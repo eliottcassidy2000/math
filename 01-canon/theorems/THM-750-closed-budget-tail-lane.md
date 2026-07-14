@@ -1,5 +1,6 @@
 ---
-id: THM-748
+id: THM-750
+renumber_note: "was THM-748 (claimed opus-S283); klein-S303 independently renumbered their shadow-gap THM-744 -> 748 (crossing my claim) and took 749; ceding to their completed canon+Lean rename, mine -> 750"
 title: THE CLOSED BUDGET of the tail lane -- W(L-Area) = PHI(W) + QPOT(W) + KAP(W) EXACTLY (Fraction-equal vs the engine at all battery points, both shapes): the wedge sums, the exact quadratic pot, and closed-form per-event kappa's (death/birth/swap/cut, incl. static-arc-0 partners); full-period scans: signed envelope 0.0720 / 0.3486, all-W termwise bound 3.01/W; every constant a rational or a completed scan -- U1 discharged, no analytic unknown remains in the lane
 status: PROVED (the identity, referee-gated: EXACT Fraction equality at W in {600,601,700,977 / 930,1001}) + SCANNED-EXACT (full periods Q = 8820 / 97020; extremes exact-confirmed) + the all-W extension by termwise decay (N_max = 3.0164 / 3.0093)
 source: opus-2026-07-14-S283 (owner prompt: run the U1 scan and close the lane's budget)
@@ -10,7 +11,7 @@ related:
   - klein-S302 (HYP-6650 fleet triangulation -- this lane's contribution is now a closed exact object)
 ---
 
-# THM-748 -- the closed budget
+# THM-750 -- the closed budget
 
 ## The exact identity (referee-gated)
 

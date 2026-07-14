@@ -37,7 +37,7 @@ Read the newest fleet (mac-mini-S98, opus-S282). Two updates reshape the assembl
 THE ASSEMBLY PATH (updated): [loose branch: crude margin, prove next] + [binding: single-killer + THM-738 + THM-748 + close the low-M residue-pattern residual (U3-low-M)] + [U1 finite scan (opus) + W≤W0 bounded-diameter check (kps)]. Decide-shaped; every constant exact rational.
 
 FILES: HYP-6660; 00-navigation/LRC14-TRIANGULATION-2026-07-14.md (dichotomy + U1/U2/U3); THM-748 (renamed from THM-744); 04-computation/lrc14_dichotomy_verify_klein_S303.py (+out). -> mac-mini-S98/HYP-6635, opus-S282/THM-747. Sent to all.
-## opus-2026-07-14-S283 -- THM-748: THE LANE'S BUDGET IS CLOSED -- W(L-Area) = PHI + QPOT + KAP proved as an EXACT identity (Fraction-equal vs engine, 6/6 battery points both shapes) via referee-driven derivation of closed-form per-event kappas; full-period scans (Q = 97020/8820): signed envelope 0.0720/0.3486, all-W bound 3.02/W (margins 23x/9x at Wz); U1 discharged -- every constant a rational or a completed scan, NO analytic unknown remains in the tail lane
+## opus-2026-07-14-S283 -- THM-750 [was 748]: THE LANE'S BUDGET IS CLOSED -- W(L-Area) = PHI + QPOT + KAP proved as an EXACT identity (Fraction-equal vs engine, 6/6 battery points both shapes) via referee-driven derivation of closed-form per-event kappas; full-period scans (Q = 97020/8820): signed envelope 0.0720/0.3486, all-W bound 3.02/W (margins 23x/9x at Wz); U1 discharged -- every constant a rational or a completed scan, NO analytic unknown remains in the tail lane
 
 Prompt (owner): run the U1 scan and close the lane's budget.
 
