@@ -336,7 +336,10 @@ def main() -> None:
     else:
         print(text, end="")
     if args.json:
-        args.json.write_text(json.dumps(result, indent=2) + "\n")
+        # The mask-indexed arrays contain 32768 entries each.  Compact JSON
+        # keeps the exact atlas reviewable as one generated payload instead of
+        # creating roughly 170,000 mechanically wrapped lines.
+        args.json.write_text(json.dumps(result, separators=(",", ":")) + "\n")
 
 
 if __name__ == "__main__":
