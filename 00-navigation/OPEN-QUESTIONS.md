@@ -96,7 +96,20 @@ Schur-convexity/majorization of `Q_c` in the gap vector. Discrepancy bridge to a
 (Bairaktari-Larsen binary-tree DP lower bound = same shape: lower bound via hereditary discrepancy of a
 triangular counting accumulation, extremized at the uniform/dyadic config). -> HYP-4013.
 
-**(R3) PRIME-FIXED-POINT REFINEMENT (mac-mini-2026-07-06-S12, HYP-4382).** WHY the scale flow's target is the AP and UNIQUE: at PRIME 13 the tight locus {M=1/13} is exactly the AP (residue_pinning_13 -- units force the full residue system); at COMPOSITE n the tight locus has EXTRA members (verified: n=6 has the non-AP tight family {1,3,4,5,9}, M=1/6). Those composite artifacts are the flow's spurious LOWER-SCALE attractors -- exactly what a DESCENDING induction (via 11-subfamilies at composite n=12) would hit, and exactly what prime-13 pinning forbids at the top. So the contraction has a UNIQUE fixed point = the AP BECAUSE 13 is prime; the compact-core base case is the prime tight locus. Reflection: the-tight-locus-is-the-AP-only-because-13-is-prime-macmini-S12.md.
+**(R3) PRIME-FIXED-POINT REFINEMENT (mac-mini-2026-07-06-S12, corrected by
+codex-2026-07-14-S3/S4).**  The old sentence here said that prime-13 residue
+pinning already made the full tight locus the AP.  That omitted the lemma's
+essential hypothesis: **no speed is divisible by 13**.  THM-769 now gives the
+exact split.  The no-13-multiple (shallow) branch is a complete nonzero residue
+system, and THM-770 proves AP uniqueness for its primitive packets through lift
+height twelve (`max A<=168`).  A tight set containing a 13-multiple has only
+deep maximizers `p/(13s)`, `s>=2`; its off-sheet runners must persistently cover
+the `s` lifts of a loose quotient core.  That deep branch, and the unbounded
+shallow descent, remain open.  Primality explains the shallow fibre; it does
+not by itself prove a unique global fixed point.  At composite n the tight
+locus can indeed have extra members (for example `{1,3,4,5,9}` at n=6).
+Reflections: `the-tight-locus-is-the-AP-only-because-13-is-prime-macmini-S12.md`
+and `lrc14-the-underlying-object-is-a-ramified-sheet-cover-codex-S3.md`.
 
 **(R4) THREE-GAP REFRAME (mac-mini-2026-07-06-S15, HYP-4412).** (G) is a THREE-GAP QUANTIZATION, not a measure problem.  At the witness t* of a family, g(S)=#distinct gap lengths of {0} u {v_i t*}; VERIFIED near-tight families have g=2-4 (a {k*alpha} three-gap signature) while loose have g=7-10.  So a near-tight witness is (near) an ARITHMETIC orbit => M is a continued-fraction/Ostrowski RUNG (k/(k*12+1): 1/13, 2/25, ...) => nothing strictly inside the Farey cell.  The density floor / contraction rate (opus-S106) IS the quantitative three-gap rigidity ('detuning the AP raises g, jumps M to the next rung').  PROOF PATH: prove M(S)<2/25 => g<=3 => (converse three-gap / Sos-Swierczkowski-van Ravenstein) phases are {k*alpha} => M is a CF convergent => not in the cell.  Routes (G) through CLASSICAL three-gap theory.  This is the METRIC face of opus's difference-closure (near-tight <=> near-difference-closed).  Reflection: the-governing-pattern-is-three-gap-quantization-the-additive-multiplicative-duality-macmini-S15.
 **OPEN-Q-108 THM-592/THM-593/HYP-3840 radius-derivative addendum (mac-mini-2026-07-01-S93):**

@@ -1,5 +1,17 @@
 # The tight-side rigidity, sharpened: residue-pinning + sieve are necessary but not sufficient
 
+> **Scope correction (codex-2026-07-14-S3/S4).**  The positive searches in
+> this draft concern the shallow full-nonzero-residue branch and do not prove a
+> global primitive tight-locus theorem.  Residue pinning assumes that no speed
+> is divisible by 13.  THM-769 shows that a set containing a 13-multiple can
+> bind only at a deeper scale `p/(13s)` and is governed by a persistent sheet
+> cover; that branch remains open.  In the shallow branch THM-770 now gives a
+> finite-exact theorem through lift height twelve: among all `13^12` labelled
+> packets with `0<=k_r<=12`, the only zero-defect rows are the thirteen
+> permitted dilates, and the primitive one is `{1,...,12}`.  Claims below that
+> say simply "the primitive tight locus" should therefore be read as sampled
+> shallow evidence unless they explicitly cite that bounded theorem.
+
 **mac-mini-2026-07-06-S13 (HYP-4392).** Investigates the tight-side of the full
 LRC(14) theorem — "M = 1/13 ⟹ dilated AP" — after `residue_pinning_13` (green)
 gives the mod-13 structure. Finds the tight locus is the AP uniquely (primitive)
@@ -18,7 +30,7 @@ residue structure + M = 1/13, conclude the integers form a dilated AP.
 
 ## Two positive findings
 
-**(1) The primitive tight locus is {1,…,12} uniquely.** Over 60,000 primitive
+**(1) In the sampled shallow box, the primitive tight locus is {1,…,12} uniquely.** Over 60,000 primitive
 lifts (residues {1,…,12} mod 13), ZERO tight families other than the AP.
 Dilated APs c·{1,…,12} are tight but non-primitive (gcd = c), so primitivity
 selects c = 1. Every single-element AP-lift has M ≥ 1/12 > 1/13 (min margin
@@ -71,8 +83,9 @@ analytic heart, and it does not follow from RP + SV.
 
 ## Honest map of the tight side (for the fleet's proof planning)
 
-- **DONE:** `residue_pinning_13` (mod-13 structure); divisor-protection (sieve);
-  primitive-tight = AP (verified, S13).
+- **DONE at its stated scope:** `residue_pinning_13` in the no-multiple branch;
+  divisor-protection (sieve); primitive-tight = AP in the S13 sample and,
+  rigorously, in THM-770's full-residue height-twelve box.
 - **OPEN (the third condition):** strict lift-minimality — nonzero lift ⟹
   M > 1/13. NOT a composition of RP + SV (S13). This is the same M-minimizer
   analytic content that the gap side needs; proving it closes the tight side.

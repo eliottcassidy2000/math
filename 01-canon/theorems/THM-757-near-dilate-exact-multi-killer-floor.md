@@ -128,9 +128,10 @@ The **open** question above ("is the tight 12-block *always* a dilate of `{1,…
   closest `{1..11,24} = 2/25 = 0.080 > 1/13`; `{1..11}∪\{12k\}` gives `k/(12k+1) ↑ 1/12`. So the exact
   mechanism that breaks rigidity at `n=13` produces **nothing** at `n=12`.
 
-So the "corrected equality conjecture" holds with the block pinned: `M = 1/13` for a multi-killer
-covering 13-set **iff** it contains a **dilate `c·{1,…,12}`** (the tight block is rigid — no sporadic
-alternative at `n=12`) plus a safe coprime killer. **Honest:** a *complete* proof still needs
+So the bounded computations support the following **corrected equality conjecture**: `M = 1/13` for
+a multi-killer covering 13-set only when its tight block is a **dilate `c·{1,…,12}`** plus a safe
+coprime killer.  This is not an iff theorem: the uniform absence of a sporadic tight block at
+`n=12` remains open. **Honest:** a *complete* proof still needs
 `[q=13 \text{ forced (rule out } u≥2\text{)}] + [\text{minimal-rep at }q=13]` (a finite check given a
 ratio bound); the lemma + census + GW-failure are the rigorous/verified core. This is **not**
 closure-critical — klein THM-758 gives `M ≥ 1/14` with the tight families all in the *proved* ≤3-far
@@ -142,9 +143,12 @@ bound" is discharged: `THM-759` proves `a_n ≤ n·a_{n-1}` for any tight `n`-se
 argument, no arithmetic hypothesis). The rigidity `R(12)` now has a fully rigorous skeleton — ratio
 bound (THM-759) + finite check `{1..n-1,w}` tight iff `w=n` (exact, all `n≤12`) + core induction — whose
 only residual is the **sporadic branch** (max-peel lands on a non-extremal core, `M(A\max) > 1/n`). That
-branch is *exactly* where the near-dilate/GW inhabitants of this theorem live: it is empty at `n=12`
-(verified three ways: census, winding, branch-hunt — HYP-6800) and populated at `n=13` by GW
+branch is *exactly* where the near-dilate/GW inhabitants of this theorem live: it is empty in three
+named finite `n=12` banks (census, winding, branch-hunt — HYP-6800/HYP-6820), but **uniform
+emptiness is open**; at `n=13` it is populated by GW
 `{1..11,13,24}` (core `{1..11,13}`, `M=1/12>1/13`). So the tight 12-block of any `M=1/13` minimizer is
-rigidly a dilate of `{1,…,12}`. Ratio-bound residual **closed**; the branch-emptiness is the LRC
-tight-instance characterization (open since Goddyn–Wong). See HYP-6800, THM-759, and the reflection
+conjecturally a dilate of `{1,…,12}`. Ratio-bound residual **closed**; the branch-emptiness is the LRC
+tight-instance characterization (open since Goddyn–Wong). THM-769 further splits it into shallow
+full-residue and deep sheet-cover branches, and THM-770 settles only the shallow height-twelve box.
+See HYP-6800/HYP-6820, THM-759/769/770, and the reflection
 `the-sporadic-branch-where-goddyn-wong-lives-macmini-S108`.

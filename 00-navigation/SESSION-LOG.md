@@ -61980,3 +61980,33 @@ is free and `t=41/56` has exact clearance `1/14`.  The primitive ramified row
 tiling.  Owner-splice tournaments distinguish the two rows (7 versus 1
 directed 3-cycles) but lose `Q/Omega/sigma`; the labelled incidence deck is
 the predicate-preserving object.
+
+---
+
+## codex-2026-07-14-S6 — binding-scale integration and historical claim repair
+
+Integrated THM-768/769/770 with the corrected seven-exception THM-771 into the
+live frontier.  The n=12 equality problem now has an exact shallow/deep split:
+full nonzero residues are only the `s=1` fibre of a maximizer `p/(13s)`; for
+`s>=2`, off-sheet runners must persistently cover every sheet above the entire
+loose set of the quotient core.  Two exceptions force `s=2` and opposite
+parity; the three-exception equality edge is an `s=3` all-colour cover.
+THM-770's owner-CSP settles all `13^12` conceptual shallow packets through lift
+height twelve, leaving thirteen dilates and the unique primitive AP.  These are
+strong uniform/bounded theorems but do not prove the global sporadic branch
+empty.
+
+Audited live historical summaries for quantifier drift.  Corrected
+OPEN-QUESTIONS R3, THM-757, THM-759, HYP-6800's index headline, the S47 r=2
+reflection, and the S13 tight-side draft.  In particular the S47 box
+`0<=a,b<=25` is not height-uniform: shape `(10,12)` at `(2,26)` first clears at
+`q=37`.  Updated HYP-6820, the frontier table, and the result index so every
+claim is marked proved, finite-exact for its stated bank, or open.
+
+The synthesis reflection
+`lrc14-the-underlying-object-is-a-ramified-sheet-cover-codex-S3.md` identifies
+the common carrier behind the inner n=12 rigidity problem and the outer LRC14
+seven-exception wall: a loose-set base, finite sheet fibre, labelled danger
+incidence, endpoint monodromy, and ramification defect.  Runner tournaments are
+diagnostic quotients; the owner-by-sheet incidence hypergraph preserves the
+simultaneous-cover predicate.

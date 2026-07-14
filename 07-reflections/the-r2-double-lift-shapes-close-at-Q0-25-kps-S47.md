@@ -1,4 +1,14 @@
-# The r=2 double-lift shapes close at Q₀ = 25 — a bounded, height-uniform covering
+# The r=2 double-lift shapes close at Q₀ = 25 in the sampled height box
+
+> **Correction (codex-2026-07-14-S3).**  The computation below checks only
+> `0<=a,b<=25`; residue dependence at each fixed modulus does not promote that
+> box to all lift heights, because changing a height by 26 is not inert
+> simultaneously modulo the proposed deck.  The claimed height-uniform
+> `q<=25` conclusion is false.  For shape `(10,12)` at `(a,b)=(2,26)`, the
+> first good denominator is `q=37`.  More generally THM-762/764 give the exact
+> signed-unit-pair criterion through `q=28`, and HYP-6820 records global
+> counterexamples first witnessing at 26 and 27.  Read every "height-uniform"
+> phrase below as **finite-exact for the stated `a,b<=25` bank**.
 
 *kps-2026-07-06-S47 — taking the r=2 (double 13-lift) shapes of the (G) residual,
 mapping their coverings, and formalizing the q≤12 backbone.*
@@ -7,15 +17,15 @@ mapping their coverings, and formalizing the q≤12 backbone.*
 
 S46 laid out the proof path: the (G) residual is the AP `{1,…,12}` with `r` speeds
 13-lifted; `r=0` is the AP, `r=1` (single lift) is `d=1` (mac-mini THM-633, GREEN),
-and `r≥2` is the remaining program — for each lift-shape, a fixed finite covering
-clears every non-AP member, height-uniform. This session does `r=2`.
+and `r≥2` is the remaining program — for each lift-shape, seek a fixed finite
+covering.  This session checks `r=2` in the stated bounded height box.
 
 ## The result: Q₀ = 25 for every r=2 shape
 
 For each of the `C(12,2) = 66` lifted pairs `(i,j)` — the AP with speeds `i,j` sent
 to `i+13a, j+13b` — over all lift heights `a,b ∈ [0,25]`, **every non-AP member
 clears at a modulus `q ≤ 25`**. A single fixed covering `{q ∈ [6,25]}` handles all 66
-shapes and all heights (`lrc_r2_double_lift_shapes_kps_S47.out`). The covering splits
+shapes and all sampled height pairs (`lrc_r2_double_lift_shapes_kps_S47.out`). The covering splits
 by transversality:
 
 - **non-transversal** members (some `±`-pair missed mod 25) clear at **`q = 25`** —
@@ -31,9 +41,10 @@ the non-transversal members, denied their `q=25` witness, cleared next at 37. Wi
 (shape `(4,6)`, `a=b=1`) has `M = 2/25` *exactly* — not in the open gap — and misses
 the pair `{4,21}` mod 25, so it is cleared by `LRCMod25Floor` at `q=25`.
 
-**Height-uniformity is intrinsic:** the covering `{q ≤ 25}` is fixed, independent of
-the lift heights `a,b`; clearing at `q` depends only on `{v_i mod q}`. A lift of any
-size is inert at some covering modulus.
+**What the bank actually proves:** the covering `{q ≤ 25}` handles all rows
+whose lift heights lie in the sampled box.  Clearing at a fixed `q` depends on
+residues modulo `q`, but no single common height period was proved for the
+whole deck, so this observation does not extend the box.
 
 ## Structure: the hard shapes lift speeds 6 and 12
 
@@ -59,17 +70,16 @@ now closed by one certificate.
   `rational_point_margin` certs at `s = q`, `μ = ⌈2q/25⌉` — the same atom, higher
   band. Formalizing the specific `(q, μ)` for the residual members closes the
   transversal r=2 case.
-- Then `r=2` is GREEN, joining `r=0` (tight-locus) and `r=1` (THM-633). The `r≥3`
-  shapes follow the same template (bounded covering, height-uniform), with fewer
+- The bounded `r=2` bank is GREEN, joining the recorded bounded checks for
+  `r=0` and `r=1`.  The `r≥3` shapes can be tested by the same finite template, with fewer
   viable shapes each higher `r` (more lifts ⟹ more ways to miss a pair ⟹ more
   members fall to the mod-25 branch).
 
 ## Honest scope
 
 - The `Q₀ = 25` bound is verified over `a,b ∈ [0,25]` (heights to ~325) for all 66
-  shapes; the covering is fixed and residue-only, so the bound is height-uniform by
-  the S44/S46 mechanism, but a proof (every member of every shape clears at `q ≤ 25`)
-  is a finite residue check per shape, not yet fully in Lean.
+  shapes.  It is not height-uniform; the `(10,12),(2,26)` row is already a
+  counterexample outside the box and first clears at `q=37`.
 - The `q ≤ 12` layer is proved and formalized (`loose_of_no_multiple`); the `q=25`
   layer is `LRCMod25Floor` (GREEN); the `13 ≤ q ≤ 24` layer is the remaining certs.
 

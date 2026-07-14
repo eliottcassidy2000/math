@@ -80,7 +80,8 @@ inductive skeleton whose one analytic gap was exactly a ratio bound. THM-759 sup
 >   literature (Perarnau–Serra survey: no progress since Goddyn–Wong).
 
 So THM-759 turns "tight ⟹ bounded spread" into a rigorous lemma; the residual content of `R(n)` is
-purely the sporadic-branch emptiness, which is `n`-dependent (empty at `n≤12`, populated at `n=13`).
+purely the sporadic-branch emptiness, which is `n`-dependent (verified empty in the named bounded
+`n=12` banks but uniformly open; populated at `n=13`).
 
 *Artifacts:* `04-computation/lrc13_tightness_rigidity_macmini_S107.py`,
 `lrc13_rigidity_ratio_bound_macmini_S108.py` (+outs). Credits: THM-751 (the aligned precursor), LRC(≤13)

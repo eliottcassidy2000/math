@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and tooth-stratified but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, and shallow-exact through height twelve, but branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -14,6 +14,9 @@ depends_on:
   - THM-764
   - THM-765
   - THM-766
+  - THM-768
+  - THM-769
+  - THM-770
   - HYP-6750
   - HYP-6775
 related:
@@ -133,58 +136,114 @@ test eliminates all 40 narrow candidates; exact pair-sum/difference/half-turn
 evaluation finds zero tight completions among all 790, with bank minimum
 `M=1/12`.  This is finite-exact for that box only.
 
-## C. Remaining proof obligation
+## C. Binding-scale recursion: what the residue picture was missing
 
-The requested uniform emptiness theorem is still missing.  The residual is:
+THM-768 eliminates one tempting deep configuration: if the largest speed is
+the unique multiple of 13, an explicit perturbation of a shallow prime-grid
+point makes all twelve runners strictly safer than `1/13`.  Thus a tight set's
+largest speed cannot be its unique 13-multiple.
 
-> Prove that every primitive nonextremal eleven-speed core below THM-763's
-> finite height has at least one safe component whose rational endpoint band
-> is incompatible with every top speed in its THM-759/766 cone.
+THM-769 gives the scale-normal statement at **every** rational global maximum.
+Write a reduced maximizer as `p/(13s)`.  Its multiplied residues lie in the
+packet `[s,12s]`, both endpoints occur, and endpoint owners are divisible by
+`s`.  With
 
-Equivalently, classify the rare zero-defect endpoint-splice packets.  A useful
-next lemma is splice-lattice coherence: when the twelve residues occupy every
-nonzero class modulo 13 and every safe gap is closed by complementary-pair
-splices, the six splice lattices should share one scale, forcing a dilate of
-`{1,...,12}` and hence the primitive AP.
-
-Concretely, let `kappa` be the number of components of the open danger-tooth
-graph and `P_splice` the number of end/start coincidences with no third tooth
-active.  Provided the open danger union is not the whole circle, exact
-endpoint sweep gives
-
+```text
+E={v:s|v}=sU,                  F=A\E,
 ```
+
+the familiar complete nonzero residue system is exactly the shallow `s=1`
+branch.  If a 13-multiple blocks all shallow points, every maximizer is deep
+and `F` must cover all `s` lifts of every point in
+`G_U={tau:phi_U(tau)>1/13}`.  Putting
+
+```text
+D_w=s/gcd(w,s),
+```
+
+gives the necessary capacity inequality
+
+```text
+sum_(w in F) (floor(2D_w/13)+1)/D_w >= 1.
+```
+
+In particular `|F|>=2`.  Equality at two exceptions forces `s=2`, ten even
+speeds and two odd speeds; tightness is then **equivalent** to persistent
+opposite nearest-integer parity over all of `G_U`.  At three exceptions,
+either a half-sheet tightener occurs or the equality edge is `s=3`, with nine
+multiples of three and three nonmultiples persistently owning all three sheet
+colours.  For `r=|F|<=6`, some exception satisfies
+`D_w<=13r/(13-2r)`.  These are uniform reductions, not empirical patterns.
+
+THM-770 settles a very large but still bounded part of the shallow branch.
+For the labelled packets
+
+```text
+W(k)={r+13k_r:1<=r<=12},       0<=k_r<=12,
+```
+
+an exact unique-owner CSP represents all `13^12=23,298,085,122,481` rows
+without literal enumeration.  It has exactly thirteen zero-defect leaves,
+`c*{1,...,12}` for `c=1,...,12,14`, and only the `c=1` leaf is primitive.
+Consequently a primitive shallow tight set with `max A<=168` is the AP.
+Dilation gives the exact defect law `chi_13(cW)=c chi_13(W)`, so gcd descent is
+lossless.  This result does not supply an unbounded height descent.
+
+## D. Remaining proof obligation
+
+The uniform theorem now has two explicit residuals:
+
+1. **Shallow descent.**  Prove that a primitive full-nonzero-residue packet
+   with `chi_13=0` descends into THM-770's height-twelve box, or extend its
+   owner-CSP by a scale-free coherence argument.
+2. **Deep colour cover.**  Rule out THM-769's persistent folded parity cover
+   at `s=2` and its higher-sheet analogues (or prove they descend to a smaller
+   primitive tight packet).
+
+Equivalently in the original top-peel language, prove that every primitive
+nonextremal eleven-speed core below THM-763's finite height has at least one
+safe component whose rational endpoint band is incompatible with every top
+speed in its THM-759/766 cone.
+
+For the shallow branch, let `kappa` be the number of components of the open
+danger-tooth graph and `P_splice` the number of protected end/start
+coincidences.  The settled twelve-speed LRC ensures that the open danger union
+is not the whole circle, and exact endpoint sweep gives
+
+```text
 chi_13 = kappa-P_splice = number of open 1/13-safe components.
 ```
-
-That proviso is automatic here: the settled twelve-speed LRC gives a point
-outside the open danger union at threshold `1/13`.  Without it, the sweep's
-component-start count is zero whereas the full circle has one topological
-component.
 
 For full nonzero residues, the nominal complementary-pair capacity is
 `P*=2 sum_(r=1)^6 gcd(w_r,w_(13-r))`, so
 
+```text
+chi_13=(kappa-P*)+(P*-P_splice).
 ```
-chi_13=(kappa-P*)+(P*-P_splice),
-```
 
-separating overlap-rank shortage from third-runner blocker debt.  The exact
-height-one lift cube has 4,085 rank-short rows, 9 blocker-debt rows, and one
-zero-defect row, the nonprimitive doubled AP.  All 4,094 primitive rows have
-`chi_13>=2`.  This is finite evidence, not the coherence lemma.
+This separates overlap-rank shortage from third-runner blocker debt.  The
+height-one lift cube had 4,085 rank-short rows, 9 blocker-debt rows, and one
+zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
+`chi_13>=2`.  THM-770 supersedes that cube by an exact height-twelve theorem,
+but the same warning remains: bounded exactness is not the global coherence
+lemma.
 
-## D. Information-preservation / Tournament Analysis
+## E. Information-preservation / Tournament Analysis
 
-The exact vertices are witness obligations `(q,a)`, safe components, or
-endpoint splices—not runners by default.  Modulus and runner tournaments are
-telemetry: changing gauges flips many edges while the blocker verdict stays
-fixed, and pairwise component compatibility does not imply simultaneous tooth
-containment.  The deciding objects are therefore:
+The exact vertices are witness obligations `(q,a)`, safe components, endpoint
+splices, or the `s` sheet fibres—not runners by default.  Modulus and runner
+tournaments are telemetry: changing gauges flips many edges while the blocker
+verdict stays fixed, and pairwise component compatibility does not imply
+simultaneous tooth containment.  In THM-770 all 66 runner-pair comparisons tie
+throughout the zero-defect leaves, while the endpoint-owner hypergraph still
+distinguishes thirteen solutions.  The deciding objects are therefore:
 
 - the zero-owner/signed-pair blocker deck for small periods;
 - the component-tooth incidence hypergraph with endpoint widths, divisor pins,
-  and core-maximizer residues for tight completions.
+  and core-maximizer residues for tight completions;
+- the off-sheet-runner by sheet incidence cover, with effective orders
+  `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
-joint blocker ownership, multiplier identity, scale, and simultaneous
-alignment.
+joint blocker ownership, multiplier identity, scale, ramification, and
+simultaneous alignment.

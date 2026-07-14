@@ -71,7 +71,10 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
-| n=12 sporadic branch | OPEN; ratio/tooth/component reductions + bounded exact banks | THM-759/765/766; HYP-6820 |
+| unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
+| arbitrary binding scale `p/(13s)` | PROVED packet split; shallow iff full nonzero residues; deep exceptions obey exact sheet capacity, with `s=2` parity and `s=3` colour criteria | THM-769 |
+| shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
+| n=12 sporadic branch | OPEN; ratio/tooth/component reductions + shallow/deep binding-scale split + bounded exact banks | THM-759/765/766/768/769/770; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -119,6 +122,19 @@ bound `a_11/a_1>=72/7`; below `12` it places the top speed in one of eleven
 danger-tooth cones and retains an exact core-maximizer residue band.  The
 remaining equality problem is simultaneous component-tooth/splice-lattice
 coherence, not raw height.
+
+Binding-scale refinement: a tight rational maximizer is not described by its
+prime residue alone.  THM-769 writes every reduced maximizer as `p/(13s)` and
+splits the speeds into an on-sheet core `sU` and off-sheet exceptions.  The
+familiar complete nonzero residues are exactly the shallow `s=1` fibre.  In a
+deep fibre the exceptions must cover every lift of the entire loose set of
+`U`; two exceptions force `s=2` and persistent opposite parity, while the
+three-exception equality edge is an `s=3` persistent colour cover.  THM-768
+separately rules out a largest speed that is the unique 13-multiple.  THM-770's
+exact owner-CSP settles all shallow labelled packets through lift height twelve
+(`13^12` conceptual rows), leaving only the permitted dilates and the unique
+primitive AP.  Neither result proves an unbounded shallow descent or eliminates
+the deep colour-cover branch.
 
 ## 4. The one-line frontier
 
