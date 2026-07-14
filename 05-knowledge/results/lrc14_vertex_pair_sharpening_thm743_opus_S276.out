@@ -1,0 +1,39 @@
+========================================================================================================
+THM-743: vertex-term pair-sector sharpening.  C2 vertex part: 4 max(J) V_R -> Sum_v^exposed delta_v
+========================================================================================================
+
+shape 1 {1}u{W..W+11}:  Area = 0.074964
+   events: Sum delta (all) = 4312 ; Sum delta (EXPOSED) = 2172 ; THM-742 charged 4*max*V_R = 5676
+   delta-histogram (delta: all/exposed): 1: 22/22, 2: 30/30, 3: 54/38, 4: 72/44, 5: 84/54, 6: 90/50, 7: 90/58, 8: 84/32, 9: 72/26, 10: 54/18, 11: 30/14
+   C2: 8712 (THM-742 stated) -> 3690 (THM-743 stated) -> 1845.0 (derived, lower-bound side)
+        W     |L-Area|      new bound       ok
+       10     0.005649      38.349000     True
+       20     0.001139       9.949500     True
+       30     0.000705       4.583000     True
+       50     0.000271       1.765800     True
+       90     0.000081       0.616556     True
+      150     0.000014       0.260600     True
+      250     0.000127       0.117000     True
+      400     0.000024       0.059287     True
+      800     0.000083       0.023878     True
+   NEW W0 = 339  (THM-742: 452; crude THM-739: 1948)  [C1-only floor: 194 -- C1 now binds]
+   violations: 0
+
+shape 2 {1,2,3}u{W..W+9}:  Area = 0.044817
+   events: Sum delta (all) = 1518 ; Sum delta (EXPOSED) = 1116 ; THM-742 charged 4*max*V_R = 2376
+   delta-histogram (delta: all/exposed): 1: 18/18, 2: 16/16, 3: 28/20, 4: 36/32, 5: 60/48, 6: 24/24, 7: 54/44, 8: 32/12, 9: 18/10
+   C2: 4086 (THM-742 stated) -> 1971 (THM-743 stated) -> 985.5 (derived, lower-bound side)
+        W     |L-Area|      new bound       ok
+       10     0.025410      21.624000     True
+       20     0.008334       5.884500     True
+       30     0.001923       2.828000     True
+       50     0.004163       1.171200     True
+       90     0.000765       0.456000     True
+      150     0.000191       0.215200     True
+      250     0.000532       0.108096     True
+      400     0.000084       0.060169     True
+      800     0.000103       0.027005     True
+   NEW W0 = 513  (THM-742: 584; crude THM-739: 2676)  [C1-only floor: 428 -- C1 now binds]
+   violations: 0
+
+done.

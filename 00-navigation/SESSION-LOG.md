@@ -12,6 +12,34 @@ HONEST BOUND: found the GROUP not the ARITHMETIC -- Z/14 translations are fixed-
 
 Files: reflection the-global-object-is-the-danger-circle-z14-...-macmini-S92; HYP-6575; 04-computation/global_object_arc_transitivity_macmini_S92.py (+out).
 
+## opus-2026-07-13-S276 -- THM-743 PROVED: vertex-term PAIR-SECTOR sharpening of THM-742 -- per-event cost = pair difference delta_v (not 2max J), buried events FREE, strand side sign-favorable; C2 vertex part 5676 -> 2172 (exposed census); W0 452 -> 339 / 584 -> 513 (cumulative from crude: 1948 -> 339, 5.7x); the delta-histogram confirms the perspective prediction (adjacent pairs always exposed, distant pairs mostly buried)
+
+Prompt (owner): attack the second-order vertex term with the perspective frame.
+
+THE FRAME DELIVERS: an arrangement vertex IS a pair event (T(n-2) sector): it exists only on the
+DIFFERENCE-RUNNER's grid (delta u = 0, +-1/7 mod 1, delta = |j-j'|), its collapsing fiber interval
+closes at the RELATIVE SPEED delta_v, and it costs nothing if buried inside a third arc. Plus a sign
+analysis: the strand-side capping error is uniformly FAVORABLE for the lower bound (truth >= linear
+model), so the LRC-relevant direction pays only the strip-average side: (1/2) Sum_v^exposed delta_v.
+
+CENSUS (exact, both shapes): shape 1: 4312 total delta-mass, 2172 exposed (742 charged 5676);
+delta-histogram: 1: 22/22, 2: 30/30 (adjacent pairs ALWAYS exposed) ... 8: 84/32, 11: 30/14 (distant
+pairs mostly buried). C2: 8712 -> 3690 stated (1845 lower-side); W0 452 -> 339. Shape 2: C2 4086 ->
+1971; W0 584 -> 513. ZERO violations (W = 10..800, exact). C1 = 2(#comp+Xi) now binds (floors 194/428).
+
+Event locations (k+-1/7)/delta = the three-distance/Farey geometry of the difference set -- the same
+pair-sector geometry as klein-S294's windowed-overlap Farey resonances (HYP-6570): the covering side
+and the density side are now visibly working the SAME pair-event grids from two directions.
+
+NEXT CONSTANTS: (i) Xi's 1/8-caps -> exact segment-end heights ((1/2-x)^2-form, arrangement-known);
+(ii) cross-line joint equidistribution (Q_s class, density turf). NAMESPACE: claim renumbered twice
+(6565 mac-mini-S91, 6570 klein-S294 first-pushers) -> HYP-6575; THM-743 clean.
+
+FILES: THM-743 canon; HYP-6575; lrc14_vertex_pair_sharpening_thm743_opus_S276.py (+.out). -> klein
+(your S294 Farey windows and my vertex grids are the same object -- worth one joint session), kps
+(W0 339/513: another ~30 percent off sweep costs; the census is pure rational arithmetic, Lean-able).
+
+---
 ## mac-mini-2026-07-13-S91 -- the Atkin-Lehner V_4 does NOT descend to the tournament metagraph (complement irreducible under S_n; not even one W-element); n=4=weight-2 Gamma_0(14) exact but breaks n=6
 
 **Owner request:** explore the V_4/Atkin-Lehner thread on the metagraph side (the S90 survivor).
