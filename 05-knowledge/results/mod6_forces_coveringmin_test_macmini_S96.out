@@ -1,0 +1,27 @@
+covering-min value M = n/Phi_6(n) = 14/183 = 14/183  (=14/183, PROVED by THM-724, metric)
+margin = M - 1/n = 13/2562 = (n-1)/(n*Phi) = 13/2562
+
+Dedekind sum s(n,Phi_6) = -(Phi-1)/(12 Phi) = -91/1098 = -0.082878   (HYP-3768, proved by reciprocity)
+DECOMPOSE:  s = -1/12 + 1/(12*Phi) = -1/12 + 1/2196 = -91/1098  (equal: True)
+   -1/12 = -B_2/2 = the E_2 EISENSTEIN ANOMALY (n->infinity limit)  <-- the Eisenstein 'backbone'
+   +1/(12*Phi) = +1/2196 = the FINITE FAREY correction        <-- NOT the Eisenstein limit
+
+So the covering-min value = 1/n + margin, margin = -12s/n^2 = -12(-1/12 + 1/(12Phi))/n^2:
+   margin = 13/2562 = (Phi-1)/(n^2 Phi); matches (n-1)/(n Phi): True
+
+WHAT THE mod-6 CONGRUENCE FORCES vs NOT:
+  FORCES (shared): the E_2 EISENSTEIN backbone. f_14 = E_2 mod 6 (S95); s(n,Phi_6) -> -1/12 = the E_2
+    anomaly (the n->inf limit). Both are E_2 shadows. The '-1/12' is the Eisenstein leading term.
+  DOES NOT FORCE: the FINITE VALUE 14/183. The correction +1/(12*Phi_6) = the Farey/reciprocity data
+    (Phi_6 = 1 mod n, CF [0;n-1,n]), PROVED by THM-724 with ZERO modular input. The congruence is about
+    f_14's coefficients mod 6; the value is metric. Consistent with S94 (no functor).
+
+THE TWO 'SIXES' ARE INDEPENDENT (no common cause):
+  6a = ord(14 mod 183) = 6  (n^3=2744=-1 mod 183; by CONSTRUCTION Phi_6 makes n order 6)
+  6b = torsion of 14a = Z/6  (a fact about the CURVE, giving the mod-6 congruence)
+  Same integer 6, DIFFERENT origins: 6a is the covering CF/Farey construction; 6b is the curve's arithmetic.
+  No rigorous common cause => the congruence (6b) does not force the value (6a/Farey).
+
+VERDICT: the mod-6 congruence does NOT force the covering-min value. It forces the EISENSTEIN BACKBONE
+(the -1/12 E_2 anomaly = the covering-min's n->inf limit); the finite value 14/183 is FAREY-forced
+(THM-724), congruence-independent. 'Linked at the backbone' (S95), NOT 'forcing the value'.
