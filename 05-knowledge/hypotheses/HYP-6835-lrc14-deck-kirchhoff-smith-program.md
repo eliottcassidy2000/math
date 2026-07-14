@@ -29,16 +29,25 @@ has count `c/7` off its endpoint coset and `c/7-g_a` on it. The event mesh is
 stratum. The former KCL necessity is withdrawn: strict endpoint equality is safe and
 cannot hand off ownership of a bad sheet. What remains, in decreasing leverage:
 
-## 1. The ρ-floor obligation (finishes regime 2)
+## 1. The ρ-floor obligation (finishes regime 2) — ANSWERED IN PART by THM-774 (S301)
 
 `rho(P) = v*(P)/maxP ≤ 12/(π|G'_P|)` since `r_P ≤ Sum(P) ≤ 12·maxP`. Measured:
 `rho ≤ 9.335`, extremal at the `{1..12}` shape, scale-invariant on dilates, `< 1` on
-the codex tooth-insertion falsifier. TO PROVE: **a positive floor on `|G'_P|` for
-12-cores outside the classified tight families** (mac-mini B5 stability lane; the
-rigidity THM-757/759 + the L=0 census are the anchors). That single lemma converts
-the regime-2 band domain into a bounded normalized (peel-relative) atlas and, with
-THM-761 + THM-771, makes the ≥4-far endgame: [c* ≥ 43: sheets] ∪ [c* ≤ 42: bounded
-ρ-band protocol] ∪ [deck residues below].
+the codex tooth-insertion falsifier.
+
+**THM-774 (opus-S301) delivered the decidable part:** the exact bounded census —
+**min |G'| = 7/858, uniquely at {1..13}∖{6}** (kps's detuning extremal one level
+down: the double-extremal signal), stable across maxP ≤ 16/17/18; NO decay under
+the full adversarial battery (scale rays flat ≈ 0.048 through c = 40, tooth
+insertions flat through N = 2003, hill-descent to height 2500 converges back to
+the bounded shapes); the ρ bridge and the 1/(91·maxP) Lipschitz tail proved
+one-line. REMAINING: the **asymptotic floor conjecture** (inf over all primitive
+shapes = 7/858) — a shape-compactness statement; named route: |G'| < ε forces a
+near-perfect twelve-comb cover (budget 12/7, waste → 5/7 minimal), which should
+force DMNR-flavored additive rigidity landing on the near-AP one-gap shape. On
+every floored stratum, ρ < 469 uniformly: the regime-2 band domain is a bounded
+normalized atlas there, and the ≥4-far endgame reads [c* ≥ 43: sheets, THM-761] ∪
+[c* ≤ 42: bounded ρ-band protocol] ∪ [deck residues, THM-767/771].
 
 ## 2. The chamber and ramification-surplus census
 

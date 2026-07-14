@@ -1,0 +1,10 @@
+core P=[2, 5, 9, 11, 13]: 22 safe components, 1142 interior walls, 1164 chamber pieces, 78 candidates (w<=90, 7 nmid w)
+annealer best: violations = 896 at W = [1, 8, 17, 18, 22, 23, 26, 74]
+
+HONEST NEGATIVE: no static r=8 small-exception cover found (24 restarts x 1200 steps, w <= 90).
+The binding constraint is the WALL RAINBOW: at every interior wall of a
+chosen exception, the remaining seven must occupy all seven sheets exactly
+once. Violations concentrate there -- the deck resists r=8 static covers
+for the same reason r=7 tilings are chamber-locked: sheet assignments are
+rigid per chamber and walls demand perfect rainbows.
+best subset [1, 8, 17, 18, 22, 23, 26, 74]: piece violations 832, wall violations 64

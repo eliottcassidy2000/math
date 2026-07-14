@@ -1,3 +1,56 @@
+## opus-2026-07-14-S301 -- SIGNAL FROM NOISE: THM-774 (the safe-measure floor: exact census min |G'| = 7/858 UNIQUELY at {1..13}-{6}, kps's detuning extremal one level down; no decay under the full battery; rho bridge => regime-2 bounded on floored strata) + HYP-6840 (the r=8 deck no-go hunt RESOLVED-NEGATIVE with the conclusion FLIPPED: full blocking needs DMNR-grade rigidity; the universal 1/7 buffering law)
+
+Prompt (owner): make mathematical progress or prove rigorously why some routes cannot provide
+more progress; separate signal from noise.
+
+THE FLOOR (THM-774): regime 2's last lemma was the |G'| floor. DECIDED as far as decidable:
+(i) EXACT CENSUS over ALL primitive 12-subsets of {1..H}, H = 16/17/18 (1,820/6,188/18,564
+shapes): min |G'(1/14)| = 7/858 ~ 0.00816, attained UNIQUELY at {1,2,3,4,5,7,8,9,10,11,12,13}
+= {1..13}-{6} at every H -- kps's least-detuned divisor-complete extremal (HYP-6055, M = 2/23
+at {1..14}-{6}) reappears as the SAFE-MEASURE minimizer: the DOUBLE-EXTREMAL signal (least
+detuning minimizes both margin and room). Runner-up: GW-core {1..11,13} at 426/35035.
+(ii) NO DECAY: perturbed dilates {c,..,11c,12c+-1} flat at ~0.0483 through c=40; GW-dilate
+tweaks flat; tooth insertions {1..11,N} flat ~0.048 through N=2003; hill-descent (heights to
+2500, 5 seeds incl. spread + compressed) converges BACK to the bounded shapes, global best =
+the census minimizer itself. (iii) PROVED one-line: the Lipschitz tail |G'| >= 2(M(P)-1/14)/maxP
+>= 1/(91 maxP) (LRC(13) floor) and the rho bridge rho = v*/maxP <= 12/(pi |G'|) (r_P <= Sum(P)).
+(iv) The ASYMPTOTIC FLOOR named as a sharp conjecture (inf over all primitive shapes = 7/858,
+only at {1..13}-{6}); on floored strata rho < 469 uniformly => the regime-2 band domain is a
+bounded normalized atlas there. Route to the conjecture: |G'| < eps forces a near-perfect
+12-comb cover (waste -> 5/7 minimal) => DMNR-flavored rigidity => the near-AP one-gap shape.
+
+THE NO-GO HUNT (HYP-6840): hunted an exact certificate that the lens-7 deck can be FULLY
+blocked over the closed core-safe set at r=8 (a rigorous method boundary). THREE ESCALATING
+ATTACKS, all honest negatives, each with the obstruction QUANTIFIED: (1) measure-greedy on an
+overlapping core (target 4/7 too big); (2) measure-greedy on a spread core (|Gbar| = 0.402,
+22 components): stalls at 0.067 uncovered in 662 DUST pieces -- finishing greedily needs ~40
+slots, not 8; (3) THE EXACT FORMULATION (zero-variance pins each coprime exception to exactly
+ONE sheet per chamber piece): full blocking <=> 8 sheet-assignments hit all of Z_7 on every one
+of 1,164 pieces AND perfect RAINBOW at every one of 1,142 interior walls; annealed search best
+= 896 violations. THE MECHANISM: the universal 1/7 BUFFERING LAW (verified exactly, dev <=
+gcd): every partner buffers w_a/7 + O(gcd) of any exception's exit stream, REGARDLESS of gcd
+(the session's first w_a/(7d) derivation was corrected by the exact referee -- multiplicity
+cancels the value-thinning; caught before canon). So full buffering of all 8 exit streams
+demands eight simultaneous near-exact 7-fold AP-partitions -- exact-covering-system (DMNR)
+grade rigidity, the same class as the chamber-locked r=7 tilings. CONCLUSION FLIPPED: 'r>=8
+is where the deck dies' (my S300 residual framing) was NOISE; the deck route plausibly EXTENDS
+past r=7 outside a rigid packet class. Sharp opens named: Q1 existence (SAT over small strata),
+Q2 the positive r=8 pierce via buffer-defect counting, Q3 the DMNR transfer.
+
+SIGNAL/NOISE LEDGER: SIGNAL = the double-extremal {1..13}-{6}; the 1/7 buffering law; the
+rainbow obstruction; regime-2 normalized boundedness. NOISE REMOVED = raw r_P complementarity
+(MISTAKE-145), q<=25 uniform finish (codex), 'r=8 kills the deck', the w/(7d) guess.
+
+HYGIENE: THM-767 file is now the merged three-agent artifact (my correction + mac-mini audit +
+codex-S5 banner/THM-771 extension); cross-ref added, no conflicts. THM-774 claimed cleanly
+post-swarm (codex took 768-773 concurrently).
+
+FILES: 01-canon/theorems/THM-774-safe-measure-floor-and-rho-bridge.md;
+05-knowledge/hypotheses/HYP-6840-lrc14-r8-deck-nogo-hunt-and-buffer-rigidity.md;
+04-computation/lrc14_{gprime_floor_decision,r8_single_lens_nogo,r8_static_deck_cover_search,
+buffering_law_referee}_opus_S301.py (+ .outs); HYP-6835 item 1 updated; INDEX entries.
+
+---
 ## codex-2026-07-14-S6 -- THM-773 PROVED: prime-seven token polynomial, monodromy, and exact metagraph fibre
 
 The `c=7` deck is now an exact finite-field local system.  Off endpoint walls,

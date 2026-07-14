@@ -1,0 +1,58 @@
+core P = [1, 2, 3, 4, 6]: |Gbar_P| = 4/7 = 0.57143, 8 components; target T = 7^-1(Gbar_P): 56 closed intervals, measure 0.57143
+after structured W=[143, 360]: uncovered measure 0.41923 in 292 pieces
+  greedy pick w=346: uncovered now 0.350059 in 424 pieces
+  greedy pick w=318: uncovered now 0.283674 in 526 pieces
+  greedy pick w=332: uncovered now 0.222186 in 604 pieces
+  greedy pick w=304: uncovered now 0.166231 in 648 pieces
+  greedy pick w=290: uncovered now 0.124998 in 638 pieces
+  greedy pick w=276: uncovered now 0.087520 in 592 pieces
+  greedy incomplete -- attempting randomized repair on last two slots...
+
+V = [7, 14, 21, 28, 42, 143, 276, 290, 304, 318, 332, 346, 360]
+distinct 13 speeds: True; covering: True
+NO CERTIFICATE FOUND in this construction -- record as honest negative.
+
+--- SIGNAL COMPLEMENT: V is still lonely, by other routes ---
+M_exact(V) = 14/113 = 0.12389 >= 1/14: True
+band protocol on V: layer 2, detail ('exact-(H)', 360)
+  lens c=2: |P|=10, r=3  <- THM-761 regime (r<=6)
+  lens c=3: |P|=5, r=8
+  lens c=4: |P|=5, r=8
+  lens c=5: |P|=2, r=11
+  lens c=6: |P|=4, r=9
+  lens c=8: |P|=2, r=11
+  lens c=9: |P|=1, r=12
+  lens c=10: |P|=2, r=11
+  lens c=12: |P|=2, r=11
+  lens c=14: |P|=3, r=10
+  lens c=143: |P|=1, r=12
+  lens c=360: |P|=1, r=12
+core P = [2, 5, 9, 11, 13]: |Gbar_P| = 12073/30030 = 0.40203, 22 components; target T = 7^-1(Gbar_P): 154 closed intervals, measure 0.40203
+after structured W=[360]: uncovered measure 0.34460 in 274 pieces
+  greedy pick w=325: uncovered now 0.288517 in 364 pieces
+  greedy pick w=290: uncovered now 0.236439 in 434 pieces
+  greedy pick w=395: uncovered now 0.190903 in 516 pieces
+  greedy pick w=685: uncovered now 0.148259 in 638 pieces
+  greedy pick w=755: uncovered now 0.115588 in 720 pieces
+  greedy pick w=430: uncovered now 0.086571 in 690 pieces
+  greedy pick w=1045: uncovered now 0.066870 in 662 pieces
+  greedy incomplete -- attempting randomized repair on last two slots...
+
+V = [14, 35, 63, 77, 91, 290, 325, 360, 395, 430, 685, 755, 1045]
+distinct 13 speeds: True; covering: True
+NO CERTIFICATE FOUND in this construction -- record as honest negative.
+
+--- SIGNAL COMPLEMENT: V is still lonely, by other routes ---
+M_exact(V) = 23/144 = 0.15972 >= 1/14: True
+band protocol on V: layer 2, detail ('exact-(H)', 1045)
+  lens c=2: |P|=4, r=9
+  lens c=3: |P|=2, r=11
+  lens c=4: |P|=1, r=12
+  lens c=5: |P|=9, r=4  <- THM-761 regime (r<=6)
+  lens c=6: |P|=1, r=12
+  lens c=8: |P|=1, r=12
+  lens c=9: |P|=2, r=11
+  lens c=10: |P|=3, r=10
+  lens c=12: |P|=1, r=12
+  lens c=14: |P|=1, r=12
+  lens c=360: |P|=1, r=12
