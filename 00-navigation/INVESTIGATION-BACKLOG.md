@@ -1,5 +1,22 @@
 # Investigation Backlog
 
+## Lead codex-2026-07-14-S1: replace the raw f>=4 band by a scale-normal packet classification
+- **Source:** HYP-6780; corrected THM-757/758; THM-668/737/739/740/755; HYP-6785.
+- **Status:** OPEN, with the obstruction proved.  Under `P->cP`, `|G'|` is invariant, `r` and `v*`
+  multiply by `c`; hence THM-755 is finite per fixed core but supplies no uniform raw cutoff.  The
+  primitive covering ray `{c,2c,...,12c,13c+1}` stays uncapped at unbounded scale, has `f=13`, and exact
+  `M=1/13`, refuting both the sampled `497` global cutoff and `f>=4 => M>=0.097` claims.
+- **Next theorem:** extract a normalized cluster tree and prove every uncapped covering packet is (i) a
+  coherent dilation pack routed by THM-668/737, (ii) a translated/hierarchical cluster routed by
+  THM-739/740, or (iii) a genuinely incoherent normalized shape whose residue/offset atlas is finite or
+  decreases recursively.  Retain covering and primitivity as residue-fiber labels; core shape alone is
+  an unsafe quotient.
+- **Parallel exact rung:** implement and finish the still-CLAIMED THM-741 2002-body run.  Completion would
+  extend the proved far-count closure from `f<=3` to `f<=4` without relying on the projective theorem.
+- **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
+  phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
+  and `lrc14_band_scale_quotient_codex_S1.py/.out`.
+
 ## Lead opus-2026-07-13-S273: AFTER THM-739 (cluster-clock) -- the j>=7 seam residual = spread two-scale + multi-cluster; hierarchical clocks extension
 - **Source:** THM-739 (cluster-clock lemma, additive pack-clock); kps THM-735 (Bonferroni j<=6); THM-737/668 (multiplicative); kps-S128c3 seam analysis.
 - **Status:** OPEN (the extension), the coherent slices all closed. Landscape at unbounded diameter:

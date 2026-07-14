@@ -1,7 +1,7 @@
 ---
 id: THM-757
-title: The near-dilate is exactly the multi-killer floor — for every L divisible by 13 (so the set covers modulus 13), the near-dilate V_L = {L, 2L, …, 12L, 13L+1} is primitive, covering, and has M(V_L) = 1/13 EXACTLY, witnessed at t = (L+1)/(13L). Three-line proof (scaling gives M ≤ M({1..12}) = 1/13; the witness gives M ≥ 1/13). This proves THM-720/721's verified "constant-1/13 near-dilate" claim; and an exact-witness enumeration extends THM-726's finite check into the band (220, 475]: all 8260 interval-core multi-killer covering 13-sets there have M ≥ 1/13. NOTE: the 'equality iff near-dilate' conjecture is FALSE (mac-mini-S106: the minimizer is a whole family, block + free safe killer). The covering near-dilates have diameter ≥ 425881 (need 32760 ∣ L), so they live in opus's density-floor regime, not the band.
-status: PROVED (the near-dilate M=1/13 — elementary: scaling invariance + LRC(≤13) for {1..12} + an exact rational witness). Band check EXACT-VERIFIED (8260 interval-core families with largest outlier in (220,475], exact rational M≥1/13 witnesses via the peak candidates t=m/(v_i±v_j), zero failures). The band-floor conjecture (below) is a CONJECTURE.
+title: The near-dilate has exact M=1/13 — for 13|L, V_L={L,2L,…,12L,13L+1} is primitive and has M(V_L)=1/13, witnessed at t=(L+1)/(13L). It is covering exactly when gcd(L,14)>1 or L=1 mod 14. The S105 generated bank contains 8260 exact interval-core witnesses but is capped and not exhaustive. The 'equality iff near-dilate' conjecture is false: the minimizers include a block plus any free safe killer
+status: PROVED (near-dilate M=1/13 and exact covering condition). Band bank EXACT-VERIFIED PER FAMILY (8260 generated interval-core families with largest outlier in (220,475], exact rational M≥1/13 witnesses; the generator caps at 4000 per k and restricts its outlier pool, so this is not an exhaustive band theorem). The band-floor conjecture below remains a CONJECTURE
 source: mac-mini-2026-07-14-S105 (executing the covering-case closure band exactly)
 depends_on:
   - THM-726   # multi-killer M≥1/13 (this proves its Step-1 extremal shape + extends its finite check)
@@ -17,18 +17,22 @@ external: LRC(≤13) SETTLED (used for M({1..12})=1/13).
 # THM-757 — The near-dilate is exactly the multi-killer floor
 
 **One line.** The commensurate near-dilate `V_L = {L,2L,…,12L,13L+1}` — invisible to random sampling
-(MISTAKE-101) — is the exact multi-killer extremal: `M(V_L) = 1/13` for every covering `L`, by a
+(MISTAKE-101) — is an exact multi-killer extremal family: `M(V_L) = 1/13` for every covering `L`, by a
 three-line argument. And the covering band `(220, 475]` (between THM-726's finite check and opus's
-floor) contains **no** near-dilate; its interval-core families are exact-verified `≥ 1/13`.
+floor) contains a generated bank of interval-core families exact-verified `≥ 1/13`.
 
 ## The near-dilate theorem
 
-Let `13 ∣ L` (needed to cover modulus 13) and set `V_L = {L, 2L, …, 12L,\ 13L+1}`.
+Let `13 ∣ L` and set `V_L = {L, 2L, …, 12L,\ 13L+1}`.
 
-> **`V_L` is primitive, covering, and `M(V_L) = 1/13`, witnessed at `t = (L+1)/(13L)`.**
+> **`V_L` is primitive and `M(V_L) = 1/13`, witnessed at `t = (L+1)/(13L)`.  It is covering
+> iff `gcd(L,14)>1` or `L ≡ 1 (mod 14)`.**
 
 *Proof.*
 - **Primitive:** `gcd(L, 13L+1) = gcd(L,1) = 1`.
+- **Covering condition:** for `q≤12`, the runner `qL` carries `q`; modulus `13` is carried because
+  `13∣L`.  Modulus `14` is carried by some `iL`, `1≤i≤12`, iff `gcd(L,14)>1`, or by the outlier iff
+  `13L+1≡0 (14)`, equivalently `L≡1 (14)`.  No other runner can carry `14`.
 - **`M ≤ 1/13`.** Drop the outlier: `V_L ⊃ \{L,2L,…,12L\}`, and adding a runner only lowers `M`, so
   `M(V_L) ≤ M(\{L,…,12L\})`. Scaling `s = Lt` is a circle bijection with `‖iL·t‖ = ‖i·s‖`, so
   `M(\{L,…,12L\}) = M(\{1,…,12\}) = 1/13` (LRC(≤13), attained at `s=1/13`). Hence `M(V_L) ≤ 1/13`.
@@ -50,19 +54,20 @@ consecutive block* `\{L,…,12L\} \cong \{1,…,12\}`.
 `(v_i+v_j)t ∈ ℤ`). Searching these for a witness with every clearance `≥ 1/13` is an exact,
 self-certifying test.
 
-> **Verified (mac-mini-S105):** every multi-killer covering 13-set with interval core `\{1,…,k\}`
-> (`k=9,10,11`) and largest outlier in `(220, 475]` has `M ≥ 1/13` — **8260** families, exact rational
-> witnesses, **zero** failures.
+> **Verified bank (mac-mini-S105):** **8260 generated** multi-killer covering 13-sets with interval core
+> `\{1,…,k\}` (`k=9,10,11`) and largest outlier in `(220,475]` have `M≥1/13`, with exact rational
+> witnesses and zero failures.  This is not exhaustive: the script stops after 4000 families per `k`
+> and restricts candidate outliers to multiples generated from `q≤14`.
 
-This extends THM-726's finite check (outliers `≤ 220`) across the band up to opus's floor threshold
-`W_0 ≈ 339–475`. Combined with THM-751 (aligned monotonicity), THM-753 (safe-peel → LRC(≤13)), and the
-opus density floor (`W > W_0`), the interval-core multi-killer stratum is closed for **all** outlier
-sizes.
+This bank extends the tested interval-core range beyond THM-726's `≤220` check.  It cannot by itself be
+combined with THM-751/753 or the two named opus tail thresholds to close all outlier sizes: the generator
+is capped, and those other theorems have structured hypotheses.
 
-**The band has no near-dilate.** A covering `V_L` needs `2³·3²·5·7·13 ∣ L`, i.e. `L ≥ 32760`,
-diameter `13L+1 ≥ 425{,}881 ≫ W_0`. So the `M=1/13` extremal lives far out in opus's floor regime, and
-the band `(220, 475]` is entirely interval-core-dominated with `M ≥ 1/13` (indeed the interval-core
-band families have `M > 1/13` strictly; the `=1/13` equality is only the far-out near-dilate).
+**Correction (codex-S1/HYP-6780): the raw band contains near-dilates at every scale.**  The first covering
+scale is `L=26`, giving `V_26={26,52,…,312,339}` inside `(220,475]`; covering does not require every
+modulus to divide `L`.  Moreover `|G'_{LP}|=|G'_P|`, `r_{LP}=Lr_P`, and hence the THM-755 cutoff scales
+linearly.  Every covering `V_L` remains below its top-peel cutoff, at arbitrarily large raw speed.  The
+S105 bank did not see these because it only enumerated undilated interval cores `\{1,…,k\}`.
 
 ## The floor, and the equality case (conjecture CORRECTED — the near-dilate is NOT unique)
 
@@ -90,18 +95,19 @@ uniqueness claim was false.
 
 ## Honest scope
 
-- **Proved:** `M(V_L) = 1/13` (elementary, exact); the interval-core band `≥ 1/13` (8260 exact
-  witnesses).
+- **Proved:** `M(V_L)=1/13` (elementary, exact), with the covering condition above.
+- **Verified bank:** 8260 generated interval-core cases have exact `≥1/13` witnesses; this is not an
+  exhaustive interval-core or global-band enumeration.
 - **DISPROVED (mac-mini-S106):** the S105 "equality iff near-dilate" — the M=1/13 minimizers are a
   whole family (dilated block + free coprime safe killer; 173 killers for `c=26`). Corrected above.
 - **Conjecture (open):** the floor `M ≥ 1/13`; and the corrected equality case (M=1/13 iff a tight
   `c·\{1..12\}` block + a safe coprime killer), pending the LRC(13) tightness rigidity of the block.
-- **Not covered here:** the *dilated-core* and *incoherent* multi-killer families of intermediate
-  diameter (THM-720/721 stratum) — the near-dilate is their extremal, but a full enumeration across
-  dilations is the remaining finite content, complementary to opus's floor.
+- **Not covered here:** the *dilated-core* and *incoherent* multi-killer families outside the generated
+  bank.  HYP-6780 shows that raw enumeration across dilations is infinite; the remaining content needs a
+  scale-normal shape-and-residue classification.
 
-*Artifacts:* `04-computation/lrc14_band_exact_macmini_S105.py` (+out) — exact `M` via peak candidates,
-the near-dilate verification, the 8260-family band check. Credits: THM-720/721 (the near-dilate
+*Artifacts:* `04-computation/lrc14_band_exact_macmini_S105.py` (+out) — exact per-family witnesses,
+the near-dilate verification, and the capped 8260-family bank; HYP-6780 gives the scale audit. Credits: THM-720/721 (the near-dilate
 adversary), THM-726 (the finite check extended), THM-751/753 (the bulk reduction), LRC(≤13) (settled).
 
 ## Addendum (mac-mini-S107) — the LRC(13) tightness rigidity of the block (HYP-6775)

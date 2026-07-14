@@ -1,11 +1,11 @@
 ---
 id: THM-758
-title: The far-count split — covering ⟹ [≤3 elements >14 ⟹ ≥10 in {1..14} ⟹ kps THM-738, PROVED, and this half contains the covering-MIN and every TIGHT family] + [≥4 elements >14 ⟹ M ≥ 0.097 > 1/14, the LOOSE half, opus density (large-diameter) + a bounded-diameter finite check]. The equidistribution / disc / k=7 wall is DODGED: it lived only in the tight families, which are all in the proved kps half. This is the sharp form of "low-M covering ⟹ near-AP or safe element"
-status: REDUCTION — covering ⟹ M≥1/14 with NO open analytic statement. Claim A (≤3 far ⟹ ≥10-in-{1..14} ⟹ THM-738) is PROVED — pure counting + kps THM-738 (PROVED, all 1001 ten-bodies). Claim B (≥4 far ⟹ M≥1/14) is FINITE-DECIDABLE (klein-S310): opus's capped-envelope (THM-755, PROVED) gives M(S)>1/14 in one peel whenever max(S)>v*=r_P/(π|G'_P|), else all speeds ≤v*≤~500 and S is in the bounded finite band (mac-mini-S105 executed (220,475], 8260 families, 0 fails) atop the kps THM-738 base. So the disc/k=7 equidistribution is dodged on BOTH the structural (far-count) and analytic (capped-envelope) sides; only the exhaustive band execution remains.
+title: The far-count split — covering families with at most 3 elements above 14 are closed by THM-738; the f>=4 complement remains open after per-core capped-envelope, coherent-pack, cluster, and exact-certificate dispatch. Absolute far count is not a hardness classifier: scale-coherent covering rays have f=13 and M=1/13
+status: PARTIAL REDUCTION. Claim A (f<=3 implies at least 10 speeds in {1..14}, hence THM-738) is PROVED. Claim B is NOT globally finite-decided: THM-755 gives a finite interval only for each fixed core, the claimed terminal cutoff near 500 is sampled, and the S105 bank is capped and structurally restricted. HYP-6780 proves the cutoff is scale-covariant and supplies an unbounded primitive covering f=13 ray below it. The remaining target is a scale-normal coherent/cluster/incoherent classification, not raw bounded enumeration
 source: klein-2026-07-14-S309
 depends_on:
   - THM-738   # kps: every ≥10-in-{1..14} family is lonely (PROVED) — Claim A's engine
-  - THM-746   # opus: the density floor / discrepancy tower (large-diameter) — Claim B's large-W half
+  - THM-746   # opus: exact density floor for two named tail shapes; not a universal large-diameter dispatch
   - THM-726   # multi-killer M≥1/13 (≥2 far outliers) — supports Claim B
 related:
   - THM-755   # opus capped-envelope (H proved v>v*) — the analytic twin of this structural split
@@ -29,42 +29,38 @@ Let `S` be a covering 13-set and `f = #{s ∈ S : s > 14}` (the number of far el
 so `M(S) ≥ 1/14` by **kps THM-738** (every 13-speed family with `≥10` speeds in `{1..14}` is lonely,
 PROVED via the exact Bonferroni tree on all 1001 ten-element bodies). *Pure counting + a proved theorem.*
 
-**Claim B — `f ≥ 4`: `M(S) ≥ 1/14`.** With `≥4` elements above 14 the set is spread; verified
-`min M = 0.097 = 1.36×` of `1/14` over ~1500 sampled `≥4`-far covering families, the margin rising
-monotonically with `f` (`1.36×` at `f=8`, `2.44×` at `f=13`). This is the **loose / decorrelated** regime:
-it is covered by opus's density floor (THM-745/746) for large diameter, and by a **bounded-diameter finite
-check** (finitely many covering 13-sets with `≥4` elements in `(14, W₀]`, each with `M ≥ 0.097 > 1/14`) for
-the rest.
+**Claim B — `f ≥ 4`: `M(S) ≥ 1/14` (OPEN in general).**  The original sample suggested
+`M≥0.097`, but HYP-6780 refutes that stronger claim: the primitive covering near-dilates
+`V_c={c,2c,…,12c,13c+1}` have `f=13` and exact `M=1/13<0.097` at arbitrarily large scale.  They still
+satisfy LRC(14), by THM-757, and illustrate the missing coherent-pack dispatch.  Samples of genuinely
+incoherent `f≥4` bodies are loose, but neither far count nor raw diameter proves that classification.
 
-## Why this dodges the wall
+## Why the original wall-dodging conclusion was too strong
 
-The covering-**minimum** is the deep well `{1..12,182}` — **one** far element (`182`), so `f = 1 ≤ 3`:
-Claim A, kps THM-738. Every tight / binding family sits at `f ≤ 3` (single-killer `{1..12,182m}`: `f=1`;
-the residue body `{1..11,13,84}`: `f=1`; multi-killers with core `≥10` in `{1..14}`: `f ≤ 3`). So **the
-equidistribution / disc_v / k=7-shadow machinery is never needed** — it was built for families that are
-all in the proved kps half. The `f ≥ 4` families, where a *disc peel* would face a moderate element, are
-exactly the ones with a `1.36×`+ loose margin, where a crude decorrelation bound (not the sharp
-equidistribution) suffices.
+The deep well and the named undilated binding families do lie in Claim A.  That does not imply every
+scale-coherent or low-margin family does: dilation preserves `M` while changing `f`.  The correct split
+must first quotient coherent packs and translated/hierarchical clusters.  Only the normalized
+incoherent residual is a plausible loose-margin class.
 
-This is the sharp, provable form of the S308 redirect ("low-`M` covering ⟹ near-AP or safe element"):
-**low-`M` ⟹ `f ≤ 3` ⟹ near-AP (kps THM-738)**, and `f ≥ 4` ⟹ loose.
+The S308 redirect "low-`M` covering implies near-AP or safe" may still have a scale-normal version, but
+its absolute far-count form is false: `V_c` is low-`M` with `f=13`.  THM-738 proves only the forward
+statement `f≤3 => lonely`; it does not classify every low-`M` family.
 
-## Claim B is FINITE-DECIDABLE, not the equidistribution (klein-S310)
+## Per-core decidability does not give a global finite band (codex-S1 correction)
 
-Claim B closes to a **bounded finite check** via opus's capped-envelope, with no equidistribution. For a
-`≥4`-far covering `S`, let `v = max(S)`, `P = S\{v}`, `v* = r_P/(π|G'_P|)` (opus THM-755):
+For an `≥4`-far covering `S`, let `v=max(S)`, `P=S\{v}`, and
+`v*=r_P/(π|G'_P|)` (THM-755).  This gives the following per-core dichotomy, not a global finite check:
 
 - **`v > v*`:** the capped-envelope `disc_v ≤ 4r_P|G'_P|/(πv) + 2|G'_P|²` gives `disc_v < 6|G'_P|²`
   (⟺ `v > v*`), so THM-731's `L(S) = (6/7)|G'_P| − ε_v > 0`, i.e. `M(S) > 1/14`. **PROVED in one peel.**
-- **`v ≤ v*`:** then *all* speeds are `≤ v*`, and the capped-envelope peel terminates at a **bounded** core.
-  Verified: over ~120 `≥4`-far covering families the terminal `maxP ≤ 497` (median 188). So the residual is
-  the **finite band** — covering 13-sets with all speeds in the bounded window — which mac-mini-S105
-  executed exactly (8260 interval-core band families in `(220,475]`, all `M ≥ 1/13`, zero fails), on top of
-  the kps THM-738 base.
+- **`v ≤ v*`:** this bounds `v` only relative to that core.  Under `P→cP`, good-set measure is invariant,
+  the component count and `v*` both multiply by `c`, so no uniform raw bound follows.  The `497` figure is
+  the maximum in 120 sampled families.  S105 exact-verified 8260 generated interval-core cases but capped
+  at 4000 per `k` and restricted the outlier pool; it did not execute the global residual.
 
-So Claim B = **[`v>v*`: opus capped-envelope THM-755, PROVED] + [`v≤v*`: bounded finite band, mac-mini-S105
-executed] + [base ⊆{1..14}: kps THM-738, PROVED]** — every piece finite or proved, and the disc/k=7
-equidistribution is dodged on both the structural (far-count) and analytic (capped-envelope) sides.
+Thus Claim B currently equals **[`v>v*`: THM-755, proved per peel] + [coherent/cluster routes, partly
+proved] + [scale-normal residual, open]**.  HYP-6750's `q≤25` good-period bank is useful exact evidence
+on 120 sampled residuals, not yet a uniform bounded-denominator theorem.
 
 ## The band residual closes via a bounded-`q` RATIONAL WITNESS, not a crude bound (klein-S312)
 
@@ -77,26 +73,26 @@ crude analytic bound** — tested and refuted (HYP-6750). Both natural forms fai
   **conditionally** — `G≈0.12` is a signed cancellation of `~10⁴`-size terms. This is the known
   **"signed not absolute" cancellation wall**; no unsigned/truncated certificate can capture it.
 
-**Resolution.** Every band-residual family is *loose*, hence has a **good period**: a small-`q` rational
-lonely witness `a/q` with all `(c·a mod q) ∈ [q/14, 13q/14]`, so `‖c·a/q‖ ≥ 1/14` and `M(S) ≥ 1/14`.
-**Verified 120/120 band-residual families have `q ∈ [15, 25]`** (median 17). This is a rigorous, decidable,
-**cheap** per-family certificate (a bounded-`q` search, not exact-`M`), and it works *precisely because* the
-band residual is loose — tight APs have **no** good period, but those are the kps/Claim-A half (THM-738).
-So the covering endgame is a clean dichotomy aligned with the far-count split: **loose ⟺ good period
-(`q≤25`), tight ⟺ Bonferroni tree (kps)**. The finite band enumeration (mac-mini) now carries a cheap
-per-family certificate.
+**Evidence and candidate resolution.** A good period is a small-`q` rational lonely witness `a/q` with
+all `(c·a mod q) ∈ [q/14,13q/14]`; it is a rigorous, cheap certificate for each family where it is found.
+The S312 bank found one with `q∈[15,25]` for 120/120 sampled residuals (median 17).  This motivates the
+uniform conjecture "every normalized incoherent residual has such a good period", but does not prove it:
+the raw residual is not globally bounded, the sample is not exhaustive, and scale-coherent rays require
+their separate pack/witness routes.  The proposed loose-good-period versus tight-Bonferroni dichotomy is
+therefore a useful target, not yet the covering endgame theorem.
 
 ## What remains
 
-Only the **exhaustive execution** of the bounded finite band (mac-mini-S105 has done the interval-core
-range `(220,475]`; the general per-core band edge is `v* = r_P/(π|G'_P|) ≤ ~500`). No open *analytic*
-statement remains in the covering case: Claim A is proved, Claim B is finite-decidable via the proved
-capped-envelope, and the tight core (incl. the covering-minimum) is closed by kps THM-738.
+The main obligation is a **scale-normal structure theorem** for `f≥4`: coherent dilation packs should
+route to THM-668/737, translated or hierarchical clusters to THM-739/740, capped incoherent peels to
+THM-755/731/732, and the remaining normalized shape-plus-residue atlas must be shown finite or
+recursively decreasing.  Independently, running the still-CLAIMED THM-741 four-slot census would extend
+the exact near-AP closure from `f≤3` to `f≤4`.
 
-**Status ledger.** PROVED: Claim A (all covering with `f≤3`, incl. the covering-min and every tight
-family). VERIFIED + reduces to opus-density/finite: Claim B (`f≥4`, loose). So `covering ⟹ M≥1/14` holds
-except the loose `≥4`-far margin bound — a decorrelation estimate with `1.36×` room, dominated by opus's
-capped-envelope (THM-755) and density floor.
+**Status ledger.** PROVED: Claim A (`f≤3`).  PROVED per fixed peel/core: THM-755.  PROVED on named
+coherent and cluster families: the corresponding pack/cluster theorems.  VERIFIED only: broad `f≥4`
+looseness and bounded-`q` witness banks.  OPEN: completeness of those routes on the scale-normal
+`f≥4` residual.
 
 *Files: `04-computation/lrc14_claimAB_klein_S309.py`, `lrc14_far_split_klein_S309.py` (+.out). HYP-6720.
 The structural twin of opus's analytic capped-envelope (THM-755) and mac-mini's safe-peel (THM-753).*

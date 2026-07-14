@@ -1,0 +1,30 @@
+HYP-6780 exact scale audit
+base P={1..12}: |G_P|=6617/194040, r_P=12
+
+Direct dilation checks:
+  c=  1: |G_cP|=6617/194040, r_cP=  12, v*(cP)/c=112.011214112322
+  c=  2: |G_cP|=6617/194040, r_cP=  24, v*(cP)/c=112.011214112322
+  c=  7: |G_cP|=6617/194040, r_cP=  84, v*(cP)/c=112.011214112322
+  c= 13: |G_cP|=6617/194040, r_cP= 156, v*(cP)/c=112.011214112322
+  c= 26: |G_cP|=6617/194040, r_cP= 312, v*(cP)/c=112.011214112322
+  c= 91: |G_cP|=6617/194040, r_cP=1092, v*(cP)/c=112.011214112322
+
+Near-dilate covering condition (exhaustive c<=500 check):
+  first covering scales: [26, 52, 78, 91, 104, 130, 156, 169]
+
+Unbounded uncapped covering ray:
+  c=  26: max=   339, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  c=  91: max=  1184, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  c= 169: max=  2198, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  c= 182: max=  2367, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  c= 364: max=  4733, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  c=1820: max= 23661, f=13, clearance@((c+1)/(13c))=1/13, top-peel=UNCAPPED
+  Hence f>=4 does not imply the sampled M>=0.097 margin.
+  The ray is nevertheless closed exactly: core upper bound and witness give M=1/13.
+
+Tournament Analysis (vertices are quotient carriers, not runners):
+  predicate_first: values={'raw_set': 18, 'gcd_normalized': 18, 'core_shape': 5, 'shape_plus_residue': 20, 'certificate_only': 10}; score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}; 3cycles=0; SCCs=[['certificate_only'], ['core_shape'], ['gcd_normalized'], ['raw_set'], ['shape_plus_residue']]; Hamiltonian_paths=1
+  compression_first: values={'raw_set': 13, 'gcd_normalized': 13, 'core_shape': 13, 'shape_plus_residue': 23, 'certificate_only': 16}; score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}; 3cycles=0; SCCs=[['certificate_only'], ['core_shape'], ['gcd_normalized'], ['raw_set'], ['shape_plus_residue']]; Hamiltonian_paths=1
+  edge_flips_between_gauges=2
+  declared_tie_Hamiltonian_path=('shape_plus_residue', 'raw_set', 'gcd_normalized', 'core_shape', 'certificate_only')
+  Verdict: shape+residue is stable first. Core shape alone preserves the capped ratio but destroys covering/primitivity; raw runners preserve truth but do not collapse the infinite ray.

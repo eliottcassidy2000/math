@@ -31,6 +31,7 @@ from fractions import Fraction as F
 import math
 
 LAM = F(1, 14)          # the LRC(14) threshold
+PI_LO = F(333, 106)     # classical strict lower bound for pi
 __all__ = ["LAM", "good_intervals", "L_exact", "M_exact", "disc_exact",
            "thm731_certificate", "capped_envelope_vstar", "h_band_protocol",
            "fine_comb_witness", "clean_slot_witness", "slot_feasible", "is_covering"]
@@ -115,8 +116,8 @@ def thm731_certificate(body, v, lam=LAM):
 
 def capped_envelope_vstar(core, lam=LAM):
     """THM-755's band edge: (H) holds unconditionally for every v > v* = r/(pi |G'|).
-    Returns (vstar_float, r, G_exact).  Above vstar the peel certificate fires with no
-    further computation."""
+    Returns (vstar_float, r, G_exact) for reporting only.  Certificate decisions must use
+    a rigorous comparison, as h_band_protocol does below."""
     ivs = good_intervals(core, lam)
     G = sum(b - a for a, b in ivs); r = len(ivs)
     return (r / (math.pi * float(G)) if G > 0 else float("inf")), r, G
@@ -189,7 +190,9 @@ def h_band_protocol(body, lam=LAM):
     v = max(body)
     core = [x for x in body if x != v]
     vstar, r, G = capped_envelope_vstar(core, lam)
-    if G > 0 and v > vstar: return 1, ("THM-755", vstar)
+    # PI_LO < pi, so PI_LO*v*G > r rigorously implies v > r/(pi*G).
+    # A borderline true case may fall through, but a false certificate cannot fire.
+    if G > 0 and PI_LO * v * G > r: return 1, ("THM-755", vstar)
     if G > 0 and disc_exact(core, v, lam) < 6 * G * G: return 2, ("exact-(H)", v)
     w = fine_comb_witness(body, lam)
     if w: return 3, ("fine-comb", w)

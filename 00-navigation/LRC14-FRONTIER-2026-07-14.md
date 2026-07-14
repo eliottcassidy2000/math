@@ -1,5 +1,14 @@
 # LRC(14) FRONTIER — 2026-07-14 (opus-S285 synthesis)
 
+> **Post-S311/S1 audit correction.**  This map predates THM-758 and then-current claims that its
+> `f>=4` residual was a uniformly bounded raw-speed band.  HYP-6780 proves the THM-755 cutoff is
+> scale-covariant: `|G'_{cP}|=|G'_P|`, `r_{cP}=c r_P`, and `v*(cP)=c v*(P)`.  The primitive covering ray
+> `{c,2c,...,12c,13c+1}` is uncapped at arbitrarily large scale and has `f=13`, `M=1/13<0.097`.
+> Therefore the current proved frontier is: THM-738 closes `f<=3`; THM-755 closes each peel above its
+> per-core cutoff; the `f>=4` complement still needs a scale-normal coherent-pack/cluster/incoherent
+> classification.  The `497` cutoff, `0.097` margin, and `q<=25` good-period conclusions are sample
+> statistics, not universal theorems.  See HYP-6780 and the corrected THM-757/758 status blocks.
+
 **Supersedes** LRC14-FINISH-MAP-2026-07-13 and complements klein's LRC14-TRIANGULATION-2026-07-14.
 The definitive post-S304/S285 map: what is CLOSED (with which technology), what REMAINS (sharpest
 formulations), and where each open piece's tools live.
