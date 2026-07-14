@@ -26,6 +26,21 @@ FILES: THM-755 canon; HYP-6700; lrc14_capped_envelope_thm755_opus_S289.out. -> k
 is discharged above v*; the skeleton's residual is the finite band -- your S306 merge + this =
 the assembly's last mile is enumerable), kps (the band contents are exact-Q territory; band
 edges are one-line computables), mac-mini (tight-core-only residual = your binding tiles' home).
+## klein-2026-07-14-S307 -- discharge (H): opus already reduced it to the k=7 terminal form "covering ⟹ some (7,a)-slot survives" (620k zero, structural margin). CONFIRMED (corrected test, 0/2500, tight family at exactly 1 slot) but PROOF-OPEN = the covering case itself (S300). Honest: (H) is the irreducible core in its smallest form. + resolved THM-753 collision (mine → THM-755).
+
+Prompt (owner): discharge (H) via opus's finite mod-360360 residual.
+
+WHAT I FOUND — opus already did the classification (S287): ~620k bodies (21,459 rigidity-guided CRT extremal blockers + 250k adversarial), ZERO all-blocked, optimal blockers keep 57/57 slots (STRUCTURAL margin), and REDUCED (H) to its TERMINAL FORM: low-M covering ⟹ some (7,a)-slot survives (the k=7 clock; margin (14−k)/(14k)=1/14 self-dual at k=7). opus-S288/THM-754 then proved the 7-CLOCK PARTITION (the 6 unit cells + origin tile the circle; k=7 unique self-dual; (7,a)-slots PARTITION LRC(14)) and stated explicitly: full-window k=7 survival IS (A) = my (H) in slot coordinates.
+
+MY CONTRIBUTION: CONFIRMED opus's k=7 reduction with a CORRECTED window-scan test (my first test was buggy — it caught only each speed's FIRST tooth, missing the periodic teeth of large speeds; fixed). Results match opus: AP survives (7,{1,2}); GW same; deep well {1,2,3}; the TIGHTEST binding {1..13\6,182} (M=2/23) at EXACTLY 1 slot (a=1) — the razor's edge, opus's "last shadow standing"; covering hunt 0/2500 with no (7,a) slot. So covering ⟹ some (7,a) survives, robustly.
+
+HONEST VERDICT: (H) is NOT dischargeable by a clean elementary lemma. It IS the equidistribution in its smallest form (ONE clock, ≤3 slots, razor-thin at the extremal), and proving the k=7 witness = proving the covering case (klein-S300 equivalence). opus's THM-754 clean-slot criterion (my THM-748's mod-7 sibling) fires only 16% — SILENT on the extremals, the same wall. So the elementary route covers the easy majority; the tight extremal core is genuine.
+
+THE FLEET HAS REDUCED (H) MAXIMALLY: mac-mini-S103 safe-peel (THM-753, ~98%→LRC(≤13)) + irreducible 2% = [kps near-AP THM-738 PROVED] + [opus loose density] + [k=7-shadow = (H), the razor]. This IS the smallest form of the covering case's hard core.
+
+HOUSEKEEPING: THM-753 collision resolved — mac-mini safe-peel committed 10:53 (first) vs my merged-closure 10:59; renumbered MINE THM-753→THM-755 (id/file/triangulation refs + banner: mac-mini's safe-peel is the primary reducer my assembly sits atop).
+
+FILES: HYP-6700; THM-755 (renamed from THM-753); 04-computation/lrc14_k7_corrected_klein_S307.py (+out). -> opus-S287/S288/THM-754, mac-mini-S103/THM-753, HYP-6685/6690. Sent to all.
 
 ---
 ## opus-2026-07-14-S288 -- THM-754: the 7-CLOCK PARTITION THEOREM (the six unit cells + origin cell TILE the circle exactly: k=7 unique self-dual; the (7,a)-slot family is a PARTITION of LRC(14), not a restriction -- the S287 collapse EXPLAINED; tight witnesses live on cell CORNERS) + the clean-slot criterion (THM-748's mod-7 sibling: explicit delta*, fires 16% census, silent on extremals); the full-window k=7 survival IS (A) = klein-S306's (H) in slot coordinates

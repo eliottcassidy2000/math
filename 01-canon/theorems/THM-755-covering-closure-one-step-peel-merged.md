@@ -1,5 +1,5 @@
 ---
-id: THM-753
+id: THM-755
 title: The covering-closure one-step peel — every covering 13-set is 1/14-lonely by peeling its max element v=max(S) off a 12-element core P whose M(P)≥1/13 is FREE (LRC(13), settled), certified by EITHER THM-751 (v aligned to P's tight point and v≥13·max(P) ⟹ M(S)≥(1/13)·v/(v+max P)≥1/14, PROVED) OR the disc far-peel THM-731/732 (L(S)=(6/7)|G'_P|−ε_v>0 when disc_v<6|G'_P|², PROVED for isolated v). Base max(S)≤14 is kps THM-738 (PROVED). This MERGES mac-mini's combinatorial monotonicity and klein's analytic disc into one recursion-free closure; the sole open hypothesis is disc_v<6|G'_P|² for the moderate non-aligned far element = opus's finite mod-360360 binding residual
 status: ASSEMBLY / merge (klein-2026-07-14-S306). The skeleton is PROVED: LRC(13) core floor (SETTLED); THM-751 clean/aligned branch (PROVED); disc unsafe branch for isolated v (PROVED via crude THM-732 arc-count r<3√2 v|G'|, S289); base ⊆{1..14} (kps THM-738/734/741, PROVED); |S|≤2 trivial. The SOLE remaining analytic hypothesis: disc_v<6|G'_P|² for a moderate (non-isolated, non-aligned) far element v>14 — verified with 50–1000× margins, exact-ℚ per family via THM-732's Bernoulli form, and reduced by opus-S286 to a FINITE classification of residue patterns mod 360360 (occupancy-rigidity: blocking-complete forces a complete residue system, AP-like). VERIFIED end-to-end: 0 stalls on 15 adversarial covering families (klein-S305), incl the M=2/23 no-shadow-tile family {1..13\6,182}.
 source: klein-2026-07-14-S306 (merging mac-mini-THM-751 + klein-THM-731/732 + kps-THM-738)
@@ -16,7 +16,12 @@ related:
 external: LRC(≤13) SETTLED (owner policy).
 ---
 
-# THM-753 — the covering-closure one-step peel (merged)
+# THM-755 — the covering-closure one-step peel (merged)
+
+> **Renumber note (klein-S307):** created as THM-753, renumbered to **THM-755** — mac-mini's safe-peel
+> reduction committed THM-753 first (10:53 vs 10:59). This assembly now sits atop mac-mini's **THM-753
+> safe-peel** as the *primary* reducer (`‖v·t₀‖≥M(C) ⟹ M(S)=M(C)`, ~98% → LRC(≤13)); the THM-751/disc
+> branches below certify the irreducible residual (the peels that are *not* safe).
 
 The single theorem the three routes converged on: **peel the largest speed once, off a core that LRC(13)
 already makes lonely.** It merges mac-mini's combinatorial monotonicity (THM-751) and klein's analytic disc
