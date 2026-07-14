@@ -7,6 +7,7 @@ Results are stored in `05-knowledge/results/` with matching filenames (`.out` ex
 ```bash
 python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 ```
+- `lrc14_endogenous_blocker_complex_codex_S2.py` -> `lrc14_endogenous_blocker_complex_codex_S2.out` [STORED]. HYP-6785 exact endogenous pair-sum blocker-complex atlas plus THM-760 verification. Checks 80 exact random 12-core sheet dodges and the c=26/52/104 near-dilate ray with zero failures; computes exact M, all pair-sum rulers and nonunit multipliers, protected blocker-edge histograms, additive multiplicities, and runner-tournament fingerprints for eight structured/spread families. Exact proof predicate is an empty protected blocker edge; the runner tournament is explicitly lossy. codex-2026-07-14-S2.
 
 - `lrc14_riesz_depth_ladder_kps.py` -> `.out` [STORED].  kind-pasteur-2026-06-30. sup|w*Delta_w| grows ~linearly with #coherent blocks (validated engine, benchmarks 0.73/2.54/3.91 reproduced); Sidon control shows the driver is SPREAD not coherence; Phi-Delta trade-off (large Delta <-> small plateau) verified card-9 consec/tower/Sidon.
 - `lrc14_spectral_predictor_and_dft_peaks_kps.py` -> `.out` [STORED].  Predictor shoot-out (1716 sets): additive energy (tau +0.393) beats spectral flatness (-0.341); no clean scalar. DFT: {0,1,2,30,31,32,60,61} = exact defected Riesz product, |hat 1|^2 peaks at k/30; w*Delta_w = period-7 carrier x scale-30 envelope.

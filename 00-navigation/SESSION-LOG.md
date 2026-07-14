@@ -61674,3 +61674,36 @@ near-attackers `0`; consecutive remains the minimizer with floors
 `1891/5880`, `28117/84084`, `242/637`, `10078/28665`.  Proof target is now
 large-span gentleness: prove every span>`k+5` row has `mu_1/7>=thr_k`, or
 extend the finite bank until a known spread lemma applies.
+
+---
+
+## codex-2026-07-14-S2 -- frontier audit, THM-760, and exact blocker complex (CHECKPOINT)
+
+Audited the July 14 covering endgame against its theorem bodies.  The proved
+frontier is THM-366 (non-covering) plus THM-738/THM-758 Claim A (at most three
+far speeds), and THM-755's per-core capped-envelope tail.  The remaining
+at-least-four-far band is not uniformly raw-bounded: HYP-6780 gives
+v*(cP)=c v*(P).  THM-758's q<=25 observation is a 120-family certificate
+sample, not yet a theorem.  THM-724/726 likewise contain empirical/global
+routing gaps beneath stronger headlines, so the global 14/183 covering
+minimum remains a target rather than a completed theorem.
+
+New exact contribution THM-760: for c>=2 and gcd(c,w)=1,
+M(cP union {w})>=min(M(P),1/2-1/(2c)).  The c lifted witness sheets preserve
+the core margin, while the exceptional phases permute a complete c-grid.
+Consequently any primitive thirteen-speed family with a twelve-speed
+common-factor core has M>=1/13.  This analytically closes the unbounded
+one-exception scale ray exposed by HYP-6780.
+
+Completed HYP-6785's exact endogenous pair-sum blocker complex.  For every
+THM-668 ruler q=v_i+v_j and every multiplier, including nonunits, retain the
+protected endpoints and the simultaneous unsafe-runner edge.  Then
+M(S)>=delta iff some retained edge is empty.  The exact companion atlas
+verifies THM-760 on 80 deterministic random twelve-core cases, checks the
+c=26/52/104 ray, and reports blocker and Tournament Analysis fingerprints for
+eight families.  The tournament is explicitly diagnostic: it loses
+simultaneous obstruction intersections.  The new frontier atlas records 30+
+viewpoints, the scale-normal witness-obstruction complex, 48 ranked pull
+cards, and 16 guardrails for future agents.  Rebase note: mac-mini's ratio
+theorem claimed THM-759 first, so the sheet-dodge theorem was renumbered
+THM-760.

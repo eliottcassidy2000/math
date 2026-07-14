@@ -1,0 +1,79 @@
+THM-760 SHEET-DODGE VERIFICATION
+  exact random trials=80, failures=0
+  smallest exhibited sheet margin=4/29 at c=9, w=44, t=1/87
+  theorem floor: min(M(core), 1/2-1/(2c)); LRC(<=13) corollary >= 1/13
+  scaled-block c=26, w=339: sheet=13, t=85/169, exceptional=84/169, margin=1/13, coreM=1/13
+  scaled-block c=52, w=677: sheet=26, t=339/676, exceptional=337/676, margin=1/13, coreM=1/13
+  scaled-block c=104, w=1353: sheet=52, t=677/1352, exceptional=675/1352, margin=1/13, coreM=1/13
+  scaled-block c=26, w=15: sheet=6, t=79/338, exceptional=167/338, margin=1/13, coreM=1/13
+
+ENDOGENOUS BLOCKER-COMPLEX ATLAS
+AP: M=1/14 (0.071429), witness=1/14, pair=(1,13), max_pair_mult=6
+  c=1/14: obligations=1014, empty=42, blocker_sizes={0: 42, 1: 612, 2: 256, 3: 36, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 9: 2, 10: 2, 12: 1}, 'cycles3': 2, 'scc_sizes': [4, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 5}
+  c=14/183: obligations=1008, empty=0, blocker_sizes={1: 612, 2: 292, 3: 36, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 1, 8: 3, 9: 1, 11: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 11}
+  c=1/13: obligations=1008, empty=0, blocker_sizes={1: 612, 2: 292, 3: 36, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 1, 8: 3, 9: 1, 11: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 11}
+  edge_flips(14/183 -> 1/13)=0
+GW: M=1/14 (0.071429), witness=1/14, pair=(1,13), max_pair_mult=5
+  c=1/14: obligations=1152, empty=42, blocker_sizes={0: 42, 1: 638, 2: 360, 3: 44, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 1, 8: 1, 9: 4, 12: 1}, 'cycles3': 7, 'scc_sizes': [6, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 37}
+  c=14/183: obligations=1146, empty=0, blocker_sizes={1: 608, 2: 426, 3: 44, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+  c=1/13: obligations=1146, empty=0, blocker_sizes={1: 608, 2: 426, 3: 44, 4: 40, 6: 28}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+  edge_flips(14/183 -> 1/13)=0
+deep_well: M=14/183 (0.076503), witness=14/183, pair=(1,182), max_pair_mult=6
+  c=1/14: obligations=2933, empty=74, blocker_sizes={0: 74, 1: 1874, 2: 700, 3: 126, 4: 106, 5: 2, 6: 26, 7: 21, 8: 2, 12: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+  c=14/183: obligations=2883, empty=2, blocker_sizes={0: 2, 1: 1704, 2: 872, 3: 148, 4: 106, 5: 2, 6: 14, 7: 31, 9: 2, 12: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+  c=1/13: obligations=2881, empty=0, blocker_sizes={1: 1694, 2: 882, 3: 148, 4: 106, 5: 2, 6: 14, 7: 31, 9: 2, 12: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+  edge_flips(14/183 -> 1/13)=0
+second_rung: M=7/89 (0.078652), witness=37/89, pair=(5,84), max_pair_mult=5
+  c=1/14: obligations=1828, empty=10, blocker_sizes={0: 10, 1: 1050, 2: 562, 3: 108, 4: 40, 5: 16, 6: 40, 11: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 9: 3, 11: 1, 12: 1}, 'cycles3': 1, 'scc_sizes': [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 3}
+  c=14/183: obligations=1818, empty=4, blocker_sizes={0: 4, 1: 956, 2: 622, 3: 136, 4: 42, 5: 16, 6: 30, 7: 10, 11: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 2, 9: 2, 11: 1, 12: 1}, 'cycles3': 2, 'scc_sizes': [4, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 5}
+  c=1/13: obligations=1818, empty=4, blocker_sizes={0: 4, 1: 956, 2: 622, 3: 136, 4: 42, 5: 16, 6: 30, 7: 10, 11: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 2, 9: 2, 11: 1, 12: 1}, 'cycles3': 2, 'scc_sizes': [4, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 5}
+  edge_flips(14/183 -> 1/13)=0
+compressed: M=1/13 (0.076923), witness=1/26, pair=(2,24), max_pair_mult=6
+  c=1/14: obligations=1881, empty=146, blocker_sizes={0: 146, 1: 1002, 2: 558, 3: 60, 4: 72, 6: 42, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 9: 3, 10: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 13}
+  c=14/183: obligations=1871, empty=84, blocker_sizes={0: 84, 1: 970, 2: 638, 3: 64, 4: 72, 6: 42, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 8: 4, 9: 1, 10: 1, 12: 1}, 'cycles3': 7, 'scc_sizes': [6, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 33}
+  c=1/13: obligations=1871, empty=84, blocker_sizes={0: 84, 1: 970, 2: 638, 3: 64, 4: 72, 6: 42, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 8: 4, 9: 1, 10: 1, 12: 1}, 'cycles3': 7, 'scc_sizes': [6, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 33}
+  edge_flips(14/183 -> 1/13)=0
+near_dilate_c26: M=1/13 (0.076923), witness=27/338, pair=(26,312), max_pair_mult=6
+  c=1/14: obligations=26395, empty=2618, blocker_sizes={0: 2618, 1: 14182, 2: 6332, 3: 1502, 4: 1012, 5: 126, 6: 514, 7: 92, 8: 8, 9: 2, 11: 2, 12: 5}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 9: 2, 10: 2, 12: 1}, 'cycles3': 2, 'scc_sizes': [4, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 5}
+  c=14/183: obligations=26233, empty=1610, blocker_sizes={0: 1610, 1: 14052, 2: 7200, 3: 1602, 4: 1012, 5: 130, 6: 518, 7: 92, 8: 6, 9: 6, 12: 5}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 9: 3, 10: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 13}
+  c=1/13: obligations=26217, empty=1584, blocker_sizes={0: 1584, 1: 13934, 2: 7316, 3: 1596, 4: 1026, 5: 130, 6: 520, 7: 92, 8: 8, 9: 4, 10: 2, 12: 5}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 9: 3, 10: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 13}
+  edge_flips(14/183 -> 1/13)=0
+safe_killer_c26: M=1/13 (0.076923), witness=1/169, pair=(26,312), max_pair_mult=6
+  c=1/14: obligations=22735, empty=2478, blocker_sizes={0: 2478, 1: 11874, 2: 5512, 3: 1282, 4: 908, 5: 106, 6: 476, 7: 90, 8: 2, 9: 2, 10: 2, 11: 2, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 2, 9: 1, 10: 2, 12: 1}, 'cycles3': 3, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 9}
+  c=14/183: obligations=22593, empty=1584, blocker_sizes={0: 1584, 1: 11756, 2: 6288, 3: 1374, 4: 910, 5: 110, 6: 480, 7: 88, 8: 2, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 9: 3, 10: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 13}
+  c=1/13: obligations=22593, empty=1584, blocker_sizes={0: 1584, 1: 11756, 2: 6288, 3: 1374, 4: 910, 5: 110, 6: 480, 7: 88, 8: 2, 12: 1}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 9: 3, 10: 1, 12: 1}, 'cycles3': 4, 'scc_sizes': [5, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 13}
+  edge_flips(14/183 -> 1/13)=0
+spread_blocker: M=406/1669 (0.243259), witness=1147/3338, pair=(1482,1856), max_pair_mult=2
+  c=1/14: obligations=162879, empty=27390, blocker_sizes={0: 27390, 1: 56766, 2: 47112, 3: 22188, 4: 7156, 5: 1862, 6: 334, 7: 40, 8: 29, 9: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 4: 1, 6: 2, 7: 4, 8: 1, 11: 1, 12: 1}, 'cycles3': 16, 'scc_sizes': [8, 1, 1, 1, 1, 1], 'hamiltonian_paths': 389}
+  c=14/183: obligations=161181, empty=23426, blocker_sizes={0: 23426, 1: 53332, 2: 48066, 3: 24860, 4: 8652, 5: 2286, 6: 480, 7: 44, 8: 33, 9: 2}
+    tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 5: 3, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 1, 'scc_sizes': [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 3}
+  c=1/13: obligations=161065, empty=23124, blocker_sizes={0: 23124, 1: 53062, 2: 48152, 3: 25022, 4: 8808, 5: 2316, 6: 502, 7: 44, 8: 33, 9: 2}
+    tournament={'score_hist': {1: 2, 2: 1, 4: 3, 5: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'cycles3': 6, 'scc_sizes': [7, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 41}
+  edge_flips(14/183 -> 1/13)=2
+
+METHODOLOGY
+  exact predicate retained: an empty protected blocker edge <=> M(S)>=target (THM-668)
+  destroyed by runner tournament: simultaneous cover intersections, exact margins, ruler labels
+  challenged assumption: witness sheets/proof obligations, not runners, are the natural proof vertices
