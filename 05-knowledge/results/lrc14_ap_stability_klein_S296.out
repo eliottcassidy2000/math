@@ -1,0 +1,17 @@
+|G(C)∩middle| and the good-arc locations in [1/14,1/2] (AP-cluster {2..13} should be ~0):
+  {2..13} AP-cluster       |G∩mid|=0.00000  first-half good arcs (center,width): []
+  {2..12,14} drop13add14   |G∩mid|=0.02390  first-half good arcs (center,width): [(np.float64(0.077), np.float64(0.00085)), (np.float64(0.1539), np.float64(0.0017)), (np.float64(0.2312), np.float64(0.00198)), (np.float64(0.3083), np.float64(0.00238)), (np.float64(0.3848), np.float64(0.00179)), (np.float64(0.4627), np.float64(0.00325))]
+  {2..14}\{6}              |G∩mid|=0.00816  first-half good arcs (center,width): [(np.float64(0.16), np.float64(0.00137)), (np.float64(0.174), np.float64(0.00271))]
+  {3..14}                  |G∩mid|=0.03022  first-half good arcs (center,width): [(np.float64(0.4746), np.float64(0.01511))]
+  {2..11,13,14}            |G∩mid|=0.01216  first-half good arcs (center,width): [(np.float64(0.0834), np.float64(0.002)), (np.float64(0.4163), np.float64(0.00408))]
+  {2..10,12,13,14}         |G∩mid|=0.05171  first-half good arcs (center,width): [(np.float64(0.0911), np.float64(0.00357)), (np.float64(0.1821), np.float64(0.00714)), (np.float64(0.2717), np.float64(0.00765)), (np.float64(0.3642), np.float64(0.00383)), (np.float64(0.4542), np.float64(0.00366))]
+verify: t=1/k good for C  <=>  C misses a multiple of k  (k=2..13):
+  {2..12,14}(no 13)      misses mult of k for k in [13] -> t=1/k is a MIDDLE witness there
+  {2..14}\{6}(has 12)    misses mult of k for k in [] -> t=1/k is a MIDDLE witness there
+  {3..14}(no 2, has 4)   misses mult of k for k in [] -> t=1/k is a MIDDLE witness there
+  {2..13}AP(all k)       misses mult of k for k in [] -> t=1/k is a MIDDLE witness there
+
+CONNECTION: t=1/k good <=> C misses mult of k <=> {1}UC misses mult of k <=> NON-COVERING at q=k.
+  This IS THM-523 (non-covering witness t=1/q). So the clean middle-witness EXISTS iff non-covering.
+  COVERING = hits every k<=13 <=> NO clean t=1/k witness => must use the subtle resonance-SHADOW gaps.
+  => the AP-stability hardness is EXACTLY the covering condition (removes all clean modular witnesses).

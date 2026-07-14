@@ -39,6 +39,25 @@ the arrangement is a planar graph and the cancellation is its cycle space at wor
 
 Files: reflection the-moduli-lift-is-proved-curving-the-circle-creates-the-class-numbers-macmini-S93; HYP-6580; 04-computation/moduli_lift_x014_fixedpoints_macmini_S93.py (+out).
 
+## klein-2026-07-13-S296 -- ATTEMPTED the AP-stability theorem: found the mechanism (resonance-SHADOW gaps) + proved the difficulty ≡ the covering condition. The clean witness t=1/k works ⟺ C misses mult of k ⟺ NON-covering (=THM-523); covering removes ALL clean witnesses. Characterized, not proven.
+
+Prompt (owner): attempt the AP-stability theorem directly.
+
+Attempted head-on. Outcome: the AP-stability's difficulty is EXACTLY the covering condition — characterized cleanly, not proven (it's the LRC extremal rigidity).
+
+FORMULATION: L({1}∪C)>0 ⟺ G(C) reaches the middle [1/14,13/14] ⟺ the bad sets ∪_{c∈C}D_c FAIL to cover the middle (AP-cluster {2..13} exactly TILES it, L=0; covering must leave a GAP).
+
+MECHANISM (verified NG=2²³): the middle good-arcs of near-AP covering clusters open at the RESONANCES j/k of a "released" speed — {2..12,14}(no 13)→j/13; {2..10,12,13,14}(no 11)→j/11; {2..14}\{6}→near j/6 (in speed-12's narrow shadow).
+
+CLEAN ARITHMETIC (proven): t=j/k (gcd(j,k)=1, k≤13) is good for C ⟺ no c∈C is a multiple of k (||c·j/k||≥1/k>1/14 unless k|cj; gcd(j,k)=1 ⟹ k|cj iff k|c). So the clean middle-witness t=1/k EXISTS ⟺ C misses a mult of k ⟺ {1}∪C NON-covering at q=k = EXACTLY THM-523.
+
+CENTRAL FINDING: covering = hits every q≤14 = NO clean t=1/q witness ⟹ G(C) reaches the middle ONLY via the subtle resonance-SHADOW gaps (covering replaces a WIDE bad arc j/k by NARROWER multiples, opening a sliver iff the other speeds clear it) = the LRC extremal rigidity. So the AP-stability theorem, attempted directly, IS the covering rigidity — no easier, but PRECISELY characterized: covering is exactly the condition that removes all clean modular witnesses. Non-covering → one rational point (THM-523); covering → no such point → the delicate shadow-gap question. (NB LRC(14) needs only M≥1/14 (a point); but covering ⟹ M≥14/183>1/14 (THM-724/726) ⟹ L>0, so L>0 ⟺ needed M>1/14 there.)
+
+HONEST: not proven; the attempt found the mechanism (shadow gaps), the exact arithmetic (t=1/k ⟺ misses k), and the clean characterization that the AP-stability difficulty ≡ covering, dovetailing with THM-523. The residual, if it falls, falls as a shadow-gap/stability theorem for covering sets; elementary + reduction routes exhausted.
+
+FILES: HYP-6590; reflection the-AP-stability-is-the-covering-rigidity-shadow-gaps-and-the-THM523-boundary-klein-S296; 04-computation/lrc14_ap_stability_klein_S296.py (+out). -> THM-523/366, S295/HYP-6580, opus-S271, THM-527-A/663. Sent to all.
+
+---
 ## mac-mini-2026-07-13-S92 -- FOUND the global object that breaks arc-transitivity: the danger circle Z/14=Z/2xZ/7, where complement FACTORS into the Atkin-Lehner V_4
 
 **Owner request:** find the global object that breaks arc-transitivity (the S91 obstruction).
