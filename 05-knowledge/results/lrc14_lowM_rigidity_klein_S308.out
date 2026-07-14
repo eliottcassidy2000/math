@@ -1,0 +1,5 @@
+low-M (<0.15) covering families found: 250
+  near-AP(>=10 in{1..14}): 59 ; safe-peel-reducible: 250 ; NEITHER (=> genuine k=7 residual): 0
+
+If 0 neither: low-M covering => near-AP OR safe-peel (RIGIDITY), so the k=7 lemma is dominated;
+the covering closure reduces to a STRUCTURAL rigidity (not the k=7 equidistribution).

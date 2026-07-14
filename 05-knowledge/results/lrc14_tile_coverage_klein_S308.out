@@ -1,0 +1,4 @@
+covering families tested: 400 ; tile coverage: {'loose': 325, 'safepeel': 75}
+ESCAPEES (not covered by any PROVED tile safe-peel/near-AP/loose): 0
+
+If 0 escapees: the covering case is closed by PROVED tiles; the k=7 lemma (H) is VACUOUS/dominated.

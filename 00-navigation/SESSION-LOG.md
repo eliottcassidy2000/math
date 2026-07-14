@@ -27,6 +27,21 @@ band: closed on sample by the stack, protocol enclosed -- the 4% is 99% instant)
 enumeration is yours: 3-line protocol, all exact-Q; Battery A is already theorem-grade), klein
 (THM-753's (H) is now: above v* proved, in-band protocol-closed; the skeleton stands complete
 modulo enumeration).
+## klein-2026-07-14-S308 -- the k=7 ANALYTIC lemma is DOMINATED by a STRUCTURAL route: low-M covering ⟹ near-AP OR safe-peel-reducible (250/250, 0 neither) ⟹ NO family needs the k=7 equidistribution. + opus-S289 capped-envelope PROVES (H) for v>v* (⟹ finite band). Together: the covering closure is a finite band + a rigidity, NOT the analytic wall. Resolved 2nd THM-755 collision (mine → THM-757).
+
+Prompt (owner): prove the k=7 extremal lemma via the 7-clock partition.
+
+THE PARTITION IS AN EQUIVALENCE, NOT A SHORTCUT (opus THM-754 corollary 1, PROVED): "some (7,a)-slot survives" ⟺ the covering case ITSELF (k=7 unique self-dual clock, cells tile the circle). So the k=7 lemma is NOT below LRC(14) — it IS LRC(14) in slot coordinates; it can't be proven "via the partition" (the partition proves the equivalence). No analytic shortcut exists.
+
+MY REDIRECT (verified): the k=7 ANALYTIC route is DOMINATED by a STRUCTURAL one. Targeted hunt (250 low-M<0.15 covering families, near-AP-core + aligned-far): ALL 250 are safe-peel-reducible (mac-mini THM-753, M-preserving ⟹ LRC(≤13)) OR near-AP (≥10 in {1..14}, kps THM-738); ZERO NEITHER. So the genuine k=7 residual is EMPTY (consistent with mac-mini 0/5813, opus 0/620k). Every covering family = a PROVED tile: [loose M≥0.15: opus density] + [low-M: safe-peel→LRC(≤13) OR near-AP kps]. THE COVERING CLOSURE = the RIGIDITY claim "low-M covering ⟹ near-AP OR has a safe element" (THM-724/726 killer-classification + THM-751 aligned-far-safe), NOT the k=7 equidistribution. (NB deep well NOT safe-reducible — safe⟹M≥1/13>14/183 — it's the near-AP tile; multi-killer⟹safe-peel; single-killer⟹near-AP core.)
+
+CONVERGENCE with opus-S289 (pushed same time): opus's CAPPED-ENVELOPE THM-755 PROVES (H) unconditionally for every v>v*=r_P/(π|G'_P|) (disc_v ≤ 4r|G'|/(πv)+2|G'|², splicing origin cap + spoke envelope), collapsing (H) to a per-core FINITE BAND (maxP,v*]. So the analytic (H) is now PROVED except a finite band, AND my structural route shows even that band is dominated (its families are safe-peel/near-AP). Two independent closures of the same residual.
+
+NET: LRC(14) covering = [v>v*: opus THM-755 capped-envelope PROVED] + [finite band (maxP,v*]: THM-756 closing it] + [structural: low-M⟹near-AP/safe-peel, verified 250/250]. The analytic wall is reduced to a finite band + a rigidity; NO family needs the k=7 equidistribution.
+
+HOUSEKEEPING: 2nd THM-755 collision — opus capped-envelope committed 11:56 (first) vs my merged-closure rename 12:00; renumbered MINE again THM-755→THM-757 (opus keeps THM-755). (My merged-closure was THM-753→755→757; it's the assembly frame, superseded as primary machinery by opus capped-envelope + mac-mini safe-peel.)
+
+FILES: HYP-6710; THM-757 (renamed); 04-computation/lrc14_tile_coverage + lowM_rigidity_klein_S308.py (+outs). -> opus-S288/S289/THM-754/755, mac-mini-S103/THM-753, THM-724/726/751/738. Sent to all.
 
 ---
 ## opus-2026-07-14-S289 -- THM-755: the CAPPED-ENVELOPE theorem -- (H) PROVED for every v > v* = r_P/(pi |G'_P|), unconditionally (splice the origin's cap |c_m| <= |G'| with the spoke envelope r/(pi m) at their crossover: disc_v <= 4r|G'|/(pi v) + 2|G'|^2); the (H)-residual collapses to the per-core FINITE band (maxP, v*] -- band edges 112/105/52/644 vs old isolated thresholds 156/169/182/4771; zero violations exact
