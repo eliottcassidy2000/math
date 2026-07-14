@@ -14047,3 +14047,23 @@ MECHANISM (rigorous, classical): 14a has E(Q)_tors = Z/6Z (a RATIONAL point of o
 **CONSISTENCY with S94 (crucial):** S94 proved NO FUNCTOR (14a is j!=0 conductor-14, the runner's curve is j=0 Eisenstein -- different curves, different fields). S95 gives the LINK as a CONGRUENCE (mod 6), which is EXACTLY how genuinely different curves/forms link (they need not be isogenous or equal). So S94 (different curves, no functor) and S95 (mod-6 Eisenstein congruence) are complementary and both true: the curves differ, but f_14 = Eisenstein mod 6 = mod Phi_6, and the Eisenstein series is the shared object. 'Coincidence at 14' upgraded to a THEOREM: the two arithmetics meet in the Eisenstein series, congruent modulo Phi_6.
 
 Status: congruence VERIFIED (34 primes, 0 violations) + PROVABLE (rational 6-torsion => reducible/Eisenstein mod-6 rep); the E_2-anomaly side is HYP-3768 (proved). The LINK is a genuine Eisenstein congruence, not a functor. Files: 04-computation/phi6_14a_link_eisenstein_congruence_macmini_S95.py (+out); reflection the-link-is-a-congruence-phi6-and-14a-meet-in-the-eisenstein-series-macmini-S95. Links: HYP-6585/S94 (no functor, different curves), HYP-3768 (Phi_6 Dedekind = E_2 anomaly), the-hecke-dictionary-of-f14 (a_p=p+1 mod 6, opus), klein-S10 (torsion Z/6), HYP-2566(=LRC14).
+
+## HYP-6615 (mac-mini-2026-07-14-S96) -- HONEST NEGATIVE: the mod-6 Eisenstein congruence (S95) does NOT force the covering-min value 14/183. The value is PROVED by THM-724 (metric/Farey, ZERO modular input). The congruence forces only the E_2 EISENSTEIN BACKBONE (-1/12, the n->inf limit); the finite value has a Farey correction +1/(12 Phi_6) the congruence does not supply.
+
+Owner: prove the mod-6 congruence forces the covering-min value. TESTED honestly -- it does NOT force it, and the decomposition shows precisely what is and isn't shared.
+
+**WHY NO FORCING:** the covering-min value M = n/Phi_6(n) = 14/183 is PROVED independently by THM-724 (the LRC balance/rigidity) -- the modular form f_14 plays NO role in that proof. A congruence about f_14's coefficients cannot force a value established by purely metric means.
+
+**THE DECOMPOSITION (exact, the real content):** the covering-min Dedekind sum (HYP-3768) splits
+   s(n,Phi_6) = -(Phi_6-1)/(12 Phi_6) = **-1/12 + 1/(12 Phi_6)**  (verified exact: -91/1098 = -1/12 + 1/2196).
+   * -1/12 = -B_2/2 = the E_2 EISENSTEIN ANOMALY = the n->infinity limit = the 'Eisenstein backbone'. This IS what the mod-6 congruence reflects (f_14 = E_2 mod 6, S95; s -> -1/12).
+   * +1/(12 Phi_6) = +1/2196 = the FINITE FAREY correction (from Phi_6 = 1 mod n, the CF [0;n-1,n], Dedekind reciprocity). This is what makes the value FINITE and EXACT (14/183), and it is NOT supplied by the congruence.
+   So margin = -12s/n^2 = (Phi_6-1)/(n^2 Phi_6) = (n-1)/(n Phi_6) = 13/2562, and M = 1/n + margin.
+
+**THE TWO 'SIXES' ARE INDEPENDENT (no common cause):** 6a = ord(14 mod 183) = 6 (14^3 = -1 mod 183; Phi_6 is BY CONSTRUCTION the cyclotomic making n order 6 -- the covering CF/Farey origin). 6b = torsion(14a) = Z/6 (a fact about the CURVE, giving the mod-6 congruence). Same integer 6, DIFFERENT origins; no rigorous common cause, so 6b (congruence) does not force 6a/the value (Farey).
+
+**VERDICT:** the mod-6 congruence forces the EISENSTEIN BACKBONE (the -1/12 E_2 anomaly = the covering-min's n->inf limit, shared with f_14), NOT the finite value 14/183 (Farey-forced, THM-724, congruence-independent). 'Linked at the backbone' (S95) is the true statement; 'forcing the value' is not. Fully consistent with S94 (no functor): the arithmetic (congruence, about f_14) and the metric (value, THM-724) are severed; they share the E_2 backbone but neither determines the other's finite data.
+
+This is the honest terminus of the modular sub-arc (S94 no functor / S95 congruence link / S96 no value-forcing): X_0(14) and the covering-min meet in the Eisenstein series E_2 -- the congruence and the anomaly are the SAME backbone -1/12 -- but the finite covering-min value is metric (Farey), not modular. The modular curve organizes the SYMMETRIES and the LIMIT/BACKBONE; the LRC Farey structure supplies the finite VALUE.
+
+Status: HONEST NEGATIVE + exact decomposition (verified). The value is THM-724-proved (metric); the shared object is the E_2 anomaly -1/12 (the backbone/limit). Files: 04-computation/mod6_forces_coveringmin_test_macmini_S96.py (+out). Links: HYP-6605/S95 (the congruence link), HYP-6585/S94 (no functor), HYP-3768 (Dedekind s(n,Phi_6) = E_2 anomaly + correction), THM-724 (covering-min value, metric proof), HYP-2566(=LRC14).

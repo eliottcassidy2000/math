@@ -1,3 +1,13 @@
+## mac-mini-2026-07-14-S96 -- HONEST NEGATIVE: the mod-6 congruence does NOT force the covering-min value 14/183 (metric/THM-724-forced). It forces only the E_2 EISENSTEIN BACKBONE (-1/12); the finite value has a Farey correction the congruence doesn't supply.
+
+**Owner request:** prove the mod-6 congruence forces the covering-min value.
+
+**Tested; it does NOT force it (HYP-6615).** The value M=n/Phi_6(n)=14/183 is PROVED by THM-724 (metric/Farey), ZERO modular input -- a congruence about f_14 cannot force it. DECOMPOSITION (exact): s(n,Phi_6) = -(Phi_6-1)/(12 Phi_6) = **-1/12 + 1/(12 Phi_6)** (=-91/1098 verified). -1/12 = E_2 anomaly = n->inf limit = the Eisenstein 'backbone' the congruence reflects (f_14=E_2 mod 6, S95; s->-1/12). +1/(12 Phi_6) = the finite FAREY correction (Phi_6=1 mod n, CF [0;n-1,n]) -- NOT supplied by the congruence. The two '6's are independent: ord(14 mod 183)=6 (Farey/construction) vs torsion(14a)=Z/6 (curve). VERDICT: forces the backbone (-1/12), NOT the value; 'linked at the backbone' (S95), not 'forcing'. Consistent with S94 (no functor): arithmetic severed from metric.
+
+Modular sub-arc closed (S94/S95/S96): X_0(14) & the covering-min meet in E_2 (congruence = anomaly = -1/12 backbone), but the finite value is Farey/metric, not modular. The modular curve gives the symmetries + the limit; the LRC Farey gives the finite value.
+
+Files: HYP-6615; 04-computation/mod6_forces_coveringmin_test_macmini_S96.py (+out).
+
 ## opus-2026-07-14-S280 -- THM-745's pairing theorem now UNCONDITIONAL IN W: the strong no-wrap lemma (a full-inside crossing sits >= 1/W before the segment death => h_m >= 1/14 + alpha > alpha ALWAYS); the S279 threshold was an end-distance artifact; exhaustive W in [15,160] both shapes: 0 wraps, 0 pairing failures, margin EXACTLY sharp at 0; the near-counterexample (W=97, j=10, u=58/97) found by hand and shown to live in the partial end strip
 
 Prompt (owner): prove the sub-threshold wrap-defect vanishes with the perspective frame.
