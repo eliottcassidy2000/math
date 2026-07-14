@@ -1,7 +1,7 @@
 ---
 id: THM-745
 title: The exact residual identity and the pairing theorem -- per segment, alpha Sum psi(h_m) = -[F(h_last+1)-F(h_first)] - (K+1)alpha^2/2 + Sum_wraps (alpha - h_m) EXACTLY; the orient-weighted residual total vanishes IDENTICALLY (rho(j,+) = rho(j,-) for every j, every W -- mirror-symmetry pairing), so the first-order wedge content EQUALS the exact dF_ext telescoping sum; the wrap heights descend the Euclidean/CF tower of (j, W)
-status: PROVED (the per-step identity, by expansion; 112/112 segments verified EXACTLY at W=90) + VERIFIED-EXACT (the pairing rho(j,+)=rho(j,-): 44/44 line-pairs across W in {90,97,150,250,400,800}, both shapes; mirror-symmetry mechanism (u,s)->(1-u,1-s) identified, full bijection lemma sketched) + HONEST (does NOT improve the sound W-uniform W0; exposes and corrects MISTAKE-142)
+status: PROVED IN FULL for W >= 14 max(J) (opus-S279: the segment-bijection lemma is proved -- see section 2b -- and with the no-wrap lemma the pairing theorem is unconditional in that regime; per-line version for W >= 14j; below the threshold the defect Sum_wraps(2h - alpha) was zero in every tested case). Identity: proved + 112/112 exact. Pairing: PROVED (regime) + verified exact at all tested W including sub-threshold. HONEST: no W-uniform W0 gain; exposed and corrected MISTAKE-142.
 source: opus-2026-07-13-S278 (owner prompt: work the rho-residual signed sums with the perspective frame)
 depends_on:
   - THM-742/743 (the wedge decomposition; THM-743's constants remain the standing sound bounds)
@@ -36,12 +36,29 @@ Define rho_seg = -(K+1)alpha^2/2 + Sum_wraps (alpha - h_m).  Then, exactly:
 44/44 line-pairs equal as Fractions (W in {90, 97, 150, 250, 400, 800}, both shapes), hence the
 orient-weighted residual total is IDENTICALLY ZERO and the first-order wedge content equals the
 exact telescoping sum Sum_seg orient (-dF_ext) -- confirmed exactly (the two evaluations agree to
-the Fraction at every W).  MECHANISM: the arrangement's mirror symmetry (u, s) -> (1-u, 1-s) maps
-the (j,+) line onto the (j,-) line (j - 1/14 == -1/14 mod 1), preserves the W-grid (m -> W-1-m)
-and the strand structure (s -> 1-s), and transports the march reversed-and-reflected; rho is
-invariant under reversal+reflection while dF is anti-invariant.  (The segment-bijection lemma --
-exposure sets map onto exposure sets -- is used and observed; its two-line write-up is the
-remaining formalization step.)
+the Fraction at every W).  MECHANISM -- now PROVED (opus-S279, section 2b).
+
+## 2b. The segment-bijection lemma and the full proof (S279)
+
+**Lemma B (mirror segment bijection).** mu(u) = 1-u maps the exposed set of the (j,+1/14)-line
+bijectively onto that of the (j,-1/14)-line, sending each maximal segment (u1,u2) to
+(1-u2, 1-u1).  Proof: (M1) ||b(1-u)|| = ||bu|| so G_B is mu-invariant; (M2) sigma in A_{j'}(u)
+<=> -sigma in A_{j'}(-u); (M3) 1 - r_j(u) = ju - 1/14 = ell_j(1-u) mod 1 (j integer): the right
+endpoint maps to the LEFT endpoint at the mirrored u; (M4) by M2+M3, buried <=> buried. QED.
+**Lemma C (grid matching).** Full-inside crossing counts of paired segments are equal:
+floor(u2 W) - ceil(u1 W) = floor((1-u1)W) - ceil((1-u2)W), by floor(W-x) = W - ceil(x) (all
+cases). QED.  **Lemma A (no-wrap).** 0 in J: heights in (0,1/14) are strictly interior to the
+static j=0 arc, hence buried; so every EXPOSED crossing has h >= 1/14 > j/W = alpha whenever
+W >= 14j: no wrap terms, and rho_seg = -(K+1) alpha^2/2 EXACTLY. QED.
+**Pairing theorem (proved, W >= 14 max(J); per-line for W >= 14j):** rho(j,+) =
+Sum -(K+1)alpha^2/2 = (B+C termwise) = rho(j,-). Below the threshold the defect is
+Sum_wraps(2h - alpha) -- ZERO in every tested case (the exposed heights sit above j/W in
+practice).  VERIFIED (lrc14_segment_bijection_lemma_opus_S279.py): Lemma B as exact Fraction
+list-equality for every j (both shapes); K-match, zero wraps, the deterministic rho form, and
+the pairing at W in {90, 97, 150, 160, 250, 800}.  A pleasing consequence: in the no-wrap
+regime the residual is DETERMINISTIC AND NEGATIVE, first-order-sized -- and the pairing
+cancels it exactly between the two orientations: a first-order term removed by symmetry, not
+by estimate.
 
 ## 3. Consequences and honest limits
 

@@ -1,0 +1,23 @@
+====================================================================================================
+THE SEGMENT-BIJECTION LEMMA -- exact verification (completes THM-745's pairing theorem)
+====================================================================================================
+
+shape 1 {1}u{W..W+11}: 172 segments total
+   Lemma B (segment bijection, exact Fractions): VERIFIED -- (j,-) = mirror of (j,+) for every j
+   W=  90: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W <= 14*maxJ = 154)
+   W=  97: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W <= 14*maxJ = 154)
+   W= 150: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W <= 14*maxJ = 154)
+   W= 160: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 154)
+   W= 250: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 154)
+   W= 800: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 154)
+
+shape 2 {1,2,3}u{W..W+9}: 154 segments total
+   Lemma B (segment bijection, exact Fractions): VERIFIED -- (j,-) = mirror of (j,+) for every j
+   W=  90: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W <= 14*maxJ = 126)
+   W=  97: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W <= 14*maxJ = 126)
+   W= 150: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 126)
+   W= 160: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 126)
+   W= 250: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 126)
+   W= 800: LemC K-match OK ; wraps at exposed crossings = 0 ; rho = -(K+1)a^2/2 OK ; pairing EXACT  (W > 14*maxJ = 126)
+
+done.

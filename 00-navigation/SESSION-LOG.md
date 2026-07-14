@@ -9,6 +9,35 @@ MULTI-RESONANCE (numerical): the widest gap over resonances p=a/k (k=2,3,…), e
 RESIDUAL: ratio∈[6,13] clusters with an unfavorable parity/residue profile still need opus-S271 true-disc per-family or the general equidistribution. But THM-744 (crude + refined) now covers all tight clusters + the odd-tight/even-heavy up to ~13.
 
 FILES: HYP-6610; THM-744 addendum (parity split + multi-resonance note); 04-computation/lrc14_multiresonance_klein_S298.py (+out). -> THM-744/HYP-6600, THM-405, opus-S271. Sent to all.
+## opus-2026-07-14-S279 -- THM-745's PAIRING THEOREM now PROVED IN FULL (W >= 14 max(J)): the segment-bijection lemma (mirror M1-M4, four lines) + grid-count identity + the NO-WRAP lemma (the static j=0 arc buries heights < 1/14, so exposed crossings never wrap and rho_seg = -(K+1)alpha^2/2 DETERMINISTIC) -- a first-order term removed by symmetry, not estimate; all verified exact (Lemma B as Fraction list-equality, zero wraps at W = 90..800)
+
+Prompt (owner): prove the pairing theorem's segment-bijection lemma.
+
+FIRST TRY FAILED HONESTLY: the naive march-transport gave rho(S') = -rho(S) - boundary (wrong
+sign vs the observed 44/44 equalities) -- the mechanism had to be found in the data. Per-segment
+diagnostics revealed it: (i) the segments pair EXACTLY as (u1,u2) <-> (1-u2,1-u1); (ii) ALL wrap
+sums are ZERO; (iii) rho depends only on the crossing count.
+
+THE PROOF (three lemmas): B (mirror bijection: ||b(1-u)||=||bu||; sigma in A_j'(u) <=> -sigma in
+A_j'(-u); 1-r_j(u) = ell_j(1-u) since j in Z; exposure transports); C (grid matching:
+floor(W-x) = W-ceil(x)); A (NO-WRAP: 0 in J buries all heights < 1/14, so exposed h >= 1/14 >
+j/W = alpha for W >= 14j: no wraps, rho = -(K+1)alpha^2/2 exactly). PAIRING = B+C termwise.
+Below threshold: defect = Sum_wraps(2h-alpha), zero in every tested case.
+
+VERIFIED (both shapes): Lemma B as exact Fraction list-equality for every j; K-match, zero
+wraps, deterministic rho, pairing EXACT at W in {90, 97, 150, 160, 250, 800}. THM-745 status
+upgraded to PROVED-in-regime; canon updated with section 2b.
+
+THE PLEASING POINT: the deterministic residual is first-order-sized and NEGATIVE on each line;
+the mirror symmetry cancels it exactly between orientations -- symmetry does what no estimate
+could. The perspective frame's mirror (u,s)->(1-u,1-s) is the time-reversal t -> -t of the
+original runner system: LRC's safe set is invariant under running time backwards, and that
+physical symmetry is what kills the first-order residual. (Reflection-grade observation --
+noted here; the S270 reflection covers the frame.)
+
+FILES: THM-745 canon section 2b + status; INDEX addendum; lrc14_segment_bijection_lemma_opus_S279.py
+(+.out). -> kps (the whole pairing proof is 12 lines of exact arithmetic -- Lean-ready),
+klein (the dF_ext sum is now provably THE first-order content in the tail regime).
 
 ---
 ## mac-mini-2026-07-14-S95 -- PROVED Phi_6 and 14a ARE LINKED despite different curves (S94): the mod-6 EISENSTEIN CONGRUENCE a_p(f_14)=1+p mod 6. Congruence, not functor.
