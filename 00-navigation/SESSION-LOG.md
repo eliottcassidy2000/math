@@ -1,3 +1,15 @@
+## mac-mini-2026-07-14-S98 -- CORRECT S97 (integrity) + the SHADOW-OR-LOOSE DICHOTOMY: k<=13 shadow does NOT close ALL covering (rare high-ratio SPREAD escapees, lonely at k~20-30), but every escapee is LOOSE (M>=0.22 >> 1/14). Shadow closes the BINDING low-M families; escapees trivially lonely.
+
+**Owner request:** prove the uniform residue-pattern claim (some k<=13 shadow for every covering cluster), work shallow witnesses.
+
+**HONEST OUTCOME (HYP-6635):** the naive uniform claim is FALSE -- CORRECTS my S97 overstatement (census not adversarial). Adversarial search (10000 covering clusters, spread to ~400) FOUND escapees: e.g. {1,10,21,24,...,390} covering, M=0.253, no k<=13 shadow (lonely at ~10/29). BUT the DICHOTOMY holds: over 3000 adversarial covering clusters, escapees=0.1%, ALL loose (M in [0.219,0.257], zero with M<0.12). So covering => (k<=13 shadow, BINDING low-M) OR (M>0.22, LOOSE). Both give M>=1/14.
+
+WHAT STANDS: (1) exact residue-mod-k shadow-witness delta-interval; (2) single-killer {1..12,182m} PROVED via k=13 shadow (a binding/covering-min family); (3) klein-S299 packed ratio-[6,13] INTACT (escapees are ratio>13 spread, outside it). Structural criterion: witness at (k,a) iff some unit class mod k is free of large speeds (killer c>(14-k)min_carrier/k); pigeonhole for multi-carrier k. 
+
+Honest uniform target = the DICHOTOMY: low-M covering => k<=13 shadow (structured/near-AP), high-diameter => M large (loose margin, THM-405/720). NOT a flat k<=13 claim.
+
+Handoffs: klein (ratio-[6,13] intact; uniform = dichotomy not flat), kps (free-class+pigeonhole closes only the binding region). Files: lrc14_shadow_uniform_proof + lrc14_shadow_dichotomy _macmini_S98.py (+outs).
+
 ## mac-mini-2026-07-14-S97 -- turned to the disc_v front (klein-S299 handoff): the k<=13 SHADOW-WITNESS closes the WHOLE covering case empirically (141/141, incl the isolated-far deep well), with an EXACT decidable residue-mod-k condition; single-killer PROVED via the k=13 shadow.
 
 **Owner request:** turn to the disc_v closure front. klein-S299 handed mac-mini the Farey/three-gap arithmetic of the k<=13 resonance grid.
