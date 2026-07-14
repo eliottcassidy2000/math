@@ -48,6 +48,22 @@ FILES: THM-747 canon; HYP-6645; lrc14_phase_sum_triangulation_thm747_opus_S282.p
 klein (your lookup is real: 71.23 exact; U1's capping scan would finish the lane's budget), kps
 (the by-vertex identity is index-free Fraction algebra), mac-mini (the exact-zero vertex at u=1/6
 is a metagraph-worthy object: 22 couplings from 11 lines summing to zero -- why 1/6?).
+## klein-2026-07-14-S302 -- TRIANGULATION synthesis: the fleet's 3 routes CONVERGED on ONE object; the covering case is now a FINITE problem (decidable residue-pattern × bounded-W tail), not one harmonic-analysis inequality. New nav doc LRC14-TRIANGULATION-2026-07-14.
+
+Prompt (owner): focus on the math remaining; synthesize recent agent work + triangulate the critical remaining pieces.
+
+Read the full recent fleet output (opus S272-S281, mac-mini S88-S97, kps S128 cont.1-4). THREE ROUTES, all closing the covering case, now CONVERGED:
+ (A) BOUNDED-BODY (kps THM-733/734/738): every 13-family with ≥10 speeds in {1..14} lonely (j≤3 done exact, 4.68M sweeps zero tights; j4 scoped, j5-6 need exact-disc CS).
+ (B) SHADOW WITNESS (klein THM-744/S299 + mac-mini-S97): explicit lonely time at a k≤13 rational. mac-mini made it EXACT (residue-mod-k shadow-interval condition) + UNIFORM: 141/141 covering closed INCL the isolated-far deep well; single-killer PROVED via k=13 (~6 lines) — a 3rd elementary proof of the covering-min, SUBSUMES disc_v.
+ (C) DENSITY TOWER (opus THM-745 pairing now UNCONDITIONAL + THM-746 exact three-term identity Φ(W)=(Ξ_sv−Z)−S/W−T/2W²; C1=2.11; W0=339/513; "S(W)=vertices as runners" = the tower inverts one level down).
+
+THE TRIANGULATION — 3 views of ONE object: (1) common WITNESS language = mac-mini's exact k≤13 shadow condition (subsumes disc_v — closes disc_v's own deep-well flagship elementarily); (2) common KERNEL = B₂ at Farey points k/14 (klein THM-739 pairwise overlap + mac-mini THM-736 far-peel + opus THM-746 phase sum; the arithmetic is ℤ/14=ℤ/2×ℤ/7 = klein's parity 6/13 × mac-mini's mod-7); (3) common RECURSION = LRC(14)→k≤13 shadow grid→level-down LRC system (opus vertices-as-runners, klein grid, mac-mini metagraph).
+
+CRITICAL REMAINING PIECE (triangulated + FINITE): the UNIFORM SHADOW CLOSURE ("some k≤13 has a nonempty shadow interval for every covering set" ⟺ L>0, klein-S300 equivalence) factors as [decidable residue-pattern mod lcm(2..14)] × [ratio control]. The 4 PROVED tiles cover (pattern×ratio) EXCEPT the spread mid-band multi-killer: there opus's floor caps the analytic content at W0≈339-513 (above: floor closes; below: bounded-W = bounded-diameter finite check, which kps sweeps + shadow census 141/141 handle). So covering = decidable-pattern × bounded-W-tail = a FINITE problem, no longer one harmonic-analysis inequality.
+
+SINGLE MOST VALUABLE NEXT MOVE: canonize mac-mini's exact shadow-interval condition as a THM, then prove the shadow closure by residue-pattern cases importing THM-744(tight)+single-killer(isolated-far)+THM-738(near-AP)+THM-745/746(spread W>W0)+finite-check(W≤W0). Decide-shaped, Lean-tractable (klein's THM-744 tile already sorry-free = LRCShadowGap.lean).
+
+FILES: HYP-6650; 00-navigation/LRC14-TRIANGULATION-2026-07-14.md; memory updated. -> THM-733/734/738/744/745/746/736/739, HYP-6620/6625/6630. Sent to all.
 
 ---
 ## mac-mini-2026-07-14-S97 -- turned to the disc_v front (klein-S299 handoff): the k<=13 SHADOW-WITNESS closes the WHOLE covering case empirically (141/141, incl the isolated-far deep well), with an EXACT decidable residue-mod-k condition; single-killer PROVED via the k=13 shadow.
