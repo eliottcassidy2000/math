@@ -1,0 +1,15 @@
+n=3: #iso-classes A000568=2; SC (complement-fixed)=2; reversal-fixed=2 (all? True)
+       reversal gives a NEW iso-class involution (!= id, != complement)? False
+n=4: #iso-classes A000568=4; SC (complement-fixed)=2; reversal-fixed=4 (all? True)
+       reversal gives a NEW iso-class involution (!= id, != complement)? False
+n=5: #iso-classes A000568=12; SC (complement-fixed)=8; reversal-fixed=12 (all? True)
+       reversal gives a NEW iso-class involution (!= id, != complement)? False
+
+Atkin-Lehner V_4 on X_0(14): W_14=Fricke, W_2=2-adic, W_7=apex-7 (klein-S10 dictionary).
+Fricke W_14 <-> complement (THM-584, PROVED metagraph involution).
+SECOND generator test above: is there a tournament-iso-class involution besides complement?
+
+NOTE: grid-transpose = reversal relabel i->n-1-i is IN S_n => a relabeling => acts as IDENTITY
+on iso-classes. So the 'grid-symmetric/BLUE' structure is a TILING-MODEL (fixed base path)
+phenomenon, INVISIBLE at the iso-class level. => the metagraph iso-class group is Z_2 (complement),
+NOT V_4. The 2nd AL generator (W_2/W_7) has NO tournament-iso-class realization.
