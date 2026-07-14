@@ -21,18 +21,19 @@
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
   (+ .out); 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
-- **S300 UPDATE (owner directive: r>=7 decks + regime 2 via squaring-the-square/Smith/Kirchhoff):**
-  (i) the r=7 STRATUM IS CLOSED above w_max > 7·Σ(P) — THM-767's EVENT PIERCE (7g|c strata:
-  counts constant = c/7 off events; any event moment in the closed core-safe set frees a sheet;
-  the S299 wall instance pierced at all 203 core-safe event moments — the witness lives at the
-  SWITCHING TIMES, not the core optimum); the KCL ABSORPTION LAW governs maintained exact
-  tilings (mirror capacities 14·gcd | w_a+w_b; generic violation 1399/1400). (ii) the
+- **S300/S5 CORRECTED UPDATE (r>=7 decks):**
+  (i) the unramified r=7 stratum is closed above
+  `max_a(w_a/gcd(w_a,c))>=7*max(P)` by THM-771's event pierce: counts are `c/7` off
+  events and drop by `g_a` on them; the event mesh is `g_a/w_a`, and the S299 wall
+  is pierced at a switching time. The promoted raw-`w` bound and KCL absorption law
+  are withdrawn (MISTAKE-146); the exact replacement is `F=Q+Omega-sigma`. (ii) the
   complementarity item RESOLVED NEGATIVELY as phrased (MISTAKE-145; codex exact falsifier + my
   census, same day): the surviving regime-2 invariant is peel-relative ρ = v*/maxP, measured
   ≤ 9.335, extremal AT {1..12} (adversarial climb converges to it); one lemma remains (|G'|
-  floor off tight families, B5 lane). (iii) remaining program in HYP-6835: the chamber census
-  (fully-covered chambers + wall types), 7∤c s-threshold decks (Kronecker geodesic), r≥8
-  alignment residue (survivor realized), Lean decide-targets. Tooling: deck_event_witness() in the library (16/16).
+  floor off tight families, B5 lane). (iii) remaining program in HYP-6835: a joint
+  chamber census and ramification-surplus equality-packet classification, effective
+  s-threshold decks, r≥8 alignment residue (survivor realized), and Lean decide-targets.
+  Tooling: deck_event_witness() in the library (16/16).
   Reflection: 07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
 
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension

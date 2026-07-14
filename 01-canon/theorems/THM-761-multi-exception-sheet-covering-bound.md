@@ -144,23 +144,24 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
 1. **`r >= 7`** (core `|P| <= 6`): the union bound cannot fire (`7 * 1/7 = 1`); the
    tight configurations are cyclic tilings of `Z_c`. The wall was realized here
    (`c = 7`, core `{1..6}`, `W = {12, 38, 72, 96, 151, 169, 188}`: all seven sheets
-   bad at the core optimum) — **and then PIERCED by THM-767 (opus-S300)**: for
-   `7|c`-type strata the bad counts are CONSTANT off a finite event set, so at every
+   bad at the core optimum) — **and then PIERCED by corrected THM-767/THM-771**: if
+   every effective order `C_a=c/gcd(w_a,c)` is divisible by `7`, the bad counts are
+   `c/7` off a finite event set and drop by `g_a` on it, so at every
    event moment in the closed core-safe set the total count drops below `c` and a
    free sheet appears with closed clearance `>= 1/14`. The wall instance is closed at
-   every one of its 203 tested core-safe event moments. Standing at the core OPTIMUM
-   was the artifact — the witness lives at the switching times. The remaining `r >= 7`
-   content after THM-767: `r >= 8` (single-event pierce fails structurally),
-   `7 ∤ c` decks, and the bounded-shape residue `w_max <= 7*Sum(P)`.
+   the explicit event `t0=1/8` (and at the stored event battery). Standing at the core
+   OPTIMUM was the artifact — the witness lives at a switching time. The correct
+   event mesh is `g_a/w_a`, not `1/w_a`; hence the proved scale-free threshold is
+   `max_a(w_a/g_a)>=7*max(P)`. The remaining `r >= 7` content is `r >= 8`, ramified
+   effective grids `7∤C_a`, and bounded reduced winding.
 2. **Small-`c` failures** of the per-`(r, c)` criterion (all confined to `c <= 42`):
    finite in `(r, c)` but not in `P`; these route to the band protocol whose
    inflation is bounded (`v*(cP) <= 42 v*(P)`), or to the exact per-family check.
 3. **Large `sum g_a`** (deep gcd entanglement): descend `c -> c/g` recursively
    (cards A2/C10); the recursion terminates but its bookkeeping is not written here.
 4. Families with **no scale structure at all** (no `c >= 2` divides `>= 7` elements):
-   outside this theorem's hypotheses; they are the low-`r_P` cores where the capped
-   envelope is already strong (HYP-6830 records the
-   precise complementarity claim to prove).
+   outside this theorem's hypotheses. HYP-6830's proposed raw fragmentation bound was
+   refuted (MISTAKE-145); only the peel-relative envelope coordinate remains viable.
 
 ## Assumption challenge and tournament analysis
 

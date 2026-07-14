@@ -22,6 +22,10 @@ types). Reflection + frontier + backlog + INDEX all corrected. Reply sent to mac
 Claim-to-correction: ~2 hours; zero downstream consumers.
 
 ---
+> **CORRECTION TO THE HISTORICAL S300 ENTRY BELOW:** THM-771/MISTAKE-146
+> withdraw THM-767's raw-`w` event-density bound and KCL necessity. The correct
+> endpoint mesh is `g/w`, and the exact sheet defect is `F=Q+Omega-sigma`.
+
 ## opus-2026-07-14-S300 -- THM-767 PROVED: DECK KIRCHHOFF RIGIDITY (the squared-square/Smith-diagram/Kirchhoff program on the sheet deck, owner directive) -- the EVENT PIERCE closes the r=7 deck stratum (the S299 wall pierced at all 203 core-safe switching times); the KCL absorption law (mirror capacities 14*gcd | w_a+w_b); regime-2 complementarity self-refereed (MISTAKE-145) and replaced by the peel-relative invariant rho = v*/maxP (measured <= 9.335, extremal at {1..12})
 
 Prompt (owner): work the r>=7 deck tilings and the regime-2 decomposition; consider squaring
@@ -61937,3 +61941,42 @@ the same tournament fingerprint.  This also gives a disciplined transfer to
 THM-761's seven-exception wall: treat its cyclic sheet tiling as a different
 base and classify labelled zero-defect owner splices, rather than identifying
 it with staircase tournament tilings by analogy.
+
+---
+
+## codex-2026-07-14-S5 — seven-exception sheet endpoint defect and THM-767 correction
+
+Independently audited the newly promoted THM-767 at the `r=7` cyclic-sheet
+wall.  Its balance identity and fixed-event pierce are valid, but three claims
+were not: at integral effective grid order the bad counts are `c/7` and
+`c/7-g` rather than floor/floor-plus-one; the event mesh is
+`g/w=1/(w/g)`, not raw `1/w`; and strict endpoint equality is safe, so it
+cannot hand off bad-sheet ownership through a KCL law.  Filed MISTAKE-146 and
+placed an immediate correction banner/status on THM-767; corrected the live
+frontier, THM-761 residual, HYP-6830, HYP-6835, and result index.
+
+THM-771 gives the exact replacement.  For seven owners, with capacities
+`A_a=g_a ceil((c/g_a)/7)`, capacity slack `Q`, sheet-overlap debt `Omega`, and
+ramification surplus `sigma=sum A_a-c`, the number of free sheets is exactly
+
+```text
+F=Q+Omega-sigma.
+```
+
+If every effective order `c/g_a` is divisible by seven, `sigma=0`; owner `a`
+has `c/7` bad sheets off one endpoint coset and `c/7-g_a` on it.  Its endpoint
+coset has mesh `1/(w_a/g_a)`.  A six-speed core has a closed `1/14`-safe
+interval of length at least `1/(7 max(P))`, so
+`max_a(w_a/g_a)>=7 max(P)` proves a free sheet uniformly.  This is scale-free
+and strictly stronger than the corrected component-count threshold.
+
+The exact S5 audit checks the unramified formula on 83,036 rows and the full
+defect identity on 12,000 mixed-gcd decks.  At `c=7`,
+`W={1,4,5,6,8,9,10}` gives a static exact partition at `t0=1/7`, but owner 10
+has zero proposed KCL mirror capacity; at the owner-4 event `t0=1/8`, sheet 5
+is free and `t=41/56` has exact clearance `1/14`.  The primitive ramified row
+`c=21`, `W={1,2,3,4,7,49,56}` has
+`(Q,Omega,sigma,F)=(0,12,12,0)`, proving that `7|c` alone does not force exact
+tiling.  Owner-splice tournaments distinguish the two rows (7 versus 1
+directed 3-cycles) but lose `Q/Omega/sigma`; the labelled incidence deck is
+the predicate-preserving object.

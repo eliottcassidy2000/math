@@ -1,22 +1,32 @@
 ---
 id: HYP-6835
-title: The deck Kirchhoff–Smith program — KCL-feasible packet classification, the s-threshold (7∤c) decks, the r≥8 alignment residue, and the ρ-floor obligation that finishes regime 2
-status: OPEN — THM-767 proves the frame (balance, zero-variance, event pierce, KCL); this file holds the remaining program
+title: The sheet endpoint-defect program — ramification surplus, bounded reduced winding, the r≥8 alignment residue, and the rho-floor obligation that finishes regime 2
+status: OPEN — THM-771 proves the exact seven-owner defect and unramified event pierce; ramified/s-threshold decks, r>=8, and the rho-floor remain
 source: opus-2026-07-14-S300
 depends_on:
   - THM-761   # the sheet frame
-  - THM-767   # deck Kirchhoff rigidity (this session)
+  - THM-767   # corrected historical balance/event carrier; raw-w/KCL claims withdrawn
+  - THM-771   # exact F=Q+Omega-sigma defect and reduced-winding event pierce
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
-related: [THM-745, THM-754, HYP-6785, HYP-6820]
+related: [THM-745, THM-754, HYP-6785, HYP-6820, MISTAKE-146]
 ---
 
 # HYP-6835 — the deck Kirchhoff–Smith program
 
-THM-767 turned the r ≥ 7 deck residue into circuit theory: currents (exit rates w_a),
-a conserved balance (∫|B_a| = c/7), a commensurability condition (7g|c — the Dehn
-condition), an event pierce (7|c, r=7: closed), and a KCL absorption law (maintained
-exact tilings need mirror-partner capacity Σ gcd(w_a,w_b)·[14d | w_a+w_b] ≥ w_a).
-What remains, in decreasing leverage:
+THM-771 replaces the promoted Kirchhoff analogy by an exact incidence identity. For
+seven owners, let `A_a=g_a ceil(C_a/7)` be capacity, `Q` total capacity slack,
+`Omega` sheet-overlap debt, and `sigma=sum A_a-c` ramification surplus. Then the
+number of free sheets is exactly
+
+```text
+                         F=Q+Omega-sigma.
+```
+
+When every effective order `C_a=c/g_a` is divisible by seven, `sigma=0`; owner `a`
+has count `c/7` off its endpoint coset and `c/7-g_a` on it. The event mesh is
+`1/(w_a/g_a)`, and `max(w_a/g_a)>=7 max(P)` closes the six-core/seven-exception
+stratum. The former KCL necessity is withdrawn: strict endpoint equality is safe and
+cannot hand off ownership of a bad sheet. What remains, in decreasing leverage:
 
 ## 1. The ρ-floor obligation (finishes regime 2)
 
@@ -26,42 +36,51 @@ the codex tooth-insertion falsifier. TO PROVE: **a positive floor on `|G'_P|` fo
 12-cores outside the classified tight families** (mac-mini B5 stability lane; the
 rigidity THM-757/759 + the L=0 census are the anchors). That single lemma converts
 the regime-2 band domain into a bounded normalized (peel-relative) atlas and, with
-THM-761 + THM-767, makes the ≥4-far endgame: [c* ≥ 43: sheets] ∪ [c* ≤ 42: bounded
+THM-761 + THM-771, makes the ≥4-far endgame: [c* ≥ 43: sheets] ∪ [c* ≤ 42: bounded
 ρ-band protocol] ∪ [deck residues below].
 
-## 2. The chamber census (the Smith-diagram census — CORRECTED per MISTAKE-146)
+## 2. The chamber and ramification-surplus census
 
-[Original "KCL-feasible packet classification" withdrawn with THM-767(4)'s
-absorption inequality: exact tilings are CHAMBER-LOCKED (strict-set event-crossing
-barrier), so no capacity condition governs persistence.] The corrected census
-object: the EVENT ARRANGEMENT on t0 (owner-a mesh g_a/w_a) partitions the circle
-into chambers; a family survives the deck attack only if the closed core-safe set
-lies INSIDE the union of fully-covered chambers, avoiding every chamber wall. So
-classify: (i) which chambers are fully covered (a finite lattice-point condition
-per chamber); (ii) when the core-safe set can avoid all walls — it cannot once any
-w_a/g_a exceeds the Lipschitz bound (THM-767 corollary, sharpened by the audit);
-(iii) the coincidence law (14·gcd | w_a+w_b, exactly gcd double-boundary events per
-window — stands as proved) as the classification of chamber-wall TYPES. The
-matrix-tree flavor survives re-aimed: which wall-type patterns are REALIZED by
-integer speed sets (cf. HYP-6785's realizability sidecar B3).
+The original "KCL-feasible packet classification" is withdrawn with THM-767(4)'s
+absorption inequality. Exact multiplicity-one tilings are **chamber-locked**: the
+strict-set event-crossing barrier forbids an owner handoff at a wall. The owner-a
+event mesh `g_a/w_a` therefore partitions the circle into chambers, and a family
+survives the deck attack only if the closed core-safe set lies inside the union of
+fully covered chambers while avoiding every wall.
+
+For covers with overlap, classify the equality packets `Q+Omega=sigma`. The
+primitive ramified row
+
+```text
+c=21, W={1,2,3,4,7,49,56}, t0=1/7
+```
+
+has capacities `(3,3,3,3,7,7,7)` and `(Q,Omega,sigma,F)=(0,12,12,0)`: ramified
+owners create precisely enough surplus to pay all overlap. The corrected census
+must therefore record both (i) fully covered chambers and (ii) the labelled surplus
+packets within them. The target is a descent lemma: either the effective orders are
+unramified and a reduced-winding endpoint event pierces the core-safe interval, or
+the surplus packet descends to a smaller effective scale with its owner labels
+intact. The coincidence law classifies chamber-wall types and may aid realizability,
+but mirror-pair congruences are sidecars and no KCL inequality is an accepted proof
+obligation.
 
 ## 3. The s-threshold decks (7 ∤ c)
 
-For c ≡ s (mod 7), s ≠ 0: counts are two-valued, coverage needs Σ X_a ≥ s with
-X_a ∈ {0,1} arc-indicators of density s/7 in phase; a free sheet needs 8−s
-simultaneous lows inside the closed core-safe set. The joint phase runs on the
-closed Kronecker geodesic t0·(w_1,…,w_7) in T^7 — exact, finite per family. TO
-PROVE: a Weyl/three-distance argument that the geodesic meets the (8−s)-low region
-whenever it is nonempty and the w's are not resonance-locked; the locked cases feed
-program item 2. (The event pierce is the s = 0 degenerate case where a SINGLE low
-suffices.)
+For nonintegral effective orders, counts take the floor/ceiling values encoded by
+`A_a`, and the exact free-sheet condition remains `Q+Omega>sigma`. The joint phase
+runs on the closed Kronecker geodesic `t0*(u_1,...,u_7)` in the product of effective
+grids — exact, finite per family. TO PROVE: a Weyl/three-distance or p-adic descent
+argument forcing enough simultaneous slack/overlap change inside the closed core-safe
+set unless the packet enters item 2. Raw `c mod 7` is too coarse; each `C_a mod 7`
+and its owner multiplicity `g_a` must be retained.
 
 ## 4. The r ≥ 8 alignment residue
 
 Single-event pierce fails structurally (realized: P={5,7,8,13,14},
 W={108,169,143,213,206,197,30,162}, t0=19/216 keeps the c=7 deck covered at an
 event). But r ≥ 8 means |P| ≤ 5, core margin ≥ 1/6, and MORE simultaneous events
-available: events of different exceptions interleave with gaps ≤ 1/w; quantify
+available: unramified owner events have gaps `1/(w_a/g_a)`; quantify
 (r−7)+1-fold simultaneous-low densities along the geodesic. Alternatively: choose a
 different lens c with fewer exceptions — r(c) varies with c; prove a MIN-LENS
 statement: min over 7|c lenses of r(c) ≤ 7 for covering families with bounded shape,
@@ -76,9 +95,13 @@ case, and the pierce inequality Σ ≤ c−1 — no analysis, pure counting.
 
 ## Tooling
 
-- `04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py` (+ .out): the referee
-  battery (balance 98 pairs exact; two-value; zero-variance; 86/86 + 22-instance +
-  203/203 wall pierces; KCL coincidence law 300 triples exact; r=8 survivor).
+- `04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py` (+ .out): historical
+  battery; balance and fixed-event witnesses remain valid, while its raw-w density
+  and KCL interpretation are corrected by MISTAKE-146.
+- `04-computation/lrc14_r7_sheet_endpoint_defect_codex_S5.py` (+ .out): 83,036
+  unramified count checks, 12,000 exact defect identities, c=7 event witness, c=21
+  ramification obstruction, and reduced-mesh audit.
 - `04-computation/lrc14_regime2_complementarity_stress_opus_S300.py` (+ .out): the
   ratio study (ρ battery, adversarial climb → {1..12}, refutation confirmation).
-- `lrc14_certificates.py`: `deck_event_witness()` (constructive THM-767 witness).
+- `lrc14_certificates.py`: `deck_event_witness()` (constructive fixed-event witness;
+  callers must verify effective-grid and reduced-winding hypotheses from THM-771).

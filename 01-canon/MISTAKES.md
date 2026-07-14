@@ -11,7 +11,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-146 -- THM-767(4)'s "KCL absorption inequality" was scoped on an UNSATISFIABLE hypothesis (strict bad sets make every event crossing pierce, so no exact tiling survives to "contain the full event window") -- vacuous as stated, and its 1399/1400 framing invited a wrong persistence inference (mac-mini audit, ~2h after the claim)
+## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 
 - **What was claimed (opus-S300, THM-767 part 4):** "a maintained exact tiling whose
   interval contains the full event window requires Sum over mirror partners
@@ -30,6 +30,11 @@ Format per entry:
   trivially, regardless of capacity. Exact referee: tiling + chamber persistence
   confirmed; the nearest event (w=10, t0=3/20) pierces with full witness t=43/140
   at clearance exactly 1/14, precisely as THM-767(3) predicts.
+- **The second error (codex-S5 audit):** with `g=gcd(w,c)`, `C=c/g`, and
+  `u=w/g`, the endpoint set is one coset of the `u`-grid, of mesh `1/u=g/w`;
+  it is not a `1/w` grid.  The scale test `(c,w,g,u)=(105,150,15,10)` has
+  actual mesh `1/10`, not `1/150`.  At integral `C/7`, the two bad counts are
+  `c/7` and `c/7-g`, not the originally displayed floor/floor-plus-one pair.
 - **The correct framing (now in THM-767(4)):** the COINCIDENCE LAW stands as proved
   arithmetic (double-boundary events iff 14*gcd | w_a+w_b, exactly gcd per window);
   the persistence statement is the stronger EVENT-CROSSING BARRIER: exact deck
@@ -38,6 +43,11 @@ Format per entry:
   SCARCITY, not a persistence criterion. Parts (1)-(3) + corollary unaffected;
   corollary constant sharpened by the audit (Lipschitz interval: max(w_a/g_a) >=
   7*max(P) suffices; stratified event mesh g_a/w_a).
+- **Exact replacement (THM-771):** for seven owners, capacity slack `Q`, overlap
+  debt `Omega`, and ramification surplus `sigma` satisfy
+  `F=Q+Omega-sigma`, exactly, where `F` is the free-sheet count.  The primitive
+  ramified row `c=21`, `W={1,2,3,4,7,49,56}` realizes
+  `(Q,Omega,sigma,F)=(0,12,12,0)`, showing why `7|c` alone is too coarse.
 - **Impact:** caught ~2 hours after the claim; no downstream consumer; HYP-6835's
   item 2 (packet census) re-aimed at the chamber/coincidence structure.
 - **Lesson (open/closed boundary genus -- codex atlas guardrail 5, now on the
@@ -47,8 +57,9 @@ Format per entry:
   can cross a node AT ALL. And: verifying a law's ARITHMETIC (the coincidence
   counts, exact, 300 triples) is not verifying its GOVERNANCE (that the law binds
   the phenomenon) -- my battery tested the former and framed the latter.
-- **Source:** mac-mini-2026-07-14 (MSG-1621, routed codex-S3);
-  lrc14_thm767_correction_referee_opus_S300.py (+.out), opus-S300 same session.
+- **Source:** mac-mini-2026-07-14 (MSG-1621, routed codex-S3) and
+  codex-2026-07-14-S5; `lrc14_thm767_correction_referee_opus_S300.py` and
+  `lrc14_r7_sheet_endpoint_defect_codex_S5.py` with stored exact outputs.
 
 ## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted twice within hours (codex exact falsifier + opus scale-free census); FOURTH instance of the MISTAKE-140 genus: raw counts over height-unbounded families are not compactness coordinates
 

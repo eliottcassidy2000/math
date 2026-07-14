@@ -7,8 +7,9 @@ depends_on:
   - THM-755   # capped envelope, v* = r_P / (pi |G'_P|)
   - THM-760   # r=1 coprime sheet dodge
   - THM-761   # multi-exception sheet covering bound (this session)
+  - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
-related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835]
+related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-146]
 ---
 
 # HYP-6830 — scale uniformization of the ≥4-far covering endgame
@@ -105,21 +106,20 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
   stability lane) — that alone converts `rho = O(1)` from measured to proved and
   makes the regime-2 band domain bounded in NORMALIZED (peel-relative) coordinates.
 
-## The residual inside regime 1 (named by THM-761; r=7 stratum CLOSED by THM-767)
+## The residual inside regime 1 (named by THM-761; unramified r=7 high reduced winding closed by THM-771)
 
-- **r = 7: CLOSED above the shape bound (THM-767, opus-S300 — the event pierce).**
-  For `7|c`-compatible strata the bad-sheet counts are CONSTANT (= c/7) off a finite
-  event set; at every event moment in the closed core-safe set the total count drops
-  to `c-1`, freeing a sheet with closed clearance `>= 1/14`. Route (a) below was the
-  right one, sharpened: not the whole safe set — the SWITCHING TIMES. The realized
-  c=7 wall instance is pierced at all 203 tested core-safe event moments. Explicit
-  sufficient condition: `w_max > 7*Sum(P)`. Remaining inside r >= 7: the r >= 8
-  alignment residue (single-event pierce fails structurally; realized), `7 ∤ c`
-  decks (s-threshold), and the bounded-shape residue `w_max <= 7*Sum(P)`.
-- The **KCL absorption law** (THM-767(4)) replaces the Newman-route sketch in (b):
-  maintained exact tilings need `sum over mirror partners (14*gcd | w_a+w_b) of
-  gcd(w_a,w_b) >= w_a` per exception — violated by 1399/1400 random 7-sets; the
-  KCL-feasible packets are the rigid arithmetic corners of the deck.
+- **r = 7, all effective grids unramified: CLOSED above a reduced-shape bound
+  (THM-771).** Put `g_a=gcd(w_a,c)`, `C_a=c/g_a`, and `u_a=w_a/g_a`. If `7|C_a`
+  for every owner, its count is `c/7` off its endpoint coset and `c/7-g_a` on it.
+  The endpoint mesh is `1/u_a`; the six-speed core supplies a closed safe interval
+  of length at least `1/(7 max(P))`. Thus `max u_a>=7 max(P)` forces a free sheet.
+  The realized c=7 wall is pierced at `t0=1/8`. Remaining inside r>=7: r>=8,
+  ramified effective grids, and bounded reduced winding.
+- The promoted **KCL absorption law is withdrawn** (MISTAKE-146). Strict endpoint
+  equality is safe for both exiting and entering owners, so it tears rather than
+  transfers a bad sheet. The theorem-facing replacement is the exact incidence
+  defect `F=Q+Omega-sigma`; the primitive c=21 row has `Q=0`, `Omega=sigma=12`,
+  and no free sheet on its static chamber. Mirror arithmetic remains diagnostic only.
 - **Deep gcd entanglement** (Σ g_a over budget): recursive descent c → c/g;
   bookkeeping to write; termination is clear (c strictly decreases).
 

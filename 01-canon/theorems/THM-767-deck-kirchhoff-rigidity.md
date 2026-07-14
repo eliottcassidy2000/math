@@ -1,17 +1,28 @@
 ---
 id: THM-767
-title: Deck Kirchhoff rigidity — the balance identity, the zero-variance (unit-resistance) case 7g|c, the EVENT PIERCE closing the r=7 deck stratum (the witness lives at the switching times), and the chamber-locking of exact deck tilings (the strict-set event-crossing barrier)
-status: PROVED parts (1)-(3) + corollary + coincidence law; part (4)'s ABSORPTION INEQUALITY WITHDRAWN (mac-mini audit, 2026-07-14 16:00, MISTAKE-146) and REPLACED by the stronger event-crossing barrier
-source: opus-2026-07-14-S300 (owner directive: r>=7 deck tilings via squaring-the-square / Smith diagrams / Kirchhoff); correction audit mac-mini-2026-07-14 (routed codex-S3)
+title: Deck balance, reduced-winding event pierce, and chamber locking of exact sheet tilings
+status: PROVED parts (1)-(3), corrected reduced-winding corollary, coincidence law, and event-crossing barrier; original KCL absorption inequality WITHDRAWN (MISTAKE-146); exact seven-owner defect extended by THM-771
+source: opus-2026-07-14-S300; correction audits mac-mini-2026-07-14 and codex-2026-07-14-S5
 depends_on:
   - THM-761   # the sheet frame: fiber-exact core, bad-sheet grids
-related: [THM-745, THM-754, THM-760, HYP-6830, HYP-6835]
-verification: 04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py
-  (+ 05-knowledge/results/lrc14_deck_kirchhoff_rigidity_opus_S300.out);
-  correction referee lrc14_thm767_correction_referee_opus_S300.py (mac-mini example exact)
+corrected_by:
+  - THM-771   # exact F=Q+Omega-sigma identity, reduced event mesh, strict endpoint convention
+related: [THM-745, THM-754, THM-760, THM-771, HYP-6830, HYP-6835, MISTAKE-146]
+verification: 04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py;
+  correction referee 04-computation/lrc14_thm767_correction_referee_opus_S300.py;
+  exact extension 04-computation/lrc14_r7_sheet_endpoint_defect_codex_S5.py
 ---
 
 # THM-767 — Deck Kirchhoff rigidity
+
+> **CORRECTION BANNER (codex-2026-07-14-S5).**  The balance identity and the
+> fixed-event pierce under `7*gcd(w,c)|c` are valid.  Three promoted claims were
+> not: the integral two-value display used the wrong pair, event density used
+> raw `w` instead of reduced winding `w/gcd(w,c)`, and strict safe endpoint
+> equality was treated as a KCL handoff.  The raw condition
+> `max(w)>7*sum(P)` and the KCL necessity are withdrawn.  **Use THM-771** for
+> the proved exact replacement.  The text below retains the valid historical
+> derivation but is corrected at every affected point.
 
 **Frame.** V = cP ⊔ W as in THM-761: scale c ≥ 2, core P (|P| = 13 − r), exceptions
 W = {w_1, …, w_r} with c ∤ w_a, g_a = gcd(w_a, c), δ = 1/14, sheets t_k = (t0+k)/c,
@@ -29,17 +40,32 @@ Over t0 ∈ [0,1) there are exactly w/g ∈ Z full periods. The mean number of g
 of spacing s in a uniformly sliding arc of length L is exactly L/s; here L = 2δ = 1/7,
 s = g/c, multiplicity g, giving g·(c/(7g)) = c/7. ∎
 
-## (2) The two-value lemma and the zero-variance case (unit resistance)
+## (2) The corrected two-value lemma and zero-variance case
 
-> |B_w(t0)| takes only the two values g·⌊c/(7g)⌋ and g·(⌊c/(7g)⌋+1) — a two-valued
-> step function of t0. If moreover **7g | c**, the count is **constant, = c/7, for
-> every t0 outside the finite event set** E_w = {t0 : some phase sits exactly on the
-> bad-arc boundary ±1/14}, where it drops to c/7 − g.
+Write `C=c/g` and `u=w/g`.  If `C/7` is not an integer, `|B_w(t0)|`
+takes the two values
 
-*Proof.* Grid-in-open-arc counts lie in {⌊L/s⌋, ⌊L/s⌋+1} (THM-761's counting). When
-L/s = c/(7g) is an integer, an open arc whose length is an exact multiple of the
-spacing contains exactly L/s points unless an endpoint lies on the grid — and then
-both endpoints do, giving L/s − 1. Multiplicity g scales both values. ∎
+```text
+g*floor(C/7),  g*ceil(C/7).
+```
+
+If instead **`7|C`** (equivalently `7g|c`), the correct two values are
+
+```text
+|B_w(t0)| = c/7-g,  on E_w,
+            c/7,    off E_w,                              (2.1)
+E_w={t0 : u*t0=C/14 (mod 1)}.                             (2.2)
+```
+
+The earlier floor/floor-plus-one display does not apply at the integral
+boundary: openness removes both aligned endpoints and produces floor-minus-one.
+
+*Proof.* When `C/7` is nonintegral, the translated `C`-grid meets the open
+arc in either the floor or ceiling number of points.  When `C=7m`, the arc is
+exactly `m` grid spacings long.  It contains `m` points off alignment and
+`m-1` when both endpoints align and are excluded.  Multiplicity `g` gives
+(2.1).  The two signed endpoint congruences project to the same set because
+their difference is `C/7=m`, proving (2.2). ∎
 
 This is the Smith-diagram "unit resistance": all exceptions burn arcs of the SAME
 phase-length 2δ = 1/7 (speed changes the wiring — the AP step — never the arc length),
@@ -62,21 +88,25 @@ one exactly c/7 − g_a ≤ c/7 − 1; the total is ≤ c − 1 < c, so some she
 B_a — i.e., every exception's clearance at that sheet is ≥ 1/14 in the closed sense
 (the bad condition is the open inequality). The core is fiber-exact. ∎
 
-**Event density (when events must exist).** The event moments of w form two shifted
-(1/w)-grids in t0 (exits at w·u ≡ c/14, entries at w·u ≡ −c/14, mod c, u = t0 + k;
-for gcd(w, c) = 1 their t0-projections are (1/w)-grids), so consecutive events of w
-are ≤ 1/w apart. Ḡ_P has measure ≥ 1 − |P|/7 = 1/7 (six core speeds each burn closed
-measure 2δ = 1/7) and at most Σ_P := Σ_{p∈P} p components (complement of ≤ Σ_P arcs),
-hence contains a closed interval of length ≥ 1/(7Σ_P). Therefore:
+**Corrected event density.** Formula (2.2) is one coset of the `u=w/g`
+grid. It has `u` points and cyclic mesh
 
-> **Corollary (large exceptions self-destruct).** 7 | c, r = 7, strata 7g_a | c:
-> if max_a w_a > 7·Σ_P, then M(V) ≥ 1/14 — no search, no enumeration.
-> *Sharpened constant (mac-mini audit): the closed core-safe set contains the
-> Lipschitz interval of half-width (M(P) − 1/14)/max(P) around the core optimum —
-> for |P| = 6 that is length ≥ 2(1/7 − 1/14)/max(P) = 1/(7·max P) — and the
-> stratified event mesh is g_a/w_a, so* **max_a (w_a/g_a) ≥ 7·max(P)** *suffices.*
+```text
+                         1/u=g/w,                         (3.1)
+```
 
-**The S299 wall falls.** The realized wall instance (c = 7, P = {1..6},
+not `1/w` unless `g=1`. Let `b=max(P)`. A core maximizer, together with
+`M(P)>=1/7` for a six-speed core, gives a closed core-safe interval of length
+at least `1/(7b)`: the core envelope is `b`-Lipschitz. Therefore the valid,
+stronger, scale-free corollary is
+
+> **Corrected large-reduced-winding corollary.** If `r=7`, every owner has
+> `7g_a|c`, and `max_a (w_a/g_a) >= 7*max(P)`, then `M(V)>=1/14`.
+
+The older measure/component argument also remains valid after replacing raw
+`w_a` by `w_a/g_a`, but gives only the weaker threshold involving `sum(P)`.
+
+**The S299 wall still falls.** The realized wall instance (c = 7, P = {1..6},
 W = {12, 38, 72, 96, 151, 169, 188}: ALL sheets bad at the core optimum t0 = 1/7) is
 pierced at **every one of its 203 tested core-safe event moments**, each yielding a
 full exact 1/14-witness. THM-761's residual note stands corrected: standing at the
@@ -122,26 +152,28 @@ classification of WHERE double-boundary events occur, feeding the chamber census
 the "1399/1400 generic violation" statistic describes coincidence SCARCITY, not a
 persistence criterion.
 
+Mirror coincidence counts may still be recorded as tournament diagnostics,
+but they are not a proof certificate for the strict LRC predicate.
+
 ## (5) Scope, residual, and what this closes
 
-- **Closes:** the r = 7 stratum of THM-761's residual, above the explicit shape bound
-  w_max > 7Σ_P, whenever V admits a scale with 7 | c, exactly six c-multiples, and
-  7g_a | c strata (coprime automatic for c = 7·squarefree-part tricks). In
+- **Closes:** the r = 7 stratum of THM-761's residual above the corrected
+  reduced-winding shape bound `max(w_a/g_a)>=7*max(P)`, whenever V admits a
+  scale with exactly six c-multiples and `7g_a|c` for every owner. In
   particular every family with exactly six multiples of 7 and one huge non-multiple
-  is now closed by an event witness.
+  is closed only when “huge” survives reduction by its sheet gcd.
 - **Residual (honest):** (i) r ≥ 8 — the single-event pierce fails structurally
   (Σ ≥ c persists; a surviving cover at an event moment is realized in the battery:
   P = {5,7,8,13,14}, W = {108,169,143,213,206,197,30,162}, t0 = 19/216); needs
-  (r−7)·(c/7)/g + 1-fold simultaneous events. (ii) 7 ∤ c decks — the s-threshold
-  alignment problem; there the enemy has slack, covers (not exact tilings) can cross
-  events via multiplicity buffers, and the chamber census + s-threshold analysis of
-  HYP-6835 governs. (iii) the bounded-shape residue: all w_a/g_a ≤ 7·max(P) with
-  7 | c — a normalized finite family per shape, exactly the right feed for the
-  band/blocker machinery. (iv) strata with 7g_a ∤ c — descend c → 7·lcm-adjusted
-  scales or handle by THM-761's budget.
+  simultaneous endpoint deficits or a surplus/overlap argument. (ii) effective
+  grids `7∤C_a` — ramification surplus can absorb endpoint losses; THM-771's
+  primitive `c=21` row realizes this; covers with multiplicity buffers can cross
+  events, so the chamber/surplus census in HYP-6835 governs. (iii) the bounded
+  reduced-shape residue `w_a/g_a<7*max(P)` — the right feed for band/blocker
+  machinery. (iv) `r>=8` and nonintegral effective grids need a separate capacity
+  theorem; the withdrawn KCL is not such a theorem.
 - **The tournament/engineering thread:** the deck's incidence is r circulant rows;
-  the event calculus is its boundary operator; the event arrangement partitions t0
-  into chambers (the deck's Smith diagram: nodes = events, chambers = wires), exact
-  tilings are chamber-locked, and every chamber wall in the closed core-safe set is
-  a witness. The free sheet is the source; the pierce says the source appears the
-  moment any current switches.
+  the event arrangement partitions `t0` into chambers, and exact tilings are
+  chamber-locked. THM-771 identifies the exact preserved quantity
+  `F=Q+Omega-sigma`; a tournament on private owner splices is useful diagnostically
+  but destroys capacity slack, ramification surplus, and simultaneous overlap.
