@@ -1,7 +1,7 @@
 ---
 id: HYP-6815
 title: LRC14 four-far cone and affine-slope threshold suspension
-status: EXACT REPRESENTATION LEMMAS + EXACT AUDIT; compactification/finite descent open
+status: EXACT REPRESENTATION LEMMAS + EXACT AUDITS; THM-761 high-support sheet descent proved, four-far splice/compactification open
 source: codex-2026-07-14-S2
 script: 04-computation/lrc14_affine_slope_suspension_codex_S2.py
 result: 05-knowledge/results/lrc14_affine_slope_suspension_codex_S2.out
@@ -9,6 +9,7 @@ related:
   - HYP-6780
   - HYP-6785
   - HYP-6820
+  - HYP-6830
   - HYP-6755
   - HYP-3106
   - HYP-3072
@@ -21,6 +22,10 @@ related:
   - THM-741
   - THM-742
   - THM-755
+  - THM-760
+  - THM-761
+  - THM-765
+  - THM-764
 ---
 
 # HYP-6815: LRC14 Four-Far Cone And Affine-Slope Threshold Suspension
@@ -39,6 +44,16 @@ four-coordinate description that must not be confused with it.
    clearance level, subject to `u=ct`.  For fixed `c` it has only the two
    continuous coordinates `(t,lambda)`.  It is not another four-dimensional
    space, and a general affine family need not stay in one four-far chart.
+
+There is now also a first *proved recursive chart change*, not a third
+dimension claim.  THM-761 sends a scaled-core packet `cD union W` to the
+finite sheet cycle `Z/cZ`: the core margin is exactly constant on every
+sheet, while the exceptions become an inhomogeneous residue-cover problem.
+This closes high-support structured scale packets with at most six exceptions.
+It does not close the literal four-far chart: on `C union kF`, the four far
+speeds are the scaled core and the nine fixed small speeds are exceptions, so
+the sheet packet has `r=9`.  HYP-6830's splice to that scale-free/small-scale
+regime remains open.
 
 The global moduli space of 13 speeds modulo dilation is not four-dimensional.
 Calling all of LRC14 a four-manifold would discard the higher far-count strata.
@@ -153,6 +168,50 @@ not a small perturbation that may be discarded.
 This generalizes THM-742's exact slope-geodesic formulation for
 `B union (W+J)`.  THM-742 is one polygonal chart; HYP-6815 retains arbitrary
 owned offsets and the clearance filtration.
+
+### The first proved recursion: the sheet chart
+
+For a scaled-core packet
+
+`V=cD union W`,
+
+where no exception `w in W` is divisible by `c`, choose a core time `t0` and
+write
+
+`t_k=(t0+k)/c`, for `k in Z/cZ`.
+
+Then for every `d in D` and every sheet `k`,
+
+`||(cd)t_k||=||d t0||`,
+
+while each exception has phase
+
+`w t_k=(w t0)/c + wk/c mod 1`.
+
+Thus the core endpoint movie may be *annihilated legally* for this operation:
+its required margin is identical on every sheet.  The exception carrier must
+retain the common sheet index, owner-labelled residues `w mod c`, offsets
+`(w t0)/c`, gcd multiplicities `g_w=gcd(w,c)`, and the closed threshold.  It
+cannot split the exceptions into independent clocks, because their bad sets
+must be unioned on the same `k`.
+
+THM-761 proves that a free sheet exists whenever
+
+`sum_{w in W} g_w*(floor(c/(7g_w))+1) <= c-1`.
+
+For LRC14 this closes every one-exception packet at every scale and, for at
+most six coprime exceptions, every `c>=43`.  The former `c=26` / `q<=25`
+canary is closed immediately on its native 26-sheet clock even though its
+first ordinary rational witness has denominator 27.  The surviving sheet
+debts are exact: seven exceptions can tile the sheet cycle, excessive gcd
+multiplicity calls for `c -> c/g` descent, and the small-scale/scale-free
+splice is HYP-6830's open content.
+
+For the fixed-core far action in Section 1, `C union kF` can be written with
+scaled core `D=F` and exception set `W=C`.  Thus the exact sheet
+reparameterization still applies, but `|W|=9`: the free-sheet union bound is
+beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
+the open tiling/overlap residue rather than claiming THM-761 has solved it.
 
 There is also an exact compressed local coordinate.  At a fixed time put
 `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and `rho_i={14x_i}`.  If
@@ -284,6 +343,12 @@ or interaction arguments require the embedded relation coefficients and
 heights.  Proof assembly additionally needs the next observer, available
 certificate, legal discharge, or named residual debt.
 
+THM-765 supplies a sharp transport model: when one runner covers every
+super-`L` component of a core, each component's length and midpoint phase must
+fit one tooth, and all gcd-deck translations must be retained.  For `L<1/4`,
+a genuine margin drop forces the core gcd to divide the added runner.  Neither
+component length alone nor a residue label alone preserves that conclusion.
+
 The resulting hierarchy is:
 
 ```text
@@ -338,13 +403,21 @@ The larger endpoint/tournament audit in
 checks 552/552 Bernoulli reconstructions, and supplies the collision counts
 quoted above.
 
-The concurrent exact HYP-6820 audit adds a denominator canary.  The same
-`c=26` transverse ray above blocks every denominator `15<=q<=25` and has its
-first rational witness at `q=27`.  A gcd-incoherent uncapped residual blocks
-the same window and first witnesses at `q=26`.  Thus a fixed small-denominator
-window is not a sufficient fiber coordinate even after coherence is removed.
-The retained object must be an adaptive exact-period/blocker deck or another
-certificate, not the Boolean field "some q<=25 works."
+THM-764 makes the concurrent HYP-6820 denominator canary exact.  For every
+`15<=q<=28`, the task-specific rational-witness carrier is precisely a
+zero-owner set plus the owner-resolved signed-unit-pair deck; a witness exists
+exactly when there is no zero owner and some signed unit pair is missing.  The
+`c=26` transverse ray blocks every denominator `15<=q<=25` and first witnesses
+at `q=27`; a gcd-incoherent uncapped residual blocks the same window and first
+witnesses at `q=26`.  The deck preserves this bounded rational predicate, not
+full LRC truth or metric data.
+
+THM-761 then resolves the apparent conflict: the coherent `c=26` row is
+dispatched by its scale-native sheet deck, without any bounded ordinary
+denominator claim.  The proof carrier is therefore an atlas of exact charts
+(signed-pair decks, scale sheets, endpoint words, blocker complexes), with an
+explicit legal transition or residual debt, not the Boolean field "some
+`q<=25` works."
 
 ## 7. Transfers from seemingly unrelated threads
 
@@ -362,6 +435,10 @@ certificate, not the Boolean field "some q<=25 works."
   resolvent-to-LRC map is claimed.
 - CRT and p-adic trees: residue skeleton and valuation/height flex are separate
   coordinates.  Fixed residue does not freeze endpoint geometry.
+- Safe-component tooth decks (THM-765): component width, midpoint phase, and
+  gcd translation sheets form one exact containment condition.  This is a
+  proved instance of a metric carrier plus arithmetic action being smaller
+  than the full row but larger than either of its projections.
 - Observer categories: an anchored cyclic order, metric gap widths, and the
   observer placement are distinct fields.  The exact LRC predicate is marked;
   an observer-blind order class can mix safe and unsafe placements.
@@ -381,23 +458,30 @@ certificate, not the Boolean field "some q<=25 works."
 
 ## 8. Open theorem targets
 
-1. **Finite jet at infinity.** Prove that every affine ray `cA+R` is
-   eventually dispatched by `A`, its first nonzero owned offset jet, finitely
-   many residue classes, and a named certificate whose denominator may adapt
-   to the packet.  HYP-6820 rules out a uniform `q<=25` terminal window.
-2. **Four-circuit localization.** Outside coherent pack/cluster faces, show
+1. **Two-regime splice.** Prove HYP-6830's fragmentation/divisibility
+   complementarity `r_D <= B(c*)` or exhibit a scale-free core with unbounded
+   good-set component count.  Compose THM-761's `c>=43`, at-most-six-exception
+   sheet regime with the bounded `c*<=42` capped-envelope band.
+2. **Seven-exception sheet residue.** Classify the `1/7` cyclic tilings on
+   `Z/cZ`, and formalize the terminating `c -> c/g` bookkeeping for excessive
+   gcd multiplicity.  These are method walls, not known LRC counterexamples.
+3. **Finite jet outside sheet structure.** For affine rays not dispatched by
+   THM-761, test whether leading shape, first owned offset, residue address,
+   and an adaptive named certificate eventually decide the ray.  THM-764
+   rules out a uniform `q<=25` terminal window.
+4. **Four-circuit localization.** Outside coherent pack/cluster faces, show
    that blocker completeness forces a bounded-height marked relation circuit
    meeting all four far coordinates.
-3. **Far-dilation event cocycle.** For the exact action `g |-> k*g`, classify
+5. **Far-dilation event cocycle.** For the exact action `g |-> k*g`, classify
    which owner endpoint blocks split, merge, or reorder, and determine the
    smallest sidecar that transports fixed-threshold truth and metric data.
    The `6/61` versus `12/121` canary rules out an `M`-invariant orbit quotient.
-4. **Cone descent.** On every residue chamber of every `X_C`, produce a
+6. **Cone descent.** On every residue chamber of every `X_C`, produce a
    threshold point or a well-founded move to a smaller normalized state.
-5. **Cubical/blocker comparison in Lean.** Connect zero-state reachability in
+7. **Cubical/blocker comparison in Lean.** Connect zero-state reachability in
    the colored endpoint loop to an empty endogenous blocker edge and state
    exactly what data transports between the two fixed-row presentations.
-6. **Information-minimal assembly.** Prove which fields of the truth, metric,
+8. **Information-minimal assembly.** Prove which fields of the truth, metric,
    functor, and proof carriers can be reconstructed or discharged on each
    current theorem lane.
 

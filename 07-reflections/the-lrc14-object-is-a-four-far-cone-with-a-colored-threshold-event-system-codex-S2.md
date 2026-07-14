@@ -128,6 +128,41 @@ THM-742 already proved this strand-versus-area idea for an additive cluster
 chart. HYP-6815 is the arbitrary owned-offset version, with the threshold
 coordinate retained.
 
+### The first proved chart change between scales
+
+The concurrent THM-761 result turns one part of the proposed recursion into a
+theorem. For `V=cD union W`, choose a core time `t0` and inspect the sheets
+
+```text
+t_k=(t0+k)/c,  k in Z/cZ.
+```
+
+Every core runner `cd` has exactly the phase of `d` at `t0` on every sheet.
+The exceptions become an inhomogeneous covering problem on the finite cycle:
+
+```text
+w t_k=(w t0)/c + (w mod c) k/c.
+```
+
+This is controlled forgetting with an exact annihilation certificate. The
+core event word can be dropped for this operation because the required core
+margin is sheet-invariant. The exception packet cannot be reduced to separate
+runner summaries: it needs the shared sheet index, owner-labelled residues,
+offsets, gcd multiplicities, and closed boundary convention.
+
+THM-761 proves a free sheet when the summed bad-sheet budget is below `c`; in
+LRC14 it closes every one-exception packet and the large-scale regime with at
+most six exceptions (`c>=43` uniformly in the coprime case). Seven exceptions
+can tile the sheet cycle, and the small-scale/scale-free splice remains open
+in HYP-6830. This sheet chart is distinct from both global dilation and the
+fixed-core far-coordinate action above.
+
+That distinction is structural. A fixed-core far ray `C union kF` has scaled
+core `F` of size four and exception set `C` of size nine. The sheet identity is
+still exact, but THM-761's free-sheet bound does not fire at `r=9`. The literal
+four-far chart therefore sits inside the open seven-or-more-exception residue,
+not inside the newly closed high-support regime.
+
 ### A smaller local address than the edge table
 
 At one time write `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and
@@ -257,6 +292,9 @@ with zero endpoint edge flips.
 
 Retain owner labels and the action on the scale/residue fiber. A quotient can
 be truth-safe for the current row and illegal for the next observer.
+THM-765 makes the needed metric sidecar exact in a one-runner peel: safe
+component length plus midpoint phase determines tooth containment, while the
+gcd translation deck detects whether all lifted components can be covered.
 
 ### To preserve a proof
 
@@ -305,12 +343,18 @@ coordinates preserves membership in `X_C` but changes `M` on the core-nine
 canary above. The relevant object is the monoid action on event fibers, not
 the orbit set of gap tuples.
 
-The concurrent HYP-6820 audit destroys another attractive compression.  The
-`c=26` shear ray blocks every rational denominator from 15 through 25 and
-first witnesses at 27.  A gcd-incoherent uncapped residual blocks the same
-window and first witnesses at 26.  The useful invariant is the exact-period
-zero/pair blocker deck and its lift action, not a Boolean "small clock exists"
-field.  Denominator support is part of the moving fiber.
+THM-764 turns the concurrent HYP-6820 audit into an exact task-specific
+carrier. For `15<=q<=28`, a rational witness is decided by the zero-owner set
+and owner-resolved signed-unit-pair deck. The `c=26` shear ray blocks every
+denominator from 15 through 25 and first witnesses at 27; a gcd-incoherent
+uncapped residual blocks the same window and first witnesses at 26. This deck
+preserves the bounded rational-witness predicate, not full LRC or metric data.
+
+THM-761 supplies the complementary chart: the coherent `c=26` row closes on
+its native sheet cycle without a bounded-denominator theorem. The invariant is
+therefore not one universal deck, but an atlas of exact carriers with declared
+transitions: endpoint words, signed-pair decks, scale sheets, and blocker
+complexes.
 
 ## 7. What unrelated threads contributed
 
@@ -411,6 +455,14 @@ the maps and comparison law have not been constructed, and the word
 HYP-6780 showed why raw maximum speed is the wrong induction variable. The
 four-cone suggests a replacement.
 
+For packets `cD union W`, this is no longer entirely schematic. THM-761 is an
+exact descent to the finite pointed cycle `Z/cZ`: the core is fiber-exact and
+the exceptions become the next level's residue runners. The immediate open
+boundary is explicit: seven-exception tilings, excessive-gcd descent, and
+HYP-6830's proof that scale-free cores have controlled good-set fragmentation.
+The projective compactification below is needed for arbitrary unbounded
+sequences outside that proved sheet chart.
+
 At infinity, keep a flag:
 
 ```text
@@ -439,24 +491,26 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Formalize the semilinear four-cone and colored endpoint-loop criterion.
-2. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
+1. Prove HYP-6830's two-regime splice: control good-set fragmentation by the
+   maximal common scale, or exhibit a scale-free unbounded-component falsifier.
+2. Classify the seven-exception `1/7` tilings on the sheet cycle and formalize
+   the terminating excessive-gcd descent `c -> c/g`.
+3. Formalize the semilinear four-cone and colored endpoint-loop criterion.
+4. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
    split, merge, or reorder and find the smallest sidecar transporting truth,
    `M`, measure, and component topology along the action.
-3. Construct a comparison theorem between cubical zero-state reachability and
+5. Construct a comparison theorem between cubical zero-state reachability and
    an empty protected edge in the endogenous pair-sum blocker complex,
    including the data transported between presentations.
-4. Test a finite-jet-at-infinity theorem on `cA+R`: leading shape plus first
-   detuning, finite residue address, and certificate should eventually decide
-   every ray, or expose the first counterexample.  The certificate denominator
-   must remain adaptive; HYP-6820 refutes a uniform `q<=25` window.
-5. Prove a four-circuit localization lemma: outside known coherent faces, a
+6. Test a finite-jet theorem on affine rays outside THM-761's sheet regime;
+   THM-764 refutes a uniform `q<=25` terminal window.
+7. Prove a four-circuit localization lemma: outside known coherent faces, a
    blocker-complete point forces a bounded-height marked relation involving all
    four far coordinates.
-6. Build an observability matrix over the actual `f=4` cone, not a curated row
+8. Build an observability matrix over the actual `f=4` cone, not a curated row
    bank, and find the smallest sidecar portfolio separating every
    truth/metric/peel-changing fiber pair.
-7. Use the existing 2002-core runner as a base case only after its output and
+9. Use the existing 2002-core runner as a base case only after its output and
    coverage protocol are present and resumable.
 
 ## 11. What this session did not prove
