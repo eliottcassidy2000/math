@@ -1,7 +1,7 @@
 LRC14 q<=25 UNIFORMITY REFUTATION -- exact certificate
-valid_pair_deck_criterion: for covering S and 15<=q<=25, a witness exists iff q has no zero owner and B_q(S) misses a unit sign-pair
-nonunit_reason: reducing a/q gives q0<=12, and covering supplies a q0-divisible speed
-unit_reason: q/14 is strictly between 1 and 2, so only residues 0,+1,-1 are unsafe
+valid_pair_deck_criterion: for covering S and 15<=q<=28, a witness exists iff q has no zero owner and B_q(S) misses a unit sign-pair
+nonunit_reason: reducing a/q gives q0<=14, and covering supplies a q0-divisible speed
+unit_reason: q/14<=2, so the integer residues strictly below threshold are exactly 0,+1,-1
 elementary_dilated_block_reason: if gcd(c,q)>1 choose i=q/gcd(c,q)<=12; otherwise choose the signed least representative of (a*c)^(-1), also <=12
 ========================================================================================
 V26 coherent near-dilate
@@ -25,6 +25,10 @@ q15_25_blocker_decks:
   q=24 units=(1, 5, 7, 11) blocked=() zeros=(312,) good_multipliers=()
   q=25 units=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) blocked=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) zeros=() good_multipliers=()
 no_q15_25_witness=True
+q26_28_pair_deck_extension:
+  q=26 units=(1, 3, 5, 7, 9, 11) blocked=(1,) zeros=(26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312) good_multipliers=()
+  q=27 units=(1, 2, 4, 5, 7, 8, 10, 11, 13) blocked=(1, 2, 4, 5, 7, 8, 10, 11) zeros=() good_multipliers=(2, 25)
+  q=28 units=(1, 3, 5, 9, 11, 13) blocked=(3,) zeros=() good_multipliers=(1, 3, 5, 11, 13, 15, 17, 23, 25, 27)
 first_rational_witness=(27, 2, Fraction(2, 27))
 M_exact=1/13
 prime_packet_counts_ge2=((2, 12), (3, 5), (5, 2), (13, 12))
@@ -66,6 +70,10 @@ q15_25_blocker_decks:
   q=24 units=(1, 5, 7, 11) blocked=(1, 5, 7, 11) zeros=() good_multipliers=()
   q=25 units=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) blocked=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) zeros=() good_multipliers=()
 no_q15_25_witness=True
+q26_28_pair_deck_extension:
+  q=26 units=(1, 3, 5, 7, 9, 11) blocked=(1, 3, 5) zeros=() good_multipliers=(3, 7, 11, 15, 19, 23)
+  q=27 units=(1, 2, 4, 5, 7, 8, 10, 11, 13) blocked=(4, 5, 7, 10, 11) zeros=(81,) good_multipliers=()
+  q=28 units=(1, 3, 5, 9, 11, 13) blocked=(3, 5, 9, 11) zeros=(196,) good_multipliers=()
 first_rational_witness=(26, 3, Fraction(1, 13))
 M_exact=101/470
 prime_packet_counts_ge2=((2, 6), (3, 5), (7, 2))

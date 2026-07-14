@@ -26,10 +26,10 @@ The last item is certified without floating point: pi < 22/7 and the exact
 inequality (22/7)*w*|G'_P| < r_P is checked for every w.
 
 The valid residue theorem left behind by the refutation is also checked.  For
-a covering family and 15<=q<=25, a q-witness exists exactly when q divides no
+a covering family and 15<=q<=28, a q-witness exists exactly when q divides no
 speed and the signed unit-pair deck modulo q misses a pair.  The two examples
-have a complete blocker at every q, but explicit witnesses immediately above
-25 (q=27 for V26 and q=26 for SSTAR).
+have a complete blocker at every q<=25, but explicit witnesses immediately
+above 25 (q=27 for V26 and q=26 for SSTAR).
 
 Tournament Analysis uses moduli, not runners, as vertices.  Its exact blocker
 deck is the mandatory sidecar; the tournament is only telemetry.  The pair-
@@ -56,7 +56,8 @@ from lrc14_certificates import M_exact, good_intervals, is_covering
 
 V26 = tuple([26 * i for i in range(1, 13)] + [339])
 SSTAR = (81, 91, 131, 151, 157, 196, 258, 274, 313, 328, 330, 339, 348)
-MODULI = tuple(range(15, 26))
+TARGET_MODULI = tuple(range(15, 26))
+PAIR_DECK_MODULI = tuple(range(15, 29))
 PI_UPPER = F(22, 7)
 
 
@@ -103,12 +104,12 @@ def zero_owners(speeds: tuple[int, ...], q: int) -> tuple[int, ...]:
 
 def blocker_data(speeds: tuple[int, ...]):
     out = {}
-    for q in MODULI:
+    for q in PAIR_DECK_MODULI:
         units = unit_sign_pairs(q)
         blocked = blocked_unit_pairs(speeds, q)
         zeros = zero_owners(speeds, q)
         good_as = tuple(a for a in range(1, q) if is_q_witness(speeds, a, q))
-        # For a covering family, nonunit a reduces to q/gcd(a,q)<=12 and is
+        # For a covering family, nonunit a reduces to q/gcd(a,q)<=14 and is
         # killed by the small-denominator divisibility covering.  A unit a is
         # killed iff q has a zero owner or its inverse sign-pair is blocked.
         residue_blocked = bool(zeros) or blocked == units
@@ -226,8 +227,8 @@ def tournament_fingerprint(vertices, edge):
 
 
 def tournament_report(name: str, data):
-    vertices = MODULI
-    tie_path = MODULI
+    vertices = TARGET_MODULI
+    tie_path = TARGET_MODULI
     pair_keys = {
         q: (len(data[q]["blocked"]), int(not data[q]["zeros"]))
         for q in vertices
@@ -264,7 +265,7 @@ def tournament_report(name: str, data):
 def verify_dilated_block_lemma(c: int):
     """Finite replay of the elementary all-c proof on the requested c=26 row."""
     block = tuple(c * i for i in range(1, 13))
-    for q in MODULI:
+    for q in TARGET_MODULI:
         for a in range(1, q):
             assert not is_q_witness(block, a, q)
 
@@ -292,14 +293,21 @@ def family_report(name: str, speeds: tuple[int, ...], expected_first_witness):
 
     data = blocker_data(speeds)
     print("q15_25_blocker_decks:")
-    for q in MODULI:
+    for q in TARGET_MODULI:
         row = data[q]
         print(
             f"  q={q} units={row['units']} blocked={row['blocked']} "
             f"zeros={row['zeros']} good_multipliers={row['good_as']}"
         )
-    assert all(not data[q]["good_as"] for q in MODULI)
+    assert all(not data[q]["good_as"] for q in TARGET_MODULI)
     print("no_q15_25_witness=True")
+    print("q26_28_pair_deck_extension:")
+    for q in range(26, 29):
+        row = data[q]
+        print(
+            f"  q={q} units={row['units']} blocked={row['blocked']} "
+            f"zeros={row['zeros']} good_multipliers={row['good_as']}"
+        )
 
     witness = first_witness(speeds)
     assert witness == expected_first_witness
@@ -317,9 +325,9 @@ def family_report(name: str, speeds: tuple[int, ...], expected_first_witness):
 
 def main():
     print("LRC14 q<=25 UNIFORMITY REFUTATION -- exact certificate")
-    print("valid_pair_deck_criterion: for covering S and 15<=q<=25, a witness exists iff q has no zero owner and B_q(S) misses a unit sign-pair")
-    print("nonunit_reason: reducing a/q gives q0<=12, and covering supplies a q0-divisible speed")
-    print("unit_reason: q/14 is strictly between 1 and 2, so only residues 0,+1,-1 are unsafe")
+    print("valid_pair_deck_criterion: for covering S and 15<=q<=28, a witness exists iff q has no zero owner and B_q(S) misses a unit sign-pair")
+    print("nonunit_reason: reducing a/q gives q0<=14, and covering supplies a q0-divisible speed")
+    print("unit_reason: q/14<=2, so the integer residues strictly below threshold are exactly 0,+1,-1")
     print("elementary_dilated_block_reason: if gcd(c,q)>1 choose i=q/gcd(c,q)<=12; otherwise choose the signed least representative of (a*c)^(-1), also <=12")
 
     verify_dilated_block_lemma(26)
