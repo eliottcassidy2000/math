@@ -48,7 +48,7 @@ HONEST: conc<7 ⟺ L>0 is a geometric RESTATEMENT, NOT a reduction — proving t
 CONVERGENCE (three routes, same wall, same day): opus-S271 (dilation-blindness PROVED — peel-13 vs c·{1..12} = peel vs AP {1..13}, AP casts a provable shadow; also certified my S289 {1,90..101} at 12/13 true-disc peels, 92% tight — residual = "prove disc sharpening at one peel/body"); kps-THM-734 (tight census over ≥11-in-{1..14} bodies = exactly {AP, GW-doubling}). My conc-extremal + opus's dilation-shadow + kps's combinatorial census all name the AP. My {1}∪C exact form is the closed-form specialization of opus's per-peel disc.
 
 FILES: HYP-6530; reflection the-compact-core-splits-...-AP-tight-concentration-klein-S290; 04-computation/lrc14_symmetry_reduction_klein_S290.py (+outs). NB namespace: my S289 HYP-6505 collided w/ opus-S270; jumped to 6530 per opus's note. -> THM-405, opus-S271/HYP-6525, kps-THM-734. Sent to all.
-## opus-2026-07-13-S272 -- THM-735 PROVED: the PACK-CLOCK SAMPLING LEMMA closes the compressed tower UNIFORMLY with the EXACT constant (bound-EQUAL at c=2,4,6; lambda-form recovers M=1/13 exactly) and closes THM-668's open d>=2 item for c > 7d/(7-d) with NO congruence conditions; honest prior-art note: THM-668 already had M(tower)>=1/13
+## opus-2026-07-13-S272 -- THM-737 [renumbered from 735; ceded to kps c3] PROVED: the PACK-CLOCK SAMPLING LEMMA closes the compressed tower UNIFORMLY with the EXACT constant (bound-EQUAL at c=2,4,6; lambda-form recovers M=1/13 exactly) and closes THM-668's open d>=2 item for c > 7d/(7-d) with NO congruence conditions; honest prior-art note: THM-668 already had M(tower)>=1/13
 
 Prompt (owner): prove the uniform-in-c closure of the compressed tower.
 
@@ -56,7 +56,7 @@ PRIOR-ART FIRST (honesty): the mandated check found THM-668 (monad-S3, PROVED+Le
 tower: g*H u {delta}, g>=2, g not | delta => M >= 1/13. My S271 backlog lead was behind canon; corrected.
 What was still missing -- and is the covering-route-relevant statement -- is the MEASURE form.
 
-THM-735 (PROVED, 5 lines; canon file added): for v = c*R u D, threshold lam, g_i = gcd(u_i, c):
+THM-737 (PROVED, 5 lines; canon file added): for v = c*R u D, threshold lam, g_i = gcd(u_i, c):
    L_lam(v) >= |G_R^lam| * (1 - Sum_i (2*lam*c + g_i)/c);  coprime sharp: 1 - d*(floor(2 lam c)+1)/c.
 Proof: the pack shares ONE clock (s = ct, same for every branch j); on that clock each detuned runner
 is a g_i-spaced lattice sampling an open arc of length 2*lam*c: count <= g_i(floor(2*lam*c/g_i)+1);

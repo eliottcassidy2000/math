@@ -1,0 +1,26 @@
+======================================================================================================
+THM-738 (cluster-clock lemma): L(B u (W+J)) >= Area(B,J) - C(B,J)/W.  All exact Fractions.
+======================================================================================================
+
+klein far-cluster shape:  B=[1], J={0..11}  (|J|=12 far elements -- beyond the Bonferroni j<=6 seam)
+   |G_B| = 6/7 = 0.857143  (#comp 1)
+   Area(B,J) = 1039/13860 = 0.074964
+   V(A_J) = 10 = 10.0000 ;  C = 146 = 146.00 ;  W0 = ceil(C/Area) = 1948
+
+klein two-scale shape:  B=[1, 2, 3], J={0..9}  (|J|=10 far elements -- beyond the Bonferroni j<=6 seam)
+   |G_B| = 29/42 = 0.690476  (#comp 4)
+   Area(B,J) = 2767/61740 = 0.044817
+   V(A_J) = 346/35 = 9.8857 ;  C = 4196/35 = 119.89 ;  W0 = ceil(C/Area) = 2676
+
+------------------------------------------------------------------------------------------------------
+VERIFICATION (exact L vs the bound Area - C/W and vs Area):
+   W=   90 : L = 0.074883   bound = -1.547258  (valid: True)   L - Area = -0.000081  (x W = -0.01)
+   W=  200 : L = 0.074767   bound = -0.655036  (valid: True)   L - Area = -0.000197  (x W = -0.04)
+   W=  400 : L = 0.074940   bound = -0.290036  (valid: True)   L - Area = -0.000024  (x W = -0.01)
+   W=  800 : L = 0.074881   bound = -0.107536  (valid: True)   L - Area = -0.000083  (x W = -0.07)
+   W= 1600 : L = 0.074935   bound = -0.016286  (valid: True)   L - Area = -0.000029  (x W = -0.05)
+   [shape 2] W=   50 : L = 0.040654   bound = -2.352897  (valid: True)
+   [shape 2] W=  200 : L = 0.043427   bound = -0.554612  (valid: True)
+   [shape 2] W=  800 : L = 0.044920   bound = -0.105040  (valid: True)
+
+done (part 1). Float sweep of W <= W0 in the companion part.

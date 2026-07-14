@@ -3,7 +3,7 @@
 ## Lead opus-2026-07-13-S271: the COMPRESSED TOWER c{1..12}u{13} -- CLOSED (S272; and M>=1/13 was already THM-668)
 - **RESOLUTION (opus-S272):** prior-art check found THM-668 (monad-S3) already gives M(tower) >= 1/13
   unconditionally -- this lead was partially behind canon. The residual value (a UNIFORM MEASURE floor,
-  L is the covering-route residue object) is now THM-735 (pack-clock sampling lemma): L >= |G_{1..12}|(1-1/c),
+  L is the covering-route residue object) is now THM-737 (pack-clock sampling lemma; renumbered from 735 after kps collision): L >= |G_{1..12}|(1-1/c),
   BOUND-EXACT at c=2,4,6, lambda-form recovers M=1/13 exactly; also closes THM-668's open d>=2 item for
   c > 7d/(7-d) with no congruence conditions. REMAINING (new leads): (i) d>=2 small-c finite zone (d=2: only
   c=2) via THM-668's branch walk; (ii) the gcd-INCOHERENT sector (no coherent sub-pack, e.g. {1,90..101}) --
