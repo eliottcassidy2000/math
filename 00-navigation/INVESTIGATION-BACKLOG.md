@@ -21,6 +21,32 @@
 - **Files:** THM-761 canon; HYP-6825; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
   (+ .out); 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
+## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension
+
+- **Source:** HYP-6825/HYP-6815; THM-761; HYP-2245/2989/3106/3513; exact
+  tournament-tiling explorer atlas.
+- **Finite result:** The converse-merged blue/black complement-line graph is
+  connected at `n=3..7`; rooted weighted 1-WL separates all merged nodes
+  (272/272 in three rounds at `n=7`, while raw incidence gives only 159
+  profiles).  Recursive deletion ancestry leaves two twin pairs at `n=7`; line
+  recursion separates both.  Every one of the 33866 fixed-path tilings through
+  n=7 has an exact class/node/global/fibre index and every node lists its inverse
+  tiling fibre.  Local flip depth and antipodal blue/black position are retained
+  as separate axes.
+- **Open theorem:** Test connectivity/WL completeness at `n=8`, then attach the
+  address as a base-chart label to the affine incidence object
+  `X={(u,t,c,lambda):u=ct,Phi(u,t)>=lambda}`.  The stalk must retain observer
+  cut, gap/sector metric, closed threshold wall, endpoint owner, scale/carry,
+  wall monodromy, deletion transport, and proof obligation unless a purity or
+  reconstruction lemma discharges a field.
+- **New incoming connection:** THM-761's scaled-core sheet fibre is `Z_c`; at
+  seven exceptions its union-bound wall is an equal-arc cyclic tiling.  Classify
+  that labelled cyclic cover with gcd strata and movable core-safe time, and
+  compare it functorially—not analogically—with staircase tiling fibres.
+- **Pull list:** 26 bounded cards in
+  `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
+  first pulls are n=7 WL twins, the seven-exception sheet tiling, and one exact
+  slope/sector chamber movie.
 
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.

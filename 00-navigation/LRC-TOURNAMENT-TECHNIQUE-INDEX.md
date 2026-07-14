@@ -39,6 +39,45 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk
+
+- **Move:** Keep two tournament-tiling graphs separate: local one-tile
+  spine/rib/sea moves supply transitive-rooted depth, while antipodal all-tile
+  blue/black complement lines supply the fold coordinate.  Recursively refine
+  the weighted coloured line neighbourhood, retain all-deletion parent data,
+  and use a canonical converse-orbit code only as an explicit final tie-break.
+- **LRC use:** HYP-6825 gives exact node addresses and forward/inverse tiling
+  fibres at `n=3..7`; the address can now serve as the combinatorial base chart
+  of HYP-6815's affine-slope suspension.  LRC data must live in stalks over that
+  base: observer cut, gap metric, threshold wall, owner, scale/carry, wall
+  monodromy, and certificate obligation.  THM-761 supplies a second finite
+  fibre, the sheet cycle `Z_c`, whose seven-exception wall is a cyclic tiling.
+- **Preserves:** local flip depth; lexicographic spine/rib/sea and blue/black
+  path words; line colour, weight and loops; recursive parent multiplicities;
+  exact class/converse orbit; every explorer tiling mask and its fibre index.
+- **Forgets / guardrail:** A merged node still forgets chirality side, exact
+  tiling/line orbit, observer, metric gaps, `1/14` versus endpoint wall,
+  blocker owner, scale residue, and future wall/lift behaviour.  Rooted line-WL
+  separates 272/272 nodes at `n=7`, but this is finite evidence, not a theorem
+  for all `n`.  Parent ancestry alone leaves two twin pairs there; recursive
+  line neighbourhoods separate both.
+- **Pairwise observable:** number of unordered merged-node pairs separated by
+  each carrier partition.  Vertices are carriers (SC type, depth, line
+  incidence, rooted line-WL, parent atlas, combined WL, structural address,
+  exact address), not runners.
+- **Switch/gauge:** total retention versus retention per description bit.  At
+  `n=7` both carrier tournaments are transitive with score histogram
+  `{0:1,...,7:1}`, singleton SCCs, zero directed 3-cycles, and one Hamiltonian
+  path; changing gauge flips 22 edges.
+- **Next pull:** Run the rooted weighted line-WL audit at `n=8`; classify the
+  first twins by line-orbit, 2-WL, spectrum, or parent groupoid.  In parallel,
+  build one exact `(u,t,c,lambda)` chamber movie with the address as base and
+  sector/owner/carry/monodromy as stalk.  Pull-card list:
+  `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`.
+- **Pointers:** HYP-6825, HYP-6815, THM-761, HYP-2245, HYP-2989, HYP-3106,
+  HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
+  `the-metagraph-needs-a-stalk-...codex-S4.md`.
+
 ## LTT-432 - Scale-Quotient Peel / Good-Period Certificate Tournament
 
 - **Move:** Treat LRC14 peel/certificate states as tournament vertices, not

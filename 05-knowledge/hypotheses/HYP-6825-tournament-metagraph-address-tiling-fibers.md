@@ -1,13 +1,18 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: VERIFIED FINITE ATLAS n=3..6; general completeness conjecture open
+status: VERIFIED FINITE ATLAS n=3..7; general completeness conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
+  - 04-computation/tournament_tiling_metagraph_address_n7_codex_S4.py
   - 05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.out
   - 05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.json
+  - 05-knowledge/results/tournament_tiling_metagraph_address_n7_codex_S4.out
+  - 05-knowledge/results/tournament_tiling_metagraph_address_n7_codex_S4.json
   - 03-artifacts/visualizations/tournament-tiling-explorer.html
+  - 07-reflections/the-metagraph-needs-a-stalk-canonical-addresses-tiling-fibres-and-the-4d-lrc-object-codex-S4.md
+  - 00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md
 related:
   - HYP-2245
   - HYP-2989
@@ -21,10 +26,11 @@ related:
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
 
-Every tournament isomorphism-class node in the explorer's converse-merged
-metagraph at `n=3..6` now has an executable objective address rooted at the
-transitive class, and every explorer tiling maps exactly to and from the
-corresponding node fibre.
+Every tournament isomorphism-class node in the explorer convention's
+converse-merged metagraph at `n=3..7` now has an executable objective address
+rooted at the transitive class, and every fixed-path tiling maps exactly to and
+from the corresponding node fibre.  The browser explorer itself stops at
+`n=6`; an exact refinement-based continuation supplies `n=7` offline.
 
 The address is not raw graph distance.  It is the tuple
 
@@ -80,18 +86,26 @@ the `m=C(n-1,2)` non-path tiles row by row.  Exhaustive enumeration gives:
 | 4 | 8 | 4 | 3 | 1 | 3 |
 | 5 | 64 | 12 | 10 | 1 | 10 |
 | 6 | 1024 | 56 | 34 | 1 | 34 |
+| 7 | 32768 | 456 | 272 | 1 | 272 |
 
-Thus, through `n=6`:
+Thus, through `n=7`:
 
 - the projected weighted blue/black complement-line graph is connected;
-- raw blue/black incidence is incomplete at `n=6` (26 cells for 34 nodes,
-  largest collision cell 3);
+- raw blue/black incidence is incomplete (`n=7`: 159 cells for 272 nodes,
+  largest collision cell 7);
 - rooted stable colour refinement of that same weighted graph separates all
-  34 merged nodes;
+  272 merged nodes in three rounds at `n=7`;
 - the local quotient distance agrees with minimum labelled tiling Hamming
   weight at every node; and
 - self-converse nodes have odd tiling fibre, non-self-converse merged nodes
   have even fibre, supplying an independent checksum.
+
+At `n=7`, the recursive local-depth/path plus all-deletion parent atlas gives
+270 cells and leaves exactly two twin pairs.  Within each pair the nodes also
+have the same all-black line incidence (`62` for one pair and `86` for the
+other), but the next blue/black neighbourhood refinement separates them.  This
+is a concrete witness that recursive line placement adds information not
+present in deletion ancestry or raw degree.
 
 The line-WL completeness is a finite observation, not a claim for all `n`.
 The canonical orbit code makes the address exact even if refinement develops
@@ -117,8 +131,10 @@ Global tilings are ordered by
 
 The fibre-local order uses `(Hamming weight, class code, mask)`.  Conversely,
 each node record lists every tiling mask and global index in its fibre.  The
-committed JSON contains all 1098 tilings at `n=3..6`, and the explorer now
-loads it to display the address and both indices of the selected tiling.
+committed JSON atlases contain all `33866` tilings at `n=3..7`.  The browser
+explorer loads the `n<=6` atlas to display the address and both indices; the
+compact `n=7` atlas stores mask-indexed class/node/global/fibre arrays and
+complete inverse node fibres.
 
 ## Preservation statement
 
@@ -141,14 +157,15 @@ local parent atlas, combined coloured WL, structural address, exact address.
 
 The pairwise observable is how many unordered node pairs each carrier
 separates.  The retention switch and retention-per-description-bit switch both
-produce transitive tournaments at `n=3..6`, but their edge order differs (18
-edge flips at `n=6`).  At `n=6`, separated-pair counts advance
+produce transitive tournaments at `n=3..7`, but their edge order differs (22
+edge flips at `n=7`).  At `n=7`, separated-pair counts advance
 
 ~~~text
-264 (SC type), 410 (depth), 552 (line incidence), 561 (rooted line-WL).
+16192 (SC type), 27974 (depth), 36636 (line incidence),
+36856 (rooted line-WL, the information ceiling).
 ~~~
 
-The tie Hamiltonian path is the carrier list above.  At `n=6` each gauge has
+The tie Hamiltonian path is the carrier list above.  At `n=7` each gauge has
 score histogram `{0:1,...,7:1}`, zero directed 3-cycles, eight singleton SCCs,
 and one Hamiltonian path.  The challenged assumption is that tournament
 vertices must be runners or arcs; here they are quotient carriers/proof
@@ -156,8 +173,9 @@ obligations.
 
 ## Open boundary
 
-1. Test whether rooted weighted blue/black 1-WL remains complete at `n=7`;
-   if not, classify the first twins by line-class, spectrum, or 2-WL.
+1. Test whether rooted weighted blue/black 1-WL remains complete at `n=8`;
+   if not, classify the first twins by line-class, spectrum, or 2-WL.  Existing
+   nauty class machinery may avoid a full `8!` per-tiling canonicalization.
 2. Prove or refute connectivity of the projected blue/black line graph for all
    `n`.
 3. Prove that local quotient depth always equals minimum tiling weight/MFAS;
