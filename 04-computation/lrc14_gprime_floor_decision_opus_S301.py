@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""THM-774 experiment: the |G'| floor decision for regime 2 (opus-2026-07-14-S301).
+"""THM-777 experiment: the |G'| floor decision for regime 2 (opus-2026-07-14-S301).
 
 Decides, with exact rational arithmetic, whether the 1/14-safe measure |G'_P| of a
 12-core admits a positive floor over primitive shapes (regime 2's last lemma via

@@ -1,5 +1,5 @@
 ---
-id: THM-774
+id: THM-777
 title: The safe-measure floor over 12-cores — exact bounded-height census (min |G'| = 7/858 at {1..13}∖{6}, the detuning extremal again), the unconditional Lipschitz tail, and the ρ bridge that bounds regime 2's normalized band domain
 status: PROVED-EXACT (the maxP ≤ 18 census; the Lipschitz tail; the ρ bridge) + VERIFIED (adversarial scale rays, tooth insertions, hill-descent to height 2500) + CONJECTURE (the asymptotic floor, named precisely)
 source: opus-2026-07-14-S301 (owner directive: make progress or prove route no-gos; separate signal from noise)
@@ -11,7 +11,7 @@ verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
   (+ 05-knowledge/results/lrc14_gprime_floor_decision_opus_S301.out)
 ---
 
-# THM-774 — the safe-measure floor and the ρ bridge
+# THM-777 — the safe-measure floor and the ρ bridge
 
 **Why this object.** Regime 2 of the ≥4-far endgame (HYP-6830) needs the band
 (maxP, v*] bounded in normalized coordinates: ρ(P) = v*(P)/maxP ≤ K. After
