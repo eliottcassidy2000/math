@@ -1,0 +1,40 @@
+========================================================================================
+PART 1 -- balance identity: exact t0-average of |B_w| = c/7 (all strata)
+========================================================================================
+  [PASS] balance identity exact on 98 (c,w) pairs (incl. gcd strata)
+
+========================================================================================
+PART 2 -- two-value lemma + 7g|c zero-variance (unit resistance)
+========================================================================================
+  [PASS] two-value lemma: |B_w| takes <= 2 values, gap = gcd (generic t0 sample)
+  [PASS] 7g|c zero-variance: count CONSTANT = c/7 at generic t0
+
+========================================================================================
+PART 3 -- the event pierce: 7|c, r=7 coprime: every event moment frees a sheet
+========================================================================================
+  [PASS] c=14 structured: 86/86 core-safe event moments pierce with full witness
+  [PASS] randomized battery: all core-safe event moments pierce (22 instances)
+
+========================================================================================
+PART 4 -- the S299 wall falls at the switching times
+========================================================================================
+  [PASS] wall reproduced: all 7 sheets bad at the core optimum t0 = 1/7
+    event moments inside closed core-safe set: 203; pierced with full witness: 203
+  [PASS] THE WALL IS PIERCED: every core-safe event moment yields a full 1/14-witness
+
+========================================================================================
+PART 5 -- KCL absorption: coincidence of exit/entry u-grids
+========================================================================================
+  [PASS] coincidence law exact: gcd(wa,wb) hits per window iff 14 | (wa+wb)/gcd, else 0
+    random exception sets: 1399/1400 exit currents exceed absorption capacity
+  [PASS] KCL is violently violated generically (maintained exact tilings need rigid packets)
+
+========================================================================================
+PART 6 -- honest negatives: r=8 single-event pierce fails structurally
+========================================================================================
+    r=8 event moment with cover SURVIVING: P=[5, 7, 8, 13, 14] W=[108, 169, 143, 213, 206, 197, 30, 162] t0=19/216
+  [PASS] r=8 single-event pierce fails structurally (alignment residue is real)
+
+========================================================================================
+SUMMARY: ALL CHECKS PASSED
+========================================================================================

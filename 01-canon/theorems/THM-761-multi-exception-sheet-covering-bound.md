@@ -142,15 +142,16 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
 ## Residual (named honestly)
 
 1. **`r >= 7`** (core `|P| <= 6`): the union bound cannot fire (`7 * 1/7 = 1`); the
-   tight configurations are cyclic tilings of `Z_c`. The wall is REAL: the script
-   found `c = 7`, core `{1..6}`, `W = {12, 38, 72, 96, 151, 169, 188}` with ALL
-   seven sheets bad at the core optimum `t0 = 1/7` — yet that family still has
-   `M = 1/7 >= 1/14` (lonely by a non-sheet route). So the wall is a wall of the
-   METHOD, not (so far) a wall of the conjecture. Core margin is large
-   (`M(P) >= 1/8`), so there is room: sweeping `t0` over the core's whole safe set
-   (not one optimum), a sharper count exploiting the arcs' EQUAL length `1/7`, or
-   one round of the capped envelope on the exceptions should decide it. NOT claimed
-   here.
+   tight configurations are cyclic tilings of `Z_c`. The wall was realized here
+   (`c = 7`, core `{1..6}`, `W = {12, 38, 72, 96, 151, 169, 188}`: all seven sheets
+   bad at the core optimum) — **and then PIERCED by THM-767 (opus-S300)**: for
+   `7|c`-type strata the bad counts are CONSTANT off a finite event set, so at every
+   event moment in the closed core-safe set the total count drops below `c` and a
+   free sheet appears with closed clearance `>= 1/14`. The wall instance is closed at
+   every one of its 203 tested core-safe event moments. Standing at the core OPTIMUM
+   was the artifact — the witness lives at the switching times. The remaining `r >= 7`
+   content after THM-767: `r >= 8` (single-event pierce fails structurally),
+   `7 ∤ c` decks, and the bounded-shape residue `w_max <= 7*Sum(P)`.
 2. **Small-`c` failures** of the per-`(r, c)` criterion (all confined to `c <= 42`):
    finite in `(r, c)` but not in `P`; these route to the band protocol whose
    inflation is bounded (`v*(cP) <= 42 v*(P)`), or to the exact per-family check.
