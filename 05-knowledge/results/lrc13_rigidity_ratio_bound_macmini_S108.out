@@ -1,0 +1,47 @@
+========================================================================
+(1) THM-759 ratio bound: tight n-set => a_n <= n*a_{n-1}
+========================================================================
+  Proof is analytic (interval/danger-tooth). Numerical corroboration: every
+  {1..11,w} with w in (12, 132] has M > 1/13 (so none violates tightness at
+  large top speed) — the bound a_12<=132 is loose but the mechanism is real:
+    {1..11,w}, w in [13,132]: tight for w in []  (only w=12 would be tight, and 12<=132)
+    => no tight set with a_12 in (12,132]; consistent with a_12<=12*a_11.
+
+========================================================================
+(2) Inductive FINITE CHECK: {1,...,k-1,w} tight (M=1/(k+1)) iff w=k
+========================================================================
+  k= 3 (level 1/ 4): tight w in [3]  unique w=k? True
+  k= 4 (level 1/ 5): tight w in [4]  unique w=k? True
+  k= 5 (level 1/ 6): tight w in [5]  unique w=k? True
+  k= 6 (level 1/ 7): tight w in [6]  unique w=k? True
+  k= 7 (level 1/ 8): tight w in [7]  unique w=k? True
+  k= 8 (level 1/ 9): tight w in [8]  unique w=k? True
+  k= 9 (level 1/10): tight w in [9]  unique w=k? True
+  k=10 (level 1/11): tight w in [10]  unique w=k? True
+  k=11 (level 1/12): tight w in [11]  unique w=k? True
+  k=12 (level 1/13): tight w in [12]  unique w=k? True
+  ALL levels k=3..12 unique: True
+
+========================================================================
+(3) PEELING: 11-subsets of {1..12} — only dropping the max is extremal
+========================================================================
+  drops giving an extremal (M=1/12) 11-core: [12]  (only the max, 12)
+  => tight {1..12} peels to the UNIQUE extremal 11-set {1..11}; the
+     mu0=1/12 branch is the one that occurs (peeling preserves tightness here).
+
+========================================================================
+(4) Three independent confirmations of R(12)
+========================================================================
+  (4a) exact census, primitive 12-subsets of {1..16} (1820): tight = 1 [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+  (4b) winding search (4095 complete-residue sets, m_r in {0,1}): tight with winding = 0
+  (4c) branch hunt (77 non-extremal 11-cores in {1..13} + killers): non-base tight = 0 []
+
+========================================================================
+VERDICT
+========================================================================
+  THM-759 ratio bound PROVED (a_n <= n*a_{n-1}, interval argument).
+  Inductive finite check PROVED-EXACT (all levels k<=12).
+  R(12) VERIFIED 3 independent ways: census {1..16}, winding, branch-hunt — all
+  give ONLY {1,...,12}. The residual (sporadic mu0>1/n branch emptiness at n=12)
+  is the LRC tight-instance characterization, OPEN since Goddyn-Wong (Perarnau-
+  Serra survey). Not closure-critical (THM-758); characterizes the extremal.

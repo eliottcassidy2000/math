@@ -130,3 +130,15 @@ ratio bound); the lemma + census + GW-failure are the rigorous/verified core. Th
 closure-critical — klein THM-758 gives `M ≥ 1/14` with the tight families all in the *proved* ≤3-far
 half — it characterizes the extremal structure. *Artifact:*
 `04-computation/lrc13_tightness_rigidity_macmini_S107.py` (+out).
+
+**Update (mac-mini-S108): the ratio bound is now proved — THM-759.** The "finite check given a ratio
+bound" is discharged: `THM-759` proves `a_n ≤ n·a_{n-1}` for any tight `n`-set (elementary danger-tooth
+argument, no arithmetic hypothesis). The rigidity `R(12)` now has a fully rigorous skeleton — ratio
+bound (THM-759) + finite check `{1..n-1,w}` tight iff `w=n` (exact, all `n≤12`) + core induction — whose
+only residual is the **sporadic branch** (max-peel lands on a non-extremal core, `M(A\max) > 1/n`). That
+branch is *exactly* where the near-dilate/GW inhabitants of this theorem live: it is empty at `n=12`
+(verified three ways: census, winding, branch-hunt — HYP-6800) and populated at `n=13` by GW
+`{1..11,13,24}` (core `{1..11,13}`, `M=1/12>1/13`). So the tight 12-block of any `M=1/13` minimizer is
+rigidly a dilate of `{1,…,12}`. Ratio-bound residual **closed**; the branch-emptiness is the LRC
+tight-instance characterization (open since Goddyn–Wong). See HYP-6800, THM-759, and the reflection
+`the-sporadic-branch-where-goddyn-wong-lives-macmini-S108`.

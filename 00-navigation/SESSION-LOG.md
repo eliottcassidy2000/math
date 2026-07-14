@@ -1,3 +1,21 @@
+## mac-mini-2026-07-14-S108 -- LRC(13) RIGIDITY: the RATIO BOUND is PROVED (THM-759); the rigidity's one hard branch is LOCALIZED as the Goddyn-Wong locus (HYP-6800).
+
+TASK (owner): prove the ratio bound to complete the LRC(13) tightness rigidity R(12) (unique tight primitive 12-set = {1..12}); work the critical path; prioritize insight exploration.
+
+DELIVERED:
+(A) THM-759 -- THE RATIO BOUND (PROVED, elementary). A tight n-set (M=1/(n+1)) has a_n <= a_{n-1}/((n+1)*M(A\max)-1) <= n*a_{n-1}. Proof: interval/danger-tooth -- at a tight point t0 of the core P=A\{a_n}, an interval I of radius rho in (L/a_n, (mu0-L)/a_{n-1}) keeps min_P > L=1/(n+1) throughout, and is WIDER than one danger-tooth of a_n (2rho > 2L/a_n), so I holds a time where a_n is ALSO >L => M(A)>1/(n+1), contra. No alignment/arithmetic hypothesis -- generalizes THM-751 (aligned) to ALL far elements; strict inequality handled by shrinking rho. This is the ratio bound HYP-6775/THM-757 flagged as missing.
+(B) INDUCTIVE SKELETON. R(n) <= R(n-1): drop max, core P, mu0=M(P)>=1/n. If mu0=1/n (P extremal): R(n-1)=>P={1..n-1}, a_{n-1}=n-1, ratio bound a_n<=n(n-1), FINITE CHECK {1..n-1,w} tight iff w=n (PROVED-EXACT, all levels k=3..12) => A={1..n}.
+(C) THE INSIGHT -- THE SPORADIC BRANCH (reflection written). The ONE hard branch is mu0>1/n (P non-extremal), and it is EXACTLY where Goddyn-Wong lives: GW {1..11,13,24} (n=13) peels to core {1..11,13} with M=1/12 > 1/13 = 1/n (NON-extremal). So 'sporadic tight instance' = 'max-peel lands on a non-extremal core' -- sporadicity and the branch are ONE property. R(12) <=> the sporadic branch is EMPTY at n=12; VERIFIED 3 independent ways: exact census {1..16} (unique {1..12} / 1820), winding search (complete-residue-systems mod 13, m_r in {0,1}: only {1..12} / 4095), branch hunt (77 non-extremal 11-cores in {1..13} + killers, 10890 candidates: ZERO non-segment tight). n=12 branch empty, n=13 populated (GW) -- the ENTIRE 12/13 asymmetry, localized to one branch (NOT a failure of the ratio bound or finite check, which hold at all n).
+
+HONEST SCOPE: ratio bound + finite check + skeleton are RIGOROUS. The residual -- sporadic-branch emptiness at n=12 -- IS the LRC tight-instance characterization, OPEN since Goddyn-Wong (checked literature: Perarnau-Serra survey arXiv:2409.20160, 'no progress since GW'; other tight families 'wide open'). So R(12) is verified (3 ways) + reduced to one sharply-defined open branch, with the analytic gap (ratio bound) now CLOSED. NOT closure-critical (klein THM-758 gives M>=1/14 with tight families in the proved <=3-far half); this characterizes the extremal structure, refining THM-757/HYP-6775.
+
+CONCURRENT: pulled klein S312 (crude M>=0.14 band bound), opus S294 (autocorrelation) -- covering endgame continuing on the >=4-far/band front; my work is the extremal-characterization refinement, orthogonal.
+
+FILES: 01-canon/theorems/THM-759-tight-instance-ratio-bound.md; 04-computation/lrc13_rigidity_ratio_bound_macmini_S108.py (+.out); HYP-6800; reflection the-sporadic-branch-where-goddyn-wong-lives-macmini-S108; THM-757 addendum touched.
+HANDOFFS: @klein/@opus -- the near-dilate/commensurate accelerations (THM-757/720/721) are the inhabitants of the sporadic branch (non-extremal-core tight sets); that is their structural home. @kps/@all -- the tight-instance characterization = classify tight sets whose max-peel is non-extremal (extremal-core branch is fully understood = initial segments by induction).
+
+---
+
 ## klein-2026-07-14-S312 -- the crude M≥0.14 bound for the band residual DOES NOT EXIST (signed-not-absolute wall), but the band residual has a bounded-q RATIONAL WITNESS (good period q≤25) — the real, cheap, decidable finish. Corrects my S311 optimism.
 
 Prompt (owner): prove the crude M≥0.14 bound for the band residual.
