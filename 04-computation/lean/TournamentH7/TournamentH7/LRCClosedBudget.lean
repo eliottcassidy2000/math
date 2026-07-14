@@ -705,7 +705,7 @@ theorem raabe_B2 (v : ℕ) (hv : 1 ≤ v) (y : ℝ) :
 autocorrelation of an interval family is such a combination, `C = |G|²`, weights `σ_p σ_q`,
 knots `x_p − x_q`; referee-verified exactly across the fleet), this is the Poisson bridge:
 geometric disc = Bernoulli jump-pair form = spectral disc. -/
-theorem grid_deficit {R : ℕ} (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (w yk : Fin R → ℝ) :
+theorem grid_deficit {ι : Type*} [Fintype ι] (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (w yk : ι → ℝ) :
     (1 / v) * (∑ i ∈ Finset.range v, (C + ∑ r, w r * B2R ((i : ℝ) / v - yk r))) - C
       = (1 / v ^ 2) * ∑ r, w r * B2R (v * yk r) := by
   have hv0 : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
@@ -731,6 +731,105 @@ theorem grid_deficit {R : ℕ} (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (w yk : Fin R 
   rw [hpull]
   field_simp
   ring
+
+/-! ### The autocorrelation B₂-decomposition chain (opus-S294)
+
+The exact decomposition (tent-verified; referee = every THM-732 exact run):
+`A(τ) = |G|² + (1/2) Σ_{p,q} σ_p σ_q B₂({τ + x_q − x_p})`, jumps `x` with signs `σ`.
+Here: the MODEL is defined, and the chain [model's grid deficit] = [the Bernoulli jump-pair
+discrepancy `discB` of THM-732] is PROVED (grid_deficit at the pair index).  The single
+remaining analysis statement in the whole (H)-edge chain is `A = acorrModel` — the
+piecewise-linear single-pair overlap identity, stated in prose with machine-checked
+rational instances below. -/
+
+/-- The B₂-model of the autocorrelation of an interval family. -/
+noncomputable def acorrModel {M : ℕ} (C : ℝ) (x sg : Fin M → ℝ) (τ : ℝ) : ℝ :=
+  C + ∑ pq : Fin M × Fin M, (sg pq.1 * sg pq.2 / 2) * B2R (τ + x pq.2 - x pq.1)
+
+/-- THM-732's exact Bernoulli jump-pair discrepancy. -/
+noncomputable def discB {M : ℕ} (x sg : Fin M → ℝ) (v : ℕ) : ℝ :=
+  (1 / (2 * (v : ℝ) ^ 2)) * ∑ pq : Fin M × Fin M, sg pq.1 * sg pq.2 * B2R (v * (x pq.1 - x pq.2))
+
+/-- **The Bernoulli form IS the model's grid deficit** — `grid_deficit` at the pair index.
+With the (prose) identity `A = acorrModel`, this is the geometric THM-731/755 statement:
+`(1/v) Σ_i A(i/v) − |G|² = discB`. -/
+theorem discB_eq_grid_deficit {M : ℕ} (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (x sg : Fin M → ℝ) :
+    (1 / v) * (∑ i ∈ Finset.range v, acorrModel C x sg ((i : ℝ) / v)) - C
+      = discB x sg v := by
+  have hmain := grid_deficit (ι := Fin M × Fin M) v hv C
+      (fun pq => sg pq.1 * sg pq.2 / 2) (fun pq => x pq.1 - x pq.2)
+  have hshape : ∀ i ∈ Finset.range v,
+      acorrModel C x sg ((i : ℝ) / v)
+        = C + ∑ pq : Fin M × Fin M,
+            (sg pq.1 * sg pq.2 / 2) * B2R ((i : ℝ) / v - (x pq.1 - x pq.2)) := by
+    intro i _
+    unfold acorrModel
+    congr 1
+    refine Finset.sum_congr rfl fun pq _ => ?_
+    congr 1
+    ring
+  rw [Finset.sum_congr rfl hshape, hmain]
+  unfold discB
+  rw [Finset.mul_sum, Finset.mul_sum]
+  refine Finset.sum_congr rfl fun pq _ => ?_
+  have hv0 : ((v : ℝ)) ≠ 0 := by
+    have : (0 : ℝ) < v := by exact_mod_cast hv
+    exact ne_of_gt this
+  field_simp
+
+/-- Machine-checked instance of the (prose) overlap identity at a tent-interior point:
+one interval `[0, 1/3]` at shift `τ = 1/4`: the true circular autocorrelation is
+`ℓ − τ = 1/3 − 1/4 = 1/12`; the model reproduces it exactly. -/
+theorem acorrModel_tent_instance :
+    acorrModel (1 / 9) ![(0 : ℝ), 1 / 3] ![(1 : ℝ), -1] (1 / 4) = 1 / 12 := by
+  unfold acorrModel
+  rw [show (Finset.univ : Finset (Fin 2 × Fin 2))
+      = {(0, 0), (0, 1), (1, 0), (1, 1)} by decide]
+  rw [Finset.sum_insert (by decide), Finset.sum_insert (by decide),
+      Finset.sum_insert (by decide), Finset.sum_singleton]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+  have h1 : B2R ((1:ℝ)/4 + 0 - 0) = (1/4)^2 - 1/4 + 1/6 := by
+    unfold B2R
+    rw [show (1:ℝ)/4 + 0 - 0 = 1/4 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  have h2 : B2R ((1:ℝ)/4 + 1/3 - 0) = (7/12)^2 - 7/12 + 1/6 := by
+    unfold B2R
+    rw [show (1:ℝ)/4 + 1/3 - 0 = 7/12 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  have h3 : B2R ((1:ℝ)/4 + 0 - 1/3) = (11/12)^2 - 11/12 + 1/6 := by
+    unfold B2R
+    rw [show (1:ℝ)/4 + 0 - 1/3 = 11/12 - 1 by ring]
+    rw [show (11:ℝ)/12 - 1 = 11/12 + ((-1 : ℤ) : ℝ) by push_cast; ring,
+        Int.fract_add_intCast, Int.fract_eq_self.mpr (by norm_num)]
+  have h4 : B2R ((1:ℝ)/4 + 1/3 - 1/3) = (1/4)^2 - 1/4 + 1/6 := by
+    unfold B2R
+    rw [show (1:ℝ)/4 + 1/3 - 1/3 = 1/4 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  rw [h1, h2, h3, h4]
+  norm_num
+
+/-- Second instance, wrap regime: interval `[0, 1/3]` at `τ = 5/6` (so `{τ} > 1 − ℓ`:
+the wrapped overlap is `τ + ℓ − 1 = 1/6`); the model reproduces it exactly. -/
+theorem acorrModel_wrap_instance :
+    acorrModel (1 / 9) ![(0 : ℝ), 1 / 3] ![(1 : ℝ), -1] (5 / 6) = 1 / 6 := by
+  unfold acorrModel
+  rw [show (Finset.univ : Finset (Fin 2 × Fin 2))
+      = {(0, 0), (0, 1), (1, 0), (1, 1)} by decide]
+  rw [Finset.sum_insert (by decide), Finset.sum_insert (by decide),
+      Finset.sum_insert (by decide), Finset.sum_singleton]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+  have h1 : B2R ((5:ℝ)/6 + 0 - 0) = (5/6)^2 - 5/6 + 1/6 := by
+    unfold B2R
+    rw [show (5:ℝ)/6 + 0 - 0 = 5/6 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  have h2 : B2R ((5:ℝ)/6 + 1/3 - 0) = (1/6)^2 - 1/6 + 1/6 := by
+    unfold B2R
+    rw [show (5:ℝ)/6 + 1/3 - 0 = 1/6 + ((1 : ℤ) : ℝ) by push_cast; ring,
+        Int.fract_add_intCast, Int.fract_eq_self.mpr (by norm_num)]
+  have h3 : B2R ((5:ℝ)/6 + 0 - 1/3) = (1/2)^2 - 1/2 + 1/6 := by
+    unfold B2R
+    rw [show (5:ℝ)/6 + 0 - 1/3 = 1/2 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  have h4 : B2R ((5:ℝ)/6 + 1/3 - 1/3) = (5/6)^2 - 5/6 + 1/6 := by
+    unfold B2R
+    rw [show (5:ℝ)/6 + 1/3 - 1/3 = 5/6 by ring, Int.fract_eq_self.mpr (by norm_num)]
+  rw [h1, h2, h3, h4]
+  norm_num
 
 end ClosedBudget
 end LRC14

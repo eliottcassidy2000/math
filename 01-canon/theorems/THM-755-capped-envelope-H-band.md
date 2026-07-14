@@ -83,10 +83,17 @@ periodized second Bernoulli), B2R_add_int / B2R_neg, both Gauss sums, raabe_shif
 raabe_shift_int (cyclic reindexing), raabe_base (fundamental-cell algebra), **raabe_B2** (the
 multiplication formula Sum_{i<v} B2({y+i/v}) = (1/v) B2({vy}) -- the finite Poisson atom), and
 **grid_deficit** (integral-free E-linearity: h = C + Sum w_r B2({. - y_r}) has grid deficit
-(1/v^2) Sum w_r B2({v y_r})).  The single remaining named step is the finite STRUCTURAL lemma
--- the autocorrelation of an interval family is such a B2-combination with C = |G'|^2, weights
-sigma_p sigma_q, knots x_p - x_q (referee-verified exactly in every THM-732 computation) --
-pure piecewise-linear case analysis, no analysis.
+(1/v^2) Sum w_r B2({v y_r})).  THE DECOMPOSITION CHAIN IS NOW ALSO FORMALIZED (opus-S294): the exact form derived and
+tent-verified -- A(tau) = |G|^2 + (1/2) Sum_{p,q} sigma_p sigma_q B2({tau + x_q - x_p}) --
+with, in Lean (sorry-free, kernel-pure): grid_deficit GENERALIZED to arbitrary Fintype
+indices; acorrModel (the B2-model) and discB (THM-732's exact Bernoulli form) defined;
+**discB_eq_grid_deficit PROVED** ((1/v) Sum_i model(i/v) - C = discB -- the geometric
+grid-mean identity for the model); and two machine-checked rational instances of the
+model-equals-autocorrelation identity (tent interior: [0,1/3] at tau = 1/4 gives 1/12; wrap
+regime: tau = 5/6 gives 1/6).  THE ONE REMAINING ANALYSIS STATEMENT in the entire (H)-edge
+chain: A = acorrModel (the single-pair circular-overlap identity -- piecewise-linear case
+analysis over the wrap thresholds; referee-verified exactly in every THM-732 run; two of its
+instances now machine-checked).
 
 ## Files
 

@@ -1,3 +1,37 @@
+## opus-2026-07-14-S294 -- the AUTOCORRELATION B2-DECOMPOSITION: exact form derived (sign nailed: PLUS; tent-verified by hand) + THE CHAIN FORMALIZED (grid_deficit generalized to Fintype; acorrModel + discB defined; discB_eq_grid_deficit PROVED; two machine-checked instances of A = model incl. the wrap regime); the (H)-edge Lean chain is complete except ONE named analysis statement (the single-pair overlap identity)
+
+Prompt (owner): prove the autocorrelation B2-decomposition lemma and finish the geometric THM-755.
+
+THE DERIVATION FIRST (sign matters): A(tau) = |G|^2 + (1/2) Sum_{p,q} sigma_p sigma_q
+B2({tau + x_q - x_p}) -- PLUS, not minus; hand-verified on the single-interval tent where the
+constants collapse exactly (A = L - tau on (0, L); A(0) = L). The Fourier derivation is 4 lines;
+the Lean content is elsewhere.
+
+THE LEAN (all sorry-free, kernel-pure, build clean):
+- grid_deficit GENERALIZED from Fin R to arbitrary [Fintype iota] (proof was index-agnostic);
+- acorrModel (the B2-model of the autocorrelation) and discB (THM-732's exact Bernoulli
+  jump-pair form) defined;
+- **discB_eq_grid_deficit PROVED**: (1/v) Sum_{i<v} model(i/v) - C = discB -- grid_deficit
+  instantiated at the pair index Fin M x Fin M; the geometric grid-mean identity for the model;
+- TWO MACHINE-CHECKED INSTANCES of the remaining identity A = model: the tent interior
+  ([0,1/3], tau = 1/4: model = 1/12 = the true overlap) and the WRAP regime (tau = 5/6:
+  model = 1/6 = the wrapped overlap) -- each by explicit pair-enumeration + fract resolution.
+
+THE HONEST REMAINDER: A = acorrModel -- the single-pair circular-overlap identity (each
+interval pair's overlap = its four-term B2 combination). Piecewise-linear case analysis over
+the wrap thresholds; zero analytic content; referee-verified exactly in every THM-732
+computation; its instances now Lean-checked. This is the ONE analysis statement left anywhere
+in the (H)-edge chain [kernel -> envelopes -> spectral -> Raabe -> grid-deficit -> discB].
+
+NAMESPACE: HYP-6740 taken by klein-S311 (closing the band residual WITH the capped envelope
+downstream); mine -> 6745.
+
+FILES: LRCClosedBudget.lean (+5 declarations); THM-755 canon; HYP-6745. -> klein (the overlap
+casework is LRCShadowGap-style -- one focused session finishes the entire geometric chain),
+kps (discB in Lean now matches your exact-Q form definitionally), mac-mini (30 opus
+declarations in the file, all kernel-pure).
+
+---
 ## mac-mini-2026-07-14-S107 -- LRC(13) TIGHTNESS RIGIDITY: {1,...,12} is the UNIQUE tight primitive 12-set (M=1/13). The remaining rigidity content of THM-757's multi-killer floor, now VERIFIED + PARTIALLY-PROVED (HYP-6775).
 
 TASK (owner): prove the LRC(13) 12-block tightness rigidity -- is the tight 12-block always a dilate of {1..12}? Approached SKEPTICALLY because the ANALOGOUS n=13 rigidity is FALSE (Goddyn-Wong {1..11,13,24} is a non-AP tight 13-set, M=1/14).
