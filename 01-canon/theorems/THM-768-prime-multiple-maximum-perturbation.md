@@ -40,7 +40,7 @@ following exact partition of any putative tight twelve-set:
 1. **no multiple of 13:** the residues are exactly `{1,...,12}` modulo `13`;
 2. **a multiple below the maximum:** `13|a_i` for some `i<12` and
    `13 does not divide a_12`; or
-3. **at least two multiples:** `13|a_12` is possible only if another speed is
+3. **a multiple at the maximum:** `13|a_12`, and at least one other speed is
    also divisible by `13`.
 
 Thus the full-residue lift branch is forced on the zero-owner-free locus, and
@@ -160,8 +160,9 @@ residue split quantifier-honest:
 
 - the zero-owner-free branch is the full-residue lift problem;
 - the unique-maximum-zero-owner branch is empty; and
-- the residual zero-owner problem has either a nonmultiple maximum or at
-  least two zero owners.
+- the residual zero-owner problem splits according to whether the maximum is
+  a nonmultiple; if the maximum is itself a zero owner, there are at least two
+  zero owners.
 
 The next task is to combine the component/splice defect with those two
 multiple-owner branches, rather than assuming every tight set is already a

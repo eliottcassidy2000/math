@@ -6,6 +6,18 @@ that the `f>=4` branch was globally finite-decidable, that all such families hav
 that LRC(14) was assembled were false. This file now records the logically current frontier.
 The standard 14-runner case remains open.
 
+**External-status note (checked 2026-07-14).**  The April 2026 arXiv preprint
+[Sungkawichai--Trakulthongchai, *Eleven, twelve, and thirteen lonely runners*](https://arxiv.org/abs/2604.23906)
+claims a computer-assisted proof for `k=10,11,12` nonzero speeds.  In the
+usual convention with one stationary runner, that makes the case studied here
+(`k=13`, fourteen runners, threshold `1/14`) the first unresolved case if the
+preprint is accepted; it is currently an arXiv v1, not a peer-reviewed theorem.
+The finite-height input used below is independently aligned with the published
+zonotopal finite-checking theorem of
+[Malikiosis--Santos--Schymura](https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/linearly-exponential-checking-is-enough-for-the-lonely-runner-conjecture-and-some-of-its-variants/A51A991DE89B8C9C2E2FF13FBD4501DA),
+which bounds the relevant velocity sum by a linearly exponential quantity but
+does not itself settle this case.
+
 ## 0. The honest reduction
 
 LRC(14) = **NON-COVERING** (THM-366, via LRC(≤13), settled) + **COVERING**, and by
@@ -75,7 +87,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
 | arbitrary binding scale `p/(13s)` | PROVED packet split; shallow iff full nonzero residues; deep exceptions obey exact sheet capacity, with `s=2` parity and `s=3` colour criteria | THM-769 |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
-| n=12 sporadic branch | OPEN; ratio/tooth/component reductions + shallow/deep binding-scale split + bounded exact banks | THM-759/765/766/768/769/770; HYP-6820 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and deep multiple-owner packets remain | THM-759/765/766/768--770; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -146,10 +158,24 @@ even a transitive safe-component phase tournament with one Hamiltonian path
 have explicit liars.  Any anti-cover theorem must retain exact midpoint-width
 slack and owner incidence, not just winding or phase order.
 
+THM-768--770 sharpen the arithmetic split.  A tight twelve-set cannot have
+its maximum as the unique multiple of `13`.  The no-multiple (shallow) branch
+is exactly a full nonzero residue transversal; every multiple-owner (deep)
+binding point has scale `s>=2` and at least two off-sheet tighteners satisfying
+THM-769's exact sheet-capacity inequality.  THM-770 exhausts all `13^12`
+shallow packets through lift height twelve by a lossless `24,008`-cell
+endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
+`c=1,...,12,14`, hence the only primitive row is the AP.  This closes the
+shallow sporadic slice through `max A<=168`, not the higher shallow lifts or
+any deep branch.  Its residue-obligation tournament has all `66` burdens tied;
+the theorem lives in the owner-incidence hypergraph, not the transitive tie
+quotient.
+
 ## 4. The one-line frontier
 
 > **LRC(14) is open. The proved `f<=3` tile and the per-core capped envelope are substantial,
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
-*Controlling corrections: HYP-6780, MISTAKE-143, THM-762/764, and the updated THM-758. Earlier
+*Controlling corrections: HYP-6780, MISTAKE-143, THM-762/764, THM-768--770,
+and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

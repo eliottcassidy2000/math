@@ -1,6 +1,6 @@
 # LRC14 after the `q<=25` refutation: the decked threshold object
 
-*codex-2026-07-14-S3.  A synthesis after THM-762--766, HYP-6820, the S2
+*codex-2026-07-14-S3.  A synthesis after THM-762--770, HYP-6820, the S2
 four-far-cone/colored-threshold-sheaf reflection, and the exact blocker and
 affine-suspension audits.*
 
@@ -361,26 +361,36 @@ unique.”  Its exact hard kernel is:
 > bound admits a completion whose metric labelled component word has
 > nonnegative slack at every letter.
 
+THM-768--770 refine this into two recursive charts: shallow full-residue
+packets above lift height twelve, and deep binding-scale packets whose
+off-sheet runners must persistently own every lift of the quotient core's
+loose set.  The component-word statement is the common geometric form; the
+residue/sheet split supplies its arithmetic addresses.
+
 The second wording exposes where the known theorems enter and what they do
 not see.  It also gives exact counterexample output if the proposed local-to-
 global principle is false.
 
 ## 9. Ranked next contributions
 
-1. Derive a global balance identity for `sum_J sigma_J(w)` refined by endpoint
+1. Prove the unbounded primitive descent trigger suggested by THM-770: a
+   zero-defect full-residue packet is `{1,...,12}` or has nontrivial gcd.
+2. Attack THM-769's exact `s=2` and `s=3` folded residuals as persistent
+   colour covers of the quotient core's entire loose set, retaining endpoints.
+3. Derive a global balance identity for `sum_J sigma_J(w)` refined by endpoint
    owner transitions; test whether it is monotone under deletion or scale
    descent.
-2. Extend the exact atlas by structural strata rather than raw height:
+4. Extend the exact atlas by structural strata rather than raw height:
    one endpoint-owner orbit, one pair-sum ruler orbit, fixed component count,
    and bounded relation rank.  Store the first liar to every quotient.
-3. Prove a primitive metric component anti-cover lemma first for cores whose safe
+5. Prove a primitive metric component anti-cover lemma first for cores whose safe
    components form one orbit under a pair-sum or endpoint translation.
-4. Couple THM-762 decks across endogenous pair-sum moduli and ask whether
+6. Couple THM-762 decks across endogenous pair-sum moduli and ask whether
    simultaneous completeness forces a bounded marked relation or repeated
    ruler.
-5. Put the gcd deck and modulus deck on the affine suspension of HYP-6815;
+7. Put the gcd deck and modulus deck on the affine suspension of HYP-6815;
    use a descent measure that counts unresolved deck orbits, not raw height.
-6. Formalize the elementary deck and component equivalences before attempting
+8. Formalize the elementary deck and component equivalences before attempting
    the global inverse theorem; they are small, stable interfaces for the
    existing proof automaton.
 
@@ -400,6 +410,10 @@ What did move is the structural frontier:
 - primitive tight twelve-speed instances received an explicit global height;
 - the remaining equality theorem became an exact component-tooth anti-cover
   problem;
+- the maximum cannot be the unique `13`-multiple, and every deep binding
+  packet needs at least two off-sheet tighteners;
+- the primitive shallow/full-residue sporadic branch is empty through
+  `max A<=168`, by an exact `13^12` endpoint-owner classification;
 - exact bounded liars eliminated winding, pure ownership, and transitive
   component-phase tournaments as sufficient quotients, isolating metric
   slack transport as the sharper target.
@@ -435,7 +449,8 @@ endpoint-owned metric word whose letters carry `e_w(J)`, not its winding
 checksum.  In the full-nonzero-residue height-one cube, the endpoint audit
 finds one zero-defect row—the nonprimitive doubled AP—and defect at least two
 on all `4,094` primitive rows.  Extending that splice coherence beyond the
-full-residue packet remains open.
+height-one packet was open at that point; THM-770 now extends it exactly
+through lift height twelve, while the unbounded trigger remains open.
 
 Second, the newly proposed scale complementarity was falsifiable and false.
 For
@@ -471,3 +486,53 @@ total multiplicity `24`, so maintained coverage need not be an exact tiling.
 Sheets, endpoint events, and safe components are related stalks, but their
 tournaments and tiling graphs are not interchangeable without an explicit
 predicate-preserving transition.
+
+## 12. Live-mainline pull: binding scales and the bounded owner-CSP
+
+THM-768 first separates the zero-owner cases.  If a prime `p` divides only
+the maximum of a set of at most `p-1` speeds, a missing nonzero residue can be
+gauged to `-1` and a height-weighted perturbation clears every runner strictly
+above `1/p`.  At `p=13`, a tight twelve-set therefore cannot have its maximum
+as the unique `13`-multiple.  Residues alone do not prove this; the decisive
+sidecar is the owner's relative height.
+
+THM-769 then exposes an endogenous scale at every binding maximum
+`p/(13s)`.  The shallow chart `s=1` is exactly the full nonzero residue
+transversal.  In the deep chart `s>=2`, the on-sheet quotient core is loose,
+so off-sheet runners must cover all `s` lifts of one of its maximizers.  The
+capacity observable is
+
+```text
+sum_(w in F) (floor(2D_w/13)+1)/D_w,   D_w=s/gcd(s,w),
+```
+
+and it must be at least one.  This kills one-exception packets, forces the
+two-exception branch to `s=2`, and isolates an `s=3` equality edge for three
+exceptions.  More importantly, it identifies the recursive object: a
+persistent sheet-colour ownership over the **whole loose set** of a quotient
+core.  A binding residue packet at one time is too weak.
+
+THM-770 closes the shallow chart through lift height twelve.  It replaces
+runner vertices by `24,008` atomic endpoint cells and 156 residue-labelled
+speed options.  Unique-owner propagation enumerates every grouped cover among
+`13^12` conceptual packets and finds exactly thirteen zero-defect leaves:
+
+```text
+c*{1,...,12},   c in {1,...,12,14}.
+```
+
+Only `c=1` is primitive.  Hence the bounded shallow sporadic branch is empty
+for `max A<=168`.  The diagnostic tournament on the twelve residue-choice
+obligations has all 66 burdens tied, a transitive tie path, no triangles, and
+one Hamiltonian path: it is maximally uninformative while the incidence
+hypergraph separates thirteen covers from more than `2.3*10^13` candidates.
+This is the cleanest tournament guardrail in the audit.  Pairwise orientation
+can summarize pressure; only the owner hyperedges preserve simultaneous
+compatibility.
+
+The bounded theorem does not combine with THM-763 into a practical closure:
+the latter's height is vastly larger, and the deep multiple-owner chart is
+outside the full-residue CSP.  The exact frontier is therefore no longer
+“prove residue rigidity.”  It is to prove either an unbounded gcd descent in
+the shallow chart or a failure of persistent sheet-colour ownership in every
+deep chart, with the metric endpoint current retained in both.

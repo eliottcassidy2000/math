@@ -163,7 +163,6 @@ THM-769 gives the scale-normal statement at **every** rational global maximum.
 Write a reduced maximizer as `p/(13s)`.  Its multiplied residues lie in the
 packet `[s,12s]`, both endpoints occur, and endpoint owners are divisible by
 `s`.  With
-
 ```text
 E={v:s|v}=sU,                  F=A\E,
 ```
@@ -202,6 +201,8 @@ an exact unique-owner CSP represents all `13^12=23,298,085,122,481` rows
 without literal enumeration.  It has exactly thirteen zero-defect leaves,
 `c*{1,...,12}` for `c=1,...,12,14`, and only the `c=1` leaf is primitive.
 Consequently a primitive shallow tight set with `max A<=168` is the AP.
+Its maximum deletion core is `{1,...,11}`, with `M=1/12`, so the bounded
+shallow **sporadic** slice is empty.
 Dilation gives the exact defect law `chi_13(cW)=c chi_13(W)`, so gcd descent is
 lossless.  This result does not supply an unbounded height descent.
 

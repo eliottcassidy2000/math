@@ -101,6 +101,8 @@ turns that looseness into a certificate without silently bounding raw scale.
 | tight-set height | primitive tight 12-tuples have sum at most 78^11 | proved, THM-763; finite is not empty |
 | tight hereditary primitivity | every leave-one-out core of a primitive tight 12-set is primitive | proved, THM-765 |
 | tight first-window geometry | a_11/a_1 at least 72/7; eleven sub-12 tooth cones | proved, THM-766 |
+| tight zero-owner split | unique-maximum 13-multiple impossible; shallow packets are full residues; deep packets obey sheet capacity | proved, THM-768/769 |
+| bounded shallow rigidity | through max 168, the only primitive tight full-residue row is {1,...,12} | finite-exact, THM-770 |
 | global covering minimum | M at least 14/183, equality only at deep well | conjectural outside routed/finite lanes |
 
 ## How the repository's understanding sharpened
@@ -479,7 +481,10 @@ large-s counterexamples to the unconditional rigidity in the test set.
 The separate n=12 non-extremal-core/sporadic tight branch is also under the
 S3 uniformity audit above.  THM-763 now makes it uniformly finite, THM-765
 removes imprimitive peeled cores, and THM-766 gives a first-window tooth ladder,
-but emptiness remains open.  It should remain
+while THM-768/769 split it into shallow full-residue and deep multiple-owner
+binding packets.  THM-770 proves that the shallow sporadic slice is empty
+through `max A<=168`; higher shallow lifts and every deep packet remain open.
+Uniform emptiness therefore remains open.  It should remain
 logically separate from the q25 covering certificate: one characterizes
 equality, while the other was a proposed closure terminal and is now refuted.
 
