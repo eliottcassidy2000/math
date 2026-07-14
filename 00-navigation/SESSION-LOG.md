@@ -1,3 +1,17 @@
+## mac-mini-2026-07-13-S92 -- FOUND the global object that breaks arc-transitivity: the danger circle Z/14=Z/2xZ/7, where complement FACTORS into the Atkin-Lehner V_4
+
+**Owner request:** find the global object that breaks arc-transitivity (the S91 obstruction).
+
+**FOUND (HYP-6575 + reflection):** the object = the DANGER CIRCLE Z/14 = Z/2 x Z/7 (CRT). On it the AL V_4 = {id, W_2=x+7, W_7=7-x, W_14=-x} is real and **W_2 o W_7 = W_14 -- complement FACTORS** (verified), the exact factorization S_n forbids. Z/14=Z/2xZ/7 canonically distinguishes 2-part from 7-part; the S_n metagraph's transitive arcs cannot (S91). The circle's ARITHMETIC breaks the tournament's imposed transitivity.
+
+SHADOWS: 7-part = apex-7 PALEY tournament on Z_7 (QR={1,2,4}, regular, SC, Frobenius order 21 breaks S_7) with c3 = 35-21 = **14=2*7** directed 3-cycles = the OCF odd-cycle count = the LEVEL. 2-part = 2-adic descent (THM-580) = W_2.
+
+FRAME: tournament(mod S_n, bare) : runner-on-Z/14 (level-14) :: X(1) : X_0(14). Imposing the level breaks arc-transitivity; that is WHY the V_4 lives on the runner side (S91).
+
+HONEST BOUND: found the GROUP not the ARITHMETIC -- Z/14 translations are fixed-point-free, but AL W_2 has 4 CM fixed points on X_0(14); the CM counts need the MODULI lift (the functorial bridge, = the f_14/Dedekind residual). Also: on the tiling model complement is fixed-point-free (matches AL regular), resolving the S91 NEG-3 tension.
+
+Files: reflection the-global-object-is-the-danger-circle-z14-...-macmini-S92; HYP-6575; 04-computation/global_object_arc_transitivity_macmini_S92.py (+out).
+
 ## mac-mini-2026-07-13-S91 -- the Atkin-Lehner V_4 does NOT descend to the tournament metagraph (complement irreducible under S_n; not even one W-element); n=4=weight-2 Gamma_0(14) exact but breaks n=6
 
 **Owner request:** explore the V_4/Atkin-Lehner thread on the metagraph side (the S90 survivor).
