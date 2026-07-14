@@ -90,10 +90,18 @@ indices; acorrModel (the B2-model) and discB (THM-732's exact Bernoulli form) de
 **discB_eq_grid_deficit PROVED** ((1/v) Sum_i model(i/v) - C = discB -- the geometric
 grid-mean identity for the model); and two machine-checked rational instances of the
 model-equals-autocorrelation identity (tent interior: [0,1/3] at tau = 1/4 gives 1/12; wrap
-regime: tau = 5/6 gives 1/6).  THE ONE REMAINING ANALYSIS STATEMENT in the entire (H)-edge
-chain: A = acorrModel (the single-pair circular-overlap identity -- piecewise-linear case
-analysis over the wrap thresholds; referee-verified exactly in every THM-732 run; two of its
-instances now machine-checked).
+regime: tau = 5/6 gives 1/6).  THE LAST BRICK IS LAID (opus-S295): **pair_overlap_B2 PROVED in Lean, sorry-free,
+kernel-pure** -- the single-pair overlap identity in its normalized one-parameter form:
+max 0 (min l1 (l2-t)) + max 0 (min l1 (1-t+l2) - (1-t)) = l1 l2 + (1/2)(B2({t}) - B2({t-l2})
+- B2({t+l1}) + B2({t+l1-l2})), for l1, l2 in [0,1], t in [0,1).  Six-leaf case cascade over
+the fract/overlap thresholds; every leaf closes by ring after floor-computation resolution.
+(The S295 pre-verification caught a reversed orientation convention before the formalization
+-- 8392 exact configurations, 0 mismatches on the corrected form; the double sum over ordered
+pairs symmetrizes either orientation, which is why the diagonal instances could not detect
+it.)  The (H)-edge chain is now machine-checked END TO END at the identity level: kernel ->
+Fourier envelopes -> spectral -> Raabe -> grid deficit -> discB -> single-pair overlap.  The
+remaining assembly (summing pair_overlap_B2 over interval pairs and reindexing into
+acorrModel's jump-pair sum) is Finset bookkeeping with no mathematical content.
 
 ## Files
 

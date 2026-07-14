@@ -831,6 +831,156 @@ theorem acorrModel_wrap_instance :
   rw [h1, h2, h3, h4]
   norm_num
 
+/-! ### The single-pair overlap identity (opus-S295) — the chain's last brick
+
+The circular overlap of `[0, ℓ₁]` with the `t`-shifted `[0, ℓ₂]` (two-tile max/min form)
+equals its four-term B₂ combination.  Orientation: args `{t}, {t−ℓ₂}, {t+ℓ₁}, {t+ℓ₁−ℓ₂}`
+(the S295 pre-verification caught the reversed convention; the double sum over ordered pairs
+symmetrizes either way).  Referee: 8392 exact-rational configurations, 0 mismatches. -/
+
+/-- **The single-pair overlap identity.**  For `ℓ₁, ℓ₂ ∈ [0,1]`, `t ∈ [0,1)`:
+the circular overlap `max 0 (min ℓ₁ (ℓ₂−t)) + max 0 (min ℓ₁ (1−t+ℓ₂) − (1−t))` equals
+`ℓ₁ℓ₂ + ½(B₂({t}) − B₂({t−ℓ₂}) − B₂({t+ℓ₁}) + B₂({t+ℓ₁−ℓ₂}))`. -/
+theorem pair_overlap_B2 (l1 l2 t : ℝ) (hl10 : 0 ≤ l1) (hl11 : l1 ≤ 1)
+    (hl20 : 0 ≤ l2) (hl21 : l2 ≤ 1) (ht0 : 0 ≤ t) (ht1 : t < 1) :
+    max 0 (min l1 (l2 - t)) + max 0 (min l1 (1 - t + l2) - (1 - t))
+      = l1 * l2 + (1 / 2) * (B2R t - B2R (t - l2) - B2R (t + l1) + B2R (t + l1 - l2)) := by
+  have hBt : B2R t = t ^ 2 - t + 1 / 6 := by
+    unfold B2R
+    rw [Int.fract_eq_self.mpr ⟨ht0, ht1⟩]
+  rcases lt_or_ge (t + l1 - l2) 0 with h3n | h3p
+  · -- Case 1: t + l1 < l2.  term1 = l1, term2 = 0, wraps on (t−l2) and (t+l1−l2).
+    have hA : B2R (t - l2) = (t - l2 + 1) ^ 2 - (t - l2 + 1) + 1 / 6 := by
+      unfold B2R
+      have hfl : ⌊t - l2⌋ = -1 := by
+        rw [Int.floor_eq_iff]
+        push_cast
+        constructor <;> linarith
+      rw [Int.fract, hfl]
+      push_cast
+      ring_nf
+    have hB : B2R (t + l1) = (t + l1) ^ 2 - (t + l1) + 1 / 6 := by
+      unfold B2R
+      rw [Int.fract_eq_self.mpr ⟨by linarith, by linarith⟩]
+    have hC : B2R (t + l1 - l2) = (t + l1 - l2 + 1) ^ 2 - (t + l1 - l2 + 1) + 1 / 6 := by
+      unfold B2R
+      have hfl : ⌊t + l1 - l2⌋ = -1 := by
+        rw [Int.floor_eq_iff]
+        push_cast
+        constructor <;> linarith
+      rw [Int.fract, hfl]
+      push_cast
+      ring_nf
+    have hmin1 : min l1 (l2 - t) = l1 := min_eq_left (by linarith)
+    have hmax1 : max 0 (min l1 (l2 - t)) = l1 := by rw [hmin1]; exact max_eq_right hl10
+    have hmin2 : min l1 (1 - t + l2) = l1 := min_eq_left (by linarith)
+    have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = 0 := by
+      rw [hmin2]; exact max_eq_left (by linarith)
+    rw [hmax1, hmax2, hBt, hA, hB, hC]
+    ring
+  · rcases lt_or_ge (t + l1 - l2) 1 with h3m | h3h
+    · -- middle regime: {t+l1−l2} literal
+      have hC : B2R (t + l1 - l2) = (t + l1 - l2) ^ 2 - (t + l1 - l2) + 1 / 6 := by
+        unfold B2R
+        rw [Int.fract_eq_self.mpr ⟨h3p, h3m⟩]
+      rcases lt_or_ge t l2 with h1l | h1h
+      · -- t < l2 (and l2 − t ≤ l1 from h3p): term1 = l2 − t; wrap on (t−l2)
+        have hA : B2R (t - l2) = (t - l2 + 1) ^ 2 - (t - l2 + 1) + 1 / 6 := by
+          unfold B2R
+          have hfl : ⌊t - l2⌋ = -1 := by
+            rw [Int.floor_eq_iff]
+            push_cast
+            constructor <;> linarith
+          rw [Int.fract, hfl]
+          push_cast
+          ring_nf
+        have hmax1 : max 0 (min l1 (l2 - t)) = l2 - t := by
+          rw [min_eq_right (by linarith)]
+          exact max_eq_right (by linarith)
+        rcases lt_or_ge (t + l1) 1 with h2l | h2h
+        · have hB : B2R (t + l1) = (t + l1) ^ 2 - (t + l1) + 1 / 6 := by
+            unfold B2R
+            rw [Int.fract_eq_self.mpr ⟨by linarith, h2l⟩]
+          have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = 0 := by
+            rw [min_eq_left (by linarith)]
+            exact max_eq_left (by linarith)
+          rw [hmax1, hmax2, hBt, hA, hB, hC]
+          ring
+        · have hB : B2R (t + l1) = (t + l1 - 1) ^ 2 - (t + l1 - 1) + 1 / 6 := by
+            unfold B2R
+            have hfl : ⌊t + l1⌋ = 1 := by
+              rw [Int.floor_eq_iff]
+              push_cast
+              constructor <;> linarith
+            rw [Int.fract, hfl]
+            push_cast
+            ring_nf
+          have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = l1 - (1 - t) := by
+            rw [min_eq_left (by linarith)]
+            exact max_eq_right (by linarith)
+          rw [hmax1, hmax2, hBt, hA, hB, hC]
+          ring
+      · -- t ≥ l2: term1 = 0; (t−l2) literal
+        have hA : B2R (t - l2) = (t - l2) ^ 2 - (t - l2) + 1 / 6 := by
+          unfold B2R
+          rw [Int.fract_eq_self.mpr ⟨by linarith, by linarith⟩]
+        have hmax1 : max 0 (min l1 (l2 - t)) = 0 := by
+          rw [min_eq_right (by linarith)]
+          exact max_eq_left (by linarith)
+        rcases lt_or_ge (t + l1) 1 with h2l | h2h
+        · have hB : B2R (t + l1) = (t + l1) ^ 2 - (t + l1) + 1 / 6 := by
+            unfold B2R
+            rw [Int.fract_eq_self.mpr ⟨by linarith, h2l⟩]
+          have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = 0 := by
+            rw [min_eq_left (by linarith)]
+            exact max_eq_left (by linarith)
+          rw [hmax1, hmax2, hBt, hA, hB, hC]
+          ring
+        · have hB : B2R (t + l1) = (t + l1 - 1) ^ 2 - (t + l1 - 1) + 1 / 6 := by
+            unfold B2R
+            have hfl : ⌊t + l1⌋ = 1 := by
+              rw [Int.floor_eq_iff]
+              push_cast
+              constructor <;> linarith
+            rw [Int.fract, hfl]
+            push_cast
+            ring_nf
+          have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = l1 - (1 - t) := by
+            rw [min_eq_left (by linarith)]
+            exact max_eq_right (by linarith)
+          rw [hmax1, hmax2, hBt, hA, hB, hC]
+          ring
+    · -- Case 6: t + l1 − l2 ≥ 1: term1 = 0, term2 = l2; wraps on (t+l1) and (t+l1−l2)
+      have hA : B2R (t - l2) = (t - l2) ^ 2 - (t - l2) + 1 / 6 := by
+        unfold B2R
+        rw [Int.fract_eq_self.mpr ⟨by linarith, by linarith⟩]
+      have hB : B2R (t + l1) = (t + l1 - 1) ^ 2 - (t + l1 - 1) + 1 / 6 := by
+        unfold B2R
+        have hfl : ⌊t + l1⌋ = 1 := by
+          rw [Int.floor_eq_iff]
+          push_cast
+          constructor <;> linarith
+        rw [Int.fract, hfl]
+        push_cast
+        ring_nf
+      have hC : B2R (t + l1 - l2) = (t + l1 - l2 - 1) ^ 2 - (t + l1 - l2 - 1) + 1 / 6 := by
+        unfold B2R
+        have hfl : ⌊t + l1 - l2⌋ = 1 := by
+          rw [Int.floor_eq_iff]
+          push_cast
+          constructor <;> linarith
+        rw [Int.fract, hfl]
+        push_cast
+        ring_nf
+      have hmax1 : max 0 (min l1 (l2 - t)) = 0 := by
+        rw [min_eq_right (by linarith)]
+        exact max_eq_left (by linarith)
+      have hmax2 : max 0 (min l1 (1 - t + l2) - (1 - t)) = (1 - t + l2) - (1 - t) := by
+        rw [min_eq_right (by linarith)]
+        exact max_eq_right (by linarith)
+      rw [hmax1, hmax2, hBt, hA, hB, hC]
+      ring
+
 end ClosedBudget
 end LRC14
 end LonelyRunner

@@ -15,6 +15,35 @@ CLEAN DICHOTOMY (aligned with the THM-758 far-count split): LOOSE ⟺ good perio
 HANDOFFS: @mac-mini — replace exact-M in your band enumeration with the q≤25 rational-witness search (cheaper); the band is closed once each family shows a q≤25 witness. @opus — your density floor is the SIGNED machinery; the band residual confirms the wall is signed (absolute diverges ~10⁴). @kps — THM-738 is the tight half (no good period); the two halves partition covering.
 
 FILES: HYP-6750 (REFUTED crude bound + rational witness); THM-758 updated (band residual → rational witness); 04-computation/lrc14_band_certificate_klein_S312.py + 3 .out (bonferroni_band, relabs_full_band, ratwitness_band). -> signed-wall, good-period memory. Sent to all.
+## opus-2026-07-14-S295 -- pair_overlap_B2 PROVED IN LEAN (sorry-free, kernel-pure): the single-pair overlap identity, THE (H)-EDGE CHAIN'S LAST BRICK -- the chain is now machine-checked END TO END (kernel -> envelopes -> spectral -> Raabe -> grid deficit -> discB -> overlap); the pre-verification caught a REVERSED ORIENTATION before the formalization (8392 exact configs; the double sum symmetrizes either way -- why the diagonal instances could not see it)
+
+Prompt (owner): prove the single-pair overlap identity and finish the chain.
+
+THE PRE-VERIFICATION STORY (the referee discipline paying off one last time): my first statement
+used args {t+l2}/{t-l1} -- the 8392-configuration exact sweep found V(t) = RHS(-t): the
+per-ordered-pair attribution must use {tau + (j-endpoint) - (k-endpoint)}; the corrected form
+passed 8392/8392. The double sum over ordered pairs symmetrizes either orientation -- which is
+exactly why S294's diagonal machine-checked instances could not detect the error. Lesson
+re-learned: verify the STATEMENT before formalizing it.
+
+THE LEAN (pair_overlap_B2, sorry-free, kernel-pure): normalized one-parameter form: for
+l1, l2 in [0,1], t in [0,1): max 0 (min l1 (l2-t)) + max 0 (min l1 (1-t+l2) - (1-t)) =
+l1 l2 + (1/2)(B2({t}) - B2({t-l2}) - B2({t+l1}) + B2({t+l1-l2})). Six-leaf cascade
+(t+l1-l2 vs 0/1; t vs l2; t+l1 vs 1); every leaf: fract resolution + max/min resolution + ring.
+BUILD LESSONS: (i) the rw-show wrap pattern SELF-CLOBBERS (the pattern occurs inside its own
+replacement) -- use the floor-computation pattern (Int.floor_eq_iff + Int.fract + push_cast);
+(ii) max_eq_right needs the goal RHS in NATIVE shape (l1 - (1 - t), not t + l1 - 1) -- state
+native, let ring absorb; (iii) lt_or_le is now lt_or_ge.
+
+THE CHAIN, COMPLETE AT THE IDENTITY LEVEL: capped_envelope_kernel (S291) -> Fourier envelopes +
+spectral_thm755 (S292) -> raabe_B2 + grid_deficit (S293) -> discB_eq_grid_deficit + instances
+(S294) -> pair_overlap_B2 (S295). 42 declarations, 0 sorries, every audit [propext,
+Classical.choice, Quot.sound]. Remaining: the family ASSEMBLY (summing the pair identity over
+interval pairs and reindexing into the jump-pair model) -- Finset bookkeeping, no mathematics.
+
+FILES: LRCClosedBudget.lean (pair_overlap_B2); THM-755 canon final section; HYP-6750. ->
+klein/kps (the assembly reindexing is a one-session bookkeeping task; every identity under
+your certificates is now machine-checked), mac-mini (the audit ledger closes at 42/42).
 
 ---
 ## opus-2026-07-14-S294 -- the AUTOCORRELATION B2-DECOMPOSITION: exact form derived (sign nailed: PLUS; tent-verified by hand) + THE CHAIN FORMALIZED (grid_deficit generalized to Fintype; acorrModel + discB defined; discB_eq_grid_deficit PROVED; two machine-checked instances of A = model incl. the wrap regime); the (H)-edge Lean chain is complete except ONE named analysis statement (the single-pair overlap identity)
