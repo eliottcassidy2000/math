@@ -1,0 +1,50 @@
+========================================================================================
+LRC(13) FULL-RESIDUE ENDPOINT-OWNER H=12 CENSUS (codex-2026-07-14-S3)
+========================================================================================
+arithmetic=integer exact (__int128 rational comparisons); no floating point
+predicate=zero strict 1/13-safe components (equivalently endpoint defect chi_13=0)
+finite_carrier=open atomic endpoint cells x residue-choice options
+owner_rule=a cell coverable by only one remaining residue group forces that owner
+
+INDEPENDENT LITERAL ENDPOINT-SWEEP AUDIT
+height=2 patterns=531441 literal_zero_rows=3 cell_CSP_zero_rows=3 classifications_agree=true
+primitive_non_AP_rows=531375 primitive_non_AP_min_defect=2
+
+HEIGHT-TWELVE EXACT OWNER-CSP
+height=12 conceptual_patterns=23298085122481 distinct_endpoints=24008 atomic_cells=24008 bit_words=376
+search_nodes=32708254 prunes=18459588 complete_leaves=13 uncovered_complete_leaves=0 zero_rows=13
+  scale=1 gcd=1 kappa=12 protected=12 defect=0 labelled=[1,2,3,4,5,6,7,8,9,10,11,12]
+  scale=2 gcd=2 kappa=24 protected=24 defect=0 labelled=[14,2,16,4,18,6,20,8,22,10,24,12]
+  scale=3 gcd=3 kappa=36 protected=36 defect=0 labelled=[27,15,3,30,18,6,33,21,9,36,24,12]
+  scale=4 gcd=4 kappa=48 protected=48 defect=0 labelled=[40,28,16,4,44,32,20,8,48,36,24,12]
+  scale=5 gcd=5 kappa=60 protected=60 defect=0 labelled=[40,15,55,30,5,45,20,60,35,10,50,25]
+  scale=6 gcd=6 kappa=72 protected=72 defect=0 labelled=[66,54,42,30,18,6,72,60,48,36,24,12]
+  scale=7 gcd=7 kappa=84 protected=84 defect=0 labelled=[14,28,42,56,70,84,7,21,35,49,63,77]
+  scale=8 gcd=8 kappa=96 protected=96 defect=0 labelled=[40,80,16,56,96,32,72,8,48,88,24,64]
+  scale=9 gcd=9 kappa=108 protected=108 defect=0 labelled=[27,54,81,108,18,45,72,99,9,36,63,90]
+  scale=10 gcd=10 kappa=120 protected=120 defect=0 labelled=[40,80,120,30,70,110,20,60,100,10,50,90]
+  scale=11 gcd=11 kappa=132 protected=132 defect=0 labelled=[66,132,55,121,44,110,33,99,22,88,11,77]
+  scale=12 gcd=12 kappa=144 protected=144 defect=0 labelled=[144,132,120,108,96,84,72,60,48,36,24,12]
+  scale=14 gcd=14 kappa=168 protected=168 defect=0 labelled=[14,28,42,56,70,84,98,112,126,140,154,168]
+classification=zero defect iff W=c*{1,...,12} in the box
+scales=[1,2,3,4,5,6,7,8,9,10,11,12,14]
+primitive_zero_rows=1 primitive_row={1,...,12}
+
+TOURNAMENT ANALYSIS (DIAGNOSTIC OWNER-PRESSURE QUOTIENT)
+vertices=residue-choice obligations 1..12
+observable=forced owner cells after deleting the other ten groups
+switch/gauge=sign(forced_r-forced_s)
+tie_hamiltonian_path=1->2->...->12
+score_histogram={0:1, 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1, 9:1, 10:1, 11:1}
+directed_3cycles=0 scc_sizes=[1,1,1,1,1,1,1,1,1,1,1,1] edge_flips=0 burden_ties=66 hamiltonian_paths=1
+forced_owner_checksum=1716039468
+guardrail=pairwise owner pressure destroys simultaneous choice compatibility
+
+PRESERVE / DESTROY
+atomic cell incidence: preserves the exact finite strict-witness predicate
+unique-owner propagation: preserves all completions; destroys only impossible options
+owner-pressure tournament: preserves pairwise burden; destroys joint option compatibility
+
+SCOPE
+This is a finite-exact theorem for 0<=k_r<=12, not the unbounded primitive rigidity theorem.
+Dilation/gcd descent reduces the unbounded problem to primitive zero-defect packets, but does not classify them.
