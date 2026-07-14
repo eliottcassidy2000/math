@@ -122,7 +122,7 @@ V₁=154 one-inequality octant + 143+7,537 exact bodies + 27 covering bottom swe
 **The seam is now sharp at j=7:** what remains of the stratum = other bounded bodies (mechanical
 trees) + families whose 7th-smallest speed is unbounded (≤6 bounded speeds — the density route /
 LEM-006 factorial-moment territory, since the level-1 base 1−j/7 dies at j≥7 per MISTAKE-122).
-(kind-pasteur-S128 cont.3, THM-735, HYP-6535.)
+(kind-pasteur-S128 cont.3, THM-735, HYP-6540 [renumbered from 6535].)
 
 **⚠ S289 (klein) — CONVERGES with kp-S128; the residual is exactly the compact core.** Independently
 (S287/S288, before seeing S128) I built the same certificate and the `disc_v ≤ r²/(3v²)` bound; kp-S128's

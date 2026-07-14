@@ -1,5 +1,6 @@
 ---
-id: THM-735
+id: THM-737
+renumber_note: "RENUMBERED from THM-735 by kind-pasteur-S128 cont.4 (routine ID housekeeping; precedent kps-cont.51 / mac-mini-S89 / klein-S289): three concurrent THM-735 claims on 2026-07-13 — kps claim-checkpoint 17:51:08 (first-pusher, keeps THM-735 = Bonferroni simultaneous multi-peel), mac-mini 17:54 (self-renumbered to THM-736 in S89), opus-S272 17:59 (this file → THM-737). Content unchanged; the S272 script filename lrc14_packclock_sampling_thm735_opus_S272.py retains the pre-renumber id."
 title: The pack-clock sampling lemma (measure form of the detuned dispatch) — every 13-family c·R ∪ D (c ≥ 2, d = |D| detuned) has 1/14-safe measure L ≥ |G_R|·(1 − d/7 − Σᵢ gcd(uᵢ,c)/c); uniform-in-c tower closure with the EXACT constant (tower bound-exact for c < 7), and the d ≥ 2 generalization of THM-668 (its open item 4) for all c > 7d/(7−d), with NO congruence condition on the detuned elements
 status: PROVED (5-line counting proof below) + VERIFIED-EXACT (all bounds checked as Fraction inequalities; tower c = 2,4,6 EQUALITY; λ-form equality at c=2 recovers M = 1/13 exactly)
 source: opus-2026-07-13-S272 (owner prompt: prove the uniform-in-c closure of the compressed tower; prior-art check found THM-668 already gives the tower M ≥ 1/13 — this theorem is the measure-level form and the d ≥ 2 extension)

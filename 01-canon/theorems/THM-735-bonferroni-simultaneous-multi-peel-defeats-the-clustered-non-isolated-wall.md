@@ -66,7 +66,7 @@ in exact ℚ, non-covering dispatched by THM-366. All thresholds exact rationals
       crude threshold: {1..10,150,151,152} (crude −0.0014 → exact-disc +0.006) and the j=6 sextuple
       {1..7,300,…,305} (crude −0.024 → exact-disc +0.002): SIX consecutive far elements certified at
       once against the fixed body. Clustering is irrelevant, as the lemma predicts.
-- [x] honest calibration (HYP-6535): on {1..10,c,c+1,c+2} the observed sequential crude also fires
+- [x] honest calibration (HYP-6540, renumbered from 6535): on {1..10,c,c+1,c+2} the observed sequential crude also fires
       (observed edge growth ~0.87·m₀ per unit c vs P1's 2.14 coefficient — P1 is ~2.5× loose); the
       cont.2 sequential failure is of the P1-BOUND composition. Bonferroni removes the composition
       rather than sharpening it — and is the only route at j ≥ 2 slots simultaneously free.
