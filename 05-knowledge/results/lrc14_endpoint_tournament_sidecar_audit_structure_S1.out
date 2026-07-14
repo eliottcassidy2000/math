@@ -1,0 +1,61 @@
+LRC14 EXACT REPRESENTATION / SIDECAR AUDIT
+bank: 552 primitive 13-speed rows (single swaps through 55 + 7 landmarks)
+covering rows: 26
+THM-755 cap-pass rows: 194
+distinct exact M values: 49
+endpoint B2 reconstructions checked exactly: 552/552
+
+MIXED-FIBER AUDIT (entries count fibers, not rows)
+carrier                          fibers   coll  cover      M    cap   disc
+R fingerprint                        86     83      7     57     55     83
+R full tournament                   145    142      5     70     75    142
+R + divisor mask                    203    180      0     41     68    179
+R + cap sign                        220    170      5     70      0    169
+R + divisor + cap sign              271    175      0     34      0    174
+R + div + cap sign + peak           310    163      0      0      0    162
+R + exact cap ratio                 552      0      0      0      0      0
+E fingerprint                        89     43     10     19     18     43
+E full tournament                   364     67     10     40     13     67
+E + divisor mask                    389     69      0     36     12     68
+E + cap sign                        377     65      9     38      0     65
+E + divisor + cap sign              401     66      0     33      0     65
+E + div + cap sign + peak           454     58      0      0      0     57
+E + exact cap ratio                 551      1      0      1      0      1
+
+EXACT COLLISION WITNESSES
+[R full]
+  AP: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), cover=False, M=1/14 at t=1/14, cap=False, cap_ratio=86021/2328480, r=12, |G|=6617/194040
+  swap-d1-a14: S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), cover=True, M=1/8 at t=1/16, cap=True, cap_ratio=1/2, r=2, |G|=1/14
+[R + divisor + cap sign]
+  swap-d1-a14: S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), cover=True, M=1/8 at t=1/16, cap=True, cap_ratio=1/2, r=2, |G|=1/14
+  swap-d1-a28: S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 28), cover=True, M=2/15 at t=1/15, cap=True, cap_ratio=1, r=2, |G|=1/14
+[E full]
+  swap-d1-a32: S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 32), cover=False, M=2/15 at t=1/15, cap=True, cap_ratio=8/7, r=2, |G|=1/14
+  swap-d2-a14: S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), cover=True, M=2/17 at t=8/17, cap=False, cap_ratio=11/52, r=2, |G|=11/364
+[E + divisor + cap sign]
+  AP: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), cover=False, M=1/14 at t=1/14, cap=False, cap_ratio=86021/2328480, r=12, |G|=6617/194040
+  swap-d13-a26: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26), cover=False, M=2/27 at t=2/27, cap=False, cap_ratio=86021/1164240, r=12, |G|=6617/194040
+
+TOURNAMENT FINGERPRINTS
+R observable=(v_j-v_i) mod 14; half-circle gauge; ties follow increasing speed
+  score fingerprints=39, 3-cycles range=57..91, SCC patterns=Counter({(13,): 552}), Hamiltonian paths range=376699..3711175
+E observable={v(x_j-x_i)}; half-circle gauge; ties follow cyclic endpoint order
+  vertices range=4..624, 3-cycles range=0..10123672, SCC patterns=[((8,), 199), ((12,), 78), ((1, 1, 1, 1, 1, 1, 1, 1), 54), ((4,), 47), ((24,), 41), ((20,), 40)], ties range=0..480
+  Hamiltonian-path counts omitted for E: endpoint tournaments reach hundreds of vertices.
+
+PROJECTIVE SCALE CHECK
+  P={1,...,12}, peel=13; scales 1,2,3,5: |G_cP|=|G_P|, r_cP=c*r_P, cap_ratio invariant: True
+  invariant cap_ratio=86021/2328480; exact checks=4/4
+
+EDGE FLIPS ON FIXED-CORE SINGLE-SWAP LIFTS
+step  1: pairs=531, R flips=0..2 (mean 920/531), E flips=0..236 (mean 2053/59)
+  first cap-status flip: swap-d2-a21 -> swap-d2-a22; E edge flips=0
+step 14: pairs=363, R flips=0..0 (mean 0), E flips=0..220 (mean 12280/363)
+  first cap-status flip: swap-d2-a14 -> swap-d2-a28; E edge flips=2
+
+PRESERVATION VERDICT
+  divisor mask recovers covering exactly; neither tournament alone does.
+  projective ratio v|G|/r proves a one-bit cap-sign sidecar exactly.
+  signed endpoint phases reconstruct Bernoulli discrepancy exactly; orientation alone does not.
+  fixed-threshold endpoint data and both tournaments still mix exact M.
+  the exact peak witness (t*,M) is the tested sidecar that restores M.

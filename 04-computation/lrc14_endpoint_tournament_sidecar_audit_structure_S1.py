@@ -45,7 +45,6 @@ from fractions import Fraction as F
 from functools import lru_cache
 from itertools import combinations
 from math import comb, gcd
-from pathlib import Path
 from typing import Callable, Hashable, Iterable
 
 from lrc14_certificates import (
@@ -435,22 +434,25 @@ def report(rows: list[Row], swap_max: int) -> None:
     endpoint_fp = lambda r: r.endpoint.fingerprint
     endpoint_full = lambda r: (r.endpoint.n, r.endpoint.edge_word)
     div = lambda r: r.div_mask
-    cap = lambda r: r.cap_ratio
+    cap_sign = lambda r: r.cap
+    cap_ratio = lambda r: r.cap_ratio
     peak = lambda r: r.peak
 
     audits = [
         audit(rows, "R fingerprint", runner_fp),
         audit(rows, "R full tournament", runner_full),
         audit(rows, "R + divisor mask", lambda r: (runner_full(r), div(r))),
-        audit(rows, "R + cap ratio", lambda r: (runner_full(r), cap(r))),
-        audit(rows, "R + divisor + cap", lambda r: (runner_full(r), div(r), cap(r))),
-        audit(rows, "R + divisor + cap + peak", lambda r: (runner_full(r), div(r), cap(r), peak(r))),
+        audit(rows, "R + cap sign", lambda r: (runner_full(r), cap_sign(r))),
+        audit(rows, "R + divisor + cap sign", lambda r: (runner_full(r), div(r), cap_sign(r))),
+        audit(rows, "R + div + cap sign + peak", lambda r: (runner_full(r), div(r), cap_sign(r), peak(r))),
+        audit(rows, "R + exact cap ratio", lambda r: (runner_full(r), cap_ratio(r))),
         audit(rows, "E fingerprint", endpoint_fp),
         audit(rows, "E full tournament", endpoint_full),
         audit(rows, "E + divisor mask", lambda r: (endpoint_full(r), div(r))),
-        audit(rows, "E + cap ratio", lambda r: (endpoint_full(r), cap(r))),
-        audit(rows, "E + divisor + cap", lambda r: (endpoint_full(r), div(r), cap(r))),
-        audit(rows, "E + divisor + cap + peak", lambda r: (endpoint_full(r), div(r), cap(r), peak(r))),
+        audit(rows, "E + cap sign", lambda r: (endpoint_full(r), cap_sign(r))),
+        audit(rows, "E + divisor + cap sign", lambda r: (endpoint_full(r), div(r), cap_sign(r))),
+        audit(rows, "E + div + cap sign + peak", lambda r: (endpoint_full(r), div(r), cap_sign(r), peak(r))),
+        audit(rows, "E + exact cap ratio", lambda r: (endpoint_full(r), cap_ratio(r))),
     ]
 
     print("LRC14 EXACT REPRESENTATION / SIDECAR AUDIT")
@@ -472,9 +474,9 @@ def report(rows: list[Row], swap_max: int) -> None:
     print("EXACT COLLISION WITNESSES")
     examples = [
         ("R full", runner_full, ("cover", "M", "cap")),
-        ("R + divisor + cap", lambda r: (runner_full(r), div(r), cap(r)), ("M",)),
+        ("R + divisor + cap sign", lambda r: (runner_full(r), div(r), cap_sign(r)), ("M",)),
         ("E full", endpoint_full, ("cover", "M", "cap", "disc")),
-        ("E + divisor + cap", lambda r: (endpoint_full(r), div(r), cap(r)), ("M",)),
+        ("E + divisor + cap sign", lambda r: (endpoint_full(r), div(r), cap_sign(r)), ("M",)),
     ]
     for label, key, targets in examples:
         pair = best_mixed_example(rows, key, targets)
@@ -507,6 +509,28 @@ def report(rows: list[Row], swap_max: int) -> None:
     )
     print("  Hamiltonian-path counts omitted for E: endpoint tournaments reach hundreds of vertices.")
 
+    base_core = tuple(range(1, 13))
+    base_intervals = good_intervals(base_core)
+    base_g = sum(right - left for left, right in base_intervals)
+    base_r = len(base_intervals)
+    base_ratio = F(13) * base_g / base_r
+    scale_checks = []
+    for scale in (1, 2, 3, 5):
+        scaled_intervals = good_intervals(tuple(scale * v for v in base_core))
+        scaled_g = sum(right - left for left, right in scaled_intervals)
+        scaled_r = len(scaled_intervals)
+        scaled_ratio = F(13 * scale) * scaled_g / scaled_r
+        scale_checks.append(
+            scaled_g == base_g and scaled_r == scale * base_r and scaled_ratio == base_ratio
+        )
+    print()
+    print("PROJECTIVE SCALE CHECK")
+    print(
+        f"  P={{1,...,12}}, peel=13; scales 1,2,3,5: "
+        f"|G_cP|=|G_P|, r_cP=c*r_P, cap_ratio invariant: {all(scale_checks)}"
+    )
+    print(f"  invariant cap_ratio={fmt(base_ratio)}; exact checks={sum(scale_checks)}/{len(scale_checks)}")
+
     print()
     print("EDGE FLIPS ON FIXED-CORE SINGLE-SWAP LIFTS")
     for step in (1, 14):
@@ -535,7 +559,7 @@ def report(rows: list[Row], swap_max: int) -> None:
     print()
     print("PRESERVATION VERDICT")
     print("  divisor mask recovers covering exactly; neither tournament alone does.")
-    print("  projective cap ratio v|G|/r recovers THM-755 cap status exactly.")
+    print("  projective ratio v|G|/r proves a one-bit cap-sign sidecar exactly.")
     print("  signed endpoint phases reconstruct Bernoulli discrepancy exactly; orientation alone does not.")
     print("  fixed-threshold endpoint data and both tournaments still mix exact M.")
     print("  the exact peak witness (t*,M) is the tested sidecar that restores M.")
