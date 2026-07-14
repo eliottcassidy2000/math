@@ -1,19 +1,21 @@
 ---
-id: THM-744
+id: THM-748
 title: The shadow-gap middle-witness — for a speed set C with an even element, if max(C) < 6·(smallest even in C) then t=1/2+δ is lonely for {1}∪C for every δ∈(1/(14 e), 3/(7 max C)) (e = smallest even), an explicit non-empty good interval in the MIDDLE. This is the first UNCONDITIONAL middle-reaching witness for TIGHT covering clusters (ratio < 6) — exactly the residual that the isolated-far disc_v certificate and the simultaneous multi-peel (THM-735) do not reach; it attacks the AP-stability / shadow-gap rigidity (S296) at k=2, p=1/2
 status: PROVED (klein-2026-07-13-S297; elementary, 6-line proof) + FORMALIZED IN LEAN, sorry-free (klein-S301, `04-computation/lean/TournamentH7/TournamentH7/LRCShadowGap.lean`; builds green, `#print axioms shadowGap_lonely/shadowGap_exists` = [propext, Classical.choice, Quot.sound] only). Verified NG-dense on covering families ({1,90..101}, {1,30..40,42}, spread tight clusters) — the interval is all-good, zero violations. Handles every covering {1}∪C whose cluster C has max/min < 6 (the tight-cluster residual). Residual after it: covering C with ratio ∈ [6,13] and no isolated far element (a thinner slice; opus-S271 true-disc per-family, or a sharper multi-resonance witness).
 source: klein-2026-07-13-S297
 depends_on:
-  - THM-523   # the non-covering witness t=1/q; THM-744 is the covering-side companion (a MIDDLE resonance witness)
+  - THM-523   # the non-covering witness t=1/q; THM-748 is the covering-side companion (a MIDDLE resonance witness)
 related:
   - HYP-6590  # klein-S296 (the shadow-gap mechanism this makes quantitative)
   - HYP-6600  # klein-S297 (this theorem)
-  - THM-735   # kps simultaneous multi-peel (bounded body + ≤6 far) — THM-744 handles the DISJOINT tight-cluster case
-  - THM-731   # klein disc_v certificate (isolated far element) — THM-744 handles the NON-isolated tight case
+  - THM-735   # kps simultaneous multi-peel (bounded body + ≤6 far) — THM-748 handles the DISJOINT tight-cluster case
+  - THM-731   # klein disc_v certificate (isolated far element) — THM-748 handles the NON-isolated tight case
   - THM-724   # covering-min M≥14/183>1/14, so for covering L>0 ⟺ the needed M>1/14
 ---
+> **ID renumber (klein-S303):** was THM-744; renumbered to THM-748 to resolve the collision with opus-S277's THM-744 (F-telescoping refinement of Ξ), which is first-in-history (2026-07-13 20:12 vs 22:32). All shadow-gap references (LRCShadowGap.lean, triangulation doc, HYP-6600/6610/6620/6630/6640) mean this THM-748.
 
-# THM-744 — the shadow-gap middle-witness for tight covering clusters
+
+# THM-748 — the shadow-gap middle-witness for tight covering clusters
 
 The quantitative form of the S296 shadow-gap mechanism, at the resonance `k=2, p=1/2`. It is the first
 *unconditional* proof that a class of covering `{1}∪C` reaches the middle `[1/14,13/14]` (hence `L>0`),
@@ -48,15 +50,15 @@ are exactly the covering `{1}∪C` that the two class-level tools miss:
   `{1}∪(12\text{-speed cluster})` the only small element is the outlier `1`, whose peel has all-energy
   disc, and there are `12>6` "far" speeds.
 
-THM-744 handles them with an explicit rational-neighbourhood witness at `t=1/2`. E.g. `{1,90,…,101}`
+THM-748 handles them with an explicit rational-neighbourhood witness at `t=1/2`. E.g. `{1,90,…,101}`
 (`e=90, m=101, m/e=1.12<6`): lonely on `t ∈ (1/2+1/1260,\ 1/2+3/707) = (0.5008, 0.5042)` — the S289
 "decisive counterexample" is dispatched by a two-line inequality. Census: every sampled tight covering
 `{1}∪C` (`min≥15`, moderate spread) satisfies `m<6e` and is certified.
 
 ## The AP-stability connection, and the honest residual
 
-THM-744 is the covering-side companion of THM-523: THM-523 gives the middle witness `t=1/q` for
-*non-covering* sets; THM-744 gives the middle witness `t=1/2+δ` for *covering tight clusters*, using the
+THM-748 is the covering-side companion of THM-523: THM-523 gives the middle witness `t=1/q` for
+*non-covering* sets; THM-748 gives the middle witness `t=1/2+δ` for *covering tight clusters*, using the
 `k=2` shadow gap. The factor `6 = (14−2)/2` is optimal for this method (other resonances `p=a/k` give
 `(14−k)/k ≤ 6`; large-`k` resonances have vanishing margin). So the surviving residual is:
 **covering `{1}∪C` with `C` of ratio `∈[6,13]` and no isolated far element** — a thinner slice than the
@@ -68,7 +70,7 @@ whole non-isolated stratum, handled per-family by opus-S271's true disc; its uni
 The `m<6e` bound is not tight: at `t=1/2` the *odd* and *even* speeds constrain the gap differently, and
 only the odds carry the factor `6`. Precisely, with `e=`min-even, `E=`max-even, `o=`max-odd (`o=0` if none):
 
-> **Refined THM-744.** If `o < 6e` **and** `E < 13e`, then `t=1/2+δ` is lonely for `{1}∪C` for every
+> **Refined THM-748.** If `o < 6e` **and** `E < 13e`, then `t=1/2+δ` is lonely for `{1}∪C` for every
 > `δ ∈ (1/(14e),\ \min(3/(7o),\ 13/(14E)))` (non-empty). Hence `M({1}∪C)≥1/14`, `L>0`.
 
 *Proof.* Same as the main proof, with the even bound sharpened: an even `c` has `‖ct‖=cδ`, which stays

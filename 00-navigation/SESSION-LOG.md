@@ -10,6 +10,27 @@
 
 Handoffs: klein (triangulation headline -> 'union of tiles', klein-S300 caveat), kps (THM-734 essential, not subsumed). Files: lrc14_lowM_escapee_search_macmini_S99.py (+out). [S99b addendum: mapped the genuine residual = NOT-near-AP + NOT-shadow: RARE (15/2500), ALL M in [0.123,0.208] (>>1/14), diameter>=24, ZERO low-M. => tiling COMPLETE: covering => shadow(single-killer/tight) OR near-AP(kps THM-734/738) OR loose(M>=0.12,opus). Low-M region fully tiled by shadow+kps; residual all loose (opus). Vindicates klein's TABLE, corrects the 'uniform shadow' headline. HYP-6660 addendum.]
 
+## klein-2026-07-14-S303 -- worked the ASSEMBLY toward the finish: integrity-corrected the triangulation to mac-mini-S98's DICHOTOMY (binding shadow / loose margin), named the residual as opus U1/U2/U3, identified the LOOSE branch as the concrete crude-margin prize; + resolved the two-THM-744 collision (my shadow-gap → THM-748).
+
+Prompt (owner): work the assembly toward the finish.
+
+Read the newest fleet (mac-mini-S98, opus-S282). Two updates reshape the assembly:
+
+(1) INTEGRITY (mac-mini-S98): the S97/my-S302 "flat k≤13 shadow closes ALL covering" is FALSE — adversarial escapees exist (e.g. {1,10,21,24,56,65,77,135,219,265,335,367,390}: covering, M≈0.25, lonely at k≈29). Corrected the triangulation doc.
+
+(2) THE DICHOTOMY is the true assembly frame (non-circular, mac-mini-S98): covering ⟹ EITHER some k≤13 has a FREE unit-class mod k (no killer c>(14−k)·min_carrier/k) ⟹ k≤13 shadow ⟹ M≥1/14; OR every k≤13 saturated ⟹ speeds spread across all residues ⟹ decorrelated ⟹ M LARGE (M>0.22≫1/14; escapees ∈[0.219,0.257], none <0.12). Splits covering by HARDNESS not shape:
+ - BINDING (M≲0.22, near covering-min): the hard families, k≤13 shadow closes; PROVED tiles = single-killer (mac-mini k=13) + near-AP ≥10-in-{1..14} (kps THM-738) + tight-ratio (klein THM-748). Residual = the low-M binding residue-patterns = U3 restricted.
+ - LOOSE (M>0.22 spread): a MARGIN bound; the 3× margin ⟹ CRUDE decorrelation suffices (far easier than THM-636's tight M≥1/14). THE concrete provable prize.
+
+(3) RESIDUAL NAMED (opus-S282): U1 density tail lane (S(W) exact periodic mod Q=97020, max|S|=71.23; floor W>W0=339/513; one more scan closes) — near-done; U2 compact core (kps bounded-Vmax) — finite; U3 multi-speed equidistribution (klein-S300) — but the dichotomy SHRINKS U3 to LOW-M binding families only. NET: covering = [loose crude margin (new)] + [binding U1+U2+U3-low-M].
+
+(4) HOUSEKEEPING: resolved the two-THM-744 collision — opus-S277 F-telescoping FIRST (git 2026-07-13 20:12) vs my S297 shadow-gap (22:32). Renumbered my shadow-gap THM-744 → THM-748 (canon file renamed, id, Lean header LRCShadowGap.lean, triangulation doc, renumber note). All shadow-gap refs mean THM-748 now.
+
+THE ASSEMBLY PATH (updated): [loose branch: crude margin, prove next] + [binding: single-killer + THM-738 + THM-748 + close the low-M residue-pattern residual (U3-low-M)] + [U1 finite scan (opus) + W≤W0 bounded-diameter check (kps)]. Decide-shaped; every constant exact rational.
+
+FILES: HYP-6660; 00-navigation/LRC14-TRIANGULATION-2026-07-14.md (dichotomy + U1/U2/U3); THM-748 (renamed from THM-744); 04-computation/lrc14_dichotomy_verify_klein_S303.py (+out). -> mac-mini-S98/HYP-6635, opus-S282/THM-747. Sent to all.
+
+---
 ## mac-mini-2026-07-14-S98 -- CORRECT S97 (integrity) + the SHADOW-OR-LOOSE DICHOTOMY: k<=13 shadow does NOT close ALL covering (rare high-ratio SPREAD escapees, lonely at k~20-30), but every escapee is LOOSE (M>=0.22 >> 1/14). Shadow closes the BINDING low-M families; escapees trivially lonely.
 
 **Owner request:** prove the uniform residue-pattern claim (some k<=13 shadow for every covering cluster), work shallow witnesses.

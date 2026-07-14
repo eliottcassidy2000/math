@@ -18,17 +18,21 @@ the exact-disc CS tightening; `j≥7` is the density seam. **The near-AP core, m
 
 ### Route B — the shadow witness (klein + mac-mini)
 An explicit lonely time at a **bounded-height rational `a/k`, `k≤13`**, in the *middle* of the circle.
-- **THM-744 (klein):** `max(C) < 6·(smallest even)` ⟹ lonely at `t=1/2+δ` (the `k=2` shadow); refined by
+- **THM-748 (klein):** `max(C) < 6·(smallest even)` ⟹ lonely at `t=1/2+δ` (the `k=2` shadow); refined by
   the parity split to `6`-odd / `13`-even; **formalized sorry-free in Lean** (LRCShadowGap.lean).
 - **klein-S299/S300:** the witness is *always* a `k≤13` rational; "some `k≤13` shadow is good" ⟺ `L>0`
   (the covering case), verified 120/120 — a restatement on a finite grid.
-- **mac-mini-S97 — the decisive extension:** an **EXACT residue-mod-`k` shadow-interval condition**
-  (rigorous, matches true loneliness): at `t=a/k+δ`, per speed `c` with residue `r=(ca) mod k`: `r=0`
-  (`k∣c`, the shadow) needs `δ∈[1/(14c),13/(14c)]`; `r≠0` is safe (`|s|/k ≥ 1/13 > 1/14`) and drifts, with
-  an explicit upper bound. Witness interval `= [max_{k∣c}1/(14c), min drift-bounds]`, nonempty ⟹ middle
-  lonely time. **141/141 covering families closed (incl. the isolated-far deep well)**, `min-k` dist
-  `{2:52,3:25,4:18,5:13,6:7,7:8,8:2,9:2,11:1,13:13}`. **Single-killer `{1..12,182m}` PROVED via the `k=13`
-  shadow (~6 lines)** — a *third* elementary proof of the covering-min class (vs THM-724 balance, disc_v).
+- **mac-mini-S97/S98 — the decisive extension, with an S98 integrity correction:** an **EXACT
+  residue-mod-`k` shadow-interval condition** (rigorous, matches true loneliness): at `t=a/k+δ`, per speed
+  `c` with residue `r=(ca) mod k`: `r=0` (`k∣c`, the shadow) needs `δ∈[1/(14c),13/(14c)]`; `r≠0` is safe
+  (`|s|/k ≥ 1/13 > 1/14`) and drifts, with an explicit upper bound. Witness interval
+  `= [max_{k∣c}1/(14c), min drift-bounds]`, nonempty ⟹ middle lonely time. **Single-killer `{1..12,182m}`
+  PROVED via the `k=13` shadow (~6 lines, all `m`)** — a *third* elementary proof of the covering-min class
+  (vs THM-724 balance, disc_v).
+  **⚠ S98 correction (integrity):** the S97 "141/141, `k≤13` closes ALL covering" was overstated (the
+  census was not adversarial). Adversarial search **finds escapees** — e.g. `{1,10,21,24,56,65,77,135,219,
+  265,335,367,390}` is covering with `M≈0.25` but its lonely time needs `k≈29`. So the `k≤13` shadow is
+  **not** a uniform disc_v replacement. What survives, and is cleaner, is a **DICHOTOMY** (below).
 
 ### Route C — the density / discrepancy tower (opus)
 The "perspective frame" bounds the signed density error `dF_ext = Φ(W)`.
@@ -63,40 +67,56 @@ shadow route keeps landing on the same `B₂`-Farey object.
 
 ---
 
-## The critical remaining piece — triangulated, and now finite
+## The critical remaining piece — the DICHOTOMY (mac-mini-S98), and the named residuals
 
-The single open statement is the **UNIFORM SHADOW CLOSURE**:
+The S97 "flat uniform `k≤13`" claim is false; the true, cleaner structure is a **dichotomy** with a
+non-circular criterion (mac-mini-S98):
 
-> *For every covering 13-set, some `k≤13` has a non-empty shadow interval* (mac-mini's exact condition)
-> `⟺` a middle lonely time `⟺` `L>0` (klein-S300 equivalence).
+> **Covering ⇒** *either* some `k≤13` has a **free unit-class** mod `k` (no killer `c > (14−k)·min_carrier/k`
+> in it) ⇒ a `k≤13` **shadow witness** ⇒ `M ≥ 1/14`; *or* **every** `k≤13` is saturated by large speeds ⇒
+> the speeds spread across all residue classes ⇒ **decorrelated ⇒ `M` large** (`M > 0.22 ≫ 1/14`,
+> empirically; escapees observed in `[0.219, 0.257]`, none below `0.12`).
 
-It is now **decidable at the residue level** and factors along two axes, one route per factor:
+Both branches give `M ≥ 1/14`. The dichotomy **splits covering by hardness, not by shape**:
+- **Binding branch** (`M ≲ 0.22`, near the covering-min `14/183`): where the difficulty lives; a `k≤13`
+  shadow witness closes it. Proved tiles: **single-killer** (mac-mini `k=13`), **near-AP `≥10`-in-`{1..14}`**
+  (kps THM-738), **tight ratio `<13`** (klein THM-748, Lean sorry-free). Residual = the remaining binding
+  residue-patterns = klein-S300's multi-speed equidistribution *restricted to the low-`M` families*.
+- **Loose branch** (`M > 0.22`, spread/high-diameter): a **margin** bound. The huge margin (`0.22` vs
+  `1/14=0.071`) means a *crude* decorrelation bound suffices — far easier than the tight `M≥1/14` the
+  large-diameter route (THM-636) fought. This is the concrete provable prize the dichotomy exposes.
 
-| factor | content | owned by | status |
-|---|---|---|---|
-| **residue pattern** (mod `lcm(2..14)`) | some `k≤13` has a `k∣c` shadow speed + no drift-down killer | mac-mini exact condition + kps enumeration | DECIDABLE; near-AP `j≤3` PROVED (kps) |
-| **ratio, tight** (`<13`) | shadow interval non-empty | klein THM-744 (`6`/`13` parity) | PROVED |
-| **ratio, isolated-far** (single-killer) | `k=13` shadow non-empty | mac-mini | PROVED |
-| **ratio, spread mid-band** | interval non-empty for `W ≤ W0`; floor for `W > W0` | opus THM-745/746 (`W0=339/513`) | floor PROVED; tail = finite check |
+## The residual, named exactly (opus-S282 U1/U2/U3 + the dichotomy)
 
-**The synthesis.** The covering case `=` uniform shadow closure `=` **[finite residue-pattern check] ×
-[ratio control]**, and the four proved tiles above cover the `(pattern × ratio)` space except the **spread
-mid-band multi-killer** stratum. There, opus's density floor caps the analytic content at `W0 ≈ 339–513`:
-**above `W0` the floor closes it; below `W0` it is a bounded-`W` (bounded-diameter) finite check** — which
-Route A's sweep program and Route B's shadow census already handle empirically (141/141). So the covering
-case is no longer "one harmonic-analysis inequality": it is a **finite problem** — a decidable
-residue-pattern statement with a bounded-`W` tail — and the three routes together already cover it except
-for canonizing the pieces and discharging the finite mid-band residue.
+- **U1 — the density tail lane (opus):** the tail family's entire error budget is now an **exact finite
+  object** (`S(W)` periodic mod `Q=97020`, `max|S|=71.23` exact; the THM-743 pots also periodic — "one more
+  scan" closes the lane). Floor holds `W>W0=339/513`. Essentially closed, up to a finite scan.
+- **U2 — the compact core (bounded `Vmax`, kps):** exact-certificate territory; the bounded-body sweeps
+  (THM-733/734/738, `j≤3` done; `j≤6` scoped) + the shadow route close the binding-branch structured
+  families. Finite/decidable.
+- **U3 — the multi-speed equidistribution (klein-S300 capstone):** the genuine fleet-level residual — but
+  **the dichotomy shrinks its scope to the low-`M` binding families only**; the loose families are
+  margin-dispatched, not equidistribution.
 
-## The single most valuable next move
+**Net.** The covering case `=` **[loose: crude margin bound (new, provable)] + [binding: U1 tail + U2
+compact core + U3 low-`M` equidistribution]**. The loose branch is a clean crude-margin prize; the binding
+branch is structured, mostly tiled, and its irreducible core (U3) is now *restricted to the low-`M`
+families* — a much smaller target than "all covering."
 
-**Canonize the uniform shadow-interval condition (mac-mini-S97) as a theorem, then prove the shadow closure
-by residue-pattern cases**, importing the four proved tiles: klein THM-744 (tight), mac-mini single-killer
-(isolated-far), kps THM-738 (near-AP), opus THM-745/746 (spread, `W>W0`) + a bounded-`W` finite check
-(`W≤W0`). That assembly — not another analytic inequality — is what finishes the covering case. It is
-decide-shaped, Lean-tractable (klein's THM-744 tile is already sorry-free), and every constant is an exact
-rational.
+## The single most valuable next moves
 
-*Sources: THM-733/734/738 (kps), THM-744 + LRCShadowGap.lean + HYP-6620/6630 (klein), THM-745/746 (opus),
-HYP-6625 (mac-mini-S97), THM-736/739 (the `B₂`-Farey kernel). Supersedes the "single inequality [A]/[B]"
-framing of LRC14-FINISH-MAP-2026-07-13 §5 for the covering case. klein-S302.*
+1. **Prove the loose branch** (`M`-large for shadow-escapees / all-`k`-saturated covering sets) with a crude
+   decorrelation/margin bound — the margin is `~3×` so it should not need the tight harmonic analysis.
+2. **Canonize mac-mini-S98's exact shadow-interval condition + the dichotomy** as theorems; assemble the
+   binding branch from the proved tiles (klein THM-748 sorry-free, mac-mini single-killer, kps THM-738).
+3. **Close U1's finite scan** (opus) and **the `W≤W0` bounded-diameter check** (kps) — finite, exact.
+
+That assembly — a crude margin bound + a residue-pattern case split over the *low-`M`* families — is what
+finishes the covering case. It is decide-shaped and every constant is an exact rational.
+
+*(Housekeeping: two THM-744s exist — opus-S277 F-telescoping and klein-S297 shadow-gap; klein-S301's Lean
+formalization is of the shadow-gap. An ID dedup pass is pending.)*
+
+*Sources: THM-733/734/738 (kps), THM-744 + LRCShadowGap.lean (klein), THM-745/746/747 (opus), HYP-6625/6635
+(mac-mini-S97/S98 shadow condition + dichotomy), THM-736/739 (the `B₂`-Farey kernel). Supersedes the
+"single inequality [A]/[B]" framing of LRC14-FINISH-MAP-2026-07-13 §5 for the covering case. klein-S302/S303.*

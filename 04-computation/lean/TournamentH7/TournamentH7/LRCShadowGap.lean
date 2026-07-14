@@ -1,5 +1,5 @@
 /-
-  TournamentH7.LRCShadowGap — the SHADOW-GAP middle-witness (THM-744, klein-2026-07-13-S297/S298).
+  TournamentH7.LRCShadowGap — the SHADOW-GAP middle-witness (THM-748 (was THM-744), klein-2026-07-13-S297/S298).
 
   For a covering cluster `C` with smallest even element `e` and every element `≤ m`, if `m < 6e`
   then the family `{1} ∪ C` is `1/14`-lonely at a time `t = 1/2 + δ` in the MIDDLE of the circle,
@@ -77,7 +77,7 @@ theorem shadowGap_odd (m : ℤ) {δ : ℝ} (hδ0 : 0 ≤ δ) (hhi : 7 * (m : ℝ
     linarith
   · nlinarith [mul_le_mul_of_nonneg_right hcmR hδ0, hhi]
 
-/-- **THM-744 (shadow-gap middle-witness).**  If every speed of `v` is either an even integer in
+/-- **THM-748 (was THM-744) (shadow-gap middle-witness).**  If every speed of `v` is either an even integer in
 `[e, m]` or an odd integer in `[1, m]` (`1 ≤ e`), then for any `δ` with `1 < 14 e δ` and
 `7 m δ < 3`, the family is `1/14`-lonely at the middle time `t = 1/2 + δ`.  The observer speed `1`
 (odd, `≤ m`) and every cluster speed are handled uniformly. -/
