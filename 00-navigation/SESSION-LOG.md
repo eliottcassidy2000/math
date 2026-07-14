@@ -2887,6 +2887,11 @@ FINDING 3: beta=0 rigidity PROVED at the tight point via S252. q=13 (beta=0), M_
 NET: unconditional rigidity FALSE (corrects S254), escape closes by verified beta-split, tight point rigorous via S252. Remaining: full beta-balance for 0<beta<14/183 (verified, unproved) + multi-killer.
 
 FILES: reflection the-single-rigidity-is-false-...-opus-S255; lrc14_rigidity_correction_beta_split_opus_S255.py(+.out); HYP-6300. -> opus-S254/S253/S252, klein S267, LRC(<=13).
+## codex-2026-07-14-S2 -- LRC14 frontier audit + endogenous pair-sum blocker complex (IN PROGRESS)
+
+Prompt (owner): assess the repository's long-history LRC14 frontier holistically, seek meaningful progress, and leave a broad niche-thread avenue list for future agents.
+
+Reserved HYP-6785 and `LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`. Initial audit correction: THM-724's headline is not a global single-killer proof; its body leaves the near-tight non-dilated residual empirical. HYP-6225's multi-killer closure is interval-core enumeration plus bounded/escape citations, not a general closed-form inequality. Current exact representation under study: the endogenous pair-sum blocker complex, combining THM-668 with the older twist-ladder blocker hypergraph and retaining protected pair endpoints plus nonunit multipliers. Work ongoing.
 
 ---
 
