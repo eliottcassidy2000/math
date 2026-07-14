@@ -1,0 +1,64 @@
+==========================================================================
+(A) The 13|q localization lemma  (verify on {1..12} and near-tight sets)
+==========================================================================
+  M({1..12}) = 1/13   tight points (p,q): [(1, 13), (2, 13), (3, 13), (4, 13), (5, 13), (6, 13)] ...
+    q=13, p=1: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=2: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=3: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=4: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=5: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=6: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=7: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=8: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=9: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=10: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=11: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+    q=13, p=12: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (complete nonzero system: True)
+  Lemma holds on all 12 tight points of {1..12}: True
+  [PROVED: ||a_j p/q||=s/q=1/13 => q=13s => 13|q; min dist = q/13 => residues in [q/13,12q/13].]
+  [At q=13: 12 distinct residues in [1,12] (12 integers) => forced = {1,...,12}.]
+
+==========================================================================
+(B) Exact census: primitive 12-subsets of {1..16}
+==========================================================================
+  primitive 12-subsets of 1..16: 1820
+  tight (M=1/13): 1
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  <== {1..12}
+
+==========================================================================
+(C) The Goddyn-Wong mechanism fails at n=12
+==========================================================================
+  n=13 sporadic tight: {1..11,13,24} (M=1/14) -- large killer 24 kills sub-witnesses.
+  n=12 analogs (drop one small elt, add a large multiple-of-12/13 killer):
+    {1..11}+24       M=2/25     (0.0800)
+    {1..11}+36       M=3/37     (0.0811)
+    {1..11}+48       M=4/49     (0.0816)
+    {1..11}+60       M=5/61     (0.0820)
+    {1..11}+72       M=6/73     (0.0822)
+    {1..11}+144      M=12/145   (0.0828)
+    {1..11}+156      M=13/157   (0.0828)
+    {1..10,12}+22    M=1/12     (0.0833)
+    {1..10,12}+24    M=1/11     (0.0909)
+    {1..10,12}+44    M=2/23     (0.0870)
+    {1..10,12}+132   M=6/67     (0.0896)
+    {1..10,12}+143   M=13/145   (0.0897)
+    {2..12}+13       M=2/15     (0.1333)
+    {2..12}+24       M=1/7      (0.1429)
+    {2..12}+26       M=1/7      (0.1429)
+    {2..12}+144      M=1/7      (0.1429)
+    {2..12}+156      M=1/7      (0.1429)
+  NON-base tight among GW-mechanism candidates: 0
+  => the n=13 sporadic mechanism produces NO tight set at n=12 (closest {1..11,24}=2/25).
+
+==========================================================================
+(D) VERDICT
+==========================================================================
+  VERIFIED: {1..12} is the unique tight primitive 12-set in {1..16} (1/1820)
+            and no GW-mechanism large-killer candidate is tight.
+  PROVED lemma: tight => 13|q at every tight point + residue localization;
+                at q=13, residues forced complete => {1..12} minimal rep.
+  REDUCTION: full rigidity = [q=13 forced: rule out u>=2 tight points]
+             + [minimal-representative at q=13] (finite given a ratio bound).
+  HONEST: this is the LRC(13) tight-instance characterization; TRUE at n=12
+          (verified), FALSE at n=13 (Goddyn-Wong). Not closure-critical:
+          THM-758 gives M>=1/14 with tight families in the PROVED <=3-far half.

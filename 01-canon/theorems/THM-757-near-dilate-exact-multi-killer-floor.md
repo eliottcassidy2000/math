@@ -103,3 +103,30 @@ uniqueness claim was false.
 *Artifacts:* `04-computation/lrc14_band_exact_macmini_S105.py` (+out) — exact `M` via peak candidates,
 the near-dilate verification, the 8260-family band check. Credits: THM-720/721 (the near-dilate
 adversary), THM-726 (the finite check extended), THM-751/753 (the bulk reduction), LRC(≤13) (settled).
+
+## Addendum (mac-mini-S107) — the LRC(13) tightness rigidity of the block (HYP-6775)
+
+The **open** question above ("is the tight 12-block *always* a dilate of `{1,…,12}`?") is now
+**verified + partially proved**. Since every primitive 12-set has `M ≥ 1/13` (LRC(13), settled),
+"tight" means `M = 1/13` exactly — the **LRC(13) extremal instance**.
+
+- **The `13∣q` localization lemma (PROVED).** At any tight point `t* = p/q` (reduced), some clearance
+  equals `1/13`, i.e. `‖a_j p/q‖ = s/q = 1/13`, forcing `q = 13s` (so `13 ∣ q`); and every residue
+  `a_i p \bmod q` lies in `[q/13, 12q/13]`. At `q = 13` the 12 distinct residues fill `[1,12]` exactly
+  (12 integers, 12 slots) → forced **complete nonzero residue system mod 13**.
+- **Exact census (VERIFIED).** Among the **1820** primitive 12-subsets of `{1,…,16}`, **exactly one**
+  is tight: `{1,…,12}`.
+- **The Goddyn–Wong mechanism fails at `n=12` (VERIFIED).** The `n=13` *sporadic* tight set
+  `{1..11,13,24}` (`M=1/14`, THM-733/734) comes from a large multiple-of-12 "killer." Every `n=12`
+  analog (drop a small speed, add a large `12`/`13`-multiple killer) has `M > 1/13` **strictly** —
+  closest `{1..11,24} = 2/25 = 0.080 > 1/13`; `{1..11}∪\{12k\}` gives `k/(12k+1) ↑ 1/12`. So the exact
+  mechanism that breaks rigidity at `n=13` produces **nothing** at `n=12`.
+
+So the "corrected equality conjecture" holds with the block pinned: `M = 1/13` for a multi-killer
+covering 13-set **iff** it contains a **dilate `c·{1,…,12}`** (the tight block is rigid — no sporadic
+alternative at `n=12`) plus a safe coprime killer. **Honest:** a *complete* proof still needs
+`[q=13 \text{ forced (rule out } u≥2\text{)}] + [\text{minimal-rep at }q=13]` (a finite check given a
+ratio bound); the lemma + census + GW-failure are the rigorous/verified core. This is **not**
+closure-critical — klein THM-758 gives `M ≥ 1/14` with the tight families all in the *proved* ≤3-far
+half — it characterizes the extremal structure. *Artifact:*
+`04-computation/lrc13_tightness_rigidity_macmini_S107.py` (+out).

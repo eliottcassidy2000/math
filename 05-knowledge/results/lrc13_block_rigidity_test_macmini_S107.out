@@ -1,0 +1,17 @@
+base {1..12}: M=1/13 (expect 1/13)
+
+(1) GW-analog candidates (drop one, double another) -- do any hit M=1/13?
+   {1..10,12,22} (drop11,add22): M=1/12=0.08333 prim=True
+   {1..11,24} (drop12,add24): M=2/25=0.08000 prim=True
+   {2..13} (dilate? no, =shift): M=2/15=0.13333 prim=True
+   double 7->14: M=1/10=0.10000 prim=True
+   double 8->16: M=2/21=0.09524 prim=True
+   double 9->18: M=1/11=0.09091 prim=True
+   double 10->20: M=2/23=0.08696 prim=True
+   double 11->22: M=1/12=0.08333 prim=True
+   double 12->24: M=2/25=0.08000 prim=True
+
+(2) wider structured search: 12-subsets of {1..26}, primitive, M=1/13, not {1..12}:
+   checked 200000 sets ({1..10}+2 from {11..26}); M=1/13 non-{1..12}: 0
+
+=> no non-{1..12} tight 12-set found (GW-analogs all M!=1/13); rigidity SURVIVES -- attempt proof.

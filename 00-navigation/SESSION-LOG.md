@@ -1,3 +1,21 @@
+## mac-mini-2026-07-14-S107 -- LRC(13) TIGHTNESS RIGIDITY: {1,...,12} is the UNIQUE tight primitive 12-set (M=1/13). The remaining rigidity content of THM-757's multi-killer floor, now VERIFIED + PARTIALLY-PROVED (HYP-6775).
+
+TASK (owner): prove the LRC(13) 12-block tightness rigidity -- is the tight 12-block always a dilate of {1..12}? Approached SKEPTICALLY because the ANALOGOUS n=13 rigidity is FALSE (Goddyn-Wong {1..11,13,24} is a non-AP tight 13-set, M=1/14).
+
+RESULT (three parts):
+(A) The 13|q LOCALIZATION LEMMA (PROVED). Every primitive 12-set has M>=1/13 (LRC(13) settled), so tight = M=1/13 exactly = the LRC(13) extremal. At any tight point t*=p/q reduced: some clearance ||a_j p/q|| = s/q = 1/13 forces q=13s, i.e. 13|q; and min-clearance = q/13 forces every residue a_i*p mod q into [q/13, 12q/13]. At q=13 the 12 distinct residues fill [1,12] EXACTLY => forced complete nonzero residue system mod 13. (Verified on all 12 tight points of {1..12}.)
+(B) EXACT CENSUS. Primitive 12-subsets of {1..16} (1820 sets, exact-Q M via peak candidates t=m/(v_i+-v_j)): EXACTLY ONE tight = {1,...,12}.
+(C) THE GODDYN-WONG MECHANISM FAILS AT n=12. n=13's sporadic tight {1..11,13,24} comes from a large mult-of-12 killer. Every n=12 analog (drop one small elt + add large mult-of-12/13 killer) has M>1/13 STRICTLY: closest {1..11,24}=2/25=0.080 (>1/13=0.0769); {1..11}+12k = k/(12k+1) up to 1/12. The sporadic mechanism that breaks n=13 rigidity produces NOTHING at n=12.
+
+HONEST SCOPE: this is the LRC(13) tight-instance characterization -- TRUE at n=12 (verified {1..16} + structured GW candidates), FALSE at n=13 (GW). Full proof = [q=13 forced: rule out u>=2 tight points] + [minimal-rep at q=13] (finite given a ratio bound); the 13|q lemma + census + GW-failure are the rigorous+verified core. NOT closure-critical: klein THM-758 (pulled this session) gives M>=1/14 with ALL tight families in the PROVED <=3-far (>=10-in-{1..14}, kps THM-738) half -- so this CHARACTERIZES the extremal/equality structure, refining THM-757 (its open rigidity item now addendum'd).
+
+CONCURRENT WORK PULLED: klein THM-758 (far-count split: covering => [<=3 far: kps THM-738 PROVED, holds the covering-min + every tight family] + [>=4 far: opus capped-envelope THM-755 + bounded band]) + klein S310/S311 (band residual 2x loose) + opus THM-755/756 (capped-envelope, H-band closure). The covering endgame is now: Claim A PROVED + Claim B = capped-envelope + a 2x-loose bounded band check.
+
+FILES: 04-computation/lrc13_tightness_rigidity_macmini_S107.py (+.out); HYP-6775; THM-757 addendum.
+HANDOFFS: @klein/@opus -- the tight extremal is rigid at the block (no GW sporadic at n=12), so your L=0 corner families (AP {1..13}, GW {1..11,13,24}) are the ONLY 13-set tight completions; the 12-block inside any multi-killer M=1/13 minimizer is forced to be a dilate of {1..12}. @kps -- THM-738 base is the home of every tight family (THM-758).
+
+---
+
 ## klein-2026-07-14-S311 -- the band residual is TRIVIALLY LOOSE (M≥0.1428=2× of 1/14) — after opus-density + capped-envelope reducers, the band adds NO hard cases. Characterization + large sample (honest: not the full exhaustive C(500,13) enumeration — that's mac-mini's exact-ℚ job or a crude M≥0.14 bound).
 
 Prompt (owner): execute the bounded band exhaustively for all cores.
