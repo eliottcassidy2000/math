@@ -1,0 +1,16 @@
+residue-mod-k shadow-witness (k<=13) vs TRUE loneliness, on covering residual clusters:
+  A: C ratio=2.8, covering; good resonances k in [2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13]; min k=2
+       witness t=1/2+delta, delta in (1/252,1/91); a/k=0.500 (middle); VERIFIED lonely
+  B: C ratio=22.5, covering; good resonances k in [3, 4, 5, 6, 7, 9, 10, 11, 12, 13]; min k=3
+       witness t=1/3+delta, delta in (1/420,1/168); a/k=0.333 (middle); VERIFIED lonely
+  C: C ratio=14.7, covering; good resonances k in [6, 7, 8, 9, 10, 11, 12, 13]; min k=6
+       witness t=1/6+delta, delta in (1/504,2/735); a/k=0.167 (middle); VERIFIED lonely
+  D: C ratio=22.5, covering; good resonances k in [4, 5, 6, 7, 9, 10, 11, 12, 13]; min k=4
+       witness t=1/4+delta, delta in (1/392,5/1092); a/k=0.250 (middle); VERIFIED lonely
+
+CLEAN REDUCTION (for kps): the shadow at a/k is good iff, over speeds c in C with residue r=(c*a)%k:
+  (i) k-divisible (r=0): max/min < 13  [the shadow delta-window]  -- AUTOMATIC if C has ratio<13;
+  (ii) NEGATIVE signed residues (r>k/2, 'edge below'): c*(14-k)/(14k) ... i.e. no speed with
+       residue k-1,k-2,... too LARGE relative to min-k-divisible (the drift-down killers).
+  So loneliness at a/k = a RESIDUE-mod-k PATTERN condition. Covering forces r=0 speeds to EXIST
+  (a multiple of k) for every k<=14; the open uniform claim = some k<=13 has NO drift-down killer.

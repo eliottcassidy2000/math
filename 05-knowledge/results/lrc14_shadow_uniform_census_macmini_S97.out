@@ -1,0 +1,8 @@
+covering families tested: 141
+with a k<=13 shadow witness (verified lonely): 141/141 = 100.0%
+min-k distribution: {2: 52, 3: 25, 4: 18, 5: 13, 6: 7, 7: 8, 8: 2, 9: 2, 11: 1, 13: 13}
+ZERO failures: EVERY covering family tested has a k<=13 shadow witness.
+=> the shadow-witness route (exact residue condition) closes the covering case empirically,
+   INCLUDING isolated-far (deep well) -- a UNIFORM elementary alternative to disc_v.
+   OPEN: the uniform PROOF (some k<=13 works for every covering residue pattern) = klein-S299's
+   resonance-grid equidistribution, now with my EXACT decidable residue-mod-k condition.
