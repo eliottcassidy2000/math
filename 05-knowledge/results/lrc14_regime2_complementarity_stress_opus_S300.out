@@ -1,0 +1,47 @@
+============================================================================================
+PART 1 -- does r_P stay bounded for scale-free cores? (the r_P <= B(c*) claim)
+============================================================================================
+     H trials  min r_P  med r_P  max r_P c* (all)
+    50     12       42       60       68        1
+   100     12       86      110      138        1
+   200     12      140      226      284        1
+   400     12      288      472      596        1
+   800     12      650      868     1178        1
+  1600     12     1070     1700     2452        1
+  median-r_P doubling ratios: ['1.83', '2.05', '2.09', '1.84', '1.96']
+  VERDICT: r_P grows ~linearly with height on scale-free cores -> r_P <= B(c*) is REFUTED as phrased
+
+============================================================================================
+PART 2 -- the band-edge ratio rho = v*/maxP across families (exact brackets)
+============================================================================================
+  interval core {1..12}              r_P=12    |G'|=0.03410  rho in [9.334, 9.335]
+  near-dilate 42*{1..12} (c*=42)     r_P=504   |G'|=0.03410  rho in [9.334, 9.335]
+  near-dilate 26*{1..12} (c*=26)     r_P=312   |G'|=0.03410  rho in [9.334, 9.335]
+  partial dilate 42*{1..7} + spread  r_P=1586  |G'|=0.15577  rho in [1.881, 1.881]
+  deep-well shape {1..11,182}        r_P=30    |G'|=0.04299  rho in [1.220, 1.221]
+  GW 12-core {1..11,13}              r_P=4     |G'|=0.01216  rho in [8.055, 8.055]
+  spread scale-free H=100            r_P=104   |G'|=0.15140  rho in [2.542, 2.543]
+  spread scale-free H=400            r_P=372   |G'|=0.15780  rho in [1.975, 1.975]
+  spread scale-free H=1600           r_P=2342  |G'|=0.15797  rho in [2.953, 2.953]
+
+  adversarial hill-climb: MAXIMIZE rho over c* <= 42 twelve-cores (600 steps)
+  adversarial peak: rho_hi = 9.335 at P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    (r_P=12, |G'|=0.03410, c*=1)
+
+============================================================================================
+PART 3 -- measured regime-2 constants and the corrected composition
+============================================================================================
+  max rho upper-bracket over battery: 9.335
+  min |G'| over battery: 0.01216
+
+  CORRECTED COMPLEMENTARITY (for HYP-6830):
+  - r_P <= B(c*) is FALSE as phrased: scale-free cores fragment ~linearly in height
+    (r_P tracks Sum(P); divisibility is not the only fragmentation source).
+  - The TRUE regime-2 invariant is the RATIO rho = v*/maxP = r_P/(pi |G'| maxP):
+    * dilates multiply r_P and maxP by c together -> rho is scale-INVARIANT;
+    * spread cores: r_P ~ alpha*Sum(P) and |G'| bounded below -> rho = O(1);
+    * so the band (maxP, v*] is bounded RELATIVE to the core everywhere tested,
+      max ratio ~9.4 at the {1..12} shape (dilates of it inherit 9.33).
+  - Proof obligation that remains: |G'_P| >= floor(shape) for 12-cores off the
+    classified tight families (stability around rigidity, mac-mini B5 lane),
+    which converts rho = O(1) from measured to proved via r_P <= Sum(P).

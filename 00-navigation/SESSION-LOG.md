@@ -1,3 +1,65 @@
+## opus-2026-07-14-S300 -- THM-767 PROVED: DECK KIRCHHOFF RIGIDITY (the squared-square/Smith-diagram/Kirchhoff program on the sheet deck, owner directive) -- the EVENT PIERCE closes the r=7 deck stratum (the S299 wall pierced at all 203 core-safe switching times); the KCL absorption law (mirror capacities 14*gcd | w_a+w_b); regime-2 complementarity self-refereed (MISTAKE-145) and replaced by the peel-relative invariant rho = v*/maxP (measured <= 9.335, extremal at {1..12})
+
+Prompt (owner): work the r>=7 deck tilings and the regime-2 decomposition; consider squaring
+the square, Smith diagrams, and Kirchhoff's circuit laws.
+
+THE THEOREM (THM-767, canon + all-pass referee battery): on the sheet deck Z_c of V = cP u W,
+(1) BALANCE: the t0-average of each exception's bad-sheet count is EXACTLY c/7 (every gcd
+stratum) -- the conserved current; (2) TWO-VALUE: each count is a two-valued step function,
+gap = gcd; (3) ZERO-VARIANCE at 7g|c (the Dehn-commensurable 'unit resistance' case): count
+CONSTANT = c/7 off a finite event set; (4) THE EVENT PIERCE: 7|c, r=7, strata 7g_a|c: at every
+event moment t0* (a phase boundary exactly on a grid point) inside the CLOSED core 1/14-safe
+set, the total count drops to <= c-1, freeing a sheet whose full family clearance is >= 1/14
+CLOSED => M(V) >= 1/14. Explicit closure: w_max > 7*Sum(P) (events spaced <= 1/w; closed
+safe set has an interval >= 1/(7*Sum(P))). (5) KCL ABSORPTION LAW: exits of a (u-grid
+w_a*u = c/14 mod c, current w_a per window) can meet entries of b ONLY IF 14*gcd(w_a,w_b) |
+w_a+w_b, and then in exactly gcd(w_a,w_b) points per window (coincidence law verified exactly,
+300 triples, 0 mismatches); maintained exact tilings need mirror-partner capacity >= current
+at every node -- violated by 1399/1400 random 7-sets. THE HEADLINE: the S299 wall instance
+(c=7, all sheets bad at the core OPTIMUM) is PIERCED at every one of its 203 core-safe event
+moments. Standing at the optimum was the artifact -- THE WITNESS LIVES AT THE SWITCHING TIMES
+(third instance of the boundary-locus pattern: 7-clock corners THM-754, mirror events THM-745).
+
+REGIME 2 (self-referee): my S299 phrasing r_P <= B(c*) is REFUTED -- twice, independently,
+same day (codex's exact falsifier P_N = {1..11,N}, single high-frequency tooth insertion; my
+scale-free census: median r_P 60 -> 1700 over H = 50 -> 1600). Logged as MISTAKE-145 (FOURTH
+instance of the MISTAKE-137/139/140/141 genus; new standing rule: state boundedness claims in
+PEEL-RELATIVE coordinates + battery with near-dilate AND single-high-frequency seeds). The
+surviving invariant: rho = v*/maxP -- scale-INVARIANT on dilates (9.334 at every c for
+c*{1..12}), O(1) on every family tested, adversarial hill-climb over c* <= 42 cores CONVERGES
+BACK TO {1..12} (rho_max = 9.335); codex's falsifier itself has rho < 1 (band EMPTY). The one
+remaining regime-2 lemma: |G'| floor off classified tight families (B5 stability lane) --
+converts rho = O(1) to PROVED via r_P <= Sum(P) and makes the c* <= 42 band domain a bounded
+normalized atlas.
+
+THE REFLECTION (07-reflections/the-deck-is-a-smith-diagram-opus-S300.md): the exact BSST
+dictionary (tiles = sliding grid-arcs, all the SAME length 1/7 = unit resistance; Dehn
+commensurability = 7g|c; nodes = event moments; KCL = absorption; KVL = phase potentials,
+exits at +c/14, entries at -c/14 -- the mirror is time reversal one level down; matrix-tree
+integrality = gcd coincidence counts). THE INVERSION: BSST's existence theorem is our
+impossibility theorem -- they engineered tilings into existence, our runners are given
+distinct and the KCL is the obstruction that tears the enemy's maintained cover; the tear IS
+the witness.
+
+REMAINING (HYP-6835, the program file): (1) KCL-feasible packet census (the deck's AP/GW
+corners; BSST matrix-tree flavor: which capacity graphs are realized by integer speeds);
+(2) 7 not| c s-threshold decks (8-s simultaneous lows on the closed Kronecker geodesic);
+(3) r >= 8 alignment residue (single-event pierce fails structurally -- survivor realized:
+P={5,7,8,13,14}, W={108,169,143,213,206,197,30,162}, t0=19/216; min-lens route named);
+(4) the |G'| floor (regime 2's last lemma); (5) Lean decide-targets (pure counting).
+
+HYGIENE: MISTAKE-143 collision (codex took 143/144 concurrently) -> mine renumbered to
+MISTAKE-145. My M_exact usages unaffected by codex's MISTAKE-144 (cusp denominators): library
++ my argmax variant both include 2v cusps.
+
+FILES: 01-canon/theorems/THM-767-deck-kirchhoff-rigidity.md; 05-knowledge/hypotheses/
+HYP-6835-lrc14-deck-kirchhoff-smith-program.md; 04-computation/
+lrc14_deck_kirchhoff_rigidity_opus_S300.py + lrc14_regime2_complementarity_stress_opus_S300.py
+(+ .outs); lrc14_certificates.py deck_event_witness (self-test 16/16); HYP-6830 updated
+(ratio study + THM-767); MISTAKE-145; frontier table + backlog updated;
+07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
+
+---
 ## opus-2026-07-14-S299 -- THM-761 PROVED: the MULTI-EXCEPTION SHEET COVERING BOUND (r<=6 exceptions of ANY gcd strata dodge whenever Sum g_a(floor(c/(7g_a))+1) <= c-1; uniform c>=43 coprime; exact failure sets c<=42; r=1 closes at EVERY scale and stratum, extending THM-760) + HYP-6830 (the two-regime splice: sheets above 43, bounded band inflation below -- the corrected uniformization of the >=4-far endgame) + the recursion reflection (the sheet residual IS a discrete inhomogeneous LRC on Z_c; tight case = cyclic tilings = the 7-clock one level down; FI arXiv:2605.29035 bridge)
 
 Prompt (owner): assess the LRC(14) frontier holistically; collect the perspectives and see what

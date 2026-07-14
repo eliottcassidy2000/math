@@ -35,7 +35,7 @@ PI_LO = F(333, 106)     # classical strict lower bound for pi
 __all__ = ["LAM", "good_intervals", "L_exact", "M_exact", "disc_exact",
            "thm731_certificate", "capped_envelope_vstar", "h_band_protocol",
            "fine_comb_witness", "clean_slot_witness", "slot_feasible", "is_covering",
-           "sheet_decomposition", "sheet_certificate"]
+           "sheet_decomposition", "sheet_certificate", "deck_event_witness"]
 
 # ---------------- the interval engine ----------------
 
@@ -147,6 +147,41 @@ def sheet_certificate(speeds, c, lam=LAM):
     budget = sum(g * (floor(2 * lam * c / g) + 1)
                  for g in (gcd(w, c) for w in W))
     return budget <= c - 1, ("sheet-budget", budget, c - 1, len(W))
+
+def deck_event_witness(speeds, c, lam=LAM, max_events=200):
+    """THM-767's constructive event-pierce witness (r = 7 deck stratum).
+
+    Requires 7 | c, exactly six speeds divisible by c (r = 7 exceptions), and
+    7*gcd(w,c) | c for every exception. Scans exception event moments t0*
+    (phase exactly at +-lam) inside the CLOSED core lam-safe set; at each, the
+    total bad count drops below c, so a free sheet gives a full witness.
+    Returns (t_exact, clearance) with clearance >= lam, or None."""
+    P, W = sheet_decomposition(speeds, c)
+    from math import gcd
+    if c % 7 != 0 or len(W) != 7 or not P: return None
+    if any(c % (7 * gcd(w, c)) != 0 for w in W): return None
+    Gp = good_intervals(P, lam)
+    def circ(x):
+        fx = x - (x.numerator // x.denominator)
+        return min(fx, 1 - fx)
+    for w in W:
+        n = 0
+        for sgn in (1, -1):
+            for j in range(14 * w):
+                if n >= max_events: break
+                t0 = (sgn * F(1, 14) * c + j) / w
+                t0 -= (t0.numerator // t0.denominator)
+                if not any(a <= t0 <= b for a, b in Gp): continue
+                n += 1
+                bad = set()
+                for wa in W:
+                    bad.update(k for k in range(c) if circ(F(wa) * (t0 + k) / c) < lam)
+                if len(bad) < c:
+                    k = next(k for k in range(c) if k not in bad)
+                    t = (t0 + k) / c
+                    clr = min(circ(v * t) for v in speeds)
+                    if clr >= lam: return (t, clr)
+    return None
 
 # ---------------- THM-752: the fine-comb witness ----------------
 
@@ -262,6 +297,10 @@ def _selftest():
     fires7, _ = sheet_certificate([7 * p for p in range(1, 7)]
                                   + [12, 38, 72, 96, 151, 169, 188], 7)
     check("THM-761 honestly refuses the r=7 wall instance", not fires7)
+    wall = [7 * p for p in range(1, 7)] + [12, 38, 72, 96, 151, 169, 188]
+    ev = deck_event_witness(wall, 7)
+    check("THM-767 event pierce closes the r=7 wall instance constructively",
+          ev is not None and ev[1] >= LAM)
     return ok
 
 if __name__ == "__main__":

@@ -85,17 +85,41 @@ data to distinguish dilation copies from high-frequency tooth insertion. It rema
 open whether those data admit a finite or recursively compact quotient; no
 replacement theorem is claimed here.
 
-## The residual inside regime 1 (named by THM-761)
+**Ratio study (opus-S300, independent confirmation + the measured constants).** The
+stress battery `lrc14_regime2_complementarity_stress_opus_S300.py` (+ .out)
+independently refuted `r_P <= B(c*)` empirically (scale-free cores: median r_P
+doubles with height, 60 -> 1700 over H = 50 -> 1600) and measured the peel-relative
+invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
 
-- **r ≥ 7** (core ≤ 6 elements): union bound structurally cannot fire (7 arcs of
-  length 1/7 can tile). The wall is realized (c=7 instance, all sheets bad) but the
-  realized family is still lonely (M = 1/7) by a non-sheet route. Routes to close:
-  (a) sweep t0 over the core's whole safe set, not one optimum (the origin-cap move
-  on the deck); (b) signed/spectral refinement: rotated arcs of length exactly 1/7
-  tile Z_c only under rigid divisibility (Newman-type cyclic tiling conditions —
-  vanishing of arc Fourier coefficients on subgroup frequencies); classify tiling
-  residue profiles as the AP/GW-analogue corners of the deck. (c) capped envelope
-  applied to the exceptions within a sheet.
+- `rho` is **scale-invariant on dilates** (9.334... at every `c` for `c*{1..12}`) and
+  `O(1)` on every tested family: spread scale-free 2.0–3.0, partial dilates 1.9,
+  deep-well shape 1.22, GW 12-core 8.06;
+- an adversarial hill-climb over `c* <= 42` cores **converged back to {1..12}**:
+  measured max `rho = 9.335` at the interval shape itself — the same extremal that
+  carries the covering-min and the H-band corners;
+- the codex falsifier `P_N = {1..11, N}` has `rho < 1` for large `N` (band EMPTY —
+  its top peel indeed fires the envelope), so it kills the raw-`r_P` bridge while
+  CONFIRMING the ratio coordinate;
+- since `r_P <= Sum(P)` always, `rho <= 12/(pi |G'_P|)`: the remaining proof
+  obligation is a **|G'| floor off the classified tight families** (the mac-mini B5
+  stability lane) — that alone converts `rho = O(1)` from measured to proved and
+  makes the regime-2 band domain bounded in NORMALIZED (peel-relative) coordinates.
+
+## The residual inside regime 1 (named by THM-761; r=7 stratum CLOSED by THM-767)
+
+- **r = 7: CLOSED above the shape bound (THM-767, opus-S300 — the event pierce).**
+  For `7|c`-compatible strata the bad-sheet counts are CONSTANT (= c/7) off a finite
+  event set; at every event moment in the closed core-safe set the total count drops
+  to `c-1`, freeing a sheet with closed clearance `>= 1/14`. Route (a) below was the
+  right one, sharpened: not the whole safe set — the SWITCHING TIMES. The realized
+  c=7 wall instance is pierced at all 203 tested core-safe event moments. Explicit
+  sufficient condition: `w_max > 7*Sum(P)`. Remaining inside r >= 7: the r >= 8
+  alignment residue (single-event pierce fails structurally; realized), `7 ∤ c`
+  decks (s-threshold), and the bounded-shape residue `w_max <= 7*Sum(P)`.
+- The **KCL absorption law** (THM-767(4)) replaces the Newman-route sketch in (b):
+  maintained exact tilings need `sum over mirror partners (14*gcd | w_a+w_b) of
+  gcd(w_a,w_b) >= w_a` per exception — violated by 1399/1400 random 7-sets; the
+  KCL-feasible packets are the rigid arithmetic corners of the deck.
 - **Deep gcd entanglement** (Σ g_a over budget): recursive descent c → c/g;
   bookkeeping to write; termination is clear (c strictly decreases).
 
