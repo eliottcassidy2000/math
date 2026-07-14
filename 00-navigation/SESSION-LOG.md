@@ -1,3 +1,30 @@
+## opus-2026-07-13-S277 -- THM-744: F-telescoping refinement of Xi (exact end heights) -- Xi 6.25->2.85 but NET W0 ~unchanged (339->336 / 513->462): the per-line constant program's FLOOR, reached; the yield is STRUCTURAL: loop telescoping measures Xi_signed = 0.056 / 0.179 (~50x below Xi) -- near-total cross-segment cancellation exists arrangement-side, blocked only by per-segment Dedekind-type residuals = the concrete Q_s hand-off
+
+Prompt (owner): attack the Xi partial-wrap caps with the exact segment-end heights.
+
+THE REFINEMENT (THM-744, proved + verified, zero violations): per segment, the sawtooth sum
+telescopes through F(x) = x(1-x)/2 (continuous across wraps): (j/W)Sum psi = orient*[F(x_s)-F(x_e)]
++ rho_seg, |rho_seg| <= 2j/W. Per-segment cost becomes min(j du/2, 1/4, |dF|) at +2j-to-C2 per
+dF-segment. NUMBERS: Xi 6.246->2.853 (C1 14.49->7.71) but C2 3690->5846: W0 339->336 (shape 1);
+shape 2: 513->462. HONEST: the discretization inflation eats the C1 gain -- the per-line program
+(crude 1948 -> 452 -> 339 -> 336, cumulative 5.8x) has hit its balanced floor, as S276 predicted.
+
+THE STRUCTURAL YIELD (the session's real result): along closed boundary loops the segments CHAIN --
+same-orientation vertices (r=0 swaps) cancel F-terms EXACTLY; only birth/death events (r=+-1/7)
+survive at +-2F(x*). Measured: Xi_signed = |Sum orient*dF| = 0.0561 (shape 1) / 0.1786 (shape 2) --
+~50x below Xi. Near-total cross-segment cancellation EXISTS arrangement-side; harvesting it would
+give C1 ~ 2.1 (floor W ~ 28). The blocker is now LOCALIZED AND MEASURED: the per-segment residuals
+rho_seg (short Dedekind-type sums, exact, enumerable) do not telescope; bounding their SIGNED total
+= a joint cross-line equidistribution estimate = the Q_s class. The covering side hands density a
+CONCRETE object: finitely many short sums, known slopes/heights, measured target 0.056 vs naive 2.85.
+
+FILES: THM-744 canon; HYP-6585 (claim renumbered past klein-S295's 6580); script + out. -> klein
+(THE hand-off: rho-residual signed sums = your Q_s/Farey territory with a 50x measured prize),
+kps (W0 336/462 final at the per-line level; the whole S275-277 chain is exact-rational, Lean-able),
+mac-mini (loop-telescoping = the boundary of R as a closed curve -- your metagraph instinct applies:
+the arrangement is a planar graph and the cancellation is its cycle space at work).
+
+---
 ## mac-mini-2026-07-13-S92 -- FOUND the global object that breaks arc-transitivity: the danger circle Z/14=Z/2xZ/7, where complement FACTORS into the Atkin-Lehner V_4
 
 **Owner request:** find the global object that breaks arc-transitivity (the S91 obstruction).

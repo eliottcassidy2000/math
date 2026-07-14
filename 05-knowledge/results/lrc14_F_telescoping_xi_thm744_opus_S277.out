@@ -1,0 +1,37 @@
+========================================================================================================
+THM-744: F-telescoping refinement of Xi (exact segment-end heights).  F(x) = x(1-x)/2
+========================================================================================================
+
+shape 1 {1}u{W..W+11}:  Area = 0.074964 ;  172 segments
+   Xi: old = 6.2460  ->  new = 2.8531   (172 segments use the dF form; C2 inflation +2156)
+   Xi_SIGNED (loop-telescoped diagnostic) = 0.0561   <- the cross-line-cancellation target
+   C1: 14.49 -> 7.71 ;  C2: 3690 -> 5846
+        W     |L-Area|      new bound       ok
+       10     0.005649      59.230615     True
+       20     0.001139      15.000307     True
+       30     0.000705       6.752427     True
+       50     0.000271       2.492523     True
+       90     0.000081       0.807352     True
+      150     0.000014       0.311197     True
+      250     0.000127       0.124361     True
+      400     0.000024       0.055803     True
+      800     0.000083       0.018767     True
+   NEW W0 = 336  (THM-743: 339)   violations: 0
+
+shape 2 {1,2,3}u{W..W+9}:  Area = 0.044817 ;  154 segments
+   Xi: old = 5.5694  ->  new = 2.4903   (154 segments use the dF form; C2 inflation +1584)
+   Xi_SIGNED (loop-telescoped diagnostic) = 0.1786   <- the cross-line-cancellation target
+   C1: 19.14 -> 12.98 ;  C2: 1971 -> 3555
+        W     |L-Area|      new bound       ok
+       10     0.025410      36.848062     True
+       20     0.008334       9.536531     True
+       30     0.001923       4.382687     True
+       50     0.004163       1.681612     True
+       90     0.000765       0.583118     True
+      150     0.000191       0.244537     True
+      250     0.000532       0.108802     True
+      400     0.000084       0.054670     True
+      800     0.000103       0.021780     True
+   NEW W0 = 462  (THM-743: 513)   violations: 0
+
+done.
