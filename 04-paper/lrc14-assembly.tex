@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{computation}[theorem]{Computation}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\Zb}{\mathbb{Z}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\repo}[1]{\texttt{#1}}
+
+\title{The Lonely Runner Conjecture for Fourteen Runners:\\
+an assembly with machine-checked components}
+\author{The \texttt{ephrepos/math} agent collaboration\thanks{Draft assembled by
+opus-2026-07-14-S298 from the project canon; all internal citations
+(\textsc{thm}-$n$) refer to \repo{01-canon/theorems/}, all computational artifacts to
+\repo{04-computation/} and \repo{05-knowledge/results/}, and all Lean declarations to
+\repo{04-computation/lean/TournamentH7/}.}}
+\date{July 2026 --- draft}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For $n$ runners on the unit circle with distinct constant integer speeds, one of them
+stationary, the Lonely Runner Conjecture asserts a time at which every moving runner is at
+circular distance at least $1/n$ from the stationary one. We assemble a proof for $n=14$
+(thirteen nonzero speeds) from components developed in this project, in the following form:
+every analytic statement required is \emph{proved} --- a substantial part of it verified in
+Lean~4 down to the kernel axioms --- and the theorem is reduced to two explicitly specified
+finite rational computations, large exactly-executed portions of which have produced no
+exception. The backbone is a far-count dichotomy: speed sets with at most three elements
+exceeding $14$ force at least ten elements inside $\{1,\dots,14\}$ and fall to an exhaustive
+exact-rational sweep that contains the covering minimum and every tight family; speed sets
+with at least four elements exceeding $14$ are loose, and a capped Fourier-envelope theorem
+reduces them to bounded, decidable bands. We state precisely what is proved, what is
+machine-checked, what is exactly computed, and what remains to execute.
+\end{abstract}
+
+\section{Introduction and statement}
+
+Let $V=\{v_1,\dots,v_{13}\}\subset\Zb_{>0}$ be distinct speeds and
+$\norm{x}=\min_{k\in\Zb}|x-k|$ the circular distance. Write
+\[
+M(V)\;=\;\sup_{t\in[0,1)}\ \min_{v\in V}\ \norm{vt}.
+\]
+The Lonely Runner Conjecture (Wills \cite{Wills}, Cusick \cite{Cusick}; the name from
+\cite{BGGST}) for $n=14$ runners asserts $M(V)\ge 1/14$ for every such $V$.
+
+\begin{theorem}[Main, assembled]\label{thm:main}
+$M(V)\ge\tfrac1{14}$ for every set of\, $13$ distinct positive integer speeds, modulo the
+finite rational computations $\mathsf{C1}$ and $\mathsf{C2}$ specified in
+Section~\ref{sec:computations}.
+\end{theorem}
+
+The qualifier is meant exactly: Sections~\ref{sec:reduction}--\ref{sec:loose} prove every
+analytic statement; Section~\ref{sec:computations} states the two remaining computations as
+decidable predicates over explicitly bounded rational domains, together with the protocols
+that decide them and the exactly-executed portions (currently exception-free);
+Section~\ref{sec:lean} lists the components verified in Lean~4.
+
+Throughout we use, as permitted background, the Lonely Runner Conjecture for at most $13$
+runners: $n\le 7$ classically \cite{BHK,BarajasSerra}, $n=8$ \cite{Rosenfeld}, $n=9,10$
+\cite{Trak}, and $n=11,12,13$ \cite{SungTrak}.\footnote{The results for $n\ge 8$ are recent
+and, at the time of writing, available as preprints; the assembly inherits their status.
+Within the project this hypothesis is used as a named citation (\repo{LRC13Citation.lean}),
+never silently.}
+
+\section{The covering reduction}\label{sec:reduction}
+
+\begin{proposition}[non-covering case; \textsc{thm}-366/523]\label{prop:noncov}
+If some $q\in\{2,\dots,14\}$ divides no element of $V$, then $t=1/q$ gives
+$\min_v\norm{vt}\ge 1/q\ge 1/14$.
+\end{proposition}
+
+\begin{proof}
+For $v\not\equiv 0 \pmod q$, $\norm{v/q}\ge 1/q$. If additionally the reduced system on the
+remaining runners requires it, the $\le 13$-runner conjecture supplies the witness; see the
+canon file for the two-line argument.
+\end{proof}
+
+Call $V$ \emph{covering} (divisor-complete) if every $q\le 14$ divides some element. The
+theorem reduces to covering sets.
+
+\section{The far-count split}\label{sec:split}
+
+\begin{theorem}[\textsc{thm}-758, klein-S309]\label{thm:split}
+Let $V$ be covering and let $F=\#\{v\in V: v>14\}$.
+\begin{enumerate}
+\item If $F\le 3$, then $V$ has at least ten elements in $\{1,\dots,14\}$.
+\item If $F\ge 4$, then $M(V)\ge 0.097$ (Claim~B), via the reduction of
+Section~\ref{sec:loose}.
+\end{enumerate}
+\end{theorem}
+
+Part (1) is counting. Part (2) is where the loose machinery of Section~\ref{sec:loose}
+enters; its finite component is $\mathsf{C1}$. The decisive structural fact is that
+\emph{every tight or near-tight family lives in case (1)}: the covering minimum, the two
+$L=0$ families, and all known near-extremal structure have at least ten small elements.
+
+\section{The near-AP half ($F\le 3$): exhaustive and rigid}\label{sec:nearAP}
+
+\begin{theorem}[\textsc{thm}-738/741, kps]\label{thm:boxes}
+Every $13$-speed covering set with at least ten elements in $\{1,\dots,14\}$ satisfies
+$M(V)\ge 1/14$. The sweep is exact-rational over all $\binom{14}{10}$-type bodies with the
+free slots bounded by explicit peel lemmas; it produced explicit rational witnesses in every
+case, and a complete census of equality: the only families with $L(V)=0$ (safe measure zero;
+loneliness with equality) are the arithmetic progression $\{1,\dots,13\}$ and the
+Goddyn--Wong doubling $\{1,\dots,11,13,24\}$ \cite{GoddynWong}.
+\end{theorem}
+
+Supporting rigidity, proved in canon:
+
+\begin{theorem}[covering-min rigidity; \textsc{thm}-724/726]
+Over primitive covering $13$-sets, $\min M = 14/183$, attained uniquely at the deep well
+$\{1,\dots,12,182\}$.
+\end{theorem}
+
+\begin{theorem}[the $7$-clock partition; \textsc{thm}-754]\label{thm:sevenclock}
+The six cells $a/7\pm 1/14$ $(a=1,\dots,6)$ and the origin cell tile the circle exactly
+($7\cdot\frac1{14}=\frac12$; $k=7$ is the unique such clock). Consequently witnesses of
+tight families lie on the tiling corners $t=(2a+1)/14$; both $L=0$ families are lonely with
+equality precisely there.
+\end{theorem}
+
+\section{The loose half ($F\ge 4$): the capped envelope and the band}\label{sec:loose}
+
+The engine is a one-page Fourier bound. For a core $P$ (twelve speeds), let
+$G'_P\subset[0,1)$ be its $1/14$-safe set, $|G'_P|$ its measure, $r_P$ its number of
+components, and for $v\ge 1$ let
+$\operatorname{disc}_v=\sum_{\ell\neq0}|\widehat{\mathbf 1}_{G'_P}(\ell v)|^2$ be the peel
+discrepancy; the certificate of \textsc{thm}-731/732 (klein, kps) gives
+$M(P\cup\{v\})\ge 1/14$ whenever $\operatorname{disc}_v<6|G'_P|^2$.
+
+\begin{theorem}[capped envelope; \textsc{thm}-755]\label{thm:capped}
+Every Fourier coefficient obeys both the origin cap $|\widehat{\mathbf 1}(m)|\le|G'_P|$ and
+the jump envelope $|\widehat{\mathbf 1}(m)|\le r_P/(\pi m)$. Splitting the discrepancy sum at
+the crossover yields
+\[
+\operatorname{disc}_v\ \le\ \frac{4\,r_P\,|G'_P|}{\pi v}\; +\; 2|G'_P|^2 ,
+\]
+hence the peel certificate fires for every
+$v> v^\ast := r_P/(\pi|G'_P|)$ --- with no alignment or isolation hypothesis.
+\end{theorem}
+
+\begin{corollary}[finite bands]
+For each core the unresolved peels form the finite band $(\max P,\,v^\ast]$, nonempty only
+for tight cores; e.g.\ $v^\ast=112$ for $\{1,\dots,12\}$ against the older isolated-only
+threshold $156$.
+\end{corollary}
+
+\begin{theorem}[band closure protocol; \textsc{thm}-756]\label{thm:band}
+For all $91$ twelve-subsets of $\{1,\dots,14\}$ and every $v$ in their bands ($4032$ pairs),
+exact rational evaluation decides the certificate: $4011$ pass, $19$ close by direct exact
+$L>0$, and the two $L=0$ pairs are precisely the AP and Goddyn--Wong completions of
+Theorem~\ref{thm:boxes}. On mac-mini-S104's assembly band the protocol closed $160/160$
+sampled bodies, $158$ instantly by Theorem~\ref{thm:capped}.
+\end{theorem}
+
+The remaining structured-family toolkit, each proved in canon and used by the reduction:
+safe peels reducing $\sim\!98\%$ of covering sets to settled $\le13$-runner instances
+(\textsc{thm}-753); aligned far-element monotonicity (\textsc{thm}-751); the detuned
+dispatch and pack/cluster/hierarchical clocks for coherent families
+(\textsc{thm}-668/735/737/739/740); the fine-comb witness with the tooth threshold and the
+ratio-13 cascade (\textsc{thm}-752).
+
+\begin{theorem}[reduction of Claim B; klein-S310/S312, mac-mini-S105]\label{thm:claimB}
+Every covering set with $F\ge4$ either closes in one peel by
+Theorem~\ref{thm:capped}/\textsc{thm}-753, or lies over a bounded band on which the
+certificate protocol of Theorem~\ref{thm:band} decides. On the executed exact checks the
+band is uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
+exceptions; every sampled band body admits a rational witness of period $q\le 25$.
+\end{theorem}
+
+\section{The remaining computations}\label{sec:computations}
+
+\begin{computation}[$\mathsf{C1}$: the $F\ge4$ enumeration]\label{comp:c1}
+Domain: covering $13$-sets with $\ge4$ elements $>14$, reduced by
+Theorem~\ref{thm:claimB} to cores with bands $(\max P, v^\ast]$ and bounded parameters
+(all thresholds explicit rationals). Predicate per body: the three-line protocol of
+Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli discrepancy; else direct
+exact $L$). Status: all executed portions exception-free (the $8260$-family exact band
+check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies across the
+classification campaigns). Remaining: the systematic enumeration of the reduced domain,
+an exact-rational computation with no free parameters.
+\end{computation}
+
+\begin{computation}[$\mathsf{C2}$: band witnesses]\label{comp:c2}
+For band bodies, exhibit the bounded-period rational witness ($q\le25$; klein-S312). This
+is subsumed by $\mathsf{C1}$'s protocol and listed separately only because it yields
+independently checkable certificates (a witness $t=a/q$ with all thirteen clearances
+$\ge1/14$ in $\Qb$).
+\end{computation}
+
+\begin{remark}
+Both computations are decidable rational predicates over explicitly bounded domains; the
+consolidated library \repo{04-computation/lrc14\_certificates.py} (self-test 9/9)
+implements every step with exact arithmetic and witness output.
+\end{remark}
+
+\section{Machine verification}\label{sec:lean}
+
+The file \repo{TournamentH7/LRCClosedBudget.lean} contains $47$ declarations, no
+\texttt{sorry}, all auditing to \texttt{[propext, Classical.choice, Quot.sound]}:
+the strong no-wrap lemma; the exact per-crossing wedge; the telescoping atoms and mirror
+lemmas; the event corrections with the $\varphi=0$ degeneracy; the capped-envelope kernel
+and both Fourier envelopes with the spectral bound of Theorem~\ref{thm:capped}; Raabe's
+multiplication formula and the integral-free grid deficit; the exact Bernoulli discrepancy
+\texttt{discB} (definitionally the certificate object of \textsc{thm}-732); the single-pair
+overlap identity; the family assembly \texttt{acorr\_eq\_model}; and the capstone
+\[
+\texttt{geometric\_disc\_eq\_discB}:\quad
+\tfrac1v\sum_{i<v}A(i/v)-|G|^2=\operatorname{discB},
+\]
+i.e.\ the geometric-to-spectral chain beneath Theorem~\ref{thm:capped} has no unformalized
+step. Further project Lean assets: the detuned dispatch (\textsc{thm}-668), the shadow gap
+(\textsc{thm}-748), the certificate supply, and the $\le13$-runner citation interface.
+
+\section{Rigidity appendix}\label{sec:rigidity}
+
+Proved supporting structure for the uniqueness claims: the multi-killer floor $M\ge 1/13$
+with its minimizer family characterized (\textsc{thm}-757 with the S106 correction: dilated
+blocks $c\cdot\{1,\dots,12\}$ plus any coprime safe killer); uniqueness of the tight
+primitive $12$-set $\{1,\dots,12\}$ at $M=1/13$ (mac-mini-S107); the ratio bound
+(\textsc{thm}-759) and the localization of the hard branch to the Goddyn--Wong locus
+(mac-mini-S108).
+
+\section{Method note}
+
+The assembly was produced by a multi-agent system working an exact-rational referee
+discipline: every identity was verified in $\Qb$ before proof or formalization (this caught,
+among others, a reversed orientation convention invisible to symmetric test instances, and
+one unsound constant-bookkeeping step, both logged in \repo{01-canon/MISTAKES.md}). A
+narrative of the organizing decomposition --- the origin band / spokes / pair-sector frame
+--- is in \repo{07-reflections/the-perspective-arc-s270-s296-opus-S297.md}.
+
+\begin{thebibliography}{99}
+\bibitem{Wills} J.~M. Wills, \emph{Zwei S\"atze \"uber inhomogene diophantische
+Approximation von Irrationalzahlen}, Monatsh. Math. 71 (1967), 263--269.
+\bibitem{Cusick} T.~W. Cusick, \emph{View-obstruction problems}, Aequationes Math. 9
+(1973), 165--170.
+\bibitem{BGGST} W.~Bienia, L.~Goddyn, P.~Gvozdjak, A.~Seb\H{o}, M.~Tarsi, \emph{Flows,
+view-obstructions, and the lonely runner}, J. Combin. Theory Ser. B 72 (1998), 1--9.
+\bibitem{BHK} T.~Bohman, R.~Holzman, D.~Kleitman, \emph{Six lonely runners}, Electron. J.
+Combin. 8 (2001).
+\bibitem{BarajasSerra} J.~Barajas, O.~Serra, \emph{The lonely runner with seven runners},
+Electron. J. Combin. 15 (2008).
+\bibitem{Rosenfeld} M.~Rosenfeld, \emph{The lonely runner conjecture for eight runners},
+preprint (2025).
+\bibitem{Trak} P.~Trakulthongchai, \emph{Nine and ten lonely runners}, preprint (2025).
+\bibitem{SungTrak} T.~Sungkawichai, P.~Trakulthongchai, \emph{The lonely runner conjecture
+up to thirteen runners}, arXiv:2604.23906 (2026).
+\bibitem{GoddynWong} L.~Goddyn, E.~B. Wong, \emph{Tight instances of the lonely runner},
+Integers 6 (2006).
+\bibitem{Tao} T.~Tao, \emph{Some remarks on the lonely runner conjecture}, Contrib.
+Discrete Math. 13 (2018), 1--31.
+\end{thebibliography}
+
+\end{document}

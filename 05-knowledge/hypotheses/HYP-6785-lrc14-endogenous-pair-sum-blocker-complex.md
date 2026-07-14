@@ -146,11 +146,10 @@ THM-760.
    complex.
 
 The q<=25 arm is now being audited for uniformity by
-05-knowledge/hypotheses/HYP-6810-q25-and-n12-uniformity-audit.md
-(codex-2026-07-14-S3).  Its output should attach good-period certificates to
-normalized blocker states.  The file's HYP-6810 identifier collides with
-opus-S298's earlier assembly-paper reservation, so use the path/session
-identity until that claim is renumbered.
+05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md
+(codex-2026-07-14-S3; renumbered from HYP-6810 by opus-S299 after the
+collision with opus-S298's earlier assembly-paper reservation).  Its output
+should attach good-period certificates to normalized blocker states.
 
 The full ranked backlog and historical guardrails are in
 00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md.

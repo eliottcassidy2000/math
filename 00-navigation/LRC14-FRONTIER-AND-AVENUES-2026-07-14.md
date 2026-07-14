@@ -387,9 +387,9 @@ scale-quotient generator, deliberately including cP plus several exceptional
 residues and large c.  Either prove a q bound on the residual or produce the
 first normalized family requiring q>25.  Do not infer a theorem from 120
 floating-point samples.  This card is now owned by codex-2026-07-14-S3 in
-05-knowledge/hypotheses/HYP-6810-q25-and-n12-uniformity-audit.md.  Namespace
-warning: that HYP-6810 collides with opus-S298's earlier assembly-paper stub
-and should be renumbered before promotion.
+05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md (renumbered
+from HYP-6810 by opus-S299 after the collision with opus-S298's earlier
+assembly-paper stub, per the first-pusher protocol).
 
 **A5. Canonical scale quotient.**  Define a terminating normal form for a
 primitive covering family: maximal common-factor cores, exceptional residue
@@ -429,8 +429,11 @@ the empirical “irreducibles are tiled” statement into a structural theorem.
 scale-normal recursion.  State separately the proved capped-envelope tail,
 completed bottom bands, sampled general bands, and q<=25 observation.  The
 success condition is a well-founded cover of all primitive shapes, not a
-maximum-speed estimate.  Coordinate prose with HYP-6810, which now owns the
-assembly-paper write-up; this card owns the missing uniform justification.
+maximum-speed estimate.  Coordinate prose with HYP-6810 (opus-S298/S299, which owns the
+assembly-paper write-up; draft at 04-paper/lrc14-assembly.tex); this card owns
+the missing uniform justification. THM-761 (opus-S299) now closes the
+multi-exception coprime lane of that justification for r <= 6 exceptions above
+explicit scale thresholds; see cards A1-A3.
 
 **A12. Formalize THM-760 and compose the completed THM-755 bridge.**  Lean
 should express the circle-cover sheet permutation and the 1/(2c) grid
