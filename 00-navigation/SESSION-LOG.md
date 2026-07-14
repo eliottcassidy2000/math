@@ -10,6 +10,26 @@ SIGNIFICANCE: LRC(<=13) discharges the BULK (~98%) of the covering case via safe
 
 Handoffs: klein (THM-753 makes LRC(<=13) the dominant reducer in the HYP-6660 tiling), kps (near-AP tile covers the irreducible-near-AP), opus (irreducible-loose is your floor). Files: THM-753; 04-computation/lrc14_{flexible_peel,full_recursion_test,irreducible_residual,lowM_irreducible_search}_macmini_S103.py (+outs).
 
+## klein-2026-07-14-S306 -- MERGED THM-751 + the far-peel into THM-753, the covering-closure ONE-STEP peel. Peel v=max(S) off a 12-core with M(P)≥1/13 FREE (LRC13); clean=THM-751 / unsafe=disc / base=kps THM-738. PROVED modulo ONE hypothesis (moderate-v disc = opus's finite mod-360360 residual). LRC(14) covering case is now one theorem.
+
+Prompt (owner): merge the far-peel with mac-mini's THM-751 into one covering-closure theorem. DONE — THM-753.
+
+THE KEY SIMPLIFICATION: it's a ONE-STEP peel, not a recursion. Peel v=max(S); P=S\{v} is 12 speeds, so M(P)≥1/13 is FREE (LRC(13) SETTLED) ⟹ |G'_P|>0. Then M(S)≥1/14 by exactly one of:
+ (1) BASE v≤14: S⊆{1..14}, kps THM-738 (≥10-in-{1..14}) — PROVED.
+ (2) CLEAN v>14 aligned to P's tight point t₀ (vt₀∈ℤ) AND v≥13·max(P): THM-751 ⟹ M(S)≥(1/13)·v/(v+maxP)≥1/14 — PROVED (explicit witness t₀+M(P)/(maxP+v)).
+ (3) UNSAFE else: THM-731 L(S)=(6/7)|G'_P|−ε_v>0 iff disc_v<6|G'_P|² — PROVED via crude THM-732 (r<3√2 v|G'_P|) for ISOLATED v (S289).
+
+THE MERGE IS EXACT: THM-751 = the COMBINATORIAL witness (t=t₀+s, one balance point; sharp when the far element is ALIGNED — its danger tooth pins to the core's tight point and only narrows). THM-731 = the MEASURE witness (good set survives the far element's thin arcs; sharp when v is LARGE — fine grid ⟹ small disc). Same peel, opposite sides. = mac-mini-S102's clean/unsafe recursion, stated as ONE closure with LRC(13) supplying the core floor for free, so NO recursion is needed.
+
+SOLE OPEN HYPOTHESIS (H): disc_v<6|G'_P|² for a MODERATE non-aligned far element (14<v comparable to max P, vt₀∉ℤ). Verified 50–1000× margins (S305: 0 stalls/15 adversarial incl {1..13\6,182} M=2/23); exact-ℚ per family (THM-732 Bernoulli); opus-S286 reduces (H) to a FINITE mod-360360 residue classification (occupancy-rigidity ⟹ complete-residue-system/AP surjectivity cuts) + conjectures a k≤13 shadow always exists there (two zero-hunts as evidence).
+
+NET: LRC(14) covering case = THM-753 (PROVED skeleton: LRC13 + THM-751 + isolated-disc + THM-738 + trivial) MODULO the single hypothesis (H). Combined with non-covering (THM-523=LRC≤13), LRC(14) is one analytic inequality atop a fully-proved finite structure.
+
+HANDOFFS: @mac-mini — THM-753 is your clean/unsafe recursion + my disc, merged; your THM-751 is branch (2); please sanity-check the merge. @opus — (H) IS your S286 finite mod-360360 residual; discharging your conjecture closes THM-753 entirely. @kps — THM-753 base = your THM-738; the whole closure is now decide-shaped (LRC13 citation + THM-751 witness + finite disc/base checks) — a Lean target.
+
+FILES: HYP-6690; THM-753 (the merged closure theorem); LRC14-TRIANGULATION-2026-07-14.md (S306 block). -> THM-751/731/732/738, opus-S286, mac-mini-S102, HYP-6680. Sent to all.
+
+---
 ## opus-2026-07-14-S286 -- the binding low-M equidistribution attacked via SLOT OCCUPANCY (speeds x clocks = the perspective grid): TWO ZEROES (60k adversarial hunt + 40x25 constructive blocking: NO covering body with all k<=13 shadows dead outside the loose stratum) + the OCCUPANCY-RIGIDITY LEMMA (blocking-complete forces a complete residue system mod 13 -- pigeonhole-exact -- and CRT near-completeness: AP-rigidity) => (A)'s shadow residual = a FINITE classification mod 360360 with surjectivity cuts
 
 Prompt (owner): attack the binding low-M equidistribution with the perspective frame.
