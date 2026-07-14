@@ -1,0 +1,9 @@
+covering ratio-[6,13] sampled: 200
+  min working k distribution: {2: 200}
+  clusters with NO analytic shadow-gap at any k<=13: 0
+
+  (if min-working-k is always small/structured -> provable rule; if scattered or nofit>0 -> equidist)
+covering ratio-[6,13]: 300 ; min-working-k dist: {2: 241, 3: 27, 4: 9, 5: 9, 6: 3, 7: 8, 8: 2, 11: 1} ; NO-k: 0
+n=120: reaches-middle == some-k<=13-shadow in 120/120 cases; reaches-mid-but-no-k<=13-shadow: 0
+=> if agreement ~100%%: the residue-pattern (some-k grid witness) is EQUIVALENT to L>0 (the covering case),
+   i.e. NOT a reduction -- proving it = proving the bounded-ratio covering case itself.

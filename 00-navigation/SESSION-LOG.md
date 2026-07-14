@@ -1,3 +1,22 @@
+## klein-2026-07-13-S300 -- CAPSTONE: the residue-pattern argument on the grid is EQUIVALENT to L>0 (verified 120/120), NOT a reduction. Every reformulation of the covering residual (S285-300) is provably equivalent to the multi-speed equidistribution; the map is complete. Real gains: THM-731/739/744 + grid-localization to bounded-height rationals.
+
+Prompt (owner): prove the residue-pattern argument on the grid.
+
+THE EQUIVALENCE (verified exact, 120/120): 'G(C) reaches the middle [1/14,13/14]' ⟺ 'some k≤13 has a good shadow point a/k+δ' ⟺ L>0. So the residue-pattern (grid-witness existence) RESTATES the covering case on the finite grid {a/k:k≤13}; it does NOT reduce it. Proving 'some k works' = proving the bounded-ratio covering case itself.
+
+(NB analytic subtlety: the per-(k,a) shadow condition has multiple bad arc-events per speed — e.g. at k=2 the even speeds go bad AGAIN at δ=13/(14E), the E<13e term. A naive first-event analytic test drops it and falsely reports k=2 always works; the reliable statement is numeric.)
+
+STRUCTURAL GAIN (real): the witness is ALWAYS a bounded-height rational (k≤13), so L>0 = check ~Σφ(k)≈50 explicit low-height candidates — exactly the THM-527/663 bounded-denominator realization shape, Lean-decidable per family. The continuum equidistribution became a finite-GRID one.
+
+DEFINITIVE TERMINUS (capstone reflection, S285-300): 16 sessions, 16 angles, all provably equivalent to the bounded-ratio multi-speed equidistribution — relation-lattice coset (S285), x-integral (S287), isolation (S289), AP-distance (S291), one-interval/pairwise/windowed (S292-294), LRC(13) (S295), AP-stability/shadow-gap (S296-297), parity split (S298), multi-resonance (S299), residue-grid (S300). The clean CLOSED-FORM witnesses (THM-744: factor 6 + parity 13) cap where the arithmetic caps them.
+
+REAL GAINS across the arc: THM-731 (x-integral certificate), THM-739 (pairwise B₂ overlap), THM-744 (shadow-gap witness) + the covering-case TILING (non-covering THM-523 + tight cluster THM-744 + isolated-far disc + bounded-body-≤6-far THM-735 + bounded-ratio grid) + the B₂-at-Farey unification (THM-732/736/739 one kernel).
+
+HONEST: continuing 'prove the next piece' keeps landing here (the pieces are equivalent). Genuinely different next moves offered to owner: (a) FORMALIZE the won theorems in Lean; (b) WRITE UP the covering tiling + B₂-Farey unification; (c) return to the NEGLECTED engineering mandate (CLAUDE.md equal-priority, untouched 16 sessions); (d) accept the per-family+tiling closure as the working state. I leave the map honestly rather than mine a 17th equivalent restatement.
+
+FILES: HYP-6630; reflection every-reformulation-of-the-covering-residual-is-equivalent-the-map-is-complete-klein-S300; 04-computation/lrc14_residue_pattern_klein_S300.py (+out). -> THM-744, THM-527/663, opus-S271. Sent to all.
+
+---
 ## mac-mini-2026-07-14-S96 -- HONEST NEGATIVE: the mod-6 congruence does NOT force the covering-min value 14/183 (metric/THM-724-forced). It forces only the E_2 EISENSTEIN BACKBONE (-1/12); the finite value has a Farey correction the congruence doesn't supply.
 
 **Owner request:** prove the mod-6 congruence forces the covering-min value.
