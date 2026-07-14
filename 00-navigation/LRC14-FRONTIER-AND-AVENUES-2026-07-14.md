@@ -235,7 +235,8 @@ certificates.
 | Capped envelope | measure cap plus jump envelope | per-core tail with explicit v* | global raw compactness | far-element peel |
 | Scale sheets | fibers t=(t0+k)/c | whole core margin exactly | endpoint labels across several exceptions | THM-760 and next extension |
 | Affine-slope suspension | V(c)=cP+R as slope-c fibers of a two-torus function | scale, offsets, and exact fiber nonemptiness | finite classification without a descent | HYP-6815 chart for multi-exception rays |
-| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-776; peel-relative splice |
+| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-779; peel-relative splice |
+| Safe-mass shape floor | `|G'_P|` on primitive normalized cores | normalized `rho` through `r_P<=sum(P)` | global positivity from bounded census | THM-777; exact through `maxP<=18`, global floor open |
 | Tropical/normal fan | active minima and wall cells | combinatorial type of optimum | metric clearance | finite chamber stratification |
 | Matroid/circuit | minimal dependent proof obligations | irreducible obstruction support | phase and margin | candidate blocker-pressure abstraction |
 | Tournament analysis | pairwise quotient of chosen objects | dominance fingerprints | higher-order intersections | diagnostics and route comparison |
@@ -310,17 +311,25 @@ The exactly-`f=4` family
 It has no divisor packet of size seven, but the top-peeled core's component
 count is unbounded because the `N`-runner inserts new teeth into a fixed safe
 interval. Thus common scale and transverse frequency are independent
-noncompact directions in the same four-far chart. THM-776 closes the entire
+noncompact directions in the same four-far chart. THM-779 closes the entire
 prime family by the capped peel, whose ratio normalizes component count against the named
 peel; `c*` alone cannot support the automaton quotient.
 
-THM-777 extracts the general mechanism at the state level. If the old good set
+THM-780 extracts the general mechanism at the state level. If the old good set
 has mass `mu` and `r_B` components, a new frequency `N` leaves mass at least
 `6mu/7-2r_B/(7N)` and creates at most `N+r_B` components. A proportional peel
 `aN` is therefore eventually terminal under an explicit rational inequality.
-One marked interval gives the simpler `L,sum(B)` corollary used by THM-776. The
+One marked interval gives the simpler `L,sum(B)` corollary used by THM-779. The
 genuinely open transverse face must include collapsing safe mass relative to
 component and peel rates.
+
+THM-777 then isolates the global compactness question. The elementary bridge
+`rho(P)<=12/(pi|G'_P|)` makes a positive safe-mass floor sufficient for a
+bounded normalized band. The candidate floor `7/858` is exact and unique only
+through `max(P)<=18`; the tested scale rays, tooth insertions, and hill descent
+do not decay, but this is evidence rather than a global theorem. The next state
+transition must either prove the floor or recognize and descend every
+safe-mass-decay face.
 
 The incoming exact endpoint-sidecar audit independently confirms the payload
 rule.  Runner and unweighted endpoint tournaments do not preserve covering,
@@ -474,7 +483,9 @@ attach HYP-6785 blocker edges and the audited divisor/cap/endpoint/peak
 sidecars, and retain peel-relative fragmentation. Prove that each fiber either
 has a threshold point or descends to a smaller normalized state. Guardrail:
 the exact suspension and cap-normalized state are representations until a
-finite or well-founded classification is proved.
+finite or well-founded classification is proved. THM-777 reduces boundedness of
+the ratio coordinate to a uniform safe-mass floor; its `maxP<=18` census is a
+base stratum, not the required global step.
 
 ### Priority B — structural inverse theorems
 

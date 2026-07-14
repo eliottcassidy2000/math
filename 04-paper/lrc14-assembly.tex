@@ -210,14 +210,20 @@ protocol of Theorem~\ref{thm:band} decides. The proposed argument for a global b
 bound from raw component count and maximal common-factor scale fails: for prime $N>110$,
 $\{1,\ldots,9,15,110,N,1092N\}$ is covering, primitive, exactly four-far, and has no
 seven-member divisor packet, while the component count of its top-peeled good set tends
-to infinity (\textsc{thm}-776; \textsc{hyp}-6830). The same theorem proves every member
+to infinity (\textsc{thm}-779; \textsc{hyp}-6830). The same theorem proves every member
 of this prime family is nevertheless closed by the capped peel. This does not refute a bounded
 peel-relative domain; it shows that any proof must retain normalized cap load and
-endpoint ownership. More generally, \textsc{thm}-777 proves that base good-set mass
+endpoint ownership. More generally, \textsc{thm}-780 proves that base good-set mass
 $\mu$ and component count $r$ obey $\mu_N\ge6\mu/7-2r/(7N)$ and
 $r_N\le N+r$ after a new frequency $N$; a fixed safe interval is a convenient
 corollary. Any sufficiently fast proportional peel is therefore eventually
-terminal at an explicit rational threshold. On the executed exact checks the
+terminal at an explicit rational threshold. In particular, for every fixed
+positive-mass base, $\liminf_N\mu_N\ge6\mu/7>0$; any safe-mass-decay sequence
+must vary its base or coordinate several scales. Finally, \textsc{thm}-777 proves
+$v^\ast(P)/\max(P)\le12/(\pi|G'_P|)$ and the unconditional tail
+$|G'_P|\ge1/(91\max(P))$. Its exact census gives the unique candidate minimum
+$7/858$ through $\max(P)\le18$, but the corresponding global safe-measure floor
+is conjectural. On the executed exact checks the
 bands are uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
 exceptions. A uniform bounded-period witness finish is \emph{refuted}: the family
 $26\cdot\{1,\dots,12\}\cup\{339\}$ has no rational witness of period $q\le25$ (first
@@ -238,7 +244,10 @@ protocol of Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli di
 else direct exact $L$). Status: all executed portions exception-free (the $8260$-family
 exact band check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies).
 Remaining: prove that the peel-relative state has a bounded atlas or a well-founded descent,
-then execute the resulting terminal leaves. This is the corrected splice of
+a task for which \textsc{thm}-777 isolates the first uniformity step: prove the
+global safe-measure floor or classify and descend every safe-mass-decay sequence.
+Even the floor would only bound the ratio coordinate; endpoint/residue classification
+would still be required before executing terminal leaves. This is the corrected splice of
 \textsc{hyp}-6830; it is analytic and currently open, not an unexecuted finite loop.
 \end{computation}
 

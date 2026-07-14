@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 """THM-777 experiment: the |G'| floor decision for regime 2 (opus-2026-07-14-S301).
 
-Decides, with exact rational arithmetic, whether the 1/14-safe measure |G'_P| of a
-12-core admits a positive floor over primitive shapes (regime 2's last lemma via
-rho = v*/maxP <= 12/(pi |G'|)), or decays along a family (killing the floor route).
+Tests, with exact rational arithmetic, whether the 1/14-safe measure |G'_P| of a
+12-core suggests a positive floor over primitive shapes (regime 2's last lemma via
+rho = v*/maxP <= 12/(pi |G'|)), or exhibits decay in the listed probes.
 
 PART 1  EXACT BOUNDED-HEIGHT CENSUS: min |G'| over ALL primitive 12-subsets of
         {1..H} for H = 16, 17, 18 — exact rational minima + minimizer shapes +
         bottom-5 table. (Dilation-invariance makes primitive shapes canonical.)
 PART 2  ADVERSARIAL FAMILIES (the MISTAKE-140/145 battery discipline):
-        (a) perturbed dilates {c,2c,...,11c,12c+1} and {c,...,11c,12c-1}, c to 40;
+        (a) perturbed dilates at the explicitly listed eight c-values through 40;
         (b) GW-dilate perturbations c*{1..11,13} with one element +-1;
-        (c) tooth insertions {1..10,12,N}, {1..11,N}, {2..12,N} for N to 2003;
+        (c) tooth insertions at the explicitly listed N-values through 2003;
         (d) two-block and compressed shapes (MISTAKE-141 near-dilate lineage).
-PART 3  HILL-DESCENT: minimize |G'| over primitive 12-sets, heights <= 2500,
-        moves = single-element replacement + local +-1 tweaks, multi-seed.
-PART 4  THE VERDICT + THE BRIDGE: the unconditional Lipschitz tail
+PART 3  HEURISTIC HILL-DESCENT: 500 proposed moves from each of five seeds,
+        with replacement proposals bounded by 2500. This is not exhaustive.
+PART 4  THE DIAGNOSTIC + THE BRIDGE: the unconditional Lipschitz tail
         |G'| >= 2(M(P)-1/14)/maxP >= 1/(91 maxP) (proved, LRC(13) floor); the
-        rho bridge rho <= 12/(pi |G'|); and floor-vs-decay conclusion with the
+        rho bridge rho <= 12/(pi |G'|); and a floor-vs-decay diagnostic with the
         conjectured asymptotic floor if the data supports one.
 """
 import sys, os, random
@@ -100,7 +100,7 @@ track("{1..11, 26}", list(range(1, 12)) + [26])
 
 print()
 print("=" * 92)
-print("PART 3 -- hill-descent minimization (primitive, heights <= 2500)")
+print("PART 3 -- heuristic hill descent (primitive proposals bounded by height 2500)")
 print("=" * 92)
 def descend(seed, steps=500, hmax=2500):
     cur = sorted(seed); curg = Gm(cur)
@@ -129,7 +129,7 @@ for sd in seeds:
 
 print()
 print("=" * 92)
-print("PART 4 -- verdict, the Lipschitz tail, and the rho bridge")
+print("PART 4 -- diagnostic, the Lipschitz tail, and the rho bridge")
 print("=" * 92)
 gmin, Pmin = best_overall
 print(f"  exact census floor (primitive, maxP <= 18): |G'| = {gmin} = {float(gmin):.6f} at {Pmin}")
@@ -139,8 +139,8 @@ overall = min(gmin, fam_min[0], desc_best[0])
 print(f"  OVERALL MIN OBSERVED:   {float(overall):.6f}")
 print()
 if desc_best[0] >= gmin * F(9, 10) and fam_min[0] >= gmin * F(9, 10):
-    print("  VERDICT: FLOOR -- no family or search moved below the bounded census minimum;")
-    print("  every adversarial scale ray converges to a constant >= the census floor.")
+    print("  VERDICT: FLOOR SIGNAL -- none of the explicitly listed finite probes moved")
+    print("  below the bounded census minimum; no convergence claim follows from this sample.")
 else:
     print("  VERDICT: DECAY CANDIDATE FOUND -- see minimizer above; the floor route dies.")
 print()

@@ -20,61 +20,52 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-776 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-779 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-776; MISTAKE-145).
-- **Terminal transverse face:** THM-777 generalizes the successful cap calculation. A base good-set
+  (THM-779; MISTAKE-145).
+- **Terminal transverse face:** THM-780 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-777's enclosure operator
+- **Recursive certificate pull:** Iterate THM-780's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
-  to four canonical certificates. Classify rows on which every certificate loses
-  positive mass; those are precisely where endpoint-owner correlations must
+  to four canonical certificates. Classify rows on which every certified mass
+  bound or cap test fails; those are precisely where endpoint-owner correlations must
   re-enter the state.
+- **Safe-mass compactness bridge:** THM-777 proves
+  `rho(P)<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 max(P))`. Its exhaustive primitive
+  census through `max(P)<=18` has unique minimum `7/858` at
+  `{1,...,13}\{6}`; the explicitly listed scale/tooth rows and five seeded
+  searches find no lower value. The global `7/858` floor is conjectural.
+  THM-780 rules out one high-frequency insertion over a fixed base as a decay
+  mechanism. Prove a uniform floor or classify and descend every varying-base
+  or correlated multiscale sequence with `|G'_P|->0`.
 - **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
-  `c*` alone; THM-776 refutes the proposed raw-component route to one.
+  `c*` alone; THM-779 refutes the proposed raw-component route to one, while
+  THM-777 identifies the missing safe-mass floor exactly and proves its bounded
+  base stratum without proving it globally.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-776/777; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-779/777/778; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
-- **S300/S5 CORRECTED UPDATE (r>=7 decks):**
-  (i) the unramified r=7 stratum is closed above
-  `max_a(w_a/gcd(w_a,c))>=7*max(P)` by THM-771's event pierce: counts are `c/7` off
-  events and drop by `g_a` on them; the event mesh is `g_a/w_a`, and the S299 wall
-  is pierced at a switching time. The promoted raw-`w` bound and KCL absorption law
-  are withdrawn (MISTAKE-146); the exact replacement is `F=Q+Omega-sigma`. (ii) the
-- **S300 UPDATE (owner directive: r>=7 decks + regime 2 via squaring-the-square/Smith/Kirchhoff):**
-  (i) the r=7 STRATUM IS CLOSED when `max(w/g) >= 7*max(P)` — THM-767's EVENT PIERCE (7g|c strata:
-  counts constant = c/7 off events; any event moment in the closed core-safe set frees a sheet;
-  the S299 wall instance pierced at all 203 core-safe event moments — the witness lives at the
-  SWITCHING TIMES, not the core optimum). The proposed KCL absorption inequality was
-  withdrawn (MISTAKE-146): strict-set handoffs instead prove that exact tilings are
-  chamber-locked, while the coincidence law only locates double-boundary events. (ii) the
-  complementarity item RESOLVED NEGATIVELY as phrased (MISTAKE-145; codex exact falsifier + my
-  census, same day): the surviving regime-2 invariant is peel-relative ρ = v*/maxP, measured
-  ≤ 9.335, extremal AT {1..12} (adversarial climb converges to it); one lemma remains (|G'|
-  floor off tight families, B5 lane). (iii) remaining program in HYP-6835: a joint
-  chamber census and ramification-surplus equality-packet classification, effective
-  s-threshold decks, r≥8 alignment residue (survivor realized), and Lean decide-targets.
-  Tooling: deck_event_witness() in the library (16/16).
-  Reflection: 07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
 - **S301/S9 floor update:** THM-777 proves the bridge
   `rho<=12/(pi|G'_P|)`, the unconditional but height-decaying floor
   `|G'_P|>=1/(91 maxP)`, and the exact bounded-shape minimum `7/858` for every
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
-  adversarial battery finds no decay, but the global shape floor remains a
-  conjecture.  Do not promote the proposed `rho<469` normalized atlas bound
-  outside strata where that floor is proved.
+  explicitly listed finite probes find no lower value, but the global shape
+  floor remains a conjecture. THM-780 separately proves that one high-frequency
+  insertion over a fixed positive-mass base cannot cause decay. Do not promote
+  the proposed `rho<469` ratio bound outside strata where the floor is proved,
+  or mistake that ratio bound for an endpoint/residue classification.
 - **S300/S5 corrected update (r>=7 decks and regime 2):** (i) The unramified
   `r=7` stratum is closed when `max_a(w_a/gcd(w_a,c))>=7*max(P)` by THM-771's
   reduced-winding event pierce. Owner counts are `c/7` off the endpoint coset and
@@ -83,8 +74,9 @@
   and the replacement identity is `F=Q+Omega-sigma`. (ii) The raw regime-2
   complementarity is refuted (MISTAKE-145); the surviving measured candidate is
   peel-relative `rho=v*/max(P)`, at most `9.335` on the stated bank and extremal
-  there at `{1,...,12}`. The missing theorem is a good-set-mass floor off classified
-  tight families. (iii) HYP-6835 retains ramification-surplus equality packets,
+  there at `{1,...,12}`. THM-777 proves the rho bridge, the Lipschitz tail, and
+  the candidate `7/858` floor through `max(P)<=18`; the global floor remains the
+  missing theorem. (iii) HYP-6835 retains ramification-surplus equality packets,
   effective threshold decks, `r>=8` alignment residue, and Lean decide targets.
   Tooling: `deck_event_witness()` in `lrc14_certificates.py` (16/16). Reflection:
   `07-reflections/the-deck-is-a-smith-diagram-opus-S300.md`.

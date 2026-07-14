@@ -1,14 +1,14 @@
 ---
-id: THM-777
+id: THM-780
 title: Good-set-state transverse-tooth cap lemma
 status: PROVED (elementary circle geometry plus THM-755)
 source: codex-2026-07-14-S2
 depends_on:
   - THM-755   # capped-envelope criterion
-related: [THM-752, THM-761, THM-766, THM-776, HYP-6815, HYP-6830]
+related: [THM-752, THM-761, THM-766, THM-779, THM-777, HYP-6815, HYP-6830]
 ---
 
-# THM-777 - Good-set-state transverse-tooth cap lemma
+# THM-780 - Good-set-state transverse-tooth cap lemma
 
 ## Statement
 
@@ -29,6 +29,15 @@ r_N  <= N+r_B.                           (2)
 
 This is the invariant-level form: the state `(|G'_B|,r_B)` controls a
 transverse frequency insertion without retaining every endpoint.
+In particular, if `mu>0`, then
+
+```text
+liminf_(N->infinity) mu_N >= 6mu/7 > 0.                         (2a)
+```
+
+Thus one high-frequency insertion over a fixed positive-mass base can never be
+a safe-mass-decay family. In the LRC14 use with `|B|=11`, settled lower-runner
+cases give `M(B)>=1/12>1/14`, hence `mu>0` by continuity.
 
 There is a useful marked-window form. If `G'_B` contains a connected closed
 circle interval `J` of length `L>0`, and `S=sum(B)`, then
@@ -181,7 +190,7 @@ is a finite proof calculus, not a finite classification of the chart: all four
 lower bounds may be nonpositive, and the compression deliberately forgets
 endpoint owners and correlations.
 
-## THM-776 specialization
+## THM-779 specialization
 
 For
 
@@ -195,7 +204,7 @@ the marked-window threshold (9) has exact crossing
 11734415/9278 < 1265.
 ```
 
-Thus THM-777 supplies the elementary infinite tail in THM-776. THM-776's
+Thus THM-780 supplies the elementary infinite tail in THM-779. THM-779's
 divisor-packet statement, fragmentation lower bound, and 176-prime finite base
 remain separate exact inputs.
 
@@ -242,8 +251,10 @@ metric incidence inequality.
 
 ## Scope
 
-THM-777 proves eventual closure only when positive safe mass persists and the
+THM-780 proves that positive safe mass persists under one high-frequency
+insertion over a fixed base, and proves eventual closure only when the
 peel rate is large enough relative to it. It does not give a uniform lower
 bound for `|G'_B|` over arbitrary cores, classify sublinear peels, or prove the
 global HYP-6830 splice. It makes the remaining obstruction more precise:
-simultaneous collapse of safe mass relative to component and peel rates.
+varying-base degeneration or iterated/multiscale insertion coupled to collapse
+of safe mass relative to component and peel rates.

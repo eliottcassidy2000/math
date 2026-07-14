@@ -84,9 +84,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | r = 7 unramified deck stratum (`7\mid c/g_a` for every owner) | PROVED above reduced-shape bound `max_a(w_a/g_a)>=7 max(P)`; the S299 wall is closed at a switching time | THM-771; corrected core of THM-767; MISTAKE-146 |
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
-| raw fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-776; HYP-6830 correction; MISTAKE-145 |
+| raw fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-779; HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
-| positive good-set state `(mu,r)` + frequency N + proportional peel aN | PROVED transition `mu_N>=6mu/7-2r/(7N)`, `r_N<=N+r`, hence eventually capped under an explicit rational threshold; one marked interval is a corollary | THM-778 (THM-776 is a full-family instance) |
+| positive good-set state `(mu,r)` + frequency N + proportional peel aN | PROVED transition `mu_N>=6mu/7-2r/(7N)`, `r_N<=N+r`, hence eventually capped under an explicit rational threshold; one marked interval is a corollary | THM-780 (THM-779 is a full-family instance) |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
@@ -119,10 +119,12 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    *Progress (S299/S300/S3/S2 audit): THM-761 proves the exact-budget `r<=6`
    sheet regime, and THM-771 closes the unramified `r=7` lane above its
    reduced-winding bound. The raw bound `r_P<=B(c*)` is false both generally and
-   in exactly `f=4` (THM-776). The open composition must retain peel-relative
+   in exactly `f=4` (THM-779). The open composition must retain peel-relative
    load `r_P/(v|G'_P|)`, divisor support, endpoint owners, and the remaining
-   deck-tiling residue. THM-777 proves the rho bridge and the candidate
-   `7/858` floor only through `maxP<=18`; its global floor is conjectural.*
+   deck-tiling residue. THM-780 rules out one high-frequency insertion over a
+   fixed positive-mass base as a decay mechanism. THM-777 proves the rho bridge
+   and the candidate `7/858` floor only through `maxP<=18`; its global floor is
+   conjectural and would bound only the ratio coordinate.*
 2. **Attack persistent translate covers with their metric stalks retained.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
    strict-danger set. In the tight `s=2` quotient, THM-772 now forces a

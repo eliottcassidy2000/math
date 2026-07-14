@@ -31,8 +31,9 @@ related:
   - THM-773   # proved prime-seven truth/transport carrier split
   - THM-774   # proved folded-diamond metric compression
   - THM-775   # CLAIMED dyadic deletion descent
-  - THM-776   # proved four-far transverse falsifier and capped family
-  - THM-777   # proved recursive good-set-state transport
+  - THM-779   # proved four-far transverse falsifier and capped family
+  - THM-780   # proved recursive good-set-state transport
+  - THM-777   # proved rho bridge and bounded-height floor; global floor conjectural
 ---
 
 # HYP-6815: LRC14 Four-Far Cone And Affine-Slope Threshold Suspension
@@ -232,7 +233,7 @@ reparameterization still applies, but `|W|=9`: the free-sheet union bound is
 beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
 the open tiling/overlap residue rather than claiming THM-761 has solved it.
 
-THM-776 makes a second, transverse route to infinity inside the literal chart exact.
+THM-779 makes a second, transverse route to infinity inside the literal chart exact.
 For prime `N>110`, set
 
 ```text
@@ -248,14 +249,14 @@ high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
 
-This does not threaten LRC14: THM-776 proves that every prime member of the
+This does not threaten LRC14: THM-779 proves that every prime member of the
 `V_N` family fires the capped-envelope peel. It identifies a missing coordinate.
 A transport state for the splice
 must retain at least the normalized cap load
 `r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
 divisor-support profile and endpoint/tooth ownership.
 
-THM-777 turns this diagnosis into a reusable terminal face. If the base good set
+THM-780 turns this diagnosis into a reusable terminal face. If the base good set
 has state `(mu,r_B)`, adjoining frequency `N` sends it to a state satisfying
 `mu_N>=6mu/7-2r_B/(7N)` and `r_N<=N+r_B`; no endpoint list is needed for those
 bounds. A sufficiently fast proportional peel `aN` then closes by THM-755 at an
@@ -271,6 +272,19 @@ shows that inserting smaller frequencies first maximizes the certified mass.
 For a fixed four-far core, the 24 formal peel/order gauges therefore collapse to
 four canonical certificates, one per named peel. Failure of all four is a
 sharper residual predicate than failure of one arbitrary peel.
+
+THM-777 locates the remaining compactness coordinate more precisely. For every
+12-core `P`, the elementary bound `r_P<=sum(P)` gives
+`rho(P)<=12/(pi*|G'_P|)`. Its exact census proves the candidate floor
+`|G'_P|>=7/858` only for primitive shapes with `max(P)<=18`; its explicitly
+listed scale and tooth samples plus five seeded searches are finite evidence,
+not a global theorem.
+Thus THM-779 refutes raw topological compactness, THM-780 proves transport of a
+positive `(mu,r)` state, and THM-777 reduces the unclassified global obstruction
+to safe-mass collapse in shape space. In fact THM-780 proves that no single
+high-frequency insertion over a fixed positive-mass base can cause that collapse.
+The next theorem must prove a uniform floor or classify and descend every
+varying-base or correlated multiscale sequence with `|G'_P| -> 0`.
 
 There is also an exact compressed local coordinate.  At a fixed time put
 `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and `rho_i={14x_i}`.  If
@@ -532,7 +546,9 @@ explicit legal transition or residual debt, not the Boolean field "some
    `r_D<=B(c*)` is refuted by the exactly-`f=4` family above. Replace it with a
    scale-normal state containing `r_D/(v|G'_D|)`, the divisor-support profile,
    and endpoint owners; then compose THM-761's high-support sheet regime with
-   the capped-envelope band or a strictly smaller descendant.
+   the capped-envelope band or a strictly smaller descendant. THM-777 proves
+   the `rho` bridge and the candidate `7/858` floor through `max(P)<=18`, but
+   the global floor or a descent for every safe-mass-decay sequence is open.
 2. **Seven-exception sheet residue.** Classify the `1/7` cyclic tilings on
    `Z/cZ`, and formalize the terminating `c -> c/g` bookkeeping for excessive
    gcd multiplicity.  These are method walls, not known LRC counterexamples.

@@ -53,7 +53,7 @@ silently quotiented.
 
 ### The chart has two inequivalent directions to infinity
 
-The far-dilation action is only the radial direction. THM-776 supplies a
+The far-dilation action is only the radial direction. THM-779 supplies a
 transverse frequency refinement. For prime `N>110`, the ray
 
 ```text
@@ -79,16 +79,22 @@ The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
 It is the smallest current proposed payload that distinguishes radial replication
-from transverse refinement while remembering why THM-776 closes the whole
+from transverse refinement while remembering why THM-779 closes the whole
 prime ray by the capped peel.
 
-THM-777 identifies the exact rate law behind that closure. If the old fiber has
+THM-780 identifies the exact rate law behind that closure. If the old fiber has
 safe mass `mu` and `r` components, a new frequency `N` leaves at least
 `6mu/7-2r/(7N)` safe mass and creates at most `N+r` components. A named interval
 is only one way to certify the initial state. A peel of speed `aN` therefore sees
 a bounded normalized wall load and becomes terminal once `a` crosses an explicit
 state-dependent threshold. In this chart, increasing geometric complexity can
 decrease proof difficulty.
+
+There is a stronger exclusion hidden in the same inequality:
+`liminf_N |G'_{B union {N}}|>=6|G'_B|/7>0` for every fixed positive-mass base.
+So a single transverse frequency is not merely easy for a fast peel; it cannot
+itself produce the safe-mass boundary. A decay sequence must move its base or
+coordinate several scales so that the inherited `(mu,r)` state degenerates.
 
 The transition also iterates. Certified lower/upper states evolve by
 
@@ -113,6 +119,17 @@ moduli data; it is an observer choice with a canonical representative in the
 certificate calculus. The nonterminal boundary must make all four certified
 mass bounds or cap tests fail, slow the peel relative to wall creation, or
 retain owner correlations that the two-number state intentionally erased.
+
+THM-777 identifies the compactness question left behind by this transport law.
+For every 12-core, `r_P<=sum(P)` turns safe mass into the bound
+`rho(P)<=12/(pi*|G'_P|)`. The candidate minimum `7/858`, uniquely attained by
+`{1,...,13}\{6}`, is proved only in the exact census through `max(P)<=18`;
+the explicitly listed scale/tooth samples and seeded searches are only finite
+evidence. So safe mass is a sufficient scalar for bounding the peel
+ratio, but its global positive floor is not yet preserved by a theorem. The
+residual object is either a compact shape stratum with that floor or a boundary
+face consisting of sequences whose safe mass collapses. Describing and
+descending the latter is now more precise than asking vaguely for compactness.
 
 That observation does not make LRC periodic. Inside one residue class,
 changing height changes:
@@ -293,7 +310,9 @@ the labelled seam plus the quotient's persistent unit-grid obligations.
 The resulting rule is task-indexed. Preserve only moments for exact-cover truth,
 the full owner stalk for future events, the obligation hypergraph for persistent
 unit-grid compatibility, and the folded metric for the proposed local two-sheet
-obstruction. "Keep everything" and "find one invariant" are both too coarse.
+obstruction. For normalized-band compactness, retain safe mass and component
+load; THM-777 proves their bridge but not a global mass floor. "Keep everything"
+and "find one invariant" are both too coarse.
 
 ### A smaller local address than the edge table
 
@@ -640,7 +659,7 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Extend THM-777 beyond its positive-good-state/proportional-peel face: stratify
+1. Extend THM-780 beyond its positive-good-state/proportional-peel face: stratify
    sequences by safe-mass decay relative to component, wall-creation, and peel rates; attach
    endpoint owners, and prove every residual state is bounded or recursively descends.
 2. Classify the seven-exception `1/7` chambers left after THM-767's

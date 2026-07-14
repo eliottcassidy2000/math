@@ -42,7 +42,7 @@ PART 2 -- adversarial families (exact; scale sweep)
   {1..11, 26}                                |G'| = 0.023148
 
 ============================================================================================
-PART 3 -- hill-descent minimization (primitive, heights <= 2500)
+PART 3 -- heuristic hill descent (primitive proposals bounded by height 2500)
 ============================================================================================
   seed (1, 2, 3, 4)...: descended to |G'| = 0.008159 at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
   seed (1, 2, 3, 4)...: descended to |G'| = 0.012159 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
@@ -51,15 +51,15 @@ PART 3 -- hill-descent minimization (primitive, heights <= 2500)
   seed (2, 4, 6, 8)...: descended to |G'| = 0.032249 at [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22]
 
 ============================================================================================
-PART 4 -- verdict, the Lipschitz tail, and the rho bridge
+PART 4 -- diagnostic, the Lipschitz tail, and the rho bridge
 ============================================================================================
   exact census floor (primitive, maxP <= 18): |G'| = 7/858 = 0.008159 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
   adversarial-family min: 0.023148 ({1..11, 26})
   hill-descent min:       0.008159 at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
   OVERALL MIN OBSERVED:   0.008159
 
-  VERDICT: FLOOR -- no family or search moved below the bounded census minimum;
-  every adversarial scale ray converges to a constant >= the census floor.
+  VERDICT: FLOOR SIGNAL -- none of the explicitly listed finite probes moved
+  below the bounded census minimum; no convergence claim follows from this sample.
 
   PROVED (unconditional Lipschitz tail): |G'_P| >= 2(M(P)-1/14)/maxP >= 1/(91*maxP)
   PROVED (the rho bridge, one line):     rho = v*/maxP = r_P/(pi|G'|maxP) <= 12/(pi|G'_P|)
