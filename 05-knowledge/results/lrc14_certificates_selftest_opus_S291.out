@@ -1,0 +1,10 @@
+lrc14_certificates self-test:
+  PASS  deep well L = 6617/388080-family value
+  PASS  deep well covering
+  PASS  THM-731 fires at the deep-well far peel
+  PASS  THM-755 band edge for {1..12} in (111, 113)
+  PASS  THM-752 closes the klein-S304 stall (witness exists)
+  PASS  slot (7,1) feasible for the deep well
+  PASS  band protocol closes a band body at layer <= 2
+  PASS  AP is the tight boundary (L = 0)
+  PASS  AP is lonely with equality at t = 1/14

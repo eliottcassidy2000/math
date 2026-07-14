@@ -306,6 +306,119 @@ instance (segs : List Seg) (evs : List Ev) (W : ℤ) (L Area : ℚ) :
   unfold ClosedBudgetSpec
   infer_instance
 
+/-! ### THM-755: the capped-envelope summation kernel (opus-S289/S291)
+
+The origin cap `|c l| ≤ A` spliced with the spoke envelope `l * |c l| ≤ B` at `m`:
+`∑ (c l)² ≤ m A² + B²/m` — the abstract engine behind `disc_v ≤ 4 r |G'|/(π v) + 2|G'|²`
+and the (H)-band edge `v* = r/(π |G'|)`. -/
+
+/-- Telescoping tail (strengthened): for `1 ≤ m ≤ N`,
+`∑_{l ∈ Ioc m N} 1/l² ≤ 1/m − 1/N`. -/
+theorem tail_inv_sq_le_sub (m : ℕ) (hm : 1 ≤ m) :
+    ∀ N, m ≤ N → ∑ l ∈ Finset.Ioc m N, (1 : ℝ) / (l : ℝ) ^ 2 ≤ 1 / m - 1 / N := by
+  intro N hN
+  induction N, hN using Nat.le_induction with
+  | base => simp
+  | succ n hn ih =>
+      rw [Finset.sum_Ioc_succ_top hn]
+      have h1n : 1 ≤ n := le_trans hm hn
+      have hn0 : (0 : ℝ) < (n : ℝ) := by exact_mod_cast h1n
+      have hstep : (1 : ℝ) / ((n : ℝ) + 1) ^ 2 ≤ 1 / n - 1 / ((n : ℝ) + 1) := by
+        have hid : (1 : ℝ) / n - 1 / ((n : ℝ) + 1) = 1 / ((n : ℝ) * ((n : ℝ) + 1)) := by
+          field_simp
+          ring
+        rw [hid]
+        have hle : (n : ℝ) * ((n : ℝ) + 1) ≤ ((n : ℝ) + 1) ^ 2 := by nlinarith
+        exact one_div_le_one_div_of_le (by positivity) hle
+      have hgoal := add_le_add ih hstep
+      push_cast
+      push_cast at hgoal
+      linarith
+
+/-- **The capped-envelope kernel (THM-755).**  Origin cap + spoke envelope, spliced at `m`:
+`∑_{l ∈ Icc 1 N} (c l)² ≤ m A² + B²/m`. -/
+theorem capped_envelope_kernel (c : ℕ → ℝ) (A B : ℝ) (_hA : 0 ≤ A)
+    (m N : ℕ) (hm : 1 ≤ m)
+    (hcap : ∀ l ∈ Finset.Icc 1 N, |c l| ≤ A)
+    (henv : ∀ l ∈ Finset.Icc 1 N, (l : ℝ) * |c l| ≤ B) :
+    ∑ l ∈ Finset.Icc 1 N, (c l) ^ 2 ≤ (m : ℝ) * A ^ 2 + B ^ 2 / m := by
+  have hm0 : (0 : ℝ) < (m : ℝ) := by exact_mod_cast hm
+  have hBm : 0 ≤ B ^ 2 / m := by positivity
+  have hsq : ∀ l ∈ Finset.Icc 1 N, (c l) ^ 2 ≤ A ^ 2 := by
+    intro l hl
+    have h := abs_le.mp (hcap l hl)
+    exact sq_le_sq' h.1 h.2
+  by_cases hNm : N ≤ m
+  · have hhead : ∑ l ∈ Finset.Icc 1 N, (c l) ^ 2 ≤ (N : ℝ) * A ^ 2 := by
+      calc ∑ l ∈ Finset.Icc 1 N, (c l) ^ 2 ≤ ∑ _l ∈ Finset.Icc 1 N, A ^ 2 :=
+            Finset.sum_le_sum hsq
+        _ = (N : ℝ) * A ^ 2 := by
+            rw [Finset.sum_const, Nat.card_Icc]
+            simp [nsmul_eq_mul]
+    have hNA : (N : ℝ) * A ^ 2 ≤ (m : ℝ) * A ^ 2 := by
+      have hc : (N : ℝ) ≤ (m : ℝ) := by exact_mod_cast hNm
+      nlinarith [sq_nonneg A]
+    linarith
+  · have hNm' : m < N := by omega
+    have hsplit : Finset.Icc 1 N = Finset.Icc 1 m ∪ Finset.Ioc m N := by
+      ext x
+      simp only [Finset.mem_Icc, Finset.mem_Ioc, Finset.mem_union]
+      omega
+    have hdisj : Disjoint (Finset.Icc 1 m) (Finset.Ioc m N) := by
+      apply Finset.disjoint_left.mpr
+      intro a ha hb
+      simp only [Finset.mem_Icc] at ha
+      simp only [Finset.mem_Ioc] at hb
+      omega
+    rw [hsplit, Finset.sum_union hdisj]
+    have hhead : ∑ l ∈ Finset.Icc 1 m, (c l) ^ 2 ≤ (m : ℝ) * A ^ 2 := by
+      have hsub : ∀ l ∈ Finset.Icc 1 m, (c l) ^ 2 ≤ A ^ 2 := by
+        intro l hl
+        simp only [Finset.mem_Icc] at hl
+        exact hsq l (by simp only [Finset.mem_Icc]; omega)
+      calc ∑ l ∈ Finset.Icc 1 m, (c l) ^ 2 ≤ ∑ _l ∈ Finset.Icc 1 m, A ^ 2 :=
+            Finset.sum_le_sum hsub
+        _ = (m : ℝ) * A ^ 2 := by
+            rw [Finset.sum_const, Nat.card_Icc]
+            simp [nsmul_eq_mul]
+    have htail : ∑ l ∈ Finset.Ioc m N, (c l) ^ 2 ≤ B ^ 2 / m := by
+      have hterm : ∀ l ∈ Finset.Ioc m N, (c l) ^ 2 ≤ B ^ 2 * (1 / (l : ℝ) ^ 2) := by
+        intro l hl
+        simp only [Finset.mem_Ioc] at hl
+        have hlN : l ∈ Finset.Icc 1 N := by
+          simp only [Finset.mem_Icc]
+          omega
+        have hl1 : 1 ≤ l := by omega
+        have hl0 : (0 : ℝ) < (l : ℝ) := by exact_mod_cast hl1
+        have habs : |c l| ≤ B / l := by
+          rw [le_div_iff₀ hl0, mul_comm]
+          exact henv l hlN
+        have h2 := abs_le.mp habs
+        have := sq_le_sq' h2.1 h2.2
+        calc (c l) ^ 2 ≤ (B / l) ^ 2 := this
+          _ = B ^ 2 * (1 / (l : ℝ) ^ 2) := by
+              rw [div_pow]
+              ring
+      have hsum : ∑ l ∈ Finset.Ioc m N, (c l) ^ 2
+          ≤ ∑ l ∈ Finset.Ioc m N, B ^ 2 * (1 / (l : ℝ) ^ 2) :=
+        Finset.sum_le_sum hterm
+      have htel : ∑ l ∈ Finset.Ioc m N, (1 : ℝ) / (l : ℝ) ^ 2 ≤ 1 / m := by
+        have := tail_inv_sq_le_sub m hm N (le_of_lt hNm')
+        have hN0 : (0 : ℝ) < (N : ℝ) := by
+          have : 1 ≤ N := by omega
+          exact_mod_cast this
+        have : (0 : ℝ) ≤ 1 / (N : ℝ) := by positivity
+        linarith
+      calc ∑ l ∈ Finset.Ioc m N, (c l) ^ 2
+          ≤ ∑ l ∈ Finset.Ioc m N, B ^ 2 * (1 / (l : ℝ) ^ 2) := hsum
+        _ = B ^ 2 * ∑ l ∈ Finset.Ioc m N, (1 / (l : ℝ) ^ 2) := by
+            rw [Finset.mul_sum]
+        _ ≤ B ^ 2 * (1 / m) := by
+            have hB2 : (0 : ℝ) ≤ B ^ 2 := sq_nonneg B
+            exact mul_le_mul_of_nonneg_left htel hB2
+        _ = B ^ 2 / m := by ring
+    linarith
+
 end ClosedBudget
 end LRC14
 end LonelyRunner

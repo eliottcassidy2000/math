@@ -8,6 +8,39 @@
 
 Handoffs: fleet -- minimizer is a (c,w) family; equality rigidity = LRC(13) 12-block tightness. Files: lrc14_floor_rigidity_test_macmini_S106.py(+out); THM-757 corrected. HYP-6720.
 
+## opus-2026-07-14-S291 -- MATH + ENGINEERING: lrc14_certificates.py (the consolidated exact-certificate library, mandate deliverable, self-test 9/9) + THM-755's summation kernel SORRY-FREE in Lean (tail_inv_sq_le_sub + capped_envelope_kernel, kernel-pure); band-enumeration ceded to mac-mini-S105 (executed exactly mid-claim: 8260 families, 0 fails)
+
+Prompt (owner): work on the remaining math and engineering.
+
+ENGINEERING (the mandate's deliverable): 04-computation/lrc14_certificates.py -- ONE importable,
+documented, self-testing module consolidating the S270-S290 arc's exact machinery: the interval
+engine, L_exact/M_exact, the Bernoulli disc (THM-731/732), thm731_certificate, the THM-755 band
+edge, THM-756's 3-line h_band_protocol, THM-752's fine_comb_witness, THM-754's clean_slot_witness,
+the S287 exact slot_feasible. All Fraction-exact, all witness-producing. SELF-TEST 9/9: deep-well
+certificate fires; band edge in (111,113); the klein-stall witness exists with clearance >= 1/14;
+slot (7,1) feasible on the deep well; a band body closes at layer <= 2; the AP has L = 0 AND is
+lonely with equality at t = 1/14. De-duplicates 20 sessions of per-script re-implementation; the
+paper's computational appendix and the Lean referee now live in one place.
+
+MATH/LEAN: THM-755's abstract engine formalized SORRY-FREE in LRCClosedBudget.lean:
+tail_inv_sq_le_sub (the telescoping Ioc tail with the strengthened 1/m - 1/N bound, by
+Nat.le_induction) and capped_envelope_kernel (origin cap + spoke envelope spliced at m:
+Sum (c l)^2 <= m A^2 + B^2/m). Both audited kernel-pure [propext, Classical.choice, Quot.sound].
+The analytic content of the (H)-band edge is now machine-checked; what remains for a full Lean
+THM-755 is the Fourier-side instantiation (|c_m| <= |G'| and <= r/(pi m)), standard.
+
+FLEET NOTE: the planned band-enumeration piece was executed EXACTLY by mac-mini-S105 mid-claim
+(8260 interval-core band families, all M >= 1/13, 0 fails, + THM-757) -- ceded and cited; this is
+the fleet working correctly at velocity. klein-S308 took HYP-6710 working the k=7 analytic lemma
+downstream of my S288 (renumbered to 6715).
+
+FILES: lrc14_certificates.py; lrc14_certificates_selftest_opus_S291.out; LRCClosedBudget.lean
+(+2 kernel-pure theorems); HYP-6715. -> fleet (import the library -- stop re-implementing the
+engine per script; the self-test is the drift alarm), kps (the module is the enumeration's
+engine; h_band_protocol is your 3-line loop body), klein (capped_envelope_kernel is the Lean
+face of the band edge your (H) needed).
+
+---
 ## mac-mini-2026-07-14-S105 -- executed the covering-band finite check EXACTLY + THM-757 (near-dilate M(V_L)=1/13 proved) + multi-killer floor conjecture. 8260 interval-core band families (220,475] all M>=1/13 (exact witnesses, 0 fails); the M=1/13 extremal (near-dilate) lives far out (diam>=425881, opus regime), NOT the band.
 
 **Owner:** execute the band finite check exactly, add small theorems/conjectures.
