@@ -44,7 +44,8 @@ family closes by THM-760/761 in one line). The scale residual after THM-761: (i)
 that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (band
 inflation bounded there — the finite regime), (iii) gcd-descent bookkeeping, (iv) families with
 no scale structure at all — the capped envelope's natural domain, pending the
-fragmentation⟺divisibility complementarity (HYP-6830's two-regime splice).
+peel-relative safe-measure/endpoint replacement for HYP-6830's now-refuted
+raw fragmentation⟺divisibility complementarity.
 
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
 on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
@@ -95,9 +96,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 1. **Prove a scale-normal structure theorem.** Split normalized families into coherent dilation
    packs, additive/hierarchical clusters, and an incoherent residual, while retaining scale residue
    and killer offset. Raw far count and diameter are not invariants of this quotient.
-   *Progress (S299): the dilation-pack side is now the two-regime splice HYP-6830 — regime 1
-   (large scale, r ≤ 6) PROVED by THM-761; the open composition is regime 2 (c ≤ 42, bounded band
-   inflation) plus the complementarity claim r_P ≤ B(c*), plus the r ≥ 7 deck-tiling residue.*
+   *Progress (S299/S300/S3 audit): THM-761 proves its exact sheet-budget regime and THM-767
+   closes compatible r=7 decks above `w_max>7 sum(P)` by an event witness. The raw bound
+   `r_P≤B(c*)` is false; `P_N={1,...,11,N}` has `c*=1` and `r_P≥N/77-O(1)`.
+   The surviving endgame coordinate is peel-relative boundary intensity
+   `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.*
 2. **Attack the prime-grid bottleneck as a persistent translate-cover problem.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of
    `F_p^x/{±1}` by the strict-danger set. Classify which covers persist under lifts and evade the
@@ -135,6 +138,13 @@ exact owner-CSP settles all shallow labelled packets through lift height twelve
 (`13^12` conceptual rows), leaving only the permitted dilates and the unique
 primitive AP.  Neither result proves an unbounded shallow descent or eliminates
 the deep colour-cover branch.
+
+The exact max-peel tooth atlas rules out a tempting shortcut.  In the
+exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all
+`2,453` escaping rows still have winding one.  Pure endpoint ownership and
+even a transitive safe-component phase tournament with one Hamiltonian path
+have explicit liars.  Any anti-cover theorem must retain exact midpoint-width
+slack and owner incidence, not just winding or phase order.
 
 ## 4. The one-line frontier
 

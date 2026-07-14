@@ -483,6 +483,14 @@ but emptiness remains open.  It should remain
 logically separate from the q25 covering certificate: one characterizes
 equality, while the other was a proposed closure terminal and is now refuted.
 
+The exact max-peel tooth atlas sharpens that residual.  Across all `2,453`
+primitive escaping rows in its exhaustive `[1,20]` slice, cyclic nearest-tooth
+winding is still one; `1,972` rows also have pure endpoint owners.  Explicit
+liars survive both that quotient and a transitive component-phase tournament
+with one Hamiltonian path.  The next theorem must therefore use the metric
+slack `1/13-||wc||-wh` together with endpoint-owner splice incidence, not
+topological winding alone.
+
 **B6. Multi-killer balance as a convex program.**  Replace the one-direction
 perturbation bound by a piecewise-linear max-min program over all killer
 slopes.  Seek a global lower bound depending on the active core face, not only

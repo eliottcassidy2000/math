@@ -69,4 +69,5 @@ tournament quotient: preserves blocker direction; destroys simultaneous connecti
 SCOPE
 THM-763 makes the primitive tight branch finite, not empty.
 THM-766 supplies local component-tooth cones, not global splice coherence.
-The remaining lemma is: zero endpoint defect at q=13 forces one common AP scale.
+Inside the full-nonzero-residue packet, the remaining proposed lemma is:
+zero endpoint defect at q=13 forces one common AP scale.

@@ -444,7 +444,8 @@ def main() -> None:
     print("SCOPE")
     print("THM-763 makes the primitive tight branch finite, not empty.")
     print("THM-766 supplies local component-tooth cones, not global splice coherence.")
-    print("The remaining lemma is: zero endpoint defect at q=13 forces one common AP scale.")
+    print("Inside the full-nonzero-residue packet, the remaining proposed lemma is:")
+    print("zero endpoint defect at q=13 forces one common AP scale.")
 
 
 if __name__ == "__main__":

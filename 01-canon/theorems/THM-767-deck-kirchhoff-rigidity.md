@@ -71,6 +71,26 @@ This is the Smith-diagram "unit resistance": all exceptions burn arcs of the SAM
 phase-length 2δ = 1/7 (speed changes the wiring — the AP step — never the arc length),
 and 7g | c is the Dehn-commensurability condition making every current integral.
 
+**Necessity guardrail.**  The condition `7g_a|c` cannot be replaced by merely
+`7|c`.  At `c=14`, `t0=1/8`, the seven exceptions
+
+```text
+W={7,47,3,23,11,53,49}
+```
+
+have strict bad-sheet sets
+
+```text
+{0,2,4,6,8,10,12}, {10,13}, {0,9}, {6,9}, {5,10},
+{2,7}, {1,3,5,7,9,11,13}.
+```
+
+They cover all fourteen sheets with total multiplicity `24`, and every phase
+has threshold margin at least `1/112`, so the overlapping cover persists on
+an open `t0`-neighborhood.  Thus maintained coverage need not be an exact
+tiling in incompatible gcd strata; parts (3)--(4) correctly require either
+the zero-variance condition or an independently assumed exact tiling.
+
 ## (3) THE EVENT PIERCE — the r = 7 deck stratum closes at the switching times
 
 > Let 7 | c, r = 7, and suppose every exception satisfies **7·g_a | c** (in particular

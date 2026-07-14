@@ -1,0 +1,98 @@
+LRC(13), n=12: exact tooth-label winding atlas (codex-S3)
+STATUS: bounded exact evidence only; this is NOT a uniform sporadic-branch proof.
+threshold L=1/13; N=20; near ceiling=1/10
+bank: exhaustive primitive A subset [1,20], |A|=12, w=max(A), M(A\{w})>1/12, M(A)<=1/10
+selector: primitive_sets=125970; super_max_cores=125961; near_rows=2453; maximal_masks@1/12=35; maximal_masks@1/10=53
+controls: eligible AP deletions=11 (w=1,...,11; w=12 has M(P)=1/12)
+full_exact_payload_sha256=53425c536efefe0b68d69baf5744f199adb718f686ab4aa5710adc8280616ddc
+
+Exact global checks
+  component/M equivalence mismatches=0/2464; all-covered labels nonunique=0/11
+  all-covered: controls=11/11, near branch=0/2453
+  M(A) histogram (near branch): (('2/25', 1), ('1/12', 3), ('3/35', 2), ('2/23', 61), ('1/11', 249), ('3/32', 47), ('2/21', 530), ('3/31', 183), ('1/10', 1377))
+  component-count histogram: ((4, 11), (6, 17), (8, 67), (10, 115), (12, 250), (14, 380), (16, 433), (18, 413), (20, 349), (22, 249), (24, 99), (26, 41), (28, 21), (30, 8))
+  completion-w histogram: ((13, 3), (14, 10), (15, 22), (16, 60), (17, 156), (18, 469), (19, 1186), (20, 547))
+  negative-component histogram: ((2, 3), (4, 22), (6, 52), (8, 131), (10, 247), (12, 396), (14, 429), (16, 389), (18, 346), (20, 235), (22, 138), (24, 33), (26, 17), (28, 15))
+
+Tooth-label winding scout
+  winding histogram (near branch)=((1, 2453),)
+  endpoint-pure rows=1972/2453
+  raw proposed separator W1: endpoint-pure + one cyclic tooth winding => all-covered.
+  W1 REFUTED; first lexicographic liar: A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13) w=13 M(P)=1/11 M(A)=1/11 k=10 covered=False zero/negative=0/10 min_sigma=-11/26 wind=1 owner_pure=True T(score=((4, 5), (5, 5)),C3=40,SCC=(10,),flips=19,ties=0,H=14937)
+  tournament refinement T1: W1 + transitive phase tournament (C3=0,H=1) => all-covered.
+  T1 REFUTED; first lexicographic liar: A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15) w=15 M(P)=1/10 M(A)=1/10 k=4 covered=False zero/negative=0/4 min_sigma=-43/91 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=4,ties=0,H=1)
+  coarse combined winding/owner/tournament signature separates the AP controls from this bank (bounded evidence only).
+
+Tournament Analysis over safe components
+  observable=within-tooth midpoint phase displacement; gauge=clockwise half-circle; tie path=chronological component order.
+  distinct (score histogram,SCC) profiles=354
+  directed-3-cycle range=0..1116; edge-flip range=2..217
+  SCC-size histogram=(((1, 1, 1, 1), 3), ((1, 1, 1, 1, 1, 1), 4), ((1, 1, 1, 1, 1, 1, 1, 1), 2), ((1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 3), ((1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 3), ((4,), 8), ((6,), 13), ((8,), 65), ((10,), 112), ((12,), 247), ((14,), 380), ((16,), 433), ((18,), 413), ((20,), 349), ((22,), 249), ((24,), 99), ((26,), 41), ((28,), 21), ((30,), 8))
+  exact H(T) evaluated for k<=12: 460/2453 rows; range=1..531141; distinct=58
+
+AP tight/all-covered controls
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=1 M(P)=1/7 M(A)=1/13 k=2 covered=True zero/negative=2/0 min_sigma=0 wind=0 owner_pure=True T(score=((0, 1), (1, 1)),C3=0,SCC=(1, 1),flips=1,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=2 M(P)=2/15 M(A)=1/13 k=2 covered=True zero/negative=2/0 min_sigma=0 wind=0 owner_pure=True T(score=((0, 1), (1, 1)),C3=0,SCC=(1, 1),flips=0,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=3 M(P)=1/8 M(A)=1/13 k=4 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=1,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=4 M(P)=2/17 M(A)=1/13 k=4 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=1,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=5 M(P)=1/9 M(A)=1/13 k=8 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1, 1, 1),flips=12,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=6 M(P)=2/19 M(A)=1/13 k=4 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=1,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=7 M(P)=1/7 M(A)=1/13 k=6 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1),flips=13,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=8 M(P)=1/8 M(A)=1/13 k=4 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=4,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=9 M(P)=1/9 M(A)=1/13 k=6 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1),flips=8,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=10 M(P)=1/10 M(A)=1/13 k=4 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1)),C3=0,SCC=(1, 1, 1, 1),flips=4,ties=0,H=1)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=11 M(P)=1/11 M(A)=1/13 k=10 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),flips=23,ties=0,H=1)
+
+Extremal branch summaries
+  smallest M(A): A=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19) w=19 M(P)=2/19 M(A)=2/25 k=6 covered=False zero/negative=2/2 min_sigma=-81/221 wind=1 owner_pure=True T(score=((1, 2), (2, 1), (3, 1), (4, 2)),C3=4,SCC=(6,),flips=3,ties=0,H=17)
+  smallest worst-tooth deficit: A=(1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 18) w=18 M(P)=1/9 M(A)=2/23 k=10 covered=False zero/negative=2/8 min_sigma=-10/143 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),flips=20,ties=0,H=1)
+  largest worst-tooth deficit: A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17) w=17 M(P)=1/10 M(A)=1/10 k=14 covered=False zero/negative=0/14 min_sigma=-8/13 wind=1 owner_pure=False T(score=((4, 1), (5, 3), (6, 3), (7, 3), (8, 3), (9, 1)),C3=100,SCC=(14,),flips=50,ties=0,H=None)
+  most components (lex first tie): A=(1, 2, 3, 4, 8, 14, 15, 16, 17, 18, 19, 20) w=20 M(P)=4/33 M(A)=3/31 k=30 covered=False zero/negative=2/28 min_sigma=-46/117 wind=1 owner_pure=False T(score=((11, 2), (12, 5), (13, 1), (14, 7), (15, 7), (16, 1), (17, 5), (18, 2)),C3=1064,SCC=(30,),flips=206,ties=0,H=None)
+
+Detailed tight control (richest AP deletion, w=11)
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) w=11 M(P)=1/11 M(A)=1/13 k=10 covered=True zero/negative=2/0 min_sigma=0 wind=1 owner_pure=True T(score=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1)),C3=0,SCC=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),flips=23,ties=0,H=1)
+  labels=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  increments=(1, 1, 1, 1, 1, 1, 1, 1, 1, 2); winding_checksum=1
+  J00=(7/78,6/65) c=71/780 h=1/780 owners=(12,)->(10,) label=1 phase=1/780 sigma=4/65
+  J01=(7/39,12/65) c=71/390 h=1/390 owners=(6,)->(5,) label=2 phase=1/390 sigma=3/65
+  J02=(7/26,25/91) c=99/364 h=1/364 owners=(4,)->(7,) label=3 phase=361/364 sigma=1/26
+  J03=(14/39,19/52) c=113/312 h=1/312 owners=(3,)->(8,) label=4 phase=307/312 sigma=1/39
+  J04=(53/117,6/13) c=107/234 h=1/234 owners=(9,)->(2,) label=5 phase=7/234 sigma=0
+  J05=(7/13,64/117) c=127/234 h=1/234 owners=(2,)->(9,) label=6 phase=227/234 sigma=0
+  J06=(33/52,25/39) c=199/312 h=1/312 owners=(8,)->(3,) label=7 phase=5/312 sigma=1/39
+  J07=(66/91,19/26) c=265/364 h=1/364 owners=(7,)->(4,) label=8 phase=3/364 sigma=1/26
+  J08=(53/65,32/39) c=319/390 h=1/390 owners=(5,)->(6,) label=9 phase=389/390 sigma=3/65
+  J09=(59/65,71/78) c=709/780 h=1/780 owners=(10,)->(12,) label=10 phase=779/780 sigma=4/65
+
+Detailed first W1 liar
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13) w=13 M(P)=1/11 M(A)=1/11 k=10 covered=False zero/negative=0/10 min_sigma=-11/26 wind=1 owner_pure=True T(score=((4, 5), (5, 5)),C3=40,SCC=(10,),flips=19,ties=0,H=14937)
+  labels=(1, 2, 4, 5, 6, 7, 8, 9, 11, 12)
+  increments=(1, 2, 1, 1, 1, 1, 1, 2, 1, 2); winding_checksum=1
+  J00=(7/78,6/65) c=71/780 h=1/780 owners=(12,)->(10,) label=1 phase=11/60 sigma=-8/65
+  J01=(7/39,12/65) c=71/390 h=1/390 owners=(6,)->(5,) label=2 phase=11/30 sigma=-21/65
+  J02=(7/26,25/91) c=99/364 h=1/364 owners=(4,)->(7,) label=4 phase=15/28 sigma=-11/26
+  J03=(14/39,19/52) c=113/312 h=1/312 owners=(3,)->(8,) label=5 phase=17/24 sigma=-10/39
+  J04=(53/117,6/13) c=107/234 h=1/234 owners=(9,)->(2,) label=6 phase=17/18 sigma=-4/117
+  J05=(7/13,64/117) c=127/234 h=1/234 owners=(2,)->(9,) label=7 phase=1/18 sigma=-4/117
+  J06=(33/52,25/39) c=199/312 h=1/312 owners=(8,)->(3,) label=8 phase=7/24 sigma=-10/39
+  J07=(66/91,19/26) c=265/364 h=1/364 owners=(7,)->(4,) label=9 phase=13/28 sigma=-11/26
+  J08=(53/65,32/39) c=319/390 h=1/390 owners=(5,)->(6,) label=11 phase=19/30 sigma=-21/65
+  J09=(59/65,71/78) c=709/780 h=1/780 owners=(10,)->(12,) label=12 phase=49/60 sigma=-8/65
+
+Detailed closest escaping row by M(A)
+  A=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19) w=19 M(P)=2/19 M(A)=2/25 k=6 covered=False zero/negative=2/2 min_sigma=-81/221 wind=1 owner_pure=True T(score=((1, 2), (2, 1), (3, 1), (4, 2)),C3=4,SCC=(6,),flips=3,ties=0,H=17)
+  labels=(3, 5, 5, 14, 14, 16)
+  increments=(2, 0, 9, 0, 2, 6); winding_checksum=1
+  J00=(2/13,25/156) c=49/312 h=1/312 owners=(7,)->(12,) label=3 phase=307/312 sigma=0
+  J01=(53/221,25/104) c=849/3536 h=1/3536 owners=(17,)->(8,) label=5 phase=1987/3536 sigma=-81/221
+  J02=(27/104,38/143) c=601/2288 h=7/2288 owners=(8,)->(11,) label=5 phase=2267/2288 sigma=1/104
+  J03=(105/143,77/104) c=1687/2288 h=7/2288 owners=(11,)->(8,) label=14 phase=21/2288 sigma=1/104
+  J04=(79/104,168/221) c=2687/3536 h=1/3536 owners=(8,)->(17,) label=14 phase=1549/3536 sigma=-81/221
+  J05=(131/156,11/13) c=263/312 h=1/312 owners=(12,)->(7,) label=16 phase=5/312 sigma=0
+
+Interpretation
+  * Exact sigma, not the raw cyclic label winding, detects tooth escape.
+  * The first liar already has one winding and pure endpoint ownership; metric width/phase is indispensable.
+  * Component tournaments retain within-tooth phase order but still quotient away sigma's width term.
+  * Challenge to the vertex assumption: components are more faithful than runners, yet a proof object must
+    carry (component interval, endpoint owners, tooth phase, width, deletion deck), not only a tournament.

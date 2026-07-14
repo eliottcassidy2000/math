@@ -1,6 +1,6 @@
 ---
 id: THM-759
-title: The tight-instance ratio bound — if A = {a_1<...<a_n} is an LRC-extremal set (M(A)=1/(n+1), the tight lonely-runner instance), then its largest speed is at most n times its second-largest, a_n ≤ a_{n-1}/((n+1)·M(A\{a_n}) − 1) ≤ n·a_{n-1}. PROVED by an elementary interval (danger-tooth) argument — no alignment/number-theory hypothesis. This is the ratio bound THM-757/HYP-6775 flagged as the missing piece of the LRC(13) tightness rigidity; it reduces "tight ⟹ bounded spread" to a rigorous lemma, and combined with the rigidity of the (n−1)-core it makes the census of tight n-sets finite. Verified against {1..12} (a_12=12 ≤ 12·a_11=132) and the empirical tight-set search.
+title: The tight-instance ratio bound — if A = {a_1<...<a_n} is an LRC-extremal set (M(A)=1/(n+1), the tight lonely-runner instance), then its largest speed is at most n times its second-largest, a_n ≤ a_{n-1}/((n+1)·M(A\{a_n}) − 1) ≤ n·a_{n-1}. PROVED by an elementary interval (danger-tooth) argument — no alignment/number-theory hypothesis. This is the ratio bound THM-757/HYP-6775 flagged in the LRC(13) tightness program; it makes the extremal-core branch finite, while the primitive non-extremal sporadic branch remains open. Verified against {1..12} (a_12=12 ≤ 12·a_11=132) and the empirical tight-set search.
 status: PROVED (elementary: distance-to-ℤ triangle inequality + a covering/interval argument; strict inequality handled). VERIFIED-EXACT (the bound holds on every tight set found; the constant n is tight when the dropped core is extremal, μ₀=1/n).
 source: mac-mini-2026-07-14-S108 (completing the ratio bound of the LRC(13) rigidity)
 depends_on:
@@ -10,6 +10,8 @@ related:
   - HYP-6775  # LRC(13) tightness rigidity (this supplies its ratio bound)
   - THM-757   # multi-killer floor (the rigidity refines its equality case)
   - THM-753   # safe-peel reduction (tight ⟹ irreducible; every element binding)
+  - THM-765   # hereditary primitivity and exact safe-component/tooth criterion
+  - THM-763   # explicit finite height for primitive tight instances
   - HYP-6800  # this session's rigidity assembly
 ---
 
@@ -68,7 +70,7 @@ Therefore `a_n ≤ a_{n-1}/((n+1)μ₀ − 1) ≤ n·a_{n-1}`. ∎
 ## Role — the finite reduction of the LRC(13) tightness rigidity
 
 The rigidity `R(n)` ("the only tight primitive `n`-set is `{1,…,n}`", HYP-6775 for `n=12`) has an
-inductive skeleton whose one analytic gap was exactly a ratio bound. THM-759 supplies it:
+inductive skeleton whose extremal-core branch required a ratio bound. THM-759 supplies that bound:
 
 > **Inductive step.** Let `A` be tight, `P = A\{a_n}`, `μ₀ = M(P)`.
 > - If `μ₀ = 1/n` (`P` extremal): by `R(n−1)`, `P = {1,…,n−1}`, so `a_{n-1} = n−1` and THM-759 gives
@@ -79,11 +81,16 @@ inductive skeleton whose one analytic gap was exactly a ratio bound. THM-759 sup
 >   `M = 1/12 > 1/13`). Ruling it out is the LRC tight-instance characterization, **open** in the
 >   literature (Perarnau–Serra survey: no progress since Goddyn–Wong).
 
-So THM-759 turns "tight ⟹ bounded spread" into a rigorous lemma; the residual content of `R(n)` is
-purely the sporadic-branch emptiness, which is `n`-dependent (verified empty in the named bounded
-`n=12` banks but uniformly open; populated at `n=13`).
+So THM-759 turns "tight ⟹ bounded spread" into a rigorous lemma.  At `n=12`, THM-765 further proves
+that every leave-one-out core is primitive and gives the exact safe-component/tooth containment
+obligation; THM-763 gives the explicit finite-height bound `sum_i a_i≤78^11`.  These are proved
+reductions, not a proof of rigidity.  THM-769 splits the residual into shallow
+full-residue and deep sheet-colour branches; THM-770 closes the shallow slice
+through `max A≤168`.  The exact bounded censuses contain no further sporadic
+row, but **uniform emptiness remains open**.  At `n=13` the sporadic branch is
+populated by the Goddyn–Wong example above.
 
 *Artifacts:* `04-computation/lrc13_tightness_rigidity_macmini_S107.py`,
 `lrc13_rigidity_ratio_bound_macmini_S108.py` (+outs). Credits: THM-751 (the aligned precursor), LRC(≤13)
-(settled), HYP-6775 (the rigidity this completes), Perarnau–Serra (arXiv:2409.20160, the open-problem
+(settled), HYP-6775 (the rigidity program this advances), Perarnau–Serra (arXiv:2409.20160, the open-problem
 context).

@@ -113,7 +113,7 @@ Choosing `t0` with `min_p ||p t0|| = M(P)` (attained: continuous function on the
 circle) gives `M(V) >= min(M(P), delta)`. ∎
 
 **LRC(14) corollary.** `|P| = 13 - r` distinct speeds form an instance of the settled
-`(14-r)`-runner conjecture (`14 - r <= 13` for `r >= 1`), so `M(P) >= 1/(14-r) >= 1/8
+`(14-r)`-runner conjecture (`14 - r <= 13` for `r >= 1`), so `M(P) >= 1/(14-r) >= 1/13
 > 1/14` for `r <= 6`, and `min(M(P), 1/14) = 1/14`. The threshold table is a finite
 computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
 `6(m+1) <= 7m + s - 1` iff `m >= 7 - s`, which holds for all `c >= 43` (worst case

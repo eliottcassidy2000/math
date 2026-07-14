@@ -1,7 +1,7 @@
 ---
 id: HYP-6830
 title: Scale uniformization of Claim B — proved sheet regime, refuted raw-fragmentation complementarity, and a peel-relative splice
-status: PARTIALLY PROVED / REFUTED AS STATED — THM-761 proves the large-scale regime; raw fragmentation is not controlled by divisor-packet scale; a peel-relative splice and the r>=7 tiling residue remain open
+status: PARTIALLY PROVED / REFUTED AS STATED — THM-761 proves its exact sheet-budget regime; raw fragmentation is not controlled by divisor-packet scale; a peel-relative splice and the remaining r>=7 residue stay open
 source: opus-2026-07-14-S299
 depends_on:
   - THM-755   # capped envelope, v* = r_P / (pi |G'_P|)
@@ -20,9 +20,17 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
 (canonical: P = {v/c : c|v}, r = |W|). Define c*(V) = the largest c with |P| ≥ 7
 (equivalently r ≤ 6), or 1 if none. Then:
 
-1. **Large scale (PROVED, THM-761):** if c*(V) ≥ 43 (or the exact per-(r,c)
-   criterion fires, or the gcd budget Σ g_a(⌊c/(7g_a)⌋+1) ≤ c−1 holds), V is closed:
-   M(V) ≥ 1/14, by a free witness sheet. No enumeration, no witness search.
+1. **Sheet-budget regime (PROVED, THM-761):** for a chosen decomposition
+   `V=cP union W`, the exact per-`(r,c)` criterion or the mixed-gcd budget
+   `sum_a g_a(floor(c/(7g_a))+1)<=c-1` gives a free witness sheet and
+   `M(V)>=1/14`.  In particular `c>=43` is uniform when all exceptions are
+   coprime to `c`.  The numerical condition `c*(V)>=43` alone is not a theorem
+   hypothesis.
+
+   For example `V={100,200,...,900,50,150,1,3}` has `c*(V)=100`, but at that
+   canonical scale the exception gcds are `(50,50,1,1)` and the THM-761 budget
+   is `130>99`.  This does not say that `V` violates LRC or lacks another
+   routing scale; it shows why the exact gcd sidecar cannot be omitted.
 2. **Small scale (OPEN — coordinate incomplete):** if c*(V) ≤ 42, then every dilated
    sub-structure inflates the capped-envelope band edge by at most the SAME bounded
    factor (`v*(cP) = c·v*(P) ≤ 42·v*(P)`, HYP-6780 used positively). This local
@@ -58,13 +66,15 @@ This family has all the scope properties needed to refute the proposed bridge.
 2. **Unbounded exact fragmentation.** The base good set for `{1,...,11}` contains
 
    ```text
-   J = [1/14, 13/154],             |J| = 1/77.
+   J = (1/14, 13/154),             |J| = 1/77.
    ```
 
-   Inside `J`, the `N`-runner removes the disjoint open danger teeth centered at
-   `k/N` with radius `1/(14N)`. The number of full teeth in `J` is `N/77+O(1)`;
-   every full tooth separates two components of `G'_{P_N}`. Thus `r_{P_N}` is
-   unbounded although `c*(P_N)=1`. Exact interval arithmetic gives component counts
+   Inside `J`, every fully contained strict `N`-safe gap
+   `((m+1/14)/N,(m+13/14)/N)` is one distinct component, because its endpoints
+   lie on the excluded threshold and adjacent gaps are separated by danger
+   teeth.  The admissible `m` occupy an interval of length `N/77-6/7`, so
+   `r_{P_N}>=N/77-13/7`.  Thus `r_{P_N}` is unbounded although `c*(P_N)=1`.
+   Exact interval arithmetic gives component counts
    `18,22,38,72` for `N=101,211,503,1009`.
 3. **It occurs inside the covering endgame.** Every `V_N` is primitive because it
    contains `1`. Speeds `2,...,11` carry moduli `2,...,11`, while `1092N` carries
@@ -72,6 +82,13 @@ This family has all the scope properties needed to refute the proposed bridge.
    top peel fires THM-755's capped-envelope test in every audited instance. It is a
    counterexample specifically to using `c*` as a sufficient fragmentation
    coordinate.
+
+The intended `f>=4` lane does not rescue the raw claim.  Put
+`B={1,...,8,21,22,23}`, `Q_N=B union {N}` for odd `N>23`, and adjoin a larger
+multiple `W` of `360360`.  Then `Q_N union {W}` is primitive, covering, has
+five speeds above `14`, and has `c*=1`.  Since
+`|t-1/12|<1/1932` is uniformly safe for `B`, the same comb argument gives
+`r_{Q_N}>=N/966-13/7`.
 
 The surviving quantity is therefore peel-relative, not component-count absolute.
 For a proposed peel `v`, the cap sees

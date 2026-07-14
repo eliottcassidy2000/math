@@ -146,7 +146,9 @@ one.  This is the paragraph immediately before MSS Lemma 3.6; primitivity of
 `w` alone would not imply that an arbitrary parallel line meets the required
 coset.
 
-There are now the same two cases as in MSS Lemma 3.6.
+There are now the same two cases as in MSS Lemma 3.6.  When `n=2`, the
+lower-dimensional scale `(n-2)/n` forces `a=0`, so only the first case can
+occur; the second case below is needed only for `n>=3`.
 
 - If `a in Rw`, then the fiber is `Rw` and its chord through `K` has lattice
   length `2/lambda_1(K)`.  By (5),

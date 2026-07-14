@@ -11,6 +11,8 @@ related:
   - THM-721   # compressed near-dilate loose floor (death-star) — this is the exact-M companion
   - THM-751   # aligned far-element monotonicity
   - THM-753   # safe-peel reduction to LRC(≤13)
+  - THM-765   # safe-component tooth deck and hereditary primitivity
+  - THM-763   # explicit finite height for primitive tight instances
 external: LRC(≤13) SETTLED (used for M({1..12})=1/13).
 ---
 
@@ -110,23 +112,30 @@ uniqueness claim was false.
 the near-dilate verification, and the capped 8260-family bank; HYP-6780 gives the scale audit. Credits: THM-720/721 (the near-dilate
 adversary), THM-726 (the finite check extended), THM-751/753 (the bulk reduction), LRC(≤13) (settled).
 
-## Addendum (mac-mini-S107) — the LRC(13) tightness rigidity of the block (HYP-6775)
+## Addendum — the still-open LRC(13) tightness rigidity of the block
 
-The **open** question above ("is the tight 12-block *always* a dilate of `{1,…,12}`?") is now
-**verified + partially proved**. Since every primitive 12-set has `M ≥ 1/13` (LRC(13), settled),
-"tight" means `M = 1/13` exactly — the **LRC(13) extremal instance**.
+The question above ("is every primitive tight 12-set a dilate of `{1,…,12}`?") remains **open**.
+Since the settled LRC for twelve nonzero speeds gives `M(A)≥1/13`, "tight" here means
+`M(A)=1/13`.  The present rigorous and computational information is as follows.
 
-- **The `13∣q` localization lemma (PROVED).** At any tight point `t* = p/q` (reduced), some clearance
-  equals `1/13`, i.e. `‖a_j p/q‖ = s/q = 1/13`, forcing `q = 13s` (so `13 ∣ q`); and every residue
-  `a_i p \bmod q` lies in `[q/13, 12q/13]`. At `q = 13` the 12 distinct residues fill `[1,12]` exactly
-  (12 integers, 12 slots) → forced **complete nonzero residue system mod 13**.
-- **Exact census (VERIFIED).** Among the **1820** primitive 12-subsets of `{1,…,16}`, **exactly one**
-  is tight: `{1,…,12}`.
-- **The Goddyn–Wong mechanism fails at `n=12` (VERIFIED).** The `n=13` *sporadic* tight set
-  `{1..11,13,24}` (`M=1/14`, THM-733/734) comes from a large multiple-of-12 "killer." Every `n=12`
-  analog (drop a small speed, add a large `12`/`13`-multiple killer) has `M > 1/13` **strictly** —
-  closest `{1..11,24} = 2/25 = 0.080 > 1/13`; `{1..11}∪\{12k\}` gives `k/(12k+1) ↑ 1/12`. So the exact
-  mechanism that breaks rigidity at `n=13` produces **nothing** at `n=12`.
+- **Denominator localization (PROVED, but weaker than residue completeness).** At a rational tight
+  point `t*=p/q` in lowest terms, an active clearance `s/q=1/13` forces `13∣q`, and all runner residues
+  lie in `[q/13,12q/13]`.  If `q=13`, every residue is nonzero.  Distinct integer speeds need not have
+  distinct residues modulo `13`, however, so this does **not** force a complete nonzero residue system.
+  The former twelve-residues/twelve-slots inference was invalid.
+- **Exact finite evidence (VERIFIED, not a uniform proof).** The original census found only
+  `{1,…,12}` among the 1820 primitive 12-subsets of `{1,…,16}`.  The exact mask census now extends this
+  to all **86,492,770** primitive 12-subsets of `{1,…,30}`, again with `{1,…,12}` the unique tight set.
+  Structured Goddyn–Wong analog and residue-lift searches also find no `n=12` sporadic instance, but
+  their bounded search domains do not establish uniform emptiness.
+- **Ratio and tooth reductions (PROVED).** THM-759 gives `a_12≤12a_11`, sharpened to
+  `a_12≤a_11/(13M(A\{a_12})-1)` on the sporadic branch.  THM-765 gives the exact component criterion
+  `||wc||+wh≤1/13` for every strict safe component of a peeled core and proves hereditary primitivity:
+  every eleven-speed deletion of a primitive tight 12-set has gcd `1`.  Thus imprimitive/common-scale
+  sporadic cores, including the complete-residue defect family isolated there, are uniformly excluded.
+- **Finite height (PROVED).** THM-763 proves that every primitive tight 12-set satisfies
+  `sum_i a_i≤78^11=650190514836423555072`; hence the full equality locus is finite.  This is an explicit
+  decision bound, not a practical exhaustion.
 
 So the bounded computations support the following **corrected equality conjecture**: `M = 1/13` for
 a multi-killer covering 13-set only when its tight block is a **dilate `c·{1,…,12}`** plus a safe

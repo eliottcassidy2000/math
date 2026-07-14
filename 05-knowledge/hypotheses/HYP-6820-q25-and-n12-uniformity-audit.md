@@ -21,6 +21,9 @@ depends_on:
   - HYP-6775
 related:
   - HYP-6780
+  - HYP-6785
+  - HYP-6800
+  - HYP-6815
   - MISTAKE-143
 ---
 
@@ -34,7 +37,7 @@ This audit began with two concrete proof obligations requested together:
    branch of primitive tight 12-speed families is empty.
 
 They now have different outcomes.  The first statement is false.  The second
-has acquired two uniform reductions, but the requested emptiness theorem is
+has acquired several uniform reductions, but the requested emptiness theorem is
 still open.
 
 ## A. The `q<=25` claim is disproved
@@ -136,6 +139,19 @@ test eliminates all 40 narrow candidates; exact pair-sum/difference/half-turn
 evaluation finds zero tight completions among all 790, with bank minimum
 `M=1/12`.  This is finite-exact for that box only.
 
+The exact max-peel tooth atlas gives a further guardrail.  It exhausts all
+primitive twelve-subsets `A` of `{1,...,20}` with `w=max(A)`,
+`M(A\{w})>1/12`, and `M(A)<=1/10`, plus eleven tight AP deletion controls.
+The component criterion agrees with an independent exact-maximum calculation
+on all `2,464` rows.  Every one of the `2,453` escaping rows nevertheless has
+cyclic nearest-tooth winding one, and `1,972` have pure endpoint owners.  The
+first liar to “pure endpoints plus winding one implies cover” is
+`{1,...,10,12,13}`; even requiring a transitive component-phase tournament
+with one Hamiltonian path fails for `{1,...,9,11,12,15}`.  Their minimum
+slacks are respectively `-11/26` and `-43/91`.  Thus winding is a checksum,
+not the missing separator: the width term in
+`sigma_J(w)=1/13-||wc_J||-w h_J` must survive every quotient.
+
 ## C. Binding-scale recursion: what the residue picture was missing
 
 THM-768 eliminates one tempting deep configuration: if the largest speed is
@@ -234,9 +250,12 @@ The exact vertices are witness obligations `(q,a)`, safe components, endpoint
 splices, or the `s` sheet fibres—not runners by default.  Modulus and runner
 tournaments are telemetry: changing gauges flips many edges while the blocker
 verdict stays fixed, and pairwise component compatibility does not imply
-simultaneous tooth containment.  In THM-770 all 66 runner-pair comparisons tie
-throughout the zero-defect leaves, while the endpoint-owner hypergraph still
-distinguishes thirteen solutions.  The deciding objects are therefore:
+containment.  The component-phase atlas makes the same loss explicit: a
+transitive tournament with singleton SCCs and one Hamiltonian path can still
+have negative slack at every component because phase order forgets interval
+width.  In THM-770 all 66 residue-obligation comparisons tie, while the
+endpoint-owner hypergraph still distinguishes thirteen solutions.  The
+deciding objects are therefore:
 
 - the zero-owner/signed-pair blocker deck for small periods;
 - the component-tooth incidence hypergraph with endpoint widths, divisor pins,

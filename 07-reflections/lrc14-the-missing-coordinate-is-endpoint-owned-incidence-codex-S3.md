@@ -107,8 +107,12 @@ for `P={1,...,10,12}`, `M(P)=1/11` but
 For target `1/q`, split each open danger comb into individual teeth
 
 ```
-I(w,m)={t: ||wt||<1/q}.
+I(w,m)={t in R/Z: |wt-m|<1/q},   m in Z/wZ,
 ```
+
+where the absolute-value expression is read on the compatible real lift
+(equivalently `|t-m/w|<1/(qw)`).  The index `m` is part of the tooth data;
+the unindexed condition `||wt||<1/q` denotes the whole comb.
 
 Assume the open danger union is not the whole circle, and let `kappa_q(W)` be
 the number of connected components of its tooth-intersection graph

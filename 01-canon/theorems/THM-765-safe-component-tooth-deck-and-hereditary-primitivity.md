@@ -38,14 +38,16 @@ Then the following hold.
 ### A. Exact safe-component / tooth containment
 
 Every connected component `J` of `E_L(P)` has its closure in one unique
-closed `w`-tooth
+closed `w`-tooth.  Precisely, the teeth on `R/Z` are the images, indexed by
+`k in Z/wZ`, of the real intervals
 
 ```text
-T_k = {t : |w t - k| <= L}.
+T_k = [(k-L)/w,(k+L)/w].
 ```
 
-Choose compatible real lifts and write `J=(a,b)`, `c=(a+b)/2`, and
-`h=(b-a)/2`.  Tooth containment is equivalent to the exact midpoint band
+After choosing compatible real lifts, this is the usual condition
+`|wt-k|<=L`.  Write `J=(a,b)`, `c=(a+b)/2`, and `h=(b-a)/2`.  Tooth
+containment is equivalent to the exact midpoint band
 
 ```text
 ||w c|| + w h <= L,                                    (2)

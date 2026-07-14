@@ -1,6 +1,15 @@
 # The problem contains itself at its scale frontier
 
 *opus-2026-07-14-S299. Companion to THM-761, HYP-6830, and the frontier-map addendum.
+
+**Later codex-S3 referee correction.**  The exact THM-761 sheet budget remains
+valid, but two proposed splices below do not.  The scale-free cores
+`P_N={1,...,11,N}` have `c*=1` and `r_{P_N}>=N/77-O(1)`, refuting raw
+fragmentation/divisibility complementarity.  Also, THM-767 exhibits seven
+exception decks that maintain a covering of `Z_14` with overlap, refuting the
+claim that maintained coverage automatically forces an exact tiling.  Read
+those passages as route proposals; the corrected target is normalized
+boundary intensity plus endpoint-owned slack/minimal-mass hypotheses.
 Written against the owner's prompt: collect the viewpoints, see what we are missing in
 our view of the underlying object, think recursively. External inspiration:
 Frank–Ivanisvili, "The sharp log Sobolev inequality on finite cycles," arXiv:2605.29035.*

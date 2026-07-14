@@ -9,6 +9,7 @@ related:
   - THM-566
   - THM-758
   - THM-760
+  - THM-761
   - THM-764   # independently pushed expanded restatement using the same exact artifact
   - HYP-6820
   - MISTAKE-143
@@ -52,7 +53,7 @@ unit-pair blocker deck misses a card.
 ### Proof
 
 First suppose `gcd(a,q)=g>1`, and reduce `a/q=a_0/q_0`.  Since
-`q<=28`, we have `q_0=q/g<=14`.  Covering gives an `s in S` divisible
+`1<=a<q` and `q<=28`, we have `2<=q_0=q/g<=14`.  Covering gives an `s in S` divisible
 by `q_0`, so `a_0s/q_0` is an integer.  Hence every witness in this range
 must have `a` a unit modulo `q`.
 
@@ -88,7 +89,10 @@ has a witness with denominator at most `25`.
 The examples rule out two possible repairs:
 
 - `V26=26*{1,...,12} union {339}` is the transparent coherent obstruction.
-  Its first rational witness is `2/27`, and `M(V26)=1/13`.
+  Its first rational witness is `2/27`, and `M(V26)=1/13`.  Denominator
+  `26` is still blocked because every speed in the dilated core is divisible
+  by `26`; together with covering below `15` and the decks through `25`, this
+  proves that `27` is indeed first.
 - `S*` has no prime dividing seven of its speeds and every leave-one-out gcd
   is one, so a twelve-speed common-factor dispatch does not explain it.  Its
   first rational witness is `3/26`, while its exact maximum is

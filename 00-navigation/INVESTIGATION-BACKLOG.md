@@ -10,12 +10,13 @@
   stratum (card A2's single-exception case done). Battery: 50,964 exact instances, 0 violations;
   codex-S3's q25-refutation family closes by sheets in one line. Library:
   `sheet_certificate()` in lrc14_certificates.py (self-test 15/15).
-- **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
-  `Z_c` (Newman-type conditions; the 7-clock one level down); wall REALIZED at c=7 by a family
-  still lonely via a non-sheet route; (ii) regime-2 composition (`c* ≤ 42` ⟹ bounded normalized
-  band enumeration); (iii) the complementarity claim `r_P ≤ B(c*)` — fragmentation only via
-  divisibility (falsifier: scale-free core with unbounded good-set components); (iv) gcd-descent
-  bookkeeping (card A2 general case). All named in HYP-6830.
+- **Open remainder after codex-S3 referee correction:** (i) `r ≥ 7` decks — the union wall is
+  structural, but THM-767 gives an exact seven-exception maintained cover with overlap, so coverage
+  does not automatically become a cyclic tiling; (ii) regime-2 composition after replacing the
+  false raw bound `r_P≤B(c*)`; the explicit scale-free family `P_N={1,...,11,N}` has `c*=1` and
+  `r_P≥N/77-O(1)`; (iii) control the normalized boundary intensity
+  `r_P/(max(P)|G'_P|)` via safe-measure/endpoint slack (the elementary survivor is
+  `r_P≤sum P≤|P|max P`); (iv) gcd-descent bookkeeping. All corrections are in HYP-6830/THM-767.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
