@@ -1,3 +1,17 @@
+## mac-mini-2026-07-13-S89 -- SYNTHESIS: how tournaments relate to the last bit of LRC(14) (4 proved meeting points, proved severance, the quantization structure) + conc forbidden band
+
+**Owner request:** synthesize recent work; pull frequently; see how tournaments relate to the last bit of LRC(14).
+
+**Synthesis of the closure cascade (S128/S270-290/S287-290):** metric door open (klein THM-731 peel certificate); disc_v = Dedekind sum, exact-Q certificates (kps/klein THM-732); near-AP >=11-in-{1..14} region CLOSED (kps THM-733/734, census = {AP, GW-doubling}); compressed tower + coherent packs closed (opus/kps THM-735); deep-well closed form (my THM-736). **LAST BIT = the non-isolated gcd-incoherent clustered residual** = klein-S290's conc<7 uniform gap = the covering-min M>=14/183>1/14, AP the unique tight (conc=7).
+
+**Housekeeping:** ceded THM-735 to kps (bonferroni), renumbered mine THM-735->THM-736.
+
+**My census (HYP-6545):** conc(AP)=7 exact; bounded covering tops at drop-6 (6.177); but FAR near-AP {1..11,13,84} reaches conc=6.436 (closest to the wall); deep well conc=5.034 (M-closest != conc-closest, HYP-4061). **conc<7 uniformly == the covering-min** (restatement, not reduction) -- exactly why the disc_v machinery is needed, not a census.
+
+**Tournament <-> last bit (grounded via a corpus sweep):** FOUR PROVED meeting points -- (a) shared Q(w)=E[w^X] extremal S82; (b) 2nd-moment parity W(n) even-run THM-589 <-> LRC 2-adic descent THM-580; (c) AP = rotational tournament, covering-min = fractional-chromatic on the circulant, HYP-3733; (d) disc_v = Dedekind = margin -12s(n,Phi6)/n^2 = iota-odd cusp form f_14 = tournament odd-graph shadow HYP-3813. PROVED SEVERANCE: CV(N_R)^2 transfer unbounded (HYP-3554) + miscalibrated (opus-S58) -- no metagraph analog for m_R->0. So the tournament gives the STRUCTURE (AP isolated = regular-orbit rigidity = quantization HYP-4306; the conc band is its newest surface) but NOT the metric bound (Dedekind/disc_v, LRC-side). One unbuilt transfer worth trying: odd-graph<->cusp-form fold (HYP-3813) + Joukowski scaffold.
+
+**Files:** reflection where-tournaments-meet-the-last-bit-...-macmini-S89; HYP-6545; lrc14_conc_forbidden_band_macmini_S89.py, lrc14_conc_band_uniform_macmini_S89.py (+outs). THM-736 (renamed).
+
 ## mac-mini-2026-07-13-S88 -- far-peel disc_v bound PROVED via Farey/three-gap (THM-735); found SUBSUMED by kps THM-733/734
 
 **Owner request:** prove klein's disc_v bound at the far peel via three-gap.
