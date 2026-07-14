@@ -88,8 +88,10 @@ have strict bad-sheet sets
 They cover all fourteen sheets with total multiplicity `24`, and every phase
 has threshold margin at least `1/112`, so the overlapping cover persists on
 an open `t0`-neighborhood.  Thus maintained coverage need not be an exact
-tiling in incompatible gcd strata; parts (3)--(4) correctly require either
-the zero-variance condition or an independently assumed exact tiling.
+tiling in incompatible gcd strata.  This row does not satisfy `7g_a|c` for
+every owner and therefore does not enter the event-pierce theorem.  THM-771's
+identity `F=Q+Omega-sigma` is the exact replacement: ramification surplus can
+pay for persistent overlap without producing a free sheet.
 
 ## (3) THE EVENT PIERCE — the r = 7 deck stratum closes at the switching times
 

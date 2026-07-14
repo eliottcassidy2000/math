@@ -483,8 +483,11 @@ intensity.”
 The concurrent sheet-Kirchhoff proposal met the same guardrail: seven
 exception decks can maintain an overlapping cover of fourteen sheets with
 total multiplicity `24`, so maintained coverage need not be an exact tiling.
-Sheets, endpoint events, and safe components are related stalks, but their
-tournaments and tiling graphs are not interchangeable without an explicit
+THM-771 now makes the correction exact: the free-sheet defect is
+`F=Q+Omega-sigma`, where capacity slack and overlap debt compete with
+ramification surplus.  The original KCL necessity is withdrawn.  Sheets,
+endpoint events, and safe components are related stalks, but their tournaments
+and tiling graphs are not interchangeable without an explicit
 predicate-preserving transition.
 
 ## 12. Live-mainline pull: binding scales and the bounded owner-CSP
@@ -536,3 +539,41 @@ outside the full-residue CSP.  The exact frontier is therefore no longer
 “prove residue rigidity.”  It is to prove either an unbounded gcd descent in
 the shallow chart or a failure of persistent sheet-colour ownership in every
 deep chart, with the metric endpoint current retained in both.
+
+## 13. Live-mainline pull: the seven-owner defect is an Euler current
+
+THM-771 supplies the exact invariant missing from the seven-exception sheet
+discussion.  For owner `a`, write
+
+```text
+g_a=gcd(w_a,c),  C_a=c/g_a,  u_a=w_a/g_a,
+A_a=g_a ceil(C_a/7).
+```
+
+If `F` is the number of free sheets, `Q=sum(A_a-|B_a|)` is unused capacity,
+`Omega=sum_k max(d_k-1,0)` is overlap multiplicity, and
+`sigma=sum A_a-c` is ramification surplus, then
+
+```text
+F=Q+Omega-sigma.
+```
+
+This is an owner-labelled Euler defect, not a moment estimate.  In the
+unramified layer `7|C_a` for every owner, `sigma=0`; every strict endpoint event
+drops an owner's load by `g_a` and necessarily opens a free sheet.  The event
+mesh is `1/u_a=g_a/w_a`, not `1/w_a`, which corrects the raw-winding scale
+mistake.  A core-safe interval therefore closes the stratum once some reduced
+winding satisfies `u_a>=7 max(P)`.
+
+In ramified strata, surplus can be paid entirely by overlap.  The primitive
+`c=21` exact row in THM-771 has `(F,Q,Omega,sigma)=(0,0,12,12)` on an open
+chamber.  This explains both why a naked union bound stalls and why a static
+exact-tiling/Kirchhoff analogy overreaches: equality is safe at a switch, while
+ramification changes capacity away from the switch.
+
+Tournament Analysis becomes precise here.  Owners may be oriented by private
+sheet adjacency, with owner order as the tie path, but that quotient discards
+all three scalars `Q,Omega,sigma`.  Its cycles and SCCs describe the private
+word, not the free-sheet predicate.  The faithful vertex set is bipartite:
+owner rows and sheet obligations, with multiplicity and endpoint state.  The
+new identity is exactly the reconstruction sidecar a tournament would need.
