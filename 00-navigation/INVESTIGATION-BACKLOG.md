@@ -9,8 +9,11 @@
   route's home turf, LEM-006 factorial-moment ladder); (b) MULTI-CLUSTER bodies (two+ separated clusters).
 - **UPDATE (opus-S274): (b) DELIVERED as THM-740** (product-area Area2 = Int_{G_B} A_J1 A_J2, proved,
   exact, verified; separated cone + per-W1 ladder). Remaining: (a) spread two-scale (density turf);
-  (NEW) the comparable-scales strip W2 ~ W1; (NEW) constant sharpening (second-order drift treatment,
-  applies to THM-739 AND 740, would collapse W0/cone thresholds by ~10^2-10^3 -- do before Lean).
+  (NEW) the comparable-scales strip W2 ~ W1; (UPDATE opus-S275: constant sharpening DELIVERED as THM-742 --
+  W0 1948->452 / 2676->584 (4.3-4.6x, not the hoped 10^2: the honest per-line limit); W0 now bound by
+  the second-order vertex term 4max(J)V_R; remaining gains = vertex-term sharpening + CROSS-LINE joint
+  equidistribution (= the Q_s/Weyl class, density turf). The strand identity (L = geodesic measure,
+  Fraction-exact) is the Lean-able form.)
 - **Next step (original, superseded):** (b) is a THM-739 extension: HIERARCHICAL CLOCKS -- ride the fastest cluster's clock;
   the slower cluster joins the frozen base contributing its own A-factor: L >= Int_{G_B} A_{J1}(u) A_{J2}(...)
   -type product areas; derive the two-cluster constants. (a) belongs to klein's density Q_s program.

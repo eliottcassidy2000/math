@@ -1,0 +1,46 @@
+========================================================================================================
+THM-742: exact-fiber second-order drift sharpening -- verification (exact Fractions)
+========================================================================================================
+
+shape 1 {1}u{W..W+11}:  Area = 1039/13860 = 0.074964
+   arrangement: #comp(G_B)=1, Xi=6.246 over 172 true segments, V_R=129, Sum j^2=506, max J=11
+   constants: derived C1=7.25 C2=4356 ; stated (2x) C1=14.49 C2=8712 ; crude THM-739 C~146
+   strand identity at W=30: engine L = 270985164113/3649178573040 ; strand sum = 270985164113/3649178573040 ; EQUAL: True
+        W     |L-Area|     stated bnd    derived bnd     ok(st)    ok(der)
+       10     0.005649      88.569206      44.284603       True       True
+       20     0.001139      22.504603      11.252302       True       True
+       30     0.000705      10.163069       5.081534       True       True
+       50     0.000271       3.774641       1.887321       True       True
+       90     0.000081       1.236578       0.618289       True       True
+      150     0.000014       0.483814       0.241907       True       True
+      250     0.000127       0.197360       0.098680       True       True
+      400     0.000024       0.090680       0.045340       True       True
+      800     0.000083       0.031728       0.015864       True       True
+   NEW W0 (stated constants) = 452   (crude THM-739 W0 = 1948)  -> 4.3x reduction
+   violations: stated 0, derived 0
+
+shape 2 {1,2,3}u{W..W+9}:  Area = 2767/61740 = 0.044817
+   arrangement: #comp(G_B)=4, Xi=5.569 over 154 true segments, V_R=66, Sum j^2=285, max J=9
+   constants: derived C1=9.57 C2=2043 ; stated (2x) C1=19.14 C2=4086 ; crude THM-739 C~120
+   strand identity at W=30: engine L = 80173648883/1869091464240 ; strand sum = 80173648883/1869091464240 ; EQUAL: True
+        W     |L-Area|     stated bnd    derived bnd     ok(st)    ok(der)
+       10     0.025410      42.773878      21.386939       True       True
+       20     0.008334      11.171939       5.585969       True       True
+       30     0.001923       5.177959       2.588980       True       True
+       50     0.004163       2.017176       1.008588       True       True
+       90     0.000765       0.717098       0.358549       True       True
+      150     0.000191       0.309192       0.154596       True       True
+      250     0.000532       0.141931       0.070966       True       True
+      400     0.000084       0.073384       0.036692       True       True
+      800     0.000103       0.030308       0.015154       True       True
+   NEW W0 (stated constants) = 584   (crude THM-739 W0 = 2676)  -> 4.6x reduction
+   violations: stated 0, derived 0
+
+--------------------------------------------------------------------------------------------------------
+THM-740 INNER RIDE sharpened: C_in^sharp = 2(#comp(G_B)+Xi(J1)) + V(A_J2)  (kills |J1|max(J1)):
+   Xi(J1)=6.857 (60 segs), V(A_J2)=6.10 -> C_in^sharp = 21.81  (crude C_in was 44.7)
+   W1=  30 : |Int - Area2| = 0.002860   sharp bound C_in^sharp/W1 = 0.726984   ok=True
+   W1=  60 : |Int - Area2| = 0.000496   sharp bound C_in^sharp/W1 = 0.363492   ok=True
+   W1= 120 : |Int - Area2| = 0.000982   sharp bound C_in^sharp/W1 = 0.181746   ok=True
+
+done.
