@@ -64,6 +64,18 @@ reconstruction must pad with the STATIC arc-0 boundaries (runs bounded by the or
 -- 2^-55 noise masquerading as a formula error.  The per-strip bisection against exact
 f(m), g(m) localized (1)-(2) in one pass.
 
+## Lean (opus-S284)
+
+`04-computation/lean/TournamentH7/TournamentH7/LRCClosedBudget.lean` -- the ALGEBRAIC SPINE,
+sorry-free, KERNEL-PURE ([propext, Classical.choice, Quot.sound], audited): F_step_nowrap/wrap
+(THM-745's atoms), strong_no_wrap (S280, the origin band), per_crossing_exact +
+sigma_fixed_point (the exact wedge), kappaD/kappaB/sigmaCross with kappaD_at_zero (the phi=0
+degeneracy) and the THM-743-style bound, floor/ceil grid lemmas + grid_count_match (S279
+Lemma C) + fract_int_shift (the mirror kernel), and the COMPUTABLE Q budget spec (Seg/Ev data,
+segPQ/evK/budget, ClosedBudgetSpec as a DECIDABLE Prop -- instance re-verification is a
+`decide` away; the exact-Q python referee is its semantic witness).  Organized by the
+perspective frame: origin band / spokes / telescoping / pair events / mirror / spec.
+
 ## Files
 
 04-computation/lrc14_closed_budget_thm748_opus_S283.py (+.out, incl. scan appendices).

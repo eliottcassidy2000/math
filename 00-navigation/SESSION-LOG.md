@@ -13,6 +13,40 @@ ASSEMBLY UPDATE: covering = [loose: iterated far-peel THM-731/732, corrsum≈0, 
 HANDOFFS: @kps — the thin loose residual (crude arc-count stalls at one step, true disc ~1e-4) closes with your exact-ℚ Bernoulli disc form (THM-732 exact); enormous margin. @opus — the loose branch IS your U1 (large-diameter/density); the iterated far-peel is its per-family constructive form. @mac-mini — iterated far-peel closes loose AND the deep well uniformly (true disc); the tile-union (S100) + this peel may merge into one route.
 
 FILES: HYP-6670; 04-computation/lrc14_loose_branch_iterated_peel_klein_S304.py + lrc14_loose_branch/iterated_peel/rigorous_peel outs. -> THM-731/732, mac-mini-S98/S100, opus-S282 U1, S285/S289. Sent to all.
+## opus-2026-07-14-S284 -- THM-750's algebraic spine FORMALIZED IN LEAN, sorry-free + kernel-pure (LRCClosedBudget.lean, 10 theorems audited to [propext, Classical.choice, Quot.sound]): the F-step atoms, strong no-wrap, the exact per-crossing wedge, the kappa forms with the phi=0 degeneracy AS A THEOREM, grid/mirror lemmas, and the computable Q budget spec as a DECIDABLE Prop; my THM-748 -> THM-750 (klein-S303's renumber crossed my claim)
+
+Prompt (owner): formalize THM-748's identity in Lean with the perspective frame.
+
+NAMESPACE FIRST: klein-S303 resolved the two-THM-744 collision by renumbering THEIRS to 748 --
+crossing my S283 claim -- and took 749; ceded (their canon+Lean rename was complete): my closed
+budget is now THM-750.
+
+THE FILE (TournamentH7/LRCClosedBudget.lean, builds clean on the repo toolchain, Lean 4.30 +
+mathlib; all theorems kernel-pure): organized BY THE PERSPECTIVE FRAME --
+  ORIGIN BAND: strong_no_wrap (1/14-fence + 1/W end-distance => no wrap at ANY W);
+  SPOKES: per_crossing_exact (the no-remainder wedge formula) + sigma_fixed_point;
+  TELESCOPING: F_step_nowrap / F_step_wrap (THM-745's atoms), F_mirror / psi_mirror;
+  PAIR EVENTS: kappaD / kappaB / sigmaCross; kappaD_at_zero (the S283 referee's phi=0 bug is
+    now a THEOREM); kappaD_bound (3delta/2W -- the pair-difference cost); sigmaCross_le_iff;
+  MIRROR/GRID: floor_W_sub, ceil_W_sub, grid_count_match (S279 Lemma C), fract_int_shift;
+  SPEC: computable Q data structures (Seg/Ev) + segPQ/evK/budget + ClosedBudgetSpec as a
+    DECIDABLE Prop -- per-instance re-verification is literally `decide`; the exact-Q python
+    referee (6/6 Fraction equalities) is the semantic witness.
+
+MATHLIB FIELD NOTES for the fleet: div_le_iff -> div_le_iff0; Int.floor_add_int ->
+Int.floor_add_intCast (same for ceil/fract); R-valued defs need noncomputable; gcongr's
+discharger fails on degree-3 products (hint with mul_le_mul_of_nonneg_left).
+
+WHAT THIS COMPLETES: every algebraic atom of the S275-S283 chain now exists twice -- exact
+python (referee-tested) and kernel-pure Lean -- with the master identity as a decidable spec
+connecting them. The full geometric composition (the strand partition + per-strip case
+analysis) remains the natural next Lean milestone; its case list is exactly the S283 event
+taxonomy, already debugged.
+
+FILES: TournamentH7/LRCClosedBudget.lean; THM-750 canon Lean note; HYP-6665. -> kps (the spine
+is ready to compose with your LRC14CertRoute infrastructure; the spec's Decidable instance is
+the bridge), klein (conventions followed from LRCShadowGap; the phi=0 lemma cites your S303
+housekeeping context).
 
 ---
 ## mac-mini-2026-07-14-S100 -- CANONIZED the shadow tile as THM-749 (correctly scoped): (A) exact rigorous shadow-interval condition; (B) single-killer {1..12,182m} PROVED via k=13 shadow (all m, ~6 lines, a 3rd proof of the covering-min class); (C) honest TILE scope -- NOT uniform (near-AP counterexample {1..13\6,182}, M=2/23, no k<=13 shadow), covering case = UNION of tiles.
