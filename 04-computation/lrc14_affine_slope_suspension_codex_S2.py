@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Exact audit of HYP-6815's affine-slope threshold suspension.
 
-For V(c)=cP+R, the identity
+For V(c)=cA+R, the identity
 
-    min_i ||(c p_i+r_i)t|| = min_i ||p_i u+r_i t||,  u={ct},
+    min_i ||(c a_i+r_i)t|| = min_i ||a_i u+r_i t||,  u={ct},
 
 turns a scale family into integer-slope slices of one two-torus field.  This
 script verifies the identity at every exact peak in a small adversarial bank,
-checks the pure-dilation cylinder and the HYP-6780 near-dilate ray, and audits
+checks the pure-dilation cylinder, distinguishes fixed-core far-coordinate
+dilation from global dilation, checks the HYP-6780 near-dilate ray, and audits
 which quotients preserve covering, M, safe measure, components, cap status,
 and low-support relation data.
 
@@ -37,12 +38,12 @@ def circle_dist(x):
     return min(x, 1 - x)
 
 
-def affine_body(P, R, c):
-    return tuple(c * p + r for p, r in zip(P, R))
+def affine_body(A, R, c):
+    return tuple(c * a + r for a, r in zip(A, R))
 
 
-def affine_phi(P, R, u, t):
-    return min(circle_dist(p * u + r * t) for p, r in zip(P, R))
+def affine_phi(A, R, u, t):
+    return min(circle_dist(a * u + r * t) for a, r in zip(A, R))
 
 
 def exact_peak(body):
@@ -83,15 +84,15 @@ def cap_data(body):
     return cap, ratio
 
 
-def sum_relation_signature(P, R, c=None):
-    """Projected support-3 relations p_i+p_j-p_k as (a.P,a.R,owners)."""
+def sum_relation_signature(A, R, c=None):
+    """Projected support-3 relations a_i+a_j-a_k with marked owners."""
     out = []
-    for i in range(len(P)):
-        for j in range(i + 1, len(P)):
-            for k in range(len(P)):
+    for i in range(len(A)):
+        for j in range(i + 1, len(A)):
+            for k in range(len(A)):
                 if k == i or k == j:
                     continue
-                m = P[i] + P[j] - P[k]
+                m = A[i] + A[j] - A[k]
                 n = R[i] + R[j] - R[k]
                 if c is None or c * m + n == 0:
                     out.append((m, n, i + 1, j + 1, k + 1))
@@ -170,35 +171,53 @@ def tournament_fingerprint(scores, tie_path):
 
 
 def main():
-    P13 = tuple(range(1, 14))
+    A13 = tuple(range(1, 14))
     zero13 = (0,) * 13
 
     print("HYP-6815 AFFINE-SLOPE THRESHOLD SUSPENSION")
     print("\nExact slice identity on the pure cylinder:")
     for c in (1, 2, 3, 5):
-        body = affine_body(P13, zero13, c)
+        body = affine_body(A13, zero13, c)
         t, M = exact_peak(body)
-        phi = affine_phi(P13, zero13, (c * t) % 1, t)
+        phi = affine_phi(A13, zero13, (c * t) % 1, t)
         assert phi == M == F(1, 14)
         print(f"  c={c}: t*={t}, Phi(ct*,t*)=M={M}, L={L_exact(body)}")
 
     print("\nHYP-6780 positive-measure core cylinder:")
-    P12 = tuple(range(1, 13))
-    base_ivs = good_intervals(P12)
+    A12 = tuple(range(1, 13))
+    base_ivs = good_intervals(A12)
     base_G = sum((b - a for a, b in base_ivs), F(0))
     base_r = len(base_ivs)
     for c in (1, 2, 3, 5):
-        ivs = good_intervals(tuple(c * p for p in P12))
+        ivs = good_intervals(tuple(c * a for a in A12))
         G = sum((b - a for a, b in ivs), F(0))
         assert G == base_G and len(ivs) == c * base_r
         print(f"  c={c}: |G|={G}, components={len(ivs)}={c}*{base_r}")
 
+    print("\nFixed-core far-coordinate dilation monoid:")
+    C9 = tuple(range(1, 10))
+    far = (22, 26, 28, 60)
+    base = C9 + far
+    doubled = C9 + tuple(2 * w for w in far)
+    assert primitive(base) and primitive(doubled)
+    assert is_covering(base) and is_covering(doubled)
+    t_base, M_base = exact_peak(base)
+    t_doubled, M_doubled = exact_peak(doubled)
+    assert (t_base, M_base) == (F(6, 61), F(6, 61))
+    assert (t_doubled, M_doubled) == (F(12, 121), F(12, 121))
+    assert M_base != M_doubled
+    print(f"  C={{1,...,9}}, far={far}: M={M_base} at t*={t_base}, covering=True")
+    print(
+        f"  C fixed, far doubled={tuple(2 * w for w in far)}: "
+        f"M={M_doubled} at t*={t_doubled}, covering=True"
+    )
+
     print("\nTransverse-shear ray R=e_13:")
     R13 = (0,) * 12 + (1,)
     for c in (26, 91):
-        body = affine_body(P13, R13, c)
+        body = affine_body(A13, R13, c)
         t, M = exact_peak(body)
-        phi = affine_phi(P13, R13, (c * t) % 1, t)
+        phi = affine_phi(A13, R13, (c * t) % 1, t)
         assert primitive(body) and is_covering(body) and phi == M == F(1, 13)
         print(f"  c={c}: max={max(body)}, t*={t}, slice M={M}, covering=True")
 
@@ -207,10 +226,10 @@ def main():
     killed = []
     for owner in (0, 6, 12):
         R = tuple(1 if i == owner else 0 for i in range(13))
-        projected = sum_relation_signature(P13, R)
+        projected = sum_relation_signature(A13, R)
         shape = [x for x in projected if x[0] == 0]
         persistent = [x for x in shape if x[1] == 0]
-        actual = sum_relation_signature(P13, R, c=2)
+        actual = sum_relation_signature(A13, R, c=2)
         assert actual == tuple(persistent)
         shape_counts.add(len(shape))
         killed.append(len(shape) - len(persistent))
@@ -224,16 +243,16 @@ def main():
     for owner in (0, 6, 12):
         R = tuple(1 if i == owner else 0 for i in range(13))
         for c in (2, 16):  # identical c mod 14, very different endpoint height.
-            body = affine_body(P13, R, c)
+            body = affine_body(A13, R, c)
             assert primitive(body) and len(set(body)) == 13
             t, M = exact_peak(body)
             u = (c * t) % 1
-            assert affine_phi(P13, R, u, t) == M
+            assert affine_phi(A13, R, u, t) == M
             ivs = good_intervals(body)
             cap, cap_ratio = cap_data(body)
             rows.append(
                 {
-                    "P": P13,
+                    "A": A13,
                     "R": R,
                     "c": c,
                     "covering": is_covering(body),
@@ -243,18 +262,18 @@ def main():
                     "components": len(ivs),
                     "cap": cap,
                     "cap_ratio": cap_ratio,
-                    "relations": sum_relation_signature(P13, R, c),
+                    "relations": sum_relation_signature(A13, R, c),
                 }
             )
 
     carriers = {
-        "shape_only": lambda x: x["P"],
-        "offset_multiset": lambda x: (x["P"], tuple(sorted(x["R"]))),
-        "owner_resolved_offset": lambda x: (x["P"], x["R"]),
+        "shape_only": lambda x: x["A"],
+        "offset_multiset": lambda x: (x["A"], tuple(sorted(x["R"]))),
+        "owner_resolved_offset": lambda x: (x["A"], x["R"]),
         "dual_relation_signature": lambda x: x["relations"],
-        "owner_offset_cmod14": lambda x: (x["P"], x["R"], x["c"] % 14),
+        "owner_offset_cmod14": lambda x: (x["A"], x["R"], x["c"] % 14),
         "exact_peak_certificate": lambda x: x["peak"],
-        "full_affine_slope_packet": lambda x: (x["P"], x["R"], x["c"]),
+        "full_affine_slope_packet": lambda x: (x["A"], x["R"], x["c"]),
     }
     fields = ("covering", "M", "L", "components", "cap", "relations")
 

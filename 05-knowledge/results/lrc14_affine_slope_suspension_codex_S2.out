@@ -12,6 +12,10 @@ HYP-6780 positive-measure core cylinder:
   c=3: |G|=6617/194040, components=36=3*12
   c=5: |G|=6617/194040, components=60=5*12
 
+Fixed-core far-coordinate dilation monoid:
+  C={1,...,9}, far=(22, 26, 28, 60): M=6/61 at t*=6/61, covering=True
+  C fixed, far doubled=(44, 52, 56, 120): M=12/121 at t*=12/121, covering=True
+
 Transverse-shear ray R=e_13:
   c=26: max=339, t*=27/338, slice M=1/13, covering=True
   c=91: max=1184, t*=92/1183, slice M=1/13, covering=True

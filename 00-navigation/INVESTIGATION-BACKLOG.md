@@ -25,19 +25,26 @@
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.
 - **Status:** OPEN, with the carrier and several exact lemmas now identified.  For each nine-speed core
-  `P subset {1,...,14}`, the first open `f=4` stratum is an arithmetic cone `X_P subset Z^4`, a finite
-  union of residue classes mod `360360`.  Its predicate is the surjectivity of the universal safe
-  incidence over an owner-colored cubical endpoint loop.  Affine rays `cP+R` are exact integer-slope
-  slices of a two-torus threshold field; the dual relation packet lies on `c(z.P)+z.R=0`.
+  `C subset {1,...,14}`, the first open covering exactly-`f=4` stratum is a semilinear rank-four chart
+  `X_C subset Z^4`, with finitely many residue addresses mod `360360` but unbounded heights.  Its
+  predicate is the surjectivity of the universal safe incidence over a fiberwise family of
+  owner-colored cubical endpoint loops.  The broader affine families `cA+R` are exact integer-slope
+  slices of a two-torus threshold field; the relation packet retains the marked weighted preimages of
+  `c(z.A)+z.R=0`.  Each `X_C` has an exact far-coordinate action `g->k*g` preserving covering, but this
+  fixes `C` and can change the metric fiber, so it is a recursion direction rather than a free quotient.
 - **Information guardrail:** fixed-threshold truth needs signed owner event blocks and tie ownership;
-  exact `M` needs a threshold filtration or peak witness; measure/THM-731 needs rational gaps and signed
-  endpoints; covering needs the divisor mask; THM-755 needs the projective cap ratio; deletion/scale
-  transport needs the fiber action.  AP versus `{1,...,12,26}` proves endpoint tournament + divisor +
-  cap sign is still insufficient for `M`.
-- **Next theorem:** prove a well-founded cone descent.  Every infinite normalized path must enter a
-  coherent pack/cluster face, gain a uniform lonely margin, emit a bounded-height marked circuit meeting
-  all four far coordinates, or descend to a smaller packet.  First executable subtarget: observability
-  matrix over the actual 2002-core `f=4` bank, followed by a finite-jet-at-infinity test for `cP+R`.
+  exact `M` needs a threshold filtration or a peak plus maximality certificate; measure/THM-731 needs
+  rational gaps and signed endpoints; covering needs the divisor mask; THM-755 needs the projective cap
+  comparison; deletion/scale transport needs the fiber action.  AP versus `{1,...,12,26}` proves
+  endpoint tournament + divisor +
+  cap sign is still insufficient for `M`.  HYP-6820 refutes a uniform `q<=25` terminal clock even on the
+  `c=26` shear ray and on a gcd-incoherent residual; retain an adaptive exact-period/blocker deck.
+- **Next theorem:** define a projective/tropical compactification and well-founded packet order, then
+  prove a subsequential cone descent: every unbounded cone sequence stabilizes an address/face and either
+  enters a coherent pack/cluster regime, gains a uniform lonely margin, emits a bounded-height marked
+  circuit meeting all four far coordinates, or descends to a smaller packet.  First executable subtarget:
+  classify the owner-event cocycle under `g->k*g`, then build an observability matrix over the actual
+  2002-core `f=4` bank and run a finite-jet test for `cA+R`.
 - **Tournament mapping:** vertices are representation carriers; observable is proof-critical fiber pairs
   separated; predicate-first versus compression-first gauges give 11 edge flips.  Raw runners and raw
   endpoints are explicitly rejected as sufficient vertex sets.
