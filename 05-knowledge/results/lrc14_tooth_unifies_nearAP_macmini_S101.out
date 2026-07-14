@@ -1,0 +1,25 @@
+
+{1..13}\{6}+182m: core M=0.08696, t0~0.82609~19/23 (q=23); w=182; ALIGNED(q|w)? False; pmax=13
+   THM-751 bound mu0*wm/(wm+pmax) vs actual M(core u {182m}):
+     m=1: bound~0.08116  actual M=0.08696  bound<=M? True  M>=1/14? True
+     m=2: bound~0.08396  actual M=0.08696  bound<=M? True  M>=1/14? True
+     m=3: bound~0.08493  actual M=0.08602  bound<=M? True  M>=1/14? True
+     m=4: bound~0.08543  actual M=0.08696  bound<=M? True  M>=1/14? True
+
+{1..13}\{6,7}+ 14m? core+169: core M=0.14286, t0~0.28571~2/7 (q=7); w=169; ALIGNED(q|w)? False; pmax=13
+   THM-751 bound mu0*wm/(wm+pmax) vs actual M(core u {169m}):
+     m=1: bound~0.13265  actual M=0.14286  bound<=M? True  M>=1/14? True
+     m=2: bound~0.13757  actual M=0.14286  bound<=M? True  M>=1/14? True
+     m=3: bound~0.13929  actual M=0.14286  bound<=M? True  M>=1/14? True
+     m=4: bound~0.14016  actual M=0.14286  bound<=M? True  M>=1/14? True
+
+{1..12}+182m (control, shadow-closed): core M=0.07692, t0~0.53846~7/13 (q=13); w=182; ALIGNED(q|w)? True; pmax=12
+   THM-751 bound mu0*wm/(wm+pmax) vs actual M(core u {182m}):
+     m=1: bound~0.07216  actual M=0.07650  bound<=M? True  M>=1/14? True
+     m=2: bound~0.07447  actual M=0.07671  bound<=M? True  M>=1/14? True
+     m=3: bound~0.07527  actual M=0.07678  bound<=M? True  M>=1/14? True
+     m=4: bound~0.07568  actual M=0.07682  bound<=M? True  M>=1/14? True
+
+=> if aligned (q|w) and the bound holds for the near-AP q=14 cores, THM-751 (tooth-narrowing at
+ANY q) closes the near-AP-with-far families the k<=13 SHADOW MISSED (S99) -- UNIFYING the shadow
+(q<=13) and near-AP (q=14) tiles as ONE mechanism: an aligned tooth at the core's tight point.

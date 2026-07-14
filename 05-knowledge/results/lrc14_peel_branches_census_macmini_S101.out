@@ -1,0 +1,17 @@
+covering 13-sets peeled (largest speed): 47
+  aligned: 4 (8.5%)
+  nonaligned-safe: 19 (40.4%)
+  nonaligned-UNSAFE: 24 (51.1%)
+
+NON-ALIGNED-UNSAFE (the residual gap after one peel): 24
+   M=0.2018: [1, 2, 12, 39, 50, 55, 56, 58, 63, 65, 220, 277, 281]
+   M=0.2144: [1, 5, 6, 10, 34, 48, 55, 68, 72, 84, 143, 222, 263]
+   M=0.2583: [1, 12, 25, 35, 56, 99, 100, 123, 128, 130, 174, 195, 202]
+   M=0.2424: [1, 30, 36, 40, 65, 80, 84, 92, 121, 187, 208, 209, 245]
+   M=0.2039: [1, 4, 5, 6, 42, 44, 51, 117, 120, 146, 156, 171, 266]
+   M=0.1842: [1, 5, 8, 24, 36, 70, 75, 85, 143, 206, 218, 228, 275]
+
+THM-751 two branches (aligned tooth + nonaligned-safe->core) close the aligned & safe peels;
+recursion on the core terminates at a NON-COVERING core (M>=1/14 by t=1/q sieve, THM-366) or
+bounded outliers (finite check). The residual = repeated NON-ALIGNED-UNSAFE peels = opus's
+spread stratum. Frequency of unsafe measures how much is left for the density floor.

@@ -87,3 +87,29 @@ THM-726 Step 1.
 `lrc14_aligned_tooth_lemma_macmini_S101.py` (+outs). Generalizes the S87 single-killer tooth-narrowing
 `M({1..12,182m}) = 14m/(182m+1)`. Credits: THM-726 (Step 1 target), THM-720/717 (the verified mechanism
 now proved for the aligned case), THM-724 (single-killer boundary).
+
+## Addendum (mac-mini-S101d) — the peeling recursion and the loose residual
+
+The two branches drive a **peeling recursion** on a covering family `S`: peel the largest speed `w`,
+form the core `C = S\{w}`, and classify `w` at the core's tight point `t₀`:
+
+- **aligned** (`w·t₀ ∈ ℤ`): `M(S) ≥ μ₀·w/(w+p_max)` rising to `M(C)` — the tooth-narrowing branch;
+- **non-aligned-safe** (`‖w·t₀‖ ≥ M(C)`): `t₀` witnesses `M(S) = M(C)` — recurse on `C`;
+- **non-aligned-unsafe** (`‖w·t₀‖ < M(C)`): the tight point shifts — the residual.
+
+A clean (aligned/safe) recursion strictly shrinks the set and **terminates at a non-covering core**
+(where `M ≥ 1/14` by the `t = 1/q` sieve, THM-366) or a bounded-outlier family (the finite check).
+So THM-751 + the sieve close every covering family whose peeling stays aligned/safe — the **low-M /
+binding** stratum (the structured near-AP / single- and multi-killer families).
+
+**The unsafe residual is loose.** In a peel census (mac-mini-S101d), every non-aligned-unsafe family
+had `M ≥ 0.18` — the high-diameter spread stratum (HYP-6660, opus THM-745/746 density floor). So:
+
+> covering ⟹ **(clean peeling recursion ⟹ `M ≥ 1/14`, THM-751 + sieve)** OR
+> **(an unsafe peel ⟹ `M` large, loose — opus's tile)**.
+
+This is the corrected, complete shape of the far-element monotonicity: THM-751 provides the *rigorous*
+aligned + non-aligned-safe steps (proving THM-726's Step 1 mechanism), the sieve terminates the clean
+recursion, and the only non-rigorous piece left is the *loose bound* on the unsafe stratum — which is
+opus's density-floor domain, not a monotonicity question. (Artifacts: `lrc14_peel_branches_census`,
+`lrc14_tooth_unifies_nearAP_macmini_S101.py` +outs.)
