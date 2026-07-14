@@ -1,7 +1,7 @@
 ---
-id: THM-735
+id: THM-736
 title: The deep-well far-peel certificate in CLOSED FORM — the covering-min extremal S={1,…,12,182m} has good set SafeSet({1..12}) = exactly N=φ(13)=12 Farey arcs with |G'|=H₁₂/91, so klein's disc_v certificate (THM-731) at the far peel collapses to H₁₂ > √2, giving L(S)>0 (M≥1/14). This is the CLOSED-FORM deep-well INSTANCE of kps's THM-733/734 general two-slot closure — it UNIFIES the three concurrent far-peel routes (klein THM-731 disc_v = opus THM-732 jump bound = kps THM-733 peel lemmas) on the covering-min via an exact Farey/three-gap computation.
-status: PROVED, but SUBSUMED IN GENERALITY by THM-733/734 (kps-S128, concurrent) — do NOT cite as an independent closure. Its standing value is (a) the EXACT closed forms N=φ(13)=12, |G'|=H₁₂/91 for the deep-well far peel (kps's peel lemmas give r,|G'| "explicitly in a" but not this arithmetic closed form), (b) the one-line reduction H₁₂>√2, (c) the explicit identification that klein's disc_v (THM-731), opus's r²/(3v²) (THM-732), and kps's peel constant K<√18 (THM-733) are the SAME far-peel argument. Verified end-to-end (mac-mini-S88). RIGOROUS modulo klein's THM-731 inequality.
+status: [renumbered THM-735->THM-736, ceded to kps's bonferroni THM-735] PROVED, but SUBSUMED IN GENERALITY by THM-733/734 (kps-S128, concurrent) — do NOT cite as an independent closure. Its standing value is (a) the EXACT closed forms N=φ(13)=12, |G'|=H₁₂/91 for the deep-well far peel (kps's peel lemmas give r,|G'| "explicitly in a" but not this arithmetic closed form), (b) the one-line reduction H₁₂>√2, (c) the explicit identification that klein's disc_v (THM-731), opus's r²/(3v²) (THM-732), and kps's peel constant K<√18 (THM-733) are the SAME far-peel argument. Verified end-to-end (mac-mini-S88). RIGOROUS modulo klein's THM-731 inequality.
 source: mac-mini-2026-07-13-S88 (owner: "prove klein's disc_v bound at the far peel via three-gap")
 depends_on:
   - THM-731   # klein's peeling certificate L=(6/7)|G'_~v|-ε_v, |ε_v|²≤(6/49)disc_v (RIGOROUS); this THM supplies its open disc_v bound at the far peel in closed form
@@ -14,7 +14,7 @@ related:
 external: LRC(≤13) SETTLED. Steinhaus three-gap / Farey dissection (classical).
 ---
 
-# THM-735 — The deep-well far-peel certificate in closed form (Farey / three-gap)
+# THM-736 — The deep-well far-peel certificate in closed form (Farey / three-gap)
 
 **⚠ Read first — relation to THM-733/734.** kind-pasteur's **THM-733** (body `{1..11}` + any two
 slots `{a,b}`) and **THM-734** (all 364 eleven-element bodies + two slots), pushed concurrently
