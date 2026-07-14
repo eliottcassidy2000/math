@@ -1,3 +1,45 @@
+## opus-2026-07-14-S302 -- THM-779 PROVED: the r=8 TOKEN-WALK BLOCKING CRITERION (fusing boxeph's THM-773 token algebra with HYP-6840's rainbow frame: full deck blocking = an integer-decidable walk condition; adversarial census K0 = 5 consecutive covered walls; any core-safe component with more walls is PIERCED; HYP-6840 Q1 resolved-negative in practice, Q2 holds with K0 working)
+
+Prompt (owner): continue the highest-leverage work; pull the fleet's progress first.
+
+FLEET PULL FIRST: boxeph/codex-S6 proved THM-773 (c=7 token algebra: owner a blocks exactly
+k_a = -w_a^{-1} round(w_a x) mod 7; coverage iff X^7-X | prod(X-k_a); the 25-mask heptagon
+stalk) and messaged me the suggested pull: absent-eighth-owner transport over the stalk +
+the exact factorization of my S300/S301 survivor. Also: THM-774 COLLISION resolved by
+codex-S9 (my safe-measure floor is now THM-777; their folded-diamond keeps 774) -- stale
+references fixed in HYP-6835/6840, both INDEXes, script header.
+
+THE THEOREM (THM-779): (1) CRITERION PROVED -- full r=8 blocking over J at the prime-7 lens
+iff [pieces: the 8 tokens cover F_7] + [walls: the 7 non-walling tokens are EXACTLY F_7,
+i.e. the waller carries the collision pair] + [no simultaneous walls]. Pure integer walk,
+O(#walls), replacing S301's Fraction chamber search. Token formula refereed exactly on
+4,000 random rational points + own-wall blanks + S301 cross-validation. (2) THE CHAIN: after
+a's wall the collision pair is (a, gamma), gamma = holder(token_a - w_a^{-1}); the next
+wall's owner must lie in the pair -- every owner switch is a ~1/7 algebraic coincidence
+(SURJ density 28*7!/7^8 = 2.45%; global carry -1 per unit x; period 7). (3) CENSUS: 120
+random 8-tuples (w <= 500): median max blocking run = 1 wall, 90th pct = 2, max = 4;
+annealed maximum K0 = 5 at {8,13,19,23,92,359,372,438}. (4) SURVIVOR FACTORED: the 19/216
+one-moment survivor has tokens [None,6,5,3,1,4,2,0] exactly as boxeph predicted (absent
+owner 108 + heptagon rainbow); its blocking run is EXACTLY 1 wall -- the algebra's minimal
+case, not a blocking seed. (5) CONSEQUENCE: any core-safe component containing > K0 walls
+cannot be fully blocked (a full 1/14-witness moment exists inside); HYP-6840 Q1
+resolved-negative in practice; Q2 (the positive r=8 pierce) holds with K0 = 5 working.
+REMAINING (THM-779 section 5, honest): the UNCONDITIONAL exit lemma (a K-run forces K-1
+schedule-vs-algebra coincidences; schedule three-distance-rigid vs orbit-large hop targets;
+classify the mod-7 degeneracy packets -- boxeph's 25-mask stalk + Nerode is the right
+machinery); tiny components (<= K0 walls) fall to the direct piece check; other-prime
+lenses mechanical but unwritten.
+
+THE ARC ACROSS S299-S302, one line each: S299 sheets close r<=6 (THM-761); S300 events
+pierce r=7 (THM-767/771, corrected collaboratively); S301 the floor + the no-go hunt flips
+(THM-777, HYP-6840); S302 the token walk closes in on r=8 (THM-779) -- the deck program has
+advanced from a union bound to symbolic dynamics in four sessions, four agents interleaving.
+
+FILES: 01-canon/theorems/THM-779-r8-token-walk-blocking-criterion.md;
+04-computation/lrc14_r8_token_walk_criterion_opus_S302.py (+ .out); HYP-6840 Q1-Q3 updated;
+THM-774->777 reference fixes; reply to boxeph; results INDEX.
+
+---
 ## opus-2026-07-14-S301 -- SIGNAL FROM NOISE: THM-774 (the safe-measure floor: exact census min |G'| = 7/858 UNIQUELY at {1..13}-{6}, kps's detuning extremal one level down; no decay under the full battery; rho bridge => regime-2 bounded on floored strata) + HYP-6840 (the r=8 deck no-go hunt RESOLVED-NEGATIVE with the conclusion FLIPPED: full blocking needs DMNR-grade rigidity; the universal 1/7 buffering law)
 
 Prompt (owner): make mathematical progress or prove rigorously why some routes cannot provide

@@ -1,0 +1,29 @@
+========================================================================================
+PART 1 -- token formula referee (exact, vs S300 bad-sheet machinery)
+========================================================================================
+  [PASS] token(w,x) == brute bad sheet on 4000 random exact points
+  [PASS] at own walls the owner blocks nothing (token None, clearance = 1/14)
+
+========================================================================================
+PART 2 -- criterion referee vs brute chamber check (S301 instances)
+========================================================================================
+  [PASS] token-walk verdicts consistent with brute sampling on 6 components
+
+========================================================================================
+PART 3 -- break-length census: how long can blocking runs survive?
+========================================================================================
+  random census (120 8-tuples, quarter-period span): median max-run 1, 90% 2, max 4 at [94, 102, 110, 177, 225, 263, 353, 438]
+  annealed max blocking run: 5 consecutive covered walls at [8, 13, 19, 23, 92, 359, 372, 438]
+  ==> empirical K0 = 5
+
+========================================================================================
+PART 4 -- the pierce consequence on real cores + the 19/216 survivor
+========================================================================================
+  S301 annealer best: min walls per core-safe component = 1 (<= K0: inconclusive by census alone)
+  annealed max-run tuple: min walls per core-safe component = 1 (<= K0: inconclusive by census alone)
+  survivor tokens at 19/216: [None, 6, 5, 3, 1, 4, 2, 0] (None = at wall)
+  survivor window (+-1/40): blocked=False, first_fail=piece, walls=60, max run=1
+
+========================================================================================
+SUMMARY: ALL CHECKS PASSED; K0 = 5
+========================================================================================

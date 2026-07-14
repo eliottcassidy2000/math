@@ -86,20 +86,24 @@ question.** Three consequences:
    extend to a full blocking; no full blocking was constructible under three
    escalating attacks.
 
-## Sharp open questions (named for the fleet)
+## Sharp open questions (named for the fleet) — Q1/Q2 STATUS after THM-779 (S302)
 
-- **Q1 (existence):** does ANY covering 13-family have its lens-c deck fully
-  blocked over the closed core-safe set with r = 8? Equivalent finite form at
-  c = 7, small exceptions: an 8-subset whose sheet table is rainbow at every
-  wall and 7-covering on every piece. SAT/CP over larger candidate pools (w up
-  to a few hundred) would settle small strata exhaustively.
-- **Q2 (the positive theorem):** prove that ≥ (1 − 7·(1/7))-type buffer counting
-  plus disjointness defect δ > 0 forces an unbuffered exit in every event window
-  — an r = 8 pierce for all families outside an explicitly-described packet
-  class.
-- **Q3:** connect the buffer partitions to DMNR: an exact 7-fold partition of an
-  exit stream by partner-APs has moduli 14·d_ab-structured; do the two-largest-
-  moduli-equal rigidity arguments transfer?
+- **Q1 (existence):** LARGELY RESOLVED-NEGATIVE by THM-779 (built on boxeph's
+  THM-773 token algebra): full blocking over J is the integer-decidable
+  token-walk condition (piece surjectivity + wall rainbow + no simultaneous
+  walls); the adversarial census gives **K0 = 5** — no 8-tuple (w ≤ 500,
+  annealed) sustains more than five consecutive covered walls; the one-moment
+  survivor factors as the algebra's minimal case (run length exactly 1). Any
+  core-safe component with > K0 walls is pierced. Residual existence question:
+  only tiny components (≤ K0 walls) and the mod-7 degeneracy packet class.
+- **Q2 (the positive theorem):** holds with K0 = 5 as the working constant; the
+  remaining lemma is the UNCONDITIONAL surjectivity-exit bound — a blocking run
+  of length K forces K−1 schedule-vs-algebra coincidences (the chain
+  o_{i+1} ∈ {o_i, γ_i}); classify the mod-7 degeneracies that could sustain
+  them (THM-779 §5).
+- **Q3:** connect the buffer partitions / hop-target orbits to DMNR: the chain's
+  rigid packets are the deck's exact-covering-system analogues; two-largest-
+  moduli arguments should transfer to the hop-target orbit structure.
 
 ## Signal/noise ledger for this session (S301)
 
