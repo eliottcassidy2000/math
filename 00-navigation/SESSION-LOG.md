@@ -10,6 +10,46 @@ Honest uniform target = the DICHOTOMY: low-M covering => k<=13 shadow (structure
 
 Handoffs: klein (ratio-[6,13] intact; uniform = dichotomy not flat), kps (free-class+pigeonhole closes only the binding region). Files: lrc14_shadow_uniform_proof + lrc14_shadow_dichotomy _macmini_S98.py (+outs).
 
+## opus-2026-07-14-S282 -- THM-747: the vertices-as-runners phase sum TRIANGULATED -- by-vertex pair-sector collapse (516 -> 98.1; one vertex carries 22 ends summing to EXACTLY zero), exact periodicity (Q = 97020/8820; period max |S| = 71.23/62.93 -- the promised LOOKUP), tower verdict (integer time pairs mirror phases EQUALLY: level-1 symmetry exhausted; the 10-100x smallness = phase equidistribution, resolved exactly); asymptotic coefficient nailed (limsup W|L-Area| <= 2.112/8.357); remaining unknowns named U1-U3
+
+Prompt (owner): bound S(W) with the perspective frame; understand the critical remaining unknowns;
+triangulate the structure from multiple perspectives.
+
+LENS 1 (pair sector): regroup 344/308 ends by 57/54 vertices: S = D0 + Sum b_v {u_v W} with D0 =
+33.64/39.21 exact deterministic; bound |S| <= |S_bar| + B1/2 = 98.14/93.29 (per-end was 516/358).
+The couplings collapse pair-sector-style; at u = 1/6 (shape 1) TWENTY-TWO ends sum to b_v = 0
+EXACTLY -- total single-vertex cancellation.
+
+LENS 2 (runners/periodicity): S(W) periodic mod Q = lcm(vertex denominators) = 97020/8820;
+FULL-PERIOD scan + exact Fraction confirmation at argmax: max|S| = 71.2259 (W = 50754) / 62.9254
+(W = 5519); max|T| = 2636/1459. TRIANGULATED: 516 > 98.1 > 71.2 (measured typical 2.6-49). The
+level-2 bound is a finite exact LOOKUP, as promised to klein.
+
+LENS 3 (tower): integer time makes mirrored phases EQUAL ({(1-u)W} = {-uW}) -- the level-1 mirror
+is EXHAUSTED at level 2 (only 7/57 mirror pairs have equal b_v; coupling multisets differ). The
+typical smallness is genuine phase equidistribution across the vertex-runners -- and at the free
+level it is exactly resolvable (the scan). The tower ALTERNATES constrained (origin-band-fenced,
+mirror-cancelling) and free (periodicity-resolved) levels; no level-3 needed.
+
+HONEST ASSEMBLY: scan form applies W >= Wz = 924/588 (zero-crossing threshold); there its bound is
+~9x below Area. Standing W0 = 339/513 UNCHANGED; the nailed object is the ASYMPTOTIC coefficient:
+limsup W|L-Area| <= 2(#comp+|Xi_sv|) = 2.112/8.357, all corrections exact or lookup.
+
+REMAINING UNKNOWNS (named): U1 the 743 pots (one-signed capping Sum delta = 2172/1116 + quadratics)
+dominate mid-W C2 -- BOTH also periodic mod Q: one more scan makes the tail lane's entire error
+budget a finite exact object (no analytic unknown left in-lane). U2 compact core = kps. U3 the
+general multi-speed equidistribution (klein-S300 capstone) = the fleet residual; this lane hands
+it structure (strand identity, pairing, periodicity), not a bridge.
+
+NB: TWO THM-744s exist (opus S277 F-telescoping + klein S297 shadow-gap; klein-S301 formalized
+THEIRS in Lean) -- ID housekeeping flagged to the fleet.
+
+FILES: THM-747 canon; HYP-6645; lrc14_phase_sum_triangulation_thm747_opus_S282.py (+.out). ->
+klein (your lookup is real: 71.23 exact; U1's capping scan would finish the lane's budget), kps
+(the by-vertex identity is index-free Fraction algebra), mac-mini (the exact-zero vertex at u=1/6
+is a metagraph-worthy object: 22 couplings from 11 lines summing to zero -- why 1/6?).
+
+---
 ## mac-mini-2026-07-14-S97 -- turned to the disc_v front (klein-S299 handoff): the k<=13 SHADOW-WITNESS closes the WHOLE covering case empirically (141/141, incl the isolated-far deep well), with an EXACT decidable residue-mod-k condition; single-killer PROVED via the k=13 shadow.
 
 **Owner request:** turn to the disc_v closure front. klein-S299 handed mac-mini the Farey/three-gap arithmetic of the k<=13 resonance grid.

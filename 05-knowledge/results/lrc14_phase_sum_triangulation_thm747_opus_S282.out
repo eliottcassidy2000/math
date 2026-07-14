@@ -1,0 +1,39 @@
+============================================================================================================
+THM-747: the vertices-as-runners phase sum, triangulated (by-vertex / periodicity / tower)
+============================================================================================================
+
+shape 1 {1}u{W..W+11}: 172 segments, 344 ends, 57 distinct vertices
+   LENS 1 (by-vertex): D0 = 33.6429 ; S_bar = 33.6429 ; B1 = Sum|b_v| = 129.00
+      bound |S| <= |S_bar| + B1/2 = 98.14   [per-end S1 was 516.35]
+      shared vertices: 43 of 57; pair-difference collapse sample:
+        u=1/7: ends [(1, 1.4285714285714286), (1, -1.7142857142857142)] -> b_v = 0.2857
+        u=8/49: ends [(1, -0.2653061224489796), (1, -0.20408163265306123), (1, 0.1836734693877551), (1, 0.8979591836734694), (1, 3.0), (1, 2.122448979591837), (1, 0.9183673469387755), (1, -0.6122448979591837), (1, -2.4693877551020407)] -> b_v = -3.5714
+        u=1/6: ends [(1, 0.40476190476190477), (2, -0.2619047619047619), (1, 0.47619047619047616), (2, -0.19047619047619047), (1, 0.21428571428571427), (2, 0.21428571428571427), (1, -0.38095238095238093), (2, 0.9523809523809523), (1, -1.3095238095238095), (2, 2.0238095238095237), (2, -2.5714285714285716), (1, -2.5714285714285716), (2, 2.8333333333333335), (1, -1.8333333333333333), (2, 1.9047619047619047), (1, -0.7619047619047619), (2, 0.6428571428571429), (1, 0.6428571428571429), (2, -0.9523809523809523), (1, 2.380952380952381), (2, -2.880952380952381), (1, 4.4523809523809526)] -> b_v = 0.0000
+      mirror pairs with EQUAL b_v: 7/57 vertices (integer time exhausts the mirror)
+   LENS 2 (periodicity): Q = lcm(vertex denominators) = 97020 ; Z(W)=0 for W >= Wz = 924
+      float scan over full period: max|S(W)| = 71.2259 at W = 50754 (exact there: 71.2259); max|T(W)| = 2636.3
+      TRIANGULATED: per-end S1 = 516  >  by-vertex 98.1  >  EXACT period max ~ 71.2  [measured 2.6-49]
+   ASSEMBLY (W >= Wz): C1 = 2.112 ; C2 = 5158 (743 pots 3690 + 2 S_max + T_max/2) ; W0 = 924 [standing 339/513]
+
+shape 2 {1,2,3}u{W..W+9}: 154 segments, 308 ends, 54 distinct vertices
+   LENS 1 (by-vertex): D0 = 39.2143 ; S_bar = 39.2143 ; B1 = Sum|b_v| = 108.14
+      bound |S| <= |S_bar| + B1/2 = 93.29   [per-end S1 was 357.70]
+      shared vertices: 44 of 54; pair-difference collapse sample:
+        u=1/7: ends [(1, 0.0), (1, 0.0), (1, 0.5714285714285714), (1, -0.7142857142857143), (1, 1.4285714285714286), (1, -1.7142857142857142)] -> b_v = 0.4286
+        u=8/49: ends [(1, -0.2653061224489796), (1, -0.20408163265306123), (1, 3.0), (1, 2.122448979591837), (1, 0.9183673469387755)] -> b_v = -5.5714
+        u=1/6: ends [(1, 0.40476190476190477), (2, -0.2619047619047619), (1, 0.47619047619047616), (2, -0.19047619047619047), (1, 0.21428571428571427), (2, 0.21428571428571427), (2, -2.5714285714285716), (1, -2.5714285714285716), (2, 2.8333333333333335), (1, -1.8333333333333333), (2, 1.9047619047619047), (1, -0.7619047619047619), (2, 0.6428571428571429), (1, 0.6428571428571429)] -> b_v = 6.0000
+      mirror pairs with EQUAL b_v: 4/54 vertices (integer time exhausts the mirror)
+   LENS 2 (periodicity): Q = lcm(vertex denominators) = 8820 ; Z(W)=0 for W >= Wz = 588
+      float scan over full period: max|S(W)| = 62.9254 at W = 5519 (exact there: 62.9254); max|T(W)| = 1458.6
+      TRIANGULATED: per-end S1 = 358  >  by-vertex 93.3  >  EXACT period max ~ 62.9  [measured 2.6-49]
+   ASSEMBLY (W >= Wz): C1 = 8.357 ; C2 = 2832 (743 pots 1971 + 2 S_max + T_max/2) ; W0 = 588 [standing 339/513]
+
+REMAINING UNKNOWNS (named):
+ U1. The 743 pots now dominate C2: vertex capping (one-signed, Sum delta = 2172/1116) and the
+     quadratic wedge remainders -- BOTH are also periodic mod Q: their exact period-extremes are
+     the same kind of lookup (unscanned here).  With them, the family's asymptotic first-order
+     coefficient becomes a FINITE EXACT OBJECT -- no analytic unknown remains in the tail lane.
+ U2. The compact core (bounded-Vmax bodies) -- outside this program (kps exact certificates).
+ U3. The general multi-speed equidistribution (klein-S300 capstone) -- the fleet-level residual;
+     this lane contributes exact structure (strand identity, pairing, periodicity), not a bridge.
+done.
