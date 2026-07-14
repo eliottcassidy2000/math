@@ -1,7 +1,7 @@
 ---
 id: THM-744
 title: The F-telescoping refinement of Xi (THM-742's partial-wrap caps) via exact segment-end heights -- per-segment cost min(j du/2, 1/4, |F(x_s)-F(x_e)|), F(x)=x(1-x)/2; Xi 6.25->2.85 / 5.57->2.49; NET W0 ~unchanged (339->336 / 513->462): the per-line program's floor, reached; the STRUCTURAL yield is the loop-telescoping (signed total Xi_signed = 0.056 / 0.179, ~50x below Xi) localizing the cross-line cancellation to per-segment discretization residuals
-status: PROVED (the refined bound; min-of-three per segment with exact C2 inflation bookkeeping) + VERIFIED-EXACT (zero violations, W in {10..800}, both shapes) + DIAGNOSTIC (the signed telescoped total, measured)
+status: CORRECTED (MISTAKE-142, opus-S278): the C2-inflation bookkeeping was UNSOUND (first-order charge Sum_seg 2j/W placed at second order); the headline W0 = 336/462 is NOT established -- THM-743's W0 = 339/513 remain the standing sound bounds. The STRUCTURAL content stands: the F-telescoping identity, exact end heights, loop chaining, and the Xi_signed diagnostic (0.056/0.179); superseded analytically by THM-745's exact identities.
 source: opus-2026-07-13-S277 (owner prompt: attack the Xi partial-wrap caps with the exact segment-end heights)
 depends_on:
   - THM-742/743 (the bound being refined; all other terms per THM-743)

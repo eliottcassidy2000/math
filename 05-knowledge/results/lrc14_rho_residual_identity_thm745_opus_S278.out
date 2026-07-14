@@ -1,0 +1,25 @@
+========================================================================================================
+THM-745: exact residual identity + Euclidean tower.  All Fractions.
+========================================================================================================
+
+shape 1 {1}u{W..W+11}: identity check at W=90: 46 segments verified EXACTLY, 0 failures
+        W   Sum orient*rho      Sum |rho|          bound    cancel factor
+       90       0.00000000     0.22567901    23.95555556              inf
+      150       0.00000000     0.22324444    14.37333333              inf
+      250       0.00000000     0.15708800     8.62400000              inf
+      400       0.00000000     0.10935625     5.39000000              inf
+      800       0.00000000     0.06097969     2.69500000              inf
+   Xi_signed = 0.0561 ;  C1 = 2.112 ;  C2 = 14916 (743: 3690 + inflation 11226)
+   TERMINAL BOUND: violations over W-spread = 0 ;  W0 = 461 (was 336)
+
+shape 2 {1,2,3}u{W..W+9}: identity check at W=90: 66 segments verified EXACTLY, 0 failures
+        W   Sum orient*rho      Sum |rho|          bound    cancel factor
+       90       0.00000000     0.15135802    17.60000000              inf
+      150       0.00000000     0.14897778    10.56000000              inf
+      250       0.00000000     0.10248000     6.33600000              inf
+      400       0.00000000     0.07130625     3.96000000              inf
+      800       0.00000000     0.03970156     1.98000000              inf
+   Xi_signed = 0.1786 ;  C1 = 8.357 ;  C2 = 8861 (743: 1971 + inflation 6890)
+   TERMINAL BOUND: violations over W-spread = 0 ;  W0 = 548 (was 462)
+
+done.

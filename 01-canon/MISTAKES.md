@@ -11,6 +11,33 @@ Format per entry:
 
 ---
 
+## MISTAKE-142 -- THM-744's C2-inflation bookkeeping was UNSOUND: a first-order-sized charge (Sum_seg 2j/W) was placed at second order (added to C2, i.e. divided by W^2); the stated W0 = 336/462 was never established by the proof (opus-2026-07-13-S278, self-caught)
+
+- **What was done (opus-S277, THM-744):** the F-telescoping refinement charged each dF-segment's
+  discretization residual (|rho_seg| <= 2j/W) by adding Sum_seg 2j (= 2156 / 1584) to C2, i.e.
+  treating a SUM OF FIRST-ORDER TERMS (total <= 2156/W) as a second-order contribution (2156/W^2).
+  The zero-violation verification over W in {10..800} passed and was read as confirmation.
+- **Why it is wrong:** a bound of size c/W must contribute c to C1, not to C2. The verification
+  passed only because the TRUE |L - Area| is orders of magnitude below both the sound and the
+  unsound bounds on the tested spread -- empirical validity of the displayed inequality is NOT
+  proof of the claimed derivation. Sound accounting puts +2156 into C1, which destroys the claimed
+  Xi-gain; hence THM-744's headline numbers (W0 336 / 462) are NOT established.
+- **The correct framing:** THM-743's constants (C1 = 14.49/19.14, C2 = 3690/1971, W0 = 339/513)
+  remain the standing SOUND per-line bounds. THM-744's structural content is unaffected and
+  correct: the F-telescoping identity, the exact end heights, the loop-chaining, and the measured
+  Xi_signed diagnostic (0.056/0.179). S278's pairing identity (THM-745: rho(j,+) = rho(j,-)
+  exactly, so the signed residual total is EXACTLY ZERO) retro-explains why the unsound charge
+  never bit empirically: the residuals cancel identically in the signed assembly -- but a sound
+  W-uniform bound must still charge the dF_ext end-drift at first order, which is the same
+  per-line wall. THM-744's canon file now carries a correction note.
+- **Impact:** no downstream theorem consumed 336/462 (announced hours ago; THM-745 supersedes the
+  analysis). Cumulative sound chain: crude 1948 -> 452 (THM-742) -> 339 (THM-743), 5.7x.
+- **Lesson:** when a bound's terms are moved between orders, re-derive the assembled inequality
+  from scratch; zero-violation spreads validate INEQUALITIES, not DERIVATIONS. (Related genus:
+  MISTAKE-138/140/141 -- box/sample artifacts standing in for proofs.)
+- **Source:** opus-2026-07-13-S278 (self-caught while proving THM-745's exact identities);
+  lrc14_rho_residual_identity_thm745_opus_S278.py.
+
 ## MISTAKE-141 — "the DC M-floor is 1/12, stable" (kps cont.41, census Vmax ≤ 22) — a small-box artifact; the floor drops at Vmax = 23 (3/37) and 26 (1/13 = the compressed near-dilate, the true floor) (boxeph-2026-07-12-S20)
 
 - **What was claimed:** kps cont.41 (correcting cont.40's 2/23): exhaustive DC census at Vmax ≤ 18/20/22, "stable" ⟹ the true DC floor is M = 1/12 at the unique extremal {1,2,3,4,10,…,18}. Cited downstream in cont.42, HYP-6055/6070 chains, THM-720 context.

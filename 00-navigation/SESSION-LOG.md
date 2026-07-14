@@ -1,3 +1,40 @@
+## opus-2026-07-13-S278 -- THM-745: the EXACT residual identity + PAIRING THEOREM (rho(j,+) = rho(j,-) IDENTICALLY -- the signed residual total is EXACTLY ZERO at every W; mirror symmetry (u,s)->(1-u,1-s)); the wrap heights descend the Euclid/CF tower of (j,W); HONEST: self-caught MISTAKE-142 (THM-744's C2 charge was unsound -- W0 336/462 never established; THM-743's 339/513 stand)
+
+Prompt (owner): work the rho-residual signed sums with the perspective frame.
+
+THE IDENTITY (proved by expansion; 112/112 segments Fraction-verified): alpha psi(h_m) = -[F(h_{m+1})
+- F(h_m)] - alpha^2/2 + [wrap](alpha - h_m); summed: the exact segment expansion. Deterministic parts
+cancel (microscopic Raabe: #wraps ~ (K+1)alpha, wrap terms ~ alpha/2 each).
+
+THE DISCOVERY (pairing theorem): rho(j, +line) = rho(j, -line) EXACTLY -- per j, per W, 44/44 pairs
+as Fractions. Mechanism: the mirror (u,s)->(1-u,1-s) maps each arc's two boundary lines onto each
+other (j - 1/14 == -1/14 mod 1), preserves the W-grid and strands; rho is reversal+reflection-
+INVARIANT, dF ANTI-invariant. CONSEQUENCE: the orient-weighted residual total is IDENTICALLY ZERO;
+the first-order wedge content EQUALS the exact dF_ext telescoping sum (confirmed to the Fraction:
+both evaluations agree at every W). L - Area is an EXACT finite expansion -- no analytic fog.
+
+THE TOWER: wrap heights follow the return-map rotation (W mod j)/j -- the Euclidean/CF descent of
+(j, W): each telescoping level leaves a sawtooth on the next convergent's clock. Perspectives all
+the way down; the Stern-Brocot/Ostrowski/Mode-A threads land here; klein's Farey grids are the
+event locations.
+
+HONEST (the session's second result): chasing the sound assembly EXPOSED MISTAKE-142 -- my S277
+THM-744 put a first-order charge (Sum_seg 2j/W = 2156/W) into C2 (/W^2); the zero-violation spread
+validated the INEQUALITY, not the DERIVATION. Filed; THM-744 status corrected; THM-743's W0 =
+339/513 remain the standing sound bounds (cumulative crude 1948 -> 339, 5.7x). No downstream
+consumer of 336/462 existed.
+
+MEASURED PRIZE (restated exactly): first-order part = -0.247/-0.096/-0.061 (W=90/97/250) vs trivial
+bound 21.5 -- the 50-500x joint cancellation is now ONE exact object (the signed dF_ext sum over
+the arrangement's segments) for the Q_s/joint-equidistribution program.
+
+FILES: THM-745 canon; MISTAKE-142; THM-744 correction note; HYP-6595 (claim renumbered past
+klein-S296's 6590); lrc14_rho_residual_identity_thm745_opus_S278.py (+.out). -> klein (the exact
+object for your Farey/Q_s machinery, with the pairing theorem halving it), kps (identity +
+pairing are pure Fraction algebra -- Lean-friendly), fleet (MISTAKE-142 lesson: spreads validate
+inequalities, not derivations).
+
+---
 ## klein-2026-07-13-S297 -- ASSAULT LANDED: PROVED THM-744, the shadow-gap middle-witness. max(C)<6·(smallest even) ⟹ t=1/2+δ lonely for {1}∪C on an explicit MIDDLE interval — the first UNCONDITIONAL middle-reach for TIGHT covering clusters (dispatches the S289 counterexample {1,90..101} by a two-line inequality)
 
 Prompt (owner): assault the shadow-gap rigidity for covering sets. LANDED A REAL HIT.
