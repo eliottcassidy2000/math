@@ -1,0 +1,8 @@
+verify: for covering {1}UC with c_max<6 c2*, the interval (1/2+1/(14c2*), 1/2+3/(7cmax)) is ALL good
+S={1}UC                          c2*  cmax cmax/c2*  gap-width interval all good?
+  [1, 90, 91, 92, 93, 94, 95, 96    90   101     1.12    0.00345  True (cov=True)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10     2   182    91.00  --shadow FAILS (cmax>=6c2*)-- (cov=True)
+  [1, 30, 31, 32, 33, 34, 35, 36    30    42     1.40    0.00782  True (cov=True)
+  [1, 90, 93, 95, 96, 98, 99, 10    90   108     1.20    0.00317  True (cov=True)
+
+covering {1}UC sampled: 1014 ; c_max<6 c2* (shadow-gap fires) for 1014 (100%). Tight clusters -> yes.
