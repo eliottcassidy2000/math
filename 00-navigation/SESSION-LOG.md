@@ -1,3 +1,25 @@
+## mac-mini-2026-07-13-S91 -- the Atkin-Lehner V_4 does NOT descend to the tournament metagraph (complement irreducible under S_n; not even one W-element); n=4=weight-2 Gamma_0(14) exact but breaks n=6
+
+**Owner request:** explore the V_4/Atkin-Lehner thread on the metagraph side (the S90 survivor).
+
+**Result (HYP-6565 + reflection):** clean structural verdict -- the AL V_4 does NOT descend to the tournament iso-class metagraph.
+
+1. **Only ONE iso-class involution: complement** (=transpose=grid-reflection, THM-280 PROVED; =antipodal on the arc-cube, THM-584). Verified n=3,4,5: no second natural involution (reversal is in S_n, trivial on classes).
+
+2. **Complement is IRREDUCIBLE under S_n (new argument):** a factoring W_14=W_2*W_7 = splitting the C(n,2) arcs into two S_n-invariant blocks; but S_n is TRANSITIVE on arcs => only blocks are {} and ALL => no factoring. The 14=2*7 AL factorization is arithmetic, not combinatorial.
+
+3. **Complement isn't even a single W-element (NEG-3, integrated):** THM-584 -- complement FIXES the 2 SC classes, swaps the NS-pair; but AL V_4 acts REGULARLY (fixed-point-free) on the 4 cusps => no W equals complement (opus: complement != [-1] either). Corrected my earlier "complement=W_14".
+
+4. **n=4 EXACT weight-2 match, breaks n>=6:** dim M_2(Gamma_0(14))=4=A000568(4); Eis=3=R-even(4); cusp=1=R-odd(4)=genus. 4=3+1 exact. But R-odd=0,1,2,22,140 (n=3..7) vs genus X_0(2p)=0,0,1,2,2 -- matches n=3,4,5, BREAKS n=6. Numerology (coincidence-at-14), not a functor.
+
+**Where the V_4 really lives:** the labeled tile-cube <complement, tile-flip> (HYP-3811/3814, tile-flip fixed-point-free) or the runner side (W_2=2-adic descent THM-580, W_7=apex-7). Never the metagraph.
+
+**Unification:** S_n-transitivity-on-arcs is the SINGLE root of (a) complement irreducible [this], (b) CV(H) bounded/miscalibrated (HYP-3554), (c) 'bulk not cusp' (klein-S4), (d) S90 odd-graph blindness. The tournament's clean transitive symmetry is exactly what forbids the arithmetic 2*7/cusp structure. The metagraph is the Eisenstein bulk; the cusp form's modularity is arithmetic, off it.
+
+Integrated corpus negatives (Explore sweep): opus modular-pushes (complement!=[-1], floor!=L(14a,1)!=L(sym2)), THM-280, NEG-6 (metagraph V_4 Burnside 1,1,2,7,28,240,3440 != {1,3,21,55}).
+
+Files: reflection the-atkin-lehner-v4-does-not-descend-...-macmini-S91; HYP-6565(+correction); 04-computation/metagraph_v4_atkinlehner_macmini_S91.py (+out).
+
 ## klein-2026-07-13-S293 -- PROVED THM-739: the pairwise coprime bad-overlap in EXACT B₂ closed form |bad_c∩bad_{c'}|=1/49+(1/cc')[B₂({(c'−c)/14})−B₂({(c'+c)/14})] ≤ 1/49+1/(4cc') — bad sets independent up to O(1/cc'); same B₂-at-Farey-points kernel as THM-732/736
 
 Prompt (owner): prove the pairwise coprime-overlap bound ≤1/49. DONE — as an exact closed form.
