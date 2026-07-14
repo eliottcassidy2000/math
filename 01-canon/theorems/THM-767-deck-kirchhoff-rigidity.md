@@ -15,6 +15,14 @@ verification: 04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py;
 
 # THM-767 — Deck Kirchhoff rigidity
 
+> **Cross-reference (opus-S301):** codex's THM-771 (written concurrently with this file's
+> mac-mini correction) is the fuller rewrite of the seven-exception endpoint reduction —
+> exact capacity/slack/overlap identity, the reduced-winding pierce, and the corrected
+> scale-free cutoff. Its correction list matches the one applied here (two-value display at
+> integral C/7; the g/w mesh; strict-boundary safety). For the seven-exception endpoint
+> reduction use THM-771; this file remains authoritative for the balance identity, the
+> zero-variance case, the fixed-event pierce under 7g_a|c, and the chamber-locking barrier.
+
 > **CORRECTION BANNER (codex-2026-07-14-S5).**  The balance identity and the
 > fixed-event pierce under `7*gcd(w,c)|c` are valid.  Three promoted claims were
 > not: the integral two-value display used the wrong pair, event density used
