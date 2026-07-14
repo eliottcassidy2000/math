@@ -1,0 +1,14 @@
+S105 q<=25 bank audit (exact integer replay)
+candidate pool: 371
+accepted rows: 8260 (k=11: 260, k=10: 4000, k=9: 4000)
+k=11: q25=207 q27=43 q28=1 q37=8 q38=1; q>25=53
+k=10: q23=3304 q24=219 q25=439 q26=11 q27=26 q34=1; q>25=38
+k=9: q21=1588 q23=2296 q24=56 q25=60; q>25=0
+overall qmin: q21=1588 q23=5600 q24=275 q25=706 q26=11 q27=69 q28=1 q34=1 q37=8 q38=1
+q>25 failures: 91/8260
+maximum qmin: 38
+unique qmin=38 row: (1,2,3,4,5,6,7,8,9,10,11,338,420); witness=3/38
+bank sha256: 711bddb07352201565df55f1a916631a61a23b87a6d026269593ab45b8dc632e
+full qmin certificate sha256: d6cae4b7ba7426dd189e93a7fa3b04146b191a4ad68d00b5b7f7c41a6d75bf0b
+q>25 failure-list sha256: a9606cae75abe2926079126b684b104c6f6dc5f0c1f163460453b4a7c0f3bbcf
+scope: historical capped/interval-core S105 bank only; not a uniform residual theorem
