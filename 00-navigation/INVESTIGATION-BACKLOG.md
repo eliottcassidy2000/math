@@ -1,5 +1,25 @@
 # Investigation Backlog
 
+## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
+- **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.
+- **Status:** OPEN, with the carrier and several exact lemmas now identified.  For each nine-speed core
+  `P subset {1,...,14}`, the first open `f=4` stratum is an arithmetic cone `X_P subset Z^4`, a finite
+  union of residue classes mod `360360`.  Its predicate is the surjectivity of the universal safe
+  incidence over an owner-colored cubical endpoint loop.  Affine rays `cP+R` are exact integer-slope
+  slices of a two-torus threshold field; the dual relation packet lies on `c(z.P)+z.R=0`.
+- **Information guardrail:** fixed-threshold truth needs signed owner event blocks and tie ownership;
+  exact `M` needs a threshold filtration or peak witness; measure/THM-731 needs rational gaps and signed
+  endpoints; covering needs the divisor mask; THM-755 needs the projective cap ratio; deletion/scale
+  transport needs the fiber action.  AP versus `{1,...,12,26}` proves endpoint tournament + divisor +
+  cap sign is still insufficient for `M`.
+- **Next theorem:** prove a well-founded cone descent.  Every infinite normalized path must enter a
+  coherent pack/cluster face, gain a uniform lonely margin, emit a bounded-height marked circuit meeting
+  all four far coordinates, or descend to a smaller packet.  First executable subtarget: observability
+  matrix over the actual 2002-core `f=4` bank, followed by a finite-jet-at-infinity test for `cP+R`.
+- **Tournament mapping:** vertices are representation carriers; observable is proof-critical fiber pairs
+  separated; predicate-first versus compression-first gauges give 11 edge flips.  Raw runners and raw
+  endpoints are explicitly rejected as sufficient vertex sets.
+
 ## Lead codex-2026-07-14-S1: replace the raw f>=4 band by a scale-normal packet classification
 - **Source:** HYP-6780; corrected THM-757/758; THM-668/737/739/740/755; HYP-6785.
 - **Status:** OPEN, with the obstruction proved.  Under `P->cP`, `|G'|` is invariant, `r` and `v*`

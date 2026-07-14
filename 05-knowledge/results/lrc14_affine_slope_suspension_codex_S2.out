@@ -1,0 +1,46 @@
+HYP-6815 AFFINE-SLOPE THRESHOLD SUSPENSION
+
+Exact slice identity on the pure cylinder:
+  c=1: t*=1/14, Phi(ct*,t*)=M=1/14, L=0
+  c=2: t*=1/28, Phi(ct*,t*)=M=1/14, L=0
+  c=3: t*=1/42, Phi(ct*,t*)=M=1/14, L=0
+  c=5: t*=1/70, Phi(ct*,t*)=M=1/14, L=0
+
+HYP-6780 positive-measure core cylinder:
+  c=1: |G|=6617/194040, components=12=1*12
+  c=2: |G|=6617/194040, components=24=2*12
+  c=3: |G|=6617/194040, components=36=3*12
+  c=5: |G|=6617/194040, components=60=5*12
+
+Transverse-shear ray R=e_13:
+  c=26: max=339, t*=27/338, slice M=1/13, covering=True
+  c=91: max=1184, t*=92/1183, slice M=1/13, covering=True
+
+Dual projected relation audit (a=e_i+e_j-e_k):
+  offset owner= 1: shape-relations=36, survive shear=25, killed=11
+  offset owner= 7: shape-relations=36, survive shear=27, killed=9
+  offset owner=13: shape-relations=36, survive shear=30, killed=6
+
+Exact mixed-fiber audit (6 adversarial rows; c=2 and c=16):
+  carrier                    fibers   covering          M          L components        cap  relations
+  shape_only                      1          1          1          1          1          0          1
+  offset_multiset                 1          1          1          1          1          0          1
+  owner_resolved_offset           3          0          0          3          3          0          0
+  dual_relation_signature         3          0          0          3          3          0          0
+  owner_offset_cmod14             3          0          0          3          3          0          0
+  exact_peak_certificate          4          0          0          2          2          0          0
+  full_affine_slope_packet        6          0          0          0          0          0          0
+
+Same shape + owned offset + c mod 14, different metric fiber:
+  owner=1,c=2: M=2/15, L=5/84, components=4, covering=True
+  owner=1,c=16: M=2/15, L=115/1904, components=30, covering=True
+
+Tournament Analysis (vertices are representations, not runners):
+  observable=proof-critical row pairs separated
+  gauges=predicate-first and compression-first
+  declared tie Hamiltonian path=('full_affine_slope_packet', 'exact_peak_certificate', 'owner_offset_cmod14', 'dual_relation_signature', 'owner_resolved_offset', 'offset_multiset', 'shape_only')
+  predicate-first: {'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3cycles': 0, 'SCCs': [['dual_relation_signature'], ['exact_peak_certificate'], ['full_affine_slope_packet'], ['offset_multiset'], ['owner_offset_cmod14'], ['owner_resolved_offset'], ['shape_only']], 'Hamiltonian_paths': 1}
+  compression-first: {'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3cycles': 0, 'SCCs': [['dual_relation_signature'], ['exact_peak_certificate'], ['full_affine_slope_packet'], ['offset_multiset'], ['owner_offset_cmod14'], ['owner_resolved_offset'], ['shape_only']], 'Hamiltonian_paths': 1}
+  edge_flips_between_gauges=11
+
+Verdict: the slope packet is exact; mod-14 residue and relation shadows are not metric-complete.
