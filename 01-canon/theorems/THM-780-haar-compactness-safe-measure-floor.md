@@ -1,14 +1,14 @@
 ---
 id: THM-780
-title: Haar-compactness turns every strict lonely-runner margin into a uniform safe-measure floor
-status: PROVED (elementary compactness, character stabilization, and Portmanteau; independent audit pending)
+title: The quantitative strict-margin-to-measure bridge — phase pigeonhole gives mu_alpha >= ceil(1/(beta-alpha))^(-d), with Haar compactness as the relation-lattice limit proof
+status: PROVED (elementary phase partition; independent Haar/character proof included; both proofs independently audited)
 source: codex-2026-07-14-S10
 depends_on:
   - LRC(<=13)
 related: [THM-777, HYP-4452, HYP-4472, MISTAKE-117]
 ---
 
-# THM-780 — Haar-compactness safe-measure floor
+# THM-780 — Quantitative strict-margin-to-measure bridge
 
 ## Statement
 
@@ -19,17 +19,76 @@ Write `T=R/Z`, let `||x||` denote distance to `0` in `T`, and for
 mu_alpha(p) = Leb{t in T : ||p_i t|| >= alpha for every i}.
 ```
 
-> **Strict-margin compactness theorem.**  Fix an integer `d>=1`, a class
+> **Strict-margin measure theorem.**  Fix an integer `d>=1`, a class
 > `A subset Z^d`, and `0<=alpha<beta<=1/2`.  If every `p in A` has a
 > `beta`-deep time,
-> `max_t min_i ||p_i t|| >= beta`, then
-> `inf_{p in A} mu_alpha(p)>0`.
+> `max_t min_i ||p_i t|| >= beta`, then, with
+>
+> `M=ceil(1/(beta-alpha))`,
+>
+> every `p in A` satisfies the explicit bound
+>
+> `mu_alpha(p) >= M^(-d)`.
 
 No height bound, primitivity assumption, divisor hypothesis, or classification
-of limiting subtori is required.  The constant supplied by this proof is
-non-effective.
+of limiting subtori is required.
 
-## Proof
+## First proof: finite phase pigeonhole
+
+Fix `p in A` and choose a `beta`-deep time `t_0`.  Partition each coordinate
+circle into the `M` half-open intervals
+
+```
+[j/M,(j+1)/M),       j=0,...,M-1,
+```
+
+and hence partition `T^d` into `M^d` half-open cubes.  For the orbit map
+
+```
+phi:T -> T^d,       phi(s)=s p,
+```
+
+the `M^d` measurable preimages partition `T`.  One cube `Q` therefore has
+
+```
+Leb(phi^(-1)(Q)) >= M^(-d).                               (1)
+```
+
+Put `A_Q=phi^(-1)(Q)` and choose `s_0 in A_Q`.  If `s in A_Q`, the two points
+`phi(s)` and `phi(s_0)` lie in the same coordinate intervals.  Thus, for
+`u=s-s_0`,
+
+```
+||p_i u|| < 1/M <= beta-alpha       for every i.          (2)
+```
+
+Translation preserves Lebesgue measure, so the simultaneous Bohr-return set
+
+```
+B={s-s_0:s in A_Q}
+```
+
+has measure at least `M^(-d)`.  For every `u in B`, the circle triangle
+inequality and (2) give
+
+```
+||p_i(t_0+u)|| >= ||p_i t_0||-||p_i u|| > alpha.          (3)
+```
+
+Hence `t_0+B` is contained even in the strict `alpha`-safe set.  Equation (1)
+proves `mu_alpha(p)>=M^(-d)`.  ∎
+
+This proof exposes the missing finite object particularly cleanly: not a
+height cutoff or a witness denominator, but one heavy cell in the joint phase
+orbit.  Subtracting an anchor in that cell turns phase concentration into a
+simultaneous return; the already-known deeper witness turns the return into a
+positive safe interval set.
+
+## Second proof: Haar compactness and the limiting relation lattice
+
+The following longer proof gives the structural limit statement that motivated
+the theorem.  It proves positivity without the explicit constant and audits
+what information survives an unbounded-height sequence.
 
 Suppose instead that `p^(n) in A` and `mu_alpha(p^(n))->0`.  Let
 
@@ -110,50 +169,70 @@ zero.)  ∎
 ## The twelve-core consequence
 
 Settled `LRC(<=13)` says that every 12-speed core has a `1/13`-deep time.  Take
-`d=12`, `beta=1/13`, and `alpha=1/14`.  There is therefore an absolute,
-possibly non-explicit constant `c_12>0` such that every 12-core `P` satisfies
+`d=12`, `beta=1/13`, and `alpha=1/14`.  Since
 
 ```
-|G'_P| = Leb{t : min_{p in P} ||pt|| >= 1/14} >= c_12.
+1/13-1/14=1/182,
 ```
 
-Together with THM-777(1), this gives the genuinely uniform but non-effective
-bound
+the first proof has `M=182` and gives every 12-core `P` the explicit bound
 
 ```
-rho(P) <= 12/(pi c_12).
+|G'_P| = Leb{t : min_{p in P} ||pt|| >= 1/14}
+       >= 182^(-12)
+        = 1/1320859596446125189798629376.                 (4)
+```
+
+Together with THM-777(1), this gives the genuinely uniform effective bound
+
+```
+rho(P) <= 12*182^12/pi < 5.046*10^27.                     (5)
 ```
 
 Thus the qualitative asymptotic floor and the existence of a bounded normalized
-regime-2 atlas are proved.  What remains open in THM-777 is the sharp effective
-identity `c_12=7/858`, its uniqueness statement, and any usable numerical atlas
-cutoff.
+regime-2 atlas are proved with an explicit (deliberately crude) cutoff.  What
+remains open in THM-777 is the sharp identity `inf |G'_P|=7/858`, its uniqueness
+statement, and a practically sized atlas cutoff.
 
 ## What changed relative to the older compactness route
 
 HYP-4472 tried to prove continuity of the safe functional on a hand-built
 one-/two-torus compactification and then classify its zero locus.  Neither step
-is needed here.  The correct state object is the **entire stabilized character
-relation lattice**, whose annihilator automatically supplies the limiting
-compact subgroup of any rank.  The correct analytic input is only the
-lower-semicontinuous open-set half of Portmanteau.  Most importantly, the
-strictly deeper `beta`-witness is transported into that subgroup, where it gives
-an interior safe point.  This is why the proof applies at `1/14` using the
-settled `1/13` theorem, but does not prove the older `2/25` floor.
+is needed.  Quantitatively, the heavy phase cell and its anchored difference
+set already give a Bohr neighborhood of mass `M^(-d)`.  Structurally, the
+correct limit state is the **entire stabilized character relation lattice**,
+whose annihilator automatically supplies the limiting compact subgroup of any
+rank.  Only the open-set half of Portmanteau is needed, not continuity of the
+safe functional.  In both proofs the decisive datum is the strictly deeper
+`beta`-witness: it absorbs a simultaneous return of radius `beta-alpha`.  This
+is why the theorem applies at `1/14` using settled `1/13`, but does not prove the
+older `2/25` floor.
 
 ## Assumption challenge and Tournament Analysis
 
-The useful vertices here are not runners.  A runner-level pair tournament
-forgets exactly the data used by the proof: which integer characters vanish
-simultaneously and which limit subgroup they cut out.  The alternative vertex
-set is the countable family of proof obligations/characters `m in Z^d`, with
-the binary stabilized switch `m·p^(n)=0` and the annihilator `L^perp` as the
-quotient object.  This preserves all torus equations and the safe predicate in
-the limit; it destroys finite height and the original one-dimensional
-parameterization, neither of which the proof needs.  A forced tournament on
-these vertices would add no information—the relation switch is a subgroup
-closure, not an antisymmetric dominance relation—so the exact fingerprint is a
-saturated lattice rather than scores, cycles, or a Hamiltonian path.  This is a
-concrete case where challenging “vertices must be runners” finds the missing
-state, while also explaining why a tournament encoding is not cleanly
-available.
+The useful vertices here are not runners.  In the finite proof they are joint
+phase cells; in the limit proof they are character obligations `m in Z^d`.  A
+runner-level pair tournament forgets exactly the simultaneous datum used by
+both: common-cell membership, or which integer characters vanish together.
+The finite switch is “two orbit points occupy the same cell”; the limit switch
+is `m·p^(n)=0`; their quotient objects are respectively the anchored Bohr-return
+set and the annihilator `L^perp`.  These preserve the safe predicate while
+discarding height.
+
+A forced tournament adds no theorem-facing information here: same-cell and
+relation switches are equivalence/subgroup closure, not antisymmetric
+dominance.  The exact fingerprints are a phase partition and a saturated
+lattice rather than scores, cycles, or Hamiltonian paths.  This is a concrete
+case where challenging “vertices must be runners” finds the missing state and
+also explains why Tournament Analysis should record an honest no-clean-switch
+result instead of manufacturing an orientation.
+
+## Audit
+
+An independent proof audit checked both routes.  For the finite proof it
+verified the half-open boundary and circle-wrap cases, translation of the
+preimage mass, and the strict triangle-inequality margin.  For the limit proof
+it checked diagonal stabilization, saturation and double annihilation, Fourier
+determination of weak Haar convergence, survival of the deep witness, and the
+direction of the Portmanteau inequality.  No admissibility or boundary gap was
+found.
