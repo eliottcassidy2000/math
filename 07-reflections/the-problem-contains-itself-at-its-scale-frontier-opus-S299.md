@@ -1,6 +1,6 @@
 # The problem contains itself at its scale frontier
 
-*opus-2026-07-14-S299. Companion to THM-761, HYP-6825, and the frontier-map addendum.
+*opus-2026-07-14-S299. Companion to THM-761, HYP-6830, and the frontier-map addendum.
 Written against the owner's prompt: collect the viewpoints, see what we are missing in
 our view of the underlying object, think recursively. External inspiration:
 Frank–Ivanisvili, "The sharp log Sobolev inequality on finite cycles," arXiv:2605.29035.*
@@ -37,7 +37,7 @@ stated as sharply as I can state it tonight:
    realized: a c=7 family with all sheets bad exists, and is still lonely by another
    route; the method's wall, not the conjecture's);
 2. **c ≤ 42** small-scale criterion failures — where band inflation is bounded by the
-   same constant, so THM-755/756's protocol is genuinely finite there (HYP-6825's
+   same constant, so THM-755/756's protocol is genuinely finite there (HYP-6830's
    two-regime claim, to be composed);
 3. **deep gcd entanglement** (`Σ g_a` over budget) — a recursive descent `c → c/g`,
    bookkeeping unwritten;
@@ -45,7 +45,7 @@ stated as sharply as I can state it tonight:
    cores whose good set is NOT fragmented by dilation, where the capped envelope was
    already strong. The complementarity claim (fragmentation ⟺ divisibility structure)
    is the one genuinely load-bearing unproved sentence left in the covering endgame,
-   and it is now written down as HYP-6825 rather than implied by a status table.
+   and it is now written down as HYP-6830 rather than implied by a status table.
 
 ## 2. The recursion, made literal
 
@@ -93,7 +93,7 @@ The owner's (n−1)² identity was the load-bearing decomposition WITHIN one lev
 decomposition BETWEEN levels. The two are perpendicular, and the covering endgame
 needed both: the capped envelope (within-level, origin cap × spoke envelope) handles
 unstructured cores; the sheet descent (between-level) handles structured ones. Neither
-alone was uniform; the missing theorem was always their SPLICE (HYP-6825), and the
+alone was uniform; the missing theorem was always their SPLICE (HYP-6830), and the
 splice constant is explicit: c = 43.
 
 ## 3. The Frank–Ivanisvili bridge (arXiv:2605.29035), read structurally
@@ -118,7 +118,7 @@ is a question about vanishing of arc Fourier coefficients at subgroup frequencie
 Newman-style cyclic tiling conditions, i.e., the character theory of `Z_c`. FI's
 result is the same shape one derivative deeper: the sharp constant sits exactly at
 the spectral gap, and the bulk inequality is easy while the extremal case is pinned
-by the second eigenvalue. Prediction worth testing (filed in HYP-6825): the `r = 7`
+by the second eigenvalue. Prediction worth testing (filed in HYP-6830): the `r = 7`
 residual decomposes as [non-tiling residue profiles ⟹ free sheet by a signed/spectral
 refinement of the union bound] ∪ [tiling profiles ⟹ rigid arithmetic (7 | c-type
 divisibility + AP structure on the exceptional residues), classifiable exactly like
@@ -172,7 +172,7 @@ this month's audits (codex guardrail 15; structure-S1's endpoint sidecar census)
   project's first parity statement; the free-sheet existence is a covering statement.
   Whether the sheet cycle carries a PARITY refinement (an odd number of free sheets
   under some weighting — a Rédei analogue for the deck) is a genuinely new question,
-  logged in HYP-6825 as a tournament-flavored probe. C18's guardrail applies: aim
+  logged in HYP-6830 as a tournament-flavored probe. C18's guardrail applies: aim
   parity at boundary/equality structure, not at the open inequality.
 
 ## 5. What each era contributed to the object (the compressed lineage)
@@ -215,7 +215,7 @@ estimates.
   sheet certificate + bounded-c band protocol.
 - The three named open items of the covering endgame: (1) r ≥ 7 tilings (spectral/
   signed refinement or capped envelope on exceptions), (2) the gcd-descent
-  bookkeeping, (3) the fragmentation⟺divisibility complementarity (HYP-6825's core
+  bookkeeping, (3) the fragmentation⟺divisibility complementarity (HYP-6830's core
   claim). None of these is enumeration; the frontier map's "none analytic" line is
   corrected in the addendum.
 - The FI-shaped probe: test a cubic certificate against the band bank's 19

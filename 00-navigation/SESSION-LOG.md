@@ -1,4 +1,4 @@
-## opus-2026-07-14-S299 -- THM-761 PROVED: the MULTI-EXCEPTION SHEET COVERING BOUND (r<=6 exceptions of ANY gcd strata dodge whenever Sum g_a(floor(c/(7g_a))+1) <= c-1; uniform c>=43 coprime; exact failure sets c<=42; r=1 closes at EVERY scale and stratum, extending THM-760) + HYP-6825 (the two-regime splice: sheets above 43, bounded band inflation below -- the corrected uniformization of the >=4-far endgame) + the recursion reflection (the sheet residual IS a discrete inhomogeneous LRC on Z_c; tight case = cyclic tilings = the 7-clock one level down; FI arXiv:2605.29035 bridge)
+## opus-2026-07-14-S299 -- THM-761 PROVED: the MULTI-EXCEPTION SHEET COVERING BOUND (r<=6 exceptions of ANY gcd strata dodge whenever Sum g_a(floor(c/(7g_a))+1) <= c-1; uniform c>=43 coprime; exact failure sets c<=42; r=1 closes at EVERY scale and stratum, extending THM-760) + HYP-6830 (the two-regime splice: sheets above 43, bounded band inflation below -- the corrected uniformization of the >=4-far endgame) + the recursion reflection (the sheet residual IS a discrete inhomogeneous LRC on Z_c; tight case = cyclic tilings = the 7-clock one level down; FI arXiv:2605.29035 bridge)
 
 Prompt (owner): assess the LRC(14) frontier holistically; collect the perspectives and see what
 we are missing in the underlying object; think recursively; weave tournament threads; inspiration
@@ -23,7 +23,7 @@ stood when I arrived; I added THM-761's rows + the shrunk residual. The same ref
 closes by sheets in ONE LINE: on scale rays, bounded-q banks are scale-blind, sheets are
 scale-native. 04-paper/lrc14-assembly.tex re-scoped honestly (S298's draft rescued + Claim B
 'M>=0.097' corrected to REFUTED-as-stated, C2 withdrawn, sheet theorems added, main theorem
-now 'assembly program' modulo C1 + HYP-6825 + r>=7 decks).
+now 'assembly program' modulo C1 + HYP-6830 + r>=7 decks).
 
 THE REFLECTION (07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md):
 the sheet residual at scale c IS an inhomogeneous discrete lonely-runner instance on Z_c
@@ -45,18 +45,19 @@ sheet = source; union criterion = in-degree budget; Redei deck-parity probe file
 HYGIENE: HYP-6810 collision resolved (codex-S3's q25-audit renumbered to HYP-6820 -- they did
 it concurrently; I deduped the INDEX); S298's untracked tex rescued and committed.
 
-REMAINING (the honest open covering endgame, all in HYP-6825): (1) r>=7 deck tilings;
+REMAINING (the honest open covering endgame, all in HYP-6830): (1) r>=7 deck tilings;
 (2) regime-2 composition (c* <= 42 bounded normalized enumeration); (3) the complementarity
 claim r_P <= B(c*) (fragmentation only via divisibility -- THE load-bearing open sentence);
 (4) gcd-descent bookkeeping. Plus fleet items: THM-738 independent rerun, THM-741 finish,
 Lean for THM-760/761 (the sheet permutation + grid count are decide-friendly).
 
 FILES: 01-canon/theorems/THM-761-multi-exception-sheet-covering-bound.md;
-05-knowledge/hypotheses/HYP-6825-lrc14-scale-uniformization-two-regime-splice.md;
+05-knowledge/hypotheses/HYP-6830-lrc14-scale-uniformization-two-regime-splice.md;
 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py (+ results .out);
 lrc14_certificates.py (sheet_decomposition, sheet_certificate, 3 new self-tests);
 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
-frontier map + backlog + tex updates. HYP-6810 (write-up) advanced; HYP-6825 claimed.
+frontier map + backlog + tex updates. HYP-6810 (write-up) advanced; the scale
+uniformization hypothesis was later renumbered HYP-6830 after an ID collision.
 
 ---
 ## opus-2026-07-14-S297 -- THE COMPLETED-ARC SYNTHESIS: LRC14-FRONTIER-2026-07-15.md (the assembly equation: covering = [<=3-far = kps THM-738 PROVED, all tight families inside] + [>=4-far = loose, finite-decidable via the capped envelope]; NO open analytic statement; remaining = enumeration + write-up + Lean composition) + the perspective-arc reflection (S270-S296: one counting identity -> 12 theorems -> one kernel-pure Lean file)
@@ -61770,7 +61771,7 @@ theorem claimed THM-759 first, so the sheet-dodge theorem was renumbered
 THM-760.
 - **2026-07-14 — codex-2026-07-14-S3 (started):** auditing and attacking two requested LRC uniformity gaps: the `q<=25` good-period/rational-witness claim and emptiness of the `n=12` sporadic tight branch. Reserved HYP-6820 (renumbered from a concurrent HYP-6810 collision) without promoting either claim. Initial sync found that `LRC14-FRONTIER-2026-07-15.md` overstates closure relative to corrected canonical THM-758/HYP-6780: the 120-family q-bank is sampled, S105's 8260 sweep is capped/interval-core restricted, and the scale-normal `f>=4` residual remains open. Parallel lanes are reconstructing the exact proof obligations and tournament history.
 
-- **2026-07-14 — codex-2026-07-14-S4 (completed):** built the exact two-axis tournament-tiling address atlas. Distinguished local one-tile spine/rib/sea depth from antipodal blue/black complement lines; exhaustive `n=3..7` enumeration found the projected blue/black line graph connected and rooted weighted 1-WL complete (272/272 merged nodes in three rounds at `n=7`; raw incidence only 159 cells). Recursive all-deletion ancestry has 270 cells and leaves two twin pairs, both resolved by line recursion. Added exact two-way JSON for all 33866 fixed-path tilings (mask -> class -> converse-merged address -> global/fibre index; node -> complete tiling fibre), collision audits, carrier Tournament Analysis, and live explorer display through n=6 plus compact offline n=7 atlas. Reframed HYP-6815's `(u,t,c,lambda)` suspension as a constructible metagraph atlas with tiling/metric/threshold/owner/monodromy stalks; integrated incoming THM-761's sheet cycle `Z_c` and seven-exception cyclic tiling as a recursive fibre. Added a 26-card future-agent pull atlas, LTT-433, backlog lead, HYP-6825 finite status, and the reflection `the-metagraph-needs-a-stalk-...codex-S4.md`. Resolved a later HYP-6825 index collision by preserving the first-pushed codex-S4 ID and marking opus-S299's scale-uniformization follow-on unnumbered pending a new claim.
+- **2026-07-14 — codex-2026-07-14-S4 (completed):** built the exact two-axis tournament-tiling address atlas. Distinguished local one-tile spine/rib/sea depth from antipodal blue/black complement lines; exhaustive `n=3..7` enumeration found the projected blue/black line graph connected and rooted weighted 1-WL complete (272/272 merged nodes in three rounds at `n=7`; raw incidence only 159 cells). Recursive all-deletion ancestry has 270 cells and leaves two twin pairs, both resolved by line recursion. Added exact two-way JSON for all 33866 fixed-path tilings (mask -> class -> converse-merged address -> global/fibre index; node -> complete tiling fibre), collision audits, carrier Tournament Analysis, and live explorer display through n=6 plus compact offline n=7 atlas. Reframed HYP-6815's `(u,t,c,lambda)` suspension as a constructible metagraph atlas with tiling/metric/threshold/owner/monodromy stalks; integrated incoming THM-761's sheet cycle `Z_c` and seven-exception cyclic tiling as a recursive fibre. Added a 26-card future-agent pull atlas, LTT-433, backlog lead, HYP-6825 finite status, and the reflection `the-metagraph-needs-a-stalk-...codex-S4.md`. Resolved a later HYP-6825 index collision by preserving the first-pushed codex-S4 ID and renumbering opus-S299's scale-uniformization follow-on HYP-6830.
 
 Final incoming-signal integration: HYP-6815's affine-slope suspension gives an
 exact two-torus chart V(c)=cP+R for multi-exception scale rays, while

@@ -15,10 +15,10 @@
   still lonely via a non-sheet route; (ii) regime-2 composition (`c* ≤ 42` ⟹ bounded normalized
   band enumeration); (iii) the complementarity claim `r_P ≤ B(c*)` — fragmentation only via
   divisibility (falsifier: scale-free core with unbounded good-set components); (iv) gcd-descent
-  bookkeeping (card A2 general case). All named in HYP-6825.
+  bookkeeping (card A2 general case). All named in HYP-6830.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
-- **Files:** THM-761 canon; HYP-6825; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
+- **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
   (+ .out); 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension

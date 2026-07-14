@@ -44,7 +44,7 @@ family closes by THM-760/761 in one line). The scale residual after THM-761: (i)
 that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (band
 inflation bounded there — the finite regime), (iii) gcd-descent bookkeeping, (iv) families with
 no scale structure at all — the capped envelope's natural domain, pending the
-fragmentation⟺divisibility complementarity (HYP-6825's two-regime splice).
+fragmentation⟺divisibility complementarity (HYP-6830's two-regime splice).
 
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
 on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
@@ -86,7 +86,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 1. **Prove a scale-normal structure theorem.** Split normalized families into coherent dilation
    packs, additive/hierarchical clusters, and an incoherent residual, while retaining scale residue
    and killer offset. Raw far count and diameter are not invariants of this quotient.
-   *Progress (S299): the dilation-pack side is now the two-regime splice HYP-6825 — regime 1
+   *Progress (S299): the dilation-pack side is now the two-regime splice HYP-6830 — regime 1
    (large scale, r ≤ 6) PROVED by THM-761; the open composition is regime 2 (c ≤ 42, bounded band
    inflation) plus the complementarity claim r_P ≤ B(c*), plus the r ≥ 7 deck-tiling residue.*
 2. **Attack the prime-grid bottleneck as a persistent translate-cover problem.** At level one,

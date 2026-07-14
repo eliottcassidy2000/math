@@ -1,5 +1,5 @@
 ---
-id: HYP-6825
+id: HYP-6830
 title: Scale uniformization of Claim B — the two-regime splice (sheets above c=43, bounded band inflation below), the fragmentation⟺divisibility complementarity, and the discrete-LRC recursion probes
 status: OPEN — THM-761 proves the large-scale regime; the splice composition, the complementarity claim, and the r>=7 tiling residue are the open content
 source: opus-2026-07-14-S299
@@ -11,7 +11,7 @@ depends_on:
 related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820]
 ---
 
-# HYP-6825 — scale uniformization of the ≥4-far covering endgame
+# HYP-6830 — scale uniformization of the ≥4-far covering endgame
 
 ## The claim to prove (the splice)
 

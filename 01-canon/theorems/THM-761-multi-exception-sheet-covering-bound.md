@@ -6,7 +6,7 @@ source: opus-2026-07-14-S299
 depends_on:
   - THM-760   # the r=1 coprime case (with the stronger 1/2-1/(2c) clearance)
   - LRC(<=13) # settled external input accepted by project policy
-related: [THM-531, THM-668, THM-724, THM-755, THM-757, THM-758, HYP-6780, HYP-6785, HYP-6820, HYP-6825]
+related: [THM-531, THM-668, THM-724, THM-755, THM-757, THM-758, HYP-6780, HYP-6785, HYP-6820, HYP-6825, HYP-6830]
 verification: 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
   (+ 05-knowledge/results/lrc14_multi_exception_sheet_bound_opus_S299.out)
 ---
@@ -78,7 +78,7 @@ last uniform failure.
 length `2*delta = 1/7`; seven exceptions can burn total measure `7 * (1/7) = 1` — the
 whole sheet cycle. So `r <= 6` is structurally sharp for the plain union bound: the
 `r = 7` tight case is a TILING of the sheet cycle `Z_c` by rotated arc-preimages
-(the unnumbered opus-S299 follow-on: the discrete 7-clock, one level down;
+(the scale-uniformization route of HYP-6830: the discrete 7-clock, one level down;
 compare HYP-6825's independent node/fibre tiling discipline). For general LRC(n) the same
 argument closes `r <= ceil(n/2) - 1` exceptions.
 
@@ -137,7 +137,7 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
   the capped-envelope band inflates linearly in `c`; THM-761 says large `c` dies by
   sheets. The two regimes meet at an explicit constant (`c = 43` for the uniform
   coprime form): **above it sheets win; below it the band inflation is bounded by
-  the same constant** — the unnumbered opus-S299 scale-uniformization route.
+  the same constant** — the scale-uniformization route of HYP-6830.
 
 ## Residual (named honestly)
 
@@ -158,7 +158,7 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
    (cards A2/C10); the recursion terminates but its bookkeeping is not written here.
 4. Families with **no scale structure at all** (no `c >= 2` divides `>= 7` elements):
    outside this theorem's hypotheses; they are the low-`r_P` cores where the capped
-   envelope is already strong (the unnumbered opus-S299 follow-on records the
+   envelope is already strong (HYP-6830 records the
    precise complementarity claim to prove).
 
 ## Assumption challenge and tournament analysis
