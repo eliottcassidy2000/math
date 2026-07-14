@@ -62137,3 +62137,31 @@ seven-exception wall: a loose-set base, finite sheet fibre, labelled danger
 incidence, endpoint monodromy, and ramification defect.  Runner tournaments are
 diagnostic quotients; the owner-by-sheet incidence hypergraph preserves the
 simultaneous-cover predicate.
+## codex-2026-07-14-S7 -- THM-778 PROVED: continued fractions are the endpoint-transport language
+
+Re-audited the repository's continued-fraction threads from Sturmian sectors,
+Ostrowski ladders, Farey roofs, convergent resonance, and Euclidean residuals
+through the prime-seven metagraph fibre.  The synthesis separates four roles
+that earlier prose sometimes conflated: value address, metric roof, symbolic
+schedule, and recursive transport.  It records the exact gains and known
+overclaims in `LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md` and leaves nine
+typed avenues rather than a generic “use continued fractions” directive.
+
+THM-778 proves that midpoint endpoint clocks form centered-Christoffel words.
+The exact centered Beatty rank reconstructs the entire labelled simultaneous
+wall schedule, and a one-bit parity cocycle makes Euclidean quotient stripping
+lossless.  Coupling that schedule to THM-773's inverse-step token translations
+gives an exact prime-seven Euclidean skew product.  An audit of all 6,400
+ordered pairs through speed 80 and five complete endpoint movies found zero
+formula, repetition, tie, balance, cocycle, rank, reflection, or fibre-update
+failures.
+
+For HYP-6835's eight-owner survivor, 1,205 walls collapse to ten covered walls
+with palindromic owner word `162,108,108,206,197,197,206,108,108,162`.  The
+25-mask word is not palindromic: all 5,040 owner-sheet assignments prove that
+reflection does not descend to a function on bare mask indices.  The adjacent
+redundancy root instead has a period-five transition word, while the gaps
+between covered walls have five exact block types and their mirror.  The next
+finite problem is to compile those five Euclidean substitutions on the
+owner-labelled mask/redundancy fibre and test continuation completeness.  This
+is a structural reduction and preservation theorem, not an LRC(14) proof.

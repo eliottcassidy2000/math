@@ -1,0 +1,69 @@
+THM-778 CENTERED-CHRISTOFFEL ENDPOINT SKEW PRODUCT
+==============================================================================
+PAIRWISE EXACT AUDIT
+  ordered pairs u,v <= 80: 6400
+  direct/formula failures: 0
+  gcd repetition failures: 0
+  odd/odd tie-count failures: 0
+  cyclic-balance failures: 0
+  Euclidean parity-cocycle failures: 0
+  CF-depth histogram: {1: 368, 2: 927, 3: 1476, 4: 1590, 5: 1189, 6: 598, 7: 201, 8: 45, 9: 6}
+
+SAMPLE CENTERED WORD PACKETS
+  (1,10): gcd=1 v/u=10/1 CF=(10,) ties=0 blocks=11 runs=3
+    run word=(('v', 5), ('u', 1), ('v', 5))
+  (4,9): gcd=1 v/u=9/4 CF=(2, 4) ties=0 blocks=13 runs=9
+    run word=(('v', 1), ('u', 1), ('v', 2), ('u', 1), ('v', 3), ('u', 1), ('v', 2), ('u', 1), ('v', 1))
+  (12,188): gcd=4 v/u=47/3 CF=(15, 1, 2) ties=4 blocks=196 runs=25
+    run word=(('v', 8), ('u', 1), ('v', 15), ('uv', 1), ('v', 15), ('u', 1), ('v', 16), ('u', 1), ('...', 9), ('u', 1), ('v', 16), ('u', 1), ('v', 15), ('uv', 1), ('v', 15), ('u', 1), ('v', 8))
+  (108,162): gcd=54 v/u=3/2 CF=(1, 2) ties=0 blocks=270 runs=217
+    run word=(('v', 1), ('u', 1), ('v', 1), ('u', 1), ('v', 2), ('u', 1), ('v', 1), ('u', 1), ('...', 201), ('u', 1), ('v', 1), ('u', 1), ('v', 2), ('u', 1), ('v', 1), ('u', 1), ('v', 1))
+
+GLOBAL RANK RECONSTRUCTION + PRIME-SEVEN FIBRE
+  W=(1, 4, 5, 6, 8, 9, 10): individual=43 walls=39 simultaneous=3 max_block=3 rank_failures=0 mirror_failures=[]
+    exact_chambers=2 covered_walls=0 carry=(6, 6, 6, 6, 6, 6, 6) transition_failures=[]
+    rank_sha256=5f3f070ed876ed47a4fe49a383408c0bfb89478c93d65d47399f5dccb7912652 CF-depths={1: 8, 2: 10, 3: 2, 4: 1} pair_ties=5 pair_runs=[3, 19]
+    next-event tournament: iso=transitive labelled_paths=37 edge_flips=178 flip_hist={0: 1, 1: 1, 2: 1, 3: 5, 4: 11, 5: 15, 6: 2, 7: 1, 8: 1, 14: 1} c3=0 SCC=singletons Hpaths=1
+  W=(12, 38, 72, 96, 151, 169, 188): individual=726 walls=721 simultaneous=5 max_block=2 rank_failures=0 mirror_failures=[]
+    exact_chambers=6 covered_walls=0 carry=(6, 6, 6, 6, 6, 6, 6) transition_failures=[]
+    rank_sha256=3964cc0b36c98b713c0749cd2a7ba6e744ec6a6c0dc694c57985b019736d5d14 CF-depths={1: 2, 2: 3, 3: 4, 4: 5, 5: 3, 6: 4} pair_ties=5 pair_runs=[25, 339]
+    next-event tournament: iso=transitive labelled_paths=333 edge_flips=2618 flip_hist={0: 3, 1: 15, 2: 94, 3: 213, 4: 247, 5: 117, 6: 28, 8: 1, 9: 3} c3=0 SCC=singletons Hpaths=1
+  W=(108, 169, 143, 213, 206, 197, 30, 162): individual=1228 walls=1205 simultaneous=19 max_block=4 rank_failures=0 mirror_failures=[]
+    exact_chambers=32 covered_walls=10 carry=(6, 6, 6, 6, 6, 6, 6, 6) transition_failures=[]
+    covered-wall owner word=((162,), (108,), (108,), (206,), (197,), (197,), (206,), (108,), (108,), (162,)) palindrome=True
+    covered-wall a267 mask word=(25773, 32153, 31115, 14635, 615, 30093, 31115, 615, 14233, 6035)
+    covered-wall duplicate-root word=((1, 0), (4, 6), (2, 4), (0, 2), (6, 5), (1, 0), (4, 6), (2, 4), (0, 2), (6, 5))
+    between-wall block word=(57, 301, 3, 24, 329, 24, 3, 301, 57)
+    between-wall event word=(58, 306, 3, 25, 336, 25, 3, 306, 58)
+    rank_sha256=3f7863992742cb7f256db59fbedcb77f70f74e4948c8753d831999c15814670d CF-depths={2: 1, 3: 4, 4: 3, 5: 8, 6: 7, 7: 3, 8: 2} pair_ties=28 pair_runs=[61, 413]
+    next-event tournament: iso=transitive labelled_paths=948 edge_flips=6620 flip_hist={0: 1, 1: 1, 2: 5, 3: 52, 4: 135, 5: 381, 6: 483, 7: 129, 8: 2, 9: 2, 10: 4, 11: 1, 12: 3, 13: 3, 15: 1, 16: 2} c3=0 SCC=singletons Hpaths=1
+    covered wall x=13/324 owners=(162,) tokens=(1, 0, 5, 4, 2, 6, 3) mask=25773 duplicate=1->0
+    covered wall x=19/216 owners=(108,) tokens=(6, 5, 3, 1, 4, 2, 0) mask=32153 duplicate=4->6
+    covered wall x=73/216 owners=(108,) tokens=(6, 5, 4, 0, 3, 2, 1) mask=31115 duplicate=2->4
+    covered wall x=141/412 owners=(206,) tokens=(4, 5, 0, 6, 3, 2, 1) mask=14635 duplicate=0->2
+    covered wall x=143/394 owners=(197,) tokens=(1, 2, 6, 0, 3, 5, 4) mask=615 duplicate=6->5
+    covered wall x=251/394 owners=(197,) tokens=(5, 4, 0, 6, 3, 1, 2) mask=30093 duplicate=1->0
+    covered wall x=271/412 owners=(206,) tokens=(2, 1, 6, 0, 3, 4, 5) mask=31115 duplicate=4->6
+    covered wall x=143/216 owners=(108,) tokens=(0, 1, 2, 6, 3, 4, 5) mask=615 duplicate=2->4
+  W=(1, 2, 3, 4, 5, 8, 10): individual=33 walls=29 simultaneous=3 max_block=3 rank_failures=0 mirror_failures=[]
+    exact_chambers=2 covered_walls=0 carry=(6, 6, 6, 6, 6, 6, 6) transition_failures=[]
+    rank_sha256=995d577adafc81be581b77c0c54c123001783b02086d72fdcb322da7b13815b4 CF-depths={1: 11, 2: 7, 3: 2, 4: 1} pair_ties=5 pair_runs=[3, 17]
+    next-event tournament: iso=transitive labelled_paths=28 edge_flips=116 flip_hist={0: 1, 1: 1, 2: 5, 3: 8, 4: 4, 5: 6, 6: 1, 7: 1, 8: 1, 14: 1} c3=0 SCC=singletons Hpaths=1
+  W=(1, 2, 3, 4, 5, 8, 11): individual=34 walls=31 simultaneous=1 max_block=4 rank_failures=0 mirror_failures=[]
+    exact_chambers=2 covered_walls=0 carry=(6, 6, 6, 6, 6, 6, 6) transition_failures=[]
+    rank_sha256=3c6f7263abf8cd0222e595f776138507c8495fb2f1daa9e00b2c26ee7be922b8 CF-depths={1: 9, 2: 6, 3: 4, 4: 2} pair_ties=6 pair_runs=[3, 17]
+    next-event tournament: iso=transitive labelled_paths=30 edge_flips=116 flip_hist={0: 1, 1: 3, 2: 5, 3: 7, 4: 5, 5: 7, 6: 2, 15: 1} c3=0 SCC=singletons Hpaths=1
+
+REFLECTION VERSUS THE 25-MASK QUOTIENT
+  assignments audited: 5040
+  masks with unique reflected image: 9/25
+  maximum reflected images from one mask: 7
+  image-size histogram: {1: 9, 2: 7, 3: 7, 4: 1, 7: 1}
+  descends to a mask function: False
+
+PRESERVATION AUDIT
+  exact base carrier: owner-local event + centered Beatty rank + simultaneous block
+  exact fibre carrier: owner token + inverse step mod 7 + cover polynomial
+  CF role: recursive address of each pairwise midpoint cutting sequence
+  iso-node loss: every next-event tournament is transitive, so the node forgets the entire labelled word
+  challenged vertices: endpoint events and Euclidean cells carry more proof data than runner vertices

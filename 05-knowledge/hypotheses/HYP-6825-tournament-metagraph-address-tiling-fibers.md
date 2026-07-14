@@ -17,6 +17,10 @@ artifacts:
   - 04-computation/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.py
   - 05-knowledge/results/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.json
   - 07-reflections/the-heptagon-node-is-a-basepoint-not-the-sheet-state-codex-S6.md
+  - 01-canon/theorems/THM-778-centered-christoffel-endpoint-skew-product.md
+  - 04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py
+  - 05-knowledge/results/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.json
+  - 00-navigation/LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md
 related:
   - HYP-2245
   - HYP-2989
@@ -27,6 +31,7 @@ related:
   - THM-550
   - THM-646
   - THM-773
+  - THM-778
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -158,6 +163,43 @@ same owner-to-sheet assignment but different next event owner and free sheet.
 Thus the inverse fibre is not an LRC continuation state.  Inverse windings,
 endpoint order/phase, metric base, and the global `x -> x+1` sheet carry remain
 mandatory transport fields.
+
+## Continued-fraction path stalk
+
+THM-778 now gives an exact address for the missing endpoint-order field.  The
+merge of every two owner midpoint clocks is a centered rational mechanical
+word; a one-bit parity cocycle survives its Euclidean shears.  For owner-local
+event `(a,i)`, the centered Beatty rank
+
+```text
+i + sum_(b != a) ceil((w_b(2i+1)-w_a)/(2w_a))
+```
+
+is its exact global simultaneous-wall index.  Thus the full wall schedule can
+be mapped forward and backward without discarding owner labels or tie blocks.
+
+The natural next-event tournament on owner clocks is transitive in every
+chamber.  On HYP-6835's eight-owner example it therefore stays at one ordinary
+isomorphism node while its labelled Hamiltonian path takes `948` values and
+flips `6,620` pair edges.  This is a particularly sharp answer to the original
+mapping question: the node is objective but static; continued-fraction
+substitutions act on the labelled path/tiling stalk above it.  The promising
+ordering is consequently lexicographic in
+
+```text
+(merged-node address, Euclidean endpoint-block address,
+ labelled path/mask index, owner-token/redundancy state),
+```
+
+not in merged-node rank alone.
+
+The ten covered walls of the named eight-owner movie have mask word
+`(25773,32153,31115,14635,615,30093,31115,615,14233,6035)`.  Its owner word is
+palindromic but its mask word is not.  Exhausting all 5,040 assignments proves
+that the reflected-mask relation is multivalued: only 9/25 masks have a unique
+image and the largest image fibre has size 7.  Therefore even fibre-local mask
+index is not a reflection-equivariant state unless the owner-labelled lift is
+retained.
 
 ## Preservation statement
 

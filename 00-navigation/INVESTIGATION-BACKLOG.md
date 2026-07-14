@@ -92,6 +92,39 @@
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
 
+## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
+
+- **Source:** THM-778/773; HYP-6835/6825; THM-536/637/745; HYP-4078/6280.
+- **Proved structure:** Owner midpoint clocks merge by the exact centered
+  mechanical count `ceil((v(2i+1)-u)/(2u))`.  The common gcd gives repeated
+  blocks, odd/odd reduced ratios give exactly `gcd(u,v)` ties, and Euclidean
+  quotient stripping carries a one-bit midpoint parity cocycle.  Summed
+  centered Beatty counts give an exact global rank for every wall event.
+- **Prime-sheet skew product:** The ranked word drives translations
+  `k_a->k_a-w_a^{-1}` in `F_7`; polynomial divisibility observes coverage and
+  the full word produces the nontrivial global carry.  Five exact movies have
+  zero rank/transition failures.
+- **r=8 finite target:** The HYP-6835 row has 1,205 wall blocks but only ten
+  covered walls, all simple, with absent-owner palindrome
+  `162,108,108,206,197,197,206,108,108,162` and 32 covered chambers.
+- **Mask lift delivered:** The wall masks are
+  `25773,32153,31115,14635,615,30093,31115,615,14233,6035`.  The word is not
+  palindromic because reflection is multivalued on the 25-mask quotient
+  (only 9/25 masks have a unique image; maximum image fibre 7).
+- **Redundancy signal:** The duplicate-root transitions are
+  `((1->0),(4->6),(2->4),(0->2),(6->5))^2`, a period-five square hidden by the
+  nonpalindromic mask word.
+- **Five block types:** Consecutive covered walls enclose
+  `(57,301,3,24,329,24,3,301,57)` wall blocks; full owner-count vectors mirror
+  exactly, so only the first five interval types require analysis.
+- **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
+  compile the five-wall half into centered Farey/Christoffel substitutions.
+  Prove a prefix loses coverage, a simultaneous event tears the stalk, or the
+  fibre state descends.  Test the proposed state by continuation minimization.
+- **Guardrail:** Standard continued fractions retain a reduced ratio but lose
+  common scale, midpoint coset, ties, owner action, metric component, and core
+  safety.  Use the full centered packet in the new CF frontier map.
+
 ## Lead codex-2026-07-14-S6: transport the absent owner over the prime-seven heptagon stalk
 
 - **Source:** THM-773; THM-771; HYP-6825/6835/6840; HYP-3802 heptagon thread.
