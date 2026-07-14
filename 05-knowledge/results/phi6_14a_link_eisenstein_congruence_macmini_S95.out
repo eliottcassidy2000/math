@@ -1,0 +1,36 @@
+VERIFY the Eisenstein congruence a_p(14a) = 1+p mod 6 (and mod 2, mod 3):
+   p=  5: a_p=  0,  1+p=  6==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 11: a_p=  0,  1+p= 12==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 13: a_p= -4,  1+p= 14==2 mod6,  a_p mod6=2,  a_p=1+p mod6? True
+   p= 17: a_p=  6,  1+p= 18==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 19: a_p=  2,  1+p= 20==2 mod6,  a_p mod6=2,  a_p=1+p mod6? True
+   p= 23: a_p=  0,  1+p= 24==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 29: a_p= -6,  1+p= 30==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 31: a_p= -4,  1+p= 32==2 mod6,  a_p mod6=2,  a_p=1+p mod6? True
+   p= 37: a_p=  2,  1+p= 38==2 mod6,  a_p mod6=2,  a_p=1+p mod6? True
+   p= 41: a_p=  6,  1+p= 42==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 43: a_p=  8,  1+p= 44==2 mod6,  a_p mod6=2,  a_p=1+p mod6? True
+   p= 47: a_p=-12,  1+p= 48==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 53: a_p=  6,  1+p= 54==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   p= 59: a_p= -6,  1+p= 60==0 mod6,  a_p mod6=0,  a_p=1+p mod6? True
+   ... checked 34 good primes p<160;  violations of a_p=1+p mod 6: 0
+
+THE MECHANISM (rigorous, classical):
+  14a has torsion subgroup E(Q)_tors = Z/6Z (a RATIONAL point of order 6). A rational N-torsion
+  point makes the mod-N Galois rep rho_N REDUCIBLE: rho_N ~ [[1,*],[0,chi]] (trivial subrep from
+  the torsion point, cyclotomic quotient chi from the Weil pairing). Hence for good p:
+     a_p = trace rho_N(Frob_p) = 1 + chi(Frob_p) = 1 + p  (mod N=6).
+  This is EXACTLY the Eisenstein congruence: f_14 = E_2-Eisenstein mod 6 (the reducible = Eisenstein rep).
+
+THE LINK to Phi_6 / Eisenstein (why the modulus is 6):
+  6 = ord(zeta_6) = deg-structure of Phi_6, the 6TH CYCLOTOMIC polynomial Phi_6(x)=x^2-x+1,
+  whose values Phi_6(n)=n^2-n+1 are the COVERING-MIN DENOMINATORS (n/Phi_6(n)). The mod-6 reduction
+  lands in mu_6 = the 6th roots of unity = Z[zeta_6] (Eisenstein). So f_14 is congruent mod Phi_6's
+  modulus to the Eisenstein series. And the COVERING-MIN side agrees (HYP-3768): the Dedekind margin
+  s(n,Phi_6) -> -1/12 = the E_2 EISENSTEIN anomaly constant. BOTH f_14 and the covering-min reduce to
+  the EISENSTEIN series -- f_14 via the mod-6 congruence, the covering-min via the E_2 anomaly.
+
+CONCLUSION: Phi_6 (Eisenstein, j=0) and 14a (conductor 14) are DIFFERENT curves (S94, no functor)
+but LINKED by the mod-6 = mod-Phi_6 EISENSTEIN CONGRUENCE a_p=1+p mod 6. Congruence, not functor --
+the standard way different curves/forms link (Mazur's Eisenstein ideal). The Eisenstein series is the
+common body; 14a is f_14's home, Phi_6 is the covering-min's home, and they are congruent mod 6.
