@@ -1,0 +1,6 @@
+CLAIM A: covering with <=1 element>14: 0 tested, 0 with <10 in {1..14} (must be 0): trivially kps THM-738
+CLAIM B: covering with >=2 elements>14: 300 tested; min M=0.09612 (=0.0961 vs 1/14=0.0714); # with M<1/13: 0
+  worst-M >=2-far family: [2, 9, 10, 11, 12, 13, 14, 16, 19, 21, 23, 29, 34] M=0.09612
+
+  If min M >= 1/13 for all >=2-far: THM-726 (>=2 far => M>=1/13) covers Claim B universally => COVERING CASE PROVED.
+  If some >=2-far has M in [1/14,1/13): the finite band residual (opus capped-envelope v>v* + per-core band).

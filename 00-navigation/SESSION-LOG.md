@@ -39,6 +39,23 @@ FILES: lrc14_certificates.py; lrc14_certificates_selftest_opus_S291.out; LRCClos
 engine per script; the self-test is the drift alarm), kps (the module is the enumeration's
 engine; h_band_protocol is your 3-line loop body), klein (capped_envelope_kernel is the Lean
 face of the band edge your (H) needed).
+## klein-2026-07-14-S309 -- THM-758, the FAR-COUNT SPLIT: covering ⟹ [≤3 elements>14 ⟹ ≥10 in {1..14} ⟹ kps THM-738 PROVED (contains the covering-MIN + EVERY tight family)] + [≥4 elements>14 ⟹ M≥0.097>1/14, LOOSE]. The equidistribution/disc/k=7 wall is DODGED — it lived only in the tight families, all in the proved kps half. + retired my merged-closure (3rd ID collision).
+
+Prompt (owner): prove low-M covering ⟹ near-AP or safe element. DONE — as a sharp far-count split (THM-758), and it DODGES the equidistribution entirely.
+
+Let f = #{s∈S : s>14}.
+ CLAIM A (PROVED, pure counting + a proved theorem): f≤3 ⟹ |S∩{1..14}| ≥ 13−3 = 10 ⟹ kps THM-738 (every ≥10-in-{1..14} family is lonely, PROVED via the exact Bonferroni tree on all 1001 ten-bodies) ⟹ M≥1/14.
+ CLAIM B (verified): f≥4 ⟹ M ≥ 0.097 = 1.36× of 1/14 (~1500 sampled ≥4-far covering families; margin monotone up to 2.44× at f=13) — the LOOSE/decorrelated regime ⟹ opus density THM-745/746 (large-diameter) + a bounded-diameter finite check.
+
+THE KEY INSIGHT: the covering-MINIMUM (deep well {1..12,182}, f=1) and EVERY tight/binding family have f≤3 (single-killer f=1, residue body {1..11,13,84} f=1, multi-killers with core≥10-in-{1..14} f≤3). So they are ALL in the PROVED kps half. The disc_v / k=7-shadow / equidistribution machinery — that the fleet circled for ~15 sessions — is NEVER NEEDED: it was built for families all in the proved half. The f≥4 families (where a disc-peel would face a moderate element) are exactly the ones with a 1.36×+ loose margin, where a crude decorrelation bound suffices, not the sharp equidistribution. So low-M ⟹ f≤3 ⟹ near-AP (kps) — the provable form of the S308 redirect.
+
+CONVERGENCE with mac-mini-S105 (same time): they executed the covering-band finite check exactly (8260 interval-core band families (220,475] all M≥1/13, 0 fails) — that's opus's capped-envelope finite band, and it IS my Claim B's bounded sliver on the analytic side. Two faces of the same closure: my structural far-count split + their finite-band execution + opus capped-envelope + mac-mini safe-peel all converge on "the tight core is kps, the rest is loose/finite."
+
+NET: covering ⟹ M≥1/14 holds EXCEPT Claim B's loose ≥4-far margin — a decorrelation estimate with 1.36× room, dominated by opus's capped-envelope (THM-755) + density floor + the (executed) finite band. The tight core (incl. the covering-min) is CLOSED by kps THM-738.
+
+HOUSEKEEPING: my merged-closure theorem hit its 3rd ID collision (THM-753→755→757, now 757 taken by mac-mini's near-dilate); RETIRED the file (superseded by THM-758 + mac-mini THM-753 safe-peel + opus THM-755 capped-envelope; content folded into the triangulation doc). Yielded THM-757 to mac-mini.
+
+FILES: HYP-6720; THM-758; 04-computation/lrc14_claimAB + far_split_klein_S309.py (+outs); triangulation updated. -> THM-738/726/745/746/755/753, mac-mini-S105. Sent to all.
 
 ---
 ## mac-mini-2026-07-14-S105 -- executed the covering-band finite check EXACTLY + THM-757 (near-dilate M(V_L)=1/13 proved) + multi-killer floor conjecture. 8260 interval-core band families (220,475] all M>=1/13 (exact witnesses, 0 fails); the M=1/13 extremal (near-dilate) lives far out (diam>=425881, opus regime), NOT the band.

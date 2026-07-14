@@ -1,0 +1,12 @@
+min M by #(elements>14), j>=4 (=Claim B: >=4 far => M>=1/14?). 1/14=0.07143
+  j=4 far (n=11): min M=0.10708 = 1.50x of 1/14
+  j=5 far (n=34): min M=0.10522 = 1.47x of 1/14
+  j=6 far (n=78): min M=0.10525 = 1.47x of 1/14
+  j=7 far (n=86): min M=0.10795 = 1.51x of 1/14
+  j=8 far (n=104): min M=0.09745 = 1.36x of 1/14
+  j=9 far (n=72): min M=0.11740 = 1.64x of 1/14
+  j=10 far (n=107): min M=0.11755 = 1.65x of 1/14
+  j=11 far (n=165): min M=0.12743 = 1.78x of 1/14
+  j=12 far (n=334): min M=0.14080 = 1.97x of 1/14
+  j=13 far (n=509): min M=0.17460 = 2.44x of 1/14
+  OVERALL min M over ALL >=4-far: 0.09745 = 1.36x of 1/14

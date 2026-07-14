@@ -30,14 +30,14 @@ trivial].** The SOLE remaining analytic statement is the per-peel disc bound `di
 *uniform* version is the equidistribution (klein-S300). Everything else is finite and proved.
 (klein-S305, HYP-6680.)
 
-**⚡ S306 — this is now a THEOREM: THM-757 (the covering-closure one-step peel).** The route above merges
+**⚡ S306 — the covering-closure one-step peel (assembly frame; my merged-closure theorem was RETIRED after 3 ID collisions — superseded by THM-758 far-count split + mac-mini THM-753 safe-peel + opus THM-755 capped-envelope; the one-step-peel content is captured here and in THM-758).** The route above merges
 with mac-mini's THM-751 into a single statement: peel `v=max(S)` off `P=S\{v}` (12 speeds), where
 `M(P)≥1/13` is FREE (LRC(13)); then `M(S)≥1/14` by **[base `v≤14`: kps THM-738]** or **[clean `v>14`
 aligned & `v≥13·maxP`: THM-751, `M(S)≥(1/13)·v/(v+maxP)`]** or **[unsafe else: disc `L(S)>0`]**. THM-751 =
 the *combinatorial* witness (aligned tooth), THM-731 = the *measure* witness (large-`v` grid) — the same
 peel from both sides; LRC(13) removes the recursion. PROVED except the one hypothesis (H): `disc_v<6|G'_P|²`
 for a moderate non-aligned far element — opus-S286 reduces (H) to a finite mod-360360 classification.
-(klein-S306, THM-757, HYP-6690.)
+(klein-S306, HYP-6690.)
 
 ---
 
