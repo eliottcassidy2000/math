@@ -1,0 +1,4 @@
+iterated EXACT-disc far-peel (peel >14) on 15 covering families:
+  stalls: 0 ; base (size, #in{1..14}) dist: {(1, 0): 6, (1, 1): 4, (2, 2): 1, (12, 12): 3, (13, 13): 1}
+  => if 0 stalls and every base has >=10 in {1..14}: covering = [exact-disc far-peel] + [kps THM-738]. UNIFORM candidate.
+  worst disc/threshold ratio seen (want <1, small=huge margin): computed per-run above

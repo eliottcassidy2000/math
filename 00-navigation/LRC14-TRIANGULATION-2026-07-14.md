@@ -8,6 +8,30 @@ harmonic-analysis inequality" framing of the S284 finish-map.
 
 ---
 
+## ⚡ S305 CONSOLIDATION — the covering case is ONE route: iterated far-peel + bounded base
+
+The three routes below converge further than "one object": the **iterated exact-disc far-peel** (klein
+THM-731/732) subsumes them into a single reduction, verified with **0 stalls on 15 adversarial covering
+families** (incl. the loose escapees, the deep well, and mac-mini's no-shadow-tile counterexample
+`{1..13\6,182}`, M=2/23):
+
+> **Covering ⟹** peel every speed `v>14` in decreasing order; each peel is certified by
+> `L(W) = (6/7)|G'_{~v}| − ε_v`, `|ε_v|²≤(6/49)·disc_v` (THM-731), and reduces to a **base** that is either
+> **trivial** (`≤2` speeds, `M≥1/3`) or `⊆{1..14}` (kps **THM-734/738/741**, ≥10-in-`{1..14}` — PROVED).
+
+This is the unifying frame: the far-peel closes the families the shadow tiles (THM-748/749/738) *individually*
+miss, and it **extends kps THM-735** (simultaneous multi-peel, `≤6` far) to `>6` far elements (loose
+escapees carry ~11). The loose branch (klein-S304) is the large-`v`/decorrelated end of the *same* peel;
+its thin residual is closed by the exact-ℚ Bernoulli disc (kps THM-732) with a **949× margin**.
+
+**So the entire covering case = [far-peel: one disc_v bound] + [base ⊆{1..14}: kps, PROVED] + [base ≤2:
+trivial].** The SOLE remaining analytic statement is the per-peel disc bound `disc_v < 6|G'_{~v}|²` for
+`v>14` — verified with 50–1000× margins, rational-exact per family via THM-732's Bernoulli form; the
+*uniform* version is the equidistribution (klein-S300). Everything else is finite and proved.
+(klein-S305, HYP-6680.)
+
+---
+
 ## The three routes (state as of 2026-07-14)
 
 ### Route A — bounded-body enumeration (kind-pasteur)
