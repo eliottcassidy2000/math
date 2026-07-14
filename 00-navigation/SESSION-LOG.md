@@ -1,3 +1,17 @@
+## mac-mini-2026-07-13-S94 -- the functor runner/circle -> X_0(14) does NOT exist (rigorous honest negative): the runner is a LEVEL without a CURVE, and its curve is Phi_6=EISENSTEIN (j=0), not 14a. CAPSTONE of S89->S94.
+
+**Owner request:** prove the functor runner/circle -> X_0(14) (the last plank of the arc).
+
+**ATTEMPTED; it does NOT exist. Rigorous obstruction:** a point of X_0(14) = a PAIR (E,C). The runner/circle gives the LEVEL C=Z/14 (S92) but NO curve E; without E there is no point of X_0(14). Worse, the runner's intrinsic curve-arithmetic is Phi_6(n)=n^2-n+1 = the EISENSTEIN norm N(n-zeta_6) (verified 31,43,183 for n=6,7,14) => the covering-min n/Phi_6 lives on Q(sqrt-3), j=0 CM -- a DIFFERENT curve from 14a (j!=0, conductor 14) and a DIFFERENT field from X_0(14)'s CM points (Q(sqrt-7), Q(sqrt-14)). The runner's natural moduli point is on the WRONG curve. NO FUNCTOR.
+
+**Partial correspondence that DOES hold:** the LEVEL 14=2*7 lifts (S92); the fixed-point ARITHMETIC is the proved target (S93); the APEX-7 (Q(sqrt-7)) matches X_0(14)'s w_7 CM (disc -7). What does NOT map: the covering-min VALUE (Phi_6, Q(sqrt-3), Eisenstein).
+
+**'Coincidence at 14' made precise:** two arithmetics meet at the integer 14. LEVEL 2*7 (threshold 1/14, 2-adic x apex-7) -> X_0(14)=14a (cusp form f_14). VALUE Phi_6(14)=183=n^2-n+1 -> Eisenstein Z[zeta_6] (Q(sqrt-3), j=0). Different curves, different fields; they share only the number 14. The covering-min is an Eisenstein/Phi_6 body in a level-14 coat; X_0(14) is the coat.
+
+**Arc ledger (S89->S94):** last bit = AP-rigidity (S89) -> tournament can't see it, order forgets measure (S90) -> root = S_n-transitivity, complement irreducible (S91) -> cure = the level circle Z/14, complement factors (S92) -> moduli fixed-point arithmetic PROVED, curving creates class numbers (S93) -> functor does NOT exist, runner is level-without-curve (S94). Bridge real from combinatorics to the level + fixed-point arithmetic; stops at the curve.
+
+Files: reflection the-functor-does-not-exist-the-runner-is-a-level-without-a-curve-macmini-S94; HYP-6585; 04-computation/functor_runner_to_x014_macmini_S94.py (+out).
+
 ## opus-2026-07-13-S277 -- THM-744: F-telescoping refinement of Xi (exact end heights) -- Xi 6.25->2.85 but NET W0 ~unchanged (339->336 / 513->462): the per-line constant program's FLOOR, reached; the yield is STRUCTURAL: loop telescoping measures Xi_signed = 0.056 / 0.179 (~50x below Xi) -- near-total cross-segment cancellation exists arrangement-side, blocked only by per-segment Dedekind-type residuals = the concrete Q_s hand-off
 
 Prompt (owner): attack the Xi partial-wrap caps with the exact segment-end heights.
