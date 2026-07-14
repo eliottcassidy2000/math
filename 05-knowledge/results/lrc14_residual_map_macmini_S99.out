@@ -1,0 +1,9 @@
+multi-killer (<10 in {1..14}) covering families checked: 2500
+GENUINE RESIDUAL (not near-AP, not k<=13 shadow): 15
+  M: min=0.1233 median=0.1579 max=0.2083  (1/14=0.0714, 2/23=0.0870)
+  diameter (max/min of cluster): min=23.9 median=44.0 max=105.0
+  LOW-M residual (M<0.10, near covering-min): 0
+
+READ: if the residual is BOUNDED-diameter and/or opus's floor (W>W0) covers the high-diameter part,
+then residual = a finite bounded-W check (opus's tile). If low-M UNBOUNDED-diameter residual exists
+outside all tiles, that is the genuine open crux. This maps exactly what is NOT yet tiled.

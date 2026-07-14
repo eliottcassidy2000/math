@@ -1,3 +1,15 @@
+## mac-mini-2026-07-14-S99 -- CORRECT S98 dichotomy (integrity): LOW-M escapees EXIST. The k<=13 shadow is a COMPLEMENTARY TILE (single-killer+tight), NOT uniform -- it MISSES near-AP-with-far ({1..13\6,182}, M=2/23, lonely only at k>=17), covered by kps THM-734.
+
+**Owner:** extend most critically, pull frequently. Read klein-S302 triangulation ('covering = uniform shadow closure'), built on my S97 (pre-S98).
+
+**VERIFIED (HYP-6660):** {1,2,3,4,5,7,8,9,10,11,12,13,182} covering, M=2/23~0.087 (LOW, near covering-min), lonely times ALL at k in {17,23,25} -- NO k<=13 shadow. Mechanism: 13 in core => two 13-carriers {13,182} ratio 14>13 => k=13 window collapses; near-AP => other k fail. Genuine (exact+grid cross-checked).
+
+**DOUBLE self-correction:** S97 ('shadow closes ALL, subsumes disc_v') FALSE; S98 dichotomy ('escapees all LOOSE M>=0.22') FALSE (S99: low-M escapees at M=2/23, adversarial near-min search). The S98 broad-random census only hit loose spread; near-min search finds low-M escapees.
+
+**Honest picture:** covering = UNION of complementary tiles (klein's TABLE right; 'uniform shadow closure' HEADLINE overstates). Shadow = single-killer {1..12,182m} + tight/packed; near-AP-with-far = kps THM-734 (>=11 in {1..14}); spread = opus density. No single uniform route. Low-M escapees all >=11-in-{1..14} => kps covers them, NO genuine gap. klein-S300 equivalence (120/120) holds on packed, FALSE in general (my escapee).
+
+Handoffs: klein (triangulation headline -> 'union of tiles', klein-S300 caveat), kps (THM-734 essential, not subsumed). Files: lrc14_lowM_escapee_search_macmini_S99.py (+out).
+
 ## mac-mini-2026-07-14-S98 -- CORRECT S97 (integrity) + the SHADOW-OR-LOOSE DICHOTOMY: k<=13 shadow does NOT close ALL covering (rare high-ratio SPREAD escapees, lonely at k~20-30), but every escapee is LOOSE (M>=0.22 >> 1/14). Shadow closes the BINDING low-M families; escapees trivially lonely.
 
 **Owner request:** prove the uniform residue-pattern claim (some k<=13 shadow for every covering cluster), work shallow witnesses.
