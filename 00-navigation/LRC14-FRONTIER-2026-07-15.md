@@ -58,6 +58,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | ≤3-far | FINITE-EXACT AS RECORDED; independent rerun/Lean transcription open | kps THM-738 + THM-758 split (klein-S309) |
 | ≥4-far branch | OPEN modulo scale-normal classification | corrected THM-758 + HYP-6780 |
 | sampled raw bands | FINITE-EXACT FOR THE STATED BANKS ONLY | mac-mini-S105; klein-S312 |
+| proposed uniform `q<=25` good period | FALSE; exact coherent and gcd-incoherent residuals | THM-762/764; MISTAKE-143 |
 | (H)-bands, bottom cores | CLOSED (complete sweep) | THM-756 (4,032 pairs; AP/GW corners) |
 | safe-peel | Parts A/B PROVED; irreducible-tiled Part C empirical | mac-mini THM-753 |
 | aligned monotonicity | PROVED | mac-mini THM-751 |
@@ -65,7 +66,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | named coherent/cluster families | PROVED at their stated scopes | THM-668/737/739/740 |
 | 12-speed common-factor core + one coprime exception | PROVED, all scales | THM-760 |
 | (13−r)-speed common-factor core + r ≤ 6 exceptions, any gcds | PROVED above exact thresholds (c ≥ 43 uniform; exact per-(r,c) sets; Σg_a budget) | THM-761 (opus-S299) + battery |
-| uniform q ≤ 25 good-period finish | REFUTED (witness q scales with c) | codex-S3 refutation (26·{1..12} ∪ {339}) |
+| primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
+| hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
+| n=12 sporadic branch | OPEN; ratio/tooth/component reductions + bounded exact banks | THM-759/765/766; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -98,10 +101,26 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
    `finite-exact for stated bank`, `verified sample`, `conditional`, or `open`.
 
+Small-period correction: S312's `120/120` observation cannot be a terminal
+uniform lemma.  THM-762 supplies exact residuals first witnessing at `q=26`
+and `q=27`, while replay of S105 gives `91/8260` rows with `q_min>25` and a
+bank maximum of `38`.  The exact replacement through `q=28` is a
+zero-owner/signed-unit-pair blocker deck, not a denominator-only tournament.
+
+Tight-locus correction: the incoming THM-763 uses the zonotopal finite-checking
+argument with a strict-interior refinement to prove that every primitive tight
+twelve-speed tuple has `sum A<=78^11`.  This makes the sporadic branch honestly
+finite, but not computationally exhausted.  THM-765 removes every imprimitive
+leave-one-out core uniformly.  THM-766 adds the uniform projective
+bound `a_11/a_1>=72/7`; below `12` it places the top speed in one of eleven
+danger-tooth cones and retains an exact core-maximizer residue band.  The
+remaining equality problem is simultaneous component-tooth/splice-lattice
+coherence, not raw height.
+
 ## 4. The one-line frontier
 
 > **LRC(14) is open. The proved `f<=3` tile and the per-core capped envelope are substantial,
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
-*Controlling corrections: HYP-6780 and the updated THM-758. Earlier S297/S310/S312 closure
-language and the companion S297 reflection must be read through this correction.*
+*Controlling corrections: HYP-6780, MISTAKE-143, THM-762/764, and the updated THM-758. Earlier
+S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

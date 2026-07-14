@@ -1,8 +1,9 @@
 ---
-id: THM-762
+id: THM-765
 title: Safe-component tooth decks force hereditary primitivity
 status: PROVED (elementary circle geometry; the twelve-speed corollary cites LRC for eleven speeds)
 source: codex-2026-07-14-S3 (n=12 component/deck audit)
+renumber_note: first pushed as THM-762 after THM-762 was already occupied; moved to THM-765 by the first-pusher protocol
 depends_on:
   - THM-592   # exact safe-component language and endpoint geometry
   - THM-619   # earlier component-tooth band criterion
@@ -11,9 +12,11 @@ related:
   - THM-759   # one-component width bound / ratio bound
   - HYP-6775  # tight twelve-speed rigidity
   - HYP-6800  # the super-lonely-core (sporadic) branch
+  - HYP-6820  # uniformity audit
+  - MISTAKE-144 # corrected self-cusp support for the bounded census
 ---
 
-# THM-762 — Safe-component tooth decks force hereditary primitivity
+# THM-765 — Safe-component tooth decks force hereditary primitivity
 
 ## Statement
 
@@ -287,4 +290,4 @@ bounded domains with the corrected engine did not change their conclusions.
 
 The census through `N=30` finds only `{1,...,12}` among `86,492,770` primitive
 twelve-subsets.  This is exact finite evidence, not the uniform theorem: the
-uniform contribution of THM-762 is the deck/divisibility reduction above.
+uniform contribution of THM-765 is the deck/divisibility reduction above.

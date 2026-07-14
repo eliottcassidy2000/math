@@ -1,0 +1,10 @@
+n=12 sporadic exact-cap audit (bounded core box {1,...,13})
+nonextremal primitive 11-cores: 77
+core branches: wide=65 narrow=12
+THM-759-capped primitive completions: 790
+candidate branches: wide=750 narrow=40
+narrow candidates with a THM-766 tooth label: 0/40
+tight completions M=1/13: 0
+minimum M in the bank: 1/12; minimizers=[(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 22), (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20), (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 30)]
+largest exact cap/max(core) ratio: 11/2 at core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), M(core)=1/11, cap=66
+scope: bounded 77-core bank only; THM-763 gives uniform finiteness, not this enumeration

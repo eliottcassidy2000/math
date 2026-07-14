@@ -1,5 +1,5 @@
 LRC(13) n=12 bounded tight census (exact integer arithmetic)
-Companion evidence for THM-762; this is finite evidence, not the uniform proof.
+Companion evidence for THM-765; this is finite evidence, not the uniform proof.
 
 Command:
   c++ -O3 -std=c++17 04-computation/lrc13_n12_tight_census_codex_S3.cpp -o /tmp/lrc13_n12_tight_census
@@ -23,6 +23,6 @@ total=86493225 primitive=86492770 hereditary_primitive=86472295 tight=1
 
 Verdict:
   The unique primitive tight twelve-set in {1,...,30} is {1,...,12}.
-  THM-762's hereditary-primitivity filter removes 20,475 additional primitive
+  THM-765's hereditary-primitivity filter removes 20,475 additional primitive
   rows at N=30 before any LRC evaluation.  The bounded census does not prove
   uniform sporadic-branch emptiness; the gcd-deck theorem is the uniform result.

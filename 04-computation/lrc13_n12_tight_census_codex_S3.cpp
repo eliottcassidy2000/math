@@ -1,5 +1,5 @@
 // Exact bounded census for primitive tight 12-speed LRC(13) instances.
-// codex-2026-07-14-S3, companion audit for THM-762.
+// codex-2026-07-14-S3, companion audit for THM-765.
 //
 // Build/run:
 //   c++ -O3 -std=c++17 04-computation/lrc13_n12_tight_census_codex_S3.cpp \
@@ -19,7 +19,7 @@
 //
 // Tournament-analysis note.  Runner-level mask dominance is transitive and
 // contributes no structural information, so this census does not promote it
-// as a tournament.  THM-762 uses the meaningful vertices: gcd-deck lifts;
+// as a tournament.  THM-765 uses the meaningful vertices: gcd-deck lifts;
 // signed killer-phase displacement is the pairwise observable, circle
 // reversal is the gauge, and deck order is the antipodal tie path.
 

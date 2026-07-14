@@ -61785,3 +61785,59 @@ q<=25 certificate bank and the n=12 sporadic branch.  These are atlas cards A4
 and the equality-rigidity side of B5, respectively; marked them as owned and
 kept the two logical targets separate.  Also recorded that their HYP-6810
 identifier collides with opus-S298's earlier assembly-paper stub.
+
+---
+
+## codex-2026-07-14-S3 -- q<=25 refutation and uniform n=12 reductions
+
+The requested uniform `q<=25` good-period statement is false.  THM-762 and
+THM-764 give the replacement: for covering sets and `15<=q<=28`, a rational
+`q`-witness is equivalent to the absence of a zero owner and to a missing
+class in the signed unit-pair deck.  Two exact residuals refute the proposed
+cutoff.  The coherent set `26*{1,...,12} union {339}` first witnesses at
+`2/27`; the primitive gcd-incoherent set
+`{81,91,131,151,157,196,258,274,313,328,330,339,348}` first witnesses at
+`3/26` and has `M=101/470`.  An independent exact replay of the historical
+S105 bank finds 91 of 8,260 rows beyond q=25, all witnessed by q<=38.  Corrected
+THM-758, the S312 script commentary, and MISTAKE-143 so the sampled bank cannot
+again be promoted to a theorem.
+
+Uniform emptiness of the n=12 sporadic tight branch is not proved.  The branch
+is, however, now finite and substantially stratified.  THM-763 gives the
+conditional strict height bound `sum(A)<=78^11` for primitive tight twelve-sets;
+THM-765 proves hereditary primitivity of every eleven-core and eliminates the
+high-winding one-defect dilates.  THM-766 proves the first-window tooth ladder:
+with `m=a_1`, `b=a_11`, and `w=a_12`, every tight set has `w>=12m`, and if
+`b<12m` then `b/m>=72/7` and one of eleven exact tooth cones holds, together
+with a sharper center-alignment inequality.  The exact 77-core capped replay
+checks 790 primitive completions and finds no tight set; all 40 narrow rows
+already fail the tooth ladder, while exact evaluation eliminates the 750 wide
+rows.  A corrected exact C++ census through height 30 checks 86,492,770
+primitive twelve-subsets and again finds only `{1,...,12}`.  MISTAKE-144 records
+and repairs the omitted single-runner half-turn cusps in the older S107/S108
+evaluators; their finite conclusions are unchanged.
+
+The new endpoint-splice observable sharpens the remaining proof obligation.
+When the open danger union is not the whole circle, `chi=kappa-P` is exactly
+the number of target-safe components, where `P` counts protected end/start
+splices.  This proviso is automatic for twelve speeds at q=13 by settled LRC.
+At q=13 the pair-overlap formula is exact, and the 4,095 nonzero height-one lift
+patterns split into 4,085 overlap-rank shortages, nine blocker-debt rows, and
+one zero-defect row, the nonprimitive doubled arithmetic progression.  Every
+primitive row has defect at least two.  Complementary-pair tournaments retain
+useful cycle/SCC fingerprints but can collide between the arithmetic
+progression and failed lifts; the theorem-facing object is therefore the
+endpoint-owned incidence deck over a scale/residue packet, not a bare runner
+or residue tournament.  The precise next lemma is: under the THM-763/766
+constraints, a primitive full-residue set with `chi_13=0` must be
+`{1,...,12}`.
+
+Pulled and integrated concurrent THM-761 (multi-exception sheet covering),
+THM-763 (strict finite height), HYP-6815, HYP-6825, and the endpoint-loss audit.
+The resulting LRC(14) frontier is: non-covering families are closed; covering
+families with at most three far speeds are closed; THM-761 closes its stated
+multi-exception scale rays; the scale-normal `f>=4` residual, cyclic packets
+with at least seven exceptions, small-sheet failure regimes, and the n=12
+component-tooth/splice coherence lemma remain open.  HYP-6820 and the two
+frontier atlases now separate proved reductions, exact bounded evidence, and
+open uniform claims.

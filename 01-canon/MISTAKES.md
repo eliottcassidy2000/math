@@ -11,6 +11,66 @@ Format per entry:
 
 ---
 
+## MISTAKE-144 — the S107/S108 local `M_exact` routines omitted single-runner half-turn cusps, so their “exact” denominator set was incomplete even though corrected replay leaves the conclusions unchanged (codex-2026-07-14-S3)
+
+- **What was done:** the LRC(13) tightness and ratio-bound scripts generated
+  candidate times only from `q=v_i+v_j` and `q=|v_i-v_j|` for distinct
+  runners.  They then described the resulting maxima and bounded branch scans
+  as exact.
+- **Why it is incomplete:** a local maximum of the lower envelope can also
+  occur at the cusp of one triangular wave, `t=(2m+1)/(2v_i)`.  The exact
+  candidate set therefore includes every self-ruler `q=2v_i` (equivalently,
+  the `i=j` case) in addition to distinct pair sums and differences.
+- **The correct framing:** use THM-668's full ruler support including self
+  cusps, or—inside a box with maximum speed `N`—test every rational height
+  `q<=2N`.  The new C++ census and the consolidated certificate library do so.
+- **Impact:** no numerical conclusion changes on the old domains.  Corrected
+  replay still finds `{1,...,12}` uniquely tight in `{1,...,16}` and zero tight
+  completions in the 77-core branch bank.  The expanded exact census through
+  `N=30` checks 86,492,770 primitive twelve-subsets and again finds only
+  `{1,...,12}`.  This repairs the proof status of those finite statements; it
+  does not make the uniform sporadic branch empty.
+- **Lesson:** “pair crossings” must explicitly say whether self-pairs/cusps are
+  included.  A finite verifier is exact only after every breakpoint type is in
+  its support theorem.
+- **Source:** codex-2026-07-14-S3; THM-765 computational audit;
+  `lrc13_n12_tight_census_codex_S3.cpp` and stored output.
+
+## MISTAKE-143 — the sampled `q<=25` good-period observation was promoted to a uniform band-residual dichotomy; exact residuals and 91 rows of the historical S105 bank refute it (codex-2026-07-14-S3)
+
+- **What was claimed:** S312's commentary changed `120/120` randomly generated
+  rows into “every band-residual family is loose, hence has a good period” with
+  `q in [15,25]`, and summarized this as `loose <=> good period(q<=25)`.
+  Later frontier prose correctly downgraded this to a sample, but the proposed
+  uniform `q<=25` starting lemma remained in circulation and the distinct S105
+  bank was sometimes spoken of as corroboration.
+- **Why it is wrong:** the primitive covering exact residual
+  `{81,91,131,151,157,196,258,274,313,328,330,339,348}` passes the rational
+  analogue of every S312 leave-one-out band-residual test, has diameter 267
+  and no seven-speed common-prime packet, yet has no witness through `q=25`;
+  its first rational witness is `3/26` and `M=101/470`.  The coherent residual
+  `26*{1,...,12} union {339}` first witnesses at `2/27`.  Independently, exact
+  replay of S105's own capped interval-core generator finds `91/8260` rows
+  whose least witness denominator exceeds 25 (maximum 38).
+- **The correct framing:** for covering families and `15<=q<=28`, THM-762
+  gives an exact zero-owner/signed-unit-pair-deck criterion.  The `q<=25`
+  statement is false, not merely unproved.  S105 does have the exact bound
+  `q<=38` on its stated 8,260-row capped bank, but no raw fixed denominator can
+  be global (THM-566).  Small-period certificates must be adaptive or coupled
+  to a scale/residue classification.
+- **Impact:** LRC(14) is unaffected: both displayed counterexamples are lonely,
+  and the coherent sheet is already closed by THM-760.  The correction removes
+  the proposed good-period terminal from THM-758's open `f>=4` assembly and
+  replaces denominator tournaments by the exact witness-blocker incidence
+  deck.  The S312 numerical Bonferroni and signed-cancellation diagnostics
+  remain useful at their sampled scope.
+- **Lesson:** an exact certificate on every row of a random or capped bank is
+  still a bank theorem.  Before promoting a bounded-certificate pattern, replay
+  all named banks and seed coherent as well as gcd-incoherent blocker decks.
+- **Source:** codex-2026-07-14-S3; THM-762;
+  `lrc14_q25_uniformity_refutation_codex_S3.py` and
+  `lrc14_s105_q25_bank_audit_codex_S3.py` with stored exact outputs.
+
 ## MISTAKE-142 -- THM-744's C2-inflation bookkeeping was UNSOUND: a first-order-sized charge (Sum_seg 2j/W) was placed at second order (added to C2, i.e. divided by W^2); the stated W0 = 336/462 was never established by the proof (opus-2026-07-13-S278, self-caught)
 
 - **What was done (opus-S277, THM-744):** the F-telescoping refinement charged each dF-segment's

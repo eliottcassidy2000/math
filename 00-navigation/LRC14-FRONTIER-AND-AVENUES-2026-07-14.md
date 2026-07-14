@@ -40,7 +40,8 @@ recent theorem headlines suggest.
    v*(P) is globally about 500 is false: HYP-6780 proves
    v*(cP)=c v*(P).  Therefore a finite band for each fixed P is not a finite
    raw-height band over all P.  The 120/120 small-good-period observation
-   q in [15,25] is valuable evidence, not yet a uniform theorem.
+   `q in [15,25]` was a useful sample, but THM-762/MISTAKE-143 now refute its
+   proposed uniform extension with exact coherent and gcd-incoherent residuals.
 
 5. **This session closes the largest elementary scale ray.**  THM-760 proves
    that for c at least 2 and gcd(c,w)=1,
@@ -93,10 +94,13 @@ turns that looseness into a certificate without silently bounding raw scale.
 | bottom H-bands | all 91 bottom cores and their bands | exact finite proof, THM-756 |
 | far-count Claim A | at most three far speeds | proved through THM-738, THM-758 |
 | far-count Claim B | at least four far speeds | per-core decidable and sampled; not globally raw-bounded |
-| q<=25 good periods | observed on 120 band residuals | verified sample only, THM-758/S312 |
+| q<=25 good periods | false uniformly; observed on 120 sampled rows | THM-762/764, MISTAKE-143; S312 sample only |
 | scale behavior | |G'| fixed, component count and v* scale by c | proved, HYP-6780 note |
 | one exceptional residue | cP plus coprime w | proved, THM-760 |
 | tight-set ratio | a_n at most n times a_{n-1} | proved, THM-759; sporadic classification branch remains |
+| tight-set height | primitive tight 12-tuples have sum at most 78^11 | proved, THM-763; finite is not empty |
+| tight hereditary primitivity | every leave-one-out core of a primitive tight 12-set is primitive | proved, THM-765 |
+| tight first-window geometry | a_11/a_1 at least 72/7; eleven sub-12 tooth cones | proved, THM-766 |
 | global covering minimum | M at least 14/183, equality only at deep well | conjectural outside routed/finite lanes |
 
 ## How the repository's understanding sharpened
@@ -473,9 +477,11 @@ empirical covering-min rigidity into a true inverse theorem.  Keep the
 large-s counterexamples to the unconditional rigidity in the test set.
 
 The separate n=12 non-extremal-core/sporadic tight branch is also under the
-S3 uniformity audit above.  It should remain logically separate from the q25
-covering certificate: one characterizes equality, while the other is
-closure-critical.
+S3 uniformity audit above.  THM-763 now makes it uniformly finite, THM-765
+removes imprimitive peeled cores, and THM-766 gives a first-window tooth ladder,
+but emptiness remains open.  It should remain
+logically separate from the q25 covering certificate: one characterizes
+equality, while the other was a proposed closure terminal and is now refuted.
 
 **B6. Multi-killer balance as a convex program.**  Replace the one-direction
 perturbation bound by a piecewise-linear max-min program over all killer
@@ -641,7 +647,8 @@ assuming runners are the automaton states.
 8. Raw additive energy, Schur counts, endpoint divergence, conductance, and
    unlabelled tournament class are diagnostics, not known monotone proofs.
 9. Random samples underrepresent near-dilate and high-scale gcd families.
-10. The observed q<=25 good period is not yet a theorem.
+10. The proposed uniform q<=25 good period is false (THM-762/MISTAKE-143):
+    retain S312 only as a 120-row sample and use the exact blocker deck.
 11. THM-724 and THM-726 titles are stronger than the honest scope in their
     bodies; cite the remaining empirical/general lanes.
 12. THM-753 proves the peel lemma and dichotomy, not the empirical assertion

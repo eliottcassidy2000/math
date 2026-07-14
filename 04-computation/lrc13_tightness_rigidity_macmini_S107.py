@@ -36,7 +36,8 @@ def M_exact_and_witness(S):
     """Exact M(S) via peak candidates t=m/q, q in pairwise sums/diffs.
        Returns (M, list of tight points p/q attaining it)."""
     S = sorted(set(S)); best = F(0); wit = []
-    dens = set()
+    # MISTAKE-144 correction: self-cusps q=2v are breakpoint candidates too.
+    dens = {2 * a for a in S}
     for a, b in combinations(S, 2):
         dens.add(a + b); dens.add(b - a)
     dens.discard(0)

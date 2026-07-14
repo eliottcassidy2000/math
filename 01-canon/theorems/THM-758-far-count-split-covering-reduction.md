@@ -62,7 +62,7 @@ Thus Claim B currently equals **[`v>v*`: THM-755, proved per peel] + [coherent/c
 proved] + [scale-normal residual, open]**.  HYP-6750's `q≤25` good-period bank is useful exact evidence
 on 120 sampled residuals, not yet a uniform bounded-denominator theorem.
 
-## The band residual closes via a bounded-`q` RATIONAL WITNESS, not a crude bound (klein-S312)
+## The sampled band suggested bounded-`q` witnesses; uniform `q<=25` is false (MISTAKE-143 / THM-762)
 
 The `v ≤ v*` residual (band residual: `≥4`-far, bounded diameter, not capped-envelope-certifiable) has **no
 crude analytic bound** — tested and refuted (HYP-6750). Both natural forms fail at `δ=1/14`:
@@ -73,13 +73,19 @@ crude analytic bound** — tested and refuted (HYP-6750). Both natural forms fai
   **conditionally** — `G≈0.12` is a signed cancellation of `~10⁴`-size terms. This is the known
   **"signed not absolute" cancellation wall**; no unsigned/truncated certificate can capture it.
 
-**Evidence and candidate resolution.** A good period is a small-`q` rational lonely witness `a/q` with
+**Evidence and corrected conclusion.** A good period is a small-`q` rational lonely witness `a/q` with
 all `(c·a mod q) ∈ [q/14,13q/14]`; it is a rigorous, cheap certificate for each family where it is found.
-The S312 bank found one with `q∈[15,25]` for 120/120 sampled residuals (median 17).  This motivates the
-uniform conjecture "every normalized incoherent residual has such a good period", but does not prove it:
-the raw residual is not globally bounded, the sample is not exhaustive, and scale-coherent rays require
-their separate pack/witness routes.  The proposed loose-good-period versus tight-Bonferroni dichotomy is
-therefore a useful target, not yet the covering endgame theorem.
+The S312 bank found one with `q∈[15,25]` for 120/120 sampled residuals (median 17), but the proposed
+uniform conclusion is **false**, not merely unproved.  THM-762 gives an exact gcd-incoherent residual
+whose first rational witness is `3/26` and a coherent residual whose first witness is `2/27`; both pass
+the exact rational analogue of S312's band predicate.  Exact replay of the separate S105 bank also finds
+`91/8260` rows with no `q<=25` witness (all rows in that capped bank witness by `q<=38`).
+
+The valid replacement is THM-762's zero-owner/signed-unit-pair-deck criterion for `15<=q<=28`.
+It turns a proposed denominator tournament into an exact blocker incidence object, but it does not close
+the residual: complete blocker decks exist.  Any good-period terminal must therefore use an adaptive
+denominator or follow a scale/residue inverse theorem.  THM-566 independently forbids every global fixed
+raw denominator ladder.
 
 ## What remains
 

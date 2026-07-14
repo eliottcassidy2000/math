@@ -29,7 +29,9 @@ from functools import reduce
 from itertools import combinations, product
 
 def M_exact(S):
-    S = sorted(set(S)); best = F(0); dens = set()
+    # MISTAKE-144 correction: include single-runner half-turn cusps q=2v,
+    # not only crossings between distinct runners.
+    S = sorted(set(S)); best = F(0); dens = {2 * a for a in S}
     for a, b in combinations(S, 2):
         dens.add(a + b); dens.add(b - a)
     dens.discard(0)

@@ -8,6 +8,7 @@ depends_on:
   - THM-668   # exact rational maximizer audit used by the companion script
   - THM-755   # definition of the uncapped residual tested below
 related:
+  - THM-762   # first-pushed statement of the same criterion; includes S105 replay
   - THM-758
   - HYP-6750
   - HYP-6780
@@ -15,6 +16,10 @@ related:
 ---
 
 # THM-764 — The signed-pair deck and the failure of the `q<=25` bound
+
+This is an independently developed expanded restatement of THM-762, using the
+same exact counterexample artifact.  It is retained because its band-residual
+and gcd-incoherence certificates are presented in greater detail.
 
 ## Statement
 
@@ -40,8 +45,8 @@ for a unit multiplier, the only unsafe integer residue classes are
 witness `a=b^(-1) mod q`, up to sign.
 
 The proposed uniform conclusion that every covering thirteen-speed residual
-has such a witness with `q<=25` is false, even inside the exact uncapped S312
-band.  Two counterexamples are
+has such a witness with `q<=25` is false, even inside the exact S312
+band-residual predicate.  Two counterexamples are
 
 ```text
 V26 = (26,52,78,104,130,156,182,208,234,260,286,312,339),
@@ -50,7 +55,7 @@ S*  = (81,91,131,151,157,196,258,274,313,328,330,339,348).
 ```
 
 Both are primitive, covering, have thirteen speeds above `14`, diameter at
-most `339`, pass every leave-one-out S312 uncapped-envelope inequality, and
+most `339`, pass every leave-one-out S312 band-residual inequality, and
 have no witness at any denominator `15<=q<=25`.  In fact:
 
 ```text
@@ -120,7 +125,7 @@ good-set measure `|G'_P|` and component count `r_P`, then proves
 pi*w*|G'_P| < (22/7)*w*|G'_P| < r_P.                   (3)
 ```
 
-This verifies the S312 uncapped residual predicate without floating point.
+This verifies the S312 band-residual predicate without floating point.
 For `V26`, the largest exact value of `w|G'_P|` is
 
 ```text
@@ -157,7 +162,7 @@ For `15<=q<=28`, each modulus carries a zero-owner bit and a subset of signed
 unit pairs.  A proof by rational periods must either show that some adaptive
 modulus has an empty pair, or derive structure from simultaneous completeness
 of these decks.  The counterexamples show that raw looseness, bounded
-diameter, the capped-envelope residual test, and the absence of a large gcd
+diameter, the band-residual test, and the absence of a large gcd
 packet do not force that empty pair by `q=25`.
 
 ## Tournament analysis and challenged vertex choice
@@ -180,4 +185,3 @@ tournament is a useful fingerprint, but the zero/sign-pair deck is the exact
 sidecar that preserves the LRC predicate.  Alternate vertices considered
 were runners, gaps, fixed sections, section boundaries, wall events,
 residues, cover arcs, Fourier modes, matroid circuits, and proof obligations.
-

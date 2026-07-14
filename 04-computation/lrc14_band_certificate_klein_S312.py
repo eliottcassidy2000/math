@@ -11,12 +11,12 @@ RESULT (honest): the crude ANALYTIC bound does NOT exist. Two natural forms both
      prod blows up at rationals). The relation series converges only CONDITIONALLY (signed), not absolutely.
      => main - rel_abs << 0. Same "signed not absolute" cancellation wall as the large-diameter route.
 
-RESOLUTION (the real finish): every band-residual family is LOOSE, hence has a GOOD PERIOD -- a small-q
-rational lonely witness a/q (all (c*a mod q) in [q/14, 13q/14] => ||c a/q|| >= 1/14 => M >= 1/14). Verified
-120/120 band-residual families have q in [15,25] (median 17). This is a rigorous, decidable, CHEAP per-family
-certificate with bounded q -- the clean finite-check finish, NOT a crude bound. It works precisely because
-the band residual is loose: tight APs (no good period) are the kps/Claim-A half (THM-738). Aligns with the
-THM-758 far-count split: loose <=> good period, tight <=> Bonferroni tree.
+CORRECTION (MISTAKE-143 / THM-762): the run below found q in [15,25] on 120/120 RANDOMLY SAMPLED
+rows.  It did not prove a uniform band theorem or ``loose <=> q<=25``.  Exact S312-predicate residuals
+exist whose first rational witnesses have q=26 and q=27, and exact replay of the separate historical
+S105 bank finds 91/8260 rows with q_min>25.  The per-family certificates printed below remain valid for
+the sampled rows; only their universal interpretation was false.  See the exact refutation artifact
+``lrc14_q25_uniformity_refutation_codex_S3.py``.
 """
 import numpy as np, random
 from math import gcd,pi,comb
@@ -61,5 +61,5 @@ for _ in range(60000):
     if found>=120: break
 C,G,tr=ex_bonf
 print("Bonferroni FAILS: Gtrue=%.4f but B1=%.2f B3=%.3f B5=%.3f B7=%.3f (oscillates negative)"%(G,tr[1],tr[3],tr[5],tr[7]))
-print("Rational witness SUCCEEDS: %d/%d band-residual families, q in [%d,%d] median~%d (good period, loose => exists)"
+print("Rational witness sample: %d/%d sampled band-residual families, q in [%d,%d] median~%d (not uniform; MISTAKE-143)"
       %(len(qs),found,min(qs),max(qs),sorted(qs)[len(qs)//2]))

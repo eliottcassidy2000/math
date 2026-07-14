@@ -9,6 +9,7 @@ related:
   - THM-566
   - THM-758
   - THM-760
+  - THM-764   # independently pushed expanded restatement using the same exact artifact
   - HYP-6820
   - MISTAKE-143
 ---
@@ -20,6 +21,11 @@ covering residual has a lonely rational time of denominator at most `25`.
 It identifies the exact finite object seen by denominators `15,...,28` and
 exhibits both coherent and gcd-incoherent counterexamples to the proposed
 uniform bound.
+
+THM-764 was developed independently on the same live mainline and gives an
+expanded restatement of the same signed-pair criterion and counterexamples.
+The two files share the exact certificate artifact; THM-762 additionally
+records the S105 replay and the dilated-block corollary.
 
 ## 1. Exact criterion
 
@@ -75,7 +81,7 @@ S*  = {81,91,131,151,157,196,258,274,313,328,330,339,348}.
 
 Both are primitive, covering, have thirteen speeds above `14`, diameter at
 most `339`, and pass the exact rational analogue of every leave-one-out
-capped-envelope test used by S312.  Their zero-owner/pair decks are complete
+band-residual test used by S312.  Their zero-owner/pair decks are complete
 for every `q=15,...,25`; covering blocks every `q<=14`.  Therefore neither
 has a witness with denominator at most `25`.
 
