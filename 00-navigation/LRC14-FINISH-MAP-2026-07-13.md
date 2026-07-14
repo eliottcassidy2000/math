@@ -124,6 +124,16 @@ trees) + families whose 7th-smallest speed is unbounded (≤6 bounded speeds —
 LEM-006 factorial-moment territory, since the level-1 base 1−j/7 dies at j≥7 per MISTAKE-122).
 (kind-pasteur-S128 cont.3, THM-735, HYP-6540 [renumbered from 6535].)
 
+**⚠ S128 cont.4 (kind-pasteur) — THM-738: the j=3 rung is DONE over the whole near-AP window.**
+All C(14,10)=1001 ten-element bodies E ⊆ {1..14} swept through THM-735's Bonferroni tree (Q-general
+bottom via lcm-multiples): **every 13-speed family with ≥10 speeds in {1..14} satisfies LRC(14)**
+(27.7 min; 6.06M exact per-pair bodies; 4.68M bottom exact-ℚ sweeps; max V₁=368; ZERO tights among
+swept covering triples, ZERO covering L=0; contains THM-734 and THM-735(iii) strictly). ID
+housekeeping same session: THM-735 triple collision resolved (kps claim 17:51 first-pusher; mac-mini
+→ THM-736 far-peel Farey; opus pack-clock → THM-737; kps HYP-6535 → HYP-6540, opus keeps 6535).
+Next rung j=4 scoped: V₁ ≈ 180–230 on 9-element bodies, 2002 bodies, ~6–30 h — overnight/cron
+target; j=5,6 likely need the exact-disc CS tightening. (kind-pasteur-S128 cont.4, THM-738.)
+
 **⚠ S289 (klein) — CONVERGES with kp-S128; the residual is exactly the compact core.** Independently
 (S287/S288, before seeing S128) I built the same certificate and the `disc_v ≤ r²/(3v²)` bound; kp-S128's
 exact-ℚ `B₂` form SUBSUMES it (my S288 THM-732 file is superseded by kp's THM-732 — same ID, kp's is

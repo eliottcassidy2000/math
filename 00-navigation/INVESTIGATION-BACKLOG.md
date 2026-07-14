@@ -57,11 +57,12 @@
   exact box pairs, 58.5 s); every 13-speed family with ≥11 speeds in {1..14} satisfies LRC(14); tight
   census = exactly {AP, GW-doubling}, zero covering L=0.** What it does NOT cover: bodies with ≥3
   outliers >14 (k≤8 multi-killer — loose per cont.58, M ≥ 2/23) and unbounded-outlier bodies
-  (multi-scale). (ii) three-scale bodies: compose peel lemmas P1/P2 (proved) — write the induction
-  cleanly; NOTE the crude composition FAILS in the clustered c≈a regime (consistent with klein-S289's
-  isolation classifier: crude cert fires ⟺ far element isolated) — the multi-scale leg needs either
-  the sharp disc rate (disc ~ r/v², klein-S280's verified rate) or opus-S270's exact-disc certificates
-  per peel; (iii) the v0(base) < lcm-step question — now MASSIVELY corroborated: all 364 bodies have
+  (multi-scale). (ii) three-scale bodies: **DONE — cont.3 (THM-735 simultaneous multi-peel: the clustered wall was
+  composition order, Bonferroni j≤6 vs the fixed body needs no isolation) + cont.4 (THM-738: the j=3
+  rung swept over ALL 1001 ten-element bodies ⊆ {1..14} — every 13-speed family with ≥10 speeds in
+  {1..14} is lonely; 4.68M exact bottom sweeps, zero tights, 27.7 min).** NEXT: the j=4 rung (2002
+  nine-element bodies, sampled V₁ ≈ 180–230, est. 6–30 h — overnight/cron target); j=5,6 want the
+  exact-disc CS tightening (THM-735); j≥7 = the density seam (LEM-006 territory, unchanged); (iii) the v0(base) < lcm-step question — now MASSIVELY corroborated: all 364 bodies have
   A₀ ≤ 455 and every box closed clean; (iv) uniform EXPOSURE bound: r ∈ [4,24] over all 364 bodies —
   tiny; r-control on the multi-scale stratum is the remaining analytic content of route [B]; (v) Lean:
   THM-732(i) 3-line Fourier + THM-733/734 box checks are decide-style (245,994 rational sweeps).
