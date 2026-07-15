@@ -9,6 +9,9 @@ verification:
   - 04-computation/lrc13_scale_one_hamming_six_component_recursion_codex_S10.cpp
   - 05-knowledge/results/lrc13_scale_one_hamming_six_component_recursion_codex_S10.out
   - 04-computation/lrc13_hamming_six_closed_danger_union_replay_codex_S10.cpp
+  - 04-computation/lrc13_hamming_six_closed_danger_union_replay_combine_codex_S10.py
+  - 05-knowledge/results/lrc13_hamming_six_closed_danger_union_replay_codex_S10.out
+  - 05-knowledge/results/lrc13_hamming_six_closed_danger_union_replay_codex_S10.validation.md
 ---
 
 # THM-857 — the scale-one Hamming-six chart closes
@@ -211,9 +214,34 @@ in root-index order.  This makes the certificate sensitive to the exact
 labelled tree without storing its hundreds of millions of logical nodes as
 text.
 
-The independent replay and frozen source/output hashes are recorded after the
-reproduction commands below.  [Certificate manifest pending final all-root
-replay; no mathematical claim in this theorem depends on an unrecorded hash.]
+The all-root replay completed in eight contiguous shards.  The canonical
+combiner verified every local range, total, manifest and `PASS` line; then it
+verified roots `0,...,923` exactly once in lexicographic deletion-set order,
+the frozen arrays (7), the `580,918,240` candidate edges, and the literal sole
+cover (3).  Its canonical root-ordered manifest is
+
+```text
+480ca266dba54d7dfa76a68baecd56b26f3294095d36786ab04c0dfd5b135dee. (11a)
+```
+
+The exact provenance hashes are
+
+```text
+primary source   58a8c4d516e340fa5bcb426a646ab0006f1ba91cd1697ab6b22d580ebaf65222
+primary output   63b3851ce74a0906821e990c81fe1195d9ea8a6bbf0dc6ff8115f7760d4b3ef7
+replay source    585c50601ef3c392a2afb020242115a7215d233878639c80d355984a8a16bd27
+combiner source  dd383b53015bea5e7aa76c1109ca4f382ca411611be726910951d8c4bf6b07e7
+replay output    6d7316ceb1fe15987bb527f75ff7938ceef60a118facdbf697315da336a393be. (11b)
+```
+
+A fresh optimized monolithic primary replay completed in `4077.18` seconds
+and was byte-identical to the stored primary output.  The independent output
+has `930` lines and `258,721` bytes.  Optimized, unoptimized, and
+ASan/UBSan builds give byte-identical root transcripts on roots `0` and `286`;
+the sanitizer runs are clean.  The validation note records the exact shard
+ranges, compile and combine commands, executable hash, diagnostic root hashes,
+and the honest distinction between sharded combination and the C++ program's
+unused monolithic aggregate branch.
 
 ## 5. Tournament analysis and challenged vertices
 
@@ -282,3 +310,18 @@ c++ -std=c++20 -O3 -DNDEBUG \
 cmp /tmp/thm857-primary.out \
   05-knowledge/results/lrc13_scale_one_hamming_six_component_recursion_codex_S10.out
 ```
+
+Reproduce and validate the independent transcript from completed shard files
+with
+
+```bash
+python3 -B \
+  04-computation/lrc13_hamming_six_closed_danger_union_replay_combine_codex_S10.py \
+  /tmp/h6-independent-final/shard{0..7}.out \
+  > /tmp/thm857-independent.out
+cmp /tmp/thm857-independent.out \
+  05-knowledge/results/lrc13_hamming_six_closed_danger_union_replay_codex_S10.out
+```
+
+The validation note gives the eight exact replay commands needed to regenerate
+those shard files from the independent C++ source.

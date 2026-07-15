@@ -240,7 +240,7 @@
   action through common dilation, proves that effective order `D` is exactly
   the number of deck masks created by one insertion, and makes the H6 gate
   containing `D=1` finite-decidable. THM-860 makes every primitive proper
-  AP-centred `D>1` language finite-decidable as well: `c<=2,328,480`, with at
+  AP-centred `D>1` language finite-decidable as well: `c<=2,177,280`, with at
   most 37 first heights per labelled ray. The first explicit unevaluated
   ramified languages are the 64 all-order-two `c=2` signed-cycle contexts, the
   `336` two-order-one/four-order-three contexts, and the `672`

@@ -5,7 +5,7 @@ p=3 coarse_range=4 optimized_range=3 extremals=((0, 1, 2, 3, 3, 3), (0, 2, 2, 3,
 p=5 coarse_range=1 optimized_range=1 extremals=((0, 1, 1, 1, 1, 1),)
 p=7 coarse_range=2 optimized_range=1 extremals=((0, 0, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1))
 p=11 coarse_range=1 optimized_range=0 extremals=((0, 0, 0, 0, 0, 0),)
-quotient_divisor=2^5*3^3*5*7=30240 scale_cap=77*30240=2328480
+quotient_divisor=2^5*3^3*5*7=30240 attenuation_pivot=77 all_six_pivot=72 scale_cap=72*30240=2177280
 rho_table=2:[1/2,1/4,1/4,3/16,5/32,5/32] 3:[1/3,2/9,5/27,13/81] 5:[1/5,4/25] 7:[2/7,8/49] 11:[2/11]
 SECTION 924 root components
 roots=924 min_length=31/1430 multiplicity=1 core=(1, 4, 7, 9, 10, 11)
@@ -25,6 +25,6 @@ owner=5 masks=2,1,-,0,-,-
 owner=8 masks=0,-,1,2,-,-
 owner=12 masks=-,1,2,0,-,-
 exact_M=5/29 witnesses=(Fraction(1, 58), Fraction(57, 58)) verdict=loose
-source_sha256=6e51c6d7487b07b8e115320df16dec1b355c6b41c95fc8bb55af45d619928161
-payload_fnv64=b3faace3116a3ab0
+source_sha256=d91e8e9be79b0339e80958ac3cedd1a6cc3efd7ccc25009673d0592978069a95
+payload_fnv64=4ef6d591ed02b211
 VERDICT finite-ramification constants and boundary censuses reproduced exactly
