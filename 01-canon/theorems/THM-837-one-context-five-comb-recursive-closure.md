@@ -1,7 +1,7 @@
 ---
 id: THM-837
 title: One order-three Hamming-five context closes by exact five-comb recursion
-status: RESERVED — proof draft and exact search are complete, but the canonical output and certificate are still being finalized; no all-context or full Hamming-five conclusion is claimed
+status: PROVED (one of 96 arbitrary-height order-three contexts) + FINITE-EXACT (75,371-state recursive closure); the other 95 contexts remain open
 source: codex-2026-07-15-S10 continuation
 depends_on: [THM-810, THM-815, THM-816, THM-820, THM-823]
 related: [HYP-6820]
@@ -43,7 +43,7 @@ u_10= 4 mod 39,       u_12=10 mod 39.                     (2)
 These are the least CRT representatives of `u_r=3r mod 13` and the chosen
 unit class `u_r=1 mod 3`.
 
-## Claimed theorem after replay promotion
+## Theorem
 
 For every choice of positive speeds in (2),
 
@@ -147,8 +147,19 @@ at the least representative row
 (label,speed)=((10,4),(12,10),(1,16),(5,28),(8,37)).      (12)
 ```
 
-Once the stored output and source-embedded certificate are frozen, these
-facts together with recursive completeness prove (3).
+The stored output freezes the state certificate
+
+```text
+9d1024dc22acdc85ccd57afe74ac23d002765ec6ce0aee0d648da64dc23d041a.
+```
+
+These facts together with recursive completeness prove (3).  The source and
+stored-output payload hashes are respectively
+
+```text
+8717e9b5f88c5ef5fec18d418a66ec1a83dd630152856b88ddb7665abe1ffb12,
+691f54f9b1fdcc8bc5c3a1e164d910811d34200e7c4dbb80a450d30573ec8c6c.
+```
 
 ## 4. State carrier and Tournament Analysis
 
@@ -165,13 +176,18 @@ the other three selected combs before comparing a pair; increasing numerical
 speed is the declared tie Hamiltonian path.  This quotient measures overlap
 reversal, but it destroys absolute residual measure, active endpoint
 topology, and the future CRT-progression action.  It therefore cannot prove
-(3).  Alternate vertices—components, endpoints, walls, or residue labels—also
+(3).  On all 57 terminals, both raw and conditioned tournaments are
+transitive with score histogram `(0,1,2,3,4)`, zero triangles, five singleton
+SCCs, and one Hamiltonian path, while the gauge switches between one and ten
+of the ten edges.  Identical standard fingerprints therefore coexist with
+substantial conditional reorientation.  Alternate vertices—components,
+endpoints, walls, or residue labels—also
 fail singly: the exact predicate is preserved by the evolving bipartite
 incidence of active residual runs with labelled future comb teeth.
 
 ## Replay
 
-After promotion, run
+Run
 
 ```bash
 python3 04-computation/lrc13_hamming_five_single_context_comb_closure_codex_S10.py

@@ -1,0 +1,36 @@
+hamming-five single-context exact comb closure
+scope=one of 96 directed-flag/parity contexts; other_contexts_open=95
+quartet=(1, 5, 8, 12) flag=10 missing=(1, 5, 8, 10, 12) pair_bits=(1, 1, 1)
+bases={1: 16, 5: 28, 8: 37, 10: 4, 12: 10} progression_modulus=39
+core_labels=(2, 3, 4, 6, 7, 9, 11) core_speeds=(6, 9, 12, 18, 21, 27, 33)
+threshold=1/13 duty=2/13 discrepancy=22/169
+carrier=active open endpoint runs on (0,1/2) plus remaining labelled CRT progressions and last speed
+mirror=t->1-t; full_K=2*half_K; full_L=2*half_L; K/L and every recursive bound unchanged
+mask_guardrail=global cell bits without boundary activation do not determine K; unused endpoints create false cuts
+root.half_components=18 root.half_measure=2615/18018
+root.full_components=36 root.full_measure=2615/9009
+root.first_speed_bound=349
+nodes_by_depth={0: 1, 1: 45, 2: 1262, 3: 20703, 4: 53303, 5: 57}
+total_states=75371
+dead_no_candidate_by_depth={3: 6253, 4: 53251}
+covering_prefixes=0
+terminal_nonempty_rows=57
+terminal_min_full_measure=413437/5714280
+terminal_min_full_components=30
+terminal_min_chosen_label_speed=((10, 4), (12, 10), (1, 16), (5, 28), (8, 37))
+max_recursive_bound=1025
+distinct_cached_replacement_operators=130
+cached_half_safe_runs=CacheInfo(hits=78375, misses=137, maxsize=None, currsize=137)
+state_certificate_sha256=9d1024dc22acdc85ccd57afe74ac23d002765ec6ce0aee0d648da64dc23d041a
+tournament.vertices=five chosen exception combs ordered by increasing speed
+tournament.raw_observable=marginal erosion of the root half-carrier
+tournament.switch=remove the other three combs before each pair comparison
+tournament.tie_hamiltonian_path=increasing speed
+tournament.raw_fingerprint_histogram={(((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)), 0, (1, 1, 1, 1, 1), 1): 57}
+tournament.conditional_fingerprint_histogram={(((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)), 0, (1, 1, 1, 1, 1), 1): 57}
+tournament.edge_flip_histogram={1: 5, 3: 5, 4: 7, 5: 11, 6: 10, 7: 9, 8: 6, 9: 3, 10: 1}
+assumption_challenge=comb vertices are overlap telemetry only; they forget absolute residual measure, active endpoint topology, and future CRT progression action
+closure_claim=this context only; no all-context or arbitrary-Hamming-five closure is claimed
+thm820_interface=does not recompute THM-820 scale-one bounds; independently rebuilds the THM-823 all-order-three context root and its five-comb bounds
+source_sha256=8717e9b5f88c5ef5fec18d418a66ec1a83dd630152856b88ddb7665abe1ffb12
+sha256=691f54f9b1fdcc8bc5c3a1e164d910811d34200e7c4dbb80a450d30573ec8c6c
