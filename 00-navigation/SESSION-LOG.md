@@ -67,6 +67,48 @@ replays; reflection `the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14`.
 Earlier coherent checkpoints `77268efb1` and `aa534512a` were pushed; pulls
 integrated THM-847/H5 closure, the self-line refutation, and THM-810 F6 rather
 than overwriting them.
+## opus-2026-07-15-S312 -- OVERNIGHT MARATHON: n=8 refutation triple-certified (404; my independent third route; Aut-weighted 416 diverges) + THM-854 witness parity law (odd-order witnesses = mod-2 path-decompositions of K_n iff n = 1,2 mod 4; NEVER involutions => MISTAKE-150 corrects THM-852(ii)) + F6 moment closure/FD-exact (THM-855, renumbered from the 810 collision) + THM-856 THE HUNTER TREE BOUND CROSSES THE SEVEN-COMB WALL (coercive iff m' <= 7.5; cluster dichotomy verified in all three regimes; radius-7 asymptotics closed modulo two finite quantifications) (HYP-6910, renumbered from the 6895 collision)
+
+Prompt (owner): prove the 2selfK = SC bijection, check n=8; long overnight, many pushes/
+pulls, integrate the fleet; toward LRC(14) completion via tournament/metagraph analysis
+and formula generation.
+
+ARC 1: kps S128 refuted the law mid-session (404 != 176); my n=8 run (subH classifier,
+third route) CONFIRMS 404/8/412; codex-S14 concurs. NEW: weighted qf 416 != 412 -- first
+weighted/unweighted divergence. SALVAGE: sigma-realizes-reversal dictionary (blue => SC in
+one line); THM-854: pi^k X = X + [k odd]ONE + XOR_j pi^j p0 => odd-order witnesses are
+mod-2 path-decompositions of K_n, possible iff n = 1,2 (mod 4); exhaustive spectra n=5,6,7
+(orders 3,5 / 4,5 / 6,10,12): NO involutions => THM-852(ii) corollary corrected (premise
+sigma^2 in Aut never holds: sigma^2 = pair-flip p0 XOR sigma p0); MISTAKE-150 + banner.
+Type ledger: anti-side ~involutions, qf-side never -- disjoint spectra seal the 8/12/88
+coincidence. selfK = 4, 6, 44, 202 stays open.
+
+ARC 2: F6 in THM-855: E[Delta^2|T] = 16(n-4)x/N + 64 exact (referee n=4..6); closure at
+order 2 (E[Delta^3] splits from n=5); Var_stat(x) = 2n(n-1)(n-2); the OU fluctuation-
+dissipation relation EXACT (Var = E[Delta^2]N/8); relaxation rate 4/N.
+
+ARC 3 (LRC headline): THM-856. Union-bound schema PROVABLY empty at m' >= 7 (per-comb
+density exactly 2/13, also E-restricted). Hunter/Kounias tree bound coercive iff
+4(m'-1) >= 13(2m'-13) iff m' <= 7.5: crosses SEVEN with 85% margin, dies at eight. Exact
+Bezout overlap (a+b)^2/(169ab) >= 4/169, minimized at near-equal speeds = the exact
+failure locus. CLUSTER DICHOTOMY verified exact-Q (prefix {1..5}): (a) beat localization
+on Beat_d = {||du|| <= 2/13}, sharp threshold d ~ 8 (baseline recovered exactly at d=8);
+(b) multi-cluster: trees need no intra-cluster edges, Hunter 3/3 coercive; (c) single-
+cluster: AP avoid-measure a(t) > 0 off width-1/637 Farey-7 windows, integral_E a(t)dt =
+0.056 > 0 = uncovered floor for ALL large N. Periodicity lemma: comb anomaly EXACTLY
+periodic in lift height (period 60) => infinite chart data = finite rational tables.
+Radius-7 asymptotics CLOSED modulo two finite per-prefix quantifications (Erdos-Turan
+rate in N; O(kappa_E/d) + O(C/x_min) constants).
+
+HYGIENE: my THM-810 -> THM-855 (LRC's was first-pushed); my HYP-6895 -> HYP-6910 (kps
+cont.11's triangle was first). Fleet: 6+ push/pull cycles; codex-S13 integrated THM-854 +
+F6 mid-session.
+
+NEXT (named): the two THM-856 quantifications => radius-7 closure; m'=8 needs a third-
+order tool; selfK object (OEIS-blank); n=8 witness spectrum (parity law predicts all
+even); H-drift second moment (codex); the level-mean potential lemma stands.
+
+FILES: THM-854/855/856; MISTAKE-150; HYP-6910; 6 result files. opus; S312.
 
 ---
 ## kind-pasteur-2026-07-15-S128 (cont.13, overnight) -- THE BLACK SELF-LINE LAW IS REFUTED AT n=8: 2selfK = SC fails (404 != 176; pipeline certified against 8/12/88) -- opus S311's 'all n >= 5' law was a small-n coincidence; WHAT SURVIVES: the Klein-four skeleton (404 = 4x101), the INVOLUTION LEMMA (odd-|Aut| coset => involutive witnesses; at odd n ALL quasi-fixed classes have trivial Aut), selfB(8) = 4 (blue self-lines are even-n only); the new open object selfK(n) = 4, 6, 44, 202

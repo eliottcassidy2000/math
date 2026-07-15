@@ -87,3 +87,37 @@ tight.
 overlap debt": the potential is Hunter's tree functional, its coercivity
 window is exactly one rung (m′ = 7), and its failure locus is exactly
 characterized (near-equal speeds) with the next tool named per residual.**
+
+## 7. THE CLUSTER DICHOTOMY (same session, all three parts verified exact-ℚ)
+
+The residuals of §6 resolve into a complete asymptotic schema:
+
+**(a) Beat localization (the corrected deficit law).** The overlap of combs
+x and x+d localizes on the beat window Beat_d = {u : ||du|| ≤ 2/13} (moiré):
+for small d, μ(D_x ∩ D_{x+d} ∩ E) is governed by μ(E ∩ Beat_d), NOT by
+(4/169)μE. Verified at x = 500: d = 1, 2, 3, 5 give overlaps 0.0059, 0.0029,
+0.0039, 0.0050 (baseline 0.0110), tracking μ(E ∩ Beat_d); **at d = 8 the
+overlap returns to baseline exactly (0.011045) and stays there (d = 13, 40,
+200)**. The deficit threshold is d ≳ 13/2: differences ≥ 8 sample E
+representatively.
+
+**(b) Multi-cluster packets: Hunter on inter-cluster edges.** A spanning tree
+needs NO intra-cluster edges once there are ≥ 2 clusters (star through the
+other cluster). Inter-cluster differences are large ⟹ overlaps at baseline ⟹
+coercive. Verified 3/3: {200..203}∪{900..902}: +0.030; {150..155}∪{700}:
++0.027; three clusters {100,101}∪{350..352}∪{800,801}: +0.005. All COERCIVE.
+
+**(c) Single-cluster packets: the AP-window floor.** Seven speeds in one
+window: (N+d_i)t is a sub-AP with step t; the avoid-measure
+a(t) = 1 − μ(∪_i(W − d_i t)) is positive off tiny Farey windows around
+denominators exactly 7 (width ~1/637 at k/7; smaller denominators q ≤ 6 leave
+gaps ≥ 1/6 > 2/13, so a(t) > 0 there ALWAYS). Verified: ∫_E a(t) dt ≈ 0.0558
+> 0 (the uncovered floor for ALL large N by skew equidistribution); spot:
+a(1/2) = 0.69, a(1/7 + 1/5000) = 0 (in-window), a(5/13) = 0.077.
+
+**The asymptotic radius-7 chart is closed by (b) + (c) modulo two explicit
+finite quantifications: the equidistribution rate in N for (c) (Erdős–Turán
+with the exact table of §4) and the O(κ_E/d) + O(C/x_min) error constants in
+(b). Both are FINITE, per-prefix computations — the wall is no longer a
+density obstruction but a bookkeeping one, exactly the reduction the
+frontier's item 3 asked for.**

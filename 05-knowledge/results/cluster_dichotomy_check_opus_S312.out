@@ -1,0 +1,18 @@
+(1) BEAT LOCALIZATION -- overlap(x, x+d, E) vs beat-window prediction:
+   d=   1: overlap = 0.005916  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.15385  (beat frac of muE: 0.330)
+   d=   2: overlap = 0.002888  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.07692  (beat frac of muE: 0.165)
+   d=   3: overlap = 0.003857  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.10256  (beat frac of muE: 0.220)
+   d=   5: overlap = 0.005021  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.12308  (beat frac of muE: 0.264)
+   d=   8: overlap = 0.011045  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.12821  (beat frac of muE: 0.275)
+   d=  13: overlap = 0.012536  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.16568  (beat frac of muE: 0.355)
+   d=  40: overlap = 0.011909  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.15769  (beat frac of muE: 0.338)
+   d= 200: overlap = 0.010989  baseline(4/169)muE = 0.011045  mu(E cap Beat_d) = 0.14462  (beat frac of muE: 0.310)
+
+(2) MULTI-CLUSTER packets -- Hunter using only inter-cluster edges:
+   xs=[200, 201, 202, 203, 900, 901, 902]: HUNTER(inter-cluster) = +0.02977 actual uncovered = 0.11827  COERCIVE
+   xs=[150, 151, 152, 153, 154, 155, 700]: HUNTER(inter-cluster) = +0.02696 actual uncovered = 0.08104  COERCIVE
+   xs=[100, 101, 350, 351, 352, 800, 801]: HUNTER(inter-cluster) = +0.00492 actual uncovered = 0.12796  COERCIVE
+
+(3) SINGLE-CLUSTER (consecutive) -- avoid-measure a(t) on E:
+   integral_E a(t) dt ~ 0.05580 (positive => uncovered floor for ALL large N)  [152 sample points]
+   spot a(t): t=1/2: 0.6923, t=1/7+1/5000: 0.0000, t=2/7+1/300: 0.0070, t=5/13: 0.0769
