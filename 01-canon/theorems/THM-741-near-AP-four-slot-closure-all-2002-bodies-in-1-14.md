@@ -15,6 +15,9 @@ related:
     the bounded side: rung j proves middle-reach (indeed L>0) for every covering family with ≥(13−j)
     in-window speeds — the "practical closure" klein's consolidation names, grown one rung per run
   - MISTAKE-122 (j≤6), MISTAKE-141 (exact thresholds), HYP-6540 (calibration)
+verification:
+  - 04-computation/lrc14_j4_flood_portable_pruner_codex_S14.py
+  - 05-knowledge/results/lrc14_j4_flood_57_exact_codex_S14.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -48,3 +51,68 @@ survived testing — see below).
 - [ ] probe calibration (4 sample bodies incl. a true flood) + extrapolation
 - [ ] overnight run launched (heavy-first, resume-safe JSONL, cpu−2 workers)
 - [ ] all 2002 bodies clean; tight census; verdict
+
+## Portable fixed-`E2` pruning addendum (codex-S14): first flood body closed
+
+The original driver hard-codes a Windows scratch path, and its reported
+`171/2002` body ledger is not present in this checkout.  The portable
+companion above hash-guards the original exact interval kernel, accepts a
+platform-neutral optional JSONL state path, and adds the following exact
+screen before constructing the fragmented `E3` interval list.
+
+Let `G=G(E2)` have `r` components and measure `m`, put `a=v3`, and write
+`m_a=|G\D_a|`.  For every `b>a`, THM-732's discrepancy bound gives
+
+```text
+|G intersect D_b| <= m/7 + sqrt(2) r/(7b).
+```
+
+Therefore
+
+```text
+|G \ (D_a union D_b)|
+ >= m_a - m/7 - sqrt(2) r/(7b).                         (A1)
+```
+
+Using the existing rational majorant `S2=99/70>sqrt(2)`, all integer
+`b>S2*r/(7(m_a-m/7))` close whenever the denominator is positive.  Before
+computing `m_a`, P2 supplies the monotone lower bound
+
+```text
+m_a-m/7 >= 5m/7 - 8r/(49a),                             (A2)
+```
+
+so one binary search locates the first `a` after which every `b>a` is
+certified.  This retains the fixed `E2` Kakeya-comb carrier: the expensive
+`G(E2 union {a})` endpoint list is built only for the finite survivors of
+(A1)--(A2).  The proof is a union bound plus THM-732/P2; no Fano symmetry or
+body transport is inferred.
+
+For the flood core
+
+```text
+E_(5,7)={5,7,8,9,10,11,12,13,14},
+```
+
+the exact tree has
+
+```text
+root: r=16, m=581453/2522520, V1=131;
+E1/E2/v3 nodes:                         121 / 10,929 / 525,362;
+P2-preclosed v3 nodes:                                    181,445;
+exact-m3 nodes / closed without E3:              343,917 / 339,348;
+residual E3 nodes / exact bottom sweeps:             4,569 / 28,847;
+fallback nodes:                                                   0.
+```
+
+All `28,847` bottom measures are positive.  The smallest is
+
+```text
+7/858
+```
+
+at `{1,2,3,4,5,7,8,9,10,11,12,13,14}`.  Hence **the `(5,7)` flood body is
+closed uniformly over all four added speeds**.  This is one of the 21 flood
+bodies, not a quotient representative: the remaining 20 require their own
+exact runs.  THM-741 therefore remains `CLAIMED`; this addendum establishes
+one rigorous flood row and a portable pruning invariant for the rest. ∎

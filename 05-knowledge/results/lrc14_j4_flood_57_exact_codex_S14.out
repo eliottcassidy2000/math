@@ -1,0 +1,24 @@
+THM-741 J=4 FLOOD PORTABLE FIXED-E2 PRUNER
+======================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+floods are K7 edges only as an index; no Fano symmetry quotient is used
+new invariant: L(E2+a+b)>=m(E2+a)-m(E2)/7-S2*r(E2)/(7b)
+requested=1 resumed=0 pending=1 frontier_only=False workers=6
+v1 branches complete=20/121
+v1 branches complete=40/121
+v1 branches complete=60/121
+v1 branches complete=80/121
+v1 branches complete=100/121
+v1 branches complete=120/121
+v1 branches complete=121/121
+edge=(5, 7) E=(5, 7, 8, 9, 10, 11, 12, 13, 14)
+root r=16 m=581453/2522520 V1=131
+nodes E1/E2/v3=121/10929/525362 ; P2-preclosed/exact-m3/exact-m3-closed/fallback=181445/343917/339348/0
+bottom candidate nodes/sweeps=4569/28847 ; positive/zero=28847/0
+minimum positive=7/858 at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14] ; covering failures=0
+frontier_only=False
+--------------------------------------------------------------------------------------
+aggregate completed=1/21 v3=525362 preclosed=181445 exact_m3=343917 candidate_sweeps=28847 failures=0
+EXACTLY CLOSED REQUESTED FLOOD BODIES=1
+source_sha256=fa081886cc6c16ecd55e1572675aba4b004f3dd05bc28434ff46a20fbdbd48a3
+ALL ASSERTIONS PASSED

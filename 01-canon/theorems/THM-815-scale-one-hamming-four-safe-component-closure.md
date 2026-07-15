@@ -1,8 +1,8 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, and complete closure of the primitive-core three-antipodal-pair H6 stratum + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, ten primitive-core H6 slice trees with 3,699 total states, and six residual H6 trees with 2,653,600 total states)
-source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction and residual six-row exact closure
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, complete closure of the primitive-core three-antipodal-pair H6 stratum, and closure of the first eleven two-antipodal-pair rows + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, ten primitive-core H6 slice trees with 3,699 total states, six residual H6 trees with 2,653,600 total states, and eleven `f=2` trees with 1,517,085 total states)
+source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction, residual six-row exact closure, and first `f=2` cap-stratum closure
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, THM-845, HYP-6820]
 verification:
@@ -16,6 +16,8 @@ verification:
   - 05-knowledge/results/lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.out
   - 04-computation/lrc13_hamming_six_open_f3_exact_closure_codex_S14.cpp
   - 05-knowledge/results/lrc13_hamming_six_open_f3_exact_closure_codex_S14.out
+  - 04-computation/lrc13_hamming_six_f2_rank_scout_codex_S14.cpp
+  - 05-knowledge/results/lrc13_hamming_six_f2_rank_scout_codex_S14.out
 proof_companion:
   - 07-reflections/lrc13-hamming-four-independent-collar-doubling-proof-codex-S10.md
 ---
@@ -422,6 +424,43 @@ so 904 missing-label patterns retain open primitive assignments.  The packet
 `2[12]` remains the nonprimitive AP equality from C.1.  This is not a proof of
 primitive scale-one H6 emptiness or global `n=12` sporadic emptiness. ∎
 
+### C.3 Addendum: the first two-antipodal-pair cap stratum is loose
+
+Now take the 360 primitive-core missing-label rows with `f=2`.  For a row `R`
+and retained core `P=[12] minus R`, let `L(P)` be the exact longest component
+of `E_P`.  Before any replacement is placed, (C17) is
+
+```text
+C_1(R)=floor(132/(13L(P))).                              (C19)
+```
+
+The exact root census has `113<=C_1(R)<=396`.  Exactly eleven rows satisfy
+`C_1(R)<=132`; in lexicographic atlas indexing they are
+
+```text
+5, 47, 62, 71, 74, 76, 77, 128, 158, 331, 346.          (C20)
+```
+
+Run the same numerically ordered, labelled longest-component recursion used
+above, now on each entire row rather than on a fixed-coordinate slice.  The
+frozen aggregate depth census is
+
+```text
+11, 599, 39415, 1414388, 62443, 229, 0,                 (C21)
+```
+
+or `1,517,085` states.  Every covering count is zero and no state reaches
+depth six.  Per-row node counts, 128-bit traces, and cache sizes are frozen;
+the complement of the full closed-danger union independently reconstructs
+all eleven roots and the 229 deepest dead leaves, giving 240 crosschecks.
+
+Consequently all eleven primitive-core `f=2` rows with `C_1<=132` are loose.
+The primitive-core frontier falls from 903 to 892 rows.  Adding the exceptional
+odd-row mixed-parity pattern gives 893 open scale-one H6 label patterns;
+`2[12]` remains the separate nonprimitive equality.  This closes a root-cap
+sub-stratum, not all `f=2` rows, arbitrary-scale H6, or the global sporadic
+branch. ∎
+
 The statistic `f` should not be mistaken for a geometric quotient.  It is
 invariant not only under reflection `r -> 13-r`, but under every multiplication
 by a unit modulo 13 and, for six-element rows, under `R <-> P` (full and empty
@@ -444,8 +483,8 @@ reduction but stop at (C15).  The increasing `(speed,label)` path used in the
 exact recursions is a transitive enumeration tournament, with score sequence
 `0,...,5`, no directed cycles, six singleton SCCs, and one Hamiltonian path.
 It is not a quotient of the cover predicate.  The faithful global carrier that
-closes (C15) is the residual endpoint union together with the labelled bank of
-unplaced danger combs.
+closes (C15) and the first `f=2` cap stratum is the residual endpoint union
+together with the labelled bank of unplaced danger combs.
 
 ## 1. Strict-safe components
 

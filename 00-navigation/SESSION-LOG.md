@@ -145,7 +145,7 @@ Honest limit: this does not classify the remaining finite strip, erode its new
 metric lift languages, close other arbitrary-scale H5 deck ramifications,
 close primitive/all-scale H6, or prove global `n=12` sporadic emptiness.
 
-## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive H6 closed except `2[12]`; fourteen primitive-core H6 rows closed; shell template, H-drift, toothpick, and Fano carriers decided
+## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: finite ramified H5 bank; nonprimitive H6 closed except `2[12]`; all twenty primitive-core `f=3` rows closed; shell, H-drift, toothpick, Fano, and flood carriers
 
 Prompt (owner): prove the n=12 sporadic branch empty; work longer with frequent
 pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the
@@ -153,10 +153,14 @@ pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the
 self-line law.
 
 HONEST VERDICT: global n=12 sporadic emptiness remains OPEN.  The session did
-close two substantial residuals and sharpen the remaining object.  THM-847's
+close substantial residuals and sharpen the remaining object.  THM-847's
 31,715-state exact recursion closes all 96 mixed order-one/order-three H5
 contexts; with THM-844/845 this makes the full effective-order-at-most-twelve
-common-sheet H5 bank empty at arbitrary lift height.  For scale-one H6,
+common-sheet H5 bank empty at arbitrary lift height.  The live THM-858 pull
+then eliminates every new language through effective order 21 and makes the
+rest uniformly finite: `min D_i<=21<max D_i<=42,336`, all orders are
+`{2,3,7}`-smooth, no maximal prime power is private, and every relative
+complement-lcm capacity cut holds.  For scale-one H6,
 nonprimitivity forces the six odd labels to be lifted at odd heights and gcd
 exactly two.  Division contracts the packet to `[12]`, a closed H1--H5 row, or
 one top-half H6 chamber.  A frozen 136,288-prefix recursion closes that chamber
@@ -250,7 +254,8 @@ This rules out the proposed shortcut, not the
 flood bodies.  Live external progress at audit time was 171/2002 clean bodies;
 the 21 floods remained queued and no local overnight sweep was claimed.
 
-ARTIFACTS: THM-815 C.1; HYP-6820 and frontier/backlog/lens updates;
+ARTIFACTS: THM-815 C.1/C.2 and live THM-858; HYP-6820 and
+frontier/backlog/lens updates;
 `lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp/.out`
 (hashes `ee57510a...e2e8bf1`, `aa87c107...769ed`);
 `lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.py/.out`

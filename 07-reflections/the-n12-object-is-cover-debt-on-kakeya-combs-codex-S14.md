@@ -397,11 +397,12 @@ argument on any consecutive/AP-window residual.
 The resulting unification is operation-indexed.  The H6 germ graph uses a
 min-plus directed-cycle obstruction; the seven-comb wall uses a max-plus
 graphic-matroid basis; the H-drift stalk uses a tridiagonal flip generator;
-and the flood atlas uses the full `K_7` edge module.  In each case a scalar
-score orders candidates, but the proof lives in which value is incident to
-which cusp, endpoint, flip, or edge.  The closest common object is therefore a
-typed operation profile over literal cover obligations, not a tournament on
-runners.
+the common-sheet H5 bank uses complement-lcm subset cuts on a prime-power
+carrier hypergraph; and the flood atlas uses the full `K_7` edge module.  In
+each case a scalar score orders candidates, but the proof lives in which value
+is incident to which cusp, endpoint, fibre, flip, or edge.  The closest common
+object is therefore a typed operation profile over literal cover obligations,
+not a tournament on runners.
 
 ## 7. The sharpened next obligations
 

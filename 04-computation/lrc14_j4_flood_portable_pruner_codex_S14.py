@@ -91,8 +91,48 @@ def missing_obligations(speeds: tuple[int, ...]) -> tuple[int, ...]:
     return tuple(q for q in range(2, 15) if not any(speed % q == 0 for speed in speeds))
 
 
-def body_work(payload: tuple[tuple[int, int], bool]) -> dict[str, object]:
-    edge, frontier_only = payload
+def p2_precloses(m: F, r: int, a: int) -> bool:
+    """Whether P2 plus (*) closes every b>a against the fixed E2 body."""
+    denominator_lower = F(5, 7) * m - F(8 * r, 49 * a)
+    return (
+        denominator_lower > 0
+        and denominator_lower - THM.S2 * r / (7 * (a + 1)) > 0
+    )
+
+
+def first_p2_preclosed(m: F, r: int, start: int, stop: int) -> int:
+    """First a in [start,stop) closed by the monotone P2 screen, else stop."""
+    if start >= stop or not p2_precloses(m, r, stop - 1):
+        return stop
+    low, high = start, stop - 1
+    while low < high:
+        middle = (low + high) // 2
+        if p2_precloses(m, r, middle):
+            high = middle
+        else:
+            low = middle + 1
+    assert p2_precloses(m, r, low)
+    assert low == start or not p2_precloses(m, r, low - 1)
+    return low
+
+
+COUNTER_KEYS = (
+    "E1",
+    "E2",
+    "v3_nodes",
+    "p2_preclosed_nodes",
+    "exact_m3_nodes",
+    "exact_m3_closed_nodes",
+    "fallback_nodes",
+    "candidate_nodes",
+    "candidate_sweeps",
+    "positive_sweeps",
+    "zero_sweeps",
+)
+
+
+def body_work(payload: tuple[tuple[int, int], bool, int | None]) -> dict[str, object]:
+    edge, frontier_only, v1_only = payload
     started = time.time()
     E = flood_body(edge)
     Eset = set(E)
@@ -101,24 +141,15 @@ def body_work(payload: tuple[tuple[int, int], bool]) -> dict[str, object]:
     threshold = 3 * mE / (THM.S2 * rE)
     V1 = THM.minV(4, threshold.numerator, threshold.denominator)
 
-    counters = {
-        "E1": 0,
-        "E2": 0,
-        "v3_nodes": 0,
-        "p2_preclosed_nodes": 0,
-        "exact_m3_nodes": 0,
-        "exact_m3_closed_nodes": 0,
-        "fallback_nodes": 0,
-        "candidate_nodes": 0,
-        "candidate_sweeps": 0,
-        "positive_sweeps": 0,
-        "zero_sweeps": 0,
-    }
+    counters = {key: 0 for key in COUNTER_KEYS}
     minimum_positive: F | None = None
     minimum_family: tuple[int, ...] | None = None
     failures: list[tuple[int, ...]] = []
 
-    for v1 in range(1, V1):
+    v1_values = range(1, V1) if v1_only is None else (v1_only,)
+    for v1 in v1_values:
+        if not 1 <= v1 < V1:
+            raise ValueError(f"v1 branch {v1} outside [1,{V1})")
         if v1 in Eset:
             continue
         r1, m1, G1 = THM.subtract(GE, v1)
@@ -134,21 +165,20 @@ def body_work(payload: tuple[tuple[int, int], bool]) -> dict[str, object]:
             counters["E2"] += 1
             threshold2 = 5 * m2 / (THM.S2 * r2)
             V3 = THM.minV(2, threshold2.numerator, threshold2.denominator)
-            for v3 in range(v2 + 1, V3):
+            v3_start = v2 + 1
+            preclosed_start = first_p2_preclosed(m2, r2, v3_start, V3)
+            total_v3 = max(0, V3 - v3_start) - sum(
+                v3_start <= speed < V3 for speed in Eset
+            )
+            bulk_preclosed = max(0, V3 - preclosed_start) - sum(
+                preclosed_start <= speed < V3 for speed in Eset
+            )
+            counters["v3_nodes"] += total_v3
+            counters["p2_preclosed_nodes"] += bulk_preclosed
+            for v3 in range(v3_start, preclosed_start):
                 if v3 in Eset:
                     continue
-                counters["v3_nodes"] += 1
-
-                # P2 pre-screen: m3 >= 6m2/7 - 8r2/(49v3).
-                denominator_lower = F(5, 7) * m2 - F(8 * r2, 49 * v3)
-                if (
-                    denominator_lower > 0
-                    and denominator_lower
-                    - THM.S2 * r2 / (7 * (v3 + 1))
-                    > 0
-                ):
-                    counters["p2_preclosed_nodes"] += 1
-                    continue
+                assert not p2_precloses(m2, r2, v3)
 
                 # Exact measure only; no E3 interval list yet.
                 m3 = THM.subtract_sparse(G2, v3)
@@ -210,8 +240,43 @@ def body_work(payload: tuple[tuple[int, int], bool]) -> dict[str, object]:
         "minimum_family": None if minimum_family is None else list(minimum_family),
         "failures": [list(family) for family in failures],
         "frontier_only": frontier_only,
+        "v1_only": v1_only,
         "seconds": round(time.time() - started, 3),
     }
+    return result
+
+
+def aggregate_branches(
+    edge: tuple[int, int], frontier_only: bool, branches: list[dict[str, object]], wall: float
+) -> dict[str, object]:
+    if not branches:
+        raise RuntimeError("no v1 branches to aggregate")
+    first = branches[0]
+    result: dict[str, object] = {
+        "edge": list(edge),
+        "E": first["E"],
+        "r": first["r"],
+        "m": first["m"],
+        "V1": first["V1"],
+        **{key: sum(int(branch[key]) for branch in branches) for key in COUNTER_KEYS},
+        "failures": [failure for branch in branches for failure in branch["failures"]],
+        "frontier_only": frontier_only,
+        "v1_only": None,
+        "seconds": round(sum(float(branch["seconds"]) for branch in branches), 3),
+        "wall_seconds": round(wall, 3),
+    }
+    positive = [
+        (F(branch["minimum_positive"]), branch["minimum_family"])
+        for branch in branches
+        if branch["minimum_positive"] is not None
+    ]
+    if positive:
+        minimum, family = min(positive)
+        result["minimum_positive"] = str(minimum)
+        result["minimum_family"] = family
+    else:
+        result["minimum_positive"] = None
+        result["minimum_family"] = None
     return result
 
 
@@ -235,7 +300,7 @@ def render(result: dict[str, object]) -> str:
             f"minimum positive={result['minimum_positive']} at {result['minimum_family']} ; "
             f"covering failures={len(result['failures'])}"
         ),
-        f"frontier_only={result['frontier_only']} seconds={result['seconds']}",
+        f"frontier_only={result['frontier_only']}",
     ]
     return "\n".join(lines)
 
@@ -284,13 +349,44 @@ def main() -> None:
         f"frontier_only={args.frontier_only} workers={args.workers}"
     )
     results = list(done.values())
-    payloads = [(edge, args.frontier_only) for edge in pending]
-    if len(payloads) == 1 or args.workers == 1:
-        iterator = map(body_work, payloads)
-        pool = None
+    pool = None
+    if len(pending) == 1 and args.workers > 1:
+        edge = pending[0]
+        E = flood_body(edge)
+        _, rE, mE = THM.good_norm(E)
+        threshold = 3 * mE / (THM.S2 * rE)
+        V1 = THM.minV(4, threshold.numerator, threshold.denominator)
+        branch_payloads = [
+            (edge, args.frontier_only, v1)
+            # Large v1 branches are empirically the expensive ones.  Submit
+            # them first so the portable intra-body pool does not finish with
+            # one long straggler; this changes scheduling only, never logic.
+            for v1 in range(V1 - 1, 0, -1)
+            if v1 not in set(E)
+        ]
+        branch_started = time.time()
+        with mp.Pool(min(args.workers, len(branch_payloads))) as branch_pool:
+            branches = []
+            for index, branch in enumerate(
+                branch_pool.imap_unordered(body_work, branch_payloads, chunksize=1), start=1
+            ):
+                branches.append(branch)
+                if index % 20 == 0 or index == len(branch_payloads):
+                    print(f"v1 branches complete={index}/{len(branch_payloads)}", flush=True)
+        iterator = iter(
+            [
+                aggregate_branches(
+                    edge, args.frontier_only, branches, time.time() - branch_started
+                )
+            ]
+        )
     else:
-        pool = mp.Pool(min(args.workers, len(payloads)))
-        iterator = pool.imap_unordered(body_work, payloads, chunksize=1)
+        payloads = [(edge, args.frontier_only, None) for edge in pending]
+        if len(payloads) <= 1 or args.workers == 1:
+            iterator = map(body_work, payloads)
+        else:
+            pool = mp.Pool(min(args.workers, len(payloads)))
+            iterator = pool.imap_unordered(body_work, payloads, chunksize=1)
     try:
         for result in iterator:
             results.append(result)

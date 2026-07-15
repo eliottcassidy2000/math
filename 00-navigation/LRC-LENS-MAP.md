@@ -40,6 +40,29 @@ destroys pair signs, exact endpoints, divisor obligations, height parity, and
 overlap.  The remaining primitive scale-one bank consists of 903
 primitive-core `f<=2` rows plus the exceptional odd-label mixed-parity pattern.
 
+THM-858 supplies the common-sheet H5 version of the same incidence lesson.
+For a nonempty colour set `S`, set
+
+```text
+L=lcm(D_j:j notin S),       m_i=D_i/gcd(D_i,L).
+```
+
+Coverage forces the relative-capacity cut
+`sum_(i in S) ceil(2m_i/13)/m_i>=1`.  Singleton and top-prime cuts eliminate
+every new language through effective order 21 and turn the remaining order
+bank into a finite strip:
+
+```text
+min D_i<=21<max D_i<=42,336,
+all orders {2,3,7}-smooth, no private maximal prime power.
+```
+
+Raw and complement-conditioned pair gauges are transitive on the final 185
+order rows even though the subset cuts reject them all.  The faithful carrier
+is therefore a prime-power carrier hypergraph decorated by complement-lcm
+fibres and affine owner-sheet intervals, not a tournament on colours or raw
+orders.
+
 THM-856 makes the first useful quadratic projection of this debt: the
 Hunter--Kounias maximum-spanning-tree functional on the symmetric weights
 `mu(E intersect D_u intersect D_v)`.  At ideal densities its coefficient is
@@ -103,6 +126,10 @@ pair_common_scale
 pair_mod13_sawtooth
 pair_endpoint_discrepancy
 shell_lift_dependent_column_packet
+relative_ramification_order
+complement_lcm_fibre
+prime_power_carrier_hypergraph
+owner_sheet_interval
 walsh_krylov_stalk
 odd_cycle_edge_current
 operation_profile
