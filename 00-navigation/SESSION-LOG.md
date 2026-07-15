@@ -53,6 +53,16 @@ nodes and about 984.25 million logical nodes for planning only; these are not
 `c=3` censuses.  The next certified computation is a complete sharded
 depth-two scout followed by primary and independent component recursions.
 
+The first-child geometry cache is exact but deliberately narrower.  The
+146,912 logical edges have 22,262 literal `(R,x_1)` children, cache factor
+`73456/11131`; their multiplicities are `2,4,6,12,18`.  Restoring the five
+future step-39 rays makes every logical lane distinct.  The matching-code
+indicator has Walsh support exactly on unions of disjoint pair constraints,
+which proves the pinning recursion and explains these fibre counts.  It does
+not linearize the maximin or cover predicate.  Least ray bases give 1,151
+transitive numeration clocks, useful for scheduling and useless as a metric
+quotient.
+
 TOURNAMENT/ASSUMPTION AUDIT: the natural order-three provider graphs are sparse
 or bidirected, not tournaments.  Their signed incidence and affine matching
 code preserve the full local sheet predicate but destroy continuous component

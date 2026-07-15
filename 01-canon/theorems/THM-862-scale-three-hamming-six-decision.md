@@ -1,13 +1,15 @@
 ---
 id: THM-862
 title: Scale-three Hamming-six common-sheet classification and exact metric plan
-status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification and 146,912 cap-admissible first metric edges; the unbounded metric bank remains open
+status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification, 146,912 cap-admissible first metric edges, and 22,262 distinct first-child geometries; the unbounded metric bank remains open
 source: codex-2026-07-15-S15/S16 c=3 transport audit
 depends_on: [THM-810, THM-815, THM-823, THM-857, THM-859, THM-860, THM-861]
 related: [THM-844, THM-847, THM-858, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.py
   - 05-knowledge/results/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.out
+  - 04-computation/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.py
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.out
 ---
 
 # THM-862 — the scale-three sheet stalk is classified
@@ -271,6 +273,93 @@ run a complete depth-two scout before an overnight full tree and to shard the
 use THM-857's complete-tooth and streaming-cap certificates, and be checked
 by an independent closed-danger reconstruction.
 
+### F. Exact first-child geometry cache and the affine Walsh projector
+
+There is an exact batching map, but it is a cache map rather than a quotient
+of proof states.  For a cap-admissible first edge let `R` be the sorted
+missing-label six-set and `x_1` the inserted speed.  Then
+
+```text
+geometric key              G=(R,x_1),
+logical lane key           Lambda=(R,x_1; five remaining step-39 rays). (20a)
+```
+
+The literal child `E(3([12] minus R) union {x_1})`, all its endpoints, its
+longest component and therefore its next THM-815 cap depend only on `G`.
+Across the `146,912` logical first edges there are exactly
+
+```text
+22,262 geometric keys,
+fibre multiplicities {2:2454, 4:8753, 6:6479, 12:2375, 18:2201}. (20b)
+```
+
+Thus an implementation may compute and cache the expensive literal child
+only once per `G`, a factor
+
+```text
+146912/22262=73456/11131 about 6.60                         (20c)
+```
+
+at the first layer.  It must still propagate every lane in the fibre: after
+adjoining the exact five future progressions to `G`, all `146,912` lane keys
+in (20a) are distinct.  This is not merely a label artefact.  A ray is the
+actual set `{b+39k:k>=0}`; its base modulo thirteen recovers its owner label.
+Consequently distinct remaining-base tuples are distinct arithmetic future
+languages.  Recursively, `(R,x_1,...,x_j)` is always a valid component-cache
+key, while the remaining labelled rays stay in the proof state.
+
+The multiplicities in (20b) are the partition functions of Part B's matching
+codes under one pinned local unit.  If `M` is a disjoint signed matching, put
+`e_i in {+1,-1}` and give an edge `ij` sign `s_ij`.  Its exact code indicator
+is
+
+```text
+1_C(e)=2^(-|M|) product_(ij in M)(1+s_ij e_i e_j).       (20d)
+```
+
+Hence, for the normalized Walsh transform `fhat`,
+
+```text
+E_(e in C) f(e)
+ =sum_(A subset M) (product_(ij in A)s_ij) fhat(V(A)),    (20e)
+```
+
+where `V(A)` is the union of the endpoints of the chosen matching edges.
+The Walsh support is exactly the unions of toothpicks.  A three-edge code has
+degree histogram `1,3,3,1` in degrees `0,2,4,6`; a two-edge code has
+`1,2,1` in degrees `0,2,4`.  This gives the exact Fourier meaning of the
+`26` eight-word and `18` sixteen-word all-order-three presentations.
+
+Conditioning is recursively self-similar on the **code** side.  Pinning one
+unit halves every fibre.  Pinning both endpoints of one matching edge imposes
+no second independent condition, whereas pins in different matching/free
+components halve it again.  For one presentation this gives conditioned
+sizes `2`, `4`, or `4/8`; the larger multiplicities `6,12,18` in (20b) are
+sums of compatible order presentations over the same `(R,x_1)`.  This is the
+rigorous toothpick recursion that survives.  It organizes conditional unit
+enumeration but does not identify the metric lanes.
+
+One useful corollary is that every separable one-ray statistic
+`f(e)=sum_i f_i(e_i)` has its code average equal to its unrestricted uniform
+average: (20e) has no nonconstant degree-zero-or-one contribution.  The
+first-edge **aggregate count** is such a statistic for a fixed presentation.
+The maximin, literal component erosion, and terminal cover indicator are not;
+the Walsh identity therefore supplies no emptiness theorem by itself.
+
+Finally, ordering the six least proper ray bases gives `1,151` distinct
+root numeration clocks among the `1,504` contexts.  Orienting one ray toward
+another when its least base is smaller produces only the transitive
+tournament fingerprint
+
+```text
+scores {0,1,2,3,4,5}, triangles 0, SCCs 1^6,
+Hamiltonian paths 1.                                    (20f)
+```
+
+It is the priority-queue clock for the numerical recursion, not a cover
+carrier.  It forgets the base values, the literal components, and the five
+future languages, so equal clocks cannot be merged.
+
 ## Proof
 
 ### 1. Derivation of the signed-provider law
@@ -411,6 +500,30 @@ translation by the reciprocal of the current prefix gcd, time reversal
 genuine metric equivariances.  Multiplicative residue relabelling, unit reflection,
 provider-graph isomorphism, and inversion are not.
 
+### 5. Why the cache and projector are exact
+
+For fixed `R` and `x_1`, the child speed set is literally
+`3([12] minus R) union {x_1}`.  This proves that its strict-safe components
+and every functional of those components descend to `G`.  Conversely, after
+one label is used, each remaining replacement language is one progression
+with modulus thirty-nine and its frozen least member from (15)--(16).
+Enumerating the exact first edges from Part E and grouping by `G` proves
+(20b); adjoining the sorted five-base tuple makes the grouping injective.
+The companion verifier asserts the full eight-row stratum/order fibre ledger,
+not only the coarser multiplicity histogram.
+
+Equation (20d) is the product of the indicator identities
+`1_(e_i e_j=s)=(1+s e_i e_j)/2`.  Since the matching edges are disjoint,
+expansion gives one different Walsh character for every edge subset, proving
+(20e) and the degree histograms.  The direct verifier evaluates every Walsh
+coefficient on all seven canonical codes.  The pinning rule follows by
+considering each two-vertex or free connected component separately.
+
+For the numeration tournament, distinct owner residues modulo thirteen imply
+distinct least ray bases.  Orienting by a scalar ranking is transitive and
+has the fingerprint (20f).  Direct enumeration gives the `1,151` distinct
+root Hamiltonian paths.
+
 ## Tournament analysis and challenged vertices
 
 Use the order-three labels as vertices and draw the signed edge
@@ -472,9 +585,10 @@ whether their full continuous combs cover the circle.
 
 This theorem proves the complete primitive `c=3` **common-sheet**
 classification, the affine unit codes, the exact sheet orbit bank, and the
-first metric layer.  It does not prove that any of the `1,504` languages is
-strictly loose, count covering terminals, close `c>=4`, or prove global
-`n=12` sporadic-branch emptiness.
+first metric layer, including its exact geometry-cache fibres and Walsh
+projectors.  It does not compute a depth-two component census, prove that any
+of the `1,504` languages is strictly loose, count covering terminals, close
+`c>=4`, or prove global `n=12` sporadic-branch emptiness.
 
 Reproduce the frozen output with
 
@@ -489,6 +603,17 @@ python3 -O \
   04-computation/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.py \
   | cmp - \
   05-knowledge/results/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.out
+
+python3 \
+  04-computation/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.py \
+  > /tmp/thm862-cache.out
+cmp /tmp/thm862-cache.out \
+  05-knowledge/results/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.out
+
+python3 -O \
+  04-computation/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.py \
+  | cmp - \
+  05-knowledge/results/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.out
 ```
 
 Frozen SHA-256 values are
@@ -496,4 +621,7 @@ Frozen SHA-256 values are
 ```text
 source  f87b0436c509313d5d90f5f9abe2d06b591e9ab639b5988bf206e4115cd7f39b
 output  c8413de89655592b5009aad83596330750d9b5ca9cb407af692fd06f5e353ba8
+
+cache source  ee7813878c7e589a30c32657c93c4d5ce106470ceaa6c125b5f09f7290797ec7
+cache output  69632620030da8ec7f2d2584f37b9f450e1a3da28b6186ec48971f9b2032d72c
 ```

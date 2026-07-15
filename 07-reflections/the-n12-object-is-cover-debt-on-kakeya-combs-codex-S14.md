@@ -243,6 +243,33 @@ scalar owner capacities exclude all four.  The next arithmetic scale gives
 better vertices than runners, arcs, or even sheet providers: the theorem lives
 on a cut hypergraph whose pair shadow is maximally uninformative.
 
+The first layer now makes the bundle projection quantitative.  The `146,912`
+logical edges have only `22,262` distinct literal children when geometry is
+keyed by `(R,x_1)`, so component erosion and the next cap can be cached by a
+factor `73456/11131`, about `6.60`.  But attaching the five remaining actual
+step-39 progressions makes all `146,912` keys distinct.  Components are valid
+cache vertices but not continuation vertices.  The affine toothpicks explain
+the cache fibres: pinning one unit halves a matching-code fibre, and pinning a
+second unit either resolves its mate for free or halves a different factor.
+Equivalently, the code indicator is
+
+```text
+2^(-|M|) product_(ij in M)(1+s_ij e_i e_j),
+```
+
+whose Walsh support consists exactly of unions of matching edges.  This is a
+real recursive self-similarity of the sheet stalk and permits exact averaging
+of separable one-ray statistics.  It does not linearize the maximin or the
+cover indicator.  The alternate ray-vertex tournament is also honest but
+weak: least future members give a transitive numeration clock, useful for the
+priority queue and incapable of identifying metric lanes.  The challenged
+vertex chain is therefore now
+
+```text
+provider obligations -> matching factors -> numerical ray clock
+ -> cached component geometry -> geometry plus future-ray language.
+```
+
 A separate implementation supplies a smaller crosscheck of that action tree:
 all 52 `f=2` roots whose exact first-speed cap is at most 156 close in
 `9,888,159` states, with zero covering prefix and 1,323 independent
