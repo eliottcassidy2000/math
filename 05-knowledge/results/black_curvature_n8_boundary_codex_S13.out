@@ -1,0 +1,49 @@
+THM-814 N=8 BLACK CURVATURE/ORBIT-CODEC BOUNDARY
+==================================================================================
+lines=1048576 black=1046528 black reflection orbits=523264
+atlas-free SC: score-symmetric candidates=744678 SC tilings=58712 blue=4096 black-mixed endpoints=54616
+
+ORBIT-SYMMETRIZED B2+B3 CODEC
+  B23 cells=331500 collision_cells=144500 excess=191764 candidate_pairs=275368 max=10
+  + unordered merged node pair: cells=523248 collision_cells=16 excess=16
+  iso calls/states=551036/216915
+  witnesses (line,line,key_lo,key_hi,epsilon):
+    1725 9789 0x116c9f34 0x2337047b eps=-4
+    1981 10045 0x116d0c93 0x2338b9fa eps=-4
+    5821 13885 0x116e54b3 0x233771da eps=-4
+    6077 14141 0x1170e4f2 0x233b4a39 eps=-4
+    296613 304677 0x156e01e4 0x1f8b14cb eps=0
+    296869 304933 0x156e6f43 0x1f8cca4a eps=0
+    300709 308773 0x156fb763 0x1f8b822a eps=0
+    300965 309029 0x157247a2 0x1f8f5a89 eps=0
+    593565 601629 0x5f9b94c 0x9a5a8fc eps=-2
+    593821 601885 0x5fa26ab 0x9a75e7b eps=-2
+    597661 605725 0x5fb6ecb 0x9a6165b eps=-2
+    597917 605981 0x5fdff0a 0x9a9eeba eps=-2
+    741086 749150 0x2bbe3d71 0x2fbfa021 eps=2
+    741342 749406 0x2bba6512 0x2fbd0fe2 eps=2
+    745182 753246 0x2bbbad32 0x2fbbc7c2 eps=2
+    745438 753502 0x2bb9f7b3 0x2fbb5a63 eps=2
+  every xor=0x02080; qpair=(0,2); flux=0; epsilon groups=(-4,-2,0,2)x4
+  fixed-layer first moment separates every collision.
+
+SOURCE-q BLACK BOUNDARY FLOW
+  black endpoint q polynomial coefficients=(412992,718848,578880,282624,84416,14336,960)
+  q=0: outward=5296/8282 reverse=8620/404710 strict=True
+  q=1: outward=5166/16240 reverse=9086/702608 strict=True
+  q=2: outward=1326/19160 reverse=1356/559720 strict=True
+  q=3: outward=1820/7844 reverse=2496/274780 strict=True
+  q=4: outward=2158/2734 reverse=2422/81682 strict=True
+  q=5: outward=180/180 reverse=368/14156 strict=True
+  q=6: outward=172/176 reverse=22/784 strict=True
+  raw non-tied outward/reverse=16118/24370; tied cross-phase=12584
+  all-size denominator: 2^(M-2n+5)(4+(1+x)^2)(3+x)^(n-4)-2^(R-n+2)G_n(x)
+
+TOURNAMENT ANALYSIS (q strata as vertices)
+  observable=larger outward-minus-reverse signal
+  switches=raw count bias / source-normalized rate bias; tie path=q0<...<q6; flips=8
+  raw score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1} C3=0 SCC=(1,1,1,1,1,1,1) Hpaths=1
+  normalized score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1} C3=0 SCC=(1,1,1,1,1,1,1) Hpaths=1
+
+The count-only fixed ABC layer is the exact codec kernel. Curvature controls
+flow but cannot repair these balanced positional collisions.

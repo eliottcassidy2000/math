@@ -91,6 +91,15 @@ strong node lumpability.  A recursive theorem would have to transport the
 sidecars and their action on the rooted Hamiltonian-path fibre, not merely
 name a static signature.
 
+THM-814 identifies the first positional warning at the same size.  On black
+reflection orbits, projected node pair plus orbit-symmetrized raw `(B2,B3)`
+has sixteen double collisions at `n=8`.  All swap two positions in the fixed
+`ABC` layer while preserving its count.  THM-809's lower-node `Lambda` remains
+injective because it retains more face position; a fixed-layer first moment
+also repairs all sixteen.  Therefore any recursive minimization of
+`Omega+B2` must keep positional data precisely when a layer ceases to be
+reconstructible from its count.
+
 ## Exact completion and minimization target
 
 For a literal core `c`, write THM-796's reconstruction variables as

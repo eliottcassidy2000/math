@@ -623,6 +623,15 @@ certificate clauses, and proof obligations.
   populations carry no such edge and give `0=0`.  The `n=8` active-stratum
   table is now the decisive conjecture test.
 
+- **`n=8` decided by THM-814:** source-normalized outward flow remains strict
+  in every `q=0,...,6` stratum although raw flow is reverse-heavy
+  `16,118<24,370`.  The proposed black edge-orbit codec fails in exactly
+  sixteen double cells among 523,264 orbits.  Every failure swaps the two
+  fixed-layer positions `(7,2),(6,3)`, preserves `(q0,q1,Delta C3)=(0,2,0)`,
+  and is repaired by a fixed-layer positional moment.  Thus curvature remains
+  the flow coordinate, while positional fixed-layer data is the identity
+  coordinate.
+
 ### MPA-37 — Give the gap face an intrinsic tournament semantics
 
 - **Delivered distinction:** the middle `d_B:(a,b)->(a-1,b)` face is a valid

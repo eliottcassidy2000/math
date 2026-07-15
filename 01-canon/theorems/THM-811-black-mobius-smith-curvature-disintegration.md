@@ -1,7 +1,7 @@
 ---
 id: THM-811
 title: The black complement-line flow has an exact Mobius/Smith master polynomial and negative curvature-energy coupling
-status: PROVED (general master polynomial, coefficients, moments, and support law) + FINITE-EXACT (node/edge classifications and q-stratified flow through n=7)
+status: PROVED (general master polynomial, coefficients, moments, and support law) + FINITE-EXACT (node classification through n=7; q-stratified flow through n=8; n=8 edge-codec boundary in THM-814)
 source: codex-2026-07-15-S13/S11
 depends_on: [THM-785, THM-790, THM-801]
 related: [THM-781, THM-796, THM-809, HYP-6880]
@@ -223,6 +223,13 @@ not part of the general theorem.  Stratifying only by `|epsilon|` does not
 have this property: the `|epsilon|=1` row can reverse and the largest tails
 are reverse-only.  Boundary cyclicity, rather than transverse magnitude, is
 therefore the sharper control variable for the phase-volume reversal.
+
+THM-814 extends this exact source-`q` statement through `n=8`: every one of
+the seven nonempty strata remains strictly outward-dominant after source-mass
+normalization, while raw flow remains reverse-heavy `16,118<24,370`.  It also
+refutes the all-size continuation of (12): orbit-symmetrized `(B2,B3)` plus
+node pair has exactly sixteen double collisions at `n=8`, all caused by an
+invisible swap of two fixed-layer positions and all curvature-balanced.
 
 ## Preservation boundary
 
