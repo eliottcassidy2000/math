@@ -603,11 +603,15 @@ universal action carrier.
 
 THM-810 supplies the metric analogue.  Its Hamming-four order-three coset has
 an exact eight-point `q=39` equality clock invariant under arbitrary `+39`
-lift heights.  Yet the clock forgets those heights, each equality point is a
-strict local cusp, and closure must select another safe component.  An exact
-boundary skeleton can therefore be neither an action carrier nor a proof
-state.  It must be attached by labelled incidence to the exception combs,
-component germ, owner, and metric side that give the clock operational meaning.
+lift heights.  Yet the clock forgets those heights and each equality point is a
+strict local cusp.  THM-816 proves uniform looseness only after replacing that
+snapshot by the dynamic residual interval union and its labelled incidence to
+successive danger-comb teeth.  The interval-comb discrepancy bound certifies a
+finite next-speed range at every step; all 34 terminals in the exhaustive
+7,909-state recursion retain a nonempty open residual.  This is a complete
+example of the recursive preservation rule: a static boundary skeleton is
+telemetry, while the operation-closed component/obligation carrier proves the
+terminal predicate.
 
 THM-811 similarly splits what had looked like one black edge weight.  The `B3`
 populations determine linear leg current `(B,T)` and hence

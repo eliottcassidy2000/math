@@ -52,6 +52,9 @@ artifacts:
   - 01-canon/theorems/THM-813-centered-christoffel-edge-descent-boundary.md
   - 04-computation/continued_fraction_edge_descent_boundary_codex_S13.py
   - 05-knowledge/results/continued_fraction_edge_descent_boundary_codex_S13.out
+  - 01-canon/theorems/THM-816-quartic-order-three-s3-uniform-looseness.md
+  - 04-computation/lrc13_quartic_s3_recursive_comb_closure_codex_S11.py
+  - 05-knowledge/results/lrc13_quartic_s3_recursive_comb_closure_codex_S11.out
 related:
   - HYP-2245
   - HYP-2989
@@ -76,6 +79,7 @@ related:
   - THM-811
   - THM-812
   - THM-813
+  - THM-816
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -567,12 +571,18 @@ edge address must separately pass (D).
 THM-810 gives the metric-side warning in an ostensibly unrelated Hamming-four
 chart.  Its order-three coset family has eight `q=39` times at exact margin
 `1/13`, unchanged by every `+39` lift height.  The clock is an exact boundary
-skeleton, but every clock point is a strict local cusp and the clock cannot
-prove the packet loose or remember which other safe component survives.  This
-is the same distinction as `P` versus `Q` in a different stalk: exact current
-truth or reconstruction is weaker than transport/closure.  The joined state
-must retain the clock's incidence with owner-labelled exception combs and the
-metric component, not only the eight numerators.
+skeleton, but every clock point is a strict local cusp and the clock alone
+cannot remember which other safe component survives.
+
+THM-816 now closes that family by restoring exactly the lost object.  The state
+is the dynamic residual open interval union `E_j` together with its labelled
+incidence to the next danger comb.  A sharp interval-comb discrepancy bound
+makes the next speed finite at each step; an exact 7,909-state recursion leaves
+all 34 terminal residuals nonempty.  This is the same distinction as `P`
+versus `Q` in a metric stalk: exact current truth or reconstruction is weaker
+than transport/closure, while an operation-closed residual carrier can prove
+the terminal predicate.  The clock numerators remain useful boundary telemetry,
+not the proof state.
 
 THM-811 supplies a complementary disintegration of black edges.  The coarse
 `B3` populations determine the linear leg currents `(B,T)`, hence

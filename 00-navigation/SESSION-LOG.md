@@ -63410,3 +63410,10 @@ Also joined THM-810's lift-invariant eight-point `q=39` equality clock: it is an
 exact static boundary skeleton but forgets all `+39` heights and every witness
 is a strict cusp.  This is the metric-side instance of the same rule that
 separates projected edge codecs from `Q`-orbit action carriers.
+
+THM-816 then closed that branch and identified the missing state exactly: the
+dynamic residual open interval union plus labelled incidence to each successive
+danger comb.  A discrepancy bound makes every next-speed branch finite; the
+7,909-state exact recursion leaves all 34 terminal residuals nonempty.  Updated
+the synthesis so the equality clock is boundary telemetry and the transported
+component/obligation carrier is the proof state.

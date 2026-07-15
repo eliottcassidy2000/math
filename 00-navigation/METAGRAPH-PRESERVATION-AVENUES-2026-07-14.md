@@ -715,4 +715,5 @@ certificate clauses, and proof obligations.
    through the ten-wall centered-CF word, auditing which coarser edge/node and
    `rho`-saturated coefficient quotients satisfy fibre-purity under the
    composite; then form the literal-witness fibre product with THM-808's
-   owner/root stalk and THM-810's metric clock/component incidence.
+   owner/root stalk and THM-816's dynamic residual-component/danger-comb
+   incidence, using THM-810's equality clock only as boundary telemetry.
