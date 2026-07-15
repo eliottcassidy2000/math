@@ -581,7 +581,7 @@ certificate clauses, and proof obligations.
 - **Deliverable:** a conditional-current table with an orbit-stabilizer formula
   that predicts the sign after node-fibre disintegration.
 
-- **Delivered master law by THM-810:** the four-variable polynomial joining
+- **Delivered master law by THM-811:** the four-variable polynomial joining
   `(Delta C3,q0,q1,epsilon)` factors into two boundary bits and `n-4` internal
   four-state packets.  It proves
   `Cov(q_i,epsilon^2)=-(n-4)/8`, strict negative covariance after conditioning

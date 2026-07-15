@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact black-edge curvature disintegration for THM-810.
+"""Exact black-edge curvature disintegration for THM-811.
 
 The audit joins THM-785's longitudinal complement flux, THM-801's boundary
 Mobius curvature q, and the antisymmetric Smith current epsilon.  It checks a
@@ -347,7 +347,7 @@ def size_audit(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[s
 
 def audit(small_atlas: Path, n7_atlas: Path) -> dict:
     _sizes, node_by_mask = load_atlases(small_atlas, n7_atlas)
-    result = {"schema_version": 1, "theorem": "THM-810", "sizes": []}
+    result = {"schema_version": 1, "theorem": "THM-811", "sizes": []}
     carriers_n7 = None
     for n in range(4, 8):
         size, carriers = size_audit(n, node_by_mask)
@@ -377,7 +377,7 @@ def audit(small_atlas: Path, n7_atlas: Path) -> dict:
 
 def render(result: dict) -> str:
     lines = [
-        "THM-810 BLACK MOBIUS/SMITH CURVATURE DISINTEGRATION",
+        "THM-811 BLACK MOBIUS/SMITH CURVATURE DISINTEGRATION",
         "=" * 82,
         "master: 2^(M-2n+5) u^(n-2)(1+w v/u)(1+w/(uv))",
         "        * (1+v/u+1/(uv)+zw/u^2)^(n-4)",

@@ -1,5 +1,5 @@
 ---
-id: THM-810
+id: THM-811
 title: The black complement-line flow has an exact Mobius/Smith master polynomial and negative curvature-energy coupling
 status: PROVED (general master polynomial, coefficients, moments, and support law) + FINITE-EXACT (node/edge classifications and q-stratified flow through n=7)
 source: codex-2026-07-15-S13
@@ -11,7 +11,7 @@ verification:
   - 05-knowledge/results/black_mobius_curvature_disintegration_codex_S13.json
 ---
 
-# THM-810 — exact black curvature disintegration
+# THM-811 — exact black curvature disintegration
 
 For the apex-zero endpoint `t` of a complement line put
 

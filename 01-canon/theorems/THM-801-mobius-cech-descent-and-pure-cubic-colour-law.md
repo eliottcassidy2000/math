@@ -438,7 +438,7 @@ the merged node pair.  Hence every black node-pair fibre has a sign-symmetric
 itself cause THM-785's oriented quotient drift; only its absolute strata and
 their unequal fibre allocation can correlate with that drift.
 
-THM-810 subsequently gives the complete joint polynomial of
+THM-811 subsequently gives the complete joint polynomial of
 `(Delta C3,q0,q1,epsilon)`.  It proves that B3 determines the two linear Smith
 currents while `q` is their positional quadratic overlap, with
 `Cov(q_i,epsilon^2)=-(n-4)/8`.  Its curvature node polynomial is complete
