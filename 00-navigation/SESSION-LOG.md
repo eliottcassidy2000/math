@@ -34,8 +34,10 @@ period-sum, single-visitor law, cluster balance, and the no-companion extent
 bound survive. The original statement that every complete f-period is
 visitor-free is false but unnecessary (`W={2,8,17,18,19,20,24,29}` gives the
 balanced visitor pair `{18,17}` with no g-wall). The de-phase/serving estimate
-is false: `(f,g,c)=(9,8,6)` gives four consecutive balanced co-visits versus
-the claimed bound three because relative order flips. MISTAKE-148 withdraws
+is false: `(f,g,c)=(9,8,6)` gives four consecutive g-wall co-visits for an
+inverse-residue-balanced pair versus the claimed bound three because relative
+order flips. This is a geometric serving counterexample, not an exhibited
+complete blocking run. MISTAKE-148 withdraws
 the serving/sparse completion and the general “r=8 finished” language. The
 stored THM-786 script exactly replays two wall-count certificates but does not
 reproduce its reported 0.589 census table.
@@ -73,6 +75,11 @@ owner, and zero-sum visitor fibres. Two-sheet phase geometry needs deep
 components with pointwise escape margin, not a fixed phase cell. Static runner,
 wall-event, or phase-cell tournaments preserve useful order telemetry but
 destroy the continuation predicate unless their incidence stalk is retained.
+After rebasing onto the concurrent THM-785/787/790 flow work, the distinction is
+sharper: `C3/E4`, blue parity, and the half-tiling recursion give exact finite
+fibre coordinates, but still lack the owner/metric pullback. A live duplicate
+THM-790 ID separates the proved blue-parity theorem from the finite-verified
+Hamiltonian-path companion and must not be scope-merged.
 
 FILES: THM-784/788/789; corrected THM-779/782/783/786; MISTAKE-147/148;
 `lrc14_unbounded_blocking_runs_codex_S10.py`,

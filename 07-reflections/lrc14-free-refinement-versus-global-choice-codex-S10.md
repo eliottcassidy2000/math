@@ -9,8 +9,8 @@ prime-seven and two-sheet results make one common distinction visible:
 > genuinely interacting pieces.
 
 This is why two initially plausible opening targets now have different honest
-statuses. A uniform good denominator `q<=25` is false: scale changes move the
-first witness beyond every fixed raw ladder. Uniform emptiness of the n=12
+statuses. A uniform good denominator `q<=25` is false: divisor loading can
+kill every prescribed bounded denominator ladder. Uniform emptiness of the n=12
 sporadic branch remains open: the branch is finite in principle and sharply
 sheet-stratified, but its remaining deep covers are not captured by a bounded
 denominator, raw height, scalar measure, or one local phase packet.
@@ -19,7 +19,7 @@ denominator, raw height, scalar measure, or one local phase packet.
 
 | viewpoint | exact gain | information it loses |
 |---|---|---|
-| rational good periods | explicit witness and signed residue blocker deck | witness denominators scale with dilation |
+| rational good periods | explicit witness and signed residue blocker deck | divisor loading can kill any fixed bounded ladder |
 | covering/divisor pins | routes non-covering families and forces sheet structure | does not identify a compatible global time |
 | capped envelope / safe measure | quantitative room and per-core finite tails | raw component count grows under scale |
 | binding denominator `p/(13s)` | exposes shallow versus deep sheet fibres | a residue snapshot does not encode persistence over the loose set |
@@ -32,12 +32,12 @@ denominator, raw height, scalar measure, or one local phase packet.
 | ownership hypergraph | simultaneous compatibility and transversal deficit | needs metric endpoints and recursion sidecars |
 | dyadic deletion tree | exact descent through imprimitive two-sheet seams | does not choose the terminal safe component |
 
-The recurring error pattern is now unmistakable. Raw height, denominator,
-component count, wall count, and phase-cell depth can all be inflated by a
-free operation. Dilation inflates denominators and components. A very fast
-owner inflates wall count. Refining a phase cell adds coordinates while staying
-inside the same bad diamond. These are resolution variables, not compactness
-coordinates.
+The recurring error pattern is now unmistakable. Raw height, component count,
+wall count, and phase-cell depth can all be inflated by a free operation, while
+a prescribed denominator ladder can be erased by divisor loading. Dilation
+proliferates components; a very fast owner inflates wall count. In THM-789's
+exact row, refining one phase cell adds coordinates while staying inside the
+same bad diamond. These are resolution variables, not compactness coordinates.
 
 ## The prime-seven correction
 
@@ -152,11 +152,22 @@ The current frontier has four honest branches:
 4. **Higher sheets / scale-normal families:** retain colour ownership and
    ramification through descent, rather than collapsing to residue counts.
 
-The metagraph transitivity-flow work remains valuable as an organizational
-atlas, especially for locating which finite fibres are balanced or rigid. Its
-proper role is diagnostic until a reconstruction theorem attaches the metric
-LRC stalk. The common strategic rule is now precise:
+The latest concurrent metagraph work sharpens this diagnosis. THM-785/787 give
+exact `C3`/`E4` flow coordinates, while the proved blue-parity theorem currently
+filed as `THM-790-blue-parity-law-proved.md` derives the half-tiling count, the
+mod-16 parity split, and the fact that the transitive pipe drains through the
+two path legs. These are real recursive laws on the finite tournament fibre,
+not merely pictures. They still do not reconstruct which metric component,
+owner assignment, or token stalk an LRC continuation occupies. The atlas is
+therefore a strong fibre coordinate and rigidity detector, but remains
+diagnostic until a pullback theorem attaches that metric LRC stalk.
+
+There is also a live namespace warning: the checkout contains a second
+`THM-790-H-companion-laws-to-the-transitivity-flow.md`, whose Hamiltonian-path
+claims are finite-verified rather than generally proved. The two scopes must
+be kept separate until the ID collision is repaired.
+
+The common strategic rule is now precise:
 
 > quotient free refinement first; then recurse on globally competing,
 > owner-labelled metric components.
-

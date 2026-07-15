@@ -76,7 +76,7 @@
   tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13` plus the erosion
   `E_U subset H minus R_U`. Its exact trap shows that the full natural return
   set can stay inside the diamond at one deep anchor even when another deep
-  component escapes. The missing datum is global component choice.
+  time escapes. The missing datum is global component choice.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
