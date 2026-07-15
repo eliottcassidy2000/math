@@ -1,0 +1,16 @@
+===== E_4: 3 classes (A002854 OK); source = empty class (fiber 1), sink rail = 1 class(es) at |E| = 4
+  DUAL RESISTANCE R^E_4 = 2/5 = 0.400000
+  |E|-axis concordance: 3/3  (perfect)
+  reciprocity probe: R^G_4 x R^E_4 = 0.171429
+===== E_5: 7 classes (A002854 OK); source = empty class (fiber 1), sink rail = 1 class(es) at |E| = 10
+  DUAL RESISTANCE R^E_5 = 5183/14960 = 0.346457
+  |E|-axis concordance: 21/21  (perfect)
+  reciprocity probe: R^G_5 x R^E_5 = 0.088845
+===== E_6: 16 classes (A002854 OK); source = empty class (fiber 1), sink rail = 1 class(es) at |E| = 12
+  DUAL RESISTANCE R^E_6 = 47582927653669/436195455521280 = 0.109086
+  |E|-axis concordance: 113/114  DISCORDANT: [(10, 15, 9, 10)]
+  reciprocity probe: R^G_6 x R^E_6 = 0.011895
+===== E_7: 54 classes (A002854 OK); source = empty class (fiber 1), sink rail = 1 class(es) at |E| = 21
+  DUAL RESISTANCE R^E_7 = 3207017290938032905577890678135794079945766899925818595549/23931081399875313254403313147717450726247946628447565232960 = 0.134011
+  |E|-axis concordance: 1341/1341  (perfect)
+  reciprocity probe: R^G_7 x R^E_7 = 0.009368
