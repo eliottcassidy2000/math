@@ -125,6 +125,21 @@ shadow of a literal defect word, while `B3` is a face shadow of a literal gap
 tournament.  The next minimizer should refine or disintegrate this tensor,
 not search for an unrelated tuple of scalars.
 
+The unprojected recursion already has exact composition numbers.  With
+`O_n=Blue_n/<1>` and `D_n=Blue_(n-1)`, complement lines are the arrows of
+`O_n semidirect D_n`; exact-defect matrices obey
+
+```text
+A_delta A_epsilon=A_(delta+epsilon).
+```
+
+Each boundary-trace component carries the binary Hamming scheme on
+`h_(n-1)` coordinates.  Its weight intersection numbers and Krawtchouk
+spectrum are explicit in THM-830.  Thus the open coherence problem is not in
+raw defect composition.  It is exactly whether the nonlinear colouring
+`c_n` together with the ordered sidecars can be refined to an equitable
+pushforward of that algebra.
+
 The preservation boundary is already exact.  Total weighted deletion roles
 collide at `n=5`; even deck totals plus `C3` collide between distinct score
 spectra at `n=6`.  Conversely, on the whole one-flip shell the address

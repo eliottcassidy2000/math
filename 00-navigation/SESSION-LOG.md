@@ -64215,3 +64215,32 @@ proved; global n=12 emptiness remains open.  The immediate exact targets are
 the other 95 order-three contexts, the two scale-one H5 boxes, finite H6, the
 fixed-ratio shell `2B-13d>=5`, mixed order-one/common-sheet languages, and the
 ternary switch-aware deep ratios.
+
+A final live-main integration added THM-839 and the THM-841 reservation.  The
+former sharpens the nonlinear boundary: among 388 endpoint-swap fixed post-B
+bases, only 58 satisfy all local ordered-state balance characters.  Therefore
+reflection/groupoid inversion is not itself a sufficient recursive sidecar.
+
+The resulting extra theorem is an exact relation algebra before node
+projection.  Put `r=h_(n-1)`, `O_n=Blue_n/<1>`, and
+`D_n=Blue_(n-1)=F_2^r`.  Complement lines are action-groupoid arrows
+`(o,delta):o->o+delta`, with
+
+```text
+A_delta A_epsilon=A_(delta+epsilon).
+```
+
+Every one of the `2^(f_n-1)` boundary components carries the binary Hamming
+scheme `H(r,2)`.  Its intersection numbers are
+
+```text
+p_(ij)^k=binom(k,(i-j+k)/2)binom(r-k,(i+j-k)/2),
+```
+
+and its eigenvalues are the Krawtchouk polynomials.  At `n=14`, complement
+quotient leaves 32 components of `2^36` objects; each nonzero exact defect has
+`2^40` black reflection packets, and defect weight `i` has
+`2^40 binom(36,i)`.  The raw defect carrier is therefore already closed.  The
+remaining mathematical frontier is the smallest refinement for which the
+isomorphism-node and ordered-sidecar colouring becomes an equitable
+pushforward of this algebra.

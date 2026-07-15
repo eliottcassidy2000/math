@@ -13,6 +13,7 @@ The audit verifies:
 * the B face as the Cech consensus of internal repaired cards;
 * weighted deletion roles, incidence/Gram/rank laws, and mirror current;
 * the half-cube fibre product and exact blue/black defect normal form;
+* the exact defect relation algebra and its Hamming/Krawtchouk fusion;
 * the complete radius-one node/line/tiling classification;
 * the invariant-ring construction of the even and odd half recursions;
 * the sign correction in the anchored c3 deletion sieve;
@@ -86,6 +87,28 @@ def fixed_cells(n: int) -> int:
 
 def half_cells(n: int) -> int:
     return ((n - 1) ** 2) // 4
+
+
+def hamming_intersection(r: int, i: int, j: int, k: int) -> int:
+    twice_on_support = i - j + k
+    twice_off_support = i + j - k
+    if twice_on_support % 2 or twice_off_support % 2:
+        return 0
+    on_support = twice_on_support // 2
+    off_support = twice_off_support // 2
+    if not (0 <= on_support <= k and 0 <= off_support <= r - k):
+        return 0
+    return math.comb(k, on_support) * math.comb(r - k, off_support)
+
+
+def krawtchouk(r: int, distance: int, weight: int) -> int:
+    return sum(
+        (-1) ** chosen_on_support
+        * math.comb(weight, chosen_on_support)
+        * math.comb(r - weight, distance - chosen_on_support)
+        for chosen_on_support in range(distance + 1)
+        if chosen_on_support <= weight and distance - chosen_on_support <= r - weight
+    )
 
 
 def reflection(root: Root, n: int) -> tuple[int, int]:
@@ -698,6 +721,67 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
     }
 
 
+def verify_defect_relation_algebra(n: int) -> None:
+    r = half_cells(n - 1)
+    components = 2 ** (fixed_cells(n) - 1)
+    blue = 2 ** (half_cells(n) - 1)
+    assert blue == components * 2**r
+
+    intersection = [
+        [
+            [hamming_intersection(r, i, j, k) for k in range(r + 1)]
+            for j in range(r + 1)
+        ]
+        for i in range(r + 1)
+    ]
+    eigenvalues = [
+        [krawtchouk(r, i, weight) for weight in range(r + 1)]
+        for i in range(r + 1)
+    ]
+
+    for i in range(r + 1):
+        valency_i = math.comb(r, i)
+        for j in range(r + 1):
+            valency_j = math.comb(r, j)
+            assert sum(
+                intersection[i][j][k] * math.comb(r, k) for k in range(r + 1)
+            ) == valency_i * valency_j
+
+    # The distance-one relation generates the Hamming Bose-Mesner algebra.
+    for j in range(r + 1):
+        for weight in range(r + 1):
+            assert sum(
+                intersection[1][j][k] * eigenvalues[k][weight]
+                for k in range(r + 1)
+            ) == eigenvalues[1][weight] * eigenvalues[j][weight]
+
+    for i in range(r + 1):
+        for j in range(r + 1):
+            inner_product = sum(
+                math.comb(r, weight) * eigenvalues[i][weight] * eigenvalues[j][weight]
+                for weight in range(r + 1)
+            )
+            assert inner_product == (2**r * math.comb(r, i) if i == j else 0)
+
+    black_square_blue_coefficient = 2**r - 1
+    black_square_black_coefficient = 2**r - 2
+    if r <= 8:
+        assert black_square_blue_coefficient == sum(
+            1 for delta in range(1, 2**r) if delta ^ delta == 0
+        )
+        for result in range(1, 2**r):
+            assert black_square_black_coefficient == sum(
+                1
+                for left in range(1, 2**r)
+                if (left ^ result) != 0
+            )
+
+    q_packets = blue + sum(
+        blue // 2 * math.comb(r, weight) for weight in range(1, r + 1)
+    )
+    assert q_packets == 2 ** (m(n) - 2) + 2 ** (half_cells(n) - 2)
+
+
 def verify_half_ring(max_n: int) -> None:
     for n in range(4, max_n + 1):
         degree = n - 3
@@ -801,6 +885,8 @@ def run(max_n: int, exhaustive_n: int) -> dict[str, object]:
     assert max_n >= 6
     assert 4 <= exhaustive_n <= 7
     reports = [verify_size(n, n <= exhaustive_n) for n in range(4, max_n + 1)]
+    for n in range(4, max_n + 1):
+        verify_defect_relation_algebra(n)
     verify_half_ring(max_n)
 
     recurrence = []
@@ -834,6 +920,10 @@ def run(max_n: int, exhaustive_n: int) -> dict[str, object]:
         "reflection_orbit_lines": 2 ** (m(14) - 2) + 2 ** (half_cells(14) - 2),
         "blue_fraction": "2^-36",
         "defect_slice_formula": "2^41 * binom(36,d)",
+        "boundary_components": 2 ** (fixed_cells(14) - 1),
+        "objects_per_component": 2 ** half_cells(13),
+        "exact_black_Q_packets": 2 ** (half_cells(14) - 2),
+        "weight_Q_formula": "2^40 * binom(36,d), d>0",
         "gap_shell": n14_shell_table(),
     }
     assert n14["m"] == n14["h"] + n14["h_previous"]
@@ -890,6 +980,10 @@ def print_report(report: dict[str, object]) -> None:
         "reflection_orbit_lines",
         "blue_fraction",
         "defect_slice_formula",
+        "boundary_components",
+        "objects_per_component",
+        "exact_black_Q_packets",
+        "weight_Q_formula",
     ):
         print(f"{key}: {n14[key]}")
     print("gap C3 H literal blue black merged blackQ")

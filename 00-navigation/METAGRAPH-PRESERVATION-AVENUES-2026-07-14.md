@@ -844,11 +844,22 @@ certificate clauses, and proof obligations.
 ### MPA-41 — Close the half-pair groupoid under node labels
 
 - **Delivered carrier by THM-830:** for common boundary `z`, half interior
-  `u`, and defect `d`, the master label
-  `c_n(z,u,d)=pi_n(u,u+d,z)` determines tilings, merged-node fibres, loops,
+  `u`, and defect `delta`, the master label
+  `c_n(z,u,delta)=pi_n(u,u+delta,z)` determines tilings, merged-node fibres, loops,
   exact-defect blue/black edges, and reflection orbits.  Raw groupoid
   composition adds defects.  THM-818's kernel-pair relation is the equality-
   witness layer needed after the nonlinear node projection.
+- **Delivered structure constants by THM-830:** after complement quotient the
+  object set has `2^(f_n-1)` boundary components, each a torsor for
+  `F_2^h_(n-1)`.  Exact-defect matrices satisfy
+  `A_delta A_epsilon=A_(delta+epsilon)`.  Weight fusion is the binary Hamming
+  scheme on each component, with explicit intersection numbers and
+  Krawtchouk spectrum; black fusion satisfies
+  `A_K^2=(2^h_(n-1)-1)I+(2^h_(n-1)-2)A_K`.
+- **Incoming obstruction by THM-839:** reflection has 388 endpoint-swap fixed
+  post-B bases in the `n=9` bank, but only 58 satisfy every ordered-state
+  balance character.  Groupoid inversion symmetry is therefore necessary but
+  not sufficient after raw-S2/node projection.
 - **Pull:** refine `c_n` until the disintegrated label products have constant
   composition/intersection numbers, or exhibit the first obstruction to any
   feasible coherent configuration.  Separately compute the three `S_3`
@@ -858,8 +869,9 @@ certificate clauses, and proof obligations.
   complement endpoint phase, line multiplicity, loops, and literal lower
   equality witnesses.  Binary colour and additive deck totals are proven
   insufficient.
-- **Deliverable:** a bounded `n<=8` structure-constant tensor and its minimal
-  stable refinement, then an action test under the THM-813 continued-fraction
+- **Deliverable:** the minimal refinement of the exact defect algebra for
+  which the node/ordered-sidecar colouring is equitable, or its first finite
+  obstruction, then an action test under the THM-813 continued-fraction
   embeddings.  LRC metric fields remain an external stalk.
 
 ## Recommended next three pulls

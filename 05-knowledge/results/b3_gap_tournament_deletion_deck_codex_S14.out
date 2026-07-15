@@ -45,6 +45,10 @@ black_lines: 151115727449629623582720
 reflection_orbit_lines: 75557863727013835046912
 blue_fraction: 2^-36
 defect_slice_formula: 2^41 * binom(36,d)
+boundary_components: 32
+objects_per_component: 68719476736
+exact_black_Q_packets: 1099511627776
+weight_Q_formula: 2^40 * binom(36,d), d>0
 gap C3 H literal blue black merged blackQ
  1   1     3      12    0    12      6      6
  2   2     5      11    1    10      6      5

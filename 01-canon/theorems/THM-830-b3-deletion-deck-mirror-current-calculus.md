@@ -617,6 +617,97 @@ complement-even because complement exchanges the two line endpoints.  The
 `(1,1)` sector is simultaneous endpoint/converse holonomy.  This is a literal
 four-component carrier, not a four-dimensional visual metaphor.
 
+### 7.1 Exact defect relation algebra
+
+The pair groupoid has explicit structure constants before the node quotient.
+For `n>=3`, with `Blue_2={0}`, put
+
+```text
+r=h_(n-1),       O_n=Blue_n/<1>,       D_n=Blue_(n-1)=F_2^r.
+```
+
+Interior addition makes `D_n` act freely on `O_n`, and (6.5) upgrades from a
+set bijection to the action-groupoid identification
+
+```text
+L_n ~= O_n semidirect D_n,
+(o,delta):o -> o+delta,
+(o,delta);(o+delta,epsilon)=(o,delta+epsilon).             (7.8)
+```
+
+The components are indexed by fixed-boundary trace modulo its all-one word.
+There are `2^(f_n-1)` components, each with `2^r` objects.  Thus a blue line
+is an identity arrow, reflection reverses an arrow, and two black arrows
+compose to blue exactly when their defect words agree.
+
+Let `A_delta` be the zero-one adjacency matrix of exact-defect arrows on
+`O_n`.  For every `delta,epsilon in F_2^r`,
+
+```text
+A_0=I,       A_delta^T=A_delta,
+A_delta A_epsilon=A_(delta+epsilon).                      (7.9)
+```
+
+Each exact-defect relation contains `b_n=|O_n|` upper lines.  For nonzero
+`delta`, it is a perfect matching with `b_n/2` reflection-orbit packets.
+Consequently the binary black relation `A_K=sum_(delta!=0) A_delta` obeys,
+for `n>=4`,
+
+```text
+A_K^2=(2^r-1)I+(2^r-2)A_K.                               (7.10)
+```
+
+This is the complete raw blue/black composition table.  Binary colour loses
+which of the `2^r-1` black relations was used, but its two possible
+composition multiplicities remain `2^r-1` for a blue result and `2^r-2` for
+a black result.
+
+Fusing exact defects by Hamming weight gives a binary Hamming scheme on each
+component.  If
+
+```text
+A_i=sum_(|delta|=i) A_delta,
+```
+
+then
+
+```text
+A_i A_j=sum_k p_(ij)^k A_k,
+p_(ij)^k
+ =binom(k,(i-j+k)/2) binom(r-k,(i+j-k)/2),                (7.11)
+```
+
+where the coefficient is zero unless both lower arguments are integers in
+range.  The eigenvalue of `A_i` on a Walsh character of weight `s` is the
+Krawtchouk value
+
+```text
+K_i(s)=sum_a (-1)^a binom(s,a)binom(r-s,i-a),             (7.12)
+```
+
+with multiplicity `2^(f_n-1)binom(r,s)` across all boundary components.  The
+reflection-orbit packet census by weight is therefore
+
+```text
+q_(n,0)=b_n,
+q_(n,i)=b_n/2 binom(r,i)                    for 1<=i<=r.  (7.13)
+```
+
+At `n=14`, there are 32 components of `2^36` objects.  Every nonzero exact
+defect contributes `2^40` black reflection packets, while weight `i`
+contributes `2^40 binom(36,i)`; the blue identity relation contributes
+`2^41`.
+
+In the gap-tournament model, `delta` is the coordinate word measuring failure
+of `G=rho(G^op)` on each reflected arc pair.  Relation multiplication is
+symmetric difference of those anti-self-converse failure sets.  Hence every
+trace component already has a closed relation algebra.  Globally these are
+`2^(f_n-1)` identical blocks; adjoining cross-component boundary-difference
+relations gives the corresponding wreath-product completion.  The open
+difficulty begins exactly when the arrow colouring `c_n(z,u,delta)` forgets
+the marked path and pushes these relations into isomorphism-node fibres;
+constant intersection numbers need not survive that pushforward.
+
 ## 8. The half recursions are invariant-ring covers
 
 Reflection swaps the simplex variables `X,Y` and fixes `Z`.  Therefore
