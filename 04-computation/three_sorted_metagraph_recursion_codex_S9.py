@@ -129,6 +129,26 @@ def line_to_nodes(index: int, n: int, node_by_mask: list[int]) -> tuple[int, int
     return node_by_mask[a], node_by_mask[b]
 
 
+def apex_zero_endpoint(index: int, n: int) -> int:
+    """The unique endpoint of a complement line whose apex coordinate is zero."""
+    a, b = line_to_tilings(index, n)
+    return a if apex_bit(a, n) == 0 else b
+
+
+def line_face(index: int, n: int, side: str) -> int:
+    """Endpoint-independent face line of an upper complement line."""
+    return line_index(face_mask(index, n, side), n - 1)
+
+
+def line_phase_mate(index: int, n: int) -> int:
+    """Other upper line with the same two bare face lines, for n >= 5."""
+    endpoint = apex_zero_endpoint(index, n)
+    low = face_mask(endpoint, n, "low")
+    high = face_mask(endpoint, n, "high")
+    mate = reconstruct_tiling(complement(low, n - 1), complement(high, n - 1), 0, n)
+    return line_index(mate, n)
+
+
 def normalized_counter(counter: Counter[int]) -> tuple[tuple[int, int], ...]:
     divisor = 0
     for value in counter.values():
@@ -178,6 +198,11 @@ def predicted_colour_descent(n: int) -> Counter[str]:
             + all_three_blue,
         }
     )
+
+
+def blue_fraction_exponent(n: int) -> int:
+    """Return e with beta_n = 2^e, the blue fraction among E_n lines."""
+    return reflection_orbits(n) - m_tiles(n)
 
 
 def load_atlases(small_path: Path, n7_path: Path) -> tuple[dict[int, dict], dict[int, list[int]]]:
@@ -320,6 +345,8 @@ def recursive_census(
     lift_blocks: dict[tuple[int, int], Counter[int]] = defaultdict(Counter)
     pullback_failures = complement_failures = reflection_failures = core_failures = 0
     colour_descent: Counter[str] = Counter()
+    line_face_pair_fibres: Counter[tuple[int, int]] = Counter()
+    line_torsor_failures = 0
     apex_zero_lines: set[int] = set()
     apex_zero_bijection_failures = 0
 
@@ -368,6 +395,28 @@ def recursive_census(
         column_sum = sum(row[lower_node] for row in low_branch.values())
         column_failures += column_sum != (1 << (n - 2)) * len(masks)
     assert row_failures == column_failures == 0
+
+    if n >= 5:
+        for line in range(1 << (m_tiles(n) - 1)):
+            low_line = line_face(line, n, "low")
+            high_line = line_face(line, n, "high")
+            low_core_line = line_face(low_line, n - 1, "high")
+            high_core_line = line_face(high_line, n - 1, "low")
+            line_torsor_failures += low_core_line != high_core_line
+            line_face_pair_fibres[(low_line, high_line)] += 1
+            mate = line_phase_mate(line, n)
+            line_torsor_failures += mate == line
+            line_torsor_failures += line_phase_mate(mate, n) != line
+            line_torsor_failures += line_face(mate, n, "low") != low_line
+            line_torsor_failures += line_face(mate, n, "high") != high_line
+            line_torsor_failures += is_grid_symmetric(
+                apex_zero_endpoint(mate, n), sigma
+            ) != is_grid_symmetric(apex_zero_endpoint(line, n), sigma)
+        line_torsor_failures += any(
+            multiplicity != 2 for multiplicity in line_face_pair_fibres.values()
+        )
+        line_torsor_failures += len(line_face_pair_fibres) != 1 << (m_tiles(n) - 2)
+        assert line_torsor_failures == 0
 
     support_signature = {node: tuple(sorted(row)) for node, row in low_branch.items()}
     weighted_signature = {
@@ -421,6 +470,10 @@ def recursive_census(
         "n": n,
         "pullback_formula": "T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex",
         "line_formula": "E_n=T_(n-1) x_[T_(n-2)] T_(n-1) via apex-zero endpoint",
+        "bare_line_tower_formula": (
+            "E_n is a C2-torsor over "
+            "E_(n-1) x_[E_(n-2)] E_(n-1), n>=5"
+        ),
         "compatible_face_pairs": 1 << (m_tiles(n) - 1),
         "pullback_failures": pullback_failures,
         "core_compatibility_failures": core_failures,
@@ -430,6 +483,11 @@ def recursive_census(
         "branch_row_conservation_failures": row_failures,
         "branch_column_conservation_failures": column_failures,
         "low_high_branch_matrix_mismatches": int(low_branch != high_branch),
+        "line_face_pair_support": len(line_face_pair_fibres),
+        "line_face_pair_fibre_size_histogram": counter_json(
+            Counter(line_face_pair_fibres.values())
+        ),
+        "line_torsor_failures": line_torsor_failures,
         "branch_support_partition": support_partition,
         "branch_weighted_partition": weighted_partition,
         "branch_normalized_partition": normalized_partition,
@@ -447,6 +505,12 @@ def recursive_census(
         "nonuniform_lift_witnesses": nonuniform_blocks[:24],
         "colour_descent_histogram": dict(colour_descent),
         "closed_form_colour_descent_histogram": dict(predicted),
+        "blue_fraction_power_of_two_exponent": blue_fraction_exponent(n),
+        "previous_blue_fraction_power_of_two_exponent": blue_fraction_exponent(n - 1),
+        "blue_event_structure": (
+            "upper/low/high blue are pairwise independent; upper blue forces "
+            "low and high colours equal; their three-way interaction is nonzero"
+        ),
         "colour_descent_formula_failures": int(colour_failures),
         "branch_rows": branch_rows_json,
         "carriers_recursive": {
@@ -524,6 +588,10 @@ def render(result: dict) -> str:
                     f"{rec['branch_normalized_partition']['cells']} of {size['nodes']}",
                     f"  lift blocks nonuniform/total={rec['nonuniform_lift_blocks']}/"
                     f"{rec['lift_blocks']} max_range={rec['maximum_lift_range']}",
+                    f"  bare-line face-pair support/fibres/torsor-failures="
+                    f"{rec['line_face_pair_support']}/"
+                    f"{rec['line_face_pair_fibre_size_histogram']}/"
+                    f"{rec['line_torsor_failures']}",
                     f"  colour descent={rec['colour_descent_histogram']}",
                     f"  recursion failures pullback/core/complement/reflection/apex/row/column/colour="
                     f"{rec['pullback_failures']}/{rec['core_compatibility_failures']}/"

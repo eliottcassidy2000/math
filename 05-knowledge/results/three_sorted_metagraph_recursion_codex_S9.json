@@ -69382,6 +69382,7 @@
       "n": 4,
       "pullback_formula": "T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex",
       "line_formula": "E_n=T_(n-1) x_[T_(n-2)] T_(n-1) via apex-zero endpoint",
+      "bare_line_tower_formula": "E_n is a C2-torsor over E_(n-1) x_[E_(n-2)] E_(n-1), n>=5",
       "compatible_face_pairs": 4,
       "pullback_failures": 0,
       "core_compatibility_failures": 0,
@@ -69391,6 +69392,9 @@
       "branch_row_conservation_failures": 0,
       "branch_column_conservation_failures": 0,
       "low_high_branch_matrix_mismatches": 0,
+      "line_face_pair_support": 0,
+      "line_face_pair_fibre_size_histogram": {},
+      "line_torsor_failures": 0,
       "branch_support_partition": {
         "cells": 2,
         "largest_cell": 2,
@@ -69431,6 +69435,9 @@
         "KKB": 0,
         "KKK": 0
       },
+      "blue_fraction_power_of_two_exponent": -1,
+      "previous_blue_fraction_power_of_two_exponent": 0,
+      "blue_event_structure": "upper/low/high blue are pairwise independent; upper blue forces low and high colours equal; their three-way interaction is nonzero",
       "colour_descent_formula_failures": 0,
       "branch_rows": [
         {
@@ -69474,6 +69481,7 @@
       "n": 5,
       "pullback_formula": "T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex",
       "line_formula": "E_n=T_(n-1) x_[T_(n-2)] T_(n-1) via apex-zero endpoint",
+      "bare_line_tower_formula": "E_n is a C2-torsor over E_(n-1) x_[E_(n-2)] E_(n-1), n>=5",
       "compatible_face_pairs": 32,
       "pullback_failures": 0,
       "core_compatibility_failures": 0,
@@ -69483,6 +69491,11 @@
       "branch_row_conservation_failures": 0,
       "branch_column_conservation_failures": 0,
       "low_high_branch_matrix_mismatches": 0,
+      "line_face_pair_support": 16,
+      "line_face_pair_fibre_size_histogram": {
+        "2": 16
+      },
+      "line_torsor_failures": 0,
       "branch_support_partition": {
         "cells": 7,
         "largest_cell": 2,
@@ -69726,6 +69739,9 @@
         "KKB": 8,
         "KKK": 4
       },
+      "blue_fraction_power_of_two_exponent": -2,
+      "previous_blue_fraction_power_of_two_exponent": -1,
+      "blue_event_structure": "upper/low/high blue are pairwise independent; upper blue forces low and high colours equal; their three-way interaction is nonzero",
       "colour_descent_formula_failures": 0,
       "branch_rows": [
         {
@@ -69860,6 +69876,7 @@
       "n": 6,
       "pullback_formula": "T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex",
       "line_formula": "E_n=T_(n-1) x_[T_(n-2)] T_(n-1) via apex-zero endpoint",
+      "bare_line_tower_formula": "E_n is a C2-torsor over E_(n-1) x_[E_(n-2)] E_(n-1), n>=5",
       "compatible_face_pairs": 512,
       "pullback_failures": 0,
       "core_compatibility_failures": 0,
@@ -69869,6 +69886,11 @@
       "branch_row_conservation_failures": 0,
       "branch_column_conservation_failures": 0,
       "low_high_branch_matrix_mismatches": 0,
+      "line_face_pair_support": 256,
+      "line_face_pair_fibre_size_histogram": {
+        "2": 256
+      },
+      "line_torsor_failures": 0,
       "branch_support_partition": {
         "cells": 34,
         "largest_cell": 1,
@@ -70399,6 +70421,9 @@
         "KKB": 96,
         "KKK": 264
       },
+      "blue_fraction_power_of_two_exponent": -4,
+      "previous_blue_fraction_power_of_two_exponent": -2,
+      "blue_event_structure": "upper/low/high blue are pairwise independent; upper blue forces low and high colours equal; their three-way interaction is nonzero",
       "colour_descent_formula_failures": 0,
       "branch_rows": [
         {
@@ -71025,6 +71050,7 @@
       "n": 7,
       "pullback_formula": "T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex",
       "line_formula": "E_n=T_(n-1) x_[T_(n-2)] T_(n-1) via apex-zero endpoint",
+      "bare_line_tower_formula": "E_n is a C2-torsor over E_(n-1) x_[E_(n-2)] E_(n-1), n>=5",
       "compatible_face_pairs": 16384,
       "pullback_failures": 0,
       "core_compatibility_failures": 0,
@@ -71034,6 +71060,11 @@
       "branch_row_conservation_failures": 0,
       "branch_column_conservation_failures": 0,
       "low_high_branch_matrix_mismatches": 0,
+      "line_face_pair_support": 8192,
+      "line_face_pair_fibre_size_histogram": {
+        "2": 8192
+      },
+      "line_torsor_failures": 0,
       "branch_support_partition": {
         "cells": 264,
         "largest_cell": 2,
@@ -71614,6 +71645,9 @@
         "KKB": 960,
         "KKK": 14160
       },
+      "blue_fraction_power_of_two_exponent": -6,
+      "previous_blue_fraction_power_of_two_exponent": -4,
+      "blue_event_structure": "upper/low/high blue are pairwise independent; upper blue forces low and high colours equal; their three-way interaction is nonzero",
       "colour_descent_formula_failures": 0,
       "branch_rows": [
         {
