@@ -1,0 +1,68 @@
+THM-801 MOBIUS/CECH METAGRAPH CODEC
+==================================================================================
+A=high endpoint face; B=gap-contraction face; C=low endpoint face
+The three faces cover every tile and reconstruct compatible tilings exactly.
+Omega adds B to THM-796 Xi; B2 is the mirror crossing-layer sidecar.
+
+n=4: lines=4
+  line Cech matching/image/holonomy/bijection=1/1/{'0': 1}/False
+  Xi cells=4 hist(max/excess)=1/0
+  Omega cells=4 hist(max/excess)=1/0
+  Omega+B2 cells=4 max/excess=1/0
+  projected fibres B2(subcells/excess/separated)=4/0/3/3
+  projected fibres B3(subcells/excess/separated)=4/0/3/3
+  projected fibres B2+B3(subcells/excess/separated)=4/0/3/3
+  UABC atoms={'BBBB': 2, 'KBBB': 2}
+  cubic cumulant=0/1
+  A/B support cells=2/2; joined=3; primitive=3/2/3
+
+n=5: lines=32
+  line Cech matching/image/holonomy/bijection=64/32/{'0': 32, '1': 32}/False
+  Xi cells=32 hist(max/excess)=1/0
+  Omega cells=32 hist(max/excess)=1/0
+  Omega+B2 cells=32 max/excess=1/0
+  projected fibres B2(subcells/excess/separated)=32/0/20/20
+  projected fibres B3(subcells/excess/separated)=32/0/20/20
+  projected fibres B2+B3(subcells/excess/separated)=32/0/20/20
+  UABC atoms={'BBBB': 4, 'BKBK': 4, 'KBBK': 4, 'KBKB': 4, 'KBKK': 4, 'KKBB': 4, 'KKKB': 4, 'KKKK': 4}
+  cubic cumulant=1/16
+  A/B support cells=7/5; joined=10; primitive=10/7/10
+
+n=6: lines=512
+  line Cech matching/image/holonomy/bijection=512/512/{'0': 512}/True
+  Xi cells=509 hist(max/excess)=2/3
+  Omega cells=510 hist(max/excess)=2/2
+  Omega+B2 cells=512 max/excess=1/0
+  projected fibres B2(subcells/excess/separated)=504/8/179/187
+  projected fibres B3(subcells/excess/separated)=468/44/156/187
+  projected fibres B2+B3(subcells/excess/separated)=512/0/187/187
+  UABC atoms={'BBBB': 8, 'BKBK': 24, 'KBBB': 8, 'KBBK': 16, 'KBKB': 16, 'KBKK': 80, 'KKBB': 16, 'KKBK': 56, 'KKKB': 80, 'KKKK': 208}
+  cubic cumulant=3/256
+  A/B support cells=34/23; joined=34; primitive=34/30/34
+
+n=7: lines=16384
+  line Cech matching/image/holonomy/bijection=16384/16384/{'0': 16384}/True
+  Xi cells=16031 hist(max/excess)=4/353
+  Omega cells=16308 hist(max/excess)=2/76
+  Omega+B2 cells=16384 max/excess=1/0
+  projected fibres B2(subcells/excess/separated)=16212/172/5962/6126
+  projected fibres B3(subcells/excess/separated)=15016/1368/5071/6126
+  projected fibres B2+B3(subcells/excess/separated)=16368/16/6110/6126
+  UABC atoms={'BBBB': 16, 'BKBK': 240, 'KBBK': 48, 'KBKB': 48, 'KBKK': 912, 'KKBB': 48, 'KKBK': 672, 'KKKB': 912, 'KKKK': 13488}
+  cubic cumulant=15/16384
+  A/B support cells=264/244; joined=269; primitive=272/262/272
+
+EXACT FRONTIER
+  n>=6: the full B3 line descent is bijective; G is the phase witness.
+  n=7: adding the gap face removes 277 of Xi's 353 collision excess.
+  n=7: Omega+B2 is an exact 16,384-line codec; B2+B3 alone leaves 16 collisions.
+  all proper upper/endpoint-face colour marginals are independent;
+  the only connected defect is a*b*(1-b)(x-1)(y-1)(z-1).
+
+TOURNAMENT ANALYSIS (information carriers as vertices)
+  vertices=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
+  pairwise observable=number of unordered literal-line pairs separated by a carrier
+  switches=('retention', 'retention_per_log2_cells'); edge flips=27
+  tie Hamiltonian path=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
+  retention fingerprints: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  regression failures=0
