@@ -3,6 +3,7 @@ THM-785 CYCLIC-TRIANGLE FLOW ON THE BLUE/BLACK MERGED METAGRAPH
 score spectrum: sum_i(d_i-(n-1)/2)^2 = n(n^2-1)/12 - 2 C3
 line flux: C3(complement(t))-C3(t) = d0-dlast-1
 blue specialization: flux = 2 d0-n; black defect: epsilon=d0+dlast-(n-1)
+closed-form aggregate audit: n=3..30, failures=0
 
 n=3: nodes=2 tilings=2 C3=0..1 balanced=('n3-a01',)
   categories={'pure_blue': 2} balanced_categories={'pure_blue': 1}
@@ -15,7 +16,7 @@ n=3: nodes=2 tilings=2 C3=0..1 balanced=('n3-a01',)
   balanced monotone paths=n3-a01:B
   local-depth/C3 Pearson=1.0; line-distance/C3 Pearson=1.0
   identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
-  closed-form line-distribution failures=0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
 
 n=4: nodes=3 tilings=8 C3=0..2 balanced=('n4-a01',)
   categories={'mixed': 1, 'pure_black': 1, 'pure_blue': 1} balanced_categories={'mixed': 1}
@@ -28,7 +29,7 @@ n=4: nodes=3 tilings=8 C3=0..2 balanced=('n4-a01',)
   balanced monotone paths=n4-a01:B
   local-depth/C3 Pearson=0.866025404; line-distance/C3 Pearson=0.5
   identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
-  closed-form line-distribution failures=0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
 
 n=5: nodes=10 tilings=64 C3=0..5 balanced=('n5-a09',)
   categories={'mixed': 5, 'pure_black': 2, 'pure_blue': 3} balanced_categories={'pure_blue': 1}
@@ -41,7 +42,7 @@ n=5: nodes=10 tilings=64 C3=0..5 balanced=('n5-a09',)
   balanced monotone paths=n5-a09:BBB
   local-depth/C3 Pearson=0.918824656; line-distance/C3 Pearson=0.288075601
   identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
-  closed-form line-distribution failures=0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
 
 n=6: nodes=34 tilings=1024 C3=0..8 balanced=('n6-a23', 'n6-a31', 'n6-a32', 'n6-a33')
   categories={'mixed': 10, 'pure_black': 22, 'pure_blue': 2} balanced_categories={'mixed': 3, 'pure_black': 1}
@@ -54,7 +55,7 @@ n=6: nodes=34 tilings=1024 C3=0..8 balanced=('n6-a23', 'n6-a31', 'n6-a32', 'n6-a
   balanced monotone paths=n6-a23:BBB, n6-a31:BBB, n6-a32:BBB, n6-a33:BKK
   local-depth/C3 Pearson=0.893586927; line-distance/C3 Pearson=0.13934278
   identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
-  closed-form line-distribution failures=0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
 
 n=7: nodes=272 tilings=32768 C3=0..14 balanced=('n7-a267', 'n7-a270', 'n7-a271')
   categories={'mixed': 84, 'pure_black': 184, 'pure_blue': 4} balanced_categories={'mixed': 3}
@@ -67,7 +68,7 @@ n=7: nodes=272 tilings=32768 C3=0..14 balanced=('n7-a267', 'n7-a270', 'n7-a271')
   balanced monotone paths=n7-a267:BBBBBB, n7-a270:BBBBBB, n7-a271:BBBBBB
   local-depth/C3 Pearson=0.898915843; line-distance/C3 Pearson=0.465133288
   identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
-  closed-form line-distribution failures=0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
 
 N=7 CATEGORY-BOUNDARY FLOW (line multiplicity / projected support)
   blue pure_blue->mixed: 6/6
@@ -75,13 +76,14 @@ N=7 CATEGORY-BOUNDARY FLOW (line multiplicity / projected support)
   black mixed->pure_black: 1254/522
   black pure_black->mixed: 2798/1075
   black mixed--pure_black ties: 992/297
+  black boundary direction by |epsilon|: {'mixed->pure_black|0': 534, 'mixed->pure_black|1': 248, 'mixed->pure_black|2': 472, 'pure_black->mixed|0': 942, 'pure_black->mixed|1': 1072, 'pure_black->mixed|2': 668, 'pure_black->mixed|3': 100, 'pure_black->mixed|4': 16, 'tie|1': 876, 'tie|3': 116}
   black C3 cut current (k means k|k+1): {'1': 4, '10': 4290, '11': 3430, '12': 1366, '13': 70, '2': 26, '3': 86, '4': 294, '5': 626, '6': 1520, '7': 2440, '8': 3512, '9': 4256}
 
 INTERPRETATION
   topology: pure-blue --blue-- mixed --black-- pure-black (no shortcut)
   C3 orientation: the blue boundary is outward at n=7, but the black
   boundary has a net reverse drift from pure-black back into mixed
-  blue left/right symmetry is exact; black epsilon is the missing skew coordinate
+  blue left/right symmetry is exact; black |epsilon| is the transverse defect coordinate
 
 TOURNAMENT ANALYSIS
   vertices: node-position carriers (category, C3, score, Landau slack, graph depths)

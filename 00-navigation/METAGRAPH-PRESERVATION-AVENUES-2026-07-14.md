@@ -418,11 +418,13 @@ certificate clauses, and proof obligations.
   creates the black drift, then predict its sign without enumerating masks.
 - **Old thread:** score-majorization/Slater depth; half-tiling reflection;
   line-metagraph simultaneous isomorphism; HYP-3813 Gram/spectral bridge;
-  MPA-02/05/07/13; THM-781/785.
+  MPA-02/05/07/13; THM-781/785/787.
 - **Must preserve:** signed `epsilon`, line-instance multiplicity, both endpoint
   masks, simultaneous-isomorphism line orbit, converse action, and the `C3`
   orientation.  Absolute defect or simple projected adjacency alone cannot
-  explain directional drift.
+  explain directional drift.  An unordered complement line must be oriented
+  by an invariant such as `C3`; choosing the numerically smaller mask makes a
+  “toward regular/transitive” ratio convention-dependent.
 - **Deliverable:** an orbit-stabilizer formula for the conditional flux kernel,
   an `n=8` exact/semiexact census, and either a theorem predicting reverse
   black drift or the smallest counterexample.  Test separately whether every

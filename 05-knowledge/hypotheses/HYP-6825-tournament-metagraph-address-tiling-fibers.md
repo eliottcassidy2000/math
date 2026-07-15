@@ -41,6 +41,7 @@ related:
   - THM-778
   - THM-781
   - THM-785
+  - THM-787
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -290,10 +291,17 @@ line ensemble remains centrally symmetric; the asymmetry appears after
 iso-class projection and `C3` orientation.
 
 Every node now has a stored `flow_rank` ordered first by `C3`, then phase and
-rooted blue/black position, score/Landau shape, weighted line refinement, and
-finally the exact HYP-6825 address.  All balanced nodes through `n=7` have a
+rooted blue/black position, score/Landau shape, tiling-fibre mass, weighted
+line refinement, and finally the exact HYP-6825 address.  All balanced nodes
+through `n=7` have a
 nondecreasing `C3` path whose colour word is `B* K*`.  Extending that reach law
 beyond `n=7` remains open.
+
+THM-787 independently recovers the same axis as the integral energy
+`E4=E4(transitive)-8C3` and supplies the complementary unmerged-class
+histograms and depth-pair current table.  Its `368` pure-black classes at
+`n=7` are the `184` converse-merged pure-black nodes here.  THM-785's closed
+blue law promotes THM-787's formerly finite parity/max pattern to all sizes.
 
 ## Preservation statement
 

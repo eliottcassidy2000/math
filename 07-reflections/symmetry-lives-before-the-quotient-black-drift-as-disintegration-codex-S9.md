@@ -3,6 +3,15 @@
 The most useful reframe of the merged metagraph is to stop asking whether the
 picture is symmetric and ask **at which level the symmetry lives**.
 
+Concurrent THM-787 found the same score-energy axis from the opposite
+direction.  Its variable is exactly eight times the reversed `C3` coordinate;
+its unmerged-class census and this session's converse-merged-node census agree
+once that quotient level is kept explicit.
+HYP-6855's centered-shift proof and half-tiling count give a third description
+of the blue fixed axis.  Agreement among energy, endpoint flux, and reflection-
+orbit counts is evidence that this coordinate is structural rather than a
+drawing convention.
+
 At the labelled tiling level, complement is brutally exact.  With
 
 ```text

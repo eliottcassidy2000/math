@@ -110,6 +110,28 @@ def black_defect_prediction(n: int) -> Counter[int]:
     return +result
 
 
+def audit_closed_forms(max_n: int = 30) -> dict:
+    """Cheap algebraic checks beyond the exhaustively enumerated sizes."""
+    failures = 0
+    for n in range(3, max_n + 1):
+        m = math.comb(n - 1, 2)
+        fixed_tiles = (n - 1) // 2
+        failures += (m + fixed_tiles) % 2 != 0
+        reflection_orbits = (m + fixed_tiles) // 2
+        blue = blue_step_prediction(n)
+        all_lines = all_line_step_prediction(n)
+        black = all_lines - blue
+        defects = black_defect_prediction(n)
+        failures += sum(all_lines.values()) != 1 << (m - 1)
+        failures += sum(blue.values()) != 1 << (reflection_orbits - 1)
+        failures += sum(black.values()) != (1 << (m - 1)) - (1 << (reflection_orbits - 1))
+        failures += sum(defects.values()) != sum(black.values())
+        failures += max(blue) != n - 2
+        failures += any(step % 2 != n % 2 for step in blue)
+    assert failures == 0
+    return {"n_min": 3, "n_max": max_n, "failures": failures}
+
+
 def landau_slack(degrees: tuple[int, ...]) -> tuple[int, ...]:
     ascending = tuple(sorted(degrees))
     return tuple(sum(ascending[:k]) - k * (k - 1) // 2 for k in range(1, len(degrees)))
@@ -384,6 +406,19 @@ def analyze(n: int, size: dict) -> dict:
     )
     assert distribution_failures == 0
 
+    black_boundary_absolute_defect: Counter[tuple[str, int]] = Counter()
+    for (direction, defect), count in black_boundary_source_defect.items():
+        black_boundary_absolute_defect[(direction, abs(defect))] += count
+    boundary_sign_symmetry_failures = 0
+    for direction in {key[0] for key in black_boundary_source_defect if key[0] != "tie"}:
+        maximum = max(abs(key[1]) for key in black_boundary_source_defect if key[0] == direction)
+        for defect in range(1, maximum + 1):
+            boundary_sign_symmetry_failures += (
+                black_boundary_source_defect[(direction, defect)]
+                != black_boundary_source_defect[(direction, -defect)]
+            )
+    assert boundary_sign_symmetry_failures == 0
+
     # Projected support has one edge regardless of tiling-line multiplicity.
     support_category_counts: Counter[tuple] = Counter()
     support_direction_counts: Counter[tuple] = Counter()
@@ -462,6 +497,7 @@ def analyze(n: int, size: dict) -> dict:
             node_records[node]["blueblack_root_word"],
             node_slack[node],
             node_score[node],
+            len(masks_by_node[node]),
             int(node_records[node]["blueblack_wl_color"]),
             node,
         )
@@ -508,6 +544,7 @@ def analyze(n: int, size: dict) -> dict:
                     "blueblack_root_word": record["blueblack_root_word"],
                     "landau_slack_orbit": [list(slack) for slack in node_slack[node]],
                     "score_sequence_orbit": [list(score) for score in node_score[node]],
+                    "tiling_fibre_size": len(masks_by_node[node]),
                     "blueblack_wl_color": int(record["blueblack_wl_color"]),
                     "HYP6825_rank": node,
                 },
@@ -573,6 +610,10 @@ def analyze(n: int, size: dict) -> dict:
             predicted_black_defects
         ),
         "black_boundary_source_defect": counter_json(black_boundary_source_defect),
+        "black_boundary_absolute_source_defect": counter_json(
+            black_boundary_absolute_defect
+        ),
+        "black_boundary_sign_symmetry_failures": boundary_sign_symmetry_failures,
         "black_cyclic_triangle_level_pair_counts": counter_json(black_depth_pair_counts),
         "black_cyclic_triangle_cut_current": counter_json(black_cut_current),
         "strict_or_tie_monotone_reachable_nodes": len(ordinary_reach),
@@ -611,6 +652,9 @@ def render(result: dict) -> str:
         "score spectrum: sum_i(d_i-(n-1)/2)^2 = n(n^2-1)/12 - 2 C3",
         "line flux: C3(complement(t))-C3(t) = d0-dlast-1",
         "blue specialization: flux = 2 d0-n; black defect: epsilon=d0+dlast-(n-1)",
+        f"closed-form aggregate audit: n={result['closed_form_general_audit']['n_min']}.."
+        f"{result['closed_form_general_audit']['n_max']}, failures="
+        f"{result['closed_form_general_audit']['failures']}",
         "",
     ]
     for size in result["sizes"]:
@@ -645,7 +689,9 @@ def render(result: dict) -> str:
                 f"{size['blue_reflection_failures']}/{size['blue_flux_parity_failures']}/"
                 f"{size['line_color_endpoint_failures']}/{size['incidence_failures']}",
                 f"  closed-form line-distribution failures="
-                f"{size['closed_form_distribution_failures']}",
+                f"{size['closed_form_distribution_failures']}; "
+                f"black boundary sign-symmetry failures="
+                f"{size['black_boundary_sign_symmetry_failures']}",
                 "",
             ]
         )
@@ -669,6 +715,8 @@ def render(result: dict) -> str:
             f"  black mixed--pure_black ties: "
             f"{n7['line_instance_direction_counts'].get('black|tie|mixed|pure_black',0)}/"
             f"{n7['line_support_direction_counts'].get('black|tie|mixed|pure_black',0)}",
+            f"  black boundary direction by |epsilon|: "
+            f"{n7['black_boundary_absolute_source_defect']}",
             f"  black C3 cut current (k means k|k+1): "
             f"{n7['black_cyclic_triangle_cut_current']}",
             "",
@@ -676,7 +724,7 @@ def render(result: dict) -> str:
             "  topology: pure-blue --blue-- mixed --black-- pure-black (no shortcut)",
             "  C3 orientation: the blue boundary is outward at n=7, but the black",
             "  boundary has a net reverse drift from pure-black back into mixed",
-            "  blue left/right symmetry is exact; black epsilon is the missing skew coordinate",
+            "  blue left/right symmetry is exact; black |epsilon| is the transverse defect coordinate",
             "",
             "TOURNAMENT ANALYSIS",
             "  vertices: node-position carriers (category, C3, score, Landau slack, graph depths)",
@@ -701,6 +749,7 @@ def main() -> None:
     result = {
         "schema_version": 1,
         "theorem": "THM-785",
+        "closed_form_general_audit": audit_closed_forms(),
         "sizes": [analyze(n, sizes[n]) for n in range(3, 8)],
     }
     output = render(result)

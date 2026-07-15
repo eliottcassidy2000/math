@@ -73,6 +73,19 @@ path; general reach is open.  MPA-30 proposes disintegrating the symmetric
 endpoint-bit measure over path/automorphism/line-orbit fibres to explain the
 black drift.  Concurrent THM-784 reinforces the information boundary: static
 nodes and raw event counts both miss owner-labelled metric refinement.
+Concurrent THM-787 independently recovered the same energy axis, unique blue
+pipe, finite blue spectra, and black line-pair concentration.  THM-785
+identifies its normalization as `E4=E4(transitive)-8C3`, promotes its
+conjectural blue parity/max law to all sizes, and distinguishes THM-787's
+unmerged class phases from the converse-merged node phases audited here.  The
+two exact line-instance censuses agree.
+HYP-6855 independently reserved the centered-score antisymmetry and half-
+tiling proof; its 2,048-line `n=8` prediction agrees with THM-785's stronger
+four-bin law `{0:640,2:960,4:384,6:64}` in `C3` units.  The concurrent KPS
+majorization ordering motivated retaining tiling-fibre mass before line-WL in
+the flow address.  Its preliminary directional majorization ratios use the
+first/numerically smaller mask on an unordered complement line, so they should
+not be compared to the invariant `C3`-oriented current until reoriented.
 
 ---
 

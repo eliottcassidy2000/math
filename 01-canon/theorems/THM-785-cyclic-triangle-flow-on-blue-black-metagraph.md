@@ -6,7 +6,7 @@ source: codex-2026-07-14-S9
 depends_on:
   - HYP-6825
   - THM-781
-related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787]
+related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787, HYP-6855]
 artifacts:
   - 04-computation/merged_metagraph_transitivity_flow_codex_S9.py
   - 05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.out
@@ -114,6 +114,15 @@ does not break it.  What black lines add is the transverse coordinate
 `epsilon`, which permits the `C3` orientation and the pure/mixed/black phase
 orientation to disagree after projection.
 
+There is a stronger residual symmetry.  Reflecting any mask in the grid
+anti-diagonal sends its tournament to a converse-isomorphic tournament, keeps
+the same merged-node endpoints and `C3` line orientation, and sends
+`epsilon -> -epsilon`.  Non-blue masks occur in reflection pairs.  Therefore
+the signed defect histogram is symmetric even after conditioning on a
+particular projected line direction or category transition.  Black categorical
+drift can depend on the distribution of `|epsilon|`, but never on an uncancelled
+sign bias.
+
 ## 3. Blue reflection law and its closed binomial distribution
 
 A blue tiling is fixed by reflection in the grid anti-diagonal.  Vertex
@@ -127,6 +136,17 @@ Delta C3=2d_0-n.                                        (7)
 
 In particular every blue step has parity `n`.  Odd `n` has no blue `C3` tie;
 even `n` can have one.
+
+The same reversal anti-isomorphism makes the sorted score multiset
+self-complementary:
+
+```text
+s_i+s_(n-1-i)=n-1.                                     (7a)
+```
+
+Consequently every non-pure-black node has at least one class representative
+with (7a).  This is a necessary filter, not a sufficient characterization of
+the blue or mixed phases.
 
 More is true: the entire blue step distribution is closed form.  Let
 
@@ -147,6 +167,9 @@ binom(q,z) 2^(r-q).                                      (8)
 
 When `z=q-z` (only the even-`n`, zero-step case), divide (8) by two.  This is
 the precise blue left/right symmetry suggested by the drawings.
+The count `2^r` is also the exact half-tiling theorem targeted independently
+in HYP-6855; the `f` fixed tiles explain why the shortcut `2^ceil(m/2)` is
+wrong when the anti-diagonal has more than one fixed position.
 
 Two further consequences reconcile the concurrent THM-787 formulation.  The
 largest blue step is exactly
@@ -252,6 +275,34 @@ audited size.  Every balanced node is reached.  At `n=6`, three chosen paths
 are `BBB` and the fourth is `BKK`; at `n=7`, all three are `BBBBBB`.  These are
 finite facts, not yet a theorem for arbitrary `n`.
 
+The full `n=7` node cross-section makes clear that phase is not itself a
+monotone scalar:
+
+| `C3` | PB | M | PK |
+|---:|---:|---:|---:|
+| 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 2 |
+| 2 | 1 | 0 | 3 |
+| 3 | 0 | 2 | 3 |
+| 4 | 0 | 3 | 7 |
+| 5 | 1 | 4 | 9 |
+| 6 | 0 | 3 | 18 |
+| 7 | 0 | 0 | 20 |
+| 8 | 0 | 11 | 24 |
+| 9 | 0 | 15 | 23 |
+| 10 | 0 | 5 | 37 |
+| 11 | 0 | 10 | 21 |
+| 12 | 0 | 17 | 15 |
+| 13 | 0 | 11 | 2 |
+| 14 | 0 | 3 | 0 |
+
+Pure-blue has a detached depth-5 island, mixed disappears at depth 7 and then
+returns, and pure-black persists to depth 13 but cannot occupy the balanced
+endpoint.  So (14) is a statement about allowed coloured incidence, not three
+contiguous intervals.  `C3` has 15 cells at `n=7`; the converse score orbit has
+37, showing exactly how much score shape refines energy before line position
+is used.
+
 The oriented line-instance phase counts `(outward,inward,same,tie)` are
 
 | n | blue | black |
@@ -275,6 +326,20 @@ Thus the reverse black drift is exactly `1544` line instances and `553`
 supports; the reverse/forward ratios are about `2.231` and `2.059`.  This is
 the requested quotient-level left/right imbalance.  It coexists with the
 exact labelled central symmetry (6).
+
+Conditioning on defect magnitude locates that imbalance more precisely:
+
+```text
+mixed -> pure_black by |epsilon|: 0:534, 1:248, 2:472;
+pure_black -> mixed by |epsilon|: 0:942, 1:1072, 2:668, 3:100, 4:16;
+C3-tied boundary lines:            1:876, 3:116.
+```
+
+Every nonzero signed bin in each directed row splits equally between `+e` and
+`-e`, as the reflection theorem predicts.  The net reverse drift decomposes as
+`408+824+196+100+16=1544` over magnitudes `0,1,2,3,4`; more than half of it
+(`824/1544`) sits at `|epsilon|=1`, while only the reverse current reaches the
+tails `3,4`.
 
 The black current across the `C3` cut `k | k+1` at `n=7`, for
 `k=1,...,13`, is
@@ -306,6 +371,7 @@ The result JSON gives every node the lexicographic address
  least rooted blue/black path word,
  Landau-slack orbit,
  score-sequence orbit,
+ tiling-fibre size `sum H(T)/|Aut(T)|`,
  stable weighted blue/black WL colour,
 exact HYP-6825 rank).                                  (15)
 ```
@@ -313,7 +379,9 @@ exact HYP-6825 rank).                                  (15)
 Sorting (15) produces `flow_rank`.  The first coordinate is the exact
 transitivity spectrum; the next three place a node in the blue-to-black
 geometry; the score/slack orbit resolves majorization shape inside a `C3`
-layer; weighted line refinement records recursive neighbourhood position;
+layer; fibre size retains THM-781's line measure rather than silently reducing
+to simple adjacency; weighted line refinement records recursive neighbourhood
+position;
 and the old canonical address is an admitted exact final tie-breaker.  Landau
 slack is a readable transform of the score orbit, not falsely claimed as an
 independent invariant.
@@ -358,6 +426,8 @@ The next structural questions are now sharp:
    the exact symmetric defect law (11) is conditioned on iso-class phase?
 4. At `n=8`, do the new balanced score nodes remain reachable, and does the
    blue boundary stay outward while the black boundary retains reverse drift?
+   Formula (8) already predicts the 2,048 blue lines exactly:
+   `|Delta C3|={0:640,2:960,4:384,6:64}`.
 5. Can signed defect and line-orbit data replace the canonical-code fallback
    in (15), or exhibit the first unavoidable twins?
 
@@ -378,3 +448,9 @@ histograms count **unmerged tournament classes**, whereas the table in §6
 counts **converse-merged nodes**.  At `n=7`, for example, its 368 pure-black
 classes form the 184 pure-black nodes reported here.  Line-instance totals and
 energy/`C3` spectra agree exactly.
+
+HYP-6855/THM-790 was concurrently reserved for a centered-score-shift
+antisymmetry proof, the same half-tiling count, and an `n=8` check.  Its
+predicted 2,048 blue lines and parity/max values agree with (8); the explicit
+four-bin `n=8` distribution above is the stronger common target.  That
+independent proof route is complementary rather than a new normalization.
