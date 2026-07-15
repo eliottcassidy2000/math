@@ -286,7 +286,7 @@
     }
   },
   "preservation": {
-    "challenged_assumption": "iterating one seam bit does not close the return dynamics; the exact state is a contraction semigroup",
+    "challenged_assumption": "iterating one seam bit does not close the return dynamics; the exact state is a contraction monoid",
     "destroys_or_defers": [
       "all-output merged-node identity",
       "LRC gaps",
@@ -304,6 +304,20 @@
     ]
   },
   "right_cayley_graph": {
+    "high_horizon_shortest_words": {
+      "4": [
+        "A",
+        "C",
+        "AB",
+        "CB"
+      ],
+      "5": [
+        "B"
+      ],
+      "6": [
+        "I"
+      ]
+    },
     "labelled_edges": 138378,
     "loops_by_letter": {
       "A": 394,
@@ -459,8 +473,10 @@
       "4": 2
     },
     "idempotents": 3149,
+    "identity_adjoined_monoid_maps": 46126,
     "mapping_sha256": "1df8e46ee522452ebf91841ae3d420abfa75f4fd056a3233b1453c64632aadc7",
     "maps": 46126,
+    "nonempty_word_semigroup_maps": 46125,
     "reflection_fixed_maps": 12,
     "reflection_orbits": 23069,
     "shortest_word_length_histogram": {

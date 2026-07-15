@@ -1,6 +1,6 @@
-THM-853 N=9 CLOSED CF RETURN SEMIGROUP
+THM-853 N=9 CLOSED CF RETURN MONOID
 ======================================================================
-maps=46126 max-shortest-word=22 idempotents=3149
+identity-adjoined/nonempty maps=46126/46125 max-shortest-word=22 idempotents=3149
 coordinate rank histogram={'1': 6, '2': 19186, '3': 25146, '4': 1038, '5': 318, '6': 180, '7': 78, '8': 36, '9': 32, '10': 54, '11': 12, '14': 14, '15': 16, '20': 4, '21': 4, '27': 1, '28': 1}
 idempotent rank histogram={'1': 6, '2': 3009, '3': 130, '4': 2, '27': 1, '28': 1}
 reflection fixed/orbits=12/23069
@@ -12,6 +12,7 @@ vertices/edges/SCCs=46126/138378/31075
 SCC sizes={'1': 31058, '216': 6, '1252': 11} nontrivial=[{'size': 216, 'coordinate_ranks': [3], 'reachable_sinks': 3, 'components': 6}, {'size': 1252, 'coordinate_ranks': [2], 'reachable_sinks': 2, 'components': 11}]
 terminal rank-one sinks=[{'sink_bit': 5, 'source_coordinate_index': 17, 'source_tile': [5, 3], 'shortest_word': 'AABAAACC'}, {'sink_bit': 3, 'source_coordinate_index': 16, 'source_tile': [6, 3], 'shortest_word': 'ABACCAACC'}, {'sink_bit': 4, 'source_coordinate_index': 21, 'source_tile': [6, 4], 'shortest_word': 'AAACCCCC'}, {'sink_bit': 2, 'source_coordinate_index': 15, 'source_tile': [7, 3], 'shortest_word': 'BACCAACC'}, {'sink_bit': 1, 'source_coordinate_index': 20, 'source_tile': [7, 4], 'shortest_word': 'CBACCAACC'}, {'sink_bit': 0, 'source_coordinate_index': 24, 'source_tile': [7, 5], 'shortest_word': 'CCBCAACC'}]
 reachable-sink count histogram={'1': 13032, '2': 31342, '3': 1746, '4': 4, '5': 1, '6': 1}
+high-horizon words={'6': ['I'], '5': ['B'], '4': ['A', 'C', 'AB', 'CB']}
 loops={'A': 394, 'B': 32253, 'C': 394} rank drops={'0': 116993, '1': 19803, '2': 1092, '3': 302, '4': 124, '5': 44, '6': 16, '7': 4}
 
 FINITE 58-ROW Q BANK

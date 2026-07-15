@@ -64413,3 +64413,79 @@ The exact remaining frontier is now:
 
 Honest close-out: `q<=25` is disproved; the bounded common-sheet H5 bank is now
 proved empty; global twelve-speed sporadic emptiness and LRC(14) remain open.
+
+## 2026-07-15 — codex-S13: n8 flow shell, n9 face purity, and the closed-CF return monoid
+
+This overnight continuation kept the tiling/node/line/defect sorts separate
+and pushed four exact calculations on the HYP-6880 frontier, with repeated
+fetch/rebase integration against live main.
+
+THM-842 classifies B3 continuation on all 58 n9 defect cells.  B is the unique
+literal-Q-pure face and maps both Q and coupled `bar P` to 58 singleton cells.
+The unordered A/C endpoint deck has 29 doubletons generated exactly by the
+apex-relative theta involution; adjoining B restores 58 cells.  The complete
+unpositioned induced-node deletion deck has the same 53-cell partition as the
+bare upper node, while marking deletion position is injective.  The result
+distinguishes affine sheet, chirality, seam, and path position.
+
+THM-843 completes the full n8 merged-metagraph flow census.  There are 3,528
+nodes (`3` pure blue, `173` mixed, `3,352` pure black).  The 155 THM-834 seed
+nodes have black radius-one shell 3,308 and blue enters through exactly two
+mixed portals; the coloured union has 3,310 nodes and contains the entire
+`x<56` tail.  Nondecreasing-C3 reach and `blue* black*` reach coincide on
+3,069 nodes and contain all 50 balanced nodes.  Endpoint curvature refines
+47,872 black supports to 58,937 cells but leaves every reflection fibre even.
+The audit also corrected THM-834's transitive-root convention from atlas mask
+zero to `FULL`: 114/155 local depths and the maximum `7->8` changed, while all
+node fibres, lines, axes, bridges, and sector order stayed fixed.
+
+THM-846 closes THM-838's `Phi:X_9->X_10` with A/B/C.  A/C have coordinate
+ranks 21/21 and jointly omit only the common apex.  B is identity except
+`y_(6,4)=x_(7,3)`, hence is an idempotent rank-27 map with exact lost seam
+`x_(6,4) xor x_(7,3)`.  Ordered A/C is injective on the apex-zero bank;
+unordered A/C Q and `bar P` are both the 29 theta doubletons.  At node level,
+direct and partner marginals fail different THM-840 kernel tests.  The seam
+repairs literal B inversion and the direct source kernel, but not target-node
+injectivity or the partner kernel; coupled `bar P` is singleton on the bank.
+
+THM-853 then enumerates the complete fixed `9->10->9` return algebra.  The
+identity-adjoined monoid has 46,126 maps (46,125 nonempty-word maps), 3,149
+idempotents, and 31,075 right-Cayley SCCs.  Its only nontrivial SCCs are six
+rank-three components of size 216 and eleven rank-two components of size
+1,252.  The six terminal rank-one sinks select central coordinates
+
+```text
+(5,3),(6,3),(6,4),(7,3),(7,4),(7,5).
+```
+
+Reflection pairs the outer four and fixes `(6,4),(7,3)`, exactly the B-seam
+pair.  Only identity can reach all six horizons; B alone reaches five.
+
+On the 58-row bank, only ten monoid maps are Q-injective and only `I,B` also
+have full old-pair descent.  State-specific Q-kernel containment holds under B
+at all 46,126 states; A/C each fail at 76 mirrored states.  The 144 present Q
+equality partitions refine under arbitrary future A/B/C returns to 20,419
+Moore classes after seven effective rounds.  This is the session's sharpest
+preservation lesson: a small static codec and a small recursively sufficient
+state are different objects.  Only 462 maps retain defect rank four and all
+eleven sectors.  The return closure contains 6,138 representative masks and
+8,940 with complements; exact merged-node classification of those masks is
+the next computation.
+
+Two independent read-only referees replayed THM-846 and THM-853.  The latter
+caught the empty-word monoid convention and verified the Moore construction.
+Incoming work was integrated rather than overwritten: THM-847 closes the
+bounded mixed H5 language; THM-852 refutes the n8 self-line/SC extrapolation;
+THM-854 corrects its invalid involution corollary with the exact witness-order
+path-XOR parity law; the S14 H-drift formula shows exact drift needs a
+length-weighted OCF endpoint coordinate, not H alone; THM-851 reserves the
+complementary node-coloured constant-composition refinement.  The THM-842/845
+namespace collision was resolved by first-pusher ordering, leaving each
+theorem ID unique.
+
+The ranked next targets are: exact node keys and node/partner/`bar P` future
+minimization on the 8,940-mask return closure; n10 relation preflight on the
+rank-four sectors; genuine increasing-size CF cocycle state with phase and
+owner tokens; and only then a metric fibre product with LRC gap/owner/wall
+data.  None of the tournament carriers computed here preserves loneliness,
+and LRC(14) remains open.

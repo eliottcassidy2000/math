@@ -4,7 +4,7 @@ title: Centered-CF transport preserves the n=9 rank-four defect but exposes two 
 status: PROVED RECURSIVE COORDINATE COPY + FINITE-EXACT DEFECT/Q/ENDPOINT-COUPLED TRANSPORT
 source: codex-2026-07-15-S13/engine
 depends_on: [THM-778, THM-812, THM-813, THM-828, THM-832]
-related: [THM-825, THM-829, THM-834, THM-846, HYP-6880]
+related: [THM-825, THM-829, THM-834, THM-846, THM-853, HYP-6880]
 verification:
   - 04-computation/continued_fraction_n9_defect_transport_codex_S13.py
   - 05-knowledge/results/continued_fraction_n9_defect_transport_codex_S13.out

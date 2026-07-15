@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Exact closed-return transformation semigroup for THM-853.
+"""Exact identity-adjoined closed-return transformation monoid for THM-853.
 
 The letters A,B,C are THM-846's endomorphisms F_R=R_10 Phi_9,10 of X_9.
 A word is applied left-to-right, so AB means F_B after F_A.  This is a
 repeated fixed-size 9->10->9 return algebra, not the increasing-size
 continued-fraction cocycle; the latter also needs ambient size and phase.
 
-The exact coordinate semigroup and its right Cayley graph are enumerated.
+The exact coordinate monoid and its right Cayley graph are enumerated.  The
+empty word supplies the identity; the strict nonempty-word semigroup has one
+fewer element.
 On THM-828's 58 rows, literal Q equality, old-pair descent, defect rank, and
 THM-840 operation kernels are audited for every semigroup element.  A
 partition-output Moore minimization records future Q equality under arbitrary
@@ -22,7 +24,7 @@ literal Q equality on the finite bank, and the rank-four defect images.
 Destroyed/not computed: merged-node identity for all 8,940 output masks, LRC
 metrics/owners/walls/loneliness, and genuine increasing-size CF evolution.
 Challenged assumption: a single seam bit cannot be iterated as a universal
-state; the closed returns form a 46,126-element contraction semigroup.
+state; the identity-adjoined returns form a 46,126-element contraction monoid.
 """
 
 from __future__ import annotations
@@ -236,6 +238,9 @@ def run(witness_path: Path) -> dict[str, object]:
     sigma = tuple(reflect(1 << bit, 9).bit_length() - 1 for bit in range(NCOORD))
     conjugate = lambda mapping: tuple(sigma[mapping[sigma[target]]] for target in range(NCOORD))
     reflection_fixed = [mapping for mapping in order if conjugate(mapping) == mapping]
+    assert conjugate(generators["A"]) == generators["C"]
+    assert conjugate(generators["C"]) == generators["A"]
+    assert conjugate(generators["B"]) == generators["B"]
     assert all(conjugate(mapping) in words for mapping in order)
     assert len(reflection_fixed) == 12
     reflection_orbits = (len(order) + len(reflection_fixed)) // 2
@@ -285,6 +290,14 @@ def run(witness_path: Path) -> dict[str, object]:
     reachable_sink_histogram = Counter(reachable_sink_count)
     assert reachable_sink_histogram == {1: 13032, 2: 31342, 3: 1746, 4: 4, 5: 1, 6: 1}
     assert reachable_sink_count[0] == 6
+    high_horizon_words = {
+        count: sorted(
+            (words[order[i]] or "I" for i, actual in enumerate(reachable_sink_count) if actual == count),
+            key=lambda word: (0 if word == "I" else len(word), word),
+        )
+        for count in (6, 5, 4)
+    }
+    assert high_horizon_words == {6: ["I"], 5: ["B"], 4: ["A", "C", "AB", "CB"]}
 
     sink_rows = []
     for bit, label in enumerate(terminal):
@@ -347,6 +360,10 @@ def run(witness_path: Path) -> dict[str, object]:
     assert len(output_masks) == 6138
     output_with_complements = output_masks | {mask ^ full for mask in output_masks}
     assert len(output_with_complements) == 8940
+    assert all(
+        (rank == 4) == (sector_count == 11)
+        for rank, sector_count in zip(defect_ranks, sector_image_counts, strict=True)
+    )
     full_q_words = sorted(
         (words[order[i]] or "I" for i, cells in enumerate(q_cell_counts) if cells == 58),
         key=lambda word: (0 if word == "I" else len(word), word),
@@ -360,6 +377,13 @@ def run(witness_path: Path) -> dict[str, object]:
         key=lambda word: (0 if word == "I" else len(word), word),
     )
     assert len(full_q_words) == 10
+    assert full_q_words == ["I", "A", "B", "C", "AB", "BA", "BC", "CB", "BAB", "BCB"]
+    assert full_q_and_descent_words == ["I", "B"]
+    assert Counter(old_pair_descent) == {
+        0: 418, 2: 140, 4: 36, 6: 96, 10: 170, 16: 2, 32: 17682,
+        34: 4, 36: 26, 38: 15190, 40: 2, 42: 10606, 56: 2, 58: 1752,
+    }
+    assert Counter(defect_ranks) == {0: 1746, 1: 22308, 2: 21374, 3: 236, 4: 462}
 
     # Exact two-step cross-check against the independent scout.
     expected_two_step = {
@@ -395,6 +419,11 @@ def run(witness_path: Path) -> dict[str, object]:
             for target in (row[position],)
         )
         operation_kernel_histograms[letter] = counter_json(histogram)
+    assert operation_kernel_histograms == {
+        "A": {"0": 46050, "1": 60, "2": 10, "5": 6},
+        "B": {"0": 46126},
+        "C": {"0": 46050, "1": 60, "2": 10, "5": 6},
+    }
 
     # Moore minimization: states are equal only when their present Q equality
     # partition and all future partition outputs under A/B/C agree.
@@ -418,11 +447,14 @@ def run(witness_path: Path) -> dict[str, object]:
             break
         colours = refined
     future_class_histogram = Counter(Counter(colours).values())
+    assert refinement_counts == [144, 502, 1741, 4367, 10983, 17598, 20397, 20419, 20419]
+    assert len(set(colours)) == 20419
 
     loops_by_letter = {
         letter: sum(row[position] == source for source, row in enumerate(adjacency))
         for position, letter in enumerate(LETTERS)
     }
+    assert loops_by_letter == {"A": 394, "B": 32253, "C": 394}
     rank_drop_histogram = Counter(
         ranks[source] - ranks[target]
         for source, row in enumerate(adjacency) for target in row
@@ -435,6 +467,8 @@ def run(witness_path: Path) -> dict[str, object]:
         b"".join(bytes(mapping) + b"\0" + words[mapping].encode() + b"\n"
                  for mapping in sorted(order))
     ).hexdigest()
+    assert mapping_hash == "1df8e46ee522452ebf91841ae3d420abfa75f4fd056a3233b1453c64632aadc7"
+    assert word_hash == "fcdf4b4adf5ca36dc138795a41bb32cf3cf27dea8839a7c48c8436e54ccd7125"
 
     tournament_analysis = ta_fingerprint([
         ("coordinate rank", ranks),
@@ -452,6 +486,8 @@ def run(witness_path: Path) -> dict[str, object]:
         "word_convention": "letters applied left-to-right; AB = F_B after F_A",
         "semigroup": {
             "maps": len(order),
+            "identity_adjoined_monoid_maps": len(order),
+            "nonempty_word_semigroup_maps": len(order) - 1,
             "shortest_word_maximum": max(map(len, words.values())),
             "shortest_word_length_histogram": counter_json(length_histogram),
             "coordinate_rank_histogram": counter_json(rank_histogram),
@@ -482,6 +518,9 @@ def run(witness_path: Path) -> dict[str, object]:
             ],
             "terminal_sinks": sink_rows,
             "reachable_sink_count_histogram": counter_json(reachable_sink_histogram),
+            "high_horizon_shortest_words": {
+                str(count): values for count, values in high_horizon_words.items()
+            },
         },
         "finite_bank": {
             "rows": len(rows),
@@ -514,7 +553,7 @@ def run(witness_path: Path) -> dict[str, object]:
                 "walls", "metric loneliness", "increasing-size CF phase state",
             ],
             "challenged_assumption": (
-                "iterating one seam bit does not close the return dynamics; the exact state is a contraction semigroup"
+                "iterating one seam bit does not close the return dynamics; the exact state is a contraction monoid"
             ),
         },
     }
@@ -527,9 +566,9 @@ def render(result: dict[str, object]) -> str:
     future = bank["Q_partition_future_minimization"]
     ta = result["tournament_analysis"]
     lines = [
-        "THM-853 N=9 CLOSED CF RETURN SEMIGROUP",
+        "THM-853 N=9 CLOSED CF RETURN MONOID",
         "=" * 70,
-        f"maps={semigroup['maps']} max-shortest-word={semigroup['shortest_word_maximum']} idempotents={semigroup['idempotents']}",
+        f"identity-adjoined/nonempty maps={semigroup['identity_adjoined_monoid_maps']}/{semigroup['nonempty_word_semigroup_maps']} max-shortest-word={semigroup['shortest_word_maximum']} idempotents={semigroup['idempotents']}",
         f"coordinate rank histogram={semigroup['coordinate_rank_histogram']}",
         f"idempotent rank histogram={semigroup['idempotent_rank_histogram']}",
         f"reflection fixed/orbits={semigroup['reflection_fixed_maps']}/{semigroup['reflection_orbits']}",
@@ -541,6 +580,7 @@ def render(result: dict[str, object]) -> str:
         f"SCC sizes={cayley['scc_size_histogram']} nontrivial={cayley['nontrivial_scc_profiles']}",
         f"terminal rank-one sinks={cayley['terminal_sinks']}",
         f"reachable-sink count histogram={cayley['reachable_sink_count_histogram']}",
+        f"high-horizon words={cayley['high_horizon_shortest_words']}",
         f"loops={cayley['loops_by_letter']} rank drops={cayley['rank_drop_histogram']}",
         "",
         "FINITE 58-ROW Q BANK",

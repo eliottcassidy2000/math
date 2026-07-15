@@ -4,7 +4,7 @@ title: Closed continued-fraction lift/face composites have distinct apex, seam, 
 status: PROVED EXACT COORDINATE ALGEBRA + FINITE-EXACT 58-CELL OPERATION-KERNEL CLASSIFICATION
 source: codex-2026-07-15-S13f
 depends_on: [THM-828, THM-834, THM-838, THM-840, THM-842]
-related: [THM-813, THM-829, THM-843, THM-851, HYP-6880]
+related: [THM-813, THM-829, THM-843, THM-851, THM-853, HYP-6880]
 verification:
   - 04-computation/n9_closed_cf_lift_face_kernels_codex_S13f.py
   - 05-knowledge/results/n9_closed_cf_lift_face_kernels_codex_S13f.out
