@@ -269,11 +269,13 @@ obligations, and proof-carrier interfaces.
   quartets. THM-845, THM-844, and THM-847 respectively close those three
   languages. THM-858 then closes every new row through effective order 21 by
   complement-lcm fibre cuts.  Iterating those cuts over adjacent valuation
-  levels bounds the `2,3,7` ranges by `5,2,1`, hence every remaining order by
-  42,336.  The scalar cone is infinite, but its common-sheet sublanguage is a
+  levels bounds the `2,3,7` ranges by `3,2,1`, hence every remaining order by
+  10,584.  The scalar cone is infinite, but its common-sheet sublanguage is a
   finite `{2,3,7}`-smooth prime-power carrier hypergraph with no singleton top edge.
   THM-857 independently closes the full proper scale-one H6 chart by exact
-  component recursion; arbitrary-sheet transport of that result remains open.
+  component recursion. THM-859 proves that common dilation conjugates the
+  whole tree and that an order-`D` insertion creates exactly `D` deck masks;
+  hence transport is exact at `D=1` and genuinely ramified at `D>1`.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies
@@ -340,12 +342,12 @@ obligations, and proof-carrier interfaces.
   by deep-component incidence in the persistent `s=2` cover; in the shallow
   branch, transport THM-845/857's component/comb recursions across AP scale and
   classify the finite THM-858 strip
-  `min D_i<=21<max D_i<=42,336`. The next shallow object is
+  `min D_i<=21<max D_i<=10,584`. The next shallow object is
   the `{2,3,7}` prime-power carrier hypergraph decorated by complement-lcm
   fibres, affine owner intervals, and active boundary words, not a
   raw global cell mask. Then treat the ramified higher-`s`
   packets outside THM-816's closed quartic coset. Use the already completed
-  THM-857 scale-one H6 tree as a boundary condition and cross the seven-comb
+  THM-857/859 unramified H6 tree as a boundary condition and cross the seven-comb
   density wall. For the
   common `(13d,5d)` branch, first derive THM-836's signed-complement and
   guarded-containment hypotheses, then continue the uniform arithmetic

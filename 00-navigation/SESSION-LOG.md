@@ -28,6 +28,10 @@ covers.  This subsumes both the intermediate 909-row AP-germ frontier and the
 later 903-row plus exceptional-root residual at scale one; it does not
 transport through arbitrary AP scale/common sheets or cross the seven-comb
 wall.
+covers.  This subsumes the earlier 909-row AP-germ residual at scale one; it
+does not by itself transport through ramified common sheets or cross the
+seven-comb wall. THM-859 below subsequently supplies the exact common-dilation
+conjugacy and identifies `D>1` as the transport boundary.
 
 TOURNAMENT/ASSUMPTION CHALLENGE: vertices as missing labels, ordered either by
 least proper lift or by the exact five-comb cap after that lift, give transitive
@@ -46,6 +50,58 @@ closed-danger-union replay; updated frontier, backlog, lens/tournament maps,
 HYP-6820, results index, and cover-debt reflection.  Primary source/output
 SHA-256 are `58a8c4d516e340fa5bcb426a646ab0006f1ba91cd1697ab6b22d580ebaf65222`
 and `63b3851ce74a0906821e990c81fe1195d9ea8a6bbf0dc6ff8115f7760d4b3ef7`.
+
+## codex-2026-07-15-S10 continuation -- THM-859 identifies H6 ramification and the order-one gate
+
+Common dilation conjugates the entire THM-857 action, not just its terminal
+value.  For `pi_c(t)=ct`,
+
+```text
+E(cQ)=pi_c^(-1)E(Q),
+pi_c^(-1)(E intersect Safe(u))=pi_c^(-1)(E) intersect Safe(cu).
+```
+
+Every component lifts `c`-fold with reciprocal length, so the THM-815 cap and
+the complete candidate tree scale exactly.  Hence `2c[12]` is the unique tight
+proper H6 packet whenever all effective orders equal one.
+
+The operation boundary is sharp.  Translation by one base sheet changes a
+`w`-comb by phase `w/c`; the centred safe arc has trivial rotational
+stabilizer.  Therefore the scale quotient is an insertion congruence iff
+`c|w`.  Its deck orbit contains exactly
+
+```text
+D=c/gcd(c,w)
+```
+
+distinct masks.  Effective order is thus the literal ramification degree of
+the failed continuation quotient, and a `Z/DZ` phase action is the missing
+sidecar.
+
+Deleting an order-one colour from an H6 common-sheet presentation leaves an
+H5 presentation on the other five owners.  Two or more order-one colours give
+either the closed all-one stratum or `3*C(8,2)*4=336` labelled
+two-order-one/four-order-three contexts.  Exactly one order-one colour leaves
+the finite THM-858 H5 bank; its through-21 face gives `96*7=672` marked
+one-order-one/five-order-three contexts.  Every fixed context lies in labelled
+progressions modulo `13 lcm(D_i)`, and the longest-component cap makes its
+unbounded-height recursion finite.  This is a finite reduction, not a
+zero-cover result for the `336`, `672`, or higher-order finite-strip languages.
+
+The same cut proof in THM-858 also sharpens here: at the first four-colour
+dyadic boundary, gap three forces every relative order to be exactly eight;
+gap two forces every relative order into `{4,8}`.  The apparent later gaps
+cannot accumulate, so
+
+```text
+range(v_2)<=3,       range(v_3)<=2,       range(v_7)<=1,
+max D_i<=21*2^3*3^2*7=10,584.
+```
+
+The range three is sharp for the relative cuts alone at order pattern
+`(2,4,8,16,16)`.  Owner/phase information is required for any stronger bound.
+THM-859 and the refined THM-858 were independently proof-audited; no new
+finite metric census is claimed in this structural checkpoint.
 
 ## codex-2026-07-15-S15 -- typed metagraph preservation: node-coloured defect closure, Walsh H drift, path holonomy, chi7 carry-Radon algebra, and the tropical Hunter defect graph
 
@@ -219,23 +275,23 @@ occurs through effective order 21.
 The remaining common-sheet strip is exact:
 
 ```text
-min D_i<=21<max D_i<=42,336,
+min D_i<=21<max D_i<=10,584,
 all D_i {2,3,7}-smooth,
 no private maximal prime power,
 all complement-lcm cuts active.
 ```
 
 The upper bound is another consequence of the same cuts, not a computation to
-height 42,336.  Across adjacent `p`-adic valuation levels, the possible upper-
+height 10,584.  Across adjacent `p`-adic valuation levels, the possible upper-
 set sizes and exact ceiling capacities force
 
 ```text
-range(v_2)<=5,             range(v_3)<=2,
+range(v_2)<=3,             range(v_3)<=2,
 range(v_7)<=1.
 ```
 
 THM-823 supplies an order `D_*<=21`; comparison prime by prime gives
-`D_i<=D_*2^5 3^2 7<=42,336`.  Thus the scalar family has infinite cones but
+`D_i<=D_*2^3 3^2 7<=10,584`.  Thus the scalar family has infinite cones but
 its common-sheet effective-order sublanguage is uniformly finite.
 
 Tournament Analysis used raw and complement-conditioned relative-capacity
@@ -256,7 +312,8 @@ output.  Source/output SHA-256 are respectively
 Honest limit at that checkpoint: this did not classify the remaining finite
 strip, erode its new metric lift languages, close other arbitrary-scale H5
 deck ramifications, or prove global `n=12` sporadic emptiness.  THM-857 above
-has since removed the scale-one H6 residual, but not arbitrary-scale transport.
+has since removed the scale-one H6 residual, and THM-859 transports the
+unramified common dilations; ramified H6 languages remain open.
 
 ## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: finite ramified H5 bank; nonprimitive H6 closed except `2[12]`; all twenty primitive-core `f=3` rows closed; shell, H-drift, toothpick, Fano, and flood carriers
 

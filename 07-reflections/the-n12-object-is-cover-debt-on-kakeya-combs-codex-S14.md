@@ -48,7 +48,7 @@ Thus no order has a private maximal prime power.  After the exact order-21
 census, every live order is `{2,3,7}`-smooth and any new row has
 `min D_i<=21<max D_i`.  Reapply the cut across adjacent valuation levels:
 the `2,3,7` exponent ranges are at most `5,2,1`.  Comparison with the order at
-most 21 gives `max D_i<=42,336`, so the presentation bank is uniformly finite.
+most 21 gives `max D_i<=10,584`, so the presentation bank is uniformly finite.
 On the 185 last order-21 residuals, both raw and
 complement-conditioned order tournaments are transitive despite 574 edge
 flips, while a top-prime subset cut rejects every row.  The H5 analogue of
@@ -443,17 +443,21 @@ not a tournament on runners.
 
 The shortest honest route to the requested theorem is now:
 
-1. **Arbitrary-scale H6 transport:** lift THM-857's closed scale-one action
-   tree across common sheets without losing literal components, labelled
+1. **Ramified H6 transport:** THM-859 proves that common dilation conjugates
+   THM-857's full action tree and that order `D` is exactly the number of deck
+   masks created by insertion.  Thus `D=1` is already closed, and every branch
+   containing it is finite-decidable.  Evaluate the first `336`
+   two-order-one/four-order-three and `672`
+   one-order-one/five-order-three context families, then lift surviving states
+   across `D>1` fibres without losing literal components, phase masks, labelled
    future progressions, last-speed order, equality ancestry, or the shortcut
    witness.  There is no remaining primitive scale-one label census.
 2. **Finite ramified H5 sheets:** classify the THM-858 strip
-   `min D_i<=21<max D_i<=42,336`.  Every order is `{2,3,7}`-smooth, every
-   maximal prime power is shared, and all complement-lcm relative-capacity
-   cuts hold.  The complete bank through 21 is already reduced to the closed
-   legacy languages; the next recursion should act on the decorated
-   prime-power carrier hypergraph rather than enumerate the full rectangular
-   order box.
+   `min D_i<=21<max D_i<=10,584`.  Every order is `{2,3,7}`-smooth, every maximal
+   prime power is shared, and all complement-lcm relative-capacity cuts hold.
+   The complete bank through 21 is already reduced to the closed legacy
+   languages; the next recursion should act on the decorated prime-power
+   carrier hypergraph rather than enumerate the full rectangular order box.
 3. **Deep `s=5`:** the uniform single-numerator endpoint-grid template is
    impossible in all three remaining classes, and every fixed pair of unit
    endpoint columns is jointly killable in the relaxed lift model.  Seek a
@@ -484,7 +488,10 @@ five coupled layers:
 
 1. The projective base records common scale, effective sheet orders, unit
    classes, and prime-power carriers.  THM-858 proves that the H5 common-sheet
-   part of this base is finite, but does not decide its metric fibres.
+   part of this base is finite, but does not decide its metric fibres. THM-859
+   gives effective order an intrinsic dynamic meaning: it is the cardinality
+   of the deck-mask orbit of one insertion, hence the ramification degree of
+   the failed scale quotient.
 2. A metric fibre records the exact open components of the current strict-safe
    set and every remaining labelled arithmetic progression of comb speeds.
 3. The transition labelled by `u` is the idempotent intersection
@@ -496,7 +503,8 @@ five coupled layers:
 5. The legal operation category records whether the next move is insertion,
    peel/deletion, replacement, scale change, sheet lift, or descent.  Two states
    are continuation-equivalent only when every legal future word has the same
-   terminal emptiness verdict.  A proposed quotient is transportable only
+   terminal emptiness verdict.  This is the Myhill--Nerode right congruence of
+   the partial cover action.  A proposed quotient is transportable only
    after it is proved to be a congruence for the required operations; THM-840
    shows why insertion-Markov endpoints alone fail this test for deletion.
 
@@ -516,9 +524,12 @@ incidence but lose the metric edge curl.
 
 In this language THM-857 computes the entire H6 fibre over the trivial
 scale-one base and finds a unique empty terminal, the equality section
-`2[12]`.  THM-858 bounds the nontrivial H5 ramification base.  The central
-missing theorem is now visible: construct a transport functor between those
-fibres that commutes with the required legal operations and preserves terminal
-emptiness and certificate witnesses.  Merely
+`2[12]`. THM-859 proves that common dilation is an exact action conjugacy and
+that `D=c/gcd(c,w)` is the ramification degree of its failure: an order-`D`
+insertion acts through `D` distinct deck masks. THM-858 bounds the nontrivial
+H5 ramification base.  The central missing theorem is now narrower: construct
+the phase-decorated transport functor on the `D>1` fibres, beginning with the
+finite order-one-gate contexts, so that it commutes with the required legal
+operations and preserves terminal emptiness and certificate witnesses.  Merely
 matching order multisets, tournament fingerprints, component counts, or
 pairwise overlaps cannot supply that transport.

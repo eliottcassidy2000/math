@@ -1,10 +1,10 @@
 ---
 id: THM-858
 title: Hamming-five relative-ramification cut and uniform effective-order bound
-status: PROVED STRUCTURAL + FINITE-EXACT — uniform complement-lcm cut; no new common-sheet language through effective order 21; every common-sheet effective order is at most 42,336
+status: PROVED STRUCTURAL + FINITE-EXACT — uniform complement-lcm cut; no new common-sheet language through effective order 21; every common-sheet effective order is at most 10,584
 source: codex-2026-07-15-S10 Hamming-five relative-order continuation
 depends_on: [THM-810, THM-823, THM-844, THM-845, THM-847]
-related: [THM-815, THM-840, THM-857, HYP-6820]
+related: [THM-815, THM-840, THM-857, THM-859, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_effective_order_21_common_sheet_census_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_effective_order_21_common_sheet_census_codex_S10.out
@@ -115,7 +115,7 @@ fibres appearing in (4).
    uniform range bounds
 
    ```text
-   max_i v_2(D_i)-min_i v_2(D_i) <= 5,
+   max_i v_2(D_i)-min_i v_2(D_i) <= 3,
    max_i v_3(D_i)-min_i v_3(D_i) <= 2,
    max_i v_7(D_i)-min_i v_7(D_i) <= 1.                (10a)
    ```
@@ -124,7 +124,7 @@ fibres appearing in (4).
    (10a), every effective order in every common-sheet presentation satisfies
 
    ```text
-   D_i <= D_(i_*)*2^5*3^2*7 <= 21*2016 = 42,336.      (10b)
+   D_i <= D_(i_*)*2^3*3^2*7 <= 21*504 = 10,584.       (10b)
    ```
 
 This makes the remaining effective-order presentation bank uniformly finite.
@@ -200,7 +200,7 @@ unclassified no-order-one common-sheet row now lies in the precise finite
 strip
 
 ```text
-2<=min_i D_i<=21 < max_i D_i<=42,336,
+2<=min_i D_i<=21 < max_i D_i<=10,584,
 all D_i {2,3,7}-smooth,
 D_i divides lcm(D_j:j!=i),
 and every relative cut (5) holds.                         (15)
@@ -379,12 +379,24 @@ For example, if `m=4k`, then `ceil(8k/13)<=k`, and if `m=16k`, then
 For `p=2`, a boundary can have only `|S|=2,3,4`.  At sizes two and three,
 `g>=2` would make every `m_i` divisible by four and the sum in (5) at most
 `1/2` or `3/4`; hence `g<=1`.  At size four, `g>=4` would make every `m_i`
-divisible by sixteen and the sum at most `3/4`; hence `g<=3`.  As the boundary
-moves upward, `|S|` strictly decreases, so the total valuation range is at
-most
+divisible by sixteen and the sum at most `3/4`; hence `g<=3`.
+
+The equality cases prevent these worst gaps from accumulating.  If the
+size-four gap is three, every `m_i` is divisible by eight.  The four terms in
+(5) are each at most `1/4`, so equality is forced term by term.  Writing
+`m=4k`, equality in `rho(m)<=1/4` is equivalent to
+`ceil(8k/13)=k`, which occurs only for `k=1,2`.  Divisibility by eight
+therefore forces `m_i=8` for all four colours.  Their two-adic valuations are
+all exactly three above the complement level, so there is no later jump.  If
+the size-four gap is two, the same equality argument gives
+`m_i in {4,8}` for all four colours, again placing the entire range inside
+three levels.  If that gap is one, the only later boundary sizes are three
+and two and each adds at most one.  If no size-four boundary occurs, there
+are at most the size-three and size-two jumps.  Consequently the sharp bound
+supplied by these cuts is
 
 ```text
-3+1+1=5.                                                (25b)
+max_i v_2(D_i)-min_i v_2(D_i) <= 3.                    (25b)
 ```
 
 For `p=3`, sizes one and two are impossible.  At sizes three or four, `g>=2`
