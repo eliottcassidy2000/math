@@ -82,6 +82,68 @@ Format per entry:
   finished outside the explicitly proved no-companion class.
 - **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
   corrected THM-783/786 and THM-788.
+- **What was claimed (opus-S303):** adversarial census (heights to 10^4, incl. targeted
+  packets) capped all blocking runs at 6 walls; "K0 := 6" was adopted as the working
+  constant and the sharp conjecture "every blocking run <= 6 walls" was stated.
+- **Why it is wrong:** the census sampled 8-subsets of [1, 10^4] UNIFORMLY -- such draws
+  essentially never produce extreme speed RATIOS (w_f/w_g > 3). But same-owner steps are
+  phi-free: when the fastest owner dwarfs the rest, the seven slow tokens are constant on
+  long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
+  w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
+  {8,10,18,24,32,34,39,3887}: 14-wall run.
+- **The correct framing (THM-786):** the invariant is run EXTENT. Both certificates'
+  extents (0.01620, 0.00334) sit UNDER 1/w_g + 2/w_f (0.02646, 0.02616) -- the extent
+  bound proved conditionally in THM-782(5) and now verified at ratio <= 0.59 across all
+  adversarial families INCLUDING designed exploits (balanced pairs, near-multiples).
+  Wall-count comparisons in THM-779(4)/THM-782(6-7) are withdrawn; extent comparisons
+  replace them; the pierce is restated in extent form.
+- **Impact:** no downstream consumer used K0 = 6 quantitatively in the ~3 hours it stood;
+  THM-779/782 carry correction banners.
+- **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
+  uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
+  seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
+  single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
+  dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
+  count what costs, not what happens.
+- **Source:** opus-2026-07-14-S304 (lrc14_extent_exit_theorem_opus_S304.py + .out).
+## MISTAKE-147 -- the empirical r=8 ceiling `K0=5` was stated as a universal wall-run pierce, but monochromatic owner cycles give arbitrarily long fully blocked runs even in divisor-complete LRC14 families
+
+- **What was claimed (opus-S302, THM-779 sections 3--4):** an annealed/random
+  search whose longest observed fully covered run had five walls was followed
+  by the unconditional sentence “any core-safe component containing more than
+  `K0` walls cannot be fully blocked.”  The next section simultaneously called
+  the universal exit bound open, so the theorem text contained its own warning
+  but still promoted the sampled ceiling in the displayed consequence.
+- **Why it is wrong (codex-S10 exact refuter):** let
+  `P={1,2,11,12,13}`, `W0={1,4,5,6,8,9,10}`, and
+  `I=[25/182,27/182]`.  The interval `I` is core-safe by the `13`-Lipschitz
+  margin around `x=1/7`, and on all of `I subset (1/8,3/20)` the seven `W0`
+  tokens are the fixed permutation `(0,5,4,1,6,3,2)`.  For
+  `A_m=182m+1`, adding owner `A_m` leaves the deck covered off its walls and
+  leaves the exact seven-token stalk at its walls.  Exactly `2m` consecutive
+  `A_m` walls lie in `I` (`j=25m,...,27m-1`).  The full family
+  `7P union W0 union {A_m}` contains a multiple of every modulus `2,...,14`.
+  Thus raw covered-wall length is unbounded on the stated residual.  Already
+  `A=1000` gives eleven covered walls.
+- **The correct framing:** THM-779's piece/wall/no-simultaneity criterion is
+  exact, as is its collision-hop rule, but the complexity must count owner
+  switches or quotient out a persistent exact seven-owner stalk.  The
+  normalized covered-state graph is an `A8` torsor with one SCC and `5,760`
+  monochromatic seven-cycles, so state-only dynamics positively predicts the
+  refuter.  THM-778 supplies the missing centered endpoint schedule; the live
+  theorem is non-synchronization after stalk factoring, not a raw wall bound.
+- **Impact:** THM-779 has been corrected: `K0=5` remains an explicitly sampled
+  statistic only; the false pierce consequence and universal-exit target are
+  removed.  The exact decision procedure, published one-wall survivor, and
+  token algebra remain valid.  HYP-6840 must not use raw wall density as a
+  scale-uniform pierce.
+- **Lesson:** a long event word may have zero combinatorial complexity when one
+  owner repeats over a persistent exact stalk.  Count state changes/owner
+  switches, not clock ticks.  As in MISTAKE-145, a raw height-growing count is
+  not a compactness coordinate; seed adversarial searches with coherent stalk
+  plus one arbitrarily fast owner.
+- **Source:** codex-2026-07-14-S10 independent r8 transport audit; corrected
+  same session as the S302 theorem landed.
 
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 

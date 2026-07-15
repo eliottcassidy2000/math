@@ -97,7 +97,8 @@ phi_n : T -> T^d,       phi_n(t)=t p^(n),
 H_n = phi_n(T),         nu_n=(phi_n)_* Leb.
 ```
 
-Thus `nu_n` is normalized Haar measure on the cyclic subgroup `H_n`.  Define
+Thus `nu_n` is normalized Haar measure on the closed one-parameter subgroup
+`H_n`.  Define
 
 ```
 C_alpha = {x in T^d : ||x_i|| >= alpha for all i},

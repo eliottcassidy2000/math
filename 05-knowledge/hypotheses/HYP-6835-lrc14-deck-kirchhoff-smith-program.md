@@ -10,8 +10,9 @@ depends_on:
   - THM-773   # prime-seven token polynomial, heptagon fibre, and event holonomy
   - THM-778   # centered-Christoffel endpoint word and exact global wall ranks
   - THM-779   # r=8 piece-surjectivity/wall-rainbow token-walk criterion
+  - THM-780   # explicit global safe-measure floor and rho bound
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
-related: [THM-745, THM-754, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146]
+related: [THM-745, THM-754, THM-778, THM-779, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146, MISTAKE-147]
 ---
 
 # HYP-6835 — the deck Kirchhoff–Smith program
@@ -43,13 +44,15 @@ down: the double-extremal signal), stable across maxP ≤ 16/17/18; NO decay und
 the full adversarial battery (scale rays flat ≈ 0.048 through c = 40, tooth
 insertions flat through N = 2003, hill-descent to height 2500 converges back to
 the bounded shapes); the ρ bridge and the 1/(91·maxP) Lipschitz tail proved
-one-line. REMAINING: the **asymptotic floor conjecture** (inf over all primitive
-shapes = 7/858) — a shape-compactness statement; named route: |G'| < ε forces a
-near-perfect twelve-comb cover (budget 12/7, waste → 5/7 minimal), which should
-force DMNR-flavored additive rigidity landing on the near-AP one-gap shape. On
-every floored stratum, ρ < 469 uniformly: the regime-2 band domain is a bounded
-normalized atlas there, and the ≥4-far endgame reads [c* ≥ 43: sheets, THM-761] ∪
-[c* ≤ 42: bounded ρ-band protocol] ∪ [deck residues, THM-767/771].
+one-line. **THM-780 subsequently closes global positivity:** the strict margin
+`1/13-1/14=1/182` and a joint-phase pigeonhole give
+`|G'|>=182^(-12)` for every twelve-core, hence
+`rho<=12*182^12/pi<5.046*10^27` uniformly.  REMAINING is only the **sharp
+asymptotic value conjecture** (inf over all primitive shapes = 7/858), not
+existence of a floor.  The sharp route remains near-perfect twelve-comb rigidity
+landing on the near-AP one-gap shape.  Thus the regime-2 domain is now a proved
+finite normalized atlas, albeit with an unusably huge first cutoff; the
+conjectural sharp floor would improve it to `rho<469`.
 
 ## 2. The chamber and ramification-surplus census
 
@@ -142,8 +145,22 @@ other walls, so all ten covered hits are isolated one-wall blocking runs.  The
 five-block palindrome is a first-return problem across uncovered excursions,
 whereas a persistent run must also satisfy THM-779's collision-pair hop chain
 at every consecutive schedule wall.  THM-778 provides that exact schedule;
-the remaining unconditional exit lemma is therefore a comparison of a
-centered mechanical owner word with a finite algebraic hop word.
+the remaining **stalk-quotiented owner-switch** exit lemma is therefore a
+comparison of a centered mechanical owner word with a finite algebraic hop
+word.
+
+**THM-778/779 correction and upgrade.**  At `r=8`, write a covered generic
+state as `(X^7-X)(X-z)`.  Normalizing by the duplicate root gives offsets
+`{0,0,1,...,6}` and the exact event-word supportability equation of THM-779;
+the rooted states form an `A8` torsor of size `20,160`.  The automaton is
+strongly connected and has monochromatic seven-cycles.  Accordingly the S302
+empirical `K0=5` raw wall ceiling is false (MISTAKE-147): a persistent exact
+seven-owner stalk plus owner `182m+1` gives `2m` consecutive covered walls in
+one core-safe interval, even in a divisor-complete family.  The corrected
+residual counts owner switches after stalk factoring.  On the positive side,
+THM-778 classifies simultaneous midpoint walls: equal 2-adic valuation and
+large gcd force a double-owner deletion inside the core-safe interval and
+therefore pierce the deck.
 
 ## 5. Lean targets (decide-friendly)
 

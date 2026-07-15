@@ -1,12 +1,12 @@
 ---
 id: HYP-6840
-title: The r=8 deck no-go hunt — three-stage honest negative, the universal 1/7 buffering law (referee-corrected), and the flipped conclusion: full deck blocking at r=8 is as rigid as the r=7 tilings
-status: FINITE SEARCH NEGATIVE at the stated core/banks; the buffering law VERIFIED; the sharp core-incidence existence question OPEN; CORRECTED by THM-784/MISTAKE-147 (local full blocking can contain unboundedly many raw walls)
+title: The r=8 deck frontier — exact token/event-word criterion, persistent seven-stalk refuter to raw wall bounds, and the corrected owner-switch problem
+status: UPDATED after MISTAKE-147 — full blocking on arbitrarily long core-safe wall runs is CONSTRUCTED; full blocking over an entire core-safe set remains OPEN; the global 1/7 law is VERIFIED but insufficient after core restriction
 source: opus-2026-07-14-S301 (owner directive: progress or rigorous no-gos; separate signal from noise)
 depends_on:
   - THM-767   # zero-variance, chamber locking (the mechanisms that resist covers)
   - THM-771   # the exact seven-owner defect frame
-related: [THM-761, THM-777, THM-779, THM-783, THM-784, HYP-6835, MISTAKE-146, MISTAKE-147]
+related: [THM-761, THM-777, THM-778, THM-779, THM-783, THM-784, THM-786, HYP-6835, MISTAKE-146, MISTAKE-147, MISTAKE-148]
 verification: 04-computation/lrc14_r8_single_lens_nogo_opus_S301.py,
   04-computation/lrc14_r8_static_deck_cover_search_opus_S301.py (+ .outs)
 ---
@@ -86,23 +86,39 @@ question.** Three consequences:
    extend to a full blocking; no full blocking was constructible under three
    escalating attacks.
 
-## Sharp open questions — corrected after THM-784 (codex-S10)
+## Sharp open questions — corrected after THM-779/783/784/786
 
-- **Q1 (local existence): RESOLVED POSITIVELY.** THM-784 gives a full blocking
+- **Q0 (local existence): RESOLVED POSITIVELY.** THM-784 gives a full blocking
   interval `J=(5/16,7/20)` for the eight owners
   `{1,2,3,4,5,8,10,560N+1}` and `21N` consecutive covered walls. The seven
   slow owners alone form a fixed rainbow there. This does not yet make `J` a
   safe component of a five-speed LRC core, so the original **core-incidence**
-  question remains open.
-- **Q2 (positive LRC theorem): OPEN.** The census values 5 and 6 are finite-bank
-  observations, not working universal constants. The corrected target is to
-  show that a relevant closed core-safe component cannot lie wholly inside a
-  persistent slow-rainbow chamber, or else to obtain a metric exit on the
-  visitor-rich complement using THM-783's balanced-cluster laws plus a still
-  missing varying-index co-landing argument.
-- **Q3:** connect the buffer partitions / hop-target orbits to DMNR: the chain's
-  rigid packets are the deck's exact-covering-system analogues; two-largest-
-  moduli arguments should transfer to the hop-target orbit structure.
+  question remains open.  The stronger divisor-complete family
+  `P={1,2,11,12,13}`, `W={1,4,5,6,8,9,10,182m+1}` places `2m` covered walls in
+  a genuine core-safe interval, but still does not cover the whole safe set.
+- **Q1 (whole-core existence): OPEN.**  THM-779 makes full blocking over any
+  fixed `J` integer-decidable (piece surjectivity + wall rainbow + no
+  simultaneity), but the empirical ceiling `K0=5` was false as a universal
+  statement.  There are now exact fully blocked core-safe intervals with
+  arbitrarily many walls: `P={1,2,11,12,13}`,
+  `W={1,4,5,6,8,9,10,182m+1}`, and
+  `J=[25/182,27/182]` give `2m` covered walls.  Whether one packet blocks the
+  **entire** closed core-safe set is still open.
+- **Q2 (positive theorem): REFRAMED AND PARTLY PROVED.**  Factor out intervals on which seven
+  owners already form a persistent exact stalk, and bound genuine owner
+  switches or centered-word complexity.  THM-779's exact redundancy cocycle
+  gives the supportability equation; THM-778 supplies the centered-Christoffel
+  event word and proves a simultaneous-wall pierce when equal 2-adic valuation
+  has sufficiently large gcd.  THM-783 supplies the balanced-cluster laws;
+  THM-786 proves the metric-extent pierce on its no-co-landing and sparse
+  classes.  Its dense balanced-swap regime is the remaining universal case.
+  Raw wall density is not a proof coordinate.
+- **Q3 (finite group / DMNR):** the rooted covered-state space is an `A8`
+  torsor of size `20,160`, with one strongly connected component and
+  monochromatic seven-cycles.  Connect the owner-switch word, after stalk
+  factoring, to exact-covering-system rigidity.  The global `1/7` buffering
+  count must be restricted to the core-safe exit set before it can govern this
+  question.
 
 The information-boundary lesson is now exact: runner or wall-event tournaments
 without metric and token-fibre labels do not preserve blocking. Fast refinement

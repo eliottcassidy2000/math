@@ -1,11 +1,12 @@
 ---
 id: THM-777
 title: The safe-measure floor over 12-cores — exact bounded-height census (min |G'| = 7/858 at {1..13}∖{6}, the detuning extremal again), the unconditional Lipschitz tail, and the ρ bridge that bounds regime 2's normalized band domain
-status: PROVED-EXACT (the maxP ≤ 18 census; the Lipschitz tail; the ρ bridge) + VERIFIED (adversarial scale rays, tooth insertions, hill-descent to height 2500) + CONJECTURE (the asymptotic floor, named precisely)
+status: PROVED (a global explicit positive floor via THM-780; the Lipschitz tail; the rho bridge) + PROVED-EXACT (maxP <= 18 census) + VERIFIED (adversarial battery) + CONJECTURE (the sharp global value 7/858 and uniqueness)
 source: opus-2026-07-14-S301 (owner directive: make progress or prove route no-gos; separate signal from noise)
 depends_on:
   - LRC(<=13)  # M(P) >= 1/13 for 12-cores (the Lipschitz tail)
   - THM-755    # v* = r_P/(pi |G'_P|) (the bridge's target)
+  - THM-780    # explicit global floor 182^(-12)
 related: [THM-757, THM-761, THM-767, HYP-6055, HYP-6830, HYP-6835, HYP-6840, MISTAKE-145]
 verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
   (+ 05-knowledge/results/lrc14_gprime_floor_decision_opus_S301.out)
@@ -17,8 +18,9 @@ verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
 (maxP, v*] bounded in normalized coordinates: ρ(P) = v*(P)/maxP ≤ K. After
 MISTAKE-145 (raw fragmentation r_P is NOT bounded by divisor structure), the only
 surviving route through r_P ≤ Σ_P is a POSITIVE FLOOR on the safe measure
-|G'_P| = |{t : min_{p∈P} ||pt|| ≥ 1/14}| over 12-cores. This file decides what is
-decidable today, exactly, and names the remaining conjecture sharply.
+|G'_P| = |{t : min_{p∈P} ||pt|| ≥ 1/14}| over 12-cores.  THM-780 now proves
+that positive floor explicitly; this file also identifies the much sharper
+candidate value.
 
 ## (1) The ρ bridge (PROVED, one line)
 
@@ -72,27 +74,42 @@ arithmetic; 7/858 = 7·(1/858).)
   and compressed):** every run converges back to the bounded shapes; global best
   found = the census minimizer 7/858 itself.
 
-## (5) The asymptotic floor (CONJECTURE, stated sharply)
+## (5) The global floor (PROVED positive; sharp value CONJECTURED)
+
+THM-780 applies the settled `1/13` margin for every twelve-core at the smaller
+threshold `1/14`.  Its phase-cell pigeonhole gives, uniformly and without a
+height or primitivity hypothesis,
+
+> **`|G'_P| >= 182^(-12) =
+> 1/1320859596446125189798629376`.**
+
+Together with (1), this proves the explicit normalized bound
+
+> **`rho(P) <= 12*182^12/pi < 5.046*10^27`.**
+
+This constant is intentionally crude, but it closes the existence of a finite
+normalized regime-2 atlas.  The sharp statement remains:
 
 > **inf over ALL primitive 12-cores of |G'_P(1/14)| = 7/858, attained only at
 > {1..13} ∖ {6}.**
 
-If true, with (1): **ρ(P) ≤ 12·858/(7π) = 10296/(7π) < 469 uniformly** — the
-regime-2 band domain is uniformly bounded in normalized (peel-relative)
-coordinates, and the ≥4-far endgame becomes [sheets above scale 43 (THM-761)] ∪
-[deck pierces (THM-767/771)] ∪ [a normalized band atlas with ρ < 469]. The
+If the sharp statement is true, (1) improves the bound to
+**rho(P) <= 12*858/(7pi) = 10296/(7pi) < 469**.  The >=4-far endgame then has
+the practical decomposition [sheets above scale 43 (THM-761)] union
+[deck pierces (THM-767/771)] union [a normalized band atlas with rho < 469]. The
 measured ρ maximum is 9.335 (HYP-6830) — the bridge is lossy by ~50× but the
-LOGIC only needs finiteness. Falsifier shape (for future adversaries): a primitive
-shape family with |G'| < 7/858 must beat the least-detuned near-AP at its own
-game — cover ≥ 719/726 of the circle with twelve combs of total budget 12/7;
+logic only needs finiteness, now supplied unconditionally by THM-780.  Any
+falsifier of the sharp value—a primitive shape family with `|G'|<7/858`—must
+beat the least-detuned near-AP at its own game: cover ≥ 719/726 of the circle
+with twelve combs of total budget 12/7;
 the census says nothing below height 18 does, and every structured ray tested
 converges to ≥ 0.048.
 
 ## (6) What this closes and what it does not
 
-- CLOSES: the regime-2 boundedness question on every stratum where the floor is
-  proved (maxP ≤ 18 exactly; every adversarially tested family), via (1)+(3).
-- LEAVES OPEN: the asymptotic floor (5) — a shape-space compactness statement.
+- CLOSES: the global regime-2 boundedness question, with an explicit but huge
+  cutoff, by THM-780 plus (1).
+- LEAVES OPEN: the sharp asymptotic value and uniqueness in (5), not positivity.
   The honest route to it: |G'| < ε forces near-perfect comb covering, which
   forces additive structure (DMNR-flavored rigidity of near-exact arc-comb
   covers); the census minimizer's structure (near-AP, one gap) is where that

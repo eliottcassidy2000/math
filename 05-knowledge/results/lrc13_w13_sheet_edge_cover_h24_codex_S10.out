@@ -1,0 +1,35 @@
+w=13 moving sheet-edge cover certificate through quotient height 24
+strict w-ineligibility / closed U-danger endpoint convention
+script_sha256=3fea6ac818bbe6677fdcddf83bd70cabcac0de504442882003aae43a8af3d2f4
+event_atlas_sha256=b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca
+decision_atlas_sha256=01dafb23a9562fc14f21dbe85bc36d6dcb4e93e4b346dde65a74e82fe2addf0c
+
+methodology:
+  sheet vertices: j in Z/13Z, tau=(s+j)/13
+  w=13 ineligible interval: 2/13 < s < 11/13
+  generic runner edge: u*j=-floor(us),-ceil(us) mod 13
+  exact grouped events: k/u with 2u < 13k < 11u
+  simultaneous updates are applied before testing the next chamber
+  event endpoints are safe to omit: the closed event edge is old union new
+
+candidate_speeds=23 range=[1,24] excluding=13 event_groups=117
+all_10_subsets=1144066 expected=1144066
+initial_chamber_edge_covers=101850
+full_moving_edge_cover_survivors=0
+divisor_complete_rows=131183 initial_covers=20612 survivors=0
+primitive_divisor_complete_rows=131149 initial_covers=20604 survivors=0
+initial_missing_sheet_cardinality_histogram={0: 101850, 1: 389835, 2: 436215, 3: 185606, 4: 29298, 5: 1257, 6: 5}
+first_failure_missing_sheet_cardinality_histogram={1: 486185, 2: 441478, 3: 185833, 4: 29308, 5: 1257, 6: 5}
+initial_failures=1042216
+distinct_post_event_first_failure_times=31
+top_post_event_first_failures=[('3/19', 25034), ('2/11', 22174), ('1/6', 21296), ('1/5', 8776), ('4/23', 7025), ('3/17', 5331), ('2/9', 2561), ('3/16', 1878), ('4/19', 1582), ('4/21', 1471), ('5/24', 1090), ('5/22', 712)]
+
+Tournament Analysis / assumption challenge:
+  exact object: 13 sheet obligations + 10 labelled edges + event word
+  covered generic chamber: 20 incidences, degree excess 7
+  switch: a simple event transports one excess token departure->entry
+  tie Hamiltonian path: cyclic sheet labels 0,1,...,12 (telemetry only)
+  no clean runner tournament: pairwise orientations discard coverage
+  required sidecar: sheet degrees, runner labels, simultaneous updates
+
+FINAL: PASS - every static edge-cover liar tears during the exact event word
