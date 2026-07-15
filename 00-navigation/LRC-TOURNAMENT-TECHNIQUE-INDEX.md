@@ -51,9 +51,11 @@ obligations, and proof-carrier interfaces.
   `T_C(E)=empty` for every legal `C subset V`; this is a finite
   Myhill--Nerode congruence, not a metaphorical state compression.
 - **LRC use:** THM-820 reduces every hypothetical tight scale-one Hamming-five
-  row to two finite boxes, but its collar tournament does not decide either
-  box.  The exact closure engine should minimize reachable `(E_S,V)` states or
-  meet them in the middle as a two-comb residual versus a three-comb cover.
+  row to two structural branches, but its collar tournament does not decide
+  either branch.  THM-842 now supplies the exact closure engine: it keeps
+  `(E_S,V)`, recomputes the longest residual component at every prefix, and
+  uses its length to cap the next comb.  The 772,543-state tree leaves only
+  nine terminal rows, all loose; the exceptional SCC branch has no terminal.
   Literal labelled four-coordinate faces have ordered restriction maps and
   unique gluing, so THM-818's kernel-pair/Cech join is also a legitimate audit
   of any proposed Hamming-five quotient.  Normalized component summaries do
@@ -101,13 +103,18 @@ obligations, and proof-carrier interfaces.
   `A/B/C=414/4/0` independently warns that face roles are ordered. THM-825
   supplies a literal-exact static quadratic positional carrier through
   `n=15`, but explicitly does not prove continuation purity.  Minimize the
-  reachable `(E,V)` automaton and use its two-plus-three join against
-  THM-820's full finite boxes; do not extrapolate any static codec to arbitrary
-  heights or across unnamed operations.
-- **Pointers:** THM-818, THM-820, THM-821, THM-822, THM-825, THM-815, THM-817,
-  THM-830, THM-837, THM-840,
+  reachable `(E,V)` automaton was not needed for scale-one emptiness: THM-842
+  proves the literal endpoint word transports through every height in that
+  chart. THM-840 proves why this is operation-specific, and THM-837 realizes
+  the active-endpoint/tooth-bank state on one order-three context.  The open
+  use of this card is deck-compatible transport across arbitrary AP scale and
+  the non-AP part of Hamming radius six; do not extrapolate the scale-one
+  transition law across ramification or unnamed deletion operations.
+- **Pointers:** THM-815, THM-817, THM-818, THM-820, THM-821, THM-822, THM-825,
+  THM-830, THM-837, THM-840, THM-842,
   HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
   `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
+  `lrc13_hamming_five_rowwise_component_closure_codex_S10.cpp/.out`;
   `lrc13_hamming_five_single_context_comb_closure_codex_S10.py/.out`;
   `lrc13_hamming_five_continuation_congruence_codex_S10.py/.out`;
   `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
@@ -123,7 +130,8 @@ obligations, and proof-carrier interfaces.
 - **LRC use:** THM-815 closes every scale-one Hamming-four lift and proves
   finite recursion through scale-one Hamming radius six. THM-816 closes the
   quartic order-three interface left by THM-810. THM-820 puts every tight
-  scale-one Hamming-five row in one of two explicit uniform boxes. THM-817
+  scale-one Hamming-five row in one of two explicit branches, and THM-842
+  closes both with the row-wise component/comb state. THM-817
   compresses the deep erosion selector to `2c_E N_R+2W-2g` without assuming
   connected returns. THM-821 proves that, for every positive odd exception pair,
   every return-cell/deep-component atom factors exactly through its
@@ -182,13 +190,17 @@ obligations, and proof-carrier interfaces.
   THM-824's two target cells have no cross-switch edge; its tie-completed
   tournament is trivially transitive, while the no-switch inequality plus the
   exact radii—not that orientation—prove the scalar factorization. THM-831
-  replaces this binary shadow by the ordered centre-switch weight
-  `omega(i|j,k)=||2c_i-c_j-c_k||-(2h_i+h_j+h_k)`. The sixteen primitive
-  `4<=alpha<=9` rows have positive nonconstant weights; the fixed labelled
-  triple `(-1|-3,+1)` has nonpositive weight for every `alpha>=10`.
-- **Next pull:** Exhaust THM-820's two scale-one Hamming-five boxes and the
-  finite Hamming-six tree, then derive the arbitrary-scale oriented-deck
-  classification. At seven remaining scale-one combs, replace mean danger
+  replaces this binary shadow by a winding-aware ordered centre-switch weight.
+  The sixteen primitive `4<=alpha<=9` rows have positive nonconstant weights;
+  the fixed triple `(-1|-3,+1)` has strictly negative weight for every
+  `alpha>=10`, while `4h<1` excludes same-label winding.
+  THM-842's nine terminal five-comb tournaments are also all transitive, with
+  score histogram `0,1,2,3,4`, no cycle, one Hamiltonian path, and 31 total
+  raw-to-conditional edge flips.  Their residual intervals, not these trivial
+  fingerprints, certify looseness.
+- **Next pull:** Derive the arbitrary-scale Hamming-five oriented-deck
+  classification and separate the tight AP orbit `2[12]` from non-AP rows in
+  the finite Hamming-six tree. At seven remaining scale-one combs, replace mean danger
   density by an overlap-debt or owner-diversity potential. On the deep side,
   seek a contradiction in the adaptive signed-cell by deep-component
   incidence. Use THM-821's exact atomic margin to prove that every admissible
@@ -196,15 +208,15 @@ obligations, and proof-carrier interfaces.
   do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)` under all
   current arithmetic/scalar gates. At fixed ratio `(13d,5d)`, instead prove
   THM-824's intrinsic radius inequality fails, equivalently that its signed slack is
-  negative. THM-831 has now classified every other primitive fold: repeat the
-  arithmetic exclusion on the other fifteen viable `4<=alpha<=9` rows, and
-  retain the weighted ordered three-hypergraph outside that range. The
-  challenged vertex assumption matters here: runners and target components
-  both lose the balanced `t,t+z,t-z` obligation, whereas ordered component
-  triples preserve it. A binary tournament may remain telemetry, but cannot
-  carry the sharp switch obstruction.
+  negative. THM-831 classifies every primitive fold: repeat arithmetic
+  exclusion on the other fifteen viable `4<=alpha<=9` rows, and retain the
+  winding-aware ordered three-hypergraph outside that range.  Runners and
+  target components both lose the balanced `t,t+z,t-z` obligation, whereas
+  ordered component triples preserve it.  The ratio-ranking tournaments are
+  only telemetry; the theorem-bearing carrier has deck, winding, and metric
+  sidecars.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821, THM-824, THM-831,
+  THM-821, THM-824, THM-831, THM-842,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
@@ -228,8 +240,9 @@ obligations, and proof-carrier interfaces.
   common-scale chart. This does not close general three-sheet covers.
   THM-817 classifies every `s=2` return satellite as a
   signed max-speed cell with endpoint owners.  THM-820 reduces the first
-  shallow five-owner scale-one chart to two finite boxes and shows why its
-  top-four SCC requires reciprocal metric mass beyond the collar graph.
+  shallow five-owner scale-one chart to two branches and shows why its
+  top-four SCC requires reciprocal metric mass beyond the collar graph;
+  THM-842 then closes both branches using the exact residual interval word.
   THM-823 proves that the all-scale five-deck scalar quotient has infinite
   cones even though some order is at most 21.  Common-sheet compatibility in
   the complete order-at-most-twelve bank leaves only forward flags of the
@@ -284,8 +297,8 @@ obligations, and proof-carrier interfaces.
   telemetry.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
-  branch, empty THM-820's two finite boxes, extend common-sheet exclusion above
-  order twelve, and apply exact residual-comb erosion to THM-823's
+  branch, transport THM-842's component/comb recursion across AP scale, extend
+  common-sheet exclusion above order twelve, and apply exact residual-comb erosion to THM-823's
   all-order-three and mixed order-one survivors.  The mod-39 clock supplies
   only equality witnesses, not strictness. THM-837 has discharged one of the
   96 order-three contexts; run the other 95 with active boundary words, not a

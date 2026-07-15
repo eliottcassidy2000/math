@@ -1,0 +1,21 @@
+THM842_SCALE_ONE_HAMMING_FIVE_ROWWISE_COMPONENT_CLOSURE
+first_prefixes=40590 first_global_second_cap=233 exceptional_label_prefixes=984 exceptional_killed_before_v=897 exceptional_v_choices=415
+nodes depth0..5=0,40590,612221,111675,7255,9, full_loose=9 full_tight=0 branchA_full=9 branchB_full=0
+exceptional_branch_nodes depth0..5=0,0,415,178,1,0,
+prefix_depth=1 min_longest=11/1898 minimizer_count=330 max_discrepancy_next_cap=233 one_min_record=3:146,
+prefix_depth=2 min_longest=11/3029 minimizer_count=120 max_discrepancy_next_cap=199 one_min_record=3:146,12:233,
+prefix_depth=3 min_longest=162/67379 minimizer_count=1 max_discrepancy_next_cap=156 one_min_record=8:138,12:142,3:146,
+prefix_depth=4 min_longest=307/129987 minimizer_count=1 max_discrepancy_next_cap=65 one_min_record=6:97,8:99,10:101,12:103,
+prefix_depth=5 min_longest=1/286 minimizer_count=1 max_discrepancy_next_cap=0 one_min_record=4:17,5:18,6:19,12:25,9:35,
+full branch=A missing=1,3,4,6,10, ordered=1:14,4:17,6:19,10:23,3:29, components=14 intervals=[1/26,12/299][14/299,12/247][14/221,6/91][14/143,38/377][66/221,90/299][79/247,38/117][40/117,129/377][248/377,77/117][79/117,168/247][209/299,155/221][339/377,129/143][85/91,207/221][235/247,285/299][287/299,25/26] M=3/28
+full branch=A missing=1,3,5,8,9, ordered=1:14,3:16,5:18,8:21,9:22, components=10 intervals=[1/26,6/143][3/26,25/208][27/208,12/91][27/130,19/91][9/26,32/91][59/91,17/26][72/91,103/130][79/91,181/208][183/208,23/26][137/143,25/26] M=2/17
+full branch=A missing=1,3,5,9,11, ordered=1:14,3:16,5:18,9:22,11:24, components=6 intervals=[7/143,2/39][9/26,32/91][35/78,129/286][157/286,43/78][59/91,17/26][37/39,136/143] M=1/10
+full branch=A missing=2,3,4,10,12, ordered=3:16,4:17,10:23,12:25,2:28, components=12 intervals=[27/325,25/299][14/143,4/39][79/299,38/143][66/221,90/299][92/221,38/91][157/325,19/39][20/39,168/325][53/91,129/221][209/299,155/221][105/143,220/299][35/39,129/143][274/299,298/325] M=1/10
+full branch=A missing=2,3,6,8,10, ordered=10:23,2:28,3:29,6:32,8:34, components=14 intervals=[14/143,38/377][53/442,51/416][33/208,25/156][27/91,90/299][131/416,29/91][53/143,155/416][209/442,142/299][157/299,233/442][261/416,90/143][62/91,285/416][209/299,64/91][131/156,175/208][365/416,389/442][339/377,129/143] M=2/15
+full branch=A missing=3,4,5,6,8, ordered=3:16,4:17,5:18,6:19,8:21, components=10 intervals=[27/208,12/91][22/91,19/78][10/39,64/247][79/247,38/117][40/117,77/221][144/221,77/117][79/117,168/247][183/247,29/39][59/78,69/91][79/91,181/208] M=3/26
+full branch=A missing=3,4,5,6,8, ordered=4:17,6:19,3:29,5:31,8:34, components=16 intervals=[27/221,51/403][53/403,12/91][27/143,77/403][79/247,129/403][40/117,129/377][131/377,77/221][92/247,142/377][157/403,51/130][79/130,246/403][235/377,155/247][144/221,246/377][248/377,77/117][274/403,168/247][326/403,116/143][79/91,350/403][352/403,194/221] M=1/8
+full branch=A missing=3,4,6,8,10, ordered=4:17,6:19,8:21,10:23,3:29, components=14 intervals=[9/91,38/377][27/221,38/299][10/39,77/299][66/221,90/299][79/247,38/117][40/117,129/377][92/247,142/377][235/377,155/247][248/377,77/117][79/117,168/247][209/299,155/221][222/299,29/39][261/299,194/221][339/377,82/91] M=1/8
+full branch=A missing=4,5,6,9,12, ordered=4:17,5:18,6:19,12:25,9:35, components=8 intervals=[27/325,38/455][27/143,5/26][53/247,17/78][92/221,103/247][144/247,129/221][61/78,194/247][21/26,116/143][417/455,298/325] M=4/37
+certificate=/tmp/lrc_h5_primary_certificate.tsv rows=772543
+certificate_sha256=6524ac6dd2d1f8c59256816c86b95d9ee52cc94766d4d3f993425e7071434a29
+PASS: exhaustive THM-815/820 recursion leaves nine loose rows and zero tight rows

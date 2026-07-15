@@ -140,10 +140,14 @@
   `a{1,2,4,8}` SCC and the two reciprocal-mass bounds sharpen it to
   `x<=228`, `v<=1986`, `max_top<=7944`.  All `792` height-one rows are loose,
   with unique minimum `2[11] union {11}` at `1/12`; the next odd lift is the
-  doubled AP `2[12]`.  Intersecting THM-820 with THM-815 gives the current
-  joint boxes `(146,292,584,1168,2336)` and
-  `x<=146,v<=1986,max_top<=7944`.  The two finite boxes have not yet been
-  emptied and an arbitrary-scale radius-five deck descent has not been proved.
+  doubled AP `2[12]`.  THM-842 now exhausts the joint boxes by applying the
+  THM-815 component cap separately at every prefix.  The exact tree has
+  772,543 states, the exceptional top-four branch dies before depth five, and
+  all nine terminal doubling rows are strictly loose.  Thus the full proper
+  scale-one radius-five chart is closed at arbitrary lift height.  The live
+  shallow obligations are now an arbitrary-AP-scale radius-five deck descent,
+  followed by separation of the genuine `2[12]` orbit from non-AP rows in the
+  finite scale-one radius-six tree.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -220,6 +224,11 @@
   `E_S -> E_S intersect Safe(u)` on exact residual interval unions with the
   remaining labelled speed bank.  Build its minimized continuation automaton
   or a two-plus-three meet-in-the-middle cover join.  In parallel, audit any
+- **Open shallow theorem:** THM-842 has finished both THM-820 scale-one
+  branches.  Prove the arbitrary-scale radius-five descent, transporting the
+  proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
+  endpoints through oriented deck ramification.  Then split the finite H6 tree
+  into the genuine tight AP orbit `2[12]` and non-AP rows.  In parallel, audit any
   proposed compression by its literal kernel pair.  THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
@@ -288,6 +297,22 @@
   be joined to the nonsymmetric satellite obligations. THM-816 has already
   removed the quartic `s=3` equality shell; the remaining higher-sheet work is
   outside that special four-exception coset and still lives on loose-set
+  phase norm); in parallel determine which
+  other odd exception ratios have a separated equal-radius target and hence
+  the same no-switch factorization.  A proof only for the global symmetric
+  union must still be joined to the nonsymmetric satellite obligations.
+  THM-831 now completes the target-side switch classification: after primitive
+  gcd reduction, the symmetric no-switch radius quotient exists exactly for
+  the sixteen rows `4<=alpha<=9`; every `alpha>=10` has a weighted ternary
+  switch obstruction, and `g>1` creates raw deck switches even when the
+  quotient-scaled criterion remains exact.  The next obligation is arithmetic,
+  not geometric: show that every admissible two-sheet core either violates its
+  legal small-alpha quotient budget or exposes a failing signed atom, and for
+  `alpha>=10` transport the weighted switch labels together with endpoint
+  owners instead of forcing another scalar.
+  THM-816 has already removed the quartic `s=3` equality shell; the remaining
+  higher-sheet work is outside that special four-exception coset and still
+  lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor

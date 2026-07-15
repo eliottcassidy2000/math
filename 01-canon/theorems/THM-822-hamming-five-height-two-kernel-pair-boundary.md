@@ -6,7 +6,7 @@ source: codex-2026-07-15-S10 Hamming-five kernel continuation
 depends_on:
   - THM-806  # exact half-open owner-handoff bands
   - THM-820  # Hamming-five chart and exact maximin method
-related: [THM-815, THM-818, THM-821, HYP-6820]
+related: [THM-815, THM-818, THM-821, THM-842, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_height_two_kernel_pairs_codex_S10.out

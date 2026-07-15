@@ -1,0 +1,9 @@
+THM842_HAMMING_FIVE_CLOSED_DANGER_UNION_REPLAY
+method=union_closed_danger_teeth_then_take_open_complementary_gaps
+core_rows=792 root_global_cap=146 root_cap_maximizers=1
+first_prefixes=40590 exceptional_label_prefixes=984 exceptional_killed_before_v=897 exceptional_v_choices=415
+nodes depth0..5=0,40590,612221,111675,7255,9, full_loose=9 full_tight=0
+exceptional_branch_nodes depth0..5=0,0,415,178,1,0,
+certificate=/tmp/lrc_h5_closed_danger_union_certificate.tsv rows=772543
+certificate_sha256=6524ac6dd2d1f8c59256816c86b95d9ee52cc94766d4d3f993425e7071434a29
+PASS: independent closed-danger-union replay byte-matches the primary THM-842 certificate

@@ -27,11 +27,14 @@ second_difference_gap_gt_4h=16/16
 synthetic_compact_packets=6160 mismatches=0
 primitive_formula_audit_alpha_le_50=518/518 including_2_empty
 equal_radius_iff_n1_or_4beta_ge_13qmax=516/516_nonempty
-weighted_no_switch_frontier=positive_alpha4..9:16 nonpositive_alpha10..50:500
+lifted_winding_guard=516/516_nonempty max_4h=8/117 strict_lt_1
+large_ball_winding_counterexamples=2/2
+equal_radius_switch_counterexample=alpha11_beta10_verified
+weighted_no_switch_frontier=positive_alpha4..9:16 negative_alpha10..50:500
 alpha10_boundary_rows=[(beta=1,offsets=(-3, -1, 1, 3),components=4,defect=4/1287,tax=41/1287,slack=-37/1287), (beta=3,offsets=(-3, -1, 1, 3),components=4,defect=12/1183,tax=41/1183,slack=-29/1183), (beta=7,offsets=(-3, -1, 1, 3),components=4,defect=11/1326,tax=37/1326,slack=-1/51), (beta=9,offsets=(-3, -1, 1, 3),components=4,defect=3/494,tax=1/38,slack=-5/247)]
 certificate_sha256=a39c46d37d72888b88827e3da9ef00f273a8b0a53606e1b9f916e05c3d81c7a6
 formula_audit_sha256=8cf16040f4adcf2663c867ef378bfc1d979c87ffd82b7bacea4bec7f679db05c
-source_sha256=de22dfe33ce641eff186d7fb2aec5638a911ebeb1e4da4ca54f33ef2aeb3c63f
+source_sha256=bcfa5cc4ba6ed79ed8ac9a88a3098781bc32215bbb8908bb749ecaa7cf18a40f
 
 TOURNAMENT_TELEMETRY
 vertices=16_reduced_ratio_types

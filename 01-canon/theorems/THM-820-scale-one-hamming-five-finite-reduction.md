@@ -7,7 +7,7 @@ depends_on:
   - LRCUpTo13  # only the settled seven-speed 1/8 and eight-speed 1/9 bounds
   - THM-806    # universal collar, half-open handoff rule, and no 2-/3-cycle lemmas
   - THM-815    # exceptional four-cycle classification and spread at most four
-related: [THM-795, THM-800, THM-804, THM-810, THM-816, HYP-6820]
+related: [THM-795, THM-800, THM-804, THM-810, THM-816, THM-842, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py
   - 05-knowledge/results/lrc13_scale_one_hamming_five_finite_reduction_codex_S10.out
@@ -606,3 +606,8 @@ The result was initially headed for THM-819, but live `main` assigned THM-819
 to the primitive harmonic law while this computation was running.  It was
 renumbered to THM-820 before publication; no THM-819 radius-five artifact was
 created.
+
+THM-842 subsequently exhausts both boxes by intersecting these collar
+constraints with the row-wise THM-815 safe-component cap.  Thus this theorem
+remains the exhaustive structural reduction; its former scale-one H5
+emptiness obligation is now discharged.

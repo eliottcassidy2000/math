@@ -95,6 +95,7 @@ def formula_balls(alpha: int, beta: int) -> list[tuple[F, F, int]]:
 
 
 def weighted_switch_slack(balls: list[tuple[F, F, int]]) -> F:
+    """Minimum nonconstant label-switch slack (the m-minimized projection)."""
     slacks: list[F] = []
     for i, (ci, hi, _) in enumerate(balls):
         for j, (cj, hj, _) in enumerate(balls):
@@ -103,6 +104,11 @@ def weighted_switch_slack(balls: list[tuple[F, F, int]]) -> F:
                     continue
                 slacks.append(circle_norm(2 * ci - cj - ck) - (2 * hi + hj + hk))
     return min(slacks)
+
+
+def winding_slack(balls: list[tuple[F, F, int]]) -> F:
+    """Minimum same-label nonzero-winding slack: min_i (1-4h_i)."""
+    return min(F(1) - 4 * h for _, h, _ in balls)
 
 
 def in_intervals(t: F, intervals: list[tuple[F, F]]) -> bool:
@@ -149,6 +155,8 @@ def main() -> None:
     summaries: list[dict[str, F | int | bool]] = []
     synthetic_cases = 0
     synthetic_mismatches = 0
+    winding_guard_rows = 0
+    max_four_h = F(0)
 
     for index, (alpha, beta) in enumerate(admissible):
         r, s = alpha - beta, alpha + beta
@@ -181,6 +189,7 @@ def main() -> None:
         delta = min(gaps)
         assert delta == min(circle_norm(2 * c), circle_norm(4 * c))
         assert delta > 4 * h
+        assert 4 * h < 1
         assert circle_norm(centres[0] - centres[1]) > 2 * h
         slack = delta - 4 * h
 
@@ -236,7 +245,7 @@ def main() -> None:
     general_rows: list[str] = []
     empty_rows = 0
     positive_switch_rows = 0
-    nonpositive_switch_rows = 0
+    negative_switch_rows = 0
     equal_radius_law_rows = 0
     for alpha in range(2, 51):
         for beta in range(1, alpha):
@@ -254,6 +263,9 @@ def main() -> None:
                 empty_rows += 1
                 general_rows.append(f"{alpha},{beta},0,0,empty")
                 continue
+            assert winding_slack(balls) > 0
+            winding_guard_rows += 1
+            max_four_h = max(max_four_h, max(4 * h for _, h, _ in balls))
             radii = {h for _, h, _ in balls}
             equal_radius = len(radii) == 1
             predicted_equal = n == 1 or 4 * beta >= 13 * (2 * n - 1)
@@ -264,8 +276,8 @@ def main() -> None:
                 assert slack > 0
                 positive_switch_rows += 1
             else:
-                assert slack <= 0
-                nonpositive_switch_rows += 1
+                assert slack < 0
+                negative_switch_rows += 1
                 by_q = {q: (c, h) for c, h, q in balls}
                 c1, h1 = by_q[1]
                 c3, h3 = by_q[3]
@@ -278,7 +290,41 @@ def main() -> None:
     assert len(general_rows) == 518
     assert empty_rows == 2
     assert positive_switch_rows == 16
-    assert nonpositive_switch_rows == 500
+    assert negative_switch_rows == 500
+    assert winding_guard_rows == 516
+    assert max_four_h < 1
+
+    # Regression for the abstract lemma's indispensable winding guard.
+    large_ball = [(F(0), F(2, 5)), (F(3, 5), F(1))]
+    large_e = F(2, 5)
+    large_r = (F(0), F(2, 5), F(3, 5))
+    assert direct_packet((large_e,), large_r, large_ball)
+    large_clearance = F(2, 5) - circle_norm(large_e)
+    large_rho = max(circle_norm(r) for r in large_r)
+    assert large_clearance == 0 and large_rho == F(2, 5)
+    assert large_rho > large_clearance
+    quarter_ball = [(F(0), F(1, 4)), (F(3, 4), F(1))]
+    quarter_e = F(1, 4)
+    quarter_r = (F(0), F(1, 2))
+    assert direct_packet((quarter_e,), quarter_r, quarter_ball)
+    quarter_clearance = F(1, 4) - circle_norm(quarter_e)
+    quarter_rho = max(circle_norm(r) for r in quarter_r)
+    assert quarter_clearance == 0 and quarter_rho == F(1, 2)
+    assert quarter_rho > quarter_clearance
+
+    # Equal radii alone do not suffice once the q=3 components occur.
+    equal_switch_balls = formula_balls(11, 10)
+    assert {h for _, h, _ in equal_switch_balls} == {F(2, 273)}
+    assert {c for c, _, _ in equal_switch_balls} == {
+        F(1, 21), F(20, 21), F(1, 7), F(6, 7)
+    }
+    equal_switch_intervals = sorted(
+        (c - h, c + h) for c, h, _ in equal_switch_balls
+    )
+    equal_switch_e = (F(20, 21),)
+    equal_switch_r = (F(0), F(2, 21), F(19, 21))
+    assert direct_packet(equal_switch_e, equal_switch_r, equal_switch_intervals)
+    assert max(circle_norm(u) for u in equal_switch_r) > F(2, 273)
 
     # Alpha=10 is the exact topological and no-switch boundary: every
     # admissible row has offsets -3,-1,1,3 and the q=(-1,-3,+1) switch.
@@ -326,9 +372,15 @@ def main() -> None:
     print("primitive_formula_audit_alpha_le_50=518/518 including_2_empty")
     print("equal_radius_iff_n1_or_4beta_ge_13qmax=516/516_nonempty")
     print(
+        "lifted_winding_guard="
+        f"{winding_guard_rows}/516_nonempty max_4h={max_four_h} strict_lt_1"
+    )
+    print("large_ball_winding_counterexamples=2/2")
+    print("equal_radius_switch_counterexample=alpha11_beta10_verified")
+    print(
         "weighted_no_switch_frontier="
         f"positive_alpha4..9:{positive_switch_rows} "
-        f"nonpositive_alpha10..50:{nonpositive_switch_rows}"
+        f"negative_alpha10..50:{negative_switch_rows}"
     )
     boundary_word = "[" + ", ".join(
         f"(beta={beta},offsets={offsets},components={count},"

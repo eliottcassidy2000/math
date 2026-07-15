@@ -129,31 +129,59 @@ radii equal exactly when the last offset is still in the containment regime
 (11); otherwise the partial-intersection radii decrease strictly with `q_j`.
 This proves (8). ∎
 
-## 2. The weighted centre-switch object
+Every nonempty component automatically satisfies the lifted winding guard:
+
+```text
+h_j<=2/(13s),       s=alpha+beta>=5,
+4h_j<=8/(13s)<=8/65<1.                                  (8')
+```
+
+Thus same-component winding can never occur in the folded targets themselves;
+the extra clause in Lemma 2 is needed for its abstract circular-ball scope.
+
+## 2. The weighted lifted centre-switch object
 
 The binary tournament on components is not the proof-bearing combinatorial
-object.  For any disjoint circular balls
+object.  For any pairwise-disjoint proper circular balls with
+`0<=h_i<1/2`,
 
 ```text
 K=disjoint_union_(i in I) B_T(c_i,h_i),                    (12)
 ```
 
-define the ordered, `j,k`-symmetric three-hyperedge weight
+choose real lifts `c_tilde_i` of the centres and define the lifted ordered,
+`j,k`-symmetric three-hyperedge weight
+
+```text
+Omega(i|j,k;m)
+ =|2c_tilde_i-c_tilde_j-c_tilde_k-m|-(2h_i+h_j+h_k),      (13)
+```
+
+for `m in Z`.  The state `(i|i,i;0)` is trivial; every other label/winding
+state is nontrivial.  The label-only projection is
 
 ```text
 omega(i|j,k)
- =||2c_i-c_j-c_k||-(2h_i+h_j+h_k).                        (13)
+ =||2c_i-c_j-c_k||-(2h_i+h_j+h_k).                       (13')
 ```
 
 ### Lemma 2 — sharp no-switch criterion
 
-The following are equivalent.
+The following two label statements are equivalent.
 
 1. Whenever `t,t+z,t-z` all lie in `K`, their three component labels are the
    same.
 2. `omega(i|j,k)>0` for every nonconstant label triple `(i,j,k)`.
 
-When they hold, define the clearance of `t in K` by
+For the radius factorization one must also exclude winding inside a single
+component.  The following strengthened conditions are equivalent.
+
+3. Every symmetric triple in `K` has the same component label and zero lifted
+   winding.
+4. `Omega(i|j,k;m)>0` for every nontrivial lifted state.
+5. Condition 2 holds and `4h_i<1` for every component `i`.
+
+When conditions 3--5 hold, define the clearance of `t in K` by
 
 ```text
 clear_K(t)=h_i-||t-c_i||
@@ -167,6 +195,9 @@ E+R subset K
 iff E subset K and rho_0(R)<=min_(t in E) clear_K(t).       (14)
 ```
 
+Moreover, (14) holds for every such pair `(E,R)` if and only if the equivalent
+conditions 3--5 hold.
+
 For equal radii `h_i=h`, (14) is the radius formula
 
 ```text
@@ -174,10 +205,11 @@ E+R subset K
 iff rho_C(E)+rho_0(R)<=h,                                 (15)
 ```
 
-and condition 2 becomes
+and condition 5 becomes
 
 ```text
-sigma(C):=min_(i,j,k not constant)||2c_i-c_j-c_k||>4h.    (16)
+min(1,sigma(C))>4h,
+sigma(C):=min_(i,j,k not constant)||2c_i-c_j-c_k||.        (16)
 ```
 
 ### Proof
@@ -206,19 +238,49 @@ t+z=c_j+e_j,
 t-z=c_k+e_k
 ```
 
-constructs a switched symmetric triple.  This proves the equivalence,
-including equality and endpoint cases.
+constructs a label-switched symmetric triple.  This proves the equivalence of
+1 and 2, including equality and endpoint cases.
 
-Under no-switch, every `z in R` keeps `t,t+z,t-z` in the same lifted interval.
-The exact real identity
+For the lifted statement, choose errors `e_i,e_j,e_k` in the three lifted
+balls.  The circle identity `2t=(t+z)+(t-z)` becomes
 
 ```text
-max(|e+z|,|e-z|)=|e|+|z|
+2(c_tilde_i+e_i)-(c_tilde_j+e_j)-(c_tilde_k+e_k)=m in Z.  (17')
+```
+
+Such errors exist exactly when `Omega(i|j,k;m)<=0`, because
+`2e_i-e_j-e_k` fills the whole displayed error interval.  For nonconstant labels,
+minimizing over `m` recovers `omega`.  For `i=j=k`, after excluding the
+trivial `m=0`, the nearest winding states are `m=+/-1` and have slack
+`1-4h_i`.  This proves the equivalence of 3--5 and shows why the strict
+quarter-circle bound is sharp.
+
+Under the strengthened condition, every `z in R` keeps `t,t+z,t-z` in the
+same lifted interval with `m=0`.  If their lifted errors are `e,e_+,e_-`, put
+`delta=e_+-e=e-e_-`.  Then `delta=z mod 1` and
+`|delta|<=2h_i<1/2`, so `||z||=|delta|`.  The exact real identity
+
+```text
+max(|e+delta|,|e-delta|)=|e|+|delta|
 ```
 
 then gives `||z||<=clear_K(t)`.  Taking compact extrema proves necessity in
 (14), and the triangle inequality proves sufficiency.  Formula (15) is the
-equal-radius specialization. ∎
+equal-radius specialization.
+
+Conversely, if a nontrivial lifted state has `Omega<=0`, the full error
+interval constructs `t,t+z,t-z in K` with a label switch or nonzero winding.
+Taking `E={t}` and `R={0,+/-z}` makes the left side of (14) true.  Its right
+side cannot hold, since that bound would keep both translates in the same
+zero-winding lifted ball.  Thus the universal factorization forces 3--5. ∎
+
+The winding guard cannot be dropped from the abstract lemma.  For
+`K=B_T(0,2/5)`, take `E={2/5}` and `R={0,+/-2/5}`.  Then `E+R subset K`, but
+the clearance of `2/5` is zero while `rho_0(R)=2/5`.  More generally, whenever
+`h_i>=1/4`, take `E={c_i+h_i}` and `R={0,1/2}`;
+the half-turn lies back in the same closed ball while the clearance is zero.
+All folded-target components in this theorem satisfy `4h_i<1`, so this
+correction leaves Parts 3--4 intact.
 
 ## 3. The exact primitive frontier
 
@@ -251,8 +313,9 @@ The complete exact table is:
 | 9 | 4 | 5/13 | 2/169 | 3/13 | 31/169 |
 | 9 | 8 | 1/17 | 2/221 | 2/17 | 18/221 |
 
-Every slack is positive, so Lemma 2 proves the symmetric compact-set radius
-factorization on all sixteen rows.
+Every displayed slack is positive and every radius satisfies `4h<1`, so
+Lemma 2 proves the symmetric compact-set radius factorization on all sixteen
+rows.
 
 This frontier is sharp in a stronger sense than equal radii.  If
 `alpha>=10`, the `q=1` and `q=3` components both occur.  Abbreviate
@@ -268,19 +331,21 @@ centre defect = ||c_3-3c_1||=|d_3-3d_1|/(26rs),
 radius tax    = 3h_1+h_3=(3a_1+a_3)/(26rs).               (20)
 ```
 
-Always
+Always, strictly,
 
 ```text
-|d_3-3d_1|<=3a_1+a_3.                                    (21)
+|d_3-3d_1|<3a_1+a_3.                                     (21)
 ```
 
 Indeed:
 
-- if `beta<=3`, the two sides reduce to `8beta` and `16alpha-78`;
+- if `beta<=3`, the two sides reduce to `8beta` and `16alpha-78`, and
+  `alpha>=10` makes the inequality strict;
 - if `4<=beta<=9`, they are `39-4beta` and
   `12r+min(4r,4alpha-39)`; if `r>=2` the latter is at least 24 while the
-  former is at most 23, and the sole `r=1` edge is immediate;
-- if `beta>=10`, the left side is zero.
+  former is at most 23, and the sole `r=1` edge `(alpha,beta)=(10,9)` is
+  `3<13`;
+- if `beta>=10`, the left side is zero and the radius tax is positive.
 
 Thus Lemma 2 constructs a switched symmetric triple for every admissible
 `beta` as soon as `alpha>=10`.  At the first boundary `alpha=10`, the four
@@ -335,8 +400,10 @@ false rewrite exposed by the corrected THM-824 guard.
 
 ## 5. Tournament Analysis and preservation boundary
 
-The proof-bearing discrete object is the weighted ordered three-hypergraph
-`omega(i|j,k)`, not a binary tournament.  In the full-tooth regime its centres
+The proof-bearing discrete object is the weighted lifted ordered
+three-hypergraph `Omega(i|j,k;m)`, not a binary tournament.  Its nonzero
+integer label records same-component winding; its label projection is
+`omega(i|j,k)`.  In the full-tooth regime the centres
 are the `u`-gauge image of the truncated odd comb
 
 ```text
@@ -370,17 +437,19 @@ The Fraction-exact verifier:
    symmetric compact packets with zero radius/direct mismatches;
 3. matches formula (6) on all 518 primitive opposite-parity pairs through
    `alpha=50`, including the two empty rows;
-4. verifies (8) on all 516 nonempty rows and the weighted switch frontier on
-   16 positive rows through `alpha=9` versus 500 nonpositive rows from
-   `alpha=10` through 50; and
-5. prints the four exact negative `alpha=10` switch witnesses and Tournament
+4. verifies (8) on all 516 nonempty rows, the winding guard on all 516 rows,
+   and the weighted switch frontier on 16 positive rows through `alpha=9`
+   versus 500 strictly negative rows from `alpha=10` through 50;
+5. checks both sharp large-ball winding counterexamples and the equal-radius
+   switch at `(alpha,beta)=(11,10)`; and
+6. prints the four exact negative `alpha=10` switch witnesses and Tournament
    Analysis telemetry.
 
 The frozen digests are
 
 ```text
-source  de22dfe33ce641eff186d7fb2aec5638a911ebeb1e4da4ca54f33ef2aeb3c63f,
-output  8ec9a1091494c03ae1862fbbac1de2797881b9f7cbd016b50bfd2edab129fe68,
+source  bcfa5cc4ba6ed79ed8ac9a88a3098781bc32215bbb8908bb749ecaa7cf18a40f,
+output  24f5213948444e51851911df73743100228af0a4efb9724aa732213a75bc7792,
 small-frontier certificate
         a39c46d37d72888b88827e3da9ef00f273a8b0a53606e1b9f916e05c3d81c7a6,
 formula audit

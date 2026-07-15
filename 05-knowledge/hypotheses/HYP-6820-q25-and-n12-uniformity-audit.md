@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart in two joint finite boxes, its complete height-at-most-two slice loose, one of 96 arbitrary-height order-three contexts closed, scale-one Hamming six recursively finite, and seven the first discrepancy-unbounded radius; the shallow operation boundary is exact—literal endpoints are Markov for monotone insertion, but H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has finite bases, exact atomic sum arcs, an all-size `(13d,5d)` radius budget, the sharp sixteen-fold no-switch classification, and the guarded thin-shell necessity `13d<=2B-5` under the exact signed-complement/containment hypotheses; THM-829 gives related contragredient owner transport but is not yet joined to metric endpoints; branch emptiness remains OPEN in the Hamming-five boxes and other 95 order-three contexts, Hamming six, unbounded deck/common-sheet languages, the `s>=5` deep shell, uniform radius/sum-arc exclusion, ternary switch-aware odd ratios, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars and the entire proper scale-one Hamming-five chart uniformly loose at arbitrary lift height; one of 96 arbitrary-scale order-three contexts is closed, and the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; scale-one H6 is finite but contains the doubled-AP equality face; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers; global emptiness remains OPEN in arbitrary-scale H5 descent, the other 95 order-three contexts, non-AP H6, unbounded common sheets, uniform radius/sum-arc exclusion or transport, the `s>=5` deep shell, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -44,6 +44,7 @@ depends_on:
   - THM-836
   - THM-837
   - THM-840
+  - THM-842
   - HYP-6750
   - HYP-6775
 related:
@@ -465,7 +466,7 @@ The exact five-cycle band bank has five feasible types and forces a ratio at
 least `3/2`; the four-cycle forces a factor-two edge.  This converts the
 collar classification into the stronger reciprocal cap.
 
-The theorem does not empty these boxes.  Its exact shallow census rejects all
+THM-820 alone does not empty these boxes.  Its exact shallow census rejects all
 `C(12,5)=792` height-one rows and finds the unique minimum
 
 ```text
@@ -481,6 +482,23 @@ telemetry have different integer centres and exact maxima.  The finite-box
 closure must act on exact residual interval unions and remaining danger teeth,
 not the collar graph alone.
 
+THM-842 supplies exactly that missing recursion.  At every prefix it chooses a
+longest strict-safe component and applies THM-815's discrepancy bound to the
+least remaining speed, while retaining THM-820's exhaustive doubling versus
+exceptional-cycle dichotomy.  The exact state counts at depths one through
+five are
+
+```text
+40,590, 612,221, 111,675, 7,255, 9.
+```
+
+The exceptional branch has `415,178,1,0` states from depth two through five
+and therefore no completion.  Each of the nine doubling terminals has a
+nonempty strict-safe interval; independent exact endpoint reconstruction gives
+`M` strictly above `1/13` in every row.  Hence every proper scale-one
+residue-preserving five-coordinate lift is loose, uniformly in all five lift
+heights.  The former H5 boxes are closed, not merely searched to a height.
+
 THM-822 empties the complete height-at-most-two slice, all
 `C(12,5)2^5=25,344` packets, with the same unique `1/12` minimum.  It also
 audits the proposed three-face quotient exactly.  The labelled live relation
@@ -489,11 +507,12 @@ ratio band, and their `111,006` ordered kernel rows include `3,810` fibres
 mixing exact `M`; one shared relation has maxima `1/4` and `12/37`.  Literal
 strict-safe component endpoint words `H2` make the bounded three-face join
 injective, while the final residual alone still has fourteen collision pairs.
-This is a static bounded reconstruction theorem.  Since every audited row is
-loose, it says nothing nonvacuous about tightness purity, and it does not prove
-that `H2` transports under arbitrary-height insertion or scale change.  The
-next quotient target is an endpoint-owner/component-incidence codec between
-`H1` and `H2`, minimized under the actual erosion action.
+This is a static bounded reconstruction theorem.  THM-842 subsequently shows
+that the literal residual endpoint word is sufficient for arbitrary-height
+scale-one recursion, while the coarser `H0=H1` quotient is not.  What remains
+unproved is transport of that state across AP-scale ramification: the next
+quotient target is an endpoint-owner/component-incidence codec between `H1`
+and `H2` compatible with the oriented deck action.
 
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
@@ -805,23 +824,21 @@ The next all-pair object is therefore the target-component symmetric-switch
 hypergraph together with its deck and metric sidecars, not a bare runner
 tournament.
 
-THM-831 now makes the “other odd ratios” clause exact.  For coprime
-opposite-parity reduced half-frequencies `alpha>beta`, every folded target is
-a disjoint union of explicit Bezout-offset balls.  The primitive symmetric
-no-switch radius factorization holds if and only if
-
-```text
-4<=alpha<=9.                                               (C5)
-```
-
-These are sixteen antipodal two-ball types.  At `alpha=10`, the new offsets
-`q=1,3` already support a switched symmetric component triple; the same
-weighted three-hyperedge obstruction persists for every `alpha>=10`.  A
-common gcd creates a raw deck switch, although multiplication by the gcd
-preserves the quotient-scaled form of the radius theorem.  Thus the missing
-deep theorem is arithmetic exclusion on the sixteen viable quotient targets,
-plus a ternary centre-switch/satellite argument elsewhere—not a search for
-further equal-radius folds.
+THM-831 completes that target-side extension sharply.  For every primitive
+coprime opposite-parity half-frequency pair `(alpha,beta)`, it gives all folded
+target components as exact Bezout-offset balls.  The nonempty symmetric-return
+predicate has a no-switch radius factorization exactly for the sixteen rows
+`4<=alpha<=9`; targets with `alpha<=3` are empty, and every `alpha>=10` has an
+explicit strictly negative weighted switch triple.  The abstract theorem also
+requires `4h<1` to exclude same-label winding; this is automatic for every
+folded target but sharp for arbitrary balls.  Common gcd creates raw deck
+switches, but multiplication by the gcd preserves the quotient-scaled radius
+criterion.  Its 518-pair formula audit and 6,160 compact-packet replay are
+exact.  Hence the remaining all-pair problem is no longer to guess which
+targets scalarize: it is to force arithmetic violation on the legal sixteen
+ratio types, or to transport the weighted ternary switch/owner carrier on all
+larger types.  Individual nonsymmetric satellites remain outside the scalar
+factorization.
 
 THM-836 supplies the first all-size arithmetic exclusion inside the guarded
 `(13d,5d)` row.  At the forced signed-wall centre, the two directional owner
@@ -851,26 +868,23 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Finish the finite scale-one radius-five action, enumerate radius six,
-   and extend descent.**
+1. **Transport the closed scale-one radius-five action, then separate radius
+   six.**
    THM-795/800/804/806 close the complete AP-centred Hamming-one through
    Hamming-three stars.  THM-810 splits radius four into common scale and one
    order-three coset interface; THM-815 and THM-816 close those alternatives
    independently.  THM-820 has now classified the radius-five collar cycles
    and anchored recursion and reduced the full scale-one chart to the two
-   explicit boxes above.  Empty those boxes by the commuting idempotent action
-   `T_u(E)=E intersect Safe(u)` on literal residual interval unions, preferably
-   through a minimized continuation automaton or a two-plus-three
-   meet-in-the-middle cover join.  Audit every proposed codec through its
-   operation-indexed kernel pair; literal labelled four-coordinate faces glue
-   uniquely, but component counts, unordered endpoints, and tournament nodes
-   do not. THM-840 permits exact endpoints as the Markov state for this
-   monotone insertion action, but requires the labelled tooth bank as soon as
-   deletion or replacement is allowed. THM-837 has closed one all-order-three
-   context with this state; run the other 95 and the mixed order-one survivor
-   languages. Then prove the arbitrary-AP-scale five-deck descent, allowing for
-   new sheet interfaces rather than assuming common scale. THM-815 Part C also
-   makes scale-one radius six a finite exact recursion; enumerate it. At radius
+   explicit branches above.  THM-842 empties them by the commuting idempotent
+   action `T_u(E)=E intersect Safe(u)` on literal residual interval unions,
+   with a row-wise component-length cap. THM-840 permits exact endpoints as the
+   Markov state for this monotone insertion action, but requires the labelled
+   tooth bank as soon as deletion or replacement is allowed. THM-837 closes
+   one all-order-three context with this state; run the other 95 and the mixed
+   order-one survivor languages.  Prove the remaining arbitrary-AP-scale
+   descent without assuming common scale. THM-815 Part C also makes scale-one
+   radius six finite, but its `2[12]` equality face is genuine; separate that
+   AP orbit and exclude the non-AP rows. At radius
    seven the discrepancy deficit `13-2m` changes sign, so a new potential must
    use overlap debt, owner diversity, or signed component/comb incidence rather
    than mean danger density alone. This is a method wall within the scale-one
@@ -940,11 +954,11 @@ while THM-795/800/804/806 close the first three Hamming directions.  THM-810
 isolates the radius-four ramification and THM-815/816 close both of its
 branches.  THM-820 makes the scale-one radius-five warning finite and rejects
 its full height-one face; THM-822 rejects the full height-at-most-two slice and
-locates the static kernel boundary. THM-840 identifies the exact
-operation-congruence boundary, and THM-837 closes one of the 96 arbitrary-
-height order-three contexts by the resulting active-endpoint recursion. The
-two complete boxes, other 95 contexts, and all-scale descent remain the
-shallow residual; THM-815 also makes scale-one radius six
+locates the static kernel boundary. THM-842 closes the two complete boxes at
+arbitrary lift height. THM-840 identifies the operation-congruence boundary,
+and THM-837 closes one of the 96 arbitrary-height order-three contexts by the
+resulting active-endpoint recursion. The other 95 contexts and all-scale
+descent remain the shallow H5 residual; THM-815 also makes scale-one radius six
 recursively finite and loses its discrepancy deficit at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
