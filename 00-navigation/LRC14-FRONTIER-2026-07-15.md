@@ -99,8 +99,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored return packet; symmetrization gives safe measure at least `2*72^(-10)` and a component of length at least `72^(-10)/(5 max(U))`; Bohr erosion and a pointwise odd-exception thickness tax hold.  An exact core traps every natural local refinement at `t=4/17` but escapes at `14/19`, so global deep-component selection—not fixed-anchor refinement—is the residual. | THM-782/789 + exact trapping certificate |
-| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier.  FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors).  Uniform tear remains open. | THM-791 + exact 117-event-group certificate |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/791; HYP-6820 |
+| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier.  FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors).  Uniform tear remains open. | THM-792 + exact 117-event-group certificate |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -221,7 +221,7 @@ quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.
 
-THM-791 now clocks the remaining even-maximum collar more sharply.  Its
+THM-792 now clocks the remaining even-maximum collar more sharply.  Its
 eleven-speed maximizer has denominator at most `4R-2`; safe mass occupies many
 top teeth with repeated disjoint flank owners; and a forced odd `13c` exception
 produces a labelled moving edge cover on thirteen quotient sheets.  For `c=1`

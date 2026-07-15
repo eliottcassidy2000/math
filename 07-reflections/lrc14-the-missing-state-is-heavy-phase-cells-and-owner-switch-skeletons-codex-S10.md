@@ -33,6 +33,7 @@ related:
   - THM-789
   - THM-790
   - THM-791
+  - THM-792
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -342,7 +343,7 @@ owners disappear simultaneously.
 
 ### 1.8 The even-maximum collar is now a clocked incidence problem
 
-THM-791 starts from the exact remaining two-sheet max-peel collar rather than
+THM-792 starts from the exact remaining two-sheet max-peel collar rather than
 asserting that the collar is empty.  If `R=max(U)`, `max(A)=2R`, and deleting
 `2R` raises the margin above `1/12`, then an eleven-speed maximizer has reduced
 denominator
@@ -473,7 +474,7 @@ tournament.
 | endpoint events | centered rank; chronological versus Euclidean decoding | the complete wall/tie schedule | current token assignment, persistent stalk, and metric restriction to `G_P` |
 | rooted redundancy states | collision-hop transitions; choice of duplicated root | the local `A_8` cocycle and supportability of an event word | absolute root, global carry, metric schedule, and the core-safe base; strong connectivity prevents a state-only exit proof |
 | minimal cover stalks | persistence across a wall; before/after minimal bases | genuine owner switches after redundant walls are contracted | raw event multiplicity by design; component location must remain as a sidecar |
-| proof obligations `(event, chip)` or `(tooth side, owner)` | transports or discharges the obligation | exactly the boundary incidence used by THM-791 | raw runner geometry unless the event clock and edge label remain attached |
+| proof obligations `(event, chip)` or `(tooth side, owner)` | transports or discharges the obligation | exactly the boundary incidence used by THM-792 | raw runner geometry unless the event clock and edge label remain attached |
 
 The challenged conclusion is that there is no single canonical tournament
 vertex set.  Different theorems live on cells, characters, events, sheets,
@@ -508,7 +509,7 @@ This stratifies the automaton by overlap-chip concentration and suggests
 measuring current across `K`-cuts.  It is telemetry, not a proof quotient:
 the normalized `r=8` stalk has the same excess-degree pattern in all 20,160
 states, and even the collar atlas has two cores with the same labelled degree
-vector and `8K=80` but different first tears.  THM-790's Hamiltonian-path axis
+vector and `8K=80` but different first tears.  THM-791's Hamiltonian-path axis
 is orthogonal in the metagraph, but the collar chronology itself is transitive
 with one path.  Event labels, transition instances, and the metric base remain
 the irreducible sidecar.
@@ -529,7 +530,7 @@ still missing.
    bank.  A proof may show that the folded containment `(FD)` cannot persist,
    or that THM-775's binary ownership tree cannot reach a terminal
    hereditarily primitive base.
-3. **The even-maximum collar.**  THM-791 gives a bounded rational clock,
+3. **The even-maximum collar.**  THM-792 gives a bounded rational clock,
    repeated ordered flank types, and—on the forced `13`-multiple subbranch—a
    moving edge-cover automaton.  It excludes `w=13` through quotient height
    `24`, but what is missing is a uniform tear or congruence obstruction
@@ -575,7 +576,7 @@ be conflated:
 The third option may be the most robust.  The phase-pigeonhole proof produces
 a heavy return set whether or not the sharp extremizer is understood.  A
 successful argument could pass that mass to an incidence repetition, as
-THM-791 begins to do, and then force a finite automaton tear.
+THM-792 begins to do, and then force a finite automaton tear.
 
 ### 4.4 LRC(14) assembly
 
@@ -636,7 +637,7 @@ reappear after an overaggressive quotient.  The final arrow is the open one.
 The sharpest current view is therefore not that LRC(14) is waiting for a
 larger computation.  It is waiting for a theorem that couples a heavy measured
 phase base to a finite labelled switch skeleton.  THM-780 supplies the former;
-THM-778/779/783/786/788/790 and THM-791 supply complementary increasingly exact
+THM-778/779/783/786/788/790/791 and THM-792 supply complementary increasingly exact
 versions of the latter.
 The remaining work is to prove that the coupling cannot stay covered without
 descending to one of the already controlled equality packets.

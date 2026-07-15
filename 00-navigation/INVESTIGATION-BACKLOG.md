@@ -130,7 +130,7 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788/789/791; corrected THM-779; MISTAKE-147/148;
+- **Source:** THM-780/782/783/784/786/788/789/792; corrected THM-779; MISTAKE-147/148;
   HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
@@ -140,7 +140,7 @@
   `2*72^(-10)` and component width `72^(-10)/(5 max(U))`, but its exact
   trapped-anchor example shows that global deep-component selection is the
   next target; refining one anchored phase cell is insufficient.
-- **Collar progress:** THM-791 gives the even-maximum sporadic collar a bounded
+- **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
   for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero

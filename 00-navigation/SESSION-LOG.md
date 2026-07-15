@@ -203,7 +203,7 @@ THM-777 rho bridge is globally bounded (crudely, `<5.046*10^27`).  THM-782's
 incoming specialization converts the same idea into an anchored `72^(-10)`
 return packet inside every ten-speed two-sheet quotient core.
 
-THM-791 advances the exact even-maximum sporadic collar.  Its eleven-speed
+THM-792 advances the exact even-maximum sporadic collar.  Its eleven-speed
 maximizer has denominator `q<=4R-2`, with a center/high-effective-order
 dichotomy; uniform safe mass occupies many top teeth with repeated disjoint
 flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
@@ -380,8 +380,9 @@ THM-782 before this package landed.  First-pusher ownership is preserved by
 renumbering the exit package to THM-783.  THM-784 is the subsequently proved unbounded-raw-wall
 theorem, THM-785 is reserved for cyclic-triangle flow, THM-786 is the extent-
 form exit theorem, THM-787 is the transitivity-flow theorem, THM-788 is the
-active-period reduction, THM-789 is two-sheet erosion, THM-790 is the
-Hamiltonian-path companion law, and the collar theorem is THM-791.
+active-period reduction, THM-789 is two-sheet erosion, THM-790 is the proved
+leg/parity law, THM-791 is its Hamiltonian-path companion, and the collar
+theorem is THM-792.
 
 FILES: 01-canon/theorems/THM-783-exit-lemma-package.md; 04-computation/
 lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.
