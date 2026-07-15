@@ -1,10 +1,10 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+S2 (raw B2 sidecar) injectivity proved through n=8 by THM-801/809
+status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel and one n9->n10 defect-bank transport classified by THM-801/809/828/832/833/834
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-832, THM-833, THM-834, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -160,7 +160,19 @@ fixed layer has only three free after apex orientation, so per-state count and
 first moment reconstruct the literal layer.  At `n=10`, `{0,3}` and `{1,2}`
 first defeat count-plus-sum.  Static raw-S2 injectivity is now refuted at
 `n=9`, while a minimal one-bit skew repair is proved there.  Continuation
-purity under lift, deletion, and centered-CF copy remains open.
+purity under lift, deletion, and arbitrary centered-CF words remains open.
+
+THM-833 decides one centered-CF continuation on the entire defect bank:
+literal rank stays four, target raw-S2 sees exactly two dimensions, all 58
+literal reflection orbits and coupled endpoint-node cells remain distinct,
+and eight static chirality signs reverse.  THM-834 gives the exact quotient
+placement.  The 116 endpoints occupy 53 converse-merged nodes, five of which
+contain two collision pairs.  The bare node quotient is insufficient, as is
+its 54-valued complement-partner marginal, but their coupled `P` coordinate
+has 58 singleton values.  The six face presentations occupy 155 size-eight
+nodes and select 87 exclusively black projected complement-line node pairs.
+The defect cube is therefore neither a node set nor the metagraph: it is a
+decorated carrier whose stalk maps into node and line fibres.
 
 ## Continued-fraction connection
 
@@ -196,6 +208,15 @@ to a projected edge cell is an additional constancy property, not functorial
 by definition.  The two-step node-indicator audit still closes at degree four,
 so the live finite-sector target is now: quartic plus the `Q`-orbit sidecar,
 with closure tested under coordinate-image saturation.
+
+THM-833 tests the next consecutive word on the first actual nontrivial
+kernel.  The literal and `Q` actions remain exact; the special 58-cell coupled
+`P` coordinate also descends without collision, even though bare projected
+edge cells fail globally by THM-813.  The raw histogram is not stable: only
+ten of 58 pairs remain equal, and two defect directions become visible at
+target layers `tau=5,7`.  This replaces the vague transport target by a
+finite one: classify the semigroup action of CF words on the decorated
+four-bit stalk and its endpoint coupling, not just on a node or S2 vector.
 
 Assumption challenge: the useful third face is not induced deletion of a
 tournament vertex.  Its vertices are gap-contracted interval roots.  It
