@@ -9,11 +9,16 @@ n=4: lines=4
   Xi cells=4 hist(max/excess)=1/0
   Omega cells=4 hist(max/excess)=1/0
   Omega+B2 cells=4 max/excess=1/0
+  Xi+core cells/excess=degenerate
   projected fibres B2(subcells/excess/separated)=4/0/3/3
   projected fibres B3(subcells/excess/separated)=4/0/3/3
   projected fibres B2+B3(subcells/excess/separated)=4/0/3/3
+  projected fibres q-pair(subcells/excess/separated)=3/1/2/3
   UABC atoms={'BBBB': 2, 'KBBB': 2}
   cubic cumulant=0/1
+  q=OmegaC3 histogram={'0': 4}; edge (q0,q1)={'(0, 0)': 1, '(0, 1)': 2, '(0, 2)': 1}
+  node K_u/K_u+C3 cells=3/3 of 3
+  Smith Omega identities/parity failures=0/0/0
   A/B support cells=2/2; joined=3; primitive=3/2/3
 
 n=5: lines=32
@@ -21,11 +26,16 @@ n=5: lines=32
   Xi cells=32 hist(max/excess)=1/0
   Omega cells=32 hist(max/excess)=1/0
   Omega+B2 cells=32 max/excess=1/0
+  Xi+core cells/excess=32/0
   projected fibres B2(subcells/excess/separated)=32/0/20/20
   projected fibres B3(subcells/excess/separated)=32/0/20/20
   projected fibres B2+B3(subcells/excess/separated)=32/0/20/20
+  projected fibres q-pair(subcells/excess/separated)=20/12/8/20
   UABC atoms={'BBBB': 4, 'BKBK': 4, 'KBBK': 4, 'KBKB': 4, 'KBKK': 4, 'KKBB': 4, 'KKKB': 4, 'KKKK': 4}
   cubic cumulant=1/16
+  q=OmegaC3 histogram={'0': 24, '1': 8}; edge (q0,q1)={'(0, 0)': 6, '(0, 1)': 12, '(0, 2)': 6, '(1, 1)': 2, '(1, 2)': 4, '(1, 3)': 2}
+  node K_u/K_u+C3 cells=9/10 of 10
+  Smith Omega identities/parity failures=0/0/0
   A/B support cells=7/5; joined=10; primitive=10/7/10
 
 n=6: lines=512
@@ -33,11 +43,16 @@ n=6: lines=512
   Xi cells=509 hist(max/excess)=2/3
   Omega cells=510 hist(max/excess)=2/2
   Omega+B2 cells=512 max/excess=1/0
+  Xi+core cells/excess=510/2
   projected fibres B2(subcells/excess/separated)=504/8/179/187
   projected fibres B3(subcells/excess/separated)=468/44/156/187
   projected fibres B2+B3(subcells/excess/separated)=512/0/187/187
+  projected fibres q-pair(subcells/excess/separated)=235/277/28/187
   UABC atoms={'BBBB': 8, 'BKBK': 24, 'KBBB': 8, 'KBBK': 16, 'KBKB': 16, 'KBKK': 80, 'KKBB': 16, 'KKBK': 56, 'KKKB': 80, 'KKKK': 208}
   cubic cumulant=3/256
+  q=OmegaC3 histogram={'0': 288, '1': 192, '2': 32}; edge (q0,q1)={'(0, 0)': 72, '(0, 1)': 144, '(0, 2)': 72, '(1, 1)': 48, '(1, 2)': 96, '(1, 3)': 48, '(2, 2)': 8, '(2, 3)': 16, '(2, 4)': 8}
+  node K_u/K_u+C3 cells=30/32 of 34
+  Smith Omega identities/parity failures=0/0/0
   A/B support cells=34/23; joined=34; primitive=34/30/34
 
 n=7: lines=16384
@@ -45,11 +60,16 @@ n=7: lines=16384
   Xi cells=16031 hist(max/excess)=4/353
   Omega cells=16308 hist(max/excess)=2/76
   Omega+B2 cells=16384 max/excess=1/0
+  Xi+core cells/excess=16110/274
   projected fibres B2(subcells/excess/separated)=16212/172/5962/6126
   projected fibres B3(subcells/excess/separated)=15016/1368/5071/6126
   projected fibres B2+B3(subcells/excess/separated)=16368/16/6110/6126
+  projected fibres q-pair(subcells/excess/separated)=7462/8922/246/6126
   UABC atoms={'BBBB': 16, 'BKBK': 240, 'KBBK': 48, 'KBKB': 48, 'KBKK': 912, 'KKBB': 48, 'KKBK': 672, 'KKKB': 912, 'KKKK': 13488}
   cubic cumulant=15/16384
+  q=OmegaC3 histogram={'0': 6912, '1': 6912, '2': 2304, '3': 256}; edge (q0,q1)={'(0, 0)': 1728, '(0, 1)': 3456, '(0, 2)': 1728, '(1, 1)': 1728, '(1, 2)': 3456, '(1, 3)': 1728, '(2, 2)': 576, '(2, 3)': 1152, '(2, 4)': 576, '(3, 3)': 64, '(3, 4)': 128, '(3, 5)': 64}
+  node K_u/K_u+C3 cells=238/249 of 272
+  Smith Omega identities/parity failures=0/0/0
   A/B support cells=264/244; joined=269; primitive=272/262/272
 
 EXACT FRONTIER
@@ -58,11 +78,15 @@ EXACT FRONTIER
   n=7: Omega+B2 is an exact 16,384-line codec; B2+B3 alone leaves 16 collisions.
   all proper upper/endpoint-face colour marginals are independent;
   the only connected defect is a*b*(1-b)(x-1)(y-1)(z-1).
+  Omega is the full Mobius primitive of legal marked-path interval faces.
+  Omega C3 counts cycles meeting both endpoints and gives a positive C3 recursion.
+  primal/dual Smith Omega modes recover both THM-785 coordinates (lambda,epsilon).
+  signed epsilon cancels in every black node-pair fibre; only |epsilon| can bias drift.
 
 TOURNAMENT ANALYSIS (information carriers as vertices)
-  vertices=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
+  vertices=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'C3_boundary_pair', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
   pairwise observable=number of unordered literal-line pairs separated by a carrier
-  switches=('retention', 'retention_per_log2_cells'); edge flips=27
-  tie Hamiltonian path=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
-  retention fingerprints: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  switches=('retention', 'retention_per_log2_cells'); edge flips=35
+  tie Hamiltonian path=('node_pair_colour', 'B3_address', 'B2_address', 'B2_B3_join', 'C3_boundary_pair', 'Xi', 'Omega', 'Omega_B2_join', 'exact_line')
+  retention fingerprints: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
   regression failures=0

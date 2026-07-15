@@ -1,3 +1,63 @@
+## codex-2026-07-15-S12 -- THM-801: seven-term Cech descent, exact B3/B2 codec, pure cubic colour law, and Smith/Mobius tournament curvature
+
+Owner asked to push the node/edge/tiling mathematics further, recover the old
+`A+B+C-D-E-F+G`, `A+B-C`, and odd folded recursions, integrate concurrent
+ideas, and make every metagraph statement speak directly about tournaments.
+
+THM-801 now categorifies the full seven-term cover.  The high endpoint,
+gap-contraction, and low endpoint subtriangles glue compatible tilings exactly.
+For complement lines, the nonempty triple overlap is the phase witness: from
+`n>=6`, every pairwise-compatible triple of lower bare lines has zero phase
+holonomy and glues to exactly one upper line.  At `n=5`, the empty deepest
+overlap leaves 32 balanced and 32 unbalanced triples.  This explains why the
+two-face THM-796 tower has an apex `C2` torsor while the full B3 tower does not.
+
+The new `Omega` tensor adds the missing gap-face node pair and colour to `Xi`.
+At `n=7`, its 16,308 cells remove 277 of `Xi`'s 353 line-collision excess.  A
+raw mirror crossing-layer B2 sidecar removes the remaining 76, making
+`Omega+B2` injective on all 16,384 lines through `n=7`.  Inside the 6,126
+coloured node-pair fibres, B2/B3/their join leave excess `172/1368/16`.
+Endpoint/gap support rows give `264/244/269` node cells; primitive rows give
+`272/262/272`.
+
+The closed four-role upper/high/gap/low colour law has ten atoms.  Its
+upper/low/high marginal is product measure plus one pure cubic
+`ab(1-b)(x-1)(y-1)(z-1)`: all one/two-role data are independent, and the whole
+missing datum is the top coefficient.  Exact atom defects realize the old
+`++-+--+` Legendre chart with constant amplitude; conditional blue/black B2
+face charges cancel globally.
+
+Concurrent Smith input was integrated as an exact theorem.  The legal marked-
+path interval-face poset has one Möbius primitive `Omega=f-low-high+core`.
+`q=Omega C3` counts cyclic triangles through both path endpoints and yields a
+positive recursive C3 formula plus the line polynomial
+`2^(M-2n+5)(1+w)^2(3+zw)^(n-4)` for the endpoint pair `(q0,q1)`.  The node
+polynomial separates 238/272 nodes (`249/272` with total C3), and the common-
+core pair improves `Xi_7` to 16,110 cells.  With THM-790 orientation bits,
+primal/dual Smith curvatures recover both THM-785 coordinates:
+
+```text
+D(Omega J_h-Omega J_v)=epsilon,
+D(Omega J_h+Omega J_v)=lambda+(2a-1)(n-2).
+```
+
+Every black fixed-node-pair signed-epsilon histogram is symmetric and every
+black q coefficient even.  Therefore black directional drift is an unsigned
+fibre-disintegration effect, not broken reflection symmetry.
+
+Exact script/JSON/output audit all 33,866 tilings with zero failures.
+HYP-6880 keeps all-size/recursive completeness open; the exact completion is
+the literal-core Boolean Möbius stalk on two leg words plus apex.  MPA-33..39
+record pullable avenues: general phase cohomology, n=8 codec decision, stalk
+minimization, black curvature disintegration, intrinsic gap-face semantics,
+continued-fraction substitution action, and marked Tutte/Smith specialization.
+
+Files: THM-801; HYP-6880; `mobius_cech_metagraph_codec_codex_S12.py/.out/.json`;
+reflection `the-seven-term-recursion-was-a-preservation-ledger-codex-S12.md`;
+MPA-33..39.
+
+---
+
 ## opus-2026-07-14-S307 -- THE SMITH DIAGRAM OF THE METAGRAPH (HYP-6865): G_n as a resistor network -- TRANSITIVITY RESISTANCE R_4 = 3/7 exact (R_5, R_6 exact, R_7 float ~0.0699); THE CONCORDANCE LAW (harmonic potential orders classes EXACTLY like the score-variance axis through n=6, exact); current migrates spine->sea but the bottleneck is ALWAYS the last spine edge into the max-H sink = PALEY at n=7; archaeology sweep: the computation fills atlas item 108's named gap; E_n-side potentials = the sharpest next pull
 
 Prompt (owner): consider Smith diagrams / squaring the square against the tournament and

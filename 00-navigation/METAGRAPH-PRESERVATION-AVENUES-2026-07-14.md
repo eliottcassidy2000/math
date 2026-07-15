@@ -509,12 +509,120 @@ certificate clauses, and proof obligations.
   audited `n`, all collisions of line-WL against it, and a conjectural finite
   grammar or obstruction to stabilization as `n` grows.
 
+### MPA-33 — Push the exact `B3` line descent beyond its first phase witness
+
+- **Delivered theorem:** THM-801 lifts `A+B+C-D-E-F+G` to high-end,
+  gap-contraction, and low-end restriction maps.  Their compatible tilings
+  glue uniquely.  For `n>=6`, the nonempty triple overlap forces zero `F_2`
+  phase holonomy, so pairwise-compatible lower complement lines glue to one
+  upper line.  At `n=5`, the empty triple overlap leaves 32 balanced and 32
+  unbalanced compatible triples.
+- **Pull:** formulate the general cohomological line-gluing theorem for an
+  arbitrary finite cover and identify exactly which deepest intersections
+  kill which `H^1(nerve;F_2)` phases.  Test four-face covers of the staircase
+  and covers adapted to Mode-B.
+- **Must preserve:** literal overlap line, canonical endpoint phase, the nerve,
+  and whether complement acts freely on each deepest intersection.
+- **Deliverable:** an all-cover phase-obstruction theorem plus the smallest
+  staircase cover with a genuine higher holonomy class.
+
+### MPA-34 — Decide `Omega+B2` at `n=8`
+
+- **Delivered finite codec:** THM-801's expanded `Omega_7` tensor has 16,308
+  cells for 16,384 lines; the mirror crossing-layer `B2` sidecar separates all
+  76 remaining double collisions.  The coarser `(S2,S3)` address leaves only
+  16 collisions inside 6,126 coloured node-pair fibres.
+- **Pull:** stream the 1,048,576 `n=8` lines without materializing all tiling
+  records, using canonical class lookup or nauty batching.  Classify the first
+  `Omega+B2` collision by path-orbit stabilizer and corewise interaction degree.
+- **Must preserve:** ordered upper/three-face endpoint-node pairs, four-role
+  colour, raw crossing-layer counts, literal loop multiplicity, and witnesses
+  for every collision.
+- **Deliverable:** injectivity or the first exact collision at `n=8`; no opaque
+  hash-only report.
+
+### MPA-35 — Minimize the corewise Boolean Möbius stalk
+
+- **Delivered exact definition:** for literal core `c`, the function
+  `I_(u,c)(p_L,p_H,a)` is the node-fibre indicator on the two legs and apex.
+  Its full Boolean Möbius transform is invertible.  THM-796's `D`, THM-801's
+  `K_u`, `Omega`, `S2`, and `S3` are smaller marginals of this stalk.
+- **Pull:** census coefficient support by bidegree
+  `(|S cap L|,|S cap H|,1_(a in S))`, then delete degrees greedily while
+  checking both static injectivity and one-step continuation equivalence.
+- **Must preserve:** the literal core, endpoint-path orbit, sign/phase action,
+  and coefficient ownership; averaging over a core node is not legal.
+- **Deliverable:** the smallest exact stalk through `n=7`, its first
+  non-lumpable truncation, and an all-size finite-degree conjecture or refuter.
+
+### MPA-36 — Disintegrate electrical Möbius curvature over the flow
+
+- **Delivered identities:** for the interval-face Möbius operator `Omega`,
+  `q=Omega C3` counts cyclic triples meeting both path endpoints.  The Smith
+  modes recover the full THM-785 cloud:
+  `D(Omega J_h-Omega J_v)=epsilon` and
+  `D(Omega J_h+Omega J_v)=lambda+(2a-1)(n-2)`.  Every black projected-fibre
+  signed-`epsilon` histogram and every black `(q0,q1)` coefficient is
+  reflection-symmetric/even.
+- **Pull:** refine MPA-30's raw-versus-normalized drift by
+  `(C3,q0,q1,|epsilon|,lambda,Smith potential,path stabilizer)`.  Determine
+  which unsigned curvature stratum creates the black boundary imbalance.
+- **Must preserve:** apex orientation, raw-bit convention, both line endpoints,
+  literal multiplicity, and reflection pairing.  Signed epsilon alone cannot
+  explain quotient drift.
+- **Deliverable:** a conditional-current table with an orbit-stabilizer formula
+  that predicts the sign after node-fibre disintegration.
+
+### MPA-37 — Give the gap face an intrinsic tournament semantics
+
+- **Delivered distinction:** the middle `d_B:(a,b)->(a-1,b)` face is a valid
+  lower tournament tiling but not induced deletion of one vertex.  Its support
+  row resolves five of the eight `n=7` endpoint-face support twins, while its
+  primitive row is weaker than endpoint deletion.
+- **Pull:** characterize `d_B` as an operation on a tournament with a marked
+  Hamiltonian path—path-edge contraction, interval-root shortening, or a
+  functor in a path-minor category—and state exactly how automorphisms act.
+- **Must preserve:** marked path positions and interval-root ownership; an
+  unmarked tournament node is insufficient.
+- **Deliverable:** an intrinsic path-category definition and the induced
+  weighted correspondence on isomorphism/converse classes.
+
+### MPA-38 — Couple continued-fraction transport to Möbius stalk coefficients
+
+- **Delivered analogy made precise enough to test:** THM-778 says a continued-
+  fraction digit is safe only together with its action on the labelled token
+  fibre.  THM-801 says a node/face address is safe only together with the
+  corewise leg/apex interaction stalk.
+- **Pull:** let centered Christoffel substitutions act on the low/high leg
+  variables and compute their pullback on Möbius coefficients.  Search for a
+  finite invariant coefficient sector under the ten-wall Euclidean word.
+- **Must preserve:** common gcd, midpoint phase, tie blocks, owner inverse
+  steps, literal core, and the substitution action—not only the digit or
+  coefficient spectrum.
+- **Deliverable:** one exact transported-stalk automaton, or a counterexample
+  proving that no bounded-degree sector is closed.
+
+### MPA-39 — Tutte/Smith polynomial of the staircase cover
+
+- **Delivered electrical bridge:** the canonical staircase Smith network is a
+  series chain of parallel bundles, while THM-801's primal/dual face
+  curvatures recover `(lambda,epsilon)`.  The colour law is a single top
+  Boolean interaction, not an Eisenstein imbalance.
+- **Pull:** compute the closed Tutte polynomial of the bundle chain and mark
+  cells by the `A/B/C` cover membership.  Test whether its deletion-
+  contraction coefficients recover the `q` edge polynomial, the blue
+  self-dual specialization, or the even-graph/Tutte duality left dormant by
+  the old kps-S11 thread.
+- **Must preserve:** planar cell network versus class-level wiggly network;
+  do not identify their resistances or spanning trees.
+- **Deliverable:** a proved marked Tutte specialization or a clean no-go
+  separating the two electrical levels.
+
 ## Recommended next three pulls
 
-1. Execute `MPA-32`: minimize the bounded three-sorted continuation system and
-   locate exactly where line-WL first forgets future behaviour.
-2. Join `MPA-30/31`: explain the observed black drift by disintegrating the
-   exact symmetric endpoint-bit law over path/automorphism fibres, then test
-   primitive face signatures at `n=8` against Smith-potential discordances.
-3. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
-   identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
+1. Join `MPA-34/35`: find the first `Omega+B2` collision at `n=8`, then explain
+   it by the smallest missing corewise Möbius coefficient.
+2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
+   drift after orbit/fibre disintegration, where signed symmetry itself cannot.
+3. Join `MPA-28/38`: make continued-fraction substitutions act on the labelled
+   path/core stalk instead of appending another static scalar address.

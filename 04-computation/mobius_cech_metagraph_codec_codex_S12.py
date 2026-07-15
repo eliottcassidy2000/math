@@ -30,6 +30,7 @@ import json
 import math
 from collections import Counter, defaultdict
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
 from three_sorted_metagraph_recursion_codex_S9 import (
@@ -44,9 +45,11 @@ from three_sorted_metagraph_recursion_codex_S9 import (
     load_atlases,
     m_tiles,
     reflection_orbits,
+    reflect,
     tile_index,
     tile_schema,
 )
+from tournament_tiling_metagraph_address_codex_S4 import c3_count, tiling_tournament
 
 
 OUTPUT = Path("05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.out")
@@ -275,6 +278,99 @@ def cubic_colour_record(n: int) -> dict:
     }
 
 
+def smith_horizontal(mask: int, n: int) -> Fraction:
+    """BSST row current using THM-790 orientation bits b=1-t_atlas."""
+    return sum(
+        (Fraction(1 - ((mask >> bit) & 1), n - 1 - y)
+         for bit, (_x, y) in enumerate(tile_schema(n)[0])),
+        Fraction(),
+    )
+
+
+def interval_mobius_square(function, mask: int, n: int):
+    """The full Möbius primitive of the legal marked-path interval faces."""
+    face_a, _face_b, face_c = b3_faces(mask, n)
+    core = b3_face_mask(face_c, n - 1, "A")
+    return (
+        function(mask, n)
+        - function(face_c, n - 1)
+        - function(face_a, n - 1)
+        + function(core, n - 2)
+    )
+
+
+def endpoint_epsilon(mask: int, n: int) -> int:
+    """THM-785 epsilon in THM-796 atlas bits: bottom ones minus top ones."""
+    index = tile_index(n)
+    bottom = sum((mask >> index[(x, 1)]) & 1 for x in range(3, n))
+    top = sum((mask >> index[(n, y)]) & 1 for y in range(2, n - 1))
+    return bottom - top
+
+
+@lru_cache(maxsize=None)
+def tiling_c3(mask: int, n: int) -> int:
+    tiles, _sigma = tile_schema(n)
+    return c3_count(tiling_tournament(mask, n, tiles), n)
+
+
+def boundary_c3_curvature(mask: int, n: int) -> int:
+    """Omega C3: cyclic triples meeting both fixed-path endpoints."""
+    return interval_mobius_square(tiling_c3, mask, n)
+
+
+def predicted_q_histogram(n: int, blue: bool | None = None) -> Counter[int]:
+    """Closed apex-zero line polynomial in q=Omega C3."""
+    degree = n - 4
+    total_factor = 1 << (m_tiles(n) - 2 * n + 7)
+    total = Counter(
+        {k: total_factor * math.comb(degree, k) * 3 ** (degree - k) for k in range(degree + 1)}
+    )
+    r = reflection_orbits(n)
+    blue_hist = Counter()
+    if n % 2 == 0:
+        factor = 1 << (r - n + 3)
+        for k in range((n - 4) // 2 + 1):
+            blue_hist[2 * k] += factor * math.comb((n - 4) // 2, k) * 3 ** ((n - 4) // 2 - k)
+    else:
+        factor = 1 << (r - n + 3)
+        for k in range((n - 5) // 2 + 1):
+            base = factor * math.comb((n - 5) // 2, k) * 3 ** ((n - 5) // 2 - k)
+            blue_hist[2 * k] += base
+            blue_hist[2 * k + 1] += base
+    if blue is True:
+        return blue_hist
+    if blue is False:
+        return total - blue_hist
+    return total
+
+
+def predicted_q_pair_histogram(n: int, blue: bool | None = None) -> Counter[tuple[int, int]]:
+    """Closed edge polynomial for (Omega C3 at apex-zero, at its complement)."""
+    degree = n - 4
+    factor = 1 << (m_tiles(n) - 2 * n + 5)
+    total = Counter()
+    for k in range(degree + 1):
+        base = factor * math.comb(degree, k) * 3 ** (degree - k)
+        for boundary, coefficient in ((0, 1), (1, 2), (2, 1)):
+            total[(k, k + boundary)] += base * coefficient
+
+    r = reflection_orbits(n)
+    blue_hist = Counter()
+    factor = 1 << (r - n + 2)
+    half_degree = (n - 4) // 2 if n % 2 == 0 else (n - 5) // 2
+    for k in range(half_degree + 1):
+        base = factor * math.comb(half_degree, k) * 3 ** (half_degree - k)
+        middle_choices = ((0, 0),) if n % 2 == 0 else ((0, 0), (1, 1))
+        for middle_q0, middle_q1 in middle_choices:
+            for boundary in (0, 2):
+                blue_hist[(2 * k + middle_q0, 2 * k + middle_q1 + boundary)] += base
+    if blue is True:
+        return blue_hist
+    if blue is False:
+        return total - blue_hist
+    return total
+
+
 def branch_census(n: int, node_by_mask: dict[int, list[int]]) -> dict:
     upper_nodes = node_by_mask[n]
     lower_nodes = node_by_mask[n - 1]
@@ -347,6 +443,7 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
     lower_nodes = node_by_mask[n - 1]
     line_count = 1 << (m_tiles(n) - 1)
     xi = {}
+    xi_core = {}
     omega_plain = {}
     omega = {}
     omega_b2 = {}
@@ -354,8 +451,22 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
     b3 = {}
     b23 = {}
     groups = {}
+    q_pair = {}
+    q_colour_pair = {}
+    q_all = Counter()
+    q_blue = Counter()
+    q_black = Counter()
+    q_pair_all = Counter()
+    q_pair_blue = Counter()
+    q_pair_black = Counter()
+    node_curvature: dict[int, Counter[int]] = defaultdict(Counter)
+    node_c3: dict[int, int] = {}
+    epsilon_all_tilings = Counter()
+    black_epsilon_by_group = Counter()
     colour_atoms = Counter()
     mirror_blue_failures = 0
+    smith_antisymmetric_failures = 0
+    smith_symmetric_failures = 0
 
     for line in range(line_count):
         mask = apex_zero_endpoint(line, n)
@@ -369,6 +480,12 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
         )
         xi_word = word[0] + word[3] + word[1]
         xi[line] = upper_pair + face_pairs[2] + face_pairs[0] + (xi_word,)
+        if n >= 5:
+            core = b3_face_mask(faces[2], n - 1, "A")
+            core_nodes = node_by_mask[n - 2]
+            xi_core[line] = xi[line] + (
+                core_nodes[core], core_nodes[complement(core, n - 2)]
+            )
         omega_plain[line] = upper_pair + sum(face_pairs, ())
         omega[line] = omega_plain[line] + (word,)
         b2[line] = b2_signature(mask, n)
@@ -379,22 +496,84 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
         groups[line] = (word[0], u, v)
         mirror_blue_failures += (b2_skew_depth(b2[line], n) == 0) != (word[0] == "B")
 
+        q0 = boundary_c3_curvature(mask, n)
+        q1 = boundary_c3_curvature(other, n)
+        q_pair[line] = (q0, q1)
+        q_colour_pair[line] = (word[0], q0, q1)
+        q_all[q0] += 1
+        q_pair_all[(q0, q1)] += 1
+        (q_blue if word[0] == "B" else q_black)[q0] += 1
+        (q_pair_blue if word[0] == "B" else q_pair_black)[(q0, q1)] += 1
+        node_curvature[upper_pair[0]][q0] += 1
+        node_curvature[upper_pair[1]][q1] += 1
+        for endpoint, node, q_value in ((mask, upper_pair[0], q0), (other, upper_pair[1], q1)):
+            c3_value = tiling_c3(endpoint, n)
+            if node in node_c3:
+                assert node_c3[node] == c3_value
+            node_c3[node] = c3_value
+            epsilon = endpoint_epsilon(endpoint, n)
+            epsilon_all_tilings[epsilon] += 1
+            omega_h = interval_mobius_square(smith_horizontal, endpoint, n)
+            omega_v = interval_mobius_square(smith_horizontal, reflect(endpoint, n), n)
+            denominator = (n - 2) * (n - 3)
+            smith_antisymmetric_failures += denominator * (omega_h - omega_v) != epsilon
+            apex_orientation = 1 - ((endpoint >> tile_index(n)[(n, 1)]) & 1)
+            index = tile_index(n)
+            bottom = sum((endpoint >> index[(x, 1)]) & 1 for x in range(3, n))
+            top = sum((endpoint >> index[(n, y)]) & 1 for y in range(2, n - 1))
+            leg_current = bottom + top + 2 * ((endpoint >> index[(n, 1)]) & 1) - (n - 2)
+            smith_symmetric_failures += (
+                denominator * (omega_h + omega_v)
+                != leg_current + (2 * apex_orientation - 1) * (n - 2)
+            )
+        if word[0] == "K":
+            black_epsilon_by_group[(groups[line], endpoint_epsilon(mask, n))] += 1
+
     predicted_atoms = predicted_four_role_atoms(n)
     predicted_atoms += Counter()  # drop no keys yet; Counter equality ignores explicit zeroes
     assert colour_atoms == +predicted_atoms
     assert mirror_blue_failures == 0
     assert compact_partition(omega_b2)["cells"] == line_count
+    assert q_all == predicted_q_histogram(n)
+    assert q_blue == predicted_q_histogram(n, True)
+    assert q_black == predicted_q_histogram(n, False)
+    assert q_pair_all == predicted_q_pair_histogram(n)
+    assert q_pair_blue == predicted_q_pair_histogram(n, True)
+    assert q_pair_black == predicted_q_pair_histogram(n, False)
+    assert smith_antisymmetric_failures == smith_symmetric_failures == 0
+
+    black_epsilon_symmetry_failures = 0
+    black_zero_epsilon_parity_failures = 0
+    black_groups = {group for group, _epsilon in black_epsilon_by_group}
+    for group in black_groups:
+        epsilons = {epsilon for one_group, epsilon in black_epsilon_by_group if one_group == group}
+        for epsilon in epsilons:
+            black_epsilon_symmetry_failures += (
+                black_epsilon_by_group[(group, epsilon)]
+                != black_epsilon_by_group[(group, -epsilon)]
+            )
+        black_zero_epsilon_parity_failures += black_epsilon_by_group[(group, 0)] % 2
+    assert black_epsilon_symmetry_failures == black_zero_epsilon_parity_failures == 0
+
+    curvature_polynomial = {
+        node: tuple(sorted(row.items())) for node, row in node_curvature.items()
+    }
+    curvature_with_c3 = {
+        node: (node_c3[node], curvature_polynomial[node]) for node in node_curvature
+    }
 
     refinements = {
         "B2": refinement_summary(groups, b2),
         "B3": refinement_summary(groups, b3),
         "B2_join_B3": refinement_summary(groups, b23),
+        "C3_boundary_pair": refinement_summary(groups, q_pair),
     }
     result = {
         "n": n,
         "lines": line_count,
         "line_cech_descent": compatible_line_triples(n),
         "Xi": compact_partition(xi),
+        "Xi_join_common_core_nodes": compact_partition(xi_core) if xi_core else None,
         "Omega_without_colour": compact_partition(omega_plain),
         "Omega": compact_partition(omega),
         "Omega_join_B2": compact_partition(omega_b2),
@@ -407,6 +586,38 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
         "four_role_closed_formula_failures": int(colour_atoms != +predicted_atoms),
         "B2_zero_skew_iff_blue_failures": mirror_blue_failures,
         "pure_cubic_three_role_colour_law": cubic_colour_record(n),
+        "interval_face_mobius_curvature": {
+            "definition": "Omega f=f_n-f_(n-1)o d_L-f_(n-1)o d_H+f_(n-2)o core",
+            "C3_positive_recursion": "C3_n=C3_low+C3_high-C3_core+q; q counts cyclic triples meeting both path endpoints",
+            "E4_recursion": "Omega E4=2(n-1)-8q",
+            "q_histogram": counter_json(q_all),
+            "blue_q_histogram": counter_json(q_blue),
+            "black_q_histogram": counter_json(q_black),
+            "q_pair_histogram": counter_json(q_pair_all),
+            "blue_q_pair_histogram": counter_json(q_pair_blue),
+            "black_q_pair_histogram": counter_json(q_pair_black),
+            "q_polynomial": "2^(M-2n+7)(3+z)^(n-4)",
+            "q_pair_polynomial": "2^(M-2n+5)(1+w)^2(3+zw)^(n-4)",
+            "node_curvature_polynomial_partition": compact_partition(curvature_polynomial),
+            "node_curvature_plus_C3_partition": compact_partition(curvature_with_c3),
+            "black_projected_fibre_q_coefficient_parity_failures": sum(
+                count % 2
+                for (group, q_value), count in Counter(
+                    (groups[line], q_pair[line][0]) for line in range(line_count)
+                    if groups[line][0] == "K"
+                ).items()
+            ),
+        },
+        "smith_interval_mobius_curvature": {
+            "orientation_bit_convention": "b_xy=1-t_atlas_xy, so b=1 means x->y as in THM-790",
+            "antisymmetric_identity": "den*(Omega J_h-Omega J_v)=epsilon=e1+e_n-(n-2)",
+            "symmetric_identity": "den*(Omega J_h+Omega J_v)=lambda+(2a-1)(n-2), lambda=e1-e_n",
+            "identity_failures": smith_antisymmetric_failures + smith_symmetric_failures,
+            "epsilon_histogram_all_tilings": counter_json(epsilon_all_tilings),
+            "black_projected_fibre_sign_symmetry_failures": black_epsilon_symmetry_failures,
+            "black_zero_epsilon_evenness_failures": black_zero_epsilon_parity_failures,
+            "warning": "blue implies antisymmetric curvature zero, but balanced black lines also exist",
+        },
         "node_branch_correspondences": branch_census(n, node_by_mask),
     }
     carriers = {
@@ -414,6 +625,7 @@ def size_census(n: int, node_by_mask: dict[int, list[int]]) -> tuple[dict, dict[
         "B3_address": b3,
         "B2_address": b2,
         "B2_B3_join": b23,
+        "C3_boundary_pair": q_colour_pair,
         "Xi": xi,
         "Omega": omega,
         "Omega_B2_join": omega_b2,
@@ -461,6 +673,11 @@ def verify_regressions(result: dict) -> None:
         for name, expected_row in refinement_expected[n].items():
             row = size["projected_node_pair_fibre_refinements"][name]
             assert (row["subcells"], row["collision_excess"], row["fully_separated_fibres"]) == expected_row
+    n6, n7 = result["sizes"][2], result["sizes"][3]
+    assert n6["Xi_join_common_core_nodes"]["cells"] == 510
+    assert n7["Xi_join_common_core_nodes"]["cells"] == 16110
+    assert n7["interval_face_mobius_curvature"]["node_curvature_polynomial_partition"]["cells"] == 238
+    assert n7["interval_face_mobius_curvature"]["node_curvature_plus_C3_partition"]["cells"] == 249
     result["regression_failures"] = 0
 
 
@@ -478,6 +695,9 @@ def render(result: dict) -> str:
         descent = size["line_cech_descent"]
         refine = size["projected_node_pair_fibre_refinements"]
         branch = size["node_branch_correspondences"]
+        curvature = size["interval_face_mobius_curvature"]
+        smith = size["smith_interval_mobius_curvature"]
+        xi_core = size["Xi_join_common_core_nodes"]
         lines.extend(
             [
                 f"n={n}: lines={size['lines']}",
@@ -491,6 +711,8 @@ def render(result: dict) -> str:
                 f"  Omega+B2 cells={size['Omega_join_B2']['cells']} "
                 f"max/excess={size['Omega_join_B2']['max_multiplicity']}/"
                 f"{size['Omega_join_B2']['collision_excess']}",
+                f"  Xi+core cells/excess="
+                f"{('degenerate' if xi_core is None else str(xi_core['cells']) + '/' + str(xi_core['collision_excess']))}",
                 f"  projected fibres B2(subcells/excess/separated)="
                 f"{refine['B2']['subcells']}/{refine['B2']['collision_excess']}/"
                 f"{refine['B2']['fully_separated_fibres']}/{refine['B2']['total_fibres']}",
@@ -501,8 +723,23 @@ def render(result: dict) -> str:
                 f"{refine['B2_join_B3']['subcells']}/{refine['B2_join_B3']['collision_excess']}/"
                 f"{refine['B2_join_B3']['fully_separated_fibres']}/"
                 f"{refine['B2_join_B3']['total_fibres']}",
+                f"  projected fibres q-pair(subcells/excess/separated)="
+                f"{refine['C3_boundary_pair']['subcells']}/"
+                f"{refine['C3_boundary_pair']['collision_excess']}/"
+                f"{refine['C3_boundary_pair']['fully_separated_fibres']}/"
+                f"{refine['C3_boundary_pair']['total_fibres']}",
                 f"  UABC atoms={size['four_role_colour_atoms_UABC']}",
                 f"  cubic cumulant={size['pure_cubic_three_role_colour_law']['third_cumulant']}",
+                f"  q=OmegaC3 histogram={curvature['q_histogram']}; edge (q0,q1)="
+                f"{curvature['q_pair_histogram']}",
+                f"  node K_u/K_u+C3 cells="
+                f"{curvature['node_curvature_polynomial_partition']['cells']}/"
+                f"{curvature['node_curvature_plus_C3_partition']['cells']} of "
+                f"{size['node_branch_correspondences']['faces']['A']['weighted']['cells']}",
+                f"  Smith Omega identities/parity failures="
+                f"{smith['identity_failures']}/"
+                f"{smith['black_projected_fibre_sign_symmetry_failures']}/"
+                f"{smith['black_zero_epsilon_evenness_failures']}",
                 f"  A/B support cells="
                 f"{branch['faces']['A']['support']['cells']}/"
                 f"{branch['faces']['B']['support']['cells']}; joined="
@@ -522,6 +759,10 @@ def render(result: dict) -> str:
             "  n=7: Omega+B2 is an exact 16,384-line codec; B2+B3 alone leaves 16 collisions.",
             "  all proper upper/endpoint-face colour marginals are independent;",
             "  the only connected defect is a*b*(1-b)(x-1)(y-1)(z-1).",
+            "  Omega is the full Mobius primitive of legal marked-path interval faces.",
+            "  Omega C3 counts cycles meeting both endpoints and gives a positive C3 recursion.",
+            "  primal/dual Smith Omega modes recover both THM-785 coordinates (lambda,epsilon).",
+            "  signed epsilon cancels in every black node-pair fibre; only |epsilon| can bias drift.",
             "",
             "TOURNAMENT ANALYSIS (information carriers as vertices)",
             f"  vertices={tuple(ta['vertices'])}",
