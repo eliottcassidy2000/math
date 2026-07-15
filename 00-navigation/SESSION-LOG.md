@@ -692,6 +692,15 @@ not yet an exact proof.  The dual `E_n` network is rationally exact through
 `(3/7)(2/5)=6/35`.  Potential, current, and recursive line-fibre state are
 therefore distinct layers.
 
+THM-801 contributes a second exact recursive analogy.  Its full three-face
+staircase cover is a genuine Čech descent: face tilings glue from compatible
+overlaps, while bare complement lines carry a relative phase cocycle.  With an
+empty triple overlap, pairwise-compatible data can still have nonzero holonomy.
+Its `Omega+S2` address is finite-exactly injective through `n=7`, not proved to
+be a Markov state.  The LRC design consequence is to add overlap-phase data to
+the proposed component/stalk/event tensor and audit gluing across divisor,
+deletion, and packet charts; this is a preservation rule, not an LRC theorem.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the

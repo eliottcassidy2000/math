@@ -211,9 +211,28 @@ The continuation clause is the dynamic version of the metagraph “stalk”
 lesson.  Two states that agree now but respond differently to a future tooth
 grid, wall crossing, peel, or divisor lift are not the same proof state.
 
-## 3. THM-794, THM-795, and THM-797 are one recursion in three regimes
+### 2.5 Čech compatibility is the missing local-to-global test
 
-The three newest structural theorems look different only after their common
+THM-801 supplies a precise tournament-metagraph model for gluing local charts.
+Three staircase faces cover the full tiling carrier, and compatible face
+tilings glue uniquely.  Bare complement lines, however, retain relative
+`F_2` phases on pair overlaps; when the triple overlap is empty, half of the
+pairwise-compatible triples carry nonzero holonomy and do not lift.  When the
+triple overlap is present, its cocycle equation kills that false gluing class.
+
+The LRC import is methodological, not a theorem identification.  A deep
+component chart, divisor-grid chart, deletion chart, or packet chart can be
+predicate-exact on its own while their pairwise summaries fail to assemble to
+one speed row.  A recursive carrier should therefore retain an **overlap phase
+address**: the common owner labels, signed endpoint germs, and scale/carry
+restrictions on chart intersections, together with the cocycle obstruction on
+triple intersections.  THM-801's `Omega+S2` codec is finitely injective through
+`n=7` but is not an all-size Markov theorem; the analogous LRC address must be
+tested for transition exactness before it is used for descent.
+
+## 3. THM-794/802, THM-795/800, and THM-797 are one recursion in three regimes
+
+These structural theorems look different only after their common
 interface has been projected away.
 
 ```text
@@ -266,7 +285,7 @@ not a predicate carrier.  Retain the exact centered-mechanical owner word,
 prefix state, phase cell, metric translation, and core incidence before
 computing SCCs.
 
-### 3.2 THM-795: simultaneous sheet obligations force descent
+### 3.2 THM-795/800: simultaneous sheet obligations force descent
 
 For a one-coordinate lift of the shallow full-residue packet, component-tooth
 geometry supplies a strict safe germ.  Lift it through the scale sheets.  If

@@ -42,6 +42,7 @@ related:
   - THM-798
   - THM-799
   - THM-800
+  - THM-801
   - THM-802
   - HYP-6820
   - HYP-6835
@@ -739,6 +740,17 @@ blocks have nonconstant lift counts.  The aggregate node address identifies
 the parent but is not a Markov state.  The exact repair is the joint
 node/line/face coupling tensor together with the hidden endpoint-phase bit.
 
+THM-801 adds the missing gluing lesson.  Its three staircase faces form an
+exact Čech descent: compatible face tilings glue uniquely, while bare
+complement lines require a relative phase cocycle on the overlaps.  At `n=5`
+pairwise-compatible triples split evenly into zero- and nonzero-holonomy
+classes because the triple overlap is empty.  The expanded `Omega+S2` address
+is injective through `n=7`, but the theorem explicitly does not promote that
+finite separator to an all-size Markov state.  For LRC this is a design rule,
+not a transfer theorem: component, divisor, deletion, and packet charts may be
+locally exact yet fail to glue unless their shared owner/phase data agrees on
+overlaps.
+
 The LRC evidence falls cleanly into the same ledger:
 
 | level | present examples | legitimate use |
@@ -772,7 +784,8 @@ sharply than “couple the marginals.”  Form a finite joint incidence tensor
 ```text
 Xi_LRC(core-safe component, initial stalk;
        f-packet type, g-packet type;
-       ordered event block, reduced holonomy).
+       ordered event block, reduced holonomy;
+       recursive face/overlap phase address).
 ```
 
 Its packet-type marginals recover the two THM-786 frequency polytopes.  Its
@@ -780,8 +793,8 @@ conditional fibres test whether the next reduced stalk/holonomy class, or the
 tear predicate, is constant.  If not, the differing event block is a literal
 non-lumpability witness; if yes, that tensor cell is a valid state quotient.
 This turns the missing common Beatty order/carry field into a finite strong-
-lumpability question, modelled on THM-796's exact coupling rather than on
-another scalar separator.
+lumpability and Čech-gluing question, modelled on THM-796's exact coupling and
+THM-801's overlap-phase descent rather than on another scalar separator.
 
 One precise proposed definition is useful for the `r=8` route.  For a
 wall-free phase `x`, let
