@@ -409,7 +409,7 @@ Choose `i_*` using THM-823's `min_i D_i<=21`.  Since all prime divisors are
 now in `{2,3,7}`, the three range bounds imply, prime by prime,
 
 ```text
-v_2(D_i)<=v_2(D_(i_*))+5,
+v_2(D_i)<=v_2(D_(i_*))+3,
 v_3(D_i)<=v_3(D_(i_*))+2,
 v_7(D_i)<=v_7(D_(i_*))+1.
 ```
