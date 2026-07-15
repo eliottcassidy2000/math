@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804;
   HYP-6820; exact endpoint-splice and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -122,8 +122,9 @@
   height.  THM-800 then closes the residue-preserving Hamming-two star:
   oriented half-open deck capacity forces common scale at exact tightness, and
   the normalized proper double lift has the sharp floor `M>=2/25`.  The
-  shallow residual starts at labelled radius three.  THM-804 is only a claimed
-  common-scale descent; its replay and the scale-one triple chart remain open.
+  shallow residual starts at labelled radius three.  THM-804 now proves that
+  every tight residue-preserving three-replacement lift has common AP scale.
+  The genuine scale-one Hamming-three chart and radius at least four remain.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -164,16 +165,13 @@
   component choice with signed affine tooth/slope address.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
-  through height twelve; THM-795 proves it on every Hamming-one AP star; and
+  through height twelve; THM-795 proves it on every Hamming-one AP star;
   THM-800 proves strict looseness throughout the residue-preserving
-  Hamming-two AP star.  The first live case has at least three replacement
-  colours sharing the
-  missing-owner splice sheets.  Build the bipartite sheet--tooth incidence
-  graph with deck orders `c/gcd(c,w_i)` and one-sided germ orientation; seek a
-  Hall defect or a forced common divisor.  Do not use another raw box unless
-  it is tied to a decreasing invariant.  THM-804 is a claimed common-scale
-  three-replacement attack only; do not use it until its incidence proof and
-  replay are complete.
+  Hamming-two AP star; and THM-804 forces common scale for every tight
+  three-replacement lift.  The first unresolved base is the genuine scale-one
+  Hamming-three chart, followed by radius at least four.  Build its bipartite
+  sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
+  defect, a normalized floor, or a new descent tied to a decreasing invariant.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -203,17 +201,19 @@
   and exact token-fibre transport. THM-773's moment certificate preserves cover
   truth; the remaining prime-seven problem is THM-779/785 non-synchronization
   of this schedule with the collision-hop transducer.
-- **Deep selection target:** prove the global erosion failure
-  `E_U not subset H minus R_U` after applying THM-797's odd-divisor grids and
-  signed walls.  At
+- **Deep selection target:** apply THM-797's odd-divisor grids and signed walls,
+  followed by THM-803's half-grid ladder.  At
   mandatory `q=13`, double-13 and full support are impossible, and the sole
   survivor has the exact signed residue complement
   `U mod 13=(Z/13Z)^*\{+/-y}` with `x<=2B-1,y<=B-1`.  Its sharp post-wall row
-  traps every exception-divisor grid but escapes at denominator 17, so the
-  selector must range over all owner-labelled closed `1/11`-superlevel
-  components and core-generated denominators. Fixed-anchor refinement,
-  argmax-only choice, divisor-only grids, and raw component tournaments are
-  insufficient by THM-789/797.  Alternatively prove a scale-free transversal
+  traps every exception-divisor grid but is caught at `11/52`, so it is sharp
+  only for the THM-797 gates. THM-803 forces full parity-twisted support and
+  proves the complete erosion predicate equivalent to at most `200B^2+22B`
+  owner-labelled component endpoints/cusps. Its sharp `U_*` row passes every
+  ordinary and anti-grid plus both maximizers but escapes at `7/22`. Prove
+  uniform failure or incompatibility of those selector obligations. Fixed-
+  anchor refinement, argmax-only choice, and bare component tournaments remain
+  insufficient. Alternatively prove a scale-free transversal
   lower bound beyond ten or strong enough dyadic seam guards to land the
   reconstructed packet in THM-774/776's certified bases.  Then treat the `s=3`
   three-colour edge.  The exact object is loose-set
@@ -254,7 +254,7 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk/holonomy-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799/800/802;
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799/800/802/803/804;
   corrected THM-779; MISTAKE-147/148/149; HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
@@ -307,19 +307,21 @@
   collision return is zero in `F_7^8/Delta`, so high-transversal alternation is
   a common Beatty-path/reduced-holonomy problem; the sampled `K0=6` is not
   universal, and its reported `0.589` extent census is not regenerated by the
-  stored script.  THM-802 proves the affine closure of this mechanism and an
-  unequal-multiplicity `(1,...,1,2)` family on a fixed core-safe interval.
-  Only three of 181,440 words with the same multiplicity and reduced return are
-  prefix-legal from the displayed state, so multiplicity and bare SCC data are
-  telemetry.
+  stored script. THM-802 proves the affine closure of this mechanism and
+  realizes every unequal one-fast-owner class `(1,...,1,k)`, `k=2,...,6`,
+  inside any prescribed nonempty open core-safe interval.
+  In the explicit `k=2` census, only three of 181,440 words with the same
+  multiplicity and reduced return are prefix-legal from the displayed state,
+  so multiplicity and bare SCC data are telemetry.
 - **Next theorem target:** define minimal persistent stalks over each metric
-  core-safe component, contract stalk-redundant walls, then contract every
-  affine-realizable prefix-legal packet path with diagonal deck return.  Prove
-  a bound or forced tear
+  core-safe component, identify the full affine diagonal-isotropy subgroupoid,
+  then contract every decorated prefix-legal packet path with diagonal deck
+  return. Prove a bound or forced tear
   for transitions in the resulting packet-path groupoid using THM-778's
   centered schedule, THM-779's supportability equation, and THM-783/786's
   signed balance/span laws.  Retain the centered-Beatty base cell, ordered
-  prefix path, reduced holonomy, and metric/core-incidence lift.  The `(69,29)`
+  unreduced prefix path/counts, reduced holonomy, and metric/core-incidence
+  lift. The `(69,29)`
   no-go proves separate marginals cannot couple the path; THM-794 proves even
   positive marginal distance cannot give uniform compactness, and THM-802
   rules out treating its once-per-owner loop as the only generator. THM-784
@@ -330,15 +332,21 @@
   construction.
 - **Parallel folded target:** apply THM-797's odd exception-divisor grids and
   signed-wall pin first; only the exact signed complement of `+/-y` survives
-  at `q=13`.  Then orient the connected components of the deep set
-  by the exact eroded folded-diamond escape margin and prove that at least one
-  global component escapes.  Retain signed tooth/slope addresses: THM-789's
+  that prime-grid gate at `q=13`. THM-803 next forces full parity-twisted
+  support and the universal
+  `26,52,78` anti-grids, then decides the entire erosion predicate on a finite
+  owner-labelled endpoint/cusp selector. Prove that some selector obligation
+  escapes uniformly, or that their joint incidence is incompatible with the
+  packet arithmetic. The sharp `U_*` row shows why: every grid and maximizer
+  is silent, but the nonmaximal singleton `7/22` escapes. Orienting the
+  connected components by the exact eroded folded-diamond margin remains a
+  useful telemetry view. Retain signed tooth/slope addresses: THM-789's
   `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
-  measure but different middle-component incidence.  Branch over every owner-labelled deep
-  component and core-generated denominator, not only global maximizers or
-  divisors of the exceptions: the post-wall `(13,5)` row traps every such
-  divisor grid but escapes at `6/17`.  Do not recurse only inside a chosen
-  anchor or a fixed divisor list.
+  measure but different middle-component incidence. Branch over every
+  owner-labelled deep
+  component and selector address, not only global maximizers or divisors of
+  the exceptions. Do not recurse only inside a chosen anchor or a fixed grid
+  list.
 - **Transverse-tail target:** THM-798 refutes every raw component-count versus
   divisor-scale bound even on a primitive four-far family.  THM-799 replaces
   it by the composable shadow state `(safe mass,full component count)` and

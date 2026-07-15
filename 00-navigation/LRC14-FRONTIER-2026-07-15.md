@@ -98,15 +98,17 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | arbitrary binding scale `p/(13s)` | PROVED packet split; shallow iff full nonzero residues; deep exceptions obey exact sheet capacity, with `s=2` parity and `s=3` colour criteria | THM-769 |
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
-| odd-exception divisor-grid / signed-wall selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, one-sided wall leakage eliminates double-13 and full support; the sole survivor is the exact signed complement `U mod 13=(Z/13Z)^*\{+/-y}`, with `M(U)>=2/13`, `x<=2B-1`, and `y<=B-1`.  A sharp survivor silences every exception-divisor grid but escapes at the core-generated denominator 17, so all owner-labelled deep components and non-divisor denominators must be retained. | THM-797 + exact 10,971,770-grid / 352,716-signed-profile replay |
+| odd-exception divisor-grid / signed-wall selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, one-sided wall leakage eliminates double-13 and full support; the sole survivor of this prime-grid signed-wall gate is the exact signed complement `U mod 13=(Z/13Z)^*\{+/-y}`, with `M(U)>=2/13`, `x<=2B-1`, and `y<=B-1`. A gate-sharp row silences every exception-divisor grid but escapes at denominator 17; THM-803's anti-grid catches it. | THM-797 + exact 10,971,770-grid / 352,716-signed-profile replay |
+| q=13 anti-grid / all-component selector | PROVED: every odd exception divisor has a mandatory half-grid; at `q=13` this forces full parity-twisted support, and the complete universal even anti-grid ladder is exactly `d=2,4,6`. The full erosion predicate is equivalent to finitely many owner-labelled component endpoints and folded cusps, at most `200B^2+22B`. A sharp signed-complement row passes every divisor/anti-grid and global-maximizer test but escapes at the nonmaximal singleton `7/22`. Uniform failure of the selector remains open. | THM-803 + exact 71,673-half-grid / 4,096-support replay |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
 | shallow AP Hamming-two star at arbitrary height | PROVED scale-free: oriented half-open splice decks force both replacements back to the common AP scale at exact tightness; the normalized proper double lift then has the sharp floor `M>=2/25>1/13`. Thus every residual shallow packet has labelled Hamming radius at least three from every AP dilation. | THM-800 + exact 600,756-row replay |
+| shallow AP Hamming-three scale descent | PROVED scale-free: if a residue-preserving three-replacement lift is tight, all three deck orders are one and all replacements share the AP scale. Thus every off-scale Hamming-three branch descends to a genuine scale-one triple lift; looseness of that normalized chart remains open. | THM-804 + exact 296,640-grid / 11,143,660-capacity replay |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a factor-2 seam and a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. An exact core traps every local refinement at `4/17` but escapes at `14/19`; two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence. THM-797 adds the odd-divisor selector and signed `q=13` wall: the sole survivor is the exact signed complement of `+/-y`. Its sharp post-wall row silences every exception-divisor grid but escapes at `6/17`, so global selection must retain every closed deep component, endpoint owners, signed tooth/slope address, divisor-shell incidence, and core-generated denominators. | THM-782/789/797 + exact trap/erosion-liar/grid/signed-profile certificates |
+| ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Exact liars show that fixed anchors, raw component tournaments, exception-divisor grids, and signed residue support all lose the escape predicate. THM-803 now constructs the exact all-component selector on `K_U=E_U+closure(R_U)` and a sharp row for which every grid and global maximizer is silent but the nonmaximal component `7/22` escapes. The remaining theorem is uniform failure or incompatibility of those finite selector obligations, not construction of the selector. | THM-782/789/797/803 + exact trap/erosion-liar/anti-grid/component certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one and Hamming-two stars at every shallow AP dilation and arbitrary height; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; and the forced-`w=13c` quotient box through height 24. Remaining: shallow Hamming radius at least three, the exact signed-complement folded branch with all-component/core-generated-denominator selection, an unbounded-height collar tear, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one and Hamming-two stars at arbitrary height; every off-scale residue-preserving Hamming-three branch by descent; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; and the forced-`w=13c` quotient box through height 24. Remaining: genuine scale-one Hamming-three lifts and radius at least four; uniform failure of THM-803's exact signed-complement selector; an unbounded-height collar tear; and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -157,9 +159,13 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    survivor to the exact signed complement of `+/-y`, with `M(U)>=2/13`,
    `x<=2B-1`, and `y<=B-1`.  Its sharp post-wall row silences every
    exception-divisor grid but escapes at denominator 17, so selecting only
-   global maximizers or exception divisors is still insufficient. Prove the global erosion failure
-   `E_U not subset H_(x,y) minus R_U`, using component/owner incidence to select
-   the right deep component; alternatively prove a uniform bad-atom transversal
+   global maximizers or exception divisors is still insufficient. THM-803 adds
+   the mandatory half-grid ladder, full parity-twisted support at `q=13`, and
+   an exact finite all-component endpoint/cusp selector. Its sharp `U_*` row
+   passes all grids and both maximizers but escapes at the nonmaximal singleton
+   `7/22`. Prove that this selector fails uniformly on every surviving packet,
+   or derive a global incompatibility among its owner-labelled obligations;
+   alternatively prove a uniform bad-atom transversal
    lower bound, quantitatively land the terminal dyadic base in a certified
    region, or force a transversal/base/effective-order descent. For higher
    sheets, classify which colour covers persist under lifts and evade the
@@ -172,9 +178,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    THM-794 proves this is only an intermediate normal form: a full visitor
    packet can repeat as a diagonal deck translation, making `A`, genuine
    switches, and the proposed universal extent unbounded/false at `R=2`.
-   THM-802 upgrades that example to an affine pumping theorem and an explicit
-   unequal-multiplicity word `(1,...,1,2)` with `Theta(L)` prefix-legal
-   diagonal-return copies across one fixed core-safe interval.  First quotient
+   THM-802 upgrades that example to an affine pumping theorem: every
+   fundamental unequal one-fast-owner count class `(1,...,1,k)`,
+   `k=2,...,6`, occurs existentially (with non-effective onset) with
+   `Theta(L)` prefix-legal diagonal-return copies inside any prescribed open
+   core-safe interval.  First quotient
    packet return maps modulo common sheet translation; then retain the exact
    centered-mechanical owner word, repeated-owner insertion, redundancy roots,
    and metric/core phase cell.  Bare normalized collision SCCs are downstream
@@ -215,10 +223,11 @@ exact owner-CSP settles all shallow labelled packets through lift height twelve
 every proper residue-preserving Hamming-one lift of every unit AP dilation is
 loose.  THM-800 closes the next stratum uniformly: at exact tightness, oriented
 half-open splice-deck capacity forces two replacements to share the AP scale,
-and every normalized proper double lift has `M>=2/25`.  No proved descent is
-known from Hamming radius three onward; THM-804 is only a claimed common-scale
-three-replacement attack, and the scale-one Hamming-three chart remains open.
-The deep colour-cover branch also remains.
+and every normalized proper double lift has `M>=2/25`. THM-804 now proves the
+next descent: exact tightness at Hamming radius three forces
+all three replacements to share the AP scale.  The genuine scale-one
+Hamming-three chart remains open, as do radius at least four and the deep
+colour-cover branch.
 
 The two-sheet edge is now considerably narrower.  THM-772 proves that its
 ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
@@ -258,11 +267,13 @@ signed component-tournament fingerprints and identical scalar eroded-diamond
 measure, but different return-thickened component incidence. The uniform
 residual is now smaller: THM-797's odd-divisor shells discharge every row with
 a deep grid class outside the opposite-exception shell, and its q=13 signed
-walls leave only the exact ten-residue complement of `+/-y`.  In the sharp
-post-wall row every exception-divisor grid is trapped or empty but `6/17`
-escapes.  The remaining theorem is therefore a signed-tooth, owner-labelled
-**all-component and core-generated-denominator**
-selection/noncontainment theorem (or
+walls leave only the exact ten-residue complement of `+/-y`. THM-803 then
+forces full parity-twisted support and silence on the universal `26,52,78`
+anti-grid ladder, and replaces informal all-component search by an exact
+endpoint/cusp selector of quadratic size. Its sharp row passes every grid and
+both maximizers but escapes on the nonmaximal singleton `7/22`. The remaining
+theorem is therefore uniform failure or incompatibility of this signed-tooth,
+owner-labelled **all-component selector** (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.
@@ -326,12 +337,12 @@ THM-769's exact sheet-capacity inequality.  THM-770 exhausts all `13^12`
 shallow packets through lift height twelve by a lossless `24,008`-cell
 endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
 `c=1,...,12,14`, hence the only primitive row is the AP.  This closes the
-shallow sporadic slice through `max A<=168`.  THM-795 additionally closes all
-  higher shallow lifts at labelled Hamming distance one from any AP dilation;
+shallow sporadic slice through `max A<=168`. THM-795 additionally closes all
+higher shallow lifts at labelled Hamming distance one from any AP dilation;
 THM-800 closes every proper residue-preserving labelled Hamming-two lift and
-gives the sharp normalized floor `2/25`.  Radius at least three and every deep
-branch remain.
-The residue-obligation and
+gives the sharp normalized floor `2/25`. THM-804 proves common-scale descent
+for three replacements, leaving genuine scale-one Hamming-three lifts, radius
+at least four, and every deep branch. The residue-obligation and
 sheet-margin tournaments are transitive telemetry; the proofs live in the
 endpoint-owner hypergraph and the missing-splice sheet-danger deck with
 oriented core-safe germs.
@@ -342,6 +353,6 @@ oriented core-safe germs.
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
 *Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
-THM-768--770, THM-794/795/797/800/802,
+THM-768--770, THM-794/795/797/800--804,
 and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

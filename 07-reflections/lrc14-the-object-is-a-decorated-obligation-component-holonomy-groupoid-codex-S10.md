@@ -20,10 +20,12 @@ residue fibre, not a scale-uniform model of the row.
 
 The statement that the `n=12` sporadic branch is empty **uniformly is still
 open in this repository**.  THM-795 removes the entire Hamming-one star around
-every shallow arithmetic-progression dilation, at every lift height, and
-THM-800 removes the residue-preserving Hamming-two star.  THM-797 proves a
+every shallow arithmetic-progression dilation, at every lift height,
+THM-800 removes the residue-preserving Hamming-two star, and THM-804 forces
+every tight Hamming-three lift back to common scale. THM-797 proves a
 general odd-divisor grid obstruction and a strong `q=13` support gate in the
-two-sheet branch.  These theorems do not close Hamming radius at least three,
+two-sheet branch.  These theorems do not close genuine scale-one
+Hamming-three lifts, Hamming radius at least four,
 every binding scale, or every owner-labelled deep component.  A finite
 census, a shallow rigidity theorem, and a uniform branch theorem are three
 different statements.
@@ -230,7 +232,7 @@ triple intersections.  THM-801's `Omega+S2` codec is finitely injective through
 `n=7` but is not an all-size Markov theorem; the analogous LRC address must be
 tested for transition exactness before it is used for descent.
 
-## 3. THM-794/802, THM-795/800, and THM-797 are one recursion in three regimes
+## 3. THM-794/802, THM-795/800/804, and THM-797/803 are one recursion in three regimes
 
 These structural theorems look different only after their common
 interface has been projected away.
@@ -276,16 +278,17 @@ An argument that only sees the cluster occupation vector or packet polytope
 has abelianized away prefix legality, return state, and metric residence.
 
 THM-802 proves that this is not peculiar to the once-per-owner word.  Its
-affine lifting lemma pumps phase-realizable diagonal-return loops, and its
-explicit unequal-multiplicity word `(1,...,1,2)` remains in one fixed
-core-safe interval.  All `181,440` words with that multiplicity have the same
+affine lifting lemma pumps phase-realizable diagonal-return loops and realizes
+each fundamental unequal one-fast class `(1,...,1,k)`, `k=2,...,6`, inside
+any prescribed nonempty open five-core-safe interval. Offsets and onset are
+existential. All `181,440` words in the explicit `k=2` census have the same
 reduced return, but only three are legal from the displayed state.  Therefore
 a bare normalized collision SCC, even augmented by owner multiplicities, is
 not a predicate carrier.  Retain the exact centered-mechanical owner word,
 prefix state, phase cell, metric translation, and core incidence before
 computing SCCs.
 
-### 3.2 THM-795/800: simultaneous sheet obligations force descent
+### 3.2 THM-795/800/804: simultaneous sheet obligations force descent
 
 For a one-coordinate lift of the shallow full-residue packet, component-tooth
 geometry supplies a strict safe germ.  Lift it through the scale sheets.  If
@@ -309,39 +312,46 @@ all sheets blocked
 
 THM-800 applies the same pattern to two replacement colours: exact tightness
 forces both deck orders to one, and the descended proper double lift has
-`M>=2/25`.  The remaining shallow frontier begins at Hamming radius at least
-three.  Its
+`M>=2/25`. THM-804 proves the analogous common-scale descent for three
+replacement colours. The remaining radius-three base is exactly the genuine
+scale-one triple-lift chart; radius at least four is also open. Its
 natural carrier is not a tournament on speeds but the bipartite incidence of
 missing-owner splice sheets with replacement teeth, decorated by deck order,
 one-sided germ orientation, exact margin, and owner.  A Hall, Smith-normal-form,
 or common-divisor lemma on this carrier would generalize the successful
-Hamming-one/two descents.
+Hamming-one/two/three descents, but the scale-one chart also needs actual lift
+heights and metric tooth placement because all deck orders there equal one.
 
-### 3.3 THM-797: a silent grid means “look elsewhere,” not “trapped”
+### 3.3 THM-797/803: a silent grid means “look elsewhere,” not “trapped”
 
 In the two-sheet branch, every odd divisor `q` gives a finite set of folded
 deep obligations.  The exception shell says exactly which of them the two
 exceptions can trap.  If one deep class falls outside that shell, global
 erosion fails immediately.  The signed-wall refinement at `q=13` eliminates
 double-13 and full support; one-sided leakage forces both signs in every
-rejected folded class.  The sole survivor is therefore the exact signed
+rejected folded class. The sole survivor of this prime-grid signed-wall gate is
+therefore the exact signed
 complement `U mod 13=(Z/13Z)^*\{+/-y}`, with every retained signed residue
 occurring once.
 
-The post-wall survivor is the decisive correction.  Every exception-divisor
-grid is empty or trapped, but the core-generated denominator `17` escapes at
-`6/17`.  Therefore:
+THM-803 corrects the next scope boundary. The two THM-797 gate-sharp rows are
+caught by the quarter anti-grid `11/52`; every tight survivor must also have
+full parity-twisted support and silence on the universal `26,52,78` ladder.
+It then proves the full erosion predicate equivalent to finitely many
+owner-labelled component endpoints and folded cusps. A new sharp row passes
+every grid and both maximizers but escapes at the nonmaximal singleton `7/22`.
+Therefore:
 
 - one chosen global maximizer is not the component family;
-- one prime grid is not the obligation family;
+- one prime or universal anti-grid is not the obligation family;
 - aggregate folded support is not the signed erosion predicate; and
-- a component theorem must retain endpoint owners and test every closed deep
-  component at core-generated denominators beyond the exception-divisor
-  shells.
+- a component theorem must retain endpoint owners and every exact selector
+  address after all grid shells are silent.
 
-THM-797 is the branching regime of the same recursion.  When one obligation
-chart is silent, transport to another divisor grid or another component before
-declaring a trap.
+THM-797/803 form the branching regime of the same recursion. When the grid
+charts are silent, transport to the exact all-component selector before
+declaring a trap. The selector is now constructed; proving its uniform failure
+or incompatibility is the remaining theorem.
 
 ## 4. The transverse-tooth state and the shape of infinity
 
@@ -402,8 +412,10 @@ A credible proof must combine, rather than substitute among:
 - every owner-labelled component of the quotient core;
 - exact component-tooth margins and one-sided endpoint germs;
 - sheet ramification and effective deck orders;
-- odd divisor-grid shells, beginning with but not ending at `q=13`; and
-- a Hamming-radius-at-least-two incidence theorem extending THM-795.
+- odd divisor and half-grid shells, beginning with but not ending at `q=13`;
+  and
+- the genuine scale-one Hamming-three chart plus radius at least four, after
+  THM-795/800/804 close or descend every smaller/off-scale chart.
 
 The next local theorem should say that a fully saturated sheet-tooth incidence
 either exposes a negative margin, forces a common divisor and descends, or
@@ -412,18 +424,19 @@ is empty” must not be written before that trichotomy is uniform in the scale.
 
 ### Target B: finish the two-sheet branch after the `q=13` gate
 
-For full six-class support and the aligned five-class survivor, enumerate all
-closed deep components, retain their endpoint owners and signed folded slopes,
-and impose the complete odd-divisor obligation family.  The desired theorem is
-a global matching obstruction between divisor-grid obligations and components,
-not another statement about a selected maximum.  The sharp THM-797 survivor
-should be a mandatory unit test because it defeats “deepest `q=13` point” while
-still escaping globally.
+After THM-797's signed complement, impose THM-803's full parity-twisted support
+and complete universal `26,52,78` anti-grid ladder. Then evaluate its exact
+selector on the owner-labelled components of `K_U=E_U+closure(R_U)`. The
+desired theorem is a uniform negative-margin or incompatibility result on at
+most `200B^2+22B` selector obligations, not construction of that selector.
+The sharp `U_*` row, whose grids and maximizers are silent but whose nonmaximal
+`7/22` component escapes, is the mandatory unit test.
 
 ### Target C: quotient the prime-seven diagonal packet correctly
 
-For `r=8`, contract empty fastest refinements and full-support diagonal packet
-loops.  The quotient state must still contain:
+For `r=8`, contract empty fastest refinements and identify the full affine
+diagonal-isotropy subgroupoid. It contains all fundamental unequal one-fast
+classes in every open core-safe interval. The quotient state must still contain:
 
 - the centered-Beatty base cell and exact ordered packet word;
 - the reduced collision state and return map;
@@ -432,11 +445,11 @@ loops.  The quotient state must still contain:
 - token-supportability; and
 - incidence with the relevant core-safe component.
 
-Then seek a theorem that every remaining long normalized collision-SCC path
-either changes component incidence, forces a divisor/scale descent, or misses
-the core.  Raw active-period boundedness and the old universal extent target
-are refuted.  THM-786 §3g also rules out treating positive marginal distance
-as a uniform constant.
+Then seek a theorem that every remaining decorated prefix-legal path either
+changes component incidence, forces a divisor/scale descent, or misses the
+core. Bare SCCs and local metric residence are telemetry. Raw active-period
+boundedness and the old universal extent target are refuted. THM-786 §3g also
+rules out treating positive marginal distance as a uniform constant.
 
 ### Target D: exact transverse insertion over a recursive cluster tree
 

@@ -616,7 +616,7 @@ The next live pull supplied THM-797's odd-divisor selector.  For every odd
 `q`, a deep unit class outside the explicit opposite-colour exception shell is
 already a global erosion escape.  Its q=13 signed-wall upgrade is much sharper:
 one-sided leakage forces both signs in every rejected folded class, so double-
-13 and full support are impossible.  The sole survivor has
+13 and full support are impossible. The sole survivor of this prime-grid gate has
 `U mod 13=(Z/13Z)^*\{+/-y}` exactly, with `M(U)>=2/13`, `x<=2B-1`,
 `y<=B-1`, and `13B+2xy<=2B(x+y)`.  The post-wall row
 `U=(1,2,4,6,7,9,10,11,12,16)`, `(x,y)=(13,5)` silences every
@@ -633,14 +633,20 @@ closed danger arc creates a false mixed-deck survivor.  After descent, every
 proper normalized double lift has the sharp floor `M>=2/25`, with equality at
 `{1,2,3,5,7,8,9,10,11,12,17,19}`.  The 600,756-row exact replay has no
 failures.  Hence the shallow AP residual begins at labelled Hamming radius
-three.  THM-804 is only a claimed three-replacement common-scale descent; its
-proof audit, replay, and normalized triple chart remain open.
+three. THM-804 now proves the three-replacement common-scale descent by a
+half-open capacity and residue-gain argument: every tight arbitrary-scale row
+descends to a genuine scale-one triple lift. The proof is symbolic; the exact
+replay adds 296,640 direct grids and 11,143,660 relaxed capacity rows. It does
+not prove the normalized triple lifts loose, so that chart and radius at least
+four remain open.
 
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
-with `d_a w_a^(-1)` constant modulo seven.  The explicit word has unequal
-multiplicity `(1,...,1,2)`, repeats `H` times across the fixed core-safe
-interval `[2/15,1/7]`, and returns diagonally after every packet.  This is not
+with `d_a w_a^(-1)` constant modulo seven. More strongly, in every prescribed
+nonempty open five-core-safe interval it realizes all fundamental unequal
+one-fast classes `(1,...,1,k)`, `k=2,...,6`; the integer offsets and onset are
+existential. The explicit `k=2` word repeats `H` times across `[2/15,1/7]`
+and returns diagonally after every packet.  This is not
 an LRC14 counterexample, but it defeats once-per-owner holonomy compression:
 only three of 181,440 words with the same multiplicity and reduced return are
 legal from the displayed state, and only one of eight repeated-owner insertion
@@ -650,6 +656,20 @@ the carrier; a bare collision SCC is telemetry.  For the `A_12` collar this
 suggests a precise next test: exclude or classify affine-realizable prefix-safe
 tropical returns up to cyclic sheet rotation inside the divisor-complete
 arithmetic clock language.
+
+THM-803 completes the per-tuple all-component selector without closing the
+uniform branch. Every odd exception divisor has a mandatory half-grid; at
+`q=13` this forces full parity-twisted support, and the complete universal
+even anti-grid ladder is exactly `26,52,78`. For
+`K_U=E_U+closure(R_U)`, erosion containment is equivalent to checking folded
+margin on owner-labelled component endpoints and cusps, at most
+`200B^2+22B` points. This corrects the THM-797 sharp rows: both fail already at
+`11/52`. The new sharp core
+`U_*=(2,4,6,7,9,10,11,12,14,16)`, `(x,y)=(13,5)` passes every grid and both
+maximizers, but the nonmaximal singleton `7/22` escapes; after return
+thickening the strongest selector point is `365/1144`. The exact selector is
+therefore done. The open theorem is a uniform negative-margin or
+incompatibility result on its scale-dependent quadratic obligation set.
 
 The folded route also gained a global theorem and an exact quotient boundary.
 For `delta=2/(143B)`, tightness forces
@@ -715,18 +735,19 @@ coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
 proved.  The next exact pieces are a uniform-in-quotient-height collar tear
-after the `w=13c`, height-24 multiplier lane; all-component eroded-packet
-noncontainment on the exact signed-complement q=13 survivor, with non-divisor
-denominators retained; a stalk- and holonomy-quotiented collision-path bound joining
-THM-778/779/783/786/788/794/802; a Hamming-radius-three-or-more shallow
-sheet--tooth obstruction beyond THM-800; and a scale-normal argument for
+after the `w=13c`, height-24 multiplier lane; uniform failure or incompatibility
+of THM-803's exact signed-complement all-component selector; a quotient by the
+full affine diagonal-isotropy subgroupoid joining
+THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
+radius at least four after THM-804; and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
-Hamming-two, affine-packet, and signed-wall odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+Hamming-two/three, affine-packet, anti-grid/component-selector, and signed-wall
+odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

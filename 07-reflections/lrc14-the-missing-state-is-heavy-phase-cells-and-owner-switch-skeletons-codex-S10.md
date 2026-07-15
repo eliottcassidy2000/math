@@ -44,6 +44,8 @@ related:
   - THM-800
   - THM-801
   - THM-802
+  - THM-803
+  - THM-804
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -79,9 +81,10 @@ session nevertheless changes the frontier in eight material ways:
 4. THM-802 proves that THM-794 is one generator of a larger affine-pumpable
    language.  A phase-realizable prefix-legal loop with constant
    `d_a w_a^(-1)` modulo seven inflates to linearly many diagonal-return
-   packets; an explicit unequal-multiplicity word `(1,...,1,2)` persists on a
-   fixed core-safe interval.  Multiplicity and reduced holonomy do not decide
-   legality, so the repeated-owner insertion and exact phase cell must remain.
+   packets. More strongly, in every prescribed nonempty open five-core-safe
+   interval it realizes each fundamental unequal one-fast class
+   `(1,...,1,k)`, `k=2,...,6`. Multiplicity and reduced holonomy do not decide
+   legality, so the unreduced insertion word and exact phase cell must remain.
 5. THM-795 closes the entire arbitrary-height Hamming-one star around every
    shallow AP dilation.  Any residual shallow sporadic packet must use at least
    two replacement colours, so the next object is a sheet--tooth incidence
@@ -89,14 +92,20 @@ session nevertheless changes the frontier in eight material ways:
 6. THM-800 closes that two-colour stratum.  Oriented half-open splice-deck
    capacity forces both replacements to the common AP scale at exact
    tightness, after which every proper normalized double lift has the sharp
-   floor `M>=2/25`.  The shallow residual now begins at labelled radius three.
+   floor `M>=2/25`. THM-804 proves the corresponding common-scale descent for
+   three replacements; only the genuine scale-one triple chart remains at
+   radius three, followed by radius at least four.
 7. THM-797 turns odd exception divisors and their one-sided walls into global
    selectors.  At `q=13`, double-13 and full support are impossible; the sole
    survivor is the exact signed complement of `+/-y`, with a `2/13` core
    witness and sharp exception-speed caps.  A post-wall row silences every
    exception-divisor grid but escapes at denominator 17, proving that all deep
    components and core-generated denominators—not merely argmax or divisors—
-   must remain.
+   must remain. THM-803 then proves the half-grid ladder, full parity-twisted
+   support, and an exact quadratic-size all-component selector. Its sharp row
+   passes every grid and both maximizers but escapes at the nonmaximal
+   component `7/22`; the selector is exact, while its uniform failure remains
+   open.
 8. THM-798/799 separate raw fragmentation from conservative state transport.
    Component count can grow transversely with no coherent divisor scale, while
    the two-number state `(safe mass, topological components)` still yields
@@ -126,7 +135,7 @@ compressions.
 | safe-component count or raw winding | a coarse amount of boundary | component widths, reduced winding, and endpoint-owner incidence |
 | raw positive-length component count | transverse tooth fragmentation | safe mass relative to the eventual peel frequency |
 | only global deep maximizers | the sharpest quotient-core clearance values | escaping threshold components and their endpoint owners |
-| only exception-divisor grids | exact deep/shell incidence at every divisor of `x,y` | core-generated detecting denominators such as the signed-wall survivor's `17` |
+| exception-divisor and universal anti-grids | THM-797's exact shell plus THM-803's half-grid/parity support at `26,52,78` | non-grid component endpoints/cusps such as the sharp survivor's `7/22` |
 | a static prime-seven token state | exact cover at one phase | endpoint order, inverse steps, and global carry |
 | a transitive next-event tournament | pairwise chronological order | the labelled Hamiltonian-path movie and simultaneous blocks |
 | number of covered walls | finite-sample difficulty | a persistent exact seven-owner stalk that makes those walls redundant |
@@ -343,7 +352,7 @@ the inverse grid point of any rejected class, all minimum owners must occur
 with both residue signs, or `G_U` leaks into the open diamond complement.  Ten
 core runners cannot supply both signs in all six classes, or in five rejected
 classes plus an accepted class.  Hence double-13 and full support are
-impossible, and the sole survivor satisfies
+impossible, and the sole survivor of the prime-grid signed-wall gate satisfies
 
 ```text
 U mod 13=(Z/13Z)^* minus {+y,-y}
@@ -377,6 +386,22 @@ are another lossy compression.  The faithful carrier joins arithmetic walls
 to geometric component/tooth incidence and retains core-generated
 denominators, instead of asking either quotient or a privileged divisor list
 to finish alone.
+
+THM-803 identifies the next exact layer. Both gate-sharp rows above are caught
+by the quarter anti-grid `11/52`. Every residual must have full
+parity-twisted support and silence on the universal `26,52,78` ladder. More
+importantly, with `K_U=E_U+closure(R_U)`, the entire erosion predicate is
+equivalent to its values at owner-labelled component endpoints and folded
+cusps, at most `200B^2+22B` points. The sharp replacement row
+
+```text
+U=(2,4,6,7,9,10,11,12,14,16),       (x,y)=(13,5)
+```
+
+passes every grid and both global maximizers but escapes on the nonmaximal
+singleton `7/22` (or, after return thickening, at `365/1144`). Thus the exact
+all-component selector is no longer missing; the open step is a uniform
+negative-margin or incompatibility theorem on its scale-dependent obligations.
 
 ### 1.6 Endpoint schedules are centered mechanical words
 
@@ -514,9 +539,11 @@ metric/core-incidence lift.
 
 THM-802 shows that this is a language phenomenon rather than a single
 once-per-owner family.  Its affine lifting lemma pumps every phase-realizable,
-prefix-legal loop with `d_a w_a^(-1)` constant modulo seven.  The explicit
-word has multiplicity `(1,...,1,2)`, repeats `H` times across the fixed
-core-safe interval `[2/15,1/7]`, and returns diagonally after each packet.  Yet
+prefix-legal loop with `d_a w_a^(-1)` constant modulo seven.  In every chosen
+nonempty open five-core-safe interval, an analytic density construction
+realizes all fundamental unequal one-fast classes `(1,...,1,k)`,
+`k=2,...,6`; the offsets and onset scale are existential, not effectively
+bounded. The explicit `k=2` word still supplies the quantitative family. Yet
 only three of the `181,440` words with that multiplicity are legal from the
 displayed state, and only one of the eight repeated-owner insertion positions
 sharing the same first-owner order works.  Thus owner multiplicity, reduced
@@ -687,9 +714,9 @@ phase substrate:
   a heavy joint-phase cell or, in a limit, the character relation lattice;
 
 arithmetic selectors:
-  odd-divisor deep classes, signed boundary walls, exception acceptance
-  shells, core-generated denominators, and their incidence with every
-  owner-labelled closed deep component;
+  odd-divisor and half-grid deep classes, signed/parity-twisted walls,
+  exception acceptance shells, and THM-803's owner-labelled endpoint/cusp
+  selector on K_U=E_U+closure(R_U);
 
 event address:
   exact wall positions, centered/global ranks, simultaneous blocks,
@@ -812,8 +839,9 @@ marked sequence, with the minimal-cover sets on both sides, is the
 **owner-switch skeleton**.
 
 THM-794 shows that this is still not the terminal quotient if every retained
-period is marked merely “active,” and THM-802 extends the obstruction to
-affine-pumpable unequal-multiplicity loops.  For an ordered packet path `P`, also retain
+period is marked merely “active,” and THM-802 extends the obstruction to an
+affine isotropy family containing all five fundamental unequal one-fast
+classes in every open core-safe interval. For an ordered packet path `P`, also retain
 its return class
 
 ```text
@@ -859,7 +887,7 @@ tournament.
 | runners or exception owners | earlier next wall; chronology versus reflected/Euclidean gauge | labelled pairwise order and edge flips | joint phase, metric scale, simultaneous ownership, sheet cover, and core-safe targeting |
 | moduli `q` | smaller blocker cost; pair-first versus compression-first gauge | fingerprints of a fixed small-period bank | multiplier identity and joint zero/signed-pair ownership; the tournament verdict can stay fixed while most edges flip |
 | witness obligations `(q,a)` | blocked by a named runner; switch multiplier or sign | the exact small-period predicate when kept as a hypergraph | scale-adaptive witnesses if collapsed to pairwise comparisons |
-| folded/signed grid classes | core multiplicity and sign occupancy; inversion as gauge | THM-797's exact deep-class, exception-shell, and one-sided-wall gate | core-generated non-divisor components and their signed tooth margins |
+| folded/signed/anti-grid classes | raw and parity-twisted multiplicity; inversion as gauge | THM-797's signed gate and THM-803's universal `26,52,78` ladder | non-grid endpoints/cusps and return-thickened component margins |
 | joint phase cells | same-cell equivalence; anchor subtraction | the simultaneous return and its measure | endpoint chronology and local blocker ownership; the relation is an equivalence, not naturally a tournament |
 | character obligations `m in Z^d` | eventual vanishing under a height sequence | the limiting subgroup and all stabilized linear relations | which safe component meets which wall; subgroup closure is again not antisymmetric |
 | safe components or top teeth | cyclic order, width, ordered flank owners | repeated collar incidence and tooth occupancy | exact sheet transport if reduced to an order tournament |
@@ -916,23 +944,25 @@ the irreducible sidecar.
 The branch is finite in principle, but the following uniform arguments are
 still missing.
 
-1. **Shallow full-residue rigidity from Hamming radius three onward.**  THM-770
+1. **Shallow full-residue rigidity at scale-one Hamming radius three and
+   beyond.** THM-770
    closes lift height twelve, THM-795 closes every arbitrary-height
    Hamming-one star around an AP dilation, and THM-800 closes the full
    Hamming-two star.  Its proof first forces both replacement deck orders to
    one at exact tightness, then gives the sharp normalized floor `2/25`.
-   What remains is a scale-free three-or-more-colour coherence theorem.
-   THM-804 currently reserves a plausible three-replacement common-scale
-   descent, but its proof audit and replay are unfinished and the normalized
-   Hamming-three chart remains open.
+   THM-804 now proves the three-replacement common-scale descent by an exact
+   half-open capacity/residue-ratio argument. What remains at radius three is
+   precisely the genuine scale-one triple-lift chart; radius at least four is
+   also open.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of
    `+/-y`, with `M(U)>=2/13` and strong exception-speed caps.  On that survivor,
-   compare every owner-labelled closed deep component and core-generated
-   denominator—not only argmax or exception divisors—with the signed folded
-   teeth, or show that THM-775's binary ownership tree cannot reach a terminal
-   hereditarily primitive base.
+   THM-803 further forces full parity-twisted support and the complete
+   `26,52,78` anti-grid ladder, then decides the full erosion predicate on an
+   exact owner-labelled endpoint/cusp set of size at most `200B^2+22B`. Prove
+   that some selector point escapes uniformly, or show that the joint selector
+   obligations are incompatible with THM-775's terminal ownership tree.
 3. **The even-maximum collar.**  THM-792 gives a bounded rational clock,
    repeated ordered flank types, and—on the forced `13`-multiple subbranch—a
    moving edge-cover automaton.  It excludes every `w=13c` through quotient
@@ -957,10 +987,12 @@ The corrected alternatives are precise.
 
 1. Prove that no deck blocks the **entire** closed core-safe set, or classify
    the exceptional whole-core covers.
-2. Define and bound the holonomy-reduced packet skeleton after persistent
-   exact seven-stalks and all affine-realizable, prefix-legal diagonal-return
-   loops—including unequal-multiplicity insertions—are contracted. Raw wall,
-   active-period, multiplicity, and bare-SCC bounds are all insufficient.
+2. Identify the affine diagonal-isotropy subgroupoid after persistent exact
+   seven-stalks, and quotient every decorated prefix-legal diagonal-return
+   loop—including all fundamental unequal one-fast classes—while retaining
+   its unreduced word, phase-cell germ, metric translation, and continuation
+   labels. Raw wall, active-period, multiplicity, and bare-SCC bounds are all
+   insufficient; arbitrary open core-safe localization cannot force exit.
 3. Use THM-783's period-sum, single-visitor, cluster-balance, and de-phasing
    laws to bound genuine transitions between reduced packet-return classes or
    their metric extent after both contractions.
