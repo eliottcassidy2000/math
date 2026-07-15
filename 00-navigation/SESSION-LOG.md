@@ -64244,3 +64244,20 @@ quotient leaves 32 components of `2^36` objects; each nonzero exact defect has
 remaining mathematical frontier is the smallest refinement for which the
 isomorphism-node and ordered-sidecar colouring becomes an equitable
 pushforward of this algebra.
+
+The last pull supplied THM-840's operation-kernel criterion.  It clarifies
+the word "recursive" in this conclusion: the kernel inclusion must be checked
+separately for defect composition, `A/B/C`, induced deletion, complement,
+reflection, lift, and CF transport.  The exact defect algebra closes the first
+operation; internal deletion still needs the shortcut seam beyond its `B`
+card.  The live target is therefore an operation-indexed congruence atlas.
+The reserved n9 face-purity file currently shares bare ID `THM-841` with an
+unrelated proved Farey violation-ladder theorem, so this synthesis cites its
+filename and does not use the ambiguous ID as a proved input.
+
+The same pull's small-size transitive-star observation is now an all-size
+corollary of THM-830.  Reversing a transitive arc of length `q` gives
+`H=1+2^(q-1)`, with multiplicity `n-q`; each intermediate vertex independently
+chooses the block before the reversed lower endpoint or after the upper
+endpoint.  Thus the whole radius-one `H` multiset is proved without further
+enumeration.

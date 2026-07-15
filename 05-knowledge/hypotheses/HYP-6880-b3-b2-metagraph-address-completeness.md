@@ -4,7 +4,7 @@ title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph
 status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures, B3 continuation, and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839/842; exact gap-tournament and half-defect carrier proved by THM-830
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-842, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-840, THM-842, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -139,6 +139,14 @@ spectrum are explicit in THM-830.  Thus the open coherence problem is not in
 raw defect composition.  It is exactly whether the nonlinear colouring
 `c_n` together with the ordered sidecars can be refined to an equitable
 pushforward of that algebra.
+
+THM-840 turns continuation safety into an operation-indexed kernel test:
+`O` updates under `T` exactly when `ker(O) subset ker(O after T)`.  This
+prevents a static or composition-closed address from being called recursive
+without naming the action.  In particular, THM-830's `B` contraction is exact
+on gap tournaments, while induced internal deletion requires the separate
+shortcut seam.  The target is therefore a small family of compatible
+operation congruences, not one unqualified quotient.
 
 The preservation boundary is already exact.  Total weighted deletion roles
 collide at `n=5`; even deck totals plus `C3` collide between distinct score

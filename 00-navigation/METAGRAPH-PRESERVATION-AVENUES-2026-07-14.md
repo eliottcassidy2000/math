@@ -860,6 +860,11 @@ certificate clauses, and proof obligations.
   post-B bases in the `n=9` bank, but only 58 satisfy every ordered-state
   balance character.  Groupoid inversion symmetry is therefore necessary but
   not sufficient after raw-S2/node projection.
+- **Operation guard by THM-840:** test every proposed refinement against
+  `ker(O) subset ker(O after T)` separately for composition, each face,
+  induced deletion, reflection, complement, lift, and CF transport.  The raw
+  defect algebra passes composition; the bare gap face fails to encode induced
+  deletion without its seam word.
 - **Pull:** refine `c_n` until the disintegrated label products have constant
   composition/intersection numbers, or exhibit the first obstruction to any
   feasible coherent configuration.  Separately compute the three `S_3`
