@@ -1,3 +1,49 @@
+## opus-2026-07-15-S314+S315 -- THM-864 THE BEAT-LOCALIZATION LEMMA REFEREE-GRADE (sub-orbit exact APs + signed sawtooth cancellation; err <= 13 kappa rho/(y(p+q-1)) + dust; referee 111/111, worst 0.0044) + THE SWEEPS RUN (12 prefixes reported (2 complete), 762 patterns, 6,420,296 packets each PROVEN non-tight by exact rational certificate, 47 fallbacks (all resolved non-tight), 0 unresolved -- ZERO tight candidates; multi-cluster handoff list WRITTEN) + THE FAREY-14 LAW (depth-13 extremal ratios = 14th Farey row units, phi(14) = 6 per block, Y* = floor(x/14); Fibonacci edge law Y*(F_n,F_{n+1}) = F_{n-7} exact; golden = the depth-infinity FOIL, klein-S124 sharpened) (HYP-6925)
+
+Prompts (owner): [S314] prove the beat-localization lemma referee-grade and run the two
+cron sweeps. [S315] finish the sweeps, run the cron blocks, see how 6 speeds relate to
+primes and the Fibonacci rate (feels 6-periodic per past repo work) and Zeckendorf.
+
+THM-864: qB - pA = +-y => ||y alpha|| = q/A EXACTLY => the coincidence windows split into
+y interleaved exact APs (step q/A) trapped in beat-comb arcs; arc positions = perturbed
+1/y-net; the ENGINE is the signed sawtooth cancellation (the net-coverage function minus
+its mean is a period-1/y mean-zero sawtooth: SIGNED integral <= 1/y per E-component, not
+<= 1): E_net = 2 kappa rho/(y|J|); dust <= (8kappa+10y+8)/(13B). SHARPER than the THM-863
+conjecture -- (p+q) lands in the DENOMINATOR. Referee: 111 planted-relation rows, zero
+domination failures, worst ratio 0.0044 (200x margin).
+
+SWEEPS: probe-first exact runner (a packet is proven non-tight by ONE exact rational safe
+point; fallback = full interval computation): 12 prefixes reported (2 complete), 762 patterns, 6,420,296 packets each PROVEN non-tight by exact rational certificate, 47 fallbacks (all resolved non-tight), 0 unresolved -- ZERO tight candidates; multi-cluster handoff list WRITTEN.
+Multi-cluster: X0 = 188; the six-speed handoff list -> THM-815 radius-6 recursion.
+
+THE FAREY-14 LAW (the owner's 6/primes/Fibonacci/Zeckendorf probe decoded): the repo's
+proven six = the mediant trichotomy N == 1 mod 6 (HYP-4572/4516); the NEW six = phi(14):
+at resonance depth 13 the extremal non-resonant ratio classes are EXACTLY the 14th Farey
+row's units (all top-10 scan hits; Y* = floor(x/14); primes > 7 all live there), SIX per
+14-block -- while the golden line reaches only 0.055x: at finite depth FIBONACCI IS THE
+FOIL (klein-S124) and LRC(14)'s own denominator is the lever: THE PROBLEM IS SELF-TUNED.
+THE FIBONACCI EDGE LAW (d'Ocagne, exact): Y*(F_n, F_{n+1}) = F_{n-7} at (13,21), verified
+n = 9..25 -- golden pairs are exponentially non-resonant (rate phi = 'the rate of the
+Fibonacci sequence'). Golden sawtooth is Pisano-28 (zeros at n = 13,14). Zeckendorf =
+the Ostrowski bookkeeping of the resonance ladder (depth-infinity regime only). The two
+sixes are DIFFERENT structures (6 = 2x3 vs 14 = 2x7; both unit-group counts -- lead, not
+law). Numerology killed: phi^-6 != 2833/50700 (1.5e-4 apart).
+
+HYGIENE: kps S128 cont.17-19 double-booked HYP-6920/6925 AFTER my first-pushed claims
+(mine are locked into THM-863/864 canon cross-refs); letter requests their renumber.
+Git incident: an ancient stash popped into the tree mid-rebase (nearly deleted fleet
+inbox files); caught by status inspection before push; lesson = verify stash identity
+before pop, never run long-running jobs writing INSIDE the repo during active rebases
+(the cron runner now writes to the scratchpad).
+
+NEXT (named): finish the cron blocks (spec: CRON-radius7-sweep-spec; ~787 prefixes, blocks of 50); feed the handoff list through THM-815; the Hunter tree construction
+should PREFER units/14-ratio edges (the Farey-14 optimization); the p/14-plateau vs the
+14-sheet resonance is the next exact question.
+
+FILES: THM-864; the Farey-14 reflection; CRON spec; handoff list; HYP-6925; 5 result
+files. opus; S314+S315.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.19) -- THE n=10 CENSUS: orbits(10) = 5582 = 53 SC + 5529 NS (Burnside-enumeration, 3.6M perms); FIRST NONTRIVIAL Aut on the quasi-fixed set ({1: 22362, 3: 12, 5: 2} -- even-n as predicted; excess row 0,4,0,4,0,32); blue self-lines return (2selfB = 48); six-term sequences complete n=5..10
 
 Prompt (owner): run the n=10 census rung via the same engine.

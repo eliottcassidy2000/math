@@ -1355,3 +1355,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `lemma_a_exact_floor_opus_S313.out` | [STORED] | THM-863 A/P: EXACT AP floor 2833/50700; |err|*N <= 0.6 over N = 100..1600; mechanism scan (pre-fix). | (self) |
 | `exceptional_prefix_positivity_opus_S313.out` | [STORED] | THM-863 P: 4 exceptional prefixes swept -- 1033 patterns, 0 positivity failures (exact witnesses). | (self) |
 | `pair_err_vs_resonance_opus_S313.out` | [STORED] | THM-863 E: 19-pair map -- err governed by Y* = min_{q,p<=13}|qx2-px1|; c5 ~ 0.06. | (self) |
+| `beat_lemma_battery_opus_S314.out` | [STORED] | THM-864 battery: ~100 planted relations; empirical worst 0.586 in the (p+q)/y form. | (self) |
+| `beat_lemma_referee_opus_S314.out` | [STORED] | THM-864 REFEREE: 111 rows, 0 domination failures, worst err/bound 0.0044; + SWEEP 1 flagship results; + SWEEP 2 handoff. | (self) |
+| `fibonacci_farey14_resonance_opus_S315.out` | [STORED] | THE FAREY-14 LAW: all top-10 Y* classes at units/14, Y* = floor(x/14); Fibonacci edge law Y* = F_{n-7} exact; golden foil 0.055x; Pisano-28 sawtooth; phi^-6 numerology killed. | (self) |
+| `radius7_cron_blocks_tail_opus_S315.out` + scratchpad progress | [STORED] | Cron blocks for remaining prefixes (per-prefix lines; continued per CRON spec). | (self) |
