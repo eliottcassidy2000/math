@@ -1,0 +1,27 @@
+THM-848 FORWARD-POLYNOMIAL / MOBIUS H-DRIFT REFEREE
+==============================================================================
+A_T(x)=sum_r H_(2r)(T)(1-x)^(2r)(1+x)^(n-1-2r)
+z=(1-x)/(1+x): A_T=(1+x)^(n-1) B_T(z)
+S A_T=(1+x)^(n-1)(-2 z d/dz)B_T
+e^(tS): B_T(z) -> B_T(exp(-2t)z)
+
+symbolic_generator_sizes=2..14 all eigenpolynomial assertions passed
+n=14 eigenvalues=0,-2,-4,-6,-8,-10,-12,-14,-16,-18,-20,-22,-24,-26
+exhaustive labelled tournament checks:
+  n=2 tournaments=2 even_modes=1 stalk_cells=1 walsh_raw_sha256=da3e59883b89334cfdb2f44a35bdab076caad9eed92a2af9674540e1abfc2edd
+  n=3 tournaments=8 even_modes=2 stalk_cells=2 walsh_raw_sha256=1425a23ebf2b35e9180d333e86fdc97dafb71892a308e5d68acedce5e744ad2a
+  n=4 tournaments=64 even_modes=2 stalk_cells=3 walsh_raw_sha256=e1d8dcbf6d6d0df5c28511b15c0b13fb08d9d7e30d4edf62072cd5cd4bf2abe4
+  n=5 tournaments=1024 even_modes=3 stalk_cells=8 walsh_raw_sha256=17e641f9a7dadd5fb57ff53a11a47ec055528d32f1f793f6536002e1b635d2cc
+
+Tournament Analysis:
+  vertices=even Mobius/Walsh modes H_0,H_2,...
+  pairwise observable=generator decay rate difference
+  switch/gauge=orient slower decay toward faster decay (increasing degree)
+  score histogram at n=14=0:1,1:1,2:1,3:1,4:1,5:1,6:1
+  directed cycles=0; SCCs=7 singletons; Hamiltonian paths=1
+  tie path=degree order (no ties because eigenvalues -4r are distinct)
+  preserves=full averaged flip semigroup and every forward-count coefficient
+  destroys=arc labels,directional currents,runner gaps,scale,owners,loneliness
+  challenged assumption=tournament vertices are spectral proof obligations, not arcs
+source_sha256=38035c53d2c76071549b3225e268d5a58c11944eaf7d5ceddc3837c5676d4138
+ALL ASSERTIONS PASSED

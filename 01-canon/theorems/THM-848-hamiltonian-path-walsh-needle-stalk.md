@@ -1,7 +1,7 @@
 ---
 id: THM-848
 title: The Hamiltonian-path Walsh needle stalk gives the exact all-size H-drift and the first missing node colour
-status: PROVED ALL n (needle boundary identity, Walsh/OCF drift, exact level-energy EGF, Krylov sufficiency/minimality, and n<=6 closed forms) + FINITE-EXACT (all converse-merged nodes n=4..7; hash-guarded directional-gradient classifier n=4..8)
+status: PROVED ALL n (needle boundary identity, Walsh/OCF drift, exact level-energy EGF, Krylov sufficiency/minimality, Mobius radial-dilation functional form, and n<=6 closed forms) + FINITE-EXACT (all converse-merged nodes n=4..7; hash-guarded directional-gradient classifier n=4..8)
 source: codex-2026-07-15-S15
 depends_on: [THM-062, THM-076, THM-163, THM-203, THM-259, THM-833]
 related: [THM-013, THM-201, THM-204, THM-217, THM-589, THM-785, THM-791, THM-810, THM-830, THM-840, HYP-2268, HYP-6900]
@@ -12,6 +12,8 @@ verification:
   - 04-computation/h_drift_K_second_krylov_referee_codex_S14.py
   - 05-knowledge/results/h_drift_K_second_krylov_referee_codex_S14.out
   - 05-knowledge/results/h_drift_K_second_krylov_n8_codex_S14.out
+  - 04-computation/h_drift_forward_polynomial_mobius_codex_S15.py
+  - 05-knowledge/results/h_drift_forward_polynomial_mobius_codex_S15.out
 ---
 
 # THM-848 - the Hamiltonian-path Walsh needle stalk
@@ -701,3 +703,71 @@ The `n=8` witness confirms that the hierarchy does not stop.  The number of
 nonconstant Walsh/OCF levels grows with `n`; `(H,K)` has only two moments.
 Formula (9.2), or equivalently the full stalk of §3, is the honest all-size
 closure. ∎
+
+## 10. The exact functional form: Mobius radial dilation
+
+Formula (9.2) diagonalizes without solving a new recurrence.  Put `m=n-1`
+and
+
+```text
+Phi_k(x)=(1-x)^k(1+x)^(m-k),       0<=k<=m.
+```
+
+For `L A=(1-x)[(1+x)A'-mA]`, direct differentiation gives
+
+```text
+L Phi_k=-2k Phi_k.                                      (10.1)
+```
+
+The full forward-adjacency polynomial has the exact expansion
+
+```text
+A_T(x)=sum_(r=0)^floor(m/2)
+       H_(2r)(T)(1-x)^(2r)(1+x)^(m-2r).                (10.2)
+```
+
+To prove it, sum `x^(number of forward adjacencies)` over all vertex orders
+and expand each consecutive-edge factor into its constant and signed parts.
+The degree-`k` term is a homogeneous degree-`k` Walsh polynomial times
+`Phi_k`.  Reversal of the order cancels odd `k`; taking the coefficient of
+`x^m` identifies the surviving coefficient with `H_(2r)`.  Equivalently, if
+`A_T=sum_j a_jx^j`, the inverse Krawtchouk formula is
+
+```text
+H_(2r)(T)=2^(-m) sum_(j=0)^m K_(2r)(j;m)a_j(T),         (10.3)
+```
+
+and every odd transform is zero.  Thus the forward-count vector, the full
+Walsh needle stalk, and the even Krawtchouk transform are three lossless
+coordinate systems for the same averaged-flip state.
+
+Now use the Mobius coordinate
+
+```text
+z=(1-x)/(1+x),
+B_T(z)=sum_r H_(2r)(T)z^(2r).
+```
+
+Then (10.2) and (10.1) become
+
+```text
+A_T(x)=(1+x)^m B_T(z),
+S A_T=(1+x)^m[-2z B_T'(z)],                             (10.4)
+e^(tS)A_T=(1+x)^m B_T(e^(-2t)z).                       (10.5)
+```
+
+This is the requested functional form.  The continuous flip-sum flow is
+literal radial dilation in `z`; the discrete uniform-flip chain multiplies
+the `2r` mode by `(1-4r/M)^t`.  The apparently nonlinear scalar `H` profile
+is evaluation at `x`'s top coefficient after projecting away the radial
+modes.  The first split of an `H` fibre, and the later split of an `(H,K)`
+fibre, are therefore projection collisions rather than failures of a hidden
+one-variable mean-reversion law.
+
+For Tournament Analysis, take the even modes as vertices and orient a pair
+from slower to faster generator decay.  At `n=14` this is the transitive
+seven-vertex tournament with score histogram `0,...,6`, no directed cycle,
+seven singleton SCCs, and one Hamiltonian path.  This quotient preserves the
+entire averaged flip semigroup and every `a_j`, but destroys arc labels,
+directional currents, and all LRC metric data.  The useful vertices are thus
+spectral proof obligations, not tournament arcs or runners. ∎

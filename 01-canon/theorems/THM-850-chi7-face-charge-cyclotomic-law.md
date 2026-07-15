@@ -486,6 +486,15 @@ full seven-mask carrier or its negative Fano line.  A whole speed predicate
 may contribute from both ends of a cyclic gap, so this is an obstruction for
 the endpoint-needle model, not for arbitrary triples of speeds.
 
+THM-741's portable exact lane has now closed the literal flood edges `(5,7)`
+and `(6,7)`: respectively `28,847` and `73,323` residual bottom sweeps are all
+positive, with minima `7/858` and `97/4004`.  These are two independent metric
+computations, not consequences of their Fano flags or Heawood coordinates.
+Nineteen literal flood edges remain.  This is a useful positive control for
+the carrier diagnosis: the rank-eight cycle repair encodes either input
+completely, yet no known function of those coordinates supplies its positive
+clearance margin without the interval recursion.
+
 Equations (20)-(21) still say only that operation depth four is the first
 depth with neutral repeated-role words beyond the balanced `ABC` word.  The
 Fano edge partition organizes the 21 flood inputs but does not close their

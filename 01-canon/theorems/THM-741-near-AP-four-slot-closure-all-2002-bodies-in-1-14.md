@@ -18,6 +18,7 @@ related:
 verification:
   - 04-computation/lrc14_j4_flood_portable_pruner_codex_S14.py
   - 05-knowledge/results/lrc14_j4_flood_57_exact_codex_S14.out
+  - 05-knowledge/results/lrc14_j4_flood_67_exact_codex_S15.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -52,7 +53,7 @@ survived testing — see below).
 - [ ] overnight run launched (heavy-first, resume-safe JSONL, cpu−2 workers)
 - [ ] all 2002 bodies clean; tight census; verdict
 
-## Portable fixed-`E2` pruning addendum (codex-S14): first flood body closed
+## Portable fixed-`E2` pruning addendum (codex-S14/S15): two flood bodies closed
 
 The original driver hard-codes a Windows scratch path, and its reported
 `171/2002` body ledger is not present in this checkout.  The portable
@@ -115,4 +116,29 @@ at `{1,2,3,4,5,7,8,9,10,11,12,13,14}`.  Hence **the `(5,7)` flood body is
 closed uniformly over all four added speeds**.  This is one of the 21 flood
 bodies, not a quotient representative: the remaining 20 require their own
 exact runs.  THM-741 therefore remains `CLAIMED`; this addendum establishes
-one rigorous flood row and a portable pruning invariant for the rest. ∎
+one rigorous flood row and a portable pruning invariant for the rest.
+
+The same unmodified exact driver closes a second, genuinely different row,
+
+```text
+E_(6,7)={6,7,8,9,10,11,12,13,14}.
+```
+
+Here the exact tree has
+
+```text
+root: r=20, m=24289/105105, V1=164;
+E1/E2/v3 nodes:                       154 / 17,296 / 1,028,036;
+P2-preclosed v3 nodes:                                      354,361;
+exact-m3 nodes / closed without E3:                673,675 / 664,115;
+residual E3 nodes / exact bottom sweeps:               9,560 / 73,323;
+fallback nodes:                                                   0.
+```
+
+All `73,323` bottom measures are positive.  The smallest is `97/4004`, at
+`{1,2,3,5,6,7,8,9,10,11,12,13,14}`.  Hence the `(6,7)` flood body is also
+closed uniformly over all four added speeds.  This is a literal second edge,
+not a Fano or tournament transport of `(5,7)`: the eight-dimensional Heawood
+cycle sector and the metric interval data forbid that quotient.  Thus two of
+the 21 flood bodies are exact, and nineteen still require independent closure;
+THM-741 remains `CLAIMED`. ∎
