@@ -866,18 +866,6 @@ Hamming-three star; and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
-THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
-radius at least four after THM-804 (THM-806 is an audit-in-progress attack;
-THM-810's order-three coset interface is reserved but not yet available as a
-THM-778/779/783/786/788/794/802; Hamming radius at least four after
-THM-795/800/804/806 close all smaller charts
-(THM-810 reduces radius four to the scale-one quadruple chart and an exact
-order-three coset interface but does not close either metric family); and a
-scale-normal argument for
-clustered comparable-size far frequencies after THM-799 closes the fully
-lacunary flags.
-
 FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
