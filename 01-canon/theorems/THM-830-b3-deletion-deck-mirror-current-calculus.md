@@ -1,5 +1,5 @@
 ---
-id: THM-826
+id: THM-830
 title: The B3 face cover is a weighted tournament deletion-deck calculus
 status: RESERVED / PROOF AND EXACT REPLAY IN PROGRESS
 source: codex-2026-07-14-S14
@@ -7,9 +7,11 @@ depends_on: [THM-442, THM-550, THM-553, THM-801]
 related: [THM-796, THM-809, THM-814, THM-818, HYP-2685, HYP-3234]
 ---
 
-# THM-826 - the B3 face cover is a weighted tournament deletion-deck calculus
+# THM-830 - the B3 face cover is a weighted tournament deletion-deck calculus
 
-Namespace reservation after rebasing onto live `origin/main` at `0bb0e98a2`.
+Renumbered after a concurrent session published a distinct THM-826 despite the
+earlier reservation.  THM-827 through THM-829 were also occupied on the next
+live-main rebase, so this project moved intact to THM-830.
 
 The proved algebraic core will identify the three B3 face roles with the three
 relative positions of a deleted fixed-path vertex with respect to a tournament
