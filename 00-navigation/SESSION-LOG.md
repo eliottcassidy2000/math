@@ -1,3 +1,53 @@
+## opus-2026-07-15-S313 -- THM-863: THE RADIUS-7 CROSSING QUANTIFIED on codex-S14's corrected sawtooth law -- floor rho >= 1/78 unique at (1,12) PROVED; THE KNIFE-EDGE IDENTITY 143m' = 1001 = 7x11x13 (m' = 7 exactly); 3-speed lemma => UNCONDITIONAL tree gap phi* = 17/546; Lemma A rate + EXACT AP floor 2833/50700; positivity ALL 792 prefixes (788 mechanized + 4 exceptions swept 1033/1033); the sharp resonance functional Y* (q,p <= 13) with the beat-route proof shape; radius 7 = per-packet DECIDABLE + one named lemma + cron-scale sweeps (HYP-6920)
+
+Prompt (owner): prove the two THM-856 quantifications and close radius 7.
+
+INTEGRATION FIRST: codex-S14 had corrected my THM-856 (global formula FALSE: rho(6,7) =
+2/91, rho(5,9) = 4/195; capped sawtooth law; projective pullback 2c_E/g; my d~8/
+quadrature/closure claims withdrawn). Everything below builds on the corrected law
+(T-formula verified vs brute force, 10 pairs).
+
+PROVED: [F] rho >= 1/78 unique at (1,12): T >= 4ab/13 - 2a by integral comparison (one
+paragraph) + exact b <= 14 scan. [K] threshold ties floor iff 143m' = 1001 = 7x11x13 iff
+m' = 7: the worst ratio ties the Hunter threshold EXACTLY at seven combs -- 1001 = C(14,4)
+resurfaces as the knife-edge equation. [T3] 3-speed lemma (c3 = 2/105, 10 low channels,
+quotients never low; tails via the same integral bound) => low graph triangle-free =>
+every 7-packet has a spanning tree with Sum rho >= 5c3 + 1/78 = 59/546 > 42/546:
+phi* = 17/546 UNCONDITIONAL (empirical min-maxtree 0.142). [A] skew-Koksma rate
+|uncovered - integral_E a| <= C_A/N (explicit; empirical |err|*N <= 0.6); EXACT AP floor
+integral_E a_(0..6) = 2833/50700 at prefix {1..5} -- the withdrawn 0.0558 quadrature
+value was right, now referee-grade. [P] positivity for ALL 792 prefixes: B1 = q <= 6
+pigeonhole (7 differences among <= 6 classes collide => <= 6 effective arcs => a >= 1/26
+on an explicit window), B2 = q = 13 adjacent-EMPTY-slot dilation (any difference in the
+6-element complement has an inverse dilation; margin q'p != 0,+-1 mod 13) -- predicate
+bug caught mid-session (S1 vs C1); 788 mechanized, 4 structured exceptions swept exactly
+(1033 patterns, 0 failures).
+
+E-RESTRICTION (quantification 2): proved regimes = codex projective law + equidistributed
+windows; the 19-pair exact map identifies THE SHARP FUNCTIONAL: err is governed by
+Y* = min_{q,p <= 13} |q x_j - p x_i| -- the large errors are EXACTLY small-q near-dilates
+(near-double offset 11: err 0.0043; near-triple offset 6: 0.0024; near-equal: 0.008);
+conjectured sharp law err <= C(q+p)kappa_E/|qx_j - px_i| (~0.06/Y*), budget needs
+Y* >= ~100; PROOF SHAPE = the S312 beat argument at the derived speed y = qx_j - px_i.
+Standard ET proves a Q0 ~ 2500 version (mid-q residue); the beat route gives the sharp
+13, matching the sheet canon scope for the residue (THM-760/761/772/668).
+
+STATUS OF CLOSE-RADIUS-7: per-packet EXACTLY DECIDABLE now (compute E-restricted
+overlaps, apply Hunter -- re-arms THM-815 Part C); uniform closure = [single-cluster:
+PROVED with explicit N0(P, dvec)] + [multi-cluster non-resonant: PROVED modulo the
+beat-localization lemma] + [near-dilate: sheet canon] + [finite cores: THM-738-shaped
+cron sweeps, named]. One lemma and two sweeps from unconditional.
+
+FLEET: built on codex-S14's corrections (credited in banners); kps cont.15's W =
+8,20,88,416 independently confirms my S312 weighted counts.
+
+NEXT (named): the beat-localization lemma referee-grade (one session); the two cron
+sweeps; the n=9 Lemma-A analogue is nearly free (mechanisms are n-uniform); the K-drift
+second moment (codex handoff) stands.
+
+FILES: THM-863; THM-856 banner; HYP-6920; 4 result files. opus; S313.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.15) -- THE SELF-LINE SEQUENCE ATLAS: W(n) = 8, 20, 88, 416 (Burnside-affine; excess over |X| is EVEN-n only, mirroring blue self-lines) + |Y|(n) = SC fiber mass = 52, 240, 7308 (new sequence; transpose bug caught in-session by a score-multiset census, 52 = 64-12 exact) + factorization ledger for 2,3,22,101 (101 prime; decoder open, n=7 carrier multiplicities the key); j=4 at 290/2002 clean
 
 Prompt (owner): investigate 2,3,22,101 and kin; define new sequences; track everything.

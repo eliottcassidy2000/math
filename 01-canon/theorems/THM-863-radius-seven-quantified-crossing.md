@@ -121,13 +121,29 @@ Proved regimes for err: (i) **the projective pullback law** (codex-S14):
 err ≤ 2c_E/g along the common scale g = gcd(x_i, x_j); (ii)
 **equidistributed-window pairs** (e.g. consecutive-type, where the
 coincidence-window positions step by (x_j⁻¹ mod x_i)/x_i ≈ uniform): err ≤
-O(κ_E/x_min). The remaining case is g small with the window orbit clustered,
-which requires |q·x_j − p·x_i| ≤ Y₀ for small (p,q) — a NEAR-DILATE relation:
-either the packet admits a tree avoiding all such edges (then the budget
-closes with the φ* margin), or the packet is pervasively near-dilate and
-descends by the sheet/dilate canon (THM-760/761/772; detuned THM-668). **The
-one open constant is the explicit err bound for non-resonant g = 1 pairs (the
-short-orbit three-distance inequality); everything else above is proved.**
+O(κ_E/x_min).
+
+**The sharp resonance functional (S313 empirics + named lemma).** Define
+Y*(x_i, x_j) = min_{1 ≤ q, p ≤ 13} |q·x_j − p·x_i| (the small-q near-dilate
+distance). The 19-pair exact map shows the error is governed by Y*, NOT by
+raw speed or deep-q resonances: the large errors are exactly the small-q
+near-dilates ((785,1581): near-double, offset 11, err 0.0043; (455,1371):
+near-triple, offset 6, err 0.0024; near-equal d ≤ 7 pairs: err ≈ 0.008),
+while all Y*-large pairs sit at err ≤ 0.001. Conjectured sharp law (with the
+PROOF SHAPE identified — the S312 beat argument run at the (q,p)-derived
+speed y = qx_j − px_i, whose coarse comb the overlap localizes on):
+
+> **err ≤ C·(q+p)·κ_E / |q·x_j − p·x_i|** per relation, hence
+> err ≤ c₅/Y* with empirical c₅ ≈ 0.06.
+
+Budget: per tree edge the φ* margin affords err ≤ μE·φ*/12 ≥ 0.0006, i.e.
+**Y* ≥ ~100 suffices**. Either the packet admits a spanning tree with all
+edges Y*-non-resonant (budget closes), or it carries pervasive small-q
+near-dilate relations (q, p ≤ 13, offset ≤ ~100) — EXACTLY the scope of the
+sheet/dilate canon (THM-760/761/772; detuned THM-668). **The one open item is
+the referee-grade proof of the boxed beat-localization lemma (standard ET
+gives it with Q₀ ≈ 2500 instead of 13 — provable but with a mid-q residue;
+the beat route at derived speed y gives the sharp 13).**
 
 ## The closure statement
 
