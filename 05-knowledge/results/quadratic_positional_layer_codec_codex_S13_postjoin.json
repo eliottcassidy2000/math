@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "theorem": "THM-825",
+  "carrier_definition": "per-state power sums M_j(c), including M_0 counts",
+  "census": {
+    "2": {
+      "1": {
+        "0": {
+          "words": 2,
+          "cells": 2,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "1": {
+          "words": 2,
+          "cells": 2,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 2,
+          "cells": 2,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "2": {
+        "0": {
+          "words": 4,
+          "cells": 3,
+          "collision_cells": 1,
+          "collision_excess": 1,
+          "collision_pairs": 1,
+          "max_fibre": 2
+        },
+        "1": {
+          "words": 4,
+          "cells": 4,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 4,
+          "cells": 4,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "3": {
+        "0": {
+          "words": 8,
+          "cells": 4,
+          "collision_cells": 2,
+          "collision_excess": 4,
+          "collision_pairs": 6,
+          "max_fibre": 3
+        },
+        "1": {
+          "words": 8,
+          "cells": 8,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 8,
+          "cells": 8,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "4": {
+        "0": {
+          "words": 16,
+          "cells": 5,
+          "collision_cells": 3,
+          "collision_excess": 11,
+          "collision_pairs": 27,
+          "max_fibre": 6
+        },
+        "1": {
+          "words": 16,
+          "cells": 15,
+          "collision_cells": 1,
+          "collision_excess": 1,
+          "collision_pairs": 1,
+          "max_fibre": 2
+        },
+        "2": {
+          "words": 16,
+          "cells": 16,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "5": {
+        "0": {
+          "words": 32,
+          "cells": 6,
+          "collision_cells": 4,
+          "collision_excess": 26,
+          "collision_pairs": 110,
+          "max_fibre": 10
+        },
+        "1": {
+          "words": 32,
+          "cells": 26,
+          "collision_cells": 6,
+          "collision_excess": 6,
+          "collision_pairs": 6,
+          "max_fibre": 2
+        },
+        "2": {
+          "words": 32,
+          "cells": 32,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "6": {
+        "0": {
+          "words": 64,
+          "cells": 7,
+          "collision_cells": 5,
+          "collision_excess": 57,
+          "collision_pairs": 430,
+          "max_fibre": 20
+        },
+        "1": {
+          "words": 64,
+          "cells": 42,
+          "collision_cells": 16,
+          "collision_excess": 22,
+          "collision_pairs": 28,
+          "max_fibre": 3
+        },
+        "2": {
+          "words": 64,
+          "cells": 64,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "7": {
+        "0": {
+          "words": 128,
+          "cells": 8,
+          "collision_cells": 6,
+          "collision_excess": 120,
+          "collision_pairs": 1652,
+          "max_fibre": 35
+        },
+        "1": {
+          "words": 128,
+          "cells": 64,
+          "collision_cells": 32,
+          "collision_excess": 64,
+          "collision_pairs": 110,
+          "max_fibre": 5
+        },
+        "2": {
+          "words": 128,
+          "cells": 126,
+          "collision_cells": 2,
+          "collision_excess": 2,
+          "collision_pairs": 2,
+          "max_fibre": 2
+        }
+      }
+    },
+    "4": {
+      "1": {
+        "0": {
+          "words": 4,
+          "cells": 4,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "1": {
+          "words": 4,
+          "cells": 4,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 4,
+          "cells": 4,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "2": {
+        "0": {
+          "words": 16,
+          "cells": 10,
+          "collision_cells": 6,
+          "collision_excess": 6,
+          "collision_pairs": 6,
+          "max_fibre": 2
+        },
+        "1": {
+          "words": 16,
+          "cells": 16,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 16,
+          "cells": 16,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "3": {
+        "0": {
+          "words": 64,
+          "cells": 20,
+          "collision_cells": 16,
+          "collision_excess": 44,
+          "collision_pairs": 96,
+          "max_fibre": 6
+        },
+        "1": {
+          "words": 64,
+          "cells": 64,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        },
+        "2": {
+          "words": 64,
+          "cells": 64,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "4": {
+        "0": {
+          "words": 256,
+          "cells": 35,
+          "collision_cells": 31,
+          "collision_excess": 221,
+          "collision_pairs": 1230,
+          "max_fibre": 24
+        },
+        "1": {
+          "words": 256,
+          "cells": 250,
+          "collision_cells": 6,
+          "collision_excess": 6,
+          "collision_pairs": 6,
+          "max_fibre": 2
+        },
+        "2": {
+          "words": 256,
+          "cells": 256,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "5": {
+        "0": {
+          "words": 1024,
+          "cells": 56,
+          "collision_cells": 52,
+          "collision_excess": 968,
+          "collision_pairs": 15240,
+          "max_fibre": 60
+        },
+        "1": {
+          "words": 1024,
+          "cells": 952,
+          "collision_cells": 72,
+          "collision_excess": 72,
+          "collision_pairs": 72,
+          "max_fibre": 2
+        },
+        "2": {
+          "words": 1024,
+          "cells": 1024,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "6": {
+        "0": {
+          "words": 4096,
+          "cells": 84,
+          "collision_cells": 80,
+          "collision_excess": 4012,
+          "collision_pairs": 191520,
+          "max_fibre": 180
+        },
+        "1": {
+          "words": 4096,
+          "cells": 3428,
+          "collision_cells": 616,
+          "collision_excess": 668,
+          "collision_pairs": 744,
+          "max_fibre": 6
+        },
+        "2": {
+          "words": 4096,
+          "cells": 4096,
+          "collision_cells": 0,
+          "collision_excess": 0,
+          "collision_pairs": 0,
+          "max_fibre": 1
+        }
+      },
+      "7": {
+        "0": {
+          "words": 16384,
+          "cells": 120,
+          "collision_cells": 116,
+          "collision_excess": 16264,
+          "collision_pairs": 2467584,
+          "max_fibre": 630
+        },
+        "1": {
+          "words": 16384,
+          "cells": 11500,
+          "collision_cells": 3828,
+          "collision_excess": 4884,
+          "collision_pairs": 6384,
+          "max_fibre": 6
+        },
+        "2": {
+          "words": 16384,
+          "cells": 16360,
+          "collision_cells": 24,
+          "collision_excess": 24,
+          "collision_pairs": 24,
+          "max_fibre": 2
+        }
+      }
+    }
+  },
+  "quadratic_exact_max_layer_size": 6,
+  "staircase_exact_through_n": 15,
+  "first_staircase_failure_size": 16,
+  "length7_witness": {
+    "left": [
+      0,
+      4,
+      5
+    ],
+    "right": [
+      1,
+      2,
+      6
+    ],
+    "common_M0_M1_M2": [
+      3,
+      9,
+      41
+    ],
+    "binary_full_key_equal": true,
+    "four_state_full_key_equal": true
+  },
+  "geometry": [
+    {
+      "n": 5,
+      "nonfixed": [
+        1,
+        1
+      ],
+      "max_nonfixed": 1,
+      "max_nonfixed_formula": 1,
+      "fixed": 2,
+      "fixed_free_after_apex_zero": 1,
+      "fixed_free_formula": 1
+    },
+    {
+      "n": 6,
+      "nonfixed": [
+        1,
+        1,
+        2
+      ],
+      "max_nonfixed": 2,
+      "max_nonfixed_formula": 2,
+      "fixed": 2,
+      "fixed_free_after_apex_zero": 1,
+      "fixed_free_formula": 1
+    },
+    {
+      "n": 7,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "max_nonfixed": 2,
+      "max_nonfixed_formula": 2,
+      "fixed": 3,
+      "fixed_free_after_apex_zero": 2,
+      "fixed_free_formula": 2
+    },
+    {
+      "n": 8,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "max_nonfixed": 3,
+      "max_nonfixed_formula": 3,
+      "fixed": 3,
+      "fixed_free_after_apex_zero": 2,
+      "fixed_free_formula": 2
+    },
+    {
+      "n": 9,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "max_nonfixed": 3,
+      "max_nonfixed_formula": 3,
+      "fixed": 4,
+      "fixed_free_after_apex_zero": 3,
+      "fixed_free_formula": 3
+    },
+    {
+      "n": 10,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "max_nonfixed": 4,
+      "max_nonfixed_formula": 4,
+      "fixed": 4,
+      "fixed_free_after_apex_zero": 3,
+      "fixed_free_formula": 3
+    },
+    {
+      "n": 11,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "max_nonfixed": 4,
+      "max_nonfixed_formula": 4,
+      "fixed": 5,
+      "fixed_free_after_apex_zero": 4,
+      "fixed_free_formula": 4
+    },
+    {
+      "n": 12,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "max_nonfixed": 5,
+      "max_nonfixed_formula": 5,
+      "fixed": 5,
+      "fixed_free_after_apex_zero": 4,
+      "fixed_free_formula": 4
+    },
+    {
+      "n": 13,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "max_nonfixed": 5,
+      "max_nonfixed_formula": 5,
+      "fixed": 6,
+      "fixed_free_after_apex_zero": 5,
+      "fixed_free_formula": 5
+    },
+    {
+      "n": 14,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6
+      ],
+      "max_nonfixed": 6,
+      "max_nonfixed_formula": 6,
+      "fixed": 6,
+      "fixed_free_after_apex_zero": 5,
+      "fixed_free_formula": 5
+    },
+    {
+      "n": 15,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6
+      ],
+      "max_nonfixed": 6,
+      "max_nonfixed_formula": 6,
+      "fixed": 7,
+      "fixed_free_after_apex_zero": 6,
+      "fixed_free_formula": 6
+    },
+    {
+      "n": 16,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6,
+        7
+      ],
+      "max_nonfixed": 7,
+      "max_nonfixed_formula": 7,
+      "fixed": 7,
+      "fixed_free_after_apex_zero": 6,
+      "fixed_free_formula": 6
+    },
+    {
+      "n": 17,
+      "nonfixed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6,
+        7,
+        7
+      ],
+      "max_nonfixed": 7,
+      "max_nonfixed_formula": 7,
+      "fixed": 8,
+      "fixed_free_after_apex_zero": 7,
+      "fixed_free_formula": 7
+    }
+  ],
+  "tournament_analysis": {
+    "vertices": [
+      "M0",
+      "M0_M1",
+      "M0_M1_M2",
+      "literal_word"
+    ],
+    "pairwise_observable": "number of unordered four-state length-seven word pairs separated relative to M0",
+    "switches": [
+      "separation retention",
+      "separation retention per integer field"
+    ],
+    "tie_hamiltonian_path": [
+      "M0",
+      "M0_M1",
+      "M0_M1_M2",
+      "literal_word"
+    ],
+    "carrier_stats": {
+      "M0": {
+        "separated_pairs": 0,
+        "cells": 4
+      },
+      "M0_M1": {
+        "separated_pairs": 2461200,
+        "cells": 8
+      },
+      "M0_M1_M2": {
+        "separated_pairs": 2467560,
+        "cells": 12
+      },
+      "literal_word": {
+        "separated_pairs": 2467584,
+        "cells": 7
+      }
+    },
+    "retention": {
+      "gauge": "retention",
+      "vertices": [
+        "M0",
+        "M0_M1",
+        "M0_M1_M2",
+        "literal_word"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "economy": {
+      "gauge": "economy",
+      "vertices": [
+        "M0",
+        "M0_M1",
+        "M0_M1_M2",
+        "literal_word"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "edge_flips": 1
+  }
+}

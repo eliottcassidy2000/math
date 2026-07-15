@@ -1,0 +1,52 @@
+THM-825 QUADRATIC POSITIONAL-MOMENT LAYER CODEC
+========================================================================
+carrier: per-state M0=count, M1=sum(position), M2=sum(position^2)
+
+EXACT WORD CENSUS (cells/excess/max-fibre for degrees 0,1,2)
+states=2
+  size=1: d0:2/0/1  d1:2/0/1  d2:2/0/1
+  size=2: d0:3/1/2  d1:4/0/1  d2:4/0/1
+  size=3: d0:4/4/3  d1:8/0/1  d2:8/0/1
+  size=4: d0:5/11/6  d1:15/1/2  d2:16/0/1
+  size=5: d0:6/26/10  d1:26/6/2  d2:32/0/1
+  size=6: d0:7/57/20  d1:42/22/3  d2:64/0/1
+  size=7: d0:8/120/35  d1:64/64/5  d2:126/2/2
+states=4
+  size=1: d0:4/0/1  d1:4/0/1  d2:4/0/1
+  size=2: d0:10/6/2  d1:16/0/1  d2:16/0/1
+  size=3: d0:20/44/6  d1:64/0/1  d2:64/0/1
+  size=4: d0:35/221/24  d1:250/6/2  d2:256/0/1
+  size=5: d0:56/968/60  d1:952/72/2  d2:1024/0/1
+  size=6: d0:84/4012/180  d1:3428/668/6  d2:4096/0/1
+  size=7: d0:120/16264/630  d1:11500/4884/6  d2:16360/24/2
+
+SHARP BOUNDARY
+  exact for every binary/four-state word of length <= 6
+  first witness left/right=[0, 4, 5]/[1, 2, 6]
+  common (M0,M1,M2)=[3, 9, 41]
+
+STAIRCASE B2 GEOMETRY
+  n= 5: max_nonfixed=1 fixed/free=2/1
+  n= 6: max_nonfixed=2 fixed/free=2/1
+  n= 7: max_nonfixed=2 fixed/free=3/2
+  n= 8: max_nonfixed=3 fixed/free=3/2
+  n= 9: max_nonfixed=3 fixed/free=4/3
+  n=10: max_nonfixed=4 fixed/free=4/3
+  n=11: max_nonfixed=4 fixed/free=5/4
+  n=12: max_nonfixed=5 fixed/free=5/4
+  n=13: max_nonfixed=5 fixed/free=6/5
+  n=14: max_nonfixed=6 fixed/free=6/5
+  n=15: max_nonfixed=6 fixed/free=7/6
+  n=16: max_nonfixed=7 fixed/free=7/6
+  n=17: max_nonfixed=7 fixed/free=8/7
+  S2+M1+M2 literal-exact through n=15
+  first layer-level failure at n=16
+
+TOURNAMENT ANALYSIS (information carriers as planning vertices)
+  vertices=('M0', 'M0_M1', 'M0_M1_M2', 'literal_word')
+  observable=number of unordered four-state length-seven word pairs separated relative to M0
+  switches=('separation retention', 'separation retention per integer field')
+  edge flips=1
+
+Verdict: a quadratic positional sidecar is an unconditional literal
+mirror-layer repair throughout every staircase size relevant to LRC(14).
