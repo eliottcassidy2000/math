@@ -187,3 +187,73 @@ print()
 fails = [n for n, c in OK if not c]
 print(f"=== {len(OK)} checks, {len(OK) - len(fails)} passed, {len(fails)} failed ===")
 for f in fails: print("FAILED:", f)
+
+# ================= (W) THE PAIR-SPREAD WITNESS CRITERION =================
+# Covering x forces S_2 >= 6/7 (convexity: minimize sum C(k,2) mu_k under R0/R1, mu_0=0:
+# support {1,2} => 6/7).  Contrapositive: S_2(x) < 6/7 ==> mu_0(x) > 0 ==> maxgap > 1/7:
+# a WITNESS from pair data alone: S_2(x) = sum_{i<j} max(0, 1/7 - ||(e_i-e_j) x||).
+def S2_pairs(E, x):
+    tot = Fr(0)
+    for i in range(len(E)):
+        for j in range(i + 1, len(E)):
+            d = ((E[j] - E[i]) * x) % 1
+            dist = min(d, 1 - d)
+            if dist < W: tot += W - dist
+    return tot
+ok_w, fires = True, {}
+for name, E in INSTANCES.items():
+    fires[name] = []
+    best = None
+    for q in range(7, 400):
+        for a in range(1, min(q, 8)):
+            x = Fr(a, q)
+            s2 = S2_pairs(E, x)
+            if best is None or s2 < best[0]: best = (s2, x)
+            if s2 < Fr(6, 7):
+                fires[name].append(x)
+                if spectrum(E, x).get(0, Fr(0)) == 0: ok_w = False   # must be a witness
+    fires[name] = (len(fires[name]), best)
+check("(W) pair-spread witness criterion: S_2(x) < 6/7 ==> uncovered (verified everywhere it "
+      "fires); S_2 computed from the DIFFERENCE SET alone", ok_w)
+for name, (cnt, best) in fires.items():
+    print(f"   {name:>16s}: fires at {cnt:4d} sampled x; min S_2 = {float(best[0]):.4f} at x = {best[1]}"
+          + ("   <- NEVER fires (saturates the criterion)" if cnt == 0 else ""))
+print()
+fails = [n for n, c in OK if not c]
+print(f"=== FINAL {len(OK)} checks, {len(OK) - len(fails)} passed ===")
+
+# ================= (FT) THE FEJES TOTH FLOOR: why (W) is vacuous =================
+# S_2 as pure configuration energy: 13 arbitrary points, kernel tent = max(0, 1/7 - dist).
+# Fejes Toth (convex decreasing kernel => regular minimizes): min = 13*(1/7 - 1/13) = 6/7.
+# => S_2 >= 6/7 ALWAYS: the pair criterion can never fire; pair data cannot certify
+# loneliness (the precise second-moment wall). Minimal certifying moment order = 3.
+rngc = random.Random(7)
+ok_ft = True
+regular = [Fr(i, 13) for i in range(13)]
+def S2_config(pos):
+    tot = Fr(0)
+    for i in range(len(pos)):
+        for j in range(i + 1, len(pos)):
+            d = (pos[j] - pos[i]) % 1
+            dist = min(d, 1 - d)
+            if dist < W: tot += W - dist
+    return tot
+assert S2_config(regular) == Fr(6, 7)
+for _ in range(4000):
+    pos = sorted(Fr(rngc.randrange(1, 10007), 10007) for _ in range(13))
+    if S2_config(pos) < Fr(6, 7): ok_ft = False
+check("(FT) Fejes-Toth floor: S_2 >= 6/7 for ALL 13-point configurations (4000 random exact "
+      "trials; regular 13-gon attains 6/7 exactly) => the pair criterion is VACUOUS: the "
+      "second-moment wall, made pointwise and exact", ok_ft)
+# covering refinement: S_2 - excess = sum C(k-1,2) mu_k  (the >=3-fold mass meter)
+ok_meter = True
+for name, E in INSTANCES.items():
+    for q in (7, 13, 14, 20, 50):
+        mu = spectrum(E, Fr(1, q))
+        s2 = S_d_moment(mu, 2)
+        excess = sum((k - 1) * m for k, m in mu.items() if k >= 2)
+        if s2 - excess != sum(comb(k - 1, 2) * m for k, m in mu.items() if k >= 3): ok_meter = False
+check("(M3) S_2 - overlap excess = sum C(k-1,2) mu_k: for covering x, S_2 - 6/7 measures the "
+      ">=3-fold mass exactly (distance from rigidity, configurationally AND spectrally)", ok_meter)
+print()
+print(f"=== GRAND TOTAL {len(OK)} checks, {sum(1 for _,c in OK if c)} passed ===")

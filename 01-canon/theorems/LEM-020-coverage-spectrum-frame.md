@@ -52,6 +52,22 @@ C(13,2)/49 (equal spacing = maximal pair correlation; random clusters approach i
 TV-to-Binom(13,1/7) quantifies resonance). THM-863's ρ(a,b) ≥ 1/78 floors these summands;
 the (1,12) minimizer is the d = 2 champion pair — the corona onset one level down.
 
+## Addendum (same session): the Fejes Tóth floor — the second-moment wall, exact
+
+**(W)** Covering x forces S₂ ≥ 6/7 (convexity of C(k,2): minimal covering support {1,2}), so
+`S₂(x) < 6/7 ⟹ x is a witness` — a criterion from the DIFFERENCE SET alone:
+S₂(x) = Σ_{i<j} max(0, 1/7 − ‖(e_i−e_j)x‖).
+**(FT)** But the criterion is VACUOUS, and its vacuity is a theorem: S₂ is a pair energy with
+convex decreasing kernel, so by Fejes Tóth the regular 13-gon minimizes it:
+min = 13·(1/7 − 1/13) = **6/7 exactly, for ALL 13-point configurations** (4000 exact random
+trials; the tight AP attains it at x = 1/7). The universal pair-energy minimum EQUALS the
+covering budget. Hence **pair data can never certify loneliness** — the repo's second-moment
+wall ("unsigned OffLine bounds provably fail", the transform blindness memory), now pointwise,
+exact, and attributed: it is Fejes Tóth exactness. The minimal certifying moment order is 3.
+**(M3)** S₂ − overlap excess = Σ C(k−1,2)μ_k, so for covering x: **S₂ − 6/7 = the ≥3-fold
+mass** — one number measuring distance-from-rigidity both configurationally (FT deficit) and
+spectrally (champion-stack mass). The d = 3 pincer should be built on (M3), not on raw S₃.
+
 ## Next steps (named)
 1. Characterize ALL covering x with maxC = 2 across admissible clusters (are they exactly the
    clock witnesses of the sieve? the 5 found are all q ∈ {7, 13, 14}).

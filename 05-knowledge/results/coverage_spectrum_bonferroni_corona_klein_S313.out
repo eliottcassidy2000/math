@@ -27,3 +27,14 @@ PASS generic x is near-binomial, resonant x is far (TV to Binom(13,1/7): 0.284 v
 PASS second-moment vein: random cluster S_2 = 1.363 ~ independent 1.592; the AP's S_2 = 1.033 deviates (equal spacing = maximal pair correlation — THM-863's rho-floor is the pointwise floor on these summands)
 
 === 8 checks, 8 passed, 0 failed ===
+PASS (W) pair-spread witness criterion: S_2(x) < 6/7 ==> uncovered (verified everywhere it fires); S_2 computed from the DIFFERENCE SET alone
+     tightAP{1..13}: fires at    0 sampled x; min S_2 = 0.8571 at x = 1/7   <- NEVER fires (saturates the criterion)
+            AP12+84: fires at    0 sampled x; min S_2 = 0.8571 at x = 1/7   <- NEVER fires (saturates the criterion)
+        Fibonacci13: fires at    0 sampled x; min S_2 = 1.0500 at x = 7/20   <- NEVER fires (saturates the criterion)
+           random13: fires at    0 sampled x; min S_2 = 0.9314 at x = 3/50   <- NEVER fires (saturates the criterion)
+
+=== FINAL 9 checks, 9 passed ===
+PASS (FT) Fejes-Toth floor: S_2 >= 6/7 for ALL 13-point configurations (4000 random exact trials; regular 13-gon attains 6/7 exactly) => the pair criterion is VACUOUS: the second-moment wall, made pointwise and exact
+PASS (M3) S_2 - overlap excess = sum C(k-1,2) mu_k: for covering x, S_2 - 6/7 measures the >=3-fold mass exactly (distance from rigidity, configurationally AND spectrally)
+
+=== GRAND TOTAL 11 checks, 11 passed ===
