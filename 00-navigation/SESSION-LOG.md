@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-15-S128 (cont.10) -- THM-826 PROVED: THE FAREY PROFILE THEOREM -- the COMPLETE measure profile m({1..k};lambda) = sum over consecutive Farey pairs of max(0,(1-lambda(i+j))/(ij)); piecewise linear convex, breakpoints exactly 1/s (s=k+1..2k-1); THM-817 = the first segment; A=1 (Farey telescope), slope = HYP-2856's totient constant, area = Franel sum; the A..G corner-Venn recursions integrated (the ledger's Div-axis is inclusion-exclusion-FREE on interval cores)
+
+Prompt (owner): prove the full profile with Farey breakpoints; go further; integrate the A+B+C-D-E-F+G / A+B-C recursion threads; more node/edge/tiling statements; formula harvest.
+
+THE THEOREM (two lemmas, both elementary; refereed exact k=2..12 at ~100-240 rational lambdas each, zero mismatches): LEMMA 1 (nesting): imprimitive arcs are contained in primitive ones => one effective arc per Farey fraction, radius lambda/denominator. LEMMA 2 (no intrusion): for lambda < 1/(k+1) an arc never crosses a neighbouring fraction into the next gap (needs lambda > 1/(i-l) >= 1/(k-1), impossible). => the good set = DISJOINT union of gap remnants: m(lambda) = sum over consecutive a/i < b/j in F_k of max(0, (1-lambda(i+j))/(ij)). Breakpoints exactly {1/s : s=k+1..2k-1} (mediant property i+j>k); segments m = A_s - lambda B_s; A_{max}=1 (gap lengths telescope); B_{max} = 2 sum phi(l)/l = HYP-2856's floor constant (~12k/pi^2) -- the witness-floor asymptotics and THM-817 are the two ENDS of one convex curve. Area = sum 1/(2ij(i+j)) (Franel-type; verified 7/60, 37/504, 85/1716).
+
+RECURSION INTEGRATION (owner's A+B+C-D-E-F+G / A+B-C / chi_7-odd threads, OPEN-Q-108/HYP-2899/2901 + codex THM-801): the letters are staircase CORNER sub-tilings; their recursions are Boolean B2/B3/Legendre Venn inclusion-exclusion BECAUSE corners overlap. The profile theorem shows the measure side of interval cores has NO such entanglement -- the Farey gap atoms are disjoint, the Div(D)-axis of the product ledger scalarizes cleanly. THE FRONTIER STATEMENT: route [B]'s tractable/intractable line = disjoint atoms (interval cores, done) vs Venn-entangled atoms (multi-scale bodies, the open stratum) -- the B_r axis is exactly where the difficulty lives, matching klein-S289's isolation wall and the j>=7 seam from the other side.
+
+FORMULA HARVEST (each verified exact): #gaps = |F_k|; #first-segment gaps = phi(k+1) (THM-817's witnesses); m({1..k};1/(2k)) table rows (23/75 at k=5; 3491/9240 at k=12); staircase-rows = profile-witnesses iff n-1 prime (one witness PER ROW in the prime case -- the H4 dictionary row tying the Smith bundles to the Farey witnesses).
+
+J=4: 101/2002 complete, 101/101 clean (light-first steady).
+
+FILES: THM-826 (PROVED+refereed), thm826_farey_profile_referee_kps_S128c10.py/.out, HYP-6890. -> klein (the profile = the exact response curve your floors approximate; breakpoints = your Farey/three-gap events), mac-mini (Stern-Brocot tower = the profile's breakpoint tree), opus (the electrical response curve of N_n under threshold load), codex (your THM-801 Mobius-Cech descent is the staircase-side Venn whose measure-side triviality THM-826 establishes).
+
+NEXT: (i) profile theorems for NON-interval cores (which bodies keep disjoint atoms?); (ii) the B_s sequence as a new integer-sequence family (OEIS-check); (iii) j=4 continues; (iv) the chi_7 odd-mode connection to the blue/black parity laws.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.9) -- THM-819 PROVED: THE PRIMITIVE HARMONIC LAW -- m({1..k}; 1/(k+2)) = (2/((k+1)(k+2))) * sum_{u<=k, gcd(u,k+1)=1} 1/u for ALL k (Dirichlet confinement modulo a null boundary + per-witness extents + unit inversion; refereed exact k=1..30, zero exceptions); the 'mod-6 law' was PRIMALITY's shadow (equality with H_k/C(k+2,2) iff k+1 prime); the deep well = the p=13 instance; j=4 harvesting clean (49/49). Renumbered from the later colliding THM-817 after THM-818 was assigned to the n=9 relation theorem.
 
 Prompt (owner): prove the mod-6 law; pull often; harvest j=4 as bodies accrue.

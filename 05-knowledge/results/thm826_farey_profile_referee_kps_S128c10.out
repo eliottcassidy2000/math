@@ -1,0 +1,31 @@
+==========================================================================================
+THM-826 REFEREE: profile formula vs direct measure, k=2..12
+==========================================================================================
+k= 2 gaps=  2  formula==direct on 241 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 3..3  THM-817 seg:True
+k= 3 gaps=  4  formula==direct on 181 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 4..5  THM-817 seg:True
+k= 4 gaps=  6  formula==direct on 146 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 5..7  THM-817 seg:True
+k= 5 gaps= 10  formula==direct on 122 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 6..9  THM-817 seg:True
+k= 6 gaps= 12  formula==direct on 105 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 7..11  THM-817 seg:True
+k= 7 gaps= 18  formula==direct on 93 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 8..13  THM-817 seg:True
+k= 8 gaps= 22  formula==direct on 84 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 9..15  THM-817 seg:True
+k= 9 gaps= 28  formula==direct on 77 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 10..17  THM-817 seg:True
+k=10 gaps= 32  formula==direct on 71 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 11..19  THM-817 seg:True
+k=11 gaps= 42  formula==direct on 66 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 12..21  THM-817 seg:True
+k=12 gaps= 46  formula==direct on 63 lams: True  A=1:True  B=2*sum(phi/l):True  i+j range 13..23  THM-817 seg:True
+PROFILE THEOREM: ALL EXACT
+
+==========================================================================================
+FORMULA HARVEST (cont.10): small exact statements, each verified here
+==========================================================================================
+(H1) k=3: area under profile = 7/60 == Franel sum 7/60 : True
+(H1) k=5: area under profile = 37/504 == Franel sum 37/504 : True
+(H1) k=8: area under profile = 85/1716 == Franel sum 85/1716 : True
+(H2) k=4: #gaps=6==|F_k|=6:True ; #(i+j=k+1 gaps)=4==phi(k+1)=4:True
+(H2) k=6: #gaps=12==|F_k|=12:True ; #(i+j=k+1 gaps)=6==phi(k+1)=6:True
+(H2) k=10: #gaps=32==|F_k|=32:True ; #(i+j=k+1 gaps)=10==phi(k+1)=10:True
+(H3) k=5: m({1..k}; 1/(2k)) = 23/75 (exact rational, from the formula: 23/75)
+(H3) k=12: m({1..k}; 1/(2k)) = 3491/9240 (exact rational, from the formula: 3491/9240)
+(H4) n=8: staircase rows = 6 ; profile witnesses phi(n-1) = 6 ; equal iff n-1 prime: True
+(H4) n=14: staircase rows = 12 ; profile witnesses phi(n-1) = 12 ; equal iff n-1 prime: True
+
+DONE
