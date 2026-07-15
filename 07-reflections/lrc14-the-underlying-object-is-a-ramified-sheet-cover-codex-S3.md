@@ -445,3 +445,43 @@ collision-hop acceptance rule.  Thus the remaining exit lemma is no longer
 mechanical schedule acting on a labelled finite fibre.  This complements the
 two-sheet target exactly: there the remaining theorem is noncontainment of an
 anchored joint-phase packet in a folded incidence diamond.
+
+## Addendum: the radius-four seam closes, the ramified object survives
+
+THM-810 first exposed Hamming radius four as a literal shallow/deep seam.
+THM-815 and THM-816 now close both sides, but they do so in a way that
+reinforces rather than erases the ramified-cover model.
+
+- On the common-scale side, owner-collar incidence forces one four-cycle and
+  then reduces to exact containment of strict-safe components by a final
+  danger tooth.  The cycle classifies the finite chart; it does not decide
+  coverage.
+- On the three-sheet side, the static `q=39` equality clock lies on the
+  boundary of the strict base.  The proof transports the open residual base
+  itself while subtracting four labelled exception combs.  This dynamic
+  cover, not the clock, decides coverage.
+- THM-817 gives the two-sheet return fibre an intrinsic coordinate: each
+  satellite is one signed maximum-speed cell with explicit endpoint owners.
+  Its incidence with the deep base components is exact.  The family with
+  `N_R=3+1440n` proves that ramification complexity can grow linearly even
+  after all current arithmetic gates fire.
+
+Thus the sharpened object is not merely a finite sheet set over a loose base.
+It is a **changing open base together with typed cells in the fibre**:
+
+```text
+base state        = current strict-safe/deep component union;
+fibre state       = sheet owner or signed max-speed cell;
+attachment        = exact tooth incidence with endpoints and margins;
+transport         = erosion, wall crossing, gcd descent, or collar branch;
+success predicate = some open base component survives every attachment.
+```
+
+Tournament gauges remain useful diagnostics after this object is built.  At
+radius four the scalar tournaments can be transitive while owner incidence
+changes; in the satellite family two transitive component orders miss
+reciprocal endpoint-owner handoff.  The exact quotient must therefore be
+chosen relative to the transport and the survival predicate.  With radius
+four closed, the first shallow test of this formulation is the five-owner
+collar chart; the live deep test is uniform noncontainment on THM-817's signed
+cell by deep-component incidence.

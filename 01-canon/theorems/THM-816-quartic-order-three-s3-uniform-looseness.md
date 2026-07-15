@@ -4,7 +4,7 @@ title: Uniform looseness of the quartic order-three three-sheet interface
 status: PROVED (uniform comb-discrepancy descent) + FINITE-EXACT (7,909-state recursive component closure)
 source: codex-2026-07-15-S10/S11 quartic-s3 continuation
 depends_on: [THM-810]
-related: [THM-769, THM-772, THM-803, THM-807, HYP-6820]
+related: [THM-769, THM-772, THM-803, THM-807, THM-815, HYP-6820]
 verification:
   - 04-computation/lrc13_quartic_s3_recursive_comb_closure_codex_S11.py
   - 05-knowledge/results/lrc13_quartic_s3_recursive_comb_closure_codex_S11.out
@@ -41,10 +41,10 @@ M(A_R)>1/13.                                             (3)
 ```
 
 Consequently the exceptional order-three alternative of THM-810 is empty at
-every lift height.  Any hypothetical tight four-coordinate perturbation of a
-full-residue AP must take THM-810's common-scale alternative; the remaining
-Hamming-four problem is the scale-one chart, not a quartic three-sheet
-residual.
+every lift height.  THM-815 independently closes THM-810's common-scale
+alternative.  Consequently the two theorems together close every proper
+residue-preserving four-coordinate perturbation of a full-residue AP, at
+arbitrary height and AP scale.
 
 The congruence conditions make all twelve speeds in (2) distinct.  There are
 three possible cosets and, by THM-810, four possible mod-three patterns.  No
@@ -212,7 +212,10 @@ recursive tree is 398.  A second implementation cuts the circle at every
 threshold endpoint from every permitted progression value through 398, turns
 the resulting 15,273--16,817 open cells into exact integer masks, and tests
 the full Cartesian product rather than following the recursive tree.  It
-checks 132,510 rows and again finds zero covers.  Its certificate digest is
+checks 132,510 rows and again finds zero covers.  Every residual in question
+is open, so any nonempty residual contains one of these open endpoint cells;
+testing a cell midpoint cannot miss an isolated strict witness.  Its
+certificate digest is
 
 ```text
 a02c30e784969c5865606455a38843f44ff49fb6a1b96faee2548a64204f8b83.

@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three stars uniformly loose; Hamming four splits into common scale and an exact quartic order-three s=3 interface; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact finite all-component erosion selector, and a linear exact connected-return compression; branch emptiness remains OPEN at Hamming radius at least four, the quartic s=3 packet, disconnected-return selector satellites/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, and an exact max-speed-cell classification of every satellite; branch emptiness remains OPEN at shallow Hamming radius at least five, the signed-cell/deep-component selector and collar residuals, and the other higher-sheet packets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -32,6 +32,9 @@ depends_on:
   - THM-806
   - THM-807
   - THM-810
+  - THM-815
+  - THM-816
+  - THM-817
   - HYP-6750
   - HYP-6775
 related:
@@ -364,6 +367,21 @@ pairs.  After removing the common gcd, this becomes an `s=3` deep packet with
 eight on-sheet speeds and four exceptions.  Hence Hamming four is the first
 literal shallow/deep gluing interface.
 
+THM-815 and THM-816 now close both sides of that interface.  In the
+common-scale chart, the all-large collar graph forces the unique band word
+`(2,2,2,5)` and the missing-label orbit `a{1,2,4,8}`.  Reciprocal mass bounds
+make this chart finite; exact component containment rejects `626,962`
+all-large rows.  Otherwise the collar recursively forces
+`14<=x<=24`, `v<=2x`, `w<=2v`, `z<=2w`, and rejects another `141,773` rows.
+In the exceptional chart, the exact residual open interval union plus its
+labelled incidence to the next danger comb obeys a sharp discrepancy bound.
+The resulting `7,909`-state recursion leaves every one of its 34 terminal
+residuals nonempty, and an independent `132,510`-row endpoint-cell audit
+agrees.  The lift-invariant `q=39` clock lies on the boundary of the strict
+core-safe set, so it is a method boundary rather than a counterexample.  Thus
+every proper residue-preserving AP perturbation through Hamming radius four is
+uniformly loose; radius five is the first unresolved shallow chart.
+
 ## D. The two-sheet branch is now a folded dyadic cover
 
 THM-772 first turns the `s=2` equality packet
@@ -549,6 +567,25 @@ nonmaximal singleton component `7/22` escapes.  Consequently the uniform proof
 must control the complete owner-labelled selector; neither global maximizers
 nor any fixed short denominator ladder can replace it.
 
+THM-807 and THM-817 now identify the selector's topology and arithmetic
+exactly.  Thickening only by the mandatory central return component gives a
+linear selector of size at most `42B-2`; it is equivalent to the full erosion
+test when the closed return set is connected.  In general, every component of
+`closure(R_U)` is one signed max-speed cell `(k+I_k)/B`, with its endpoint
+owners read directly from the defining interval intersection.  If `N_R` cells
+survive and `c_E` deep components are present, the exact adaptive bound is
+
+```text
+|Sigma(U;x,y)|<=2c_E N_R+2W-2g<=20B^2+22B-2g.
+```
+
+This is the right representation but not a new compactness theorem.  The
+primitive divisor-complete exact signed-complement family
+`B_n=506+360360n` has `N_R=3+1440n`.  Thus primitivity, divisor pins,
+raw/parity support, and the known scalar taxes cannot force connected,
+bounded, or sublinear return geometry.  Any uniform proof must act on the
+signed cell/deep-component incidence and its margins.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
@@ -561,22 +598,17 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Extend descent and closure at radius four.**
-   THM-795/800 remove the complete Hamming-one/two stars around every AP
-   dilation. THM-804 proves that a tight three-replacement packet has common
-   scale, and THM-806 closes every proper normalized triple lift. For four or
-   more replacements, extend the oriented missing-owner germ/deck-capacity
-   argument to a Hall, flow, or divisor theorem.  The exact carrier is the
-   incidence graph between missing-owner splice germs and replacement teeth,
-   with the half-open orientation, deck order, owner labels, and margins
-   retained. THM-810 now supplies the scalar classification: only common scale
-   or the all-order-three coset `a{1,5,8,12}` can survive. The remaining metric
-   targets are therefore the scale-one quadruple chart and arbitrary lifts of
-   that `s=3` coset interface; four least-CRT representatives are loose but do
-   not settle the latter uniformly.  Each coset has eight lift-invariant
-   `q=39` equality witnesses pinned by opposite core constraints, so strict
-   looseness must come from another core-safe component rather than a local
-   perturbation of the common clock.
+1. **Extend descent and closure at radius five.**
+   THM-795/800/804/806 close the complete AP-centred Hamming-one through
+   Hamming-three stars.  THM-810 splits radius four into common scale and one
+   order-three coset interface; THM-815 and THM-816 close those alternatives
+   independently.  The next shallow theorem must therefore treat five or more
+   replacement owners.  Start by classifying the possible collar handoff
+   cycles and anchored recursions at radius five, but retain the exact
+   owner-exit/provider-tooth incidence, half-open orientation, speed ratios,
+   component widths, and residual interval union.  Radius four shows why: its
+   forced tournament cycle supplied a finite box but did not itself decide the
+   LRC predicate.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
@@ -586,13 +618,16 @@ The uniform theorem now has two explicit residuals:
    `E_U not subset H_(x,y) minus R_U`. THM-789 proves that fixed-anchor packet
    refinement alone cannot do this, while THM-797 proves it whenever an odd
    exception-divisor grid leaves the explicit acceptance shell. THM-803 adds
-   raw/parity support, the complete `26/52/78` anti-shell ladder, and an exact
-   finite endpoint/cusp selector of size at most `200B^2+22B`.  Prove a
-   height-independent contradiction or decreasing invariant for that selector;
+   raw/parity support and the complete `26/52/78` anti-shell ladder. THM-807
+   isolates the linear central-return selector, and THM-817 classifies every
+   satellite as a signed max-speed cell, giving the adaptive exact bound
+   `2c_E N_R+2W-2g`.  Prove a height-independent contradiction or decreasing
+   invariant for that labelled cell/component selector;
    the `U_*` row shows that all short gates and both global maximizers can pass
-   while a nonmaximal component escapes. At
-   higher sheets, classify and rule out THM-769's persistent colour covers,
-   beginning with the explicit `s=3` equality shells of THM-772.
+   while a nonmaximal component escapes, and THM-817's linear-satellite family
+   rules out a connectedness shortcut.  At higher sheets, classify and rule
+   out THM-769's remaining persistent colour covers; the special quartic
+   order-three equality shell is already closed by THM-816.
 
 Equivalently in the original top-peel language, prove that every primitive
 nonextremal eleven-speed core below THM-763's finite height has at least one
@@ -620,8 +655,9 @@ height-one lift cube had 4,085 rank-short rows, 9 blocker-debt rows, and one
 zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
 `chi_13>=2`.  THM-770 supersedes that cube by an exact height-twelve theorem,
 while THM-795/800/804/806 close the first three Hamming directions.  THM-810
-shows that the warning now applies precisely to the scale-one Hamming-four
-chart and its quartic order-three `s=3` interface, followed by higher radii.
+isolates the radius-four ramification and THM-815/816 close both of its
+branches.  The warning now begins at radius five and at the remaining deep
+sheet packets.
 
 ## F. Information-preservation / Tournament Analysis
 
@@ -647,17 +683,18 @@ deciding objects are therefore:
   of THM-782/789, THM-797's decorated divisor-class/exception-shell incidence,
   THM-803's parity-twisted support/anti-shells, and the complete owner-labelled
   endpoint/cusp selector; THM-807 separates its mandatory linear central-return
-  component from the satellite-return incidences that carry the quadratic
-  part of the obstruction;
+  component from the satellites, while THM-817 reconstructs each satellite as
+  a signed max-speed cell with endpoint owners and exposes its incidence with
+  every deep component;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
   incidence hypergraph, which can forget metric positions after atomization;
 - in the shallow packet, missing-owner splice sheets joined to replacement
-  teeth; THM-795/800/804/806 close every AP-centred chart through three
-  replacements, while THM-810 shows that at four replacements a bare scalar
-  tournament misses the exceptional order-three coset incidence and its
-  complementary mod-three parity.
+  teeth and then to strict-safe components; THM-795/800/804/806 close the first
+  three radii, THM-810 identifies the radius-four scalar/parity ramification,
+  and THM-815/816 close its two branches.  The first unresolved shallow carrier
+  has five owner obligations.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

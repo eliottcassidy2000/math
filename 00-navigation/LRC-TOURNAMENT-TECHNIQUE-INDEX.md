@@ -49,6 +49,10 @@ obligations, and proof-carrier interfaces.
   ownership problem. Two tighteners force `s=2` and persistent opposite parity;
   the three-tightener equality edge has the analogous three-colour cover.
   THM-770 proves the shallow full-residue branch exactly through lift height 12.
+  THM-810 isolates the quartic `s=3` coset, THM-816 closes it uniformly by
+  dynamic residual-comb erosion, and THM-815 closes the complementary
+  common-scale chart.  THM-817 classifies every `s=2` return satellite as a
+  signed max-speed cell with endpoint owners.
 - **Preserves:** quotient-core loose components, sheet label, tightener owner,
   gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
   quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
@@ -63,10 +67,12 @@ obligations, and proof-carrier interfaces.
   gauge. The resulting tournament is transitive with score histogram
   `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
   one Hamiltonian path. These fingerprints certify collapse, not rigidity.
-- **Next pull:** Solve the persistent `s=2` opposite-parity cover over each
-  component of `G_U`, then classify the `s=3` equality cover and the ramified
-  higher-`s` packets admitted by THM-769's capacity inequality.
-- **Pointers:** THM-769, THM-770, THM-765, HYP-6775, HYP-6820;
+- **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
+  by deep-component incidence in the persistent `s=2` cover; in the shallow
+  branch, classify the five-owner collar state; then treat the ramified
+  higher-`s` packets outside THM-816's closed quartic coset.
+- **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
+  THM-817, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

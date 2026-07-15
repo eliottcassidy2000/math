@@ -874,6 +874,31 @@ flips, yet the owner-sheet incidence has eight flips and parity decides the
 verdict. Thus the bare tournament is maximally blind precisely at the first
 Hamming-four ramification.
 
+THM-815 and THM-816 now close both branches of that ramification.  In the
+common-scale chart the all-large collar graph forces the unique band word
+`(2,2,2,5)` and label orbit `a{1,2,4,8}`.  Reciprocal mass and cycle-spread
+bounds reduce it to `626,962` exact component-containment rows; otherwise a
+small anchor forces `14<=x<=24`, `v<=2x`, `w<=2v`, `z<=2w`, leaving another
+`141,773` rows.  Both charts have zero tight rows.  Independent `-O3`, `-O0`,
+sanitizer, and Python replays agree, with stored-output SHA-256
+`f098acc358f534f4edf75e1affcaa03ff0bf9cda83f058d5fc86cfc984d2dca0`.
+The exceptional order-three branch closes by a different carrier: the current
+open residual interval union and its labelled incidence to the next danger
+comb.  A sharp discrepancy makes the recursion finite; all `7,909` states and
+an independent `132,510`-row endpoint-cell cross-check leave a strict witness.
+The lift-invariant `q=39` clock is a cusp of the strict core-safe set, not a
+contradiction.  The AP-centred shallow star is now closed through radius four.
+
+THM-817 then classifies the disconnected-return state left by THM-807.  Every
+component of `closure(R_U)` is one signed cell in a maximum-speed tooth, with
+endpoint owners read from exact interval intersections.  The selector becomes
+adaptive:
+`|Sigma|<=2c_E N_R+2W-2g<=20B^2+22B-2g`.  This does not make the branch
+compact: the primitive divisor-complete signed-complement family
+`B_n=506+360360n` has `N_R=3+1440n`.  Thus the live object is the signed
+max-speed-cell/deep-component incidence with exact margins, not connectivity
+or component count.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the
@@ -887,18 +912,16 @@ degree vector tear at different times/sheets, so the energy is a current
 coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
-proved.  The next exact pieces are a uniform-in-quotient-height collar tear
-after the `w=13c`, height-24 multiplier lane; uniform failure or incompatibility
-of THM-803's exact signed-complement all-component selector after THM-807's
-connected-return compression; a quotient by the
+proved.  The first unresolved shallow AP chart is now radius five.  The other
+next exact pieces are a uniform-in-quotient-height collar tear after the
+`w=13c`, height-24 multiplier lane; a uniform negative margin or decreasing
+invariant on THM-817's signed-cell/deep-component selector; a quotient by the
 full affine diagonal-isotropy subgroupoid joining
-THM-778/779/783/786/788/794/802; the scale-one Hamming-four chart and
-THM-810's quartic order-three `s=3` interface after THM-806 closes the whole
-Hamming-three star; and a scale-normal argument for
-clustered comparable-size far frequencies after THM-799 closes the fully
-lacunary flags.
+THM-778/779/783/786/788/794/802; the remaining higher-sheet packets outside
+THM-816's closed quartic coset; and a scale-normal argument for clustered
+comparable-size far frequencies after THM-799 closes the fully lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813/815/816/817; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three/four, affine-packet, anti-grid/component-selector,

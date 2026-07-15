@@ -107,9 +107,9 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810;
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807;
-  HYP-6820; exact endpoint-splice and tooth-winding atlases.
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817;
+  HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
+  return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
   the shallow branch is exactly the full nonzero residue transversal and that
@@ -127,16 +127,14 @@
   hypothetical tight three-replacement lift to common scale, and THM-806
   closes the remaining base: a collar handoff gives one lift in `[14,24]`,
   safe-window bounds give `v<=381,w<=12v`, and all `5,713,539` exact rows are
-  loose.  THM-810 classifies the first radius-four deck obstruction: common
-  scale or four order-three labels on a coset of `<5>`, with the latter
-  normalizing to an `s=3` deep packet.
-  the normalized proper double lift has the sharp floor `M>=2/25`. THM-804
-  proves that every tight residue-preserving three-replacement lift has common
-  AP scale, and THM-806 closes the remaining scale-one chart: a collar handoff
-  forces one lift into `[14,24]`, lower-runner bounds and connected two-comb
-  geometry give `v<=262` and `w<=12v`, and a larger legacy replay through
-  `v<=381` rejects all 5,713,539 canonical rows. The first unresolved shallow
-  chart is therefore labelled Hamming radius four.
+  loose.  THM-810 classifies the radius-four deck obstruction: common scale or
+  four order-three labels on a coset of `<5>`, with the latter normalizing to
+  an `s=3` deep packet.  THM-815 closes the common-scale chart by a forced
+  collar four-cycle and `768,735` exact component-containment rows.  THM-816
+  closes every arbitrary-height coset packet by a `7,909`-state residual-comb
+  recursion plus an independent `132,510`-row endpoint-cell cross-check.  The
+  shallow AP star is therefore closed through radius four; radius five is the
+  first unresolved labelled chart.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -145,74 +143,36 @@
   `8/117`, and finite-exactly closes all `92,378` ten-cores in `[1,19]` against
   unbounded odd exceptions (`767,700` intrinsic runner tests, zero universal
   incidence).
-- **Dyadic/height-100 progress:** THM-775 proves that every failure of
-  hereditary primitivity in the two-sheet quotient is a unique dyadic seam and
-  that iteration gives a finite dyadic quotient chain with binary safe-child
-  fibers, primitive divisor-complete quotients, and a hereditarily primitive
-  terminal base. THM-776 independently proves every 10-even/2-odd twelve-set
-  of raw height at most 100
-  has `M>1/13`, with no primitivity or divisor-completeness filter. Its exact
-  atom-incidence dual has transversal number 12 for all 1,225 odd pairs.
-  incidence).  THM-775 proves that every imprimitive deletion is a factor-two
-  seam, with an exact first `Z/4` ownership tiling and a finite dyadic descent
-  to a hereditarily primitive divisor-complete core.  THM-776 independently
-  closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
-  bad-atom hypergraphs have transversal number exactly 12, while a packet core
-  has only ten speeds. THM-782/789 give every ten-core a symmetric return
-  packet of measure at least `2*72^(-10)`, strict clearance, a safe component
-  of normalized width at least `72^(-10)/5`, and a pointwise thickness tax.
-  THM-789 also gives an exact method boundary: one deep anchor and every local
-  refinement can be trapped while a different deep component escapes. The
-  scalar floor and fixed-anchor route therefore cannot contradict the diamond
-  cap.
-  has only ten speeds. THM-789 strengthens THM-782 to a symmetric packet of
-  measure `2*72^(-10)` and component width `72^(-10)/(5 maxU)`, and proves the
-  tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13`, the erosion
-  `E_U subset H minus R_U`, and the global gap/Kneser budgets
-  `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Its exact trap
-  shows that the full return set can stay inside the diamond at one deep
-  anchor even when another deep time escapes.  Its exact two-pair liar shows
-  that raw component order/sign and total eroded measure can also agree while
-  return-thickened component incidence differs. The missing datum is global
-  component choice with signed affine tooth/slope address.
-  THM-803 makes that datum finite with a quadratic owner-labelled selector.
-  THM-807 proves a sharper topological split: the mandatory central return
-  component yields a linear necessary selector of size at most `42B-2`, exact
-  when the closed return set is connected, while disconnected return
-  satellites carry the genuinely quadratic interaction. Exact signed-complement
-  rows also silence all multiplier grids through `d=7`, or every even grid
-  through `d=18`; fixed grid ladders cannot replace the component selector.
-- **Open shallow theorem:** prove the primitive descent trigger
-  `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
-  through height twelve; THM-795 proves it on every Hamming-one AP star;
-  THM-800 proves strict looseness throughout the residue-preserving
-  Hamming-two AP star; THM-804 forces common scale for every hypothetical
-  tight three-replacement lift; and THM-806 proves the normalized triple chart
-  empty.  The first unresolved shallow base is radius four.  THM-810 reduces
-  its off-scale deck geometry to one exact alternative: all orders are three,
-  the labels form `a<5>`, and complementary labels share the same mod-three
-  parity.  Attack the scale-one Hamming-four chart and this eight-core/four-
-  exception `s=3` interface together.  The predicate carrier is the bipartite
-  owner-sheet incidence with half-open germ orientation and parity, not a
-  runner tournament or scalar capacity table.
-  Hamming-two AP star; and THM-804 forces common scale for every tight
-  three-replacement lift.  The first unresolved base is the genuine scale-one
-  Hamming-three chart, followed by radius at least four.  Build its bipartite
-  Hamming-two AP star; THM-804 forces common scale for every tight
-  three-replacement lift; and THM-806 proves the normalized triple chart
-  empty. The first unresolved base is radius four. Build its bipartite
-  sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
-  defect, a normalized floor, or a new descent tied to a decreasing invariant.
-  THM-810 proves the four-replacement scalar classification: either all deck
-  orders are one or every order is three and the labels form a coset of
-  `<5>={1,5,8,12}`. The first branch leaves the scale-one quadruple chart; the
-  second is an exact `s=3` deep interface with four feasible sheet-parity
-  patterns. Its four least-CRT rows are loose.  Each coset has eight
-  lift-invariant `q=39` witnesses at exact margin `1/13`, pinned by an opposite
-  pair of core speeds, so a local perturbation of the common clock cannot close
-  the family.  Search a different core-safe component or prove the four lifted
-  exception combs cannot cover all of them.  Arbitrary coset lifts remain, so
-  radius four is classified by deck type rather than closed.
+- **Dyadic/height-100/component progress:** THM-775 proves that every
+  imprimitive deletion is a unique factor-two seam, with an exact first
+  `Z/4` ownership tiling and a finite dyadic descent to a hereditarily
+  primitive divisor-complete core.  THM-776 closes the full ten-even/two-odd
+  speed box through 100: all 1,225 odd-pair bad-atom hypergraphs have
+  transversal number 12 while the quotient core has only ten speeds.
+  THM-782/789 give every ten-core a symmetric return packet of measure
+  `2*72^(-10)`, a component-width floor `72^(-10)/(5 maxU)`, the pointwise
+  thickness tax, and exact global erosion budgets.  Their trap and liar rows
+  prove that local anchoring, raw component order/sign, and total eroded
+  measure do not determine which component escapes.  THM-803 makes the full
+  owner-labelled endpoint/cusp selector finite; THM-807 makes its central
+  connected-return part linear, while exact loose rows show that fixed grid
+  ladders cannot replace the satellite incidences.
+  THM-817 now classifies the missing satellite input exactly.  Every component
+  of `closure(R_U)` is one signed cell inside a tooth of `B=max(U)`, with exact
+  endpoint owners; hence the adaptive selector has size
+  `2c_E N_R+2W-2g<=20B^2+22B-2g`.  The family
+  `B_n=506+360360n` has `N_R=3+1440n`, so the current arithmetic gates cannot
+  force connected returns or even `o(B)` satellite count.  Work on the
+  labelled max-speed-cell/deep-component incidence, not component count alone.
+- **Open shallow theorem:** extend the now-complete AP-centred radius-four
+  closure to radius five.  THM-810/815/816 prove that every proper
+  residue-preserving packet at distance at most four from an AP dilation is
+  loose.  The first target is therefore a five-owner analogue of the collar
+  reduction: classify the possible directed cycles and anchored recursion in
+  the owner-exit/provider-tooth incidence, retaining half-open orientation,
+  speed ratios, and component widths.  Do not assume the runner tournament is
+  the predicate; at radius four its cycle was only a finite-box reduction and
+  the actual closure occurred on strict-safe components.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -225,10 +185,11 @@
   show that THM-775's dyadic chain lands in one of THM-774/776's certified
   regions. THM-807 permits a linear exact selector on the connected-return
   branch, but its explicit loose rows show that even long fixed grid ladders
-  do not supply the missing uniform negative margin. Then treat the `s=3`
-  three-colour edge. The exact object is
-  loose-set component x sheet-owner incidence with closed endpoints, not a
-  residue condition at one binding point.
+  do not supply the missing uniform negative margin.  THM-816 has already
+  removed the quartic `s=3` equality shell; the remaining higher-sheet work is
+  outside that special four-exception coset and still lives on loose-set
+  component by sheet-owner incidence with closed endpoints, not a residue
+  condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
   transfer for the `s=2,3` equality packets, including quotient primitivity,
   divisor completeness, exact local shells, and speed bounds. THM-774 proves the

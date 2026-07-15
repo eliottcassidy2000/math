@@ -803,3 +803,115 @@ component-obligation state, whether its quotient keeps reduced holonomy,
 metric translation, one-sided germ orientation, and chart-overlap phase, and
 whether its recursion genuinely decreases after the exact selector—not merely
 a preferred component or denominator—has been tested.
+
+## 9. Radius-four closure and the next form of the object
+
+The next three exact theorems materially sharpen that closing paragraph.
+They do not prove the global sporadic branch empty, but they remove the whole
+AP-centred radius-four interface and finish the representation of return
+satellites.
+
+### 9.1 One interface, two different closure states
+
+THM-810's scalar deck theorem left two radius-four alternatives.  THM-815
+closes common scale by an owner-collar argument.  If all four replacements
+are large, positive indegree forces a four-cycle; the exact handoff bands have
+the unique centre word `(2,2,2,5)`, hence missing labels
+`a{1,2,4,8}`.  The cycle is not the verdict.  It supplies a reciprocal bound
+and a spread bound, after which the predicate is tested on the bipartite
+incidence between strict-safe components of eleven speeds and teeth of the
+last speed.  Exact containment rejects `626,962` all-large rows.  Otherwise a
+small collar anchor recursively gives
+
+```text
+14<=x<=24,       v<=2x,       w<=2v,       z<=2w,
+```
+
+and another `141,773` rows are rejected.  The theorem-bearing vertices change
+mid-proof: owner exits are correct for reduction, components and teeth are
+correct for truth.
+
+THM-816 closes the order-three alternative with a different state.  The
+lift-invariant eight-point `q=39` clock is real, but every point is a cusp of
+the strict core-safe set.  It is a static boundary skeleton and cannot carry a
+strict witness.  The exact state is instead the current open residual interval
+union together with labelled incidence to the next danger comb.  The sharp
+discrepancy
+
+```text
+|E intersect D_w| <= 2|E|/13 + 22K/(169w)
+```
+
+makes every next speed finite.  The `7,909`-state recursion and an independent
+`132,510`-row endpoint-cell audit leave no cover.  Thus the same deck interface
+closes by two nonisomorphic recursive carriers: collar-cycle reduction on one
+side, dynamic residual erosion on the other.  Radius five is now the first
+unresolved shallow AP chart.
+
+### 9.2 Disconnected returns are cells, not an anonymous component count
+
+THM-817 completes THM-807's topological split.  For `B=max(U)`, every
+component of `closure(R_U)` is exactly one signed cell `(k+I_k)/B` inside a
+maximum-speed tooth.  Its interval endpoints reconstruct the left and right
+owners.  If `N_R` cells survive, the erosion selector has the adaptive exact
+bound
+
+```text
+|Sigma(U;x,y)| <= 2c_E N_R+2W-2g
+                <= 20B^2+22B-2g.
+```
+
+This is a representation theorem, not a hidden compactness theorem.  The
+primitive divisor-complete signed-complement family `B_n=506+360360n` has
+`N_R=3+1440n`.  Therefore no argument from primitivity, divisor pins,
+raw/parity support, or the existing scalar taxes can force connected returns
+or even sublinear satellite count.  The faithful residual is the incidence
+
+```text
+(signed max-speed cell, endpoint owners)
+        x (closed deep component, folded margin).
+```
+
+The component tournament remains transitive after a gauge switch and loses
+the reciprocal endpoint-owner handoff.  This is another instance where the
+liar fibre, not the tournament fingerprint, identifies the next state field.
+
+### 9.3 What the tournament/metagraph history now says recursively
+
+The parallel metagraph results make the same distinction algebraic.
+`Q_n=L_n/<reflection>` is the action object for equivariant centered copies;
+the coloured unordered-node-pair carrier `P_n` is only an observation.  At
+`n=6`, `P_6` merges 52 independent obligations and the next action separates
+51, while `Q_6` acts injectively.  Bounded continuation minimization finds an
+order-five relative holonomy invisible to the static defect; a gap face
+recovers it.  At `n=8` the old collision square dies and unrelated collisions
+are born, so collision ancestry is not nested.  THM-814 further shows that
+curvature can remain the correct flow coordinate while sixteen edge-orbit
+identities require a fixed-layer positional moment.
+
+These are not proofs about runner speeds.  They supply a recursive design
+rule: distinguish an **action carrier**, an **observation**, a **terminal
+predicate**, and an **operation-labelled ancestry**.  A coarsening is legal
+only when the terminal predicate is constant on every observation fibre for
+the named operation.  Hidden state can be path holonomy, gap incidence,
+position inside a fixed layer, endpoint owner, or metric component; no single
+all-purpose scalar is expected.
+
+The resulting LRC object is best described as an operation-indexed decorated
+obligation groupoid with noninvertible descent:
+
+```text
+action state: owner exits / sheets / signed return cells / residual components
+observation: runner or residue tournaments, clocks, masses, component counts
+stalk: exact endpoints, widths, owners, parity, scale, carry, and margins
+arrows: tooth erosion, wall transport, gcd descent, peel, and component branch
+terminal predicate: a strict witness interval survives.
+```
+
+The immediate mathematical frontier is correspondingly precise: classify the
+five-owner shallow collar state; prove a uniform negative margin on the
+THM-817 signed-cell/deep-component selector; finish the unbounded-height
+two-sheet collar language; and then address the other higher-sheet and
+scale-normal clustered packets.  The false uniform `q<=25` claim remains
+false; what changed is that the shallow frontier moved from radius four to
+radius five and the disconnected-return coordinate is now exact.
