@@ -1,0 +1,6 @@
+n=8: 6874 classes (A000568(8) = 6880): FAIL
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\metagraph_flow_n8_check_opus_S305.py", line 94, in <module>
+    assert C == 6880
+           ^^^^^^^^^
+AssertionError
