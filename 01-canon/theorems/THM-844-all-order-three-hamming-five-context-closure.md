@@ -250,9 +250,9 @@ python3 04-computation/lrc13_hamming_five_all_order_three_context_closure_codex_
 and compare byte-for-byte with the stored output.  The frozen hashes are
 
 ```text
-source       627822ffa1b284e96e380b7478d135e21d6197ec54f623f4b6ff1b03e6880b9f
-output       6b3f8cb3673d6beb140484a9c2d5de670a49910b454e6628f04650e5dcab3ac8
-payload      f0cec95795494fff6dc88c7650504cbb92d5097dd0280dfa3f098e76d3d9ba17
+source       6ee83b94b23f699939fea5ed53e5c50c7eb3f8a99aeac30375feabf3e0e8befb
+output       f95764d03f29876053c187bd41f844e6996da044d1ac0d3c017320431337741b
+payload      0cb0a440d26756d041f7f3a57806310ae18568f42d96bb80753dceddbe0a12c9
 certificate  9bb065fe6ffafc348ada19c5f3ef30f0b28a5066bfd905a72107202ed13cdb2a
 ```
 

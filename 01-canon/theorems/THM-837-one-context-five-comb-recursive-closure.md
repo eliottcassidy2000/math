@@ -1,10 +1,10 @@
 ---
 id: THM-837
 title: One order-three Hamming-five context closes by exact five-comb recursion
-status: PROVED (one of 96 arbitrary-height order-three contexts) + FINITE-EXACT (75,371-state recursive closure); the other 95 contexts remain open
+status: PROVED (one of 96 arbitrary-height order-three contexts) + FINITE-EXACT (75,371-state recursive closure); subsequently strengthened by THM-844, which closes all 96
 source: codex-2026-07-15-S10 continuation
 depends_on: [THM-810, THM-815, THM-816, THM-820, THM-823]
-related: [HYP-6820]
+related: [THM-844, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_single_context_comb_closure_codex_S10.py
   - 05-knowledge/results/lrc13_hamming_five_single_context_comb_closure_codex_S10.out
@@ -52,9 +52,10 @@ S(3P union {u_1,u_5,u_8,u_10,u_12}) is nonempty.          (3)
 ```
 
 Equivalently, every arbitrary-height packet in this one directed-flag/parity
-context is loose.  This is one of 96 order-three contexts.  It does not close
-the other 95 contexts, the other scalar-order branches, or the global
-Hamming-five problem.
+context is loose.  This is one of 96 order-three contexts.  The present proof
+does not itself close the other 95 contexts, the other scalar-order branches,
+or the global Hamming-five problem; THM-844 subsequently replaces its global
+`K/L` cap by the longest-component cap and closes all 96 contexts.
 
 ## 1. Exact five-comb discrepancy
 

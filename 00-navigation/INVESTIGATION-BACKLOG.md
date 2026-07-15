@@ -255,17 +255,15 @@
   most twelve, common-sheet compatibility leaves only the all-order-three
   forward coset flags `C union {b}`, `b in 2C`.  Their forty least CRT packets
   are loose, while the mod-39 clock proves only the non-strict boundary for
-  arbitrary lifts.  Extend common-sheet exclusion above order twelve, then run
-  exact residual-comb erosion on the all-order-three and mixed order-one
-  survivors; do not promote scalar attenuation or the coset cycle to a metric
-  closure. THM-837 has now run the exact recursion on one of the 96
-  all-order-three contexts: `C={1,5,8,12}`, `b=10`, bits `(1,1,1)`.  Its
-  active-run state visits 75,371 nodes, finds zero covers, and leaves 57
-  nonempty terminals.  This proves that context loose at every height.  Run
-  the other 95 contexts with the same operation-complete state, adding
-  memoization or symmetry only after auditing boundary activation; a global
-  cell mask without active-boundary bits miscounts components and invalidates
-  the recursive discrepancy bound.
+  arbitrary lifts.  THM-837 first runs exact residual-comb erosion on one of
+  the 96 contexts. THM-844 then replaces its global `K/L` bound by the no-weaker
+  longest-component cap and closes all 96 in 28,876 states, with no cover and
+  no depth-five terminal. THM-845 also closes the all-order-one/common-scale
+  language after normalization. Extend common-sheet exclusion above order
+  twelve and erode the mixed one-plus-order-three language; do not promote
+  scalar attenuation or the coset cycle to a metric closure.  Retain active
+  boundary words: a global cell mask without activation bits miscounts
+  components and invalidates the recursive discrepancy bound.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put

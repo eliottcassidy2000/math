@@ -98,20 +98,20 @@ obligations, and proof-carrier interfaces.
   deletion is determined only by the repaired card together with its shortcut
   seam bit.  Even a literal tournament coordinate needs operation-specific
   ancestry. THM-837 realizes the forward state on one of THM-823's 96
-  all-order-three contexts and closes it at arbitrary height, while leaving
-  the other 95 contexts open. THM-818's canonical first-off-diagonal split
+  all-order-three contexts; THM-844 strengthens the cap to the longest active
+  component and closes all 96 at arbitrary height. THM-818's canonical first-off-diagonal split
   `A/B/C=414/4/0` independently warns that face roles are ordered. THM-825
   supplies a literal-exact static quadratic positional carrier through
   `n=15`, but explicitly does not prove continuation purity.  Minimize the
   reachable `(E,V)` automaton was not needed for scale-one emptiness: THM-845
   proves the literal endpoint word transports through every height in that
-  chart. THM-840 proves why this is operation-specific, and THM-837 realizes
-  the active-endpoint/tooth-bank state on one order-three context.  The open
+  chart. THM-840 proves why this is operation-specific, and THM-837/844 realize
+  the active-endpoint/tooth-bank state on the full bounded order-three orbit.  The open
   use of this card is deck-compatible transport across arbitrary AP scale and
   the non-AP part of Hamming radius six; do not extrapolate the scale-one
   transition law across ramification or unnamed deletion operations.
 - **Pointers:** THM-815, THM-817, THM-818, THM-820, THM-821, THM-822, THM-825,
-  THM-830, THM-837, THM-840, THM-845,
+  THM-830, THM-837, THM-840, THM-844, THM-845,
   HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
   `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
   `lrc13_hamming_five_rowwise_component_closure_codex_S10.cpp/.out`;
@@ -198,6 +198,11 @@ obligations, and proof-carrier interfaces.
   score histogram `0,1,2,3,4`, no cycle, one Hamiltonian path, and 31 total
   raw-to-conditional edge flips.  Their residual intervals, not these trivial
   fingerprints, certify looseness.
+  THM-844 repeats the warning uniformly on all 96 bounded all-order-three
+  contexts: both scalar marginal gauges are transitive with the same standard
+  fingerprint, yet 492 edges flip.  Its exact state is the active
+  component--remaining-comb incidence with endpoint and CRT-progression
+  sidecars.
 - **Next pull:** Derive the arbitrary-scale Hamming-five oriented-deck
   classification and separate the tight AP orbit `2[12]` from non-AP rows in
   the finite Hamming-six tree. At seven remaining scale-one combs, replace mean danger
@@ -216,7 +221,7 @@ obligations, and proof-carrier interfaces.
   only telemetry; the theorem-bearing carrier has deck, winding, and metric
   sidecars.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821, THM-824, THM-831, THM-845,
+  THM-821, THM-824, THM-831, THM-844, THM-845,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
@@ -254,8 +259,8 @@ obligations, and proof-carrier interfaces.
   hypotheses, THM-836 empties the first two `(13d,5d)` owner shells by a
   two-direction residue-packing obligation. On the shallow side, THM-837
   closes one of the 96 all-order-three contexts by exact residual-comb
-  recursion, and THM-840 proves which parts of that state are Markov for which
-  operations.
+  recursion; THM-844 strengthens the cap and closes all 96, while THM-840
+  proves which parts of that state are Markov for which operations.
 - **Preserves:** quotient-core loose components, sheet label, tightener owner,
   gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
   quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
@@ -297,12 +302,11 @@ obligations, and proof-carrier interfaces.
   telemetry.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
-  branch, transport THM-845's component/comb recursion across AP scale, extend
-  common-sheet exclusion above order twelve, and apply exact residual-comb erosion to THM-823's
-  all-order-three and mixed order-one survivors.  The mod-39 clock supplies
-  only equality witnesses, not strictness. THM-837 has discharged one of the
-  96 order-three contexts; run the other 95 with active boundary words, not a
-  raw global cell mask. Then treat the ramified higher-`s`
+  branch, transport THM-845's component/comb recursion across AP scale and
+  extend common-sheet exclusion above order twelve. THM-844 has discharged all
+  96 bounded all-order-three survivors, and THM-845 discharges all order one;
+  apply exact residual-comb erosion next to the mixed one-plus-order-three
+  language with active boundary words, not a raw global cell mask. Then treat the ramified higher-`s`
   packets outside THM-816's closed quartic coset. Enumerate the finite
   scale-one Hamming-six tree and cross the seven-comb density wall. For the
   common `(13d,5d)` branch, first derive THM-836's signed-complement and
@@ -312,7 +316,7 @@ obligations, and proof-carrier interfaces.
   sixteen viable no-switch folds and its ternary obstruction elsewhere.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
   THM-817, THM-820, THM-823, THM-824, THM-829, THM-831, THM-836, THM-837,
-  THM-840, HYP-6775, HYP-6820;
+  THM-840, THM-844, THM-845, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

@@ -3,8 +3,10 @@ id: THM-845
 title: Scale-one Hamming-five row-wise safe-component closure
 status: PROVED (exact row-wise THM-815 recursion inside the exhaustive THM-820 dichotomy) + FINITE-EXACT (772,543-row state certificate, independent open-safe/closed-danger full-tree replays, nine Fraction-exact terminal rows, and Tournament Analysis)
 source: codex-2026-07-15-S10 continuation
+renumber_note: originally checkpointed as THM-842; renumbered after live main
+  assigned that identifier to the earlier n9 defect-continuation theorem
 depends_on: [LRC(<=13), THM-815, THM-820]
-related: [THM-810, THM-816, THM-822, THM-823, THM-837, THM-840, HYP-6820]
+related: [THM-810, THM-816, THM-822, THM-823, THM-837, THM-840, THM-844, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_rowwise_component_closure_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_rowwise_component_closure_codex_S10.out
@@ -168,13 +170,13 @@ the identical 772,543-row certificate and also passes UBSan.  The frozen
 digests are
 
 ```text
-primary source       3ac19e586ca7b86e0b3f982e10cb901077f9504e0279615d4d86fa6526e75417
-primary output       4aaf3bf6191699e98b8824f53c6a9bd5a0424f77d553734a71a32b0f401a9d5f
+primary source       161337548084a47bd8d503a00a638ef74e0ac89801821de780567422863245f3
+primary output       b45ccb31e45743c6f5dc11ab7f51057a8a2fbffaac569390ca4e51e0f8c9377c
 state certificate    6524ac6dd2d1f8c59256816c86b95d9ee52cc94766d4d3f993425e7071434a29
-danger-union source  9913f7623ef6a8918bab64e0e7dc531001a20a63361733bf36e799744a5f82e0
-danger-union output  1b49d00f21018e9d9e9e88ce70110239ef4bafc04e975efad631d23dc49ba298
-cross-check source   deebad6c21dc8aaaffd7a31126d1bb3d83964581b00872cc0bd3706005797c09
-cross-check output   ea62afb0e126e45cd770180037171fd97c516b10475d2c3dc9b40894f8289cf1
+danger-union source  0d7bdc75e0cc0e50dccd4370abf60d30144874a82705790f4f77e036d8517b6c
+danger-union output  6d01066e912363d8631483bf7aeefc24443931d65e063acd0507b19dab1f8cb3
+cross-check source   dcf180a3f5159d60f2ef7cb4b964e7eaea3409b926369d45f6bab12a50fcc4a4
+cross-check output   753742266fae999adf6f8d60949b1630213b3c3270809c493b78daaddfc5acfc
 cross-check rows     05c2dac64e5197b3926d74d9fca27b0e4adbbe2309be44178608091abfe13182
 ```
 
