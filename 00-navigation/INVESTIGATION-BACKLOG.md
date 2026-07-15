@@ -119,6 +119,8 @@
   `node <- HP/Aut tiling <- owner-to-sheet assignments <- endpoint transport`.
   Test continuation purity at each arrow; the first expected failure is at the
   mask-to-owner lift, where reflection and next-wall futures are multivalued.
+  HYP-6845's new wall `phi`-recurrence belongs in the endpoint-transport field,
+  not in the merged node or path-orbit address.
 
 ## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
 

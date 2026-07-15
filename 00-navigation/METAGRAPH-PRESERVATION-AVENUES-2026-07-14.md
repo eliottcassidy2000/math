@@ -389,6 +389,10 @@ certificate clauses, and proof obligations.
   fibre, then attach THM-778 endpoint transport to transitions between cut
   orbits.  Separate a mask transition from a complement-line orbit and from a
   mere endpoint-node incidence.
+- **Concurrent join:** HYP-6845's wall `phi`-recurrence is transport above this
+  cut orbit, not a node invariant.  Test whether `(path orbit, owner assignment,
+  phi)` is sufficient for its flip-break step before adding more metagraph
+  coordinates.
 - **Must preserve:** path orbit, owner assignment, simultaneous-isomorphism
   line orbit, inverse winding, centered phase/ties, wall rank, and carry.
 - **Deliverable:** the first exact three-level incidence index
