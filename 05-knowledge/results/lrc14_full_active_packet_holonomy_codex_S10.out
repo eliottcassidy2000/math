@@ -1,0 +1,35 @@
+FULL ACTIVE-PACKET HOLONOMY -- EXACT REPLAY
+family: F=49H+1; w_j=F-7j (0<=j<=7); all w_j=1 (mod 7)
+interval: [x_(6H),x_(7H-1)], x_m=(m+1/2)/F
+packet word per active period: (7,6,5,4,3,2,1)
+
+audited H range: 2..200 (199 families)
+complete event-list comparisons: 199 passed
+covered walls checked: 159399
+covered chambers checked: 159200
+active periods checked: 19900
+per-family formulas: walls=8H-7; active=H-1; extent=(H-1)/(49H+1)
+ratio/gap formulas: ceil(f/g)=2; f-g=7
+extent refutations for H>=5: 196/196
+
+sample H=2: W=(50, 57, 64, 71, 78, 85, 92, 99); walls=9; active=1; extent=1/99; proposed_bound=283/9108; refutes=False
+sample H=5: W=(197, 204, 211, 218, 225, 232, 239, 246); walls=33; active=4; extent=2/123; proposed_bound=362/29397; refutes=True
+sample H=10: W=(442, 449, 456, 463, 470, 477, 484, 491); walls=73; active=9; extent=9/491; proposed_bound=1459/237644; refutes=True
+sample H=50: W=(2402, 2409, 2416, 2423, 2430, 2437, 2444, 2451); walls=393; active=49; extent=49/2451; proposed_bound=7339/5990244; refutes=True
+sample H=200: W=(9752, 9759, 9766, 9773, 9780, 9787, 9794, 9801); walls=1593; active=199; extent=199/9801; proposed_bound=29389/95990994; refutes=True
+
+TOURNAMENT FINGERPRINTS
+marked-cut scores: (0, 1, 2, 3, 4, 5, 6)
+marked-cut directed triangles: 0
+marked-cut SCC sizes: (1, 1, 1, 1, 1, 1, 1)
+marked-cut Hamiltonian paths: 1
+marked-cut edge flips per global translation: 6
+marked-cut/circular gauge edge flips: 6
+circular R7 scores: (3, 3, 3, 3, 3, 3, 3)
+circular R7 directed triangles: 14
+circular R7 SCC sizes: (7,)
+circular R7 Hamiltonian paths: 175
+circular R7 lexicographic tie path: (0, 1, 2, 3, 4, 5, 6)
+chronological packet path in converse gauge: (6, 5, 4, 3, 2, 1, 0)
+
+SUMMARY: ALL EXACT CHECKS PASSED
