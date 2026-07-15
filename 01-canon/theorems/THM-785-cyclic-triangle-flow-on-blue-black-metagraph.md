@@ -341,6 +341,33 @@ Every nonzero signed bin in each directed row splits equally between `+e` and
 (`824/1544`) sits at `|epsilon|=1`, while only the reverse current reaches the
 tails `3,4`.
 
+There is a second, measure-theoretic qualification.  Each black mask is one
+line endpoint, so divide directional current by the available black-mask mass
+in its source phase:
+
+| n | raw `M->PK / PK->M` | black-mask mass `M / PK` | source-normalized rates `M->PK / PK->M` |
+|---:|---:|---:|---:|
+| 4 | `0 / 2` | `2 / 2` | `0 / 1` |
+| 5 | `0 / 12` | `36 / 12` | `0 / 1` |
+| 6 | `38 / 78` | `176 / 784` | `19/88 / 39/392` |
+| 7 | `1254 / 2798` | `6796 / 25460` | `627/3398 / 1399/12730` |
+
+At `n=7` these rates are `18.4520%` outward and `10.9898%` reverse.  Thus raw
+line-instance current points from pure-black back to mixed, but the per-source-
+mask current points from mixed out to pure-black at `n=6,7`.  The apparent
+direction is gauge-dependent: the raw reversal is driven by the much larger
+pure-black fibre mass.  Both gauges are objective, but they answer different
+questions and must not be conflated.
+
+The simple projected support gives the same conclusion without tiling
+multiplicity.  At `n=7`, raw supports are `522` outward versus `1075` reverse,
+but per source node the rates are `522/84=87/14` and `1075/184`, i.e.
+`6.2143` outward versus `5.8424` reverse.  At `n=6`, raw supports are `16/32`
+but node-normalized rates are `16/10=8/5` versus `32/22=16/11`.  Both the
+labelled-line and projected-support gauges therefore locate the raw reversal
+in phase population size, rather than in larger reverse incidence per
+pure-black source after normalization.
+
 The black current across the `C3` cut `k | k+1` at `n=7`, for
 `k=1,...,13`, is
 

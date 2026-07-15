@@ -99,6 +99,11 @@ majorization ordering motivated retaining tiling-fibre mass before line-WL in
 the flow address.  Its preliminary directional majorization ratios use the
 first/numerically smaller mask on an unordered complement line, so they should
 not be compared to the invariant `C3`-oriented current until reoriented.
+Disintegrating one layer further shows the black arrow is itself gauge-
+dependent: raw `n=7` current is reverse (`2798` versus `1254`), but division by
+available black source masks (`25460` pure-black, `6796` mixed) gives rates
+`10.99%` reverse versus `18.45%` outward.  The reverse raw current is therefore
+a fibre-volume effect, not a per-state transport preference.
 
 ---
 

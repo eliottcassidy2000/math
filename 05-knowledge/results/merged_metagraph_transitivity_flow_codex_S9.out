@@ -77,6 +77,9 @@ N=7 CATEGORY-BOUNDARY FLOW (line multiplicity / projected support)
   black pure_black->mixed: 2798/1075
   black mixed--pure_black ties: 992/297
   black boundary direction by |epsilon|: {'mixed->pure_black|0': 534, 'mixed->pure_black|1': 248, 'mixed->pure_black|2': 472, 'pure_black->mixed|0': 942, 'pure_black->mixed|1': 1072, 'pure_black->mixed|2': 668, 'pure_black->mixed|3': 100, 'pure_black->mixed|4': 16, 'tie|1': 876, 'tie|3': 116}
+  category black-mask mass: {'mixed': 6796, 'pure_black': 25460, 'pure_blue': 0}
+  density mixed->pure_black: {'numerator': 1254, 'denominator': 6796, 'reduced': '627/3398', 'decimal': 0.184520306}; pure_black->mixed: {'numerator': 2798, 'denominator': 25460, 'reduced': '1399/12730', 'decimal': 0.109897879}
+  support density mixed->pure_black: {'numerator': 522, 'denominator': 84, 'reduced': '87/14', 'decimal': 6.214285714}; pure_black->mixed: {'numerator': 1075, 'denominator': 184, 'reduced': '1075/184', 'decimal': 5.842391304}
   black C3 cut current (k means k|k+1): {'1': 4, '10': 4290, '11': 3430, '12': 1366, '13': 70, '2': 26, '3': 86, '4': 294, '5': 626, '6': 1520, '7': 2440, '8': 3512, '9': 4256}
 
 INTERPRETATION

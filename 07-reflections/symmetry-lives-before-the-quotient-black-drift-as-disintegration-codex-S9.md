@@ -39,6 +39,13 @@ symmetric labelled measure
   -> asymmetric categorical current.
 ```
 
+At `n=7` this can already be separated cleanly.  Raw boundary current is
+`2798` pure-black-to-mixed versus `1254` mixed-to-pure-black.  But the source
+populations are `25460` and `6796` black masks, so the per-mask rates are
+`10.99%` and `18.45%`: normalization reverses the arrow.  “The black flow
+points left” is therefore incomplete unless it states whether the measure is
+line count or source-fibre density.
+
 This viewpoint connects several old threads that otherwise look unrelated.
 
 - Score majorization supplies the horizontal potential: `C3` is exactly

@@ -412,10 +412,15 @@ certificate clauses, and proof obligations.
   pure-black-to-mixed instances against 1,254 mixed-to-pure-black.  This does
   not break complement symmetry: `(a,epsilon)` is sent to `(-a,-epsilon)`
   before quotienting.
+- **Delivered first disintegration:** the `n=7` reverse raw current is a fibre-
+  volume effect.  Pure-black has 25,460 black masks and mixed has 6,796; after
+  source-mass normalization, reverse rate is `10.99%` while outward rate is
+  `18.45%`.  Raw and density gauges point in opposite directions.
 - **Pull:** condition the exact endpoint-bit measure `(R,X,Y)` successively on
   unmerged class, converse orbit, fibre size, automorphism stabilizer, line
-  orbit, and pure/mixed/black phase.  Locate the first conditioning step that
-  creates the black drift, then predict its sign without enumerating masks.
+  orbit, and pure/mixed/black phase.  Explain the residual density-normalized
+  outward kernel and the one-sided `|epsilon|=3,4` tails, then predict both raw
+  and normalized signs without enumerating masks.
 - **Old thread:** score-majorization/Slater depth; half-tiling reflection;
   line-metagraph simultaneous isomorphism; HYP-3813 Gram/spectral bridge;
   MPA-02/05/07/13; THM-781/785/787.
