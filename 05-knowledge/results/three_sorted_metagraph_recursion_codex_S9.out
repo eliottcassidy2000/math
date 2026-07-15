@@ -1,0 +1,59 @@
+THM-796 THREE-SORTED RECURSIVE METAGRAPH INCIDENCE
+==================================================================================
+T_n = (T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex
+E_n = T_(n-1) x_[T_(n-2)] T_(n-1) (choose apex-zero endpoint)
+A^colour_uv = #{t in fibre(u): complement(t) in fibre(v), colour(t)=colour}
+D_n(u,v) = #{t in fibre(u): low_face(t) in fibre(v)}
+
+n=3: tilings=2 lines=1 nodes=2
+  line colours={'blue': 1} projected supports=1 loops(lines/nodes)={}/{'blue': 0, 'black': 0}
+  edge-fibre multiplicities={'1': 1}
+  incidence/symmetry/diagonal failures=0/0/0
+
+n=4: tilings=8 lines=4 nodes=3
+  line colours={'blue': 2, 'black': 2} projected supports=3 loops(lines/nodes)={'blue': 1}/{'blue': 1, 'black': 0}
+  edge-fibre multiplicities={'1': 2, '2': 1}
+  incidence/symmetry/diagonal failures=0/0/0
+  branch partitions support/weighted/normalized=2/3/3 of 3
+  lift blocks nonuniform/total=0/5 max_range=0
+  colour descent={'BBB': 2, 'KBB': 2}
+  recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
+
+n=5: tilings=64 lines=32 nodes=10
+  line colours={'blue': 8, 'black': 24} projected supports=20 loops(lines/nodes)={'black': 4}/{'blue': 0, 'black': 2}
+  edge-fibre multiplicities={'1': 8, '2': 12}
+  incidence/symmetry/diagonal failures=0/0/0
+  branch partitions support/weighted/normalized=7/10/10 of 10
+  lift blocks nonuniform/total=11/19 max_range=3
+  colour descent={'BBB': 4, 'KBB': 4, 'KBK': 8, 'BKK': 4, 'KKK': 4, 'KKB': 8}
+  recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
+
+n=6: tilings=1024 lines=512 nodes=34
+  line colours={'blue': 32, 'black': 480} projected supports=187 loops(lines/nodes)={'black': 24, 'blue': 2}/{'blue': 2, 'black': 8}
+  edge-fibre multiplicities={'1': 24, '12': 2, '14': 1, '2': 115, '4': 31, '6': 8, '8': 6}
+  incidence/symmetry/diagonal failures=0/0/0
+  branch partitions support/weighted/normalized=34/34/34 of 34
+  lift blocks nonuniform/total=76/112 max_range=6
+  colour descent={'BBB': 8, 'KBB': 24, 'KBK': 96, 'BKK': 24, 'KKK': 264, 'KKB': 96}
+  recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
+
+n=7: tilings=32768 lines=16384 nodes=272
+  line colours={'blue': 256, 'black': 16128} projected supports=6126 loops(lines/nodes)={'black': 114}/{'blue': 0, 'black': 44}
+  edge-fibre multiplicities={'1': 236, '10': 25, '12': 3, '14': 1, '16': 2, '2': 4291, '4': 1176, '6': 303, '8': 89}
+  incidence/symmetry/diagonal failures=0/0/0
+  branch partitions support/weighted/normalized=264/272/272 of 272
+  lift blocks nonuniform/total=1206/1312 max_range=6
+  colour descent={'BBB': 16, 'KBB': 48, 'KBK': 960, 'BKK': 240, 'KKK': 14160, 'KKB': 960}
+  recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
+
+N=7 INFORMATION BOUNDARY
+  lower-face support alone: 264/272 cells, 8 twin pairs
+  weighted row: 272/272; normalized row: 272/272
+  node-only strong lumpability fails on 1206/1312 nonzero node blocks
+  conclusion: relative lower-face multiplicities identify every audited node,
+  but a lower node does not make its tilings exchangeable for the next lift
+
+TOURNAMENT ANALYSIS (n=7)
+  carriers=('fibre_size', 'colour_degree', 'line_support_row', 'line_weighted_row', 'lower_face_support', 'lower_face_weighted', 'lower_face_normalized', 'exact_node')
+  retention/economy edge flips=18
+  tie Hamiltonian path=('fibre_size', 'colour_degree', 'line_support_row', 'line_weighted_row', 'lower_face_support', 'lower_face_weighted', 'lower_face_normalized', 'exact_node')
