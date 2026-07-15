@@ -65185,7 +65185,7 @@ rank-four sectors; genuine increasing-size CF cocycle state with phase and
 owner tokens; and only then a metric fibre product with LRC gap/owner/wall
 data.  None of the tournament carriers computed here preserves loneliness,
 and LRC(14) remains open.
-## codex-2026-07-15-S10 continuation -- joint relative cuts collapse the primitive H6 scale cap to 882
+## codex-2026-07-15-S10 continuation -- joint relative cuts collapse the primitive H6 scale cap to 840
 
 HONEST VERDICT: the requested uniform `q<=25` statement is false (THM-762/764),
 and global `n=12` sporadic-branch emptiness remains open.  The live mainline now
@@ -65211,9 +65211,11 @@ For each, simultaneous label multiplication normalizes one label to one, so
 all `11P5=55,440` assignments can be scanned exactly.  None satisfies even the
 unit-independent scalar owner-capacity inequality; best floors are
 `1046,1047,1045,1049 < 1120`.  The same exact scan rejects all twelve rows at
-the next scale 1,008, with best floor only `946/1008`.  Thus 887,040 normalized
-label assignments across the sixteen top rows have zero survivors.  The next
-arithmetic scale is 882, proving `c<=882` under THM-860's hypotheses.  This
+the next scale 1,008, with best floor only `946/1008`.  A further scan rejects
+all twenty-three scale-882 rows, with best floor `817/882`.  Thus 2,162,160
+normalized label assignments across the thirty-nine top rows have zero
+survivors.  The next arithmetic scale is 840, proving `c<=840` under
+THM-860's hypotheses.  This
 replaces the former coarse product bound 2,177,280 without claiming a metric
 verdict for any surviving scale.
 

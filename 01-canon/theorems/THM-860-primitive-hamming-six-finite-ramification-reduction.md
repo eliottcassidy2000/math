@@ -1,7 +1,7 @@
 ---
 id: THM-860
 title: Primitive Hamming-six finite ramification reduction
-status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=882 and belongs to a finite exact component recursion; no emptiness claim
+status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=840 and belongs to a finite exact component recursion; no emptiness claim
 source: codex-2026-07-15-S14/S15 primitive-H6 transport and independent audit
 depends_on: [THM-765, THM-810, THM-815, THM-857, THM-858, THM-859]
 related: [THM-823, THM-840, THM-856, THM-861, THM-862, HYP-6820]
@@ -139,13 +139,14 @@ Its sharp order-only cap is `1,120`, attained by exactly four sorted words:
 (20,35,80,280,1120,1120),     (20,35,112,160,280,1120).
 ```
 
-None of these four words, nor any of the twelve arithmetic words at the next
-scale `1,008`, admits even the unit-independent scalar owner capacity required
-by common-sheet coverage.  The next arithmetic scale is `882`.  Consequently
-every packet in the theorem satisfies the much smaller exact bound
+None of these four words, the twelve arithmetic words at scale `1,008`, or the
+twenty-three words at scale `882` admits even the unit-independent scalar owner
+capacity required by common-sheet coverage.  The next arithmetic scale is
+`840`.  Consequently every packet in the theorem satisfies the much smaller
+exact bound
 
 ```text
-                              c<=882.                   (11)
+                              c<=840.                   (11)
 ```
 
 The last line of (9) is a **valuation-range** statement, not a prime
@@ -224,7 +225,7 @@ entire primitive AP-centred Hamming-six branch is finite-decidable.  At
 `2[12]`; hence any primitive row satisfying (2) has
 
 ```text
-2<=c<=882.                                             (19)
+2<=c<=840.                                             (19)
 ```
 
 This is a finite reduction, not a zero-row verdict.
@@ -576,7 +577,16 @@ minimum owner capacity is only
 ```
 
 with deficit `62`.  The next scale in the complete arithmetic census is
-`882`, proving (11).
+`882`.  Its twenty-three words likewise have zero scalar-covering assignments
+among `23*55,440=1,275,120` normalized label rows, with best minimum owner
+capacity
+
+```text
+817/882.                                                (40i)
+```
+
+The next arithmetic scale is `840`, proving (11).  Its `372` order rows have
+not been scalar-owner scanned.
 
 ### 4. Exact finite verifier
 
@@ -594,8 +604,8 @@ The stored verifier independently performs four exact jobs:
 
 The joint-cap verifier independently enumerates all `63` cuts, every normalized
 prime-profile alignment and common multiplier in (40c), the four extremal
-words, all `16*55,440=887,040` normalized label assignments at scales `1,120`
-and `1,008` in (40f), and the pairwise
+words, all `39*55,440=2,162,160` normalized label assignments at scales
+`1,120`, `1,008`, and `882` in (40f), and the pairwise
 Tournament Analysis loss audit.  Its two completed tournaments are transitive
 on every extremal word.  The raw-order gauge has zero or one tie; after
 conditioning a pair on the other four orders, all fifteen pairs tie.  The
@@ -618,8 +628,8 @@ c=2 FNV-64      b2aad8bd497eb595.                       (41)
 The additional joint certificate has
 
 ```text
-joint source SHA-256  b87ece57ed84b78c26fdd68cabe50cffab040e3cfa6160ba6755e480f236b61f
-joint output SHA-256  d22e3c16db932809eb09666917825b057ad72bbe8c2d1476f7159abda8cc1646. (41a)
+joint source SHA-256  21d55646c21c4530e9fca1f00dec5c422aec4edc8993f9d3571e881f145e5b4f
+joint output SHA-256  8d9968402a16e247c6ee6024b1dc573b69b4e3380faa2f48cbdc7393965d5ccb. (41a)
 ```
 
 Reproduce with
@@ -658,6 +668,6 @@ THM-860 makes every primitive proper AP-centred H6 language finite-decidable.
 THM-861 subsequently proves that the only `c=2` cover is the ordinary AP
 presentation `[12]`, and THM-862 classifies all `1,504` common-sheet contexts
 at `c=3` without running their terminal metric recursion.  This theorem does
-**not** close those `c=3` trees, the remaining `4<=c<=882` trees, the finite
+**not** close those `c=3` trees, the remaining `4<=c<=840` trees, the finite
 ramified H5 metric bank, the seven-comb wall, or global `n=12`
 sporadic-branch emptiness.

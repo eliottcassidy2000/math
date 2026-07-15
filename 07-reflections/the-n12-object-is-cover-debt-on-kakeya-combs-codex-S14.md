@@ -238,8 +238,8 @@ complete 63-cut prime-power hypergraph has only 8,449 normalized words and
 1,120.  If the six order slots are made tournament vertices, however, every
 complement-conditioned pair in all four rows ties, and the fixed tie completion
 is transitive.  The multi-colour cuts still distinguish the words, and exact
-scalar owner capacities exclude all four plus every one of the twelve rows at
-scale 1,008.  The next arithmetic scale gives `c<=882`.  Thus “proof
+scalar owner capacities exclude all four plus every row at scales 1,008 and
+882.  The next arithmetic scale gives `c<=840`.  Thus “proof
 obligations” and prime-power upper sets are sometimes
 better vertices than runners, arcs, or even sheet providers: the theorem lives
 on a cut hypergraph whose pair shadow is maximally uninformative.

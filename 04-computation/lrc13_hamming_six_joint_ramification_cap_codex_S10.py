@@ -268,9 +268,11 @@ def main():
         (20, 35, 112, 160, 280, 1120),
     )
     assert tuple(sorted(extremals)) == expected_extremals
-    assert distinct_scales[:3] == (1120, 1008, 882)
+    assert distinct_scales[:4] == (1120, 1008, 882, 840)
     scale_1008_rows = tuple(orders for scale, orders, *_ in rows if scale == 1008)
     assert len(scale_1008_rows) == 12
+    scale_882_rows = tuple(orders for scale, orders, *_ in rows if scale == 882)
+    assert len(scale_882_rows) == 23
 
     print("THM-860 JOINT RAMIFICATION CAP -- EXACT INTEGER CERTIFICATE")
     print("method: gcd-normalized prime profiles + all 63 relative cuts")
@@ -286,8 +288,9 @@ def main():
     print(f"final normalized words: {len(normalized_words)}")
     print(f"feasible (normalized word, common-gcd) rows: {len(rows)}")
     print(
-        "largest three arithmetic scales: "
-        f"{distinct_scales[0]}, {distinct_scales[1]}, {distinct_scales[2]}"
+        "largest four arithmetic scales: "
+        f"{distinct_scales[0]}, {distinct_scales[1]}, "
+        f"{distinct_scales[2]}, {distinct_scales[3]}"
     )
     print(f"arithmetic relaxation cap: {arithmetic_cap}")
     print()
@@ -331,7 +334,22 @@ def main():
     assert all(result[1] == 0 for _, result in scale_1008_results)
     best_1008 = max(result[2] for _, result in scale_1008_results)
     assert best_1008 == 946
-    print("common-sheet consequence: c in {1120,1008} impossible; hence c<=882")
+    print()
+    print("unit-independent scalar owner-capacity scan at c=882:")
+    scale_882_results = []
+    for orders in scale_882_rows:
+        result = scalar_owner_scan(orders)
+        scale_882_results.append((orders, result))
+        assignments, survivors, best_floor, best_labels = result
+        print(
+            f"  {orders}: assignments={assignments}, covers={survivors}, "
+            f"best-floor={best_floor}/882, deficit={882-best_floor}, "
+            f"first-best-labels={best_labels}"
+        )
+    assert all(result[1] == 0 for _, result in scale_882_results)
+    best_882 = max(result[2] for _, result in scale_882_results)
+    assert best_882 == 817
+    print("common-sheet consequence: c in {1120,1008,882} impossible; hence c<=840")
 
     print()
     print("Tournament Analysis loss audit on the four arithmetic extremals:")
