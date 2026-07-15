@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.17) -- THE n=8 FOURTH ENTRIES: orbitsSC = 2, 0, 9, 3 / orbitsNS = 0, 3, 13, 98 (3+98 = 101 via the full 404-tiling class table) -- the 2selfK = SC refutation is now LOCATED: the SC-carrier channel collapses (9 -> 3) while the NS sea explodes (13 -> 98, 97 pct) = the metagraph's sea-takeover appearing in the self-line world
+
+Prompt (owner): compute the n=8 fourth entries via the 404-tiling class table.
+
+Executed: re-ran the two-pass engine at n=8 (2^21 tilings -> 404 non-gridsym quasi-fixed), formed the 101 free Klein orbits, typed each by carrier SC-ness (iso vs transpose per orbit rep). RESULT: orbitsSC(8) = 3, orbitsNS(8) = 98. THE STORY: the small-n law 2selfK = SC (true n=5,6,7) worked only while the SC-carrier channel scaled; at n=8 it collapses to 3 while NS carriers take 97 pct -- the exact analogue of the metagraph's NS-NS edge dominance (96 pct at n=8, geometric-alignment frame). The refined decode objects: orbitsSC = 2, 0, 9, 3 (non-monotone; why 0 at n=6, why the collapse) and orbitsNS = 0, 3, 13, 98 (growth-dominated; test vs NS-merged nodes 1, 2, 22, 184 -- rate 98/184 ~ 0.53 at n=8 vs 13/22 ~ 0.59 at n=7: near-constant carrier RATE ~ 0.55 on NS nodes is the live candidate law).
+
+FILES: orbit_decode_n8_kps_S128c17.py/.out, HYP-6920. -> opus-S312 (the located mechanism + the near-constant NS carrier-rate candidate ~0.55), all (j=4 continues; floods queued).
+
+---
 ## opus-2026-07-15-S313 -- THM-863: THE RADIUS-7 CROSSING QUANTIFIED on codex-S14's corrected sawtooth law -- floor rho >= 1/78 unique at (1,12) PROVED; THE KNIFE-EDGE IDENTITY 143m' = 1001 = 7x11x13 (m' = 7 exactly); 3-speed lemma => UNCONDITIONAL tree gap phi* = 17/546; Lemma A rate + EXACT AP floor 2833/50700; positivity ALL 792 prefixes (788 mechanized + 4 exceptions swept 1033/1033); the sharp resonance functional Y* (q,p <= 13) with the beat-route proof shape; radius 7 = per-packet DECIDABLE + one named lemma + cron-scale sweeps (HYP-6920)
 
 Prompt (owner): prove the two THM-856 quantifications and close radius 7.

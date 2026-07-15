@@ -1,0 +1,9 @@
+pass 1+2 over 2^21 tilings...
+  ...0, X so far 0
+  ...524288, X so far 83
+  ...1048576, X so far 202
+  ...1572864, X so far 321
+non-gridsym quasi-fixed: 404 (expect 404)
+n=8: orbits=101 = orbitsSC 3 + orbitsNS 98
+SEQUENCES: orbitsSC = 2, 0, 9, 3 ; orbitsNS = 0, 3, 13, 98
+DONE
