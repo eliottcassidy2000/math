@@ -128,6 +128,24 @@ def audit_closed_forms(max_n: int = 30) -> dict:
         failures += sum(defects.values()) != sum(black.values())
         failures += max(blue) != n - 2
         failures += any(step % 2 != n % 2 for step in blue)
+        total_endpoint_states = 1 << (2 * (n - 3) + 1)
+        moment_s = moment_e = moment_ss = moment_ee = moment_se = 0
+        for shared in (0, 1):
+            for left_wins in range(n - 2):
+                for right_wins in range(n - 2):
+                    weight = math.comb(n - 3, left_wins) * math.comb(
+                        n - 3, right_wins
+                    )
+                    flux = 2 * shared - 1 + left_wins - right_wins
+                    defect = left_wins + right_wins - (n - 3)
+                    moment_s += weight * flux
+                    moment_e += weight * defect
+                    moment_ss += weight * flux * flux
+                    moment_ee += weight * defect * defect
+                    moment_se += weight * flux * defect
+        failures += moment_s != 0 or moment_e != 0 or moment_se != 0
+        failures += 2 * moment_ss != (n - 1) * total_endpoint_states
+        failures += 2 * moment_ee != (n - 3) * total_endpoint_states
     assert failures == 0
     return {"n_min": 3, "n_max": max_n, "failures": failures}
 
@@ -174,6 +192,16 @@ def counter_json(counter: Counter) -> dict[str, int]:
         return str(key)
 
     return {key_text(key): value for key, value in sorted(counter.items(), key=lambda kv: repr(kv[0]))}
+
+
+def exact_rate(numerator: int, denominator: int) -> dict:
+    divisor = math.gcd(numerator, denominator) if denominator else 1
+    return {
+        "numerator": numerator,
+        "denominator": denominator,
+        "reduced": f"{numerator // divisor}/{denominator // divisor}" if denominator else "undefined",
+        "decimal": round(numerator / denominator, 9) if denominator else None,
+    }
 
 
 def classify_node(masks: list[int], grid_symmetric: list[bool]) -> str:
@@ -481,6 +509,42 @@ def analyze(n: int, size: dict) -> dict:
             incidence_failures += bool(inc["blue_cross"] or inc["blue_self"])
     assert incidence_failures == 0
 
+    category_tiling_mass: Counter[str] = Counter()
+    category_blue_tiling_mass: Counter[str] = Counter()
+    category_black_tiling_mass: Counter[str] = Counter()
+    for node, masks in masks_by_node.items():
+        category = node_category[node]
+        category_tiling_mass[category] += len(masks)
+        category_blue_tiling_mass[category] += sum(grid_symmetric[mask] for mask in masks)
+        category_black_tiling_mass[category] += sum(not grid_symmetric[mask] for mask in masks)
+    assert sum(category_tiling_mass.values()) == tiling_count
+    assert sum(category_blue_tiling_mass.values()) == 2 * sum(
+        count for (color, _step), count in line_step_histogram.items() if color == "blue"
+    )
+    assert sum(category_black_tiling_mass.values()) == 2 * sum(
+        count for (color, _step), count in line_step_histogram.items() if color == "black"
+    )
+    black_outward = line_phase_counts[("black", "categorical_outward")]
+    black_inward = line_phase_counts[("black", "categorical_inward")]
+    black_flow_density = {
+        "mixed_to_pure_black_per_mixed_black_mask": exact_rate(
+            black_outward, category_black_tiling_mass["mixed"]
+        ),
+        "pure_black_to_mixed_per_pure_black_mask": exact_rate(
+            black_inward, category_black_tiling_mass["pure_black"]
+        ),
+    }
+    black_support_flow_density = {
+        "mixed_to_pure_black_per_mixed_node": exact_rate(
+            support_phase_counts[("black", "categorical_outward")],
+            sum(category == "mixed" for category in node_category.values()),
+        ),
+        "pure_black_to_mixed_per_pure_black_node": exact_rate(
+            support_phase_counts[("black", "categorical_inward")],
+            sum(category == "pure_black" for category in node_category.values()),
+        ),
+    }
+
     category_by_depth: dict[int, Counter[str]] = defaultdict(Counter)
     for node, depth in node_depth.items():
         category_by_depth[depth][node_category[node]] += 1
@@ -589,6 +653,11 @@ def analyze(n: int, size: dict) -> dict:
         "balanced_categories": counter_json(Counter(node_category[node] for node in balanced_nodes)),
         "balanced_monotone_blue_then_black_paths": balanced_paths,
         "node_category_counts": counter_json(Counter(node_category.values())),
+        "category_tiling_mass": counter_json(category_tiling_mass),
+        "category_blue_tiling_mass": counter_json(category_blue_tiling_mass),
+        "category_black_tiling_mass": counter_json(category_black_tiling_mass),
+        "black_boundary_flow_density": black_flow_density,
+        "black_boundary_support_density": black_support_flow_density,
         "node_categories_by_triangle_depth": {
             str(depth): counter_json(counts) for depth, counts in sorted(category_by_depth.items())
         },
@@ -717,6 +786,15 @@ def render(result: dict) -> str:
             f"{n7['line_support_direction_counts'].get('black|tie|mixed|pure_black',0)}",
             f"  black boundary direction by |epsilon|: "
             f"{n7['black_boundary_absolute_source_defect']}",
+            f"  category black-mask mass: {n7['category_black_tiling_mass']}",
+            f"  density mixed->pure_black: "
+            f"{n7['black_boundary_flow_density']['mixed_to_pure_black_per_mixed_black_mask']}; "
+            f"pure_black->mixed: "
+            f"{n7['black_boundary_flow_density']['pure_black_to_mixed_per_pure_black_mask']}",
+            f"  support density mixed->pure_black: "
+            f"{n7['black_boundary_support_density']['mixed_to_pure_black_per_mixed_node']}; "
+            f"pure_black->mixed: "
+            f"{n7['black_boundary_support_density']['pure_black_to_mixed_per_pure_black_node']}",
             f"  black C3 cut current (k means k|k+1): "
             f"{n7['black_cyclic_triangle_cut_current']}",
             "",

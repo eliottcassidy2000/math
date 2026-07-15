@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""Partial THM-786 battery (opus-S304; scope corrected by codex-S10).
+"""THM-786 exact replay (opus-S304, scope-corrected by codex-S10).
 
-This file exactly replays two extreme-ratio certificates refuting a universal
-raw wall-count bound and checks their extents against 1/w_g+2/w_f. It does NOT
-implement the census table printed in THM-786, and it does not test or prove the
-withdrawn serving/de-phase and sparse-regime claims. The historical 0.589
-telemetry is merely printed, not recomputed. Pure integer/Fraction arithmetic.
+This file exactly checks the two extreme-ratio wall-count certificates and
+their extents.  It does *not* implement the session-reported generic /
+extreme-ratio / balanced-pair / near-multiple census or annealing run; the
+legacy 0.589 line is printed only as an explicitly unreplayed report.
+
+Tournament Analysis is intentionally not recomputed here: the wall chronology
+tournament is transitive (one Hamiltonian path) and forgets both metric extent
+and which companion serves which g-wall.  The theorem-facing carrier is the
+labelled incidence relation (g-wall, f-period, companion); the exact tournament
+guardrail is audited in lrc14_r8_raw_wall_refuter_codex_S10.py.
 """
 import random
 from fractions import Fraction as F
@@ -49,6 +54,6 @@ if __name__ == '__main__':
         k, ext = run_stats(W8, F(1,100), F(1,100)+F(1,4))
         print(f"certificate {W8}: run = {k} WALLS (K0=6 refuted), "
               f"extent = {float(ext):.5f} < bound {float(bound):.5f}: {ext < bound}")
-    # (2) extent census (seeded as in the session; see THM-786 table)
+    # (2) Legacy session report; no census generator was stored in this file.
     random.seed(3041)
-    print("historical extent table/peak 0.589 is NOT recomputed by this script")
+    print("extent census NOT REPLAYED: S304 reported peak ratio 0.589 (annealed).")

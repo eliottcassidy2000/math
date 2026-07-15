@@ -1,11 +1,11 @@
 ---
 id: THM-778
 title: Centered-Christoffel endpoint words and the prime-sheet Euclidean skew product
-status: PROVED (elementary midpoint-rank, Euclidean-cocycle, reconstruction, and skew-product theorem; finite-exact audit through 6,400 ordered pairs and five complete LRC movies)
-source: codex-2026-07-14-S7
+status: PROVED (elementary midpoint-rank, Euclidean-cocycle, reconstruction, and skew-product theorem; finite-exact audit through 6,400 ordered pairs and five complete LRC movies) + COROLLARY (r=8 simultaneous-wall pierce)
+source: codex-2026-07-14-S7 with codex-S10 post-pull audit/corollary
 depends_on:
   - THM-773
-related: [THM-536, THM-565, THM-637, THM-745, THM-779, HYP-4078, HYP-6280]
+related: [THM-536, THM-565, THM-637, THM-745, THM-779, HYP-4078, HYP-6280, HYP-6840]
 verification: 04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py
   (+ 05-knowledge/results/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.out and .json)
 ---
@@ -352,3 +352,49 @@ next-event paths and `6,620` pair-edge flips.  The isomorphism class is therefor
 a constant base label, while the labelled Euclidean path is the dynamic stalk.
 Even the 25-mask refinement is not closed under reflection without its
 owner-labelled lift.
+
+## Post-pull addendum: closed ranks and an r=8 simultaneous-wall pierce
+
+The strict predecessor count (1) has the closed companion
+
+```text
+D_(v|u)(i)=#{j:e_(v,j)<=e_(u,i)}
+           =floor((v(2i+1)+u)/(2u)).                     (18)
+```
+
+Thus `D-C in {0,1}` is the exact tie indicator.  With `g=gcd(u,v)`,
+`U=u/g`, and `V=v/g`, ties occur exactly when `U,V` are odd, equivalently
+`nu_2(u)=nu_2(v)`.  In that case their positions are the complete midpoint
+grid
+
+```text
+e=(2ell+1)/(2g),       0<=ell<g.                          (19)
+```
+
+This makes THM-779's no-simultaneous-wall condition arithmetic.  In an
+eight-exception split `7P union W`, if `u,v in W` have equal 2-adic valuation,
+then both owners are absent at every point of (19).  Only six singleton tokens
+remain, so seven sheets cannot be covered.  Therefore any closed core-safe
+interval of length at least `1/g` forces an LRC witness.
+
+Let `B=max(P)` and `eta=M(P)-1/14`.  The `B`-Lipschitz core margin supplies a
+closed core-safe interval of length at least `2eta/B`; hence the explicit
+sufficient condition is
+
+```text
+g>=B/(2eta).                                              (20)
+```
+
+For the five-speed core in the r=8 branch, settled LRC gives `M(P)>=1/6`, so
+(20) reduces to `g>=21B/4`.  This is a genuine schedule/core obstruction,
+not a token-state obstruction.
+
+An independent expanded audit checked (1), (18), the tie grid, marked word,
+and rank decoder over all `40,000` ordered pairs through `200`, totaling
+`4,020,000` letters and `56,792` ties, plus all `4,029` owner tuples of sizes
+two through four from `[1,18]`.  Its pair and global-rank fingerprints are
+
+```text
+f65558ecb52b629762236c1051fcdf0b982eb4ea67269d6aac348b0669ab447e
+708f2fabe9372407898085bf486336a6787db3b01f0181b5b43efe6827fea9c5.
+```

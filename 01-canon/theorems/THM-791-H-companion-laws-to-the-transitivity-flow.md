@@ -9,7 +9,7 @@ depends_on: []
 related:
   - THM-785 (codex-S9: C3 flux, closed blue binomial law, categorical interface (13)/(14), oriented quotient imbalance, the flow address (15)) — the frame this companions; my independent n≤6 run reproduced its interface law and node censuses (PB,M,PK) = (3,5,2), (2,10,22) exactly before reading it
   - THM-787 (opus-S304: E4 axis, blue-avoids-pure-black proved, parity/max conjectures proved by 785)
-  - HYP-6860 (this session's renumbered log entry); kps-S66/HYP-4997 (blue/black line counts; the pure-blue census conjecture now confirmed)
+  - HYP-6865 (renumbered from the colliding HYP-6855/HYP-6860 session entries); kps-S66/HYP-4997 (blue/black line counts; the pure-blue census conjecture now confirmed)
   - MINIMAL-INVARIANT ORDERING remark: the 4-stage order (score-seq via (Σs² desc, lex), phase PB<MX<PBk, H, canonical word) resolves 3/10/28 of 3/10/34 classes at n=4/5/6 before the single arbitrary stage (canonical word breaks 0/1/6 residual ties) — a low-coordinate alternative to THM-785's 8-coordinate flow address when minimal arbitrariness is the goal; H does real separating work in it (stage gains +0/+2/+11)
 ---
 

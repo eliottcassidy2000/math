@@ -39,6 +39,43 @@
       "node_category_counts": {
         "pure_blue": 2
       },
+      "category_tiling_mass": {
+        "pure_blue": 2
+      },
+      "category_blue_tiling_mass": {
+        "pure_blue": 2
+      },
+      "category_black_tiling_mass": {
+        "pure_blue": 0
+      },
+      "black_boundary_flow_density": {
+        "mixed_to_pure_black_per_mixed_black_mask": {
+          "numerator": 0,
+          "denominator": 0,
+          "reduced": "undefined",
+          "decimal": null
+        },
+        "pure_black_to_mixed_per_pure_black_mask": {
+          "numerator": 0,
+          "denominator": 0,
+          "reduced": "undefined",
+          "decimal": null
+        }
+      },
+      "black_boundary_support_density": {
+        "mixed_to_pure_black_per_mixed_node": {
+          "numerator": 0,
+          "denominator": 0,
+          "reduced": "undefined",
+          "decimal": null
+        },
+        "pure_black_to_mixed_per_pure_black_node": {
+          "numerator": 0,
+          "denominator": 0,
+          "reduced": "undefined",
+          "decimal": null
+        }
+      },
       "node_categories_by_triangle_depth": {
         "0": {
           "pure_blue": 1
@@ -544,6 +581,49 @@
         "mixed": 1,
         "pure_black": 1,
         "pure_blue": 1
+      },
+      "category_tiling_mass": {
+        "mixed": 5,
+        "pure_black": 2,
+        "pure_blue": 1
+      },
+      "category_blue_tiling_mass": {
+        "mixed": 3,
+        "pure_black": 0,
+        "pure_blue": 1
+      },
+      "category_black_tiling_mass": {
+        "mixed": 2,
+        "pure_black": 2,
+        "pure_blue": 0
+      },
+      "black_boundary_flow_density": {
+        "mixed_to_pure_black_per_mixed_black_mask": {
+          "numerator": 0,
+          "denominator": 2,
+          "reduced": "0/1",
+          "decimal": 0.0
+        },
+        "pure_black_to_mixed_per_pure_black_mask": {
+          "numerator": 2,
+          "denominator": 2,
+          "reduced": "1/1",
+          "decimal": 1.0
+        }
+      },
+      "black_boundary_support_density": {
+        "mixed_to_pure_black_per_mixed_node": {
+          "numerator": 0,
+          "denominator": 1,
+          "reduced": "0/1",
+          "decimal": 0.0
+        },
+        "pure_black_to_mixed_per_pure_black_node": {
+          "numerator": 1,
+          "denominator": 1,
+          "reduced": "1/1",
+          "decimal": 1.0
+        }
       },
       "node_categories_by_triangle_depth": {
         "0": {
@@ -1180,6 +1260,49 @@
         "mixed": 5,
         "pure_black": 2,
         "pure_blue": 3
+      },
+      "category_tiling_mass": {
+        "mixed": 47,
+        "pure_black": 12,
+        "pure_blue": 5
+      },
+      "category_blue_tiling_mass": {
+        "mixed": 11,
+        "pure_black": 0,
+        "pure_blue": 5
+      },
+      "category_black_tiling_mass": {
+        "mixed": 36,
+        "pure_black": 12,
+        "pure_blue": 0
+      },
+      "black_boundary_flow_density": {
+        "mixed_to_pure_black_per_mixed_black_mask": {
+          "numerator": 0,
+          "denominator": 36,
+          "reduced": "0/1",
+          "decimal": 0.0
+        },
+        "pure_black_to_mixed_per_pure_black_mask": {
+          "numerator": 12,
+          "denominator": 12,
+          "reduced": "1/1",
+          "decimal": 1.0
+        }
+      },
+      "black_boundary_support_density": {
+        "mixed_to_pure_black_per_mixed_node": {
+          "numerator": 0,
+          "denominator": 5,
+          "reduced": "0/1",
+          "decimal": 0.0
+        },
+        "pure_black_to_mixed_per_pure_black_node": {
+          "numerator": 6,
+          "denominator": 2,
+          "reduced": "3/1",
+          "decimal": 3.0
+        }
       },
       "node_categories_by_triangle_depth": {
         "0": {
@@ -2354,6 +2477,49 @@
         "mixed": 10,
         "pure_black": 22,
         "pure_blue": 2
+      },
+      "category_tiling_mass": {
+        "mixed": 238,
+        "pure_black": 784,
+        "pure_blue": 2
+      },
+      "category_blue_tiling_mass": {
+        "mixed": 62,
+        "pure_black": 0,
+        "pure_blue": 2
+      },
+      "category_black_tiling_mass": {
+        "mixed": 176,
+        "pure_black": 784,
+        "pure_blue": 0
+      },
+      "black_boundary_flow_density": {
+        "mixed_to_pure_black_per_mixed_black_mask": {
+          "numerator": 38,
+          "denominator": 176,
+          "reduced": "19/88",
+          "decimal": 0.215909091
+        },
+        "pure_black_to_mixed_per_pure_black_mask": {
+          "numerator": 78,
+          "denominator": 784,
+          "reduced": "39/392",
+          "decimal": 0.099489796
+        }
+      },
+      "black_boundary_support_density": {
+        "mixed_to_pure_black_per_mixed_node": {
+          "numerator": 16,
+          "denominator": 10,
+          "reduced": "8/5",
+          "decimal": 1.6
+        },
+        "pure_black_to_mixed_per_pure_black_node": {
+          "numerator": 32,
+          "denominator": 22,
+          "reduced": "16/11",
+          "decimal": 1.454545455
+        }
       },
       "node_categories_by_triangle_depth": {
         "0": {
@@ -5587,6 +5753,49 @@
         "mixed": 84,
         "pure_black": 184,
         "pure_blue": 4
+      },
+      "category_tiling_mass": {
+        "mixed": 7302,
+        "pure_black": 25460,
+        "pure_blue": 6
+      },
+      "category_blue_tiling_mass": {
+        "mixed": 506,
+        "pure_black": 0,
+        "pure_blue": 6
+      },
+      "category_black_tiling_mass": {
+        "mixed": 6796,
+        "pure_black": 25460,
+        "pure_blue": 0
+      },
+      "black_boundary_flow_density": {
+        "mixed_to_pure_black_per_mixed_black_mask": {
+          "numerator": 1254,
+          "denominator": 6796,
+          "reduced": "627/3398",
+          "decimal": 0.184520306
+        },
+        "pure_black_to_mixed_per_pure_black_mask": {
+          "numerator": 2798,
+          "denominator": 25460,
+          "reduced": "1399/12730",
+          "decimal": 0.109897879
+        }
+      },
+      "black_boundary_support_density": {
+        "mixed_to_pure_black_per_mixed_node": {
+          "numerator": 522,
+          "denominator": 84,
+          "reduced": "87/14",
+          "decimal": 6.214285714
+        },
+        "pure_black_to_mixed_per_pure_black_node": {
+          "numerator": 1075,
+          "denominator": 184,
+          "reduced": "1075/184",
+          "decimal": 5.842391304
+        }
       },
       "node_categories_by_triangle_depth": {
         "0": {

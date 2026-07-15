@@ -1,28 +1,30 @@
 ---
 id: THM-783
-title: The corrected exit-lemma package — anchored φ-extension, period-sum and single-visitor laws, cluster balance, and a conditional metric extent theorem; raw wall count and the original de-phase estimate are withdrawn
-status: PROVED at the stated hypotheses (anchored simple-wall φ-extension; period-sum; single-visitor break; cluster balance; corrected no-companion extent bound) + VERIFIED (bounded-bank run cap 6 at heights to 10^4; laws 40/40, 45-period, 6/6 batteries) + CORRECTED (the unconditional de-phase estimate is WITHDRAWN; the absolute raw-wall conjecture is REFUTED by THM-784/MISTAKE-147; the extent theorem's original visitor-free intermediate claim is false) + OPEN (a metric/core-sensitive exit theorem and a valid varying-index balanced co-landing analysis)
-source: opus-2026-07-14-S303 (owner directive: prove the unconditional exit lemma)
+title: The corrected r=8 exit package — anchored φ-extension, visitor balance, conditional factor-two de-phasing, and a conditional metric-extent theorem; raw wall count and unconditional de-phasing are withdrawn
+status: PROVED at the stated hypotheses (anchored simple-wall φ-extension; period-sum; single-visitor break; cluster balance; factor-two drift under one-step paired indices; no-companion extent bound) + VERIFIED (bounded-bank maximum 6 only; laws 40/40, 45-period, 6/6 batteries) + CORRECTED (unconditional de-phasing and every absolute raw-wall K0 are withdrawn) + OPEN (varying-index balanced co-landings and a universal metric/core-sensitive exit)
+source: opus-2026-07-14-S303 package, scope-corrected and strengthened by codex-2026-07-14-S10
 renumber_note: claimed as THM-782 before the author observed codex-S9's earlier-pushed
   THM-782 phase-cell theorem; renumbered to THM-783 under the first-pusher protocol.
 depends_on:
   - THM-779   # the token-walk criterion this analyzes
   - THM-773   # the token algebra
-related: [THM-767, THM-771, THM-784, HYP-6840, HYP-6845, MISTAKE-147]
+related: [THM-767, THM-771, THM-784, THM-786, THM-788, HYP-6840, HYP-6845, MISTAKE-147, MISTAKE-148]
 verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
   (+ 05-knowledge/results/lrc14_exit_lemma_decision_opus_S303.out)
 ---
 
-# THM-783 — the exit-lemma package
+# THM-783 — the corrected r=8 exit package
 
-> **CORRECTION (opus-S304, MISTAKE-147):** the census constant "K0 = 6 walls" in the
-> census section was a ratio-boxed artifact — extreme-ratio tuples give 41-wall runs
-> (exact certificate in THM-786). The LAWS (phi-recurrence, period-sum, single-visitor
-> break, cluster balance, de-phase, conditional extent) are UNAFFECTED — proofs, not
-> censuses. The invariant is EXTENT; THM-786 finishes the exit lemma in extent form.
+> **Superseding correction to the historical S304 banner:** the ratio-boxed
+> census diagnosis was right, but the claimed de-phase/serving law and general
+> extent completion were not. MISTAKE-148 withdraws them. The anchored
+> recurrence, period-sum/single-visitor laws, cluster balance, and the
+> no-companion conditional extent theorem are the surviving proved package.
 
 > **Correction (codex-S10, THM-784/MISTAKE-147).** Sections (1)--(3) retain
-> the corrected local content below; (4) is withdrawn; (5) is corrected
+> the corrected local content below; the unconditional claim in (4) is
+> withdrawn but a factor-two lemma survives under explicit one-step pairing;
+> (5) is corrected
 > below without changing its metric conclusion. The finite census in (6) never
 > established a uniform bound, and the absolute wall-count conjecture in the
 > original (7) is false. A fixed slow rainbow chamber supports arbitrarily many
@@ -90,6 +92,41 @@ principle forcing those hypotheses was proved here. Therefore the unconditional
 bound and the asserted mandatory `>=3`-cluster handover are withdrawn; a sound
 varying-index/Beatty formulation is an open part of the cascade.
 
+The factor-two statement under the weaker explicit **one-step paired-index**
+hypothesis is nonetheless rigorous and does not require fixed order. Suppose
+two owners `c!=c'` make `L` paired co-visits, each paired index advances by one,
+and both walls of each pair lie in one `f`-period. Their signed separation
+drifts each time by
+
+```text
+|1/w_c-1/w_(c')|=Delta/(w_c w_(c')),
+Delta=|w_c-w_(c')|.
+```
+
+Every signed separation lies in `(-1/w_f,1/w_f)`. Hence the `L-1` equal drifts
+fit in a window of width `2/w_f`, proving
+
+```text
+L < 2 w_c w_(c')/(w_f Delta)+1.                         (D)
+```
+
+The factor two is necessary: `(w_f,w_c,w_(c'))=(11,6,8)` has four successive
+one-step paired co-visits with signed separations
+
+```text
+1/16, 1/48, -1/48, -1/16.
+```
+
+The old bound is `35/11<4`, while (D) gives `59/11>4`. The pair is balanced
+because `6+8=0 (mod 7)`. This lemma controls a fixed one-step strand only; it
+does not repair the varying-index counterexample `(8,2,5)` or prove a mandatory
+handover.
+
+THM-786 obtains the same factor-two scale without a one-step assumption in the
+special but important case where one fixed companion serves consecutive
+second-fastest-owner walls: comparing the first and last companion walls gives
+the bound directly. Alternation among several companions remains open.
+
 ## (5) The corrected conditional extent theorem (PROVED)
 
 Here a g-wall has a **balanced companion cluster** when the other visitors in
@@ -130,6 +167,12 @@ co-landings is still missing. THM-784 shows that this geometry governs only the
 visitor-rich mode: a visitor-free fast refinement can persist inside a slow
 rainbow chamber without invoking the cascade at all.
 
+On a strand whose paired indices really do advance one-by-one, (D) bounds the
+life of a fixed pair. General strands can skip indices and reverse order, so
+their handovers still require a varying-index/Beatty analysis. After persistent
+stalks are factored out, the remaining owner-switch problem is exactly how long
+this geometric-arithmetic conspiracy can persist.
+
 ## (6) The decision census (VERIFIED on its stated bounded banks only)
 
 Anchored-run maxima over sampled windows of length `1/5`, heights to `10^4`:
@@ -148,11 +191,19 @@ banks** is 6 (THM-779's earlier height-500 census found 5). THM-784 shows why
 this cannot be called a working universal constant: the banks omitted static
 seven-owner rainbow chambers refined by one arbitrarily fast owner.
 
+THM-779 supplies a stronger arithmetic adversary. A fixed seven-owner
+permutation stalk on a divisor-complete core-safe interval, together with
+`A_m=182m+1`, has `2m` consecutive covered walls. Every complete fast-owner
+period there is visitor-free, so all the proved visitor laws coexist with the
+diverging count. The finite generator contained neither this family nor the
+independent THM-784 slow-rainbow refinement.
+
 ## (7) Status of the exit lemma after this package
 
 - Proved at the displayed hypotheses: anchored simple-wall extension (1); no
-  single-visitor periods and cluster balance (3); the extent bound under the
-  no-companion hypothesis (5).
+  single-visitor periods and cluster balance (3); the factor-two drift bound on
+  one-step paired strands (4); and the extent bound under the no-companion
+  hypothesis (5).
 - The r = 8 pierce is now UNCONDITIONAL for every run configuration in which
   the second-fastest owner's walls fail to attract balanced co-landing clusters
   — while repeated companion co-landings still need a correct varying-index
@@ -163,8 +214,8 @@ seven-owner rainbow chambers refined by one arbitrarily fast owner.
 - REMAINING (sharp, geometric): split off visitor-free fast refinements of a
   slow seven-owner rainbow chamber. For the visitor-rich complement, bound
   consecutive balanced co-landings using a sound Beatty/varying-index cascade;
-  the earlier fixed-index de-phase and mandatory-handover claims are not
-  available. Globally,
+  the factor-two lemma applies only to one-step strands and no mandatory-
+  handover theorem is available. Globally,
   prove a metric/core-sensitive statement that forces a free time in every
   relevant core-safe component. A normalized extent bound or a theorem that
   static slow rainbows cannot contain the required core component would suffice.

@@ -20,23 +20,23 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded positive-length good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-792 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-794 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-792; MISTAKE-145).
-- **Terminal transverse face:** THM-793 generalizes the successful cap calculation. A base good-set
+  (THM-794; MISTAKE-145).
+- **Terminal transverse face:** THM-795 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-793's enclosure operator
+- **Recursive certificate pull:** Iterate THM-795's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
   to four canonical certificates. Classify rows on which every certified mass
   bound or cap test fails; those are precisely where endpoint-owner correlations must
   re-enter the state.
-- **Uniform four-far terminal cone:** THM-793 now proves that every nine-small
+- **Uniform four-far terminal cone:** THM-795 now proves that every nine-small
   chart closes whenever successive far coordinates satisfy the cumulative
   `412`-lacunarity inequalities. The exact rational comparison is
   `4455873/4453855>1`, while `411` fails the same calculation. Therefore every
@@ -59,14 +59,14 @@
   `{1,...,13}\{6}`; the explicitly listed scale/tooth rows and five seeded
   searches find no lower value. THM-780 proves the weaker global floor
   `182^(-12)`, so the ratio coordinate is uniformly bounded; the sharp
-  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-793
+  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-795
   separately gives a much stronger fixed-base transition. The residual task is
   owner/residue/deck transport inside the enormous bounded ratio domain.
 - **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound follows from
-  `c*` alone; THM-792 refutes the proposed raw-component route, while
+  `c*` alone; THM-794 refutes the proposed raw-component route, while
   THM-777/780 give qualitative ratio compactness without an effective
   endpoint-owner classification.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
@@ -81,7 +81,7 @@
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
   explicitly listed finite probes find no lower value, but the sharp global
   value remains a conjecture. THM-780 proves the crude global floor
-  `182^(-12)`; THM-793 separately proves that one high-frequency
+  `182^(-12)`; THM-795 separately proves that one high-frequency
   insertion over a fixed positive-mass base cannot cause decay. Do not promote
   the proposed `rho<469` ratio bound outside strata where the floor is proved,
   or mistake that ratio bound for an endpoint/residue classification.
@@ -146,6 +146,12 @@
   refinement can be trapped while a different deep component escapes. The
   scalar floor and fixed-anchor route therefore cannot contradict the diamond
   cap.
+  has only ten speeds. THM-789 strengthens THM-782 to a symmetric packet of
+  measure `2*72^(-10)` and component width `72^(-10)/(5 maxU)`, and proves the
+  tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13` plus the erosion
+  `E_U subset H minus R_U`. Its exact trap shows that the full natural return
+  set can stay inside the diamond at one deep anchor even when another deep
+  time escapes. The missing datum is global component choice.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -185,6 +191,9 @@
   lies in THM-774/776's complementary finite bases, or prove THM-789's global
   selection target: some deep component escapes the eroded admissible diamond.
   A theorem for an arbitrary fixed phase-cell anchor is false. Then
+  lies in THM-774/776's complementary finite bases, or prove the global
+  erosion failure `E_U not subset H minus R_U` by selecting among deep
+  components. Fixed-anchor phase refinement is insufficient by THM-789. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -219,6 +228,54 @@
   path orbits, automorphism stabilizers, simultaneous line orbits, and node
   phases to identify exactly where black drift is created.  Then audit `n=8`
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
+## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk-quotiented r=8 dynamics
+
+- **Source:** THM-780/782/783/784/786/788/789/792; corrected THM-779; MISTAKE-147/148;
+  HYP-6820/6835/6840.
+- **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
+  `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
+  twelve-core has `|G'|>=182^(-12)` and the normalized `rho` regime is
+  genuinely bounded.  THM-782 specializes this to an anchored `72^(-10)`
+  return packet in every ten-core.  THM-789 symmetrizes it to safe mass
+  `2*72^(-10)` and component width `72^(-10)/(5 max(U))`, but its exact
+  trapped-anchor example shows that global deep-component selection is the
+  next target; refining one anchored phase cell is insufficient.
+- **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
+  rational clock, occupied top teeth with repeated ordered flank types, and a
+  seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
+  for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero
+  survivors over 117 grouped event times.  Open: make the tear uniform in
+  quotient height and in `w=13c`, then splice it with the center/high-order
+  clock dichotomy.  The collision energy `K=sum binom(d_j-1,2)` obeys the
+  THM-785 endpoint-defect flux and THM-787 step-eight law.  Exact equal-energy
+  liars show that current across `K`-cuts must retain runner labels and the
+  event word.
+- **r=8 correction and surviving structure:** raw covered-wall count is
+  unbounded even for divisor-complete families; the exact refuter is a fixed
+  seven-token permutation stalk plus owner `182m+1`.  The rooted redundancy
+  graph is an `A8` torsor with 20,160 states and one SCC.  THM-783's phi
+  recurrence, period-sum, single-visitor, cluster-balance, and conditional
+  extent laws survive on the corrected coordinate.  THM-786 now proves the
+  factor-two span for one fixed companion serving consecutive `g`-walls even
+  when indices skip, plus an explicit ultra-sparse bound when `sum c<g`.
+  Alternation among several companions is still uncontrolled; the sampled
+  `K0=6` is not universal, and its reported `0.589` extent census is not
+  regenerated by the stored script.
+- **Next theorem target:** define minimal persistent stalks over each metric
+  core-safe component, contract stalk-redundant walls, and prove a bound or
+  forced tear for the remaining owner-switch/visitor-cluster skeleton using
+  THM-778's centered schedule, THM-779's supportability equation, and
+  THM-783/786's signed balance/span laws.  THM-784 supplies an
+  independent simpler unbounded-run family, confirming that this quotient is
+  necessary rather than an artefact of the divisor-complete construction.
+- **Parallel folded target:** orient the connected components of the deep set
+  by eroded folded-diamond escape margin and prove that at least one global
+  component escapes.  Do not recurse only inside a chosen anchor: THM-789's
+  `4/17` versus `14/19` example makes that strategy formally incomplete.
+- **Tournament guardrail:** wall-event tournaments are transitive and forget
+  the stalk; the normalized `A8` graph forgets the metric base.  The faithful
+  carrier is `(core component, labelled minimal stalk, event word, redundancy
+  root/visitor cluster)`, not runners alone.
 
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 
@@ -240,7 +297,7 @@
   `node <- HP/Aut tiling <- owner-to-sheet assignments <- endpoint transport`.
   Test continuation purity at each arrow; the first expected failure is at the
   mask-to-owner lift, where reflection and next-wall futures are multivalued.
-  HYP-6845's new wall `phi`-recurrence belongs in the endpoint-transport field,
+  THM-783's wall `phi`-recurrence belongs in the endpoint-transport field,
   not in the merged node or path-orbit address.
 
 ## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
@@ -268,10 +325,15 @@
 - **Five block types:** Consecutive covered walls enclose
   `(57,301,3,24,329,24,3,301,57)` wall blocks; full owner-count vectors mirror
   exactly, so only the first five interval types require analysis.
-- **THM-779 join:** All nine gaps are nonempty (minimum three intervening
+- **THM-779/784/788 join:** All nine named gaps are nonempty (minimum three intervening
   walls), so the ten hits are isolated one-wall blocking runs.  The period-five
-  root word is a first-return signal, not a long-run survivor.  THM-779's open
-  exit lemma becomes an exact schedule-versus-hop-word question under THM-778.
+  root word is a first-return signal, not a long-run survivor. Raw wall count is
+  nevertheless unbounded in other families (THM-784). The correct word is the
+  decorated active-period normal form of THM-788, not the uncontracted event word.
+  root word is a first-return signal, not a long-run survivor.  After
+  MISTAKE-147, the open exit lemma is stalk-quotiented: combine THM-783's
+  visitor clusters with an exact schedule-versus-hop-word question under
+  THM-778.
 - **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
   compile the five-return half into centered Farey/Christoffel substitutions.
   Prove a prefix loses coverage, a simultaneous event tears the stalk, or the

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact verifier for THM-793's lacunary far-flag corollaries.
+"""Exact verifier for THM-795's lacunary far-flag corollaries.
 
 The script checks the least integer separation factor supplied by the stated
 q=333/106 capped-envelope calculation in every far-count stratum f=4,...,13.
@@ -115,7 +115,7 @@ def main():
     assert next_b[0] - next_c[0] == F(1, 826)
     assert next_b[1:3] == next_c[1:3] == (44, 0)
 
-    print("THM-793 lacunary far-flag exact certificate")
+    print("THM-795 lacunary far-flag exact certificate")
     print("marked-core factors (f=4..6):")
     for f, (factor, before, after) in marked.items():
         print(f"  f={f}: R={factor}, q-test(R-1)={before}, q-test(R)={after}")

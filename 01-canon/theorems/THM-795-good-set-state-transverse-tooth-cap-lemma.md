@@ -1,19 +1,19 @@
 ---
-id: THM-793
+id: THM-795
 title: Good-set-state transverse-tooth cap lemma and uniform lacunary terminal cones for every far-count flag
 status: PROVED (elementary circle geometry plus THM-755; uniform corollaries use THM-780 and settled lower-runner LRC) + FINITE-EXACT (the 2,002-core factor-19 enhancement)
 source: codex-2026-07-14-S2
-renumber_note: claimed locally as THM-780 and then THM-784; renumbered to
-  THM-793 after integrating the live THM-779--791 namespace.
+renumber_note: claimed locally as THM-780, then THM-784, then THM-793;
+  renumbered to THM-795 after the shared THM-792/793 claims landed.
 depends_on:
   - THM-755   # capped-envelope criterion
   - THM-780   # strict-margin phase floor for the uniform corollaries
-related: [THM-752, THM-761, THM-766, THM-792, THM-777, HYP-6815, HYP-6830]
+related: [THM-752, THM-761, THM-766, THM-794, THM-777, HYP-6815, HYP-6830]
 verification: 04-computation/lrc14_lacunary_far_flag_certificate_codex_S2.py
   (+ 05-knowledge/results/lrc14_lacunary_far_flag_certificate_codex_S2.out)
 ---
 
-# THM-793 - Good-set-state transverse-tooth cap lemma
+# THM-795 - Good-set-state transverse-tooth cap lemma
 
 ## Statement
 
@@ -201,7 +201,7 @@ is a finite proof calculus, not a finite classification of the chart: all four
 lower bounds may be nonpositive, and the compression deliberately forgets
 endpoint owners and correlations.
 
-## THM-792 specialization
+## THM-794 specialization
 
 For
 
@@ -215,7 +215,7 @@ the marked-window threshold (9) has exact crossing
 11734415/9278 < 1265.
 ```
 
-Thus THM-793 supplies the elementary infinite tail in THM-792. THM-792's
+Thus THM-795 supplies the elementary infinite tail in THM-794. THM-794's
 divisor-packet statement, fragmentation lower bound, and 176-prime finite base
 remain separate exact inputs.
 
@@ -489,7 +489,7 @@ metric incidence inequality.
 
 ## Scope
 
-THM-793 proves that positive safe mass persists under one high-frequency
+THM-795 proves that positive safe mass persists under one high-frequency
 insertion over a fixed base, and proves eventual closure only when the
 peel rate is large enough relative to it. The one-step inequalities (1)-(2)
 alone do not give a uniform lower bound over arbitrary cores, classify

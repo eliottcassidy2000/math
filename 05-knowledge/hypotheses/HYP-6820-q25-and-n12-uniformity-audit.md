@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on complementary finite regions, equipped with a proved dyadic quotient chain and symmetric return-packet/erosion bounds; fixed-anchor escape is refuted and branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on complementary finite regions, equipped with a proved dyadic quotient chain and symmetric packet/erosion theorem; fixed-anchor escape is refuted, while global deep-component selection, shallow descent, higher sheets, and branch emptiness remain OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -396,24 +396,36 @@ the constant is far below `8/117`, and the exact core-19 atlas has the explicit
 profile `|G_U|=41/858<8/117=|H_(1,9)|`.  The sharpened target is therefore
 structured phase-packet noncontainment, not scalar measure comparison.
 
-THM-789 strengthens and corrects that target.  For the heavy cell preimage
-`A`, the symmetric packet `D=A-A` satisfies
+THM-789 strengthens and delimits that stalk. Replacing one anchored translate
+by the symmetric difference set `A-A` gives
 
 ```text
-t_0+D subset G_U,       |D|>=2*72^(-10),
-one component has length at least 72^(-10)/(5 max(U)).
+measure(G_U)>=2*72^(-10),
+ell_max(G_U)>=72^(-10)/(5 max(U)).
 ```
 
-Under tightness, every deep time also pays the pointwise thickness tax
-`||wt||+(w/B)(phi_U(t)-1/13)<=2/13`, so each odd exception obeys
-`w<=11B`.  But fixed-anchor escape is false as a universal method:
-`U={1,2,3,5,7,8,9,10,11,12}`, `t_0=4/17`, and `(x,y)=(13,9)` trap the
-full natural Bohr return set, every same-cell difference packet, every further
-literal phase refinement, and the ordinary Lipschitz interval inside the
-diamond.  The same row escapes at the different deep time `14/19`.  The
-correct target is therefore the global selection statement
-`E_U not subset H_(x,y)-R_U`, not noncontainment of a packet attached to an
-arbitrary chosen anchor.
+Under tightness every safe time obeys the pointwise thickness tax
+
+```text
+||wt||+(w/max(U))(phi_U(t)-1/13)<=2/13,
+```
+
+and the deep set satisfies the exact erosion
+
+```text
+E_U subset H_(x,y) minus R_U,
+R_U={d:max_u||ud||<2/143}.
+```
+
+This still does not close the branch. For
+`U={1,2,3,5,7,8,9,10,11,12}`, `t_0=4/17`, `(x,y)=(13,9)`, the full return
+set is exactly `R_U=(-1/858,1/858)` and its translate is contained in the
+diamond. Every same-cell symmetric packet and literal extra-coordinate
+refinement is trapped there too. Yet `14/19` is `2/19`-deep and lies outside
+the diamond. The thickness tax also gives `w<=11 max(U)` for each odd
+exception. Thus the new target is not stronger local refinement at an
+arbitrary anchor; it is the global selection statement
+`E_U not subset H_(x,y) minus R_U` among all deep components.
 
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
@@ -435,9 +447,10 @@ The uniform theorem now has two explicit residuals:
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
    quantitative bounds on every dyadic seam guard strong enough to place the
    reconstructed ten-core/full packet inside one of those finite bases, or
-   prove the global THM-789 selection target
-   `E_U not subset H_(x,y)-R_U`.  A theorem for an arbitrary fixed THM-782
-   anchor is impossible. At higher sheets, classify and rule out THM-769's persistent colour covers,
+   prove the global erosion failure
+    `E_U not subset H_(x,y) minus R_U`. THM-789 proves that fixed-anchor packet
+    refinement alone cannot do this. At
+    higher sheets, classify and rule out THM-769's persistent colour covers,
    beginning with the explicit `s=3` equality shells of THM-772.
 
 Equivalently in the original top-peel language, prove that every primitive
@@ -488,7 +501,7 @@ deciding objects are therefore:
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 - in the two-sheet equality packet, the folded half-frequency diamond together
   with the exact locations of all deep components, labelled phase-cell/anchor
-  incidence, symmetric return packets, and componentwise escape margins from
+  incidence, pointwise escape margins, and the symmetric return erosion of
   THM-782/789;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;

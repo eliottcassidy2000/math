@@ -39,6 +39,13 @@ symmetric labelled measure
   -> asymmetric categorical current.
 ```
 
+At `n=7` this can already be separated cleanly.  Raw boundary current is
+`2798` pure-black-to-mixed versus `1254` mixed-to-pure-black.  But the source
+populations are `25460` and `6796` black masks, so the per-mask rates are
+`10.99%` and `18.45%`: normalization reverses the arrow.  “The black flow
+points left” is therefore incomplete unless it states whether the measure is
+line count or source-fibre density.
+
 This viewpoint connects several old threads that otherwise look unrelated.
 
 - Score majorization supplies the horizontal potential: `C3` is exactly
@@ -73,6 +80,19 @@ Successively forget fields and measure the first stage at which the oriented
 current changes.  This turns “what information must be preserved?” into an
 objective minimality experiment.  It may also explain the visual left/right
 effect without fitting it after the fact.
+
+At the raw endpoint-bit level the kernel already has a closed bivariate
+description:
+
+```text
+v^(-(n-3))(u+u^-1)(1+uv)^(n-3)(1+u^-1 v)^(n-3).
+```
+
+Its two exponents are `(Delta C3,epsilon)`.  They have zero covariance and
+variances `(n-1)/2` and `(n-3)/2`.  This is the broken convention that seems
+most useful: draw the metagraph over this two-dimensional probability cloud,
+then regard node fibres as measurable packets, rather than forcing the nodes
+themselves onto one line and asking the drawing to remember discarded mass.
 
 For the four-coordinate LRC object, this is a model rather than a solution.
 The tournament node is a chamber label; the tiling fibre is an observer-cut

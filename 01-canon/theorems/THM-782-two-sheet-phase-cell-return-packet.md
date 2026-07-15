@@ -1,7 +1,7 @@
 ---
 id: THM-782
 title: Uniform phase-cell return packets inside every ten-speed two-sheet core
-status: PROVED (elementary corollary of the quantitative phase-pigeonhole theorem and settled LRC(<=13))
+status: PROVED (elementary corollary of the quantitative phase-pigeonhole theorem and settled LRC(<=13)); quantitatively strengthened and locally delimited by THM-789
 source: codex-2026-07-14-S9
 depends_on:
   - THM-780
@@ -10,10 +10,20 @@ related:
   - THM-772
   - THM-774
   - THM-776
+  - THM-789
   - HYP-6820
 ---
 
 # THM-782 — A uniform phase-cell return packet in every two-sheet core
+
+> **Strengthening (THM-789).** Passing from one anchored difference `A-s_0` to
+> the symmetric difference set `A-A` doubles the measure floor to
+> `2*72^(-10)` and improves the component-width floor to
+> `72^(-10)/(5 max(U))`. Tightness also forces the pointwise thickness tax (3)
+> and the erosion `E_U subset H minus R_U`. An exact admissible triple shows
+> the full natural return set can remain inside the diamond at one deep time,
+> so the residual is global selection among deep components, not further local
+> refinement of an arbitrary anchor.
 
 ## Statement
 

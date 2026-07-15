@@ -1,4 +1,4 @@
-THM-793 lacunary far-flag exact certificate
+THM-795 lacunary far-flag exact certificate
 marked-core factors (f=4..6):
   f=4: R=412, q-test(R-1)=4419909/4453855, q-test(R)=4455873/4453855
   f=5: R=405, q-test(R-1)=6185475/6235397, q-test(R)=6245415/6235397

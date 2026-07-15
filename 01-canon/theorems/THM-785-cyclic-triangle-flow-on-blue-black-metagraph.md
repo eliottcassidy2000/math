@@ -6,7 +6,7 @@ source: codex-2026-07-14-S9
 depends_on:
   - HYP-6825
   - THM-781
-related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787, HYP-6855]
+related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787, THM-790, HYP-6855]
 artifacts:
   - 04-computation/merged_metagraph_transitivity_flow_codex_S9.py
   - 05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.out
@@ -227,6 +227,33 @@ D_n(0)=2^(m-2p-1) binom(2p,p) - 2^(r-1),                (12)
 where the subtracted term is the complete blue locus.  Equations (8),
 (10)--(12) were asserted against every line at `n=3..7` with zero failures.
 
+The two one-dimensional laws are marginals of a simpler exact two-dimensional
+object.  Write `S=Delta C3` and `e=epsilon`.  Before the irrelevant free tile
+bits are counted, their joint Laurent generating function is
+
+```text
+G_n(u,v)=v^(-p)(u+u^(-1))(1+uv)^p(1+u^(-1)v)^p.        (12a)
+```
+
+The number of masks with `(S,e)=(s,e)` is
+`2^(m-(2p+1)) [u^s v^e]G_n`.  The factors respectively encode the shared
+endpoint arc, the `p` left bits, and the `p` right bits.  Simultaneous inversion
+`(u,v)->(u^(-1),v^(-1))` is the complement symmetry (6).
+
+Under the uniform labelled-mask measure, this coordinate system has exact
+moments
+
+```text
+E[S]=E[e]=0,
+Var(S)=(n-1)/2,   Var(e)=(n-3)/2,   Cov(S,e)=0.         (12b)
+```
+
+Thus flux and endpoint defect are orthogonal in `L^2`, though not independent.
+Blue is the reflection-fixed slice `e=0`; black supplies almost all of the
+two-dimensional cloud as `n` grows.  The directional quotient problem is now
+precisely to disintegrate this centrally symmetric measure over iso-class
+fibres.
+
 At `n=7` they specialize to
 
 ```text
@@ -341,6 +368,33 @@ Every nonzero signed bin in each directed row splits equally between `+e` and
 (`824/1544`) sits at `|epsilon|=1`, while only the reverse current reaches the
 tails `3,4`.
 
+There is a second, measure-theoretic qualification.  Each black mask is one
+line endpoint, so divide directional current by the available black-mask mass
+in its source phase:
+
+| n | raw `M->PK / PK->M` | black-mask mass `M / PK` | source-normalized rates `M->PK / PK->M` |
+|---:|---:|---:|---:|
+| 4 | `0 / 2` | `2 / 2` | `0 / 1` |
+| 5 | `0 / 12` | `36 / 12` | `0 / 1` |
+| 6 | `38 / 78` | `176 / 784` | `19/88 / 39/392` |
+| 7 | `1254 / 2798` | `6796 / 25460` | `627/3398 / 1399/12730` |
+
+At `n=7` these rates are `18.4520%` outward and `10.9898%` reverse.  Thus raw
+line-instance current points from pure-black back to mixed, but the per-source-
+mask current points from mixed out to pure-black at `n=6,7`.  The apparent
+direction is gauge-dependent: the raw reversal is driven by the much larger
+pure-black fibre mass.  Both gauges are objective, but they answer different
+questions and must not be conflated.
+
+The simple projected support gives the same conclusion without tiling
+multiplicity.  At `n=7`, raw supports are `522` outward versus `1075` reverse,
+but per source node the rates are `522/84=87/14` and `1075/184`, i.e.
+`6.2143` outward versus `5.8424` reverse.  At `n=6`, raw supports are `16/32`
+but node-normalized rates are `16/10=8/5` versus `32/22=16/11`.  Both the
+labelled-line and projected-support gauges therefore locate the raw reversal
+in phase population size, rather than in larger reverse incidence per
+pure-black source after normalization.
+
 The black current across the `C3` cut `k | k+1` at `n=7`, for
 `k=1,...,13`, is
 
@@ -449,8 +503,13 @@ counts **converse-merged nodes**.  At `n=7`, for example, its 368 pure-black
 classes form the 184 pure-black nodes reported here.  Line-instance totals and
 energy/`C3` spectra agree exactly.
 
-HYP-6855/THM-790 was concurrently reserved for a centered-score-shift
-antisymmetry proof, the same half-tiling count, and an `n=8` check.  Its
-predicted 2,048 blue lines and parity/max values agree with (8); the explicit
-four-bin `n=8` distribution above is the stronger common target.  That
-independent proof route is complementary rather than a new normalization.
+THM-790 independently proves the master leg law, centered-score-shift
+antisymmetry, the same half-tiling count, and endpoint localization of every
+line's energy drop.  Its full-layer generating function is the `v=1` marginal
+of (12a), while (12a) retains the transverse defect that flux alone discards.
+The completed sub-Hamiltonian classifier now certifies all 6,880 `n=8`
+classes.  It exactly matches the predicted blue distribution
+`{0:640,2:960,4:384,6:64}` and black distribution
+`{0:214400,1:380928,2:260160,3:133120,4:46720,5:10240,6:960}` in
+`|Delta C3|`.  Its unmerged phase counts are `(PB,M,PK)=(3,173,6704)`.
+An `n=8` converse-merged flow address and directed reach census remain open.

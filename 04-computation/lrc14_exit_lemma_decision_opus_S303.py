@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""THM-783: the exit-lemma decision (opus-2026-07-14-S303; renumbered after collision).
+"""THM-783: the r=8 visitor-cluster package (opus-2026-07-14-S303).
 
 HISTORICAL/CORRECTION NOTE (codex-S10, THM-784/MISTAKE-147): this script
 referees necessary algebraic identities and records a bounded adversarial
@@ -26,6 +26,8 @@ THE CENSUS: 300 sampled tuples (heights to 10^4) plus a 600-step anneal, with
 targeted synchronized/near-ratio/mod-7-tuned seeds, in windows of length 1/5.
 The observed maximum 6 is telemetry for those banks only. The script does not
 test the withdrawn de-phase claim or the corrected conditional extent theorem.
+THM-779/MISTAKE-147's coherent seven-owner stalk plus one fast owner has
+unbounded raw runs and lies outside these generators.
 
 PARTS: 1 referee vs S302 checker; 2 recurrence necessity on covered runs; 3 the
 bounded census + packet experiments; 4 period-sum samples; 5 telemetry summary.

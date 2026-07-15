@@ -1,0 +1,64 @@
+LRC14 r=8 RAW-WALL REFUTER / A8 STATE GRAPH — EXACT REPLAY
+==============================================================================
+METHOD
+  arithmetic: fractions.Fraction only; all wall and clearance tests exact
+  geometry: direct strict bad-sheet sets, not only token formulas
+  group: explicit permutation closure and full normalized-state graph
+
+CORE-SAFE BASE AND PERSISTENT SEVEN-STALK
+  P=(1, 2, 11, 12, 13)  I=[25/182,27/182]  center=1/7  delta=1/14
+  exact interval clearances: {1: 25/182, 2: 25/91, 11: 67/182, 12: 20/91, 13: 1/14}
+  minimum clearance: 1/14  safe=True
+  enclosing W0 chamber: (Fraction(1, 8), Fraction(3, 20))
+  W0=(1, 4, 5, 6, 8, 9, 10)
+  token permutation at all 5 probes: (0, 5, 4, 1, 6, 3, 2)
+  W0 covers F7 throughout I; W0 walls in I: 0
+
+INFINITE RAW-WALL FAMILY
+  symbolic index audit m=1..1000: families=1000 total_walls=1001000
+  A_m=182m+1; exact indices 25m..27m-1; every wall/chamber covered
+  m=  1 A=  183 walls=  2 j=[25,26] x=[17/122,53/366] owners=13
+  m=  2 A=  365 walls=  4 j=[50,53] x=[101/730,107/730] owners=13
+  m=  3 A=  547 walls=  6 j=[75,80] x=[151/1094,161/1094] owners=13
+  m=  5 A=  911 walls= 10 j=[125,134] x=[251/1822,269/1822] owners=13
+  m= 10 A= 1821 walls= 20 j=[250,269] x=[167/1214,539/3642] owners=13
+  m= 25 A= 4551 walls= 50 j=[625,674] x=[417/3034,1349/9102] owners=13
+  m=100 A=18201 walls=200 j=[2500,2699] x=[1667/12134,5399/36402] owners=13
+  divisor witnesses 2..14 (independent of m): {2: 4, 3: 6, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 77, 12: 84, 13: 91, 14: 14}
+  primitive=True; distinct owners=13; divisor_complete_2_through_14=True
+
+CONCRETE A=1000 ROW
+  indices=(137, 147) walls=11 x=[11/80,59/400] all_covered=True
+
+DE-PHASE / SERVING FACTOR-TWO AUDIT (THM-783/786 SCOPE CORRECTION)
+  (fast,c,c')=(11, 6, 8) paired_co_visits=4 pair_balanced_mod7=True
+  (m,n)=(1,2) times=(1/4,5/16) signed_difference=1/16 fast_period=2
+  (m,n)=(2,3) times=(5/12,7/16) signed_difference=1/48 fast_period=4
+  (m,n)=(3,4) times=(7/12,9/16) signed_difference=-1/48 fast_period=5
+  (m,n)=(4,5) times=(3/4,11/16) signed_difference=-1/16 fast_period=7
+  old_one-window_bound=35/11 refuted; corrected_two-window_bound=59/11
+  exhaustive f<= 50: triples=19600 corrected_factor_two_failures=0 old_factor_one_failures=3981
+  first_old_failure=(5, 4, 2, 2) old_bound=1 corrected_bound=13/5
+  lens-balanced triples=2121 old_factor_one_failures=421 first=(9, 8, 6, 4) old_bound=3 corrected_bound=19/3 largest_small_run=(48, (50, 49, 48))
+
+A8 TORSOR AND NORMALIZED COVERED-STATE GRAPH
+  generators: p=(1 2 3 4 5 6 7), q=(0 2 3 4 5 6 7); orders=(7, 7)
+  p*q^-1=(1, 2, 0, 3, 4, 5, 6, 7) = cycle (0 1 2)
+  generated group=20160 all even permutations=20160 torsor orbit=20160
+  states=20160 directed_edges=40320 in={2: 20160} out={2: 20160}
+  forward/reverse reach=20160/20160 SCCs=1
+  monochromatic cycles by owner=(720, 720, 720, 720, 720, 720, 720, 720) length histogram={7: 5760}
+
+TOURNAMENT ANALYSIS / ASSUMPTION CHALLENGE
+  vertices: A_m wall events in I (not runners)
+  observable: strict Fraction time precedence
+  switch/gauge: reverse marked interval orientation
+  tie Hamiltonian path: (125, 126, 127, 128, 129, 130, 131, 132, 133, 134)
+  fingerprint: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} cycles3=0 SCCs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1) flips=45 Hamiltonian_paths=1
+  no-clean-owner-switch guardrail: owner quotient has one active vertex; tournament forgets the exact W0 stalk
+  challenged vertices: runners -> wall events -> normalized token states
+  preserved by state graph: duplicate root, anchor choice, token translation
+  destroyed by tournament quotient: stalk identity, residues, metric core interval
+
+DETERMINISTIC AUDIT SHA256: bac61ac7dd1baaf135d699fb225ed2d63540f120673385f061961ec80e811a7d
+VERDICT: exact PASS; raw covered-wall length is unbounded, while owner-switch complexity is zero

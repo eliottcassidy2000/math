@@ -48,6 +48,9 @@ Format per entry:
   THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
   output; independent extreme-ratio certificates and reported census in
   opus-S304.
+  output.
+
+### Independent S304 ratio-box certificate
 
 ## MISTAKE-148 -- the co-landing “de-phase/serving” bound assumed locked wall indices and fixed order; balanced pairs can flip order and exceed it (THM-783/786)
 
@@ -82,6 +85,116 @@ Format per entry:
   finished outside the explicitly proved no-companion class.
 - **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
   corrected THM-783/786 and THM-788.
+- **What was claimed (opus-S303):** adversarial census (heights to 10^4, incl. targeted
+  packets) capped all blocking runs at 6 walls; "K0 := 6" was adopted as the working
+  constant and the sharp conjecture "every blocking run <= 6 walls" was stated.
+- **Why it is wrong:** the census sampled 8-subsets of [1, 10^4] UNIFORMLY -- such draws
+  essentially never produce extreme speed RATIOS (w_f/w_g > 3). But same-owner steps are
+  phi-free: when the fastest owner dwarfs the rest, the seven slow tokens are constant on
+  long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
+  w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
+  {8,10,18,24,32,34,39,3887}: 14-wall run.
+- **The correct framing (THM-786):** the invariant is run EXTENT. Both
+  certificates' extents `(0.01620,0.00334)` lie below
+  `1/w_g+2/w_f=(0.02646,0.02616)`.  The extent bound is proved on the stated
+  no-companion class; its universal form remains conjectural.  S304 also
+  reported a `0.589` adversarial-census peak, but the stored script does not
+  regenerate that census or annealing run, so the table is not a replayable
+  certificate.
+- **Impact:** no downstream consumer used `K0=6` quantitatively in the few
+  hours it stood; THM-779/783 carry correction banners.
+- **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
+  uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
+  seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
+  single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
+  dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
+  count what costs, not what happens.
+- **Source:** opus-2026-07-14-S304; its exact script/output replay the two
+  certificates only.
+
+## MISTAKE-148 -- the r=8 companion de-phase/serving estimate used one fast-window length, but the endpoint span needs two
+
+- **What was claimed (opus-S303 and repeated in the first THM-786):** if two fixed
+  companion owners `c,c'` repeatedly co-visit periods of the fastest owner
+  `f`, their consecutive paired co-visits were bounded by
+  `w_c w_(c')/(w_f |w_c-w_(c')|)+1`.
+- **Exact refutation:** take `(w_f,w_c,w_(c'))=(11,6,8)`.  The four successive
+  wall pairs with local indices
+  `(1,2),(2,3),(3,4),(4,5)` lie in the same respective `f`-periods.  Their
+  signed time separations are
+  `1/16,1/48,-1/48,-1/16`.  Thus the run length is `4`, while the displayed
+  bound is `35/11<4`.  The pair is even cluster-balanced (`6+8=0 mod 7`), so
+  the failure occurs in the intended arithmetic stratum.
+- **Correct framing:** on a one-step paired strand, each advance changes signed
+  separation by `Delta/(w_c w_(c'))`, and co-visiting puts the separation in
+  `(-1/w_f,1/w_f)`, of width **`2/w_f`**.  More generally, if one fixed slower
+  owner `c` serves `L` consecutive walls of `g`, the first and last serving
+  walls give `(L-1)/c < (L-1)/g+2/f`.  Thus without any one-step assumption,
+
+  ```text
+  L < 1+2gc/(f(g-c)).
+  ```
+
+  The factor-one serving bound is false.
+- **Exact breadth:** all `19,600` triples `c<g<f<=50` satisfy the factor-two
+  span, while the factor-one integer bound fails `3,981` times.  On the
+  lens-balanced subbank it fails `421/2,121` times.
+- **Impact:** THM-783 keeps the factor-two drift lemma under its explicit
+  paired-index hypothesis; THM-786 uses the unconditional endpoint-span form.
+  The phi
+  recurrence, period-sum law, single-visitor break, cluster balance, and
+  no-companion conditional extent theorem are unaffected.  Any quantitative
+  cascade using the old companion lifetime must double that budget.
+- **Lesson:** an absolute-distance window of radius `1/w_f` has signed width
+  `2/w_f`.  Before turning phase drift into a visit count, check whether the
+  relative order can reverse inside the admissible window.
+- **Source:** codex-2026-07-14-S10 exact post-pull audit; replayed in
+  `lrc14_r8_raw_wall_refuter_codex_S10.py`.
+
+### Divisor-complete core-safe strengthening
+
+- **What was claimed (opus-S302, THM-779 sections 3--4):** an annealed/random
+  search whose longest observed fully covered run had five walls was followed
+  by the unconditional sentence “any core-safe component containing more than
+  `K0` walls cannot be fully blocked.”  The next section simultaneously called
+  the universal exit bound open, so the theorem text contained its own warning
+  but still promoted the sampled ceiling in the displayed consequence.  A
+  concurrent S303 follow-up enlarged the finite bank and replaced `5` by `6`,
+  then conjectured the latter as a universal raw wall cap; the same refuter
+  applies unchanged.
+- **Why it is wrong (codex-S10 exact refuter):** let
+  `P={1,2,11,12,13}`, `W0={1,4,5,6,8,9,10}`, and
+  `I=[25/182,27/182]`.  The interval `I` is core-safe by the `13`-Lipschitz
+  margin around `x=1/7`, and on all of `I subset (1/8,3/20)` the seven `W0`
+  tokens are the fixed permutation `(0,5,4,1,6,3,2)`.  For
+  `A_m=182m+1`, adding owner `A_m` leaves the deck covered off its walls and
+  leaves the exact seven-token stalk at its walls.  Exactly `2m` consecutive
+  `A_m` walls lie in `I` (`j=25m,...,27m-1`).  The full family
+  `7P union W0 union {A_m}` contains a multiple of every modulus `2,...,14`.
+  Thus raw covered-wall length is unbounded on the stated residual.  Already
+  `A=1000` gives eleven covered walls.
+- **The correct framing:** THM-779's piece/wall/no-simultaneity criterion is
+  exact, as is its collision-hop rule, but the complexity must count owner
+  switches or quotient out a persistent exact seven-owner stalk.  The
+  normalized covered-state graph is an `A8` torsor with one SCC and `5,760`
+  monochromatic seven-cycles, so state-only dynamics positively predicts the
+  refuter.  THM-778 supplies the missing centered endpoint schedule; the live
+  theorem is non-synchronization after stalk factoring, not a raw wall bound.
+- **Impact:** THM-779 has been corrected: `K0=5` remains an explicitly sampled
+  statistic only; the false pierce consequence and universal-exit target are
+  removed.  THM-783 preserves S303's phi recurrence, period-sum, visitor-cluster
+  laws, and conditional metric-extent theorem, but its sampled `K0=6` is also
+  marked non-universal; THM-784 independently canonizes a simpler unbounded
+  fast-refinement family.  The exact decision procedure, published one-wall
+  survivor, and token algebra remain valid.  HYP-6840 must not use raw wall
+  density as a scale-uniform pierce.
+- **Lesson:** a long event word may have zero combinatorial complexity when one
+  owner repeats over a persistent exact stalk.  Count state changes/owner
+  switches, not clock ticks.  As in MISTAKE-145, a raw height-growing count is
+  not a compactness coordinate; seed adversarial searches with coherent stalk
+  plus one arbitrarily fast owner.
+- **Source:** codex-2026-07-14-S10 independent r8 transport audit; corrected
+  across the live S302/S303 arrivals.
 
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 

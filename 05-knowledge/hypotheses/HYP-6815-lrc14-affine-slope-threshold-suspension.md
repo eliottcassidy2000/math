@@ -36,8 +36,8 @@ related:
   - THM-780   # proved global strict-margin safe-measure floor
   - THM-781   # proved Hamiltonian-path inverse metagraph fibre
   - THM-782   # proved anchored two-sheet phase-cell return packet
-  - THM-792   # proved four-far transverse falsifier and capped family
-  - THM-793   # proved recursive good-set-state transport
+  - THM-794   # proved four-far transverse falsifier and capped family
+  - THM-795   # proved recursive good-set-state transport
   - THM-777   # proved rho bridge and bounded-height sharp-floor candidate
   - THM-783   # corrected local prime-seven exit laws
   - THM-784   # raw-wall exit-count falsifier
@@ -247,7 +247,7 @@ reparameterization still applies, but `|W|=9`: the free-sheet union bound is
 beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
 the open tiling/overlap residue rather than claiming THM-761 has solved it.
 
-THM-792 makes a second, transverse route to infinity inside the literal chart exact.
+THM-794 makes a second, transverse route to infinity inside the literal chart exact.
 For prime `N>110`, set
 
 ```text
@@ -267,14 +267,14 @@ high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
 
-This does not threaten LRC14: THM-792 proves that every prime member of the
+This does not threaten LRC14: THM-794 proves that every prime member of the
 `V_N` family fires the capped-envelope peel. It identifies a missing coordinate.
 A transport state for the splice
 must retain at least the normalized cap load
 `r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
 divisor-support profile and endpoint/tooth ownership.
 
-THM-793 turns this diagnosis into a reusable terminal face. If the base good set
+THM-795 turns this diagnosis into a reusable terminal face. If the base good set
 has conservative state `(mu,r_B)` with `r_B:=r_top(B)`, adjoining frequency
 `N` and putting `r_N:=r_top(B union {N})` gives
 `mu_N>=6mu/7-2r_B/(7N)` and `r_N<=N+r_B`; no endpoint list is needed for those
@@ -304,7 +304,7 @@ n_3>=412(S+n_1+n_2),
 n_4>=412(S+n_1+n_2+n_3).
 ```
 
-THM-793 proves this from the universal marked interval `L>=1/245`; `412` is
+THM-795 proves this from the universal marked interval `L>=1/245`; `412` is
 the least integer admitted by that uniform rational comparison. Hence every
 unresolved tuple has a bounded-ratio cluster at some cumulative scale level.
 Fully lacunary flags are terminal; the recursive object lives on clustered
@@ -334,7 +334,7 @@ listed scale and tooth samples plus five seeded searches are finite evidence,
 not a proof of that sharp global value. THM-780 now supplies the weaker but
 uniform theorem `|G'_P|>=182^(-12)`, so existence of a finite ratio bound is no
 longer open.
-Thus THM-792 refutes raw topological compactness, THM-793 proves transport of a
+Thus THM-794 refutes raw topological compactness, THM-795 proves transport of a
 positive `(mu,r_top)` state, and THM-777/780 prove qualitative ratio
 compactness. The remaining obstruction is not a sequence with
 `|G'_P| -> 0`; it is failure to transport the owner-labelled metric packet

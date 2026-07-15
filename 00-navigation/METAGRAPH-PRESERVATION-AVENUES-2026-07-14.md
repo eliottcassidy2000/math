@@ -389,10 +389,11 @@ certificate clauses, and proof obligations.
   fibre, then attach THM-778 endpoint transport to transitions between cut
   orbits.  Separate a mask transition from a complement-line orbit and from a
   mere endpoint-node incidence.
-- **Concurrent join:** HYP-6845's wall `phi`-recurrence is transport above this
-  cut orbit, not a node invariant.  Test whether `(path orbit, owner assignment,
-  phi)` is sufficient for its flip-break step before adding more metagraph
-  coordinates.
+- **Concurrent join:** THM-783's wall `phi`-recurrence and visitor clusters are
+  transport above this cut orbit, not node invariants.  Test whether `(path
+  orbit, owner assignment, phi, minimal persistent stalk)` is sufficient for
+  its flip-break step before adding more metagraph coordinates.  Raw wall count
+  is excluded by MISTAKE-147.
 - **Must preserve:** path orbit, owner assignment, simultaneous-isomorphism
   line orbit, inverse winding, centered phase/ties, wall rank, and carry.
 - **Deliverable:** the first exact three-level incidence index
@@ -406,16 +407,25 @@ certificate clauses, and proof obligations.
   `2(d0-n/2)-epsilon`.  Blue reflection sets `epsilon=0`; closed binomial
   formulas give every blue step, every total step, and every black
   `|epsilon|` count for arbitrary `n`.
+- **Delivered joint law:** `(Delta C3,epsilon)` has Laurent kernel
+  `v^(-p)(u+u^-1)(1+uv)^p(1+u^-1v)^p`, `p=n-3`.  Its coordinates have zero
+  covariance and variances `(n-1)/2,(n-3)/2`; quotient drift is a
+  disintegration of a centrally symmetric two-dimensional measure.
 - **Delivered quotient signal:** line colour permits only the category path
   `pure_blue --blue-- mixed --black-- pure_black`.  At `n=7` the blue boundary
   is entirely outward, while increasing-`C3` black flow has 2,798
   pure-black-to-mixed instances against 1,254 mixed-to-pure-black.  This does
   not break complement symmetry: `(a,epsilon)` is sent to `(-a,-epsilon)`
   before quotienting.
+- **Delivered first disintegration:** the `n=7` reverse raw current is a fibre-
+  volume effect.  Pure-black has 25,460 black masks and mixed has 6,796; after
+  source-mass normalization, reverse rate is `10.99%` while outward rate is
+  `18.45%`.  Raw and density gauges point in opposite directions.
 - **Pull:** condition the exact endpoint-bit measure `(R,X,Y)` successively on
   unmerged class, converse orbit, fibre size, automorphism stabilizer, line
-  orbit, and pure/mixed/black phase.  Locate the first conditioning step that
-  creates the black drift, then predict its sign without enumerating masks.
+  orbit, and pure/mixed/black phase.  Explain the residual density-normalized
+  outward kernel and the one-sided `|epsilon|=3,4` tails, then predict both raw
+  and normalized signs without enumerating masks.
 - **Old thread:** score-majorization/Slater depth; half-tiling reflection;
   line-metagraph simultaneous isomorphism; HYP-3813 Gram/spectral bridge;
   MPA-02/05/07/13; THM-781/785/787.
