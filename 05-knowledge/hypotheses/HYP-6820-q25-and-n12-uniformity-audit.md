@@ -49,6 +49,7 @@ related:
   - HYP-6815
   - THM-771
   - THM-829
+  - THM-831
   - MISTAKE-143
 ---
 
@@ -777,6 +778,13 @@ a new closure step in this audit.
 The next all-pair object is therefore the target-component symmetric-switch
 hypergraph together with its deck and metric sidecars, not a bare runner
 tournament.
+
+THM-831 reserves the first systematic extension test: the sixteen coprime
+opposite-parity pairs with `4<=alpha<=9` in the half-frequency folded
+coordinates. Its preliminary two-ball and separation observations are not a
+result. Exact component formulae, endpoint-complete no-switch proof, the sharp
+`alpha=10` boundary, common-dilate corollary, replay, and Tournament Analysis
+remain mandatory before this stub can affect HYP-6820.
 
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped

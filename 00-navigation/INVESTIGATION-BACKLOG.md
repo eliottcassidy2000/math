@@ -278,6 +278,10 @@
   other odd exception ratios have a separated equal-radius target and hence
   the same no-switch factorization.  A proof only for the global symmetric
   union must still be joined to the nonsymmetric satellite obligations.
+  THM-831 reserves the finite small-half-frequency audit `4<=alpha<=9` as one
+  implementation of this switch classification. It is a proof/replay stub:
+  regenerate its sixteen preliminary rows, prove every endpoint case and the
+  `alpha=10` boundary, and add tournament fingerprints before using it.
   THM-816 has already removed the quartic `s=3` equality shell; the remaining
   higher-sheet work is outside that special four-exception coset and still
   lives on loose-set

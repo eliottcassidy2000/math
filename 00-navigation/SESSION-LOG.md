@@ -63869,3 +63869,16 @@ THM-824 radius budget  7c2c4b124893f07659918f9da45903cee7fc93acfeacc0c5b2b8ec327
 The THM-822 C++ replay also agreed at `-O3` and under ASan/UBSan.  These
 validations certify the finite statements above; they do not promote the open
 H5 boxes, arbitrary lifts, or global n=12 branch to proved closure.
+
+A final live pull reserved THM-831 for the natural extension of THM-824: audit
+the sixteen coprime opposite-parity half-frequency pairs with
+`4<=alpha<=9`, where preliminary arithmetic reports two antipodal target
+components and no second-difference switch. The stub explicitly lacks its
+endpoint proof, `alpha=10` boundary, common-dilate corollary, replay, and
+Tournament Analysis, so none of those observations enters the frontier yet.
+
+That pull also exposed an unrelated later-pushed `THM-810` identifier
+collision. Throughout this LRC record, THM-810 means
+`THM-810-four-replacement-order-three-coset-interface.md`, first pushed in
+commit `8dfb0ed8926`; the later wiggly-dictionary file is not an LRC dependency
+and needs namespace repair in its own lane.

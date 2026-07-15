@@ -186,8 +186,11 @@ obligations, and proof-carrier interfaces.
   THM-824's radius inequality fails, equivalently that its signed slack is
   negative. For other pairs, classify the
   target-component symmetric-switch carrier before proposing another scalar.
+  THM-831 reserves the sixteen-pair `4<=alpha<=9` two-ball audit for this
+  purpose, but remains a non-usable proof/replay stub; its declared tournament
+  and no-switch fingerprints must be frozen before promotion.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821, THM-824,
+  THM-821, THM-824, THM-831 (reserved only),
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
