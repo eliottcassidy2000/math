@@ -207,8 +207,12 @@
   orders are one or every order is three and the labels form a coset of
   `<5>={1,5,8,12}`. The first branch leaves the scale-one quadruple chart; the
   second is an exact `s=3` deep interface with four feasible sheet-parity
-  patterns. Its four least-CRT rows are loose, but arbitrary coset lifts remain,
-  so radius four is classified by deck type rather than closed.
+  patterns. Its four least-CRT rows are loose.  Each coset has eight
+  lift-invariant `q=39` witnesses at exact margin `1/13`, pinned by an opposite
+  pair of core speeds, so a local perturbation of the common clock cannot close
+  the family.  Search a different core-safe component or prove the four lifted
+  exception combs cannot cover all of them.  Arbitrary coset lifts remain, so
+  radius four is classified by deck type rather than closed.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -534,8 +538,16 @@
   endpoint data identifies only 7,248/8,064 black reflection orbits there;
   orbit-`(B2,B3)` identifies all 8,064 and literal identity still needs
   mirror/path orientation.  Treat this as telemetry on the metric stalk, not
-  as a continuation state.  THM-812 is reserved only and supplies no proved
-  centered-Christoffel/metagraph transport.
+  as a continuation state.
+- **First direct CF stalk action (THM-812):** The centered word `(1,2)` gives
+  an equivariant coordinate-copy embedding `X_5->X_6`.  Bare nodes do not
+  transport, but all 20 projected coloured edge cells do, injectively.  The
+  general Boolean pullback is subset-image pushforward, and one fixed-core
+  collision surviving degree at most three requires three quartic
+  cross-leg/apex coefficients.  The
+  next theorem is closure of a finite coefficient sector under arbitrary
+  Euclidean words, coupled to THM-808's owner/root action and the LRC metric
+  stalk.
 - **Open theorem:** Test transition/continuation completeness at `n=8` and
   all-size reconstruction, then attach the
   address as a base-chart label to the affine incidence object

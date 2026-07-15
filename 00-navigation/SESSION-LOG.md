@@ -684,6 +684,17 @@ Cayley/overlap replay byte-matches; the four least-CRT representatives are
 loose. Arbitrary coset lifts remain open, so this is a precise shallow/deep
 interface rather than radius-four closure.
 
+A subsequent audit repaired the replay itself: the old attenuation loop was
+tautological because it called the formula it purported to check. The revised
+script directly enumerates every oriented interval through `D=999`, asserts
+both sharp equality orders, and exposes a new uniform boundary skeleton. Each
+of the three order-three cosets has eight `q=39` times with margin exactly
+`1/13`, independent of all four `+39` lift heights and all feasible parity
+patterns. Two oppositely signed core speeds pin every such point, so either
+one-sided perturbation lowers the margin. Strict looseness must jump to a
+different core-safe component; the clock is a certificate shadow, not a
+closure state.
+
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
 with `d_a w_a^(-1)` constant modulo seven. More strongly, in every prescribed
@@ -797,7 +808,15 @@ in source-`q` strata carrying a mixed--pure-black boundary edge; the nonempty
 `n=6,q=2` source populations have no such edge and give `0=0`. None of this
 preserves the LRC metric witness, owners, threshold side, wall schedule, root,
 or carry, so curvature/current remains telemetry on the metric stalk. THM-812
-is reserved only and supplies no transport theorem.
+now supplies the first path/core transport. Its centered word `(1,2)` acts by
+an explicit complement/reflection-equivariant coordinate-copy embedding
+`X_5->X_6`. Bare nodes spread, but all twenty projected coloured edge cells
+transport injectively. On the Boolean stalk the general action is subset-image
+pushforward; one fixed-core collision survives degree three and exactly three
+quartic cross-leg/apex coefficients first separate it. This is not an LRC
+transport theorem: the required object still couples it to THM-808's
+owner/root action and retains the metric component, threshold side, wall
+schedule, gcd, and carry.
 
 THM-807 now proves the next deep-selector split. The exact zero return
 component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
@@ -859,7 +878,7 @@ scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811 plus reserved THM-812; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three/four, affine-packet, anti-grid/component-selector,

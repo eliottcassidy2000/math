@@ -141,8 +141,10 @@ quotient, including the loop cells, without pretending that a bare node has
 a target.
 
 This part is finite-exact, not an all-size functor theorem: constancy in (9)
-uses the `n=5,6` tournament atlases.  The all-size statement is the tiling and
-line embedding supplied by the coordinate-copy lemma.
+uses the `n=5,6` tournament atlases.  The dimension-free statement is only the
+conditional coordinate-copy lemma: once a surjective equivariant `rho` has
+been constructed, it embeds tilings and lines.  The theorem does not construct
+such maps for an all-size centered-Christoffel family.
 
 THM-813 explains why this finite descent succeeds: at `n=5` every projected
 coloured edge cell is exactly one staircase-reflection orbit.  At the next
@@ -224,7 +226,10 @@ The quotient in (9) preserves precisely the source coloured edge cell for this
 one replication.  Bare node projection destroys the chosen path/core lift;
 coefficient truncation destroys a quartic cross-leg/apex interaction.
 
-Nothing here preserves the metric LRC loneliness predicate, owner assignment,
+Nothing here gives a graph/metagraph functor with a vertex-incidence map:
+bare nodes do not have targets.  The finite result is the commuting quotient
+arrow `P_6 Phi=bar(Phi) P_5` on coloured edge cells.  Nor does anything here
+preserve the metric LRC loneliness predicate, owner assignment,
 wall position, common gcd, or prime-sheet carry.  The contribution is instead
 a rigorous bridge between two previously separate descriptions: a centered-
 CF digit supplies a coordinate substitution, and (10) supplies its exact

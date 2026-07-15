@@ -41,6 +41,20 @@ def count(D: int, replacement: int, owner: int, side: str = "left") -> int:
     return 2 * q + base_count(d, replacement, owner, side)
 
 
+def direct_counts(D: int, side: str = "left") -> tuple[int, ...]:
+    """Independently count every residue in the full oriented D-window."""
+    if side == "left":
+        window = range(-D + 1, D + 1)  # -D < z <= D
+    elif side == "right":
+        window = range(-D, D)  # -D <= z < D
+    else:
+        raise ValueError(side)
+    out = [0] * P
+    for z in window:
+        out[z % P] += 1
+    return tuple(out)
+
+
 def capacity(D: int, replacement: int, owner: int, side: str = "left") -> Fraction:
     return Fraction(count(D, replacement, owner, side), D)
 
@@ -219,6 +233,55 @@ def exact_overlap_patterns() -> tuple[list[tuple[int, ...]], list[tuple[tuple[in
     return feasible, audit
 
 
+def coset_clock() -> tuple[tuple[tuple[int, ...], tuple[int, ...], tuple[tuple[int, int], ...]], ...]:
+    """Audit the lift-invariant equality clock on the order-three interface."""
+    expected = {
+        (1, 5, 8, 12): ((2, 10, 11, 16, 23, 28, 29, 37), ((12, 27), (18, 21))),
+        (2, 3, 10, 11): ((1, 5, 8, 14, 25, 31, 34, 38), ((3, 36), (15, 24))),
+        (4, 6, 7, 9): ((4, 7, 17, 19, 20, 22, 32, 35), ((6, 33), (9, 30))),
+    }
+    rows = []
+    for multiplier in (1, 2, 4):
+        labels = tuple(sorted({multiplier * r % P for r in H}))
+        core = tuple(3 * r for r in LABELS if r not in labels)
+        negative_pairs = tuple((r, (-r) % P) for r in labels if r < (-r) % P)
+        pattern_clocks = []
+        active_pairs = set()
+        for bits in product((1, 2), repeat=2):
+            parity = {
+                r: bit
+                for pair, bit in zip(negative_pairs, bits)
+                for r in pair
+            }
+            lifts = tuple(crt_u(r, parity[r]) for r in labels)
+            speeds = core + lifts
+            safe = []
+            for a in range(1, 3 * P):
+                if gcd(a, 3 * P) != 1:
+                    continue
+                residues = tuple(signed_mod(a * speed, 3 * P) for speed in speeds)
+                margin = min(abs(z) for z in residues)
+                if margin >= 3:
+                    assert margin == 3
+                    safe.append(a)
+                    active = tuple(
+                        speed for speed, z in zip(speeds, residues) if abs(z) == 3
+                    )
+                    assert len(active) == 2
+                    active_residues = {
+                        z for speed, z in zip(speeds, residues) if speed in active
+                    }
+                    assert active_residues == {-3, 3}
+                    assert all(speed in core for speed in active)
+                    active_pairs.add(tuple(sorted(active)))
+            pattern_clocks.append(tuple(safe))
+        clock, expected_pairs = expected[labels]
+        assert all(value == clock for value in pattern_clocks)
+        assert tuple(sorted(active_pairs)) == expected_pairs
+        rows.append((labels, clock, expected_pairs))
+    return tuple(rows)
+
+
 def norm(x: Fraction) -> Fraction:
     r = x % 1
     return min(r, 1 - r)
@@ -301,21 +364,26 @@ def incidence_flip_count() -> int:
 
 def main() -> None:
     # Infinite-order attenuation identity and its two finite cutoff lists.
-    for D in range(1, 501):
+    for D in range(1, 1000):
         if D % P == 0:
             continue
-        q, d = divmod(D, P)
+        direct = direct_counts(D)
         for r in LABELS:
             for o in LABELS:
-                assert count(D, r, o) == 2 * q + base_count(d, r, o)
+                target = D * r * inv(o) % P
+                assert count(D, r, o) == direct[target]
 
-    L16 = tuple(D for D in range(3, 79) if D % P and f(D) >= Fraction(1, 6))
-    L23 = tuple(D for D in range(4, 79) if D % P and s4(D) >= Fraction(2, 3))
+    finite_orders = tuple(D for D in range(3, 79) if D % P)
+    assert all(f(D) <= Fraction(1, 3) for D in finite_orders)
+    assert tuple(D for D in finite_orders if f(D) == Fraction(1, 3)) == (3,)
+    assert all(s4(D) <= 1 for D in finite_orders if D >= 4)
+    assert tuple(D for D in finite_orders if D >= 4 and s4(D) == 1) == (4,)
+
+    L16 = tuple(D for D in finite_orders if f(D) >= Fraction(1, 6))
+    L23 = tuple(D for D in finite_orders if D >= 4 and s4(D) >= Fraction(2, 3))
     assert max(L16) == 72 and max(L23) == 48
     assert all(f(D) < Fraction(1, 6) for D in range(79, 501) if D % P)
     assert all(s4(D) < Fraction(2, 3) for D in range(79, 501) if D % P)
-    assert all(s4(D) <= 1 for D in range(4, 501) if D % P)
-    assert [D for D in range(4, 501) if D % P and s4(D) == 1] == [4]
 
     one2 = normalized_one_d2_three_d3()
     two2 = normalized_two_d2(L16)
@@ -323,6 +391,7 @@ def main() -> None:
     all3 = normalized_all_d3()
     mutual4, adjacency4 = no_d4_clique()
     feasible, _ = exact_overlap_patterns()
+    clock_rows = coset_clock()
     packets = base_packets(feasible)
 
     left = tournament_fingerprint("left")
@@ -337,16 +406,17 @@ def main() -> None:
 
     lines = [
         "THM-810 exact replay",
-        "attenuation_identity.D<=500=PASS",
+        "attenuation_identity.direct_D<=999=PASS",
         f"cutoff.f>=1/6.count={len(L16)} max={max(L16)} values={L16}",
         f"cutoff.S4>=2/3.count={len(L23)} max={max(L23)} values={L23}",
-        "top4.D>=4<=1=PASS equality_orders=(4,)",
+        "sharp_bounds.f.D>=3<=1/3 equality_orders=(3,) S4.D>=4<=1 equality_orders=(4,)",
         f"case.one_D2_three_D3.rows={one2[0]} survivors=0 best_min={one2[1]}",
         f"case.two_D2.configurations={two2[0]} rows={two2[1]} survivors=0 best_min={two2[2]}",
         f"case.one_D3_three_large.rows={one3[0]} survivors=0 best_min={one3[1]}",
         f"case.all_D3.rows={all3[0]} survivors={tuple(x[0] for x in all3[1])}",
         f"case.no_D2_D3.mutual_D4={mutual4} adjacency={adjacency4} clique4=0",
         f"overlap.feasible_patterns={tuple(feasible)} count={len(feasible)}",
+        f"coset_clock.mod39={clock_rows} margin=1/13",
     ]
     for signs, lifts, speeds, maximum, witness in packets:
         lines.append(

@@ -573,7 +573,10 @@ The uniform theorem now has two explicit residuals:
    or the all-order-three coset `a{1,5,8,12}` can survive. The remaining metric
    targets are therefore the scale-one quadruple chart and arbitrary lifts of
    that `s=3` coset interface; four least-CRT representatives are loose but do
-   not settle the latter uniformly.
+   not settle the latter uniformly.  Each coset has eight lift-invariant
+   `q=39` equality witnesses pinned by opposite core constraints, so strict
+   looseness must come from another core-safe component rather than a local
+   perturbation of the common clock.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add

@@ -807,8 +807,17 @@ collisions are precisely mirror pairs.  Thus curvature is faithful telemetry
 on a reflection orbit, `(B2,B3)` is the stronger positional orbit address, and
 literal continuation still needs mirror/path orientation.  Neither carries
 the LRC metric witness, owners, threshold side, wall schedule, root, or carry.
-THM-812 is only a reserved attempt to relate the centered-Christoffel stalk to
-the metagraph path orbit and must not be used as a transport theorem.
+
+THM-812 now proves the first direct centered-Christoffel action on the
+metagraph stalk.  Its `(1,2)` coordinate replication embeds `X_5` in `X_6`,
+commutes with complement/reflection, and transports all twenty projected
+coloured edge cells injectively even though bare nodes spread.  Boolean
+coefficients transform by subset-image pushforward; the unique fixed-core
+collision surviving degree at most three is first separated by three explicit quartic
+cross-leg/apex coefficients.  This is a genuine path/core transport theorem,
+not an LRC transport theorem.  The missing LRC state is therefore even more
+specific: couple THM-812's path/core action to THM-808's owner/root action and
+retain metric component, threshold side, wall schedule, gcd, and carry.
 
 The LRC evidence falls cleanly into the same ledger:
 
@@ -996,7 +1005,11 @@ still missing.
    leaves four parity patterns, and division by the common gcd turns the latter
    into an `s=3` deep packet. The scale-one quadruple chart and arbitrary lifts
    of the coset interface remain; four least-CRT base rows are loose but do not
-   give uniform radius-four closure.
+   give uniform radius-four closure.  Every coset has eight lift-invariant
+   `q=39` equality points pinned by an opposite pair of core speeds.  Since
+   each is a strict local cusp, the missing field is not lift height on that
+   clock but the identity and exception-comb incidence of a different
+   core-safe component.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

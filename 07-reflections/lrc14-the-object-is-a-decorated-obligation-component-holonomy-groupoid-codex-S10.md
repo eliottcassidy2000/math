@@ -269,8 +269,18 @@ exactly mirror pairs, so literal edge identity still needs path orientation.
 Neither coordinate preserves an LRC metric witness, owner assignment,
 threshold side, wall schedule, root, or carry.  Curvature/current is therefore
 telemetry attached to the metric stalk, not another candidate replacement for
-it.  THM-812 merely reserves a possible centered-Christoffel path-orbit lift;
-it has no proved transport content yet.
+it.
+
+THM-812 now supplies the first proved path/core action.  The centered word
+`(1,2)` gives an equivariant coordinate-copy embedding `X_5->X_6`; bare nodes
+do not transport, but all twenty projected coloured edge cells do, injectively.
+On the Boolean stalk its general pullback is subset-image pushforward.  Degree
+three loses one fixed-core node pair and exactly three quartic cross-leg/apex
+coefficients repair it.  This proves that a CF digit can act on the metagraph
+stalk, while also locating the first truncation obstruction.  It still
+transports no LRC metric predicate: the prospective LRC morphism is the fibre
+product of this path/core action with THM-808's owner/root action, plus the
+metric component, threshold side, wall schedule, gcd, and carry.
 
 ## 3. THM-794/802, THM-795/800/804/806, and THM-797/803 are one recursion in three regimes
 
@@ -369,7 +379,12 @@ division. The bare four-vertex tournament is transitive in both endpoint
 gauges with zero edge flips while eight owner/colour incidences change; the
 oriented bipartite sheet carrier, not the tournament, bears the theorem. What
 remains is metric: the scale-one quadruple chart and arbitrary lifts of the
-order-three coset.
+order-three coset.  The latter now has a lift-invariant boundary skeleton:
+each coset carries eight `q=39` points of exact margin `1/13`, pinned by an
+oppositely signed pair of core speeds.  The clock forgets all `+39` lift
+heights, but every one of its points is a strict local cusp.  It is therefore
+a certificate shadow, not a closure state; the proof must select another
+core-safe component and retain its incidence with all four exception combs.
 The half-open arc `(-1/13,1/13]` is theorem-bearing data: germ orientation is
 a one-bit local coefficient, not a cosmetic endpoint convention.  Erasing it
 destroys the own/complement deck-capacity asymmetry used by the descent.

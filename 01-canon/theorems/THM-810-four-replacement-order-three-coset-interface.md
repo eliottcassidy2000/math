@@ -13,7 +13,7 @@ verification:
 
 # THM-810 — Four-replacement oriented-deck classification
 
-Put `F=F_13^*`.  For distinct labels `r,o in F` and a positive deck order
+Put `F=F_13^*`.  For labels `r,o in F` and a positive deck order
 `D` not divisible by `13`, define the left-germ count and capacity
 
 ```text
@@ -50,7 +50,8 @@ Then exactly one of the following holds:
 Conversely, every row in (i) satisfies (2), and every order-three coset in
 (ii) satisfies (2) with equality at all four owners.
 
-Consequently, consider a full-residue four-replacement packet
+Consequently, consider a full-residue four-replacement packet with positive
+integers `c,w_r`
 
 ```text
 A=(c[12] minus {cr:r in R}) union {w_r:r in R},
@@ -98,6 +99,18 @@ Directly from (5),
 D>=3  => f(D)<=1/3, with equality iff D=3,
 D>=4  => S_4(D)<=1,   with equality iff D=4.             (7)
 ```
+
+More explicitly, for `d=1,...,12`,
+
+```text
+f(13q+d)  =(2q+m_d)/(13q+d),
+S_4(13q+d)=(8q+T_d)/(13q+d),
+m=(1,1,1,1,1,1,2,2,2,2,2,2),
+T=(1,3,4,4,4,4,5,7,8,8,8,8).                          (7a)
+```
+
+These twelve short-deck values prove both sharp equality statements in (7),
+rather than leaving them as sampled inequalities.
 
 Also `f(D)<=2/13+1/D` and `S_4(D)<=8/13+4/D`.  Therefore
 the two thresholds needed later are finite.  Exact evaluation of (5) gives
@@ -188,8 +201,9 @@ They therefore cannot both hit two further owners.  Hence a mixed row has
 exactly one order-three colour.  Normalize its label to one.  Its other three
 owners must be chosen from `{3,5,8,10}`.  They must contribute total capacity
 at least `8/3` across the four owner inequalities.  Since each colour has
-owner-sum at most one, each individual owner-sum is at least `2/3`, placing
-all three orders in (9).  The third finite Cayley lemma closes these rows.
+owner-sum at most one, each of the three remaining colours has total capacity
+at least `2/3` across the four owners, placing all three orders in (9).  The
+third finite Cayley lemma closes these rows.
 
 If `k=0`, sum the four owner inequalities.  Each colour contributes at most
 `S_4(D)<=1`, so equality must hold everywhere.  Formula (7) forces every
@@ -315,6 +329,33 @@ when `a=1`.  Exact breakpoint evaluation gives:
 All four base rows are loose.  This is not a uniform result for arbitrary
 `u_r+39k_r`; the order-three collar remains a named structured residual.
 
+### 4.1 The lift-invariant `q=39` equality clock
+
+The exceptional family nevertheless has a uniform boundary skeleton.  For
+each feasible parity pattern and every choice of nonnegative lift heights
+`k_r`, put `u'_r=u_r+39k_r`.  Each of the three cosets has eight times
+
+```text
+coset aH         numerator clock modulo 39              active core pairs
+H                2,10,11,16,23,28,29,37                {12,27},{18,21}
+2H               1,5,8,14,25,31,34,38                  {3,36},{15,24}
+4H               4,7,17,19,20,22,32,35                 {6,33},{9,30}. (20a)
+```
+
+For the row's coset, take `t` to be a listed numerator divided by 39.  The
+complete packet in (20), with `u_r` replaced by `u'_r`, has margin exactly
+`1/13`.  Reduction modulo 39 shows that the coset's same eight numerators work
+for all four parity patterns.  At each time the two active speeds form one of
+the listed core pairs and have signed residues `+3,-3`.  Thus the equality
+point is a strict local cusp of the packet minimum: either one-sided
+perturbation immediately lowers one active core constraint.
+
+This does not prove the packet tight.  It proves that arbitrary lift height is
+invisible on a common eight-point clock and that strict looseness cannot be
+obtained by perturbing those clock witnesses.  A uniform closure must find a
+different core-safe component or prove that the four lifted exception combs
+cannot cover all such components.
+
 ## 5. Tournament Analysis and assumption challenge
 
 On the four replacement labels use the antisymmetric cross-capacity difference
@@ -345,9 +386,12 @@ carrier has been retained.
 
 ## Exact replay
 
-`lrc13_hamming_four_oriented_deck_codex_S10.py` verifies the residue-block
-identity through order 500, derives the exact cutoff sets (8)--(9), runs all
+`lrc13_hamming_four_oriented_deck_codex_S10.py` independently counts every
+oriented interval `(-D,D]` through order 999 and verifies the residue-block
+identity, derives the exact cutoff sets (8)--(9), runs all
 141,230 finite Cayley rows in the proof, reconstructs all sixteen parity
-patterns and the four exact tilings, evaluates the four base-packet maxima,
-and records both tournament gauges.  Its canonical output is stored beside
-the script.
+patterns and the four exact tilings, verifies the lift-invariant clock (20a),
+evaluates the four base-packet maxima, and records both tournament gauges.  The
+infinite residue-block identity itself is proved by the two outer length-13
+blocks in (5); the direct scan is an independent finite replay, not its proof.
+The canonical output is stored beside the script.
