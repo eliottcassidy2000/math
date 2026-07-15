@@ -1,0 +1,42 @@
+THM-836 TWO-SHEET OWNER-SHELL PACKING OBSTRUCTION
+arithmetic=integer+fractions.Fraction floating_point=none sampled_circle=none optimizer=none
+hypotheses=signed_q13_complement plus guarded_E_plus_R_subset_H_d
+centre_guard=5dp=1_mod13 implies dp=8_mod13; forced deep point maps to 8/13
+
+DIRECTIONAL_EXIT_TABLE
+signed_residues=(-6, -5, -4, -3, -2, 2, 3, 4, 5, 6)
+each_direction_coefficients=(9, 20, 31, 42, 53, 64, 75, 86, 97, 108)
+same_owner_complement=c_plus+c_minus=117
+coefficient_rows=20 endpoint_tests=80
+endpoint_semantics=E_closed boundary_at_1/11_included immediate_exterior_excluded
+
+LOCAL_GEOMETRY_BANK
+rows=119 direct_endpoint_tests=9996
+central_return=[-2/(143B),2/(143B)]_closed_in_closure_R
+target_component_radius=2/(169d) about forced preimage centre
+necessary_each_side=min_z(c_sigma(z)/u_z)+2/B<=22/(13d)
+telemetry_edge_flip_histogram=((11, 1), (12, 3), (13, 5), (14, 1), (15, 2), (16, 5), (17, 4), (18, 3), (19, 8), (20, 7), (21, 4), (22, 13), (23, 14), (24, 11), (25, 4), (26, 8), (27, 3), (28, 3), (29, 3), (30, 2), (31, 4), (32, 4), (33, 3), (34, 1), (35, 2), (36, 1))
+telemetry_observable=right_exit_time switch=left_exit_time tie=(signed_residue,speed)
+telemetry_each_order=transitive score_histogram_0..9 SCCs_10_singletons HP_1
+local_geometry_sha256=fd6b4d581ae361cd94738104237520f0c16bd5ad398204cb4e95f12a8b86e608
+
+THIN_SHELL_BANK
+odd_d_limit=999 shell_rows=1502751 owner_feasible_rows=1499442
+packing_failures=0 packing_equalities=0 owner_equalities=0
+s1_rows=462 s1_owner_feasible=0
+s3_rows=462 s3_owner_feasible=0 s3_mod13_histogram=()
+s5_rows=462 s5_owner_feasible=77 first_s5_witness=(11, 74, 71, 72, 8140, 2684)
+packing_law=delta(d)<=11s(13d+s)/(2(117d+11s))
+s1_consequence=empty
+s3_consequence=empty_after_mod13_alignment
+combined_consequence=13d<=2B-5
+s5_guardrail=local_owner_constraints_have_survivors; no_stronger_shell_claim
+shell_bank_sha256=78441201fc042254735b7c7dc49ced7f7419c45705dbda961dec41eb2f64858b
+
+CARRIER_AUDIT
+theorem_carrier=two_direction_obligations_x_owner_labelled_exit_times_x_mod13_gap
+not_a_tournament=binary_owner_order_loses_simultaneous_left_right_minima_and_interval_packing
+tournament_role=lossy_planning_telemetry_only
+
+certificate_sha256=741dc1d6e7e476817867d9b6ec13181e18b5ef7f999c9a7253680b2477f7fc07
+PASS: centre guard, closed endpoints, exit coefficients, owner inequalities, and modular packing
