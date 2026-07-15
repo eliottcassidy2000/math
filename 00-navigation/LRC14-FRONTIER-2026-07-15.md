@@ -349,19 +349,21 @@ family `B_n=506+360360n` has `N_R=3+1440n`.  The remaining argument must use
 the labelled cell/deep-component incidence, not hope that the satellites
 become connected or sublinear.
 
-THM-821 tests that incidence at its first nontrivial quotient boundary.  For
-the folded pair `(x,y)=(13,5)`, each atomic erosion obligation is one circular
-sum arc `C+R_k`; its exact endpoints determine the selector minimum at an
-endpoint or `9`-/`4`-cusp.  The deterministic THM-817 bank plus the complete
+THM-821 resolves that incidence at the atomic boundary uniformly over every
+positive odd folded pair `x>y`.  With
+`a=(x+y)/2`, `b=(x-y)/2`, each obligation factors through the pair-indexed
+circular sum arc `((x,y),C+R_k)`: its minimum occurs at an arc endpoint or a
+cusp `j/(2a),j/(2b)`.  The pair cannot be forgotten.  In the fixed
+`(13,5)` diagnostic census, the deterministic THM-817 bank plus the complete
 three-cell `U_0` row gives `9,974` atoms, with `492` successes and `9,482`
-failures.  Exact return data alone and exact deep data alone both mix verdicts;
+failures. Exact return data alone and exact deep data alone both mix verdicts;
 the disconnected satellites make the same deep interval fail for `k=-1` and
-succeed for `k=+1`.  Exact input intervals or their exact sum arc have zero
-mixed fibres.  Owners are redundant for this one numerical evaluation once
-the endpoints are fixed, but remain indispensable ancestry for moving an
-endpoint under descent.  Thus the next uniform theorem acts on signed sum arcs
-with owner provenance; no component-width, event-type, or bare-cell ranking
-can replace them.
+succeed for `k=+1`. Exact input intervals or their exact sum arc have zero
+mixed fibres. Owners are redundant for one numerical evaluation after the arc
+is formed, but remain indispensable ancestry for moving an endpoint under
+descent. Thus the next global theorem acts on pair-indexed signed sum arcs with
+owner provenance; no component-width, event-type, or bare-cell ranking can
+replace them.
 
 THM-824 identifies a different quotient boundary for the **global symmetric
 return union**.  The folded target for `(13,5)` is exactly the union of the two

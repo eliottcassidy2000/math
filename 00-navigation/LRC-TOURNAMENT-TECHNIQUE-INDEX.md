@@ -67,12 +67,13 @@ obligations, and proof-carrier interfaces.
   centres (`9` versus `22`) and different exact maxima; its top-four SCC can
   persist at unbounded scale.  Component count, total mass, unordered
   endpoints, or fibre sizes likewise cannot be joined until terminal purity
-  is proved.  THM-821 makes the corresponding deep boundary exact for the
-  fixed `(13,5)` selector: a signed return cell alone and a deep component
-  alone both have mixed fibres, while their exact circular sum arc determines
-  the numerical predicate on all `9,974` audited atoms.  Endpoint owners remain
-  descent ancestry even when exact intervals make them numerically redundant.
-  This atomic fixed-functional purity is not a global Cech theorem.
+  is proved. THM-821 makes the corresponding deep boundary exact uniformly in
+  every positive odd pair: the pair-indexed circular sum arc determines each
+  atomic verdict. In the fixed `(13,5)` audit, a signed return cell alone and a
+  deep component alone both have mixed fibres across `9,974` atoms. Endpoint
+  owners remain candidate descent ancestry even when exact intervals make
+  them numerically redundant. This pair-indexed atomic factorization is not a
+  global Cech theorem.
 - **Pairwise observable:** left owner-exit handoff, oriented provider-to-owner.
   The live five-cycle examples use increasing-label and decreasing-label
   completions of silent pairs.  In the first gauge the score histogram is
@@ -81,7 +82,7 @@ obligations, and proof-carrier interfaces.
   triangles and eleven paths.  Deleting one live cycle edge supplies the
   common tie Hamiltonian path.  These fingerprints diagnose a liar fibre;
   they are not the terminal predicate.
-- **Next pull:** THM-822 executes the `25,344`-row height-at-most-two audit.
+- **Next pull:** THM-822 completes the `25,344`-row height-at-most-two audit.
   `H0` (labelled live relation) and `H1` (plus integer centres) coincide and
   mix exact `M`; literal endpoint stalks `H2` make the bounded three-face join
   injective, while the final residual alone still has fourteen collision
@@ -222,9 +223,10 @@ obligations, and proof-carrier interfaces.
   `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
   one Hamiltonian path. These fingerprints certify collapse, not rigidity.
 - **Theorem-bearing comparison:** Odd gcd-deck lifts supply a positive control.
-  Orient lift vertices by signed circular phase displacement.  The resulting
-  cyclic tournament has one SCC and genuine directed cycles because it is
-  induced by the deck group action; together with the metric radius
+  For odd `D>=3`, orient `j->k` in `Z/DZ` exactly when
+  `k-j in {1,...,(D-1)/2}`; reflection/inversion reverses the declared gauge.
+  This cyclic tournament has one SCC and genuine directed cycles because it
+  is induced by the deck group action; together with the metric radius
   `(D-1)/(2D)`, its wrap certifies that the deck cannot lie in a short arc.
   Without the group action and radius sidecar, the same cycle data is only
   telemetry.

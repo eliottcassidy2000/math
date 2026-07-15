@@ -435,6 +435,22 @@ seven- and eight-speed reciprocal bounds combine to give
 x<=228,       v<=1986,       max_top<=7944.
 ```
 
+These are THM-820's standalone boxes.  The same row is also subject to
+THM-815's independent component-discrepancy cap `x<=146`.  Their intersection,
+which is the sharp current scale-one Hamming-five frontier, is therefore
+
+```text
+(x,v,w,y,z)<=(146,292,584,1168,2336)
+```
+
+in the doubling branch, or
+
+```text
+x<=146,       v<=1986,       max_top<=7944
+```
+
+in the exceptional branch.
+
 The least-coordinate sharpening is itself structural: when all five owners
 are large, positive indegree gives a minimal cycle of length four or five.
 The exact five-cycle band bank has five feasible types and forces a ratio at

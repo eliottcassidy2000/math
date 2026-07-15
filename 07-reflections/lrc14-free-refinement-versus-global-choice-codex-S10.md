@@ -24,7 +24,7 @@ seven remaining combs; arbitrary higher-radius deck ramification is still
 unclassified. THM-820 makes the Hamming-five finiteness operational: after
 intersecting with THM-815, only the doubling box
 `(146,292,584,1168,2336)` and an exceptional top-four box with
-`x<=146,v<=1986,max<=7944` remain. Its tournament-identical centre-9/centre-22
+`x<=146,v<=1986,max_top<=7944` remain. Its tournament-identical centre-9/centre-22
 cycles show that the global choice must act on residual intervals with legal
 continuations, not on the collar graph.
 THM-817 decomposes every disconnected return into signed maximum-speed cells

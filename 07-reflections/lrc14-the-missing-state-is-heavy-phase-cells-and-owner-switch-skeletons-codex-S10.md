@@ -57,6 +57,9 @@ related:
   - THM-816
   - THM-817
   - THM-819
+  - THM-820
+  - THM-821
+  - THM-822
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -80,7 +83,7 @@ seven remaining combs.
 
 THM-820 makes the first of those trees explicitly bounded by a doubling or
 exceptional top-four collar branch. Intersecting with THM-815 sharpens the
-boxes to `(146,292,584,1168,2336)` and `x<=146,v<=1986,max<=7944`. Its two
+boxes to `(146,292,584,1168,2336)` and `x<=146,v<=1986,max_top<=7944`. Its two
 five-cycles with identical live tournament data but integer centres `9` and
 `22` are a direct witness that the missing state includes metric band centre
 and the whole legal-continuation kernel, not only owner-switch topology.

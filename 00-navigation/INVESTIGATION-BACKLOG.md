@@ -140,8 +140,10 @@
   `a{1,2,4,8}` SCC and the two reciprocal-mass bounds sharpen it to
   `x<=228`, `v<=1986`, `max_top<=7944`.  All `792` height-one rows are loose,
   with unique minimum `2[11] union {11}` at `1/12`; the next odd lift is the
-  doubled AP `2[12]`.  The two finite boxes have not yet been emptied and an
-  arbitrary-scale radius-five deck descent has not been proved.
+  doubled AP `2[12]`.  Intersecting THM-820 with THM-815 gives the current
+  joint boxes `(146,292,584,1168,2336)` and
+  `x<=146,v<=1986,max_top<=7944`.  The two finite boxes have not yet been
+  emptied and an arbitrary-scale radius-five deck descent has not been proved.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -171,10 +173,10 @@
   `B_n=506+360360n` has `N_R=3+1440n`, so the current arithmetic gates cannot
   force connected returns or even `o(B)` satellite count.  Work on the
   labelled max-speed-cell/deep-component incidence, not component count alone.
-  THM-821 now audits that carrier exactly for `(x,y)=(13,5)`: among `9,974`
-  atomic sum arcs, cell labels, return/deep data separately, widths, owners,
-  and event types all have mixed fibres, while the exact input intervals or
-  exact circular sum arc determine the fixed predicate.  Its disconnected
+  THM-821 now factors that carrier uniformly for every positive odd `(x,y)`
+  through the pair-indexed atomic sum arc. In its fixed `(13,5)` audit of
+  `9,974` atoms, cell labels, return/deep data separately, widths, owners, and
+  event types all have mixed fibres. Its disconnected
   liar proves that an exact deep interval alone can fail for one satellite and
   succeed for its opposite.  Retain the sum-arc endpoints and owner ancestry.
   THM-824 proves that the full symmetric return union has a much smaller
@@ -261,6 +263,12 @@
   the same no-switch factorization.  A proof only for the global symmetric
   union must still be joined to the nonsymmetric satellite obligations.
   THM-816 has already
+  do not supply the missing uniform negative margin. THM-821 proves uniformly
+  for every positive odd `(x,y)` that each atomic verdict factors through the
+  pair-indexed circular cell/component sum arc. Its fixed `(13,5)` census gives
+  mixed fibres for every tested coarser positional/width/owner shadow. Seek a
+  height-independent contradiction or
+  decreasing invariant on those signed sum arcs with owner ancestry.  THM-816 has already
   removed the quartic `s=3` equality shell; the remaining higher-sheet work is
   outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
@@ -281,9 +289,12 @@
   with first-speed caps `146` and `468`. Intersecting the H5 bound with
   THM-820's constructive collar dichotomy gives the doubling box
   `(146,292,584,1168,2336)`, or the exceptional top-four cycle with `v<=1986`
-  and maximum lift at most `7944`. All 792 height-one H5 rows are loose; the
-  height-one H6 minimum is the unique doubled AP `2[12]`. At
-  scale-one Hamming seven the coefficient `13-2m` changes sign. Exhaust the H5
+  and `x<=146`, with maximum lift at most `7944`.  All 792 height-one H5 rows
+  are loose; the height-one H6 minimum is the unique doubled AP `2[12]`.  At
+  height at most two, THM-822 rejects all 25,344 H5 rows; its `H0/H1` kernel
+  mixes exact `M`, while literal endpoint faces H2 are injective only on this
+  static bank.  At scale-one Hamming seven the coefficient `13-2m` changes
+  sign. Exhaust the H5
   boxes and H6 tree, classify arbitrary five-/six-owner deck ramification, then
   seek a new overlap/owner potential at the seven-comb wall.
 - **Deep progress:** THM-772 gives primitive divisor-complete two-/three-sheet

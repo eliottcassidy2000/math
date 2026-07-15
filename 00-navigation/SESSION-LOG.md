@@ -63790,13 +63790,12 @@ all-pair noncontainment theorem, but it identifies the precise deep state and
 turns the next task into proving at least one negative-margin atom for every
 admissible packet.
 
-The same pull reserved THM-822 for the height-at-most-two Hamming-five kernel
-audit: the claimed 25,344-row slice is all loose, while relation/centre
-three-face fibres mix exact maxima and literal residual faces glue
-injectively.  Its canonical replay was still in progress at integration time,
-so the active shallow frontier continues to cite the finalized THM-820 boxes
-and treats THM-822 as incoming finite-slice evidence rather than arbitrary-
-height closure.
+The next live-main pull finalized THM-822.  Its optimized C++ replay
+byte-matches the stored certificate: all 25,344 height-at-most-two rows are
+loose, while relation/centre three-face fibres mix exact maxima and literal
+residual faces glue injectively on this bounded bank.  This closes the finite
+slice but not either THM-820 box; endpoint-owner incidence and actual
+continuation purity remain the missing intermediate codec.
 
 A subsequent live pull reserved THM-823 for the arbitrary-scale five-deck
 boundary.  Its current scout refutes a naive scalar-capacity cutoff by an

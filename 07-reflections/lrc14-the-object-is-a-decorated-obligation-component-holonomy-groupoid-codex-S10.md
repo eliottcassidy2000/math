@@ -16,7 +16,7 @@ scale-one Hamming five and six into finite exact decision trees.  Seven is the
 first radius where the interval-comb discrepancy loses positive cover deficit.
 THM-820 supplies an independent collar decomposition of radius five; combined
 with THM-815 it leaves the explicit doubling box
-`(146,292,584,1168,2336)` and exceptional box `x<=146,v<=1986,max<=7944`. The
+`(146,292,584,1168,2336)` and exceptional box `x<=146,v<=1986,max_top<=7944`. The
 literal continuation kernel of `(E_S,V)` is the finite automaton semantics of
 the decorated component-obligation state proposed here; no nontrivial minimized
 quotient has yet been proved.
