@@ -1,0 +1,51 @@
+LRC13 HAMMING-TWO COMMON-SCALE RIGIDITY — EXACT REPLAY
+arithmetic=integer+fractions.Fraction floating_point=none
+scope=exact tightness descent at 1/13 plus sharp scale-one floor 2/25
+
+ORIENTED_SPLICE_DECK_AUDIT
+eligible_endpoint_arc=(-1/13,1/13]  orientation=left_core_safe_germ
+capacity=ceil(2D/13); D=1 -> 1, D=2 -> 1, D>=3 -> capacity/D<=1/3
+two-colour sheet cover => one D=1, or both D=2
+D=2 own colour covers even parity; cross covers odd parity iff provider/owner in {6,7}
+reverse ratios are {6^-1,7^-1}={11,2}; simultaneous two-owner cover impossible
+D=1 covers every sheet at its own owner and zero sheets at every distinct owner
+therefore a mixed D=1/D>1 cover is impossible; exact tightness forces D_r=D_s=1
+complementary_guardrail=(c=2,r=1,s=12,wr=28,ws=11) closed_masks=[((True, True), (False, True)), ((True, True), (True, False))] oriented_masks=[((True, True), (False, False)), ((False, False), (True, False))]
+interpretation=closed endpoint sheets give a false mixed-deck survivor; the half-open germ removes it
+
+SCALE_ONE_DOUBLE_LIFT_FLOOR
+beta=2/25 ten_core_radius=1/1100 fee=17/2200 both_large_cutoff=259
+periodic-danger bound: |D_w(beta) intersect I| <= 2*beta*|I| + 2*beta/w
+outer reduction: smaller replacement wb<=258 and larger replacement wa<=24*wb
+small_label= 1 cumulative_total= 48469 sieve= 21115 rational= 27354 fail=0
+small_label= 2 cumulative_total= 97299 sieve= 42640 rational= 54659 fail=0
+small_label= 3 cumulative_total=146490 sieve= 63744 rational= 82746 fail=0
+small_label= 4 cumulative_total=196042 sieve= 85631 rational=110411 fail=0
+small_label= 5 cumulative_total=245974 sieve=106716 rational=139258 fail=0
+small_label= 6 cumulative_total=296267 sieve=128188 rational=168079 fail=0
+small_label= 7 cumulative_total=346940 sieve=171225 rational=175715 fail=0
+small_label= 8 cumulative_total=397974 sieve=213918 rational=184056 fail=0
+small_label= 9 cumulative_total=449388 sieve=257593 rational=191795 fail=0
+small_label=10 cumulative_total=501163 sieve=304300 rational=196863 fail=0
+small_label=11 cumulative_total=553299 sieve=351543 rational=201756 fail=0
+small_label=12 cumulative_total=600756 sieve=393962 rational=206794 fail=0
+final_stats={'total': 600756, 'sieve': 393962, 'rational': 206794, 'failure': 0}
+sieve_modulus_histogram={5: 6232, 6: 5954, 7: 75306, 8: 71727, 9: 67825, 10: 60001, 11: 61143, 12: 45774}
+rational_q_histogram={25: 1, 26: 5810, 39: 53153, 52: 61310, 65: 63693, 78: 5767, 91: 14531, 104: 748, 117: 876, 130: 41, 143: 704, 156: 78, 169: 82}
+minimum_rational_certificate=2/25 equality_certificate_rows=1 maximum_q=169
+certificate_digest=785322d71dd93ce3233cc7534e1cb46c0be25b5357a26bd056ff87ccf496f06f
+result=no scale-one proper double lift lies below 2/25
+
+SHARPNESS
+speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19)
+exact_M=2/25 maximizers=['6/25', '19/25'] binders_at_6/25=(8, 17) vector=(6, 12, 7, 5, 8, 2, 4, 10, 9, 3, 2, 11)
+
+TOURNAMENT_TELEMETRY
+vertices=nonzero residue owners pair_observable=order-two cross-parity eligibility
+orientation=provider_to_recipient tie_gauge=increasing_residue switch=reverse_live_edges
+live_edges=24 edge_flips_under_switch=24
+forward_score_histogram={2: 2, 4: 3, 5: 1, 6: 1, 7: 3, 9: 2} directed_triangles=40 scc_sizes=[12] hamiltonian_paths=125355 tie_hamiltonian_path=[10, 6, 7, 1, 12, 2, 11, 9, 5, 8, 3, 4]
+reverse_score_histogram={2: 2, 4: 3, 5: 1, 6: 1, 7: 3, 9: 2} directed_triangles=40 scc_sizes=[12] hamiltonian_paths=125355 tie_hamiltonian_path=[10, 5, 8, 4, 9, 2, 11, 1, 12, 6, 7, 3]
+interpretation=tournament is a cyclic shadow; the proof needs labelled two-colour sheet incidence
+
+PASS: exact tightness forces common scale; the descended proper double lift has M>=2/25>1/13.
