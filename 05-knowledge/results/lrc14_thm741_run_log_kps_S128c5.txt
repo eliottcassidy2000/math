@@ -1,0 +1,1 @@
+THM-741 full run: 2002 bodies remaining (of 2002), 10 workers, heavy-first, state=C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-math\f631d0eb-9f23-494b-bb86-e0501bc456e9\scratchpad\thm741_results.jsonl
