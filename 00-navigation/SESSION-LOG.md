@@ -200,13 +200,19 @@ draft, indexes, and mistake ledger were reconciled to this state. The exit
 package settled at THM-783, the unproved universal `K0` consequence was
 withdrawn, and the transverse results moved to THM-798/799.
 ## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
-## codex-2026-07-14-S10 -- CURRENT THM-794/795/797 CORRECTION: r=8 QUOTIENTS DIAGONAL HOLONOMY; n=12 RESIDUAL IS SHALLOW HAMMING RADIUS >=2 OR DEEP FULL/ALIGNED SUPPORT WITH GLOBAL COMPONENT CHOICE
+## codex-2026-07-14-S10 -- INTERMEDIATE THM-794/795/797 CORRECTION: r=8 QUOTIENTS DIAGONAL HOLONOMY; LATER PULLS BELOW SUPERSEDE THE RESIDUAL
 
 This is a current correction entry; the historical entries below are left
 unchanged.  The original request was to reassess the LRC(14) frontier, begin
 with the claimed `q<=25` and uniform `n=12` finishes, and seek the faithful
 tournament carrier.  Uniform `q<=25` remains refuted, and the new theorems make
 the surviving frontier substantially more exact without proving LRC(14).
+
+> **Later S10 correction:** the paragraphs immediately below record the
+> intermediate THM-794/795/797 stage. The later THM-800/802/803/804 paragraphs
+> in this same entry supersede their residual wording: shallow radius two is
+> closed, radius three descends to scale one, and the `q=13` residual has the
+> signed/parity-twisted/anti-grid and exact all-component conditions.
 
 **THM-795 (uniform shallow Hamming-one rigidity).**  Twelve exact core-safe
 intervals, seven residual atoms, and a missing-owner splice-deck argument prove
@@ -235,9 +241,9 @@ U=(1,2,3,4,7,9,10,11,12,16),       (x,y)=(13,5)
 has aligned support, satisfies the earlier arithmetic and sporadic taxes, and
 traps both deep thirteenths.  Nevertheless the owner-labelled component at
 `7/33` escapes; the reconstructed packet has `M=2/19>1/13`, while its maximum
-peel has `M=1/8>1/12`.  This is the sharp loose sporadic survivor: it proves
-that the residue gate cannot replace the global component atlas.  The deep
-residual is full/aligned `q=13` support followed by selection among all closed
+peel has `M=1/8>1/12`. This is the prime-grid-gate-sharp loose sporadic row: it
+proves that the residue gate cannot replace the global component atlas. The
+deep residual at this stage was full/aligned `q=13` support followed by selection among all closed
 `1/11`-superlevel components with endpoint owners and exact escape margins.
 
 **THM-794 (full-active prime-seven holonomy).**  The infinite family
@@ -638,7 +644,9 @@ half-open capacity and residue-gain argument: every tight arbitrary-scale row
 descends to a genuine scale-one triple lift. The proof is symbolic; the exact
 replay adds 296,640 direct grids and 11,143,660 relaxed capacity rows. It does
 not prove the normalized triple lifts loose, so that chart and radius at least
-four remain open.
+four remain open. THM-806 now reserves a collar reduction of that scale-one
+chart to a proposed finite box, but its component-containment proof and
+corrected replay remain in progress; it is not counted as closure.
 
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
@@ -705,12 +713,15 @@ metric base.  The faithful object is the labelled incidence skew product
 recorded in the S10 reflection.
 
 The Smith/metagraph side gives the same controlled-forgetting warning without
-supplying an LRC theorem.  Voltage/score concordance is exact through `n=6`;
-the `n=7` float solve robustly finds 132 discordant adjacent-level pairs but is
-not yet an exact proof.  The dual `E_n` network is rationally exact through
-`n=7`, while resistance reciprocity already fails exactly at `n=4` because
-`(3/7)(2/5)=6/35`.  Potential, current, and recursive line-fibre state are
-therefore distinct layers.
+supplying an LRC theorem. Voltage/score concordance is exact through `n=6`;
+the numerically refined `n=7` solve finds 132 adjacent-level failures, and the
+`n=8` audit finds 65,921 failures reaching level distance 32. This decisively
+refutes coarse pairwise concordance numerically, but is not promoted here to
+an exact theorem. Only level-mean/median monotonicity is verified through the
+completed `n<=7` checks; `n=8` is pending. The dual `E_n` network is rationally exact
+through `n=7`, while resistance reciprocity already fails exactly at `n=4`
+because `(3/7)(2/5)=6/35`. Potential, mean-field order, current, and recursive
+line-fibre state are therefore distinct layers.
 
 THM-801 contributes a second exact recursive analogy.  Its full three-face
 staircase cover is a genuine Čech descent: face tilings glue from compatible
@@ -739,11 +750,12 @@ after the `w=13c`, height-24 multiplier lane; uniform failure or incompatibility
 of THM-803's exact signed-complement all-component selector; a quotient by the
 full affine diagonal-isotropy subgroupoid joining
 THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
-radius at least four after THM-804; and a scale-normal argument for
+radius at least four after THM-804 (THM-806 is an audit-in-progress attack,
+not closure); and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804 plus claimed THM-806; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three, affine-packet, anti-grid/component-selector, and signed-wall

@@ -125,6 +125,8 @@
   shallow residual starts at labelled radius three.  THM-804 now proves that
   every tight residue-preserving three-replacement lift has common AP scale.
   The genuine scale-one Hamming-three chart and radius at least four remain.
+  THM-806 reserves a promising collar reduction for the scale-one chart, but
+  its component-containment proof and corrected replay are still in progress.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -172,6 +174,8 @@
   Hamming-three chart, followed by radius at least four.  Build its bipartite
   sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
   defect, a normalized floor, or a new descent tied to a decreasing invariant.
+  Audit THM-806's proposed bounds before using its finite box; it is claimed,
+  not proved.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put

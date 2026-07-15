@@ -46,6 +46,7 @@ related:
   - THM-802
   - THM-803
   - THM-804
+  - THM-806
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -794,12 +795,16 @@ state.
 
 This also clarifies the honest import of the Smith-diagram tournament thread.
 The S307 metagraph entry currently sharing the colliding ID `HYP-6865` has
-exact voltage/score concordance through `n=6`.  Its `n=7` float solve finds 132
-well-separated discordant adjacent-level pairs, but that is a robust numerical
-decision rather than an exact theorem.  The separate `E_n` network is rationally
-exact through `n=7`, and already at `n=4` the proposed electrical reciprocity
-fails: `(3/7)(2/5)=6/35`, so the cut/cycle relation is algebraic rather than a
-planar Smith duality.  THM-796 meanwhile proves that actual current and
+exact voltage/score concordance through `n=6`. Its numerically refined `n=7`
+solve finds 132 well-separated discordant adjacent-level pairs, and the `n=8`
+audit finds 65,921 discordances reaching four score levels: coarse pairwise
+concordance is decisively refuted numerically, though not promoted here to an
+exact theorem. Level-mean and level-median monotonicity are verified through
+`n=7` (the `n=8` check is pending), so the score axis is at most a mean-field
+harmonic coordinate. The separate `E_n` network is
+rationally exact through `n=7`, and already at `n=4` the proposed electrical
+reciprocity fails: `(3/7)(2/5)=6/35`, so the cut/cycle relation is algebraic
+rather than a planar Smith duality. THM-796 meanwhile proves that actual current and
 recursive continuation live on weighted line fibres.  This is a rigorous
 potential-versus-current separation inside the tournament model, not a direct
 LRC theorem.  In the collar the analogous exact current is the full `A_12`
@@ -953,7 +958,9 @@ still missing.
    THM-804 now proves the three-replacement common-scale descent by an exact
    half-open capacity/residue-ratio argument. What remains at radius three is
    precisely the genuine scale-one triple-lift chart; radius at least four is
-   also open.
+   also open. THM-806 reserves a collar/finite-box attack on the scale-one
+   chart, but its proof and corrected full replay are explicitly still in
+   progress.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

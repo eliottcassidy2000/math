@@ -321,6 +321,9 @@ one-sided germ orientation, exact margin, and owner.  A Hall, Smith-normal-form,
 or common-divisor lemma on this carrier would generalize the successful
 Hamming-one/two/three descents, but the scale-one chart also needs actual lift
 heights and metric tooth placement because all deck orders there equal one.
+THM-806 reserves a concrete collar/finite-box attack on that metric chart, but
+its proof and corrected full replay remain in progress; it is not a new
+descent theorem yet.
 The half-open arc `(-1/13,1/13]` is theorem-bearing data: germ orientation is
 a one-bit local coefficient, not a cosmetic endpoint convention.  Erasing it
 destroys the own/complement deck-capacity asymmetry used by the descent.
