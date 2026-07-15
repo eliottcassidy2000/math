@@ -1,0 +1,44 @@
+THM831_SMALL_HALF_FREQUENCY_TWO_BALL_RADIUS_BUDGET
+threshold=11/13 epsilon=2/13
+admissible_rows=16 alpha_range=4..9
+columns=alpha,beta,r,s,centre,h,second_difference_gap,slack,full_s_tooth,intervals
+row[00]=4,1,3,5,49/130,1/130,16/65,14/65,0,[24/65,5/13];[8/13,41/65]
+row[01]=4,3,1,7,25/182,3/182,25/91,19/91,0,[11/91,2/13];[11/13,80/91]
+row[02]=5,2,3,7,23/78,1/78,7/39,5/39,0,[11/39,4/13];[9/13,28/39]
+row[03]=5,4,1,9,1/9,2/117,2/9,2/13,1,[11/117,5/39];[34/39,106/117]
+row[04]=6,1,5,7,381/910,11/910,74/455,4/35,0,[37/91,28/65];[37/65,54/91]
+row[05]=6,5,1,11,1/11,2/143,2/11,18/143,1,[1/13,15/143];[128/143,12/13]
+row[06]=7,2,5,9,17/78,1/78,5/39,1/13,0,[8/39,3/13];[10/13,31/39]
+row[07]=7,4,3,11,4/11,2/143,3/11,31/143,1,[50/143,54/143];[89/143,93/143]
+row[08]=7,6,1,13,1/13,2/169,2/13,18/169,1,[11/169,15/169];[154/169,158/169]
+row[09]=8,1,7,9,719/1638,19/1638,100/819,62/819,0,[50/117,41/91];[50/91,67/117]
+row[10]=8,3,5,11,261/1430,19/1430,193/715,31/143,0,[11/65,28/143];[115/143,54/65]
+row[11]=8,5,3,13,4/13,2/169,3/13,31/169,1,[50/169,54/169];[115/169,119/169]
+row[12]=8,7,1,15,1/15,2/195,2/15,6/65,1,[11/195,1/13];[12/13,184/195]
+row[13]=9,2,7,11,551/2002,23/2002,101/1001,5/91,0,[24/91,41/143];[102/143,67/91]
+row[14]=9,4,5,13,5/13,2/169,3/13,31/169,1,[63/169,67/169];[102/169,106/169]
+row[15]=9,8,1,17,1/17,2/221,2/17,18/221,1,[11/221,15/221];[206/221,210/221]
+
+EXACT_CHECKS
+affine_sweep_equals_bezout_intersections=16/16
+two_antipodal_components=16/16
+radius_formula=16/16
+second_difference_gap_gt_4h=16/16
+synthetic_compact_packets=6160 mismatches=0
+primitive_formula_audit_alpha_le_50=518/518 including_2_empty
+equal_radius_iff_n1_or_4beta_ge_13qmax=516/516_nonempty
+weighted_no_switch_frontier=positive_alpha4..9:16 nonpositive_alpha10..50:500
+alpha10_boundary_rows=[(beta=1,offsets=(-3, -1, 1, 3),components=4,defect=4/1287,tax=41/1287,slack=-37/1287), (beta=3,offsets=(-3, -1, 1, 3),components=4,defect=12/1183,tax=41/1183,slack=-29/1183), (beta=7,offsets=(-3, -1, 1, 3),components=4,defect=11/1326,tax=37/1326,slack=-1/51), (beta=9,offsets=(-3, -1, 1, 3),components=4,defect=3/494,tax=1/38,slack=-5/247)]
+certificate_sha256=a39c46d37d72888b88827e3da9ef00f273a8b0a53606e1b9f916e05c3d81c7a6
+formula_audit_sha256=8cf16040f4adcf2663c867ef378bfc1d979c87ffd82b7bacea4bec7f679db05c
+source_sha256=de22dfe33ce641eff186d7fb2aec5638a911ebeb1e4da4ca54f33ef2aeb3c63f
+
+TOURNAMENT_TELEMETRY
+vertices=16_reduced_ratio_types
+pair_observable=no_switch_slack_difference
+switch=raw_slack_vs_slack_per_target_radius
+tie_path=lexicographic_alpha_beta
+edge_flips=9
+both_tournaments=transitive score_histogram=0..15 cycles=0 SCCs=16_singletons HP=1
+preserves=planning_order_only destroys=centres_endpoints_owner_transport_LRC_predicate
+PASS: exact components, radii, no-switch gaps, packets, and boundary
