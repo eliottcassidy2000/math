@@ -43,6 +43,32 @@ Format per entry:
 - **Source:** codex-2026-07-14-S10 and an independent parallel rediscovery;
   THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
   output.
+## MISTAKE-147 -- "K0 = 6: every blocking run has at most 6 walls" (THM-782/S303 census) -- a RATIO-BOXED sampling artifact; extreme-ratio tuples give runs of 41+ walls (exact certificate); the true exit-lemma invariant is EXTENT, not wall count (opus-S304, self-caught next session)
+
+- **What was claimed (opus-S303):** adversarial census (heights to 10^4, incl. targeted
+  packets) capped all blocking runs at 6 walls; "K0 := 6" was adopted as the working
+  constant and the sharp conjecture "every blocking run <= 6 walls" was stated.
+- **Why it is wrong:** the census sampled 8-subsets of [1, 10^4] UNIFORMLY -- such draws
+  essentially never produce extreme speed RATIOS (w_f/w_g > 3). But same-owner steps are
+  phi-free: when the fastest owner dwarfs the rest, the seven slow tokens are constant on
+  long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
+  w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
+  {8,10,18,24,32,34,39,3887}: 14-wall run.
+- **The correct framing (THM-786):** the invariant is run EXTENT. Both certificates'
+  extents (0.01620, 0.00334) sit UNDER 1/w_g + 2/w_f (0.02646, 0.02616) -- the extent
+  bound proved conditionally in THM-782(5) and now verified at ratio <= 0.59 across all
+  adversarial families INCLUDING designed exploits (balanced pairs, near-multiples).
+  Wall-count comparisons in THM-779(4)/THM-782(6-7) are withdrawn; extent comparisons
+  replace them; the pierce is restated in extent form.
+- **Impact:** no downstream consumer used K0 = 6 quantitatively in the ~3 hours it stood;
+  THM-779/782 carry correction banners.
+- **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
+  uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
+  seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
+  single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
+  dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
+  count what costs, not what happens.
+- **Source:** opus-2026-07-14-S304 (lrc14_extent_exit_theorem_opus_S304.py + .out).
 
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 

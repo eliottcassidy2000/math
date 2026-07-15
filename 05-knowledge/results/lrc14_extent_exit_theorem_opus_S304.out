@@ -1,0 +1,3 @@
+certificate [10, 12, 17, 18, 22, 32, 39, 2445]: run = 41 WALLS (K0=6 refuted), extent = 0.01620 < bound 0.02646: True
+certificate [8, 10, 18, 24, 32, 34, 39, 3887]: run = 14 WALLS (K0=6 refuted), extent = 0.00334 < bound 0.02616: True
+extent census: see THM-786 table; peak ratio 0.589 (annealed).
