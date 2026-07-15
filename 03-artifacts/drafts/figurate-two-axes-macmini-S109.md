@@ -83,8 +83,9 @@ candidate). It is to Fibonacci precisely what Moser is to 2^r:
   **G(n) = n⁴/96 − n³/16 + n²/3 + n/32 + 53/64 + (−1)ⁿ·(11/64 − n/32).**
 - **Asymptotics:** G(n) ~ n⁴/96, vs Moser ~ n⁴/24: same degree, quarter constant — the
   diagonal/row ratio echoing F(n) ~ φⁿ vs 2ⁿ.
-- **Fibonacci defect** F(n+1) − G(n) = 0, 1, 1, 2, 3, 5, 8, 13, **22**, 38, 68, 122, … —
-  itself Fibonacci-like until its own second-order holes open.
+- **Fibonacci deficit** F(n+1) − G(n) = 0 for n < 8, then **1, 4, 13, 33, 76, 159, …**
+  with exact GF x⁸/((1−x)⁵(1+x)²(1−x−x²)) (THM-868). [CORRECTED per MISTAKE-137: this
+  line originally used F(n+2), which manufactured a fake "Fibonacci-like" pattern.]
 
 ## 3. The fundamental object: the run/support filtration
 

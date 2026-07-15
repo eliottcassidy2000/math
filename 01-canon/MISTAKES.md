@@ -4031,3 +4031,16 @@ numerically (not just downstream bounds), at t >= 3 and at q large enough that d
 resolve the candidate objects apart. Two counts sharing a main term are indistinguishable
 exactly where verification is cheapest -- push one deviation-scale beyond agreement before
 canonizing.
+
+## MISTAKE-137
+**Session:** mac-mini-2026-07-15-S109 (caught by S110's THM-868 GF referee, same day)
+**What happened:** the S109 figurate note printed a "Fibonacci defect" line as F(n+2) − G(n)
+= 0,1,1,2,3,5,8,13,22,38,... and narrated it as "itself Fibonacci-like until its own holes open".
+The correct deficit is F(n+1) − G(n) = 0 (n < 8), then 1, 4, 13, 33, 76, 159, ... — opus-S317's
+independently computed "deviations" — with exact GF x^8/((1-x)^5 (1+x)^2 (1-x-x^2)) (THM-868).
+The fake pattern was pure index shift: F(n+2) − F(n+1) = F(n) makes any off-by-one look
+"Fibonacci-like" while G still equals Fibonacci.
+**Lesson:** an off-by-one against a linearly recurrent sequence MANUFACTURES a plausible pattern
+(the recurrence reproduces itself under shifts). Before narrating "the deficit looks like X",
+check the index against the exact GF — the GF referee catches in one line what eyeballing cannot.
+**Status:** corrected in the S109 draft + THM-868; no downstream theorem used the wrong line.

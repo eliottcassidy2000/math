@@ -1,0 +1,25 @@
+(A) THM-869 -- the Morse shelves
+  characterization check: stuck <=> d in {0,+-2} and all (-2)->(+2) upsets:
+  n=5: stuck=40, characterized=40, mismatches=0
+        score (1, 2, 2, 2, 3): stuck 40 / fiber 280  (upset fraction 40/280)
+  n=6: stuck=0, characterized=0, mismatches=0
+  n=7: stuck=16800, characterized=16800, mismatches=0
+        score (2, 3, 3, 3, 3, 3, 4): stuck 16800 / fiber 72240  (upset fraction 16800/72240)
+
+  n=9, a=2 construction (predicted first x=16 shelf):
+    constructed: scores=[3, 3, 4, 4, 4, 4, 4, 5, 5]  x=16  tournament-valid=True  STUCK=True   (shelf level a=2, x=16: CONFIRMED)
+
+(B) RYSER-FIBER MONODROMY (fibers = score VECTORS, per Ryser; n=4 baseline + n=5)
+   n=4: reversal edges: parity-flipping 0, keeping 32  -> digit 1 fiber-constant
+   n=5: reversal edges: parity-flipping 240, keeping 1040  -> digit 1 MONODROMY-CARRIED
+   score-vector fibers: 291; vector-fibers with parity split: 20; sorted-classes affected: 1 (THM-466: 1 of 9)
+   Ryser connectivity: every score-vector fiber connected (no disconnection lines above)
+   reversal edges: parity-flipping 240, parity-keeping 1040 (digit 1 is monodromy-carried iff flips > 0: YES)
+
+   local-law hunt (n=5, all reversal edges):
+   Delta-par vs (#5cyc >=1 tri-arc) mod 2: {(0, 0): 960, (0, 1): 1120, (1, 1): 240, (1, 0): 240}  LAW: False
+   Delta-par vs (#5cyc exactly-1 arc) mod 2: {(0, 0): 1600, (0, 1): 480, (1, 1): 480}  LAW: False
+   Delta-par vs (#5cyc exactly-2 arcs) mod 2: {(0, 0): 1200, (0, 1): 880, (1, 0): 240, (1, 1): 240}  LAW: False
+   Delta-par vs (tri out-degree) mod 2: {(0, 0): 800, (0, 1): 1280, (1, 0): 480}  LAW: False
+
+DONE

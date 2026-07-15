@@ -1,0 +1,78 @@
+==============================================================================
+(1) THM-868 -- THE GEOMETRIC LADDER (all series exact to order 40)
+   telescope algebra: (1-x)^2 - x^2 = 1-2x: True ;  (1-x)^2(1+x) - x^3 = 1-x-x^2: True
+   R_j ladder == T_j row sums (j=1..6): True
+   G_j ladder == T_j diagonal sums (j=1..6): True
+   row-deficit GF x^(2j+1)/((1-x)^(2j+1)(1-2x)) exact (j=1..6): True
+   diag-deficit GF x^(3j+2)/((1-x)^(2j+1)(1+x)^j(1-x-x^2)) exact (j=1..6): True
+   telescope totals: R_6 -> 1/(1-2x) head: True ; G_13 == Fibonacci to order 40: True
+   [S109 ERRATUM: the S109 'Fibonacci defect' line used F(n+2); true deficit below]
+   deficit sequences (j=2): rows 2^r - Moser: [1, 7, 29, 93, 256, 638, 1486]
+                            diags F - G:      [1, 4, 13, 33, 76, 159, 315, 594]
+   pure layer-s diagonal sequences (new; layer GF x^(3s-1)/((1-x)^(2s+1)(1+x)^s)):
+      layer 1: [2, 4, 6, 9, 12, 16, 20, 25, 30, 36, 42, 49]
+      layer 2: [1, 3, 8, 16, 30, 50, 80, 120, 175, 245, 336, 448]
+      layer 3: [0, 1, 4, 13, 32, 71, 140, 259, 448, 742, 1176, 1806]
+
+(2) THE d-DIMENSIONAL MOSER LAW: row sums of the d-dim polygonal triangle
+   d=2: rows = 1 + C(r+d-1,d) + C(r+d-1,d+2): head [1, 2, 4, 8, 16, 31, 57, 99, 163]
+   d=3: rows = 1 + C(r+d-1,d) + C(r+d-1,d+2): head [1, 2, 5, 12, 27, 57, 113, 211, 373]
+   d=4: rows = 1 + C(r+d-1,d) + C(r+d-1,d+2): head [1, 2, 6, 17, 43, 99, 211, 421, 793]
+   d=5: rows = 1 + C(r+d-1,d) + C(r+d-1,d+2): head [1, 2, 7, 23, 65, 163, 373, 793, 1585]
+   law exact d=2..5, r<30: True
+   d=3: diagonal sums head [1, 1, 2, 4, 8, 15, 27, 47, 79, 129, 204, 314, 470, 687]   (Fibonacci-of-d analog)
+   d=4: diagonal sums head [1, 1, 2, 5, 12, 26, 52, 98, 176, 304, 507, 820, 1289, 1975]   (Fibonacci-of-d analog)
+
+(3) CENTERED-POLYGONAL TRIANGLE (col k: 1 + k*C(m,2)); row sums = 1 + r + C(r+2,4)
+   row law exact: True ; rows head: [1, 2, 4, 9, 20, 41, 77, 134, 219, 340]
+   diagonal sums head: [1, 1, 2, 3, 6, 11, 20, 34, 55, 85, 126, 181, 252, 343]
+
+(4) ODD/EVEN-SUPPORT SPLIT of the FULL triangle (Pascal): period-8 structure
+   odd-support rows: [0, 1, 3, 6, 10, 16, 28, 56, 120, 256, 528, 1056]
+   = (2^r - Re(1+i)^(r+1))/2 [Gaussian-integer / period-8 law]: True
+   odd-support diagonals: [0, 0, 1, 2, 4, 6, 9, 12, 17, 24, 38, 62, 107, 182, 309, 510] (Fibonacci-split analog)
+
+(5) LEVEL-MULTIPLICITY TRIANGLE L(n,k) (THM-866 made quantitative)
+   n= 3: L-row (2 levels, total 2): [1, 1]  unimodal:True
+   n= 4: L-row (3 levels, total 4): [1, 2, 1]  unimodal:True
+   n= 5: L-row (6 levels, total 9): [1, 1, 1, 2, 3, 1]  unimodal:True
+   n= 6: L-row (9 levels, total 22): [1, 2, 1, 4, 3, 2, 4, 4, 1]  unimodal:False
+   n= 7: L-row (15 levels, total 59): [1, 1, 1, 3, 3, 3, 5, 6, 5, 8, 5, 5, 7, 5, 1]  unimodal:False
+   n= 8: L-row (21 levels, total 167): [1, 2, 3, 4, 3, 6, 8, 6, 8, 14, 11, 10, 13, 14, 12, 14, 10, 10, 11, 6, 1]  unimodal:False
+   n= 9: L-row (31 levels, total 490): [1, 1, 1, 3, 4, 3, 7, 9, 7, 12, 14, 13, 18, 22]...  unimodal:False
+   n=10: L-row (41 levels, total 1486): [1, 2, 3, 4, 7, 6, 8, 12, 14, 14, 20, 22, 23, 30]...  unimodal:False
+   n=11: L-row (56 levels, total 4639): [1, 1, 1, 3, 4, 4, 7, 11, 10, 14, 18, 20, 24, 31]...  unimodal:False
+   distance-1-below-transitive multiplicities (n=4..11): [2, 3, 4, 5, 6, 7, 8, 9]
+   max multiplicities (n=3..11): [1, 2, 3, 4, 8, 14, 34, 72, 175]
+
+(6) MAJORIZATION GRADEDNESS: are ALL covering relations |Delta-x| = 8?
+   n=4: 4 covers, non-8 covers: 0  -- POSET IS GRADED BY x/8
+   n=5: 11 covers, non-8 covers: 0  -- POSET IS GRADED BY x/8
+   n=6: 35 covers, non-8 covers: 3  e.g. ((4, 4, 3, 2, 1, 1), (4, 4, 4, 1, 1, 1), 16)
+   n=7: 115 covers, non-8 covers: 12  e.g. ((5, 5, 4, 3, 2, 2, 0), (5, 5, 5, 2, 2, 2, 0), 16)
+   n=8: 388 covers, non-8 covers: 50  e.g. ((6, 6, 5, 4, 3, 3, 1, 0), (6, 6, 6, 3, 3, 3, 1, 0), 16)
+
+(7) FALSE-PEAK CROSS-CHECK (kps cont.22) at n=5,6,7: descent obstructions
+   n=5: above-floor 1000; NO unit-descent: 40; NO descent at all (x-local-min above floor): 40
+        stuck score census: {(1, 2, 2, 2, 3): 40}   stuck x levels: {8: 40}
+   n=6: above-floor 30128; NO unit-descent: 368; NO descent at all (x-local-min above floor): 0
+   n=7: above-floor 2094512; NO unit-descent: (skipped); NO descent at all (x-local-min above floor): 16800
+        stuck score census: {(2, 3, 3, 3, 3, 3, 4): 16800}   stuck x levels: {8: 16800}
+
+OEIS CANDIDATE STRINGS:
+   row-deficit j=2 (2^r - Moser): 0,0,0,0,0,1,7,29,93,256,638,1486,3302,7099,14913,30827,63019,127858,258096,51925
+   diag-deficit j=2 (F - G): 1,4,13,33,76,159,315,594,1084,1923,3343,5714,9645,16115,26720,44035
+   layer-2 diagonals: 1,3,8,16,30,50,80,120,175,245,336,448,588,756,960
+   layer-3 diagonals: 1,4,13,32,71,140,259,448,742,1176,1806,2688,3906,5544,7722,10560
+   d=3 Moser rows: 1,2,5,12,27,57,113,211,373,628,1013,1574,2367,3459,4929,6869
+   d=4 Moser rows: 1,2,6,17,43,99,211,421,793,1420,2432,4005,6371,9829,14757,21625
+   d=3 diagonals: 1,1,2,4,8,15,27,47,79,129,204,314,470,687,981,1373
+   centered rows: 1,2,4,9,20,41,77,134,219,340,506,727,1014,1379,1835,2396
+   centered diagonals: 1,1,2,3,6,11,20,34,55,85,126,181,252,343,456,596
+   odd-support diagonals: 2,4,6,9,12,17,24,38,62,107,182,309,510,832,1334
+   G_3: 1,1,2,3,5,8,13,21,34,55,89,143,228,358,554,841,1255,1837
+   G_4: 1,1,2,3,5,8,13,21,34,55,89,144,233,377,609,981,1571,2497
+   L distance-1 multiplicities: 2,3,4,5,6,7,8,9
+   L max multiplicities: 1,2,3,4,8,14,34,72,175
+
+DONE
