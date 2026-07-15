@@ -63,13 +63,16 @@ mixed bad atoms with distinct masks, and several exact SAT encodings did not
 finish.  These runs remain numerical evidence, not a theorem or committed
 artifact.
 
-The close-out pull also integrated proved THM-778/779.  Centered Beatty ranks
-now give the exact prime-seven wall schedule, while the token-walk criterion
-gives its exact collision-hop acceptance rule.  HYP-6845's proposed exit-lemma
-decision remains a claim stub.  Across both two- and seven-sheet fronts the
-faithful object is now a labelled incidence skew product with metric base,
-phase/endpoint schedule, sheet action, and continuation state; tournament
-nodes are diagnostic quotients unless a reconstruction lemma is supplied.
+The close-out pulls also integrated proved THM-778/779 and THM-781.  Centered
+Beatty ranks give the exact prime-seven wall schedule, the token-walk criterion
+gives its exact collision-hop acceptance rule, and the metagraph theorem
+inverts a merged node set-valuedly as `HP(T)/Aut(T)`.  That inverse restores
+the fixed-cut tiling but not owner assignment, metric transport, or carry.
+HYP-6845's proposed exit-lemma decision remains a claim stub.  Across both
+two- and seven-sheet fronts the faithful object is a labelled incidence skew
+product with metric base, phase/endpoint schedule, sheet action, and
+continuation state; tournament nodes are diagnostic quotients unless a
+reconstruction lemma is supplied.
 
 ---
 

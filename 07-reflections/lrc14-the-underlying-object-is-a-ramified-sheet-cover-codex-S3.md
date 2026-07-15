@@ -77,9 +77,13 @@ Each sharpened the question, and each also forgot something.
 
 8. **Tournaments and metagraphs.**  Tournaments compress comparisons, expose
    gauge dependence, and organize switching histories.  They are excellent
-   diagnostics for which information a quotient has discarded.  They have
-   not been faithful theorem carriers when vertices are chosen to be runners
-   by default.
+   diagnostics for which information a quotient has discarded.  THM-781 gives
+   one exact positive result: for the explorer's fixed-path tilings, the
+   inverse fibre of a merged node is intrinsically the union of
+   `HP(T)/Aut(T)` over its converse classes.  That theorem preserves the tiling
+   predicate exactly, but not owner labels, metric wall data, phase, or carry.
+   Runner tournaments have still not been faithful LRC theorem carriers when
+   chosen by default.
 
 9. **Finite exact computation.**  Exact rational sweeps falsified the period
    shortcut, repaired the missing half-turn cusp, and proved enormous bounded
@@ -400,6 +404,20 @@ orientation is telemetry.  A directed cycle induced by the actual sheet-group
 action can certify wrap, as in the gcd deck.  But the proof contract should be
 written first in the incidence skew product, and only then pushed through a
 tournament quotient with an explicit list of what survives.
+
+THM-781 makes this preservation ladder exact at one level:
+
+```text
+merged node <- Hamiltonian-path orbit / fixed-cut tiling
+            <- owner-to-sheet assignment
+            <- metric endpoint transport and carry.
+```
+
+The first inverse is now a theorem and explains the 25 masks above the
+prime-seven node `n7-a267` as `175/7` path orbits.  The next two arrows remain
+multivalued and continuation-sensitive.  This is a useful boundary case: a
+tournament quotient can be fully invertible for the combinatorial question it
+was designed to answer while remaining insufficient for the LRC predicate.
 
 This suggests a recursive research rule for future tournament experiments:
 
