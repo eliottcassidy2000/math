@@ -1,0 +1,40 @@
+(A) THM-865 -- leftmost-tie-split walk vs the level census:
+   n=3: levels=2 walk-visits=2 all-legal=True all-steps-8=True walk==census: True
+   n=4: levels=3 walk-visits=3 all-legal=True all-steps-8=True walk==census: True
+   n=5: levels=6 walk-visits=6 all-legal=True all-steps-8=True walk==census: True
+   n=6: levels=9 walk-visits=9 all-legal=True all-steps-8=True walk==census: True
+   n=7: levels=15 walk-visits=15 all-legal=True all-steps-8=True walk==census: True
+   n=8: levels=21 walk-visits=21 all-legal=True all-steps-8=True walk==census: True
+   n=9: levels=31 walk-visits=31 all-legal=True all-steps-8=True walk==census: True
+
+(B) THE VANDERMONDE TRUNCATION LAW:
+   polyhedral row sums (2^n): [1, 2, 4, 8, 16, 32, 64, 128, 256]
+   polygonal  row sums      : [1, 2, 4, 8, 16, 31, 57, 99, 163, 256]
+   A000127                  : 1 2 4 8 16 31 57 99 163 256
+   polyhedral skip sums (Fib): [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+   polygonal  skip sums      : [1, 1, 2, 3, 5, 8, 13, 21, 33, 51, 76, 111, 157, 218]
+   owner's sequence          : 1 1 2 3 5 8 13 21 33 51 76 111 157 218
+
+   diagonal differences Delta(i,j) = pas - pol, and the Pascal law:
+   i=3: diffs=[0, 1, 3, 6, 10, 15, 21]  law-match=True
+   i=4: diffs=[0, 4, 13, 28, 50, 80, 119]  law-match=True
+   i=5: diffs=[0, 10, 35, 81, 155, 265, 420]  law-match=True
+   i=6: diffs=[0, 20, 75, 186, 381, 696, 1176]  law-match=True
+   i=7: diffs=[0, 35, 140, 371, 812, 1583, 2849]  law-match=True
+   i=4 closed form (j-1)(j-2)(j+9)/6: True ([4, 13, 28, 50, 80])
+
+   polygonal skip sum in truncated-diagonal-binomial form:
+      n= 0: skip=   1 direct-form=   1 F(n+1)=   1
+      n= 1: skip=   1 direct-form=   1 F(n+1)=   1
+      n= 2: skip=   2 direct-form=   2 F(n+1)=   2
+      n= 3: skip=   3 direct-form=   3 F(n+1)=   3
+      n= 4: skip=   5 direct-form=   5 F(n+1)=   5
+      n= 5: skip=   8 direct-form=   8 F(n+1)=   8
+      n= 6: skip=  13 direct-form=  13 F(n+1)=  13
+      n= 7: skip=  21 direct-form=  21 F(n+1)=  21
+      n= 8: skip=  33 direct-form=  33 F(n+1)=  34
+      n= 9: skip=  51 direct-form=  51 F(n+1)=  55
+      n=10: skip=  76 direct-form=  76 F(n+1)=  89
+      n=11: skip= 111 direct-form= 111 F(n+1)= 144
+      n=12: skip= 157 direct-form= 157 F(n+1)= 233
+      n=13: skip= 218 direct-form= 218 F(n+1)= 377

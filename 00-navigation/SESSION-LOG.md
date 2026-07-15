@@ -3,6 +3,42 @@
 Prompt (owner): prove locker parity via divisor pairing; prove no-holes via the F3 exchange walk; polygonal vs polyhedral diagonals.
 
 Details in THM-854 and HYP-6940; referee script noholes_locker_polygonal_kps_S128c21.py/.out (lemma exhaustive n=4..6; tables 14 terms / 5 diagonals; spectra n=5..9).
+## opus-2026-07-15-S317 -- THM-865 THE LEVEL COMPLETENESS THEOREM PROVED (leftmost-tie-split walk: F3 zero-margin gives +8 exactly; leftmost tie always Landau-legal -- tight prefix contradicts Landau at i+1; walk == census 7/7, n = 3..9) + THE VANDERMONDE TRUNCATION LAW (polygonal = the k <= 1 Vandermonde truncation of polyhedral; diagonal differences = the k >= 2 tail with PASCAL'S OWN ROWS as coefficients; row sums = A000127 = Moser; skip sums = 1,1,2,3,5,8,13,21,33,... = the exact Fibonacci analogue of Moser, as the owner predicted) (HYP-6940)
+
+Prompts (owner): prove the no-holes completeness via the F3 exchange walk; generalize
+triangulars along both axes (polygonal/polyhedral); the two triangles' sums (A000127;
+the Fibonacci-analog skip sequence); find the diagonal-difference patterns (1,3,6,10,15;
+4,13,28,50,80; deeper); understand the fundamental objects.
+
+THM-865 (one-paragraph proof + referee 7/7): tie-split = F3 zero-margin = +8 exactly;
+ties at 0/n-1 impossible (mutual arc); LEFTMOST tie always legal: tightness of its
+prefix forces bottom-i = {0..i-1} and s_{i+1} = i-1, violating Landau at i+1; no tie
+iff transitive. The walk from the floor visits EVERY level (walk == census, n = 3..9;
+all steps +8). The level lattice is obstruction-free; the mod-16 story is entirely
+THM-790's flip-layer selection rule. x is Schur-convex; the walk is a maximal
+majorization chain with constant increment.
+
+THE VANDERMONDE TRUNCATION LAW (all exact): P_{j+1}(i) = i + (j-1)C(i,2) = the k <= 1
+layers of C(i+j-1,j) = Sum_k C(i,k+1)C(j-1,k). Diagonal differences = the k >= 2 tail:
+i=3: C(j-1,2) (triangulars ✓ owner); i=4: C(j-1,3)+4C(j-1,2) = (j-1)(j-2)(j+9)/6 =
+4,13,28,50,80 ✓; i=5: 10,35,81,155,265 = 10,5,1-weighted ✓; THE COEFFICIENT ROW OF THE
+i-TH DIAGONAL IS PASCAL'S ROW C(i,3),...,C(i,i): the difference triangle is self-similar
+Pascal, two layers deep. Row sums: polygonal = A000127 EXACT (Moser = truncated 2^n);
+skip sums = 1,1,2,3,5,8,13,21,33,51,76,111,157,218 EXACT = entry-wise truncated
+Fibonacci diagonal -- the exact Moser-analogue the owner predicted; the deviations
+(1,4,13,33,76,159 from n=8) are tail-sums of the same shape: the cascade recurses.
+META: the repo's recurring grammar = finite-depth truncation shadows with Pascal-
+structured discrepancies (Farey-14/golden at depth 13; the OCF 2-adic tower; now
+polygonal/polyhedral at Vandermonde depth 1).
+
+(Network was down mid-session; local commits; pushed on restore.)
+
+NEXT (named): the deviations sequence 1,4,13,33,76,159 as its own truncation object
+(depth-2 shadow); THM-865's walk as a metagraph tool (level-indexed class enumeration
+via majorization chains); the SAT census pilot stands; the Z-conjugated walk stands.
+
+FILES: THM-865; the-vandermonde-truncation-law reflection; HYP-6940; 1 result file.
+opus; S317.
 
 ---
 ## kind-pasteur-2026-07-15-S128 (cont.20) -- THM-853: SEQUENCE ATLAS TO CANON (six terms n=5..10) + DEEP-WELL CORRIDOR LAW PROVED (m({1..12};lam) = (2H_12/13)(1-13lam) on [1/14,1/13]; covering-min margin 2H_12/2379 exact) + THE LOCKER TOURNAMENT D_n (divisibility as edges; H = 5,9,33,109,469, H = 1 mod 4 five-for-five OUTSIDE the stratum -- divisor-pairing conjecture) + creative bundle (3-triangular = 3 staircase corners; XOR-SAT engine note; Smith chart/Moebius/Stern-Brocot)
