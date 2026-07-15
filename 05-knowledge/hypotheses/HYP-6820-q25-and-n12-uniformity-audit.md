@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart reduced to two joint finite boxes with its complete height-at-most-two slice loose, scale-one Hamming six recursively finite, seven the first discrepancy-unbounded scale-one radius, and the arbitrary-scale five-deck interface reduced to a least-order pivot plus a bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact adaptive max-speed-cell/component selector, a pair-indexed uniform atomic-stalk factorization, an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`, and a sharp linear-satellite method limit; THM-829 gives related contragredient arithmetic-owner transport but is not yet joined to metric endpoint owners; branch emptiness remains OPEN in the Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, all-scale descent, uniform violation or transport of the exact radius/sum-arc selectors, other odd ratios, the deep dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart reduced to two joint finite boxes with its complete height-at-most-two slice loose, scale-one Hamming six recursively finite, seven the first discrepancy-unbounded scale-one radius, and the arbitrary-scale five-deck interface reduced to a least-order pivot plus a bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact adaptive max-speed-cell/component selector, a pair-indexed uniform atomic-stalk factorization, an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`, a sharp classification of the sixteen reduced folds admitting the primitive no-switch quotient, and a sharp linear-satellite method limit; THM-829 gives related contragredient arithmetic-owner transport but is not yet joined to metric endpoint owners; branch emptiness remains OPEN in the Hamming-five boxes, the finite Hamming-six recursion, unbounded common-sheet and survivor-strictness problems, all-scale descent, uniform violation or transport of the viable radius/sum-arc selectors, ternary switch-aware treatment of the other odd ratios, the deep dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -40,6 +40,7 @@ depends_on:
   - THM-822
   - THM-823
   - THM-824
+  - THM-831
   - HYP-6750
   - HYP-6775
 related:
@@ -779,12 +780,23 @@ The next all-pair object is therefore the target-component symmetric-switch
 hypergraph together with its deck and metric sidecars, not a bare runner
 tournament.
 
-THM-831 reserves the first systematic extension test: the sixteen coprime
-opposite-parity pairs with `4<=alpha<=9` in the half-frequency folded
-coordinates. Its preliminary two-ball and separation observations are not a
-result. Exact component formulae, endpoint-complete no-switch proof, the sharp
-`alpha=10` boundary, common-dilate corollary, replay, and Tournament Analysis
-remain mandatory before this stub can affect HYP-6820.
+THM-831 now makes the “other odd ratios” clause exact.  For coprime
+opposite-parity reduced half-frequencies `alpha>beta`, every folded target is
+a disjoint union of explicit Bezout-offset balls.  The primitive symmetric
+no-switch radius factorization holds if and only if
+
+```text
+4<=alpha<=9.                                               (C5)
+```
+
+These are sixteen antipodal two-ball types.  At `alpha=10`, the new offsets
+`q=1,3` already support a switched symmetric component triple; the same
+weighted three-hyperedge obstruction persists for every `alpha>=10`.  A
+common gcd creates a raw deck switch, although multiplication by the gcd
+preserves the quotient-scaled form of the radius theorem.  Thus the missing
+deep theorem is arithmetic exclusion on the sixteen viable quotient targets,
+plus a ternary centre-switch/satellite argument elsewhere—not a search for
+further equal-radius folds.
 
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
@@ -837,9 +849,12 @@ The uniform theorem now has two explicit residuals:
    THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
    factors through the exact intrinsic radius budget
    `rho_(C,d)(E)+rho_d(R)<=2/169`.  Prove that every admissible core
-   violates that budget, extend the no-switch geometry to other odd ratios,
-   or prove a height-independent contradiction/decreasing invariant on the
-   individual exact signed sum arcs with owner ancestry;
+   violates that budget.  THM-831 has classified every other fold: repeat the
+   arithmetic exclusion on the other fifteen primitive rows in (C5), and for
+   `alpha>=10` retain the weighted ordered centre-switch three-hypergraph
+   rather than a nonexistent radius quotient.  Alternatively prove a
+   height-independent contradiction/decreasing invariant on the individual
+   exact signed sum arcs with owner ancestry;
    the `U_*` row shows that all short gates and both global maximizers can pass
    while a nonmaximal component escapes, and THM-817's linear-satellite family
    rules out a connectedness shortcut.  At higher sheets, classify and rule
@@ -913,7 +928,10 @@ deciding objects are therefore:
   prove that neither factor nor its coarse shadows can be ranked separately.
   THM-824 proves that after assembling the symmetric full return union, the
   same fixed-ratio conjunction factors through two extremal radii, while
-  individual satellites and dynamic owner transport do not;
+  while individual satellites and dynamic owner transport do not; THM-831
+  proves that this primitive no-switch quotient exists exactly on sixteen
+  reduced half-frequency types and replaces component tournaments outside
+  them by the weighted ordered centre-switch three-hypergraph;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed

@@ -173,7 +173,11 @@ obligations, and proof-carrier interfaces.
   9,974-atom fibre table—not the ranking—locates the mixed projections.
   THM-824's two target cells have no cross-switch edge; its tie-completed
   tournament is trivially transitive, while the no-switch inequality plus the
-  exact radii—not that orientation—prove the scalar factorization.
+  exact radii—not that orientation—prove the scalar factorization. THM-831
+  replaces this binary shadow by the ordered centre-switch weight
+  `omega(i|j,k)=||2c_i-c_j-c_k||-(2h_i+h_j+h_k)`. The sixteen primitive
+  `4<=alpha<=9` rows have positive nonconstant weights; the fixed labelled
+  triple `(-1|-3,+1)` has nonpositive weight for every `alpha>=10`.
 - **Next pull:** Exhaust THM-820's two scale-one Hamming-five boxes and the
   finite Hamming-six tree, then derive the arbitrary-scale oriented-deck
   classification. At seven remaining scale-one combs, replace mean danger
@@ -184,19 +188,22 @@ obligations, and proof-carrier interfaces.
   do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)` under all
   current arithmetic/scalar gates. At fixed ratio `(13d,5d)`, instead prove
   THM-824's intrinsic radius inequality fails, equivalently that its signed slack is
-  negative. For other pairs, classify the
-  target-component symmetric-switch carrier before proposing another scalar.
-  THM-831 reserves the sixteen-pair `4<=alpha<=9` two-ball audit for this
-  purpose, but remains a non-usable proof/replay stub; its declared tournament
-  and no-switch fingerprints must be frozen before promotion.
+  negative. THM-831 has now classified every other primitive fold: repeat the
+  arithmetic exclusion on the other fifteen viable `4<=alpha<=9` rows, and
+  retain the weighted ordered three-hypergraph outside that range. The
+  challenged vertex assumption matters here: runners and target components
+  both lose the balanced `t,t+z,t-z` obligation, whereas ordered component
+  triples preserve it. A binary tournament may remain telemetry, but cannot
+  carry the sharp switch obstruction.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821, THM-824, THM-831 (reserved only),
+  THM-821, THM-824, THM-831,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
   `lrc13_return_satellites_cell_classifier_codex_S10.py`, and
   `lrc14_signed_cell_stalk_purity_codex_S10.py`, and
-  `lrc14_fixed_pair_symmetric_radius_budget_codex_S10.py`.
+  `lrc14_fixed_pair_symmetric_radius_budget_codex_S10.py`, and
+  `lrc13_small_half_frequency_two_ball_radius_budget_codex_S10.py`.
 
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 

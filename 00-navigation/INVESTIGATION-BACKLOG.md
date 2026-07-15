@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/829;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/829/831;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -196,6 +196,14 @@
   necessary reflection conjugacy.  Use it as a candidate arithmetic transport
   sidecar, but first prove a fibre-product identification with the metric
   cell-endpoint owners; THM-829 itself does not preserve LRC continuation.
+  THM-831 closes the geometric generalization question.  Every primitive
+  folded target has explicit Bezout-offset component balls, but the symmetric
+  no-switch radius quotient exists exactly for reduced half-frequency
+  `4<=alpha<=9` (sixteen rows).  The `q=(-1|-3,+1)` weighted centre-switch
+  hyperedge is nonpositive for every `alpha>=10`.  Common gcd creates raw deck
+  switches; use only the proved quotient-scaled radius.  The next object is an
+  ordered three-hypergraph of component centres/radii, not a component
+  tournament.
 - **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
   the arbitrary-scale radius-five descent.  The collar classification is no
   longer the missing step: spanning five-cycles have five feasible band types,
@@ -263,17 +271,13 @@
   sum arcs with owner ancestry. On the common `(13d,5d)` ratio, first try to
   prove that every admissible arithmetic core violates THM-824's intrinsic
   centre-radius budget (including its centre-cell identity, not the unguarded
-  phase norm); in parallel determine which
-  other odd exception ratios have a separated equal-radius target and hence
-  the same no-switch factorization.  A proof only for the global symmetric
-  union must still be joined to the nonsymmetric satellite obligations.
-  THM-831 reserves the finite small-half-frequency audit `4<=alpha<=9` as one
-  implementation of this switch classification. It is a proof/replay stub:
-  regenerate its sixteen preliminary rows, prove every endpoint case and the
-  `alpha=10` boundary, and add tournament fingerprints before using it.
-  THM-816 has already removed the quartic `s=3` equality shell; the remaining
-  higher-sheet work is outside that special four-exception coset and still
-  lives on loose-set
+  phase norm). THM-831 has already classified the extension: run the same
+  arithmetic test on the other fifteen primitive `4<=alpha<=9` folds, and
+  retain the weighted ternary switch obstruction rather than a scalar radius
+  outside that range. A proof only for the global symmetric union must still
+  be joined to the nonsymmetric satellite obligations. THM-816 has already
+  removed the quartic `s=3` equality shell; the remaining higher-sheet work is
+  outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
