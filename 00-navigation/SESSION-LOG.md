@@ -1,4 +1,3 @@
-## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive H6 closed except `2[12]`; fourteen primitive-core H6 rows closed; shell template, H-drift, toothpick, and Fano carriers decided
 ## codex-2026-07-15-S15 -- typed metagraph preservation: node-coloured defect closure, Walsh H drift, path holonomy, chi7 carry-Radon algebra, and the tropical Hunter defect graph
 
 Prompt (owner): take the 14-runner/metagraph mathematics further; preserve
