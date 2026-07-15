@@ -1,0 +1,16 @@
+THM-784 exact verification
+slow=(1, 2, 3, 4, 5, 8, 10)
+J=(5/16,7/20) length=3/80
+rounds=(0, 1, 1, 1, 2, 3, 3)
+tokens=(0, 3, 2, 5, 1, 4, 6) rainbow=True
+slow_walls_in_J=0
+N=1 fast=561 fast_mod_7=1 walls_in_J=21
+N=2 fast=1121 fast_mod_7=1 walls_in_J=42
+N=5 fast=2801 fast_mod_7=1 walls_in_J=105
+N=20 fast=11201 fast_mod_7=1 walls_in_J=420
+formula: m=175N,...,196N-1; count=21N
+runner_tournament: vertices=8 scores=(0, 1, 2, 3, 4, 5, 6, 7) cycles=0 sccs=8 hp_count=1 edge_flips=0
+event_tournament_N=1: vertices=21 scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20) cycles=0 sccs=21 hp_count=1 edge_flips=0
+event_tournament_N=20: vertices=420 scores=(0,1,...,419) cycles=0 sccs=420 hp_count=1 edge_flips=0
+information_destroyed_by_bare_tournament=owner-labelled_token_fibre+metric_mesh
+PASS
