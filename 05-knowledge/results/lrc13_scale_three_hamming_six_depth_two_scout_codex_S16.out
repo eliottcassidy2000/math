@@ -1,0 +1,50 @@
+SCALE_THREE_HAMMING_SIX_DEPTH_TWO_EXACT_CENSUS
+arithmetic=integer+rational floating_point=none height_cutoff=none depth_limit=2
+contexts=1504 by_type={2,4:336, 1,5:672, 0,6:496}
+nodes_depth0..2=1504,146912,14992263
+candidate_edges=15139175
+edge_orders first_D1=20640 first_D3=126272 second_D1=2216176 second_D3=12776087
+dead_depth0..2=0,0,1 streaming_cap_depth2=1 full_safe_tooth_depth0..2=0,0,0
+covers_depth1=0 covers_depth2=0 frontier_live=14992262
+unique_dead_prefix context=1448 R=4,6,7,8,9,12 orders=3,3,3,3,3,1 units=2,1,1,1,2,0 insertions=9:14,4:38
+unique_dead_certificate longest_component=(183/494,56/143) length=115/5434 four_comb_cap=63 least_future=70 remaining=6:70,7:73,8:76,12:75
+component_depth=0 min_longest=1/117 multiplicity=8 max_next_cap=1188
+component_depth=1 min_longest=11/15431 multiplicity=4 max_next_cap=3956
+component_depth=2 min_longest=11/51389 multiplicity=2 max_next_cap=6324
+stratum=2,4 contexts=336 depth1=32708 depth2=3408353 dead2=0 live2=3408353 per_context_depth1=53..161 per_context_depth2=3011..26093
+stratum=1,5 contexts=672 depth1=64596 depth2=6469464 dead2=1 live2=6469463 per_context_depth1=66..152 per_context_depth2=4530..22800
+stratum=0,6 contexts=496 depth1=49608 depth2=5114446 dead2=0 live2=5114446 per_context_depth1=68..183 per_context_depth2=4600..33133
+geometry_cache depth1_logical=146912 unique_R_x1=22262 multiplicity_hist=2:2454,4:8753,6:6479,12:2375,18:2201
+proof_languages depth1=146912 collisions=0 geometry_cache_is_not_a_proof_state_quotient
+SIGNED_PROVIDER_GRAPH_ANALYSIS
+vertices=order_three_labels relation=provider_to_owner_at_ratio_4|5|8|9 signed_by_ratio
+edge_count_hist=8:336,10:672,12:304,14:192
+sign_split_hist=(4, 4):336,(5, 5):672,(6, 6):304,(7, 7):192
+directed_triangle_hist=0:1296,4:192,8:16
+SCC_profile_hist=4:336,4,1:672,4,1,1:96,4,2:192,6:208
+Hamiltonian_path_count_hist=0:96,4:672,8:720,24:16
+relation_type=sparse_signed_not_tournament sheet_predicate_preserved=1 metric_predicate_preserved=0
+RAY_TOURNAMENT_ANALYSIS
+vertices=labelled_future_rays pair_observable=least_legal_speed_difference switch=sign gauge=numerical_order
+root_tournaments=1504 score_hist_per_root=0:1,1:1,2:1,3:1,4:1,5:1 directed_triangles=0 SCCs=1:6 Hamiltonian_paths=1 ties=0
+conditioned_tournaments=146912 score_hist_per_prefix=0:1,1:1,2:1,3:1,4:1 directed_triangles=0 SCCs=1:5 Hamiltonian_paths=1 ties=0 edge_flips=552554 flip_hist=0:26541,1:5584,2:7497,3:13104,4:38196,5:10478,6:34052,7:8502,8:2958
+tie_Hamiltonian_path=increasing_label_after_equal_speed;_unused_because_CRT_residues_are_distinct
+ASSUMPTION_AUDIT
+challenged_vertices=runners->missing_labels->signed_sheet_providers->labelled_ray_states->prefix_obligations
+faithful_state=literal_components+remaining_labelled_step39_rays+last_speed+shortcut_ancestry
+cache_preserves=literal_component_geometry destroys=remaining_ray_language_and_metric_continuation
+row_payload_sha256=19b6806acb4fd6c00c914690b20322594013ef82799b53c9d42d26710ac80b3f
+geometry1_payload_sha256=466f63905e19a2288545697480b98f237c5bb577db49c0f3f14adae1622e7c11
+language_payload_sha256=916008f85570e4a1a3a17c6915b69cc1f18b65c76102a0d7c06f3344d57a5feb
+shards=8
+shard range=0:188 sha256=7b1632a378591aeb1ece6bf4a878e6d13648335151faa4eca709c018e331e4da
+shard range=188:376 sha256=f8838411ef21f34012090cd9fb081e23dade7b7a6b7b9187eaf79a716a5be3d0
+shard range=376:564 sha256=51e7a69f90624b8b017fa6d51d35a3abf96683740a027aec4e35d3839b7225de
+shard range=564:752 sha256=966a6683efa8cced056dc999900d0997bf9a19f0c9665242d59d77e5109bc938
+shard range=752:940 sha256=b3cc001ab6023846d51237a7488b2ba1b4c2f0c5353b93fae3f41afcb9473cdd
+shard range=940:1128 sha256=2d21226b29dcd137e7f95e424d74b31ba6b1c9c2681aa30ac6e9834ac49ae247
+shard range=1128:1316 sha256=86a69491b0cbe7244247d722229ffdf2f7882b858eb00bf9680b4c960df99a15
+shard range=1316:1504 sha256=c15419e91f4cfcf69b6c77d2614943566e692a457134beb46a2d43f42a0d5877
+primary_source_sha256=4c6144e14d12a4badf734d26844a26980dadd29f5553e1c7927bb23a74d66ca9
+combiner_source_sha256=a946796336fb798f2e02e841a9839a6bd0ab2a33077ab352dc58ce2b98473edd
+verdict=exact_depth_two_census_complete_deeper_metric_bank_open

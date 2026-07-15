@@ -1,7 +1,7 @@
 ---
 id: THM-862
 title: Scale-three Hamming-six common-sheet classification and exact metric plan
-status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification, 146,912 cap-admissible first metric edges, and 22,262 distinct first-child geometries; the unbounded metric bank remains open
+status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification; its exact metric prefix has 146,912 first edges and 14,992,263 second edges, of which exactly one dies at depth two, while 22,262 and 4,307,561 literal geometries cache those layers; the unbounded metric bank remains open
 source: codex-2026-07-15-S15/S16 c=3 transport audit
 depends_on: [THM-810, THM-815, THM-823, THM-857, THM-859, THM-860, THM-861]
 related: [THM-844, THM-847, THM-858, HYP-6820]
@@ -10,6 +10,11 @@ verification:
   - 05-knowledge/results/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.out
   - 04-computation/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.py
   - 05-knowledge/results/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.out
+  - 04-computation/lrc13_scale_three_hamming_six_depth_two_scout_codex_S16.cpp
+  - 04-computation/lrc13_scale_three_hamming_six_depth_two_combine_codex_S16.py
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_scout_codex_S16.out
+  - 04-computation/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.py
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.out
 ---
 
 # THM-862 — the scale-three sheet stalk is classified
@@ -389,6 +394,90 @@ It is the priority-queue clock for the numerical recursion, not a cover
 carrier.  It forgets the base values, the literal components, and the five
 future languages, so equal clocks cannot be merged.
 
+### G. Exact depth-two metric census
+
+The complete sharded depth-two scout has now replaced the workload estimate
+in (19) by an exact census.  Across all `1,504` arithmetic contexts,
+
+```text
+depth-zero contexts                         1,504
+cap-admissible first edges                146,912
+cap-admissible second edges            14,992,263.       (20g)
+```
+
+The second layer splits by sheet stratum and effective order as follows:
+
+| stratum | depth-two nodes | `D1->D1` | `D1->D3` | `D3->D1` | `D3->D3` |
+|---|---:|---:|---:|---:|---:|
+| `1^2 3^4` | 3,408,353 | 225,672 | 901,620 | 911,740 | 1,369,321 |
+| `1 3^5` | 6,469,464 | 0 | 1,069,716 | 1,078,764 | 4,320,984 |
+| `3^6` | 5,114,446 | 0 | 0 | 0 | 5,114,446 |
+| **total** | **14,992,263** | **225,672** | **1,971,336** | **1,990,504** | **10,804,751** |
+
+Equivalently the second insertion has order-one/order-three totals
+
+```text
+2,216,176 + 12,776,087 = 14,992,263.                     (20h)
+```
+
+No root or first-edge lane is dead, and no prefix through depth two covers.
+Exactly one depth-two prefix has no cap-admissible third insertion.  In
+context `1448`,
+
+```text
+R=(4,6,7,8,9,12),
+D=(3,3,3,3,3,1),              e=(2,1,1,1,2,0),
+(label,speed) insertions=(9,14),(4,38).                   (20i)
+```
+
+Its longest child component is
+
+```text
+(183/494,56/143),       length=115/5434.
+```
+
+With four combs remaining, (17) gives cap `63`, while the four least legal
+future speeds are `70,73,76,75`.  Thus this lane is rigorously dead.  Every
+other one of the `14,992,262` depth-two lanes reaches the depth-three
+frontier.  The depth-two longest-component minimum is `11/51389`, with
+multiplicity two, and the largest next cap is `6,324`.
+
+Literal geometry still gives a cache, not a state quotient.  Grouping by
+
+```text
+G_2=(R,x_1,x_2)                                          (20j)
+```
+
+reduces the second layer to exactly `4,307,561` geometric children, with
+fibre multiplicities
+
+```text
+{1:212990, 2:2123879, 3:535281, 4:337242,
+ 6:892407, 9:164606, 18:41156}.                           (20k)
+```
+
+The cache factor is `14992263/4307561`, about `3.48`.  Distinct lanes in a
+fibre still carry different unused labelled step-39 rays and cannot be merged
+for continuation.  The numerical-order tournaments remain transitive at all
+`146,912` first prefixes, but conditioning flips `552,554` pair orientations;
+this is scheduling telemetry, not cover data.
+
+The primary C++ engine reconstructs all contexts independently from literal
+CRT masks, materializes every depth-two child exactly, and hash-combines eight
+canonical context shards.  A separate one-core Python implementation builds
+the `110` roots as complements of merged closed danger combs, reconstructs
+all `22,262` first children, and obtains (20g)--(20k) without using the C++
+interval engine.  It also independently rebuilds the unique dead geometry
+and its cap certificate.  The exact count is only `56,862` below the estimate
+in (19), a relative error under `0.38%`.
+
+This near-total survival is a negative computational result with a positive
+design consequence.  A blind full logical recursion is still predicted near
+one billion nodes.  The next run should first batch literal third-child
+geometry, retain all arithmetic lanes over that cache, and benchmark the
+complete-tooth and streaming-cap collapse at depth three.  Nothing in this
+part proves terminal looseness.
+
 ## Proof
 
 ### 1. Derivation of the signed-provider law
@@ -614,10 +703,11 @@ whether their full continuous combs cover the circle.
 
 This theorem proves the complete primitive `c=3` **common-sheet**
 classification, the affine unit codes, the exact sheet orbit bank, and the
-first metric layer, including its exact geometry-cache fibres and Walsh
-projectors.  It does not compute a depth-two component census, prove that any
-of the `1,504` languages is strictly loose, count covering terminals, close
-`c>=4`, or prove global `n=12` sporadic-branch emptiness.
+first two metric layers, including their exact geometry-cache fibres and the
+first-layer Walsh projectors.  It does not compute the full depth-three
+census or terminal recursion, prove that any of the `1,504` languages is
+strictly loose, count covering terminals, close `c>=4`, or prove global
+`n=12` sporadic-branch emptiness.
 
 Reproduce the frozen output with
 
@@ -643,6 +733,26 @@ python3 -O \
   04-computation/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.py \
   | cmp - \
   05-knowledge/results/lrc13_scale_three_hamming_six_geometry_cache_walsh_codex_S16.out
+
+clang++ -std=c++20 -O3 -Wall -Wextra -pedantic \
+  04-computation/lrc13_scale_three_hamming_six_depth_two_scout_codex_S16.cpp \
+  -o /tmp/thm862-depth2
+for shard in 0 1 2 3 4 5 6 7; do
+  /tmp/thm862-depth2 --context-start $((188*shard)) --context-limit 188 \
+    > /tmp/thm862-depth2-$shard.out
+done
+python3 \
+  04-computation/lrc13_scale_three_hamming_six_depth_two_combine_codex_S16.py \
+  /tmp/thm862-depth2-{0,1,2,3,4,5,6,7}.out \
+  > /tmp/thm862-depth2.out
+cmp /tmp/thm862-depth2.out \
+  05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_scout_codex_S16.out
+
+python3 \
+  04-computation/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.py \
+  > /tmp/thm862-depth2-crosscheck.out
+cmp /tmp/thm862-depth2-crosscheck.out \
+  05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.out
 ```
 
 Frozen SHA-256 values are
@@ -653,4 +763,11 @@ output  c8413de89655592b5009aad83596330750d9b5ca9cb407af692fd06f5e353ba8
 
 cache source  ee7813878c7e589a30c32657c93c4d5ce106470ceaa6c125b5f09f7290797ec7
 cache output  69632620030da8ec7f2d2584f37b9f450e1a3da28b6186ec48971f9b2032d72c
+
+depth-two source    4c6144e14d12a4badf734d26844a26980dadd29f5553e1c7927bb23a74d66ca9
+depth-two combiner  a946796336fb798f2e02e841a9839a6bd0ab2a33077ab352dc58ce2b98473edd
+depth-two output    04b34203c3dd47d6d836523e74bb5671105cfbfd0617b948bc7b7273f4795c87
+
+independent source  8cee05a32b863c369fff2f0f09fcb0f247648778fac27c6ea8eb3500cf272fa6
+independent output  935cf7b809e178378230329ccdf1ffe027b20f7243105865fe9bc174aad0a58b
 ```

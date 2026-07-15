@@ -298,7 +298,12 @@ obligations, and proof-carrier interfaces.
   yet one orbit contains packets with `M=1/4,7/26,14/65`.  Hence even the
   labelled signed graph plus affine code is only a sheet carrier.  Metric
   recursion must retain all 1,504 arithmetic lanes, literal components,
-  step-39 rays, last speed, and shortcut ancestry.
+  step-39 rays, last speed, and shortcut ancestry.  The exact depth-two
+  census reinforces the point: `146,912` conditioned numerical-order
+  tournaments flip `552,554` pair orientations yet remain transitive, while
+  `14,992,263` second edges have only one cap-dead lane.  Their literal
+  geometry caches to `4,307,561` keys, but the tournament clock and geometry
+  key both forget the unused labelled rays that control continuation.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies

@@ -1,0 +1,25 @@
+SCALE_THREE_HAMMING_SIX_DEPTH_TWO_GEOMETRY_CACHE_CROSSCHECK
+arithmetic=integer+rational workers=1 height_sampling=none height_cutoff=none
+roots=110 first_logical=146912 first_geometries=22262 rebuild_samples=66
+root_component_histogram={36: 3, 42: 28, 48: 52, 54: 16, 60: 6, 66: 4, 72: 1}
+depth1_longest_range=11/15431..1/36 real_cap_range=1320/13..11870/3 floor_cap_range=101..3956
+depth1_min_longest=11/15431 geometric_multiplicity=1 logical_lane_multiplicity=4
+depth1_component_histogram={30: 1, 32: 5, 34: 12, 36: 29, 38: 54, 40: 62, 42: 141, 44: 128, 46: 134, 48: 200, 50: 170, 52: 140, 54: 199, 56: 171, 58: 189, 60: 227, 62: 193, 64: 160, 66: 258, 68: 183, 70: 182, 72: 263, 74: 163, 76: 192, 78: 270, 80: 174, 82: 158, 84: 239, 86: 165, 88: 168, 90: 269, 92: 158, 94: 174, 96: 236, 98: 173, 100: 172, 102: 265, 104: 187, 106: 176, 108: 251, 110: 161, 112: 206, 114: 236, 116: 158, 118: 182, 120: 230, 122: 184, 124: 167, 126: 251, 128: 180, 130: 172, 132: 265, 134: 167, 136: 183, 138: 225, 140: 168, 142: 197, 144: 264, 146: 178, 148: 166, 150: 242, 152: 148, 154: 185, 156: 260, 158: 182, 160: 168, 162: 245, 164: 198, 166: 172, 168: 224, 170: 175, 172: 165, 174: 266, 176: 156, 178: 189, 180: 246, 182: 152, 184: 194, 186: 245, 188: 171, 190: 173, 192: 240, 194: 176, 196: 176, 198: 262, 200: 134, 202: 165, 204: 225, 206: 178, 208: 158, 210: 238, 212: 178, 214: 145, 216: 215, 218: 157, 220: 157, 222: 225, 224: 142, 226: 131, 228: 206, 230: 119, 232: 130, 234: 212, 236: 130, 238: 135, 240: 167, 242: 125, 244: 116, 246: 147, 248: 116, 250: 117, 252: 139, 254: 81, 256: 96, 258: 133, 260: 84, 262: 80, 264: 112, 266: 56, 268: 86, 270: 101, 272: 72, 274: 63, 276: 75, 278: 52, 280: 53, 282: 70, 284: 53, 286: 42, 288: 61, 290: 35, 292: 33, 294: 55, 296: 39, 298: 37, 300: 36, 302: 28, 304: 26, 306: 38, 308: 34, 310: 29, 312: 39, 314: 23, 316: 18, 318: 27, 320: 24, 322: 30, 324: 36, 326: 17, 328: 13, 330: 26, 332: 11, 334: 15, 336: 28, 338: 21, 340: 15, 342: 21, 344: 11, 346: 10, 348: 17, 350: 11, 352: 6, 354: 9, 356: 3, 358: 8, 360: 11, 362: 7, 364: 4, 366: 6, 368: 3, 370: 7, 372: 6, 374: 4, 376: 3, 378: 3, 380: 4, 382: 2, 384: 5, 386: 1, 388: 3, 390: 5, 392: 5, 394: 4, 396: 2, 398: 1, 400: 2, 402: 2, 404: 7, 406: 1, 408: 3, 410: 2, 412: 1, 414: 4, 416: 1, 418: 3, 422: 3}
+depth2_logical_nodes=14992263 by_type={(0, 6): 5114446, (1, 5): 6469464, (2, 4): 3408353}
+depth2_transition type=(0, 6) D3->D3 nodes=5114446
+depth2_transition type=(1, 5) D1->D3 nodes=1069716
+depth2_transition type=(1, 5) D3->D1 nodes=1078764
+depth2_transition type=(1, 5) D3->D3 nodes=4320984
+depth2_transition type=(2, 4) D1->D1 nodes=225672
+depth2_transition type=(2, 4) D1->D3 nodes=901620
+depth2_transition type=(2, 4) D3->D1 nodes=911740
+depth2_transition type=(2, 4) D3->D3 nodes=1369321
+depth1_dead_no_depth2=0 by_type={}
+depth1_dead_by_first_order={}
+depth2_geometric_children=4307561 multiplicities={1: 212990, 2: 2123879, 3: 535281, 4: 337242, 6: 892407, 9: 164606, 18: 41156}
+geometry_payload_sha256=acebdeb61d6971b83282f6cc5113e13a5fd7d084d2ce79b9e73abf8953689097
+primary_dead_rebuild context=1448 R=4,6,7,8,9,12 orders=3,3,3,3,3,1 units=2,1,1,1,2,0 insertions=14,38
+primary_dead_longest_interval=183/494,56/143 length=115/5434 four_comb_cap=63 least_future=70 remaining=6:3:1:70,7:3:1:73,8:3:1:76,12:1:0:75
+primary_dead_verdict=cap_below_least_future geometry_independently_reconstructed=true uniqueness_owned_by_primary=true
+scope=depth_two_count_only depth_two_components_not_materialized
+source_sha256=8cee05a32b863c369fff2f0f09fcb0f247648778fac27c6ea8eb3500cf272fa6
