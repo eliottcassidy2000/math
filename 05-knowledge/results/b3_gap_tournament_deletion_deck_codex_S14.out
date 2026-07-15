@@ -1,0 +1,62 @@
+THM-830 GAP-TOURNAMENT / DELETION-DECK EXACT AUDIT
+====================================================================
+method: {"alternate_vertices": "radius-one merged node addresses (gap, mirror depth)", "challenged_assumption": "tournament vertices need not be original runners or arcs; path gaps and information carriers work", "destroys": ["multi-flip packet interactions", "general node fibre", "LRC metric loneliness"], "gauges": ["gap first", "mirror depth first"], "pairwise_observable": "lexicographic comparison", "preserves": ["one-flip C3", "one-flip H", "converse sheet", "blue/black packet"], "tie_hamiltonian_path": "the corresponding lexicographic order"}
+
+size ledger
+n= 4 m=  3 h=  2 f= 1 rank(deck F2)= 3 root-nodes=  2 root B/K= 1/  2 checked=8
+n= 5 m=  6 h=  4 f= 2 rank(deck F2)= 5 root-nodes=  4 root B/K= 2/  4 checked=64
+n= 6 m= 10 h=  6 f= 2 rank(deck F2)= 5 root-nodes=  6 root B/K= 2/  8 checked=1024
+n= 7 m= 15 h=  9 f= 3 rank(deck F2)= 7 root-nodes=  9 root B/K= 3/ 12 checked=32768
+n= 8 m= 21 h= 12 f= 3 rank(deck F2)= 7 root-nodes= 12 root B/K= 3/ 18 checked=0
+n= 9 m= 28 h= 16 f= 4 rank(deck F2)= 9 root-nodes= 16 root B/K= 4/ 24 checked=0
+n=10 m= 36 h= 20 f= 4 rank(deck F2)= 9 root-nodes= 20 root B/K= 4/ 32 checked=0
+n=11 m= 45 h= 25 f= 5 rank(deck F2)=11 root-nodes= 25 root B/K= 5/ 40 checked=0
+n=12 m= 55 h= 30 f= 5 rank(deck F2)=11 root-nodes= 30 root B/K= 5/ 50 checked=0
+n=13 m= 66 h= 36 f= 6 rank(deck F2)=13 root-nodes= 36 root B/K= 6/ 60 checked=0
+n=14 m= 78 h= 42 f= 6 rank(deck F2)=13 root-nodes= 42 root B/K= 6/ 72 checked=0
+
+recurrence curvature
+n= 4 m=  3 h=  2 f= 1 Delta2(h)=0
+n= 5 m=  6 h=  4 f= 2 Delta2(h)=1
+n= 6 m= 10 h=  6 f= 2 Delta2(h)=0
+n= 7 m= 15 h=  9 f= 3 Delta2(h)=1
+n= 8 m= 21 h= 12 f= 3 Delta2(h)=0
+n= 9 m= 28 h= 16 f= 4 Delta2(h)=1
+n=10 m= 36 h= 20 f= 4 Delta2(h)=0
+n=11 m= 45 h= 25 f= 5 Delta2(h)=1
+n=12 m= 55 h= 30 f= 5 Delta2(h)=0
+n=13 m= 66 h= 36 f= 6 Delta2(h)=1
+n=14 m= 78 h= 42 f= 6 Delta2(h)=0
+
+anchored c3 sieve (direct - sieve; n=4 must UNDERSHOOT)
+{"4": {"direct_minus_sieve": {"0": 48, "1": 16}, "tournaments": 64}, "5": {"direct_minus_sieve": {"0": 1024}, "tournaments": 1024}}
+
+Tournament Analysis edge flips: gap-first vs depth-first
+n=4:1 n=5:3 n=6:9 n=7:19 n=8:38 n=9:66 n=10:110 n=11:170 n=12:255 n=13:365 n=14:511
+
+n=14 exact ledger
+m: 78
+h: 42
+h_previous: 36
+f: 6
+literal_lines: 151115727451828646838272
+blue_lines: 2199023255552
+black_lines: 151115727449629623582720
+reflection_orbit_lines: 75557863727013835046912
+blue_fraction: 2^-36
+defect_slice_formula: 2^41 * binom(36,d)
+gap C3 H literal blue black merged blackQ
+ 1   1     3      12    0    12      6      6
+ 2   2     5      11    1    10      6      5
+ 3   3     9      10    0    10      5      5
+ 4   4    17       9    1     8      5      4
+ 5   5    33       8    0     8      4      4
+ 6   6    65       7    1     6      4      3
+ 7   7   129       6    0     6      3      3
+ 8   8   257       5    1     4      3      2
+ 9   9   513       4    0     4      2      2
+10  10  1025       3    1     2      2      1
+11  11  2049       2    0     2      1      1
+12  12  4097       1    1     0      1      0
+
+ALL ASSERTIONS PASSED
