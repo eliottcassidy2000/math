@@ -4,7 +4,7 @@ title: The 58 n=9 false-palindrome pairs occupy 53 converse-merged tournament no
 status: PROVED FINITE-EXACT FORWARD/INVERSE-FIBRE MAP + n8 BLACK-FLOW PLACEMENT
 source: codex-2026-07-15-S13b
 depends_on: [THM-810, THM-828, THM-832]
-related: [THM-796, THM-809, THM-833, THM-835, HYP-3809, HYP-6880]
+related: [THM-796, THM-809, THM-833, THM-836, HYP-3809, HYP-6880]
 verification:
   - 04-computation/n9_false_palindrome_node_forward_map_codex_S13b.py
   - 05-knowledge/results/n9_false_palindrome_node_forward_map_codex_S13b.out
@@ -122,7 +122,7 @@ nu(u xor FULL):   54 values, multiplicity {1:51,2:2,3:1}.
 Neither marginal is sufficient.  Their ordered joint coordinate has 58
 values; forgetting which marginal is first still leaves 58 values, and none
 is a loop.  Reflection swaps the literal endpoints coherently and creates no
-failure.  THM-835 further proves that all 58 coupled cells remain distinct
+failure.  THM-836 further proves that all 58 coupled cells remain distinct
 under the centered-CF copy `X_9 -> X_10`.
 
 This does not say that `P` is a global invariant of every metagraph line or
