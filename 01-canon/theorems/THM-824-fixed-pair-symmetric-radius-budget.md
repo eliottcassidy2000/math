@@ -1,7 +1,7 @@
 ---
 id: THM-824
 title: Fixed-ratio folded target and the exact symmetric Minkowski radius budget
-status: PROVED (all-size compact-set factorization and common-dilate corollary) + VERIFIED (exact affine, synthetic-packet, and 214-core replays)
+status: PROVED (all-size compact-set factorization and guarded common-dilate phase corollary) + VERIFIED (exact affine, synthetic-packet, phase-guard, and 214-core replays)
 source: codex-2026-07-15-S10 deep sum-arc continuation
 depends_on:
   - THM-774  # folded-diamond eligibility/colour equivalence
@@ -285,17 +285,25 @@ m_d(E+R)=m_d(E)+m_d(R),                                   (25)
 and the image of `R` remains compact, symmetric, and contains zero.  Apply
 Theorem 3 to the two images.
 
-When (24) holds, every `dt` lies in one of the two cells in (3), and hence
+On the target `H`, and only there, the selected centre is the centre of the
+containing `13`-tooth, so
 
 ```text
 d_C(dt)=||13dt||/13.
 ```
 
-Thus (24) has the exact phase form
+Consequently the exact phase form of (24) is the **two-part** condition
 
 ```text
-max_(t in E)||13dt|| + 13 max_(r in R)||dr|| <=2/13.       (26)
+m_d(E) subset H,                                           (26a)
+max_(t in E)||13dt|| + 13 max_(r in R)||dr|| <=2/13.       (26b)
 ```
+
+Indeed (24) implies (26a) because `0 in R`, and then turns the first radius
+in (24) into the first term of (26b).  Conversely (26a) identifies the
+correct two `13`-teeth, so (26b) is exactly the radius inequality (24).
+The membership conjunct cannot be dropped: `E={0}, R={0}` satisfies (26b)
+with left side zero but is not contained in `H_d`.
 
 If these are the THM-789 deep and return sets for a hypothetical two-sheet
 packet, its individual exception cap gives `13d<=11B`, where `B=max(U)`.
@@ -305,7 +313,8 @@ The closed central return interval then gives
 rho_d(closure(R_U))>=2d/(143B)<1/2.
 ```
 
-Substitution in (26) recovers exactly THM-789's `w=13d` thickness tax
+Under the hypothetical containment, substitution in (26b) recovers exactly
+THM-789's necessary `w=13d` thickness tax
 
 ```text
 max_(t in E_U)||13dt||
@@ -322,26 +331,28 @@ R_U={r:max_(u in U)||ur||<2/143}.                          (27a)
 
 Settled `LRC(<=13)` makes `E_U` nonempty, and `closure(R_U)` is compact,
 symmetric, and contains zero.  Therefore the entire THM-803/821 containment
-is exactly
+is exactly the conjunction
 
 ```text
+E_U subset H,                                              (28a)
 max_(t in E_U)||13t||
- +13 max_(r in closure(R_U))||r|| <=2/13.                  (28)
+ +13 max_(r in closure(R_U))||r|| <=2/13.                  (28b)
 ```
 
 The mandatory central return cell has radius `2/(143B)`, where `B=max(U)`.
-Replacing the second maximum in (28) by this lower bound recovers exactly
-THM-789's pointwise `w=13` thickness tax:
+Replacing the second maximum in (28b) by this lower bound recovers exactly
+THM-789's necessary pointwise `w=13` thickness tax:
 
 ```text
 max_(t in E_U)||13t||
  <=2/13-26/(143B)=2(11B-13)/(143B).                        (29)
 ```
 
-Every return satellite farther from zero strictly strengthens (29).  This is
-the promised scale-free use of THM-817's signed cells: their full numerical
-effect is their outer circular radius, even when their count is linear in
-`B`.
+Every return satellite farther from zero strictly strengthens (29), once the
+independent centre-cell membership (28a) is retained.  This is the promised
+scale-free use of THM-817's signed cells: after the target-cell condition is
+checked, their full remaining numerical effect is their outer circular
+radius, even when their count is linear in `B`.
 
 ## 5. Linear evaluation and endpoint ancestry
 
@@ -442,8 +453,8 @@ python3 04-computation/lrc14_fixed_pair_symmetric_radius_budget_codex_S10.py
 The frozen source and stored-output SHA-256 digests are
 
 ```text
-source  d9c77bce064e23c9891012612cc80e3c8e1fbc4e148685d6c28063cc37f841b5,
-output  7c2c4b124893f07659918f9da45903cee7fc93acfeacc0c5b2b8ec327a125e6b.
+source  a49a369ed3f0d777779ab8950f2554877bbe7c19535c966f7ce20db0363a96d4,
+output  af7f37a8640d133361333797a70c6a65b35ee1fc7b686610876c6f84b63d4258.
 ```
 
 The canonical mathematical certificate digest emitted inside the output is
@@ -455,7 +466,7 @@ The canonical mathematical certificate digest emitted inside the output is
 An independent byte-equal replay used `4.62` seconds of user CPU (about
 `19.6` seconds wall time under the shared concurrent load).
 
-The theorem does not prove that every arithmetic core violates (28), does not
+The theorem does not prove that every arithmetic core violates (28a)--(28b), does not
 close the global `n=12` sporadic branch, and says nothing uniform about odd
 pairs outside the common ratio `(13d):(5d)`.  It does not bound the number of
 deep or return components and does not replace the stronger tightness target

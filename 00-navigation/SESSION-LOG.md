@@ -63619,8 +63619,12 @@ symmetric `R=-R` containing zero,
 E+R subset H  iff  rho_{ {5/13,8/13} }(E)+rho_0(R)<=2/169.
 ```
 
-For `(13d,5d)` this is
-`max_E||13dt||+13max_R||dr||<=2/13`.  The replay checks 12,159 synthetic
+For `(13d,5d)` the intrinsic statement is
+`rho_(C,d)(E)+rho_d(R)<=2/169`.  The simpler phase expression
+`max_E||13dt||+13max_R||dr||<=2/13` is equivalent only with the separate
+centre-cell guard `dE subset H`; without it `E=R={0}` is an immediate
+counterexample.  The phase inequality alone is the necessary THM-789
+thickness tax.  The replay checks 12,159 synthetic
 compact packets and the complete 214-core/9,974-atom THM-821 bank with zero
 direct/radius mismatches.  All 214 cores fail globally.  Thus evaluation of
 the assembled symmetric union collapses from all cell/component pairs to two

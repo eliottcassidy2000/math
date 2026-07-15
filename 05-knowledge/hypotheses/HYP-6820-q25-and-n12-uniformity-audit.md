@@ -711,8 +711,11 @@ iff max_(t in E) min(||t-5/13||,||t-8/13||)
    +max_(r in R)||r|| <=2/169.                              (C4)
 ```
 
-For the common-dilate pair `(13d,5d)`, (C4) is equivalently
-`max_E||13dt||+13max_R||dr||<=2/13`.  Exact replay on 12,159 synthetic compact
+For the common-dilate pair `(13d,5d)`, (C4) is intrinsically
+`rho_(C,d)(E)+rho_d(R)<=2/169`.  It is equivalent to the phase inequality
+`max_E||13dt||+13max_R||dr||<=2/13` only together with `dE subset H`; the
+unguarded phase statement fails already for `E=R={0}`.  Thus the phase
+inequality alone is the necessary THM-789 thickness tax.  Exact replay on 12,159 synthetic compact
 packets and the 214 THM-821 cores has zero direct/radius mismatches; every
 core fails the global budget.  This is a global-conjunction factorization,
 not a factorization of an individual nonsymmetric `R_k`.  It makes present
@@ -770,8 +773,8 @@ The uniform theorem now has two explicit residuals:
    verdict factors through its exact circular cell/component sum arc and that
    the tested cell, component, width, owner, and event projections all mix.
    THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
-   factors through the exact radius budget
-   `max_E||13dt||+13max_R||dr||<=2/13`.  Prove that every admissible core
+   factors through the exact intrinsic radius budget
+   `rho_(C,d)(E)+rho_d(R)<=2/169`.  Prove that every admissible core
    violates that budget, extend the no-switch geometry to other odd ratios,
    or prove a height-independent contradiction/decreasing invariant on the
    individual exact signed sum arcs with owner ancestry;

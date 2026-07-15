@@ -556,8 +556,12 @@ complete containment predicate has the radial coarse coordinate
 and succeeds exactly when the coordinate lies below the line
 `rho_E+rho_R=2/169`.  The separation of the two target centres proves that no
 symmetric translate can jump between sheets.  The common-dilate pair
-`(13d,5d)` inherits the identical budget
-`max_E||13dt||+13max_R||dr||<=2/13`.
+`(13d,5d)` inherits the intrinsic budget
+`rho_(C,d)(E)+rho_d(R)<=2/169`.  Its phase-norm rewrite requires the separate
+sheet-membership guard `dE subset H`; without the guard a point near any wrong
+`13`-tooth has a small phase norm.  In particular `E=R={0}` disproves the
+unguarded rewrite.  The phase inequality alone remains a necessary thickness
+tax under hypothetical containment.
 
 This does not mean the cover itself is radial.  Before gluing, each signed
 satellite is nonsymmetric and can attach differently to the same base

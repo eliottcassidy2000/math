@@ -181,11 +181,14 @@
   evaluation quotient at the fixed ratio `(13d,5d)`.  The exact folded target
   is two radius-`2/169` cells, and
   `E+R subset H iff rho_C(E)+rho_0(R)<=2/169`; equivalently after dilation,
-  `max_E||13dt||+13max_R||dr||<=2/13`.  This is an all-size theorem for compact
+  `rho_(C,d)(E)+rho_d(R)<=2/169`.  This is an all-size theorem for compact
   `E` and symmetric compact `R` containing zero.  All 214 replayed cores fail
   this global budget with zero direct/radius mismatches.  Individual signed
   satellites remain outside the factorization, and owners remain transport
-  data even though the assembled-set evaluation uses only two extrema.
+  data even though the assembled-set evaluation uses only two extrema.  The
+  simpler phase inequality `max_E||13dt||+13max_R||dr||<=2/13` also requires
+  `dE subset H`; alone it is only a necessary tax, with `E=R={0}` the exact
+  counterexample to the unguarded rewrite.
   THM-829 proves the exact contragredient owner law
   `(v,b)->(Av,bA^(-1))` over primitive column/Bezout-row stalks and the
   necessary reflection conjugacy.  Use it as a candidate arithmetic transport
@@ -252,7 +255,8 @@
   positional/width/owner shadow.  Seek a height-independent contradiction or
   decreasing invariant on those signed sum arcs with owner ancestry.  On the
   common `(13d,5d)` ratio, first try to prove that every admissible arithmetic
-  core violates THM-824's scalar radius budget; in parallel determine which
+  core violates THM-824's intrinsic centre-radius budget (including its
+  centre-cell identity, not the unguarded phase norm); in parallel determine which
   other odd exception ratios have a separated equal-radius target and hence
   the same no-switch factorization.  A proof only for the global symmetric
   union must still be joined to the nonsymmetric satellite obligations.

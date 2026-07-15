@@ -30,8 +30,10 @@ bank_certificate_sha256=f34e491a5599d3c6732a2c84b2a3ab6c1f364cdb0f800e4814371ecd
 
 COMMON_DILATE_COROLLARY
 pair=(13d,5d) target=m_d^(-1)(H)
-criterion=max_E||13dt||+13max_R||dr||<=2/13
-d=1_central_return_lower_bound=recovers_THM789_w13_thickness_tax
+intrinsic_criterion=rho_(C,d)(E)+rho_d(R)<=2/169
+phase_criterion=m_d(E)_subset_H AND max_E||13dt||+13max_R||dr||<=2/13
+phase_guard_counterexample=E={0},R={0}:phase_inequality_true,target_containment_false
+d=1_central_return_lower_bound=recovers_necessary_THM789_w13_thickness_tax
 full_return_outer_radius=strengthens_central_tax
 
 TOURNAMENT_TELEMETRY

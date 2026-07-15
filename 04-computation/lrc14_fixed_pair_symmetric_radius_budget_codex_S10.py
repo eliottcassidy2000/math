@@ -527,8 +527,11 @@ def main() -> None:
     print()
     print("COMMON_DILATE_COROLLARY")
     print("pair=(13d,5d) target=m_d^(-1)(H)")
-    print("criterion=max_E||13dt||+13max_R||dr||<=2/13")
-    print("d=1_central_return_lower_bound=recovers_THM789_w13_thickness_tax")
+    assert q_value(F(0)) < THRESHOLD
+    print("intrinsic_criterion=rho_(C,d)(E)+rho_d(R)<=2/169")
+    print("phase_criterion=m_d(E)_subset_H AND max_E||13dt||+13max_R||dr||<=2/13")
+    print("phase_guard_counterexample=E={0},R={0}:phase_inequality_true,target_containment_false")
+    print("d=1_central_return_lower_bound=recovers_necessary_THM789_w13_thickness_tax")
     print("full_return_outer_radius=strengthens_central_tax")
     print()
     print("TOURNAMENT_TELEMETRY")
