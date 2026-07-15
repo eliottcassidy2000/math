@@ -33,6 +33,19 @@ related:
 4. Metagraph reading: on the iso-class quotient the drift descends to the wiggly-layer flow; the
    spine/ribs/sea currents (opus-S307) are the class-level shadow of this exact vertex-level OU.
 
+## Addendum (cont.12): the NOISE is closed too — the c₃-marginal walk is autonomous
+
+D(T) := E[(Δc₃)² | T] over a uniform arc is DEGREE-DETERMINED despite appearances: (d_u−d_v)² is
+orientation-blind, so Σ_arcs (d_u−d_v)² = Σ_{u<v} (d_u−d_v)² = nΣd² − (Σd)², and expanding
+(d_u−d_v−1)² gives the closed form
+
+>  **D(T) = 1 + (n−4)·V/C(n,2),   V = Σ(d_i − (n−1)/2)² = n(n²−1)/12 − 2c₃.**
+
+At n=4 the noise is CONSTANT (D ≡ 1). Referee: at n=5,6 every c₃-fiber has a single D value (0
+multi-valued fibers) — drift AND diffusion are both functions of c₃ alone, so the c₃-marginal of
+the flip walk is an exact autonomous process: OU drift −κ(c₃−c₃*), state-dependent noise
+1 + (n−4)V(c₃)/C(n,2) (larger far from equilibrium — the transitive end is noisier).
+
 ## Evidence log
 
 - [x] atom + drift refereed exactly over ALL classes at n=5,6 (per-class E[Δc₃] = −κ(c₃ − c₃*) as

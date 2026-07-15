@@ -1,0 +1,34 @@
+================================================================================================
+(A) THM-841 violation ladder referee
+================================================================================================
+k= 4: ladder m_r (r<=4) exact on 4 lambdas: True
+k= 6: ladder m_r (r<=4) exact on 4 lambdas: True
+k= 8: ladder m_r (r<=4) exact on 4 lambdas: True
+k=10: ladder m_r (r<=4) exact on 4 lambdas: True
+k= 6 lam=1/8: S_rho (rho<=3) direct==gap: True  (S_1=3/2 S_2=277/240)
+k=10 lam=1/12: S_rho (rho<=3) direct==gap: True  (S_1=5/3 S_2=745/432)
+(A) VERDICT: ALL EXACT
+
+================================================================================================
+(B) OU on H: E[Delta H | T] vs H (n=4,5) -- law or negative
+================================================================================================
+n=4: per-H drift E[dH|T] (H: mean [min..max] count):
+   H= 1:   1.3333  [4/3..4/3]  x1
+   H= 3:   0.0000  [0..0]  x2
+   H= 5:  -1.3333  [-4/3..-4/3]  x5
+n=5: per-H drift E[dH|T] (H: mean [min..max] count):
+   H= 1:   2.2000  [11/5..11/5]  x1
+   H= 3:   1.8000  [9/5..9/5]  x3
+   H= 5:   1.4000  [7/5..7/5]  x10
+   H= 9:  -0.6000  [-3/5..-3/5]  x18
+   H=11:  -1.0000  [-1..-1]  x11
+   H=13:  -2.6000  [-13/5..-13/5]  x13
+   H=15:  -3.7500  [-21/5..-3]  x8
+
+================================================================================================
+(C) D(T) = E[(dc3)^2 | T]: is the OU noise degree-determined? spread within (n, c3) fibers
+================================================================================================
+n=5: c3-fibers with MULTIPLE D values: 0 of 6  (noise NOT c3-determined: False)
+n=6: c3-fibers with MULTIPLE D values: 0 of 9  (noise NOT c3-determined: False)
+
+DONE

@@ -30,6 +30,21 @@ realizer rho-conjugation) + pair-counting (Sum sigma_kappa(c)|Aut(c)| = #{(t,pi)
 T(kappa t)}) is the named proof frame.
 
 FILES: 05-knowledge/results/transitive_star_formula_opus_S311.out; HYP-6890. opus; S311.
+## kind-pasteur-2026-07-15-S128 (cont.12) -- THM-841 PROVED+REFEREED (the VIOLATION LADDER: BH order-statistics on Farey gaps; LEM-006's factorial moments S_rho CLOSED-FORM on interval cores) + THM-833 ADDENDUM (noise closed form D = 1 + (n-4)V/C(n,2): the c3-marginal walk is AUTONOMOUS; n=4 noise constant) + the H-DRIFT PROFILE (H-fiber-constant, nonlinear, first split at the regular top) + 1001/toothpick/BH integrations; my THM-817 was fleet-renumbered to THM-819 (refs fixed)
+
+Prompt (owner): work the named next targets; merge 1001-related work + arXiv:1004.3036 (toothpick) + dobriban/BH + A139250; comprehensive metagraph by formula.
+
+THM-841 (the BH lens, PROVED+refereed): for lambda < 1/(k+1) the violation count W(t) = #{j <= k: ||jt|| < lambda} is supported on the two end-fractions' DIVISOR CHAINS of each Farey gap (two-line corollary of THM-826's lemmas); every ladder measure m_r = |{W < r}| and every factorial moment S_rho = E[C(W,rho)] is an explicit piecewise-linear rational -- refereed exact (m_r r<=4, S_rho rho<=3, k<=10; S_1 = 3/2, S_2 = 277/240 at k=6, lam=1/8). LEM-006's density-route inputs are CLOSED-FORM on interval cores; the multiple-testing dependence structure of the speeds is fully explicit (a rare exact BH universe).
+
+THM-833 ADDENDUM (proved): D(T) = E[(dc3)^2|T] = 1 + (n-4)V/C(n,2) -- (d_u-d_v)^2 is orientation-blind, so the noise is degree-determined; with the drift, the c3-marginal is an exact autonomous state-dependent-noise OU (noisier at the transitive end; n=4 noise CONSTANT = 1). Referee: zero multi-valued c3-fibers at n=5,6.
+
+THE H-DRIFT (HYP-6900, exact n=4,5): E[dH|T] is H-FIBER-CONSTANT (depends on H alone!) except the top fiber splits (n=5 H=15: -21/5 vs -3); n=4 is EXACTLY linear with equilibrium 3 = 4!/2^3 (the random mean); n=5 profile (11,9,7,*,-3,-5,-13)/5 -- mean-reverting toward n!/2^{n-1} but NOT affine. The transitivity flow on the H axis is deterministic-per-fiber drift toward randomness with a nonlinear profile -- the c3-OU is its linear shadow.
+
+INTEGRATIONS: 1001 = 7*11*13 = C(14,10) (THM-738's body count; 105105 = 105*1001 the L-denominators); toothpick A139250: the ladder's divisor-chain accretion is the Farey-side toothpick (lead logged, target: breakpoint tree vs T(2^k) self-similarity); BH = THM-841 formalized. j=4: 140/2002 accruing.
+
+FILES: THM-841, THM-833 addendum, HYP-6900, referee script/out; THM-826 refs fixed 817->819 (fleet renumber absorbed). -> klein/opus (LEM-006's S_j now exact on interval cores -- the density route's compact-row inputs), codex (the ladder = your Cech/descent's measure-side order statistics), mac-mini (H-drift fiber-constancy is a new H rigidity -- why does H determine its own drift?).
+
+NEXT: (i) H-drift functional form + where fiber-splitting starts; (ii) the ladder's toothpick self-similarity; (iii) j=4 (floods pending); (iv) Fano/chi_7 still open.
 
 ---
 ## kind-pasteur-2026-07-15-S128 (cont.11) -- THM-833 PROVED: THE ORNSTEIN-UHLENBECK LAW OF THE WIGGLY LAYER -- every arc flip has dc3 = d_u - d_v - 1, and the uniform-random-flip drift is EXACTLY E[dc3|T] = -(8/(n(n-1)))(c3 - C(n,3)/4): linear mean reversion toward the RANDOM mean (not the regular end -- that sits n(n-1)/8 beyond); fluctuation-dissipation exact; + the c_k(s) INTERVAL-TOTIENT TRIANGLE (B_s integer skeleton) + chi_7 honest negative (Fano lead opened)
