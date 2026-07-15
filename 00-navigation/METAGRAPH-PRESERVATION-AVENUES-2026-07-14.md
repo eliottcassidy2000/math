@@ -615,7 +615,7 @@ certificate clauses, and proof obligations.
   `Cov(q_i,epsilon^2)=-(n-4)/8`, strict negative covariance after conditioning
   on black, and the support bound
   `|epsilon|<=n-4-q0+1_(q1-q0=1)`.  The node orbit polynomial
-  `(C3,H_u(q,|epsilon|)/2)` separates every node through `n=7`.  Curvature is
+  `(C3,H_x)` separates every node through `n=7`.  Curvature is
   not an edge codec: it gives 7,248/8,064 black orbits at `n=7`, while the
   reflection-orbit `(B2,B3)` address gives all 8,064.  Source-normalized
   outward black flow dominates in every source-`q` stratum carrying a
@@ -711,5 +711,7 @@ certificate clauses, and proof obligations.
    coefficient.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
-3. Join `MPA-28/38`: make continued-fraction substitutions act on the labelled
-   path/core stalk instead of appending another static scalar address.
+3. Join `MPA-28/38`: extend THM-812's exact one-block action through the
+   ten-wall centered-CF word, auditing fibre-purity separately on tilings,
+   lines, coloured edge cells, and nodes; then form the literal-witness fibre
+   product with THM-808's transported owner/root stalk.

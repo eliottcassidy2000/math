@@ -2,13 +2,15 @@
 id: THM-811
 title: The black complement-line flow has an exact Mobius/Smith master polynomial and negative curvature-energy coupling
 status: PROVED (general master polynomial, coefficients, moments, and support law) + FINITE-EXACT (node/edge classifications and q-stratified flow through n=7)
-source: codex-2026-07-15-S13
+source: codex-2026-07-15-S13/S11
 depends_on: [THM-785, THM-790, THM-801]
 related: [THM-781, THM-796, THM-809, HYP-6880]
 verification:
   - 04-computation/black_mobius_curvature_disintegration_codex_S13.py
   - 05-knowledge/results/black_mobius_curvature_disintegration_codex_S13.out
   - 05-knowledge/results/black_mobius_curvature_disintegration_codex_S13.json
+  - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
+  - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
 ---
 
 # THM-811 — exact black curvature disintegration
@@ -76,6 +78,31 @@ lambda=S3_A+S3_AB+S3_C+S3_BC-(n-2).                     (5)
 
 They do not determine `q` from `n=6` onward.  This precisely separates B3
 linear current from Möbius quadratic curvature.
+
+## Exact recursion in size for the distribution
+
+Let `P_n(u,z,w,v)` denote the left side of (1).  Comparing the factorizations
+at consecutive sizes gives, for `n>=5`,
+
+```text
+P_n=2^(n-4) u(1+v/u+1/(uv)+zw/u^2) P_(n-1).                (5a)
+```
+
+Thus one new internal packet has the four increment vectors
+
+```text
+state   (Delta S,Delta q0,Delta q1,Delta epsilon)
+ 00                  (+1,0,0,0)
+ 10                  ( 0,0,0,+1)
+ 01                  ( 0,0,0,-1)
+ 11                  (-1,1,1,0),                            (5b)
+```
+
+with a factor `2^(n-4)` from coordinates integrated out by the polynomial.
+This is an exact recursion for the joint distribution, not a transport map on
+literal lines: multiplication forgets the packet position and the free-bit
+witnesses.  It therefore explains algebraically how curvature can control
+flow across every size while remaining incomplete as an edge address.
 
 ## Coefficients and curvature uncertainty
 
@@ -162,6 +189,18 @@ the 16 reflection pairs.  Every black projected loop is already separated
 literally by `(B2,B3)`.  Thus curvature is the right disintegration coordinate
 but cannot replace the positional edge address.  Any reflection-invariant
 carrier can classify at most a black edge orbit, never a literal black line.
+
+The independent continuation verifier gives a sharp example.  THM-796's four
+`n=7` phase-square lines all have projected node pair `(264,270)` and oriented
+
+```text
+(q0,q1,epsilon_Smith)=(1,2,0).
+```
+
+Thus the curvature carrier collapses the whole square even though coherent
+`C2` phase changes.  Their `B3` signatures split the two phase values, and raw
+`B2/B3` separates the literal lines.  Here `epsilon_Smith` is the transverse
+current in (4), not THM-796's coherent descent phase.
 
 ## The finite source-normalized flow signal
 

@@ -4,7 +4,7 @@ title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph
 status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+S2 (raw B2 sidecar) injectivity proved through n=8 by THM-801/809
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -40,6 +40,9 @@ The same computation found exact compact companions:
   twin pairs at `n=7`;
 - the boundary-curvature polynomial `K_u(z)` separates 238/272 nodes, or
   249/272 with total `C3`;
+- THM-811's richer black orbit polynomial `(C3,H_x)` separates all 272 nodes,
+  while node pair plus `(q0,q1,|epsilon_Smith|)` separates only 7,248/8,064
+  black edge orbits; positional `(B2,B3)` data remain necessary;
 - the common-core node pair improves `Xi_7` to 16,110 cells but is weaker than
   the gap face;
 - the joined address remains a static codec, not a proved recursive Markov

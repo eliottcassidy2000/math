@@ -63362,3 +63362,34 @@ Minimal state is relative to the branch, operation language, and terminal
 predicate; line phase, chord holonomy, affine root, owner incidence, and metric
 translation must be joined over a common literal witness rather than merged as
 one scalar.
+
+### Post-rebase coloured-edge transport and curvature join
+
+Integrated THM-811/812 into the three-sorted synthesis.  THM-812 proves that a
+centered-CF coordinate replication can embed literal tilings and complement
+lines and descend injectively on projected coloured edge cells while failing
+to descend on bare iso nodes.  Recorded the general fibre-purity criterion
+`c_n(x)=c_n(y) => c_m(fx)=c_m(fy)` and reframed cross-size recursion as a
+presentation span: functional on whichever sorts pass that test, relational on
+the others.  The same `n=5` black seed loops `0x3,0x9` follow different
+genealogies under different size-changing operations: centered-CF replication
+sends them to the `n=6` cross-edge cell `K(22,33)`, while endpoint extension
+keeps them as loop faces.  Recorded operation labels as part of recursive
+ancestry rather than treating `n->n+1` as a unique arrow.
+
+THM-811 separates black-edge linear current, quadratic Möbius curvature, and
+positional address.  The current/curvature packet controls the exact flow law
+but does not identify all `n=7` black edge orbits; the reflection orbit of the
+full `(B2,B3)` positional data does.  Derived the exact distribution recursion
+`P_n=2^(n-4)u(1+v/u+1/(uv)+zw/u^2)P_(n-1)` and stated why its integrated packet
+positions/free bits prevent it from being a literal edge transport.
+
+Extended the S11 verifier with a curvature/phase cross-audit.  All four
+residual lines have `(q0,q1,epsilon_Smith)=(1,2,0)` under the apex-zero
+orientation, while their B3 signatures split coherent phase exactly; all
+assertions pass.  Corrected the double-halving notation for THM-811's already
+orbit-normalized `H_x`.  Added a precise face-labelled collision zigzag:
+non-singleton address fibres are joined across sizes by witnessed `A/B/C` face
+incidences, retaining literal lines and phase.  This makes the S11/S13 statement
+“the old `n=7` square dies and new `n=8` ambiguity is born” an executable
+recursive object rather than a metaphor or a comparison of collision counts.

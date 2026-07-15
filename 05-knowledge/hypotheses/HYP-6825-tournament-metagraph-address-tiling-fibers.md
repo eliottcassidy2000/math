@@ -43,6 +43,12 @@ artifacts:
   - 01-canon/theorems/THM-809-n8-lower-first-metagraph-codec.md
   - 04-computation/mobius_cech_n8_frontier_codex_S13.cpp
   - 05-knowledge/results/mobius_cech_n8_frontier_codex_S13.out
+  - 01-canon/theorems/THM-811-black-mobius-smith-curvature-disintegration.md
+  - 04-computation/black_mobius_curvature_disintegration_codex_S13.py
+  - 05-knowledge/results/black_mobius_curvature_disintegration_codex_S13.out
+  - 01-canon/theorems/THM-812-centered-christoffel-metagraph-edge-transport.md
+  - 04-computation/continued_fraction_metagraph_edge_transport_codex_S13.py
+  - 05-knowledge/results/continued_fraction_metagraph_edge_transport_codex_S13.out
 related:
   - HYP-2245
   - HYP-2989
@@ -63,6 +69,8 @@ related:
   - THM-807
   - THM-808
   - THM-809
+  - THM-811
+  - THM-812
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -317,6 +325,13 @@ opposite direction (`1075` versus `522` projected supports).  The labelled
 line ensemble remains centrally symmetric; the asymmetry appears after
 iso-class projection and `C3` orientation.
 
+THM-811 resolves an apparent reversal in that paragraph.  Raw multiplicity is
+dominated by the much larger pure-black source fibres.  After normalizing by
+available source black endpoints and stratifying by source curvature `q`, the
+mixed-to-pure-black rate exceeds the reverse rate in every nonempty stratum at
+both `n=6` and `n=7`.  Flow direction is therefore not defined until the source
+category, curvature stratum, and fibre-volume measure are named.
+
 Every node now has a stored `flow_rank` ordered first by `C3`, then phase and
 rooted blue/black position, score/Landau shape, tiling-fibre mass, weighted
 line refinement, and finally the exact HYP-6825 address.  All balanced nodes
@@ -495,6 +510,59 @@ for the two-face cover but reconstructed by the three-face cover.  The honest
 join is a fibre product over the same literal owner-labelled path orbit, not a
 concatenation of the `C2` line phase, order-five chord holonomy, and affine
 root as though they were one scalar.
+
+THM-812 now turns that analogy into an exact metagraph transport at the first
+nontrivial centered schedule.  Its complement/reflection-equivariant
+coordinate copy embeds literal tilings and lines from `n=5` to `n=6`.  It does
+not induce a function on bare nodes: the ten source nodes spread over 23 target
+nodes.  It does induce an injective function on all 20 projected coloured edge
+cells, loops included.  Thus a cross-size operation can be functional on the
+edge quotient while only relational on its endpoint-node quotient.  The right
+recursive category is consequently built from spans/correspondences over
+marked presentations, not assumed graph homomorphisms between node quotients.
+
+This transport meets the S11 genealogy at its literal `n=5` seed and then
+diverges.  The reflected black loops `0x3,0x9` form source cell `K(6,6)`;
+THM-812 sends them to `0x23,0x31` in the cross-edge cell `K(22,33)`.  Endpoint
+extension instead retains `n=6` loop faces before producing the `n=7` phase
+square.  Thus size alone does not index recursion.  The operation label and its
+marked-presentation lift are indispensable coordinates of collision ancestry.
+
+For any marked-state operation `f:X_n->X_m` and carrier maps `c_n,c_m`, the
+exact descent test is
+
+```text
+c_n(x)=c_n(y)  =>  c_m(fx)=c_m(fy).                           (D)
+```
+
+Only after (D) is proved does `f` induce a map on carrier cells; the converse
+implication is the additional test for an injective induced map.  Node descent
+fails and coloured-edge descent succeeds for THM-812 precisely in this sense.
+This is also the algebraic content of continuation purity: impose (D)
+simultaneously for every legal operation word and terminal observation.
+
+THM-811 supplies a complementary disintegration of black edges.  The coarse
+`B3` populations determine the linear leg currents `(B,T)`, hence
+`(lambda,epsilon_Smith)`, while `q` is a positional quadratic overlap.  Their exact
+master polynomial controls black flow and proves negative
+`Cov(q_i,epsilon_Smith^2)`, but projected node pair plus
+`(q0,q1,|epsilon_Smith|)` still
+identifies only 7,248 of 8,064 black reflection orbits at `n=7`.  The positional
+reflection orbit of `(B2,B3)` identifies all 8,064.  Colour, linear current,
+quadratic curvature, positional orbit, and literal line are therefore distinct
+typed coordinates, not one increasingly precise scalar edge weight.  This
+Smith current is not the coherent `C2` phase: on the four S11 residual lines
+the phase flips, while `epsilon_Smith=0` throughout.
+
+Writing `P_n` for THM-811's joint distribution gives the exact recursion
+
+```text
+P_n=2^(n-4) u(1+v/u+1/(uv)+zw/u^2)P_(n-1).
+```
+
+It transports aggregate current/curvature laws while integrating out packet
+position and free-bit witnesses.  This distributional recursion must not be
+mistaken for the face-labelled collision genealogy or a literal edge map.
 
 ## Tournament Analysis
 

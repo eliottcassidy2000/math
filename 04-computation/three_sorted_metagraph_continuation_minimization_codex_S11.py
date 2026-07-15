@@ -49,7 +49,13 @@ from merged_metagraph_recursive_three_sort_audit_codex_S2 import (
     reflection_permutation,
     tile_schema,
 )
-from mobius_cech_metagraph_codec_codex_S12 import b3_face_mask, b3_line_face
+from mobius_cech_metagraph_codec_codex_S12 import (
+    b3_face_mask,
+    b3_line_face,
+    b3_signature,
+    boundary_c3_curvature,
+    endpoint_epsilon,
+)
 from tournament_tiling_metagraph_address_codex_S4 import (
     permutation_arc_maps,
     perms,
@@ -421,6 +427,35 @@ def analyze(atlases: dict[int, dict]) -> str:
     assert {record["colour"][-1] for record in square_records} == {"K"}
     assert {record["sheet"][-1] for record in square_records} == {"E"}
     assert {record["defect"][-1] for record in square_records} == {0x06A6}
+    assert {apex_zero(mask, 7) for mask in residual_masks} == {
+        0x12CA,
+        0x6D34,
+        0x146C,
+        0x6B92,
+    }
+    curvature_data = {}
+    for mask in residual_masks:
+        oriented = apex_zero(mask, 7)
+        other = oriented ^ full_mask(7)
+        curvature_data[mask] = (
+            boundary_c3_curvature(oriented, 7),
+            boundary_c3_curvature(other, 7),
+            endpoint_epsilon(oriented, 7),
+            b3_signature(oriented, 7),
+        )
+    phase_one_b3 = (0, 0, 0, 2, 0, 2, 2)
+    phase_zero_b3 = (1, 0, 1, 1, 3, 1, 1)
+    assert curvature_data == {
+        0x12CA: (1, 2, 0, phase_one_b3),
+        0x12CB: (1, 2, 0, phase_zero_b3),
+        0x146C: (1, 2, 0, phase_one_b3),
+        0x146D: (1, 2, 0, phase_zero_b3),
+    }
+    assert all(
+        curvature_data[mask][3]
+        == (phase_one_b3 if records[(7, mask)]["phase"][-1] else phase_zero_b3)
+        for mask in residual_masks
+    )
     q7 = list(map(int, atlases[7]["q"]))
     classes7 = list(map(int, atlases[7]["class_codes"]))
     class_fibres = Counter(
@@ -550,6 +585,9 @@ def analyze(atlases: dict[int, dict]) -> str:
             "residual labelled Xi square:",
             "  rho=(12ca 12cb)(146c 146d), reflection=(12ca 146c)(12cb 146d); involutions commute",
             "  all four are black cross-lines on nodes (264 non-SC,270 SC), defect=0x06a6",
+            "  THM-811: all four have oriented (q0,q1,epsilon_Smith)=(1,2,0),",
+            "  B3 signatures split coherent phase exactly: phase 1=(0,0,0,2,0,2,2), phase 0=(1,0,1,1,3,1,1)",
+            "  hence node pair+(q0,q1,|epsilon_Smith|) collapses the square; B3 gap/ownership data do not",
             "  endpoint class-sheet fibre sizes at those nodes are 151,151 and 57",
             "  rho changes the marked-path presentation inside fixed ordinary endpoint classes;",
             "  reflection exchanges the two 151-element converse sheets at node 264",

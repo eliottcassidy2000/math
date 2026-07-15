@@ -580,6 +580,17 @@
   supply: reduced token/sheet return and metric component translation.  Keep
   both distinct from same/converse class-sheet holonomy; a zero reduced return
   can still move the metric base (THM-794).
+- **Edge transport/curvature join (THM-811/812):** Centered-CF coordinate copy
+  is functorial on literal `X_5->X_6` tilings, complement lines, and all 20
+  projected coloured edge cells, but not on the ten bare source nodes.  Treat
+  the induced node data as a relation over the presentation span, and audit
+  descent by fibre-purity for each operation.  On black edges, keep linear
+  current `(lambda,epsilon_Smith)`, quadratic curvature `(q0,q1)`, and positional
+  `(B2,B3)` orbit distinct: the first two resolve only 7,248/8,064 `n=7` black
+  reflection orbits, while the positional address resolves all 8,064.  The
+  shared `n=5` S11 seed loops `0x3,0x9` expose operation dependence directly:
+  CF replication maps them to the `n=6` cross-edge cell `K(22,33)`, while
+  endpoint extension carries them through `n=6` loop faces.
 - **Open theorem:** Test connectivity/WL completeness and continuation closure
   at `n=8`, then attach the
   address as a base-chart label to the affine incidence object
@@ -601,8 +612,11 @@
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
   first pull is the MPA-32/34/35 join: compare `n=8` continuation cells with
   THM-809's injective lower `Lambda` and its layer genealogy, then push the
-  static codec to `n=9`.  Follow with black-flux disintegration and the owner-
-  labelled heptagon/endpoint stalk join.
+  static codec to `n=9`.  Materialize the genealogy as a face-labelled zigzag
+  of witnessed collision cells, so births, deaths, and phase transport are
+  tested rather than inferred from counts.  Then extend THM-812's fibre-purity
+  test to the ten-wall CF word and join the surviving edge action to THM-808's
+  owner/root stalk.  Follow with the owner-labelled heptagon/endpoint join.
 
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.

@@ -514,6 +514,18 @@ resolved by the moving outer mirror layer.  Recursion should therefore track
 a genealogy of ambiguity classes, not assume that exceptional sets embed
 monotonically from one size to the next.
 
+The precise carrier for that genealogy is a labelled zigzag, not a filtration.
+For a chosen address `c_n:L_n->C_n`, let `K_n` be its non-singleton fibres.
+Join a cell of `K_n` to a cell of `K_(n-1)` whenever one named `A`, `B`, or `C`
+face sends a witnessed pair of upper lines into the lower cell; retain the face
+name, both literal lines, complement phase, and multiplicity on the join.  A
+cell with no incoming lower witness is born; a lower cell with no compatible
+upper witness dies.  Changing the address or operation alphabet changes this
+zigzag, as it must.  The S11/S13 calculation is its first exact fragment: the
+four `n=7` phase-square lines have no incidence with any of the 418 `n=8` base
+doubletons.  A persistence barcode on unlabelled collision counts would miss
+this because the essential datum is the face-labelled witness relation.
+
 This reframes the next search: classify endpoint-fixed interior permutations
 that absorb chord duality, then impose compatible face restrictions and
 overlap holonomy.  This permutation-first search may expose the next primitive
@@ -526,9 +538,89 @@ finite-field transport law.  THM-807 proves that a quadratic general selector
 becomes linear after restricting to connected return sets.  These are the
 same two lessons in different stalks: equal current observations need not have
 equal futures, and a field can be minimal in one branch yet reconstructible or
-redundant in another.  The line phase, chord witness, affine root, owner
-incidence, and metric translation must be joined over a common literal
-owner/path witness.  They are not interchangeable scalar decorations.
+redundant in another.
+
+THM-812 makes the first lesson exact on the metagraph itself.  A centered-CF
+coordinate copy `Phi:X_5->X_6` commutes with complement and reflection, so it
+embeds all literal tilings and complement lines and preserves blue/black.  It
+does not descend on the ten source nodes, which spread over 23 target nodes,
+but it does descend injectively on all 20 projected coloured edge cells.  This
+is not a graph homomorphism between node quotients.  It is a function on the
+presentation and edge sorts together with a relation on the node sort.  In
+categorical language, the proved node arrow is the presentation-mediated
+relation
+
+```text
+R_Phi={(q_5(x),q_6(Phi x)):x in X_5},
+```
+
+equivalently a span of sets; an ordinary node map is a special fibre-pure case.
+A profunctor between the full presentation groupoids is the natural upgrade,
+but its automorphism action has not yet been proved.
+
+The overlap with the phase-square genealogy is unexpectedly diagnostic.  Its
+two reflected `n=5` seed loops are `0x3,0x9`, the cell `K(6,6)` in THM-812's
+source atlas.  Centered-CF replication sends them to
+
+```text
+Phi(0x3)=0x23,       Phi(0x9)=0x31,       K(6,6)->K(22,33),
+```
+
+an `n=6` black cross-edge pair.  Endpoint extension instead carries these
+seeds through `n=6` loop faces before the `n=7` cross-edge square appears.
+Hence even literal agreement of the source line does not define a unique
+cross-size ancestry: the operation name and its presentation lift are part of
+the state.  A genealogy indexed only by `n` conflates different arrows.
+
+There is a one-line exact test.  Given an operation `f:X_n->X_m` and carrier
+maps `c_n,c_m`, a descended map exists exactly when
+
+```text
+c_n(x)=c_n(y)  implies  c_m(fx)=c_m(fy).                     (D)
+```
+
+It is injective exactly when the reverse implication also holds.  Applying
+(D) to every legal continuation word and terminal observation is the recursive
+Nerode congruence.  This phrasing covers node projection, line phase, face
+restriction, CF replication, and the owner-root update without pretending they
+live on the same quotient.
+
+THM-811 similarly splits what had looked like one black edge weight.  The `B3`
+populations determine linear leg current `(B,T)` and hence
+`(lambda,epsilon_Smith)`; Möbius `q` is their positional quadratic overlap.  The
+master polynomial gives their complete joint distribution and negative
+curvature-energy coupling, but node pair plus `(q0,q1,|epsilon_Smith|)` resolves only
+7,248 of 8,064 black reflection orbits at `n=7`.  The positional reflection
+orbit of `(B2,B3)` resolves all 8,064.  Thus colour, defect, linear current,
+quadratic curvature, positional edge orbit, and literal line form a partial
+lattice of typed observables.  None is licensed to replace another merely
+because it has more scalar entries.
+
+The master polynomial itself has a clean size recursion.  If `P_n` is its
+four-variable line distribution, then
+
+```text
+P_n=2^(n-4) u(1+v/u+1/(uv)+zw/u^2) P_(n-1).
+```
+
+The new packet increments `(S,q0,q1,epsilon_Smith)` by
+`(+1,0,0,0)`, `(0,0,0,+1)`, `(0,0,0,-1)`, or `(-1,1,1,0)`.
+This is exact renormalization of the distribution, but not transport of a
+line: packet position and `2^(n-4)` free-bit witnesses have been integrated
+out.  Distributional recursion and genealogical recursion are therefore two
+different operations on the same object.
+
+The notation matters here.  THM-796's coherent `C2` descent phase and
+THM-811's Smith current have both been denoted `epsilon` historically.  On all
+four S11 residual lines the Smith packet is
+`(q0,q1,epsilon_Smith)=(1,2,0)`, while the coherent phase changes from one to
+zero.  The curvature carrier collapses the entire phase/reflection square;
+raw positional `B2/B3` separates it.  Smith balance therefore cannot be used
+as a proxy for descent phase.
+
+The line phase, chord witness, affine root, owner incidence, and metric
+translation must finally be joined over a common literal owner/path witness.
+They are not interchangeable scalar decorations.
 
 This suggests a better recursive ontology: node data are observations, lines
 are continuation states, tilings are witnesses, and phase is descent data
@@ -604,6 +696,8 @@ sorted face marginal -> simultaneous coupling -> Xi -> three-face Omega
 node aggregates: support -> weights -> primitive face row
 witness fibre:    exact line <- oriented marked tiling
 LRC bundle:       combinatorial atlas <- owner/metric/transport stalk.
+
+cross-size map:   node relation <- presentation map -> edge-cell map
 ```
 
 Only the first two rows are refinements of partitions on the same line set.
