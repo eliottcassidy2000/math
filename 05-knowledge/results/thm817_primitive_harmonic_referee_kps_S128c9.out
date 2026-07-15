@@ -1,0 +1,31 @@
+k= 1 q= 2 PRIME  EXACT
+k= 2 q= 3 PRIME  EXACT
+k= 3 q= 4 comp   EXACT
+k= 4 q= 5 PRIME  EXACT
+k= 5 q= 6 comp   EXACT
+k= 6 q= 7 PRIME  EXACT
+k= 7 q= 8 comp   EXACT
+k= 8 q= 9 comp   EXACT
+k= 9 q=10 comp   EXACT
+k=10 q=11 PRIME  EXACT
+k=11 q=12 comp   EXACT
+k=12 q=13 PRIME  EXACT
+k=13 q=14 comp   EXACT
+k=14 q=15 comp   EXACT
+k=15 q=16 comp   EXACT
+k=16 q=17 PRIME  EXACT
+k=17 q=18 comp   EXACT
+k=18 q=19 PRIME  EXACT
+k=19 q=20 comp   EXACT
+k=20 q=21 comp   EXACT
+k=21 q=22 comp   EXACT
+k=22 q=23 PRIME  EXACT
+k=23 q=24 comp   EXACT
+k=24 q=25 comp   EXACT
+k=25 q=26 comp   EXACT
+k=26 q=27 comp   EXACT
+k=27 q=28 comp   EXACT
+k=28 q=29 PRIME  EXACT
+k=29 q=30 comp   EXACT
+k=30 q=31 PRIME  EXACT
+PRIMITIVE HARMONIC LAW k=1..30: ALL EXACT

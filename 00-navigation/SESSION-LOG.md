@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-15-S128 (cont.9) -- THM-817 PROVED: THE PRIMITIVE HARMONIC LAW -- m({1..k}; 1/(k+2)) = (2/((k+1)(k+2))) * sum_{u<=k, gcd(u,k+1)=1} 1/u for ALL k (Dirichlet confinement + per-witness extents + unit inversion; refereed exact k=1..30, zero exceptions); the 'mod-6 law' was PRIMALITY's shadow (equality with H_k/C(k+2,2) iff k+1 prime); the deep well = the p=13 instance; j=4 harvesting clean (49/49)
+
+Prompt (owner): prove the mod-6 law; pull often; harvest j=4 as bodies accrue.
+
+THE PROOF (THM-817, three elementary steps, self-contained): (1) DIRICHLET CONFINEMENT: good t at lambda=1/(k+2) => (Dirichlet, Q=k+1) some j<=k+1 has ||jt||<1/(k+2); goodness forces j=k+1=q => t within delta=1/(q(k+2)) of a/q; gcd(a,q)=d>1 would put q/d<=k with ||(q/d)t||=|eps|/d<lambda, contradiction => a PRIMITIVE. (2) PER-WITNESS EXTENTS: at primitive a/q the unique binding speeds are j+ = a^{-1} mod q (+1 residue) and j- = q-j+ (-1 residue); all others sit >= 2/q and move <= k*delta < (k+3)/(q(k+2)) over the neighborhood => never bind; the good interval is exactly [a/q - delta/j+, a/q + delta/j-]. (3) UNIT INVERSION: a -> a^{-1} permutes the primitive residues => sum over witnesses of (1/j+ + 1/j-) = 2*sum_{u primitive} 1/u. QED. Refereed exact k=1..30. COROLLARY: = H_k/C(k+2,2) iff k+1 PRIME -- the cont.8 'n even, n != 4 mod 6' pattern = {n : n-1 prime} exactly (primes>3 are +-1 mod 6; the exceptions 10,16,22 have n-1 = 9,15,21 composite); n=4 fits (3 prime), dissolving the 'exception'. The failure ratios reproduce as H^prim/H_k exactly.
+
+LRC MEANING: the interval-core good measure -- the base quantity of the whole peel ladder (THM-733/735/738/741) -- is a TOTIENT-weighted harmonic object: only speeds coprime to k+1 carry measure at the sub-tight threshold, each in proportion 1/u, witness intervals powered by inverse pairs (a, a^{-1}). Via HYP-6865: the staircase Smith network's electrical resistance equals the LRC good measure PRECISELY WHEN n-1 IS PRIME -- the staircase detects primality through the Lonely Runner. mac-mini's THM-736 base measure H_12/91: the p=13 instance.
+
+J=4 HARVEST (light-first reorder vindicated): 49/2002 bodies complete at close, 49/49 clean (fails=[]); the run accrues steadily; floods deferred to the tail as designed.
+
+FILES: THM-817 (PROVED+refereed), thm817_primitive_harmonic_referee_kps_S128c9.py/.out, HYP-6885(a) marked resolved. -> mac-mini (your H_12/91 is the p=13 instance of a totient law; the composite deficit is exactly the non-coprime speeds' missing witnesses), klein (witness structure = inverse pairs a,a^{-1} mod q -- the clean-witness grid refined), opus (the concordance/electrical frame now has an arithmetic law: resistance = measure iff n-1 prime), codex (Tutte thread: THM-805's bridge completed by 817).
+
+NEXT: (i) j=4 continues (floods overnight+); (ii) generalize THM-817 to general lambda (the good-measure PROFILE of interval cores -- the full function lambda -> m, piecewise linear with Farey breakpoints); (iii) E_n-side Tutte (kps-S11 + opus-S308).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.8) -- THM-805 PROVED+REFEREED: the closed-form Tutte polynomial T(N_n;x,y) = prod_{k=1}^{n-2}(x-1+[k]_y) (product of shifted q-integers; every specialization a one-line product) + THE MOD-6 HARMONIC LAW (the LRC bridge, corrected by the referee: m({1..k};1/(k+2)) = H_k/C(k+2,2) iff n=k+2 even, n != 4 mod 6 -- the n=14 DEEP-WELL case HOLDS exactly) + the clean-witness zero set (T's unit-circle zeros = klein-S296's witness grid); FOUR id collisions absorbed (800->802->805); j=4 reordered LIGHT-FIRST and finally accruing
 
 Prompt (owner): work the closed-form Tutte polynomial; pull often; connect to the LRC.
