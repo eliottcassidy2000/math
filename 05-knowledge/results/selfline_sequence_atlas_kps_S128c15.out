@@ -1,0 +1,28 @@
+(A) W(8) Burnside-affine...
+W(8) = 416   (W = 8, 20, 88, 416)
+(B) |Y|(n) = # tilings whose class is SC (T(t) iso T(t)^op)...
+   |Y|(5) = 64
+   |Y|(6) = 1024
+   |Y|(7) = 32768
+
+THE SELF-LINE SEQUENCE ATLAS (n = 5, 6, 7, 8):
+  ORBITS (free Klein-4)      : 2, 3, 22, 101       [fundamental; = merged carrier census]
+  selfK  (black self-lines)  : 4, 6, 44, 202
+  2selfB (gridsym qf tilings): 0, 4, 0, 8
+  |X|    (quasi-fixed total) : 8, 16, 88, 412
+  W      (Aut-weighted |X|)  : 8, 20, 88, 416
+  |Y|    (SC fiber mass)     : 64, 1024, 32768, ?
+  SC     (A000570)           : 8, 12, 88, 176
+  A000568 (classes)          : 12, 56, 456, 6880
+DONE
+
+CORRECTION (same session): the |Y| row above was computed with a transpose bug (B2 copied B1;
+caught by the score-multiset census: 12 asymmetric-multiset tilings at n=5 must fail). Fixed
+(B2[v][u] = B1[u][v]) and rerun:
+  |Y|    (SC fiber mass)     : 52, 240, 7308, ?     [52 = 64-12 exactly matches the census]
+FINAL ATLAS (n = 5, 6, 7, 8):
+  ORBITS : 2, 3, 22, 101      selfK : 4, 6, 44, 202      2selfB : 0, 4, 0, 8
+  |X|    : 8, 16, 88, 412     W     : 8, 20, 88, 416     |Y|    : 52, 240, 7308, ?
+  SC     : 8, 12, 88, 176     A000568: 12, 56, 456, 6880
+Factorizations: 22=2*11, 101 prime; 202=2*101; 412=4*103; 416=2^5*13; 52=4*13, 240=2^4*15,
+7308=2^2*3^2*7*29. W-|X| = 0, 4, 0, 4 (excess Aut-weight is EVEN-n only, like selfB).

@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.15) -- THE SELF-LINE SEQUENCE ATLAS: W(n) = 8, 20, 88, 416 (Burnside-affine; excess over |X| is EVEN-n only, mirroring blue self-lines) + |Y|(n) = SC fiber mass = 52, 240, 7308 (new sequence; transpose bug caught in-session by a score-multiset census, 52 = 64-12 exact) + factorization ledger for 2,3,22,101 (101 prime; decoder open, n=7 carrier multiplicities the key); j=4 at 290/2002 clean
+
+Prompt (owner): investigate 2,3,22,101 and kin; define new sequences; track everything.
+
+ATLAS (n=5..8): ORBITS 2,3,22,101 | selfK 4,6,44,202 | 2selfB 0,4,0,8 | |X| 8,16,88,412 | W 8,20,88,416 | |Y| 52,240,7308,? | SC 8,12,88,176 | A000568 12,56,456,6880. TWO NEW LAWS OBSERVED: (i) W - |X| = 0, 4, 0, 4 -- the Aut-excess on the quasi-fixed set vanishes at odd n, the SAME parity law as blue self-lines (one mechanism: odd n forces trivial Aut on X AND kills gridsym-qf; even n admits both); (ii) |Y| grows ~ x30 per step vs |X| ~ x5: the SC fiber mass and the quasi-fixed set are on different growth scales (the twisted diagonals are asymmetric in mass despite the Klein symmetry -- because kappa-quasi-fixedness is a LINE condition and gk-fixedness a CLASS condition). QUALITY NOTE: initial |Y| run hit a transpose bug (B2 = copy not transpose -> all-pass); caught by the multiset census (12 asymmetric tilings at n=5 in complement-pairs 5+5+1+1), fixed, 52 = 64-12 exact -- the census-check discipline pays again.
+
+FILES: selfline_sequence_atlas_kps_S128c15.py/.out (with correction block), HYP-6910. -> opus-S312 (W(8)=416 and |Y| rows for your decoder; the even-n Aut-excess law), all (2,3,22,101: 101 prime kills polynomial forms; carrier-multiplicity decoding is next).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.14) -- FREENESS PROVED: the Klein four-group acts FREELY on the non-gridsym quasi-fixed tilings for EVERY n (three one-line checks; anti-diagonal tiles kill g-kappa-fixedness) => selfK = 2 x orbits always, ORBITS(n) = 2, 3, 22, 101 = the fundamental sequence (each orbit = one merged carrier node); j=4 at 284/2002 all clean
 
 Prompt (owner): harvest n=8 + push (done cont.13); work the orbit bijection; critical LRC math.
