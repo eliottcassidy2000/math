@@ -203,7 +203,7 @@ THM-777 rho bridge is globally bounded (crudely, `<5.046*10^27`).  THM-782's
 incoming specialization converts the same idea into an anchored `72^(-10)`
 return packet inside every ten-speed two-sheet quotient core.
 
-THM-790 advances the exact even-maximum sporadic collar.  Its eleven-speed
+THM-791 advances the exact even-maximum sporadic collar.  Its eleven-speed
 maximizer has denominator `q<=4R-2`, with a center/high-effective-order
 dichotomy; uniform safe mass occupies many top teeth with repeated disjoint
 flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
@@ -245,12 +245,24 @@ wall tournament is transitive and loses the stalk; the `A8` graph loses the
 metric base.  The faithful object is the labelled incidence skew product
 recorded in the S10 reflection.
 
+The final live-main joins sharpened this picture.  A referee audit found no
+fatal issue in THM-786's corrected factor-two span, signed visitor law, or
+`sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the
+coefficient two asymptotically sharp even with `k=4 (mod 7)`.  THM-789 doubles
+the ten-core safe-mass packet and quadruples its component-width floor, but its
+exact `4/17` trapped anchor versus `14/19` escape proves that folded
+noncontainment requires global deep-component selection.  Finally the collar
+energy `K=sum binom(d_j-1,2)` obeys exactly THM-785's endpoint-defect flux and
+THM-787's step-eight scale.  Two exact `X_sheet=80` cores with the same labelled
+degree vector tear at different times/sheets, so the energy is a current
+coordinate, not a proof quotient.
+
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
 proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear,
-structured noncontainment of THM-782's phase packet in every admissible folded
-diamond, and a stalk-quotiented visitor/switch bound joining THM-778/779/783.
+global eroded-packet noncontainment in every admissible folded diamond, and a
+stalk-quotiented visitor/switch bound joining THM-778/779/783/786/788.
 
-FILES: THM-783/784/786/788; corrected THM-779; MISTAKE-147/148; exact collar and raw-wall
+FILES: THM-783/784/786/791; corrected THM-779; MISTAKE-147/148; exact collar and raw-wall
 scripts/outputs; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
@@ -368,8 +380,8 @@ THM-782 before this package landed.  First-pusher ownership is preserved by
 renumbering the exit package to THM-783.  THM-784 is the subsequently proved unbounded-raw-wall
 theorem, THM-785 is reserved for cyclic-triangle flow, THM-786 is the extent-
 form exit theorem, THM-787 is the transitivity-flow theorem, THM-788 is the
-active-period reduction, THM-789 is two-sheet erosion, and the collar theorem
-is THM-790.
+active-period reduction, THM-789 is two-sheet erosion, THM-790 is the
+Hamiltonian-path companion law, and the collar theorem is THM-791.
 
 FILES: 01-canon/theorems/THM-783-exit-lemma-package.md; 04-computation/
 lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.

@@ -32,6 +32,7 @@ related:
   - THM-788
   - THM-789
   - THM-790
+  - THM-791
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -229,6 +230,25 @@ safe component of length at least `72^(-10)/(20 max(U))`.  Tightness places the
 entire packet and component inside the folded diamond.  This is the precise
 structured-noncontainment target that scalar comparison with `8/117` misses.
 
+THM-789 sharpens both the positive statement and the missing quantifier.  The
+symmetric difference packet `A-A` doubles the safe-measure floor to
+`2*72^(-10)` and improves the component-width floor to
+`72^(-10)/(5 max(U))`.  Bohr erosion also turns depth into a pointwise tax on
+each odd exception.  Yet the exact core
+
+```text
+U_0={1,2,3,5,7,8,9,10,11,12},   t_0=4/17,   (x,y)=(13,9)
+```
+
+traps the full natural return set, its symmetric packet, the Lipschitz
+interval, and every literal refinement by the odd/folded coordinates inside
+the diamond at `t_0`; the same core escapes globally at `14/19`.  Refining one
+good anchor can therefore be monotone trapping.  The live theorem is not
+“make the local packet finer,” but **select a deep component whose eroded
+packet is not contained**.  A component-margin tournament is transitive, yet
+it is useful because its vertices preserve the global alternatives that the
+fixed-anchor quotient erased.
+
 ### 1.6 Endpoint schedules are centered mechanical words
 
 THM-778 makes the event clock exact.  The danger endpoints of speed `u` are
@@ -322,7 +342,7 @@ owners disappear simultaneously.
 
 ### 1.8 The even-maximum collar is now a clocked incidence problem
 
-THM-790 starts from the exact remaining two-sheet max-peel collar rather than
+THM-791 starts from the exact remaining two-sheet max-peel collar rather than
 asserting that the collar is empty.  If `R=max(U)`, `max(A)=2R`, and deleting
 `2R` raises the margin above `1/12`, then an eleven-speed maximizer has reduced
 denominator
@@ -453,7 +473,7 @@ tournament.
 | endpoint events | centered rank; chronological versus Euclidean decoding | the complete wall/tie schedule | current token assignment, persistent stalk, and metric restriction to `G_P` |
 | rooted redundancy states | collision-hop transitions; choice of duplicated root | the local `A_8` cocycle and supportability of an event word | absolute root, global carry, metric schedule, and the core-safe base; strong connectivity prevents a state-only exit proof |
 | minimal cover stalks | persistence across a wall; before/after minimal bases | genuine owner switches after redundant walls are contracted | raw event multiplicity by design; component location must remain as a sidecar |
-| proof obligations `(event, chip)` or `(tooth side, owner)` | transports or discharges the obligation | exactly the boundary incidence used by THM-790 | raw runner geometry unless the event clock and edge label remain attached |
+| proof obligations `(event, chip)` or `(tooth side, owner)` | transports or discharges the obligation | exactly the boundary incidence used by THM-791 | raw runner geometry unless the event clock and edge label remain attached |
 
 The challenged conclusion is that there is no single canonical tournament
 vertex set.  Different theorems live on cells, characters, events, sheets,
@@ -475,6 +495,24 @@ transitive event tournaments and THM-779's strongly connected `A_8` state
 graph are complementary warnings: the former is too small, while the latter
 is dynamically rich but detached from the metric base.
 
+The collar carrier nevertheless has one exact tournament-flow shadow.  If
+`d_j` are its thirteen sheet degrees, then
+
+```text
+K=sum_j binom(d_j-1,2)
+```
+
+satisfies `Delta(-K)=d_departure-d_entry-1` at a simple edge slide, exactly the
+endpoint-defect flux of THM-785; `8K` has THM-787's step-eight quantization.
+This stratifies the automaton by overlap-chip concentration and suggests
+measuring current across `K`-cuts.  It is telemetry, not a proof quotient:
+the normalized `r=8` stalk has the same excess-degree pattern in all 20,160
+states, and even the collar atlas has two cores with the same labelled degree
+vector and `8K=80` but different first tears.  THM-790's Hamiltonian-path axis
+is orthogonal in the metagraph, but the collar chronology itself is transitive
+with one path.  Event labels, transition instances, and the metric base remain
+the irreducible sidecar.
+
 ## 4. The exact remaining mathematical pieces
 
 ### 4.1 Uniform emptiness of the primitive tight twelve-speed sporadic branch
@@ -491,7 +529,7 @@ still missing.
    bank.  A proof may show that the folded containment `(FD)` cannot persist,
    or that THM-775's binary ownership tree cannot reach a terminal
    hereditarily primitive base.
-3. **The even-maximum collar.**  THM-790 gives a bounded rational clock,
+3. **The even-maximum collar.**  THM-791 gives a bounded rational clock,
    repeated ordered flank types, and—on the forced `13`-multiple subbranch—a
    moving edge-cover automaton.  It excludes `w=13` through quotient height
    `24`, but what is missing is a uniform tear or congruence obstruction
@@ -537,7 +575,7 @@ be conflated:
 The third option may be the most robust.  The phase-pigeonhole proof produces
 a heavy return set whether or not the sharp extremizer is understood.  A
 successful argument could pass that mass to an incidence repetition, as
-THM-790 begins to do, and then force a finite automaton tear.
+THM-791 begins to do, and then force a finite automaton tear.
 
 ### 4.4 LRC(14) assembly
 
@@ -598,7 +636,7 @@ reappear after an overaggressive quotient.  The final arrow is the open one.
 The sharpest current view is therefore not that LRC(14) is waiting for a
 larger computation.  It is waiting for a theorem that couples a heavy measured
 phase base to a finite labelled switch skeleton.  THM-780 supplies the former;
-THM-778/779/783/786/788 and THM-790 supply complementary increasingly exact
+THM-778/779/783/786/788/790 and THM-791 supply complementary increasingly exact
 versions of the latter.
 The remaining work is to prove that the coupling cannot stay covered without
 descending to one of the already controlled equality packets.

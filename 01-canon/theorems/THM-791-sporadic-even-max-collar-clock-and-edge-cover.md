@@ -1,5 +1,5 @@
 ---
-id: THM-790
+id: THM-791
 title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover carrier, and no w=13 packet through quotient height 24
 status: PROVED (quantifier-exact reductions) + VERIFIED (finite-exact w=13 closure for U subset [1,24]; does not exclude the unbounded collar)
 source: codex-2026-07-14-S10
@@ -8,13 +8,13 @@ depends_on:
   - THM-772
   - THM-775
   - THM-780
-related: [THM-774, THM-776, THM-778, THM-782, HYP-6820]
+related: [THM-774, THM-776, THM-778, THM-782, THM-785, THM-787, THM-790, HYP-6820]
 verification:
   - 04-computation/lrc13_w13_sheet_edge_cover_h24_codex_S10.py
   - 05-knowledge/results/lrc13_w13_sheet_edge_cover_h24_codex_S10.out
 ---
 
-# THM-790 — Sporadic even-maximum collar reductions
+# THM-791 — Sporadic even-maximum collar reductions
 
 Let a primitive tight twelve-speed set lie in the two-sheet packet
 
@@ -241,6 +241,57 @@ word.  A faithful finite state is therefore
 This is a predicate-preserving automaton on each of the `c` ineligible
 intervals.  It does not yet prove that the automaton must tear; it replaces an
 unbounded continuous collar by an exact finite moving-edge-cover problem.
+
+### 3.1 A transitivity-style collision energy (PROVED, but not a quotient)
+
+Let `d_j>=1` be the thirteen sheet degrees in a covered generic chamber and
+put `e_j=d_j-1`.  Since `sum d_j=20`, the seven excess chips have collision
+energy
+
+```text
+K(d)=sum_j binom(e_j,2)=(sum_j d_j^2-34)/2.              (14)
+```
+
+At a simple event write the edge slide as `{a,c}->{c,b}`.  Then only
+`d_a'=d_a-1` and `d_b'=d_b+1` change, so
+
+```text
+K(d')-K(d)=d_b-d_a+1,        Delta(-K)=d_a-d_b-1.        (15)
+```
+
+The second identity is exactly the endpoint-defect form of THM-785's
+cyclic-triangle flux.  The rescaled coordinate
+
+```text
+X_sheet=8K in 8 Z_(>=0),      Delta X_sheet=8(d_b-d_a+1) (16)
+```
+
+has the step-eight quantization of THM-787.  Its zero locus is the maximally
+spread pattern: seven sheets of degree two and six of degree one.  This is a
+genuine algebraic bridge from the tournament flow work to the collar carrier,
+but `K` is incidence energy, not a tournament cyclic-triangle count.
+
+Nor is it a Lyapunov function.  The covered degree pairs `(d_a,d_b)=(3,1)`,
+`(2,1)`, and `(2,2)` respectively decrease, preserve, and increase `K`.
+More decisively, the exact height-24 atlas contains the two cores
+
+```text
+(1,2,3,4,5,6,7,8,20,23),
+(1,2,3,4,5,6,8,10,11,14).
+```
+
+They have the identical sheet-indexed initial degree vector
+
+```text
+(6,1,1,2,1,2,1,1,1,1,1,1,1),       K=10, X_sheet=80,
+```
+
+but first tear at `4/23` on sheet `1` and at `2/11` on sheet `7`,
+respectively.  Thus the labelled event word and transition instance are
+indispensable.  THM-790's Hamiltonian-path coordinate is complementary in the
+general metagraph, but here chronology is transitive with one path and the
+fixed cyclic tie path has no additional resolving power.  The theorem-bearing
+object remains (13), now equipped with `K` as telemetry.
 
 ## 4. The `w=13`, quotient-height-24 automaton always tears
 

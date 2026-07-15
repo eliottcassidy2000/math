@@ -17,11 +17,12 @@ verification:
 # THM-786 — the extent-form exit theorem
 
 > **Correction (codex-S10 referee audit).** The no-companion extent theorem in
-> §2 is sound. The serving/de-phase bound and sparse completion originally
-> claimed in §3 are false as stated and are withdrawn; see MISTAKE-148. The
-> census in §4 is finite evidence only. Consequently §5 does not finish the
-> general r=8 pierce. THM-788 gives a sound replacement reduction through the
-> number of active fastest periods.
+> §2 is sound. The original factor-one serving/de-phase bound, unsigned swap
+> rule, and `sum c<f` sparse completion are withdrawn; see MISTAKE-148.
+> Sections 3a--3c replace them with proved factor-two, signed-balance, and
+> `sum c<g` statements. The census in §4 is finite unreproduced evidence only,
+> so §5 still does not finish the general r=8 pierce. THM-788 gives a
+> complementary sound reduction through the number of active fastest periods.
 
 ## (1) The wall-count constant was an artifact (REFUTED, exact certificate)
 
@@ -46,11 +47,14 @@ Let f, g be the fastest and second-fastest owners.
 > **(a)** Every wall of a non-f owner in a run's interior (≥ 1/w_f from the run
 > ends) lies in a complete in-run f-period, whose visitor set must be BALANCED
 > (Σ w^{-1} ≡ 0 mod 7) and of size ≥ 2 — the single-visitor break (THM-783(3)).
-> **(b)** Hence if no interior g-wall is served by a balanced co-landing
-> companion, the interior contains no g-wall at all, and
+> Call the entire nonempty set `V\{g}` in such a period its **balanced
+> companion cluster**; its inverse sum is `-g^(-1)`. **(b)** Hence if no
+> interior g-wall is served by a balanced companion cluster, the interior
+> contains no g-wall at all, and
 > **extent < 1/w_g + 2/w_f.**
 > **(c)** In general, extent < (M_g + 1)/w_g + 2/w_f, where M_g is the maximal
-> number of CONSECUTIVE interior g-walls with balanced-visited periods.
+> number of CONSECUTIVE interior g-walls with balanced-visited periods; set
+> `M_g=0` when there are no interior g-walls.
 
 ## (3) Corrected geometric co-landing machinery (PROVED)
 
@@ -77,6 +81,25 @@ it only uses their order and spacing. The original factor-one bound is false.
 For `(f,g,c)=(11,8,6)`, four consecutive `g`-walls are served, with signed
 separations `1/16,1/48,-1/48,-1/16`; the old right side is `35/11<4`, whereas
 (S) gives `59/11`.
+
+The coefficient `2` is asymptotically sharp, even for residue-balanced pairs.
+For `k>=2`, take
+
+```text
+f=3k-1,        g=3k-2,        c=k.
+```
+
+The two consecutive `g`-walls `1+-1/(2g)` and the two `c`-walls
+`1+-1/(2c)` lie pairwise in the adjacent `f`-periods bounded by distances
+`1/(2f)` and `3/(2f)` from `1`. If a universal replacement of (S) used a
+coefficient `C`, its `L=2` instance would require
+
+```text
+C > f(g-c)/(gc) = (3k-1)(2k-2)/(k(3k-2)) -> 2.
+```
+
+Choosing `k=4 (mod 7)` makes `g+c=0 (mod 7)` and keeps `f,g,c` nonzero
+modulo seven, so the sharpness persists inside the balanced-pair lens.
 
 The exact small-triple audit checks all `19,600` triples `c<g<f<=50`: (S) has
 zero failures, whereas the old factor-one integer bound fails `3,981` times.

@@ -130,20 +130,26 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788; corrected THM-779; MISTAKE-147/148;
+- **Source:** THM-780/782/783/784/786/788/789/791; corrected THM-779; MISTAKE-147/148;
   HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
   twelve-core has `|G'|>=182^(-12)` and the normalized `rho` regime is
   genuinely bounded.  THM-782 specializes this to an anchored `72^(-10)`
-  return packet in every ten-core.
-- **Collar progress:** THM-790 gives the even-maximum sporadic collar a bounded
+  return packet in every ten-core.  THM-789 symmetrizes it to safe mass
+  `2*72^(-10)` and component width `72^(-10)/(5 max(U))`, but its exact
+  trapped-anchor example shows that global deep-component selection is the
+  next target; refining one anchored phase cell is insufficient.
+- **Collar progress:** THM-791 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
   for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero
   survivors over 117 grouped event times.  Open: make the tear uniform in
   quotient height and in `w=13c`, then splice it with the center/high-order
-  clock dichotomy.
+  clock dichotomy.  The collision energy `K=sum binom(d_j-1,2)` obeys the
+  THM-785 endpoint-defect flux and THM-787 step-eight law.  Exact equal-energy
+  liars show that current across `K`-cuts must retain runner labels and the
+  event word.
 - **r=8 correction and surviving structure:** raw covered-wall count is
   unbounded even for divisor-complete families; the exact refuter is a fixed
   seven-token permutation stalk plus owner `182m+1`.  The rooted redundancy
@@ -162,6 +168,10 @@
   THM-783/786's signed balance/span laws.  THM-784 supplies an
   independent simpler unbounded-run family, confirming that this quotient is
   necessary rather than an artefact of the divisor-complete construction.
+- **Parallel folded target:** orient the connected components of the deep set
+  by eroded folded-diamond escape margin and prove that at least one global
+  component escapes.  Do not recurse only inside a chosen anchor: THM-789's
+  `4/17` versus `14/19` example makes that strategy formally incomplete.
 - **Tournament guardrail:** wall-event tournaments are transitive and forget
   the stalk; the normalized `A8` graph forgets the metric base.  The faithful
   carrier is `(core component, labelled minimal stalk, event word, redundancy

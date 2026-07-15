@@ -98,9 +98,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase/erosion packet | PROVED symmetric packet measure `>=2*72^(-10)`, component width `>=72^(-10)/(5 maxU)`, pointwise thickness tax, and erosion `E_U subset H minus R_U` under tightness. An exact admissible row traps the entire natural return set at one deep anchor but escapes at another; global component selection, not local refinement, is the missing lemma. | THM-782/789 |
-| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier. FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors). Uniform tear remains open. | THM-791 + exact 117-event-group certificate |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty. Residuals are global eroded-packet noncontainment, uniform collar tear, unbounded shallow descent, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/791; HYP-6820 |
+| ten-core phase-cell / erosion packet | PROVED anchored return packet; symmetrization gives safe measure at least `2*72^(-10)` and a component of length at least `72^(-10)/(5 max(U))`; Bohr erosion and a pointwise odd-exception thickness tax hold.  An exact core traps every natural local refinement at `t=4/17` but escapes at `14/19`, so global deep-component selection—not fixed-anchor refinement—is the residual. | THM-782/789 + exact trapping certificate |
+| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier.  FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors).  Uniform tear remains open. | THM-791 + exact 117-event-group certificate |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/791; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -221,13 +221,27 @@ quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.
 
-THM-790 now clocks the remaining even-maximum collar more sharply.  Its
+THM-791 now clocks the remaining even-maximum collar more sharply.  Its
 eleven-speed maximizer has denominator at most `4R-2`; safe mass occupies many
 top teeth with repeated disjoint flank owners; and a forced odd `13c` exception
 produces a labelled moving edge cover on thirteen quotient sheets.  For `c=1`
 and `U subset [1,24]`, an exact sweep of all 1,144,066 cores and 117 grouped
 event times leaves zero survivors.  This is a new finite slice, not the missing
 uniform automaton tear.
+
+The collar overlap degrees carry the exact energy
+`K=sum_j binom(d_j-1,2)`.  A simple event satisfies
+`Delta(-K)=d_departure-d_entry-1`, the THM-785 endpoint-defect flux, and `8K`
+has THM-787's step-eight increments.  This is a useful current coordinate but
+not a quotient: two certified height-24 cores have the same indexed degree
+vector and `8K=80` yet first tear at different events and sheets.
+
+THM-789 changes the folded residual in a complementary direction.  Symmetric
+return packets improve the safe-measure and component-width floors, while its
+exact `U_0` example proves that the full local Bohr return set and every
+literal phase refinement can remain trapped at one deep time even though a
+different deep time escapes.  The next folded theorem must compare or select
+global deep components; further refinement of a fixed anchor is insufficient.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

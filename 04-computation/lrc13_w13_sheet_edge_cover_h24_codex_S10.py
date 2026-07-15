@@ -42,6 +42,15 @@ sheet degrees, simultaneous events, and this token current.  The cyclic sheet
 order 0,...,12 may be used as a tie Hamiltonian path only if the full labelled
 incidence/event-word sidecar is retained; without that sidecar, scores, SCCs,
 cycles, and Hamiltonian paths do not preserve the LRC predicate.
+
+The script also certifies the exact degree-collision energy
+
+    K = sum_j binom(d_j-1,2),        X_sheet = 8K.
+
+For a covered simple slide from departure sheet a to entry sheet b,
+Delta K=d_b-d_a+1.  Two explicit cores have the same labelled initial degree
+vector and X_sheet but different first tears, proving that this energy is a
+useful flux coordinate rather than a sufficient quotient.
 """
 
 from __future__ import annotations
@@ -69,6 +78,11 @@ EXPECTED_DECISION_DIGEST = (
 EXPECTED_EVENT_DIGEST = (
     "b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca"
 )
+ENERGY_LIAR_CORES = {
+    (1, 2, 3, 4, 5, 6, 7, 8, 20, 23): ("4/23", 1),
+    (1, 2, 3, 4, 5, 6, 8, 10, 11, 14): ("2/11", 7),
+}
+ENERGY_LIAR_DEGREES = (6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1)
 
 
 def set_gcd(values: tuple[int, ...]) -> int:
@@ -145,6 +159,31 @@ def fmt_fraction(value: F) -> str:
     return f"{value.numerator}/{value.denominator}"
 
 
+def choose_two(value: int) -> int:
+    return value * (value - 1) // 2
+
+
+def collision_energy(degrees: tuple[int, ...]) -> int:
+    """Collision count among degree-excess chips in a covered chamber."""
+    assert len(degrees) == MODULUS and min(degrees) >= 1
+    return sum(choose_two(degree - 1) for degree in degrees)
+
+
+def audit_collision_flux_identity() -> None:
+    """Audit every locally possible covered simple-slide degree pair."""
+    for departure_degree in range(2, 21):
+        for entry_degree in range(1, 21):
+            before = (
+                choose_two(departure_degree - 1)
+                + choose_two(entry_degree - 1)
+            )
+            after = (
+                choose_two(departure_degree - 2)
+                + choose_two(entry_degree)
+            )
+            assert after - before == entry_degree - departure_degree + 1
+
+
 def main() -> None:
     candidates = tuple(
         value for value in range(1, MAX_U + 1) if value % MODULUS
@@ -165,6 +204,9 @@ def main() -> None:
     failure_histogram: Counter[str] = Counter()
     initial_missing_cardinalities: Counter[int] = Counter()
     first_failure_missing_cardinalities: Counter[int] = Counter()
+    energy_liar_records = {}
+
+    audit_collision_flux_identity()
 
     for core in combinations(candidates, CORE_SIZE):
         total += 1
@@ -178,6 +220,7 @@ def main() -> None:
         for speed in core:
             for sheet in initial_edges[speed]:
                 degrees[sheet] += 1
+        initial_degree_vector = tuple(degrees)
 
         first_missing = missing_mask(degrees)
         initial_missing_cardinalities[first_missing.bit_count()] += 1
@@ -219,6 +262,13 @@ def main() -> None:
             (",".join(map(str, core))
              + f"|{first_missing:04x}|{failure_label}|{failure_missing:04x}\n").encode()
         )
+        if core in ENERGY_LIAR_CORES:
+            energy_liar_records[core] = (
+                initial_degree_vector,
+                collision_energy(initial_degree_vector),
+                failure_label,
+                failure_missing,
+            )
 
     decision_hexdigest = decision_digest.hexdigest()
     script_digest = sha256(Path(__file__).read_bytes()).hexdigest()
@@ -279,6 +329,14 @@ def main() -> None:
     print("  tie Hamiltonian path: cyclic sheet labels 0,1,...,12 (telemetry only)")
     print("  no clean runner tournament: pairwise orientations discard coverage")
     print("  required sidecar: sheet degrees, runner labels, simultaneous updates")
+    print("  collision energy: K=sum binom(d_j-1,2), X_sheet=8K")
+    print("  simple-slide flux: Delta K=d_entry-d_departure+1")
+    for core in ENERGY_LIAR_CORES:
+        degrees, energy, failure_label, failure_mask = energy_liar_records[core]
+        print(
+            f"  energy liar {core}: degrees={degrees} X_sheet={8*energy} "
+            f"first_tear={failure_label} missing_sheet={failure_mask.bit_length()-1}"
+        )
     print()
 
     assert total == 1_144_066
@@ -290,6 +348,13 @@ def main() -> None:
     assert primitive_divisor_initial_covers == 20_604
     assert divisor_survivors == 0
     assert primitive_divisor_survivors == 0
+    assert set(energy_liar_records) == set(ENERGY_LIAR_CORES)
+    for core, (failure_label, missing_sheet) in ENERGY_LIAR_CORES.items():
+        degrees, energy, actual_label, actual_mask = energy_liar_records[core]
+        assert degrees == ENERGY_LIAR_DEGREES
+        assert energy == 10 and 8 * energy == 80
+        assert actual_label == failure_label
+        assert actual_mask == 1 << missing_sheet
     if EXPECTED_EVENT_DIGEST != "TO_BE_FILLED":
         assert event_digest == EXPECTED_EVENT_DIGEST
     if EXPECTED_DECISION_DIGEST != "TO_BE_FILLED":
