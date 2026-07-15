@@ -1,0 +1,73 @@
+THM-828 SIZE-NINE FORWARD MAP: TILING -> CLASS -> MERGED NODE
+canonical code = least upper-triangle adjacency integer under all S9 relabellings
+
+endpoints=116 pairs=58 merged-nodes=53
+pair multiplicity per merged node={1: 48, 2: 5}
+merged nodes carrying multiple false-palindrome pairs=5
+self-converse nodes/pairs/endpoints=49/54/108; non-self-converse nodes=4
+all 5 repeated nodes are self-converse, carry exactly 2 pairs, and lie in D=0x4c41818: YES
+all 58 pairs join converse ordinary classes and map to one merged node: YES
+source-node projection=53 multiplicity={1: 48, 2: 5}
+complement-partner projection=54 multiplicity={1: 51, 2: 2, 3: 1}
+ordered/unordered projected P cells=58/58; all singleton; loops=0
+
+count node-key pair-count endpoints H Aut H/Aut D-hist ordinary-class-presentations
+ 0 0x0000a68d4/0x0000a68d4  2  4  1581  1  1581 {'0x4c41818': 2} {'0x0000a68d4': 4}
+ 1 0x0008840b2/0x0008840b2  2  4  1903  1  1903 {'0x4c41818': 2} {'0x0008840b2': 4}
+ 2 0x000884195/0x000884195  2  4  1711  1  1711 {'0x4c41818': 2} {'0x000884195': 4}
+ 3 0x0008848a3/0x0008848a3  2  4  1931  1  1931 {'0x4c41818': 2} {'0x0008848a3': 4}
+ 4 0x0008c51f3/0x0008c51f3  2  4  1639  1  1639 {'0x4c41818': 2} {'0x0008c51f3': 4}
+ 5 0x000052080/0x000052080  1  2  1233  1  1233 {'0x5df5e18': 1} {'0x000052080': 2}
+ 6 0x00005c1f9/0x00005c1f9  1  2   995  1   995 {'0x4c41818': 1} {'0x00005c1f9': 2}
+ 7 0x0000869f5/0x0000869f5  1  2  1401  1  1401 {'0x4c41818': 1} {'0x0000869f5': 2}
+ 8 0x00008c8eb/0x00008c8eb  1  2  1481  1  1481 {'0x4c41818': 1} {'0x00008c8eb': 2}
+ 9 0x0000aad94/0x0000aad94  1  2   829  1   829 {'0x5df5e18': 1} {'0x0000aad94': 2}
+10 0x0000ae8d2/0x0000ae8d2  1  2  1515  1  1515 {'0x4c41818': 1} {'0x0000ae8d2': 2}
+11 0x0000c41f1/0x0000c41f1  1  2  2033  1  2033 {'0x8c2c0c': 1} {'0x0000c41f1': 2}
+12 0x0000d50a7/0x0000d50a7  1  2  1437  1  1437 {'0x4c41818': 1} {'0x0000d50a7': 2}
+13 0x0000e63e1/0x0000e63e1  1  2  2243  1  2243 {'0x18e4e8a': 1} {'0x0000e63e1': 2}
+14 0x0001470e8/0x0001470e8  1  2  2565  1  2565 {'0x95088a': 1} {'0x0001470e8': 2}
+15 0x0001560f2/0x0001560f2  1  2  2455  1  2455 {'0x4483414': 1} {'0x0001560f2': 2}
+16 0x0001664e2/0x0001664e2  1  2  2659  1  2659 {'0x5c67a9e': 1} {'0x0001664e2': 2}
+17 0x0001668e2/0x0001969e1  1  2  2699  1  2699 {'0x4511092': 1} {'0x0001668e2': 1, '0x0001969e1': 1}
+18 0x000442386/0x000442386  1  2   997  1   997 {'0x5df5e18': 1} {'0x000442386': 2}
+19 0x0004441c0/0x0004840a0  1  2  1623  3   541 {'0x4c41818': 1} {'0x0004441c0': 1, '0x0004840a0': 1}
+20 0x0004451c0/0x0004c40a0  1  2  1671  3   557 {'0x4c41818': 1} {'0x0004451c0': 1, '0x0004c40a0': 1}
+21 0x00044a080/0x00044a080  1  2  1449  1  1449 {'0x5df5e18': 1} {'0x00044a080': 2}
+22 0x00049eadb/0x00049eadb  1  2  1141  1  1141 {'0x4c41818': 1} {'0x00049eadb': 2}
+23 0x0008840aa/0x0008840aa  1  2  1729  1  1729 {'0x4c41818': 1} {'0x0008840aa': 2}
+24 0x0008849a0/0x0008849a0  1  2  1925  1  1925 {'0x4c41818': 1} {'0x0008849a0': 2}
+25 0x00088ab8c/0x00088ab8c  1  2  1237  1  1237 {'0x11b4600': 1} {'0x00088ab8c': 2}
+26 0x00089f2eb/0x00089f2eb  1  2  1511  1  1511 {'0x4c41818': 1} {'0x00089f2eb': 2}
+27 0x0008acab2/0x0008acab2  1  2  1561  1  1561 {'0x4c41818': 1} {'0x0008acab2': 2}
+28 0x0008c3580/0x0008c3580  1  2  1665  1  1665 {'0x11b4600': 1} {'0x0008c3580': 2}
+29 0x0008c64d8/0x0008c64d8  1  2  2305  1  2305 {'0x1976a0c': 1} {'0x0008c64d8': 2}
+30 0x0008c74f0/0x0008c74f0  1  2  2075  1  2075 {'0x4483414': 1} {'0x0008c74f0': 2}
+31 0x0008d59e3/0x0008d59e3  1  2  1937  1  1937 {'0x8c2c0c': 1} {'0x0008d59e3': 2}
+32 0x0009470f3/0x0009470f3  1  2  2043  1  2043 {'0x4c41818': 1} {'0x0009470f3': 2}
+33 0x000986ce1/0x000986ce1  1  2  2991  1  2991 {'0x1976a0c': 1} {'0x000986ce1': 2}
+34 0x000a84293/0x000a84293  1  2  1685  1  1685 {'0x4c41818': 1} {'0x000a84293': 2}
+35 0x000a9c195/0x000a9c195  1  2  1479  1  1479 {'0x4c41818': 1} {'0x000a9c195': 2}
+36 0x0010c58c0/0x0010c58c0  1  2  2517  1  2517 {'0x1976a0c': 1} {'0x0010c58c0': 2}
+37 0x0011468f0/0x0011468f0  1  2  3043  1  3043 {'0x192486': 1} {'0x0011468f0': 2}
+38 0x00114e9e1/0x0019168e4  1  2  3021  1  3021 {'0x192486': 1} {'0x00114e9e1': 1, '0x0019168e4': 1}
+39 0x0011661e1/0x0011661e1  1  2  3055  1  3055 {'0x192486': 1} {'0x0011661e1': 2}
+40 0x0011669e2/0x0011669e2  1  2  2847  1  2847 {'0x5c67a9e': 1} {'0x0011669e2': 2}
+41 0x0012cc8a5/0x0012cc8a5  1  2  2187  1  2187 {'0x4c41818': 1} {'0x0012cc8a5': 2}
+42 0x0014c60e5/0x0014c60e5  1  2  2359  1  2359 {'0x4483414': 1} {'0x0014c60e5': 2}
+43 0x0014cd0c3/0x0014cd0c3  1  2  2523  1  2523 {'0x18e4e8a': 1} {'0x0014cd0c3': 2}
+44 0x00156e5e0/0x00156e5e0  1  2  2653  1  2653 {'0x95088a': 1} {'0x00156e5e0': 2}
+45 0x00190e4f0/0x00190e4f0  1  2  3007  1  3007 {'0x18e4e8a': 1} {'0x00190e4f0': 2}
+46 0x0019463d1/0x0019463d1  1  2  3035  1  3035 {'0x18e4e8a': 1} {'0x0019463d1': 2}
+47 0x0019464d3/0x0019464d3  1  2  2709  1  2709 {'0x4483414': 1} {'0x0019464d3': 2}
+48 0x0029869e5/0x0029869e5  1  2  3027  1  3027 {'0x192486': 1} {'0x0029869e5': 2}
+49 0x0093256c5/0x0093256c5  1  2  2825  1  2825 {'0x4511092': 1} {'0x0093256c5': 2}
+50 0x00a3969e5/0x00a3969e5  1  2  3043  1  3043 {'0x1976a0c': 1} {'0x00a3969e5': 2}
+51 0x0121568e2/0x0121568e2  1  2  3281  1  3281 {'0x192486': 1} {'0x0121568e2': 2}
+52 0x01254e5e1/0x01254e5e1  1  2  3333  3  1111 {'0x192486': 1} {'0x01254e5e1': 2}
+
+INTERPRETATION
+A repeated group means several of the 58 false-palindrome pairs are distinct fixed-Hamilton-path
+presentations inside the same converse-merged tournament node; it is not a new isomorphism class.
+For 54 pairs the two reflected tilings are presentations of the SAME self-converse ordinary class;
+only 4 pairs have endpoints in two distinct ordinary classes exchanged by converse.

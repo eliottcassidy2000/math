@@ -1,0 +1,36 @@
+THM-810 x THM-828: N=9 FALSE-PALINDROME METAGRAPH FLOW
+exact on 58 witnesses, 348 distinct n=8 endpoint tilings, and the full 2^21 atlas
+
+global n=8 quotient: nodes=3528 local-pairs=46886 blue-pairs=1794 black-pairs=436580 local-depth-max=7
+face support: merged-nodes=155 categories={'mixed': 2, 'pure_black': 153}
+selected lines: occurrences=174 distinct=87 multiplicity={1: 58, 4: 29}
+selected black-line |Delta x|={0: 32, 8: 52, 16: 72, 24: 4, 32: 13, 48: 1}
+selected line endpoint types={('mixed', 'pure_black'): 2, ('pure_black', 'pure_black'): 172}
+full-arc flip signs={'climb': 4643, 'level': 2548, 'descend': 2553}; marked-wiggly signs={'climb': 3133, 'level': 2027, 'descend': 2148}
+
+OBJECTIVE SECTOR ORDER
+rank D cube witnesses nodes lines xbar depthbar H/Aut-bar categories K-|Dx|
+ 0 11b4600 0010  2   6  3   220/3    25/6     487/2 {'mixed': 2, 'pure_black': 10} {'16': 4, '32': 1, '48': 1}
+ 1 5df5e18 0111  4  12  6      68    33/8    1813/6 {'pure_black': 24} {'16': 6, '24': 4, '32': 2}
+ 2 4c41818 0101 26  72 39 1660/39 709/156  15545/39 {'pure_black': 156} {'0': 20, '8': 20, '16': 33, '32': 5}
+ 3 08c2c0c 0100  2   6  3    92/3       5       451 {'pure_black': 12} {'16': 5, '32': 1}
+ 4 4483414 0001  4  12  6    88/3   61/12    2815/6 {'pure_black': 24} {'0': 1, '8': 4, '16': 6, '32': 1}
+ 5 4511092 1001  2   6  3    68/3    31/6    1598/3 {'pure_black': 12} {'8': 4, '16': 1, '32': 1}
+ 6 18e4e8a 1110  4  10  6      20    11/2    2223/4 {'pure_black': 24} {'0': 1, '8': 4, '16': 6, '32': 1}
+ 7 1976a0c 0110  4  12  6    56/3    23/4   6847/12 {'pure_black': 24} {'0': 1, '8': 4, '16': 6, '32': 1}
+ 8 095088a 1100  2   6  3    52/3   67/12    3503/6 {'pure_black': 12} {'0': 1, '8': 4, '16': 1}
+ 9 0192486 1000  6  16  9    44/3  101/18    3583/6 {'pure_black': 36} {'0': 7, '8': 8, '16': 3}
+10 5c67a9e 1111  2   6  3      12    17/3    1139/2 {'pure_black': 12} {'0': 1, '8': 4, '16': 1}
+
+DEFECT-CUBE ADJACENCY VERSUS ACTUAL METAGRAPH RELATIONS
+cube-adjacent: {'black_bridge_pairs': 14, 'blue_bridge_pairs': 0, 'distance_0': 1, 'distance_1': 11, 'distance_2': 2, 'local_bridge_pairs': 12, 'node_overlap_pairs': 1, 'pairs': 14, 'selected_line_overlap_pairs': 0}
+not-cube-adjacent: {'black_bridge_pairs': 38, 'blue_bridge_pairs': 0, 'distance_0': 7, 'distance_1': 21, 'distance_2': 12, 'distance_3': 1, 'local_bridge_pairs': 25, 'node_overlap_pairs': 7, 'pairs': 41, 'selected_line_overlap_pairs': 0}
+mean |axis barycentre gap| cube={'numerator': 1724, 'denominator': 91, 'decimal': 18.945054945054945} noncube={'numerator': 38720, 'denominator': 1599, 'decimal': 24.215134459036896}
+cube edge gaps in sector order={1: 5, 2: 2, 4: 3, 5: 1, 6: 1, 7: 1, 9: 1}
+axis-oriented cube root=11b4600 radial changes={-1: 5, 1: 9} directed reach=2/11
+cube local maxima=['11b4600', '18e4e8a', '5df5e18'] local minima=['0192486', '1976a0c', '5c67a9e']
+
+INTERPRETATION
+Every witness selects three exclusively black complement lines; its reflected mate selects the same lines.
+The 11 D sectors are therefore carriers of finite sets of black lines, not metagraph nodes.
+Cube adjacency is compared with, but never identified with, local, blue, or black metagraph adjacency.
