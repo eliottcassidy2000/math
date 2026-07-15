@@ -1,0 +1,22 @@
+================================================================================================
+(1) structure of the quasi-fixed set X, n=5,6 (exact, full enumeration)
+================================================================================================
+n=5: |X|=8  gridsym=0  NON-gridsym=8  (SC(n) target: 8)
+   Klein-4 orbits on non-gridsym X: 2 orbits, sizes Counter({4: 2})
+n=6: |X|=16  gridsym=4  NON-gridsym=12  (SC(n) target: 12)
+   Klein-4 orbits on non-gridsym X: 3 orbits, sizes Counter({4: 3})
+
+================================================================================================
+(3) Burnside-affine: W(n) = sum_sigma #{t : sigma T(t) = T(kappa t)} = sum_{t in X} |Aut(T(t))|
+================================================================================================
+n=5: W = sum_{t in X} |Aut| = 8
+n=6: W = sum_{t in X} |Aut| = 20
+n=7: W = sum_{t in X} |Aut| = 88
+
+(n=8 Burnside-affine and the direct n=8 filter run in part (2) -- see below)
+
+================================================================================================
+(2) n=8 CHECK: count non-gridsym quasi-fixed tilings; TARGET SC(8) = 176
+================================================================================================
+m=21, tilings=2097152; pass 1 = invariant filter (scores, c3)...
+   ...0/2097152, survivors so far 0
