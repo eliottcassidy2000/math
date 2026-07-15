@@ -2,14 +2,14 @@
 //
 // The strong recursive key Lambda uses only the three ordered n=7 face-node
 // pairs, the UABC colour word, and the raw mirror-layer S2 counts.  Lambda is
-// strictly weaker than Omega+B2 because it omits the upper n=8 node pair.  If
-// Lambda is injective, Omega+B2 is injective without constructing an n=8
+// strictly weaker than Omega+S2 because it omits the upper n=8 node pair.  If
+// Lambda is injective, Omega+S2 is injective without constructing an n=8
 // tournament-class atlas.
 //
 // Tournament Analysis is reported as a refinement path: B3 lower node/colour,
 // then tau=3,...,7 S2 layers, then the fixed layer.  Its pairwise observable is
 // the number of unordered literal-line pairs separated at each stage.  The
-// switch is retention versus retention per encoded bit, and the displayed
+// switches are retention versus separation per carrier cell, and the displayed
 // refinement order is the tie Hamiltonian path.
 //
 // Assumption challenge: the vertices carrying the proof are complement lines,
@@ -261,6 +261,75 @@ int main(int argc, char **argv) {
     Stats literal_stats = stats(literal);
     assert(literal_stats.cells == lines);
 
+    // Genealogy of the 418 lower-node/colour double collisions.
+    std::vector<uint32_t> base_order(rows.size());
+    std::iota(base_order.begin(), base_order.end(), uint32_t{0});
+    std::sort(base_order.begin(), base_order.end(), [&](uint32_t i, uint32_t j) {
+        if (rows[i].base != rows[j].base) return rows[i].base < rows[j].base;
+        return rows[i].line < rows[j].line;
+    });
+
+    std::array<uint64_t,6> first_separation{}; // tau=3,...,7,fixed tau=8
+    std::array<uint64_t,8> face_difference{};  // bit 0=A, 1=B, 2=C
+    uint64_t base_doubletons = 0;
+    uint64_t ac_equal_pairs = 0;
+    uint64_t s11_residual_face_occurrences = 0;
+    auto is_s11_residual = [](uint16_t e) {
+        return e == 0x12ca || e == 0x12cb ||
+               e == 0x146c || e == 0x146d;
+    };
+
+    for (size_t i = 0; i < base_order.size();) {
+        size_t j = i + 1;
+        while (j < base_order.size() &&
+               rows[base_order[j]].base == rows[base_order[i]].base) ++j;
+        assert(j - i <= 2);
+        if (j - i == 2) {
+            const Rich& x = rows[base_order[i]];
+            const Rich& y = rows[base_order[i + 1]];
+            ++base_doubletons;
+
+            unsigned pattern = 0;
+            for (int face = 0; face < 3; ++face) {
+                pattern |= unsigned(x.face_line[face] != y.face_line[face]) << face;
+                s11_residual_face_occurrences += is_s11_residual(x.face_line[face]);
+                s11_residual_face_occurrences += is_s11_residual(y.face_line[face]);
+            }
+            ++face_difference[pattern];
+            ac_equal_pairs += (pattern & 0b101u) == 0;
+
+            int first = 0;
+            while (first < 6 && x.digit[first] == y.digit[first]) ++first;
+            assert(first < 6);
+            ++first_separation[first];
+        }
+        i = j;
+    }
+
+    const std::array<uint64_t,6> expected_first{166,104,74,22,52,0};
+    const std::array<uint64_t,8> expected_faces{0,0,0,4,0,44,4,366};
+    assert(ladder[0].max_mult == 2);
+    assert(base_doubletons == ladder[0].collision_cells);
+    assert(base_doubletons == ladder[0].excess);
+    assert(first_separation == expected_first);
+    assert(face_difference == expected_faces);
+    for (int d = 0; d < 6; ++d)
+        assert(first_separation[d] == ladder[d].excess - ladder[d + 1].excess);
+    assert(ac_equal_pairs == 0);
+    assert(s11_residual_face_occurrences == 0);
+
+    const uint64_t total_pairs = uint64_t(lines) * (lines - 1) / 2;
+    std::array<uint64_t,7> separated_pairs{};
+    for (int i = 0; i < 7; ++i)
+        separated_pairs[i] = total_pairs - ladder[i].pairs;
+    for (int i = 0; i < 5; ++i) {
+        assert(separated_pairs[i] < separated_pairs[i + 1]);
+        assert(u128(separated_pairs[i]) * ladder[i + 1].cells >
+               u128(separated_pairs[i + 1]) * ladder[i].cells);
+    }
+    assert(separated_pairs[5] == separated_pairs[6]);
+    assert(ladder[5].cells == ladder[6].cells);
+
     // Exact full-key collision witnesses; keys are 75-bit integers, not hashes.
     struct Witness { Wide key; uint32_t line; };
     std::vector<Witness> full;
@@ -318,7 +387,7 @@ int main(int argc, char **argv) {
                   << " collision_cells=" << ladder[i].collision_cells
                   << " max=" << ladder[i].max_mult << " pairs=" << ladder[i].pairs << "\n";
     std::cout << "\nLambda injective=" << (ladder[6].cells == lines ? "True" : "False")
-              << "; therefore Omega+B2 injective="
+              << "; therefore Omega+S2 injective="
               << (ladder[6].cells == lines ? "True" : "undecided by lower key") << "\n";
     std::cout << "collision witnesses=";
     if (collision_witnesses.empty()) std::cout << "()";
@@ -329,15 +398,38 @@ int main(int argc, char **argv) {
     }
     std::cout << "\n";
     std::cout << "UABC closed-form failures=" << atom_failures
-              << "; B2 skew-binomial failures=" << skew_failures << "\n";
+              << "; S2 skew-binomial failures=" << skew_failures << "\n";
     std::cout << "S2 radix product=128000 (<2^17); full Lambda uses <=75 exact bits.\n";
     std::cout << "At n=8 each tau layer has <=3 positions. Counts plus first position moments\n"
                  "reconstruct every layer, so S2+M1 is an unconditional exact fallback (not needed\n"
                  "if Lambda is already injective).\n\n";
+    std::cout << "BASE DOUBLETON GENEALOGY\n"
+              << "  first separator: tau3=" << first_separation[0]
+              << " tau4=" << first_separation[1]
+              << " tau5=" << first_separation[2]
+              << " tau6=" << first_separation[3]
+              << " tau7=" << first_separation[4]
+              << " fixed8=" << first_separation[5] << "\n"
+              << "  differing literal faces: A+B=" << face_difference[3]
+              << " A+C=" << face_difference[5]
+              << " B+C=" << face_difference[6]
+              << " A+B+C=" << face_difference[7] << "\n"
+              << "  A/C-equal pairs=" << ac_equal_pairs
+              << "; S11 residual-face occurrences="
+              << s11_residual_face_occurrences << "\n\n";
     std::cout << "TOURNAMENT ANALYSIS\n"
                  "  vertices=the seven displayed recursive carriers\n"
                  "  observable=unordered literal-line pairs separated\n"
-                 "  switches=retention / retention per encoded bit\n"
-                 "  tie Hamiltonian path=B3 -> tau3 -> tau4 -> tau5 -> tau6 -> tau7 -> fixed\n";
+                 "  switches=retention / separation per carrier cell\n";
+    std::cout << "  separated_pairs=(";
+    for (int i = 0; i < 7; ++i)
+        std::cout << (i ? "," : "") << separated_pairs[i];
+    std::cout << ")\n"
+                 "  retention score_hist={0:1,...,6:1} directed_3cycles=0 SCCs=[1,1,1,1,1,1,1] HP=1\n"
+                 "  economy score_hist={0:1,...,6:1} directed_3cycles=0 SCCs=[1,1,1,1,1,1,1] HP=1\n"
+                 "  edge_flips=20\n"
+                 "  tie_order=(B3,tau3,tau4,tau5,tau6,tau7,fixed)\n"
+                 "  retention_HP=(tau7,fixed,tau6,tau5,tau4,tau3,B3)\n"
+                 "  economy_HP=(B3,tau3,tau4,tau5,tau6,tau7,fixed)\n";
     return 0;
 }

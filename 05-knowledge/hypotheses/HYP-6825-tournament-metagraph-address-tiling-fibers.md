@@ -40,6 +40,9 @@ artifacts:
   - 01-canon/theorems/THM-801-mobius-cech-descent-and-pure-cubic-colour-law.md
   - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.json
+  - 01-canon/theorems/THM-809-n8-lower-first-metagraph-codec.md
+  - 04-computation/mobius_cech_n8_frontier_codex_S13.cpp
+  - 05-knowledge/results/mobius_cech_n8_frontier_codex_S13.out
 related:
   - HYP-2245
   - HYP-2989
@@ -57,6 +60,9 @@ related:
   - THM-793
   - THM-796
   - THM-801
+  - THM-807
+  - THM-808
+  - THM-809
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -444,9 +450,19 @@ THM-801's missing gap-contraction face resolves the square.  The endpoint face
 lines are fixed within each pair, while the gap lines change
 `0x115<->0x114` and `0x0c3<->0x0c2`: phase one is a black loop at node 33 and
 phase zero is a black cross-line `21--33`.  The three-face `Omega_7` carrier
-already separates all four, without its mirror `B2` sidecar.  Thus phase is
-irreducible in the two-end cover but reconstructible as gap incidence in the
-full Cech cover.
+already separates all four, without its mirror `S2` (raw B2) sidecar.  Thus
+phase is irreducible in the two-end cover but reconstructible as gap incidence
+in the full Cech cover.
+
+THM-809 then exhausts all `1,048,576` literal `n=8` lines without an upper
+node atlas.  Lower three-face node pairs plus `UABC` leave 418 doubletons;
+the `S2` mirror-layer filtration reduces their excess through
+`252,148,74,52,0,0`.  The moving `tau=7` layer is decisive and the fixed layer
+is redundant.  None of the 418 doubletons has both endpoint faces `A,C` equal,
+and none contains an `n=7` phase-square line as a face.  This separates two
+questions that had been conflated: the old seed dies, while a new static
+genealogy appears and is completely coded.  Static `Omega+S2` is decided at
+`n=8`; continuation equivalence there is not.
 
 When the two face successors are retained only as an unordered multiset, the
 node-boundary and `Xi_n` partitions have `8310` and `16380` cells.  This
@@ -467,6 +483,18 @@ distributed rail is perfectly concordant with score variance through `n=6`
 and `99.9%` concordant at `n=7`.  It lives on the unmerged local-flip graph, not
 the complement-line graph; pairing that voltage with THM-796's primitive face
 vector is a promising two-axis address rather than a proved graph identity.
+
+Two ostensibly separate LRC threads enforce the same preservation rule without
+identifying their coordinates.  THM-808 exhibits equal path masks and equal
+centered continued-fraction blocks with different target masks; the missing
+field is an affine finite-field redundancy root with an explicit transport
+law.  THM-807 shows that a quadratic general selector collapses to a linear
+owner-labelled endpoint selector on a connected-return branch.  Thus
+minimality is operation- and branch-relative, just as line phase is necessary
+for the two-face cover but reconstructed by the three-face cover.  The honest
+join is a fibre product over the same literal owner-labelled path orbit, not a
+concatenation of the `C2` line phase, order-five chord holonomy, and affine
+root as though they were one scalar.
 
 ## Tournament Analysis
 
@@ -503,13 +531,12 @@ singleton SCCs, and one Hamiltonian path, with 20 edge flips between switches.
 ## Open boundary
 
 1. Extend bounded continuation minimization and rooted weighted blue/black
-   1-WL to `n=8`; test whether either remains complete and compare their first
-   twins.  Existing nauty class machinery may avoid a full `8!` per-tiling
-   canonicalization.  Before building the full atlas, enumerate endpoint-fixed
-   interior permutations that conjugate a tiling endpoint to its chord-dual
-   phase mate, then impose face-loop and overlap compatibility.  The known
-   5-cycle seed dies in the direct channel at `n=7`, so search for new primitive
-   seeds and compare them with THM-801's first `Omega+B2` collision.
+   1-WL to `n=8`; test transport closure rather than static injectivity, which
+   THM-809 has settled.  Compare any continuation twins with the 52 residual
+   lower-key doubletons before the decisive `tau=7` layer.  Existing nauty
+   class machinery may avoid a full `8!` per-tiling canonicalization.  In
+   parallel, push the static `Lambda` filtration to its first undecided size
+   `n=9`, retaining witnesses and positional moments for the first collision.
 2. Define the chord-duality witness groupoid: isomorphisms modulo endpoint
    automorphisms, endpoint-fixing subsets, restrictions to all legal faces,
    and overlap holonomy.  Prove that this packet detects phase collisions and

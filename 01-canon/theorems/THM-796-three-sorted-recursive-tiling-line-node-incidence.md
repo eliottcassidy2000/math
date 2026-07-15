@@ -4,7 +4,7 @@ title: Three-sorted recursive incidence of tilings, complement lines, and conver
 status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, bounded continuation minimization, and census through n=7)
 source: codex-2026-07-15-S9/S11 (independent S9 and S2 audits, reconciled)
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
-related: [THM-477, THM-785, THM-790, THM-801, HYP-6815, HYP-6825, HYP-6865]
+related: [THM-477, THM-785, THM-790, THM-801, THM-809, HYP-6815, HYP-6825, HYP-6865]
 verification:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.out
@@ -795,9 +795,20 @@ On the residual square this resolution is completely visible:
 The two endpoint faces are unchanged inside a phase pair; only the gap face
 changes.  Here the coherent phase bit is exactly the indicator that the gap
 line closes as a loop.  THM-801's node-compressed `Omega_7` already separates
-all four lines, without its additional mirror `B2` sidecar.  Hence “phase is
-necessary” is cover-relative: it is irreducible for the two-end cover and is
-reconstructed as gap-face incidence in the full three-face cover.
+all four lines, without its additional mirror `S2` (raw B2) sidecar.  Hence
+“phase is necessary” is cover-relative: it is irreducible for the two-end
+cover and is reconstructed as gap-face incidence in the full three-face cover.
+
+THM-809 independently pushes the lower three-face address across all
+`1,048,576` lines at `n=8`.  Lower node pairs plus colour leave 418 doubletons;
+successive mirror-layer populations have collision excess
+`252,148,74,52,0,0`, with the size-three `tau=7` layer decisive and the fixed
+layer redundant.  None of those 418 pairs has both `A,C` face lines equal, and
+none of their 2,508 face occurrences is one of the four lines in (12.3).
+Consequently this is a new collision genealogy rather than a lift of the
+order-five phase square.  The result closes static `Omega+S2` injectivity at
+`n=8`; it does not extend the bounded continuation minimization or prove
+transport closure.
 
 ## 13. Tournament Analysis and the LRC preservation boundary
 

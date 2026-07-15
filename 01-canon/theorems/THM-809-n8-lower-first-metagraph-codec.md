@@ -1,10 +1,10 @@
 ---
 id: THM-809
 title: The lower-first B3/S2 metagraph address is injective on all n=8 complement lines
-status: FINITE-EXACT (all 1,048,576 n=8 complement lines)
-source: codex-2026-07-15-S13
+status: FINITE-EXACT (all 1,048,576 n=8 complement lines, with collision genealogy)
+source: codex-2026-07-15-S13/S11
 depends_on: [THM-553, THM-796, THM-801]
-related: [THM-785, THM-790, HYP-6880]
+related: [THM-785, THM-790, HYP-6825, HYP-6880]
 verification:
   - 04-computation/mobius_cech_n8_frontier_codex_S13.cpp
   - 05-knowledge/results/mobius_cech_n8_frontier_codex_S13.out
@@ -28,12 +28,12 @@ Lambda(e)=((a,a'),(b,b'),(c,c'),UABC,(S2_tau)_(3<=tau<=8)). (1)
 ```
 
 Then `Lambda` is injective on all `1,048,576` `n=8` complement lines.
-Consequently THM-801's `Omega+B2` address is also injective at `n=8`, because
-it contains every field of (1) and additionally retains the ordered upper
-node pair.
+Consequently THM-801's `Omega+S2` address, where `S2` is its raw `B2` sidecar,
+is also injective at `n=8`, because it contains every field of (1) and
+additionally retains the ordered upper node pair.
 
-This is stronger than constructing an `n=8` atlas and using its canonical
-codes to repair lower collisions: no upper tournament classification occurs.
+This avoids constructing an `n=8` atlas and using its canonical codes to
+repair lower collisions: no upper tournament classification occurs.
 
 ## Exact refinement ladder
 
@@ -55,6 +55,35 @@ the fixed layer adds no information after it.  This localizes the `n=8`
 frontier much more sharply than the yes/no statement: within-layer crossing
 position, not an upper isomorphism code, is the decisive new datum.
 
+## Collision genealogy
+
+The 418 base doubletons split by their first separating mirror layer as
+
+```text
+tau=3     tau=4     tau=5     tau=6     tau=7     fixed tau=8
+  166       104        74        22        52          0.
+```
+
+Their literal face-line difference patterns are
+
+```text
+A+B: 4,       A+C: 44,       B+C: 4,       A+B+C: 366.       (2)
+```
+
+In particular no base doubleton has both `A` and `C` face lines equal.  Across
+all `418*2*3=2,508` face occurrences, none is one of THM-796's four `n=7`
+continuation residuals
+
+```text
+0x12ca, 0x12cb, 0x146c, 0x146d.                              (3)
+```
+
+Thus the `n=8` ambiguities are a new genealogy, not lifts of the `n=7`
+two-end phase square.  The old square dies when its lines become cross-lines;
+new lower-node collisions are born elsewhere and are separated by successive
+mirror layers.  This gives exact cross-size evidence that collision ancestry
+is a birth/death system rather than a nested family.
+
 ## Why the computation is exact
 
 The verifier reads the previously certified `n=7` tiling-to-node array, whose
@@ -73,10 +102,10 @@ size `s` has `binom(s+3,3)` possibilities.  Hence the exact mixed radix of S2
 is
 
 ```text
-4*4*10*10*20*4=128000 < 2^17.                            (2)
+4*4*10*10*20*4=128000 < 2^17.                            (4)
 ```
 
-Six nine-bit node ranks, four colour bits, and (2) fit in 75 bits.  The
+Six nine-bit node ranks, four colour bits, and (4) fit in 75 bits.  The
 program sorts these exact integers; it uses no probabilistic hash and retains
 literal line indices for every collision.  No full-key collisions occur.
 
@@ -107,8 +136,12 @@ THM-796's non-lumpability obstruction remains.
 
 The seven refinement stages in the table are the Tournament Analysis
 vertices.  The pairwise observable is the number of unordered literal-line
-pairs separated, the switches are raw retention and retention per encoded
-bit, and the displayed recursive order is the tie Hamiltonian path.
+pairs separated, and the switches are total retention and separation per
+carrier cell.  Both scalar-ranked tournaments are transitive, with score
+histogram `{0:1,...,6:1}`, zero directed triangles, singleton SCCs, and one
+Hamiltonian path; the gauges flip 20 of 21 edges.  The retention path runs
+from the tied `tau=7`/fixed exact carriers through the coarser carriers, while
+the economy path is the displayed refinement order.
 
 The useful mathematical vertices are marked complement lines, gap-contracted
 faces, and mirror layers—not unmarked tournament vertices.  `Lambda` preserves
@@ -116,4 +149,8 @@ the literal line within the audited size and all declared lower projections.
 It destroys the upper class, automorphism/path stabilizer, owner-labelled LRC
 state, metric gaps, wall chronology, and carry.  Its exactness is therefore a
 finite recursive-codec theorem, not an LRC(14) proof or an all-size Markov
-theorem.
+theorem.  It does not prove that `Lambda_n` is injective for every `n`, that
+its fields transport under inverse lifts or internal deletion, or that the
+resulting quotient is a continuation-complete state.  The first undecided
+static size is `n=9`; continuation minimization at `n=8` remains a separate
+problem. ∎

@@ -517,12 +517,12 @@ certificate clauses, and proof obligations.
   face-lift to `n=8`.  THM-801's gap face detects it immediately: phase one
   gives a black gap loop `33--33`, phase zero a black gap cross-line `21--33`,
   so `Omega_7` resolves the square without `B2`.
-- **Next pull:** join MPA-34/35 while extending the operation alphabet to inverse lifts, internal
-  deletion/repair, and an explicit terminal proof-obligation predicate; then
-  run `n=8` and compare the stable line partition directly with rooted weighted
-  line-WL and primitive face rows.  First enumerate endpoint-fixed interior
-  chord-dual permutations, face-loop compatibility, and overlap holonomy;
-  this can expose new primitive `n=8` seeds before full node canonicalization.
+- **Next pull:** join MPA-34/35 while extending the operation alphabet to
+  inverse lifts, internal deletion/repair, and an explicit terminal proof-
+  obligation predicate.  Run the `n=8` continuation minimizer and compare it
+  with rooted weighted line-WL and THM-809's already-injective static `Lambda`
+  filtration.  Classify any transport twins among the 52 doubletons surviving
+  through `tau=6`; the static collision frontier has moved to `n=9`.
 - **Old thread:** HYP-3513 Nerode; HYP-3106 controlled forgetting; MPA-02/04/12;
   THM-781/793/796/801; line-metagraph simultaneous-isomorphism work.
 - **Must preserve:** the named line, simultaneous half-edge coupling, exact
@@ -558,28 +558,24 @@ certificate clauses, and proof obligations.
 - **Deliverable:** an all-cover phase-obstruction theorem plus the smallest
   staircase cover with a genuine higher holonomy class.
 
-### MPA-34 — Decide `Omega+B2` at `n=8`
+### MPA-34 — Decide `Omega+S2` at `n=8`
 
 - **Delivered finite codec:** THM-801's expanded `Omega_7` tensor has 16,308
-  cells for 16,384 lines; the mirror crossing-layer `B2` sidecar separates all
-  76 remaining double collisions.  The coarser `(S2,S3)` address leaves only
-  16 collisions inside 6,126 coloured node-pair fibres.
-- **Pull:** stream the 1,048,576 `n=8` lines without materializing all tiling
-  records, using canonical class lookup or nauty batching.  Classify the first
-  `Omega+B2` collision by path-orbit stabilizer and corewise interaction degree.
+  cells for 16,384 lines; the mirror crossing-layer `S2` vector from the B2
+  chart separates all 76 remaining double collisions.  The coarser `(S2,S3)`
+  address leaves only 16 collisions inside 6,126 coloured node-pair fibres.
 - **Must preserve:** ordered upper/three-face endpoint-node pairs, four-role
   colour, raw crossing-layer counts, literal loop multiplicity, and witnesses
   for every collision.
-- **Deliverable:** injectivity or the first exact collision at `n=8`; no opaque
-  hash-only report.
-
-- **Delivered by THM-809:** the stronger lower-only key `Lambda` is injective
+- **Delivered by THM-809:** the strictly weaker lower-only key `Lambda` is injective
   on all `1,048,576` lines.  The exact excess ladder is
   `418,252,148,74,52,0,0` as `tau=3,...,7,fixed` are adjoined.  Therefore the
   new size-three `tau=7` layer, not the upper node pair or fixed layer, closes
-  `n=8`.  The next pull is the same layer-by-layer test at `n=9`, with first
-  positional moments retained as the guaranteed repair when counts cease to
-  reconstruct a layer.
+  `n=8`.  Among the 418 initial doubletons, the first-separator counts are
+  `166,104,74,22,52`; none has both endpoint faces equal or contains an S11
+  residual line as a face.  The next pull is the same layer-by-layer test at
+  `n=9`, with first positional moments retained as the guaranteed repair when
+  counts cease to reconstruct a layer.
 
 ### MPA-35 — Minimize the corewise Boolean Möbius stalk
 
@@ -707,10 +703,12 @@ certificate clauses, and proof obligations.
 
 ## Recommended next three pulls
 
-1. Join `MPA-32/34/35`: test the two-face continuation residual against the
-   three-face `Omega+B2` codec, then find its first `n=8` collision and explain
-   it by an endpoint-fixed interior permutation or the smallest missing
-   corewise Möbius coefficient.  Include inverse lifts and internal deletion.
+1. Join `MPA-32/34/35`: compare `n=8` continuation cells with THM-809's
+   injective lower `Lambda` and its 418-to-zero layer genealogy.  Include
+   inverse lifts and internal deletion, then test static injectivity at `n=9`
+   and explain the first pre-separation or genuine collision by an endpoint-
+   fixed interior permutation or the smallest missing corewise Möbius
+   coefficient.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
 3. Join `MPA-28/38`: make continued-fraction substitutions act on the labelled

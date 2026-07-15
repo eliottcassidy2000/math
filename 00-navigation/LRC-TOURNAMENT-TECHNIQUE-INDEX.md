@@ -143,11 +143,17 @@ obligations, and proof-carrier interfaces.
   refinement.  Retention and separation-per-cell rankings are transitive by
   construction, have the standard score histogram and one Hamiltonian path,
   and flip 20 edges; the fingerprints are consistency telemetry.
+- **`n=8` static join:** THM-809 proves the strictly weaker lower-only
+  `Lambda` key, hence `Omega+S2`, injective on all 1,048,576 lines.  Its excess
+  ladder is `418,252,148,74,52,0,0`; none of the 418 base doubletons has both
+  endpoint faces equal or contains an S11 residual-square face.  The old
+  phase branch dies and the `n=8` collisions have a new genealogy.
 - **Next pull:** Minimize bounded continuation equivalence under endpoint
   extension, internal deletion/repair, complement, and reflection at `n=8`,
-  comparing the exact cells with line-WL and THM-801's `Omega+B2` codec.
-  Enumerate endpoint-fixed interior permutations absorbing chord duality, then
-  impose face-loop and overlap compatibility before full `n=8` canonicalization.
+  comparing the exact cells with line-WL and THM-809's `Lambda` ladder.  Static
+  injectivity is closed at `n=8`; push that question to `n=9`.  Enumerate
+  endpoint-fixed interior permutations absorbing chord duality, then impose
+  face-loop and overlap compatibility before full `n=8` canonicalization.
   Then disintegrate THM-785's exact endpoint-bit flux law over
   `HP/Aut`, line-orbit, and category fibres to predict the black drift, then run
   the rooted weighted line-WL/flow audit at `n=8`; classify the first twins by
@@ -156,7 +162,7 @@ obligations, and proof-carrier interfaces.
   sector/owner/carry/monodromy as stalk.  Pull-card list:
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`.
 - **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, THM-793,
-  THM-796, THM-801, HYP-2245, HYP-2989, HYP-3106,
+  THM-796, THM-801, THM-809, HYP-2245, HYP-2989, HYP-3106,
   HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
   `merged_metagraph_recursive_three_sort_audit_codex_S2.py/.out`;
   `three_sorted_metagraph_continuation_minimization_codex_S11.py/.out`;

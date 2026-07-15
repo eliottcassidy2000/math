@@ -500,18 +500,44 @@ the two endpoint faces remain fixed while the gap lines are
 `0x115/0x114` and `0x0c3/0x0c2`.  Phase one is a black gap loop at node 33;
 phase zero is a black gap cross-line from node 21 to 33.  The node-compressed
 three-face `Omega` carrier therefore separates the whole square without the
-mirror `B2` sidecar.  A coordinate irreducible for one cover has become
-ordinary incidence after refining the cover.
+mirror `S2` (raw B2) sidecar.  A coordinate irreducible for one cover has
+become ordinary incidence after refining the cover.
+
+The completed `n=8` lower-first census shows what happens one size later.
+Lower three-face node pairs and colour leave 418 doubletons.  Mirror layers
+separate `166,104,74,22,52` of them first at `tau=3,4,5,6,7`; the fixed layer
+separates none.  Their literal face-difference patterns are
+`A+B:4, A+C:44, B+C:4, A+B+C:366`.  No pair has both endpoint faces equal,
+and none of its 2,508 face occurrences is an `n=7` residual-square line.  The
+old phase branch has genuinely died; new ambiguity is born elsewhere and is
+resolved by the moving outer mirror layer.  Recursion should therefore track
+a genealogy of ambiguity classes, not assume that exceptional sets embed
+monotonically from one size to the next.
 
 This reframes the next search: classify endpoint-fixed interior permutations
 that absorb chord duality, then impose compatible face restrictions and
 overlap holonomy.  This permutation-first search may expose the next primitive
 seed without constructing a full next-size node atlas.
 
+Seemingly unrelated LRC transport results sharpen the ontology.  THM-808 has
+equal path masks and equal centered continued-fraction blocks with unequal
+target masks; an affine redundancy root repairs the collision by an explicit
+finite-field transport law.  THM-807 proves that a quadratic general selector
+becomes linear after restricting to connected return sets.  These are the
+same two lessons in different stalks: equal current observations need not have
+equal futures, and a field can be minimal in one branch yet reconstructible or
+redundant in another.  The line phase, chord witness, affine root, owner
+incidence, and metric translation must be joined over a common literal
+owner/path witness.  They are not interchangeable scalar decorations.
+
 This suggests a better recursive ontology: node data are observations, lines
-are continuation states, tilings are witnesses, and phase is descent data gluing
-the two face witnesses.  The object is organized by what operations can be
-performed, not by which marks happen to appear in one graph drawing.
+are continuation states, tilings are witnesses, and phase is descent data
+gluing the face witnesses.  The “4D object” is not established as a literal
+four-manifold.  It is better treated as a typed arithmetic-geometric stack:
+measured phase base, combinatorial presentation fibre, arithmetic obligation
+fibre, and directed recursive transport.  The object is organized by what
+operations can be performed, not by which marks happen to appear in one graph
+drawing.
 
 If top and bottom successor cells are retained only as an unordered multiset,
 the same carriers give `8310,8310,8310,8311,16380,16380,16384,16384` cells.  This

@@ -63338,3 +63338,27 @@ wording was tightened to state that minimization is carrier-relative and
 bounded to `3<=n<=7`.  The continuation-carrier tournaments use information
 carriers, not runners, and flip 20 edges between total-retention and
 separation-per-cell scalar rankings.
+
+### Post-rebase `n=8` genealogy join
+
+Integrated concurrent THM-809 rather than leaving the static frontier stale.
+The lower-only `Lambda_8` key, which omits the upper `n=8` node pair, is
+injective on all 1,048,576 lines.  Its 418 base doubletons have first-separator
+counts `166,104,74,22,52` on mirror layers `tau=3,...,7`; the fixed layer
+separates none.  Added exact assertions and output for the literal face-
+difference census `A+B:4,A+C:44,B+C:4,A+B+C:366`.
+
+None of those 418 pairs has both endpoint faces equal, and none of their 2,508
+face occurrences is one of S11's four `n=7` residual lines.  This proves the
+old order-five phase square dies rather than lifting: `n=8` has a new collision
+genealogy, closed by the moving size-three `tau=7` layer.  Static injectivity is
+therefore settled at `n=8`; continuation minimization there and the static
+codec at `n=9` are the distinct next questions.
+
+Joined the preservation lesson to THM-807/808.  Connected-return restriction
+can make a general quadratic selector linear, while equal continued-fraction
+blocks and masks can still need an affine redundancy root for transport.
+Minimal state is relative to the branch, operation language, and terminal
+predicate; line phase, chord holonomy, affine root, owner incidence, and metric
+translation must be joined over a common literal witness rather than merged as
+one scalar.

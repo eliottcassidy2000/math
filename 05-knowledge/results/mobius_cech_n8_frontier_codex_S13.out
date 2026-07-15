@@ -12,16 +12,27 @@ RECURSIVE LAMBDA REFINEMENT
   + tau=7                         cells=1048576 excess=0 collision_cells=0 max=1 pairs=0
   + fixed tau=8                   cells=1048576 excess=0 collision_cells=0 max=1 pairs=0
 
-Lambda injective=True; therefore Omega+B2 injective=True
+Lambda injective=True; therefore Omega+S2 injective=True
 collision witnesses=()
-UABC closed-form failures=0; B2 skew-binomial failures=0
+UABC closed-form failures=0; S2 skew-binomial failures=0
 S2 radix product=128000 (<2^17); full Lambda uses <=75 exact bits.
 At n=8 each tau layer has <=3 positions. Counts plus first position moments
 reconstruct every layer, so S2+M1 is an unconditional exact fallback (not needed
 if Lambda is already injective).
 
+BASE DOUBLETON GENEALOGY
+  first separator: tau3=166 tau4=104 tau5=74 tau6=22 tau7=52 fixed8=0
+  differing literal faces: A+B=4 A+C=44 B+C=4 A+B+C=366
+  A/C-equal pairs=0; S11 residual-face occurrences=0
+
 TOURNAMENT ANALYSIS
   vertices=the seven displayed recursive carriers
   observable=unordered literal-line pairs separated
-  switches=retention / retention per encoded bit
-  tie Hamiltonian path=B3 -> tau3 -> tau4 -> tau5 -> tau6 -> tau7 -> fixed
+  switches=retention / separation per carrier cell
+  separated_pairs=(549755289182,549755289348,549755289452,549755289526,549755289548,549755289600,549755289600)
+  retention score_hist={0:1,...,6:1} directed_3cycles=0 SCCs=[1,1,1,1,1,1,1] HP=1
+  economy score_hist={0:1,...,6:1} directed_3cycles=0 SCCs=[1,1,1,1,1,1,1] HP=1
+  edge_flips=20
+  tie_order=(B3,tau3,tau4,tau5,tau6,tau7,fixed)
+  retention_HP=(tau7,fixed,tau6,tau5,tau4,tau3,B3)
+  economy_HP=(B3,tau3,tau4,tau5,tau6,tau7,fixed)

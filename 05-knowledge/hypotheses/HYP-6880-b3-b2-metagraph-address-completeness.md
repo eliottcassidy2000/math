@@ -1,9 +1,9 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+B2 injectivity proved through n=8 by THM-801/809
-source: codex-2026-07-15-S12
-depends_on: [THM-553, THM-796, THM-801]
+status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+S2 (raw B2 sidecar) injectivity proved through n=8 by THM-801/809
+source: codex-2026-07-15-S12/S13/S11
+depends_on: [THM-553, THM-796, THM-801, THM-809]
 related: [THM-805, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
@@ -20,7 +20,7 @@ node-pair fibres beyond the current finite atlas.
 THM-801 completed the exact audit:
 
 ```text
-n       lines       Xi cells    Omega cells    Omega+B2 cells
+n       lines       Xi cells    Omega cells    Omega+S2 cells
 4           4              4              4                 4
 5          32             32             32                32
 6         512            509            510               512
@@ -28,11 +28,11 @@ n       lines       Xi cells    Omega cells    Omega+B2 cells
 8   1,048,576               -              -         1,048,576
 ```
 
-Thus `Omega+B2` is injective on literal lines through `n=8`.  At `n=7`, the
-gap face removes 277 of `Xi`'s 353 collision excess and `B2` removes the
-remaining 76.  Inside coloured node-pair fibres, `B2`, `B3`, and their join
-leave respectively 172, 1,368, and 16 excess collisions; the two charts
-preserve genuinely different information.
+Thus `Omega+S2` is injective on literal lines through `n=8`.  At `n=7`, the
+gap face removes 277 of `Xi`'s 353 collision excess and the `S2` vector from
+the B2 chart removes the remaining 76.  Inside coloured node-pair fibres,
+`S2`, `S3`, and their join leave respectively 172, 1,368, and 16 excess
+collisions; the two charts preserve genuinely different information.
 
 The same computation found exact compact companions:
 
@@ -75,6 +75,13 @@ size-three crossing layer `tau=7` is the first complete separator, while the
 fixed layer is redundant after it.  The literal B3 lower-line triple is also
 injective on all `2^20` lines, independently checking the Cech descent.
 
+The 418 base doubletons have first-separator counts
+`166,104,74,22,52` on `tau=3,...,7`.  Their literal face-difference patterns
+are `A+B:4,A+C:44,B+C:4,A+B+C:366`; none has both endpoint faces `A,C`
+equal, and none contains one of the four S11 `n=7` phase-square residuals as a
+face.  The `n=8` ambiguity is therefore a new genealogy rather than a direct
+lift of the two-face phase obstruction.
+
 The all-size claim remains deliberately open.  Even an injective finite codec
 need not be a continuation-complete state: THM-796 already proves failure of
 strong node lumpability.  A recursive theorem would have to transport the
@@ -92,7 +99,7 @@ I_(u,c)(p_L,p_H,a)=1[reconstruct(c,p_L,p_H,a) in F_n(u)].
 
 The full anchored Boolean Möbius transform of this function is invertible and
 therefore continuation-safe if its substitution action is retained.  The
-research question is whether `Omega+B2` identifies a small closed sector of
+research question is whether `Omega+S2` identifies a small closed sector of
 these coefficients.  Static equality must be tested separately from equality
 under future deletion, complement, reflection, and lift operations.
 

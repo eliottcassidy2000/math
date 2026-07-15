@@ -1,10 +1,10 @@
 ---
 id: THM-801
 title: The seven-term tiling recursion lifts to exact three-face Cech descent, pure cubic colour interaction, and tournament/Smith Mobius curvature
-status: PROVED (three-face tiling and line descent, colour laws, interval-face Mobius and Smith identities) + FINITE-EXACT (Omega/B2 codec through n=8; other node/fibre classifications through n=7)
-source: codex-2026-07-15-S12
+status: PROVED (three-face tiling and line descent, colour laws, interval-face Mobius and Smith identities) + FINITE-EXACT (Omega/S2 codec through n=8; node/fibre classifications through n=7)
+source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-442, THM-553, THM-785, THM-790, THM-796]
-related: [THM-549, THM-550, THM-781, THM-805, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6880]
+related: [THM-549, THM-550, THM-781, THM-805, THM-809, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6880]
 verification:
   - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.out
@@ -147,18 +147,27 @@ membership strata `A,B,C,AB,AC,BC,ABC`.  The finite exact classifications are:
 | 5 | 32 | 32 | 32 | 32 |
 | 6 | 512 | 509 | 510 | 512 |
 | 7 | 16,384 | 16,031 | 16,308 | 16,384 |
-| 8 | 1,048,576 | not computed | not computed | 1,048,576 |
+| 8 | 1,048,576 | -- | -- | 1,048,576 |
 
 At `n=7`, the missing gap face removes 277 of `Xi`'s 353 collision excess.
 The remaining 76 double collisions are all separated by `S2`.  This proves
 finite injectivity of `Omega+S2` through `n=8`, not an all-size or Markov-state
 claim.
 
-The `n=8` row is proved by THM-809 without an upper class atlas.  The weaker
-lower-only key consisting of the three ordered face-node pairs, UABC colour,
-and S2 has excess ladder `418,252,148,74,52,0,0` as the five crossing layers
-and fixed layer are adjoined.  Hence `tau=7` is the first complete separator;
-the upper node pair and fixed layer are unnecessary at this size.
+THM-809 proves the `n=8` row without constructing upper `n=8` node classes.
+The strictly weaker lower-only key `Lambda_8` uses the three ordered lower
+node pairs, `UABC`, and the `S2` mirror-layer populations.  Its collision
+excess falls
+
+```text
+418 -> 252 -> 148 -> 74 -> 52 -> 0 -> 0
+```
+
+as `tau=3,...,7,fixed` are adjoined.  The 418 initial doubletons are a new
+genealogy: none has both endpoint faces `A,C` equal and none uses any of the
+four recursively stable `n=7` phase-square lines as a face.  Thus static
+injectivity now holds through `n=8`, while continuation completeness remains
+open.
 
 The independent bounded continuation minimizer localizes the join.  Recursive
 labelled refinement of `Xi_7` leaves only the phase/reflection square

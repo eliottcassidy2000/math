@@ -568,7 +568,11 @@
   retain only `8310` node cells and `16380` `Xi` cells.  This delivers the
   forward part of MPA-32; inverse lifts, internal deletion, direct line-WL
   comparison, the chord-duality isomorphism torsor with face restrictions,
-  endpoint-fixed interior-permutation classification, and `n=8` remain open.
+  endpoint-fixed interior-permutation classification, `n=8` continuation
+  minimization, node WL, and the full recursive atlas remain open.  THM-809
+  separately closes static `Omega+S2` injectivity at `n=8`: its weaker lower
+  key has excess ladder `418,252,148,74,52,0,0`, and none of the base
+  doubletons is an S11 phase-square lift.
 - **Component-obligation join:** The independent S10 LRC synthesis proposes
   objects `(P,C,O,I;A,M,W,K)` with reversible holonomy inside exact strata and
   certified descent/branching between strata.  This matches THM-796's
@@ -576,7 +580,8 @@
   supply: reduced token/sheet return and metric component translation.  Keep
   both distinct from same/converse class-sheet holonomy; a zero reduced return
   can still move the metric base (THM-794).
-- **Open theorem:** Test connectivity/WL completeness at `n=8`, then attach the
+- **Open theorem:** Test connectivity/WL completeness and continuation closure
+  at `n=8`, then attach the
   address as a base-chart label to the affine incidence object
   `X={(u,t,c,lambda):u=ct,Phi(u,t)>=lambda}`.  The stalk must retain observer
   cut, gap/sector metric, closed threshold wall, endpoint owner, scale/carry,
@@ -594,9 +599,10 @@
   labelled assignment, event step, and endpoint schedule are required for transport.
 - **Pull list:** 39 bounded cards in
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
-  first pull is the MPA-32/34/35 join: compare continuation cells with the full
-  three-face/Möbius codec at `n=8`, followed by black-flux disintegration and
-  the owner-labelled heptagon/endpoint stalk join.
+  first pull is the MPA-32/34/35 join: compare `n=8` continuation cells with
+  THM-809's injective lower `Lambda` and its layer genealogy, then push the
+  static codec to `n=9`.  Follow with black-flux disintegration and the owner-
+  labelled heptagon/endpoint stalk join.
 
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.
