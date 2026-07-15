@@ -503,10 +503,13 @@ counts **converse-merged nodes**.  At `n=7`, for example, its 368 pure-black
 classes form the 184 pure-black nodes reported here.  Line-instance totals and
 energy/`C3` spectra agree exactly.
 
-THM-790 independently proves the centered-score-shift antisymmetry, the same
-half-tiling count, and the endpoint-leg localization of the transitive drop.
-Its 2,048-blue-line `n=8` prediction and parity/max values agree with (8); the
-explicit four-bin `n=8` distribution above is the stronger common target.
-The currently stored `n=8` class script stops at 6,874 rather than A000568's
-6,880 classes, so no `n=8` node-phase or black-flow table is certified by that
-run.  This does not affect either general blue proof.
+THM-790 independently proves the master leg law, centered-score-shift
+antisymmetry, the same half-tiling count, and endpoint localization of every
+line's energy drop.  Its full-layer generating function is the `v=1` marginal
+of (12a), while (12a) retains the transverse defect that flux alone discards.
+The completed sub-Hamiltonian classifier now certifies all 6,880 `n=8`
+classes.  It exactly matches the predicted blue distribution
+`{0:640,2:960,4:384,6:64}` and black distribution
+`{0:214400,1:380928,2:260160,3:133120,4:46720,5:10240,6:960}` in
+`|Delta C3|`.  Its unmerged phase counts are `(PB,M,PK)=(3,173,6704)`.
+An `n=8` converse-merged flow address and directed reach census remain open.

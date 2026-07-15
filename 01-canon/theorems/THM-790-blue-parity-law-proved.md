@@ -1,10 +1,11 @@
 ---
 id: THM-790
 title: THE LEG LAW and the blue parity law PROVED — every d=m line's axis drop is Δx = 8(e₁ − e_n) (the difference of the two LEG out-degrees); the full flip acts on centered scores as reversal-plus-leg-defect; closed-form drop spectra for the whole layer AND the blue sublayer at every n; the parity law is a one-line corollary; the half-tiling model counts blue objects
-status: PROVED (every identity verified on ALL tilings n = 4..7 — the leg law, the score action, both generating functions, all six lemmas) + n=8 CERTIFIED (subH-augmented classifier: 6,880/6,880 classes; every prediction exact incl. the blue GF histogram {0:640, 16:960, 32:384, 48:64}; codex-S9's interim 6,874-bucket caveat is superseded by the completed run)source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
+status: PROVED (every identity verified on ALL tilings n = 4..7 — the leg law, the score action, both generating functions, all six lemmas) + n=8 CERTIFIED (subH-augmented classifier: 6,880/6,880 classes; every prediction exact incl. the blue GF histogram {0:640, 16:960, 32:384, 48:64}; codex-S9's interim 6,874-bucket caveat is superseded by the completed run)
+source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
 depends_on:
   - THM-787   # the flow study whose laws this proves
-related: [HYP-6855, everything-is-the-triangle, the geometric-alignment frame]
+related: [THM-785, THM-787, THM-791, HYP-6855, everything-is-the-triangle, the geometric-alignment frame]
 verification: 04-computation/blue_parity_law_proof_referee_opus_S305.py (six lemmas, all blue tilings n=4..7)
   + 04-computation/leg_law_referee_opus_S305.py (the leg law + score action + GFs, ALL tilings n=4..7)
   + 04-computation/metagraph_flow_n8_check_opus_S305.py (n=8)
@@ -79,7 +80,8 @@ the legs ("the strict ordering's transitivity leaves through the legs").
   complement-symmetric score multiset; a class without one is PURE BLACK** —
   a per-node exclusion computable from the score sequence at every n.
 - Blue lines never touch pure black (THM-787(1)); the transitive node's whole
-  d=m connectivity is ONE blue pipe of drop 8(n−2) landing mixed.
+  d=m connectivity is ONE blue pipe of drop 8(n−2), landing mixed in the
+  certified `n=4..8` atlases.  General mixed landing remains open.
 
 ## (6) The half-tiling model and the recursion (PROVED / named)
 
@@ -93,8 +95,6 @@ half model quotients the hypotenuse; the QUARTER model (quotient the half
 domain by its residual reflection through the apex) is the named next descent
 — its fixed cells sit on the staircase's short diagonal, and its count
 formula 2^{(half+fixed′)/2} is the next prediction to verify.
-
-## (7) The n = 8 certification
 
 ## The predictive-formula ledger (what can be written down at EVERY n)
 
