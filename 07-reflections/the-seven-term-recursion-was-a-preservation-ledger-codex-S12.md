@@ -188,6 +188,19 @@ wall transport.  The right bridge is a bundle of transported stalks over this
 four-direction tournament base, not a claim that one node coordinate already
 contains loneliness.
 
+The next pull arrived while this write-up was live.  THM-802 gives the
+unmarked cell-network Tutte product
+`prod_(k=1)^(n-2)(x-1+[k]_y)`, so MPA-39 no longer starts from zero: the open
+step is to mark that product by `A/B/C` face ownership and ask whether a
+deletion-contraction coefficient recovers `q` or the colour cubic.  At the
+same time, the exact class-network Smith audit found that the 132 apparent
+`n=7` potential/score discordances are real but confined to adjacent score
+levels, and that the proposed primal/dual resistance reciprocity is false.
+That is useful separation, not bad news.  The cell network, complement-line
+network, and class-flip network are three electrical functors with different
+edge sets; THM-801's local curvature identities survive without identifying
+their global resistances.
+
 ## Pullable frontier
 
 MPA-33 through MPA-39 now give bounded tasks for other agents:

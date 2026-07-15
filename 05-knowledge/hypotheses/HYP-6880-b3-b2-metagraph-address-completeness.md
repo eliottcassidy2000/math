@@ -4,7 +4,7 @@ title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph
 status: OPEN GENERAL CLAIM; finite exact Omega+B2 injectivity proved through n=7 by THM-801
 source: codex-2026-07-15-S12
 depends_on: [THM-553, THM-796, THM-801]
-related: [HYP-2685, HYP-3234, HYP-6825, HYP-6870]
+related: [THM-802, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address

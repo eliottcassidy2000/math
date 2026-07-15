@@ -608,8 +608,11 @@ certificate clauses, and proof obligations.
   series chain of parallel bundles, while THM-801's primal/dual face
   curvatures recover `(lambda,epsilon)`.  The colour law is a single top
   Boolean interaction, not an Eisenstein imbalance.
-- **Pull:** compute the closed Tutte polynomial of the bundle chain and mark
-  cells by the `A/B/C` cover membership.  Test whether its deletion-
+- **Concurrent delivery:** THM-802 gives the unmarked closed form
+  `T(N_n;x,y)=prod_(k=1)^(n-2)(x-1+[k]_y)` and its classical specializations.
+  Its unit-circle and harmonic-measure bridges are logged separately under
+  HYP-6885.
+- **Pull:** mark this product by `A/B/C` cover membership and test whether its deletion-
   contraction coefficients recover the `q` edge polynomial, the blue
   self-dual specialization, or the even-graph/Tutte duality left dormant by
   the old kps-S11 thread.

@@ -56,6 +56,14 @@ Files: THM-801; HYP-6880; `mobius_cech_metagraph_codec_codex_S12.py/.out/.json`;
 reflection `the-seven-term-recursion-was-a-preservation-ledger-codex-S12.md`;
 MPA-33..39.
 
+POST-PULL INTEGRATION: kind-pasteur THM-802 concurrently proved the unmarked
+cell-network Tutte product `prod_k(x-1+[k]_y)`, starting MPA-39; the remaining
+target is its `A/B/C`-marked specialization.  Opus S308 decided that the 132
+class-network `n=7` concordance exceptions are real but adjacent-level only,
+and refuted simple primal/dual resistance reciprocity.  THM-801 now states
+explicitly that its local Smith/Möbius formulas do not identify these global
+electrical networks.
+
 ---
 
 ## opus-2026-07-14-S307 -- THE SMITH DIAGRAM OF THE METAGRAPH (HYP-6865): G_n as a resistor network -- TRANSITIVITY RESISTANCE R_4 = 3/7 exact (R_5, R_6 exact, R_7 float ~0.0699); THE CONCORDANCE LAW (harmonic potential orders classes EXACTLY like the score-variance axis through n=6, exact); current migrates spine->sea but the bottleneck is ALWAYS the last spine edge into the max-H sink = PALEY at n=7; archaeology sweep: the computation fills atlas item 108's named gap; E_n-side potentials = the sharpest next pull

@@ -4,7 +4,7 @@ title: The seven-term tiling recursion lifts to exact three-face Cech descent, p
 status: PROVED (three-face tiling and line descent, colour laws, interval-face Mobius and Smith identities) + FINITE-EXACT (Omega/B2 codec and node/fibre classifications through n=7)
 source: codex-2026-07-15-S12
 depends_on: [THM-442, THM-553, THM-785, THM-790, THM-796]
-related: [THM-549, THM-550, THM-781, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6880]
+related: [THM-549, THM-550, THM-781, THM-802, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6880]
 verification:
   - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.out
@@ -475,6 +475,15 @@ lower tournament tiling and exact tile-overlap ownership; it destroys induced-
 subtournament ancestry.  None of these quotients preserves the LRC loneliness
 predicate, whose metric scale, owner, threshold, carry, and continued-fraction
 transport still require a separate stalk.
+
+Concurrent THM-802 computes the unmarked staircase Smith network's Tutte
+polynomial as `prod_(k=1)^(n-2)(x-1+[k]_y)`.  That is the natural scalar base
+for a marked deletion-contraction refinement by the `A/B/C` ownership slots
+and `q` curvature.  It does not identify the cell-level series-parallel Smith
+network with the class-level wiggly network: the latter's exact `n=7`
+potential has adjacent-level concordance failures, and the incoming dual-side
+audit refutes simple resistance reciprocity.  Equations (8.3)–(8.4) are local
+face identities and do not require either global concordance claim.
 
 Tournament Analysis uses the information carriers
 
