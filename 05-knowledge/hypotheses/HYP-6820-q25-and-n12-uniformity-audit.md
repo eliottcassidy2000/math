@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve and uniformly rigid in Hamming radius one, while the two-sheet branch has finite bases, erosion budgets, and an odd-divisor support gate; branch emptiness remains OPEN at shallow Hamming radius at least two, aligned/full-support global components, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, uniformly loose in the AP Hamming-one/two stars, and reduced at Hamming three to the scale-one chart; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, and an exact finite all-component erosion selector; branch emptiness remains OPEN at scale-one triple lifts, Hamming radius at least four, the unbounded selector/collar residual, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -26,6 +26,9 @@ depends_on:
   - THM-789
   - THM-795
   - THM-797
+  - THM-800
+  - THM-803
+  - THM-804
   - HYP-6750
   - HYP-6775
 related:
@@ -322,10 +325,28 @@ has a strict `1/13` witness.  More generally, if one coordinate `cr` of
 `c[12]` is replaced by `w=cr mod 13`, with `13` not dividing `c`, tightness
 forces `w=cr`.  The proof uses the `c` lifted missing-owner splice germs: all
 their replacement phases would have to lie in one arc of length `2/13`, which
-forces `c/gcd(c,w)=1`, followed by seven exact low atoms.  Thus every
-hypothetical non-AP shallow tight packet differs from every AP dilation in at
-least two labelled coordinates.  The unbounded shallow residual now begins at
-Hamming radius two, where several replacements may share splice sheets.
+forces `c/gcd(c,w)=1`, followed by seven exact low atoms.
+
+THM-800 closes the two-coordinate continuation.  The oriented core-safe germ
+at a missing owner uses the half-open phase arc `(-1/13,1/13]`; exact deck
+capacity then forces both replacement orders to one, hence common scale.  At
+scale one every proper double lift has the sharp floor `M>=2/25`.  Thus the
+entire residue-preserving Hamming-one/two star is uniformly loose.
+
+THM-804 proves the next descent without claiming the missing base theorem.  If
+three labelled coordinates of `c[12]` are replaced and the resulting packet
+is tight, then all three effective orders
+
+```text
+D_i=c/gcd(c,w_i)
+```
+
+equal one.  The proof combines the same half-open germ with exact own/complement
+capacities, a two-colour sublemma, and a finite case split on order-two and
+order-at-least-three decks.  Hence every arbitrary-scale Hamming-three packet
+descends to a genuine scale-one triple lift.  Whether every proper scale-one
+triple lift is loose remains open; beyond it the unbounded shallow residual
+begins with at least four replacement colours.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -476,14 +497,46 @@ has folded value `8/33<11/13`.  The associated full twelve-set
 ```
 
 is a genuine sporadic max-peel row—its maximum deletion has `M=1/8>1/12`—
-but it is loose with `M=2/19>1/13`.  Thus the uniform proof must retain all
-closed deep components and endpoint owners, not just global maximizers or the
-prime grid.
+but it is loose with `M=2/19>1/13`.  THM-803 corrects the status of this and
+the companion signed-wall row: both are sharp for the prime-13 gate, but both
+already escape at the mandatory quarter anti-grid `11/52`.
+
+THM-803 supplies the strengthened exact carrier.  If a 13-divisible exception
+is present, the half-divisor grid forces full **parity-twisted support**
+`P(U)=C` in addition to THM-797's raw signed support.  Exactly the even
+denominators `d=2,4,6` make the 13-divisible exception universally ineligible,
+so the mandatory anti-shell ladder is `26,52,78` and no longer.  For the full
+erosion predicate put
+
+```text
+K_U=E_U+closure(R_U).
+```
+
+Containment is equivalent to `K_U subset H_(x,y)` and is decided exactly at
+the component endpoints of `K_U` together with the cusps `k/(2a),k/(2b)` of
+the folded diamond.  This selector has the scale-normal bound
+
+```text
+|Sigma(U;x,y)|<=200 max(U)^2+22 max(U).
+```
+
+Thus the continuum selection problem is finite for each core, without a raw
+height bound.  The current mandatory regression is
+
+```text
+U_*=(2,4,6,7,9,10,11,12,14,16),       (x,y)=(13,5).
+```
+
+It satisfies the exact signed complement, full parity-twisted support, every
+odd exception-divisor test, and the `26/52/78` anti-shell ladder, while the
+nonmaximal singleton component `7/22` escapes.  Consequently the uniform proof
+must control the complete owner-labelled selector; neither global maximizers
+nor any fixed short denominator ladder can replace it.
 
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
-component, and its symmetric return packet and escape margins. The runner
+component, and its symmetric return packet, selector cusps, and escape margins. The runner
 tournament records which odd runner owns a sheet but forgets the simultaneous
 hitting number; the dyadic quotient chain records recursion but needs binary
 sheet-fiber, incidence, component, and phase-cell sidecars.
@@ -492,12 +545,15 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Shallow descent from Hamming radius two.**  THM-795 removes the complete
-   Hamming-one star around every AP dilation.  Prove that any primitive
-   full-nonzero-residue packet with `chi_13=0` either descends into THM-770's
-   height-twelve box or cannot begin at Hamming radius at least two.  The next
-   exact carrier is the incidence graph between missing-owner splice germs and
-   multiple replacement teeth, with deck order and germ orientation retained.
+1. **Close the scale-one triple chart and extend descent at radius four.**
+   THM-795/800 remove the complete Hamming-one/two stars around every AP
+   dilation.  THM-804 proves that a tight three-replacement packet has common
+   scale, so classify the genuine scale-one triple lifts exactly.  For four or
+   more replacements, extend the oriented missing-owner germ/deck-capacity
+   argument to a Hall, flow, or divisor theorem.  The exact carrier is the
+   incidence graph between missing-owner splice germs and replacement teeth,
+   with the half-open orientation, deck order, owner labels, and margins
+   retained.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
@@ -506,8 +562,12 @@ The uniform theorem now has two explicit residuals:
    prove the global erosion failure
    `E_U not subset H_(x,y) minus R_U`. THM-789 proves that fixed-anchor packet
    refinement alone cannot do this, while THM-797 proves it whenever an odd
-   exception-divisor grid leaves the explicit acceptance shell and reduces
-   the mandatory q=13 residual to full or aligned-five folded support. At
+   exception-divisor grid leaves the explicit acceptance shell. THM-803 adds
+   raw/parity support, the complete `26/52/78` anti-shell ladder, and an exact
+   finite endpoint/cusp selector of size at most `200B^2+22B`.  Prove a
+   height-independent contradiction or decreasing invariant for that selector;
+   the `U_*` row shows that all short gates and both global maximizers can pass
+   while a nonmaximal component escapes. At
    higher sheets, classify and rule out THM-769's persistent colour covers,
    beginning with the explicit `s=3` equality shells of THM-772.
 
@@ -536,9 +596,9 @@ This separates overlap-rank shortage from third-runner blocker debt.  The
 height-one lift cube had 4,085 rank-short rows, 9 blocker-debt rows, and one
 zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
 `chi_13>=2`.  THM-770 supersedes that cube by an exact height-twelve theorem,
-while THM-795 supplies a global coherence lemma in the one-coordinate
-direction.  The warning now applies precisely to the multi-coordinate
-Hamming-radius-at-least-two residual.
+while THM-795/800 close the first two Hamming directions and THM-804 reduces
+the third to common scale.  The warning now applies precisely to genuine
+scale-one triple lifts and the four-or-more-coordinate residual.
 
 ## F. Information-preservation / Tournament Analysis
 
@@ -561,15 +621,17 @@ deciding objects are therefore:
 - in the two-sheet equality packet, the folded half-frequency diamond together
   with the exact locations of all deep components, their pointwise escape
   margins, labelled phase-cell/anchor incidence, the symmetric return erosion
-  of THM-782/789, and THM-797's decorated divisor-class/exception-shell
-  incidence;
+  of THM-782/789, THM-797's decorated divisor-class/exception-shell incidence,
+  THM-803's parity-twisted support/anti-shells, and the complete owner-labelled
+  endpoint/cusp selector;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
   incidence hypergraph, which can forget metric positions after atomization;
 - in the shallow packet, missing-owner splice sheets joined to replacement
-  teeth; THM-795 shows that the one-replacement incidence deck forces gcd
-  descent, while bare residue and margin tournaments do not.
+  teeth; THM-795/800 prove looseness through two replacements and THM-804 shows
+  that the three-colour incidence deck forces common scale, while bare residue
+  and margin tournaments do not.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

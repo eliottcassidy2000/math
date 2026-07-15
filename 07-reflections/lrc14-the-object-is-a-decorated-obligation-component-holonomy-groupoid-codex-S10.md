@@ -321,6 +321,9 @@ one-sided germ orientation, exact margin, and owner.  A Hall, Smith-normal-form,
 or common-divisor lemma on this carrier would generalize the successful
 Hamming-one/two/three descents, but the scale-one chart also needs actual lift
 heights and metric tooth placement because all deck orders there equal one.
+The half-open arc `(-1/13,1/13]` is theorem-bearing data: germ orientation is
+a one-bit local coefficient, not a cosmetic endpoint convention.  Erasing it
+destroys the own/complement deck-capacity asymmetry used by the descent.
 
 ### 3.3 THM-797/803: a silent grid means “look elsewhere,” not “trapped”
 
@@ -501,6 +504,20 @@ role is now sharper.
   SCC, and `175` Hamiltonian paths.  A marked-cut change produces six edge
   flips.  Global token translation does not change these fingerprints, even
   though the metric packet advances.
+- THM-802's unequal-multiplicity phase loop changes from a transitive owner
+  gauge to a circular blow-up after nine edge flips.  The latter has score
+  histogram `{3:4,4:4}`, twenty directed triangles, one SCC, and 629
+  Hamiltonian paths.  Those rich fingerprints still accept only three of the
+  181,440 reduced-return words from the displayed prefix state; exact word
+  legality remains the predicate.
+- THM-803's erosion-margin and component-width gauges are both transitive but
+  differ by 26 edges; its raw-support and parity-twisted-support gauges are
+  likewise transitive and differ by six edges.  The bare orders lose the sign
+  of the selector margin and the parity source of a residue.
+- THM-804's relaxed germ-gauge row with labels `(6,7,12)` and deck orders
+  `(12,5,11)` changes a directed triangle into a transitive tournament after
+  one edge flip, while the capacity verdict is unchanged.  The theorem lives
+  in the oriented cover inequalities, not in that triangle.
 
 Thus cycles can signal holonomy and edge flips can signal observer dependence,
 but neither is automatically an obstruction or a witness.
@@ -595,7 +612,9 @@ bounded-ratio cluster tree
   + owner-labelled safe/deep components
   + residue/sheet/tooth/divisor obligation fibres
   + exact endpoint and margin incidence
+  + overlap-phase and Cech compatibility addresses
   + centered event words and carry
+  + the complete phase-realizable prefix-legal loop language
   + reduced holonomy and metric translation
   + certified descent or residual proof debt.
 ```
@@ -612,9 +631,12 @@ return that forces arithmetic descent,
 return to the same combinatorics at a different metric location.
 ```
 
-THM-794 exhibits the third.  THM-795 turns the second into a contradiction.
-THM-797 shows why the first observation chart may be silent while another
-component escapes.  THM-798/799 show that transverse fragmentation can grow
+THM-794/802 exhibit the third and show that the loop language is larger than
+the central once-per-owner packet.  THM-795/800/804 turn the second into
+common-scale descent through three replacement colours.  THM-797/803 show why
+the first observation chart may be silent, how denominator pullback produces
+anti-grids, and how the remaining continuum compiles to an exact endpoint/cusp
+selector while another component escapes.  THM-798/799 show that transverse fragmentation can grow
 without creating a new global obstruction and that arbitrary lacunary escape
 to infinity is terminal.
 
@@ -627,6 +649,7 @@ uniform emptiness of the n=12 sporadic branch is open.
 ```
 
 The next proof should be judged by whether it acts faithfully on the decorated
-component-obligation state, whether its quotient keeps both reduced holonomy
-and metric translation, and whether its recursion genuinely decreases after
-all components—not merely a preferred one—have been tested.
+component-obligation state, whether its quotient keeps reduced holonomy,
+metric translation, one-sided germ orientation, and chart-overlap phase, and
+whether its recursion genuinely decreases after the exact selector—not merely
+a preferred component or denominator—has been tested.
