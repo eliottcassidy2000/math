@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+## Lead klein-2026-07-15-S313c3: post-THM-868 sweep — corona ANSWERED, four new gaps
+- **Status:** THM-868's four named steps are now: corona = THM-869 (ANSWERED: cubic law, guess
+  refuted); Milgram = THM-872 (D16+ bridge; n=24 Niemeier OPEN); sedenion = THM-871 (16 anonymous
+  rigid classes); A5 monodromy = tetrahedral-block realization + censuses (natural class-fibration
+  instance still OPEN: THM-848 split (H,K) fibre). New: K(A5) = 15, K(2I) = 30 (THM-870).
+- **Next steps:** (i) formalize corona onset minimality for all n; (ii) OEIS: corona widths
+  2,5,10,16,25,35,49,64,84,105 and level-width rows; (iii) Niemeier selection at n=24;
+  (iv) Kakeya numbers of Z_p⋊Z_q multiplier groups; (v) full invariant table of the 16 sedenion classes.
+
 ## Lead klein-2026-07-15-S313: figurate Vandermonde tail — OEIS submissions + mode-i bijection
 - **Source:** owner prompt (two-axes generalization of triangular numbers); T1532, HYP-6911/6912;
   draft `03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md`.
