@@ -1,0 +1,71 @@
+THM-821 SIGNED RETURN-CELL / DEEP-COMPONENT STALK PURITY
+arithmetic=integer+fractions.Fraction floating_point=none
+fixed_pair=(13,5) folded_frequencies=(9,4) threshold=11/13
+atomic_predicate=min_(t in E_component+return_cell) Q_(9,4)(t)>=11/13
+scope=finite_exact_atomic_audit_not_all_size_not_global_row_separator_not_Cech_gluing
+
+RANDOM_THM817_BANK
+seed=803807 rows=213 bank_sha256=303009db5bf61e2b5584f0664e740039aefda134e8ba80cf34de30cd897fcc71
+return_component_histogram={1: 213}
+deep_component_histogram={2: 2, 4: 1, 6: 2, 8: 6, 10: 3, 12: 5, 14: 8, 16: 6, 18: 2, 20: 5, 22: 10, 24: 12, 26: 7, 28: 6, 30: 7, 32: 4, 34: 10, 36: 9, 38: 5, 40: 3, 42: 8, 44: 5, 46: 6, 48: 4, 50: 4, 52: 6, 54: 4, 56: 9, 58: 7, 60: 7, 62: 5, 64: 1, 66: 4, 68: 4, 70: 7, 72: 3, 74: 2, 76: 3, 78: 2, 80: 3, 82: 2, 84: 1, 88: 1, 90: 1, 92: 1}
+atoms=8660 success=342 failure=8318 global_row_success=0 global_row_failure=213
+note=global_row_predicate_is_constant_false_so_only_atomic_fibres_are_nontrivial
+
+DISCONNECTED_U0
+U0=(1, 2, 3, 4, 7, 500, 503, 504, 505, 506) deep_components=438 return_cells=3 atoms=1314
+cell_label=-1 success=50 failure=388
+cell_label=0 success=50 failure=388
+cell_label=1 success=50 failure=388
+
+COMBINED_SIGNATURE_FIBRES
+atoms=9974 success=492 failure=9482
+columns=signature,fibres,mixed,largest_mixed,largest_bucket
+cell_label,3,3,9098,9098
+return_interval,74,61,438,438
+return_owners,74,61,438,438
+signed_cell_full,74,61,438,438
+deep_width,2718,65,668,668
+deep_interval,7290,24,3,38
+deep_owners,3519,234,144,144
+deep_interval_owners,7808,24,3,7
+cell_label_plus_deep,8166,0,0,38
+return_plus_deep,9796,0,0,3
+full_input_stalk,9850,0,0,3
+sum_width,4088,48,28,38
+sum_arc,9796,0,0,3
+selector_event_shape,3,2,4804,4804
+selector_argmin,9086,0,0,60
+exact_margin,4397,0,0,126
+
+MIXED_FIBRE_RETURN_CELL
+U=(30, 33, 35, 42, 50, 53, 55, 72, 73, 75)
+shared_cell=[-2/10725,2/10725] owners=((75,), (75,))
+failure_E=[1/330,2/165] sum_arc=(61/21450,203/21450) argmin=(61/21450) margin=-17357/21450
+success_E=[309/803,106/275] sum_arc=(301129/782925,799/782925) argmin=(301129/782925) margin=12049/156585
+
+MIXED_FIBRE_DEEP_COMPONENT
+U0=(1, 2, 3, 4, 7, 500, 503, 504, 505, 506)
+shared_E=[49/132,2067/5566]
+failure_k=-1 R=[-2/1001,-141/71500] owners=((7,), (500,)) sum_arc=(4435/12012,2567/14610750) argmin=(4435/12012) margin=-557/12012
+success_k=1 R=[141/71500,2/1001] owners=((500,), (7,)) sum_arc=(20012/53625,2567/14610750) argmin=(20012/53625) margin=281/53625
+
+UN_FAMILY_LOCAL_STALK
+s=479/616 E=[s-25/(616*(B-3)),s] E_owners=(B-3,B-2)
+central_R=[-2/(143B),2/(143B)] R_owners=(B,B)
+central_min_Q=69/616-10/(143B)<11/13 checked_n=0..5
+first_and_last_positive_satellite_stalks=failure checked_n=0..5
+family_component_law=N_R=3+1440n
+
+TOURNAMENT_TELEMETRY
+vertices=forgetful_signatures pair_observable=(mixed,largest_mixed,payload)
+switch=payload_first tie_path=declaration_order
+purity_path=('selector_argmin', 'exact_margin', 'sum_arc', 'cell_label_plus_deep', 'return_plus_deep', 'full_input_stalk', 'selector_event_shape', 'cell_label', 'deep_interval', 'deep_interval_owners', 'sum_width', 'return_interval', 'return_owners', 'signed_cell_full', 'deep_width', 'deep_owners')
+compression_path=('selector_argmin', 'exact_margin', 'selector_event_shape', 'cell_label', 'sum_width', 'deep_width', 'sum_arc', 'deep_interval', 'return_interval', 'return_owners', 'deep_owners', 'cell_label_plus_deep', 'return_plus_deep', 'deep_interval_owners', 'signed_cell_full', 'full_input_stalk')
+edge_flips=41
+both_tournaments=transitive score_histogram=0..15 cycles=0 SCCs=16_singletons HP=1
+theorem_carrier=exact_return_interval+exact_deep_interval_or_exact_sum_arc
+endpoint_owners=numerically_forgettable_here_but_retained_for_ancestry_and_descent
+Cech_status=not_tested_no_overlap_or_gluing_data_emitted
+
+certificate_sha256=ebfe916e128a632c0e61bc5891df396f054b925747c56ca99ac7d3f252db4f8e
+PASS: cell/R/E/width/event projections mix; exact input/sum/argmin/margin signatures are pure
