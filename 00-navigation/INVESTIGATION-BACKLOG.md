@@ -107,10 +107,8 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797; HYP-6820; exact endpoint-splice
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795; HYP-6820; exact endpoint-splice
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/795/797; HYP-6820; exact endpoint-splice
-  and tooth-winding atlases.
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800;
+  HYP-6820; exact endpoint-splice and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
   the shallow branch is exactly the full nonzero residue transversal and that
@@ -120,13 +118,12 @@
   classifies all `13^12` shallow packets through lift height twelve: only
   `c*{1,...,12}`, `c=1,...,12,14`, have zero defect, so the only primitive row
   is the AP and the shallow sporadic slice is empty for `max A<=168`.  THM-795
-  closes an unbounded direction: around every unit AP dilation and at every
-  lift height, a congruent one-coordinate replacement is tight only if it is
-  unchanged.  Any remaining non-AP shallow packet has Hamming radius at least
-  two from every AP dilation.
-  is the AP and the shallow sporadic slice is empty for `max A<=168`.
-  THM-795 closes the full Hamming-one star around every unit AP dilation at
-  every lift height; the shallow residual starts at labelled radius two.
+  closes the full Hamming-one star around every unit AP dilation at every lift
+  height.  THM-800 then closes the residue-preserving Hamming-two star:
+  oriented half-open deck capacity forces common scale at exact tightness, and
+  the normalized proper double lift has the sharp floor `M>=2/25`.  The
+  shallow residual starts at labelled radius three.  THM-804 is only a claimed
+  common-scale descent; its replay and the scale-one triple chart remain open.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -167,22 +164,16 @@
   component choice with signed affine tooth/slope address.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
-  through height twelve and THM-795 proves it on every Hamming-one AP star.
-  The first live case has at least two replacement colours sharing the
+  through height twelve; THM-795 proves it on every Hamming-one AP star; and
+  THM-800 proves strict looseness throughout the residue-preserving
+  Hamming-two AP star.  The first live case has at least three replacement
+  colours sharing the
   missing-owner splice sheets.  Build the bipartite sheet--tooth incidence
   graph with deck orders `c/gcd(c,w_i)` and one-sided germ orientation; seek a
   Hall defect or a forced common divisor.  Do not use another raw box unless
-  it is tied to a decreasing invariant.
-  return-thickened component incidence differs. THM-797 now gives an exact
-  odd-divisor acceptance shell and reduces q=13 to full or aligned-five folded
-  support; its sharp survivor escapes only on another deep component. The
-  missing datum is global component choice with signed affine tooth/slope and
-  divisor-shell address.
-- **Open shallow theorem:** extend THM-795 from one replacement to Hamming
-  radius at least two.  Several replacement colours may share the lifted
-  missing-owner germs, so target a Hall obstruction or forced common-divisor
-  descent in the sheet-tooth incidence graph.  Do not use another raw box
-  unless it is tied to a decreasing deck/height invariant.
+  it is tied to a decreasing invariant.  THM-804 is a claimed common-scale
+  three-replacement attack only; do not use it until its incidence proof and
+  replay are complete.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -212,25 +203,9 @@
   and exact token-fibre transport. THM-773's moment certificate preserves cover
   truth; the remaining prime-seven problem is THM-779/785 non-synchronization
   of this schedule with the collision-hop transducer.
-  impossible, prove a scale-free transversal lower bound beyond ten, or bound
-  all dyadic seam guards strongly enough that the reconstructed `U` or `A`
-  lies in THM-774/776's complementary finite bases, or prove THM-789's global
-  selection target: some deep component escapes the eroded admissible diamond.
-  A theorem for an arbitrary fixed phase-cell anchor is false. Then
-  lies in THM-774/776's complementary finite bases, or prove the global
-  erosion failure `E_U not subset H minus R_U` by selecting among deep
-  components and transporting their signed tooth address or exact eroded
-  margin.  Apply THM-797's odd-divisor grid first: at mandatory `q=13`, only
-  full six-class support and aligned five-class support survive.  Its sharp
-  aligned example traps every global maximizer but escapes at a threshold
-  endpoint, so the selector must range over all owner-labelled closed
-  `1/11`-superlevel components. Fixed-anchor refinement, argmax-only choice,
-  and raw component tournaments are insufficient by THM-789/797. Then
-  erosion failure `E_U not subset H minus R_U` on THM-797's remaining full and
-  aligned-five support patterns by selecting among all deep components and
-  transporting their signed tooth address or exact eroded margin. Fixed-anchor
-  refinement and raw component tournaments are insufficient by THM-789. Then
-  margin.  Apply THM-797's odd-divisor grid and signed walls first: at
+- **Deep selection target:** prove the global erosion failure
+  `E_U not subset H minus R_U` after applying THM-797's odd-divisor grids and
+  signed walls.  At
   mandatory `q=13`, double-13 and full support are impossible, and the sole
   survivor has the exact signed residue complement
   `U mod 13=(Z/13Z)^*\{+/-y}` with `x<=2B-1,y<=B-1`.  Its sharp post-wall row
@@ -238,8 +213,9 @@
   selector must range over all owner-labelled closed `1/11`-superlevel
   components and core-generated denominators. Fixed-anchor refinement,
   argmax-only choice, divisor-only grids, and raw component tournaments are
-  insufficient by THM-789/797. Then
-  treat the `s=3`
+  insufficient by THM-789/797.  Alternatively prove a scale-free transversal
+  lower bound beyond ten or strong enough dyadic seam guards to land the
+  reconstructed packet in THM-774/776's certified bases.  Then treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
@@ -278,10 +254,8 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk/holonomy-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149;
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795; corrected THM-779; MISTAKE-147/148/149;
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797; corrected THM-779; MISTAKE-147/148/149;
-  HYP-6820/6835/6840.
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799/800/802;
+  corrected THM-779; MISTAKE-147/148/149; HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
   twelve-core has `|G'|>=182^(-12)` and the normalized `rho` regime is
@@ -308,7 +282,11 @@
   liars show that current across `K`-cuts must retain the event/root word.
   Reframe the uniform task as emptiness of the intersection between the
   regular safe-current language and the divisor-complete arithmetic clock
-  language.
+  language.  THM-802 warns that finite state alone cannot force exit: the
+  collar analogue is an affine-realizable prefix-safe tropical return, possibly
+  only up to cyclic sheet rotation.  Search for or exclude those decorated
+  loops while retaining the initial chip allocation, phase cell, root insertion
+  order, and ineligibility-window incidence.
 - **r=8 correction and surviving structure:** raw covered-wall count is
   unbounded even for divisor-complete families; the exact refuter is a fixed
   seven-token permutation stalk plus owner `182m+1`.  The rooted redundancy
@@ -329,47 +307,34 @@
   collision return is zero in `F_7^8/Delta`, so high-transversal alternation is
   a common Beatty-path/reduced-holonomy problem; the sampled `K0=6` is not
   universal, and its reported `0.589` extent census is not regenerated by the
-  stored script.
+  stored script.  THM-802 proves the affine closure of this mechanism and an
+  unequal-multiplicity `(1,...,1,2)` family on a fixed core-safe interval.
+  Only three of 181,440 words with the same multiplicity and reduced return are
+  prefix-legal from the displayed state, so multiplicity and bare SCC data are
+  telemetry.
 - **Next theorem target:** define minimal persistent stalks over each metric
-  core-safe component, contract stalk-redundant walls, then contract repeated
-  legal packet paths with diagonal deck return.  Prove a bound or forced tear
+  core-safe component, contract stalk-redundant walls, then contract every
+  affine-realizable prefix-legal packet path with diagonal deck return.  Prove
+  a bound or forced tear
   for transitions in the resulting packet-path groupoid using THM-778's
   centered schedule, THM-779's supportability equation, and THM-783/786's
   signed balance/span laws.  Retain the centered-Beatty base cell, ordered
   prefix path, reduced holonomy, and metric/core-incidence lift.  The `(69,29)`
   no-go proves separate marginals cannot couple the path; THM-794 proves even
-  positive marginal distance cannot give uniform compactness.  THM-784/794
-  are the two independent gauge families—empty refinement and full-support
-  diagonal holonomy—that the quotient must remove.
-- **Parallel folded target:** orient the connected components of the deep set
-  fixed-span laws, so separate marginals leave a common Beatty-order/carry
-  coupling problem.  THM-794 adds a stronger correction: a full seven-visitor
-  packet repeats for `H-1` active periods with a genuine switch at every wall
-  and fixed `ceil(f/g)=2`, but returns only by diagonal sheet translation.  It
-  refutes both active/switch compactness and the universal extent conjecture.
-- **Next theorem target:** define minimal persistent stalks over each metric
-  core-safe component, contract stalk-redundant walls **and** full-support
-  packet return cycles modulo common sheet translation, and prove a bound or
-  forced tear for the remaining normalized collision/SCC skeleton using
-  THM-778's centered schedule, THM-779's supportability equation, and
-  THM-783/786's signed balance/span/transversal laws.  First classify the
-  finite residue-profile LPs with optimal speed-weight at least `g`, then
-  intersect them with the complete-`g`-period packet polytopes.  For the rows
-  surviving both, build the joint transportation automaton retaining local
-  centered-Beatty order, carry, and packet holonomy; separate marginals and
-  raw active words provably cannot work.
-  THM-784 supplies an
-  independent simpler unbounded-run family, confirming that this quotient is
-  necessary rather than an artefact of the divisor-complete construction.
-- **Parallel folded target:** THM-797 first applies every odd exception-divisor
-  grid and leaves only full/aligned-five support at q=13.  Then orient the
-  connected components of the deep set
+  positive marginal distance cannot give uniform compactness, and THM-802
+  rules out treating its once-per-owner loop as the only generator. THM-784
+  and THM-794/802 are the independent gauge mechanisms—empty refinement and
+  affine diagonal-return holonomy—that the quotient must remove.  THM-784
+  supplies an independent simpler unbounded-run family, confirming that this
+  quotient is necessary rather than an artefact of the divisor-complete
+  construction.
+- **Parallel folded target:** apply THM-797's odd exception-divisor grids and
+  signed-wall pin first; only the exact signed complement of `+/-y` survives
+  at `q=13`.  Then orient the connected components of the deep set
   by the exact eroded folded-diamond escape margin and prove that at least one
   global component escapes.  Retain signed tooth/slope addresses: THM-789's
   `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
-  measure but different middle-component incidence.  Run THM-797's odd-
-  divisor shell and signed-wall pin first; only the exact signed complement of
-  `+/-y` survives at `q=13`.  Then branch over every owner-labelled deep
+  measure but different middle-component incidence.  Branch over every owner-labelled deep
   component and core-generated denominator, not only global maximizers or
   divisors of the exceptions: the post-wall `(13,5)` row traps every such
   divisor grid but escapes at `6/17`.  Do not recurse only inside a chosen
@@ -383,13 +348,11 @@
   tooth incidence whenever the conservative lower mass bound is nonpositive.
 - **Tournament guardrail:** wall-event tournaments are transitive and forget
   the stalk; the normalized `A8` graph forgets the metric base; packet
-  incidence/frequency forgets the ordered return map.  The faithful carrier is
-  `(core component, labelled minimal stalk, centered event path, redundancy
-  root/visitor cluster, reduced holonomy)`, not runners or packets alone.
-  both stalks and central return cycles; the normalized `A8` graph forgets the
-  metric base.  The faithful carrier is `(core component, labelled minimal
-  stalk, event word, redundancy root/visitor cluster, packet return map)`
-  modulo diagonal deck translation, not runners alone.
+  incidence/frequency and bare SCCs forget prefix legality and the ordered
+  return map.  The faithful carrier is `(core component, labelled minimal
+  stalk, centered mechanical event path, prefix state, redundancy root/visitor
+  cluster, reduced holonomy)` modulo diagonal deck translation, not runners or
+  packets alone.
 
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 

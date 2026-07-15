@@ -101,11 +101,12 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | odd-exception divisor-grid / signed-wall selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, one-sided wall leakage eliminates double-13 and full support; the sole survivor is the exact signed complement `U mod 13=(Z/13Z)^*\{+/-y}`, with `M(U)>=2/13`, `x<=2B-1`, and `y<=B-1`.  A sharp survivor silences every exception-divisor grid but escapes at the core-generated denominator 17, so all owner-labelled deep components and non-divisor denominators must be retained. | THM-797 + exact 10,971,770-grid / 352,716-signed-profile replay |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
+| shallow AP Hamming-two star at arbitrary height | PROVED scale-free: oriented half-open splice decks force both replacements back to the common AP scale at exact tightness; the normalized proper double lift then has the sharp floor `M>=2/25>1/13`. Thus every residual shallow packet has labelled Hamming radius at least three from every AP dilation. | THM-800 + exact 600,756-row replay |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a factor-2 seam and a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. An exact core traps every local refinement at `4/17` but escapes at `14/19`; two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence. THM-797 adds the odd-divisor selector and signed `q=13` wall: the sole survivor is the exact signed complement of `+/-y`. Its sharp post-wall row silences every exception-divisor grid but escapes at `6/17`, so global selection must retain every closed deep component, endpoint owners, signed tooth/slope address, divisor-shell incidence, and core-generated denominators. | THM-782/789/797 + exact trap/erosion-liar/grid/signed-profile certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one star at every shallow AP dilation and arbitrary height; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; and the forced-`w=13c` quotient box through height 24. Remaining: shallow Hamming radius at least two, the exact signed-complement folded branch with all-component/core-generated-denominator selection, an unbounded-height collar tear, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one and Hamming-two stars at every shallow AP dilation and arbitrary height; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; and the forced-`w=13c` quotient box through height 24. Remaining: shallow Hamming radius at least three, the exact signed-complement folded branch with all-component/core-generated-denominator selection, an unbounded-height collar tear, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -171,9 +172,13 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    THM-794 proves this is only an intermediate normal form: a full visitor
    packet can repeat as a diagonal deck translation, making `A`, genuine
    switches, and the proposed universal extent unbounded/false at `R=2`.
-   First quotient packet return maps modulo common sheet translation; then
-   retain the redundancy roots, study exits between reduced collision SCCs,
-   and intersect their metric lift with the core-safe base. A continued-
+   THM-802 upgrades that example to an affine pumping theorem and an explicit
+   unequal-multiplicity word `(1,...,1,2)` with `Theta(L)` prefix-legal
+   diagonal-return copies across one fixed core-safe interval.  First quotient
+   packet return maps modulo common sheet translation; then retain the exact
+   centered-mechanical owner word, repeated-owner insertion, redundancy roots,
+   and metric/core phase cell.  Bare normalized collision SCCs are downstream
+   telemetry, not the legality predicate. A continued-
    fraction digit is useful only through this labelled fibre action.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
@@ -206,11 +211,14 @@ three-exception equality edge is an `s=3` persistent colour cover.  THM-768
 separately rules out a largest speed that is the unique 13-multiple.  THM-770's
 exact owner-CSP settles all shallow labelled packets through lift height twelve
 (`13^12` conceptual rows), leaving only the permitted dilates and the unique
-primitive AP.  THM-795 proves the complete unbounded one-coordinate direction:
+   primitive AP.  THM-795 proves the complete unbounded one-coordinate direction:
 every proper residue-preserving Hamming-one lift of every unit AP dilation is
-loose.  No descent is known at Hamming radius at least two, where replacements
-can share missing-owner splice germs; the deep colour-cover branch also
-remains.
+loose.  THM-800 closes the next stratum uniformly: at exact tightness, oriented
+half-open splice-deck capacity forces two replacements to share the AP scale,
+and every normalized proper double lift has `M>=2/25`.  No proved descent is
+known from Hamming radius three onward; THM-804 is only a claimed common-scale
+three-replacement attack, and the scale-one Hamming-three chart remains open.
+The deep colour-cover branch also remains.
 
 The two-sheet edge is now considerably narrower.  THM-772 proves that its
 ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
@@ -268,20 +276,24 @@ long-run exclusion are therefore three distinct obligations.
 THM-792 now clocks the remaining even-maximum collar more sharply.  Its
 eleven-speed maximizer has denominator at most `4R-2`; safe mass occupies many
 top teeth with repeated disjoint flank owners; and a forced odd `13c` exception
-produces a labelled moving edge cover on thirteen quotient sheets.  For `c=1`
-and `U subset [1,24]`, an exact sweep of all 1,144,066 cores and 117 grouped
-event times leaves zero survivors.  This is a new finite slice, not the missing
-uniform automaton tear.
+produces a labelled moving edge cover on thirteen quotient sheets.  The entire
+height-24 multiplier lane is exact: `c=1` has 101,850 initial covers and tears
+by `3/8`; `c=3` has 2,528 and tears by `1/7`; every odd `c>=5` fails in the
+initial chamber because `13c>2 max(U)`.  This is uniform in the multiplier, not
+in quotient height.
 
-The sweep is actually a short-prefix theorem: every initial cover tears by
-the 38th group at `3/8`, and every divisor-complete initial cover by the 36th
-at `4/11`.  With initial excess `e^0` and cumulative grouped root current `C`,
+With initial excess `e^0` and cumulative grouped root current `C`,
 coverage is precisely `e^0+C>=0` coordinatewise, and
 `K=K_0+<e^0,C>+||C||^2/2`.  Thus the finite state is the 50,388-point
 seven-chip simplex plus a dead state.  Labels can be compiled into the
-`A_12` root word, but that word cannot be discarded; the uniform theorem is
-an intersection problem between a regular safe-current language and the thin
-arithmetic language generated by divisor-complete rational clocks.
+`A_12` root word, and its tropical transfer `T(W)=(c_W,b_W)` composes exactly,
+but neither word nor actual initial allocation can be discarded.  The uniform
+theorem is an intersection problem between a regular safe-current language and
+the thin arithmetic language generated by divisor-complete rational clocks.
+THM-802 supplies the precise warning from the prime-seven carrier: affine
+phase cells can pump prefix-legal return loops.  The collar target must rule out
+or classify arithmetic-realizable safe tropical returns up to `Z/13` sheet
+rotation, not merely show that the abstract current graph is finite.
 
 The collar overlap degrees carry the exact energy
 `K=sum_j binom(d_j-1,2)`.  A simple event satisfies
@@ -315,8 +327,11 @@ shallow packets through lift height twelve by a lossless `24,008`-cell
 endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
 `c=1,...,12,14`, hence the only primitive row is the AP.  This closes the
 shallow sporadic slice through `max A<=168`.  THM-795 additionally closes all
-higher shallow lifts at labelled Hamming distance one from any AP dilation;
-radius at least two and every deep branch remain.  The residue-obligation and
+  higher shallow lifts at labelled Hamming distance one from any AP dilation;
+THM-800 closes every proper residue-preserving labelled Hamming-two lift and
+gives the sharp normalized floor `2/25`.  Radius at least three and every deep
+branch remain.
+The residue-obligation and
 sheet-margin tournaments are transitive telemetry; the proofs live in the
 endpoint-owner hypergraph and the missing-splice sheet-danger deck with
 oriented core-safe germs.
@@ -327,6 +342,6 @@ oriented core-safe germs.
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
 *Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
-THM-768--770, THM-794/795/797,
+THM-768--770, THM-794/795/797/800/802,
 and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

@@ -606,8 +606,9 @@ The same live-main cycle completed THM-795 on the shallow n=12 branch.  A
 congruent one-coordinate lift of any unit AP dilation is tight only when it is
 unchanged, uniformly in both dilation and lift height.  The proof turns the
 `c` missing-owner splice germs into a full deck grid that one replacement
-danger tooth cannot contain, then descends to seven exact atoms.  Consequently
-the unbounded shallow residual begins at Hamming radius two.  Its natural next
+danger tooth cannot contain, then descends to seven exact atoms.  At this stage
+the unbounded shallow residual began at Hamming radius two; the later THM-800
+paragraph below closes that stratum.  Its natural next
 carrier is a bipartite splice-sheet/replacement-tooth graph with deck orders
 and oriented safe germs, where two replacement colours may share obligations.
 
@@ -623,6 +624,32 @@ exception-divisor grid but escapes at `6/17`.  Thus the geometric carrier must
 retain every owner-labelled closed deep component and core-generated
 denominator, not only the argmax orbit or exception divisors.  The exact replay
 checks 10,971,770 odd-grid triples and all 352,716 signed residue multisets.
+
+The next shallow pull closed the two-colour chart rather than merely sampling
+it.  THM-800 proves that if two residue owners in `c*{1,...,12}` are replaced
+by proper congruent lifts, exact tightness forces both replacements to share
+the scale `c`.  The oriented interval `(-1/13,1/13]` is essential: using a
+closed danger arc creates a false mixed-deck survivor.  After descent, every
+proper normalized double lift has the sharp floor `M>=2/25`, with equality at
+`{1,2,3,5,7,8,9,10,11,12,17,19}`.  The 600,756-row exact replay has no
+failures.  Hence the shallow AP residual begins at labelled Hamming radius
+three.  THM-804 is only a claimed three-replacement common-scale descent; its
+proof audit, replay, and normalized triple chart remain open.
+
+THM-802 simultaneously widened the prime-seven obstruction language.  Its
+affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
+with `d_a w_a^(-1)` constant modulo seven.  The explicit word has unequal
+multiplicity `(1,...,1,2)`, repeats `H` times across the fixed core-safe
+interval `[2/15,1/7]`, and returns diagonally after every packet.  This is not
+an LRC14 counterexample, but it defeats once-per-owner holonomy compression:
+only three of 181,440 words with the same multiplicity and reduced return are
+legal from the displayed state, and only one of eight repeated-owner insertion
+positions with the same first-owner order works.  Exact centered-mechanical
+order, prefix state, phase cell, metric translation, and core incidence form
+the carrier; a bare collision SCC is telemetry.  For the `A_12` collar this
+suggests a precise next test: exclude or classify affine-realizable prefix-safe
+tropical returns up to cyclic sheet rotation inside the divisor-complete
+arithmetic clock language.
 
 The folded route also gained a global theorem and an exact quotient boundary.
 For `delta=2/(143B)`, tightness forces
@@ -657,6 +684,14 @@ wall tournament is transitive and loses the stalk; the `A8` graph loses the
 metric base.  The faithful object is the labelled incidence skew product
 recorded in the S10 reflection.
 
+The Smith/metagraph side gives the same controlled-forgetting warning without
+supplying an LRC theorem.  Voltage/score concordance is exact through `n=6`;
+the `n=7` float solve robustly finds 132 discordant adjacent-level pairs but is
+not yet an exact proof.  The dual `E_n` network is rationally exact through
+`n=7`, while resistance reciprocity already fails exactly at `n=4` because
+`(3/7)(2/5)=6/35`.  Potential, current, and recursive line-fibre state are
+therefore distinct layers.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the
@@ -674,13 +709,15 @@ proved.  The next exact pieces are a uniform-in-quotient-height collar tear
 after the `w=13c`, height-24 multiplier lane; all-component eroded-packet
 noncontainment on the exact signed-complement q=13 survivor, with non-divisor
 denominators retained; a stalk- and holonomy-quotiented collision-path bound joining
-THM-778/779/783/786/788/794; a Hamming-radius-two shallow sheet--tooth
-obstruction extending THM-795; and a scale-normal argument for clustered
-comparable-size far frequencies after THM-799 closes the fully lacunary flags.
+THM-778/779/783/786/788/794/802; a Hamming-radius-three-or-more shallow
+sheet--tooth obstruction beyond THM-800; and a scale-normal argument for
+clustered comparable-size far frequencies after THM-799 closes the fully
+lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
-scripts/outputs plus the exact tropical-transfer, marginal-holonomy, and signed-wall odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
+Hamming-two, affine-packet, and signed-wall odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

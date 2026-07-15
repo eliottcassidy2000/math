@@ -41,6 +41,8 @@ related:
   - THM-797
   - THM-798
   - THM-799
+  - THM-800
+  - THM-802
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -54,7 +56,7 @@ related:
 The standard fourteen-runner case remains open.  The primitive tight
 twelve-speed sporadic branch used by the current reduction is uniformly finite
 in principle, but it has not been classified and is not proved empty.  This
-session nevertheless changes the frontier in six material ways:
+session nevertheless changes the frontier in eight material ways:
 
 1. THM-780 proves a uniform positive safe-measure floor from the already known
    lower-dimensional strict margin.  The floor is explicit,
@@ -73,18 +75,28 @@ session nevertheless changes the frontier in six material ways:
    `ceil(f/g)=2` while its return is only diagonal sheet translation.  The
    corrected coordinate is the ordered packet path after both persistent
    stalks and zero reduced-holonomy loops have been quotiented.
-4. THM-795 closes the entire arbitrary-height Hamming-one star around every
+4. THM-802 proves that THM-794 is one generator of a larger affine-pumpable
+   language.  A phase-realizable prefix-legal loop with constant
+   `d_a w_a^(-1)` modulo seven inflates to linearly many diagonal-return
+   packets; an explicit unequal-multiplicity word `(1,...,1,2)` persists on a
+   fixed core-safe interval.  Multiplicity and reduced holonomy do not decide
+   legality, so the repeated-owner insertion and exact phase cell must remain.
+5. THM-795 closes the entire arbitrary-height Hamming-one star around every
    shallow AP dilation.  Any residual shallow sporadic packet must use at least
    two replacement colours, so the next object is a sheet--tooth incidence
    graph rather than another one-coordinate lift bound.
-5. THM-797 turns odd exception divisors and their one-sided walls into global
+6. THM-800 closes that two-colour stratum.  Oriented half-open splice-deck
+   capacity forces both replacements to the common AP scale at exact
+   tightness, after which every proper normalized double lift has the sharp
+   floor `M>=2/25`.  The shallow residual now begins at labelled radius three.
+7. THM-797 turns odd exception divisors and their one-sided walls into global
    selectors.  At `q=13`, double-13 and full support are impossible; the sole
    survivor is the exact signed complement of `+/-y`, with a `2/13` core
    witness and sharp exception-speed caps.  A post-wall row silences every
    exception-divisor grid but escapes at denominator 17, proving that all deep
    components and core-generated denominators—not merely argmax or divisors—
    must remain.
-6. THM-798/799 separate raw fragmentation from conservative state transport.
+8. THM-798/799 separate raw fragmentation from conservative state transport.
    Component count can grow transversely with no coherent divisor scale, while
    the two-number state `(safe mass, topological components)` still yields
    exact terminal cones for sufficiently lacunary far flags.
@@ -499,6 +511,20 @@ map.  Thus the missing coupling is sharper than “use both marginals at once”
 it is a centered-Beatty packet path groupoid carrying reduced holonomy and a
 metric/core-incidence lift.
 
+THM-802 shows that this is a language phenomenon rather than a single
+once-per-owner family.  Its affine lifting lemma pumps every phase-realizable,
+prefix-legal loop with `d_a w_a^(-1)` constant modulo seven.  The explicit
+word has multiplicity `(1,...,1,2)`, repeats `H` times across the fixed
+core-safe interval `[2/15,1/7]`, and returns diagonally after each packet.  Yet
+only three of the `181,440` words with that multiplicity are legal from the
+displayed state, and only one of the eight repeated-owner insertion positions
+sharing the same first-owner order works.  Thus owner multiplicity, reduced
+return, and collision-SCC membership together remain telemetry.  The exact
+carrier is the centered-mechanical owner word with prefix state, phase-cell
+wall coordinates, metric translation, and core incidence.  Here “noncentral”
+describes the word shape; the holonomy itself is central and zero after the
+diagonal quotient.
+
 The surviving problem is therefore a first-return or owner-switch problem:
 after contracting intervals supported by a persistent exact stalk and legal
 zero-holonomy packet loops, can the centered mechanical schedule keep agreeing
@@ -728,10 +754,14 @@ is a valid one-sided transport shadow and provably not an exact transition
 state.
 
 This also clarifies the honest import of the Smith-diagram tournament thread.
-The S307 metagraph entry currently sharing the colliding ID `HYP-6865` has a
-harmonic potential that almost perfectly orders finite tournament classes by
-score variance, while THM-796 shows that actual current and
-recursive continuation live on weighted line fibres.  That is a rigorous
+The S307 metagraph entry currently sharing the colliding ID `HYP-6865` has
+exact voltage/score concordance through `n=6`.  Its `n=7` float solve finds 132
+well-separated discordant adjacent-level pairs, but that is a robust numerical
+decision rather than an exact theorem.  The separate `E_n` network is rationally
+exact through `n=7`, and already at `n=4` the proposed electrical reciprocity
+fails: `(3/7)(2/5)=6/35`, so the cut/cycle relation is algebraic rather than a
+planar Smith duality.  THM-796 meanwhile proves that actual current and
+recursive continuation live on weighted line fibres.  This is a rigorous
 potential-versus-current separation inside the tournament model, not a direct
 LRC theorem.  In the collar the analogous exact current is the full `A_12`
 cut-current vector; its quadratic energy is only a potential-like shadow.
@@ -769,19 +799,21 @@ marked sequence, with the minimal-cover sets on both sides, is the
 **owner-switch skeleton**.
 
 THM-794 shows that this is still not the terminal quotient if every retained
-period is marked merely “active.”  For an ordered packet path `P`, also retain
+period is marked merely “active,” and THM-802 extends the obstruction to
+affine-pumpable unequal-multiplicity loops.  For an ordered packet path `P`, also retain
 its return class
 
 ```text
 Hol(P)=[(-N_a(P) w_a^(-1))_a] in F_7^8/Delta.
 ```
 
-Contract a maximal repetition only when the same prefix-legal collision path
-returns by the diagonal class and remains in the same centered-Beatty base
-cell type.  The result, with its nonzero metric translation still attached,
-is the **holonomy-reduced packet skeleton**.  The metric clause prevents a
-closed fibre loop from being mistaken for a closed orbit on the core-safe
-base.
+Contract a maximal repetition only when the same exact centered-mechanical
+owner word is prefix-legal, returns by the diagonal class, and remains in the
+same decorated metric/core phase-cell type.  This includes all affine
+phase-cell diagonal-return loops, not only THM-794's once-per-owner generator.
+The result, with its nonzero metric translation still attached, is the
+**holonomy-reduced packet skeleton**.  The metric clause prevents a closed
+fibre loop from being mistaken for a closed orbit on the core-safe base.
 
 This definition deliberately makes the THM-779 family simple: its `2m` walls
 are redundant over the fixed `W_0` stalk.  It also explains why the definition
@@ -792,7 +824,8 @@ word are isomorphic.
 The proposed reduced skeleton is not yet proved to have bounded complexity.
 It is a better theorem target because its complexity cannot be inflated either
 by adding a redundant high-frequency owner to an exact stalk or by repeating
-THM-794's diagonal full-support packet loop.
+any recognized affine prefix-legal diagonal-return loop.  A quotient keyed
+only by multiplicity or bare collision SCC is still too coarse by THM-802.
 
 ## 3. Tournament Analysis after challenging the vertices
 
@@ -834,7 +867,8 @@ Tournament fingerprints are still valuable telemetry:
 
 - edge flips reveal sensitivity to the chosen gauge;
 - directed cycles can witness genuine nontransitive transport when they occur;
-- SCCs of a finite transducer distinguish trapped from escaping state regions;
+- SCCs of a predicate- and transition-exact decorated transducer distinguish
+  trapped from escaping regions; bare collision SCCs are only telemetry;
 - Hamiltonian-path counts measure how much labelled chronology an isomorphism
   node has collapsed.
 
@@ -869,12 +903,15 @@ the irreducible sidecar.
 The branch is finite in principle, but the following uniform arguments are
 still missing.
 
-1. **Shallow full-residue rigidity from Hamming radius two onward.**  THM-770
-   closes lift height twelve, and THM-795 closes every arbitrary-height
-   Hamming-one star around an AP dilation.  What remains is a scale-free
-   endpoint-owner coherence theorem when two or more replacement teeth share
-   the missing-owner splice germs: prove a Hall defect, forced common divisor,
-   or complete the finite global bound.
+1. **Shallow full-residue rigidity from Hamming radius three onward.**  THM-770
+   closes lift height twelve, THM-795 closes every arbitrary-height
+   Hamming-one star around an AP dilation, and THM-800 closes the full
+   Hamming-two star.  Its proof first forces both replacement deck orders to
+   one at exact tightness, then gives the sharp normalized floor `2/25`.
+   What remains is a scale-free three-or-more-colour coherence theorem.
+   THM-804 currently reserves a plausible three-replacement common-scale
+   descent, but its proof audit and replay are unfinished and the normalized
+   Hamming-three chart remains open.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of
@@ -889,6 +926,10 @@ still missing.
    height `24`: `c=1,3` tear exactly, while `c>=5` fails at the first boundary.
    What is missing is a uniform-in-quotient-height tear or congruence
    obstruction linking those three structures beyond the bounded atlas.
+   The sharp pumpability test is to exclude arithmetic-realizable prefix-safe
+   tropical return blocks up to `Z/13` sheet rotation; a literal zero-current
+   word is only the simplest case.  Retain `e^0`, exact root insertion order,
+   phase coset, and ineligibility-window incidence in that search.
 4. **Higher-sheet packets.**  The three-sheet equality edge and general deep
    `s`-fibres still require a classification of persistent colour covers with
    effective orders, ramification, and omit-one gcd descent retained.
@@ -904,8 +945,9 @@ The corrected alternatives are precise.
 1. Prove that no deck blocks the **entire** closed core-safe set, or classify
    the exceptional whole-core covers.
 2. Define and bound the holonomy-reduced packet skeleton after persistent
-   exact seven-stalks and repeated diagonal-return packet loops are contracted.
-   Raw wall and active-period bounds are both impossible.
+   exact seven-stalks and all affine-realizable, prefix-legal diagonal-return
+   loops—including unequal-multiplicity insertions—are contracted. Raw wall,
+   active-period, multiplicity, and bare-SCC bounds are all insufficient.
 3. Use THM-783's period-sum, single-visitor, cluster-balance, and de-phasing
    laws to bound genuine transitions between reduced packet-return classes or
    their metric extent after both contractions.
