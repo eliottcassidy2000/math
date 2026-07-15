@@ -1,0 +1,49 @@
+THM-848 LIVE-PULL REFEREE: K IS THE SECOND KRYLOV NEEDLE
+==================================================================================
+guarded THM-848 audit SHA256=dbab32bfcfb091ef8fa7f7558733127d1eeea3e8dbca63f4f622b9eff1862e6c
+generator: S f=sum_e(f(T^e)-f(T)), M=C(n,2)
+S a_j=(j+1)a_(j+1)+(n-j)a_(j-1)-(n-1)a_j
+K=(a_(n-2)+(n+1)H)/2
+S K=a_(n-3)+a_(n-2)-M H
+Walsh form: E[Delta K|T]=-(4/M) sum_r r(n-2r)H_(2r)
+n=4: merged nodes=3, H cells/max/split(bH,bK)=3/1/0,0, K cells/max/split(bK)=3/1/0, (H,K) cells/max/split(bK)=3/1/0, (H,K,a_(n-3)) cells/max/split(bK)=3/1/0
+n=5: merged nodes=10, H cells/max/split(bH,bK)=7/2/1,1, K cells/max/split(bK)=8/2/0, (H,K) cells/max/split(bK)=8/2/0, (H,K,a_(n-3)) cells/max/split(bK)=8/2/0
+n=6: merged nodes=34, H cells/max/split(bH,bK)=19/3/5,0, K cells/max/split(bK)=24/3/0, (H,K) cells/max/split(bK)=24/3/0, (H,K,a_(n-3)) cells/max/split(bK)=24/3/0
+n=7: merged nodes=272, H cells/max/split(bH,bK)=77/8/50,50, K cells/max/split(bK)=146/6/10, (H,K) cells/max/split(bK)=156/6/0, (H,K,a_(n-3)) cells/max/split(bK)=156/6/0
+
+THE n=7 AMBIENT KERNEL IS NOT REALIZED
+----------------------------------------------------------------------------------
+alpha_6=1 and the nonempty level vector is (alpha_4,alpha_2,alpha_0)
+same (H,K) would force alpha difference lambda*(1,-5,4)
+along that ambient kernel, a4 and S K change by 120*lambda; det[(H,K,a4) on alpha_(4,2,0)]=-360
+exact merged-node audit: (H,K) cells = OCF-alpha cells = Walsh-stalk cells = 156; no nonzero kernel step is realized
+therefore (H,K) closes E[Delta K] through n=7, but only by finite n=7 rigidity
+
+POINTWISE ODD-CYCLE EDGE CURRENT
+----------------------------------------------------------------------------------
+exact edge identities checked=6340
+Delta_e K=4(sum gained K(T-V(C))-sum lost K(T-V(C)))
+affected cycles all share the flipped pair, so at most one occurs per OCF family
+K(empty)=1/2 handles a spanning odd cycle without an exception
+
+TOURNAMENT ANALYSIS / ASSUMPTION CHALLENGE
+----------------------------------------------------------------------------------
+H                       : cells= 77, max fibre= 8, separated=36369, economy=36369/7
+(H,K)                   : cells=156, max fibre= 6, separated=36672, economy=4584
+(H,K,a4)                : cells=156, max fibre= 6, separated=36672, economy=4584
+OCF alpha levels        : cells=156, max fibre= 6, separated=36672, economy=4584
+K-gradient multiset     : cells=272, max fibre= 1, separated=36856, economy=36856/9
+raw observer tournament: score={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, C3=0, SCC=[1, 1, 1, 1, 1], HP=1
+economy switch: score={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, C3=0, SCC=[1, 1, 1, 1, 1], HP=1, flips=7
+vertices are proof-observer quotients, not runners, tournament vertices, or raw arcs
+(H,K) ambiently forgets a third moment, but the n=7 realized locus retains it rigidly
+edge-current carrier preserves endpoint-pair response but not labels after multiset quotient
+
+FINITE-HIERARCHY BOUNDARY
+----------------------------------------------------------------------------------
+A_T(x)=sum_j a_j x^j obeys S A=(1-x)[(1+x)A'-(n-1)A]
+top coefficients form a finite tridiagonal Krylov ladder, not an all-n two-scalar law
+n<=6: fixed alpha_(n-1)=1 leaves at most two nonempty f-levels; (H,K) closes algebraically
+n=7: three nonempty levels occur; a third moment is ambiently independent but unrealized
+the all-n hierarchy grows; the n=7 two-scalar closure is finite rigidity, not a theorem beyond n=7
+ALL ASSERTIONS PASSED

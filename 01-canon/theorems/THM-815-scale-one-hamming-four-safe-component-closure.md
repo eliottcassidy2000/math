@@ -1,8 +1,8 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, and a primitive-core three-antipodal-pair H6 reduction + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, and ten primitive-core H6 slice trees with 3,699 total states)
-source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, and complete closure of the primitive-core three-antipodal-pair H6 stratum + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, ten primitive-core H6 slice trees with 3,699 total states, and six residual H6 trees with 2,653,600 total states)
+source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction and residual six-row exact closure
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, THM-845, HYP-6820]
 verification:
@@ -14,6 +14,8 @@ verification:
   - 05-knowledge/results/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.out
   - 04-computation/lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.py
   - 05-knowledge/results/lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.out
+  - 04-computation/lrc13_hamming_six_open_f3_exact_closure_codex_S14.cpp
+  - 05-knowledge/results/lrc13_hamming_six_open_f3_exact_closure_codex_S14.out
 proof_companion:
   - 07-reflections/lrc13-hamming-four-independent-collar-doubling-proof-codex-S10.md
 ---
@@ -216,7 +218,7 @@ is the only possible tight packet.  This addendum makes no claim about
 primitive scale-one H6 packets, arbitrary-scale H6 packets, or global `n=12`
 sporadic emptiness. ∎
 
-### C.2 Addendum: antipodal AP pins close fourteen primitive-core H6 rows
+### C.2 Addendum: all primitive-core three-antipodal-pair H6 rows are loose
 
 Continue with (C1), but now restrict to missing-label rows whose retained core
 is primitive, `gcd(P)=1`.  Put
@@ -322,7 +324,9 @@ The six rows not decided by the germ-cycle argument are exactly
 {2,4,5,8,9,11}    {3,4,5,8,9,10}    {3,5,6,7,8,10}.   (C15)
 ```
 
-Their minimum cycle product is `1/16`; no looseness claim is made for them.
+Their minimum cycle product is `1/16`; the germ-cycle quotient alone makes no
+looseness claim for them.  The exact residual-component recursion below closes
+all six.
 
 #### Exact exhaustion of the ten boundary slices
 
@@ -366,18 +370,66 @@ f8c8465455fdbf1f21aec0438a8894c11f56accf53579dc84658a703aa5c227e. (C16)
 Thus each single forced slice is empty, and the union of the two slices
 exhausts each disjunctive row in (C14).  All eight rows in (C14) are loose.
 Together with (C13), this closes fourteen of the twenty primitive-core `f=3`
-rows and reduces that missing-label frontier from 923 rows to 909.  The
-remaining primitive-core scope is the 903 rows with `f<=2` and the six rows in
-(C15).  The exceptional mixed-parity packets just noted are a separate open
-branch.  This is not a proof of primitive scale-one H6 emptiness. ∎
+rows by local reduction plus ten small slice trees.
+
+#### Exact exhaustion of the six product-`1/16` rows
+
+For each row in (C15), start from its six-speed retained core and numerically
+order all six proper replacement lifts.  At a depth-`j` prefix, let `L_j` be
+the longest component of the exact residual strict-safe set.  If a tight
+completion existed, its `6-j` remaining danger combs would cover that
+component, so (8) gives the exact next-speed cap
+
+```text
+x_(j+1) <= floor(22(6-j)/[13(13-2(6-j))L_j]).          (C17)
+```
+
+The denominator is positive through all six levels.  Enumerating every unused
+residue label and every proper congruent lift above the preceding speed and at
+most (C17) therefore contains every hypothetical tight completion exactly
+once.  The six frozen recursion trees are
+
+```text
+R                  depth nodes                         trace128
+12491112           1,64,4769,195705,7340,50,0          063c1b3f17d4520feaf265b370a1c09d
+12671112           1,64,4761,195502,5875,12,0          3b468adfcff92e6bafc5cf50ea6b5000
+13671012           1,97,10343,620068,17195,39,0        4844a2fbb06e7c9aad37d047eefeecab
+2458911            1,93,9560,550797,10885,21,0         a60c4579e7f6cff7404360e8db9bc6f4
+3458910            1,79,7032,349248,10523,10,0         144d8b3b67d164cdb04afbf0bafffa3c
+3567810            1,97,10348,620350,22597,70,0        242306835e1bb0c1289ce8d030c29a7a
+aggregate          6,494,46813,2531670,74415,202,0
+```
+
+The aggregate edge counts are
+
+```text
+494,46813,2531670,74415,202,0,                         (C18)
+```
+
+and the trees contain `2,653,600` states.  Every row has zero covering prefix,
+and none reaches depth six.  Independently taking the complement of the full
+closed-danger union reconstructs all six root safe sets and all 202 deepest
+dead leaves endpoint-for-endpoint, for 208 independent checks.  The source
+asserts every row's depth counts, dead counts, maximum caps,
+minimum-longest-component values, trace halves, cache size, and crosscheck
+count.
+
+Thus all six rows in (C15) are loose.  Together with (C13)--(C14), **all twenty
+primitive-core `f=3` rows are closed**, reducing the primitive-core
+missing-label frontier from 923 rows to the 903 rows with `f<=2`.  The
+exceptional odd-label row still has a separate primitive mixed-parity branch,
+so 904 missing-label patterns retain open primitive assignments.  The packet
+`2[12]` remains the nonprimitive AP equality from C.1.  This is not a proof of
+primitive scale-one H6 emptiness or global `n=12` sporadic emptiness. ∎
 
 The statistic `f` should not be mistaken for a geometric quotient.  It is
 invariant not only under reflection `r -> 13-r`, but under every multiplication
 by a unit modulo 13 and, for six-element rows, under `R <-> P` (full and empty
 antipodal pairs exchange in equal numbers).  It preserves the number of
-antipodal AP cusps and their forced germ owners.  It destroys the identities
-and signs of the pairs, the retained speeds, exact safe endpoints and longest
-components, divisor obligations, height congruences, and Kakeya overlap.
+antipodal AP cusps and hence the number of forced germ owners, but not their
+identities.  It also destroys the signs of the pairs, the retained speeds,
+exact safe endpoints and longest components, divisor obligations, height
+congruences, and Kakeya overlap.
 These label operations need not even preserve the primitive-core domain, and
 they are not common integer dilations of a normalized scale-one packet.
 
@@ -387,11 +439,13 @@ is (C11), and the gauge is the oriented left germ at `a=r^(-1)`.  Thresholding
 does not produce a tournament: a vertex pair can carry both arrows or neither
 because its two orientations use different gauges.  Accordingly score
 histograms, SCCs, and Hamiltonian-path counts are not proof invariants here;
-the weighted directed-cycle products in (C12) are.  The increasing
-`(speed,label)` path is a tie-free enumeration device for the slice recursion,
-not a quotient of the cover predicate.  The faithful global carrier remains
-the residual endpoint union together with the labelled bank of unplaced
-danger combs.
+the weighted directed-cycle products in (C12) carry the fourteen-row local
+reduction but stop at (C15).  The increasing `(speed,label)` path used in the
+exact recursions is a transitive enumeration tournament, with score sequence
+`0,...,5`, no directed cycles, six singleton SCCs, and one Hamiltonian path.
+It is not a quotient of the cover predicate.  The faithful global carrier that
+closes (C15) is the residual endpoint union together with the labelled bank of
+unplaced danger combs.
 
 ## 1. Strict-safe components
 

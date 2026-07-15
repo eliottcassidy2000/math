@@ -1,0 +1,16 @@
+THM-848 SECOND-KRYLOV OPTIONAL HASH-GUARDED N=8 FIBRE AUDIT
+==================================================================================
+command: python3 04-computation/h_drift_K_second_krylov_referee_codex_S14.py \
+         --n8-atlas /tmp/n8_merged_node_rank_u16.bin
+atlas producer: 04-computation/mobius_cech_n8_node_atlas_export_codex_S13.py
+atlas format: 2^21 little-endian uint16 converse-merged node ranks
+atlas SHA256: 30debad3387a4ea0ef51108ea132115efda2ac2fcdfcc2c5c1d4d23155095835
+merged nodes=3528, (H,K) cells=1727, max fibre=13
+(H,K) fibres split by E[Delta K]=1 (the unique first actual split)
+unique split key: (H,K)=(345, 2820)
+rank=3338, mask=51915, a6=2535, a5=6165, S_K=-960, E[Delta K]=-240/7, alpha_(5,3,1)=(30, 184, 130)
+rank=2367, mask=7767, a6=2535, a5=6885, S_K=-240, E[Delta K]=-60/7, alpha_(5,3,1)=(32, 174, 138)
+alpha difference=(2,-10,8)=2*(1,-5,4): the n=7 ambient kernel is realized
+Delta a5=Delta S_K=720; drift gap=180/7
+scope: finite-exact conditional on the hash-verified scratch atlas; no all-n claim
+ALL ASSERTIONS PASSED

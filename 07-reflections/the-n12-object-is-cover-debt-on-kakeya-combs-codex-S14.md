@@ -245,6 +245,14 @@ so the obligation/lcm filter is literally silent.  The `j=4` flood tail still
 requires its exact lower-tree interval geometry; the Fano probe diagnoses why
 the proposed shortcut cannot prune it.
 
+The representation-theoretic obstruction is exact.  On the 21-dimensional
+edge space of `K_7`, the orbit of `r(E)` has rank seven and is the point
+potential `r_{ab}=x_a+x_b`.  The orbits of `m(E)` and `V1(E)` both have full
+rank 21.  Point incidence and Fano-line incidence together have rank only 13,
+leaving eight invisible edge directions; explicit four-edge curls of both
+`m` and `V1` are nonzero.  Thus the still-open flood geometry lives precisely
+in directions that every point/Fano marginal forgets.
+
 ## 6. Tournament threads after the audit
 
 The recurring tournament failure is now precise.  Scalar gauges often produce

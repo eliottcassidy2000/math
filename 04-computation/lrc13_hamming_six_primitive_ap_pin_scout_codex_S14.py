@@ -32,7 +32,6 @@ P13 = 13
 BASE = tuple(range(1, P13))
 ODD_ROW = (1, 3, 5, 7, 9, 11)
 
-THM815 = Path("01-canon/theorems/THM-815-scale-one-hamming-four-safe-component-closure.md")
 CONTRACTION_SOURCE = Path(
     "04-computation/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp"
 )
@@ -736,7 +735,6 @@ def main() -> None:
     print()
 
     print("PROVENANCE")
-    print(f"THM815_sha256={sha256(THM815)}")
     print(f"contraction_source_sha256={sha256(CONTRACTION_SOURCE)}")
     print(f"contraction_output_sha256={sha256(CONTRACTION_OUTPUT)}")
     print(f"script_sha256={sha256(Path(__file__))}")
