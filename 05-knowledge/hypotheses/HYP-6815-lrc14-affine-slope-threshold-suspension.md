@@ -32,10 +32,14 @@ related:
   - THM-774   # proved folded-diamond metric compression
   - THM-775   # proved dyadic deletion tower and exact Z/4 seam
   - THM-776   # finite-exact two-sheet exclusion through height 100
-  - THM-778   # CLAIMED centered-Christoffel endpoint-order decoder
-  - THM-779   # proved four-far transverse falsifier and capped family
-  - THM-780   # proved recursive good-set-state transport
-  - THM-777   # proved rho bridge and bounded-height floor; global floor conjectural
+  - THM-778   # proved centered-Christoffel endpoint-order decoder
+  - THM-780   # proved global strict-margin safe-measure floor
+  - THM-781   # proved Hamiltonian-path inverse metagraph fibre
+  - THM-782   # proved anchored two-sheet phase-cell return packet
+  - THM-783   # proved four-far transverse falsifier and capped family
+  - THM-784   # proved recursive good-set-state transport
+  - THM-777   # proved rho bridge and bounded-height sharp-floor candidate
+  - THM-785   # proved partial prime-seven exit package; universal exit open
 ---
 
 # HYP-6815: LRC14 Four-Far Cone And Affine-Slope Threshold Suspension
@@ -77,7 +81,7 @@ owner-colored threshold loop, rational gap metric, embedded marked relation
 lattice, and the action of the next permitted proof operation.  Uniform wall
 stratification and transport of those fibers over the chart remain open.
 
-The concurrent THM-772/773/774/775/776/778 programs sharpen the word "retain." A quotient
+The concurrent THM-772 through THM-782 programs sharpen the word "retain." A quotient
 need not preserve the same data for every task. THM-773's stored prime-seven
 audit shows that six finite-field moments recognize exact-cover truth while
 forgetting which of the `7!` owner assignments occurs and what the next event
@@ -88,10 +92,11 @@ proves that every imprimitive-deletion branch becomes a finite dyadic quotient
 chain with binary safe-child fibers and divisor-complete quotients. THM-776
 preserves the bounded two-sheet
 truth predicate by reversing the quantifiers into an atom/runner incidence
-hypergraph and proves that packet empty through height 100. THM-778 proposes a
-centered-Christoffel decoder for endpoint order, but remains CLAIMED. The
-status and payload splits matter: none of these carrier theorems is by itself
-an LRC14 assembly theorem.
+hypergraph and proves that packet empty through height 100. THM-778 proves a
+centered-Christoffel decoder for the complete owner-labelled endpoint schedule;
+THM-781 inverts the merged tiling node set-valuedly; THM-782 supplies an anchored
+interior return packet. The status and payload splits matter: none of these
+carrier theorems is by itself an LRC14 assembly theorem.
 
 ## 1. The outer four-far cone
 
@@ -240,7 +245,7 @@ reparameterization still applies, but `|W|=9`: the free-sheet union bound is
 beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
 the open tiling/overlap residue rather than claiming THM-761 has solved it.
 
-THM-779 makes a second, transverse route to infinity inside the literal chart exact.
+THM-783 makes a second, transverse route to infinity inside the literal chart exact.
 For prime `N>110`, set
 
 ```text
@@ -260,43 +265,80 @@ high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
 
-This does not threaten LRC14: THM-779 proves that every prime member of the
+This does not threaten LRC14: THM-783 proves that every prime member of the
 `V_N` family fires the capped-envelope peel. It identifies a missing coordinate.
 A transport state for the splice
 must retain at least the normalized cap load
 `r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
 divisor-support profile and endpoint/tooth ownership.
 
-THM-780 turns this diagnosis into a reusable terminal face. If the base good set
+THM-784 turns this diagnosis into a reusable terminal face. If the base good set
 has conservative state `(mu,r_B)` with `r_B:=r_top(B)`, adjoining frequency
 `N` and putting `r_N:=r_top(B union {N})` gives
 `mu_N>=6mu/7-2r_B/(7N)` and `r_N<=N+r_B`; no endpoint list is needed for those
 bounds. A sufficiently fast proportional peel `aN` then closes by THM-755 at an
 explicit rational threshold. One named safe interval supplies a convenient
 certificate for `mu`. The remaining noncompactness is therefore not "many
-walls" by itself, but many walls coupled to vanishing safe mass relative to
-component or peel rate.
+walls" by itself. THM-780 rules out vanishing safe mass globally; the residual
+is comparable-scale phase incidence, component load relative to a named peel,
+or owner alignment erased by the two-number enclosure.
 
 These bounds iterate under the enclosure operator
 `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Although adjoining
 frequencies commutes, the proof operators do not. The exact exchange identity
-shows that inserting smaller frequencies first maximizes the certified mass.
+shows that inserting smaller frequencies first uniquely maximizes this affine
+enclosure, not necessarily the exact mass.
 For a fixed four-far core, the 24 formal peel/order gauges therefore collapse to
 four canonical certificates, one per named peel. Failure of all four is a
 sharper residual predicate than failure of one arbitrary peel.
+
+There is now a uniform literal-cone consequence. For any nine-speed
+`C subset {1,...,14}`, `S=sum(C)`, the four-far row closes whenever
+
+```text
+n_1>=412,
+n_2>=412(S+n_1),
+n_3>=412(S+n_1+n_2),
+n_4>=412(S+n_1+n_2+n_3).
+```
+
+THM-784 proves this from the universal marked interval `L>=1/245`; `412` is
+the least integer admitted by that uniform rational comparison. Hence every
+unresolved tuple has a bounded-ratio cluster at some cumulative scale level.
+Fully lacunary flags are terminal; the recursive object lives on clustered
+projective faces.
+
+The exact 2,002-core floor `10601/114660` gives a complementary factor-19 cone
+when `n_1` is also at least `19*sum(C)`. Factor 18 fails the corresponding
+uniform comparison. This is finite-exact, whereas the factor-412 face is an
+analytic consequence of the universal marked interval.
+
+Optimizing the same calculation for all far counts gives factors
+`412,405,394,27,17,14,13,13,13,13` for `f=4,...,13`. Thus the clustered-face
+reduction is global across the high-far strata, even though only the first
+unclosed chart is literally four-dimensional.
+
+Even mass, both component counts, and the full component-length multiset are
+not exact transition state. The bases `{1,2,3,6,12}` and `{1,2,4,6,12}` agree
+on all those data, but after inserting `59` their safe masses differ by
+`1/826`. The missing datum is phase placement relative to the pending tooth
+grid.
 
 THM-777 locates the remaining compactness coordinate more precisely. For every
 12-core `P`, the elementary bound `r_P<=sum(P)` gives
 `rho(P)<=12/(pi*|G'_P|)`. Its exact census proves the candidate floor
 `|G'_P|>=7/858` only for primitive shapes with `max(P)<=18`; its explicitly
 listed scale and tooth samples plus five seeded searches are finite evidence,
-not a global theorem.
-Thus THM-779 refutes raw topological compactness, THM-780 proves transport of a
-positive `(mu,r_top)` state, and THM-777 reduces the unclassified global obstruction
-to safe-mass collapse in shape space. In fact THM-780 proves that no single
-high-frequency insertion over a fixed positive-mass base can cause that collapse.
-The next theorem must prove a uniform floor or classify and descend every
-varying-base or correlated multiscale sequence with `|G'_P| -> 0`.
+not a proof of that sharp global value. THM-780 now supplies the weaker but
+uniform theorem `|G'_P|>=182^(-12)`, so existence of a finite ratio bound is no
+longer open.
+Thus THM-783 refutes raw topological compactness, THM-784 proves transport of a
+positive `(mu,r_top)` state, and THM-777/780 prove qualitative ratio
+compactness. The remaining obstruction is not a sequence with
+`|G'_P| -> 0`; it is failure to transport the owner-labelled metric packet
+through an astronomically coarse scalar bound. The next theorem must classify
+or descend the clustered comparable-scale faces while retaining the event data
+that scalar mass and length multisets erase.
 
 The same task-indexed distinction now has a bounded exact test on the two-sheet
 face. THM-776 atomizes the bad locus for each odd pair and keeps only the
@@ -571,8 +613,9 @@ explicit legal transition or residual debt, not the Boolean field "some
    scale-normal state containing `r_D/(v|G'_D|)`, the divisor-support profile,
    and endpoint owners; then compose THM-761's high-support sheet regime with
    the capped-envelope band or a strictly smaller descendant. THM-777 proves
-   the `rho` bridge and the candidate `7/858` floor through `max(P)<=18`, but
-   the global floor or a descent for every safe-mass-decay sequence is open.
+   the `rho` bridge and the candidate `7/858` floor through `max(P)<=18`;
+   THM-780 proves the weaker global floor `182^(-12)`. The open task is a useful
+   owner/residue/deck descent inside that enormous scalar bound.
 2. **Seven-exception sheet residue.** Classify the `1/7` cyclic tilings on
    `Z/cZ`, and formalize the terminating `c -> c/g` bookkeeping for excessive
    gcd multiplicity.  These are method walls, not known LRC counterexamples.
@@ -600,10 +643,9 @@ explicit legal transition or residual debt, not the Boolean field "some
    base into THM-774/776's folded atom-incidence deficit, or prove a
    height-independent lower bound
    greater than ten for the corresponding transversal number.
-10. **Prime-sheet event decoder.** Audit THM-778's centered mechanical word,
-    tie blocks, cyclic carry, and global multi-owner reconstruction. THM-773's
-    moments already decide cover truth; the new decoder is needed only if it
-    really transports the next owner event.
+10. **Prime-sheet non-synchronization.** Compose THM-778's proved centered
+    mechanical schedule with THM-779/785's collision-hop transducer and bound
+    balanced co-landing cascades absolutely.
 
 ## Tournament Analysis and assumption challenge
 

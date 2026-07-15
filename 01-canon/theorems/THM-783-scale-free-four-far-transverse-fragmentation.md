@@ -1,17 +1,17 @@
 ---
-id: THM-779
+id: THM-783
 title: Scale-free four-far transverse fragmentation and capped closure
 status: PROVED (elementary interval geometry and capped tail) + VERIFIED-EXACT (176-prime capped base and component canaries attached)
 source: codex-2026-07-14-S2
 depends_on:
   - THM-755   # the peel-relative capped-envelope coordinate
-  - THM-780   # invariant-level good-set-state transverse-tooth cap
+  - THM-784   # invariant-level good-set-state transverse-tooth cap
 related: [HYP-6780, HYP-6815, HYP-6830, MISTAKE-145]
 verification: 04-computation/lrc14_affine_slope_suspension_codex_S2.py
   (+ 05-knowledge/results/lrc14_affine_slope_suspension_codex_S2.out)
 ---
 
-# THM-779 — Scale-free four-far transverse fragmentation and capped closure
+# THM-783 — Scale-free four-far transverse fragmentation and capped closure
 
 ## Statement
 
@@ -87,6 +87,9 @@ The `N`-runner is dangerous on the disjoint open teeth
 ```text
 T_k=((k-1/14)/N,(k+1/14)/N),       k in Z.
 ```
+
+If `N<=1760`, the asserted lower bound `N/1540-8/7` is nonpositive and hence
+trivial. Assume for the remainder of this count that `N>1760`.
 
 A tooth has closure strictly inside `J` whenever its center `k/N` is farther
 than `1/(14N)` from both endpoints. After multiplying by `N`, the admissible

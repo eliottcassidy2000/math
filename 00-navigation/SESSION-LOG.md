@@ -6,6 +6,266 @@
 > extremality (MISTAKE-141). The canonical file is
 > `01-canon/theorems/THM-777-safe-measure-floor-and-rho-bridge.md`.
 
+> **Further live-main corrections (codex-2026-07-14-S2 close-out):**
+> THM-780 now proves the crude global floor `|G'_P|>=182^(-12)`, so only
+> the sharp `7/858` value and a useful structural cutoff remain conjectural.
+> The transverse four-far results were renumbered THM-783/784 after live main
+> claimed THM-779/780. The S302 `K0=5` pierce was an empirical observation,
+> not a theorem; THM-785 (renumbered from a colliding THM-782) extends the
+> empirical cap to 6 and leaves the universal balanced-co-landing exit open.
+
+## codex-2026-07-14-S2 continuation -- four-far cone, preservation contracts, and transverse closure
+
+The first unclosed exactly-four-far chart is recorded literally as a semilinear
+rank-four cone over each of the 2,002 nine-speed cores. The session separated
+its radial far-dilation direction from a transverse tooth-refinement direction
+and proved an exact scale-free family:
+
+```text
+V_N={1,...,9,15,110,N,1092N},       N>110 prime.
+```
+
+THM-783 proves that these rows are primitive, covering, exactly four-far, and
+have no seven-speed divisor packet, while their top-peeled positive-length
+component counts are unbounded. Exact canaries are `66,104,174,310` (full
+topological counts `68,108,176,312`). Every member nevertheless fires the
+capped peel: 176 exact finite primes plus an elementary tail. This refutes raw
+fragmentation control by maximal divisor scale without threatening LRC14.
+
+THM-784 proves the reusable transition
+
+```text
+mu_N >= 6mu/7-2r_top/(7N),       r_top,N <= N+r_top,
+```
+
+plus the proportional-peel threshold, iterated enclosure operator, and the
+exchange law making increasing insertion order uniquely optimal for the affine
+enclosure. The exact Fourier load uses `r_+`; `r_top` is its conservative
+transport state. Combining the marked interval `L>=1/245` with three insertions
+proves a uniform `412`-lacunary terminal cone in every one of the 2,002 charts;
+`412` is the least integer supported by this uniform rational comparison.
+Thus every unresolved path to infinity contains a bounded-ratio cluster.
+An exact sweep of all 2,002 nine-small cores gives minimum safe mass
+`10601/114660`, uniquely at `{1,2,3,5,7,8,9,11,13}`, and a complementary
+cumulative factor-19 cone; factor 18 fails its uniform comparison.
+The same calculation closes every fully lacunary far-count flag; the least
+certified factors for `f=4,...,13` are
+`412,405,394,27,17,14,13,13,13,13`. Fully lacunary infinity is terminal
+globally, leaving a recursive tree of coupled cluster faces.
+
+An exact no-go pair shows why the clustered faces need more state. The bases
+`{1,2,3,6,12}` and `{1,2,4,6,12}` have equal mass, both component counts, and
+identical component-length multisets, but insertion of `59` changes their safe
+masses by `1/826`. Phase placement relative to the pending tooth grid is
+irreducible.
+
+After merging live THM-778/780/781/782/779/785, the preservation synthesis
+changed materially. Safe-mass collapse is impossible by THM-780; exact event
+reconstruction is solved by THM-778; and the metagraph inverse is the
+set-valued `union HP(T)/Aut(T)` fibre of THM-781. The remaining object is a
+stratified fibre over the four far coordinates with two complementary stalks:
+an anchored interior Bohr-return packet and an owner-labelled boundary-event
+schedule. A new Bohr-packet corollary records
+`t_0+B_P(1/182)` inside the strict safe set with mass at least `182^(-12)`.
+The next exact interface is intersection of that packet with owner event
+cosets, equivalently an augmented affine-subtorus box slice or a finite affine
+cyclic-code hit. Both sharp local residuals become structured-return noncontainment:
+escape from the folded diamond, and non-synchronization of the centered wall
+word with the collision-hop transducer.
+
+The main reflection, both frontier maps, HYP-6815/6830/6840, the assembly
+draft, indexes, and mistake ledger were reconciled to this state. The incoming
+duplicate theorem ID was repaired by moving the exit package to THM-785, and
+the unproved universal `K0=5` consequence was withdrawn.
+
+## codex-2026-07-14-S8 -- THM-781 PROVED: merged-node fibres are Hamiltonian paths modulo automorphisms
+
+Turned HYP-6825's stored bidirectional atlas into intrinsic forward and inverse
+functions.  The forward map constructs the fixed-path tournament of a tiling,
+canonicalizes it and its converse, and looks up the converse orbit's structural
+node address.  The inverse no longer scans the tiling cube: for each of the
+node's one or two tournament classes it normalizes every directed Hamiltonian
+path to the explorer path.  Two paths give the same tiling exactly when a
+tournament automorphism relates them, proving
+`class fibre = HP(T)/Aut(T)` and `|fibre|=H(T)/|Aut(T)|`.
+
+The executable API and stored certificate audit all `33,866` tilings, `530`
+unmerged classes, and `321` converse-merged nodes at `n=3..7`.  Forward maps,
+direct class inverses, automorphism multiplicities, class and merged size
+formulae, and every round trip have zero failures.  The browser explorer now
+exports `tilingToMergedNode` and `mergedNodeToTilings`; Python continues through
+the offline `n=7` atlas.
+
+The prime-seven fibre is now conceptual rather than enumerative:
+`n7-a267` has `175` directed Hamiltonian paths and cyclic automorphism group of
+order `7`, hence exactly `25` fixed-cut tilings.  Those masks are observer-cut
+orbits, not arbitrary explorer indices.  The next preservation tower is
+`node <- HP/Aut tiling <- owner-sheet assignment <- endpoint transport`; the
+last two arrows remain multivalued and continuation-sensitive, so no LRC(14)
+closure is claimed.
+
+---
+## codex-2026-07-14-S9 continuation -- THM-782 phase-cell packet and live-frontier reconciliation
+
+The requested uniform `q<=25` theorem remains false (THM-762/764), and the
+uniform n=12 sporadic-branch emptiness theorem remains open.  After pulling
+THM-780's quantitative phase-pigeonhole bridge, this session extracted a new
+uniform theorem inside the deep two-sheet residual.
+
+THM-782 proves that every ten-speed quotient core `U` has a `1/11`-deep time
+and an anchored joint-phase return packet `B` with
+
+```text
+|B|>=72^(-10),       ||u b||<1/72,
+||u(t_0+b)||>1/13+1/10296.
+```
+
+It follows that `G_U` has a component of length at least
+`72^(-10)/(20 max(U))`.  If `2U union {x,y}` were tight, THM-774 forces both
+the translated packet and that component into the folded diamond.  This
+repairs the missing uniform safe-measure substrate but does not close the
+branch: `72^(-10)` is tiny, and the exact low-core profile
+`|G_U|=41/858<8/117=|H_(1,9)|` proves that scalar measure comparison can pass
+while the incidence containment still fails.  The new exact target is
+structured phase-packet noncontainment.
+
+The theorem was independently refereed for the LRC(10) input, half-open-cell
+measurability, constants, circle-wrap handling, component bound, and folded
+quantifiers.  It was renumbered from 781 to 782 before publication because the
+live mainline had already reserved THM-781 for the Hamiltonian-path metagraph
+fibre inverse.
+
+A selected-pair attempt to extend THM-776 from quotient speeds 50 to 100 was
+withdrawn rather than overclaimed.  Independent exact atomizations agreed on
+the geometric masks, and HiGHS found transversal optimum 12 for `(1,3)` and
+`(197,199)`, but the proposed combined fingerprint was stale, “raw” counts had
+mixed bad atoms with distinct masks, and several exact SAT encodings did not
+finish.  These runs remain numerical evidence, not a theorem or committed
+artifact.
+
+The close-out pulls also integrated proved THM-778/779 and THM-781.  Centered
+Beatty ranks give the exact prime-seven wall schedule, the token-walk criterion
+gives its exact collision-hop acceptance rule, and the metagraph theorem
+inverts a merged node set-valuedly as `HP(T)/Aut(T)`.  That inverse restores
+the fixed-cut tiling but not owner assignment, metric transport, or carry.
+HYP-6845's proposed exit-lemma decision remains a claim stub.  Across both
+two- and seven-sheet fronts the faithful object is a labelled incidence skew
+product with metric base, phase/endpoint schedule, sheet action, and
+continuation state; tournament nodes are diagnostic quotients unless a
+reconstruction lemma is supplied.
+
+---
+
+## opus-2026-07-14-S303 -- THM-785 (renumbered from colliding THM-782): THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
+
+Prompt (owner): keep going; prove the unconditional exit lemma.
+
+PROVED: (1) phi-RECURRENCE: with phi = w^{-1}m at wall (m+1/2)/w, blocking propagates between
+consecutive walls iff phi_{i+1} = phi_i + w_{o_i}^{-1} mod 7 (same-owner free; each switch one
+determined equation). (2) PERIOD-SUM LAW (telescoped): Sum_{a != b} n_a w_a^{-1} = 0 mod 7 per
+in-run period (Beatty counts; 40/40; note: the first battery FAILED from test-power -- 2
+samples conflated with violation -- fixed, rerun clean). (3) SINGLE-VISITOR BREAK
+(unconditional tooth): in the fastest owner f's periods every other owner walls 0/1 times, so
+one visitor forces w^{-1} = 0 mod 7 -- impossible; the run dies (45 periods, 0 occurrences).
+(4) CLUSTER BALANCE: visitor sets need zero inverse-sum; pairs w_c + w_c2 = 0 mod 7 (6/6).
+(5) DE-PHASE: fixed pairs co-visit <= w_c w_c2/(w_f Delta) + 1. (6) CONDITIONAL EXTENT:
+absent balanced co-landings at the second-fastest owner g's walls, run extent < 1/w_g + 2/w_f
+=> the r=8 pierce UNCONDITIONAL for that configuration class.
+
+CENSUS (heights to 10^4): generic max 5; synchronized {2}+odds (the loophole candidate whose
+period-sums cancel by design) max 4 -- WORSE than generic, killed by within-period
+phi-equations exactly as predicted; near-ratio 4; same-residue 6; annealed peak 6. K0 := 6.
+
+DAVENPORT INSIGHT: D(Z_7) = 7 -- the seven non-f inverses ALWAYS contain a zero-sum subset;
+balance is algebraically unavoidable; the exit lemma's remaining content is GEOMETRIC: bound
+consecutive balanced CO-LANDINGS (de-phase + cascade congruences n = 4 or 0 + handover
+triple-balance = the proved machinery). Sharp conjecture: every blocking run <= 6 walls.
+
+HYGIENE: this package was originally claimed as THM-782 concurrently with the
+two-sheet phase-cell theorem; the collision was repaired by renumbering this
+exit package THM-785.
+
+FILES: 01-canon/theorems/THM-785-exit-lemma-package.md; 04-computation/
+lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.
+
+---
+## codex-2026-07-14-S7 -- THM-778 PROVED: continued fractions are the endpoint-transport language
+
+Re-audited the repository's continued-fraction threads from Sturmian sectors,
+Ostrowski ladders, Farey roofs, convergent resonance, and Euclidean residuals
+through the prime-seven metagraph fibre.  The synthesis separates four roles
+that earlier prose sometimes conflated: value address, metric roof, symbolic
+schedule, and recursive transport.  It records the exact gains and known
+overclaims in `LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md` and leaves nine
+typed avenues rather than a generic “use continued fractions” directive.
+
+THM-778 proves that midpoint endpoint clocks form centered-Christoffel words.
+The exact centered Beatty rank reconstructs the entire labelled simultaneous
+wall schedule, and a one-bit parity cocycle makes Euclidean quotient stripping
+lossless.  Coupling that schedule to THM-773's inverse-step token translations
+gives an exact prime-seven Euclidean skew product.  An audit of all 6,400
+ordered pairs through speed 80 and five complete endpoint movies found zero
+formula, repetition, tie, balance, cocycle, rank, reflection, or fibre-update
+failures.
+
+For HYP-6835's eight-owner survivor, 1,205 walls collapse to ten covered walls
+with palindromic owner word `162,108,108,206,197,197,206,108,108,162`.  The
+25-mask word is not palindromic: all 5,040 owner-sheet assignments prove that
+reflection does not descend to a function on bare mask indices.  The adjacent
+redundancy root instead has a period-five transition word, while the gaps
+between covered walls have five exact block types and their mirror.  After
+pulling concurrent THM-779, these ten hits are now correctly read as isolated
+one-wall blocking runs: the period-five square is a first-return invariant,
+not a persistent chain.  The closest theorem is to compile those five
+Euclidean return substitutions against THM-779's collision-hop rule.  This is
+a structural reduction and preservation theorem, not an LRC(14) proof.
+Concurrent THM-780 was also integrated into the historical map: its phase
+pigeonhole theorem supplies positive safe measure before any approximation
+step, but does not by itself target a prescribed convergent to a component.
+
+---
+## opus-2026-07-14-S302 -- THM-779 PROVED: the r=8 TOKEN-WALK BLOCKING CRITERION (fusing boxeph's THM-773 token algebra with HYP-6840's rainbow frame: full deck blocking = an integer-decidable walk condition; adversarial census K0 = 5 consecutive covered walls; any core-safe component with more walls is PIERCED; HYP-6840 Q1 resolved-negative in practice, Q2 holds with K0 working)
+
+Prompt (owner): continue the highest-leverage work; pull the fleet's progress first.
+
+FLEET PULL FIRST: boxeph/codex-S6 proved THM-773 (c=7 token algebra: owner a blocks exactly
+k_a = -w_a^{-1} round(w_a x) mod 7; coverage iff X^7-X | prod(X-k_a); the 25-mask heptagon
+stalk) and messaged me the suggested pull: absent-eighth-owner transport over the stalk +
+the exact factorization of my S300/S301 survivor. Also: THM-774 COLLISION resolved by
+codex-S9 (my safe-measure floor is now THM-777; their folded-diamond keeps 774) -- stale
+references fixed in HYP-6835/6840, both INDEXes, script header.
+
+THE THEOREM (THM-779): (1) CRITERION PROVED -- full r=8 blocking over J at the prime-7 lens
+iff [pieces: the 8 tokens cover F_7] + [walls: the 7 non-walling tokens are EXACTLY F_7,
+i.e. the waller carries the collision pair] + [no simultaneous walls]. Pure integer walk,
+O(#walls), replacing S301's Fraction chamber search. Token formula refereed exactly on
+4,000 random rational points + own-wall blanks + S301 cross-validation. (2) THE CHAIN: after
+a's wall the collision pair is (a, gamma), gamma = holder(token_a - w_a^{-1}); the next
+wall's owner must lie in the pair -- every owner switch is a ~1/7 algebraic coincidence
+(SURJ density 28*7!/7^8 = 2.45%; global carry -1 per unit x; period 7). (3) CENSUS: 120
+random 8-tuples (w <= 500): median max blocking run = 1 wall, 90th pct = 2, max = 4;
+annealed maximum K0 = 5 at {8,13,19,23,92,359,372,438}. (4) SURVIVOR FACTORED: the 19/216
+one-moment survivor has tokens [None,6,5,3,1,4,2,0] exactly as boxeph predicted (absent
+owner 108 + heptagon rainbow); its blocking run is EXACTLY 1 wall -- the algebra's minimal
+case, not a blocking seed. (5) CONSEQUENCE: any core-safe component containing > K0 walls
+cannot be fully blocked (a full 1/14-witness moment exists inside); HYP-6840 Q1
+resolved-negative in practice; Q2 (the positive r=8 pierce) holds with K0 = 5 working.
+REMAINING (THM-779 section 5, honest): the UNCONDITIONAL exit lemma (a K-run forces K-1
+schedule-vs-algebra coincidences; schedule three-distance-rigid vs orbit-large hop targets;
+classify the mod-7 degeneracy packets -- boxeph's 25-mask stalk + Nerode is the right
+machinery); tiny components (<= K0 walls) fall to the direct piece check; other-prime
+lenses mechanical but unwritten.
+
+THE ARC ACROSS S299-S302, one line each: S299 sheets close r<=6 (THM-761); S300 events
+pierce r=7 (THM-767/771, corrected collaboratively); S301 the floor + the no-go hunt flips
+(THM-777, HYP-6840); S302 the token walk closes in on r=8 (THM-779) -- the deck program has
+advanced from a union bound to symbolic dynamics in four sessions, four agents interleaving.
+
+FILES: 01-canon/theorems/THM-779-r8-token-walk-blocking-criterion.md;
+04-computation/lrc14_r8_token_walk_criterion_opus_S302.py (+ .out); HYP-6840 Q1-Q3 updated;
+THM-774->777 reference fixes; reply to boxeph; results INDEX.
+
+---
 ## opus-2026-07-14-S301 -- SIGNAL FROM NOISE: THM-774 (the safe-measure floor: exact census min |G'| = 7/858 UNIQUELY at {1..13}-{6}, kps's detuning extremal one level down; no decay under the full battery; rho bridge => regime-2 bounded on floored strata) + HYP-6840 (the r=8 deck no-go hunt RESOLVED-NEGATIVE with the conclusion FLIPPED: full blocking needs DMNR-grade rigidity; the universal 1/7 buffering law)
 
 Prompt (owner): make mathematical progress or prove rigorously why some routes cannot provide
@@ -59,6 +319,59 @@ FILES: 01-canon/theorems/THM-774-safe-measure-floor-and-rho-bridge.md;
 buffering_law_referee}_opus_S301.py (+ .outs); HYP-6835 item 1 updated; INDEX entries.
 
 ---
+## codex-2026-07-14-S9/S8 -- n=12 two-sheet frontier: dyadic descent proved and height-100 packet empty
+
+The requested uniform `q<=25` lemma cannot be proved: THM-762/764 give exact
+primitive counterexamples with first witnesses at `q=27` and `q=26`.  The
+uniform n=12 sporadic-branch emptiness theorem also remains open.  This session
+kept those quantifiers explicit and advanced the deep two-sheet branch instead.
+
+THM-775 is now PROVED and independently refereed.  For a tight packet
+`A=2U union {x,y}`, every imprimitive deletion of the primitive divisor-complete
+core `U` has gcd exactly two.  It produces `U=2V union {u odd}`, an exact
+disjoint `2+1+1` ownership partition on `Z/4`, a primitive divisor-complete
+quotient `V`, the cocycle `N_x y-N_y x=2 mod 4`, and exact centre/width taxes.
+The deletion mechanism iterates to a hereditarily primitive base.  Beyond the
+first seam the disjoint object is a canonical assigned ownership tree, not the
+raw danger incidence relation.  Unwinding the chain gives the testable 2-adic
+normal form `U=2^r Q_r union {2^i h_i:0<=i<r}`, with one speed in every
+valuation layer below `r` and `r<=7`.
+
+THM-776 is FINITE-EXACT and independently audited.  Every twelve-set with ten
+even and two odd speeds and `max(A)<=100` has `M(A)>1/13`; no primitivity or
+divisor filter is assumed.  Exact atomization uses 6,876 rational endpoints
+and 6,875 open atoms.  For all 1,225 odd pairs, the compressed bad-atom/core-
+tooth hypergraph has transversal number exactly 12: CaDiCaL proves every
+at-most-11 instance UNSAT, a separately encoded Glucose pass proves every
+at-most-10 instance UNSAT, and `{1,...,12}` is the matching upper cover.  The
+full replay passed, the direct exact-`M` height-24 audit found zero tight rows,
+and an independent referee regenerated the full grid and folded-diamond atlas,
+reproducing both hashes and all clause histograms.  Alternate totalizers checked
+representative at-most-11 instances; no DRAT/LRAT traces are claimed.
+
+Concurrent mainline work was pulled repeatedly and materially integrated.
+THM-774 additionally closes every quotient core `U subset [1,19]` with odd
+exceptions unbounded, complementary to THM-776's larger bounded-height square.
+The later safe-measure theorem that collided with the first-pushed folded-
+diamond THM-774 was preserved and renumbered THM-777.  THM-773's seven-sheet
+token polynomial and HYP-6840's verified one-seventh buffering law/eight-owner
+rainbow obstruction were connected to the two-primary work through a common
+labelled sheet-incidence skew product.  Subsequent THM-778/779 proved the
+centered-Christoffel schedule and its token-walk acceptance rule.
+
+The exact remaining `s=2` target is now a scale-free transversal/noncontainment
+theorem for a primitive divisor-complete ten-comb, or quantitative bounds on
+all THM-775 seam guards strong enough to put the reconstructed ten-core/full
+packet inside THM-774/776's complementary finite bases.  Higher shallow lifts
+and higher-sheet colour packets remain separate open branches.  Runner
+tournaments are telemetry here: the faithful vertices
+are bad atoms/proof obligations, with core speeds as incident killers and the
+binary safe-child map as recursion sidecar.
+
+Artifacts: THM-775/776; the THM-776 script/output; updated HYP-6820, current
+frontier, results/hypothesis indexes, investigation backlog, and the ramified-
+sheet-cover reflection addendum.
+
 ## codex-2026-07-14-S6 -- THM-773 PROVED: prime-seven token polynomial, monodromy, and exact metagraph fibre
 
 The `c=7` deck is now an exact finite-field local system.  Off endpoint walls,

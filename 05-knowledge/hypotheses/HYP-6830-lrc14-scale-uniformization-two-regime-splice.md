@@ -8,8 +8,9 @@ depends_on:
   - THM-760   # r=1 coprime sheet dodge
   - THM-761   # multi-exception sheet covering bound (this session)
   - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
-  - THM-779   # exact scale-free f=4 transverse-fragmentation falsifier
-  - THM-780   # invariant-level good-set-state transverse-tooth cap
+  - THM-783   # exact scale-free f=4 transverse-fragmentation falsifier
+  - THM-784   # invariant-level good-set-state transverse-tooth cap
+  - THM-780   # unconditional height-free safe-measure floor
   - THM-777   # rho bridge and exact bounded-height safe-mass floor
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
 related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-145, MISTAKE-146]
@@ -56,7 +57,7 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
    but a single high-frequency runner cuts a fixed safe interval into arbitrarily
    many pieces without creating a seven-runner divisor packet.
 
-## Exact infinite-family falsifier (THM-779)
+## Exact infinite-family falsifier (THM-783)
 
 For every prime `N>110`, put
 
@@ -93,7 +94,7 @@ This family has all the scope properties needed to refute the proposed bridge.
    `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
    literally in the first open far-count chart: its nine small speeds are
    `{1,...,9}` and its four far coordinates are `15,110,N,1092N`. This is not an
-   LRC counterexample: THM-779 proves the top peel fires THM-755's capped-envelope
+   LRC counterexample: THM-783 proves the top peel fires THM-755's capped-envelope
    test for every prime `N>110`. It is a counterexample specifically to using `c*` as a
    sufficient fragmentation coordinate, now internal to the four-dimensional
    object rather than imported from another stratum.
@@ -118,7 +119,7 @@ data to distinguish dilation copies from high-frequency tooth insertion. It rema
 open whether those data admit a finite or recursively compact quotient; no
 replacement theorem is claimed here.
 
-## A terminal transverse face (THM-780)
+## A terminal transverse face (THM-784)
 
 The falsifier mechanism itself admits a general theorem. For a fixed base `B`,
 put `mu=|G'_B|` and let `r_B=r_top(B)` include singleton components. After
@@ -140,21 +141,50 @@ r_top(B union {N}) <= N+sum(B).
 
 Consequently, for every fixed base with `mu>0`,
 `liminf_(N->infinity)|G'_{B union {N}}|>=6mu/7>0`. A single transverse tooth
-frequency cannot cause safe-mass collapse; any global decay sequence must vary
-the base or use correlated iterated/multiscale insertions.
+frequency cannot cause safe-mass collapse. THM-780 separately rules out such
+collapse even for varying twelve-cores.
 
 A proportional peel `aN` closes beyond an explicit rational threshold
 whenever `(333/106)*a*6L/7>1`. This proves that transverse wall proliferation
 alone is a terminal face: it can make raw components unbounded while keeping
 the exact cap load `r_+/(aN|G'|)` bounded by the conservative state load
-`r_top/(aN|G'|)`. For THM-779, `L=1/1540`,
+`r_top/(aN|G'|)`. For THM-783, `L=1/1540`,
 `a=1092`, and the exact crossing is `11734415/9278<1265`.
 
+More globally, THM-784 proves a uniform `412`-lacunary terminal cone in every
+literal four-far chart. If `C subset {1,...,14}`, `|C|=9`, `S=sum(C)`, and
+
+```text
+n_1>=412,
+n_2>=412(S+n_1),
+n_3>=412(S+n_1+n_2),
+n_4>=412(S+n_1+n_2+n_3),
+```
+
+then peeling `n_4` closes `C union {n_1,n_2,n_3,n_4}`. Thus a genuinely
+unresolved far tuple must contain a bounded-ratio cluster at some level of its
+cumulative scale flag.
+
+An exact sweep of all 2,002 nine-small cores gives the stronger finite-core
+floor `10601/114660` and a complementary factor-19 cumulative cone when
+`n_1>=19*sum(C)`. Factor 18 fails the same uniform comparison.
+
+The same proof covers every higher far-count stratum. The least cumulative
+separation factors certified for `f=4,...,13` are
+
+```text
+412,405,394,27,17,14,13,13,13,13.
+```
+
+For `f>=7`, the bounded core has at most six speeds and the elementary danger
+union already supplies the stronger starting mass. Thus fully lacunary escape
+is terminal throughout the `f>=4` endgame; only recursively clustered faces
+remain.
+
 This does not prove the global splice. It sharpens its negation space. A truly
-unresolved sequence must couple increasing wall frequency to safe-mass collapse
-relative to its component state, to a subcritical peel rate, or to an owner
-alignment that evades the proposed descent. Those three channels must remain
-distinguishable.
+unresolved sequence must stay on a clustered comparable-scale face, have a
+subcritical peel relative to component load, or exhibit owner alignment that
+evades the proposed descent. Those channels must remain distinguishable.
 
 **Ratio study (opus-S300, independent confirmation + the measured constants).** The
 stress battery `lrc14_regime2_complementarity_stress_opus_S300.py` (+ .out)
@@ -170,25 +200,27 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
   height 727, so this is heuristic finite evidence, not convergence. The
   separate stated-bank ratio study measured `rho <= 9.335`, with its maximum at
   the interval shape; no global ratio extremum follows;
-- THM-779 proves that the chosen top peel `1092N` lies above its band edge for
+- THM-783 proves that the chosen top peel `1092N` lies above its band edge for
   every member of the chart-native prime family; the band itself need not be empty;
   the other high-frequency falsifier is compatible with the same candidate on its
   audited range. Neither fact proves the ratio-coordinate conjecture globally;
 - THM-777 proves the bridge `rho <= 12/(pi |G'_P|)`, the unconditional tail
   `|G'_P|>=1/(91 max(P))`, and by exact census the sharp candidate floor
   `7/858` for every primitive 12-core with `max(P)<=18`. Its explicitly listed
-  scale/tooth samples and five seeded searches find no lower value. The
-  global floor is explicitly **CONJECTURAL**. If proved, it would give
-  `rho<469` uniformly and bound the normalized regime-2 band; the census and
-  adversarial battery alone do not do so.
+  scale/tooth samples and five seeded searches find no lower value. THM-780
+  separately proves the much smaller but global floor `182^(-12)` and hence
+  `rho<=12*182^12/pi`. The sharp `7/858` identity, uniqueness, and practical
+  `rho<469` cutoff remain conjectural; the census and adversarial battery alone
+  do not prove them.
 
-The three scale statements now form a precise logical staircase. THM-779 shows
-that component topology is not compact modulo `c*`. THM-780 shows that a fixed
+The scale statements now form a precise logical staircase. THM-783 shows
+that component topology is not compact modulo `c*`. THM-784 shows that a fixed
 positive safe-mass state survives transverse refinement strongly enough for a
-proportional peel. THM-777 shows that a global positive safe-mass floor would
-compactify the remaining ratio coordinate. What is missing is exactly either
-that shape-space floor or a classification/descent of every sequence on which
-safe mass tends to zero.
+proportional peel. THM-777 turns any positive safe-mass floor into a ratio
+bound, and THM-780 now supplies such a floor uniformly. Thus qualitative ratio
+compactness is proved. What remains is an effective structural atlas: the
+universal constant is enormous and scalar mass still forgets endpoint owners,
+residue action, and the noncontainment predicates needed by recursive descent.
 
 ## Assumption challenge and tournament scope
 
@@ -230,8 +262,9 @@ the orientation itself.
 
 The sheet residual at scale c IS an inhomogeneous discrete lonely-runner instance on
 Z_c: runners = exceptional residues w_a mod c, offsets = w_a·t0/c, radius 1/14,
-lonely time = free sheet. The tight case (r = 7, arcs tile) is the 7-clock partition
-(THM-754) one level down: tight instances are tilings at every level. The underlying
+lonely time = free sheet. In the all-unramified zero-surplus `r=7` fibre, a
+multiplicity-one cover is the 7-clock tiling (THM-754) one level down. Ramified
+full covers may overlap and instead satisfy `F=Q+Omega-sigma`. The underlying
 object is a pointed circle with burned arcs, self-similar under scale descent; the
 free sheet is the next level's basepoint (the observer-lens principle survives
 descent).

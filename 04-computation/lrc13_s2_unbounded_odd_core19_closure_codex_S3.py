@@ -117,6 +117,9 @@ def main():
 
     core_count = 0
     divisor_complete = 0
+    divisor_below_diamond = 0
+    min_divisor_measure = None
+    min_divisor_core = None
     odd_tests = 0
     pair_capacity = 0
     universal = 0
@@ -125,12 +128,23 @@ def main():
 
     for core in combinations(range(1, args.N + 1), 10):
         core_count += 1
-        divisor_complete += all(
+        is_divisor_complete = all(
             any(speed % modulus == 0 for speed in core)
             for modulus in range(2, 13)
         )
+        divisor_complete += is_divisor_complete
         components = strict_safe_components(core)
         assert components
+        if is_divisor_complete:
+            safe_measure = sum(
+                (right - left for left, right in components), Fraction(0)
+            )
+            divisor_below_diamond += safe_measure <= Fraction(8, 117)
+            if min_divisor_measure is None or (safe_measure, core) < (
+                min_divisor_measure, min_divisor_core
+            ):
+                min_divisor_measure = safe_measure
+                min_divisor_core = core
         widest = max(right - left for left, right in components)
         ratio = Fraction(4, 13) / widest
         cap = ratio.numerator // ratio.denominator
@@ -186,6 +200,11 @@ def main():
         f"expected={comb(args.N,10)} divisor_complete={divisor_complete}"
     )
     print(
+        "divisor_complete_below_diamond_cap="
+        f"{divisor_below_diamond} min_safe_measure={min_divisor_measure} "
+        f"at U={min_divisor_core}"
+    )
+    print(
         f"odd_(U,w)_tests={odd_tests} implied_pair_capacity={pair_capacity} "
         f"universal_incidences={universal}"
     )
@@ -221,6 +240,9 @@ def main():
     assert core_count == comb(args.N, 10)
     if args.N == 19:
         assert divisor_complete == 3400
+        assert divisor_below_diamond == 52
+        assert min_divisor_measure == Fraction(41, 858)
+        assert min_divisor_core == (1, 2, 3, 5, 7, 8, 9, 10, 11, 12)
         assert odd_tests == 767700
         assert pair_capacity == 3179784
         assert universal == 0

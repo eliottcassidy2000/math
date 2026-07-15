@@ -1,0 +1,41 @@
+THM-781 HAMILTONIAN-PATH INVERSE OF MERGED METAGRAPH FIBRES
+==============================================================================
+forward: tiling -> tournament -> canonical class -> converse orbit -> node
+inverse: node classes -> Hamiltonian paths / automorphisms -> tilings
+
+n=3: tilings=2 classes=2 merged_nodes=2
+  exact forward checks=2 failures=0
+  class inverse failures=0 automorphism multiplicity failures=0
+  H/Aut formula failures=0 merged-sum failures=0 inverse round-trip failures=0
+  class fibre size range=(1, 1) node fibre size range=(1, 1)
+n=4: tilings=8 classes=4 merged_nodes=3
+  exact forward checks=8 failures=0
+  class inverse failures=0 automorphism multiplicity failures=0
+  H/Aut formula failures=0 merged-sum failures=0 inverse round-trip failures=0
+  class fibre size range=(1, 5) node fibre size range=(1, 5)
+n=5: tilings=64 classes=12 merged_nodes=10
+  exact forward checks=64 failures=0
+  class inverse failures=0 automorphism multiplicity failures=0
+  H/Aut formula failures=0 merged-sum failures=0 inverse round-trip failures=0
+  class fibre size range=(1, 13) node fibre size range=(1, 13)
+n=6: tilings=1024 classes=56 merged_nodes=34
+  exact forward checks=1024 failures=0
+  class inverse failures=0 automorphism multiplicity failures=0
+  H/Aut formula failures=0 merged-sum failures=0 inverse round-trip failures=0
+  class fibre size range=(1, 43) node fibre size range=(1, 86)
+n=7: tilings=32768 classes=456 merged_nodes=272
+  exact forward checks=32768 failures=0
+  class inverse failures=0 automorphism multiplicity failures=0
+  H/Aut formula failures=0 merged-sum failures=0 inverse round-trip failures=0
+  class fibre size range=(1, 159) node fibre size range=(1, 306)
+
+DISTINGUISHED PRIME-SEVEN PULLBACK
+  n7-a267 classes=('0x7436170381c0e',) self_converse=True
+  inverse fibre size=25 digest=bfc531b0f5bac89c53a90294333fb8ce23e8d3ce0a71d79ae7aa87ffaa058310
+
+TOURNAMENT ANALYSIS
+  vertices: fixed Hamiltonian paths (inverse generator), not runners
+  observable: whether two paths normalize to the same tiling
+  switch: quotient by Aut(T); each equivalence block has size |Aut(T)|
+  tie Hamiltonian path: lexicographic path order
+  isomorphism-node loss: path representative and fixed-cut tiling, restored as the inverse fibre

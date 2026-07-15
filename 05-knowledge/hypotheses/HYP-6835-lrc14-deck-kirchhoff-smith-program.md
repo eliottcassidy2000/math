@@ -8,6 +8,8 @@ depends_on:
   - THM-767   # corrected historical balance/event carrier; raw-w/KCL claims withdrawn
   - THM-771   # exact F=Q+Omega-sigma defect and reduced-winding event pierce
   - THM-773   # prime-seven token polynomial, heptagon fibre, and event holonomy
+  - THM-778   # centered-Christoffel endpoint word and exact global wall ranks
+  - THM-779   # r=8 piece-surjectivity/wall-rainbow token-walk criterion
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
 related: [THM-745, THM-754, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146]
 ---
@@ -29,13 +31,13 @@ has count `c/7` off its endpoint coset and `c/7-g_a` on it. The event mesh is
 stratum. The former KCL necessity is withdrawn: strict endpoint equality is safe and
 cannot hand off ownership of a bad sheet. What remains, in decreasing leverage:
 
-## 1. The ρ-floor obligation (finishes regime 2) — ANSWERED IN PART by THM-774 (S301)
+## 1. The ρ-floor obligation (finishes regime 2) — ANSWERED IN PART by THM-777 (S301; renumbered from a 774 collision)
 
 `rho(P) = v*(P)/maxP ≤ 12/(π|G'_P|)` since `r_P ≤ Sum(P) ≤ 12·maxP`. Measured:
 `rho ≤ 9.335`, extremal at the `{1..12}` shape, scale-invariant on dilates, `< 1` on
 the codex tooth-insertion falsifier.
 
-**THM-774 (opus-S301) delivered the decidable part:** the exact bounded census —
+**THM-777 (opus-S301) delivered the decidable part:** the exact bounded census —
 **min |G'| = 7/858, uniquely at {1..13}∖{6}** (kps's detuning extremal one level
 down: the double-extremal signal), stable across maxP ≤ 16/17/18; NO decay under
 the full adversarial battery (scale rays flat ≈ 0.048 through c = 40, tooth
@@ -109,6 +111,40 @@ or failure of the divisor condition.  For `r>8`, the quotient polynomial
 `product(X-k_a)/(X^7-X)` on covered chambers is a candidate exact redundancy
 sidecar.
 
+**Continued-fraction transport update (THM-778).**  The missing endpoint-order
+field is now exact.  Every pair of owner midpoint clocks is a centered rational
+mechanical word with an Euclidean parity cocycle, and the centered Beatty rank
+of each owner-local event reconstructs the full simultaneous-wall schedule.
+For the displayed eight-owner row, `1,228` individual events form `1,205`
+walls, `32` chambers are covered, and exactly `10` walls are covered.  They are
+all simple, and their absent-owner word is
+
+```text
+162,108,108,206,197,197,206,108,108,162.
+```
+
+The palindrome is forced by `x -> 1-x`; the published `19/216` wall is the
+second entry.  The seven-token masks are
+`(25773,32153,31115,14635,615,30093,31115,615,14233,6035)`.
+This word is not palindromic: among all 25 masks, reflection has a unique mask
+image for only 9 and as many as 7 images for one mask, so the owner-labelled
+lift is essential.  The adjacent duplicate/redundancy-root word is nevertheless
+the exact period-five square
+`((1->0),(4->6),(2->4),(0->2),(6->5))^2`.  The next target is therefore finite
+and labelled: the nine intervening wall-block counts are the palindrome
+`(57,301,3,24,329,24,3,301,57)`, leaving five exact block types.  Compile their
+Euclidean substitutions between these root/mask walls.  A useful descent must
+act on that fibre data; the continued fraction of a speed ratio alone is only
+the base address.
+
+THM-779 sharpens the interpretation: every gap above contains at least three
+other walls, so all ten covered hits are isolated one-wall blocking runs.  The
+five-block palindrome is a first-return problem across uncovered excursions,
+whereas a persistent run must also satisfy THM-779's collision-pair hop chain
+at every consecutive schedule wall.  THM-778 provides that exact schedule;
+the remaining unconditional exit lemma is therefore a comparison of a
+centered mechanical owner word with a finite algebraic hop word.
+
 ## 5. Lean targets (decide-friendly)
 
 The balance identity and two-value lemma are finite-checkable per (c,w); the event
@@ -124,6 +160,9 @@ case, and the pierce inequality Σ ≤ c−1 — no analysis, pure counting.
 - `04-computation/lrc14_r7_sheet_endpoint_defect_codex_S5.py` (+ .out): 83,036
   unramified count checks, 12,000 exact defect identities, c=7 event witness, c=21
   ramification obstruction, and reduced-mesh audit.
+- `04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py`
+  (+ .out/.json): 6,400-pair exact word/cocycle audit, lossless global rank
+  reconstruction, five full prime-sheet movies, and the ten-wall r=8 word.
 - `04-computation/lrc14_regime2_complementarity_stress_opus_S300.py` (+ .out): the
   ratio study (ρ battery, adversarial climb → {1..12}, refutation confirmation).
 - `lrc14_certificates.py`: `deck_event_witness()` (constructive fixed-event witness;

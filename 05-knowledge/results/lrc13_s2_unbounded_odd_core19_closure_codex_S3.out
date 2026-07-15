@@ -2,6 +2,7 @@ THM-774 finite-exact unbounded-odd low-core closure
 strict G_U / closed odd eligibility endpoint convention
 
 N=19 all_10_subsets=92378 expected=92378 divisor_complete=3400
+divisor_complete_below_diamond_cap=52 min_safe_measure=41/858 at U=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12)
 odd_(U,w)_tests=767700 implied_pair_capacity=3179784 universal_incidences=0
 max_intrinsic_w_cap=60 at U=(1, 2, 3, 5, 7, 8, 11, 13, 18, 19) ell_max=6/1183 components=18
 sha256=ec206bf06eda11b5f8ee5318b2bdbc97d61ae63c78e508c83610ce3a8a2dcf83

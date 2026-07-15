@@ -20,49 +20,68 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded positive-length good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-779 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-783 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-779; MISTAKE-145).
-- **Terminal transverse face:** THM-780 generalizes the successful cap calculation. A base good-set
+  (THM-783; MISTAKE-145).
+- **Terminal transverse face:** THM-784 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-780's enclosure operator
+- **Recursive certificate pull:** Iterate THM-784's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
   to four canonical certificates. Classify rows on which every certified mass
   bound or cap test fails; those are precisely where endpoint-owner correlations must
   re-enter the state.
+- **Uniform four-far terminal cone:** THM-784 now proves that every nine-small
+  chart closes whenever successive far coordinates satisfy the cumulative
+  `412`-lacunarity inequalities. The exact rational comparison is
+  `4455873/4453855>1`, while `411` fails the same calculation. Therefore every
+  unresolved path to infinity has a bounded-ratio cluster at some scale level;
+  recurse on clustered/projective faces rather than fully lacunary flags.
+- **Finite-exact four-far enhancement:** all 2,002 nine-small cores have safe
+  mass at least `10601/114660`, uniquely minimized by
+  `{1,2,3,5,7,8,9,11,13}`. Full-state transport gives a complementary
+  cumulative factor-19 terminal cone; factor 18 fails the same uniform
+  comparison. Retain both it and the analytic factor-412 cone.
+- **All far-count flags:** optimizing the same proof gives least certified
+  cumulative separation factors `412,405,394,27,17,14,13,13,13,13` for
+  `f=4,...,13`. The high-far constants drop sharply because a core of at most
+  six speeds has positive safe mass by the union budget. Fully lacunary escape
+  is therefore terminal globally; the remaining atlas should be organized as
+  a recursive cluster tree.
 - **Safe-mass compactness bridge:** THM-777 proves
   `rho(P)<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 max(P))`. Its exhaustive primitive
   census through `max(P)<=18` has unique minimum `7/858` at
   `{1,...,13}\{6}`; the explicitly listed scale/tooth rows and five seeded
-  searches find no lower value. The global `7/858` floor is conjectural.
-  THM-780 rules out one high-frequency insertion over a fixed base as a decay
-  mechanism. Prove a uniform floor or classify and descend every varying-base
-  or correlated multiscale sequence with `|G'_P|->0`.
+  searches find no lower value. THM-780 proves the weaker global floor
+  `182^(-12)`, so the ratio coordinate is uniformly bounded; the sharp
+  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-784
+  separately gives a much stronger fixed-base transition. The residual task is
+  owner/residue/deck transport inside the enormous bounded ratio domain.
 - **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
-  owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
-  `c*` alone; THM-779 refutes the proposed raw-component route to one, while
-  THM-777 identifies the missing safe-mass floor exactly and proves its bounded
-  base stratum without proving it globally.
+  owners; (iii) gcd-descent bookkeeping. No global regime-2 bound follows from
+  `c*` alone; THM-783 refutes the proposed raw-component route, while
+  THM-777/780 give qualitative ratio compactness without an effective
+  endpoint-owner classification.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-777/779/780; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-777/780/783/784; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S301/S9 floor update:** THM-777 proves the bridge
   `rho<=12/(pi|G'_P|)`, the unconditional but height-decaying floor
   `|G'_P|>=1/(91 maxP)`, and the exact bounded-shape minimum `7/858` for every
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
-  explicitly listed finite probes find no lower value, but the global shape
-  floor remains a conjecture. THM-780 separately proves that one high-frequency
+  explicitly listed finite probes find no lower value, but the sharp global
+  value remains a conjecture. THM-780 proves the crude global floor
+  `182^(-12)`; THM-784 separately proves that one high-frequency
   insertion over a fixed positive-mass base cannot cause decay. Do not promote
   the proposed `rho<469` ratio bound outside strata where the floor is proved,
   or mistake that ratio bound for an endpoint/residue classification.
@@ -75,15 +94,20 @@
   complementarity is refuted (MISTAKE-145); the surviving measured candidate is
   peel-relative `rho=v*/max(P)`, at most `9.335` on the stated bank and extremal
   there at `{1,...,12}`. THM-777 proves the rho bridge, the Lipschitz tail, and
-  the candidate `7/858` floor through `max(P)<=18`; the global floor remains the
-  missing theorem. (iii) HYP-6835 retains ramification-surplus equality packets,
+  the candidate `7/858` floor through `max(P)<=18`; THM-780 later proves the
+  much smaller global floor `182^(-12)`, leaving only the sharp value and a
+  useful structural cutoff open. (iii) HYP-6835 retains ramification-surplus equality packets,
   effective threshold decks, `r>=8` alignment residue, and Lean decide targets.
   Tooling: `deck_event_witness()` in `lrc14_certificates.py` (16/16). Reflection:
   `07-reflections/the-deck-is-a-smith-diagram-opus-S300.md`.
+  The adversarial battery finds no decay. The resulting normalized bound is
+  finite but enormous; the sharp global value `7/858` remains conjectural. Do
+  not promote the proposed practical `rho<469` atlas bound outside strata
+  where the sharp floor is proved.
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -110,6 +134,17 @@
   of raw height at most 100
   has `M>1/13`, with no primitivity or divisor-completeness filter. Its exact
   atom-incidence dual has transversal number 12 for all 1,225 odd pairs.
+  incidence).  THM-775 proves that every imprimitive deletion is a factor-two
+  seam, with an exact first `Z/4` ownership tiling and a finite dyadic descent
+  to a hereditarily primitive divisor-complete core.  THM-776 independently
+  closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
+  bad-atom hypergraphs have transversal number exactly 12, while a packet core
+  has only ten speeds.  THM-782 gives every ten-core a scale-free anchored
+  phase-cell packet of measure at least `72^(-10)`, strict clearance
+  `1/13+1/10296`, and a safe component of normalized width at least
+  `72^(-10)/20`.  Tightness would force this whole structured packet into the
+  folded diamond; the scalar floor alone is much too small to contradict the
+  diamond cap.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -139,11 +174,19 @@
   exact `2+1+1` ownership partition on `Z/4`, transfers divisor completeness,
   and iterates to a finite terminal base. It does not exclude that base or the
   full tower uniformly.
-- **S7 transport proposal:** THM-778 remains CLAIMED. Its pairwise centered
-  mechanical-word formula is derived, but global multi-owner reconstruction,
-  odd/odd tie blocks, cyclic carry, and prediction of the next owner/free-sheet
-  future still need exact audit. THM-773's moment certificate already preserves
-  cover truth; THM-778 is needed only for event transport.
+- **S7 transport theorem:** THM-778 now proves the centered mechanical-word
+  formula, global multi-owner reconstruction, odd/odd tie blocks, cyclic carry,
+  and exact token-fibre transport. THM-773's moment certificate preserves cover
+  truth; the remaining prime-seven problem is THM-779/785 non-synchronization
+  of this schedule with the collision-hop transducer.
+  impossible, prove a scale-free transversal lower bound beyond ten, or bound
+  all dyadic seam guards strongly enough that the reconstructed `U` or `A`
+  lies in THM-774/776's complementary finite bases, or prove that some
+  THM-782 heavy anchored phase cell escapes every admissible diamond.  Then
+  treat the `s=3`
+  three-colour edge.  The exact object is loose-set
+  component x sheet-owner incidence with closed endpoints, not a residue
+  condition at one binding point.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all
@@ -154,6 +197,66 @@
   all 66 burdens tied and one tie Hamiltonian path, yet the owner hypergraph
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
+
+## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
+
+- **Source:** THM-781; HYP-6825; THM-773/778; tournament-tiling explorer.
+- **Forward function:** construct the fixed-path tournament of a tiling,
+  canonicalize it and its converse, take their orbit, and look up HYP-6825's
+  structurally ordered merged address.
+- **Inverse function:** for each of the node's one or two unmerged tournament
+  classes, normalize every directed Hamiltonian path to the fixed observer
+  path.  Quotienting by the free automorphism action gives exactly the tilings.
+- **Formula:** an unmerged class has `H(T)/|Aut(T)|` tilings; a non-self-
+  converse merged node has twice the contribution of one class.
+- **Exact audit:** all 33,866 tilings, 530 classes, and 321 merged nodes at
+  `n=3..7` pass forward lookup, path inverse, automorphism multiplicity,
+  cardinality, and round-trip checks with zero failures.
+- **Prime-seven payoff:** `n7-a267` has `H=175`, `|Aut|=7`, so its exact 25-mask
+  fibre is the set of Hamiltonian observer-cut orbits, not a UI accident.
+- **Next pull:** refine the relation to
+  `node <- HP/Aut tiling <- owner-to-sheet assignments <- endpoint transport`.
+  Test continuation purity at each arrow; the first expected failure is at the
+  mask-to-owner lift, where reflection and next-wall futures are multivalued.
+  HYP-6845's new wall `phi`-recurrence belongs in the endpoint-transport field,
+  not in the merged node or path-orbit address.
+
+## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
+
+- **Source:** THM-778/773; HYP-6835/6825; THM-536/637/745; HYP-4078/6280.
+- **Proved structure:** Owner midpoint clocks merge by the exact centered
+  mechanical count `ceil((v(2i+1)-u)/(2u))`.  The common gcd gives repeated
+  blocks, odd/odd reduced ratios give exactly `gcd(u,v)` ties, and Euclidean
+  quotient stripping carries a one-bit midpoint parity cocycle.  Summed
+  centered Beatty counts give an exact global rank for every wall event.
+- **Prime-sheet skew product:** The ranked word drives translations
+  `k_a->k_a-w_a^{-1}` in `F_7`; polynomial divisibility observes coverage and
+  the full word produces the nontrivial global carry.  Five exact movies have
+  zero rank/transition failures.
+- **r=8 finite target:** The HYP-6835 row has 1,205 wall blocks but only ten
+  covered walls, all simple, with absent-owner palindrome
+  `162,108,108,206,197,197,206,108,108,162` and 32 covered chambers.
+- **Mask lift delivered:** The wall masks are
+  `25773,32153,31115,14635,615,30093,31115,615,14233,6035`.  The word is not
+  palindromic because reflection is multivalued on the 25-mask quotient
+  (only 9/25 masks have a unique image; maximum image fibre 7).
+- **Redundancy signal:** The duplicate-root transitions are
+  `((1->0),(4->6),(2->4),(0->2),(6->5))^2`, a period-five square hidden by the
+  nonpalindromic mask word.
+- **Five block types:** Consecutive covered walls enclose
+  `(57,301,3,24,329,24,3,301,57)` wall blocks; full owner-count vectors mirror
+  exactly, so only the first five interval types require analysis.
+- **THM-779 join:** All nine gaps are nonempty (minimum three intervening
+  walls), so the ten hits are isolated one-wall blocking runs.  The period-five
+  root word is a first-return signal, not a long-run survivor.  THM-779's open
+  exit lemma becomes an exact schedule-versus-hop-word question under THM-778.
+- **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
+  compile the five-return half into centered Farey/Christoffel substitutions.
+  Prove a prefix loses coverage, a simultaneous event tears the stalk, or the
+  fibre state descends.  Test the proposed state by continuation minimization.
+- **Guardrail:** Standard continued fractions retain a reduced ratio but lose
+  common scale, midpoint coset, ties, owner action, metric component, and core
+  safety.  Use the full centered packet in the new CF frontier map.
 
 ## Lead codex-2026-07-14-S6: transport the absent owner over the prime-seven heptagon stalk
 

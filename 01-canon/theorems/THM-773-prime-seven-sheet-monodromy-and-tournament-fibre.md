@@ -6,7 +6,7 @@ source: codex-2026-07-14-S6
 depends_on:
   - THM-771   # exact seven-owner sheet defect and strict endpoint convention
   - HYP-6825  # canonical merged-metagraph addresses and inverse tiling fibres
-related: [THM-754, THM-772, THM-774, HYP-3802, HYP-6835, HYP-6840]
+related: [THM-754, THM-772, THM-774, THM-781, HYP-3802, HYP-6835, HYP-6840]
 verification: 04-computation/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.py
   (+ 05-knowledge/results/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.out and .json)
 ---
@@ -199,7 +199,12 @@ has
 175/7=25                                                      (12)
 ```
 
-masks.  The exact audit chooses the lexicographically least Hamiltonian path
+masks.  THM-781 subsequently proves this mechanism for every tournament
+class: its fixed-path tilings are canonically `HP(T)/Aut(T)`, and a
+merged-node fibre is the union over the one or two converse classes.  Equation
+(12) is the cyclic heptagon instance of that general inverse theorem.
+
+The exact audit chooses the lexicographically least Hamiltonian path
 of each labelled circular tournament, relabels it to the explorer's fixed
 path, and encodes its staircase mask.  The resulting map from all `5,040`
 assignments is surjective onto **exactly the 25 masks stored at `n7-a267`**.

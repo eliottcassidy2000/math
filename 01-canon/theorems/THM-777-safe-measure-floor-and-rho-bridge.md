@@ -1,12 +1,12 @@
 ---
 id: THM-777
-title: The safe-measure floor over 12-cores — exact bounded-height census, unconditional ρ bridge, and a conditional regime-2 compactness route
-status: PROVED-EXACT (the maxP ≤ 18 census; the Lipschitz tail; the ρ bridge) + VERIFIED (the explicitly listed finite adversarial probes) + CONJECTURE (the asymptotic floor, named precisely)
+title: The sharp safe-measure floor over 12-cores — exact bounded-height census, unconditional ρ bridge, and the 7/858 conjecture
+status: PROVED-EXACT (the maxP ≤ 18 census; the Lipschitz tail; the ρ bridge) + VERIFIED (the explicitly listed finite adversarial probes) + CONJECTURE (the sharp 7/858 floor and uniqueness only; THM-780 later proves a much smaller uniform positive floor)
 source: opus-2026-07-14-S301 (owner directive: make progress or prove route no-gos; separate signal from noise)
 depends_on:
   - LRC(<=13)  # M(P) >= 1/13 for 12-cores (the Lipschitz tail)
   - THM-755    # v* = r_P/(pi |G'_P|) (the bridge's target)
-related: [THM-757, THM-761, THM-767, THM-779, THM-780, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
+related: [THM-757, THM-761, THM-767, THM-780, THM-783, THM-784, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
 verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
   (+ 05-knowledge/results/lrc14_gprime_floor_decision_opus_S301.out)
 ---
@@ -19,6 +19,12 @@ MISTAKE-145 (raw fragmentation r_P is NOT bounded by divisor structure), the onl
 surviving route through r_P ≤ Σ_P is a POSITIVE FLOOR on the safe measure
 |G'_P| = |{t : min_{p∈P} ||pt|| ≥ 1/14}| over 12-cores. This file decides what is
 decidable today, exactly, and names the remaining conjecture sharply.
+
+**Later closure of the qualitative floor.** THM-780 uses the settled `1/13`
+margin and a heavy joint-phase cell to prove the unconditional height-free
+bound `|G'_P|>=182^(-12)`. Thus the existence of some positive floor and some
+finite normalized `rho` bound is no longer conjectural. What remains open here
+is the sharp value `7/858`, its uniqueness, and a practically sized cutoff.
 
 ## (1) The ρ bridge (PROVED, one line)
 
@@ -64,7 +70,7 @@ pair-sum endpoint arithmetic; this factorization is diagnostic, not a proof.)
 
 ## (4) Fixed-base exclusion and finite adversarial probes
 
-- **Fixed-base tooth insertion (PROVED, THM-780):** for every fixed 11-speed
+- **Fixed-base tooth insertion (PROVED, THM-784):** for every fixed 11-speed
   base `B` with safe mass `mu>0` and `r_B` components,
   `|G'_{B union {N}}|>=6mu/7-2r_B/(7N)`. Hence
   `liminf_{N->infinity}|G'_{B union {N}}|>=6mu/7>0`; one new high frequency over
@@ -81,7 +87,7 @@ pair-sum endpoint arithmetic; this factorization is diagnostic, not a proof.)
   minimizer itself, and the spread seed stopped at height 727 with mass
   `0.129333`; this is a probe, not convergence or global-optimality evidence.
 
-## (5) The asymptotic floor (CONJECTURE, stated sharply)
+## (5) The sharp asymptotic floor (CONJECTURE, stated sharply)
 
 > **inf over ALL primitive 12-cores of |G'_P(1/14)| = 7/858, attained only at
 > {1..13} ∖ {6}.**
@@ -100,17 +106,23 @@ unbounded structured ray.
 
 ## (6) What this closes and what it does not
 
-- CLOSES: the regime-2 ratio bound on the exact stratum `maxP<=18`, via (1)+(3),
+- CLOSES: the practical regime-2 ratio bound on the exact stratum `maxP<=18`, via (1)+(3),
   and rules out a single high-frequency insertion over any fixed base as a
-  safe-mass-decay mechanism, via THM-780.
-- LEAVES OPEN: the asymptotic floor (5) — a shape-space compactness statement.
+  safe-mass-decay mechanism, via THM-784.
+- THM-780 LATER CLOSES: the qualitative global floor and hence the existence of
+  a bounded normalized ratio coordinate, with the deliberately crude bound
+  `rho(P)<=12*182^12/pi`.
+- LEAVES OPEN: the sharp asymptotic identity and uniqueness in (5), plus a
+  structurally usable rather than astronomical cutoff and atlas.
   The honest route to it: |G'| < ε forces near-perfect comb covering, which
   forces additive structure (DMNR-flavored rigidity of near-exact arc-comb
   covers); the census minimizer's structure (near-AP, one gap) is where that
   argument should land.
-- SEPARATES SIGNAL FROM NOISE: the floor route remains viable but unproved; the
-  raw-`r_P` route is refuted (MISTAKE-145). THM-780 rigorously removes fixed-base
+- SEPARATES SIGNAL FROM NOISE: the sharp-floor route remains viable but unproved; the
+  raw-`r_P` route is refuted (MISTAKE-145). THM-784 rigorously removes fixed-base
   tooth insertion from the decay mechanisms. The unresolved possibilities are
-  varying-base degeneration and iterated or multiscale insertion. Even a global
-  floor would bound `rho`; it would not by itself classify endpoint-owner and
+  varying-base degeneration and iterated or multiscale insertion are no longer
+  candidates for making safe mass tend to zero, by THM-780, but they can still
+  defeat practical transport or endpoint alignment. A global floor bounds
+  `rho`; it does not by itself classify endpoint-owner and
   residue transport.

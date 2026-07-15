@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, shallow-exact through height twelve, and two-sheet-exact through raw height 100 with a proved dyadic deletion tower, but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on complementary finite regions, equipped with a proved dyadic quotient chain and a uniform anchored phase-cell packet, but branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -21,6 +21,8 @@ depends_on:
   - THM-774
   - THM-775
   - THM-776
+  - THM-780
+  - THM-782
   - HYP-6750
   - HYP-6775
 related:
@@ -28,6 +30,7 @@ related:
   - HYP-6785
   - HYP-6800
   - HYP-6815
+  - THM-771
   - MISTAKE-143
 ---
 
@@ -305,20 +308,115 @@ shallow **sporadic** slice is empty.
 Dilation gives the exact defect law `chi_13(cW)=c chi_13(W)`, so gcd descent is
 lossless.  This result does not supply an unbounded height descent.
 
-## D. Remaining proof obligation
+## D. The two-sheet branch is now a folded dyadic cover
+
+THM-772 first turns the `s=2` equality packet
+
+```text
+A=2U union {x,y},       |U|=10,       x,y odd
+```
+
+into a recursive arithmetic object.  The quotient `U` is primitive, contains
+a multiple of every `m=2,...,12`, contains no 13-multiple, and, with
+`B=max(U)`, satisfies
+
+```text
+x,y<=11B,       min(x,y)<=11B-36,
+1/(xy)+2(M(U)-1/13)/B <= 2/(13x)+2/(13y).
+```
+
+THM-774 then removes the nearest-integer colour notation without losing the
+predicate.  For
+
+```text
+a=(x+y)/2,       b=(x-y)/2,
+```
+
+the two odd exceptions cover the two lifts exactly at
+
+```text
+H_(x,y)={tau:||a tau||+||b tau||>=11/13}.
+```
+
+Thus tightness is precisely `G_U subset H_(x,y)`.  The folded diamond has the
+sharp universal measure cap `8/117`, attained at reduced ratio `x:y=9:1`.
+This is a useful necessary condition, not a noncoverage theorem: a small loose
+set could still sit inside the diamond.
+
+The same theorem closes the entire low-core slice `max(U)<=19` with `x,y`
+unbounded: the widest strict component of `G_U` gives an intrinsic cap on any
+individually eligible odd speed, and all 767,700 permitted incidences fail.
+This is genuinely stronger than the measure filter: 52 of the 3,400
+divisor-complete cores already have `measure(G_U)<=8/117`, with minimum
+`41/858`.  The finite region is complementary to THM-776's larger
+bounded-height box.
+
+THM-775 identifies the recursive gcd pathology exactly.  If a deletion of
+`U` is imprimitive, its gcd is two and
+
+```text
+U=2V union {u odd}.
+```
+
+Over `G_V` the four lifts carry a saturated `2+1+1` ownership partition: `2u`
+owns one parity class and `x,y` own the two singleton sheets of the other
+parity.  The quotient `V` is again primitive and divisor-complete.  Repeating
+the argument produces a finite dyadic tower ending at a hereditarily primitive,
+divisor-complete quotient.  At later levels the exact object is a canonical
+assigned ownership tree; raw danger incidences can overlap and must not be
+called a literal disjoint partition.  A depth-`r` tower has the explicit
+normal form `U=2^r Q_r union {2^i h_i:0<=i<r}` with every `h_i` odd, so its
+2-adic valuation profile contains exactly one speed at each level below `r`.
+
+THM-776 supplies a substantial finite base.  Every twelve-set with exactly ten
+even and two odd speeds and `max(A)<=100` has `M(A)>1/13`, without assuming
+primitivity or divisor-completeness.  The exact proof reverses the tuple
+quantifiers: for each of the 1,225 odd pairs, the bad atoms form a hitting-set
+hypergraph whose transversal number is exactly twelve, while a packet core has
+only ten quotient speeds.  The 6,876-point grid and full folded-diamond atlas
+were independently regenerated.  This empties the entire two-sheet branch
+through height 100, but it does not prove that the transversal deficit persists
+when larger quotient teeth are admitted.
+
+THM-782 adds a genuinely scale-free metric stalk.  Every ten-speed quotient
+core has a `1/11`-deep time `t_0` and an anchored joint-phase return packet
+`B` with
+
+```text
+|B|>=72^(-10),       ||u b||<1/72,
+||u(t_0+b)||>1/13+1/10296       (u in U, b in B).
+```
+
+It also forces a component of `G_U` of length at least
+`72^(-10)/(20 max(U))`.  If the packet were tight, both the translated return
+packet and that component would have to lie in `H_(x,y)`.  This repairs the
+earlier missing uniform measure-floor statement without closing the branch:
+the constant is far below `8/117`, and the exact core-19 atlas has the explicit
+profile `|G_U|=41/858<8/117=|H_(1,9)|`.  The sharpened target is therefore
+structured phase-packet noncontainment, not scalar measure comparison.
+
+These results reveal the faithful carrier more precisely than “ten even plus
+two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
+with a binary safe-child map, divisor unit columns, and an anchored joint-phase
+return packet.  The runner tournament records which odd runner owns a sheet
+but forgets the simultaneous hitting number; the dyadic quotient chain records
+recursion but needs binary sheet-fiber, incidence, and phase-cell sidecars.
+
+## E. Remaining proof obligation
 
 The uniform theorem now has two explicit residuals:
 
 1. **Shallow descent.**  Prove that a primitive full-nonzero-residue packet
    with `chi_13=0` descends into THM-770's height-twelve box, or extend its
    owner-CSP by a scale-free coherence argument.
-2. **Deep colour cover.** Rule out THM-769's persistent folded cover at `s=2`
-   after THM-772's primitive divisor transfer, THM-774's sharp diamond and
-   `max(U)<=19` closure, THM-775's proved dyadic tower, and THM-776's raw
-   height-100 exclusion. The next theorem must land every terminal
-   hereditarily primitive base in a certified region or prove that the
-   bad-atom transversal number stays above ten uniformly. Then rule out the
-   higher-sheet analogues.
+2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
+   bound above ten for the folded bad-atom hypergraph beyond THM-774's
+   `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
+   quantitative bounds on every dyadic seam guard strong enough to place the
+   reconstructed ten-core/full packet inside one of those finite bases, or
+   prove that an admissible folded diamond cannot contain a THM-782 anchored
+   heavy phase-cell packet. At higher sheets, classify and rule out THM-769's persistent colour covers,
+   beginning with the explicit `s=3` equality shells of THM-772.
 
 Equivalently in the original top-peel language, prove that every primitive
 nonextremal eleven-speed core below THM-763's finite height has at least one
@@ -348,7 +446,7 @@ zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
 but the same warning remains: bounded exactness is not the global coherence
 lemma.
 
-## E. Information-preservation / Tournament Analysis
+## F. Information-preservation / Tournament Analysis
 
 The exact vertices are witness obligations `(q,a)`, safe components, endpoint
 splices, or the `s` sheet fibres—not runners by default.  Modulus and runner
@@ -367,7 +465,8 @@ deciding objects are therefore:
 - the off-sheet-runner by sheet incidence cover, with effective orders
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 - in the two-sheet equality packet, the folded half-frequency diamond together
-  with the exact locations of the quotient loose components;
+  with the exact locations of the quotient loose components and the labelled
+  phase-cell/anchor incidence of THM-782;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed

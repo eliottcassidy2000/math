@@ -1,0 +1,23 @@
+THM-784 lacunary far-flag exact certificate
+marked-core factors (f=4..6):
+  f=4: R=412, q-test(R-1)=4419909/4453855, q-test(R)=4455873/4453855
+  f=5: R=405, q-test(R-1)=6185475/6235397, q-test(R)=6245415/6235397
+  f=6: R=394, q-test(R-1)=43448175/43647779, q-test(R)=43933689/43647779
+union-mass factors (f=7..12):
+  f=7: R=27, q-test(R-1)=36489141/43647779, q-test(R)=44257365/43647779
+  f=8: R=17, q-test(R-1)=224351091/305534453, q-test(R)=317569779/305534453
+  f=9: R=14, q-test(R-1)=1384020261/2138741171, q-test(R)=317569779/305534453
+  f=10: R=13, q-test(R-1)=9967797891/14971188197, q-test(R)=16679543427/14971188197
+  f=11: R=13, q-test(R-1)=86553949077/104798317379, q-test(R)=136892040597/104798317379
+  f=12: R=13, q-test(R-1)=11051743527/13841287201, q-test(R)=948176665875/733588221653
+all-far factor: f=13, R=13, q-test=948176665875/733588221653
+factor vector: [412, 405, 394, 27, 17, 14, 13, 13, 13, 13]
+finite-exact nine-core enhancement:
+  min_mu=10601/114660, unique_core=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+  R=18 q-test=55930347/57900115, R=19 q-test=66520746/57900115
+phase-placement no-go:
+  common base state: mu=4/7, r_plus=12, isolated=0
+  common length multiset: ((Fraction(1, 168), 2), (Fraction(1, 24), 2), (Fraction(3, 56), 4), (Fraction(11, 168), 4))
+  after N=59: mu_B=2425/4956, mu_C=41/84, difference=1/826
+  after N=59: r_plus=44, isolated=0
+PASS: fully lacunary flags are terminal; exact insertion still needs phase incidence.

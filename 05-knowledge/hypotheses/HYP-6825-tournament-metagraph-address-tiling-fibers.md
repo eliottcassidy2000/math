@@ -1,7 +1,7 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: VERIFIED FINITE ATLAS n=3..7; general completeness conjecture open
+status: PROVED general Hamiltonian-path fibre inverse (THM-781) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
@@ -17,6 +17,13 @@ artifacts:
   - 04-computation/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.py
   - 05-knowledge/results/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.json
   - 07-reflections/the-heptagon-node-is-a-basepoint-not-the-sheet-state-codex-S6.md
+  - 01-canon/theorems/THM-778-centered-christoffel-endpoint-skew-product.md
+  - 04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py
+  - 05-knowledge/results/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.json
+  - 00-navigation/LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md
+  - 01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md
+  - 04-computation/tournament_tiling_metagraph_fibre_inverse_codex_S8.py
+  - 05-knowledge/results/tournament_tiling_metagraph_fibre_inverse_codex_S8.json
 related:
   - HYP-2245
   - HYP-2989
@@ -27,6 +34,8 @@ related:
   - THM-550
   - THM-646
   - THM-773
+  - THM-778
+  - THM-781
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -141,6 +150,43 @@ explorer loads the `n<=6` atlas to display the address and both indices; the
 compact `n=7` atlas stores mask-indexed class/node/global/fibre arrays and
 complete inverse node fibres.
 
+## Direct inverse theorem: paths modulo automorphisms
+
+THM-781 removes the exhaustive-cube scan from the mathematical definition of
+the inverse.  If a merged node carries class representatives `T` (one for a
+self-converse class, two for a converse pair), enumerate their directed
+Hamiltonian paths, relabel each path to the explorer's fixed path, and read the
+remaining arcs as tile bits.  The exact functions are
+
+```text
+tiling t -> A_n({[tau(t)],[tau(t)^op]}),
+
+node u -> union_[T] HP(T)/Aut(T).
+```
+
+Two paths produce the same tiling exactly when an automorphism relates them.
+Thus an unmerged class has `H(T)/|Aut(T)|` tilings; a non-self-converse merged
+pair has twice this number.  This is a theorem for every size once its class
+and node atlas is defined, not merely an observation through `n=7`.
+
+The executable API `MetagraphFibreAtlas.tiling_to_node` computes the forward
+quotient and `node_to_tilings` constructs the inverse directly from paths.
+All `33,866` stored tilings, `530` classes, and `321` nodes through `n=7` pass
+both directions with zero mismatches.  The browser exposes the analogous
+`tilingToMergedNode` and `mergedNodeToTilings` functions through `n=6`.
+
+For the prime-seven pullback this explains the previously mysterious fibre
+size without scanning masks:
+
+```text
+n7-a267: H=175, |Aut|=7, H/|Aut|=25.
+```
+
+The 25 masks are precisely automorphism orbits of Hamiltonian observer cuts on
+the cyclic heptagon.  THM-773's 5,040 owner-sheet assignments select these cut
+orbits with nonuniform multiplicity; the node alone still forgets the owner
+assignment and transport future.
+
 ## Prime-seven sheet pullback: the node is a base, not the state
 
 THM-773 gives the first exact functor from an LRC sheet tiling into this
@@ -158,6 +204,50 @@ same owner-to-sheet assignment but different next event owner and free sheet.
 Thus the inverse fibre is not an LRC continuation state.  Inverse windings,
 endpoint order/phase, metric base, and the global `x -> x+1` sheet carry remain
 mandatory transport fields.
+
+## Continued-fraction path stalk
+
+THM-778 now gives an exact address for the missing endpoint-order field.  The
+merge of every two owner midpoint clocks is a centered rational mechanical
+word; a one-bit parity cocycle survives its Euclidean shears.  For owner-local
+event `(a,i)`, the centered Beatty rank
+
+```text
+i + sum_(b != a) ceil((w_b(2i+1)-w_a)/(2w_a))
+```
+
+is its exact global simultaneous-wall index.  Thus the full wall schedule can
+be mapped forward and backward without discarding owner labels or tie blocks.
+
+The natural next-event tournament on owner clocks is transitive in every
+chamber.  On HYP-6835's eight-owner example it therefore stays at one ordinary
+isomorphism node while its labelled Hamiltonian path takes `948` values and
+flips `6,620` pair edges.  This is a particularly sharp answer to the original
+mapping question: the node is objective but static; continued-fraction
+substitutions act on the labelled path/tiling stalk above it.  The promising
+ordering is consequently lexicographic in
+
+```text
+(merged-node address, Euclidean endpoint-block address,
+ labelled path/mask index, owner-token/redundancy state),
+```
+
+not in merged-node rank alone.
+
+The ten covered walls of the named eight-owner movie have mask word
+`(25773,32153,31115,14635,615,30093,31115,615,14233,6035)`.  Its owner word is
+palindromic but its mask word is not.  Exhausting all 5,040 assignments proves
+that the reflected-mask relation is multivalued: only 9/25 masks have a unique
+image and the largest image fibre has size 7.  Therefore even fibre-local mask
+index is not a reflection-equivariant state unless the owner-labelled lift is
+retained.
+
+THM-779 supplies the predicate on this path stalk: continued blocking requires
+the chronological next-wall owner to agree with the current collision-pair hop
+target.  In the ten-wall movie every covered-wall gap contains at least three
+other walls, so these are isolated first returns rather than a consecutive
+blocking chain.  A continuation-complete address must therefore distinguish
+the current `SURJ`/hop state from the later return mask.
 
 ## Preservation statement
 

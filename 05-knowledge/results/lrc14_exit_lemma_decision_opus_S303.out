@@ -1,0 +1,29 @@
+========================================================================================
+PART 1+2 -- referee: absolute wall condition vs phi-recurrence consistency
+========================================================================================
+  [PASS] phi-recurrence streak >= anchored run - 1 on 40 random instances (necessity)
+
+========================================================================================
+PART 3 -- THE DECISION CENSUS (anchored runs; heights to 10^4; targeted packets)
+========================================================================================
+  generic random (w <= 10^4)                   n=80   median=3   max=5   at [767, 3341, 3823, 4267, 5087, 5198, 7043, 7874]
+  synchronized {2}+odds, sum w^-1 = 0 (7)      n=80   median=2   max=4   at [2, 99, 123, 1639, 2837, 3347, 3523, 3599]
+  near-ratio packets n*base +- 1               n=80   median=2   max=4   at [16, 225, 289, 401, 529, 543, 577, 625]
+  all w = r (mod 7)                            n=60   median=2   max=6   at [41, 1630, 1861, 3380, 4290, 4381, 4528, 5613]
+  ANNEALED PEAK: max anchored run = 6 at [796, 1906, 2543, 3380, 4290, 5613, 8023, 9704]
+
+========================================================================================
+PART 4 -- period-sum law verification on random blocking-run fragments
+========================================================================================
+  [PASS] period-sum law holds on all 40 in-run periods found
+  [PASS] period-sum sample size adequate (40 periods)
+
+========================================================================================
+PART 5 -- the single-visitor break + cluster balance (the unconditional teeth)
+========================================================================================
+  [PASS] single-visitor break: 0 single-visitor in-run f-periods (of 45 examined)
+  [PASS] pair balance w+w' = 0 mod 7 on all 6 two-visitor periods
+
+========================================================================================
+SUMMARY: ALL CHECKS PASSED
+========================================================================================

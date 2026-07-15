@@ -29,19 +29,24 @@ opus-2026-07-14-S298 from the project canon; all internal citations
 \begin{abstract}
 For $n$ runners on the unit circle with distinct constant integer speeds, one of them
 stationary, the Lonely Runner Conjecture asserts a time at which every moving runner is at
-circular distance at least $1/n$ from the stationary one. We assemble a proof for $n=14$
-(thirteen nonzero speeds) from components developed in this project, in the following form:
+circular distance at least $1/n$ from the stationary one. We audit an assembly program for
+$n=14$ (thirteen nonzero speeds) from components developed in this project, in the following form:
 the backbone is a far-count dichotomy: speed sets with at most three elements
-exceeding $14$ force at least ten elements inside $\{1,\dots,14\}$ and fall to an exhaustive
-exact-rational sweep that contains the covering minimum and every tight family; for speed
+exceeding $14$ force at least ten elements inside $\{1,\dots,14\}$ and fall to the recorded
+exact-rational certificate sweep; for speed
 sets with at least four elements exceeding $14$, a capped Fourier-envelope theorem bounds
 each \emph{core's} unresolved peels, and sheet-covering theorems close every scale ray with
 up to six exceptional runners above explicit thresholds. The band edge scales with dilation
 ($v^\ast(cP)=c\,v^\ast(P)$), while an exactly four-far scale-free family shows that raw
 good-set fragmentation is not controlled by the maximal common-divisor scale. Thus the
-remaining domain has not yet been reduced to a globally bounded one: a peel-relative splice,
-together with the residual $r\ge7$ deck strata outside the event-pierce lane, is the
-honest open remainder. We state precisely what is proved,
+safe mass has a height-free lower bound, so the peel-relative ratio is globally bounded,
+but the resulting constant does not give a terminal structural atlas. Owner-labelled
+incidence transport, together with the residual $r\ge7$ deck strata outside the
+event-pierce lane, is the honest open remainder. A uniform $412$-lacunary
+terminal cone is proved in every exactly-four-far chart, and optimized factors
+close every fully lacunary far-count flag through the all-far stratum. All
+remaining paths to infinity are forced onto clustered comparable-scale faces.
+We state precisely what is proved,
 what is machine-checked, what is exactly computed, what is refuted (including a uniform
 bounded-period witness finish), and what remains.
 \end{abstract}
@@ -103,9 +108,9 @@ Let $V$ be covering and let $F=\#\{v\in V: v>14\}$. If $F\le 3$, then $V$ has at
 elements in $\{1,\dots,14\}$.
 \end{theorem}
 
-Part $F\le3$ is counting, and it is where every tight or near-tight family lives: the
-covering minimum, the two $L=0$ families, and all known near-extremal structure have at
-least ten small elements. The original Claim~B ($F\ge 4\Rightarrow M\ge 0.097$) is
+Part $F\le3$ is counting, and it contains the candidate covering minimum, the two known
+$L=0$ families, and all currently catalogued near-extremal structure. A global
+equality classification is not claimed. The original Claim~B ($F\ge 4\Rightarrow M\ge 0.097$) is
 \emph{false as stated}: the primitive covering ray $V_c=\{c,2c,\dots,12c,13c+1\}$ has
 $F=13$ and exact $M(V_c)=1/13<0.097$ (\textsc{hyp}-6780/\textsc{thm}-757). The correct
 statement for $F\ge4$ is the threshold $M\ge 1/14$ itself, via
@@ -113,27 +118,22 @@ Section~\ref{sec:loose}'s reduction; its finite component is $\mathsf{C1}$.
 
 \section{The near-AP half ($F\le 3$): exhaustive and rigid}\label{sec:nearAP}
 
-\begin{theorem}[\textsc{thm}-738/741, kps]\label{thm:boxes}
+\begin{theorem}[\textsc{thm}-738, kps; finite-exact as recorded]\label{thm:boxes}
 Every $13$-speed covering set with at least ten elements in $\{1,\dots,14\}$ satisfies
-$M(V)\ge 1/14$. The sweep is exact-rational over all $\binom{14}{10}$-type bodies with the
-free slots bounded by explicit peel lemmas; it produced explicit rational witnesses in every
-case, and a complete census of equality: the only families with $L(V)=0$ (safe measure zero;
-loneliness with equality) are the arithmetic progression $\{1,\dots,13\}$ and the
-Goddyn--Wong doubling $\{1,\dots,11,13,24\}$ \cite{GoddynWong}.
+$M(V)\ge 1/14$ in the exact certificate sweep recorded by THM-738. The broader
+THM-741 equality/classification program remains claimed and is not used here.
 \end{theorem}
 
-Supporting rigidity, proved in canon:
-
-\begin{theorem}[covering-min rigidity; \textsc{thm}-724/726]
-Over primitive covering $13$-sets, $\min M = 14/183$, attained uniquely at the deep well
-$\{1,\dots,12,182\}$.
-\end{theorem}
+The covering-min rigidity route in THM-724/726 is not an assembly input:
+THM-724 closes its stated single-killer addendum, while THM-726 still depends on
+an unproved global monotonicity step. No unconditional global minimum or
+uniqueness statement from that route is asserted here.
 
 \begin{theorem}[the $7$-clock partition; \textsc{thm}-754]\label{thm:sevenclock}
 The six cells $a/7\pm 1/14$ $(a=1,\dots,6)$ and the origin cell tile the circle exactly
-($7\cdot\frac1{14}=\frac12$; $k=7$ is the unique such clock). Consequently witnesses of
-tight families lie on the tiling corners $t=(2a+1)/14$; both $L=0$ families are lonely with
-equality precisely there.
+($7\cdot\frac1{14}=\frac12$; $k=7$ is the unique such clock). The tiling corners
+$t=(2a+1)/14$ supply equality witnesses for the two known $L=0$ families. This is not an
+unconditional exhaustive classification.
 \end{theorem}
 
 \section{The loose half ($F\ge 4$): the capped envelope and the band}\label{sec:loose}
@@ -158,8 +158,8 @@ $v> v^\ast := r_P/(\pi|G'_P|)$ --- with no alignment or isolation hypothesis.
 \end{theorem}
 
 \begin{corollary}[finite bands]
-For each core the unresolved peels form the finite band $(\max P,\,v^\ast]$, nonempty only
-for tight cores; e.g.\ $v^\ast=112$ for $\{1,\dots,12\}$ against the older isolated-only
+For each fixed core the unresolved peels form the finite band $(\max P,\,v^\ast]$;
+e.g.\ $v^\ast=112$ for $\{1,\dots,12\}$ against the older isolated-only
 threshold $156$.
 \end{corollary}
 
@@ -190,14 +190,16 @@ For $r=1$, gcd coprime, the stronger clearance $\tfrac12-\tfrac1{2c}$ holds
 (\textsc{thm}-760).
 \end{theorem}
 
-Seven exceptions can cover the sheet cycle ($7\cdot\tfrac17=1$); the tight configurations
-are cyclic tilings of $\Zb_c$ --- the $7$-clock of Theorem~\ref{thm:sevenclock} one level
-down. Corrected \textsc{thm}-767 proves that, in the commensurate $7g_a\mid c$ strata,
+Seven exceptions can cover the sheet cycle ($7\cdot\tfrac17=1$). In the
+all-unramified zero-surplus layer, multiplicity-one configurations are cyclic
+tilings of $\Zb_c$ --- the $7$-clock of Theorem~\ref{thm:sevenclock} one level
+down. Ramified full covers may overlap and are governed instead by
+$F=Q+\Omega-\sigma$. Corrected \textsc{thm}-767 proves that, in the commensurate $7g_a\mid c$ strata,
 an exception event inside the closed core-safe set frees a sheet; in particular
 $\max_a(w_a/g_a)\ge7\max(P)$ closes the row. Exact deck tilings cannot cross such an
-event and are chamber-locked. The remaining structured-family toolkit, each proved in canon:
-safe peels reducing $\sim\!98\%$ of covering sets to settled $\le13$-runner instances
-(\textsc{thm}-753, parts A/B); aligned far-element monotonicity (\textsc{thm}-751); the
+event and are chamber-locked. The remaining structured-family toolkit includes:
+safe-peel Parts A/B (\textsc{thm}-753), with the reported $\sim\!98\%$ only a sample
+prevalence rather than theorem scope; aligned far-element monotonicity (\textsc{thm}-751); the
 detuned dispatch and pack/cluster/hierarchical clocks for coherent families
 (\textsc{thm}-668/735/737/739/740); the fine-comb witness with the tooth threshold and the
 ratio-13 cascade (\textsc{thm}-752).
@@ -211,22 +213,28 @@ protocol of Theorem~\ref{thm:band} decides. The proposed argument for a global b
 bound from raw component count and maximal common-factor scale fails: for prime $N>110$,
 $\{1,\ldots,9,15,110,N,1092N\}$ is covering, primitive, exactly four-far, and has no
 seven-member divisor packet, while the positive-length component count of its top-peeled good set tends
-to infinity (\textsc{thm}-779; \textsc{hyp}-6830). The same theorem proves every member
+to infinity (\textsc{thm}-783; \textsc{hyp}-6830). The same theorem proves every member
 of this prime family is nevertheless closed by the capped peel. This does not refute a bounded
 peel-relative domain; it shows that any proof must retain normalized cap load and
-endpoint ownership. More generally, \textsc{thm}-780 proves that base good-set mass
+endpoint ownership. More generally, \textsc{thm}-784 proves that base good-set mass
 $\mu$ and full topological component count $r_{\rm top}$ obey
 $\mu_N\ge6\mu/7-2r_{\rm top}/(7N)$ and
 $r_{{\rm top},N}\le N+r_{\rm top}$ after a new frequency $N$; this is a conservative
 upper state for the Fourier count $r_P\le r_{\rm top}$. A fixed safe interval is a convenient
 corollary. Any sufficiently fast proportional peel is therefore eventually
 terminal at an explicit rational threshold. In particular, for every fixed
-positive-mass base, $\liminf_N\mu_N\ge6\mu/7>0$; any safe-mass-decay sequence
-must vary its base or coordinate several scales. Finally, \textsc{thm}-777 proves
+positive-mass base, $\liminf_N\mu_N\ge6\mu/7>0$. Iterating the marked-window
+form proves an unconditional terminal cone in every literal four-far chart:
+if the four ordered far speeds are successively at least $412$ times the
+cumulative preceding scale (with the first at least $412$), peeling the fourth
+closes the row. Thus an unresolved far tuple has a bounded-ratio cluster at
+some scale level. Finally, \textsc{thm}-777 proves
 $v^\ast(P)/\max(P)\le12/(\pi|G'_P|)$ and the unconditional tail
 $|G'_P|\ge1/(91\max(P))$. Its exact census gives the unique candidate minimum
-$7/858$ through $\max(P)\le18$, but the corresponding global safe-measure floor
-is conjectural. On the executed exact checks the
+$7/858$ through $\max(P)\le18$. The later phase-pigeonhole theorem
+\textsc{thm}-780 proves the global, deliberately crude floor
+$|G'_P|\ge182^{-12}$ and hence a finite normalized ratio bound. The sharp
+$7/858$ identity, uniqueness, and practical cutoff remain conjectural. On the executed exact checks the
 bands are uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
 exceptions. A uniform bounded-period witness finish is \emph{refuted}: the family
 $26\cdot\{1,\dots,12\}\cup\{339\}$ has no rational witness of period $q\le25$ (first
@@ -246,11 +254,10 @@ sheet certificate (Theorem~\ref{thm:sheets}, speed-only, $O(r)$); else the three
 protocol of Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli discrepancy;
 else direct exact $L$). Status: all executed portions exception-free (the $8260$-family
 exact band check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies).
-Remaining: prove that the peel-relative state has a bounded atlas or a well-founded descent,
-a task for which \textsc{thm}-777 isolates the first uniformity step: prove the
-global safe-measure floor or classify and descend every safe-mass-decay sequence.
-Even the floor would only bound the ratio coordinate; endpoint/residue classification
-would still be required before executing terminal leaves. This is the corrected splice of
+Remaining: turn the enormous bounded ratio domain supplied by
+\textsc{thm}-777/780 into a structural atlas or a well-founded descent. Scalar
+mass bounds only the ratio coordinate; endpoint-owner incidence, residue action,
+and deck transport are still required before executing terminal leaves. This is the corrected splice of
 \textsc{hyp}-6830; it is analytic and currently open, not an unexecuted finite loop.
 \end{computation}
 

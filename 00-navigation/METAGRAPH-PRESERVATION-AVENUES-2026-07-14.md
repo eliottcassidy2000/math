@@ -347,11 +347,63 @@ certificate clauses, and proof obligations.
   wall event changes boundedly many fields, or an explicit pair proving that
   every proposed low-order mode truncation merges different continuations.
 
+### MPA-28 — Continued-fraction substitutions on the labelled path stalk
+
+- **Delivered base decoder:** THM-778 proves that centered Beatty ranks recover
+  every simultaneous endpoint wall and that pairwise words carry an Euclidean
+  parity cocycle.  The ordinary next-event tournament stays transitive; the
+  eight-owner movie nevertheless visits 948 labelled Hamiltonian paths.
+- **Delivered mask guardrail:** the ten covered walls are mask-labelled, but
+  reflection does not descend to the 25-mask quotient: only 9/25 mask sources
+  have unique images over all 5,040 assignments.
+- **Delivered redundancy signal:** duplicate roots follow the five-step word
+  `(1->0,4->6,2->4,0->2,6->5)` twice, a simpler transport coordinate than the
+  nonpalindromic mask word.
+- **Delivered finite base:** the nine between-wall block lengths are
+  `(57,301,3,24,329,24,3,301,57)`, reducing the exact movie to five block types
+  and their mirror.
+- **Pull:** attach each Euclidean/centered-Christoffel substitution to its
+  induced transition on owner tokens, redundancy roots, and the 25 masks over
+  `n7-a267`.
+- **Old thread:** THM-536 Sturmian cover word; THM-637 Farey roof; HYP-4078
+  Ostrowski ladder; THM-745 Euclidean residual; THM-773 prime-sheet fibre.
+- **Must preserve:** common gcd, midpoint phase bit, simultaneous blocks,
+  owner-specific inverse steps, metric wall rank/time, core-safe component,
+  mask, redundancy factor, and global carry.
+- **Deliverable:** a centered Farey concatenation law plus a finite
+  substitution automaton for the ten-wall r=8 word, minimized by continuation
+  equivalence.
+
+### MPA-29 — Hamiltonian-path orbit fibres instead of cube scans
+
+- **Delivered theorem:** THM-781 gives the literal maps
+  `tiling -> canonical class -> converse-merged node` and
+  `node -> union HP(T)/Aut(T)` over its one or two classes.
+- **Delivered size law:** each unmerged class fibre has
+  `H(T)/|Aut(T)|` tilings; a non-self-converse merged pair has twice that
+  number.  Every forward and inverse record through `n=7` agrees exactly.
+- **Heptagon explanation:** `n7-a267` has `H=175`, `|Aut|=7`, hence its 25
+  masks are intrinsic observer-cut orbits.  THM-773's 5,040 sheet assignments
+  map onto these path orbits with nonuniform multiplicity.
+- **Pull:** lift each `HP(T)/Aut(T)` element to its owner-labelled assignment
+  fibre, then attach THM-778 endpoint transport to transitions between cut
+  orbits.  Separate a mask transition from a complement-line orbit and from a
+  mere endpoint-node incidence.
+- **Concurrent join:** HYP-6845's wall `phi`-recurrence is transport above this
+  cut orbit, not a node invariant.  Test whether `(path orbit, owner assignment,
+  phi)` is sufficient for its flip-break step before adding more metagraph
+  coordinates.
+- **Must preserve:** path orbit, owner assignment, simultaneous-isomorphism
+  line orbit, inverse winding, centered phase/ties, wall rank, and carry.
+- **Deliverable:** the first exact three-level incidence index
+  `node <- path orbit <- owner-labelled LRC state`, with forward maps,
+  inverse fibres, and continuation-purity audit at every quotient.
+
 ## Recommended next three pulls
 
-1. Continue `MPA-17/18`: transport THM-773's absent eighth owner over the
-   25-mask heptagon stalk and classify rigid periodic survivor words.
-2. Continue `MPA-12/26`: minimize the bounded prime-sheet movie and prove
+1. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
+   identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
+2. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove
    whether inverse steps plus cyclic endpoint word are continuation-complete.
-3. `MPA-27`: seek a predicate-preserving folded coordinate system for the
-   absent-owner/heptagon transport before applying another tournament quotient.
+3. Join `MPA-27/28`: seek a folded coordinate system in which each Euclidean
+   substitution changes only boundedly many fibre fields.

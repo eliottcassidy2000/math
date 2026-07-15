@@ -273,6 +273,19 @@ containment (1), with the positions and widths of all components retained.
 An ordinary tournament ranking candidate diamonds by size destroys precisely
 that containment data.
 
+Divisor transfer does not repair this scalar loss.  Among the `3,400`
+divisor-complete ten-cores in `[1,19]`, exactly `52` already satisfy
+`measure(G_U)<=8/117`; the minimum is
+
+```text
+measure(G_U)=41/858
+at U={1,2,3,5,7,8,9,10,11,12}.
+```
+
+Section 5 nevertheless rules out every one of these cores pointwise.  Thus
+the divisor pins plus the sharp measure cap still do not imply noncoverage;
+component incidence is genuinely stronger.
+
 The companion exact audit is
 
 ```text

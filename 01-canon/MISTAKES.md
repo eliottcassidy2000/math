@@ -71,8 +71,8 @@ Format per entry:
 - **Why it is wrong:** a SINGLE high-frequency runner fragments a fixed safe interval
   without creating any seven-member divisor packet. The first exact falsifier
   `P_N={1,...,11,N}` has `c*=1` and unbounded `r_+` (positive-length counts
-  `18,22,38,72` at `N=101,211,503,1009`). THM-779 strengthens this inside the literal
-  four-far covering chart: `P_N={1,...,9,15,110,N}` has the exact safe interval
+  `18,22,38,72` at `N=101,211,503,1009`). THM-783 strengthens this inside the literal
+  four-far covering chart: `P_N={1,...,9,15,110,N}` contains the explicit safe interval
   `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and
   positive-length counts `66,104,174,310` at `N=211,503,1009,2003` (the full
   topological counts are `68,108,176,312`); adjoining `1092N` makes the row
@@ -81,11 +81,12 @@ Format per entry:
 - **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
   rho(P) = v*(P)/maxP = r_+(P)/(pi |G'_P| maxP). It is scale-invariant on dilates
   (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
-  measured maximum at the `{1,...,12}` shape. THM-779 proves the chosen top peel
+  measured maximum at the `{1,...,12}` shape. THM-783 proves the chosen top peel
   lies above its band edge throughout the chart-native prime falsifier family;
-  the underlying band need not be empty. None of this proves a global rho bound:
-  the remaining proposed
-  obligation is a `|G'|` floor off classified tight families, using `r_+(P)<=Sum(P)`.
+  the underlying band need not be empty. THM-780 now proves the crude global
+  floor `|G'_P|>=182^(-12)`, which together with THM-777 gives a global but
+  enormous rho bound. The remaining metric question is the sharp `7/858` floor
+  and practical `rho<469` cutoff, not existence of a bound.
 - **Impact:** none downstream -- the claim lived a few hours as OPEN, was consumed by
   nobody, and both refutations landed before any theorem cited it. HYP-6830 carries
   the correction and the ratio study.
@@ -95,7 +96,7 @@ Format per entry:
   normalized shapes. New standing rule: when proposing a boundedness claim, state it
   in peel-relative coordinates first, and battery it with BOTH near-dilate seeds
   (MISTAKE-140 rule) AND single-high-frequency-runner seeds (this entry's mechanism).
-- **Source:** THM-779/777; HYP-6830 correction; HYP-6815 exact audit; codex exact scripts;
+- **Source:** THM-777/780/783; HYP-6830 correction; HYP-6815 exact audit; codex exact scripts;
   opus-2026-07-14-S300 `lrc14_regime2_complementarity_stress_opus_S300.py` + output.
 
 ## MISTAKE-144 — the S107/S108 local `M_exact` routines omitted single-runner half-turn cusps, so their “exact” denominator set was incomplete even though corrected replay leaves the conclusions unchanged (codex-2026-07-14-S3)

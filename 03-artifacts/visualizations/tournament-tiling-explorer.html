@@ -114,6 +114,26 @@ let addressAtlas=null;
 function addressSizeData(){return addressAtlas?.sizes?.find(r=>r.n===N)||null;}
 function addressForMask(mask){return addressSizeData()?._byMask?.[mask]||null;}
 function addressNode(rank){return addressSizeData()?.nodes?.find(node=>node.rank===rank)||null;}
+
+// Exact public two-way correspondence (THM-781).  The forward direction is a
+// function.  Its inverse deliberately returns the complete tiling fibre.
+function tilingToMergedNode(mask,n=N){
+  const size=addressAtlas?.sizes?.find(r=>r.n===n)||null;
+  const tiling=size?._byMask?.[mask]||null;
+  if(!tiling)return null;
+  const node=size.nodes.find(candidate=>candidate.rank===tiling.node_rank)||null;
+  return node?{tiling,node}:null;
+}
+function mergedNodeToTilings(nodeRef,n=N){
+  const size=addressAtlas?.sizes?.find(r=>r.n===n)||null;
+  if(!size)return[];
+  const node=size.nodes.find(candidate=>
+    typeof nodeRef==='number'?candidate.rank===nodeRef:candidate.id===nodeRef
+  );
+  return node?node.tiling_masks.map(mask=>size._byMask[mask]):[];
+}
+window.tilingToMergedNode=tilingToMergedNode;
+window.mergedNodeToTilings=mergedNodeToTilings;
 function addressPrefix(mask){
   const rec=addressForMask(mask);
   return rec?`a${String(rec.node_rank).padStart(2,'0')}/`:'';

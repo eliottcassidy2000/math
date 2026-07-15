@@ -2,7 +2,9 @@
 
 *codex-2026-07-14-S2. A creative information-preservation session following
 HYP-6780, the completed Lean THM-755 chain, HYP-6785, and the exact endpoint
-sidecar audit. Updated after the exact HYP-6830 fragmentation falsifier.*
+sidecar audit. Updated after the exact transverse falsifier and the live
+THM-778/780/781/782/785 transport, compactness, fibre, return-packet, and exit
+results.*
 
 Throughout, `r_+` means the number of positive-length safe intervals and
 `r_top` counts all closed-set components, including isolated equality points.
@@ -57,7 +59,7 @@ silently quotiented.
 
 ### The chart has two inequivalent directions to infinity
 
-The far-dilation action is only the radial direction. THM-779 supplies a
+The far-dilation action is only the radial direction. THM-783 supplies a
 transverse frequency refinement. For prime `N>110`, the ray
 
 ```text
@@ -84,10 +86,10 @@ The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
 It is the smallest current proposed payload that distinguishes radial replication
-from transverse refinement while remembering why THM-779 closes the whole
+from transverse refinement while remembering why THM-783 closes the whole
 prime ray by the capped peel.
 
-THM-780 identifies the exact rate law behind that closure. If the old fiber has
+THM-784 identifies the exact rate law behind that closure. If the old fiber has
 safe mass `mu` and `r_top` components, including isolated equality points, a
 new frequency `N` leaves at least `6mu/7-2r_top/(7N)` safe mass and creates at
 most `N+r_top` components. A named interval
@@ -97,11 +99,26 @@ once `a` crosses an explicit state-dependent threshold. The Fourier cap itself
 uses the smaller positive-length count `r_+<=r_top`. In this chart, increasing
 geometric complexity can decrease proof difficulty.
 
-There is a stronger exclusion hidden in the same inequality:
+There is a stronger fixed-base exclusion hidden in the same inequality:
 `liminf_N |G'_{B union {N}}|>=6|G'_B|/7>0` for every fixed positive-mass base.
 So a single transverse frequency is not merely easy for a fast peel; it cannot
-itself produce the safe-mass boundary. A decay sequence must move its base or
-coordinate several scales so that the inherited `(mu,r)` state degenerates.
+itself produce the safe-mass boundary.
+
+THM-780 subsequently removes even the moving-base version of that imagined
+boundary. Settled LRC(13) supplies a `1/13`-deep time for every twelve-core; a
+heavy cell in the joint phase orbit, translated back to its anchor, gives
+
+```text
+|G'_P(1/14)| >= 182^(-12),
+rho(P) <= 12*182^12/pi.
+```
+
+Equivalently, a subsequential limit retains its full stabilized character
+relation lattice, whose annihilator is the limiting compact subgroup and still
+contains the deep witness. This is qualitative scalar compactness with an
+astronomical constant, not a terminal finite atlas. It kills safe-mass collapse
+as a boundary face but preserves none of the owner-to-component incidence
+needed for descent.
 
 The transition also iterates. Certified lower/upper states evolve by
 
@@ -127,16 +144,56 @@ certificate calculus. The nonterminal boundary must make all four certified
 mass bounds or cap tests fail, slow the peel relative to wall creation, or
 retain owner correlations that the two-number state intentionally erased.
 
-THM-777 identifies the compactness question left behind by this transport law.
-For every 12-core, `r_P<=sum(P)` turns safe mass into the bound
-`rho(P)<=12/(pi*|G'_P|)`. The candidate minimum `7/858`, uniquely attained by
-`{1,...,13}\{6}`, is proved only in the exact census through `max(P)<=18`;
-the explicitly listed scale/tooth samples and seeded searches are only finite
-evidence. So safe mass is a sufficient scalar for bounding the peel
-ratio, but its global positive floor is not yet preserved by a theorem. The
-residual object is either a compact shape stratum with that floor or a boundary
-face consisting of sequences whose safe mass collapses. Describing and
-descending the latter is now more precise than asking vaguely for compactness.
+THM-784 now makes one genuine boundary face uniform. For a nine-speed small
+core `C subset {1,...,14}`, write `S=sum(C)`. If
+
+```text
+n_1>=412,
+n_2>=412(S+n_1),
+n_3>=412(S+n_1+n_2),
+n_4>=412(S+n_1+n_2+n_3),
+```
+
+then peeling `n_4` closes the row. The proof starts from the universal marked
+interval `L>=1/245`, transports the first three coordinates, and uses the exact
+comparison `4455873/4453855>1`; `411` fails this same uniform calculation.
+Hence each of the 2,002 charts contains a proved `412`-lacunary terminal cone.
+An exact sweep of those same 2,002 cores gives the unique minimum safe mass
+`10601/114660` and a complementary factor-19 cone when the first far speed is
+also measured against the core sum. The two regions overlap but neither
+subsumes the other.
+
+This is the first theorem that turns the literal four coordinates themselves
+into a global certificate region. Any unresolved far tuple must fail at least
+one successive separation inequality, so it contains a bounded-ratio cluster
+at some level of the cumulative scale flag. Infinity has become a recursive
+cluster tree: fully lacunary flags are terminal; only clustered or projectively
+coupled faces require the owner-labelled stalk.
+
+This is not peculiar to dimension four. The optimized THM-784 corollary closes
+fully lacunary flags in every far-count stratum. The least factors supplied by
+the same rational certificate are
+
+```text
+f = 4,5,6,7,8,9,10,11,12,13
+R = 412,405,394,27,17,14,13,13,13,13.
+```
+
+For `f<=6` the proof starts from a marked interval in the bounded small core;
+for `7<=f<=12` the danger-union budget already gives positive bulk mass; for
+`f=13` the smallest speed itself is the base. Thus the global high-far problem
+has the same recursive geometry: infinity is easy when scales separate, and
+all unresolved content is forced onto coupled cluster faces.
+
+THM-777 identifies the bridge left behind by this transport law. For every
+12-core, `r_P<=sum(P)` turns safe mass into
+`rho(P)<=12/(pi*|G'_P|)`. Its candidate sharp minimum `7/858`, uniquely attained
+by `{1,...,13}\{6}` in the exact census through `max(P)<=18`, remains
+conjectural globally. THM-780 nevertheless proves a much smaller positive floor
+uniformly. Thus the remaining problem is not existence of scalar compactness;
+it is finding a useful structured quotient inside a domain whose proved scalar
+bound is too large and whose fibers mix endpoint ownership, residue action, and
+obstruction incidence.
 
 That observation does not make LRC periodic. Inside one residue class,
 changing height changes:
@@ -284,9 +341,9 @@ sheet action and closed boundary convention retained.
 
 ### Truth compression is not transport compression
 
-The concurrent THM-772/773/774/775/776/778 programs make the preservation
-hierarchy more exact. THM-772 through THM-776 are proved at their stated
-scopes; THM-778's endpoint-order decoder remains claimed.
+The concurrent THM-772 through THM-782 programs make the preservation hierarchy
+more exact. Their roles are different: some decide a local predicate, some
+reconstruct a fibre, and some transport an event schedule.
 
 At prime sheet size seven, THM-773's stored audit shows that the six nontrivial
 finite-field moments recognize exactly the 5,040 permutation states among all
@@ -327,22 +384,43 @@ folded parameter space, not a uniform theorem above height 100. A useful next
 map would send the terminal dyadic-chain base from THM-775 to a certified
 transversal deficit of this kind.
 
-THM-778 points at the information missing on the prime-seven face. THM-773's
+THM-778 now proves the information missing on the prime-seven face. THM-773's
 moments decide exact cover truth but deliberately forget endpoint order.
-Centered mechanical words and a Euclidean skew product may reconstruct that
-event schedule, including odd/odd ties and cyclic carry. Only the pairwise
-formula is currently derived; global reconstruction remains CLAIMED. It should
-therefore be treated as a proposed transport carrier, not as a proved truth
-certificate or closure.
+Centered Beatty ranks, common scale, midpoint parity, and a Euclidean cocycle
+reconstruct every simultaneous owner-labelled wall and drive the exact
+`F_7` token skew product. THM-779 then evaluates the local survival predicate:
+piece surjectivity, wall rainbow, and absence of ties. THM-785 proves several
+exit mechanisms, but an absolute bound on balanced co-landing cascades remains
+open. Event reconstruction is solved; non-synchronization with the finite
+collision-hop transducer is not.
+
+THM-781 supplies a complementary inverse for the tournament-tiling view. A
+merged node lifts to the set-valued fibre `union HP(T)/Aut(T)` over its converse
+orbit; in particular `175/7=25` explains the prime-seven masks exactly. This
+recovers path classes, not owner-to-sheet assignment, wall position, midpoint
+parity, carry, or the core-safe component. The right combinatorial object is
+therefore not the merged node alone but
+
+```text
+merged node + HP/Aut path fibre + owner-labelled metric/event stalk.
+```
+
+On the two-sheet face, the phase-cell THM-782 adds the corresponding interior
+stalk. Every ten-core has an anchored simultaneous-return packet of mass
+`72^(-10)` and a safe component of normalized width at least
+`72^(-10)/20`; tightness would have to place that structured packet inside the
+folded diamond. Its mass is far too small for scalar comparison. Anchor, joint
+cell membership, and diamond incidence are the information to preserve.
 
 The resulting rule is task-indexed. Preserve only moments for exact-cover truth,
 the full owner/event stalk for future events, the obligation hypergraph for
 persistent unit-grid compatibility, the dyadic quotient chain and binary
 safe-child fibers for descent, and the folded metric or atom-incidence
 hypergraph for the local two-sheet obstruction. For normalized-band
-compactness, retain safe mass and component load; THM-777 proves their bridge
-but not a global mass floor. "Keep
-everything" and "find one invariant" are both too coarse.
+compactness, retain safe mass and component load; THM-777/780 prove a global
+scalar bound. For recursive closure retain the anchored interior-return packet
+and the owner-labelled boundary-event stalk. "Keep everything" and "find one
+invariant" are both too coarse.
 
 ### A smaller local address than the edge table
 
@@ -646,10 +724,92 @@ The square may commute by reconstruction, by exact cancellation of the
 forgotten fiber, or by a descent certificate. If it does none of these, its
 commutator is not an error term to hide: it is the missing sidecar. In the
 current frontier, THM-773 gives a commuting square for cover truth but not next
-events; THM-780 gives one for safe-mass/component enclosures but not owner
-correlations; THM-775 gives one for dyadic safe-child descent; THM-776 gives one
-for bounded two-sheet truth after reversing the quantifiers. This is a more
-precise notion of an invariant than equality of static labels.
+events; THM-778 supplies the missing event transport; THM-779 supplies its local
+survival observation; THM-781 inverts the merged tiling node set-valuedly;
+THM-780 transports strict margin into uniform safe mass; THM-784 gives a sharper
+fixed-base safe-mass/component enclosure but not owner correlations; THM-775
+gives one for dyadic safe-child descent; and THM-776 gives one for bounded
+two-sheet truth after reversing the quantifiers. This is a more precise notion
+of an invariant than equality of static labels.
+
+### The common residual is structured-return noncontainment
+
+Two apparently unrelated frontiers now have the same logical shape.
+
+In the two-sheet packet, a chosen deep anchor and its heavy simultaneous-return
+cell produce a structured Bohr packet. Tightness asks whether the translated
+packet can remain inside one folded diamond. In the prime-seven packet, centered
+mechanical words produce a structured return schedule. Full blocking asks
+whether that schedule can remain inside the finite SURJ/collision-hop
+transducer by indefinitely handing over balanced co-landing clusters.
+
+The Bohr packet can be written without reference to the chosen partition:
+
+```text
+B_P(1/182)={u: ||p_i u||<1/182 for every core speed p_i},
+t_0+B_P(1/182) subset G'_P(1/14) strictly.
+```
+
+THM-780's heavy-cell proof gives this packet mass at least `182^(-12)`. The
+next exact interface is therefore `E_a intersect (t_0+B_P(1/182))`, with `E_a`
+an owner-labelled endpoint/event coset. That is an inhomogeneous
+residue-character incidence problem, not another measure estimate.
+
+There is an exact augmented-torus formulation. For core vector `p`, event
+frequency `u`, event phase `gamma`, and deep anchor `t_0`, put
+
+```text
+psi_(p,u)(v)=(p_1 v,...,p_d v,u v),       H=im psi_(p,u).
+```
+
+Then, with `E(u,gamma)={t:ut=gamma}`, one has
+
+```text
+E(u,gamma) intersect (t_0+B_p(delta)) != empty
+iff
+H intersects (-delta,delta)^d x {gamma-u t_0}.
+```
+
+For Boolean existence the augmented relation lattice
+`ker((m,n) |-> m dot p+n u)` and the target phase determine the subgroup slice.
+For event density, component count, or subsequent transport one must additionally
+retain the orbit covering degree/gcd and owner action. This is a concrete example
+of the same representation being sufficient for truth and insufficient for its
+next operation.
+
+The same slice has a finite-code presentation. Choose a lift
+`eta=gamma-u t_0`. Its event-fibre candidates are
+
+```text
+v_k=(eta+k)/u,       k in Z/uZ,
+```
+
+and intersection is exactly the question whether the affine cyclic code
+
+```text
+k |-> (p_i(eta+k) mod u)_i
+```
+
+enters the centered product box of radius `u*delta` in `(R/uZ)^d`. Gcd and
+parity strata become code multiplicities. This turns the Bohr/event interface
+into a finite inhomogeneous lonely-runner problem and gives a literal bridge to
+the repository's coding, matroid-circuit, and sheet-deck threads.
+
+This suggests a common target, not yet a theorem:
+
+```text
+deep anchor + structured return packet + labelled obstruction incidence
+    => escape, quantitative transversality, or a smaller descendant.
+```
+
+The two return objects are not literally the same category, so a slogan is not
+a proof. But the preservation contract is identical. Scalar measure, score
+histograms, unlabelled masks, and pairwise order all forget where the return
+packet meets the obstruction boundary. The minimal candidate state must retain
+the anchor, exact return law, owner labels, tie/carry data, the active safe
+component, and its incidence with the obstruction. This reframes both sharp
+residuals as noncontainment rather than as searches for another scalar
+invariant.
 
 It also suggests replacing one linear proof ledger by a bicomplex:
 
@@ -678,8 +838,11 @@ peel-relative replacement for the refuted claim that scale-free cores have
 controlled raw good-set fragmentation. Corrected THM-767 shows that an exact
 deck tiling cannot cross an event: it is chamber-locked, while the coincidence
 law locates double-boundary walls without governing chamber persistence.
-The projective compactification below is needed for arbitrary unbounded
-sequences outside that proved sheet chart.
+THM-780 already compactifies the scalar safe-mass/rho coordinate for arbitrary
+unbounded twelve-core sequences. The projective compactification below is
+needed for transport and descent outside the proved sheet chart: it must retain
+which structured packet meets which owner-labelled obstruction, not merely a
+positive amount of safe mass.
 
 At infinity, keep a flag:
 
@@ -709,16 +872,18 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Extend THM-780 beyond its positive-good-state/proportional-peel face: stratify
-   sequences by safe-mass decay relative to component, wall-creation, and peel rates; attach
-   endpoint owners, and prove every residual state is bounded or recursively descends.
-2. Land THM-775's terminal hereditarily primitive dyadic-chain base in a
-   height-independent version of THM-776's atom-incidence deficit, or exhibit
-   the first packet whose obligation hypergraph has transversal number at most
-   ten.
-3. Complete or refute THM-778's global centered-Christoffel reconstruction.
-   The test is whether the proposed Euclidean skew product predicts the next
-   owner and free-sheet future, not merely the pairwise merged word.
+1. Strengthen the crude THM-780 scalar compactness into an incidence theorem:
+   attach the active safe component, phase-cell anchor, endpoint owners, and
+   peel alignment, then prove every unresolved state is bounded or recursively
+   descends. First test the exact intersection of `t_0+B_P(1/182)` with one
+   owner event coset. Safe-mass decay itself is no longer a possible residual.
+2. Prove anchored phase-cell escape from the THM-774 folded diamond, uniformly
+   in the ten-core height, or land THM-775's terminal hereditarily primitive
+   dyadic-chain base in a height-independent THM-776 transversal deficit.
+3. Compose THM-778's proved centered-Christoffel schedule with THM-779/785's
+   collision-hop transducer and bound balanced co-landing cascades absolutely.
+   This is a mechanical-word non-synchronization theorem, not an event-decoder
+   construction.
 4. Classify the seven-exception `1/7` chambers left after THM-767's
    event-pierce/chamber-locking lane and formalize the terminating excessive-gcd
    descent `c -> c/g`.
@@ -742,8 +907,9 @@ samples from an infinite box.
 
 ## 11. What this session did not prove
 
-The affine suspension is an exact reparameterization, not a compactness
-theorem. The semilinear residue quotient does not make LRC residue-periodic.
+The affine suspension is an exact reparameterization, not a transport
+compactification. THM-780 does prove scalar safe-mass compactness, but not a
+finite structural atlas. The semilinear residue quotient does not make LRC residue-periodic.
 The colored threshold event system has not been transported uniformly over
 the cone. The projective compactification, comparison map, four-circuit
 localization, and cone descent remain open. Torus, persistence, and curvature
