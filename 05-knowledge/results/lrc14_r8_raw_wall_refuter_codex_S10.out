@@ -30,13 +30,16 @@ INFINITE RAW-WALL FAMILY
 CONCRETE A=1000 ROW
   indices=(137, 147) walls=11 x=[11/80,59/400] all_covered=True
 
-DE-PHASE FACTOR-TWO AUDIT (THM-783 SCOPE CORRECTION)
+DE-PHASE / SERVING FACTOR-TWO AUDIT (THM-783/786 SCOPE CORRECTION)
   (fast,c,c')=(11, 6, 8) paired_co_visits=4 pair_balanced_mod7=True
   (m,n)=(1,2) times=(1/4,5/16) signed_difference=1/16 fast_period=2
   (m,n)=(2,3) times=(5/12,7/16) signed_difference=1/48 fast_period=4
   (m,n)=(3,4) times=(7/12,9/16) signed_difference=-1/48 fast_period=5
   (m,n)=(4,5) times=(3/4,11/16) signed_difference=-1/16 fast_period=7
   old_one-window_bound=35/11 refuted; corrected_two-window_bound=59/11
+  exhaustive f<= 50: triples=19600 corrected_factor_two_failures=0 old_factor_one_failures=3981
+  first_old_failure=(5, 4, 2, 2) old_bound=1 corrected_bound=13/5
+  lens-balanced triples=2121 old_factor_one_failures=421 first=(9, 8, 6, 4) old_bound=3 corrected_bound=19/3 largest_small_run=(48, (50, 49, 48))
 
 A8 TORSOR AND NORMALIZED COVERED-STATE GRAPH
   generators: p=(1 2 3 4 5 6 7), q=(0 2 3 4 5 6 7); orders=(7, 7)
@@ -57,5 +60,5 @@ TOURNAMENT ANALYSIS / ASSUMPTION CHALLENGE
   preserved by state graph: duplicate root, anchor choice, token translation
   destroyed by tournament quotient: stalk identity, residues, metric core interval
 
-DETERMINISTIC AUDIT SHA256: 346093631b07762d39454e79ad08fa640a4129f1721f4e901b86fed86b301481
+DETERMINISTIC AUDIT SHA256: bac61ac7dd1baaf135d699fb225ed2d63540f120673385f061961ec80e811a7d
 VERDICT: exact PASS; raw covered-wall length is unbounded, while owner-switch complexity is zero

@@ -229,6 +229,15 @@ wall runs, while THM-785 reserves the cyclic-triangle metagraph-flow thread.
 The balanced example `(f,c,c')=(11,6,8)` has four paired co-visits while the
 old expression is `35/11<4`; the corrected expression is `59/11`.
 
+A later pull brought THM-786's extent package.  Exact audit refuted its repeated
+factor-one serving bound with the same four-co-visit strand and found that its
+stored script does not regenerate the reported `0.589` census.  The repaired
+theorem is stronger where it is proved: an endpoint-span argument gives
+`L<1+2gc/(f(g-c))` for one fixed companion even with skipped indices; visitor
+sets obey the signed entrant/leaver balance; and companion-density counting
+gives an explicit bound under the correct ultra-sparse hypothesis `sum c<g`.
+Alternation among several companions at general density remains open.
+
 Tournament Analysis challenged runners as vertices throughout.  Heavy phase
 cells, character obligations, endpoint events, minimal stalks, top teeth, and
 thirteen sheet obligations each preserve different theorem predicates.  The

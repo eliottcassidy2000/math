@@ -55,6 +55,7 @@ simultaneous wall is uncovered even if one selected owner's congruence holds
 (`W={1,2,3,4,5,8,10,30}`, from the covered owner-30 wall at `19/60` to the
 owner-10/30 double wall at `7/20`). Calling both candidate walls “walls of the
 run” in advance would make the original iff circular.
+
 ## (2) The period-sum law (PROVED; battery 40/40)
 
 > If owner b walls twice inside a run (consecutive b-walls, m ↦ m+1),
@@ -120,6 +121,11 @@ The old bound is `35/11<4`, while (D) gives `59/11>4`. The pair is balanced
 because `6+8=0 (mod 7)`. This lemma controls a fixed one-step strand only; it
 does not repair the varying-index counterexample `(8,2,5)` or prove a mandatory
 handover.
+
+THM-786 obtains the same factor-two scale without a one-step assumption in the
+special but important case where one fixed companion serves consecutive
+second-fastest-owner walls: comparing the first and last companion walls gives
+the bound directly. Alternation among several companions remains open.
 
 ## (5) The corrected conditional extent theorem (PROVED)
 

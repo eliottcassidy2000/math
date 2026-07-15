@@ -290,6 +290,82 @@ def dephase_factor_two_audit() -> dict:
     }
 
 
+def period_index_or_none(fast: int, time: Fraction) -> int | None:
+    """Return the fast-period index, or None at a simultaneous fast wall."""
+    shifted = fast * time - Fraction(1, 2)
+    if shifted.denominator == 1:
+        return None
+    return floor(shifted)
+
+
+def longest_circular_true(pattern: tuple[bool, ...]) -> int:
+    current = best = 0
+    for value in pattern + pattern:
+        current = current + 1 if value else 0
+        best = max(best, min(current, len(pattern)))
+    return best
+
+
+def fixed_companion_span_audit(limit: int = 50) -> dict:
+    """Exhaust the corrected THM-786 fixed-companion span for small triples.
+
+    A g-wall is served when some c-wall lies in the same open f-period.  The
+    pattern is one-periodic; the g midpoint walls in [0,1) give its full word.
+    """
+    checked = 0
+    old_factor_one_failures = []
+    balanced_checked = 0
+    balanced_old_failures = []
+    largest_run = (0, None)
+    for fast in range(3, limit + 1):
+        for g in range(2, fast):
+            for c in range(1, g):
+                checked += 1
+                c_cells = {
+                    cell
+                    for m in range(-1, c + 1)
+                    if (cell := period_index_or_none(fast, endpoint(c, m))) is not None
+                }
+                pattern = tuple(
+                    (cell := period_index_or_none(fast, endpoint(g, j))) is not None
+                    and cell in c_cells
+                    for j in range(g)
+                )
+                length = longest_circular_true(pattern)
+                delta = g - c
+                corrected = Fraction(2 * g * c, fast * delta) + 1
+                assert length < corrected
+                old_integer_bound = (g * c) // (fast * delta) + 1
+                if length > old_integer_bound:
+                    row = (fast, g, c, length, old_integer_bound, corrected)
+                    old_factor_one_failures.append(row)
+                if fast % PRIME and g % PRIME and c % PRIME and (g + c) % PRIME == 0:
+                    balanced_checked += 1
+                    if length > old_integer_bound:
+                        balanced_old_failures.append(
+                            (fast, g, c, length, old_integer_bound, corrected)
+                        )
+                if length > largest_run[0]:
+                    largest_run = (length, (fast, g, c))
+
+    assert checked == comb(limit, 3)
+    assert old_factor_one_failures
+    assert any(row[:4] == (11, 8, 6, 4) for row in old_factor_one_failures)
+    assert balanced_old_failures
+    assert any(row[:4] == (11, 8, 6, 4) for row in balanced_old_failures)
+    return {
+        "limit": limit,
+        "triples": checked,
+        "corrected_failures": 0,
+        "old_factor_one_failures": len(old_factor_one_failures),
+        "first_old_failure": old_factor_one_failures[0],
+        "balanced_triples": balanced_checked,
+        "balanced_old_failures": len(balanced_old_failures),
+        "first_balanced_old_failure": balanced_old_failures[0],
+        "largest_run": largest_run,
+    }
+
+
 Permutation = tuple[int, ...]
 State = tuple[int, ...]
 
@@ -518,6 +594,7 @@ def main() -> None:
     detailed = tuple(direct_family_audit(m) for m in (1, 2, 3, 5, 10, 25, 100))
     thousand = a1000_audit()
     dephase = dephase_factor_two_audit()
+    serving_span = fixed_companion_span_audit()
 
     for label, payload in (
         ("stalk", stalk),
@@ -525,6 +602,7 @@ def main() -> None:
         ("families", detailed),
         ("A1000", thousand),
         ("dephase", dephase),
+        ("serving_span", serving_span),
     ):
         digest.update(f"{label}|{payload}\n".encode())
 
@@ -570,7 +648,7 @@ def main() -> None:
         f"x=[{thousand['first_wall']},{thousand['last_wall']}] all_covered=True"
     )
     print()
-    print("DE-PHASE FACTOR-TWO AUDIT (THM-783 SCOPE CORRECTION)")
+    print("DE-PHASE / SERVING FACTOR-TWO AUDIT (THM-783/786 SCOPE CORRECTION)")
     print(
         f"  (fast,c,c')={dephase['speeds']} paired_co_visits={dephase['length']} "
         f"pair_balanced_mod7={dephase['pair_balanced_mod7']}"
@@ -583,6 +661,24 @@ def main() -> None:
     print(
         f"  old_one-window_bound={dephase['old_bound']} refuted; "
         f"corrected_two-window_bound={dephase['corrected_bound']}"
+    )
+    print(
+        f"  exhaustive f<= {serving_span['limit']}: triples={serving_span['triples']} "
+        f"corrected_factor_two_failures={serving_span['corrected_failures']} "
+        f"old_factor_one_failures={serving_span['old_factor_one_failures']}"
+    )
+    first = serving_span["first_old_failure"]
+    first_balanced = serving_span["first_balanced_old_failure"]
+    print(
+        f"  first_old_failure={(first[0], first[1], first[2], first[3])} "
+        f"old_bound={first[4]} corrected_bound={first[5]}"
+    )
+    print(
+        f"  lens-balanced triples={serving_span['balanced_triples']} "
+        f"old_factor_one_failures={serving_span['balanced_old_failures']} "
+        f"first={(first_balanced[0], first_balanced[1], first_balanced[2], first_balanced[3])} "
+        f"old_bound={first_balanced[4]} corrected_bound={first_balanced[5]} "
+        f"largest_small_run={serving_span['largest_run']}"
     )
     print()
     print("A8 TORSOR AND NORMALIZED COVERED-STATE GRAPH")

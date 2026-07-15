@@ -48,6 +48,9 @@ Format per entry:
   THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
   output; independent extreme-ratio certificates and reported census in
   opus-S304.
+  output.
+
+### Independent S304 ratio-box certificate
 
 ## MISTAKE-148 -- the co-landing “de-phase/serving” bound assumed locked wall indices and fixed order; balanced pairs can flip order and exceed it (THM-783/786)
 
@@ -91,24 +94,27 @@ Format per entry:
   long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
   w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
   {8,10,18,24,32,34,39,3887}: 14-wall run.
-- **The correct framing (THM-786):** the invariant is run EXTENT. Both certificates'
-  extents (0.01620, 0.00334) sit UNDER 1/w_g + 2/w_f (0.02646, 0.02616) -- the extent
-  bound proved conditionally in THM-782(5) and now verified at ratio <= 0.59 across all
-  adversarial families INCLUDING designed exploits (balanced pairs, near-multiples).
-  Wall-count comparisons in THM-779(4)/THM-782(6-7) are withdrawn; extent comparisons
-  replace them; the pierce is restated in extent form.
-- **Impact:** no downstream consumer used K0 = 6 quantitatively in the ~3 hours it stood;
-  THM-779/782 carry correction banners.
+- **The correct framing (THM-786):** the invariant is run EXTENT. Both
+  certificates' extents `(0.01620,0.00334)` lie below
+  `1/w_g+2/w_f=(0.02646,0.02616)`.  The extent bound is proved on the stated
+  no-companion class; its universal form remains conjectural.  S304 also
+  reported a `0.589` adversarial-census peak, but the stored script does not
+  regenerate that census or annealing run, so the table is not a replayable
+  certificate.
+- **Impact:** no downstream consumer used `K0=6` quantitatively in the few
+  hours it stood; THM-779/783 carry correction banners.
 - **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
   uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
   seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
   single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
   dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
   count what costs, not what happens.
-- **Source:** opus-2026-07-14-S304 (lrc14_extent_exit_theorem_opus_S304.py + .out).
-## MISTAKE-148 -- the r=8 companion de-phase estimate used one fast-window length, but signed wall separation can cross zero and needs two
+- **Source:** opus-2026-07-14-S304; its exact script/output replay the two
+  certificates only.
 
-- **What was claimed (opus-S303, incoming exit package):** if two fixed
+## MISTAKE-148 -- the r=8 companion de-phase/serving estimate used one fast-window length, but the endpoint span needs two
+
+- **What was claimed (opus-S303 and repeated in the first THM-786):** if two fixed
   companion owners `c,c'` repeatedly co-visit periods of the fastest owner
   `f`, their consecutive paired co-visits were bounded by
   `w_c w_(c')/(w_f |w_c-w_(c')|)+1`.
@@ -119,18 +125,23 @@ Format per entry:
   `1/16,1/48,-1/48,-1/16`.  Thus the run length is `4`, while the displayed
   bound is `35/11<4`.  The pair is even cluster-balanced (`6+8=0 mod 7`), so
   the failure occurs in the intended arithmetic stratum.
-- **Correct framing:** each paired advance changes signed separation by
-  `Delta/(w_c w_(c'))`.  Co-visiting only puts that signed separation in
-  `(-1/w_f,1/w_f)`, an interval of width **`2/w_f`**.  Hence the elementary
-  conclusion is
+- **Correct framing:** on a one-step paired strand, each advance changes signed
+  separation by `Delta/(w_c w_(c'))`, and co-visiting puts the separation in
+  `(-1/w_f,1/w_f)`, of width **`2/w_f`**.  More generally, if one fixed slower
+  owner `c` serves `L` consecutive walls of `g`, the first and last serving
+  walls give `(L-1)/c < (L-1)/g+2/f`.  Thus without any one-step assumption,
 
   ```text
-  L < 2 w_c w_(c')/(w_f Delta)+1.
+  L < 1+2gc/(f(g-c)).
   ```
 
-  The factor two cannot be removed without an additional fixed-order
-  hypothesis.
-- **Impact:** THM-783 now uses the corrected factor-two bound.  Its phi
+  The factor-one serving bound is false.
+- **Exact breadth:** all `19,600` triples `c<g<f<=50` satisfy the factor-two
+  span, while the factor-one integer bound fails `3,981` times.  On the
+  lens-balanced subbank it fails `421/2,121` times.
+- **Impact:** THM-783 keeps the factor-two drift lemma under its explicit
+  paired-index hypothesis; THM-786 uses the unconditional endpoint-span form.
+  The phi
   recurrence, period-sum law, single-visitor break, cluster balance, and
   no-companion conditional extent theorem are unaffected.  Any quantitative
   cascade using the old companion lifetime must double that budget.
@@ -140,9 +151,7 @@ Format per entry:
 - **Source:** codex-2026-07-14-S10 exact post-pull audit; replayed in
   `lrc14_r8_raw_wall_refuter_codex_S10.py`.
 
----
-
-## MISTAKE-147 -- the empirical r=8 ceiling `K0=5` was stated as a universal wall-run pierce, but monochromatic owner cycles give arbitrarily long fully blocked runs even in divisor-complete LRC14 families
+### Divisor-complete core-safe strengthening
 
 - **What was claimed (opus-S302, THM-779 sections 3--4):** an annealed/random
   search whose longest observed fully covered run had five walls was followed

@@ -303,6 +303,16 @@ universal status.  THM-784 independently proves the same raw-bound failure
 with a simpler `21N`-wall family; the divisor-complete family above adds the
 arithmetically stronger core-safe witness.
 
+The subsequent THM-786 audit isolates the next exact scale.  A fixed companion
+serving `L` consecutive second-fastest-owner walls satisfies
+`L<1+2gc/(f(g-c))`: compare only the first and last companion walls, so skipped
+indices cause no loss.  Consecutive visitor sets satisfy a signed entrant-
+leaver balance, and a density count closes the ultra-sparse class `sum c<g`.
+What remains is not generic “co-landing”; it is alternation among several
+companion spans in the general-density class.  The originally reported factor-
+one span and `sum c<f` threshold do not survive exact audit, and the stored
+S304 script does not regenerate its `0.589` census.
+
 The surviving problem is therefore a first-return or owner-switch problem:
 after contracting intervals supported by a persistent exact stalk, can the
 centered mechanical schedule keep agreeing with the redundancy cocycle across

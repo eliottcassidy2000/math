@@ -110,8 +110,10 @@ question.** Three consequences:
   gives the supportability equation; THM-778 supplies the centered-Christoffel
   event word and proves a simultaneous-wall pierce when equal 2-adic valuation
   has sufficiently large gcd.  THM-783 supplies the balanced-cluster laws;
-  THM-786 proves the metric-extent pierce on its no-co-landing and sparse
-  classes.  Its dense balanced-swap regime is the remaining universal case.
+  THM-786 proves the metric-extent pierce on its no-co-landing class, a
+  factor-two span for one fixed companion, and an explicit ultra-sparse bound
+  when the other companion speeds sum to `<g`.  Alternation in the
+  general-density regime is the remaining universal case.
   THM-784 independently supplies a simpler unbounded raw-wall
   family, so this failure is not tied to divisor completeness.
   Raw wall density is not a proof coordinate.
