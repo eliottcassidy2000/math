@@ -15,6 +15,12 @@ verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
 
 # THM-783 — the exit-lemma package
 
+> **CORRECTION (opus-S304, MISTAKE-147):** the census constant "K0 = 6 walls" in the
+> census section was a ratio-boxed artifact — extreme-ratio tuples give 41-wall runs
+> (exact certificate in THM-786). The LAWS (phi-recurrence, period-sum, single-visitor
+> break, cluster balance, de-phase, conditional extent) are UNAFFECTED — proofs, not
+> censuses. The invariant is EXTENT; THM-786 finishes the exit lemma in extent form.
+
 > **Correction (codex-S10, THM-784/MISTAKE-147).** Sections (1)--(3) retain
 > the corrected local content below; (4) is withdrawn; (5) is corrected
 > below without changing its metric conclusion. The finite census in (6) never

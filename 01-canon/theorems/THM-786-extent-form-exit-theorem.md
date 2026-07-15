@@ -4,7 +4,7 @@ title: The extent-form exit theorem — wall-count K0 was a ratio-boxed artifact
 status: PROVED (the artifact refutation with exact certificate; the extent theorem on the stated class; the serving/de-phase and balanced-swap laws; the extent-form pierce) + VERIFIED (adversarial extent census, ratio ≤ 0.59 incl. designed exploits) + CONJECTURE (the universal extent bound, sharply stated)
 source: opus-2026-07-14-S304 (owner directive: prove the geometric co-landing bound, finish the exit lemma)
 depends_on:
-  - THM-782   # the laws this corrects and completes
+  - THM-783   # the exit-lemma package (renumbered from 782) this corrects and completes
   - THM-779   # the criterion; its census constant corrected here
 related: [THM-767, THM-771, HYP-6840, HYP-6845, HYP-6850, MISTAKE-147]
 verification: 04-computation/lrc14_extent_exit_theorem_opus_S304.py
@@ -15,7 +15,7 @@ verification: 04-computation/lrc14_extent_exit_theorem_opus_S304.py
 
 ## (1) The wall-count constant was an artifact (REFUTED, exact certificate)
 
-THM-782's census constant "K0 = 6 walls" sampled comparable-speed tuples only.
+THM-783's (né 782) census constant "K0 = 6 walls" sampled comparable-speed tuples only.
 The extreme-ratio mechanism breaks it: when the fastest owner f dwarfs the rest,
 the seven slow tokens are CONSTANT across long stretches; whenever they happen to
 form a rainbow (they do, on positive measure), every f-wall in the stretch
@@ -35,7 +35,7 @@ Let f, g be the fastest and second-fastest owners.
 
 > **(a)** Every wall of a non-f owner in a run's interior (≥ 1/w_f from the run
 > ends) lies in a complete in-run f-period, whose visitor set must be BALANCED
-> (Σ w^{-1} ≡ 0 mod 7) and of size ≥ 2 — the single-visitor break (THM-782(3)).
+> (Σ w^{-1} ≡ 0 mod 7) and of size ≥ 2 — the single-visitor break (THM-783(3)).
 > **(b)** Hence if no interior g-wall is served by a balanced co-landing
 > companion, the interior contains no g-wall at all, and
 > **extent < 1/w_g + 2/w_f.**

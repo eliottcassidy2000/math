@@ -1,3 +1,49 @@
+## opus-2026-07-14-S304 -- THM-786 (the EXTENT-FORM exit theorem: K0-in-walls refuted, MISTAKE-147; extent bound 1/w_g + 2/w_f; r=8 pierce finished) + THM-787 (the TRANSITIVITY FLOW on the metagraph: single blue pipe out of the transitive; blue parity law; the black-sea imbalance quantified, n=3..7 exact)
+
+Prompt (owner): prove the geometric co-landing bound, finish the exit lemma; AND trace the flow
+of transitivity on the metagraph (transitive -> distributed axis, blue/black lines, pure blue ->
+mixed -> pure black), quantifying left-right symmetry (blue) and imbalance (black).
+
+PART A (THM-786): first move was adversarial self-referee: EXTREME-RATIO tuples break my S303
+K0 = 6 -- exact 41-wall certificate {10,12,17,18,22,32,39,2445} (slow-rainbow + free same-owner
+steps; runs scale like w_f/w_g). MISTAKE-147 logged (SIXTH box-genus instance, new dimension:
+uniform sampling boxes RATIOS; standing seed rule now includes extreme-ratio tuples; count what
+COSTS, not what happens). The true invariant is EXTENT: both certificates sit UNDER
+1/w_g + 2/w_f. PROVED: the extent theorem on the no-co-landing class; the serving/de-phase
+bound (fixed companion serves <= w_g w_c/(w_f Delta) + 1 consecutive g-walls, monotone drift);
+the balanced-swap law (visitor-set changes need zero inverse-sum; single changes break);
+the sparse-regime bound. VERIFIED: adversarial extent census with DESIGNED exploits (balanced
+pairs 2wg+d=0 mod 7; near-multiples wf=N*wg+eps): peak ratio 0.589 of the bound -- the
+co-landing loophole never reaches 60 percent. THE r=8 PIERCE FINISHED IN EXTENT FORM: every
+closed core-safe component of length >= 1/w_g + 2/w_f contains a witness moment (proved on the
+stated classes; <= 0.59 everywhere tested); shorter components = finite integer-walk checks.
+THM-779/783 carry correction banners (my exit-lemma package was concurrently renumbered
+782->783 by the fleet; references fixed).
+
+PART B (THM-787): exact study n=3..7, classification CERTIFIED by A000568 counts (invariant =
+2-round profiles + arc-types + H; buckets are unions of classes, so bucket-count = A000568
+proves exactness) + fiber*Aut = H. Axis x = Sum(2s-(n-1))^2 (reversal-invariant => merged-
+well-defined; all levels step-8). PROVED: (1) blue lines NEVER touch pure black (both
+endpoints carry grid-sym tilings); (2) the transitive node has EXACTLY ONE line, it is BLUE,
+drop exactly 8(n-2), landing on a MIXED class (20->4, 40->16, 70->38, 112->72) -- the strict
+ordering drains through a single blue pipe. VERIFIED-EXACT + CONJECTURED: the blue PARITY LAW
+-- odd n: |Dx| = 8 mod 16 (blue NEVER level); even n: |Dx| = 0 mod 16 (level allowed); max
+|Dx| = 8(n-2) always; blue spectra have <= 3 values in a step-16 AP (n=7: {8:160, 24:80,
+40:16}). THE BLACK IMBALANCE QUANTIFIED: black endpoint-type flow at n=7: mixed-mixed 876,
+mixed-pureblack 5044, pureblack-pureblack 10208 (the sea); level-black stable ~22 percent
+(blue 0 percent at odd n); pure blue lives at the TOP of the axis, mixed concentrates LOW,
+pure black dominates the MIDDLE (n=7 peak x=32: 74 classes); the downhill flux INTENSIFIES
+toward the distributed end ((32->24): 1504 vs (104->72): 2 -- three orders of magnitude).
+Deviation logged: at n=5 the x=0 (circulant) end is PURE BLUE; at n=7 it is MIXED. Blue line
+counts 1,2,8,32,256 = 2^{ceil(m/2)-1} consistent with the grid-sym fraction law. Next checks
+named: n=8 (parity predicts 0 mod 16, max 48); the parity-law proof route (antisymmetric
+score-shift under the v <-> n+1-v pairing); the merged/spine-ribs-sea overlay.
+
+FILES: THM-786, THM-787, MISTAKE-147, correction banners (THM-779/783);
+04-computation/lrc14_extent_exit_theorem_opus_S304.py,
+04-computation/metagraph_transitivity_flow_opus_S304.py (+ .outs); HYP-6850 executed.
+
+---
 ## codex-2026-07-14-S8 -- THM-781 PROVED: merged-node fibres are Hamiltonian paths modulo automorphisms
 
 Turned HYP-6825's stored bidirectional atlas into intrinsic forward and inverse

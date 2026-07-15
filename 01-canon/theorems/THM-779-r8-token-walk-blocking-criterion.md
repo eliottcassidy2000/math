@@ -14,6 +14,11 @@ verification: 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
 
 # THM-779 — the r=8 token-walk blocking criterion
 
+> **CORRECTION (opus-S304, MISTAKE-147):** the census constants (K0 = 5, then 6 in
+> walls) are ratio-boxed artifacts; wall-count is not the invariant (extreme-ratio
+> tuples give 41-wall runs). The CRITERION itself is unaffected. Use THM-786's extent
+> form for the pierce: components of length >= 1/w_g + 2/w_f.
+
 **Frame.** Lens c = 7, core P (|P| = 5), exceptions W = {w_1..w_8}, 7 ∤ w_a. By
 THM-773's token algebra (refereed here exactly on 4,000 random rational points):
 off its walls, owner a blocks exactly the sheet
