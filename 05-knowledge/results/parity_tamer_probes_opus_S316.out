@@ -1,0 +1,39 @@
+(i) AXIS LEVEL-POPULATION (score sequences via Landau):
+   n=4: levels=[4, 12, 20]
+        mod 8: [4]   mod 16: [4, 12]   holes-in-mod8-class: []
+   n=5: levels=[0, 8, 16, 24, 32, 40]
+        mod 8: [0]   mod 16: [0, 8]
+   n=6: levels=[6, 14, 22, 30, 38, 46, 54, 62, 70]
+        mod 8: [6]   mod 16: [6, 14]   holes-in-mod8-class: []
+   n=7: levels=[0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112]
+        mod 8: [0]   mod 16: [0, 8]
+   n=8: levels=[8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96]...
+        mod 8: [0]   mod 16: [0, 8]   holes-in-mod8-class: []
+
+(ii) H mod 4 / mod 8 vs c3 (n = 4..7):
+   n=4: (c3 mod 2, c3 mod 4) -> set of (H mod 4, H mod 8):
+      c3=(0, 0): [(1, 1)]
+      c3=(0, 2): [(1, 5)]
+      c3=(1, 1): [(3, 3)]
+   n=5: (c3 mod 2, c3 mod 4) -> set of (H mod 4, H mod 8):
+      c3=(0, 0): [(1, 1), (1, 5), (3, 3), (3, 7)]
+      c3=(0, 2): [(1, 5)]
+      c3=(1, 1): [(3, 3), (3, 7)]
+      c3=(1, 3): [(1, 1)]
+   n=6: (c3 mod 2, c3 mod 4) -> set of (H mod 4, H mod 8):
+      c3=(0, 0): [(1, 1), (1, 5), (3, 3), (3, 7)]
+      c3=(0, 2): [(1, 1), (1, 5), (3, 7)]
+      c3=(1, 1): [(3, 3), (3, 7)]
+      c3=(1, 3): [(1, 1), (1, 5)]
+   n=7: (c3 mod 2, c3 mod 4) -> set of (H mod 4, H mod 8):
+      c3=(0, 0): [(1, 1), (1, 5), (3, 3), (3, 7)]
+      c3=(0, 2): [(1, 1), (1, 5), (3, 3), (3, 7)]
+      c3=(1, 1): [(1, 1), (1, 5), (3, 3), (3, 7)]
+      c3=(1, 3): [(1, 1), (1, 5), (3, 3), (3, 7)]
+
+(iii) THE STAIRCASE LOCKER (interval zeta mod 2):
+   n=4: Z(all-ones) == gap-(2,3 mod 4)-stripes: True
+        Z fixes class for 4/8 tilings; class-functional: False; image-class-count histogram: [1, 3]
+   n=5: Z(all-ones) == gap-(2,3 mod 4)-stripes: True
+        Z fixes class for 12/64 tilings; class-functional: False; image-class-count histogram: [1, 2, 3, 4, 5, 6, 7]
+   n=6: Z(all-ones) == gap-(2,3 mod 4)-stripes: True

@@ -5,6 +5,39 @@ Prompt (owner): harvest n=10 (done cont.19); sequences to canon; Farey-14 law + 
 CORRIDOR LAW: THM-826's k=12 first segment keeps exactly the i+j=13 gaps; 13 prime => pair-sum 2H_12/13 (THM-819) => m LINEAR on the whole corridor [1/14, 1/13] containing every deep-well threshold: at the covering-min 14/183 the margin is 2H_12/2379 (referee exact at 4 points). LOCKER: D_n = the covering lattice (q|w) as one canonical tournament per n; never SC/qf/gridsym yet H = 1 mod 4 always (n=5..9) -- the THM-791 stratum does NOT explain it; conjectured mechanism = divisor-pairing involution (the locker fact: squares alone end toggled). BUNDLE: staircase tile counts are triangular => Gauss 3-triangular = the three Venn corners; the Burnside engine = XOR-SAT tractability (P-slice of a GI-hard census; mirrors disjoint-vs-Venn); Smith chart = Moebius nomogram, shared Stern-Brocot orbit with our breakpoints.
 
 FILES: THM-853, HYP-6935, locker_tournament_and_corridor_kps_S128c20.py/.out. -> all (corridor law immediately usable; locker parity = clean target; atlas canon-fixed).
+## opus-2026-07-15-S316 -- PARITY IS THE TAMER: the axis level law (x = 0/n mod 8 by parity of n, PROVED; full step-8 progression NO holes n <= 8; the step-16 memory was THM-790's line-layer rule) + THE 2-ADIC TOWER ABOVE REDEI (H mod 8 = f(c3 mod 4) at n = 4; odd-c3 law exact n <= 6; DEAD at n = 7 -- higher OCF layers irreducible, a Toda stratification inside the OCF) + THE STAIRCASE LOCKER THEOREM (interval zeta mod 2: all-ones -> gap = 2,3 mod 4 stripes, T_{g-1} parity; Z bijective, not class-functional) + SAT/nomogram engineering leads + cron banked (HYP-6935)
+
+Prompt (owner): P-vs-NP via SAT; the locker process; squares vs triangulars; 3-triangular
+vs 4-square; Smith-chart nomograms; binary conditions as tournament edges, creatively.
+
+THE DECODE: the common shape is a hard count tamed by its parity -- locker tau (squares),
+Redei H (odd, #P-shaped), parity-SAT (Toda: PH <= P^#P through +P). Tournaments ARE
+C(n,2)-variable truth assignments (Kemeny/Slater already NP-hard), so tournament-SAT is
+fully expressive; Redei is the miracle row and the natural question is how far the 2-adic
+taming goes. ANSWER (probe ii): digit 0 constant (Redei); digit 1 = c3-governed to n = 6
+exactly; n >= 7 needs the higher odd-cycle-collection layers -- the OCF is itself the
+Toda tower. PROBE (i): the level law -- odd n: x = 0 mod 8; even n: x = n mod 8 (both
+proved in two lines); populated levels = FULL step-8 progression, no holes (n <= 8 exact);
+the mod-16 alternation lives in the d=m FLIP layer (THM-790), not the level lattice.
+m = T_{n-2}, n^2 = T_{n-1} + T_n: the squares/triangulars exchange is the staircase
+gluing. PROBE (iii): THE STAIRCASE LOCKER THEOREM -- the subtile count of a gap-g tile is
+T_{g-1}, so the interval-lattice locker leaves the gap = 2,3 (mod 4) stripes lit (proved
++ verified n = 4,5,6): triangular parity replaces square parity exactly as the owner's
+bundle suggested. Z is a bijection on tilings but NOT class-functional -- a new
+scrambling layer for the metagraph, logged.
+
+ENGINEERING (mandate): tournament-SAT spec for the n = 9/10 census rungs (CDCL +
+base-path symmetry breaking); the Smith-chart nomogram panel ((phi, x) with the reversal
+Mobius fold) for the tournament-tiling explorer.
+
+CRON: 7 additional prefixes banked (215 patterns, 1,632,315 packets, 0 unresolved) (spec continues fleet-side).
+
+NEXT (named): the no-holes completeness proof (exchange walk realizing +-8 steps -- F3
+margin structure); the H-digit-1 law's exact n=7 failure certificate as an OCF-layer
+separation witness; the Z-conjugated wiggly walk (does the locker scrambling expose new
+metagraph structure?); the SAT census pilot.
+
+FILES: reflection; parity_tamer_probes .py/.out; HYP-6935. opus; S316.
 
 ---
 ## opus-2026-07-15-S314+S315 -- THM-864 THE BEAT-LOCALIZATION LEMMA REFEREE-GRADE (sub-orbit exact APs + signed sawtooth cancellation; err <= 13 kappa rho/(y(p+q-1)) + dust; referee 111/111, worst 0.0044) + THE SWEEPS RUN (12 prefixes reported (2 complete), 762 patterns, 6,420,296 packets each PROVEN non-tight by exact rational certificate, 47 fallbacks (all resolved non-tight), 0 unresolved -- ZERO tight candidates; multi-cluster handoff list WRITTEN) + THE FAREY-14 LAW (depth-13 extremal ratios = 14th Farey row units, phi(14) = 6 per block, Y* = floor(x/14); Fibonacci edge law Y*(F_n,F_{n+1}) = F_{n-7} exact; golden = the depth-infinity FOIL, klein-S124 sharpened) (HYP-6925)

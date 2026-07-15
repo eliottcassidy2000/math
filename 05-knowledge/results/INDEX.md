@@ -1359,3 +1359,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `beat_lemma_referee_opus_S314.out` | [STORED] | THM-864 REFEREE: 111 rows, 0 domination failures, worst err/bound 0.0044; + SWEEP 1 flagship results; + SWEEP 2 handoff. | (self) |
 | `fibonacci_farey14_resonance_opus_S315.out` | [STORED] | THE FAREY-14 LAW: all top-10 Y* classes at units/14, Y* = floor(x/14); Fibonacci edge law Y* = F_{n-7} exact; golden foil 0.055x; Pisano-28 sawtooth; phi^-6 numerology killed. | (self) |
 | `radius7_cron_blocks_tail_opus_S315.out` + scratchpad progress | [STORED] | Cron blocks for remaining prefixes (per-prefix lines; continued per CRON spec). | (self) |
+| `parity_tamer_probes_opus_S316.out` | [STORED] | The axis level law (full step-8 progression, no holes, n<=8; residues proved); H mod 8 vs c3 mod 4 (perfect n=4, odd-c3 law n<=6, dead n=7); the staircase locker theorem (Z(1) = gap 2,3 mod 4 stripes; Z not class-functional). | (self) |

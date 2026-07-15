@@ -1,9 +1,8 @@
-# cron block start 2026-07-15 09:52:50
-P=[1, 2, 3, 4, 6]: patterns=13 packets=95707 fallbacks=3 unresolved=0 complete=False
-# cron block start 2026-07-15 10:08:52
-P=[1, 2, 3, 4, 7]: patterns=20 packets=159095 fallbacks=4 unresolved=0 complete=False
-P=[1, 2, 3, 4, 8]: patterns=42 packets=315191 fallbacks=2 unresolved=0 complete=False
-P=[1, 2, 3, 4, 9]: patterns=64 packets=502387 fallbacks=3 unresolved=0 complete=False
+# radius-7 cron progress (deduped; continued per CRON spec)
 P=[1, 2, 3, 4, 10]: patterns=22 packets=173402 fallbacks=2 unresolved=0 complete=False
 P=[1, 2, 3, 4, 11]: patterns=39 packets=283728 fallbacks=1 unresolved=0 complete=False
 P=[1, 2, 3, 4, 12]: patterns=15 packets=102805 fallbacks=6 unresolved=0 complete=False
+P=[1, 2, 3, 4, 6]: patterns=13 packets=95707 fallbacks=3 unresolved=0 complete=False
+P=[1, 2, 3, 4, 7]: patterns=20 packets=159095 fallbacks=4 unresolved=0 complete=False
+P=[1, 2, 3, 4, 8]: patterns=42 packets=315191 fallbacks=2 unresolved=0 complete=False
+P=[1, 2, 3, 4, 9]: patterns=64 packets=502387 fallbacks=3 unresolved=0 complete=False
