@@ -16,7 +16,8 @@ scale-one Hamming five and six into finite exact decision trees.  Seven is the
 first radius where the interval-comb discrepancy loses positive cover deficit.
 
 THM-817 replaces the coarse disconnected-return discussion by an exact cell
-theorem.  Every component of `closure(R_U)` is a signed maximum-speed tooth,
+theorem. Every component of `closure(R_U)` is a signed maximum-speed cell
+inside a tooth,
 and the all-component selector is bounded by
 `2c_E N_R+2W-2g<=20B^2+22B-2g`.  The present arithmetic gates permit
 `N_R=Theta(B)`, so satellites cannot be quotiented away, but their bare centre-
@@ -534,7 +535,7 @@ A credible proof must combine, rather than substitute among:
 - sheet ramification and effective deck orders;
 - odd divisor and half-grid shells, beginning with but not ending at `q=13`;
   and
-- the finite Hamming-five/six component trees and a new invariant at the
+- the finite scale-one Hamming-five/six component trees and a new invariant at the
   seven-comb density wall, after THM-795/800/804/806/815/816 close every
   smaller AP-centred chart including THM-810's quartic interface.
 

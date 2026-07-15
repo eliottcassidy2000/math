@@ -100,7 +100,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | odd-exception divisor-grid / signed-wall selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, one-sided wall leakage eliminates double-13 and full support; the sole survivor of this prime-grid signed-wall gate is the exact signed complement `U mod 13=(Z/13Z)^*\{+/-y}`, with `M(U)>=2/13`, `x<=2B-1`, and `y<=B-1`. A gate-sharp row silences every exception-divisor grid but escapes at denominator 17; THM-803's anti-grid catches it. | THM-797 + exact 10,971,770-grid / 352,716-signed-profile replay |
 | q=13 anti-grid / all-component selector | PROVED: every odd exception divisor has a mandatory half-grid; at `q=13` this forces full parity-twisted support, and the complete universal even anti-grid ladder is exactly `d=2,4,6`. The full erosion predicate is equivalent to finitely many owner-labelled component endpoints and folded cusps. THM-817 sharpens the bound from `200B^2+22B` to the adaptive `2c_E N_R+2W-2g<=20B^2+22B-2g`, where `N_R` is the exact number of return cells. A sharp signed-complement row passes every divisor/anti-grid and global-maximizer test but escapes at the nonmaximal singleton `7/22`. Uniform failure of the selector remains open. | THM-803/817 + exact half-grid/support/cell replays |
-| return-cell selector compression / satellite limit | PROVED / VERIFIED: the mandatory central return component gives a selector of size at most `42B-2` when the closed return set is connected. In general every return component is one signed max-speed tooth, so `N_R<=B` with an exact gcd label sieve and the adaptive selector above. An explicit primitive, divisor-complete, exact signed-complement family has `N_R=3+1440n=Theta(B)` while passing the present arithmetic and scalar gates; connected, bounded-component, and sublinear return geometry therefore cannot be inferred from those gates. The family has an explicit central erosion escape, so it is a method limit, not a tight candidate. | THM-807/817 + exact connected-return/grid/cell replays |
+| return-cell selector compression / satellite limit | PROVED / VERIFIED: the mandatory central return component gives a selector of size at most `42B-2` when the closed return set is connected. In general every return component is one signed max-speed cell inside a tooth, so `N_R<=B` with an exact gcd label sieve and the adaptive selector above. An explicit primitive, divisor-complete, exact signed-complement family has `N_R=3+1440n=Theta(B)` while passing the present arithmetic and scalar gates; connected, bounded-component, and sublinear return geometry therefore cannot be inferred from those gates. The family has an explicit central erosion escape, so it is a method limit, not a tight candidate. | THM-807/817 + exact connected-return/grid/cell replays |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
 | shallow AP Hamming-two star at arbitrary height | PROVED scale-free: oriented half-open splice decks force both replacements back to the common AP scale at exact tightness; the normalized proper double lift then has the sharp floor `M>=2/25>1/13`. Thus every residual shallow packet has labelled Hamming radius at least three from every AP dilation. | THM-800 + exact 600,756-row replay |
@@ -203,14 +203,17 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    and metric/core phase cell.  Bare normalized collision SCCs are downstream
    telemetry, not the legality predicate. A continued-
    fraction digit is useful only through this labelled fibre action.
-3. **Finish the newly finite shallow trees, then cross the seven-comb wall.**
+3. **Classify higher deck ramification, finish the finite common-scale trees,
+   then cross the seven-comb wall.**
    THM-815/816 close every AP-centred Hamming-four packet.  THM-815's
-   discrepancy recursion makes radius five and six finite exact trees, with
+   discrepancy recursion makes the scale-one radius-five and radius-six
+   charts finite exact trees, with
    first caps `146` and `468`; enumerate those trees with prefix certificates
-   before adding another raw height box.  At radius seven the mean danger
-   density is `14/13`, so the same potential ceases to decrease.  Seek a
-   replacement potential using overlap debt, owner diversity, or signed
-   component/comb incidence.  The parallel six-exception/seven-exception sheet
+   and build the radius-five/six analogue of THM-810's oriented deck
+   classification. At scale-one radius seven the mean danger density is
+   `14/13`, so the same potential ceases to decrease. Seek a replacement
+   potential using overlap debt, owner diversity, or signed component/comb
+   incidence. The parallel six-exception/seven-exception sheet
    wall is a structural clue, not yet an identification theorem.
 4. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.

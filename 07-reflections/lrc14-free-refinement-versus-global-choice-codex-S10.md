@@ -18,8 +18,10 @@ denominator, raw height, scalar measure, or one local phase packet.
 **2026-07-15 update.** THM-815/816 close both Hamming-four alternatives left
 by THM-810, so every AP-centred residue-preserving packet through radius four
 is uniformly loose.  THM-815 has independent component-discrepancy and
-collar/doubling certificates.  The same exact component/comb discrepancy makes radii
-five and six finite-decidable, and loses coercivity at seven remaining combs.
+collar/doubling certificates. The same exact component/comb discrepancy makes
+the scale-one radii five and six finite-decidable, and loses coercivity at
+seven remaining combs; arbitrary higher-radius deck ramification is still
+unclassified.
 THM-817 decomposes every disconnected return into signed maximum-speed cells
 and sharpens the deep selector to `2c_E N_R+2W-2g`; an exact family with
 `N_R=Theta(B)` proves that global choice must retain those satellites rather

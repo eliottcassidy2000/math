@@ -63709,9 +63709,10 @@ bounds the least remaining speed.  Every scale-one Hamming-five/six chart is
 therefore a finite rational decision tree.  Exact first-root scans give
 `min L=1/52,x_1<=146` at radius five and
 `min L=31/1430,x_1<=468` at radius six.  At seven combs the coefficient
-`13-2m` changes sign.  This is the first discrepancy-unbounded shallow radius
-and strikingly parallels the independent six-exception/seven-exception sheet
-wall, without yet proving that the two walls are the same theorem.
+`13-2m` changes sign. This is the first discrepancy-unbounded scale-one
+shallow radius and strikingly parallels the independent six-exception/seven-
+exception sheet wall, without yet proving that the two walls are the same
+theorem or classifying arbitrary higher-radius deck ramification.
 
 THM-817 resolves the disconnected-return geometry exactly.  Every component
 of `closure(R_U)` is one signed maximum-speed cell with explicit interval and
@@ -63733,10 +63734,11 @@ syntheses now use the common recursive object
  endpoint owners and widths).
 ```
 
-The global n=12 sporadic branch remains open.  Its shallow residual is the
-finite radius-five/six trees plus the discrepancy-unbounded radius-seven-and-
-higher charts; its deep residual is the adaptive signed-cell/component
-selector, unbounded dyadic/collar assembly, and general higher sheets.
+The global n=12 sporadic branch remains open. Its shallow residual is the
+finite scale-one radius-five/six trees, arbitrary higher-radius deck
+ramification, and the discrepancy-unbounded scale-one radius-seven-and-higher
+charts; its deep residual is the adaptive signed-cell/component selector,
+unbounded dyadic/collar assembly, and general higher sheets.
 
 Post-rebase, THM-819 supplied a complementary exact base law:
 `m({1,...,k};1/(k+2))` is the primitive harmonic sum with its labelled

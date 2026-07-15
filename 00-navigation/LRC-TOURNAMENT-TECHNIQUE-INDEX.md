@@ -112,8 +112,8 @@ obligations, and proof-carrier interfaces.
   `closure(R_U)` into signed maximum-speed cells, then form its incidence with
   every deep component.
 - **LRC use:** THM-815 closes every scale-one Hamming-four lift and proves
-  finite-recursion through Hamming radius six. THM-816 closes the quartic
-  order-three interface left by THM-810. THM-817 compresses the deep erosion
+  finite recursion through scale-one Hamming radius six. THM-816 closes the
+  quartic order-three interface left by THM-810. THM-817 compresses the deep erosion
   selector to `2c_E N_R+2W-2g` without assuming connected returns.
 - **Preserves:** strict survival of at least one interval; exact component
   lengths and endpoints; lift magnitude and residue label; left/right endpoint
@@ -137,14 +137,16 @@ obligations, and proof-carrier interfaces.
   triangles, one four-vertex SCC, five Hamiltonian paths, and four flips, yet
   is loose with `M=3/19`. THM-816's raw/conditional four-comb tournaments are
   transitive while terminal flip counts range from zero to three. THM-817's
-  three return-cell tournaments are transitive with one edge flip and one
-  Hamiltonian path. In every case the tournament is telemetry; the interval/
-  comb or cell/component incidence proves the theorem.
-- **Next pull:** Exhaust the finite Hamming-five/six trees. At seven remaining
-  combs, replace mean danger density by an overlap-debt or owner-diversity
-  potential. On the deep side, seek a contradiction in the adaptive signed-
-  cell by deep-component incidence; do not assume `N_R=O(1)`, since THM-817
-  permits `N_R=Theta(B)` under all current arithmetic/scalar gates.
+  two tournaments on three return-cell vertices are transitive with one edge
+  flip and one Hamiltonian path. In every case the tournament is telemetry;
+  the interval/comb or cell/component incidence proves the theorem.
+- **Next pull:** Exhaust the finite scale-one Hamming-five/six trees and derive
+  the corresponding arbitrary-scale oriented-deck classification. At seven
+  remaining scale-one combs, replace mean danger density by an overlap-debt or
+  owner-diversity potential. On the deep side, seek a contradiction in the
+  adaptive signed-cell by deep-component incidence; do not assume `N_R=O(1)`,
+  since THM-817 permits `N_R=Theta(B)` under all current arithmetic/scalar
+  gates.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`, and

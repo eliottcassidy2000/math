@@ -78,8 +78,9 @@ open are superseded.  The same discrepancy recursion makes scale-one Hamming
 five and six finite exact decision trees; its coefficient changes sign at
 seven remaining combs.
 
-THM-817 sharpens the deep side in the same language.  Every return component
-is one signed maximum-speed tooth with exact interval and endpoint owners, and
+THM-817 sharpens the deep side in the same language. Every return component
+is one signed maximum-speed cell inside a tooth, with exact interval and
+endpoint owners, and
 the erosion selector has adaptive size `2c_E N_R+2W-2g`.  A primitive signed-
 complement family has `N_R=Theta(B)`, so current arithmetic and scalar gates do
 not force connected returns, but an explicit central escape shows that family
@@ -1062,9 +1063,11 @@ still missing.
    leaves four parity patterns, and division by the common gcd turns the latter
    into an `s=3` deep packet. THM-815/816 close both alternatives uniformly;
    the `q=39` equality points are boundary telemetry, while open components
-   survive elsewhere. THM-815 also makes radii five and six finite exact trees
-   with initial caps `146` and `468`. The first discrepancy-unbounded shallow
-   chart is radius seven, where mean danger density exceeds one.
+   survive elsewhere. THM-815 also makes the scale-one radii five and six
+   finite exact trees with initial caps `146` and `468`. The first
+   discrepancy-unbounded scale-one shallow chart is radius seven, where mean
+   danger density exceeds one; arbitrary higher-radius deck ramification is
+   not yet classified.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

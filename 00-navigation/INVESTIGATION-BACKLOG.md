@@ -278,11 +278,12 @@
   combs, endpoint owners, and widths—not the bare deck or tournament.
 - **New shallow finite boundary:** THM-815's discrepancy recursion makes every
   scale-one Hamming-five and Hamming-six chart a finite rational decision tree.
-  Exact root scans give first-speed caps `146` and `468`. At Hamming seven the
-  coefficient `13-2m` changes sign, so mean danger density no longer yields an
-  initial cap.  Finish the two finite trees, then seek a new overlap/owner
-  potential at the seven-comb wall. This is a method boundary, not a claimed
-  radius-seven counterfamily.
+  Exact root scans give first-speed caps `146` and `468`. At scale-one Hamming
+  seven the coefficient `13-2m` changes sign, so mean danger density no longer
+  yields an initial cap. Finish the two finite trees and classify arbitrary
+  five-/six-owner deck ramification, then seek a new overlap/owner potential at
+  the seven-comb wall. This is a method boundary, not a claimed radius-seven
+  counterfamily.
 - **Deep progress:** THM-772 gives primitive divisor-complete two-/three-sheet
   quotients and relative speed bounds. THM-774 identifies the exact two-sheet
   folded diamond and closes all ten-cores in `[1,19]` against unbounded odd
@@ -299,8 +300,9 @@
   complement family has `N_R=3+1440n`, so current arithmetic/scalar gates do
   not imply connected, bounded, or sublinear return geometry. The family has
   an explicit central escape and is a method limit, not a tight candidate.
-- **Open shallow theorem:** enumerate the finite radius-five/six trees and
-  prove a decreasing overlap/owner invariant at radius seven and above. The
+- **Open shallow theorem:** enumerate the finite scale-one radius-five/six
+  trees, classify arbitrary five-/six-owner deck ramification, and prove a
+  decreasing overlap/owner invariant at scale-one radius seven and above. The
   target carrier is dynamic component--comb incidence; the Hamming-four collar
   tournament is strongly connected on an explicit loose row and is telemetry.
 - **Open deep theorem:** rule out every surviving folded cover by proving
@@ -399,9 +401,11 @@
   common scale and one order-three coset interface. THM-815/816 close both
   branches uniformly by recursively transporting the full residual interval
   union against labelled danger combs. THM-815 also proves finite-decidability
-  at radii five and six, with first caps `146` and `468`; seven combs are where
-  the mean-density discrepancy loses coercivity.  The next shallow invariant
-  must see overlap and owner incidence, not merely total danger mass.
+  at scale-one radii five and six, with first caps `146` and `468`; seven combs
+  are where the mean-density discrepancy loses coercivity. The next shallow
+  work must separately classify arbitrary deck ramification and find an
+  invariant that sees overlap and owner incidence, not merely total danger
+  mass.
 - **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13c` automaton
