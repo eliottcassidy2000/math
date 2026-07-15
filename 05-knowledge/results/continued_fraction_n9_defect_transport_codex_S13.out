@@ -1,0 +1,36 @@
+CENTERED-CF ACTION ON THM-828'S N=9 RANK-FOUR DEFECT
+==============================================================================
+phase schedule n=5..9: 5->6:s=1 d=(1, 2), 6->7:s=0 d=(1, 2, 1), 7->8:s=1 d=(1, 1, 1, 2), 8->9:s=0 d=(1, 1, 2, 1, 1), 9->10:s=1 d=(1, 1, 1, 1, 1, 2)
+rho_9_10=(0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 17, 18, 19, 20, 15, 21, 22, 23, 24, 21, 25, 26, 24, 27, 26, 27)
+rho audits: 5->6 surj=True sigma_fail=0, 6->7 surj=True sigma_fail=0, 7->8 surj=True sigma_fail=0, 8->9 surj=True sigma_fail=0, 9->10 surj=True sigma_fail=0
+
+LINEAR DEFECT ACTION
+  source basis=('0x0192486', '0x08c2c0c', '0x11b4600', '0x4483414')
+  target basis=('0x000c48906', '0x00860980c', '0x110dd0c00', '0x48440e814')
+  rank source/target=4/4
+  target S2-syndrome intersection rank=2 coordinates=('0000', '0001', '0010', '0011')
+  parity quotient={'basis_1': [], 'basis_2': [], 'basis_3': ['tau7_low', 'tau7_high'], 'basis_4': ['tau5_low', 'tau5_high']}
+  verdict: rank four is retained literally but not syndrome-invariant; the last two basis directions become visible at target tau7 and tau5.
+
+LITERAL 58-Q-ORBIT ACTION
+  source/target distinct Q=58/58
+  target S2 prefix tau3..fixed10=(58, 58, 20, 20, 10, 10, 10, 10)
+  first S2 failure={5: 38, 7: 10}
+  target raw-S2 equal pairs/sectors=10/{'0x0192486': 6, '0x08c2c0c': 2, '0x095088a': 2}
+  first target M1 separator={7: 4, 8: 6}; eta transport={'preserved': 50, 'reversed': 8} reversed sectors={'0x18e4e8a': 4, '0x1976a0c': 4}
+
+EXACT PROJECTED-CELL AUDIT INSIDE THE WITNESS IMAGE
+  classified masks source/target=232/232; local merged nodes=97/116
+  P cells source/target=58/58; descent/reflection failures=0/0
+  ordered endpoint projections source direct/partner=54/53 with fibre histograms {1: 51, 2: 2, 3: 1}/{1: 48, 2: 5}
+  convention audit: local tournament(mask) is direct-chart tournament(mask^FULL) up to vertex-label reversal; this exchanges the 54/53 ordered projections
+  P fibre histograms={1: 58}/{1: 58}
+  source/target P loops=0/0
+
+TOURNAMENT ANALYSIS (information carriers as vertices)
+  vertices=('source_sector', 'target_difference', 'target_syndrome', 'target_S2_orbit', 'source_projected_P', 'target_projected_P', 'target_literal_Q')
+  observable=number of unordered THM-828 Q-orbit pairs separated by the carrier
+  switches=('retention', 'retention_per_log2_cells'); flips=14
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1, 1] Hpaths=1
+
+Boundary: this is an exact coordinate/Q/finite-image P result, not metric LRC transport and not a global n=10 metagraph classification.
