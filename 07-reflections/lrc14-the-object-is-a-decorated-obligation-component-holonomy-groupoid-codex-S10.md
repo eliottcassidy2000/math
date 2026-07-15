@@ -1009,3 +1009,72 @@ legal quotient:  one whose fibres are terminal-pure for every named future.
 This is narrower than a universal invariant and more useful.  It says exactly
 which equality relation to compute, which operation it must survive, and what
 counterexample witnesses an illegal quotient.
+
+## 11. The deep stalk is a signed Minkowski incidence
+
+THM-821 now tests the deep side of that rule rather than merely prescribing
+it.  For `(x,y)=(13,5)`, one atomic erosion obligation is
+
+```text
+(closed deep component C, signed return cell R_k)
+       -> circular sum arc C+R_k
+       -> min(||9t||+||4t||)-11/13.                         (42)
+```
+
+The last minimum is attained at an arc endpoint or a `9`-/`4`-cusp, so the
+exact sum arc is a sufficient numerical quotient for this fixed operation.
+The 213 deterministic THM-817 cores and all three cells of `U_0` give 9,974
+atomic stalks.  Every tempting one-sort projection has liar fibres: sign,
+return endpoints or owners, deep endpoints or owners, widths, and event type.
+There are 492 successful and 9,482 failing arcs, so these are genuine mixed
+truth fibres rather than different encodings of a constant bank.
+
+The two minimal liars point in opposite directions.  Holding one central
+return cell fixed while changing the deep component flips the verdict.
+Holding one exact deep component fixed while switching from the negative to
+the positive satellite also flips it.  In the latter pair the two sum arcs
+even have equal width.  Thus neither factor and not even the Minkowski width
+is the object; signed position in the sum is.
+
+Exact return and deep intervals, or their exact circular sum arc, have zero
+mixed fibres.  Endpoint owners add no information to the value of one already
+fixed arc, but discarding them is still illegal for the groupoid: they say
+which inequality transports an endpoint when a speed is lifted, deleted, or
+descended.  This separates two kinds of sufficiency that the older language
+often merged:
+
+```text
+evaluation sufficiency = enough to decide the present scalar predicate;
+transport sufficiency  = enough to reconstruct every legal future arrow.
+```
+
+THM-821 proves the former for exact sum arcs and deliberately retains owner
+ancestry for the latter.  It does not construct restriction maps or multiple
+overlaps, so calling this stalk a Cech sheaf would still be premature.  The
+proved object is a two-sorted signed Minkowski incidence with operation-
+labelled ancestry.
+
+## 12. The shallow kernel pair has two degenerate extremes
+
+THM-822 runs the operation-kernel test on every height-at-most-two
+Hamming-five packet.  The coarse extreme `H0` is the labelled live handoff
+relation.  Adding all integer band centres gives `H1`, but bounded ratios make
+the centre a function of the labelled residue, so `H0=H1` as partitions.  A
+single common fibre already carries maxima `1/4` and `12/37`; across the bank
+there are 3,810 exact-`M`-mixed fibres.  Tournament completion can checksum
+that relation but cannot repair its lost metric placement.
+
+At the fine extreme, `H2` records every exact strict-safe component endpoint
+on three literal four-coordinate faces.  Their ordered join is injective on
+all 25,344 rows.  Yet the endpoint word of the final full residual is not
+injective: fourteen pairs collide.  Facewise partial geometry can reconstruct
+more of the input than the terminal set it produces.  This is a useful warning
+against identifying “the residual” with “the continuation state.”
+
+The missing state is between these extremes.  It should retain ordered
+component/endpoint-owner incidence and the remaining labelled teeth, then be
+minimized by actual future insertions.  `H2` proves finite static
+reconstruction only; it has no all-height transport theorem.  The groupoid
+view therefore becomes an operation-labelled residual automaton: evaluation
+fibres, reconstruction fibres, and continuation fibres are three different
+equivalence relations.

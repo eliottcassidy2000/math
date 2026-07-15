@@ -930,6 +930,31 @@ component summaries and deep signed-cell charts do not inherit gluing without
 a separate reconstruction theorem.  LTT-435 records the resulting residual-
 automaton and two-plus-three meet-in-the-middle targets.
 
+THM-821 settles the first deep stalk question at the right quantifier.  For
+the fixed pair `(x,y)=(13,5)`, the exact audit reconstructs `9,974` atomic
+`(deep component, signed return cell)` stalks and finds `492` successful sum
+arcs.  Return cells, deep components, widths, owners, and coarse selector
+events all have explicit mixed fibres.  The exact circular sum arc, equivalently
+the two exact input intervals for this fixed numerical functional, has none.
+One liar even keeps the same deep interval while changing the return-cell sign
+and flips the verdict.  Owners are therefore arithmetic ancestry rather than
+the metric predicate once the intervals are fixed.  This is atomic
+fixed-functional purity, not uniform row separation, global margin, or Cech
+descent; the `213` seeded full rows still all fail the global selector test.
+
+THM-822 executes the next shallow kernel-pair audit.  Every one of the
+`C(12,5)2^5=25,344` Hamming-five packets with heights in `{1,2}` is loose; the
+unique minimum is still `2[11] union {11}` at `1/12`.  The labelled live
+relation `H0` and its integer-centre refinement `H1` have identical fibres in
+this bounded ratio band.  Their full three-face kernel has `111,006` ordered
+rows and `3,810` fibres mixing exact `M`; an explicit common fibre has maxima
+`1/4` and `12/37`.  Literal strict-safe endpoint words `H2` make the bounded
+three-face join injective, although the final full residual alone retains
+fourteen collision pairs.  This locates the next compression between the two
+extremes: an endpoint-owner/component-incidence `H1.5`, tested for continuation
+purity under insertion rather than static reconstruction.  All tightness
+purity in this bank is vacuous because the bank has no tight rows.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the
@@ -944,8 +969,9 @@ coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
 proved.  Radius five is the first unresolved shallow AP chart; its complete
-scale-one locus is now uniformly finite, but neither box has been emptied and
-the arbitrary-scale five-deck descent is open.  The other
+scale-one locus is now uniformly finite and its height-at-most-two slice is
+empty, but neither full box has been emptied and the arbitrary-scale five-deck
+descent is open.  The other
 next exact pieces are a uniform-in-quotient-height collar tear after the
 `w=13c`, height-24 multiplier lane; a uniform negative margin or decreasing
 invariant on THM-817's signed-cell/deep-component selector; a quotient by the
@@ -954,7 +980,7 @@ THM-778/779/783/786/788/794/802; the remaining higher-sheet packets outside
 THM-816's closed quartic coset; and a scale-normal argument for clustered
 comparable-size far frequencies after THM-799 closes the fully lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813/815/816/817/820; corrected THM-779 and THM-819 boundary; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813/815/816/817/820/821/822; corrected THM-779 and THM-819 boundary; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three/four/five, affine-packet, anti-grid/component-selector,

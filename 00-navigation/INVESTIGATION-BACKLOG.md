@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -171,6 +171,12 @@
   `B_n=506+360360n` has `N_R=3+1440n`, so the current arithmetic gates cannot
   force connected returns or even `o(B)` satellite count.  Work on the
   labelled max-speed-cell/deep-component incidence, not component count alone.
+  THM-821 now audits that carrier exactly for `(x,y)=(13,5)`: among `9,974`
+  atomic sum arcs, cell labels, return/deep data separately, widths, owners,
+  and event types all have mixed fibres, while the exact input intervals or
+  exact circular sum arc determine the fixed predicate.  Its disconnected
+  liar proves that an exact deep interval alone can fail for one satellite and
+  succeed for its opposite.  Retain the sum-arc endpoints and owner ancestry.
 - **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
   the arbitrary-scale radius-five descent.  The collar classification is no
   longer the missing step: spanning five-cycles have five feasible band types,
@@ -179,12 +185,18 @@
   `E_S -> E_S intersect Safe(u)` on exact residual interval unions with the
   remaining labelled speed bank.  Build its minimized continuation automaton
   or a two-plus-three meet-in-the-middle cover join.  In parallel, audit any
-  proposed compression by its literal kernel pair on the `25,344`
-  height-at-most-two rows and ordered four-coordinate face overlaps.  A runner
-  tournament is telemetry: THM-820's centre-9 and centre-22 cycles have the
-  same labelled live/tie fingerprints but different exact maxima.  Exact
-  centres, ratios, open endpoints, component widths, and the future operation
-  bank must remain until terminal purity is proved.
+  proposed compression by its literal kernel pair.  THM-822 has completed that
+  audit on the `25,344` height-at-most-two rows: all are loose; the labelled
+  live relation and integer-centre refinement coincide and mix exact `M`, while
+  literal strict-safe endpoint words make the three ordered faces injective.
+  The final residual itself still has fourteen collision pairs.  Build the
+  missing `H1.5` endpoint-owner/component-incidence codec and test it under
+  actual continuation, rather than treating bounded `H2` static injectivity as
+  a theorem for the full boxes.  A runner tournament is telemetry: THM-820's
+  centre-9 and centre-22 cycles have the same labelled live/tie fingerprints
+  but different exact maxima.  Exact centres, ratios, open endpoints,
+  component widths, owner ancestry, and the future operation bank must remain
+  until terminal purity is proved.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -197,7 +209,11 @@
   show that THM-775's dyadic chain lands in one of THM-774/776's certified
   regions. THM-807 permits a linear exact selector on the connected-return
   branch, but its explicit loose rows show that even long fixed grid ladders
-  do not supply the missing uniform negative margin.  THM-816 has already
+  do not supply the missing uniform negative margin.  THM-821 proves that the
+  fixed `(13,5)` atomic verdict factors through exact circular
+  cell/component sum arcs and gives mixed fibres for every tested coarser
+  positional/width/owner shadow.  Seek a height-independent contradiction or
+  decreasing invariant on those signed sum arcs with owner ancestry.  THM-816 has already
   removed the quartic `s=3` equality shell; the remaining higher-sheet work is
   outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue

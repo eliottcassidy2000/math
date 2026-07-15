@@ -67,8 +67,12 @@ obligations, and proof-carrier interfaces.
   centres (`9` versus `22`) and different exact maxima; its top-four SCC can
   persist at unbounded scale.  Component count, total mass, unordered
   endpoints, or fibre sizes likewise cannot be joined until terminal purity
-  is proved.  For deep signed cells, a Cech interpretation remains only an
-  analogy until literal restriction and effective gluing maps are supplied.
+  is proved.  THM-821 makes the corresponding deep boundary exact for the
+  fixed `(13,5)` selector: a signed return cell alone and a deep component
+  alone both have mixed fibres, while their exact circular sum arc determines
+  the numerical predicate on all `9,974` audited atoms.  Endpoint owners remain
+  descent ancestry even when exact intervals make them numerically redundant.
+  This atomic fixed-functional purity is not a global Cech theorem.
 - **Pairwise observable:** left owner-exit handoff, oriented provider-to-owner.
   The live five-cycle examples use increasing-label and decreasing-label
   completions of silent pairs.  In the first gauge the score histogram is
@@ -77,14 +81,18 @@ obligations, and proof-carrier interfaces.
   triangles and eleven paths.  Deleting one live cycle edge supplies the
   common tie Hamiltonian path.  These fingerprints diagnose a liar fibre;
   they are not the terminal predicate.
-- **Next pull:** On the `25,344` height-at-most-two Hamming-five rows, build
-  kernel relations for (i) the labelled handoff graph, (ii) graph plus integer
-  centres, (iii) an endpoint-owner component word, and (iv) literal `E_S`.
-  Report exact-maximum and tight/loose purity, then preflight the three-face
-  ordered join.  In parallel, minimize the reachable residual automaton and
-  use its two-plus-three join against THM-820's two boxes.
-- **Pointers:** THM-818, THM-820, THM-815, THM-817, HYP-6820;
-  `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
+- **Next pull:** THM-822 executes the `25,344`-row height-at-most-two audit.
+  `H0` (labelled live relation) and `H1` (plus integer centres) coincide and
+  mix exact `M`; literal endpoint stalks `H2` make the bounded three-face join
+  injective, while the final residual alone still has fourteen collision
+  pairs.  The useful missing rung is therefore an `H1.5` ordered
+  endpoint-owner/component-incidence word, tested under actual insertions.
+  Minimize the reachable `(E,V)` automaton and use its two-plus-three join
+  against THM-820's full finite boxes; do not extrapolate `H2` static
+  injectivity to arbitrary heights.
+- **Pointers:** THM-818, THM-820, THM-821, THM-822, THM-815, THM-817,
+  HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
+  `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
   `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
 
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse

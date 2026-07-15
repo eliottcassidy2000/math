@@ -508,3 +508,25 @@ should therefore be minimized operation by operation; its fibres are
 continuation classes, not merely equal tournament nodes or equal component
 counts.  The unfinished shallow theorem is exact closure of THM-820's two
 finite erosion languages plus the arbitrary-scale five-deck interface.
+
+THM-821 confirms the analogous attachment law on the deep fibre.  A deep base
+component and one signed return cell attach by circular Minkowski sum.  Across
+9,974 exact atoms, neither attachment factor, its owners, its width, nor its
+coarse event type is predicate-pure; the exact signed sum arc is.  Opposite
+satellites act differently on the same deep component even when the two sum
+widths agree.  This is ramification in the literal sense relevant here: the
+base point does not determine the future until the fibre sheet and its signed
+translation are specified.  Owners can be forgotten for evaluating a fixed
+arc but not for transporting that arc, so the cover carries both metric
+position and endpoint ancestry.
+
+THM-822 tests the shallow fibre at the next bounded layer.  All 25,344
+height-at-most-two radius-five packets are loose, but the quotient experiment
+is more informative than the census.  The labelled live relation and its
+integer-centre refinement coincide and mix exact maxima; exact partial
+component endpoint words on three literal faces reconstruct every bounded
+input, while the final residual alone identifies fourteen distinct pairs.
+Thus the cover is not determined by its terminal geometric subset: it also
+remembers how that subset was assembled and which labelled operations remain.
+The next all-height object is an endpoint-owner/component incidence deck acted
+on by erosion, not either the bare tournament or an unlabelled residual set.

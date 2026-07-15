@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose and the complete scale-one Hamming-five chart reduced to two explicit finite boxes; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, and an exact max-speed-cell classification of every satellite; branch emptiness remains OPEN in the Hamming-five boxes and arbitrary-scale descent, the signed-cell/deep-component selector and collar residuals, and the other higher-sheet packets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, and its complete height-at-most-two slice loose; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, and a finite-exact proof that the fixed folded predicate factors through signed cell/component sum arcs; branch emptiness remains OPEN in the full Hamming-five boxes and arbitrary-scale descent, uniform control of the exact sum-arc selector and collar residuals, and the other higher-sheet packets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -36,6 +36,8 @@ depends_on:
   - THM-816
   - THM-817
   - THM-820
+  - THM-821
+  - THM-822
   - HYP-6750
   - HYP-6775
 related:
@@ -426,6 +428,20 @@ telemetry have different integer centres and exact maxima.  The finite-box
 closure must act on exact residual interval unions and remaining danger teeth,
 not the collar graph alone.
 
+THM-822 empties the complete height-at-most-two slice, all
+`C(12,5)2^5=25,344` packets, with the same unique `1/12` minimum.  It also
+audits the proposed three-face quotient exactly.  The labelled live relation
+`H0` and its integer-centre decoration `H1` have identical fibres in this
+ratio band, and their `111,006` ordered kernel rows include `3,810` fibres
+mixing exact `M`; one shared relation has maxima `1/4` and `12/37`.  Literal
+strict-safe component endpoint words `H2` make the bounded three-face join
+injective, while the final residual alone still has fourteen collision pairs.
+This is a static bounded reconstruction theorem.  Since every audited row is
+loose, it says nothing nonvacuous about tightness purity, and it does not prove
+that `H2` transports under arbitrary-height insertion or scale change.  The
+next quotient target is an endpoint-owner/component-incidence codec between
+`H1` and `H2`, minimized under the actual erosion action.
+
 ## D. The two-sheet branch is now a folded dyadic cover
 
 THM-772 first turns the `s=2` equality packet
@@ -630,6 +646,26 @@ raw/parity support, and the known scalar taxes cannot force connected,
 bounded, or sublinear return geometry.  Any uniform proof must act on the
 signed cell/deep-component incidence and its margins.
 
+THM-821 locates the first exact purity boundary inside that incidence.  Fixing
+`(x,y)=(13,5)`, an atomic obligation is the circular sum of one closed deep
+component `C` and one signed return cell `R_k`.  Its folded minimum occurs at
+an endpoint or a `9`-/`4`-cusp, so the exact circular sum arc determines its
+verdict.  The 213 deterministic THM-817 cores plus all three cells of `U_0`
+give
+
+```text
+9,974 atoms:       492 succeed,       9,482 fail.
+```
+
+Every tested separate shadow—cell label, return interval or owners, deep
+interval or owners, widths, and coarse selector event—has mixed fibres.  In
+the disconnected row, the same exact deep interval fails for `k=-1` and
+succeeds for `k=+1`.  Exact input intervals or their exact sum arc have zero
+mixed fibres.  Endpoint owners are redundant only for evaluating one fixed
+arc; they remain the ancestry that says how the arc moves under replacement,
+gcd descent, and sheet transport.  This finite result neither separates global
+rows (all 213 random rows fail) nor proves an all-size or Cech-gluing theorem.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
@@ -668,8 +704,11 @@ The uniform theorem now has two explicit residuals:
    raw/parity support and the complete `26/52/78` anti-shell ladder. THM-807
    isolates the linear central-return selector, and THM-817 classifies every
    satellite as a signed max-speed cell, giving the adaptive exact bound
-   `2c_E N_R+2W-2g`.  Prove a height-independent contradiction or decreasing
-   invariant for that labelled cell/component selector;
+   `2c_E N_R+2W-2g`.  THM-821 proves for `(x,y)=(13,5)` that each atomic
+   verdict factors through its exact circular cell/component sum arc and that
+   the tested cell, component, width, owner, and event projections all mix.
+   Prove a height-independent contradiction or decreasing invariant on those
+   exact signed sum arcs with owner ancestry;
    the `U_*` row shows that all short gates and both global maximizers can pass
    while a nonmaximal component escapes, and THM-817's linear-satellite family
    rules out a connectedness shortcut.  At higher sheets, classify and rule
@@ -704,8 +743,10 @@ zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
 while THM-795/800/804/806 close the first three Hamming directions.  THM-810
 isolates the radius-four ramification and THM-815/816 close both of its
 branches.  THM-820 makes the scale-one radius-five warning finite and rejects
-its full height-one face; its two boxes and all-scale descent are the shallow
-residual, alongside the remaining deep sheet packets.
+its full height-one face; THM-822 rejects the full height-at-most-two slice and
+locates the static kernel boundary.  The two complete boxes and all-scale
+descent remain the shallow residual, alongside the remaining deep sheet
+packets.
 
 ## F. Information-preservation / Tournament Analysis
 
@@ -733,7 +774,10 @@ deciding objects are therefore:
   endpoint/cusp selector; THM-807 separates its mandatory linear central-return
   component from the satellites, while THM-817 reconstructs each satellite as
   a signed max-speed cell with endpoint owners and exposes its incidence with
-  every deep component;
+  every deep component; THM-821 proves on the fixed `(13,5)` bank that the
+  numerical atomic predicate factors through the exact circular sum arc and
+  supplies explicit liar fibres for every separate cell/deep/width/event
+  shadow tested;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
@@ -743,7 +787,9 @@ deciding objects are therefore:
   three radii, THM-810 identifies the radius-four scalar/parity ramification,
   and THM-815/816 close its two branches.  At radius five THM-820 proves that
   the owner-exit tournament supplies a finite reduction but loses integer
-  centre and scale.  The exact action state is `(E_S,V)`, the literal residual
+  centre and scale; THM-822 proves on the height-at-most-two bank that adding
+  those centres still mixes exact `M`, whereas literal endpoint faces are
+  statically injective.  The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict
   after every legal future subset of `V`.
