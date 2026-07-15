@@ -63402,3 +63402,11 @@ blue cells, while every `Q_6` orbit acts.  Updated the synthesis and backlog so
 `Q_n=L_n/<reflection>` is the universal CF action carrier and every coarser
 node/edge codec is tested by the explicit fibre-purity condition rather than
 assumed functorial.
+
+The subsequent THM-810/811 mainline audit supplied two corrections.  Tightened
+the normalized black-flow statement to active boundary-edge `q` strata; the
+nonempty `n=6,q=2` populations have no such edge and give the vacuous `0=0`.
+Also joined THM-810's lift-invariant eight-point `q=39` equality clock: it is an
+exact static boundary skeleton but forgets all `+39` heights and every witness
+is a strict cusp.  This is the metric-side instance of the same rule that
+separates projected edge codecs from `Q`-orbit action carriers.

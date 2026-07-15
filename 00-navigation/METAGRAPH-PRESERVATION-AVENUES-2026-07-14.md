@@ -713,5 +713,6 @@ certificate clauses, and proof obligations.
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
 3. Join `MPA-28/38`: extend THM-813's canonical reflection-orbit line action
    through the ten-wall centered-CF word, auditing which coarser edge/node and
-   `rho`-saturated coefficient quotients satisfy fibre-purity under the composite;
-   then form the literal-witness fibre product with THM-808's owner/root stalk.
+   `rho`-saturated coefficient quotients satisfy fibre-purity under the
+   composite; then form the literal-witness fibre product with THM-808's
+   owner/root stalk and THM-810's metric clock/component incidence.

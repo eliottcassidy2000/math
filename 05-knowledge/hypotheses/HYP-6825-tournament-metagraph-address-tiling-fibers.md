@@ -72,6 +72,7 @@ related:
   - THM-807
   - THM-808
   - THM-809
+  - THM-810
   - THM-811
   - THM-812
   - THM-813
@@ -332,9 +333,11 @@ iso-class projection and `C3` orientation.
 THM-811 resolves an apparent reversal in that paragraph.  Raw multiplicity is
 dominated by the much larger pure-black source fibres.  After normalizing by
 available source black endpoints and stratifying by source curvature `q`, the
-mixed-to-pure-black rate exceeds the reverse rate in every nonempty stratum at
-both `n=6` and `n=7`.  Flow direction is therefore not defined until the source
-category, curvature stratum, and fibre-volume measure are named.
+mixed-to-pure-black rate exceeds the reverse rate in every stratum carrying a
+mixed--pure-black boundary edge at both `n=6` and `n=7`.  The nonempty
+`n=6,q=2` source populations carry no such edge and give `0=0`.  Flow direction
+is therefore not defined until the source category, active edge stratum, and
+fibre-volume measure are named.
 
 Every node now has a stored `flow_rank` ordered first by `C3`, then phase and
 rooted blue/black position, score/Landau shape, tiling-fibre mass, weighted
@@ -560,6 +563,16 @@ while all 272 `Q_6` cells act without failure.  Thus even the whole colour plus
 endpoint-node context is only a conditional quotient of the line action.  The
 universal recursive skeleton is the reflection-orbit line, and every coarser
 edge address must separately pass (D).
+
+THM-810 gives the metric-side warning in an ostensibly unrelated Hamming-four
+chart.  Its order-three coset family has eight `q=39` times at exact margin
+`1/13`, unchanged by every `+39` lift height.  The clock is an exact boundary
+skeleton, but every clock point is a strict local cusp and the clock cannot
+prove the packet loose or remember which other safe component survives.  This
+is the same distinction as `P` versus `Q` in a different stalk: exact current
+truth or reconstruction is weaker than transport/closure.  The joined state
+must retain the clock's incidence with owner-labelled exception combs and the
+metric component, not only the eight numerators.
 
 THM-811 supplies a complementary disintegration of black edges.  The coarse
 `B3` populations determine the linear leg currents `(B,T)`, hence

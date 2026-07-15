@@ -601,6 +601,14 @@ cells, including four blue cells, while all 272 `Q_6` orbits act.  Colour plus
 endpoint nodes is therefore an edge identity codec in a static drawing, not a
 universal action carrier.
 
+THM-810 supplies the metric analogue.  Its Hamming-four order-three coset has
+an exact eight-point `q=39` equality clock invariant under arbitrary `+39`
+lift heights.  Yet the clock forgets those heights, each equality point is a
+strict local cusp, and closure must select another safe component.  An exact
+boundary skeleton can therefore be neither an action carrier nor a proof
+state.  It must be attached by labelled incidence to the exception combs,
+component germ, owner, and metric side that give the clock operational meaning.
+
 THM-811 similarly splits what had looked like one black edge weight.  The `B3`
 populations determine linear leg current `(B,T)` and hence
 `(lambda,epsilon_Smith)`; Möbius `q` is their positional quadratic overlap.  The
