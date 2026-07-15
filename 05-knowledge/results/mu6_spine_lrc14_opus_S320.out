@@ -1,0 +1,39 @@
+[a] leave-one-out families {1..13}\{k}: exact M, argmax, chi13(k):
+   k= 1 (QR ): M = 2/15 = 0.133333  t* = 1/15  q = 15 (Eisenstein norm: False)
+   k= 2 (QNR): M = 2/17 = 0.117647  t* = 8/17  q = 17 (Eisenstein norm: False)
+   k= 3 (QR ): M = 2/17 = 0.117647  t* = 6/17  q = 17 (Eisenstein norm: False)
+   k= 4 (QR ): M = 2/19 = 0.105263  t* = 5/19  q = 19 (Eisenstein norm: True)
+   k= 5 (QNR): M = 2/19 = 0.105263  t* = 4/19  q = 19 (Eisenstein norm: True)
+   k= 6 (QNR): M = 2/23 = 0.086957  t* = 4/23  q = 23 (Eisenstein norm: False)
+   k= 7 (QNR): M = 1/7 = 0.142857  t* = 1/7  q = 7 (Eisenstein norm: True)
+   k= 8 (QNR): M = 1/8 = 0.125000  t* = 1/8  q = 8 (Eisenstein norm: False)
+   k= 9 (QR ): M = 1/9 = 0.111111  t* = 1/9  q = 9 (Eisenstein norm: True)
+   k=10 (QR ): M = 1/10 = 0.100000  t* = 1/10  q = 10 (Eisenstein norm: False)
+   k=11 (QNR): M = 1/11 = 0.090909  t* = 1/11  q = 11 (Eisenstein norm: False)
+   k=12 (QR ): M = 1/12 = 0.083333  t* = 1/12  q = 12 (Eisenstein norm: True)
+   k=13 (0  ): M = 1/13 = 0.076923  t* = 1/13  q = 13 (Eisenstein norm: True)
+   M-value classes:
+      M = 1/13: [(13, '0')]
+      M = 1/12: [(12, 'QR')]
+      M = 2/23: [(6, 'QNR')]
+      M = 1/11: [(11, 'QNR')]
+      M = 1/10: [(10, 'QR')]
+      M = 2/19: [(4, 'QR'), (5, 'QNR')]
+      M = 1/9: [(9, 'QR')]
+      M = 2/17: [(2, 'QNR'), (3, 'QR')]
+      M = 1/8: [(8, 'QNR')]
+      M = 2/15: [(1, 'QR')]
+      M = 1/7: [(7, 'QNR')]
+
+[b] the tight locus of the AP {1..13}: all t with min = 1/14 (q <= 200):
+   tight times: [Fraction(1, 14), Fraction(3, 14), Fraction(5, 14), Fraction(9, 14), Fraction(11, 14), Fraction(13, 14)]
+   = p/14 with p in (Z/14)* = <3> = mu6: True
+   powers of 3 mod 14: [1, 3, 9, 13, 11, 5] (cyclic order 6: True)
+
+[c] mediant denominators q = 3N+2 and Phi_6/Eisenstein:
+   N=7: q = 23 = NOT Eisenstein; N mod 6 = 1
+   N=13: q = 41 = NOT Eisenstein; N mod 6 = 1
+   N=19: q = 59 = NOT Eisenstein; N mod 6 = 1
+   N=25: q = 77 = NOT Eisenstein; N mod 6 = 1
+   N=31: q = 95 = NOT Eisenstein; N mod 6 = 1
+   deep well: 183 = Phi_6(14) = 183 (Eisenstein norm: True); 14^k mod 183: [14, 13, 182, 169, 170, 1]

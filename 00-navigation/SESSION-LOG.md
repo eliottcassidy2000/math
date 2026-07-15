@@ -17,6 +17,42 @@ THE THEOREM: THM-826's effective-arc structure (one arc per primitive Farey frac
 NAMED NEXT: the Ramanujan mean-square estimate (c_l orthogonality) toward Q_s = O(r) -- the route-[A] sharp rate, now in textbook-analytic form.
 
 FILES: THM-873, HYP-6960, ramanujan_fourier_profile_kps_S128c25.py/.out. -> klein (your S280 rate is now a Ramanujan mean square -- the classical machinery applies), opus (S271 cross-validated; S319's Milgram frame is this expansion's quadratic shadow), all (j=4 banking continues).
+## opus-2026-07-15-S320 -- THM-873 THE mu6 SPINE OF LRC(14): the TIGHT-LOCUS THEOREM (equality times of {1..13} = {p/14 : p in mu6 = <3> mod 14}, a GROUP, = the S315 Farey-14 extremal classes: hardest instances = best tool directions); THE WELL DICHOTOMY (mediant q = 2 mod 3 never Eisenstein norms vs deep well 183 = Phi_6(14) = N(14+omega)); the leave-one-out atlas (M = 1/k for k >= 7, paired 2/q for k <= 6, global min at minus-6 = THM-777's M-face); chi13/Eisenstein atlas gradings NEGATIVE (BH 2/0) (HYP-6960)
+
+Prompt (owner): long session applying the new lenses to LRC(14); think roots of unity;
+delve into past work; synthesize threads.
+
+ARCHAEOLOGY: my own S52 reflection (the-13-comb-lever-is-the-eisenstein-resonance: 14 is
+a primitive 6th root mod 183 = Phi_6(14); S55 correction noted) + klein-S124 (the
+anti-golden Eisenstein sibling) + THM-773 (F7 tokens) + HYP-4572/4516 (mediant mod-6
+gate) + S315 (Farey-14 six) + THM-869/872 (Milgram mu8 phases). Fleet velocity note:
+my S319 handoffs were consumed within the hour (THM-870 icosahedral/Kakeya, THM-871,
+THM-872 Milgram).
+
+[T] THE TIGHT-LOCUS THEOREM (proved + exact scan): min_v ||vt|| <= 1/14 always, equality
+iff t = p/14, gcd(p,14) = 1: the tight locus = (Z/14)* = <3> = mu6, cyclic order
+1->3->9->13->11->5, a group under numerator multiplication, folding to three Eisenstein
+directions under reflection. IDENTIFICATION: these are the S315 depth-13 resonance
+maximizers: LRC(14)'s loneliest moments and the optimal Hunter edge directions are THE
+SAME SIX POINTS -- the self-tuning now has a group face.
+[W] mediant wells q = 3N+2 = 2 mod 3: never Eisenstein norms; the deep well 183 IS one:
+the two well species = the inert vs norm branches of Z[omega].
+[L] leave-one-out atlas exact: 1/k (k >= 7, t* = 1/k); 2/15, 2/17, 2/17, 2/19, 2/19,
+2/23 (k = 1..6); minus-6 = global min = the M-face of the THM-777 floor. NEGATIVES:
+chi13 and Eisenstein-norm gradings of the atlas both fail (BH: 2 scans, 0 laws).
+
+THE SPINE: mu6 at FIVE stations (tight locus, deep well, mediant gate, QR hexagon,
+Farey-14 row), flanked by mu8 (Milgram) and F7 (tokens). FLEET CONJECTURE: one
+structure -- the (Z/14)*-character grading of the wall lattice; re-coordinatize the
+deep two-sheet signed selectors (THM-797/803/817) by this character before the next
+uniform-failure attempt.
+
+NEXT (named): the character re-coordinatization of the signed selectors; the tight-locus
+group law's action on wall words (does numerator multiplication permute the THM-778
+mechanical words?); the Eisenstein well census (which q in the well atlas are norms);
+the leave-one-out pairing (2,3)/(4,5) mechanism.
+
+FILES: THM-873; mu6_spine .py/.out; HYP-6960. opus; S320.
 
 ---
 ## opus-2026-07-15-S319 -- THM-869: MILGRAM FORMALIZED (coset-constancy 3-liner; Gauss phase = the residue law; the D_n+ unimodular ladder) + THE CORONA LAW (first-bite = double-zero = 2(n-1)^2 + 5n - 2; widths 0,0,5,16 exact; my S318 conjecture refuted) + THE SEDENION RUNG EXACT (E8^2 vs D16+ isospectral, Sigma=0 slices diverge 252/240 & 23662/23790: the ambiguity the score hyperplane breaks) + A5 PILOT NEGATIVE (85 classes, no golden eigenvalues; refined to the Weyl/icosian carrier) + THE 1001/1024 WEAVE (torsion vs Diophantine resonance) (HYP-6950)
