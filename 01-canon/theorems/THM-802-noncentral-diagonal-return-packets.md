@@ -438,4 +438,7 @@ Three vertex choices expose the quotient boundary.
 
 The circular tournament sees the collision geometry, and the occurrence
 tournament sees exact chronology; neither alone preserves both prefix
-legality and reduced return.  The decorated carrier (19) does.
+legality and reduced return.  In particular, its SCC is **telemetry**, not the
+LRC predicate: the predicate is exact owner-word prefix legality in the
+centered mechanical order, coupled to the reduced return and metric/core
+incidence.  The decorated carrier (19) retains precisely those fields.
