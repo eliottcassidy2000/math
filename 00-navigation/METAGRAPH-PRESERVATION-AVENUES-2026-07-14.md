@@ -458,8 +458,12 @@ certificate clauses, and proof obligations.
 - **Pull:** decide whether primitive face rows remain injective at `n=8`, and
   refine the first collision by rooted path-orbit lift distributions rather
   than by an opaque canonical code.  Quotient the line `C2` torsor only after
-  attaching THM-793's leg current and THM-785's signed `C3` orientation.
-- **Old thread:** THM-345/477/643/781/793; HYP-3051..3054 observer-extension
+  attaching THM-793's leg current and THM-785's signed `C3` orientation.  Use
+  HYP-6865's Smith harmonic potential as an independent horizontal coordinate:
+  determine whether its rare `n=7` discordances localize exactly in primitive-
+  face collision or non-lumpable blocks.
+- **Old thread:** THM-345/477/643/781/793; HYP-6865 Smith diagram;
+  HYP-3051..3054 observer-extension
   calculus; MPA-01/02/04/05/06/29/30; continued-fraction transport THM-778.
 - **Must preserve:** both tiling endpoints of a line, coherent face phase,
   colour, line multiplicity, loop factor two, Hamiltonian-path orbit, and the

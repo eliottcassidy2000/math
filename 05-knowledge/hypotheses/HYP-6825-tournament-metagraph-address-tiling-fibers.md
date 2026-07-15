@@ -346,6 +346,13 @@ This exact pre-quotient symmetry locates THM-785's black left/right imbalance
 in the disintegration over unequal node fibres rather than in the raw line
 tower.
 
+HYP-6865's concurrent Smith-diagram audit gives the horizontal flow order a
+second interpretation: harmonic voltage from the transitive class to the
+distributed rail is perfectly concordant with score variance through `n=6`
+and `99.9%` concordant at `n=7`.  It lives on the unmerged local-flip graph, not
+the complement-line graph; pairing that voltage with THM-796's primitive face
+vector is a promising two-axis address rather than a proved graph identity.
+
 ## Tournament Analysis
 
 Vertices are candidate information carriers rather than runners:

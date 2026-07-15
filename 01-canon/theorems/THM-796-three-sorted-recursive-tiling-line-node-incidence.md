@@ -4,7 +4,7 @@ title: Three-sorted recursive incidence of tilings, complement lines, and conver
 status: PROVED — general two-face tiling pullback, C2 line-phase torsor, colored incidence conservation, and blue/black face recursion; exact node-kernel and non-lumpability census n=3..7
 source: codex-2026-07-15-S9
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
-related: [THM-477, THM-785, THM-790, HYP-6825, HYP-6870]
+related: [THM-477, THM-785, THM-790, HYP-6825, HYP-6865, HYP-6870]
 verification:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.out
@@ -304,6 +304,19 @@ primitive D row:       how its whole path-orbit fibre branches into faces;
 coloured A rows:       how its tiling endpoints pair into blue/black lines;
 canonical orbit code:  final exact tie-breaker if structural rows collide.
 ```
+
+HYP-6865's concurrently computed Smith diagram supplies an independent
+physical realization of the horizontal coordinate.  Regard the weighted local
+one-tile-flip graph on ordinary isomorphism classes as a resistor network,
+wire the transitive class to the distributed score rail, and solve the
+Dirichlet problem.  Its harmonic potential has perfect pairwise concordance
+with the score-variance axis at `n=4,5,6` (`5/5`, `58/58`, `1345/1345`
+comparable pairs) and `92502/92634` concordance in the floating `n=7` audit.
+Thus three different constructions now point along the same horizontal
+direction: inverse score variance, complement-line `C3` flux, and electrical
+potential.  The Smith graph is unmerged and uses local flips, so this is an
+independent related coordinate—not an identification with the blue/black
+complement-line multigraph or a proof of general concordance.
 
 ## 6. Why a complete node fingerprint is still not a recursive state
 
