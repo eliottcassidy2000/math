@@ -1,0 +1,33 @@
+THM-741 PURE (3,4) TAIL: ANCESTRAL-CARRIER BOUNDED FRONTIER PROBE
+================================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); external order 15<=a<b<c<d; Q(E)=empty
+root r=28 m=433607/2522520
+proved carrier law: |A\U D_w| >= |A|-s|C|/7-(S2*r(C)/7)sum(1/w), A subset C
+proved P2 hybrid: first needle uses 6|A|/7-8r(A)/(49v); later needles use ancestor C
+root cutoffs: common-threshold V1=308; ordered-union=306 (union C0); ordered-P2-envelope=291 (P2+union C0)
+global first layer: baseline a-nodes=293; baseline E2 nodes=61379; root-algebra-closed a=17; exact-m1 sparse=276; post-sparse-closed a=63; modeled full-G1 needed=213
+bounded deeper window: 15<=a<=40 (26 exact a branches)
+  b frontier: standard nodes=4796; algebra-closed=405; exact-m2 sparse=4391; post-sparse-closed=1538; full-G2 needed=2853
+  c frontier at surviving G2: standard nodes=244652; ancestor-envelope nodes=144695; algebra-closed=99957
+  c-cutoff winning certificate counts:
+    C0 P2+union: 361
+    C0 union: 376
+    C1 P2+union: 943
+    C1 union: 791
+    C2 P2+union: 382
+    C2 union: 0
+Tournament Analysis vertices: C0=root carrier,C1=after a,C2=after a,b (not runners)
+pair observable: nodewise lower-c-horizon wins; tie by smaller residual sum, then older carrier
+  C0 vs C1: wins=(743, 1968); residual_sums=(166541,150685); observable=(-1225, -15856, 1)
+  C0 vs C2: wins=(1975, 799); residual_sums=(166541,196683); observable=(1176, 30142, 2)
+  C1 vs C2: wins=(2377, 407); residual_sums=(150685,196683); observable=(1970, 45998, 1)
+fingerprint: score_hist={0: 1, 1: 1, 2: 1}; directed_3cycles=0; SCC_sizes=(1, 1, 1); Hamiltonian_paths=1
+tie Hamiltonian paths=C1->C0->C2
+kept: one-sided LRC closure horizons and ancestor containment
+destroyed: exact later-needle overlaps, final margins, and all c/d interval geometry
+challenged vertices: runners/root edges/Fano flags are unnecessary; carrier levels preserve the certificate
+alternate vertices audited: gaps/sections/endpoints/wall-events retain geometry but not this scalar tail horizon
+VERDICT: exact root/first-layer reductions plus an exact a=15..40 frontier census; no c measures or d sweeps were evaluated, so the (3,4) body and sporadic branch remain open
+source_sha256=2d514f63de184013bf5ac9f9b95a5241d06edc20d24994584cc17c7a39908eb3
+ALL BOUNDED FRONTIER CHECKS PASSED

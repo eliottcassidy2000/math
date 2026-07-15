@@ -141,8 +141,20 @@ SC(n)      =8,12,88,176.                                  (7)
 The `n=8` excess is entirely black; it is not caused by accidentally counting
 blue self-lines.  What survives all size is the Klein-four orbit structure,
 evenness/divisibility, and the path-relative holonomy law in THM-849/852/854.
+The subsequent live-main freeness proof sharpens that replacement: on the
+non-grid-symmetric quasi-fixed locus, `g` is excluded by definition, `kappa`
+flips every tile bit, and `g kappa` cannot fix an anti-diagonal tile.  Thus the
+Klein four acts freely for every size, so
+
+```text
+selfK(n)=2 orbitK(n),       orbitK(5..8)=2,3,22,101.
+```
+
+These are the merged-carrier orbit counts; they are not `SC(n)/2` at `n=8`.
 This is the same lesson as the Farey ladder: an initial count identity can be
-the shadow of a real group action without being the correct orbit count.
+the shadow of a real group action without being the correct orbit count.  The
+all-size theorem belongs to freeness of the action, not equality of the two
+twisted diagonals.
 
 ## 4. The Fano carrier is an atlas, not the metric object
 

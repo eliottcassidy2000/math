@@ -55,6 +55,35 @@ the first localized repair.  Tournament vertices were challenged throughout: roo
 arithmetic lanes are useful job schedulers, whereas literal components plus
 labelled future languages remain the proof carrier.
 
+The Kakeya hint now has one exact, useful form.  If `S(t)` is the active set of
+remaining danger combs, then
+`1_(S=empty)=1-|S|+rank_graphic(K_S)`.  Hunter replaces the integrated
+pointwise graphic basis by one global maximum tree; the difference is exactly
+the tree-adaptivity gap.  Summing clipped Hunter bounds over a measurable
+partition is monotone under refinement and becomes exact on activation atoms.
+In all twelve first proper Hamming-one packets, global Hunter closes only
+`3/12`, whereas literal-component-local and rooted-six localization close
+`12/12`.  The missing-6 row improves from `-634/9009` to `1/8151`, with rooted
+value equal to the exact uncovered mass `1/286`.  This is a general certificate
+and a method test for the seven-comb wall, not global sporadic-branch closure.
+
+The same localization idea gives a one-sided ancestral-carrier envelope for
+the recommended pure `(3,4)` flood tail.  Charging future combs to whichever
+ancestor survivor has the best exact `(m,r)` tradeoff, with P2 on the first
+needle, lowers the root cutoff from `308` to `291`.  In the bounded
+`15<=a<=40` probe it reduces 4,796 standard `b` nodes to 2,853 literal `G2`
+carriers and the next `c` horizon from 244,652 to 144,695.  No `c` measures or
+`d` sweeps were run, so this is a proof-preserving workload reduction, not a
+fourth whole flood closure.
+
+The intervening live pull supplied two connected signals.  First, the direct
+THM-741 runner has advanced to `284/2002` clean bodies, independently of the
+completed-family shadows here.  Second, the correct all-size self-line theorem
+is Klein-four freeness, not `2 selfK=SC`: the non-grid-symmetric quasi-fixed
+orbit counts are `2,3,22,101` through `n=8`, with `selfK=2 orbitK`; the `n=8`
+SC equality remains refuted.  The S16 reflection now separates this genuine
+orbit law from the false twisted-diagonal count identity.
+
 ## codex-2026-07-15-S16 continuation -- flood re-root descent closes the five-small shadow
 
 THM-741 remains `CLAIMED`: only two of its 21 whole flood bodies were exact at

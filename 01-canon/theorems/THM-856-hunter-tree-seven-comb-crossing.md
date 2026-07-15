@@ -1,12 +1,12 @@
 ---
 id: THM-856
 title: Hunter tree functional at the seven-comb wall — the first-moment schema is empty, exact pair overlap is a two-sided mod-13 sawtooth, and its ten-ratio bad-edge graph gives a strict universal projective tree margin; full radius-seven closure still requires restricted endpoint control
-status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, the `2c_E/g` projective pullback bound, exact node/edge anomaly and tropical recursion laws, the rank-six projective Gram kernel, the strict all-packet projective margin `19/572`, and asymptotic closure of every common-dilate seven-comb packet + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the full radius-seven chart.
-source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge covariance, tropical recursion, strict projective-tree margin, and common-dilate closure added by codex-2026-07-15-S15
+status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, the `2c_E/g` projective pullback bound, exact node/edge anomaly and tropical recursion laws, the rank-six projective Gram kernel, the strict all-packet projective margin `19/572`, asymptotic closure of every common-dilate seven-comb packet, and the adaptive graphic-rank/component-localization identity + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the full radius-seven chart.
+source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge covariance, tropical recursion, strict projective-tree margin, and common-dilate closure added by codex-2026-07-15-S15; adaptive graphic-rank localization added by codex-2026-07-15-S16
 depends_on:
   - THM-815 Part C   # the recursion whose union bound dies at 7 combs
 related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), THM-857 (the closed scale-one H6 boundary fibre), LRC14-FRONTIER item 3]
-verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out, seven_comb_node_edge_defect_algebra_codex_S15.out, seven_comb_projective_mst_bound_codex_S15.out
+verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out, seven_comb_node_edge_defect_algebra_codex_S15.out, seven_comb_projective_mst_bound_codex_S15.out, lrc13_kakeya_adaptive_tree_identity_codex_S16.out
 ---
 
 # THM-856 — the Hunter tree bound at the seven-comb wall
@@ -665,3 +665,84 @@ integral by midpoint sampling; neither step is an exact all-packet argument.
 Thus the cluster experiment names plausible mechanical-word sublemmas but
 does not close the asymptotic radius-seven chart or reduce the remaining work
 to finite bookkeeping.  Its stored numbers remain reproducible finite data.
+
+## 8. S16 adaptive graphic-rank localization
+
+For a measurable prefix-safe set `E`, let
+
+```text
+A_i=E intersect D_(u_i),             S(t)={i:t in A_i}.
+```
+
+The graphic-matroid rank of the clique induced by the active set is
+`r(t)=max(|S(t)|-1,0)`.  Pointwise,
+
+```text
+1_(S(t)=empty)=1-|S(t)|+r(t),
+```
+
+and hence
+
+```text
+mu(E minus union_i A_i)
+ =mu(E)-sum_i mu(A_i)+integral_E r(t)dt.                 (8.1)
+```
+
+This is an exact all-order identity.  A fixed spanning tree contains at most
+`r(t)` edges induced by `S(t)`, so Hunter is precisely the lower bound obtained
+by replacing the spatially adaptive graphic basis in (8.1) by one global tree.
+The discarded nonnegative quantity is the tree-adaptivity gap
+
+```text
+Gamma_E=integral_E r(t)dt-max_T sum_(ij in T)mu(A_i intersect A_j). (8.2)
+```
+
+There is a monotone exact localization hierarchy.  For a finite measurable
+partition `P` of `E`, let `MST_C` be the maximum spanning-tree weight from the
+pair overlaps restricted to a cell `C`, put
+
+```text
+H_C=mu(C)-sum_i mu(C intersect A_i)+MST_C,
+L(P)=sum_(C in P) max(0,H_C).                            (8.3)
+```
+
+Then
+
+```text
+0<=L(P)<=mu(E minus union_i A_i).
+```
+
+If `P'` refines `P`, then `L(P')>=L(P)`; on the Boolean activation-atom
+partition equality holds.  Indeed `MST(w_1+w_2)<=MST(w_1)+MST(w_2)` under a
+cell split, and on an atom with nonempty active set `S` a tree takes exactly
+`|S|-1` positive internal edges, whereas the empty atom contributes its full
+mass.  This proves the claims without a generic-position or independence
+hypothesis.
+
+The exact-Fraction audit on the twelve first proper Hamming-one packets
+
+```text
+([12] minus {r}) union {r+13},          1<=r<=12,
+```
+
+uses the five smallest speeds as `E` and the other seven as needles.  One
+global Hunter tree is positive in only `3/12` rows; literal-component-local
+Hunter and a rooted six-comb localization are positive in `12/12`.  For the
+row missing `6`, the three values are respectively
+
+```text
+-634/9009,       1/8151,       1/286,
+```
+
+and the rooted value equals the exact uncovered mass.  The bank was already
+closed by stronger Hamming recursion: this is a new general certificate and
+method test, not global sporadic-branch closure.
+
+Tournament Analysis uses the 21 pair-overlap obligations rather than runners.
+Every component order is transitive, yet the missing-`6` row realizes five
+local edge orders and five local Kruskal trees, with 77--135 flips from the
+global order.  Thus a tournament retains local Kruskal priority only together
+with the original `K_7` edge-incidence sidecar; activation atoms remain the
+exact carrier.  In the Kakeya language the periodic combs are fixed-intercept
+needles, and (8.1)--(8.3), rather than a Euclidean dimension estimate, are the
+part of incidence geometry that transfers. ∎

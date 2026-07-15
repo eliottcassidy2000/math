@@ -24,6 +24,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
   - 04-computation/lrc14_j4_next_anchor_shadow_frontier_codex_S16.py
   - 05-knowledge/results/lrc14_j4_next_anchor_shadow_frontier_codex_S16.out
+  - 04-computation/lrc14_j4_34_ancestral_carrier_frontier_probe_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_34_ancestral_carrier_frontier_probe_codex_S16.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -413,4 +415,57 @@ This scheduler retains containment gain and first-layer work but destroys
 frontier has the `22` unshadowed three-small `K`-bases as vertices; runners,
 Fano flags, and root charts discard that final-family quotient.  If a whole
 edge must be run next, `(3,4)` remains the coverage-first choice: it gains five
-three-small sets and has the least `E2` count among all gain-five edges. ∎
+three-small sets and has the least `E2` count among all gain-five edges.
+
+## Ancestral-carrier envelope for the pure `(3,4)` tail (codex-S16)
+
+Fix `E=H union {3,4}` and write the remaining ordered speeds as
+`15<=a<b<c<d`.  Let `A` be an exact current survivor and let `C` be any
+ancestor carrier with `A subset C`, measure `m_C`, and `r_C` components.  If
+`s` ordered needles `w_i` remain, THM-732 gives the reusable one-sided bound
+
+```text
+|A minus union_i D_(w_i)|
+ >= |A|-s m_C/7-(S2 r_C/7)sum_i 1/w_i.                  (B8)
+```
+
+If the first possible speed is `v`, the reciprocal sum is largest at
+`v,v+1,...,v+s-1`.  Applying P2 to that first needle and charging the other
+`s-1` needles to `C` also gives
+
+```text
+|A minus union_i D_(w_i)|
+ >=6|A|/7-8r_A/(49v)-(s-1)m_C/7
+   -(S2 r_C/7)sum_(i=1)^(s-1)1/(v+i).                   (B9)
+```
+
+Taking the maximum of (B8)--(B9) over all ancestors is sound.  It is a proof
+certificate, not an equality quotient: it retains ancestor containment and
+the `(m,r)` tradeoff while discarding later-needle overlap geometry.
+
+The exact root is
+
+```text
+r=28,       m=433607/2522520.
+```
+
+The common-threshold tree starts at `V1=308`.  Merely using distinct ordered
+speeds improves the union cutoff to `306`; the P2/ancestor envelope improves
+it to `291`.  Thus 17 of the 293 baseline `a` branches close algebraically.
+Exact sparse first-child measures close 63 more, leaving 213 branches that
+need a literal `G1` carrier; the baseline exact `E2` bank has 61,379 nodes.
+
+A deliberately bounded `15<=a<=40` audit performs no `c` subtraction and no
+`d` sweep.  It reduces 4,796 standard `b` nodes to 4,391 sparse measures and
+2,853 literal `G2` constructions.  On those survivors the standard `c`
+frontier has 244,652 nodes, whereas the ancestor envelope retains 144,695,
+closing 99,957 without constructing `G3`.  Normal and optimized runs
+byte-match the frozen exact output.
+
+Tournament vertices are the ancestor levels `C0,C1,C2`, not runners or Fano
+flags.  The pair observable is the nodewise smaller certified `c` horizon,
+then residual workload; the tournament is transitive with Hamiltonian path
+`C1->C0->C2`.  Different ancestors win in real nodes, so keeping the entire
+ancestor antichain is useful.  This bounded prepass proves only the screened
+subtrees.  It evaluates no final margins and does not close the whole `(3,4)`
+body or THM-741. ∎
