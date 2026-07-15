@@ -15,10 +15,15 @@ the shape of the remaining object:
    uniformly empty at arbitrary lift height.
 2. The nonprimitive scale-one Hamming-six branch contracts exactly.  Its only
    possible tight row is the doubled AP `2[12]`; every other nonprimitive row
-   is loose.  Primitive H6 remains open.
+   is loose.  A subsequent AP-germ reduction closes fourteen of the twenty
+   primitive-core rows with three full antipodal missing pairs.  Primitive H6
+   remains open on 909 primitive-core rows plus the exceptional mixed-parity
+   odd-label branch.
 3. THM-836's local `s=5` shell is exactly four congruence classes, and the full
    class `d=11 mod 52` is uniformly impossible by one explicit divisor-grid
-   witness.  The classes `15,37,41 mod 52` remain open uniformly.
+   witness.  The classes `15,37,41 mod 52` remain open uniformly, and the
+   U-independent single-numerator endpoint-grid template is now proved
+   impossible in all three.
 4. THM-841's proposed toothpick breakpoint tree does not exist.  The ladder has
    a much simpler all-order totient formula.
 5. The Fano/`chi_7` organization of the 21 `j=4` flood bodies is exact but not
@@ -125,7 +130,20 @@ in
 
 states by depth, with no covering prefix.  Hence `2[12]` is the only possible
 tight nonprimitive H6 packet.  The remaining H6 problem is now intrinsically
-primitive.
+primitive, but “primitive” has two layers.  The odd-label row has retained
+core `{2,4,6,8,10,12}`: its all-odd height fibre contracts as above, whereas
+mixed height parity makes the completed packet primitive.  That exceptional
+fibre must not be dropped.
+
+For every other row, let `f` count full antipodal missing pairs.  Exactly
+`2f` thirteenth-grid points lie in the retained-core safe set.  At each such
+cusp, compare the owner's tooth reach with the first incoming provider tooth.
+The resulting weighted handoff graph is not a tournament: a pair can carry
+both directions or neither because its two cusp gauges differ.  Directed-cycle
+products close six of the twenty `f=3` rows; eight more force one of ten fixed
+coordinates, and exact slice trees close all ten in 3,699 states.  Six
+product-`1/16` rows survive.  This is the first place where a projective AP
+grid cusp, rather than a runner or whole component, is the right local vertex.
 
 ## 3. The deep shell is an incidence problem too
 
@@ -154,6 +172,15 @@ class is uniformly empty.  At `d=15`, divisor completeness and parity support
 leave 71,644 of 1,605,632 signed lifts; 3,004 cover the `q=75` grid, four cover
 the `q=195` grid, and none cover both.  That last statement is finite at
 `d=15`, not uniform over its congruence class.
+
+There is also an all-size negative result about the proof architecture.  If a
+single unit numerator is required to be deep for every possible choice of the
+seven free lifts, a 35-speed skeleton localizes it to four intervals around
+`4/13` and `9/26`.  Neither `q=5d` nor `q=13d` meets those intervals in a unit
+point for `d mod 52 in {15,37,41}`.  So the successful `d=11` column has no
+uniform analogue.  The missing object cannot be a scalar numerator selected
+before the lift set is known; it must be lift-dependent, multi-column, or on a
+different denominator.
 
 The lesson matches H6: an owner inequality locates a narrow shell, but a
 cross-incidence of numerator grids, signed lifts, divisor obligations, and
@@ -308,14 +335,17 @@ argument on any consecutive/AP-window residual.
 
 The shortest honest route to the requested theorem is now:
 
-1. **Primitive H6:** extend the component--comb recursion from the closed
-   nonprimitive chamber to the 923 primitive missing-label rows, using overlap
-   debt and unique-owner pins before attempting a raw full tree.
+1. **Primitive H6:** extend the two-sided AP-germ/component handoff from the
+   fourteen closed `f=3` rows to the six product-`1/16` rows, then the 903
+   rows with `f<=2`, while keeping the exceptional mixed-parity odd-label
+   branch separate.  Do not quotient by the antipodal count alone.
 2. **Unbounded H5 sheets:** classify common-sheet presentations with an
    effective order above twelve.  The entire bounded bank is already empty.
-3. **Deep `s=5`:** find uniform grid witnesses for the remaining classes
-   `15,37,41 mod 52`, or exhibit which additional divisor/satellite obligation
-   is missing.  Do not extrapolate the finite `d=15` census.
+3. **Deep `s=5`:** the uniform single-numerator endpoint-grid template is
+   impossible in all three remaining classes.  Seek a U-dependent or
+   multi-column incidence certificate, a non-endpoint denominator, or the
+   missing divisor/satellite obligation.  Do not extrapolate the finite
+   `d=15` census.
 4. **General two-sheet transport:** retain signed component--return sum arcs
    and endpoint ancestry outside the sixteen no-switch radius types.
 5. **`j=4` flood tail:** continue the exact resumable sweeps.  Fano symmetry,

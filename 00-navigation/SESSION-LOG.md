@@ -1,4 +1,4 @@
-## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive scale-one H6 closed except `2[12]`; exact shell-five and H-drift refinements; toothpick and Fano shortcuts decided
+## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive H6 closed except `2[12]`; fourteen primitive-core H6 rows closed; shell template, H-drift, toothpick, and Fano carriers decided
 
 Prompt (owner): prove the n=12 sporadic branch empty; work longer with frequent
 pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the
@@ -17,6 +17,17 @@ with depth counts `1,54,3612,130515,2104,2,0`, no covering prefix, and trace
 `919c6848d4e1187a2cef093e58982ae6`.  Thus `2[12]` is the only possible tight
 nonprimitive scale-one H6 packet.  Primitive/all-scale H6 remains open.
 
+PRIMITIVE-CORE H6: among the 923 rows with primitive retained core, the number
+`f` of full antipodal missing pairs has distribution `63,480,360,20`.  Each
+full pair gives two oriented thirteenth-grid safe cusps.  A height-independent
+germ-owner handoff and its weighted cycle products close six of the twenty
+`f=3` rows and force `u_5=18` and/or `u_6=19` in eight.  Ten exact slice trees
+close those eight in 3,699 states, depth counts `10,228,2176,1236,49,0`, with
+no covering prefix and trace `f8c84654...a5c227e`.  Thus fourteen `f=3` rows
+are loose.  Scope is exact: 909 primitive-core rows plus the odd-label
+mixed-parity primitive branch remain, so the global open label-pattern count
+is 910 rather than 909.
+
 KAKEYA/OBJECT REFRAME: for a core `P`, retain the literal components of
 `E(P)`, labelled periodic danger combs, endpoint owners, and future operation
 bank.  The new local potential is overlap debt
@@ -34,6 +45,13 @@ DEEP SHELL: THM-836's `s=5` local feasibility is exactly
 1,605,632-row census excludes the single value `d=15`; this was not
 extrapolated to its congruence class.  The classes `15,37,41 mod 52` remain
 open uniformly.
+
+The direct continuation is now ruled out too.  For every open class, the set
+deep for the entire possible-lift pool is confined to four exact intervals
+around `4/13` and `9/26`, and neither endpoint grid `5d` nor `13d` contains a
+unit there.  This proves a uniform no-go for a U-independent single-numerator
+template, not emptiness of any class.  The next witness must be lift-dependent,
+multi-column, or use another denominator.
 
 H-DRIFT/TOURNAMENT: the exact all-n pointwise law is
 `E[Delta H|T]=(a_(n-2)-(n-1)H)/C(n,2)=2(K-nH)/C(n,2)`, where `K` is the
@@ -67,19 +85,26 @@ the totals agree with A139250 through `1,2,4,8` and split at 16 (`159` versus
 bodies are the edges of `K_7` and admit an exact Fano/`chi_7` organization,
 but only the identity in `GL(3,2)` preserves their numerical weights, three
 endpoint needles cannot carry the full negative line, and their modular
-obligation sets are empty.  This rules out the proposed shortcut, not the
+obligation sets are empty.  A live-pulled refinement shows `r(E)` is a
+seven-point additive potential, while `m(E)` and `V1(E)` have full
+21-dimensional edge orbit spans; point-plus-Fano incidence has rank only 13.
+This rules out the proposed shortcut, not the
 flood bodies.  Live external progress at audit time was 171/2002 clean bodies;
 the 21 floods remained queued and no local overnight sweep was claimed.
 
 ARTIFACTS: THM-815 C.1; HYP-6820 and frontier/backlog/lens updates;
 `lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp/.out`
 (hashes `ee57510a...e2e8bf1`, `aa87c107...769ed`);
+`lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.py/.out`
+(`f3e96760...836d7dd`, `5783697e...56188c`);
+`lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py/.out`
+(`b6fce3d5...bbb233`, `9f2bdae7...00ad0b`);
 `lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py/.out`
-(`cecb046b...0e91a8`, `495fae30...ffa765`); shell-five and THM-841 exact
+(`031cf74c...d4815`, `858cada4...b5b59`); shell-five and THM-841 exact
 replays; `hunter_pair_overlap_exact_referee_codex_S14.py/.out`
 (`e38455f...786e5`, `4e780650...dccc`); reflection
 `the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14`.
-Earlier coherent checkpoints `77268efb1` and `aa534512a` were pushed; pulls
+Earlier coherent checkpoints `77268efb1`, `aa534512a`, and `75c237a73` were pushed; pulls
 integrated THM-847/H5 closure, the self-line refutation, and THM-855 F6 rather
 than overwriting them.
 > **codex-S14 live-pull correction to the historical opus-S312 entry below.**

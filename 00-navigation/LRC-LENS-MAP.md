@@ -27,6 +27,16 @@ tree closes every nonprimitive H6 packet except `2[12]`; primitive H6 remains
 open.  “Kakeya needles” here means periodic one-dimensional comb teeth acting
 on disconnected components, not a transfer of planar Kakeya dimension theory.
 
+The primitive-core H6 continuation identifies a sharper local vertex: an
+oriented thirteenth-grid cusp.  If `f` counts full antipodal missing pairs,
+there are exactly `2f` such cusps in the retained-core safe set.  Comparing an
+owner tooth's reach with incoming provider starts gives a weighted digraph,
+not a tournament; directed-cycle products plus ten fixed-coordinate trees
+close fourteen of the twenty `f=3` rows.  The antipodal count is only a
+stratification: it destroys pair signs, exact endpoints, divisor obligations,
+height parity, and overlap.  The remaining primitive scale-one bank consists
+of 909 primitive-core rows plus the exceptional odd-label mixed-parity branch.
+
 THM-856 makes the first useful quadratic projection of this debt: the
 Hunter--Kounias maximum-spanning-tree functional on the symmetric weights
 `mu(E intersect D_u intersect D_v)`.  At ideal densities its coefficient is
@@ -53,7 +63,11 @@ This addendum also records three quotient decisions from the same session:
   one-kink Farey stalk with totient multiplicities.
 - The `j=4` flood bodies are the 21 edges of `K_7` and admit an exact
   Fano/`chi_7` organization, but only the identity in `GL(3,2)` preserves their
-  numerical body weights.  Fano incidence is organization, not symmetry.
+  numerical body weights.  The component count `r(E)` is a seven-point
+  additive potential, but `m(E)` and `V1(E)` have full 21-dimensional edge
+  orbit spans; the combined point-plus-Fano incidence space has rank only 13.
+  Fano incidence is organization, not symmetry, and its eight invisible edge
+  directions contain proof-relevant numerical curl.
 - Scalar tournament gauges on H5 contexts, shell classes, and flood bodies are
   transitive while the cover verdict remains non-pairwise.  Use components,
   owner pins, grid numerators, or proof obligations as vertices; retain the
@@ -67,14 +81,19 @@ component_overlap_debt
 zero_debt_unique_owner
 remaining_comb_progressions
 nonprimitive_contraction_target
+antipodal_AP_cusp_count
+oriented_germ_handoff_graph
+weighted_cycle_product
 farey_one_kink_stalk
 fano_organization_not_symmetry
+fano_edge_module_invisible_dimension
 kakeya_analogy_scope
 hunter_tree_lower_bound
 projective_pair_ratio
 pair_common_scale
 pair_mod13_sawtooth
 pair_endpoint_discrepancy
+shell_lift_dependent_column_packet
 ```
 
 ## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens

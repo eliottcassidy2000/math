@@ -146,10 +146,11 @@
   all nine terminal doubling rows are strictly loose.  Thus the full proper
   scale-one radius-five chart is closed at arbitrary lift height.  The live
   shallow obligations are now an arbitrary-AP-scale radius-five deck descent,
-  followed by separation of the genuine `2[12]` orbit from non-AP rows in the
-  finite scale-one radius-six tree.  In that tree retain equality flags and
-  shortcut-seam ancestry and test the rigidity target: every tight terminal
-  reconstructs `2[12]`; primitivity would then remove the sole equality orbit.
+  followed by the residual primitive scale-one radius-six tree.  THM-815 C.1
+  isolates `2[12]` on the nonprimitive slice; C.2 closes fourteen
+  three-antipodal-pair primitive-core rows.  Retain equality flags, oriented
+  AP-cusp handoffs, height parity, and shortcut-seam ancestry on the 909
+  primitive-core rows plus the exceptional mixed-parity odd-label branch.
   At radius seven replace the failed mean-density coefficient by the
   fractional covering LP on residual-component--comb incidence.  Seek a
   Farkas-dual component weighting whose overlap refund is positive whenever
@@ -224,15 +225,21 @@
   are exactly `d mod 52 in {11,15,37,41}`, with owners `{B-3,B-2}`.  The
   explicit `q=5d`, `p=(45d-1)/26` grid uniformly removes `11 mod 52`; the
   value `d=15` is finite-exact empty, but its congruence class is not closed.
-  Continue uniformly on `15,37,41 mod 52` with the full unit-numerator by
-  signed-lift by divisor/parity incidence.
+  THM-836 §6B proves a sharp no-go: on `15,37,41 mod 52`, neither endpoint
+  grid has a unit numerator deep for the entire possible-lift pool.  Continue
+  with a U-dependent or multi-column signed-lift/divisor incidence, or a
+  non-endpoint denominator; do not retry the uniform one-column template.
 - **Open shallow theorem:** THM-845 has finished both THM-820 scale-one
   branches.  Prove the arbitrary-scale radius-five descent, transporting the
   proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
   endpoints through oriented deck ramification. THM-815 C.1 has split the
   finite H6 tree uniformly on its nonprimitive slice: only the genuine tight
-  AP orbit `2[12]` survives.  Classify the remaining primitive H6 rows and
-  transport across scale.  In parallel, audit any
+  AP orbit `2[12]` survives.  THM-815 C.2 stratifies the 923 primitive-core
+  rows by antipodal AP cusps and closes fourteen of the twenty `f=3` rows;
+  909 primitive-core rows plus the exceptional mixed-parity odd-label branch
+  remain.  First combine left/right cusp handoffs on the six product-`1/16`
+  rows, then use divisor/zero-debt pins on `f<=2`, and transport across scale.
+  In parallel, audit any
   proposed compression by its literal kernel pair.  THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
@@ -788,6 +795,9 @@
   an unsafe quotient.
 - **Parallel exact rung:** implement and finish the still-CLAIMED THM-741 2002-body run.  Completion would
   extend the proved far-count closure from `f<=3` to `f<=4` without relying on the projective theorem.
+  The resume ledger currently records `171/2002` clean bodies; the 21 empty-obligation flood bodies
+  are deliberately last and remain unproved.  The Fano/`chi_7` audit organizes those floods but
+  supplies neither a symmetry quotient nor a pruning certificate.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
   phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
   and `lrc14_band_scale_quotient_codex_S1.py/.out`.
@@ -860,7 +870,8 @@
   composition order, Bonferroni j≤6 vs the fixed body needs no isolation) + cont.4 (THM-738: the j=3
   rung swept over ALL 1001 ten-element bodies ⊆ {1..14} — every 13-speed family with ≥10 speeds in
   {1..14} is lonely; 4.68M exact bottom sweeps, zero tights, 27.7 min).** NEXT: the j=4 rung (2002
-  nine-element bodies, sampled V₁ ≈ 180–230, est. 6–30 h — overnight/cron target); j=5,6 want the
+  nine-element bodies, `171/2002` presently clean; the 21 flood bodies are the expensive tail and
+  remain open); j=5,6 want the
   exact-disc CS tightening (THM-735); j≥7 = the density seam (LEM-006 territory, unchanged); (iii) the v0(base) < lcm-step question — now MASSIVELY corroborated: all 364 bodies have
   A₀ ≤ 455 and every box closed clean; (iv) uniform EXPOSURE bound: r ∈ [4,24] over all 364 bodies —
   tiny; r-control on the multi-scale stratum is the remaining analytic content of route [B]; (v) Lean:

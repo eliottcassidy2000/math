@@ -3,6 +3,12 @@ id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
 status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, while primitive H6 remains open; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class now uniformly excluded; global emptiness remains OPEN in unbounded-order H5 descent, primitive/all-scale H6, uniform radius/sum-arc exclusion or transport, the remaining `s=5` deep-shell classes, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
+progress_note: >-
+  THM-815 C.2 closes 14 of the 20 primitive-core H6 rows with three full
+  antipodal missing pairs; 909 primitive-core row patterns plus the separate
+  odd-label mixed-parity branch remain. THM-836 §6B also rules out a
+  U-independent single-numerator endpoint-grid proof in each remaining
+  shell-five class, without closing those classes.
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
   first-pusher protocol, as codex-S2's atlas itself requested; subsequently updated by codex-S3.
@@ -549,6 +555,29 @@ through arbitrary AP scale.  On the doubled-AP equality side, the core
 overlap debt and a unique owner.  This weighted component--comb incidence,
 not pairwise comb overlap, is the predicate-preserving Kakeya-needle carrier.
 
+THM-815 C.2 makes the first uniform cut inside primitive H6.  For a missing
+row `R`, let `f(R)` count the full antipodal pairs `{r,13-r}` contained in
+`R`.  The 923 rows whose retained core is primitive have distribution
+
+```text
+f=0,1,2,3:                 63,480,360,20.                (B6a)
+```
+
+Exactly `2f` nonzero points of the thirteenth grid lie in the retained-core
+strict-safe set.  Comparing each oriented cusp germ with its owner tooth gives
+a height-independent weighted handoff digraph.  Cycle products close six of
+the twenty `f=3` rows and force `u_5=18` and/or `u_6=19` in eight others.  Ten
+fixed-coordinate longest-component trees then close those eight rows in
+`3,699` exact states, with aggregate depth counts
+`10,228,2176,1236,49,0` and no covering prefix.  Hence fourteen `f=3` rows
+are uniformly loose and the primitive-core row bank falls from 923 to 909.
+The remaining bank is 903 rows with `f<=2`, six product-`1/16` `f=3` rows,
+and the separate odd-label row with mixed height parity.  The latter can be a
+primitive packet although its retained core has gcd two, so the global open
+label-pattern count is 910, not 909.  The cusp count stratifies the bank but
+does not quotient it: it forgets pair signs, exact endpoints, divisor
+obligations, heights, and component overlap.
+
 At seven remaining combs THM-815's single-comb discrepancy coefficient changes
 sign.  THM-856 proves the correct second-order functional is the
 Hunter--Kounias maximum spanning tree of restricted pair overlaps.  At ideal
@@ -953,6 +982,17 @@ Consequently the uniformly open shell-five classes are exactly
 `15,37,41 mod 52`; their next proof must add a divisor/component/satellite
 incidence beyond the local two-owner packing.
 
+THM-836 §6B rules out the most direct proposed continuation uniformly.  Let
+`P_d` contain every possible free raw lift up to `B`, together with the forced
+owners `B-3,B-2,B`.  An exact 35-speed skeleton and a no-jump progression
+argument localize the common deep set for `P_d` to four thin intervals around
+`4/13` and `9/26`.  Neither `q=5d` nor `q=13d` has a unit numerator in those
+intervals for any of the three open classes.  Thus no single endpoint-grid
+column chosen from `d` alone can work for every allowed `U`.  This is a
+method obstruction, not a shell closure: the next certificate must depend on
+the actual lift set, combine several numerator columns, or leave the endpoint
+grids.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
@@ -983,8 +1023,11 @@ The uniform theorem now has two explicit residuals:
    unbounded-order common-sheet languages.  Prove the remaining arbitrary-AP-scale
    descent without assuming common scale. THM-815 Part C also makes scale-one
    radius six finite, and Part C.1 proves that every nonprimitive row other
-   than the genuine `2[12]` equality is loose.  Classify the remaining
-   primitive scale-one H6 rows and transport the result across AP scale. At radius
+   than the genuine `2[12]` equality is loose.  Part C.2 further closes
+   fourteen of the twenty three-antipodal-pair primitive-core rows; 909 such
+   rows plus the exceptional odd-label mixed-parity branch remain.  Extend
+   the two-sided cusp/component handoff across those rows, then transport the
+   result across AP scale. At radius
    seven the discrepancy deficit `13-2m` changes sign, so a new potential must
    use overlap debt, owner diversity, or signed component/comb incidence rather
    than mean danger density alone. This is a method wall within the scale-one
@@ -1013,8 +1056,10 @@ The uniform theorem now has two explicit residuals:
    `2B-13d>=5`; at equality it leaves exactly four classes modulo 52.  The
    explicit `q=5d` witness uniformly removes `d=11 mod 52`, and the single
    value `d=15` is finite-exact empty, but the classes `15,37,41 mod 52`
-   remain open uniformly.  Their next step must add another component,
-   divisor, or satellite obligation. THM-831 has
+   remain open uniformly.  THM-836 §6B proves that no U-independent single
+   unit numerator on either endpoint grid can close them.  Their next step
+   must use U-dependent or multi-column incidence, a non-endpoint denominator,
+   or another component/divisor/satellite obligation. THM-831 has
    classified the other fifteen viable folds in its coprime opposite-parity
    reduced family: repeat the
    arithmetic exclusion on the other fifteen primitive rows in (C5), and for
@@ -1111,7 +1156,9 @@ deciding objects are therefore:
   obligation that empties the first two shells.  At shell five the faithful
   carrier is the unit-numerator by signed-lift by divisor/parity incidence:
   it uniformly removes `d=11 mod 52`, while the transitive four-class
-  tournament does not distinguish the three open classes;
+  tournament does not distinguish the three open classes.  A column chosen
+  independently of the actual free lifts is now ruled out on both endpoint
+  grids, so the carrier must retain lift-dependent or multi-column data;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
@@ -1141,8 +1188,10 @@ deciding objects are therefore:
   through six remaining combs.  In nonprimitive H6, divisibility contracts
   the packet to the core `[6]` plus combs `7,...,12`; the resulting weighted
   component--comb incidence has four zero-overlap-debt unique-owner pins and
-  closes every row except the doubled AP. Primitive H6 is the remaining
-  scale-one chamber.
+  closes every row except the doubled AP.  In the primitive-core atlas,
+  oriented AP cusps and weighted handoff cycles close fourteen of the twenty
+  `f=3` rows; the remaining scale-one chamber has 909 primitive-core row
+  patterns plus the exceptional mixed-parity odd-label branch.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and
