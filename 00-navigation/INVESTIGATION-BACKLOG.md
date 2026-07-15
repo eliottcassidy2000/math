@@ -40,13 +40,15 @@
   `rho<=12/(pi|G'_P|)`, the unconditional but height-decaying floor
   `|G'_P|>=1/(91 maxP)`, and the exact bounded-shape minimum `7/858` for every
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
-  adversarial battery finds no decay, but the global shape floor remains a
-  conjecture.  Do not promote the proposed `rho<469` normalized atlas bound
-  outside strata where that floor is proved.
+  adversarial battery finds no decay.  THM-780 now adds the unconditional
+  height-free floor `|G'_P|>=182^(-12)` and hence a finite (enormous)
+  normalized bound; the sharp global value `7/858` remains conjectural.  Do
+  not promote the proposed practical `rho<469` atlas bound outside strata
+  where the sharp floor is proved.
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -69,7 +71,12 @@
   to a hereditarily primitive divisor-complete core.  THM-776 independently
   closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
   bad-atom hypergraphs have transversal number exactly 12, while a packet core
-  has only ten speeds.
+  has only ten speeds.  THM-782 gives every ten-core a scale-free anchored
+  phase-cell packet of measure at least `72^(-10)`, strict clearance
+  `1/13+1/10296`, and a safe component of normalized width at least
+  `72^(-10)/20`.  Tightness would force this whole structured packet into the
+  folded diamond; the scalar floor alone is much too small to contradict the
+  diamond cap.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -84,7 +91,9 @@
   `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
   impossible, prove a scale-free transversal lower bound beyond ten, or bound
   all dyadic seam guards strongly enough that the reconstructed `U` or `A`
-  lies in THM-774/776's complementary finite bases.  Then treat the `s=3`
+  lies in THM-774/776's complementary finite bases, or prove that some
+  THM-782 heavy anchored phase cell escapes every admissible diamond.  Then
+  treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.

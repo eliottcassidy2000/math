@@ -87,7 +87,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is now subsumed by THM-779's integer token-walk criterion.  The universal `1/7+O(gcd/w)` partner-buffer law remains VERIFIED; adversarial runs reach 5, but a uniform finite exit bound is OPEN | HYP-6840 + THM-779 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
-| safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
+| safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; phase pigeonhole gives the height-free floor `182^(-12)`; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`, while that sharp global value remains CONJECTURAL | THM-777/780 |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
@@ -97,7 +97,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776; HYP-6820 |
+| ten-core phase-cell packet | PROVED every two-sheet quotient core contains an anchored return packet of measure `72^(-10)` with clearance `>1/13+1/10296`, plus a safe component of normalized width at least `72^(-10)/20`; tightness forces both into the folded diamond | THM-782 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform structured folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -124,14 +125,17 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    The surviving endgame coordinate is peel-relative boundary intensity
    `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.
    THM-777 proves `rho<=12/(pi|G'_P|)`, the height-decaying Lipschitz floor,
-   and the exact shape floor `7/858` through `maxP<=18`; its global asymptotic
-   floor is still a named conjecture, not a compactness theorem.*
+   and the exact shape floor `7/858` through `maxP<=18`.  THM-780 supplies the
+   unconditional height-free floor `182^(-12)` and therefore compactness at an
+   enormous explicit scale; only the sharp global value and a practical cutoff
+   remain conjectural.*
 2. **Attack persistent translate covers with their metric stalks retained.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
    strict-danger set.  In the tight `s=2` quotient, THM-772 now forces a
    primitive divisor-complete ten-core and THM-774 turns the two odd colours
    into a sharp folded diamond.  Prove that no such diamond contains the whole
-   loose-component word, or force a dyadic/effective-order descent.  For higher
+   loose-component word or the THM-782 anchored heavy phase-cell packet, or
+   force a dyadic/effective-order descent.  For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
    *Prime-lens refinement:* THM-778 supplies the full Euclidean endpoint word.
@@ -195,7 +199,13 @@ sheets and then a canonical binary assigned-ownership tower ending at a
 hereditarily primitive quotient.  THM-776 reverses the remaining finite
 quantifiers: every odd pair through height 100 induces a bad-atom hypergraph
 of transversal number 12, too large for the ten-speed quotient core.  The
-uniform residual is now a scale-free transversal/noncontainment theorem (or
+uniform metric substrate is no longer missing: THM-782 puts inside every
+`G_U` an anchored simultaneous-return packet of measure `72^(-10)` and a
+component of length at least `72^(-10)/(20 max(U))`.  Tightness would have to
+embed this structured packet in the folded diamond.  The exact low-core row
+`|G_U|=41/858<8/117=|H_(1,9)|` shows why scalar measure comparison still
+cannot finish the job.  The uniform residual is now a scale-free
+transversal/noncontainment theorem (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.

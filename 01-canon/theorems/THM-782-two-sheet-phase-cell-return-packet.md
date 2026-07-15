@@ -130,7 +130,8 @@ For a fixed `u` this wall has exactly `2u` points on the circle.  Therefore
 the open set `G_U` has at most `2 sum u` components.  Combining that count
 with (5), and then using `sum u<=10H`, proves (6).
 
-Finally, THM-774/776 prove the lossless two-sheet equivalence
+Finally, THM-774 proves the lossless two-sheet equivalence (restated and used
+in the bounded theorem THM-776)
 
 ```text
 M(2U union {x,y})<=1/13  iff  G_U subset H_(x,y).          (14)
@@ -150,18 +151,26 @@ discussion lacked.  Its value is deliberately crude:
 
 where `8/117` is THM-774's sharp upper bound for the measure of a folded
 diamond.  Thus (5) cannot by itself contradict `G_U subset H_(x,y)`.  This is
-not just a constants problem: the exact core-19 closure audit contains
-primitive divisor-complete cores with `|G_U|<=8/117`.  A proof based only on
-the two scalar measures is therefore structurally insufficient on those
-cores.
+not just a constants problem.  The exact core-19 closure audit gives
+
+```text
+U={1,2,3,5,7,8,9,10,11,12},       (x,y)=(1,9),
+|G_U|=41/858 < 8/117=|H_(1,9)|.                            (16)
+```
+
+Thus even comparison of the two exact scalar measures does not refute
+containment for this admissible measure profile; the incidence geometry is
+essential.
 
 The new theorem-facing object is the containment in (9): a translate of one
 heavy joint-phase atom, anchored at zero after subtraction, whose every point
 is a simultaneous `1/72` return for all ten core frequencies.  The most direct
 uniform residual can now be asked as a **structured noncontainment theorem**:
 
-> Can an admissible folded diamond contain `t_0+B` for a primitive,
-> divisor-complete ten-core satisfying THM-772's speed bounds?
+> For every admissible `(U,x,y)`, can one choose a `1/11`-deep time `t_0`, a
+> phase cell `Q` with `|phi^(-1)(Q)|>=72^(-10)`, and an anchor
+> `s_0 in phi^(-1)(Q)` so that
+> `t_0+(phi^(-1)(Q)-s_0)` is not contained in `H_(x,y)`?
 
 This is strictly richer than comparing `|G_U|` and `|H_(x,y)|`, but it is not
 yet a proof that such containment is impossible.
@@ -175,9 +184,9 @@ the deep time, the LRC-safe predicate (4).  It destroys the cell's absolute
 phase address and most endpoint incidence data; those must be restored when
 testing containment in the folded diamond.
 
-There is no clean antisymmetric switch on these cells.  Same-cell membership
-is an equivalence relation, and anchored subtraction is a group operation.
-A forced tournament would discard precisely the common-cell information used
-in (3).  The honest tournament fingerprint is therefore “no predicate-
-preserving orientation”; runner tournaments remain telemetry, while the
-phase-cell/return-packet incidence is the proof carrier.
+This proof exhibits no natural useful antisymmetric switch on these cells.
+Same-cell membership is an equivalence relation, and anchored subtraction is
+a group operation.  An unlabelled runner or cell tournament, without the
+cell/anchor incidence labels, does not encode (3).  Runner tournaments remain
+telemetry here, while the labelled phase-cell/return-packet incidence is the
+proof carrier.

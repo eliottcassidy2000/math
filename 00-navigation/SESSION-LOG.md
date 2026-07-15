@@ -25,6 +25,54 @@ last two arrows remain multivalued and continuation-sensitive, so no LRC(14)
 closure is claimed.
 
 ---
+## codex-2026-07-14-S9 continuation -- THM-782 phase-cell packet and live-frontier reconciliation
+
+The requested uniform `q<=25` theorem remains false (THM-762/764), and the
+uniform n=12 sporadic-branch emptiness theorem remains open.  After pulling
+THM-780's quantitative phase-pigeonhole bridge, this session extracted a new
+uniform theorem inside the deep two-sheet residual.
+
+THM-782 proves that every ten-speed quotient core `U` has a `1/11`-deep time
+and an anchored joint-phase return packet `B` with
+
+```text
+|B|>=72^(-10),       ||u b||<1/72,
+||u(t_0+b)||>1/13+1/10296.
+```
+
+It follows that `G_U` has a component of length at least
+`72^(-10)/(20 max(U))`.  If `2U union {x,y}` were tight, THM-774 forces both
+the translated packet and that component into the folded diamond.  This
+repairs the missing uniform safe-measure substrate but does not close the
+branch: `72^(-10)` is tiny, and the exact low-core profile
+`|G_U|=41/858<8/117=|H_(1,9)|` proves that scalar measure comparison can pass
+while the incidence containment still fails.  The new exact target is
+structured phase-packet noncontainment.
+
+The theorem was independently refereed for the LRC(10) input, half-open-cell
+measurability, constants, circle-wrap handling, component bound, and folded
+quantifiers.  It was renumbered from 781 to 782 before publication because the
+live mainline had already reserved THM-781 for the Hamiltonian-path metagraph
+fibre inverse.
+
+A selected-pair attempt to extend THM-776 from quotient speeds 50 to 100 was
+withdrawn rather than overclaimed.  Independent exact atomizations agreed on
+the geometric masks, and HiGHS found transversal optimum 12 for `(1,3)` and
+`(197,199)`, but the proposed combined fingerprint was stale, “raw” counts had
+mixed bad atoms with distinct masks, and several exact SAT encodings did not
+finish.  These runs remain numerical evidence, not a theorem or committed
+artifact.
+
+The close-out pull also integrated proved THM-778/779.  Centered Beatty ranks
+now give the exact prime-seven wall schedule, while the token-walk criterion
+gives its exact collision-hop acceptance rule.  HYP-6845's proposed exit-lemma
+decision remains a claim stub.  Across both two- and seven-sheet fronts the
+faithful object is now a labelled incidence skew product with metric base,
+phase/endpoint schedule, sheet action, and continuation state; tournament
+nodes are diagnostic quotients unless a reconstruction lemma is supplied.
+
+---
+
 ## codex-2026-07-14-S7 -- THM-778 PROVED: continued fractions are the endpoint-transport language
 
 Re-audited the repository's continued-fraction threads from Sturmian sectors,
@@ -190,10 +238,10 @@ THM-774 additionally closes every quotient core `U subset [1,19]` with odd
 exceptions unbounded, complementary to THM-776's larger bounded-height square.
 The later safe-measure theorem that collided with the first-pushed folded-
 diamond THM-774 was preserved and renumbered THM-777.  THM-773's seven-sheet
-token polynomial, HYP-6840's verified one-seventh buffering law/eight-owner
-rainbow obstruction, and the claimed THM-778 centered-Christoffel continuation
-were connected to the two-primary work through a common labelled
-sheet-incidence skew product.
+token polynomial and HYP-6840's verified one-seventh buffering law/eight-owner
+rainbow obstruction were connected to the two-primary work through a common
+labelled sheet-incidence skew product.  Subsequent THM-778/779 proved the
+centered-Christoffel schedule and its token-walk acceptance rule.
 
 The exact remaining `s=2` target is now a scale-free transversal/noncontainment
 theorem for a primitive divisor-complete ten-comb, or quantitative bounds on

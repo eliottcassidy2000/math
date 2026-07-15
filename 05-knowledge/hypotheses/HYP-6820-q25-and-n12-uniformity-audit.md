@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, and two-sheet-exact for max(U)<=19 with unbounded odd exceptions and for max(A)<=100, but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on two complementary finite regions, and equipped with a uniform anchored phase-cell packet, but branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -21,6 +21,8 @@ depends_on:
   - THM-774
   - THM-775
   - THM-776
+  - THM-780
+  - THM-782
   - HYP-6750
   - HYP-6775
 related:
@@ -356,11 +358,29 @@ were independently regenerated.  This empties the entire two-sheet branch
 through height 100, but it does not prove that the transversal deficit persists
 when larger quotient teeth are admitted.
 
+THM-782 adds a genuinely scale-free metric stalk.  Every ten-speed quotient
+core has a `1/11`-deep time `t_0` and an anchored joint-phase return packet
+`B` with
+
+```text
+|B|>=72^(-10),       ||u b||<1/72,
+||u(t_0+b)||>1/13+1/10296       (u in U, b in B).
+```
+
+It also forces a component of `G_U` of length at least
+`72^(-10)/(20 max(U))`.  If the packet were tight, both the translated return
+packet and that component would have to lie in `H_(x,y)`.  This repairs the
+earlier missing uniform measure-floor statement without closing the branch:
+the constant is far below `8/117`, and the exact core-19 atlas has the explicit
+profile `|G_U|=41/858<8/117=|H_(1,9)|`.  The sharpened target is therefore
+structured phase-packet noncontainment, not scalar measure comparison.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
-with a binary safe-child map and divisor unit columns.  The runner tournament
-records which odd runner owns a sheet but forgets the simultaneous hitting
-number; the sheet tree records recursion but needs the incidence sidecar.
+with a binary safe-child map, divisor unit columns, and an anchored joint-phase
+return packet.  The runner tournament records which odd runner owns a sheet
+but forgets the simultaneous hitting number; the sheet tree records recursion
+but needs the incidence and phase-cell sidecars.
 
 ## E. Remaining proof obligation
 
@@ -373,7 +393,9 @@ The uniform theorem now has two explicit residuals:
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
    quantitative bounds on every dyadic seam guard strong enough to place the
-   reconstructed ten-core/full packet inside one of those finite bases.  At
+   reconstructed ten-core/full packet inside one of those finite bases, or
+   prove that an admissible folded diamond cannot contain a THM-782 anchored
+   heavy phase-cell packet.  At
    higher sheets, classify and rule out THM-769's persistent colour covers,
    beginning with the explicit `s=3` equality shells of THM-772.
 
@@ -424,7 +446,8 @@ deciding objects are therefore:
 - the off-sheet-runner by sheet incidence cover, with effective orders
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 - in the two-sheet equality packet, the folded half-frequency diamond together
-  with the exact locations of the quotient loose components.
+  with the exact locations of the quotient loose components and the labelled
+  phase-cell/anchor incidence of THM-782.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

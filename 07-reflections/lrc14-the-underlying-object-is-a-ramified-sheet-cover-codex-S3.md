@@ -1,8 +1,9 @@
 # LRC(14): the underlying object is a ramified sheet cover
 
-*codex-2026-07-14-S3/S4/S5 — synthesis after the `q<=25` refutation,
-binding-scale packet theorem, height-twelve owner census, and seven-exception
-endpoint correction.*
+*codex-2026-07-14-S3/S4/S5/S7/S9 — synthesis after the `q<=25`
+refutation, binding-scale packet theorem, height-twelve owner census,
+seven-exception endpoint correction, centered endpoint transport, and the
+uniform phase-cell return packet.*
 
 ## The failed shortcut exposed the missing coordinate
 
@@ -272,6 +273,7 @@ directions that fit together exactly.
 | folded diamond | opposite parity is `||a tau||+||b tau||>=11/13` | which odd runner owns which sheet |
 | dyadic deletion | every imprimitive deletion is a factor-2 seam | absolute scale of the quotient |
 | incidence dual | every height-100 odd pair needs 12 core teeth | widths and locations after minimal-clause compression |
+| joint phase cells | every ten-core contains an anchored `72^(-10)` simultaneous-return packet | absolute phase address and most endpoint incidence after anchoring |
 
 The unit-grid theorem says that the quotient core is arithmetically saturated,
 not generic.  The folded conjugacy says the two odd owners are really one
@@ -314,19 +316,39 @@ cap (minimum `41/858`), yet none is covered.  This is a direct certificate that
 the missing uniform statement is pointwise/incidence-theoretic, not a measure
 inequality waiting for the arithmetic filter.
 
+THM-780 and THM-782 nevertheless repair an important omission in that
+sentence.  Settled ten-runner loneliness supplies a `1/11`-deep time; a heavy
+cell in the `72^10` joint phase partition yields an anchored return packet `B`
+with
+
+```text
+|B|>=72^(-10),       ||u b||<1/72,
+||u(t_0+b)||>1/13+1/10296.
+```
+
+Consequently every `G_U` has a component of length at least
+`72^(-10)/(20 max(U))`.  A hypothetical folded cover must contain both this
+translated phase packet and the whole component.  The missing datum is no
+longer positive measure as such; it is whether this simultaneous-return
+geometry can fit the diamond's labelled teeth.
+
 The remaining uniform two-sheet statement can now be phrased without the
 historical clutter:
 
 > A primitive divisor-complete ten-comb, with its two odd folded frequencies
 > in the THM-772 width band, cannot hit every atom outside the folded diamond.
 
-There are two plausible proof shapes.  One is a scale-free lower bound of at
+There are now three plausible proof shapes.  One is a scale-free lower bound of at
 least eleven (the finite atlas suggests twelve) on the relevant transversal
 number.  The other is a quantitative descent theorem: bound every seam guard
 and then reconstruct the original ten-core/full packet inside a certified
-finite region.  A proof using only the measure cap `mu(H)<=8/117` would need a
-matching uniform lower bound for `mu(G_U)`; absent that, it loses the incidence
-pattern that the exact atlas shows is decisive.
+finite region.  The third is structured noncontainment: choose the deep time,
+heavy phase cell, and anchor so that the THM-782 return packet exits every
+admissible folded diamond.  A scalar lower bound now exists, but
+`72^(-10)<<8/117`; worse, the exact profile
+`|G_U|=41/858<8/117=|H_(1,9)|` shows that even exact measure comparison can
+pass while pointwise containment fails.  Incidence and phase structure remain
+decisive.
 
 ## The two-primary and seven-primary tournament threads meet
 
@@ -343,22 +365,25 @@ different only if the tournament is treated as the primary object.
   endpoint order, owner identity, metric base position, and carry/monodromy
   were quotiented away.
 
-The new eight-owner deck hunt HYP-6840 sharpens the same lesson.  At `c=7`,
-zero variance turns persistent coverage into a finite chamber condition: the
-eight owner tokens must hit all seven sheets on every chamber piece, and at an
-owner wall the other seven tokens must form a perfect rainbow.  The verified
-buffering law says that any partner covers asymptotically one seventh of an
-owner's exits, independent of its gcd stratum up to the exact gcd error.
-Therefore full blocking would require eight simultaneous near-disjoint
-seven-fold arithmetic-progression partitions.  Greedy, random, and annealed
-searches found no such object, but this is a quantified no-go hunt rather than
-a nonexistence theorem.
+The HYP-6840 hunt and THM-779 sharpen the same lesson at `c=7`.  THM-779 proves
+that persistent eight-owner coverage is exactly an integer token-walk
+condition: every chamber token multiset is surjective on `F_7`, every simple
+wall leaves a perfect rainbow, and simultaneous walls pierce immediately.
+After owner `a` walls, the next wall owner must lie in a forced collision pair.
+HYP-6840's verified buffering law independently says that any partner covers
+asymptotically one seventh of an owner's exits, up to the exact gcd error.
+Together these turn a putative blocker into synchronization of a centered
+mechanical owner schedule with a finite collision-hop transducer.
 
-This suggests a useful seven-primary obstruction rank: chamber collision debt
-plus wall rainbow defect.  It retains exactly what the two standard tournament
-gauges erase, and it is the prime-seven analogue of transversal deficiency in
-THM-776.  Classifying zero-rank states is now an exact-covering-system problem,
-not a question about whether one tournament node is sufficiently cyclic.
+THM-778 supplies the schedule losslessly through centered Beatty ranks and a
+Euclidean parity cocycle.  The adversarial census finds blocking runs through
+five walls, but this is not a universal exit bound.  HYP-6845 currently
+reserves a recurrence/flip-break attack on that exit lemma; until its claimed
+decision is proved, the uniform run bound and synchronized exceptional packets
+remain open.  The seven-primary obstruction rank is therefore collision debt
+plus wall-rainbow defect plus schedule/transducer synchronization, the prime-
+seven analogue of transversal deficiency and phase-packet containment on the
+two-sheet side.
 
 The common object is therefore a finite-state skew product over the circle:
 
@@ -393,10 +418,12 @@ transversal rank in the finite two-sheet atlas, protected-splice defect in the
 shallow prime-13 atlas, and token-polynomial divisibility in the seven-sheet
 atlas are three local shadows of such a rank.
 
-A concurrent claimed direction, THM-778, is aimed at the missing base dynamics
-on the seven-sheet side: encode pairwise midpoint-grid merges by centered
-Christoffel words and generate their quotient/remainder structure by the
-Euclidean algorithm, retaining the odd/odd tie block and cyclic carry.  If its
-global reconstruction is proved, it would complement the fibre polynomial of
-THM-773 exactly as the bad-atom order complements the folded diamond here.
-Its present status is a namespace reservation, not a theorem input.
+THM-778 now proves the missing base dynamics on the seven-sheet side:
+pairwise midpoint-grid merges are centered Christoffel words, the Euclidean
+algorithm transports their phase bit, and centered Beatty ranks reconstruct
+the full simultaneous-wall order.  THM-779 couples that word to the exact
+collision-hop acceptance rule.  Thus the remaining exit lemma is no longer
+“find the right tournament”; it is a precise non-synchronization theorem for a
+mechanical schedule acting on a labelled finite fibre.  This complements the
+two-sheet target exactly: there the remaining theorem is noncontainment of an
+anchored joint-phase packet in a folded incidence diamond.
