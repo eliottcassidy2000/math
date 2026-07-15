@@ -904,7 +904,44 @@ certificate clauses, and proof obligations.
   obstruction, then an action test under the THM-813 continued-fraction
   embeddings.  LRC metric fields remain an external stalk.
 
-## Recommended next three pulls
+### MPA-42 — Tropical Radon/Kakeya edge stalks at the seven-comb wall
+
+- **Delivered exact decomposition by THM-856/S15:** for prefix safe set `E`,
+  subtract `2mu(E)/13` from each restricted comb mass.  On edge `ij`, reduce
+  `(x_i,x_j)=g_ij(a_ij,b_ij)` and split its pair anomaly into the projective
+  mod-13 sawtooth
+  `[Q(a_ij+b_ij)-Q(b_ij-a_ij)]/(169a_ijb_ij)` and the endpoint pullback
+  discrepancy, bounded by `2c_E/g_ij`.  The Hunter lower bound is exactly
+  `(165-22m)mu(E)/169-sum_i s_i+MST(c)`; at `m=7` the baseline margin is
+  `11mu(E)/169`.
+- **Recursive edge classification:** the maximum-tree term is the tropical
+  Kirchhoff polynomial.  If `F_l` is the graph of edges above the `l`-th
+  credit threshold, its contribution is the threshold value times the jump
+  in graphic-matroid rank `m-kappa(F_l)`.  Only connectivity-changing levels
+  contribute, but a histogram of edge values is insufficient because it
+  loses their incidence on comb vertices.
+- **Connection to MPA-41 and THM-850:** the same typed failure occurs three
+  ways.  Factor defects need factor-node incidence, H gradients need their
+  target incidence, and Hunter credits need comb/prefix incidence.  The
+  chi-seven Radon transform is linear on typed carry atoms; the Hunter tree is
+  tropical after those atoms are formed.  Applying either scalarization too
+  early destroys the other operation.
+- **Pull:** enumerate the seven-comb vertex/edge colours on the exact
+  radius-seven prefix language, including rational-period words for the
+  single and endpoint anomalies.  Quotient by projective edge type only after
+  checking operation congruence under the next insertion/peel.  Classify
+  negative certificates by their Kruskal rank word and test whether every
+  recurrent class is an AP/mechanical-word stalk.
+- **Must preserve:** prefix component endpoints, comb vertex identity,
+  reduced pair ratio, common scale, mod-13 phase, endpoint discrepancy, and
+  the incidence of each credit in the threshold graphs.  Raw speeds,
+  differences, pair averages, Fano orbits, and blue/black metagraph colour do
+  not determine this LRC edge state.
+- **Deliverable:** an operation-stable finite projective edge language with a
+  positive Hunter certificate, or an exact residual grammar handed to the
+  THM-778 mechanical-word argument.
+
+## Recommended next four pulls
 
 1. Join `MPA-32/34/35/38`: THM-828 has completed THM-818's static join and
    isolated a punctured rank-four mirror-defect cube.  Apply the centered-CF
@@ -914,7 +951,11 @@ certificate clauses, and proof obligations.
    only after composing these operations.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
-3. Join `MPA-28/38/40`: extend THM-813's canonical reflection-orbit line action
+3. Join `MPA-41/42`: compute the typed carry-Radon ranks and the tropical
+   Kruskal rank words on the completed j=4 flood rows and the radius-seven
+   comb prefixes.  Search for a common operation-stable atom module before
+   comparing any Fano, blue/black, or projective quotient.
+4. Join `MPA-28/38/40`: extend THM-813's canonical reflection-orbit line action
    through the ten-wall centered-CF word, auditing which coarser edge/node and
    `rho`-saturated coefficient quotients satisfy fibre-purity under the
    composite; then form the literal-witness fibre product with THM-808's

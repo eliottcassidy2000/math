@@ -18,6 +18,29 @@ zonotopal finite-checking theorem of
 which bounds the relevant velocity sum by a linearly exponential quantity but
 does not itself settle this case.
 
+**S15 structural update.**  The metagraph, chi-seven, and Kakeya threads now
+share one exact preservation diagnosis, but none closes LRC(14).  Exact
+defect-factor refinement reconstructs literal arrows and reflection orbits
+through `n=7`; the full Hamiltonian-gradient multiset classifies merged nodes
+through `n=8`; path-relative complement needs a separate holonomy stalk; and
+the depth-11 chi-seven address simplex splits into a 48-dimensional residue
+base plus 30 A/B/C carry contrasts.  These are operation-specific codecs, not
+metric witnesses.  The j=4 computation remains only at its recorded partial
+progress (`171/2002` clean bodies at the last integrated audit), and the 21
+flood bodies retain an eight-dimensional edge sector invisible to point-star
+plus Fano-triangle sums.
+
+At the seven-comb wall the corrected Hunter state is now exact.  After
+subtracting independent single and pair densities, its lower bound is
+`11mu(E)/169-sum_i s_i+MST(c)` on a seven-node coloured graph.  Each edge
+colour retains reduced projective ratio, common scale, mod-13 sawtooth, and
+prefix-endpoint discrepancy; Kruskal's graphic-rank word determines the
+maximum-tree term.  This converts the next uniform step into a projective
+edge-language/mechanical-word problem, not a raw-speed or average-density
+inequality.  The four-far chart is four-dimensional only in its ordered far
+coordinates; owner, carry, wall chronology, and metric clearance remain a
+stalk over that cone.
+
 ## 0. The honest reduction
 
 LRC(14) = **NON-COVERING** (THM-366, via LRC(≤13), settled) + **COVERING**, and by

@@ -1,8 +1,8 @@
 ---
 id: THM-856
 title: Hunter tree functional at the seven-comb wall — the first-moment schema is empty, while the ideal independent-density Hunter coefficient is positive for seven combs and negative for eight; exact pair overlap is a two-sided mod-13 sawtooth around 4/169, so uniform radius-seven closure still requires projective-ratio and restricted-overlap control
-status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, and the `2c_E/g` projective pullback bound + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the radius-seven chart.
-source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee
+status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, the `2c_E/g` projective pullback bound, and the exact node/edge anomaly decomposition + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the radius-seven chart.
+source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge defect decomposition added by codex-2026-07-15-S15
 depends_on:
   - THM-815 Part C   # the recursion whose union bound dies at 7 combs
 related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), LRC14-FRONTIER item 3]
@@ -113,6 +113,68 @@ On every full cell `[j/g,(j+1)/g)`, multiplication by `g` maps the pullback of
 cells; bounding their actual and expected contributions by the cell length
 proves (3.4).  Thus common scale `g`, reduced ratio `(a:b)`, and the mod-13
 sawtooth are the natural edge coordinates.  Raw speeds alone are not.
+
+## 3.5 The exact node-coloured Hunter defect algebra
+
+The correction above admits a useful exact reorganization.  Let `e=mu(E)`
+and let `x_1,...,x_m` be the remaining comb frequencies.  Give vertex `i` the
+single-comb anomaly
+
+```text
+s_i = mu(E intersect D_(x_i)) - 2e/13.                  (3.5)
+```
+
+For every edge `ij`, write `x_i=g_ij a_ij`, `x_j=g_ij b_ij` with the reduced
+pair coprime, and define
+
+```text
+h_ij = [Q(a_ij+b_ij)-Q(b_ij-a_ij)]/(169 a_ij b_ij),
+eta_ij = mu(E intersect D_(x_i) intersect D_(x_j))
+         - e mu(D_(a_ij) intersect D_(b_ij)),
+c_ij = e h_ij + eta_ij.                                 (3.6)
+```
+
+Here `h_ij` is the projective mod-13 defect from independent pair density,
+while `eta_ij` is the endpoint/pullback defect and satisfies
+`|eta_ij|<=2c_E/g_ij`.  Substitution into Hunter--Kounias gives the exact
+decomposition of its lower bound on the uncovered part of `E`:
+
+```text
+L_H(E;x_1,...,x_m)
+ = e - sum_i mu(E intersect D_(x_i))
+     + max_T sum_(ij in T) mu(E intersect D_(x_i) intersect D_(x_j))
+ = (165-22m)e/169 - sum_i s_i + MST(c),                 (3.7)
+```
+
+where `MST(c)=max_T sum_(ij in T)c_ij`.  In particular, at the seven-comb
+wall,
+
+```text
+L_H = 11e/169 - sum_i s_i + MST(c).                     (3.8)
+```
+
+Thus the residual is not a statistic of seven raw speeds.  It is a coloured
+complete graph with vertex colours `s_i` and edge colours
+`(a_ij:b_ij,g_ij,h_ij,eta_ij)`, evaluated by a tropical spanning-tree
+character.  This is the precise sense in which pair data must remain joined
+to its endpoint incidences.
+
+There is also an exact recursive classification of the edge information that
+the Hunter evaluator uses.  Let `lambda_1>...>lambda_q` be the distinct values
+of `c_ij`, let `F_l={ij:c_ij>=lambda_l}`, and put
+`r_l=m-kappa(F_l)`, where `kappa` is the number of connected components of
+the threshold graph and `r_0=0`.  Kruskal's theorem gives
+
+```text
+MST(c)=sum_(l=1)^q lambda_l (r_l-r_(l-1)).               (3.9)
+```
+
+Only connectivity-increasing edge levels contribute, but which levels do so
+depends on their full incidence pattern.  For example, a connected graph of
+nonnegative `c_ij` edges implies `MST(c)>=0`; it does not follow from the
+number or average of nonnegative edges.  Equations (3.7)--(3.9) turn the open
+uniform step into a finite-type projective edge-classification problem once
+the rational-prefix periodic tables for `s_i` and `eta_ij` are fixed.
 
 ## 4. The periodicity lemma (the finite table for E-restricted masses)
 

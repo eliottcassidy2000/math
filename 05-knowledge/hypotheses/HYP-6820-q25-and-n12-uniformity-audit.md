@@ -600,6 +600,27 @@ sawtooth, and endpoint discrepancy on each tree edge.  THM-856's exact pilots
 show this functional certifies generic packets, not that all packets are
 closed.
 
+The S15 node/edge defect decomposition makes that state exact.  With
+`e=mu(E)`, put
+
+```text
+s_i=mu(E intersect D_(x_i))-2e/13,
+c_ij=e[Q(a_ij+b_ij)-Q(b_ij-a_ij)]/(169a_ijb_ij)+eta_ij,
+```
+
+where `(a_ij,b_ij)` is the reduced pair and `eta_ij` is its restricted
+endpoint discrepancy.  Then for `m` remaining combs the Hunter lower bound is
+
+```text
+(165-22m)e/169-sum_i s_i+MST(c).                       (B8)
+```
+
+At seven combs the baseline is `11e/169`.  Kruskal rewrites `MST(c)` as the
+sum of edge-credit thresholds times jumps in the graphic rank
+`m-(number of threshold-graph components)`.  Thus the live finite quotient is
+a vertex-period and edge-threshold incidence language.  An edge histogram or
+average pair density is not sufficient.
+
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
 creates different handoffs; neither coarse observation is insertion-Markov.

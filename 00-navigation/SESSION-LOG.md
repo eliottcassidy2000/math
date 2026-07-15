@@ -1,4 +1,60 @@
 ## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive H6 closed except `2[12]`; fourteen primitive-core H6 rows closed; shell template, H-drift, toothpick, and Fano carriers decided
+## codex-2026-07-15-S15 -- typed metagraph preservation: node-coloured defect closure, Walsh H drift, path holonomy, chi7 carry-Radon algebra, and the tropical Hunter defect graph
+
+Prompt (owner): take the 14-runner/metagraph mathematics further; preserve
+iso-class nodes, tilings, blue/black lines, factor edges, the three signed B3
+recursions, H drift, toothpick/ladder structure, Fano/chi7, j=4 floods, and
+Kakeya needles; test the claimed all-n black self-line law.
+
+HONEST VERDICT: LRC(14), primitive/all-scale H6, the radius-seven chart, and
+the full j=4 sweep remain open.  The session instead identified the exact
+typed state needed by several operations and removed three misleading scalar
+extrapolations.
+
+METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
+colour, refined by its ordered two-factor deck, recovers every literal arrow
+at n=3 and n=5..7; its inversion-symmetric deck recovers reflection orbits.
+THM-848 gives the all-n Hamiltonian-path Walsh needle formula and corrected
+energy EGF.  The gradient multiset classifies every merged node through n=8,
+but target incidence is still required for transport.  THM-854 isolates the
+marked-path square holonomy lost by class quotients.  The n=8 census in
+THM-849 refutes `2 selfK=SC`: `404 != 176`; only Klein-four divisibility and
+the path-norm obstruction survive.
+
+CHI7/LADDER/FLOOD: THM-850 makes `(1,2,4)` the operation charge behind the
+augmented chi7 word and proves the seven-periodic cyclotomic specialization.
+At depth 11, the 78 B3 addresses have a 48-dimensional residue base and 30
+A/B/C carry contrasts.  Six reflection-invariant Radon directions recover
+all four carry channels; five cannot.  The 21 j=4 floods are `E(K_7)`, but
+point-star plus Fano-triangle sums leave an eight-dimensional edge sector
+containing exact `m,V1` curl.  THM-841's full ladder is not toothpick
+self-similar: a dyadic chi-labelled stalk survives, with primitive odd
+reciprocals as its source term.
+
+KAKEYA/HUNTER: live pulls integrated the corrected THM-856 pair law.  The new
+exact defect form is
+`L_H=(165-22m)mu(E)/169-sum_i s_i+MST(c)`, hence baseline `11mu(E)/169` at
+seven combs.  Vertices retain restricted single-comb anomalies; edges retain
+reduced projective ratio, common scale, mod-13 sawtooth, endpoint discrepancy,
+and incidence.  Kruskal rewrites the tree term by connectivity-rank jumps of
+edge-threshold graphs.  This is a finite-type projective edge-language target,
+not a raw-speed inequality.  It also supplies the nonlinear analogue of the
+factor/gradient preservation rule: marginal values are insufficient when
+their incidence with sources, targets, or endpoints is forgotten.
+
+RECURSION: the full `A+B+C-D-E-F+G` word is exact typed B3 Cech descent.  Its
+even half is the Reynolds-invariant `A+B-C` chart.  The odd chart must retain
+the geometrically distinct equal-size corner, written
+`A+B+D-C-E-F+G`; scalar cancellation of C against D loses transport.
+
+ARTIFACTS: THM-848/849/850/851/854/856; five exact S15 scripts plus the
+chi7 charge referee and their stored outputs; the holistic reflection
+`node-coloured-defect-needles-radon-and-the-typed-metagraph-codex-S15.md`;
+MPA-42 and frontier/backlog/index corrections.  Fast exact replays and syntax
+checks passed; the expensive n=8 H-gradient and self-line outputs were reused
+from their hash-guarded exact runs.
+
+## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive scale-one H6 closed except `2[12]`; exact shell-five and H-drift refinements; toothpick and Fano shortcuts decided
 
 Prompt (owner): prove the n=12 sporadic branch empty; work longer with frequent
 pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the
@@ -119,10 +175,17 @@ than overwriting them.
 > wherever it conflicts with this correction.
 
 ## opus-2026-07-15-S312 -- OVERNIGHT MARATHON: n=8 refutation triple-certified (404; my independent third route; Aut-weighted 416 diverges) + THM-854 witness parity law (odd-order witnesses = mod-2 path-decompositions of K_n iff n = 1,2 mod 4; NEVER involutions => MISTAKE-150 corrects THM-852(ii)) + F6 moment closure/FD-exact (THM-855, renumbered from the 810 collision) + THM-856 historical radius-seven claim (WITHDRAWN by the live-pull referee above) (HYP-6910, renumbered from the 6895 collision)
+## opus-2026-07-15-S312 -- HISTORICAL SNAPSHOT, SCOPE CORRECTED BY S14/S15: n=8 refutation triple-certified; THM-854 path-norm necessity; THM-855 F6 closure; THM-856 Hunter functional and finite pilots, not radius-seven asymptotic closure
 
 Prompt (owner): prove the 2selfK = SC bijection, check n=8; long overnight, many pushes/
 pulls, integrate the fleet; toward LRC(14) completion via tournament/metagraph analysis
 and formula generation.
+
+**S14/S15 correction to the historical text below:** the path-norm congruence
+is necessary, not an existence theorem; the global overlap floor, Bezout
+minimum, distance-eight threshold, sampled AP floor, and radius-seven closure
+claim are refuted or unproved.  The current statements are THM-854 and the
+corrected THM-856, summarized in the two newer session entries above.
 
 ARC 1: kps S128 refuted the law mid-session (404 != 176); my n=8 run (subH classifier,
 third route) CONFIRMS 404/8/412; codex-S14 concurs. NEW: weighted qf 416 != 412 -- first
@@ -162,9 +225,15 @@ even); H-drift second moment (codex); the level-mean potential lemma stands.
 FILES: THM-854/855/856; MISTAKE-150; HYP-6910; 6 result files. opus; S312.
 
 ---
-## kind-pasteur-2026-07-15-S128 (cont.13, overnight) -- THE BLACK SELF-LINE LAW IS REFUTED AT n=8: 2selfK = SC fails (404 != 176; pipeline certified against 8/12/88) -- opus S311's 'all n >= 5' law was a small-n coincidence; WHAT SURVIVES: the Klein-four skeleton (404 = 4x101), the INVOLUTION LEMMA (odd-|Aut| coset => involutive witnesses; at odd n ALL quasi-fixed classes have trivial Aut), selfB(8) = 4 (blue self-lines are even-n only); the new open object selfK(n) = 4, 6, 44, 202
+## kind-pasteur-2026-07-15-S128 (cont.13, overnight) -- HISTORICAL SELF-LINE REFUTATION; its involution corollary is subsequently corrected by THM-854
 
 Prompt (owner): prove the 2selfK = SC bijection and check at n=8; long overnight session, many pushes/pulls, integrate concurrent agents, toward LRC(14).
+
+**S15 correction:** the odd-coset lemma requires the realizer square/normalizer
+premise.  Trivial endpoint automorphism alone does not force an involutive
+realizer; every audited direct black realizer through n=8 has nontrivial
+path-relative square holonomy.  The census and Klein-four divisibility below
+remain valid.
 
 THE CHECK CAME FIRST AND KILLED THE PROOF TARGET (the right order): built the two-pass n=8 engine (invariant filter (sorted scores, c3): 2,097,152 tilings -> 195,004 survivors; exact iso with degree-bucket backtracking) and the Burnside-affine engine (per sigma, 'sigma T(t) = T(kappa t)' is an affine GF(2) system; sum of 2^dim = Aut-weighted count W). RESULTS: n=8 non-gridsym quasi-fixed = 404 != 176 = SC(8); total X = 412 != 184 = SC + 2selfB (both S311 laws fail). CERTIFICATION: the identical pipeline reproduces 8/12/88 at n=5,6,7 and gridsym-qf = 0 at odd n (opus's counts, independently). PUSHED IMMEDIATELY (opus-S312 runs the same prompt concurrently -- stopped them building a bijection that does not exist; also flagged their HYP-6895 reuse, kps cont.12 is first-pusher).
 
@@ -177,7 +246,7 @@ J=4: 171/2002 complete, 171/171 clean (light-first steady; floods queued).
 FILES: THM-852 (structure + refutation), HYP-6905, thm852_selfline_sc_bijection_kps_S128c13.py/.out; two checkpoints pushed mid-session. -> opus-S312 (the law is dead as stated -- redirect to the selfK decoder or the involution census; your S311 HYPs need the n=8 bound noted; HYP-6895 is kps's), opus/codex/klein (the Burnside-affine engine is reusable for ANY twisted-fixed-point count: affine GF(2) per sigma, exact, n=8-fast), all (LRC(14) main line unaffected: j=4 accrues; the metagraph formula atlas gained the involution lemma + lost a false law -- net positive).
 
 ---
-## opus-2026-07-15-S311 -- THE TRANSITIVE STAR BY FORMULA (neighbour H-multiset = {2^(g-1)+1 : weight n-g}, exact n=4..7) + THE ALL-n BLACK SELF-LINE LAW (2*selfK = SC for ALL n >= 5 -- the odd-n restriction was an artifact; verified 8, 12, 88) + the 1001 = 7x11x13 prime-lens note + the toothpick numeration-recursion lens filed (HYP-6890)
+## opus-2026-07-15-S311 -- HISTORICAL SNAPSHOT: transitive-star formula survives; all-n self-line and toothpick extrapolations are refuted at n=8 and dyadic depth 16
 
 Prompt (owner): work the named next steps; merge 1001-related past work; inspirations
 arXiv:1004.3036, github dobriban/BH, OEIS A139250; keep working toward the metagraph
