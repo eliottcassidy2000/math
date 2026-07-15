@@ -6,7 +6,7 @@ source: codex-2026-07-14-S9
 depends_on:
   - HYP-6825
   - THM-781
-related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787, HYP-6855]
+related: [THM-550, THM-646, THM-773, THM-778, THM-784, THM-787, THM-790, HYP-6855]
 artifacts:
   - 04-computation/merged_metagraph_transitivity_flow_codex_S9.py
   - 05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.out
@@ -476,8 +476,10 @@ counts **converse-merged nodes**.  At `n=7`, for example, its 368 pure-black
 classes form the 184 pure-black nodes reported here.  Line-instance totals and
 energy/`C3` spectra agree exactly.
 
-HYP-6855/THM-790 was concurrently reserved for a centered-score-shift
-antisymmetry proof, the same half-tiling count, and an `n=8` check.  Its
-predicted 2,048 blue lines and parity/max values agree with (8); the explicit
-four-bin `n=8` distribution above is the stronger common target.  That
-independent proof route is complementary rather than a new normalization.
+THM-790 independently proves the centered-score-shift antisymmetry, the same
+half-tiling count, and the endpoint-leg localization of the transitive drop.
+Its 2,048-blue-line `n=8` prediction and parity/max values agree with (8); the
+explicit four-bin `n=8` distribution above is the stronger common target.
+The currently stored `n=8` class script stops at 6,874 rather than A000568's
+6,880 classes, so no `n=8` node-phase or black-flow table is certified by that
+run.  This does not affect either general blue proof.

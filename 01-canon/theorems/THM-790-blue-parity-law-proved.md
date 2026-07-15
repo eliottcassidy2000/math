@@ -1,7 +1,7 @@
 ---
 id: THM-790
 title: The blue parity law PROVED — grid-symmetric tilings have antisymmetric score-shift and centered-score vectors; Δx = 8·Σ_half a(d+a); odd n forces Δx ≡ 8 (mod 16) (blue never level), even n forces Δx ≡ 0 (mod 16); the transitive pipe drains AT THE LEGS with drop exactly 8(n−2); the half-tiling model counts blue tilings 2^{(m+f)/2}; node law: non-pure-black classes have complement-symmetric score multisets
-status: PROVED (all parts; every lemma referee-verified on ALL blue tilings n = 4..7) + n=8 CHECK (predictions logged before the run; outcome recorded below)
+status: PROVED (all algebraic parts; every lemma referee-verified on ALL blue tilings n=4..7) + n=8 CLASSIFICATION CHECK INCOMPLETE (stored classifier has 6874/6880 classes; structural blue predictions unaffected)
 source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
 depends_on:
   - THM-787   # the flow study this proves the laws of
@@ -100,21 +100,24 @@ a_1(d_1 + a_1) = (n−2)(−(n−1) + n−2) = −(n−2):
 
 ## The predictive-formula ledger (what can be written down at EVERY n)
 
-1. The transitive node: fiber 1, one line, blue, drop 8(n−2), landing mixed
-   (its partner class contains the grid-symmetric near-balanced tiling).
+1. The transitive node: fiber 1, one line, blue, drop 8(n−2).  Its landing node
+   is mixed in the certified `n=4..7` atlases; a general mixed-landing proof is
+   not supplied by L1--L6.
 2. Blue tilings/lines: 2^{(m+f)/2}, 2^{(m+f)/2−1}.
 3. Blue Δx spectrum ⊂ {0 or 8 (by n's parity), then step 16, max 8(n−2)}.
 4. Non-pure-black ⟹ complement-symmetric score multiset (L2) — a per-node
    exclusion computable from the score sequence alone.
-5. All axis drops (both colours) ≡ 0 mod 8 (L3's argument applies to any
-   tiling once summed with its reflection... verified n ≤ 8; the blue case is
-   proved above).
+5. All axis drops (both colours) are `0 mod 8` for every `n` by THM-785's
+   identity `x=n(n^2-1)/3-8C3`; the blue refinement is proved above.
 
 ## The n = 8 check
 
 Predictions logged before the run: 6,880 classes (A000568 certification);
 4,096 blue tilings, 2,048 blue lines; blue |Δx| ≡ 0 (mod 16), max 48; the
-transitive pipe 168 → 120. Outcome: see
-05-knowledge/results/metagraph_flow_n8_check_opus_S305.out (recorded in the
-session log; the run also delivers the n=8 type histograms and black-flux
-tables extending THM-787's tables).
+transitive pipe 168 → 120.  The stored run currently stops at 6,874 invariant
+buckets and fails its 6,880-class assertion before producing phase or black-
+flux tables.  It is therefore an incomplete classifier, not an `n=8`
+certification.  The 4,096 blue masks, 2,048 blue lines, parity, and maximum are
+already consequences of L4--L6 and do not depend on that run.  THM-785 further
+predicts the exact blue `|Delta C3|` histogram
+`{0:640,2:960,4:384,6:64}`.
