@@ -229,6 +229,12 @@
   grid has a unit numerator deep for the entire possible-lift pool.  Continue
   with a U-dependent or multi-column signed-lift/divisor incidence, or a
   non-endpoint denominator; do not retry the uniform one-column template.
+  THM-836's new all-size template obstruction proves that on
+  `15,37,41 mod 52` neither endpoint grid `q=5d,13d` admits one unit numerator
+  deep for every admissible lift choice.  Therefore do not search for a
+  direct analogue of the `11 mod 52` column.  Continue with a numerator
+  depending on the actual lift packet, a multicolumn incidence certificate,
+  or a non-endpoint denominator, retaining signed-lift/divisor/parity data.
 - **Open shallow theorem:** THM-845 has finished both THM-820 scale-one
   branches.  Prove the arbitrary-scale radius-five descent, transporting the
   proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
@@ -240,6 +246,13 @@
   remain.  First combine left/right cusp handoffs on the six product-`1/16`
   rows, then use divisor/zero-debt pins on `f<=2`, and transport across scale.
   In parallel, audit any
+  AP orbit `2[12]` survives.  Classify the remaining primitive H6 rows and
+  transport across scale.  THM-815 C.2 now supplies the first exact grading:
+  14 of the 20 primitive-core rows with three full antipodal missing-label
+  pairs are loose.  The live primitive-core bank is 903 rows with at most two
+  pairs plus six product-`1/16` three-pair rows; the exceptional mixed-parity
+  packet branch is separate.  Join the oriented AP-germ handoff cycle word to
+  the Hunter/Kruskal edge word before extending the recursion. In parallel, audit any
   proposed compression by its literal kernel pair.  THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while

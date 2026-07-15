@@ -920,21 +920,32 @@ certificate clauses, and proof obligations.
   in graphic-matroid rank `m-kappa(F_l)`.  Only connectivity-changing levels
   contribute, but a histogram of edge values is insufficient because it
   loses their incidence on comb vertices.
+- **Incoming cycle-dual by THM-815 C.2:** an antipodal AP cusp gives each
+  owner vertex an exact germ cap `B_r(P)` and each oriented provider edge a
+  multiplicative weight `c([as])/2`.  If every vertex avoids its cap, a
+  selected-provider functional digraph contains a cycle whose weight product
+  must be at most one.  In logarithmic coordinates this is the min-plus cycle
+  companion to Hunter's max-plus tree.  It is not a tournament: opposite
+  germ gauges may give both arrows or neither.  This closes 14 of the 20
+  three-antipodal-pair primitive-core H6 rows and leaves 909 primitive-core
+  rows plus the exceptional mixed-parity branch.
 - **Connection to MPA-41 and THM-850:** the same typed failure occurs three
   ways.  Factor defects need factor-node incidence, H gradients need their
   target incidence, and Hunter credits need comb/prefix incidence.  The
   chi-seven Radon transform is linear on typed carry atoms; the Hunter tree is
   tropical after those atoms are formed.  Applying either scalarization too
   early destroys the other operation.
-- **Pull:** enumerate the seven-comb vertex/edge colours on the exact
-  radius-seven prefix language, including rational-period words for the
-  single and endpoint anomalies.  Quotient by projective edge type only after
-  checking operation congruence under the next insertion/peel.  Classify
-  negative certificates by their Kruskal rank word and test whether every
-  recurrent class is an AP/mechanical-word stalk.
+- **Pull:** enumerate the seven-comb vertex/edge colours on the 903 `f<=2`
+  rows, six open `f=3` rows, and exceptional mixed-parity branch, including
+  rational-period words for the single and endpoint anomalies.  Join each
+  Kruskal rank word to its directed AP-handoff cycle word.  Quotient by
+  projective type only after checking operation congruence under the next
+  insertion/peel; test whether every recurrent negative tree class is an
+  expanding handoff class or an AP/mechanical-word stalk.
 - **Must preserve:** prefix component endpoints, comb vertex identity,
   reduced pair ratio, common scale, mod-13 phase, endpoint discrepancy, and
-  the incidence of each credit in the threshold graphs.  Raw speeds,
+  the incidence of each credit in the threshold graphs; for AP pins also keep
+  cusp orientation, germ cap, provider direction, and height parity. Raw speeds,
   differences, pair averages, Fano orbits, and blue/black metagraph colour do
   not determine this LRC edge state.
 - **Deliverable:** an operation-stable finite projective edge language with a

@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, while primitive H6 remains open; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class now uniformly excluded; global emptiness remains OPEN in unbounded-order H5 descent, primitive/all-scale H6, uniform radius/sum-arc exclusion or transport, the remaining `s=5` deep-shell classes, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, and 14 of 923 primitive-core H6 label rows are now closed by antipodal AP-pin handoff; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and the universal single-column endpoint-grid template refuted in the other three; global emptiness remains OPEN in unbounded-order H5 descent, the remaining 909 primitive-core H6 rows plus the exceptional mixed-parity branch, arbitrary-scale H6 transport, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-815 C.2 closes 14 of the 20 primitive-core H6 rows with three full
@@ -564,19 +564,23 @@ f=0,1,2,3:                 63,480,360,20.                (B6a)
 ```
 
 Exactly `2f` nonzero points of the thirteenth grid lie in the retained-core
-strict-safe set.  Comparing each oriented cusp germ with its owner tooth gives
-a height-independent weighted handoff digraph.  Cycle products close six of
-the twenty `f=3` rows and force `u_5=18` and/or `u_6=19` in eight others.  Ten
-fixed-coordinate longest-component trees then close those eight rows in
-`3,699` exact states, with aggregate depth counts
-`10,228,2176,1236,49,0` and no covering prefix.  Hence fourteen `f=3` rows
-are uniformly loose and the primitive-core row bank falls from 923 to 909.
-The remaining bank is 903 rows with `f<=2`, six product-`1/16` `f=3` rows,
-and the separate odd-label row with mixed height parity.  The latter can be a
-primitive packet although its retained core has gcd two, so the global open
-label-pattern count is 910, not 909.  The cusp count stratifies the bank but
-does not quotient it: it forgets pair signs, exact endpoints, divisor
-obligations, heights, and component overlap.
+strict-safe set. At an oriented AP cusp the owner has an exact germ cap
+`B_r(P)` and provider edge `r->s` has multiplier `c([as])/2`. If every owner
+evades its cap, a selected provider digraph contains a directed cycle whose
+multiplier product must be at most one. The twenty `f=3` rows have
+minimum-cycle-product census `1/16:6, 1:2, 3/2:12`; the twelve expanding rows
+and two equality rows therefore force a cap. In six of those fourteen rows no
+proper lift satisfies the cap, so they close immediately. In the other eight,
+the cap forces `u_5=18` and/or `u_6=19`; ten fixed-coordinate
+longest-component trees close those slices in `3,699` exact states, with
+aggregate depth counts `10,228,2176,1236,49,0` and no covering prefix. Hence
+the primitive-core row bank falls from 923 to 909. The remaining bank is 903
+rows with `f<=2`, six product-`1/16` `f=3` rows, and the separate odd-label
+row with mixed height parity. The latter can be a primitive packet although
+its retained core has gcd two, so the global open label-pattern count is 910,
+not 909. The cusp count is a routing grade, not a quotient: it forgets pair
+signs, germ owners, exact endpoints, divisor obligations, heights, and
+component overlap.
 
 At seven remaining combs THM-815's single-comb discrepancy coefficient changes
 sign.  THM-856 proves the correct second-order functional is the

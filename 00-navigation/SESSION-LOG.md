@@ -6,10 +6,11 @@ iso-class nodes, tilings, blue/black lines, factor edges, the three signed B3
 recursions, H drift, toothpick/ladder structure, Fano/chi7, j=4 floods, and
 Kakeya needles; test the claimed all-n black self-line law.
 
-HONEST VERDICT: LRC(14), primitive/all-scale H6, the radius-seven chart, and
-the full j=4 sweep remain open.  The session instead identified the exact
-typed state needed by several operations and removed three misleading scalar
-extrapolations.
+HONEST VERDICT: LRC(14), the remaining primitive/all-scale H6 branches, the
+radius-seven chart, and the full j=4 sweep remain open.  The session instead
+identified the exact typed state needed by several operations, removed three
+misleading scalar extrapolations, and integrated a live closure of fourteen
+primitive-core H6 label rows.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
@@ -42,6 +43,17 @@ not a raw-speed inequality.  It also supplies the nonlinear analogue of the
 factor/gradient preservation rule: marginal values are insufficient when
 their incidence with sources, targets, or endpoints is forgotten.
 
+LIVE-PULL H6 DUAL: THM-815 C.2 turns each antipodal AP cusp into a vertex germ
+cap and each oriented owner/provider handoff into a multiplicative edge.  If
+all caps are evaded, a directed cycle of product at most one is necessary.
+In logarithmic coordinates this is the min-plus cycle dual of Hunter's
+max-plus spanning tree.  It closes 14 of the 20 three-antipodal-pair rows,
+leaving 903 rows with at most two pairs, six open three-pair rows, and the
+exceptional mixed-parity branch.  The accompanying THM-836 pull also proves
+that no universal one-numerator endpoint-grid column can close the remaining
+shell-five congruence classes; future certificates must be lift-dependent,
+multicolumn, or off the endpoint grids.
+
 RECURSION: the full `A+B+C-D-E-F+G` word is exact typed B3 Cech descent.  Its
 even half is the Reynolds-invariant `A+B-C` chart.  The odd chart must retain
 the geometrically distinct equal-size corner, written
@@ -51,8 +63,9 @@ ARTIFACTS: THM-848/849/850/851/854/856; five exact S15 scripts plus the
 chi7 charge referee and their stored outputs; the holistic reflection
 `node-coloured-defect-needles-radon-and-the-typed-metagraph-codex-S15.md`;
 MPA-42 and frontier/backlog/index corrections.  Fast exact replays and syntax
-checks passed; the expensive n=8 H-gradient and self-line outputs were reused
-from their hash-guarded exact runs.
+checks passed, including the pulled AP-pin and shell-template audits; the
+expensive n=8 H-gradient and self-line outputs were reused from their
+hash-guarded exact runs.
 
 ## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive scale-one H6 closed except `2[12]`; exact shell-five and H-drift refinements; toothpick and Fano shortcuts decided
 

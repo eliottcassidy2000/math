@@ -146,7 +146,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Exact liars show that fixed anchors, raw component tournaments, exception-divisor grids, and signed residue support all lose the escape predicate. THM-803 now constructs the exact all-component selector on `K_U=E_U+closure(R_U)` and a sharp row for which every grid and global maximizer is silent but the nonmaximal component `7/22` escapes. The remaining theorem is uniform failure or incompatibility of those finite selector obligations, not construction of the selector. | THM-782/789/797/803 + exact trap/erosion-liar/anti-grid/component certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every effective-order-at-most-twelve common-sheet H5 survivor language (all-one, all-three, and mixed one-plus-three); the whole nonprimitive scale-one H6 slice except the doubled AP equality; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-844/845/847 make the bounded H5 sheet bank empty; THM-815 C.1 contracts nonprimitive H6 exactly. THM-840 proves exact endpoints are Markov only for monotone insertion; reversible/transport operations need the labelled tooth bank. Still open are common-sheet H5 languages with an order above twelve and other unbounded deck ramifications, primitive scale-one H6 and arbitrary-scale H6 transport, and the deeper branches. On the deep side THM-824/831 classify the radius scalar and ternary switch boundary, while THM-836 excludes shells `s=1,3`, classifies local `s=5`, and uniformly eliminates its `d=11 mod 52` class; `15,37,41 mod 52` remain open uniformly. Remaining: unbounded-order arbitrary-scale H5 descent; primitive/all-scale H6; uniform radius/sum-arc exclusion or transport; the dyadic/collar residual; and higher sheets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every effective-order-at-most-twelve common-sheet H5 survivor language; the nonprimitive scale-one H6 slice except the doubled AP equality; 14 primitive-core H6 label rows; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-844/845/847 empty the bounded H5 sheet bank; THM-815 C.1/C.2 leave 909 primitive-core H6 rows plus the exceptional mixed-parity branch. Exact endpoints are Markov only for monotone insertion. On the deep side THM-824/831 classify the radius/switch scalar, while THM-836 excludes shells `s=1,3`, uniformly eliminates `d=11 mod 52` at `s=5`, and proves that no `U`-independent single unit numerator on `q=5d` or `13d` can close the other three classes. The classes `15,37,41 mod 52` remain open and now require a lift-dependent, multicolumn, or non-endpoint certificate. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -549,8 +549,10 @@ one. The nonprimitive H6 contraction leaves `2[12]` as its only possible
 tight row.  Inside the primitive-core atlas, AP-cusp handoff cycles and ten
 fixed-coordinate trees close fourteen of the twenty `f=3` rows; 909
 primitive-core patterns plus the exceptional mixed-parity odd-label branch
-remain. Unbounded-order H5 decks, primitive/all-scale H6, deep two-sheet, and general
-higher-sheet branches remain.
+remain, for 910 open label patterns globally. Unbounded-order H5 decks, the
+remaining primitive and arbitrary-scale H6 transport, deep two-sheet, and
+general higher-sheet
+branches remain.
 
 For the historical viewpoint atlas behind this synthesis, use
 `00-navigation/LRC-LENS-MAP.md`; for the current predicate-preserving carrier,
@@ -565,7 +567,8 @@ claim that every listed analogy has theorem status.
 > doubled AP, and fourteen three-antipodal-pair primitive-core H6 rows are
 > closed.  The live obstruction is unbounded-order
 > arbitrary-scale deck ramification plus signed-cell/component compatibility
-> in primitive H6 and the deep and higher-sheet branches.**
+> in the remaining 909 primitive-core H6 rows, the mixed-parity branch, and
+> the deep and higher-sheet branches.**
 
 *Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
 THM-768--770, THM-794/795/797/800--804/806/807/810/815--817/820--824/831/836/837/840/844/845/847,
