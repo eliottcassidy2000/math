@@ -1,0 +1,60 @@
+========================================================================================
+PART A -- exact H-drift endpoint and length-weighted OCF formula
+========================================================================================
+identity: E[Delta H|T] = (a_(n-2)-(n-1)H)/C(n,2)
+OCF form: E[Delta H|T] = 2*(K-nH)/C(n,2)
+K = sum_I 2^(|I|+f_I) = 2^(n-1) sum_I prod_(C in I) 2^(2-|C|)
+n=4 specialization: E[Delta H|T] = 2*(3-H)/3
+n=5 specialization: E[Delta H|T] = (12-H-6*t5)/5
+n=4: rows=8 H-fibres=3 split-fibres=0 {}
+n=5: rows=64 H-fibres=7 split-fibres=1 {15: (Fraction(-21, 5), Fraction(-3, 1))}
+n=6: rows=1024 H-fibres=19 split-fibres=5 {9: (Fraction(12, 5), Fraction(4, 1)), 15: (Fraction(12, 5), Fraction(4, 1)), 23: (Fraction(-4, 15), Fraction(4, 3)), 33: (Fraction(-4, 1), Fraction(-12, 5)), 37: (Fraction(-92, 15), Fraction(-68, 15))}
+first H-only obstruction: n=5, H=15; t5=2 gives -3, t5=3 gives -21/5
+proof: each Hamiltonian path is destroyed once for each of its n-1 arcs;
+orders with one backward adjacency are created by flipping their unique bad arc.
+THM-062 gives a_(n-2)=sum_I 2^|I|*(2^(f_I+1)-n-1),
+while H=sum_I 2^|I|; subtraction gives the displayed OCF formula.
+n=6 obstruction to pointwise mean reversion: E[H]=45/2 but H=23 has drift 4/3 or -4/15.
+
+========================================================================================
+PART B -- n=8 corrected black-self-line law
+========================================================================================
+fixed_path_tilings=2097152
+ordinary_classes=6880
+self_converse_classes=176
+grid_symmetric_tilings=4096
+quasi_fixed_tilings=412
+blue_quasi_fixed_tilings=8
+black_quasi_fixed_tilings=404
+blue_self_lines=4
+black_self_lines=202
+two_black_self_lines_equals_SC=False
+black_quasi_fixed_equals_SC=False
+free_black_Klein_four_orbits=101
+SC_divided_by_four=44
+carrier_classes=162
+self_converse_carrier_classes=2
+non_self_converse_carrier_classes=160
+self_lines_per_carrier_histogram={1: 136, 2: 19, 3: 2, 4: 3, 5: 2}
+Klein_four_orbits_with_SC_carrier=3
+Klein_four_orbits_with_non_SC_converse_pair=98
+Klein-four target: SC classes -> black self-lines must be 2-to-1;
+after quotienting black lines by reflection, four SC classes are required per free V4 orbit.
+
+ASSUMPTION CHALLENGE / TOURNAMENT ANALYSIS
+drift vertices are odd-cycle collections and endpoint coefficients, not runners or raw arcs;
+self-line vertices are ordinary-class equalities, kappa-lines, and free V4 orbits.
+H alone destroys cycle-length occupancy; the converse-merged atlas destroys same-vs-converse.
+No joint carrier tournament is formed: drift exactness and ordinary-class equality are different predicates.
+Within the drift predicate, the exactness/compression carrier order is
+length-weighted OCF K > endpoint pair (H,a_(n-2)) > direct flip ledger > H-only;
+fingerprint: transitive score histogram {0:1,1:1,2:1,3:1}, cycles=0, SCCs=4, HP=1.
+
+PROVENANCE
+legacy_n8_classifier_sha256=283877ea71d18ba3e1467d4eb0b78a67a5caef884fa4ef08438d7d9acec3229f
+n8_atlas_export_sha256=d0ba71ffa9dbb0cde82037ee0456bfef429413acdea863b854386237c4ab5169
+THM062_sha256=0627573950a6958856d72064c9acae0a69a8360e7bbeb0a502629bf0224fa492
+THM830_sha256=abf03828bb5d1e56c5e464037ac406b0a56f05203835c796c5b95d4fd43825b3
+THM833_sha256=70eb7b374c01589ca91f0e64833d396eb06dc3270f28bee99960a4e720a9a87a
+certified_merged_atlas_sha256=30debad3387a4ea0ef51108ea132115efda2ac2fcdfcc2c5c1d4d23155095835
+script_sha256=f241a9bdad08a5b4f6864ed5544f5158d38cf7c3271c068a1735289eb414b51d
