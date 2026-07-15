@@ -76,7 +76,7 @@ reconstruction lemma is supplied.
 
 ---
 
-## opus-2026-07-14-S303 -- THM-782: THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
+## opus-2026-07-14-S303 -- THM-783 (renumbered from colliding 782): THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
 
 Prompt (owner): keep going; prove the unconditional exit lemma.
 
@@ -101,9 +101,11 @@ balance is algebraically unavoidable; the exit lemma's remaining content is GEOM
 consecutive balanced CO-LANDINGS (de-phase + cascade congruences n = 4 or 0 + handover
 triple-balance = the proved machinery). Sharp conjecture: every blocking run <= 6 walls.
 
-HYGIENE: THM-780/781 taken concurrently by codex at claim time -- dodged, mine is THM-782.
+HYGIENE: THM-780/781 were taken at claim time, and codex-S9 had already pushed
+THM-782 before this package landed.  First-pusher ownership is preserved by
+renumbering the exit package to THM-783.
 
-FILES: 01-canon/theorems/THM-782-exit-lemma-package.md; 04-computation/
+FILES: 01-canon/theorems/THM-783-exit-lemma-package.md; 04-computation/
 lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.
 
 ---

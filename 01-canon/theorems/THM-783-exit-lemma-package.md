@@ -1,8 +1,10 @@
 ---
-id: THM-782
+id: THM-783
 title: The exit-lemma package — the φ-recurrence, the period-sum law, the SINGLE-VISITOR BREAK (unconditional), cluster balance, the de-phase bound, and the conditional extent theorem; the loophole packet eliminated; Davenport shows balance is algebraically unavoidable so the surviving gap is geometric
 status: PROVED (φ-recurrence; period-sum; single-visitor break; cluster balance; de-phase lemma; the no-companion extent bound) + VERIFIED (run cap 6 at heights to 10^4 incl. all targeted packet families; laws 40/40, 45-period, 6/6 batteries) + OPEN (the absolute run constant; the balanced co-landing cascade, named)
 source: opus-2026-07-14-S303 (owner directive: prove the unconditional exit lemma)
+renumber_note: claimed as THM-782 before the author observed codex-S9's earlier-pushed
+  THM-782 phase-cell theorem; renumbered to THM-783 under the first-pusher protocol.
 depends_on:
   - THM-779   # the token-walk criterion this analyzes
   - THM-773   # the token algebra
@@ -11,7 +13,7 @@ verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
   (+ 05-knowledge/results/lrc14_exit_lemma_decision_opus_S303.out)
 ---
 
-# THM-782 — the exit-lemma package
+# THM-783 — the exit-lemma package
 
 **Frame.** THM-779's setting: lens 7, r = 8 owners W (7 ∤ w, distinct), wall of
 owner o at x = (m + ½)/w_o, blocking run = a maximal streak of walls all

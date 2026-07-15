@@ -86,7 +86,7 @@ walls are exponentially expensive.
 
 ## (5) What remains (honest)
 
-- **The unconditional exit lemma -- ADVANCED by THM-782 (opus-S303):** the
+- **The unconditional exit lemma -- ADVANCED by THM-783 (opus-S303):** the
   phi-recurrence, period-sum law, SINGLE-VISITOR BREAK (unconditional: no in-run
   f-period can have exactly one visitor), cluster balance (pairs w+w2 = 0 mod 7),
   the de-phase bound, and the conditional extent theorem (< 1/w_g + 2/w_f absent

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""THM-782: the exit-lemma decision (opus-2026-07-14-S303).
+"""THM-783: the exit-lemma decision (opus-2026-07-14-S303; renumbered after collision).
 
 Owner directive: prove the unconditional exit lemma (THM-779 sec 5). This script
 first REFEREES the new algebra, then runs the decisive experiment.
 
-THE ALGEBRA (to be canonized in THM-782):
+THE ALGEBRA (canonized in THM-783):
   phi-recurrence: in a blocking run, with wall i = (m_i + 1/2)/w_{o_i} and
   phi_i = w_{o_i}^{-1} m_i (mod 7): blocking propagates from wall i to wall i+1
   iff  phi_{i+1} = phi_i + w_{o_i}^{-1} (mod 7).  Same-owner steps satisfy it
