@@ -65185,7 +65185,7 @@ rank-four sectors; genuine increasing-size CF cocycle state with phase and
 owner tokens; and only then a metric fibre product with LRC gap/owner/wall
 data.  None of the tournament carriers computed here preserves loneliness,
 and LRC(14) remains open.
-## codex-2026-07-15-S10 continuation -- joint relative cuts collapse the primitive H6 scale cap to 1,008
+## codex-2026-07-15-S10 continuation -- joint relative cuts collapse the primitive H6 scale cap to 882
 
 HONEST VERDICT: the requested uniform `q<=25` statement is false (THM-762/764),
 and global `n=12` sporadic-branch emptiness remains open.  The live mainline now
@@ -65210,9 +65210,12 @@ The sharp order-only cap is `c=1,120`, with exactly four sorted extremals.
 For each, simultaneous label multiplication normalizes one label to one, so
 all `11P5=55,440` assignments can be scanned exactly.  None satisfies even the
 unit-independent scalar owner-capacity inequality; best floors are
-`1046,1047,1045,1049 < 1120`.  The next arithmetic scale is 1,008, proving
-`c<=1,008` under THM-860's hypotheses.  This replaces the former coarse product
-bound 2,177,280 without claiming a metric verdict for any surviving scale.
+`1046,1047,1045,1049 < 1120`.  The same exact scan rejects all twelve rows at
+the next scale 1,008, with best floor only `946/1008`.  Thus 887,040 normalized
+label assignments across the sixteen top rows have zero survivors.  The next
+arithmetic scale is 882, proving `c<=882` under THM-860's hypotheses.  This
+replaces the former coarse product bound 2,177,280 without claiming a metric
+verdict for any surviving scale.
 
 TOURNAMENT / ASSUMPTION CHALLENGE: use the six order slots as vertices, compare
 raw orders or complement-conditioned relative `rho`, and complete ties by slot
@@ -65225,3 +65228,16 @@ preserves a scalar ranking and tie path but destroys the multi-colour cover
 debt.  This agrees with the newly pulled `c=2` signed-cycle result, the `c=3`
 affine toothpick-code result, and the H-drift/j4 signal: operation-specific
 pair or Walsh codecs are useful stalks, while literal metric fibres remain.
+
+NEW CROSS-LENS LEMMA: on any complement-missed sheet fibre `F`, write
+`A_i=E_i(o) intersect F` for the colours that must cover it.  Pointwise forest
+counting gives the exact necessary inequality
+
+```text
+sum_i |A_i| - max_(spanning trees tau) sum_(ij in tau)|A_i intersect A_j|
+ >= |F|.
+```
+
+This fibre-Hunter cut strengthens the scalar relative cut and imports the
+THM-856 Kruskal rank word directly into H5/H6 ramification.  It is the next
+label/unit-sensitive prefilter before launching higher-scale metric trees.

@@ -14,7 +14,7 @@ through 5: raw distinct=6977, all-cut survivors=2913
 through 7: raw distinct=47915, all-cut survivors=8449
 final normalized words: 8449
 feasible (normalized word, common-gcd) rows: 18405
-largest two arithmetic scales: 1120, 1008
+largest three arithmetic scales: 1120, 1008, 882
 arithmetic relaxation cap: 1120
 
 arithmetic extremals:
@@ -28,7 +28,21 @@ unit-independent scalar owner-capacity scan at c=1120:
   (20, 35, 80, 224, 280, 1120): assignments=55440, covers=0, best-floor=1047/1120, deficit=73, first-best-labels=(1, 3, 5, 8, 2, 11)
   (20, 35, 80, 280, 1120, 1120): assignments=55440, covers=0, best-floor=1045/1120, deficit=75, first-best-labels=(1, 3, 2, 5, 8, 11)
   (20, 35, 112, 160, 280, 1120): assignments=55440, covers=0, best-floor=1049/1120, deficit=71, first-best-labels=(1, 3, 5, 8, 2, 11)
-common-sheet consequence: c=1120 impossible; hence c<=1008
+
+unit-independent scalar owner-capacity scan at c=1008:
+  (16, 18, 28, 63, 168, 1008): assignments=55440, covers=0, best-floor=945/1008, deficit=63, first-best-labels=(1, 2, 12, 3, 5, 8)
+  (16, 18, 28, 63, 336, 504): assignments=55440, covers=0, best-floor=946/1008, deficit=62, first-best-labels=(1, 3, 6, 5, 8, 12)
+  (16, 18, 28, 126, 168, 1008): assignments=55440, covers=0, best-floor=945/1008, deficit=63, first-best-labels=(1, 3, 6, 12, 5, 8)
+  (16, 18, 28, 126, 336, 504): assignments=55440, covers=0, best-floor=946/1008, deficit=62, first-best-labels=(1, 3, 10, 6, 5, 8)
+  (16, 28, 36, 63, 168, 1008): assignments=55440, covers=0, best-floor=946/1008, deficit=62, first-best-labels=(1, 3, 10, 5, 8, 6)
+  (16, 28, 36, 63, 336, 504): assignments=55440, covers=0, best-floor=946/1008, deficit=62, first-best-labels=(1, 3, 10, 5, 6, 8)
+  (16, 28, 36, 126, 168, 1008): assignments=55440, covers=0, best-floor=945/1008, deficit=63, first-best-labels=(1, 3, 10, 6, 5, 8)
+  (16, 28, 36, 126, 336, 504): assignments=55440, covers=0, best-floor=946/1008, deficit=62, first-best-labels=(1, 3, 10, 6, 5, 8)
+  (16, 28, 63, 72, 126, 336): assignments=55440, covers=0, best-floor=942/1008, deficit=66, first-best-labels=(1, 3, 5, 6, 10, 8)
+  (16, 28, 63, 72, 252, 336): assignments=55440, covers=0, best-floor=943/1008, deficit=65, first-best-labels=(1, 3, 5, 6, 8, 10)
+  (16, 28, 72, 126, 126, 336): assignments=55440, covers=0, best-floor=936/1008, deficit=72, first-best-labels=(1, 2, 5, 3, 10, 8)
+  (16, 28, 72, 126, 252, 336): assignments=55440, covers=0, best-floor=938/1008, deficit=70, first-best-labels=(1, 3, 6, 5, 10, 8)
+common-sheet consequence: c in {1120,1008} impossible; hence c<=882
 
 Tournament Analysis loss audit on the four arithmetic extremals:
   vertices=six sorted order slots

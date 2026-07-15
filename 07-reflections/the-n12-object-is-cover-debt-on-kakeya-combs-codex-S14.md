@@ -238,10 +238,24 @@ complete 63-cut prime-power hypergraph has only 8,449 normalized words and
 1,120.  If the six order slots are made tournament vertices, however, every
 complement-conditioned pair in all four rows ties, and the fixed tie completion
 is transitive.  The multi-colour cuts still distinguish the words, and exact
-scalar owner capacities exclude all four.  The next arithmetic scale gives
-`c<=1,008`.  Thus “proof obligations” and prime-power upper sets are sometimes
+scalar owner capacities exclude all four plus every one of the twelve rows at
+scale 1,008.  The next arithmetic scale gives `c<=882`.  Thus “proof
+obligations” and prime-power upper sets are sometimes
 better vertices than runners, arcs, or even sheet providers: the theorem lives
 on a cut hypergraph whose pair shadow is maximally uninformative.
+
+There is also a direct bridge from that hypergraph to the radius-seven Hunter
+tree.  On a complement-missed sheet fibre `F`, put
+`A_i=E_i(o) intersect F`.  For every spanning tree, a sheet lying in `k` active
+sets sees at most `k-1` induced tree edges.  Therefore
+
+```text
+sum_i |A_i|-max_tau sum_(ij in tau)|A_i intersect A_j| >= |F|.
+```
+
+The scalar relative cut deletes this nonnegative overlap debt.  Retaining it
+turns the H5/H6 prefilter into the same fibrewise graphic-rank object that
+THM-856 uses at the seven-comb wall.
 
 The first layer now makes the bundle projection quantitative.  The `146,912`
 logical edges have only `22,262` distinct literal children when geometry is

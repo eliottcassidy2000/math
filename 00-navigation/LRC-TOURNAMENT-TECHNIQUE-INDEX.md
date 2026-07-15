@@ -277,7 +277,7 @@ obligations, and proof-carrier interfaces.
   whole tree and that an order-`D` insertion creates exactly `D` deck masks;
   hence transport is exact at `D=1` and genuinely ramified at `D>1`.
   THM-860 bounds every primitive proper AP-centred ramified language by
-  `c<=1,008`. Its exact joint-cut audit is a sharp warning against pairwise
+  `c<=882`. Its exact joint-cut audit is a sharp warning against pairwise
   compression: the four order-only extremals lie at `c=1,120`, but after
   conditioning any pair on the other four orders all fifteen pair comparisons
   tie and the fixed tie completion is transitive, while the 63-cut

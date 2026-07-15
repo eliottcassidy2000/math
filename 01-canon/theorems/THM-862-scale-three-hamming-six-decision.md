@@ -273,6 +273,35 @@ run a complete depth-two scout before an overnight full tree and to shard the
 use THM-857's complete-tooth and streaming-cap certificates, and be checked
 by an independent closed-danger reconstruction.
 
+Two exact representation reductions and one shortcut guardrail refine that
+plan.  Before the first order-three insertion every speed is divisible by
+three.  For `Q=3Q'`,
+
+```text
+E(Q)={t:3t mod 1 lies in E(Q')},             L(Q)=L(Q')/3. (20a0)
+```
+
+The THM-815 cap and the order-one ray `3(r+13k)` scale by the same factor, so
+root and order-one-only prefixes may be computed in the scale-one quotient;
+literal scale-three components must be materialized at the first order-three
+insertion.  Also every residual is invariant under `t -> 1-t`, so exact
+half-circle storage is legal provided the `1/2` cut and all open endpoint flags
+are retained.  Neither reduction identifies arithmetic lanes.
+
+The generic complete-safe-tooth implication from tooth containment alone is
+automatic only once at most three combs remain.  Indeed, a full retained safe
+tooth for the just-inserted speed `x` has length `11/(13x)`, so the next cap is
+at most
+
+```text
+2s x/(13-2s)<x                         exactly when s<=3. (20a1)
+```
+
+At the first two insertion depths (`s=5,4`), containment alone must not trigger
+the shortcut; an exact larger child component could still make the numerical
+cap test pass.  The streaming-cap certificate remains valid there.  This
+distinction is essential for a proof-facing depth-two scout.
+
 ### F. Exact first-child geometry cache and the affine Walsh projector
 
 There is an exact batching map, but it is a cache map rather than a quotient

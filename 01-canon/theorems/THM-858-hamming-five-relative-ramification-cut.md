@@ -1,10 +1,10 @@
 ---
 id: THM-858
 title: Hamming-five relative-ramification cut and uniform effective-order bound
-status: PROVED STRUCTURAL + FINITE-EXACT — uniform complement-lcm cut; no new common-sheet language through effective order 21; every common-sheet effective order is at most 10,584
+status: PROVED STRUCTURAL + FINITE-EXACT — uniform complement-lcm and fibre-Hunter cuts; no new common-sheet language through effective order 21; every common-sheet effective order is at most 10,584
 source: codex-2026-07-15-S10 Hamming-five relative-order continuation
 depends_on: [THM-810, THM-823, THM-844, THM-845, THM-847]
-related: [THM-815, THM-840, THM-857, THM-859, HYP-6820]
+related: [THM-815, THM-840, THM-856, THM-857, THM-859, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_effective_order_21_common_sheet_census_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_effective_order_21_common_sheet_census_codex_S10.out
@@ -64,6 +64,20 @@ sum_(i in S) rho(m_i) >= 1             for every nonempty S. (5)
 
 This is an all-order statement.  It is independent of the chosen unit word
 and is not a scalar cutoff on the individual `D_i`.
+
+The actual label/unit masks satisfy a stronger fibre-Hunter cut.  On the
+complement-missed fibre `F` in the proof, put `A_i=E_i(o) intersect F` for
+`i in S`.  Then
+
+```text
+sum_i |A_i|/|F| - max_(spanning trees tau on S)
+  sum_(ij in tau)|A_i intersect A_j|/|F| >=1.           (5a)
+```
+
+The scalar cut (5) follows by upper-bounding the singleton terms by `rho(m_i)`
+and discarding the nonnegative pair-overlap correction.  Unlike (5), (5a)
+retains labels and units and is intended as the next exact prefilter for the
+finite strip (15).
 
 ### B. Prime-power carrier rigidity
 
@@ -330,6 +344,14 @@ rho(m)=ceil(2m/13)/m                                   (24)
 
 of `F`.  Every colour in `T` misses all of `F`.  If (3) holds, the colours in
 `S` must cover `F`; the union bound and (24) give (5).
+
+For (5a), a point of `F` lying in exactly `k>=1` active sets contributes `k`
+to the singleton sum.  The subgraph induced by those `k` vertices in any
+spanning tree is a forest and has at most `k-1` edges, so the point contributes
+at least one after the tree-overlap subtraction.  Sum pointwise over `F` and
+choose the maximum-overlap spanning tree.  This is the finite-fibre
+Hunter/Kruskal inequality; every pair intersection is an exact intersection
+of affine cyclic intervals with gcd cosets.
 
 ### 3. Arithmetic consequences
 

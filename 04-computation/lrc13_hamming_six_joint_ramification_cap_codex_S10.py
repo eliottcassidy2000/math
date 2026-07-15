@@ -268,7 +268,9 @@ def main():
         (20, 35, 112, 160, 280, 1120),
     )
     assert tuple(sorted(extremals)) == expected_extremals
-    assert distinct_scales[:2] == (1120, 1008)
+    assert distinct_scales[:3] == (1120, 1008, 882)
+    scale_1008_rows = tuple(orders for scale, orders, *_ in rows if scale == 1008)
+    assert len(scale_1008_rows) == 12
 
     print("THM-860 JOINT RAMIFICATION CAP -- EXACT INTEGER CERTIFICATE")
     print("method: gcd-normalized prime profiles + all 63 relative cuts")
@@ -283,7 +285,10 @@ def main():
         print(f"{stage}: raw distinct={raw}, all-cut survivors={kept}")
     print(f"final normalized words: {len(normalized_words)}")
     print(f"feasible (normalized word, common-gcd) rows: {len(rows)}")
-    print(f"largest two arithmetic scales: {distinct_scales[0]}, {distinct_scales[1]}")
+    print(
+        "largest three arithmetic scales: "
+        f"{distinct_scales[0]}, {distinct_scales[1]}, {distinct_scales[2]}"
+    )
     print(f"arithmetic relaxation cap: {arithmetic_cap}")
     print()
     print("arithmetic extremals:")
@@ -311,7 +316,22 @@ def main():
             f"first-best-labels={best_labels}"
         )
     assert all(survivors == 0 for _, survivors, _, _ in scalar_results)
-    print("common-sheet consequence: c=1120 impossible; hence c<=1008")
+    print()
+    print("unit-independent scalar owner-capacity scan at c=1008:")
+    scale_1008_results = []
+    for orders in scale_1008_rows:
+        result = scalar_owner_scan(orders)
+        scale_1008_results.append((orders, result))
+        assignments, survivors, best_floor, best_labels = result
+        print(
+            f"  {orders}: assignments={assignments}, covers={survivors}, "
+            f"best-floor={best_floor}/1008, deficit={1008-best_floor}, "
+            f"first-best-labels={best_labels}"
+        )
+    assert all(result[1] == 0 for _, result in scale_1008_results)
+    best_1008 = max(result[2] for _, result in scale_1008_results)
+    assert best_1008 == 946
+    print("common-sheet consequence: c in {1120,1008} impossible; hence c<=882")
 
     print()
     print("Tournament Analysis loss audit on the four arithmetic extremals:")
