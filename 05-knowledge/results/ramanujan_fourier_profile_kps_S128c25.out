@@ -1,0 +1,16 @@
+REFEREE: ghat formula vs direct (max |diff| over h=1..40)
+  k= 5 lam=1/15: max|formula-direct| = 5.86e-16 OK
+  k= 5 lam=1/7: max|formula-direct| = 3.52e-16 OK
+  k= 8 lam=1/24: max|formula-direct| = 8.08e-16 OK
+  k= 8 lam=1/10: max|formula-direct| = 6.59e-16 OK
+  k=12 lam=1/36: max|formula-direct| = 8.99e-16 OK
+  k=12 lam=1/14: max|formula-direct| = 8.85e-16 OK
+
+disc_v at the deep well {1..12}, lam=1/14 via the Ramanujan form (h-sum, H=4000) vs |G'|^2 scale:
+  v=182: disc_v ~ 4.121394e-04  (crude bound r^2/(3v^2) with r=12: 1.449e-03)
+  v= 84: disc_v ~ 9.567894e-05  (crude bound r^2/(3v^2) with r=12: 6.803e-03)
+  v= 13: disc_v ~ 1.648259e-02  (crude bound r^2/(3v^2) with r=12: 2.840e-01)
+
+h-profile concentration at v=182 (|ghat(hv)|^2, h=1..12):
+   ['1.69e-04', '3.01e-05', '3.84e-06', '2.60e-07', '4.77e-07', '5.60e-07', '4.15e-07', '5.07e-07', '2.22e-08', '1.37e-08', '4.79e-09', '8.25e-08']
+DONE

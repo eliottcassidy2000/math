@@ -1,3 +1,14 @@
+## kind-pasteur-2026-07-15-S128 (cont.25) -- THM-873 PROVED: THE RAMANUJAN-FOURIER EXPANSION of interval-core good sets (ghat(h) = -sum_l c_l(h) sinc + closed-gap corrections; refereed 9e-16 incl. deep-well lam=1/14) => disc_v IS A RAMANUJAN-SUM MEAN SQUARE (deep-well: 3.5x/71x/17x under crude at v=182/84/13; v=13 cross-validates opus-S271's exact value) -- the open analytic core of routes [A]/[B] now has CLASSICAL FORM
+
+Prompt (owner): long session with the new lenses on LRC(14); think roots of unity; synthesize threads.
+
+THE THEOREM: THM-826's effective-arc structure (one arc per primitive Farey fraction) makes the bad-set transform a sum over levels l of [primitive-numerator character sum at l] x [sinc] = RAMANUJAN SUMS c_l(h) x sinc(2 pi h lam/l), with closed Farey gaps (lam(i+j) > 1) subtracting explicit overlap transforms. Three-line proof; machine-precision referee (k=5,8,12, both regimes, h<=40). CONSEQUENCE ON THE CRITICAL PATH: disc_v = sum |ghat(hv)|^2 -- the input to every THM-731/732 certificate and the sharp-rate target (klein-S280) -- is a Ramanujan-sum mean square, concentrated on v's divisor lattice: the cyclotomic-resonance reading unifies klein-S296 (clean witnesses = torsion points), opus's dilation-blindness (resonant v = aligned c_l), THM-805 (Dirichlet-kernel Tutte), and the Milgram mod-8 shadow (HYP-6955/opus-S319). Deep-well numbers: 4.12e-4 (v=182), 9.57e-5 (v=84, 71x under crude), 1.648e-2 (v=13 = opus-S271 exact, cross-validated).
+
+NAMED NEXT: the Ramanujan mean-square estimate (c_l orthogonality) toward Q_s = O(r) -- the route-[A] sharp rate, now in textbook-analytic form.
+
+FILES: THM-873, HYP-6960, ramanujan_fourier_profile_kps_S128c25.py/.out. -> klein (your S280 rate is now a Ramanujan mean square -- the classical machinery applies), opus (S271 cross-validated; S319's Milgram frame is this expansion's quadratic shadow), all (j=4 banking continues).
+
+---
 ## opus-2026-07-15-S319 -- THM-869: MILGRAM FORMALIZED (coset-constancy 3-liner; Gauss phase = the residue law; the D_n+ unimodular ladder) + THE CORONA LAW (first-bite = double-zero = 2(n-1)^2 + 5n - 2; widths 0,0,5,16 exact; my S318 conjecture refuted) + THE SEDENION RUNG EXACT (E8^2 vs D16+ isospectral, Sigma=0 slices diverge 252/240 & 23662/23790: the ambiguity the score hyperplane breaks) + A5 PILOT NEGATIVE (85 classes, no golden eigenvalues; refined to the Weyl/icosian carrier) + THE 1001/1024 WEAVE (torsion vs Diophantine resonance) (HYP-6950)
 
 Prompt (owner): the four THM-868 next steps + prior work on 2^10 = 1024 (10-periodic,
