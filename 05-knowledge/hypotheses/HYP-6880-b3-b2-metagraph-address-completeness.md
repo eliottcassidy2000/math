@@ -127,6 +127,15 @@ whether a CF digit can act at all, but whether a finite coefficient sector
 containing those quartics is closed under arbitrary Euclidean words and the
 `Omega+B2` recursion.
 
+THM-813 supplies the first negative transport boundary.  The immediate
+`X_6->X_7` centered copy splits 51 projected colour/node-pair edge cells, even
+though it remains exact on literal tilings and complement lines.  The safe
+recursive carrier is the staircase-reflection orbit `Q_n=E_n/<sigma>`; descent
+to a projected edge cell is an additional constancy property, not functorial
+by definition.  The two-step node-indicator audit still closes at degree four,
+so the live finite-sector target is now: quartic plus the `Q`-orbit sidecar,
+with closure tested under coordinate-image saturation.
+
 Assumption challenge: the useful third face is not induced deletion of a
 tournament vertex.  Its vertices are gap-contracted interval roots.  It
 preserves a valid lower tournament tiling but destroys literal induced-

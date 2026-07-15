@@ -1,0 +1,38 @@
+THM-813 CENTERED-CHRISTOFFEL EDGE-DESCENT BOUNDARY
+==============================================================================
+schedule (q,p,s)=(4,3,0): F=(1, 2, 4, 5), d=(1, 2, 1), next phase=1, tie=False
+rho=(0, 1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 5, 7, 8, 9); image=1024/1024; intertwining/complement/reflection/colour failures=0/0/0/0
+
+P=COLOUR+UNORDERED NODE PAIR; Q=COMPLEMENT LINE / STAIRCASE REFLECTION
+  lines=512; P cells=187; Q cells=272
+  P fibre histogram={1: 24, 2: 115, 4: 31, 6: 8, 8: 6, 12: 2, 14: 1}
+  P target-support histogram={1: 136, 2: 34, 3: 8, 4: 6, 6: 2, 7: 1}
+  P failures=51 (blue=4, black=47)
+  multi-Q P cells=52; sole accidental success=[['K', 12, 29]]
+  Q descent failures=0; Q cells -> target P cells=272->268 (4 double collisions)
+
+FIRST EXACT FAILURE
+  P=('B', 15, 16); lines=(132, 370)
+  target P=(('B', 143, 203), ('B', 27, 65))
+  target masks=(4620, 11746)
+
+CORE-LIFT ROBUSTNESS
+  candidates/surjective equivariant=64/40
+  P-failure histogram={51: 8, 52: 32}; B(15,16) missing failures=0
+
+COMPOSED X5 -> X7 ACTION
+  rho=(0, 1, 2, 2, 2, 3, 0, 4, 4, 5, 4, 0, 5, 4, 5)
+  source/target P cells/failures=20/20/0
+  node support=10 source -> 36 target; histogram={1: 3, 3: 2, 4: 1, 5: 2, 7: 2}
+  core=0: degree cells=(2, 5, 10, 16, 18, 18); degree-3 collisions=[[73, 143, 187]]
+  core=1: degree cells=(2, 5, 11, 17, 18, 18); degree-3 collisions=[[35, 145]]
+  coefficient law: (rho1)_* (rho2)_* mu = (rho1 o rho2)_* mu
+
+TOURNAMENT ANALYSIS (line-information carriers as vertices)
+  vertices=('colour', 'source_P', 'source_Q', 'target_P', 'source_P_target_P', 'literal_line')
+  observable=number of unordered source-line pairs separated by a carrier
+  switches=('retention', 'retention_per_log2_cells'); edge flips=11
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1] Hpaths=1
+
+GENERAL LEMMA: any kappa/sigma-equivariant tiling map induces E_source/<sigma> -> P_target
+DESCENT TEST: descent through P_source iff the induced Q-source function is constant inside every P-source fibre

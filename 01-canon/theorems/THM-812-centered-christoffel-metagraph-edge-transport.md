@@ -144,6 +144,12 @@ This part is finite-exact, not an all-size functor theorem: constancy in (9)
 uses the `n=5,6` tournament atlases.  The all-size statement is the tiling and
 line embedding supplied by the coordinate-copy lemma.
 
+THM-813 explains why this finite descent succeeds: at `n=5` every projected
+coloured edge cell is exactly one staircase-reflection orbit.  At the next
+centered action `X_6->X_7`, projected edge descent fails in 51 cells.  The
+universally functorial carrier is the reflection orbit of a complement line,
+not the projected node pair.
+
 ## 4. Pullback of the Boolean Mobius stalk
 
 Write a multilinear target function as

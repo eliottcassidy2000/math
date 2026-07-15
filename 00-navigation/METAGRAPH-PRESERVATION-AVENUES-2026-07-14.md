@@ -641,6 +641,17 @@ certificate clauses, and proof obligations.
   the owner/root stalk must still be coupled before any LRC predicate is
   transported.
 
+- **Delivered sharp action boundary by THM-813:** the next centered copy
+  `X_6->X_7`, with word `(1,2,1)`, is still injective and complement/reflection
+  equivariant but splits 51/187 projected coloured edge cells.  The first
+  failure is the blue cell `B(15,16)`, and it persists across all 40 natural
+  equivariant core lifts.  The correct all-size action carrier is
+  `Q_n=E_n/<sigma>`: all 272 source reflection orbits act without failure,
+  although their target projections need not be distinct.  Degree-four node
+  indicators remain exact after composing the first two CF replications;
+  arbitrary bounded-degree sectors require saturation under coordinate
+  collapse.
+
 ### MPA-39 — Tutte/Smith polynomial of the staircase cover
 
 - **Delivered electrical bridge:** the canonical staircase Smith network is a
