@@ -915,3 +915,97 @@ two-sheet collar language; and then address the other higher-sheet and
 scale-normal clustered packets.  The false uniform `q<=25` claim remains
 false; what changed is that the shallow frontier moved from radius four to
 radius five and the disconnected-return coordinate is now exact.
+
+## 10. Radius five: the action is an interval semilattice, the audit object is a kernel pair
+
+THM-820 resolves the first question asked at radius five without pretending
+to resolve the last one.  The seven retained speeds give reciprocal mass, the
+owner collars give a directed handoff graph, and every hypothetical tight
+scale-one row enters one of two explicit finite boxes.  If the second-smallest
+replacement remains within twice the smallest, the other three coordinates
+recur by doubling.  Otherwise the top four owners form THM-815's
+`a{1,2,4,8}` cycle and a second, eight-speed safe interval metrically caps that
+SCC.  The tournament locates the exceptional branch; reciprocal component
+mass prevents its scale from escaping.
+
+Two exact method boundaries explain why neither ingredient can be discarded.
+The centre words `(2,2,2,2,9)` and `(2,2,2,2,22)` have the same ordered labels,
+the same live five-cycle, and the same two completed-tournament fingerprints,
+but different speed ratios and different exact LRC maxima.  Conversely, a
+fixed top-four collar SCC persists while its four speeds are multiplied by
+`1+13N`; the combinatorial state is constant and the metric scale is
+unbounded.  A tournament on runners or owner exits is therefore neither
+false nor complete.  It is the image of a richer local incidence under a
+forgetful map that erases integer centre, ratio, and width.
+
+The exact global action has a much simpler algebraic description.  For
+retained core `P` and a set `S` of inserted replacement speeds, put
+
+```text
+E_S={t:min_(q in P union S)||qt||>1/13},
+T_u(E)=E intersect {t:||ut||>1/13}.
+```
+
+Then `T_u T_v=T_v T_u` and `T_u^2=T_u`; the shallow closure problem is an
+action of a finite commutative idempotent semigroup on literal open interval
+unions.  Relative to a remaining labelled bank `V`, define
+
+```text
+E ~_V E'  iff
+[T_C(E)=empty] <=> [T_C(E')=empty] for every legal C subset V.    (41)
+```
+
+This is the coarsest continuation-safe quotient for the terminal emptiness
+predicate: a finite Myhill--Nerode congruence once THM-820 supplies the bank.
+It gives the recursion a precise target.  Component count, total safe mass,
+endpoint order, or a tournament fingerprint is legal only if it refines
+`~_V`; literal `(E,V)` is sufficient by construction.  The promising closure
+engine is consequently a minimized residual automaton or a two-plus-three
+meet-in-the-middle join, not an undifferentiated scan of all five heights.
+
+THM-818 supplies a second exact lesson from the live tournament-metagraph
+thread.  For any proposed observation `H:X->Y`, the object that tests legal
+forgetting is its kernel pair
+
+```text
+R_H={(x,x'):H(x)=H(x')},
+```
+
+with both literal states and every role-specific restriction map retained.
+Five labelled speed coordinates have literal four-coordinate faces; ordered
+assignments that agree on overlaps glue uniquely to one full packet.  A
+three-face kernel join is therefore a genuine Cech-style audit of a proposed
+Hamming-five codec.  Joining component counts, normalized endpoint words, or
+tournament nodes is not genuine until reconstruction or terminal purity is
+proved.  Independent normalization can forget common scale and carry; the
+exact shallow seam
+
+```text
+2[11] union {11}  ->  2[12]
+```
+
+is the required regression test.  THM-820 finds the left packet as the unique
+height-one Hamming-five minimum at `1/12`, while the sixth odd lift reaches the
+tight doubled AP exactly at `1/13`.
+
+This kernel-pair viewpoint also clarifies the limit of transferring the word
+“Cech” to THM-817.  A signed return cell, its endpoint owners, a closed deep
+component, their sum arc, and the selector margin form an exact two-sorted
+incidence stalk for the current erosion operation.  They do not yet come with
+proved restriction maps and effective gluing across divisor, parity, gcd, and
+descent charts.  The cell/component carrier is exact; a sheaf description is
+still a research obligation.
+
+The updated recursive picture is thus:
+
+```text
+local reduction: owner-exit / provider-tooth incidence and its tournament;
+action state:    (literal residual interval union, remaining labelled bank);
+audit state:     operation-indexed kernel pairs with ordered projections;
+deep stalk:      signed return cell / deep-component incidence with margins;
+legal quotient:  one whose fibres are terminal-pure for every named future.
+```
+
+This is narrower than a universal invariant and more useful.  It says exactly
+which equality relation to compute, which operation it must survive, and what
+counterexample witnesses an illegal quotient.
