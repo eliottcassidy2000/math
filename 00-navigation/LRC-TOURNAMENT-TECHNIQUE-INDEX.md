@@ -111,13 +111,20 @@ obligations, and proof-carrier interfaces.
   signed max-speed cell with endpoint owners.  THM-820 reduces the first
   shallow five-owner scale-one chart to two finite boxes and shows why its
   top-four SCC requires reciprocal metric mass beyond the collar graph.
+  THM-823 proves that the all-scale five-deck scalar quotient has infinite
+  cones even though some order is at most 21.  Common-sheet compatibility in
+  the complete order-at-most-twelve bank leaves only forward flags of the
+  three-coset cycle `H->2H->4H->H`, all at order three.
 - **Preserves:** quotient-core loose components, sheet label, tightener owner,
   gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
   quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
 - **Forgets / guardrail:** A residue multiset or runner-pair tournament loses
   simultaneous sheet coverage and persistence. In THM-770 all 66 pairwise
   owner-pressure comparisons tie, while the endpoint-incidence hypergraph
-  distinguishes 13 zero-defect packets among `13^12` candidates.
+  distinguishes 13 zero-defect packets among `13^12` candidates.  THM-823's
+  `D=40` scalar cover has no common-sheet word among 1,024 unit choices and
+  reaches only `29/40` sheets at its weakest owner.  Its coset cycle preserves
+  the forward scalar flag but forgets unit parity and every metric lift.
 - **Pairwise observable:** For diagnostic residue-obligation vertices, compare
   atomic cells exclusively ownable after the other ten groups are erased.
   The exact observable ties on every pair in the height-12 census.
@@ -127,11 +134,13 @@ obligations, and proof-carrier interfaces.
   one Hamiltonian path. These fingerprints certify collapse, not rigidity.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
-  branch, empty THM-820's two finite boxes and extend its scale-one result to
-  the all-order five-deck interface; then treat the ramified higher-`s`
+  branch, empty THM-820's two finite boxes, extend common-sheet exclusion above
+  order twelve, and apply exact residual-comb erosion to THM-823's
+  all-order-three and mixed order-one survivors.  The mod-39 clock supplies
+  only equality witnesses, not strictness.  Then treat the ramified higher-`s`
   packets outside THM-816's closed quartic coset.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
-  THM-817, THM-820, HYP-6775, HYP-6820;
+  THM-817, THM-820, THM-823, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

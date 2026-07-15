@@ -530,3 +530,14 @@ Thus the cover is not determined by its terminal geometric subset: it also
 remembers how that subset was assembled and which labelled operations remain.
 The next all-height object is an endpoint-owner/component incidence deck acted
 on by erosion, not either the bare tournament or an unlabelled residual set.
+
+THM-823 exposes a second kind of ramification at radius five.  Scalar deck
+capacity admits infinite-order cones, while actual common sheets can be empty:
+the first `D=40` scalar row has zero compatible unit words.  In the bounded
+no-order-one bank, the only sheets that survive lie over forward flags in the
+three-coset cycle `H->2H->4H->H`; the fibre over each flag is the quartet
+opposite-pair parity times one free fifth parity.  The least points of those
+fibres are loose, but their mod-39 clock remains on the `1/13` boundary at
+arbitrary lift height.  The cover therefore has distinct scalar, sheet, and
+metric strata.  No quotient that collapses these three levels can carry the
+remaining all-scale proof.

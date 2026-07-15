@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, and its complete height-at-most-two slice loose; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, and a finite-exact proof that the fixed folded predicate factors through signed cell/component sum arcs; branch emptiness remains OPEN in the full Hamming-five boxes and arbitrary-scale descent, uniform control of the exact sum-arc selector and collar residuals, and the other higher-sheet packets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, its complete height-at-most-two slice loose, and the arbitrary-scale deck interface reduced to a least-order pivot plus bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, and a finite-exact proof that the fixed folded predicate factors through signed cell/component sum arcs; branch emptiness remains OPEN in the full Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, uniform control of the exact sum-arc selector and collar residuals, and the other higher-sheet packets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -38,6 +38,7 @@ depends_on:
   - THM-820
   - THM-821
   - THM-822
+  - THM-823
   - HYP-6750
   - HYP-6775
 related:
@@ -442,6 +443,31 @@ that `H2` transports under arbitrary-height insertion or scale change.  The
 next quotient target is an endpoint-owner/component-incidence codec between
 `H1` and `H2`, minimized under the actual erosion action.
 
+THM-823 proves that the remaining all-scale deck interface is not a finite
+scalar-order problem.  Every five-colour scalar cover satisfies
+
+```text
+sum_i 1/D_i>3/13,                    hence min_i D_i<=21,
+```
+
+but `(1,2,3,5,10):(2,5,13q+1,2,13q+1)` scalar-covers for every `q>=3`.
+At `q=3` all 1,024 unit words fail common-sheet coverage, with best minimum
+`29/40`; scalar capacity and simultaneous sheets have separated completely.
+In the exhaustive no-order-one bank `2<=D_i<=12`, only five of 2,190 scalar
+presentations survive the sheet test.  They form one all-order-three orbit
+
+```text
+R=C union {b},              C=a{1,5,8,12},              b in 2C,
+```
+
+with THM-810 opposite-pair parity on `C` and a free parity on `b`.  All forty
+least CRT packets are loose, with minimum `2/17`; arbitrary lifts retain six
+mod-39 boundary witnesses and are only proved to have `M>=1/13`.  The
+order-one branch is symbolically either all one or one plus the order-three
+quartet, again with only the boundary clock at arbitrary height.  Remaining
+work is unbounded common-sheet classification and strict metric erosion of
+these survivor languages, not a stronger scalar cutoff.
+
 ## D. The two-sheet branch is now a folded dyadic cover
 
 THM-772 first turns the `s=2` equality packet
@@ -789,7 +815,10 @@ deciding objects are therefore:
   the owner-exit tournament supplies a finite reduction but loses integer
   centre and scale; THM-822 proves on the height-at-most-two bank that adding
   those centres still mixes exact `M`, whereas literal endpoint faces are
-  statically injective.  The exact action state is `(E_S,V)`, the literal residual
+  statically injective.  THM-823 shows that five-colour scalar attenuation has
+  infinite cones, while bounded common sheets retain only the forward flags
+  of a three-coset cycle with a parity fibre and unresolved metric strictness.
+  The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict
   after every legal future subset of `V`.

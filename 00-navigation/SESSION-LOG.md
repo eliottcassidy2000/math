@@ -955,6 +955,21 @@ extremes: an endpoint-owner/component-incidence `H1.5`, tested for continuation
 purity under insertion rather than static reconstruction.  All tightness
 purity in this bank is vacuous because the bank has no tight rows.
 
+THM-823 attacks the arbitrary-scale deck interface and refutes the tempting
+radius-four extrapolation.  Every five-colour scalar cover has
+`sum 1/D_i>3/13`, hence some order at most 21, but the exact family
+`(1,2,3,5,10):(2,5,13q+1,2,13q+1)` covers scalarly for every `q>=3`.
+At `D=40` none of its 1,024 unit words covers common sheets and the best weak
+owner reaches only `29/40`.  Conversely the full no-order-one bank with
+`D_i<=12` has 2,190 scalar presentations but only five sheet-compatible ones:
+one all-order-three orbit `C union {b}`, where `C=a{1,5,8,12}` and `b in 2C`.
+The quartet has THM-810 opposite-pair parity and the fifth parity is free.
+All forty least CRT packets are loose with minimum `2/17`; the all-height
+mod-39 clock gives only `M>=1/13`, so survivor strictness and unbounded-order
+common-sheet classification remain open.  The informative tournament uses
+the three multiplicative cosets and is a directed cycle; the runner tournament
+is transitive.  Even the coset quotient loses parity, sheets, and metric lifts.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the

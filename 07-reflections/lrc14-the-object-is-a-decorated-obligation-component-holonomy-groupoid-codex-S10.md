@@ -1078,3 +1078,30 @@ reconstruction only; it has no all-height transport theorem.  The groupoid
 view therefore becomes an operation-labelled residual automaton: evaluation
 fibres, reconstruction fibres, and continuation fibres are three different
 equivalence relations.
+
+## 13. The five-deck compactification has a boundary at infinity
+
+THM-823 shows that the four-colour scalar classification does not extend by
+adding one more vertex.  Attenuation toward the constant capacity `2/13`
+leaves robust five-colour cones with two unbounded deck orders.  The formal
+infinity state is legitimate for scalar inequalities but has no sheet period,
+no unit word, and no metric action.  It is a compactification boundary, not an
+extra object of the owner-sheet groupoid.
+
+The first nontrivial quotient that does survive is not on five runners.  The
+three multiplicative cosets of `H={1,5,8,12}` form the directed cycle
+`H->2H->4H->H`; its forward pointed flags are exactly the bounded
+all-order-three scalar extensions.  Reinstating common sheets adds two
+opposite-pair parity bits and a free fifth bit.  Reinstating metric lifts then
+separates the strictly loose least representatives from the arbitrary-height
+boundary clock.  These are three successive fibres over the same coset flag:
+
+```text
+coset direction -> unit-parity sheet cover -> lifted residual geometry.
+```
+
+The runner tournament is transitive and loses even the first step.  The coset
+tournament retains the scalar extension rule but loses the latter two.  Thus
+the all-scale Hamming-five object is a decorated pointed coset flag acted on by
+labelled erosion combs, with infinity allowed only in its scalar boundary
+compactification.

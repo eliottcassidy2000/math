@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -197,6 +197,16 @@
   but different exact maxima.  Exact centres, ratios, open endpoints,
   component widths, owner ancestry, and the future operation bank must remain
   until terminal purity is proved.
+  THM-823 separately rules out a scalar-only all-scale descent: every scalar
+  cover has some order at most 21, but two orders can escape to infinity in
+  an explicit robust family.  In the full no-order-one bank with all orders at
+  most twelve, common-sheet compatibility leaves only the all-order-three
+  forward coset flags `C union {b}`, `b in 2C`.  Their forty least CRT packets
+  are loose, while the mod-39 clock proves only the non-strict boundary for
+  arbitrary lifts.  Extend common-sheet exclusion above order twelve, then run
+  exact residual-comb erosion on the all-order-three and mixed order-one
+  survivors; do not promote scalar attenuation or the coset cycle to a metric
+  closure.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
