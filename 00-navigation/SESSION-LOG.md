@@ -132,6 +132,77 @@ draft, indexes, and mistake ledger were reconciled to this state. The exit
 package settled at THM-783, the unproved universal `K0` consequence was
 withdrawn, and the transverse results moved to THM-798/799.
 ## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
+## codex-2026-07-14-S10 -- CURRENT THM-794/795/797 CORRECTION: r=8 QUOTIENTS DIAGONAL HOLONOMY; n=12 RESIDUAL IS SHALLOW HAMMING RADIUS >=2 OR DEEP FULL/ALIGNED SUPPORT WITH GLOBAL COMPONENT CHOICE
+
+This is a current correction entry; the historical entries below are left
+unchanged.  The original request was to reassess the LRC(14) frontier, begin
+with the claimed `q<=25` and uniform `n=12` finishes, and seek the faithful
+tournament carrier.  Uniform `q<=25` remains refuted, and the new theorems make
+the surviving frontier substantially more exact without proving LRC(14).
+
+**THM-795 (uniform shallow Hamming-one rigidity).**  Twelve exact core-safe
+intervals, seven residual atoms, and a missing-owner splice-deck argument prove
+that every proper one-coordinate lift of `[12]` is loose.  More generally, at
+every height and after every unit dilation `c[12]`, replacing one coordinate by
+a congruent lift can be tight only if the original coordinate is restored.
+Therefore every hypothetical non-AP shallow tight twelve-speed packet has
+labelled Hamming distance at least two from every AP dilation.  The exact
+remaining shallow object is a multi-replacement sheet--tooth incidence problem:
+two or more replacement colours may share the forced splice germs, so the
+one-tooth grid descent no longer applies separately.
+
+**THM-797 (odd-divisor grids and the deep `q=13` support gate).**  In the
+two-sheet chart, a unit class on an odd divisor grid is deep exactly when every
+core residue clears the integer threshold, and the two exceptions occupy the
+opposite-parity balanced-residue shell exactly when the folded diamond holds.
+At the mandatory divisor `13`, hypothetical containment forces either all six
+folded core classes or the aligned five-class pattern whose missing class is
+the off-divisor exception class; if both exceptions are 13-divisible, full
+support is forced.  The gate is sharp.  The primitive divisor-complete core
+
+```text
+U=(1,2,3,4,7,9,10,11,12,16),       (x,y)=(13,5)
+```
+
+has aligned support, satisfies the earlier arithmetic and sporadic taxes, and
+traps both deep thirteenths.  Nevertheless the owner-labelled component at
+`7/33` escapes; the reconstructed packet has `M=2/19>1/13`, while its maximum
+peel has `M=1/8>1/12`.  This is the sharp loose sporadic survivor: it proves
+that the residue gate cannot replace the global component atlas.  The deep
+residual is full/aligned `q=13` support followed by selection among all closed
+`1/11`-superlevel components with endpoint owners and exact escape margins.
+
+**THM-794 (full-active prime-seven holonomy).**  The infinite family
+`F=49H+1`, `w_j=F-7j` has `H-1` consecutive fully active fastest periods and
+`8H-7` covered walls at fixed `ceil(f/g)=2`.  It makes active-period count
+unbounded and refutes the proposed universal extent inequality for every
+`H>=5`.  Each full visitor word returns the collision state by a common
+diagonal translation in `F_7`; after quotienting common sheet translation it
+is a closed eight-step holonomy cycle.  The corrected `r=8` target is therefore
+not another wall, active-period, extent, or frequency-marginal bound.  It is a
+diagonal-holonomy-quotiented collision state retaining prefix-legal
+Christoffel/Beatty order, together with incidence against the metric core-safe
+components and their visitor teeth.  The quotient removes repeated gauge
+motion; the incidence sidecar preserves the LRC exit predicate.
+
+The transverse compactness correction from live main is complementary.
+THM-798 closes its scale-free four-far fragmentation family by a capped peel,
+and THM-799 proves every fully lacunary far-count flag terminal, with certified
+factors `412,405,394,27,17,14,13,13,13,13` for far counts `4,...,13`.
+Consequently every unresolved route to infinity contains a bounded-ratio
+cluster.  That cluster is where the holonomy-quotiented collision state and
+core incidence must now interact; fully lacunary escape is no longer a live
+infinite direction.
+
+Exact replays are indexed for THM-794/795/797.  They respectively audit
+`H<=200`, the twelve core rows/seven atoms, and `10,971,770` odd-grid tests plus
+the complete `q=13` profile/component certificate.  Their finite tournament
+fingerprints are diagnostic only: bare transitive orders lose diagonal return,
+the all-sheets-dangerous bit, folded support identity, or the sign of component
+escape.
+
+---
+
 ## opus-2026-07-14-S306 -- THE MODE-B LINE TOWER (THM-793): tilings, nodes, and blue/black lines with all five maps commute down the strip-legs+apex projection; the axis current lives on the fiber; SC = A000570 (merged = (A000568+A000570)/2); the transitive node is a descent FIXED POINT; blue self-lines vanish at odd n (proved)
 
 Prompt (owner): track iso-class nodes, tilings, and blue/black edges with all their relations

@@ -1,14 +1,14 @@
 ---
 id: THM-783
 title: The corrected r=8 exit package — anchored φ-extension, visitor balance, conditional factor-two de-phasing, and a conditional metric-extent theorem; raw wall count and unconditional de-phasing are withdrawn
-status: PROVED at the stated hypotheses (anchored simple-wall φ-extension; period-sum; single-visitor break; cluster balance; factor-two drift under one-step paired indices; no-companion extent bound) + VERIFIED (bounded-bank maximum 6 only; laws 40/40, 45-period, 6/6 batteries) + CORRECTED (unconditional de-phasing and every absolute raw-wall K0 are withdrawn) + OPEN (varying-index balanced co-landings and a universal metric/core-sensitive exit)
+status: PROVED at the stated hypotheses (anchored simple-wall φ-extension; period-sum; single-visitor break; cluster balance; factor-two drift under one-step paired indices; no-companion extent bound) + VERIFIED (bounded-bank maximum 6 only; laws 40/40, 45-period, 6/6 batteries) + CORRECTED (unconditional de-phasing, every absolute raw-wall K0, active/switch compactness, and universal extent are withdrawn) + OPEN (collision holonomy modulo diagonal packet cycles, coupled to core incidence)
 source: opus-2026-07-14-S303 package, scope-corrected and strengthened by codex-2026-07-14-S10
 renumber_note: claimed as THM-782 before the author observed codex-S9's earlier-pushed
   THM-782 phase-cell theorem; renumbered to THM-783 under the first-pusher protocol.
 depends_on:
   - THM-779   # the token-walk criterion this analyzes
   - THM-773   # the token algebra
-related: [THM-767, THM-771, THM-784, THM-786, THM-788, HYP-6840, HYP-6845, MISTAKE-147, MISTAKE-148]
+related: [THM-767, THM-771, THM-784, THM-786, THM-788, THM-794, HYP-6840, HYP-6845, MISTAKE-147, MISTAKE-148, MISTAKE-149]
 verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
   (+ 05-knowledge/results/lrc14_exit_lemma_decision_opus_S303.out)
 ---
@@ -29,6 +29,13 @@ verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
 > established a uniform bound, and the absolute wall-count conjecture in the
 > original (7) is false. A fixed slow rainbow chamber supports arbitrarily many
 > fastest-owner walls. Raw wall count and metric extent are not equivalent.
+
+> **Further correction (THM-794/MISTAKE-149).**  Contracting empty fastest
+> periods is still insufficient.  A fixed full seven-visitor packet can repeat
+> for arbitrarily many active periods, with a genuine owner switch at every
+> wall, while its return map is only diagonal sheet translation.  The proposed
+> universal extent bound is false.  All local lemmas below survive; their
+> correct consumer must first quotient this central packet holonomy.
 
 **Frame.** THM-779's setting: lens 7, r = 8 owners W (7 ∤ w, distinct), wall of
 owner o at x = (m + ½)/w_o, blocking run = a maximal streak of walls all
@@ -167,11 +174,19 @@ co-landings is still missing. THM-784 shows that this geometry governs only the
 visitor-rich mode: a visitor-free fast refinement can persist inside a slow
 rainbow chamber without invoking the cascade at all.
 
+THM-794 realizes the other extremal mode.  Every complete period has the full
+seven-owner visitor set, all inverse residues are one, and the fixed order
+`w_7,...,w_1` repeats arbitrarily often.  The balance identity is merely
+`7=0`; over one packet all eight tokens translate by `-1`.  Thus varying-index
+analysis can constrain noncentral strands only after full-support diagonal
+packet cycles have been removed; it cannot bound all balanced co-landings.
+
 On a strand whose paired indices really do advance one-by-one, (D) bounds the
 life of a fixed pair. General strands can skip indices and reverse order, so
 their handovers still require a varying-index/Beatty analysis. After persistent
-stalks are factored out, the remaining owner-switch problem is exactly how long
-this geometric-arithmetic conspiracy can persist.
+stalks and diagonal packet return cycles are factored out, the remaining
+problem is how long a **normalized collision state** can change while the
+metric word still intersects the relevant core component.
 
 ## (6) The decision census (VERIFIED on its stated bounded banks only)
 
@@ -198,6 +213,10 @@ period there is visitor-free, so all the proved visitor laws coexist with the
 diverging count. The finite generator contained neither this family nor the
 independent THM-784 slow-rainbow refinement.
 
+It also omitted THM-794's congruence packet, which has every period active and
+all seven visitors present.  Hence neither sparse nor saturated visitor
+incidence makes the bounded-bank maximum a universal signal.
+
 ## (7) Status of the exit lemma after this package
 
 - Proved at the displayed hypotheses: anchored simple-wall extension (1); no
@@ -211,12 +230,13 @@ independent THM-784 slow-rainbow refinement.
 - **REFUTED by THM-784:** “every blocking run has at most 6 walls.” The claimed
   equivalence with `extent < C/w_g` was also false: changing only the fastest
   mesh makes wall count diverge while the blocked interval stays fixed.
-- REMAINING (sharp, geometric): split off visitor-free fast refinements of a
-  slow seven-owner rainbow chamber. For the visitor-rich complement, bound
-  consecutive balanced co-landings using a sound Beatty/varying-index cascade;
-  the factor-two lemma applies only to one-step strands and no mandatory-
-  handover theorem is available. Globally,
-  prove a metric/core-sensitive statement that forces a free time in every
-  relevant core-safe component. A normalized extent bound or a theorem that
-  static slow rainbows cannot contain the required core component would suffice.
+- **REFUTED by THM-794:** active-period count, genuine owner-switch count, and
+  the universal `extent<1/w_g+2/w_f` conjecture.  Its exact family has all
+  seven visitors in fixed order and returns only by diagonal translation.
+- REMAINING (sharp, geometric): split off both visitor-free stalk refinement
+  and full-support central packet holonomy.  On the resulting collision
+  transducer, combine sound Beatty/varying-index constraints with a theorem
+  that forces the normalized state path to miss every relevant core-safe
+  component.  Metric lift and core incidence are indispensable; no bound on
+  raw walls, active packets, or switches can substitute for them.
 - Everything here is Lean-friendly (mod-7 arithmetic + Beatty counting).

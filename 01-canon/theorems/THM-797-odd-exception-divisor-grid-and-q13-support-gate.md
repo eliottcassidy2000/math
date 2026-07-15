@@ -270,6 +270,20 @@ Q_(9,4)(t)=8/33<11/13.                                   (22)
 Thus `t in E_(U_0)\H_(13,5)`, and since `0 in R_(U_0)`, (22) proves the full
 erosion failure (0).
 
+This sharp row also lies in the exact **sporadic max-peel regime**.  Its full
+packet and maximum deletion are
+
+```text
+A_0=(2,4,5,6,8,13,14,18,20,22,24,32),
+M(A_0)=2/19 at t in {2/19,8/19,11/19,17/19},
+M(A_0\{32})=1/8 at t in {1/16,7/16,9/16,15/16}.
+```
+
+Hence the deletion is strictly super-lonely at the `1/12` threshold, while
+the full packet is loose rather than tight because `2/19>1/13`.  Its deepest
+`q=13` choices remain trapped by (21), but the different component endpoint
+`7/33` supplies the escape in (22).
+
 The complete closed `1/11`-superlevel set has eight components:
 
 ```text

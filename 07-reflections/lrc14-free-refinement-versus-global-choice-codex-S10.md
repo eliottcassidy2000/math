@@ -46,30 +46,39 @@ THM-784 makes the failure exact. On `(5/16,7/20)`, the seven slow owners
 `560N+1` contributes `21N` consecutive covered walls without changing the
 slow state. The event tournament simply becomes a longer transitive order.
 
-THM-788 supplies the right quotient. Write a run as
+THM-788 supplies the first quotient. Write a run as
 
 ```text
 E_0, V_1, E_1, ..., V_A, E_A.
 ```
 
 Each `E_j` is a fastest-owner block absorbing empty periods; each `V_j` is an
-ordered zero-sum visitor packet. The proof cost is `A`, not the number of
-events. Metric scale is retained by `f,g`, and exact inequalities convert an
-active-period bound into wall-count and extent bounds.
+ordered zero-sum visitor packet. THM-794 proves that this quotient is still
+noncompact: for `F=49H+1`, the full eight-owner packet repeats through `H-1`
+active periods and `8H-8` genuine owner switches even though
+`ceil(F/(F-7))=2`. The packet returns by common diagonal sheet translation,
+so its raw token displacement is zero in the reduced deck `F_7^8/Delta` while
+the metric base advances. Consequently `A`, switch count, and the proposed
+universal extent bound are not proof costs. THM-788's exact conditional
+conversions remain valid once some later invariant controls the normalized
+return dynamics.
 
 This also clarifies the role of Tournament Analysis. Chronological comparison
 gives a transitive tournament with one Hamiltonian path, zero cycles, and
 singleton SCCs. Those fingerprints are correct but nearly content-free. The
 proof carrier is the decorated path: owner labels, absorbed block lengths,
-absolute slow scale, and zero-sum visitor hyperedges. Changing vertices from
-runners to wall events was not enough; maximal free blocks must be contracted.
+absolute slow scale, zero-sum visitor hyperedges, ordered collision state, and
+reduced return holonomy. Changing vertices from runners to wall events was not
+enough; maximal free blocks and central packet cycles must both be contracted.
 
 The remaining prime-seven theorem is therefore:
 
-1. bound the number or metric density of active zero-sum packets;
-2. do so with varying Beatty indices and possible order flips—MISTAKE-148
-   rules out the fixed-index de-phase shortcut;
-3. intersect the resulting blocked interval with the actual core-safe
+1. recognize legal packet loops in the centered-Beatty collision transducer
+   and quotient their diagonal deck holonomy;
+2. prove an exit from every remaining normalized SCC, retaining varying
+   indices and possible order flips—MISTAKE-148 rules out the fixed-index
+   de-phase shortcut;
+3. lift that exit to metric time and intersect it with the actual core-safe
    component.
 
 ## The two-sheet correction
@@ -89,6 +98,14 @@ E_U subset H_(x,y) minus R_U
 ```
 
 is the exact form of what hypothetical tightness must maintain.
+
+THM-797 adds a genuinely global arithmetic selector. An odd divisor `q` of
+one exception exposes a balanced-residue acceptance shell on every deep unit
+class. At `q=13`, containment forces the folded ten-core support to be full,
+or to omit only the other exception's class. Thus small-support and misaligned
+branches die uniformly. Its sharp aligned survivor also explains the residual:
+the deepest thirteenths can all be trapped while `7/33` escapes. The object is
+the whole owner-labelled family of deep components, not a single prime grid.
 
 But the exact core
 
@@ -143,12 +160,15 @@ sentences.
 
 The current frontier has four honest branches:
 
-1. **Shallow n=12:** construct a decreasing height/owner invariant extending
-   THM-770 beyond lift height twelve; another raw box is not recursion.
+1. **Shallow n=12:** THM-795 removes the Hamming-one star around every AP
+   dilation at every scale. Construct a decreasing height/owner invariant for
+   the remaining Hamming-radius-at-least-two packets; another raw box is not
+   recursion.
 2. **Deep two-sheet:** prove global erosion noncontainment by selecting a deep
    component, or force the dyadic seam tree into the existing finite bases.
-3. **Prime-seven r=8:** bound active visitor packets with varying-index
-   arithmetic and then use core incidence; do not count raw walls.
+3. **Prime-seven r=8:** quotient zero reduced-holonomy packet loops, prove an
+   exit between normalized collision SCCs, and then use core incidence; do not
+   count raw walls, active periods, or raw switches.
 4. **Higher sheets / scale-normal families:** retain colour ownership and
    ramification through descent, rather than collapsing to residue counts.
 

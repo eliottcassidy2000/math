@@ -323,6 +323,16 @@ def audit_sharp_survivor() -> dict[str, object]:
     assert folded_q(X0, Y0, escape) == F(8, 33) < F(11, 13)
     assert max(norm(speed * F(0)) for speed in U0) == 0 < GAMMA
 
+    full_packet = tuple(sorted({2 * speed for speed in U0} | {X0, Y0}))
+    assert full_packet == (2, 4, 5, 6, 8, 13, 14, 18, 20, 22, 24, 32)
+    full_value, full_maximizers = exact_loneliness(full_packet)
+    peeled_packet = tuple(speed for speed in full_packet if speed != 32)
+    peeled_value, peeled_maximizers = exact_loneliness(peeled_packet)
+    assert full_value == F(2, 19) > ALPHA
+    assert full_maximizers == (F(2, 19), F(8, 19), F(11, 19), F(17, 19))
+    assert peeled_value == F(1, 8) > F(1, 12)
+    assert peeled_maximizers == (F(1, 16), F(7, 16), F(9, 16), F(15, 16))
+
     components = deep_components(U0)
     assert components == (
         (F(12, 77), F(7, 44)),
@@ -438,6 +448,11 @@ def audit_sharp_survivor() -> dict[str, object]:
         "escape": escape,
         "escape_phi": phi(U0, escape),
         "escape_q": folded_q(X0, Y0, escape),
+        "full_packet": full_packet,
+        "full_value": full_value,
+        "full_maximizers": full_maximizers,
+        "peeled_value": peeled_value,
+        "peeled_maximizers": peeled_maximizers,
         "components": components,
         "endpoint_owners": endpoint_owners,
         "component_minima": component_minima,
@@ -514,6 +529,14 @@ def main() -> None:
         f"erosion_escape_t={sharp['escape']} "
         f"phi={sharp['escape_phi']} Q={sharp['escape_q']}<11/13; "
         "0 in R_U, so t notin H minus R_U"
+    )
+    print(
+        f"full_packet={sharp['full_packet']} M={sharp['full_value']} "
+        f"maximizers={sharp['full_maximizers']} (>1/13, loose)"
+    )
+    print(
+        f"max_peel_M={sharp['peeled_value']} "
+        f"maximizers={sharp['peeled_maximizers']} (>1/12, sporadic inequality)"
     )
     print(f"E_U_components={len(sharp['components'])} {sharp['components']}")
     print(f"component_endpoint_owners={sharp['endpoint_owners']}")

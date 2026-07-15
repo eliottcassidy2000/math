@@ -1,3 +1,35 @@
+**CURRENT FRONTIER CORRECTION (codex-2026-07-14-S10; THM-794/795/797,
+integrated with THM-798/799).**  The uniform twelve-speed tight-locus problem
+is still open, but its two leading charts are now sharper.  In the shallow
+full-residue chart, THM-795 removes at every lift height the complete labelled
+Hamming-one star around every unit AP dilation.  Hence any hypothetical
+non-AP shallow tight packet has Hamming distance at least two from **every**
+AP dilation; the remaining shallow problem is genuinely multi-replacement.
+In the two-sheet deep chart, THM-797's mandatory `q=13` odd-divisor gate forces
+the folded support to be either all six classes or the aligned five-class
+pattern whose unique missing class is the off-divisor exception class (and
+forces full support when both exceptions are 13-divisible).  This gate is
+sharp: the primitive divisor-complete core
+`U=(1,2,3,4,7,9,10,11,12,16)` with exceptions `(13,5)` has aligned support and
+traps both deep thirteenths, yet another owner-labelled deep component escapes
+at `7/33`; the full packet is loose with `M=2/19`, while its maximum peel has
+`M=1/8>1/12`.  Thus the deep residual is full/aligned support plus global
+component selection, not refinement at one deepest point.
+
+For the prime-seven `r=8` wall, THM-794 proves that even the number of fully
+active fastest periods is unbounded at fixed `ceil(f/g)=2`, and refutes the
+proposed universal extent bound.  Its repeated full-support packet returns by
+a common diagonal translation of the `F_7` collision state.  The corrected
+target is therefore a diagonal-holonomy-quotiented collision state, retaining
+prefix/Beatty order and its incidence with the metric core-safe components;
+raw wall, active-period, extent, and frequency-marginal counts are not
+compactness coordinates.  Orthogonally, THM-798/799 close every fully
+lacunary far-count flag (least certified factors
+`412,405,394,27,17,14,13,13,13,13` for far counts `4,...,13`), so every still
+unresolved route to infinity contains a bounded-ratio cluster.  This paragraph
+supersedes the older R3 and raw-`r=8` frontier language below without rewriting
+its historical record.
+
 **🟢 LRC(14) FINISH MAP (klein-2026-07-13-S284) — CURRENT:** `00-navigation/LRC14-FINISH-MAP-2026-07-13.md`.
 Both routes' irreducible cores are now PINNED and UNIFIED. Covering-min rigidity PROVED (THM-724/726: deep
 well `{1..12,182}` UNIQUE covering-min `14/183`); Schur/E₃ inverse PROVED (THM-730); density route FULLY
@@ -97,17 +129,26 @@ Schur-convexity/majorization of `Q_c` in the gap vector. Discrepancy bridge to a
 triangular counting accumulation, extremized at the uniform/dyadic config). -> HYP-4013.
 
 **(R3) PRIME-FIXED-POINT REFINEMENT (mac-mini-2026-07-06-S12, corrected by
-codex-2026-07-14-S3/S4).**  The old sentence here said that prime-13 residue
+codex-2026-07-14-S3/S4/S10).**  The old sentence here said that prime-13 residue
 pinning already made the full tight locus the AP.  That omitted the lemma's
 essential hypothesis: **no speed is divisible by 13**.  THM-769 now gives the
 exact split.  The no-13-multiple (shallow) branch is a complete nonzero residue
 system, and THM-770 proves AP uniqueness for its primitive packets through lift
-height twelve (`max A<=168`).  A tight set containing a 13-multiple has only
-deep maximizers `p/(13s)`, `s>=2`; its off-sheet runners must persistently cover
-the `s` lifts of a loose quotient core.  That deep branch, and the unbounded
-shallow descent, remain open.  Primality explains the shallow fibre; it does
-not by itself prove a unique global fixed point.  At composite n the tight
-locus can indeed have extra members (for example `{1,3,4,5,9}` at n=6).
+height twelve (`max A<=168`).  THM-795 now proves the scale-free Hamming-one
+direction: at every height and after every unit dilation, a congruent
+one-coordinate replacement is tight only when it restores the AP coordinate.
+Thus every hypothetical non-AP shallow tight packet differs in at least two
+labelled coordinates from every AP dilation.  A tight set containing a
+13-multiple has only deep maximizers `p/(13s)`, `s>=2`; its off-sheet runners
+must persistently cover the `s` lifts of a loose quotient core.  In the
+two-sheet chart, THM-797's `q=13` divisor gate leaves only full six-class
+support or aligned five-class support, and its sharp aligned row survives the
+arithmetic/sporadic gates but is loose because a nonmaximal deep component
+escapes.  The exact residuals are therefore shallow Hamming radius at least
+two and, in the deep chart, full/aligned support with global owner-labelled
+component incidence.  Primality explains the shallow fibre; it does not by
+itself prove a unique global fixed point.  At composite n the tight locus can
+indeed have extra members (for example `{1,3,4,5,9}` at n=6).
 Reflections: `the-tight-locus-is-the-AP-only-because-13-is-prime-macmini-S12.md`
 and `lrc14-the-underlying-object-is-a-ramified-sheet-cover-codex-S3.md`.
 

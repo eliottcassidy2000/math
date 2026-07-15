@@ -100,12 +100,12 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | odd-exception divisor-grid selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, only full six-class support or the aligned five-class pattern survives.  An exact aligned row traps every global maximizer but escapes at another threshold component, so all owner-labelled deep components—not only argmax—must be retained. | THM-797 + 10,971,770-test exact replay |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
-| shallow AP Hamming-one star at arbitrary height | PROVED scale-free: replacing one coordinate of any unit AP dilation by a congruent lift is tight only for the original coordinate.  Every residual non-AP shallow packet differs from every AP dilation in at least two coordinates. | THM-795 + exact core/atom certificate |
-| dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
+| shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
+| dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a factor-2 seam and a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`.  An exact core traps every local refinement at `4/17` but escapes at `14/19`; moreover two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence.  Global selection must retain signed tooth/slope address. | THM-782/789 + exact trap/erosion-liar certificates |
+| ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. An exact core traps every local refinement at `4/17` but escapes at `14/19`; two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence. THM-797 adds a global divisor-grid selector and a sharp aligned survivor whose deepest thirteenths are trapped but whose `7/33` component escapes. Global selection must retain every closed deep component, endpoint owners, signed tooth/slope address, and divisor-shell incidence. | THM-782/789/797 + exact trap/erosion-liar/grid certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative and a quadratic energy cocycle. FINITE-EXACT: all 101,850 initial height-24 covers tear by `3/8` (38 groups), and all divisor-complete covers by `4/11` (36 groups). Uniform arithmetic-language exclusion remains open. | THM-792 + exact root-current/prefix certificate |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, the arbitrary-height Hamming-one AP star, every two-sheet core in `[1,19]`, the speed box through 100, most odd-divisor support profiles, and the forced-`w=13` quotient box through 24 are empty.  Shallow Hamming radius at least two, full/aligned-five folded support with all-component selection, uniform collar tear, and higher-sheet packets remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: bounded shallow slice; the full Hamming-one star at every shallow AP dilation and height; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; q=13 support-at-most-four/misaligned-five/non-full-double branch; and the forced-`w=13` quotient box through 24. Remaining: shallow Hamming radius at least two, aligned/full-support global deep-component selection, uniform collar tear, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/789/792/795/797; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -150,27 +150,27 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    deep anchor traps the full Bohr return set even though another deep time
    escapes.  Its global gap/Kneser budgets tax every tight component layout,
    but an exact two-pair liar shows that raw component order, raw escape signs,
-   and total eroded measure still lose the signed tooth slope. THM-797 now
-   supplies a uniform selector on odd exception-divisor grids; at `q=13` it
-   removes every support except full six-class and aligned five-class rows.
-   Its sharp aligned survivor proves that selecting only global maximizers is
-   still insufficient. Prove the global erosion failure
-   `E_U not subset H_(x,y) minus R_U`, using component/owner incidence to select
-   the right deep component; alternatively prove a uniform bad-atom transversal
-   lower bound or quantitatively land the terminal dyadic base in a certified
-   region. For higher
+   and total eroded measure still lose the signed tooth slope. THM-797 proves
+   the global erosion failure whenever an odd exception-divisor grid leaves
+   its exact shell and reduces q=13 to full or aligned-five support.  Finish
+   those survivors using component/owner incidence across **all** deep
+   components, prove a uniform bad-atom transversal bound, quantitatively land
+   the terminal dyadic base in a certified region, or force an effective-order
+   descent. For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
    *Prime-lens refinement:* THM-778 supplies the full Euclidean endpoint word;
    THM-779/784 rule out raw wall count, and MISTAKE-148 withdraws fixed-index
-   de-phasing. After persistent stalks are contracted, THM-788 replaces the
-   word by decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb
+   de-phasing. After persistent stalks are contracted, THM-788 gives the
+   decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb
    free fastest-owner refinement and `V` packets are ordered zero-sum visitors.
-   THM-794 proves that `A` cannot be bounded: contract repeated legal packet
-   loops whose return is diagonal in the deck, retain transitions in the
-   reduced collision groupoid and the redundancy roots, then intersect the
-   metric lift with the core-safe base. A continued-fraction digit is useful
-   only through this labelled fibre action.
+   THM-794 proves this is only an intermediate normal form: a full visitor
+   packet can repeat as a diagonal deck translation, making `A`, genuine
+   switches, and the proposed universal extent unbounded/false at `R=2`.
+   First quotient packet return maps modulo common sheet translation; then
+   retain the redundancy roots, study exits between reduced collision SCCs,
+   and intersect their metric lift with the core-safe base. A continued-
+   fraction digit is useful only through this labelled fibre action.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
 4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
@@ -202,11 +202,11 @@ three-exception equality edge is an `s=3` persistent colour cover.  THM-768
 separately rules out a largest speed that is the unique 13-multiple.  THM-770's
 exact owner-CSP settles all shallow labelled packets through lift height twelve
 (`13^12` conceptual rows), leaving only the permitted dilates and the unique
-primitive AP.  THM-795 adds a scale-free direction: at every lift height and
-around every unit AP dilation, a congruent one-coordinate replacement is tight
-only when it is unchanged.  Thus any unbounded shallow residual begins at
-Hamming radius two.  This still does not prove general shallow descent or
-eliminate the deep colour-cover branch.
+primitive AP.  THM-795 proves the complete unbounded one-coordinate direction:
+every proper residue-preserving Hamming-one lift of every unit AP dilation is
+loose.  No descent is known at Hamming radius at least two, where replacements
+can share missing-owner splice germs; the deep colour-cover branch also
+remains.
 
 The two-sheet edge is now considerably narrower.  THM-772 proves that its
 ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
@@ -246,13 +246,14 @@ signed component-tournament fingerprints and identical scalar eroded-diamond
 measure, but different return-thickened component incidence. The uniform
 residual is now smaller: THM-797's odd-divisor shells discharge every row with
 a deep grid class outside the opposite-exception shell, and `q=13` leaves only
-full or aligned-five folded support.  In the sharp aligned row all global
-maximizers are trapped but a `1/11` threshold endpoint escapes.  The remaining
-theorem is therefore a signed-tooth, owner-labelled **all-component**
-selection/noncontainment theorem (or
-quantitative seam-guard bounds that put the reconstructed ten-core/full packet
-inside a certified base), not an unstructured search over ten-even/two-odd
-tuples.
+full or aligned-five folded support, eliminating support-at-most-four,
+misaligned-five, and non-full double-13 cores. Its sharp aligned survivor
+traps both deepest thirteenths but escapes at `7/33`, proving that all closed
+deep components and endpoint owners—not only global maxima—must remain. The
+remaining theorem is therefore a signed-tooth, owner-labelled **all-component**
+selection/noncontainment theorem (or quantitative seam-guard bounds that put
+the reconstructed ten-core/full packet inside a certified base), not an
+unstructured search over ten-even/two-odd tuples.
 
 On the prime-seven face, THM-778 reconstructs the complete endpoint event
 schedule that THM-773's moments forget. THM-779 converts full eight-owner
@@ -309,18 +310,19 @@ THM-769's exact sheet-capacity inequality.  THM-770 exhausts all `13^12`
 shallow packets through lift height twelve by a lossless `24,008`-cell
 endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
 `c=1,...,12,14`, hence the only primitive row is the AP.  This closes the
-shallow sporadic slice through `max A<=168`.  THM-795 closes the full
-arbitrary-height Hamming-one star around every AP dilation by a missing-owner
-splice grid; the higher shallow residual now starts with two simultaneous
-replacement colours.  Its residue-obligation tournament has all `66` burdens
-tied, and THM-795's sheet-margin tournament is also transitive; both theorems
-live in owner/sheet incidence, not the tie quotient.  Deep packets remain.
+shallow sporadic slice through `max A<=168`.  THM-795 additionally closes all
+higher shallow lifts at labelled Hamming distance one from any AP dilation;
+radius at least two and every deep branch remain.  The residue-obligation and
+sheet-margin tournaments are transitive telemetry; the proofs live in the
+endpoint-owner hypergraph and the missing-splice sheet-danger deck with
+oriented core-safe germs.
 
 ## 4. The one-line frontier
 
 > **LRC(14) is open. The proved `f<=3` tile and the per-core capped envelope are substantial,
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
-*Controlling corrections: HYP-6780, MISTAKE-143, THM-762/764, THM-768--770,
+*Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
+THM-768--770, THM-794/795/797,
 and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

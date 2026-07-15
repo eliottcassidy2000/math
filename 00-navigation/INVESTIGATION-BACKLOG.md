@@ -108,6 +108,8 @@
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
 - **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/795/797; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -122,6 +124,9 @@
   lift height, a congruent one-coordinate replacement is tight only if it is
   unchanged.  Any remaining non-AP shallow packet has Hamming radius at least
   two from every AP dilation.
+  is the AP and the shallow sporadic slice is empty for `max A<=168`.
+  THM-795 closes the full Hamming-one star around every unit AP dilation at
+  every lift height; the shallow residual starts at labelled radius two.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -168,6 +173,16 @@
   graph with deck orders `c/gcd(c,w_i)` and one-sided germ orientation; seek a
   Hall defect or a forced common divisor.  Do not use another raw box unless
   it is tied to a decreasing invariant.
+  return-thickened component incidence differs. THM-797 now gives an exact
+  odd-divisor acceptance shell and reduces q=13 to full or aligned-five folded
+  support; its sharp survivor escapes only on another deep component. The
+  missing datum is global component choice with signed affine tooth/slope and
+  divisor-shell address.
+- **Open shallow theorem:** extend THM-795 from one replacement to Hamming
+  radius at least two.  Several replacement colours may share the lifted
+  missing-owner germs, so target a Hall obstruction or forced common-divisor
+  descent in the sheet-tooth incidence graph.  Do not use another raw box
+  unless it is tied to a decreasing deck/height invariant.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -211,6 +226,10 @@
   endpoint, so the selector must range over all owner-labelled closed
   `1/11`-superlevel components. Fixed-anchor refinement, argmax-only choice,
   and raw component tournaments are insufficient by THM-789/797. Then
+  erosion failure `E_U not subset H minus R_U` on THM-797's remaining full and
+  aligned-five support patterns by selecting among all deep components and
+  transporting their signed tooth address or exact eroded margin. Fixed-anchor
+  refinement and raw component tournaments are insufficient by THM-789. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -225,6 +244,9 @@
   all 66 burdens tied and one tie Hamiltonian path, yet the owner hypergraph
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
+  THM-795's scalar sheet-margin tournament is likewise transitive with one
+  Hamiltonian path but forgets whether **all** lifted margins are nonnegative;
+  its proof carrier is the sheet-danger deck plus oriented metric germs.
 
 ## Lead codex-2026-07-14-S9: cyclic-triangle flow and black quotient drift
 
@@ -248,6 +270,8 @@
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk/holonomy-quotiented r=8 dynamics
 
 - **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149;
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795; corrected THM-779; MISTAKE-147/148/149;
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797; corrected THM-779; MISTAKE-147/148/149;
   HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
@@ -307,6 +331,28 @@
   are the two independent gauge families—empty refinement and full-support
   diagonal holonomy—that the quotient must remove.
 - **Parallel folded target:** orient the connected components of the deep set
+  fixed-span laws, so separate marginals leave a common Beatty-order/carry
+  coupling problem.  THM-794 adds a stronger correction: a full seven-visitor
+  packet repeats for `H-1` active periods with a genuine switch at every wall
+  and fixed `ceil(f/g)=2`, but returns only by diagonal sheet translation.  It
+  refutes both active/switch compactness and the universal extent conjecture.
+- **Next theorem target:** define minimal persistent stalks over each metric
+  core-safe component, contract stalk-redundant walls **and** full-support
+  packet return cycles modulo common sheet translation, and prove a bound or
+  forced tear for the remaining normalized collision/SCC skeleton using
+  THM-778's centered schedule, THM-779's supportability equation, and
+  THM-783/786's signed balance/span/transversal laws.  First classify the
+  finite residue-profile LPs with optimal speed-weight at least `g`, then
+  intersect them with the complete-`g`-period packet polytopes.  For the rows
+  surviving both, build the joint transportation automaton retaining local
+  centered-Beatty order, carry, and packet holonomy; separate marginals and
+  raw active words provably cannot work.
+  THM-784 supplies an
+  independent simpler unbounded-run family, confirming that this quotient is
+  necessary rather than an artefact of the divisor-complete construction.
+- **Parallel folded target:** THM-797 first applies every odd exception-divisor
+  grid and leaves only full/aligned-five support at q=13.  Then orient the
+  connected components of the deep set
   by the exact eroded folded-diamond escape margin and prove that at least one
   global component escapes.  Retain signed tooth/slope addresses: THM-789's
   `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
@@ -327,6 +373,10 @@
   incidence/frequency forgets the ordered return map.  The faithful carrier is
   `(core component, labelled minimal stalk, centered event path, redundancy
   root/visitor cluster, reduced holonomy)`, not runners or packets alone.
+  both stalks and central return cycles; the normalized `A8` graph forgets the
+  metric base.  The faithful carrier is `(core component, labelled minimal
+  stalk, event word, redundancy root/visitor cluster, packet return map)`
+  modulo diagonal deck translation, not runners alone.
 
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 
@@ -385,6 +435,12 @@
   MISTAKE-147/149, the open exit lemma is stalk- and holonomy-quotiented:
   combine THM-783's visitor clusters with an exact centered-schedule versus
   ordered-hop/return-map question under THM-778.
+  nevertheless unbounded in other families (THM-784). THM-788's decorated
+  active-period word is an intermediate normal form, not the final quotient:
+  THM-794 repeats a full active owner cycle by diagonal sheet translation.
+  The root word is a first-return signal, not a long-run survivor.  After
+  MISTAKE-149, combine THM-783's visitor constraints with a schedule-versus-
+  hop-word question only after central return holonomy is removed.
 - **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
   compile the five-return half into centered Farey/Christoffel substitutions.
   Prove a prefix loses coverage, a simultaneous event tears the stalk, or the

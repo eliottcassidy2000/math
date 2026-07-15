@@ -1,12 +1,12 @@
 ---
 id: HYP-6840
-title: The r=8 deck frontier — exact token/event-word criterion, persistent seven-stalk refuter to raw wall bounds, and the corrected owner-switch problem
-status: UPDATED after MISTAKE-147 — full blocking on arbitrarily long core-safe wall runs is CONSTRUCTED; full blocking over an entire core-safe set remains OPEN; the global 1/7 law is VERIFIED but insufficient after core restriction
+title: The r=8 deck frontier — exact token criterion, persistent-stalk and full-packet refuters, and normalized collision holonomy
+status: UPDATED after MISTAKE-149 — full blocking on arbitrarily long core-safe wall runs and unbounded active/switch runs at fixed fastest ratio are CONSTRUCTED; full blocking over an entire core-safe set remains OPEN; the global 1/7 law is VERIFIED but must be applied after diagonal packet holonomy is quotiented
 source: opus-2026-07-14-S301 (owner directive: progress or rigorous no-gos; separate signal from noise)
 depends_on:
   - THM-767   # zero-variance, chamber locking (the mechanisms that resist covers)
   - THM-771   # the exact seven-owner defect frame
-related: [THM-761, THM-777, THM-778, THM-779, THM-780, THM-783, THM-784, THM-786, THM-788, HYP-6835, MISTAKE-141, MISTAKE-146, MISTAKE-147, MISTAKE-148]
+related: [THM-761, THM-777, THM-778, THM-779, THM-780, THM-783, THM-784, THM-786, THM-788, THM-794, HYP-6835, MISTAKE-141, MISTAKE-146, MISTAKE-147, MISTAKE-148, MISTAKE-149]
 verification: 04-computation/lrc14_r8_single_lens_nogo_opus_S301.py,
   04-computation/lrc14_r8_static_deck_cover_search_opus_S301.py (+ .outs)
 ---
@@ -105,30 +105,32 @@ question.** Three consequences:
   `J=[25/182,27/182]` give `2m` covered walls.  Whether one packet blocks the
   **entire** closed core-safe set is still open.
 - **Q2 (positive theorem): REFRAMED AND PARTLY PROVED.**  Factor out intervals on which seven
-  owners already form a persistent exact stalk, and bound genuine owner
-  switches or centered-word complexity.  THM-779's exact redundancy cocycle
+  owners already form a persistent exact stalk **and** packet cycles whose
+  return map is common sheet translation.  THM-779's exact redundancy cocycle
   gives the supportability equation; THM-778 supplies the centered-Christoffel
   event word and proves a simultaneous-wall pierce when equal 2-adic valuation
   has sufficiently large gcd.  THM-783 supplies the balanced-cluster laws;
   THM-786 proves the metric-extent pierce on its no-co-landing class, a
-  factor-two span for one fixed companion, and an explicit ultra-sparse bound
-  when the other companion speeds sum to `<g`.  Alternation in the
-  general-density regime is the remaining universal case.
+  factor-two span for one fixed companion, plus transversal and packet-
+  polytope bounds.  THM-794 shows that general alternation cannot be bounded
+  before quotienting: its full seven-visitor owner cycle repeats arbitrarily
+  with `ceil(f/g)=2` and diagonal return holonomy.
   THM-784 independently supplies a simpler unbounded raw-wall
   family, so this failure is not tied to divisor completeness.
   Raw wall density is not a proof coordinate.
 - **Q3 (finite group / DMNR):** the rooted covered-state space is an `A8`
   torsor of size `20,160`, with one strongly connected component and
-  monochromatic seven-cycles.  Connect the owner-switch word, after stalk
-  factoring, to exact-covering-system rigidity.  The global `1/7` buffering
-  count must be restricted to the core-safe exit set before it can govern this
-  question.
+  monochromatic seven-cycles.  THM-794 adds an explicit full-packet central
+  cycle.  Connect the **normalized return SCC word**, after stalk and diagonal
+  holonomy factoring, to exact-covering-system rigidity.  The global `1/7`
+  buffering count must also be restricted to the core-safe exit set.
 
 The information-boundary lesson is now exact: runner or wall-event tournaments
-without metric and token-fibre labels do not preserve blocking. Fast refinement
-changes only event resolution. The appropriate quotient must retain the
-owner-labelled chronological path, slow chamber, mesh ratios, and core-safe
-base interval.
+without metric and token-fibre labels do not preserve blocking. Empty fast
+refinement changes event resolution, while THM-794's full active refinement
+changes every wall owner but only rotates the common sheet gauge. The
+appropriate quotient must retain normalized collision return maps, slow
+chamber, mesh ratios, and the core-safe base interval.
 
 ## Signal/noise ledger for this session (S301)
 

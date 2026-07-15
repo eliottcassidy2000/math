@@ -1,18 +1,20 @@
 ---
 id: THM-779
-title: The r=8 token-walk criterion and redundancy cocycle at the prime-7 lens — exact event-word decidability; the raw wall-count exit conjecture is false and the surviving complexity is owner switches
-status: PROVED (blocking criterion, redundancy/event-word cocycle, and an infinite divisor-complete refuter to every universal raw wall-count bound) + VERIFIED (finite adversarial census and A8 state graph) + OPEN (universal dense-regime extent/owner-switch exit)
+title: The r=8 token-walk criterion and redundancy cocycle at the prime-7 lens — exact event-word decidability; raw walls, active periods, and owner switches are noncompact
+status: PROVED (blocking criterion, redundancy/event-word cocycle, and infinite refuters to raw-wall, active-period, owner-switch, and universal-extent targets) + VERIFIED (finite adversarial census, A8 state graph, and full-packet holonomy replay) + OPEN (normalized collision holonomy coupled to core incidence)
 source: opus-2026-07-14-S302 criterion, corrected and strengthened by codex-2026-07-14-S10
 depends_on:
   - THM-773   # the token k_a = -w_a^{-1} round(w_a x), the X^7 - X factorization criterion
   - THM-767   # zero-variance at the prime lens; chamber locking
   - THM-771   # the exact seven-owner defect frame
-related: [HYP-2603, HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, THM-786, THM-788, MISTAKE-147, MISTAKE-148]
+related: [HYP-2603, HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, THM-786, THM-788, THM-794, MISTAKE-147, MISTAKE-148, MISTAKE-149]
 verification:
   - 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
   - 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out
   - 04-computation/lrc14_r8_raw_wall_refuter_codex_S10.py
   - 05-knowledge/results/lrc14_r8_raw_wall_refuter_codex_S10.out
+  - 04-computation/lrc14_full_active_packet_holonomy_codex_S10.py
+  - 05-knowledge/results/lrc14_full_active_packet_holonomy_codex_S10.out
 ---
 
 # THM-779 — the r=8 token-walk blocking criterion
@@ -21,7 +23,11 @@ verification:
 > 6 walls) are ratio-boxed artifacts; THM-784 gives unbounded runs. The
 > criterion itself is unaffected. THM-786 proves the extent comparison only in
 > its no-companion class; its advertised serving/sparse completion is withdrawn.
-> THM-788 gives the sound scale-sensitive reduction through active f-periods.
+> THM-788 gives sound conditional inequalities through active f-periods, but
+> THM-794/MISTAKE-149 makes active periods and genuine owner switches
+> unbounded at `ceil(f/g)=2` and refutes the proposed universal extent.  The
+> surviving carrier is collision return holonomy modulo diagonal sheet
+> translation, with metric core incidence retained.
 
 **Frame.** Lens c = 7, core P (|P| = 5), exceptions W = {w_1..w_8}, 7 ∤ w_a. By
 THM-773's token algebra (refereed here exactly on 4,000 random rational points):
@@ -160,8 +166,10 @@ THM-784/MISTAKE-147. The fixed slow rainbow `{1,2,3,4,5,8,10}` blocks
 The sound finite statement is only instance-relative: after the exact walk has
 computed the maximal run `K(W,J)` for a specified tuple and interval, more than
 that computed number forces a pierce for that instance. No uniform conclusion
-can use the unnormalised number of walls. The next theorem must use metric
-extent, slow-owner switches, or direct intersection with a core-safe component.
+can use the unnormalised number of walls.  THM-794 subsequently shows that
+metric extent at the proposed scale and slow-owner switches are not uniformly
+bounded either.  Direct intersection with a core-safe component must be
+studied only after central packet return cycles are quotiented.
 
 There is also a divisor-complete core-safe refuter, which puts the same failure
 inside the arithmetic LRC14 residual rather than merely in an abstract deck.
@@ -210,25 +218,30 @@ covered walls in `I`.
   metric-extent bound are valid.  They constrain genuine visitor clusters and
   owner switches.  They do **not** imply the sampled raw count `K0=6`: in the
   family above every complete fast-owner period is visitor-free, so the proved
-  laws coexist with `2m` covered walls.
-- **Owner-switch/skeleton exit (OPEN):** after factoring out intervals on which
-  seven owners already form a persistent exact stalk, bound the number or
-  complexity of genuine owner switches using (9) and THM-778's centered
-  mechanical schedule.  Raw wall count is not a valid complexity coordinate.
+  laws coexist with `2m` covered walls.  THM-794 realizes the opposite
+  saturated mode: every period has all seven visitors, yet the same packet
+  repeats arbitrarily often.
+- **Normalized collision-holonomy exit (OPEN):** persistent-stalk contraction
+  is only the first quotient.  THM-794 has `8H-8` genuine owner switches and
+  `H-1` active periods at fixed ratio; one full packet returns the collision
+  state by common sheet translation.  Divide out that central return action,
+  then study SCC transitions using (9) and THM-778's centered mechanical
+  schedule.
   THM-778 makes the schedule side exact: centered Beatty ranks merge the eight
   midpoint clocks, and their Euclidean parity cocycles recursively generate
   every owner/tie block.  Thus the lemma can be posed as non-synchronization of
   a centered mechanical schedule with this finite collision-hop transducer.
 - Every specified finite component still falls to the direct piece check
-  (criterion (1)); wall count alone gives no scale-uniform split.  THM-786
-  reframes the positive theorem in metric extent and proves it on its stated
-  no-co-landing and sparse classes; the dense balanced-swap regime remains.
+  (criterion (1)).  THM-786's no-companion, transversal, and packet-polytope
+  classes remain valid, but THM-794 refutes its universal extent conjecture.
+  The dense residual is normalized packet persistence plus core incidence.
 - **Simultaneous-wall stratum (PARTLY PROVED):** THM-778 shows that equal
   2-adic valuation gives a `gcd(u,v)` midpoint grid of double walls.  A
   core-safe interval of length at least `1/gcd(u,v)` pierces; for the five-core
   here, `gcd(u,v)>=21 max(P)/4` suffices.
 - Every fixed family remains exactly decidable by the criterion and event-word
-  test.  What is missing is a scale-uniform theorem on the corrected
-  owner-switch/quotient-skeleton coordinate.
+  test.  What is missing is a scale-uniform theorem on the diagonal-holonomy-
+  quotiented collision coordinate and its metric embedding in the core-safe
+  set.
 - Lens generalization (7g | c strata, r = p+1 at other primes p ≤ 13 after
   rescaling δ) is mechanical but unwritten.

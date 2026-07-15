@@ -12,6 +12,8 @@ exceptions=(13, 5) bounds=(<=11B, min<=11B-36)=PASS rho=1/208 Astar=1/40<=36/845
 folded_support_multiplicity=(2, 2, 3, 2, 0, 1) missing_class=5=fold(y)
 q13_deep_numerators=(5, 8) phi=2/13 Q=12/13 (all trapped)
 erosion_escape_t=7/33 phi=1/11 Q=8/33<11/13; 0 in R_U, so t notin H minus R_U
+full_packet=(2, 4, 5, 6, 8, 13, 14, 18, 20, 22, 24, 32) M=2/19 maximizers=(Fraction(2, 19), Fraction(8, 19), Fraction(11, 19), Fraction(17, 19)) (>1/13, loose)
+max_peel_M=1/8 maximizers=(Fraction(1, 16), Fraction(7, 16), Fraction(9, 16), Fraction(15, 16)) (>1/12, sporadic inequality)
 E_U_components=8 ((Fraction(12, 77), Fraction(7, 44)), (Fraction(23, 110), Fraction(7, 33)), (Fraction(67, 176), Fraction(43, 110)), (Fraction(9, 22), Fraction(9, 22)), (Fraction(13, 22), Fraction(13, 22)), (Fraction(67, 110), Fraction(109, 176)), (Fraction(26, 33), Fraction(87, 110)), (Fraction(37, 44), Fraction(65, 77)))
 component_endpoint_owners=(((7,), (12,)), ((10,), (9,)), ((16,), (10,)), ((10, 12), (10, 12)), ((10, 12), (10, 12)), ((10,), (16,)), ((9,), (10,)), ((12,), (7,)))
 reflection_orbit_(minQ,argmin)=((Fraction(60, 77), Fraction(12, 77)), (Fraction(8, 33), Fraction(7, 33)), (Fraction(159, 176), Fraction(67, 176)), (Fraction(15, 22), Fraction(9, 22))) margins=(Fraction(67, 1001), Fraction(259, 429), Fraction(-131, 2288), Fraction(47, 286))
