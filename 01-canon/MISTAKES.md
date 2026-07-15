@@ -11,6 +11,17 @@ Format per entry:
 
 ---
 
+## MISTAKE-149 -- counting full active fastest periods still counts a diagonal sheet-translation gauge (THM-788, corrected by THM-794)
+
+> **Namespace claim stub.**  THM-794 gives an exact family with arbitrarily
+> many consecutive active fastest periods while `ceil(f/g)=2`.  Each period
+> carries all seven visitors and induces only a common token translation.
+> Therefore active-period count, like empty fast refinement before it, is not
+> a compactness coordinate.  The full formulas, impact audit, and replacement
+> invariant are being integrated with THM-794.
+
+---
+
 ## MISTAKE-147 -- an adversarial census ceiling on covered walls was treated as a scale-free exit constant; fast refinement makes the raw count unbounded (THM-779/783, corrected by THM-784)
 
 - **What was claimed:** THM-779 promoted the annealed maximum `K0=5` to the
