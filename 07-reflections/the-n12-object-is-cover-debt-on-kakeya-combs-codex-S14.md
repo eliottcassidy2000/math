@@ -1,7 +1,7 @@
 # The n=12 object is cover debt on periodic Kakeya combs
 
-*codex-2026-07-15-S14, with codex-S10 relative-ramification continuation.
-Companion to HYP-6820, THM-815/823/836/841/844/845/847/858,
+*codex-2026-07-15-S14, with codex-S10 relative-ramification and exact-H6 continuation.
+Companion to HYP-6820, THM-815/823/836/841/844/845/847/857/858,
 and the exact Fano/chi7 flood and Hamming-six contraction audits.*
 
 ## 0. Honest verdict
@@ -16,12 +16,13 @@ the shape of the remaining object:
    effective order 21. All-one, all-three, and mixed one-plus-three are the
    complete list through 21 and are uniformly empty at proper lift height;
    the remaining order bank is finite but not yet classified.
-2. The nonprimitive scale-one Hamming-six branch contracts exactly.  Its only
-   possible tight row is the doubled AP `2[12]`; every other nonprimitive row
-   is loose.  A subsequent AP-germ reduction closes fourteen of the twenty
-   primitive-core rows with three full antipodal missing pairs.  Primitive H6
-   remains open on 909 primitive-core rows plus the exceptional mixed-parity
-   odd-label branch.
+2. The entire proper scale-one Hamming-six chart is now exact.  THM-857's
+   `580,919,164`-node recursion over all 924 deletion roots has one covering
+   terminal, the doubled AP `2[12]`, and twenty loose terminals.  It subsumes
+   the earlier nonprimitive contraction and fourteen-row AP-germ closure,
+   removing all 909 formerly open primitive-core rows and the exceptional
+   mixed-parity branch at scale one.  Arbitrary-scale/common-sheet transport
+   remains open.
 3. THM-836's local `s=5` shell is exactly four congruence classes, and the full
    class `d=11 mod 52` is uniformly impossible by one explicit divisor-grid
    witness.  The classes `15,37,41 mod 52` remain open uniformly, and the
@@ -153,8 +154,8 @@ in
 ```
 
 states by depth, with no covering prefix.  Hence `2[12]` is the only possible
-tight nonprimitive H6 packet.  The remaining H6 problem is now intrinsically
-primitive, but “primitive” has two layers.  The odd-label row has retained
+tight nonprimitive H6 packet.  Before THM-857, the remaining H6 problem was
+intrinsically primitive, but “primitive” had two layers.  The odd-label row has retained
 core `{2,4,6,8,10,12}`: its all-odd height fibre contracts as above, whereas
 mixed height parity makes the completed packet primitive.  That exceptional
 fibre must not be dropped.
@@ -166,8 +167,29 @@ The resulting weighted handoff graph is not a tournament: a pair can carry
 both directions or neither because its two cusp gauges differ.  Directed-cycle
 products close six of the twenty `f=3` rows; eight more force one of ten fixed
 coordinates, and exact slice trees close all ten in 3,699 states.  Six
-product-`1/16` rows survive.  This is the first place where a projective AP
-grid cusp, rather than a runner or whole component, is the right local vertex.
+product-`1/16` rows survived that quotient.  This is the first place where a
+projective AP grid cusp, rather than a runner or whole component, is the right
+local vertex—but it is a lossy local chart, not the final H6 object.
+
+THM-857 completes the picture by refusing that quotient.  Numerically order
+all six proper lifts and retain the literal open residual after each insertion.
+THM-815's longest-component inequality gives a finite next-speed cap at every
+prefix.  A child is certified dead either when it contains a full safe tooth,
+which would force the next ordered speed below the current speed, or when an
+emerging exact child component already makes the cap smaller than the least
+legal future lift.  This produces the all-root census
+
+```text
+nodes by depth = 924, 83,881, 8,906,315, 559,202,706,
+                 12,671,505, 53,812, 21;
+covers = 1; loose terminals = 20.
+```
+
+The unique cover lifts missing labels `{1,3,5,7,9,11}` to
+`{14,16,18,20,22,24}`.  An independent replay reconstructs unions of closed
+danger teeth from scratch and checks each expanded child endpoint-for-endpoint.
+Thus the scale-one H6 object is the labelled component--future-comb action
+tree, not the antipodal count, germ-cycle product, or a runner tournament.
 
 ## 3. The deep shell is an incidence problem too
 
@@ -367,10 +389,10 @@ argument on any consecutive/AP-window residual.
 
 The shortest honest route to the requested theorem is now:
 
-1. **Primitive H6:** extend the two-sided AP-germ/component handoff from the
-   fourteen closed `f=3` rows to the six product-`1/16` rows, then the 903
-   rows with `f<=2`, while keeping the exceptional mixed-parity odd-label
-   branch separate.  Do not quotient by the antipodal count alone.
+1. **Arbitrary-scale H6 transport:** lift THM-857's closed scale-one action
+   tree across common sheets without losing literal components, labelled
+   future progressions, last-speed order, equality ancestry, or the shortcut
+   witness.  There is no remaining primitive scale-one label census.
 2. **Finite ramified H5 sheets:** classify the THM-858 strip
    `min D_i<=21<max D_i<=42,336`.  Every order is `{2,3,7}`-smooth, every maximal
    prime power is shared, and all complement-lcm relative-capacity cuts hold.
@@ -388,7 +410,57 @@ The shortest honest route to the requested theorem is now:
    `chi_7`, and local three-needle paths are now ruled out as pruning quotients.
 
 The object underneath these obligations is a ramified sheaf of periodic combs
-over literal safe components, carrying owner, scale, residue, and future-action
-data.  The older viewpoints—Farey gaps, sheets, tournaments, Fano masks,
-continued fractions, and Kakeya needles—are useful charts precisely to the
-extent that they preserve that cover-debt packet.
+over literal safe components, carrying owner, scale, residue, future-action
+data, and on sheeted branches the complement-lcm fibre.  The two new theorems
+meet at that description: THM-857 resolves the literal metric stalk at scale
+one, while THM-858 bounds the arithmetic ramification base.  The older
+viewpoints—Farey gaps, sheets, tournaments, Fano masks, continued fractions,
+matroid circuits, tropical cycles/trees, and Kakeya needles—are useful charts
+precisely to the extent that they preserve this cover-debt packet.
+
+## 8. A recursive definition of the underlying object
+
+The accumulated work suggests a sharper definition than “a difficult
+twelve-set.”  The live object is a **ramified component-cover automaton** with
+five coupled layers:
+
+1. The projective base records common scale, effective sheet orders, unit
+   classes, and prime-power carriers.  THM-858 proves that the H5 common-sheet
+   part of this base is finite, but does not decide its metric fibres.
+2. A metric fibre records the exact open components of the current strict-safe
+   set and every remaining labelled arithmetic progression of comb speeds.
+3. The transition labelled by `u` is the idempotent intersection
+   `T_u(E)=E intersect Safe(u)`, together with numerical-order and endpoint
+   ancestry.  Covering is exactly arrival at the empty fibre.
+4. A proof certificate is a local obstruction to future empty fibres: a
+   longest-component cap, full safe tooth, streaming cap witness, owner pin,
+   complement-lcm cut, tropical cycle, or Hunter tree credit.
+5. The legal operation category records whether the next move is insertion,
+   peel/deletion, replacement, scale change, sheet lift, or descent.  Two states
+   are continuation-equivalent only when every legal future word has the same
+   terminal emptiness verdict.  A proposed quotient is transportable only
+   after it is proved to be a congruence for the required operations; THM-840
+   shows why insertion-Markov endpoints alone fail this test for deletion.
+
+This definition explains the historical viewpoints without identifying any
+one of them with the whole problem.  Hamming shells choose a local coordinate
+chart around the AP.  Sheet and dyadic descent move in the projective base.
+Farey/continued-fraction addresses track endpoint genealogy.  Fourier modes
+and relation-lattice or matroid circuits measure global resonance but forget
+which component is hit.  AP-germ cycles are a min-plus necessary condition for
+local cusp coverage; the Hunter/Kruskal tree is a max-plus rank-two lower bound
+on the uncovered mass.  Exact radius-seven coverage still lives in the
+higher-order cover nerve, or dually in a component-weighted fractional-cover
+LP/Farkas certificate retaining edge incidence.  Tournaments impose a binary order on one projection and are
+usually non-conservative: thousands of edges can switch while the terminal
+cover verdict is unchanged.  Fano and `chi_7` coordinates organize seven-fold
+incidence but lose the metric edge curl.
+
+In this language THM-857 computes the entire H6 fibre over the trivial
+scale-one base and finds a unique empty terminal, the equality section
+`2[12]`.  THM-858 bounds the nontrivial H5 ramification base.  The central
+missing theorem is now visible: construct a transport functor between those
+fibres that commutes with the required legal operations and preserves terminal
+emptiness and certificate witnesses.  Merely
+matching order multisets, tournament fingerprints, component counts, or
+pairwise overlaps cannot supply that transport.

@@ -1,12 +1,13 @@
-// Exploratory exact scale-one Hamming-six component recursion.
+// Exact scale-one Hamming-six component recursion.
 //
 // For each six-label deletion core P subset [12], enumerate the six proper
 // residue-preserving lifts in increasing numerical order.  At every prefix,
 // THM-815's longest-component discrepancy inequality gives a complete bound
 // for the next speed.  There is no height cutoff and no floating point.
 //
-// This file is intentionally exploratory until the full census, independent
-// replay, and theorem scope are frozen.
+// The full 924-root census is frozen below.  A companion implementation
+// independently reconstructs every expanded prefix from its closed danger
+// union and certifies the shortcut witnesses.
 #include <algorithm>
 #include <array>
 #include <chrono>
@@ -41,8 +42,15 @@ struct Rat {
 };
 
 Rat operator-(Rat a, Rat b) {
-  __int128 nn = (__int128)a.n * b.d - (__int128)b.n * a.d;
-  __int128 dd = (__int128)a.d * b.d;
+  // Form the difference over the lcm denominator.  Cancelling the common
+  // denominator factor before multiplying is important on the deep H6 tree:
+  // the exact endpoints are small, but their unreduced denominator product
+  // need not be.
+  long long g = gcd(a.d, b.d);
+  long long a_scale = b.d / g;
+  long long b_scale = a.d / g;
+  __int128 nn = (__int128)a.n * a_scale - (__int128)b.n * b_scale;
+  __int128 dd = (__int128)a.d * a_scale;
   if (nn < numeric_limits<long long>::min() ||
       nn > numeric_limits<long long>::max() ||
       dd > numeric_limits<long long>::max())
@@ -125,8 +133,73 @@ long long discrepancy_cap(int remaining, Rat longest_length) {
   return (long long)(numerator / denominator);
 }
 
+enum class MeetVerdict { materialized, dead_completion, loose_terminal };
+
+bool contains_full_safe_band(vector<Interval> const &components, int u) {
+  for (Interval const &component : components) {
+    long long centre = floor_mul(component.lo, u);
+    long long first = max<long long>(0, centre - 1);
+    long long last = min<long long>(u - 1, centre + 2);
+    for (long long k = first; k <= last; ++k) {
+      bool left_inside =
+          (__int128)component.lo.n * 13 * u <=
+          (__int128)(13 * k + 1) * component.lo.d;
+      bool right_inside =
+          (__int128)(13 * k + 12) * component.hi.d <=
+          (__int128)component.hi.n * 13 * u;
+      if (left_inside && right_inside)
+        return true;
+    }
+  }
+  return false;
+}
+
+bool cap_strictly_below(int remaining, Rat lo, Rat hi, int candidate) {
+  __int128 length_numerator =
+      (__int128)hi.n * lo.d - (__int128)lo.n * hi.d;
+  if (length_numerator <= 0)
+    throw runtime_error("nonpositive interval in early cap gate");
+  __int128 lhs = (__int128)22 * remaining * lo.d * hi.d;
+  __int128 rhs = (__int128)candidate * 13 * (13 - 2 * remaining) *
+                 length_numerator;
+  return lhs < rhs;
+}
+
+// Fuse intersection with the child's next-cap test.  If one emerging child
+// component already makes THM-815's cap smaller than the least legal future
+// lift, the actual longest child component can only make that cap smaller.
+// At a terminal, the first emerging component directly certifies looseness.
+MeetVerdict meet_speed_early(vector<Interval> const &current, int u,
+                             int remaining_after, int least_future,
+                             vector<Interval> &out) {
+  vector<Interval> const &bands = safe_bands(u);
+  out.clear();
+  out.reserve(current.size() + 4);
+  size_t i = 0, j = 0;
+  while (i < current.size() && j < bands.size()) {
+    Rat lo = current[i].lo < bands[j].lo ? bands[j].lo : current[i].lo;
+    Rat hi = current[i].hi < bands[j].hi ? current[i].hi : bands[j].hi;
+    if (lo < hi) {
+      if (remaining_after == 0)
+        return MeetVerdict::loose_terminal;
+      if (cap_strictly_below(remaining_after, lo, hi, least_future))
+        return MeetVerdict::dead_completion;
+      out.push_back({lo, hi});
+    }
+    if (current[i].hi <= bands[j].hi)
+      ++i;
+    else
+      ++j;
+  }
+  return MeetVerdict::materialized;
+}
+
 array<unsigned long long, 7> nodes{};
 array<unsigned long long, 7> dead_no_candidate{};
+array<unsigned long long, 7> full_safe_band_prunes{};
+array<unsigned long long, 7> early_cap_prunes{};
+array<unsigned long long, 6> materialized_prefixes{};
+array<unsigned long long, 16> tournament_flip_histogram{};
 array<long long, 6> max_cap{};
 array<Rat, 6> min_longest{};
 array<unsigned long long, 6> min_longest_count{};
@@ -135,12 +208,48 @@ unsigned long long loose_terminals = 0;
 unsigned long long root_count = 0;
 unsigned long long global_cap_first_prefix_states = 0;
 unsigned long long candidate_edges = 0;
+unsigned long long tournament_total_flips = 0;
+unsigned long long tournament_conditioned_ties = 0;
 array<int, 6> chosen_label{};
 array<int, 6> chosen_speed{};
 vector<string> covering_rows;
 int exploratory_depth_limit = 6;
+bool use_early_cap_gate = true;
+
+// Root-level Tournament Analysis.  The raw gauge orders the six missing
+// labels by their least proper lifts.  The conditioned gauge orders them by
+// the exact five-comb cap left after adjoining that least lift to the whole
+// deletion core; ties use increasing label.  Each gauge is therefore
+// transitive by construction.  Edge flips measure how much the literal core
+// changes this pairwise planning telemetry, not the cover predicate.
+void audit_root_tournament(array<int, 6> const &missing,
+                           vector<Interval> const &components) {
+  array<long long, 6> conditioned_cap{};
+  for (int i = 0; i < 6; ++i) {
+    vector<Interval> child = meet_speed(components, missing[i] + 13);
+    if (child.empty())
+      throw runtime_error("root tournament child unexpectedly covers");
+    Interval longest = longest_component(child);
+    conditioned_cap[i] =
+        discrepancy_cap(5, longest.hi - longest.lo);
+  }
+  int flips = 0;
+  for (int i = 0; i < 6; ++i)
+    for (int j = i + 1; j < 6; ++j) {
+      // The raw winner is i because missing[] is strictly increasing.
+      int conditioned_winner = i;
+      if (conditioned_cap[j] < conditioned_cap[i])
+        conditioned_winner = j;
+      else if (conditioned_cap[i] == conditioned_cap[j])
+        tournament_conditioned_ties++;
+      flips += conditioned_winner != i;
+    }
+  tournament_flip_histogram[flips]++;
+  tournament_total_flips += flips;
+}
 
 void note_prefix(int depth, vector<Interval> const &components) {
+  materialized_prefixes[depth]++;
   Interval longest = longest_component(components);
   Rat length = longest.hi - longest.lo;
   if (length < min_longest[depth]) {
@@ -212,7 +321,50 @@ void recurse(array<int, 6> const &missing,
   for (auto [speed, label] : candidates) {
     chosen_label[depth] = label;
     chosen_speed[depth] = speed;
-    vector<Interval> child = meet_speed(components, speed);
+    vector<Interval> child;
+    if (use_early_cap_gate && exploratory_depth_limit == 6) {
+      if (depth >= 2 && contains_full_safe_band(components, speed)) {
+        nodes[depth + 1]++;
+        full_safe_band_prunes[depth + 1]++;
+        if (depth == 5)
+          loose_terminals++;
+        else
+          dead_no_candidate[depth + 1]++;
+        continue;
+      }
+      int remaining_after = 5 - depth;
+      int least_future = numeric_limits<int>::max();
+      if (remaining_after) {
+        for (int future_label : missing) {
+          bool used = future_label == label;
+          for (int i = 0; i < depth; ++i)
+            used |= chosen_label[i] == future_label;
+          if (used)
+            continue;
+          int future_speed = future_label + 13;
+          if (future_speed <= speed)
+            future_speed += 13 * ((speed - future_speed) / 13 + 1);
+          least_future = min(least_future, future_speed);
+        }
+        if (least_future == numeric_limits<int>::max())
+          throw runtime_error("missing least future lift");
+      }
+      MeetVerdict verdict = meet_speed_early(
+          components, speed, remaining_after, least_future, child);
+      if (verdict != MeetVerdict::materialized) {
+        nodes[depth + 1]++;
+        if (verdict == MeetVerdict::dead_completion) {
+          dead_no_candidate[depth + 1]++;
+          early_cap_prunes[depth + 1]++;
+        } else {
+          loose_terminals++;
+          early_cap_prunes[depth + 1]++;
+        }
+        continue;
+      }
+    } else {
+      child = meet_speed(components, speed);
+    }
     recurse(missing, child, depth + 1, speed);
   }
 }
@@ -228,6 +380,8 @@ int main(int argc, char **argv) {
       root_start = stoi(argv[++i]);
     else if (argument == "--root-limit" && i + 1 < argc)
       root_limit = stoi(argv[++i]);
+    else if (argument == "--no-early-cap-gate")
+      use_early_cap_gate = false;
     else
       throw runtime_error("unknown or incomplete argument: " + argument);
   }
@@ -267,6 +421,7 @@ int main(int argc, char **argv) {
                   components = meet_speed(components, label);
               if (components.empty())
                 throw runtime_error("six-speed deletion core has empty residual");
+              audit_root_tournament(missing, components);
               root_count++;
               recurse(missing, components, 0, 0);
               if (root_count <= 10 || root_count % 50 == 0) {
@@ -289,12 +444,50 @@ int main(int argc, char **argv) {
        nodes[1] > global_cap_first_prefix_states))
     throw runtime_error("THM-815 root/first-prefix census mismatch");
 
-  cout << "EXPLORATORY_SCALE_ONE_HAMMING_SIX_COMPONENT_RECURSION\n";
+  if (root_start == 0 && root_limit == 924 && exploratory_depth_limit == 6 &&
+      use_early_cap_gate) {
+    const array<unsigned long long, 7> expected_nodes = {
+        924, 83881, 8906315, 559202706, 12671505, 53812, 21};
+    const array<unsigned long long, 7> expected_dead = {
+        0, 0, 0, 555565824, 12638291, 53792, 0};
+    const array<unsigned long long, 7> expected_full = {
+        0, 0, 0, 495797163, 0, 0, 0};
+    const array<unsigned long long, 7> expected_early = {
+        0, 0, 0, 59768661, 12638291, 53792, 20};
+    const array<unsigned long long, 6> expected_materialized = {
+        924, 83881, 8906315, 3636882, 33214, 20};
+    const array<Rat, 6> expected_min_longest = {
+        Rat(31, 1430), Rat(11, 6071), Rat(11, 20215),
+        Rat(2, 5941), Rat(2251, 2834949), Rat(1, 325)};
+    const array<long long, 6> expected_max_cap = {
+        468, 1556, 2488, 2154, 473, 50};
+    const array<unsigned long long, 6> expected_min_count = {
+        1, 1, 1, 1, 1, 1};
+    const array<unsigned long long, 16> expected_flip_histogram = {
+        47, 61, 93, 115, 146, 108, 110, 78,
+        49, 46, 33, 18, 16, 4, 0, 0};
+    const vector<string> expected_covers = {
+        "missing=1,3,5,7,9,11, ordered="
+        "1:14,3:16,5:18,7:20,9:22,11:24,"};
+    if (nodes != expected_nodes || dead_no_candidate != expected_dead ||
+        full_safe_band_prunes != expected_full ||
+        early_cap_prunes != expected_early ||
+        materialized_prefixes != expected_materialized ||
+        min_longest != expected_min_longest ||
+        min_longest_count != expected_min_count || max_cap != expected_max_cap ||
+        candidate_edges != 580918240ULL || covering_terminals != 1 ||
+        loose_terminals != 20 || covering_rows != expected_covers ||
+        tournament_flip_histogram != expected_flip_histogram ||
+        tournament_conditioned_ties != 406 || tournament_total_flips != 4500)
+      throw runtime_error("frozen full H6 census mismatch");
+  }
+
+  cout << "SCALE_ONE_HAMMING_SIX_COMPONENT_RECURSION\n";
   cout << "arithmetic=integer+rational floating_point=none height_cutoff=none\n";
   cout << "root_start=" << root_start << " root_limit=" << root_limit
        << " depth_limit=" << exploratory_depth_limit << "\n";
   cout << "roots=" << root_count << " candidate_edges=" << candidate_edges
-       << " runtime_seconds=" << seconds << "\n";
+       << "\n";
   cout << "global_cap_first_prefix_states="
        << global_cap_first_prefix_states
        << " local_cap_first_prefix_states=" << nodes[1] << "\n";
@@ -306,13 +499,39 @@ int main(int argc, char **argv) {
   for (auto value : dead_no_candidate)
     cout << value << ",";
   cout << "\n";
+  cout << "full_safe_band_prunes_depth0..6=";
+  for (auto value : full_safe_band_prunes)
+    cout << value << ",";
+  cout << "\n";
+  cout << "early_cap_prunes_depth0..6=";
+  for (auto value : early_cap_prunes)
+    cout << value << ",";
+  cout << "\n";
   for (int depth = 0; depth < 6; ++depth)
-    cout << "depth=" << depth << " min_longest=" << min_longest[depth]
+    cout << "materialized_depth=" << depth
+         << " prefixes=" << materialized_prefixes[depth]
+         << " min_longest=" << min_longest[depth]
          << " min_count=" << min_longest_count[depth]
          << " max_next_cap=" << max_cap[depth] << "\n";
   cout << "covering_terminals=" << covering_terminals
        << " loose_terminals=" << loose_terminals << "\n";
   for (string const &row : covering_rows)
     cout << "COVER " << row << "\n";
-  cout << "EXPLORATORY_DONE\n";
+  cout << "TOURNAMENT_ANALYSIS\n";
+  cout << "vertices=missing_labels raw=least_proper_lift_order "
+          "conditioned=five_comb_cap_after_least_lift\n";
+  cout << "tie_hamiltonian_order=increasing_label raw_and_conditioned_"
+          "fingerprints=transitive_scores_0_to_5_triangles_0_"
+          "singleton_SCCs_6_Hamiltonian_paths_1\n";
+  cout << "conditioned_ties=" << tournament_conditioned_ties
+       << " total_edge_flips=" << tournament_total_flips << "\n";
+  cout << "edge_flip_histogram=";
+  for (int flips = 0; flips <= 15; ++flips)
+    if (tournament_flip_histogram[flips])
+      cout << flips << ":" << tournament_flip_histogram[flips] << ",";
+  cout << "\n";
+  cout << "tournament_verdict=pairwise_planning_telemetry_only;_cover_"
+          "predicate_requires_literal_components_and_remaining_combs\n";
+  cout << "CERTIFIED_DONE\n";
+  cerr << "runtime_seconds=" << seconds << "\n";
 }

@@ -6,13 +6,14 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
-## Addendum 2026-07-15: component--comb cover debt / Kakeya-needle lens
+## Addendum 2026-07-15: ramified component-cover sheaf / Kakeya-comb lens
 
-The Hamming-five closures and the nonprimitive Hamming-six contraction sharpen
-the central packet-sheaf claim.  For a current core `P`, the monotone proof
-state is the literal component union `E(P)`, the remaining labelled periodic
-danger combs, active endpoints, and the last speed.  On a component `I`, the
-new useful potential is the overlap debt
+The Hamming-five ramification theorem and the complete scale-one Hamming-six
+closure sharpen the central packet-sheaf claim.  For a current core `P`, the
+monotone proof state is the literal component union `E(P)`, the remaining
+labelled periodic danger combs, active endpoints, last speed, and common-sheet
+fibre when present.  On a component `I`, the useful potential is the overlap
+debt
 
 ```text
 omega_I(S)=sum_(u in S)|I intersect D_u|
@@ -20,22 +21,34 @@ omega_I(S)=sum_(u in S)|I intersect D_u|
 ```
 
 The discrepancy ladder controls the first term; coverage and unique-owner
-rigidity live in the second.  At the doubled-AP H6 equality, division by two
-gives core `{1,...,6}` and combs `{7,...,12}`.  Its twelve components have four
-zero-debt unique-owner pins.  Exact descent plus a 136,288-state deepest-prefix
-tree closes every nonprimitive H6 packet except `2[12]`; primitive H6 remains
-open.  “Kakeya needles” here means periodic one-dimensional comb teeth acting
-on disconnected components, not a transfer of planar Kakeya dimension theory.
+rigidity live in the second.  THM-857's exact recursion ranges over all 924
+scale-one H6 deletion roots and all unbounded proper heights.  Its
+580,919,164-node logical tree has exactly one covering terminal, `2[12]`; the
+other twenty terminals are loose.  Thus the former 909 primitive-root residual
+and the exceptional mixed-parity fibre are closed at scale one, not merely
+stratified.  At equality, division by two gives core `{1,...,6}` and combs
+`{7,...,12}`; its twelve components have four zero-debt unique-owner pins.
+“Kakeya needles” here means periodic one-dimensional comb teeth acting on
+disconnected components, not a transfer of planar Kakeya dimension theory.
 
-The primitive-core H6 continuation identifies a sharper local vertex: an
+The earlier primitive-core H6 continuation identifies a sharper local vertex: an
 oriented thirteenth-grid cusp.  If `f` counts full antipodal missing pairs,
 there are exactly `2f` such cusps in the retained-core safe set.  Comparing an
 owner tooth's reach with incoming provider starts gives a weighted digraph,
 not a tournament; directed-cycle products plus ten fixed-coordinate trees
-close fourteen of the twenty `f=3` rows.  The antipodal count is only a
-stratification: it destroys pair signs, exact endpoints, divisor obligations,
-height parity, and overlap.  The remaining primitive scale-one bank consists
-of 909 primitive-core rows plus the exceptional odd-label mixed-parity branch.
+first closed fourteen of the twenty `f=3` rows.  THM-857 subsumes that partial
+closure at scale one, while showing why the chart was useful but incomplete.
+The antipodal count is only a stratification: it destroys pair signs, exact
+endpoints, divisor obligations, height parity, and overlap.
+
+THM-858 supplies the ramified analogue.  Its vertices are not runners but
+prime-power carrier obligations.  Complement-lcm fibres turn a colour set
+`S` into the exact cut
+`sum_(i in S) ceil(2m_i/13)/m_i>=1`; adjacent valuation cuts make the common-
+sheet H5 order bank finite with `max D_i<=42,336`.  Raw and conditioned pair
+gauges remain transitive despite 574 flips.  The faithful sheet object is the
+carrier hypergraph together with affine owner intervals on complement fibres,
+not an order tournament.
 
 THM-856 makes the first useful quadratic projection of this debt: the
 Hunter--Kounias maximum-spanning-tree functional on the symmetric weights
@@ -84,6 +97,11 @@ nonprimitive_contraction_target
 antipodal_AP_cusp_count
 oriented_germ_handoff_graph
 weighted_cycle_product
+all_root_component_tree_hash
+common_sheet_fibre
+prime_power_carrier_hyperedge
+complement_lcm_relative_order
+affine_owner_interval
 farey_one_kink_stalk
 fano_organization_not_symmetry
 fano_edge_module_invisible_dimension

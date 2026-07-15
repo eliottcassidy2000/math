@@ -926,22 +926,24 @@ certificate clauses, and proof obligations.
   selected-provider functional digraph contains a cycle whose weight product
   must be at most one.  In logarithmic coordinates this is the min-plus cycle
   companion to Hunter's max-plus tree.  It is not a tournament: opposite
-  germ gauges may give both arrows or neither.  This closes 14 of the 20
-  three-antipodal-pair primitive-core H6 rows and leaves 909 primitive-core
-  rows plus the exceptional mixed-parity branch.
+  germ gauges may give both arrows or neither.  This first closed 14 of the 20
+  three-antipodal-pair primitive-core H6 rows.  THM-857 subsequently closes
+  the full proper scale-one H6 chart; the former 909-row plus mixed-parity
+  residual is now a diagnosed information loss of the germ quotient.
 - **Connection to MPA-41 and THM-850:** the same typed failure occurs three
   ways.  Factor defects need factor-node incidence, H gradients need their
   target incidence, and Hunter credits need comb/prefix incidence.  The
   chi-seven Radon transform is linear on typed carry atoms; the Hunter tree is
   tropical after those atoms are formed.  Applying either scalarization too
   early destroys the other operation.
-- **Pull:** enumerate the seven-comb vertex/edge colours on the 903 `f<=2`
-  rows, six open `f=3` rows, and exceptional mixed-parity branch, including
-  rational-period words for the single and endpoint anomalies.  Join each
-  Kruskal rank word to its directed AP-handoff cycle word.  Quotient by
-  projective type only after checking operation congruence under the next
-  insertion/peel; test whether every recurrent negative tree class is an
-  expanding handoff class or an AP/mechanical-word stalk.
+- **Pull:** use THM-857's complete scale-one H6 component/certificate language
+  as the boundary input for the seven-comb vertex/edge colours and for
+  arbitrary-sheet transport.  Include rational-period words for single and
+  endpoint anomalies, and join each Kruskal rank word to its directed AP-
+  handoff cycle word.  Quotient by projective type only after checking
+  operation congruence under the next insertion/peel; test whether every
+  recurrent negative tree class is an expanding handoff class or an AP/
+  mechanical-word stalk.
 - **Must preserve:** prefix component endpoints, comb vertex identity,
   reduced pair ratio, common scale, mod-13 phase, endpoint discrepancy, and
   the incidence of each credit in the threshold graphs; for AP pins also keep

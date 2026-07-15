@@ -849,6 +849,15 @@ it into a tournament destroys the cover predicate.  Tournament Analysis is
 faithful telemetry at the collar sidecar and deliberately not substituted
 for the component proof.
 
+## Downstream radius-six closure
+
+THM-857 completes Part C's proper scale-one Hamming-six tree over all 924
+deletion roots and all unbounded lift heights.  Its unique covering terminal
+is the doubled AP `2[12]`; every other proper scale-one H6 packet is loose.
+Thus C.1's nonprimitive contraction and C.2's AP-germ cuts are now structural
+precursors to a full scale-one theorem.  Arbitrary-scale/common-sheet
+transport and the seven-comb wall remain outside that downstream result.
+
 ## Reproduction
 
 ```bash
