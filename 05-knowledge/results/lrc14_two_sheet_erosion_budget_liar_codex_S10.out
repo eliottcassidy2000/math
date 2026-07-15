@@ -1,0 +1,36 @@
+THM-789 global erosion budget + component-tournament liar
+U=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12)
+E_components=[12/77,7/44] [23/99,21/88] [23/88,32/121] [89/121,65/88] [67/88,76/99] [37/44,65/77]
+R_U=(-1/858,1/858) gaps_min=1/44
+mu(E)=193/7623 mu(E+I_delta)=3895/99099 mu(R)_uniform_lower=1/429
+general_budget: mu(E)+sum_i min(g_i,2delta) <= mu(H)
+kneser_budget: mu(E)+mu(R) <= mu(H), mu(R)>=max(2delta,2*72^-10)
+
+pair=(13, 9)
+  H_components=[37/169,28/117] [37/117,54/169] [115/169,80/117] [89/117,132/169]
+  mu(H)=8/169 mu(H-minus-R)=212/5577
+  raw_component_margins=(159/572,-7/1144,447/1573,447/1573,-7/1144,159/572)
+  eroded_component_margins=(15/52,5/1144,2825/9438,2825/9438,5/1144,15/52)
+  tournament_order_zero_based=(1, 4, 0, 5, 2, 3)
+  raw_escape_signs=(True, False, True, True, False, True)
+  eroded_escape_signs=(True, True, True, True, True, True)
+pair=(17, 13)
+  H_components=[50/221,41/169] [50/169,67/221] [154/221,119/169] [128/169,171/221]
+  mu(H)=8/169 mu(H-minus-R)=212/5577
+  raw_component_margins=(197/1001,-59/1144,538/1573,538/1573,-59/1144,197/1001)
+  eroded_component_margins=(1301/6006,-125/3432,3415/9438,3415/9438,-125/3432,1301/6006)
+  tournament_order_zero_based=(1, 4, 0, 5, 2, 3)
+  raw_escape_signs=(True, False, True, True, False, True)
+  eroded_escape_signs=(True, False, True, True, False, True)
+
+expanded_C2=[595/2574,823/3432]
+pair_13_9_right_overshoot=5/10296
+pair_17_13_containment_slacks=(215/43758,125/44616)
+tournament_fingerprint: score_histogram=(0,1,2,3,4,5) directed_cycles=0 scc_sizes=(1,1,1,1,1,1) hp_count=1 edge_flips=0
+preserved=raw_component_escape_order_and_sign
+destroyed=signed_affine_tooth_slope_and_return-incidence
+
+anchor_slope_liar: t0=4/17 pairs=(13,9),(43,13) Q=15/17 odd_error_multiset=(1/17,2/17) determinant=-1
+anchor_slope_liar_escape: d=1/1000 in R, Q_(43,13)(t0+d)-11/13=-1503/221000
+canonical_sha256=9c319fb9ea80a9ef193345d85bed9b752a2a7a77cdee570cde8ef4bc00361cd6
+PASS

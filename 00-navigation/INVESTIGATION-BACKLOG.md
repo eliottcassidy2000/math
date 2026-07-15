@@ -73,10 +73,14 @@
   bad-atom hypergraphs have transversal number exactly 12, while a packet core
   has only ten speeds. THM-789 strengthens THM-782 to a symmetric packet of
   measure `2*72^(-10)` and component width `72^(-10)/(5 maxU)`, and proves the
-  tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13` plus the erosion
-  `E_U subset H minus R_U`. Its exact trap shows that the full natural return
-  set can stay inside the diamond at one deep anchor even when another deep
-  time escapes. The missing datum is global component choice.
+  tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13`, the erosion
+  `E_U subset H minus R_U`, and the global gap/Kneser budgets
+  `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Its exact trap
+  shows that the full return set can stay inside the diamond at one deep
+  anchor even when another deep time escapes.  Its exact two-pair liar shows
+  that raw component order/sign and total eroded measure can also agree while
+  return-thickened component incidence differs. The missing datum is global
+  component choice with signed affine tooth/slope address.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -93,7 +97,9 @@
   all dyadic seam guards strongly enough that the reconstructed `U` or `A`
   lies in THM-774/776's complementary finite bases, or prove the global
   erosion failure `E_U not subset H minus R_U` by selecting among deep
-  components. Fixed-anchor phase refinement is insufficient by THM-789. Then
+  components and transporting their signed tooth address or exact eroded
+  margin. Fixed-anchor refinement and raw component tournaments are
+  insufficient by THM-789. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -137,9 +143,11 @@
   twelve-core has `|G'|>=182^(-12)` and the normalized `rho` regime is
   genuinely bounded.  THM-782 specializes this to an anchored `72^(-10)`
   return packet in every ten-core.  THM-789 symmetrizes it to safe mass
-  `2*72^(-10)` and component width `72^(-10)/(5 max(U))`, but its exact
-  trapped-anchor example shows that global deep-component selection is the
-  next target; refining one anchored phase cell is insufficient.
+  `2*72^(-10)` and component width `72^(-10)/(5 max(U))`; its gap/Kneser
+  budgets tax every tight component layout.  Exact trapped-anchor and
+  component-tournament liars show that global selection must retain signed
+  tooth/slope and return incidence; refining one anchor or ranking raw margins
+  is insufficient.
 - **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
@@ -185,9 +193,12 @@
   independent simpler unbounded-run family, confirming that this quotient is
   necessary rather than an artefact of the divisor-complete construction.
 - **Parallel folded target:** orient the connected components of the deep set
-  by eroded folded-diamond escape margin and prove that at least one global
-  component escapes.  Do not recurse only inside a chosen anchor: THM-789's
-  `4/17` versus `14/19` example makes that strategy formally incomplete.
+  by the exact eroded folded-diamond escape margin and prove that at least one
+  global component escapes.  Retain signed tooth/slope addresses: THM-789's
+  `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
+  measure but different middle-component incidence.  Do not recurse only
+  inside a chosen anchor: its `4/17` versus `14/19` example makes that strategy
+  formally incomplete.
 - **Tournament guardrail:** wall-event tournaments are transitive and forget
   the stalk; the normalized `A8` graph forgets the metric base.  The faithful
   carrier is `(core component, labelled minimal stalk, event word, redundancy

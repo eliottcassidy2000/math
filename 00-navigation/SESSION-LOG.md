@@ -299,6 +299,20 @@ with at most two periods.  The exact `(69,29)` tuple survives both marginal
 tests and all fixed-span constraints, proving that the next invariant must
 couple them through one centered-Beatty order/carry word.
 
+The folded route also gained a global theorem and an exact quotient boundary.
+For `delta=2/(143B)`, tightness forces
+`mu(E)+sum min(g_i,2delta)<=mu(H)` and
+`mu(E)+mu(R)<=mu(H)`, with
+`mu(R)>=max(2delta,2*72^(-10))`.  On the exact divisor-complete core `U_0`,
+the odd pairs `(13,9)` and `(17,13)` have the same diamond measure `8/169`,
+the same eroded measure `212/5577`, and identical raw signed component-
+tournament fingerprints, yet their middle return-thickened components have
+different escape incidence.  A pointwise `(13,9)`/`(43,13)` liar also keeps
+the unsigned odd errors, folded margin, parity, and determinant while changing
+the signed slope outcome.  Thus the global selector must retain affine tooth
+address/slope or the exact eroded margin, not just component order and scalar
+erosion.
+
 Tournament Analysis challenged runners as vertices throughout.  Heavy phase
 cells, character obligations, endpoint events, minimal stalks, top teeth, and
 thirteen sheet obligations each preserve different theorem predicates.  The
@@ -323,7 +337,8 @@ proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear,
 global eroded-packet noncontainment in every admissible folded diamond, and a
 stalk-quotiented visitor/switch bound joining THM-778/779/783/786/788.
 
-FILES: THM-783/784/786/791; corrected THM-779; MISTAKE-147/148; exact collar and raw-wall
+FILES: THM-783/784/786/789/791/792; corrected THM-779; MISTAKE-147/148; exact collar,
+raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
