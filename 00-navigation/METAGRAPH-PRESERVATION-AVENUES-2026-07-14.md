@@ -590,8 +590,10 @@ certificate clauses, and proof obligations.
   `(C3,H_u(q,|epsilon|)/2)` separates every node through `n=7`.  Curvature is
   not an edge codec: it gives 7,248/8,064 black orbits at `n=7`, while the
   reflection-orbit `(B2,B3)` address gives all 8,064.  Source-normalized
-  outward black flow dominates in every nonempty source-`q` stratum at
-  `n=6,7`; `n=8` is now the decisive conjecture test.
+  outward black flow dominates in every source-`q` stratum carrying a
+  mixed--pure-black boundary edge at `n=6,7`; the nonempty `n=6,q=2` source
+  populations carry no such edge and give `0=0`.  The `n=8` active-stratum
+  table is now the decisive conjecture test.
 
 ### MPA-37 — Give the gap face an intrinsic tournament semantics
 

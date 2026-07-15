@@ -259,6 +259,19 @@ The typed combined carrier is a fibre product over the literal path orbit:
 Čech mask/face address on one side, owner-labelled sheet root and event block
 on the other, with metric component and carry retained above both.
 
+THM-811 adds a third, deliberately non-state layer.  Its all-size master
+polynomial exactly disintegrates complement flux, the linear Smith current,
+and positional Möbius curvature.  The carrier `(C3,H_x)` is only a static node
+codec through `n=7`; curvature plus endpoint nodes distinguishes
+`7248/8064` black reflection orbits there, while the orbit address `(B2,B3)`
+distinguishes all `8064`.  Sixteen literal `(B2,B3)` collisions remain and are
+exactly mirror pairs, so literal edge identity still needs path orientation.
+Neither coordinate preserves an LRC metric witness, owner assignment,
+threshold side, wall schedule, root, or carry.  Curvature/current is therefore
+telemetry attached to the metric stalk, not another candidate replacement for
+it.  THM-812 merely reserves a possible centered-Christoffel path-orbit lift;
+it has no proved transport content yet.
+
 ## 3. THM-794/802, THM-795/800/804/806, and THM-797/803 are one recursion in three regimes
 
 These structural theorems look different only after their common
@@ -348,13 +361,15 @@ connected two-comb geometry gives `v<=262`, `w<=12v`; and the larger legacy
 box through `v<=381` has 5,713,539 exact rows and no tight packet. The carrier
 change is essential: the residue tournament sees cyclic pressure but loses
 ratio bands, boundary orientation, and component width.
-THM-810 shows why radius four is qualitatively new. Oriented scalar coverage
-either descends to common scale or yields the exact order-three label coset
-`a<5>`; overlap feasibility then depends on complementary mod-three
-owner-sheet parity and normalizes to an `s=3` deep packet. Its natural carrier
-is not a tournament on speeds but the bipartite incidence of missing-owner
-splice sheets with replacement teeth, decorated by deck order, one-sided germ
-orientation, exact margin, parity, and owner.
+THM-810 proves the next scalar deck interface at four replacements. Its
+dichotomy is common scale versus the genuine all-order-three state on a
+multiplicative coset of `<5>={1,5,8,12}`. Four exact sheet-parity patterns
+survive, and the exceptional state becomes an `s=3` deep packet after gcd
+division. The bare four-vertex tournament is transitive in both endpoint
+gauges with zero edge flips while eight owner/colour incidences change; the
+oriented bipartite sheet carrier, not the tournament, bears the theorem. What
+remains is metric: the scale-one quadruple chart and arbitrary lifts of the
+order-three coset.
 The half-open arc `(-1/13,1/13]` is theorem-bearing data: germ orientation is
 a one-bit local coefficient, not a cosmetic endpoint convention.  Erasing it
 destroys the own/complement deck-capacity asymmetry used by the descent.

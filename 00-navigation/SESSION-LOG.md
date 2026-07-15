@@ -675,6 +675,15 @@ An independent byte replay passed. The handoff bands are `[3,4)` and
 `[9/2,11/2)`; correcting the reversed endpoint typography does not affect the
 cycle contradictions. Radius at least four is now the first shallow residual.
 
+THM-810 classifies its oriented scalar deck interface. A hypothetically tight
+four-replacement packet has either four order-one decks and descends to the
+scale-one quadruple chart, or four order-three decks whose labels form a coset
+of `<5>={1,5,8,12}`. The latter has exactly four feasible sheet-parity
+patterns and becomes an `s=3` deep packet after gcd division. The 141,230-row
+Cayley/overlap replay byte-matches; the four least-CRT representatives are
+loose. Arbitrary coset lifts remain open, so this is a precise shallow/deep
+interface rather than radius-four closure.
+
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
 with `d_a w_a^(-1)` constant modulo seven. More strongly, in every prescribed
@@ -777,6 +786,19 @@ continuation state are three different claims. The LRC analogue must glue the
 face/mask address to owner-labelled root, event word, carry, and metric
 component over a common literal path orbit.
 
+THM-811 separates a fourth layer. Its all-size factorized polynomial is an
+exact joint law for complement flux, linear Smith current, and positional
+Möbius curvature. The node carrier `(C3,H_x)` is injective only in the finite
+range through `n=7`; curvature plus endpoint nodes reaches 7,248/8,064 black
+reflection orbits, while orbit-`(B2,B3)` reaches all 8,064 and literal
+identity still needs mirror/path orientation. The exact replay byte-matches
+both stored artifacts. Source-normalized outward flow is strictly larger only
+in source-`q` strata carrying a mixed--pure-black boundary edge; the nonempty
+`n=6,q=2` source populations have no such edge and give `0=0`. None of this
+preserves the LRC metric witness, owners, threshold side, wall schedule, root,
+or carry, so curvature/current remains telemetry on the metric stalk. THM-812
+is reserved only and supplies no transport theorem.
+
 THM-807 now proves the next deep-selector split. The exact zero return
 component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
 endpoint/cusp selector, equivalent to full erosion when the closed return set
@@ -831,15 +853,16 @@ radius at least four after THM-804 (THM-806 is an audit-in-progress attack;
 THM-810's order-three coset interface is reserved but not yet available as a
 THM-778/779/783/786/788/794/802; Hamming radius at least four after
 THM-795/800/804/806 close all smaller charts
-(THM-810's order-three coset interface is reserved but not yet available as a
-radius-four theorem); and a scale-normal argument for
+(THM-810 reduces radius four to the scale-one quadruple chart and an exact
+order-three coset interface but does not close either metric family); and a
+scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809 plus reserved THM-810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811 plus reserved THM-812; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
-Hamming-two/three, affine-packet, anti-grid/component-selector,
+Hamming-two/three/four, affine-packet, anti-grid/component-selector,
 connected-return/grid-ladder, and signed-wall odd-grid cross-audits;
 HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.

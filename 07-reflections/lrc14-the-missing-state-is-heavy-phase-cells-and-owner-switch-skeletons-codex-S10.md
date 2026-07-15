@@ -51,6 +51,7 @@ related:
   - THM-808
   - THM-809
   - THM-810
+  - THM-811
   - THM-812
   - HYP-6820
   - HYP-6835
@@ -797,13 +798,25 @@ therefore three different levels. The LRC carrier needs the fibre product of
 the face/mask address with the owner-labelled sheet root, event word, carry,
 and metric component—not a concatenation of independent tournament scores.
 
+THM-811 locates Möbius/Smith curvature one layer lower in this ledger.  Its
+factorized polynomial is an exact all-size law for flux, linear current, and
+positional curvature, but `(C3,H_x)` is only node-injective through `n=7` and
+curvature endpoint data reaches only `7248/8064` black reflection orbits.
+Orbit-symmetrized `(B2,B3)` reaches all `8064`; the sixteen residual literal
+collisions are precisely mirror pairs.  Thus curvature is faithful telemetry
+on a reflection orbit, `(B2,B3)` is the stronger positional orbit address, and
+literal continuation still needs mirror/path orientation.  Neither carries
+the LRC metric witness, owners, threshold side, wall schedule, root, or carry.
+THM-812 is only a reserved attempt to relate the centered-Christoffel stalk to
+the metagraph path orbit and must not be used as a transport theorem.
+
 The LRC evidence falls cleanly into the same ledger:
 
 | level | present examples | legitimate use |
 |---|---|---|
 | predicate- and transition-exact after labels | collar `(e^0,root word,cursor)` or block transfer `(e^0,T(W))`; owner-labelled deep components with signed tooth address; ordered packet path with reduced holonomy and metric base | recursive tear, escape, or descent |
 | certificate shadow | `(mu,r_top)` transverse transport; `W_*<g` balanced-transversal bound; positive packet-polytope distance; global erosion budgets | close a terminal cone or one tuple without reconstructing every event |
-| telemetry | collision energy `K`; raw component/wall/period counts; argmax-only selectors; bare tournament fingerprints | choose a gauge, locate a bottleneck, or falsify an overcompressed conjecture |
+| telemetry | collision energy `K`; raw component/wall/period counts; argmax-only selectors; black Möbius/Smith current-curvature; bare tournament fingerprints | choose a gauge, locate a bottleneck, or falsify an overcompressed conjecture |
 
 THM-799 makes the middle distinction exact.  Two bases can have the same safe
 mass, component count, and entire component-length multiset, yet adjoining the
@@ -977,11 +990,13 @@ still missing.
    scale-one triple lift: a uniform collar forces one replacement into
    `[14,24]`, two-comb geometry sharpens the remaining box to `v<=262`,
    `w<=12v`, and a larger 5,713,539-row superset replay has zero tight rows.
-   Thus radius at least four is the first shallow residual. THM-810 reduces
-   Hamming four to two joined bases: the scale-one chart, and a quartic
-   order-three coset packet with complementary mod-three parity that
-   normalizes to an eight-core/four-exception `s=3` branch. These, followed by
-   higher radii, are open.
+   Thus radius at least four is the first shallow residual. THM-810 proves its
+   first deck classification: scalar capacity leaves only common scale or the
+   all-order-three labels in a coset of `<5>={1,5,8,12}`. Exact sheet overlap
+   leaves four parity patterns, and division by the common gcd turns the latter
+   into an `s=3` deep packet. The scale-one quadruple chart and arbitrary lifts
+   of the coset interface remain; four least-CRT base rows are loose but do not
+   give uniform radius-four closure.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

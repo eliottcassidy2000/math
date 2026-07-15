@@ -40,8 +40,6 @@ related:
   - HYP-6800
   - HYP-6815
   - THM-771
-  - THM-806
-  - THM-810
   - MISTAKE-143
 ---
 
@@ -563,15 +561,19 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Close the Hamming-four shallow/deep interface.**  THM-795/800/804/806
-   remove the complete Hamming-one/two/three stars around every AP dilation.
-   THM-810 says a four-replacement tight packet must either descend to the
-   genuine scale-one Hamming-four chart or enter the exact order-three coset
-   packet
-   `3([12] minus a<5>) union {u_r:r in a<5>}` with complementary mod-three signs
-   matched.  Rule out these two bases or find a further decreasing quotient.
-   The exact carrier is the owner-sheet/replacement incidence graph with the
-   half-open orientation, parity, deck order, and metric margins retained.
+1. **Extend descent and closure at radius four.**
+   THM-795/800 remove the complete Hamming-one/two stars around every AP
+   dilation. THM-804 proves that a tight three-replacement packet has common
+   scale, and THM-806 closes every proper normalized triple lift. For four or
+   more replacements, extend the oriented missing-owner germ/deck-capacity
+   argument to a Hall, flow, or divisor theorem.  The exact carrier is the
+   incidence graph between missing-owner splice germs and replacement teeth,
+   with the half-open orientation, deck order, owner labels, and margins
+   retained. THM-810 now supplies the scalar classification: only common scale
+   or the all-order-three coset `a{1,5,8,12}` can survive. The remaining metric
+   targets are therefore the scale-one quadruple chart and arbitrary lifts of
+   that `s=3` coset interface; four least-CRT representatives are loose but do
+   not settle the latter uniformly.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add

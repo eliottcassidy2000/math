@@ -203,10 +203,12 @@
   empty. The first unresolved base is radius four. Build its bipartite
   sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
   defect, a normalized floor, or a new descent tied to a decreasing invariant.
-  THM-810 reserves a four-replacement scalar
-  classification: either all deck orders are one or every order is three and
-  the labels form a coset of `<5>={1,5,8,12}`. Its proof and replay are still
-  being transcribed, so the radius-four branch remains open.
+  THM-810 proves the four-replacement scalar classification: either all deck
+  orders are one or every order is three and the labels form a coset of
+  `<5>={1,5,8,12}`. The first branch leaves the scale-one quadruple chart; the
+  second is an exact `s=3` deep interface with four feasible sheet-parity
+  patterns. Its four least-CRT rows are loose, but arbitrary coset lifts remain,
+  so radius four is classified by deck type rather than closed.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -501,7 +503,7 @@
 
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension
 
-- **Source:** HYP-6825/HYP-6815; THM-761/796/801/809;
+- **Source:** HYP-6825/HYP-6815; THM-761/796/801/809/811;
   HYP-2245/2989/3106/3513; exact
   tournament-tiling explorer atlas.
 - **Finite result:** The converse-merged blue/black complement-line graph is
@@ -526,6 +528,14 @@
   lower-face collisions fall successively to 252, 148, 74, 52, and zero by
   the `tau=7` layer. This proves static identification at `n=8`, not an
   all-size or continuation-complete state.
+- **Curvature/current layer (THM-811):** The all-size polynomial exactly joins
+  complement flux, linear Smith current, and positional Möbius curvature.
+  The finite node carrier `(C3,H_x)` is injective through `n=7`, but curvature
+  endpoint data identifies only 7,248/8,064 black reflection orbits there;
+  orbit-`(B2,B3)` identifies all 8,064 and literal identity still needs
+  mirror/path orientation.  Treat this as telemetry on the metric stalk, not
+  as a continuation state.  THM-812 is reserved only and supplies no proved
+  centered-Christoffel/metagraph transport.
 - **Open theorem:** Test transition/continuation completeness at `n=8` and
   all-size reconstruction, then attach the
   address as a base-chart label to the affine incidence object

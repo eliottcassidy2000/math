@@ -168,7 +168,10 @@ carrier can classify at most a black edge orbit, never a literal black line.
 Orient a non-tied black boundary line toward larger `C3`.  Raw multiplicity at
 `n=7` points from pure black back to mixed, as THM-785 found.  After dividing
 separately by the available source black endpoints, however, mixed-to-black
-flow is larger in every nonempty source-`q` stratum at both `n=6` and `n=7`.
+flow is larger in every source-`q` stratum carrying at least one
+mixed--pure-black boundary edge at both `n=6` and `n=7`.  The nonempty
+`n=6,q=2` source populations carry no such boundary edge and give the vacuous
+equality `0=0`; they are not a strict-dominance row.
 At `n=7` the outward/reverse rates for `q=0,...,5` are approximately
 
 ```text
