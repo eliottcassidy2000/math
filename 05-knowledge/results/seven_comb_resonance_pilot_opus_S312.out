@@ -1,0 +1,35 @@
+prefix P=[1, 2, 3, 4, 5]: E has 10 components, mu(E) = 7/15 ~ 0.46667
+endpoint denominator lcm = 390
+
+L1 anomaly x*(mass - (2/13)muE) for x = r+13h, r=6:
+   h=  1 x=  19: anomaly*x = -2/15 ~ -0.133333
+   h=  2 x=  32: anomaly*x = -28/195 ~ -0.143590
+   h=  3 x=  45: anomaly*x = -2/13 ~ -0.153846
+   h=  4 x=  58: anomaly*x = -32/195 ~ -0.164103
+   h=  5 x=  71: anomaly*x = -34/195 ~ -0.174359
+   h=  6 x=  84: anomaly*x = -12/65 ~ -0.184615
+   h=  7 x=  97: anomaly*x = -38/195 ~ -0.194872
+   h=  8 x= 110: anomaly*x = 4/39 ~ +0.102564
+   period T=5: no
+   period T=10: no
+   period T=20: no
+   period T=60: EXACT
+
+P2 pair defect mu(D1 D2 E) - (4/169)muE, x1=58, x2=7+13h:
+   x2=  20 (|x2-x1|= 38): defect = -0.0022920 (x-0.0458 per 1/x2)
+   x2=  33 (|x2-x1|= 25): defect = -0.0005157 (x-0.0170 per 1/x2)
+   x2=  46 (|x2-x1|= 12): defect = -0.0035491 (x-0.1633 per 1/x2)
+   x2=  59 (|x2-x1|=  1): defect = -0.0052008 (x-0.3068 per 1/x2)
+   x2=  72 (|x2-x1|= 14): defect = +0.0023646 (x+0.1703 per 1/x2)
+   x2=  85 (|x2-x1|= 27): defect = -0.0033375 (x-0.2837 per 1/x2)
+   x2=  98 (|x2-x1|= 40): defect = +0.0029751 (x+0.2916 per 1/x2)
+   x2=  59 (|x2-x1|=  1): defect = -0.0052008 (x-0.3068 per 1/x2)
+
+P3 uncovered mass vs independence prediction 0.144928:
+   xs=[123, 46, 255, 230, 218, 141, 116]: uncovered = 0.144940 ratio = 1.0001
+   xs=[474, 98, 515, 386, 62, 50, 103]: uncovered = 0.132354 ratio = 0.9132
+   xs=[201, 215, 450, 529, 49, 492, 194]: uncovered = 0.142170 ratio = 0.9810
+   xs=[474, 371, 216, 399, 517, 258, 38]: uncovered = 0.139975 ratio = 0.9658
+   xs=[162, 384, 307, 256, 153, 206, 311]: uncovered = 0.141706 ratio = 0.9778
+   xs=[110, 98, 346, 113, 322, 323, 532]: uncovered = 0.136976 ratio = 0.9451
+   consecutive xs=[499, 500, 501, 502, 503, 504, 505]: uncovered = 0.054706 ratio = 0.3775

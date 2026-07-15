@@ -1,0 +1,15 @@
+prefix [1, 2, 3, 4, 5]: mu(E) = 7/15 ~ 0.46667; needed tree-sum > sum(mass_i) - mu(E)
+asymptotic: tree 6*(4/169)muE = 0.06627 vs needed (1/13)muE = 0.03590 -- margin x1.85
+
+xs=[292, 150, 359, 74, 88, 479, 116]
+   sum mass = 0.51358  max-tree = 0.07988  HUNTER >= +0.03297  actual = 0.13354  COERCIVE
+xs=[331, 514, 73, 451, 205, 63, 103]
+   sum mass = 0.50734  max-tree = 0.07451  HUNTER >= +0.03383  actual = 0.13830  COERCIVE
+xs=[383, 371, 86, 230, 101, 492, 389]
+   sum mass = 0.50483  max-tree = 0.07450  HUNTER >= +0.03633  actual = 0.14058  COERCIVE
+xs=[71, 501, 125, 217, 517, 76, 506]
+   sum mass = 0.51094  max-tree = 0.08217  HUNTER >= +0.03790  actual = 0.13903  COERCIVE
+xs=[499, 500, 501, 502, 503, 504, 505]
+   sum mass = 0.50471  max-tree = 0.03742  HUNTER >= -0.00063  actual = 0.05471  not coercive
+xs=[32, 33, 34, 35, 36, 37, 38]
+   sum mass = 0.52568  max-tree = 0.04226  HUNTER >= -0.01675  actual = 0.03958  not coercive
