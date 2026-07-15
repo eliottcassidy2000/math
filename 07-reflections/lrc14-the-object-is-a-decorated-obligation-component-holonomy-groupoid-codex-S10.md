@@ -1105,3 +1105,87 @@ tournament retains the scalar extension rule but loses the latter two.  Thus
 the all-scale Hamming-five object is a decorated pointed coset flag acted on by
 labelled erosion combs, with infinity allowed only in its scalar boundary
 compactification.
+
+## 14. Symmetry can collapse evaluation without collapsing transport
+
+THM-824 supplies the cleanest example yet of why the relevant quotient depends
+on the arrow being asked to act.  At the fixed ratio `(13,5)`, the folded target
+is not an amorphous diamond but two closed balls of radius `2/169` about
+`5/13,8/13`.  If the entire return set has been assembled and is symmetric,
+the global predicate is exactly
+
+```text
+E+R subset H
+iff rho_{ {5/13,8/13} }(E)+rho_0(R)<=2/169.                (43)
+```
+
+The no-switch lemma is the structural reason.  A centre switch would cost
+`3/13`, while the three symmetric translates can deviate by at most
+`4(2/169)`.  Hence every pair `t+r,t-r` stays over the same target centre and
+the real identity `max(|s+u|,|s-u|)=|s|+|u|` reduces the conjunction to two
+radii.  This is not an approximation or a bank phenomenon: it holds for all
+compact `E` and symmetric compact `R` containing zero.
+
+Yet (43) does not demote the THM-821 stalk to two numbers.  A signed satellite
+`R_k` is nonsymmetric; only the full union has the involution needed for the
+reverse implication.  Moreover, `rho_C(E)` and `rho_0(R)` say which inequality
+is extremal only after the endpoint arrangement has already been transported
+and assembled.  Thus the same object has two exact presentations:
+
+```text
+present global evaluation:  two extremal radii;
+future descent/assembly:     owner-decorated component and cell endpoints.
+```
+
+This is controlled forgetting in its sharpest form.  It is legal along the
+evaluation arrow and unproved along every lift, deletion, gcd, and sheet
+transport arrow.  The corresponding proof-carrier tournaments are both
+transitive but flip six edges when ranked by evaluation versus transport;
+their vertices are proof obligations, not runners.
+
+THM-829 supplies an exact algebraic model for one part of that transport.
+Over a primitive witness column `v=(a,q)^T`, retain the full Bezout owner row
+`b` with `bv=1`.  A unimodular continued-fraction action transports the stalk
+contragrediently:
+
+```text
+v'=Av,                    b'=bA^{-1},                    b'v'=1.
+```
+
+Reflection conjugates the action by `R`; only `+/-I,+/-R` commute with it.
+This proves that inverse-owner transport is linear on the column-row stalk and
+cannot be recovered from a bare inverse residue when the denominator changes.
+It does not yet identify THM-824's component endpoint owners with such witness
+columns, and it explicitly forgets the LRC continuation predicate.  The right
+future join is therefore a fibre product between the metric endpoint atlas and
+the primitive column/Bezout-row transport, not replacement of either one.
+
+The first `H1.5` experiment makes the shallow side equally non-linear.  Let
+`EO` join `H1` to the ordered residue-owner word of every residual component.
+Three ordered faces make EO injective on the height-two bank, but one full EO
+doubleton mixes exact maxima.  Replacing speed `14` by `27` on face `1245`
+preserves the owner word; inserting the omitted fifth label at height one
+preserves it again while the maxima split as `3/31` and `4/29`.  Literal
+components already differ.  Adding the owner incidence of the named child
+operations repairs the collision but makes the codec fully injective.  Thus
+there is no linear ladder
+
+```text
+H1 < owner incidence < literal endpoints.
+```
+
+There is a lattice of observations, each pure for different maps.  EO is
+coordinate-complete after three static restrictions but not Markov for exact
+geometry; EOI is Markov on the tested operations only by becoming literal.
+No tested continuation empties either liar residual, so terminal Nerode
+impurity remains open.
+
+Two live-main results reinforce the distinction.  THM-818's canonical
+first-off-diagonal relation splits by face role as `414/4/0`; unordered face
+incidence is not the object.  THM-825 proves that quadratic positional moments
+reconstruct every literal mirror-layer word through `n=15`, with the first
+subset collision at length seven.  That static theorem is stronger than a
+coarse tournament and still weaker than a continuation theorem.  Static
+reconstruction, present evaluation, dynamic transport, and terminal
+continuation are four genuinely different quotients of the same decorated
+obligation complex.

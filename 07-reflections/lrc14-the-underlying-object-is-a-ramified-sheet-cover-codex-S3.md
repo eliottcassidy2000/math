@@ -541,3 +541,48 @@ fibres are loose, but their mod-39 clock remains on the `1/13` boundary at
 arbitrary lift height.  The cover therefore has distinct scalar, sheet, and
 metric strata.  No quotient that collapses these three levels can carry the
 remaining all-scale proof.
+
+## Addendum: the symmetric full fibre has a radial coarse moduli space
+
+THM-824 shows that ramification can disappear after a very specific gluing.
+For the `(13,5)` fold, the target is exactly two radius-`2/169` cells.  Once
+every signed return cell is glued into the symmetric return fibre `R=-R`, the
+complete containment predicate has the radial coarse coordinate
+
+```text
+(rho_{ {5/13,8/13} }(E), rho_0(R)),
+```
+
+and succeeds exactly when the coordinate lies below the line
+`rho_E+rho_R=2/169`.  The separation of the two target centres proves that no
+symmetric translate can jump between sheets.  The common-dilate pair
+`(13d,5d)` inherits the identical budget
+`max_E||13dt||+13max_R||dr||<=2/13`.
+
+This does not mean the cover itself is radial.  Before gluing, each signed
+satellite is nonsymmetric and can attach differently to the same base
+component, as THM-821's opposite-cell liar demonstrates.  During transport,
+endpoint owners decide which wall moves.  The radial pair is therefore a
+coarse moduli coordinate for one completed global section, while the ramified
+owner-decorated atlas is still needed to construct or deform that section.
+All 214 replayed cores lie outside the radial budget, but no current arithmetic
+theorem forces that violation uniformly.
+
+THM-829 now gives one exact transition law available to that atlas: a primitive
+column and its Bezout owner row transform by `(v,b)->(Av,bA^{-1})`, with the
+reflected branch conjugated rather than acted on identically.  The law explains
+why a residue owner without its denominator chart cannot be a transport state.
+Connecting these arithmetic witness owners to the signed cell endpoints is a
+new fibre-product obligation, not something THM-829 assumes.
+
+On the shallow fibre, the exploratory `H1.5` owner-incidence word exhibits the
+same separation.  Three ordered faces reconstruct every bounded row, while a
+single full word can preserve owner residues through a named insertion and
+still change the exact maximum from `3/31` to `4/29`.  Adding child-incidence
+data makes the bounded codec injective and removes compression.  The first
+off-diagonal `A/B/C=414/4/0` split of THM-818 says why: attachment roles are
+oriented charts, not an unordered cover.  THM-825's quadratic positional
+moments give a literal static chart through `n=15`, but not its transition
+maps.  The surviving object is consequently a ramified cover together with a
+family of operation-dependent coarse moduli spaces, not one universal
+tournament quotient.

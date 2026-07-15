@@ -85,12 +85,21 @@ obligations, and proof-carrier interfaces.
   `H0` (labelled live relation) and `H1` (plus integer centres) coincide and
   mix exact `M`; literal endpoint stalks `H2` make the bounded three-face join
   injective, while the final residual alone still has fourteen collision
-  pairs.  The useful missing rung is therefore an `H1.5` ordered
-  endpoint-owner/component-incidence word, tested under actual insertions.
-  Minimize the reachable `(E,V)` automaton and use its two-plus-three join
-  against THM-820's full finite boxes; do not extrapolate `H2` static
-  injectivity to arbitrary heights.
-- **Pointers:** THM-818, THM-820, THM-821, THM-822, THM-815, THM-817,
+  pairs.  The first `H1.5` probe shows that the codecs form a lattice, not a
+  chain: `EO=H1` joined to ordered residue-owner incidence has an injective
+  three-face join, yet its full word has one exact-`M`-mixed doubleton.  A
+  height-one continuation preserves that owner word while splitting
+  `M=3/31` from `4/29`; no tested continuation empties either residual, so
+  this proves non-Markov exact geometry but not a terminal tight/loose liar.
+  `EOI`, which adds operation-indexed child incidence, is already injective
+  and gives no compression.  THM-818's canonical first-off-diagonal split
+  `A/B/C=414/4/0` independently warns that face roles are ordered.  THM-825
+  supplies a literal-exact static quadratic positional carrier through
+  `n=15`, but explicitly does not prove continuation purity.  Minimize the
+  reachable `(E,V)` automaton and use its two-plus-three join against
+  THM-820's full finite boxes; do not extrapolate any static codec to arbitrary
+  heights.
+- **Pointers:** THM-818, THM-820, THM-821, THM-822, THM-825, THM-815, THM-817,
   HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
   `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
   `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
@@ -114,7 +123,9 @@ obligations, and proof-carrier interfaces.
   THM-823 proves that the all-scale five-deck scalar quotient has infinite
   cones even though some order is at most 21.  Common-sheet compatibility in
   the complete order-at-most-twelve bank leaves only forward flags of the
-  three-coset cycle `H->2H->4H->H`, all at order three.
+  three-coset cycle `H->2H->4H->H`, all at order three.  On the deep two-sheet
+  side, THM-824 proves that the **assembled symmetric return union** at ratio
+  `(13d,5d)` has an exact two-radius evaluation quotient.
 - **Preserves:** quotient-core loose components, sheet label, tightener owner,
   gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
   quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
@@ -125,6 +136,15 @@ obligations, and proof-carrier interfaces.
   `D=40` scalar cover has no common-sheet word among 1,024 unit choices and
   reaches only `29/40` sheets at its weakest owner.  Its coset cycle preserves
   the forward scalar flag but forgets unit parity and every metric lift.
+  THM-824's radius pair preserves the fixed present conjunction but forgets
+  which endpoint inequality owns an extremum and does not factor an individual
+  nonsymmetric satellite.  It is evaluation-minimal only after the exact full
+  sets have been assembled, not a proved transport quotient.  THM-829 proves
+  that inverse owners over a primitive witness column transport as the full
+  Bezout row `bA^{-1}`, with reflection-conjugate branch action; a bare owner
+  residue is therefore not even an arithmetic cross-denominator state.  The
+  identification of this stalk with metric cell-endpoint ancestry remains
+  open.
 - **Pairwise observable:** For diagnostic residue-obligation vertices, compare
   atomic cells exclusively ownable after the other ten groups are erased.
   The exact observable ties on every pair in the height-12 census.
@@ -138,9 +158,12 @@ obligations, and proof-carrier interfaces.
   order twelve, and apply exact residual-comb erosion to THM-823's
   all-order-three and mixed order-one survivors.  The mod-39 clock supplies
   only equality witnesses, not strictness.  Then treat the ramified higher-`s`
-  packets outside THM-816's closed quartic coset.
+  packets outside THM-816's closed quartic coset.  For the common
+  `(13d,5d)` branch, first test a uniform arithmetic violation of THM-824's
+  radius budget; separately classify odd ratios whose folded target has the
+  separated equal-ball geometry needed by the no-switch proof.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
-  THM-817, THM-820, THM-823, HYP-6775, HYP-6820;
+  THM-817, THM-820, THM-823, THM-824, THM-829, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, its complete height-at-most-two slice loose, and the arbitrary-scale deck interface reduced to a least-order pivot plus bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, and a finite-exact proof that the fixed folded predicate factors through signed cell/component sum arcs; branch emptiness remains OPEN in the full Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, uniform control of the exact sum-arc selector and collar residuals, and the other higher-sheet packets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, its complete height-at-most-two slice loose, and the arbitrary-scale deck interface reduced to a least-order pivot plus bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, a finite-exact proof that the fixed folded atomic predicate factors through signed cell/component sum arcs, and an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`; branch emptiness remains OPEN in the full Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, uniform violation or transport of the exact radius/sum-arc selectors, other odd ratios, collar residuals, and higher-sheet packets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -39,6 +39,7 @@ depends_on:
   - THM-821
   - THM-822
   - THM-823
+  - THM-824
   - HYP-6750
   - HYP-6775
 related:
@@ -47,6 +48,7 @@ related:
   - HYP-6800
   - HYP-6815
   - THM-771
+  - THM-829
   - MISTAKE-143
 ---
 
@@ -692,6 +694,40 @@ arc; they remain the ancestry that says how the arc moves under replacement,
 gcd descent, and sheet transport.  This finite result neither separates global
 rows (all 213 random rows fail) nor proves an all-size or Cech-gluing theorem.
 
+THM-824 proves that assembling **all** signed return cells restores enough
+symmetry for an exact all-size compression at one fixed ratio.  Put
+
+```text
+H_(13,5)={t:||9t||+||4t||>=11/13}
+        =B(5/13,2/169) union B(8/13,2/169).
+```
+
+For every nonempty compact `E` and compact `R=-R` with `0 in R`, its no-switch
+lemma gives
+
+```text
+E+R subset H_(13,5)
+iff max_(t in E) min(||t-5/13||,||t-8/13||)
+   +max_(r in R)||r|| <=2/169.                              (C4)
+```
+
+For the common-dilate pair `(13d,5d)`, (C4) is equivalently
+`max_E||13dt||+13max_R||dr||<=2/13`.  Exact replay on 12,159 synthetic compact
+packets and the 214 THM-821 cores has zero direct/radius mismatches; every
+core fails the global budget.  This is a global-conjunction factorization,
+not a factorization of an individual nonsymmetric `R_k`.  It makes present
+evaluation linear in the exact component/cell lists, but does not prove that
+owner ancestry may be discarded under descent or that other odd pairs have
+the same two-cell geometry.
+
+THM-829 proves a complementary all-size transport identity over primitive
+arithmetic witnesses: if `bv=1` and `A in GL_2(Z)`, then the transported stalk
+is `(Av,bA^{-1})`, with reflection handled by conjugating `A`.  This establishes
+why an inverse residue without its denominator/Bezout row cannot transport.
+It does not yet identify those witness owners with the endpoint owners of the
+signed max-speed cells, so it is related transport infrastructure rather than
+a new closure step in this audit.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
@@ -733,8 +769,12 @@ The uniform theorem now has two explicit residuals:
    `2c_E N_R+2W-2g`.  THM-821 proves for `(x,y)=(13,5)` that each atomic
    verdict factors through its exact circular cell/component sum arc and that
    the tested cell, component, width, owner, and event projections all mix.
-   Prove a height-independent contradiction or decreasing invariant on those
-   exact signed sum arcs with owner ancestry;
+   THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
+   factors through the exact radius budget
+   `max_E||13dt||+13max_R||dr||<=2/13`.  Prove that every admissible core
+   violates that budget, extend the no-switch geometry to other odd ratios,
+   or prove a height-independent contradiction/decreasing invariant on the
+   individual exact signed sum arcs with owner ancestry;
    the `U_*` row shows that all short gates and both global maximizers can pass
    while a nonmaximal component escapes, and THM-817's linear-satellite family
    rules out a connectedness shortcut.  At higher sheets, classify and rule
@@ -803,7 +843,9 @@ deciding objects are therefore:
   every deep component; THM-821 proves on the fixed `(13,5)` bank that the
   numerical atomic predicate factors through the exact circular sum arc and
   supplies explicit liar fibres for every separate cell/deep/width/event
-  shadow tested;
+  shadow tested; THM-824 proves that after assembling the symmetric full return
+  union, the same fixed-ratio conjunction factors through two extremal radii,
+  while individual satellites and dynamic owner transport do not;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed

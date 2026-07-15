@@ -63551,3 +63551,89 @@ danger comb.  A discrepancy bound makes every next-speed branch finite; the
 7,909-state exact recursion leaves all 34 terminal residuals nonempty.  Updated
 the synthesis so the equality clock is boundary telemetry and the transported
 component/obligation carrier is the proof state.
+
+## codex-2026-07-15-S10 continuation -- radius budget, H1.5 boundary, and five-comb feasibility
+
+Pulled and rebased repeatedly against the live research surface while working
+the remaining shallow and deep pieces in parallel.  The honest frontier is
+unchanged at the top level: the claimed uniform `q<=25` theorem is false and
+uniform emptiness of the `n=12` sporadic branch remains open.  This continuation
+proved a new deep compression theorem and sharpened two shallow computation
+targets without promoting either to branch closure.
+
+THM-824 identifies the fixed folded target exactly:
+
+```text
+{t:||9t||+||4t||>=11/13}
+ =B(5/13,2/169) union B(8/13,2/169).
+```
+
+An exact no-switch argument proves, for every nonempty compact `E` and compact
+symmetric `R=-R` containing zero,
+
+```text
+E+R subset H  iff  rho_{ {5/13,8/13} }(E)+rho_0(R)<=2/169.
+```
+
+For `(13d,5d)` this is
+`max_E||13dt||+13max_R||dr||<=2/13`.  The replay checks 12,159 synthetic
+compact packets and the complete 214-core/9,974-atom THM-821 bank with zero
+direct/radius mismatches.  All 214 cores fail globally.  Thus evaluation of
+the assembled symmetric union collapses from all cell/component pairs to two
+extrema, but an individual signed satellite is nonsymmetric and does not
+factor.  Endpoint owners remain transport ancestry.  The proof-carrier
+tournaments make this distinction visible: `radius_pair` is first in the
+evaluation gauge, owner-decorated inputs first in the transport gauge, with
+six edge flips; both rankings are transitive and are planning telemetry.
+
+The Hamming-five `H1.5` probe retained ordered endpoint-owner incidence and
+all face roles.  The codec lattice is not the expected linear ladder.  The
+join `EO=H1` plus residue-owner words has an injective ordered three-face join,
+yet its full observation has one exact-`M`-mixed doubleton:
+
+```text
+missing labels R=(1,4,5,6,12), face C=1245,
+{14,17,19,25} versus {27,17,19,25}.
+```
+
+A height-one insertion preserves the child owner word but splits `M=3/31`
+from `4/29`; at height two the owner words split and both maxima are `1/6`.
+Through heights `1..500`, owner words agree only at `1,6,7,8`, literal
+components never agree, and neither residual is empty.  A two-comb scan through
+500 also found no terminal split.  This proves that EO is non-Markov for exact
+geometry and exact `M`, not that it fails terminal tight/loose continuation
+equivalence.  Adding operation-indexed child incidence (`EOI`) is already
+injective and supplies no compression.  The replacement-label tournament is
+also a liar checksum: increasing and decreasing gauges flip eight silent
+edges while both exact rows retain the same two live handoffs.
+
+The THM-816 discrepancy calculation extends algebraically from four to five
+combs as `B_5(E)=110K/(39L)`.  On the twelve directed flag roots it bounds the
+first new speed between 349 and 678.  This proves finiteness of each next
+branch but not practical closure: 96 parity contexts already have 5,848
+first-level states, and an easiest context grows with breadth
+`1,45,1262,20703` through depth three.  The next implementation should encode
+endpoint-cell masks, memoize residual equivalence, and quotient declared
+symmetries before attempting the final two combs.
+
+Live-main integration supplied three connected guardrails.  THM-818's
+first-off-diagonal join splits canonically as `A/B/C=414/4/0`, so face roles
+cannot be unordered.  THM-825 proves quadratic positional moments reconstruct
+literal mirror-layer words through `n=15` and first collide at length seven,
+which is a strong static carrier but explicitly not a continuation quotient.
+The next pull promoted THM-829: a primitive witness column `v=(a,q)^T` and its
+Bezout owner row `b` transport under `A in GL_2(Z)` by the exact
+contragredient law `v'=Av`, `b'=bA^{-1}`.  Reflection requires conjugating the
+action by `R`, and the only commuting matrices are `+/-I,+/-R`.  This proves
+an algebraic transport law for inverse-owner stalks and reinforces THM-824's
+owner guardrail, but it does not yet identify a deep cell-endpoint owner with
+a continued-fraction witness column or preserve LRC continuation.  The same
+pull resolved the duplicate THM-826 namespace cleanly: the B3 deletion-deck
+reservation moved to THM-830, leaving the proved Farey-profile THM-826 intact.
+
+The exact next frontier is now sharper: on the deep fixed-ratio branch, prove
+that every admissible arithmetic core violates the scalar radius budget and
+classify other odd ratios with the same separated-ball geometry; on the
+shallow branch, minimize the literal residual action or build the five-comb
+meet-in-the-middle engine.  Neither task can be replaced by a runner
+tournament, a scalar deck cover, or a static codec.

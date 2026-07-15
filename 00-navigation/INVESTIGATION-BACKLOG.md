@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/829;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -177,6 +177,20 @@
   exact circular sum arc determine the fixed predicate.  Its disconnected
   liar proves that an exact deep interval alone can fail for one satellite and
   succeed for its opposite.  Retain the sum-arc endpoints and owner ancestry.
+  THM-824 proves that the full symmetric return union has a much smaller
+  evaluation quotient at the fixed ratio `(13d,5d)`.  The exact folded target
+  is two radius-`2/169` cells, and
+  `E+R subset H iff rho_C(E)+rho_0(R)<=2/169`; equivalently after dilation,
+  `max_E||13dt||+13max_R||dr||<=2/13`.  This is an all-size theorem for compact
+  `E` and symmetric compact `R` containing zero.  All 214 replayed cores fail
+  this global budget with zero direct/radius mismatches.  Individual signed
+  satellites remain outside the factorization, and owners remain transport
+  data even though the assembled-set evaluation uses only two extrema.
+  THM-829 proves the exact contragredient owner law
+  `(v,b)->(Av,bA^(-1))` over primitive column/Bezout-row stalks and the
+  necessary reflection conjugacy.  Use it as a candidate arithmetic transport
+  sidecar, but first prove a fibre-product identification with the metric
+  cell-endpoint owners; THM-829 itself does not preserve LRC continuation.
 - **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
   the arbitrary-scale radius-five descent.  The collar classification is no
   longer the missing step: spanning five-cycles have five feasible band types,
@@ -189,10 +203,18 @@
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
   literal strict-safe endpoint words make the three ordered faces injective.
-  The final residual itself still has fourteen collision pairs.  Build the
-  missing `H1.5` endpoint-owner/component-incidence codec and test it under
-  actual continuation, rather than treating bounded `H2` static injectivity as
-  a theorem for the full boxes.  A runner tournament is telemetry: THM-820's
+  The final residual itself still has fourteen collision pairs.  The first
+  `H1.5` probe shows that the codec lattice is not a chain.  Joining `H1` to
+  ordered residue-owner words (`EO`) makes the three-face join injective, but
+  the full codec still has one exact-`M`-mixed doubleton: replacing speed `14`
+  by `27` in face `1245` preserves the residue-owner word while a height-one
+  insertion gives `M=3/31` versus `4/29`.  Across heights `1..500` the child
+  owner words agree only at `1,6,7,8`, literal components never agree, and no
+  residual becomes empty.  Thus EO is non-Markov for geometry and exact `M`,
+  but this is not yet a tight/loose Nerode liar.  Continue with actual
+  multi-comb terminal languages rather than treating either bounded face
+  injectivity or this quantitative liar as a full-box theorem.  A runner
+  tournament is telemetry: THM-820's
   centre-9 and centre-22 cycles have the same labelled live/tie fingerprints
   but different exact maxima.  Exact centres, ratios, open endpoints,
   component widths, owner ancestry, and the future operation bank must remain
@@ -206,7 +228,12 @@
   arbitrary lifts.  Extend common-sheet exclusion above order twelve, then run
   exact residual-comb erosion on the all-order-three and mixed order-one
   survivors; do not promote scalar attenuation or the coset cycle to a metric
-  closure.
+  closure.  THM-816's discrepancy algebra extends formally to five combs as
+  `B_5(E)=110K/(39L)`, with root first-speed bounds `349..678`, but 96 parity
+  contexts already produce 5,848 first-level states and one easy context has
+  breadth `1,45,1262,20703` through depth three.  The finite computation needs
+  endpoint masks, memoized residuals, or symmetry reduction before a direct
+  recursion is credible.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -223,7 +250,13 @@
   fixed `(13,5)` atomic verdict factors through exact circular
   cell/component sum arcs and gives mixed fibres for every tested coarser
   positional/width/owner shadow.  Seek a height-independent contradiction or
-  decreasing invariant on those signed sum arcs with owner ancestry.  THM-816 has already
+  decreasing invariant on those signed sum arcs with owner ancestry.  On the
+  common `(13d,5d)` ratio, first try to prove that every admissible arithmetic
+  core violates THM-824's scalar radius budget; in parallel determine which
+  other odd exception ratios have a separated equal-radius target and hence
+  the same no-switch factorization.  A proof only for the global symmetric
+  union must still be joined to the nonsymmetric satellite obligations.
+  THM-816 has already
   removed the quartic `s=3` equality shell; the remaining higher-sheet work is
   outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
