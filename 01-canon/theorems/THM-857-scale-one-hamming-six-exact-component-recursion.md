@@ -4,7 +4,7 @@ title: Scale-one Hamming-six exact component closure
 status: PROVED + FINITE-EXACT — every proper scale-one Hamming-six packet is strictly loose except the doubled AP equality 2[12]; 580,919,164-node logical census with independent closed-danger replay
 source: codex-2026-07-15-S10 H6 continuation
 depends_on: [THM-815]
-related: [THM-770, THM-820, THM-845, THM-856, THM-858, HYP-6820]
+related: [THM-770, THM-820, THM-845, THM-856, THM-858, THM-859, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_one_hamming_six_component_recursion_codex_S10.cpp
   - 05-knowledge/results/lrc13_scale_one_hamming_six_component_recursion_codex_S10.out
@@ -58,6 +58,11 @@ In particular, the `923` primitive retained-core rows have zero covering
 terminals.  The exceptional missing-odd row also has no primitive
 mixed-height cover; its only cover is the all-even equality (3).  This closes
 the entire proper **scale-one** Hamming-six chart.
+
+THM-859 subsequently proves that common dilation conjugates this entire
+component action, so the same conclusion holds for every unramified
+common-scale packet: the unique tight row is `2c[12]`.  The genuinely open
+transport begins when some effective order exceeds one.
 
 ## 1. Complete finite recursion
 
@@ -260,11 +265,12 @@ component coverage.
 
 ## Scope guardrail
 
-This theorem closes proper residue-preserving Hamming-six lifts at common
-scale one.  It does not transport the result across arbitrary AP scale or
-arbitrary common sheets, classify the finite Hamming-five bank left by
-THM-858, cross the seven-comb wall, or prove global `n=12` sporadic-branch
-emptiness.
+This theorem itself closes proper residue-preserving Hamming-six lifts at
+common scale one.  THM-859 transports its full action tree across common
+dilation and identifies effective order `D>1` as the exact ramification
+obstruction.  Neither theorem closes those ramified common-sheet languages,
+classifies the finite Hamming-five bank left by THM-858, crosses the
+seven-comb wall, or proves global `n=12` sporadic-branch emptiness.
 
 Reproduce the primary census with
 

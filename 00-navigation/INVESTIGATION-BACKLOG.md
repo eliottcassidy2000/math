@@ -236,8 +236,13 @@
   one- or two-column endpoint template.
 - **Open shallow theorem:** THM-845 has finished both THM-820 scale-one H5
   branches, and THM-857 has finished all 924 proper scale-one H6 deletion
-  roots away from the genuine equality `2[12]`.  Prove the arbitrary-scale
-  H5/H6 descent by transporting the proof-facing action
+  roots away from the genuine equality `2[12]`. THM-859 transports the whole
+  action through common dilation, proves that effective order `D` is exactly
+  the number of deck masks created by one insertion, and makes the H6 gate
+  containing `D=1` finite-decidable.  The first unevaluated ramified languages
+  are the `336` two-order-one/four-order-three and `672`
+  one-order-one/five-order-three contexts.  Prove the ramified H5/H6 descent by
+  transporting the proof-facing action
   `E_S -> E_S intersect Safe(u)` and its exact residual endpoints through
   oriented deck ramification.  The AP-cusp cycle word and Hunter/Kruskal edge
   word remain useful diagnostics, but there is no remaining primitive
@@ -280,9 +285,9 @@
   complement-lcm fibre cut
   `sum_(i in S)ceil(2m_i/13)/m_i>=1`, closes every new common-sheet row through
   effective order 21, and reduces the live branch to
-  `min D_i<=21<max D_i<=42,336` with `{2,3,7}`-smooth orders and no private
+  `min D_i<=21<max D_i<=10,584` with `{2,3,7}`-smooth orders and no private
   maximal prime power.  The upper bound follows by applying the cut at every
-  adjacent valuation level: the `2,3,7` valuation ranges are at most `5,2,1`.
+  adjacent valuation level: the `2,3,7` valuation ranges are at most `3,2,1`.
   Extend common-sheet classification in this finite strip. A
   concrete next carrier is the prime-power carrier hypergraph whose hyperedges
   are decorated by complement-lcm fibres, affine owner intervals, and
@@ -963,6 +968,7 @@ computer-assisted + 9–13 announced (the repo's citation basis, confirmed curre
 - **Status:** OPEN - the transport dictionary is written (F6's LRC paragraph); the missing input is THM-815's event-sampling law (which tooth/comb gets hit, size-biased?) to compute E[delta Phi] for Phi = (K-K*)^2 and convex degree-weights.
 - **NO-GO (opus-S312, proved):** at the seven-comb wall itself, NO per-comb bound of the schema |I cap D_x| <= alpha*L + beta(x) can be coercive: alpha < 2/13 is FALSE for large x (equidistribution: the comb's density on any fixed interval tends to exactly 2/13), and alpha = 2/13 gives total 14L/13 >= L -- always satisfied, no constraint on x. The union-bound schema is information-theoretically empty at m' >= 7. Surviving routes, each with a repo carrier: (i) JOINT pair statistics -- comb-comb overlaps are mechanical-word/three-distance objects (THM-778); (ii) RESTRICTED density -- D_x on the prefix's safe set E, not on an interval (density on E can differ from 2/13; the selector machinery THM-803/817/821 lives here); (iii) GLOBAL accounting -- multi-component + arithmetic relations forced by tightness (THM-792 root currents). The F6/K-transport targets the COLLAR EVENT WALK (a different sub-problem than this covering bound) -- do not conflate the two walls.
 - **Next step:** use THM-857's complete scale-one H6 prefix/certificate language as a frozen input rather than enumerating another primitive-root bank.  Lift its exact component--comb states to common-sheet fibres, classify each negative certificate by its Kruskal rank word and reciprocal-gcd tree cost, and quotient only under insertion/peel operation congruence.  Remove common-dilate classes with the proved `19/572` margin.  Prove that each recurrent small-gcd endpoint class either gains that margin under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
+- **Next step:** use THM-857's complete H6 prefix/certificate language and THM-859's exact `Z/DZ` phase action as frozen inputs rather than enumerating another primitive-root bank.  First evaluate the `336` and `672` order-one-gate context families; then lift the surviving component--comb states to higher common-sheet fibres and classify the seven-comb vertex/edge defect language only under insertion/peel operation congruence.  Prove that each recurrent negative Kruskal class either gains `11mu(E)/169` under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
 - **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-855 F5/F6, the level-mean gap (same problem shape).
 
 ### LEAD (klein-2026-07-09-S233 → RESOLVED S234 as THM-685): the RELATION-LATTICE RESUMMATION → the Kronecker transfer

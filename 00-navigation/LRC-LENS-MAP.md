@@ -58,7 +58,7 @@ every new language through effective order 21 and turn the remaining order
 bank into a finite strip:
 
 ```text
-min D_i<=21<max D_i<=42,336,
+min D_i<=21<max D_i<=10,584,
 all orders {2,3,7}-smooth, no private maximal prime power.
 ```
 
@@ -133,6 +133,13 @@ This addendum also records three quotient decisions from the same session:
   one `(H,K)` fibre splits at `n=8`.  The pointwise `K` current is the
   gained-minus-lost odd-cycle-forest incidence, so an operation profile is a
   better carrier than a scalar class count.
+- THM-840's operation boundary is part of the carrier, not metadata.  Literal
+  endpoints are Markov for monotone insertion but fail for deletion or exact
+  reconstruction without the labelled tooth bank.  Every proposed transport
+  quotient must therefore name its legal operations and prove continuation
+  congruence.  At radius seven, the Hunter tree is only the rank-two shadow of
+  the full cover nerve; retain the component-weighted fractional-cover/Farkas
+  dual when pair incidence is insufficient.
 
 Packet fields to add where available:
 
@@ -173,6 +180,12 @@ walsh_krylov_stalk
 odd_cycle_edge_current
 operation_profile
 quotient_boundary_witness
+legal_operation_category
+continuation_equivalence_class
+myhill_nerode_cover_class
+quotient_congruence_scope
+component_cover_nerve
+fractional_cover_farkas_weight
 ```
 
 ## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens
@@ -309,7 +322,7 @@ The current evidence does not point to one decisive scalar, one universal
 runner tournament, or one sequence shadow.  It points to a labelled packet
 sheaf with controlled forgetting.
 
-The live proof object has at least four layers:
+The live proof object has at least six layers:
 
 1. **Status and boundary layer:** strict-open versus AP/GW endpoint-boundary
    equality; closed arc-Cech H1; open topes; safe-component stalks.
@@ -324,6 +337,9 @@ The live proof object has at least four layers:
 5. **Certificate layer:** dual annihilation, cut/cochain/zeta repair,
    familywise descent, Henselian unit rules, Fejer/Toeplitz interval
    certificates, Ramanujan exact-period projectors, formal exact arithmetic.
+6. **Operation/continuation layer:** the legal insertion, peel, replacement,
+   scale, sheet, and descent moves, together with the continuation-equivalence
+   relation for which a proposed quotient must be a congruence.
 
 Every LRC quotient seen so far is safe only if the forgotten coordinate is
 fiber-constant, reconstructed, dual-annihilated, descended familywise,
@@ -358,6 +374,7 @@ positive-open residual
 
 | Lens family | What it preserves | What it destroys or hides | Required sidecar / repair | What it points at |
 |---|---|---|---|---|
+| Ramified component-cover/action lens | literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; higher-order union if reduced to pairs | operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-858 bounds the finite H5 ramification base |
 | Labelled packet / reduction lens | theorem route, exact packet identity, AP/GW boundary atoms, C27/K33/covering family | local topology and certificate economy if scalarized | route label, exact `M`, qdiv, packet family, residual sector | packet sheaf base |
 | Equivalence triad lens | count shadow, retained scissors/fiber data, observer-cut orbit, limiting distribution law, first failed interaction order | proof predicate if equinumerosity, equidecomposability, or equidistribution is used alone | `cardinal_shadow`, `scissors_fiber`, `observer_cut_orbit`, `distribution_law`, `interaction_order_defect`, `residual_debt_name` | forgetting-cost invariant |
 | Tournament / metagraph / observer lens | pairwise comparator, wall-crossing relation, marked source/phase order | thresholds, endpoints, scale, family route if vertices are raw runners | marked vertices, retained observable, tie Hamiltonian path, lost-coordinate ledger | relation walk over packet base |

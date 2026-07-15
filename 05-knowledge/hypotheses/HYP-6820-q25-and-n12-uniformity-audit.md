@@ -1,13 +1,15 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts, and the entire proper scale-one Hamming-six chart closed except for the doubled-AP equality `2[12]`; the remaining common-sheet H5 presentation bank is finite with `min D_i<=21<max D_i<=42,336`, is {2,3,7}-smooth, and has no private prime power; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and both the universal single-column endpoint-grid template and every fixed two-column unit endpoint family refuted in the relaxed model for the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, arbitrary-scale/common-sheet H6 transport, the seven-comb wall, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts, and the entire proper scale-one Hamming-six chart plus all common dilations closed except for the doubled-AP equality family `2c[12]`; the remaining common-sheet H5 presentation bank is finite with `min D_i<=21<max D_i<=10,584`, is {2,3,7}-smooth, and has no private prime power; effective order is the exact H6 ramification degree, and every H6 branch containing order one is finite-decidable; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and both the universal single-column endpoint-grid template and every fixed two-column unit endpoint family refuted in the relaxed model for the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, ramified H6 context languages, radius-seven endpoint/third-moment and correlated AP-window residuals, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
   580,919,164-node exact component recursion; the unique covering terminal is
   2[12].  This subsumes the former 903 `f<=2` primitive-core row residual and
-  the odd-label mixed-parity branch at scale one. THM-836 §§6B--6C also rule out
+  the odd-label mixed-parity branch at scale one. THM-859 conjugates the tree
+  across common dilation, identifies D as the deck-mask ramification degree,
+  and makes every H6 order-one gate finite-decidable. THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
   the three structured shell-five classes.
@@ -58,6 +60,7 @@ depends_on:
   - THM-856
   - THM-857
   - THM-858
+  - THM-859
   - HYP-6750
   - HYP-6775
 related:
@@ -77,6 +80,7 @@ related:
   - THM-856
   - THM-857
   - THM-858
+  - THM-859
   - MISTAKE-143
 ---
 
@@ -623,8 +627,10 @@ the missing odd labels lifted to `14,16,18,20,22,24`, namely `2[12]`.  Hence
 all 923 primitive retained-core roots and every mixed-parity completion of the
 exceptional odd-label root are loose.  A separate closed-danger-union replay
 reconstructs each expanded prefix from scratch and hashes the labelled root
-trees.  The remaining H6 obligation is arbitrary-scale/common-sheet transport,
-not the former 903-row plus exceptional-root scale-one bank.
+trees.  The remaining H6 obligation is ramified common-sheet transport, not
+the former 903-row plus exceptional-root scale-one bank. THM-859 proves that
+common dilation is exactly conjugate and every branch containing `D=1` is
+finite-decidable.
 
 An independent C.3 replay crosschecks a nontrivial subforest using the earlier
 residual-component implementation: all 52 `f=2` roots with exact first-speed
@@ -854,7 +860,7 @@ languages through order 21 are the already closed all-one, all-three, and
 mixed languages.  Any new common-sheet row must have
 
 ```text
-min D_i<=21<max D_i<=42,336,
+min D_i<=21<max D_i<=10,584,
 every D_i {2,3,7}-smooth,
 D_i divides lcm(D_j:j!=i),
 and all cuts (B8).                                      (B9)
@@ -862,16 +868,20 @@ and all cuts (B8).                                      (B9)
 
 The upper endpoint is structural.  Apply (B8) at each adjacent `p`-adic
 valuation level.  For `p=2`, the only possible upper-set sizes are `2,3,4`,
-with level gaps at most `1,1,3`; for `p=3`, sizes `3,4` have gaps at most one;
-for `p=7`, only size four is possible and its gap is one.  Thus
+with level gaps at most `1,1,3`.  The apparent sum five cannot occur: a
+size-four initial gap three forces all four relative orders to equal eight,
+while a gap two forces them into `{4,8}`; either equality case leaves total
+dyadic spread at most three.  If the initial gap is one, the later size-three
+and size-two gaps add at most one each.  For `p=3`, sizes `3,4` have gaps at
+most one; for `p=7`, only size four is possible and its gap is one.  Thus
 
 ```text
-range(v_2)<=5,             range(v_3)<=2,
+range(v_2)<=3,             range(v_3)<=2,
 range(v_7)<=1.                                            (B10)
 ```
 
 Comparing every order primewise with THM-823's order `D_*<=21` gives
-`D_i<=D_*2^5 3^2 7<=42,336`.  The common-sheet presentation bank is therefore
+`D_i<=D_*2^3 3^2 7<=10,584`.  The common-sheet presentation bank is therefore
 uniformly finite, though the arbitrary metric lifts in its surviving
 languages are not decided by this arithmetic bound.
 
@@ -881,6 +891,18 @@ subset/complement cut, so the faithful carrier is instead the maximal-prime-
 power hypergraph decorated by complement-lcm fibres and affine owner-sheet
 intervals.  This is a genuine finite reduction of the H5 common-sheet object, not a
 global H5 or `n=12` closure.
+
+THM-859 identifies how this H5 base enters H6.  Common dilation conjugates the
+entire THM-857 insertion tree, while an order-`D` insertion creates exactly
+`D` distinct deck masks; the scale quotient is a continuation congruence
+exactly at `D=1`.  Deleting an order-one H6 colour leaves an H5 common-sheet
+presentation.  Hence two or more order-one colours give either the already
+closed all-one dilation or exactly `336` two-order-one/four-order-three
+contexts.  Exactly one order-one colour leaves the finite THM-858 H5 bank; in
+its through-21 face this gives `96*7=672` marked contexts.  Every fixed context
+has a finite longest-component recursion because its future speeds lie in
+labelled progressions modulo `13 lcm(D_i)`.  The reduction is uniform and
+finite, but no zero-cover verdict is yet claimed for those ramified trees.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -1338,9 +1360,11 @@ state-wise longest-component cap, while THM-847 closes all 96 mixed contexts.
 THM-858 closes every new common-sheet row through order 21.  The shallow H5
 residual is the finite smooth-ramified strip (B9) plus other all-scale deck
 descent; THM-857 completes THM-815's scale-one radius-six recursion over every
-root and leaves only `2[12]`.  No proper primitive or mixed-parity scale-one H6
-chamber remains; transport across arbitrary scale/common sheets is open, and
-the discrepancy deficit is lost at seven. Arbitrary
+root and leaves only `2[12]`. THM-859 conjugates this tree across every common
+dilation and proves that the scale quotient fails precisely at effective order
+`D>1`; branches containing `D=1` form a finite family of finite exact trees.
+No proper primitive or mixed-parity unramified H6 chamber remains; ramified
+context languages are open, and the discrepancy deficit is lost at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
 
@@ -1410,7 +1434,7 @@ deciding objects are therefore:
   order one, and THM-847 closes all 96 mixed contexts. THM-858 adds the
   complement-lcm fibre cut, closes every new order-through-21 row, and shows
   that the live language is a finite `{2,3,7}`-smooth bank with
-  `max D_i<=42,336` and no private maximal prime power. On this edge the useful alternate vertices are prime-power
+  `max D_i<=10,584` and no private maximal prime power. On this edge the useful alternate vertices are prime-power
   carrier hyperedges; they must retain complement fibres and affine interval
   phase to preserve common-sheet coverage.
   The exact action state is `(E_S,V)`, the literal residual
@@ -1422,7 +1446,9 @@ deciding objects are therefore:
   the packet to the core `[6]` plus combs `7,...,12`; the resulting weighted
   component--comb incidence has four zero-overlap-debt unique-owner pins.
   THM-857 then retains the full literal action state over all 924 roots and
-  closes every proper scale-one H6 row except the doubled AP equality.  The
+  closes every proper scale-one H6 row except the doubled AP equality. THM-859
+  makes common dilation an exact action conjugacy and identifies the
+  `Z/DZ` phase action as the missing sidecar at ramification.  The
   earlier oriented AP cusps and weighted handoff cycles remain explanatory
   local vertices, but their intermediate 909-row frontier and eventual
   903-row plus exceptional-root residual were quotient artefacts rather than
