@@ -64216,8 +64216,8 @@ the other 95 order-three contexts, the two scale-one H5 boxes, finite H6, the
 fixed-ratio shell `2B-13d>=5`, mixed order-one/common-sheet languages, and the
 ternary switch-aware deep ratios.
 
-A final live-main integration added THM-839 and the THM-841 reservation.  The
-former sharpens the nonlinear boundary: among 388 endpoint-swap fixed post-B
+A live-main integration added THM-839 and the then-reserved n9 face-action
+audit.  THM-839 sharpens the nonlinear boundary: among 388 endpoint-swap fixed post-B
 bases, only 58 satisfy all local ordered-state balance characters.  Therefore
 reflection/groupoid inversion is not itself a sufficient recursive sidecar.
 
@@ -64251,9 +64251,13 @@ separately for defect composition, `A/B/C`, induced deletion, complement,
 reflection, lift, and CF transport.  The exact defect algebra closes the first
 operation; internal deletion still needs the shortcut seam beyond its `B`
 card.  The live target is therefore an operation-indexed congruence atlas.
-The reserved n9 face-purity file currently shares bare ID `THM-841` with an
-unrelated proved Farey violation-ladder theorem, so this synthesis cites its
-filename and does not use the ambiguous ID as a proved input.
+A subsequent pull renumbered the face-purity audit to THM-842 and proved it.
+On all 58 cells, `B` is the unique literal-`Q`-pure face and remains injective;
+the unordered A/C carrier has 29 affine-sheet doubletons.  The position-marked
+induced deletion deck is injective, while the unpositioned deck has exactly
+the bare upper-node partition.  This is a finite-exact instance of the
+operation-indexed atlas: path position survives where defect rank, chirality,
+and unmarked node multisets do not.
 
 The same pull's small-size transitive-star observation is now an all-size
 corollary of THM-830.  Reversing a transitive arc of length `q` gives

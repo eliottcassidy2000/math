@@ -865,6 +865,12 @@ certificate clauses, and proof obligations.
   induced deletion, reflection, complement, lift, and CF transport.  The raw
   defect algebra passes composition; the bare gap face fails to encode induced
   deletion without its seam word.
+- **Finite action test by THM-842:** on the 58 `n=9` defect cells, `B` is the
+  unique role descending cellwise and injectively to literal `Q`; the
+  unordered A/C endpoint carrier has 29 doubletons under an apex-relative
+  affine antipode.  The position-marked induced deck is injective, whereas its
+  unpositioned multiset has exactly the bare upper-node partition.  Path
+  position and affine sheet are proven necessary on this bank.
 - **Pull:** refine `c_n` until the disintegrated label products have constant
   composition/intersection numbers, or exhibit the first obstruction to any
   feasible coherent configuration.  Separately compute the three `S_3`
