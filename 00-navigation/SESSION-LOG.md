@@ -1,3 +1,64 @@
+## codex-2026-07-15-S14/S15 continuation -- THM-860 makes primitive proper AP-centred H6 finite-ramified
+
+HONEST VERDICT: global `n=12` sporadic-branch emptiness remains open.  This
+continuation removes the unbounded-scale quantifier from the primitive proper
+AP-centred Hamming-six branch and replaces it by a finite presentation bank of
+finite exact metric trees.
+
+For
+
+```text
+A=c([12] minus R) union {w_i:i in R},       |R|=6,
+```
+
+primitivity and `M(A)<=1/13` make every leave-one-out core primitive.
+Consequently `lcm(D_j:j!=i)=c` for every effective order word.  This identity
+is also the missing singleton case of the six-colour relative cuts; all larger
+colour sets have complements of size at most four and inherit THM-858's
+missed-fibre proof. Six-colour attenuation gives `min D_i<=77`.
+
+The independently audited full upper-set argument sharpens the adjacent
+valuation ranges from `(8,4,1,2)` to
+
+```text
+range(v_2,v_3,v_5,v_7)<=(5,3,1,1),
+range(v_p)=0 for p>=11, p!=13.
+```
+
+Thus `c/min D_i | 2^5*3^3*5*7=30,240` and
+
+```text
+c<=2,328,480.
+```
+
+Range zero at a large prime means a common factor, not prime absence. Every
+fixed order/unit language lies in six labelled progressions modulo `13c`;
+THM-815's exact component cap makes the insertion tree finite. The exact
+924-root replay finds the unique minimum root component `31/1430` at
+`{1,4,7,9,10,11}`, giving at most 37 first heights per labelled ray.
+
+The first ramified sheet is structurally clean. At `c=2`, every primitive
+common-sheet presentation has six order-two colours. The signed relation
+`r->o iff o/r in {+2,-2}` must be one Hamiltonian six-cycle with odd negative
+parity; any chord creates a forbidden cycle of length at most five. Hence
+there are exactly `12*32/6=64` contexts. The direct-mask replay agrees, with
+orbit sizes `12,12,12,4,12,12`, one SCC, one directed cycle, and six
+Hamiltonian paths per row. These 64 metric trees are not yet evaluated.
+
+The `c=3` mixed-order guardrail common-covers all three sheets but has exact
+`M=5/29` at `t=+/-1/58`, refuting “common sheets imply common scale” without
+threatening LRC. Normal and optimized Python runs reproduce the stored output
+byte-for-byte. Source/output SHA-256 are
+`6e51c6d7487b07b8e115320df16dec1b355c6b41c95fc8bb55af45d619928161` and
+`c99965afdc8300e8e46e9bfc76b849c61c60d9fb745a24796ed367235ebbf85e`;
+payload FNV-64 is `b3faace3116a3ab0`.
+
+FAITHFUL CARRIER: prime-power valuation upper sets -> complement-lcm owner
+fibres -> labelled CRT progressions -> literal strict-safe components. The
+`c=2` signed cycle is useful because it retains sheet parity; completing it to
+a tournament destroys the cover predicate. Next exact target: run the 64
+`c=2` component trees, then the `336` and `672` THM-859 order-one-gate banks.
+
 ## codex-2026-07-15-S10 continuation -- THM-857 closes the full proper scale-one H6 chart
 
 HONEST VERDICT: the requested uniform `q<=25` statement remains false and

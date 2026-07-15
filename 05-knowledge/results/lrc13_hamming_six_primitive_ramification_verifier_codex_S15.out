@@ -1,0 +1,30 @@
+THM-860 PRIMITIVE H6 FINITE-RAMIFICATION EXACT VERIFIER
+SECTION valuation upper-set cuts
+p=2 coarse_range=8 optimized_range=5 extremals=((0, 2, 3, 4, 5, 5), (0, 3, 3, 4, 5, 5))
+p=3 coarse_range=4 optimized_range=3 extremals=((0, 1, 2, 3, 3, 3), (0, 2, 2, 3, 3, 3))
+p=5 coarse_range=1 optimized_range=1 extremals=((0, 1, 1, 1, 1, 1),)
+p=7 coarse_range=2 optimized_range=1 extremals=((0, 0, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1))
+p=11 coarse_range=1 optimized_range=0 extremals=((0, 0, 0, 0, 0, 0),)
+quotient_divisor=2^5*3^3*5*7=30240 scale_cap=77*30240=2328480
+rho_table=2:[1/2,1/4,1/4,3/16,5/32,5/32] 3:[1/3,2/9,5/27,13/81] 5:[1/5,4/25] 7:[2/7,8/49] 11:[2/11]
+SECTION 924 root components
+roots=924 min_length=31/1430 multiplicity=1 core=(1, 4, 7, 9, 10, 11)
+normalized_real_cap=14520/31 cap_over_13=14520/403 first_heights_per_ray<=37 c2_first_heights_per_ray<=36
+root_length_payload_fnv64=321c8da774c59420
+SECTION c=2 direct masks and signed cycles
+presentations=64 order_patterns={(2,2,2,2,2,2):64} symbolic_count=12*32/6=64
+multiplicative_orbit_sizes=(12, 12, 12, 4, 12, 12) representatives=((1, 2, 3, 4, 5, 6), (1, 2, 3, 4, 5, 7), (1, 2, 3, 4, 6, 8), (1, 2, 3, 5, 6, 9), (1, 2, 3, 5, 7, 9), (1, 2, 6, 8, 9, 10))
+graph_fingerprint=(edges=6,SCC=[6],directed_cycles=1,Hamiltonian_paths=6) count=64 negative_edge_histogram={1: 12, 3: 40, 5: 12}
+c2_row_edge_payload_fnv64=b2aad8bd497eb595
+SECTION c=3 mixed common-sheet false positive
+scale=3 labels=(1, 2, 3, 5, 8, 12) packet=(10, 12, 16, 18, 21, 27, 28, 30, 33, 37, 45, 48) orders=(3,1,1,3,3,3)
+owner=1 masks=2,1,0,-,-,-
+owner=2 masks=-,0,1,-,012,-
+owner=3 masks=1,-,-,2,-,012
+owner=5 masks=2,1,-,0,-,-
+owner=8 masks=0,-,1,2,-,-
+owner=12 masks=-,1,2,0,-,-
+exact_M=5/29 witnesses=(Fraction(1, 58), Fraction(57, 58)) verdict=loose
+source_sha256=6e51c6d7487b07b8e115320df16dec1b355c6b41c95fc8bb55af45d619928161
+payload_fnv64=b3faace3116a3ab0
+VERDICT finite-ramification constants and boundary censuses reproduced exactly
