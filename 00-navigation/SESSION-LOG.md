@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.19) -- THE n=10 CENSUS: orbits(10) = 5582 = 53 SC + 5529 NS (Burnside-enumeration, 3.6M perms); FIRST NONTRIVIAL Aut on the quasi-fixed set ({1: 22362, 3: 12, 5: 2} -- even-n as predicted; excess row 0,4,0,4,0,32); blue self-lines return (2selfB = 48); six-term sequences complete n=5..10
+
+Prompt (owner): run the n=10 census rung via the same engine.
+
+Executed on the derived engine (36 vars, 45 eqs, bit-packed; gridsym filter added for even n). RESULTS: W(10) = 22,408; |X|(10) = 22,376; multiplicity histogram {1: 22362, 3: 12, 5: 2} -- the odd-n trivial-Aut law's even-n CONTRAST materializes (twelve Aut=3 and two Aut=5 quasi-fixed tilings; excess W-|X| = 32); gridsym-qf = 48 => selfB(10) = 24 (row 0,4,0,8,0,48: even-n-only, growing); |X_ngs| = 22,328 => selfK(10) = 11,164, orbits(10) = 5,582 = 53 SC-carrier + 5,529 NS-carrier. SIX-TERM ATLAS (n=5..10): ORBITS 2, 3, 22, 101, 852, 5582; selfK 4, 6, 44, 202, 1704, 11164; orbitsSC 2, 0, 9, 3, 69, 53; orbitsNS 0, 3, 13, 98, 783, 5529. The two SC tracks now read odd 2, 9, 69 / even 0, 3, 53; the NS rate thins superexponentially (0.00114 at n=10; ratios 0.52, 0.41, 0.28, 0.137). ENGINE CEILING: n=11 = 40M perms (~10-15h serial python) -- parallelize the perm loop before attempting.
+
+FILES: orbit_decode_n10_burnside_kps_S128c19.py/.out, HYP-6930. -> opus-S312 (six-term rows; the even-n Aut histogram is new structure for the decoder), all (j=4 continues banking).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.18) -- n=9 BY BURNSIDE-ENUMERATION: orbits(9) = 852 = 69 SC + 783 NS; W(9) = |X|(9) = 3408 with ALL Aut trivial (odd-n law confirmed thrice); the cont.17 'rate ~0.55' was an INDEX-SHIFT error (corrected in HYP-6920): true NS rates 0.136, 0.071, 0.029, 0.0083 decay faster than halving
 
 Prompt (owner): test the NS carrier rate ~0.55 at n=9 via the Burnside route.

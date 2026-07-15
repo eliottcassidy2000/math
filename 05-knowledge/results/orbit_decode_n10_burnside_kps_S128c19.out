@@ -1,0 +1,9 @@
+m=36; sweeping 3628800 perms...
+W(9) = 22408 ; |X|(9) = 22376 ; multiplicity histogram (|Aut| profile) = {1: 22362, 5: 2, 3: 12}
+gridsym-qf at n=10: 48 (even n: expect > 0)
+|X_ngs|(10) = 22328 ; selfK(10) = 11164 ; orbits target = 5582
+n=10: orbits=5582 = orbitsSC 53 + orbitsNS 5529
+SEQUENCES: orbitsSC = 2,0,9,3,69,53 ; orbitsNS = 0,3,13,98,783,5529
+NS rates incl n=10: 0.136, 0.071, 0.029, 0.0083, 5529/4862136=0.00114
+DONE
+NOTE: the 'W(9)' label in the run output is a derivation artifact -- the values are n=10's (W(10)=22408, |X|(10)=22376).
