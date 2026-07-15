@@ -1,0 +1,19 @@
+THM-810 exact replay
+attenuation_identity.D<=500=PASS
+cutoff.f>=1/6.count=40 max=72 values=(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 27, 28, 29, 30, 33, 34, 35, 36, 40, 41, 42, 46, 47, 48, 53, 54, 59, 60, 66, 72)
+cutoff.S4>=2/3.count=25 max=48 values=(4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17, 18, 21, 22, 23, 24, 28, 29, 30, 34, 35, 36, 42, 48)
+top4.D>=4<=1=PASS equality_orders=(4,)
+case.one_D2_three_D3.rows=165 survivors=0 best_min=2/3
+case.two_D2.configurations=49 rows=78400 survivors=0 best_min=17/18
+case.one_D3_three_large.rows=62500 survivors=0 best_min=92/105
+case.all_D3.rows=165 survivors=((1, 5, 8, 12),)
+case.no_D2_D3.mutual_D4=(3, 4, 9, 10) adjacency=((3, (4, 9)), (4, (3, 10)), (9, (3, 10)), (10, (4, 9))) clique4=0
+overlap.feasible_patterns=((1, 1, 1, 1), (1, 2, 2, 1), (2, 1, 1, 2), (2, 2, 2, 2)) count=4
+base.signs=(1, 1, 1, 1) lifts=(16, 28, 37, 10) speeds=(6, 9, 10, 12, 16, 18, 21, 27, 28, 30, 33, 37) M=6/43 witness=1/43
+base.signs=(1, 2, 2, 1) lifts=(16, 2, 11, 10) speeds=(2, 6, 9, 10, 11, 12, 16, 18, 21, 27, 30, 33) M=2/17 witness=7/51
+base.signs=(2, 1, 1, 2) lifts=(29, 28, 37, 23) speeds=(6, 9, 12, 18, 21, 23, 27, 28, 29, 30, 33, 37) M=6/43 witness=1/43
+base.signs=(2, 2, 2, 2) lifts=(29, 2, 11, 23) speeds=(2, 6, 9, 11, 12, 18, 21, 23, 27, 29, 30, 33) M=1/8 witness=1/8
+tournament.left.scores=(3, 2, 1, 0) triangles=0 scc=(1, 1, 1, 1) H=1
+tournament.right.scores=(3, 2, 1, 0) triangles=0 scc=(1, 1, 1, 1) H=1
+tournament.gauge_edge_flips=0 incidence_flips=8
+sha256=74fe9127bbe973c5b72d04051bb2d6cc35b2a31e53ef69d21891ba4218de0713
