@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/829/831;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/829/831/836/837/840;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -196,14 +196,22 @@
   necessary reflection conjugacy.  Use it as a candidate arithmetic transport
   sidecar, but first prove a fibre-product identification with the metric
   cell-endpoint owners; THM-829 itself does not preserve LRC continuation.
-  THM-831 closes the geometric generalization question.  Every primitive
-  folded target has explicit Bezout-offset component balls, but the symmetric
-  no-switch radius quotient exists exactly for reduced half-frequency
+  THM-831 closes the geometric generalization question in its coprime
+  opposite-parity reduced family.  Every primitive folded target in that
+  family has explicit Bezout-offset component balls, but the symmetric
+  no-switch radius quotient exists exactly for half-frequency
   `4<=alpha<=9` (sixteen rows).  The `q=(-1|-3,+1)` weighted centre-switch
-  hyperedge is nonpositive for every `alpha>=10`.  Common gcd creates raw deck
-  switches; use only the proved quotient-scaled radius.  The next object is an
-  ordered three-hypergraph of component centres/radii, not a component
-  tournament.
+  hyperedge is nonpositive for every admissible `alpha>=10`.  Common gcd
+  creates raw deck switches; use only the proved quotient-scaled radius.  The
+  next object is an ordered three-hypergraph of component centres/radii, not a
+  component tournament.
+  THM-836 extracts the first exact arithmetic obstruction from the guarded
+  `(13d,5d)` centre for ten distinct speeds with the exact signed-complement
+  residue set and full guarded containment.  The two directional owner exits
+  force `13d<=2B-5`: the shells `2B-13d=1,3` are empty by a coefficient-nine
+  owner-packing and mod-13 alignment argument.  Exact local shell-five owners
+  survive, so continue from `2B-13d>=5`; this is not yet a global core survivor
+  or a proof that the radius budget fails.
 - **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
   the arbitrary-scale radius-five descent.  The collar classification is no
   longer the missing step: spanning five-cycles have five feasible band types,
@@ -216,19 +224,17 @@
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
   literal strict-safe endpoint words make the three ordered faces injective.
-  The final residual itself still has fourteen collision pairs. An
-  **UNREPLAYED EXPLORATORY** `H1.5` probe (no stored artifact) reports that the
-  codec lattice is not a chain. Joining `H1` to
-  ordered residue-owner words (`EO`) makes the three-face join injective, but
-  the full codec still has one exact-`M`-mixed doubleton: replacing speed `14`
-  by `27` in face `1245` preserves the residue-owner word while a height-one
-  insertion gives `M=3/31` versus `4/29`.  Across heights `1..500` the child
-  owner words agree only at `1,6,7,8`, literal components never agree, and no
-  residual becomes empty. If reproduced, this would show that EO is non-Markov
-  for geometry and exact `M`, but not yet a tight/loose Nerode liar. Do not use
-  these figures as a theorem until a replay artifact is stored. Continue with actual
-  multi-comb terminal languages rather than treating either bounded face
-  injectivity or this quantitative liar as a full-box theorem.  A runner
+  The final residual itself still has fourteen collision pairs. THM-840 now
+  gives the operation-facing decision that the earlier unreplayed `H1.5`
+  probe could not.  `H0=H1` is not a congruence even for one common labelled
+  insertion: the height-one/height-two liar pair acquires different incident
+  handoffs after inserting `(6,19)`.  Literal exact endpoints are Markov for
+  every monotone addition by `E->E intersect Safe(u)`, but not for deletion or
+  exact `M`; a fixed-cardinality common-deletion counterexample separates the
+  outputs.  Retain the labelled tooth bank and owner ancestry for
+  replacement/descent, while allowing the owner-free endpoint word only in a
+  pure-addition recursion. Continue with actual multi-comb terminal languages
+  rather than treating bounded face injectivity as a full-box theorem. A runner
   tournament is telemetry: THM-820's
   centre-9 and centre-22 cycles have the same labelled live/tie fingerprints
   but different exact maxima.  Exact centres, ratios, open endpoints,
@@ -243,14 +249,14 @@
   arbitrary lifts.  Extend common-sheet exclusion above order twelve, then run
   exact residual-comb erosion on the all-order-three and mixed order-one
   survivors; do not promote scalar attenuation or the coset cycle to a metric
-  closure. An **UNREPLAYED EXPLORATORY** feasibility note extends THM-816's
-  discrepancy algebra formally to five combs as `B_5(E)=110K/(39L)` and reports
-  root first-speed bounds `349..678`, 5,848 first-level states across 96 parity
-  contexts, and breadth `1,45,1262,20703` through depth three in one context.
-  Regenerate and store this probe before treating those figures as certified.
-  The finite computation needs
-  endpoint masks, memoized residuals, or symmetry reduction before a direct
-  recursion is credible.
+  closure. THM-837 has now run the exact recursion on one of the 96
+  all-order-three contexts: `C={1,5,8,12}`, `b=10`, bits `(1,1,1)`.  Its
+  active-run state visits 75,371 nodes, finds zero covers, and leaves 57
+  nonempty terminals.  This proves that context loose at every height.  Run
+  the other 95 contexts with the same operation-complete state, adding
+  memoization or symmetry only after auditing boundary activation; a global
+  cell mask without active-boundary bits miscounts components and invalidates
+  the recursive discrepancy bound.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -271,7 +277,11 @@
   sum arcs with owner ancestry. On the common `(13d,5d)` ratio, first try to
   prove that every admissible arithmetic core violates THM-824's intrinsic
   centre-radius budget (including its centre-cell identity, not the unguarded
-  phase norm). THM-831 has already classified the extension: run the same
+  phase norm). Under THM-836's exact signed-complement and guarded-containment
+  hypotheses, the two thinnest owner shells are removed, so in this ratio
+  begin at `2B-13d>=5`; its exact shell-five local survivors show that another
+  obligation must join the owner packing. THM-831 has classified the coprime
+  opposite-parity extension: run the same
   arithmetic test on the other fifteen primitive `4<=alpha<=9` folds, and
   retain the weighted ternary switch obstruction rather than a scalar radius
   outside that range. A proof only for the global symmetric union must still

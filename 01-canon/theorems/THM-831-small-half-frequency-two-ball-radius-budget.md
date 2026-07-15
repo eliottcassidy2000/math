@@ -393,9 +393,3 @@ the legal symmetric-return quotient.  It does not prove that a two-sheet LRC
 core realizes or violates the corresponding radius budget, does not factor an
 individual nonsymmetric satellite, and does not close the `n=12` sporadic
 branch.
-
-Still to prove and freeze: the exact centres and radii, a uniform or finite
-exhaustive no-switch proof with all endpoint cases, the common-dilate
-corollary, the sharp boundary at `alpha=10`, an independent exact replay, and
-the preservation/tournament guardrail.  No claim in this stub may be used as
-a theorem until the status is promoted.

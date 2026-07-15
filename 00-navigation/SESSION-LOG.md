@@ -64066,3 +64066,152 @@ THM-818 kernel rows are the current equality-witness stalk.  None of these
 objects preserves LRC speed, metric scale, owner, threshold, carry, or
 continued-fraction data; those fields must remain an external stalk before
 any fourteen-runner conclusion.
+## 2026-07-15 — codex-S10 continuation: three operation-facing closures
+
+This continuation pulled and pushed after every theorem reservation and
+promotion.  The first live integration brought in stronger THM-815 Hamming-
+five/six bounds and the THM-828/832 n=9 Cech core.  The merged frontier keeps
+the joint H5 boxes
+
+```text
+(146,292,584,1168,2336),
+x<=146, v<=1986, max_top<=7944,
+```
+
+the finite H6 recursion, and the radius-seven discrepancy wall.  It also
+corrects the historical THM-831 reservation: the theorem is now proved.
+
+### THM-831: the exact no-switch frontier
+
+For coprime opposite-parity half-frequencies `alpha>beta`, every folded target
+has an explicit Bezout-offset ball decomposition.  The symmetric primitive
+radius quotient exists exactly for the sixteen rows `4<=alpha<=9`.  For every
+`alpha>=10`, the ordered component triple `(-1|-3,+1)` has nonpositive
+weighted switch slack, so even variable-radius clearance factorization fails.
+A common gcd creates raw deck switches but preserves the quotient-scaled
+theorem.  The proof object is the ordered weighted three-hypergraph
+
+```text
+omega(i|j,k)=||2c_i-c_j-c_k||-(2h_i+h_j+h_k),
+```
+
+not a runner or component tournament.  The exact audit covers 518 primitive
+pairs and 6,160 compact packets.
+
+### THM-837: one all-height Hamming-five context is empty
+
+For the THM-823 context
+
+```text
+C={1,5,8,12}, b=10, bits=(1,1,1),
+CRT bases={1:16,5:28,8:37,10:4,12:10} mod 39,
+```
+
+the five-comb discrepancy recursion is complete at every height.  It visits
+
+```text
+depth nodes={0:1,1:45,2:1262,3:20703,4:53303,5:57},
+```
+
+75,371 states in total, with zero covers and 57 nonempty terminals.  The
+maximum recursive bound is 1,025 and the smallest enumerated terminal residual
+has full measure `413437/5714280`.  This closes one of 96 contexts; the other
+95 remain open.  Active endpoint runs are essential because inactive global
+endpoints create false component cuts.  Raw and conditioned comb tournaments
+are transitive on every terminal while one through ten edges flip.
+
+### THM-840: continuation is an operation-kernel congruence
+
+An observation `O` supports a deterministic update under `T` exactly when
+
+```text
+ker(O) subset ker(O after T).
+```
+
+The THM-822 `H0=H1` liar pair violates this condition after the common
+insertion `(6,19)`: its new incident handoffs split.  Literal exact endpoints
+satisfy the condition for every monotone addition by intersection, but not
+for deletion or exact maximin.  The fixed-cardinality rows
+
+```text
+S=[13],
+T={1,...,9,11,12,13,20}
+```
+
+both have empty strict `1/13` residuals and maxima `1/14,2/27`; deleting the
+common speed `13` leaves an empty residual at `1/13` versus two intervals at
+`2/23`.  Thus pure insertion may use owner-free endpoints, while replacement,
+deletion, and transport must retain the labelled tooth bank and ancestry.
+
+### THM-836: the first two fixed-ratio owner shells are empty
+
+For ten distinct speeds with the exact signed-complement residues and guarded
+`(13d,5d)` containment, each directional exit table at the signed-wall centre
+is a permutation of
+
+```text
+(9,20,31,42,53,64,75,86,97,108).
+```
+
+When `B<13d`, both directions must use the coefficient-nine owners.  Their
+real packing interval and mod-13 separation empty
+`s=2B-13d=1` and `3`, proving
+
+```text
+13d<=2B-5.
+```
+
+A local shell-five pair at `(d,B)=(11,74)` satisfies both owner inequalities,
+so this argument stops sharply and does not close the deep branch.  The
+Fraction replay checks 20 coefficient rows, 9,996 endpoint facts on 119
+geometry rows, and 1,502,751 shell rows.  An independent referee reproduced
+the stored artifact and audited the proof's signs, endpoint conventions,
+circle cuts, owner forcing, and shell-five guardrail; no additional replay
+range is claimed here.
+
+### Cross-lane structural conclusion
+
+THM-828/832/838 provide a finite positive control: a rank-four Cech core can
+glue statically and transport literally while its one-bit chirality repair
+reverses on sector-dependent pairs.  A later live pull added THM-830's exact
+gap-tournament model.  A fixed-path tiling is literally a tournament on path
+gaps, but internal path-vertex deletion requires the repaired card plus its
+shortcut seam bit.  This independently confirms that even a faithful present
+tournament need not be closed under deletion.  Combined with the LRC results
+above, the underlying object is best described as an operation-indexed
+congruence atlas, not one universal tournament.  The current fibre product has
+exact residual geometry, the remaining labelled obligations, owner/gcd/Bezout
+transport ancestry, and ordered target-switch triples.  Which coordinates may
+be forgotten depends on the arrow being applied.
+
+A final live-main integration added THM-839's exact n=9 puncture certificates:
+one missing sector has empty A/C support and the other three die by a single
+local parity layer.  Only 58 of 388 endpoint-swap-fixed bases satisfy raw S2,
+so reflection symmetry and the evaluation predicate remain transverse.  This
+strengthens the proof-obligation-vertex viewpoint without transferring an LRC
+predicate.  The rolewise audit file
+`THM-841-n9-defect-b3-continuation-purity.md` remains a reservation and is not
+used as a proved input here.  Its numeric ID currently collides with the
+unrelated proved `THM-841-violation-ladder-order-statistic-profiles.md`; this
+record therefore cites the filenames rather than treating bare `THM-841` as
+unambiguous.
+
+The canonical artifact hashes added in this continuation are
+
+```text
+THM-831 source   de22dfe33ce641eff186d7fb2aec5638a911ebeb1e4da4ca54f33ef2aeb3c63f
+THM-831 output   8ec9a1091494c03ae1862fbbac1de2797881b9f7cbd016b50bfd2edab129fe68
+THM-837 source   8717e9b5f88c5ef5fec18d418a66ec1a83dd630152856b88ddb7665abe1ffb12
+THM-837 state    9d1024dc22acdc85ccd57afe74ac23d002765ec6ce0aee0d648da64dc23d041a
+THM-840 payload  b5c04163a21209f82231228b6fcb8c4eb5beb96fe5d254157253d21f21d14f27
+THM-840 cert     b9580c2c4793555ae76ae2c5bea5a2cc0b22a1f6bc2900feff6acf1735ce63d2
+THM-836 source   d6b259c0324752bfcdbf1efe5583843debcebcae898ebe8aca22629a7e0d246d
+THM-836 output   0c10a33bfc6e6c79b5b06e85a9f6fc3949b3b4214331a9a52846d3a2a21ae2e4
+THM-836 cert     741dc1d6e7e476817867d9b6ec13181e18b5ef7f999c9a7253680b2477f7fc07
+```
+
+Honest terminal status: the uniform `q<=25` claim remains disproved, not
+proved; global n=12 emptiness remains open.  The immediate exact targets are
+the other 95 order-three contexts, the two scale-one H5 boxes, finite H6, the
+fixed-ratio shell `2B-13d>=5`, mixed order-one/common-sheet languages, and the
+ternary switch-aware deep ratios.

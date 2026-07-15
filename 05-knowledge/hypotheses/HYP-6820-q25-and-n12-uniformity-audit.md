@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart reduced to two joint finite boxes with its complete height-at-most-two slice loose, scale-one Hamming six recursively finite, seven the first discrepancy-unbounded scale-one radius, and the arbitrary-scale five-deck interface reduced to a least-order pivot plus a bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact adaptive max-speed-cell/component selector, a pair-indexed uniform atomic-stalk factorization, an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`, a sharp classification of the sixteen reduced folds admitting the primitive no-switch quotient, and a sharp linear-satellite method limit; THM-829 gives related contragredient arithmetic-owner transport but is not yet joined to metric endpoint owners; branch emptiness remains OPEN in the Hamming-five boxes, the finite Hamming-six recursion, unbounded common-sheet and survivor-strictness problems, all-scale descent, uniform violation or transport of the viable radius/sum-arc selectors, ternary switch-aware treatment of the other odd ratios, the deep dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart in two joint finite boxes, its complete height-at-most-two slice loose, one of 96 arbitrary-height order-three contexts closed, scale-one Hamming six recursively finite, and seven the first discrepancy-unbounded radius; the shallow operation boundary is exact—literal endpoints are Markov for monotone insertion, but H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has finite bases, exact atomic sum arcs, an all-size `(13d,5d)` radius budget, the sharp sixteen-fold no-switch classification, and the guarded thin-shell necessity `13d<=2B-5` under the exact signed-complement/containment hypotheses; THM-829 gives related contragredient owner transport but is not yet joined to metric endpoints; branch emptiness remains OPEN in the Hamming-five boxes and other 95 order-three contexts, Hamming six, unbounded deck/common-sheet languages, the `s>=5` deep shell, uniform radius/sum-arc exclusion, ternary switch-aware odd ratios, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -41,6 +41,9 @@ depends_on:
   - THM-823
   - THM-824
   - THM-831
+  - THM-836
+  - THM-837
+  - THM-840
   - HYP-6750
   - HYP-6775
 related:
@@ -51,6 +54,9 @@ related:
   - THM-771
   - THM-829
   - THM-831
+  - THM-836
+  - THM-837
+  - THM-840
   - MISTAKE-143
 ---
 
@@ -489,6 +495,16 @@ that `H2` transports under arbitrary-height insertion or scale change.  The
 next quotient target is an endpoint-owner/component-incidence codec between
 `H1` and `H2`, minimized under the actual erosion action.
 
+THM-840 now separates those operations exactly.  The THM-822 quantitative
+liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
+creates different handoffs; neither coarse observation is insertion-Markov.
+Literal exact endpoint words do update at every height under a monotone comb
+addition by `E->E intersect Safe(u)`.  They are not deletion-Markov and do not
+determine exact `M`: two thirteen-speed rows with empty strict residuals split
+after deleting their common speed `13`.  Thus a pure-addition recursion may
+forget owners after forming exact endpoints, while deletion, replacement, and
+transport must retain the labelled tooth bank and ancestry.
+
 THM-823 proves that the remaining all-scale deck interface is not a finite
 scalar-order problem.  Every five-colour scalar cover satisfies
 
@@ -513,6 +529,15 @@ order-one branch is symbolically either all one or one plus the order-three
 quartet, again with only the boundary clock at arbitrary height.  Remaining
 work is unbounded common-sheet classification and strict metric erosion of
 these survivor languages, not a stronger scalar cutoff.
+
+THM-837 performs that metric erosion on one of the 96 all-order-three
+directed-flag/parity contexts, namely `C={1,5,8,12}`, `b=10`, bits
+`(1,1,1)`.  The operation-complete active-run recursion has 75,371 states,
+zero covering prefixes, and 57 nonempty terminals, proving this context loose
+at every height.  Its raw and conditioned comb tournaments are both
+transitive on all terminals while one through ten edges flip.  The proof is
+in the residual endpoints plus remaining CRT progressions; the other 95
+contexts remain open.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -798,6 +823,22 @@ deep theorem is arithmetic exclusion on the sixteen viable quotient targets,
 plus a ternary centre-switch/satellite argument elsewhere—not a search for
 further equal-radius folds.
 
+THM-836 supplies the first all-size arithmetic exclusion inside the guarded
+`(13d,5d)` row.  At the forced signed-wall centre, the two directional owner
+exit tables are permutations of
+`(9,20,31,42,53,64,75,86,97,108)`.  If `B<13d`, both directions must use the
+coefficient-nine owners; their real interval and mod-13 separation empty
+`2B-13d=1` and `3`.  Hence every configuration satisfying THM-836's ten-
+distinct-speed, exact signed-complement, and guarded-containment hypotheses
+obeys
+
+```text
+13d<=2B-5.                                                (C6)
+```
+
+The next shell has exact locally feasible owner pairs, so (C6) is a sharp
+stopping point for this two-sided packing argument, not branch closure.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep
@@ -823,7 +864,11 @@ The uniform theorem now has two explicit residuals:
    meet-in-the-middle cover join.  Audit every proposed codec through its
    operation-indexed kernel pair; literal labelled four-coordinate faces glue
    uniquely, but component counts, unordered endpoints, and tournament nodes
-   do not.  Then prove the arbitrary-AP-scale five-deck descent, allowing for
+   do not. THM-840 permits exact endpoints as the Markov state for this
+   monotone insertion action, but requires the labelled tooth bank as soon as
+   deletion or replacement is allowed. THM-837 has closed one all-order-three
+   context with this state; run the other 95 and the mixed order-one survivor
+   languages. Then prove the arbitrary-AP-scale five-deck descent, allowing for
    new sheet interfaces rather than assuming common scale. THM-815 Part C also
    makes scale-one radius six a finite exact recursion; enumerate it. At radius
    seven the discrepancy deficit `13-2m` changes sign, so a new potential must
@@ -849,7 +894,12 @@ The uniform theorem now has two explicit residuals:
    THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
    factors through the exact intrinsic radius budget
    `rho_(C,d)(E)+rho_d(R)<=2/169`.  Prove that every admissible core
-   violates that budget.  THM-831 has classified every other fold: repeat the
+   violates that budget. Under its exact signed-complement and guarded-
+   containment hypotheses, THM-836 reduces this fixed-ratio task to the shell
+   `2B-13d>=5`; its locally feasible shell-five owners show that the next step
+   must add another component, divisor, or satellite obligation. THM-831 has
+   classified the other fifteen viable folds in its coprime opposite-parity
+   reduced family: repeat the
    arithmetic exclusion on the other fifteen primitive rows in (C5), and for
    `alpha>=10` retain the weighted ordered centre-switch three-hypergraph
    rather than a nonexistent radius quotient.  Alternatively prove a
@@ -890,8 +940,11 @@ while THM-795/800/804/806 close the first three Hamming directions.  THM-810
 isolates the radius-four ramification and THM-815/816 close both of its
 branches.  THM-820 makes the scale-one radius-five warning finite and rejects
 its full height-one face; THM-822 rejects the full height-at-most-two slice and
-locates the static kernel boundary.  The two complete boxes and all-scale
-descent remain the shallow residual; THM-815 also makes scale-one radius six
+locates the static kernel boundary. THM-840 identifies the exact
+operation-congruence boundary, and THM-837 closes one of the 96 arbitrary-
+height order-three contexts by the resulting active-endpoint recursion. The
+two complete boxes, other 95 contexts, and all-scale descent remain the
+shallow residual; THM-815 also makes scale-one radius six
 recursively finite and loses its discrepancy deficit at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
@@ -928,10 +981,13 @@ deciding objects are therefore:
   prove that neither factor nor its coarse shadows can be ranked separately.
   THM-824 proves that after assembling the symmetric full return union, the
   same fixed-ratio conjunction factors through two extremal radii, while
-  while individual satellites and dynamic owner transport do not; THM-831
+  individual satellites and dynamic owner transport do not; THM-831
   proves that this primitive no-switch quotient exists exactly on sixteen
   reduced half-frequency types and replaces component tournaments outside
-  them by the weighted ordered centre-switch three-hypergraph;
+  them by the weighted ordered centre-switch three-hypergraph. THM-836's
+  fixed-ratio deduction instead needs two directional owner minima and their
+  mod-13 packing; its binary owner tournament loses the simultaneous
+  obligation that empties the first two shells;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
@@ -943,9 +999,13 @@ deciding objects are therefore:
   the owner-exit tournament supplies a finite reduction but loses integer
   centre and scale; THM-822 proves on the height-at-most-two bank that adding
   those centres still mixes exact `M`, whereas literal endpoint faces are
-  statically injective.  THM-823 shows that five-colour scalar attenuation has
+  statically injective. THM-840 proves the latter are Markov exactly for
+  monotone insertion, while `H0/H1` fail even there and endpoint words fail
+  under deletion without the labelled tooth bank. THM-823 shows that
+  five-colour scalar attenuation has
   infinite cones, while bounded common sheets retain only the forward flags
-  of a three-coset cycle with a parity fibre and unresolved metric strictness.
+  of a three-coset cycle with a parity fibre. THM-837 closes one of its 96
+  all-order-three metric contexts; the other 95 remain unresolved.
   The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict

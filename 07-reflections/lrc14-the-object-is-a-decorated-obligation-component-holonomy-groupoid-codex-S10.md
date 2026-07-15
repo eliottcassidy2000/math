@@ -1273,3 +1273,126 @@ coarse tournament and still weaker than a continuation theorem.  Static
 reconstruction, present evaluation, dynamic transport, and terminal
 continuation are four genuinely different quotients of the same decorated
 obligation complex.
+
+## 15. The missing structure is an operation-indexed congruence atlas
+
+THM-831, THM-836, THM-837, and THM-840 sharpen the groupoid language enough
+to replace one vague phrase—“retain enough information”—by a testable rule.
+For an observation `O` and an allowed arrow `T`, a deterministic acted state
+exists exactly when
+
+```text
+ker(O) subset ker(O after T).                              (44)
+```
+
+Thus there is no context-free “right object.”  There is an atlas of
+equivalence relations indexed by the arrows the proof still needs.  Expanding
+the allowed arrow set refines the required congruence:
+
+```text
+present predicate
+  < static reconstruction
+  < monotone-addition continuation
+  < deletion/replacement continuation
+  < gcd/sheet/continued-fraction transport.               (45)
+```
+
+The order in (45) is schematic, not always a chain; different arrows can
+produce incomparable congruences.  Equation (44), rather than the size or
+beauty of a codec, decides legality.
+
+THM-840 gives the exact shallow calibration.  The THM-822 rows with
+replacements `(14,...,18)` and `(27,...,31)` have the same `H0=H1`, but the
+common insertion `(label,speed)=(6,19)` creates different incident handoffs.
+So the live relation is not even forward-congruent.  Literal endpoint words
+do satisfy (44) for every monotone addition because
+
+```text
+E(S union {u})=E(S) intersect Safe(u).                    (46)
+```
+
+But the same endpoint word fails (44) for deletion.  The two thirteen-speed
+sets `[13]` and `{1,...,9,11,12,13,20}` both have empty strict `1/13`
+residual, while deleting their common speed `13` leaves respectively an empty
+residual and two open intervals.  They also have different exact maxima
+before deletion.  Endpoint geometry is therefore a sufficient forward state,
+not a provenance state.
+
+THM-837 is the positive computational realization of (46).  For one of
+THM-823's 96 all-order-three contexts, the state
+
+```text
+(active open endpoint runs, remaining labelled CRT progressions, last speed)
+```
+
+closes all heights in 75,371 nodes.  A global endpoint cell mask is not the
+same object: endpoints belonging to future, inactive combs make false
+component cuts and corrupt the discrepancy potential `K/L`.  Boundary
+activation is part of the state.  On all 57 terminals the raw and conditioned
+comb tournaments are transitive with identical standard fingerprints, while
+one through ten edges switch.  Pairwise order is useful telemetry but does not
+encode the acted residual.
+
+The deep side shows two different failures of binarity.  THM-831 proves that
+the target-component switch obstruction is the ordered weight
+
+```text
+omega(i|j,k)=||2c_i-c_j-c_k||-(2h_i+h_j+h_k),             (47)
+```
+
+not a component tournament.  Positive weights give the no-switch radius
+quotient exactly on the sixteen primitive folds `4<=alpha<=9`; the fixed
+triple `(-1|-3,+1)` obstructs every admissible `alpha>=10`.  THM-836 then
+works inside the `(13d,5d)` fold under the exact signed-complement residue and
+guarded-containment hypotheses, and needs two simultaneous directional minima.
+Its theorem carrier is
+
+```text
+left/right obligation x signed exit owner x mod-13 owner separation, (48)
+```
+
+which empties the shells `2B-13d=1,3` and gives `13d<=2B-5`.  Ordering owners
+by exit time makes a transitive tournament in either direction, but loses the
+fact that both directions must be served by two residue-separated owners in
+one short real interval.
+
+The n=9 Cech lane supplies an independent finite model of the same warning.
+THM-828/832 find a constant rank-four overlap core behind 58 nonlinear
+reflection doubletons, with no positive Cech cohomology.  Static gluing is
+therefore clean.  THM-830 makes the tournament carrier literal: a fixed-path
+tiling is a tournament on its path gaps.  Yet deleting an internal path vertex
+requires both the repaired card and the newly adjacent shortcut seam bit; the
+gap tournament splits into the lower B face plus an entire seam word.  This is
+the tournament analogue of THM-840's deletion failure: the present coordinate
+does not carry its own deletion ancestry.  THM-838 transports the literal
+rank-four core injectively to the next size, exposes only two dimensions to
+raw S2, and reverses the static chirality repair on eight sector-dependent
+pairs.  THM-839 then resolves all four missing sectors as proof obligations
+rather than absent quotient nodes: one has empty A/C face support, while the
+other three have one-layer local parity killers.  Reflection symmetry is
+necessary but raw S2 balance remains transverse, selecting only 58 of 388
+endpoint-swap-fixed bases.  The repair is consequently an acted skew fibre
+over the address, not a free bit.  The rolewise continuation-purity audit in
+`THM-841-n9-defect-b3-continuation-purity.md` is reserved, not proved.  At this
+pull its numeric ID collides with an unrelated proved violation-ladder file,
+so no bare `THM-841` citation is used here.  None of this transfers an LRC
+predicate; it identifies the categorical pattern that an LRC codec must meet
+before such a transfer is credible.
+
+The best current description of the n=12 object is therefore a fibre product
+of four carriers:
+
+```text
+metric present:     exact residual components / signed sum arcs;
+future operations:  remaining labelled comb or satellite obligations;
+transport ancestry: endpoint owners, gcd sheets, Bezout rows;
+target switching:   ordered weighted component triples.                  (49)
+```
+
+Controlled forgetting is legal only after naming the arrow and checking
+(44).  This reframes the remaining proof search.  The other 95 order-three
+contexts ask for forward minimization of (49); the shell-five deep branch asks
+for one more obligation to join (48); and a global descent asks for a common
+congruence of addition, deletion, and sheet transport.  A universal runner
+tournament is not missing.  What is missing is the smallest operation-closed
+fibre product for the particular descent we choose.
