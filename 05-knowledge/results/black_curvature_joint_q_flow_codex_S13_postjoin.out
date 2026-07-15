@@ -1,0 +1,70 @@
+N=8 JOINT SOURCE-q / TARGET-q BLACK BOUNDARY FLOW
+==============================================================================
+black lines=1046528 non-tied outward/reverse=16118/24370 tied=12584
+self-converse classifier score-candidates/SC/states=744678/58712/4101417
+
+RAW MATRICES (rows=source q, columns=target q)
+O mixed->pure
+  q0: 1160 2826 1310 0 0 0 0
+  q1: 0 1600 2874 692 0 0 0
+  q2: 0 0 1002 324 0 0 0
+  q3: 0 704 940 176 0 0 0
+  q4: 0 0 1382 756 20 0 0
+  q5: 0 0 0 168 12 0 0
+  q6: 0 0 0 0 172 0 0
+R pure->mixed
+  q0: 2044 4442 2134 0 0 0 0
+  q1: 0 2784 5226 1076 0 0 0
+  q2: 0 0 932 424 0 0 0
+  q3: 0 784 1448 264 0 0 0
+  q4: 0 0 1542 848 32 0 0
+  q5: 0 0 0 316 52 0 0
+  q6: 0 0 0 0 22 0 0
+
+SOURCE MARGINAL (THM-814 replay)
+  q=0 O/M=5296/8282=2648/4141 R/P=8620/404710=862/40471
+  q=1 O/M=5166/16240=369/1160 R/P=9086/702608=4543/351304
+  q=2 O/M=1326/19160=663/9580 R/P=1356/559720=339/139930
+  q=3 O/M=1820/7844=455/1961 R/P=2496/274780=624/68695
+  q=4 O/M=2158/2734=1079/1367 R/P=2422/81682=1211/40841
+  q=5 O/M=180/180=1/1 R/P=368/14156=92/3539
+  q=6 O/M=172/176=43/44 R/P=22/784=11/392
+
+TARGET MARGINAL
+  q=0 O/P=1160/404710=116/40471 R/M=2044/8282=1022/4141 comparison=reverse
+  q=1 O/P=5130/702608=2565/351304 R/M=8010/16240=801/1624 comparison=reverse
+  q=2 O/P=7508/559720=1877/139930 R/M=11282/19160=5641/9580 comparison=reverse
+  q=3 O/P=2116/274780=529/68695 R/M=2928/7844=732/1961 comparison=reverse
+  q=4 O/P=204/81682=102/40841 R/M=106/2734=53/1367 comparison=reverse
+  q=5 O/P=0/14156=0/1 R/M=0/180=0/1 comparison=tie
+  q=6 O/P=0/784=0/1 R/M=0/176=0/1 comparison=tie
+  strict outward target strata=0/7
+
+NONZERO JOINT CELLS WITH BOTH CONDITIONINGS
+  0->0 O=1160 R=2044 source(O/M,R/P)=(580/4141,1022/202355) target(O/P,R/M)=(116/40471,1022/4141)
+  0->1 O=2826 R=4442 source(O/M,R/P)=(1413/4141,2221/202355) target(O/P,R/M)=(1413/351304,2221/8120)
+  0->2 O=1310 R=2134 source(O/M,R/P)=(655/4141,1067/202355) target(O/P,R/M)=(131/55972,1067/9580)
+  1->1 O=1600 R=2784 source(O/M,R/P)=(20/203,174/43913) target(O/P,R/M)=(100/43913,6/35)
+  1->2 O=2874 R=5226 source(O/M,R/P)=(1437/8120,2613/351304) target(O/P,R/M)=(1437/279860,2613/9580)
+  1->3 O=692 R=1076 source(O/M,R/P)=(173/4060,269/175652) target(O/P,R/M)=(173/68695,269/1961)
+  2->2 O=1002 R=932 source(O/M,R/P)=(501/9580,233/139930) target(O/P,R/M)=(501/279860,233/4790)
+  2->3 O=324 R=424 source(O/M,R/P)=(81/4790,53/69965) target(O/P,R/M)=(81/68695,2/37)
+  3->1 O=704 R=784 source(O/M,R/P)=(176/1961,196/68695) target(O/P,R/M)=(44/43913,7/145)
+  3->2 O=940 R=1448 source(O/M,R/P)=(235/1961,362/68695) target(O/P,R/M)=(47/27986,181/2395)
+  3->3 O=176 R=264 source(O/M,R/P)=(44/1961,6/6245) target(O/P,R/M)=(4/6245,66/1961)
+  4->2 O=1382 R=1542 source(O/M,R/P)=(691/1367,771/40841) target(O/P,R/M)=(691/279860,771/9580)
+  4->3 O=756 R=848 source(O/M,R/P)=(378/1367,424/40841) target(O/P,R/M)=(189/68695,4/37)
+  4->4 O=20 R=32 source(O/M,R/P)=(10/1367,16/40841) target(O/P,R/M)=(10/40841,16/1367)
+  5->3 O=168 R=316 source(O/M,R/P)=(14/15,79/3539) target(O/P,R/M)=(42/68695,79/1961)
+  5->4 O=12 R=52 source(O/M,R/P)=(1/15,13/3539) target(O/P,R/M)=(6/40841,26/1367)
+  6->4 O=172 R=22 source(O/M,R/P)=(43/44,11/392) target(O/P,R/M)=(86/40841,11/1367)
+  common support cells=17 source-strict=17 target-reverse=17; every |target q-source q|<=2
+
+TOURNAMENT ANALYSIS (q strata as vertices)
+  observable=conditional outward-minus-reverse marginal
+  switches=source conditioning / target conditioning; tie path=q0<...<q6; flips=1
+  source scores={0:1,1:1,2:1,3:1,4:1,5:1,6:1} C3=0 SCC=(1,1,1,1,1,1,1) Hpaths=1
+  target scores={0:1,1:1,2:1,3:1,4:1,5:1,6:1} C3=0 SCC=(1,1,1,1,1,1,1) Hpaths=1
+
+Preservation: marked endpoint q, category, C3 direction, literal multiplicity.
+Destroyed: node identity, layer position, owner/metric/LRC predicate, continuation.

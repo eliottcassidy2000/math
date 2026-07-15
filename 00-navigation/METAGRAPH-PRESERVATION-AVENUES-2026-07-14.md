@@ -627,6 +627,20 @@ certificate clauses, and proof obligations.
   pull is now an orbit-stabilizer formula for the denominators, followed by
   target-`q` and joint `(source q,target q)` disintegration—not another
   scalar curvature refinement.
+- **Joint endpoint conditioning decided by THM-827:** the outward and reverse
+  matrices have identical 17-cell `(source q,target q)` support, contained in
+  `|Delta q|<=2`.  Every active cell obeys the exact odds sandwich
+  `M_i/P_i < O_ij/R_ij < P_j/M_j`: it is strictly outward after conditioning
+  on its source fibre and strictly reverse after conditioning on its target
+  fibre.  Hence the source marginals are outward in all seven q strata, while
+  the target marginals are reverse for every active target `q=0,...,4` and
+  tie at `5,6` only because no cross-category edge enters them.  The black
+  flow coordinate is therefore the marked incidence
+  `(source category,q; target category,q; C3 direction; endpoint measure)`,
+  not a scalar q with an endpoint-free drift.  The next exact pull is to
+  disintegrate these 17 cells by endpoint-node orbit/stabilizer and
+  `(abs(epsilon),lambda)` to explain the odds sandwich rather than merely
+  census it.
 - **Must preserve:** apex orientation, raw-bit convention, both line endpoints,
   literal multiplicity, and reflection pairing.  Signed epsilon alone cannot
   explain quotient drift.
