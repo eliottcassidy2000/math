@@ -5,8 +5,12 @@ k= 4: ladder m_r (r<=4) exact on 4 lambdas: True
 k= 6: ladder m_r (r<=4) exact on 4 lambdas: True
 k= 8: ladder m_r (r<=4) exact on 4 lambdas: True
 k=10: ladder m_r (r<=4) exact on 4 lambdas: True
-k= 6 lam=1/8: S_rho (rho<=3) direct==gap: True  (S_1=3/2 S_2=277/240)
-k=10 lam=1/12: S_rho (rho<=3) direct==gap: True  (S_1=5/3 S_2=745/432)
+k= 4: rho-general max-multiplier formula exact for rho<=k on 16 cases: True
+k= 6: rho-general max-multiplier formula exact for rho<=k on 24 cases: True
+k= 8: rho-general max-multiplier formula exact for rho<=k on 32 cases: True
+k=10: rho-general max-multiplier formula exact for rho<=k on 40 cases: True
+k= 6 lam=1/8: (S_1,S_2,S_3,S_4)=('3/2', '277/240', '247/240', '163/240')
+k=10 lam=1/12: (S_1,S_2,S_3,S_4)=('5/3', '745/432', '2351/840', '31621/7560')
 (A) VERDICT: ALL EXACT
 
 ================================================================================================

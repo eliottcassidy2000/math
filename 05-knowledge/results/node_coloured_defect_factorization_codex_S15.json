@@ -1,0 +1,685 @@
+{
+  "inputs": {
+    "05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.json": "01e62b1869c32e1302b593093733326c30d50e58940bf7aa37edb86fafa619d0",
+    "05-knowledge/results/tournament_tiling_metagraph_address_n7_codex_S4.json": "da0a354d35070a77096e0cb2a44484b8d06a7f419d4953d88b6f5ca6a6a0b922"
+  },
+  "preservation": {
+    "challenged_assumption": "the useful vertices are not runners or tournament vertices: they are coloured groupoid arrows and factorization obligations",
+    "destroys": [
+      "runner speeds",
+      "metric scale",
+      "LRC gaps",
+      "owners",
+      "wall chronology",
+      "continued-fraction carry",
+      "loneliness predicate"
+    ],
+    "preserves": [
+      "fixed-path tiling",
+      "full reflection defect",
+      "merged tournament node",
+      "two-arrow factorization multiplicity",
+      "grid reflection",
+      "complement line incidence",
+      "blue/black line colour"
+    ]
+  },
+  "schema_version": 1,
+  "sizes": [
+    {
+      "arrows_tilings": 2,
+      "base_cells_node_plus_exact_defect": 2,
+      "base_cells_split_by_ordered_factorization": 0,
+      "base_cells_split_by_symmetric_factorization": 0,
+      "base_reflection_orbit_fibre_profile": {
+        "1": 2
+      },
+      "blue_lines": 1,
+      "complement_lines": 1,
+      "defect_rank": 0,
+      "first_unlabelled_factor_collision": null,
+      "fixed_trace_bits": 1,
+      "line_keys_from_symmetric_factor_colour": 1,
+      "line_reflection_orbits_burnside": 1,
+      "n": 3,
+      "objects": 2,
+      "ordered_endpoint_node_cells": 2,
+      "ordered_one_step_cells": 2,
+      "ordered_one_step_is_discrete": true,
+      "ordered_witness": null,
+      "reflection_orbit_tilings": 2,
+      "symmetric_endpoint_node_cells": 2,
+      "symmetric_one_step_cells": 2,
+      "symmetric_one_step_is_exactly_reflection_orbits": true,
+      "symmetric_witness": null,
+      "tile_count": 1,
+      "unlabelled_ordered_factor_cells": 2,
+      "unlabelled_symmetric_factor_cells": 2,
+      "unlabelled_symmetric_residual_reflection_orbits": 0
+    },
+    {
+      "arrows_tilings": 8,
+      "base_cells_node_plus_exact_defect": 4,
+      "base_cells_split_by_ordered_factorization": 2,
+      "base_cells_split_by_symmetric_factorization": 1,
+      "base_reflection_orbit_fibre_profile": {
+        "1": 3,
+        "3": 1
+      },
+      "blue_lines": 2,
+      "complement_lines": 4,
+      "defect_rank": 1,
+      "first_unlabelled_factor_collision": null,
+      "fixed_trace_bits": 1,
+      "line_keys_from_symmetric_factor_colour": 3,
+      "line_reflection_orbits_burnside": 3,
+      "n": 4,
+      "objects": 4,
+      "ordered_endpoint_node_cells": 5,
+      "ordered_one_step_cells": 6,
+      "ordered_one_step_is_discrete": false,
+      "ordered_witness": {
+        "left": {
+          "bit_word": "010",
+          "defect": 1,
+          "defect_word": "1",
+          "mask": 2,
+          "node": 2,
+          "object": 2,
+          "selected_tiles": [
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        "left_multiplicity": 0,
+        "right": {
+          "bit_word": "100",
+          "defect": 1,
+          "defect_word": "1",
+          "mask": 4,
+          "node": 2,
+          "object": 0,
+          "selected_tiles": [
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 1,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 1,
+            "node": 2
+          }
+        ]
+      },
+      "reflection_orbit_tilings": 6,
+      "symmetric_endpoint_node_cells": 4,
+      "symmetric_one_step_cells": 5,
+      "symmetric_one_step_is_exactly_reflection_orbits": false,
+      "symmetric_witness": {
+        "left": {
+          "bit_word": "001",
+          "defect": 0,
+          "defect_word": "0",
+          "mask": 1,
+          "node": 1,
+          "object": 1,
+          "selected_tiles": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "left_multiplicity": 1,
+        "right": {
+          "bit_word": "110",
+          "defect": 0,
+          "defect_word": "0",
+          "mask": 6,
+          "node": 1,
+          "object": 2,
+          "selected_tiles": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 0,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 1,
+            "node": 1
+          },
+          {
+            "defect": 1,
+            "node": 1
+          }
+        ]
+      },
+      "tile_count": 3,
+      "unlabelled_ordered_factor_cells": 6,
+      "unlabelled_symmetric_factor_cells": 5,
+      "unlabelled_symmetric_residual_reflection_orbits": 1
+    },
+    {
+      "arrows_tilings": 64,
+      "base_cells_node_plus_exact_defect": 23,
+      "base_cells_split_by_ordered_factorization": 19,
+      "base_cells_split_by_symmetric_factorization": 12,
+      "base_reflection_orbit_fibre_profile": {
+        "1": 11,
+        "2": 7,
+        "3": 5
+      },
+      "blue_lines": 8,
+      "complement_lines": 32,
+      "defect_rank": 2,
+      "first_unlabelled_factor_collision": {
+        "defect": 0,
+        "left_mask": 52,
+        "left_object": 10,
+        "right_mask": 62,
+        "right_object": 14
+      },
+      "fixed_trace_bits": 2,
+      "line_keys_from_symmetric_factor_colour": 20,
+      "line_reflection_orbits_burnside": 20,
+      "n": 5,
+      "objects": 16,
+      "ordered_endpoint_node_cells": 48,
+      "ordered_one_step_cells": 64,
+      "ordered_one_step_is_discrete": true,
+      "ordered_witness": {
+        "left": {
+          "bit_word": "000010",
+          "defect": 1,
+          "defect_word": "01",
+          "mask": 2,
+          "node": 3,
+          "object": 4,
+          "selected_tiles": [
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "left_multiplicity": 0,
+        "right": {
+          "bit_word": "001000",
+          "defect": 1,
+          "defect_word": "01",
+          "mask": 8,
+          "node": 3,
+          "object": 0,
+          "selected_tiles": [
+            [
+              5,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 1,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 1,
+            "node": 3
+          }
+        ]
+      },
+      "reflection_orbit_tilings": 40,
+      "symmetric_endpoint_node_cells": 29,
+      "symmetric_one_step_cells": 40,
+      "symmetric_one_step_is_exactly_reflection_orbits": true,
+      "symmetric_witness": {
+        "left": {
+          "bit_word": "001000",
+          "defect": 1,
+          "defect_word": "01",
+          "mask": 8,
+          "node": 3,
+          "object": 0,
+          "selected_tiles": [
+            [
+              5,
+              2
+            ]
+          ]
+        },
+        "left_multiplicity": 1,
+        "right": {
+          "bit_word": "011000",
+          "defect": 1,
+          "defect_word": "01",
+          "mask": 24,
+          "node": 3,
+          "object": 2,
+          "selected_tiles": [
+            [
+              5,
+              2
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 0,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 1,
+            "node": 3
+          }
+        ]
+      },
+      "tile_count": 6,
+      "unlabelled_ordered_factor_cells": 62,
+      "unlabelled_symmetric_factor_cells": 39,
+      "unlabelled_symmetric_residual_reflection_orbits": 1
+    },
+    {
+      "arrows_tilings": 1024,
+      "base_cells_node_plus_exact_defect": 255,
+      "base_cells_split_by_ordered_factorization": 253,
+      "base_cells_split_by_symmetric_factorization": 135,
+      "base_reflection_orbit_fibre_profile": {
+        "1": 120,
+        "2": 72,
+        "3": 26,
+        "4": 14,
+        "5": 8,
+        "6": 5,
+        "7": 6,
+        "8": 2,
+        "9": 2
+      },
+      "blue_lines": 32,
+      "complement_lines": 512,
+      "defect_rank": 4,
+      "first_unlabelled_factor_collision": {
+        "defect": 0,
+        "left_mask": 32,
+        "left_object": 2,
+        "right_mask": 352,
+        "right_object": 34
+      },
+      "fixed_trace_bits": 2,
+      "line_keys_from_symmetric_factor_colour": 272,
+      "line_reflection_orbits_burnside": 272,
+      "n": 6,
+      "objects": 64,
+      "ordered_endpoint_node_cells": 761,
+      "ordered_one_step_cells": 1024,
+      "ordered_one_step_is_discrete": true,
+      "ordered_witness": {
+        "left": {
+          "bit_word": "0000000010",
+          "defect": 1,
+          "defect_word": "0001",
+          "mask": 2,
+          "node": 3,
+          "object": 4,
+          "selected_tiles": [
+            [
+              5,
+              1
+            ]
+          ]
+        },
+        "left_multiplicity": 0,
+        "right": {
+          "bit_word": "0000010000",
+          "defect": 1,
+          "defect_word": "0001",
+          "mask": 16,
+          "node": 3,
+          "object": 0,
+          "selected_tiles": [
+            [
+              6,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 1,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 1,
+            "node": 3
+          }
+        ]
+      },
+      "reflection_orbit_tilings": 544,
+      "symmetric_endpoint_node_cells": 401,
+      "symmetric_one_step_cells": 544,
+      "symmetric_one_step_is_exactly_reflection_orbits": true,
+      "symmetric_witness": {
+        "left": {
+          "bit_word": "0100000110",
+          "defect": 11,
+          "defect_word": "1011",
+          "mask": 262,
+          "node": 13,
+          "object": 12,
+          "selected_tiles": [
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        "left_multiplicity": 0,
+        "right": {
+          "bit_word": "0110010000",
+          "defect": 11,
+          "defect_word": "1011",
+          "mask": 400,
+          "node": 13,
+          "object": 0,
+          "selected_tiles": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        "right_multiplicity": 1,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 11,
+            "node": 13
+          }
+        ]
+      },
+      "tile_count": 10,
+      "unlabelled_ordered_factor_cells": 1022,
+      "unlabelled_symmetric_factor_cells": 543,
+      "unlabelled_symmetric_residual_reflection_orbits": 1
+    },
+    {
+      "arrows_tilings": 32768,
+      "base_cells_node_plus_exact_defect": 7926,
+      "base_cells_split_by_ordered_factorization": 7916,
+      "base_cells_split_by_symmetric_factorization": 4491,
+      "base_reflection_orbit_fibre_profile": {
+        "1": 3435,
+        "2": 2333,
+        "3": 1094,
+        "4": 573,
+        "5": 231,
+        "6": 112,
+        "7": 93,
+        "8": 17,
+        "9": 32,
+        "10": 3,
+        "11": 3
+      },
+      "blue_lines": 256,
+      "complement_lines": 16384,
+      "defect_rank": 6,
+      "first_unlabelled_factor_collision": {
+        "defect": 0,
+        "left_mask": 10496,
+        "left_object": 260,
+        "right_mask": 11648,
+        "right_object": 388
+      },
+      "fixed_trace_bits": 3,
+      "line_keys_from_symmetric_factor_colour": 8320,
+      "line_reflection_orbits_burnside": 8320,
+      "n": 7,
+      "objects": 512,
+      "ordered_endpoint_node_cells": 28882,
+      "ordered_one_step_cells": 32768,
+      "ordered_one_step_is_discrete": true,
+      "ordered_witness": {
+        "left": {
+          "bit_word": "000000000000010",
+          "defect": 1,
+          "defect_word": "000001",
+          "mask": 2,
+          "node": 4,
+          "object": 8,
+          "selected_tiles": [
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        "left_multiplicity": 0,
+        "right": {
+          "bit_word": "000000000100000",
+          "defect": 1,
+          "defect_word": "000001",
+          "mask": 32,
+          "node": 4,
+          "object": 0,
+          "selected_tiles": [
+            [
+              7,
+              2
+            ]
+          ]
+        },
+        "right_multiplicity": 1,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 1,
+            "node": 4
+          }
+        ]
+      },
+      "reflection_orbit_tilings": 16640,
+      "symmetric_endpoint_node_cells": 14562,
+      "symmetric_one_step_cells": 16640,
+      "symmetric_one_step_is_exactly_reflection_orbits": true,
+      "symmetric_witness": {
+        "left": {
+          "bit_word": "000010000000000",
+          "defect": 16,
+          "defect_word": "010000",
+          "mask": 1024,
+          "node": 6,
+          "object": 0,
+          "selected_tiles": [
+            [
+              6,
+              3
+            ]
+          ]
+        },
+        "left_multiplicity": 1,
+        "right": {
+          "bit_word": "000110000000000",
+          "defect": 16,
+          "defect_word": "010000",
+          "mask": 3072,
+          "node": 6,
+          "object": 4,
+          "selected_tiles": [
+            [
+              6,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        },
+        "right_multiplicity": 0,
+        "separating_factor_colour_pair": [
+          {
+            "defect": 0,
+            "node": 0
+          },
+          {
+            "defect": 16,
+            "node": 6
+          }
+        ]
+      },
+      "tile_count": 15,
+      "unlabelled_ordered_factor_cells": 32688,
+      "unlabelled_symmetric_factor_cells": 16604,
+      "unlabelled_symmetric_residual_reflection_orbits": 36
+    }
+  ],
+  "theorem": "THM-851",
+  "tournament_analysis_n7": {
+    "cells": {
+      "blue/black": 2,
+      "merged node": 272,
+      "node + defect + endpoints": 14562,
+      "node + defect weight": 1448,
+      "node + exact defect": 7926,
+      "ordered factor colour": 32768,
+      "symmetric factor colour": 16640,
+      "unlabelled midpoint-node deck": 16604
+    },
+    "edge_flips_between_gauges": 18,
+    "pairwise_observable": "number of unordered arrow pairs separated",
+    "raw_retention": {
+      "directed_3cycles": 0,
+      "hamiltonian_path_count": 1,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_histogram": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "tie_hamiltonian_path": [
+        "ordered factor colour",
+        "symmetric factor colour",
+        "unlabelled midpoint-node deck",
+        "node + defect + endpoints",
+        "node + exact defect",
+        "node + defect weight",
+        "merged node",
+        "blue/black"
+      ]
+    },
+    "retention_per_address_bit": {
+      "directed_3cycles": 0,
+      "hamiltonian_path_count": 1,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_histogram": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "tie_hamiltonian_path": [
+        "merged node",
+        "node + defect weight",
+        "node + exact defect",
+        "node + defect + endpoints",
+        "ordered factor colour",
+        "symmetric factor colour",
+        "unlabelled midpoint-node deck",
+        "blue/black"
+      ]
+    },
+    "separated_pairs": {
+      "blue/black": 16515072,
+      "merged node": 534097292,
+      "node + defect + endpoints": 536829184,
+      "node + defect weight": 536174920,
+      "node + exact defect": 536775252,
+      "ordered factor colour": 536854528,
+      "symmetric factor colour": 536838400,
+      "unlabelled midpoint-node deck": 536838280
+    },
+    "switch": "retention divided by ceiling(log2(number of cells))",
+    "tie_rule": "carrier name",
+    "vertices": [
+      "blue/black",
+      "merged node",
+      "node + defect weight",
+      "node + exact defect",
+      "node + defect + endpoints",
+      "unlabelled midpoint-node deck",
+      "symmetric factor colour",
+      "ordered factor colour"
+    ]
+  }
+}

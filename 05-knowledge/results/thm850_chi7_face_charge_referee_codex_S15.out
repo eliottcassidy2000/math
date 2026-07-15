@@ -1,0 +1,53 @@
+THM-850 exact chi-seven face-charge referee
+========================================================================
+
+A. Exact B3 sign convention
+mask=1 subset=A   charge=1 chi7=+1 augmented=+1 mobius=+1
+mask=2 subset=B   charge=2 chi7=+1 augmented=+1 mobius=+1
+mask=3 subset=AB  charge=3 chi7=-1 augmented=-1 mobius=-1
+mask=4 subset=C   charge=4 chi7=+1 augmented=+1 mobius=+1
+mask=5 subset=AC  charge=5 chi7=-1 augmented=-1 mobius=-1
+mask=6 subset=BC  charge=6 chi7=-1 augmented=-1 mobius=-1
+mask=7 subset=ABC charge=0 chi7=+0 augmented=+1 mobius=+1
+mask-order sign word=++-+--+
+
+B. Cyclotomic recurrence and seven-periodicity
+F_r for r mod 7 = [1, eta, -1, eta_bar, 1, 0, 0]
+exact recurrence and period checked through r=140
+
+C. Address charge census
+ n   r    M     c(0)   per-QR   per-NQR   vector q=0..6
+ 3   0    1        1        0          0   [1, 0, 0, 0, 0, 0, 0]
+ 4   1    3        0        1          0   [0, 1, 1, 0, 1, 0, 0]
+ 5   2    6        0        1          1   [0, 1, 1, 1, 1, 1, 1]
+ 6   3   10        1        1          2   [1, 1, 1, 2, 1, 2, 2]
+ 7   4   15        3        2          2   [3, 2, 2, 2, 2, 2, 2]
+ 8   5   21        3        3          3   [3, 3, 3, 3, 3, 3, 3]
+ 9   6   28        4        4          4   [4, 4, 4, 4, 4, 4, 4]
+10   7   36        6        5          5   [6, 5, 5, 5, 5, 5, 5]
+11   8   45        6        7          6   [6, 7, 7, 6, 7, 6, 6]
+12   9   55        7        8          8   [7, 8, 8, 8, 8, 8, 8]
+13  10   66        9        9         10   [9, 9, 9, 10, 9, 10, 10]
+14  11   78       12       11         11   [12, 11, 11, 11, 11, 11, 11]
+15  12   91       13       13         13   [13, 13, 13, 13, 13, 13, 13]
+16  13  105       15       15         15   [15, 15, 15, 15, 15, 15, 15]
+17  14  120       18       17         17   [18, 17, 17, 17, 17, 17, 17]
+18  15  136       19       20         19   [19, 20, 20, 19, 20, 19, 19]
+19  16  153       21       22         22   [21, 22, 22, 22, 22, 22, 22]
+20  17  171       24       24         25   [24, 24, 24, 25, 24, 25, 25]
+21  18  190       28       27         27   [28, 27, 27, 27, 27, 27, 27]
+formula checked exactly through r=399 (80,200 addresses on the last row)
+
+D. First repeated-role neutral layer
+depth=3 neutral (A,B,C) exponent triples=[(1, 1, 1)]
+depth=4 neutral (A,B,C) exponent triples=[(0, 1, 3), (1, 3, 0), (3, 0, 1)]
+
+E. Fixed-depth operation-plane fibre
+kernel direction in alpha+beta+gamma=constant is (2,4,1) mod 7
+the charge records one parallel-line pencil, not all Kakeya directions
+
+F. Tournament Analysis on the seven B3 strata
+score_hist={3: 7}, directed_3cycles=14, SCC_sizes=[7], Hamiltonian_paths=189
+tie path=0->1->2->3->4->5->6 (no ties occur)
+
+VERDICT: ALL EXACT

@@ -124,12 +124,64 @@ def Srho_gap(k, lam, rho):
             tot += comb(W, rho) * (b - a)
     return tot
 
+def Srho_max_multiplier(k, lam, rho):
+    """Closed THM-841 formula, independent of the cut-by-cut gap integration.
+
+    For a same-end subset of nested violation intervals, only its largest
+    multiplier matters.  There are C(M-1,a-1) a-subsets with maximum M.
+    """
+    fr = farey(k)
+    tot = F(0)
+    for x, y in zip(fr, fr[1:] + [F(1)]):
+        i = x.denominator; j = (y.denominator if y != 1 else 1)
+        g = y - x
+        Ki = k // i; Kj = k // j
+        for a in range(rho + 1):
+            b = rho - a
+            # Empty selection imposes the whole gap.  Otherwise record
+            # (multiplicity, prefix/suffix extent) by maximal multiplier.
+            left = [(1, g)] if a == 0 else [
+                (comb(M - 1, a - 1), lam / (i * M))
+                for M in range(a, Ki + 1)
+            ]
+            right = [(1, g)] if b == 0 else [
+                (comb(N - 1, b - 1), lam / (j * N))
+                for N in range(b, Kj + 1)
+            ]
+            if a:
+                assert all(L < g for _, L in left)
+            if b:
+                assert all(R < g for _, R in right)
+            for wl, L in left:
+                for wr, R in right:
+                    tot += wl * wr * max(F(0), L + R - g)
+    return tot
+
+for k in [4, 6, 8, 10]:
+    lams = [F(1, k + 2), F(1, 2 * k), F(1, 3 * k), F(2, 3 * (k + 1))]
+    checked = 0
+    ok = True
+    for lam in lams:
+        if lam >= F(1, k + 1):
+            continue
+        for rho in range(1, k + 1):
+            direct = Srho_direct(k, lam, rho)
+            cut_gap = Srho_gap(k, lam, rho)
+            max_formula = Srho_max_multiplier(k, lam, rho)
+            if direct != cut_gap or direct != max_formula:
+                ok = False
+                print("  S_rho MISMATCH k=%d lam=%s rho=%d: direct=%s cut=%s max=%s"
+                      % (k, lam, rho, direct, cut_gap, max_formula))
+            checked += 1
+    print("k=%2d: rho-general max-multiplier formula exact for rho<=k on %d cases: %s"
+          % (k, checked, ok))
+    allA &= ok
+
 for k in [6, 10]:
     lam = F(1, k + 2)
-    ok = all(Srho_direct(k, lam, rho) == Srho_gap(k, lam, rho) for rho in [1, 2, 3])
-    print("k=%2d lam=1/%d: S_rho (rho<=3) direct==gap: %s  (S_1=%s S_2=%s)"
-          % (k, k + 2, ok, Srho_gap(k, lam, 1), Srho_gap(k, lam, 2)))
-    allA &= ok
+    values = [Srho_max_multiplier(k, lam, rho) for rho in [1, 2, 3, 4]]
+    print("k=%2d lam=1/%d: (S_1,S_2,S_3,S_4)=%s"
+          % (k, k + 2, tuple(map(str, values))))
 print("(A) VERDICT: %s" % ("ALL EXACT" if allA else "FAILURES"))
 
 # ---------- (B) OU on the H axis ----------

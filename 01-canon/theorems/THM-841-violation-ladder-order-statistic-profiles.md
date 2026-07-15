@@ -1,7 +1,7 @@
 ---
 id: THM-841
-title: THE VIOLATION LADDER (the Benjamini–Hochberg lens on interval cores) — for λ < 1/(k+1) the FULL ORDER-STATISTIC structure of the danger indicators is exactly computable on Farey gaps. Let W(t) = #{j ≤ k : ‖jt‖ < λ} (the violation count = the density route's arc-occupancy variable). Then W is supported on the Farey-gap ends: inside the gap (a/i, b/j) of F_k, a point at distance s from a/i violates EXACTLY the multiples mi ≤ k with s < λ/(mi) (a divisor chain; nothing else — no third-fraction intrusion below 1/(k+1)), and symmetrically from b/j. Hence every ladder measure m_r(λ) = |{t : W(t) < r}| is an explicit piecewise-linear sum over gaps with breakpoints on the divisor-refined grid {λ : λ = (1/(ij))·(i j)/(m i + m' j)-type collisions} — and the density route's factorial moments S_ρ = E[C(W,ρ)] (LEM-006's exact inputs) are CLOSED-FORM rationals on interval cores: S_ρ(λ) = Σ_gaps Σ-over-divisor-chain-pairs of explicit interval lengths. r = 1 recovers THM-826 (m_1 = the Farey profile); the OU/BH synthesis: the violation process along t is a two-sided divisor-chain birth process on each gap
-status: PROVED (support lemma = two-line corollary of THM-826 Lemmas 1-2) + REFEREED (m_r for r ≤ 4 and S_ρ for ρ ≤ 3 exact vs direct at k ≤ 10 over rational λ grids, zero mismatches; e.g. S_1 = 3/2, S_2 = 277/240 at k=6, λ=1/8). Original claim text: the support lemma (violations ⊆ the two end-fractions' divisor chains, λ < 1/(k+1)) is a two-line corollary of THM-826's Lemmas 1-2; m_r and S_ρ formulas refereed exactly for r ≤ 4, ρ ≤ 3, k ≤ 10 on a rational λ grid (script); the general-λ breakpoint taxonomy stated, full write-up of the S_ρ closed form deferred to the referee output tables
+title: THE VIOLATION LADDER (the Benjamini–Hochberg lens on interval cores) — for λ < 1/(k+1) the FULL ORDER-STATISTIC structure of the danger indicators is exactly computable on Farey gaps. Let W(t) = #{j ≤ k : ‖jt‖ < λ} (the violation count = the density route's arc-occupancy variable). Then W is supported on the Farey-gap ends: inside the gap (a/i, b/j) of F_k, a point at distance s from a/i violates EXACTLY the multiples mi ≤ k with s < λ/(mi) (a divisor chain; nothing else — no third-fraction intrusion below 1/(k+1)), and symmetrically from b/j. Hence every ladder measure m_r(λ) = |{t : W(t) < r}| is an explicit piecewise-linear sum over gaps with breakpoints on the divisor-refined collision grid {λ = mm'/(m'j+mi)} — and the density route's factorial moments S_ρ = E[C(W,ρ)] (LEM-006's exact inputs) have the all-ρ maximal-multiplier formula below. r = 1 recovers THM-826 (m_1 = the Farey profile); the OU/BH synthesis: the violation process along t is a two-sided divisor-chain birth process on each gap
+status: PROVED (support lemma = two-line corollary of THM-826 Lemmas 1-2; the all-rho maximal-multiplier formula below closes the formerly deferred factorial-moment form) + REFEREED (m_r for r ≤ 4 and S_ρ for every 1 ≤ ρ ≤ k exact against both direct arc sweeps and independent cut-by-cut gap integration at k ∈ {4,6,8,10} over rational λ grids, zero mismatches; e.g. S_1 = 3/2, S_2 = 277/240, S_3 = 247/240, S_4 = 163/240 at k=6, λ=1/8)
 source: kind-pasteur-2026-07-15-S128 (cont.12; owner: BH/dobriban + LEM-006 merge; comprehensive-by-formula mandate)
 depends_on:
   - THM-826   # the r=1 rung + the two lemmas whose corollary is the support statement
@@ -24,7 +24,51 @@ AT a/i are the imprimitive copies — the divisor chain.) So W(t) = #{m : mi ≤
 **Ladder measures.** |{t ∈ gap : W ≥ r}| is a sum of explicit interval lengths cut by the thresholds
 λ/(mi), λ/(m'j); each m_r(λ) is piecewise linear with breakpoints where thresholds collide with each
 other or the gap length. m_1 = THM-826. The factorial moments S_ρ(λ) = ∫ C(W,ρ) dt are rational
-polynomials in λ per segment — LEM-006's density-route inputs, exact on interval cores.
+piecewise-linear functions of λ — LEM-006's density-route inputs, exact on interval cores.
+
+**General factorial-moment corollary (all ρ).** Fix one gap with endpoint denominators `i,j`, length
+`g=1/(ij)`, and put `K_i=floor(k/i)`, `K_j=floor(k/j)`. For `a>=0`, define the weighted extent list
+
+```text
+E_i(0)={(1,g)},
+E_i(a)={(C(M-1,a-1), lambda/(iM)) : a<=M<=K_i}   for a>=1,                 (1)
+```
+
+and define `E_j(b)` symmetrically. Empty integer ranges contribute nothing. Then the exact contribution
+of this gap to the `rho`-th factorial moment is
+
+```text
+S_rho^(i,j)(lambda)
+ = sum_(a+b=rho) sum_((c,L) in E_i(a)) sum_((d,R) in E_j(b))
+       c d (L+R-g)_+,                                                        (2)
+
+S_rho(lambda)=sum_(consecutive a/i<b/j in F_k) S_rho^(i,j)(lambda).          (3)
+```
+
+Here the dummy extent `g` means that choosing zero intervals from one side imposes no constraint.
+For a nonempty left selection, the chosen multiplier intervals are nested prefixes of the gap. Their
+intersection is controlled by their largest multiplier `M`, and exactly `C(M-1,a-1)` `a`-subsets have
+maximum `M`. The right intervals are nested suffixes with the analogous count. A prefix of length `L`
+and suffix of length `R` intersect in length `(L+R-g)_+`. Finally,
+`lambda/(iM)<g` because `lambda*j<M` in the regime `lambda<1/(k+1)`, so no unrecorded clipping occurs.
+Expanding `C(W,rho)` as the sum of the indicators of all `rho`-subsets of violation intervals and
+integrating proves (2)-(3).
+
+Formula (2) also gives the exact divisor-refined breakpoint taxonomy. Terms chosen from both ends can
+change slope only at
+
+```text
+lambda = M N/(j N+i M),                                      (4)
+```
+
+when the two nested fronts meet; one-sided terms are linear throughout. Thus (2) is a finite sum of
+positive parts of rational linear forms for every `rho`, including `rho>k` where all contributions
+vanish and the result is zero.
+This closes the deferred `rho`-general formula, not merely the checked cases.
+
+**Scope of the toothpick lead.** Formula (2) proves nested divisor-chain algebra. It does not prove that
+its breakpoint tree obeys the A139250 toothpick recursion or any other self-similarity. The dyadic
+subchains remain a proposed comparison, not a consequence of this corollary.
 
 ## Codex-S14 correction/addendum: the apparent divisor refinement collapses
 
@@ -103,5 +147,8 @@ through `k=20`.
 
 - [x] support lemma refereed (all violations lie on end divisor chains): k ≤ 10, dense λ grid, exact
 - [x] m_r (r ≤ 4) formula vs direct measure: exact match on the grid (script tables)
-- [x] S_ρ (ρ ≤ 3) closed-form vs direct integral: exact on the grid
-- [x] full breakpoint collapse and all-`r`, all-`rho` formulas (codex-S14 exact replay)
+- [x] S_ρ for every 1 ≤ ρ ≤ k: maximal-multiplier formula == direct arc sweep == independent
+      cut-by-cut gap integral for k ∈ {4,6,8,10}, four rational λ values per k (112 exact cases)
+- [x] the rho-general closed form and collision breakpoints (2)-(4), proved for all k, lambda, and rho
+- [x] full breakpoint collapse and all-`r`, all-`rho` formulas independently replayed through
+      `k=20`, with the structural no-dyadic-breakpoint inequalities checked through `k=64`

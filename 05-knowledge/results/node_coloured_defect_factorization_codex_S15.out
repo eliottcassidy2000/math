@@ -1,0 +1,34 @@
+THM-851 NODE-COLOURED DEFECT FACTORIZATION CLOSURE
+========================================================================
+n  (f,r) objects arrows  C0  ordered-C1  symmetric-C1  sigma-orbits  Q-lines
+3  (1,0)       2      2     2           2             2             2       1
+   C0 orbit-fibres={1: 2}; split cells ordered/symmetric=0/0
+   endpoint O/S=2/2; unlabelled-factor O/S=2/2; residual sigma-orbits=0
+4  (1,1)       4      8     4           6             5             6       3
+   C0 orbit-fibres={1: 3, 3: 1}; split cells ordered/symmetric=2/1
+   endpoint O/S=5/4; unlabelled-factor O/S=6/5; residual sigma-orbits=1
+   first symmetric witness masks=1,6 delta=0 node=1 separating multiplicity=1/0
+5  (2,2)      16     64    23          64            40            40      20
+   C0 orbit-fibres={1: 11, 2: 7, 3: 5}; split cells ordered/symmetric=19/12
+   endpoint O/S=48/29; unlabelled-factor O/S=62/39; residual sigma-orbits=1
+   first symmetric witness masks=8,24 delta=1 node=3 separating multiplicity=1/0
+6  (2,4)      64   1024   255        1024           544           544     272
+   C0 orbit-fibres={1: 120, 2: 72, 3: 26, 4: 14, 5: 8, 6: 5, 7: 6, 8: 2, 9: 2}; split cells ordered/symmetric=253/135
+   endpoint O/S=761/401; unlabelled-factor O/S=1022/543; residual sigma-orbits=1
+   first symmetric witness masks=262,400 delta=11 node=13 separating multiplicity=0/1
+7  (3,6)     512  32768  7926       32768         16640         16640    8320
+   C0 orbit-fibres={1: 3435, 2: 2333, 3: 1094, 4: 573, 5: 231, 6: 112, 7: 93, 8: 17, 9: 32, 10: 3, 11: 3}; split cells ordered/symmetric=7916/4491
+   endpoint O/S=28882/14562; unlabelled-factor O/S=32688/16604; residual sigma-orbits=36
+   first symmetric witness masks=1024,3072 delta=16 node=6 separating multiplicity=1/0
+
+n=7 TOURNAMENT ANALYSIS ON INFORMATION CARRIERS
+vertices=['blue/black', 'merged node', 'node + defect weight', 'node + exact defect', 'node + defect + endpoints', 'unlabelled midpoint-node deck', 'symmetric factor colour', 'ordered factor colour']
+cells={'blue/black': 2, 'merged node': 272, 'node + defect weight': 1448, 'node + exact defect': 7926, 'node + defect + endpoints': 14562, 'unlabelled midpoint-node deck': 16604, 'symmetric factor colour': 16640, 'ordered factor colour': 32768}
+raw scores/cycles/SCC/Hpaths={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}/0/[1, 1, 1, 1, 1, 1, 1, 1]/1
+economy scores/cycles/SCC/Hpaths={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}/0/[1, 1, 1, 1, 1, 1, 1, 1]/1
+edge flips between gauges=18
+
+PRESERVES: tilings, exact defect, merged nodes, factor counts, reflection, line incidence, colour
+DESTROYS: all runner/metric/owner/wall/carry/loneliness data
+CHALLENGED ASSUMPTION: factorization obligations, not runners or original arcs, are the vertices
+ALL ASSERTIONS PASSED
