@@ -1,0 +1,20 @@
+quartic_s3 independent global endpoint crosscheck
+analytic_global_cap=398
+context=1 labels=(1, 5, 8, 12) parity=(1, 1) cells=15617 core_safe_cells=3026 rows=10000 covers=0
+context=2 labels=(1, 5, 8, 12) parity=(1, 2) cells=15273 core_safe_cells=2946 rows=11000 covers=0
+context=3 labels=(1, 5, 8, 12) parity=(2, 1) cells=16025 core_safe_cells=3118 rows=10000 covers=0
+context=4 labels=(1, 5, 8, 12) parity=(2, 2) cells=15681 core_safe_cells=3038 rows=11000 covers=0
+context=5 labels=(2, 3, 10, 11) parity=(1, 1) cells=16405 core_safe_cells=3052 rows=12100 covers=0
+context=6 labels=(2, 3, 10, 11) parity=(1, 2) cells=16033 core_safe_cells=2946 rows=11000 covers=0
+context=7 labels=(2, 3, 10, 11) parity=(2, 1) cells=16165 core_safe_cells=3022 rows=11000 covers=0
+context=8 labels=(2, 3, 10, 11) parity=(2, 2) cells=15793 core_safe_cells=2916 rows=10000 covers=0
+context=9 labels=(4, 6, 7, 9) parity=(1, 1) cells=16205 core_safe_cells=3292 rows=11000 covers=0
+context=10 labels=(4, 6, 7, 9) parity=(1, 2) cells=16817 core_safe_cells=3426 rows=13310 covers=0
+context=11 labels=(4, 6, 7, 9) parity=(2, 1) cells=15989 core_safe_cells=3248 rows=10000 covers=0
+context=12 labels=(4, 6, 7, 9) parity=(2, 2) cells=16601 core_safe_cells=3382 rows=12100 covers=0
+contexts=12
+rows=132510
+covers=0
+cell_count_range=(15273,16817)
+certificate_digest=a02c30e784969c5865606455a38843f44ff49fb6a1b96faee2548a64204f8b83
+sha256=be2d91028cf4ee1458622d0d19c95e79a0c888ca4b8feef20272bb1be00611f5
