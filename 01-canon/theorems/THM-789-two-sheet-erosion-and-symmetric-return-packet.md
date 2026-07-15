@@ -8,7 +8,7 @@ depends_on:
   - THM-780   # quantitative phase pigeonhole
   - THM-782   # one-sided return packet, strengthened here
   - LRC(<=13)
-related: [THM-772, THM-775, THM-776, HYP-6820]
+related: [THM-772, THM-775, THM-776, THM-797, HYP-6820]
 verification:
   - 04-computation/lrc14_two_sheet_erosion_trap_codex_S10.py
   - 05-knowledge/results/lrc14_two_sheet_erosion_trap_codex_S10.out
@@ -360,3 +360,10 @@ class destroys the LRC predicate.  The challenged assumption is that refining
 one successful local phase anchor adds information.  It is monotone trapping
 here.  Recursion must branch across deep components, then transport the full
 return incidence on each branch, not only descend inside one phase cell.
+
+THM-797 implements the first arithmetic branch of this prescription.  An odd
+exception-divisor grid class outside its explicit acceptance shell gives an
+immediate global escape; at `q=13` only full and aligned-five folded supports
+survive.  Its sharp aligned row traps every global maximizer but escapes at a
+different threshold component, confirming that the branch set in this section
+must contain all closed deep components and their endpoint owners.

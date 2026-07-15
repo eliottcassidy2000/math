@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -205,8 +205,12 @@
   lies in THM-774/776's complementary finite bases, or prove the global
   erosion failure `E_U not subset H minus R_U` by selecting among deep
   components and transporting their signed tooth address or exact eroded
-  margin. Fixed-anchor refinement and raw component tournaments are
-  insufficient by THM-789. Then
+  margin.  Apply THM-797's odd-divisor grid first: at mandatory `q=13`, only
+  full six-class support and aligned five-class support survive.  Its sharp
+  aligned example traps every global maximizer but escapes at a threshold
+  endpoint, so the selector must range over all owner-labelled closed
+  `1/11`-superlevel components. Fixed-anchor refinement, argmax-only choice,
+  and raw component tournaments are insufficient by THM-789/797. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -243,7 +247,7 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk/holonomy-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795; corrected THM-779; MISTAKE-147/148/149;
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149;
   HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
@@ -306,9 +310,18 @@
   by the exact eroded folded-diamond escape margin and prove that at least one
   global component escapes.  Retain signed tooth/slope addresses: THM-789's
   `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
-  measure but different middle-component incidence.  Do not recurse only
-  inside a chosen anchor: its `4/17` versus `14/19` example makes that strategy
-  formally incomplete.
+  measure but different middle-component incidence.  Run THM-797's odd-
+  divisor shell first; only full/aligned-five support survives at `q=13`.
+  Then branch over every owner-labelled deep component, not only global
+  maximizers: the aligned `(13,5)` row traps both maximizers but escapes at
+  `7/33`.  Do not recurse only inside a chosen anchor.
+- **Transverse-tail target:** THM-798 refutes every raw component-count versus
+  divisor-scale bound even on a primitive four-far family.  THM-799 replaces
+  it by the composable shadow state `(safe mass,full component count)` and
+  closes all fully lacunary far flags; increasing insertion order is the
+  canonical certificate gauge.  Concentrate the remaining scale-normal
+  theorem on clustered comparable-size faces, restoring endpoint owners and
+  tooth incidence whenever the conservative lower mass bound is nonpositive.
 - **Tournament guardrail:** wall-event tournaments are transitive and forget
   the stalk; the normalized `A8` graph forgets the metric base; packet
   incidence/frequency forgets the ordered return map.  The faithful carrier is

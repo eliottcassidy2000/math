@@ -98,13 +98,14 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | arbitrary binding scale `p/(13s)` | PROVED packet split; shallow iff full nonzero residues; deep exceptions obey exact sheet capacity, with `s=2` parity and `s=3` colour criteria | THM-769 |
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
+| odd-exception divisor-grid selector | PROVED for every odd divisor `q`: deep unit classes outside the explicit opposite-exception shell force global erosion escape. At mandatory `q=13`, only full six-class support or the aligned five-class pattern survives.  An exact aligned row traps every global maximizer but escapes at another threshold component, so all owner-labelled deep components—not only argmax—must be retained. | THM-797 + 10,971,770-test exact replay |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: replacing one coordinate of any unit AP dilation by a congruent lift is tight only for the original coordinate.  Every residual non-AP shallow packet differs from every AP dilation in at least two coordinates. | THM-795 + exact core/atom certificate |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`.  An exact core traps every local refinement at `4/17` but escapes at `14/19`; moreover two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence.  Global selection must retain signed tooth/slope address. | THM-782/789 + exact trap/erosion-liar certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative and a quadratic energy cocycle. FINITE-EXACT: all 101,850 initial height-24 covers tear by `3/8` (38 groups), and all divisor-complete covers by `4/11` (36 groups). Uniform arithmetic-language exclusion remains open. | THM-792 + exact root-current/prefix certificate |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, the full arbitrary-height Hamming-one star around every AP dilation, every two-sheet core in `[1,19]` with unbounded odd exceptions, the speed box through 100, and the forced-`w=13` quotient box through 24 are empty.  Shallow Hamming radius at least two, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795; HYP-6820 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, the arbitrary-height Hamming-one AP star, every two-sheet core in `[1,19]`, the speed box through 100, most odd-divisor support profiles, and the forced-`w=13` quotient box through 24 are empty.  Shallow Hamming radius at least two, full/aligned-five folded support with all-component selection, uniform collar tear, and higher-sheet packets remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -149,7 +150,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    deep anchor traps the full Bohr return set even though another deep time
    escapes.  Its global gap/Kneser budgets tax every tight component layout,
    but an exact two-pair liar shows that raw component order, raw escape signs,
-   and total eroded measure still lose the signed tooth slope. Prove the global erosion failure
+   and total eroded measure still lose the signed tooth slope. THM-797 now
+   supplies a uniform selector on odd exception-divisor grids; at `q=13` it
+   removes every support except full six-class and aligned five-class rows.
+   Its sharp aligned survivor proves that selecting only global maximizers is
+   still insufficient. Prove the global erosion failure
    `E_U not subset H_(x,y) minus R_U`, using component/owner incidence to select
    the right deep component; alternatively prove a uniform bad-atom transversal
    lower bound or quantitatively land the terminal dyadic base in a certified
@@ -239,7 +244,12 @@ escapes. Thus even symmetric local incidence at an arbitrary anchor cannot
 finish the job.  On the same core, `(13,9)` and `(17,13)` have identical raw
 signed component-tournament fingerprints and identical scalar eroded-diamond
 measure, but different return-thickened component incidence. The uniform
-residual is now a signed-tooth global deep-component selection/noncontainment theorem (or
+residual is now smaller: THM-797's odd-divisor shells discharge every row with
+a deep grid class outside the opposite-exception shell, and `q=13` leaves only
+full or aligned-five folded support.  In the sharp aligned row all global
+maximizers are trapped but a `1/11` threshold endpoint escapes.  The remaining
+theorem is therefore a signed-tooth, owner-labelled **all-component**
+selection/noncontainment theorem (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.

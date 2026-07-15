@@ -469,6 +469,17 @@ the unbounded shallow residual begins at Hamming radius two.  Its natural next
 carrier is a bipartite splice-sheet/replacement-tooth graph with deck orders
 and oriented safe germs, where two replacement colours may share obligations.
 
+The next live pull supplied THM-797's odd-divisor selector.  For every odd
+`q`, a deep unit class outside the explicit opposite-colour exception shell is
+already a global erosion escape.  At the mandatory `q=13`, hypothetical
+containment forces either full six-class folded support or the aligned five-
+class pattern.  The gate is sharp: for
+`U=(1,2,3,4,7,9,10,11,12,16)` and `(x,y)=(13,5)`, both global maximizers
+`5/13,8/13` are trapped, but the threshold endpoint `7/33` escapes.  Thus the
+geometric carrier must retain every owner-labelled closed deep component, not
+only the argmax orbit.  The exact replay checks 10,971,770 odd-grid triples and
+the complete eight-component survivor with rational arithmetic.
+
 The folded route also gained a global theorem and an exact quotient boundary.
 For `delta=2/(143B)`, tightness forces
 `mu(E)+sum min(g_i,2delta)<=mu(H)` and
@@ -482,6 +493,18 @@ the unsigned odd errors, folded margin, parity, and determinant while changing
 the signed slope outcome.  Thus the global selector must retain affine tooth
 address/slope or the exact eroded margin, not just component order and scalar
 erosion.
+
+Concurrent THM-798/799 close a different false compression in the far tail.
+The primitive four-far family `{1,...,9,15,110,N,1092N}` has no divisor packet
+of size seven while its positive-length good-component count grows at least
+`N/1540-8/7`; raw fragmentation is therefore not controlled by coherent
+divisor scale.  Nevertheless its top peel closes.  The reusable reason is the
+conservative transition
+`mu_N>=6mu/7-2r/(7N), r_N<=r+N`, which composes and is optimized by inserting
+frequencies in increasing order.  Together with the phase floor, it closes
+every fully lacunary far-count flag (uniform four-far factor 412, exact-core
+factor 19).  The remaining infinite faces are clustered and comparable-scale;
+`(mu,r)` is a terminal-cap shadow there, not a lossless endpoint quotient.
 
 Tournament Analysis challenged runners as vertices throughout.  Heavy phase
 cells, character obligations, endpoint events, minimal stalks, top teeth, and
@@ -503,15 +526,16 @@ degree vector tear at different times/sheets, so the energy is a current
 coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
-proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear,
-global eroded-packet noncontainment in every admissible folded diamond, and a
-stalk- and holonomy-quotiented collision-path bound joining
-THM-778/779/783/786/788/794, together with a Hamming-radius-two shallow
-sheet--tooth obstruction extending THM-795.
+proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear;
+all-component eroded-packet noncontainment on the full/aligned-five `q=13`
+survivors; a stalk- and holonomy-quotiented collision-path bound joining
+THM-778/779/783/786/788/794; a Hamming-radius-two shallow sheet--tooth
+obstruction extending THM-795; and a scale-normal argument for clustered
+comparable-size far frequencies after THM-799 closes the fully lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795; corrected THM-779; MISTAKE-147/148/149; exact collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149; exact collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
-scripts/outputs plus the exact marginal-holonomy cross-audit; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+scripts/outputs plus the exact marginal-holonomy and odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

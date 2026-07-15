@@ -37,6 +37,9 @@ related:
   - THM-792
   - THM-794
   - THM-795
+  - THM-797
+  - THM-798
+  - THM-799
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -49,7 +52,7 @@ related:
 The standard fourteen-runner case remains open.  The primitive tight
 twelve-speed sporadic branch used by the current reduction is uniformly finite
 in principle, but it has not been classified and is not proved empty.  This
-session nevertheless changes the frontier in four material ways:
+session nevertheless changes the frontier in six material ways:
 
 1. THM-780 proves a uniform positive safe-measure floor from the already known
    lower-dimensional strict margin.  The floor is explicit,
@@ -72,6 +75,13 @@ session nevertheless changes the frontier in four material ways:
    shallow AP dilation.  Any residual shallow sporadic packet must use at least
    two replacement colours, so the next object is a sheet--tooth incidence
    graph rather than another one-coordinate lift bound.
+5. THM-797 turns odd exception divisors into global component selectors.  At
+   `q=13` only full or aligned-five folded support survives, and its sharp row
+   proves that all deep components—not merely global maximizers—must remain.
+6. THM-798/799 separate raw fragmentation from conservative state transport.
+   Component count can grow transversely with no coherent divisor scale, while
+   the two-number state `(safe mass, topological components)` still yields
+   exact terminal cones for sufficiently lacunary far flags.
 
 The two changes point in the same direction.  The base of the problem is a
 measured set in joint phase space; the obstruction over that base is a labelled
@@ -95,6 +105,8 @@ compressions.
 | number of occupied sheets | capacity necessary conditions | which labelled owner occupies which sheet, especially at equality |
 | measure of a folded obstruction | a sharp necessary cap | component-by-component containment and endpoint colours |
 | safe-component count or raw winding | a coarse amount of boundary | component widths, reduced winding, and endpoint-owner incidence |
+| raw positive-length component count | transverse tooth fragmentation | safe mass relative to the eventual peel frequency |
+| only global deep maximizers | the sharpest quotient-core clearance values | escaping threshold components and their endpoint owners |
 | a static prime-seven token state | exact cover at one phase | endpoint order, inverse steps, and global carry |
 | a transitive next-event tournament | pairwise chronological order | the labelled Hamiltonian-path movie and simultaneous blocks |
 | number of covered walls | finite-sample difficulty | a persistent exact seven-owner stalk that makes those walls redundant |
@@ -289,6 +301,36 @@ component tournament is useful because its vertices preserve global
 alternatives, but the faithful vertex must carry the signed affine tooth
 address and eroded margin.  Order, signs, and scalar erosion are still only
 telemetry.
+
+THM-797 supplies the first uniform global selector on top of this corrected
+state.  For every odd divisor `q` of an exception, it compares two exact
+folded unit-class sets:
+
+```text
+D_q(U) = deep classes for the quotient core,
+A_q(x,y) = exception-eligible, opposite-colour classes.
+```
+
+Any class in `D_q(U)\A_q(x,y)` is already a point of `E_U\H`, hence proves
+the full erosion failure.  At the mandatory divisor `q=13`, hypothetical
+containment forces the core's folded residue support to be either all six
+classes or the five-class support missing exactly the off-divisor exception's
+class.  This eliminates every support of size at most four, every misaligned
+five-class row, and every non-full double-13 row without a height bound.
+
+The aligned case is genuinely sharp.  For
+
+```text
+U=(1,2,3,4,7,9,10,11,12,16),       (x,y)=(13,5),
+```
+
+both global maximizers `5/13,8/13` lie inside the diamond, while the threshold
+endpoint `7/33` has `phi_U=1/11` and lies far outside it.  Thus “choose a
+deepest point” is another lossy compression.  The faithful selector is a
+bipartite incidence object between folded divisor obligations and **all**
+owner-labelled closed deep components, with signed escape margin attached.
+This connects the arithmetic support gate to the geometric component/tooth
+carrier instead of asking either quotient to finish alone.
 
 ### 1.6 Endpoint schedules are centered mechanical words
 
@@ -503,6 +545,43 @@ intersection of two languages: a regular safe-current language on the chip
 simplex and the much thinner arithmetic language of root words realizable by
 divisor-complete rational clocks.
 
+### 1.9 Transverse far flags need state transport, not a fragmentation bound
+
+THM-798 closes another historical compression.  The four-far family
+
+```text
+P_N={1,...,9,15,110,N},       V_N=P_N union {1092N}
+```
+
+has no nontrivial divisor packet of size seven, yet the number of positive-
+length good components grows at least as `N/1540-8/7`.  Raw fragmentation is
+therefore independent of the coherent scale coordinate even in the first open
+four-far chart.  This is not a hard family: its proportional top peel closes
+uniformly.
+
+THM-799 identifies the conservative state that explains that closure.  If a
+base has safe mass `mu` and full topological component count `r`, adjoining a
+frequency `N` gives
+
+```text
+mu_N >= 6mu/7-2r/(7N),       r_N<=r+N.                   (GS)
+```
+
+The state composes.  An adjacent-exchange identity proves that inserting
+distinct frequencies in increasing order uniquely maximizes this affine lower
+certificate, so the `k!` order gauges collapse to one canonical path per peel.
+Combined with the heavy-cell floor and THM-755, (GS) proves terminal cones for
+every fully lacunary far-count flag; in the literal four-far chart the uniform
+factor is `412`, improved to `19` by the exact 2,002-core floor.
+
+This does not make `(mu,r)` a lossless LRC quotient.  It deliberately forgets
+endpoint owners and correlations, and may give a nonpositive lower bound on
+comparable-scale faces.  Its lesson is subtler: different proof stages need
+different controlled resolutions.  The scalar pair `(mu,r)` suffices for a
+one-sided terminal cap, while folded containment, collar current, and packet
+holonomy require the richer incidence stalk.  The unresolved infinity is now
+concentrated on clustered comparable-scale faces, not fully lacunary ones.
+
 ## 2. A candidate underlying object
 
 The most economical object consistent with all of the proved corrections is a
@@ -513,8 +592,16 @@ and an exception deck `W`, its fields are
 base:
   the strict core-safe set G_P, with component endpoints and measure;
 
+terminal-cap shadow:
+  the conservative pair (safe mass, full component count), used only when
+  transverse insertion plus a proportional peel makes its inequalities fire;
+
 phase substrate:
   a heavy joint-phase cell or, in a limit, the character relation lattice;
+
+arithmetic selectors:
+  odd-divisor deep classes, exception acceptance shells, and their incidence
+  with every owner-labelled closed deep component;
 
 event address:
   exact wall positions, centered/global ranks, simultaneous blocks,
@@ -601,6 +688,7 @@ tournament.
 | runners or exception owners | earlier next wall; chronology versus reflected/Euclidean gauge | labelled pairwise order and edge flips | joint phase, metric scale, simultaneous ownership, sheet cover, and core-safe targeting |
 | moduli `q` | smaller blocker cost; pair-first versus compression-first gauge | fingerprints of a fixed small-period bank | multiplier identity and joint zero/signed-pair ownership; the tournament verdict can stay fixed while most edges flip |
 | witness obligations `(q,a)` | blocked by a named runner; switch multiplier or sign | the exact small-period predicate when kept as a hypergraph | scale-adaptive witnesses if collapsed to pairwise comparisons |
+| folded odd-divisor classes | core multiplicity; inversion as gauge | THM-797's exact deep-class versus exception-shell gate | non-grid deep components and their signed tooth margins |
 | joint phase cells | same-cell equivalence; anchor subtraction | the simultaneous return and its measure | endpoint chronology and local blocker ownership; the relation is an equivalence, not naturally a tournament |
 | character obligations `m in Z^d` | eventual vanishing under a height sequence | the limiting subgroup and all stabilized linear relations | which safe component meets which wall; subgroup closure is again not antisymmetric |
 | safe components or top teeth | cyclic order, width, ordered flank owners | repeated collar incidence and tooth occupancy | exact sheet transport if reduced to an order tournament |
@@ -664,8 +752,10 @@ still missing.
    or complete the finite global bound.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
-   bank.  A proof may show that the folded containment `(FD)` cannot persist,
-   or that THM-775's binary ownership tree cannot reach a terminal
+   bank.  THM-797's odd-divisor grids remove every q=13 support except full
+   six-class and aligned five-class rows.  On those survivors, compare every
+   owner-labelled closed deep component—not only argmax—with the signed folded
+   teeth, or show that THM-775's binary ownership tree cannot reach a terminal
    hereditarily primitive base.
 3. **The even-maximum collar.**  THM-792 gives a bounded rational clock,
    repeated ordered flank types, and—on the forced `13`-multiple subbranch—a
@@ -722,8 +812,10 @@ Even a complete sporadic-branch theorem must be inserted into the current
 covering/non-covering and scale-normal decomposition with its hypotheses
 checked.  The live global residual still includes multi-exception sheets,
 ramification/s-threshold decks, gcd descent, and families without an obvious
-large common-factor core.  The proved bounded and sheet regimes are not yet an
-assembly theorem for LRC(14).
+large common-factor core.  THM-798/799 remove raw fragmentation and every
+fully lacunary far-count flag from this list; unresolved infinity is on
+clustered comparable-scale faces.  The proved bounded, state-transport, and
+sheet regimes are not yet an assembly theorem for LRC(14).
 
 ## 5. A recursive research program suggested by the synthesis
 
@@ -731,22 +823,27 @@ The history suggests a disciplined recursion rather than a new scalar.
 
 1. **Find mass.**  Use a deeper lower-dimensional witness and the heavy-cell
    argument to obtain a positive measured base.
-2. **Expose boundary incidence.**  Decompose that base into exact components or
+2. **Try the conservative terminal cap.**  Transport `(safe mass,component
+   count)` across genuinely transverse frequencies and peel proportionally;
+   if the inequality does not fire, restore the richer endpoint state.
+3. **Fire arithmetic selectors.**  Test odd-divisor deep grids against the
+   exception shells; retain every support class that survives.
+4. **Expose boundary incidence.**  Decompose the whole remaining superlevel set into exact components or
    top teeth and retain ordered endpoint owners.
-3. **Choose the natural fibre.**  According to the binding scale, use `s`
+5. **Choose the natural fibre.**  According to the binding scale, use `s`
    sheets, a prime-field token deck, a dyadic sheet tree, or the `Z/13` Cayley
    edge cover.
-4. **Decode chronology.**  Use centered/global ranks with gcd, parity phase,
+6. **Decode chronology.**  Use centered/global ranks with gcd, parity phase,
    simultaneous blocks, and metric positions retained.
-5. **Factor persistent stalks.**  Remove event multiplicity already absorbed by
+7. **Factor persistent stalks.**  Remove event multiplicity already absorbed by
    a fixed exact cover.
-6. **Factor diagonal packet holonomy.**  Contract repeated prefix-legal packet
+8. **Factor diagonal packet holonomy.**  Contract repeated prefix-legal packet
    loops whose return is zero in the reduced deck, while retaining their
    metric base translation.
-7. **Study the essential skeleton.**  Apply the redundancy cocycle, overlap-chip
+9. **Study the essential skeleton.**  Apply the redundancy cocycle, overlap-chip
    transport, divisor shells, or endpoint-owner constraints only to genuine
    changes of minimal cover basis or reduced return class.
-8. **Descend or tear.**  Either exhibit a free sheet/time, force a dyadic or gcd
+10. **Descend or tear.**  Either exhibit a free sheet/time, force a dyadic or gcd
    descent, or return a smaller normalized packet with all sidecars intact.
 
 The key invariant is not “how complicated is the speed vector?”  It is “how
