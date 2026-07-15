@@ -9771,3 +9771,20 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 6. u-substitution grammar: test whether the OCF digit tower / Farey-14 depth tower admit a
    substitution variable making them geometric (predict NO for OCF digits >= 1 -- that absence
    IS the Toda-decay theorem, restated).
+
+## Lead mac-mini-2026-07-15-S111: LRC(14/15) lens follow-ups
+**Source:** THM-874, HYP-6975. **Status:** open.
+1. Rigorize THM-726 (the named residual of the low-M rigidity assembly): replace the 64317-config
+   certification + monotone tail by a closed argument; then klein-S308's covering closure is
+   hypothesis-free. The shelf template (THM-869 overload argument) is the suggested shape: assume
+   two outliers, overload the core's witness budget.
+2. Align outlier thresholds: THM-726's ">= 13" vs the ">14" near-AP window; write the one-page
+   bookkeeping lemma (covering-type + one outlier + core in {1..14} choose 12 => near-AP tile
+   hypotheses of THM-738/741 are met verbatim).
+3. Merge THM-874 (profile face) with kps THM-873 (Ramanujan-Fourier face): one write-up, two
+   transforms of the same coprime filtration; check whether 873's disc_v mean-square constant is
+   a value of the 874 GF at roots of unity (Ramanujan sums ARE mu-filtered root sums).
+4. The corridor-constant sequence (2/s)H*(s), s = 2, 3, ...: 1, 2/3, ..., as exact fractions --
+   OEIS check numerators/denominators; its GF is THM-874's F(x).
+5. LRC(15) prep: the depth-14 corridor is now exact; the deep-well margin analysis at the
+   (conjectural) LRC(15) covering-min wants the analog of THM-853(II)'s margin 2H_12/2379.

@@ -1,0 +1,16 @@
+(I) THE MOEBIUS-LOG^2 GRAMMAR (all exact in Q)
+   H*(m) = sum_{d|m} (mu(d)/d) H_{m/d-1}, m<40: True
+   [x^s] sum_d (mu(d)/d^2) log^2(1/(1-x^d)) = (2/s) H*(s), s<=40: True
+   Farey corridor constants A_{k+1} = (2/(k+1)) H*(k+1), k=3..13: True
+   LRC(15) corridor m({1..13};lam) = (H*(14)/7)(1-14lam) on [1/15,1/14]: True
+      H*(14) = 11662/6435 = 1+1/3+1/5+1/9+1/11+1/13; constant = 1666/6435
+      [prime contrast k=12: constant 2H_12/13 = 6617/13860 (THM-853 II)]
+
+(II) LOW-M RIGIDITY ASSEMBLY PROBE (shelf lens; klein-S308 handoff)
+   candidates tested: 190; covering-type (m(1/13)=0) found: 10
+   ALL covering-type hits near-AP (>=10 in {1..14}): True
+   outlier(>14) counts among hits: {1} (assembly predicts <= 1)
+   two-outlier samples that are covering-type: 0 of 25 (THM-726 face predicts 0)
+   sample hits still good at 14/183 (M > covering-min): {(12, 170): True, (12, 176): True, (12, 180): True, (12, 182): False, (12, 183): True, (12, 190): True}
+
+DONE
