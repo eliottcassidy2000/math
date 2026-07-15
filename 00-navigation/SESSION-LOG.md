@@ -12,8 +12,10 @@ The logical second layer has 4,307,561 literal `(R,x1,x2)` geometries, a
 3.48045-fold execution cache but not a proof-state quotient.  Raw depth-three
 pilots project 568.6M--1.426B nodes and 2.33--12.65 uncached CPU-hours; three
 light full-depth pilots gate more than 99% at depth three and die by depth
-five.  The next safe computation is geometry-batched depth three, not a blind
-billion-node run.
+five.  A bounded geometry-batched prototype now matches 1,685,358 raw lanes
+and both fingerprints while reducing CPU by 1.599x on an eight-context root
+block.  Complete root-block sharding, not a blind billion-node run, is the
+next safe computation.
 
 For the `j=4` flood tail, the exact anchor triangle `{56,57,67}` shadows 22 of
 35 four-small bases.  THM-732 reduces each of the thirteen residual bases to a
@@ -29,11 +31,16 @@ open.
 
 The conceptual synthesis is an operation-congruence test: a proposed quotient
 must intertwine every legal labelled transition and retain the terminal
-predicate.  H-drift passes after the Mobius radial change of variable;
-Farey/toothpick totals and the proposed black self-line equality do not.  The
+predicate.  H-drift closes exactly after the Mobius radial change only at the
+Koopman-observable level: strong state lumpability first fails at `n=5`, even
+for two states with the same full forward polynomial and mean drift.  The
+ordered Farey denominator pair does pass the special interval-core rewrite,
+while toothpick totals and the proposed black self-line equality do not.  The
 `chi_7`/Fano carrier is an atlas with carry and Heawood-cycle sidecars, while a
 Kakeya needle needs offset, owner, sheet, component incidence, future ray, and
-chronology.  Tournament vertices were challenged throughout: root edges and
+chronology.  The natural `A/B/C` component-Euler role word fails the same
+labelled `T_26` square; cyclic killed-block phase `(8,20)` versus `(12,16)` is
+the first localized repair.  Tournament vertices were challenged throughout: root edges and
 arithmetic lanes are useful job schedulers, whereas literal components plus
 labelled future languages remain the proof carrier.
 

@@ -17,6 +17,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
   - 04-computation/lrc14_j4_next_anchor_shadow_frontier_codex_S16.py
   - 05-knowledge/results/lrc14_j4_next_anchor_shadow_frontier_codex_S16.out
+  - 04-computation/lrc14_j4_peel_role_congruence_probe_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_peel_role_congruence_probe_codex_S16.out
   - 04-computation/lrc14_fano_flag_heawood_radon_repair_codex_S15.py
   - 05-knowledge/results/lrc14_fano_flag_heawood_radon_repair_codex_S15.out
 ---
@@ -549,6 +551,29 @@ labels is strictly lonely.  The unresolved metric tail has at most three
 small labels and at least three speeds above `14`; the number of uniformly
 closed whole edge bodies remains three.  Again the closure comes from exact
 interval geometry plus ordinary containment, not the Fano/Heawood carrier.
+
+A direct test also rules out the simplest proposed repair by peel histories.
+For an insertion into an exact component union, define its role to be `A`,
+`B`, or `C` according as component births minus deaths is positive, zero, or
+negative, and concatenate roles chronologically.  This word is independent of
+component numbering and is prefix-compatible, but it is not an operation
+congruence.  In the fixed flood root `E12={1,2,8,...,14}`, one-peel histories
+`(3)` and `(4)` both have role `C` and the identical unordered event profile
+`((0,4),(1,28))`.  The common legal operation `T_26` sends them to roles `C`
+and `B`, with exact child ledgers
+
+```text
+(r,m,V3)=(26,36613/504504,203),
+(r,m,V3)=(28,6005/72072,191).
+```
+
+Their `chi_7` charges become `1` and `6`, so even the augmented quadratic
+sign cannot update through the proposed word.  The first missing coordinate
+is already localized: cyclic positive-run lengths between killed components
+are `(8,20)` versus `(12,16)`, distinct even after dihedral gauge.  This is a
+kernel-pair counterexample to the Euler-role word and its unordered-event
+refinement, not to a position-decorated component-incidence history.  The
+Fano carrier still needs a metric/cyclic stalk.
 
 Equations (20)-(21) still say only that operation depth four is the first
 depth with neutral repeated-role words beyond the balanced `ABC` word.  The

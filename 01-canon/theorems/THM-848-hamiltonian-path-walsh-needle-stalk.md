@@ -1,7 +1,7 @@
 ---
 id: THM-848
 title: The Hamiltonian-path Walsh needle stalk gives the exact all-size H-drift and the first missing node colour
-status: PROVED ALL n (needle boundary identity, Walsh/OCF drift, exact level-energy EGF, Krylov sufficiency/minimality, Mobius radial-dilation functional form, and n<=6 closed forms) + FINITE-EXACT (all converse-merged nodes n=4..7; hash-guarded directional-gradient classifier n=4..8)
+status: PROVED ALL n (needle boundary identity, Walsh/OCF drift, exact level-energy EGF, Krylov sufficiency/minimality, Mobius radial-dilation observable functional form, and n<=6 closed forms) + FINITE-EXACT (all converse-merged nodes n=4..7; hash-guarded directional-gradient classifier n=4..8; strong-lumpability boundary through n=5)
 source: codex-2026-07-15-S15
 depends_on: [THM-062, THM-076, THM-163, THM-203, THM-259, THM-833]
 related: [THM-013, THM-201, THM-204, THM-217, THM-589, THM-785, THM-791, THM-810, THM-830, THM-840, HYP-2268, HYP-6900]
@@ -14,6 +14,8 @@ verification:
   - 05-knowledge/results/h_drift_K_second_krylov_n8_codex_S14.out
   - 04-computation/h_drift_forward_polynomial_mobius_codex_S15.py
   - 05-knowledge/results/h_drift_forward_polynomial_mobius_codex_S15.out
+  - 04-computation/h_drift_operation_congruence_and_farey_rewrite_codex_S16.py
+  - 05-knowledge/results/h_drift_operation_congruence_and_farey_rewrite_codex_S16.out
 ---
 
 # THM-848 - the Hamiltonian-path Walsh needle stalk
@@ -771,3 +773,54 @@ seven singleton SCCs, and one Hamiltonian path.  This quotient preserves the
 entire averaged flip semigroup and every `a_j`, but destroys arc labels,
 directional currents, and all LRC metric data.  The useful vertices are thus
 spectral proof obligations, not tournament arcs or runners. ∎
+
+## 11. Koopman closure is not strong lumpability (codex-S16)
+
+The radial formula closes the averaged observables; it does not make the map
+`T -> B_T` a Markov-state quotient.  Strong lumpability would require the
+multiset of successor `B`-states under the `M` individual arc flips to be
+constant on every `B`-fibre.  An exact converse-merged audit finds zero split
+fibres for `n=2,3,4`, but two at `n=5`.
+
+The first explicit kernel pair has full-arc masks `8` and `10` (atlas states
+`n5-a01` and `n5-a05`).  Both have
+
+```text
+A_T=(9,30,42,30,9),   B_T=(3/2,0),
+H=9,   c3=3,   score sequence=(1,1,2,3,3),
+E[Delta H]=-3/5.
+```
+
+Their individual `H`-gradient multisets are respectively
+
+```text
+(-8,-4,-4,0,0,0,0,2,2,6),
+(-6,-6,-4,-4,0,0,2,4,4,4),
+```
+
+so their one-step diffusions are `14` and `78/5`; their target-`B`
+histograms differ as well.  More directly, the same labelled flip `{1,2}`
+sends their common stalk to `(-3/2,-1)` and `(-9/2,0)`, respectively.  Thus
+even the complete forward polynomial fails the labelled transition square as
+well as strong lumpability for the uniformly random arc-flip chain.
+
+The operator distinction is exact.  If `P=I+S/M` is one uniform discrete
+flip, then
+
+```text
+P B(z)=B(z)-(2/M)zB'(z),
+P^t H_(2r)=(1-4r/M)^t H_(2r),
+```
+
+whereas only the Poissonized semigroup satisfies
+
+```text
+exp(tS)B(z)=B(exp(-2t)z).
+```
+
+No single discrete scale factor works once the degree-two and degree-four
+modes both occur: the required fourth-power multipliers differ by
+`(1-4/M)^2-(1-8/M)=16/M^2`.  Möbius radiality is therefore an exact Koopman
+observable conjugacy, not a state operation-congruence.  It preserves every
+future mean of `H` while losing successor incidence, diffusion, arc owners,
+and wall chronology. ∎

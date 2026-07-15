@@ -303,7 +303,10 @@ obligations, and proof-carrier interfaces.
   tournaments flip `552,554` pair orientations yet remain transitive, while
   `14,992,263` second edges have only one cap-dead lane.  Their literal
   geometry caches to `4,307,561` keys, but the tournament clock and geometry
-  key both forget the unused labelled rays that control continuation.
+  key both forget the unused labelled rays that control continuation.  A
+  bounded raw/batched depth-three comparison keeps those rays attached and
+  agrees on 1,685,358 lanes while improving CPU by 1.599x; this validates the
+  execution cache, not the tournament or geometry key as a proof quotient.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies

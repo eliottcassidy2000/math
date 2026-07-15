@@ -1,7 +1,7 @@
 ---
 id: THM-862
 title: Scale-three Hamming-six common-sheet classification and exact metric plan
-status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification; its exact metric prefix has 146,912 first edges and 14,992,263 second edges, of which exactly one dies at depth two, while 22,262 and 4,307,561 literal geometries cache those layers; the unbounded metric bank remains open
+status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification; its exact metric prefix has 146,912 first edges and 14,992,263 second edges, of which exactly one dies at depth two, while 22,262 and 4,307,561 literal geometries cache those layers; a bounded depth-three raw/batch prototype agrees exactly and gives 1.599x CPU speedup on an eight-context root block; the full metric bank remains open
 source: codex-2026-07-15-S15/S16 c=3 transport audit
 depends_on: [THM-810, THM-815, THM-823, THM-857, THM-859, THM-860, THM-861]
 related: [THM-844, THM-847, THM-858, HYP-6820]
@@ -15,6 +15,9 @@ verification:
   - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_scout_codex_S16.out
   - 04-computation/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.py
   - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.out
+  - 04-computation/lrc13_scale_three_hamming_six_depth_three_geometry_batch_codex_S16.cpp
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_three_geometry_batch_codex_S16.out
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_three_benchmark_codex_S16.md
 ---
 
 # THM-862 — the scale-three sheet stalk is classified
@@ -699,6 +702,46 @@ This is also the Kakeya-needle guardrail.  The provider graph describes how
 periodic danger needles meet the three local sheet germs; it does not decide
 whether their full continuous combs cover the circle.
 
+## Bounded depth-three geometry-batch prototype
+
+The exact depth-two cache can be used without quotienting proof states.  The
+prototype processes one retained-root block at a time.  It attaches every
+logical lane—with context, labels, used mask, last speed, least future ray,
+and shortcut ancestry—to its metric `(R,x_1,x_2)` parent, transposes proposed
+third speeds, computes each `(R,x_1,x_2,x_3)` intersection once, and then
+replays lane-specific streaming caps.  Complete-tooth detection is metric;
+the least-future-speed test is not.
+
+On contexts `20,...,27`, all sharing retained root mask `2199`, raw and
+batched evaluators agree row-by-row and in two independent lane fingerprints:
+
+```text
+logical depths 1/2/3       568 / 40,680 / 1,685,358
+depth-three verdicts       1,542,729 full-tooth
+                             138,945 streaming-dead
+                               3,684 materialized/live
+                                   0 covering
+metric calls depth 1       568 -> 143
+metric calls depth 2       40,680 -> 17,447
+metric calls depth 3       142,629 -> 86,316
+CPU seconds                11.8168 -> 7.38807  (1.59944x)
+```
+
+The combined raw/batch process used about seven MB maximum RSS.  Timings are
+only a benchmark; logical counts, call counts, and fingerprints are exact.
+On context 103, `--literal-crosscheck` additionally compares every streamed
+comb intersection endpoint-for-endpoint with the original materialized-band
+routine; all `97,386` depth-three lanes agree.  Warning-clean `-O0`/`-O3`
+builds agree after timing fields are removed, and the sanitizer pilot is
+clean.
+
+Nine earlier raw pilots project `568.6M--1.426B` ungated depth-three logical
+nodes and `2.33--12.65` uncached CPU-hours, while three light full-depth pilots
+gate over 99% at depth three and die by depth five.  These are workload
+projections, not bounds or a census.  The prototype validates root-block
+sharding and metric transposition; it proves no additional lane loose and
+does not change the open terminal verdict.
+
 ## Scope guardrail and reproduction
 
 This theorem proves the complete primitive `c=3` **common-sheet**
@@ -770,4 +813,8 @@ depth-two output    04b34203c3dd47d6d836523e74bb5671105cfbfd0617b948bc7b7273f479
 
 independent source  8cee05a32b863c369fff2f0f09fcb0f247648778fac27c6ea8eb3500cf272fa6
 independent output  935cf7b809e178378230329ccdf1ffe027b20f7243105865fe9bc174aad0a58b
+
+depth-three batch source  5b53b1cad43ac30a7c2b12c7a5fdb97513c449c10f832f7d38a190118823bc4f
+depth-three batch output  016b9260477d6c1189edadff3980cda991eb384b07d5f2fe0a05fc39ed4f604c
+depth-three planning note e9a5616d5efee35a4a1cf4f201bde56ad876cea43c59776e3cc9841f703506a7
 ```

@@ -1,0 +1,28 @@
+THM-741 j=4 PEEL-ROLE OPERATION-CONGRUENCE PROBE
+====================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+fixed flood root E12=(1, 2, 8, 9, 10, 11, 12, 13, 14)
+root exact geometry: components=32 measure=319927/2522520 V1=476
+one-peel histories=466 role_census={'A': 429, 'B': 15, 'C': 22}
+role law: A if births>deaths, B if equal, C if births<deaths
+tau law: concatenate chronological roles; exact prefix/subtree restriction=PASS
+minimal schedule: increasing (v1,v1',common w) inside E12 exact horizons; kernel_pairs_visited=1 extensions_checked=15
+kernel parents: h=(3) and h'=(4); tau(h)=tau(h')=C; event_hist=((0, 4), (1, 28)); births/deaths=0/4
+  h=(3): components=28 measure=4163/51480 V2=368
+  h'=(4): components=28 measure=19909/194040 V2=290
+common labelled operation T_26: legal in both exact J3 horizons
+  T_26h: tau=CC event_hist=((0, 2), (1, 26)) births/deaths=0/2 components=26 measure=36613/504504 V3=203
+  T_26h': tau=CB event_hist=((0, 2), (1, 24), (2, 2)) births/deaths=2/2 components=28 measure=6005/72072 V3=191
+operation-congruence square: C --T26--> CC versus C --T26--> CB ; FAIL
+chi7 charge: parent=4; children=1/6; augmented signs=+1/-1
+stronger kernel: the parents also share the full unordered event multiplicity history
+first missing coordinate: cyclic positive-run lengths between killed blocks are (8, 20) versus (12, 16) (already distinct up to dihedral gauge)
+Tournament Analysis vertices: 22 C-role one-peel histories (not runners/edges/Fano flags)
+pair observable: lex delta(V2,-measure,components); gauge: larger wins; true tie: smaller speed
+fingerprint: score_hist={0..21:1}, directed_3cycles=0, SCC_sizes=22x1, edge_flips_vs_speed_lex=114, Hamiltonian_paths=1
+gauge Hamiltonian path=(3, 23, 34, 22, 25, 17, 50, 19, 16, 4, 6, 15, 27, 20, 21, 45, 33, 48, 5, 18, 24, 7)
+kept: role C and exact workload ordering; destroyed: endpoint phase, killed-component placement, successor role
+VERDICT: this canonical Euler-drift role word is prefix-compatible but not operation-congruent
+SCOPE: no claim against decorated metric-stalk role maps; no THM-741 body closure
+source_sha256=cdab83091fa1ef63c6d57e9c0facee7c80df72ab791cac89a1e0d605fa0dada6
+ALL EXACT ROLE-PROBE CHECKS PASSED

@@ -19,7 +19,9 @@ progress_note: >-
   contexts, whose unit fibres are affine matching codes. Its 68 sheet orbits
   are not metric quotients. Its exact first two layers have 146,912 and
   14,992,263 edges, cached by 22,262 and 4,307,561 literal geometries; exactly
-  one second-layer lane is cap-dead, so the terminal recursion remains open.
+  one second-layer lane is cap-dead. A bounded depth-three raw/batch prototype
+  matches 1,685,358 logical lanes and reduces CPU by 1.599x on an eight-context
+  root block, but the terminal recursion remains open.
   THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
@@ -966,6 +968,11 @@ those layers to `22,262` and `4,307,561` geometries, but only one depth-two
 lane is cap-dead and the other `14,992,262` reach depth three.  This proves
 that sheet classification alone does not create early metric collapse and
 makes third-child geometry batching the next computation.
+
+The first bounded implementation of that batching now agrees with raw
+evaluation on 1,685,358 depth-three lanes and literal endpoint crosschecks;
+it is an execution result, not a terminal census.  Complete retained-root
+blocks remain to be sharded.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 

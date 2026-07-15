@@ -35,7 +35,7 @@ It separates four phenomena that had repeatedly been conflated.
 
 | phenomenon | exact example | what really recurs | what does not |
 |---|---|---|---|
-| dynamical conjugacy | THM-848 H-drift | the full forward polynomial in the Mobius radial coordinate | an LRC witness or tournament iso-class |
+| Koopman observable conjugacy | THM-848 H-drift | future averaged `H` observables in the Mobius radial coordinate | the state transition law, diffusion, or an LRC witness |
 | conditional fibre recursion | THM-862 toothpick code | affine matching constraints under sign pinning | literal component erosion and future rays |
 | sourced self-affinity | THM-850/841 dyadic `chi_7` stalk | a three-step scaled stalk plus a birth term | the full Farey multiplier ladder |
 | census coincidence | early toothpick totals and `2 selfK=SC` at `n=5,6,7` | nothing yet | an all-size bijection or quotient |
@@ -44,32 +44,40 @@ The missing object in the LRC branches is therefore not one more scalar.  It
 is a fibred transition object: a symbolic operation base together with the
 literal metric stalk needed to make (1)--(2) true.
 
-## 2. H-drift is the clean positive control
+## 2. H-drift is an observable positive control, not a state quotient
 
 THM-848 gives
 
 ```text
-A_T(x)=sum_r H_(2r)(1-x)^(2r)(1+x)^(M-2r),
+A_T(x)=sum_r H_(2r)(1-x)^(2r)(1+x)^(m-2r),   m=n-1,
 z=(1-x)/(1+x),
 B_T(z)=sum_r H_(2r)z^(2r).                                (3)
 ```
 
-The flip-sum generator becomes exactly
+The flip-sum generator on these observables becomes exactly
 
 ```text
 -2z d/dz,                                                 (4)
 ```
 
-so the continuous flow is radial dilation
-`B(z)->B(exp(-2t)z)` and the discrete averaged flip chain has modes
-`(1-4r/M)^t`.  This is genuine self-similarity: the coordinate change
-conjugates the operation itself.  It also explains why `(H,K)` eventually
-fails.  Those are only the first Krylov coordinates of the radial polynomial;
-at `n=8` a higher even layer becomes visible.
+so the Poissonized continuous flow is radial dilation
+`B(z)->B(exp(-2t)z)`.  The discrete uniform-flip operator is instead
+`P B=B-(2/M)zB'`, `M=binom(n,2)`, with modes `(1-4r/M)^t`; it is not substitution by one
+scalar dilation once degrees two and four both occur.
 
-This positive control sharpens a general rule.  A functional form is useful
-when its generator closes on the retained coordinates.  Matching a few
-moments or a few small-`n` values is not the same statement.
+More importantly, even the full polynomial is not a transition quotient.
+At `n=5`, full-arc masks `8` and `10` have the same
+`A=(9,30,42,30,9)`, `B=(3/2,0)`, `H=9`, `c3=3`, score sequence, and mean
+drift `-3/5`, but their one-step `H` diffusions are `14` and `78/5` and their
+target-`B` histograms differ.  The same labelled flip `{1,2}` already sends
+their stalks to `(-3/2,-1)` and `(-9/2,0)`.  Thus radiality is a Koopman
+conjugacy for averaged observables, not an operation-congruence of tournament states.  It
+still explains why `(H,K)` eventually fails: those are only the first Krylov
+coordinates, and at `n=8` a higher even layer becomes visible.
+
+This sharpens a general rule.  A functional form may close a generator on
+observables without closing the underlying transition kernel.  Matching a few
+moments, future means, or small-`n` values is not strong lumpability.
 
 ## 3. Toothpicks occur in three different senses
 
@@ -92,6 +100,14 @@ W_a^H(s)=zeta 1_(s<a)+zeta^2 1_(s<a/2)+zeta^4 1_(s<a/4)
 The last term is a scaled copy; the first three are the source.  The full
 Farey ladder adds the odd births omitted from (5).  This is toothpick
 self-similarity with immigration.
+
+At the local rewrite level there is a cleaner exact carrier.  If `(i,j)` are
+the ordered denominators of a gap of `F_k`, then the next order replaces it by
+`(i,i+j),(i+j,j)` exactly when `i+j=k+1`, and otherwise leaves it fixed.  The
+coarse chain-length code already fails at `k=6`: pairs `(4,3)` and `(5,3)`
+both map to `(1,2)`, but only the first splits at order seven.  Thus the
+ordered Stern--Brocot address is operation-congruent for the interval core;
+the toothpick count is not.
 
 ### 3.2 The scale-three sheet bank has affine toothpick codes
 
@@ -171,6 +187,15 @@ has at most three small labels.  This is useful because containment and the
 tail inequality commute with the actual extension operation.  It still does
 not identify any of the eighteen remaining whole bodies.
 
+The natural peel-role repair also fails the operation square.  Classify an
+insertion as split-dominant, balanced, or kill-dominant (`A/B/C`) by component
+Euler drift.  In the root `{1,2,8,...,14}`, histories `(3)` and `(4)` have the
+same role `C` and the same unordered birth/death profile, but the common legal
+next speed `26` produces `CC` and `CB`; their `chi_7` charges split to `1` and
+`6`.  What the quotient forgot is not another character: the killed
+components occur in cyclic run patterns `(8,20)` and `(12,16)`.  Position
+along the component circle is the first concrete repair.
+
 ## 5. Kakeya needles need offsets, owners, and chronology
 
 A direction-only Kakeya picture is too coarse in both the finite-operation
@@ -232,17 +257,17 @@ compression has a concrete kernel-pair test.
 
 ## 7. Ranked next tests
 
-1. Build the scale-three geometry-batched depth-three evaluator now that the
-   exact depth-two census is `14,992,263` logical lanes but `4,307,561`
-   `(R,x_1,x_2)` geometries.  Cache metric intersections while propagating
-   every labelled future language; do not turn the cache into a quotient.
+1. Shard complete retained-root blocks with the now-validated scale-three
+   geometry-batched depth-three evaluator.  Its bounded prototype matches
+   1,685,358 raw lanes at 1.599x CPU speedup; propagate every labelled future
+   language and do not turn the cache into a quotient.
 2. For `j=4`, move to the 22 unshadowed three-small completed-family bases now
    that all thirteen four-small two-external-speed banks are closed.  Seek a
    genuine three-speed tail inequality, or use `(3,4)` as the coverage-first
    whole-body job; do not infer it from the Fano orbit.
-3. Define the proposed peel-history role map into `{A,B,C}^*` and test the
-   operation-congruence square (1) before using `chi_7` or Radon coordinates
-   on flood histories.
+3. Replace the refuted Euler-drift role word by a cyclic component-incidence
+   history retaining killed-block phase, then retest the operation-congruence
+   square before using `chi_7` or Radon coordinates on flood histories.
 4. Treat the full Farey ladder as a renewal equation: isolate its odd-birth
    source and ask whether the sourced operator, rather than its total count,
    has a contractive norm.

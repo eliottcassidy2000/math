@@ -1,7 +1,7 @@
 ---
 id: THM-841
 title: The Farey violation ladder: exact all-order profiles, one-kink collapse, and the failure of toothpick self-similarity
-status: PROVED ALL k (support, maximal-multiplier moments, sharp breakpoint collapse, and closed m_r/S_rho formulas) + EXACT REPLAY through k=20 (structural inequalities through k=64)
+status: PROVED ALL k (support, maximal-multiplier moments, sharp breakpoint collapse, closed m_r/S_rho formulas, and ordered Farey-pair rewrite) + EXACT REPLAY through k=20 (structural and rewrite checks through k=64)
 source: kind-pasteur-2026-07-15-S128; sharpened codex-2026-07-15-S14/S15
 depends_on:
   - THM-826   # the r=1 rung + the two lemmas whose corollary is the support statement
@@ -10,6 +10,11 @@ related:
   - THM-819 (the primitive harmonic law = m_1 at λ=1/(k+2)), THM-833 (the OU drift; W is the spatial side of the same danger bookkeeping)
   - BH/FDR reading (owner's dobriban/BH pointer): the speeds are k simultaneous tests, ‖jt‖ the p-values, W the rejection count; the ladder measures are the FDR operating characteristics of the interval core; the Farey gaps make the joint law EXACT — a rare case of fully explicit multiple-testing dependence
   - A139250 toothpick comparison: exact self-similarity is refuted below; the matches at dyadic sizes 1,2,4,8 are a finite mirage caused by totient totals
+verification:
+  - 04-computation/thm841_no_dyadic_breakpoint_codex_S14.py
+  - 05-knowledge/results/thm841_no_dyadic_breakpoint_codex_S14.out
+  - 04-computation/h_drift_operation_congruence_and_farey_rewrite_codex_S16.py
+  - 05-knowledge/results/h_drift_operation_congruence_and_farey_rewrite_codex_S16.out
 ---
 
 # THM-841 — the violation ladder
@@ -143,6 +148,38 @@ The profile formula itself is unaffected.
 Exact replay: `thm841_no_dyadic_breakpoint_codex_S14.py/.out` checks the structural inequalities
 through `k=64` and every displayed `m_r,S_rho` identity against an independent exact circle sweep
 through `k=20`.
+
+## Exact rewrite carrier versus the coarse toothpick code
+
+There is an exact self-similar operation here, but its state is an ordered
+Farey-neighbour pair rather than a count.  A gap of `F_k` with endpoint
+denominators `(i,j)` has length `1/(ij)`.  On passing to `F_(k+1)`, it obeys
+
+```text
+(i,j) -> (i,i+j),(i+j,j)   if i+j=k+1,
+(i,j) -> (i,j)             if i+j>k+1.                   (5)
+```
+
+Farey adjacency excludes `i+j<k+1`.  The support profile on the gap is also
+determined by `(k,i,j,lambda)`, because its two multiplier chains and their
+metric extents are.  Hence the ordered pair is an operation-congruent address
+for this special interval-core refinement, even though the total endpoint
+count has no homogeneous toothpick recurrence.
+
+The first failure of the coarser divisor-chain-length code occurs at `k=6`.
+The gaps
+
+```text
+(1/4,1/3): (i,j)=(4,3),
+(3/5,2/3): (i,j)=(5,3)
+```
+
+both have chain code `(floor(6/i),floor(6/j))=(1,2)`, but the first splits at
+order seven and the second stays fixed.  Thus chain lengths, totals, and
+unlabelled tooth counts are not rewrite congruences.  An independent replay
+checks 26,573 gap transitions through order 64, with 1,259 splits and no
+rewrite ambiguity.  The theorem is scoped to the interval core
+`{1,...,k}`; it is not an arbitrary-speed LRC quotient. ∎
 
 ## Evidence log
 

@@ -1,0 +1,102 @@
+SCALE-THREE HAMMING-SIX DEPTH-THREE GEOMETRY-BATCH PROTOTYPE
+Date: 2026-07-15
+Status: exact bounded implementation/benchmark; not a full census and not an
+emptiness claim.
+
+SOURCE
+04-computation/lrc13_scale_three_hamming_six_depth_three_geometry_batch_codex_S16.cpp
+SHA-256 5b53b1cad43ac30a7c2b12c7a5fdb97513c449c10f832f7d38a190118823bc4f
+
+DESIGN
+The imported S16 depth-two engine reconstructs the 1,504 CRT contexts and
+supplies the exact rational predicates.  Contexts are processed one root mask
+at a time.  Logical depth-two lanes are transposed first by (R,x1,x2), then by
+proposed x3.  The literal parent/child component geometry is evaluated once
+per metric key and discarded immediately after all attached lanes consume it.
+
+Every attached lane still carries context index, used-label mask, labelled x1,
+labelled x2, proposed labelled x3, least later ray, and shortcut verdict.  Thus
+the cache is not a proof-state quotient.  The complete-tooth predicate is
+metric; the streaming-cap predicate is re-evaluated with the lane-specific
+least future ray.
+
+The speed-s comb intersection is streamed through only the teeth overlapping
+each current component.  It never retains all s safe bands.  With
+--literal-crosscheck, every streamed intersection is compared endpoint by
+endpoint with the original materialized-safe-band routine.
+
+REPRESENTATIVE SAME-ROOT BENCHMARK
+Command:
+  /usr/bin/time -l /tmp/c3-d3-batch \
+    --context-start 20 --context-limit 8 --mode compare --gate-audit
+
+The eight contexts are indices 20,...,27 inside the 36-context root-mask 2199
+block (stratum 2,4).  Both engines returned:
+  logical depth1 = 568
+  logical depth2 = 40,680
+  logical depth3 = 1,685,358
+  full-tooth depth3 = 1,542,729
+  streaming-dead depth3 = 138,945
+  materialized/live depth3 = 3,684
+  covering depth3 = 0
+  lane fingerprint xor = 92e6871df66247b0
+  lane fingerprint sum = 159352585f8e7074
+  per-context rows equal = yes
+
+Literal/raw metric calls versus batch metric calls:
+  depth1: 568 -> 143
+  depth2: 40,680 -> 17,447
+  depth3 (after tooth gate): 142,629 -> 86,316
+  unique (R,x1,x2,x3) keys, including teeth: 1,039,782
+
+Measured in the same process under concurrent repository load:
+  raw wall / CPU = 22.0156 / 11.8168 seconds
+  batch wall / CPU = 13.1800 / 7.38807 seconds
+  wall speedup = 1.67038
+  CPU speedup = 1.59944
+  maximum resident set size for the combined raw+batch process = 6,995,968 B
+  peak memory footprint = 7,374,080 B
+
+The timings are a benchmark, not a bound.  The exact call counts and logical
+fingerprints are the reproducible content.
+
+LITERAL-ARITHMETIC AND BUILD CHECKS
+Context 103 (the light 2,4 pilot) was run in compare mode with both
+--gate-audit and --literal-crosscheck.  All streamed comb intersections matched
+the original materialized-band routine.  Raw and batch both returned:
+  depth1,depth2,depth3 = 53,3,011,97,386
+  tooth,stream,materialized,cover = 87,184,9,629,573,0
+  fingerprint xor = 8eac81632173e3a4
+  fingerprint sum = 1e20bb79dde005cc
+
+Warning-clean -O0 and -O3 builds gave byte-identical output after removing the
+four timing fields.  An AddressSanitizer+UndefinedBehaviorSanitizer build ran
+the batch/literal-crosscheck pilot cleanly (leak detection disabled because it
+is unsupported by the platform ASan runtime).
+
+TOURNAMENT AUDIT
+Vertices are the remaining labelled rays, not metric geometries.  The pair
+observable is the difference of least legal step-39 speeds after the prefix;
+the numerical-order switch orients the edge, with increasing label as the
+unused tie realizer.  Every conditioned four-ray tournament is transitive:
+score multiset 0,1,2,3; directed triangles 0; SCC profile 1,1,1,1; one
+Hamiltonian path.  The eight-context depth-two flip histogram against raw CRT
+ray order is
+  0:10,302  1:1,009  2:5,990  3:16,233  4:6,152  5:994  6:0
+with 91,266 flips in total.  Geometry batching leaves this lane fingerprint
+unchanged.
+
+ALTERNATE-VERTEX ASSUMPTION AUDIT
+Metric-prefix geometries are useful cache vertices, but not faithful proof
+vertices.  They preserve exact residual circle components.  They destroy
+label availability, the least future speed, the conditioned ray tournament,
+and shortcut ancestry.  The faithful vertices remain labelled future-ray
+obligations decorated by metric geometry and chronology.
+
+RECOMMENDATION
+Use complete root-mask blocks as independent shards.  Within each block retain
+only the depth-one geometries and the depth-two lane ledger; reconstruct one
+depth-two parent, transpose its proposed x3 values, consume its children, and
+discard them.  This is the concrete bounded-memory route to the full gated
+depth-three/full-depth census.  Do not merge lane states merely because their
+metric prefix agrees.
