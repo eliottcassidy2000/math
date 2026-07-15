@@ -268,6 +268,30 @@ when the tail is cut**, even though uniqueness (the extremal/binary property) is
    pattern (explicit-tail transfers). Same algebraic move, opposite goals: there we bound
    the tail, here the tail IS the object.
 
+## 6b. Reconciliation with the concurrent tournament-side work (post-push integration)
+
+mac-mini-2026-07-15-S109 worked the same owner directive on the TOURNAMENT side, concurrently:
+
+- **THM-865**: the repo-internal "locker parity law" — H(D_n) ≡ 1 (mod 4) for the
+  divisibility tournament D_n of THM-853(III), hoped to follow from the divisor-pairing
+  involution — is **FALSE**: H(D_11) = 4027 ≡ 3 (mod 4); t_m odd exactly at m ∈ {11,13,16,20}
+  (m ≤ 20); the pairing mechanism is real on exit cells for composite m ≤ 18 (square cell
+  carries the parity at m = 16 — a genuine locker signature) but dies at m = 20, and primes
+  never had it.
+- **THM-866**: the repo-internal "no-holes completeness" — the x = Σd_v² level lattice is the
+  full step-8 progression floor → (n³−n)/3 — is **PROVED** by the F3 tie-splitting walk
+  (Δx = +8 on tied pairs; halts only at the transitive order).
+
+Division of labor that results: §4 here proves the *integer-side* locker law (τ-parity via
+the involution — TRUE), and THM-865 shows precisely that this truth does **not** lift to
+H(D_n) mod 4: "the locker tournament inherits the locker's definition but not its parity
+law." §5 here and THM-866 are two instances of one proof pattern — *a value-monotone
+exchange walk with an explicit certificate (integer potential w(2)=8, w(c)=5c here; the
++8 quantum there), halting only at a canonical normal form (Zeckendorf ↔ transitive order),
+whose reachability proves a no-holes statement (representable integers ↔ populated levels)*.
+Even the terminal characterizations align: "no duplicates, no adjacent indices" ↔ "no tied
+scores." The two files should be read as one lemma-pattern with two instantiations.
+
 ## 7. Errata to the prompt (for the record)
 
 - First-diagonal pair "35 − 21 = 15" should read **36 − 21 = 15** (C(9,7) = 36, octagonal
