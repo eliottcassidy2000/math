@@ -117,17 +117,25 @@ obligations, and proof-carrier interfaces.
   quartic order-three interface left by THM-810. THM-820 puts every tight
   scale-one Hamming-five row in one of two explicit uniform boxes. THM-817
   compresses the deep erosion selector to `2c_E N_R+2W-2g` without assuming
-  connected returns.
+  connected returns. THM-821 proves that, for every positive odd exception pair,
+  every return-cell/deep-component atom factors exactly through its
+  pair-indexed circular sum arc and endpoint/cusp minimum.
 - **Preserves:** strict survival of at least one interval; exact component
   lengths and endpoints; lift magnitude and residue label; left/right endpoint
   owners; signed return-cell label; and the next cover obligation.  This is the
-  smallest current carrier known to preserve the terminal escape predicate
-  under the actual recursive operation.
+  sufficient literal operation-closed carrier currently used to preserve the
+  terminal escape predicate; no minimality or descent/gluing sufficiency is
+  claimed.
+  For each THM-821 functional, the
+  pair plus exact sum arc, selector argmin, and signed margin are lossless
+  verdict coordinates; the pair index itself cannot be discarded.
 - **Forgets / guardrail:** A runner or residue tournament loses interval width
   and lift height. A collar-exit tournament loses global cover truth. A static
   equality clock sees only boundary cusps. Centre- or width-order tournaments
   on return cells lose reciprocal endpoint-owner handoffs and their incidence
-  with deep components. The dynamic carrier is bipartite, not naturally
+  with deep components. THM-821 gives explicit opposite-verdict fibres for a
+  fixed complete return cell and, separately, for one exact deep interval.
+  The dynamic carrier is bipartite, not naturally
   antisymmetric; forcing it into a tournament destroys the cover predicate.
 - **Pairwise observable:** At the collar sidecar, use the exact half-open owner-
   exit handoff. At the quartic sidecar, compare which labelled comb removes
@@ -144,19 +152,25 @@ obligations, and proof-carrier interfaces.
   flip and one Hamiltonian path. THM-820 has two realized five-cycles with the
   same labelled live graph but centres `9` and `22` and different maxima. In
   every case the tournament is telemetry; the interval/comb or cell/component
-  incidence proves the theorem.
+  incidence proves the theorem. THM-821's tournament on sixteen forgetful
+  signatures is transitive in both gauges and flips 41 edges, while the exact
+  9,974-atom fibre table—not the ranking—locates the mixed projections.
 - **Next pull:** Exhaust THM-820's two scale-one Hamming-five boxes and the
   finite Hamming-six tree, then derive the arbitrary-scale oriented-deck
   classification. At seven remaining scale-one combs, replace mean danger
   density by an overlap-debt or owner-diversity potential. On the deep side,
   seek a contradiction in the adaptive signed-cell by deep-component
-  incidence; do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)`
-  under all current arithmetic/scalar gates.
+  incidence. Use THM-821's exact atomic margin to prove that every admissible
+  `(U,x,y)` has at least one failing stalk;
+  do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)` under all
+  current arithmetic/scalar gates.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
+  THM-821,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
-  `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`, and
-  `lrc13_return_satellites_cell_classifier_codex_S10.py`.
+  `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
+  `lrc13_return_satellites_cell_classifier_codex_S10.py`, and
+  `lrc14_signed_cell_stalk_purity_codex_S10.py`.
 
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 

@@ -29,6 +29,18 @@ and the all-component selector is bounded by
 `N_R=Theta(B)`, so satellites cannot be quotiented away, but their bare centre-
 or width-order tournaments lose reciprocal endpoint-owner handoffs.
 
+THM-821 resolves the next question uniformly over positive odd exception
+pairs: the atomic stalk retains `(x,y)` together with the exact circular sum
+arc `C+R_k`, with verdict determined by its endpoint/cusp minimum and signed
+margin. Across 9,974 audited `(13,5)` atoms,
+return-only, component-only, owner, width, and event-shape projections all
+have mixed fibres, while the pair-indexed exact sum arc is pure by theorem. Thus the
+groupoid packet below is slightly overdecorated for one fixed verdict but
+retains the ancestry needed to formulate transport: endpoint owners may be
+forgotten only after the arc is formed, not before the next speed replacement
+or descent. THM-821 proves neither descent sufficiency nor restriction/gluing
+maps.
+
 These results instantiate the proposed groupoid-valued recursion more
 concretely than the original synthesis did: within the shallow metric stratum,
 the active object is the dynamic residual interval union with remaining

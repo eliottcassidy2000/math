@@ -708,25 +708,18 @@ raw/parity support, and the known scalar taxes cannot force connected,
 bounded, or sublinear return geometry.  Any uniform proof must act on the
 signed cell/deep-component incidence and its margins.
 
-THM-821 locates the first exact purity boundary inside that incidence.  Fixing
-`(x,y)=(13,5)`, an atomic obligation is the circular sum of one closed deep
-component `C` and one signed return cell `R_k`.  Its folded minimum occurs at
-an endpoint or a `9`-/`4`-cusp, so the exact circular sum arc determines its
-verdict.  The 213 deterministic THM-817 cores plus all three cells of `U_0`
-give
-
-```text
-9,974 atoms:       492 succeed,       9,482 fail.
-```
-
-Every tested separate shadow—cell label, return interval or owners, deep
-interval or owners, widths, and coarse selector event—has mixed fibres.  In
-the disconnected row, the same exact deep interval fails for `k=-1` and
-succeeds for `k=+1`.  Exact input intervals or their exact sum arc have zero
-mixed fibres.  Endpoint owners are redundant only for evaluating one fixed
-arc; they remain the ancestry that says how the arc moves under replacement,
-gcd descent, and sheet transport.  This finite result neither separates global
-rows (all 213 random rows fail) nor proves an all-size or Cech-gluing theorem.
+THM-821 now identifies that incidence at atomic resolution for every positive
+odd exception pair `x>y`. For every deep component `C` and signed return cell
+`R_k`, the pair-indexed circular sum state `((x,y),C+R_k)` determines the
+selector event, exact margin, and success verdict; global containment holds
+exactly when every such atom succeeds.  Its 9,974-atom audit has 492 successes
+and 9,482 failures and gives
+explicit liar fibres showing that a return cell alone, a deep interval alone,
+owners alone, widths, or selector-event shape can mix verdicts.  Exact input
+intervals or the exact sum arc do not mix, as the factorization proves.  The
+linear-satellite family has a uniformly failing central stalk at `(13,5)`, but
+neither that failure nor the finite mixed-fibre table is an all-core/all-pair
+row separator.
 
 THM-824 proves that assembling **all** signed return cells restores enough
 symmetry for an exact all-size compression at one fixed ratio.  Put
@@ -809,9 +802,10 @@ The uniform theorem now has two explicit residuals:
    raw/parity support and the complete `26/52/78` anti-shell ladder. THM-817
    makes the endpoint/cusp selector adaptive with size
    `2c_E N_R+2W-2g<=20B^2+22B-2g`, while proving that the current gates permit
-   `N_R=Theta(B)`. THM-821 proves for `(x,y)=(13,5)` that each atomic
-   verdict factors through its exact circular cell/component sum arc and that
-   the tested cell, component, width, owner, and event projections all mix.
+   `N_R=Theta(B)`. THM-821 factors every positive-odd-pair selector into exact
+   pair-indexed atomic sum arcs and proves that the coarser cell/component,
+   width, owner, and event projections have mixed verdict fibres in the audited
+   `(13,5)` bank.
    THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
    factors through the exact intrinsic radius budget
    `rho_(C,d)(E)+rho_d(R)<=2/169`.  Prove that every admissible core
@@ -882,15 +876,16 @@ deciding objects are therefore:
   margins, labelled phase-cell/anchor incidence, the symmetric return erosion
   of THM-782/789, THM-797's decorated divisor-class/exception-shell incidence,
   THM-803's parity-twisted support/anti-shells, and the complete owner-labelled
-  endpoint/cusp selector; THM-807 separates its mandatory linear central-return
-  component from the satellites, while THM-817 reconstructs each satellite as
-  a signed max-speed cell with endpoint owners and exposes its incidence with
-  every deep component; THM-821 proves on the fixed `(13,5)` bank that the
-  numerical atomic predicate factors through the exact circular sum arc and
-  supplies explicit liar fibres for every separate cell/deep/width/event
-  shadow tested; THM-824 proves that after assembling the symmetric full return
-  union, the same fixed-ratio conjunction factors through two extremal radii,
-  while individual satellites and dynamic owner transport do not;
+  endpoint/cusp selector; THM-807 separates its mandatory central return cell,
+  while THM-817 represents every satellite as a signed maximum-speed cell and
+  retains its left/right endpoint owners and incidence with each deep
+  component. THM-821 makes each positive-odd-pair incidence atom the
+  pair-indexed circular sum state `((x,y),C+R_k)`, whose endpoint/cusp minimum
+  and signed margin determine its verdict; the fixed `(13,5)` mixed fibres
+  prove that neither factor nor its coarse shadows can be ranked separately.
+  THM-824 proves that after assembling the symmetric full return union, the
+  same fixed-ratio conjunction factors through two extremal radii, while
+  individual satellites and dynamic owner transport do not;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed

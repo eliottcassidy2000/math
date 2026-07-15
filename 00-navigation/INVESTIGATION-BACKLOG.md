@@ -294,7 +294,9 @@
   floors, a pointwise thickness tax, and global erosion budgets, while exact
   liars rule out fixed anchors and raw component rankings. THM-797/803 add the
   signed/parity support gates, the complete `26/52/78` anti-grid ladder, and an
-  exact all-component selector.
+  exact all-component selector. THM-821 factors every odd-pair selector
+  into pair-indexed atomic circular sum arcs and proves that return-only,
+  component-only, owner, width, and event-shape projections have mixed fibres.
 - **Return-cell sharpening:** THM-807 isolates the mandatory central return
   cell. THM-817 proves that every satellite is one signed maximum-speed cell,
   with exact endpoint owners, and sharpens the selector to
@@ -302,15 +304,19 @@
   complement family has `N_R=3+1440n`, so current arithmetic/scalar gates do
   not imply connected, bounded, or sublinear return geometry. The family has
   an explicit central escape and is a method limit, not a tight candidate.
+  THM-821 upgrades that escape to a uniform failing central atomic stalk and
+  audits 9,974 `(13,5)` atoms (492 successes, 9,482 failures); the audit does
+  not yet give all-core/all-pair noncontainment.
 - **Open shallow theorem:** enumerate THM-820's two scale-one Hamming-five
   boxes and the finite Hamming-six tree, classify arbitrary five-/six-owner deck
   ramification, and prove a decreasing overlap/owner invariant at scale-one
   radius seven and above. The exact carrier is the residual interval union plus
   its legal continuation bank. THM-820's tournament-identical centre-9/centre-
   22 five-cycles and unbounded top-four SCC family rule out a bare collar graph.
-- **Open deep theorem:** rule out every surviving folded cover by proving
-  failure of the adaptive signed-return-cell by deep-component selector, or
-  force the dyadic/collar descent into THM-774/776's finite bases. For an even
+- **Open deep theorem:** rule out every surviving folded cover by proving that
+  each admissible `(U,x,y)` has at least one negative-margin atomic
+  return-cell plus deep-component stalk,
+  or force the dyadic/collar descent into THM-774/776's finite bases. For an even
   maximum `2R`, retain the exact nine-core collar
   `E_(1/13)(U^-) subset D_R union {Q>=11/13}` and its `1/12` witness obligation.
   Then treat general higher-sheet colour covers; THM-816 closes only the

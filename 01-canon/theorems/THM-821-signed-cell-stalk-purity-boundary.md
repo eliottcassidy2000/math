@@ -1,7 +1,7 @@
 ---
 id: THM-821
 title: Signed return-cell / deep-component stalk purity boundary
-status: PROVED (fixed-pair exact factorization) + FINITE-EXACT (9,974 atomic stalks; explicit mixed fibres)
+status: PROVED (pair-indexed uniform exact atomic factorization) + FINITE-EXACT at (13,5) (9,974 atomic stalks; explicit mixed fibres)
 source: codex-2026-07-15-S10 deep signed-cell continuation
 depends_on:
   - THM-803  # closed deep components and endpoint/cusp erosion selector
@@ -14,11 +14,11 @@ verification:
 
 # THM-821 — Signed return-cell / deep-component stalk purity boundary
 
-Fix the exception pair
+Let `x>y` be positive odd exception speeds and put
 
 ```text
-(x,y)=(13,5),                 (a,b)=((x+y)/2,|x-y|/2)=(9,4),
-Q(t)=||9t||+||4t||,           theta=11/13.                (1)
+(a,b)=((x+y)/2,(x-y)/2),
+Q_(x,y)(t)=||at||+||bt||,             theta=11/13.         (1)
 ```
 
 For a ten-speed core `U`, retain THM-803's closed deep set and THM-817's
@@ -39,7 +39,7 @@ S(C,k)=C+R_k                                               (3)
 an **atomic erosion stalk**.  It succeeds when
 
 ```text
-min_(t in S(C,k)) Q(t)>=theta.                             (4)
+min_(t in S(C,k)) Q_(x,y)(t)>=theta.                       (4)
 ```
 
 The sum in (3) is circular.  A proper arc is encoded exactly by its left
@@ -48,28 +48,40 @@ THM-803's deep set is closed.
 
 ## The result
 
-### A. Exact numerical factorization
+### A. Exact pair-indexed numerical factorization
 
-For the fixed functional (1), the exact circular sum arc `S(C,k)` determines
-the atomic verdict (4).  Equivalently, the pair of exact input intervals
-`(C,R_k)` determines it.  On each lifted representative of `S(C,k)`, the
-minimum is attained at an endpoint or at a cusp
+For each fixed pair in (1), the decorated sum state
+`((x,y),S(C,k))` determines the atomic verdict (4).  Equivalently, the pair
+index together with the exact input intervals `(C,R_k)` determines it.  On
+each lifted representative of `S(C,k)`, the minimum is attained at an endpoint
+or at a cusp
 
 ```text
-j/18 or j/8.                                               (5)
+j/(2a) or j/(2b),                    j in Z.               (5)
 ```
 
-Thus the exact selector argmin and the exact signed margin
+Thus, with the pair index retained, the exact selector argmin and the exact
+signed margin
 
 ```text
-mu(C,k)=min_(t in S(C,k))Q(t)-11/13                       (6)
+mu_(x,y)(C,k)=min_(t in S(C,k))Q_(x,y)(t)-11/13           (6)
 ```
 
 also determine the verdict.
 
-This is a fixed-functional factorization, not a claim that a cell label,
+This is a pair-indexed uniform atomic factorization, not a claim that the sum
+arc or argmin determines a verdict after `(x,y)` is forgotten, or that a cell label,
 component count, width, owner word, or unlabelled tournament determines the
-LRC predicate.
+LRC predicate, and not a proof that every admissible packet has a failing
+atom.
+
+The finite audit, explicit liar fibres, `U_n` family calculation, and
+tournament telemetry below specialize to
+
+```text
+(x,y)=(13,5),                    (a,b)=(9,4).             (6a)
+Q=Q_(13,5),                      mu=mu_(13,5).
+```
 
 ### B. The finite-exact stalk audit
 
@@ -179,12 +191,21 @@ bank was accidental.
 
 ## Proof
 
-For Part A, a circular sum of two connected closed arcs is a closed circular
-arc or the whole circle.  On every interval avoiding the breakpoints (5),
-both triangular waves in (1) are affine.  Their sum is affine, so its minimum
-on an arc occurs at an endpoint or at an internal breakpoint.  This is
-exactly THM-803's selector argument, now applied before merging the raw
-`C+R_k` arcs.  Since
+For Part A, put `B=max(U)`.  Every connected component `C` is contained in one
+`B`-safe band at threshold `1/11`, hence has width at most `9/(11B)`.
+THM-817 puts every `R_k` inside one maximum-speed return tooth of width at most
+`4/(143B)`.  Therefore
+
+```text
+width(C+R_k)<=9/(11B)+4/(143B)=121/(143B)<1.             (14a)
+```
+
+Thus the circular sum is a proper closed circular arc.  On every interval
+avoiding the breakpoints (5), both triangular waves in (1) are affine.  Their
+sum is affine, so its minimum on an arc occurs at an endpoint or at an internal
+breakpoint.  This argument is uniform in the positive integers `a,b`, hence in
+every odd pair `x>y`.  It is exactly THM-803's selector argument, now applied
+before merging the raw `C+R_k` arcs.  Since
 
 ```text
 E_U+closure(R_U)=union_(C,k)(C+R_k),                     (15)
@@ -277,15 +298,16 @@ purity comparison: these selected family stalks all have the same verdict.
 
 ## Endpoint ownership, ancestry, and scope
 
-For the fixed numerical predicate (4), exact endpoints of `C` and `R_k`
+For each chosen numerical predicate (4), exact endpoints of `C` and `R_k`
 already determine the sum arc.  Endpoint owners can therefore be forgotten
 *after* those intervals are given without changing this one verdict.  They
 must nevertheless remain in the theorem-bearing carrier:
 
 ```text
-(signed cell, return endpoints and owners)
-    x (deep component, deep endpoints and owners)
-    -> exact circular sum arc -> selector event and margin. (22)
+(x,y) x [(signed cell, return endpoints and owners)
+         x (deep component, deep endpoints and owners)]
+    -> ((x,y), exact circular sum arc)
+    -> selector event and mu_(x,y).                         (22)
 ```
 
 Owners record which inequality moves an endpoint under speed replacement,
@@ -297,7 +319,7 @@ The finite audit proves none of the following:
 
 - an all-size purity theorem for `cell label + deep interval`;
 - a separator for globally successful versus globally failing rows;
-- a result uniform in `(x,y)`;
+- a mixed-fibre table or liar classification uniform in `(x,y)`;
 - a bound on the number of deep or return components;
 - a Čech, nerve, sheaf, or overlap-gluing theorem.
 
@@ -324,7 +346,8 @@ bare tournament is not the proof.  The exact mixed fibres (11)--(14) and the
 factorization (15) are the theorem-bearing incidence data.  The challenged
 assumption is that return cells, deep components, owners, widths, or event
 types can be ranked separately and then used as a predicate.  Each such
-projection mixes; their exact signed incidence does not.
+projection has a mixed fibre already in the fixed `(13,5)` bank; their exact
+pair-indexed signed incidence does not.
 
 ## Reproduction and certificate digests
 

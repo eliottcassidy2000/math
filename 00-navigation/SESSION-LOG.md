@@ -63777,3 +63777,33 @@ published operation-kernel card therefore remains LTT-435, while the broader
 component/comb and return-cell carrier was renumbered LTT-436 under the
 first-pusher rule. Together they identify the exact shallow state as a residual
 interval union plus legal labelled continuations, endpoint owners, and widths.
+
+The next live-main pull proved THM-821's deep analogue, and this integration
+promoted its analytic argument uniformly to every positive odd exception pair.
+One signed return cell plus one deep component factors through the
+pair-indexed exact circular sum arc; its endpoint/cusp minimum and signed
+margin decide the atomic verdict.  The fixed `(13,5)` 9,974-atom audit has 492
+successes and 9,482 failures and explicit opposite-verdict fibres for
+return-only and component-only projections.  On THM-817's linear-satellite
+family the central atom fails uniformly.  This is not yet an all-core or
+all-pair noncontainment theorem, but it identifies the precise deep state and
+turns the next task into proving at least one negative-margin atom for every
+admissible packet.
+
+The same pull reserved THM-822 for the height-at-most-two Hamming-five kernel
+audit: the claimed 25,344-row slice is all loose, while relation/centre
+three-face fibres mix exact maxima and literal residual faces glue
+injectively.  Its canonical replay was still in progress at integration time,
+so the active shallow frontier continues to cite the finalized THM-820 boxes
+and treats THM-822 as incoming finite-slice evidence rather than arbitrary-
+height closure.
+
+A subsequent live pull reserved THM-823 for the arbitrary-scale five-deck
+boundary.  Its current scout refutes a naive scalar-capacity cutoff by an
+infinite `(1,2,3,5,10)` label family, while the bounded common-sheet bank has
+exactly five all-order-three survivors in one multiplicative orbit.  The
+mod-39 clock reaches only the `1/13` boundary, so arbitrary-lift strictness is
+still open.  This incoming signal reinforces the present routing: all-scale
+Hamming five needs sheet-compatible metric incidence, not another scalar
+capacity threshold.  THM-823 remains reserved pending its canonical proof and
+replay and is therefore not used here as a closure theorem.

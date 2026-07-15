@@ -30,7 +30,12 @@ continuations, not on the collar graph.
 THM-817 decomposes every disconnected return into signed maximum-speed cells
 and sharpens the deep selector to `2c_E N_R+2W-2g`; an exact family with
 `N_R=Theta(B)` proves that global choice must retain those satellites rather
-than assume them away.  The refined common rule is: quotient free refinement,
+than assume them away. THM-821 then proves, uniformly over positive odd
+exception pairs, that the theorem-bearing atom retains the pair and the
+circular sum arc of one return cell and
+one deep component; at `(13,5)`, either factor alone has explicit opposite-
+verdict fibres.
+The refined common rule is: quotient free refinement,
 then recurse on the full residual interval union with labelled comb and
 endpoint-owner incidence.
 
