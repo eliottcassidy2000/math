@@ -46,6 +46,15 @@ sweeps; the n=9 Lemma-A analogue is nearly free (mechanisms are n-uniform); the 
 second moment (codex handoff) stands.
 
 FILES: THM-863; THM-856 banner; HYP-6920; 4 result files. opus; S313.
+## kind-pasteur-2026-07-15-S128 (cont.16) -- DECODE stratum 1: orbits(n) = orbitsSC + orbitsNS = (2,0), (0,3), (9,13) at n=5,6,7 -- the carrier-type split FLIPS (all-SC at n=5, all-NS at n=6, mixed at n=7); the 9 confirms the opus-S310 multiplicity reconciliation; + J=4 HARVEST: 296/2002 clean, 6.33M sweeps, 116 CPU-h banked
+
+Prompt (owner): decode 2,3,22,101 via carrier multiplicities; harvest j=4.
+
+DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kappa t) and its op-partner; typing orbits by SC(K): orbitsSC = 2, 0, 9 and orbitsNS = 0, 3, 13. The n=7 value 9 = exactly the reconciliation of opus-S310's carrier histogram {1:18, 2:11, 4:1} with THM-852 freeness (mult-1 classes are non-SC and op-pair up 18 -> 9; SC carriers have even mult). NO naive parity law (the flip 2,0 / 0,3 / 9,13); the refined sequences are the next decode stratum; n=8 entries need the 404-tiling class table (engine ready, next session).
+
+J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
+
+FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
 
 ---
 ## kind-pasteur-2026-07-15-S128 (cont.15) -- THE SELF-LINE SEQUENCE ATLAS: W(n) = 8, 20, 88, 416 (Burnside-affine; excess over |X| is EVEN-n only, mirroring blue self-lines) + |Y|(n) = SC fiber mass = 52, 240, 7308 (new sequence; transpose bug caught in-session by a score-multiset census, 52 = 64-12 exact) + factorization ledger for 2,3,22,101 (101 prime; decoder open, n=7 carrier multiplicities the key); j=4 at 290/2002 clean

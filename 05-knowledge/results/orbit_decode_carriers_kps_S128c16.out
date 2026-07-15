@@ -1,0 +1,4 @@
+n=5: orbits=2 = orbitsSC 2 + orbitsNS 0
+n=6: orbits=3 = orbitsSC 0 + orbitsNS 3
+n=7: orbits=22 = orbitsSC 9 + orbitsNS 13
+DONE
