@@ -63806,3 +63806,23 @@ still open.  This incoming signal reinforces the present routing: all-scale
 Hamming five needs sheet-compatible metric incidence, not another scalar
 capacity threshold.  THM-823 remains reserved pending its canonical proof and
 replay and is therefore not used here as a closure theorem.
+
+The latest pull also reserved THM-824 for a fixed `(13,5)` symmetric-radius
+compression.  An independent exact breakpoint check confirms the provisional
+target identity
+
+```text
+{t:||9t||+||4t||>=11/13}
+  =[63/169,67/169] union [102/169,106/169],
+```
+
+two radius-`2/169` arcs centred at `5/13` and `8/13`.  The advertised global
+Minkowski-radius equivalence and replay are still in progress, so this session
+does not promote or use THM-824.  It does expose a useful next carrier for the
+all-pair problem: put the connected target arcs, rather than runners, at the
+vertices of the **symmetric-switch hypergraph**, recording whether
+`e-r,e,e+r` can occupy different target components.  An empty switch carrier
+permits a theorem-bearing radius scalar; a nonempty carrier must retain its
+deck translation and metric sidecar.  This reconciles the positive cyclic
+deck tournament with the repeated negative results for bare runner and
+component tournaments.
