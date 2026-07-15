@@ -1,0 +1,37 @@
+LRC13 SCALE-ONE HAMMING-THREE COLLAR CLOSURE — EXACT REPLAY
+arithmetic=integer+fractions.Fraction floating_point=none
+scope=all distinct labels and all three positive lift heights
+
+ORIENTED_COLLAR_HANDOFF
+core_left_collar=1/156 own_tooth_length=2/(13u) all_u>24_forces_cross_handoff
+left_handoff_phase=(-1,1] after multiplying by 13
+subunit_handoff_residue=2 inverse_residue=7 three_cycle_middle_bands={2,3,4}
+height12_stress_rows=380160 all_replacements_gt24=299475 all_three_indegrees_positive=0
+conclusion=hypothetical tight proper triple lift has a replacement in [14,24]
+
+ANALYTIC_FINITE_BOX
+ten_core_gap=2/143 radius=1/1716 safe_interval_length=1/858
+two-comb cover requires 1/y+1/z>=3/572; with v=min(y,z), v<=381
+eleven_core_gap=1/156 interval_length=1/(78v); one-tooth cover forces w<=12v
+
+FINITE_COMPONENT_CLOSURE
+canonicalization=unique least replacement x<=24; remaining labels assigned to ordered x<v<w
+exact_rows=5713539 distinct_eleven_cores=33730 tight_rows=0
+anchor_row_histogram={14: 519251, 15: 518898, 16: 518537, 17: 518168, 18: 521024, 19: 520648, 20: 520208, 21: 519813, 22: 519410, 23: 519000, 24: 518582}
+component_count_histogram={6: 9, 8: 59, 10: 402, 12: 878, 14: 1261, 16: 1548, 18: 1593, 20: 1653, 22: 1672, 24: 1611, 26: 1682, 28: 1559, 30: 1521, 32: 1511, 34: 1521, 36: 1469, 38: 1436, 40: 1307, 42: 1273, 44: 1188, 46: 1145, 48: 1069, 50: 969, 52: 843, 54: 770, 56: 654, 58: 624, 60: 467, 62: 414, 64: 375, 66: 266, 68: 251, 70: 188, 72: 176, 74: 109, 76: 82, 78: 52, 80: 45, 82: 33, 84: 18, 86: 10, 88: 7, 90: 7, 92: 3}
+failure_component_index_histogram={0: 5703830, 1: 9690, 2: 19}
+closest_first_certificate_surplus=2366/835198 row_and_component=(2, 8, 10, 21, 353, 2831, 0)
+certificate_digest=d85978aceb2f460036b3d2b1919d78381948e458c44fd7e43d23db4a1829479a
+result=every canonical row leaves a nonempty strict-safe subinterval
+
+HEIGHT_ONE_INDEPENDENT_CROSSCHECK
+rows=220 exact_piecewise_maximin_minimum=2/21 missing_label_minimizers=[(2, 5, 6), (4, 5, 6)]
+
+TOURNAMENT_TELEMETRY
+vertices=residue_owners observable=subunit_ratio_2_handoff tie_gauge=increasing_residue
+switch=reverse_live_handoffs live_edges=12 edge_flips=12
+forward_score_histogram={1: 2, 3: 2, 5: 2, 6: 2, 8: 2, 10: 2} directed_triangles=18 scc_sizes=[12] hamiltonian_paths=4029 tie_path=[8, 4, 2, 1, 12, 6, 3, 10, 5, 7, 9, 11]
+switched_score_histogram={1: 2, 3: 2, 5: 2, 6: 2, 8: 2, 10: 2} directed_triangles=18 scc_sizes=[12] hamiltonian_paths=4029 tie_path=[10, 7, 1, 2, 8, 3, 4, 12, 11, 9, 5, 6]
+interpretation=tournament_is_telemetry; proof_retains_ratios_half_open_flags_and_widths
+
+PASS: every proper labelled scale-one triple lift has M>1/13.
