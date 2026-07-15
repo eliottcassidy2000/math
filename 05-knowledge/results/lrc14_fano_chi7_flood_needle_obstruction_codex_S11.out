@@ -30,6 +30,10 @@ flood rows (edge, line, r(E), m(E), V1(E)):
   (6, 7)  line=(1, 6, 7)  r=20  m=24289/105105  V1=164
 GL(3,2) maps audited: 168
 Fano-automorphism stabilizers: r=1 (identity only), m=1 (identity only), V1=1 (identity only)
+edge-module orbit ranks r/m/V1=7/21/21 ; centered=6/20/20
+point/Fano/combined incidence ranks=7/7/13; invisible edge dimension=8
+r edge potential x=(16, 16, 14, 14, 10, 14, 6); r_ab=x_a+x_b
+m,V1 outside point+Fano span; curls m12+m67-m16-m27=1/21, V1(13)+V1(56)-V1(15)-V1(36)=48
 Tournament Analysis vertices: 21 flood bodies/K7 edges (not runners)
 pair observable: V1(F)-V1(E); switch: E->F iff V1(E)<V1(F); tie: lexicographic
 fingerprint: score_hist={0..20:1}, directed_3cycles=0, SCC_sizes=21x1, edge_flips_vs_lex=187, Hamiltonian_paths=1
@@ -40,7 +44,7 @@ scope: no Fano symmetry quotient; no local 3-needle realization of the full chi7
 scope: this diagnoses but does not close the exact-geometry flood sweeps
 quotients: body keeps (r,m,V1); obligation keeps lcm filter; needle keeps local switch order
 destroyed: lower-tree geometry; exact intervals; speed identity/cross-gap gluing, respectively
-source_sha256=cecb046b54de0cb60decd23094ccbdfbb3a911315086a8d9822c43ca5f0e91a8
+source_sha256=031cf74c8982b9cafed7951a777ab44817ec521bd3559db24fb62461940d4815
 thm741_dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
-payload_sha256=b60fec541aa5da1644ea4c30844f2ddcdb41ed9b1eeebc7e52c094383fdd66bc
+payload_sha256=fa6f826d17d34ed90d4b0b1cece236a0864677c3e67db7c89ebfd16bc16e66d0
 VERDICT: ALL EXACT ASSERTIONS PASSED

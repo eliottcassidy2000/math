@@ -1,46 +1,98 @@
 ---
 id: THM-852
-title: THE BLACK SELF-LINE LAW, STRUCTURED — 2·selfK = SC(n) (opus S311's law) carries a KLEIN-FOUR and INVOLUTION skeleton. Setup: κ = complement tiling (T(κt) = P ∪ Ā = "op modulo the base path": it differs from T(t)^op = P^op ∪ Ā exactly by re-reversing the base), g = the grid reflection (realizes op at class level: cls(gt) = cls(t)^op); quasi-fixed X = {t : cls(κt) = cls(t)}, SC-ness of cls(t) ⟺ cls(gκt) = cls(t). PROVED HERE: (i) the Klein four-group {1, g, κ, gκ} acts on X, κ freely; (ii) THE INVOLUTION LEMMA: any witness coset σ·Aut(T) with σ² ∈ Aut(T) and |Aut| ODD (always, tournaments) contains an element of 2-power order; when Aut is trivial the unique witness is an INVOLUTION — at odd n ALL quasi-fixed classes have trivial Aut (verified n=5,7: Burnside-affine W = |X| = 8, 88), so every black self-line carries a unique involutive κ-twisted symmetry, the exact analogue of the SC classes' involutive anti-automorphism; (iii) the Klein-4 orbits on X_non-gridsym ALL have full size 4 (n=5: 2 orbits; n=6: 3; the law reads SC(n) = 4·#orbits); (iv) THE n=8 CHECK REFUTES THE LAW: non-gridsym quasi-fixed = 404 ≠ 176 = SC(8) (total X = 412, gridsym-qf = 8) — the 'all n ≥ 5' law was a small-n coincidence killed at the first even n beyond its data; the S311 total-law SC + 2selfB also fails (412 ≠ 184). Pipeline certified: the identical two-pass code reproduces 8/12/88 at n=5,6,7 and gridsym-qf = 0 at odd n
-status: STRUCTURE PROVED ((i),(ii) odd-order-coset; (iii) verified n=5,6) + **THE LAW REFUTED AT n=8**: 404 ≠ 176 (run complete, pipeline certified against 8/12/88 at n=5,6,7). The law 2selfK = SC holds at n = 5,6,7 ONLY as far as is known — there is NO all-n bijection to prove; the 5,6,7 agreement is either coincidence or the shadow of a modified law (404 = 4·101 orbits-worth; the Klein-orbit granularity SURVIVES: 404 ≡ 0 mod 4). The open question is now: what does 2selfK count in general? (n=8 data: selfK = 202, selfB = 4, X = 412.)
+title: Klein-four structure and the n=8 refutation of the black self-line SC law
+status: CORRECTED - Klein structure and normalized odd-coset lemma proved; all-n count refuted at n=8; involutive direct-realizer inference impossible by the all-n path-square law
 source: kind-pasteur-2026-07-15-S128 (cont.13, overnight; owner: prove the 2selfK = SC bijection, check n=8)
-depends_on: []
-related:
-  - opus S306/S310/S311 (HYP-6860/6885/6890): the law's discovery arc (odd-n restriction was an artifact; carriers not all SC ⟹ weighted bijection needed)
-  - THM-791 (the even-n fixed-point-free involution mechanism — the SAME odd-|Aut| forcing produces involutions here)
-  - THM-466/OCF (Aut odd via Rédei-adjacent parity), THM-793 (Mode-B tower: the κ/g actions descend it)
+depends_on: [THM-466, THM-791, THM-793, THM-849]
+related: [THM-781, THM-796, THM-854, HYP-6860, HYP-6885, HYP-6890, HYP-6905]
 ---
 
 # THM-852 — structure of the black self-line law
 
 > **CORRECTION (opus-S312, 2026-07-15, THM-854 / MISTAKE-150):** the involution
 > corollary in (ii) ("when Aut is trivial the unique witness is an INVOLUTION")
-> is REFUTED by direct witness computation: at n=5 the eight witnesses have
-> cycle types (1,1,3) and (5,) — orders 3 and 5; at n=6 orders 4, 5; at n=7
-> orders 6, 10, 12. No witness at n ≤ 7 is an involution. The lemma itself is
-> correct group theory but its premise σ² ∈ Aut(T) NEVER holds for κ-witnesses:
+> is refuted by direct witness computation: at n=5 the eight witnesses have
+> cycle types (1,1,3) and (5,) — orders 3 and 5; at n=6 orders 4 and 5; at
+> n=7 orders 6, 10, and 12; at n=8 orders 4, 8, 10, and 12.  No direct
+> realizer through n=8 is an involution.  The conditional group lemma is valid
+> with the normalizer hypothesis stated below, but its square premise never
+> holds for a black kappa-witness:
 > σ² realizes the pair-flip p₀ Δ σp₀ ≠ ∅ (THM-854(1)). Witness orders obey the
-> parity law: odd order possible iff n ≡ 1, 2 (mod 4) (THM-854(3)). Items (i),
+> parity law: odd-order witnesses can occur only if n ≡ 1, 2 (mod 4)
+> (THM-854(3)). Items (i),
 > (iii), (iv) — the Klein-four action, orbit granularity, and the n=8
 > refutation — are unaffected (my independent n=8 run and codex-S14 concur:
 > 404 ≠ 176).
 
-**The dictionary.** T(κt) = P ∪ Ā and T(t)^op = P^op ∪ Ā: the complement tiling is "converse
-modulo the base path". Hence: quasi-fixed (self-line) ⟺ cls(P∪A) = cls(P∪Ā); SC ⟺ cls(P∪A) =
-cls(P^op∪Ā) = cls(gκt). The law 2selfK = SC equates the sizes of two twisted diagonals of the
-same Klein-four action — off the grid-symmetric locus.
+**The dictionary.** For `t` in the quasi-fixed locus `X`,
+`T(kappa t)=P union Abar` and `T(t)^op=P^op union Abar`: the complement
+tiling is "converse modulo the base path." In general
+`cls(g kappa t)=cls(kappa t)^op`; on `X`, quasi-fixedness gives
+`cls(kappa t)=cls(t)`, so only there may this be rewritten as
+`cls(g kappa t)=cls(t)^op=cls(P^op union Abar)`. Hence quasi-fixed (self-line)
+means `cls(P union A)=cls(P union Abar)`, whereas SC means
+`cls(P union A)=cls(P^op union Abar)`. The proposed law `2selfK=SC` equated
+the sizes of two twisted diagonals of the same Klein-four action off the
+grid-symmetric locus; THM-849 refutes that equality at `n=8`.
 
-**Involution lemma.** If σ(T) = T' with T' ≅ T via σ and σ² ∈ Aut(T), and |Aut(T)| is odd (every
-tournament, by Rédei-parity of automorphisms), then the coset σ·Aut(T) contains an element of
-2-power order; if Aut(T) = 1, σ itself satisfies σ² = 1. (⟨σ⟩ has order 2^a·b, b odd dividing
-into Aut-data; σ^b is a witness of 2-power order.) Consequently at odd n — where the referee finds
-every quasi-fixed class has TRIVIAL Aut (W = |X| exactly at n=5, 7) — each black self-line carries
-a UNIQUE involutive witness σ, mirroring the unique involutive anti-automorphism π of a trivial-Aut
-SC class. The conjectured bijection should match (t, σ) ↔ (K, π) data; the Klein-orbit granularity
-(SC = 4·#orbits) says each orbit {t, gt, κt, gκt} accounts for exactly four SC classes.
+## The conditional involution lemma
+
+Let `A` be an odd-order subgroup of a finite group and let
+`sigma in N(A) minus A` satisfy `sigma^2 in A`.  If `b` is the odd order of
+`sigma^2`, then `sigma` has order `2b` and
+
+```text
+sigma^b = sigma (sigma^2)^((b-1)/2) in sigma A
+```
+
+is an involution.  This is the valid group-extension statement behind the
+earlier proposed proof frame.  The normalizer and square hypotheses are
+structural data; oddness of `A` does not manufacture them.  Tournament
+automorphism groups have odd order, but a torsor of isomorphisms between two
+different labelled tournaments is not automatically the nontrivial coset of
+an index-two group extension.
+
+For converse, relabelling equivariance supplies the appropriate twisted
+extension and this lemma is useful for anti-automorphisms.  It does **not**
+apply automatically to the fixed-path all-tile flip.  That operation is
+indexed by the observer path `P`, and THM-854 proves the actual law
+
+```text
+sigma kappa_P = kappa_(sigma P) sigma.                      (1)
+```
+
+Consequently, for a direct realizer `sigma T=kappa_P T`,
+
+```text
+sigma^2 T
+ =kappa_(sigma P) kappa_P T
+ =Flip_(E(P) symmetric_difference E(sigma P)) T.           (2)
+```
+
+Thus `sigma^2 in Aut(T)` holds exactly when the two undirected path-edge sets
+coincide.  It is an additional path-stabilizer condition, not a consequence
+of quasi-fixedness or trivial automorphism group.  The exact THM-854 census
+finds **zero** direct black realizers satisfying it at each of `n=5,6,7,8`.
+It also finds zero involutive direct realizers.  In particular, the earlier
+claim that every odd-size black self-line has a unique involutive witness is
+false already at `n=5`.
+
+The Burnside-affine equalities `W=|X|` at `n=5,7` prove triviality of the
+automorphism groups only in those two finite censuses.  They do not prove an
+all-odd-size theorem.  At `n=8`, THM-849 independently finds all 404 black
+endpoints asymmetric while their unique direct realizers still fail (2)'s
+square condition.  The missing information is the marked pair `(P,sigma P)`.
 
 ## Evidence log
 
-- [x] Klein-4 action + free κ + orbit sizes (all 4): exact n=5,6
-- [x] Burnside-affine W(n) = Σ_{t∈X}|Aut| = 8, 20, 88 (n=5,6,7): odd-n triviality of Aut on X
-- [ ] n=8: #non-gridsym quasi-fixed =? 176 = SC(8)   [two-pass run in flight]
-- [ ] the orbit ↦ 4-SC-classes bijection (open crux)
+- [x] The Klein four acts on the quasi-fixed set; every black orbit has size
+  four for all `n` (THM-849 gives the fixed-point proof).
+- [x] Burnside-affine weighted counts are `8,20,88` at `n=5,6,7`.
+- [x] The all-size law is refuted at `n=8`: black quasi-fixed endpoints are
+  `404`, not `SC(8)=176`; total quasi-fixed endpoints are `412`, not `184`.
+- [x] The proposed direct-realizer involution application is impossible for
+  every black kappa-witness by THM-854's path-square law; its cycle and
+  path-holonomy censuses are exact at `n=5,6,7,8`.
+- [ ] Decode `selfK(n)=4,6,44,202` using marked-path holonomy rather than a
+  class-only bijection.  THM-849's endpoint-deletion audit rules out the
+  simplest unmarked lift of the numerical size-seven residual.

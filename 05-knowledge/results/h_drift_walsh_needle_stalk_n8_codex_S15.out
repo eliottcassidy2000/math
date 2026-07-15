@@ -1,0 +1,16 @@
+THM-848 OPTIONAL HASH-GUARDED N=8 GRADIENT CLASSIFIER
+======================================================================
+command: python3 04-computation/h_drift_walsh_needle_stalk_codex_S15.py --n8-atlas /tmp/n8_merged_node_rank_u16.bin
+atlas producer: 04-computation/mobius_cech_n8_node_atlas_export_codex_S13.py
+atlas format: 2^21 little-endian uint16 converse-merged node ranks
+atlas SHA256: 30debad3387a4ea0ef51108ea132115efda2ac2fcdfcc2c5c1d4d23155095835
+merged ranks: 3528
+directional-gradient-multiset cells: 3528
+max fibre: 1
+one H-seeded multiplicity-aware refinement round: COMPLETE at n=8
+all assertions: PASSED
+wall time: 106.04 seconds
+user time: 105.40 seconds
+system time: 0.16 seconds
+peak RSS: 35600 KB
+scope: finite-exact conditional on the hash-verified scratch atlas; no all-n claim

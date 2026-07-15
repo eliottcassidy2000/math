@@ -871,15 +871,34 @@ certificate clauses, and proof obligations.
   affine antipode.  The position-marked induced deck is injective, whereas its
   unpositioned multiset has exactly the bare upper-node partition.  Path
   position and affine sheet are proven necessary on this bank.
-- **Pull:** refine `c_n` until the disintegrated label products have constant
-  composition/intersection numbers, or exhibit the first obstruction to any
-  feasible coherent configuration.  Separately compute the three `S_3`
+- **Delivered coherent closure by THM-851:** colour an arrow by its exact
+  defect and merged node, then refine by the multiset of all two-arrow
+  factorization colours.  One ordered deck is discrete, and its
+  inversion-symmetric Jordan deck is exactly the reflection-orbit partition,
+  at `n=3` and every `5<=n<=7`.  Pairing complement colours reconstructs the
+  reflection quotient of lines, including blue/black.  Endpoint nodes and an
+  unlabelled midpoint-node deck still miss `1,1,36` reflection orbits at
+  `n=5,6,7`; the decisive field is the incidence
+  `(factor defect)<->(factor-node pair)`.
+- **Operation stalks by THM-848/854:** uniform full-arc-flip drift closes on
+  the Walsh needle vector `W_n`, while the directional gradient multiset is a
+  complete merged-node classifier through `n=8`.  This does not make it a
+  face/CF congruence; edge transport needs derivative-to-target incidence.
+  Likewise a black self-line realizer needs the marked path pair
+  `(P,sigma P)`: its symmetric-difference flip holonomy is destroyed by the
+  class quotient and is nonzero for every audited realizer through `n=8`.
+- **Pull:** test THM-851's one-deck separation at `n=8`, then refine the joined
+  defect/factor/gradient/path-holonomy carrier under each operation until its
+  disintegrated products and target transports are constant.  Separately
+  compute the three `S_3`
   address-transposition transport kernels; only the endpoint swap is true
   converse, so the other two measure endpoint/cut duality failure.
 - **Must preserve:** common boundary, both half endpoints, full defect word,
-  complement endpoint phase, line multiplicity, loops, and literal lower
-  equality witnesses.  Binary colour and additive deck totals are proven
-  insufficient.
+  factor-defect-to-factor-node incidence, complement endpoint phase, line
+  multiplicity, loops, literal lower equality witnesses, operation-labelled
+  target gradients, and marked-path holonomy when realizers are composed.
+  Binary colour, additive deck totals, and unlabelled neighbour histograms are
+  proven insufficient.
 - **Deliverable:** the minimal refinement of the exact defect algebra for
   which the node/ordered-sidecar colouring is equitable, or its first finite
   obstruction, then an action test under the THM-813 continued-fraction

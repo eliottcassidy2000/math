@@ -1,6 +1,6 @@
 ---
 id: THM-851
-title: One factorization deck closes the node-coloured defect algebra through n=7
+title: One factorization deck closes the node-coloured defect algebra at n=3 and n=5..7
 status: PROVED ABSTRACT CLOSURE LEMMA + FINITE-EXACT n=3..7
 source: codex-2026-07-15-S15
 depends_on: [THM-549, THM-781, THM-796, THM-818, THM-830]
@@ -15,18 +15,21 @@ verification:
 
 THM-830 identifies every fixed-path tiling with an arrow in a disjoint union
 of elementary abelian pair groupoids.  This theorem gives the exact missing
-refinement after colouring those arrows by tournament nodes.  Through `n=7`,
-one two-arrow factorization deck recovers every oriented tiling; its
-reversal-compatible version recovers exactly every grid-reflection orbit.
-Pairing the resulting colours under all-tile complementation then recovers the
-line quotient, including its node endpoints and blue/black colour.
+refinement after colouring those arrows by tournament nodes.  At `n=3` and
+for each `5<=n<=7`, one two-arrow factorization deck recovers every oriented
+tiling; its reversal-compatible version recovers exactly every
+grid-reflection orbit.  Pairing the resulting colours under all-tile
+complementation then recovers the line quotient, including its node endpoints
+and blue/black colour.  The analogous reconstruction fails at `n=4`.
 
 ## 1. The coloured pair groupoid
 
-Write
+The computation starts on the unquotiented tiling groupoid `X_n`; it does not
+start on THM-830's already complement-paired line quotient.  Write
 
 ```text
-f=f_n=floor((n-1)/2),       r=h_(n-1)=floor((n-2)^2/4).
+f=f_n=floor((n-1)/2),       r=h_(n-1)=floor((n-2)^2/4),
+h=f+r,                      m=h+r=binom(n-1,2).
 ```
 
 In each trace sheet, let `x in F_2^(f+r)` be an object and let
@@ -82,9 +85,10 @@ R^->(C)=(C,F_C^->),             R^pm(C)=(C,F_C^pm).        (7)
 ## 2. General closure lemma
 
 For any finite coloured groupoid, iteration of `R^->` stabilizes at the
-coarsest refinement of `C` having constant ordered composition numbers.
-Iteration of `R^pm` stabilizes at the coarsest inversion-invariant refinement
-having constant symmetrized, or Jordan, composition numbers.
+coarsest refinement of `C` having constant ordered composition numbers.  If
+the seed colour is inversion-invariant, `C(g)=C(g^(-1))`, iteration of
+`R^pm` stabilizes at the coarsest inversion-invariant refinement having
+constant symmetrized, or Jordan, composition numbers.
 
 Indeed, (7) only splits colour cells, so it terminates.  A fixed point says
 precisely that the number of factorizations with each ordered colour pair is
@@ -92,8 +96,10 @@ constant on every output colour; this is the intersection-number condition.
 If an equitable colour `E` refines `C`, its constant `E`-pair counts can be
 summed over the fibres `E->C`, so `E` refines `R^->(C)`.  Induction proves that
 `E` refines every iterate and hence the stable partition.  The same argument,
-with `(a,b)` and `(b,a)` summed, proves the symmetric statement.  This is the
-canonical recursive closure requested in THM-830, not a chosen feature list.
+with `(a,b)` and `(b,a)` summed, proves the symmetric statement.  For
+off-diagonal colours the unordered count is `p_(ab)+p_(ba)`, i.e. the Jordan
+coefficient before the conventional factor `1/2`.  This is the canonical
+recursive closure requested in THM-830, not a chosen feature list.
 
 ## 3. Exact closure through n=7
 
@@ -137,9 +143,10 @@ defect plus output node is not enough even to multiply colours consistently.
 
 ## 4. Precisely what must be preserved
 
-The two `alpha=0,gamma` terms in (5) first attach the identity colours at the
-source and target objects.  Those endpoint nodes explain much, but not all, of
-the refinement.  The controlled-forgetting census is:
+When `gamma!=0`, the two distinct `alpha=0,gamma` terms in (5) first attach
+the identity colours at the source and target objects.  For `gamma=0` they
+coincide.  Those endpoint nodes explain much, but not all, of the refinement.
+The controlled-forgetting census is:
 
 | `n` | symmetric `C_0` | plus endpoint nodes | unlabelled midpoint-node deck | full defect-labelled deck | missing orbits before full deck |
 |---:|---:|---:|---:|---:|---:|

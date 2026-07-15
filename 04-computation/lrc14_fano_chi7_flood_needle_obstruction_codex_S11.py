@@ -20,6 +20,9 @@ The computation certifies four exact statements:
 * none of the 167 nonidentity Fano automorphisms preserves even one of the
   exact THM-741 flood-body observables r(E), m(E), or V1(E), so this Fano
   organization is not a symmetry quotient of the numerical flood work;
+* r(E) is a seven-point additive potential, whereas m(E) and V1(E) have full
+  21-dimensional edge orbit spans and survive outside the point/Fano rank-13
+  marginal space;
 * three one-sided endpoint needles realize at most four masks and at most two
   points of the negative Fano line, including coincident switching times.
 
@@ -123,6 +126,37 @@ def needle_path(initial_mask: int, blocks: tuple[tuple[int, ...], ...]) -> tuple
     return tuple(masks)
 
 
+def rational_rank(rows: list[list[Fraction | int]]) -> int:
+    """Exact row rank over Q."""
+    if not rows:
+        return 0
+    matrix = [[Fraction(value) for value in row] for row in rows]
+    height, width = len(matrix), len(matrix[0])
+    pivot_row = 0
+    for column in range(width):
+        pivot = next(
+            (row for row in range(pivot_row, height) if matrix[row][column]),
+            None,
+        )
+        if pivot is None:
+            continue
+        matrix[pivot_row], matrix[pivot] = matrix[pivot], matrix[pivot_row]
+        scale = matrix[pivot_row][column]
+        matrix[pivot_row] = [value / scale for value in matrix[pivot_row]]
+        for row in range(height):
+            if row == pivot_row or not matrix[row][column]:
+                continue
+            factor = matrix[row][column]
+            matrix[row] = [
+                left - factor * right
+                for left, right in zip(matrix[row], matrix[pivot_row], strict=True)
+            ]
+        pivot_row += 1
+        if pivot_row == height:
+            break
+    return pivot_row
+
+
 def main() -> None:
     thm741 = load_thm741()
 
@@ -196,6 +230,66 @@ def main() -> None:
         stabilizers[name] = preserving
         assert preserving == [(1, 2, 4)]
 
+    # The three exact observables live in different K7 edge modules.
+    edges = tuple(frozenset(edge) for edge in combinations(range(1, 8), 2))
+    point_rows = [
+        [int(vertex in edge) for edge in edges]
+        for vertex in range(1, 8)
+    ]
+    fano_rows = [
+        [int(edge.issubset(set(line))) for edge in edges]
+        for line in lines
+    ]
+    point_rank = rational_rank(point_rows)
+    fano_rank = rational_rank(fano_rows)
+    point_fano_rank = rational_rank(point_rows + fano_rows)
+    assert (point_rank, fano_rank, point_fano_rank) == (7, 7, 13)
+
+    orbit_ranks = {}
+    centered_orbit_ranks = {}
+    in_point_fano_span = {}
+    for coordinate, name in enumerate(("r", "m", "V1")):
+        base = [weights[edge][coordinate] for edge in edges]
+        orbit = [
+            [
+                weights[frozenset(point_map[point] for point in edge)][coordinate]
+                for edge in edges
+            ]
+            for point_map in maps
+        ]
+        centered = [
+            [left - right for left, right in zip(row, base, strict=True)]
+            for row in orbit
+        ]
+        orbit_ranks[name] = rational_rank(orbit)
+        centered_orbit_ranks[name] = rational_rank(centered)
+        in_point_fano_span[name] = (
+            rational_rank(point_rows + fano_rows + [base]) == point_fano_rank
+        )
+    assert orbit_ranks == {"r": 7, "m": 21, "V1": 21}
+    assert centered_orbit_ranks == {"r": 6, "m": 20, "V1": 20}
+    assert in_point_fano_span == {"r": True, "m": False, "V1": False}
+
+    point_potential = {1: 16, 2: 16, 3: 14, 4: 14, 5: 10, 6: 14, 7: 6}
+    assert all(
+        weights[edge][0] == sum(point_potential[point] for point in edge)
+        for edge in edges
+    )
+    m_curl = (
+        weights[frozenset((1, 2))][1]
+        + weights[frozenset((6, 7))][1]
+        - weights[frozenset((1, 6))][1]
+        - weights[frozenset((2, 7))][1]
+    )
+    v1_curl = (
+        weights[frozenset((1, 3))][2]
+        + weights[frozenset((5, 6))][2]
+        - weights[frozenset((1, 5))][2]
+        - weights[frozenset((3, 6))][2]
+    )
+    assert m_curl == Fraction(1, 21)
+    assert v1_curl == 48
+
     # Tournament Analysis on proof carriers (the 21 flood bodies/K7 edges).
     # All V1 values are distinct, so the gauge is a transitive total order.
     assert len({row["V1"] for row in rows}) == len(rows)
@@ -248,6 +342,18 @@ def main() -> None:
         "rows": rows,
         "gl32_count": len(maps),
         "stabilizer_sizes": {name: len(value) for name, value in stabilizers.items()},
+        "edge_module": {
+            "orbit_ranks": orbit_ranks,
+            "centered_orbit_ranks": centered_orbit_ranks,
+            "point_rank": point_rank,
+            "fano_rank": fano_rank,
+            "point_plus_fano_rank": point_fano_rank,
+            "invisible_dimension": len(edges) - point_fano_rank,
+            "in_point_plus_fano_span": in_point_fano_span,
+            "r_point_potential": point_potential,
+            "m_curl": str(m_curl),
+            "V1_curl": v1_curl,
+        },
         "tournament": tournament,
         "weak_needle_paths": len(paths),
         "max_masks": max_masks,
@@ -275,6 +381,19 @@ def main() -> None:
     print(
         "Fano-automorphism stabilizers: "
         + ", ".join(f"{name}={len(value)} (identity only)" for name, value in stabilizers.items())
+    )
+    print(
+        f"edge-module orbit ranks r/m/V1={orbit_ranks['r']}/{orbit_ranks['m']}/{orbit_ranks['V1']} ; "
+        f"centered={centered_orbit_ranks['r']}/{centered_orbit_ranks['m']}/{centered_orbit_ranks['V1']}"
+    )
+    print(
+        f"point/Fano/combined incidence ranks={point_rank}/{fano_rank}/{point_fano_rank}; "
+        f"invisible edge dimension={len(edges)-point_fano_rank}"
+    )
+    print(f"r edge potential x={tuple(point_potential.values())}; r_ab=x_a+x_b")
+    print(
+        f"m,V1 outside point+Fano span; curls m12+m67-m16-m27={m_curl}, "
+        f"V1(13)+V1(56)-V1(15)-V1(36)={v1_curl}"
     )
     print("Tournament Analysis vertices: 21 flood bodies/K7 edges (not runners)")
     print("pair observable: V1(F)-V1(E); switch: E->F iff V1(E)<V1(F); tie: lexicographic")

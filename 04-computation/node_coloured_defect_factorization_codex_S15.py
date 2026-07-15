@@ -166,10 +166,18 @@ def refinement_step(
     """One exact two-factor refinement step.
 
     The returned semantic signature includes the old colour, so the operation
-    can only split cells.  In symmetric mode each factor-colour pair is sorted;
-    this forces invariance under arrow reversal.
+    can only split cells.  In symmetric mode each factor-colour pair is sorted.
+    The Jordan-closure interpretation requires the input colour to be
+    inversion-invariant; the THM-851 seed has that property.
     """
     dcount = chart.defects
+    if symmetric:
+        assert all(
+            colours[obj * dcount + defect]
+            == colours[(obj ^ chart.embedded_defect[defect]) * dcount + defect]
+            for obj in range(chart.objects)
+            for defect in range(dcount)
+        )
     signatures = []
     for obj in range(chart.objects):
         for result_defect in range(dcount):

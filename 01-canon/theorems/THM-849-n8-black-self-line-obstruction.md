@@ -4,7 +4,7 @@ title: The n=8 obstruction to the black self-line equals SC law
 status: PROVED FINITE-EXACT n=3..8 + PROVED ALL-n KLEIN AND REALIZER IDENTITIES
 source: codex-2026-07-15-S15
 depends_on: [THM-549, THM-644, THM-781, THM-793, THM-796, THM-843]
-related: [THM-409, THM-587, THM-830, HYP-6885, HYP-6890]
+related: [THM-409, THM-587, THM-830, THM-852, THM-854, HYP-6885, HYP-6890]
 verification:
   - 04-computation/n8_black_self_line_obstruction_codex_S15.py
   - 05-knowledge/results/n8_black_self_line_obstruction_codex_S15.out

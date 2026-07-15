@@ -1,13 +1,17 @@
 ---
 id: THM-850
 title: The chi-seven face-charge, cyclotomic B3 recursion, and equitable operation-congruence census
-status: PROVED (all-size face-charge intertwiner, augmented-character sign law, cyclotomic recurrence, and residue census) + FINITE-EXACT (independent replay through address depth 399; Paley fingerprints exact)
+status: PROVED (all-size face-charge intertwiner, augmented-character sign law, cyclotomic recurrence, residue census, finite Radon rank theorem, and address/carry odometer) + FINITE-EXACT (depth-399 replay, Paley fingerprints, 21-body flood incidence, three-needle obstruction, and depth-11 Radon alias)
 source: codex-2026-07-15-S15
 depends_on: [THM-830]
-related: [THM-211, THM-801, THM-841, HYP-3575, HYP-6895, HYP-6900]
+related: [THM-211, THM-741, THM-801, THM-841, HYP-3575, HYP-6895, HYP-6900]
 verification:
   - 04-computation/thm850_chi7_face_charge_referee_codex_S15.py
   - 05-knowledge/results/thm850_chi7_face_charge_referee_codex_S15.out
+  - 04-computation/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py
+  - 05-knowledge/results/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.out
+  - 04-computation/chi7_radon_carry_alias_codex_S15.py
+  - 05-knowledge/results/chi7_radon_carry_alias_codex_S15.out
 ---
 
 # THM-850 - the chi-seven face-charge law
@@ -355,12 +359,72 @@ with the right-end analogue before comparing it with any toothpick recursion.
 The full THM-841 divisor ladder includes every multiplier, so a dyadic match
 alone would still be a subladder theorem.
 
+The chi-labelled dyadic subladder does have an exact restricted self-affinity.
+Writing `a=lambda/i` and truncating after depth `H`, one has
+
+```text
+W_a^H(s)=zeta 1_(s<a)+zeta^2 1_(s<a/2)+zeta^4 1_(s<a/4)
+         +W_a^(H-3)(8s).                                  (27b)
+```
+
+This follows from `2^3=1 mod 7`. THM-841's full multiplier ladder has the
+additional odd-reciprocal birth term, so (27b) is a self-similar stalk plus a
+non-self-similar source, not a restoration of full toothpick self-similarity.
+
 ### 7.2 The `j=4` flood tail
 
-THM-741 remains `CLAIMED`; its committed aggregate 2,002-body output is not
-complete, and its `Q(E)=emptyset` flood bodies are the expensive tail.  Equations
-(20)-(21) say only that operation depth four is the first depth with neutral
-repeated-role words beyond the balanced `ABC` word.
+THM-741 remains `CLAIMED`; the shared log records `171/2002` clean bodies, not
+a complete aggregate run, and its `Q(E)=emptyset` flood bodies are the
+expensive tail.  A separate exact audit does classify that tail before the
+recursive sweeps.  There are exactly 21 flood bodies:
+
+```text
+E_(a,b)={8,9,10,11,12,13,14} union {a,b},
+1<=a<b<=7.                                                  (27a)
+```
+
+They are naturally the edges of `K_7`.  Each edge belongs to the unique Fano
+line `{a,b,a xor b}`, and the 21 edges split into seven triples.  The three
+negative Boolean masks `{3,5,6}` are themselves one of those lines.  This is
+an exact organizational bridge between the flood bank and the `chi_7` signs,
+but not a quotient symmetry: among all 168 elements of `GL(3,2)`, only the
+identity preserves any one of the exact body observables `r(E)`, `m(E)`, or
+the THM-741 threshold `V1(E)` on all 21 rows.
+
+The exact edge-module structure is sharper than the stabilizer test. Write a
+flood body as edge `{a,b}` of `K_7`. Then
+
+```text
+r_(a,b)=x_a+x_b,           x=(16,16,14,14,10,14,6).        (27c)
+```
+
+Consequently the `GL(3,2)` orbit span of `r` has rank 7 and centered rank 6.
+The orbit spans of `m` and `V1` each have the full edge-space rank 21 and
+centered rank 20. Concrete non-additive curls are
+
+```text
+m_12+m_67-m_16-m_27=1/21,
+V1_13+V1_56-V1_15-V1_36=48.                               (27d)
+```
+
+The seven point-star rows have rank 7, the seven Fano-triangle rows have rank
+7, and together they have rank 13, with only their common total shared. Thus
+point and Fano marginals leave an eight-dimensional edge field invisible;
+both `m` and `V1` have nonzero components there. The natural symmetry object
+is the defect cocycle `d_g(e)=w(ge)-w(e)`, not a nonexistent Fano quotient.
+
+There is also a local needle obstruction.  Exhausting all weak switch orders
+of three one-sided Farey endpoint needles shows that such a path visits at
+most four Boolean masks and at most two points of the negative line, including
+coincident switches.  Three endpoint needles therefore cannot realize the
+full seven-mask carrier or its negative Fano line.  A whole speed predicate
+may contribute from both ends of a cyclic gap, so this is an obstruction for
+the endpoint-needle model, not for arbitrary triples of speeds.
+
+Equations (20)-(21) still say only that operation depth four is the first
+depth with neutral repeated-role words beyond the balanced `ABC` word.  The
+Fano edge partition organizes the 21 flood inputs but does not close their
+exact interval sweeps.
 
 The falsifiable next computation is to define, from the exact safe-interval
 event complex, a canonical role map
@@ -397,14 +461,134 @@ of the S659 finite-field scout: one scalar projection saturates early and
 forgets position along its fibres, just as raw support forgets pinned and
 concurrency data.
 
+There is an exact rank theorem behind the proposed upgrade. Identify `H_r`
+with `F_7^2`, first regard `f` as a function on that residue plane, and let
+`P^1(F_7)` index the eight nonzero linear forms up to scale.  For a direction
+`v` define its seven-offset Radon family
+
+```text
+R_v f(s)=sum_(x:v dot x=s) f(x),             s in F_7.      (31)
+```
+
+Over any characteristic-zero coefficient field, a deck of `d>=1` distinct
+directions has
+
+```text
+rank {R_v:v in D}=1+6d,       kernel dimension=48-6d.      (32)
+```
+
+Indeed, the one-dimensional Fourier transform in `s` gives the Fourier slice
+identity `hat(R_v f)(k)=hat f(kv)`.  Each direction reveals its six nonzero
+frequency points, distinct projective directions intersect only at frequency
+zero, and every deck shares the same total sum.  Formula (32) follows.  In
+particular, the one `chi_7` pencil has rank 7 and a 42-dimensional kernel;
+seven directions still leave a six-dimensional kernel; all eight directions
+are necessary and sufficient to reconstruct an arbitrary function on the
+residue operation plane.
+
+There is a second, essential rank boundary before applying this theorem to
+the integer address simplex. Let
+
+```text
+S_r={(alpha,beta,gamma) in Z_(>=0)^3: alpha+beta+gamma=r}.
+```
+
+For a canonical residue `xi=(a,b,c) in {0,...,6}^3` with
+`a+b+c=r mod 7`, put
+
+```text
+L_xi=(r-a-b-c)/7.                                         (33)
+```
+
+Reduction modulo seven has the exact odometer decomposition
+
+```text
+S_r ~= disjoint-union_(xi in H_r) Comp_3(L_xi),
+(alpha,beta,gamma)=xi+7(i,j,k),                            (34)
+```
+
+where the fibre is empty for `L_xi<0` and otherwise has size
+`binom(L_xi+2,2)`. Addition of A, B, or C increments the corresponding
+residue; a `6->0` wrap increments the corresponding carry coordinate. Thus
+the carry fibre is itself a smaller three-part composition simplex with the
+same B3 recursion.
+
+At `n=14`, `r=11`, canonical residue sums are 4, 11, or 18. Consequently
+
+```text
+15 residue fibres have size 3,    33 have size 1,
+(6,6,6) is the one empty residue.                         (35)
+```
+
+Let `P:K^S_11 -> K^H_4` be scalar residue pushforward, summing address values
+within each residue fibre. Over characteristic zero,
+
+```text
+rank(P)=48,             dim ker(P)=30=15(3-1).             (36)
+```
+
+The all-direction Radon map `R` has rank 49 on the plane, so
+
+```text
+rank(RP)=48,            ker(RP)=ker(P).                    (37)
+```
+
+The complete scalar deck reconstructs the residue-aggregated value `Pf`, not
+the original 78 address values. On each of the 15 triple fibres the missing
+label is exactly which coordinate carries the extra seven: A, B, or C. The
+30-dimensional alias kernel consists of the two independent contrasts in
+each such triple. Explicitly, for every canonical `xi` with coordinate sum 4,
+a basis is
+
+```text
+1_(xi+7e_A)-1_(xi+7e_C),
+1_(xi+7e_B)-1_(xi+7e_C).                                  (37a)
+```
+
+Face triality gives a further exact organization of the eight directions:
+
+```text
+coordinate orbit: {(1,0),(0,1),(1,1)}                     size 3,
+mixed orbit:      {(1,2),(1,4),(1,6)}                     size 3,
+chi orbit:        {(1,3),(1,5)}                           size 2.             (38)
+```
+
+The coordinate-pencil line loads are, up to offset permutation,
+`(17,15,13,11,9,7,6)`. Every mixed or chi pencil has loads
+`(12,11,11,11,11,11,11)`. The charge triple `(1,2,4)` projects to direction
+`(1,3)`, and its affine offset places the 12-address line at charge zero.
+
+After splitting the 78 addresses into four channels, namely no carry and the
+A/B/C carry, the same reflection-invariant six-direction set
+
+```text
+{(1,0),(0,1),(1,2),(1,4),(1,3),(1,5)}                    (38a)
+```
+
+has channel ranks `(33,15,15,15)` and total rank 78. Five directions cannot
+work because their rank on the 33-point no-carry support is at most 31. Exact
+enumeration shows (38a) is the unique reflection-invariant six-subset with
+full channel rank. The formally triality-invariant six-set, coordinate orbit
+union mixed orbit, has ranks `(32,15,15,15)` and misses one mode. Thus true
+endpoint reflection permits a minimal six-pencil repair, while insisting on
+formal face triality requires all eight directions.
+
 The concrete metagraph target is a full finite Radon deck.  For every
 direction in `P^1(F_7)`, retain all line sums of the address-decorated tiling
 tensor on (29), together with upper/lower node classes, blue/black colour,
-and pair-groupoid defect.  The finite Fourier slice theorem makes the full
-direction deck information-complete for a function on `F_7^2`; the open test
-is whether a much smaller set of directions matches the `Omega+S2`
-classification through `n=8` and continues recursively.  THM-850 supplies
-one of those directions, not the deck.
+and pair-groupoid defect. At `r=11`, also retain the A/B/C carry role in every
+triple residue fibre. The full scalar direction deck is information-complete
+only after residue pushforward; equations (35)-(37) prove that dropping carry
+loses 30 address dimensions. A structured metagraph tensor may occupy a
+proper subspace, so the open test is its restricted rank: which directions
+and carry contrasts match the `Omega+S2` classification through `n=8` and
+remain closed recursively?
+
+This Radon construction acts on Parikh/exponent vectors. It cannot recover an
+ordered j=4 peel chronology unless the proposed role map (28) is first proved
+to commute with the relevant history operations. Word-to-Parikh is sound for
+THM-830's commuting face monoid; no corresponding commutation theorem exists
+for THM-741 histories.
 
 ## Verification record
 
@@ -418,4 +602,17 @@ The independent referee uses exact arithmetic in
 - the fixed-depth kernel direction (30);
 - all Paley fingerprints in (24), with Hamiltonian paths by subset DP.
 
-The script does not test an LRC transfer, and none is asserted here.
+The independent flood/needle audit additionally checks all 2,002 nine-body
+subsets, the 21-body characterization (27a), the seven Fano edge triples, all
+168 Fano automorphisms against `r,m,V1`, and all 104 distinct weak-order
+three-needle mask paths. It also verifies the orbit ranks, point/Fano incidence
+ranks, and curls (27c)-(27d).
+
+The Radon/carry audit checks every subset of the eight directions, obtaining
+plane rank `1+6d` and address rank `1+6d` for `d<=7`, followed by the strict
+`49/48` plane/address split at `d=8`. It independently verifies (35)-(38) and
+the exact A/B/C carry repair of all 78 addresses, including the minimal and
+unique reflection-invariant six-pencil deck (38a).
+
+Neither script closes a THM-741 sweep or tests an LRC transfer, and none is
+asserted here.

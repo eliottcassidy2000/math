@@ -1,0 +1,59 @@
+THM-848: H-DRIFT WALSH NEEDLE STALK - EXACT AUDIT
+==============================================================================
+n=4: nodes=3, layers=1, forest supports=[12], gradient cells=3, away-from-mean nodes=0
+n=5: nodes=10, layers=2, forest supports=[30, 60], gradient cells=10, away-from-mean nodes=0
+n=6: nodes=34, layers=2, forest supports=[60, 450], gradient cells=34, away-from-mean nodes=2
+n=7: nodes=272, layers=3, forest supports=[105, 1890, 2520], gradient cells=272, away-from-mean nodes=12
+
+LOW-SIZE CLOSED FORMS
+------------------------------------------------------------------------------
+n=4: b_H=(2/3)(3-H), U1=12-H: PASS
+n=5: b_H=(6c3-4H+15)/5, U1=12c3-4H+30: PASS
+n=6: b_H=(24c3-8H+60)/15, U1=24c3-3H+60: PASS
+n=4 H-fibre drift profile: 1:4/3, 3:0, 5:-4/3
+n=5 H-fibre drift profile: 1:11/5, 3:9/5, 5:7/5, 9:-3/5, 11:-1, 13:-13/5, 15:-21/5/-3
+n=6 H-fibre drift profile: 1:52/15, 3:4, 5:68/15, 9:12/5/4, 11:68/15, 13:52/15, 15:12/5/4, 17:4/3, 19:28/15, 23:-4/15/4/3, 25:4/15, 27:-12/5, 29:-28/15, 31:-44/15, 33:-4/-12/5, 37:-92/15/-68/15, 41:-76/15, 43:-92/15, 45:-36/5
+
+EXACT WALSH-LEVEL ENERGY EGF AND N=8 CORRECTION
+------------------------------------------------------------------------------
+weighted forest EGF: exp(x+2x^3 z/(1-x^2 z)); Q(w)=(1+w)/(1-w)
+E_(2r)/mu_n^2=[w^r]Q(w)^(n-2r)/(n)_(2r): PASS for all supports n=4..7
+n=8 coefficients [w^r]Q(w)^(8-2r): (12,32,12)
+n=8 level ratios (E2,E4,E6)/mu^2: (3/14,2/105,1/1680)
+n=8 variance ratio: 131/560 = 49752/8!-1; old 59/252: REFUTED
+
+N=7 FIRST DEGREE-SIX SPLIT
+------------------------------------------------------------------------------
+H                              : cells= 77, max fibre=8, drift-split=50, diffusion-split=62, separated pairs=36369
+(H,c3)                         : cells=126, max fibre=6, drift-split=28, diffusion-split=71, separated pairs=36598
+(H,c3,phase)                   : cells=162, max fibre=6, drift-split=21, diffusion-split=68, separated pairs=36682
+(H,score)                      : cells=165, max fibre=5, drift-split=20, diffusion-split=64, separated pairs=36689
+(H,c3,score,phase,depth)       : cells=211, max fibre=5, drift-split=11, diffusion-split=45, separated pairs=36775
+Walsh needle stalk             : cells=156, max fibre=6, drift-split= 0, diffusion-split=68, separated pairs=36672
+directional gradient multiset  : cells=272, max fibre=1, drift-split= 0, diffusion-split= 0, separated pairs=36856
+
+strong same-address witness:
+  n7-a106: mask=4232, H=49, c3=7, score=(1, 2, 2, 3, 3, 5, 5), phase=pure_black, depth=3, (H2,H4,H6)=(-105/4,-21/4,7/4), b_H=6
+  n7-a118: mask=648, H=49, c3=7, score=(1, 2, 2, 3, 3, 5, 5), phase=pure_black, depth=3, (H2,H4,H6)=(-105/4,-9/4,-5/4), b_H=46/7
+
+first-moment boundary of the Walsh stalk:
+  common layers=(Fraction(-345, 4), Fraction(63, 4), Fraction(3, 4))
+  diffusion values=[('n7-a002', '9332/21'), ('n7-a005', '908/3'), ('n7-a011', '1340/3'), ('n7-a023', '916/3')]
+
+TOURNAMENT ANALYSIS OF CANDIDATE NODE COLOURS
+------------------------------------------------------------------------------
+  v0 H                              : cells= 77, separated=36369, economy=36369/7
+  v1 (H,c3)                         : cells=126, separated=36598, economy=36598/7
+  v2 (H,c3,phase)                   : cells=162, separated=36682, economy=18341/4
+  v3 (H,score)                      : cells=165, separated=36689, economy=36689/8
+  v4 (H,c3,score,phase,depth)       : cells=211, separated=36775, economy=36775/8
+  v5 Walsh needle stalk             : cells=156, separated=36672, economy=4584
+  v6 directional gradient multiset  : cells=272, separated=36856, economy=36856/9
+raw fingerprint: score={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, C3=0, SCC=[1, 1, 1, 1, 1, 1, 1], HP=1
+economy fingerprint: score={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, C3=0, SCC=[1, 1, 1, 1, 1, 1, 1], HP=1, edge flips=14
+
+OPTIONAL HASH-GUARDED N=8 GRADIENT CLASSIFIER
+------------------------------------------------------------------------------
+SKIPPED: pass --n8-atlas /tmp/n8_merged_node_rank_u16.bin
+
+ALL ASSERTIONS PASSED

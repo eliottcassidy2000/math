@@ -1,15 +1,15 @@
 ---
 id: THM-841
-title: THE VIOLATION LADDER (the Benjamini–Hochberg lens on interval cores) — for λ < 1/(k+1) the FULL ORDER-STATISTIC structure of the danger indicators is exactly computable on Farey gaps. Let W(t) = #{j ≤ k : ‖jt‖ < λ} (the violation count = the density route's arc-occupancy variable). Then W is supported on the Farey-gap ends: inside the gap (a/i, b/j) of F_k, a point at distance s from a/i violates EXACTLY the multiples mi ≤ k with s < λ/(mi) (a divisor chain; nothing else — no third-fraction intrusion below 1/(k+1)), and symmetrically from b/j. Hence every ladder measure m_r(λ) = |{t : W(t) < r}| is an explicit piecewise-linear sum over gaps with breakpoints on the divisor-refined collision grid {λ = mm'/(m'j+mi)} — and the density route's factorial moments S_ρ = E[C(W,ρ)] (LEM-006's exact inputs) have the all-ρ maximal-multiplier formula below. r = 1 recovers THM-826 (m_1 = the Farey profile); the OU/BH synthesis: the violation process along t is a two-sided divisor-chain birth process on each gap
-status: PROVED (support lemma = two-line corollary of THM-826 Lemmas 1-2; the all-rho maximal-multiplier formula below closes the formerly deferred factorial-moment form) + REFEREED (m_r for r ≤ 4 and S_ρ for every 1 ≤ ρ ≤ k exact against both direct arc sweeps and independent cut-by-cut gap integration at k ∈ {4,6,8,10} over rational λ grids, zero mismatches; e.g. S_1 = 3/2, S_2 = 277/240, S_3 = 247/240, S_4 = 163/240 at k=6, λ=1/8)
-source: kind-pasteur-2026-07-15-S128 (cont.12; owner: BH/dobriban + LEM-006 merge; comprehensive-by-formula mandate)
+title: The Farey violation ladder: exact all-order profiles, one-kink collapse, and the failure of toothpick self-similarity
+status: PROVED ALL k (support, maximal-multiplier moments, sharp breakpoint collapse, and closed m_r/S_rho formulas) + EXACT REPLAY through k=20 (structural inequalities through k=64)
+source: kind-pasteur-2026-07-15-S128; sharpened codex-2026-07-15-S14/S15
 depends_on:
   - THM-826   # the r=1 rung + the two lemmas whose corollary is the support statement
 related:
   - LEM-006 (the factorial-moment E[W] Bonferroni ladder — its S_j integrals are now closed-form on interval cores)
   - THM-819 (the primitive harmonic law = m_1 at λ=1/(k+2)), THM-833 (the OU drift; W is the spatial side of the same danger bookkeeping)
   - BH/FDR reading (owner's dobriban/BH pointer): the speeds are k simultaneous tests, ‖jt‖ the p-values, W the rejection count; the ladder measures are the FDR operating characteristics of the interval core; the Farey gaps make the joint law EXACT — a rare case of fully explicit multiple-testing dependence
-  - A139250 toothpick lead (owner): the divisor-chain two-sided growth on gaps is toothpick-like self-similar accretion; the 2-adic structure of the chains (m doubling) echoes THM-466's 2-adic H digits — recorded as a lead, not a claim
+  - A139250 toothpick comparison: exact self-similarity is refuted below; the matches at dyadic sizes 1,2,4,8 are a finite mirage caused by totient totals
 ---
 
 # THM-841 — the violation ladder
@@ -54,23 +54,24 @@ and suffix of length `R` intersect in length `(L+R-g)_+`. Finally,
 Expanding `C(W,rho)` as the sum of the indicators of all `rho`-subsets of violation intervals and
 integrating proves (2)-(3).
 
-Formula (2) also gives the exact divisor-refined breakpoint taxonomy. Terms chosen from both ends can
-change slope only at
+Formula (2) gives a finite candidate grid for cross-end collisions.  Terms
+chosen from both ends could change slope only at
 
 ```text
 lambda = M N/(j N+i M),                                      (4)
 ```
 
-when the two nested fronts meet; one-sided terms are linear throughout. Thus (2) is a finite sum of
-positive parts of rational linear forms for every `rho`, including `rho>k` where all contributions
-vanish and the result is zero.
-This closes the deferred `rho`-general formula, not merely the checked cases.
+when the two nested fronts meet; one-sided terms are linear throughout.  Thus
+(2) is a finite sum of positive parts of rational linear forms for every
+`rho`, including `rho>k` where all contributions vanish.  The Farey-neighbor
+constraint eliminates every nonprimitive candidate in the theorem's lambda
+window, as the next section proves.
 
-**Scope of the toothpick lead.** Formula (2) proves nested divisor-chain algebra. It does not prove that
-its breakpoint tree obeys the A139250 toothpick recursion or any other self-similarity. The dyadic
-subchains remain a proposed comparison, not a consequence of this corollary.
+Formula (2) closes the deferred all-`rho` moment problem.  It does not create a
+toothpick recursion; the sharp collapse below refutes that proposed
+self-similarity.
 
-## Codex-S14 correction/addendum: the apparent divisor refinement collapses
+## Sharp breakpoint collapse and closed forms
 
 The preceding potential-breakpoint description is correct but not sharp.  If `i,j` are the endpoint
 denominators of a gap of `F_k`, then `i+j>k`, so

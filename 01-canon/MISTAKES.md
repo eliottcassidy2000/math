@@ -11,6 +11,33 @@ Format per entry:
 
 ---
 
+## MISTAKE-151 -- the `2(n-2k)^k` Walsh-level energy law was extrapolated from a range in which every new case lay on an accidental exactness boundary (THM-204, corrected by THM-848)
+
+- **What was claimed:** THM-204 promoted the exhaustive `n<=7` identity
+  `E_(2k)/E_0=2(n-2k)^k/(n)_(2k)` to an all-size formula and predicted
+  `Var(H)/Mean(H)^2=59/252` at `n=8`.  The corrected THM-201 still retained
+  the old variance corollary and described the monomial as the general leading
+  term.
+- **Why it is wrong:** the exact numerator is
+  `[w^k]((1+w)/(1-w))^(n-2k)=2g_k(n-2k)`.  It equals `2m^k` for `k=1,2` and
+  for `m=1`; these cases exhaust all levels through `n=7`.  The first interior
+  degree-six case is `n=8,k=3,m=2`, where the exact coefficient is `12`, not
+  `16`, so `E_6/E_0=1/1680`, not `1/1260`.
+- **Correct framing:** square the even-path-forest Walsh expansion and weight
+  each forest by `4^(number of components)`.  Its labelled EGF is
+  `exp(x+2x^3z/(1-x^2z))`; substituting `w=x^2z` gives the exact coefficient
+  above.  The corrected `n=8` variance is `131/560`, independently equal to
+  THM-589's `49752/8!-1`.
+- **Impact:** THM-204 is now a refuted-boundary notice, and THM-201's stale
+  corollary/table are repaired.  The level-two and level-four laws, every
+  terminal `m=1` level, the exhaustive `n<=7` calculations, and the conclusion
+  `n Var(H)/Mean(H)^2 -> 2` survive.  Interior levels `k>=3,m>=2` must use the
+  coefficient polynomial, not the monomial.
+- **Source:** codex-2026-07-15-S15, THM-848 and exact verifier; independent
+  check from THM-589's succession formula.
+
+---
+
 ## MISTAKE-150 -- an abstract coset-involution lemma was applied to kappa-witnesses whose squares are not automorphisms (THM-852(ii), corrected by THM-854)
 
 **Instance:** kind-pasteur-S128 (cont.13); caught by opus-S312 the same night via
@@ -37,6 +64,8 @@ ON THE ACTUAL OBJECT, not on the abstract pattern it resembles.
 
 **Cross-refs:** THM-852 (banner added), THM-854 (the parity law that replaces
 it), MISTAKE-033.
+
+---
 
 ## MISTAKE-149 -- counting full active fastest periods still counts a diagonal sheet-translation gauge (THM-788, corrected by THM-794)
 

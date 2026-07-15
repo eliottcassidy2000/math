@@ -1,0 +1,37 @@
+THM-854: PATH-RELATIVE KAPPA HOLONOMY EXACT AUDIT
+identity: sigma*kappa_P = kappa_(sigma P)*sigma
+direct realizer: sigma*T=kappa_P*T
+square law: sigma^2*T=Flip_(E(P) symmetric_difference E(sigma P))*T
+method: S15 paired equitable refinement + complete witness backtracking
+
+n=5: black=8, selfK=4, Klein_orbits=2, score_pass=16, square_in_Aut=0, involutive_realizers=0
+  cycle types: (3, 1, 1):4, (5,):4
+  |path symmetric difference|: 6:8
+  |path edge intersection|: 1:8
+  Klein orbits by holonomy: 6:2
+  holonomy x cycle type: (6, (3, 1, 1)):4, (6, (5,)):4
+n=6: black=12, selfK=6, Klein_orbits=3, score_pass=156, square_in_Aut=0, involutive_realizers=0
+  cycle types: (4, 2):8, (5, 1):4
+  |path symmetric difference|: 6:8, 8:4
+  |path edge intersection|: 1:4, 2:8
+  Klein orbits by holonomy: 6:2, 8:1
+  holonomy x cycle type: (6, (4, 2)):8, (8, (5, 1)):4
+n=7: black=88, selfK=44, Klein_orbits=22, score_pass=4540, square_in_Aut=0, involutive_realizers=0
+  cycle types: (4, 3):8, (5, 2):48, (6, 1):32
+  |path symmetric difference|: 10:40, 12:16, 8:32
+  |path edge intersection|: 0:16, 1:40, 2:32
+  Klein orbits by holonomy: 10:10, 12:4, 8:8
+  holonomy x cycle type: (10, (5, 2)):32, (10, (6, 1)):8, (12, (4, 3)):8, (12, (6, 1)):8, (8, (5, 2)):16, (8, (6, 1)):16
+n=8: black=404, selfK=202, Klein_orbits=101, score_pass=193724, square_in_Aut=0, involutive_realizers=0
+  cycle types: (4, 2, 2):128, (4, 3, 1):32, (5, 2, 1):188, (8,):56
+  |path symmetric difference|: 10:84, 12:128, 14:48, 6:136, 8:8
+  |path edge intersection|: 0:48, 1:128, 2:84, 3:8, 4:136
+  Klein orbits by holonomy: 10:21, 12:32, 14:12, 6:34, 8:2
+  holonomy x cycle type: (10, (5, 2, 1)):64, (10, (8,)):20, (12, (5, 2, 1)):124, (12, (8,)):4, (14, (4, 3, 1)):32, (14, (8,)):16, (6, (4, 2, 2)):128, (6, (8,)):8, (8, (8,)):8
+
+conditional odd-coset hypothesis: failed on every direct black realizer
+preserved datum: ordered pair of path edge sets (E(P), E(sigma P))
+destroyed by class quotient: their symmetric-difference flip holonomy
+source_sha256=87d452cda6bf2abbb01e5b53e5b3f8a96bd4a6a8d445e1d36398e7f533b4a282
+s15_dependency_sha256=8a316ef13e40d65215c2c524353d2f1e423829d7662aa5b303bbec676092e737
+ALL ASSERTIONS PASSED (65.862s)
