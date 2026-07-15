@@ -1,10 +1,27 @@
-MOBIUS/CECH N=8 FRONTIER — RESERVED CHECKPOINT
+MOBIUS/CECH N=8 LOWER-FIRST FRONTIER
+==================================================================================
+lines=1048576 n7 node ranks=32768 max=271
+literal B3 face-line triples: cells=1048576 excess=0
 
-Planned exact decision:
-  1. certify 6,880 tournament classes on all 2^21 marked-path tilings;
-  2. merge converse classes and retain the literal tiling-to-node map;
-  3. stream all 1,048,576 complement lines through Omega+B2;
-  4. save every collision witness and its first missing corewise coefficient;
-  5. disintegrate black curvature only after retaining both endpoints.
+RECURSIVE LAMBDA REFINEMENT
+  B3 lower node pairs + UABC      cells=1048158 excess=418 collision_cells=418 max=2 pairs=418
+  + tau=3                         cells=1048324 excess=252 collision_cells=252 max=2 pairs=252
+  + tau=4                         cells=1048428 excess=148 collision_cells=148 max=2 pairs=148
+  + tau=5                         cells=1048502 excess=74 collision_cells=74 max=2 pairs=74
+  + tau=6                         cells=1048524 excess=52 collision_cells=52 max=2 pairs=52
+  + tau=7                         cells=1048576 excess=0 collision_cells=0 max=1 pairs=0
+  + fixed tau=8                   cells=1048576 excess=0 collision_cells=0 max=1 pairs=0
 
-No n=8 conclusion is claimed by this reservation.
+Lambda injective=True; therefore Omega+B2 injective=True
+collision witnesses=()
+UABC closed-form failures=0; B2 skew-binomial failures=0
+S2 radix product=128000 (<2^17); full Lambda uses <=75 exact bits.
+At n=8 each tau layer has <=3 positions. Counts plus first position moments
+reconstruct every layer, so S2+M1 is an unconditional exact fallback (not needed
+if Lambda is already injective).
+
+TOURNAMENT ANALYSIS
+  vertices=the seven displayed recursive carriers
+  observable=unordered literal-line pairs separated
+  switches=retention / retention per encoded bit
+  tie Hamiltonian path=B3 -> tau3 -> tau4 -> tau5 -> tau6 -> tau7 -> fixed

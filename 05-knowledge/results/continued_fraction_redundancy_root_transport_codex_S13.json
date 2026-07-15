@@ -1,0 +1,981 @@
+{
+  "schema_version": 1,
+  "theorem": "THM-808",
+  "prime": 7,
+  "speeds": [
+    108,
+    169,
+    143,
+    213,
+    206,
+    197,
+    30,
+    162
+  ],
+  "general_identity": "d'=d-sum_a c_a*w_a^(-1) (mod p)",
+  "root_equals_token_sum_failures": 0,
+  "block_cocycle_failures": 0,
+  "block_types": [
+    {
+      "rank": 0,
+      "wall_blocks": 57,
+      "individual_events": 58,
+      "owner_counts": [
+        5,
+        8,
+        7,
+        10,
+        10,
+        9,
+        2,
+        7
+      ],
+      "occurrences": [
+        0,
+        8
+      ],
+      "root_translation_mod_prime": [
+        4
+      ],
+      "coordinate_shifts": [
+        3,
+        6,
+        0,
+        6,
+        6,
+        5,
+        6,
+        0
+      ]
+    },
+    {
+      "rank": 1,
+      "wall_blocks": 301,
+      "individual_events": 306,
+      "owner_counts": [
+        26,
+        42,
+        35,
+        53,
+        52,
+        50,
+        7,
+        41
+      ],
+      "occurrences": [
+        1,
+        7
+      ],
+      "root_translation_mod_prime": [
+        3
+      ],
+      "coordinate_shifts": [
+        3,
+        0,
+        0,
+        1,
+        6,
+        6,
+        0,
+        1
+      ]
+    },
+    {
+      "rank": 2,
+      "wall_blocks": 3,
+      "individual_events": 3,
+      "owner_counts": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "occurrences": [
+        2,
+        6
+      ],
+      "root_translation_mod_prime": [
+        3
+      ],
+      "coordinate_shifts": [
+        0,
+        6,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "rank": 3,
+      "wall_blocks": 24,
+      "individual_events": 25,
+      "owner_counts": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        1,
+        4
+      ],
+      "occurrences": [
+        3,
+        5
+      ],
+      "root_translation_mod_prime": [
+        4
+      ],
+      "coordinate_shifts": [
+        4,
+        4,
+        6,
+        1,
+        1,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "rank": 4,
+      "wall_blocks": 329,
+      "individual_events": 336,
+      "owner_counts": [
+        30,
+        47,
+        39,
+        59,
+        56,
+        53,
+        8,
+        44
+      ],
+      "occurrences": [
+        4
+      ],
+      "root_translation_mod_prime": [
+        3
+      ],
+      "coordinate_shifts": [
+        4,
+        2,
+        1,
+        6,
+        0,
+        3,
+        3,
+        5
+      ]
+    }
+  ],
+  "records": [
+    {
+      "index": 0,
+      "wall_blocks": 57,
+      "individual_events": 58,
+      "owner_counts": [
+        5,
+        8,
+        7,
+        10,
+        10,
+        9,
+        2,
+        7
+      ],
+      "owner_counts_mod_prime": [
+        5,
+        1,
+        0,
+        3,
+        3,
+        2,
+        2,
+        0
+      ],
+      "coordinate_shifts": [
+        3,
+        6,
+        0,
+        6,
+        6,
+        5,
+        6,
+        0
+      ],
+      "cocycle_delta": 4,
+      "observed_delta": 4,
+      "source_mask": 25773,
+      "target_mask": 32153,
+      "source_root": 0,
+      "target_root": 4
+    },
+    {
+      "index": 1,
+      "wall_blocks": 301,
+      "individual_events": 306,
+      "owner_counts": [
+        26,
+        42,
+        35,
+        53,
+        52,
+        50,
+        7,
+        41
+      ],
+      "owner_counts_mod_prime": [
+        5,
+        0,
+        0,
+        4,
+        3,
+        1,
+        0,
+        6
+      ],
+      "coordinate_shifts": [
+        3,
+        0,
+        0,
+        1,
+        6,
+        6,
+        0,
+        1
+      ],
+      "cocycle_delta": 3,
+      "observed_delta": 3,
+      "source_mask": 32153,
+      "target_mask": 31115,
+      "source_root": 6,
+      "target_root": 2
+    },
+    {
+      "index": 2,
+      "wall_blocks": 3,
+      "individual_events": 3,
+      "owner_counts": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "owner_counts_mod_prime": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coordinate_shifts": [
+        0,
+        6,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cocycle_delta": 3,
+      "observed_delta": 3,
+      "source_mask": 31115,
+      "target_mask": 14635,
+      "source_root": 4,
+      "target_root": 0
+    },
+    {
+      "index": 3,
+      "wall_blocks": 24,
+      "individual_events": 25,
+      "owner_counts": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        1,
+        4
+      ],
+      "owner_counts_mod_prime": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        1,
+        4
+      ],
+      "coordinate_shifts": [
+        4,
+        4,
+        6,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "cocycle_delta": 4,
+      "observed_delta": 4,
+      "source_mask": 14635,
+      "target_mask": 615,
+      "source_root": 2,
+      "target_root": 6
+    },
+    {
+      "index": 4,
+      "wall_blocks": 329,
+      "individual_events": 336,
+      "owner_counts": [
+        30,
+        47,
+        39,
+        59,
+        56,
+        53,
+        8,
+        44
+      ],
+      "owner_counts_mod_prime": [
+        2,
+        5,
+        4,
+        3,
+        0,
+        4,
+        1,
+        2
+      ],
+      "coordinate_shifts": [
+        4,
+        2,
+        1,
+        6,
+        0,
+        3,
+        3,
+        5
+      ],
+      "cocycle_delta": 3,
+      "observed_delta": 3,
+      "source_mask": 615,
+      "target_mask": 30093,
+      "source_root": 5,
+      "target_root": 1
+    },
+    {
+      "index": 5,
+      "wall_blocks": 24,
+      "individual_events": 25,
+      "owner_counts": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        1,
+        4
+      ],
+      "owner_counts_mod_prime": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        1,
+        4
+      ],
+      "coordinate_shifts": [
+        4,
+        4,
+        6,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "cocycle_delta": 4,
+      "observed_delta": 4,
+      "source_mask": 30093,
+      "target_mask": 31115,
+      "source_root": 0,
+      "target_root": 4
+    },
+    {
+      "index": 6,
+      "wall_blocks": 3,
+      "individual_events": 3,
+      "owner_counts": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "owner_counts_mod_prime": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coordinate_shifts": [
+        0,
+        6,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cocycle_delta": 3,
+      "observed_delta": 3,
+      "source_mask": 31115,
+      "target_mask": 615,
+      "source_root": 6,
+      "target_root": 2
+    },
+    {
+      "index": 7,
+      "wall_blocks": 301,
+      "individual_events": 306,
+      "owner_counts": [
+        26,
+        42,
+        35,
+        53,
+        52,
+        50,
+        7,
+        41
+      ],
+      "owner_counts_mod_prime": [
+        5,
+        0,
+        0,
+        4,
+        3,
+        1,
+        0,
+        6
+      ],
+      "coordinate_shifts": [
+        3,
+        0,
+        0,
+        1,
+        6,
+        6,
+        0,
+        1
+      ],
+      "cocycle_delta": 3,
+      "observed_delta": 3,
+      "source_mask": 615,
+      "target_mask": 14233,
+      "source_root": 4,
+      "target_root": 0
+    },
+    {
+      "index": 8,
+      "wall_blocks": 57,
+      "individual_events": 58,
+      "owner_counts": [
+        5,
+        8,
+        7,
+        10,
+        10,
+        9,
+        2,
+        7
+      ],
+      "owner_counts_mod_prime": [
+        5,
+        1,
+        0,
+        3,
+        3,
+        2,
+        2,
+        0
+      ],
+      "coordinate_shifts": [
+        3,
+        6,
+        0,
+        6,
+        6,
+        5,
+        6,
+        0
+      ],
+      "cocycle_delta": 4,
+      "observed_delta": 4,
+      "source_mask": 14233,
+      "target_mask": 6035,
+      "source_root": 2,
+      "target_root": 6
+    }
+  ],
+  "transition_audits": {
+    "block_to_root": {
+      "state_fields": [
+        "owner_counts"
+      ],
+      "target": "target_root",
+      "cells": 5,
+      "conflict_cells": 4,
+      "conflicts": [
+        {
+          "state": "((5, 8, 7, 10, 10, 9, 2, 7),)",
+          "indices": [
+            0,
+            8
+          ],
+          "targets": [
+            4,
+            6
+          ]
+        },
+        {
+          "state": "((26, 42, 35, 53, 52, 50, 7, 41),)",
+          "indices": [
+            1,
+            7
+          ],
+          "targets": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "((0, 1, 1, 1, 0, 0, 0, 0),)",
+          "indices": [
+            2,
+            6
+          ],
+          "targets": [
+            0,
+            2
+          ]
+        },
+        {
+          "state": "((2, 3, 3, 4, 4, 4, 1, 4),)",
+          "indices": [
+            3,
+            5
+          ],
+          "targets": [
+            4,
+            6
+          ]
+        }
+      ],
+      "descends_to_function": false
+    },
+    "root_block_to_root": {
+      "state_fields": [
+        "source_root",
+        "owner_counts"
+      ],
+      "target": "target_root",
+      "cells": 9,
+      "conflict_cells": 0,
+      "conflicts": [],
+      "descends_to_function": true
+    },
+    "mask_block_to_mask": {
+      "state_fields": [
+        "source_mask",
+        "owner_counts"
+      ],
+      "target": "target_mask",
+      "cells": 8,
+      "conflict_cells": 1,
+      "conflicts": [
+        {
+          "state": "(31115, (0, 1, 1, 1, 0, 0, 0, 0))",
+          "indices": [
+            2,
+            6
+          ],
+          "targets": [
+            615,
+            14635
+          ]
+        }
+      ],
+      "descends_to_function": false
+    },
+    "mask_root_block_to_mask": {
+      "state_fields": [
+        "source_mask",
+        "source_root",
+        "owner_counts"
+      ],
+      "target": "target_mask",
+      "cells": 9,
+      "conflict_cells": 0,
+      "conflicts": [],
+      "descends_to_function": true
+    }
+  },
+  "tournament_analysis": {
+    "vertices": [
+      "block_length",
+      "owner_count_block",
+      "source_root",
+      "source_mask",
+      "mask_plus_block",
+      "root_plus_block",
+      "mask_root_block",
+      "exact_gap"
+    ],
+    "pairwise_observable": "number of unordered covered-gap pairs separated by a carrier",
+    "switches": [
+      "retention",
+      "retention_per_log2_cells"
+    ],
+    "tie_hamiltonian_path": [
+      "block_length",
+      "owner_count_block",
+      "source_root",
+      "source_mask",
+      "mask_plus_block",
+      "root_plus_block",
+      "mask_root_block",
+      "exact_gap"
+    ],
+    "carrier_stats": {
+      "block_length": {
+        "cells": 5,
+        "collision_cells": 4,
+        "collision_excess": 4,
+        "collision_pairs": 4,
+        "max_multiplicity": 2,
+        "separated_pairs": 32
+      },
+      "owner_count_block": {
+        "cells": 5,
+        "collision_cells": 4,
+        "collision_excess": 4,
+        "collision_pairs": 4,
+        "max_multiplicity": 2,
+        "separated_pairs": 32
+      },
+      "source_root": {
+        "cells": 5,
+        "collision_cells": 4,
+        "collision_excess": 4,
+        "collision_pairs": 4,
+        "max_multiplicity": 2,
+        "separated_pairs": 32
+      },
+      "source_mask": {
+        "cells": 7,
+        "collision_cells": 2,
+        "collision_excess": 2,
+        "collision_pairs": 2,
+        "max_multiplicity": 2,
+        "separated_pairs": 34
+      },
+      "mask_plus_block": {
+        "cells": 8,
+        "collision_cells": 1,
+        "collision_excess": 1,
+        "collision_pairs": 1,
+        "max_multiplicity": 2,
+        "separated_pairs": 35
+      },
+      "root_plus_block": {
+        "cells": 9,
+        "collision_cells": 0,
+        "collision_excess": 0,
+        "collision_pairs": 0,
+        "max_multiplicity": 1,
+        "separated_pairs": 36
+      },
+      "mask_root_block": {
+        "cells": 9,
+        "collision_cells": 0,
+        "collision_excess": 0,
+        "collision_pairs": 0,
+        "max_multiplicity": 1,
+        "separated_pairs": 36
+      },
+      "exact_gap": {
+        "cells": 9,
+        "collision_cells": 0,
+        "collision_excess": 0,
+        "collision_pairs": 0,
+        "max_multiplicity": 1,
+        "separated_pairs": 36
+      }
+    },
+    "retention": {
+      "gauge": "retention",
+      "vertices": [
+        "block_length",
+        "owner_count_block",
+        "source_root",
+        "source_mask",
+        "mask_plus_block",
+        "root_plus_block",
+        "mask_root_block",
+        "exact_gap"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "economy": {
+      "gauge": "economy",
+      "vertices": [
+        "block_length",
+        "owner_count_block",
+        "source_root",
+        "source_mask",
+        "mask_plus_block",
+        "root_plus_block",
+        "mask_root_block",
+        "exact_gap"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "edge_flips_between_gauges": 22
+  }
+}

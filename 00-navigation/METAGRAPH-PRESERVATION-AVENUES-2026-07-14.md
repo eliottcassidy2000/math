@@ -541,6 +541,14 @@ certificate clauses, and proof obligations.
 - **Deliverable:** injectivity or the first exact collision at `n=8`; no opaque
   hash-only report.
 
+- **Delivered by THM-809:** the stronger lower-only key `Lambda` is injective
+  on all `1,048,576` lines.  The exact excess ladder is
+  `418,252,148,74,52,0,0` as `tau=3,...,7,fixed` are adjoined.  Therefore the
+  new size-three `tau=7` layer, not the upper node pair or fixed layer, closes
+  `n=8`.  The next pull is the same layer-by-layer test at `n=9`, with first
+  positional moments retained as the guaranteed repair when counts cease to
+  reconstruct a layer.
+
 ### MPA-35 — Minimize the corewise Boolean Möbius stalk
 
 - **Delivered exact definition:** for literal core `c`, the function
@@ -601,6 +609,14 @@ certificate clauses, and proof obligations.
   coefficient spectrum.
 - **Deliverable:** one exact transported-stalk automaton, or a counterexample
   proving that no bounded-degree sector is closed.
+
+- **Delivered first action/no-go by THM-808:** for `p+1` tokens covering
+  `F_p` with duplicate root `d`, a centered-Christoffel block with owner counts
+  `c_a` acts by `d'=d-sum c_a w_a^(-1)`.  On THM-778's ten-wall movie the five
+  block types act by translations `4,3,3,4,3 mod 7`.  The repeated three-wall
+  block begins twice at mask `31115` but reaches masks `14635` and `615`, so
+  `(mask,CF block)` is not a continuation state; the two source roots `4,6`
+  supply the missing transported phase.
 
 ### MPA-39 — Tutte/Smith polynomial of the staircase cover
 

@@ -1,0 +1,34 @@
+THM-808 CENTERED-CHRISTOFFEL REDUNDANCY-ROOT TRANSPORT
+==================================================================================
+prime=7 speeds=(108, 169, 143, 213, 206, 197, 30, 162)
+law: d'=d-sum_a c_a*w_a^(-1) (mod p)
+root-sum failures=0; block-cocycle failures=0
+
+FIVE EXACT FIRST-RETURN BLOCK TYPES
+  B0: walls/events=57/58 occurrences=(0, 8) root translation=(4,) counts=(5, 8, 7, 10, 10, 9, 2, 7)
+  B1: walls/events=301/306 occurrences=(1, 7) root translation=(3,) counts=(26, 42, 35, 53, 52, 50, 7, 41)
+  B2: walls/events=3/3 occurrences=(2, 6) root translation=(3,) counts=(0, 1, 1, 1, 0, 0, 0, 0)
+  B3: walls/events=24/25 occurrences=(3, 5) root translation=(4,) counts=(2, 3, 3, 4, 4, 4, 1, 4)
+  B4: walls/events=329/336 occurrences=(4,) root translation=(3,) counts=(30, 47, 39, 59, 56, 53, 8, 44)
+
+CONTINUATION DESCENT
+  block_to_root: cells=5 conflicts=4 function=False
+    witness indices=(0, 8) targets=(4, 6) state=((5, 8, 7, 10, 10, 9, 2, 7),)
+    witness indices=(1, 7) targets=(0, 2) state=((26, 42, 35, 53, 52, 50, 7, 41),)
+    witness indices=(2, 6) targets=(0, 2) state=((0, 1, 1, 1, 0, 0, 0, 0),)
+    witness indices=(3, 5) targets=(4, 6) state=((2, 3, 3, 4, 4, 4, 1, 4),)
+  root_block_to_root: cells=9 conflicts=0 function=True
+  mask_block_to_mask: cells=8 conflicts=1 function=False
+    witness indices=(2, 6) targets=(615, 14635) state=(31115, (0, 1, 1, 1, 0, 0, 0, 0))
+  mask_root_block_to_mask: cells=9 conflicts=0 function=True
+
+TOURNAMENT ANALYSIS (preservation carriers as vertices)
+  vertices=('block_length', 'owner_count_block', 'source_root', 'source_mask', 'mask_plus_block', 'root_plus_block', 'mask_root_block', 'exact_gap')
+  observable=number of unordered covered-gap pairs separated by a carrier
+  switches=('retention', 'retention_per_log2_cells'); edge flips=22
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+
+The repeated three-wall block starts twice from mask 31115 but reaches
+different masks.  The source redundancy roots differ and restore the
+observed transition.  Thus the CF block acts on the labelled/root stalk,
+not on the metagraph mask quotient alone.

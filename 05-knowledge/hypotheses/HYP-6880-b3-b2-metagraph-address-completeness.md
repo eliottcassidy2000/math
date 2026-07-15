@@ -1,7 +1,7 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL CLAIM; finite exact Omega+B2 injectivity proved through n=7 by THM-801
+status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+B2 injectivity proved through n=8 by THM-801/809
 source: codex-2026-07-15-S12
 depends_on: [THM-553, THM-796, THM-801]
 related: [THM-805, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
@@ -25,9 +25,10 @@ n       lines       Xi cells    Omega cells    Omega+B2 cells
 5          32             32             32                32
 6         512            509            510               512
 7      16,384         16,031         16,308            16,384
+8   1,048,576               -              -         1,048,576
 ```
 
-Thus `Omega+B2` is injective on literal lines through `n=7`.  At `n=7`, the
+Thus `Omega+B2` is injective on literal lines through `n=8`.  At `n=7`, the
 gap face removes 277 of `Xi`'s 353 collision excess and `B2` removes the
 remaining 76.  Inside coloured node-pair fibres, `B2`, `B3`, and their join
 leave respectively 172, 1,368, and 16 excess collisions; the two charts
@@ -50,6 +51,30 @@ counts, retaining loop multiplicity only at the endpoint-incidence marginal.
 Record every remaining collision rather than replacing a multigraph fibre by
 simple adjacency.
 
+THM-809 proves the `n=8` row by the strictly weaker lower-only key
+
+```text
+Lambda=((A,A'),(B,B'),(C,C'),UABC,S2),
+```
+
+where all six nodes are `n=7` face nodes.  No upper `n=8` node label is used.
+Its collision-excess ladder is
+
+```text
+B3 lower nodes + colour                 418
++ tau=3                                 252
++ tau=4                                 148
++ tau=5                                  74
++ tau=6                                  52
++ tau=7                                   0
++ fixed tau=8                             0.
+```
+
+Every collision before the last step is a double collision.  Thus the new
+size-three crossing layer `tau=7` is the first complete separator, while the
+fixed layer is redundant after it.  The literal B3 lower-line triple is also
+injective on all `2^20` lines, independently checking the Cech descent.
+
 The all-size claim remains deliberately open.  Even an injective finite codec
 need not be a continuation-complete state: THM-796 already proves failure of
 strong node lumpability.  A recursive theorem would have to transport the
@@ -71,19 +96,19 @@ research question is whether `Omega+B2` identifies a small closed sector of
 these coefficients.  Static equality must be tested separately from equality
 under future deletion, complement, reflection, and lift operations.
 
-The first decisive computation is `n=8`: either retain injectivity on all
-1,048,576 lines or save the first collision with its core, path-orbit
-stabilizer, and lowest missing Möbius bidegree.  See MPA-34/35.
-
-The `codex-2026-07-15-S13` continuation has reserved the streaming experiment
-`mobius_cech_n8_frontier_codex_S13.py/.out`.  The reservation makes no finite
-claim: it records that class certification, converse merging, literal
-collision witnesses, and collision-local stalk refinement must all remain in
-the same audit.
+The first undecided finite size is now `n=9`.  The exact next question is not
+merely whether the codec collides, but whether the decisive `tau=n-1` layer
+continues to remove every lower-node collision and whether its positional
+moment, rather than raw counts, first becomes necessary.
 
 ## Continued-fraction connection
 
-THM-778 supplies the exact analogy and the guardrail.  A continued-fraction
+THM-778 supplies the exact analogy and the guardrail.  THM-808 now supplies an
+actual transported coefficient: on a degree-one prime-sheet fibre, a centered
+Christoffel owner-count block acts on the duplicate root by
+`d'=d-sum c_a w_a^(-1)`.  The same block and same least-path mask can still
+have two different target masks, so the root/owner lift is genuinely needed.
+A continued-fraction
 digit is useful only with the induced substitution on its labelled token
 fibre; a metagraph address is useful only with the induced action on its
 path/core stalk.  HYP-6880 therefore asks for a transported address, not a
