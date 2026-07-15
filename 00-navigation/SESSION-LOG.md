@@ -59,13 +59,21 @@ identified the exact typed state needed by several operations, removed three
 misleading scalar extrapolations, and integrated a live closure of fourteen
 primitive-core H6 label rows.  THM-857 in the later S10 continuation above
 subsequently closes the complete proper scale-one H6 chart.
+misleading scalar extrapolations, and integrated a live closure of all twenty
+three-antipodal-pair primitive-core H6 label rows.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
 at n=3 and n=5..7; its inversion-symmetric deck recovers reflection orbits.
+At binary resolution the all-size factor rows are already closed:
+`B->(BB,KK)=(1,2^r-1)` and `K->(BK,KB,KK)=(1,1,2^r-2)`, proving that colour
+closure alone has no within-colour resolving power.
 THM-848 gives the all-n Hamiltonian-path Walsh needle formula and corrected
 energy EGF.  The gradient multiset classifies every merged node through n=8,
-but target incidence is still required for transport.  THM-854 isolates the
+but target incidence is still required for transport.  The live second-Krylov
+addendum gives a tridiagonal coefficient recurrence and an edgewise odd-cycle-
+forest current for `K`; `(H,K)` closes its drift through n=7 but has one split
+fibre at n=8, so the full Walsh/OCF stalk remains necessary. THM-854 isolates the
 marked-path square holonomy lost by class quotients.  The n=8 census in
 THM-849 refutes `2 selfK=SC`: `404 != 176`; only Klein-four divisibility and
 the path-norm obstruction survive.
@@ -98,37 +106,59 @@ consecutive failures have all 21 endpoint and total credits negative despite
 is a rank-six PSD kernel on the reflection-odd `Z/13` sector.  At full packet
 scope, centered danger indicators give the PSD completion
 `G^E_ij=c_ij-(2/13)(s_i+s_j)`; the irreducible endpoint field is a centered
-prefix--comb--comb third moment.  Tropical
+prefix--comb--comb third moment.  A ten-ratio threshold classification makes
+the very-negative projective-edge graph triangle-free and proves the strict
+all-packet bounds `MST(h)>=-237/7436` and
+`11/169+MST(h)>=19/572`.  Tropical
 deletion--contraction, a set-partition node-insertion law, and an edge-order
 tournament with graphic-rank sidecar now give exact recursive forms.  Uniform
-tree averaging closes every fixed pairwise-coprime common-scale seven-comb ray
-beyond the explicit bound `L_H>=(4363/382200)e-26c_E/g`.  The bare conditional-
-overlap tournament is transitive in all six pilots and loses the Hunter verdict.
+endpoint control closes every common-dilate seven-comb ray, with no pairwise-
+coprime hypothesis, beyond `L_H>=19e/572-(1203/70)c_E/g`.  The exact low packet
+`{5} union {8,22,36} union 8{8,22,36}` has
+`MST(h)=-941/334620` and Kruskal word `(1,3,1,1)`; its copy-plus-source shape is
+exploratory, not a claimed extremum.  The bare conditional-overlap tournament
+is transitive in all six pilots and loses the Hunter verdict.
 
 LIVE-PULL H6 DUAL: THM-815 C.2 turns each antipodal AP cusp into a vertex germ
 cap and each oriented owner/provider handoff into a multiplicative edge.  If
 all caps are evaded, a directed cycle of product at most one is necessary.
 In logarithmic coordinates this is the min-plus cycle dual of Hunter's
 max-plus spanning tree.  It closes 14 of the 20 three-antipodal-pair rows,
-leaving 903 rows with at most two pairs, six open three-pair rows, and the
-exceptional mixed-parity branch.  The accompanying THM-836 pull also proves
+and an exact 2,653,600-state residual-endpoint recursion closes the remaining
+six product-`1/16` rows. The live bank is 903 rows with at most two pairs plus
+the exceptional mixed-parity branch.  The accompanying THM-836 pull also proves
 that no universal one-numerator endpoint-grid column can close the remaining
 shell-five congruence classes; future certificates must be lift-dependent,
 multicolumn, or off the endpoint grids.
 
+LIVE-PULL H5: THM-858's complement-lcm fibre cuts close every new common-sheet
+language through effective order 21 and bound the entire residual order bank
+by 42,336.  Every surviving order is `{2,3,7}`-smooth and has no private prime
+power.  Its transitive pair tournaments lose the rejecting subset cut; the
+faithful object is a prime-power carrier hypergraph with complement fibres and
+affine owner intervals.
+
 RECURSION: the full `A+B+C-D-E-F+G` word is exact typed B3 Cech descent.  Its
 even half is the Reynolds-invariant `A+B-C` chart.  The odd chart must retain
 the geometrically distinct equal-size corner, written
-`A+B+D-C-E-F+G`; scalar cancellation of C against D loses transport.
+`A+B+D-C-E-F+G`; scalar cancellation of C against D loses transport.  More
+precisely, these seven slots are the nonempty raw Boolean moments and the
+Hunter covariance variables are their centered triangular coordinates.  The
+third centered moment `theta_(Eij)` is the image of the B3 center term: dropping
+it, dropping the A/B/C carry contrast, and cancelling the odd-chart corner are
+the same premature degree-three truncation in three operation languages.
 
-ARTIFACTS: THM-848/849/850/851/854/856; six exact S15 scripts plus the
+ARTIFACTS: THM-815/848/849/850/851/854/856/858; seven exact S15 scripts plus the
 chi7 charge referee and their stored outputs; the holistic reflection
 `node-coloured-defect-needles-radon-and-the-typed-metagraph-codex-S15.md`;
 MPA-42 and frontier/backlog/index corrections.  Fast exact replays and syntax
-checks passed, including the pulled AP-pin, shell-template, and exact
-seven-comb node/edge audits; the
-expensive n=8 H-gradient and self-line outputs were reused from their
-hash-guarded exact runs.
+checks passed.  Fresh runs reproduced the pulled 2,653,600-state AP-pin closure,
+the effective-order-21 H5 census, both default and hash-guarded n=8 Krylov
+audits, and the exact seven-comb node/edge output byte-for-byte.  The n=8
+self-line replay reproduced every mathematical row; only its elapsed-time
+footer differs from the stored output.  The projective-MST referee also
+reproduced byte-for-byte and checked both packet values against all 16,807
+labelled spanning trees.
 
 ## codex-2026-07-15-S10 continuation -- THM-858 relative ramification uniformly bounds the H5 common-sheet order bank
 

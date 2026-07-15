@@ -880,6 +880,10 @@ certificate clauses, and proof obligations.
   unlabelled midpoint-node deck still miss `1,1,36` reflection orbits at
   `n=5,6,7`; the decisive field is the incidence
   `(factor defect)<->(factor-node pair)`.
+  The binary projection is already an all-size equitable algebra:
+  blue outputs have factor counts `(BB,KK)=(1,2^r-1)`, while black outputs
+  have `(BK,KB,KK)=(1,1,2^r-2)`.  Precisely because these rows depend only on
+  output colour, binary closure has no within-colour resolving power.
 - **Operation stalks by THM-848/854:** uniform full-arc-flip drift closes on
   the Walsh needle vector `W_n`, while the directional gradient multiset is a
   complete merged-node classifier through `n=8`.  This does not make it a
@@ -932,17 +936,26 @@ certificate clauses, and proof obligations.
   reflection-even channels and is positive definite on the six odd channels.
   This gives a six-dimensional Gram description for common-scale pairwise-
   coprime packets.  Pairwise gcd changes and endpoint discrepancies are
-  separate stalks and prevent promotion to an arbitrary-packet Gram theorem.
+  separate stalks and prevent promotion of this particular rank-six
+  realization; the ambient `L^2` covariance Gram remains valid for every
+  packet.
+- **Strict projective tree margin:** at threshold `-3/676`, the complete bad
+  reduced-ratio list has ten types.  Its directed multiplicative relation is
+  triangle-free, so the complementary good-edge graph has at most two
+  components.  Combining five good edges with the second global edge level
+  gives `MST(h)>=-237/7436` and the strict seven-comb projective margin
+  `19/572`.  This is all-packet and exact; it does not assert edgewise
+  positivity.
 - **Exact recursive/tournament carrier:** tropical deletion--contraction holds,
   and insertion of a new comb is a maximum over set partitions of the old
   vertices, summing induced subtree values and one best new edge per block.
   Ordering graph edges by credit gives a transitive edge-vertex tournament;
   adjoining the graphic-matroid rank derivative recovers the Kruskal word and
   `MST(c)`.  Without the circuit/incidence sidecar the tournament is lossy.
-- **Coherent-ray closure and exact replay:** for seven pairwise-coprime reduced
-  speeds at common scale `g`,
-  `L_H>=(4363/382200)mu(E)-26c_E/g`; every fixed such ray closes beyond an
-  explicit scale.  In six exact pilots, the four successes have connected
+- **Common-dilate closure and exact replay:** for arbitrary seven distinct
+  reduced speeds at common scale `g`,
+  `L_H>=19mu(E)/572-(1203/70)c_E/g`; every fixed such ray closes beyond an explicit
+  scale, with no pairwise-coprime hypothesis.  In six exact pilots, the four successes have connected
   positive-credit graphs.  Both consecutive failures have all 21 endpoint
   discrepancies and credits negative although their projective defects are
   mostly positive.  Conditional-overlap tournaments remain transitive on both
@@ -953,10 +966,12 @@ certificate clauses, and proof obligations.
   selected-provider functional digraph contains a cycle whose weight product
   must be at most one.  In logarithmic coordinates this is the min-plus cycle
   companion to Hunter's max-plus tree.  It is not a tournament: opposite
-  germ gauges may give both arrows or neither.  This first closed 14 of the 20
-  three-antipodal-pair primitive-core H6 rows.  THM-857 subsequently closes
-  the full proper scale-one H6 chart; the former 909-row plus mixed-parity
-  residual is now a diagnosed information loss of the germ quotient.
+  germ gauges may give both arrows or neither.  This local quotient first
+  closed 14 of the 20 three-antipodal-pair primitive-core H6 rows, and a
+  subsequent 2,653,600-state residual-endpoint recursion closed the other six.
+  THM-857 then closes the full proper scale-one H6 chart; both the intermediate
+  909-row frontier and the later 903-row plus exceptional-root residual are
+  diagnosed information losses of the germ quotient, not live scale-one banks.
 - **Connection to MPA-41 and THM-850:** the same typed failure occurs three
   ways.  Factor defects need factor-node incidence, H gradients need their
   target incidence, and Hunter credits need comb/prefix incidence.  The

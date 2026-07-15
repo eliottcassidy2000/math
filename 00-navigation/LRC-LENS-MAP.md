@@ -24,9 +24,9 @@ The discrepancy ladder controls the first term; coverage and unique-owner
 rigidity live in the second.  THM-857's exact recursion ranges over all 924
 scale-one H6 deletion roots and all unbounded proper heights.  Its
 580,919,164-node logical tree has exactly one covering terminal, `2[12]`; the
-other twenty terminals are loose.  Thus the former 909 primitive-root residual
-and the exceptional mixed-parity fibre are closed at scale one, not merely
-stratified.  At equality, division by two gives core `{1,...,6}` and combs
+other twenty terminals are loose.  Thus the former 903 `f<=2` primitive-root
+residual and the exceptional mixed-parity fibre are closed at scale one, not
+merely stratified.  At equality, division by two gives core `{1,...,6}` and combs
 `{7,...,12}`; its twelve components have four zero-debt unique-owner pins.
 “Kakeya needles” here means periodic one-dimensional comb teeth acting on
 disconnected components, not a transfer of planar Kakeya dimension theory.
@@ -36,10 +36,13 @@ oriented thirteenth-grid cusp.  If `f` counts full antipodal missing pairs,
 there are exactly `2f` such cusps in the retained-core safe set.  Comparing an
 owner tooth's reach with incoming provider starts gives a weighted digraph,
 not a tournament; directed-cycle products plus ten fixed-coordinate trees
-first closed fourteen of the twenty `f=3` rows.  THM-857 subsumes that partial
-closure at scale one, while showing why the chart was useful but incomplete.
-The antipodal count is only a stratification: it destroys pair signs, exact
-endpoints, divisor obligations, height parity, and overlap.
+first closed fourteen of the twenty `f=3` rows, leaving an intermediate
+909-row frontier; the later 2,653,600-state residual recursion closed the
+other six.  THM-857 subsumes that complete `f=3` closure, the remaining 903
+`f<=2` rows, and the exceptional root at scale one, while showing why the
+chart was useful but incomplete.  The antipodal count is only a
+stratification: it destroys pair signs, exact endpoints, divisor obligations,
+height parity, and overlap.
 
 THM-858 supplies the ramified analogue.  Its vertices are not runners but
 prime-power carrier obligations.  Complement-lcm fibres turn a colour set
@@ -68,6 +71,21 @@ discrepancy from the projective density.  Hence the faithful second-order
 edge packet is `(reduced ratio, common scale, mod-13 sawtooth, endpoint
 discrepancy)`.  A maximum spanning tree gives a certified lower bound, but it
 still does not determine the full higher-order union.
+
+The projective tree part is now uniformly strict.  Below edge threshold
+`-3/676` there are exactly ten reduced ratio types, and their directed
+multiplicative graph is triangle-free.  The complementary good graph has at
+most two components, which gives
+
+```text
+MST(h)>=-237/7436,
+11/169+MST(h)>=19/572.
+```
+
+Thus the global projective layer is no longer the open obstruction.  Every
+common-dilate seven-comb ray satisfies
+`L_H>=19mu(E)/572-(1203/70)c_E/g`.  The residual is the prefix-coupled centered third
+moment on small-gcd maximizing-tree edges.
 
 This addendum also records three quotient decisions from the same session:
 
@@ -111,6 +129,9 @@ projective_pair_ratio
 pair_common_scale
 pair_mod13_sawtooth
 pair_endpoint_discrepancy
+prefix_comb_comb_third_moment
+projective_max_tree_margin
+max_tree_reciprocal_gcd_cost
 shell_lift_dependent_column_packet
 ```
 

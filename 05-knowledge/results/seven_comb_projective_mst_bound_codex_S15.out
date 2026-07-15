@@ -1,0 +1,60 @@
+SEVEN-COMB UNIVERSAL PROJECTIVE MST REFEREE
+method=integer/Fraction exact; no floating point
+covariance_identity=h_xy=<1_Dx-2/13,1_Dy-2/13>_L2
+covariance_scope=all positive integer speeds; no common-scale hypothesis
+bad_threshold=-3/676; numerator threshold=-3/4
+cutoff_proof=D>=-42 and ab>=56 imply D/ab>=-3/4
+bad_ratio_table:
+  (1,9) D/ab=-10/9 h=-10/1521
+  (1,10) D/ab=-7/5 h=-7/845
+  (1,11) D/ab=-18/11 h=-18/1859
+  (1,12) D/ab=-11/6 h=-11/1014
+  (1,25) D/ab=-22/25 h=-22/4225
+  (2,9) D/ab=-10/9 h=-10/1521
+  (2,11) D/ab=-18/11 h=-18/1859
+  (3,10) D/ab=-7/5 h=-7/845
+  (3,11) D/ab=-28/33 h=-28/5577
+  (4,9) D/ab=-10/9 h=-10/1521
+bad_directed_ratios=20
+bad_ratio_triangles=0
+bad_threshold_graph=triangle-free
+minimum_cutoff=22 because -42/23>-11/6
+minimum_h=-11/1014 ratios=[(1, 12)]
+second_cutoff=25 because -42/26>-18/11
+second_distinct_h=-18/1859 ratios=[(1, 11), (2, 11)]
+minimum_edge_graph=disjoint subgraph of x--12x; maximum_degree=2
+component_argument=bad triangle-free => good graph has at most 2 components
+connected_good_graph_bound=-9/338
+two_component_cross_cut=at least 6 pairs, so not all minimum edges
+two_component_bound=-237/7436
+universal_MST_bound=-237/7436
+seven_comb_projective_margin=19/572
+distinct_reduced_speed_reciprocal_sum<=H_7=363/140
+common_dilate_reciprocal_cost<=1203/140/g
+common_dilate_Hunter_bound=19e/572-(1203/70)c_E/g
+packet=all_negative_counterexample
+  speeds=[4, 9, 21, 32, 70, 170, 189]
+  negative_edges=21/21
+  mst=-505/1447992 maximizers=1
+  threshold_rank_word=[('-1/2714985', 1), ('-1/100555', 1), ('-1/85176', 1), ('-1/25857', 1), ('-2/31941', 1), ('-4/17745', 1)]
+  chosen=[(170, 189, '-1/2714985'), (21, 170, '-1/100555'), (32, 189, '-1/85176'), (9, 170, '-1/25857'), (4, 189, '-2/31941'), (9, 70, '-4/17745')]
+  tournament={'vertices': 21, 'score_histogram': Counter({20: 1, 19: 1, 18: 1, 17: 1, 16: 1, 15: 1, 14: 1, 13: 1, 12: 1, 11: 1, 10: 1, 9: 1, 8: 1, 7: 1, 6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}), 'directed_3cycles': 0, 'sccs': 21, 'hamiltonian_paths': 1, 'tie_blocks': [(1, 15), (2, 1), (4, 1)], 'tie_gauge_flips': 7}
+packet=toothpick_candidate
+  speeds=[5, 8, 22, 36, 64, 176, 288]
+  negative_edges=20/21
+  mst=-941/334620 maximizers=2
+  threshold_rank_word=[('1/20280', 1), ('-1/14872', 3), ('-2/5577', 1), ('-7/3042', 1)]
+  chosen=[(5, 288, '1/20280'), (5, 176, '-1/14872'), (22, 64, '-1/14872'), (22, 288, '-1/14872'), (22, 36, '-2/5577'), (8, 288, '-7/3042')]
+  tournament={'vertices': 21, 'score_histogram': Counter({20: 1, 19: 1, 18: 1, 17: 1, 16: 1, 15: 1, 14: 1, 13: 1, 12: 1, 11: 1, 10: 1, 9: 1, 8: 1, 7: 1, 6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}), 'directed_3cycles': 0, 'sccs': 21, 'hamiltonian_paths': 1, 'tie_blocks': [(1, 6), (2, 1), (3, 3), (4, 1)], 'tie_gauge_flips': 16}
+toothpick_shape={5} union A union 8A, A={8,22,36}
+toothpick_status=SEARCH_ONLY; exact value audited, global minimum NOT claimed
+TOURNAMENT ANALYSIS
+vertices=21 pair-overlap obligations (alternate carrier, not runners)
+pairwise_observable=sign(h_e-h_f)
+tie_gauge=lexicographic endpoint order
+tie_Hamiltonian_path=descending (h_e, gauge) edge order
+rank_derivative=graphic rank increase at each h-level
+preserves=Kruskal order only when weights, labels, and graphic incidence remain attached
+destroys=pure tournament forgets numerical gaps, endpoints, cuts, and MST value
+assumption_challenge=tournament vertices need not be runners; here they are proof edges
+RESULT=PASS
