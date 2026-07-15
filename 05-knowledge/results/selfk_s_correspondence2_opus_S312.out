@@ -1,0 +1,5 @@
+anti-pairs: 960
+S-correspondence per-anti-pair histogram: {0: 960}
+   cycle type (1, 2, 2): {0: 960}, orbits example: 6
+total black (Y,pi,S) = 0;  n!*SC = 960
+(92s)

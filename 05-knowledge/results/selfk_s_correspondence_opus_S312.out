@@ -1,0 +1,12 @@
+n=4: qf triples: black=0, blue=2; anti-pairs=48 = 24*2 (SC=2)
+   M_black == n!*SC ? 0 vs 48: False
+   M_total == n!*(weighted qf) sanity: M_tot=2
+   S-correspondence multiplicity histogram over anti-pairs: {0: 48}
+   total valid (Y,pi,S) black triples = 0 (M_black = 0)
+   (0s)
+n=5: qf triples: black=8, blue=0; anti-pairs=960 = 120*8 (SC=8)
+   M_black == n!*SC ? 8 vs 960: False
+   M_total == n!*(weighted qf) sanity: M_tot=8
+   S-correspondence multiplicity histogram over anti-pairs: {0: 960}
+   total valid (Y,pi,S) black triples = 0 (M_black = 8)
+   (43s)

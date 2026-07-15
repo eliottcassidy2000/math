@@ -1,0 +1,15 @@
+
+===== n=5 (black qf tilings: 8, SC: 8) [0s]
+qf-side (t,pi) mass by witness type (total = weighted = 8):
+    (1, 1, 3): 4
+    (5,): 4
+anti-side mass by type (total/n! = SC = 8):
+    (1, 2, 2): 960 = n!*8
+
+===== n=6 (black qf tilings: 12, SC: 12) [4s]
+qf-side (t,pi) mass by witness type (total = weighted = 12):
+    (1, 5): 4
+    (2, 4): 8
+anti-side mass by type (total/n! = SC = 12):
+    (2, 2, 2): 7680 = n!*10.6667
+    (6,): 960 = n!*1.33333

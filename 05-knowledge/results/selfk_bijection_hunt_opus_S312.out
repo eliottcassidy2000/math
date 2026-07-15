@@ -1,0 +1,179 @@
+
+================= n=5: qf=8 black=8 blue=0 SC=8  law black==SC: True
+WEIGHTED: total=8, black=8 (if all-Aut-1 these equal 8, 8)
+black carriers: 2 classes
+   class 1: qfblack=4, H=11, Aut=1, x=8, SC
+   class 2: qfblack=4, H=13, Aut=1, x=8, SC
+SC classes (8):
+   class 0: H=9, Aut=1, x=16, fiber=9
+   class 1: H=11, Aut=1, x=8, fiber=11
+   class 2: H=13, Aut=1, x=8, fiber=13
+   class 3: H=9, Aut=1, x=16, fiber=9
+   class 5: H=15, Aut=5, x=0, fiber=3
+   class 6: H=15, Aut=3, x=8, fiber=5
+   class 9: H=3, Aut=3, x=32, fiber=1
+   class 11: H=1, Aut=1, x=40, fiber=1
+x-multiset match (black qf tilings vs SC classes): False
+   black x: [8, 8, 8, 8, 8, 8, 8, 8]
+   SC    x: [0, 8, 8, 8, 16, 16, 32, 40]
+H-multiset match: False
+   black H: [11, 11, 11, 11, 13, 13, 13, 13]
+   SC    H: [1, 3, 9, 9, 11, 13, 15, 15]
+
+================= n=6: qf=16 black=12 blue=4 SC=12  law black==SC: True
+WEIGHTED: total=20, black=12 (if all-Aut-1 these equal 16, 12)
+black carriers: 6 classes
+   class 7: qfblack=2, H=15, Aut=1, x=38, NS(rev=10)
+   class 10: qfblack=2, H=15, Aut=1, x=38, NS(rev=7)
+   class 23: qfblack=2, H=43, Aut=1, x=6, NS(rev=24)
+   class 24: qfblack=2, H=43, Aut=1, x=6, NS(rev=23)
+   class 28: qfblack=2, H=25, Aut=1, x=22, NS(rev=31)
+   class 31: qfblack=2, H=25, Aut=1, x=22, NS(rev=28)
+SC classes (12):
+   class 0: H=17, Aut=1, x=38, fiber=17
+   class 1: H=29, Aut=1, x=22, fiber=29
+   class 2: H=29, Aut=1, x=22, fiber=29
+   class 13: H=45, Aut=3, x=6, fiber=15
+   class 14: H=41, Aut=1, x=6, fiber=41
+   class 22: H=45, Aut=3, x=6, fiber=15
+   class 27: H=33, Aut=1, x=22, fiber=33
+   class 33: H=37, Aut=1, x=22, fiber=37
+   class 35: H=17, Aut=1, x=38, fiber=17
+   class 42: H=9, Aut=9, x=54, fiber=1
+   class 48: H=5, Aut=1, x=54, fiber=5
+   class 55: H=1, Aut=1, x=70, fiber=1
+x-multiset match (black qf tilings vs SC classes): False
+   black x: [6, 6, 6, 6, 22, 22, 22, 22, 38, 38, 38, 38]
+   SC    x: [6, 6, 6, 22, 22, 22, 22, 38, 38, 54, 54, 70]
+H-multiset match: False
+   black H: [15, 15, 15, 15, 25, 25, 25, 25, 43, 43, 43, 43]
+   SC    H: [1, 5, 9, 17, 17, 29, 29, 33, 37, 41, 45, 45]
+
+================= n=7: qf=88 black=88 blue=0 SC=88  law black==SC: True
+WEIGHTED: total=88, black=88 (if all-Aut-1 these equal 88, 88)
+black carriers: 30 classes
+   class 35: qfblack=2, H=123, Aut=1, x=24, NS(rev=195)
+   class 54: qfblack=2, H=139, Aut=1, x=16, NS(rev=260)
+   class 56: qfblack=4, H=133, Aut=1, x=16, NS(rev=268)
+   class 74: qfblack=4, H=153, Aut=1, x=8, SC
+   class 79: qfblack=4, H=139, Aut=1, x=16, NS(rev=119)
+   class 101: qfblack=4, H=117, Aut=1, x=24, SC
+   class 119: qfblack=4, H=139, Aut=1, x=16, NS(rev=79)
+   class 123: qfblack=2, H=137, Aut=1, x=16, NS(rev=197)
+   class 133: qfblack=2, H=75, Aut=1, x=40, NS(rev=227)
+   class 134: qfblack=2, H=67, Aut=1, x=40, NS(rev=333)
+   class 139: qfblack=4, H=151, Aut=1, x=8, SC
+   class 146: qfblack=4, H=133, Aut=1, x=16, SC
+   class 147: qfblack=4, H=147, Aut=1, x=8, SC
+   class 149: qfblack=2, H=109, Aut=1, x=24, NS(rev=238)
+   class 195: qfblack=2, H=123, Aut=1, x=24, NS(rev=35)
+   class 197: qfblack=2, H=137, Aut=1, x=16, NS(rev=123)
+   class 215: qfblack=4, H=125, Aut=1, x=16, SC
+   class 227: qfblack=2, H=75, Aut=1, x=40, NS(rev=133)
+   class 238: qfblack=2, H=109, Aut=1, x=24, NS(rev=149)
+   class 240: qfblack=2, H=117, Aut=1, x=24, NS(rev=245)
+   class 245: qfblack=2, H=117, Aut=1, x=24, NS(rev=240)
+   class 260: qfblack=2, H=139, Aut=1, x=16, NS(rev=54)
+   class 264: qfblack=2, H=151, Aut=1, x=8, NS(rev=269)
+   class 268: qfblack=4, H=133, Aut=1, x=16, NS(rev=56)
+   class 269: qfblack=2, H=151, Aut=1, x=8, NS(rev=264)
+   class 293: qfblack=8, H=159, Aut=1, x=8, SC
+   class 296: qfblack=2, H=143, Aut=1, x=16, NS(rev=339)
+   class 333: qfblack=2, H=67, Aut=1, x=40, NS(rev=134)
+   class 337: qfblack=4, H=141, Aut=1, x=16, SC
+   class 339: qfblack=2, H=143, Aut=1, x=16, NS(rev=296)
+SC classes (88):
+   class 0: H=31, Aut=1, x=72, fiber=31
+   class 1: H=69, Aut=1, x=48, fiber=69
+   class 6: H=75, Aut=1, x=40, fiber=75
+   class 17: H=41, Aut=1, x=64, fiber=41
+   class 20: H=27, Aut=1, x=72, fiber=27
+   class 26: H=129, Aut=1, x=24, fiber=129
+   class 27: H=137, Aut=1, x=16, fiber=137
+   class 30: H=145, Aut=1, x=16, fiber=145
+   class 31: H=141, Aut=1, x=16, fiber=141
+   class 34: H=127, Aut=1, x=24, fiber=127
+   class 42: H=91, Aut=1, x=40, fiber=91
+   class 44: H=77, Aut=1, x=40, fiber=77
+   class 45: H=65, Aut=1, x=48, fiber=65
+   class 50: H=65, Aut=1, x=48, fiber=65
+   class 52: H=133, Aut=1, x=16, fiber=133
+   class 62: H=81, Aut=1, x=40, fiber=81
+   class 67: H=65, Aut=1, x=48, fiber=65
+   class 71: H=135, Aut=1, x=16, fiber=135
+   class 72: H=151, Aut=1, x=8, fiber=151
+   class 74: H=153, Aut=1, x=8, fiber=153
+   class 75: H=157, Aut=1, x=8, fiber=157
+   class 76: H=155, Aut=1, x=8, fiber=155
+   class 80: H=141, Aut=1, x=16, fiber=141
+   class 81: H=139, Aut=1, x=16, fiber=139
+   class 89: H=83, Aut=1, x=32, fiber=83
+   class 93: H=67, Aut=1, x=40, fiber=67
+   class 95: H=71, Aut=1, x=40, fiber=71
+   class 101: H=117, Aut=1, x=24, fiber=117
+   class 112: H=69, Aut=1, x=48, fiber=69
+   class 115: H=61, Aut=1, x=48, fiber=61
+   class 120: H=143, Aut=1, x=16, fiber=143
+   class 126: H=87, Aut=1, x=40, fiber=87
+   class 127: H=93, Aut=1, x=32, fiber=93
+   class 132: H=79, Aut=1, x=40, fiber=79
+   class 139: H=151, Aut=1, x=8, fiber=151
+   class 141: H=99, Aut=3, x=32, fiber=33
+   class 146: H=133, Aut=1, x=16, fiber=133
+   class 147: H=147, Aut=1, x=8, fiber=147
+   class 150: H=139, Aut=1, x=16, fiber=139
+   class 151: H=129, Aut=3, x=24, fiber=43
+   class 176: H=25, Aut=1, x=72, fiber=25
+   class 193: H=31, Aut=1, x=64, fiber=31
+   class 213: H=117, Aut=1, x=24, fiber=117
+   class 214: H=105, Aut=1, x=24, fiber=105
+   class 215: H=125, Aut=1, x=16, fiber=125
+   class 242: H=129, Aut=1, x=16, fiber=129
+   class 243: H=115, Aut=1, x=24, fiber=115
+   class 246: H=93, Aut=1, x=48, fiber=93
+   class 252: H=77, Aut=1, x=40, fiber=77
+   class 254: H=67, Aut=1, x=40, fiber=67
+   class 261: H=137, Aut=1, x=16, fiber=137
+   class 262: H=159, Aut=3, x=8, fiber=53
+   class 263: H=151, Aut=1, x=8, fiber=151
+   class 265: H=145, Aut=1, x=16, fiber=145
+   class 270: H=175, Aut=7, x=0, fiber=25
+   class 271: H=159, Aut=1, x=8, fiber=159
+   class 273: H=123, Aut=1, x=16, fiber=123
+   class 292: H=159, Aut=1, x=8, fiber=159
+   class 293: H=159, Aut=1, x=8, fiber=159
+   class 300: H=171, Aut=3, x=0, fiber=57
+   class 310: H=105, Aut=1, x=24, fiber=105
+   class 318: H=95, Aut=1, x=32, fiber=95
+   class 329: H=45, Aut=1, x=48, fiber=45
+   class 332: H=111, Aut=1, x=40, fiber=111
+   class 335: H=135, Aut=3, x=24, fiber=45
+   class 337: H=141, Aut=1, x=16, fiber=141
+   class 347: H=111, Aut=3, x=40, fiber=37
+   class 350: H=85, Aut=1, x=48, fiber=85
+   class 356: H=117, Aut=1, x=40, fiber=117
+   class 359: H=135, Aut=3, x=16, fiber=45
+   class 361: H=49, Aut=1, x=48, fiber=49
+   class 369: H=135, Aut=5, x=32, fiber=27
+   class 372: H=51, Aut=1, x=40, fiber=51
+   class 377: H=51, Aut=3, x=64, fiber=17
+   class 379: H=93, Aut=1, x=48, fiber=93
+   class 381: H=33, Aut=1, x=72, fiber=33
+   class 385: H=123, Aut=3, x=40, fiber=41
+   class 393: H=99, Aut=9, x=24, fiber=11
+   class 395: H=189, Aut=21, x=0, fiber=9
+   class 398: H=9, Aut=9, x=96, fiber=1
+   class 411: H=9, Aut=1, x=88, fiber=9
+   class 421: H=11, Aut=1, x=80, fiber=11
+   class 429: H=13, Aut=1, x=80, fiber=13
+   class 436: H=9, Aut=1, x=88, fiber=9
+   class 439: H=15, Aut=5, x=72, fiber=3
+   class 441: H=15, Aut=3, x=80, fiber=5
+   class 451: H=3, Aut=3, x=104, fiber=1
+   class 455: H=1, Aut=1, x=112, fiber=1
+x-multiset match (black qf tilings vs SC classes): False
+   black x: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 40, 40, 40, 40, 40, 40, 40, 40]
+   SC    x: [0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 32, 32, 32, 32, 32, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 64, 64, 64, 72, 72, 72, 72, 72, 80, 80, 80, 88, 88, 96, 104, 112]
+H-multiset match: False
+   black H: [67, 67, 67, 67, 75, 75, 75, 75, 109, 109, 109, 109, 117, 117, 117, 117, 117, 117, 117, 117, 123, 123, 123, 123, 125, 125, 125, 125, 133, 133, 133, 133, 133, 133, 133, 133, 133, 133, 133, 133, 137, 137, 137, 137, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 141, 141, 141, 141, 143, 143, 143, 143, 147, 147, 147, 147, 151, 151, 151, 151, 151, 151, 151, 151, 153, 153, 153, 153, 159, 159, 159, 159, 159, 159, 159, 159]
+   SC    H: [1, 3, 9, 9, 9, 11, 13, 15, 15, 25, 27, 31, 31, 33, 41, 45, 49, 51, 51, 61, 65, 65, 65, 67, 67, 69, 69, 71, 75, 77, 77, 79, 81, 83, 85, 87, 91, 93, 93, 93, 95, 99, 99, 105, 105, 111, 111, 115, 117, 117, 117, 123, 123, 125, 127, 129, 129, 129, 133, 133, 135, 135, 135, 135, 137, 137, 139, 139, 141, 141, 141, 143, 145, 145, 147, 151, 151, 151, 153, 155, 157, 159, 159, 159, 159, 171, 175, 189]

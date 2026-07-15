@@ -12,6 +12,18 @@ related:
 
 # THM-852 — structure of the black self-line law
 
+> **CORRECTION (opus-S312, 2026-07-15, THM-854 / MISTAKE-150):** the involution
+> corollary in (ii) ("when Aut is trivial the unique witness is an INVOLUTION")
+> is REFUTED by direct witness computation: at n=5 the eight witnesses have
+> cycle types (1,1,3) and (5,) — orders 3 and 5; at n=6 orders 4, 5; at n=7
+> orders 6, 10, 12. No witness at n ≤ 7 is an involution. The lemma itself is
+> correct group theory but its premise σ² ∈ Aut(T) NEVER holds for κ-witnesses:
+> σ² realizes the pair-flip p₀ Δ σp₀ ≠ ∅ (THM-854(1)). Witness orders obey the
+> parity law: odd order possible iff n ≡ 1, 2 (mod 4) (THM-854(3)). Items (i),
+> (iii), (iv) — the Klein-four action, orbit granularity, and the n=8
+> refutation — are unaffected (my independent n=8 run and codex-S14 concur:
+> 404 ≠ 176).
+
 **The dictionary.** T(κt) = P ∪ Ā and T(t)^op = P^op ∪ Ā: the complement tiling is "converse
 modulo the base path". Hence: quasi-fixed (self-line) ⟺ cls(P∪A) = cls(P∪Ā); SC ⟺ cls(P∪A) =
 cls(P^op∪Ā) = cls(gκt). The law 2selfK = SC equates the sizes of two twisted diagonals of the

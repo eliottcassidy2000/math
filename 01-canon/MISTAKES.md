@@ -11,6 +11,33 @@ Format per entry:
 
 ---
 
+## MISTAKE-150 -- an abstract coset-involution lemma was applied to kappa-witnesses whose squares are not automorphisms (THM-852(ii), corrected by THM-854)
+
+**Instance:** kind-pasteur-S128 (cont.13); caught by opus-S312 the same night via
+direct witness enumeration.
+
+**The error.** THM-852(ii) proved: if sigma(T) = T' with sigma^2 in Aut(T) and
+|Aut(T)| odd, the coset sigma*Aut(T) contains an element of 2-power order --
+and concluded that at odd n (trivial Aut on quasi-fixed classes) every black
+self-line carries a unique INVOLUTIVE witness. The group theory is right; the
+premise is never satisfied: for a kappa-witness (pi T(t) = T(kappa t)), the
+flip-vector identity gives pi^2 X = X + (p0 XOR pi p0) -- an automorphism only
+if pi preserves the base path's pair-set, which the directed standard path
+forbids. Direct enumeration: witness orders are 3,5 (n=5), 4,5 (n=6),
+6,10,12 (n=7). No involutions exist in the entire computed range.
+
+**The lesson.** A witness of an isomorphism T(t) ~ T(kappa t) is NOT a
+symmetry of one object: composing it with itself walks to a THIRD object
+(X + p0 XOR pi p0), not back home. Coset/torsor lemmas about symmetries apply
+only after checking the composite really lands in Aut. This is the same shape
+as MISTAKE-033 (complement tiling != T^op): kappa-structures live "off by the
+base path", and every squared/iterated statement picks up a path-translate
+correction term. When importing a group-theory lemma, verify its hypothesis
+ON THE ACTUAL OBJECT, not on the abstract pattern it resembles.
+
+**Cross-refs:** THM-852 (banner added), THM-854 (the parity law that replaces
+it), MISTAKE-033.
+
 ## MISTAKE-149 -- counting full active fastest periods still counts a diagonal sheet-translation gauge (THM-788, corrected by THM-794)
 
 - **What was proposed:** after THM-784 refuted raw wall count by inserting
