@@ -117,6 +117,10 @@ def audit(atlas_path: Path) -> dict:
 
     sigma8 = reflection_map(8, tiles(8))
     nontrivial = apex_zero = upper_colour = 0
+    first_off_diagonal = {"A": 0, "B": 0, "C": 0}
+    first_off_diagonal_apex = {"A": 0, "B": 0, "C": 0}
+    first_off_diagonal_colour = {"A": 0, "B": 0, "C": 0}
+    canonical_by_first = {"A": set(), "B": set(), "C": set()}
     canonical_pairs: set[tuple[int, int]] = set()
     for row_a in rows:
         b_groups = b_index.get(ordered_key(ab_a, row_a))
@@ -130,21 +134,33 @@ def audit(atlas_path: Path) -> dict:
                     row_c = rows[c_index_value]
                     if row_a[2] and row_b[2] and row_c[2]:
                         continue
+                    first = "A" if not row_a[2] else ("B" if not row_b[2] else "C")
                     nontrivial += 1
+                    first_off_diagonal[first] += 1
                     upper_x = glue((row_a[0], row_b[0], row_c[0]), maps)
                     upper_y = glue((row_a[1], row_b[1], row_c[1]), maps)
                     assert upper_x != upper_y
                     if (upper_x & 1) or (upper_y & 1):
                         continue
                     apex_zero += 1
+                    first_off_diagonal_apex[first] += 1
                     if symmetric(upper_x, sigma8) != symmetric(upper_y, sigma8):
                         continue
                     upper_colour += 1
-                    canonical_pairs.add((min(upper_x, upper_y), max(upper_x, upper_y)))
+                    first_off_diagonal_colour[first] += 1
+                    canonical = (min(upper_x, upper_y), max(upper_x, upper_y))
+                    canonical_pairs.add(canonical)
+                    canonical_by_first[first].add(canonical)
 
     assert nontrivial == 1_672
     assert apex_zero == 836 and upper_colour == 836
     assert len(canonical_pairs) == 418
+    assert first_off_diagonal == {"A": 1_656, "B": 16, "C": 0}
+    assert first_off_diagonal_apex == {"A": 828, "B": 8, "C": 0}
+    assert first_off_diagonal_colour == {"A": 828, "B": 8, "C": 0}
+    assert {key: len(value) for key, value in canonical_by_first.items()} == {
+        "A": 414, "B": 4, "C": 0
+    }
 
     stages = {
         "nontrivial_triangles": {"separated_pairs": 0, "cells": nontrivial},
@@ -165,6 +181,10 @@ def audit(atlas_path: Path) -> dict:
         "both_apex_zero": apex_zero,
         "upper_colour_equal": upper_colour,
         "canonical_unordered_pairs": len(canonical_pairs),
+        "first_off_diagonal": first_off_diagonal,
+        "first_off_diagonal_apex": first_off_diagonal_apex,
+        "first_off_diagonal_colour": first_off_diagonal_colour,
+        "canonical_by_first": {key: len(value) for key, value in canonical_by_first.items()},
         "tournament_analysis": {
             "vertices": list(stages),
             "pairwise_observable": "number of raw nontrivial triangles rejected by the filter carrier",
@@ -187,6 +207,10 @@ def render(result: dict) -> str:
             f"both-apex-zero={result['both_apex_zero']}",
             f"upper-colour-equal={result['upper_colour_equal']}",
             f"canonical unordered pairs={result['canonical_unordered_pairs']}",
+            f"first-off-diagonal A/B/C={result['first_off_diagonal']}",
+            f"  after apex={result['first_off_diagonal_apex']}",
+            f"  after colour={result['first_off_diagonal_colour']}",
+            f"  canonical={result['canonical_by_first']}",
             "",
             "TOURNAMENT ANALYSIS (filter carriers as planning vertices)",
             f"  vertices={tuple(ta['vertices'])}",

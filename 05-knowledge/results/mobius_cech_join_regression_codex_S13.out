@@ -5,6 +5,10 @@ nontrivial ordered triangles=1672
 both-apex-zero=836
 upper-colour-equal=836
 canonical unordered pairs=418
+first-off-diagonal A/B/C={'A': 1656, 'B': 16, 'C': 0}
+  after apex={'A': 828, 'B': 8, 'C': 0}
+  after colour={'A': 828, 'B': 8, 'C': 0}
+  canonical={'A': 414, 'B': 4, 'C': 0}
 
 TOURNAMENT ANALYSIS (filter carriers as planning vertices)
   vertices=('nontrivial_triangles', 'both_apex_zero', 'upper_colour', 'unordered_pairs')
