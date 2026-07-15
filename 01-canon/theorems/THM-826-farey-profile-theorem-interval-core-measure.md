@@ -1,6 +1,6 @@
 ---
 id: THM-826
-title: THE FAREY PROFILE THEOREM — the COMPLETE measure profile of the interval core. For 0 ≤ λ ≤ 1/(k+1), m({1,…,k}; λ) = Σ over consecutive pairs a/i < b/j of the Farey sequence F_k (on the circle) of max(0, (1 − λ(i+j))/(ij)). The profile is piecewise linear and convex, with breakpoints exactly at λ = 1/s for s = k+1, …, 2k−1; on [1/(s+1), 1/s] it is m = A_s − λ·B_s with A_s = Σ_{i+j≤s} 1/(ij), B_s = Σ_{i+j≤s} (i+j)/(ij) (sums over consecutive-F_k pairs). ENDPOINT IDENTITIES: A_{2k−1} = Σ 1/(ij) = 1 (the classical Farey telescope: m(0)=1); initial slope B_{2k−1} = 2·Σ_{l≤k} φ(l)/l (the HYP-2856 totient constant, ~12k/π²); THM-819 (the primitive harmonic law) is the FIRST SEGMENT (s = k+1); the area under the profile is the Franel-type sum Σ 1/(2ij(i+j))
+title: THE FAREY PROFILE THEOREM — the COMPLETE measure profile of the interval core. For 0 ≤ λ ≤ 1/(k+1), m({1,…,k}; λ) = Σ over consecutive pairs a/i < b/j of the Farey sequence F_k (on the circle) of max(0, (1 − λ(i+j))/(ij)). The profile is piecewise linear and convex, with breakpoints exactly at λ = 1/s for s = k+1, …, 2k−1, except that s = 2k−2 is omitted when k is even; on [1/(s+1), 1/s] it is m = A_s − λ·B_s with A_s = Σ_{i+j≤s} 1/(ij), B_s = Σ_{i+j≤s} (i+j)/(ij) (sums over consecutive-F_k pairs). ENDPOINT IDENTITIES: A_{2k−1} = Σ 1/(ij) = 1 (the classical Farey telescope: m(0)=1); initial slope B_{2k−1} = 2·Σ_{l≤k} φ(l)/l (the HYP-2856 totient constant, ~12k/π²); THM-819 (the primitive harmonic law) is the FIRST SEGMENT (s = k+1); the area under the profile is the Franel-type sum Σ 1/(2ij(i+j))
 status: PROVED (two-lemma proof below: gap-locality + no-intrusion; both elementary) + REFEREED exact (k = 2..12, dense rational λ grid including all breakpoints; every identity checked in ℚ)
 source: kind-pasteur-2026-07-15-S128 (cont.10; owner: prove the full measure profile with Farey breakpoints)
 depends_on:
@@ -30,7 +30,9 @@ is consumed exactly by its two endpoint arcs, at rates 1/i (left) and 1/j (right
 m(λ) = Σ_gaps max(0, 1/(ij) − λ(1/i + 1/j)) = Σ_gaps max(0, (1 − λ(i+j))/(ij)). ∎
 
 **Structure.** A gap dies at λ = 1/(i+j); consecutive pairs have k+1 ≤ i+j ≤ 2k−1 (mediant property:
-i+j > k; max at j=k−1,i=k... realized values k+1..2k−1), giving the breakpoint set {1/s}. On
+i+j > k; max at j=k−1,i=k).  The realized values are k+1..2k−1, except that 2k−2 is absent when
+k is even, giving the corresponding breakpoint set {1/s}.  Indeed, sum 2k−2 would force the
+denominator pair (k−2,k), (k−1,k−1), or (k,k−2); for even k these are non-coprime or equal. On
 [1/(s+1), 1/s] the live gaps are those with i+j ≤ s: m = A_s − λB_s. Endpoints: A_{2k−1} = Σ1/(ij) =
 Σ gap lengths = 1; B_{2k−1} = Σ(1/i + 1/j) = 2Σ_{l≤k}φ(l)/l (each fraction borders two gaps).
 THM-819 is the s = k+1 segment: the only pairs with i+j = k+1 are the witnesses-adjacent gaps, and
@@ -50,3 +52,5 @@ A_{k+1} − λB_{k+1} at λ = 1/(k+2) reproduces 2δ·H^prim. ∫₀^{1/(k+1)} m
 - [x] referee exact ℚ: profile formula == direct arc-union measure at all λ ∈ {c/720 : c} ∩ [0,1/(k+1)]
       plus every breakpoint 1/s, k = 2..12; segment form A_s − λB_s checked; A=1, B=2Σφ/l, THM-819
       segment, and the area identity checked exactly (thm826_farey_profile_referee_kps_S128c10.py)
+- [x] even-k omission `2k−2` and the corrected realized-sum range checked through k=64
+      (thm841_no_dyadic_breakpoint_codex_S14.py)

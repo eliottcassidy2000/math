@@ -1,13 +1,15 @@
 ---
 id: THM-836
 title: Thin two-sheet owner shells force a modular packing obstruction
-status: PROVED (directional owner-exit law, modular packing, and the empty s=1,3 shells) + VERIFIED (fraction-exact endpoint and 1,502,751-shell replay)
+status: PROVED (directional owner-exit law, modular packing, empty s=1,3 shells, exact local s=5 classification, and the uniform d=11 mod 52 divisor exclusion) + VERIFIED (fraction-exact endpoint/shell replay and finite d=15 endpoint-grid census)
 source: codex-2026-07-15-S10 continuation
-depends_on: [THM-797, THM-824]
+depends_on: [THM-772, THM-797, THM-803, THM-824]
 related: [THM-774, THM-803, HYP-6820]
 verification:
   - 04-computation/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.py
   - 05-knowledge/results/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.out
+  - 04-computation/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.py
+  - 05-knowledge/results/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.out
 ---
 
 # THM-836 — thin two-sheet owner-shell packing obstruction
@@ -342,6 +344,137 @@ This is only a local owner-shell survivor, not a ten-speed core satisfying
 (2)--(3).  It proves that this argument alone cannot replace `-5` in (13) by
 a stronger constant.
 
+## 6A. Shell-five addendum: exact local classes and one uniform divisor exclusion
+
+The local shell-five survivors in the preceding paragraph admit an all-size
+classification.  Suppose
+
+```text
+s=2B-13d=5,             B=(13d+5)/2.                    (S5.1)
+```
+
+Then `B=9 mod 13`, and the available packing width in (28) is
+
+```text
+G_5(d)=B-L(d,B)=55(13d+5)/(2(117d+55))<4.              (S5.2)
+```
+
+The two coefficient-nine owners therefore have integer offsets at most three
+below `B`; their residue classes must both lie in
+
+```text
+{B,B-1,B-2,B-3} mod 13={9,8,7,6}.                       (S5.3)
+```
+
+But their signed residue pair is `{+3d,-3d}` by (26), and the only signed
+pair wholly contained in (S5.3) is `{6,7}`.  Consequently
+
+```text
+d=+/-2 mod 13,
+d mod 52 in {11,15,37,41},
+{u_(+2),u_(-2)}={B-3,B-2},
+{+5d,-5d} mod 13={3,10}.                                (S5.4)
+```
+
+Conversely, every positive odd `d` in the four classes in (S5.4) has
+`d>=11` and
+
+```text
+G_5(d)>3,                                                 (S5.5)
+```
+
+so the two speeds `B-3,B-2` satisfy both local coefficient-nine owner
+inequalities.  Thus (S5.4) is an exact classification of the **local owner
+shell**.  The converse asserts only those two inequalities, not existence of
+a ten-speed set satisfying (2)--(3).
+
+One of the four congruence classes is nevertheless uniformly incompatible
+with the guarded containment.  Let
+
+```text
+d=11 mod 52,             q=5d,
+p=(45d-1)/26,            t=p/q.                           (S5.6)
+```
+
+The numerator is integral, `26p=45d-1` gives `gcd(p,d)=1`, and
+`p=4 mod 5`; hence `p` is a unit modulo `q`.  Moreover
+
+```text
+t=9/26-1/(130d).                                         (S5.7)
+```
+
+Write `a(u)=[9u]_26` in balanced notation and
+`delta_u=u/(130d)`.  The exact signed complement in (2), together with
+(S5.4), leaves the seven free raw classes
+
+```text
+1,2,4,5,8,11,12.                                        (S5.8)
+```
+
+For either parity of a speed in (S5.8), its value `a(u)` is always at least
+`4` or at most `-3`.  Since `d=11 mod 52` makes `B` even, the three forced
+speeds have
+
+```text
+(u,a(u))=(B-3,-11),(B-2,-2),(B,-10).                    (S5.9)
+```
+
+There is no half-circle wrap because `B<10d`.  The only three lower-bound
+calculations needed are
+
+```text
+a>=4:  ||ut|| >=4/26-B/(130d)
+                   =(27d-5)/(260d)>1/11,
+a<=-3: ||ut|| >=3/26>1/11,
+a=-2:  ||ut|| =2/26+(B-2)/(130d)
+                   =(33d+1)/(260d)>1/11.                (S5.10)
+```
+
+The strict comparisons in the first and third rows reduce respectively to
+`37d>55` and `103d+11>0`.  Thus `t` lies in `E_U` for **every** lift allowed
+by (2) and the shell-five owner conclusion.  On the other hand, `p=4 mod 5`
+gives
+
+```text
+||9dt||+||4dt||=||9p/5||+||4p/5||=2/5<11/13.            (S5.11)
+```
+
+Hence `t notin H_d`, contradicting (3) already through its necessary
+consequence `E_U subset H_d` (because `0 in closure(R_U)`).  We have proved
+the residue-refined uniform exclusion
+
+```text
+s=5 and (2)--(3)  implies  d mod 52 in {15,37,41}.       (S5.12)
+```
+
+There is also a finite exact exclusion at the first remaining scale.  Add
+the actual two-sheet-core conclusions from THM-772 and THM-803: `U` contains
+a multiple of every `2,...,12`, and its parity-twisted mod-13 support is full.
+At
+
+```text
+d=15,                  B=100,                            (S5.13)
+```
+
+the signed complement and (S5.4) force the speeds `97,98,100` in raw classes
+`6,7,9`.  Exhausting the other seven signed lifts gives
+
+```text
+all signed lifts                         1,605,632,
+divisor-complete rows                      121,352,
+also parity-support-complete                 71,644,
+cover the mandatory q=75 endpoint grid       3,004,
+cover the mandatory q=195 endpoint grid          4,
+cover both endpoint grids                         0.      (S5.14)
+```
+
+The replay prints the four `q=195` rows and an explicit uncovered `q=75`
+unit numerator for each.  Therefore `(d,B)=(15,100)` cannot be an actual
+hypothetical two-sheet quotient core once those already-proved necessary
+conditions are adjoined.  Statement (S5.14) is finite at exactly `d=15`; it
+does not eliminate the entire class `d=15 mod 52`, and no uniform conclusion
+is asserted for the remaining classes `15,37,41` beyond (S5.12).
+
 ## 7. Why the theorem carrier is not a tournament
 
 The exact carrier is the incidence object
@@ -379,17 +512,35 @@ The independent verifier uses only integers and `fractions.Fraction`.  It:
 4. finds `77` locally feasible `s=5` rows, beginning with (35), guarding the
    exact scope of the shell conclusion.
 
+The shell-five continuation verifier, also using only integers and
+`fractions.Fraction`, separately:
+
+1. replays the exact local classification through every odd `d<=9,999`,
+   finding `770` rows in precisely the four classes in (S5.4);
+2. directly checks the explicit divisor witness (S5.6) on the first `100`
+   members `d=52k+11`, through `d=5,159`, while (S5.7)--(S5.11) supply the
+   all-size proof;
+3. exhausts the `1,605,632` signed lifts in (S5.14), printing all four
+   `q=195` survivors and their uncovered `q=75` numerator sets; and
+4. records a four-class planning tournament.  Ordering by local owner slack
+   and then by divisor-proof priority flips three edges; both gauges are
+   transitive.  This tournament forgets the unit-numerator/signed-lift
+   incidence that proves the exclusion.
+
 No optimizer, floating point, or sampled-circle verdict is used.  The replay
 certifies the arithmetic and endpoint calculus; the proof above supplies the
 all-size quantifiers.  The theorem assumes the signed-wall complement and the
 guarded containment (2)--(3).  It does not prove those predicates for an
-arbitrary core, does not show the `s>=5` branch empty, and does not establish
-LRC(14).
+arbitrary core, does not show the remaining `s>=5` branch empty, does not
+uniformly eliminate the classes `15,37,41 mod 52`, and does not establish
+LRC(14).  The `d=15` census additionally assumes THM-772 divisor completeness
+and THM-803 parity-twisted support; it is not a consequence of (2)--(3) alone.
 
 Reproduce with
 
 ```bash
 python3 04-computation/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.py
+python3 04-computation/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.py
 ```
 
 The frozen artifact digests are
@@ -398,4 +549,11 @@ The frozen artifact digests are
 source  d6b259c0324752bfcdbf1efe5583843debcebcae898ebe8aca22629a7e0d246d,
 output  0c10a33bfc6e6c79b5b06e85a9f6fc3949b3b4214331a9a52846d3a2a21ae2e4,
 certificate 741dc1d6e7e476817867d9b6ec13181e18b5ef7f999c9a7253680b2477f7fc07.
+
+shell-five continuation source
+        7bdbf2ddfb9527775d45589d40fcb85e24cc8defd30ea9f91a751e0e9ec098f9,
+shell-five continuation output
+        50cd0f1761d202ef6a8565d58c6d70951221101f55649ea27e8cf9e52e9cbbfb,
+shell-five continuation certificate
+        b5b0d682307e61c71eded52fb94f286d8ecd33f8f9c0a00abbce164e2b20b7f4.
 ```

@@ -1,0 +1,46 @@
+LRC14 SHELL-FIVE LOCAL CLASSIFICATION AND DIVISOR WITNESS
+arithmetic=integer+fractions.Fraction optimizer=none SAT=none floating_point=none sampled_circle=none
+base_hypotheses=THM-836 exact ten-speed signed complement plus guarded containment
+
+ALL_SIZE_LOCAL_CLASSIFICATION
+s=5 B=(13d+5)/2 B_mod13=9 packing_width_G=55(13d+5)/(2(117d+55))<4
+top_four_classes={9,8,7,6} unique_signed_pair={6,7}
+local_feasible_iff=d_mod13_in_{2,11}_and_d_odd
+equivalently_d_mod52=(11, 15, 37, 41)
+missing_signed_class={3,10} owner_speeds={B-3,B-2}
+finite_audit_odd_d_limit=9999 feasible_rows=770 residues=(11, 15, 37, 41)
+first_row=(11, 74, 71, 72, Fraction(185, 61)) last_row=(9999, 64996, 64993, 64994, Fraction(162490, 53179)) audit_sha256=a5d6a6b5305ab41200f077b058a7da22b3ceea36e99993bfb961e68df56b3319
+
+UNIFORM_DIVISOR_EXCLUSION
+class=d_mod52_11 denominator=q=5d numerator=p=(45d-1)/26
+p_is_unit=26p=45d-1_and_p_mod5=4
+all_allowed_core_phases_at_least=1/11 folded_target_value=2/5<11/13
+consequence=E_U_not_subset_H_d_hence_guarded_containment_fails
+remaining_local_classes_mod52=(15,37,41)
+witness_audit_k_limit=99 rows=100 first=(11, 74, 19, 55) last=(5159, 33536, 8929, 25795)
+witness_audit_sha256=99d2d1e9269bad30d889c086cd5c89d45283b76fc86300da7e6ff7ce8b5efb64
+
+D15_FINITE_ENDPOINT_GRID_CENSUS
+d=15 B=100 signed_lift_rows=1605632
+divisor_complete=121352 plus_parity_support=71644
+pass_q_5d=3004 pass_q_13d=4 pass_both=0
+q13d_survivors=((4, 24, 31, 34, 54, 64, 66, 97, 98, 100), (17, 24, 31, 34, 54, 64, 66, 97, 98, 100), (5, 24, 51, 54, 66, 69, 73, 97, 98, 100), (5, 24, 34, 54, 64, 66, 82, 97, 98, 100))
+q5d_uncovered_on_q13d_survivors=(((4, 24, 31, 34, 54, 64, 66, 97, 98, 100), (2, 4, 71, 73)), ((17, 24, 31, 34, 54, 64, 66, 97, 98, 100), (1, 2, 4, 37, 38, 71, 73, 74)), ((5, 24, 51, 54, 66, 69, 73, 97, 98, 100), (4, 71)), ((5, 24, 34, 54, 64, 66, 82, 97, 98, 100), (2, 4, 37, 38, 71, 73)))
+forbidden_unit_counts=((75, 40), (195, 80)) survivor_sha256=46c045449f2365feaa49c7f931295753ae7df3b30cbdb65712ca91637f42f7b4
+scope=d15_only_no_uniform_extrapolation
+
+TOURNAMENT_ANALYSIS
+vertices_mod52=(11, 15, 37, 41) local_slacks=((11, Fraction(2, 61)), (15, Fraction(7, 181)), (37, Fraction(213, 4384)), (41, Fraction(239, 4852)))
+observable_order=(11, 15, 37, 41) switch_order=(11, 41, 37, 15) edge_flips=3
+score_histogram=(0, 1, 2, 3) directed_cycles=0 SCCs=4 Hamiltonian_paths=1
+tie_Hamiltonian_path=numerical_mod52_order
+telemetry_only=both_orders_destroy_the_unit_numerator_by_signed_lift_incidence
+proof_carrier=(divisor_grid,numerator)_to_(signed_class,lift)_to_(divisor,parity_obligation)
+challenged_assumption=vertices_need_not_be_runners_or_target_components
+
+SCOPE_GUARDRAIL
+proved=exact_local_s5_classification_plus_uniform_elimination_of_d_mod52_11
+not_proved=existence_or_nonexistence_of_full_cores_in_remaining_classes_15_37_41
+local_survivor_means_owner_inequalities_only_not_guarded_containment
+certificate_sha256=b5b0d682307e61c71eded52fb94f286d8ecd33f8f9c0a00abbce164e2b20b7f4
+PASS

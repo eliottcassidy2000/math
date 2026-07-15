@@ -1,0 +1,51 @@
+========================================================================================
+THM-841: NO DYADIC BREAKPOINT TREE; EXACT ALL-ORDER CLOSURE
+========================================================================================
+local lemma: i+j>k => min(floor(k/i),floor(k/j))=1
+collision: lambda_(m,n)=mn/(n*j+m*i)
+nonprimitive collision: lambda_(m,n)>1/(k+1)
+actual lambda-breakpoints: primitive lambda=1/(i+j) only
+parameter graph per Farey gap: a path with at most one kink
+
+m_1 = sum_g [1-lambda(i+j)]_+/(ij)
+m_2 = 1-lambda*sum_(d<=floor(k/2)) phi(d)/d-O_k(lambda)
+m_r = 1-(2lambda/r)*sum_(d<=floor(k/r)) phi(d)/d, r>=3
+O_k(lambda)=sum_g [lambda(i+j)-1]_+/(ij)
+S_1 = 2k lambda
+S_rho = 2lambda*sum_d phi(d)/d*sum_(m=rho..floor(k/d)) C(m-1,rho-1)/m
+        + 1_(rho=2) O_k(lambda), rho>=2
+
+structure audit: Farey gaps=27832, nonprimitive collisions=35854, k<=64
+formula audit: (k,lambda) rows=359, exact m_r/S_rho equalities=8980, k<=20
+formula verdict: ALL EXACT against independent circle interval sweep
+
+DYADIC / TOOTHPICK REFUTATION
+D_(2p)=D_p union (1/2)D_p union {1/m: p<m<=2p, m odd}
+first local defect: D_4 \ (D_2 union (1/2)D_2) = {1/3}
+actual witness gap: (0/1,1/4)
+literal Farey-end additions b(1)=1, b(n)=2phi(n) for n>=2
+first recurrence failure: b(5)=8, but 2b(1)+b(2)=4=A139251(5)
+dyadic totals (n, Farey-end total, A139250 total):
+   1:   1    1
+   2:   3    3
+   4:  11   11
+   8:  43   43
+  16: 159  171
+the 1,2,4,8 agreement is a finite mirage; 159 != 171 at n=16
+
+THM-826 CROSS-CORRECTION
+for even k, denominator sum 2k-2 is absent: candidates (k-2,k),(k-1,k-1),(k,k-2)
+are non-coprime/equal; it is not an actual breakpoint
+
+ASSUMPTION CHALLENGE / TOURNAMENT ANALYSIS
+vertices tested: endpoint multiple-events, spatial cells, lambda-collisions, Farey gaps
+predicate preserved by the endpoint carrier: the full violation count W(t)
+information destroyed by dyadic quotient: odd multipliers p<m<=2p
+no tournament is formed: the exact switch relation is laminar/path-like, with no cycles or SCC choice
+challenged assumption: two-sided chains can branch; Farey adjacency forces one side to be primitive-only
+
+PROVENANCE
+THM841_sha256=fbf56346ecbe18e7f3bae97c9e6df503112722cc7ec2c6a5e7e724f7c26259cd
+THM826_sha256=0eed65fb30be085cb642a4a6dedfa49241db9c39b7bcbdb9dfc3348e2dcbdbe2
+legacy_referee_sha256=d018f07c392f1d2494e0c80f93a17d471d81de806949298ca9b3e04f380f692e
+script_sha256=40070ecd78863f3d67c8e891becd1a06899ef84191043daac898771aaebda887
