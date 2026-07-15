@@ -14,6 +14,11 @@ the second gauge is therefore not a quotient of current states by reflection.
 These are different continuation predicates, not alternative encodings of one
 answer.
 
+The residual audit then lifts line equality back to the marked-tournament
+isomorphism groupoid.  It records chord-dual witnesses, endpoint stabilizers,
+face restrictions, core ancestry, and the THM-801 gap face that resolves the
+remaining two-face phase square.
+
 Tournament Analysis uses information carriers as vertices.  The pairwise
 observable is the sign of their difference in the number of n=7 sample-line
 pairs separated after stable labelled-face refinement.  The switches are total
@@ -44,6 +49,7 @@ from merged_metagraph_recursive_three_sort_audit_codex_S2 import (
     reflection_permutation,
     tile_schema,
 )
+from mobius_cech_metagraph_codec_codex_S12 import b3_face_mask, b3_line_face
 from tournament_tiling_metagraph_address_codex_S4 import (
     permutation_arc_maps,
     perms,
@@ -441,8 +447,12 @@ def analyze(atlases: dict[int, dict]) -> str:
         0x7436470291C1A,
     )
     address_tiles, _sigma = address_tile_schema(7)
-    phase_presentations = ((0x12CA, apex_zero(0x12CB, 7)), (0x146C, apex_zero(0x146D, 7)))
+    phase_presentations = (
+        (0x12CA, apex_zero(0x12CB, 7)),
+        (0x146C, apex_zero(0x146D, 7)),
+    )
     phase_isomorphisms = []
+    opposite_isomorphisms = []
     for left, right in phase_presentations:
         left_tournament = tiling_tournament(left, 7, address_tiles)
         right_tournament = tiling_tournament(right, 7, address_tiles)
@@ -452,10 +462,38 @@ def analyze(atlases: dict[int, dict]) -> str:
             if tournament_image(left_tournament, permutation_map) == right_tournament
         )
         phase_isomorphisms.append(witnesses)
+        left_opposite = tiling_tournament(left ^ full_mask(7), 7, address_tiles)
+        right_opposite = tiling_tournament(right ^ full_mask(7), 7, address_tiles)
+        opposite_isomorphisms.append(
+            tuple(
+                permutation
+                for permutation, permutation_map in zip(
+                    perms(7), permutation_arc_maps(7), strict=True
+                )
+                if tournament_image(left_opposite, permutation_map) == right_opposite
+            )
+        )
     assert phase_isomorphisms == [
         ((0, 2, 3, 5, 1, 4, 6),),
         ((0, 2, 5, 1, 3, 4, 6),),
     ]
+    assert opposite_isomorphisms == [
+        (
+            (0, 4, 1, 2, 5, 3, 6),
+            (2, 0, 3, 4, 1, 5, 6),
+            (4, 2, 5, 0, 3, 1, 6),
+        ),
+        (
+            (0, 1, 5, 2, 3, 6, 4),
+            (0, 3, 1, 4, 5, 2, 6),
+            (0, 5, 3, 6, 1, 4, 2),
+        ),
+    ]
+    for rigid, opposite in zip(phase_isomorphisms, opposite_isomorphisms, strict=True):
+        endpoint_fixed = tuple(p for p in opposite if p[0] == 0 and p[-1] == 6)
+        inverse_rigid = tuple(rigid[0].index(vertex) for vertex in range(7))
+        assert endpoint_fixed == (inverse_rigid,)
+        assert set(rigid).isdisjoint(opposite)
     path_reflection = tuple(reversed(range(7)))
     first_isomorphism = phase_isomorphisms[0][0]
     reflected_isomorphism = tuple(
@@ -464,6 +502,49 @@ def analyze(atlases: dict[int, dict]) -> str:
     assert reflected_isomorphism == phase_isomorphisms[1][0]
     node_records = {int(node["rank"]): node for node in atlases[7]["record"]["nodes"]}
     assert not node_records[264]["self_converse"] and node_records[270]["self_converse"]
+    q6 = list(map(int, atlases[6]["q"]))
+    for record in square_records:
+        assert all(q6[line] == q6[line ^ full_mask(6)] for line in record["phase"][1:3])
+    core_lines = {
+        mask: line_id(
+            endpoint_delete(endpoint_delete(apex_zero(mask, 7), 7, "top"), 6, "bottom"),
+            5,
+        )
+        for mask in residual_masks
+    }
+    assert core_lines == {
+        0x12CA: 0x3,
+        0x12CB: 0x3,
+        0x146C: 0x9,
+        0x146D: 0x9,
+    }
+    q5 = list(map(int, atlases[5]["q"]))
+    classes5 = list(map(int, atlases[5]["class_codes"]))
+    for core_line in {0x3, 0x9}:
+        core_other = core_line ^ full_mask(5)
+        assert q5[core_line] == q5[core_other] == 6
+        assert classes5[core_line] == classes5[core_other] == 0xC
+        assert not is_grid_symmetric(core_line, 5)
+    gap_data = {}
+    for mask in residual_masks:
+        gap_endpoint = b3_face_mask(apex_zero(mask, 7), 7, "B")
+        gap_other = gap_endpoint ^ full_mask(6)
+        gap_data[mask] = (
+            b3_line_face(mask, 7, "B"),
+            (q6[gap_endpoint], q6[gap_other]),
+            "B" if is_grid_symmetric(gap_endpoint, 6) else "K",
+        )
+    assert gap_data == {
+        0x12CA: (0x115, (33, 33), "K"),
+        0x12CB: (0x114, (21, 33), "K"),
+        0x146C: (0x0C3, (33, 33), "K"),
+        0x146D: (0x0C2, (21, 33), "K"),
+    }
+    assert all(
+        int(gap_data[mask][1][0] == gap_data[mask][1][1])
+        == int(records[(7, mask)]["phase"][-1])
+        for mask in residual_masks
+    )
     lines.extend(
         [
             "residual labelled Xi square:",
@@ -472,8 +553,15 @@ def analyze(atlases: dict[int, dict]) -> str:
             "  endpoint class-sheet fibre sizes at those nodes are 151,151 and 57",
             "  rho changes the marked-path presentation inside fixed ordinary endpoint classes;",
             "  reflection exchanges the two 151-element converse sheets at node 264",
-            "  unique rho isomorphisms fix path endpoints and are reflection-conjugate 5-cycles",
+            "  rigid-endpoint rho isomorphisms are unique, endpoint-fixed, reflection-conjugate 5-cycles",
             f"  interior permutations={tuple(witnesses[0] for witnesses in phase_isomorphisms)}",
+            "  SC endpoint has three isomorphisms; its endpoint-fixed choice is the inverse 5-cycle,",
+            "  so no one relabelling maps both line endpoints (relative holonomy has order 5)",
+            "  ancestry cores are reflected n=5 black same-class loops 0x3 and 0x9 at node 6",
+            "  both n=6 endpoint faces are loops; the n=7 residuals are cross-lines,",
+            "  so this branch is born at n=7 and cannot directly face-lift to an n=8 Xi collision",
+            "  THM-801 gap lines=(0x115,0x114,0xc3,0xc2): phase 1 is a black loop at node 33,",
+            "  phase 0 is a black cross-line 21--33; Omega resolves the whole square",
         ]
     )
 

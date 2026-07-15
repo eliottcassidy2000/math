@@ -11,6 +11,8 @@ verification:
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.json
   - 04-computation/mobius_cech_n8_frontier_codex_S13.cpp
   - 05-knowledge/results/mobius_cech_n8_frontier_codex_S13.out
+  - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
+  - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
 ---
 
 # THM-801 — Möbius/Čech descent for the merged metagraph
@@ -157,6 +159,21 @@ lower-only key consisting of the three ordered face-node pairs, UABC colour,
 and S2 has excess ladder `418,252,148,74,52,0,0` as the five crossing layers
 and fixed layer are adjoined.  Hence `tau=7` is the first complete separator;
 the upper node pair and fixed layer are unnecessary at this size.
+
+The independent bounded continuation minimizer localizes the join.  Recursive
+labelled refinement of `Xi_7` leaves only the phase/reflection square
+
+```text
+{0x12ca,0x12cb,0x146c,0x146d}.
+```
+
+Within each phase pair the `A,C` endpoint-face lines agree, while the `B` gap
+lines are respectively `0x115/0x114` and `0x0c3/0x0c2`.  Phase one makes the
+gap line a black loop at node 33; phase zero makes it a black cross-line
+`21--33`.  Hence `Omega_7` itself separates this entire recursively stable
+two-face residual; `S2` is needed for other, static `Omega` collisions.  This
+is the finite-exact instance of Section 2's Cech statement: the two-face phase
+bit has become ordinary incidence on the missing face.
 
 Disintegrating literal lines inside their 6,126 coloured upper node-pair
 fibres gives:

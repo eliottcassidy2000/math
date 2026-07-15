@@ -490,13 +490,14 @@ certificate clauses, and proof obligations.
 
 ### MPA-32 — Minimize the recursive three-sorted address
 
-- **Delivered exact carrier and bounded minimization:** THM-796 separates merged nodes `M_n`, tiling
+- **Delivered exact carrier and bounded minimization:** THM-796 separates
+  merged nodes `M_n`, tiling
   half-edges `X_n`, and complement lines `L_n`; it adds reflection defect,
   same/converse-sheet loop holonomy, and the simultaneous high/low half-edge
   tensor.  Independently sorting endpoint pairs loses coupling at `n=4`, and
   bare node transfer fails Markov composition at `n=5`.  The S11 audit then
-  minimizes literal lines over `3<=n<=7` under labelled or unordered-successor endpoint
-  deletion plus reflection.  At `n=7`, node boundary recursively refines
+  minimizes literal lines over `3<=n<=7` under labelled or unordered-successor
+  endpoint deletion plus reflection.  At `n=7`, node boundary recursively refines
   `6076->16359` cells, while `Xi` refines `16031->16382`; the latter leaves
   exactly the phase deck pairs `0x12ca/0x12cb` and `0x146c/0x146d`.
 - **Finding:** in the labelled-face language, adding colour, class sheet, and
@@ -506,22 +507,30 @@ certificate clauses, and proof obligations.
   have the same defect because their deck move flips the reflection-fixed
   apex, so phase and defect are transverse.  Together the four residual lines
   form a commuting phase/reflection square of parallel black edges between a
-  non-self-converse two-sheet node and a self-converse node.  Their unique
-  class isomorphisms fix the path endpoints and are reflection-conjugate
-  5-cycles on the interior vertices.  Under unordered successor cells,
+  non-self-converse two-sheet node and a self-converse node.  On the rigid
+  endpoint the unique class isomorphisms are reflection-conjugate interior
+  5-cycles; the inverse endpoint-fixed choices on the self-converse endpoint
+  give order-five relative holonomy.  Under unordered successor cells,
   node boundary and `Xi` retain `8310` and `16380` cells respectively.
-- **Next pull:** extend the operation alphabet to inverse lifts, internal
+- **Three-face join:** the pair is a chord-dual suspension of reflected black
+  `n=5` core loops.  It is born as cross-lines at `n=7` and cannot directly
+  face-lift to `n=8`.  THM-801's gap face detects it immediately: phase one
+  gives a black gap loop `33--33`, phase zero a black gap cross-line `21--33`,
+  so `Omega_7` resolves the square without `B2`.
+- **Next pull:** join MPA-34/35 while extending the operation alphabet to inverse lifts, internal
   deletion/repair, and an explicit terminal proof-obligation predicate; then
   run `n=8` and compare the stable line partition directly with rooted weighted
   line-WL and primitive face rows.  First enumerate endpoint-fixed interior
-  permutations that absorb the phase-deck face complement; this can expose
-  candidate `n=8` obstructions before full node canonicalization.
+  chord-dual permutations, face-loop compatibility, and overlap holonomy;
+  this can expose new primitive `n=8` seeds before full node canonicalization.
 - **Old thread:** HYP-3513 Nerode; HYP-3106 controlled forgetting; MPA-02/04/12;
-  THM-781/793/796; line-metagraph simultaneous-isomorphism work.
+  THM-781/793/796/801; line-metagraph simultaneous-isomorphism work.
 - **Must preserve:** the named line, simultaneous half-edge coupling, exact
-  defect ancestry, class-sheet holonomy, path witness, and every declared
-  future observation.  Record which of these fields minimization proves
-  redundant rather than dropping it in advance.  On an LRC pullback, keep
+  defect ancestry, class-sheet holonomy, path witness, chord-duality
+  isomorphism torsor modulo endpoint automorphisms, its face restrictions and
+  overlap holonomy, and every declared future observation.  Record which of
+  these fields minimization proves redundant rather than dropping it in
+  advance.  On an LRC pullback, keep
   class-sheet holonomy distinct from reduced token return and metric component
   translation; finite-state closure does not imply metric closure.
 - **Delivered artifact:**
@@ -537,7 +546,9 @@ certificate clauses, and proof obligations.
   glue uniquely.  For `n>=6`, the nonempty triple overlap forces zero `F_2`
   phase holonomy, so pairwise-compatible lower complement lines glue to one
   upper line.  At `n=5`, the empty triple overlap leaves 32 balanced and 32
-  unbalanced compatible triples.
+  unbalanced compatible triples.  MPA-32's only stable labelled `Xi_7`
+  collision square is an exact local witness: its endpoint faces agree while
+  its two gap-line pairs differ, and `Omega_7` separates all four lines.
 - **Pull:** formulate the general cohomological line-gluing theorem for an
   arbitrary finite cover and identify exactly which deepest intersections
   kill which `H^1(nerve;F_2)` phases.  Test four-face covers of the staircase

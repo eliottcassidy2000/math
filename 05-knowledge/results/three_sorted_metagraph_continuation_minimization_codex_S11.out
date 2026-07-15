@@ -43,8 +43,15 @@ residual labelled Xi square:
   endpoint class-sheet fibre sizes at those nodes are 151,151 and 57
   rho changes the marked-path presentation inside fixed ordinary endpoint classes;
   reflection exchanges the two 151-element converse sheets at node 264
-  unique rho isomorphisms fix path endpoints and are reflection-conjugate 5-cycles
+  rigid-endpoint rho isomorphisms are unique, endpoint-fixed, reflection-conjugate 5-cycles
   interior permutations=((0, 2, 3, 5, 1, 4, 6), (0, 2, 5, 1, 3, 4, 6))
+  SC endpoint has three isomorphisms; its endpoint-fixed choice is the inverse 5-cycle,
+  so no one relabelling maps both line endpoints (relative holonomy has order 5)
+  ancestry cores are reflected n=5 black same-class loops 0x3 and 0x9 at node 6
+  both n=6 endpoint faces are loops; the n=7 residuals are cross-lines,
+  so this branch is born at n=7 and cannot directly face-lift to an n=8 Xi collision
+  THM-801 gap lines=(0x115,0x114,0xc3,0xc2): phase 1 is a black loop at node 33,
+  phase 0 is a black cross-line 21--33; Omega resolves the whole square
 
 TOURNAMENT ANALYSIS (stable labelled n=7 partitions)
 carriers=('plain', 'colour', 'sheet', 'defect', 'xi', 'xi_defect', 'phase', 'exact')

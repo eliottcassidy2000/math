@@ -558,13 +558,17 @@
   `Xi` cells are exactly phase deck pairs, have common defect `0x06a6`, and
   are separated by the coherent endpoint bit.  The four lines form a
   commuting phase/reflection square of parallel black edges between one
-  non-self-converse two-sheet node and one self-converse node.  Its unique
-  endpoint-class identifications fix both path ends and act by reflection-
-  conjugate 5-cycles on the interior vertices.  Unordered face successors
+  non-self-converse two-sheet node and one self-converse node.  The rigid-
+  endpoint identifications are reflection-conjugate interior 5-cycles; inverse
+  endpoint-fixed choices on the self-converse side give order-five relative
+  holonomy.  The square descends from reflected `n=5` black loop cores, is born
+  as cross-lines at `n=7`, and cannot directly face-lift to `n=8`.  THM-801's
+  gap face resolves it as loop-versus-cross incidence, so `Omega_7` separates
+  all four without `B2`.  Unordered face successors
   retain only `8310` node cells and `16380` `Xi` cells.  This delivers the
   forward part of MPA-32; inverse lifts, internal deletion, direct line-WL
-  comparison, endpoint-fixed interior-permutation classification, and `n=8`
-  remain open.
+  comparison, the chord-duality isomorphism torsor with face restrictions,
+  endpoint-fixed interior-permutation classification, and `n=8` remain open.
 - **Component-obligation join:** The independent S10 LRC synthesis proposes
   objects `(P,C,O,I;A,M,W,K)` with reversible holonomy inside exact strata and
   certified descent/branching between strata.  This matches THM-796's
@@ -588,11 +592,11 @@
   unlabelled tournament gauge. Exact chamber movies with equal coarse states have
   different next owners and free sheets. Thus moments suffice for current truth;
   labelled assignment, event step, and endpoint schedule are required for transport.
-- **Pull list:** 32 bounded cards in
+- **Pull list:** 39 bounded cards in
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
-  first pull is the bounded continuation/Nerode minimization of the three-sorted
-  address, followed by black-flux disintegration and the owner-labelled
-  heptagon/endpoint stalk join.
+  first pull is the MPA-32/34/35 join: compare continuation cells with the full
+  three-face/Möbius codec at `n=8`, followed by black-flux disintegration and
+  the owner-labelled heptagon/endpoint stalk join.
 
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.

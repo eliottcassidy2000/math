@@ -4,7 +4,7 @@ title: Three-sorted recursive incidence of tilings, complement lines, and conver
 status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, bounded continuation minimization, and census through n=7)
 source: codex-2026-07-15-S9/S11 (independent S9 and S2 audits, reconciled)
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
-related: [THM-477, THM-785, THM-790, HYP-6815, HYP-6825, HYP-6865, HYP-6870]
+related: [THM-477, THM-785, THM-790, THM-801, HYP-6815, HYP-6825, HYP-6865]
 verification:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.out
@@ -13,6 +13,8 @@ verification:
   - 05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out
   - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
   - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
+  - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
+  - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.out
   - 03-artifacts/visualizations/tournament-tiling-explorer.html
   - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
 ---
@@ -624,17 +626,28 @@ groupoid, while endpoint deletion, arbitrary deletion spans, and certified
 quotients are functors or correspondences between strata.  A well-founded
 condensation requires a separately proved complexity decrease.
 
-The information hierarchy proved above is
+The information relation proved above is not a total hierarchy.  On the
+literal-line domain, write `P <= Q` when carrier `Q` refines carrier `P`.  The
+relevant finite lattice contains
 
 ```text
-simple node support
- < weighted coloured node kernel
- < named line + phase + defect + loop sheet
- < independently sorted face transport
- < simultaneous half-edge / Xi transport
- < marked-path deletion witness
- < owner-labelled metric LRC state.                                (12.1)
+node boundary <= colour <= class-sheet packet <= defect packet
+       |                                             |
+       +-----------> Xi -----------------------------+--> Xi+sheet+defect
+
+independently sorted face transport <= simultaneous coupling <= Xi
+
+Xi+sheet+defect <= exact line ~= (compatible lower lines, coherent phase).
+                                                                    (12.1)
 ```
+
+Several arrows are deliberately absent.  The weighted node kernel and face
+matrix aggregate over many lines, so they are linear shadows, not refinements
+of one line partition.  A marked tiling is an oriented witness above a line,
+not merely the next cell in the lattice.  An owner-labelled metric LRC packet
+is a stalk over the combinatorial atlas, not a maximum element on the same
+domain.  This typed partial order prevents “more coordinates” from being
+confused with “enough information for the next operation.”
 
 The coarsest exact bounded recursive address is naturally Nerode-like: two
 marked states agree only if every continuation word in
@@ -647,7 +660,7 @@ proofs of continuation equivalence for arbitrary `n`.
 This prescription can be computed without guessing an address.  On
 
 ```text
-Omega_[3,7]=disjoint union_(3<=k<=7) L_k,                 (12.2)
+L_[3,7]^tot=disjoint union_(3<=k<=7) L_k,                 (12.2)
 ```
 
 start with equality of a declared current observation `O`.  Repeatedly refine
@@ -706,17 +719,30 @@ reflection exchanges the two 151-element converse sheets.  Thus the first
 failure of recursively refined `Xi_n` is precisely observer-path descent data,
 not node, class, colour, sheet, or defect data.
 
-For each deck pair the endpoint-class isomorphism is unique.  It fixes the two
-Hamiltonian-path endpoints and acts as a 5-cycle on the five interior
-vertices; the two 5-cycles are conjugate by path reflection:
+On the rigid 151-presentation endpoint, each deck-pair class isomorphism is
+unique.  It fixes the two Hamiltonian-path endpoints and acts as a 5-cycle on
+the five interior vertices; the two 5-cycles are conjugate by path reflection:
 
 ```text
 (0,2,3,5,1,4,6),       (0,2,5,1,3,4,6).                 (12.5)
 ```
 
-Consequently the first hidden phase is an endpoint-fixed cyclic relabelling
-of the interior path, not merely a collision of canonical codes.  Whether
-such interior cycles generate phase-blind families for larger `n` is open.
+The self-converse endpoint admits three isomorphisms; exactly one fixes both
+path ends, and it is the inverse 5-cycle.  No single relabelling maps both
+endpoints of the line simultaneously.  The relative presentation holonomy
+therefore has order five.  Consequently the first hidden phase is an
+endpoint-fixed cyclic relabelling of the interior path, not merely a collision
+of canonical codes.
+
+The two common `n=5` cores are the reflected black same-class loops `0x3` and
+`0x9` at node 6.  Their compatible one-end loop extensions glue to the four
+`n=7` lines.  Conversely, an ordered `Xi_(n+1)` phase collision requires both
+of its size-`n` endpoint-face lines to be loops, because the chord-dual deck
+move complements each face and reverses its ordered endpoint pair.  The four
+residual `n=7` lines are cross-lines, so this branch cannot lift directly to
+an `n=8` collision.  Larger phase-blind families may reappear around different
+interior cores; collision ancestry is a birth/death process, not a nested
+subgraph.
 
 Making only the successor refinement unordered creates two additional `Xi_n`
 collision pairs with the face-line order exchanged.  The current `Xi_n`
@@ -726,6 +752,52 @@ states.
 The minimization is finite-exact only.  It does not include extension words,
 internal-vertex deletion/repair, metric LRC observations, or `n>=8`, and it
 does not assert that the displayed partitions stabilize with `n`.
+
+### 12.2 Chord duality and the three-face Cech resolution
+
+Let `A_n` toggle only the apex tile and put
+
+```text
+zeta_n=a_n A_n.                                            (12.6)
+```
+
+For an apex-zero endpoint, the phase deck mate in (3.5) has apex-zero
+representative `zeta_n(t)`.  In the polygon determined by the distinguished
+Hamiltonian path, `zeta_n` preserves the `n` boundary edges (the path plus the
+apex) and reverses every interior chord.  Moreover
+
+```text
+d_L zeta_n=a_(n-1)d_L,       d_H zeta_n=a_(n-1)d_H.        (12.7)
+```
+
+Thus the two phase mates always have the same bare endpoint-face lines.  Their
+ordered `Xi_n` face-node pairs agree exactly when those lower lines are loops;
+the upper-node/class conditions then decide whether a collision survives.
+This identifies the missing datum as a chord-duality witness in the marked-
+path isomorphism groupoid, modulo endpoint automorphisms and compatible face
+restrictions.
+
+Concurrent THM-801 adds the third gap-contraction face `B`.  Its three faces
+cover the apex, and their nonempty triple overlap forces the relative endpoint
+phases to satisfy the Cech cocycle equation.  Literal three-face line descent
+is therefore exact for every `n>=6`: the two-face torsor becomes ordinary
+overlap descent data in the finer cover.
+
+On the residual square this resolution is completely visible:
+
+| upper line | high face | gap face | low face | gap incidence |
+|---:|---:|---:|---:|---|
+| `0x12ca` | `0x35` | `0x115` | `0x96` | black loop `33--33` |
+| `0x12cb` | `0x35` | `0x114` | `0x96` | black cross `21--33` |
+| `0x146c` | `0x96` | `0x0c3` | `0x0a3` | black loop `33--33` |
+| `0x146d` | `0x96` | `0x0c2` | `0x0a3` | black cross `21--33` |
+
+The two endpoint faces are unchanged inside a phase pair; only the gap face
+changes.  Here the coherent phase bit is exactly the indicator that the gap
+line closes as a loop.  THM-801's node-compressed `Omega_7` already separates
+all four lines, without its additional mirror `B2` sidecar.  Hence “phase is
+necessary” is cover-relative: it is irreducible for the two-end cover and is
+reconstructed as gap-face incidence in the full three-face cover.
 
 ## 13. Tournament Analysis and the LRC preservation boundary
 

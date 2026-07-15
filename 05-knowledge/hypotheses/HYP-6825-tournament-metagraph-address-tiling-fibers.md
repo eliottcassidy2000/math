@@ -37,6 +37,9 @@ artifacts:
   - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
   - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
   - 07-reflections/the-merged-metagraph-is-a-three-sorted-recursive-incidence-object-codex-S2.md
+  - 01-canon/theorems/THM-801-mobius-cech-descent-and-pure-cubic-colour-law.md
+  - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
+  - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.json
 related:
   - HYP-2245
   - HYP-2989
@@ -53,6 +56,7 @@ related:
   - THM-787
   - THM-793
   - THM-796
+  - THM-801
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -423,14 +427,32 @@ The four lines form a commuting `C2 x C2` square under phase and reflection.
 They are parallel black lines from a non-self-converse node with two
 151-presentation class sheets to a self-converse 57-presentation node; phase
 changes only the marked-path presentation within fixed ordinary endpoints.
-The unique class isomorphisms fix both path endpoints and act as reflection-
-conjugate 5-cycles on the interior vertices.
+On the rigid endpoint the unique class isomorphisms fix both path ends and act
+as reflection-conjugate 5-cycles on the interior vertices.  The self-converse
+endpoint has three choices; its endpoint-fixed choice is the inverse cycle, so
+no single relabelling maps both line endpoints.  The relative holonomy has
+order five.
+
+Writing the apex-zero deck mate as `zeta=tau A` shows what is happening:
+`zeta` preserves the Hamiltonian boundary and reverses every interior chord.
+It complements both lower faces, so a phase collision requires both face
+lines to be loops.  The two reflected `n=5` black same-class core loops suspend
+through `n=6` loop faces and become cross-lines at `n=7`; they therefore cannot
+directly lift as faces of an `n=8` phase collision.
+
+THM-801's missing gap-contraction face resolves the square.  The endpoint face
+lines are fixed within each pair, while the gap lines change
+`0x115<->0x114` and `0x0c3<->0x0c2`: phase one is a black loop at node 33 and
+phase zero is a black cross-line `21--33`.  The three-face `Omega_7` carrier
+already separates all four, without its mirror `B2` sidecar.  Thus phase is
+irreducible in the two-end cover but reconstructible as gap incidence in the
+full Cech cover.
 
 When the two face successors are retained only as an unordered multiset, the
 node-boundary and `Xi_n` partitions have `8310` and `16380` cells.  This
-unordered-face gauge keeps the current observation and unary reflection; it
-does not quotient current line states.  The comparison isolates exactly which
-loss comes from forgetting the end labels.
+unordered-successor gauge keeps the current observation and unary reflection;
+it does not quotient current line states.  The comparison isolates exactly
+which loss comes from forgetting the end labels.
 
 The blue/black face recursion is closed for all `n`.  Upper-, low-face-, and
 high-face-blue are pairwise independent, although upper blue forces the two
@@ -484,15 +506,21 @@ singleton SCCs, and one Hamiltonian path, with 20 edge flips between switches.
    1-WL to `n=8`; test whether either remains complete and compare their first
    twins.  Existing nauty class machinery may avoid a full `8!` per-tiling
    canonicalization.  Before building the full atlas, enumerate endpoint-fixed
-   interior permutations that conjugate a tiling endpoint to its phase-deck
-   mate; the `n=7` obstruction is a unique 5-cycle pair.
-2. Prove or refute connectivity of the projected blue/black line graph for all
+   interior permutations that conjugate a tiling endpoint to its chord-dual
+   phase mate, then impose face-loop and overlap compatibility.  The known
+   5-cycle seed dies in the direct channel at `n=7`, so search for new primitive
+   seeds and compare them with THM-801's first `Omega+B2` collision.
+2. Define the chord-duality witness groupoid: isomorphisms modulo endpoint
+   automorphisms, endpoint-fixing subsets, restrictions to all legal faces,
+   and overlap holonomy.  Prove that this packet detects phase collisions and
+   composes under three-face Cech gluing.
+3. Prove or refute connectivity of the projected blue/black line graph for all
    `n`.
-3. Prove that local quotient depth always equals minimum tiling weight/MFAS;
+4. Prove that local quotient depth always equals minimum tiling weight/MFAS;
    the finite equality alone does not justify the general statement.
-4. Extend THM-796's exact endpoint-deletion functors to arbitrary vertex
+5. Extend THM-796's exact endpoint-deletion functors to arbitrary vertex
    deletion spans, retaining vertex automorphism orbits, stabilizers,
    insertion signatures, converse sheets, and repaired path witnesses.
-5. Pull the exact node/fibre atlas back over the LRC slope suspension and test
+6. Pull the exact node/fibre atlas back over the LRC slope suspension and test
    fibre-purity of threshold nonemptiness after adding metric gap, owner,
    carry, scale, and wall-monodromy sidecars.

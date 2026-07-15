@@ -106,13 +106,18 @@ obligations, and proof-carrier interfaces.
   `0x12ca/0x12cb` and `0x146c/0x146d`, both invisible to defect because the
   deck move flips the reflection-fixed apex.  Phase and reflection organize
   them into one commuting square of parallel black edges across the
-  non-self-converse/self-converse boundary; the unique endpoint-class
-  isomorphisms are reflection-conjugate interior 5-cycles.  Unordered successor refinement
+  non-self-converse/self-converse boundary.  The rigid-endpoint isomorphisms
+  are reflection-conjugate interior 5-cycles, with inverse endpoint-fixed
+  choices and order-five relative holonomy on the self-converse side.
+  THM-801's gap face resolves the square as black loop-versus-cross incidence;
+  `Omega_7` separates all four.  The seed is born as cross-lines at `n=7` and
+  cannot directly face-lift to `n=8`.  Unordered successor refinement
   retains `8310` node cells and `16380` `Xi` cells while leaving ordered fields
   in the current observation intact.
 - **Preserves:** local flip depth; lexicographic spine/rib/sea and blue/black
   path words; named line, weight, defect, loop and class sheet; simultaneous
-  half-edge coupling; recursive parent multiplicities; exact class/converse
+  half-edge coupling; chord-duality witness modulo endpoint automorphisms and
+  its face restrictions; recursive parent multiplicities; exact class/converse
   orbit; every explorer tiling mask and its fibre index.
 - **Forgets / guardrail:** A merged node still forgets chirality side, exact
   tiling/line orbit, observer, metric gaps, `1/14` versus endpoint wall,
@@ -140,8 +145,9 @@ obligations, and proof-carrier interfaces.
   and flip 20 edges; the fingerprints are consistency telemetry.
 - **Next pull:** Minimize bounded continuation equivalence under endpoint
   extension, internal deletion/repair, complement, and reflection at `n=8`,
-  comparing the exact cells with line-WL.  Enumerate endpoint-fixed interior
-  permutations absorbing phase complement before full `n=8` canonicalization.
+  comparing the exact cells with line-WL and THM-801's `Omega+B2` codec.
+  Enumerate endpoint-fixed interior permutations absorbing chord duality, then
+  impose face-loop and overlap compatibility before full `n=8` canonicalization.
   Then disintegrate THM-785's exact endpoint-bit flux law over
   `HP/Aut`, line-orbit, and category fibres to predict the black drift, then run
   the rooted weighted line-WL/flow audit at `n=8`; classify the first twins by
@@ -149,7 +155,8 @@ obligations, and proof-carrier interfaces.
   build one exact `(u,t,c,lambda)` chamber movie with the address as base and
   sector/owner/carry/monodromy as stalk.  Pull-card list:
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`.
-- **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, THM-793, THM-796, HYP-2245, HYP-2989, HYP-3106,
+- **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, THM-793,
+  THM-796, THM-801, HYP-2245, HYP-2989, HYP-3106,
   HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
   `merged_metagraph_recursive_three_sort_audit_codex_S2.py/.out`;
   `three_sorted_metagraph_continuation_minimization_codex_S11.py/.out`;

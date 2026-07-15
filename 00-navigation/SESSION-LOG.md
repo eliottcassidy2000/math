@@ -63312,11 +63312,23 @@ tower and the phase torsor are transverse information channels.  The four
 lines form one commuting phase/reflection square of parallel black edges from
 a non-self-converse two-sheet node (`151+151` tiling presentations) to a
 self-converse node (`57` presentations); phase moves only the marked-path
-witness inside fixed ordinary endpoint classes.  Each class-identifying
-isomorphism is unique, fixes both path endpoints, and cycles the five interior
-vertices; reflection conjugates the two 5-cycles.  This supplies a cheaper
-next-size search target: endpoint-fixed interior permutations absorbing the
-phase complement, before a full `n=8` class atlas.
+witness inside fixed ordinary endpoint classes.  On the rigid endpoint each
+class-identifying isomorphism is unique, fixes both path ends, and cycles the
+five interior vertices; reflection conjugates the two 5-cycles.  The
+self-converse endpoint has three choices, with the endpoint-fixed inverse
+cycle producing order-five relative holonomy and no simultaneous line
+isomorphism.
+
+After rebasing, THM-801 supplied the missing cover coordinate.  The phase deck
+mate is chord duality: preserve the Hamiltonian boundary and reverse every
+interior chord.  The two reflected black `n=5` core loops suspend through
+`n=6` loop faces and are born as the `n=7` cross-edge square; because they are
+cross-lines, this branch cannot directly face-lift to `n=8`.  THM-801's gap
+face changes `0x115/0x114` and `0x0c3/0x0c2` inside the two pairs.  Phase one
+is a black gap loop `33--33`, phase zero a black gap cross-line `21--33`, so
+the compressed three-face `Omega_7` packet resolves all four without `B2`.
+This supplies a cheaper next-size search target: chord-dual permutations plus
+face-loop and overlap compatibility, before a full `n=8` class atlas.
 
 The unordered-successor variant retains `8310` node-boundary and `16380` `Xi`
 cells.  It keeps ordered fields in the current observation and unary

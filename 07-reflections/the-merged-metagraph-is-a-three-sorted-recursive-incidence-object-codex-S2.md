@@ -457,9 +457,9 @@ laws, but for this bounded labelled-face observation language they add no
 line separation beyond the bounded future tree of node boundaries.  They cannot
 be discarded globally: changing the operation alphabet, asking a direct
 colour/defect theorem, changing the face-successor semantics, moving to
-`n>=8`, or pulling back to metric LRC states changes the equivalence relation.  Necessary
-information is therefore not an absolute list of fields.  It is a congruence
-relative to `(operations, terminal predicates, gauge)`.
+`n>=8`, or pulling back to metric LRC states changes the equivalence relation.
+Necessary information is therefore not an absolute list of fields.  It is a
+congruence relative to `(operations, terminal predicates, gauge)`.
 
 Only two `Xi` collision pairs survive.  Both are phase-torsor deck pairs:
 
@@ -477,16 +477,39 @@ pairs, while reflection swaps the two pairs.  They are parallel black lines
 between one non-self-converse node, whose two ordinary class sheets contain
 151 tiling presentations each, and a self-converse node with 57 presentations.
 Phase changes only the marked-path presentation inside fixed ordinary endpoint
-classes; reflection exchanges the two 151-element converse sheets.  The
-class-identifying relabelling for each phase pair is unique, fixes both path
-endpoints, and cycles all five interior vertices.  The two interior 5-cycles
-are reflection-conjugate.  This reframes the next search: classify endpoint-
-fixed interior permutations that absorb simultaneous complement of both
-faces.  Such a permutation is an algebraic witness for phase blindness and
-may be enumerable without constructing the full next-size node atlas.
+classes; reflection exchanges the two 151-element converse sheets.  On the
+rigid endpoint the class-identifying relabelling is unique, fixes both path
+ends, and cycles all five interior vertices.  The self-converse endpoint has
+three choices; its unique endpoint-fixed choice is the inverse 5-cycle, and no
+one relabelling maps both line endpoints.  The two phase pairs carry
+reflection-conjugate relative holonomy of order five.
 
-This suggests a better recursive ontology: node data are observations, lines are
-continuation states, tilings are witnesses, and phase is descent data gluing
+The right involution on presentations is clearer than “apex ambiguity.”  If
+`A` flips the apex and `tau` complements all tiles, then `zeta=tau A` preserves
+the Hamiltonian boundary cycle and reverses every interior polygon chord.
+Deletion sends `zeta` to lower complementation.  Therefore a two-face phase
+collision requires both lower face lines to be loops.  The residuals descend
+from two reflected black same-class `n=5` core loops, suspend through `n=6`
+loop faces, and are born as cross-lines at `n=7`.  Being cross-lines, they
+cannot themselves be direct faces of an `n=8` phase collision.  Phase-blind
+ancestry has births and deaths rather than monotone inclusion.
+
+THM-801 supplies the decisive alternative description.  Its third gap face
+covers the apex and turns phase into Cech overlap descent.  On the four lines,
+the two endpoint faces remain fixed while the gap lines are
+`0x115/0x114` and `0x0c3/0x0c2`.  Phase one is a black gap loop at node 33;
+phase zero is a black gap cross-line from node 21 to 33.  The node-compressed
+three-face `Omega` carrier therefore separates the whole square without the
+mirror `B2` sidecar.  A coordinate irreducible for one cover has become
+ordinary incidence after refining the cover.
+
+This reframes the next search: classify endpoint-fixed interior permutations
+that absorb chord duality, then impose compatible face restrictions and
+overlap holonomy.  This permutation-first search may expose the next primitive
+seed without constructing a full next-size node atlas.
+
+This suggests a better recursive ontology: node data are observations, lines
+are continuation states, tilings are witnesses, and phase is descent data gluing
 the two face witnesses.  The object is organized by what operations can be
 performed, not by which marks happen to appear in one graph drawing.
 
@@ -543,19 +566,25 @@ destroys metric widths, owners, endpoint side, scale/residue, wall chronology,
 inverse winding, and carry.  Those fields remain a stalk above the atlas until
 one proves fibre-purity or a reconstruction/annihilation theorem.
 
-This gives a practical preservation hierarchy:
+This gives a practical preservation diagram, not a one-dimensional hierarchy:
 
 ```text
-simple support
- < weighted coloured node incidence
- < named line + defect + loop sheet
- < simultaneously coupled half-edge transport
- < marked deletion witness
- < owner-labelled metric wall state.
+node boundary -> colour -> sheet -> defect packet
+       |                              |
+       +----------> Xi ---------------+-> joined line packet -> exact line
+
+sorted face marginal -> simultaneous coupling -> Xi -> three-face Omega
+
+node aggregates: support -> weights -> primitive face row
+witness fibre:    exact line <- oriented marked tiling
+LRC bundle:       combinatorial atlas <- owner/metric/transport stalk.
 ```
 
-The hierarchy is recursive: what must be retained at one level is exactly the
-information needed to make the next intended operation well-defined.
+Only the first two rows are refinements of partitions on the same line set.
+Node aggregates sum over lines; marked tilings orient them; the LRC stalk adds
+fields on a different space.  Treating all four as one ladder was itself a
+lossy description.  The recursive rule is operational instead: retain enough
+to make the next intended operation and terminal predicate well-defined.
 
 ## Cross-thread convergence: component obligations and three holonomies
 
