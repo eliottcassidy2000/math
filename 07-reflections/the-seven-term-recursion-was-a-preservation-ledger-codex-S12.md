@@ -188,7 +188,7 @@ wall transport.  The right bridge is a bundle of transported stalks over this
 four-direction tournament base, not a claim that one node coordinate already
 contains loneliness.
 
-The next pull arrived while this write-up was live.  THM-802 gives the
+The next pull arrived while this write-up was live.  THM-805 gives the
 unmarked cell-network Tutte product
 `prod_(k=1)^(n-2)(x-1+[k]_y)`, so MPA-39 no longer starts from zero: the open
 step is to mark that product by `A/B/C` face ownership and ask whether a

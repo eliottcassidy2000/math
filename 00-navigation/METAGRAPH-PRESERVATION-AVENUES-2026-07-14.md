@@ -608,7 +608,7 @@ certificate clauses, and proof obligations.
   series chain of parallel bundles, while THM-801's primal/dual face
   curvatures recover `(lambda,epsilon)`.  The colour law is a single top
   Boolean interaction, not an Eisenstein imbalance.
-- **Concurrent delivery:** THM-802 gives the unmarked closed form
+- **Concurrent delivery:** THM-805 gives the unmarked closed form
   `T(N_n;x,y)=prod_(k=1)^(n-2)(x-1+[k]_y)` and its classical specializations.
   Its unit-circle and harmonic-measure bridges are logged separately under
   HYP-6885.

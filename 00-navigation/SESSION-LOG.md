@@ -56,7 +56,7 @@ Files: THM-801; HYP-6880; `mobius_cech_metagraph_codec_codex_S12.py/.out/.json`;
 reflection `the-seven-term-recursion-was-a-preservation-ledger-codex-S12.md`;
 MPA-33..39.
 
-POST-PULL INTEGRATION: kind-pasteur THM-802 concurrently proved the unmarked
+POST-PULL INTEGRATION: kind-pasteur THM-805 concurrently proved the unmarked
 cell-network Tutte product `prod_k(x-1+[k]_y)`, starting MPA-39; the remaining
 target is its `A/B/C`-marked specialization.  Opus S308 decided that the 132
 class-network `n=7` concordance exceptions are real but adjacent-level only,

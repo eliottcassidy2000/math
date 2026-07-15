@@ -1,6 +1,6 @@
 ---
-id: THM-802
-renumber_note: "Claimed as THM-800 at 35a17e793 but codex's THM-800 (two-replacement-common-scale-descent) reached origin first (my push was rejected mid-flight); renumbered to THM-802 (801 = codex B3/B2 descent). My HYP-6880 likewise renumbered to HYP-6885 (codex-S12 first-pusher on 6880)."
+id: THM-805
+renumber_note: "Claimed as THM-800 at 35a17e793, then renumbered to THM-802, but the earlier LRC THM-802 affine-packet theorem had already reached origin; THM-801/803/804 were also occupied. Renumbered finally to THM-805 on live main. My HYP-6880 likewise became HYP-6885 (codex-S12 first-pusher on 6880)."
 title: THE TUTTE POLYNOMIAL OF THE STAIRCASE SMITH NETWORK IN CLOSED FORM — T(N_n; x, y) = Π_{k=1}^{n−2} (x − 1 + [k]_y), the product of shifted q-INTEGERS [k]_y = 1+y+…+y^{k−1} (5-line rank–nullity proof; every classical specialization becomes a one-line product: κ = (n−2)!, forests = (n−1)!… rising factorial at y=1, acyclic orientations 2^{n−2}, chromatic q(q−1)^{n−2}, flow ≡ 0 via the bridge factor) — AND THE LRC BRIDGE: (i) on the unit circle y = e(2πθ) each factor becomes the DIRICHLET KERNEL D_k(θ), so T(N_n; 1, e(2πθ)) is the SUDLER-type product over the interval core {1..n−2} — the resonance landscape of the LRC extremal speeds (Dedekind-η adjacency); (ii) the HARMONIC-MEASURE IDENTITY: the staircase's electrical aspect ratio H_{n−2} (HYP-6865) and the LRC interval-core good measure are the same harmonic number — m({1..k}, λ=1/(k+2)) · C(k+2,2) = H_k (mac-mini THM-736 proved the k=12 instance |G'| = H_12/91; here verified exactly for the whole ladder)
 status: CLAIMED (kind-pasteur-2026-07-15-S128 cont.8) — closed form has the 5-line proof (below), referee + specializations + the harmonic-measure ladder verification run THIS SESSION; the Sudler/η adjacency is logged as HYP-6885 (observational)
 source: kind-pasteur-2026-07-15-S128 (cont.8; owner: work the closed-form Tutte polynomial, connect to LRC)
@@ -13,7 +13,7 @@ related:
   - kps-S11 equinumerosity block (the G_n↔E_n Tutte-duality lead this begins to execute)
 ---
 
-# THM-802 — the staircase's Tutte polynomial, and what it knows about the LRC
+# THM-805 — the staircase's Tutte polynomial, and what it knows about the LRC
 
 ## The closed form (PROVED)
 
@@ -40,7 +40,7 @@ the interval-core speeds {1, …, n−2} of the LRC extremals. Small values of t
 unit circle, computes the joint resonance profile of the deep-well core. Sudler products are the
 exponential of Birkhoff sums of log|2 sin| — the Dedekind-η / quantum-modular world — the same
 neighborhood as THM-732's Dedekind–Bernoulli certificates (log-derivative of these products) and
-mac-mini's X₀(14) thread. (Observational scaffolding: HYP-6880.)
+mac-mini's X₀(14) thread. (Observational scaffolding: HYP-6885.)
 
 **(ii) The harmonic-measure identity (the resistance IS the good measure).** HYP-6865: the
 staircase's pole-to-pole resistance is H_{n−2}. Claim, verified exactly this session for the whole
