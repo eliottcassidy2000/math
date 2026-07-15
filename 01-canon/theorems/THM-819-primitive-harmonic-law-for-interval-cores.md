@@ -3,6 +3,7 @@ id: THM-819
 title: THE PRIMITIVE HARMONIC LAW — for every k ≥ 1, the interval core's good measure at the sub-tight threshold is EXACTLY the primitive harmonic sum — m({1,…,k}; λ = 1/(k+2)) = (2/((k+1)(k+2))) · Σ_{1≤u≤k, gcd(u,k+1)=1} 1/u. COROLLARY: it equals H_k/C(k+2,2) (THM-805's harmonic-measure form) ⟺ k+1 is PRIME — the "mod-6 law" of HYP-6885 was the shadow of primality (primes > 3 are ≡ ±1 mod 6, so n = k+2 = p+1 ≡ 0,2 mod 6; the mod-6 exceptions n ∈ {10,16,22} are n−1 ∈ {9,15,21} composite). The deep well is the p = 13 instance: m({1..12}; 1/14) = 2H₁₂/(13·14) = H₁₂/91 (mac-mini THM-736's base measure — now an instance of a totient-structured law)
 status: PROVED (three-step proof below: Dirichlet confinement + per-witness two-sided extents + unit-inversion bijection; every step elementary and self-contained) + REFEREED (exact ℚ, k = 1..30, zero exceptions; also re-derives every EQUAL/differ entry of the cont.8 ladder including the exact failure ratios)
 source: kind-pasteur-2026-07-15-S128 (cont.9; owner: prove the mod-6 law)
+renumber_note: Reserved/pushed as THM-817 after the earlier THM-817 return-satellite reservation and proof; S13 renumbered it to THM-819 because THM-818 had already been assigned to the n=9 relation-join theorem. Codex-S10 then repaired the null-boundary quantifier and replay text.
 depends_on: []
 related:
   - THM-805 (the Tutte/harmonic bridge whose part (ii) this completes and corrects: the harmonic-number form is the prime case)
@@ -20,11 +21,22 @@ verification:
 
 >  m({1,…,k}; 1/(k+2)) = 2δ · Σ_{1≤u≤k, gcd(u,q)=1} 1/u.
 
-**Step 1 (Dirichlet confinement).** Let t be good (‖jt‖ ≥ 1/(k+2) for all j ≤ k). By Dirichlet's
-theorem with Q = k+1 there is 1 ≤ j ≤ q with ‖jt‖ < 1/(k+2). Goodness forces j = q: t lies within
-δ' := ‖qt‖/q < δ of some a/q. If d = gcd(a, q) > 1, then (q/d) ≤ k and ‖(q/d)t‖ = ‖a/d + ε/d‖ =
-|ε|/d < 1/(k+2) (a/d ∈ ℤ), contradicting goodness. So **every good t lies within δ of a PRIMITIVE
-a/q** — the good set is contained in the δ-neighborhoods of the φ-witnesses.
+**Step 1 (Dirichlet confinement up to a null boundary).** Let t be good
+(‖jt‖ ≥ 1/(k+2) for all j ≤ k).  The sharp pigeonhole form of Dirichlet with
+Q = k+1 gives `1≤j≤q` with `‖jt‖≤1/(k+2)`.  If the inequality is strict,
+goodness forces `j=q`: t lies within `δ'=‖qt‖/q<δ` of some `a/q`.  If
+`ε=qt-a` and `d=gcd(a,q)>1`, then `(q/d)≤k` and
+`‖(q/d)t‖=‖a/d+ε/d‖=|ε|/d<1/(k+2)`, a contradiction.  Hence every strict
+Dirichlet case lies within δ of a primitive `a/q`.
+
+The equality case omitted by the word “strict” is finite and has measure zero.
+Indeed equality in the `q+1`-point spacing argument forces the orbit
+`0,t,...,qt` to be the equally spaced `(q+1)`-grid, so
+`t=b/(q+1)` modulo one.  Some of these points need not lie in the primitive
+`q`-neighborhoods (for example `k=3,t=2/5`), which is why the earlier
+pointwise formulation was too strong.  Removing or restoring this finite set
+does not change `m`.  Thus, for the measure calculation, the good set is
+contained in the δ-neighborhoods of the primitive witnesses.
 
 **Step 2 (per-witness extents).** Fix a primitive a/q and write t = a/q + s, |s| ≤ δ. For j ≤ k:
 ‖j·a/q‖ = (ja mod q)/q or its complement; the residues ja mod q run over nonzero residues. The

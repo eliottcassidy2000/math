@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """THM-819 referee: m({1..k}; 1/(k+2)) = (2/((k+1)(k+2))) * sum_{u<=k, gcd(u,k+1)=1} 1/u, k=1..30 exact.
-kind-pasteur-2026-07-15-S128 (cont.9). Output: 05-knowledge/results/thm819_primitive_harmonic_referee_kps_S128c9.out"""
+Renumbered from colliding THM-817 after THM-818 was assigned to the n=9 relation theorem.
+Output: 05-knowledge/results/thm819_primitive_harmonic_referee_kps_S128c9.out"""
 from fractions import Fraction as F
 from math import gcd
 
