@@ -1,0 +1,7 @@
+m=28; sweeping 362880 perms...
+W(9) = 3408 ; |X|(9) = 3408 ; multiplicity histogram (|Aut| profile) = {1: 3408}
+gridsym-qf at n=9: 0 (expect 0, odd n)
+n=9: orbits=852 = orbitsSC 69 + orbitsNS 783
+SEQUENCES: orbitsSC = 2,0,9,3,69 ; orbitsNS = 0,3,13,98,783
+CORRECTED NS rates: 3/22=0.136 (n=6), 13/184=0.071 (n=7), 98/3352=0.029 (n=8), 783/94392=0.0083 (n=9)
+DONE

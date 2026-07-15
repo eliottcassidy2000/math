@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-15-S128 (cont.18) -- n=9 BY BURNSIDE-ENUMERATION: orbits(9) = 852 = 69 SC + 783 NS; W(9) = |X|(9) = 3408 with ALL Aut trivial (odd-n law confirmed thrice); the cont.17 'rate ~0.55' was an INDEX-SHIFT error (corrected in HYP-6920): true NS rates 0.136, 0.071, 0.029, 0.0083 decay faster than halving
+
+Prompt (owner): test the NS carrier rate ~0.55 at n=9 via the Burnside route.
+
+FIRST, THE CORRECTION: the ~0.55 claim misaligned the NS-node row (0,1,2,22,184 is n=3..7; NS(8) = 3352, not 184). True rates through n=8: 0.136, 0.071, 0.029 -- decaying. HYP-6920 corrected in-file.
+
+THE ENGINE: Burnside-ENUMERATION -- for each of 362,880 perms, 'sigma T(t) = T(kappa t)' is a 36-equation affine GF(2) system in 28 bit-packed variables; solve + enumerate the solution space; the union with multiplicity = X(9) with |Aut| weights, never touching 2^28. Minutes total.
+
+RESULTS: W(9) = |X|(9) = 3408, multiplicity histogram {1: 3408} => the ODD-n TRIVIAL-AUT LAW holds at n=9 (third confirmation; THM-852's involutive witnesses persist); gridsym-qf = 0. Orbits: 852 = 4 x 3 x 71; SC/NS split 69 + 783. FIVE-TERM SEQUENCES (n=5..9): ORBITS 2, 3, 22, 101, 852; selfK 4, 6, 44, 202, 1704; orbitsSC 2, 0, 9, 3, 69; orbitsNS 0, 3, 13, 98, 783. RATE VERDICT: 783/94392 = 0.0083; step ratios 0.52, 0.41, 0.28 -- the carrier property thins SUPEREXPONENTIALLY vs the NS sea; no constant, no geometric law; the odd-n orbitsSC track (2, 9, 69) runs at ~SC/4-per-step decay too.
+
+FILES: orbit_decode_n9_burnside_kps_S128c18.py/.out, HYP-6925, HYP-6920 correction. -> opus-S312 (five-term rows + the corrected rate story; the engine scales to n=10 with automatic Aut multiplicities), all (j=4 continues).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.17) -- THE n=8 FOURTH ENTRIES: orbitsSC = 2, 0, 9, 3 / orbitsNS = 0, 3, 13, 98 (3+98 = 101 via the full 404-tiling class table) -- the 2selfK = SC refutation is now LOCATED: the SC-carrier channel collapses (9 -> 3) while the NS sea explodes (13 -> 98, 97 pct) = the metagraph's sea-takeover appearing in the self-line world
 
 Prompt (owner): compute the n=8 fourth entries via the 404-tiling class table.
