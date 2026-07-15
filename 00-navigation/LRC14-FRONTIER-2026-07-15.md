@@ -27,13 +27,13 @@ the depth-11 chi-seven address simplex splits into a 48-dimensional residue
 base plus 30 A/B/C carry contrasts.  These are operation-specific codecs, not
 metric witnesses.  The broad j=4 computation remains at its recorded partial
 progress (`171/2002` clean bodies at the last integrated audit), but the new
-portable exact lane closes flood edges `(5,7)` and `(6,7)` uniformly.  The
-first has 28,847 residual bottom sweeps, all positive with minimum `7/858`;
-the second has 73,323, all positive with minimum `97/4004`.  Thus two of the
-21 flood bodies are closed and nineteen remain.  They retain an eight-dimensional edge
+portable exact lane closes the flood triangle `(5,6)`, `(5,7)`, `(6,7)`
+uniformly.  Their residual bottom-sweep counts are `191,000`, `28,847`, and
+`73,323`, all positive, with minima `57191/2522520`, `7/858`, and `97/4004`.
+Thus three of the 21 flood bodies are closed and eighteen remain.  They retain an eight-dimensional edge
 sector invisible to point-star plus Fano-triangle sums and are not symmetry
 quotients of the closed edge.  Re-root descent nevertheless gives a genuine
-completed-family transport: the two closed anchors plus 456 exact residual
+completed-family transport: the three closed anchors plus 260 exact residual
 one-speed sweeps prove that every family containing `{8,...,14}` and at least
 five small labels is lonely.  Thus every unresolved flood completion has at
 most four small labels and at least two speeds above `14`.
@@ -106,8 +106,9 @@ gcd-descent bookkeeping, and (iv) scale-free transverse fragmentation. HYP-6830'
 
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
 on an unproved global far-element monotonicity statement; THM-741 remains explicitly `CLAIMED` for
-the 2002-body theorem.  Its edge-`(5,7)` and edge-`(6,7)` addenda are exact proved banks, not an
-unconditional assembly lemma for the other nineteen floods.
+the 2002-body theorem.  Its edge-`(5,6)`, edge-`(5,7)`, and edge-`(6,7)`
+addenda are exact proved banks, not an unconditional assembly lemma for the
+other eighteen floods.
 
 ## 1. Status by piece
 

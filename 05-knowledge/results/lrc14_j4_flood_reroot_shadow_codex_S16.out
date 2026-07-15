@@ -1,29 +1,25 @@
 THM-741 FLOOD RE-ROOT DESCENT AND FIVE-SMALL SHADOW
 ========================================================================================
 dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
-anchor_output_sha256=(5, 7):582097f06cb0f66f5deedd7814e127e22f48b22051bed612305ecd7ea3c062b0,(6, 7):5f8e5dc2108c15ba4f7d80ce7d77805c58eb5c292b326f704ab3a28279d11694
+anchor_output_sha256=(5, 6):f75cce66766f68e4c44c3a5d68a17136f135cdf775f396591517ac55e793a233,(5, 7):582097f06cb0f66f5deedd7814e127e22f48b22051bed612305ecd7ea3c062b0,(6, 7):5f8e5dc2108c15ba4f7d80ce7d77805c58eb5c292b326f704ab3a28279d11694
 root charts=21 K7 edges; transition families=35 small-label triples
 Fano transitions: triples=7 components=7x3 degree=2 edges=21 equality_rank=14 quotient_dim=7
 non-Fano transitions: triples=28 components=1x21 degree=8 edges=84 equality_rank=20 quotient_dim=1
 all transitions: triples=35 components=1x21 degree=10 edges=105 equality_rank=20 quotient_dim=1
 descent no-go: every root-edge-only completed-family invariant is constant
-five-small sets total/anchor-shadow/residual=21/14/7
+five-small sets total/anchor-shadow/residual=21/18/3
 residual rows K ; r ; m ; cap ; exact_w ; minimum ; first_tail ; tail_lower
   (1, 2, 3, 4, 5) ; 16 ; 77771/2522520 ; 9513504/77771 ; 15..122 (108) ; 16607/840840@23 ; 123 ; 17443/120660540
   (1, 2, 3, 4, 6) ; 20 ; 17471/360360 ; 1698840/17471 ; 15..97 (83) ; 42487/1261260@22 ; 98 ; 6659/20600580
   (1, 2, 3, 4, 7) ; 12 ; 14281/420420 ; 1189188/14281 ; 15..83 (69) ; 204983/9669660@69 ; 84 ; 62/245245
-  (1, 2, 3, 5, 6) ; 16 ; 118301/2522520 ; 9513504/118301 ; 15..80 (66) ; 1691323/58017960@46 ; 81 ; 2551/8828820
-  (1, 2, 4, 5, 6) ; 16 ; 19013/360360 ; 1359072/19013 ; 15..71 (57) ; 3683/114660@22 ; 72 ; 137/420420
-  (1, 3, 4, 5, 6) ; 14 ; 133421/2522520 ; 8324316/133421 ; 15..62 (48) ; 285569/8576568@17 ; 63 ; 1289/2942940
-  (2, 3, 4, 5, 6) ; 14 ; 4319/51480 ; 169884/4319 ; 15..39 (25) ; 103669/1681680@16 ; 40 ; 719/600600
-exact residual sweeps=456 zeros=0 ; global_exact_minimum=16607/840840 at K=(1, 2, 3, 4, 5),w=23
-six-small sets total/anchor-shadow/residual=7/6/1 ; residual_K=(1, 2, 3, 4, 5, 6) r=12 measure=57191/2522520
-Tournament Analysis vertices: seven residual five-label bases (not runners or root edges)
+exact residual sweeps=260 zeros=0 ; global_exact_minimum=16607/840840 at K=(1, 2, 3, 4, 5),w=23
+six-small sets total/anchor-shadow/residual=7/7/0 ; the former residual K=(1,2,3,4,5,6) is the (5,6)-anchor minimum
+Tournament Analysis vertices: three residual five-label bases (not runners or root edges)
 pair observable: C(B)-C(A), C=(99/70)r/(6m); gauge: lower C -> higher C; tie: lex
-fingerprint: score_hist={0..6:1}, directed_3cycles=0, SCC_sizes=7x1, edge_flips_vs_lex=21, Hamiltonian_paths=1
-tie Hamiltonian path=((2, 3, 4, 5, 6), (1, 3, 4, 5, 6), (1, 2, 4, 5, 6), (1, 2, 3, 5, 6), (1, 2, 3, 4, 7), (1, 2, 3, 4, 6), (1, 2, 3, 4, 5))
+fingerprint: score_hist={0..2:1}, directed_3cycles=0, SCC_sizes=3x1, edge_flips_vs_lex=3, Hamiltonian_paths=1
+tie Hamiltonian path=((1, 2, 3, 4, 7), (1, 2, 3, 4, 6), (1, 2, 3, 4, 5))
 kept: exact one-speed horizon; destroyed: interval comb and exact clearance
 PROVED SHADOW: H plus at least five small labels is strictly lonely
 SCOPE: unresolved flood families have at most four small labels; THM-741 remains CLAIMED
-source_sha256=54f370fd04269e53b7a7716245e0fd462e397a576c5991eb3e6214546ed609e4
+source_sha256=55718b1d84b0efd2d19502d61c22210b35d69f361433dff1793bb7a8eaecab99
 ALL EXACT CHECKS PASSED

@@ -10,6 +10,7 @@ verification:
   - 05-knowledge/results/thm850_chi7_face_charge_referee_codex_S15.out
   - 04-computation/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py
   - 05-knowledge/results/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.out
+  - 05-knowledge/results/lrc14_j4_flood_56_exact_codex_S16.out
   - 04-computation/chi7_radon_carry_alias_codex_S15.py
   - 05-knowledge/results/chi7_radon_carry_alias_codex_S15.out
   - 04-computation/lrc14_j4_flood_reroot_shadow_codex_S16.py
@@ -488,11 +489,12 @@ full seven-mask carrier or its negative Fano line.  A whole speed predicate
 may contribute from both ends of a cyclic gap, so this is an obstruction for
 the endpoint-needle model, not for arbitrary triples of speeds.
 
-THM-741's portable exact lane has now closed the literal flood edges `(5,7)`
-and `(6,7)`: respectively `28,847` and `73,323` residual bottom sweeps are all
-positive, with minima `7/858` and `97/4004`.  These are two independent metric
-computations, not consequences of their Fano flags or Heawood coordinates.
-Nineteen literal flood edges remain.  This is a useful positive control for
+THM-741's portable exact lane has now closed the literal flood triangle
+`(5,6),(5,7),(6,7)`: respectively `191,000`, `28,847`, and `73,323` residual
+bottom sweeps are all positive, with minima `57191/2522520`, `7/858`, and
+`97/4004`.  These are three independent metric computations, not consequences
+of their Fano flags or Heawood coordinates.  Eighteen literal flood edges
+remain.  This is a useful positive control for
 the carrier diagnosis: the rank-eight cycle repair encodes either input
 completely, yet no known function of those coordinates supplies its positive
 clearance margin without the interval recursion.
@@ -517,10 +519,10 @@ identify alternative presentations.  This formally rules out promoting the
 recovered Fano/Heawood edge field to a nonconstant invariant of the final LRC
 family.
 
-The positive transport is ordinary containment.  Since the literal `(5,7)`
-and `(6,7)` bodies are uniformly closed, every completed family containing
-either is closed, even when it was reached from another root edge.  Together
-with `456` exact one-speed sweeps on the seven anchor-avoiding five-subsets and
+The positive transport is ordinary containment.  Since the literal `(5,6)`,
+`(5,7)`, and `(6,7)` bodies are uniformly closed, every completed family
+containing any one is closed, even when it was reached from another root edge.
+Together with `260` exact one-speed sweeps on the three anchor-avoiding five-subsets and
 the THM-732 tail inequality, this proves that every flood-universe family with
 at least five small labels is strictly lonely.  Hence the unresolved metric
 tail has at most four small labels and at least two speeds above `14`.  This is

@@ -395,13 +395,16 @@ leaving eight invisible edge directions; explicit four-edge curls of both
 `m` and `V1` are nonzero.  Thus the still-open flood geometry lives precisely
 in directions that every point/Fano marginal forgets.
 
-Two edges can nevertheless be closed without pretending the Fano organization
+Three edges can nevertheless be closed without pretending the Fano organization
 is a symmetry.  For flood `(5,7)`, a fixed-`E_2` lower bound closes 181,445 of
 525,362 third-level nodes before evaluating `m_3`; exact `m_3` closes another
 339,348.  Only 4,569 `E_3` nodes and 28,847 bottom sweeps remain, all positive,
 with exact minimum `7/858`.  The same literal computation on `(6,7)` leaves
 9,560 residual `E_3` nodes and 73,323 bottom sweeps, all positive, with exact
-minimum `97/4004`.  These are two of the 21 floods; the other nineteen must be
+minimum `97/4004`.  The third run, on `(5,6)`, leaves 19,820 residual `E_3`
+nodes and 191,000 bottom sweeps, all positive, with exact minimum
+`57191/2522520`.  These form a triangle of three closed floods; the other
+eighteen must be
 transported or recomputed because their numerical weights have no nontrivial
 `GL(3,2)` stabilizer.
 
@@ -410,9 +413,9 @@ family.  A small-label triple presents the same final family from each of its
 three root edges.  Fano triples alone leave seven chart components; the 28
 non-Fano triples connect all 21 root edges, so every edge-only scalar that
 descends to the final family is forced to be constant.  The positive remnant
-is containment: the two closed anchors cast upward shadows.  They close 14 of
-the 21 five-small sets; 456 exact one-speed sweeps plus the THM-732 tail close
-the other seven, and the sole unanchored six-small family is directly loose.
+is containment: the three closed anchors cast upward shadows.  They close 18 of
+the 21 five-small sets; 260 exact one-speed sweeps plus the THM-732 tail close
+the other three, and every six-small family contains an anchor.
 Thus every unresolved flood completion has at most four small labels and at
 least two speeds above 14.  This is a reduction of the common tail, not a
 symmetry closure of any remaining root body.
@@ -577,8 +580,8 @@ The shortest honest route to the requested theorem is now:
    divisor/satellite obligation.  Do not extrapolate the finite `d=15` census.
 4. **General two-sheet transport:** retain signed component--return sum arcs
    and endpoint ancestry outside the sixteen no-switch radius types.
-5. **`j=4` flood tail:** port the exact `(5,7)`/`(6,7)` bulk screen across the
-   nineteen remaining flood bodies.  Fano symmetry, `chi_7`, and local three-needle
+5. **`j=4` flood tail:** port the exact `(5,6)`/`(5,7)`/`(6,7)` bulk screen across the
+   eighteen remaining flood bodies.  Fano symmetry, `chi_7`, and local three-needle
    paths are ruled out as pruning quotients, so each transport needs a numeric
    monotonicity proof or its own exact sweep.
 
