@@ -1,0 +1,582 @@
+{
+  "finite_bank": {
+    "Q_cell_count_histogram": {
+      "1": 6,
+      "11": 182,
+      "12": 64,
+      "13": 74,
+      "14": 22,
+      "15": 76,
+      "17": 20,
+      "18": 16,
+      "19": 44,
+      "2": 19186,
+      "24": 8,
+      "25": 68,
+      "28": 18,
+      "3": 18,
+      "30": 12,
+      "31": 20,
+      "33": 12,
+      "34": 2,
+      "35": 30,
+      "37": 58,
+      "4": 25128,
+      "45": 6,
+      "48": 8,
+      "58": 10,
+      "6": 2,
+      "7": 918,
+      "8": 118
+    },
+    "Q_fibre_profile_histogram": {
+      "10x1,11x1,17x1,20x1": 60,
+      "12x1,14x1,15x1,17x1": 84,
+      "14x1,44x1": 6976,
+      "1x1,13x1,19x1,25x1": 16416,
+      "1x1,13x1,44x1": 4,
+      "1x1,19x1,38x1": 4,
+      "1x1,25x1,32x1": 4,
+      "1x1,2x1,3x1,8x1,9x2,12x1,14x1": 46,
+      "1x1,2x1,5x1,7x1,8x1,11x1,12x2": 28,
+      "1x1,2x2,3x1,6x1,7x1,17x1,20x1": 16,
+      "1x1,2x2,3x1,7x1,11x1,15x1,17x1": 2,
+      "1x1,2x2,5x1,6x1,7x1,17x1,18x1": 2,
+      "1x1,2x2,7x1,9x1,10x2,17x1": 8,
+      "1x1,2x3,3x4,4x1,5x1,6x1,12x2": 8,
+      "1x1,2x8,3x2,4x2,5x3,6x2": 16,
+      "1x1,3x1,5x1,6x1,10x1,13x1,20x1": 132,
+      "1x1,3x1,5x2,8x1,14x1,22x1": 16,
+      "1x1,3x1,7x1,10x1,12x2,13x1": 54,
+      "1x1,4x1,6x1,7x1,9x1,10x1,21x1": 38,
+      "1x1,5x2,8x1,18x1,21x1": 2,
+      "1x11,2x6,3x1,4x4,5x2,6x1": 60,
+      "1x12,2x3,3x1,4x4,5x3,6x1": 8,
+      "1x13,2x3,3x1,4x5,5x2,6x1": 8,
+      "1x13,2x9,4x3,5x3": 10,
+      "1x16,2x3,3x2,4x5,5x2": 8,
+      "1x16,2x8,3x1,4x2,5x3": 12,
+      "1x18,2x7,4x4,5x2": 20,
+      "1x19,2x10,3x1,4x4": 2,
+      "1x2,2x2,3x2,7x1,8x1,9x1,11x2": 8,
+      "1x2,2x3,3x1,4x2,5x2,7x1,10x1,12x1": 8,
+      "1x2,2x4,3x1,5x1,8x1,9x2,14x1": 8,
+      "1x2,2x4,5x2,6x2,8x1,9x2": 8,
+      "1x2,3x2,4x3,5x2,10x1,18x1": 76,
+      "1x2,5x2,8x1,18x1,20x1": 654,
+      "1x20,2x11,4x4": 30,
+      "1x20,2x8,4x3,5x2": 12,
+      "1x24,2x9,4x4": 58,
+      "1x3,2x2,3x1,5x1,6x1,8x1,10x1,19x1": 98,
+      "1x3,2x2,5x2,6x2,7x1,11x2": 56,
+      "1x3,2x7,3x2,4x2,5x3,6x2": 36,
+      "1x32,2x13": 6,
+      "1x38,2x10": 8,
+      "1x4,2x2,4x1,5x1,6x1,8x2,9x1,10x1": 10,
+      "1x5,2x1,3x1,5x1,6x1,8x1,9x2,11x1": 38,
+      "1x5,3x1,4x3,5x2,10x1,18x1": 2,
+      "1x58": 10,
+      "1x6,2x2,3x2,4x1,5x2,10x1,18x1": 76,
+      "1x6,2x3,3x6,5x2,9x2": 8,
+      "1x6,3x2,4x2,5x2,10x1,18x1": 22,
+      "1x7,2x3,3x1,5x2,6x1,7x1,9x1,10x1": 20,
+      "20x1,38x1": 3488,
+      "26x1,32x1": 5232,
+      "27x1,31x1": 2,
+      "28x1,30x1": 3488,
+      "2x1,3x1,9x2,10x1,11x1,14x1": 8,
+      "3x1,11x1,20x1,24x1": 60,
+      "3x1,5x1,6x2,8x1,14x1,16x1": 8,
+      "4x1,10x1,18x1,26x1": 76,
+      "4x1,5x1,6x2,7x1,8x1,11x2": 8,
+      "4x2,5x1,6x1,7x1,8x1,12x2": 8,
+      "4x2,6x1,7x1,10x1,11x1,16x1": 8,
+      "58x1": 6,
+      "5x1,21x1,32x1": 2,
+      "5x1,23x1,30x1": 2,
+      "5x1,9x1,21x1,23x1": 8330,
+      "5x1,9x1,44x1": 2,
+      "6x1,8x1,14x1,30x1": 84,
+      "6x1,8x2,36x1": 8,
+      "8x2,20x1,22x1": 8,
+      "9x1,12x1,18x1,19x1": 2
+    },
+    "Q_injective_and_full_old_pair_descent_shortest_words": [
+      "I",
+      "B"
+    ],
+    "Q_injective_shortest_words": [
+      "I",
+      "A",
+      "B",
+      "C",
+      "AB",
+      "BA",
+      "BC",
+      "CB",
+      "BAB",
+      "BCB"
+    ],
+    "Q_operation_kernel_split_histograms": {
+      "A": {
+        "0": 46050,
+        "1": 60,
+        "2": 10,
+        "5": 6
+      },
+      "B": {
+        "0": 46126
+      },
+      "C": {
+        "0": 46050,
+        "1": 60,
+        "2": 10,
+        "5": 6
+      }
+    },
+    "Q_partition_future_minimization": {
+      "final_class_size_histogram": {
+        "1": 14574,
+        "10": 396,
+        "11": 36,
+        "12": 186,
+        "14": 110,
+        "16": 55,
+        "18": 22,
+        "2": 2793,
+        "20": 66,
+        "22": 44,
+        "26": 44,
+        "3": 558,
+        "4": 556,
+        "46": 22,
+        "5": 188,
+        "52": 22,
+        "6": 240,
+        "7": 108,
+        "76": 11,
+        "8": 388
+      },
+      "final_classes": 20419,
+      "round_class_counts": [
+        144,
+        502,
+        1741,
+        4367,
+        10983,
+        17598,
+        20397,
+        20419,
+        20419
+      ]
+    },
+    "defect_image_rank_histogram": {
+      "0": 1746,
+      "1": 22308,
+      "2": 21374,
+      "3": 236,
+      "4": 462
+    },
+    "distinct_output_masks": 6138,
+    "distinct_output_masks_with_complements": 8940,
+    "occupied_sector_image_count_histogram": {
+      "1": 1746,
+      "11": 462,
+      "2": 22308,
+      "4": 21374,
+      "7": 12,
+      "8": 224
+    },
+    "old_pair_Q_descent_histogram": {
+      "0": 418,
+      "10": 170,
+      "16": 2,
+      "2": 140,
+      "32": 17682,
+      "34": 4,
+      "36": 26,
+      "38": 15190,
+      "4": 36,
+      "40": 2,
+      "42": 10606,
+      "56": 2,
+      "58": 1752,
+      "6": 96
+    },
+    "rows": 58,
+    "two_step_Q_census": {
+      "AA": {
+        "Q_cells": 37,
+        "Q_fibre_profile": {
+          "1": 24,
+          "2": 9,
+          "4": 4
+        },
+        "coordinate_rank": 15,
+        "old_pair_descent": 0
+      },
+      "AB": {
+        "Q_cells": 58,
+        "Q_fibre_profile": {
+          "1": 58
+        },
+        "coordinate_rank": 21,
+        "old_pair_descent": 0
+      },
+      "AC": {
+        "Q_cells": 48,
+        "Q_fibre_profile": {
+          "1": 38,
+          "2": 10
+        },
+        "coordinate_rank": 15,
+        "old_pair_descent": 4
+      },
+      "BA": {
+        "Q_cells": 58,
+        "Q_fibre_profile": {
+          "1": 58
+        },
+        "coordinate_rank": 20,
+        "old_pair_descent": 0
+      },
+      "BB": {
+        "Q_cells": 58,
+        "Q_fibre_profile": {
+          "1": 58
+        },
+        "coordinate_rank": 27,
+        "old_pair_descent": 58
+      },
+      "BC": {
+        "Q_cells": 58,
+        "Q_fibre_profile": {
+          "1": 58
+        },
+        "coordinate_rank": 20,
+        "old_pair_descent": 0
+      },
+      "CA": {
+        "Q_cells": 48,
+        "Q_fibre_profile": {
+          "1": 38,
+          "2": 10
+        },
+        "coordinate_rank": 15,
+        "old_pair_descent": 4
+      },
+      "CB": {
+        "Q_cells": 58,
+        "Q_fibre_profile": {
+          "1": 58
+        },
+        "coordinate_rank": 21,
+        "old_pair_descent": 0
+      },
+      "CC": {
+        "Q_cells": 37,
+        "Q_fibre_profile": {
+          "1": 24,
+          "2": 9,
+          "4": 4
+        },
+        "coordinate_rank": 15,
+        "old_pair_descent": 0
+      }
+    }
+  },
+  "preservation": {
+    "challenged_assumption": "iterating one seam bit does not close the return dynamics; the exact state is a contraction semigroup",
+    "destroys_or_defers": [
+      "all-output merged-node identity",
+      "LRC gaps",
+      "owners",
+      "walls",
+      "metric loneliness",
+      "increasing-size CF phase state"
+    ],
+    "preserves": [
+      "literal coordinate-copy composition",
+      "complement",
+      "reflection conjugation",
+      "finite-bank Q equality",
+      "finite-bank defect images"
+    ]
+  },
+  "right_cayley_graph": {
+    "labelled_edges": 138378,
+    "loops_by_letter": {
+      "A": 394,
+      "B": 32253,
+      "C": 394
+    },
+    "nontrivial_scc_profiles": [
+      {
+        "components": 6,
+        "coordinate_ranks": [
+          3
+        ],
+        "reachable_sinks": 3,
+        "size": 216
+      },
+      {
+        "components": 11,
+        "coordinate_ranks": [
+          2
+        ],
+        "reachable_sinks": 2,
+        "size": 1252
+      }
+    ],
+    "rank_drop_histogram": {
+      "0": 116993,
+      "1": 19803,
+      "2": 1092,
+      "3": 302,
+      "4": 124,
+      "5": 44,
+      "6": 16,
+      "7": 4
+    },
+    "reachable_sink_count_histogram": {
+      "1": 13032,
+      "2": 31342,
+      "3": 1746,
+      "4": 4,
+      "5": 1,
+      "6": 1
+    },
+    "scc_size_histogram": {
+      "1": 31058,
+      "1252": 11,
+      "216": 6
+    },
+    "sccs": 31075,
+    "terminal_sinks": [
+      {
+        "shortest_word": "AABAAACC",
+        "sink_bit": 5,
+        "source_coordinate_index": 17,
+        "source_tile": [
+          5,
+          3
+        ]
+      },
+      {
+        "shortest_word": "ABACCAACC",
+        "sink_bit": 3,
+        "source_coordinate_index": 16,
+        "source_tile": [
+          6,
+          3
+        ]
+      },
+      {
+        "shortest_word": "AAACCCCC",
+        "sink_bit": 4,
+        "source_coordinate_index": 21,
+        "source_tile": [
+          6,
+          4
+        ]
+      },
+      {
+        "shortest_word": "BACCAACC",
+        "sink_bit": 2,
+        "source_coordinate_index": 15,
+        "source_tile": [
+          7,
+          3
+        ]
+      },
+      {
+        "shortest_word": "CBACCAACC",
+        "sink_bit": 1,
+        "source_coordinate_index": 20,
+        "source_tile": [
+          7,
+          4
+        ]
+      },
+      {
+        "shortest_word": "CCBCAACC",
+        "sink_bit": 0,
+        "source_coordinate_index": 24,
+        "source_tile": [
+          7,
+          5
+        ]
+      }
+    ],
+    "vertices": 46126
+  },
+  "schema_version": 1,
+  "semigroup": {
+    "coordinate_rank_histogram": {
+      "1": 6,
+      "10": 54,
+      "11": 12,
+      "14": 14,
+      "15": 16,
+      "2": 19186,
+      "20": 4,
+      "21": 4,
+      "27": 1,
+      "28": 1,
+      "3": 25146,
+      "4": 1038,
+      "5": 318,
+      "6": 180,
+      "7": 78,
+      "8": 36,
+      "9": 32
+    },
+    "distinct_supports_by_rank": {
+      "1": 6,
+      "10": 4,
+      "11": 2,
+      "14": 3,
+      "15": 3,
+      "2": 13,
+      "20": 2,
+      "21": 2,
+      "27": 1,
+      "28": 1,
+      "3": 22,
+      "4": 32,
+      "5": 19,
+      "6": 7,
+      "7": 6,
+      "8": 6,
+      "9": 2
+    },
+    "idempotent_rank_histogram": {
+      "1": 6,
+      "2": 3009,
+      "27": 1,
+      "28": 1,
+      "3": 130,
+      "4": 2
+    },
+    "idempotents": 3149,
+    "mapping_sha256": "1df8e46ee522452ebf91841ae3d420abfa75f4fd056a3233b1453c64632aadc7",
+    "maps": 46126,
+    "reflection_fixed_maps": 12,
+    "reflection_orbits": 23069,
+    "shortest_word_length_histogram": {
+      "0": 1,
+      "1": 3,
+      "10": 3873,
+      "11": 5317,
+      "12": 6440,
+      "13": 6666,
+      "14": 6152,
+      "15": 4930,
+      "16": 3460,
+      "17": 2106,
+      "18": 1148,
+      "19": 602,
+      "2": 8,
+      "20": 268,
+      "21": 90,
+      "22": 16,
+      "3": 22,
+      "4": 56,
+      "5": 142,
+      "6": 328,
+      "7": 706,
+      "8": 1361,
+      "9": 2431
+    },
+    "shortest_word_maximum": 22,
+    "shortest_word_sha256": "fcdf4b4adf5ca36dc138795a41bb32cf3cf27dea8839a7c48c8436e54ccd7125",
+    "two_step_coordinate_ranks": {
+      "AA": 15,
+      "AB": 21,
+      "AC": 15,
+      "BA": 20,
+      "BB": 27,
+      "BC": 20,
+      "CA": 15,
+      "CB": 21,
+      "CC": 15
+    }
+  },
+  "theorem": "THM-853",
+  "tournament_analysis": {
+    "directed_triangles": 0,
+    "edge_flips": 8,
+    "hamiltonian_paths": 1,
+    "retention": {
+      "Q cell count": {
+        "cells": 27,
+        "separated_pairs": 563585084
+      },
+      "Q equality partition": {
+        "cells": 144,
+        "separated_pairs": 996410643
+      },
+      "coordinate rank": {
+        "cells": 17,
+        "separated_pairs": 562980505
+      },
+      "defect image rank": {
+        "cells": 5,
+        "separated_pairs": 584897740
+      },
+      "old-pair Q descent": {
+        "cells": 14,
+        "separated_pairs": 734213736
+      },
+      "reachable rank-one horizon": {
+        "cells": 27,
+        "separated_pairs": 1002406473
+      },
+      "visible support": {
+        "cells": 131,
+        "separated_pairs": 996334336
+      }
+    },
+    "scc_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "score_histogram": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "switches": [
+      "raw retention",
+      "retention per logarithmic cell cost"
+    ],
+    "tie_hamiltonian_path": [
+      "coordinate rank",
+      "visible support",
+      "reachable rank-one horizon",
+      "defect image rank",
+      "Q cell count",
+      "Q equality partition",
+      "old-pair Q descent"
+    ],
+    "vertices": [
+      "coordinate rank",
+      "visible support",
+      "reachable rank-one horizon",
+      "defect image rank",
+      "Q cell count",
+      "Q equality partition",
+      "old-pair Q descent"
+    ]
+  },
+  "word_convention": "letters applied left-to-right; AB = F_B after F_A"
+}

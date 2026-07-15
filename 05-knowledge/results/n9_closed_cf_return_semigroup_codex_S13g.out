@@ -1,0 +1,35 @@
+THM-853 N=9 CLOSED CF RETURN SEMIGROUP
+======================================================================
+maps=46126 max-shortest-word=22 idempotents=3149
+coordinate rank histogram={'1': 6, '2': 19186, '3': 25146, '4': 1038, '5': 318, '6': 180, '7': 78, '8': 36, '9': 32, '10': 54, '11': 12, '14': 14, '15': 16, '20': 4, '21': 4, '27': 1, '28': 1}
+idempotent rank histogram={'1': 6, '2': 3009, '3': 130, '4': 2, '27': 1, '28': 1}
+reflection fixed/orbits=12/23069
+two-step ranks={'AA': 15, 'AB': 21, 'AC': 15, 'BA': 20, 'BB': 27, 'BC': 20, 'CA': 15, 'CB': 21, 'CC': 15}
+mapping/word SHA256=1df8e46ee522452ebf91841ae3d420abfa75f4fd056a3233b1453c64632aadc7/fcdf4b4adf5ca36dc138795a41bb32cf3cf27dea8839a7c48c8436e54ccd7125
+
+RIGHT CAYLEY FLOW
+vertices/edges/SCCs=46126/138378/31075
+SCC sizes={'1': 31058, '216': 6, '1252': 11} nontrivial=[{'size': 216, 'coordinate_ranks': [3], 'reachable_sinks': 3, 'components': 6}, {'size': 1252, 'coordinate_ranks': [2], 'reachable_sinks': 2, 'components': 11}]
+terminal rank-one sinks=[{'sink_bit': 5, 'source_coordinate_index': 17, 'source_tile': [5, 3], 'shortest_word': 'AABAAACC'}, {'sink_bit': 3, 'source_coordinate_index': 16, 'source_tile': [6, 3], 'shortest_word': 'ABACCAACC'}, {'sink_bit': 4, 'source_coordinate_index': 21, 'source_tile': [6, 4], 'shortest_word': 'AAACCCCC'}, {'sink_bit': 2, 'source_coordinate_index': 15, 'source_tile': [7, 3], 'shortest_word': 'BACCAACC'}, {'sink_bit': 1, 'source_coordinate_index': 20, 'source_tile': [7, 4], 'shortest_word': 'CBACCAACC'}, {'sink_bit': 0, 'source_coordinate_index': 24, 'source_tile': [7, 5], 'shortest_word': 'CCBCAACC'}]
+reachable-sink count histogram={'1': 13032, '2': 31342, '3': 1746, '4': 4, '5': 1, '6': 1}
+loops={'A': 394, 'B': 32253, 'C': 394} rank drops={'0': 116993, '1': 19803, '2': 1092, '3': 302, '4': 124, '5': 44, '6': 16, '7': 4}
+
+FINITE 58-ROW Q BANK
+output masks/with complements=6138/8940
+Q cell count histogram={'1': 6, '2': 19186, '3': 18, '4': 25128, '6': 2, '7': 918, '8': 118, '11': 182, '12': 64, '13': 74, '14': 22, '15': 76, '17': 20, '18': 16, '19': 44, '24': 8, '25': 68, '28': 18, '30': 12, '31': 20, '33': 12, '34': 2, '35': 30, '37': 58, '45': 6, '48': 8, '58': 10}
+old-pair Q descent histogram={'0': 418, '2': 140, '4': 36, '6': 96, '10': 170, '16': 2, '32': 17682, '34': 4, '36': 26, '38': 15190, '40': 2, '42': 10606, '56': 2, '58': 1752}
+Q-injective words=['I', 'A', 'B', 'C', 'AB', 'BA', 'BC', 'CB', 'BAB', 'BCB']
+Q-injective + full-descent words=['I', 'B']
+defect rank/sector images={'0': 1746, '1': 22308, '2': 21374, '3': 236, '4': 462}/{'1': 1746, '2': 22308, '4': 21374, '7': 12, '8': 224, '11': 462}
+two-step Q={'AA': {'coordinate_rank': 15, 'Q_cells': 37, 'Q_fibre_profile': {'1': 24, '2': 9, '4': 4}, 'old_pair_descent': 0}, 'AB': {'coordinate_rank': 21, 'Q_cells': 58, 'Q_fibre_profile': {'1': 58}, 'old_pair_descent': 0}, 'AC': {'coordinate_rank': 15, 'Q_cells': 48, 'Q_fibre_profile': {'1': 38, '2': 10}, 'old_pair_descent': 4}, 'BA': {'coordinate_rank': 20, 'Q_cells': 58, 'Q_fibre_profile': {'1': 58}, 'old_pair_descent': 0}, 'BB': {'coordinate_rank': 27, 'Q_cells': 58, 'Q_fibre_profile': {'1': 58}, 'old_pair_descent': 58}, 'BC': {'coordinate_rank': 20, 'Q_cells': 58, 'Q_fibre_profile': {'1': 58}, 'old_pair_descent': 0}, 'CA': {'coordinate_rank': 15, 'Q_cells': 48, 'Q_fibre_profile': {'1': 38, '2': 10}, 'old_pair_descent': 4}, 'CB': {'coordinate_rank': 21, 'Q_cells': 58, 'Q_fibre_profile': {'1': 58}, 'old_pair_descent': 0}, 'CC': {'coordinate_rank': 15, 'Q_cells': 37, 'Q_fibre_profile': {'1': 24, '2': 9, '4': 4}, 'old_pair_descent': 0}}
+Q operation-kernel splits={'A': {'0': 46050, '1': 60, '2': 10, '5': 6}, 'B': {'0': 46126}, 'C': {'0': 46050, '1': 60, '2': 10, '5': 6}}
+Q future refinement rounds=[144, 502, 1741, 4367, 10983, 17598, 20397, 20419, 20419]
+Q future classes/profile=20419/{'1': 14574, '2': 2793, '3': 558, '4': 556, '5': 188, '6': 240, '7': 108, '8': 388, '10': 396, '11': 36, '12': 186, '14': 110, '16': 55, '18': 22, '20': 66, '22': 44, '26': 44, '46': 22, '52': 22, '76': 11}
+
+TOURNAMENT ANALYSIS vertices=7 edge-flips=8
+  retention={'coordinate rank': {'separated_pairs': 562980505, 'cells': 17}, 'visible support': {'separated_pairs': 996334336, 'cells': 131}, 'reachable rank-one horizon': {'separated_pairs': 1002406473, 'cells': 27}, 'defect image rank': {'separated_pairs': 584897740, 'cells': 5}, 'Q cell count': {'separated_pairs': 563585084, 'cells': 27}, 'Q equality partition': {'separated_pairs': 996410643, 'cells': 144}, 'old-pair Q descent': {'separated_pairs': 734213736, 'cells': 14}}
+  both gauges transitive: C3=0, singleton SCCs, one Hamiltonian path
+PRESERVATION: literal return maps/reflection/complement/Q equality/defect images
+DEFERS: 8,940-mask node classification, every LRC metric field, increasing-size CF phase
+CHALLENGED ASSUMPTION: one iterated seam bit is not a closed recursive state
+ALL ASSERTIONS PASSED
