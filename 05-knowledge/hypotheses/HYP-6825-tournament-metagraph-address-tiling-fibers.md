@@ -49,6 +49,9 @@ artifacts:
   - 01-canon/theorems/THM-812-centered-christoffel-metagraph-edge-transport.md
   - 04-computation/continued_fraction_metagraph_edge_transport_codex_S13.py
   - 05-knowledge/results/continued_fraction_metagraph_edge_transport_codex_S13.out
+  - 01-canon/theorems/THM-813-centered-christoffel-edge-descent-boundary.md
+  - 04-computation/continued_fraction_edge_descent_boundary_codex_S13.py
+  - 05-knowledge/results/continued_fraction_edge_descent_boundary_codex_S13.out
 related:
   - HYP-2245
   - HYP-2989
@@ -71,6 +74,7 @@ related:
   - THM-809
   - THM-811
   - THM-812
+  - THM-813
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -541,10 +545,26 @@ fails and coloured-edge descent succeeds for THM-812 precisely in this sense.
 This is also the algebraic content of continuation purity: impose (D)
 simultaneously for every legal operation word and terminal observation.
 
+THM-813 finds the first boundary of the successful coloured-edge descent.  For
+every complement/reflection-equivariant tiling embedding, the canonical
+all-size action carrier is
+
+```text
+Q_n=L_n/<reflection>.
+```
+
+At `n=5`, each projected coloured edge cell is exactly one `Q_5` orbit, which
+explains THM-812.  At `n=6`, 187 projected cells contain 272 reflection orbits;
+the next centered copy splits 51 projected cells, including four blue cells,
+while all 272 `Q_6` cells act without failure.  Thus even the whole colour plus
+endpoint-node context is only a conditional quotient of the line action.  The
+universal recursive skeleton is the reflection-orbit line, and every coarser
+edge address must separately pass (D).
+
 THM-811 supplies a complementary disintegration of black edges.  The coarse
 `B3` populations determine the linear leg currents `(B,T)`, hence
-`(lambda,epsilon_Smith)`, while `q` is a positional quadratic overlap.  Their exact
-master polynomial controls black flow and proves negative
+`(lambda,epsilon_Smith)`, while `q` is a positional quadratic overlap.  Their
+exact master polynomial controls black flow and proves negative
 `Cov(q_i,epsilon_Smith^2)`, but projected node pair plus
 `(q0,q1,|epsilon_Smith|)` still
 identifies only 7,248 of 8,064 black reflection orbits at `n=7`.  The positional

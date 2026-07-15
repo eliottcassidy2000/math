@@ -4,7 +4,7 @@ title: Three-sorted recursive incidence of tilings, complement lines, and conver
 status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, bounded continuation minimization, and census through n=7)
 source: codex-2026-07-15-S9/S11 (independent S9 and S2 audits, reconciled)
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
-related: [THM-477, THM-785, THM-790, THM-801, THM-809, THM-811, THM-812, HYP-6815, HYP-6825, HYP-6865]
+related: [THM-477, THM-785, THM-790, THM-801, THM-809, THM-811, THM-812, THM-813, HYP-6815, HYP-6825, HYP-6865]
 verification:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.out

@@ -585,12 +585,28 @@ Nerode congruence.  This phrasing covers node projection, line phase, face
 restriction, CF replication, and the owner-root update without pretending they
 live on the same quotient.
 
+THM-813 identifies the universal carrier for the CF class of arrows.  If `f`
+commutes with complement and staircase reflection, it acts canonically on
+
+```text
+Q_n=L_n/<reflection>.
+```
+
+The projected coloured edge address `P_n=(colour,unordered node pair)` is a
+further quotient, and (D) is exactly the condition for the `Q` action to descend
+through `P`.  The first THM-812 step succeeds because `P_5=Q_5`: eight blue
+singletons and twelve black reflection doubletons.  At the next step,
+`|P_6|=187` but `|Q_6|=272`; the centered copy `X_6->X_7` splits 51 `P_6`
+cells, including four blue cells, while all 272 `Q_6` orbits act.  Colour plus
+endpoint nodes is therefore an edge identity codec in a static drawing, not a
+universal action carrier.
+
 THM-811 similarly splits what had looked like one black edge weight.  The `B3`
 populations determine linear leg current `(B,T)` and hence
 `(lambda,epsilon_Smith)`; Möbius `q` is their positional quadratic overlap.  The
 master polynomial gives their complete joint distribution and negative
-curvature-energy coupling, but node pair plus `(q0,q1,|epsilon_Smith|)` resolves only
-7,248 of 8,064 black reflection orbits at `n=7`.  The positional reflection
+curvature-energy coupling, but node pair plus `(q0,q1,|epsilon_Smith|)` resolves
+only 7,248 of 8,064 black reflection orbits at `n=7`.  The positional reflection
 orbit of `(B2,B3)` resolves all 8,064.  Thus colour, defect, linear current,
 quadratic curvature, positional edge orbit, and literal line form a partial
 lattice of typed observables.  None is licensed to replace another merely

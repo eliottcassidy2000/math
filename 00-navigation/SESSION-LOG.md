@@ -63393,3 +63393,12 @@ non-singleton address fibres are joined across sizes by witnessed `A/B/C` face
 incidences, retaining literal lines and phase.  This makes the S11/S13 statement
 “the old `n=7` square dies and new `n=8` ambiguity is born” an executable
 recursive object rather than a metaphor or a comparison of collision counts.
+
+After the next shared-main fetch, integrated THM-813's sharp boundary.  The
+THM-812 projected coloured-edge action works because `P_5` accidentally equals
+the line-reflection orbit quotient `Q_5`.  At `n=6`, `|P_6|=187` and
+`|Q_6|=272`; the next centered copy splits 51 projected cells, including four
+blue cells, while every `Q_6` orbit acts.  Updated the synthesis and backlog so
+`Q_n=L_n/<reflection>` is the universal CF action carrier and every coarser
+node/edge codec is tested by the explicit fibre-purity condition rather than
+assumed functorial.
