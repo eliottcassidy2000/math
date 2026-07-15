@@ -146,6 +146,14 @@ compatibility but fail literal S2.  The raw address therefore determines the
 reflection orbit but needs one sheet-orientation bit to determine the literal
 tiling.
 
+THM-832 identifies the recursive linear core of those differences.  Each of
+the three faces, each pair overlap, and even the triple overlap retains all
+four survivor coordinates; explicit decoders recover the global sector from
+any one chart.  The resulting constant Cech system has no positive-degree
+cohomology.  Nevertheless equal regional support profiles carry different
+literal fibre masses, so this holonomy-free linear carrier cannot replace the
+nonlinear kernel rows or their base witnesses.
+
 This also identifies the positional boundary exactly.  At
 `n=9`, each nonfixed layer has at most three positions and the four-position
 fixed layer has only three free after apex orientation, so per-state count and

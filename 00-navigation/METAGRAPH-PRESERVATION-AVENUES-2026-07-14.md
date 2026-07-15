@@ -599,6 +599,14 @@ certificate clauses, and proof obligations.
   curvature—is the missing datum.  The next pull is continuation: act on this
   15-sector cube by the THM-812/813 centered-CF copies, inverse lifts, and
   internal deletion before minimizing it.
+- **Recursive core isolated by THM-832:** the four defect generators retain
+  rank four on every face, every pairwise overlap, and the ten-cell triple
+  overlap; the three face-exclusive corner cells carry no defect.  Explicit
+  four-bit decoders recover the sector from any chart, and the trivialized
+  Cech complex has cohomology dimensions `(4,0,0)`.  Hence the linear defect
+  has no phase holonomy; the punctures are imposed by nonlinear H-kernel and
+  literal-S2 fibres.  Venn support still does not predict fibre mass, so carry
+  the exact witness rows when testing continuation.
 
 ### MPA-35 — Minimize the corewise Boolean Möbius stalk
 

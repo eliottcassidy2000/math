@@ -1,0 +1,33 @@
+THM-832 N=9 RANK-FOUR CECH CORE
+basis=0192486,08c2c0c,11b4600,4483414
+intersection name:cells/rank:pivot-tiles
+  A:21/4:8-1,7-1,6-1,7-2:decoder=1487
+  B:21/4:8-1,7-1,6-1,7-2:decoder=1487
+  AB:15/4:8-1,7-1,6-1,7-2:decoder=1487
+  C:21/4:9-2,7-2,6-2,5-2:decoder=182f
+  AC:15/4:7-2,6-2,5-2,4-2:decoder=f418
+  BC:15/4:9-2,7-2,6-2,5-2:decoder=182f
+  ABC:10/4:7-2,6-2,5-2,6-3:decoder=941e
+exact-Venn-region name:cells/rank=A:1/0,B:1/0,AB:5/3,C:1/0,AC:5/2,BC:5/3,ABC:10/4
+rank inclusion-exclusion=4+4+4-4-4-4+4=4
+Cech ranks d0/d1=8/4 cohomology H0/H1/H2=4/0/0
+missing coordinates=1026286:0101,4dd3c9e:1011,54a5692:1101,5537214:1100
+occupied sector coord:mass:weight:AB,AC,BC,ABC:J3..J8
+  0192486 0001:6:8:2,0,2,4:0,0,0,0,-1,2
+  08c2c0c 0010:2:8:2,0,2,4:0,0,0,1,-1,0
+  095088a 0011:2:8:2,0,2,4:0,0,0,1,0,-2
+  11b4600 0100:2:8:0,2,0,6:0,0,0,0,1,-1
+  18e4e8a 0111:4:12:2,2,2,6:0,0,0,-1,1,1
+  1976a0c 0110:4:12:2,2,2,6:0,0,0,-1,2,-1
+  4483414 1000:4:8:2,2,2,2:0,0,1,0,-1,0
+  4511092 1001:2:8:2,2,2,2:0,0,1,0,0,-2
+  4c41818 1010:26:8:2,2,2,2:0,0,1,-1,0,0
+  5c67a9e 1111:2:16:4,4,4,4:0,0,1,1,-2,-1
+  5df5e18 1110:4:16:2,4,2,8:0,0,1,-1,-1,1
+nonlinear no-go: exact-region support weights do not determine fibre mass
+  profile=2,0,2,4 masses=2,6
+  profile=2,2,2,2 masses=2,4,26
+TOURNAMENT ANALYSIS vertices=11 occupied sectors observable=(first skew layer,weight,mass)
+  switches=structural/empirical tie-path=hex-D C3=0 SCC=1^11 HP=1 edge-flips=22
+PRESERVES difference coordinates and all face restrictions; DESTROYS base witness,H8 kernel,S2 realization,LRC metric
+CHALLENGED ASSUMPTION vertices need not be runners/nodes: here they are defect sectors with literal fibres
