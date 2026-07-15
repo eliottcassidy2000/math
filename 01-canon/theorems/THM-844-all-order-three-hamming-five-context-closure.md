@@ -4,7 +4,7 @@ title: All order-three Hamming-five common-sheet contexts close by longest-compo
 status: PROVED (uniform arbitrary-height closure of all 96 THM-823 all-order-three contexts) + FINITE-EXACT (28,876-state endpoint certificate and Tournament Analysis)
 source: codex-2026-07-15-S10 continuation and integration audit
 depends_on: [THM-815, THM-823, THM-837]
-related: [THM-820, THM-822, THM-845, HYP-6820]
+related: [THM-820, THM-822, THM-845, THM-847, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_all_order_three_context_closure_codex_S10.py
   - 05-knowledge/results/lrc13_hamming_five_all_order_three_context_closure_codex_S10.out
@@ -259,6 +259,7 @@ certificate  9bb065fe6ffafc348ada19c5f3ef30f0b28a5066bfd905a72107202ed13cdb2a
 The replay uses no optimizer, floating point, sampled time grid, or height
 cutoff.  The theorem closes all ninety-six all-order-three contexts and
 supersedes THM-837's statement that the other ninety-five are open.  It does
-not close THM-823's mixed order-one/order-three branch, scalar rows of other
-orders, or the global Hamming-five problem.  It does not prove the `n=12`
+not itself close THM-823's mixed order-one/order-three branch; THM-847
+subsequently does.  Scalar rows with effective order above twelve and the
+global Hamming-five problem remain open.  It does not prove the `n=12`
 sporadic branch empty.

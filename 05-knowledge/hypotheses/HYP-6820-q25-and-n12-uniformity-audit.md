@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and all 96 bounded all-order-three common-sheet contexts uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; scale-one H6 is finite but contains the doubled-AP equality face; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers; global emptiness remains OPEN in mixed order-one and unbounded-order H5 descent, non-AP H6, uniform radius/sum-arc exclusion or transport, the `s>=5` deep shell, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; scale-one H6 is finite but contains the doubled-AP equality face; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers; global emptiness remains OPEN in unbounded-order H5 descent, non-AP H6, uniform radius/sum-arc exclusion or transport, the `s>=5` deep shell, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -46,6 +46,7 @@ depends_on:
   - THM-840
   - THM-844
   - THM-845
+  - THM-847
   - HYP-6750
   - HYP-6775
 related:
@@ -61,6 +62,7 @@ related:
   - THM-840
   - THM-844
   - THM-845
+  - THM-847
   - MISTAKE-143
 ---
 
@@ -550,10 +552,11 @@ mod-39 boundary witnesses and are only proved to have `M>=1/13`.  The
 order-one branch is symbolically either all one or one plus the order-three
 quartet.  The all-one case normalizes to the scale-one chart and is now closed
 by THM-845 (zero-height faces reduce to already closed lower Hamming radii).
-The mixed one-plus-order-three quartet still has only the boundary clock at
-arbitrary height.  Remaining work is unbounded common-sheet classification and
-strict metric erosion of that mixed survivor language, not a stronger scalar
-cutoff.
+THM-847 now closes every proper mixed one-plus-order-three lift; its order-one
+speed is exactly `3(b+13h)`, `h>=1`, while `h=0` is THM-816's Hamming-four
+face.  Thus every survivor language with all five effective orders at most
+twelve is closed.  Remaining work is unbounded common-sheet classification,
+not a stronger scalar cutoff.
 
 THM-837 performs that metric erosion on one of the 96 all-order-three
 directed-flag/parity contexts, namely `C={1,5,8,12}`, `b=10`, bits
@@ -573,8 +576,16 @@ binary tournaments remain transitive in both gauges across all contexts even
 though 492 edges flip.  The exact carrier is the evolving incidence of literal
 residual components with remaining labelled CRT comb obligations, decorated by
 active endpoints and the last chosen speed.  This closes the bounded
-all-order-three common-sheet language, but not the mixed order-one language,
-unbounded common sheets, or arbitrary deck descent outside THM-823's bank.
+all-order-three common-sheet language.
+
+THM-847 applies the same carrier to the mixed language.  The exact recursion
+visits `31,715` states over `96` contexts, finds no covering prefix, and dies
+before depth five.  A standalone implementation reproduces the certificate,
+and an independent literal sheet census finds exactly those contexts among all
+`63,360` marked mixed presentations.  Both tournament gauges remain transitive
+while 395 edges flip.  Together THM-844/845/847 empty THM-823's complete
+effective-order-at-most-twelve common-sheet bank; unbounded common sheets and
+arbitrary deck descent outside that bank remain.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -899,8 +910,9 @@ The uniform theorem now has two explicit residuals:
    Markov state for this monotone insertion action, but requires the labelled
    tooth bank as soon as deletion or replacement is allowed. THM-837 first
    closes one all-order-three context with this state, and THM-844 closes all
-   96 by the stronger longest-component recursion.  Run the mixed order-one
-   and unbounded common-sheet survivor languages.  Prove the remaining arbitrary-AP-scale
+   96 by the stronger longest-component recursion. THM-847 closes all 96 mixed
+   contexts, and THM-845 supplies all order one.  Classify and erode the
+   unbounded-order common-sheet languages.  Prove the remaining arbitrary-AP-scale
    descent without assuming common scale. THM-815 Part C also makes scale-one
    radius six finite, but its `2[12]` equality face is genuine; separate that
    AP orbit and exclude the non-AP rows. At radius
@@ -977,8 +989,9 @@ locates the static kernel boundary. THM-845 closes the two complete boxes at
 arbitrary lift height. THM-840 identifies the operation-congruence boundary,
 and THM-837 closes one of the 96 arbitrary-height order-three contexts by the
 resulting active-endpoint recursion. THM-844 then closes all 96 with the
-state-wise longest-component cap. Mixed order-one, unbounded common sheets,
-and all-scale deck descent remain the shallow H5 residual; THM-815 also makes scale-one radius six
+state-wise longest-component cap, while THM-847 closes all 96 mixed contexts.
+Unbounded common sheets and all-scale deck descent remain the shallow H5
+residual; THM-815 also makes scale-one radius six
 recursively finite and loses its discrepancy deficit at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
@@ -1038,9 +1051,11 @@ deciding objects are therefore:
   under deletion without the labelled tooth bank. THM-823 shows that
   five-colour scalar attenuation has
   infinite cones, while bounded common sheets retain only the forward flags
-  of a three-coset cycle with a parity fibre. THM-837 closes one of its 96
-  all-order-three metric contexts, and THM-844 strengthens the cap and closes
-  all 96. The mixed order-one and unbounded common-sheet languages remain.
+  of a three-coset cycle with a parity fibre, together with the symbolic
+  order-one alternatives. THM-837 closes one of the 96 all-order-three metric
+  contexts, THM-844 strengthens the cap and closes all 96, THM-845 closes all
+  order one, and THM-847 closes all 96 mixed contexts. Only unbounded-order
+  common-sheet languages remain on this shallow deck edge.
   The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict

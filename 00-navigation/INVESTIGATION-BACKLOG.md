@@ -258,12 +258,14 @@
   arbitrary lifts.  THM-837 first runs exact residual-comb erosion on one of
   the 96 contexts. THM-844 then replaces its global `K/L` bound by the no-weaker
   longest-component cap and closes all 96 in 28,876 states, with no cover and
-  no depth-five terminal. THM-845 also closes the all-order-one/common-scale
-  language after normalization. Extend common-sheet exclusion above order
-  twelve and erode the mixed one-plus-order-three language; do not promote
-  scalar attenuation or the coset cycle to a metric closure.  Retain active
-  boundary words: a global cell mask without activation bits miscounts
-  components and invalidates the recursive discrepancy bound.
+  no depth-five terminal. THM-845 closes the all-order-one/common-scale
+  language after normalization, and THM-847 closes all 96 proper mixed
+  one-plus-order-three contexts in 31,715 states. Thus THM-823's complete
+  effective-order-at-most-twelve common-sheet bank is empty. Extend
+  common-sheet classification above order twelve; do not promote scalar
+  attenuation to a metric closure. Retain active boundary words: a global cell
+  mask without activation bits miscounts components and invalidates the
+  recursive discrepancy bound.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put

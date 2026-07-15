@@ -1,10 +1,10 @@
 ---
 id: THM-823
 title: Hamming-five scalar-deck escape and common-sheet survivor boundary
-status: PROVED STRUCTURAL + FINITE-EXACT — scalar cutoff refuted; bounded common-sheet bank classified; arbitrary-lift strictness open
+status: PROVED STRUCTURAL + FINITE-EXACT — scalar cutoff refuted and bounded common-sheet bank classified; all of its survivor languages subsequently closed by THM-844/845/847; orders above twelve remain open
 source: codex-2026-07-15-S10 arbitrary-scale five-deck continuation
 depends_on: [THM-810, THM-816, THM-820, THM-822]
-related: [THM-815, HYP-6820]
+related: [THM-815, THM-837, THM-844, THM-845, THM-847, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_common_sheet_deck_boundary_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_common_sheet_deck_boundary_codex_S10.out
@@ -223,8 +223,9 @@ M(B)>=1/13.                                                (19)
 ```
 
 The clock may attain equality.  It proves the conjectured lower bound, not
-strict looseness.  Whether every arbitrary lift in (15) has `M(B)>1/13`
-remains open.
+strict looseness.  Whether every arbitrary lift in (15) has `M(B)>1/13` is
+left open by the present argument and subsequently answered affirmatively by
+THM-844.
 
 ### E. The symbolic order-one branch
 
@@ -239,8 +240,8 @@ D_b=1 and the other four orders are three on a coset
 C=a{1,5,8,12}, with b outside C.                           (20)
 ```
 
-The all-order-one branch is the genuine scale-one Hamming-five chart reduced,
-but not closed, by THM-820.
+The all-order-one branch is the genuine scale-one Hamming-five chart reduced
+by THM-820 and subsequently closed by THM-845.
 
 In the mixed branch, common-sheet coverage holds exactly when the quartet
 parities satisfy (16).  At the owner `b`, the order-one colour fills every
@@ -255,7 +256,9 @@ modulo `39`.  All eight quartet clock points therefore survive, and again
 M(B)>=1/13                                                   (21)
 ```
 
-for arbitrary lifts.  As in (19), strictness is not proved.
+for arbitrary lifts.  As in (19), strictness is not proved here; THM-847
+subsequently proves it for every proper mixed lift, while the zero-height face
+is THM-816.
 
 ## Proof
 
@@ -412,7 +415,15 @@ owner-sheet obligation hypergraph, not either bare tournament.  The formal
 infinity compactification loses even the sheet periodicity and must not be
 used as a metric quotient.
 
-## Exact scope
+## Subsequent closure and exact scope
+
+THM-844 closes every arbitrary lift in the `96` labelled all-order-three
+contexts, THM-845 closes the normalized all-order-one chart, and THM-847
+closes all `96` proper mixed order-one/order-three contexts (with the
+zero-height face supplied by THM-816).  Consequently every common-sheet
+survivor language whose five effective orders are at most twelve is now
+strictly loose.  This is a later metric closure of the languages classified
+here, not an extension of the present common-sheet census to larger orders.
 
 THM-823 proves no more than the following:
 
@@ -422,11 +433,12 @@ THM-823 proves no more than the following:
   `2<=D_i<=12`;
 - strict looseness only for the forty least-positive CRT packets;
 - boundary inequalities `M>=1/13`, not strictness, for arbitrary lifts in the
-  all-order-three and mixed order-one branches.
+  all-order-three and mixed order-one branches; strictness comes from the
+  later theorems above.
 
-It does **not** classify common-sheet covers with an order above twelve, prove
-arbitrary-lift strictness for either survivor branch, or close the full
-arbitrary-scale Hamming-five problem.
+It does **not** classify common-sheet covers with an order above twelve or
+close the full arbitrary-scale Hamming-five problem.  Those unbounded-order
+languages are the remaining shallow deck frontier.
 
 ## Exact replay
 

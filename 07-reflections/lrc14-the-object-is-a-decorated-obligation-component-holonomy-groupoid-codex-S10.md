@@ -11,15 +11,18 @@ order-three `s=3` interface left by THM-810.  Therefore the AP-centred,
 residue-preserving Hamming-four star is uniformly loose; only general higher-
 sheet packets remain, not this specific three-sheet seam. THM-815 has both a
 component-discrepancy proof and an independent 768,735-row collar/doubling
-certificate.  THM-815 also turns
-scale-one Hamming five and six into finite exact decision trees.  Seven is the
-first radius where the interval-comb discrepancy loses positive cover deficit.
-THM-820 supplies an independent collar decomposition of radius five; combined
-with THM-815 it leaves the explicit doubling box
-`(146,292,584,1168,2336)` and exceptional box `x<=146,v<=1986,max_top<=7944`. The
-literal continuation kernel of `(E_S,V)` is the finite automaton semantics of
-the decorated component-obligation state proposed here; no nontrivial minimized
-quotient has yet been proved.
+certificate. THM-820 supplies an independent collar decomposition of radius
+five, and THM-845 now closes both of its arbitrary-height branches by a
+772,543-state row-wise exact component recursion. THM-844 closes all 96
+bounded all-order-three common-sheet contexts, while THM-847 closes all 96
+mixed order-one/order-three contexts; THM-845 supplies the normalized all-one
+language. Consequently THM-823's complete effective-order-at-most-twelve
+common-sheet bank is empty. Scale-one Hamming six remains a finite exact tree
+but contains the genuine doubled-AP equality face `2[12]`; seven is the first
+radius where the interval-comb discrepancy loses positive cover deficit.
+THM-840 identifies the literal continuation kernel of `(E_S,V)` as the finite
+automaton semantics of the decorated component-obligation state. The closures
+did not require a nontrivial minimized quotient.
 
 THM-817 replaces the coarse disconnected-return discussion by an exact cell
 theorem. Every component of `closure(R_U)` is a signed maximum-speed cell
@@ -67,6 +70,17 @@ discrepancy potential through six remaining combs.  Older statements below
 that list Hamming four or the quartic interface as open are superseded by this
 addendum.
 
+The new all-context closures sharpen that readout. In THM-844 and THM-847 both
+binary gauges are transitive in every context, yet changing from total erosion
+to longest-component erosion flips `492+395` edges. The tournaments are useful
+planning telemetry but do not contain cover truth. The faithful shallow object
+is the active bipartite incidence of literal residual components with future
+labelled progressions, decorated by endpoints and the last chosen speed. The
+mixed proper-lift boundary `3b+39` lives in that progression sidecar and is
+invisible to the coset tournament. On the deep folded side, THM-831 shows the
+corresponding failure is already ternary: an ordered three-component switch and
+a winding guard are required where any binary runner ranking is too small.
+
 ## 0. Two corrections before any synthesis
 
 The historical conjecture that every covering thirteen-speed row has a good
@@ -84,15 +98,17 @@ residue fibre, not a scale-uniform model of the row.
 The statement that the `n=12` sporadic branch is empty **uniformly is still
 open in this repository**.  THM-795/800/804/806 close the AP-centred
 Hamming-one through Hamming-three stars, and THM-810/815/816 now close both
-the common-scale and quartic order-three branches at Hamming four.  At radius
-five, THM-815/820 give only the two explicit scale-one boxes above; radius six
-is recursively finite, and radius seven is the first discrepancy wall.  The
-arbitrary-scale five-/six-owner deck interfaces and general higher radii remain
-unclassified.  On the deep side, THM-797 gives an odd-divisor grid obstruction
-and a strong `q=13` support gate, while THM-817 makes the exact return-cell
-selector finite but does not prove its uniform failure.  A finite census, a
-shallow rigidity theorem, and a uniform branch theorem are three different
-statements.
+the common-scale and quartic order-three branches at Hamming four. At radius
+five, THM-845 closes the full proper scale-one chart, and THM-844/845/847
+together close every common-sheet H5 survivor language with effective orders
+at most twelve. Radius six is recursively finite but contains `2[12]`, and
+radius seven is the first discrepancy wall. Common-sheet languages with an
+effective order above twelve, other unbounded five-/six-owner deck
+ramifications, and general higher radii remain unclassified. On the deep side,
+THM-797 gives an odd-divisor grid obstruction and a strong `q=13` support gate,
+while THM-817 makes the exact return-cell selector finite but does not prove
+its uniform failure. A finite census, a shallow rigidity theorem, and a
+uniform branch theorem are three different statements.
 
 Those corrections do not merely narrow the frontier.  They identify the
 kind of object the frontier requires.
@@ -991,12 +1007,14 @@ terminal predicate: a strict witness interval survives.
 ```
 
 The immediate mathematical frontier is correspondingly precise: classify the
-five-owner shallow collar state; prove a uniform negative margin on the
-THM-817 signed-cell/deep-component selector; finish the unbounded-height
-two-sheet collar language; and then address the other higher-sheet and
-scale-normal clustered packets.  The false uniform `q<=25` claim remains
-false; what changed is that the shallow frontier moved from radius four to
-radius five and the disconnected-return coordinate is now exact.
+unbounded-effective-order common-sheet and non-common-sheet Hamming-five deck
+languages; separate the doubled-AP equality orbit from non-AP Hamming six;
+prove a uniform negative margin on the THM-817 signed-cell/deep-component
+selector; finish the unbounded-height two-sheet collar language; and then
+address the other higher-sheet and scale-normal clustered packets. The false
+uniform `q<=25` claim remains false; what changed is that the complete bounded
+Hamming-five sheet bank is now empty and the disconnected-return coordinate is
+exact.
 
 ## 10. Radius five: the action is an interval semilattice, the audit object is a kernel pair
 
@@ -1041,9 +1059,13 @@ This is the coarsest continuation-safe quotient for the terminal emptiness
 predicate: a finite Myhill--Nerode congruence once THM-820 supplies the bank.
 It gives the recursion a precise target.  Component count, total safe mass,
 endpoint order, or a tournament fingerprint is legal only if it refines
-`~_V`; literal `(E,V)` is sufficient by construction.  The promising closure
-engine is consequently a minimized residual automaton or a two-plus-three
-meet-in-the-middle join, not an undifferentiated scan of all five heights.
+`~_V`; literal `(E,V)` is sufficient by construction. THM-845 realizes this
+closure engine directly and empties both scale-one boxes without first
+minimizing the automaton. THM-844 and THM-847 then reuse the same
+longest-component/action state on the bounded all-three and mixed common-sheet
+languages. A minimized residual automaton or a two-plus-three meet-in-the-middle
+join remains a possible compression and transport interface, not a missing
+ingredient in those three proofs.
 
 THM-818 supplies a second exact lesson from the live tournament-metagraph
 thread.  For any proposed observation `H:X->Y`, the object that tests legal
@@ -1390,9 +1412,12 @@ target switching:   ordered weighted component triples.                  (49)
 ```
 
 Controlled forgetting is legal only after naming the arrow and checking
-(44).  This reframes the remaining proof search.  The other 95 order-three
-contexts ask for forward minimization of (49); the shell-five deep branch asks
-for one more obligation to join (48); and a global descent asks for a common
-congruence of addition, deletion, and sheet transport.  A universal runner
-tournament is not missing.  What is missing is the smallest operation-closed
-fibre product for the particular descent we choose.
+(44). THM-844 has now closed all 96 order-three contexts and THM-847 all 96
+mixed contexts using the literal forward carrier, so bounded forward
+minimization is no longer a theorem debt. This reframes the remaining proof
+search: unbounded-order deck transport asks for a congruence that survives
+scale and ramification; the shell-five deep branch asks for one more obligation
+to join (48); and a global descent asks for a common congruence of addition,
+deletion, and sheet transport. A universal runner tournament is not missing.
+What is missing is the smallest operation-closed fibre product for the
+particular descent we choose.

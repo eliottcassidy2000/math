@@ -64280,3 +64280,114 @@ corollary of THM-830.  Reversing a transitive arc of length `q` gives
 chooses the block before the reversed lower endpoint or after the upper
 endpoint.  Thus the whole radius-one `H` multiset is proved without further
 enumeration.
+
+## 2026-07-15 — codex-S10: honest q<=25 correction and complete bounded H5 common-sheet closure
+
+The requested starting statements separated immediately. Uniform `q<=25`
+cannot be proved because THM-762/764 already refute it: the coherent family
+`26[12] union {339}` first witnesses at `2/27`, and a gcd-incoherent primitive
+row first witnesses at denominator 26. The full twelve-speed sporadic branch
+also remains open. Work therefore proceeded only on theorem-safe descendants,
+with repeated fetch/rebase integration against the moving shared `main`.
+
+Four mathematical advances now sharpen the frontier.
+
+1. THM-831 corrects and completes the folded-target scalar boundary. Every
+   primitive opposite-parity half-frequency target has an exact
+   Bezout-offset ball decomposition. The nonempty symmetric radius
+   factorization holds exactly for `4<=alpha<=9`; `alpha<=3` is empty, while
+   every `alpha>=10` has the strictly negative ordered ternary switch
+   `(-1|-3,+1)`. The proof includes the necessary quarter-circle winding guard
+   `4h<1`. Common gcds create raw deck switches but preserve the quotient-scaled
+   theorem. Thus binary target tournaments are insufficient even before the
+   remaining arithmetic exclusion: the proof object is an ordered weighted
+   three-hyperedge with winding and metric sidecars.
+
+2. THM-845 closes every proper scale-one Hamming-five lift at arbitrary
+   height. It intersects THM-820's doubling/exceptional dichotomy with the
+   exact longest-component cap at each labelled prefix. The main depth census
+   is `40,590,612,221,111,675,7,255,9`; the exceptional branch is
+   `415,178,1,0`; all nine terminals are strictly loose. The 772,543-row
+   certificate was reproduced byte-for-byte by an independent closed-danger
+   union implementation, and the terminal values were reconstructed with
+   exact `Fraction` endpoint cells.
+
+3. THM-844 closes all 96 arbitrary-height all-order-three contexts classified
+   by THM-823. Its exact longest-component recursion visits 28,876 states with
+   depth census `{0:96,1:2496,2:20660,3:5351,4:273}`, finds no covering prefix,
+   and has no depth-five terminal. An independent literal packet census finds
+   exactly the same 96 contexts among all 25,344 labelled presentations and an
+   independent danger-union audit reproduces the recursive candidates. The
+   THM-837 context shrinks from 75,371 states to 213.
+
+4. THM-847 closes the remaining mixed order-one/order-three bounded language.
+   If the common scale is normalized to three, the quartet coordinates lie in
+   their labelled step-39 CRT progressions and the order-one coordinate is
+   exactly `3(b+13h)`. Proper Hamming five is `h>=1`, hence starts at `3b+39`;
+   `h=0` restores the deleted core coordinate and is THM-816's Hamming-four
+   face. There are exactly `3*8*4=96` contexts. The complete exact tree has
+   31,715 states with census `{0:96,1:2600,2:23612,3:5292,4:115}`, dead census
+   `{2:20913,3:5183,4:115}`, no cover, no depth-five terminal, and longest/global
+   caps 521/893. A standalone interval implementation reproduces every context,
+   candidate, state count, and the same certificate. A separate literal sheet
+   census over all 63,360 marked presentations recovers exactly the 96 roots.
+
+The resulting theorem-level conclusion is exact: THM-823's complete
+effective-order-at-most-twelve common-sheet survivor bank consists of the
+all-one, all-three, and mixed one-plus-three languages; THM-845, THM-844, and
+THM-847 respectively close all three. The bounded bank is empty. This does not
+classify a common-sheet language containing an effective order above twelve,
+does not settle other ramified arbitrary-scale Hamming-five packets, and does
+not prove global `n=12` emptiness.
+
+Verification fingerprints at close-out:
+
+```text
+THM-844 source/output  6ee83b94...befb / f95764d0...741b
+THM-844 certificate    9bb065fe...cdb2a
+THM-845 primary        16133754...f3 / b45ccb31...7c
+THM-845 certificate    6524ac6d...a29
+THM-847 primary        8ab134ee...b03 / 3d786b54...266
+THM-847 primary payload d869bf92...4d2
+THM-847 independent    81ed5a15...e27 / 48120979...7e3
+THM-847 independent payload cbaa8167...b95
+THM-847 certificate    1cab41e8...eb75
+```
+
+Tournament Analysis gives a structural negative result rather than a proof
+shortcut. In THM-844 and THM-847, both total-erosion and longest-component
+gauges are transitive in every context, with score histogram `(0,1,2,3,4)`,
+no directed cycles, singleton SCCs, and one Hamiltonian path. Yet the gauges
+flip 492 and 395 edges. They preserve a planning order and destroy absolute
+geometry, higher-order overlap, future progression action, and cover truth.
+The runner-, residue-, coset-, or bare-comb vertex assumptions are therefore
+all too small. The faithful shallow carrier is the evolving bipartite
+incidence
+
+```text
+(literal residual components) <-> (remaining labelled progression combs),
+```
+
+decorated by exact active endpoints and the last speed. The mixed boundary
+`3b+39` is visible only in this sidecar. More broadly, the historical viewpoints
+fit a typed recursive object: runners label incidences; residues and sheets
+carry arithmetic ramification; safe components and teeth carry threshold
+truth; wall events/Beatty words carry order and holonomy; Fourier modes and
+mass are certificate projections; tournaments are diagnostic two-skeleta;
+proof obligations are legitimate vertices only with the metric/arithmetic
+stalk that makes the next operation Markov. Each quotient must record both the
+LRC predicate it preserves and the information it destroys.
+
+The exact remaining frontier is now:
+
+- unbounded-effective-order common-sheet and other arbitrary-scale H5 deck
+  languages, with scale/ramification transport rather than another bounded
+  parity census;
+- non-AP Hamming six after separating the genuine `2[12]` equality orbit, and
+  the radius-seven mean-density wall;
+- the deep `s=2` signed return-cell/deep-component selector and sum-arc
+  incompatibility, including the shell `2B-13d>=5` where THM-836 is sharp;
+- terminal dyadic/collar descent and the general higher-sheet packets.
+
+Honest close-out: `q<=25` is disproved; the bounded common-sheet H5 bank is now
+proved empty; global twelve-speed sporadic emptiness and LRC(14) remain open.

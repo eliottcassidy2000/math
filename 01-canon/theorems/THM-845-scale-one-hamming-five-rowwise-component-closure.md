@@ -6,7 +6,7 @@ source: codex-2026-07-15-S10 continuation
 renumber_note: originally checkpointed as THM-842; renumbered after live main
   assigned that identifier to the earlier n9 defect-continuation theorem
 depends_on: [LRC(<=13), THM-815, THM-820]
-related: [THM-810, THM-816, THM-822, THM-823, THM-837, THM-840, THM-844, HYP-6820]
+related: [THM-810, THM-816, THM-822, THM-823, THM-837, THM-840, THM-844, THM-847, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_rowwise_component_closure_codex_S10.cpp
   - 05-knowledge/results/lrc13_hamming_five_rowwise_component_closure_codex_S10.out
