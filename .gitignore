@@ -59,3 +59,5 @@ test_images/
 # Lean build artifacts (~6+ GB cache directories, regenerable via lake exe cache get).
 # Keep lakefile.toml, lake-manifest.json (pins dep versions), and lean-toolchain.
 04-computation/lean/**/.lake/
+lrc14_thm741_detached_run_log.txt
+lrc14_thm741_detached_run_err.txt
