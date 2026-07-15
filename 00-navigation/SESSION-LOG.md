@@ -44,10 +44,23 @@ all 29,183 remaining exact rational pair measures are strictly positive; the
 global minimum is `482219/29008980` at `K=1235,(a,b)=(15,46)`.  Sixty-five
 deterministic sparse/full interval replays agree exactly.  Hence every family
 containing `{8,...,14}` and at least four labels from `{1,...,7}` is lonely.
-The unresolved completed-family tail now has at most three small labels and at
+At that checkpoint the unresolved completed-family tail had at most three small labels and at
 least three speeds above 14.  This closes no additional whole root body:
 THM-741 remains `CLAIMED`, with exactly 3 of 21 flood bodies proved and 18
 open.
+
+The subsequent three-small ladder is now complete.  The thirteen anchor-
+shadowed triples plus 22 residual completed-family bases cover all 35 choices.
+Across the residual bases, 4,408 one-external nodes and 359,236 two-external
+nodes are positive; all 1,357,920 exact terminal triples are strictly positive.
+The global minimum is `28470499/1520554035` at
+`K=134,(a,b,c)=(17,23,37)`.  All 110 sparse/full same-core cross-path replays
+agree.  Canonical row/cross-path/global manifests are
+`7632b1ef...658f`, `3a4e2885...e886`, and `b05c5670...b886`.
+Therefore every completion containing `{8,...,14}` and at least three small
+labels is lonely.  Each unresolved root-edge body retains only its pure tail
+of four added speeds above 14.  Whole bodies remain exactly `3/21`; global
+THM-741 and the `n=12` sporadic branch remain open.
 
 The conceptual synthesis is an operation-congruence test: a proposed quotient
 must intertwine every legal labelled transition and retain the terminal
@@ -76,6 +89,14 @@ In all twelve first proper Hamming-one packets, global Hunter closes only
 value equal to the exact uncovered mass `1/286`.  This is a general certificate
 and a method test for the seven-comb wall, not global sporadic-branch closure.
 
+A later pull supplied THM-863's complementary projective quantification.
+Pair channels satisfy `rho>=1/78` uniquely at `(1,12)`; channels below
+`2/105` form a triangle-free graph, forcing a seven-packet spanning tree of
+weight at least `59/546` and a uniform Hunter gap `17/546`.  Window arguments
+give positive slow avoid mass for all 792 five-speed prefixes.  The honest
+remaining radius-seven work is one non-resonant short-orbit `g=1` endpoint
+constant plus finite named sweeps; this is a sharp reduction, not closure.
+
 The same localization idea gives a one-sided ancestral-carrier envelope for
 the recommended pure `(3,4)` flood tail.  Charging future combs to whichever
 ancestor survivor has the best exact `(m,r)` tradeoff, with P2 on the first
@@ -86,12 +107,15 @@ carriers and the next `c` horizon from 244,652 to 144,695.  No `c` measures or
 fourth whole flood closure.
 
 The intervening live pull supplied two connected signals.  First, the direct
-THM-741 runner has advanced to `284/2002` clean bodies, independently of the
+THM-741 runner has advanced to `290/2002` clean bodies, independently of the
 completed-family shadows here.  Second, the correct all-size self-line theorem
 is Klein-four freeness, not `2 selfK=SC`: the non-grid-symmetric quasi-fixed
 orbit counts are `2,3,22,101` through `n=8`, with `selfK=2 orbitK`; the `n=8`
-SC equality remains refuted.  The S16 reflection now separates this genuine
-orbit law from the false twisted-diagonal count identity.
+SC equality remains refuted.  The next atlas separates `|X|=8,16,88,412`,
+Burnside-affine weights `W=8,20,88,416`, blue mass `0,4,0,8`, and SC-fibre
+mass `|Y|=52,240,7308,?`; these are different-growth objects.  The S16
+reflection now separates this genuine orbit law from the false twisted-
+diagonal count identity.
 
 ## codex-2026-07-15-S16 continuation -- flood re-root descent closes the five-small shadow
 

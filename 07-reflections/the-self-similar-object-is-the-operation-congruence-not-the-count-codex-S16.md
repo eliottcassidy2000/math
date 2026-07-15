@@ -151,6 +151,18 @@ selfK(n)=2 orbitK(n),       orbitK(5..8)=2,3,22,101.
 ```
 
 These are the merged-carrier orbit counts; they are not `SC(n)/2` at `n=8`.
+The next live atlas separates the remaining masses:
+
+```text
+|X|=8,16,88,412,       W=8,20,88,416,
+2 selfB=0,4,0,8,       |Y|=52,240,7308,? .
+```
+
+Here `X` is the total quasi-fixed endpoint locus, `W` its Burnside-affine
+weight, and `Y` the SC-fibre mass.  The excess `W-|X|` appears only at even
+size in this bank, alongside blue self-lines, while `Y` grows on a completely
+different scale.  Thus even the weighted and class-fibre versions are distinct
+objects; the orbit law does not collapse them.
 This is the same lesson as the Farey ladder: an initial count identity can be
 the shadow of a real group action without being the correct orbit count.  The
 all-size theorem belongs to freeness of the action, not equality of the two
@@ -194,10 +206,13 @@ the other three require 260 exact one-speed sweeps.  Every six-small base is
 anchored.  At four small labels the triangle shadows 22 of 35 bases.  On each
 of the thirteen residual bases, THM-732 reduces the two-external-speed tail to
 a finite bank; all 29,183 exact pair measures are positive.  Thus every
-completion with at least four small labels is lonely, and the unresolved tail
-has at most three small labels.  This is useful because containment and the
-tail inequality commute with the actual extension operation.  It still does
-not identify any of the eighteen remaining whole bodies.
+completion with at least four small labels is lonely.  The next 22 residual
+three-small bases reduce to 1,357,920 exact triples, all positive, so every
+completion with at least three small labels is lonely.  The unresolved part
+of each root-edge body is now its pure tail of four added speeds above `14`.
+This is useful because containment and the tail inequality commute with the
+actual extension operation.  It still does not identify any of the eighteen
+remaining whole bodies.
 
 The natural peel-role repair also fails the operation square.  Classify an
 insertion as split-dominant, balanced, or kill-dominant (`A/B/C`) by component
@@ -233,6 +248,47 @@ This reframing also explains the seven-comb wall.  Pairwise projective ratios
 and a maximum-spanning-tree rank word recover the second-order Hunter credit,
 but the irreducible residual is a prefix--comb--comb third moment.  It is the
 incidence and chronology part of (10), not another pairwise direction.
+
+There is nevertheless an exact Kakeya transfer.  If `S(t)` is the active set
+of remaining danger needles, then
+
+```text
+1_(S(t)=empty)=1-|S(t)|+rank_graphic(K_(S(t))).           (10a)
+```
+
+Hunter freezes the pointwise graphic basis to one global tree.  Its precise
+loss is therefore a tree-adaptivity gap, and summing clipped Hunter bounds
+over cells is monotone under partition refinement and exact on activation
+atoms.  In the first proper Hamming-one bank, a global tree closes only 3 of
+12 packets while literal-component-local and rooted-six trees close all 12.
+Thus “third moment” can be refined to a concrete missing coordinate: where
+the locally optimal graphic basis changes along the safe set.
+
+The subsequent THM-863 pull quantifies the complementary projective side.
+The exact pair channel has floor `rho(a,b)>=1/78`, uniquely at `(1,12)`, and
+this equals the per-edge Hunter threshold exactly for seven needles.  Edges
+below `2/105` form a triangle-free graph, so every seven-needle packet admits
+a tree with projective weight at least
+
+```text
+5(2/105)+1/78=59/546,
+```
+
+leaving the unconditional global gap `17/546` above the Hunter threshold
+`42/546`.  Exact window arguments prove positive slow avoid mass on all 792
+five-speed prefixes.  This does not yet close radius seven: one non-resonant
+short-orbit `g=1` endpoint constant and finite named sweeps remain.  The two
+new coordinates are now cleanly separated: THM-863 controls the projective
+tree budget, while (10a) measures the spatial adaptivity lost when that tree
+is frozen across prefix components.
+
+The same idea has a one-sided recursive form.  If current survivor `A` lies
+inside any ancestor carrier `C`, every future needle may be charged to the
+ancestor's exact `(measure,component count)` pair.  Maximizing this valid
+lower bound over the ancestor antichain lowers the pure `(3,4)` cutoff
+`308->291` and removes 99,957 bounded-window `c` nodes.  This is the useful
+toothpick self-similarity: not equality of descendant counts, but reuse of an
+ancestral carrier under the legal intersection operation.
 
 ## 6. The underlying LRC state
 
@@ -273,10 +329,11 @@ compression has a concrete kernel-pair test.
    geometry-batched depth-three evaluator.  Its bounded prototype matches
    1,685,358 raw lanes at 1.599x CPU speedup; propagate every labelled future
    language and do not turn the cache into a quotient.
-2. For `j=4`, move to the 22 unshadowed three-small completed-family bases now
-   that all thirteen four-small two-external-speed banks are closed.  Seek a
-   genuine three-speed tail inequality, or use `(3,4)` as the coverage-first
-   whole-body job; do not infer it from the Fano orbit.
+2. For `j=4`, move past the now-closed three-small completed-family bases to
+   the 18 pure two-small/root-edge tails.  Extend the `(3,4)` ancestor-carrier
+   screen through actual `c` measures and `d` sweeps, or continue the direct
+   whole-body runner; do not infer a closure from the Fano orbit or workload
+   tournament.
 3. Replace the refuted Euler-drift role word by a cyclic component-incidence
    history retaining killed-block phase, then retest the operation-congruence
    square before using `chi_7` or Radon coordinates on flood histories.

@@ -828,19 +828,25 @@
   an unsafe quotient.
 - **Parallel exact rung:** implement and finish the still-CLAIMED THM-741 2002-body run.  Completion would
   extend the proved far-count closure from `f<=3` to `f<=4` without relying on the projective theorem.
-  The resume ledger currently records `171/2002` clean bodies.  A portable
+  The live resume ledger records `290/2002` clean bodies at the last pull.  A portable
   fixed-`E_2` screen now closes the flood triangle `(5,6)`, `(5,7)`, `(6,7)`
   exactly.  Their completed-family containment shadows, three residual bases, and 260 exact
   one-speed sweeps close every completion containing `{8,...,14}` and at least
   five small labels.  The thirteen residual four-small bases reduce by THM-732
   to 1,788 positive one-external nodes and 29,183 finite exact pairs; all pairs
   are positive, so every completion with at least four small labels is lonely.
-  Every unresolved completion therefore has at most three small labels and at
-  least three speeds above `14`.  Eighteen whole
+  The 22 residual three-small bases then reduce to 4,408 one-external nodes,
+  359,236 two-external nodes, and 1,357,920 exact terminal triples.  Every
+  terminal is positive, with minimum `28470499/1520554035`; thus every
+  completion with at least three small labels is lonely.  Each unresolved
+  root body now retains only its pure four-added-speeds-above-14 tail.  Eighteen whole
   empty-obligation floods remain.  The Fano/`chi_7` audit organizes them but supplies no symmetry
-  quotient.  The next direct vertices are the 22 unshadowed three-small bases;
-  alternatively port the numeric screen edge by edge or prove a new monotone
-  three-external-speed transport inequality.
+  quotient.  The next direct completed-family vertices are the 18 pure
+  two-small/root-edge tails.  For the recommended `(3,4)` body, the proved
+  ancestor-carrier/P2 envelope lowers the root cutoff `308->291` and removes
+  99,957 of 244,652 bounded-window `c` nodes before constructing `G3`; extend
+  that exact screen into the remaining `c,d` recursion or continue the direct
+  body runner.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
   phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
   and `lrc14_band_scale_quotient_codex_S1.py/.out`.
@@ -913,7 +919,7 @@
   composition order, Bonferroni j≤6 vs the fixed body needs no isolation) + cont.4 (THM-738: the j=3
   rung swept over ALL 1001 ten-element bodies ⊆ {1..14} — every 13-speed family with ≥10 speeds in
   {1..14} is lonely; 4.68M exact bottom sweeps, zero tights, 27.7 min).** NEXT: the j=4 rung (2002
-  nine-element bodies, `171/2002` presently clean; the 21 flood bodies are the expensive tail and
+  nine-element bodies, `290/2002` presently clean in the live resume ledger; the 21 flood bodies are the expensive tail and
   remain open); j=5,6 want the
   exact-disc CS tightening (THM-735); j≥7 = the density seam (LEM-006 territory, unchanged); (iii) the v0(base) < lcm-step question — now MASSIVELY corroborated: all 364 bodies have
   A₀ ≤ 455 and every box closed clean; (iv) uniform EXPOSURE bound: r ∈ [4,24] over all 364 bodies —
@@ -988,10 +994,11 @@ computer-assisted + 9–13 announced (the repo's citation basis, confirmed curre
 - **S14 CORRECTION:** for `x=ga,y=gb`, `(a,b)=1`, global pair density is `4/169+[Q(a+b)-Q(|a-b|)]/(169ab)`, a two-sided mod-13 sawtooth, not `(a+b)^2/(169ab)>=4/169`. Exact counterexamples are `rho(6,7)=2/91` and `rho(5,9)=4/195`. The legal ray `g=1+13k,(x,y)=(6g,7g)` refutes the proposed `C(E)/x_min` deficit from `4mu(E)/169`. For a `c_E`-component prefix the correct projective pullback bound is `|mu(E cap D_ga cap D_gb)-mu(E)rho(a,b)|<=2c_E/g`.
 - **S15 NODE/EDGE DEFECT FORM:** put `s_i=mu(E cap D_(x_i))-2mu(E)/13` and split each restricted pair anomaly into its projective sawtooth plus endpoint term `c_ij`.  The Hunter lower bound is exactly `(165-22m)mu(E)/169-sum_i s_i+MST(c)`, hence `11mu(E)/169-sum_i s_i+MST(c)` at seven combs.  If `F_l` is the graph above the `l`-th edge-credit threshold, Kruskal rewrites `MST(c)` as the sum of threshold values times the jumps of `m-kappa(F_l)`.  The next finite language should therefore classify vertex-period words and projective edge threshold-incidence words; edge histograms are not sufficient.
 - **S15 STRICT PROJECTIVE MARGIN:** the edges below `-3/676` have exactly ten reduced ratio types, whose directed multiplicative relation is triangle-free.  Their good complement has at most two components; the first two global edge levels then give `MST(h)>=-237/7436` and strict projective margin `19/572` for every seven-speed packet.  The general endpoint criterion is `L_H>=19mu(E)/572-2c_E(sum_i1/x_i+Gamma_h(x))`; in particular every common-dilate ray satisfies `L_H>=19mu(E)/572-(1203/70)c_E/g` without a pairwise-coprime hypothesis.  The global projective maximum-tree lemma is therefore closed.  The open field is the prefix--comb--comb third moment on small-gcd maximizing trees.
+- **S16/THM-863 QUANTIFIED + ADAPTIVE CROSSING:** the exact pair floor is `rho>=1/78`, uniquely `(1,12)`, and it meets the Hunter edge threshold exactly at seven combs.  Channels below `2/105` are triangle-free, forcing tree weight `59/546` and uniform projective gap `17/546`.  Slow-window positivity holds on all 792 five-speed prefixes.  Independently, active-needle graphic rank gives the exact tree-adaptivity gap; component-local/rooted-six Hunter closes `12/12` first proper Hamming-one packets versus `3/12` globally.  The surviving analytic obligation is now one non-resonant short-orbit `g=1` endpoint constant, followed by explicit finite sweeps; local activation incidence is the fallback carrier when a global tree loses credit.
 - **Source:** THM-855 F6 (exact axis-walk moment closure + exact fluctuation-dissipation) x LRC14-FRONTIER item 3 (seven-comb wall: first-moment potential stalls at density 14/13).
 - **Status:** OPEN - the transport dictionary is written (F6's LRC paragraph); the missing input is THM-815's event-sampling law (which tooth/comb gets hit, size-biased?) to compute E[delta Phi] for Phi = (K-K*)^2 and convex degree-weights.
 - **NO-GO (opus-S312, proved):** at the seven-comb wall itself, NO per-comb bound of the schema |I cap D_x| <= alpha*L + beta(x) can be coercive: alpha < 2/13 is FALSE for large x (equidistribution: the comb's density on any fixed interval tends to exactly 2/13), and alpha = 2/13 gives total 14L/13 >= L -- always satisfied, no constraint on x. The union-bound schema is information-theoretically empty at m' >= 7. Surviving routes, each with a repo carrier: (i) JOINT pair statistics -- comb-comb overlaps are mechanical-word/three-distance objects (THM-778); (ii) RESTRICTED density -- D_x on the prefix's safe set E, not on an interval (density on E can differ from 2/13; the selector machinery THM-803/817/821 lives here); (iii) GLOBAL accounting -- multi-component + arithmetic relations forced by tightness (THM-792 root currents). The F6/K-transport targets the COLLAR EVENT WALK (a different sub-problem than this covering bound) -- do not conflate the two walls.
-- **Next step:** use THM-857's complete scale-one H6 prefix/certificate language as a frozen input rather than enumerating another primitive-root bank.  Lift its exact component--comb states to common-sheet fibres, classify each negative certificate by its Kruskal rank word and reciprocal-gcd tree cost, and quotient only under insertion/peel operation congruence.  Remove common-dilate classes with the proved `19/572` margin.  Prove that each recurrent small-gcd endpoint class either gains that margin under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
+- **Next step:** prove THM-863's named non-resonant `g=1` short-orbit/three-distance endpoint bound, using THM-778's mechanical words and the exact component-local activation partition when one global Kruskal tree fails.  Then execute the explicit sub-`N0` single-cluster and small-`x` multi-cluster sweeps.  Lift only the surviving component--comb states into the common-sheet fibres and quotient them under insertion/peel operation congruence.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
 - **Next step:** use THM-861's closed `c=2` component/certificate language, THM-859's exact `Z/DZ` phase action, and THM-860's bounded presentation bank as frozen inputs.  THM-862 has classified the `c=3` sheet stalk (`336`, `672`, and `496` unit contexts) and evaluated its first two metric layers exactly: `146,912` and `14,992,263` edges, cached by `22,262` and `4,307,561` literal geometries.  Only one depth-two lane dies.  The bounded depth-three prototype now proves that root-block metric transposition preserves every lane and reduces CPU by 1.599x on its eight-context benchmark.  Use it to shard complete retained-root blocks, materializing scale-three components at the first order-three insertion and preserving every arithmetic sidecar; measure the complete-safe-tooth/streaming collapse that first becomes automatic with at most three combs remaining.  Then run the primary/independent exact recursion without quotienting the 1,504 lanes by the 68 sheet templates.  Before launching higher-scale trees, strengthen THM-858/860's scalar fibre cuts by the exact fibre-Hunter inequality `sum |A_i|-MST(|A_i intersect A_j|)>=|F|`; pair intersections are affine CRT interval intersections and may reject whole label/unit banks.  Lift surviving states to higher common-sheet fibres and classify the seven-comb vertex/edge defect language only under insertion/peel operation congruence.  Prove that each recurrent negative Kruskal class either gains `11mu(E)/169` under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
 - **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-855 F5/F6, the level-mean gap (same problem shape).
 

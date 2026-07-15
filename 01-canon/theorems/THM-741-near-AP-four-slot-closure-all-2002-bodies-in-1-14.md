@@ -1,8 +1,8 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED (kind-pasteur-2026-07-13-S128 cont.5) — the OVERNIGHT run (owner-directed): multiprocessing over bodies, resume-safe per-body JSONL checkpoint (scratchpad; harvested to 05-knowledge/results on completion), probe-calibrated. Regression built in: the subtree (E={1..9}, v₁=10) must reproduce THM-738's body-{1..10} numbers (V=154, 143, 7537, 27) exactly. Upgrades to PROVED when all 2002 bodies close clean
-source: kind-pasteur-2026-07-13-S128 (cont.5)
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
   - THM-731 / THM-732 / THM-366
@@ -26,6 +26,9 @@ verification:
   - 05-knowledge/results/lrc14_j4_next_anchor_shadow_frontier_codex_S16.out
   - 04-computation/lrc14_j4_34_ancestral_carrier_frontier_probe_codex_S16.py
   - 05-knowledge/results/lrc14_j4_34_ancestral_carrier_frontier_probe_codex_S16.out
+  - 04-computation/lrc14_j4_three_small_frontier_workload_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_three_small_frontier_workload_codex_S16.out
+  - 05-knowledge/results/lrc14_j4_three_small_frontier_workload_codex_S16.jsonl
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -57,13 +60,14 @@ survived testing — see below).
       (E={1..9}, v₁=10) checked as (V₂, E₂-count, v₃-nodes, sweeps) = (154, 143, 7537, ≥27) — the
       ≥ is because v₀ᵘ ≥ v₀ sweeps a superset of THM-738's 27
 - [ ] probe calibration (4 sample bodies incl. a true flood) + extrapolation
-- [ ] overnight run launched (heavy-first, resume-safe JSONL, cpu−2 workers)
+- [x] live resume run launched; `290/2002` bodies clean at the last pull, ledger not yet harvested here
 - [ ] all 2002 bodies clean; tight census; verdict
 
 ## Portable fixed-`E2` pruning addendum (codex-S14/S16): three flood bodies closed
 
-The original driver hard-codes a Windows scratch path, and its reported
-`171/2002` body ledger is not present in this checkout.  The portable
+The original driver hard-codes a Windows scratch path.  Its earlier reported
+`171/2002` body ledger is not present in this checkout; the live runner later
+advanced to `290/2002`, likewise not yet harvested here.  The portable
 companion above hash-guards the original exact interval kernel, accepts a
 platform-neutral optional JSONL state path, and adds the following exact
 screen before constructing the fragmented `E3` interval list.
@@ -383,8 +387,8 @@ Consequently:
 > strictly lonely.
 
 Together with the containment triangle, this closes all `35` four-small
-completed families uniformly over their two unbounded external speeds.  The
-unresolved flood tail is now confined to at most three small labels,
+completed families uniformly over their two unbounded external speeds.  At
+this checkpoint the unresolved flood tail was confined to at most three small labels,
 equivalently at least three speeds above `14`.  This closes no additional
 whole flood body: exactly three of the `21` literal edges are still certified
 uniformly, and eighteen remain.
@@ -411,11 +415,103 @@ histogram `{0,...,17}:1`, no directed 3-cycles, eighteen singleton SCCs,
 ```
 
 This scheduler retains containment gain and first-layer work but destroys
-`v3` geometry, bottom margins, and final-family identity.  The next direct
+`v3` geometry, bottom margins, and final-family identity.  The then-next direct
 frontier has the `22` unshadowed three-small `K`-bases as vertices; runners,
 Fano flags, and root charts discard that final-family quotient.  If a whole
 edge must be run next, `(3,4)` remains the coverage-first choice: it gains five
 three-small sets and has the least `E2` count among all gain-five edges.
+
+## Three-small exact closure (codex-S16)
+
+The anchor triangle shadows exactly the thirteen three-subsets containing at
+least two of `{5,6,7}`.  The other `22` bases have the form
+
+```text
+P=H union K,       |K|=3,       |K intersect {5,6,7}|<=1.
+```
+
+For three ordered external speeds `15<=a<b<c`, let the exact good set of `P`
+have measure `m` and `r` components.  Choose the least `V_a` with
+
+```text
+3/V_a < 4m/(S2 r).                                      (B8)
+```
+
+Three applications of THM-732 show that every `a,b,c>=V_a` leaves positive
+measure.  For each `15<=a<V_a`, subtract `D_a` exactly, obtaining `(m_1,r_1)`,
+and choose the least `V_b` with
+
+```text
+2/V_b < 5m_1/(S2 r_1).                                  (B9)
+```
+
+Every `b,c>=V_b` is then positive.  Finally, after exact subtraction at each
+`a<b<V_b`, with survivor `(m_2,r_2)`, THM-732 closes every
+
+```text
+c>S2 r_2/(6m_2).                                        (B10)
+```
+
+The exact bank therefore includes every integer
+`b<c<=floor(S2 r_2/(6m_2))`; in particular an integral equal-cap endpoint is
+not skipped.  These are the `4,5,6` residual-density coefficients from the
+THM-735/732 ladder.  P2 is not used in this three-small computation.
+
+All `4,408` one-external and `359,236` two-external nodes have positive exact
+measure.  The terminal bank contains exactly `1,357,920` triples.  Every
+terminal sparse subtraction is strictly positive, with global minimum
+
+```text
+28470499/1520554035
+```
+
+at `K=134,(a,b,c)=(17,23,37)`.  Five deterministic flat-index samples in each
+base bank, `110` total, agree with full subtraction through the same pinned
+core.  These are sparse/full cross-path checks, not an independent kernel.
+The row, cross-path, and global certificate manifests are respectively
+
+```text
+7632b1ef6cfaadc11f8091a7ac3d6fbebe49b353944d60f2c19561256c97658f,
+3a4e288500174602ea83cd48db388f7160de6256c668b282a301d94db52fe886,
+b05c56708781287bdb958c7937d5e70a781803a4ccb9a3226fc6c83ed957b886.
+```
+
+The canonical 22-row JSONL is hash-linked to the exact source and premise;
+normal and optimized render-only runs reproduce the stored report byte for
+byte.  The stored JSONL is complete and clean.  Operationally, its malformed-
+last-line reader does not truncate a partial fragment before a later append,
+so such a crash residue should be removed before resuming; this caveat does
+not affect the frozen 22-row artifact.  The zero ledgers are empty.  Had a zero occurred, it would have been a
+zero-measure/tight-certificate alarm rather than, by itself, proof of a
+covering family.
+
+Consequently:
+
+> **Three-small shadow.** Every 13-speed family containing
+> `H={8,9,10,11,12,13,14}` and at least three labels from `{1,...,7}` is
+> strictly lonely.
+
+For each of the eighteen root-edge bodies not already certified, the only
+unresolved completions now add four speeds all greater than `14`; equivalently,
+the fixed root edge supplies the completed family's only two small labels.
+This common shadow still closes no fourth whole body: the whole-body count
+remains `3/21`, and THM-741 remains `CLAIMED`.  The live direct runner
+independently reached `290/2002` clean bodies at the last pull; its unharvested
+resume ledger is not a substitute for a completed theorem.
+
+Tournament Analysis uses the 22 residual completed-family bases as proof-job
+vertices.  Orient by fewer terminal triples, then fewer `b` and `a` nodes,
+with lexicographic tie-breaking.  The tournament is transitive, has score
+histogram `{0,...,21}:1`, no directed triangles, 22 singleton SCCs, 196 flips
+from lexicographic order, and one Hamiltonian path beginning
+
+```text
+347 -> 247 -> 345 -> 346 -> ... -> 134 -> 123.
+```
+
+It retains exact finite workload and final-family base but destroys interval
+geometry and margins.  Runners, Fano flags, and root-edge charts do not even
+preserve the completed-family bank being decided.
 
 ## Ancestral-carrier envelope for the pure `(3,4)` tail (codex-S16)
 
@@ -426,7 +522,7 @@ ancestor carrier with `A subset C`, measure `m_C`, and `r_C` components.  If
 
 ```text
 |A minus union_i D_(w_i)|
- >= |A|-s m_C/7-(S2 r_C/7)sum_i 1/w_i.                  (B8)
+ >= |A|-s m_C/7-(S2 r_C/7)sum_i 1/w_i.                  (B11)
 ```
 
 If the first possible speed is `v`, the reciprocal sum is largest at
@@ -436,10 +532,10 @@ If the first possible speed is `v`, the reciprocal sum is largest at
 ```text
 |A minus union_i D_(w_i)|
  >=6|A|/7-8r_A/(49v)-(s-1)m_C/7
-   -(S2 r_C/7)sum_(i=1)^(s-1)1/(v+i).                   (B9)
+   -(S2 r_C/7)sum_(i=1)^(s-1)1/(v+i).                   (B12)
 ```
 
-Taking the maximum of (B8)--(B9) over all ancestors is sound.  It is a proof
+Taking the maximum of (B11)--(B12) over all ancestors is sound.  It is a proof
 certificate, not an equality quotient: it retains ancestor containment and
 the `(m,r)` tradeoff while discarding later-needle overlap geometry.
 

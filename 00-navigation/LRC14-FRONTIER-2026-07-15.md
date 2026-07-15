@@ -18,15 +18,15 @@ zonotopal finite-checking theorem of
 which bounds the relevant velocity sum by a linearly exponential quantity but
 does not itself settle this case.
 
-**S15 structural update.**  The metagraph, chi-seven, and Kakeya threads now
+**S16 structural update.**  The metagraph, chi-seven, and Kakeya threads now
 share one exact preservation diagnosis, but none closes LRC(14).  Exact
 defect-factor refinement reconstructs literal arrows and reflection orbits
 through `n=7`; the full Hamiltonian-gradient multiset classifies merged nodes
 through `n=8`; path-relative complement needs a separate holonomy stalk; and
 the depth-11 chi-seven address simplex splits into a 48-dimensional residue
 base plus 30 A/B/C carry contrasts.  These are operation-specific codecs, not
-metric witnesses.  The broad j=4 computation remains at its recorded partial
-progress (`171/2002` clean bodies at the last integrated audit), but the new
+metric witnesses.  The broad j=4 computation remains partial
+(`290/2002` clean bodies in the live resume ledger at the last pull), but the new
 portable exact lane closes the flood triangle `(5,6)`, `(5,7)`, `(6,7)`
 uniformly.  Their residual bottom-sweep counts are `191,000`, `28,847`, and
 `73,323`, all positive, with minima `57191/2522520`, `7/858`, and `97/4004`.
@@ -39,9 +39,15 @@ five small labels is lonely.  The remaining thirteen four-small bases admit a
 uniform THM-732 two-speed reduction to 29,183 finite exact pairs; every pair is
 strictly positive, with minimum `482219/29008980`, and 65 deterministic
 sparse/full replays agree.  Thus every family containing `{8,...,14}` and at
-least four small labels is lonely.  Every unresolved flood completion now has
-at most three small labels and at least three speeds above `14`; this direct
-shadow theorem still closes no fourth whole flood body.
+least four small labels is lonely.  The 22 residual three-small bases reduce
+by the same exact THM-735/732 ladder to 4,408 one-external nodes, 359,236
+two-external nodes, and 1,357,920 terminal triples.  Every measure is strictly
+positive, with global minimum `28470499/1520554035` at
+`K=134,(a,b,c)=(17,23,37)`; 110 sparse/full same-core cross-path replays agree.
+Hence every family containing `{8,...,14}` and at least three small labels is
+lonely.  Each unresolved root body is now confined to its pure tail of four
+added speeds above `14`; this completed-family shadow still closes no fourth
+whole flood body.
 
 At the seven-comb wall the corrected Hunter state is now exact.  After
 subtracting independent single and pair densities, its lower bound is
@@ -62,7 +68,20 @@ beyond `L_H>=19e/572-(1203/70)c_E/g`, without a pairwise-coprime hypothesis.  Ex
 replay of six pilots finds connected positive-credit graphs in all four Hunter
 successes, but all 21 endpoint and total edge defects negative in both
 consecutive failures despite mostly positive sawtooth terms.  The remaining
-state is the incoherent, small-gcd, prefix-coupled third-moment field.  The four-far
+loss from one global tree is now exact as well: for active needle set `S(t)`,
+uncovered mass is first-moment deficit plus
+`integral rank_graphic(K_(S(t)))`.  Clipped cellwise Hunter bounds are monotone
+under partition refinement and exact on activation atoms.  On the twelve first
+proper Hamming-one packets, global Hunter closes `3/12`, whereas literal-
+component-local and rooted-six screens close `12/12`.  This supplies an
+adaptive incidence carrier.  THM-863 now proves the complementary uniform
+projective channel bounds: `rho>=1/78` uniquely at `(1,12)`; low channels below
+`2/105` are triangle-free; every seven-packet has a tree of weight at least
+`59/546`, leaving Hunter gap `17/546`; and all 792 five-speed prefixes have
+positive slow avoid mass.  Radius seven is reduced, not closed: one explicit
+non-resonant short-orbit `g=1` endpoint constant and finite named sweeps remain.
+The remaining state is the incoherent, small-gcd, prefix-coupled third-moment
+field.  The four-far
 chart is four-dimensional only in its ordered far coordinates; owner, carry,
 wall chronology, and metric clearance remain a stalk over that cone.
 
@@ -115,7 +134,9 @@ the 2002-body theorem.  Its edge-`(5,6)`, edge-`(5,7)`, and edge-`(6,7)`
 addenda are exact proved banks, not an unconditional assembly lemma for the
 other eighteen floods.  Its four-small addendum is also exact, but is a
 completed-family shadow theorem rather than a uniform closure of another
-root-edge body.
+root-edge body.  The three-small addendum is likewise exact: it leaves only
+the pure four-far completion tail inside each unresolved root body, while the
+whole-body count remains `3/21`.
 
 ## 1. Status by piece
 
@@ -177,7 +198,7 @@ root-edge body.
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Exact liars show that fixed anchors, raw component tournaments, exception-divisor grids, and signed residue support all lose the escape predicate. THM-803 now constructs the exact all-component selector on `K_U=E_U+closure(R_U)` and a sharp row for which every grid and global maximizer is silent but the nonmaximal component `7/22` escapes. The remaining theorem is uniform failure or incompatibility of those finite selector obligations, not construction of the selector. | THM-782/789/797/803 + exact trap/erosion-liar/anti-grid/component certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every common-sheet H5 survivor language with all effective orders at most 21; the **entire proper scale-one Hamming-six chart and all common dilations except `2c[12]`**; and the **entire first ramified H6 face `c=2` except its ordinary-AP presentation `[12]`**; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-858 proves that the remaining common-sheet H5 order bank is finite, with `min D_i<=21<max D_i<=10,584`, all orders `{2,3,7}`-smooth, and no private prime power. THM-860 makes every primitive H6 ramified language finite with `c<=840`; THM-861 evaluates all 64 `c=2` contexts. THM-862 classifies but does not close `c=3`: 1,504 arithmetic lanes survive behind 68 nonmetric sheet templates. The exact first two layers have `146,912` and `14,992,263` edges, and only one second-layer lane dies before depth three; literal caches have `22,262` and `4,307,561` geometries. Thus the `c=3` terminal recursion and `4<=c<=840` remain. Exact endpoints are Markov only for monotone insertion. On the deep side THM-824/831 classify the radius/switch scalar, while THM-836 excludes shells `s=1,3`, uniformly eliminates `d=11 mod 52` at `s=5`, and proves that no `U`-independent single unit numerator on `q=5d` or `13d` can close the other three classes. The classes `15,37,41 mod 52` remain open and now require a lift-dependent, multicolumn, or non-endpoint certificate. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847/857/858/859/860/861/862; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every common-sheet H5 survivor language with all effective orders at most 21; the **entire proper scale-one Hamming-six chart and all common dilations except `2c[12]`**; and the **entire first ramified H6 face `c=2` except its ordinary-AP presentation `[12]`**; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-858 proves that the remaining common-sheet H5 order bank is finite, with `min D_i<=21<max D_i<=10,584`, all orders `{2,3,7}`-smooth, and no private prime power. THM-860 makes every primitive H6 ramified language finite with `c<=840`; THM-861 evaluates all 64 `c=2` contexts. THM-862 classifies but does not close `c=3`: 1,504 arithmetic lanes survive behind 68 nonmetric sheet templates. The exact first two layers have `146,912` and `14,992,263` edges, and only one second-layer lane dies before depth three; literal caches have `22,262` and `4,307,561` geometries. Thus the `c=3` terminal recursion and `4<=c<=840` remain. Exact endpoints are Markov only for monotone insertion. At radius seven, THM-863 proves the pair floor, uniform `17/546` projective Hunter gap, and positive slow avoid mass on all 792 prefixes; one non-resonant short-orbit `g=1` endpoint constant plus finite sweeps remain. On the deep side THM-824/831 classify the radius/switch scalar, while THM-836 excludes shells `s=1,3`, uniformly eliminates `d=11 mod 52` at `s=5`, and proves that no `U`-independent single unit numerator on `q=5d` or `13d` can close the other three classes. The classes `15,37,41 mod 52` remain open and now require a lift-dependent, multicolumn, or non-endpoint certificate. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847/857/858/859/860/861/862/863; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger

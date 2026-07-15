@@ -5,7 +5,7 @@ status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coef
 source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge covariance, tropical recursion, strict projective-tree margin, and common-dilate closure added by codex-2026-07-15-S15; adaptive graphic-rank localization added by codex-2026-07-15-S16
 depends_on:
   - THM-815 Part C   # the recursion whose union bound dies at 7 combs
-related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), THM-857 (the closed scale-one H6 boundary fibre), LRC14-FRONTIER item 3]
+related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), THM-857 (the closed scale-one H6 boundary fibre), THM-863 (quantified radius-seven crossing), LRC14-FRONTIER item 3]
 verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out, seven_comb_node_edge_defect_algebra_codex_S15.out, seven_comb_projective_mst_bound_codex_S15.out, lrc13_kakeya_adaptive_tree_identity_codex_S16.out
 ---
 
