@@ -1,0 +1,26 @@
+================================================================================================
+PART 1+2: the Smith network of the staircase, n=4..10; self-duality
+================================================================================================
+n= 4 m= 3 | H-net: V= 3 rank= 1 kappa=2          R=3/2      | V-net: V= 3 kappa=2          R=3/2      | dual-iso? deg:True kappa:True R:True
+n= 5 m= 6 | H-net: V= 4 rank= 3 kappa=6          R=11/6     | V-net: V= 4 kappa=6          R=11/6     | dual-iso? deg:True kappa:True R:True
+n= 6 m=10 | H-net: V= 5 rank= 6 kappa=24         R=25/12    | V-net: V= 5 kappa=24         R=25/12    | dual-iso? deg:True kappa:True R:True
+n= 7 m=15 | H-net: V= 6 rank=10 kappa=120        R=137/60   | V-net: V= 6 kappa=120        R=137/60   | dual-iso? deg:True kappa:True R:True
+n= 8 m=21 | H-net: V= 7 rank=15 kappa=720        R=49/20    | V-net: V= 7 kappa=720        R=49/20    | dual-iso? deg:True kappa:True R:True
+n= 9 m=28 | H-net: V= 8 rank=21 kappa=5040       R=363/140  | V-net: V= 8 kappa=5040       R=363/140  | dual-iso? deg:True kappa:True R:True
+n=10 m=36 | H-net: V= 9 rank=28 kappa=40320      R=761/280  | V-net: V= 9 kappa=40320      R=761/280  | dual-iso? deg:True kappa:True R:True
+
+================================================================================================
+PART 3: the battery table (leg-law KCL bookkeeping), n=5,6
+================================================================================================
+n=5: blue identity e1+e_n=n-2 on all grid-sym tilings: True ; GLOBAL flux sum = 0 (expect 0)
+   PB  classes= 3  zero-flux= 0  nonzero fluxes=[-3, -3, 3]
+   MX  classes= 5  zero-flux= 0  nonzero fluxes=[1, 3, 5, 5, 9]
+   PBk classes= 4  zero-flux= 0  nonzero fluxes=[-8, -8, -2, -2]
+   Bouwkamp-order type word: MMMMKMBKKBKB
+n=6: blue identity e1+e_n=n-2 on all grid-sym tilings: True ; GLOBAL flux sum = 0 (expect 0)
+   PB  classes= 2  zero-flux= 0  nonzero fluxes=[-4, -2]
+   MX  classes=10  zero-flux= 0  nonzero fluxes=[-20, -12, -6, -2, 8, 12, 14, 20, 32, 32]
+   PBk classes=44  zero-flux= 2  nonzero fluxes=[-28, -28, -25, -25, -22, -22, -21, -21, -13, -13, -10, -10, -8, -8, -8, -8, -6, -6, -6, -6, -4, -4, -3, -3, -2, -2, 3, 3, 4, 4, 8, 8, 9, 9, 13, 13, 22, 22, 24, 24, 37, 37]
+   Bouwkamp-order type word: MKKKMKMKKKKKKKMKKKKKMMMKKKMKKKKKMKKKKKKKKKBKKKKKMKKKKKKB
+
+DONE

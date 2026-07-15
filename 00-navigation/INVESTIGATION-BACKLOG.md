@@ -946,7 +946,9 @@ Top leads (see reflection even-graph-equinumerosity-one-cube-four-faces-eight-wi
     matrices = PALEY = the SAME object as G_n's H-max and the iso-covering depth-extremum. Next: Seidel spectrum
     of E_7's densest node, look for sqrt(7); recast OPEN-Q-108 as an equiangular-lines extremal bound.
 (2) G_n<->E_n = TUTTE chromatic<->flow duality (even subgraphs = flow support). Next: test V(E_n)/V(G_n)/bridge B
-    as S_n-symmetrized Tutte specializations of K_n.
+    as S_n-symmetrized Tutte specializations of K_n. UPDATE (kps-S128 cont.7, HYP-6865): the staircase now has a
+    canonical PLANAR Tutte substrate -- the Smith network N_n (series-parallel, kappa=(n-2)!, R=H_{n-2}, SELF-DUAL
+    under the grid reflection); next concrete step = closed-form T(N_n;x,y) and its specializations vs this guess.
 (3) E_n = CURIE-WEISS ISING (VERIFIED: Sum_{even S} x^|S| = 2^-n Sum_s prod(1+x s_i s_j)); odd-n palindrome = Z_2.
     Next: is the perfection-break at n=7 a phase transition; is chi(E_n)=2,3,5,10,28 the order parameter?
 (4) NON-EQUIVARIANCE ANOMALY: Burnside-decompose A002854 vs A000088(n-1) by cycle type; the difference = a new
