@@ -65,6 +65,10 @@ certificate clauses, and proof obligations.
 
 ### MPA-04 — Make deletion ancestry a genuine groupoid functor
 
+- **Delivered endpoint case:** THM-796 identifies fixed-path tilings with
+  marked Hamiltonian-path objects.  Terminal endpoint deletion is an honest
+  functor; after forgetting the path it becomes a weighted span, and its node
+  kernel is not Markov-compositional.
 - **Pull:** replace “delete vertex zero from one representative” by all
   vertex-deletion orbits, their multiplicities, and transport under
   automorphisms/converse.
@@ -77,6 +81,10 @@ certificate clauses, and proof obligations.
 
 ### MPA-05 — Half-tiling recursion without the false dyadic tower
 
+- **Delivered algebra:** THM-796 identifies lines with the quotient code
+  `F_2^m/<1>` and blue lines with the zero fibre of
+  `delta([t])=t+sigma(t)`.  Mode-B gives exact line/blue/defect kernels of
+  dimensions `2n-5,n-2,n-3`; inherited and fresh blackness are distinct.
 - **Pull:** express the SC blue subgraph through its anti-diagonal fixed
   subcube, then identify what recursion remains after the known “repeat the
   complement fold” correction.
@@ -89,6 +97,10 @@ certificate clauses, and proof obligations.
 
 ### MPA-06 — Fibre size from reversible metagraph dynamics
 
+- **Delivered complement-line kernel:** THM-796's coloured half-edge matrix is
+  symmetric, has row sum equal to tiling-fibre size, and normalizes to a
+  reversible kernel.  It is still recursively insufficient: repeated endpoint
+  deletion fails the node Markov product in nearly every row by `n=7`.
 - **Pull:** revisit the one-tile-flip Markov chain, its stationary distribution
   proportional to tiling fibres, and ask which weighted transition data
   reconstructs fibre size without circularly assuming it.
@@ -476,12 +488,33 @@ certificate clauses, and proof obligations.
   sidecar that turns the weighted node correspondence into a genuine recursive
   transition object.
 
+### MPA-32 — Minimize the recursive three-sorted address
+
+- **Delivered exact carrier:** THM-796 separates merged nodes `M_n`, tiling
+  half-edges `X_n`, and complement lines `L_n`; it adds reflection defect,
+  same/converse-sheet loop holonomy, and the simultaneous high/low half-edge
+  tensor.  Independently sorting endpoint pairs loses coupling at `n=4`, and
+  bare node transfer fails Markov composition at `n=5`.
+- **Pull:** define bounded continuation equivalence under the operation
+  alphabet `{d_top,d_bottom,complement,reflection}` and observations
+  `(node,line colour,defect,loop sheet)`.  Minimize the resulting automata for
+  `n<=7`; compare their cells with rooted weighted line-WL and canonical codes.
+- **Old thread:** HYP-3513 Nerode; HYP-3106 controlled forgetting; MPA-02/04/12;
+  THM-781/793/796; line-metagraph simultaneous-isomorphism work.
+- **Must preserve:** the named line, simultaneous half-edge coupling, exact
+  defect ancestry, class-sheet holonomy, path witness, and every declared
+  future observation.  Record which of these fields minimization proves
+  redundant rather than dropping it in advance.
+- **Deliverable:** the first minimal continuation-complete address at each
+  audited `n`, all collisions of line-WL against it, and a conjectural finite
+  grammar or obstruction to stabilization as `n` grows.
+
 ## Recommended next three pulls
 
-1. Join `MPA-30/31`: explain black drift by disintegrating the exact symmetric
-   endpoint-bit law over path/automorphism fibres, then test primitive face
-   signatures and their first non-lumpable refinements at `n=8`.
-2. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
+1. Execute `MPA-32`: minimize the bounded three-sorted continuation system and
+   locate exactly where line-WL first forgets future behaviour.
+2. Join `MPA-30/31`: explain the observed black drift by disintegrating the
+   exact symmetric endpoint-bit law over path/automorphism fibres, then test
+   primitive face signatures at `n=8` against Smith-potential discordances.
+3. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
    identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
-3. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove
-   whether inverse steps plus cyclic endpoint word are continuation-complete.

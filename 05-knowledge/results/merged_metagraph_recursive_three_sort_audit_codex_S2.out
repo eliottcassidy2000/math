@@ -1,0 +1,55 @@
+MERGED METAGRAPH RECURSIVE THREE-SORT AUDIT
+exact committed atlases; all counts include line multiplicity and self-loops
+
+SIZE CENSUS
+n m tilings classes merged fibre[min,max] B[cross,loop] K[cross,loop] support[colored,plain,loops] loop_hol[Bsame,Bswap,Ksame,Kswap]
+3 1 2 2 2 [1,1] B[1,0] K[0,0] [1,1,0] [0,0,0,0]
+4 3 8 4 3 [1,5] B[1,1] K[2,0] [3,3,1] [1,0,0,0]
+5 6 64 12 10 [1,13] B[8,0] K[20,4] [20,20,2] [0,0,4,0]
+6 10 1024 56 34 [1,86] B[30,2] K[456,24] [187,183,10] [2,0,6,18]
+7 15 32768 456 272 [1,306] B[256,0] K[16014,114] [6126,6076,44] [0,0,44,70]
+
+CROSS-n RECURSION
+n P_support parent-target histogram line-degree colors[BB,BK,KB,KK] tensor_support[coupled,projected] edge-images[high->low,low<-high] loop-transport
+4 5 [(1, 1), (2, 2)] 4 [2, 0, 2, 0] [4,3] [1..1,3..3] {('BB', 'E', 'E'):1, ('BB', 'L', 'E'):1, ('KB', 'E', 'E'):2}
+5 19 [(1, 3), (2, 5), (3, 2)] 8 [4, 4, 12, 12] [31,30] [1..2,8..14] {('BB', 'E', 'E'):2, ('BB', 'E', 'L'):2, ('BK', 'E', 'E'):4, ('KB', 'E', 'E'):5, ('KB', 'E', 'L'):5, ('KB', 'L', 'E'):1, ('KB', 'L', 'L'):1, ('KK', 'E', 'E'):10, ('KK', 'L', 'E'):2}
+6 112 [(1, 5), (2, 4), (3, 11), (4, 5), (5, 8), (6, 1)] 16 [8, 24, 120, 360] [464,455] [1..10,11..32] {('BB', 'E', 'E'):7, ('BB', 'L', 'E'):1, ('BK', 'E', 'E'):20, ('BK', 'E', 'L'):3, ('BK', 'L', 'L'):1, ('KB', 'E', 'E'):114, ('KB', 'L', 'E'):6, ('KK', 'E', 'E'):284, ('KK', 'E', 'L'):58, ('KK', 'L', 'E'):16, ('KK', 'L', 'L'):2}
+7 1312 [(1, 11), (2, 16), (3, 31), (4, 62), (5, 33), (6, 70), (7, 49)] 32 [16, 240, 1008, 15120] [15112,15074] [1..11,22..358] {('BB', 'E', 'E'):14, ('BB', 'E', 'L'):2, ('BK', 'E', 'E'):228, ('BK', 'E', 'L'):12, ('KB', 'E', 'E'):942, ('KB', 'E', 'L'):62, ('KB', 'L', 'E'):4, ('KK', 'E', 'E'):14267, ('KK', 'E', 'L'):743, ('KK', 'L', 'E'):97, ('KK', 'L', 'L'):13}
+
+MODE-B TWO-END LINE/DEFECT TOWER
+n->n-2 line-degree blue-lifts/blue-parent defects[high,low,kernel-dim] colors[BB,BK,KB,KK] loop[EE,EL,LE,LL] sheet-transport
+5->3 32 8 [2,0,2] [8, 0, 24, 0] [28, 0, 4, 0] {('BB', 'E', 'E'):8, ('KB', 'E', 'E'):20, ('KB', 'S', 'E'):4}
+6->4 128 16 [4,1,3] [32, 0, 224, 256] [366, 120, 18, 8] {('BB', 'E', 'E'):14, ('BB', 'E', 'S'):16, ('BB', 'S', 'E'):2, ('KB', 'C', 'E'):6, ('KB', 'C', 'S'):4, ('KB', 'E', 'E'):104, ('KB', 'E', 'S'):104, ('KB', 'S', 'E'):2, ('KB', 'S', 'S'):4, ('KK', 'C', 'E'):8, ('KK', 'E', 'E'):248}
+7->5 512 32 [6,2,4] [256, 0, 3840, 12288] [14244, 2026, 92, 22] {('BB', 'E', 'E'):256, ('KB', 'C', 'E'):12, ('KB', 'E', 'E'):3816, ('KB', 'S', 'E'):12, ('KK', 'C', 'E'):50, ('KK', 'C', 'S'):8, ('KK', 'E', 'E'):10172, ('KK', 'E', 'S'):2026, ('KK', 'S', 'E'):18, ('KK', 'S', 'S'):14}
+
+NODE-QUOTIENT COMPOSITION TEST
+n unequal[entries,rows/total] max_error witness=(high,low,actual,Markov-product)
+5 [16,8/10] 1/2 (2,0,1,1/2)
+6 [86,32/34] 1/2 (2,1,0,1/2)
+7 [1778,270/272] 1/2 (2,1,0,1/2)
+
+GENERAL IDENTITIES CHECKED FOR n=4..7
+d_top C_n = C_(n-1) d_top; d_bottom C_n = C_(n-1) d_bottom
+d_top S_n = S_(n-1) d_bottom
+d_top d_bottom = d_bottom d_top (where both composites are defined)
+P_top = P_bottom after converse merging
+each lower complement-line has exactly 2^(n-2) high line lifts
+BB masks = difference-striped masks; dim = n-2; BB lines = 2^(n-3)
+reflection-line orbits have size 1 exactly for blue and size 2 exactly for black
+every projected black pair has even multiplicity, including black self-loops
+black half-edge degree is even at every node (loops count twice)
+blue half-edge degree is odd exactly at self-converse nodes and zero otherwise
+merged loops retain class-sheet holonomy: same class or converse-sheet swap
+reflection defect gives 0 -> blue lines -> all lines -> defect space -> 0
+Mode-B defect fibres have dimension n-3; inherited/fresh blackness is distinguished
+Mode-B loop and class-sheet status are transported but are not hereditary
+
+PRESERVATION VERDICT
+tilings: honest endpoint-deletion maps and 2^(n-2)-fold extension fibres
+lines: honest regular set maps; multiplicity, color transition, and loop status retained by tensor
+nodes: no deletion function in general; retain weighted span M_n <- X_n -> M_(n-1)
+node span: not Markov-compositional; retain the reached lower tiling, not only its node
+blue/black: not preserved as a color; retain the two-time label (chi_n,chi_(n-1))
+simple node support: insufficient; it forgets parallel lines, self-loop mass, and cross-n coupling
+
+ALL ASSERTIONS PASSED

@@ -1,228 +1,193 @@
 ---
 id: THM-796
 title: Three-sorted recursive incidence of tilings, complement lines, and converse-merged tournament nodes
-status: PROVED — general two-face tiling pullback, C2 line-phase torsor, colored incidence conservation, and blue/black face recursion; exact node-kernel and non-lumpability census n=3..7
-source: codex-2026-07-15-S9
+status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, and census through n=7)
+source: codex-2026-07-15-S9/S11 (independent S9 and S2 audits, reconciled)
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
-related: [THM-477, THM-785, THM-790, HYP-6825, HYP-6865, HYP-6870]
+related: [THM-477, THM-785, THM-790, HYP-6815, HYP-6825, HYP-6865, HYP-6870]
 verification:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.out
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.json
+  - 04-computation/merged_metagraph_recursive_three_sort_audit_codex_S2.py
+  - 05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out
   - 03-artifacts/visualizations/tournament-tiling-explorer.html
   - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
 ---
 
-# THM-796 — the three-sorted recursive metagraph
+# THM-796 — The three-sorted recursive metagraph
 
-The merged metagraph has three different sorts.  They must not be collapsed:
+## 1. The object is a span, not one graph
 
-```text
-tiling endpoints T_n  --free complement quotient-->  lines E_n
-       |                                           /        \
-       | pi_n                                     / colour   \ endpoint nodes
-       v                                         v            v
-converse-merged nodes N_n  <---------------- projected coloured multigraph
-```
-
-The theorem gives exact forward maps and inverse fibres between these sorts,
-then makes their recursion in `n` explicit.  Its main information-boundary
-conclusion is that the recursion closes on tilings, becomes a two-sheeted
-endpoint-phase torsor on bare lines, and becomes a weighted correspondence—but
-not a Markov state—on merged nodes.
-
-## 1. The three sorts and the maps
-
-Put
+Fix the directed Hamiltonian path `n -> n-1 -> ... -> 1`.  Put
 
 ```text
-S_n = {(x,y): 1 <= y < x <= n and x-y >= 2},
-M_n = |S_n| = C(n-1,2),
-T_n = {0,1}^{S_n}.
+S_n = {(x,y):1 <= y < x <= n and x-y >= 2},
+m_n = |S_n| = binom(n-1,2),
+X_n = F_2^{S_n}.                                           (1.1)
 ```
 
-These are the explorer tilings above the fixed Hamiltonian path
-`n -> n-1 -> ... -> 1`.  There are two commuting operations on `T_n`:
+An element of `X_n` is a fixed-path tiling, equivalently a tournament with the
+displayed Hamiltonian observer path.  Define the commuting involutions
 
 ```text
-kappa_n(t)_(x,y) = 1-t_(x,y),
-sigma_n(t)_(n+1-y,n+1-x) = t_(x,y).
+a_n(t) = t+1                                      all-tile complement,
+r_n(t)(x,y) = t(n-y+1,n-x+1)                     grid reflection. (1.2)
 ```
 
-Here `kappa` flips every non-path tile, while `sigma` is grid reflection.
-They are different involutions.  By THM-280, `sigma` induces tournament
-converse up to relabelling; `kappa` is the antipodal complement-line operation
-inside the fixed-path cube.
-
-Define
+By THM-280, `r_n` realizes tournament converse after relabelling; `a_n` is the
+antipodal complement operation inside the fixed-path cube.  Let
 
 ```text
-E_n = T_n/<kappa_n>,
-N_n = tournament isomorphism classes modulo converse,
-q_n : T_n -> E_n,
-pi_n : T_n -> N_n.
+I_n = tournament isomorphism classes,
+M_n = I_n/(T ~ T^op),                            merged nodes,
+L_n = X_n/<a_n>,                                 line instances,
+pi_n:X_n->M_n,       lambda_n:X_n->L_n.           (1.3)
 ```
 
-A line `e={t,kappa(t)}` is blue when `sigma(t)=t` and black otherwise.  This is
-endpoint-independent because `sigma` and `kappa` commute.  For `u in N_n`, set
+Then `pi_n r_n=pi_n`, and the exact object is
 
 ```text
-F_n(u) = pi_n^{-1}(u).
+                         pi_n             lambda_n
+                 M_n  <-------  X_n  ------------>  L_n.   (1.4)
 ```
 
-THM-781 supplies the exact inverse without scanning the cube:
+Tilings are its named, oriented half-edges.  A line `ell=[t]` has boundary
 
 ```text
-F_n(u) = union_[T in u] HP(T)/Aut(T),
-|F_n(u)| = sum_[T in u] H(T)/|Aut(T)|.
+partial_n(ell)={pi_n(t),pi_n(a_nt)} in Sym^2(M_n).         (1.5)
 ```
 
-Thus a node maps to a set of tilings, never to a fictitious unique tiling.
+The two entries may agree.  A loop is therefore a free two-cycle of tilings
+inside one node fibre, not a fixed tiling or a drawing convention.  Parallel
+lines remain distinct elements of `L_n`.
 
-For a colour `c` and an unordered node pair `{u,v}`, define the exact line
-fibre
+For `u in M_n`, let `F_n(u)=pi_n^{-1}(u)`.  THM-781 gives the intrinsic inverse
 
 ```text
-G_n^c(u,v) = {
-  {t,kappa(t)} in E_n :
-  {pi_n(t),pi_n(kappa(t))}={u,v} and colour(t)=c
-}.
+F_n(u)=disjoint union_(c in C(u)) HP(T_c)/Aut(T_c),
+|F_n(u)|=sum_(c in C(u)) H(T_c)/|Aut(T_c)|.                (1.6)
 ```
 
-These are the inverse fibres of the projected blue/black multigraph.  Parallel
-lines and loops remain literal line instances.  The browser explorer now
-exposes the executable maps
+Thus a node returns a fibre of observer-path orbits, never a fictitious unique
+tiling.  In particular `a_n` does not descend to a node involution: tilings in
+one node fibre can have complements in several different nodes.
+
+For a colour `c` and unordered node pair `{u,v}`, define the literal line fibre
+
+```text
+G_n^c(u,v)={ell in L_n:partial_n(ell)={u,v}, colour(ell)=c}. (1.7)
+```
+
+A line is blue when `r_n(t)=t`, and black otherwise.  This is endpoint-
+independent because `a_n,r_n` commute.  The browser explorer exposes the maps
 
 ```text
 tilingToMergedNode, mergedNodeToTilings,
 tilingToComplementLine, complementLineToTilings,
 complementLineToMergedNodes, mergedNodeToComplementLines,
-mergedNodePairToComplementLines.
+mergedNodePairToComplementLines.                           (1.8)
 ```
 
-The line descriptor keeps both endpoints even for a loop and records incidence
-multiplicity two at its single node.  The exact browser atlas currently covers
-`n=3..6`; the same relations through `n=7` are stored in the offline theorem
-JSON.
+The executable browser atlas covers `n=3..6`; the same relations through
+`n=7` are stored in the theorem JSON.
 
 ## 2. Exact two-face pullback of tilings
 
-Let `d_L:T_n->T_(n-1)` delete path endpoint `1`: keep tiles with `y>1` and
-shift `(x,y)` to `(x-1,y-1)`.  Let `d_H` delete path endpoint `n`: keep tiles
-with `x<n`.  Let
+For `n>=4`, let `d_L:X_n->X_(n-1)` delete path endpoint `1`, and let `d_H`
+delete endpoint `n`.  Let `alpha(t)=t_(n,1)` be the apex bit.  Then
 
 ```text
-a(t)=t_(n,1)
-```
-
-be the apex bit.  Then, for every `n>=4`,
-
-```text
-Phi_n(t) = (d_L(t),d_H(t),a(t))
+t |-> (d_Lt,d_Ht,alpha(t))                                 (2.1)
 ```
 
 is a bijection
 
 ```text
-T_n  ~=  (T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1},              (2.1)
+X_n ~= (X_(n-1) x_[X_(n-2)] X_(n-1)) x F_2(apex),         (2.2)
 ```
 
-where `(L,H)` belongs to the fibre product precisely when
+where `(x_L,x_H)` is compatible exactly when
 
 ```text
-d_H(L)=d_L(H).                                                (2.2)
+d_H(x_L)=d_L(x_H).                                        (2.3)
 ```
 
-The common value is the interior tiling on vertices `{2,...,n-1}`.  The
-inverse fills the common interior from (2.2), the two disjoint legs from `L`
-and `H`, and the only still-missing tile `(n,1)` from the apex bit.  Hence
-reconstruction is unique.
+The common value is the interior tiling on vertices `{2,...,n-1}`.  It fills
+the overlap; the two faces fill the disjoint legs; and `alpha` fills the only
+missing tile `(n,1)`.  This proves both injectivity and surjectivity.
 
-The bijection is equivariant in the exact forms
+The pullback is equivariant:
 
 ```text
-kappa_n(L,H,a) = (kappa_(n-1)L,kappa_(n-1)H,1-a),
-sigma_n(L,H,a) = (sigma_(n-1)H,sigma_(n-1)L,a).                (2.3)
+a_n(x_L,x_H,alpha)=(a_(n-1)x_L,a_(n-1)x_H,1-alpha),
+r_n(x_L,x_H,alpha)=(r_(n-1)x_H,r_(n-1)x_L,alpha).          (2.4)
 ```
 
-The compatible pair has
+In particular,
 
 ```text
-M_(n-2)+2(n-3)=M_n-1
+d_s a_n=a_(n-1)d_s,
+d_L r_n=r_(n-1)d_H,
+d_Ld_H=d_Hd_L.                                            (2.5)
 ```
 
-free bits.  Formula (2.1) therefore also proves `|T_n|=2^{M_n}`.  Its common
-core is exactly THM-793's Mode-B projection `p:T_n->T_(n-2)`; fixing the core
-leaves `2(n-3)+1=2n-5` free leg/apex bits, recovering that theorem's
-`2^{2n-5}` fibre law.
-
-This is a fixed-path-coordinate pullback.  It is not a pullback of unmarked
-tournament classes, and “delete a path endpoint” does not mean “delete a
-tournament source or sink.”
+The common core is exactly THM-793's Mode-B restriction.  Fixing it leaves
+`2(n-3)+1=2n-5` free leg/apex bits.  This is a fixed-path-coordinate pullback,
+not a pullback of unmarked tournament classes; deleting a path endpoint does
+not mean deleting a tournament source or sink.
 
 ## 3. The line tower is a phase torsor
 
-Every complement line has a unique endpoint with apex bit zero.  Using it in
-(2.1) gives a canonical bijection
+Every complement line has a unique endpoint with apex bit zero.  Taking that
+endpoint in (2.2) gives the canonical set bijection
 
 ```text
-E_n ~= T_(n-1) x_[T_(n-2)] T_(n-1).                           (3.1)
+L_n ~= X_(n-1) x_[X_(n-2)] X_(n-1).                       (3.1)
 ```
 
-This does **not** say that upper lines are a fibre product of lower lines.  A
-face commutes with `kappa`, so it gives an endpoint-independent map
+Each face descends to an honest map
 
 ```text
-bar d_L,bar d_H : E_n -> E_(n-1).
+bar d_L,bar d_H:L_n->L_(n-1),                              (3.2)
 ```
 
+and every lower line has exactly `2^(n-2)` upper lifts through either face.
+Equation (3.1) does not make upper lines a fibre product of lower **lines**.
 For every `n>=5`,
 
 ```text
-(bar d_L,bar d_H): E_n ->
-E_(n-1) x_[E_(n-2)] E_(n-1)                                  (3.2)
+(bar d_L,bar d_H):L_n ->
+L_(n-1) x_[L_(n-2)] L_(n-1)                               (3.3)
 ```
 
-is uniformly two-to-one.  It is a canonical `C2`-torsor.  In the apex-zero
-model (3.1), its deck involution is
+is uniformly two-to-one: a canonical `C_2` endpoint-phase torsor.  In the
+apex-zero model, the deck operation simultaneously complements both tiling
+faces.  Equality of their bare core lines admits exactly two coherent endpoint
+choices.  At `n=4` the empty core is degenerate and the fibre has size four.
+
+There is an explicit recursive phase address.  Let `c=d_H(x_L)=d_L(x_H)` and
+let `epsilon(ell)` be the first fixed coordinate of this common core.  Its
+value changes under simultaneous complement, so
 
 ```text
-rho_n(L,H)=(kappa_(n-1)L,kappa_(n-1)H).                        (3.3)
+ell |-> (bar d_Lell,bar d_Hell,epsilon(ell))                (3.4)
 ```
 
-Indeed, equality of the two bare core lines lets one choose coherent core
-endpoints in exactly two ways; the choices differ by simultaneous complement.
-They reconstruct two distinct upper lines with the same two lower face-lines.
-The deck mate has the same upper blue/black colour because `kappa` commutes
-with `sigma`.  At `n=4` the empty `T_2` core is degenerate and the corresponding
-fibre has size four, which is why (3.2) begins at `n=5`.
-
-This identifies the exact information lost by bare-line recursion: not a new
-node scalar, but a simultaneous endpoint phase.  Keeping an oriented endpoint,
-or equivalently the apex-zero section, repairs the loss.
-
-There is also an explicit binary recursive address.  In the apex-zero endpoint
-let `c=d_H(L)=d_L(H)` be the common core and let `epsilon(e)` be the bit of its
-fixed first tile `(n-2,1)`.  Simultaneous complement flips `epsilon`, so
+is a bijection onto compatible lower-line pairs plus one phase bit.  The deck
+mate can equivalently be obtained by flipping only the apex of the apex-zero
+upper endpoint and then taking its complement line.  Explicitly, if `s_0(ell)`
+is the apex-zero endpoint and `e_(n,1)` is the apex basis vector, then
 
 ```text
-e -> (bar d_L(e),bar d_H(e),epsilon(e))                        (3.4)
+rho_n(ell)=lambda_n(s_0(ell)+e_(n,1)).                    (3.5)
 ```
 
-is a bijection from `E_n` to compatible lower-line pairs with one phase bit.
-Conversely, choose the unique coherent endpoints of the two lower lines whose
-common core has the prescribed bit, reconstruct the apex-zero upper tiling,
-and take its complement-line.  This gives literal mutually inverse recursive
-functions, not only a counting law.  The deck mate is especially concrete:
+Thus the information
+lost by bare-line recursion is exactly a simultaneous endpoint phase, not an
+unnamed node scalar.
 
-```text
-rho_n(e) = q_n(s_0(e) xor {(n,1)}),                            (3.5)
-```
-
-where `s_0(e)` is the apex-zero endpoint.  Thus the hidden line phase is
-changed by the one-tile apex flip in the local tiling cube.
-
-The exhaustive audit gives
+The exact torsor audit is
 
 | n | upper lines | lower-line-pair support | fibre histogram | failures |
 |---:|---:|---:|---:|---:|
@@ -230,82 +195,161 @@ The exhaustive audit gives
 | 6 | 512 | 256 | `2:256` | 0 |
 | 7 | 16,384 | 8,192 | `2:8192` | 0 |
 
-## 4. Projected coloured incidence matrices
+## 4. Lines are a quotient code and colour is zero defect
 
-Define the directed endpoint kernel
+The line sort is the binary vector space
 
 ```text
-A_n^c(u,v) = #{t in F_n(u): pi_n(kappa(t))=v and colour(t)=c}. (4.1)
+L_n=F_2^{m_n}/<1>.                                        (4.1)
 ```
 
-For every `n`, node pair, and colour:
+Let
 
 ```text
-A_n^c(u,v)=A_n^c(v,u),                                        (4.2)
-sum_(v,c) A_n^c(u,v)=|F_n(u)|,                                (4.3)
-A_n^c(u,u) is even.                                           (4.4)
+f_n=floor((n-1)/2)                         fixed tiles,
+h_n=(m_n+f_n)/2=floor((n-1)^2/4)           reflection orbits,
+B_n=Fix(r_n)/<1>,
+D_n=im(1+r_n).                                           (4.2)
 ```
 
-The involution `t -> kappa(t)` proves (4.2) and pairs the diagonal endpoints
-in (4.4).  Consequently the exact projected line multiplicities are
+The reflection defect
 
 ```text
-|G_n^c(u,v)| = A_n^c(u,v)       if u != v,
-|G_n^c(u,u)| = A_n^c(u,u)/2.                                 (4.5)
+delta_n([t])=t+r_n(t)                                     (4.3)
 ```
 
-Equivalently, the node fibre size is the coloured multigraph degree with loops
-counted twice:
+is representative-independent and gives the short exact sequence
 
 ```text
-|F_n(u)| = sum_(v!=u,c)|G_n^c(u,v)| + 2 sum_c|G_n^c(u,u)|.    (4.6)
+0 -> B_n -> L_n --delta_n-> D_n -> 0,
+dim B_n=h_n-1,          dim D_n=(m_n-f_n)/2.               (4.4)
 ```
 
-These equations refine the `d=M_n` transport matrix of THM-345 and the
-one-level blue/black allocation laws of THM-643.  A simple graph obtained by
-replacing every nonempty `G_n^c(u,v)` by one edge destroys exactly the data in
-(4.5): parallel multiplicity, two endpoint incidences of a loop, and possibly
-colour.
+Its kernel statement is the definition of `Fix(r_n)`; surjectivity is by the
+definition of the image.  Each reflection two-cycle contributes one image
+coordinate and each fixed tile contributes none, proving the dimensions.
 
-Three loop notions must therefore remain separate:
-
-1. an unmerged class-self line, whose two endpoints have the same ordinary
-   tournament class;
-2. a merged-node loop, whose endpoints agree only after converse merging;
-3. a simple adjacency loop, which records only existence.
-
-For example, at `n=6` there are 8 unmerged class-self lines but 26 merged-node
-loops; the latter split as 2 blue and 24 black.
-
-## 5. Recursive node correspondence and its conservation laws
-
-Faces do not descend to functions `N_n->N_(n-1)`.  The honest object is the
-weighted correspondence
+Blue lines are exactly the zero-defect fibre.  Every defect fibre has size
 
 ```text
-D_n(u,v) = #{t in F_n(u): pi_(n-1)(d_L(t))=v}.                 (5.1)
+b_n=2^(h_n-1),                                            (4.5)
+```
+
+and the number of black lines is
+
+```text
+k_n=2^(m_n-1)-b_n.                                        (4.6)
+```
+
+There is no setwise-fixed black line.  Every image of `1+r_n` vanishes on the
+reflection-fixed tile coordinates, whereas the all-one word does not, so
+`r_n(t)=a_n(t)` is impossible.  Reflection acts with singleton line orbits
+exactly on blue lines and free two-element orbits on black lines.
+
+Since `pi_nr_n=pi_n`, the two lines in a black reflection orbit have the same
+node boundary and the same nonzero defect.  Hence, for every `n`,
+
+```text
+every black node-pair multiplicity is even, loops included;
+every black half-edge degree is even;
+both statements remain true after conditioning on an exact defect.         (4.7)
+```
+
+A blue tiling represents a self-converse class.  Conversely, reflection acts
+on the odd THM-781 fibre `HP(T)/Aut(T)` of a self-converse node and therefore
+has an odd number of fixed tilings.  On a non-self-converse merged node it
+exchanges the two class fibres and has none.  Thus
+
+```text
+u is self-converse      iff its blue half-edge degree is odd,
+u is non-self-converse  iff its blue half-edge degree is zero.              (4.8)
+```
+
+Pure-black nodes are exactly the non-self-converse nodes; self-converse nodes
+are pure-blue or mixed.
+
+## 5. Projected incidence and the reversible node shadow
+
+Define the incidence multiplicity
+
+```text
+J_n(u,ell)=#{t in ell:pi_n(t)=u} in {0,1,2}.               (5.1)
+```
+
+Then
+
+```text
+sum_u J_n(u,ell)=2,
+sum_ell J_n(u,ell)=|F_n(u)|.                               (5.2)
+```
+
+For colour `c`, define the directed half-edge kernel
+
+```text
+A_n^c(u,v)=#{t in F_n(u):pi_n(a_nt)=v,colour([t])=c}.      (5.3)
+```
+
+Complementing `t` proves
+
+```text
+A_n^c(u,v)=A_n^c(v,u),
+sum_(v,c) A_n^c(u,v)=|F_n(u)|,
+A_n^c(u,u) is even.                                       (5.4)
+```
+
+The literal line multiplicities satisfy
+
+```text
+|G_n^c(u,v)|=A_n^c(u,v)       if u!=v,
+|G_n^c(u,u)|=A_n^c(u,u)/2.                                (5.5)
+```
+
+Therefore node fibre size is coloured multigraph degree with loops counted
+twice.  The row-normalized total kernel
+
+```text
+P_n(u,v)=sum_c A_n^c(u,v)/|F_n(u)|                         (5.6)
+```
+
+is reversible with stationary mass `|F_n(u)|/2^m_n`.  It reconstructs fibre
+volume and weighted coloured incidence, but not literal parallel-line
+identity, class-sheet holonomy, or recursive ancestry.
+
+Three loop notions must remain distinct: an ordinary class-self line, a loop
+only after converse merging, and a simple support loop.  At `n=6` there are 8
+ordinary class-self lines but 26 merged-node loops, split into 2 blue and 24
+black.
+
+## 6. Faces give a weighted node correspondence, not a parent map
+
+Faces do not descend to functions `M_n->M_(n-1)`.  The exact node object is
+the span
+
+```text
+M_n <-pi_n- X_n -pi_(n-1)d_s-> M_(n-1)                   (6.1)
+```
+
+or its matrix
+
+```text
+R_n(u,v)=#{t in F_n(u):pi_(n-1)(d_Lt)=v}.                 (6.2)
 ```
 
 It obeys
 
 ```text
-sum_v D_n(u,v)=|F_n(u)|,                                      (5.2)
-sum_u D_n(u,v)=2^{n-2}|F_(n-1)(v)|.                           (5.3)
+sum_v R_n(u,v)=|F_n(u)|,
+sum_u R_n(u,v)=2^(n-2)|F_(n-1)(v)|.                       (6.3)
 ```
 
-For (5.3), a fixed lower tiling has `n-3` free bits on the other exclusive
-leg and one free apex bit.  The `d_H` branching matrix equals (5.1): reflection
-swaps the two faces by (2.3), while `pi(sigma(t))=pi(t)` after converse merging.
+Reflection exchanges the faces, so the `d_L,d_H` matrices agree after
+converse merging.  This is equality of weighted correspondences, not equality
+of maps on tilings.
 
-The row `D_n(u,-)` is a recursive node fingerprint.  Key its entries by the
-already ordered lower nodes, divide by the gcd of its nonzero entries, and
-call the resulting primitive vector `R_n(u)`.  Starting from the transitive-
-first order at `n=3`, the lexicographic order of these vectors is an objective
-recursive *face order*.  It is a second coordinate, not a replacement for
-THM-785's horizontal transitive-to-distributed `C3` flow order.  The output
-stores both the primitive vector and its recursive face rank for every node.
-
-Finite exact separation is unexpectedly strong:
+Divide a nonzero row by the gcd of its entries, key the entries by the already
+ordered lower nodes, and call the primitive vector `Rbar_n(u)`.  This is an
+objective recursive face coordinate.  It complements, rather than replaces,
+THM-785's horizontal `C3` coordinate.
 
 | n | nodes | support-row cells | weighted-row cells | primitive-row cells |
 |---:|---:|---:|---:|---:|
@@ -314,186 +358,161 @@ Finite exact separation is unexpectedly strong:
 | 6 | 34 | 34 | 34 | 34 |
 | 7 | 272 | 264 | 272 | 272 |
 
-Thus at `n=7` support alone leaves eight twin pairs, whereas relative
-multiplicities already distinguish all 272 nodes.  Absolute fibre size is not
-needed for this finite separation.  This is a verified `n<=7` completeness
-statement, not a proof that `R_n` stays injective for every `n`; canonical
-converse-orbit code remains the final exact fallback.
+Thus relative face multiplicities distinguish all audited nodes, though this
+is not a general injectivity theorem.  HYP-6865 supplies an independent
+horizontal coordinate: harmonic voltage on the unmerged local-flip resistor
+network is perfectly concordant with score variance through `n=6` and has
+`92502/92634` pairwise concordance in the floating `n=7` audit.  The Smith
+graph is not the complement-line graph; voltage, `C3`, and `Rbar_n` are
+related coordinates, not an asserted graph identity.
 
-This recursive coordinate complements the horizontal flow picture:
+## 7. The universal node/line/face coupling tensor
 
-```text
-THM-785 C3 flow:       where the node lies from transitive to distributed;
-primitive D row:       how its whole path-orbit fibre branches into faces;
-coloured A rows:       how its tiling endpoints pair into blue/black lines;
-canonical orbit code:  final exact tie-breaker if structural rows collide.
-```
-
-HYP-6865's concurrently computed Smith diagram supplies an independent
-physical realization of the horizontal coordinate.  Regard the weighted local
-one-tile-flip graph on ordinary isomorphism classes as a resistor network,
-wire the transitive class to the distributed score rail, and solve the
-Dirichlet problem.  Its harmonic potential has perfect pairwise concordance
-with the score-variance axis at `n=4,5,6` (`5/5`, `58/58`, `1345/1345`
-comparable pairs) and `92502/92634` concordance in the floating `n=7` audit.
-Thus three different constructions now point along the same horizontal
-direction: inverse score variance, complement-line `C3` flux, and electrical
-potential.  The Smith graph is unmerged and uses local flips, so this is an
-independent related coordinate—not an identification with the blue/black
-complement-line multigraph or a proof of general concordance.
-
-### 5.1 The universal node/line/face coupling tensor
-
-All of the preceding node and line relations are marginals of one finite
-coupling.  For an upper line, choose its apex-zero endpoint `t` and write
+For an upper line choose its apex-zero endpoint `t` and write
 
 ```text
-u  = pi_n(t),                 u' = pi_n(kappa t),
-l  = pi_(n-1)(d_L t),         l' = pi_(n-1)(kappa d_L t),
-h  = pi_(n-1)(d_H t),         h' = pi_(n-1)(kappa d_H t).
+u =pi_n(t),       u'=pi_n(a_nt),
+l =pi_(n-1)(d_Lt),l'=pi_(n-1)(a_(n-1)d_Lt),
+h =pi_(n-1)(d_Ht),h'=pi_(n-1)(a_(n-1)d_Ht).               (7.1)
 ```
 
-Define
+Let
 
 ```text
-Xi_n(u,u';l,l';h,h';ULH)                                     (5.4)
+Xi_n(u,u';l,l';h,h';ULH)                                 (7.2)
 ```
 
-to count upper lines with these ordered endpoint-node pairs and the indicated
-upper/low/high colour word.  Then:
+count upper lines with these ordered endpoint-node pairs and upper/low/high
+colour word.  Then:
 
-- summing over the lower data gives the exact upper line fibres `G_n^c`;
-- adding the first-endpoint contribution `(u,l)` and second-endpoint
-  contribution `(u',l')` gives `D_n`, and similarly for the high face;
-- summing by `ULH` gives the six colour atoms in (7.1);
-- reflection gives the exact symmetry
+- summing lower data gives the upper line fibres `G_n^c`;
+- adding the two endpoint contributions gives `R_n`, for either face;
+- summing by `ULH` gives the colour atoms in Section 9;
+- reflection swaps the low/high data and the last two colour letters.
 
-```text
-Xi(u,u';l,l';h,h';ULH)=Xi(u,u';h,h';l,l';UHL).                (5.5)
-```
+Thus `Xi_n` is one joint count-valued object whose marginals cannot disagree.
+It remains a quotient: several literal lines may occupy one tensor cell.
 
-Consequently `Xi_n` is a single count-valued joint object from which the three
-displayed diagrams can all be recovered without inconsistent independent
-marginals.  It remains a quotient: equal tensor cells may contain
-several literal lines.  The exact recursive line address (3.4) resolves those
-collisions.
-
-The finite tensor is already remarkably sharp:
-
-| n | lines | nonempty `Xi` cells | multiplicity histogram | collision cells | max multiplicity |
+| n | lines | nonempty `Xi` cells | multiplicity histogram | collision cells | max |
 |---:|---:|---:|---:|---:|---:|
 | 4 | 4 | 4 | `1:4` | 0 | 1 |
 | 5 | 32 | 32 | `1:32` | 0 | 1 |
-| 6 | 512 | 509 | `1:506, 2:3` | 3 | 2 |
-| 7 | 16,384 | 16,031 | `1:15704, 2:309, 3:10, 4:8` | 327 | 4 |
+| 6 | 512 | 509 | `1:506,2:3` | 3 | 2 |
+| 7 | 16,384 | 16,031 | `1:15704,2:309,3:10,4:8` | 327 | 4 |
 
-All tensor marginals and the reflection law have zero failures.  At `n=7`,
-endpoint nodes of the upper line and both face-lines plus the colour word
-therefore distinguish all but 353 of the 16,384 line instances; one binary
-face phase together with the actual lower lines gives the exact inverse.
+All marginals and the reflection law have zero failures.  The actual pair of
+lower lines plus the coherent phase bit from (3.4) is exactly invertible.
 
-## 6. Why a complete node fingerprint is still not a recursive state
-
-For `s in F_(n-1)(v)`, define the lift count
+For a single face, a representative-free coupling retains
 
 ```text
-L_(u,v)(s) = #{t in F_n(u): d_L(t)=s}.                         (6.1)
+(u_0,u_1;v_0,v_1)~(u_1,u_0;v_1,v_0).                    (7.3)
 ```
 
-A node-only Markov recursion would require (6.1) to be constant over every
-lower node fibre `F_(n-1)(v)`—the standard strong-lumpability condition.  It
-fails immediately and overwhelmingly:
+This simultaneous swap records which upper half-edge descends to which lower
+half-edge.  Independently sorting `(u_0,u_1)` and `(v_0,v_1)` identifies
+straight and crossed couplings and is only a marginal:
 
-| n | nonuniform nonzero `(u,v)` blocks | all nonzero blocks | max lift range |
+| n | simultaneous-coupled support | independently sorted support |
+|---:|---:|---:|
+| 4 | 4 | 3 |
+| 5 | 31 | 30 |
+| 6 | 464 | 455 |
+| 7 | 15,112 | 15,074 |
+
+## 8. Complete static node fingerprints are not recursive states
+
+For `s in F_(n-1)(v)`, define the individual lift count
+
+```text
+Q_(u,v)(s)=#{t in F_n(u):d_Lt=s}.                          (8.1)
+```
+
+Node-level strong lumpability would require this to be constant over every
+lower node fibre.  It fails:
+
+| n | nonuniform nonzero blocks | all nonzero blocks | max lift range |
 |---:|---:|---:|---:|
 | 4 | 0 | 5 | 0 |
 | 5 | 11 | 19 | 3 |
 | 6 | 76 | 112 | 6 |
 | 7 | 1,206 | 1,312 | 6 |
 
-For instance, in the `n=7-a026 -> n=6-a01` block, one lower mask has one lift
-while another has three.  Therefore an aggregate row can identify the parent
-node perfectly while still failing to tell how an individual child tiling
-continues.  Recursive reconstruction must retain the lower tiling, its
-Hamiltonian-path/automorphism orbit, or an equivalent rooted incident-word
-state.  The node is a base address, not the whole stalk.
+There is a second, coarser manifestation.  Row-normalizing `R_n` and
+multiplying consecutive node kernels assumes that reached tilings are uniform
+inside the middle node.  Direct two-step deletion disagrees with this Markov
+product as follows:
 
-## 7. Closed blue/black face recursion
+| n | unequal high/low entries | erroneous high rows | maximum error |
+|---:|---:|---:|---:|
+| 5 | 16 | `8/10` | `1/2` |
+| 6 | 86 | `32/34` | `1/2` |
+| 7 | 1,778 | `270/272` | `1/2` |
 
-Write
+The lower tiling, its Hamiltonian-path/automorphism orbit, or a genuinely
+continuation-equivalent refinement must survive.  A node is a base address,
+not the whole recursive stalk.
 
-```text
-f_n=floor((n-1)/2),
-r_n=(M_n+f_n)/2,
-T=2^{M_n-1},
-U=2^{r_n-1},
-L=2^{r_(n-1)+n-3},
-Q=2^{n-3+floor((n-2)/2)},
-J=2^{n-3}.
-```
+## 9. Closed one-face and three-face colour recursion
 
-Choose the apex-zero endpoint of each upper line.  Let a three-letter word
-record `(upper colour, low-face colour, high-face colour)`, with `B` blue and
-`K` black.  For every `n>=4`, the six possible atoms have the exact counts
+### 9.1 One face
+
+For `n>=4`, count lines by `(upper colour,deleted colour)`.  With high colours
+as rows and low colours as columns,
 
 ```text
-BBB = J,
-BKK = U-J,
-KBB = Q-J,
-KBK = KKB = L-Q,
-KKK = T-U-2L+Q+J,                                            (7.1)
-BBK = BKB = 0.
+BB=2^(n-3),
+BK=b_n-BB,
+KB=2^(n-2)b_(n-1)-BB,
+KK=2^(n-2)k_(n-1)-BK.                                   (9.1)
 ```
 
-Proof of the nontrivial ranks: fix a constant-gap diagonal and enumerate its
-tiles by `y=1,...,q`.  Low- and high-face symmetry impose
+An upper line and one face are both blue precisely when the mask is constant
+on every difference diagonal `x-y=d`.  The two relevant reflections compose
+to unit translation along each diagonal.  There are `n-2` diagonal bits and
+complement identifies opposite words, proving `BB=2^(n-3)`; the other entries
+follow from row and column totals.  The difference-striped/Toeplitz subspace
+is the recursive blue-to-blue spine.
+
+### 9.2 Both faces
+
+Let
 
 ```text
-y ~ q-y,             y ~ q+2-y.
+T=2^(m_n-1),
+U=2^(h_n-1),
+F=2^(h_(n-1)+n-3),
+Q=2^(n-3+floor((n-2)/2)),
+J=2^(n-3).                                                (9.2)
 ```
 
-Their compositions translate by two.  The equality graph therefore has one
-component for odd `q` and two parity components for even `q`.  Summing over
-the diagonals and fixing the isolated apex to zero gives
-`n-3+floor((n-2)/2)` free bits, hence `Q`.  Upper symmetry adds
+For the word `(upper,low-face,high-face)`, the exact atoms are
 
 ```text
-y ~ q+1-y,
+BBB=J,
+BKK=U-J,
+KBB=Q-J,
+KBK=KKB=F-Q,
+KKK=T-U-2F+Q+J,
+BBK=BKB=0.                                               (9.3)
 ```
 
-which connects the two parity components.  Every gap diagonal becomes
-constant; after fixing the apex there are `n-3` free diagonal values, hence
-`J`.  Upper reflection swaps the two faces, so an upper-blue line forces their
-colours to agree.  Inclusion-exclusion gives (7.1).
+Both-face symmetry is parity-constant on each gap diagonal; adding upper
+symmetry joins the two parity components and makes the diagonal constant.
+This gives `Q` and `J`; reflection gives left/right equality and inclusion-
+exclusion gives the other atoms.
 
-Geometrically, both-face-blue endpoints are parity-constant on every gap
-diagonal, while all-three-blue endpoints are constant on every gap diagonal:
-they are precisely the apex-normalized Toeplitz, or distance-stationary,
-tilings.
-
-There is a sharper probabilistic form.  Let
+If `beta_n=U/T`, then
 
 ```text
-beta_n = U/T = 2^{r_n-M_n}.
+F/T=beta_(n-1),
+Q/T=beta_(n-1)^2,
+J/T=beta_n beta_(n-1).                                   (9.4)
 ```
 
-Since `r_n+r_(n-1)=M_n`,
-
-```text
-beta_n = beta_(n-1) 2^{-floor((n-2)/2)},
-L/T = beta_(n-1),
-Q/T = beta_(n-1)^2,
-J/T = beta_n beta_(n-1).                                    (7.2)
-```
-
-Consequently upper-blue, low-face-blue, and high-face-blue are pairwise
-independent under the uniform measure on lines.  They are not jointly
-independent: upper blue deterministically makes the two face colours equal,
-and the triple-blue probability is `beta_n beta_(n-1)`, not
-`beta_n beta_(n-1)^2`.  The first new colour datum across sizes is therefore a
-pure three-way interaction.
-
-The exact atom counts are:
+Upper-, low-face-, and high-face-blue are pairwise independent.  They are not
+jointly independent: upper blue forces the two face colours equal.  The first
+new colour datum across sizes is therefore a pure three-way interaction.
 
 | n | BBB | BKK | KBB | KBK | KKB | KKK |
 |---:|---:|---:|---:|---:|---:|---:|
@@ -502,63 +521,159 @@ The exact atom counts are:
 | 6 | 8 | 24 | 24 | 96 | 96 | 264 |
 | 7 | 16 | 240 | 48 | 960 | 960 | 14,160 |
 
-This exact left/right symmetry belongs to the tiling/line tower before node
-projection.  THM-785's observed black left/right drift is therefore a
-disintegration effect: it enters when these symmetric line masses are
-allocated among unequal node fibres, loops, and transitive-flow positions.
+The exact pre-quotient symmetry locates THM-785's black left/right imbalance
+in disintegration over unequal node fibres rather than in the raw line tower.
 
-## 8. Finite three-sort census
+## 10. Mode-B two-end deletion is the defect tower
 
-| n | tilings `T_n` | lines `E_n` | merged nodes `N_n` | coloured node-pair supports | merged loops |
-|---:|---:|---:|---:|---:|---:|
-| 3 | 2 | 1 | 2 | 1 | 0 |
-| 4 | 8 | 4 | 3 | 3 | 1 |
-| 5 | 64 | 32 | 10 | 20 | 4 |
-| 6 | 1,024 | 512 | 34 | 187 | 26 |
-| 7 | 32,768 | 16,384 | 272 | 6,126 | 114 |
-
-Every pullback, reconstruction, core-compatibility, `kappa` naturality,
-reflection face swap, apex-zero section, line-torsor, matrix conservation,
-diagonal parity, and colour-formula audit has zero failures through `n=7`.
-
-The computation's Tournament Analysis deliberately uses information carriers,
-not runners, as vertices.  Its pairwise observable is the number of merged-node
-pairs separated by a carrier; the switches are retained pairs and retained
-pairs per partition cell; its tie Hamiltonian path is
+For `n>=5`, let
 
 ```text
-fibre_size -> colour_degree -> line_support_row -> line_weighted_row
- -> lower_face_support -> lower_face_weighted -> lower_face_normalized
- -> exact_node.
+p_n=d_Ld_H:X_n->X_(n-2).                                  (10.1)
 ```
 
-At `n=7` the two gauges flip 18 carrier-tournament edges.
+It commutes with complement and reflection, and induces surjective linear maps
+on lines, blue subspaces, and defect spaces.  Boundary coordinates give
 
-## 9. Preservation boundary and the LRC object
+```text
+0 -> F_2^(2n-5) -> L_n -> L_(n-2) -> 0,
+0 -> F_2^(n-2)  -> B_n -> B_(n-2) -> 0,
+0 -> F_2^(n-3)  -> D_n -> D_(n-2) -> 0.                  (10.2)
+```
 
-This theorem challenges the assumption that the natural vertices must be
-runners or arcs.  Here the useful vertices are alternately tiling endpoints,
-complement-line instances, merged nodes, lower-face states, and information
-carriers.
+Surjectivity follows by freely extending an interior word, symmetrically when
+restricted to `B_n`.  The kernel dimensions are the differences of the line,
+blue, and defect dimensions in (4.4).  Each lower line has `2^(2n-5)` lifts,
+and the Mode-B colour channel is triangular:
 
-The quotient ledger is exact:
+```text
+BB=b_n=2^(n-2)b_(n-2),
+BK=0,
+KB=(2^(2n-5)-2^(n-2))b_(n-2),
+KK=2^(2n-5)k_(n-2).                                      (10.3)
+```
 
-| operation | preserves | destroys / required repair |
-|---|---|---|
-| `T_n -> E_n` | antipodal line, colour, two endpoint set | endpoint phase; repair by apex-zero orientation |
-| two lower tilings -> two lower lines | face-line pair and core line | simultaneous coherent phase; repair by the `C2` torsor |
-| `T_n -> N_n` | tournament converse-orbit class | chosen Hamiltonian path/observer cut and individual lift distribution |
-| lines -> weighted coloured node multigraph | all pair multiplicities and loops | endpoint masks/path orbits |
-| weighted multigraph -> simple graph | existence of adjacency | multiplicity, loop factor two, and possibly colour |
+A nonzero lower defect forces every lift to remain black: inherited
+blackness.  Over a blue lower line, a nonzero defect in the kernel creates
+fresh blackness.  Thus black lines have an exact recursive ancestry, not only
+a binary colour.
 
-None of these tournament-only quotients preserves the LRC loneliness predicate,
-which is metric and phase-sensitive.  Pulling the address back to the four-
-coordinate LRC slope suspension still requires the owner, metric scale,
-threshold, endpoint/tie order, inverse-step, and carry/continued-fraction
-transport stalk.  THM-778 supplies the analogous lesson on the arithmetic side:
-a static node or continued-fraction digit is safe only together with its action
-on the labelled fibre.
+## 11. Loops carry class-sheet holonomy
 
-The comprehensive structural object is therefore not one graph.  It is the
-three-sorted incidence diagram together with its endpoint-phase and LRC
-transport stalks.
+Let `c_n(t) in I_n` be the ordinary unmerged class.  If `[t]` is a merged loop,
+then either
+
+```text
+same sheet:       c_n(t)=c_n(a_nt),
+converse switch:  c_n(a_nt)=c_n(t)^op != c_n(t).          (11.1)
+```
+
+This is endpoint-independent.  A blue loop is necessarily same-sheet; a black
+loop may have either holonomy.  Neither loop status nor its sheet status is
+hereditary.  Under Mode-B `6->4`, the exact line transitions are
+
+```text
+cross/cross 366,  cross/loop 120,
+loop/cross   18,  loop/loop    8.                         (11.2)
+```
+
+At `n=6` the 24 black loops split into 6 same-sheet and 18 converse-switch
+lines; at `n=7` the 114 black loops split `44+70`.
+
+The full finite census is:
+
+| n | tilings | classes | merged | `B[cross,loop]` | `K[cross,loop]` | coloured/plain support | loop holonomy `Bs,Bc,Ks,Kc` |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 3 | 2 | 2 | 2 | `1,0` | `0,0` | `1/1` | `0,0,0,0` |
+| 4 | 8 | 4 | 3 | `1,1` | `2,0` | `3/3` | `1,0,0,0` |
+| 5 | 64 | 12 | 10 | `8,0` | `20,4` | `20/20` | `0,0,4,0` |
+| 6 | 1,024 | 56 | 34 | `30,2` | `456,24` | `187/183` | `2,0,6,18` |
+| 7 | 32,768 | 456 | 272 | `256,0` | `16,014,114` | `6,126/6,076` | `0,0,44,70` |
+
+The Mode-B line census is:
+
+| map | line degree | blue lifts/blue parent | `BB,BK,KB,KK` | `EE,EL,LE,LL` |
+|---:|---:|---:|---:|---:|
+| `5->3` | 32 | 8 | `8,0,24,0` | `28,0,4,0` |
+| `6->4` | 128 | 16 | `32,0,224,256` | `366,120,18,8` |
+| `7->5` | 512 | 32 | `256,0,3840,12288` | `14244,2026,92,22` |
+
+All pullback, torsor, incidence, tensor, defect, parity, colour, loop, and
+sheet-transport assertions pass with zero failures.
+
+## 12. Groupoids and the continuation-complete address
+
+Let `P_n` be the finite groupoid of tournaments with a directed Hamiltonian
+path.  Its skeleton is `X_n`.  Forgetting the path gives the tournament
+groupoid, folding converse gives `M_n`, and quotienting the free complement
+action gives `L_n`.  The span (1.4) is a coloured multigraph internal to finite
+groupoids.
+
+Terminal path deletion is an honest functor on `P_n`, but is not cartesian
+after forgetting the path.  Arbitrary unmarked vertex deletion is instead a
+span through `(T,v)` and must retain the `Aut(T)` orbit and stabilizer of `v`.
+Deleting an internal path vertex also needs a repaired Hamiltonian path of
+`T-v`, because the shortcut can point backward.
+
+The information hierarchy proved above is
+
+```text
+simple node support
+ < weighted coloured node kernel
+ < named line + phase + defect + loop sheet
+ < independently sorted face transport
+ < simultaneous half-edge / Xi transport
+ < marked-path deletion witness
+ < owner-labelled metric LRC state.                                (12.1)
+```
+
+The coarsest exact bounded recursive address is naturally Nerode-like: two
+marked states agree only if every continuation word in
+`{d_L,d_H,a,r}` has the same declared terminal observations.  HYP-6825's
+weighted line-WL and primitive face row are strong finite approximations, not
+proofs of continuation equivalence for arbitrary `n`.
+
+## 13. Tournament Analysis and the LRC preservation boundary
+
+The native relation is symmetric, weighted, coloured, and looped.  Forcing the
+three sorts into a single binary tournament destroys the theorem's payload.
+The computation instead uses information carriers as Tournament Analysis
+vertices:
+
+```text
+fibre_size, colour_degree, line_support_row, line_weighted_row,
+lower_face_support, lower_face_weighted, lower_face_normalized, exact_node.
+```
+
+The pairwise observable is separated unordered node pairs.  The switches are
+retention and retention per partition cell, with the displayed list as the tie
+Hamiltonian path.  At `n=7` both carrier tournaments are transitive, have score
+histogram `{0:1,...,7:1}`, zero directed triangles, singleton SCCs, and one
+Hamiltonian path; the gauges flip 18 edges.
+
+The challenged assumption is that vertices must be runners or arcs.  Depending
+on the predicate, viable vertices include node classes, Hamiltonian paths,
+line instances, defects, gaps, fixed sections, boundaries, wall events,
+residues, cover arcs, Fourier modes, matroid circuits, and proof obligations.
+Every quotient must name its preserved predicate and destroyed coordinates.
+
+For LRC(14), this theorem does not identify a metagraph node with HYP-6815's
+four-coordinate suspension
+
+```text
+X_(A,R)={(u,t,c,lambda):u=ct and Phi_(A,R)(u,t)>=lambda}.  (13.1)
+```
+
+The three-sorted object is a constructible combinatorial atlas over the
+suspension's phase-order strata.  The LRC predicate is nonemptiness of every
+integer-slope section at `lambda=1/14`.  A node quotient destroys metric gap
+widths, observer phase, runner owners, exact wall side, scale/residue, inverse
+winding, endpoint ties, chronology, and carry.  These remain stalk fields
+unless fibre-purity, reconstruction, annihilation, or a named residual theorem
+proves that a field can be discarded.
+
+The exact preservation rule is therefore recursive: keep precisely enough
+data to make the next intended operation well-defined, recurse on literal
+lines and named half-edges before quotienting, refine nodes by their incident
+recursive signatures, and attach this finite atlas to the LRC suspension
+rather than replacing the suspension by its shadow. ∎

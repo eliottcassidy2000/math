@@ -488,6 +488,15 @@
   n=7 has an exact class/node/global/fibre index and every node lists its inverse
   tiling fibre.  Local flip depth and antipodal blue/black position are retained
   as separate axes.
+- **Recursive theorem (THM-796):** The exact object is the incidence span
+  `M_n <- X_n -> L_n`, not one node graph.  Lines are the quotient code
+  `F_2^m/<1>` and reflection defect refines blue/black into equal-sized cosets.
+  One-end deletion is regular on tilings and lines, a weighted non-Markov span
+  on nodes, and requires simultaneous high/low half-edge coupling.  Mode-B
+  gives exact line/blue/defect kernels of dimensions `2n-5,n-2,n-3` and
+  separates inherited from fresh blackness.  Loops carry same/converse-sheet
+  holonomy and are nonhereditary.  All identities are exact-audited through
+  `n=7`; general linear/incidence statements are proved for every `n`.
 - **Open theorem:** Test connectivity/WL completeness at `n=8`, then attach the
   address as a base-chart label to the affine incidence object
   `X={(u,t,c,lambda):u=ct,Phi(u,t)>=lambda}`.  The stalk must retain observer
@@ -504,10 +513,11 @@
   unlabelled tournament gauge. Exact chamber movies with equal coarse states have
   different next owners and free sheets. Thus moments suffice for current truth;
   labelled assignment, event step, and endpoint schedule are required for transport.
-- **Pull list:** 26 bounded cards in
+- **Pull list:** 32 bounded cards in
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
-  first pulls are n=7 WL twins, the seven-exception sheet tiling, and one exact
-  slope/sector chamber movie.
+  first pull is the bounded continuation/Nerode minimization of the three-sorted
+  address, followed by black-flux disintegration and the owner-labelled
+  heptagon/endpoint stalk join.
 
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.

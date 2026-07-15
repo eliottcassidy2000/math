@@ -62958,3 +62958,44 @@ seven-exception wall: a loose-set base, finite sheet fibre, labelled danger
 incidence, endpoint monodromy, and ramification defect.  Runner tournaments are
 diagnostic quotients; the owner-by-sheet incidence hypergraph preserves the
 simultaneous-cover predicate.
+
+---
+
+## codex-2026-07-14-S11 — THM-796 three-sorted recursive metagraph incidence
+
+Promoted the reserved THM-796 stub to a general theorem plus an exact
+`n=3..7` audit.  The merged metagraph is the incidence span
+`M_n <- X_n -> L_n`: converse-merged tournament nodes, fixed-Hamiltonian-path
+tilings as named half-edges, and complement-line instances.  The weighted
+coloured node kernel is symmetric and reversible, with loop diagonal counted
+twice, but it forgets line identity and recursive ancestry.
+
+The new algebraic coordinate is the reflection defect
+`delta_n([t])=t+sigma_n(t)`.  It gives the exact sequence
+`0 -> Blue_n -> L_n -> D_n -> 0`; blue is zero defect and black lines are
+equal-sized nonzero-defect cosets.  Reflection pairs black lines freely inside
+every endpoint pair and defect fibre, proving even black multiplicity including
+loops.  Self-converse nodes are exactly those with odd blue half-degree;
+non-self-converse nodes have blue degree zero.
+
+Endpoint deletion gives the exact tiling pullback and regular line maps, but
+only a weighted span on nodes.  The exact edge transport retains simultaneous
+high/low half-edge coupling; independently sorting endpoint pairs loses data
+already at `n=4`.  Direct two-step deletion refutes the node Markov product in
+`8/10`, `32/34`, and `270/272` rows at `n=5,6,7`.  The one-step colour channel
+is closed-form, with `BB=2^(n-3)` exactly on difference-striped masks.
+
+Symmetric Mode-B deletion yields line/blue/defect kernel dimensions
+`2n-5,n-2,n-3` and separates inherited from fresh blackness.  Merged loops
+carry same-class versus converse-sheet holonomy: black loops split `6+18` at
+`n=6` and `44+70` at `n=7`; loop status is nonhereditary (`6->4` counts
+`366,120,18,8`).  Extended the S2 verifier to assert the defect tower, Mode-B
+colour channel, loop transport, and sheet transport; all assertions pass.
+
+Updated HYP-6825, the hypothesis/result indexes, preservation pull cards,
+LRC tournament technique card, and investigation backlog.  The next exact
+question is a bounded Nerode minimization under endpoint deletion, complement,
+and reflection, comparing continuation-complete cells with rooted weighted
+line-WL.  For LRC14 the metagraph remains a constructible atlas over the
+`(u,t,c,lambda)` suspension; metric width, owners, endpoint side, scale,
+residue, wall chronology, inverse winding, and carry remain stalk fields.

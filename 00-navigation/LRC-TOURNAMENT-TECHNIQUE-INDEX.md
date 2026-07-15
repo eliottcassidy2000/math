@@ -71,11 +71,13 @@ obligations, and proof-carrier interfaces.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk
 
-- **Move:** Keep two tournament-tiling graphs separate: local one-tile
-  spine/rib/sea moves supply transitive-rooted depth, while antipodal all-tile
-  blue/black complement lines supply the fold coordinate.  Recursively refine
-  the weighted coloured line neighbourhood, retain all-deletion parent data,
-  and use a canonical converse-orbit code only as an explicit final tie-break.
+- **Move:** Keep the three THM-796 sorts separate: converse-merged nodes,
+  fixed-path tilings as named half-edges, and antipodal complement-line
+  instances.  Local one-tile spine/rib/sea moves supply transitive-rooted
+  depth, while blue/black complement lines supply the fold coordinate.
+  Recursively refine the weighted coloured line neighbourhood, retain marked
+  deletion witnesses, and use a canonical converse-orbit code only as an
+  explicit final tie-break.
 - **LRC use:** HYP-6825 gives exact node addresses and forward/inverse tiling
   fibres at `n=3..7`; the address can now serve as the combinatorial base chart
   of HYP-6815's affine-slope suspension.  LRC data must live in stalks over that
@@ -88,9 +90,16 @@ obligations, and proof-carrier interfaces.
   the endpoint defect, while black lines retain it.  The labelled law is
   symmetric, but its iso-class disintegration has a strong reverse black
   boundary drift at `n=7`.
+- **Recursive refinement:** THM-796 identifies lines with
+  `F_2^m/<1>` and colour with the zero/nonzero reflection defect.  Endpoint
+  deletion is regular on tilings/lines but only a non-Markov weighted span on
+  nodes; exact edge transport retains simultaneous high/low half-edge
+  coupling.  Mode-B distinguishes inherited from fresh blackness.  Merged
+  loops additionally retain same-class/converse-sheet holonomy.
 - **Preserves:** local flip depth; lexicographic spine/rib/sea and blue/black
-  path words; line colour, weight and loops; recursive parent multiplicities;
-  exact class/converse orbit; every explorer tiling mask and its fibre index.
+  path words; named line, weight, defect, loop and class sheet; simultaneous
+  half-edge coupling; recursive parent multiplicities; exact class/converse
+  orbit; every explorer tiling mask and its fibre index.
 - **Forgets / guardrail:** A merged node still forgets chirality side, exact
   tiling/line orbit, observer, metric gaps, `1/14` versus endpoint wall,
   blocker owner, scale residue, and future wall/lift behaviour.  Rooted line-WL
@@ -105,15 +114,22 @@ obligations, and proof-carrier interfaces.
   `n=7` both carrier tournaments are transitive with score histogram
   `{0:1,...,7:1}`, singleton SCCs, zero directed 3-cycles, and one Hamiltonian
   path; changing gauge flips 22 edges.
-- **Next pull:** Disintegrate THM-785's exact endpoint-bit flux law over
+- **THM-796 carrier tournament:** vertices are fibre size, colour degree,
+  line support/weight, lower-face support/weight/normalization, and exact node.
+  Its two `n=7` gauges are transitive with the same score histogram and flip
+  18 edges.
+- **Next pull:** Minimize bounded continuation equivalence under endpoint
+  deletion, complement, and reflection, comparing the exact cells with line-WL.
+  Then disintegrate THM-785's exact endpoint-bit flux law over
   `HP/Aut`, line-orbit, and category fibres to predict the black drift, then run
   the rooted weighted line-WL/flow audit at `n=8`; classify the first twins by
   line-orbit, 2-WL, spectrum, or parent groupoid.  In parallel,
   build one exact `(u,t,c,lambda)` chamber movie with the address as base and
   sector/owner/carry/monodromy as stalk.  Pull-card list:
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`.
-- **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, HYP-2245, HYP-2989, HYP-3106,
+- **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, THM-793, THM-796, HYP-2245, HYP-2989, HYP-3106,
   HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
+  `merged_metagraph_recursive_three_sort_audit_codex_S2.py/.out`;
   `the-metagraph-needs-a-stalk-...codex-S4.md`.
 
 ## LTT-432 - Scale-Quotient Peel / Good-Period Certificate Tournament

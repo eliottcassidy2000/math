@@ -1,7 +1,7 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: PROVED general Hamiltonian-path fibre inverse (THM-781), cyclic-triangle flow laws (THM-785), and three-sorted tiling/line/node recursion (THM-796) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
+status: PROVED general Hamiltonian-path fibre inverse (THM-781), cyclic-triangle flow laws (THM-785), and three-sorted recursive incidence (THM-796) + VERIFIED FINITE objective atlas n=3..7; general continuation-complete address conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
@@ -32,6 +32,9 @@ artifacts:
   - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.json
   - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
+  - 04-computation/merged_metagraph_recursive_three_sort_audit_codex_S2.py
+  - 05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out
+  - 07-reflections/the-merged-metagraph-is-a-three-sorted-recursive-incidence-object-codex-S2.md
 related:
   - HYP-2245
   - HYP-2989
@@ -46,6 +49,7 @@ related:
   - THM-781
   - THM-785
   - THM-787
+  - THM-793
   - THM-796
 ---
 
@@ -73,15 +77,21 @@ The canonical code is an admitted final tie-breaker.  Every preceding
 controlled-forgetting stage is audited for collisions, so a profile is never
 silently promoted to a complete invariant.
 
-The exact relation under study is two-sorted:
+The original forward address was written as a two-stage quotient, but the
+exact metagraph relation is three-sorted:
 
 ~~~text
-labelled tiling/tournament realization
-  -> canonical tournament isomorphism class
-  -> merged complement-orbit node,
+                         merged node M_n
+                              ^
+                              | forget observer path
+                              |
+fixed-path tiling X_n  --------+--------> complement line L_n,
+                                         quotient by all-tile complement
 ~~~
 
-with inverse maps returning fibers, not a fictitious unique tiling.
+with inverse maps returning fibres, not a fictitious unique tiling.  The
+tilings are named half-edges; a line can be a loop and parallel lines remain
+distinct.  THM-796 makes this span and its cross-size recursion exact.
 
 ## The distinction that makes the address work
 
@@ -308,6 +318,48 @@ histograms and depth-pair current table.  Its `368` pure-black classes at
 `n=7` are the `184` converse-merged pure-black nodes here.  THM-785's closed
 blue law promotes THM-787's formerly finite parity/max pattern to all sizes.
 
+## Recursive three-sorted refinement
+
+THM-796 determines what the address must retain as `n` changes.  Endpoint
+deletion is an honest regular map on tilings and complement-line instances,
+but only a weighted span on merged nodes.  The normalized node span is not
+Markov-compositional: direct two-step deletion disagrees with the product
+kernel in `8/10`, `32/34`, and `270/272` high-node rows at `n=5,6,7`.
+Therefore a recursive address cannot replace the reached lower tiling by its
+node and remain exact.
+
+For a line `[t]`, the reflection defect
+
+```text
+delta_n([t])=t+sigma_n(t)
+```
+
+refines the blue/black bit.  It yields
+
+```text
+0 -> Fix(sigma_n)/<1> -> L_n -> im(1+sigma_n) -> 0.
+```
+
+Blue is the zero fibre; nonzero defects are equally sized black cosets.  Under
+the symmetric `n->n-2` deletion, a surviving nonzero defect is inherited
+blackness, while a nonzero kernel defect is fresh blackness.  A merged loop
+also carries same-class versus converse-sheet holonomy, which is not
+recoverable from its diagonal node entry and is not hereditary under deletion.
+
+The exact recursive line key is consequently not just
+`(colour,unordered high endpoints,unordered low endpoints)`.  It retains the
+simultaneous association
+
+```text
+(high endpoint 0 -> low endpoint 0,
+ high endpoint 1 -> low endpoint 1)
+```
+
+modulo swapping both labels together.  Independently sorting the two endpoint
+pairs loses straight-versus-crossed coupling already at `n=4`.  HYP-6825's
+rooted weighted line-WL remains a strong finite node separator, but the theorem
+now identifies it as a quotient of this richer line/half-edge recursion.
+
 ## Preservation statement
 
 This solves the combinatorial address problem, not the LRC quotient problem.
@@ -394,8 +446,9 @@ obligations.
    `n`.
 3. Prove that local quotient depth always equals minimum tiling weight/MFAS;
    the finite equality alone does not justify the general statement.
-4. Replace raw all-deletion parent codes by a genuine functor on the whole
-   recursive metagraph tower, retaining deletion multiplicities and orbits.
+4. Extend THM-796's exact endpoint-deletion functors to arbitrary vertex
+   deletion spans, retaining vertex automorphism orbits, stabilizers,
+   insertion signatures, converse sheets, and repaired path witnesses.
 5. Pull the exact node/fibre atlas back over the LRC slope suspension and test
    fibre-purity of threshold nonemptiness after adding metric gap, owner,
    carry, scale, and wall-monodromy sidecars.
