@@ -5,7 +5,7 @@ status: PROVED (the flip-vector identity + parity; one-paragraph proofs) + witne
 source: opus-2026-07-15-S312 (owner directive: prove the 2selfK = SC bijection, check n=8 — the law was refuted at n=8 by kind-pasteur S128 (404 ≠ 176) and codex-S14 (audit concurs); this theorem is the surviving witness-level structure)
 depends_on:
   - THM-852 (Klein-four skeleton; the n=8 refutation)
-related: [THM-790 (leg law), THM-810 (F1-F5), MISTAKE-150, codex-S14 H-drift]
+related: [THM-790 (leg law), THM-855 (F1-F5), MISTAKE-150, codex-S14 H-drift]
 verification: 05-knowledge/results/selfk_type_ledger_fixed_opus_S312.out, selfk_debug_witness_opus_S312.out
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: THM-810
+id: THM-855  # renumbered from THM-810 (collision with the LRC four-replacement coset interface, first-pushed 21:04 vs 23:57 on 2026-07-14; opus-S312 hygiene)
 title: The wiggly dictionary formulas — degree = m·fiber; the stationary law (H/|Aut| is the equilibrium measure of the metagraph walk); the per-flip drop law Δx = 4(d_loser − d_winner) + 8 (upsets climb, expected results descend, margin-2 is level); the unit-current cut law; and the level-mean status after the S308 decision
 status: PROVED (F1–F4, each with a one-line proof; referee-verified exhaustively n = 4..6) + the level-mean law status recorded per the n=8 verdict
 source: opus-2026-07-14-S309 (owner directive: prove the level-mean law, more node/edge/tiling statements, small formulas everywhere)
@@ -9,7 +9,9 @@ related: [THM-801 (codex: the A+B+C−D−E−F+G Čech descent), THM-588, HYP-6
 verification: 05-knowledge/results/small_formulas_referee_opus_S309.out (exhaustive n = 4..6)
 ---
 
-# THM-810 — the wiggly dictionary formulas
+# THM-855 — the wiggly dictionary formulas
+
+> (Formerly numbered THM-810; renumbered by opus-S312 — the LRC THM-810 was pushed first.)
 
 Four exact formulas, each a one-line proof, each a tournament ↔ metagraph
 dictionary entry (per the owner's principle: every metagraph fact has a

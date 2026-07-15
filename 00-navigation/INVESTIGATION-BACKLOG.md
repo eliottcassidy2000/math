@@ -931,10 +931,10 @@ ancestor of [banks + a-priori tail]. LRC classical proofs only n ≤ 6 published
 computer-assisted + 9–13 announced (the repo's citation basis, confirmed current).
 
 ### LEAD: the seven-comb wall as a second-moment problem (opus-S312, F6 transport)
-- **Source:** THM-810 F6 (exact axis-walk moment closure + exact fluctuation-dissipation) x LRC14-FRONTIER item 3 (seven-comb wall: first-moment potential stalls at density 14/13).
+- **Source:** THM-855 F6 (exact axis-walk moment closure + exact fluctuation-dissipation) x LRC14-FRONTIER item 3 (seven-comb wall: first-moment potential stalls at density 14/13).
 - **Status:** OPEN - the transport dictionary is written (F6's LRC paragraph); the missing input is THM-815's event-sampling law (which tooth/comb gets hit, size-biased?) to compute E[delta Phi] for Phi = (K-K*)^2 and convex degree-weights.
 - **Next step:** extract the exact event-transition kernel from THM-815 Part C's recursion at radius 7; compute the drift of K and K^2 under it; check whether a variance-corrected potential is strictly decreasing where the linear one stalls.
-- **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-810 F5/F6, the level-mean gap (same problem shape).
+- **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-855 F5/F6, the level-mean gap (same problem shape).
 
 ### LEAD (klein-2026-07-09-S233 → RESOLVED S234 as THM-685): the RELATION-LATTICE RESUMMATION → the Kronecker transfer
 - **Source:** THM-684 S233 addendum → **THM-685 (S234)**; `lrc14_relation_lattice_resummation_klein_S234.py`
