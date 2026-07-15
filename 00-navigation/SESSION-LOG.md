@@ -895,6 +895,41 @@ compact: the primitive divisor-complete signed-complement family
 max-speed-cell/deep-component incidence with exact margins, not connectivity
 or component count.
 
+THM-820 advances the next shallow chart without overstating closure.  Every
+hypothetically tight proper scale-one Hamming-five row is in one of two
+uniform boxes.  A minimal four-/five-cycle and reciprocal mass give
+`x<=388`; the recursive branch has caps
+`(388,776,1552,3104,6208)`.  If `v>2x`, the top four form THM-815's
+`a{1,2,4,8}` SCC.  Strict global mass gives `x<=228`, and the exact envelope
+of the seven- and eight-core top bounds gives `v<=1986`, `max_top<=7944`,
+uniquely maximized at `(m,x)=(12,97)`.  All 792 height-one H5 rows are loose;
+the unique minimum is `2[11] union {11}` at `1/12`, and the next odd lift is
+the tight doubled AP `2[12]`.  The 201,376-row spanning-five-cycle audit leaves
+five feasible band types.  Centre-9 and centre-22 examples have identical
+labelled live/tie tournament fingerprints but different exact maxima, while a
+top-four SCC persists at unbounded scale.  The replay byte-matches SHA-256
+`fb5f88213b591b69a6f6565b91776f9ab00ffa03fa6df35ebebb5a4264268eab`.
+
+The live rebase also exposed and repaired a genuine quantifier error in the
+primitive harmonic law, now THM-819 after the THM-817/818 namespace collision.
+Sharp Dirichlet confinement is strict only off a finite equality grid:
+`k=3,t=2/5` is good at `1/5` but is not in a primitive-fourth neighborhood.
+These equality points have measure zero, so the primitive harmonic measure
+formula and prime/composite corollary survive unchanged.  The corrected exact
+`k=1..30` replay byte-matches its stored output.
+
+THM-818's ordered relation join suggests the exact next compression audit.
+For the Hamming-five action
+`T_u(E)=E intersect Safe(u)`, the theorem-facing state is the literal residual
+interval union together with its remaining labelled bank.  A proposed codec
+must be tested on its operation-indexed kernel pair, not on fibre sizes.  The
+coarsest legal quotient identifies states only when every future subset has
+the same terminal emptiness verdict.  Literal labelled coordinate faces glue
+uniquely and admit a genuine ordered Cech-style regression; normalized
+component summaries and deep signed-cell charts do not inherit gluing without
+a separate reconstruction theorem.  LTT-435 records the resulting residual-
+automaton and two-plus-three meet-in-the-middle targets.
+
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
 `sum c<g` density bound, and the family `(f,g,c)=(3k-1,3k-2,k)` proves the
@@ -908,7 +943,9 @@ degree vector tear at different times/sheets, so the energy is a current
 coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
-proved.  The first unresolved shallow AP chart is now radius five.  The other
+proved.  Radius five is the first unresolved shallow AP chart; its complete
+scale-one locus is now uniformly finite, but neither box has been emptied and
+the arbitrary-scale five-deck descent is open.  The other
 next exact pieces are a uniform-in-quotient-height collar tear after the
 `w=13c`, height-24 multiplier lane; a uniform negative margin or decreasing
 invariant on THM-817's signed-cell/deep-component selector; a quotient by the
@@ -917,10 +954,10 @@ THM-778/779/783/786/788/794/802; the remaining higher-sheet packets outside
 THM-816's closed quartic coset; and a scale-normal argument for clustered
 comparable-size far frequencies after THM-799 closes the fully lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813/815/816/817; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813/815/816/817/820; corrected THM-779 and THM-819 boundary; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
-Hamming-two/three/four, affine-packet, anti-grid/component-selector,
+Hamming-two/three/four/five, affine-packet, anti-grid/component-selector,
 connected-return/grid-ladder, and signed-wall odd-grid cross-audits;
 HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.

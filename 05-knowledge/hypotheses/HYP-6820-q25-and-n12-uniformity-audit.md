@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, and an exact max-speed-cell classification of every satellite; branch emptiness remains OPEN at shallow Hamming radius at least five, the signed-cell/deep-component selector and collar residuals, and the other higher-sheet packets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose and the complete scale-one Hamming-five chart reduced to two explicit finite boxes; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, and an exact max-speed-cell classification of every satellite; branch emptiness remains OPEN in the Hamming-five boxes and arbitrary-scale descent, the signed-cell/deep-component selector and collar residuals, and the other higher-sheet packets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -35,6 +35,7 @@ depends_on:
   - THM-815
   - THM-816
   - THM-817
+  - THM-820
   - HYP-6750
   - HYP-6775
 related:
@@ -382,6 +383,49 @@ core-safe set, so it is a method boundary rather than a counterexample.  Thus
 every proper residue-preserving AP perturbation through Hamming radius four is
 uniformly loose; radius five is the first unresolved shallow chart.
 
+THM-820 gives the first uniform radius-five reduction.  For a proper
+scale-one five-lift packet with ordered replacements `x<v<w<y<z`, every
+hypothetical tight row satisfies
+
+```text
+x<=388.
+```
+
+Either `v<=2x` and recursive collar obligations give
+
+```text
+(x,v,w,y,z)<=(388,776,1552,3104,6208),
+```
+
+or `v>2x`, the top four labels form THM-815's `a{1,2,4,8}` cycle, and the
+seven- and eight-speed reciprocal bounds combine to give
+
+```text
+x<=228,       v<=1986,       max_top<=7944.
+```
+
+The least-coordinate sharpening is itself structural: when all five owners
+are large, positive indegree gives a minimal cycle of length four or five.
+The exact five-cycle band bank has five feasible types and forces a ratio at
+least `3/2`; the four-cycle forces a factor-two edge.  This converts the
+collar classification into the stronger reciprocal cap.
+
+The theorem does not empty these boxes.  Its exact shallow census rejects all
+`C(12,5)=792` height-one rows and finds the unique minimum
+
+```text
+2[11] union {11},               M=1/12.
+```
+
+Lifting the sixth odd label produces `2[12]`, the unique height-one
+radius-six minimum at `1/13`.  Thus radius five approaches a literal
+scale-changing AP face rather than an unrelated sporadic pattern.  THM-820
+also supplies the method obstruction: the top-four SCC can persist at
+unbounded scale, while two labelled five-cycles with identical tournament
+telemetry have different integer centres and exact maxima.  The finite-box
+closure must act on exact residual interval unions and remaining danger teeth,
+not the collar graph alone.
+
 ## D. The two-sheet branch is now a folded dyadic cover
 
 THM-772 first turns the `s=2` equality packet
@@ -598,17 +642,20 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Extend descent and closure at radius five.**
+1. **Finish the finite scale-one radius-five action and extend descent.**
    THM-795/800/804/806 close the complete AP-centred Hamming-one through
    Hamming-three stars.  THM-810 splits radius four into common scale and one
    order-three coset interface; THM-815 and THM-816 close those alternatives
-   independently.  The next shallow theorem must therefore treat five or more
-   replacement owners.  Start by classifying the possible collar handoff
-   cycles and anchored recursions at radius five, but retain the exact
-   owner-exit/provider-tooth incidence, half-open orientation, speed ratios,
-   component widths, and residual interval union.  Radius four shows why: its
-   forced tournament cycle supplied a finite box but did not itself decide the
-   LRC predicate.
+   independently.  THM-820 has now classified the radius-five collar cycles
+   and anchored recursion and reduced the full scale-one chart to the two
+   explicit boxes above.  Empty those boxes by the commuting idempotent action
+   `T_u(E)=E intersect Safe(u)` on literal residual interval unions, preferably
+   through a minimized continuation automaton or a two-plus-three
+   meet-in-the-middle cover join.  Audit every proposed codec through its
+   operation-indexed kernel pair; literal labelled four-coordinate faces glue
+   uniquely, but component counts, unordered endpoints, and tournament nodes
+   do not.  Then prove the arbitrary-AP-scale five-deck descent, allowing for
+   new sheet interfaces rather than assuming common scale.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
@@ -656,8 +703,9 @@ zero-defect row, the nonprimitive doubled AP; all 4,094 primitive rows had
 `chi_13>=2`.  THM-770 supersedes that cube by an exact height-twelve theorem,
 while THM-795/800/804/806 close the first three Hamming directions.  THM-810
 isolates the radius-four ramification and THM-815/816 close both of its
-branches.  The warning now begins at radius five and at the remaining deep
-sheet packets.
+branches.  THM-820 makes the scale-one radius-five warning finite and rejects
+its full height-one face; its two boxes and all-scale descent are the shallow
+residual, alongside the remaining deep sheet packets.
 
 ## F. Information-preservation / Tournament Analysis
 
@@ -693,8 +741,12 @@ deciding objects are therefore:
 - in the shallow packet, missing-owner splice sheets joined to replacement
   teeth and then to strict-safe components; THM-795/800/804/806 close the first
   three radii, THM-810 identifies the radius-four scalar/parity ramification,
-  and THM-815/816 close its two branches.  The first unresolved shallow carrier
-  has five owner obligations.
+  and THM-815/816 close its two branches.  At radius five THM-820 proves that
+  the owner-exit tournament supplies a finite reduction but loses integer
+  centre and scale.  The exact action state is `(E_S,V)`, the literal residual
+  interval union together with its remaining labelled operation bank; its
+  continuation equivalence is equality of the terminal emptiness verdict
+  after every legal future subset of `V`.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

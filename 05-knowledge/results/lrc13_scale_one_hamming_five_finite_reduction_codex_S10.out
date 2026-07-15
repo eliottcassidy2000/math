@@ -6,14 +6,21 @@ arithmetic=integer_maximin_and_endpoint_bands_plus_exact_Fraction_constants
 UNIFORM_TWO_BOX_CONSTANTS
 seven_core_threshold=1/8 gap=5/104 safe_length=5/(52m)
 five_comb_cover_requires=sum(1/u)>=15/(104m)
-least_replacement_bound=x<=floor(104m/3)<=416
-doubling_box=v<=2x,w<=2v,y<=2w,z<=2y; numeric_caps=(416,832,1664,3328,6656)
+preliminary_least_bound=x<=floor(104m/3)<=416
+all_large_minimal_cycle=length4_sum<=9/(2x)_or_length5_sum<=14/(3x)
+sharpened_least_bound=x<=floor(1456m/45)<=388
+doubling_box=v<=2x,w<=2v,y<=2w,z<=2y; numeric_caps=(388,776,1552,3104,6208)
 exceptional_trigger=v>2x => induced_top_four_positive_indegree
 exceptional_cycle=THM815_a*{1,2,4,8} spread<=4
+exceptional_global_mass=sum_all<11/(4x) => x<286m/15 => integer_x<=228
 eight_core_threshold=1/9 gap=4/117 safe_length=8/(117x)
 four_comb_cover_requires=sum_top(1/u)>=20/(117x)
 cycle_reciprocal_upper=sum_top(1/u)<=7/(2v)
-exceptional_box=v<=floor(819x/40)<=8517 max_top<=4v<=34068
+preliminary_exceptional_box=v<=floor(819x/40)<=4668
+seven_core_top_residual=sum_top>=15/(104m)-1/x
+x_dependent_cap=v<=min(floor(819x/40),floor((7/2)/(15/(104m)-1/x)))_when_positive
+exact_envelope=m12_x97_caps=(1986,2046)_min1986; x98_second_cap=1928
+exceptional_box=v<=1986 max_top<=4v<=7944
 
 HEIGHT_ONE_HAMMING_FIVE_CENSUS
 rows=792 value_count=66 minimum=1/12 unique=1

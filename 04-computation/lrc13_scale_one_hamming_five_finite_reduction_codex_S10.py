@@ -4,10 +4,12 @@
 The theorem has an infinite symbolic part and three finite exact audits.
 
 * Seven retained speeds have a 1/8 lonely point.  The resulting safe interval
-  and the periodic danger estimate force the least replacement x <= 416.
+  first forces x <= 416; the exact minimal-cycle bank sharpens this to 388.
   The collar graph then gives either a recursive doubling box or an induced
-  exceptional four-cycle, for which the eight-speed 1/9 bound gives a second
-  finite box.  ``finite_reduction_constants`` checks every rational constant.
+  exceptional four-cycle.  Strict reciprocal mass sharpens the exceptional
+  anchor to 228.  The lower bounds from both the seven- and eight-speed safe
+  intervals then have an exact upper envelope v <= 1986 for the second finite
+  box.  ``finite_reduction_constants`` checks every rational constant.
 * ``height_one_censuses`` evaluates all C(12,5)=792 radius-five rows and all
   C(12,6)=924 radius-six rows.  Maxima are exact: a maximum of a minimum of
   triangular waves occurs at a self-cusp (denominator 2u) or a pair crossing
@@ -189,6 +191,16 @@ def finite_reduction_constants() -> None:
     assert least_multiplier == F(104, 3)
     assert (104 * 12) // 3 == 416
 
+    # If x>24, every owner has positive collar indegree.  A minimal cycle has
+    # length four or five.  A four-cycle gives reciprocal sum <=9/(2x); the
+    # exact five-cycle bank has a centre at least four, hence one speed at
+    # least 3x/2 and reciprocal sum <=14/(3x).  The latter is the weaker cap.
+    all_large_reciprocal_upper = F(14, 3)
+    sharpened_least_multiplier = all_large_reciprocal_upper / required_five_reciprocal
+    assert sharpened_least_multiplier == F(1456, 45)
+    sharpened_x_cap = (1456 * 12) // 45
+    assert sharpened_x_cap == 388
+
     # Exceptional branch: P union {x} has eight speeds and M >= 1/9.  Since
     # x>=14>max(P), its maximum is x and its safe length is 8/(117x).
     eight_gap = F(1, 9) - DELTA
@@ -206,21 +218,73 @@ def finite_reduction_constants() -> None:
     assert required_four_reciprocal == F(20, 117)
     exceptional_multiplier = F(7, 2) / required_four_reciprocal
     assert exceptional_multiplier == F(819, 40)
-    exceptional_v_cap = (819 * 416) // 40
-    assert exceptional_v_cap == 8517
-    assert 4 * exceptional_v_cap == 34068
+
+    # In the v>2x branch, sum_all=1/x+sum_top and
+    # sum_top<=7/(2v)<7/(4x), so sum_all<11/(4x).  The inequality is strict.
+    exceptional_all_upper = F(11, 4)
+    exceptional_x_multiplier = exceptional_all_upper / required_five_reciprocal
+    assert exceptional_x_multiplier == F(286, 15)
+    exceptional_x_cap = (286 * 12 - 1) // 15
+    assert exceptional_x_cap == 228
+    exceptional_v_cap = (819 * exceptional_x_cap) // 40
+    assert exceptional_v_cap == 4668
+    assert 4 * exceptional_v_cap == 18672
+
+    # The seven-core mass also leaves a top-only lower bound
+    # 15/(104m)-1/x after subtracting the anchor reciprocal.  When positive,
+    # combine it with sum_top<=7/(2v).  Audit the exact integer envelope of
+    # that cap and the eight-core cap over the full uniform superset box.
+    envelope = -1
+    envelope_rows = []
+    for m in range(7, 13):
+        for x in range(14, exceptional_x_cap + 1):
+            eight_core_cap = (819 * x) // 40
+            residual_lower = F(15, 104 * m) - F(1, x)
+            if residual_lower > 0:
+                ratio_cap_fraction = F(7, 2) / residual_lower
+                ratio_cap = ratio_cap_fraction.numerator // ratio_cap_fraction.denominator
+                cap = min(eight_core_cap, ratio_cap)
+            else:
+                ratio_cap = None
+                cap = eight_core_cap
+            row = (m, x, eight_core_cap, ratio_cap, residual_lower)
+            if cap > envelope:
+                envelope = cap
+                envelope_rows = [row]
+            elif cap == envelope:
+                envelope_rows.append(row)
+    assert envelope == 1986
+    assert envelope_rows == [(12, 97, 1986, 2046, F(69, 40352))]
+
+    crossover = F(4384, 45)
+    eight_at_cross = F(819, 40) * crossover
+    residual_at_cross = F(15, 104 * 12) - 1 / crossover
+    assert eight_at_cross == F(7, 2) / residual_at_cross
+    assert 97 < crossover < 98
+
+    residual_98 = F(15, 104 * 12) - F(1, 98)
+    cap_98_fraction = F(7, 2) / residual_98
+    cap_98 = cap_98_fraction.numerator // cap_98_fraction.denominator
+    assert residual_98 == F(37, 20384) and cap_98 == 1928
 
     print("UNIFORM_TWO_BOX_CONSTANTS")
     print("seven_core_threshold=1/8 gap=5/104 safe_length=5/(52m)")
     print("five_comb_cover_requires=sum(1/u)>=15/(104m)")
-    print("least_replacement_bound=x<=floor(104m/3)<=416")
-    print("doubling_box=v<=2x,w<=2v,y<=2w,z<=2y; numeric_caps=(416,832,1664,3328,6656)")
+    print("preliminary_least_bound=x<=floor(104m/3)<=416")
+    print("all_large_minimal_cycle=length4_sum<=9/(2x)_or_length5_sum<=14/(3x)")
+    print("sharpened_least_bound=x<=floor(1456m/45)<=388")
+    print("doubling_box=v<=2x,w<=2v,y<=2w,z<=2y; numeric_caps=(388,776,1552,3104,6208)")
     print("exceptional_trigger=v>2x => induced_top_four_positive_indegree")
     print("exceptional_cycle=THM815_a*{1,2,4,8} spread<=4")
+    print("exceptional_global_mass=sum_all<11/(4x) => x<286m/15 => integer_x<=228")
     print("eight_core_threshold=1/9 gap=4/117 safe_length=8/(117x)")
     print("four_comb_cover_requires=sum_top(1/u)>=20/(117x)")
     print("cycle_reciprocal_upper=sum_top(1/u)<=7/(2v)")
-    print("exceptional_box=v<=floor(819x/40)<=8517 max_top<=4v<=34068")
+    print("preliminary_exceptional_box=v<=floor(819x/40)<=4668")
+    print("seven_core_top_residual=sum_top>=15/(104m)-1/x")
+    print("x_dependent_cap=v<=min(floor(819x/40),floor((7/2)/(15/(104m)-1/x)))_when_positive")
+    print("exact_envelope=m12_x97_caps=(1986,2046)_min1986; x98_second_cap=1928")
+    print("exceptional_box=v<=1986 max_top<=4v<=7944")
     print()
 
 
@@ -357,6 +421,7 @@ def five_cycle_audit() -> None:
     impossible = numerical_survivors[-1]
     assert __import__("math").prod(k - 1 for k in impossible) == 32
     feasible_types = numerical_survivors[:-1]
+    assert all(max(word) >= 4 for word in feasible_types)
 
     cyclic_words: set[tuple[int, ...]] = set()
     label_orbits: set[tuple[int, ...]] = set()

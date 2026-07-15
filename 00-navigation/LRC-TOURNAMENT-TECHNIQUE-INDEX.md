@@ -100,7 +100,9 @@ obligations, and proof-carrier interfaces.
   THM-810 isolates the quartic `s=3` coset, THM-816 closes it uniformly by
   dynamic residual-comb erosion, and THM-815 closes the complementary
   common-scale chart.  THM-817 classifies every `s=2` return satellite as a
-  signed max-speed cell with endpoint owners.
+  signed max-speed cell with endpoint owners.  THM-820 reduces the first
+  shallow five-owner scale-one chart to two finite boxes and shows why its
+  top-four SCC requires reciprocal metric mass beyond the collar graph.
 - **Preserves:** quotient-core loose components, sheet label, tightener owner,
   gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
   quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
@@ -117,10 +119,11 @@ obligations, and proof-carrier interfaces.
   one Hamiltonian path. These fingerprints certify collapse, not rigidity.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
-  branch, classify the five-owner collar state; then treat the ramified
-  higher-`s` packets outside THM-816's closed quartic coset.
+  branch, empty THM-820's two finite boxes and extend its scale-one result to
+  the all-order five-deck interface; then treat the ramified higher-`s`
+  packets outside THM-816's closed quartic coset.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
-  THM-817, HYP-6775, HYP-6820;
+  THM-817, THM-820, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

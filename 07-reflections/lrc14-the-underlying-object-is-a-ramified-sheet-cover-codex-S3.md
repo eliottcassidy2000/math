@@ -485,3 +485,26 @@ chosen relative to the transport and the survival predicate.  With radius
 four closed, the first shallow test of this formulation is the five-owner
 collar chart; the live deep test is uniform noncontainment on THM-817's signed
 cell by deep-component incidence.
+
+THM-820 now runs that shallow test far enough to expose the next ramification.
+The five-owner collar chart is uniformly finite at scale one, but it is not a
+single tournament state.  One branch recursively doubles; the other carries
+a four-owner SCC over a fifth anchor.  Reciprocal mass caps the SCC even though
+the same labelled graph persists under unbounded metric rescaling.  The exact
+height-one predecessor `2[11] union {11}` becomes the different-scale AP
+`2[12]` after one more lift, so the shallow chart meets the dilation stratum
+along a literal codimension-one seam.
+
+The base transport here is the commutative erosion action
+
+```text
+E_S -> E_(S union {u})=E_S intersect Safe(u).
+```
+
+This gives “changing open base” an algebraic meaning.  A quotient of interval
+unions is valid only relative to the remaining labelled attachments and only
+when every future erosion has the same emptiness verdict.  The ramified cover
+should therefore be minimized operation by operation; its fibres are
+continuation classes, not merely equal tournament nodes or equal component
+counts.  The unfinished shallow theorem is exact closure of THM-820's two
+finite erosion languages plus the arbitrary-scale five-deck interface.

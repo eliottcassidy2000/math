@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810/815/816/817/820;
   HYP-6820; exact endpoint-splice, component-containment, dynamic-comb, and
   return-cell atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
@@ -133,8 +133,15 @@
   collar four-cycle and `768,735` exact component-containment rows.  THM-816
   closes every arbitrary-height coset packet by a `7,909`-state residual-comb
   recursion plus an independent `132,510`-row endpoint-cell cross-check.  The
-  shallow AP star is therefore closed through radius four; radius five is the
-  first unresolved labelled chart.
+  shallow AP star is therefore closed through radius four.  THM-820 makes the
+  complete scale-one radius-five chart uniformly finite.  A minimal collar
+  cycle gives `x<=388`; either recursive doubling bounds the ordered speeds by
+  `(388,776,1552,3104,6208)`, or the top four form the exceptional
+  `a{1,2,4,8}` SCC and the two reciprocal-mass bounds sharpen it to
+  `x<=228`, `v<=1986`, `max_top<=7944`.  All `792` height-one rows are loose,
+  with unique minimum `2[11] union {11}` at `1/12`; the next odd lift is the
+  doubled AP `2[12]`.  The two finite boxes have not yet been emptied and an
+  arbitrary-scale radius-five deck descent has not been proved.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -164,15 +171,20 @@
   `B_n=506+360360n` has `N_R=3+1440n`, so the current arithmetic gates cannot
   force connected returns or even `o(B)` satellite count.  Work on the
   labelled max-speed-cell/deep-component incidence, not component count alone.
-- **Open shallow theorem:** extend the now-complete AP-centred radius-four
-  closure to radius five.  THM-810/815/816 prove that every proper
-  residue-preserving packet at distance at most four from an AP dilation is
-  loose.  The first target is therefore a five-owner analogue of the collar
-  reduction: classify the possible directed cycles and anchored recursion in
-  the owner-exit/provider-tooth incidence, retaining half-open orientation,
-  speed ratios, and component widths.  Do not assume the runner tournament is
-  the predicate; at radius four its cycle was only a finite-box reduction and
-  the actual closure occurred on strict-safe components.
+- **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
+  the arbitrary-scale radius-five descent.  The collar classification is no
+  longer the missing step: spanning five-cycles have five feasible band types,
+  and one small anchor can support a persistent top-four SCC at unbounded
+  scale.  The proof-facing finite action is
+  `E_S -> E_S intersect Safe(u)` on exact residual interval unions with the
+  remaining labelled speed bank.  Build its minimized continuation automaton
+  or a two-plus-three meet-in-the-middle cover join.  In parallel, audit any
+  proposed compression by its literal kernel pair on the `25,344`
+  height-at-most-two rows and ordered four-coordinate face overlaps.  A runner
+  tournament is telemetry: THM-820's centre-9 and centre-22 cycles have the
+  same labelled live/tie fingerprints but different exact maxima.  Exact
+  centres, ratios, open endpoints, component widths, and the future operation
+  bank must remain until terminal purity is proved.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
