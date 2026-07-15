@@ -338,7 +338,7 @@ capacity then forces both replacement orders to one, hence common scale.  At
 scale one every proper double lift has the sharp floor `M>=2/25`.  Thus the
 entire residue-preserving Hamming-one/two star is uniformly loose.
 
-THM-804 proves the next descent without claiming the missing base theorem.  If
+THM-804 proves the next descent. If
 three labelled coordinates of `c[12]` are replaced and the resulting packet
 is tight, then all three effective orders
 
@@ -348,15 +348,14 @@ D_i=c/gcd(c,w_i)
 
 equal one.  The proof combines the same half-open germ with exact own/complement
 capacities, a two-colour sublemma, and a finite case split on order-two and
-order-at-least-three decks.
-
-THM-806 closes the descended base.  A universal left owner collar and its
-half-open cross-handoff relation force one proper lift into `[14,24]`; the
-settled ten- and eleven-speed LRC bounds then give `v<=381` and `w<=12v` for
-the other two.  Exact component-tooth containment clears all `5,713,539`
-canonical rows (`33,730` eleven-speed cores), with zero tight packets.  Thus
-every proper residue-preserving Hamming-three perturbation of every AP dilation
-is uniformly loose.
+order-at-least-three decks. Hence every arbitrary-scale Hamming-three packet
+descends to a genuine scale-one triple lift. THM-806 closes that base. A
+universal `1/156` owner collar and the exact half-open handoff bands force one
+replacement into `[14,24]`; the settled ten- and eleven-speed bounds plus
+connected two-comb geometry reduce the remaining ordered replacements to
+`v<=262`, `w<=12v`; a larger legacy superset replay rejects all `5,713,539`
+canonical rows. Thus the full residue-preserving Hamming-three AP star is
+uniformly loose.
 
 THM-810 identifies the first live recursion instead of leaving “radius at
 least four” unstructured.  Four-colour oriented capacity forces either all

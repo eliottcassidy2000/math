@@ -972,12 +972,16 @@ still missing.
    Hamming-one star around an AP dilation, and THM-800 closes the full
    Hamming-two star.  Its proof first forces both replacement deck orders to
    one at exact tightness, then gives the sharp normalized floor `2/25`.
-   THM-804 proves the three-replacement common-scale descent and THM-806 closes
-   its normalized base by an exact `5,713,539`-row collar/component sweep.
-   THM-810 then reduces Hamming four to two joined bases: the scale-one chart,
-   and a quartic order-three coset packet with complementary mod-three parity
-   that normalizes to an eight-core/four-exception `s=3` branch. These, followed
-   by higher radii, are open.
+   THM-804 proves the three-replacement common-scale descent by an exact
+   half-open capacity/residue-ratio argument. THM-806 then closes every proper
+   scale-one triple lift: a uniform collar forces one replacement into
+   `[14,24]`, two-comb geometry sharpens the remaining box to `v<=262`,
+   `w<=12v`, and a larger 5,713,539-row superset replay has zero tight rows.
+   Thus radius at least four is the first shallow residual. THM-810 reduces
+   Hamming four to two joined bases: the scale-one chart, and a quartic
+   order-three coset packet with complementary mod-three parity that
+   normalizes to an eight-core/four-exception `s=3` branch. These, followed by
+   higher radii, are open.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

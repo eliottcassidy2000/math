@@ -136,6 +136,12 @@ Multiplying the phase at (9) by `13`, the exact handoff condition is
 -1 < z-2lambda-13m <= 1            for some m in Z.      (12)
 ```
 
+Equivalently, for fixed `m`, the exact half-open ratio band is
+
+```text
+(z-13m-1)/2 <= lambda < (z-13m+1)/2.                    (12a)
+```
+
 Draw an arrow `q -> r` when (12) holds.  If all three replacements exceed
 `24`, tightness and (7)--(10) give positive indegree at every one of the three
 owner vertices.  Such a digraph contains a directed 2- or 3-cycle.
@@ -248,6 +254,67 @@ Since the left side is at most `2/v`,
 v <= 1144/3,                 hence v<=381.              (22)
 ```
 
+### 4.1 A sharp two-comb refinement
+
+The component geometry of the two danger combs improves (22) to
+
+```text
+v<=262.                                                   (22a)
+```
+
+Indeed, let `I` be the safe interval of length `L=1/858`, and let `C` be the
+component of `D_v(delta) union D_w(delta)` containing it. Put
+
+```text
+a=1/(13v),                 b=1/(13w).
+```
+
+A `w`-tooth cannot meet two distinct `v`-teeth: the latter have separating
+gap `11/(13v)`, larger than the full `w`-tooth length `2/(13w)`. Since teeth
+of the same comb are disjoint, `C` contains at most one `v`-tooth, and every
+`w`-tooth in `C` meets it.
+
+If at most one `w`-tooth occurs, including the case with no `v`-tooth, then
+
+```text
+L<=|C|<=2a+2b=(2/13)(1/v+1/w)<4/(13v).                  (22b)
+```
+
+Thus `v<4/(13L)=264`, so `v<=263`. If at least two `w`-teeth meet the
+`v`-tooth, their centres are at distance at most `2(a+b)` but at least `1/w`.
+Hence `w>=11v/2`. Every such `w`-tooth lies in the `v`-tooth enlarged by
+`2b` on either side, giving
+
+```text
+L<=|C|<=2a+4b<=30/(143v),             hence v<=180.      (22c)
+```
+
+It remains to remove `v=263` from the one-tooth case. Inequality (22b) forces
+
+```text
+1/w>=1/132-1/263=131/34716,
+```
+
+so only `w=264,265` are possible. For either coprime pair, the distance
+between intersecting tooth centres is `d/(vw)`, where
+`d<=floor((v+w)/13)=40`. Therefore their union has length at most
+
+```text
+(v+w+520)/(13vw)
+ =349/300872 < 1/858,       w=264,
+ =1048/906035 < 1/858,      w=265.                       (22d)
+```
+
+This contradiction proves (22a). The bound is sharp for two-comb geometry
+alone: for `(v,w)=(262,263)`, the index-40 teeth form
+
+```text
+[519/3419,521/3406],       length 1045/895778>1/858.     (22e)
+```
+
+Thus any further improvement must use more than the existence of one interval
+of length `1/858` covered by two danger combs.
+
 Now adjoin `v`.  The resulting eleven-speed core has maximum speed `v` and,
 by settled eleven-speed LRC, clearance at least `1/12`.  Its `delta`-safe
 interval has length
@@ -263,7 +330,9 @@ fit inside one tooth of length `2/(13w)`, which forces
 1/(78v)<=2/(13w),                 w<=12v.                (24)
 ```
 
-Equations (17), (22), and (24) give a practical exact box.
+Equations (17), (22a), and (24) give the sharpened exact box. The canonical
+replay below deliberately exhausts the larger legacy superset `v<=381`; its
+5,713,539-row certificate therefore remains valid without regeneration.
 
 ## 5. The exact component-containment predicate
 
@@ -310,7 +379,9 @@ The enumeration is canonical.
 2. Choose its unique least replacement `x<=24`; necessarily
    `x=a+13` with `a in R\{12}`.
 3. Assign the other two residue labels to the numerical order `v<w`.
-4. Range over every proper `v<=381` and every proper `v<w<=12v`.
+4. For a stronger superset audit, range over every proper `v<=381` and every
+   proper `v<w<=12v`, even though (22a) reduces the theorem-facing box to
+   `v<=262`.
 
 The guard `x<v` removes exactly the duplicate presentations in which another
 height-one lift should have been the anchor.  An independent arithmetic count

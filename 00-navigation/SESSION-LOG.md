@@ -225,8 +225,9 @@ the surviving frontier substantially more exact without proving LRC(14).
 
 > **Later S10 correction:** the paragraphs immediately below record the
 > intermediate THM-794/795/797 stage. The later THM-800/802/803/804 paragraphs
-> in this same entry supersede their residual wording: shallow radius two is
-> closed, radius three descends to scale one, and the `q=13` residual has the
+> in this same entry supersede their residual wording; THM-806 subsequently
+> closes the descended radius-three base. Thus shallow radius three is closed,
+> and the `q=13` residual has the
 > signed/parity-twisted/anti-grid and exact all-component conditions.
 
 **THM-795 (uniform shallow Hamming-one rigidity).**  Twelve exact core-safe
@@ -664,6 +665,15 @@ component-containment sweep rejects all 5,713,539 canonical rows. Its two
 first-band intervals are half-open `[3,4)` and `[9/2,11/2)`; an endpoint-order
 typo was corrected without changing either contradiction. Consequently the
 full AP-centred Hamming-three star is uniformly loose.
+replay adds 296,640 direct grids and 11,143,660 relaxed capacity rows. It does
+not by itself prove the normalized triple lifts loose. THM-806 now closes that
+base: a `1/156` owner collar and exact half-open handoff graph force one
+replacement into `[14,24]`; connected two-comb geometry sharpens the other
+bounds to `v<=262`, `w<=12v`; and the larger legacy box through `v<=381`
+contains 5,713,539 exact component-containment rows and zero tight packets.
+An independent byte replay passed. The handoff bands are `[3,4)` and
+`[9/2,11/2)`; correcting the reversed endpoint typography does not affect the
+cycle contradictions. Radius at least four is now the first shallow residual.
 
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
@@ -819,11 +829,14 @@ FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/8
 THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
 radius at least four after THM-804 (THM-806 is an audit-in-progress attack;
 THM-810's order-three coset interface is reserved but not yet available as a
+THM-778/779/783/786/788/794/802; Hamming radius at least four after
+THM-795/800/804/806 close all smaller charts
+(THM-810's order-three coset interface is reserved but not yet available as a
 radius-four theorem); and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/807/808/809 plus claimed THM-806 and reserved THM-810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809 plus reserved THM-810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three, affine-packet, anti-grid/component-selector,

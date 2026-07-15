@@ -108,6 +108,7 @@
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
 - **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807;
   HYP-6820; exact endpoint-splice and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -129,6 +130,13 @@
   loose.  THM-810 classifies the first radius-four deck obstruction: common
   scale or four order-three labels on a coset of `<5>`, with the latter
   normalizing to an `s=3` deep packet.
+  the normalized proper double lift has the sharp floor `M>=2/25`. THM-804
+  proves that every tight residue-preserving three-replacement lift has common
+  AP scale, and THM-806 closes the remaining scale-one chart: a collar handoff
+  forces one lift into `[14,24]`, lower-runner bounds and connected two-comb
+  geometry give `v<=262` and `w<=12v`, and a larger legacy replay through
+  `v<=381` rejects all 5,713,539 canonical rows. The first unresolved shallow
+  chart is therefore labelled Hamming radius four.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -190,10 +198,12 @@
   Hamming-two AP star; and THM-804 forces common scale for every tight
   three-replacement lift.  The first unresolved base is the genuine scale-one
   Hamming-three chart, followed by radius at least four.  Build its bipartite
+  Hamming-two AP star; THM-804 forces common scale for every tight
+  three-replacement lift; and THM-806 proves the normalized triple chart
+  empty. The first unresolved base is radius four. Build its bipartite
   sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
   defect, a normalized floor, or a new descent tied to a decreasing invariant.
-  Audit THM-806's proposed bounds before using its finite box; it is claimed,
-  not proved. THM-810 separately reserves a four-replacement scalar
+  THM-810 reserves a four-replacement scalar
   classification: either all deck orders are one or every order is three and
   the labels form a coset of `<5>={1,5,8,12}`. Its proof and replay are still
   being transcribed, so the radius-four branch remains open.
