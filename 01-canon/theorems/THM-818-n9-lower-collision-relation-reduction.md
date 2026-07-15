@@ -174,11 +174,16 @@ S2 mixed radix                               22 bits
 total                                        98 bits.
 ```
 
-The raw `S2` radix is
+On canonical apex-zero representatives, the raw `S2` radix is
 
 ```text
-4^2 * 10^2 * 20^2 * 5 = 3,200,000 < 2^22.                 (5)
+4^2 * 10^2 * 20^2 * 4 = 2,560,000 < 2^22.                 (5)
 ```
+
+The last factor is four, not five: the fixed layer has four positions but
+the apex bit is already fixed to zero, so its one-count ranges only from zero
+through three.  The earlier `*5=3,200,000` preflight was a safe unoriented
+upper bound; it was not the exact canonical radix.
 
 More importantly, `n=9` is the last size at which adjoining the first
 positional moment to every `S2` state is unconditionally literal-exact.

@@ -17,7 +17,7 @@ MEMORY PREFLIGHT
 
 N=9 LOWER KEY
   bits node/UABC/S2/total=72/4/22/98
-  S2 radix product=3200000 (<2^22)
+  S2 radix product=2560000 (<2^22; canonical apex-zero fixed radix=4)
 
 TOURNAMENT ANALYSIS (join representations as vertices)
   vertices=('fibre_count_table', 'packed_relation_rows', 'two_projection_indexes', 'three_projection_indexes')

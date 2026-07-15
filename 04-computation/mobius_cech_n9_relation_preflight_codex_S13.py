@@ -107,7 +107,7 @@ def audit(legacy: Path) -> dict:
             "UABC": 4,
             "S2": 22,
             "total": 98,
-            "S2_radix_product": 3_200_000,
+            "S2_radix_product": 2_560_000,
         },
         "exact_reduction": "ordered equal-face-H8 pairs are role-specific overlap-compatible triangles in R8^3; lower-codec collisions then require the non-diagonal, both-apex-zero, upper-UABC, and full-S2 filters",
         "tournament_analysis": {
