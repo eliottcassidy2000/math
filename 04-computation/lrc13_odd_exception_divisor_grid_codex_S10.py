@@ -486,7 +486,8 @@ def main() -> None:
     )
     print(f"q13_inversion={inverse}")
     print(
-        "q13_corollary: exactly one 13-divisible exception forces "
+        "q13_corollary: E_U subset H minus R_U with exactly one "
+        "13-divisible exception forces "
         "C\\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C"
     )
     print()

@@ -4,7 +4,7 @@ equivalence: lifted eligibility+opposite nearest parity <=> balanced residues in
 divisor_specialization_tests=143346 PASS; q|x accepts exactly odd nonzero y-residues in |s|<=floor(2q/13), and accepts none when q|y
 q13_folded_support: subset/y_assertions=832 off_divisor_containment_profiles=24 double_divisor_containment_profiles=1 PASS
 q13_inversion={1: 1, 2: 6, 3: 4, 4: 3, 5: 5, 6: 2}
-q13_corollary: exactly one 13-divisible exception forces C\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C
+q13_corollary: E_U subset H minus R_U with exactly one 13-divisible exception forces C\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C
 
 sharp_survivor_U=(1, 2, 3, 4, 7, 9, 10, 11, 12, 16)
 primitive=True divisor_complete_2_12=True no_13_multiple=True B=16 M(U)=2/13 maximizers=(Fraction(5, 13), Fraction(8, 13))
