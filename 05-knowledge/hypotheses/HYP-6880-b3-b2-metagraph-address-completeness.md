@@ -1,10 +1,10 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839
+status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839; exact gap-tournament and half-defect carrier proved by THM-830
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-832, THM-833, THM-834, THM-838, THM-839, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-841, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -99,6 +99,39 @@ injective because it retains more face position; a fixed-layer first moment
 also repairs all sixteen.  Therefore any recursive minimization of
 `Omega+B2` must keep positional data precisely when a layer ceases to be
 reconstructible from its count.
+
+## Exact carrier supplied by THM-830
+
+THM-830 identifies the object on which a recursive minimization should now be
+performed.  A size-`n` tiling is exactly a labelled tournament on the `n-1`
+path gaps.  The `B` face is its cut/window tournament and the discarded
+adjacent arcs are a literal seam word.  More globally, if `C_n` is the
+half-coordinate cube with fixed-boundary trace, then
+
+```text
+X_n ~= C_n x_trace C_n.
+```
+
+Writing a tiling as common boundary `z`, first half `u`, and additive defect
+`delta`, the merged-node label
+
+```text
+c_n(z,u,delta)=pi_n(u,u+delta,z)
+```
+
+determines the full node/tiling/edge tensor.  Blue is `delta=0`; every nonzero
+`delta` is black and is itself a size-`n-1` blue word.  Thus `S2` is a population
+shadow of a literal defect word, while `B3` is a face shadow of a literal gap
+tournament.  The next minimizer should refine or disintegrate this tensor,
+not search for an unrelated tuple of scalars.
+
+The preservation boundary is already exact.  Total weighted deletion roles
+collide at `n=5`; even deck totals plus `C3` collide between distinct score
+spectra at `n=6`.  Conversely, on the whole one-flip shell the address
+`(gap,|mirror depth|)` is a complete merged-node and reflection-orbit line
+codec.  THM-814's sixteen fixed-layer collisions are separated by the gap
+component of this weighted deck.  Therefore literal root positions, kernel
+rows, or an equivalent action on `c_n` remain necessary beyond radius one.
 
 ## Exact completion and minimization target
 
@@ -228,8 +261,9 @@ target layers `tau=5,7`.  This replaces the vague transport target by a
 finite one: classify the semigroup action of CF words on the decorated
 four-bit stalk and its endpoint coupling, not just on a node or S2 vector.
 
-Assumption challenge: the useful third face is not induced deletion of a
-tournament vertex.  Its vertices are gap-contracted interval roots.  It
-preserves a valid lower tournament tiling but destroys literal induced-
-subtournament ancestry; that loss must be stated whenever the face is pushed
-to merged nodes.
+Assumption challenge: the useful third face is not induced deletion of an
+original tournament vertex.  THM-830 proves that it is an honest tournament
+on path gaps/cuts, with adjacent seams retained separately.  It preserves the
+gap tournament and exact face-overlap ownership but destroys literal induced-
+subtournament ancestry in the original marked tournament; that loss must be
+stated whenever the face is pushed to merged nodes.

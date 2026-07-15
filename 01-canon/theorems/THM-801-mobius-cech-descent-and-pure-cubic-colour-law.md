@@ -58,6 +58,14 @@ The new face `B` contracts the interval-root gap coordinate.  It is a valid
 lower staircase tiling, but it is not induced deletion of a fixed tournament
 vertex.
 
+THM-830 subsequently gives the intrinsic tournament object behind this
+distinction.  The coordinate shift `G_(i,j)=t_(i+1,j)` identifies `X_n` with
+the full labelled tournament cube on the `n-1` path gaps.  In those
+coordinates `B(G)_(p,q)=G_(p+1,q)` is the cut/window tournament; its omitted
+adjacent arcs are exactly the shortcut seam bits created by internal path-
+vertex deletion.  Thus `B` is an honest tournament operation, just not an
+induced subtournament of the original marked tournament.
+
 The three face sets cover every tile.  Their pairwise intersections are three
 copies of the size-`n-2` staircase and their triple intersection is the
 size-`n-3` staircase.  Therefore
@@ -508,6 +516,13 @@ equivalent action on the stalk.
   overlap and `D` a corner of equal scalar size.  The colour-event assignment
   `A=low`, `B=high`, `D=upper` realizes its `++-+--+` sign word through (6.4),
   but is a chart isomorphism, not an identification of the geometric slots.
+
+THM-830 further proves that the corrected half charts are invariant-ring
+monomial covers.  Reflection invariants are
+`Q[X,Y,Z]^(X<->Y)=Q[X+Y,XY,Z]`, with generator degrees `1,2,1`.  At even
+output degree the two degree-one generators cover; at odd degree the pure
+power of `XY` is the missing third corner.  The equal-size `C,D` slots are
+therefore distinct ideals, not terms that may be cancelled before transport.
 
 The assumption challenged here is that recursive tournament vertices must be
 literal vertices or arcs.  Useful vertices include interval faces, gap-

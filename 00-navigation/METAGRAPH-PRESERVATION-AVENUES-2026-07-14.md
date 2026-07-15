@@ -79,6 +79,12 @@ certificate clauses, and proof obligations.
 - **Deliverable:** recursive address tower `G_n -> multiset(G_{n-1})` with
   invariance tests and first nontrivial ancestry twins.
 
+- **Delivered marked-path card by THM-830:** internal deletion is exactly a
+  repaired lower tiling `c_j` plus shortcut seam bit `s_j`; these pairs recover
+  the induced ordered cards.  Their crossing-window restrictions Cech-glue to
+  the middle gap face.  The remaining pull is disintegration by automorphism
+  orbits and comparison of the full all-vertex deck with node continuation.
+
 ### MPA-05 — Half-tiling recursion without the false dyadic tower
 
 - **Delivered algebra:** THM-796 identifies lines with the quotient code
@@ -94,6 +100,13 @@ certificate clauses, and proof obligations.
   second complement action after restriction.
 - **Deliverable:** a corrected recursive address or a proof that recursion
   needs a different mirror/gauge.
+
+- **Delivered corrected recursion by THM-830:** if `C_n` is the half-coordinate
+  cube and `tr` its fixed-boundary trace, then
+  `X_n ~= C_n x_tr C_n`.  Reflection swaps the factors; blue is the diagonal;
+  the additive defect is literally a size-`n-1` blue word.  This gives exact
+  line counts, the full defect distribution, and a pair-groupoid model rather
+  than a repeated quotient.
 
 ### MPA-06 — Fibre size from reversible metagraph dynamics
 
@@ -702,9 +715,16 @@ certificate clauses, and proof obligations.
   lower tournament tiling but not induced deletion of one vertex.  Its support
   row resolves five of the eight `n=7` endpoint-face support twins, while its
   primitive row is weaker than endpoint deletion.
-- **Pull:** characterize `d_B` as an operation on a tournament with a marked
-  Hamiltonian path—path-edge contraction, interval-root shortening, or a
-  functor in a path-minor category—and state exactly how automorphisms act.
+- **Delivered by THM-830:** the coordinate shift
+  `G_(i,j)=t_(i+1,j)` is a cube bijection from size-`n` fixed-path tilings to
+  labelled tournaments on the `n-1` path gaps.  In this model `A,C` are
+  principal endpoint deletions and `B(G)_(p,q)=G_(p+1,q)` is the cut/window
+  tournament.  Its discarded adjacent arcs are exactly the internal-deletion
+  seam word.  Every composite `A^alpha B^beta C^gamma` has one coordinate
+  formula, and `B^r` peels the arc-span words recursively.
+- **Pull:** disintegrate the resulting gap-class map by upper merged nodes and
+  automorphism/anti-automorphism stabilizers; test the hidden `S_3` endpoint/
+  gap triality as a new node classifier.
 - **Must preserve:** marked path positions and interval-root ownership; an
   unmarked tournament node is insufficient.
 - **Deliverable:** an intrinsic path-category definition and the induced
@@ -820,6 +840,27 @@ certificate clauses, and proof obligations.
 - **Deliverable:** an exact modular-CF action table at `q=13`, followed by a
   proof or smallest refuter for descent to `Q x root`; keep the LRC metric
   predicate as a separate stalk until a preservation lemma is proved.
+
+### MPA-41 — Close the half-pair groupoid under node labels
+
+- **Delivered carrier by THM-830:** for common boundary `z`, half interior
+  `u`, and defect `d`, the master label
+  `c_n(z,u,d)=pi_n(u,u+d,z)` determines tilings, merged-node fibres, loops,
+  exact-defect blue/black edges, and reflection orbits.  Raw groupoid
+  composition adds defects.  THM-818's kernel-pair relation is the equality-
+  witness layer needed after the nonlinear node projection.
+- **Pull:** refine `c_n` until the disintegrated label products have constant
+  composition/intersection numbers, or exhibit the first obstruction to any
+  feasible coherent configuration.  Separately compute the three `S_3`
+  address-transposition transport kernels; only the endpoint swap is true
+  converse, so the other two measure endpoint/cut duality failure.
+- **Must preserve:** common boundary, both half endpoints, full defect word,
+  complement endpoint phase, line multiplicity, loops, and literal lower
+  equality witnesses.  Binary colour and additive deck totals are proven
+  insufficient.
+- **Deliverable:** a bounded `n<=8` structure-constant tensor and its minimal
+  stable refinement, then an action test under the THM-813 continued-fraction
+  embeddings.  LRC metric fields remain an external stalk.
 
 ## Recommended next three pulls
 

@@ -22,8 +22,9 @@ Tournament Analysis uses radius-one merged node addresses (gap, mirror depth)
 as vertices.  The pair observable is lexicographic comparison, with either
 cyclic depth or mirror depth chosen as the first gauge.  Ties use the other
 coordinate, producing the displayed Hamiltonian paths.  These quotients
-preserve one-flip C3, H, converse sheet, and line colour; they destroy all
-multi-flip packet interactions and therefore do not preserve LRC loneliness.
+preserve one-flip C3, H, absolute mirror depth, and line colour; they destroy
+the signed converse sheet and all multi-flip packet interactions, and
+therefore do not preserve LRC loneliness.
 """
 
 from __future__ import annotations
@@ -34,6 +35,7 @@ import json
 import math
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from fractions import Fraction
 from functools import lru_cache
 
 
@@ -170,6 +172,16 @@ def u_window(n: int, deleted: int) -> set[tuple[int, int]]:
     }
 
 
+def composite_face_support(n: int, alpha: int, beta: int, gamma: int) -> set[tuple[int, int]]:
+    """Source gap-tournament arcs retained by A^alpha B^beta C^gamma."""
+    size = n - 1 - alpha - beta - gamma
+    return {
+        (p + beta + gamma, q + gamma)
+        for p in range(2, size + 1)
+        for q in range(1, p)
+    }
+
+
 @lru_cache(maxsize=None)
 def half_keys(n: int) -> tuple[tuple[int, int], ...]:
     return tuple(sorted((root.g, root.d) for root in roots(n) if root.d >= 0))
@@ -284,6 +296,45 @@ def merged_score_signature(mask: int, n: int) -> tuple[int, ...]:
     return min(scores, converse)
 
 
+def deck_vector(mask: int, n: int) -> tuple[int, int, int, int]:
+    values = [0, 0, 0, 0]
+    for bit, root in enumerate(roots(n)):
+        if not ((mask >> bit) & 1):
+            continue
+        values[0] += root.x
+        values[2] += root.y
+        if root.g >= 2:
+            values[1] += root.g
+        else:
+            values[3] += 1
+    return tuple(values)  # type: ignore[return-value]
+
+
+def mask_from_tiles(n: int, tiles: tuple[tuple[int, int], ...]) -> int:
+    index = root_index(n)
+    return sum(1 << index[tile] for tile in tiles)
+
+
+def packet_eta(left: Root, right: Root) -> int:
+    if left.a == right.a or left.b == right.b:
+        return -1
+    if left.a == right.b or right.a == left.b:
+        return 1
+    return 0
+
+
+def c3_quadratic(mask: int, n: int) -> int:
+    cells = roots(n)
+    value = sum(root.g * ((mask >> bit) & 1) for bit, root in enumerate(cells))
+    for left in range(len(cells)):
+        if not ((mask >> left) & 1):
+            continue
+        for right in range(left):
+            if (mask >> right) & 1:
+                value += packet_eta(cells[left], cells[right])
+    return value
+
+
 def arbitrary_tournament_c3(mask: int, n: int, vertices: tuple[int, ...] | None = None) -> int:
     if vertices is None:
         vertices = tuple(range(n))
@@ -322,7 +373,7 @@ def add_counters(*parts: Counter[tuple[int, int]]) -> Counter[tuple[int, int]]:
     result: Counter[tuple[int, int]] = Counter()
     for part in parts:
         result.update(part)
-    return +result
+    return Counter({key: value for key, value in result.items() if value != 0})
 
 
 def root_spectrum(n: int, half: bool = False) -> Counter[tuple[int, int]]:
@@ -345,6 +396,53 @@ def ta_fingerprint(n: int) -> dict[str, object]:
     by_depth = sorted(vertices, key=lambda item: (item[1], item[0]))
     position_gap = {vertex: index for index, vertex in enumerate(by_gap)}
     position_depth = {vertex: index for index, vertex in enumerate(by_depth)}
+
+    def order_fingerprint(order: list[tuple[int, int]]) -> dict[str, object]:
+        position = {vertex: index for index, vertex in enumerate(order)}
+
+        def beats(left: tuple[int, int], right: tuple[int, int]) -> bool:
+            return position[left] < position[right]
+
+        scores = Counter(
+            sum(beats(vertex, other) for other in order if other != vertex)
+            for vertex in order
+        )
+        triangles = sum(
+            (beats(a, b) and beats(b, c) and beats(c, a))
+            or (beats(a, c) and beats(c, b) and beats(b, a))
+            for a, b, c in itertools.combinations(order, 3)
+        )
+        reach = [[beats(left, right) for right in order] for left in order]
+        for index in range(len(order)):
+            reach[index][index] = True
+        for pivot in range(len(order)):
+            for left in range(len(order)):
+                if reach[left][pivot]:
+                    reach[left] = [
+                        old or reach[pivot][right]
+                        for right, old in enumerate(reach[left])
+                    ]
+        unseen = set(range(len(order)))
+        scc_sizes = []
+        while unseen:
+            seed = next(iter(unseen))
+            component = {other for other in unseen if reach[seed][other] and reach[other][seed]}
+            scc_sizes.append(len(component))
+            unseen -= component
+        assert all(beats(order[index], order[index + 1]) for index in range(len(order) - 1))
+        assert scores == Counter({score: 1 for score in range(len(order))})
+        assert triangles == 0
+        assert scc_sizes == [1] * len(order)
+        return {
+            "score_histogram": {str(score): count for score, count in sorted(scores.items())},
+            "directed_triangles": triangles,
+            "scc_sizes": scc_sizes,
+            "hamiltonian_path_count": 1,
+        }
+
+    gap_fingerprint = order_fingerprint(by_gap)
+    depth_fingerprint = order_fingerprint(by_depth)
+    assert gap_fingerprint == depth_fingerprint
     flips = sum(
         (position_gap[u] < position_gap[v]) != (position_depth[u] < position_depth[v])
         for u, v in itertools.combinations(vertices, 2)
@@ -352,10 +450,7 @@ def ta_fingerprint(n: int) -> dict[str, object]:
     size = len(vertices)
     return {
         "vertices": size,
-        "score_histogram": {str(score): 1 for score in range(size)},
-        "directed_triangles": 0,
-        "scc_sizes": [1] * size,
-        "hamiltonian_path_count": 1,
+        **gap_fingerprint,
         "gap_first_path": by_gap,
         "depth_first_path": by_depth,
         "edge_flips": flips,
@@ -370,6 +465,19 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
     assert all(reflection(root, n) in root_index(n) for root in cells)
     assert len(gap_pairs(n)) == m(n)
     assert {(root.a - 1, root.b) for root in cells} == set(gap_pairs(n))
+
+    face_a = composite_face_support(n, 1, 0, 0)
+    face_b = composite_face_support(n, 0, 1, 0)
+    face_c = composite_face_support(n, 0, 0, 1)
+    assert face_a | face_b | face_c == set(gap_pairs(n))
+    assert face_a & face_b == composite_face_support(n, 1, 1, 0)
+    assert face_a & face_c == composite_face_support(n, 1, 0, 1)
+    assert face_b & face_c == composite_face_support(n, 0, 1, 1)
+    assert face_a & face_b & face_c == composite_face_support(n, 1, 1, 1)
+    for depth in range(0, n - 2):
+        support = composite_face_support(n, 0, depth, 0)
+        assert len(support) == math.comb(n - 1 - depth, 2)
+        assert len(support) + sum(n - 1 - layer for layer in range(1, depth + 1)) == m(n)
 
     strata = Counter(face_word(root) for root in cells)
     expected_strata = Counter(
@@ -431,6 +539,24 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
     assert m(n) == half_cells(n) + half_cells(n - 1)
     assert fixed_cells(n) == half_cells(n) - half_cells(n - 1)
 
+    line_count = 2 ** (m(n) - 1)
+    blue_count = 2 ** (half_cells(n) - 1)
+    black_count = line_count - blue_count
+    lower_line_count = 2 ** (m(n - 1) - 1) if n > 4 else 1
+    lower_blue_count = 2 ** (half_cells(n - 1) - 1) if n > 4 else 1
+    lower_black_count = lower_line_count - lower_blue_count
+    bb = 2 ** fixed_cells(n) * lower_blue_count
+    bk = 0
+    kb = (2 ** (n - 2) - 2 ** fixed_cells(n)) * lower_blue_count
+    kk = 2 ** (n - 2) * lower_black_count
+    assert (bb, bk) == (blue_count, 0)
+    assert bb + kb + kk == line_count
+    assert kb + kk == black_count
+    assert sum(
+        2 ** ((n - 2 + 1) // 2) * math.comb((n - 2) // 2, defect)
+        for defect in range((n - 2) // 2 + 1)
+    ) == 2 ** (n - 2)
+
     spectrum = root_spectrum(n)
     if n >= 6:
         recurrence = add_counters(
@@ -443,6 +569,26 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
             shift(root_spectrum(n - 3), 1, 0),
         )
         assert spectrum == recurrence
+
+    half_spectrum = root_spectrum(n, half=True)
+    if n % 2 == 0:
+        even_recurrence = add_counters(
+            shift(root_spectrum(n - 1, half=True), 1, 0),
+            shift(root_spectrum(n - 1, half=True), 0, 1),
+            shift(root_spectrum(n - 2, half=True), 1, 1, -1),
+        )
+        assert half_spectrum == even_recurrence
+    elif n >= 7:
+        odd_recurrence = add_counters(
+            shift(root_spectrum(n - 1, half=True), 1, 0),
+            shift(root_spectrum(n - 1, half=True), 0, 1),
+            root_spectrum(n - 2, half=True),
+            shift(root_spectrum(n - 2, half=True), 1, 1, -1),
+            shift(root_spectrum(n - 3, half=True), 1, 0, -1),
+            shift(root_spectrum(n - 3, half=True), 0, 1, -1),
+            shift(root_spectrum(n - 4, half=True), 1, 1),
+        )
+        assert half_spectrum == odd_recurrence
 
     score_cells: dict[tuple[int, ...], list[Root]] = defaultdict(list)
     merged_cells: dict[tuple[int, ...], list[Root]] = defaultdict(list)
@@ -462,9 +608,26 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
         for fibre in merged_cells.values()
     )
 
+    packet_counts = Counter()
+    for left, root in enumerate(cells):
+        row_sum = 0
+        for right, other in enumerate(cells):
+            if left == right:
+                continue
+            row_sum += packet_eta(root, other)
+            if left > right:
+                packet_counts[packet_eta(root, other)] += 1
+        boundary_weight = int(root.b == 1) + int(root.a == n)
+        assert row_sum == boundary_weight - 2 * root.g
+    assert packet_counts[-1] == 2 * math.comb(n - 1, 3)
+    assert packet_counts[1] == math.comb(n - 2, 3)
+
     checked_masks = 0
     if exhaustive:
         all_mask = (1 << m(n)) - 1
+        c3_values = []
+        line_steps = []
+        line_midpoints = []
         for mask in range(1 << m(n)):
             checked_masks += 1
             assert gap_mask(mask, n) == mask
@@ -495,6 +658,29 @@ def verify_size(n: int, exhaustive: bool) -> dict[str, object]:
             cx, cd = normal_form(mask ^ all_mask, n)
             assert cx == x_word ^ ((1 << half_cells(n)) - 1)
             assert cd == defect
+
+            direct_c3 = c3(mask, n)
+            complement_c3 = c3(mask ^ all_mask, n)
+            assert c3_quadratic(mask, n) == direct_c3
+            boundary_sum = sum(
+                ((mask >> bit) & 1) * (int(root.b == 1) + int(root.a == n))
+                for bit, root in enumerate(cells)
+            )
+            assert complement_c3 - direct_c3 == n - 2 - boundary_sum
+            c3_values.append(direct_c3)
+            if mask < (mask ^ all_mask):
+                line_steps.append(complement_c3 - direct_c3)
+                line_midpoints.append(Fraction(complement_c3 + direct_c3, 2))
+
+        count = len(c3_values)
+        mean = Fraction(sum(c3_values), count)
+        variance = sum((Fraction(value) - mean) ** 2 for value in c3_values) / count
+        assert variance == Fraction(n**3 - 7 * n**2 + 20 * n - 16, 32)
+        step_second_moment = Fraction(sum(step * step for step in line_steps), len(line_steps))
+        assert step_second_moment == Fraction(n - 1, 2)
+        midpoint_mean = sum(line_midpoints) / len(line_midpoints)
+        midpoint_variance = sum((value - midpoint_mean) ** 2 for value in line_midpoints) / len(line_midpoints)
+        assert midpoint_variance == Fraction((n - 3) * (n - 2) ** 2, 32)
 
     return {
         "n": n,
@@ -550,6 +736,43 @@ def verify_anchored_sieve() -> dict[str, object]:
             "direct_minus_sieve": dict(histogram),
         }
     return result
+
+
+def verify_preservation_boundaries() -> dict[str, object]:
+    examples = [
+        (
+            5,
+            ((4, 2), (5, 2)),
+            ((4, 1), (5, 3)),
+            (1, 2, 2, 1),
+            (2, 3),
+        ),
+        (
+            6,
+            ((6, 2), (5, 3)),
+            ((6, 4), (5, 1)),
+            (1, 3, 3, 1),
+            (4, 4),
+        ),
+    ]
+    result = []
+    for n, left_tiles, right_tiles, expected_deck, expected_c3 in examples:
+        left = mask_from_tiles(n, left_tiles)
+        right = mask_from_tiles(n, right_tiles)
+        assert deck_vector(left, n) == deck_vector(right, n) == expected_deck
+        assert (c3(left, n), c3(right, n)) == expected_c3
+        result.append(
+            {
+                "n": n,
+                "left_tiles": left_tiles,
+                "right_tiles": right_tiles,
+                "deck": expected_deck,
+                "c3": expected_c3,
+                "score_signatures": (score_signature(left, n), score_signature(right, n)),
+            }
+        )
+    assert result[1]["score_signatures"][0] != result[1]["score_signatures"][1]
+    return {"examples": result}
 
 
 def n14_shell_table() -> list[dict[str, int]]:
@@ -621,13 +844,14 @@ def run(max_n: int, exhaustive_n: int) -> dict[str, object]:
             "pairwise_observable": "lexicographic comparison",
             "gauges": ["gap first", "mirror depth first"],
             "tie_hamiltonian_path": "the corresponding lexicographic order",
-            "preserves": ["one-flip C3", "one-flip H", "converse sheet", "blue/black packet"],
-            "destroys": ["multi-flip packet interactions", "general node fibre", "LRC metric loneliness"],
+            "preserves": ["one-flip C3", "one-flip H", "absolute mirror depth", "blue/black packet"],
+            "destroys": ["signed converse sheet", "multi-flip packet interactions", "general node fibre", "LRC metric loneliness"],
             "challenged_assumption": "tournament vertices need not be original runners or arcs; path gaps and information carriers work",
         },
         "size_reports": reports,
         "recurrence": recurrence,
         "anchored_c3_sieve": verify_anchored_sieve(),
+        "preservation_boundaries": verify_preservation_boundaries(),
         "tournament_analysis": ta,
         "n14": n14,
     }
@@ -678,6 +902,8 @@ def print_report(report: dict[str, object]) -> None:
 
 
 def main() -> None:
+    if not __debug__:
+        raise RuntimeError("this exact audit requires Python assertions; do not run with -O")
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-n", type=int, default=14)
     parser.add_argument("--exhaustive-n", type=int, default=7)

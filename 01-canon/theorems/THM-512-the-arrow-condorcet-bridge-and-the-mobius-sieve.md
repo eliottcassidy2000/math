@@ -1,7 +1,7 @@
 ---
 id: THM-512
 title: The Arrow–Condorcet bridge (the tiling cube IS the social-choice cube; transitive = rational/dictator, 3-cycle = Condorcet paradox = the OCF obstruction; c3 = the Guilbaud quadratic) + the Möbius vertex-deletion sieve (A+B+C−D−E−F+G)
-status: PROVED/VERIFIED + ADVERSARIALLY CHECKED (two external sign typos fixed: Kalai P_rational=¾−¾Stab_{-1/3}; Guilbaud=¾+¾(2/π)arcsin(1/3)≈0.9123; n=4 sieve overshoot characterized; all internal identities reconfirmed over ALL tournaments n≤6). The Arrow/Condorcet identifications are exact (Kalai 2002 Adv.Appl.Math 29:412; Mossel 2009/Keller 2010; FKN 2002 external; the project-side identities Var(c3)=3C(m,3)/16, P_transitive=m!/2^{C(m,2)}, c3 ⊂ Walsh-level-2 verified m≤7); the Möbius sieve Σ(-1)^{|A|+1}φ(T-A)=φ(T) verified n≤6 (n=4 edge case noted). Builds on THM-511.
+status: PROVED/VERIFIED + ADVERSARIALLY CHECKED (two external sign typos fixed: Kalai P_rational=¾−¾Stab_{-1/3}; Guilbaud=¾+¾(2/π)arcsin(1/3)≈0.9123; n=4 sieve undershoot corrected by THM-830; all internal identities reconfirmed over ALL tournaments n≤6). The Arrow/Condorcet identifications are exact (Kalai 2002 Adv.Appl.Math 29:412; Mossel 2009/Keller 2010; FKN 2002 external; the project-side identities Var(c3)=3C(m,3)/16, P_transitive=m!/2^{C(m,2)}, c3 ⊂ Walsh-level-2 verified m≤7); the Möbius sieve Σ(-1)^{|A|+1}φ(T-A)=φ(T) verified n≤6 (n=4 edge case corrected below). Builds on THM-511.
 source: mac-mini-2026-06-15-S3
 depends_on:
   - THM-511   # converse-parity = Fourier-level-parity = ranking(level-1)/cyclic(even) split = FKN dictator hierarchy
@@ -63,10 +63,25 @@ For an additive sub-structure invariant φ (e.g. c3 = #directed triangles), anch
 vertex and sieving over the other n−1:
 
 > **Σ_{∅≠A ⊆ [n−1]} (−1)^{|A|+1} φ(T−A) = φ(T)** for n ≥ 5 (verified over ALL
-> tournaments at n=5,6). At n=4 the sieve OVERSHOOTS by exactly the indicator
-> [the all-deletable triple {1,2,3} is cyclic]: sieve = c3(T) + [deletable-triple
-> cyclic] ∈ {c3, c3+1} (residual +1 on exactly 16/64 tournaments) — the lone triangle
-> using all n−1=3 deletable vertices, which the c≥4 codim terms cannot reach.
+> tournaments at n=5,6). At n=4 the sieve UNDERSHOOTS by exactly the indicator
+> [the all-deletable triple {1,2,3} is cyclic]: sieve = c3(T) - [deletable-triple
+> cyclic] ∈ {c3, c3-1} (residual 1 on exactly 16/64 tournaments) — the lone triangle
+> using all n−1=3 deletable vertices has zero inclusion-exclusion coefficient.
+
+More generally, if `phi(T)=sum_R w_T(R)` is support-additive with
+deletion-compatible weights
+`w_(T-A)(R)=w_T(R)` whenever `R` is disjoint from `A`, and
+`U=V\{anchor}`, then the exact identity is
+
+```text
+sum_(empty!=A subset U)(-1)^(|A|+1) phi(T-A)
+  =phi(T)-sum_(R:U subset R) w_T(R).
+```
+
+A support `R` has coefficient one precisely when `U\R` is nonempty, and
+coefficient zero otherwise.  This is the convention-independent proof of the
+corrected sign.  THM-830 replays all 64 cases at `n=4` and all 1,024 cases at
+`n=5`.
 
 The codim-c terms number **C(n−1,c)** with sign **(−1)^{c+1}**, and
 Σ_c (−1)^{c+1} C(n−1,c) = 1 — the inclusion–exclusion / Möbius function of the Boolean

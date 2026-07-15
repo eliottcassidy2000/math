@@ -1,6 +1,6 @@
 THM-830 GAP-TOURNAMENT / DELETION-DECK EXACT AUDIT
 ====================================================================
-method: {"alternate_vertices": "radius-one merged node addresses (gap, mirror depth)", "challenged_assumption": "tournament vertices need not be original runners or arcs; path gaps and information carriers work", "destroys": ["multi-flip packet interactions", "general node fibre", "LRC metric loneliness"], "gauges": ["gap first", "mirror depth first"], "pairwise_observable": "lexicographic comparison", "preserves": ["one-flip C3", "one-flip H", "converse sheet", "blue/black packet"], "tie_hamiltonian_path": "the corresponding lexicographic order"}
+method: {"alternate_vertices": "radius-one merged node addresses (gap, mirror depth)", "challenged_assumption": "tournament vertices need not be original runners or arcs; path gaps and information carriers work", "destroys": ["signed converse sheet", "multi-flip packet interactions", "general node fibre", "LRC metric loneliness"], "gauges": ["gap first", "mirror depth first"], "pairwise_observable": "lexicographic comparison", "preserves": ["one-flip C3", "one-flip H", "absolute mirror depth", "blue/black packet"], "tie_hamiltonian_path": "the corresponding lexicographic order"}
 
 size ledger
 n= 4 m=  3 h=  2 f= 1 rank(deck F2)= 3 root-nodes=  2 root B/K= 1/  2 checked=8

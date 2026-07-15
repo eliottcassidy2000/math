@@ -63895,9 +63895,9 @@ lane: the new Farey-profile file gives the complete piecewise-linear measure
 of `{t:min_(1<=j<=k)||jt||>=lambda}` by disjoint consecutive-Farey gap atoms.
 That clean scalarization explains why interval cores are tractable, but it
 does not transfer to the overlapping multi-scale bodies that remain here.
-Its `THM-826` identifier currently collides with the independently pushed B3
-deletion-deck theorem, so this session records the mathematical connection
-without using that identifier in the LRC14 dependency chain.
+Its `THM-826` identifier initially collided with the independently reserved
+B3 deletion-deck theorem.  The B3 project moved to THM-830 on the next live
+pull, leaving the Farey profile as THM-826 and removing that collision.
 
 Final fresh replay validation was byte-identical to every stored certificate.
 The SHA-256 matrix is:
@@ -63932,3 +63932,88 @@ collision. Throughout this LRC record, THM-810 means
 `THM-810-four-replacement-order-three-coset-interface.md`, first pushed in
 commit `8dfb0ed8926`; the later wiggly-dictionary file is not an LRC dependency
 and needs namespace repair in its own lane.
+
+## 2026-07-14 - codex-S14: gap-tournament and deletion-deck synthesis
+
+This session re-audited the three historical recursions
+
+```text
+A+B+C-D-E-F+G,
+A+B-C,
+A+B-C+D-E-F+G
+```
+
+across the full tiling, half-tiling, line, node, and tournament carriers.  The
+main result is THM-830.  Its coordinate shift
+
+```text
+G_(i,j)=t_(i+1,j)
+```
+
+identifies a fixed-path size-`n` tiling with an arbitrary labelled tournament
+on the `n-1` path gaps.  In this model the endpoint faces are principal
+deletions and the middle face is the cut/window tournament
+`B(G)_(p,q)=G_(p+1,q)`.  The adjacent arcs it discards are exactly the seam
+bits created by internal path-vertex deletion.  Repaired internal cards agree
+with `B` on crossing windows and Cech-glue uniquely.
+
+The tile addresses are the weak-composition simplex
+
+```text
+(x,y,z)=(n-a,b-1,a-b-2),       x+y+z=n-3.
+```
+
+Face membership is positivity of `x,y,z`, so the full seven-term word is the
+complete-homogeneous polynomial recurrence, not merely a count.  Reflection
+swaps `x,y`.  Its invariant ring is `Q[x+y,xy,z]` with generator degrees
+`1,2,1`; even degree has the exact two-generator `A+B-C` cover, while odd
+degree needs the pure `xy` corner and the full seven slots.  The equal-size
+`C,D` terms are different ideals.
+
+Actual deletion forces a seam correction.  For gap
+`g=a-b-1`, the mutable role vector is
+
+```text
+J_A=n-a, J_C=b-1, J_B=g 1[g>=2], J_S=1[g=1],
+J_A+J_B+J_C+J_S=n-2.
+```
+
+The mirror current is `d=J_A-J_C=n-(a+b-1)`.  The weighted deck separates
+THM-814's sixteen fixed-layer collisions, but total deck roles collide at
+`n=5`, and deck plus `C3` still fails to determine a node at `n=6`.
+
+The full tiling cube also has the exact fibre product
+
+```text
+X_n ~= C_n x_trace C_n.
+```
+
+It is the arrow set of a pair groupoid on half-tilings with common fixed
+boundary.  Reflection is inversion, blue is the identity arrow, and the
+additive defect is literally a size-`n-1` blue word.  The master label
+`c_n(z,u,delta)=pi_n(u,u+delta,z)` determines node fibres, tilings, loops, exact-
+defect edges, and reflection orbits.  At `n=14`, this is 64 boundary layers of
+a `2^36 x 2^36` table; there are `2^41` blue lines and
+`(2^36-1)2^41` black lines.  Binary colour discards 36 defect bits.
+
+On the complete one-flip shell, `(gap,|mirror current|)` is an exact merged-
+node and line-orbit address.  It gives 42 `n=14` merged nodes/packets: six
+blue singleton packets and 36 black double-line packets.  `C3=gap` and
+`H=1+2^gap`.  This is the first all-size sub-metagraph on which iso nodes,
+tilings, and blue/black edges have one common explicit classification.
+
+The verifier checks all formula families through `n=14`, all tilings through
+`n=7`, one-flip `C3/H` through `n=9`, the quadratic `C3` packet/line ANOVA,
+and the anchored sieve sign.  That audit corrected THM-512's `n=4` sieve from
+overshoot to undershoot, THM-549's half-region/orbit conflation, and THM-813's
+one-line injectivity typo.  A concurrent pull supplied THM-838; its preserved
+rank-four literal defect and rank-two raw-S2 image support transporting the
+full `c_n` defect tensor rather than a static layer histogram.
+
+The open metagraph problem is now precise: refine the node labels on the
+half-pair groupoid until their disintegrated products have constant
+composition numbers, or find the first coherent-configuration obstruction.
+THM-818 kernel rows are the current equality-witness stalk.  None of these
+objects preserves LRC speed, metric scale, owner, threshold, carry, or
+continued-fraction data; those fields must remain an external stalk before
+any fourteen-runner conclusion.

@@ -67,8 +67,10 @@ is a well-defined observation of the action.  It descends further through
 `P_m` if and only if (4a) is constant on all `Q_m` points contained in each
 `P_m` fibre.
 
-This proves the lemma.  Notice what it does not say: the map (4) need not be
-injective, and it need not assign a target to a bare merged node.
+This proves the lemma.  Notice what it does not say: the projected observation
+(4a) need not be injective or descend through `P_m`, and `Phi_Q` need not
+assign a target to a bare merged node.  The map (4) itself is injective by the
+preceding paragraph.
 
 At `n=5`, every `P_5` fibre is exactly one reflection orbit: there are eight
 blue singleton cells and twelve black doubletons.  Hence `P_5=Q_5`, explaining
