@@ -1,0 +1,397 @@
+SEVEN-COMB NODE/EDGE DEFECT ALGEBRA: EXACT FRACTION AUDIT
+prefix=(1, 2, 3, 4, 5) E_components=10 e=7/15
+vertex=s_i=mu(E cap D_xi)-2e/13
+edge=h(projective ratio), eta(endpoint pullback), c=e*h+eta
+identity=Hunter=11e/169-sum(s_i)+MST(c)
+kruskal_word=graphic-rank increments at descending distinct c levels
+
+PACKET random-1
+speeds=(292, 150, 359, 74, 88, 479, 116)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 6 x=292 mass=68/949 s=-2/14235
+  A2 residue= 7 x=150 mass=14/195 s=0
+  A3 residue= 8 x=359 mass=336/4667 s=14/70005
+  A4 residue= 9 x= 74 mass=189/2405 s=49/7215
+  A5 residue=10 x= 88 mass=109/1430 s=19/4290
+  A6 residue=11 x=479 mass=6797/93405 s=7/7185
+  A7 residue=12 x=116 mass=133/1885 s=-7/5655
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ .A1A2 ratio=75:146 g=2 h=-7/308425 eta=-19/27375 c=-652/925275 pair=736/71175
+ .A1A3 ratio=292:359 g=1 h=-5/8857966 eta=-1627/5110365 c=-42337/132869490 pair=7309/681382
+ .A1A4 ratio=37:146 g=2 h=-14/456469 eta=-142/105339 c=-9328/6847035 pair=340/35113
+ *A1A5 ratio=22:73 g=4 h=12/135707 eta=811/626340 c=989/740220 pair=47/3796
+ .A1A6 ratio=292:479 g=1 h=-1/5909423 eta=283/1049010 c=47813/177282690 pair=10287/909142
+ .A1A7 ratio=29:73 g=4 h=-18/357773 eta=-163/82563 c=-10721/5366595 pair=249/27521
+ .A2A3 ratio=150:359 g=1 h=1/910065 eta=386/1050075 c=67/182013 pair=799/70005
+ .A2A4 ratio=37:75 g=2 h=28/468975 eta=-1837/541125 c=-1579/468975 pair=277/36075
+ *A2A5 ratio=44:75 g=2 h=-3/92950 eta=101/53625 c=521/278850 pair=277/21450
+ .A2A6 ratio=150:479 g=1 h=2/6071325 eta=-4493/7005375 c=-3893/6071325 pair=4859/467025
+ .A2A7 ratio=58:75 g=2 h=-1/122525 eta=-119/94250 c=-931/735150 pair=553/56550
+ .A3A4 ratio=74:359 g=1 h=12/2244827 eta=4969/2590185 c=64681/33672405 pair=2239/172679
+ *A3A5 ratio=88:359 g=1 h=9/2669524 eta=7523/3080220 c=48931/20021430 pair=1385/102674
+ .A3A6 ratio=359:479 g=1 h=12/29061409 eta=10796/33532395 c=140432/435921135 pair=25412/2235493
+ *A3A7 ratio=116:359 g=1 h=3/3518918 eta=11881/4060290 c=77237/26391885 pair=1891/135343
+ *A4A5 ratio=37:44 g=2 h=-3/68783 eta=17/4290 c=1627/412698 pair=61/4070
+ *A4A6 ratio=74:479 g=1 h=10/2995187 eta=1259/1151995 c=49171/44927805 pair=2797/230399
+ .A4A7 ratio=37:58 g=2 h=-2/181337 eta=-133/139490 c=-1043/1088022 pair=1407/139490
+ .A5A6 ratio=88:479 g=1 h=7/1780922 eta=179/342485 c=14011/26713830 pair=1585/136994
+ .A5A7 ratio=22:29 g=4 h=-15/53911 eta=-32/12441 c=-437/161733 pair=173/20735
+ .A6A7 ratio=116:479 g=1 h=9/4695158 eta=-8974/2708745 c=-233261/70427370 pair=2793/361166
+mst_c=102250880436613/7511958648351300 mst_edges=('A4A5', 'A3A7', 'A3A5', 'A2A5', 'A1A5', 'A4A6')
+kruskal_threshold_rank_word=(1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=1627/412698 edges=('A4A5',) components=6 delta_rank=1
+  lambda=77237/26391885 edges=('A3A7',) components=5 delta_rank=1
+  lambda=48931/20021430 edges=('A3A5',) components=4 delta_rank=1
+  lambda=64681/33672405 edges=('A3A4',) components=4 delta_rank=0
+  lambda=521/278850 edges=('A2A5',) components=3 delta_rank=1
+  lambda=989/740220 edges=('A1A5',) components=2 delta_rank=1
+  lambda=49171/44927805 edges=('A4A6',) components=1 delta_rank=1
+  lambda=14011/26713830 edges=('A5A6',) components=1 delta_rank=0
+  lambda=67/182013 edges=('A2A3',) components=1 delta_rank=0
+  lambda=140432/435921135 edges=('A3A6',) components=1 delta_rank=0
+  lambda=47813/177282690 edges=('A1A6',) components=1 delta_rank=0
+  lambda=-42337/132869490 edges=('A1A3',) components=1 delta_rank=0
+  lambda=-3893/6071325 edges=('A2A6',) components=1 delta_rank=0
+  lambda=-652/925275 edges=('A1A2',) components=1 delta_rank=0
+  lambda=-1043/1088022 edges=('A4A7',) components=1 delta_rank=0
+  lambda=-931/735150 edges=('A2A7',) components=1 delta_rank=0
+  lambda=-9328/6847035 edges=('A1A4',) components=1 delta_rank=0
+  lambda=-10721/5366595 edges=('A1A7',) components=1 delta_rank=0
+  lambda=-437/161733 edges=('A5A7',) components=1 delta_rank=0
+  lambda=-233261/70427370 edges=('A6A7',) components=1 delta_rank=0
+  lambda=-1579/468975 edges=('A2A4',) components=1 delta_rank=0
+hunter_direct=6350550702737/192614324316700 (~+0.03297029) decomposition=6350550702737/192614324316700 actual_uncovered=584564587283/4377598279925 coercive=True
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(7, 1, 2, 3, 6, 5, 4) ties=0 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A1A7', 'A2A7', 'A3A7', 'A4A5', 'A4A6', 'A4A7', 'A5A6', 'A5A7', 'A6A7') flips_from_packet_1=()
+
+PACKET random-2
+speeds=(331, 514, 73, 451, 205, 63, 103)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 6 x=331 mass=308/4303 s=-14/64545
+  A2 residue= 7 x=514 mass=240/3341 s=2/50115
+  A3 residue= 8 x= 73 mass=68/949 s=-2/14235
+  A4 residue= 9 x=451 mass=424/5863 s=46/87945
+  A5 residue=10 x=205 mass=188/2665 s=-2/1599
+  A6 residue=11 x= 63 mass=1/13 s=1/195
+  A7 residue=12 x=103 mass=112/1545 s=14/20085
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ *A1A2 ratio=331:514 g=1 h=-6/14376323 eta=11467/16588065 c=149029/215644845 pair=12979/1105871
+ .A1A3 ratio=73:331 g=1 h=-10/4083547 eta=-246/1570595 c=-9664/61253205 pair=3420/314119
+ .A1A4 ratio=331:451 g=1 h=-8/25228489 eta=6376/29109795 c=82832/378427335 pair=21860/1940653
+ .A1A5 ratio=205:331 g=1 h=-6/11467495 eta=158/1017825 c=5332/34402485 pair=152/13571
+ .A1A6 ratio=63:331 g=1 h=-4/3524157 eta=-206/580905 c=-298/839085 pair=46/4303
+ *A1A7 ratio=103:331 g=1 h=-2/5761717 eta=3080/1329627 c=200186/86425755 pair=5922/443209
+ .A2A3 ratio=73:514 g=1 h=5/3170609 eta=614/3658395 c=8017/47559135 pair=2735/243893
+ .A2A4 ratio=451:514 g=1 h=4/19588283 eta=4949/7533955 c=17549/26711295 pair=1603/136981
+ .A2A5 ratio=205:514 g=1 h=3/8903765 eta=-12197/10273575 c=-31708/26711295 pair=6752/684905
+ .A2A6 ratio=63:514 g=1 h=2/2736279 eta=2176/3157245 c=9434/13681395 pair=190/16191
+ .A2A7 ratio=103:514 g=1 h=1/4473599 eta=24/344123 c=4687/67103985 pair=3825/344123
+ .A3A4 ratio=73:451 g=1 h=24/5563987 eta=236/6419985 c=3236/83459805 pair=4744/427999
+ *A3A5 ratio=73:205 g=1 h=18/2529085 eta=7658/2918175 c=19936/7587255 pair=532/38909
+ .A3A6 ratio=63:73 g=1 h=4/259077 eta=-464/298935 c=-6004/3886155 pair=568/59787
+ .A3A7 ratio=73:103 g=1 h=6/1270711 eta=-1288/1466205 c=-16702/19060665 pair=994/97747
+ .A4A5 ratio=5:11 g=41 h=-12/9295 eta=-482/439725 c=-1942/1143285 pair=274/29315
+ *A4A6 ratio=63:451 g=1 h=20/4801797 eta=4012/5540535 c=17432/24008985 pair=4348/369369
+ .A4A7 ratio=103:451 g=1 h=10/7850557 eta=5752/9058335 c=74846/117758355 pair=7054/603889
+ *A5A6 ratio=63:205 g=1 h=4/311805 eta=2798/2518425 c=2438/2182635 pair=2042/167895
+ .A5A7 ratio=103:205 g=1 h=14/3568435 eta=218/1372475 c=344/2141061 pair=3076/274495
+ *A6A7 ratio=63:103 g=1 h=2/121849 eta=106/140595 c=464/609245 pair=332/28119
+mst_c=42177330935023/5118865842225135 mst_edges=('A3A5', 'A1A7', 'A5A6', 'A6A7', 'A4A6', 'A1A2')
+kruskal_threshold_rank_word=(1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=19936/7587255 edges=('A3A5',) components=6 delta_rank=1
+  lambda=200186/86425755 edges=('A1A7',) components=5 delta_rank=1
+  lambda=2438/2182635 edges=('A5A6',) components=4 delta_rank=1
+  lambda=464/609245 edges=('A6A7',) components=3 delta_rank=1
+  lambda=17432/24008985 edges=('A4A6',) components=2 delta_rank=1
+  lambda=149029/215644845 edges=('A1A2',) components=1 delta_rank=1
+  lambda=9434/13681395 edges=('A2A6',) components=1 delta_rank=0
+  lambda=17549/26711295 edges=('A2A4',) components=1 delta_rank=0
+  lambda=74846/117758355 edges=('A4A7',) components=1 delta_rank=0
+  lambda=82832/378427335 edges=('A1A4',) components=1 delta_rank=0
+  lambda=8017/47559135 edges=('A2A3',) components=1 delta_rank=0
+  lambda=344/2141061 edges=('A5A7',) components=1 delta_rank=0
+  lambda=5332/34402485 edges=('A1A5',) components=1 delta_rank=0
+  lambda=4687/67103985 edges=('A2A7',) components=1 delta_rank=0
+  lambda=3236/83459805 edges=('A3A4',) components=1 delta_rank=0
+  lambda=-9664/61253205 edges=('A1A3',) components=1 delta_rank=0
+  lambda=-298/839085 edges=('A1A6',) components=1 delta_rank=0
+  lambda=-16702/19060665 edges=('A3A7',) components=1 delta_rank=0
+  lambda=-31708/26711295 edges=('A2A5',) components=1 delta_rank=0
+  lambda=-6004/3886155 edges=('A3A6',) components=1 delta_rank=0
+  lambda=-1942/1143285 edges=('A4A5',) components=1 delta_rank=0
+hunter_direct=13322563785667/393758910940395 (~+0.03383432) decomposition=13322563785667/393758910940395 actual_uncovered=10891281944419/78751782188079 coercive=True
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(5, 1, 3, 2, 4, 7, 6) ties=0 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A1A5', 'A2A3', 'A2A5', 'A3A5', 'A4A5', 'A6A7') flips_from_packet_1=('A1A5', 'A1A7', 'A2A3', 'A2A5', 'A2A7', 'A3A5', 'A3A7', 'A4A6', 'A4A7', 'A5A6', 'A5A7')
+
+PACKET random-3
+speeds=(383, 371, 86, 230, 101, 492, 389)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 6 x=383 mass=352/4979 s=-82/74685
+  A2 residue= 7 x=371 mass=348/4823 s=2/5565
+  A3 residue= 8 x= 86 mass=40/559 s=-2/8385
+  A4 residue= 9 x=230 mass=22/299 s=8/4485
+  A5 residue=10 x=101 mass=476/6565 s=14/19695
+  A6 residue=11 x=492 mass=89/1230 s=3/5330
+  A7 residue=12 x=389 mass=28/389 s=14/75855
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ .A1A2 ratio=371:383 g=1 h=-12/24013717 eta=-1256/791661 c=-81652/51457965 pair=192/20299
+ .A1A3 ratio=86:383 g=1 h=-5/2783261 eta=72/1070485 c=2773/41748915 pair=183/16469
+ *A1A4 ratio=230:383 g=1 h=-4/7443605 eta=7466/8588775 c=19406/22330815 pair=6822/572585
+ .A1A5 ratio=101:383 g=1 h=-6/6537427 eta=-1444/7543185 c=-18814/98061405 pair=5458/502879
+ .A1A6 ratio=383:492 g=1 h=-1/7961421 eta=-37/89622 c=-32873/79614210 pair=4341/408278
+ .A1A7 ratio=383:389 g=1 h=-2/25178803 eta=-7988/2234805 c=-1349986/377682045 pair=14470/1936831
+ .A2A3 ratio=86:371 g=1 h=5/2696057 eta=1607/3110835 c=20926/40440855 pair=2398/207389
+ *A2A4 ratio=230:371 g=1 h=4/7210385 eta=4723/2773225 c=7369/4326231 pair=7071/554645
+ .A2A5 ratio=101:371 g=1 h=6/6332599 eta=328/1461369 c=21362/94988985 pair=5490/487123
+ .A2A6 ratio=371:492 g=1 h=1/7711977 eta=-6059/17796870 c=-26251/77119770 pair=977/91266
+ *A2A7 ratio=371:389 g=1 h=2/24389911 eta=22326/9380735 c=870728/365848665 pair=25188/1876147
+ .A3A4 ratio=43:115 g=2 h=-4/167141 eta=-88/192855 c=-1172/2507115 pair=136/12857
+ .A3A5 ratio=86:101 g=1 h=9/733967 eta=-6674/846885 c=-86699/11009505 pair=179/56459
+ *A3A6 ratio=43:246 g=2 h=-5/893841 eta=836/1031355 c=3611/4469205 pair=815/68757
+ *A3A7 ratio=86:389 g=1 h=3/2826863 eta=4636/3261765 c=60289/42402945 pair=2711/217451
+ .A4A5 ratio=101:230 g=1 h=3/392587 eta=-113/90597 c=-7324/5888805 pair=296/30199
+ .A4A6 ratio=115:246 g=2 h=3/796835 eta=-1039/1838850 c=-2693/4781010 pair=257/24518
+ .A4A7 ratio=230:389 g=1 h=1/1512043 eta=103/1744665 c=1346/22680645 pair=6458/581555
+ *A5A6 ratio=101:492 g=1 h=7/2099487 eta=2519/2422485 c=3644/3499145 pair=1952/161499
+ .A5A7 ratio=101:389 g=1 h=14/6639841 eta=-1600/510757 c=-311902/99597615 pair=4042/510757
+ .A6A7 ratio=389:492 g=1 h=3/5390762 eta=-77/1244022 c=-2492/40430715 pair=6832/622011
+mst_c=1573041939703097/191284824117799685 mst_edges=('A2A7', 'A2A4', 'A3A7', 'A5A6', 'A1A4', 'A3A6')
+kruskal_threshold_rank_word=(1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=870728/365848665 edges=('A2A7',) components=6 delta_rank=1
+  lambda=7369/4326231 edges=('A2A4',) components=5 delta_rank=1
+  lambda=60289/42402945 edges=('A3A7',) components=4 delta_rank=1
+  lambda=3644/3499145 edges=('A5A6',) components=3 delta_rank=1
+  lambda=19406/22330815 edges=('A1A4',) components=2 delta_rank=1
+  lambda=3611/4469205 edges=('A3A6',) components=1 delta_rank=1
+  lambda=20926/40440855 edges=('A2A3',) components=1 delta_rank=0
+  lambda=21362/94988985 edges=('A2A5',) components=1 delta_rank=0
+  lambda=2773/41748915 edges=('A1A3',) components=1 delta_rank=0
+  lambda=1346/22680645 edges=('A4A7',) components=1 delta_rank=0
+  lambda=-2492/40430715 edges=('A6A7',) components=1 delta_rank=0
+  lambda=-18814/98061405 edges=('A1A5',) components=1 delta_rank=0
+  lambda=-26251/77119770 edges=('A2A6',) components=1 delta_rank=0
+  lambda=-32873/79614210 edges=('A1A6',) components=1 delta_rank=0
+  lambda=-1172/2507115 edges=('A3A4',) components=1 delta_rank=0
+  lambda=-2693/4781010 edges=('A4A6',) components=1 delta_rank=0
+  lambda=-7324/5888805 edges=('A4A5',) components=1 delta_rank=0
+  lambda=-81652/51457965 edges=('A1A2',) components=1 delta_rank=0
+  lambda=-311902/99597615 edges=('A5A7',) components=1 delta_rank=0
+  lambda=-1349986/377682045 edges=('A1A7',) components=1 delta_rank=0
+  lambda=-86699/11009505 edges=('A3A5',) components=1 delta_rank=0
+hunter_direct=3207706171151467/88285303438984470 (~+0.03633341) decomposition=3207706171151467/88285303438984470 actual_uncovered=4137098311279637/29428434479661490 coercive=True
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(1, 3, 7, 2, 6, 5, 4) ties=0 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A2A3', 'A2A7', 'A4A5', 'A4A6', 'A4A7', 'A5A6', 'A5A7', 'A6A7') flips_from_packet_1=('A1A7', 'A2A3', 'A3A7')
+
+PACKET random-4
+speeds=(71, 501, 125, 217, 517, 76, 506)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 6 x= 71 mass=64/923 s=-34/13845
+  A2 residue= 7 x=501 mass=472/6513 s=22/32565
+  A3 residue= 8 x=125 mass=124/1625 s=22/4875
+  A4 residue= 9 x=217 mass=1038/14105 s=76/42315
+  A5 residue=10 x=517 mass=44/611 s=2/9165
+  A6 residue=11 x= 76 mass=187/2470 s=29/7410
+  A7 residue=12 x=506 mass=1176/16445 s=-14/49335
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ *A1A2 ratio=71:501 g=1 h=-4/2003833 eta=844/2312115 c=3648/10019165 pair=5276/462423
+ .A1A3 ratio=71:125 g=1 h=-2/299975 eta=-34/23075 c=-6644/4499625 pair=1104/115375
+ .A1A4 ratio=71:217 g=1 h=-8/2603783 eta=-1000/200291 c=-195056/39056745 pair=1212/200291
+ .A1A5 ratio=71:517 g=1 h=-6/6203483 eta=-878/7157865 c=-11456/93052245 pair=5212/477191
+ .A1A6 ratio=71:76 g=1 h=-1/227981 eta=-278/52611 c=-18077/3419715 pair=101/17537
+ .A1A7 ratio=71:506 g=1 h=-1/3035747 eta=-1099/3502785 c=-14294/45536205 pair=2506/233519
+ *A2A3 ratio=125:501 g=1 h=2/2116725 eta=2278/2442375 c=3292/3527875 pair=9752/814125
+ .A2A4 ratio=217:501 g=1 h=8/18373173 eta=52/1630755 c=2948/91865865 pair=15656/1413321
+ .A2A5 ratio=501:517 g=1 h=2/14591291 eta=-1234/1295085 c=-208532/218869365 pair=11328/1122407
+ .A2A6 ratio=76:501 g=1 h=1/1608711 eta=3229/3712410 c=13997/16087110 pair=983/82498
+ .A2A7 ratio=501:506 g=1 h=1/21421257 eta=-156142/24716835 c=-676613/107106285 pair=2597/549263
+ .A3A4 ratio=125:217 g=1 h=24/4584125 eta=13534/5289375 c=35222/13752375 pair=4798/352625
+ .A3A5 ratio=125:517 g=1 h=18/10921625 eta=7318/12601875 c=1732/2978625 pair=888/76375
+ *A3A6 ratio=76:125 g=1 h=3/401375 eta=2651/926250 c=6901/2408250 pair=859/61750
+ .A3A7 ratio=125:506 g=1 h=3/5344625 eta=478/6166875 c=1247/16033875 pair=4573/411125
+ .A4A5 ratio=217:517 g=1 h=30/18959941 eta=706/1988805 c=101168/284399115 pair=16628/1458457
+ *A4A6 ratio=76:217 g=1 h=5/696787 eta=123/28210 c=91213/20903610 pair=8259/535990
+ .A4A7 ratio=217:506 g=1 h=5/9278269 eta=61/274505 c=30962/139174035 pair=8042/713713
+ *A5A6 ratio=76:517 g=1 h=7/1660087 eta=3893/3830970 c=50707/49802610 pair=237/19646
+ *A5A7 ratio=46:47 g=11 h=5/182689 eta=4903/772915 c=191602/30143685 pair=2690/154583
+ .A6A7 ratio=38:253 g=2 h=-1/812383 eta=244/312455 c=9509/12185745 pair=739/62491
+mst_c=234316266701827/14736165739645350 mst_edges=('A5A7', 'A4A6', 'A3A6', 'A5A6', 'A2A3', 'A1A2')
+kruskal_threshold_rank_word=(1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=191602/30143685 edges=('A5A7',) components=6 delta_rank=1
+  lambda=91213/20903610 edges=('A4A6',) components=5 delta_rank=1
+  lambda=6901/2408250 edges=('A3A6',) components=4 delta_rank=1
+  lambda=35222/13752375 edges=('A3A4',) components=4 delta_rank=0
+  lambda=50707/49802610 edges=('A5A6',) components=3 delta_rank=1
+  lambda=3292/3527875 edges=('A2A3',) components=2 delta_rank=1
+  lambda=13997/16087110 edges=('A2A6',) components=2 delta_rank=0
+  lambda=9509/12185745 edges=('A6A7',) components=2 delta_rank=0
+  lambda=1732/2978625 edges=('A3A5',) components=2 delta_rank=0
+  lambda=3648/10019165 edges=('A1A2',) components=1 delta_rank=1
+  lambda=101168/284399115 edges=('A4A5',) components=1 delta_rank=0
+  lambda=30962/139174035 edges=('A4A7',) components=1 delta_rank=0
+  lambda=1247/16033875 edges=('A3A7',) components=1 delta_rank=0
+  lambda=2948/91865865 edges=('A2A4',) components=1 delta_rank=0
+  lambda=-11456/93052245 edges=('A1A5',) components=1 delta_rank=0
+  lambda=-14294/45536205 edges=('A1A7',) components=1 delta_rank=0
+  lambda=-208532/218869365 edges=('A2A5',) components=1 delta_rank=0
+  lambda=-6644/4499625 edges=('A1A3',) components=1 delta_rank=0
+  lambda=-195056/39056745 edges=('A1A4',) components=1 delta_rank=0
+  lambda=-18077/3419715 edges=('A1A6',) components=1 delta_rank=0
+  lambda=-676613/107106285 edges=('A2A7',) components=1 delta_rank=0
+hunter_direct=15342920255059/404839718122125 (~+0.03789875) decomposition=15342920255059/404839718122125 actual_uncovered=131331423591653/944626008951625 coercive=True
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(1, 7, 5, 2, 4, 6, 3) ties=0 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A2A5', 'A2A7', 'A3A4', 'A3A5', 'A3A6', 'A3A7', 'A4A5', 'A4A7', 'A5A7', 'A6A7') flips_from_packet_1=('A1A7', 'A2A5', 'A3A4', 'A3A5', 'A3A6', 'A4A6', 'A5A6')
+
+PACKET consecutive-high
+speeds=(499, 500, 501, 502, 503, 504, 505)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 5 x=499 mass=464/6487 s=-2/7485
+  A2 residue= 6 x=500 mass=9/125 s=1/4875
+  A3 residue= 7 x=501 mass=472/6513 s=22/32565
+  A4 residue= 8 x=502 mass=232/3263 s=-34/48945
+  A5 residue= 9 x=503 mass=2358/32695 s=32/98085
+  A6 residue=10 x=504 mass=33/455 s=1/1365
+  A7 residue=11 x=505 mass=479/6565 s=23/19695
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ .A1A2 ratio=499:500 g=1 h=1/4216550 eta=-4178/810875 c=-325877/63248250 pair=9557/1621750
+ .A1A3 ratio=499:501 g=1 h=-10/42249831 eta=-390824/48749805 c=-1693594/211249155 pair=9842/3249987
+ .A1A4 ratio=499:502 g=1 h=-15/21167081 eta=-175964/24423555 c=-2287637/317506215 pair=481/125249
+ .A1A5 ratio=499:503 g=1 h=-24/42418493 eta=-394976/48944415 c=-5134856/636277395 pair=9708/3262961
+ .A1A6 ratio=499:504 g=1 h=-1/2361268 eta=-12986/2043405 c=-675293/106257060 pair=7667/1634724
+ *A1A7 ratio=499:505 g=1 h=-12/42587155 eta=-169492/49139025 c=-440696/127761465 pair=24884/3275935
+ *A2A3 ratio=500:501 g=1 h=-1/3527875 eta=-13919/2713750 c=-108571/21167250 pair=247/41750
+ .A2A4 ratio=250:251 g=2 h=3/1060475 eta=-9983/1223625 c=-129758/15907125 pair=1178/407875
+ .A2A5 ratio=500:503 g=1 h=-2/10625875 eta=-176269/24521250 c=-91661/12751050 pair=97/25150
+ .A2A6 ratio=125:126 g=4 h=4/443625 eta=-1831/227500 c=-42823/5323500 pair=1229/409500
+ .A2A7 ratio=100:101 g=5 h=3/170690 eta=-457/75750 c=-38564/6400875 pair=824/164125
+ *A3A4 ratio=501:502 g=1 h=5/21251919 eta=-125186/24521445 c=-542461/106259595 pair=249/41917
+ .A3A5 ratio=501:503 g=1 h=8/42588507 eta=-78556/9828117 c=-1702028/212942535 pair=10000/3276039
+ .A3A6 ratio=167:168 g=3 h=3/790244 eta=-18779/2735460 c=-61016/8890245 pair=44/10521
+ .A3A7 ratio=501:505 g=1 h=4/42757845 eta=-395596/49335975 c=-342848/42757845 pair=9956/3289065
+ *A4A5 ratio=502:503 g=1 h=12/21336757 eta=-125101/24619335 c=-6479/1275105 pair=3/503
+ .A4A6 ratio=251:252 g=2 h=2/890799 eta=-2389/293670 c=-10351/1272570 pair=19/6526
+ .A4A7 ratio=502:505 g=1 h=6/21421595 eta=-176879/24717225 c=-459877/64264785 pair=493/126755
+ *A5A6 ratio=503:504 g=1 h=5/7140588 eta=-10418/2059785 c=-60189/11900980 pair=253/42252
+ .A5A7 ratio=503:505 g=1 h=4/8585707 eta=-78944/9906585 c=-1026244/128785605 pair=2032/660439
+ *A6A7 ratio=504:505 g=1 h=1/1536210 eta=-124931/24815700 c=-36089/7168980 pair=17/2828
+mst_c=-13603064109578717/471407089332850125 mst_edges=('A1A7', 'A6A7', 'A5A6', 'A4A5', 'A3A4', 'A2A3')
+kruskal_threshold_rank_word=(1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=-440696/127761465 edges=('A1A7',) components=6 delta_rank=1
+  lambda=-36089/7168980 edges=('A6A7',) components=5 delta_rank=1
+  lambda=-60189/11900980 edges=('A5A6',) components=4 delta_rank=1
+  lambda=-6479/1275105 edges=('A4A5',) components=3 delta_rank=1
+  lambda=-542461/106259595 edges=('A3A4',) components=2 delta_rank=1
+  lambda=-108571/21167250 edges=('A2A3',) components=1 delta_rank=1
+  lambda=-325877/63248250 edges=('A1A2',) components=1 delta_rank=0
+  lambda=-38564/6400875 edges=('A2A7',) components=1 delta_rank=0
+  lambda=-675293/106257060 edges=('A1A6',) components=1 delta_rank=0
+  lambda=-61016/8890245 edges=('A3A6',) components=1 delta_rank=0
+  lambda=-459877/64264785 edges=('A4A7',) components=1 delta_rank=0
+  lambda=-91661/12751050 edges=('A2A5',) components=1 delta_rank=0
+  lambda=-2287637/317506215 edges=('A1A4',) components=1 delta_rank=0
+  lambda=-1026244/128785605 edges=('A5A7',) components=1 delta_rank=0
+  lambda=-1702028/212942535 edges=('A3A5',) components=1 delta_rank=0
+  lambda=-1693594/211249155 edges=('A1A3',) components=1 delta_rank=0
+  lambda=-342848/42757845 edges=('A3A7',) components=1 delta_rank=0
+  lambda=-42823/5323500 edges=('A2A6',) components=1 delta_rank=0
+  lambda=-5134856/636277395 edges=('A1A5',) components=1 delta_rank=0
+  lambda=-10351/1272570 edges=('A4A6',) components=1 delta_rank=0
+  lambda=-129758/15907125 edges=('A2A4',) components=1 delta_rank=0
+hunter_direct=-3248280870311/5180297684976375 (~-0.00062705) decomposition=-3248280870311/5180297684976375 actual_uncovered=1190249283463042/21757250276900775 coercive=False
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(4, 1, 2, 5, 3, 6, 7) ties=0 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A1A4', 'A2A4', 'A3A4', 'A3A5') flips_from_packet_1=('A1A4', 'A1A7', 'A2A4', 'A2A7', 'A3A4', 'A3A5', 'A3A7', 'A4A5', 'A4A6', 'A4A7', 'A5A6', 'A5A7', 'A6A7')
+
+PACKET consecutive-low
+speeds=(32, 33, 34, 35, 36, 37, 38)
+VERTEX COLOURS (proof events, not runners)
+  A1 residue= 6 x= 32 mass=7/104 s=-7/1560
+  A2 residue= 7 x= 33 mass=12/143 s=2/165
+  A3 residue= 8 x= 34 mass=14/221 s=-28/3315
+  A4 residue= 9 x= 35 mass=36/455 s=2/273
+  A5 residue=10 x= 36 mass=49/585 s=7/585
+  A6 residue=11 x= 37 mass=189/2405 s=49/7215
+  A7 residue=12 x= 38 mass=86/1235 s=-8/3705
+EDGE COLOURS (reduced ratio, scale, h, eta, c, restricted mass)
+ .A1A2 ratio=32:33 g=1 h=-1/14872 eta=-61/11440 c=-2393/446160 pair=1/176
+ .A1A3 ratio=16:17 g=2 h=15/22984 eta=-497/53040 c=-6251/689520 pair=7/3536
+ .A1A4 ratio=32:35 g=1 h=-1/23660 eta=-73/8400 c=-2473/283920 pair=17/7280
+ .A1A5 ratio=8:9 g=4 h=1/507 eta=-1/130 c=-103/15210 pair=1/234
+ *A1A6 ratio=32:37 g=1 h=-1/50024 eta=-569/115440 c=-7411/1500720 pair=47/7696
+ .A1A7 ratio=16:19 g=2 h=3/25688 eta=-41/7410 c=-2111/385320 pair=11/1976
+ .A2A3 ratio=33:34 g=1 h=5/94809 eta=-536/109395 c=-2311/474045 pair=15/2431
+ .A2A4 ratio=33:35 g=1 h=8/195195 eta=-1532/225225 c=-1324/195195 pair=64/15015
+ *A2A5 ratio=11:12 g=3 h=3/3718 eta=-47/12870 c=-274/83655 pair=10/1287
+ .A2A6 ratio=33:37 g=1 h=4/206349 eta=-46/6435 c=-7366/1031745 pair=62/15873
+ .A2A7 ratio=33:38 g=1 h=1/105963 eta=-586/122265 c=-2537/529815 pair=17/2717
+ *A3A4 ratio=34:35 g=1 h=12/100555 eta=-523/116025 c=-79/17745 pair=3/455
+ .A3A5 ratio=17:18 g=2 h=4/8619 eta=-179/19890 c=-757/86190 pair=1/442
+ .A3A6 ratio=34:37 g=1 h=6/106301 eta=-983/122655 c=-12737/1594515 pair=25/8177
+ .A3A7 ratio=17:19 g=2 h=8/54587 eta=-140/12597 c=-28/2535 pair=0
+ *A4A5 ratio=35:36 g=1 h=1/7098 eta=-17/4095 c=-29/7098 pair=19/2730
+ .A4A6 ratio=35:37 g=1 h=4/43771 eta=-64/10101 c=-4132/656565 pair=16/3367
+ .A4A7 ratio=35:38 g=1 h=1/22477 eta=-40/5187 c=-2593/337155 pair=29/8645
+ *A5A6 ratio=36:37 g=1 h=7/56277 eta=-497/129870 c=-707/187590 pair=7/962
+ .A5A7 ratio=18:19 g=2 h=5/28899 eta=-577/66690 c=-2477/288990 pair=11/4446
+ *A6A7 ratio=37:38 g=1 h=9/118807 eta=-484/137085 c=-6229/1782105 pair=69/9139
+mst_c=-158181487/6586660080 mst_edges=('A2A5', 'A6A7', 'A5A6', 'A4A5', 'A3A4', 'A1A6')
+kruskal_threshold_rank_word=(1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+KRUSKAL LEVELS (descending c; incidence retained)
+  lambda=-274/83655 edges=('A2A5',) components=6 delta_rank=1
+  lambda=-6229/1782105 edges=('A6A7',) components=5 delta_rank=1
+  lambda=-707/187590 edges=('A5A6',) components=4 delta_rank=1
+  lambda=-29/7098 edges=('A4A5',) components=3 delta_rank=1
+  lambda=-79/17745 edges=('A3A4',) components=2 delta_rank=1
+  lambda=-2537/529815 edges=('A2A7',) components=2 delta_rank=0
+  lambda=-2311/474045 edges=('A2A3',) components=2 delta_rank=0
+  lambda=-7411/1500720 edges=('A1A6',) components=1 delta_rank=1
+  lambda=-2393/446160 edges=('A1A2',) components=1 delta_rank=0
+  lambda=-2111/385320 edges=('A1A7',) components=1 delta_rank=0
+  lambda=-4132/656565 edges=('A4A6',) components=1 delta_rank=0
+  lambda=-103/15210 edges=('A1A5',) components=1 delta_rank=0
+  lambda=-1324/195195 edges=('A2A4',) components=1 delta_rank=0
+  lambda=-7366/1031745 edges=('A2A6',) components=1 delta_rank=0
+  lambda=-2593/337155 edges=('A4A7',) components=1 delta_rank=0
+  lambda=-12737/1594515 edges=('A3A6',) components=1 delta_rank=0
+  lambda=-2477/288990 edges=('A5A7',) components=1 delta_rank=0
+  lambda=-2473/283920 edges=('A1A4',) components=1 delta_rank=0
+  lambda=-757/86190 edges=('A3A5',) components=1 delta_rank=0
+  lambda=-6251/689520 edges=('A1A3',) components=1 delta_rank=0
+  lambda=-28/2535 edges=('A3A7',) components=1 delta_rank=0
+hunter_direct=-48097487/2871108240 (~-0.01675224) decomposition=-48097487/2871108240 actual_uncovered=364233/9202270 coercive=False
+TOURNAMENT ANALYSIS
+  vertices=A_i=E_[5] cap D_xi (proof carriers; not runner identities)
+  observable=pair/mass_i-pair/mass_j; tie gauge=(mass_i,i)
+  tie_path=(3, 1, 7, 6, 4, 5, 2) ties=1 score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  directed_3cycles=0 scc_sizes=(1, 1, 1, 1, 1, 1, 1) hamiltonian_paths=1
+  flips_from_slot_path=('A1A3', 'A2A3', 'A2A4', 'A2A5', 'A2A6', 'A2A7', 'A4A6', 'A4A7', 'A5A6', 'A5A7', 'A6A7') flips_from_packet_1=('A1A3', 'A1A7', 'A2A3', 'A2A4', 'A2A5', 'A2A6', 'A3A7', 'A4A5')
+
+CROSS-PACKET VERDICT
+hunter_signs=(True, True, True, True, False, False) expected=(True,True,True,True,False,False)
+all_interval_masses=exact Fraction; direct/decomposition identities=PASS
+Prim=Kruskal and Kruskal threshold-rank integral=MST(c): PASS
+Tournament quotient is transitive in all six packets and is NOT sufficient for MST(c)
+HONEST SCOPE: six finite pilots only; uniform radius-seven closure remains open
