@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-15-S128 (cont.11) -- THM-833 PROVED: THE ORNSTEIN-UHLENBECK LAW OF THE WIGGLY LAYER -- every arc flip has dc3 = d_u - d_v - 1, and the uniform-random-flip drift is EXACTLY E[dc3|T] = -(8/(n(n-1)))(c3 - C(n,3)/4): linear mean reversion toward the RANDOM mean (not the regular end -- that sits n(n-1)/8 beyond); fluctuation-dissipation exact; + the c_k(s) INTERVAL-TOTIENT TRIANGLE (B_s integer skeleton) + chi_7 honest negative (Fano lead opened)
+
+Prompt (owner): B_s as an integer family; chi_7 odd mode vs blue/black parity laws; think Ornstein-Uhlenbeck drift.
+
+THE OU LAW (THM-833, four lines, refereed on ALL tournaments n=4,5,6 + exact F-D identity): atom dc3 = d_u - d_v - 1 (= codex THM-785's flux atom); summing over arcs: E[dc3 | T] = -kappa_n (c3 - c3*) with kappa_n = 8/(n(n-1)), c3* = C(n,3)/4 = the random-tournament mean. The single-flip walk is an exact discrete OU process on the C3 axis: relaxation time = quarter-sweep of the arcs; uniform-stationary (symmetric chain); E[dc3 (c3-c3*)] = -kappa Var(c3) EXACTLY (Var = 3/4, 13/8, 25/8 at n=4,5,6). READING: 'the flow of transitivity' (THM-785/787/790/791 atlas) is OU RELAXATION TOWARD RANDOMNESS; the regular locus is an entropic tail event n(n-1)/8 beyond the drift target; opus-S307's potential gradient = this drift's class-level shadow.
+
+THE INTEGER FAMILY (HYP-6895): c_k(s) = #{consecutive F_k pairs with i+j = s} = #{i in [max(1,s-k),k] : gcd(i,s)=1} (interval totients; confirmed k=2..14): row sums |F_k|, first column phi(k+1), last entry 2, c_k(2k-2)=0 at even k. The B_s slopes of THM-826 are this triangle's weighted partial sums -- the profile's integer skeleton.
+
+CHI_7 (honest negative + a lead): the odd-mode Venn signs ++-+--+ = chi_7 confirmed, but three candidate parity reductions ((-1)^tiles, (-1)^gridsym-exp, (-1)^size) all REFUTED at n=6,7. NEW LEAD: the 7 Venn cells of the 3-corner decomposition are the points of a FANO PLANE (Boolean 2^3-1); chi_7 + Fano + PSL(2,7) is the right frame to try next, or the cells' merged-class H mod 4 strata.
+
+J=4: 120/2002 complete, 120/120 clean.
+
+FILES: THM-833 (PROVED+refereed), thm833_ou_and_bs_family_referee_kps_S128c11.py/.out, HYP-6895. -> codex (your flux atom is the OU atom; the d=m line = the atom summed), opus (S307 currents = class shadow of the exact drift), klein (regularity as entropic tail = a new frame for the AP-stability rigidity), all (Fano lead on the chi_7 mode).
+
+NEXT: (i) OU on the H axis (is there a mean-reverting law for Delta H?); (ii) the diffusion coefficient's class dependence (the OU is exact in drift; the noise is class-structured); (iii) Fano/chi_7; (iv) j=4 continues.
+
+---
 ## opus-2026-07-14-S308+S309 -- THE CONCORDANCE DECISION (strong forms are small-n artifacts: n=7's 132 pairs REAL, n=8 spreads to distance 32; SURVIVING: level-mean/median monotonicity, now verified n<=8) + THE E_n DUAL SMITH DIAGRAM (exact n=4..7; reciprocity honest negative) + THM-810 THE WIGGLY DICTIONARY FORMULAS (degree law; STATIONARY LAW: H/|Aut| is the equilibrium measure; the per-flip UPSET law; unit-current cuts; F5 the margin identity Sum(s_w-s_l) = x/2 and the exact O-U drift E[Dx] = 8 - 4x/C(n,2))
 
 Prompts (owner): compute the E_n dual + prove the concordance law + validate above n=7
