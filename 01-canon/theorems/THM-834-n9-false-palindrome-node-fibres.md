@@ -3,7 +3,7 @@ id: THM-834
 title: The 58 n=9 false-palindrome pairs occupy 53 converse-merged tournament nodes
 status: PROVED FINITE-EXACT FORWARD/INVERSE-FIBRE MAP + n8 BLACK-FLOW PLACEMENT
 source: codex-2026-07-15-S13b
-depends_on: [THM-810, THM-828, THM-832]
+depends_on: [THM-828, THM-832]
 related: [THM-796, THM-809, THM-833, THM-838, HYP-3809, HYP-6880]
 verification:
   - 04-computation/n9_false_palindrome_node_forward_map_codex_S13b.py
@@ -15,6 +15,10 @@ verification:
 ---
 
 # THM-834 — exact node fibres and black-flow placement
+
+Every reference below to the wiggly dictionary means the repository file
+`THM-810-wiggly-dictionary-formulas.md`, not the unrelated duplicate theorem
+ID currently present on mainline.
 
 For a size-nine tiling `u`, let `T(u)` be its tournament in the fixed
 Hamiltonian-path chart.  For any tournament `T`, let `c(T)` be its least
@@ -193,6 +197,10 @@ on individual nodes is
 (-x, score sequence, colour stratum, local depth,
  H/|Aut|, canonical merged key).                         (14)
 ```
+
+For definiteness the proposed colour-stratum tie order is
+`pure_blue < mixed < pure_black`; it is a convention, not a theorem about
+reachability.
 
 Incoming THM-833 supplies the dynamical centre of this order.  For the
 size-eight single-arc-flip walk the exact OU equilibrium is
