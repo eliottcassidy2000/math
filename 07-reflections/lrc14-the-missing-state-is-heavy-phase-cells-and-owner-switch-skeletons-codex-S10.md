@@ -12,6 +12,7 @@ tags:
   - christoffel-words
   - tournament-analysis
   - controlled-forgetting
+  - packet-holonomy
 related:
   - THM-762
   - THM-769
@@ -34,19 +35,21 @@ related:
   - THM-790
   - THM-791
   - THM-792
+  - THM-794
+  - THM-795
   - HYP-6820
   - HYP-6835
   - HYP-6840
 ---
 
-# The missing state is heavy phase cells and owner-switch skeletons
+# The missing state is heavy phase cells, owner-switch skeletons, and packet holonomy
 
 ## Honest status
 
 The standard fourteen-runner case remains open.  The primitive tight
 twelve-speed sporadic branch used by the current reduction is uniformly finite
 in principle, but it has not been classified and is not proved empty.  This
-session nevertheless changes the frontier in two material ways:
+session nevertheless changes the frontier in four material ways:
 
 1. THM-780 proves a uniform positive safe-measure floor from the already known
    lower-dimensional strict margin.  The floor is explicit,
@@ -59,8 +62,16 @@ session nevertheless changes the frontier in two material ways:
    regime disappear merely by sending its safe measure to zero.
 2. THM-779's tempting empirical bound on the number of covered walls is false.
    An exact persistent seven-owner stalk supports arbitrarily long covered wall
-   runs.  The corrected dynamic coordinate is the owner-switch skeleton after
-   persistent stalks have been factored, not raw wall count.
+   runs.  Persistent stalks must be factored; raw wall count is not complexity.
+3. THM-794 proves that counting the remaining active fastest periods is still
+   too fine.  A full seven-visitor packet can repeat arbitrarily often at
+   `ceil(f/g)=2` while its return is only diagonal sheet translation.  The
+   corrected coordinate is the ordered packet path after both persistent
+   stalks and zero reduced-holonomy loops have been quotiented.
+4. THM-795 closes the entire arbitrary-height Hamming-one star around every
+   shallow AP dilation.  Any residual shallow sporadic packet must use at least
+   two replacement colours, so the next object is a sheet--tooth incidence
+   graph rather than another one-coordinate lift bound.
 
 The two changes point in the same direction.  The base of the problem is a
 measured set in joint phase space; the obstruction over that base is a labelled
@@ -80,12 +91,14 @@ compressions.
 |---|---|---|
 | a uniformly good denominator `q<=25` | zero owners and signed unit-pair blockers for each fixed `15<=q<=28` | scale and the adaptive modulus |
 | residues modulo `13` | the shallow full-residue packet and its protected points | binding-scale depth `s` and lift ownership |
+| one-coordinate shallow lift | one replacement tooth against a complete missing-owner splice grid | two or more replacement colours sharing the sheet obligations |
 | number of occupied sheets | capacity necessary conditions | which labelled owner occupies which sheet, especially at equality |
 | measure of a folded obstruction | a sharp necessary cap | component-by-component containment and endpoint colours |
 | safe-component count or raw winding | a coarse amount of boundary | component widths, reduced winding, and endpoint-owner incidence |
 | a static prime-seven token state | exact cover at one phase | endpoint order, inverse steps, and global carry |
 | a transitive next-event tournament | pairwise chronological order | the labelled Hamiltonian-path movie and simultaneous blocks |
 | number of covered walls | finite-sample difficulty | a persistent exact seven-owner stalk that makes those walls redundant |
+| number of active fastest periods | nonempty zero-sum visitor incidence | a full-support prefix-legal loop with zero reduced deck holonomy |
 
 None of these negative results says the corresponding viewpoint was useless.
 Each viewpoint became useful when its lost coordinate was restored as a
@@ -161,8 +174,14 @@ strict endpoint convention is what turns a static sheet count into a proof.
 The shallow branch exhibits the same lesson in a different form.  THM-770's
 height-twelve classification is not proved by the residue tournament, whose
 burdens all tie.  It is proved by an atomic endpoint-cell/owner incidence
-hypergraph.  That finite exact result leaves higher lifts open; it does not
-license a global extrapolation.
+hypergraph.  THM-795 now extends one complete direction uniformly: a congruent
+one-coordinate lift of any unit AP dilation is tight only when unchanged, at
+every height.  Its proof uses the `c` missing-owner splice germs as vertices;
+one replacement danger arc cannot contain their nontrivial deck grid.  Thus
+the live higher-lift problem begins with at least two replacement colours that
+can divide the splice obligations.  The next faithful object is their
+bipartite sheet--tooth incidence graph with deck orders and one-sided germ
+orientation, not an extrapolation from the height-twelve residue census.
 
 ### 1.4 Folding made the two-sheet metric exact
 
@@ -368,12 +387,49 @@ originally reported factor-
 one span and `sum c<f` threshold do not survive exact audit, and the stored
 S304 script does not regenerate its `0.589` census.
 
+THM-794 then stress-tests the repaired picture in the opposite direction.
+For
+
+```text
+F=49H+1,   f=F,   g=F-7,   C={F-14,...,F-49},
+```
+
+every fastest period contains all seven slower owners, in the same order, and
+`H-1` such periods are covered.  This refutes the universal extent conjecture
+and makes active-period count unbounded even at `ceil(f/g)=2`.  Exact
+cross-audit explains why neither new marginal theorem contradicts it.  The
+balanced hypergraph has only the full edge `C`, with
+
+```text
+W_*=F-49,       1-W_*/g=42/g,
+```
+
+while the complete-`g` packet target has exact polytope distance
+
+```text
+dist_infinity(r,P)=49/(2g).
+```
+
+Both positive margins tend to zero, so their per-tuple bounds grow like `H`
+and admit the construction.  More importantly, the repeated owner word
+
+```text
+(f,w_7,w_6,...,w_1)
+```
+
+is prefix-legal in the collision automaton and translates every token by the
+same `-1`.  Its return is zero in `F_7^8/Delta`.  The two polytopes see only
+the abelian occupation vector; they forget the ordered path and its return
+map.  Thus the missing coupling is sharper than “use both marginals at once”:
+it is a centered-Beatty packet path groupoid carrying reduced holonomy and a
+metric/core-incidence lift.
+
 The surviving problem is therefore a first-return or owner-switch problem:
-after contracting intervals supported by a persistent exact stalk, can the
-centered mechanical schedule keep agreeing with the redundancy cocycle across
-every relevant part of the core-safe set?  THM-778 already settles one useful
-stratum: sufficiently dense equal-valuation double walls pierce because two
-owners disappear simultaneously.
+after contracting intervals supported by a persistent exact stalk and legal
+zero-holonomy packet loops, can the centered mechanical schedule keep agreeing
+with the redundancy cocycle across every relevant part of the core-safe set?
+THM-778 already settles one useful stratum: sufficiently dense equal-valuation
+double walls pierce because two owners disappear simultaneously.
 
 ### 1.8 The even-maximum collar is now a clocked incidence problem
 
@@ -464,6 +520,10 @@ event address:
   exact wall positions, centered/global ranks, simultaneous blocks,
   and the Euclidean phase cocycle;
 
+packet transport:
+  ordered prefix-legal collision paths, reduced deck holonomy, and the
+  metric translation of the centered-Beatty base cell;
+
 fibre:
   labelled owner-to-sheet incidences, strict endpoint deletion,
   inverse steps, and global carry;
@@ -472,8 +532,8 @@ stalk decomposition:
   inclusion-minimal owner sets that already cover throughout an interval;
 
 essential dynamics:
-  changes of those minimal stalks, together with redundancy roots,
-  flank owners, or overlap chips.
+  changes of those minimal stalks and reduced packet-return classes,
+  together with redundancy roots, flank owners, or overlap chips.
 ```
 
 This package is larger than a tournament and much smaller than the original
@@ -496,15 +556,31 @@ that wall.  Contract maximal runs of stalk-redundant walls.  The remaining
 marked sequence, with the minimal-cover sets on both sides, is the
 **owner-switch skeleton**.
 
+THM-794 shows that this is still not the terminal quotient if every retained
+period is marked merely “active.”  For an ordered packet path `P`, also retain
+its return class
+
+```text
+Hol(P)=[(-N_a(P) w_a^(-1))_a] in F_7^8/Delta.
+```
+
+Contract a maximal repetition only when the same prefix-legal collision path
+returns by the diagonal class and remains in the same centered-Beatty base
+cell type.  The result, with its nonzero metric translation still attached,
+is the **holonomy-reduced packet skeleton**.  The metric clause prevents a
+closed fibre loop from being mistaken for a closed orbit on the core-safe
+base.
+
 This definition deliberately makes the THM-779 family simple: its `2m` walls
 are redundant over the fixed `W_0` stalk.  It also explains why the definition
 must remain over the metric base.  A stalk may persist on one core-safe
 component and fail on another even when the abstract token state and owner
 word are isomorphic.
 
-The proposed skeleton is not yet proved to have bounded complexity.  It is a
-better theorem target because its complexity cannot be inflated by adding a
-redundant high-frequency owner to an already exact stalk.
+The proposed reduced skeleton is not yet proved to have bounded complexity.
+It is a better theorem target because its complexity cannot be inflated either
+by adding a redundant high-frequency owner to an exact stalk or by repeating
+THM-794's diagonal full-support packet loop.
 
 ## 3. Tournament Analysis after challenging the vertices
 
@@ -530,6 +606,7 @@ tournament.
 | safe components or top teeth | cyclic order, width, ordered flank owners | repeated collar incidence and tooth occupancy | exact sheet transport if reduced to an order tournament |
 | sheets | owner incidence or Cayley-edge incidence; circle reflection as gauge | the fixed-phase cover predicate and overlap degree | endpoint order, inverse step, event owner, and future continuation |
 | endpoint events | centered rank; chronological versus Euclidean decoding | the complete wall/tie schedule | current token assignment, persistent stalk, and metric restriction to `G_P` |
+| active packet occurrences | chronology; switch to reduced deck-return class | visitor support and abelian owner frequencies | prefix legality, repeated zero holonomy, centered-Beatty cell, and metric translation |
 | rooted redundancy states | collision-hop transitions; choice of duplicated root | the local `A_8` cocycle and supportability of an event word | absolute root, global carry, metric schedule, and the core-safe base; strong connectivity prevents a state-only exit proof |
 | minimal cover stalks | persistence across a wall; before/after minimal bases | genuine owner switches after redundant walls are contracted | raw event multiplicity by design; component location must remain as a sidecar |
 | proof obligations `(event, chip)` or `(tooth side, owner)` | transports or discharges the obligation | exactly the boundary incidence used by THM-792 | raw runner geometry unless the event clock and edge label remain attached |
@@ -579,10 +656,12 @@ the irreducible sidecar.
 The branch is finite in principle, but the following uniform arguments are
 still missing.
 
-1. **Shallow full-residue rigidity beyond the bounded lift box.**  THM-770
-   closes lift height twelve and the corresponding primitive range, but a
-   scale-free endpoint-owner coherence theorem or a complete finite execution
-   of the global bound is absent.
+1. **Shallow full-residue rigidity from Hamming radius two onward.**  THM-770
+   closes lift height twelve, and THM-795 closes every arbitrary-height
+   Hamming-one star around an AP dilation.  What remains is a scale-free
+   endpoint-owner coherence theorem when two or more replacement teeth share
+   the missing-owner splice germs: prove a Hall defect, forced common divisor,
+   or complete the finite global bound.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  A proof may show that the folded containment `(FD)` cannot persist,
@@ -607,11 +686,12 @@ The corrected alternatives are precise.
 
 1. Prove that no deck blocks the **entire** closed core-safe set, or classify
    the exceptional whole-core covers.
-2. Define and bound the owner-switch skeleton after persistent exact
-   seven-stalks are contracted.  A raw wall bound is impossible.
+2. Define and bound the holonomy-reduced packet skeleton after persistent
+   exact seven-stalks and repeated diagonal-return packet loops are contracted.
+   Raw wall and active-period bounds are both impossible.
 3. Use THM-783's period-sum, single-visitor, cluster-balance, and de-phasing
-   laws to bound the genuine visitor-cluster word or its metric extent after
-   stalk contraction.
+   laws to bound genuine transitions between reduced packet-return classes or
+   their metric extent after both contractions.
 4. Combine THM-779's supportability equation with THM-778's centered schedule
    to prove non-synchronization on at least one core-safe component.
 5. Complete the simultaneous-wall analysis below the current large-gcd pierce,
@@ -660,17 +740,20 @@ The history suggests a disciplined recursion rather than a new scalar.
    simultaneous blocks, and metric positions retained.
 5. **Factor persistent stalks.**  Remove event multiplicity already absorbed by
    a fixed exact cover.
-6. **Study the essential skeleton.**  Apply the redundancy cocycle, overlap-chip
+6. **Factor diagonal packet holonomy.**  Contract repeated prefix-legal packet
+   loops whose return is zero in the reduced deck, while retaining their
+   metric base translation.
+7. **Study the essential skeleton.**  Apply the redundancy cocycle, overlap-chip
    transport, divisor shells, or endpoint-owner constraints only to genuine
-   changes of minimal cover basis.
-7. **Descend or tear.**  Either exhibit a free sheet/time, force a dyadic or gcd
+   changes of minimal cover basis or reduced return class.
+8. **Descend or tear.**  Either exhibit a free sheet/time, force a dyadic or gcd
    descent, or return a smaller normalized packet with all sidecars intact.
 
 The key invariant is not “how complicated is the speed vector?”  It is “how
-many genuinely different minimal cover stalks can the measured core-safe base
-support under its exact mechanical schedule?”  That question survives the
-counterexamples that defeat bounded denominators, raw component counts, and
-raw wall counts.
+many genuinely different minimal cover stalks and reduced packet-return classes
+can the measured core-safe base support under its exact mechanical schedule?”
+That question survives the counterexamples that defeat bounded denominators,
+raw component counts, raw wall counts, and active-period counts.
 
 ## Closing reframe
 
@@ -684,7 +767,8 @@ speed vector
   -> endpoint-ranked mechanical word
   -> labelled sheet-incidence fibre
   -> persistent cover stalks
-  -> owner-switch skeleton
+  -> ordered packet paths / reduced deck holonomy
+  -> holonomy-reduced owner-switch skeleton
   -> lonely witness or a smaller residual packet.
 ```
 

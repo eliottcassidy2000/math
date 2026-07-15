@@ -9,6 +9,8 @@ related: [THM-779, THM-784, THM-786, THM-788, HYP-6840, HYP-6845, HYP-6850, MIST
 verification:
   - 04-computation/lrc14_full_active_packet_holonomy_codex_S10.py
   - 05-knowledge/results/lrc14_full_active_packet_holonomy_codex_S10.out
+  - 04-computation/lrc14_full_active_marginal_holonomy_audit_codex_S10.py
+  - 05-knowledge/results/lrc14_full_active_marginal_holonomy_audit_codex_S10.out
 ---
 
 # THM-794 — Unbounded full-active prime-seven packets

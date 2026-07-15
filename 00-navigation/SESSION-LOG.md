@@ -385,6 +385,28 @@ with at most two periods.  The exact `(69,29)` tuple survives both marginal
 tests and all fixed-span constraints, proving that the next invariant must
 couple them through one centered-Beatty order/carry word.
 
+A subsequent live-main pull supplied THM-794 and corrected the compactness
+interpretation.  The family `F=49H+1`, `w_j=F-7j` has `H-1` consecutive full-
+support active packets at `ceil(f/g)=2`; their composite return is diagonal
+sheet translation.  This refutes the universal extent conjecture and any
+absolute or ratio-only active-period bound.  New exact cross-audit shows why
+the repaired marginal theorems remain valid but nonuniform: their balanced
+hypergraph is `{C}` with `W_*=F-49` and slack `42/g`, while the complete-`g`
+packet target has exact `L-infinity` distance `49/(2g)` from its polytope.
+Both margins vanish like `1/H`.  The repeated owner word is prefix-legal and
+zero in `F_7^8/Delta`, so the theorem-facing object is now an ordered packet-
+path groupoid with reduced holonomy and metric/core incidence, not an active
+packet count or occupation vector.
+
+The same live-main cycle completed THM-795 on the shallow n=12 branch.  A
+congruent one-coordinate lift of any unit AP dilation is tight only when it is
+unchanged, uniformly in both dilation and lift height.  The proof turns the
+`c` missing-owner splice germs into a full deck grid that one replacement
+danger tooth cannot contain, then descends to seven exact atoms.  Consequently
+the unbounded shallow residual begins at Hamming radius two.  Its natural next
+carrier is a bipartite splice-sheet/replacement-tooth graph with deck orders
+and oriented safe germs, where two replacement colours may share obligations.
+
 The folded route also gained a global theorem and an exact quotient boundary.
 For `delta=2/(143B)`, tightness forces
 `mu(E)+sum min(g_i,2delta)<=mu(H)` and
@@ -421,11 +443,13 @@ coordinate, not a proof quotient.
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
 proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear,
 global eroded-packet noncontainment in every admissible folded diamond, and a
-stalk-quotiented visitor/switch bound joining THM-778/779/783/786/788.
+stalk- and holonomy-quotiented collision-path bound joining
+THM-778/779/783/786/788/794, together with a Hamming-radius-two shallow
+sheet--tooth obstruction extending THM-795.
 
-FILES: THM-783/784/786/789/791/792; corrected THM-779; MISTAKE-147/148; exact collar,
+FILES: THM-783/784/786/789/791/792/794/795; corrected THM-779; MISTAKE-147/148/149; exact collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
-scripts/outputs; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+scripts/outputs plus the exact marginal-holonomy cross-audit; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

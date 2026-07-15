@@ -1,7 +1,7 @@
 ---
 id: THM-786
 title: The corrected extent-form exit theorem — factor-two companion spans, residue transversals, and two-scale packet polytopes
-status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse/fractional balanced-cluster-transversal bounds; g-period packet-polytope separation) + EXACT NO-GO (the two marginal density relaxations do not couple) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, sparse threshold sum<c<f, and active-period compactness interpretation are withdrawn) + REFUTED (the universal extent conjecture, by THM-794) + OPEN (Beatty-order/packet-holonomy coupling and core incidence)
+status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse/fractional balanced-cluster-transversal bounds; g-period packet-polytope separation) + EXACT NO-GO/STRESS TESTS (the two marginal density relaxations do not couple, and their positive margins can vanish along the THM-794 full-holonomy family) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, sparse threshold sum<c<f, and active-period compactness interpretation are withdrawn) + REFUTED (the universal extent conjecture, by THM-794) + OPEN (Beatty-order/packet-holonomy coupling and core incidence)
 source: opus-2026-07-14-S304 package, exact-scope correction by codex-2026-07-14-S10
 depends_on:
   - THM-783   # the visitor laws this refines
@@ -18,6 +18,8 @@ verification:
   - 05-knowledge/results/lrc14_r8_g_period_packet_polytope_codex_S10.out
   - 04-computation/lrc14_full_active_packet_holonomy_codex_S10.py
   - 05-knowledge/results/lrc14_full_active_packet_holonomy_codex_S10.out
+  - 04-computation/lrc14_full_active_marginal_holonomy_audit_codex_S10.py
+  - 05-knowledge/results/lrc14_full_active_marginal_holonomy_audit_codex_S10.out
 ---
 
 # THM-786 — the extent-form exit theorem
@@ -368,6 +370,114 @@ must be coupled through the **same** centered Beatty event word, including
 local order and carry.  Neither residue balance, individual density, fixed
 span, nor the two separate frequency polytopes retain that coupling.
 
+### (3g) Exact THM-794 stress test: positive marginal distance is not uniform
+
+THM-794 also lies on the nominally finite side of **both** marginal tests.
+This does not contradict either theorem; it proves that their quantitative
+margins can collapse along a structured family.  Put
+
+```text
+F=49H+1,       f=F,       g=F-7,
+C={F-14,F-21,F-28,F-35,F-42,F-49},       H>=2.
+```
+
+Every inverse residue is one.  Thus a balanced cluster must satisfy
+`1+|B|=0 mod 7`, so the balanced-cluster hypergraph has the single edge `C`.
+Its exact fractional speed-weight is
+
+```text
+W_*=F-49,
+```
+
+attained by putting unit weight on the slowest companion.  Formula (T), with
+`Lambda=1`, becomes
+
+```text
+M < 1+(F-49)(F-7)/(21F).                                (T794)
+```
+
+It permits the family's `H-1` explicitly complete full-cluster rows.  Combined
+with part (2c), it gives the valid but nonuniform extent estimate
+
+```text
+L < 2/g+g/(21F),
+```
+
+which tends to `1/21` and therefore permits THM-794's extent tending to
+`1/49`.  The degenerating transversal slack is exactly
+
+```text
+1-W_*/g=42/g.                                           (Tslack)
+```
+
+The complete-`g`-period polytope has the same behavior.  Here `q=1` and
+`theta=7/g`.  The residue equation leaves exactly the seven packet types
+
+```text
+(0,C),        (1,C minus {c}) for c in C.               (P794)
+```
+
+Write `p_c=1-z_c` for the missing-companion coordinates.  Their convex hull is
+
+```text
+p_c>=0,        epsilon=sum_c p_c<=1.
+```
+
+The target has
+
+```text
+epsilon_0=7/g,       p^0=(7,14,21,28,35,42)/g.
+```
+
+On the polytope the functional
+
+```text
+h(epsilon,p)=p_4+p_5+p_6-epsilon
+```
+
+is nonpositive.  At the target it equals `98/g`, while its coefficient
+`l_1` norm is four.  Hence `dist_infinity(r,P)>=49/(2g)`.  Equality is attained
+at
+
+```text
+p=(0,0,0,7/2,21/2,35/2)/g,       epsilon=63/(2g),
+```
+
+so exactly
+
+```text
+delta=49/(2g),       T<2g/49=2H-12/49.                  (Pdist)
+```
+
+This permits the actual `T=H-2` complete `g`-periods.  Both reductions are
+therefore **per-tuple finiteness theorems**, not uniform compactness theorems:
+their positive margins are `Theta(1/H)` on this family.
+
+The reason is visible before abelianization.  Every fastest period has the
+ordered owner word
+
+```text
+P_m=(f,w_7,w_6,...,w_1),
+```
+
+and its wall phases are `(m,m+1,...,m+7) mod 7`, so every prefix is a legal
+THM-783 anchored extension.  Every owner crosses once with inverse residue
+one.  The composite raw token map is therefore
+
+```text
+k -> k-(1,1,...,1),
+```
+
+which is zero in the reduced deck `F_7^8/Delta`.  Thus `P_m` is a closed legal
+loop in the normalized `A_8` collision automaton while the metric base advances
+by `1/F`.  The cluster and packet polytopes retain only its abelian occupation
+vector.  They forget its prefix-legal order, zero reduced holonomy, continued
+residence in one centered-Beatty order cell, and nonzero metric translation.
+
+The next theorem-facing object is consequently a skew-product packet-path
+groupoid: centered-Beatty base cell, ordered collision-state path, reduced
+deck holonomy, and metric/core-incidence lift.
+
 ## (4) The adversarial extent census (SESSION-REPORTED; not replayed by the stored script)
 
 Maximal run extent as a fraction of 1/w_g + 2/w_f, quarter-period windows:
@@ -403,7 +513,8 @@ used to validate the corrected laws in part (3).
 > (3c), and more generally whenever (3d) has `W_lambda<g`, an explicit finite
 > multiple of the same meshes follows.  Part (3e) gives an independent finite
 > bound whenever the `g`-period target has positive distance from its packet
-> polytope. Components
+> polytope.  These are per-family bounds; part (3g) shows that both controlling
+> margins can tend to zero. Components
 > shorter than the relevant bound are finite
 > per-family checks (the THM-779 integer walk, O(#walls)).
 
@@ -418,33 +529,39 @@ THM-788 proves that **if** the number `A` of active fastest periods is bounded,
 then ratio-sensitive extent and wall bounds follow after empty fastest-owner
 blocks are contracted.  THM-794 proves that `A` itself is unbounded even at
 `ceil(f/g)=2`: a full seven-visitor packet can repeat by diagonal sheet
-translation.  Part (3d) removes every residue profile whose minimum
-speed-weight fractional transversal is below `g`, even when `sum C>=g`;
-part (3e) independently removes profiles separated by their complete
-`g`-period packet polytope.  The exact tuple in (3f) proves that high-
-transversal, polytope-admissible profiles remain.  For them the missing
-invariant is the common centered-Beatty order coupling the `f`-period cluster
-word to the `g`-period packet word, together with the factor-two spans (S),
-the signed law (B), and THM-779's token supportability equation.  This is both
-a Diophantine-combinatorial coupling question and a geometric core-incidence
-question.  The old universal extent conjecture is refuted.  The sharper open
-target is to quotient diagonal packet holonomy and then prove that any long
-normalized collision-state persistence misses the relevant core-safe
-component.
+translation.  Part (3d) gives a finite bound for each residue profile whose
+minimum speed-weight fractional transversal is below `g`, even when
+`sum C>=g`; part (3e) independently gives a per-profile bound when the target
+is separated from its complete-`g`-period packet polytope.  Part (3g) proves
+that neither statement is uniform: both positive margins are `Theta(1/H)` on
+THM-794.  The exact tuple in (3f) shows that high-transversal,
+polytope-admissible profiles remain as well.  The missing invariant is the
+common centered-Beatty order coupling the `f`-period cluster word to the
+`g`-period packet word, together with its ordered collision path, reduced deck
+holonomy, the factor-two spans (S), the signed law (B), and THM-779's token
+supportability equation.  This is both a Diophantine-combinatorial coupling
+question and a geometric core-incidence question.  The old universal extent
+conjecture is refuted.  The sharper open target is to quotient legal diagonal-
+holonomy loops and then prove that any remaining normalized collision-state
+persistence misses the relevant core-safe component.
 
 ## (7) Tournament/quotient audit
 
 Taking runners or wall coordinates as tournament vertices does not preserve
 the theorem predicate. Fast refinement leaves a runner tournament unchanged,
 while chronological wall comparison gives a transitive tournament with one
-Hamiltonian path no matter which companion supplies balance. The exact object
-here is the labelled incidence set
+Hamiltonian path no matter which companion supplies balance. The first
+lossless incidence lift is
 
 ```text
 (g-wall, containing f-period, serving companion, visitor set),
 ```
 
-with metric endpoints as a sidecar. Switching from chronology to inverse-
-residue order can expose balance but destroys the span inequalities. Thus the
-signed difference law (B) is a hypergraph conservation rule, not a tournament
-edge law; any tournament fingerprint must retain the incidence lift.
+with metric endpoints as a sidecar.  THM-794 proves that even this set is not
+the terminal object: its visitor set is constantly full while a prefix-legal
+zero-holonomy collision loop repeats.  The incidence lift must therefore be
+decorated by the ordered automaton path and reduced deck return map.  Switching
+from chronology to inverse-residue order can expose balance but destroys the
+span inequalities. Thus the signed difference law (B) is a hypergraph
+conservation rule, not a tournament edge law; any tournament fingerprint must
+retain the ordered incidence/holonomy lift.

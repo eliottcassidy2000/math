@@ -36,7 +36,11 @@ Format per entry:
   candidate must contract both empty refinement and central/full-support
   packet holonomy, for example by counting SCC transitions in the collision
   transducer modulo diagonal deck translation while retaining metric lift
-  data for core incidence.
+  data for core incidence.  The repaired marginal bounds do not restore
+  uniformity: on this family the fractional-transversal slack is exactly
+  `42/g` and the complete-`g` packet-polytope distance is `49/(2g)`.  Both are
+  positive for each tuple but tend to zero, so their bounds grow linearly with
+  `H` and admit the repeated packet.
 - **Impact:** THM-788's inequalities remain proved and useful conditional
   conversions; only its claim that `A` is the corrected compactness target is
   withdrawn.  THM-786's no-companion, transversal, packet-polytope, and
@@ -50,8 +54,9 @@ Format per entry:
   175 Hamiltonian paths); only its marked cut rotates.  Bare tournaments lose
   the return map, while raw chronology counts repeated gauge cycles as new
   vertices.
-- **Source:** codex-2026-07-14-S10, THM-794 and exact Fraction replay
-  `lrc14_full_active_packet_holonomy_codex_S10.py`.
+- **Source:** codex-2026-07-14-S10, THM-794 and exact Fraction replays
+  `lrc14_full_active_packet_holonomy_codex_S10.py` and
+  `lrc14_full_active_marginal_holonomy_audit_codex_S10.py`.
 
 ---
 

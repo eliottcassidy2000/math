@@ -85,9 +85,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | prime-lens endpoint transport | Pairwise midpoint clocks are centered mechanical words with an Euclidean parity cocycle; centered Beatty ranks reconstruct every simultaneous wall and drive the exact `F_7` skew product.  The named r=8 row has 10 simple covered walls with palindromic owner word `162,108,108,206,197,197,206,108,108,162` | THM-778 + 6,400-pair/five-movie exact audit |
 | merged-node tiling fibres | A fixed-path tiling maps to its canonical class and converse-merged node; the inverse node fibre is intrinsically `union HP(T)/Aut(T)`.  All n=3..7 atlases round-trip.  For `n7-a267`, `H=175` and `|Aut|=7` explain the exact 25 masks. | THM-781 + 33,866-tiling exact audit |
-| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; the redundancy cocycle gives an exact event-word test and rooted states form an `A8` torsor. Raw wall length is unbounded: a divisor-complete persistent seven-stalk family has `2m` covered walls, and an independent simpler family has `21N`. The live target is the stalk-quotiented owner-switch/visitor skeleton. | THM-779/784; MISTAKE-147; exact refuter/A8 audit |
-| r=8 visitor/extent laws | Phi recurrence, signed balance, and factor-two span laws are proved. A finite bound follows if the balanced-cluster hypergraph has fractional speed-weight `<g`, strictly beyond `sum c<g`, or if the orthogonal complete-`g`-period frequency target lies outside its exact packet polytope. The dense `(65,64;26,33,40,47,54,61)` row closes with at most two complete `g`-periods. Exact `(69,29;4,5,12,13,16,27)` data satisfy both marginals and the span laws, proving that their common Beatty order/carry is the missing coupling. THM-788 contracts empty fastest periods to active normal form. | THM-783/786/788 + exact transversal/packet certificates; MISTAKE-147/148 |
-| eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is subsumed by THM-779's integer token walk. The global `1/7+O(gcd/w)` partner-buffer law remains VERIFIED but must be restricted to the core-safe exit set; whole-core blocking and the general-density stalk-quotiented switch bound remain OPEN. | HYP-6840 + THM-779/783/784/786/788 |
+| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; the redundancy cocycle gives an exact event-word test and rooted states form an `A8` torsor. Raw wall length is unbounded by persistent-stalk refinement. Active-period count is also unbounded at `ceil(f/g)=2`: THM-794 repeats a full seven-visitor packet whose return is diagonal translation, hence zero in `F_7^8/Delta`. The live target is the stalk- and holonomy-quotiented packet path with metric lift. | THM-779/784/788/794; MISTAKE-147/149; exact refuter/A8/holonomy audits |
+| r=8 visitor/extent laws | Phi recurrence, signed balance, and factor-two span laws are proved. A per-tuple finite bound follows if the balanced-cluster hypergraph has fractional speed-weight `<g`, or if the complete-`g`-period target lies outside its exact packet polytope. The dense `(65,64)` row closes with two periods; exact `(69,29)` data survive both marginals. THM-794 refutes the universal extent and active-period compactness claims while satisfying both positive tests: `1-W_*/g=42/g` and `dist(r,P)=49/(2g)` both vanish. The missing carrier is the common Beatty-ordered collision path, reduced deck holonomy, and metric/core incidence. | THM-783/786/788/794 + exact transversal/packet/holonomy certificates; MISTAKE-147/148/149 |
+| eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is subsumed by THM-779's integer token walk. The global `1/7+O(gcd/w)` partner-buffer law remains VERIFIED but must be restricted to the core-safe exit set; whole-core blocking and the general-density stalk/holonomy-quotiented switch bound remain OPEN. | HYP-6840 + THM-779/783/784/786/788/794 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw positive-length fragmentation bound `r_+(P)<=B(c*)` | REFUTED by an exact four-far family and an independent census; peel-relative `rho` is measured at most `9.335` only on the stated bank | THM-798; HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; phase pigeonhole gives the height-free floor `182^(-12)`; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`, while that sharp global value remains CONJECTURAL | THM-777/780 |
@@ -99,11 +99,12 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
+| shallow AP Hamming-one star at arbitrary height | PROVED scale-free: replacing one coordinate of any unit AP dilation by a congruent lift is tight only for the original coordinate.  Every residual non-AP shallow packet differs from every AP dilation in at least two coordinates. | THM-795 + exact core/atom certificate |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`.  An exact core traps every local refinement at `4/17` but escapes at `14/19`; moreover two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence.  Global selection must retain signed tooth/slope address. | THM-782/789 + exact trap/erosion-liar certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative and a quadratic energy cocycle. FINITE-EXACT: all 101,850 initial height-24 covers tear by `3/8` (38 groups), and all divisor-complete covers by `4/11` (36 groups). Uniform arithmetic-language exclusion remains open. | THM-792 + exact root-current/prefix certificate |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792; HYP-6820 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, the full arbitrary-height Hamming-one star around every AP dilation, every two-sheet core in `[1,19]` with unbounded odd exceptions, the speed box through 100, and the forced-`w=13` quotient box through 24 are empty.  Shallow Hamming radius at least two, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -160,9 +161,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    de-phasing. After persistent stalks are contracted, THM-788 replaces the
    word by decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb
    free fastest-owner refinement and `V` packets are ordered zero-sum visitors.
-   Bound `A`, retain the redundancy roots, then intersect the resulting metric
-   interval with the core-safe base. A continued-fraction digit is useful only
-   through this labelled fibre action.
+   THM-794 proves that `A` cannot be bounded: contract repeated legal packet
+   loops whose return is diagonal in the deck, retain transitions in the
+   reduced collision groupoid and the redundancy roots, then intersect the
+   metric lift with the core-safe base. A continued-fraction digit is useful
+   only through this labelled fibre action.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
 4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
@@ -194,8 +197,11 @@ three-exception equality edge is an `s=3` persistent colour cover.  THM-768
 separately rules out a largest speed that is the unique 13-multiple.  THM-770's
 exact owner-CSP settles all shallow labelled packets through lift height twelve
 (`13^12` conceptual rows), leaving only the permitted dilates and the unique
-primitive AP.  Neither result proves an unbounded shallow descent or eliminates
-the deep colour-cover branch.
+primitive AP.  THM-795 adds a scale-free direction: at every lift height and
+around every unit AP dilation, a congruent one-coordinate replacement is tight
+only when it is unchanged.  Thus any unbounded shallow residual begins at
+Hamming radius two.  This still does not prove general shallow descent or
+eliminate the deep colour-cover branch.
 
 The two-sheet edge is now considerably narrower.  THM-772 proves that its
 ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
@@ -293,10 +299,12 @@ THM-769's exact sheet-capacity inequality.  THM-770 exhausts all `13^12`
 shallow packets through lift height twelve by a lossless `24,008`-cell
 endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
 `c=1,...,12,14`, hence the only primitive row is the AP.  This closes the
-shallow sporadic slice through `max A<=168`, not the higher shallow lifts or
-any deep branch.  Its residue-obligation tournament has all `66` burdens tied;
-the theorem lives in the owner-incidence hypergraph, not the transitive tie
-quotient.
+shallow sporadic slice through `max A<=168`.  THM-795 closes the full
+arbitrary-height Hamming-one star around every AP dilation by a missing-owner
+splice grid; the higher shallow residual now starts with two simultaneous
+replacement colours.  Its residue-obligation tournament has all `66` burdens
+tied, and THM-795's sheet-margin tournament is also transitive; both theorems
+live in owner/sheet incidence, not the tie quotient.  Deep packets remain.
 
 ## 4. The one-line frontier
 

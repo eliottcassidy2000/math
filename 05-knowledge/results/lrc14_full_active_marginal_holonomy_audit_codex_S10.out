@@ -1,0 +1,18 @@
+H=2 F=99 W*=50 slack=21/46 active=1 transversal_bound=6679/2079
+  delta=49/184 complete_g=0 packet_bound=184/49 extent=1/99 derived_extent_bound=6311/95634
+H=5 F=246 W*=197 slack=42/239 active=4 transversal_bound=52249/5166
+  delta=49/478 complete_g=3 packet_bound=478/49 extent=2/123 derived_extent_bound=67453/1234674
+H=20 F=981 W*=932 slack=21/487 active=19 transversal_bound=928369/20601
+  delta=49/1948 complete_g=18 packet_bound=1948/49 extent=19/981 derived_extent_bound=494939/10032687
+H=200 F=9801 W*=9752 slack=21/4897 active=199 transversal_bound=95716909/205821
+  delta=49/19588 complete_g=198 packet_bound=19588/49 extent=199/9801 derived_extent_bound=48167039/1007905437
+balanced_hypergraph={C}
+allowed_packets=(0,C) and (1,C-minus-{c})
+separator=sum(last_three_missing)-epsilon <= 0; l1=4
+target_excess=98/g exact_delta=49/(2g)
+reduced_holonomy=0 in F7^8/Delta
+tournament_fingerprint=transitive score_histogram=0..H-2 directed_cycles=0 singleton_SCCs=true hp_count=1
+preserved=packet_count_and_abelian_occupation
+destroyed=ordered_prefix_legal_path_reduced_holonomy_metric_incidence
+canonical_sha256=3bb05201d747b57788088bc8a4845e4625cc3addf19c0c9df69b3e5c55a2c8f0
+PASS
