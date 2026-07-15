@@ -144,8 +144,9 @@ R_j(u)[a,b]=u[a+1_(a>=j),b+1_(b>=j)].                    (9)
 An internal card also needs the shortcut seam
 `s_j=u[j+1,j-1]`; when the inherited shortcut points against the fixed path,
 `R_j` alone is not a literal presentation of the induced tournament in the
-inherited order.  B is different from every internal `R_j`: among 58 sources,
-the numbers with `B(u)=R_j(u)` for `j=2,...,8` are
+inherited order.  B is different from every internal `R_j` as a coordinate
+map, although accidental equalities occur on individual bank elements.  Among
+58 sources, the numbers with `B(u)=R_j(u)` for `j=2,...,8` are
 
 ```text
 0,0,1,2,1,0,0.                                          (10)

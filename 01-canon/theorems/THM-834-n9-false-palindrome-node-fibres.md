@@ -4,7 +4,7 @@ title: The 58 n=9 false-palindrome pairs occupy 53 converse-merged tournament no
 status: PROVED FINITE-EXACT FORWARD/INVERSE-FIBRE MAP + n8 BLACK-FLOW PLACEMENT
 source: codex-2026-07-15-S13b
 depends_on: [THM-828, THM-832]
-related: [THM-796, THM-809, THM-833, THM-838, THM-842, HYP-3809, HYP-6880]
+related: [THM-796, THM-809, THM-833, THM-838, THM-842, THM-843, HYP-3809, HYP-6880]
 verification:
   - 04-computation/n9_false_palindrome_node_forward_map_codex_S13b.py
   - 05-knowledge/results/n9_false_palindrome_node_forward_map_codex_S13b.out
@@ -174,6 +174,15 @@ selected face bank, not a claim that the global size-eight metagraph lacks
 blue symmetry.
 
 ## An objective sector order and its obstruction
+
+The S13e full-shell audit corrected one convention error in the local-depth
+sidecar.  This verifier's legacy adjacency convention makes `FULL`, not zero,
+the transitive presentation, so the BFS root is `atlas[FULL]=3527`.  The
+correct global local-depth maximum is eight.  Re-rooting changes 114 of the
+155 selected depth labels but changes no node fibre, line, category, score
+axis, bridge count, cube statement, or sector rank; the primary axis means in
+the following order are all distinct.  The stored output and JSON have been
+replayed with the corrected root.
 
 For each realized `D` sector, average over its supporting face-node
 presentations.  Order first by decreasing mean score-axis coordinate, then

@@ -248,7 +248,12 @@ def main() -> None:
     # Exact global n=8 quotient structure.
     local_codes = quotient_edges(atlas)
     local_adj = edge_adjacency(local_codes)
-    root = int(atlas[0])
+    # This verifier uses the legacy bit convention in ``adjacency``: bit one
+    # points from the larger path label to the smaller.  Hence FULL, not zero,
+    # is its transitive fixed-path presentation.  The atlas itself was exported
+    # in the opposite explorer bit convention, so using atlas[0] here would
+    # silently measure depth from the wrong endpoint node.
+    root = int(atlas[FULL])
     local_depth = bfs(local_adj, {root})
     if min(local_depth) < 0:
         raise RuntimeError("local quotient is disconnected")

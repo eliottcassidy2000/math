@@ -107,6 +107,11 @@ difference.  None can silently substitute for another.
 9. **B3 continuation.**  THM-842 proves that B gap contraction maps the 58
    cells injectively to 58 lower `Q` and 58 lower `bar P` cells.  The unordered
    A/C endpoint deck has 29 doubletons; adjoining B restores 58 singletons.
+10. **Full n8 node-axis shell.**  THM-843 expands the 155 face nodes in the
+    exact blue/black complement-line graph.  Black radius one has 3,308/3,528
+    nodes; blue re-enters through exactly two mixed portals.  Monotone
+    unrestricted and `blue* black*` reach coincide on 3,069 nodes and contain
+    every one of the 50 balanced nodes.
 
 The missing map is now general continuation, not static lookup: given a
 decorated sector or node fibre, what decorated fibres can lift, delete, flip,
@@ -205,6 +210,15 @@ distinct exclusively-black projected complement-line node pairs.  The
 selected defect bank therefore has no blue rail; its black `|Delta x|`
 histogram is `(0:32,8:52,16:72,24:4,32:13,48:1)`.
 
+THM-843 shows precisely where that local statement stops.  The full black
+radius-one shell contains 3,308 nodes; the two mixed seed nodes are the only
+blue portals, supplying 25 external blue neighbours.  The coloured union has
+3,310 nodes and contains the entire `x<56` distributed tail.  Endpoint
+curvature refines the 47,872 incident black projected supports to 58,937
+cells, but every fibre is still even under reflection.  Thus the selected
+bank is internally black yet globally almost spanning, and curvature still
+does not replace mirror position.
+
 ### Continued fractions and owner transport
 
 THM-778 says a continued-fraction digit is safe only with its token action.
@@ -216,6 +230,13 @@ centered consecutive word exactly: rank `4->4`, raw-S2 kernel rank two, all
 58 literal `Q` orbits and coupled `P` cells distinct.  Static chirality is
 not functorial—eight signs reverse—so the next fibre product must retain the
 layerwise moment word and owner/Bezout sidecar.
+
+Incoming THM-840 makes the general logical boundary operation-indexed: a
+kernel can be a congruence for monotone insertion while failing deletion,
+replacement, or exact evaluation.  THM-842/843 give the tournament-side
+instance.  Bare node identity, endpoint deletion, B gap contraction,
+blue/black line expansion, and a CF lift must be audited as five different
+relations rather than called one recursive address.
 
 ### Positional moments and additive reconstruction
 
@@ -248,10 +269,10 @@ reflection-fixed locus.
 
 ## Critical next computations, in order
 
-1. **Full node-axis neighbourhood.**  THM-834 has placed the collision bank
-   and shown its selected relations are all black.  Expand one metagraph ball
-   around its 155 face nodes, retain blue and black incidence separately, and
-   quantify where global blue symmetry re-enters the black-only bank.
+1. **Closed lift/delete word.**  Compose THM-838's `Phi:X_9->X_10` with each
+   THM-842 face role `A_10,B_10,C_10`.  Compute the literal kernels first,
+   then test the theta sheet, seam, `Q`, bare-node marginals, and coupled
+   `bar P` under the named composites.
 2. **n10 codec preflight.**  Carry the rank-four sectors through the next
    relation join before building a full n9 atlas.  Retain second moments as
    the unconditional repair and test whether the residual kernel grows by
@@ -259,10 +280,7 @@ reflection-fixed locus.
 3. **General CF-word action.**  Factor the literal coordinate action of two
    consecutive continued-fraction digits, determine its semigroup on the
    four-bit core, and classify which words preserve the coupled `P` descent.
-4. **Inverse-lift continuation.**  THM-842 decides A/B/C descent and THM-838
-   one forward CF copy.  Add one inverse lift, retain the theta sheet and seam
-   tokens, and minimize only after composing lift with deletion.
-5. **Metric fibre product.**  Couple literal `Q` orbit, skew chirality,
+4. **Metric fibre product.**  Couple literal `Q` orbit, skew chirality,
    THM-829 Bezout row, owner/root labels, and actual witness intervals.  Prove
    a preservation lemma before claiming any implication for LRC(14).
 
@@ -272,8 +290,9 @@ reflection-fixed locus.
   node/curvature data; compare its square with the four defect coordinates.
 - **THM-814 fixed-layer swap:** the n8 black codec fails on one positional
   kernel; test whether it is the first shadow of the n9 skew sectors.
-- **THM-830 deletion-deck mirror current:** apply its deck calculus to the 58
-  pairs and ask whether deletion reconstructs chirality.
+- **THM-830 deletion-deck mirror current:** THM-842 applies its A/B/C roles and
+  isolates the theta sheet.  Next test whether lift followed by each role
+  retains the sheet, the shortcut seam, or neither.
 - **THM-549/550 half-tiling parity:** blue lines are the reflection-fixed
   half-tiling; use even/odd recursion on the defect basis, not only cell count.
 - **HYP-3809 parity skeleton / even black graph:** test whether sector mass or

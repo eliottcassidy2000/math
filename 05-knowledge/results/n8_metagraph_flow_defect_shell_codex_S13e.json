@@ -1,0 +1,579 @@
+{
+  "THM834_support": {
+    "black_distance_from_support": {
+      "histogram": {
+        "-1": 3,
+        "0": 155,
+        "1": 3153,
+        "2": 215,
+        "3": 2
+      },
+      "maximum_finite_distance": 3,
+      "unreachable": 3
+    },
+    "black_marked_endpoint_curvature_drift": {
+      "by_endpoint_q": {
+        "0": {
+          "higher": 8498,
+          "lower": 4120,
+          "marked_endpoint_half_incidences": 13828,
+          "mean_delta_C3": {
+            "decimal": 0.26337865201041366,
+            "denominator": 6914,
+            "numerator": 1821
+          },
+          "sum_delta_C3": 3642,
+          "tie": 1210
+        },
+        "1": {
+          "higher": 13506,
+          "lower": 21380,
+          "marked_endpoint_half_incidences": 43480,
+          "mean_delta_C3": {
+            "decimal": -0.4753909843606256,
+            "denominator": 4348,
+            "numerator": -2067
+          },
+          "sum_delta_C3": -20670,
+          "tie": 8594
+        },
+        "2": {
+          "higher": 3144,
+          "lower": 30618,
+          "marked_endpoint_half_incidences": 46976,
+          "mean_delta_C3": {
+            "decimal": -0.8364271117166212,
+            "denominator": 11744,
+            "numerator": -9823
+          },
+          "sum_delta_C3": -39292,
+          "tie": 13214
+        },
+        "3": {
+          "higher": 4584,
+          "lower": 10946,
+          "marked_endpoint_half_incidences": 24954,
+          "mean_delta_C3": {
+            "decimal": -0.41756832571932356,
+            "denominator": 12477,
+            "numerator": -5210
+          },
+          "sum_delta_C3": -10420,
+          "tie": 9424
+        },
+        "4": {
+          "higher": 4648,
+          "lower": 436,
+          "marked_endpoint_half_incidences": 5910,
+          "mean_delta_C3": {
+            "decimal": 1.0524534686971234,
+            "denominator": 591,
+            "numerator": 622
+          },
+          "sum_delta_C3": 6220,
+          "tie": 826
+        },
+        "5": {
+          "higher": 696,
+          "lower": 0,
+          "marked_endpoint_half_incidences": 696,
+          "mean_delta_C3": {
+            "decimal": 2.206896551724138,
+            "denominator": 29,
+            "numerator": 64
+          },
+          "sum_delta_C3": 1536,
+          "tie": 0
+        },
+        "6": {
+          "higher": 70,
+          "lower": 0,
+          "marked_endpoint_half_incidences": 70,
+          "mean_delta_C3": {
+            "decimal": 4.0,
+            "denominator": 1,
+            "numerator": 4
+          },
+          "sum_delta_C3": 280,
+          "tie": 0
+        }
+      },
+      "lower_tie_higher": {
+        "higher": 35146,
+        "lower": 67500,
+        "tie": 33268
+      },
+      "marked_endpoint_half_incidences": 135914,
+      "mean_delta_C3": {
+        "decimal": -0.43192018482275557,
+        "denominator": 67957,
+        "numerator": -29352
+      },
+      "sum_delta_C3": -58704
+    },
+    "black_shell": {
+      "absolute_epsilon_histogram": {
+        "0": 41458,
+        "1": 56480,
+        "2": 23942,
+        "3": 5938,
+        "4": 780,
+        "5": 54
+      },
+      "all_radius_one_nodes": 3308,
+      "colour": "black",
+      "external_neighbor_C3_histogram": {
+        "10": 186,
+        "11": 162,
+        "12": 297,
+        "13": 305,
+        "14": 446,
+        "15": 355,
+        "16": 458,
+        "17": 287,
+        "18": 297,
+        "19": 115,
+        "20": 31,
+        "4": 2,
+        "5": 5,
+        "6": 22,
+        "7": 26,
+        "8": 68,
+        "9": 91
+      },
+      "external_neighbor_nodes": 3153,
+      "external_neighbor_phase_histogram": {
+        "mixed": 154,
+        "pure_black": 2999
+      },
+      "literal_boundary_instances": 121390,
+      "literal_internal_nonloop_instances": 7174,
+      "literal_line_instances": 128652,
+      "literal_loop_instances": 88,
+      "node_pair_plus_attached_q_and_abs_epsilon": {
+        "cells": 58937,
+        "fibre_profile": {
+          "10": 15,
+          "12": 2,
+          "2": 54247,
+          "4": 4124,
+          "6": 452,
+          "8": 97
+        }
+      },
+      "projected_boundary_supports": 45889,
+      "projected_endpoint_phase_histogram": {
+        "mixed--mixed": 3,
+        "mixed--pure_black": 1857,
+        "pure_black--pure_black": 46012
+      },
+      "projected_internal_supports_excluding_loops": 1956,
+      "projected_loop_supports": 27,
+      "projected_supports": 47872,
+      "support_codes_also_in_other_colour": 1,
+      "touched_support_nodes": 155,
+      "unordered_q_pair_histogram": {
+        "0,0": 5108,
+        "0,1": 14242,
+        "0,2": 9714,
+        "1,1": 12520,
+        "1,2": 27358,
+        "1,3": 16744,
+        "2,2": 8614,
+        "2,3": 16814,
+        "2,4": 8404,
+        "3,3": 2636,
+        "3,4": 4224,
+        "3,5": 1672,
+        "4,4": 228,
+        "4,5": 210,
+        "4,6": 164
+      }
+    },
+    "blue_distance_from_support": {
+      "histogram": {
+        "-1": 3199,
+        "0": 155,
+        "1": 25,
+        "2": 118,
+        "3": 31
+      },
+      "maximum_finite_distance": 3,
+      "unreachable": 3199
+    },
+    "blue_marked_endpoint_drift": {
+      "lower_tie_higher": {
+        "higher": 18,
+        "lower": 7,
+        "tie": 5
+      },
+      "marked_endpoint_half_incidences": 30,
+      "mean_delta_C3": {
+        "decimal": 2.0,
+        "denominator": 1,
+        "numerator": 2
+      },
+      "sum_delta_C3": 60
+    },
+    "blue_portals": [
+      {
+        "C3": 12,
+        "axis": 72,
+        "external_blue_neighbor_C3": {
+          "10": 4,
+          "12": 5,
+          "14": 3,
+          "16": 7,
+          "8": 2
+        },
+        "external_blue_neighbor_phases": {
+          "mixed": 21
+        },
+        "external_blue_neighbors": 21,
+        "literal_blue_line_degree": 23,
+        "node_rank": 3411,
+        "phase": "mixed",
+        "projected_blue_degree_excluding_loops": 21,
+        "score_sequence_up_to_converse": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "C3": 6,
+        "axis": 120,
+        "external_blue_neighbor_C3": {
+          "12": 7
+        },
+        "external_blue_neighbor_phases": {
+          "mixed": 7
+        },
+        "external_blue_neighbors": 7,
+        "literal_blue_line_degree": 7,
+        "node_rank": 3512,
+        "phase": "mixed",
+        "projected_blue_degree_excluding_loops": 7,
+        "score_sequence_up_to_converse": [
+          0,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          7
+        ]
+      }
+    ],
+    "blue_shell": {
+      "all_radius_one_nodes": 27,
+      "colour": "blue",
+      "external_neighbor_C3_histogram": {
+        "10": 4,
+        "12": 9,
+        "14": 3,
+        "16": 7,
+        "8": 2
+      },
+      "external_neighbor_nodes": 25,
+      "external_neighbor_phase_histogram": {
+        "mixed": 25
+      },
+      "literal_boundary_instances": 30,
+      "literal_internal_nonloop_instances": 0,
+      "literal_line_instances": 30,
+      "literal_loop_instances": 0,
+      "projected_boundary_supports": 28,
+      "projected_endpoint_phase_histogram": {
+        "mixed--mixed": 28
+      },
+      "projected_internal_supports_excluding_loops": 0,
+      "projected_loop_supports": 0,
+      "projected_supports": 28,
+      "support_codes_also_in_other_colour": 1,
+      "touched_support_nodes": 2
+    },
+    "combined_distance_from_support": {
+      "histogram": {
+        "0": 155,
+        "1": 3155,
+        "2": 215,
+        "3": 3
+      },
+      "maximum_finite_distance": 3,
+      "unreachable": 0
+    },
+    "combined_radius_one_external_nodes": 3155,
+    "combined_radius_one_nodes": 3310,
+    "contains_all_balanced_nodes": true,
+    "contains_every_node_strictly_beyond_OU_center_axis_56": true,
+    "nodes": 155,
+    "outside_combined_radius_one": 218,
+    "outside_radius_one_C3_histogram": {
+      "0": 1,
+      "1": 3,
+      "10": 23,
+      "11": 33,
+      "12": 14,
+      "14": 2,
+      "2": 7,
+      "3": 7,
+      "4": 14,
+      "5": 17,
+      "6": 23,
+      "7": 28,
+      "8": 28,
+      "9": 18
+    },
+    "outside_radius_one_axis_histogram": {
+      "104": 28,
+      "112": 28,
+      "120": 23,
+      "128": 17,
+      "136": 14,
+      "144": 7,
+      "152": 7,
+      "160": 3,
+      "168": 1,
+      "56": 2,
+      "72": 14,
+      "80": 33,
+      "88": 23,
+      "96": 18
+    },
+    "outside_radius_one_phase_histogram": {
+      "mixed": 15,
+      "pure_black": 200,
+      "pure_blue": 3
+    },
+    "phase_histogram": {
+      "mixed": 2,
+      "pure_black": 153
+    }
+  },
+  "global_n8": {
+    "balanced_C3": 20,
+    "balanced_nodes": 50,
+    "balanced_phase_histogram": {
+      "mixed": 15,
+      "pure_black": 35
+    },
+    "black_literal_lines": 1046528,
+    "black_projected_loops": 232,
+    "black_projected_supports_including_loops": 436580,
+    "blue_literal_lines": 2048,
+    "blue_projected_loops": 4,
+    "blue_projected_supports_including_loops": 1794,
+    "literal_complement_lines": 1048576,
+    "merged_nodes": 3528,
+    "node_C3_histogram": {
+      "0": 1,
+      "1": 3,
+      "10": 210,
+      "11": 198,
+      "12": 320,
+      "13": 314,
+      "14": 460,
+      "15": 370,
+      "16": 481,
+      "17": 311,
+      "18": 321,
+      "19": 131,
+      "2": 7,
+      "20": 50,
+      "3": 7,
+      "4": 16,
+      "5": 22,
+      "6": 46,
+      "7": 54,
+      "8": 96,
+      "9": 110
+    },
+    "node_phase_histogram": {
+      "mixed": 173,
+      "pure_black": 3352,
+      "pure_blue": 3
+    },
+    "projected_supports_in_both_colours": 158,
+    "tilings": 2097152,
+    "transitive_node": 3527
+  },
+  "global_phase_boundary_flow": {
+    "black_boundary_source_q_histogram": {
+      "outward,q=0": 5296,
+      "outward,q=1": 5166,
+      "outward,q=2": 1326,
+      "outward,q=3": 1820,
+      "outward,q=4": 2158,
+      "outward,q=5": 180,
+      "outward,q=6": 172,
+      "reverse,q=0": 8620,
+      "reverse,q=1": 9086,
+      "reverse,q=2": 1356,
+      "reverse,q=3": 2496,
+      "reverse,q=4": 2422,
+      "reverse,q=5": 368,
+      "reverse,q=6": 22
+    },
+    "black_mixed_pure_black_literal": {
+      "outward": 16118,
+      "reverse": 24370,
+      "tie": 12584
+    },
+    "black_mixed_pure_black_projected_support": {
+      "outward": 7298,
+      "reverse": 10634,
+      "tie": 4836
+    },
+    "black_source_normalized_rates": {
+      "outward_mixed": {
+        "decimal": 0.2951149846198916,
+        "denominator": 27308,
+        "numerator": 8059
+      },
+      "reverse_pure_black": {
+        "decimal": 0.011955220658935265,
+        "denominator": 203844,
+        "numerator": 2437
+      }
+    },
+    "blue_pure_blue_mixed_literal": {
+      "outward": 3
+    },
+    "blue_pure_blue_mixed_projected_support": {
+      "outward": 3
+    }
+  },
+  "inputs": {
+    "THM834_support": "05-knowledge/results/n9_false_palindrome_metagraph_flow_codex_S13b.json",
+    "atlas": "/tmp/n8_merged_node_rank_u16.bin",
+    "atlas_sha256": "30debad3387a4ea0ef51108ea132115efda2ac2fcdfcc2c5c1d4d23155095835"
+  },
+  "monotone_transitivity_flow": {
+    "THM834_support_reached": 153,
+    "THM834_support_unreached": [
+      {
+        "C3": 11,
+        "axis": 80,
+        "node_rank": 1008,
+        "phase": "pure_black"
+      },
+      {
+        "C3": 6,
+        "axis": 120,
+        "node_rank": 3512,
+        "phase": "mixed"
+      }
+    ],
+    "all_balanced_nodes_reached": true,
+    "reach_sets_equal": true,
+    "two_phase_balanced_reach": 50,
+    "two_phase_blue_then_black_reach": 3069,
+    "two_phase_state_count": 3224,
+    "unrestricted_balanced_reach": 50,
+    "unrestricted_non_decreasing_C3_reach": 3069,
+    "unrestricted_unreached_C3_histogram": {
+      "1": 3,
+      "10": 79,
+      "11": 52,
+      "12": 47,
+      "13": 15,
+      "14": 3,
+      "2": 7,
+      "3": 7,
+      "4": 16,
+      "5": 22,
+      "6": 44,
+      "7": 45,
+      "8": 58,
+      "9": 61
+    }
+  },
+  "preservation": {
+    "challenged_assumption": "the selected black line bank is not a closed subgraph",
+    "destroys": [
+      "unrecorded n=9 gluing",
+      "LRC metric gaps",
+      "owners",
+      "walls",
+      "loneliness predicate",
+      "continued-fraction carry"
+    ],
+    "preserves": [
+      "fixed-path tiling",
+      "converse-merged node",
+      "literal line multiplicity",
+      "blue/black reflection colour",
+      "C3",
+      "endpoint q and epsilon",
+      "THM-834 support membership"
+    ]
+  },
+  "schema_version": 1,
+  "theorem": "THM-843",
+  "tournament_analysis": {
+    "both_gauges_transitive": true,
+    "cells": {
+      "C3 pair": 67,
+      "literal line": 128652,
+      "node pair": 47872,
+      "node pair + curvature": 58937,
+      "phase pair": 3
+    },
+    "edge_flips_between_gauges": 5,
+    "raw_retention": {
+      "directed_triangles": 0,
+      "hamiltonian_path": [
+        "literal line",
+        "node pair + curvature",
+        "node pair",
+        "C3 pair",
+        "phase pair"
+      ],
+      "scores": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    "retention_per_log_cell": {
+      "directed_triangles": 0,
+      "hamiltonian_path": [
+        "C3 pair",
+        "node pair + curvature",
+        "node pair",
+        "literal line",
+        "phase pair"
+      ],
+      "scores": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    "separated_pairs": {
+      "C3 pair": 7872304188,
+      "literal line": 8275604226,
+      "node pair": 8275431560,
+      "node pair + curvature": 8275514932,
+      "phase pair": 630145764
+    },
+    "vertices": [
+      "phase pair",
+      "C3 pair",
+      "node pair",
+      "node pair + curvature",
+      "literal line"
+    ]
+  }
+}

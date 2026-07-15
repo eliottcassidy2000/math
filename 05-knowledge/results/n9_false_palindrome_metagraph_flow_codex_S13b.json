@@ -13,7 +13,7 @@
     "local_edge_pairs_including_loops": 46886,
     "blue_edge_pairs_including_loops": 1794,
     "black_edge_pairs_including_loops": 436580,
-    "local_depth_maximum": 7
+    "local_depth_maximum": 8
   },
   "face_support": {
     "endpoint_tiling_occurrences": 348,
@@ -94,12 +94,12 @@
         "decimal": 11.833333333333334
       },
       "endpoint_depth_mean": {
-        "numerator": 25,
-        "denominator": 6,
-        "decimal": 4.166666666666667
+        "numerator": 9,
+        "denominator": 2,
+        "decimal": 4.5
       },
       "endpoint_depth_range": [
-        3,
+        2,
         5
       ],
       "class_stationary_numerator_mean": {
@@ -153,13 +153,13 @@
         "decimal": 12.5
       },
       "endpoint_depth_mean": {
-        "numerator": 33,
-        "denominator": 8,
-        "decimal": 4.125
+        "numerator": 4,
+        "denominator": 1,
+        "decimal": 4.0
       },
       "endpoint_depth_range": [
         3,
-        6
+        7
       ],
       "class_stationary_numerator_mean": {
         "numerator": 1813,
@@ -210,13 +210,13 @@
         "decimal": 15.679487179487179
       },
       "endpoint_depth_mean": {
-        "numerator": 709,
-        "denominator": 156,
-        "decimal": 4.544871794871795
+        "numerator": 415,
+        "denominator": 78,
+        "decimal": 5.32051282051282
       },
       "endpoint_depth_range": [
-        2,
-        6
+        4,
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 15545,
@@ -268,13 +268,13 @@
         "decimal": 17.166666666666668
       },
       "endpoint_depth_mean": {
-        "numerator": 5,
-        "denominator": 1,
-        "decimal": 5.0
+        "numerator": 35,
+        "denominator": 6,
+        "decimal": 5.833333333333333
       },
       "endpoint_depth_range": [
-        4,
-        6
+        5,
+        7
       ],
       "class_stationary_numerator_mean": {
         "numerator": 451,
@@ -324,13 +324,13 @@
         "decimal": 17.333333333333332
       },
       "endpoint_depth_mean": {
-        "numerator": 61,
-        "denominator": 12,
-        "decimal": 5.083333333333333
+        "numerator": 51,
+        "denominator": 8,
+        "decimal": 6.375
       },
       "endpoint_depth_range": [
-        3,
-        6
+        4,
+        7
       ],
       "class_stationary_numerator_mean": {
         "numerator": 2815,
@@ -382,13 +382,13 @@
         "decimal": 18.166666666666668
       },
       "endpoint_depth_mean": {
-        "numerator": 31,
-        "denominator": 6,
-        "decimal": 5.166666666666667
+        "numerator": 13,
+        "denominator": 2,
+        "decimal": 6.5
       },
       "endpoint_depth_range": [
         4,
-        6
+        7
       ],
       "class_stationary_numerator_mean": {
         "numerator": 1598,
@@ -439,13 +439,13 @@
         "decimal": 18.5
       },
       "endpoint_depth_mean": {
-        "numerator": 11,
-        "denominator": 2,
-        "decimal": 5.5
+        "numerator": 27,
+        "denominator": 4,
+        "decimal": 6.75
       },
       "endpoint_depth_range": [
-        4,
-        7
+        5,
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 2223,
@@ -497,13 +497,13 @@
         "decimal": 18.666666666666668
       },
       "endpoint_depth_mean": {
-        "numerator": 23,
-        "denominator": 4,
-        "decimal": 5.75
+        "numerator": 161,
+        "denominator": 24,
+        "decimal": 6.708333333333333
       },
       "endpoint_depth_range": [
         5,
-        6
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 6847,
@@ -555,13 +555,13 @@
         "decimal": 18.833333333333332
       },
       "endpoint_depth_mean": {
-        "numerator": 67,
-        "denominator": 12,
-        "decimal": 5.583333333333333
+        "numerator": 43,
+        "denominator": 6,
+        "decimal": 7.166666666666667
       },
       "endpoint_depth_range": [
-        5,
-        6
+        7,
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 3503,
@@ -612,13 +612,13 @@
         "decimal": 19.166666666666668
       },
       "endpoint_depth_mean": {
-        "numerator": 101,
-        "denominator": 18,
-        "decimal": 5.611111111111111
+        "numerator": 64,
+        "denominator": 9,
+        "decimal": 7.111111111111111
       },
       "endpoint_depth_range": [
-        4,
-        6
+        5,
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 3583,
@@ -669,13 +669,13 @@
         "decimal": 19.5
       },
       "endpoint_depth_mean": {
-        "numerator": 17,
-        "denominator": 3,
-        "decimal": 5.666666666666667
+        "numerator": 7,
+        "denominator": 1,
+        "decimal": 7.0
       },
       "endpoint_depth_range": [
-        5,
-        7
+        6,
+        8
       ],
       "class_stationary_numerator_mean": {
         "numerator": 1139,
@@ -741,7 +741,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 2,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 3,
         "-16": 7,
@@ -792,7 +792,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 3,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 8,
         "-8": 4,
@@ -841,7 +841,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -889,7 +889,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-24": 1,
         "-16": 4,
@@ -940,7 +940,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 5,
@@ -989,7 +989,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 7,
@@ -1038,7 +1038,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 6,
         "0": 3,
@@ -1086,7 +1086,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -1233,7 +1233,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 7,
@@ -1283,7 +1283,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 8,
@@ -1586,7 +1586,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 5,
@@ -1685,7 +1685,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 4,
         "-8": 6,
@@ -1734,7 +1734,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 7,
@@ -1782,7 +1782,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 3,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 7,
@@ -1832,7 +1832,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 3,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-32": 3,
         "-24": 1,
@@ -1882,7 +1882,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -1930,7 +1930,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -1979,7 +1979,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -2028,7 +2028,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -2077,7 +2077,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 4,
         "-8": 5,
@@ -2127,7 +2127,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 3,
         "-16": 3,
@@ -2177,7 +2177,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "-8": 5,
         "0": 5,
@@ -2223,7 +2223,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 1,
@@ -2272,7 +2272,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -2321,7 +2321,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 6,
@@ -2369,7 +2369,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -2416,7 +2416,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -2461,7 +2461,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -2509,7 +2509,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 3,
@@ -2558,7 +2558,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -2607,7 +2607,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -2656,7 +2656,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 1,
         "-16": 5,
@@ -2706,7 +2706,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 3,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 7,
@@ -2756,7 +2756,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 7,
@@ -2805,7 +2805,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -2852,7 +2852,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -2900,7 +2900,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 4,
         "-8": 6,
@@ -2949,7 +2949,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 8,
@@ -2999,7 +2999,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 7,
@@ -3049,7 +3049,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 7,
@@ -3099,7 +3099,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 7,
@@ -3150,7 +3150,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-24": 1,
@@ -3356,7 +3356,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 7,
@@ -3456,7 +3456,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-16": 6,
@@ -3660,7 +3660,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 7,
@@ -3710,7 +3710,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 3,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 3,
         "-16": 4,
@@ -3759,7 +3759,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -3805,7 +3805,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -3851,7 +3851,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 2,
@@ -3901,7 +3901,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -4000,7 +4000,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 6,
@@ -4050,7 +4050,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-24": 1,
         "-16": 4,
@@ -4099,7 +4099,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -4145,7 +4145,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -4189,7 +4189,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -4235,7 +4235,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -4284,7 +4284,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -4333,7 +4333,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -4382,7 +4382,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 8,
@@ -4431,7 +4431,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 3,
         "0": 9,
@@ -4477,7 +4477,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -4523,7 +4523,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -4572,7 +4572,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 7,
@@ -4621,7 +4621,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-8": 5,
         "0": 11,
@@ -4670,7 +4670,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 6,
@@ -4720,7 +4720,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 8,
@@ -4769,7 +4769,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -4817,7 +4817,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -4866,7 +4866,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 6,
@@ -4965,7 +4965,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 3,
@@ -5014,7 +5014,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-8": 5,
         "0": 11,
@@ -5063,7 +5063,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-16": 5,
@@ -5114,7 +5114,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -5213,7 +5213,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5257,7 +5257,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5301,7 +5301,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5346,7 +5346,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 3,
         "0": 9,
@@ -5393,7 +5393,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -5439,7 +5439,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5532,7 +5532,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 6,
@@ -5578,7 +5578,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5624,7 +5624,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 5,
@@ -5671,7 +5671,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5716,7 +5716,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 1,
@@ -5763,7 +5763,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5808,7 +5808,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 5,
         "-8": 7,
@@ -5906,7 +5906,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -5999,7 +5999,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -6045,7 +6045,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 6,
         "0": 9,
@@ -6093,7 +6093,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 8,
@@ -6143,7 +6143,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 7,
@@ -6191,7 +6191,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -6385,7 +6385,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -6433,7 +6433,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-8": 5,
         "0": 11,
@@ -6530,7 +6530,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 4,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-16": 5,
@@ -6581,7 +6581,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 6,
@@ -6683,7 +6683,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 1,
         "-16": 5,
@@ -6735,7 +6735,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 4,
@@ -6786,7 +6786,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 3,
         "-8": 5,
@@ -7088,7 +7088,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -7136,7 +7136,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 3,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-24": 1,
@@ -7238,7 +7238,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 1,
@@ -7288,7 +7288,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "-8": 4,
         "0": 7,
@@ -7334,7 +7334,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 7,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -7378,7 +7378,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 7,
+      "local_depth_from_transitive": 8,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -7475,7 +7475,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 4,
       "full_arc_delta_x_histogram": {
         "-16": 7,
         "-8": 5,
@@ -7572,7 +7572,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 4,
       "full_arc_delta_x_histogram": {
         "-16": 2,
         "-8": 6,
@@ -7621,7 +7621,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 5,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 7,
@@ -7722,7 +7722,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 4,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-24": 1,
@@ -7929,7 +7929,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 6,
+      "local_depth_from_transitive": 7,
       "full_arc_delta_x_histogram": {
         "0": 10,
         "8": 12,
@@ -8077,7 +8077,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 6,
       "full_arc_delta_x_histogram": {
         "-16": 1,
         "-8": 4,
@@ -8179,7 +8179,7 @@
       },
       "self_converse": true,
       "blueblack_category": "mixed",
-      "local_depth_from_transitive": 5,
+      "local_depth_from_transitive": 3,
       "full_arc_delta_x_histogram": {
         "-24": 2,
         "-16": 5,
@@ -8230,7 +8230,7 @@
       },
       "self_converse": false,
       "blueblack_category": "pure_black",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 3,
       "full_arc_delta_x_histogram": {
         "-32": 1,
         "-24": 2,
@@ -8283,7 +8283,7 @@
       },
       "self_converse": true,
       "blueblack_category": "mixed",
-      "local_depth_from_transitive": 4,
+      "local_depth_from_transitive": 2,
       "full_arc_delta_x_histogram": {
         "-48": 1,
         "-32": 2,
@@ -8319,8 +8319,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8374,7 +8374,7 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -8435,8 +8435,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8490,8 +8490,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8547,8 +8547,8 @@
         56
       ],
       "endpoint_local_depth": [
-        6,
-        4
+        7,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8608,8 +8608,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8665,8 +8665,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8725,7 +8725,7 @@
         64
       ],
       "endpoint_local_depth": [
-        5,
+        7,
         4
       ],
       "endpoint_categories": [
@@ -8787,8 +8787,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8847,8 +8847,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8907,8 +8907,8 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -8968,8 +8968,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9028,8 +9028,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9088,7 +9088,7 @@
       ],
       "endpoint_local_depth": [
         6,
-        5
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9145,8 +9145,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9204,8 +9204,8 @@
         56
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9264,7 +9264,7 @@
         64
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         4
       ],
       "endpoint_categories": [
@@ -9325,8 +9325,8 @@
         56
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9385,7 +9385,7 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -9446,7 +9446,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9505,7 +9505,7 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -9565,8 +9565,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9620,8 +9620,8 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9675,8 +9675,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9730,8 +9730,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9790,8 +9790,8 @@
         64
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9851,8 +9851,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -9911,7 +9911,7 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -9971,8 +9971,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10031,7 +10031,7 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -10090,8 +10090,8 @@
         40
       ],
       "endpoint_local_depth": [
-        3,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10150,8 +10150,8 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10211,8 +10211,8 @@
         40
       ],
       "endpoint_local_depth": [
-        3,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10271,8 +10271,8 @@
         56
       ],
       "endpoint_local_depth": [
-        3,
-        5
+        5,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10331,7 +10331,7 @@
         56
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -10391,8 +10391,8 @@
         56
       ],
       "endpoint_local_depth": [
-        3,
-        5
+        5,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10450,8 +10450,8 @@
         56
       ],
       "endpoint_local_depth": [
-        2,
-        5
+        5,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10511,7 +10511,7 @@
         64
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -10573,8 +10573,8 @@
         56
       ],
       "endpoint_local_depth": [
-        2,
-        5
+        5,
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10813,8 +10813,8 @@
         88
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        3,
+        3
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10871,8 +10871,8 @@
         64
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10932,8 +10932,8 @@
         88
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        3,
+        3
       ],
       "endpoint_categories": [
         "pure_black",
@@ -10990,7 +10990,7 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -11050,7 +11050,7 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -11111,7 +11111,7 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -11171,8 +11171,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11285,8 +11285,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11341,7 +11341,7 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
+        4,
         5
       ],
       "endpoint_categories": [
@@ -11398,7 +11398,7 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -11456,7 +11456,7 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
+        4,
         5
       ],
       "endpoint_categories": [
@@ -11513,7 +11513,7 @@
         40
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -11572,8 +11572,8 @@
         24
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11630,7 +11630,7 @@
         40
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -11689,8 +11689,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11745,7 +11745,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11803,8 +11803,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11858,8 +11858,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11913,8 +11913,8 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -11971,8 +11971,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12026,8 +12026,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12081,8 +12081,8 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        8,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12137,8 +12137,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12192,8 +12192,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12247,7 +12247,7 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
+        8,
         6
       ],
       "endpoint_categories": [
@@ -12302,8 +12302,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12357,8 +12357,8 @@
         32
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12415,7 +12415,7 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -12475,8 +12475,8 @@
         32
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12534,7 +12534,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        3
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12593,7 +12593,7 @@
       ],
       "endpoint_local_depth": [
         4,
-        4
+        2
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12653,7 +12653,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        3
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12711,8 +12711,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12825,8 +12825,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12880,7 +12880,7 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -12939,8 +12939,8 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -12998,7 +12998,7 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
+        6,
         5
       ],
       "endpoint_categories": [
@@ -13057,8 +13057,8 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13114,8 +13114,8 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13170,8 +13170,8 @@
         24
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13227,8 +13227,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        8,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13280,8 +13280,8 @@
         24
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13338,8 +13338,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        8,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13391,8 +13391,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        8,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13444,8 +13444,8 @@
         40
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13501,8 +13501,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        8,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13554,8 +13554,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13609,7 +13609,7 @@
         72
       ],
       "endpoint_local_depth": [
-        4,
+        6,
         4
       ],
       "endpoint_categories": [
@@ -13670,8 +13670,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13726,7 +13726,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13784,8 +13784,8 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
-        4
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13843,7 +13843,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13902,7 +13902,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -13958,8 +13958,8 @@
         48
       ],
       "endpoint_local_depth": [
-        5,
-        3
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14017,7 +14017,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        4
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14073,8 +14073,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14130,8 +14130,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        8,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14183,8 +14183,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14241,7 +14241,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14299,8 +14299,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14355,7 +14355,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14413,8 +14413,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14528,8 +14528,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14584,7 +14584,7 @@
         64
       ],
       "endpoint_local_depth": [
-        3,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -14643,7 +14643,7 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
+        3,
         5
       ],
       "endpoint_categories": [
@@ -14701,7 +14701,7 @@
         64
       ],
       "endpoint_local_depth": [
-        3,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -14760,8 +14760,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14816,7 +14816,7 @@
       ],
       "endpoint_local_depth": [
         6,
-        5
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14871,8 +14871,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14927,7 +14927,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -14987,7 +14987,7 @@
       ],
       "endpoint_local_depth": [
         6,
-        6
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15043,7 +15043,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        5
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15102,8 +15102,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        6,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15161,7 +15161,7 @@
       ],
       "endpoint_local_depth": [
         6,
-        6
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15216,8 +15216,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        6,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15274,8 +15274,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15329,8 +15329,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15382,8 +15382,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15437,8 +15437,8 @@
         72
       ],
       "endpoint_local_depth": [
-        5,
-        2
+        4,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15557,8 +15557,8 @@
         72
       ],
       "endpoint_local_depth": [
-        5,
-        2
+        4,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15618,8 +15618,8 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
-        3
+        4,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15677,8 +15677,8 @@
         40
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15737,8 +15737,8 @@
         56
       ],
       "endpoint_local_depth": [
-        5,
-        3
+        4,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15797,8 +15797,8 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
-        3
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15857,7 +15857,7 @@
         56
       ],
       "endpoint_local_depth": [
-        4,
+        5,
         5
       ],
       "endpoint_categories": [
@@ -15916,8 +15916,8 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
-        3
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -15977,7 +15977,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16035,8 +16035,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16096,7 +16096,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16155,8 +16155,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16215,8 +16215,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        5,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16273,8 +16273,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16333,8 +16333,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16388,8 +16388,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        7
+        7,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16441,8 +16441,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16496,8 +16496,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16551,8 +16551,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16604,8 +16604,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16659,8 +16659,8 @@
         72
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        3,
+        3
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16717,8 +16717,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -16775,8 +16775,8 @@
         72
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        3,
+        3
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17011,7 +17011,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17070,8 +17070,8 @@
         40
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        7,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17130,7 +17130,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        4
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17189,8 +17189,8 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17250,7 +17250,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        6
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17306,8 +17306,8 @@
         48
       ],
       "endpoint_local_depth": [
-        4,
-        4
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17366,8 +17366,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17425,8 +17425,8 @@
         16
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17482,8 +17482,8 @@
         32
       ],
       "endpoint_local_depth": [
-        5,
-        5
+        6,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17541,8 +17541,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17601,8 +17601,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        5,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17657,8 +17657,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17717,8 +17717,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17778,7 +17778,7 @@
       ],
       "endpoint_local_depth": [
         5,
-        6
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17835,8 +17835,8 @@
         32
       ],
       "endpoint_local_depth": [
-        4,
-        5
+        5,
+        6
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17895,8 +17895,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -17950,8 +17950,8 @@
         64
       ],
       "endpoint_local_depth": [
-        6,
-        3
+        5,
+        5
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18011,8 +18011,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18066,8 +18066,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18121,8 +18121,8 @@
         24
       ],
       "endpoint_local_depth": [
-        5,
-        6
+        6,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18178,8 +18178,8 @@
         8
       ],
       "endpoint_local_depth": [
-        6,
-        6
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18233,8 +18233,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18290,8 +18290,8 @@
         8
       ],
       "endpoint_local_depth": [
-        5,
-        7
+        6,
+        8
       ],
       "endpoint_categories": [
         "pure_black",
@@ -18346,8 +18346,8 @@
         16
       ],
       "endpoint_local_depth": [
-        6,
-        5
+        7,
+        7
       ],
       "endpoint_categories": [
         "pure_black",
