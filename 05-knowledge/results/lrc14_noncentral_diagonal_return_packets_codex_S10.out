@@ -1,0 +1,50 @@
+NONCENTRAL DIAGONAL-RETURN PACKETS -- EXACT REPLAY
+family: L=105H; W=(L+1,L+22,L-20,L-6,L+15,L-13,L+8,2L+2)
+fixed blocked/core-safe interval: [2/15,1/7], length=1/105
+packet word: (7,2,5,3,0,6,4,1,7)
+packet counts: (1,1,1,1,1,1,1,2)
+inverse steps: (1,1,1,1,1,1,1,4)
+count*step mod 7: (1,1,1,1,1,1,1,1); reduced return=0
+reduced boundary state: (0,4,3,1,5,2,6,0)
+
+audited H range: 1..300 (300 families)
+complete event-list comparisons: 300 passed
+covered walls checked: 406350
+covered chambers checked: 406650
+wall order inequalities: 84M>11L-10 and 14M<2L-5
+block range: M=14H,...,15H-1; packets=H; walls=9H
+core P=(1,2,11,12,13); exact minima=(2/15,4/15,3/7,2/7,1/7)
+full LRC speed row: 7P union W; 13 distinct nonzero speeds
+ceil(f/g)=2 for every H; wall extent beats 1/g+2/f for H>=3
+
+H=1: L=105 W=(106, 127, 85, 99, 120, 92, 113, 212) walls=9 wall_extent=1/212 mesh_bound=233/13462 refutes=False
+H=3: L=315 W=(316, 337, 295, 309, 330, 302, 323, 632) walls=27 wall_extent=5/632 mesh_bound=653/106492 refutes=True
+H=10: L=1050 W=(1051, 1072, 1030, 1044, 1065, 1037, 1058, 2102) walls=90 wall_extent=19/2102 mesh_bound=2123/1126672 refutes=True
+H=100: L=10500 W=(10501, 10522, 10480, 10494, 10515, 10487, 10508, 21002) walls=900 wall_extent=199/21002 mesh_bound=21023/110491522 refutes=True
+H=300: L=31500 W=(31501, 31522, 31480, 31494, 31515, 31487, 31508, 63002) walls=2700 wall_extent=599/63002 mesh_bound=63023/992974522 refutes=True
+
+PREFIX-LEGALITY CENSUS
+multiplicity words: 181440
+legal from displayed reduced state: 3
+supportable from some covered state: 45360
+same first-owner tournament/order: 8
+same first-owner order and legal from displayed state: 1
+three fixed-state legal words: ((0, 6, 4, 1, 2, 5, 3, 7, 7), (7, 2, 5, 3, 0, 6, 4, 1, 7), (7, 7, 6, 4, 1, 2, 5, 3, 0))
+
+TOURNAMENT FINGERPRINTS
+nine-event chronology: score histogram ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1)); triangles 0; SCCs (1, 1, 1, 1, 1, 1, 1, 1, 1); Hamiltonian paths 1
+marked score histogram: ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1))
+marked directed triangles: 0
+marked SCC sizes: (1, 1, 1, 1, 1, 1, 1, 1)
+marked Hamiltonian paths: 1
+marked tie path: (7, 0, 3, 5, 2, 1, 4, 6)
+circular score histogram: ((3, 4), (4, 4))
+circular directed triangles: 20
+circular SCC sizes: (8,)
+circular Hamiltonian paths: 629
+circular tie path: (0, 2, 1, 4, 6, 7, 3, 5)
+marked/circular edge flips: 9
+preserved by owner multiplicity: reduced return congruence only
+destroyed by owner multiplicity: prefix legality and raw event insertion order
+canonical_sha256=431910fda5eef26208bf411ce79a371e5bce88b0871a83cd25c709453f64c335
+SUMMARY: ALL EXACT CHECKS PASSED
