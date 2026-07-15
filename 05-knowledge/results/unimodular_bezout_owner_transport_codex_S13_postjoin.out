@@ -1,0 +1,51 @@
+THM-829 UNIMODULAR BEZOUT / INVERSE-OWNER TRANSPORT
+============================================================================
+law: v'=A v, b'=b A^(-1), with b v=b' v'=1
+finite records=831 exact failures=0
+reflection/owner-swap failures=0/0
+
+CENTERED-RATIO CONVERGENT MATRICES
+  A32_[1;2]: A=((3,1),(2,1)) RAR=((1,-1),(-2,3))
+  A43_[1;3]: A=((4,1),(3,1)) RAR=((1,-1),(-3,4))
+  A43_A32: A=((14,5),(11,4)) RAR=((3,-4),(-11,15))
+
+GL2(Z) centralizer of R in search box=('((-1,0),(0,-1))', '((-1,1),(0,1))', '((1,-1),(0,-1))', '((1,0),(0,1))')
+proved centralizer={+I,-I,+R,-R}
+
+q=13 PRIMITIVE WITNESS TABLE
+  a old(j+,j-) | A32:(a',q';j+',j-') | A43 | A43*A32
+   1 (1, 12) | (1, 15);(1, 14) | (1, 16);(1, 15) | (16, 63);(4, 59)
+   2 (7, 6) | (2, 17);(9, 8) | (2, 19);(10, 9) | (19, 74);(39, 35)
+   3 (9, 4) | (3, 19);(13, 6) | (3, 22);(15, 7) | (22, 85);(58, 27)
+   4 (10, 3) | (4, 21);(16, 5) | (4, 25);(19, 6) | (25, 96);(73, 23)
+   5 (8, 5) | (5, 23);(14, 9) | (5, 28);(17, 11) | (28, 107);(65, 42)
+   6 (11, 2) | (6, 25);(21, 4) | (6, 31);(26, 5) | (31, 118);(99, 19)
+   7 (2, 11) | (7, 27);(4, 23) | (7, 34);(5, 29) | (34, 129);(19, 110)
+   8 (5, 8) | (8, 29);(11, 18) | (8, 37);(14, 23) | (37, 140);(53, 87)
+   9 (3, 10) | (9, 31);(7, 24) | (9, 40);(9, 31) | (40, 151);(34, 117)
+  10 (4, 9) | (10, 33);(10, 23) | (10, 43);(13, 30) | (43, 162);(49, 113)
+  11 (6, 7) | (11, 35);(16, 19) | (11, 46);(21, 25) | (46, 173);(79, 94)
+  12 (12, 1) | (12, 37);(34, 3) | (12, 49);(45, 4) | (49, 184);(169, 15)
+
+THM-808 ROOT BLOCKS VIA BEZOUT OWNERS
+  rank=0 occurrences=(0, 8) translation=4 expected=4
+  rank=1 occurrences=(1, 7) translation=3 expected=3
+  rank=2 occurrences=(2, 6) translation=3 expected=3
+  rank=3 occurrences=(3, 5) translation=4 expected=4
+  rank=4 occurrences=(4,) translation=3 expected=3
+  translation/shear-owner failures=0/0
+
+CARRIER PURITY
+  inverse_only: cells=29 separated=327174 conflict_pairs=17534
+  inverse_matrix: cells=87 separated=339131 conflict_pairs=5577
+  bezout_matrix: cells=417 separated=342548 conflict_pairs=2160
+  column_matrix: cells=831 separated=344708 conflict_pairs=0
+  full_stalk: cells=831 separated=344708 conflict_pairs=0
+
+TOURNAMENT ANALYSIS (arithmetic carriers as planning vertices)
+  vertices=('inverse_only', 'inverse_matrix', 'bezout_matrix', 'column_matrix', 'full_stalk')
+  observable=number of target-distinct finite-bank transport pairs separated
+  switches=('separation retention', 'separation retention per partition cell'); flips=9
+
+Verdict: inverse owners form a contragredient Bezout-row stalk.
+Reflection requires the conjugate action RAR except for +/-I,+/-R.

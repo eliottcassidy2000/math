@@ -765,13 +765,29 @@ certificate clauses, and proof obligations.
   `a->q-a` are exact operations on this stalk.  Changing the denominator can
   change the unit set, so a fixed-modulus residue quotient is not functorial
   under an arbitrary Euclidean word.
-- **Pull:** compute the piecewise-rational action of the centered words used in
-  THM-808/812/813 on the primitive witness intervals, then form the fibre
-  product with THM-808's duplicate-root stalk and THM-813's literal
-  reflection-orbit carrier `Q`.  Test commutation with reflection and whether
-  endpoint-owner changes are exactly the failures of projected metagraph
-  descent.  No canonical map from these residues to tournament nodes is yet
-  claimed.
+- **Delivered exact action by THM-829:** lift the inverse owner to the Bezout
+  row `b=(j,k)` with `b(a,q)^T=1`.  Every `A in GL_2(Z)` acts by
+  `v'=Av, b'=bA^(-1)`; after sign/numerator normalization the first coordinate
+  of `b'` is exactly the new inverse owner.  Reflection
+  `R(a,q)=(q-a,q)` swaps `j+` and `j-` and conjugates the action to `RAR`.
+  The GL2(Z) centralizer of R is only `{+I,-I,+R,-R}`, proving that every
+  nontrivial positive CF matrix needs distinct reflected high/low branch
+  actions.  Exact q=13 tables for the `3/2=[1;2]` and `4/3=[1;3]` convergent
+  matrices have zero transport/owner-swap failures.  Fixed-denominator shears
+  leave the owner inverse unchanged and reproduce THM-808's five root
+  translations, while a general matrix changes modulus and cannot be summed
+  in the old common prime sheet.  The arithmetic action is now closed; the
+  remaining pull is the typed fibre product with THM-813's literal `Q` orbit
+  and THM-808's common-modulus owner-count block, plus a separate lemma for
+  the metric interval image.
+- **Pull:** compute the actual Möbius image of each primitive witness interval
+  and compare it with THM-819's canonically *rebased* interval at the new
+  denominator; these are not automatically the same metric object.  Then form
+  the typed fibre product of THM-829's column/Bezout action with THM-808's
+  duplicate-root/common-sheet stalk and THM-813's literal reflection-orbit
+  carrier `Q`.  Test whether endpoint-owner changes coincide with failures of
+  projected metagraph descent.  No canonical map from these residues to
+  tournament nodes is yet claimed.
 - **Must preserve:** primitive numerator and denominator, orientation, both
   inverse owners, the two unequal interval extents, and the CF matrix.  The
   total primitive harmonic sum destroys the continuation data.

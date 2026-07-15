@@ -1,0 +1,788 @@
+{
+  "schema_version": 1,
+  "theorem": "THM-829",
+  "matrices": {
+    "A32_[1;2]": [
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "A43_[1;3]": [
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "A43_A32": [
+      [
+        14,
+        5
+      ],
+      [
+        11,
+        4
+      ]
+    ]
+  },
+  "reflected_matrices": {
+    "A32_[1;2]": [
+      [
+        1,
+        -1
+      ],
+      [
+        -2,
+        3
+      ]
+    ],
+    "A43_[1;3]": [
+      [
+        1,
+        -1
+      ],
+      [
+        -3,
+        4
+      ]
+    ],
+    "A43_A32": [
+      [
+        3,
+        -4
+      ],
+      [
+        -11,
+        15
+      ]
+    ]
+  },
+  "finite_transport_records": 831,
+  "exact_failures": 0,
+  "reflection_failures": 0,
+  "inverse_owner_swap_failures": 0,
+  "centralizer_GL2Z_of_reflection": [
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "q13_table": [
+    {
+      "a": 1,
+      "old_inverse_pair": [
+        1,
+        12
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          1,
+          15
+        ],
+        "target_inverse_pair": [
+          1,
+          14
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          1,
+          16
+        ],
+        "target_inverse_pair": [
+          1,
+          15
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          16,
+          63
+        ],
+        "target_inverse_pair": [
+          4,
+          59
+        ]
+      }
+    },
+    {
+      "a": 2,
+      "old_inverse_pair": [
+        7,
+        6
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          2,
+          17
+        ],
+        "target_inverse_pair": [
+          9,
+          8
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          2,
+          19
+        ],
+        "target_inverse_pair": [
+          10,
+          9
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          19,
+          74
+        ],
+        "target_inverse_pair": [
+          39,
+          35
+        ]
+      }
+    },
+    {
+      "a": 3,
+      "old_inverse_pair": [
+        9,
+        4
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          3,
+          19
+        ],
+        "target_inverse_pair": [
+          13,
+          6
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          3,
+          22
+        ],
+        "target_inverse_pair": [
+          15,
+          7
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          22,
+          85
+        ],
+        "target_inverse_pair": [
+          58,
+          27
+        ]
+      }
+    },
+    {
+      "a": 4,
+      "old_inverse_pair": [
+        10,
+        3
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          4,
+          21
+        ],
+        "target_inverse_pair": [
+          16,
+          5
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          4,
+          25
+        ],
+        "target_inverse_pair": [
+          19,
+          6
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          25,
+          96
+        ],
+        "target_inverse_pair": [
+          73,
+          23
+        ]
+      }
+    },
+    {
+      "a": 5,
+      "old_inverse_pair": [
+        8,
+        5
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          5,
+          23
+        ],
+        "target_inverse_pair": [
+          14,
+          9
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          5,
+          28
+        ],
+        "target_inverse_pair": [
+          17,
+          11
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          28,
+          107
+        ],
+        "target_inverse_pair": [
+          65,
+          42
+        ]
+      }
+    },
+    {
+      "a": 6,
+      "old_inverse_pair": [
+        11,
+        2
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          6,
+          25
+        ],
+        "target_inverse_pair": [
+          21,
+          4
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          6,
+          31
+        ],
+        "target_inverse_pair": [
+          26,
+          5
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          31,
+          118
+        ],
+        "target_inverse_pair": [
+          99,
+          19
+        ]
+      }
+    },
+    {
+      "a": 7,
+      "old_inverse_pair": [
+        2,
+        11
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          7,
+          27
+        ],
+        "target_inverse_pair": [
+          4,
+          23
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          7,
+          34
+        ],
+        "target_inverse_pair": [
+          5,
+          29
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          34,
+          129
+        ],
+        "target_inverse_pair": [
+          19,
+          110
+        ]
+      }
+    },
+    {
+      "a": 8,
+      "old_inverse_pair": [
+        5,
+        8
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          8,
+          29
+        ],
+        "target_inverse_pair": [
+          11,
+          18
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          8,
+          37
+        ],
+        "target_inverse_pair": [
+          14,
+          23
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          37,
+          140
+        ],
+        "target_inverse_pair": [
+          53,
+          87
+        ]
+      }
+    },
+    {
+      "a": 9,
+      "old_inverse_pair": [
+        3,
+        10
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          9,
+          31
+        ],
+        "target_inverse_pair": [
+          7,
+          24
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          9,
+          40
+        ],
+        "target_inverse_pair": [
+          9,
+          31
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          40,
+          151
+        ],
+        "target_inverse_pair": [
+          34,
+          117
+        ]
+      }
+    },
+    {
+      "a": 10,
+      "old_inverse_pair": [
+        4,
+        9
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          10,
+          33
+        ],
+        "target_inverse_pair": [
+          10,
+          23
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          10,
+          43
+        ],
+        "target_inverse_pair": [
+          13,
+          30
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          43,
+          162
+        ],
+        "target_inverse_pair": [
+          49,
+          113
+        ]
+      }
+    },
+    {
+      "a": 11,
+      "old_inverse_pair": [
+        6,
+        7
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          11,
+          35
+        ],
+        "target_inverse_pair": [
+          16,
+          19
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          11,
+          46
+        ],
+        "target_inverse_pair": [
+          21,
+          25
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          46,
+          173
+        ],
+        "target_inverse_pair": [
+          79,
+          94
+        ]
+      }
+    },
+    {
+      "a": 12,
+      "old_inverse_pair": [
+        12,
+        1
+      ],
+      "A32_[1;2]": {
+        "target_column": [
+          12,
+          37
+        ],
+        "target_inverse_pair": [
+          34,
+          3
+        ]
+      },
+      "A43_[1;3]": {
+        "target_column": [
+          12,
+          49
+        ],
+        "target_inverse_pair": [
+          45,
+          4
+        ]
+      },
+      "A43_A32": {
+        "target_column": [
+          49,
+          184
+        ],
+        "target_inverse_pair": [
+          169,
+          15
+        ]
+      }
+    }
+  ],
+  "thm808_root_blocks": [
+    {
+      "rank": 0,
+      "occurrences": [
+        0,
+        8
+      ],
+      "translation": 4,
+      "expected": 4
+    },
+    {
+      "rank": 1,
+      "occurrences": [
+        1,
+        7
+      ],
+      "translation": 3,
+      "expected": 3
+    },
+    {
+      "rank": 2,
+      "occurrences": [
+        2,
+        6
+      ],
+      "translation": 3,
+      "expected": 3
+    },
+    {
+      "rank": 3,
+      "occurrences": [
+        3,
+        5
+      ],
+      "translation": 4,
+      "expected": 4
+    },
+    {
+      "rank": 4,
+      "occurrences": [
+        4
+      ],
+      "translation": 3,
+      "expected": 3
+    }
+  ],
+  "thm808_root_translation_failures": 0,
+  "fixed_denominator_shear_owner_failures": 0,
+  "carrier_partitions": {
+    "inverse_only": {
+      "separated_pairs": 327174,
+      "cells": 29,
+      "conflict_pairs": 17534,
+      "target_distinct_pairs": 344708
+    },
+    "inverse_matrix": {
+      "separated_pairs": 339131,
+      "cells": 87,
+      "conflict_pairs": 5577,
+      "target_distinct_pairs": 344708
+    },
+    "bezout_matrix": {
+      "separated_pairs": 342548,
+      "cells": 417,
+      "conflict_pairs": 2160,
+      "target_distinct_pairs": 344708
+    },
+    "column_matrix": {
+      "separated_pairs": 344708,
+      "cells": 831,
+      "conflict_pairs": 0,
+      "target_distinct_pairs": 344708
+    },
+    "full_stalk": {
+      "separated_pairs": 344708,
+      "cells": 831,
+      "conflict_pairs": 0,
+      "target_distinct_pairs": 344708
+    }
+  },
+  "tournament_analysis": {
+    "vertices": [
+      "inverse_only",
+      "inverse_matrix",
+      "bezout_matrix",
+      "column_matrix",
+      "full_stalk"
+    ],
+    "pairwise_observable": "number of target-distinct finite-bank transport pairs separated",
+    "switches": [
+      "separation retention",
+      "separation retention per partition cell"
+    ],
+    "tie_hamiltonian_path": [
+      "inverse_only",
+      "inverse_matrix",
+      "bezout_matrix",
+      "column_matrix",
+      "full_stalk"
+    ],
+    "retention": {
+      "gauge": "retention",
+      "vertices": [
+        "inverse_only",
+        "inverse_matrix",
+        "bezout_matrix",
+        "column_matrix",
+        "full_stalk"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "economy": {
+      "gauge": "economy",
+      "vertices": [
+        "inverse_only",
+        "inverse_matrix",
+        "bezout_matrix",
+        "column_matrix",
+        "full_stalk"
+      ],
+      "score_hist": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "directed_3cycles": 0,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hamiltonian_paths": 1,
+      "adjacency": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "edge_flips": 9
+  }
+}
