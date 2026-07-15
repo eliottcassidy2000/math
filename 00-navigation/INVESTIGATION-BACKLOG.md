@@ -220,22 +220,19 @@
   `(13d,5d)` centre for ten distinct speeds with the exact signed-complement
   residue set and full guarded containment.  The two directional owner exits
   force `13d<=2B-5`: the shells `2B-13d=1,3` are empty by a coefficient-nine
-  owner-packing and mod-13 alignment argument.  Exact local shell-five owners
-  survive, so continue from `2B-13d>=5`; this is not yet a global core survivor
-  or a proof that the radius budget fails.
-- **Open shallow theorem:** finish the two THM-820 scale-one boxes, then prove
-  the arbitrary-scale radius-five descent.  The collar classification is no
-  longer the missing step: spanning five-cycles have five feasible band types,
-  and one small anchor can support a persistent top-four SCC at unbounded
-  scale.  The proof-facing finite action is
-  `E_S -> E_S intersect Safe(u)` on exact residual interval unions with the
-  remaining labelled speed bank.  Build its minimized continuation automaton
-  or a two-plus-three meet-in-the-middle cover join.  In parallel, audit any
+  owner-packing and mod-13 alignment argument.  At shell five the local classes
+  are exactly `d mod 52 in {11,15,37,41}`, with owners `{B-3,B-2}`.  The
+  explicit `q=5d`, `p=(45d-1)/26` grid uniformly removes `11 mod 52`; the
+  value `d=15` is finite-exact empty, but its congruence class is not closed.
+  Continue uniformly on `15,37,41 mod 52` with the full unit-numerator by
+  signed-lift by divisor/parity incidence.
 - **Open shallow theorem:** THM-845 has finished both THM-820 scale-one
   branches.  Prove the arbitrary-scale radius-five descent, transporting the
   proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
-  endpoints through oriented deck ramification.  Then split the finite H6 tree
-  into the genuine tight AP orbit `2[12]` and non-AP rows.  In parallel, audit any
+  endpoints through oriented deck ramification. THM-815 C.1 has split the
+  finite H6 tree uniformly on its nonprimitive slice: only the genuine tight
+  AP orbit `2[12]` survives.  Classify the remaining primitive H6 rows and
+  transport across scale.  In parallel, audit any
   proposed compression by its literal kernel pair.  THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
@@ -305,8 +302,10 @@
   centre-radius budget (including its centre-cell identity, not the unguarded
   phase norm). Under THM-836's exact signed-complement and guarded-containment
   hypotheses, the two thinnest owner shells are removed, so in this ratio
-  begin at `2B-13d>=5`; its exact shell-five local survivors show that another
-  obligation must join the owner packing. THM-831 has classified the coprime
+  begin at `2B-13d>=5`.  The equality shell has exactly four classes modulo
+  52; one is uniformly excluded and the single value `d=15` is finite-exact
+  empty.  Another component/divisor/satellite obligation must join the owner
+  packing on the uniformly open classes `15,37,41 mod 52`. THM-831 has classified the coprime
   opposite-parity extension: run the same
   arithmetic test on the other fifteen primitive `4<=alpha<=9` folds, and
   retain the weighted ternary switch obstruction rather than a scalar radius

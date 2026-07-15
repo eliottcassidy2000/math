@@ -1,8 +1,8 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, and an independent 768,735-row C++ collar certificate)
-source: codex-2026-07-15-S10 Hamming-four continuation
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six and a downstream nonprimitive H6 contraction addendum + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, and a 136,288-prefix nonprimitive H6 chamber certificate)
+source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, THM-845, HYP-6820]
 verification:
@@ -10,6 +10,8 @@ verification:
   - 05-knowledge/results/lrc13_h4_scale_one_component_ladder_codex_S10.out
   - 04-computation/lrc13_scale_one_hamming_four_collar_closure_codex_S10.cpp
   - 05-knowledge/results/lrc13_scale_one_hamming_four_collar_closure_codex_S10.out
+  - 04-computation/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp
+  - 05-knowledge/results/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.out
 proof_companion:
   - 07-reflections/lrc13-hamming-four-independent-collar-doubling-proof-codex-S10.md
 ---
@@ -102,9 +104,114 @@ its branch inequalities with `x_1<=146` gives the explicit joint boxes
 `x<=146,v<=1986,max(v,w,y,z)<=7944`. For `m=7`, the initial mean danger
 density is `14/13`; the coefficient
 `13-2m` changes sign, so this union-bound recursion becomes noncoercive before
-the first lift.  No claim of radius-five or radius-six emptiness is made here,
-and the density barrier is a limitation of this method, not a proof that the
+the first lift.  Part C by itself made no claim of radius-five or radius-six
+emptiness.  Downstream THM-845 closes radius five, and the addendum below closes
+only the nonprimitive slice of radius six.  Primitive radius six remains open.
+The density barrier is a limitation of this method, not a proof that the
 radius-seven chart is intrinsically infinite.
+
+### C.1 Addendum: only `2[12]` survives in nonprimitive scale-one H6
+
+Let
+
+```text
+W=([12] minus R) union {r+13h_r:r in R},
+|R|=6, h_r>=1.                                         (C1)
+```
+
+If `gcd(W)>1`, then all six retained labels in `[12] minus R` are divisible
+by that gcd.  Since `[12]` contains fewer than six multiples of every integer
+at least three, the gcd is two and the retained set is exactly
+`{2,4,6,8,10,12}`.  Thus
+
+```text
+R={1,3,5,7,9,11}.                                      (C2)
+```
+
+The retained label `2` makes the gcd exactly two.  For odd `r`, the lift
+`r+13h_r` is even exactly when `h_r` is odd, so nonprimitivity is equivalent
+to (C2) together with all six heights odd.  Write
+
+```text
+r=2i-1,                 h_r=2k_i+1,       1<=i<=6.
+```
+
+Division by two gives the exact contraction
+
+```text
+W/2={1,...,6} union {6+i+13k_i:1<=i<=6}.               (C3)
+```
+
+If no `k_i` is positive, then `W=2[12]`.  If between one and five are
+positive, (C3) is a proper scale-one Hamming-`j` packet with `1<=j<=5`, hence
+is loose by THM-795/800/804/806/815/845.  It remains only to close the single
+top-half chamber in which all six `k_i` are positive:
+
+```text
+{1,...,6} union {r+13h_r:7<=r<=12, h_r>=1}.            (C4)
+```
+
+Apply Part C's longest-component cap separately at every numerically ordered
+prefix of (C4).  The exact recursion has the following depth census; `edges`
+is the number of legal next labelled lifts, and `dead` is the number of
+prefixes with none:
+
+```text
+depth       0       1        2         3       4     5  6
+nodes       1      54     3612    130515    2104     2  0
+edges      54    3612   130515      2104       2     0  -
+dead        0       0        0    129772    2103     2  -
+max cap   132     430      683       608     315    28  -
+```
+
+There are zero covering prefixes at every depth.  The two depth-five leaves
+are
+
+```text
+(7:33,10:36,9:48,8:60,11:63),  unused label 12,
+    L=17/3120, cap=28, least legal next speed=64;
+(7:33,10:36,9:48,8:60,12:64),  unused label 11,
+    L=47/8580, cap=28, least legal next speed=76.        (C5)
+```
+
+Thus neither leaf has an outgoing edge, and no hypothetical tight completion
+of (C4) exists.  Independently reconstructing the strict-safe sets of both
+leaves as complements of the full closed-danger union gives exact endpoint-
+for-endpoint agreement with the intersection recursion.  The complete tree
+has `136,288` prefixes, trace
+`919c6848d4e1187a2cef093e58982ae6`, and `313` cached speeds.
+
+There is also a useful equality-side Kakeya ledger.  The strict-safe set
+`E_{1,...,6}` has twelve components, total measure `27/65`, and longest
+component `1/13`.  The six periodic danger combs `D_7,...,D_12` cover all
+twelve components.  Their component--comb incidence graph has 34 edges and
+component-degree histogram `1:4,2:2,3:2,4:2,6:2`.  Exactly four components
+have zero overlap debt and a unique full owner:
+
+```text
+[7/39,12/65] and [53/65,32/39]       owner 11,
+[14/65,3/13] and [10/13,51/65]       owner 9.           (C6)
+```
+
+This is a component/needle rigidity fingerprint of the AP equality, not a
+tournament proof.  Pairwise comb overlap is symmetric; an arbitrary switch
+would forget the union-cover predicate.  The faithful carrier is the weighted
+bipartite incidence of safe components with danger combs.
+
+The `-O3` and `-O0` builds produce byte-identical output, and an
+AddressSanitizer/UndefinedBehaviorSanitizer build is clean.  The source
+asserts every frozen depth counter and cap, both trace halves, the cache size,
+and both deepest paths.  The frozen hashes are
+
+```text
+source  ee57510a4796e23da1408b383af1146478f067a5e0e98d2ad52220e55e2e8bf1
+output  aa87c107ff7e5fdc6cb6a3803ecc0751ac41c267dd59540e4bd6dd764f7769ed
+```
+
+Consequently, among **nonprimitive** scale-one Hamming-six packets, `2[12]`
+is the only possible tight packet.  This addendum makes no claim about
+primitive scale-one H6 packets, arbitrary-scale H6 packets, or global `n=12`
+sporadic emptiness. ∎
 
 ## 1. Strict-safe components
 

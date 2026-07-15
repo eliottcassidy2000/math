@@ -1,3 +1,74 @@
+## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive scale-one H6 closed except `2[12]`; exact shell-five and H-drift refinements; toothpick and Fano shortcuts decided
+
+Prompt (owner): prove the n=12 sporadic branch empty; work longer with frequent
+pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the
+`j=4` flood tail, and Kakeya needles; incorporate the claimed all-n black
+self-line law.
+
+HONEST VERDICT: global n=12 sporadic emptiness remains OPEN.  The session did
+close two substantial residuals and sharpen the remaining object.  THM-847's
+31,715-state exact recursion closes all 96 mixed order-one/order-three H5
+contexts; with THM-844/845 this makes the full effective-order-at-most-twelve
+common-sheet H5 bank empty at arbitrary lift height.  For scale-one H6,
+nonprimitivity forces the six odd labels to be lifted at odd heights and gcd
+exactly two.  Division contracts the packet to `[12]`, a closed H1--H5 row, or
+one top-half H6 chamber.  A frozen 136,288-prefix recursion closes that chamber
+with depth counts `1,54,3612,130515,2104,2,0`, no covering prefix, and trace
+`919c6848d4e1187a2cef093e58982ae6`.  Thus `2[12]` is the only possible tight
+nonprimitive scale-one H6 packet.  Primitive/all-scale H6 remains open.
+
+KAKEYA/OBJECT REFRAME: for a core `P`, retain the literal components of
+`E(P)`, labelled periodic danger combs, endpoint owners, and future operation
+bank.  The new local potential is overlap debt
+`omega_I(S)=sum_u |I intersect D_u|-|I intersect union_u D_u|`.  On the
+doubled-AP equality, the core `[6]` has twelve strict-safe components; combs
+`7,...,12` cover them with 34 incidences and four zero-debt uniquely owned
+components.  This is the useful one-dimensional Kakeya-needle object.  A
+pairwise comb tournament is symmetric before an arbitrary gauge and destroys
+the higher-order union-cover predicate.
+
+DEEP SHELL: THM-836's `s=5` local feasibility is exactly
+`d mod 52 in {11,15,37,41}`, with missing signed class `{3,10}` and owners
+`{B-3,B-2}`.  The explicit mandatory grid `q=5d`,
+`p=(45d-1)/26` uniformly excludes `d=11 mod 52`.  A separate
+1,605,632-row census excludes the single value `d=15`; this was not
+extrapolated to its congruence class.  The classes `15,37,41 mod 52` remain
+open uniformly.
+
+H-DRIFT/TOURNAMENT: the exact all-n pointwise law is
+`E[Delta H|T]=(a_(n-2)-(n-1)H)/C(n,2)=2(K-nH)/C(n,2)`, where `K` is the
+odd-cycle-forest partition function.  At `n=6,H=23` the drift takes both
+`4/3` and `-4/15`, refuting H-fibre constancy and scalar mean reversion.
+Concurrent THM-810 F6 supplies the complementary exact second-moment closure
+for the score-axis walk; it suggests computing a variance-corrected cover-debt
+potential at the seven-comb wall, but only after extracting the actual
+component/comb event kernel.  The user's black self-line premise was tested
+before proof: it fails first at `n=8`, with 404 non-grid-symmetric quasi-fixed
+tilings versus `SC(8)=176`; only the Klein-four/involution skeleton survives.
+
+TOOTHPICK/FANO/FLOOD: Farey adjacency gives `i+j>k` and
+`min(floor(k/i),floor(k/j))=1`, so every THM-841 gap has at most one real kink.
+The all-order ladder is a totient/Farey stalk, not a dyadic toothpick tree;
+the totals agree with A139250 through `1,2,4,8` and split at 16 (`159` versus
+`171`), with the first local recurrence failure at 5.  The 21 `j=4` flood
+bodies are the edges of `K_7` and admit an exact Fano/`chi_7` organization,
+but only the identity in `GL(3,2)` preserves their numerical weights, three
+endpoint needles cannot carry the full negative line, and their modular
+obligation sets are empty.  This rules out the proposed shortcut, not the
+flood bodies.  Live external progress at audit time was 171/2002 clean bodies;
+the 21 floods remained queued and no local overnight sweep was claimed.
+
+ARTIFACTS: THM-815 C.1; HYP-6820 and frontier/backlog/lens updates;
+`lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp/.out`
+(hashes `ee57510a...e2e8bf1`, `aa87c107...769ed`);
+`lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py/.out`
+(`cecb046b...0e91a8`, `495fae30...ffa765`); shell-five and THM-841 exact
+replays; reflection `the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14`.
+Earlier coherent checkpoints `77268efb1` and `aa534512a` were pushed; pulls
+integrated THM-847/H5 closure, the self-line refutation, and THM-810 F6 rather
+than overwriting them.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.13, overnight) -- THE BLACK SELF-LINE LAW IS REFUTED AT n=8: 2selfK = SC fails (404 != 176; pipeline certified against 8/12/88) -- opus S311's 'all n >= 5' law was a small-n coincidence; WHAT SURVIVES: the Klein-four skeleton (404 = 4x101), the INVOLUTION LEMMA (odd-|Aut| coset => involutive witnesses; at odd n ALL quasi-fixed classes have trivial Aut), selfB(8) = 4 (blue self-lines are even-n only); the new open object selfK(n) = 4, 6, 44, 202
 
 Prompt (owner): prove the 2selfK = SC bijection and check at n=8; long overnight session, many pushes/pulls, integrate concurrent agents, toward LRC(14).

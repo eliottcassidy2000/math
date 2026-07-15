@@ -6,6 +6,53 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
+## Addendum 2026-07-15: component--comb cover debt / Kakeya-needle lens
+
+The Hamming-five closures and the nonprimitive Hamming-six contraction sharpen
+the central packet-sheaf claim.  For a current core `P`, the monotone proof
+state is the literal component union `E(P)`, the remaining labelled periodic
+danger combs, active endpoints, and the last speed.  On a component `I`, the
+new useful potential is the overlap debt
+
+```text
+omega_I(S)=sum_(u in S)|I intersect D_u|
+           -|I intersect union_(u in S)D_u|.
+```
+
+The discrepancy ladder controls the first term; coverage and unique-owner
+rigidity live in the second.  At the doubled-AP H6 equality, division by two
+gives core `{1,...,6}` and combs `{7,...,12}`.  Its twelve components have four
+zero-debt unique-owner pins.  Exact descent plus a 136,288-state deepest-prefix
+tree closes every nonprimitive H6 packet except `2[12]`; primitive H6 remains
+open.  “Kakeya needles” here means periodic one-dimensional comb teeth acting
+on disconnected components, not a transfer of planar Kakeya dimension theory.
+
+This addendum also records three quotient decisions from the same session:
+
+- THM-841's toothpick/dyadic breakpoint tree is refuted.  Farey adjacency
+  forces one endpoint chain to be primitive-only, so the exact carrier is a
+  one-kink Farey stalk with totient multiplicities.
+- The `j=4` flood bodies are the 21 edges of `K_7` and admit an exact
+  Fano/`chi_7` organization, but only the identity in `GL(3,2)` preserves their
+  numerical body weights.  Fano incidence is organization, not symmetry.
+- Scalar tournament gauges on H5 contexts, shell classes, and flood bodies are
+  transitive while the cover verdict remains non-pairwise.  Use components,
+  owner pins, grid numerators, or proof obligations as vertices; retain the
+  higher-order incidence as a sidecar.
+
+Packet fields to add where available:
+
+```text
+component_comb_incidence
+component_overlap_debt
+zero_debt_unique_owner
+remaining_comb_progressions
+nonprimitive_contraction_target
+farey_one_kink_stalk
+fano_organization_not_symmetry
+kakeya_analogy_scope
+```
+
 ## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens
 
 HYP-3423 adds a guardrail to the controlled-forgetting thesis.  C2/Borsuk-Ulam

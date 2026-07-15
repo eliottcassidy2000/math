@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; scale-one H6 is finite but contains the doubled-AP equality face; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers; global emptiness remains OPEN in unbounded-order H5 descent, non-AP H6, uniform radius/sum-arc exclusion or transport, the `s>=5` deep shell, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, while primitive H6 remains open; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class now uniformly excluded; global emptiness remains OPEN in unbounded-order H5 descent, primitive/all-scale H6, uniform radius/sum-arc exclusion or transport, the remaining `s=5` deep-shell classes, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -519,6 +519,34 @@ unproved is transport of that state across AP-scale ramification: the next
 quotient target is an endpoint-owner/component-incidence codec between `H1`
 and `H2` compatible with the oriented deck action.
 
+THM-815 C.1 now closes the nonprimitive part of the adjacent scale-one H6
+face.  If
+
+```text
+W=([12] minus R) union {r+13h_r:r in R},       |R|=6,
+```
+
+is nonprimitive, its six retained labels force `gcd(W)=2`,
+`R={1,3,5,7,9,11}`, and all six heights odd.  Writing
+`h_(2i-1)=2k_i+1` and dividing by two gives exactly
+
+```text
+{1,...,6} union {6+i+13k_i:1<=i<=6}.                    (B6)
+```
+
+Zero positive `k_i` is `[12]`; one through five positive coordinates are the
+already closed H1--H5 charts.  The all-positive top-half H6 chamber is closed
+by a frozen 136,288-prefix longest-component recursion with depth counts
+`1,54,3612,130515,2104,2,0`, no covering prefix, and no depth-six state.
+Both deepest leaves agree exactly with an independent closed-danger-union
+reconstruction.  Therefore `2[12]` is the only possible tight nonprimitive
+scale-one H6 row.  This is not primitive H6 closure and does not transport
+through arbitrary AP scale.  On the doubled-AP equality side, the core
+`{1,...,6}` has twelve strict-safe components and the six danger combs
+`D_7,...,D_12` cover them with 34 incidences; four components have zero
+overlap debt and a unique owner.  This weighted component--comb incidence,
+not pairwise comb overlap, is the predicate-preserving Kakeya-needle carrier.
+
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
 creates different handoffs; neither coarse observation is insertion-Markov.
@@ -882,8 +910,24 @@ obeys
 13d<=2B-5.                                                (C6)
 ```
 
-The next shell has exact locally feasible owner pairs, so (C6) is a sharp
-stopping point for this two-sided packing argument, not branch closure.
+At the next shell `s=2B-13d=5`, local feasibility is exact:
+
+```text
+d mod 52 in {11,15,37,41},
+missing signed class={3,10},       owners={B-3,B-2}.      (C7)
+```
+
+The class `d=11 mod 52` is nevertheless uniformly impossible.  The mandatory
+raw-exception grid `q=5d` and the unit numerator
+`p=(45d-1)/26` put every allowed signed-complement lift at depth at least
+`1/11`, while the folded `(13d,5d)` target value is `2/5<11/13`.
+Thus even the guarded containment fails.  A separate exact 1,605,632-row
+census closes the single value `d=15`: after divisor completeness and parity
+support, 3,004 rows pass the `q=75` grid, four pass `q=195`, and none pass
+both.  That finite statement does not extrapolate to `d=15 mod 52`.
+Consequently the uniformly open shell-five classes are exactly
+`15,37,41 mod 52`; their next proof must add a divisor/component/satellite
+incidence beyond the local two-owner packing.
 
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
@@ -914,8 +958,9 @@ The uniform theorem now has two explicit residuals:
    contexts, and THM-845 supplies all order one.  Classify and erode the
    unbounded-order common-sheet languages.  Prove the remaining arbitrary-AP-scale
    descent without assuming common scale. THM-815 Part C also makes scale-one
-   radius six finite, but its `2[12]` equality face is genuine; separate that
-   AP orbit and exclude the non-AP rows. At radius
+   radius six finite, and Part C.1 proves that every nonprimitive row other
+   than the genuine `2[12]` equality is loose.  Classify the remaining
+   primitive scale-one H6 rows and transport the result across AP scale. At radius
    seven the discrepancy deficit `13-2m` changes sign, so a new potential must
    use overlap debt, owner diversity, or signed component/comb incidence rather
    than mean danger density alone. This is a method wall within the scale-one
@@ -941,8 +986,11 @@ The uniform theorem now has two explicit residuals:
    `rho_(C,d)(E)+rho_d(R)<=2/169`.  Prove that every admissible core
    violates that budget. Under its exact signed-complement and guarded-
    containment hypotheses, THM-836 reduces this fixed-ratio task to the shell
-   `2B-13d>=5`; its locally feasible shell-five owners show that the next step
-   must add another component, divisor, or satellite obligation. THM-831 has
+   `2B-13d>=5`; at equality it leaves exactly four classes modulo 52.  The
+   explicit `q=5d` witness uniformly removes `d=11 mod 52`, and the single
+   value `d=15` is finite-exact empty, but the classes `15,37,41 mod 52`
+   remain open uniformly.  Their next step must add another component,
+   divisor, or satellite obligation. THM-831 has
    classified the other fifteen viable folds in its coprime opposite-parity
    reduced family: repeat the
    arithmetic exclusion on the other fifteen primitive rows in (C5), and for
@@ -991,8 +1039,10 @@ and THM-837 closes one of the 96 arbitrary-height order-three contexts by the
 resulting active-endpoint recursion. THM-844 then closes all 96 with the
 state-wise longest-component cap, while THM-847 closes all 96 mixed contexts.
 Unbounded common sheets and all-scale deck descent remain the shallow H5
-residual; THM-815 also makes scale-one radius six
-recursively finite and loses its discrepancy deficit at seven. Arbitrary
+residual; THM-815 also makes scale-one radius six recursively finite and its
+C.1 addendum closes the entire nonprimitive slice away from `2[12]`.  The
+remaining scale-one H6 chamber is primitive, and the discrepancy deficit is
+lost at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
 
@@ -1034,7 +1084,10 @@ deciding objects are therefore:
   them by the weighted ordered centre-switch three-hypergraph. THM-836's
   fixed-ratio deduction instead needs two directional owner minima and their
   mod-13 packing; its binary owner tournament loses the simultaneous
-  obligation that empties the first two shells;
+  obligation that empties the first two shells.  At shell five the faithful
+  carrier is the unit-numerator by signed-lift by divisor/parity incidence:
+  it uniformly removes `d=11 mod 52`, while the transitive four-class
+  tournament does not distinguish the three open classes;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
@@ -1061,7 +1114,11 @@ deciding objects are therefore:
   continuation equivalence is equality of the terminal emptiness verdict
   after every legal future subset of `V`. Endpoint owners and widths decorate
   this operation-closed carrier, and its discrepancy potential stays coercive
-  through six remaining combs.
+  through six remaining combs.  In nonprimitive H6, divisibility contracts
+  the packet to the core `[6]` plus combs `7,...,12`; the resulting weighted
+  component--comb incidence has four zero-overlap-debt unique-owner pins and
+  closes every row except the doubled AP. Primitive H6 is the remaining
+  scale-one chamber.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

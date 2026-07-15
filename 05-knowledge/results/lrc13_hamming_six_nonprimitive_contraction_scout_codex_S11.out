@@ -1,0 +1,24 @@
+LRC13 SCALE-ONE HAMMING-SIX NONPRIMITIVE CONTRACTION SCOUT
+arithmetic=exact_int64_rationals comparisons=int128 endpoint_convention=strict_safe_open
+gcd_core_census rows=924 candidate_rows=1 unique_missing={1,3,5,7,9,11} retained_gcd=2
+nonprimitive_criterion=missing_odds_and_all_six_heights_odd gcd_exactly=2
+divide_by_two={1,...,6}_union_{6+i+13k_i:i=1,...,6} branch_by_positive_k=0:AP,1..5:H1..H5,6:top_half_H6
+kakeya_core={1,...,6} needles={7,...,12} components=12 measure=27/65 longest=1/13 covered=12 zero_overlap_debt=4 incidence_edges=34
+component_degree_hist=1:4,2:2,3:2,4:2,6:2 comb_degrees=7:6,8:4,9:6,10:4,11:10,12:4
+zero_debt_unique_owners=[7/39,12/65]:11,[14/65,3/13]:9,[10/13,51/65]:9,[53/65,32/39]:11
+tournament_guardrail=pairwise_comb_overlap_is_symmetric; faithful_carrier=component_comb_incidence_with_lengths
+top_half_packet={1,...,6}_union_{r+13h_r:r=7,...,12,h_r>=1}
+depth=0 nodes=1 edges=54 dead=0 max_cap=132 covering=0 min_longest=1/13
+depth=1 nodes=54 edges=3612 dead=0 max_cap=430 covering=0 min_longest=11/1677
+depth=2 nodes=3612 edges=130515 dead=0 max_cap=683 covering=0 min_longest=11/5551
+depth=3 nodes=130515 edges=2104 dead=129772 max_cap=608 covering=0 min_longest=2/1677
+depth=4 nodes=2104 edges=2 dead=2103 max_cap=315 covering=0 min_longest=2/1677
+depth=5 nodes=2 edges=0 dead=2 max_cap=28 covering=0 min_longest=17/3120
+depth=6 nodes=0 covering=0 min_longest=-
+deepest_dead_leaf=1 path=7:33,10:36,9:48,8:60,11:63 unused=12 least_next=64 cap=28 components=58 longest=17/3120
+deepest_dead_leaf=2 path=7:33,10:36,9:48,8:60,12:64 unused=11 least_next=76 cap=28 components=54 longest=47/8580
+closed_danger_deepest_leaf_checks=2 exact_component_matches=2
+trace128=919c6848d4e1187a2cef093e58982ae6 cached_speeds=313
+PASS: top-half H6 chamber has no covering completion
+CONCLUSION: among nonprimitive scale-one H6 packets, only 2[12] can be tight
+SCOPE: primitive scale-one H6 and global n=12 sporadic emptiness remain open
