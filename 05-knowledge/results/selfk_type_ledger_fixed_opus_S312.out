@@ -13,3 +13,12 @@ qf-side (t,pi) mass by witness type (total = weighted = 12):
 anti-side mass by type (total/n! = SC = 12):
     (2, 2, 2): 7680 = n!*10.6667
     (6,): 960 = n!*1.33333
+
+===== n=7 (black qf tilings: 88, SC: 88) [171s]
+qf-side (t,pi) mass by witness type (total = weighted = 88):
+    (1, 6): 32
+    (2, 5): 48
+    (3, 4): 8
+anti-side mass by type (total/n! = SC = 88):
+    (1, 2, 2, 2): 430080 = n!*85.3333
+    (1, 6): 13440 = n!*2.66667
