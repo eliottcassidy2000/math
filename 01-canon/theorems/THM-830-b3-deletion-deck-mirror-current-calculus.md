@@ -4,7 +4,7 @@ title: Gap-tournament suspension and the weighted deletion deck classify the B3 
 status: PROVED (all-size coordinate, face, deletion, seam, half-cube, line-defect, and radius-one laws) + FINITE-EXACT (full tilings through n=7; root invariants through n=9; formula replay through n=14)
 source: codex-2026-07-14-S14
 depends_on: [THM-002, THM-442, THM-513, THM-549, THM-550, THM-553, THM-559, THM-796, THM-801]
-related: [THM-781, THM-809, THM-811, THM-814, THM-818, THM-825, THM-828, THM-832, THM-838, THM-839, THM-841, HYP-2685, HYP-3234, HYP-6880]
+related: [THM-781, THM-809, THM-811, THM-814, THM-818, THM-825, THM-828, THM-832, THM-838, THM-839, THM-842, HYP-2685, HYP-3234, HYP-6880]
 verification:
   - 04-computation/b3_gap_tournament_deletion_deck_codex_S14.py
   - 05-knowledge/results/b3_gap_tournament_deletion_deck_codex_S14.out
@@ -943,9 +943,9 @@ ordered-state balance character.  Each of the three nonlinear punctures is
 killed by one two-toggle parity obligation.  Thus groupoid inversion symmetry
 is necessary but not sufficient for the raw ordered sidecar: a recursively
 closed node label must retain these transverse local characters or an
-equivalent ordered-state witness.  THM-841 reserves the corresponding
-rolewise continuation test, especially whether the gap face is distinguished
-from the endpoint faces; its reserved title is not used here as a theorem.
+equivalent ordered-state witness.  THM-842 performs the corresponding
+rolewise continuation test: the gap face is Q-pure and retains the affine
+sheet that the unordered endpoint deck loses.
 
 The barycentric carrier has a formal `S_3` triality permuting endpoint,
 internal-gap, and opposite-end roles.  Only the endpoint swap is tournament

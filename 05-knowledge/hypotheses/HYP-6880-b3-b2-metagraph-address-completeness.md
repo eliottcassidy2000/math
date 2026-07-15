@@ -1,10 +1,10 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839; exact gap-tournament and half-defect carrier proved by THM-830
+status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures, B3 continuation, and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839/842; exact gap-tournament and half-defect carrier proved by THM-830
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-841, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-842, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -216,6 +216,18 @@ reflection into 388 endpoint-swap fixed points and 124 two-cycles.  Exactly
 58 fixed points also satisfy every ordered `01/10` balance bit.  The nonlinear
 stalk is therefore a balanced reflection-fixed locus, not an unexplained
 punctured code.
+
+THM-842 decides the first deletion/gap-contraction continuation on that stalk.
+B is the unique B3 role descending to literal Q on each source cell and maps
+the 58 cells injectively.  The reflection-exchanged A/C endpoint deck has 29
+doubletons.  Their involution is the apex-relative antipode
+`theta=sigma(nonapex-complement)`, which preserves `D` and the entire upper
+skew word; the missing bit is therefore affine sheet context, not chirality.
+Endpoint deletion converts theta to ordinary complement-reflection, while B
+transports theta itself.  The unpositioned induced-tournament deletion deck
+has exactly the same 53-cell partition as the bare upper node, whereas the
+position-marked deck is injective.  This proves that recursive usefulness
+requires path position and sheet action even after static node completeness.
 
 ## Continued-fraction connection
 

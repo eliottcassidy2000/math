@@ -1,0 +1,748 @@
+{
+  "apex_relative_antipode": {
+    "endpoint_identity": "A theta = sigma kappa C; C theta = sigma kappa A",
+    "fixed_points": 0,
+    "formula": "theta_n(u)=sigma_n(u xor (FULL_n xor apex))",
+    "gap_identity": "B theta = theta B",
+    "golden_companions": [
+      [
+        0,
+        55,
+        "0x4483414"
+      ],
+      [
+        1,
+        57,
+        "0x18e4e8a"
+      ],
+      [
+        2,
+        54,
+        "0x4c41818"
+      ],
+      [
+        3,
+        53,
+        "0x4c41818"
+      ],
+      [
+        4,
+        52,
+        "0x4c41818"
+      ],
+      [
+        5,
+        51,
+        "0x4c41818"
+      ],
+      [
+        6,
+        50,
+        "0x4c41818"
+      ],
+      [
+        7,
+        46,
+        "0x5c67a9e"
+      ],
+      [
+        8,
+        45,
+        "0x4c41818"
+      ],
+      [
+        9,
+        44,
+        "0x4c41818"
+      ],
+      [
+        10,
+        43,
+        "0x4c41818"
+      ],
+      [
+        11,
+        42,
+        "0x4c41818"
+      ],
+      [
+        12,
+        41,
+        "0x4c41818"
+      ],
+      [
+        13,
+        49,
+        "0x5df5e18"
+      ],
+      [
+        14,
+        48,
+        "0x5df5e18"
+      ],
+      [
+        15,
+        38,
+        "0x4c41818"
+      ],
+      [
+        16,
+        35,
+        "0x4483414"
+      ],
+      [
+        17,
+        32,
+        "0x4c41818"
+      ],
+      [
+        18,
+        31,
+        "0x4c41818"
+      ],
+      [
+        19,
+        30,
+        "0x4511092"
+      ],
+      [
+        20,
+        56,
+        "0x0192486"
+      ],
+      [
+        21,
+        47,
+        "0x0192486"
+      ],
+      [
+        22,
+        40,
+        "0x1976a0c"
+      ],
+      [
+        23,
+        39,
+        "0x1976a0c"
+      ],
+      [
+        24,
+        36,
+        "0x11b4600"
+      ],
+      [
+        25,
+        37,
+        "0x18e4e8a"
+      ],
+      [
+        26,
+        34,
+        "0x08c2c0c"
+      ],
+      [
+        27,
+        33,
+        "0x095088a"
+      ],
+      [
+        28,
+        29,
+        "0x0192486"
+      ]
+    ],
+    "orbits": 29,
+    "preserves": [
+      "D",
+      "full upper skew word J",
+      "upper eta"
+    ]
+  },
+  "bare_sector_guardrail": "all four missing sectors have B footprints before A/C or raw-S2 death",
+  "chirality": {
+    "A": {
+      "eta_histogram": {
+        "-1": 21,
+        "0": 4,
+        "1": 33
+      },
+      "first_layer_histogram": {
+        "5": 25,
+        "6": 18,
+        "7": 11,
+        "none": 4
+      },
+      "relative_to_upper": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      },
+      "sector_constant": false
+    },
+    "B": {
+      "eta_histogram": {
+        "-1": 52,
+        "1": 6
+      },
+      "first_layer_histogram": {
+        "5": 44,
+        "6": 12,
+        "7": 2
+      },
+      "relative_to_upper": {
+        "preserve": 20,
+        "reverse": 38
+      },
+      "sector_constant": true
+    },
+    "C": {
+      "eta_histogram": {
+        "-1": 21,
+        "0": 4,
+        "1": 33
+      },
+      "first_layer_histogram": {
+        "5": 25,
+        "6": 18,
+        "7": 11,
+        "none": 4
+      },
+      "relative_to_upper": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      },
+      "sector_constant": false
+    }
+  },
+  "endpoint_bar_P_plus_A_C_eta": [
+    50,
+    {
+      "1": 42,
+      "2": 8
+    }
+  ],
+  "face_continuation": {
+    "B_Q": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "B_bar_P": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "endpoint_Q": [
+      29,
+      {
+        "2": 29
+      }
+    ],
+    "endpoint_Q_role_coincidences": 0,
+    "endpoint_bar_P": [
+      29,
+      {
+        "2": 29
+      }
+    ],
+    "endpoint_bar_P_role_coincidences": 58,
+    "endpoint_plus_B_Q": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "endpoint_plus_B_bar_P": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "rolewise_Q_descent": {
+      "A": 0,
+      "B": 58,
+      "C": 0
+    },
+    "rolewise_bar_P_descent": {
+      "A": 58,
+      "B": 58,
+      "C": 58
+    }
+  },
+  "induced_tournament_decks": {
+    "central_node_partition_equals_upper_node": true,
+    "ordered_nine_cards_mod_reversal": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "position_orbits": {
+      "(1, 9)": {
+        "fibres": [
+          49,
+          {
+            "1": 41,
+            "2": 7,
+            "3": 1
+          }
+        ],
+        "role_coincidences": 58
+      },
+      "(2, 8)": {
+        "fibres": [
+          45,
+          {
+            "1": 33,
+            "2": 11,
+            "3": 1
+          }
+        ],
+        "role_coincidences": 30
+      },
+      "(3, 7)": {
+        "fibres": [
+          55,
+          {
+            "1": 52,
+            "2": 3
+          }
+        ],
+        "role_coincidences": 9
+      },
+      "(4, 6)": {
+        "fibres": [
+          55,
+          {
+            "1": 52,
+            "2": 3
+          }
+        ],
+        "role_coincidences": 0
+      },
+      "(5,)": {
+        "fibres": [
+          53,
+          {
+            "1": 48,
+            "2": 5
+          }
+        ],
+        "role_coincidences": 0
+      }
+    },
+    "unpositioned_multiset": [
+      53,
+      {
+        "1": 48,
+        "2": 5
+      }
+    ],
+    "unpositioned_partition_equals_upper_node": true,
+    "unpositioned_set": [
+      53,
+      {
+        "1": 48,
+        "2": 5
+      }
+    ]
+  },
+  "inputs": {
+    "forward_map": "05-knowledge/results/n9_false_palindrome_node_forward_map_codex_S13b.json",
+    "node_atlas": "/tmp/n8_merged_node_rank_u16.bin",
+    "witnesses": "05-knowledge/results/mobius_cech_n9_exact_join_witnesses_codex_S13.tsv"
+  },
+  "methodology": {
+    "alternate_vertices": [
+      "face roles",
+      "proof obligations",
+      "information carriers",
+      "path positions"
+    ],
+    "challenged_assumption": "tournament vertices and continuation states need not be runners or unmarked classes",
+    "destroys": [
+      "LRC gaps",
+      "owners",
+      "walls",
+      "metric loneliness"
+    ],
+    "preserves": [
+      "finite-bank equality",
+      "D action",
+      "Q/bar-P fibres",
+      "skew",
+      "path position when retained"
+    ]
+  },
+  "repaired_cards": {
+    "B_exact_and_Q_equal_by_internal_position": {
+      "2": [
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0
+      ],
+      "4": [
+        1,
+        1
+      ],
+      "5": [
+        2,
+        2
+      ],
+      "6": [
+        1,
+        1
+      ],
+      "7": [
+        0,
+        0
+      ],
+      "8": [
+        0,
+        0
+      ]
+    },
+    "eta_relative_by_position": {
+      "1": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      },
+      "2": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      },
+      "3": {
+        "preserve": 21,
+        "reverse": 26,
+        "zero": 11
+      },
+      "4": {
+        "preserve": 20,
+        "reverse": 28,
+        "zero": 10
+      },
+      "5": {
+        "preserve": 52,
+        "reverse": 6
+      },
+      "6": {
+        "preserve": 20,
+        "reverse": 28,
+        "zero": 10
+      },
+      "7": {
+        "preserve": 21,
+        "reverse": 26,
+        "zero": 11
+      },
+      "8": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      },
+      "9": {
+        "preserve": 31,
+        "reverse": 23,
+        "zero": 4
+      }
+    },
+    "full_ordered_mod_reversal": [
+      58,
+      {
+        "1": 58
+      }
+    ],
+    "position_orbits": {
+      "(1, 9)": {
+        "Q": [
+          29,
+          {
+            "2": 29
+          }
+        ],
+        "Q_role_coincidences": 0,
+        "bar_P": [
+          29,
+          {
+            "2": 29
+          }
+        ],
+        "bar_P_role_coincidences": 58,
+        "seam_augmented_same_fibres": true
+      },
+      "(2, 8)": {
+        "Q": [
+          46,
+          {
+            "1": 34,
+            "2": 12
+          }
+        ],
+        "Q_role_coincidences": 0,
+        "bar_P": [
+          46,
+          {
+            "1": 34,
+            "2": 12
+          }
+        ],
+        "bar_P_role_coincidences": 8,
+        "seam_augmented_same_fibres": true
+      },
+      "(3, 7)": {
+        "Q": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "Q_role_coincidences": 0,
+        "bar_P": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "bar_P_role_coincidences": 0,
+        "seam_augmented_same_fibres": true
+      },
+      "(4, 6)": {
+        "Q": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "Q_role_coincidences": 0,
+        "bar_P": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "bar_P_role_coincidences": 0,
+        "seam_augmented_same_fibres": true
+      },
+      "(5,)": {
+        "Q": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "Q_role_coincidences": 0,
+        "bar_P": [
+          58,
+          {
+            "1": 58
+          }
+        ],
+        "bar_P_role_coincidences": 0,
+        "seam_augmented_same_fibres": true
+      }
+    },
+    "shortcut_seams": {
+      "ones_by_j2_to_j8": [
+        29,
+        48,
+        31,
+        29,
+        27,
+        10,
+        29
+      ],
+      "weight_histogram": {
+        "1": 5,
+        "2": 9,
+        "3": 15,
+        "4": 15,
+        "5": 9,
+        "6": 5
+      },
+      "word_fibres": [
+        22,
+        {
+          "1": 8,
+          "2": 4,
+          "3": 2,
+          "4": 6,
+          "6": 2
+        }
+      ]
+    }
+  },
+  "role_D_images": {
+    "0x0192486": {
+      "A": "0x01a103",
+      "B": "0x034a46",
+      "C": "0x003249"
+    },
+    "0x08c2c0c": {
+      "A": "0x048306",
+      "B": "0x098e0c",
+      "C": "0x011858"
+    },
+    "0x095088a": {
+      "A": "0x052205",
+      "B": "0x0ac44a",
+      "C": "0x012a11"
+    },
+    "0x11b4600": {
+      "A": "0x09e980",
+      "B": "0x035300",
+      "C": "0x02368c"
+    },
+    "0x18e4e8a": {
+      "A": "0x0ccb85",
+      "B": "0x09974a",
+      "C": "0x031c9d"
+    },
+    "0x1976a0c": {
+      "A": "0x0d6a86",
+      "B": "0x0add0c",
+      "C": "0x032ed4"
+    },
+    "0x4483414": {
+      "A": "0x10850a",
+      "B": "0x050a14",
+      "C": "0x089068"
+    },
+    "0x4511092": {
+      "A": "0x112409",
+      "B": "0x064052",
+      "C": "0x08a221"
+    },
+    "0x4c41818": {
+      "A": "0x14060c",
+      "B": "0x0c8418",
+      "C": "0x098830"
+    },
+    "0x5c67a9e": {
+      "A": "0x1c4e8f",
+      "B": "0x0c9d5e",
+      "C": "0x0b8cf5"
+    },
+    "0x5df5e18": {
+      "A": "0x1def8c",
+      "B": "0x0fd718",
+      "C": "0x0bbebc"
+    }
+  },
+  "role_geometry": {
+    "A": "delete fixed-path vertex 9",
+    "B": "gap contraction, not one vertex deletion",
+    "C": "delete fixed-path vertex 1",
+    "reflection": [
+      "A sigma = sigma C",
+      "B sigma = sigma B",
+      "C sigma = sigma A"
+    ]
+  },
+  "role_rank_on_V": {
+    "A": 4,
+    "B": 4,
+    "C": 4
+  },
+  "schema_version": 1,
+  "source_cells": 58,
+  "theorem": "THM-842",
+  "tournament_analysis": {
+    "directed_triangles": 0,
+    "edge_flips": 28,
+    "hamiltonian_paths": 1,
+    "retention": {
+      "B Q": {
+        "cells": 58,
+        "separated_pairs": 1653
+      },
+      "B bar P": {
+        "cells": 58,
+        "separated_pairs": 1653
+      },
+      "D sector": {
+        "cells": 11,
+        "separated_pairs": 1284
+      },
+      "endpoint Q": {
+        "cells": 29,
+        "separated_pairs": 1624
+      },
+      "endpoint bar P": {
+        "cells": 29,
+        "separated_pairs": 1624
+      },
+      "endpoint+B Q": {
+        "cells": 58,
+        "separated_pairs": 1653
+      },
+      "ordered induced deck": {
+        "cells": 58,
+        "separated_pairs": 1653
+      },
+      "unpositioned induced deck": {
+        "cells": 53,
+        "separated_pairs": 1648
+      },
+      "upper node": {
+        "cells": 53,
+        "separated_pairs": 1648
+      }
+    },
+    "scc_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "score_histogram": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "switches": [
+      "raw retention",
+      "retention per logarithmic cell cost"
+    ],
+    "tie_hamiltonian_path": [
+      "D sector",
+      "endpoint Q",
+      "endpoint bar P",
+      "upper node",
+      "unpositioned induced deck",
+      "B Q",
+      "B bar P",
+      "endpoint+B Q",
+      "ordered induced deck"
+    ],
+    "vertices": [
+      "D sector",
+      "endpoint Q",
+      "endpoint bar P",
+      "upper node",
+      "unpositioned induced deck",
+      "B Q",
+      "B bar P",
+      "endpoint+B Q",
+      "ordered induced deck"
+    ]
+  }
+}

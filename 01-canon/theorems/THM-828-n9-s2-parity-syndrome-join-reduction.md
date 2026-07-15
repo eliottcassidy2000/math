@@ -4,7 +4,7 @@ title: The n=9 raw lower codec has exactly 58 reflection doubletons supported on
 status: PROVED REDUCTION + FINITE-EXACT COMPLETE CANONICAL JOIN
 source: codex-2026-07-15-S13/referee
 depends_on: [THM-809, THM-811, THM-814, THM-818, THM-825]
-related: [THM-801, THM-813, THM-839, HYP-6880]
+related: [THM-801, THM-813, THM-839, THM-842, HYP-6880]
 verification:
   - 04-computation/mobius_cech_n8_node_atlas_export_codex_S13.py
   - 04-computation/mobius_cech_n9_exact_join_codex_S13.cpp
