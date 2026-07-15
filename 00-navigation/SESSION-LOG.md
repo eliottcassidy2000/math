@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.22) -- THE FALSE-PEAKS CENSUS: the +8 climb is obstructed EXACTLY FROM n=5 (0 / 40 / 368 false peaks at n=4/5/6; descent provably free at all n, THM-854) -- the quintic threshold lands as a computed Morse asymmetry; the solvability-as-rank-truncation dictionary (Moser truncation order 4 = last solvable degree; CD n=5 = quaternions = 2I = A5 = the same rung as the first false peaks); archaeology pointers merged
+
+Prompt (owner): keep the rank-truncation lens; the +8 climb vs transitive; CD tower; quintic unsolvability; search + extend.
+
+CENSUS (exhaustive): false peaks (below c3max, no +1 move: no arc u->v with d_u = d_v+2) = 0 (n=4), 40 (n=5, all at c3=4), 368 (n=6: 80 at c3=2, 288 at c3=5). With THM-854 (descent always free), the flip landscape is DOWN-SOLVABLE / UP-OBSTRUCTED from n=5 -- degrees <= 4 climb freely, n = 5 acquires local maxima: Abel-Ruffini's threshold appears as Morse structure in tournament space. DICTIONARY: polygonal:Pascal :: Moser:2^n :: solvable-shadow:full-tower; Moser truncates at rank 4 = last solvable S_k; the CD Mode-B tower's n=5 node (quaternions, first property loss) hosts 2I with A5 = 2I/(+-1) = Klein's quintic monodromy -- three thresholds, one rung. CD level counts: 2, 6, 31, 205 at n=3,5,9,17. ARCHAEOLOGY: alternating-group-graph-s699, bsd-hodge-polygonal-ladder-kps7, five-and-ten, T1215/HYP-3150 degree ledger (Abel-Ruffini debt) -- the ancestors; merge next.
+
+FILES: false_peaks_cd_tower_kps_S128c22.py/.out, HYP-6945. -> all (classify the 40 stuck n=5 tournaments; 2I on the n=5 metagraph; false-peak fraction asymptotics).
+
+---
 ## mac-mini-2026-07-15-S109 -- THM-865: THE LOCKER PARITY LAW IS FALSE (H(D_11) = 4027 = 3 mod 4) + THM-866: AXIS LEVEL NO-HOLES COMPLETENESS PROVED (F3 tie-splitting walk; triple-convergence merge point) + THE TWO-AXES FIGURATE NOTE (trinity, tower, G(n) decoded, A060488 identity, Brown/Fermat split)
 
 Prompt (owner): prove the locker parity law via the divisor-pairing involution; prove the no-holes completeness via the F3 exchange walk; generalize the triangular numbers along the polygonal (shape) and polyhedral (dimension) axes; decode the difference diagonals (1,3,6,10,15 and the subtler 4,13,28,50,80); characterize the Fibonacci-analogue 1,1,2,3,5,8,13,21,33,51,76,111,157,218.

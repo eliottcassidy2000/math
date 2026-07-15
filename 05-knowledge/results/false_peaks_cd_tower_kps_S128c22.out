@@ -1,0 +1,7 @@
+n=4: below-max tournaments 40 ; FALSE PEAKS (no +1 move) 0 ; by c3 {} ; c3max=2
+n=5: below-max tournaments 1000 ; FALSE PEAKS (no +1 move) 40 ; by c3 {4: 40} ; c3max=5
+n=6: below-max tournaments 30128 ; FALSE PEAKS (no +1 move) 368 ; by c3 {2: 80, 5: 288} ; c3max=8
+
+CD-tower level counts (populated E4 levels = c3max+1): n=2,3,5,9,17 -> [(3, 2), (5, 6), (9, 31), (17, 205)]
+Moser rank note: A000127 = sum_{k<=4} C(n-1,k) -- truncation order 4 = last solvable S_k
+DONE
