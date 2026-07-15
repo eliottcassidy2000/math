@@ -1,0 +1,9 @@
+(A) EXACT integral_E a_(0..6) = 2833/50700 ~ 0.055878  (S312 quadrature said ~0.0558)
+(B) |uncovered(N) - integral| * N   (residues: x_i = N + d_i):
+    N=  100: uncovered = 0.053425  err*N = -0.245
+    N=  200: uncovered = 0.053669  err*N = -0.442
+    N=  400: uncovered = 0.055989  err*N = +0.044
+    N=  800: uncovered = 0.055604  err*N = -0.219
+    N= 1600: uncovered = 0.056228  err*N = +0.560
+
+(C) prefixes with NEITHER mechanism: 0 of 792

@@ -1,0 +1,13 @@
+(1) floor 1/78 violations in box a<=60, b<=400: 0
+    minimizers: [(1, 12)]
+(2) deviation-bound violations: 13536
+
+(3) c3 = 9/500 ~ 0.01800: low channels (8): [(1, 9), (1, 10), (1, 11), (1, 12), (2, 9), (2, 11), (3, 10), (4, 9)]
+(4) low-quotient violations (3-speed lemma fails if nonempty): 0
+
+(3) c3 = 2/105 ~ 0.01905: low channels (10): [(1, 9), (1, 10), (1, 11), (1, 12), (1, 25), (2, 9), (2, 11), (3, 10), (3, 11), (4, 9)]
+(4) low-quotient violations (3-speed lemma fails if nonempty): 0
+
+(5) min over candidates of maxtree = 74892933577540739913/527369994155082074095 ~ 0.14201 at [818, 951, 1409, 1657, 2105, 2211, 2246]
+    threshold 13/169 = 0.07692; gap = +0.06509
+    proved floor 5*c3 + 1/78 with c3=0.018: 0.10282

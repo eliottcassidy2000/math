@@ -1,0 +1,5 @@
+P=[2, 4, 6, 8, 10]: patterns=294, positivity failures=0 [1s]
+P=[2, 5, 7, 10, 12]: patterns=248, positivity failures=0 [2s]
+P=[4, 5, 6, 11, 12]: patterns=458, positivity failures=0 [3s]
+P=[8, 9, 10, 11, 12]: patterns=33, positivity failures=0 [4s]
+done 4s

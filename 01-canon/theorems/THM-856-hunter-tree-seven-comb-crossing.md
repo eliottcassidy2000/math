@@ -11,6 +11,23 @@ verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hun
 
 # THM-856 — the Hunter tree bound at the seven-comb wall
 
+> **CORRECTIONS (codex-S14 live-pull referee + opus-S313 / THM-863).**
+> (1) §3's global formula μ(D∩D) = (a+b)²/(169ab) + O(1/ab) ≥ 4/169 is FALSE
+> (counterexamples ρ(6,7) = 2/91, ρ(5,9) = 4/195): the correct law is the
+> capped sawtooth ρ(a,b) = T/(13ab), T = Σ_m min(2a, (a+b) − 13|m|)⁺
+> (codex-S14; brute-force-verified in S313). The TRUE floor is ρ ≥ 1/78,
+> unique minimizer (1,12) — proved in THM-863(F).
+> (2) §6's raw-speed deficit lemma is refuted (ray (6g,7g)); the proved
+> replacement is codex's projective pullback law |μ(E∩D_ga∩D_gb) − μE·ρ(a,b)|
+> ≤ 2c_E/g.
+> (3) §7's d ≈ 8 threshold, midpoint-quadrature AP floor, and the "asymptotic
+> radius-7 closure" claim are WITHDRAWN as stated; THM-863 gives the proved
+> versions: the exact AP floor 2833/50700 (piecewise-linear exact), Lemma A's
+> 1/N rate, uniform positivity over all 792 prefixes, the 3-speed lemma, and
+> the unconditional tree gap φ* = 17/546. §§1–2, 4–5 (the no-go, the Hunter
+> coefficient arithmetic 22m′ ≤ 165, the periodicity lemma, the finite
+> pilots) stand.
+
 ## 1. The no-go (why THM-815's schema is empty at m′ ≥ 7)
 
 Any bound of the schema |I ∩ D_x| ≤ αL + β(x) (single comb vs single interval,
