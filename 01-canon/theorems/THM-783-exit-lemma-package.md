@@ -1,36 +1,52 @@
 ---
 id: THM-783
-title: The exit-lemma package — the φ-recurrence, the period-sum law, the SINGLE-VISITOR BREAK (unconditional), cluster balance, the de-phase bound, and the conditional extent theorem; the loophole packet eliminated; Davenport shows balance is algebraically unavoidable so the surviving gap is geometric
-status: PROVED (φ-recurrence; period-sum; single-visitor break; cluster balance; de-phase lemma; the no-companion extent bound) + VERIFIED (run cap 6 at heights to 10^4 incl. all targeted packet families; laws 40/40, 45-period, 6/6 batteries) + OPEN (the absolute run constant; the balanced co-landing cascade, named)
+title: The corrected exit-lemma package — anchored φ-extension, period-sum and single-visitor laws, cluster balance, and a conditional metric extent theorem; raw wall count and the original de-phase estimate are withdrawn
+status: PROVED at the stated hypotheses (anchored simple-wall φ-extension; period-sum; single-visitor break; cluster balance; corrected no-companion extent bound) + VERIFIED (bounded-bank run cap 6 at heights to 10^4; laws 40/40, 45-period, 6/6 batteries) + CORRECTED (the unconditional de-phase estimate is WITHDRAWN; the absolute raw-wall conjecture is REFUTED by THM-784/MISTAKE-147; the extent theorem's original visitor-free intermediate claim is false) + OPEN (a metric/core-sensitive exit theorem and a valid varying-index balanced co-landing analysis)
 source: opus-2026-07-14-S303 (owner directive: prove the unconditional exit lemma)
 renumber_note: claimed as THM-782 before the author observed codex-S9's earlier-pushed
   THM-782 phase-cell theorem; renumbered to THM-783 under the first-pusher protocol.
 depends_on:
   - THM-779   # the token-walk criterion this analyzes
   - THM-773   # the token algebra
-related: [THM-767, THM-771, HYP-6840, HYP-6845]
+related: [THM-767, THM-771, THM-784, HYP-6840, HYP-6845, MISTAKE-147]
 verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
   (+ 05-knowledge/results/lrc14_exit_lemma_decision_opus_S303.out)
 ---
 
 # THM-783 — the exit-lemma package
 
+> **Correction (codex-S10, THM-784/MISTAKE-147).** Sections (1)--(3) retain
+> the corrected local content below; (4) is withdrawn; (5) is corrected
+> below without changing its metric conclusion. The finite census in (6) never
+> established a uniform bound, and the absolute wall-count conjecture in the
+> original (7) is false. A fixed slow rainbow chamber supports arbitrarily many
+> fastest-owner walls. Raw wall count and metric extent are not equivalent.
+
 **Frame.** THM-779's setting: lens 7, r = 8 owners W (7 ∤ w, distinct), wall of
 owner o at x = (m + ½)/w_o, blocking run = a maximal streak of walls all
 satisfying the wall condition (the seven non-walling tokens exactly F_7). Write
 φ_i = w_{o_i}^{-1}·m_i (mod 7) for the i-th wall of the run.
 
-## (1) The φ-recurrence (PROVED)
+## (1) The anchored φ-extension lemma (PROVED)
 
-> Blocking propagates from wall i to wall i+1 **iff φ_{i+1} ≡ φ_i + w_{o_i}^{-1}
-> (mod 7).** Same-owner steps satisfy it identically; every owner switch is one
-> determined mod-7 equation.
+> Let wall `i` be a simple covered wall, and let the next global event coordinate
+> be a simple wall `i+1`. Then wall `i+1` is covered **iff
+> `φ_{i+1} ≡ φ_i + w_{o_i}^{-1} (mod 7)`.** Same-owner steps satisfy the
+> congruence identically; every owner switch is one determined mod-7 equation.
 
 *Proof.* After wall i the non-o_i tokens are F_7 and o_i's new token
 −w_{o_i}^{-1}(m_i+1) duplicates its unique holder; no token changes before wall
 i+1; wall i+1's condition (its non-walling tokens = F_7) holds iff o_{i+1}'s
 token −w_{o_{i+1}}^{-1}·m_{i+1} equals that duplicated value. Rearranged, this
 is the recurrence; for o_{i+1} = o_i it is m ↦ m+1, an identity. ∎
+
+Both hypotheses matter. Without a covered anchor the congruence can hold while
+both walls fail (for example `W={1,2,3,4,5,6,8,9}`, from the owner-9 wall at
+`1/6` to the owner-8 wall at `3/16`). Without a simple next coordinate, a
+simultaneous wall is uncovered even if one selected owner's congruence holds
+(`W={1,2,3,4,5,8,10,30}`, from the covered owner-30 wall at `19/60` to the
+owner-10/30 double wall at `7/20`). Calling both candidate walls “walls of the
+run” in advance would make the original iff circular.
 
 ## (2) The period-sum law (PROVED; battery 40/40)
 
@@ -51,45 +67,66 @@ counts n_a ∈ {0,1}. The period-sum law then reads Σ_{visitors} w_a^{-1} ≡ 0
 > **Cluster balance:** any visitor set S must satisfy Σ_{a∈S} w_a^{-1} ≡ 0
 > (mod 7); for pairs, **w_c + w_{c'} ≡ 0 (mod 7)** (battery 6/6).
 
-## (4) The de-phase lemma (PROVED)
+## (4) CORRECTION — the unconditional de-phase lemma is withdrawn
 
-Two owners c ≠ c′ co-visiting f-periods drift apart at rate
-|1/w_c − 1/w_{c′}| = Δ/(w_c w_{c′}) per c-period (Δ = |w_c − w_{c′}| ≥ 1, distinct
-integers), while co-landing requires staying within one f-window 1/w_f:
+The original argument assumed that paired `c`- and `c'`-wall indices both
+advance by one and keep a fixed relative order. Neither follows from
+co-visitation. For `f=8`, `c=2`, `c'=5`, every owner-2 wall co-visits an
+f-period with an owner-5 wall forever (pairs near `.25/.30`, then `.75/.70`,
+and their integer translates), although the displayed bound would be `17/12`.
+The owner-5 index advances alternately by two and three and the relative order
+flips.
 
-> consecutive co-visits of a FIXED pair ≤ **w_c·w_{c′}/(w_f·Δ) + 1.**
+Under the **extra** hypotheses of one-step paired indices and fixed order, the
+elementary drift estimate is valid. Without fixed order the available window
+has width `2/w_f`, giving at best a factor-two version. No blocking-specific
+principle forcing those hypotheses was proved here. Therefore the unconditional
+bound and the asserted mandatory `>=3`-cluster handover are withdrawn; a sound
+varying-index/Beatty formulation is an open part of the cascade.
 
-Balanced clusters are temporary; sustaining a run past a fixed pair's de-phase
-needs a handover through a ≥3-cluster with Σ w^{-1} ≡ 0 co-landing at the
-handover moment — each a further determined coincidence, cascading with the
-two-owner congruences (n ≡ w_f·w_b^{-1} count-locks; the (f,c,c′)
-tri-consistency forces the f-count n ≡ 4 or 0 mod 7).
+## (5) The corrected conditional extent theorem (PROVED)
 
-## (5) The conditional extent theorem (PROVED) and why it cannot be unconditional as stated
+Here a g-wall has a **balanced companion cluster** when the other visitors in
+its complete f-period have inverse-residue sum `-w_g^{-1}`; equivalently, the
+full visitor set containing g has sum zero.
 
 > **If no g-wall in a run co-lands with a balanced companion cluster** (g = the
-> second-fastest owner), then every complete in-run f-period is visitor-free,
-> all g-walls sit within 1/w_f of the run's ends, and the run's extent is
-> **< 1/w_g + 2/w_f.** Consequently any closed core-safe component longer than
-> that contains a wall where blocking fails — a full 1/14-witness moment.
+> second-fastest owner), then all g-walls sit within 1/w_f of the run's ends,
+> and the run's extent is
+> **< 1/w_g + 2/w_f.** Consequently, under the same no-companion hypothesis for
+> its putative covered streak, any closed core-safe component longer than that
+> contains a wall where blocking fails — a full 1/14-witness moment.
 
-*Proof.* A g-wall ≥ 1/w_f from both ends lies in a complete in-run f-period,
-which then has a visitor; by (3) it needs ≥ 2 balanced visitors — excluded by
-hypothesis. So the interior (minus two 1/w_f buffers) contains no g-wall, hence
-is shorter than g's mesh 1/w_g. ∎
+*Proof.* A g-wall at least `1/w_f` from both ends is bracketed by two consecutive
+f-walls that are still inside the run. The intervening complete f-period has a
+visitor set containing g. By the period-sum law this set has inverse-sum zero;
+since `w_g^{-1}` is nonzero, it contains a balanced companion to g, contrary to
+the hypothesis. Thus the closed central interval contains no g-wall. It is
+strictly shorter than g's wall mesh `1/w_g`, giving the displayed bound. ∎
+
+The original sentence “every complete in-run f-period is visitor-free” was too
+strong and is withdrawn. Exact counterexample:
+
+`W={2,8,17,18,19,20,24,29}`, with `f=29`, `g=24`.
+
+The consecutive covered walls at `11/58, 7/36, 7/34, 13/58` have owners
+`29,18,17,29`. The complete f-period has the balanced visitors `{18,17}`
+because `18^{-1}+17^{-1}=5+2=0 (mod 7)`, but it contains no g-wall. This does
+not affect the proof above, which needs only complete periods containing g.
 
 **Why the companion hypothesis cannot simply be dropped (the Davenport
 observation):** the seven non-f inverses are seven nonzero residues of Z_7, and
 the Davenport constant D(Z_7) = 7 means a zero-sum (balanced) subset ALWAYS
 exists algebraically. The obstruction to long runs is therefore not algebraic
 scarcity of balanced clusters but GEOMETRY: balanced owners must co-land in one
-f-window at every g-wall, fixed pairs de-phase by (4), and handovers demand
-cascading coincidences. The absolute run bound is exactly the statement that
-this geometric-arithmetic conspiracy cannot persist.
+f-window at every interior g-wall. A correct varying-index analysis of repeated
+co-landings is still missing. THM-784 shows that this geometry governs only the
+visitor-rich mode: a visitor-free fast refinement can persist inside a slow
+rainbow chamber without invoking the cascade at all.
 
-## (6) The decision census (VERIFIED; the loophole eliminated)
+## (6) The decision census (VERIFIED on its stated bounded banks only)
 
-Anchored-run maxima over quarter-period windows, heights to 10^4:
+Anchored-run maxima over sampled windows of length `1/5`, heights to `10^4`:
 
 | family | n | median | max |
 |---|---|---|---|
@@ -99,21 +136,30 @@ Anchored-run maxima over quarter-period windows, heights to 10^4:
 | all w ≡ r (mod 7) | 60 | 2 | 6 |
 | annealed peak (600 steps from the best) | — | — | **6** |
 
-The synchronized packet — the one family whose period-sums cancel by design —
-performs WORSE than generic: the within-period φ-equations it cannot tune kill
-it, exactly as (4)–(5) predict. **Working constant updated: K0 = 6** (THM-779's
-census said 5 at heights ≤ 500).
+The synchronized packet — the one tested family whose period-sums cancel by
+design — performs worse than the generic samples. The maximum **within these
+banks** is 6 (THM-779's earlier height-500 census found 5). THM-784 shows why
+this cannot be called a working universal constant: the banks omitted static
+seven-owner rainbow chambers refined by one arbitrarily fast owner.
 
 ## (7) Status of the exit lemma after this package
 
-- UNCONDITIONAL and proved: no single-visitor periods (3); cluster balance (3);
-  the de-phase bound (4); the extent bound under the no-companion hypothesis (5).
+- Proved at the displayed hypotheses: anchored simple-wall extension (1); no
+  single-visitor periods and cluster balance (3); the extent bound under the
+  no-companion hypothesis (5).
 - The r = 8 pierce is now UNCONDITIONAL for every run configuration in which
   the second-fastest owner's walls fail to attract balanced co-landing clusters
-  — and quantitatively constrained (de-phase + cascade) when they do.
-- REMAINING (sharp, geometric): bound consecutive balanced co-landings
-  absolutely — the cascade (n ≡ 4 or 0 tri-consistency, handover triple-balance,
-  simultaneity exclusion) is the named machinery; the census says the true
-  constant is 6 at all tested scales. Conjecture: **every blocking run has at
-  most 6 walls; equivalently extent < C/w_g with small explicit C.**
+  — while repeated companion co-landings still need a correct varying-index
+  analysis.
+- **REFUTED by THM-784:** “every blocking run has at most 6 walls.” The claimed
+  equivalence with `extent < C/w_g` was also false: changing only the fastest
+  mesh makes wall count diverge while the blocked interval stays fixed.
+- REMAINING (sharp, geometric): split off visitor-free fast refinements of a
+  slow seven-owner rainbow chamber. For the visitor-rich complement, bound
+  consecutive balanced co-landings using a sound Beatty/varying-index cascade;
+  the earlier fixed-index de-phase and mandatory-handover claims are not
+  available. Globally,
+  prove a metric/core-sensitive statement that forces a free time in every
+  relevant core-safe component. A normalized extent bound or a theorem that
+  static slow rainbows cannot contain the required core component would suffice.
 - Everything here is Lean-friendly (mod-7 arithmetic + Beatty counting).

@@ -11,6 +11,39 @@ Format per entry:
 
 ---
 
+## MISTAKE-147 -- an adversarial census ceiling on covered walls was treated as a scale-free exit constant; fast refinement makes the raw count unbounded (THM-779/783, corrected by THM-784)
+
+- **What was claimed:** THM-779 promoted the annealed maximum `K0=5` to the
+  boxed consequence that every core-safe component containing more than `K0`
+  walls is pierced. THM-783 expanded the census to height `10^4`, set the
+  working value to 6, and conjectured that every blocking run has at most six
+  walls, calling this equivalent to a metric extent bound.
+- **Why it is wrong:** the seven owners `{1,2,3,4,5,8,10}` form the constant
+  perfect token rainbow `(0,3,2,5,1,4,6)` throughout
+  `J=(5/16,7/20)`. Adding `f_N=560N+1` inserts exactly `21N` fast walls in
+  `J`, with no slow wall between them. At every fast wall the seven slow owners
+  remain a rainbow, so all `21N` walls are consecutive and covered. The count
+  is unbounded while `J` and its slow-owner geometry are fixed.
+- **Correct framing:** raw wall count is a temporal-resolution coordinate, not
+  a compactness coordinate. Contract same-owner refinements, retain metric
+  extent relative to the slow mesh, or work directly with incidence of the
+  blocking interval and the core-safe set. THM-783's no-companion conditional
+  extent conclusion survives: here `g=10` and `|J|=3/80 < 1/g+2/f_N`.
+- **Impact:** THM-779's token criterion, collision-hop rule, and exact decision
+  procedure stand. THM-783's phi recurrence, period-sum/single-visitor laws,
+  and corrected conditional extent result are not refuted. Withdraw only the
+  universal raw-wall consequence, the `K0<=6` conjecture, and the asserted
+  equivalence of raw count with metric extent. The finite censuses remain valid
+  on their stated sampled banks.
+- **Tournament lesson:** the runner tournament is unchanged by fast metric
+  refinement, while the wall-event tournament merely gains a longer transitive
+  Hamiltonian path. Neither quotient retains the constant seven-token fibre.
+  The proof object must be a metric owner-labelled event stalk over a token
+  chamber, not a bare tournament or event count.
+- **Source:** codex-2026-07-14-S10 and an independent parallel rediscovery;
+  THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
+  output.
+
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 
 - **What was claimed (opus-S300, THM-767 part 4):** "a maintained exact tiling whose
