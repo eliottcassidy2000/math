@@ -34,6 +34,14 @@ Smith diagram of the flow of transitivity.
 
 ## 3. THE CONCORDANCE LAW (the headline)
 
+> **DECIDED NEXT SESSION (S308): the law is a small-n artifact in its strong
+> forms.** The 132 n=7 pairs are REAL (exact refinement) — all at adjacent
+> levels; at n=8 discordances spread to level-distance 32 (65,921 pairs,
+> 0.31%). What survives: LEVEL-MEAN/MEDIAN monotonicity (all computed n) — the
+> axis is a mean-field harmonic coordinate. See
+> the-concordance-decision-and-the-en-dual-opus-S308.md. The text below is the
+> S307 state, kept for the record.
+
 > **Through n = 6, in exact arithmetic, the harmonic potential φ and the
 > score-variance axis x induce the SAME strict order on every comparable pair
 > of classes: x(A) > x(B) ⟹ φ(A) > φ(B), with zero exceptions

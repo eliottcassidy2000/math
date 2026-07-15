@@ -1,0 +1,3 @@
+n=5: level-MEAN monotone: True; level-MEDIAN monotone: True; max adjacent overlap/mean-gap ratio: -0.611
+n=6: level-MEAN monotone: True; level-MEDIAN monotone: True; max adjacent overlap/mean-gap ratio: -0.245
+n=7: level-MEAN monotone: True; level-MEDIAN monotone: True; max adjacent overlap/mean-gap ratio: 0.726
