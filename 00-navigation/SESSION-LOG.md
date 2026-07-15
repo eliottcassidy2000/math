@@ -5,6 +5,33 @@ Prompt (owner): keep the rank-truncation lens; the +8 climb vs transitive; CD to
 CENSUS (exhaustive): false peaks (below c3max, no +1 move: no arc u->v with d_u = d_v+2) = 0 (n=4), 40 (n=5, all at c3=4), 368 (n=6: 80 at c3=2, 288 at c3=5). With THM-854 (descent always free), the flip landscape is DOWN-SOLVABLE / UP-OBSTRUCTED from n=5 -- degrees <= 4 climb freely, n = 5 acquires local maxima: Abel-Ruffini's threshold appears as Morse structure in tournament space. DICTIONARY: polygonal:Pascal :: Moser:2^n :: solvable-shadow:full-tower; Moser truncates at rank 4 = last solvable S_k; the CD Mode-B tower's n=5 node (quaternions, first property loss) hosts 2I with A5 = 2I/(+-1) = Klein's quintic monodromy -- three thresholds, one rung. CD level counts: 2, 6, 31, 205 at n=3,5,9,17. ARCHAEOLOGY: alternating-group-graph-s699, bsd-hodge-polygonal-ladder-kps7, five-and-ten, T1215/HYP-3150 degree ledger (Abel-Ruffini debt) -- the ancestors; merge next.
 
 FILES: false_peaks_cd_tower_kps_S128c22.py/.out, HYP-6945. -> all (classify the 40 stuck n=5 tournaments; 2I on the n=5 metagraph; false-peak fraction asymptotics).
+## opus-2026-07-15-S318 -- THM-868 THE E8 BRIDGE: n=8 score deviations = the Sigma=0 slice of E8's half-coset (one-line proof; 1,012,664-vector referee); the +8 step = +2 in E8 norm; near-regular = 70 of E8's 240 roots; THE LANDAU CORONA (trivial <= 128, 5-level bite, empty > 168); climb increments = paired triangulars T_floor((n-1)/2); THE FEIT-THOMPSON FACE (tournament Aut odd => SOLVABLE: the quintic's A5 cannot enter by symmetry -- it enters by lattice: E8 = McKay(SL(2,5))); Bott's 8 = octonions' 8 = the metagraph's 8 (HYP-6945)
+
+Prompt (owner): relate the +8 climb to the Cayley-Dickson tower and the geometry/topology
+behind quintic unsolvability; search past ideas, extend through current problems, beyond.
+
+ARCHAEOLOGY: the CD tower canon (Mode-B rungs 2,3,5,9,17; kps's cd-tower-architecture);
+the Aut-odd lineage (THM-466-adjacent). THE CHAIN ASSEMBLED: the residue engine odd^2 = 1
+mod 8 IS Milgram/Bott mod-8 periodicity, minimal witness E8; E8 = McKay(2I) with 2I =
+SL(2,5) = the quintic obstruction's double cover (Poincare sphere, E8 plumbing). NEW
+EXACT MATH (THM-868): [1] d/2 in E8 (D8+ half-coset, Sigma=0) -- immediate + full-box
+referee; x = 4|v|^2: the +8 step is the MINIMAL even-lattice step; [2] the near-regular
+floor = the 70 Sigma=0 half-coset roots (of 240); [3] THE LANDAU CORONA: filter trivial
+to 128, bites 136..168 (1/10 at the ceiling = transitive alone), empty beyond -- the
+tournament world is a sharply truncated E8 slice (truncation grammar #4); [4] climb
+increments = paired triangulars (exact n = 3..12); [5] FEIT-THOMPSON: tournament Aut is
+always odd (arc-reversal kills involutions) => ALL tournament symmetry groups solvable
+(528/528 verified) => the quintic cannot enter by symmetry; it enters at n = 8 through
+the score lattice -- the same E8 from its other face. CD dims 1,2,4,8 vs Mode-B rungs
+2,3,5,9,17 = dim+1 (the stationary-runner shift); at n = 9 the lattice is only the A8
+slice (E8's glue invisible to integer scores): the exceptional structure lives at n = 8
+exactly.
+
+NEXT (named): Milgram/discriminant-form formalization of the S316 residue laws; the
+sedenion rung n = 17 (zero divisors <-> metagraph degeneration?); A5 as MONODROMY of
+class families; corona widths at general even n (is it floor(n/2)+1?).
+
+FILES: THM-868; e8_bridge_referee .py/.out; HYP-6945. opus; S318.
 
 ---
 ## mac-mini-2026-07-15-S109 -- THM-865: THE LOCKER PARITY LAW IS FALSE (H(D_11) = 4027 = 3 mod 4) + THM-866: AXIS LEVEL NO-HOLES COMPLETENESS PROVED (F3 tie-splitting walk; triple-convergence merge point) + THE TWO-AXES FIGURATE NOTE (trinity, tower, G(n) decoded, A060488 identity, Brown/Fermat split)

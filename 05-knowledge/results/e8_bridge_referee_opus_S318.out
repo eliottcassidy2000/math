@@ -1,0 +1,42 @@
+(1) THE E8 BRIDGE at n = 8:
+   all-odd Sigma=0 vectors (|d|<=7): 1012664
+   ALL half-vectors in E8 (D8+ membership): True
+   x=8 shell: lattice points = 70 (E8 roots in the Sigma=0 half-coset: C(8,4) = 70); E8 total roots = 240
+   per-level: x | lattice pts | sorted orbits | Landau-legal orbits
+         8 |     70 |    1 |    1
+        16 |    336 |    2 |    2
+        24 |   1176 |    3 |    3
+        32 |   1792 |    4 |    4
+        40 |   4200 |    3 |    3
+        48 |   5152 |    6 |    6
+        56 |   9536 |    8 |    8
+        64 |  10752 |    6 |    6
+        72 |  17710 |    8 |    8
+        80 |  17696 |   14 |   14
+        88 |  31752 |   11 |   11
+        96 |  28560 |   10 |   10
+
+(2) Feit-Thompson face: all class |Aut| odd (n = 4..7):
+   n=4: classes=4, all |Aut| odd: True (=> all tournament symmetry groups SOLVABLE by Feit-Thompson)
+   n=5: classes=12, all |Aut| odd: True (=> all tournament symmetry groups SOLVABLE by Feit-Thompson)
+   n=6: classes=56, all |Aut| odd: True (=> all tournament symmetry groups SOLVABLE by Feit-Thompson)
+   n=7: classes=456, all |Aut| odd: True (=> all tournament symmetry groups SOLVABLE by Feit-Thompson)
+
+(3) climb length and paired-triangular increments:
+   n= 3: climb=  1
+   n= 4: climb=  2  increment=1
+   n= 5: climb=  5  increment=3
+   n= 6: climb=  8  increment=3
+   n= 7: climb= 14  increment=6
+   n= 8: climb= 20  increment=6
+   n= 9: climb= 30  increment=10
+   n=10: climb= 40  increment=10
+   n=11: climb= 55  increment=15
+   n=12: climb= 70  increment=15
+   increments 1,3,3,6,6,10,10,15,15 = the triangulars, each twice
+
+FULL-RANGE LANDAU CENSUS (follow-up): levels where the filter bites:
+(136: 10/12) (144: 10/14) (152: 11/15) (160: 6/12) (168: 1/10) then ZERO
+legal for 176..392 (pure lattice; top shell x=392 = (-7^4, 7^4)).
+=> the tournament shadow of the E8 slice: TRIVIAL <= 128; 5-level corona
+136..168; empty beyond the transitive ceiling 168 = (n^3-n)/3.
