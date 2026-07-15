@@ -585,7 +585,8 @@ with aggregate depth nodes `6,494,46813,2531670,74415,202,0`, no covering
 prefix, and 208 independent endpoint reconstructions. Hence all twenty `f=3`
 rows are loose and the primitive-core bank falls from 923 to the 903 rows with
 `f<=2`. The separate odd-label row has primitive mixed-parity packets although
-its retained core has gcd two, so the global open label-pattern count is 904.
+its retained core has gcd two, so the open label-pattern count at this
+checkpoint is 904.
 The cusp count is a routing grade, not a quotient: it forgets pair
 signs, germ owners, exact endpoints, divisor obligations, heights, and
 component overlap.

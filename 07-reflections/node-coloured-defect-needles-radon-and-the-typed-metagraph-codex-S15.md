@@ -805,8 +805,11 @@ three full antipodal pairs have minimum-cycle-product census
 cap; exact fixed-coordinate recursions then close the remaining forced slices.
 That local algebra closes fourteen rows. A later exact longest-component
 recursion closes the six product-`1/16` rows in 2,653,600 states. Thus all
-twenty three-pair rows are loose, leaving 903 rows with at most two full pairs
-and the exceptional mixed-parity branch.
+twenty three-pair rows are loose, leaving at that checkpoint 903 rows with at
+most two full pairs and the exceptional mixed-parity branch. THM-857's later
+all-root component recursion closes that entire residual at scale one. This
+shows exactly what the cusp quotient forgot: the literal residual component
+word, remaining labelled progressions, last speed, and shortcut witness.
 
 This produces a useful tree/cycle duality:
 
@@ -920,6 +923,24 @@ owner/wall/carry/clearance data.                            (8.3)
 The apparent size is a reason to seek transforms and coherent algebras, not a
 license to average away labels.
 
+THM-856--858 sharpen this base/stalk picture into four interacting layers:
+
+```text
+projective ratio skeleton,
+arithmetic ramification base,
+literal metric-component fibre,
+legal operation history.                                      (8.4)
+```
+
+THM-856 gives a positive horizontal projective tree margin `19/572`.
+THM-857 solves the complete H6 metric fibre over scale one, with `2[12]` as
+the only covering equality. THM-858 makes the H5 ramification base finite. What is
+still missing is not another scale-one node census: it is the vertical
+transport law joining fibres. Analytically, that coupling is the centered
+prefix--comb--comb third moment on small-gcd maximizing trees; combinatorially,
+it is the endpoint/progression cocycle and correlated AP-window word. The four
+layers are a carrier decomposition, not four Euclidean coordinates.
+
 ## 9. The universal recursive definition
 
 Let `O` be a declared alphabet of legal operations: face restrictions,
@@ -1016,15 +1037,14 @@ that can be joined and then subjected to (9.1).
 6. Attach owner-event cocycles and clearance margins to the four-far scale
    action. Test whether the resulting packet is a congruence under peel and
    insertion, rather than only under static residue classification.
-7. Build the seven-comb coloured graph (6.7) on every surviving scale-one H6
-   prefix, beginning with the 903 `f<=2` rows and the exceptional mixed-parity
-   branch left by THM-815 C.2.
-   Classify its projective edge types, rational-period stalks, Kruskal rank
-   word, and first negative Hunter certificate. Remove every common-dilate ray
-   with (6.9h), then stratify the remainder by the reciprocal-gcd tree cost in
-   (6.9g). Test whether the small-gcd endpoint packets share a finite
-   operation-stable third-moment language before invoking an AP-window
-   argument.
+7. Use THM-857's closed 924-root scale-one certificate language as boundary
+   data for arbitrary-scale/common-sheet transport. Lift its component word,
+   remaining progressions, last speed, and shortcut witnesses to each
+   ramification fibre. Attach the seven-comb projective edge types, rational-
+   period stalks, Kruskal rank word, and reciprocal-gcd tree cost. Remove every
+   common-dilate ray with (6.9h), then test whether the remaining small-gcd
+   endpoint packets share a finite operation-stable third-moment language
+   before invoking an AP-window argument.
 8. Join the Hunter tree word to the AP-pin cycle word. Test whether every
    negative tree certificate either has an expanding directed handoff cycle
    or descends to a residual-endpoint grammar of the type that closed the six

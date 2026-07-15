@@ -24,9 +24,10 @@ loose terminals = 20
 The unique cover is missing `{1,3,5,7,9,11}` with ordered lifts
 `14,16,18,20,22,24`, exactly `2[12]`.  Thus the 923 primitive retained-core
 roots and every mixed-parity completion of the exceptional even core have zero
-covers.  This subsumes the earlier 909-row AP-germ residual at scale one; it
-does not transport through arbitrary AP scale/common sheets or cross the
-seven-comb wall.
+covers.  This subsumes both the intermediate 909-row AP-germ frontier and the
+later 903-row plus exceptional-root residual at scale one; it does not
+transport through arbitrary AP scale/common sheets or cross the seven-comb
+wall.
 
 TOURNAMENT/ASSUMPTION CHALLENGE: vertices as missing labels, ordered either by
 least proper lift or by the exact five-comb cap after that lift, give transitive
@@ -53,14 +54,13 @@ iso-class nodes, tilings, blue/black lines, factor edges, the three signed B3
 recursions, H drift, toothpick/ladder structure, Fano/chi7, j=4 floods, and
 Kakeya needles; test the claimed all-n black self-line law.
 
-HONEST VERDICT AT THIS CHECKPOINT: LRC(14), the then-remaining primitive/all-scale H6 branches, the
-radius-seven chart, and the full j=4 sweep remain open.  The session instead
-identified the exact typed state needed by several operations, removed three
-misleading scalar extrapolations, and integrated a live closure of fourteen
-primitive-core H6 label rows.  THM-857 in the later S10 continuation above
-subsequently closes the complete proper scale-one H6 chart.
-misleading scalar extrapolations, and integrated a live closure of all twenty
-three-antipodal-pair primitive-core H6 label rows.
+HONEST VERDICT AT THIS CHECKPOINT: LRC(14), arbitrary-scale/common-sheet H6
+transport, the radius-seven endpoint field, and the full j=4 sweep remain open.
+The session identified the exact typed state needed by several operations,
+removed three misleading scalar extrapolations, and integrated the historical
+closure of all twenty three-antipodal-pair primitive-core H6 rows. THM-857 in
+the later S10 continuation above subsequently closes the complete proper
+scale-one H6 chart.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
@@ -123,10 +123,12 @@ LIVE-PULL H6 DUAL: THM-815 C.2 turns each antipodal AP cusp into a vertex germ
 cap and each oriented owner/provider handoff into a multiplicative edge.  If
 all caps are evaded, a directed cycle of product at most one is necessary.
 In logarithmic coordinates this is the min-plus cycle dual of Hunter's
-max-plus spanning tree.  It closes 14 of the 20 three-antipodal-pair rows,
-and an exact 2,653,600-state residual-endpoint recursion closes the remaining
-six product-`1/16` rows. The live bank is 903 rows with at most two pairs plus
-the exceptional mixed-parity branch.  The accompanying THM-836 pull also proves
+max-plus spanning tree.  It first closes 14 of the 20 three-antipodal-pair
+rows, and an exact 2,653,600-state residual-endpoint recursion closes the
+remaining six product-`1/16` rows. At that intermediate checkpoint the bank
+was 903 rows with at most two pairs plus the exceptional mixed-parity branch;
+THM-857 above subsequently closes all of it at scale one. The accompanying
+THM-836 pull also proves
 that no universal one-numerator endpoint-grid column can close the remaining
 shell-five congruence classes; future certificates must be lift-dependent,
 multicolumn, or off the endpoint grids.
@@ -148,7 +150,7 @@ third centered moment `theta_(Eij)` is the image of the B3 center term: dropping
 it, dropping the A/B/C carry contrast, and cancelling the odd-chart corner are
 the same premature degree-three truncation in three operation languages.
 
-ARTIFACTS: THM-815/848/849/850/851/854/856/858; seven exact S15 scripts plus the
+ARTIFACTS: THM-815/848/849/850/851/854/856/857/858; seven exact S15 scripts plus the
 chi7 charge referee and their stored outputs; the holistic reflection
 `node-coloured-defect-needles-radon-and-the-typed-metagraph-codex-S15.md`;
 MPA-42 and frontier/backlog/index corrections.  Fast exact replays and syntax

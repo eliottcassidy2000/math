@@ -244,8 +244,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    and metric/core phase cell.  Bare normalized collision SCCs are downstream
    telemetry, not the legality predicate. A continued-
    fraction digit is useful only through this labelled fibre action.
-3. **Classify higher deck ramification, finish Hamming six,
-   then cross the seven-comb wall.**
+3. **Classify higher deck ramification, transport Hamming six, and resolve
+   the radius-seven endpoint field.**
    THM-815/816 close every AP-centred Hamming-four packet.  THM-815's
    discrepancy recursion makes the scale-one radius-five and radius-six
    charts finite exact trees, with first caps `146` and `468`. THM-820 gives
@@ -257,17 +257,20 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    orbit or loose.  THM-815 C.2 first closes fourteen of the twenty
    three-antipodal-pair primitive-core rows by oriented AP-germ handoffs and
    ten fixed-coordinate trees; a 2,653,600-state residual recursion closes the
-   remaining six product-`1/16` rows. Continue through the 903 `f<=2` rows and
-   the exceptional odd-label mixed-parity branch;
-   build the radius-six analogue of THM-810's oriented deck classification. At
-   scale-one radius seven the mean danger density is
+   remaining six product-`1/16` rows. THM-857 then closes all 903 `f<=2` roots
+   and the exceptional root by the literal all-root component recursion; no
+   primitive scale-one H6 bank remains. Transport that component/progression
+   action across arbitrary AP scale and common sheets. At scale-one radius
+   seven the mean danger density is
    `14/13`, so the same potential ceases to decrease. THM-856 supplies the
    Hunter maximum-tree overlap functional and proves its ideal coefficient is
    positive for seven combs.  Its S14 referee shows that the actual edge state
    must retain reduced ratio, common scale, the mod-13 overlap sawtooth, and
-   endpoint discrepancy; a raw-speed deficit is false.  Prove the resulting
-   maximum-tree lemma, then treat its consecutive/AP-window residual by
-   mechanical words.  THM-855 F6's fluctuation--dissipation law remains a
+   endpoint discrepancy; a raw-speed deficit is false.  The S15 ten-ratio
+   theorem proves the global projective maximum-tree lemma with strict margin
+   `19/572` and closes every common-dilate ray asymptotically. Classify the
+   small-gcd prefix third moments and treat the correlated AP-window residual
+   by mechanical words.  THM-855 F6's fluctuation--dissipation law remains a
    separate lead for the collar event walk. The parallel six-exception/seven-exception sheet
    wall is a structural clue, not yet an identification theorem.
 4. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
@@ -323,11 +326,12 @@ exceptional `a{1,2,4,8}` top SCC satisfies `x<=228`, `v<=1986`, and
 caps: its exceptional branch dies early and all nine terminals are loose. This
 is arbitrary-height scale-one closure, not an arbitrary-scale descent. The exact height-one minimum `2[11] union {11}` at
 `1/12` reaches the doubled AP `2[12]` after the sixth odd lift, exposing the
-adjacent scale-change face. THM-815 also makes scale-one Hamming six recursively
-finite with initial cap `468`; its C.1 addendum contracts every nonprimitive
-row and closes the sole top-half chamber, leaving only `2[12]` on that slice.
-Its density coefficient changes sign at seven. Primitive H6, all-scale deck interfaces, radius at least seven, the
-two-sheet selector, and other deep colour covers remain open.
+adjacent scale-change face. THM-815 makes scale-one Hamming six recursively
+finite with initial cap `468`; its C.1 addendum first leaves only `2[12]` on
+the nonprimitive slice, and THM-857's 580,919,164-node all-root recursion
+closes every other scale-one H6 packet. Its density coefficient changes sign
+at seven. Arbitrary-scale/common-sheet H6 transport, radius at least seven,
+the two-sheet selector, and other deep colour covers remain open.
 
 THM-823 now proves why the radius-five all-scale interface cannot repeat the
 radius-four scalar argument.  Five-colour scalar capacity has robust infinite
