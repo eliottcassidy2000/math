@@ -1,0 +1,41 @@
+PASS (r,g)=(1,1) reproduces D = 1,1,2,3,5,8,13,21,33,51,...
+PASS (r,g)=(1,0) reproduces Moser row sums
+PASS r=inf gap-g sums = g-bonacci (2^n, Fibonacci, Narayana A000930, A003269, A003520)
+PASS MASTER: (1-x)^{r+2}(1-x^{g+1})^{r+1} - x^{(g+2)(r+2)-1} divisible by 1-x-x^{g+1}, r<=4, g<=5
+PASS GF identity: D_{r,g}(x) = N_{r,g}/[(1-x)^{r+2}(1-x^{g+1})^{r+1}(1-x-x^{g+1})], r<=3, g<=3
+PASS MISSING-REGION LAW: deficit 0 before d0=(g+2)(r+2)-1 and EXACTLY 1 at d0 (r<=3, g<=4)
+   r=1 'missing 32nd region' moments: (g, d0, full, shadow): [(0, 5, 32, 31), (1, 8, 34, 33), (2, 11, 41, 40), (3, 14, 50, 49), (4, 17, 60, 59)]
+PASS D_{r,g} is a quasi-polynomial of degree 2r+2, period g+1 (finite differences)
+
+NEW-SEQUENCE CANDIDATES (first 24 terms):
+  D_{1,2} (gap-2 polygonal vs Narayana A000930):
+    [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 40, 56, 78, 106, 141, 186, 241, 307, 388, 484, 596, 729, 883]
+  D_{1,3} (gap-3 polygonal vs A003269):
+    [1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14, 19, 26, 36, 49, 65, 85, 111, 143, 181, 226, 281, 346, 421]
+  D_{1,4} (gap-4 polygonal vs A003520):
+    [1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 8, 11, 15, 20, 26, 34, 45, 59, 76, 96, 120, 150, 186, 228]
+  D_{2,1} (rank-2 'polyhedral-gonal' Fibonacci shadow, sextic):
+    [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 143, 228, 358, 554, 841, 1255, 1837, 2644, 3739, 5207, 7140, 9659, 12893]
+  D_{2,2} (rank-2 gap-2 shadow):
+    [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60, 88, 129, 188, 272, 391, 556, 781, 1086, 1492, 2024, 2717]
+  deficit t_{1,1}(d) = F(d+1) - D(d): [1, 4, 13, 33, 76, 159, 315, 594, 1084, 1923, 3343, 5714, 9645, 16115, 26720, 44035]
+PASS Brown criterion: D_{1,g} complete for g = 0..4; D_{2,1}, D_{2,2} complete
+PASS INTEGRATION LADDER: s-fold integrated polygonal rows = 1 + C(n+s+1, s+2) + C(n+s+1, s+4)
+   s=1 (pyramidal Moser): [1, 2, 5, 12, 27, 57, 113, 211, 373, 628, 1013, 1574]
+   s=2 (4D hyper-pyramidal Moser): [1, 2, 6, 17, 43, 99, 211, 421, 793, 1420, 2432, 4005]
+PASS x = (n^3-n)/3 - 8*c3 (EXHAUSTIVE n=5, all 1024)
+PASS x = (n^3-n)/3 - 8*c3 (random n=6..9)
+PASS tie-split walk: every step Dx=+8 AND Dc3=-1; halts transitive after exactly c3(T) steps
+PASS |Aut(T)| odd for ALL tournaments n<=5 (exhaustive; => solvable by Feit-Thompson)
+PASS n=5 floor x=0: every floor tournament has c3=5 (=k_max) and the max |Aut|=5 occurs there
+   max |Aut| by n: {3: 3, 4: 3, 5: 5} | n=5 floor count: 24 (labelled copies of the round tournament C5)
+
+CAYLEY-DICKSON LEVELS n = 2^k+1: ceiling (n^3-n)/3 and k_max = c3_max:
+   n=  3: ceiling=     8   c3_max=     1
+   n=  5: ceiling=    40   c3_max=     5
+   n=  9: ceiling=   240   c3_max=    30
+   n= 17: ceiling=  1632   c3_max=   204
+   n= 33: ceiling= 11968   c3_max=  1496
+   (n=9: ceiling 240 = #E8 roots; c3_max 30 = #icosahedron edges — numerology, flagged)
+
+=== 14 checks, 14 passed, 0 failed ===

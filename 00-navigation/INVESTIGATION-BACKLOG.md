@@ -12,6 +12,14 @@
   the Fibonacci layer polynomials L_i(d) (GF x^{3i+2}/((1−x²)^{i+1}(1−x)^{i+2})) have a
   gap-statistic bijection on path independent sets (mode = #occupied slack slots).
 - **Next step:** OEIS submission text for D (formula, GF, palindromic numerator, completeness).
+- **UPDATE (klein-S313c2):** generalized to the full (r,g) shadow lattice (HYP-6946): master
+  kernel-divisibility (one-line proof), missing-region law (deficit exactly 1 at
+  d₀=(g+2)(r+2)−1), EIGHT further OEIS-absent sequences (HYP-6947) — submission batch now:
+  D_{1,1..4}, D_{2,1..2}, t_{1,1}, hyper-pyramidal Moser, CD-c3max. New bijection targets:
+  pyramidal-Moser = A362193 (Grassmannian avoiders, verified vs b-file) and Δ_·(4) = A060488.
+  Tournament side: k(T) = c3(T) proved (HYP-6948) — Lean targets: master divisibility
+  (pure polynomial algebra) + tie-split Δc3 = −1. Speculative (flagged): icosian/E8/240 and
+  Gauss–Milgram mod-8 as mechanism address for the CD-level numerology.
 
 ## Lead opus-2026-07-14-S299: the two-regime splice after THM-761 (cards A1/A2 largely closed)
 - **Source:** codex atlas pull-cards A1–A3; THM-760; HYP-6780; Frank–Ivanisvili arXiv:2605.29035
