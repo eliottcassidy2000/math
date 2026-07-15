@@ -325,6 +325,7 @@ def recursive_census(
     n: int,
     sizes: dict[int, dict],
     node_by_mask: dict[int, list[int]],
+    lower_recursive_order: dict[int, int],
 ) -> dict:
     upper_map = node_by_mask[n]
     lower_map = node_by_mask[n - 1]
@@ -425,6 +426,20 @@ def recursive_census(
     normalized_signature = {
         node: normalized_counter(row) for node, row in low_branch.items()
     }
+    ordered_lower_nodes = sorted(lower_fibres, key=lower_recursive_order.__getitem__)
+    primitive_face_vectors = {}
+    for node, row in low_branch.items():
+        divisor = 0
+        for value in row.values():
+            divisor = math.gcd(divisor, value)
+        primitive_face_vectors[node] = tuple(row[lower] // divisor for lower in ordered_lower_nodes)
+    recursive_face_order_nodes = sorted(
+        upper_fibres,
+        key=lambda node: (
+            primitive_face_vectors[node],
+            tuple(upper_records[node]["canonical_orbit_codes"]),
+        ),
+    )
     support_partition = partition_summary(support_signature)
     weighted_partition = partition_summary(weighted_signature)
     normalized_partition = partition_summary(normalized_signature)
@@ -491,6 +506,15 @@ def recursive_census(
         "branch_support_partition": support_partition,
         "branch_weighted_partition": weighted_partition,
         "branch_normalized_partition": normalized_partition,
+        "recursive_face_order": [
+            {
+                "recursive_rank": rank,
+                "node_rank": node,
+                "node": upper_records[node]["id"],
+                "primitive_lower_face_vector": list(primitive_face_vectors[node]),
+            }
+            for rank, node in enumerate(recursive_face_order_nodes)
+        ],
         "lift_blocks": len(lift_blocks),
         "nonuniform_lift_blocks": len(nonuniform_blocks),
         "strong_lumpability_failures": len(nonuniform_blocks),
@@ -651,8 +675,15 @@ def main() -> None:
         "recursive_sizes": [],
     }
     recursive_by_n = {}
+    recursive_order_by_n = {3: {node: node for node in node_records(sizes[3])}}
     for n in range(4, 8):
-        recursive_by_n[n] = recursive_census(n, sizes, node_by_mask)
+        recursive_by_n[n] = recursive_census(
+            n, sizes, node_by_mask, recursive_order_by_n[n - 1]
+        )
+        recursive_order_by_n[n] = {
+            row["node_rank"]: row["recursive_rank"]
+            for row in recursive_by_n[n]["recursive_face_order"]
+        }
         result["recursive_sizes"].append(recursive_by_n[n])
     for n in range(3, 8):
         size_result = basic_three_sorted_census(n, sizes[n], node_by_mask[n])

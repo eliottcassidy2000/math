@@ -440,10 +440,39 @@ certificate clauses, and proof obligations.
   black drift or the smallest counterexample.  Test separately whether every
   balanced node remains nondecreasing-`C3` reachable by a `B* K*` word.
 
+### MPA-31 — Three-sorted recursive incidence and the missing line phase
+
+- **Delivered theorem:** THM-796 proves
+  `T_n=(T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex`; after choosing the
+  apex-zero endpoint, `E_n` is the compatible-face pullback.  Passing to bare
+  lower lines creates a uniform `C2` endpoint-phase torsor over
+  `E_(n-1) x_[E_(n-2)] E_(n-1)` for every `n>=5`.
+- **Delivered node law:** the coloured directed endpoint kernels are symmetric,
+  have row sum equal to node fibre size, and have even diagonal; off-diagonal
+  line multiplicity is `A_uv`, while loop multiplicity is `A_uu/2`.  The
+  weighted lower-face row and its primitive normalization separate all nodes
+  through `n=7`, but strong lumpability fails on `1206/1312` nonzero blocks.
+- **Delivered colour law:** upper/low/high blue are pairwise independent but
+  not jointly independent.  Upper blue forces equal face colours; both-face
+  blue is parity-constant on gap diagonals and all-three blue is Toeplitz.
+- **Pull:** decide whether primitive face rows remain injective at `n=8`, and
+  refine the first collision by rooted path-orbit lift distributions rather
+  than by an opaque canonical code.  Quotient the line `C2` torsor only after
+  attaching THM-793's leg current and THM-785's signed `C3` orientation.
+- **Old thread:** THM-345/477/643/781/793; HYP-3051..3054 observer-extension
+  calculus; MPA-01/02/04/05/06/29/30; continued-fraction transport THM-778.
+- **Must preserve:** both tiling endpoints of a line, coherent face phase,
+  colour, line multiplicity, loop factor two, Hamiltonian-path orbit, and the
+  individual—not merely aggregate—lower-tiling lift distribution.
+- **Deliverable:** an `n=8` collision/lumpability atlas and a minimal rooted
+  sidecar that turns the weighted node correspondence into a genuine recursive
+  transition object.
+
 ## Recommended next three pulls
 
-1. Execute `MPA-30`: explain the observed black drift by disintegrating the
-   exact symmetric endpoint-bit law over path/automorphism fibres.
+1. Join `MPA-30/31`: explain black drift by disintegrating the exact symmetric
+   endpoint-bit law over path/automorphism fibres, then test primitive face
+   signatures and their first non-lumpable refinements at `n=8`.
 2. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
    identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
 3. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove

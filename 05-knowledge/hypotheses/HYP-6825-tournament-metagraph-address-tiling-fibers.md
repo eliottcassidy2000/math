@@ -1,7 +1,7 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: PROVED general Hamiltonian-path fibre inverse (THM-781) and cyclic-triangle flow laws (THM-785) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
+status: PROVED general Hamiltonian-path fibre inverse (THM-781), cyclic-triangle flow laws (THM-785), and three-sorted tiling/line/node recursion (THM-796) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
@@ -28,6 +28,10 @@ artifacts:
   - 04-computation/merged_metagraph_transitivity_flow_codex_S9.py
   - 05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.json
   - 07-reflections/symmetry-lives-before-the-quotient-black-drift-as-disintegration-codex-S9.md
+  - 01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md
+  - 04-computation/three_sorted_metagraph_recursion_codex_S9.py
+  - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.json
+  - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
 related:
   - HYP-2245
   - HYP-2989
@@ -42,6 +46,7 @@ related:
   - THM-781
   - THM-785
   - THM-787
+  - THM-796
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -312,6 +317,34 @@ identity.  The tiling fibre repairs the fixed-cut address but not those LRC
 sidecars.  HYP-6815's slope suspension should therefore carry the metagraph
 address as a constructible chamber label with metric/owner/monodromy stalks,
 not identify the 4-coordinate object with a bare node.
+
+## Three-sorted recursive incidence
+
+THM-796 separates the atlas into tiling endpoints `T_n`, complement-line
+instances `E_n`, and converse-merged nodes `N_n`, with exact inverse fibres at
+every arrow.  Its tiling recursion is the two-face pullback
+
+```text
+T_n = (T_(n-1) x_[T_(n-2)] T_(n-1)) x {0,1}_apex.
+```
+
+Choosing the apex-zero endpoint identifies `E_n` with the compatible tiling-
+face pairs.  Passing both faces to bare lower lines loses one coherent endpoint
+phase: for `n>=5`, `E_n` is a uniform two-sheeted torsor over
+`E_(n-1) x_[E_(n-2)] E_(n-1)`.
+
+At node level the face is a weighted correspondence `D_n`, not a function.
+Its primitive row separates all nodes through `n=7` (support alone leaves eight
+twin pairs there), but strong lumpability fails on `1206/1312` nonzero `n=7`
+node blocks.  Thus a complete static node fingerprint is still not a complete
+continuation state: the lower tiling/Hamiltonian-path orbit must survive.
+
+The blue/black face recursion is closed for all `n`.  Upper-, low-face-, and
+high-face-blue are pairwise independent, although upper blue forces the two
+face colours equal; the remaining information is a pure three-way interaction.
+This exact pre-quotient symmetry locates THM-785's black left/right imbalance
+in the disintegration over unequal node fibres rather than in the raw line
+tower.
 
 ## Tournament Analysis
 
