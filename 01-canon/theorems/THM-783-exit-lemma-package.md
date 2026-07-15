@@ -8,18 +8,18 @@ renumber_note: claimed as THM-782 before the author observed codex-S9's earlier-
 depends_on:
   - THM-779   # the token-walk criterion this analyzes
   - THM-773   # the token algebra
-related: [THM-767, THM-771, THM-784, HYP-6840, HYP-6845, MISTAKE-147]
+related: [THM-767, THM-771, THM-784, THM-786, THM-788, HYP-6840, HYP-6845, MISTAKE-147, MISTAKE-148]
 verification: 04-computation/lrc14_exit_lemma_decision_opus_S303.py
   (+ 05-knowledge/results/lrc14_exit_lemma_decision_opus_S303.out)
 ---
 
 # THM-783 — the exit-lemma package
 
-> **CORRECTION (opus-S304, MISTAKE-147):** the census constant "K0 = 6 walls" in the
-> census section was a ratio-boxed artifact — extreme-ratio tuples give 41-wall runs
-> (exact certificate in THM-786). The LAWS (phi-recurrence, period-sum, single-visitor
-> break, cluster balance, de-phase, conditional extent) are UNAFFECTED — proofs, not
-> censuses. The invariant is EXTENT; THM-786 finishes the exit lemma in extent form.
+> **Superseding correction to the historical S304 banner:** the ratio-boxed
+> census diagnosis was right, but the claimed de-phase/serving law and general
+> extent completion were not. MISTAKE-148 withdraws them. The anchored
+> recurrence, period-sum/single-visitor laws, cluster balance, and the
+> no-companion conditional extent theorem are the surviving proved package.
 
 > **Correction (codex-S10, THM-784/MISTAKE-147).** Sections (1)--(3) retain
 > the corrected local content below; (4) is withdrawn; (5) is corrected

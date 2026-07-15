@@ -83,8 +83,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | prime-lens endpoint transport | Pairwise midpoint clocks are centered mechanical words with an Euclidean parity cocycle; centered Beatty ranks reconstruct every simultaneous wall and drive the exact `F_7` skew product.  The named r=8 row has 10 simple covered walls with palindromic owner word `162,108,108,206,197,197,206,108,108,162` | THM-778 + 6,400-pair/five-movie exact audit |
 | merged-node tiling fibres | A fixed-path tiling maps to its canonical class and converse-merged node; the inverse node fibre is intrinsically `union HP(T)/Aut(T)`.  All n=3..7 atlases round-trip.  For `n7-a267`, `H=175` and `|Aut|=7` explain the exact 25 masks. | THM-781 + 33,866-tiling exact audit |
-| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; consecutive wall owners must follow the collision-pair hop chain.  Adversarial census finds runs through 5, but a universal exit bound remains open.  THM-778's named ten wall hits are all isolated runs. | THM-779 proved criterion; `K0=5` verified, not universal |
-| eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is now subsumed by THM-779's integer token-walk criterion.  The universal `1/7+O(gcd/w)` partner-buffer law remains VERIFIED; adversarial runs reach 5, but a uniform finite exit bound is OPEN | HYP-6840 + THM-779 |
+| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls. Raw wall count is unbounded: `{1,2,3,4,5,8,10}` is a fixed rainbow on `(5/16,7/20)`, and `560N+1` inserts `21N` covered walls. The no-companion extent bound survives; the original de-phase/serving bound is false. After contracting empty fastest periods, `A` active periods control both count and extent exactly. | THM-779/783/784/786/788; MISTAKE-147/148 |
+| eight-owner `c=7` buffer rigidity | Local full deck blocking exists on positive intervals, so finite raw-run caps cannot prove exit. The universal `1/7+O(gcd/w)` buffering law and zero-sum visitor law remain; the open target is a bound on active zero-sum visitor packets plus incidence with the core-safe component. | HYP-6840 + THM-783/788 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; phase pigeonhole gives the height-free floor `182^(-12)`; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`, while that sharp global value remains CONJECTURAL | THM-777/780 |
@@ -97,8 +97,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase-cell packet | PROVED every two-sheet quotient core contains an anchored return packet of measure `72^(-10)` with clearance `>1/13+1/10296`, plus a safe component of normalized width at least `72^(-10)/20`; tightness forces both into the folded diamond | THM-782 |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform structured folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782; HYP-6820 |
+| ten-core phase/erosion packet | PROVED symmetric packet measure `>=2*72^(-10)`, component width `>=72^(-10)/(5 maxU)`, pointwise thickness tax, and erosion `E_U subset H minus R_U` under tightness. Exact admissible row has the entire natural return set trapped at one deep anchor but an escape on another component; local refinement is not the missing lemma. | THM-782/789 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty. The two-sheet residual is now global deep-component selection/noncontainment, not scalar measure or fixed-anchor packet width; unbounded shallow descent and higher-sheet packets also remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/789; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -133,15 +133,20 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
    strict-danger set.  In the tight `s=2` quotient, THM-772 now forces a
    primitive divisor-complete ten-core and THM-774 turns the two odd colours
-   into a sharp folded diamond.  Prove that no such diamond contains the whole
-   loose-component word or the THM-782 anchored heavy phase-cell packet, or
-   force a dyadic/effective-order descent.  For higher
+   into a sharp folded diamond. THM-789 shows that neither scalar measure nor
+   arbitrary fixed-anchor refinement can prove noncontainment: one admissible
+   deep anchor traps the full Bohr return set even though another deep component
+   escapes. Prove the global erosion failure
+   `E_U not subset H_(x,y) minus R_U`, using component/owner incidence to select
+   the right deep component, or force a dyadic/effective-order descent. For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
-   *Prime-lens refinement:* THM-778 supplies the full Euclidean endpoint word.
-   On the named eight-owner row, attach `n7-a267` masks and redundancy roots to
-   the ten covered walls and seek a descent on the five-wall half word.  A
-   continued-fraction digit is useful only through its labelled fibre action.
+   *Prime-lens refinement:* THM-784 refutes raw wall-count exit and MISTAKE-148
+   withdraws the fixed-index de-phase shortcut. THM-788 replaces the wall word
+   by decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb free
+   fastest-owner refinement and `V` packets are ordered zero-sum visitors.
+   Bound `A`, then intersect the resulting metric interval with the core-safe
+   base. A continued-fraction digit is useful only through this labelled fibre.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
 4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
@@ -199,13 +204,15 @@ sheets and then a canonical binary assigned-ownership tower ending at a
 hereditarily primitive quotient.  THM-776 reverses the remaining finite
 quantifiers: every odd pair through height 100 induces a bad-atom hypergraph
 of transversal number 12, too large for the ten-speed quotient core.  The
-uniform metric substrate is no longer missing: THM-782 puts inside every
-`G_U` an anchored simultaneous-return packet of measure `72^(-10)` and a
-component of length at least `72^(-10)/(20 max(U))`.  Tightness would have to
-embed this structured packet in the folded diamond.  The exact low-core row
-`|G_U|=41/858<8/117=|H_(1,9)|` shows why scalar measure comparison still
-cannot finish the job.  The uniform residual is now a scale-free
-transversal/noncontainment theorem (or
+uniform metric substrate is no longer missing: THM-789 strengthens THM-782 to
+a symmetric simultaneous-return packet of measure `2*72^(-10)` and a component
+of length at least `72^(-10)/(5 max(U))`, and derives the pointwise thickness
+tax and Bohr erosion forced by tightness. The exact row
+`U={1,2,3,5,7,8,9,10,11,12}`, `(x,y)=(13,9)` goes further: its entire return
+set `(-1/858,1/858)` is trapped at `t_0=4/17`, while `14/19` is deep and
+escapes. Thus even symmetric local incidence at an arbitrary anchor cannot
+finish the job. The uniform residual is now a global deep-component
+selection/noncontainment theorem (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.

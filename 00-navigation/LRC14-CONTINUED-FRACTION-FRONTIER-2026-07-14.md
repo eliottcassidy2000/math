@@ -24,7 +24,7 @@ different operations.  Keeping those operations separate is the main lesson.
 | THM-722/HYP-6280, leader ledger | Interprets the deep-well Ostrowski rung as a stopping time of a metric handoff staircase. | The average conservation law is nearly a factor two too weak; the cutting/lander pattern, not its total mass, is the missing information. |
 | THM-773, prime token polynomial | Gives the exact finite sheet fibre and proves endpoint order/inverse steps/carry are missing from the metagraph node. | It deliberately left the endpoint schedule as an undecomposed field. |
 | THM-778, centered endpoint skew product | Supplies that missing field: pairwise midpoint clocks are centered mechanical words; centered Beatty ranks reconstruct all simultaneous walls; the Euclidean parity cocycle recursively addresses the word; the word drives the `F_7` token fibre. | This is an exact language and reduction, not a proof that every persistent cover tears. |
-| THM-779, r=8 token-walk chain | Characterizes full blocking by piece surjectivity, wall rainbows, and absence of simultaneous walls; consecutive wall owners must follow a deterministic collision-hop rule.  Joined to THM-778, this is a schedule-versus-algebra word problem. | The reported `K0=5` is an adversarial-census ceiling, not an unconditional bound.  The unconditional exit lemma and mod-seven degeneracy classification remain open. |
+| THM-779/783/784/788, r=8 token-walk chain | Characterizes blocking exactly, proves zero-sum visitor laws, refutes every absolute raw-wall cap by fast refinement, and contracts runs to decorated active-period normal form `E_0,V_1,...,V_A,E_A`. Joined to THM-778, this is a metric schedule-versus-fibre problem. | Fixed-index de-phasing is false (MISTAKE-148). The open theorem is a varying-index bound on active visitor packets plus core-component incidence, not a wall-count bound. |
 
 ## The conceptual correction
 
@@ -188,5 +188,6 @@ The most focused next step is CF-02/03:
 > first-return movie.
 
 This would turn the current historical synthesis into a finite automaton whose
-fields each have a mathematical reason to survive, and aim THM-779's open exit
-lemma at the exact mechanical schedule rather than at an empirical wall count.
+fields each have a mathematical reason to survive, and aim the corrected
+THM-788 exit target at active zero-sum visitor packets rather than an empirical
+or raw wall count.

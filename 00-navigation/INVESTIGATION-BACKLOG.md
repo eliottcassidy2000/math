@@ -71,12 +71,12 @@
   to a hereditarily primitive divisor-complete core.  THM-776 independently
   closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
   bad-atom hypergraphs have transversal number exactly 12, while a packet core
-  has only ten speeds.  THM-782 gives every ten-core a scale-free anchored
-  phase-cell packet of measure at least `72^(-10)`, strict clearance
-  `1/13+1/10296`, and a safe component of normalized width at least
-  `72^(-10)/20`.  Tightness would force this whole structured packet into the
-  folded diamond; the scalar floor alone is much too small to contradict the
-  diamond cap.
+  has only ten speeds. THM-789 strengthens THM-782 to a symmetric packet of
+  measure `2*72^(-10)` and component width `72^(-10)/(5 maxU)`, and proves the
+  tightness tax `||wt||+(w/B)(phi_U(t)-1/13)<=2/13` plus the erosion
+  `E_U subset H minus R_U`. Its exact trap shows that the full natural return
+  set can stay inside the diamond at one deep anchor even when another deep
+  component escapes. The missing datum is global component choice.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -91,8 +91,9 @@
   `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
   impossible, prove a scale-free transversal lower bound beyond ten, or bound
   all dyadic seam guards strongly enough that the reconstructed `U` or `A`
-  lies in THM-774/776's complementary finite bases, or prove that some
-  THM-782 heavy anchored phase cell escapes every admissible diamond.  Then
+  lies in THM-774/776's complementary finite bases, or prove the global
+  erosion failure `E_U not subset H minus R_U` by selecting among deep
+  components. Fixed-anchor phase refinement is insufficient by THM-789. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -176,10 +177,11 @@
 - **Five block types:** Consecutive covered walls enclose
   `(57,301,3,24,329,24,3,301,57)` wall blocks; full owner-count vectors mirror
   exactly, so only the first five interval types require analysis.
-- **THM-779 join:** All nine gaps are nonempty (minimum three intervening
+- **THM-779/784/788 join:** All nine named gaps are nonempty (minimum three intervening
   walls), so the ten hits are isolated one-wall blocking runs.  The period-five
-  root word is a first-return signal, not a long-run survivor.  THM-779's open
-  exit lemma becomes an exact schedule-versus-hop-word question under THM-778.
+  root word is a first-return signal, not a long-run survivor. Raw wall count is
+  nevertheless unbounded in other families (THM-784). The correct word is the
+  decorated active-period normal form of THM-788, not the uncontracted event word.
 - **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
   compile the five-return half into centered Farey/Christoffel substitutions.
   Prove a prefix loses coverage, a simultaneous event tears the stalk, or the

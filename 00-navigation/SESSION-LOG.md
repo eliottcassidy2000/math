@@ -11,6 +11,76 @@ FILES: THM-741 (updated, run launched), THM-790, HYP-6855; lrc14_thm741_2002_bod
 NEXT: (i) harvest THM-741 (morning); (ii) n=7 H-laws data -> THM-790 evidence log; (iii) proof targets: blue H mod 4 via the grid-sym anti-automorphism; majorization comparability via near-constancy of C; (iv) j=5 rung feasibility after 741.
 
 ---
+## codex-2026-07-14-S10 -- THM-784/788/789: RAW WALL COUNT REFUTED, ACTIVE-PERIOD EXIT REDUCTION PROVED, TWO-SHEET EROSION/SYMMETRIC PACKET PROVED; THM-783/786 REFEREE CORRECTIONS
+
+Prompt: reassess the LRC(14) frontier holistically, start with the proposed
+`q<=25` and uniform n=12 sporadic-branch finishes, and advance the tournament
+threads. Standing audit result: `q<=25` is false (THM-762/764/MISTAKE-143), and
+uniform n=12 sporadic emptiness remains open. This continuation attacked the
+two most developed residual carriers: the prime-seven eight-owner deck and the
+two-sheet folded diamond.
+
+**THM-784 (PROVED, exact):** the conjectured absolute blocking-wall bound is
+false. The slow owners `{1,2,3,4,5,8,10}` have constant tokens
+`(0,3,2,5,1,4,6)=F_7` throughout `J=(5/16,7/20)`. Adding
+`f_N=560N+1` inserts exactly `21N` consecutive covered walls in `J`. Thus raw
+wall count is temporal resolution, not complexity. This corrects THM-779 §4,
+THM-783's `K0=6` conjecture, HYP-6840/6845, and is MISTAKE-147. Runner and
+event tournaments are both transitive and lose the constant token fibre unless
+metric/owner labels are retained.
+
+**THM-783/786 referee correction:** the anchored simple-event phi extension,
+period-sum, single-visitor law, cluster balance, and the no-companion extent
+bound survive. The original statement that every complete f-period is
+visitor-free is false but unnecessary (`W={2,8,17,18,19,20,24,29}` gives the
+balanced visitor pair `{18,17}` with no g-wall). The de-phase/serving estimate
+is false: `(f,g,c)=(9,8,6)` gives four consecutive balanced co-visits versus
+the claimed bound three because relative order flips. MISTAKE-148 withdraws
+the serving/sparse completion and the general “r=8 finished” language. The
+stored THM-786 script exactly replays two wall-count certificates but does not
+reproduce its reported 0.589 census table.
+
+**THM-788 (PROVED + independent exact audit):** let `A` count complete fastest
+periods containing non-fast walls, `R=ceil(f/g)`, `K` wall count, and `L`
+extent. Then
+
+`K<=R(A+1)+7A+14`,
+
+`L<(R(A+1)+1)/f<(A+1)/g+(A+2)/f`.
+
+Every active period is an ordered 2--7-owner zero-sum visitor packet. The exact
+normal form is `E_0,V_1,E_1,...,V_A,E_A`, with empty refinement absorbed into
+f-blocks `E_j`. A 2,000-tuple/4,626-run independent audit found zero violations.
+The remaining exit target is to bound active packets and intersect their metric
+stalk with the core-safe component, not bound raw events.
+
+**THM-789 (PROVED + independent referee):** THM-782's packet symmetrizes to
+`D=A-A`, giving `mu(D)>=2*72^(-10)` and a safe component of width at least
+`72^(-10)/(5 maxU)` (factor four over the old width). Tightness forces
+
+`||wt||+(w/maxU)(phi_U(t)-1/13)<=2/13`
+
+and the exact erosion `E_U subset H_(x,y) minus R_U`. The admissible core
+`U={1,2,3,5,7,8,9,10,11,12}`, `t0=4/17`, `(x,y)=(13,9)` has
+`M(U)=2/17` and full return set `R_U=(-1/858,1/858)` trapped in the folded
+diamond at `t0`; nevertheless `14/19` is deep and outside. This proves that
+local symmetrization/refinement at an arbitrary anchor cannot close the branch.
+The missing theorem is global deep-component selection/noncontainment.
+
+**Unified object lesson:** finest-resolution tournament vertices are often the
+wrong quotient. Prime-seven needs decorated fastest-period blocks with metric,
+owner, and zero-sum visitor fibres. Two-sheet phase geometry needs deep
+components with pointwise escape margin, not a fixed phase cell. Static runner,
+wall-event, or phase-cell tournaments preserve useful order telemetry but
+destroy the continuation predicate unless their incidence stalk is retained.
+
+FILES: THM-784/788/789; corrected THM-779/782/783/786; MISTAKE-147/148;
+`lrc14_unbounded_blocking_runs_codex_S10.py`,
+`lrc14_two_sheet_erosion_trap_codex_S10.py` (+ stored outputs); frontier,
+backlog, hypothesis/result indexes updated.
+
+---
+
 ## opus-2026-07-14-S304 -- THM-786 (the EXTENT-FORM exit theorem: K0-in-walls refuted, MISTAKE-147; extent bound 1/w_g + 2/w_f; r=8 pierce finished) + THM-787 (the TRANSITIVITY FLOW on the metagraph: single blue pipe out of the transitive; blue parity law; the black-sea imbalance quantified, n=3..7 exact)
 
 Prompt (owner): prove the geometric co-landing bound, finish the exit lemma; AND trace the flow

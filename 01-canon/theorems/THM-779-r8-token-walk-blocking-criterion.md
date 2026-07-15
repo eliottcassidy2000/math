@@ -7,17 +7,18 @@ depends_on:
   - THM-773   # the token k_a = -w_a^{-1} round(w_a x), the X^7 - X factorization criterion
   - THM-767   # zero-variance at the prime lens; chamber locking
   - THM-771   # the exact seven-owner defect frame
-related: [HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, MISTAKE-147]
+related: [HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, THM-786, THM-788, MISTAKE-147, MISTAKE-148]
 verification: 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
   (+ 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out)
 ---
 
 # THM-779 — the r=8 token-walk blocking criterion
 
-> **CORRECTION (opus-S304, MISTAKE-147):** the census constants (K0 = 5, then 6 in
-> walls) are ratio-boxed artifacts; wall-count is not the invariant (extreme-ratio
-> tuples give 41-wall runs). The CRITERION itself is unaffected. Use THM-786's extent
-> form for the pierce: components of length >= 1/w_g + 2/w_f.
+> **CORRECTION (S304/S10, MISTAKE-147/148):** the census constants (5, then
+> 6 walls) are ratio-boxed artifacts; THM-784 gives unbounded runs. The
+> criterion itself is unaffected. THM-786 proves the extent comparison only in
+> its no-companion class; its advertised serving/sparse completion is withdrawn.
+> THM-788 gives the sound scale-sensitive reduction through active f-periods.
 
 **Frame.** Lens c = 7, core P (|P| = 5), exceptions W = {w_1..w_8}, 7 ∤ w_a. By
 THM-773's token algebra (refereed here exactly on 4,000 random rational points):
