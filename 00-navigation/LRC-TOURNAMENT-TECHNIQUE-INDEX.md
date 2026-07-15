@@ -183,7 +183,7 @@ obligations, and proof-carrier interfaces.
   `(U,x,y)` has at least one failing stalk;
   do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)` under all
   current arithmetic/scalar gates. At fixed ratio `(13d,5d)`, instead prove
-  THM-824's radius inequality fails, equivalently that its signed slack is
+  THM-824's intrinsic radius inequality fails, equivalently that its signed slack is
   negative. For other pairs, classify the
   target-component symmetric-switch carrier before proposing another scalar.
   THM-831 reserves the sixteen-pair `4<=alpha<=9` two-ball audit for this
@@ -264,7 +264,7 @@ obligations, and proof-carrier interfaces.
   packets outside THM-816's closed quartic coset. Enumerate the finite
   scale-one Hamming-six tree and cross the seven-comb density wall. For the common
   `(13d,5d)` branch, first test a uniform arithmetic violation of THM-824's
-  radius budget; separately classify odd ratios whose folded target has the
+  intrinsic radius budget; separately classify odd ratios whose folded target has the
   separated equal-ball geometry needed by the no-switch proof.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
   THM-817, THM-820, THM-823, THM-824, THM-829, HYP-6775, HYP-6820;

@@ -255,26 +255,15 @@
   show that THM-775's dyadic chain lands in one of THM-774/776's certified
   regions. THM-807 permits a linear exact selector on the connected-return
   branch, but its explicit loose rows show that even long fixed grid ladders
-  do not supply the missing uniform negative margin.  THM-821 proves that the
-  fixed `(13,5)` atomic verdict factors through exact circular
-  cell/component sum arcs and gives mixed fibres for every tested coarser
-  positional/width/owner shadow.  Seek a height-independent contradiction or
-  decreasing invariant on those signed sum arcs with owner ancestry.  On the
-  common `(13d,5d)` ratio, first try to prove that every admissible arithmetic
-  core violates THM-824's intrinsic centre-radius budget (including its
-  centre-cell identity, not the unguarded phase norm); in parallel determine which
-  other odd exception ratios have a separated equal-radius target and hence
-  the same no-switch factorization.  A proof only for the global symmetric
-  union must still be joined to the nonsymmetric satellite obligations.
-  THM-816 has already
   do not supply the missing uniform negative margin. THM-821 proves uniformly
   for every positive odd `(x,y)` that each atomic verdict factors through the
   pair-indexed circular cell/component sum arc. Its fixed `(13,5)` census gives
   mixed fibres for every tested coarser positional/width/owner shadow. Seek a
   height-independent contradiction or decreasing invariant on those signed
   sum arcs with owner ancestry. On the common `(13d,5d)` ratio, first try to
-  prove that every admissible arithmetic
-  core violates THM-824's scalar radius budget; in parallel determine which
+  prove that every admissible arithmetic core violates THM-824's intrinsic
+  centre-radius budget (including its centre-cell identity, not the unguarded
+  phase norm); in parallel determine which
   other odd exception ratios have a separated equal-radius target and hence
   the same no-switch factorization.  A proof only for the global symmetric
   union must still be joined to the nonsymmetric satellite obligations.

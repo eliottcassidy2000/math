@@ -63828,8 +63828,12 @@ the no-switch lemma proves the all-size equivalence
 E+R subset H_(13,5) iff rho_C(E)+rho_0(R)<=2/169,
 ```
 
-and multiplication gives the exact common-dilate `(13d,5d)` phase budget.
-The 12,159-packet and 214-core replay has zero direct/radius mismatches.  This
+and multiplication gives the exact intrinsic common-dilate criterion
+`rho_(C,d)(E)+rho_d(R)<=2/169`.  The phase-norm rewrite is equivalent only
+with the separate target-cell guard `dE subset H`; without it `E=R={0}` is a
+counterexample, and the phase inequality alone is merely the necessary
+THM-789 thickness tax.  The 12,159-packet and 214-core replay has zero
+direct/radius mismatches.  This
 does not prove uniform budget failure, treat one nonsymmetric satellite, or
 classify arbitrary odd ratios.  It does expose a useful next carrier for the
 all-pair problem: put the connected target arcs, rather than runners, at the
@@ -63863,7 +63867,7 @@ THM-820 H5             f0c27f4f771a807624350dd8818480c76e849a5ae7ed88462a61851fd
 THM-821 stalks         bc7b53c51792cd790c2ebeb77b1cf8142a996a7f4aa26d261bc2d66b24275e16
 THM-822 H5 height<=2  d08d0702d7a9b1f6c96f4889c68631de10ddfdefc0793ae32a9610ab98f2bf4a
 THM-823 common sheet   f9d2372dff0c80499f95229353970afb0f8aa22d981d34634a56a7ab1083a795
-THM-824 radius budget  7c2c4b124893f07659918f9da45903cee7fc93acfeacc0c5b2b8ec327a125e6b
+THM-824 radius budget  af7f37a8640d133361333797a70c6a65b35ee1fc7b686610876c6f84b63d4258
 ```
 
 The THM-822 C++ replay also agreed at `-O3` and under ASan/UBSan.  These
