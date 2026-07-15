@@ -1,0 +1,29 @@
+PASS (R0)(R1)(R2) sum rules exact on 4 instances x 7 rational x
+PASS (S) S_d = sum C(k,d) mu_k == literal d-subset intersection sums (d=2,3)
+PASS (T) truncation identity exact (D=3,4,5); odd-D deficit = C(k-1,D)-moment >= 0
+PASS covering-slack identity: every covering x found (18 across instances/q<120) has overlap excess EXACTLY 6/7
+
+max multiplicity + B5 deficit by x-order (tight AP {1..13}):
+  q | x=1/q | maxC | mu_0 | B5 deficit = sum C(k-1,5) mu_k
+     2 |  1/2    |  7 |      5/7 |          1
+     3 |  1/3    |  5 |      4/7 |          0   <- B5 EXACT
+     5 |  1/5    |  3 |      2/7 |          0   <- B5 EXACT
+     7 |  1/7    |  2 |        0 |          0   <- B5 EXACT
+    13 |  1/13   |  2 |        0 |          0   <- B5 EXACT
+    14 |  1/14   |  2 |        0 |          0   <- B5 EXACT
+    28 |  1/28   |  4 |      3/7 |          0   <- B5 EXACT
+    49 |  1/49   |  7 |    30/49 |      44/49
+    91 |  1/91   | 13 |    66/91 |    2640/91
+   101 |  1/101  | 13 |  522/707 |  26400/707
+   187 |  1/187  | 13 | 1038/1309 |   8592/119
+   401 |  1/401  | 13 | 2322/2807 | 264000/2807
+  1009 |  1/1009 | 13 | 5970/7063 | 745536/7063
+PASS MID-BAND LAW: maxC(AP, x=1/q) = min(13, floor(q/7)+[7∤q]) for q = 14..200 (=> clustered/lonely for q > 91; B5-exact zone = maxC <= 5 <=> q <= 35 + covering band)
+PASS RIGIDITY: every minimal-multiplicity covering x (5 found) has the UNIQUE spectrum (mu_1, mu_2) = (1/7, 6/7) — the LRC twin of the K(A5) multiplicity-<=2 Kakeya witness
+
+x = 1/7 spectrum (tight AP): {1: '1/7', 2: '6/7'}
+x = 377/1009 spectrum      : {1: '2097/7063', 2: '4034/7063', 3: '776/7063', 4: '156/7063'}
+PASS generic x is near-binomial, resonant x is far (TV to Binom(13,1/7): 0.284 vs 0.565)
+PASS second-moment vein: random cluster S_2 = 1.363 ~ independent 1.592; the AP's S_2 = 1.033 deviates (equal spacing = maximal pair correlation — THM-863's rho-floor is the pointwise floor on these summands)
+
+=== 8 checks, 8 passed, 0 failed ===
