@@ -1,3 +1,32 @@
+## opus-2026-07-14-S306 -- THE MODE-B LINE TOWER (THM-793): tilings, nodes, and blue/black lines with all five maps commute down the strip-legs+apex projection; the axis current lives on the fiber; SC = A000570 (merged = (A000568+A000570)/2); the transitive node is a descent FIXED POINT; blue self-lines vanish at odd n (proved)
+
+Prompt (owner): track iso-class nodes, tilings, and blue/black edges with all their relations
+as recursively as possible.
+
+THE TOWER (THM-793, proved + verified exactly at n=5->3, 6->4, 7->5): p = forget the two legs
+and the apex: (a) exactly 2^{2n-5}-to-1; (b) p.kappa = kappa.p; (c) p.sigma = sigma.p (blue ->
+blue, blue-fiber 2^{n-2}); (d) T(p(t)) = induced subtournament on {2..n-1}; (e) THE CURRENT
+LIVES ON THE FIBER: Dx = 8(e_1 - e_n) depends only on forgotten coordinates -- the layer GF
+2-power IS 2^{m(n-2)}; blue GF = #blue(n-2) x (z+1/z)^{n-2}. The line layer of level n is a
+BUNDLE over level n-2; iterating strips two vertices per step -- Mode B of everything-is-the-
+triangle now carries the metagraph edge structure. Mode A is kappa- but NOT sigma-equivariant:
+blue/black descends ONLY the Mode-B tower.
+
+THE CENSUS (exact n=3..7): SC(n) = A000570(n) = 2,2,8,12,88 => merged nodes = (A000568 +
+A000570)/2 = 2,3,10,34,272 (n=8 prediction 3,528 with SC(8)=176). Self-lines: blue 0,1,0,2,0
+-- VANISH at odd n, PROVED (self-lines are level by the leg law; blue never level at odd n by
+the parity law); black 0,0,4,6,44. Merged self-loops: black 0,1,4,24,114. CONJ (needs n=9 or
+proof): black self-lines = SC/2 at odd n (4 = 8/2, 44 = 88/2); fails at even n.
+
+THE DESCENT KERNEL: the TRANSITIVE NODE IS A FIXED POINT -- point mass on the child transitive
+at every n (its fiber is one tiling at every level). Kernel support: max 2/2, 4/4, 11/12 --
+at n=7 NO class sees all twelve children; full-support rows 8/12, 31/56, 0/456: the node
+recursion is a sparsifying refinement, not mixing.
+
+FILES: 01-canon/theorems/THM-793-mode-b-line-tower.md;
+04-computation/mode_b_line_tower_census_opus_S306.py (+ .out); HYP-6860 executed.
+
+---
 ## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (renumbered from later colliding THM-790; blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
 ## kind-pasteur-2026-07-15-S128 (cont.6) -- THM-791(a) PROVED: the EVEN-n GRID-SYM STRATUM LAW -- every iso class containing a grid-symmetric tiling has H = 1 (mod 4) (OCF/THM-466 + grid-sym <=> reversal anti-automorphism + fixed-point-free involution on odd cycles); blue mod-4 law + "H=3 mod 4 => pure black" certificate are corollaries; n=7 flow harvested (censuses triple-certified vs codex; comparability = a BLUE law; regular NOT pure-blue at n=7) + j=4 relaunched with sleep inhibitor (overnight attempt died to system sleep, 0 bodies)
 
