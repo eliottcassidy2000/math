@@ -1,0 +1,7 @@
+(A) the 40 stuck n=5 tournaments by class:
+   class canon=40 scores=(1, 2, 2, 2, 3) c3=4 : 40 labeled members
+(B) chirality census n=5 (op-witness parity per class):
+    {'SC-even': 8, 'NS': 4}  (12 classes total; SC split by op-witness parity = the 2I/chirality refinement)
+(C) false peaks exhaustive n=7:
+   n=7: false peaks 60144 of 2094512 below-max (fraction 0.02872); sequence 0, 40, 368, 60144; fractions 0.0400, 0.0122, 0.02872
+DONE

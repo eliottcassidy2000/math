@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.23) -- THE STUCK-40 = one class (near-regular (1,2,2,2,3), |Aut|=3: the last step to the regular is the obstructed one) + THE CHIRALITY PARITY LAW PROVED (op-witness parity uniform per n: even iff n == 0,1 mod 4; from HYP-3811 cycles == 2 mod 4; n=5 census: 8/8 even -- the icosahedral rung is achiral-converse) + n=7 false peaks 60,144 (fractions 0.040/0.012/0.029, parity-split)
+
+Prompt (owner): classify the 40; 2I orbit structure; false-peak asymptotics; LRC leverage.
+
+(A) 40 = the single class (1,2,2,2,3) at c3=4 (|Aut|=3): the only +1 move is the gap-2 arc 3-beats-1, absent throughout the class -- the regular pentagon is reachable only by a structural (non-greedy) move: the discrete mirror of near-AP extremal rigidity. (B) All tournament Auts are odd-order hence EVEN permutations => each class = 2 chiral A5-copies; HYP-3811's anti-automorphism cycle law (parts == 2 mod 4 + <=1 fixed point) forces #parts == floor(n/2) mod 2 => WITNESS PARITY IS UNIFORM PER n: even iff n == 0,1 mod 4. At n=5: conversion preserves chirality (verified 8/8). (C) false peaks 0, 40, 368, 60144; asymptotics parity-split, open. LRC: the flip calculus as certified local search; corridor law + profiles remain the direct levers.
+
+FILES: stuck40_chirality_asymptotics_kps_S128c23.py/.out, HYP-6950. -> all.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.22) -- THE FALSE-PEAKS CENSUS: the +8 climb is obstructed EXACTLY FROM n=5 (0 / 40 / 368 false peaks at n=4/5/6; descent provably free at all n, THM-854) -- the quintic threshold lands as a computed Morse asymmetry; the solvability-as-rank-truncation dictionary (Moser truncation order 4 = last solvable degree; CD n=5 = quaternions = 2I = A5 = the same rung as the first false peaks); archaeology pointers merged
 
 Prompt (owner): keep the rank-truncation lens; the +8 climb vs transitive; CD tower; quintic unsolvability; search + extend.
