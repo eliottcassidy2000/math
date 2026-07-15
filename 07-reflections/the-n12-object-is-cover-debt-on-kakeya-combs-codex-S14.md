@@ -16,13 +16,16 @@ the shape of the remaining object:
    effective order 21. All-one, all-three, and mixed one-plus-three are the
    complete list through 21 and are uniformly empty at proper lift height;
    the remaining order bank is finite but not yet classified.
-2. The entire proper scale-one Hamming-six chart is now exact.  THM-857's
+2. The proper scale-one and first ramified Hamming-six faces are now exact.
+   THM-857's
    `580,919,164`-node recursion over all 924 deletion roots has one covering
    terminal, the doubled AP `2[12]`, and twenty loose terminals.  It subsumes
    the earlier nonprimitive contraction and fourteen-row AP-germ closure,
    removing all 909 formerly open primitive-core rows and the exceptional
-   mixed-parity branch at scale one.  Arbitrary-scale/common-sheet transport
-   remains open.
+   mixed-parity branch at scale one. THM-860 makes every primitive ramified
+   language finite, and THM-861 evaluates all 64 `c=2` signed-cycle roots:
+   the only cover is the ordinary AP `[12]`. Transport remains open from
+   `c=3` onward.
 3. THM-836's local `s=5` shell is exactly four congruence classes, and the full
    class `d=11 mod 52` is uniformly impossible by one explicit divisor-grid
    witness.  The classes `15,37,41 mod 52` remain open uniformly, and the
@@ -47,7 +50,7 @@ sum_(i in S) ceil(2m_i/13)/m_i>=1.
 Thus no order has a private maximal prime power.  After the exact order-21
 census, every live order is `{2,3,7}`-smooth and any new row has
 `min D_i<=21<max D_i`.  Reapply the cut across adjacent valuation levels:
-the `2,3,7` exponent ranges are at most `5,2,1`.  Comparison with the order at
+the `2,3,7` exponent ranges are at most `3,2,1`.  Comparison with the order at
 most 21 gives `max D_i<=10,584`, so the presentation bank is uniformly finite.
 On the 185 last order-21 residuals, both raw and
 complement-conditioned order tournaments are transitive despite 574 edge
@@ -191,6 +194,18 @@ danger teeth from scratch and checks each expanded child endpoint-for-endpoint.
 Thus the scale-one H6 object is the labelled component--future-comb action
 tree, not the antipodal count, germ-cycle product, or a runner tournament.
 
+The first ramified fibre makes that distinction sharper.  At `c=2`, common
+sheet routing forces one signed-doubling Hamiltonian cycle on the six missing
+labels.  There are only 64 such roots, yet the cycle does not decide their
+metric fate.  Running the literal step-26 component action produces
+`41,882,982` logical nodes and one cover: replace labels `7,...,12` by
+`1,3,...,11`; together with the retained even speeds this is exactly `[12]`.
+Thus the scale-two sporadic branch is empty, but not because the signed cycle
+is inconsistent.  The arithmetic stalk is perfectly viable on all 64 roots;
+the metric fibre kills 63 roots and every non-AP height.  This is the cleanest
+current example of a tournament-related carrier refining the search without
+being the underlying cover object.
+
 A separate implementation supplies a smaller crosscheck of that action tree:
 all 52 `f=2` roots whose exact first-speed cap is at most 156 close in
 `9,888,159` states, with zero covering prefix and 1,323 independent
@@ -316,13 +331,15 @@ leaving eight invisible edge directions; explicit four-edge curls of both
 `m` and `V1` are nonzero.  Thus the still-open flood geometry lives precisely
 in directions that every point/Fano marginal forgets.
 
-One edge can nevertheless be closed without pretending the Fano organization
+Two edges can nevertheless be closed without pretending the Fano organization
 is a symmetry.  For flood `(5,7)`, a fixed-`E_2` lower bound closes 181,445 of
 525,362 third-level nodes before evaluating `m_3`; exact `m_3` closes another
 339,348.  Only 4,569 `E_3` nodes and 28,847 bottom sweeps remain, all positive,
-with exact minimum `7/858`.  This is one of the 21 floods; the other twenty
-must be transported or recomputed because their numerical weights have no
-nontrivial `GL(3,2)` stabilizer.
+with exact minimum `7/858`.  The same literal computation on `(6,7)` leaves
+9,560 residual `E_3` nodes and 73,323 bottom sweeps, all positive, with exact
+minimum `97/4004`.  These are two of the 21 floods; the other nineteen must be
+transported or recomputed because their numerical weights have no nontrivial
+`GL(3,2)` stabilizer.
 
 ## 6. Tournament threads after the audit
 
@@ -370,6 +387,21 @@ next-size boundary, not a heuristic failure of mean reversion.  Pointwise,
 `Delta_e K` is four times the gained-minus-lost odd-cycle-forest weight after
 deleting the affected cycle vertices; 6,340 incidences through `n=7` verify
 that current law.
+
+The ladder itself diagonalizes.  With `m=n-1` and
+`z=(1-x)/(1+x)`, the exact all-size identity is
+
+```text
+A_T(x)=sum_r H_(2r)(T)(1-x)^(2r)(1+x)^(m-2r)
+      =(1+x)^m B_T(z),
+S A_T=(1+x)^m[-2z B_T'(z)].
+```
+
+Thus continuous flip-sum evolution is the radial dilation
+`B(z)->B(exp(-2t)z)`.  The scalar `H`-drift looks nonlinear only after the
+even radial modes are projected onto one coefficient.  This is a genuine
+self-similarity, but it belongs to the tournament needle stalk—not to the
+Farey violation ladder, whose toothpick recursion was refuted above.
 
 Likewise, the proposed all-`n` black self-line law loses its first untested
 case at `n=8` (`404` versus `SC(8)=176`), while only the Klein-four orbit
@@ -445,10 +477,11 @@ The shortest honest route to the requested theorem is now:
 
 1. **Ramified H6 transport:** THM-859 proves that common dilation conjugates
    THM-857's full action tree and that order `D` is exactly the number of deck
-   masks created by insertion.  Thus `D=1` is already closed, and every branch
-   containing it is finite-decidable.  Evaluate the first `336`
-   two-order-one/four-order-three and `672`
-   one-order-one/five-order-three context families, then lift surviving states
+   masks created by insertion. THM-860 bounds the presentation base and
+   THM-861 closes the full `c=2` fibre except for `[12]`. Evaluate THM-862's
+   scale-three bank: `336` two-order-one/four-order-three, `672`
+   one-order-one/five-order-three, and `496` all-order-three unit contexts.
+   Then lift surviving states
    across `D>1` fibres without losing literal components, phase masks, labelled
    future progressions, last-speed order, equality ancestry, or the shortcut
    witness.  There is no remaining primitive scale-one label census.
@@ -466,16 +499,17 @@ The shortest honest route to the requested theorem is now:
    divisor/satellite obligation.  Do not extrapolate the finite `d=15` census.
 4. **General two-sheet transport:** retain signed component--return sum arcs
    and endpoint ancestry outside the sixteen no-switch radius types.
-5. **`j=4` flood tail:** port the exact `(5,7)` bulk screen across the twenty
-   remaining flood bodies.  Fano symmetry, `chi_7`, and local three-needle
+5. **`j=4` flood tail:** port the exact `(5,7)`/`(6,7)` bulk screen across the
+   nineteen remaining flood bodies.  Fano symmetry, `chi_7`, and local three-needle
    paths are ruled out as pruning quotients, so each transport needs a numeric
    monotonicity proof or its own exact sweep.
 
 The object underneath these obligations is a ramified sheaf of periodic combs
 over literal safe components, carrying owner, scale, residue, future-action
-data, and on sheeted branches the complement-lcm fibre.  The two new theorems
+data, and on sheeted branches the complement-lcm fibre.  The newer theorems
 meet at that description: THM-857 resolves the literal metric stalk at scale
-one, while THM-858 bounds the arithmetic ramification base.  The older
+one, THM-858/860 bound arithmetic ramification, and THM-861 resolves the first
+nontrivial fibre without collapsing its sparse sheet cycle.  The older
 viewpoints—Farey gaps, sheets, tournaments, Fano masks, continued fractions,
 matroid circuits, tropical cycles/trees, and Kakeya needles—are useful charts
 precisely to the extent that they preserve this cover-debt packet.
@@ -527,9 +561,11 @@ scale-one base and finds a unique empty terminal, the equality section
 `2[12]`. THM-859 proves that common dilation is an exact action conjugacy and
 that `D=c/gcd(c,w)` is the ramification degree of its failure: an order-`D`
 insertion acts through `D` distinct deck masks. THM-858 bounds the nontrivial
-H5 ramification base.  The central missing theorem is now narrower: construct
-the phase-decorated transport functor on the `D>1` fibres, beginning with the
-finite order-one-gate contexts, so that it commutes with the required legal
+H5 ramification base, THM-860 bounds the primitive H6 base, and THM-861
+computes the complete `c=2` metric fibre with unique AP terminal `[12]`. The
+central missing theorem is now narrower: construct the phase-decorated
+transport functor on the remaining `D>1` fibres, beginning with THM-862's
+scale-three contexts, so that it commutes with the required legal
 operations and preserves terminal emptiness and certificate witnesses.  Merely
 matching order multisets, tournament fingerprints, component counts, or
 pairwise overlaps cannot supply that transport.

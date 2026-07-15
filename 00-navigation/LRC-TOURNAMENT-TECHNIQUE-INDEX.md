@@ -280,7 +280,11 @@ obligations, and proof-carrier interfaces.
   `c<=2,177,280`. Its `c=2` pair object is not a tournament: the signed ratio
   relation `o/r in {+2,-2}` is exactly one six-cycle/SCC on each of 64 rows.
   Completing absent pairs by an increasing-label tie path is lossy; sheet
-  parity on the sparse cycle is the preserved pair datum.
+  parity on the sparse cycle is the preserved pair datum. THM-861 evaluates
+  the full metric fibre over those 64 cycles: only the ordinary AP `[12]`
+  covers, while all other roots/heights are loose. Thus even the exact sparse
+  relation is routing telemetry; the faithful carrier adds literal strict-safe
+  components, remaining labelled step-26 rays, last speed, and shortcut ancestry.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies

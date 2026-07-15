@@ -1,0 +1,22 @@
+SCALE_TWO_HAMMING_SIX_COMPONENT_RECURSION
+arithmetic=integer+rational floating_point=none height_cutoff=none
+root_start=0 root_limit=924 depth_limit=6
+roots=64 candidate_edges=41882918
+nodes_depth0..6=64,6266,641866,40800088,433938,758,2,
+dead_no_candidate_depth0..6=0,0,0,40666446,433354,756,0,
+full_safe_band_prunes_depth0..6=0,0,0,38293571,0,0,0,
+early_cap_prunes_depth0..6=0,0,0,2372875,433354,756,1,
+materialized_depth=0 prefixes=64 min_longest=11/780 min_count=1 max_next_cap=720
+materialized_depth=1 prefixes=6266 min_longest=11/9347 min_count=1 max_next_cap=2396
+materialized_depth=2 prefixes=641866 min_longest=11/31109 min_count=1 max_next_cap=3828
+materialized_depth=3 prefixes=133642 min_longest=2779/3780205 min_count=1 max_next_cap=986
+materialized_depth=4 prefixes=584 min_longest=411/165529 min_count=1 max_next_cap=151
+materialized_depth=5 prefixes=2 min_longest=1/156 min_count=1 max_next_cap=24
+covering_terminals=1 loose_terminals=1
+COVER missing=7,8,9,10,11,12, ordered=7:1,8:3,9:5,10:7,11:9,12:11,
+SIGNED_DOUBLING_ANALYSIS
+vertices=missing_labels relation=provider_to_owner_at_ratio_+/-2
+relation_type=sparse_not_tournament edges_per_root=6 directed_cycles=1 SCC_size=6 Hamiltonian_paths=6
+negative_edge_histogram=1:12,3:40,5:12,
+graph_verdict=sheet_parity_routing_only;_cover_predicate_requires_literal_components_and_remaining_step_26_progressions
+CERTIFIED_DONE

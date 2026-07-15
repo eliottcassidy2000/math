@@ -1,3 +1,39 @@
+## codex-2026-07-15-S14/S15 continuation -- THM-861 closes the scale-two primitive H6 fibre
+
+HONEST VERDICT: the global `n=12` sporadic branch remains open, but its first
+ramified AP-centred Hamming-six face is now closed uniformly in lift height.
+THM-860 forces every primitive common-sheet presentation at `c=2` to have all
+six effective orders equal to two and one of 64 signed-doubling Hamiltonian
+cycles.  The unique unit gives six labelled rays
+
+```text
+w_r=u_r+26k,  k>=0;  u_r=2r+13 for r<=6, u_r=2r-13 for r>=7.
+```
+
+THM-861 transports THM-857's exact longest-component recursion to those rays.
+The frozen logical census is
+
+```text
+nodes = 64, 6,266, 641,866, 40,800,088, 433,938, 758, 2
+total nodes = 41,882,982; candidate edges = 41,882,918
+covering terminals = 1; loose terminals = 1.
+```
+
+The unique cover is missing `{7,8,9,10,11,12}` with replacements
+`1,3,5,7,9,11`; joined to retained `2,4,6,8,10,12`, it is exactly the
+ordinary AP `[12]`.  Thus every sporadic `c=2` packet is loose.  An independent
+implementation rebuilds closed danger unions at every expanded prefix,
+checks every shortcut witness endpoint-for-endpoint, and emits a canonical
+SHA-256 certificate per root.  O3/O0 diagnostics agree on roots 0 and 923;
+ASan diagnostics are clean.  The signed graph has one six-cycle/SCC and six
+Hamiltonian paths per root, with negative-edge histogram `{1:12,3:40,5:12}`.
+It routes sheet parity but does not decide coverage; literal components,
+remaining step-26 rays, last speed, and shortcut ancestry are the faithful
+carrier. Primary source/output SHA-256 are `2241f57f...f616b3` / `bd7b25d3...bbe28`;
+replay source/output are `6faf0e5d...fb137` / `95c46bd5...6f735`, with manifest
+`d963e886...d75e0`. Next exact target: THM-862's `c=3` bank of `336+672+496` unit
+contexts, followed by `c>=4`.
+
 ## codex-2026-07-15-S14/S15 continuation -- THM-860 makes primitive proper AP-centred H6 finite-ramified
 
 HONEST VERDICT: global `n=12` sporadic-branch emptiness remains open.  This
@@ -44,7 +80,8 @@ common-sheet presentation has six order-two colours. The signed relation
 parity; any chord creates a forbidden cycle of length at most five. Hence
 there are exactly `12*32/6=64` contexts. The direct-mask replay agrees, with
 orbit sizes `12,12,12,4,12,12`, one SCC, one directed cycle, and six
-Hamiltonian paths per row. These 64 metric trees are not yet evaluated.
+Hamiltonian paths per row. THM-861 subsequently evaluates all 64 metric trees;
+their only cover is the ordinary AP `[12]`.
 
 The `c=3` mixed-order guardrail common-covers all three sheets but has exact
 `M=5/29` at `t=+/-1/58`, refuting “common sheets imply common scale” without
@@ -57,8 +94,8 @@ payload FNV-64 is `4ef6d591ed02b211`.
 FAITHFUL CARRIER: prime-power valuation upper sets -> complement-lcm owner
 fibres -> labelled CRT progressions -> literal strict-safe components. The
 `c=2` signed cycle is useful because it retains sheet parity; completing it to
-a tournament destroys the cover predicate. Next exact target: run the 64
-`c=2` component trees, then the `336` and `672` THM-859 order-one-gate banks.
+a tournament destroys the cover predicate. THM-861 closes that metric fibre;
+the next exact target is the THM-862 `c=3` bank (`336+672+496` unit contexts).
 
 ## codex-2026-07-15-S10 continuation -- THM-857 closes the full proper scale-one H6 chart
 

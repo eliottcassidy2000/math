@@ -4,7 +4,7 @@ title: Primitive Hamming-six finite ramification reduction
 status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=2,177,280 and belongs to a finite exact component recursion; no emptiness claim
 source: codex-2026-07-15-S14/S15 primitive-H6 transport and independent audit
 depends_on: [THM-765, THM-810, THM-815, THM-857, THM-858, THM-859]
-related: [THM-823, THM-840, HYP-6820]
+related: [THM-823, THM-840, THM-861, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.py
   - 05-knowledge/results/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.out
@@ -248,6 +248,10 @@ If absent pairs are forcibly completed, increasing label supplies a tie
 Hamiltonian path, but that completion destroys the sheet-cover predicate.
 The signed cycle is the useful pair object; the metric verdict remains in the
 component/progression incidence state.
+
+THM-861 subsequently evaluates that complete incidence state over all 64
+roots and every unbounded step-26 height. Its unique cover is the ordinary AP
+`[12]`; hence the sporadic `c=2` face is empty.
 
 ### E. Common sheets do not imply common scale
 
