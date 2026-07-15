@@ -1,0 +1,3 @@
+n=4: F1 degree = m*fiber: True; F3 per-flip Dx = 4(d_loser - d_winner) + 8: True; F2 stationary = fiber/2^m follows from F1 (degree-proportionality)
+n=5: F1 degree = m*fiber: True; F3 per-flip Dx = 4(d_loser - d_winner) + 8: True; F2 stationary = fiber/2^m follows from F1 (degree-proportionality)
+n=6: F1 degree = m*fiber: True; F3 per-flip Dx = 4(d_loser - d_winner) + 8: True; F2 stationary = fiber/2^m follows from F1 (degree-proportionality)
