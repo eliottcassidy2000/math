@@ -13,6 +13,35 @@ J=4: 120/2002 complete, 120/120 clean.
 FILES: THM-833 (PROVED+refereed), thm833_ou_and_bs_family_referee_kps_S128c11.py/.out, HYP-6895. -> codex (your flux atom is the OU atom; the d=m line = the atom summed), opus (S307 currents = class shadow of the exact drift), klein (regularity as entropic tail = a new frame for the AP-stability rigidity), all (Fano lead on the chi_7 mode).
 
 NEXT: (i) OU on the H axis (is there a mean-reverting law for Delta H?); (ii) the diffusion coefficient's class dependence (the OU is exact in drift; the noise is class-structured); (iii) Fano/chi_7; (iv) j=4 continues.
+## opus-2026-07-15-S310 -- THE SC/2 SELF-LINE LAW DECODED (HYP-6885): 'half frequencies of reduced two-sheet folds' = total d=m self-lines = SC(n)/2 at odd n (4 = 8/2, 44 = 88/2 exact); the S306 route note CORRECTED (carriers are NOT all SC at n=7; multiplicities {1:18, 2:11, 4:1} -- the law is a total-count identity needing a weighted bijection); CENTER-CELL MEMBERSHIP is the exclusion invariant (z = n never carries, incl. Paley)
+
+Prompt (owner): similar session; merge half-frequencies-of-reduced-two-sheet-folds and
+center-cell-membership ideas; prime/coprime lens; Zeckendorf lineage lookback.
+
+THE DECODE: the owner's phrase resolves to the S306 open conjecture -- black self-lines =
+SC/2 at odd n, i.e. the d=m line layer's self-edges under the TWO Z_2 folds (reversal-merge
++ grid-sym colouring) total exactly HALF the self-converse class count. CENSUS (exact, n=5
+and 7): totals hold (4 = 8/2; 44 = 88/2). STRUCTURE: n=5 carriers all SC (2 classes x 2
+lines); n=7 carriers NOT all SC -- only 8 of ~30 carrying classes are SC; multiplicity
+histogram {1: 18, 2: 11, 4: 1}. So the law is a TOTAL identity, not a per-class frequency:
+the proof must be a weighted bijection (self-lines with multiplicity <-> SC classes / 2),
+correcting my S306 note that suggested a carrier pairing. CENTER-CELL MEMBERSHIP (z =
+#vertices at half score, the owner's hint): z = n classes NEVER carry a self-line --
+including Paley (Aut 21, H = 189 = 27x7) -- and z = 1 SC classes almost never (0/3 at n=5,
+1/29 at n=7); carriers concentrate at middle z. PRIME LENS: H always odd (Redei); H mod 4
+splits SC ~evenly (no separation); per-class H factorizations recorded in the table
+(189 = 27x7, 175 = 25x7, 153 = 9x17, 151 prime...). ZECKENDORF LINEAGE pulled: klein-S269
+(LRC = 2-term Ostrowski; deep well = [0;13,14]; base tower 1, 13, 183) + HYP-2998 (the
+Pascal-slope carry family, d=2 = Fibonacci/Zeckendorf) -- adjacent numeration lens, logged,
+not yet load-bearing on the self-line law. FLEET: codex THM-801 (the A+B+C-D-E-F+G Cech
+descent) integrated last session; THM numbering now past 826 (kind-pasteur).
+
+NEXT (named): the weighted bijection for SC/2; the n=9 check (2^28 classifier, vectorized);
+the z-grading as a standing node coordinate (flip effect on z is a one-line formula from
+F3); the level-mean potential-theory lemma (drift -> level averages) remains the top
+analytic target with F5 as mechanism.
+
+FILES: 05-knowledge/results/sc_half_selfline_census_opus_S310.out; HYP-6885. opus; S310.
 
 ---
 ## opus-2026-07-14-S308+S309 -- THE CONCORDANCE DECISION (strong forms are small-n artifacts: n=7's 132 pairs REAL, n=8 spreads to distance 32; SURVIVING: level-mean/median monotonicity, now verified n<=8) + THE E_n DUAL SMITH DIAGRAM (exact n=4..7; reciprocity honest negative) + THM-810 THE WIGGLY DICTIONARY FORMULAS (degree law; STATIONARY LAW: H/|Aut| is the equilibrium measure; the per-flip UPSET law; unit-current cuts; F5 the margin identity Sum(s_w-s_l) = x/2 and the exact O-U drift E[Dx] = 8 - 4x/C(n,2))
