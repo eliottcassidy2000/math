@@ -359,6 +359,15 @@ charts are silent, transport to the exact all-component selector before
 declaring a trap. The selector is now constructed; proving its uniform failure
 or incompatibility is the remaining theorem.
 
+The THM-807 reservation challenges a further implicit vertex choice. The
+quadratic selector treats every deep-component/return-component pair as a
+potential vertex, but the central return component is mandatory and connected.
+It should support a linear necessary selector, becoming exact if no satellite
+return component exists. On this view the extra vertices are not runners or
+deep components alone: they are satellite-labelled return incidences. The
+claim is still being audited, so the present theorem-facing carrier retains all
+of them.
+
 ## 4. The transverse-tooth state and the shape of infinity
 
 THM-798 and THM-799 add a second axis to the proposed object.

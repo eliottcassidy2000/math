@@ -165,6 +165,12 @@
   that raw component order/sign and total eroded measure can also agree while
   return-thickened component incidence differs. The missing datum is global
   component choice with signed affine tooth/slope address.
+  THM-803 makes that datum finite with a quadratic owner-labelled selector.
+  THM-807 now reserves a sharper topological split: the mandatory central
+  return component should yield a linear necessary selector, exact when the
+  closed return set is connected, while disconnected return satellites carry
+  the genuinely quadratic interaction. Its proof and replay are still under
+  audit.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; THM-795 proves it on every Hamming-one AP star;
@@ -186,7 +192,9 @@
   impossible on the hereditarily primitive terminal base. Equivalently, prove
   a height-independent version of THM-776's transversal-number lower bound or
   show that THM-775's dyadic chain lands in one of THM-774/776's certified
-  regions. Then treat the `s=3` three-colour edge. The exact object is
+  regions. Audit THM-807's proposed connected-return compression before using
+  it as a uniform reduction; it is claimed, not proved. Then treat the `s=3`
+  three-colour edge. The exact object is
   loose-set component x sheet-owner incidence with closed endpoints, not a
   residue condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor

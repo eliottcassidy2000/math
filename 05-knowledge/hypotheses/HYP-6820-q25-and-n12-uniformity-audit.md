@@ -37,6 +37,8 @@ related:
   - HYP-6800
   - HYP-6815
   - THM-771
+  - THM-806
+  - THM-807
   - MISTAKE-143
 ---
 
