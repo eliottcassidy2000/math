@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""THM-786 battery (opus-S304): (1) the wall-count artifact refutation via
-extreme-ratio tuples (exact 41-wall run certificate; extents stay under the
-bound); (2) the adversarial EXTENT census against 1/w_g + 2/w_f over generic /
-extreme-ratio / balanced-pair / near-multiple families + annealing (peak 0.589).
-Pure integer/Fraction arithmetic; see the .out for the recorded runs."""
+"""Partial THM-786 battery (opus-S304; scope corrected by codex-S10).
+
+This file exactly replays two extreme-ratio certificates refuting a universal
+raw wall-count bound and checks their extents against 1/w_g+2/w_f. It does NOT
+implement the census table printed in THM-786, and it does not test or prove the
+withdrawn serving/de-phase and sparse-regime claims. The historical 0.589
+telemetry is merely printed, not recomputed. Pure integer/Fraction arithmetic.
+"""
 import random
 from fractions import Fraction as F
 def inv7(w): return pow(w % 7, 5, 7)
@@ -48,4 +51,4 @@ if __name__ == '__main__':
               f"extent = {float(ext):.5f} < bound {float(bound):.5f}: {ext < bound}")
     # (2) extent census (seeded as in the session; see THM-786 table)
     random.seed(3041)
-    print("extent census: see THM-786 table; peak ratio 0.589 (annealed).")
+    print("historical extent table/peak 0.589 is NOT recomputed by this script")

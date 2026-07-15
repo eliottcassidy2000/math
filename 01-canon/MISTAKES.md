@@ -24,6 +24,10 @@ Format per entry:
   `J`, with no slow wall between them. At every fast wall the seven slow owners
   remain a rainbow, so all `21N` walls are consecutive and covered. The count
   is unbounded while `J` and its slow-owner geometry are fixed.
+  Independent exact finite certificates found concurrently include
+  `{10,12,17,18,22,32,39,2445}` (41 walls) and
+  `{8,10,18,24,32,34,39,3887}` (14 walls); they expose the same extreme-ratio
+  mechanism.
 - **Correct framing:** raw wall count is a temporal-resolution coordinate, not
   a compactness coordinate. Contract same-owner refinements, retain metric
   extent relative to the slow mesh, or work directly with incidence of the
@@ -42,33 +46,42 @@ Format per entry:
   chamber, not a bare tournament or event count.
 - **Source:** codex-2026-07-14-S10 and an independent parallel rediscovery;
   THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
-  output.
-## MISTAKE-147 -- "K0 = 6: every blocking run has at most 6 walls" (THM-783 [né 782]/S303 census) -- a RATIO-BOXED sampling artifact; extreme-ratio tuples give runs of 41+ walls (exact certificate); the true exit-lemma invariant is EXTENT, not wall count (opus-S304, self-caught next session)
+  output; independent extreme-ratio certificates and reported census in
+  opus-S304.
 
-- **What was claimed (opus-S303):** adversarial census (heights to 10^4, incl. targeted
-  packets) capped all blocking runs at 6 walls; "K0 := 6" was adopted as the working
-  constant and the sharp conjecture "every blocking run <= 6 walls" was stated.
-- **Why it is wrong:** the census sampled 8-subsets of [1, 10^4] UNIFORMLY -- such draws
-  essentially never produce extreme speed RATIOS (w_f/w_g > 3). But same-owner steps are
-  phi-free: when the fastest owner dwarfs the rest, the seven slow tokens are constant on
-  long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
-  w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
-  {8,10,18,24,32,34,39,3887}: 14-wall run.
-- **The correct framing (THM-786):** the invariant is run EXTENT. Both certificates'
-  extents (0.01620, 0.00334) sit UNDER 1/w_g + 2/w_f (0.02646, 0.02616) -- the extent
-  bound proved conditionally in THM-783(5) and now verified at ratio <= 0.59 across all
-  adversarial families INCLUDING designed exploits (balanced pairs, near-multiples).
-  Wall-count comparisons in THM-779(4)/THM-783(6-7) are withdrawn; extent comparisons
-  replace them; the pierce is restated in extent form.
-- **Impact:** no downstream consumer used K0 = 6 quantitatively in the ~3 hours it stood;
-  THM-779/783 carry correction banners.
-- **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
-  uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
-  seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
-  single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
-  dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
-  count what costs, not what happens.
-- **Source:** opus-2026-07-14-S304 (lrc14_extent_exit_theorem_opus_S304.py + .out).
+## MISTAKE-148 -- the co-landing “de-phase/serving” bound assumed locked wall indices and fixed order; balanced pairs can flip order and exceed it (THM-783/786)
+
+- **What was claimed:** THM-783 originally bounded consecutive co-visits of
+  owners `c,c'` by `cc'/(f|c-c'|)+1`. THM-786 §3 repackaged the same argument
+  as a proved serving bound for a fixed companion of consecutive g-walls,
+  using `floor(gc/(f|g-c|))+1`, and used it to advertise a proved sparse-regime
+  cascade.
+- **Why it is wrong:** the derivation assumes paired wall indices both advance
+  by one and that their relative order stays fixed. General co-visits need not
+  have the first property. Even when indices do advance together, order can
+  flip, doubling the allowed signed-offset window. Exact balanced example:
+  `(f,g,c)=(9,8,6)`. The four consecutive g-walls
+  `13/16,15/16,17/16,19/16` share f-periods with c-walls
+  `3/4,11/12,13/12,5/4`. Since `8^{-1}+6^{-1}=1+6=0 (mod 7)`, all four are
+  balanced co-visits, but the claimed bound is
+  `floor(8*6/(9*2))+1=3`. More broadly `(f,c,c')=(8,2,5)` has recurring
+  co-visits forever because the owner-5 index advances alternately by two and
+  three.
+- **Correct framing:** with one-step paired indices and fixed order, the
+  factor-one drift bound is elementary. Allowing order flips gives a signed
+  window of width `2/f`, hence only a factor-two bound. Applying either inside
+  a blocking run requires a separately proved pairing/order hypothesis. The
+  safe scale-sensitive reduction is THM-788: contract empty f-refinement and
+  count active f-periods without assuming a de-phase law.
+- **Impact:** THM-783 §4 and THM-786 §3's serving/sparse conclusions are
+  withdrawn. The anchored recurrence, period-sum, single-visitor law, and the
+  conditional no-companion extent theorem stand. Subtracting two visitor-set
+  balance identities also stands; the asserted simultaneous swap geometry and
+  mandatory handover do not follow. THM-786's extent census remains finite
+  evidence, not proof of the universal conjecture, and the r=8 pierce is not
+  finished outside the explicitly proved no-companion class.
+- **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
+  corrected THM-783/786 and THM-788.
 
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 

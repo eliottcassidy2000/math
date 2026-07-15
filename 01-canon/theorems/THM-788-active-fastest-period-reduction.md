@@ -1,7 +1,7 @@
 ---
 id: THM-788
 title: Active-fastest-period reduction for prime-seven blocking runs
-status: PROVED (elementary wall-mesh counting plus THM-783's period-sum law; independent proof audit requested)
+status: PROVED (elementary wall-mesh counting plus THM-783's period-sum law; independently audited, including 2,000 random tuples / 4,626 covered runs with zero inequality violations)
 source: codex-2026-07-14-S10 with balanced-cascade parallel analysis; numbered after concurrent THM-785/786/787 claims
 depends_on:
   - THM-779   # simple covered-wall criterion
@@ -18,8 +18,10 @@ the fastest owner, `g` the second fastest, and
 
 `R = ceil(f/g)`.
 
-Consider a prime-seven blocking run: a consecutive sequence of simple global
-wall coordinates satisfying THM-779's wall-rainbow condition.  Let
+Consider a prime-seven blocking run: consecutive coordinates in the **full
+global event-coordinate order**, every coordinate simple and satisfying
+THM-779's wall-rainbow condition. No intervening event coordinate is deleted.
+Let
 
 - `K` be its number of walls;
 - `L` be the distance from its first to its last wall;
@@ -124,13 +126,25 @@ the pairwise observable, and time orientation as the gauge.  The event
 tournament is transitive: score histogram `{0,...,K-1}`, no directed cycles,
 singleton SCCs, and a unique chronological Hamiltonian path.  Those
 fingerprints do not distinguish an empty refinement from genuine interaction.
-Contracting maximal f-blocks and marking the intervening f-periods active or
-empty adds the missing fibre.  The retained proof object is therefore the
-owner-labelled tie-free Hamiltonian path together with `f/g`, the active-period
-word, and each active period's zero-sum visitor set.
+For fixed `K`, the bare tournament cannot distinguish empty refinement from
+genuine interaction (although its vertex count of course records `K`). The
+exact normal form for `N_f>=1` is
+
+`E_0, V_1, E_1, ..., V_A, E_A`,
+
+where each `E_j` is an f-block of 1 through `R` f-walls, absorbing at most
+`R-1` empty periods, and each `V_j` is an ordered two- through seven-owner
+zero-sum visitor packet. There are also two edge packets of at most seven walls
+each. Contract the `E_j` blocks while decorating them by absorbed length; the
+`V_j` packets are fibre/hyperedge data not supplied by the transitive
+tournament.
+
+The retained proof object is therefore the owner-labelled tie-free Hamiltonian
+path together with one absolute slow scale (`g`, or `1/g`), the ratio `f/g`,
+the decorated f-block word, and each active packet's zero-sum visitor set.
 
 This challenges the assumption that event vertices at the finest available
-resolution are canonical.  Period vertices preserve the LRC-relevant visitor
-predicate and slow metric; the raw event tournament destroys both by treating
-arbitrarily fine same-owner subdivision as new complexity.
-
+resolution are canonical. Decorated period/block vertices preserve the
+LRC-relevant visitor predicate and slow metric; undecorated period vertices do
+not. The raw event tournament obscures both by treating arbitrarily fine
+same-owner subdivision as new complexity.
