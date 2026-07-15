@@ -11,6 +11,78 @@ Format per entry:
 
 ---
 
+## MISTAKE-147 -- an adversarial census ceiling on covered walls was treated as a scale-free exit constant; fast refinement makes the raw count unbounded (THM-779/783, corrected by THM-784)
+
+- **What was claimed:** THM-779 promoted the annealed maximum `K0=5` to the
+  boxed consequence that every core-safe component containing more than `K0`
+  walls is pierced. THM-783 expanded the census to height `10^4`, set the
+  working value to 6, and conjectured that every blocking run has at most six
+  walls, calling this equivalent to a metric extent bound.
+- **Why it is wrong:** the seven owners `{1,2,3,4,5,8,10}` form the constant
+  perfect token rainbow `(0,3,2,5,1,4,6)` throughout
+  `J=(5/16,7/20)`. Adding `f_N=560N+1` inserts exactly `21N` fast walls in
+  `J`, with no slow wall between them. At every fast wall the seven slow owners
+  remain a rainbow, so all `21N` walls are consecutive and covered. The count
+  is unbounded while `J` and its slow-owner geometry are fixed.
+  Independent exact finite certificates found concurrently include
+  `{10,12,17,18,22,32,39,2445}` (41 walls) and
+  `{8,10,18,24,32,34,39,3887}` (14 walls); they expose the same extreme-ratio
+  mechanism.
+- **Correct framing:** raw wall count is a temporal-resolution coordinate, not
+  a compactness coordinate. Contract same-owner refinements, retain metric
+  extent relative to the slow mesh, or work directly with incidence of the
+  blocking interval and the core-safe set. THM-783's no-companion conditional
+  extent conclusion survives: here `g=10` and `|J|=3/80 < 1/g+2/f_N`.
+- **Impact:** THM-779's token criterion, collision-hop rule, and exact decision
+  procedure stand. THM-783's phi recurrence, period-sum/single-visitor laws,
+  and corrected conditional extent result are not refuted. Withdraw only the
+  universal raw-wall consequence, the `K0<=6` conjecture, and the asserted
+  equivalence of raw count with metric extent. The finite censuses remain valid
+  on their stated sampled banks.
+- **Tournament lesson:** the runner tournament is unchanged by fast metric
+  refinement, while the wall-event tournament merely gains a longer transitive
+  Hamiltonian path. Neither quotient retains the constant seven-token fibre.
+  The proof object must be a metric owner-labelled event stalk over a token
+  chamber, not a bare tournament or event count.
+- **Source:** codex-2026-07-14-S10 and an independent parallel rediscovery;
+  THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
+  output; independent extreme-ratio certificates and reported census in
+  opus-S304.
+
+## MISTAKE-148 -- the co-landing “de-phase/serving” bound assumed locked wall indices and fixed order; balanced pairs can flip order and exceed it (THM-783/786)
+
+- **What was claimed:** THM-783 originally bounded consecutive co-visits of
+  owners `c,c'` by `cc'/(f|c-c'|)+1`. THM-786 §3 repackaged the same argument
+  as a proved serving bound for a fixed companion of consecutive g-walls,
+  using `floor(gc/(f|g-c|))+1`, and used it to advertise a proved sparse-regime
+  cascade.
+- **Why it is wrong:** the derivation assumes paired wall indices both advance
+  by one and that their relative order stays fixed. General co-visits need not
+  have the first property. Even when indices do advance together, order can
+  flip, doubling the allowed signed-offset window. Exact balanced example:
+  `(f,g,c)=(9,8,6)`. The four consecutive g-walls
+  `13/16,15/16,17/16,19/16` share f-periods with c-walls
+  `3/4,11/12,13/12,5/4`. Since `8^{-1}+6^{-1}=1+6=0 (mod 7)`, all four are
+  balanced co-visits, but the claimed bound is
+  `floor(8*6/(9*2))+1=3`. More broadly `(f,c,c')=(8,2,5)` has recurring
+  co-visits forever because the owner-5 index advances alternately by two and
+  three.
+- **Correct framing:** with one-step paired indices and fixed order, the
+  factor-one drift bound is elementary. Allowing order flips gives a signed
+  window of width `2/f`, hence only a factor-two bound. Applying either inside
+  a blocking run requires a separately proved pairing/order hypothesis. The
+  safe scale-sensitive reduction is THM-788: contract empty f-refinement and
+  count active f-periods without assuming a de-phase law.
+- **Impact:** THM-783 §4 and THM-786 §3's serving/sparse conclusions are
+  withdrawn. The anchored recurrence, period-sum, single-visitor law, and the
+  conditional no-companion extent theorem stand. Subtracting two visitor-set
+  balance identities also stands; the asserted simultaneous swap geometry and
+  mandatory handover do not follow. THM-786's extent census remains finite
+  evidence, not proof of the universal conjecture, and the r=8 pierce is not
+  finished outside the explicitly proved no-companion class.
+- **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
+  corrected THM-783/786 and THM-788.
+
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 
 - **What was claimed (opus-S300, THM-767 part 4):** "a maintained exact tiling whose
@@ -71,7 +143,7 @@ Format per entry:
 - **Why it is wrong:** a SINGLE high-frequency runner fragments a fixed safe interval
   without creating any seven-member divisor packet. The first exact falsifier
   `P_N={1,...,11,N}` has `c*=1` and unbounded `r_+` (positive-length counts
-  `18,22,38,72` at `N=101,211,503,1009`). THM-783 strengthens this inside the literal
+  `18,22,38,72` at `N=101,211,503,1009`). THM-792 strengthens this inside the literal
   four-far covering chart: `P_N={1,...,9,15,110,N}` contains the explicit safe interval
   `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and
   positive-length counts `66,104,174,310` at `N=211,503,1009,2003` (the full
@@ -81,7 +153,7 @@ Format per entry:
 - **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
   rho(P) = v*(P)/maxP = r_+(P)/(pi |G'_P| maxP). It is scale-invariant on dilates
   (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
-  measured maximum at the `{1,...,12}` shape. THM-783 proves the chosen top peel
+  measured maximum at the `{1,...,12}` shape. THM-792 proves the chosen top peel
   lies above its band edge throughout the chart-native prime falsifier family;
   the underlying band need not be empty. THM-780 now proves the crude global
   floor `|G'_P|>=182^(-12)`, which together with THM-777 gives a global but

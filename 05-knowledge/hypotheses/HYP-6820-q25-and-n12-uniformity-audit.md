@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on complementary finite regions, equipped with a proved dyadic quotient chain and a uniform anchored phase-cell packet, but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, two-sheet-exact on complementary finite regions, equipped with a proved dyadic quotient chain and symmetric return-packet/erosion bounds; fixed-anchor escape is refuted and branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -23,6 +23,7 @@ depends_on:
   - THM-776
   - THM-780
   - THM-782
+  - THM-789
   - HYP-6750
   - HYP-6775
 related:
@@ -395,10 +396,30 @@ the constant is far below `8/117`, and the exact core-19 atlas has the explicit
 profile `|G_U|=41/858<8/117=|H_(1,9)|`.  The sharpened target is therefore
 structured phase-packet noncontainment, not scalar measure comparison.
 
+THM-789 strengthens and corrects that target.  For the heavy cell preimage
+`A`, the symmetric packet `D=A-A` satisfies
+
+```text
+t_0+D subset G_U,       |D|>=2*72^(-10),
+one component has length at least 72^(-10)/(5 max(U)).
+```
+
+Under tightness, every deep time also pays the pointwise thickness tax
+`||wt||+(w/B)(phi_U(t)-1/13)<=2/13`, so each odd exception obeys
+`w<=11B`.  But fixed-anchor escape is false as a universal method:
+`U={1,2,3,5,7,8,9,10,11,12}`, `t_0=4/17`, and `(x,y)=(13,9)` trap the
+full natural Bohr return set, every same-cell difference packet, every further
+literal phase refinement, and the ordinary Lipschitz interval inside the
+diamond.  The same row escapes at the different deep time `14/19`.  The
+correct target is therefore the global selection statement
+`E_U not subset H_(x,y)-R_U`, not noncontainment of a packet attached to an
+arbitrary chosen anchor.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
-with a binary safe-child map, divisor unit columns, and an anchored joint-phase
-return packet.  The runner tournament records which odd runner owns a sheet
+with a binary safe-child map, divisor unit columns, and the family of deep
+components with their symmetric return packets and escape margins.  The runner
+tournament records which odd runner owns a sheet
 but forgets the simultaneous hitting number; the dyadic quotient chain records
 recursion but needs binary sheet-fiber, incidence, and phase-cell sidecars.
 
@@ -414,8 +435,9 @@ The uniform theorem now has two explicit residuals:
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
    quantitative bounds on every dyadic seam guard strong enough to place the
    reconstructed ten-core/full packet inside one of those finite bases, or
-   prove that an admissible folded diamond cannot contain a THM-782 anchored
-   heavy phase-cell packet. At higher sheets, classify and rule out THM-769's persistent colour covers,
+   prove the global THM-789 selection target
+   `E_U not subset H_(x,y)-R_U`.  A theorem for an arbitrary fixed THM-782
+   anchor is impossible. At higher sheets, classify and rule out THM-769's persistent colour covers,
    beginning with the explicit `s=3` equality shells of THM-772.
 
 Equivalently in the original top-peel language, prove that every primitive
@@ -465,8 +487,9 @@ deciding objects are therefore:
 - the off-sheet-runner by sheet incidence cover, with effective orders
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 - in the two-sheet equality packet, the folded half-frequency diamond together
-  with the exact locations of the quotient loose components and the labelled
-  phase-cell/anchor incidence of THM-782;
+  with the exact locations of all deep components, labelled phase-cell/anchor
+  incidence, symmetric return packets, and componentwise escape margins from
+  THM-782/789;
 - for dyadic descent, the quotient chain and binary safe-child fibers with
   eligibility radii and divisor obligations;
 - for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed

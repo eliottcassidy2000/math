@@ -20,23 +20,23 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded positive-length good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-783 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-792 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-783; MISTAKE-145).
-- **Terminal transverse face:** THM-784 generalizes the successful cap calculation. A base good-set
+  (THM-792; MISTAKE-145).
+- **Terminal transverse face:** THM-793 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-784's enclosure operator
+- **Recursive certificate pull:** Iterate THM-793's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
   to four canonical certificates. Classify rows on which every certified mass
   bound or cap test fails; those are precisely where endpoint-owner correlations must
   re-enter the state.
-- **Uniform four-far terminal cone:** THM-784 now proves that every nine-small
+- **Uniform four-far terminal cone:** THM-793 now proves that every nine-small
   chart closes whenever successive far coordinates satisfy the cumulative
   `412`-lacunarity inequalities. The exact rational comparison is
   `4455873/4453855>1`, while `411` fails the same calculation. Therefore every
@@ -59,14 +59,14 @@
   `{1,...,13}\{6}`; the explicitly listed scale/tooth rows and five seeded
   searches find no lower value. THM-780 proves the weaker global floor
   `182^(-12)`, so the ratio coordinate is uniformly bounded; the sharp
-  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-784
+  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-793
   separately gives a much stronger fixed-base transition. The residual task is
   owner/residue/deck transport inside the enormous bounded ratio domain.
 - **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound follows from
-  `c*` alone; THM-783 refutes the proposed raw-component route, while
+  `c*` alone; THM-792 refutes the proposed raw-component route, while
   THM-777/780 give qualitative ratio compactness without an effective
   endpoint-owner classification.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
@@ -81,7 +81,7 @@
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
   explicitly listed finite probes find no lower value, but the sharp global
   value remains a conjecture. THM-780 proves the crude global floor
-  `182^(-12)`; THM-784 separately proves that one high-frequency
+  `182^(-12)`; THM-793 separately proves that one high-frequency
   insertion over a fixed positive-mass base cannot cause decay. Do not promote
   the proposed `rho<469` ratio bound outside strata where the floor is proved,
   or mistake that ratio bound for an endpoint/residue classification.
@@ -139,12 +139,13 @@
   to a hereditarily primitive divisor-complete core.  THM-776 independently
   closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
   bad-atom hypergraphs have transversal number exactly 12, while a packet core
-  has only ten speeds.  THM-782 gives every ten-core a scale-free anchored
-  phase-cell packet of measure at least `72^(-10)`, strict clearance
-  `1/13+1/10296`, and a safe component of normalized width at least
-  `72^(-10)/20`.  Tightness would force this whole structured packet into the
-  folded diamond; the scalar floor alone is much too small to contradict the
-  diamond cap.
+  has only ten speeds. THM-782/789 give every ten-core a symmetric return
+  packet of measure at least `2*72^(-10)`, strict clearance, a safe component
+  of normalized width at least `72^(-10)/5`, and a pointwise thickness tax.
+  THM-789 also gives an exact method boundary: one deep anchor and every local
+  refinement can be trapped while a different deep component escapes. The
+  scalar floor and fixed-anchor route therefore cannot contradict the diamond
+  cap.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -181,8 +182,9 @@
   of this schedule with the collision-hop transducer.
   impossible, prove a scale-free transversal lower bound beyond ten, or bound
   all dyadic seam guards strongly enough that the reconstructed `U` or `A`
-  lies in THM-774/776's complementary finite bases, or prove that some
-  THM-782 heavy anchored phase cell escapes every admissible diamond.  Then
+  lies in THM-774/776's complementary finite bases, or prove THM-789's global
+  selection target: some deep component escapes the eroded admissible diamond.
+  A theorem for an arbitrary fixed phase-cell anchor is false. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -197,6 +199,26 @@
   all 66 burdens tied and one tie Hamiltonian path, yet the owner hypergraph
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
+
+## Lead codex-2026-07-14-S9: cyclic-triangle flow and black quotient drift
+
+- **Source:** THM-785; HYP-6825; THM-781; MPA-30.
+- **General theorem:** `C3` is exact inverse score variance and its maximum is
+  exactly the regular/near-regular score locus.  Complement-line flux is
+  `d0-dlast-1=2(d0-n/2)-epsilon`, with complement negating both coordinates.
+- **Blue law:** anti-diagonal symmetry forces `epsilon=0` and produces a closed
+  binomial distribution of `|Delta C3|`; odd sizes have no blue ties.
+- **Black law:** the full step distribution and black `|epsilon|` distribution
+  are closed binomial sums.  At `n=7`, black boundary flow oriented toward
+  larger `C3` nevertheless reverses from pure-black to mixed by a net 1,544
+  instances and 553 projected supports.
+- **Objective order:** sort by `(C3, PB/M/PK phase, rooted line distance/word,
+  score/Landau orbit, weighted line-WL, exact HYP-6825 rank)`.  The JSON stores
+  this `flow_rank` for every node through `n=7`.
+- **Next pull:** disintegrate the symmetric `(R,X,Y)` endpoint-bit measure over
+  path orbits, automorphism stabilizers, simultaneous line orbits, and node
+  phases to identify exactly where black drift is created.  Then audit `n=8`
+  and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 

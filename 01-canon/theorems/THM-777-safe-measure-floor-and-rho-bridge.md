@@ -6,7 +6,7 @@ source: opus-2026-07-14-S301 (owner directive: make progress or prove route no-g
 depends_on:
   - LRC(<=13)  # M(P) >= 1/13 for 12-cores (the Lipschitz tail)
   - THM-755    # v* = r_P/(pi |G'_P|) (the bridge's target)
-related: [THM-757, THM-761, THM-767, THM-780, THM-783, THM-784, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
+related: [THM-757, THM-761, THM-767, THM-780, THM-783, THM-784, THM-792, THM-793, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
 verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
   (+ 05-knowledge/results/lrc14_gprime_floor_decision_opus_S301.out)
 ---
@@ -70,7 +70,7 @@ pair-sum endpoint arithmetic; this factorization is diagnostic, not a proof.)
 
 ## (4) Fixed-base exclusion and finite adversarial probes
 
-- **Fixed-base tooth insertion (PROVED, THM-784):** for every fixed 11-speed
+- **Fixed-base tooth insertion (PROVED, THM-793):** for every fixed 11-speed
   base `B` with safe mass `mu>0` and `r_B` components,
   `|G'_{B union {N}}|>=6mu/7-2r_B/(7N)`. Hence
   `liminf_{N->infinity}|G'_{B union {N}}|>=6mu/7>0`; one new high frequency over
@@ -108,7 +108,7 @@ unbounded structured ray.
 
 - CLOSES: the practical regime-2 ratio bound on the exact stratum `maxP<=18`, via (1)+(3),
   and rules out a single high-frequency insertion over any fixed base as a
-  safe-mass-decay mechanism, via THM-784.
+  safe-mass-decay mechanism, via THM-793.
 - THM-780 LATER CLOSES: the qualitative global floor and hence the existence of
   a bounded normalized ratio coordinate, with the deliberately crude bound
   `rho(P)<=12*182^12/pi`.
@@ -119,7 +119,7 @@ unbounded structured ray.
   covers); the census minimizer's structure (near-AP, one gap) is where that
   argument should land.
 - SEPARATES SIGNAL FROM NOISE: the sharp-floor route remains viable but unproved; the
-  raw-`r_P` route is refuted (MISTAKE-145). THM-784 rigorously removes fixed-base
+  raw-`r_P` route is refuted (MISTAKE-145). THM-793 rigorously removes fixed-base
   tooth insertion from the decay mechanisms. The unresolved possibilities are
   varying-base degeneration and iterated or multiscale insertion are no longer
   candidates for making safe mass tend to zero, by THM-780, but they can still

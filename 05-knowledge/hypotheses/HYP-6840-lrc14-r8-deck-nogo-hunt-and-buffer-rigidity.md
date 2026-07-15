@@ -1,12 +1,12 @@
 ---
 id: HYP-6840
 title: The r=8 deck no-go hunt — three-stage honest negative, the universal 1/7 buffering law (referee-corrected), and the flipped conclusion: full deck blocking at r=8 is as rigid as the r=7 tilings
-status: RESOLVED-NEGATIVE for the hunted object (no full-coverage certificate found; three independent obstruction mechanisms identified and quantified); the buffering law VERIFIED; the sharp existence question OPEN and named
+status: FINITE SEARCH NEGATIVE at the stated core/banks; the buffering law VERIFIED; the sharp core-incidence existence question OPEN; CORRECTED by THM-784/MISTAKE-147 (local full blocking can contain unboundedly many raw walls)
 source: opus-2026-07-14-S301 (owner directive: progress or rigorous no-gos; separate signal from noise)
 depends_on:
   - THM-767   # zero-variance, chamber locking (the mechanisms that resist covers)
   - THM-771   # the exact seven-owner defect frame
-related: [THM-761, THM-777, THM-779, THM-780, THM-785, HYP-6835, MISTAKE-141, MISTAKE-146]
+related: [THM-761, THM-777, THM-779, THM-780, THM-783, THM-784, HYP-6835, MISTAKE-141, MISTAKE-146, MISTAKE-147]
 verification: 04-computation/lrc14_r8_single_lens_nogo_opus_S301.py,
   04-computation/lrc14_r8_static_deck_cover_search_opus_S301.py (+ .outs)
 ---
@@ -86,26 +86,29 @@ question.** Three consequences:
    extend to a full blocking; no full blocking was constructible under three
    escalating attacks.
 
-## Sharp open questions (named for the fleet) — Q1/Q2 STATUS after THM-779 (S302)
+## Sharp open questions — corrected after THM-784 (codex-S10)
 
-- **Q1 (existence):** REDUCED TO A SHARP OPEN EXIT PROBLEM by THM-779 (built on boxeph's
-  THM-773 token algebra): full blocking over J is the integer-decidable
-  token-walk condition (piece surjectivity + wall rainbow + no simultaneous
-  walls); THM-785's expanded adversarial census gives a working **K0 = 6**
-  through height `10^4`, not a universal theorem; the one-moment
-  survivor factors as the algebra's minimal case (run length exactly 1). Any
-  core-safe component with more than six walls was pierced in the tested bank.
-  The residual is the balanced co-landing cascade, including arbitrarily scaled
-  mod-7 degeneracy packets.
-- **Q2 (the positive theorem):** OPEN. THM-785 proves single-visitor break,
-  cluster balance, fixed-pair dephasing, and a conditional extent bound. The
-  remaining lemma is the UNCONDITIONAL surjectivity-exit bound: a blocking run
-  of length K forces K−1 schedule-vs-algebra coincidences (the chain
-  o_{i+1} ∈ {o_i, γ_i}); classify the mod-7 degeneracies that could sustain
-  them (THM-779 §5).
+- **Q1 (local existence): RESOLVED POSITIVELY.** THM-784 gives a full blocking
+  interval `J=(5/16,7/20)` for the eight owners
+  `{1,2,3,4,5,8,10,560N+1}` and `21N` consecutive covered walls. The seven
+  slow owners alone form a fixed rainbow there. This does not yet make `J` a
+  safe component of a five-speed LRC core, so the original **core-incidence**
+  question remains open.
+- **Q2 (positive LRC theorem): OPEN.** The census values 5 and 6 are finite-bank
+  observations, not working universal constants. The corrected target is to
+  show that a relevant closed core-safe component cannot lie wholly inside a
+  persistent slow-rainbow chamber, or else to obtain a metric exit on the
+  visitor-rich complement using THM-783's balanced-cluster laws plus a still
+  missing varying-index co-landing argument.
 - **Q3:** connect the buffer partitions / hop-target orbits to DMNR: the chain's
   rigid packets are the deck's exact-covering-system analogues; two-largest-
   moduli arguments should transfer to the hop-target orbit structure.
+
+The information-boundary lesson is now exact: runner or wall-event tournaments
+without metric and token-fibre labels do not preserve blocking. Fast refinement
+changes only event resolution. The appropriate quotient must retain the
+owner-labelled chronological path, slow chamber, mesh ratios, and core-safe
+base interval.
 
 ## Signal/noise ledger for this session (S301)
 

@@ -1,18 +1,23 @@
 ---
 id: THM-779
-title: The r=8 token-walk blocking criterion at the prime-7 lens — full deck blocking is an integer-decidable walk condition; a universal exit bound remains open
-status: PROVED (the criterion and its exact decision procedure; referee 4000-point token check + S301 cross-validation) + VERIFIED (finite adversarial censuses, superseded at height 10^4 by THM-785's working cap 6; the survivor's exact factorization) + OPEN (the unconditional surjectivity-exit bound)
+title: The r=8 token-walk blocking criterion at the prime-7 lens — full deck blocking is an integer-decidable walk condition; raw wall count is not an exit complexity
+status: PROVED (the criterion and its exact decision procedure; referee 4000-point token check + S301 cross-validation) + VERIFIED (K0 = 5 only on the stated adversarial census; the survivor's exact factorization) + CORRECTED (the universal raw-wall pierce consequence is REFUTED by THM-784/MISTAKE-147) + OPEN (a metric/core-sensitive exit theorem)
 source: opus-2026-07-14-S302, built directly on boxeph/codex-S6's THM-773 token algebra (their suggested pull: absent-eighth-owner transport)
 depends_on:
   - THM-773   # the token k_a = -w_a^{-1} round(w_a x), the X^7 - X factorization criterion
   - THM-767   # zero-variance at the prime lens; chamber locking
   - THM-771   # the exact seven-owner defect frame
-related: [HYP-6835, HYP-6840, THM-777, THM-778]
+related: [HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, MISTAKE-147]
 verification: 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
   (+ 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out)
 ---
 
 # THM-779 — the r=8 token-walk blocking criterion
+
+> **CORRECTION (opus-S304, MISTAKE-147):** the census constants (K0 = 5, then 6 in
+> walls) are ratio-boxed artifacts; wall-count is not the invariant (extreme-ratio
+> tuples give 41-wall runs). The CRITERION itself is unaffected. Use THM-786's extent
+> form for the pierce: components of length >= 1/w_g + 2/w_f.
 
 **Frame.** Lens c = 7, core P (|P| = 5), exceptions W = {w_1..w_8}, 7 ∤ w_a. By
 THM-773's token algebra (refereed here exactly on 4,000 random rational points):
@@ -52,15 +57,17 @@ steps, and reduces the r=8 escape-hatch question (Q1) to a symbolic-dynamics
 question: **can the deterministic token walk remain inside the surjectivity
 region SURJ ⊂ (F_7)^8 (density 28·7!/7^8 ≈ 2.45%) across many walls?**
 
-## (2) The chain structure (why runs die)
+## (2) The chain structure (why owner switches are constrained)
 
 After a's wall the collision pair is (a, γ) with γ = the unique owner holding
 `token_a − w_a^{-1}`; condition (2) at the NEXT wall (owner b) forces
 **b ∈ {a, γ}** — the wall-owner schedule (fixed by the eight meshes) must agree
 with the deterministic hop-target chain (fixed by the token algebra). Every
-owner switch in the schedule imposes a restrictive algebraic coincidence. The
-census below suggests rapid decay of long runs, but no exponential bound is
-proved.
+owner switch in the schedule is one algebraic coincidence. This constrains
+visitor-rich runs. It does **not** constrain a long block of walls from the same
+owner: the same-owner recurrence is automatic. THM-784 exploits exactly that
+scale-refinement loophole inside a chamber already rainbowed by the other seven
+owners.
 
 ## (3) The census (VERIFIED, adversarial)
 
@@ -75,38 +82,42 @@ proved.
   immediately outside). The survivor was the algebra's minimal case, not the
   seed of a blocking family.
 
-## (4) The conditional pierce consequence
+## (4) CORRECTION — the advertised raw-wall pierce consequence is false
 
-> **If a universal run bound `K0` is proved, any core-safe component containing more than K0 walls cannot be fully
-> blocked** — a free sheet (a full 1/14-witness moment) exists inside it. Since
-> a component of length λ contains ≈ λ·Σw_a walls, r = 8 full blocking at the
-> prime-7 lens fails for every family whose longest core-safe component sees
-> more than K0 walls. Empirically (S301 + this census) that is
-> every family tested; HYP-6840's Q1 is resolved-negative in practice and Q2
-> (the positive r=8 pierce) is supported on the tested rows. THM-785 later
-> updates the working empirical cap to 6; neither value is universal.
+The original version boxed the sentence “any core-safe component containing
+more than `K0` walls cannot be fully blocked.” That did not follow from a finite
+adversarial census, and its proposed universal form is **refuted** by
+THM-784/MISTAKE-147. The fixed slow rainbow `{1,2,3,4,5,8,10}` blocks
+`J=(5/16,7/20)` while `560N+1` inserts `21N` consecutive covered walls there.
+
+The sound finite statement is only instance-relative: after the exact walk has
+computed the maximal run `K(W,J)` for a specified tuple and interval, more than
+that computed number forces a pierce for that instance. No uniform conclusion
+can use the unnormalised number of walls. The next theorem must use metric
+extent, slow-owner switches, or direct intersection with a core-safe component.
 
 ## (5) What remains (honest)
 
-- **The unconditional exit lemma -- ADVANCED by THM-785 (opus-S303):** the
+- **The exit analysis -- ADVANCED and then corrected by THM-783/784:** the
   phi-recurrence, period-sum law, SINGLE-VISITOR BREAK (unconditional: no in-run
   f-period can have exactly one visitor), cluster balance (pairs w+w2 = 0 mod 7),
-  the de-phase bound, and the conditional extent theorem (< 1/w_g + 2/w_f absent
-  balanced co-landings) are PROVED; the synchronized loophole packet is
-  eliminated; K0 updated to 6 (heights to 10^4); Davenport (D(Z_7) = 7) shows
-  balance is algebraically unavoidable, so the residual gap is the GEOMETRIC
-  co-landing cascade. Original statement of the gap:** prove K0 is finite/small for
-  all 8-tuples — e.g. via (2): a blocking run of length K forces K−1 successive
-  schedule-vs-algebra coincidences; the schedule's owner-switch pattern is
-  three-distance-rigid while the hop targets move on a large orbit unless the
-  w's satisfy explicit mod-7 degeneracies; classify the degeneracies (the rigid
-  packet class) or bound their runs. This is the r=8 analogue of the
-  chamber-locking proof, and DMNR-style tools apply to the hop-target orbit.
+  the corrected conditional extent theorem (< 1/w_g + 2/w_f absent
+  balanced co-landings) retain their stated local/conditional content. The
+  height-`10^4` census maximum 6 remains a bounded-bank fact, but THM-784 proves
+  that **no absolute raw-wall constant exists**. Visitor-free fastest periods
+  can repeat arbitrarily inside a slow rainbow chamber, so the balanced
+  co-landing cascade is relevant only after this static-rainbow mode is
+  separated. The corrected gap is a metric/core-incidence exit theorem:
+  classify persistent slow rainbow chambers, or prove that every relevant
+  core-safe component escapes them; on the visitor-rich complement, develop a
+  valid varying-index analysis of balanced handovers. This is the r=8 analogue of the
+  chamber-locking proof, and DMNR-style tools may still apply to the hop-target
+  orbit.
   THM-778 makes the schedule side exact: centered Beatty ranks merge the eight
   midpoint clocks, and their Euclidean parity cocycles recursively generate
   every owner/tie block.  Thus the lemma can be posed as non-synchronization of
   a centered mechanical schedule with this finite collision-hop transducer.
-- Small components (≤ K0 walls) are outside the census argument; they fall to
-  the direct piece check (criterion (1)) — finite per family.
+- Every specified finite component still falls to the direct piece check
+  (criterion (1)); wall count alone gives no scale-uniform split.
 - Lens generalization (7g | c strata, r = p+1 at other primes p ≤ 13 after
   rescaling δ) is mechanical but unwritten.

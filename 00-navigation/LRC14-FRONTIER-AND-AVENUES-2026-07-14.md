@@ -238,7 +238,7 @@ certificates.
 | Capped envelope | measure cap plus jump envelope | per-core tail with explicit v* | global raw compactness | far-element peel |
 | Scale sheets | fibers t=(t0+k)/c | whole core margin exactly | endpoint labels across several exceptions | THM-760 and next extension |
 | Affine-slope suspension | V(c)=cP+R as slope-c fibers of a two-torus function | scale, offsets, and exact fiber nonemptiness | finite classification without a descent | HYP-6815 chart for multi-exception rays |
-| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-783; peel-relative splice |
+| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-792; peel-relative splice |
 | Safe-mass shape floor | `|G'_P|` on primitive normalized cores | normalized `rho` through `r_P<=sum(P)` | endpoint-owner and obstruction incidence | THM-777 sharp candidate; THM-780 global floor `182^(-12)` |
 | Dyadic sheet chain | quotient chain plus binary safe-child fibers and eligibility/divisor sidecars | imprimitive-deletion descent | terminal hereditarily primitive base | THM-775, proved |
 | Atom-incidence dual | bad atoms as obligations, quotient speeds as killers | exact two-sheet truth after bounded atomization | metric positions and uniform height | THM-776, finite-exact through height 100 |
@@ -317,17 +317,17 @@ The exactly-`f=4` family
 It has no divisor packet of size seven, but the top-peeled core's positive-length component
 count is unbounded because the `N`-runner inserts new teeth into a fixed safe
 interval. Thus common scale and transverse frequency are independent
-noncompact directions in the same four-far chart. THM-783 closes the entire
+noncompact directions in the same four-far chart. THM-792 closes the entire
 prime family by the capped peel, whose ratio normalizes positive-length component count against the named
 peel; `c*` alone cannot support the automaton quotient.
 
-THM-784 extracts the general mechanism at the state level. If the old good set
+THM-793 extracts the general mechanism at the state level. If the old good set
 has mass `mu` and `r_top(B)` components, including isolated equality points, a
 new frequency `N` leaves mass at least `6mu/7-2r_top(B)/(7N)` and creates at
 most `N+r_top(B)` components. This conservatively dominates the Fourier count.
 A proportional peel
 `aN` is therefore eventually terminal under an explicit rational inequality.
-One marked interval gives the simpler `L,sum(B)` corollary used by THM-783.
+One marked interval gives the simpler `L,sum(B)` corollary used by THM-792.
 Iterating it proves a uniform `412`-lacunary terminal cone in every literal
 four-far chart. The
 genuinely open transverse face must retain owner-to-component incidence and
@@ -355,9 +355,12 @@ the safe-child map and eligibility radii cannot be forgotten during descent.
 At prime sheet size seven, THM-773's moment carrier decides exact cover truth
 but not future endpoint events. THM-778's centered-Christoffel word now proves
 the full schedule decoder. THM-779 evaluates the local blocking predicate and
-THM-785 proves several exit mechanisms; an absolute balanced-co-landing cascade
-bound remains open. This keeps truth, transport, and exit compression separate
-in the frontier ledger.
+THM-783 proves the corrected local handover laws. THM-784 shows that raw wall
+count is unbounded under empty fast refinement in a fixed slow rainbow, and
+THM-788 contracts that resolution-only mode to active fastest periods. The
+remaining exit problem is metric/core incidence plus visitor-rich handover.
+This keeps truth, transport, refinement, and exit compression separate in the
+frontier ledger.
 
 The incoming exact endpoint-sidecar audit independently confirms the payload
 rule.  Runner and unweighted endpoint tournaments do not preserve covering,

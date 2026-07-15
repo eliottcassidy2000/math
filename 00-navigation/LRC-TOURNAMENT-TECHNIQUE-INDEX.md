@@ -82,6 +82,12 @@ obligations, and proof-carrier interfaces.
   base: observer cut, gap metric, threshold wall, owner, scale/carry, wall
   monodromy, and certificate obligation.  THM-761 supplies a second finite
   fibre, the sheet cycle `Z_c`, whose seven-exception wall is a cyclic tiling.
+- **Flow refinement:** THM-785 puts the nodes on the exact inverse-score-
+  variance coordinate `C3`, from the transitive root to the regular/
+  near-regular locus.  Complement flux is `d0-dlast-1`; blue reflection kills
+  the endpoint defect, while black lines retain it.  The labelled law is
+  symmetric, but its iso-class disintegration has a strong reverse black
+  boundary drift at `n=7`.
 - **Preserves:** local flip depth; lexicographic spine/rib/sea and blue/black
   path words; line colour, weight and loops; recursive parent multiplicities;
   exact class/converse orbit; every explorer tiling mask and its fibre index.
@@ -99,12 +105,14 @@ obligations, and proof-carrier interfaces.
   `n=7` both carrier tournaments are transitive with score histogram
   `{0:1,...,7:1}`, singleton SCCs, zero directed 3-cycles, and one Hamiltonian
   path; changing gauge flips 22 edges.
-- **Next pull:** Run the rooted weighted line-WL audit at `n=8`; classify the
-  first twins by line-orbit, 2-WL, spectrum, or parent groupoid.  In parallel,
+- **Next pull:** Disintegrate THM-785's exact endpoint-bit flux law over
+  `HP/Aut`, line-orbit, and category fibres to predict the black drift, then run
+  the rooted weighted line-WL/flow audit at `n=8`; classify the first twins by
+  line-orbit, 2-WL, spectrum, or parent groupoid.  In parallel,
   build one exact `(u,t,c,lambda)` chamber movie with the address as base and
   sector/owner/carry/monodromy as stalk.  Pull-card list:
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`.
-- **Pointers:** HYP-6825, HYP-6815, THM-761, HYP-2245, HYP-2989, HYP-3106,
+- **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, HYP-2245, HYP-2989, HYP-3106,
   HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
   `the-metagraph-needs-a-stalk-...codex-S4.md`.
 
@@ -120,8 +128,8 @@ obligations, and proof-carrier interfaces.
   THM-758 splits covering by far count, THM-755 closes peels above
   `v*=r_P/(pi|G'_P|)`, HYP-6780 says the remaining band is a scale quotient
   rather than a raw speed cutoff, THM-764 refutes a uniform `q<=25` terminal,
-  and THM-783/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
-  inside exactly `f=4`. THM-784 closes the positive-good-state/proportional-peel
+  and THM-792/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
+  inside exactly `f=4`. THM-793 closes the positive-good-state/proportional-peel
   transverse face by retaining mass, component count, wall rate, and peel rate together. The card prevents
   future agents from treating "bounded band" as a scalar table or from
   re-promoting the `k<=13` shadow to a uniform route.
@@ -155,6 +163,7 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** THM-758, THM-755, THM-756, THM-753, THM-751, THM-738,
   THM-757, THM-759, THM-764, THM-771, THM-772, THM-773, THM-774, THM-775, THM-777, THM-778,
   THM-779, THM-780, THM-781, THM-782, THM-783, THM-784, THM-785,
+  THM-786, THM-787, THM-788, THM-789, THM-790, THM-791, THM-792, THM-793,
   HYP-6780, HYP-6815, HYP-6830, HYP-6800,
   MISTAKE-145, klein-S312, opus-S295,
   `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`.

@@ -399,11 +399,42 @@ certificate clauses, and proof obligations.
   `node <- path orbit <- owner-labelled LRC state`, with forward maps,
   inverse fibres, and continuation-purity audit at every quotient.
 
+### MPA-30 — Disintegrate symmetric line flux over asymmetric node fibres
+
+- **Delivered general laws:** THM-785 makes `C3` exact inverse score variance,
+  proves complement flux `d0-dlast-1`, and decomposes it as
+  `2(d0-n/2)-epsilon`.  Blue reflection sets `epsilon=0`; closed binomial
+  formulas give every blue step, every total step, and every black
+  `|epsilon|` count for arbitrary `n`.
+- **Delivered quotient signal:** line colour permits only the category path
+  `pure_blue --blue-- mixed --black-- pure_black`.  At `n=7` the blue boundary
+  is entirely outward, while increasing-`C3` black flow has 2,798
+  pure-black-to-mixed instances against 1,254 mixed-to-pure-black.  This does
+  not break complement symmetry: `(a,epsilon)` is sent to `(-a,-epsilon)`
+  before quotienting.
+- **Pull:** condition the exact endpoint-bit measure `(R,X,Y)` successively on
+  unmerged class, converse orbit, fibre size, automorphism stabilizer, line
+  orbit, and pure/mixed/black phase.  Locate the first conditioning step that
+  creates the black drift, then predict its sign without enumerating masks.
+- **Old thread:** score-majorization/Slater depth; half-tiling reflection;
+  line-metagraph simultaneous isomorphism; HYP-3813 Gram/spectral bridge;
+  MPA-02/05/07/13; THM-781/785/787.
+- **Must preserve:** signed `epsilon`, line-instance multiplicity, both endpoint
+  masks, simultaneous-isomorphism line orbit, converse action, and the `C3`
+  orientation.  Absolute defect or simple projected adjacency alone cannot
+  explain directional drift.  An unordered complement line must be oriented
+  by an invariant such as `C3`; choosing the numerically smaller mask makes a
+  “toward regular/transitive” ratio convention-dependent.
+- **Deliverable:** an orbit-stabilizer formula for the conditional flux kernel,
+  an `n=8` exact/semiexact census, and either a theorem predicting reverse
+  black drift or the smallest counterexample.  Test separately whether every
+  balanced node remains nondecreasing-`C3` reachable by a `B* K*` word.
+
 ## Recommended next three pulls
 
-1. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
+1. Execute `MPA-30`: explain the observed black drift by disintegrating the
+   exact symmetric endpoint-bit law over path/automorphism fibres.
+2. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
    identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
-2. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove
+3. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove
    whether inverse steps plus cyclic endpoint word are continuation-complete.
-3. Join `MPA-27/28`: seek a folded coordinate system in which each Euclidean
-   substitution changes only boundedly many fibre fields.

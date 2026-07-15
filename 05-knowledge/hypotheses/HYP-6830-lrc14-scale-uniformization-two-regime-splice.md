@@ -8,8 +8,8 @@ depends_on:
   - THM-760   # r=1 coprime sheet dodge
   - THM-761   # multi-exception sheet covering bound (this session)
   - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
-  - THM-783   # exact scale-free f=4 transverse-fragmentation falsifier
-  - THM-784   # invariant-level good-set-state transverse-tooth cap
+  - THM-792   # exact scale-free f=4 transverse-fragmentation falsifier
+  - THM-793   # invariant-level good-set-state transverse-tooth cap
   - THM-780   # unconditional height-free safe-measure floor
   - THM-777   # rho bridge and exact bounded-height safe-mass floor
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
@@ -57,7 +57,7 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
    but a single high-frequency runner cuts a fixed safe interval into arbitrarily
    many pieces without creating a seven-runner divisor packet.
 
-## Exact infinite-family falsifier (THM-783)
+## Exact infinite-family falsifier (THM-792)
 
 For every prime `N>110`, put
 
@@ -94,7 +94,7 @@ This family has all the scope properties needed to refute the proposed bridge.
    `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
    literally in the first open far-count chart: its nine small speeds are
    `{1,...,9}` and its four far coordinates are `15,110,N,1092N`. This is not an
-   LRC counterexample: THM-783 proves the top peel fires THM-755's capped-envelope
+   LRC counterexample: THM-792 proves the top peel fires THM-755's capped-envelope
    test for every prime `N>110`. It is a counterexample specifically to using `c*` as a
    sufficient fragmentation coordinate, now internal to the four-dimensional
    object rather than imported from another stratum.
@@ -119,7 +119,7 @@ data to distinguish dilation copies from high-frequency tooth insertion. It rema
 open whether those data admit a finite or recursively compact quotient; no
 replacement theorem is claimed here.
 
-## A terminal transverse face (THM-784)
+## A terminal transverse face (THM-793)
 
 The falsifier mechanism itself admits a general theorem. For a fixed base `B`,
 put `mu=|G'_B|` and let `r_B=r_top(B)` include singleton components. After
@@ -148,10 +148,10 @@ A proportional peel `aN` closes beyond an explicit rational threshold
 whenever `(333/106)*a*6L/7>1`. This proves that transverse wall proliferation
 alone is a terminal face: it can make raw components unbounded while keeping
 the exact cap load `r_+/(aN|G'|)` bounded by the conservative state load
-`r_top/(aN|G'|)`. For THM-783, `L=1/1540`,
+`r_top/(aN|G'|)`. For THM-792, `L=1/1540`,
 `a=1092`, and the exact crossing is `11734415/9278<1265`.
 
-More globally, THM-784 proves a uniform `412`-lacunary terminal cone in every
+More globally, THM-793 proves a uniform `412`-lacunary terminal cone in every
 literal four-far chart. If `C subset {1,...,14}`, `|C|=9`, `S=sum(C)`, and
 
 ```text
@@ -200,7 +200,7 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
   height 727, so this is heuristic finite evidence, not convergence. The
   separate stated-bank ratio study measured `rho <= 9.335`, with its maximum at
   the interval shape; no global ratio extremum follows;
-- THM-783 proves that the chosen top peel `1092N` lies above its band edge for
+- THM-792 proves that the chosen top peel `1092N` lies above its band edge for
   every member of the chart-native prime family; the band itself need not be empty;
   the other high-frequency falsifier is compatible with the same candidate on its
   audited range. Neither fact proves the ratio-coordinate conjecture globally;
@@ -213,8 +213,8 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
   `rho<469` cutoff remain conjectural; the census and adversarial battery alone
   do not prove them.
 
-The scale statements now form a precise logical staircase. THM-783 shows
-that component topology is not compact modulo `c*`. THM-784 shows that a fixed
+The scale statements now form a precise logical staircase. THM-792 shows
+that component topology is not compact modulo `c*`. THM-793 shows that a fixed
 positive safe-mass state survives transverse refinement strongly enough for a
 proportional peel. THM-777 turns any positive safe-mass floor into a ratio
 bound, and THM-780 now supplies such a floor uniformly. Thus qualitative ratio

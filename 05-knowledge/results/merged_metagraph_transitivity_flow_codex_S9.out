@@ -1,0 +1,92 @@
+THM-785 CYCLIC-TRIANGLE FLOW ON THE BLUE/BLACK MERGED METAGRAPH
+==================================================================================
+score spectrum: sum_i(d_i-(n-1)/2)^2 = n(n^2-1)/12 - 2 C3
+line flux: C3(complement(t))-C3(t) = d0-dlast-1
+blue specialization: flux = 2 d0-n; black defect: epsilon=d0+dlast-(n-1)
+closed-form aggregate audit: n=3..30, failures=0
+
+n=3: nodes=2 tilings=2 C3=0..1 balanced=('n3-a01',)
+  categories={'pure_blue': 2} balanced_categories={'pure_blue': 1}
+  lines=1 support_edges=1 self={}
+  line steps={'blue|1': 1}
+  blue phase=0 outward, 0 inward, 1 same, 0 tie
+  black phase=0 outward, 0 inward, 0 same, 0 tie
+  black reflection |epsilon|={}
+  monotone reach=2/2; blue-then-black reach=2
+  balanced monotone paths=n3-a01:B
+  local-depth/C3 Pearson=1.0; line-distance/C3 Pearson=1.0
+  identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
+
+n=4: nodes=3 tilings=8 C3=0..2 balanced=('n4-a01',)
+  categories={'mixed': 1, 'pure_black': 1, 'pure_blue': 1} balanced_categories={'mixed': 1}
+  lines=4 support_edges=3 self={'blue|mixed': 1}
+  line steps={'black|1': 2, 'blue|0': 1, 'blue|2': 1}
+  blue phase=1 outward, 0 inward, 0 same, 1 tie
+  black phase=0 outward, 2 inward, 0 same, 0 tie
+  black reflection |epsilon|={'1': 2}
+  monotone reach=2/3; blue-then-black reach=2
+  balanced monotone paths=n4-a01:B
+  local-depth/C3 Pearson=0.866025404; line-distance/C3 Pearson=0.5
+  identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
+
+n=5: nodes=10 tilings=64 C3=0..5 balanced=('n5-a09',)
+  categories={'mixed': 5, 'pure_black': 2, 'pure_blue': 3} balanced_categories={'pure_blue': 1}
+  lines=32 support_edges=20 self={'black|mixed': 4}
+  line steps={'black|0': 8, 'black|1': 8, 'black|2': 8, 'blue|1': 6, 'blue|3': 2}
+  blue phase=2 outward, 3 inward, 3 same, 0 tie
+  black phase=0 outward, 12 inward, 4 same, 8 tie
+  black reflection |epsilon|={'0': 4, '1': 16, '2': 4}
+  monotone reach=7/10; blue-then-black reach=7
+  balanced monotone paths=n5-a09:BBB
+  local-depth/C3 Pearson=0.918824656; line-distance/C3 Pearson=0.288075601
+  identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
+
+n=6: nodes=34 tilings=1024 C3=0..8 balanced=('n6-a23', 'n6-a31', 'n6-a32', 'n6-a33')
+  categories={'mixed': 10, 'pure_black': 22, 'pure_blue': 2} balanced_categories={'mixed': 3, 'pure_black': 1}
+  lines=512 support_edges=187 self={'black|pure_black': 24, 'blue|mixed': 2}
+  line steps={'black|0': 108, 'black|1': 208, 'black|2': 112, 'black|3': 48, 'black|4': 4, 'blue|0': 12, 'blue|2': 16, 'blue|4': 4}
+  blue phase=2 outward, 0 inward, 18 same, 12 tie
+  black phase=38 outward, 78 inward, 256 same, 108 tie
+  black reflection |epsilon|={'0': 128, '1': 240, '2': 96, '3': 16}
+  monotone reach=22/34; blue-then-black reach=22
+  balanced monotone paths=n6-a23:BBB, n6-a31:BBB, n6-a32:BBB, n6-a33:BKK
+  local-depth/C3 Pearson=0.893586927; line-distance/C3 Pearson=0.13934278
+  identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
+
+n=7: nodes=272 tilings=32768 C3=0..14 balanced=('n7-a267', 'n7-a270', 'n7-a271')
+  categories={'mixed': 84, 'pure_black': 184, 'pure_blue': 4} balanced_categories={'mixed': 3}
+  lines=16384 support_edges=6126 self={'black|mixed': 18, 'black|pure_black': 96}
+  line steps={'black|0': 3584, 'black|1': 6112, 'black|2': 4096, 'black|3': 1776, 'black|4': 512, 'black|5': 48, 'blue|1': 160, 'blue|3': 80, 'blue|5': 16}
+  blue phase=6 outward, 0 inward, 250 same, 0 tie
+  black phase=1254 outward, 2798 inward, 8492 same, 3584 tie
+  black reflection |epsilon|={'0': 4224, '1': 7168, '2': 3584, '3': 1024, '4': 128}
+  monotone reach=212/272; blue-then-black reach=212
+  balanced monotone paths=n7-a267:BBBBBB, n7-a270:BBBBBB, n7-a271:BBBBBB
+  local-depth/C3 Pearson=0.898915843; line-distance/C3 Pearson=0.465133288
+  identity failures energy/flux/blue/parity/endpoints/incidence=0/0/0/0/0/0
+  closed-form line-distribution failures=0; black boundary sign-symmetry failures=0
+
+N=7 CATEGORY-BOUNDARY FLOW (line multiplicity / projected support)
+  blue pure_blue->mixed: 6/6
+  blue mixed->pure_blue: 0/0
+  black mixed->pure_black: 1254/522
+  black pure_black->mixed: 2798/1075
+  black mixed--pure_black ties: 992/297
+  black boundary direction by |epsilon|: {'mixed->pure_black|0': 534, 'mixed->pure_black|1': 248, 'mixed->pure_black|2': 472, 'pure_black->mixed|0': 942, 'pure_black->mixed|1': 1072, 'pure_black->mixed|2': 668, 'pure_black->mixed|3': 100, 'pure_black->mixed|4': 16, 'tie|1': 876, 'tie|3': 116}
+  black C3 cut current (k means k|k+1): {'1': 4, '10': 4290, '11': 3430, '12': 1366, '13': 70, '2': 26, '3': 86, '4': 294, '5': 626, '6': 1520, '7': 2440, '8': 3512, '9': 4256}
+
+INTERPRETATION
+  topology: pure-blue --blue-- mixed --black-- pure-black (no shortcut)
+  C3 orientation: the blue boundary is outward at n=7, but the black
+  boundary has a net reverse drift from pure-black back into mixed
+  blue left/right symmetry is exact; black |epsilon| is the transverse defect coordinate
+
+TOURNAMENT ANALYSIS
+  vertices: node-position carriers (category, C3, score, Landau slack, graph depths)
+  observable: number of unordered node pairs separated by each carrier
+  n=7 carrier edge flips retention/economy=25
+  tie Hamiltonian path=('pure_mixed_black_category', 'cyclic_triangle_depth', 'score_sequence', 'landau_slack_vector', 'local_flip_depth', 'blueblack_root_distance', 'flow_packet', 'exact_HYP6825_address')

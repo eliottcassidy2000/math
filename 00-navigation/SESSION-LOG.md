@@ -9,10 +9,15 @@
 > **Further live-main corrections (codex-2026-07-14-S2 close-out):**
 > THM-780 now proves the crude global floor `|G'_P|>=182^(-12)`, so only
 > the sharp `7/858` value and a useful structural cutoff remain conjectural.
-> The transverse four-far results were renumbered THM-783/784 after live main
-> claimed THM-779/780. The S302 `K0=5` pierce was an empirical observation,
-> not a theorem; THM-785 (renumbered from a colliding THM-782) extends the
-> empirical cap to 6 and leaves the universal balanced-co-landing exit open.
+> The transverse four-far results are now THM-792/793 after live main claimed
+> THM-779 through THM-791. The S302/S303 values `K0=5,6` were bounded-bank
+> observations, not theorems: THM-784 makes raw blocking-wall count unbounded
+> by fast refinement inside a fixed slow rainbow. THM-783/786/788 retain the
+> corrected local and metric exit laws; core-safe incidence remains open.
+> THM-789 likewise refutes fixed-anchor recursion on the two-sheet face: its
+> symmetric packet improves the uniform metric floor, but an exact anchor and
+> all local refinements can be trapped while another deep component escapes.
+> Global deep-component choice is therefore part of the preserved object.
 
 ## codex-2026-07-14-S2 continuation -- four-far cone, preservation contracts, and transverse closure
 
@@ -25,14 +30,14 @@ and proved an exact scale-free family:
 V_N={1,...,9,15,110,N,1092N},       N>110 prime.
 ```
 
-THM-783 proves that these rows are primitive, covering, exactly four-far, and
+THM-792 proves that these rows are primitive, covering, exactly four-far, and
 have no seven-speed divisor packet, while their top-peeled positive-length
 component counts are unbounded. Exact canaries are `66,104,174,310` (full
 topological counts `68,108,176,312`). Every member nevertheless fires the
 capped peel: 176 exact finite primes plus an elementary tail. This refutes raw
 fragmentation control by maximal divisor scale without threatening LRC14.
 
-THM-784 proves the reusable transition
+THM-793 proves the reusable transition
 
 ```text
 mu_N >= 6mu/7-2r_top/(7N),       r_top,N <= N+r_top,
@@ -59,7 +64,7 @@ identical component-length multisets, but insertion of `59` changes their safe
 masses by `1/826`. Phase placement relative to the pending tooth grid is
 irreducible.
 
-After merging live THM-778/780/781/782/779/785, the preservation synthesis
+After merging live THM-778 through THM-791, the preservation synthesis
 changed materially. Safe-mass collapse is impossible by THM-780; exact event
 reconstruction is solved by THM-778; and the metagraph inverse is the
 set-valued `union HP(T)/Aut(T)` fibre of THM-781. The remaining object is a
@@ -74,9 +79,112 @@ escape from the folded diamond, and non-synchronization of the centered wall
 word with the collision-hop transducer.
 
 The main reflection, both frontier maps, HYP-6815/6830/6840, the assembly
-draft, indexes, and mistake ledger were reconciled to this state. The incoming
-duplicate theorem ID was repaired by moving the exit package to THM-785, and
-the unproved universal `K0=5` consequence was withdrawn.
+draft, indexes, and mistake ledger were reconciled to this state. The exit
+package settled at THM-783, the unproved universal `K0` consequence was
+withdrawn, and the transverse results moved to THM-792/793.
+## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
+
+Prompt (owner): launch the full j=4 run once the probe passes, pull often + reroute; AND trace the flow of transitivity through the merged metagraph, quantify symmetry/imbalance, build a distinct cross-n ordering.
+
+LRC THREAD (THM-741): the probe caught TWO design failures before the overnight commitment. (1) SEGFAULT root-caused: the P1/P2 v0-upper bound explodes when m3l is tiny (small v3) -> gigantic bad_pieces tuples -> Store-Python GC access violation; capped at 2000 with exact-E3 fallback. (2) The naive "sweep up to v0u" is 15x SLOWER than the original (sweeps 7k -> 5.4M on the smoke body): v0u >> v0 inflates every bottom. FIX: v0u is a SCREEN only -- nodes with candidates pay for the exact E3 and rebuild with the TRUE v0; sweeps via a sparse subtract (only the D_v4 arcs meeting G3). RESULT: smoke body 178.9s (was 278.6s original / 4123s naive), sweeps exactly 7294 again. FULL RUN LAUNCHED ~23:00: heavy-first (21 flood bodies first), cpu-2 workers, per-body JSONL in scratchpad (restart-resume), summary to 05-knowledge/results on completion. Both lessons recorded in the THM-741 file. Also mid-session: my naive per-level "lemma-skips" proved algebraically VACUOUS (skip thresholds always sit above the loop bounds) -- removed, documented.
+
+TOURNAMENT THREAD (THM-791 + HYP-6860; renumbered after the earlier THM-790/HYP-6855 claim): ran the strict-definition flow analysis blind (n=4..6 exhaustive, n=7 running); mid-run the pulls surfaced codex-S9's THM-785 (C3-flux: exact line flux DeltaC3 = d0-d(n-1)-1, closed blue binomial law, categorical interface law, oriented-quotient imbalance 2.23:1 at n=7, 8-coordinate flow address) and opus-S304's THM-787 (E4 axis) -- THREE agents on the owner's flow directive. My independent n<=6 censuses match codex EXACTLY ((3,5,2),(2,10,22) -- computed before reading them); the interface law + flux quantification are CEDED to 785/787 (first-pusher; my checkpoint 23:1x vs codex 18:47). NET-NEW kept (THM-791): the flow measured on H (Hamiltonian paths, NOT degree-derived -- 785/787 are C3/E4 only): (a) blue lines preserve H mod 4 at EVEN n (exhaustive n=4,6; FAILS at odd n, DeltaH=2 at n=5 -- the H-analogue of 785's DeltaE4 0/8 mod 16 dichotomy); (b) blue |DeltaH| near-flat vs black decaying; (c) s(t-bar) = C - s(t) exactly (C=(n-2,n-1,...,n-1,n)) and the two ends are ALWAYS majorization-comparable (zero incomparables n<=6) -- the flow moves along majorization CHAINS, blue 4:1 regular-directed at n=6; (d) pure_blue(n) = floor((n+1)/2) - [n even] (my kps-S66 conjecture) CONFIRMED through n=7 by codex's independent (4,84,184) atlas. Minimal-invariant ordering remark: (scoreseq, phase, H, canon-word) resolves 28/34 at n=6 with H doing +11 of the separating work -- the low-arbitrariness alternative to 785's address.
+
+FILES: THM-741 (updated, run launched), THM-791, HYP-6860; lrc14_thm741_2002_body_j4_tree_kps_S128c5.py (final), transitivity_flow_merged_metagraph_kps_S128c5.py (+.out, n=7 appending); checkpoints pushed through the codex-concurrent rebase. -> codex (your 785 is the definitive C3 frame; my n<=6 blind reproduction double-certifies your atlas; THM-791 adds the H axis your degree laws can't reach), opus (S304's parity/max conjectures were proved by 785 same-day; THM-791's mod-4 is the H-side sibling -- a proof would likely pair with your E4 argument), all (j=4 run: harvest = read 05-knowledge/results/lrc14_thm741_*.out when the DONE line appears; resume = rerun the script, it skips completed bodies).
+
+NEXT: (i) harvest THM-741 (morning); (ii) n=7 H-laws data -> THM-791 evidence log; (iii) proof targets: blue H mod 4 via the grid-sym anti-automorphism; majorization comparability via near-constancy of C; (iv) j=5 rung feasibility after 741.
+
+---
+## opus-2026-07-14-S304 -- THM-786 (the EXTENT-FORM exit theorem: K0-in-walls refuted, MISTAKE-147; extent bound 1/w_g + 2/w_f; r=8 pierce finished) + THM-787 (the TRANSITIVITY FLOW on the metagraph: single blue pipe out of the transitive; blue parity law; the black-sea imbalance quantified, n=3..7 exact)
+
+Prompt (owner): prove the geometric co-landing bound, finish the exit lemma; AND trace the flow
+of transitivity on the metagraph (transitive -> distributed axis, blue/black lines, pure blue ->
+mixed -> pure black), quantifying left-right symmetry (blue) and imbalance (black).
+
+PART A (THM-786): first move was adversarial self-referee: EXTREME-RATIO tuples break my S303
+K0 = 6 -- exact 41-wall certificate {10,12,17,18,22,32,39,2445} (slow-rainbow + free same-owner
+steps; runs scale like w_f/w_g). MISTAKE-147 logged (SIXTH box-genus instance, new dimension:
+uniform sampling boxes RATIOS; standing seed rule now includes extreme-ratio tuples; count what
+COSTS, not what happens). The true invariant is EXTENT: both certificates sit UNDER
+1/w_g + 2/w_f. PROVED: the extent theorem on the no-co-landing class; the serving/de-phase
+bound (fixed companion serves <= w_g w_c/(w_f Delta) + 1 consecutive g-walls, monotone drift);
+the balanced-swap law (visitor-set changes need zero inverse-sum; single changes break);
+the sparse-regime bound. VERIFIED: adversarial extent census with DESIGNED exploits (balanced
+pairs 2wg+d=0 mod 7; near-multiples wf=N*wg+eps): peak ratio 0.589 of the bound -- the
+co-landing loophole never reaches 60 percent. THE r=8 PIERCE FINISHED IN EXTENT FORM: every
+closed core-safe component of length >= 1/w_g + 2/w_f contains a witness moment (proved on the
+stated classes; <= 0.59 everywhere tested); shorter components = finite integer-walk checks.
+THM-779/783 carry correction banners (my exit-lemma package was concurrently renumbered
+782->783 by the fleet; references fixed).
+
+PART B (THM-787): exact study n=3..7, classification CERTIFIED by A000568 counts (invariant =
+2-round profiles + arc-types + H; buckets are unions of classes, so bucket-count = A000568
+proves exactness) + fiber*Aut = H. Axis x = Sum(2s-(n-1))^2 (reversal-invariant => merged-
+well-defined; all levels step-8). PROVED: (1) blue lines NEVER touch pure black (both
+endpoints carry grid-sym tilings); (2) the transitive node has EXACTLY ONE line, it is BLUE,
+drop exactly 8(n-2), landing on a MIXED class (20->4, 40->16, 70->38, 112->72) -- the strict
+ordering drains through a single blue pipe. VERIFIED-EXACT + CONJECTURED: the blue PARITY LAW
+-- odd n: |Dx| = 8 mod 16 (blue NEVER level); even n: |Dx| = 0 mod 16 (level allowed); max
+|Dx| = 8(n-2) always; blue spectra have <= 3 values in a step-16 AP (n=7: {8:160, 24:80,
+40:16}). THE BLACK IMBALANCE QUANTIFIED: black endpoint-type flow at n=7: mixed-mixed 876,
+mixed-pureblack 5044, pureblack-pureblack 10208 (the sea); level-black stable ~22 percent
+(blue 0 percent at odd n); pure blue lives at the TOP of the axis, mixed concentrates LOW,
+pure black dominates the MIDDLE (n=7 peak x=32: 74 classes); the downhill flux INTENSIFIES
+toward the distributed end ((32->24): 1504 vs (104->72): 2 -- three orders of magnitude).
+Deviation logged: at n=5 the x=0 (circulant) end is PURE BLUE; at n=7 it is MIXED. Blue line
+counts 1,2,8,32,256 = 2^{ceil(m/2)-1} consistent with the grid-sym fraction law. Next checks
+named: n=8 (parity predicts 0 mod 16, max 48); the parity-law proof route (antisymmetric
+score-shift under the v <-> n+1-v pairing); the merged/spine-ribs-sea overlay.
+
+FILES: THM-786, THM-787, MISTAKE-147, correction banners (THM-779/783);
+04-computation/lrc14_extent_exit_theorem_opus_S304.py,
+04-computation/metagraph_transitivity_flow_opus_S304.py (+ .outs); HYP-6850 executed.
+
+---
+## codex-2026-07-14-S9 -- THM-785 cyclic-triangle flow and black quotient drift
+
+Organized every converse-merged tournament node through `n=7` on the exact
+cyclic-triangle spectrum.  The score identity
+`sum(d_i-(n-1)/2)^2=n(n^2-1)/12-2C3` proves that the unique transitive node and
+the regular/near-regular score nodes are the two ends.  For the explorer's
+fixed-path complement lines, the exact flux is
+`Delta C3=d0-dlast-1=2(d0-n/2)-epsilon`.
+
+Blue reflection forces `epsilon=0` and gives a closed binomial step law.  A
+second binomial formula gives all complement steps, and another gives the
+black absolute endpoint-defect distribution.  Exhaustive `n=3..7` audits have
+zero identity or distribution failures.  Line colour enforces the exact
+category topology `pure_blue --blue-- mixed --black-- pure_black`, but this is
+not the same as `C3` direction: at `n=7`, all six blue boundary supports point
+outward, while black boundary flow has 2,798 pure-black-to-mixed instances
+against 1,254 in the other direction (supports 1,075 versus 522).  The labelled
+ensemble remains centrally symmetric; the drift is created by iso-class
+projection and orientation.
+
+The new exact JSON orders nodes by a flow address beginning with `C3`, phase,
+and rooted blue/black position, then score/Landau shape, weighted line
+refinement, and HYP-6825's exact fallback.  The browser displays `C3`, phase,
+and flow rank beside the existing forward/inverse fibre address.  All balanced
+nodes through `n=7` are nondecreasing-`C3` reachable by a two-phase `B*K*`
+path; general reach is open.  MPA-30 proposes disintegrating the symmetric
+endpoint-bit measure over path/automorphism/line-orbit fibres to explain the
+black drift.  Concurrent THM-784 reinforces the information boundary: static
+nodes and raw event counts both miss owner-labelled metric refinement.
+Concurrent THM-787 independently recovered the same energy axis, unique blue
+pipe, finite blue spectra, and black line-pair concentration.  THM-785
+identifies its normalization as `E4=E4(transitive)-8C3`, promotes its
+conjectural blue parity/max law to all sizes, and distinguishes THM-787's
+unmerged class phases from the converse-merged node phases audited here.  The
+two exact line-instance censuses agree.
+HYP-6855 independently reserved the centered-score antisymmetry and half-
+tiling proof; its 2,048-line `n=8` prediction agrees with THM-785's stronger
+four-bin law `{0:640,2:960,4:384,6:64}` in `C3` units.  The concurrent KPS
+majorization ordering motivated retaining tiling-fibre mass before line-WL in
+the flow address.  Its preliminary directional majorization ratios use the
+first/numerically smaller mask on an unordered complement line, so they should
+not be compared to the invariant `C3`-oriented current until reoriented.
+
+---
 
 ## codex-2026-07-14-S8 -- THM-781 PROVED: merged-node fibres are Hamiltonian paths modulo automorphisms
 
@@ -156,7 +264,7 @@ reconstruction lemma is supplied.
 
 ---
 
-## opus-2026-07-14-S303 -- THM-785 (renumbered from colliding THM-782): THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
+## opus-2026-07-14-S303 -- THM-783 (renumbered from colliding 782): THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
 
 Prompt (owner): keep going; prove the unconditional exit lemma.
 
@@ -181,11 +289,11 @@ balance is algebraically unavoidable; the exit lemma's remaining content is GEOM
 consecutive balanced CO-LANDINGS (de-phase + cascade congruences n = 4 or 0 + handover
 triple-balance = the proved machinery). Sharp conjecture: every blocking run <= 6 walls.
 
-HYGIENE: this package was originally claimed as THM-782 concurrently with the
-two-sheet phase-cell theorem; the collision was repaired by renumbering this
-exit package THM-785.
+HYGIENE: THM-780/781 were taken at claim time, and codex-S9 had already pushed
+THM-782 before this package landed.  First-pusher ownership is preserved by
+renumbering the exit package to THM-783.
 
-FILES: 01-canon/theorems/THM-785-exit-lemma-package.md; 04-computation/
+FILES: 01-canon/theorems/THM-783-exit-lemma-package.md; 04-computation/
 lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.
 
 ---
