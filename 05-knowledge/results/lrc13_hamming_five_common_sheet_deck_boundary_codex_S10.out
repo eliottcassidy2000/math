@@ -1,0 +1,24 @@
+THM-823 exact replay
+threshold.guardrail=1/13 arbitrary_lift_strictness=OPEN full_H5_closure=NO
+attenuation.direct_D<=999=PASS error=|C_D-2/13|<1/D reciprocal=sum(1/D_i)>3/13 min_order<=21
+scalar.counterfamily.labels=(1,2,3,5,10) orders=(2,5,13q+1,2,13q+1) q>=3 small_mass=7/10 large_floor=4q/(13q+1)
+compact.rows=2410 by_inf=(2190,140,80,0,0,0) patterns=86 row_hash=c262405def920cf0
+compact.pattern=(2,2,5,inf,inf) rows=50 orbits=10 margin=1/130 first=(1:2,2:2,4:inf,9:inf,11:5)
+compact.pattern=(2,2,8,9,inf) rows=60 orbits=12 margin=1/936 first=(1:2,2:2,4:8,9:9,11:inf)
+compact.pattern=(2,2,10,inf,inf) rows=30 orbits=6 margin=1/130 first=(1:10,2:2,4:inf,6:2,9:inf)
+compact.pattern=(2,3,3,10,inf) rows=20 orbits=4 margin=4/195 first=(1:10,4:3,6:2,7:3,12:inf)
+compact.pattern=(2,3,3,11,inf) rows=20 orbits=4 margin=1/429 first=(1:11,4:3,6:2,7:3,12:inf)
+compact.pattern=(3,3,3,5,inf) rows=20 orbits=4 margin=4/195 first=(1:3,2:5,5:3,8:3,12:inf)
+compact.pattern=(3,3,3,10,inf) rows=10 orbits=2 margin=4/195 first=(1:10,4:3,6:3,7:inf,9:3)
+compact.pattern=(3,3,3,11,inf) rows=10 orbits=2 margin=1/429 first=(1:11,4:3,6:3,7:inf,9:3)
+compact.robustness=replace_inf_by_Dj_if_sum(1/Dj)<=pattern_margin
+finite.no_D1.orders<=12.scalar_rows=2190 scalar_patterns=78 sheet_rows=5 sheet_patterns=1 unit_words=40 sheet_hash=9c0c8eb4ef366685
+finite.sheet_structure=C_union_{b}, C=a{1,5,8,12}, b_in_2C, quartet_opposites_equal, b_parity_free
+least_CRT.packets=40 min_M=2/17 min_count=4 histogram=1/5:4,1/7:4,1/8:6,2/17:4,3/20:2,5/31:4,6/37:2,6/41:1,6/43:8,9/46:4,11/64:1 metric_hash=85bf05b036df0421
+scalar_liar.D40.sheet_choices=1024 covers=0 best_min=29/40 best_count=96
+D1.classification=all_D1_or_one_D1_plus_D3_coset common_sheet=quartet_pair_rule
+clock.mod39.quartic_rows=12 D3_flag_tests=96 safe_points_each=6 mixed_D1_tests=96 conclusion=M>=1/13_only
+tournament.coset.observable=A(Ci,Cj)=#D3_quartet_hits matrix=((3,2,0),(0,3,2),(2,0,3)) scores=(1,1,1) triangles=1 scc=(3) H=3
+tournament.runner.scores=(4,1,3,2,0) ties=8 triangles=0 scc=(1,1,1,1,1) H=1
+carrier.audit=coset_cycle_preserves_D3_scalar_flags_but_loses_unit_parity_sheet_overlap_and_metric_lifts
+scope.no_claim=unbounded_common_sheet_classification,arbitrary_lift_strictness,full_H5_closure
