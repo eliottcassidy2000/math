@@ -1,0 +1,71 @@
+==============================================================================
+(1) shared frame: columns k<=2 and entries m<=2 coincide
+   agree on first 3 columns + first 2 entries of every column: True
+
+(2) ROW SUMS
+   Pascal rows = 2^r AND polygonal rows = 1 + C(r+1,2) + C(r+1,4) = A000127(r+1): True
+   polygonal row sums r=0..9: [1, 2, 4, 8, 16, 31, 57, 99, 163, 256]
+   double hockey stick sum_j (r-j)C(j,2) = C(r+1,4): True
+
+(3) DIAGONAL (skipped-row) SUMS
+   Pascal shallow diagonals = Fibonacci: True
+   G(n), n=0..24: [1, 1, 2, 3, 5, 8, 13, 21, 33, 51, 76, 111, 157, 218, 295, 393, 513, 661, 838, 1051, 1301, 1596, 1937, 2333, 2785]
+   matches owner's 14 terms: True
+   GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) reproduces G: True
+   denominator coeffs (recurrence): [1, -3, 1, 5, -5, -1, 3, -1]  -> G(n) = 3G(n-1)-G(n-2)-5G(n-3)+5G(n-4)+G(n-5)-3G(n-6)+G(n-7)
+   order-7 recurrence verified: True
+   closed form G(n) = p(n) + (-1)^n q(n) with
+     p(n) = (53/64) n^0 + (1/32) n^1 + (1/3) n^2 + (-1/16) n^3 + (1/96) n^4
+     q(n) = (11/64) + (-1/32) n
+   exact on all 40 terms: True    leading coeff: 1/96 (predicted 1/96)
+   Fibonacci defect F(n+1)-G(n), n=0..14: [0, 1, 1, 2, 3, 5, 8, 13, 22, 38, 68, 122, 220, 392, 692]
+
+(4) THE DIFFERENCE TRIANGLE  Delta(m,k) = Simplex - Polygonal
+   Vandermonde tail  Delta(m,k) = sum_{j>=2} C(m,j+1) C(k-1,j): True
+   first diagonal  (m=3): [1, 3, 6, 10, 15, 21, 28] = C(k-1,2) = triangulars True
+     [owner's '35-21=15' corrected: the polyhedral entry over octagonal 21 is C(9,2)=36; 36-21=15]
+   second diagonal (m=4): [4, 13, 28, 50, 80, 119, 168, 228, 300] = 4C(k-1,2) + C(k-1,3) = (k-1)(k-2)(k+9)/6: True
+   third diagonal  (m=5): [10, 35, 81, 155, 265, 420, 630, 906] = 10C(k-1,2)+5C(k-1,3)+C(k-1,4): True
+   coefficient rows = Pascal row m minus its first three entries:
+     m=3: [1]
+     m=4: [4, 1]
+     m=5: [10, 5, 1]
+     m=6: [20, 15, 6, 1]
+     m=7: [35, 35, 21, 7, 1]
+     m=8: [56, 70, 56, 28, 8, 1]
+   down-column k=3 (squares): [0, 0, 1, 4, 10, 20, 35, 56] = C(m,3) tetrahedrals: True
+
+(5) THREE INTERPRETATIONS of the polygonal entry
+   Q(r,k) = support-<=2 multisets = <=2-run subsets = 1-skeleton Ehrhart: True
+   exact-run law  #(k-subsets of [r], s runs) = C(m,s) C(k-1,s-1): True
+
+(6) THE RUN-TRUNCATION TOWER T_j
+   j=1: row sums = sum_i<= j C(r+1,2i): True;  diagonal sums G_1(n) n=0..15: [1, 1, 2, 3, 5, 7, 10, 13, 17, 21, 26, 31, 37, 43, 50, 57]
+   j=2: row sums = sum_i<= j C(r+1,2i): True;  diagonal sums G_2(n) n=0..15: [1, 1, 2, 3, 5, 8, 13, 21, 33, 51, 76, 111, 157, 218, 295, 393]
+   j=3: row sums = sum_i<= j C(r+1,2i): True;  diagonal sums G_3(n) n=0..15: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 143, 228, 358, 554, 841]
+   j=4: row sums = sum_i<= j C(r+1,2i): True;  diagonal sums G_4(n) n=0..15: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 609, 981]
+   G_1(n) = 1 + floor(n^2/4)  (quarter-squares + 1): True
+   j -> infinity recovers Pascal (rows -> 2^r, diagonals -> Fibonacci): True
+
+(7) MASTER FORMULA N(s,d,m) = (s-2) C(m+d-2,d) + C(m+d-2,d-1)
+   simplex slice (s=3), polygonal slice (d=2), coning recurrence (d-axis),
+   triangle-gluing increment (s-axis, +T_{m-1}): True
+   classic checks: square pyramidal N(4,3,m): [1, 5, 14, 30, 55, 91]   n^2 = T_{n-1}+T_n: True
+
+(8) NO-HOLES COMPLETENESS (Brown criterion) of the four sum-sequences
+   2^r (Pascal rows): complete=True  [TIGHT: a_k = 1 + sum -- the binary numeration]
+   Moser A000127 (polygonal rows): complete=True
+   Fibonacci (Pascal diagonals): complete=True
+   G (polygonal diagonals): complete=True
+   columns FAIL Brown: squares (4 > 1+1): True ; triangulars (3 > 1+1): True  -> Fermat polygonal theorem territory (repetition k times)
+   Gauss 3-triangular covers 1..500: True ;  Lagrange 4-square covers 1..500: True
+
+(9) the integer locker (classic, for the record)
+   tau(n) odd <=> n square (n <= 10^4): True ;  gaps of open lockers = odd numbers: True
+
+OEIS SEARCH STRINGS:
+   G: 1,1,2,3,5,8,13,21,33,51,76,111,157,218,295,393,513,661
+   second-diagonal differences: 4,13,28,50,80,119,168,228,300,385
+   third-diagonal differences: 10,35,81,155,265,420,630,906,1260,1705
+
+ALL DONE

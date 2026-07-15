@@ -4524,3 +4524,17 @@ crossing invariant X(S,t) (straight chords see only C(n,4)); sweep t -> a crossi
 breakpoints; test whether the tight locus {AP,GW} is crossing-extremal at witness times. (b) the tensor
 code's K_{|A|,|B|} links: Zarankiewicz counts pairs of squares interleaving on the cylinder -- a
 geometric-complexity reading of local views. Status: TANGENT, unexplored; no claims.
+
+## T-figurate-two-axes (mac-mini-2026-07-15-S109, owner prompt): the polygonal/polyhedral filtration and its four new sequences
+The polygonal and polyhedral (Pascal) triangles are the two orthogonal lifts of the triangular numbers
+(shape axis = affine triangle-gluing; dimension axis = integral coning) inside the master array
+N(s,d,m) = (s-2)C(m+d-2,d) + C(m+d-2,d-1). Polygonal = the support-<=2 / <=2-runs / 1-skeleton-Ehrhart
+truncation of Pascal; the difference triangle = the Vandermonde tail sum_{j>=2} C(m,j+1)C(k-1,j) whose
+coefficient scheme is PASCAL WITH ITS FIRST THREE COLUMNS DELETED. Row sums: Moser A000127; diagonal
+sums: G(n) = 1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (NOT in OEIS; GF, order-7 recurrence, exact
+quasi-polynomial in the draft). Run-truncation tower T_j interpolates lazy-caterer -> Moser -> 2^r and
+quarter-squares+1 (A033638) -> G -> Fibonacci with the proved first-miss law (rows r = 2j+1, diagonals
+n = 3j+2, deficit exactly 1 -- Moser's missing 32nd region = the unique minimal 3-run cell). Second
+difference diagonal = A060488 (4-block ordered tricoverings) -- bijection wanted. Full note:
+03-artifacts/drafts/figurate-two-axes-macmini-S109.md. Status: verified + partially canonizable;
+OEIS submissions pending.

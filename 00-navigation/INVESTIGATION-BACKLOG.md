@@ -9718,3 +9718,23 @@ on `Phi`, not as a standalone scalar proof.
 - **Status:** NEW INSTRUMENT. The nearest-runner process: ∫v_leader = 2Σ(handoff depths); H⁺ even; chains of mass x_in+x_out ≤ 2M; M = deepest handoff. Deep well = the k/183 staircase cut at ⌊183/13⌋ = 14 (stopping time). LEM-025 (M ≥ v·⌊q/(B+v)⌋/q, q = min+max) is TIGHT at AP, all Ostrowski rungs, deep well, compressed 2{1..12}∪{13}.
 - **Next steps:** (1) does climb-tightness extend to opus-S254's s≥2 single-killer stratum? — their reduction constant (182+s)/2379 lives on the (s, 182)-ruler q = 182+s; probe s = 3, 5 (coprime scales). (2) The climb-cut inverse (covering cannot cut every ruler below 14/183) = klein-S270's lander-exclusion count with a process attached. (3) Lean: THM-722(B) is a finite-breakpoint telescope — kernel-friendly shape.
 - **Refuted en route:** covering ⟹ max-chain-mass ≥ 28/183 (deep well violates; one-sided staircase top, not equioscillation). Do not re-derive: average-depth bound is 1.87× short at the deep well.
+
+## Lead mac-mini-2026-07-15-S109: figurate two-axes follow-ups (owner session)
+**Source:** owner directive 2026-07-15; draft 03-artifacts/drafts/figurate-two-axes-macmini-S109.md;
+script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified, leads open.
+1. OEIS submissions: G(n) = 1,1,2,3,5,8,13,21,33,51,76,111,157,218,295,393,513,661 (diagonal sums of
+   the polygonal triangle; GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2)); G_3 (1,1,2,3,5,8,13,21,34,55,89,
+   143,228,358,554,841); difference diagonal m=5 (10,35,81,155,265,420,...). NEXT: draft b-files + text.
+2. A060488 mystery: our second difference diagonal (k-1)(k-2)(k+9)/6 = "4-block ordered tricoverings of
+   an unlabeled n-set" EXACTLY. NEXT: find the bijection tricoverings <-> support-{3,4} multisets
+   (= 4C(k-1,2) + C(k-1,3) decomposition); would be new content for the OEIS entry.
+3. Geometric incidence model for G(n) (the Moser-analog): what planar/circle process counts the
+   diagonal truncation? (Tiling model exists: strip tilings with dominoes in <= 2 runs.)
+4. Deficit GF: the G_j-vs-Fibonacci deficit sequence per j (first term 1 at n = 3j+2); compute its GF
+   from the Delta-tail diagonal sums; likewise rows vs 2^r (Moser deficit = sum_{i>j} C(r+1,2i)).
+5. ENGINEERING (mandate): figurate_growth.py library candidate -- N(s,d,m), T_j entries, row/diagonal
+   growth functions (= VC growth of <= j interval unions, consecutive-k-out-of-n reliability counts),
+   Brown completeness checker. Small, clean, PyPI-adjacent.
+6. Locker tournament aftermath (THM-865): is there ANY invariant family where digit 1 of H is lawful?
+   (D_n refutes the divisor-pairing route; the exit-cell pair-matching at composite m <= 18 remains
+   unexplained data -- prove or kill the pair-matching for m in {8,9,12,14,16,18} as a finite curiosity.)

@@ -9,10 +9,26 @@ related:
   - opus-S316 probe (i) (the mod-8 congruence, two-line parity proofs; exact census n ≤ 8 — both recovered here)
   - THM-790 (the mod-16 selection rule lives on the FLIP layer, not the level lattice)
   - THM-801/855 (the axis as the metagraph's principal coordinate)
+  - kind-pasteur cont.21 (I) [filed as THM-854, number collides with opus-S312's THM-854 — kps to renumber] and opus THM-867 — the other two proofs, see banner
 script: 04-computation/axis_level_completeness_thm866_macmini_S109.py -> 05-knowledge/results/axis_level_completeness_thm866_macmini_S109.out
 ---
 
 # THM-866 — axis level no-holes completeness
+
+> **THE TRIPLE CONVERGENCE (2026-07-15, merge point).** Three agents proved this theorem
+> independently on the same day, from the same owner directive, at three different levels
+> of the same walk:
+> - **kind-pasteur cont.21 (I)** (first push): the c₃-shadow — equal-degree pair exists
+>   iff non-transitive, THM-833 gives Δc₃ = −1 per tie-split, and x is affine in c₃, so
+>   the descent realizes every c₃ level (filed under THM-854, renumber pending).
+> - **this file (mac-mini S109)**: the tournament-level walk — the flip happens inside an
+>   actual tournament, so Landau-realizability is automatic; floors by explicit
+>   circulants; census verified n ≤ 14; the k(T) distance corollary below.
+> - **opus THM-867** (written during a network outage; renumbered from 865): the
+>   score-sequence-level walk — the LEFTMOST tie-split is always Landau-legal (tight
+>   prefix ⟹ contradiction at i+1), ties at 0/n−1 impossible; walk == census referee 7/7.
+> Per opus's proposal, THM-866 carries the statement; THM-867 carries the leftmost-tie
+> determinization; kps's file carries the c₃-descent form. Triple-certified.
 
 **Theorem.** Let x(T) = Σ_v d_v², d_v = 2s_v − (n−1) (centered doubled scores). Then
 
