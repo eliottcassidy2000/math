@@ -101,7 +101,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase-cell / erosion packet | PROVED anchored return packet; symmetrization gives safe measure at least `2*72^(-10)` and a component of length at least `72^(-10)/(5 max(U))`; Bohr erosion and a pointwise odd-exception thickness tax hold.  An exact core traps every natural local refinement at `t=4/17` but escapes at `14/19`, so global deep-component selection—not fixed-anchor refinement—is the residual. | THM-782/789 + exact trapping certificate |
+| ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`.  An exact core traps every local refinement at `4/17` but escapes at `14/19`; moreover two odd pairs have the same raw signed component tournament and scalar eroded measure but different component erosion incidence.  Global selection must retain signed tooth/slope address. | THM-782/789 + exact trap/erosion-liar certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative and a quadratic energy cocycle. FINITE-EXACT: all 101,850 initial height-24 covers tear by `3/8` (38 groups), and all divisor-complete covers by `4/11` (36 groups). Uniform arithmetic-language exclusion remains open. | THM-792 + exact root-current/prefix certificate |
 | n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
@@ -146,7 +146,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    THM-776 excludes the full height-100 packet. THM-789 shows that neither scalar measure nor
    arbitrary fixed-anchor refinement can prove noncontainment: one admissible
    deep anchor traps the full Bohr return set even though another deep time
-   escapes. Prove the global erosion failure
+   escapes.  Its global gap/Kneser budgets tax every tight component layout,
+   but an exact two-pair liar shows that raw component order, raw escape signs,
+   and total eroded measure still lose the signed tooth slope. Prove the global erosion failure
    `E_U not subset H_(x,y) minus R_U`, using component/owner incidence to select
    the right deep component; alternatively prove a uniform bad-atom transversal
    lower bound or quantitatively land the terminal dyadic base in a certified
@@ -221,12 +223,17 @@ of transversal number 12, too large for the ten-speed quotient core.  The
 uniform metric substrate is no longer missing: THM-789 strengthens THM-782 to
 a symmetric simultaneous-return packet of measure `2*72^(-10)` and a component
 of length at least `72^(-10)/(5 max(U))`, and derives the pointwise thickness
-tax and Bohr erosion forced by tightness. The exact row
+tax and Bohr erosion forced by tightness.  Globally it proves
+`mu(E)+sum min(g_i,4/(143B))<=mu(H)` and
+`mu(E)+mu(R)<=mu(H)`, with
+`mu(R)>=max(4/(143B),2*72^(-10))`. The exact row
 `U={1,2,3,5,7,8,9,10,11,12}`, `(x,y)=(13,9)` goes further: its entire return
 set `(-1/858,1/858)` is trapped at `t_0=4/17`, while `14/19` is deep and
 escapes. Thus even symmetric local incidence at an arbitrary anchor cannot
-finish the job. The uniform residual is now a global deep-component
-selection/noncontainment theorem (or
+finish the job.  On the same core, `(13,9)` and `(17,13)` have identical raw
+signed component-tournament fingerprints and identical scalar eroded-diamond
+measure, but different return-thickened component incidence. The uniform
+residual is now a signed-tooth global deep-component selection/noncontainment theorem (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.
@@ -263,11 +270,13 @@ not a quotient: two certified height-24 cores have the same indexed degree
 vector and `8K=80` yet first tear at different events and sheets.
 
 THM-789 changes the folded residual in a complementary direction.  Symmetric
-return packets improve the safe-measure and component-width floors, while its
-exact `U_0` example proves that the full local Bohr return set and every
-literal phase refinement can remain trapped at one deep time even though a
-different deep time escapes.  The next folded theorem must compare or select
-global deep components; further refinement of a fixed anchor is insufficient.
+return packets improve the safe-measure and component-width floors, and exact
+gap/Kneser erosion budgets constrain the whole component layout.  Its `U_0`
+example proves that the full local Bohr return set can remain trapped at one
+deep time even though another escapes.  Its component-tournament liar then
+proves that raw margin order/sign and total eroded measure still do not encode
+which component escapes: the next folded theorem must transport signed affine
+tooth addresses or eroded margins while selecting globally.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

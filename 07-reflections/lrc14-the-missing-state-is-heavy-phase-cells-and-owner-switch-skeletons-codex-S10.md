@@ -235,7 +235,17 @@ THM-789 sharpens both the positive statement and the missing quantifier.  The
 symmetric difference packet `A-A` doubles the safe-measure floor to
 `2*72^(-10)` and improves the component-width floor to
 `72^(-10)/(5 max(U))`.  Bohr erosion also turns depth into a pointwise tax on
-each odd exception.  Yet the exact core
+each odd exception.  At the global level, if `g_i` are the cyclic gaps of the
+deep set and `delta=2/(143 max(U))`, hypothetical tightness forces
+
+```text
+mu(E)+sum_i min(g_i,2delta) <= mu(H),
+mu(E)+mu(R) <= mu(H),
+mu(R) >= max(2delta,2*72^(-10)).
+```
+
+This is a real component-layout tax, but it does not yet choose the escaping
+component.  The exact core
 
 ```text
 U_0={1,2,3,5,7,8,9,10,11,12},   t_0=4/17,   (x,y)=(13,9)
@@ -246,9 +256,20 @@ interval, and every literal refinement by the odd/folded coordinates inside
 the diamond at `t_0`; the same core escapes globally at `14/19`.  Refining one
 good anchor can therefore be monotone trapping.  The live theorem is not
 “make the local packet finer,” but **select a deep component whose eroded
-packet is not contained**.  A component-margin tournament is transitive, yet
-it is useful because its vertices preserve the global alternatives that the
-fixed-anchor quotient erased.
+packet is not contained**.
+
+Even that selector has a controlled-forgetting boundary.  On the same core,
+the odd pairs `(13,9)` and `(17,13)` have identical raw margin order, identical
+raw escape signs, identical transitive tournament fingerprints, identical
+diamond measure `8/169`, and identical total eroded measure `212/5577`.
+Nevertheless the return-thickened middle components escape only for `(13,9)`.
+At `4/17`, the pairs `(13,9)` and `(43,13)` even share the unsigned odd-error
+multiset, folded margin, parity opposition, and sharp determinant while their
+signed local slopes make the same return interval behave differently.  The
+component tournament is useful because its vertices preserve global
+alternatives, but the faithful vertex must carry the signed affine tooth
+address and eroded margin.  Order, signs, and scalar erosion are still only
+telemetry.
 
 ### 1.6 Endpoint schedules are centered mechanical words
 

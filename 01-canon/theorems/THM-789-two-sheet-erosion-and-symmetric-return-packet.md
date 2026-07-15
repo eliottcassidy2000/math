@@ -1,7 +1,7 @@
 ---
 id: THM-789
-title: Two-sheet erosion, pointwise thickness tax, and the symmetric return-packet upgrade; exact local-trapping obstruction
-status: PROVED (elementary metric erosion + Kneser/Macbeath; exact obstruction independently refereed and replayed)
+title: Two-sheet erosion, global gap/Kneser budgets, and the symmetric return-packet upgrade; exact local and component-tournament obstructions
+status: PROVED (pointwise and global metric erosion + Kneser/Macbeath) + VERIFIED (exact local trap, component-erosion tournament liar, and signed-slope liar)
 source: codex-2026-07-14-S10 phase-noncontainment analysis
 depends_on:
   - THM-774   # folded-diamond equivalence
@@ -9,8 +9,11 @@ depends_on:
   - THM-782   # one-sided return packet, strengthened here
   - LRC(<=13)
 related: [THM-772, THM-775, THM-776, HYP-6820]
-verification: 04-computation/lrc14_two_sheet_erosion_trap_codex_S10.py
-  (+ 05-knowledge/results/lrc14_two_sheet_erosion_trap_codex_S10.out)
+verification:
+  - 04-computation/lrc14_two_sheet_erosion_trap_codex_S10.py
+  - 05-knowledge/results/lrc14_two_sheet_erosion_trap_codex_S10.out
+  - 04-computation/lrc14_two_sheet_erosion_budget_liar_codex_S10.py
+  - 05-knowledge/results/lrc14_two_sheet_erosion_budget_liar_codex_S10.out
 ---
 
 # THM-789 — erosion and the symmetric return packet
@@ -86,6 +89,64 @@ times. Settled `LRC(<=13)`, applied to these ten speeds, makes `E_U` nonempty.
 If `M(U)>1/11`, continuity
 would make `E_U` contain an interval, impossible inside the finite w-grid;
 therefore `M(U)=1/11`. ∎
+
+### Theorem 1A — the global gap and return-mass budgets
+
+Put
+
+```text
+delta=gamma/B=2/(143B),       I_delta=(-delta,delta).
+```
+
+Let the cyclic complementary gaps between the connected components of
+`E_U` have lengths `g_1,...,g_r`, including the wraparound gap.  Hypothetical
+tightness forces
+
+```text
+mu(E_U)+sum_i min(g_i,2delta) <= mu(H_(x,y)) <= 8/117,   (4a)
+mu(E_U)+mu(R_U)                <= mu(H_(x,y)),            (4b)
+mu(R_U) >= max(2delta,2*72^(-10)).                        (4c)
+```
+
+In particular,
+
+```text
+mu(E_U) <= mu(H_(x,y))-max(4/(143B),2*72^(-10)).         (4d)
+```
+
+### Proof
+
+If `|d|<delta`, then for every `u in U`,
+
+```text
+||ud|| <= u|d| < B delta=gamma,
+```
+
+so `I_delta subset R_U`.  By (1)--(2), tightness gives
+
+```text
+E_U+I_delta subset E_U+R_U subset H_(x,y).
+```
+
+Thickening a finite union of closed circle intervals by a centered interval
+of radius `delta` removes exactly `min(g_i,2delta)` from each complementary
+gap.  Hence
+
+```text
+mu(E_U+I_delta)=mu(E_U)+sum_i min(g_i,2delta),
+```
+
+which proves (4a).  Macbeath's circle sumset inequality gives
+
+```text
+mu(E_U+R_U)>=min(1,mu(E_U)+mu(R_U)).
+```
+
+Since this sumset lies in `H_(x,y)` and `mu(H_(x,y))<1`, (4b) follows.  The
+interval inclusion gives `mu(R_U)>=2delta`.  The difference packet `D` in
+Theorem 2 satisfies `||ud||<1/72<2/143=gamma` for every `d in D`, hence
+`D subset R_U`; (5) below gives the second lower bound in (4c).  Finally use
+THM-774's sharp diamond cap `mu(H)<=8/117`. ∎
 
 ## 2. Symmetric return-packet upgrade
 
@@ -203,7 +264,79 @@ deep time cannot establish structured noncontainment. The sharpened residual is
 
 the proof must globally select a different deep time or component.
 
-## 4. Tournament and assumption challenge
+## 4. Exact obstruction: the raw component tournament loses erosion incidence
+
+The global budgets are stronger than a local return packet, but their scalar
+and raw-ranking shadows still do not decide (13).  For the same core `U_0`,
+the `1/11`-deep set has six components
+
+```text
+C1=[12/77,7/44]       C2=[23/99,21/88]
+C3=[23/88,32/121]     C4=[89/121,65/88]
+C5=[67/88,76/99]      C6=[37/44,65/77].
+```
+
+For an odd pair define the raw and eroded escape margins
+
+```text
+m(C)=sup_(t in C)(11/13-Q(t)),
+m_R(C)=sup_(t in C+R_(U_0))(11/13-Q(t)).                       (14)
+```
+
+Positive sign means that the component, respectively its full return
+thickening, escapes the folded diamond.  Exact evaluation for two odd pairs
+gives:
+
+| pair | raw margins on `C1,...,C6` | eroded margins on `C1,...,C6` |
+|---|---|---|
+| `(13,9)` | `(159/572,-7/1144,447/1573,447/1573,-7/1144,159/572)` | `(15/52,5/1144,2825/9438,2825/9438,5/1144,15/52)` |
+| `(17,13)` | `(197/1001,-59/1144,538/1573,538/1573,-59/1144,197/1001)` | `(1301/6006,-125/3432,3415/9438,3415/9438,-125/3432,1301/6006)` |
+
+Orient components toward larger raw margin and break ties by left endpoint.
+Both rows then have the identical transitive tournament order
+
+```text
+C2 < C5 < C1 < C6 < C3 < C4,
+```
+
+the identical raw sign decoration (only `C2,C5` are negative), score
+histogram `(0,1,2,3,4,5)`, no directed cycles, six singleton SCCs, and one
+Hamiltonian path.  Both folded diamonds have four components and
+
+```text
+mu(H)=8/169,        mu(H minus R_(U_0))=212/5577.               (15)
+```
+
+Nevertheless their erosion incidence differs.  The closed thickening of
+`C2` is
+
+```text
+[595/2574,823/3432].                                           (16)
+```
+
+For `(13,9)` the relevant diamond tooth is `[37/169,28/117]`, and (16)
+overshoots its right endpoint by `5/10296`; hence `m_R(C2)=5/1144>0`.
+For `(17,13)` the relevant tooth is `[50/221,41/169]`, and (16) lies inside
+with left/right slacks `215/43758` and `125/44616`; hence
+`m_R(C2)=-125/3432<0`.  Reflection gives the same discrepancy on `C5`.
+
+There is a pointwise version of the same loss.  At `t_0=4/17`, the pairs
+`(13,9)` and `(43,13)` have the same folded value `Q=15/17`, the same
+unsigned odd-error multiset `{1/17,2/17}`, opposite parity, and the same sharp
+determinant `-1`.  The first pair traps all of `t_0+R_(U_0)` by (11), whereas
+for `d=1/1000 in R_(U_0)`,
+
+```text
+Q_(43,13)(t_0+d)-11/13=-1503/221000.
+```
+
+Thus the signed affine tooth slope, not the unsigned errors or determinant,
+decides the return incidence.  The faithful component vertex must retain its
+tooth address, signed slope, and return-set incidence—or directly `m_R(C)`.
+Raw component order, raw signs, and the scalar eroded measure in (15) are
+provably insufficient.
+
+## 5. Tournament and assumption challenge
 
 Runner vertices, gap vertices, and fixed-time phase-cell vertices all lose the
 global choice exposed by (11). A more faithful candidate vertex set is the set
@@ -216,10 +349,14 @@ Hamiltonian path is the sorted component list. This tournament is transitive
 (score histogram `{0,...,r-1}`, no directed cycles, singleton SCCs, one
 Hamiltonian path); its value is not nontransitive structure but preservation of
 the **global alternatives**. In the exact example the escaping `14/19` choice
-beats the locally trapped `4/17` choice.
+beats the locally trapped `4/17` choice.  Section 4 now shows the exact limit
+of that proposal: even the raw sign-decorated component tournament and the
+total eroded-diamond measure can agree while componentwise erosion incidence
+differs.
 
-Even this quotient must retain component intervals, owner labels, and the
-pointwise margin; its bare isomorphism class destroys the LRC predicate. The
-challenged assumption is that refining one successful local phase anchor adds
-information. It is monotone trapping here. Recursion must branch across deep
-components, not only downward inside one phase cell.
+Even this quotient must retain component intervals, owner labels, signed
+folded-tooth addresses, and the eroded pointwise margin; its bare isomorphism
+class destroys the LRC predicate.  The challenged assumption is that refining
+one successful local phase anchor adds information.  It is monotone trapping
+here.  Recursion must branch across deep components, then transport the full
+return incidence on each branch, not only descend inside one phase cell.

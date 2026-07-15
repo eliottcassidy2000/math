@@ -13,12 +13,45 @@ Format per entry:
 
 ## MISTAKE-149 -- counting full active fastest periods still counts a diagonal sheet-translation gauge (THM-788, corrected by THM-794)
 
-> **Namespace claim stub.**  THM-794 gives an exact family with arbitrarily
-> many consecutive active fastest periods while `ceil(f/g)=2`.  Each period
-> carries all seven visitors and induces only a common token translation.
-> Therefore active-period count, like empty fast refinement before it, is not
-> a compactness coordinate.  The full formulas, impact audit, and replacement
-> invariant are being integrated with THM-794.
+- **What was proposed:** after THM-784 refuted raw wall count by inserting
+  empty fastest periods, THM-788 correctly proved wall/extent inequalities in
+  terms of the number `A` of nonempty fastest periods and proposed `A` as the
+  new scale-free cascade target.  THM-786 retained the sharper conjecture
+  `L<1/g+2/f` for every blocking run.
+- **Why it is wrong:** for every `H>=2`, THM-794 takes
+
+  ```text
+  w_j=49H+1-7j,              0<=j<=7.
+  ```
+
+  All owners are `1 mod 7`.  The interval from fastest wall `x_(6H)` to
+  `x_(7H-1)` contains `H-1` complete fastest periods, and every period has the
+  same ordered packet of all seven slower visitors.  Exact wall-index
+  progression plus THM-783 proves all `8H-7` walls covered.  Nevertheless
+  `ceil(f/g)=2` for every `H`, and for `H>=5` the subrun extent
+  `(H-1)/f` is greater than `1/g+2/f`.
+- **Correct framing:** nonempty incidence is not enough.  Across one full
+  packet every owner token changes by `-1`, so the return map is a diagonal
+  sheet translation and acts trivially on normalized coverage.  The next
+  candidate must contract both empty refinement and central/full-support
+  packet holonomy, for example by counting SCC transitions in the collision
+  transducer modulo diagonal deck translation while retaining metric lift
+  data for core incidence.
+- **Impact:** THM-788's inequalities remain proved and useful conditional
+  conversions; only its claim that `A` is the corrected compactness target is
+  withdrawn.  THM-786's no-companion, transversal, packet-polytope, and
+  ultra-sparse conditional theorems remain proved, but its universal extent
+  conjecture is refuted.  Frontier summaries must not describe either active-
+  packet boundedness or the universal extent inequality as open/plausible
+  without this correction.
+- **Tournament lesson:** packet occurrences and within-packet walls both form
+  transitive chronology tournaments.  The cut-free seven-sheet assignment is
+  the unchanged regular `R_7` (scores all 3, 14 directed triangles, one SCC,
+  175 Hamiltonian paths); only its marked cut rotates.  Bare tournaments lose
+  the return map, while raw chronology counts repeated gauge cycles as new
+  vertices.
+- **Source:** codex-2026-07-14-S10, THM-794 and exact Fraction replay
+  `lrc14_full_active_packet_holonomy_codex_S10.py`.
 
 ---
 
@@ -71,10 +104,13 @@ Format per entry:
   walls.  Exact S304 certificates are
   `{10,12,17,18,22,32,39,2445}` (41 walls) and
   `{8,10,18,24,32,34,39,3887}` (14 walls).
-- **Correct framing:** both certificate extents lie below `1/w_g+2/w_f`.
-  Extent, active periods, and metric core incidence survive fast refinement;
-  raw wall count does not.  The stored S304 script replays these two rows but
-  does not regenerate its reported `0.589` extent census.
+- **Correct framing:** both certificate extents lie below `1/w_g+2/w_f`, but
+  that observation was only local evidence: THM-794 later refutes the
+  universal inequality and makes active-period count unbounded too.  Metric
+  core incidence and normalized packet holonomy survive the two known free
+  refinements; raw wall count and raw active count do not.  The stored S304
+  script replays these two rows but does not regenerate its reported `0.589`
+  extent census.
 - **Lesson:** uniform sampling boxes ratios as surely as ranges box sizes.
   Adversarial seeds must include extreme-ratio tuples, and a bounded invariant
   must quotient any free same-owner refinement.
@@ -103,16 +139,18 @@ Format per entry:
   a blocking run requires a separately proved pairing/order hypothesis. The
   unconditional fixed-companion endpoint span also has factor two.  THM-786's
   residue-transversal and `g`-period packet-polytope bounds then close named
-  aggregate profiles without assuming locked indices; THM-788 contracts empty
-  f-refinement and counts active periods.  Their exact `(69,29)` marginal
-  no-go shows why the remaining proof must retain common Beatty order/carry.
+  aggregate profiles without assuming locked indices; THM-788 soundly counts
+  active periods after empty refinement, but THM-794 shows that full-support
+  diagonal holonomy makes that count unbounded.  The exact `(69,29)` marginal
+  no-go and THM-794 together show why the remaining proof must retain common
+  Beatty order/carry **and** quotient normalized packet return maps.
 - **Impact:** THM-783 §4 and THM-786 §3's serving/sparse conclusions are
   withdrawn. The anchored recurrence, period-sum, single-visitor law, and the
   conditional no-companion extent theorem stand. Subtracting two visitor-set
   balance identities also stands; the asserted simultaneous swap geometry and
   mandatory handover do not follow. THM-786's extent census remains finite
-  evidence, not proof of the universal conjecture, and the r=8 pierce is not
-  finished outside the explicitly proved no-companion class.
+  evidence; THM-794 now refutes the universal conjecture outright.  The r=8
+  pierce is not finished outside the explicitly proved conditional classes.
 - **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
   corrected THM-783/786 and THM-788.
 

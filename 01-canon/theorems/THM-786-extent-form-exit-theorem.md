@@ -1,12 +1,12 @@
 ---
 id: THM-786
 title: The corrected extent-form exit theorem — factor-two companion spans, residue transversals, and two-scale packet polytopes
-status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse/fractional balanced-cluster-transversal bounds; g-period packet-polytope separation) + EXACT NO-GO (the two marginal density relaxations do not couple) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, and sparse threshold sum<c<f are withdrawn) + CONJECTURE (the universal extent bound) + OPEN (Beatty-order coupling, active-period bound, and core incidence)
+status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse/fractional balanced-cluster-transversal bounds; g-period packet-polytope separation) + EXACT NO-GO (the two marginal density relaxations do not couple) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, sparse threshold sum<c<f, and active-period compactness interpretation are withdrawn) + REFUTED (the universal extent conjecture, by THM-794) + OPEN (Beatty-order/packet-holonomy coupling and core incidence)
 source: opus-2026-07-14-S304 package, exact-scope correction by codex-2026-07-14-S10
 depends_on:
   - THM-783   # the visitor laws this refines
   - THM-779   # the criterion; its census constant corrected here
-related: [THM-767, THM-771, THM-784, THM-788, HYP-6840, HYP-6845, HYP-6850, MISTAKE-147, MISTAKE-148]
+related: [THM-767, THM-771, THM-784, THM-788, THM-794, HYP-6840, HYP-6845, HYP-6850, MISTAKE-147, MISTAKE-148, MISTAKE-149]
 verification:
   - 04-computation/lrc14_extent_exit_theorem_opus_S304.py
   - 05-knowledge/results/lrc14_extent_exit_theorem_opus_S304.out
@@ -16,6 +16,8 @@ verification:
   - 05-knowledge/results/lrc14_r8_balanced_cluster_transversal_codex_S10.out
   - 04-computation/lrc14_r8_g_period_packet_polytope_codex_S10.py
   - 05-knowledge/results/lrc14_r8_g_period_packet_polytope_codex_S10.out
+  - 04-computation/lrc14_full_active_packet_holonomy_codex_S10.py
+  - 05-knowledge/results/lrc14_full_active_packet_holonomy_codex_S10.out
 ---
 
 # THM-786 — the extent-form exit theorem
@@ -24,9 +26,11 @@ verification:
 > §2 is sound. The original factor-one serving/de-phase bound, unsigned swap
 > rule, and `sum c<f` sparse completion are withdrawn; see MISTAKE-148.
 > Sections 3a--3d replace them with proved factor-two, signed-balance,
-> `sum c<g`, and residue-transversal statements. The census in §4 is finite unreproduced evidence only,
-> so §5 still does not finish the general r=8 pierce. THM-788 gives a
-> complementary sound reduction through the number of active fastest periods.
+> `sum c<g`, and residue-transversal statements. The census in §4 is finite
+> unreproduced evidence only, so §5 still does not finish the general r=8
+> pierce. THM-794 refutes the universal extent conjecture and proves that
+> THM-788's active-period count is unbounded even at fixed fastest ratio.  The
+> conditional results below are unaffected.
 
 ## (1) The wall-count constant was an artifact (REFUTED, exact certificate)
 
@@ -382,10 +386,14 @@ replays the two exact wall-count certificates and prints the sentence
 the table is evidence, not a verified certificate. In particular it cannot be
 used to validate the corrected laws in part (3).
 
-> **The universal extent conjecture (sharp):** every blocking run at the prime-7
-> lens with r = 8 has extent < 1/w_g + 2/w_f. (Proved on class (2b); the
-> reported `0.589` experimental margin is not independently replayable from
-> the stored artifact.)
+> **REFUTED universal extent conjecture.**  The proposed assertion that every
+> prime-seven, eight-owner blocking run has extent `<1/w_g+2/w_f` is false.
+> THM-794 takes `f=49H+1`, `g=49H-6`, and the six remaining owners spaced by
+> seven.  It proves a covered subrun of extent `(H-1)/f`, which exceeds the
+> proposed right side for every `H>=5`.  All seven slower owners visit every
+> fastest period, so the example lies outside class (2b) and does not affect
+> the proved conditional bound.  The reported `0.589` sample missed this
+> structured full-support holonomy family.
 
 ## (5) The r = 8 pierce in the proved no-companion class
 
@@ -406,9 +414,11 @@ bound shrinks proves that every core-safe component is pierced.
 
 ## (6) What remains (honest, sharp)
 
-THM-788 proves that bounding the number `A` of active fastest periods gives a
-ratio-sensitive extent and wall bound after empty fastest-owner blocks are
-contracted.  Part (3d) now removes every residue profile whose minimum
+THM-788 proves that **if** the number `A` of active fastest periods is bounded,
+then ratio-sensitive extent and wall bounds follow after empty fastest-owner
+blocks are contracted.  THM-794 proves that `A` itself is unbounded even at
+`ceil(f/g)=2`: a full seven-visitor packet can repeat by diagonal sheet
+translation.  Part (3d) removes every residue profile whose minimum
 speed-weight fractional transversal is below `g`, even when `sum C>=g`;
 part (3e) independently removes profiles separated by their complete
 `g`-period packet polytope.  The exact tuple in (3f) proves that high-
@@ -417,8 +427,10 @@ invariant is the common centered-Beatty order coupling the `f`-period cluster
 word to the `g`-period packet word, together with the factor-two spans (S),
 the signed law (B), and THM-779's token supportability equation.  This is both
 a Diophantine-combinatorial coupling question and a geometric core-incidence
-question; the universal extent conjecture remains open and is not finished by
-the stored census.
+question.  The old universal extent conjecture is refuted.  The sharper open
+target is to quotient diagonal packet holonomy and then prove that any long
+normalized collision-state persistence misses the relevant core-safe
+component.
 
 ## (7) Tournament/quotient audit
 
