@@ -1,3 +1,47 @@
+## opus-2026-07-14-S308+S309 -- THE CONCORDANCE DECISION (strong forms are small-n artifacts: n=7's 132 pairs REAL, n=8 spreads to distance 32; SURVIVING: level-mean/median monotonicity, now verified n<=8) + THE E_n DUAL SMITH DIAGRAM (exact n=4..7; reciprocity honest negative) + THM-810 THE WIGGLY DICTIONARY FORMULAS (degree law; STATIONARY LAW: H/|Aut| is the equilibrium measure; the per-flip UPSET law; unit-current cuts; F5 the margin identity Sum(s_w-s_l) = x/2 and the exact O-U drift E[Dx] = 8 - 4x/C(n,2))
+
+Prompts (owner): compute the E_n dual + prove the concordance law + validate above n=7
+minimally ('make sure we are not misguided'); then: prove the level-mean law, more
+node/edge/tiling statements, the A+B+C-D-E-F+G recursion thread, small formulas everywhere.
+
+S308 -- THE DECISION: the 132 n=7 float-discordant pairs are REAL (float64 LU + exact
+integer-residual refinement, 0 undecided): exact concordance FAILS at n=7 -- but every
+discordance sits at ADJACENT levels (gap exactly 8). The corrected candidate (coarse
+concordance) then FAILED the n=8 test: 65,921 discordant pairs (0.31 pct) reaching
+level-distance 32 ({8: 61954, 16: 3811, 24: 150, 32: 6}). VERDICT: the strong concordance
+forms are SMALL-n ARTIFACTS -- caught in one session by [decide the suspect pairs exactly +
+jump one n on the cheapest certified instrument], before any proof effort was spent. The
+owner's misguidedness directive paid in full. SURVIVING LAW: level-MEAN and level-MEDIAN
+monotonicity -- verified n=5,6,7 AND n=8 (the next-scale check PASSED with the pairwise
+overlap at 5.1 mean-gaps: the mean law lives exactly where the pointwise law died).
+E_n DUAL: exact n=4..7: R^E = 2/5, 5183/14960, ~0.109086, ~0.134011 (NON-monotone --
+odd/even parity of the maximal even graph); the dual side shows the SAME adjacent-overlap
+phenomenon (one pair at n=6); reciprocity probe R^G x R^E = 0.17 -> 0.009: honest negative
+(cut/cycle duality is algebraic Ihara/Bass, not electrical-planar); curiosity: R^E_6 ~
+R^G_6 to 3 digits. S307's headline corrected in place.
+
+S309 -- THM-810 (all one-line proofs, referee-verified): F1 weighted wiggly degree =
+m*fiber = m*H/|Aut|. F2 THE STATIONARY LAW: the metagraph walk's equilibrium measure is
+fiber/2^m = H/(|Aut| 2^m) -- Redei's count IS the long-run visit frequency (Redei parity:
+every class has positive equilibrium mass; the transitive's H=1 is the minimum). F3 THE
+UPSET LAW: flipping arc w->l gives Dx = 4(d_l - d_w) + 8: upset flips CLIMB toward the
+transitive (Dx >= 8), expected results with margin > 2 DESCEND toward the circulant,
+margin-2 flips are the LEVEL edges -- refines codex THM-801's high/gap/low Cech descent
+(the owner's A+B+C-D-E-F+G thread, which codex-S12 landed as an exact tiling descent with
+the ++-+--+ Legendre/QR_7 defect -- Paley again) with the exact per-edge current. F4 unit
+current through every axis cut (proved Kirchhoff skeleton of the flow). F5 THE MARGIN
+IDENTITY: Sum over arcs (s_winner - s_loser) = x/2 for EVERY tournament => the uniform
+arc-flip walk has EXACT O-U drift E[Dx] = 8 - 4x/C(n,2) with equilibrium x* = n(n-1) =
+the uniform-stationary mean (drift vanishes exactly at stationarity) -- sampled-exact to
+n=20; the named mechanism for the level-mean law, whose remaining gap is one potential-
+theory lemma (drift -> hitting-probability level averages).
+
+FILES: THM-810; concordance_decision_n7 / en_dual_smith_diagram / coarse_concordance_n8 /
+level_mean scripts + outs; S307 reflection corrected; reflection
+the-concordance-decision-and-the-en-dual-opus-S308.md; HYP-6870 executed; boxeph reply
+(THM-801 x THM-810 composition).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.10) -- THM-826 PROVED: THE FAREY PROFILE THEOREM -- the COMPLETE measure profile m({1..k};lambda) = sum over consecutive Farey pairs of max(0,(1-lambda(i+j))/(ij)); piecewise linear convex, breakpoints exactly 1/s (s=k+1..2k-1); THM-817 = the first segment; A=1 (Farey telescope), slope = HYP-2856's totient constant, area = Franel sum; the A..G corner-Venn recursions integrated (the ledger's Div-axis is inclusion-exclusion-FREE on interval cores)
 
 Prompt (owner): prove the full profile with Farey breakpoints; go further; integrate the A+B+C-D-E-F+G / A+B-C recursion threads; more node/edge/tiling statements; formula harvest.

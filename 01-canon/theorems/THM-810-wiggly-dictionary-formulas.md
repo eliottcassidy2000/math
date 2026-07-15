@@ -58,13 +58,32 @@ tournament reading, and vice versa).
 > discordances (S308), one full unit of transitivity crosses every level
 > boundary, at every n.
 
+## F5 — the margin identity and the exact drift law (PROVED; sampled-exact to n = 20)
+
+> **Σ over arcs of (s_winner − s_loser) = x/2** for every tournament — the
+> total score margin is half the axis. Hence the uniform arc-flip walk has the
+> EXACT Ornstein–Uhlenbeck drift
+> **E[Δx | one uniform arc flip] = 8 − 4x/C(n,2)**,
+> whose equilibrium x* = n(n−1) is exactly the stationary mean of x under
+> uniform tournaments (E[Σd²] = 4n·Var(Binomial(n−1,½)) = n(n−1)) — uniform is
+> arc-flip-stationary, and the drift vanishes precisely at its mean.
+> *Proof:* Σ_arcs s_w = Σ_v s_v² and Σ_arcs s_l = (n−1)Σs − Σs²; subtract and
+> use x = 4Σs² − n(n−1)². ∎ (The wiggly version carries a bounded base-path
+> correction p(t) = Σ_path(d_w − d_l): E[Δx] = 8 − 4(x − p(t))/m.)
+> Tournament reading: the mean-reversion of score variance under random arc
+> perturbation is EXACT and linear — the mechanism behind the axis's
+> mean-field behaviour (F4, the level-mean law below).
+
 ## The level-mean law (status per the S308/S309 verdicts)
 
 Exact concordance is FALSE (n=7: 132 real adjacent overlaps; n=8: spreading
-to distance 32 — S308's decision). Level-MEAN and level-MEDIAN monotonicity
-hold at n = 5, 6, 7; the n = 8 check: see
-05-knowledge/results/level_mean_n8_opus_S308.out (recorded in the session
-log). The provable content extracted so far is F4 (cuts) plus the max-
-principle endpoints; full mean-monotonicity, if the n=8 verdict sustains it,
-is the named conjecture — with the S308 lesson applied: no proof attempt
-until the next-scale check passes.
+to distance 32 — S308's decision). **Level-MEAN and level-MEDIAN monotonicity
+hold at n = 5, 6, 7 AND 8** (the n=8 next-scale check PASSED even as the
+pairwise overlap deepened to 5.1 mean-gaps) — the mean law survives where the
+pointwise law died. Proved content: F4 (unit current through every cut), F5
+(the exact mean-reverting drift — the mechanism), and the max-principle
+endpoints. **The level-mean monotonicity conjecture** (now n ≤ 8 verified,
+drift-mechanism named): the harmonic potential's level averages descend
+strictly along the axis at every n. The proof gap: converting the walk's
+exact drift into hitting-probability level-averages — a potential-theory
+lemma over the F5 drift, the sharpest named target this thread has produced.
