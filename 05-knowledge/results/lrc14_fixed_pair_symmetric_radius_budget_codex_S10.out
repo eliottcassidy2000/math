@@ -1,0 +1,50 @@
+THM-824 FIXED-RATIO SYMMETRIC RADIUS BUDGET
+arithmetic=integer+fractions.Fraction floating_point=none sampled_circle=none
+Q(t)=||9t||+||4t|| threshold=11/13
+target=[63/169,67/169]U[102/169,106/169]
+centres=(5/13,8/13) radius=2/169
+predicate=E+R_subset_target_iff_rho_C(E)+rho_0(R)<=2/169
+hypotheses=E_nonempty_compact R_compact_symmetric_contains_zero
+
+TARGET_RECONSTRUCTION
+affine_components=((63/169,67/169),(102/169,106/169))
+opposite_parity_bezout_intersections=((5,2,-1,(63/169,67/169)),(8,3,1,(102/169,106/169)))
+no_switch_rows=8 good_rows=2 bad_rows=6 bad_gap_values=(3/13,6/13)
+no_switch_comparison=min_bad_gap=3/13 > 4h=8/169
+
+SYNTHETIC_COMPACT_PACKET_AUDIT
+cases=12159 success=708 failure=11451 mismatches=0
+families=single_interval,double_interval,disconnected_symmetric_return_intervals
+includes_return_scales=central,near_3/13_switch,half_turn
+synthetic_sha256=fee549dedf12c2beef3b65037ecdda722f4ce8ace95fa21396b6e0ff608dd073
+
+THM821_CORE_BANK
+rows=214 random_rows=213 disconnected_rows=1
+random_bank_sha256=303009db5bf61e2b5584f0664e740039aefda134e8ba80cf34de30cd897fcc71
+combined_row_bank_sha256=4203d99379245539331c5c14a3b325f0e9d4bcb1c47a85071069955e1831cde6
+atoms=9974 success=492 failure=9482
+global_direct_success=0 global_direct_failure=214
+global_radius_success=0 global_radius_failure=214 direct_radius_mismatches=0
+closest_budget_row=index=5 U=(1,2,4,5,6,7,8,9,10,11) deep_components=4 return_cells=1 rho_E=54/715 rho_R=2/1573 margin=-6642/102245 verdict=0
+bank_certificate_sha256=f34e491a5599d3c6732a2c84b2a3ab6c1f364cdb0f800e4814371ecd0cbd1f6d
+
+COMMON_DILATE_COROLLARY
+pair=(13d,5d) target=m_d^(-1)(H)
+criterion=max_E||13dt||+13max_R||dr||<=2/13
+d=1_central_return_lower_bound=recovers_THM789_w13_thickness_tax
+full_return_outer_radius=strengthens_central_tax
+
+TOURNAMENT_TELEMETRY
+vertices=proof_carriers_not_runners
+pair_observable=fixed_predicate_loss_then_payload switch=endpoint_ancestry_first
+tie_path=declaration_order
+evaluation_path=('radius_pair', 'exact_input_intervals', 'owner_decorated_inputs', 'exact_sum_arcs', 'signed_labels', 'topology_counts')
+transport_path=('owner_decorated_inputs', 'exact_input_intervals', 'signed_labels', 'exact_sum_arcs', 'radius_pair', 'topology_counts')
+edge_flips=6
+both_tournaments=transitive score_histogram=0..5 cycles=0 SCCs=6_singletons HP=1
+evaluation_minimal=radius_pair transport_ancestry=owner_decorated_inputs
+owner_guardrail=fixed_evaluation_forgettable_dynamic_transport_not_proved_forgettable
+
+scope=fixed_ratio_not_all_odd_pairs_not_global_n12_closure_not_height_exhaustion
+certificate_sha256=8eac54e4513394b3857199e3e5528a4bd6780b8ff5f53efcbe0c9ba26c06f95c
+PASS: target, no-switch, radius factorization, common-dilate, bank, and tournament checks
