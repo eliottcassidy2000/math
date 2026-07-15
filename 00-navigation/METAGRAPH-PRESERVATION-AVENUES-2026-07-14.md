@@ -630,6 +630,17 @@ certificate clauses, and proof obligations.
   `(mask,CF block)` is not a continuation state; the two source roots `4,6`
   supply the missing transported phase.
 
+- **Delivered direct stalk action by THM-812:** the centered schedule
+  `(q,p,s)=(3,2,1)` with increment word `(1,2)` gives an explicit coordinate-
+  copy embedding `X_5->X_6`.  It is complement/reflection equivariant and
+  maps all 20 projected coloured edge cells injectively, although 10 bare
+  source nodes spread over 23 target nodes.  Boolean Mobius coefficients obey
+  the general subset-image pushforward law.  Degree at most three has one
+  fixed-core collision, resolved by exactly three quartic cross-leg/apex
+  coefficients.  This supplies the first exact CF-to-metagraph edge action;
+  the owner/root stalk must still be coupled before any LRC predicate is
+  transported.
+
 ### MPA-39 — Tutte/Smith polynomial of the staircase cover
 
 - **Delivered electrical bridge:** the canonical staircase Smith network is a

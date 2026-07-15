@@ -1,0 +1,56 @@
+THM-812 CENTERED-CHRISTOFFEL METAGRAPH EDGE TRANSPORT
+==============================================================================
+schedule (q,p,s)=(3,2,1): F=(1, 2, 4), d=(1, 2), next phase=0, tie=False
+low replication=(l0,l1,l1); high=(h0,h0,h1); core=(c,a,c)
+rho=(0, 1, 2, 2, 3, 0, 4, 5, 4, 5); surjective=True; image=64/64
+rho-sigma/complement/reflection/colour failures=0/0/0/0
+
+NODE AND COLOURED-EDGE TRANSPORT
+  bare source nodes=10; target union=23; support histogram={1: 3, 2: 1, 3: 2, 4: 1, 5: 1, 6: 2}
+  bare-node map is a function: False
+  projected coloured edge cells source/target=20/20; descent failures=0
+  blue singleton cells=8; black reflection-doubletons=12; reflection failures=0
+    B(0,5) -> B(0,15) lines=(0,)
+    B(1,6) -> B(7,31) lines=(1,)
+    B(2,8) -> B(2,24) lines=(16,)
+    B(5,6) -> B(24,25) lines=(27,)
+    B(5,8) -> B(23,25) lines=(26,)
+    B(6,9) -> B(23,32) lines=(11,)
+    B(7,9) -> B(7,23) lines=(17,)
+    B(8,9) -> B(16,32) lines=(10,)
+    K(1,3) -> K(9,13) lines=(7, 22)
+    K(1,4) -> K(4,12) lines=(4, 31)
+    K(1,5) -> K(26,26) lines=(5, 30)
+    K(1,8) -> K(26,28) lines=(13, 28)
+    K(3,5) -> K(3,15) lines=(6, 23)
+    K(3,6) -> K(10,11) lines=(15, 20)
+    K(3,7) -> K(13,22) lines=(18, 24)
+    K(3,8) -> K(3,24) lines=(2, 8)
+    K(5,7) -> K(9,29) lines=(12, 29)
+    K(6,6) -> K(22,33) lines=(3, 9)
+    K(6,8) -> K(10,24) lines=(14, 21)
+    K(8,8) -> K(21,22) lines=(19, 25)
+
+ANCHORED BOOLEAN MOBIUS PULLBACK
+  core=0: target nodes=13; cells through degrees 0..5=(2, 5, 10, 13, 13, 13)
+  core=1: target nodes=15; cells through degrees 0..5=(2, 5, 10, 14, 15, 15)
+  unique degree<=3 collision=(12, 31); truth sets={'12': [27, 29], '31': [15]}
+    degree-4 ('l0', 'l1', 'h0', 'h1') bidegree=(2, 2, 0): mu_12=0 mu_31=1
+    degree-4 ('l0', 'l1', 'h1', 'a') bidegree=(2, 1, 1): mu_12=1 mu_31=0
+    degree-4 ('l0', 'h0', 'h1', 'a') bidegree=(1, 2, 1): mu_12=1 mu_31=0
+  law: mu_(f o Phi)(A)=sum_{B subset S_target: rho(B)=A} mu_f(B)
+
+ODD/ODD TIE SANITY
+  schedule d=(3,); image=8/8; source nodes=3; support histogram={1: 2, 3: 1}
+  lines/edge cells/descent failures=4/3/0
+
+TOURNAMENT ANALYSIS (line-information carriers as vertices)
+  vertices=('source_colour', 'source_node_pair', 'source_edge_cell', 'target_node_pair', 'target_edge_cell', 'literal_line')
+  observable=number of unordered source complement-line pairs separated by a carrier
+  switches=('retention', 'retention_per_log2_cells'); edge flips=9
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} C3=0 SCC=[1, 1, 1, 1, 1, 1] Hpaths=1
+
+The CF replication is functorial on literal tilings, complement lines, and
+these 20 projected coloured edge fibres, but not on the 10 bare source
+nodes.  Degree <=3 also fails on one fixed-core node-indicator pair;
+this is a truncation obstruction, not a failure of the full Omega+B2 codec.

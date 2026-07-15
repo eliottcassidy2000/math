@@ -116,6 +116,17 @@ larger tuple of static scalars.  MPA-38 proposes the first direct test: apply
 centered Christoffel substitutions to the low/high leg variables and their
 Möbius coefficients.
 
+THM-812 now performs that direct test for the first nontrivial centered word
+`d=(1,2)`.  Its coordinate-copy action `X_5->X_6` is complement/reflection
+equivariant.  Bare nodes are not functorial, but every one of the 20 projected
+coloured edge cells has a unique, distinct target cell.  On the coefficient
+side, the induced general law is subset-image pushforward; degree at most
+three loses one fixed-core target-node pair and three explicit quartic
+coefficients repair it.  The remaining open transport claim is therefore not
+whether a CF digit can act at all, but whether a finite coefficient sector
+containing those quartics is closed under arbitrary Euclidean words and the
+`Omega+B2` recursion.
+
 Assumption challenge: the useful third face is not induced deletion of a
 tournament vertex.  Its vertices are gap-contracted interval roots.  It
 preserves a valid lower tournament tiling but destroys literal induced-
