@@ -1,0 +1,55 @@
+LRC13 HAMMING-FIVE CONTINUATION CONGRUENCE - EXACT REPLAY
+scope=THM-822 bounded liar plus exact common-deletion witness
+arithmetic=integer_half_open_handoff+Fraction_residuals+Fraction_maximin
+claim=pure_addition_only; deletion_replacement_transport_require_tooth_provenance
+
+H0_H1_INSERTION_COUNTEREXAMPLE
+base_labels=(1, 2, 3, 4, 5)
+low_speeds=(14, 15, 16, 17, 18) high_speeds=(27, 28, 29, 30, 31)
+shared_base_relation={2->1:k=2,3->1:k=3,4->2:k=2}
+half_open_rule=-u_owner<z*u_owner-2*u_provider-13*m*u_owner<=u_owner
+incoming=(label=6,speed=19)
+low_incident={6->2:k=3,6->3:k=2}
+high_incident={5->6:k=3,6->3:k=2}
+H0_base_equal=true H1_base_equal=true child_equal=false
+
+STRICT_RESIDUAL_COMMON_DELETION_COUNTEREXAMPLE
+S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) E_S={} M_S=1/14
+M_S_witnesses=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14), Fraction(9, 14), Fraction(11, 14), Fraction(13, 14))
+T=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20) E_T={} M_T=2/27
+M_T_witnesses=(Fraction(8, 27), Fraction(19, 27))
+delete=13 E_Sminus={} M_Sminus=1/13
+M_Sminus_witnesses=(Fraction(1, 13), Fraction(2, 13), Fraction(3, 13), Fraction(4, 13), Fraction(5, 13), Fraction(6, 13), Fraction(7, 13), Fraction(8, 13), Fraction(9, 13), Fraction(10, 13), Fraction(11, 13), Fraction(12, 13))
+delete=13 E_Tminus={(79/260,4/13),(9/13,181/260)} M_Tminus=2/23
+M_Tminus_witnesses=(Fraction(7, 23), Fraction(16, 23))
+base_endpoint_words_equal=true deleted_endpoint_words_equal=false
+
+KERNEL_CONGRUENCE_TRUTH_TABLE
+columns=observation|operation|base_equal|outputs_equal|verdict
+H0|insert labelled (6,19)|True|False|FAIL
+H1|insert labelled (6,19)|True|False|FAIL
+exact residual E|add common safe comb|True|True|PASS_BY_INTERSECTION
+exact residual E|delete common comb 13|True|False|FAIL
+exact residual E|evaluate exact M|True|False|FAIL
+E + labelled tooth bank|delete/recompute|False|True|SUFFICIENT_CARRIER
+identity=E(S_union_{u})=E(S)_intersection_G_u
+endpoint_word_preserves=one_step_exact_residual_geometry_and_threshold_nonemptiness
+endpoint_word_destroys=exact_M+deleted_comb_identity+owner_ancestry+transport_action
+
+TOURNAMENT_ANALYSIS
+vertices=replacement_labels
+pair_observable=directed_half_open_handoff
+switch=low_lift_branch_vs_high_lift_branch_after_common_insertion
+tie_Hamiltonian_path=(1, 2, 3, 4, 5, 6) rule=increasing_label_on_silent_pairs
+base score=((0, 1), (2, 2), (3, 2)) triangles=2 SCC=(4, 1) Hamiltonian_paths=5 first_path=(1, 4, 2, 3, 5)
+low_child score=((1, 1), (2, 1), (3, 4)) triangles=7 SCC=(6,) Hamiltonian_paths=33 first_path=(1, 4, 2, 3, 5, 6)
+high_child score=((1, 2), (3, 3), (4, 1)) triangles=5 SCC=(6,) Hamiltonian_paths=23 first_path=(1, 4, 2, 3, 5, 6)
+live_support_symmetric_difference=((5, 6), (6, 2))
+completed_tournament_edge_flips=1
+tournament_preserves=completed_pairwise_orientation_for_this_gauge
+tournament_destroys=live_vs_tie_provenance+integer_centres+residual_geometry+LRC_threshold_truth
+
+payload_sha256=b5c04163a21209f82231228b6fcb8c4eb5beb96fe5d254157253d21f21d14f27
+certificate_sha256=b9580c2c4793555ae76ae2c5bea5a2cc0b22a1f6bc2900feff6acf1735ce63d2
+source_sha256=9a540b6421b35874551cafcad0292c61120b290d90f98a6a0d9ab7d1723898a4
+PASS: both continuation counterexamples and the pure-addition identity are exact
