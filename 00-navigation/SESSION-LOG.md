@@ -1,3 +1,30 @@
+## codex-2026-07-14-S8 -- THM-781 PROVED: merged-node fibres are Hamiltonian paths modulo automorphisms
+
+Turned HYP-6825's stored bidirectional atlas into intrinsic forward and inverse
+functions.  The forward map constructs the fixed-path tournament of a tiling,
+canonicalizes it and its converse, and looks up the converse orbit's structural
+node address.  The inverse no longer scans the tiling cube: for each of the
+node's one or two tournament classes it normalizes every directed Hamiltonian
+path to the explorer path.  Two paths give the same tiling exactly when a
+tournament automorphism relates them, proving
+`class fibre = HP(T)/Aut(T)` and `|fibre|=H(T)/|Aut(T)|`.
+
+The executable API and stored certificate audit all `33,866` tilings, `530`
+unmerged classes, and `321` converse-merged nodes at `n=3..7`.  Forward maps,
+direct class inverses, automorphism multiplicities, class and merged size
+formulae, and every round trip have zero failures.  The browser explorer now
+exports `tilingToMergedNode` and `mergedNodeToTilings`; Python continues through
+the offline `n=7` atlas.
+
+The prime-seven fibre is now conceptual rather than enumerative:
+`n7-a267` has `175` directed Hamiltonian paths and cyclic automorphism group of
+order `7`, hence exactly `25` fixed-cut tilings.  Those masks are observer-cut
+orbits, not arbitrary explorer indices.  The next preservation tower is
+`node <- HP/Aut tiling <- owner-sheet assignment <- endpoint transport`; the
+last two arrows remain multivalued and continuation-sensitive, so no LRC(14)
+closure is claimed.
+
+---
 ## codex-2026-07-14-S7 -- THM-778 PROVED: continued fractions are the endpoint-transport language
 
 Re-audited the repository's continued-fraction threads from Sturmian sectors,

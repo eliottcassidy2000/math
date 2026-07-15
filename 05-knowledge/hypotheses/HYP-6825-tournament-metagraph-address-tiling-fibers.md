@@ -1,7 +1,7 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: VERIFIED FINITE ATLAS n=3..7; general completeness conjecture open
+status: PROVED general Hamiltonian-path fibre inverse (THM-781) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
@@ -21,6 +21,9 @@ artifacts:
   - 04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py
   - 05-knowledge/results/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.json
   - 00-navigation/LRC14-CONTINUED-FRACTION-FRONTIER-2026-07-14.md
+  - 01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md
+  - 04-computation/tournament_tiling_metagraph_fibre_inverse_codex_S8.py
+  - 05-knowledge/results/tournament_tiling_metagraph_fibre_inverse_codex_S8.json
 related:
   - HYP-2245
   - HYP-2989
@@ -32,6 +35,7 @@ related:
   - THM-646
   - THM-773
   - THM-778
+  - THM-781
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -145,6 +149,43 @@ committed JSON atlases contain all `33866` tilings at `n=3..7`.  The browser
 explorer loads the `n<=6` atlas to display the address and both indices; the
 compact `n=7` atlas stores mask-indexed class/node/global/fibre arrays and
 complete inverse node fibres.
+
+## Direct inverse theorem: paths modulo automorphisms
+
+THM-781 removes the exhaustive-cube scan from the mathematical definition of
+the inverse.  If a merged node carries class representatives `T` (one for a
+self-converse class, two for a converse pair), enumerate their directed
+Hamiltonian paths, relabel each path to the explorer's fixed path, and read the
+remaining arcs as tile bits.  The exact functions are
+
+```text
+tiling t -> A_n({[tau(t)],[tau(t)^op]}),
+
+node u -> union_[T] HP(T)/Aut(T).
+```
+
+Two paths produce the same tiling exactly when an automorphism relates them.
+Thus an unmerged class has `H(T)/|Aut(T)|` tilings; a non-self-converse merged
+pair has twice this number.  This is a theorem for every size once its class
+and node atlas is defined, not merely an observation through `n=7`.
+
+The executable API `MetagraphFibreAtlas.tiling_to_node` computes the forward
+quotient and `node_to_tilings` constructs the inverse directly from paths.
+All `33,866` stored tilings, `530` classes, and `321` nodes through `n=7` pass
+both directions with zero mismatches.  The browser exposes the analogous
+`tilingToMergedNode` and `mergedNodeToTilings` functions through `n=6`.
+
+For the prime-seven pullback this explains the previously mysterious fibre
+size without scanning masks:
+
+```text
+n7-a267: H=175, |Aut|=7, H/|Aut|=25.
+```
+
+The 25 masks are precisely automorphism orbits of Hamiltonian observer cuts on
+the cyclic heptagon.  THM-773's 5,040 owner-sheet assignments select these cut
+orbits with nonuniform multiplicity; the node alone still forgets the owner
+assignment and transport future.
 
 ## Prime-seven sheet pullback: the node is a base, not the state
 

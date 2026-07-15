@@ -99,6 +99,27 @@
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
 
+## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
+
+- **Source:** THM-781; HYP-6825; THM-773/778; tournament-tiling explorer.
+- **Forward function:** construct the fixed-path tournament of a tiling,
+  canonicalize it and its converse, take their orbit, and look up HYP-6825's
+  structurally ordered merged address.
+- **Inverse function:** for each of the node's one or two unmerged tournament
+  classes, normalize every directed Hamiltonian path to the fixed observer
+  path.  Quotienting by the free automorphism action gives exactly the tilings.
+- **Formula:** an unmerged class has `H(T)/|Aut(T)|` tilings; a non-self-
+  converse merged node has twice the contribution of one class.
+- **Exact audit:** all 33,866 tilings, 530 classes, and 321 merged nodes at
+  `n=3..7` pass forward lookup, path inverse, automorphism multiplicity,
+  cardinality, and round-trip checks with zero failures.
+- **Prime-seven payoff:** `n7-a267` has `H=175`, `|Aut|=7`, so its exact 25-mask
+  fibre is the set of Hamiltonian observer-cut orbits, not a UI accident.
+- **Next pull:** refine the relation to
+  `node <- HP/Aut tiling <- owner-to-sheet assignments <- endpoint transport`.
+  Test continuation purity at each arrow; the first expected failure is at the
+  mask-to-owner lift, where reflection and next-wall futures are multivalued.
+
 ## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
 
 - **Source:** THM-778/773; HYP-6835/6825; THM-536/637/745; HYP-4078/6280.

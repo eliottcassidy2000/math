@@ -138,6 +138,22 @@ atlases store both directions for all `33866` tilings at `n=3..7`; the browser
 explorer displays them through `n=6`, and the compact offline continuation
 stores mask-indexed maps plus complete inverse fibres at `n=7`.
 
+THM-781 subsequently replaced the extensional inverse list by an intrinsic
+one.  A fixed-path tiling presentation of a class `[T]` is exactly a directed
+Hamiltonian path of `T`, modulo the free action of `Aut(T)`.  Therefore
+
+```text
+class tilings = HP(T)/Aut(T),
+node tilings  = union over the one or two converse classes,
+|class tilings| = H(T)/|Aut(T)|.
+```
+
+This matters conceptually: the observer cut is not an awkward label attached
+after the tournament is built.  It is a Hamiltonian-path orbit.  For the
+heptagon node `n7-a267`, `H=175` and `|Aut|=7`, so the explorer's 25 masks are
+forced as `175/7`.  The inverse fibre is now generated from the object itself,
+not recovered by searching all `2^15` tilings.
+
 The `n=7` comparison isolates why the blue/black recursion is useful.  Local
 depth/path plus the all-deletion parent address gives 270 cells and leaves two
 twin pairs.  The nodes in each pair even have identical raw all-black incidence

@@ -374,10 +374,31 @@ certificate clauses, and proof obligations.
   substitution automaton for the ten-wall r=8 word, minimized by continuation
   equivalence.
 
+### MPA-29 — Hamiltonian-path orbit fibres instead of cube scans
+
+- **Delivered theorem:** THM-781 gives the literal maps
+  `tiling -> canonical class -> converse-merged node` and
+  `node -> union HP(T)/Aut(T)` over its one or two classes.
+- **Delivered size law:** each unmerged class fibre has
+  `H(T)/|Aut(T)|` tilings; a non-self-converse merged pair has twice that
+  number.  Every forward and inverse record through `n=7` agrees exactly.
+- **Heptagon explanation:** `n7-a267` has `H=175`, `|Aut|=7`, hence its 25
+  masks are intrinsic observer-cut orbits.  THM-773's 5,040 sheet assignments
+  map onto these path orbits with nonuniform multiplicity.
+- **Pull:** lift each `HP(T)/Aut(T)` element to its owner-labelled assignment
+  fibre, then attach THM-778 endpoint transport to transitions between cut
+  orbits.  Separate a mask transition from a complement-line orbit and from a
+  mere endpoint-node incidence.
+- **Must preserve:** path orbit, owner assignment, simultaneous-isomorphism
+  line orbit, inverse winding, centered phase/ties, wall rank, and carry.
+- **Deliverable:** the first exact three-level incidence index
+  `node <- path orbit <- owner-labelled LRC state`, with forward maps,
+  inverse fibres, and continuation-purity audit at every quotient.
+
 ## Recommended next three pulls
 
-1. Continue `MPA-18/28`: attach redundancy roots to THM-778's ten
-   owner-and-mask-labelled r=8 walls and compile the five-wall half word.
+1. Join `MPA-18/28/29`: attach redundancy roots and Hamiltonian path-orbit
+   identities to THM-778's ten owner-and-mask-labelled r=8 first returns.
 2. Continue `MPA-12/26`: minimize the bounded prime-sheet/Euclidean movie and prove
    whether inverse steps plus cyclic endpoint word are continuation-complete.
 3. Join `MPA-27/28`: seek a folded coordinate system in which each Euclidean
