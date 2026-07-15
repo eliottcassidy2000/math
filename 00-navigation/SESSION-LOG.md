@@ -92,7 +92,13 @@ At depth 11, the 78 B3 addresses have a 48-dimensional residue base and 30
 A/B/C carry contrasts.  Six reflection-invariant Radon directions recover
 all four carry channels; five cannot.  The 21 j=4 floods are `E(K_7)`, but
 point-star plus Fano-triangle sums leave an eight-dimensional edge sector
-containing exact `m,V1` curl.  THM-841's full ladder is not toothpick
+containing exact `m,V1` curl.  The new THM-850 addendum identifies it with
+`H_1` of the Heawood flag graph: 28 oriented hexagons span the rank-eight
+sector and eight support-minimal cycles repair the marginals.  The unique
+triality-six Radon alias is the alternating Vandermonde character
+`-chi_7((a-b)(b-c)(c-a))`; the chi pair detects it and gives the unique
+reflection-full six.  This is exact carrier recovery, not j=4 metric closure.
+THM-841's full ladder is not toothpick
 self-similar: a dyadic chi-labelled stalk survives, with primitive odd
 reciprocals as its source term.
 

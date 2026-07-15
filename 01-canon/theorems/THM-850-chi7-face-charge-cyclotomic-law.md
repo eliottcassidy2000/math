@@ -1,7 +1,7 @@
 ---
 id: THM-850
 title: The chi-seven face-charge, cyclotomic B3 recursion, and equitable operation-congruence census
-status: PROVED (all-size face-charge intertwiner, augmented-character sign law, cyclotomic recurrence, residue census, finite Radon rank theorem, and address/carry odometer) + FINITE-EXACT (depth-399 replay, Paley fingerprints, 21-body flood incidence, three-needle obstruction, and depth-11 Radon alias)
+status: PROVED (all-size face-charge intertwiner, augmented-character sign law, cyclotomic recurrence, residue census, finite Radon rank theorem, and address/carry odometer) + FINITE-EXACT (depth-399 replay, Paley fingerprints, 21-body flood incidence, three-needle obstruction, Heawood-homology cycle repair, and depth-11 Radon alias/repair)
 source: codex-2026-07-15-S15
 depends_on: [THM-830]
 related: [THM-211, THM-741, THM-801, THM-841, HYP-3575, HYP-6895, HYP-6900]
@@ -12,6 +12,8 @@ verification:
   - 05-knowledge/results/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.out
   - 04-computation/chi7_radon_carry_alias_codex_S15.py
   - 05-knowledge/results/chi7_radon_carry_alias_codex_S15.out
+  - 04-computation/lrc14_fano_flag_heawood_radon_repair_codex_S15.py
+  - 05-knowledge/results/lrc14_fano_flag_heawood_radon_repair_codex_S15.out
 ---
 
 # THM-850 - the chi-seven face-charge law
@@ -413,6 +415,69 @@ point and Fano marginals leave an eight-dimensional edge field invisible;
 both `m` and `V1` have nonzero components there. The natural symmetry object
 is the defect cocycle `d_g(e)=w(ge)-w(e)`, not a nonexistent Fano quotient.
 
+That eight-dimensional field now has an exact intrinsic description.  Send a
+`K_7` edge to the incident Fano flag
+
+```text
+{a,b} -> (p,L)=(a xor b,{a,b,a xor b}).                    (27e)
+```
+
+This is a bijection from the 21 flood labels to the 21 edges of the Heawood
+point-line incidence graph.  Fano-triangle sums are its seven line-column
+sums.  If `F_L` is such a column sum, `S_v` is the original `K_7` point-star
+sum, and `R_v` is the flag row sum with distinguished point `v`, then
+
+```text
+R_v=sum_(L contains v) F_L-S_v.                            (27f)
+```
+
+Thus point-star plus Fano data are exactly the row and column marginals of a
+function on the incident flags.  Since the Heawood graph is connected, their
+rank is `14-1=13`; the invisible field is
+
+```text
+W=ker(partial_Heawood)=H_1(Heawood;Q),
+dim W=21-14+1=8.                                           (27g)
+```
+
+This proves a broad linear obstruction: all `GL(3,2)` translates of point or
+line incidence remain in the same rank-13 cut/main-effect space and cannot
+see `W`.  The smallest natural repair is an alternating current around a
+Heawood hexagon.  For a noncollinear Fano point triple `(a,b,c)`, one
+orientation gives
+
+```text
+C_abc(w)=w_(b,a xor b)-w_(a,a xor b)
+        +w_(c,b xor c)-w_(b,b xor c)
+        +w_(a,c xor a)-w_(c,c xor a).                      (27h)
+```
+
+There are 28 such hexagons, one `GL(3,2)` orbit, and their currents have rank
+8.  Heawood girth six proves that no nonzero invisible current has smaller
+support, while dimension proves that fewer than eight scalar probes cannot
+repair all marginals.  The eight triples
+
+```text
+125,126,127,134,135,136,137,146                            (27i)
+```
+
+form a basis: their minor on edge columns
+`12,13,14,15,16,24,25,26` has determinant one.  All seven point stars, six
+independent Fano lines, and these eight cycles give a full `21 x 21` recovery
+matrix of determinant `-100842=-2*3*7^5`.  On the basis (27i), the exact
+cycle charges are
+
+```text
+r:  (0,0,0,0,0,0,0,0),
+m:  (1/140,-1/42,-1/210,-1/42,-41/1260,-1/35,-1/28,-1/42),
+V1: (44,-20,15,15,65,-6,25,1).                            (27j)
+```
+
+Indeed `r` is additive, whereas `m` is nonzero on 26 of the 28 hexagons and
+`V1` on all 28.  Oriented flag cycles therefore recover the previously named
+numerical curl.  They recover an edge carrier, not flood interval geometry,
+peel chronology, ownership, or the LRC metric predicate.
+
 There is also a local needle obstruction.  Exhausting all weak switch orders
 of three one-sided Farey endpoint needles shows that such a path visits at
 most four Boolean masks and at most two points of the negative line, including
@@ -573,6 +638,39 @@ union mixed orbit, has ranks `(32,15,15,15)` and misses one mode. Thus true
 endpoint reflection permits a minimal six-pencil repair, while insisting on
 formal face triality requires all eight directions.
 
+The missed triality mode also has a closed form.  Write the no-carry support
+as
+
+```text
+T={(a,b):0<=a,b<=6, 5<=a+b<=11},          c=11-a-b.        (38b)
+```
+
+Then the one-dimensional kernel of the triality six-set is spanned by the
+alternating Vandermonde character
+
+```text
+f(a,b,c)=-chi_7((a-b)(b-c)(c-a)).                          (38c)
+```
+
+It has twelve `-1`, nine zero, and twelve `+1` values.  Every line sum of
+`f` vanishes in the coordinate and mixed direction orbits.  The omitted chi
+pair detects it, with offset profiles
+
+```text
+(1,3): ( 4,-3,-3,-3, 4, 4,-3),
+(1,5): (-4, 3, 3, 3,-4, 3,-4).                            (38d)
+```
+
+This is the exact role-chirality that triality-symmetric scalar tomography
+loses.  Endpoint reflection has direction orbits of sizes `2,1,2,1,2`.
+Among its six invariant five-subsets, the no-carry ranks are `28` once, `29`
+twice, and `30` three times; every A/B/C carry channel already has rank 15.
+Among its four invariant six-subsets, the no-carry ranks are `31,32,32,33`,
+and only (38a), the union of the three paired orbits, reaches 33.  A displayed
+`33 x 33` minor has determinant `-352947=-3*7^6`.  Hence six versus five is
+not merely a dimension estimate: the chi pair is the exact detector of the
+last formal-triality alias.
+
 The concrete metagraph target is a full finite Radon deck.  For every
 direction in `P^1(F_7)`, retain all line sums of the address-decorated tiling
 tensor on (29), together with upper/lower node classes, blue/black colour,
@@ -614,5 +712,12 @@ plane rank `1+6d` and address rank `1+6d` for `d<=7`, followed by the strict
 the exact A/B/C carry repair of all 78 addresses, including the minimal and
 unique reflection-invariant six-pencil deck (38a).
 
-Neither script closes a THM-741 sweep or tests an LRC transfer, and none is
-asserted here.
+The Fano-flag/Radon repair audit independently verifies the edge-to-flag
+bijection (27e), all 168 `GL(3,2)` maps, the rank-13 marginal and rank-8
+Heawood cycle decomposition, all 28 hexagons, the unimodular basis (27i), the
+flood charges (27j), the invariant five/six rank censuses, the closed kernel
+(38c), both detecting profiles (38d), and the two nonzero recovery
+determinants.
+
+None of these scripts closes a THM-741 sweep or proves an LRC transfer, and no
+such claim is asserted here.

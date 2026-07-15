@@ -1,0 +1,46 @@
+THM-850 ADDENDUM: FANO-FLAG/HEAWOOD AND CHI7 RADON REPAIR
+============================================================================
+method: exact Fraction row reduction, determinants, and finite incidence
+
+FANO FLAGS AND THE INVISIBLE EDGE SECTOR
+K7 edges / Fano flags / Heawood edges=21; vertices=14; connected=yes; girth=6
+point-star/Fano/joint marginal ranks=7/7/13
+flag identity: row_v=sum_(L contains v) column_L-star_v
+invisible sector=ker Heawood boundary=H1(Heawood;Q), dimension=21-14+1=8
+GL(3,2) maps audited=168; marginal orbit span remains rank 13
+
+ORIENTED HEXAGON REPAIR
+noncollinear triples / Heawood hexagons=28; orbit rank=8
+basis=((1, 2, 5), (1, 2, 6), (1, 2, 7), (1, 3, 4), (1, 3, 5), (1, 3, 6), (1, 3, 7), (1, 4, 6))
+basis pivot edges=((1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6)); minor determinant=1
+13 marginals + 8 cycles recovery determinant=-100842=-2*3*7^5
+minimum invisible support=6 (Heawood girth); minimum scalar repair count=8
+r basis charges=(0,0,0,0,0,0,0,0)
+m basis charges=(1/140,-1/42,-1/210,-1/42,-41/1260,-1/35,-1/28,-1/42)
+V1 basis charges=(44,-20,15,15,65,-6,25,1)
+all-hexagon nonzero counts r/m/V1=0/26/28; m zeros=((1, 2, 4), (4, 5, 7))
+
+DEPTH-11 CARRY RADON REPAIR
+channel sizes no-carry/A/B/C=(33,15,15,15)
+reflection direction orbits=(frozenset({(1, 0), (0, 1)}), frozenset({(1, 1)}), frozenset({(1, 2), (1, 4)}), frozenset({(1, 6)}), frozenset({(1, 3), (1, 5)}))
+invariant five no-carry rank census={28:1,29:2,30:3}; carry ranks always 15,15,15
+general five-direction upper/attained rank=31/31<33
+invariant six no-carry rank census={31:1,32:2,33:1}; carry ranks always 15,15,15
+triality six ranks=(32, 15, 15, 15); nullity=1
+triality kernel f(a,b,c)=-chi7((a-b)(b-c)(c-a)); values -/0/+=12/9/12
+chi-pair detection profiles=((4, -3, -3, -3, 4, 4, -3), (-4, 3, 3, 3, -4, 3, -4))
+unique reflection-full six=((1, 0), (0, 1), (1, 2), (1, 4), (1, 3), (1, 5)); ranks=(33, 15, 15, 15)
+full-rank 33x33 minor determinant=-352947=-3*7^6
+
+TOURNAMENT ANALYSIS ON EIGHT HEXAGON PROBES (NOT RUNNERS/ARCS)
+pair observable=absolute V1 cycle charge; switch=larger wins; tie=basis order
+score_hist={6: 1, 4: 1, 3: 1, 2: 1, 7: 1, 1: 1, 5: 1, 0: 1}; C3=0; SCC=8x1; edge_flips_vs_basis=8; HP=1
+Hamiltonian path=((1, 3, 5), (1, 2, 5), (1, 3, 7), (1, 2, 6), (1, 2, 7), (1, 3, 4), (1, 3, 6), (1, 4, 6))
+PRESERVES: all point/Fano marginals plus the full eight-dimensional flag curl
+DESTROYS: interval locations, lower-tree chronology, owner data, and the LRC metric predicate
+CHALLENGED ASSUMPTION: oriented Fano flags/hexagons, not runners or arcs, are the probe vertices
+
+SCOPE: exact carrier recovery only; no THM-741 sweep or j=4 metric closure
+source_sha256=881269ea0e2e3a4c7c8620b33a29d452c4fbf7ad0d66c89bb10712c56d572000
+thm741_dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+ALL EXACT ASSERTIONS PASSED

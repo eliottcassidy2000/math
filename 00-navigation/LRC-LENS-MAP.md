@@ -112,8 +112,14 @@ This addendum also records three quotient decisions from the same session:
   numerical body weights.  The component count `r(E)` is a seven-point
   additive potential, but `m(E)` and `V1(E)` have full 21-dimensional edge
   orbit spans; the combined point-plus-Fano incidence space has rank only 13.
-  Fano incidence is organization, not symmetry, and its eight invisible edge
-  directions contain proof-relevant numerical curl.  A portable fixed-`E_2`
+  Under the edge-to-Fano-flag bijection, the eight invisible directions are
+  exactly `H_1` of the Heawood incidence graph.  Its 28 oriented hexagons span
+  that sector, and an explicit support-minimal eight-cycle basis repairs the
+  marginals and recovers the `m,V1` curl.  On the depth-11 no-carry simplex,
+  the corresponding triality alias is the alternating character
+  `-chi_7((a-b)(b-c)(c-a))`; the chi direction pair is its exact Radon
+  detector.  This is carrier recovery, not Fano symmetry or metric closure.
+  A portable fixed-`E_2`
   lower bound nevertheless closes edge `(5,7)` exactly: 28,847 residual
   sweeps are all positive with minimum `7/858`.  This proves one flood, not a
   Fano transport to the other twenty.
