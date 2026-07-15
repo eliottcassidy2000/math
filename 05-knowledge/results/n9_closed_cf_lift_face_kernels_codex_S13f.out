@@ -1,0 +1,32 @@
+THM-846 N=9 CLOSED CF LIFT/FACE OPERATION KERNELS
+======================================================================
+coordinate ranks A/B/C=(21, 27, 21)
+A/C used union=27 missing=[9, 1] left-invertible with apex=True
+B idempotent=True exceptional={'output': [6, 4], 'source': [7, 3]}
+B lost seam=x_(6,4) xor x_(7,3) exact inverse=True
+Phi image codimension=8 doubled fibres=[{'source_tile': [3, 1], 'target_tiles': [[4, 1], [3, 1]]}, {'source_tile': [4, 2], 'target_tiles': [[5, 2], [4, 2]]}, {'source_tile': [7, 3], 'target_tiles': [[8, 3], [7, 4]]}, {'source_tile': [5, 3], 'target_tiles': [[6, 3], [5, 3]]}, {'source_tile': [6, 4], 'target_tiles': [[6, 4], [7, 5]]}, {'source_tile': [7, 5], 'target_tiles': [[8, 5], [8, 6]]}, {'source_tile': [8, 6], 'target_tiles': [[9, 6], [9, 7]]}, {'source_tile': [9, 7], 'target_tiles': [[10, 7], [10, 8]]}]
+defect action={'roles': {'A': {'basis_rank': 4, 'occupied_sector_images': 11}, 'B': {'basis_rank': 4, 'occupied_sector_images': 11}, 'C': {'basis_rank': 4, 'occupied_sector_images': 11}}, 'B_fixes_all_four_basis_words': True, 'B_fixes_all_eleven_occupied_sectors': True, 'B_seam_zero_on_basis_and_sectors': True}
+
+FINITE 58-CELL BANK
+B changed/seam histogram=32/{0: 26, 1: 32}
+rolewise Q/bar-P descent={'A': 0, 'B': 58, 'C': 0}/{'A': 0, 'B': 58, 'C': 0}
+role Q fibres={'A': (58, {1: 58}), 'B': (58, {1: 58}), 'C': (58, {1: 58})}
+role bar-P fibres={'A': (58, {1: 58}), 'B': (58, {1: 58}), 'C': (58, {1: 58})}
+ordered A/C Q/bar-P=(58, {1: 58})/(58, {1: 58})
+unordered A/C Q/bar-P=(29, {2: 29})/(29, {2: 29})
+A/C bar-P + B bar-P=(58, {1: 58})
+theta orbits/seam/sheet preserved=29/{0: 13, 1: 16}/29
+theta source=B=-A/C-role orientation=29
+B node margins/coupled=(55, {1: 52, 2: 3})/(55, {1: 52, 2: 3})/(58, {1: 58})
+B target node + input seam=(55, {1: 52, 2: 3})/(55, {1: 52, 2: 3})
+B image masks/nodes/loops=232/105/0
+
+THM-840 OPERATION KERNELS (split source cells)
+  {'direct_node': 1, 'partner_node': 2, 'direct_node_plus_seam': 0, 'partner_node_plus_seam': 1, 'coupled_bar_P': 0, 'literal_Q': 0}
+TOURNAMENT ANALYSIS vertices=7 edge-flips=20
+  retention={'defect sector': {'separated_pairs': 1284, 'cells': 11}, 'B seam': {'separated_pairs': 832, 'cells': 2}, 'source direct node': {'separated_pairs': 1648, 'cells': 54}, 'F_B direct node': {'separated_pairs': 1650, 'cells': 55}, 'A/C bar-P deck': {'separated_pairs': 1624, 'cells': 29}, 'F_B coupled bar-P': {'separated_pairs': 1653, 'cells': 58}, 'A/C literal-Q deck': {'separated_pairs': 1624, 'cells': 29}}
+  both gauges transitive: C3=0, singleton SCCs, one Hamiltonian path
+PRESERVATION: literal maps/Q/local nodes/coupled bar-P/seam/theta on the finite bank
+DESTROYS: all LRC metric/owner/wall data and arbitrary CF-word continuation
+CHALLENGED ASSUMPTION: seam, sheet, and node fibre are not one universal bit
+ALL ASSERTIONS PASSED

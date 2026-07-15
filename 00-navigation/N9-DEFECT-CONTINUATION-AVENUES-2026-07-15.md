@@ -1,8 +1,9 @@
 # The `n=9` defect continuation frontier
 
-**Status:** working atlas after THM-828/832/834/838, codex-2026-07-15-S13.
-The exact static join, its linear Cech core, one centered-CF continuation,
-and the collision-fibre-to-node placement are complete.  This file records the
+**Status:** working atlas after THM-828/832/834/838/842/843/846,
+codex-2026-07-15-S13.  The exact static join, its linear Cech core, one
+centered-CF continuation, its first closed lift/face composites, and the
+collision-fibre-to-node placement are complete.  This file records the
 object dictionary, preservation ledger, and ranked pull list for continuation
 and LRC-facing agents.  It is deliberately explicit about which statements
 concern tilings, tournament nodes, complement lines, defect sectors, or LRC
@@ -112,8 +113,14 @@ difference.  None can silently substitute for another.
     nodes; blue re-enters through exactly two mixed portals.  Monotone
     unrestricted and `blue* black*` reach coincide on 3,069 nodes and contain
     every one of the 50 balanced nodes.
+11. **First closed CF lift/face words.**  THM-846 computes
+    `F_R=R_10 Phi_(9->10)` literally.  A/C jointly omit only the apex; B is an
+    idempotent projection omitting the seam `x_64 xor x_73`.  On the 58-cell
+    bank, ordered A/C is injective while unordered A/C is exactly the 29
+    theta orbits.  Bare node marginals fail different THM-840 operation-
+    kernel tests; coupled `bar P` and literal Q pass for B.
 
-The missing map is now general continuation, not static lookup: given a
+The missing map is now multiword continuation, not static lookup: given a
 decorated sector or node fibre, what decorated fibres can lift, delete, flip,
 or undergo an arbitrary centered-CF word?
 
@@ -231,6 +238,15 @@ centered consecutive word exactly: rank `4->4`, raw-S2 kernel rank two, all
 not functorial—eight signs reverse—so the next fibre product must retain the
 layerwise moment word and owner/Bezout sidecar.
 
+THM-846 closes that lift with A/B/C.  The resulting three kernels are not one
+phenomenon: endpoint A/C forgets the apex on the full cube; B forgets the seam
+`x_(6,4) xor x_(7,3)`; unordered A/C forgets the theta sheet on the finite
+bank.  The seam repairs the literal B map and the direct-node source
+congruence, but it neither repairs the partner-node congruence nor refines the
+target node marginal.  Coupled `bar P` is the operation-safe metagraph address
+for this named word.  This is the exact example the operation-indexed language
+was designed to distinguish.
+
 Incoming THM-840 makes the general logical boundary operation-indexed: a
 kernel can be a congruence for monotone insertion while failing deletion,
 replacement, or exact evaluation.  THM-842/843 give the tournament-side
@@ -269,14 +285,14 @@ reflection-fixed locus.
 
 ## Critical next computations, in order
 
-1. **Closed lift/delete word.**  Compose THM-838's `Phi:X_9->X_10` with each
-   THM-842 face role `A_10,B_10,C_10`.  Compute the literal kernels first,
-   then test the theta sheet, seam, `Q`, bare-node marginals, and coupled
-   `bar P` under the named composites.
-2. **n10 codec preflight.**  Carry the rank-four sectors through the next
+1. **n10 codec preflight.**  Carry the rank-four sectors through the next
    relation join before building a full n9 atlas.  Retain second moments as
    the unconditional repair and test whether the residual kernel grows by
    new position modes or by node-fibre continuation.
+2. **Two-word CF operation semigroup.**  Compose two consecutive lift/face
+   closed words.  Minimize the decorated 58-cell state separately for Q,
+   coupled `bar P`, and each node marginal; record apex, seam, and theta-sheet
+   transition rather than merely its static fibre profile.
 3. **General CF-word action.**  Factor the literal coordinate action of two
    consecutive continued-fraction digits, determine its semigroup on the
    four-bit core, and classify which words preserve the coupled `P` descent.
@@ -291,8 +307,9 @@ reflection-fixed locus.
 - **THM-814 fixed-layer swap:** the n8 black codec fails on one positional
   kernel; test whether it is the first shadow of the n9 skew sectors.
 - **THM-830 deletion-deck mirror current:** THM-842 applies its A/B/C roles and
-  isolates the theta sheet.  Next test whether lift followed by each role
-  retains the sheet, the shortcut seam, or neither.
+  isolates the theta sheet.  THM-846 answers the first closed word: endpoint
+  order retains the sheet, B transports it, and the B seam is a distinct
+  coordinate.  Pull this thread next for two-word compositions.
 - **THM-549/550 half-tiling parity:** blue lines are the reflection-fixed
   half-tiling; use even/odd recursion on the defect basis, not only cell count.
 - **HYP-3809 parity skeleton / even black graph:** test whether sector mass or

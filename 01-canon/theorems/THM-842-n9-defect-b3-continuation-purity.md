@@ -4,7 +4,7 @@ title: The B gap face is the unique Q-pure role on the 58 n=9 defect cells and r
 status: PROVED FINITE-BANK B3/REPAIRED/INDUCED-DECK CONTINUATION CLASSIFICATION
 source: codex-2026-07-15-S13d
 depends_on: [THM-828, THM-830, THM-834, THM-839]
-related: [THM-796, THM-813, THM-838, HYP-6880]
+related: [THM-796, THM-813, THM-838, THM-846, HYP-6880]
 verification:
   - 04-computation/n9_defect_b3_continuation_purity_codex_S13d.py
   - 05-knowledge/results/n9_defect_b3_continuation_purity_codex_S13d.out

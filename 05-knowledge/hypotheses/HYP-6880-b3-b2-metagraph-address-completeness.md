@@ -1,10 +1,10 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures, B3 continuation, and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839/842; exact gap-tournament and half-defect carrier proved by THM-830
+status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures, B3 continuation, one n9->n10 defect-bank transport, and its first closed lift/face words classified by THM-801/809/828/832/834/838/839/842/843/846; exact gap-tournament and half-defect carrier proved by THM-830
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-840, THM-842, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-840, THM-842, THM-843, THM-846, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -251,6 +251,19 @@ transports theta itself.  The unpositioned induced-tournament deletion deck
 has exactly the same 53-cell partition as the bare upper node, whereas the
 position-marked deck is injective.  This proves that recursive usefulness
 requires path position and sheet action even after static node completeness.
+
+THM-846 composes THM-838's lift with each THM-842 face and proves the first
+closed-word classification.  Ordered A/C has a literal left inverse after
+adjoining the common apex, while B is an idempotent rank-27 map with the exact
+lost seam `x_(6,4) xor x_(7,3)`.  On the canonical apex-zero bank ordered A/C
+is injective, but forgetting endpoint order gives exactly 29 theta
+doubletons for both Q and `bar P`.  The seam is theta-invariant and cannot
+replace the endpoint sheet.  At node level, direct and partner marginals have
+different operation kernels; the seam repairs only the direct source kernel,
+whereas coupled `bar P` and literal Q are B-congruences on all 58 cells.  This
+proves that apex, seam, affine sheet, and complement partner are typed
+sidecars, not one generic orientation bit.  General multiword closure remains
+open.
 
 ## Continued-fraction connection
 
