@@ -328,9 +328,22 @@ The subsequent THM-786 audit isolates the next exact scale.  A fixed companion
 serving `L` consecutive second-fastest-owner walls satisfies
 `L<1+2gc/(f(g-c))`: compare only the first and last companion walls, so skipped
 indices cause no loss.  Consecutive visitor sets satisfy a signed entrant-
-leaver balance, and a density count closes the ultra-sparse class `sum c<g`.
-What remains is not generic “co-landing”; it is alternation among several
-companion spans in the general-density class.  The originally reported factor-
+leaver balance.  The density argument is now residue-sensitive: make the
+possible balanced companion clusters into a hypergraph and fractionally hit
+them with weights `lambda_c`.  If the speed-weight
+`sum lambda_c c` is below `g`, grid counting gives a finite run bound.  This
+strictly exceeds the ultra-sparse class: for `g=9,C={1,...,6}`, total companion
+speed is 21 while the optimal transversal `{1,2,5}` has weight 8.  What remains
+is not generic “co-landing.”  A second marginal looks between consecutive
+`g`-walls: allowed `(extra f-wall, companion set)` packets form a finite
+polytope, and lattice discrepancy bounds a run whenever the natural frequency
+vector lies outside it.  This closes a dense `(f,g)=(65,64)` profile that the
+transversal misses.  But `(f,g)=(69,29)` with companions
+`(4,5,12,13,16,27)` lies inside both marginal polytopes and respects every
+fixed-span constraint abstractly.  The missing state is therefore the common
+centered-Beatty event order and carry coupling the `f`-period cluster word to
+the `g`-period packet word, not either frequency vector separately.  The
+originally reported factor-
 one span and `sum c<f` threshold do not survive exact audit, and the stored
 S304 script does not regenerate its `0.589` census.
 
@@ -388,6 +401,30 @@ it is not a uniform collar theorem.  Its conceptual value is that static edge
 covers are plentiful while dynamic covers vanish in the first complete bounded
 atlas: the moving labels and event order, not initial degree counts, do the
 separating.
+
+The dynamic carrier now has an exact minimal form.  With initial excess
+`e^0=d^0-1` and cumulative entry-minus-departure current `C`, every grouped
+event is a sum of `A_12` roots and
+
+```text
+e=e^0+C,       coverage iff e>=0 coordinatewise.
+```
+
+The safe state space is therefore the 50,388 integer points of the seven-chip
+simplex plus a dead state.  The energy is only its quadratic shadow,
+
+```text
+K=K_0+<e^0,C>+||C||^2/2.
+```
+
+All 14,184 initial `K=0` covers still tear.  Exact enumeration shortens the
+bounded proof too: every initial cover tears by `3/8` (38 event groups), and
+every divisor-complete cover by `4/11` (36 groups).  Once the labelled clocks
+generate the root word, the edge multiset can be compiled out of predicate
+testing; the root word itself cannot.  The uniform problem becomes an
+intersection of two languages: a regular safe-current language on the chip
+simplex and the much thinner arithmetic language of root words realizable by
+divisor-complete rational clocks.
 
 ## 2. A candidate underlying object
 

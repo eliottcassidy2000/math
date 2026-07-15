@@ -229,6 +229,12 @@ flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
 edge cover on `Z/13Z`.  The `w=13`, `U subset [1,24]` automaton is empty:
 1,144,066 cores, 101,850 initial covers, 117 grouped event times, zero full-word
 survivors (also zero among 20,604 primitive divisor-complete initial liars).
+In fact every initial cover tears by `3/8` after 38 groups, and every
+divisor-complete one by `4/11` after 36.  Writing `e=e^0+C` turns the carrier
+into an `A_12` root-current walk in the 50,388-state seven-chip simplex;
+coverage is exactly `e>=0` and
+`K=K_0+<e^0,C>+||C||^2/2`.  All 14,184 initial `K=0` covers still tear, so cut
+current—not minimum energy—is the exact quotient.
 
 The r=8 audit changed the target.  THM-779's sampled raw wall ceiling is false:
 `P={1,2,11,12,13}`, a fixed seven-owner permutation stalk, and owner
@@ -253,9 +259,16 @@ factor-one serving bound with the same four-co-visit strand and found that its
 stored script does not regenerate the reported `0.589` census.  The repaired
 theorem is stronger where it is proved: an endpoint-span argument gives
 `L<1+2gc/(f(g-c))` for one fixed companion even with skipped indices; visitor
-sets obey the signed entrant/leaver balance; and companion-density counting
-gives an explicit bound under the correct ultra-sparse hypothesis `sum c<g`.
-Alternation among several companions at general density remains open.
+sets obey the signed entrant/leaver balance.  A new balanced-cluster
+fractional-transversal theorem replaces total companion speed by the minimum
+speed-weight cover of the residue hypergraph.  It strictly extends the
+ultra-sparse class: `g=9,C={1,...,6}` has total 21 but optimal transversal
+`{1,2,5}` of weight 8, giving `M<167/5` for `f=10`.  LP duality identifies
+the surviving profiles as capacity-compatible balanced-cluster mixtures.  An
+orthogonal complete-`g`-period packet polytope closes the dense `(65,64)` row
+with at most two periods.  The exact `(69,29)` tuple survives both marginal
+tests and all fixed-span constraints, proving that the next invariant must
+couple them through one centered-Beatty order/carry word.
 
 Tournament Analysis challenged runners as vertices throughout.  Heavy phase
 cells, character obligations, endpoint events, minimal stalks, top teeth, and

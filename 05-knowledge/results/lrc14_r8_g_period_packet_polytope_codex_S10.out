@@ -1,0 +1,35 @@
+THM-786 dense marginal packet-polytope certificate
+profile A: g-period separator beyond cluster density
+f=65 g=64 companions=(26, 33, 40, 47, 54, 61) sum=261
+inverse_residues=(4, 1, 3, 3, 3, 3, 3, 3) order=(f,g,C)
+balanced_cluster_count=15 characterization=all_2_subsets
+fractional_cluster_cover_optimum=261/2 dual_value=261/2 > g=64
+g_packet_type_count=21 epsilon_counts=(6, 15)
+allowed_packet_characterization=|D|=1+epsilon
+separator=|D|-epsilon<=1 target=65/16 eta=49/16 l1=7
+complete_g_period_bound=T<16/7 hence integer_T<=2
+
+profile B: exact no-go for separate marginal arguments
+f=69 g=29 companions=(4, 5, 12, 13, 16, 27)
+inverse_residues=(6, 1, 2, 3, 3, 6, 4, 6) order=(f,g,C)
+balanced_cluster_count=9 clusters=((5, 12), (13,), (4, 16), (5, 13, 16), (12, 13, 16), (27,), (4, 5, 12, 13, 27), (5, 16, 27), (12, 16, 27))
+fractional_cluster_cover_optimum=49 dual_value=49 > g=29
+cluster_frequency_relaxation={27}:24/29, {5,13,16}:5/29
+fixed_span_checks=((4, 0, 0, Fraction(1957, 1725)), (5, 5, 1, Fraction(973, 828)), (12, 0, 0, Fraction(623, 391)), (13, 5, 1, Fraction(929, 552)), (16, 5, 1, Fraction(1825, 897)), (27, 24, 5, Fraction(284, 23)))
+signed_difference_law=PASS on all 29 cyclic transitions
+g_packet_type_count=18 epsilon_counts=(10, 8)
+exact_target_decomposition_numerators_over_29=((0, (5, 13), 2), (0, (5, 27), 1), (0, (12, 27), 6), (0, (5, 12, 16, 27), 2), (0, (13, 16, 27), 7), (1, (4, 12, 13, 27), 4), (1, (16, 27), 7))
+target_marginals=(epsilon:11/29,C:4/29,5/29,12/29,13/29,16/29,27/29)
+exact_event_walk_max_covered_run=2
+longest_exact_runs=((('13/32', 16), ('19/46', 69)), (('27/46', 69), ('19/32', 16)))
+interpretation=marginal no-go only; exact f/g cell incidence and event order remain essential
+certificate_digest=0a552ab80738d3089b8967a6f83caf842fe35f467e19d1af5a4791d02de103dc
+
+Tournament Analysis / assumption challenge:
+  vertices: allowed g-period packet types (21 in A, 18 in B)
+  gauge: (epsilon, packet mask), yielding a transitive total-order tournament
+  A fingerprint: scores=0..20 cycles=0 sccs=21 hp_count=1
+  B fingerprint: scores=0..17 cycles=0 sccs=18 hp_count=1
+  information lost: hypergraph incidence, convex weights, f-cell/g-cell wall identity
+  exact carrier: labelled two-clock incidence transport + Beatty event word
+PASS

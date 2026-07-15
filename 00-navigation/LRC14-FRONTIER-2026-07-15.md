@@ -84,7 +84,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime-lens endpoint transport | Pairwise midpoint clocks are centered mechanical words with an Euclidean parity cocycle; centered Beatty ranks reconstruct every simultaneous wall and drive the exact `F_7` skew product.  The named r=8 row has 10 simple covered walls with palindromic owner word `162,108,108,206,197,197,206,108,108,162` | THM-778 + 6,400-pair/five-movie exact audit |
 | merged-node tiling fibres | A fixed-path tiling maps to its canonical class and converse-merged node; the inverse node fibre is intrinsically `union HP(T)/Aut(T)`.  All n=3..7 atlases round-trip.  For `n7-a267`, `H=175` and `|Aut|=7` explain the exact 25 masks. | THM-781 + 33,866-tiling exact audit |
 | prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; the redundancy cocycle gives an exact event-word test and rooted states form an `A8` torsor. Raw wall length is unbounded: a divisor-complete persistent seven-stalk family has `2m` covered walls, and an independent simpler family has `21N`. The live target is the stalk-quotiented owner-switch/visitor skeleton. | THM-779/784; MISTAKE-147; exact refuter/A8 audit |
-| r=8 visitor/extent laws | Phi recurrence, period-sum, single-visitor break, cluster balance, no-companion extent pierce, signed visitor-set difference, and the factor-two fixed-companion span are proved. If the six companion speeds sum to less than `g`, an explicit extent bound follows; THM-788 contracts empty fastest periods to active normal form. The old factor-one span and `sum c<f` threshold are false/unsupported; general alternating companions remain open. | THM-783/786/788; MISTAKE-147/148 |
+| r=8 visitor/extent laws | Phi recurrence, signed balance, and factor-two span laws are proved. A finite bound follows if the balanced-cluster hypergraph has fractional speed-weight `<g`, strictly beyond `sum c<g`, or if the orthogonal complete-`g`-period frequency target lies outside its exact packet polytope. The dense `(65,64;26,33,40,47,54,61)` row closes with at most two complete `g`-periods. Exact `(69,29;4,5,12,13,16,27)` data satisfy both marginals and the span laws, proving that their common Beatty order/carry is the missing coupling. THM-788 contracts empty fastest periods to active normal form. | THM-783/786/788 + exact transversal/packet certificates; MISTAKE-147/148 |
 | eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is subsumed by THM-779's integer token walk. The global `1/7+O(gcd/w)` partner-buffer law remains VERIFIED but must be restricted to the core-safe exit set; whole-core blocking and the general-density stalk-quotiented switch bound remain OPEN. | HYP-6840 + THM-779/783/784/786/788 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
@@ -99,7 +99,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored return packet; symmetrization gives safe measure at least `2*72^(-10)` and a component of length at least `72^(-10)/(5 max(U))`; Bohr erosion and a pointwise odd-exception thickness tax hold.  An exact core traps every natural local refinement at `t=4/17` but escapes at `14/19`, so global deep-component selection—not fixed-anchor refinement—is the residual. | THM-782/789 + exact trapping certificate |
-| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier.  FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors).  Uniform tear remains open. | THM-792 + exact 117-event-group certificate |
+| even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative and a quadratic energy cocycle. FINITE-EXACT: all 101,850 initial height-24 covers tear by `3/8` (38 groups), and all divisor-complete covers by `4/11` (36 groups). Uniform arithmetic-language exclusion remains open. | THM-792 + exact root-current/prefix certificate |
 | n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty; unbounded shallow descent, global eroded-packet noncontainment, uniform collar tear, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
@@ -228,6 +228,16 @@ produces a labelled moving edge cover on thirteen quotient sheets.  For `c=1`
 and `U subset [1,24]`, an exact sweep of all 1,144,066 cores and 117 grouped
 event times leaves zero survivors.  This is a new finite slice, not the missing
 uniform automaton tear.
+
+The sweep is actually a short-prefix theorem: every initial cover tears by
+the 38th group at `3/8`, and every divisor-complete initial cover by the 36th
+at `4/11`.  With initial excess `e^0` and cumulative grouped root current `C`,
+coverage is precisely `e^0+C>=0` coordinatewise, and
+`K=K_0+<e^0,C>+||C||^2/2`.  Thus the finite state is the 50,388-point
+seven-chip simplex plus a dead state.  Labels can be compiled into the
+`A_12` root word, but that word cannot be discarded; the uniform theorem is
+an intersection problem between a regular safe-current language and the thin
+arithmetic language generated by divisor-complete rational clocks.
 
 The collar overlap degrees carry the exact energy
 `K=sum_j binom(d_j-1,2)`.  A simple event satisfies

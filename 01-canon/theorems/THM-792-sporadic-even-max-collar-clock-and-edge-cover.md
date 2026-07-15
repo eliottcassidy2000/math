@@ -1,7 +1,7 @@
 ---
 id: THM-792
-title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover carrier, and no w=13 packet through quotient height 24
-status: PROVED (quantifier-exact reductions) + VERIFIED (finite-exact w=13 closure for U subset [1,24]; does not exclude the unbounded collar)
+title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover/root-current carrier, and no w=13 packet through quotient height 24
+status: PROVED (quantifier-exact reductions and cut-current/energy identities) + VERIFIED (finite-exact w=13 closure for U subset [1,24], by 3/8 in general and 4/11 in the divisor-complete subatlas; does not exclude the unbounded collar)
 source: codex-2026-07-14-S10
 depends_on:
   - THM-668-pair-sum-ruler-witness-structure
@@ -291,9 +291,118 @@ respectively.  Thus the labelled event word and transition instance are
 indispensable.  THM-791's Hamiltonian-path coordinate is complementary in the
 general metagraph, but here chronology is transitive with one path and the
 fixed cyclic tie path has no additional resolving power.  The theorem-bearing
-object remains (13), now equipped with `K` as telemetry.
+object must retain the labelled event word as well as chip incidence.  The next
+subsection shows that, once the initial chip state and event word are fixed,
+the full labelled edge multiset in (13) is redundant for the coverage test.
 
-## 4. The `w=13`, quotient-height-24 automaton always tears
+### 3.2 The exact cut-current and quadratic-energy cocycle
+
+There is a sharper state description.  Work in generic chambers, applying all
+updates at the same rational event before entering its immediately-right
+chamber.  Let `d^0` be the sheet-degree vector immediately right of `2/13` and
+put
+
+```text
+e^0=d^0-1,                  sum_j e^0_j=7.
+```
+
+For the event `k/u`, with `r_u=u^(-1) mod 13`, define its departure, entry,
+and signed root current by
+
+```text
+a_(u,k)=-(k-1)r_u,          b_(u,k)=-(k+1)r_u,
+z_(u,k)=delta_(b_(u,k))-delta_(a_(u,k)).                 (17)
+```
+
+For a chamber immediately right of `s`, group equal rational events and set
+
+```text
+C(s)=sum_(u in U, 2u<13k, k/u<=s) z_(u,k).               (18)
+```
+
+Then the seven-chip state and the coverage predicate are exactly
+
+```text
+e(s)=e^0+C(s),
+edge cover at s  iff  C_j(s)>=-e^0_j for every sheet j.  (19)
+```
+
+Equivalently, for every sheet cut `S subset Z/13Z`, put
+`C_S=sum_(j in S) C_j`.  This is net labelled current entering `S`, and
+
+```text
+e_S(s)=e^0_S+C_S(s).                                    (20)
+```
+
+All cut inequalities `e^0_S+C_S>=0` are equivalent to the thirteen singleton
+inequalities in (19).  At a first tear, every newly missing singleton has
+`C_j=-e^0_j-1`: its initial chip capacity is overdrawn by exactly one.  Thus
+the moving-edge obstruction is a labelled walk by roots
+`delta_b-delta_a` in the `A_12` root lattice, killed when it exits the integer
+simplex
+
+```text
+{e in Z_(>=0)^13 : sum e_j=7},                           (21)
+```
+
+whose unlabelled state space has `binom(19,7)=50,388` points.  The runner
+labels and phase-coset word generate the roots.  Discarding the resulting root
+word destroys the predicate; retaining the roots allows the labels themselves
+to be compiled out of the coverage test.
+
+On this affine root walk, `K` has the integrated identity
+
+```text
+K(s)=K(2/13+)+<e^0,C(s)>+||C(s)||^2/2.                  (22)
+```
+
+Indeed, `K(e)=(sum e_j^2-7)/2` and `sum C_j=0`.  More locally, if a grouped
+event has total root increment `z`, then, whenever both adjacent chambers are
+covered and `e` denotes the pre-event state,
+
+```text
+Delta K=<e,z>+||z||^2/2.                                (23)
+```
+
+Formula (15) is the simple-root-step specialization.  This identifies what
+the scalar energy retains: the squared displacement and its pairing with the
+initial chip allocation.  It forgets the thirteen cut coordinates that decide
+exit.
+
+If `supp(e)={j:e_j>0}`, then
+
+```text
+7-|supp(e)| <= K(e),                                    (24)
+```
+
+with equality exactly when every chip stack has height at most two.  In
+particular `K=0` means seven unit chips on seven distinct sheets, but it is not
+a safe barrier: the exact height-24 atlas has `14,184` initial covers with
+`K=0`, and all of them tear.  The cut-current vector, rather than energy alone,
+is an exact predicate-preserving quotient once the event roots are fixed.
+More precisely, (13) reduces for predicate testing to
+
+```text
+(initial excess vector e^0, grouped root-increment word, current cursor).    (25)
+```
+
+The next root in (17) updates `e` directly, so no edge reconstruction is
+needed to decide coverage.  Runner labels can therefore be compiled out after
+they generate the root word.  They remain essential on the arithmetic side,
+where they constrain which root words are realizable.  The two energy-liar
+cores prove that the root-event word itself cannot be removed from (25).
+
+This separates the uniform problem into two languages.  The grouped sums of
+at most ten `A_12` roots form a finite alphabet, and (21), with one added dead
+state, recognizes the regular **safe-current language**.  The ten rational
+clocks generate a much thinner arithmetic language of realizable grouped root
+words.  Uniform collar closure is therefore an intersection problem: show
+that the divisor-complete arithmetic language has no word whose whole relevant
+factor remains in the 50,388-state safety automaton.  Unbounded quotient
+height enlarges the generating clocks and word length, not the chip state
+space.
+
+## 4. The `w=13`, quotient-height-24 automaton tears by a short prefix
 
 There is no tight two-sheet packet
 
@@ -327,11 +436,53 @@ At an event a runner's closed danger set is the union of its left and right
 edges, so coverage of all open chambers is equivalent to the required closed
 predicate, including simultaneous events.
 
-Exactly `101,850` cores cover the initial chamber, but **zero** survive the
-full event word.  In the THM-772 subatlas, `131,183` cores are
-divisor-complete for moduli `2,...,12`, `131,149` of those are primitive, and
-respectively `20,612` and `20,604` are initial static covers; again zero
-survive.  The canonical event and decision digests are
+Exactly `101,850` cores cover the initial chamber, but **every one tears by
+the event at `3/8`**, after only the first `38` of the `117` grouped events.
+Here a tear at `s` means that the immediately-right open chamber is uncovered.
+Exactly three cores reach that last event:
+
+```text
+(1,2,3,5,6,7,8,9,10,11),
+(1,2,3,5,6,7,8,9,11,20),
+(1,2,5,6,7,8,9,10,14,22).
+```
+
+In each case the `u=8` slide at `3/8` leaves sheet `3` and enters sheet `6`,
+overdrawing the sheet-`3` singleton cut.
+
+The THM-772 subatlas is sharper.  Of `131,183` cores that are
+divisor-complete for moduli `2,...,12`, `131,149` are primitive, and
+respectively `20,612` and `20,604` are initial static covers.  Every
+divisor-complete initial cover tears by `4/11`, after `36` event groups.  The
+only two that reach that last event are
+
+```text
+(1,2,6,7,8,9,10,14,22,24),
+(2,6,8,10,14,16,18,20,22,24).
+```
+
+The first is primitive and the second has gcd two.  In both, the `u=22` slide
+at `4/11` leaves sheet `5` and enters sheet `12`, overdrawing the sheet-`5`
+cut.  Thus the primitive divisor-complete atlas has just the first final
+carrier.
+
+The collision-energy stratification of the `101,850` initial covers is
+
+```text
+K:      0      1      2      3     4    5    6    7  9  10  11
+count: 14184  43927  26518  11036  4838  201  922  193  1  28   2.
+```
+
+Immediately before each core's first tear the corresponding histogram is
+
+```text
+K:      0      1      2     3     4    5    6    7  9  10  11
+count: 15270  45098  26853  9518  4254  204  511  127  1  12   2.
+```
+
+So neither small nor large energy separates survivors; the exact separation
+is the first violated cut in (19).  The canonical event and decision digests
+remain
 
 ```text
 b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca
@@ -354,6 +505,7 @@ The challenged vertex sets are:
 
 - top teeth with ordered flank-owner sets for (7)--(8);
 - thirteen sheet vertices with labelled Cayley edges for (9)--(13);
+- thirteen sheet cuts and `A_12` root currents for (17)--(23);
 - proof obligations `(tooth side, owner)` or `(event, overlap chip)`.
 
 The first quotient preserves repeated collar incidence; the second preserves
@@ -370,10 +522,12 @@ hypothetical even-maximum collar row simultaneously carries:
    dichotomy (3);
 2. a uniform positive safe mass distributed over top teeth, with repeated
    disjoint flank-owner types;
-3. in the deep branch, a seven-chip moving edge cover on `Z/13Z` driven by an
-   exact Christoffel/phase-coset word;
+3. in the deep branch, a seven-chip moving edge cover on `Z/13Z`, equivalently
+   a cut-constrained `A_12` root-current walk driven by an exact
+   Christoffel/phase-coset word;
 4. for the forced exception `w=13`, an exact tear for every quotient core
-   through height 24.
+   through height 24, by `3/8` in general and `4/11` in the divisor-complete
+   subatlas.
 
 These are the next finite/arithmetic coordinates on which a uniform exclusion
 can act.
