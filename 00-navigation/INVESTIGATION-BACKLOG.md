@@ -107,7 +107,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/807;
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776/780/782/789/792/795/797/800/803/804/806/807/810;
   HYP-6820; exact endpoint-splice and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -122,11 +122,13 @@
   height.  THM-800 then closes the residue-preserving Hamming-two star:
   oriented half-open deck capacity forces common scale at exact tightness, and
   the normalized proper double lift has the sharp floor `M>=2/25`.  The
-  shallow residual starts at labelled radius three.  THM-804 now proves that
-  every tight residue-preserving three-replacement lift has common AP scale.
-  The genuine scale-one Hamming-three chart and radius at least four remain.
-  THM-806 reserves a promising collar reduction for the scale-one chart, but
-  its component-containment proof and corrected replay are still in progress.
+  shallow residual starts at labelled radius three.  THM-804 forces every
+  hypothetical tight three-replacement lift to common scale, and THM-806
+  closes the remaining base: a collar handoff gives one lift in `[14,24]`,
+  safe-window bounds give `v<=381,w<=12v`, and all `5,713,539` exact rows are
+  loose.  THM-810 classifies the first radius-four deck obstruction: common
+  scale or four order-three labels on a coset of `<5>`, with the latter
+  normalizing to an `s=3` deep packet.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -176,13 +178,15 @@
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; THM-795 proves it on every Hamming-one AP star;
   THM-800 proves strict looseness throughout the residue-preserving
-  Hamming-two AP star; and THM-804 forces common scale for every tight
-  three-replacement lift.  The first unresolved base is the genuine scale-one
-  Hamming-three chart, followed by radius at least four.  Build its bipartite
-  sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
-  defect, a normalized floor, or a new descent tied to a decreasing invariant.
-  Audit THM-806's proposed bounds before using its finite box; it is claimed,
-  not proved.
+  Hamming-two AP star; THM-804 forces common scale for every hypothetical
+  tight three-replacement lift; and THM-806 proves the normalized triple chart
+  empty.  The first unresolved shallow base is radius four.  THM-810 reduces
+  its off-scale deck geometry to one exact alternative: all orders are three,
+  the labels form `a<5>`, and complementary labels share the same mod-three
+  parity.  Attack the scale-one Hamming-four chart and this eight-core/four-
+  exception `s=3` interface together.  The predicate carrier is the bipartite
+  owner-sheet incidence with half-open germ orientation and parity, not a
+  runner tournament or scalar capacity table.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put

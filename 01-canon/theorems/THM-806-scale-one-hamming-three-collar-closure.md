@@ -159,7 +159,7 @@ and `u_r/u_q<=2`.  The reverse residue is `2^(-1)=7`, but a handoff with
 residue `7` requires provider/owner ratio in
 
 ```text
-(3,4]                                                      (14)
+[3,4)                                                      (14)
 ```
 
 in its first positive band.  It cannot occur at a ratio at most two.
@@ -171,7 +171,7 @@ Name the three speeds `A>B>C`.  There are two cyclic orders.
 1. If `B->A`, `C->B`, and `A->C`, the two descending arrows give residue
    ratios `2,2` and speed ratios at least `1/2`.  Hence the residue of `A/C`
    is `4^(-1)=10`, while `A/C<=4`.  But residue `10` first becomes eligible
-   only for ratio in `(9/2,11/2]`, a contradiction.
+   only for ratio in `[9/2,11/2)`, a contradiction.
 
 2. If `C->A`, `A->B`, and `B->C`, then `C/A>=1/2`, so `A/C<=2`.  Both ratios
    `A/B` and `B/C` lie strictly between one and two.  In that metric band,

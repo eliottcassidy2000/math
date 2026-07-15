@@ -22,13 +22,17 @@ The statement that the `n=12` sporadic branch is empty **uniformly is still
 open in this repository**.  THM-795 removes the entire Hamming-one star around
 every shallow arithmetic-progression dilation, at every lift height,
 THM-800 removes the residue-preserving Hamming-two star, and THM-804 forces
-every tight Hamming-three lift back to common scale. THM-797 proves a
-general odd-divisor grid obstruction and a strong `q=13` support gate in the
-two-sheet branch.  These theorems do not close genuine scale-one
-Hamming-three lifts, Hamming radius at least four,
-every binding scale, or every owner-labelled deep component.  A finite
-census, a shallow rigidity theorem, and a uniform branch theorem are three
-different statements.
+every tight Hamming-three lift back to common scale. THM-806 closes that
+scale-one triple chart, so the entire AP-centred Hamming-three star is loose
+at arbitrary height. THM-810 then identifies the first shallow/deep seam:
+at Hamming four, oriented scalar coverage forces either common scale or four
+order-three labels on a coset of `<5>`, the latter normalizing to an `s=3`
+packet. THM-797 proves a general odd-divisor grid obstruction and a strong
+`q=13` support gate in the two-sheet branch. These theorems do not close the
+scale-one Hamming-four chart, the quartic `s=3` packet, higher Hamming radii,
+every binding scale, or every owner-labelled deep component. A finite census,
+a shallow rigidity theorem, and a uniform branch theorem are three different
+statements.
 
 Those corrections do not merely narrow the frontier.  They identify the
 kind of object the frontier requires.
@@ -313,17 +317,17 @@ all sheets blocked
 THM-800 applies the same pattern to two replacement colours: exact tightness
 forces both deck orders to one, and the descended proper double lift has
 `M>=2/25`. THM-804 proves the analogous common-scale descent for three
-replacement colours. The remaining radius-three base is exactly the genuine
-scale-one triple-lift chart; radius at least four is also open. Its
-natural carrier is not a tournament on speeds but the bipartite incidence of
-missing-owner splice sheets with replacement teeth, decorated by deck order,
-one-sided germ orientation, exact margin, and owner.  A Hall, Smith-normal-form,
-or common-divisor lemma on this carrier would generalize the successful
-Hamming-one/two/three descents, but the scale-one chart also needs actual lift
-heights and metric tooth placement because all deck orders there equal one.
-THM-806 reserves a concrete collar/finite-box attack on that metric chart, but
-its proof and corrected full replay remain in progress; it is not a new
-descent theorem yet.
+replacement colours. THM-806 closes the remaining scale-one triple chart:
+the oriented collar handoff forces one lift into `[14,24]`, lower-dimensional
+safe windows bound the other two by `v<=381` and `w<=12v`, and exact component
+containment rejects all `5,713,539` canonical rows. Thus the whole
+Hamming-three star is closed. THM-810 shows why radius four is qualitatively new.
+Oriented scalar coverage either descends to common scale or yields the exact
+order-three label coset `a<5>`; overlap feasibility then depends on
+complementary mod-three owner-sheet parity and normalizes to an `s=3` deep
+packet. Its natural carrier is not a tournament on speeds but the bipartite
+incidence of missing-owner splice sheets with replacement teeth, decorated by
+deck order, one-sided germ orientation, exact margin, parity, and owner.
 The half-open arc `(-1/13,1/13]` is theorem-bearing data: germ orientation is
 a one-bit local coefficient, not a cosmetic endpoint convention.  Erasing it
 destroys the own/complement deck-capacity asymmetry used by the descent.
@@ -432,8 +436,8 @@ A credible proof must combine, rather than substitute among:
 - sheet ramification and effective deck orders;
 - odd divisor and half-grid shells, beginning with but not ending at `q=13`;
   and
-- the genuine scale-one Hamming-three chart plus radius at least four, after
-  THM-795/800/804 close or descend every smaller/off-scale chart.
+- the scale-one Hamming-four chart and THM-810's quartic order-three `s=3`
+  interface, after THM-795/800/804/806 close every smaller chart.
 
 The next local theorem should say that a fully saturated sheet-tooth incidence
 either exposes a negative margin, forces a common divisor and descends, or
@@ -538,6 +542,12 @@ role is now sharper.
   gauges differing by seven edges. Both have singleton SCCs and one
   Hamiltonian path, while the owner-labelled component selector detects the
   escape missed by the ranked grid obligations.
+- THM-810's left- and right-capacity gauges are the same transitive
+  four-vertex tournament: zero edge flips, singleton SCCs, and one Hamiltonian
+  path. Nevertheless the exceptional order-three row has eight owner-sheet
+  incidence flips, and its complementary parity decides overlap feasibility.
+  This is a clean case where the tournament is maximally stable while the
+  theorem-bearing stalk changes.
 
 Thus cycles can signal holonomy and edge flips can signal observer dependence,
 but neither is automatically an obstruction or a witness.
@@ -598,7 +608,9 @@ singleton component. THM-804 supplies the multiplicative companion: residue
 gains on an owner cycle must telescope to one, and the forbidden `+/-2` cycle
 products close the nontrivial deck-order cases. At deck order one that gain
 obstruction becomes trivial, explaining why THM-806 must retain the ordered
-metric collar word. The transfer does not certify that a word is arithmetically
+metric collar word. At four colours THM-810 finds the other failure mode:
+the scalar order stays transitive while a mod-three owner-sheet parity stalk
+decides overlap. The transfer does not certify that a word is arithmetically
 realizable; phase cell, owner/return provenance, and component address remain
 the sidecar.
 
@@ -618,6 +630,15 @@ node is a base-chart address.  THM-781's Hamiltonian-path quotient explains
 the observer fibre.  Neither supplies the endpoint/grid stalk.  The lonely
 runner predicate lives on a section of the decorated metagraph, not on its
 unweighted node label.
+
+The live-main THM-812 transport makes this preservation rule exact in a
+separate combinatorial model. Its centered continued-fraction coordinate copy
+does not descend on bare metagraph nodes, but it does descend injectively on
+all twenty projected coloured-edge fibres. A degree-three coefficient shadow
+then loses one fixed-core pair, repaired by exactly three quartic cross-leg/
+apex coefficients. This is not an LRC theorem, but it independently matches
+THM-810's first radius-four lesson: transport becomes faithful only after the
+edge/incidence fibre and its quartic stalk are retained.
 
 Tournament fingerprints worth recording remain:
 
@@ -688,8 +709,10 @@ return to the same combinatorics at a different metric location.
 ```
 
 THM-794/802 exhibit the third and show that the loop language is larger than
-the central once-per-owner packet.  THM-795/800/804 turn the second into
-common-scale descent through three replacement colours.  THM-797/803 show why
+the central once-per-owner packet. THM-795/800/804/806 turn the second into
+complete looseness through three replacement colours. THM-810 shows that the
+fourth colour can change carrier altogether, from a shallow splice chart to a
+three-sheet owner-parity packet. THM-797/803 show why
 the first observation chart may be silent, how denominator pullback produces
 anti-grids, and how the remaining continuum compiles to an exact endpoint/cusp
 selector while another component escapes.  THM-798/799 show that transverse fragmentation can grow

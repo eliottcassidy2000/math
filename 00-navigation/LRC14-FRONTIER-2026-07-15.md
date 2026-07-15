@@ -104,13 +104,13 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
 | shallow AP Hamming-two star at arbitrary height | PROVED scale-free: oriented half-open splice decks force both replacements back to the common AP scale at exact tightness; the normalized proper double lift then has the sharp floor `M>=2/25>1/13`. Thus every residual shallow packet has labelled Hamming radius at least three from every AP dilation. | THM-800 + exact 600,756-row replay |
-| shallow AP Hamming-three scale descent | PROVED scale-free: if a residue-preserving three-replacement lift is tight, all three deck orders are one and all replacements share the AP scale. Thus every off-scale Hamming-three branch descends to a genuine scale-one triple lift; looseness of that normalized chart remains open. | THM-804 + exact 296,640-grid / 11,143,660-capacity replay |
-| scale-one Hamming-three collar attack | CLAIMED / AUDIT IN PROGRESS: scratch work proposes one lift `<=24`, then bounds the others by `v<=381`, `w<=12v`; the component-containment proof and corrected full replay are unfinished. No closure may use this row yet. | THM-806 reservation |
+| shallow AP Hamming-three star at arbitrary height | PROVED scale-free. THM-804 forces every hypothetical tight three-replacement packet to common scale. THM-806 then proves every proper scale-one triple lift loose: a collar-handoff cycle forces one lift into `[14,24]`, lower-runner safe windows give `v<=381,w<=12v`, and all `5,713,539` exact component-containment rows fail. Thus the full Hamming-three star is closed. | THM-804/806 + exact 296,640-grid / 11,143,660-capacity / 5,713,539-component replays |
+| shallow Hamming-four deck interface | PROVED necessary classification: oriented scalar coverage forces either four order-one decks (common-scale descent) or four order-three decks whose labels form a coset of `<5>={1,5,8,12}`. Exact overlap survives in four parity patterns and normalizes to an `s=3` packet with eight on-sheet and four off-sheet speeds. The scale-one Hamming-four chart and this quartic three-sheet residual remain OPEN. | THM-810 + exact 141,230-row Cayley/overlap replay |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a factor-2 seam and a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Exact liars show that fixed anchors, raw component tournaments, exception-divisor grids, and signed residue support all lose the escape predicate. THM-803 now constructs the exact all-component selector on `K_U=E_U+closure(R_U)` and a sharp row for which every grid and global maximizer is silent but the nonmaximal component `7/22` escapes. The remaining theorem is uniform failure or incompatibility of those finite selector obligations, not construction of the selector. | THM-782/789/797/803 + exact trap/erosion-liar/anti-grid/component certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one and Hamming-two stars at arbitrary height; every off-scale residue-preserving Hamming-three branch by descent; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; the connected-return selector compression; and the forced-`w=13c` quotient box through height 24. Remaining: genuine scale-one Hamming-three lifts (THM-806 only claimed) and radius at least four; uniform negative margin on THM-803's exact signed-complement selector, including disconnected-return satellites; an unbounded-height collar tear; and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/807; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full Hamming-one, Hamming-two, and Hamming-three stars at arbitrary height; every two-sheet core in `[1,19]` with unbounded odd exceptions; the full two-sheet speed box through 100; every non-signed-complement `q=13` profile; the connected-return selector compression; and the forced-`w=13c` quotient box through height 24. Remaining shallow: scale-one Hamming radius at least four plus THM-810's exact quartic order-three `s=3` interface. Remaining deep: uniform negative margin for disconnected-return selector satellites, an unbounded-height collar tear, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -225,11 +225,14 @@ exact owner-CSP settles all shallow labelled packets through lift height twelve
 every proper residue-preserving Hamming-one lift of every unit AP dilation is
 loose.  THM-800 closes the next stratum uniformly: at exact tightness, oriented
 half-open splice-deck capacity forces two replacements to share the AP scale,
-and every normalized proper double lift has `M>=2/25`. THM-804 now proves the
-next descent: exact tightness at Hamming radius three forces
-all three replacements to share the AP scale.  The genuine scale-one
-Hamming-three chart remains open, as do radius at least four and the deep
-colour-cover branch.
+and every normalized proper double lift has `M>=2/25`. THM-804 forces exact
+tightness at Hamming radius three to common scale, and THM-806 closes that
+scale-one base: one replacement lies in `[14,24]`, the others satisfy
+`v<=381,w<=12v`, and an exact `5,713,539`-row component sweep has no tight
+packet. THM-810 identifies the first live ramification at radius four: either
+common scale, or the order-three quartic coset `<5>` which normalizes directly
+into an `s=3` deep packet. The scale-one Hamming-four chart, that structured
+three-sheet residual, and the other deep colour covers remain open.
 
 The two-sheet edge is now considerably narrower.  THM-772 proves that its
 ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
@@ -342,9 +345,11 @@ endpoint-owner CSP: the only zero-defect rows are `c*{1,...,12}` for
 shallow sporadic slice through `max A<=168`. THM-795 additionally closes all
 higher shallow lifts at labelled Hamming distance one from any AP dilation;
 THM-800 closes every proper residue-preserving labelled Hamming-two lift and
-gives the sharp normalized floor `2/25`. THM-804 proves common-scale descent
-for three replacements, leaving genuine scale-one Hamming-three lifts, radius
-at least four, and every deep branch. The residue-obligation and
+gives the sharp normalized floor `2/25`. THM-804/806 close the complete
+Hamming-three star at arbitrary height. THM-810 then splits the first live
+Hamming-four chart into common-scale packets and one exact order-three quartic
+coset interface with the `s=3` deep branch. Radius at least four and every
+deep branch remain. The residue-obligation and
 sheet-margin tournaments are transitive telemetry; the proofs live in the
 endpoint-owner hypergraph and the missing-splice sheet-danger deck with
 oriented core-safe germs.
@@ -355,6 +360,6 @@ oriented core-safe germs.
 > but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
 *Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
-THM-768--770, THM-794/795/797/800--804,
+THM-768--770, THM-794/795/797/800--804/806/807/810,
 and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

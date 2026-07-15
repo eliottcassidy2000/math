@@ -48,6 +48,8 @@ related:
   - THM-804
   - THM-806
   - THM-807
+  - THM-810
+  - THM-812
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -95,8 +97,10 @@ session nevertheless changes the frontier in eight material ways:
    capacity forces both replacements to the common AP scale at exact
    tightness, after which every proper normalized double lift has the sharp
    floor `M>=2/25`. THM-804 proves the corresponding common-scale descent for
-   three replacements; only the genuine scale-one triple chart remains at
-   radius three, followed by radius at least four.
+   three replacements, and THM-806 closes the scale-one triple chart by an
+   exact collar/component argument. The whole Hamming-three star is therefore
+   loose. THM-810 splits the first live radius-four chart into common scale and
+   one quartic order-three coset packet that is already an `s=3` deep branch.
 7. THM-797 turns odd exception divisors and their one-sided walls into global
    selectors.  At `q=13`, double-13 and full support are impossible; the sole
    survivor is the exact signed complement of `+/-y`, with a `2/13` core
@@ -950,18 +954,17 @@ the irreducible sidecar.
 The branch is finite in principle, but the following uniform arguments are
 still missing.
 
-1. **Shallow full-residue rigidity at scale-one Hamming radius three and
-   beyond.** THM-770
+1. **Shallow full-residue rigidity at Hamming radius four and beyond.** THM-770
    closes lift height twelve, THM-795 closes every arbitrary-height
    Hamming-one star around an AP dilation, and THM-800 closes the full
    Hamming-two star.  Its proof first forces both replacement deck orders to
    one at exact tightness, then gives the sharp normalized floor `2/25`.
-   THM-804 now proves the three-replacement common-scale descent by an exact
-   half-open capacity/residue-ratio argument. What remains at radius three is
-   precisely the genuine scale-one triple-lift chart; radius at least four is
-   also open. THM-806 reserves a collar/finite-box attack on the scale-one
-   chart, but its proof and corrected full replay are explicitly still in
-   progress.
+   THM-804 proves the three-replacement common-scale descent and THM-806 closes
+   its normalized base by an exact `5,713,539`-row collar/component sweep.
+   THM-810 then reduces Hamming four to two joined bases: the scale-one chart,
+   and a quartic order-three coset packet with complementary mod-three parity
+   that normalizes to an eight-core/four-exception `s=3` branch. These, followed
+   by higher radii, are open.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of

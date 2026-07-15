@@ -657,11 +657,13 @@ failures.  Hence the shallow AP residual begins at labelled Hamming radius
 three. THM-804 now proves the three-replacement common-scale descent by a
 half-open capacity and residue-gain argument: every tight arbitrary-scale row
 descends to a genuine scale-one triple lift. The proof is symbolic; the exact
-replay adds 296,640 direct grids and 11,143,660 relaxed capacity rows. It does
-not prove the normalized triple lifts loose, so that chart and radius at least
-four remain open. THM-806 now reserves a collar reduction of that scale-one
-chart to a proposed finite box, but its component-containment proof and
-corrected replay remain in progress; it is not counted as closure.
+replay adds 296,640 direct grids and 11,143,660 relaxed capacity rows. THM-806
+now closes the normalized base: an oriented collar handoff puts one lift in
+`[14,24]`, lower-dimensional safe windows give `v<=381,w<=12v`, and an exact
+component-containment sweep rejects all 5,713,539 canonical rows. Its two
+first-band intervals are half-open `[3,4)` and `[9/2,11/2)`; an endpoint-order
+typo was corrected without changing either contradiction. Consequently the
+full AP-centred Hamming-three star is uniformly loose.
 
 THM-802 simultaneously widened the prime-seven obstruction language.  Its
 affine phase-cell lemma pumps any phase-realizable prefix-legal collision loop
@@ -747,6 +749,14 @@ be a Markov state.  The LRC design consequence is to add overlap-phase data to
 the proposed component/stalk/event tensor and audit gluing across divisor,
 deletion, and packet charts; this is a preservation rule, not an LRC theorem.
 
+A final live pull supplied THM-812's first exact centered-CF action on that
+metagraph stalk. The coordinate copy fails to descend on bare nodes but maps
+all twenty projected coloured-edge fibres injectively; degree three then loses
+one fixed-core pair, repaired by exactly three quartic cross-leg/apex
+coefficients. This remains an analogy, not an LRC implication. Its relevance
+is the preservation boundary: independently of THM-810, the first faithful
+transport again requires an edge/incidence fibre plus quartic stalk data.
+
 THM-807 now proves the next deep-selector split. The exact zero return
 component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
 endpoint/cusp selector, equivalent to full erosion when the closed return set
@@ -757,6 +767,19 @@ incidences, not by component count alone. Exact signed-complement rows make
 all multiplier grids through `d=7`, or every even grid through `d=18`, silent
 or trapped before their connected-return selectors escape. Both rows are loose
 method boundaries, not tight packets.
+
+THM-810 identifies the first exact shallow/deep gluing seam. For four
+replacement labels, oriented scalar owner coverage forces either all deck
+orders to one or all orders to three on a coset of
+`<5>={1,5,8,12}`. In the exceptional row, overlap is feasible exactly when
+the mod-three signs agree on complementary labels, leaving four parity
+patterns. After the common gcd is removed, the packet is
+`3([12] minus a<5>) union {u_r:r in a<5>}`: eight on-sheet speeds and four
+exceptions on an `s=3` branch. The exact Cayley/overlap replay checks 141,230
+rows. Both scalar capacity gauges are the same transitive `T_4` with zero edge
+flips, yet the owner-sheet incidence has eight flips and parity decides the
+verdict. Thus the bare tournament is maximally blind precisely at the first
+Hamming-four ramification.
 
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
@@ -776,13 +799,13 @@ after the `w=13c`, height-24 multiplier lane; uniform failure or incompatibility
 of THM-803's exact signed-complement all-component selector after THM-807's
 connected-return compression; a quotient by the
 full affine diagonal-isotropy subgroupoid joining
-THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
-radius at least four after THM-804 (THM-806 is an audit-in-progress attack,
-not closure); and a scale-normal argument for
+THM-778/779/783/786/788/794/802; the scale-one Hamming-four chart and
+THM-810's quartic order-three `s=3` interface after THM-806 closes the whole
+Hamming-three star; and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/807 plus claimed THM-806; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three, affine-packet, anti-grid/component-selector,
