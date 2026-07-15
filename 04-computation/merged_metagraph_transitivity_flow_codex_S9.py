@@ -128,6 +128,24 @@ def audit_closed_forms(max_n: int = 30) -> dict:
         failures += sum(defects.values()) != sum(black.values())
         failures += max(blue) != n - 2
         failures += any(step % 2 != n % 2 for step in blue)
+        total_endpoint_states = 1 << (2 * (n - 3) + 1)
+        moment_s = moment_e = moment_ss = moment_ee = moment_se = 0
+        for shared in (0, 1):
+            for left_wins in range(n - 2):
+                for right_wins in range(n - 2):
+                    weight = math.comb(n - 3, left_wins) * math.comb(
+                        n - 3, right_wins
+                    )
+                    flux = 2 * shared - 1 + left_wins - right_wins
+                    defect = left_wins + right_wins - (n - 3)
+                    moment_s += weight * flux
+                    moment_e += weight * defect
+                    moment_ss += weight * flux * flux
+                    moment_ee += weight * defect * defect
+                    moment_se += weight * flux * defect
+        failures += moment_s != 0 or moment_e != 0 or moment_se != 0
+        failures += 2 * moment_ss != (n - 1) * total_endpoint_states
+        failures += 2 * moment_ee != (n - 3) * total_endpoint_states
     assert failures == 0
     return {"n_min": 3, "n_max": max_n, "failures": failures}
 

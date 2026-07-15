@@ -81,6 +81,19 @@ current changes.  This turns “what information must be preserved?” into an
 objective minimality experiment.  It may also explain the visual left/right
 effect without fitting it after the fact.
 
+At the raw endpoint-bit level the kernel already has a closed bivariate
+description:
+
+```text
+v^(-(n-3))(u+u^-1)(1+uv)^(n-3)(1+u^-1 v)^(n-3).
+```
+
+Its two exponents are `(Delta C3,epsilon)`.  They have zero covariance and
+variances `(n-1)/2` and `(n-3)/2`.  This is the broken convention that seems
+most useful: draw the metagraph over this two-dimensional probability cloud,
+then regard node fibres as measurable packets, rather than forcing the nodes
+themselves onto one line and asking the drawing to remember discarded mass.
+
 For the four-coordinate LRC object, this is a model rather than a solution.
 The tournament node is a chamber label; the tiling fibre is an observer-cut
 fibre; endpoint mechanical words give directed wall transport; owner and sheet

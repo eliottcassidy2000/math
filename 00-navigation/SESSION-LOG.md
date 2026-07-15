@@ -185,6 +185,12 @@ dependent: raw `n=7` current is reverse (`2798` versus `1254`), but division by
 available black source masks (`25460` pure-black, `6796` mixed) gives rates
 `10.99%` reverse versus `18.45%` outward.  The reverse raw current is therefore
 a fibre-volume effect, not a per-state transport preference.
+Finally, the raw endpoint-bit packet has the closed bivariate kernel
+`v^(-(n-3))(u+u^-1)(1+uv)^(n-3)(1+u^-1v)^(n-3)` in
+`(Delta C3,epsilon)`.  The coordinates are centered, uncorrelated, and have
+variances `(n-1)/2,(n-3)/2`.  This replaces the one-dimensional black-sea
+metaphor by an exact symmetric probability cloud whose iso-class
+disintegration creates the observed currents.
 
 ---
 

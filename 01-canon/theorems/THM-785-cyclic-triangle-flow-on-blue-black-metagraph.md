@@ -227,6 +227,33 @@ D_n(0)=2^(m-2p-1) binom(2p,p) - 2^(r-1),                (12)
 where the subtracted term is the complete blue locus.  Equations (8),
 (10)--(12) were asserted against every line at `n=3..7` with zero failures.
 
+The two one-dimensional laws are marginals of a simpler exact two-dimensional
+object.  Write `S=Delta C3` and `e=epsilon`.  Before the irrelevant free tile
+bits are counted, their joint Laurent generating function is
+
+```text
+G_n(u,v)=v^(-p)(u+u^(-1))(1+uv)^p(1+u^(-1)v)^p.        (12a)
+```
+
+The number of masks with `(S,e)=(s,e)` is
+`2^(m-(2p+1)) [u^s v^e]G_n`.  The factors respectively encode the shared
+endpoint arc, the `p` left bits, and the `p` right bits.  Simultaneous inversion
+`(u,v)->(u^(-1),v^(-1))` is the complement symmetry (6).
+
+Under the uniform labelled-mask measure, this coordinate system has exact
+moments
+
+```text
+E[S]=E[e]=0,
+Var(S)=(n-1)/2,   Var(e)=(n-3)/2,   Cov(S,e)=0.         (12b)
+```
+
+Thus flux and endpoint defect are orthogonal in `L^2`, though not independent.
+Blue is the reflection-fixed slice `e=0`; black supplies almost all of the
+two-dimensional cloud as `n` grows.  The directional quotient problem is now
+precisely to disintegrate this centrally symmetric measure over iso-class
+fibres.
+
 At `n=7` they specialize to
 
 ```text

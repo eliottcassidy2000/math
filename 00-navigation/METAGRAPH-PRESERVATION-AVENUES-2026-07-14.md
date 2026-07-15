@@ -406,6 +406,10 @@ certificate clauses, and proof obligations.
   `2(d0-n/2)-epsilon`.  Blue reflection sets `epsilon=0`; closed binomial
   formulas give every blue step, every total step, and every black
   `|epsilon|` count for arbitrary `n`.
+- **Delivered joint law:** `(Delta C3,epsilon)` has Laurent kernel
+  `v^(-p)(u+u^-1)(1+uv)^p(1+u^-1v)^p`, `p=n-3`.  Its coordinates have zero
+  covariance and variances `(n-1)/2,(n-3)/2`; quotient drift is a
+  disintegration of a centrally symmetric two-dimensional measure.
 - **Delivered quotient signal:** line colour permits only the category path
   `pure_blue --blue-- mixed --black-- pure_black`.  At `n=7` the blue boundary
   is entirely outward, while increasing-`C3` black flow has 2,798
