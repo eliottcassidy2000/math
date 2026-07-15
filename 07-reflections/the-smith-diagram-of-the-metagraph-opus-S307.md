@@ -87,14 +87,42 @@ Current split by the class-level edge types:
 | "perfect" (distinct squares) | distinct currents per edge — holds for the max-current bottlenecks; full distinctness pattern unexamined (named) |
 | electrical planar duality | the G_n / E_n duality candidate: E_n (the even-graph metagraph) as the DUAL network — the sharpest untested Smith connection (named for the next session; E_n data exists at n ≤ 7 in the even-graph thread) |
 
-## 6. Underexplored-thread connections (merged from the archaeology sweep)
+## 6. The archaeology: what existed, what this session fills, and the niche threads
 
-*(This section records the sweep's findings; see the session log for the full
-agent report.)* The threads that the Smith frame most directly re-energizes:
-the even-graph metagraph E_n as electrical dual; the H = 1 + 2^d hypotenuse
-formula as the conductance profile of the transitive node's star; the
-Cayley–Dickson Mode-B tower (THM-793) now carrying resistance recursively
-(does R_n factor through the bundle?); the circulant/QR engineering thread
-(the sink bottleneck IS the circulant class — spectral tools apply at the
-bottleneck); Rédei parity as the source-side boundary condition (H odd ⟹ the
-transitive's unit fiber). Each is one session from a decisive computation.
+The comprehensive sweep (full report in the S307 session log) found:
+
+- **This computation fills a NAMED gap.** Effective resistance on tournament
+  carriers was proposed in the classic-results atlas (item 108,
+  tournament-matrix-classic-results-atlas-codex-s210) and executed only on LRC
+  objects (the 7-sector cycle with Foster's rule; the Green-current trap
+  graphs) — "no effective-resistance / harmonic-potential computation on G_n
+  or E_n exists" until now. Spanning trees HAD been computed — the arc-flip
+  metagraph's closed form κ(n) = (1/N)Π(2k)^mult (metagraph-spectral-toolkit,
+  with THM-588's algebraic connectivity 4) and the merged metagraph's
+  unweighted counts (gn_merged_tutte_s219, n ≤ 7) — but not the wiggly
+  multiplicity-WEIGHTED complexity computed here, and never with potentials.
+- **The repo's existing electrical duality is Ihara/Bass**: cut ⊕ cycle =
+  sandpile ⊕ even-graph (three-avenues reflection + HYP-3728: the Bass
+  factorization's determinant half is the Laplacian/spanning-tree/cut side —
+  our G_n network — and the (1−u²)^{r−1} half is the cycle side = E_n). So the
+  BSST "planar duality" row of the dictionary lands on an existing theorem-
+  grade structure: **E_n is the cycle half; the Smith network built here is
+  the cut half; the missing computation is the E_n-side potential/resistance**
+  (E_n data exists: A002854 counts, flip-rank ρ_E = 1,2,6,9, chordality loss
+  at E_7, spectrum scripts) — the sharpest next pull.
+- **Guardrails inherited**: the tournament↔even-graph map is a cube-iso but
+  NOT a structure-iso (HYP-3807); the cut/cycle projection is odd-n only; and
+  the deck's KCL story (THM-767 → MISTAKE-146 → THM-771's F = Q + Ω − σ)
+  teaches that incidence identities outlive conservation heuristics.
+- **Niche threads the Smith frame re-energizes** (from the 20-thread sweep +
+  the MPA-01..30 card index): the sandpile/chip-firing observer thread (the
+  critical group n^{n−2} as the K_n-level tree count under our class-level
+  κ's); the H-saddle/waggly duality and the waggly Schurian coherent-
+  configuration framing (association-scheme spectra ⟹ network spectra); the
+  line-metagraph rigidity (klein-S163) as the edge-space network; the
+  iso-classes-as-free-monoid grading (does R_n factor over SC primes?); the
+  flip-rank/Paley thread — now directly connected, since the electrical sink
+  bottleneck IS the Paley class; and the Mode-B tower (THM-793): does the
+  bundle structure give a recursion R_n = f(R_{n−2}, leg data)? Each is one
+  session from a decisive computation; the resistance-through-the-tower and
+  the E_n-side potentials are the two I would run first.

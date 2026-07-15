@@ -1,3 +1,52 @@
+## opus-2026-07-14-S307 -- THE SMITH DIAGRAM OF THE METAGRAPH (HYP-6865): G_n as a resistor network -- TRANSITIVITY RESISTANCE R_4 = 3/7 exact (R_5, R_6 exact, R_7 float ~0.0699); THE CONCORDANCE LAW (harmonic potential orders classes EXACTLY like the score-variance axis through n=6, exact); current migrates spine->sea but the bottleneck is ALWAYS the last spine edge into the max-H sink = PALEY at n=7; archaeology sweep: the computation fills atlas item 108's named gap; E_n-side potentials = the sharpest next pull
+
+Prompt (owner): consider Smith diagrams / squaring the square against the tournament and
+metagraph corpus; sweep past work comprehensively; go down niche underexplored threads.
+
+THE COMPUTATION (exact Fractions n<=6, float64 n=7): nodes = iso classes, edges = wiggly d=1
+tile-flips with conductance = flip multiplicity, source = transitive, sink rail = x_min
+classes, unit current. RESULTS: (1) TRANSITIVITY RESISTANCE R_4 = 3/7, R_5 =
+112209451/437566662 ~ 0.2564, R_6 exact ~ 0.1090, R_7 ~ 0.0699 -- a new invariant; tree
+complexity kappa(G_4) = 21 = 3x7, kappa(G_5) = 12,993,979,594,752, kappa(G_6) exact
+111-digit (the wiggly-WEIGHTED counts; the arc-flip closed form and the merged unweighted
+counts existed -- cross-cited). (2) THE CONCORDANCE LAW: phi and the score-variance axis x
+induce the SAME strict order on every comparable class pair through n=6 IN EXACT ARITHMETIC
+(5/5, 58/58, 1345/1345); n=7 float 92502/92634 = 99.86 pct with 132 pairs pending exact
+recheck -- the axis IS the voltage ladder of the wiggly layer; the flow of transitivity is
+literally a current. (3) CURRENT GEOGRAPHY: bulk transport migrates spine (n=5 dominant
+2.09) -> sea (n=6: 2.39; n=7: 3.71) -- electrical confirmation of the geometric-alignment
+picture -- BUT the max-current edge is a SPINE edge at every n and it is the LAST edge into
+the sink: at n=5 the (x=8,H=13)-(x=0,H=15) edge carries 0.51 of the unit current; at n=7
+the (x=8,H=159)-(x=0,H=189) edge (mult 135): H = 15, 189 are the MAX Hamiltonian-path
+counts -- the sink bottleneck is the quasi-regular/PALEY class. The flow of transitivity
+funnels through the SC backbone into Paley no matter how diffuse the mid-axis sea is.
+
+THE ARCHAEOLOGY (Explore agent, full report in its transcript; distilled into the
+reflection): (i) this computation fills a NAMED gap -- effective resistance on tournament
+carriers was proposed (atlas item 108) and executed only on LRC objects (7-sector Foster,
+Green-current traps); no harmonic potential existed on G_n or E_n; (ii) spanning trees DID
+exist (arc-flip closed form kappa(n) = (1/N)Prod(2k)^mult + THM-588 connectivity 4; merged
+unweighted gn_merged_tutte_s219) -- distinct weightings, cross-cited; (iii) the repo's
+existing electrical duality is IHARA/BASS: cut+cycle = sandpile+even-graph (three-avenues +
+HYP-3728): E_n is the CYCLE half, my network is the CUT half => the E_n-side
+potential/resistance is the sharpest untested Smith connection; (iv) guardrails inherited:
+cube-iso is not structure-iso (HYP-3807), cut/cycle projection odd-n only, and the deck's
+KCL lesson (incidence identities outlive conservation heuristics); (v) 20 niche threads
+cataloged (sandpile observer, H-saddle/waggly duality, waggly Schurian scheme, line-
+metagraph rigidity, free-monoid grading, flip-rank/Paley -- now CONNECTED: the electrical
+sink bottleneck IS the Paley class; Mode-B tower resistance recursion) + the MPA-01..30
+card index as the standing map.
+
+NAMED NEXT PULLS: (1) the E_n-side potentials/resistance (the dual Smith diagram); (2) the
+132 n=7 discordant pairs decided exactly (first local-vs-global disagreements if real);
+(3) R_n through the Mode-B tower (does the bundle give R_n = f(R_{n-2}, legs)?); (4) the
+concordance law as a THEOREM (is phi always monotone in x? route: the wiggly layer's
+score-stratified structure + Laplacian monotonicity).
+
+FILES: 07-reflections/the-smith-diagram-of-the-metagraph-opus-S307.md;
+04-computation/smith_diagram_of_the_metagraph_opus_S307.py (+ .out); HYP-6865 executed.
+
+---
 > **Correction to the historical S301 entry below (codex-2026-07-14-S2):**
 > the safe-measure artifact is now THM-777, not THM-774. Only the rho bridge,
 > Lipschitz tail, and primitive `maxP<=18` census are proved. The listed scale
