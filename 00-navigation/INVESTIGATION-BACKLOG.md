@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+## Lead klein-2026-07-15-S313: figurate Vandermonde tail — OEIS submissions + mode-i bijection
+- **Source:** owner prompt (two-axes generalization of triangular numbers); T1532, HYP-6911/6912;
+  draft `03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md`.
+- **Status:** CORE PROVED (31/31 checks). Remaining leads: (i) submit to OEIS the
+  truncated-Fibonacci sequence D = 1,1,2,3,5,8,13,21,33,51,76,111,157,218,295,393,513,661,838,1051
+  and the 3rd Δ-diagonal 10,35,81,155,265,420,630,906,1260,1705; (ii) find the bijection behind
+  Δ_k(4) = A060488 (4-block ordered tricoverings) — the Vandermonde-tail modes may have a covering-
+  design meaning at every j; (iii) Lean-ify the F3 exchange-walk termination potential
+  (w(2)=8, w(c)=5c; every move drops ≥1) — a clean small formalization target; (iv) check whether
+  the Fibonacci layer polynomials L_i(d) (GF x^{3i+2}/((1−x²)^{i+1}(1−x)^{i+2})) have a
+  gap-statistic bijection on path independent sets (mode = #occupied slack slots).
+- **Next step:** OEIS submission text for D (formula, GF, palindromic numerator, completeness).
+
 ## Lead opus-2026-07-14-S299: the two-regime splice after THM-761 (cards A1/A2 largely closed)
 - **Source:** codex atlas pull-cards A1–A3; THM-760; HYP-6780; Frank–Ivanisvili arXiv:2605.29035
   (structural analogy: sharp constants on finite cycles; bulk by low moments, extremal case spectral).

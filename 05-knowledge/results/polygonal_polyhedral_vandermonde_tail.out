@@ -1,0 +1,43 @@
+PASS Pascal row sums = 2^n
+PASS Polygonal row sums = 1 + C(n+1,2) + C(n+1,4)
+PASS   ... = sum_{j<=4} C(n,j)  (Moser truncation of 2^n)
+   polygonal row sums: [1, 2, 4, 8, 16, 31, 57, 99, 163, 256] = A000127(n+1)
+PASS Pascal diagonal sums = Fibonacci
+PASS Polygonal diagonal sums start 1,1,2,3,5,8,13,21,33,51,76,111,157,218
+PASS D(d) = (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192 exactly
+PASS D(2m) = (m^4-3m^3+8m^2+6)/6 and D(2m+1) = (m^4-m^3+5m^2+7m+6)/6
+   D continued: [295, 393, 513, 661, 838, 1051, 1301, 1596, 1937, 2333]
+PASS Vandermonde master: S_k(j) = sum_i C(k-1,i) C(j,i+1)
+PASS Polygonal = modes i<=1: P(k+1,j) = C(j,1) + (k-1)C(j,2)
+PASS Tail: Delta_k(j) = sum_{i>=2} C(k-1,i) C(j,i+1)
+PASS Delta = 0 exactly on columns k<=2 and rows j<=2 (agreement zone)
+PASS 1st diagonal (j=3): Delta = C(k-1,2) = 1,3,6,10,15,... (triangulars)
+PASS 2nd diagonal (j=4): Delta = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6
+   2nd diagonal continued: [4, 13, 28, 50, 80, 119, 168, 228, 300]
+PASS 3rd diagonal (j=5): Delta = 10C(k-1,2)+5C(k-1,3)+C(k-1,4)
+   3rd diagonal: [10, 35, 81, 155, 265, 420, 630, 906, 1260]
+PASS General: j-th diagonal coefficients on C(k-1,i) are C(j,i+1), i=2..j-1 (Pascal row tails)
+PASS Fixed column k: Delta_k(j) = sum_i C(k-1,i) C(j,i+1); e.g. Delta_3 = C(j,3) (tet - square = tet)
+PASS Delta_k(j) = triple-j/double-k partial sums of Pascal, shifted to (3,3)
+PASS (1-x)^3(1-x^2)^2 - x^8 divisible by 1-x-x^2 (phi-pole cancels => D quartic)
+   quotient Q(x) coeffs (D = Q/((1-x)^5(1+x)^2)): [1, -2, 0, 3, -2, 0, 1]
+PASS tail(d) - tail(d-1) - tail(d-2) = [x^d] x^8/((1-x^2)^2(1-x)^3) >= 0
+PASS D(d) <= D(d-1)+D(d-2), equality iff d <= 7
+PASS Brown criterion holds for D  => D is a complete (no-holes) sequence
+PASS Brown criterion holds for Moser A000127 row sums
+PASS every N in 1..5000 is a sum of DISTINCT D-terms (greedy, holes: none)
+PASS 2^n = 1 + sum_{i>=0} C(n+1, 2i+2)  (even-binomial mode decomposition)
+PASS F(d+1) = 1 + sum_{i>=0} L_i(d)  (Fibonacci Vandermonde-layer decomposition)
+PASS D(d) = 1 + L_0(d) + L_1(d)  (modes i<=1) and L_0(d) = floor(d^2/4)
+PASS Moser row sum = modes i<=1: 1 + C(n+1,2) + C(n+1,4)
+PASS locker n open <=> n is a perfect square (simulation to 10000)
+PASS tau(n) = 2*(pairs of involution d<->n/d) + [n square]; tau odd <=> square
+PASS F3 exchange walk from n*[F_2]: terminates, value-preserving, lands on the unique Zeckendorf form (n=1..600)
+PASS F3 exchange walk is confluent: messy start reps normalize to the same Zeckendorf form
+
+=== 31 checks, 31 passed, 0 failed ===
+
+OEIS-ready sequences:
+  D(d), d>=0:         [1, 1, 2, 3, 5, 8, 13, 21, 33, 51, 76, 111, 157, 218, 295, 393, 513, 661, 838, 1051]
+  2nd Delta diagonal: [4, 13, 28, 50, 80, 119, 168, 228, 300, 385]
+  3rd Delta diagonal: [10, 35, 81, 155, 265, 420, 630, 906, 1260, 1705]
