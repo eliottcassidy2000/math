@@ -4,6 +4,9 @@ vertex=s_i=mu(E cap D_xi)-2e/13
 edge=h(projective ratio), eta(endpoint pullback), c=e*h+eta
 identity=Hunter=11e/169-sum(s_i)+MST(c)
 kruskal_word=graphic-rank increments at descending distinct c levels
+projective_H13=PSD rank 6; even kernel dimension 7; normalized_odd_minors=(11, 117, 1183, 10985, 85683, 371293)
+coherent_common_scale_bound=L>=4363/382200*e-26*c_E/g
+global_projective_covariance=PSD; sharp_edge_floor=-11/1014
 
 PACKET random-1
 speeds=(292, 150, 359, 74, 88, 479, 116)
@@ -392,6 +395,13 @@ TOURNAMENT ANALYSIS
 CROSS-PACKET VERDICT
 hunter_signs=(True, True, True, True, False, False) expected=(True,True,True,True,False,False)
 all_interval_masses=exact Fraction; direct/decomposition identities=PASS
+restricted node-edge covariance Gram: all principal minors nonnegative=PASS
 Prim=Kruskal and Kruskal threshold-rank integral=MST(c): PASS
+  random-1: h(+0-)=(11, 0, 10) eta(+0-)=(11, 0, 10) c(+0-)=(11, 0, 10) kruskal_contributing_levels=(1, 2, 3, 5, 6, 7)
+  random-2: h(+0-)=(14, 0, 7) eta(+0-)=(15, 0, 6) c(+0-)=(15, 0, 6) kruskal_contributing_levels=(1, 2, 3, 4, 5, 6)
+  random-3: h(+0-)=(13, 0, 8) eta(+0-)=(10, 0, 11) c(+0-)=(10, 0, 11) kruskal_contributing_levels=(1, 2, 3, 4, 5, 6)
+  random-4: h(+0-)=(14, 0, 7) eta(+0-)=(14, 0, 7) c(+0-)=(14, 0, 7) kruskal_contributing_levels=(1, 2, 3, 5, 6, 10)
+  consecutive-high: h(+0-)=(14, 0, 7) eta(+0-)=(0, 0, 21) c(+0-)=(0, 0, 21) kruskal_contributing_levels=(1, 2, 3, 4, 5, 6)
+  consecutive-low: h(+0-)=(18, 0, 3) eta(+0-)=(0, 0, 21) c(+0-)=(0, 0, 21) kruskal_contributing_levels=(1, 2, 3, 4, 5, 8)
 Tournament quotient is transitive in all six packets and is NOT sufficient for MST(c)
-HONEST SCOPE: six finite pilots only; uniform radius-seven closure remains open
+HONEST SCOPE: all-size algebraic certificates plus six finite packet verdicts; full radius-seven closure remains open

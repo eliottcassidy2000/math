@@ -1,7 +1,7 @@
 ---
 id: THM-851
 title: One factorization deck closes the node-coloured defect algebra at n=3 and n=5..7
-status: PROVED ABSTRACT CLOSURE LEMMA + FINITE-EXACT n=3..7
+status: PROVED ABSTRACT CLOSURE LEMMA + PROVED ALL-SIZE BINARY FACTOR TENSOR + FINITE-EXACT n=3..7
 source: codex-2026-07-15-S15
 depends_on: [THM-549, THM-781, THM-796, THM-818, THM-830]
 related: [THM-813, THM-840, THM-843, HYP-6825, HYP-6880]
@@ -81,6 +81,25 @@ factor colours are retained.  Put
 ```text
 R^->(C)=(C,F_C^->),             R^pm(C)=(C,F_C^pm).        (7)
 ```
+
+The coarsest binary projection already has all-size composition constants,
+and this explains exactly why it cannot perform the reconstruction.  Write
+`B` for defect zero and `K` for a nonzero defect.  Reading (4) as `alpha`
+runs through `D` gives
+
+```text
+output B:  p_BB=1, p_BK=p_KB=0, p_KK=2^r-1,
+output K:  p_BB=0, p_BK=p_KB=1, p_KK=2^r-2.               (6a)
+```
+
+The second row applies only when `gamma!=0`, hence `r>=1`.  For a blue output,
+`alpha=0` is the unique blue--blue factorization and every other `alpha`
+gives two black factors.  For a black output, `alpha=0,gamma` give the two
+mixed orders and every other `alpha` gives two black factors.  Thus the
+blue/black projection is an equitable two-cell composition algebra for every
+`n`, but its factor tensor is constant inside each output colour.  Exact
+defect words and their incident merged nodes, not binary colour alone, are
+what split the tilings in Sections 3--4.
 
 ## 2. General closure lemma
 

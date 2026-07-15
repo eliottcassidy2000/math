@@ -6,9 +6,9 @@ source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
   580,919,164-node exact component recursion; the unique covering terminal is
-  2[12].  This subsumes the former 909 primitive-core row residual and the
-  odd-label mixed-parity branch at scale one. THM-836 §§6B--6C also rule out a
-  U-independent single-numerator endpoint-grid proof and every fixed pair of
+  2[12].  This subsumes the former 903 `f<=2` primitive-core row residual and
+  the odd-label mixed-parity branch at scale one. THM-836 §§6B--6C also rule out
+  a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
   the three structured shell-five classes.
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
@@ -624,7 +624,7 @@ all 923 primitive retained-core roots and every mixed-parity completion of the
 exceptional odd-label root are loose.  A separate closed-danger-union replay
 reconstructs each expanded prefix from scratch and hashes the labelled root
 trees.  The remaining H6 obligation is arbitrary-scale/common-sheet transport,
-not the former 909-row scale-one bank.
+not the former 903-row plus exceptional-root scale-one bank.
 
 An independent C.3 replay crosschecks a nontrivial subforest using the earlier
 residual-component implementation: all 52 `f=2` roots with exact first-speed
@@ -674,6 +674,92 @@ sum of edge-credit thresholds times jumps in the graphic rank
 `m-(number of threshold-graph components)`.  Thus the live finite quotient is
 a vertex-period and edge-threshold incidence language.  An edge histogram or
 average pair density is not sufficient.
+
+The S15 refinement identifies the algebra behind those colours.  With
+`p=2/13`, `F_E=1_E-e`, and `F_i=1_(D_(x_i))-p`,
+
+```text
+s_i=<F_E,F_i>,                 h_ij=<F_i,F_j>,
+theta_(Eij)=integral F_E F_i F_j,
+c_ij=e h_ij+p(s_i+s_j)+theta_(Eij).                       (B8a)
+```
+
+Thus the completed restricted matrix
+
+```text
+G^E_ij=c_ij-p(s_i+s_j),                         i!=j,
+G^E_ii=22e/169+9s_i/13                                  (B8b)
+```
+
+is PSD for every packet.  The edge discrepancy is not free noise: after its
+node contribution is removed, it is the centered prefix--comb--comb third
+moment.  All principal minors of (B8b) constrain admissible node and edge
+colours.
+
+The global projective covariance has two further exact forms.  For arbitrary
+gcd patterns, `h_ij=<F_i,F_j>` has a PSD completion with constant diagonal
+`22/169`.  On `Z/13`, the sawtooth numerator is
+
+```text
+H_(r,s)=Q(r+s)-Q(r-s)=C_Q(R-I),                            (B8c)
+```
+
+a rank-six PSD kernel whose kernel is the seven-dimensional reflection-even
+sector.  A common-scale packet with pairwise-coprime quotients therefore has
+an explicit six-dimensional sine Gram realization.  The sharp scalar floor
+is `h_ij>=-11/1014`, at reduced ratio `1:12`; six such edge floors exactly
+cancel, but cannot cross, the ideal `11/169` margin when treated independently.
+The complete graph forces strict ratio consistency.  At threshold
+`-3/676`, the bad edges have exactly ten reduced ratio types, and their
+directed multiplicative relation is triangle-free.  The good complement has
+at most two components; using the second global edge level on the cross cut
+gives
+
+```text
+MST(h)>=-237/7436,
+11/169+MST(h)>=19/572.                                  (B8c1)
+```
+
+This is a strict projective margin for every seven-speed packet, independent
+of its gcd pattern.
+
+The tree functional is recursively closed by more than its present value.
+Tropical deletion--contraction is exact, while insertion of a vertex `v` obeys
+
+```text
+MST(G+v)=max_(pi partition of V)
+ [sum_(B in pi)MST(G[B])+sum_(B in pi)max_(i in B)c_(iv)]. (B8d)
+```
+
+Hence the induced-subtree/partition-defect profile is sufficient for the next
+comb insertion.  Ordering graph edges by credit gives a transitive tournament;
+its graphic-rank derivative is the Kruskal acceptance word.  The tournament
+alone loses incidence.  After higher levels are contracted, a level edge is a
+loop (in no maximum tree), a bridge (in every maximum tree), or an optional
+nonloop (in some but not all), giving an exact three-colour edge classifier.
+
+Finally, the strict tree margin gives an all-packet endpoint criterion.  Let
+`Gamma_h(x)` be the least `sum_(ij in T)1/gcd(x_i,x_j)` over projective-
+maximizing trees.  Then
+
+```text
+L_H>=19e/572-2c_E[sum_i 1/x_i+Gamma_h(x)].               (B8e)
+```
+
+If `x_i=g a_i` for arbitrary distinct positive `a_i`, the bracket is at most
+`(H_7+6)/g=1203/(140g)`, so
+
+```text
+L_H>=19e/572-(1203/70)c_E/g.                             (B8f)
+```
+
+Every fixed common-dilate ray is therefore loose beyond an explicit scale,
+with no pairwise-coprime hypothesis.  What remains is the small-gcd endpoint
+field.  In the exact six-packet replay, all four Hunter successes have positive-
+credit spanning trees.  Both consecutive failures instead have all 21
+endpoint and total credits negative despite 14 and 18 positive projective
+terms.  Their conditional-overlap tournaments are still transitive, locating
+the failure in the joined third-moment edge field.
 
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
@@ -1146,8 +1232,8 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Transport the closed scale-one radius-five action, then separate radius
-   six.**
+1. **Transport the closed scale-one shallow action across AP scale and common
+   sheets.**
    THM-795/800/804/806 close the complete AP-centred Hamming-one through
    Hamming-three stars.  THM-810 splits radius four into common scale and one
    order-three coset interface; THM-815 and THM-816 close those alternatives
@@ -1166,7 +1252,7 @@ The uniform theorem now has two explicit residuals:
    prime-power/complement-fibre language. Prove the remaining arbitrary-AP-scale
    descent without assuming common scale. THM-857 has now completed THM-815
    Part C's finite scale-one radius-six tree over all 924 roots: every proper
-   row is loose except the genuine equality `2[12]`.  The former 909
+   row is loose except the genuine equality `2[12]`.  The former 903 `f<=2`
    primitive-root residual and exceptional mixed-parity branch are no longer
    open at scale one.  Transport the literal component/progression action and
    its exact shortcut witnesses across AP scale and common sheets. At radius
@@ -1338,8 +1424,9 @@ deciding objects are therefore:
   THM-857 then retains the full literal action state over all 924 roots and
   closes every proper scale-one H6 row except the doubled AP equality.  The
   earlier oriented AP cusps and weighted handoff cycles remain explanatory
-  local vertices, but their 909-row residual was a quotient artefact rather
-  than a surviving scale-one branch.
+  local vertices, but their intermediate 909-row frontier and eventual
+  903-row plus exceptional-root residual were quotient artefacts rather than
+  surviving scale-one branches.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and
