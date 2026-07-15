@@ -1,7 +1,7 @@
 ---
 id: THM-836
 title: Thin two-sheet owner shells force a modular packing obstruction
-status: PROVED (directional owner-exit law, modular packing, empty s=1,3 shells, exact local s=5 classification, the uniform d=11 mod 52 divisor exclusion, and the universal single-numerator q=5d,13d template obstruction in the other three classes) + VERIFIED (fraction-exact endpoint/shell replay and finite d=15 endpoint-grid census)
+status: PROVED (directional owner-exit law, modular packing, empty s=1,3 shells, exact local s=5 classification, the uniform d=11 mod 52 divisor exclusion, the universal single-numerator q=5d,13d template obstruction in the other three classes, and the relaxed-shell two-column danger-support no-go) + VERIFIED (fraction-exact endpoint/shell replay, finite d=15 endpoint-grid census, and an exact 432-row all-size affine certificate)
 source: codex-2026-07-15-S10 continuation
 depends_on: [THM-772, THM-797, THM-803, THM-824]
 related: [THM-774, THM-803, HYP-6820]
@@ -12,6 +12,8 @@ verification:
   - 05-knowledge/results/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.out
   - 04-computation/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py
   - 05-knowledge/results/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.out
+  - 04-computation/lrc14_shell_five_two_column_support_no_go_codex_S10.py
+  - 05-knowledge/results/lrc14_shell_five_two_column_support_no_go_codex_S10.out
 ---
 
 # THM-836 — thin two-sheet owner-shell packing obstruction
@@ -638,6 +640,303 @@ numerator depending on the actual seven lifts, several numerators whose
 incidences are combined, or a non-endpoint denominator can still yield a
 contradiction.  What is closed is the direct analogue of (S5.6) on both
 mandatory endpoint grids for every uniformly remaining shell-five class.
+
+## 6C. Exact danger supports and the relaxed two-column no-go
+
+The next obstruction addresses the first multi-column refinement of (S5.26).
+It is useful to retain the lift incidence rather than intersect every possible
+lift at once.  For a unit `p mod q`, define
+
+```text
+Sigma_q(p)={r in {1,2,4,5,8,11,12}:
+             some 1<=u<=B with u=r mod 13 has ||pu/q||<1/11},
+F_q(p)={u in {B-3,B-2,B}:||pu/q||<1/11}.               (S5.28)
+```
+
+Thus `Sigma_q(p)` is the free **danger support**, while `F_q(p)` records a
+column already killed by a forced speed.  Both are unchanged by replacing
+`p` with `q-p`.  The exact all-size classification is
+
+```text
+q=13d:                         |Sigma_q(p)|>=3,
+
+q=5d and F_q(p)=empty:
+  |Sigma_q(p)|>=2,
+  except d=41 mod 52 and p=+/-(45d+1)/26 mod 5d,
+  where Sigma_q(p)={4}.                                  (S5.29)
+```
+
+Here and below `d mod 52` lies in `{15,37,41}`.  Statement (S5.29) has the
+following precise two-column consequence.  Call `U` **relaxed
+shell-admissible** when it contains `B-3,B-2,B` and exactly one positive lift
+at most `B` from each of the seven free raw classes.  Given any two fixed unit
+endpoint columns
+
+```text
+(q_i,p_i),             q_i in {5d,13d},                 (S5.30)
+```
+
+there is a relaxed shell-admissible `U` for which both columns are dangerous:
+
+```text
+min_(u in U)||p_i u/q_i||<1/11,             i=1,2.       (S5.31)
+```
+
+Consequently no `U`-independent family of one or two unit endpoint columns
+can, by the signed-complement shell data alone, guarantee a deep target-bad
+column.
+This does **not** assert that the constructed `U` satisfies THM-772 divisor
+completeness or THM-803 parity-twisted support.  Those extra restrictions can
+remove relaxed lift choices, as the `d=15` census already demonstrates.
+
+### The three signed pairs on the `q=13d` grid
+
+Let `q=13d`, `a=p^(-1) mod q`, and take `r` successively in `{1,2,5}`.  Put
+
+```text
+j_r=[pr]_13,             v_r=[a j_r]_q,       u_r=|v_r|, (S5.32)
+```
+
+using balanced residues.  Then `1<=|j_r|<=6`, `v_r=r mod 13`, and
+
+```text
+1<=u_r<=q/2<B,
+u_r mod 13 in {+r,-r},
+||p u_r/q||=|j_r|/q<=6/(13d)<1/11.                       (S5.33)
+```
+
+The three signed pairs `{1,12}`, `{2,11}`, `{5,8}` are disjoint.  They give
+three distinct elements of `Sigma_q(p)` and prove the first row of (S5.29).
+
+### A leave-one-class skeleton on the `q=5d` grid
+
+For the second row, reflection lets us assume `1<=p<q/2`; `q` is odd.  The
+case `d=15` is finite and exact: among the positive-half units modulo `75`,
+fourteen are not forced-dangerous, and their support-size histogram is
+
+```text
+size 2: 1,        size 5: 1,        size 6: 5,        size 7: 7. (S5.34)
+```
+
+The unique size-two row is `p=29`, with support `{2,5}`.
+
+Now let `d>=37` and suppose `F_q(p)` is empty and
+`|Sigma_q(p)|<=1`.  Choose an omitted raw class `r` containing that support
+(arbitrarily if it is empty).  Every speed in the fixed retained skeleton
+
+```text
+S_r={1<=u<=150:u mod 13 in {1,2,4,5,8,11,12} minus {r}} (S5.35)
+```
+
+is deep; it is available because `B>=243`.  Exact closed rational interval
+intersection gives the following positive-half component centres:
+
+```text
+r!=4:       2/13, 4/13, 9/26,
+r=4:        4/39, 2/13, 3/13, 4/13, 9/26, 17/39.        (S5.36)
+```
+
+There is exactly one component about each displayed centre and no other
+positive-half component; the negative half consists of their reflections.
+The verifier freezes all twenty-four positive components and their endpoints.
+
+Here is the endpoint-safe no-jump lemma used on those exact components.  If
+`c=a/m` is the displayed centre and `t=c+x`, the verifier chooses, for each
+sign of `x`, a retained state `s mod m` whose balanced centre phase is `z/m`
+and points toward zero as the lift increases.  At the relevant component
+endpoint the initial unwrapped phase is explicitly checked to lie in
+
+```text
+[1/11,1/2] for x<0,       [-1/2,-1/11] for x>0.         (S5.37)
+```
+
+Moreover, in all twenty-four cases,
+
+```text
+m max(c-lo,hi-c)<2/11,
+M=11|z|-m<=42,             m<=39.                       (S5.38)
+```
+
+Successive lifts in the state differ by `m`.  Since every retained lift is
+deep, (S5.37)--(S5.38) prevent a phase from jumping across the open danger gap
+of width `2/11`; the last available lift remains in the same unwrapped safe
+arc.  That lift is at least `B-(m-1)>=B-38`, so its wall inequality gives
+
+```text
+|x|<=M/(11m u)<=42/[143(B-38)].                         (S5.39)
+```
+
+The factor `143` in the last denominator uses `m>=13`.  This is the point at
+which merely checking the sign at `c`, without the endpoint-safe condition
+(S5.37), would leave a gap.
+
+Multiplying (S5.39) by `q=5d` yields a radius strictly below one because
+
+```text
+5d*42/[143(B-38)]<1  iff  1439d>10153,                  (S5.40)
+```
+
+which holds already at `d=37`.  Therefore `p` is either the floor or the
+ceiling of `qc` for one of the centres in (S5.36).
+
+### The exact 432-row affine certificate
+
+All denominators in (S5.36) divide `78`.  Every `d>=37` in the three open
+classes belongs to exactly one progression
+
+```text
+d=d_0+156h,
+d_0 in (171,67,119,37,89,141,41,93,145),       h>=0,    (S5.41)
+```
+
+where the first progression represents `d=15 mod 156` after the separately
+checked value `d=15`.  Along a progression,
+
+```text
+q=q_0+780h,             B=B_0+1014h.                    (S5.42)
+```
+
+There are
+
+```text
+9*(2*(6+6*3))=432                                      (S5.43)
+```
+
+choices of base progression, omitted class, applicable centre, and
+floor/ceiling numerator.  No unit filter is used in this count.
+
+Because `780c` is integral, either floor/ceiling numerator evolves as
+`p(h)=p_0+(780c)h`; hence `p(h)-q(h)c` is the constant
+`delta=p_0-q_0c`.  A frozen affine danger witness is either a forced family
+or a retained free family
+
+```text
+u(h)=u_0+alpha h,
+alpha=0 mod 13,       c alpha integer,       0<=alpha<=1014. (S5.44)
+```
+
+In the free case the raw class of `u_0` is retained; in the forced case its
+offset below `B` is fixed.  After removing the integral centre drift, its
+unwrapped phase is
+
+```text
+y(h)=c u_0+delta*(u_0+alpha h)/(q_0+780h).               (S5.45)
+```
+
+The final ratio in (S5.45) is monotone, because the sign of its derivative is
+the constant sign of `alpha*q_0-780u_0`.  Thus if `y(0)` and
+
+```text
+y(infinity)=c u_0+delta*alpha/780                        (S5.46)
+```
+
+lie strictly in the **same** integer danger cell
+`(k-1/11,k+1/11)`, the entire infinite family is dangerous.  It is not enough
+that the two endpoints be dangerous modulo one in different cells.
+
+The fraction-exact certificate partitions the `432` rows as follows:
+
+```text
+forced, alpha=1014                  254,
+free,   alpha=1014                  172,
+free,   alpha=117                     3,
+certified total                     429.                (S5.47)
+```
+
+Its minimum strict same-cell margin is `1/6545`.  Exactly three base rows
+remain:
+
+```text
+(d_0,r,c,p_0)=(41,4,9/26,71),
+                (93,4,9/26,161),
+                (145,4,9/26,251).                       (S5.48)
+```
+
+Their union is precisely
+
+```text
+d=41 mod 52,              p=(45d+1)/26.                 (S5.49)
+```
+
+This proves the lower bound in (S5.29) outside the claimed exception.
+
+### The singleton family is genuine
+
+For `d=41 mod 52`, the numerator in (S5.49) is integral and
+
+```text
+26p-45d=1,             p=1 mod 5.                       (S5.50)
+```
+
+Hence `p` is a unit modulo `5d`, and
+
+```text
+p/(5d)=9/26+1/(130d),             B=9 mod 26.            (S5.51)
+```
+
+The two parity states in every free raw class have balanced `9u mod 26`
+phases
+
+| raw class | `1` | `2` | `4` | `5` | `8` | `11` | `12` |
+|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| two phases | `9,-4` | `-8,5` | `10,-3` | `-7,6` | `-6,7` | `-5,8` | `4,-9` |
+
+Outside raw class `4`, every signed base is at least `+4` or at most `-4`.
+The positive correction is at most `B/(130d)`, and the two exact guards are
+
+```text
+4/26-B/(130d)-1/11=(37d-55)/(2860d)>0,
+1/2-(9/26+B/(130d))=(27d-5)/(260d)>0.                  (S5.52)
+```
+
+Thus all free lifts outside class `4` are deep, with no hidden half-circle
+wrap.  The forced residues `B-3,B-2,B mod 26` are `6,7,9`, with centre phases
+`2/26,11/26,3/26`.  The only phase initially below the wall is the first, and
+its correction makes it deep because
+
+```text
+1/13+(B-3)/(130d)>1/11  iff  1339d>143.                 (S5.53)
+```
+
+The other two start deep; their no-wrap margins include
+
+```text
+1/2-[11/26+(B-2)/(130d)]=(7d-1)/(260d)>0,
+1/2-[3/26+B/(130d)]=(87d-5)/(260d)>0.                  (S5.54)
+```
+
+Finally the available raw-`4` lift `U=B-18=17 mod 26` has phase
+
+```text
+-3/26+U/(130d),
+7/286<U/(130d)<3/26.                                   (S5.55)
+```
+
+The lower inequality is equivalent to `1898d>8866`; the upper one is
+immediate from `17d+31>0`.  Hence this phase lies strictly in the danger arc,
+so `Sigma_{5d}(p)={4}` and `F_{5d}(p)` is empty.  Reflection gives the
+negative numerator and the same set of dangerous lifts.  This completes
+(S5.29).
+
+### Two columns are a labelled matching problem, not a tournament
+
+To prove (S5.31), discard any column killed by a forced speed.  If none remain,
+choose arbitrary free lifts.  If one remains, choose any danger lift from its
+nonempty support and fill the other free classes arbitrarily.  If two remain
+and one support has size at least two, choose a danger class from the other
+support and a different danger class from the first; the corresponding two
+danger lifts occupy distinct raw classes and extend arbitrarily to a relaxed
+shell-admissible `U`.  If both remaining supports are singletons, (S5.29)
+says that both columns are the exceptional numerator or its reflection.
+Their danger-lift sets are identical, and the one lift `B-18` kills both.
+
+This is a two-vertex system-of-distinct-representatives argument with one
+labelled common-lift exception.  Orienting raw classes only by their marginal
+column coverage produces a tournament, but destroys both support intersections
+and the fact that the two singleton columns share the same concrete lift.
+The exact carrier is the bipartite column/raw-class incidence decorated by
+dangerous lift labels.
+
 ## 7. Why the theorem carrier is not a tournament
 
 The exact carrier is the incidence object
@@ -702,16 +1001,39 @@ The universal-grid-template verifier then:
 4. directly scans the entire possible-lift pool at three representatives of
    each class, finding no universal unit numerator on either grid.  These
    nine scans are consistency checks, not finite extrapolation.
+
+The two-column support verifier then:
+
+1. reconstructs all twenty-four positive-half components of the seven
+   leave-one-class skeletons, checks an endpoint-safe unwrapped carrier on
+   each side, and certifies the uniform margin `M<=42` and top-lift deficit
+   at most `38` in (S5.37)--(S5.40);
+2. checks the complete `d=15` half-grid and all `432` periodic affine rows,
+   certifying `429` by same-danger-cell endpoint inequalities with minimum
+   strict margin `1/6545` and isolating exactly the three rows in (S5.48);
+3. verifies the all-size exceptional-family inequalities, replays its first
+   `100` members, and checks the three signed-pair inverse construction on
+   `13,680` positive-half `q=13d` unit columns; and
+4. constructs a relaxed shell-admissible simultaneous cover for all `95,322`
+   unordered pairs with repetition of positive-half endpoint representatives
+   at `d=15,37,41`.  Reflection supplies the full unit grids.  This last scan
+   guards the constructive matching implementation; (S5.29)--(S5.31), not
+   finite extrapolation, supply the all-size statement.  The accompanying
+   raw-class tournament changes twelve edges between the `q=5d` and `q=13d`
+   marginal-coverage gauges, while both gauges are transitive.
+
 No optimizer, floating point, or sampled-circle verdict is used.  The replay
 certifies the arithmetic and endpoint calculus; the proof above supplies the
 all-size quantifiers.  The theorem assumes the signed-wall complement and the
 guarded containment (2)--(3).  It does not prove those predicates for an
 arbitrary core, does not show the remaining `s>=5` branch empty, does not
 uniformly eliminate the classes `15,37,41 mod 52`, and does not establish
-LRC(14).  It does uniformly eliminate only the U-independent, single-unit-
-numerator endpoint-grid template in those classes.  The `d=15` census
-additionally assumes THM-772 divisor completeness
-and THM-803 parity-twisted support; it is not a consequence of (2)--(3) alone.
+LRC(14).  It uniformly eliminates the `U`-independent single-column template
+in those classes and proves that every fixed one- or two-column unit endpoint
+family is jointly killable in the relaxed shell model.  That two-column
+statement is not asserted after imposing THM-772 divisor completeness or
+THM-803 parity-twisted support.  The separate `d=15` census does impose both
+extra predicates; it is not a consequence of (2)--(3) alone.
 
 Reproduce with
 
@@ -719,6 +1041,7 @@ Reproduce with
 python3 04-computation/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.py
 python3 04-computation/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.py
 python3 04-computation/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py
+python3 04-computation/lrc14_shell_five_two_column_support_no_go_codex_S10.py
 ```
 
 The frozen artifact digests are
@@ -741,4 +1064,11 @@ shell-five universal-grid output
         9f2bdae79fdd71039d86bb322ecc6c12494b87a0f98cc89070b35f7bea00ad0b,
 shell-five universal-grid certificate
         0d98f73ab6f70094c26210a94efa5dc6bc78c19ae5fefb6e12ca138eeabaf457.
+
+shell-five two-column support source
+        471f95b7899ee0fcd34188fd3847a0bc0303150483f0495f6a03b18b1ab4d339,
+shell-five two-column support output
+        68016a5b6d6f3ec43569b545c5c14396df046b05125a45115950cad4da90bfab,
+shell-five two-column support certificate
+        7ff338763cc66b6029a0a7ff4d82a6cac8a9560f0930bc40266a7932ffa983b6.
 ```

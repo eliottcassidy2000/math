@@ -1,0 +1,58 @@
+LRC14 SHELL-FIVE TWO-COLUMN SUPPORT NO-GO
+arithmetic=integer+fractions.Fraction optimizer=none SAT=none floating_point=none
+model=relaxed_shell_admissible_lifts_only
+scope_guard=does_not_impose_THM-772_divisor_or_THM-803_parity_conditions
+
+LEAVE_ONE_CLASS_SKELETON
+speeds=1..150_in_retained_free_raw_classes
+omission_rows=7 positive_components=24
+centres_non4=(2/13,4/13,9/26)
+centres_omit4=(4/39,2/13,3/13,4/13,9/26,17/39)
+max_wall_margin_M=42 max_top_lift_deficit=38
+radius_bound=42/[143(B-38)] q5_radius_below_one_for_d>=37
+skeleton_sha256=fbc444c1fc4a66a3942efc7fe471878a0d991f7fd5772b210bf06accb9421901
+
+D15_BASE_CASE
+forced_uncovered_rows=14 support_histogram=((2, 1), (5, 1), (6, 5), (7, 7))
+minimum_row=(p=29,support={2,5})
+rows_sha256=ae4f300a74a86e4c225f8bd1d235445a575f58d619eebcaa9a2cbe1eea07f2b9
+
+AFFINE_ALL_SIZE_CERTIFICATE
+period=d0+156h q=q0+780h B=B0+1014h
+base_d=(171, 67, 119, 37, 89, 141, 41, 93, 145) candidate_rows=432 certified_rows=429
+witness_type_histogram=((('forced', 1014), 254), (('free', 117), 3), (('free', 1014), 172)) minimum_strict_margin=1/6545
+unresolved_rows=((41, 4, Fraction(9, 26), 71, Fraction(1, 26)), (93, 4, Fraction(9, 26), 161, Fraction(1, 26)), (145, 4, Fraction(9, 26), 251, Fraction(1, 26)))
+unresolved_union=d_mod52_41,p=(45d+1)/26,omitted_raw_class=4
+certified_rows_sha256=14685e41f0fb8747267bc227781fd0a0b38c2efe8a6ab45ea94b6d679d8593a6
+
+EXCEPTION_FAMILY
+classification=d_mod52_41,p=+/-(45d+1)/26,support={4},forced_uncovered
+phase_table=((1, (9, -4)), (2, (-8, 5)), (4, (10, -3)), (5, (-7, 6)), (8, (-6, 7)), (11, (-5, 8)), (12, (4, -9)))
+replay_limit=100 first=(41, 269, 71, 251) last=(5189, 33731, 8981, 33713)
+rows_sha256=b17ebb3fba6c518dc05a89a6c4568e56fd21aafe26dc296fcebcf0417aca5af3
+
+Q13_THREE_SIGNED_PAIRS
+pairs={1,12},{2,11},{5,8};inverse_lift_gives_one_danger_class_in_each
+class_depth=6 replayed_positive_half_unit_columns=13680 rows_sha256=7e803461d2bbefa80fdd17be79e4251b6de32509114718e485882ec981cddf7c
+
+TWO_COLUMN_REPLAY
+rows=((15, 68, 2346), (37, 288, 41616), (41, 320, 51360)) rows_sha256=f9814ff7aa1d4a61b9d0a69019df32f66057a3a3453ae5de594b52b30eac5df0
+columns=positive_half_representatives reflection_supplies_full_unit_grids
+all_size_carrier=two-support_SDR_plus_common_raw4_lift_for_double_exception
+
+TOURNAMENT_ANALYSIS
+vertices=free_raw_classes_not_runners
+pairwise_observable=number_of_nonforced_endpoint_columns_supported_at_d41
+switch=q5d_coverage_gauge_to_q13d_coverage_gauge tie_Hamiltonian_path=(1,2,4,5,8,11,12)
+q5_weights=((1, 37), (2, 38), (4, 38), (5, 37), (8, 38), (11, 37), (12, 36)) q13_weights=((1, 156), (2, 157), (4, 155), (5, 159), (8, 156), (11, 159), (12, 156))
+q5_fingerprint=((37, 38, 38, 37, 38, 37, 36), (0, 1, 2, 3, 4, 5, 6), 0, ((1,), (2,), (4,), (5,), (8,), (11,), (12,)), 1) q13_fingerprint=((156, 157, 155, 159, 156, 159, 156), (0, 1, 2, 3, 4, 5, 6), 0, ((1,), (2,), (4,), (5,), (8,), (11,), (12,)), 1) edge_flips=12
+preserves=marginal_raw_class_coverage_order
+destroys=support_intersections_and_common_concrete_lifts
+theorem_carrier=bipartite_column_to_raw_class_incidence_with_lift_labels
+
+VERDICT
+q5_nonforced_support_size>=2_except_explicit_reflection_pair_with_support={4}
+q13_support_size>=3
+any_two_fixed_unit_endpoint_columns_are_jointly_killable_in_the_relaxed_shell_model
+certificate_sha256=7ff338763cc66b6029a0a7ff4d82a6cac8a9560f0930bc40266a7932ffa983b6
+PASS
