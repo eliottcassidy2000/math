@@ -63797,15 +63797,16 @@ residual faces glue injectively on this bounded bank.  This closes the finite
 slice but not either THM-820 box; endpoint-owner incidence and actual
 continuation purity remain the missing intermediate codec.
 
-A subsequent live pull reserved THM-823 for the arbitrary-scale five-deck
-boundary.  Its current scout refutes a naive scalar-capacity cutoff by an
-infinite `(1,2,3,5,10)` label family, while the bounded common-sheet bank has
-exactly five all-order-three survivors in one multiplicative orbit.  The
-mod-39 clock reaches only the `1/13` boundary, so arbitrary-lift strictness is
-still open.  This incoming signal reinforces the present routing: all-scale
-Hamming five needs sheet-compatible metric incidence, not another scalar
-capacity threshold.  THM-823 remains reserved pending its canonical proof and
-replay and is therefore not used here as a closure theorem.
+A subsequent live pull finalized THM-823 for the arbitrary-scale five-deck
+boundary.  It proves the scalar pivot `min D_i<=21` while the infinite
+`(1,2,3,5,10)` label family refutes an all-order cutoff.  In the complete
+no-order-one bank through order twelve, exactly five scalar presentations
+admit common-sheet covers: one all-order-three multiplicative orbit.  All
+forty least-CRT packets are loose with minimum `2/17`, but the mod-39 clock
+reaches only the `1/13` boundary for arbitrary lifts.  Thus the bounded label
+classification is closed while common sheets above order twelve and
+arbitrary-lift strictness remain open; all-scale Hamming five still needs
+sheet-compatible metric incidence, not another scalar capacity threshold.
 
 The latest pull also reserved THM-824 for a fixed `(13,5)` symmetric-radius
 compression.  An independent exact breakpoint check confirms the provisional
