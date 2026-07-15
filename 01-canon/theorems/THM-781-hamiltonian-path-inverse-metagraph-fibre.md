@@ -149,6 +149,9 @@ fibre consequently has size `|Aut(T)|`, proving (6)--(9). ∎
 The companion module exposes the literal maps:
 
 ```python
+# Run from 04-computation/, or place that directory on PYTHONPATH.
+from tournament_tiling_metagraph_fibre_inverse_codex_S8 import MetagraphFibreAtlas
+
 atlas = MetagraphFibreAtlas()
 
 atlas.tiling_to_node(7, 615)
