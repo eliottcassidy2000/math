@@ -4,7 +4,7 @@ title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph
 status: OPEN GENERAL/TRANSPORT CLAIM; finite exact Omega+S2 (raw B2 sidecar) injectivity proved through n=8 by THM-801/809
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -119,6 +119,30 @@ The first undecided finite size is now `n=9`.  The exact next question is not
 merely whether the codec collides, but whether the decisive `tau=n-1` layer
 continues to remove every lower-node collision and whether its positional
 moment, rather than raw counts, first becomes necessary.
+
+THM-818 removes the exponential outer scan from that question.  Define the
+oriented face observation
+
+```text
+H_8(x)=(nu_8(x),nu_8(kappa x),chi_8(x))
+```
+
+and retain its kernel relation `R_8`, not just its fibre labels.  Exact census
+gives `876,512` fibres and `5,997,416` relation rows, of which `3,900,264` are
+off-diagonal.  Ordered pairs of candidate `n=9` tilings with equal three-face
+data are exactly the compatible triangles in three copies of `R_8`; both
+apexes must then be zero, the remaining upper colour bit and `S2` must agree
+(the upper bit plus the three face colours is `UABC`).  The three face
+projections are therefore part of the address's recursive structure.  Fibre
+cardinalities alone destroy precisely the gluing information needed at the
+next size.
+
+This also identifies the positional boundary without awaiting the join.  At
+`n=9`, each nonfixed layer has at most three positions and the four-position
+fixed layer has only three free after apex orientation, so per-state count and
+first moment reconstruct the literal layer.  At `n=10`, `{0,3}` and `{1,2}`
+first defeat count-plus-sum.  Thus raw-S2 injectivity remains open at `n=9`,
+but an exact first-moment repair is already proved available there.
 
 ## Continued-fraction connection
 

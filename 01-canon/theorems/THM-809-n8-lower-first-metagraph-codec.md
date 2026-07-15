@@ -129,8 +129,10 @@ two distinct two-subsets may have the same position sum.
 
 The next finite target is consequently `n=9`: test whether its new
 `tau=n-1` count layer still removes all lower-node collisions before appending
-moments.  Static injectivity still does not prove continuation completeness;
-THM-796's non-lumpability obstruction remains.
+moments.  THM-818 reduces that test exactly to a three-way join over the
+`5,997,416`-row `n=8` face-observation kernel, avoiding a `2^27` line scan.
+Static injectivity still does not prove continuation completeness; THM-796's
+non-lumpability obstruction remains.
 
 ## Tournament Analysis and preservation boundary
 

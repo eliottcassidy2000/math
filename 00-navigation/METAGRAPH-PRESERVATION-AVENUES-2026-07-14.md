@@ -576,6 +576,16 @@ certificate clauses, and proof obligations.
   residual line as a face.  The next pull is the same layer-by-layer test at
   `n=9`, with first positional moments retained as the guaranteed repair when
   counts cease to reconstruct a layer.
+- **Delivered `n=9` reduction by THM-818:** the right recursion carrier is the
+  kernel pair `R_8={(x,y):H_8(x)=H_8(y)}` with its three ordered literal face
+  projections, not merely the `3,528` merged nodes or the `876,512` fibre
+  labels.  Exact census gives `5,997,416` rows, only `3,900,264`
+  off-diagonal.  Lower-base collisions are precisely compatible triangles in
+  `R_8^3`, followed by the both-apex-zero, upper-colour, and full-S2 filters.
+  This passes the single-machine memory gate; the triangle join itself remains
+  open.  At `n=9`, count plus first positional moment is still guaranteed to
+  reconstruct every layer; `{0,3}` versus `{1,2}` makes `n=10` the first
+  unconditional ambiguity.
 
 ### MPA-35 — Minimize the corewise Boolean Möbius stalk
 
@@ -603,6 +613,17 @@ certificate clauses, and proof obligations.
 - **Pull:** refine MPA-30's raw-versus-normalized drift by
   `(C3,q0,q1,|epsilon|,lambda,Smith potential,path stabilizer)`.  Determine
   which unsigned curvature stratum creates the black boundary imbalance.
+- **`n=8` boundary decided by THM-814:** source-normalized outward flow is
+  strict in every source-curvature stratum `q=0,...,6`, although the raw
+  aggregate reverses it (`16,118` outward versus `24,370` reverse).  Thus the
+  imbalance is a source-fibre volume effect, not a reversal of conditional
+  drift.  Separately, the only sixteen node-pair plus `(B2,B3)` orbit-codec
+  collisions all have `(q0,q1,Delta C3)=(0,2,0)` and swap the fixed-layer
+  positions `(7,2)` and `(6,3)`; curvature is constant on the kernel and
+  cannot repair it, while the first positional moment does.  The critical
+  pull is now an orbit-stabilizer formula for the denominators, followed by
+  target-`q` and joint `(source q,target q)` disintegration—not another
+  scalar curvature refinement.
 - **Must preserve:** apex orientation, raw-bit convention, both line endpoints,
   literal multiplicity, and reflection pairing.  Signed epsilon alone cannot
   explain quotient drift.
