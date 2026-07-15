@@ -1,0 +1,39 @@
+THM-807 connected-return linear selector replay
+all verdicts use integer/Fraction arithmetic
+
+all-grid_row=(45, 48, 50, 54, 55, 62, 85, 95, 105, 116)
+  B=116 M=45/161 maximizers=('1/161', '160/161')
+  rho=106/60697 Astar=5729/303485<=36/845
+  unit_grid_profiles={1: ((5, Fraction(2, 13), Fraction(12, 13)),), 2: (), 3: (), 4: (), 5: (), 6: (), 7: (), 8: ((31, Fraction(5, 52), Fraction(53, 104)), (45, Fraction(11, 104), Fraction(3, 8)))}
+  return=((Fraction(-1, 8294), Fraction(1, 8294)),) E_components=106 K_components=106 selector=212
+  selector_min_(Q,t)=(709/28710,709/373230)
+  Tournament Analysis (vertices = multiplier-grid obligations)
+    observable: signed grid-detection margin; switch: danger-covered unit population
+    tie Hamiltonian path: increasing multiplier
+    margin_order=(2, 3, 4, 5, 6, 7, 1, 8)
+    population_order=(1, 2, 3, 4, 6, 8, 5, 7)
+    edge_flips=9
+    margin_fingerprint=((0, 1, 2, 3, 4, 5, 6, 7), 0, (1, 1, 1, 1, 1, 1, 1, 1), 1)
+    population_fingerprint=((0, 1, 2, 3, 4, 5, 6, 7), 0, (1, 1, 1, 1, 1, 1, 1, 1), 1)
+
+even-grid_row=(6, 9, 20, 24, 30, 36, 42, 54, 66, 90)
+  B=90 M=2/13 maximizers=('11/39', '5/13', '8/13', '28/39')
+  rho=1/1170 Astar=2/117<=36/845
+  unit_grid_profiles={2: (), 4: (), 6: (), 8: (), 10: ((51, Fraction(7, 65), Fraction(9, 10)),), 12: (), 14: (), 16: (), 18: (), 20: ((73, Fraction(7, 65), Fraction(31, 52)),)}
+  return=((Fraction(-1, 6435), Fraction(1, 6435)),) E_components=48 K_components=48 selector=96
+  selector_min_(Q,t)=(1159/5445,1159/70785)
+  Tournament Analysis (vertices = multiplier-grid obligations)
+    observable: signed grid-detection margin; switch: danger-covered unit population
+    tie Hamiltonian path: increasing multiplier
+    margin_order=(2, 4, 6, 8, 12, 14, 16, 18, 10, 20)
+    population_order=(2, 4, 6, 10, 8, 12, 14, 18, 20, 16)
+    edge_flips=7
+    margin_fingerprint=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), 0, (1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 1)
+    population_fingerprint=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), 0, (1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 1)
+
+sha256=39ad9ab6c2e7d932103d798b357b1f29beaa960bb4d4dd5b44a9cec895d04a7b
+challenged vertices: runners and denominator grids
+preserved by grid tournament: relative finite-grid detection difficulty only
+destroyed: non-grid deep components, endpoint owners, return incidence, metric sign
+predicate carrier: owner-labelled components plus exact endpoint/cusp selector
+FINAL: PASS
