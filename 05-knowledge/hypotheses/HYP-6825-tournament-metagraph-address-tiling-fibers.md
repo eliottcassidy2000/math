@@ -339,6 +339,13 @@ twin pairs there), but strong lumpability fails on `1206/1312` nonzero `n=7`
 node blocks.  Thus a complete static node fingerprint is still not a complete
 continuation state: the lower tiling/Hamiltonian-path orbit must survive.
 
+The joint tensor `Xi_n` records an upper line's ordered endpoint-node pair,
+both face-lines' ordered endpoint-node pairs, and the three colours.  Its
+marginals recover the coloured line fibres, both `D_n` branching matrices,
+and colour descent with zero failures.  It has 16,031 cells for 16,384 `n=7`
+lines (maximum multiplicity four); the exact lower-line pair plus the binary
+coherent endpoint phase resolves every remaining collision.
+
 The blue/black face recursion is closed for all `n`.  Upper-, low-face-, and
 high-face-blue are pairwise independent, although upper blue forces the two
 face colours equal; the remaining information is a pure three-way interaction.

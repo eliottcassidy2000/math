@@ -201,6 +201,27 @@ This identifies the exact information lost by bare-line recursion: not a new
 node scalar, but a simultaneous endpoint phase.  Keeping an oriented endpoint,
 or equivalently the apex-zero section, repairs the loss.
 
+There is also an explicit binary recursive address.  In the apex-zero endpoint
+let `c=d_H(L)=d_L(H)` be the common core and let `epsilon(e)` be the bit of its
+fixed first tile `(n-2,1)`.  Simultaneous complement flips `epsilon`, so
+
+```text
+e -> (bar d_L(e),bar d_H(e),epsilon(e))                        (3.4)
+```
+
+is a bijection from `E_n` to compatible lower-line pairs with one phase bit.
+Conversely, choose the unique coherent endpoints of the two lower lines whose
+common core has the prescribed bit, reconstruct the apex-zero upper tiling,
+and take its complement-line.  This gives literal mutually inverse recursive
+functions, not only a counting law.  The deck mate is especially concrete:
+
+```text
+rho_n(e) = q_n(s_0(e) xor {(n,1)}),                            (3.5)
+```
+
+where `s_0(e)` is the apex-zero endpoint.  Thus the hidden line phase is
+changed by the one-tile apex flip in the local tiling cube.
+
 The exhaustive audit gives
 
 | n | upper lines | lower-line-pair support | fibre histogram | failures |
@@ -320,6 +341,56 @@ direction: inverse score variance, complement-line `C3` flux, and electrical
 potential.  The Smith graph is unmerged and uses local flips, so this is an
 independent related coordinate—not an identification with the blue/black
 complement-line multigraph or a proof of general concordance.
+
+### 5.1 The universal node/line/face coupling tensor
+
+All of the preceding node and line relations are marginals of one finite
+coupling.  For an upper line, choose its apex-zero endpoint `t` and write
+
+```text
+u  = pi_n(t),                 u' = pi_n(kappa t),
+l  = pi_(n-1)(d_L t),         l' = pi_(n-1)(kappa d_L t),
+h  = pi_(n-1)(d_H t),         h' = pi_(n-1)(kappa d_H t).
+```
+
+Define
+
+```text
+Xi_n(u,u';l,l';h,h';ULH)                                     (5.4)
+```
+
+to count upper lines with these ordered endpoint-node pairs and the indicated
+upper/low/high colour word.  Then:
+
+- summing over the lower data gives the exact upper line fibres `G_n^c`;
+- adding the first-endpoint contribution `(u,l)` and second-endpoint
+  contribution `(u',l')` gives `D_n`, and similarly for the high face;
+- summing by `ULH` gives the six colour atoms in (7.1);
+- reflection gives the exact symmetry
+
+```text
+Xi(u,u';l,l';h,h';ULH)=Xi(u,u';h,h';l,l';UHL).                (5.5)
+```
+
+Consequently `Xi_n` is a single count-valued joint object from which the three
+displayed diagrams can all be recovered without inconsistent independent
+marginals.  It remains a quotient: equal tensor cells may contain
+several literal lines.  The exact recursive line address (3.4) resolves those
+collisions.
+
+The finite tensor is already remarkably sharp:
+
+| n | lines | nonempty `Xi` cells | multiplicity histogram | collision cells | max multiplicity |
+|---:|---:|---:|---:|---:|---:|
+| 4 | 4 | 4 | `1:4` | 0 | 1 |
+| 5 | 32 | 32 | `1:32` | 0 | 1 |
+| 6 | 512 | 509 | `1:506, 2:3` | 3 | 2 |
+| 7 | 16,384 | 16,031 | `1:15704, 2:309, 3:10, 4:8` | 327 | 4 |
+
+All tensor marginals and the reflection law have zero failures.  At `n=7`,
+endpoint nodes of the upper line and both face-lines plus the colour word
+therefore distinguish all but 353 of the 16,384 line instances; one binary
+face phase together with the actual lower lines gives the exact inverse.
 
 ## 6. Why a complete node fingerprint is still not a recursive state
 

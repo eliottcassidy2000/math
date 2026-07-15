@@ -17,6 +17,7 @@ n=4: tilings=8 lines=4 nodes=3
   branch partitions support/weighted/normalized=2/3/3 of 3
   lift blocks nonuniform/total=0/5 max_range=0
   bare-line face-pair support/fibres/torsor-failures=0/{}/0
+  Xi node/line/face coupling cells/multiplicities/failures=4/{'1': 4}/0
   colour descent={'BBB': 2, 'KBB': 2}
   recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
 
@@ -27,6 +28,7 @@ n=5: tilings=64 lines=32 nodes=10
   branch partitions support/weighted/normalized=7/10/10 of 10
   lift blocks nonuniform/total=11/19 max_range=3
   bare-line face-pair support/fibres/torsor-failures=16/{'2': 16}/0
+  Xi node/line/face coupling cells/multiplicities/failures=32/{'1': 32}/0
   colour descent={'BBB': 4, 'KBB': 4, 'KBK': 8, 'BKK': 4, 'KKK': 4, 'KKB': 8}
   recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
 
@@ -37,6 +39,7 @@ n=6: tilings=1024 lines=512 nodes=34
   branch partitions support/weighted/normalized=34/34/34 of 34
   lift blocks nonuniform/total=76/112 max_range=6
   bare-line face-pair support/fibres/torsor-failures=256/{'2': 256}/0
+  Xi node/line/face coupling cells/multiplicities/failures=509/{'1': 506, '2': 3}/0
   colour descent={'BBB': 8, 'KBB': 24, 'KBK': 96, 'BKK': 24, 'KKK': 264, 'KKB': 96}
   recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
 
@@ -47,6 +50,7 @@ n=7: tilings=32768 lines=16384 nodes=272
   branch partitions support/weighted/normalized=264/272/272 of 272
   lift blocks nonuniform/total=1206/1312 max_range=6
   bare-line face-pair support/fibres/torsor-failures=8192/{'2': 8192}/0
+  Xi node/line/face coupling cells/multiplicities/failures=16031/{'1': 15704, '2': 309, '3': 10, '4': 8}/0
   colour descent={'BBB': 16, 'KBB': 48, 'KBK': 960, 'BKK': 240, 'KKK': 14160, 'KKB': 960}
   recursion failures pullback/core/complement/reflection/apex/row/column/colour=0/0/0/0/0/0/0/0
 

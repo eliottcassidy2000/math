@@ -452,6 +452,10 @@ certificate clauses, and proof obligations.
   line multiplicity is `A_uv`, while loop multiplicity is `A_uu/2`.  The
   weighted lower-face row and its primitive normalization separate all nodes
   through `n=7`, but strong lumpability fails on `1206/1312` nonzero blocks.
+- **Delivered joint coupling:** `Xi_n` records the upper endpoint-node pair,
+  both face-lines' endpoint-node pairs, and the three colours.  All other
+  matrices are its marginals.  It has `16031` cells for `16384` `n=7` lines;
+  the actual lower-line pair plus one coherent phase bit is exactly invertible.
 - **Delivered colour law:** upper/low/high blue are pairwise independent but
   not jointly independent.  Upper blue forces equal face colours; both-face
   blue is parity-constant on gap diagonals and all-three blue is Toeplitz.

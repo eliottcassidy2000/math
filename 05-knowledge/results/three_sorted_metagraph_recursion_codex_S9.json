@@ -69395,6 +69395,13 @@
       "line_face_pair_support": 0,
       "line_face_pair_fibre_size_histogram": {},
       "line_torsor_failures": 0,
+      "node_line_face_coupling_definition": "Xi_n(u,u';l,l';h,h';ULH) counts apex-zero upper lines with ordered upper/low/high endpoint-node pairs and colour word ULH",
+      "node_line_face_coupling_cells": 4,
+      "node_line_face_coupling_multiplicity_histogram": {
+        "1": 4
+      },
+      "node_line_face_coupling_marginal_failures": 0,
+      "node_line_face_coupling_reflection_failures": 0,
       "branch_support_partition": {
         "cells": 2,
         "largest_cell": 2,
@@ -69525,6 +69532,13 @@
         "2": 16
       },
       "line_torsor_failures": 0,
+      "node_line_face_coupling_definition": "Xi_n(u,u';l,l';h,h';ULH) counts apex-zero upper lines with ordered upper/low/high endpoint-node pairs and colour word ULH",
+      "node_line_face_coupling_cells": 32,
+      "node_line_face_coupling_multiplicity_histogram": {
+        "1": 32
+      },
+      "node_line_face_coupling_marginal_failures": 0,
+      "node_line_face_coupling_reflection_failures": 0,
       "branch_support_partition": {
         "cells": 7,
         "largest_cell": 2,
@@ -70022,6 +70036,14 @@
         "2": 256
       },
       "line_torsor_failures": 0,
+      "node_line_face_coupling_definition": "Xi_n(u,u';l,l';h,h';ULH) counts apex-zero upper lines with ordered upper/low/high endpoint-node pairs and colour word ULH",
+      "node_line_face_coupling_cells": 509,
+      "node_line_face_coupling_multiplicity_histogram": {
+        "1": 506,
+        "2": 3
+      },
+      "node_line_face_coupling_marginal_failures": 0,
+      "node_line_face_coupling_reflection_failures": 0,
       "branch_support_partition": {
         "cells": 34,
         "largest_cell": 1,
@@ -71776,6 +71798,16 @@
         "2": 8192
       },
       "line_torsor_failures": 0,
+      "node_line_face_coupling_definition": "Xi_n(u,u';l,l';h,h';ULH) counts apex-zero upper lines with ordered upper/low/high endpoint-node pairs and colour word ULH",
+      "node_line_face_coupling_cells": 16031,
+      "node_line_face_coupling_multiplicity_histogram": {
+        "1": 15704,
+        "2": 309,
+        "3": 10,
+        "4": 8
+      },
+      "node_line_face_coupling_marginal_failures": 0,
+      "node_line_face_coupling_reflection_failures": 0,
       "branch_support_partition": {
         "cells": 264,
         "largest_cell": 2,

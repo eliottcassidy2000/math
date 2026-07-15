@@ -344,6 +344,7 @@ def recursive_census(
     low_branch: dict[int, Counter[int]] = {node: Counter() for node in upper_fibres}
     high_branch: dict[int, Counter[int]] = {node: Counter() for node in upper_fibres}
     lift_blocks: dict[tuple[int, int], Counter[int]] = defaultdict(Counter)
+    node_line_face_coupling: Counter[tuple[int, int, int, int, int, int, str]] = Counter()
     pullback_failures = complement_failures = reflection_failures = core_failures = 0
     colour_descent: Counter[str] = Counter()
     line_face_pair_fibres: Counter[tuple[int, int]] = Counter()
@@ -377,7 +378,19 @@ def recursive_census(
             upper_colour = "B" if is_grid_symmetric(mask, sigma) else "K"
             low_colour = "B" if is_grid_symmetric(low, lower_sigma) else "K"
             high_colour = "B" if is_grid_symmetric(high, lower_sigma) else "K"
-            colour_descent[upper_colour + low_colour + high_colour] += 1
+            colour_word = upper_colour + low_colour + high_colour
+            colour_descent[colour_word] += 1
+            node_line_face_coupling[
+                (
+                    upper_node,
+                    upper_map[mask ^ full],
+                    low_node,
+                    lower_map[complement(low, n - 1)],
+                    high_node,
+                    lower_map[complement(high, n - 1)],
+                    colour_word,
+                )
+            ] += 1
 
     assert not (
         pullback_failures
@@ -406,7 +419,11 @@ def recursive_census(
             line_torsor_failures += low_core_line != high_core_line
             line_face_pair_fibres[(low_line, high_line)] += 1
             mate = line_phase_mate(line, n)
+            apex_flip_mate = line_index(
+                apex_zero_endpoint(line, n) ^ (1 << tile_index(n)[(n, 1)]), n
+            )
             line_torsor_failures += mate == line
+            line_torsor_failures += mate != apex_flip_mate
             line_torsor_failures += line_phase_mate(mate, n) != line
             line_torsor_failures += line_face(mate, n, "low") != low_line
             line_torsor_failures += line_face(mate, n, "high") != high_line
@@ -418,6 +435,27 @@ def recursive_census(
         )
         line_torsor_failures += len(line_face_pair_fibres) != 1 << (m_tiles(n) - 2)
         assert line_torsor_failures == 0
+
+    coupling_low_branch: dict[int, Counter[int]] = {
+        node: Counter() for node in upper_fibres
+    }
+    coupling_high_branch: dict[int, Counter[int]] = {
+        node: Counter() for node in upper_fibres
+    }
+    coupling_colour_descent: Counter[str] = Counter()
+    coupling_reflection_failures = 0
+    for (u, uc, low, lowc, high, highc, word), count in node_line_face_coupling.items():
+        coupling_low_branch[u][low] += count
+        coupling_low_branch[uc][lowc] += count
+        coupling_high_branch[u][high] += count
+        coupling_high_branch[uc][highc] += count
+        coupling_colour_descent[word] += count
+        reflected_key = (u, uc, high, highc, low, lowc, word[0] + word[2] + word[1])
+        coupling_reflection_failures += node_line_face_coupling[reflected_key] != count
+    coupling_marginal_failures = int(coupling_low_branch != low_branch)
+    coupling_marginal_failures += int(coupling_high_branch != high_branch)
+    coupling_marginal_failures += int(coupling_colour_descent != colour_descent)
+    assert coupling_marginal_failures == coupling_reflection_failures == 0
 
     support_signature = {node: tuple(sorted(row)) for node, row in low_branch.items()}
     weighted_signature = {
@@ -503,6 +541,16 @@ def recursive_census(
             Counter(line_face_pair_fibres.values())
         ),
         "line_torsor_failures": line_torsor_failures,
+        "node_line_face_coupling_definition": (
+            "Xi_n(u,u';l,l';h,h';ULH) counts apex-zero upper lines with "
+            "ordered upper/low/high endpoint-node pairs and colour word ULH"
+        ),
+        "node_line_face_coupling_cells": len(node_line_face_coupling),
+        "node_line_face_coupling_multiplicity_histogram": counter_json(
+            Counter(node_line_face_coupling.values())
+        ),
+        "node_line_face_coupling_marginal_failures": coupling_marginal_failures,
+        "node_line_face_coupling_reflection_failures": coupling_reflection_failures,
         "branch_support_partition": support_partition,
         "branch_weighted_partition": weighted_partition,
         "branch_normalized_partition": normalized_partition,
@@ -616,6 +664,10 @@ def render(result: dict) -> str:
                     f"{rec['line_face_pair_support']}/"
                     f"{rec['line_face_pair_fibre_size_histogram']}/"
                     f"{rec['line_torsor_failures']}",
+                    f"  Xi node/line/face coupling cells/multiplicities/failures="
+                    f"{rec['node_line_face_coupling_cells']}/"
+                    f"{rec['node_line_face_coupling_multiplicity_histogram']}/"
+                    f"{rec['node_line_face_coupling_marginal_failures'] + rec['node_line_face_coupling_reflection_failures']}",
                     f"  colour descent={rec['colour_descent_histogram']}",
                     f"  recursion failures pullback/core/complement/reflection/apex/row/column/colour="
                     f"{rec['pullback_failures']}/{rec['core_compatibility_failures']}/"
