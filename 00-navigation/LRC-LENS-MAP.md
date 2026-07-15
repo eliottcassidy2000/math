@@ -27,6 +27,25 @@ tree closes every nonprimitive H6 packet except `2[12]`; primitive H6 remains
 open.  “Kakeya needles” here means periodic one-dimensional comb teeth acting
 on disconnected components, not a transfer of planar Kakeya dimension theory.
 
+THM-856 makes the first useful quadratic projection of this debt: the
+Hunter--Kounias maximum-spanning-tree functional on the symmetric weights
+`mu(E intersect D_u intersect D_v)`.  At ideal densities its coefficient is
+positive for seven remaining combs and negative for eight, crossing exactly
+the first-moment wall.  The live-pull referee corrected its edge law.  If
+`x=ga,y=gb` with `(a,b)=1`, then
+
+```text
+mu(D_x intersect D_y)
+ =4/169+[Q(a+b)-Q(|a-b|)]/(169ab),
+Q(c)=r(13-r), r=c mod 13,
+```
+
+and restricting to a `c_E`-component set adds at most `2c_E/g` boundary
+discrepancy from the projective density.  Hence the faithful second-order
+edge packet is `(reduced ratio, common scale, mod-13 sawtooth, endpoint
+discrepancy)`.  A maximum spanning tree gives a certified lower bound, but it
+still does not determine the full higher-order union.
+
 This addendum also records three quotient decisions from the same session:
 
 - THM-841's toothpick/dyadic breakpoint tree is refuted.  Farey adjacency
@@ -51,6 +70,11 @@ nonprimitive_contraction_target
 farey_one_kink_stalk
 fano_organization_not_symmetry
 kakeya_analogy_scope
+hunter_tree_lower_bound
+projective_pair_ratio
+pair_common_scale
+pair_mod13_sawtooth
+pair_endpoint_discrepancy
 ```
 
 ## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens

@@ -251,7 +251,7 @@ case at `n=8` (`404` versus `SC(8)=176`), while only the Klein-four orbit
 structure survives.  Both corrections point away from scalar class counts and
 toward decorated incidence/orbit packets.
 
-The concurrent THM-810 F6 second-moment closure sharpens the positive side of
+The concurrent THM-855 F6 second-moment closure sharpens the positive side of
 that warning.  For the score-axis energy `x`, one arc flip satisfies the exact
 pointwise law
 
@@ -261,12 +261,48 @@ E[(Delta x)^2|T]=16(n-4)x/C(n,2)+64,
 
 and the stationary variance is `2n(n-1)(n-2)`.  Thus scalar first-moment
 closure can fail while a quadratic fluctuation--dissipation law survives.
-The seven-comb wall has exactly this shape: its linear density potential stalls
-at `14/13`, but cover debt has a nonnegative quadratic part.  The concrete next
-experiment is not to transplant the tournament axis blindly; it is to extract
-the size-biased component/comb event kernel from the THM-815 recursion and
-compute the drift of `omega_I` and `omega_I^2`.  This preserves the union-cover
-predicate that the score-axis quotient would destroy.
+That law concerns the collar event walk, however, not the cover inequality
+itself; the two walls should not be conflated.
+
+The pulled THM-856 supplies the cover-side second-order object directly.  For
+remaining combs `S`, put
+
+```text
+Phi_H(E,S)=mu(E)-sum_(u in S)mu(E intersect D_u)
+ +max_(trees T on S)sum_(uv in T)mu(E intersect D_u intersect D_v).
+```
+
+Hunter--Kounias gives `mu(E minus union D_u)>=Phi_H`.  At independent
+densities its coefficient is `(165-22|S|)/169`, so it is positive for seven
+combs and negative for eight.  This is the correct quadratic use of overlap
+debt.  The same audit also proved that every single-comb schema is genuinely
+empty at seven.
+
+The initial global pair formula pulled with THM-856 was false: it omitted the
+containment plateau between unequal teeth.  For `x=ga,y=gb`, `(a,b)=1`, the
+correct exact law is
+
+```text
+mu(D_x intersect D_y)
+ =4/169+[Q(a+b)-Q(|a-b|)]/(169ab),
+Q(c)=r(13-r),  r=c mod 13.
+```
+
+The correction has both signs (`D_6 intersect D_7` has measure `2/91`, below
+`4/169`) and refutes a raw `C(E)/min(x,y)` deficit bound along the legal ray
+`(x,y)=(6g,7g)`, `g=1 mod 13`.  What survives is sharper: for `E` with `c_E`
+components,
+
+```text
+|mu(E intersect D_(ga) intersect D_(gb))
+ -mu(E)mu(D_a intersect D_b)| <= 2c_E/g.
+```
+
+Thus the Hunter graph is weighted and undirected, with edge coordinates
+`(reduced ratio, common scale, mod-13 sawtooth, endpoint discrepancy)`.  It is
+not a switched tournament.  The remaining seven-comb lemma is a maximum-tree
+statement on those projective edge packets, followed by a mechanical-word
+argument on any consecutive/AP-window residual.
 
 ## 7. The sharpened next obligations
 

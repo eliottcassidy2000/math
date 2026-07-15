@@ -1,12 +1,12 @@
 ---
 id: THM-856
-title: THE HUNTER TREE BOUND CROSSES THE SEVEN-COMB WALL — second-order Bonferroni over a spanning tree is coercive at m′ = 7 remaining combs (and at no m′ ≥ 8): with per-comb density exactly 2/13 and pairwise overlaps at their equidistribution value 4/169, the criterion 4(m′−1) ≥ 13(2m′−13) holds iff m′ ≤ 7.5. The union-bound schema of THM-815 Part C is PROVABLY empty at m′ ≥ 7 (no per-comb bound |I ∩ D_x| ≤ αL + β(x) can be coercive: α < 2/13 is false for large x by equidistribution, α = 2/13 sums to 14L/13 ≥ L); the tree bound is its exact one-rung-stronger replacement. Global pairwise comb overlap has the exact Bezout form μ(D_{x₁} ∩ D_{x₂}) = (a+b)²/(169ab) + O(1/ab) ≥ 4/169 (a,b the coprime reduction) — minimized precisely at equal/consecutive speeds, which is exactly the observed failure locus of the tree bound
-status: SCHEMA PROVED (Hunter/Kounias inequality + exact density arithmetic + the m′ ≤ 7.5 computation + the union-bound no-go) + VERIFIED on exact radius-7 pilot packets (prefix {1..5}: 4/4 generic packets coercive, Hunter ≥ +0.033; consecutive-speed packets fail the tree bound exactly as the Bezout minimum predicts while remaining uncovered ≥ 0.04 in fact). NOT a closure of the radius-7 chart: two named residuals below
-source: opus-2026-07-15-S312 (owner: overnight marathon toward LRC(14) through formula generation; the frontier's item-3 ask "seek a replacement potential using overlap debt")
+title: Hunter tree functional at the seven-comb wall — the first-moment schema is empty, while the ideal independent-density Hunter coefficient is positive for seven combs and negative for eight; exact pair overlap is a two-sided mod-13 sawtooth around 4/169, so uniform radius-seven closure still requires projective-ratio and restricted-overlap control
+status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, and the `2c_E/g` projective pullback bound + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the radius-seven chart.
+source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee
 depends_on:
   - THM-815 Part C   # the recursion whose union bound dies at 7 combs
 related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), LRC14-FRONTIER item 3]
-verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out
+verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out
 ---
 
 # THM-856 — the Hunter tree bound at the seven-comb wall
@@ -15,7 +15,7 @@ verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hun
 
 Any bound of the schema |I ∩ D_x| ≤ αL + β(x) (single comb vs single interval,
 β(x) → 0) must have α ≥ 2/13: the comb D_x has density exactly 2/13, and
-|I ∩ D_x|/L → 2L/13 as x → ∞ (equidistribution), so α < 2/13 is FALSE for
+|I ∩ D_x|/L → 2/13 as x → ∞ (equidistribution), so α < 2/13 is FALSE for
 large x. At α = 2/13 and m′ = 7 remaining combs, the coverage constraint reads
 14L/13 + Σβ ≥ L — satisfied identically: NO constraint on the lifts. The same
 holds restricted to any fixed safe set E in place of I (the restricted density
@@ -29,25 +29,90 @@ Hunter–Kounias: for any events A_i and ANY spanning tree T on the index set,
 
 > **uncovered ≥ μ(E) − Σ_i μ(D_i ∩ E) + max_T Σ_T μ(D_i ∩ D_j ∩ E).**
 
-With densities 2/13 + O(1/x) and pairwise overlaps at the equidistribution
-value (4/169)μ(E) + err, the criterion for coercivity at m′ combs is
+If all single masses have their independent-density value `(2/13)mu(E)` and
+the selected tree overlaps have `(4/169)mu(E)`, the ideal Hunter coefficient
+at `m'` combs is
 
-> **4(m′−1) ≥ 13(2m′−13) ⟺ 22m′ ≤ 165 ⟺ m′ ≤ 7.5.**
+> **1-2m'/13+4(m'-1)/169=(165-22m')/169.**
 
-At m′ = 7: tree sum 24/169·μE vs needed 13/169·μE — **an 85% margin**. At
-m′ = 8: 28 < 39 — the tree bound has its own wall at eight. ∎ (schema)
+For integer `m'` this is positive through `m'=7` and negative from `m'=8`.
+At seven, the tree sum is `24mu(E)/169` versus the `13mu(E)/169` needed to
+repair the union bound, leaving `11mu(E)/169`.  At eight, `28<39` and the
+ideal tree functional has its own wall.  This proves the coefficient
+calculation, not that every actual radius-seven packet has sufficiently large
+restricted pair overlaps. ∎
 
-## 3. The exact pairwise overlap formula (global)
+## 3. S14 correction: the exact global pair overlap is a trapezoid
 
-For speeds x₁ = ga, x₂ = gb with (a,b) coprime:
-**μ(D_{x₁} ∩ D_{x₂}) = (a+b)²/(169ab) + O(1/(ab)) ≥ 4/169**, with equality in
-the leading term iff a = b (impossible for distinct speeds — so the infimum is
-approached by near-equal ratios, e.g. consecutive integers). *Proof sketch:*
-simultaneous teeth ⟺ |jb − ka| ≤ (a+b)/13; each admissible m = jb − ka
-contributes a coincidence window of length max(0, (a+b)/(13ab) − |m|/(ab));
-sum the triangle. gcd g cancels. AM–GM gives ≥ 4/169. ∎
-Reading: **overlap is never scarce; it is minimized exactly at near-equal
-speeds** — the tree bound's failure locus is a THIN, structured family.
+Put `D_u={t:||ut||<=1/13}`.  Write `x_1=ga`, `x_2=gb` with `(a,b)=1` and,
+without loss, `a<=b`.  Multiplication by `g` preserves Haar measure, so the
+answer depends on the reduced projective pair `(a:b)`, not on the raw scale.
+Define
+
+```text
+T(z)=sum_(m in Z) (z-|m|)_+,
+psi(theta)=theta(1-theta),       0<=theta<1.
+```
+
+Then the exact formula is
+
+```text
+mu(D_x1 intersect D_x2)
+ = [T((a+b)/13)-T((b-a)/13)]/(ab)                      (3.1)
+ = 4/169
+   +[psi({(a+b)/13})-psi({(b-a)/13})]/(ab).            (3.2)
+```
+
+Indeed a tooth centred at `j/a` and one centred at `k/b` have centre offset
+`m/(ab)`, where `m=bj-ak`.  Coprimality makes the tooth pairs bijective with
+`m mod ab`.  Since `2(a+b)<13ab`, every contributing residue has a unique
+least integer representative and no contributing overlap wraps around the
+residue circle.  The overlap is a **trapezoid**, not the triangle used in the
+original S312 draft: after multiplication by `ab` its length is
+
+```text
+((a+b)/13-|m|)_+ - ((b-a)/13-|m|)_+.
+```
+
+Summing gives (3.1).  If `r=floor(z)` then
+`T(z)=(2r+1)z-r(r+1)=z^2+psi({z})`; subtracting the two squares gives
+`4ab/169` and proves (3.2).  Equivalently, with
+`Q(c)=r(13-r)` for `r=c mod 13` in `{0,...,12}`,
+
+```text
+mu(D_x1 intersect D_x2)
+ = 4/169 + [Q(a+b)-Q(b-a)]/(169ab),                    (3.3)
+|mu-4/169| <= 42/(169ab).
+```
+
+The error has both signs.  Exact counterexamples to the original lower bound
+are
+
+```text
+mu(D_6 intersect D_7)=2/91 < 4/169,
+mu(D_5 intersect D_9)=4/195 < 4/169.
+```
+
+Thus `(a+b)^2/(169ab)` is not the leading term; it results from omitting the
+containment plateau when the narrower tooth lies inside the wider one.
+Near-equality is not a global minimizer theorem.  The sign is the mod-13
+sawtooth `Q(a+b)-Q(b-a)`, and the restricted overlap inside a prefix safe set
+has an additional endpoint-correlation term.
+
+There is an exact scale-normal estimate for that term.  If `E` is a union of
+`c_E` intervals and `B_(a,b)=D_a intersect D_b`, then
+
+```text
+|mu(E intersect D_(ga) intersect D_(gb))
+   -mu(E)mu(B_(a,b))| <= 2c_E/g.                        (3.4)
+```
+
+On every full cell `[j/g,(j+1)/g)`, multiplication by `g` maps the pullback of
+`B_(a,b)` linearly onto `B_(a,b)`, so its mass is exactly
+`mu(B_(a,b))/g`.  Each component of `E` has at most two partial boundary
+cells; bounding their actual and expected contributions by the cell length
+proves (3.4).  Thus common scale `g`, reduced ratio `(a:b)`, and the mod-13
+sawtooth are the natural edge coordinates.  Raw speeds alone are not.
 
 ## 4. The periodicity lemma (the finite table for E-restricted masses)
 
@@ -65,59 +130,81 @@ in h with period = denominator/gcd data. ∎
 Hunter bound = +0.033, +0.034, +0.036, +0.038 — ALL COERCIVE (non-coverage
 PROVED per packet by one inequality; actual uncovered ≈ 0.13–0.14, i.e. the
 independence prediction (11/13)⁷·μE = 0.145 is accurate to 9%). Consecutive
-packets {499..505}, {32..38}: Hunter −0.001, −0.017 (fails, exactly the
-Bezout-minimum locus) while actual uncovered = 0.055, 0.040 — still far from
-tight.
+packets {499..505}, {32..38}: Hunter −0.001, −0.017 while actual uncovered =
+0.055, 0.040 — still far from tight.  These are exact finite witnesses that
+the functional can succeed and fail.  In view of (3.3), they do not prove
+that consecutive packets are the unique failure locus.
 
 ## 6. What remains for a radius-7 closure (named residuals)
 
-1. **The deficit lemma** (the crux): |μ(D_i ∩ D_j ∩ E) − (4/169)μE| ≤
-   C(E)/min(x_i, x_j) with explicit C — pilot-consistent (observed
-   |err|·x ≤ 0.31). This bounds the smallest lift of any Hunter-refuting
-   packet: x_min ≤ X₀(E) ⟹ adjoin it, drop to m′ = 6, where THM-815's
-   recursion is coercive again — closing the chart down to finitely many
-   small-lift states plus residual 2.
-2. **The near-equal residual**: packets with several near-equal speeds evade
-   the tree bound. For 7 consecutive speeds the values (N+i)t form an AP with
-   step t bounded away from 0 on E — an AP-window/mechanical-word argument
-   (THM-778 machinery) should prove uniform non-coverage; pilot shows
-   uncovered ≥ 0.04 there.
+1. **Projective-ratio stratification.**  A bound by raw speed alone is false.
+   On the legal scale-one ray
 
-**This theorem supplies the frontier's requested "replacement potential using
-overlap debt": the potential is Hunter's tree functional, its coercivity
-window is exactly one rung (m′ = 7), and its failure locus is exactly
-characterized (near-equal speeds) with the next tool named per residual.**
+   ```text
+   g=1+13k,       x=6g=6+13(6k),       y=7g=7+13(7k),
+   ```
 
-## 7. THE CLUSTER DICHOTOMY (same session, all three parts verified exact-ℚ)
+   the reduced pair is always `(6,7)` and
+   `mu(D_x intersect D_y)=2/91<4/169`.  For every fixed finite union `E` of
+   intervals,
 
-The residuals of §6 resolve into a complete asymptotic schema:
+   ```text
+   mu(E intersect D_(6g) intersect D_(7g))
+      -> mu(E) 2/91,
+   ```
 
-**(a) Beat localization (the corrected deficit law).** The overlap of combs
-x and x+d localizes on the beat window Beat_d = {u : ||du|| ≤ 2/13} (moiré):
-for small d, μ(D_x ∩ D_{x+d} ∩ E) is governed by μ(E ∩ Beat_d), NOT by
-(4/169)μE. Verified at x = 500: d = 1, 2, 3, 5 give overlaps 0.0059, 0.0029,
-0.0039, 0.0050 (baseline 0.0110), tracking μ(E ∩ Beat_d); **at d = 8 the
-overlap returns to baseline exactly (0.011045) and stays there (d = 13, 40,
-200)**. The deficit threshold is d ≳ 13/2: differences ≥ 8 sample E
-representatively.
+   because `D_(6g) intersect D_(7g)` is the pullback of
+   `D_6 intersect D_7` by multiplication by `g`.  Hence the originally
+   proposed `C(E)/min(x,y)` deficit from the ideal `4mu(E)/169` has a
+   nonzero limiting left side and a zero right side.  The next tree lemma
+   must retain every reduced ratio `(a:b)` (or prove that the maximum tree
+   can avoid its deficient edges), with limiting edge weight given by (3.3).
+2. **Boundary discrepancy at fixed reduced ratio.**  For `x=ga,y=gb`, use the
+   proved split of the restricted edge weight into
 
-**(b) Multi-cluster packets: Hunter on inter-cluster edges.** A spanning tree
-needs NO intra-cluster edges once there are ≥ 2 clusters (star through the
-other cluster). Inter-cluster differences are large ⟹ overlaps at baseline ⟹
-coercive. Verified 3/3: {200..203}∪{900..902}: +0.030; {150..155}∪{700}:
-+0.027; three clusters {100,101}∪{350..352}∪{800,801}: +0.005. All COERCIVE.
+   ```text
+   mu(E) mu(D_a intersect D_b)
+   + [endpoint discrepancy of the g-fold pullback].
+   ```
 
-**(c) Single-cluster packets: the AP-window floor.** Seven speeds in one
-window: (N+d_i)t is a sub-AP with step t; the avoid-measure
-a(t) = 1 − μ(∪_i(W − d_i t)) is positive off tiny Farey windows around
-denominators exactly 7 (width ~1/637 at k/7; smaller denominators q ≤ 6 leave
-gaps ≥ 1/6 > 2/13, so a(t) > 0 there ALWAYS). Verified: ∫_E a(t) dt ≈ 0.0558
-> 0 (the uncovered floor for ALL large N by skew equidistribution); spot:
-a(1/2) = 0.69, a(1/7 + 1/5000) = 0 (in-window), a(5/13) = 0.077.
+   Equation (3.4) bounds the second term by `2c_E/g`; for rational endpoints
+   its scaled value is periodic.  What remains is a maximum-tree lemma that
+   combines these edgewise errors without losing the positive `11/169`
+   ideal margin on the admissible projective-ratio graph.
+3. **Correlated/AP-window residual.**  The two consecutive pilot packets evade
+   the tree certificate but remain far from covering.  Once the projective
+   densities and boundary errors are separated, use an AP-window/mechanical-
+   word argument (THM-778) on any genuinely consecutive residual rather than
+   attributing it to a nonexistent global Bezout minimum.
 
-**The asymptotic radius-7 chart is closed by (b) + (c) modulo two explicit
-finite quantifications: the equidistribution rate in N for (c) (Erdős–Turán
-with the exact table of §4) and the O(κ_E/d) + O(C/x_min) error constants in
-(b). Both are FINITE, per-prefix computations — the wall is no longer a
-density obstruction but a bookkeeping one, exactly the reduction the
-frontier's item 3 asked for.**
+**The surviving replacement potential is Hunter's weighted-tree functional.
+Its ideal-density coefficient crosses the first-moment wall at seven combs,
+and the exact pilots show that it can certify real packets.  Its uniform input
+is not a scalar raw-speed deficit: it is the reduced-ratio, mod-13 sawtooth,
+and endpoint-discrepancy packet above.**
+
+## 7. Exploratory cluster pilots from S312 (not an asymptotic theorem)
+
+The companion cluster script adds three useful finite observations on
+`E_[5]`, but its original “complete asymptotic schema” language is not proved.
+In particular, the script labels a calibration as such and estimates one
+integral by midpoint sampling; neither step is an exact all-packet argument.
+
+1. At `x=500`, differences `d=1,2,3,5` give restricted overlaps below the
+   independent baseline, while the sampled `d=8,13,40,200` rows are closer to
+   it.  This supports a beat-window diagnostic.  It does **not** prove a
+   threshold at `d=8`: equations (3.3)--(3.4) show that raw difference alone
+   cannot determine the edge weight.
+2. Three displayed multi-cluster packets have positive Hunter certificates
+   when a chosen tree uses inter-cluster edges.  This is a three-packet exact
+   pilot, not a proof that every large raw separation gives baseline overlap;
+   projective rays with a large common scale are the explicit obstruction.
+3. The seven-consecutive-speed avoid function has positive sampled integral
+   over `E_[5]` (about `0.0558`) and the recorded spot values expose narrow
+   denominator-seven windows.  Turning this into a uniform floor still needs
+   exact integration over its Farey cells and a quantitative skew-
+   equidistribution error.
+
+Thus the cluster experiment names plausible mechanical-word sublemmas but
+does not close the asymptotic radius-seven chart or reduce the remaining work
+to finite bookkeeping.  Its stored numbers remain reproducible finite data.

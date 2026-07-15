@@ -47,6 +47,7 @@ depends_on:
   - THM-844
   - THM-845
   - THM-847
+  - THM-856
   - HYP-6750
   - HYP-6775
 related:
@@ -63,6 +64,7 @@ related:
   - THM-844
   - THM-845
   - THM-847
+  - THM-856
   - MISTAKE-143
 ---
 
@@ -546,6 +548,28 @@ through arbitrary AP scale.  On the doubled-AP equality side, the core
 `D_7,...,D_12` cover them with 34 incidences; four components have zero
 overlap debt and a unique owner.  This weighted component--comb incidence,
 not pairwise comb overlap, is the predicate-preserving Kakeya-needle carrier.
+
+At seven remaining combs THM-815's single-comb discrepancy coefficient changes
+sign.  THM-856 proves the correct second-order functional is the
+Hunter--Kounias maximum spanning tree of restricted pair overlaps.  At ideal
+densities its lower-bound coefficient is `(165-22m)/169`, positive for seven
+combs and negative for eight.  The S14 live-pull referee corrects its original
+pair formula.  For `x=ga,y=gb`, `(a,b)=1`,
+
+```text
+mu(D_x intersect D_y)
+ =4/169+[Q(a+b)-Q(|a-b|)]/(169ab),
+Q(c)=r(13-r),  r=c mod 13,                              (B7)
+```
+
+and if `E` has `c_E` components then restriction adds at most `2c_E/g` to
+the projective-product discrepancy.  The sawtooth in (B7) has both signs:
+`mu(D_6 intersect D_7)=2/91<4/169`.  Hence neither the original one-sided
+overlap floor nor a deficit bounded only by raw `min(x,y)` is valid.  The
+radius-seven state must retain the reduced pair ratio, common scale, mod-13
+sawtooth, and endpoint discrepancy on each tree edge.  THM-856's exact pilots
+show this functional certifies generic packets, not that all packets are
+closed.
 
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`

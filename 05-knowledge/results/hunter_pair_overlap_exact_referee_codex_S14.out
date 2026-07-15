@@ -1,0 +1,40 @@
+GLOBAL EXACT FORMULA
+triangular_identity_checks=401
+direct_closed_tooth_checks=1770 domain=1<=x<y<=60
+formula=mu(D_x cap D_y)=[T((a+b)/13)-T(|a-b|/13)]/(ab), gcd(a,b)=1
+sawtooth=4/169+[psi({(a+b)/13})-psi({|a-b|/13})]/(ab)
+T(z)=z^2+psi({z}), psi(t)=t(1-t)
+coprime_sign_census_a_lt_b_le_80=below:837,equal:282,above:846
+equality_character=13_divides_a_or_b
+uniform_error_bound=abs(mu-4/169)<=42/(169ab)
+counterexample_6_7=2/91 baseline_gap=-2/1183
+counterexample_5_9=4/195 baseline_gap=-8/2535
+
+PROJECTIVE-RATIO OBSTRUCTION
+core=E_[5] components=10 measure=7/15
+legal_ray=g=1+13k,x=6g=6+13(6k),y=7g=7+13(7k)
+fixed_reduced_density=2/91 reduced_target_muE=2/195
+ideal_4_over_169_target=28/2535 persistent_deficit=2/2535
+k= 1 g= 14 x=  84 restricted=6/637 error_to_reduced=-8/9555 g_times_error=-16/1365
+k= 2 g= 27 x= 162 restricted=8/819 error_to_reduced=-2/4095 g_times_error=-6/455
+k= 5 g= 66 x= 396 restricted=32/3003 error_to_reduced=2/5005 g_times_error=12/455
+k=10 g=131 x= 786 restricted=120/11921 error_to_reduced=-34/178815 g_times_error=-34/1365
+k=30 g=391 x=2346 restricted=4/391 error_to_reduced=-2/76245 g_times_error=-2/195
+k=31 g=404 x=2424 restricted=94/9191 error_to_reduced=-4/137865 g_times_error=-16/1365
+k=32 g=417 x=2502 restricted=388/37947 error_to_reduced=-2/63245 g_times_error=-6/455
+k=35 g=456 x=2736 restricted=107/10374 error_to_reduced=1/17290 g_times_error=12/455
+k=40 g=521 x=3126 restricted=484/47411 error_to_reduced=-34/711165 g_times_error=-34/1365
+k=60 g=781 x=4686 restricted=8/781 error_to_reduced=-2/152295 g_times_error=-2/195
+scaled_error_period_30_checks=5
+correct_asymptotic=mu(E cap D_ga cap D_gb)=mu(E)*rho(a,b)+O_E(1/g)
+REFUTED: a uniform O_E(1/min(x,y)) deficit from (4/169)mu(E)
+
+THM-856 REFEREE VERDICT
+RETAIN: Hunter/Kounias inequality and conditional coefficient arithmetic
+RETAIN: first-moment seven-comb no-go and exact one-comb periodicity
+RETAIN: the finite exact pilot packets as packet-specific computations
+DELETE: global pair-overlap >=4/169 and (a+b)^2 leading term
+DELETE: near-equal speeds are precisely the global minimum/failure locus
+DELETE: raw-speed C(E)/x_min deficit lemma
+REPLACE: stratify by reduced projective ratio (a,b) and common scale g
+PASS: exact correction and projective obstruction independently verified

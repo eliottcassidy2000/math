@@ -39,12 +39,25 @@ H-DRIFT/TOURNAMENT: the exact all-n pointwise law is
 `E[Delta H|T]=(a_(n-2)-(n-1)H)/C(n,2)=2(K-nH)/C(n,2)`, where `K` is the
 odd-cycle-forest partition function.  At `n=6,H=23` the drift takes both
 `4/3` and `-4/15`, refuting H-fibre constancy and scalar mean reversion.
-Concurrent THM-810 F6 supplies the complementary exact second-moment closure
-for the score-axis walk; it suggests computing a variance-corrected cover-debt
-potential at the seven-comb wall, but only after extracting the actual
-component/comb event kernel.  The user's black self-line premise was tested
+Concurrent THM-855 F6 supplies the complementary exact second-moment closure
+for the score-axis walk, a separate collar-event lead rather than the cover
+inequality itself.  The user's black self-line premise was tested
 before proof: it fails first at `n=8`, with 404 non-grid-symmetric quasi-fixed
 tilings versus `SC(8)=176`; only the Klein-four/involution skeleton survives.
+
+LIVE-PULL REFEREE: incoming THM-856 identifies the cover-side quadratic object
+as the Hunter maximum-spanning-tree overlap functional; its ideal coefficient
+`(165-22m)/169` is positive at seven combs and negative at eight.  Exact audit
+caught a false global edge formula before integration.  The corrected law for
+`x=ga,y=gb`, `(a,b)=1`, is
+`4/169+[Q(a+b)-Q(|a-b|)]/(169ab)`, with both signs; in particular
+`rho(6,7)=2/91<4/169`.  The legal ray `(6g,7g)`, `g=1 mod 13`, also refutes
+the proposed raw-speed deficit lemma.  The replacement projective pullback
+law is
+`|mu(E cap D_ga cap D_gb)-mu(E)rho(a,b)|<=2c_E/g`.  Thus the seven-comb
+edge packet retains reduced ratio, common scale, mod-13 sawtooth, and endpoint
+discrepancy.  The Hunter pilots survive; their claimed unique near-equal
+failure diagnosis does not.
 
 TOOTHPICK/FANO/FLOOD: Farey adjacency gives `i+j>k` and
 `min(floor(k/i),floor(k/j))=1`, so every THM-841 gap has at most one real kink.
@@ -63,9 +76,11 @@ ARTIFACTS: THM-815 C.1; HYP-6820 and frontier/backlog/lens updates;
 (hashes `ee57510a...e2e8bf1`, `aa87c107...769ed`);
 `lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py/.out`
 (`cecb046b...0e91a8`, `495fae30...ffa765`); shell-five and THM-841 exact
-replays; reflection `the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14`.
+replays; `hunter_pair_overlap_exact_referee_codex_S14.py/.out`
+(`e38455f...786e5`, `4e780650...dccc`); reflection
+`the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14`.
 Earlier coherent checkpoints `77268efb1` and `aa534512a` were pushed; pulls
-integrated THM-847/H5 closure, the self-line refutation, and THM-810 F6 rather
+integrated THM-847/H5 closure, the self-line refutation, and THM-855 F6 rather
 than overwriting them.
 ## opus-2026-07-15-S312 -- OVERNIGHT MARATHON: n=8 refutation triple-certified (404; my independent third route; Aut-weighted 416 diverges) + THM-854 witness parity law (odd-order witnesses = mod-2 path-decompositions of K_n iff n = 1,2 mod 4; NEVER involutions => MISTAKE-150 corrects THM-852(ii)) + F6 moment closure/FD-exact (THM-855, renumbered from the 810 collision) + THM-856 THE HUNTER TREE BOUND CROSSES THE SEVEN-COMB WALL (coercive iff m' <= 7.5; cluster dichotomy verified in all three regimes; radius-7 asymptotics closed modulo two finite quantifications) (HYP-6910, renumbered from the 6895 collision)
 
