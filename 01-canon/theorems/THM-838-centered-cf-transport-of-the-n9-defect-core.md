@@ -1,7 +1,7 @@
 ---
 id: THM-838
 title: Centered-CF transport preserves the n=9 rank-four defect but exposes two dimensions to n=10 raw S2
-status: PROVED RECURSIVE COORDINATE COPY + FINITE-EXACT DEFECT/Q/P TRANSPORT
+status: PROVED RECURSIVE COORDINATE COPY + FINITE-EXACT DEFECT/Q/ENDPOINT-COUPLED TRANSPORT
 source: codex-2026-07-15-S13/engine
 depends_on: [THM-778, THM-812, THM-813, THM-828, THM-832]
 related: [THM-825, THM-829, THM-834, HYP-6880]
@@ -47,7 +47,7 @@ layer parity.
 On the 58 literal false-palindrome pairs, all 58 target reflection orbits and
 all 58 projected complement-line node-pair cells remain distinct.  Yet only
 ten pairs retain raw-S2 equality.  Hence the continued-fraction action is
-more faithful on literal `Q` and endpoint-coupled `P` carriers than on the
+more faithful on literal `Q` and endpoint-coupled `bar P` carriers than on the
 static raw histogram codec.
 
 ## The derived coordinate map
@@ -96,7 +96,8 @@ Phi(b2): tau=7 low and high parity defects,
 Phi(b3): tau=5 low and high parity defects.              (6)
 ```
 
-Consequently the only syndrome coordinates, including zero, are
+Consequently the only coefficient coordinates `z`, including zero, whose
+images have zero target syndrome are
 
 ```text
 0000,0001,0010,0011,                                    (7)
@@ -134,7 +135,7 @@ pairs and reversed on eight, precisely the four pairs in each of sectors
 transported without the layerwise moment word or an explicit action on its
 orientation.
 
-## Literal `Q` and projected `P` transport
+## Literal `Q` and projected endpoint-coupled transport
 
 Reflection equivariance gives
 
@@ -142,20 +143,24 @@ Reflection equivariance gives
 Phi(sigma_9 u)=sigma_10 Phi(u).
 ```
 
-All 58 target unordered reflection orbits are distinct.  For a canonical
-line endpoint define the coupled tournament coordinate
+For a line endpoint define `e(u)={u,u xor FULL}` and THM-813's literal carrier
+`Q(u)=[e(u)]_sigma`.  All 58 target `Q` cells are distinct.  For the canonical
+apex-zero representative, distinguish the following ordered and unordered
+coupled node coordinates, retaining multiplicity and the common endpoint
+swap:
 
 ```text
-P(u)={nu(u),nu(u xor FULL)},                              (10)
+P^->(u)=(nu(u),nu(u xor FULL)),
+bar P(u)={nu(u),nu(u xor FULL)}.                          (10)
 ```
 
-with multiplicity and the common endpoint swap retained.  Exact tournament
-isomorphism on the 232 source and 232 target endpoint masks finds
+Exact tournament isomorphism on the 232 source and 232 target endpoint masks
+finds
 
 ```text
-source P cells       58 singleton nonloops
-target P cells       58 singleton nonloops
-P descent failures    0
+source bar-P cells       58 singleton nonloops
+target bar-P cells       58 singleton nonloops
+bar-P descent failures    0
 reflection failures   0.                                 (11)
 ```
 
@@ -169,7 +174,7 @@ opposite order.  Their fibre histograms are
 54 projection: {1:51,2:2,3:1}.                          (12)
 ```
 
-Both the ordered endpoint pair and (10) have 58 singleton values.  This
+Both `P^->` and `bar P` have 58 singleton values.  This
 independently matches THM-834 and proves that endpoint coupling restores the
 information lost by either bare node projection on this bank.
 
@@ -183,17 +188,18 @@ Use seven information carriers as vertices:
 
 ```text
 source sector, target difference, target syndrome, target S2 orbit,
-source P, target P, target literal Q.
+source bar P, target bar P, target literal Q.
 ```
 
 The pairwise observable is the number of unordered source witness pairs
 separated.  Switching from raw retention to retention per logarithmic cell
-cost flips 14 edges.  Both gauges are transitive with score histogram
-`0,...,6`, no directed triangle, singleton SCCs, and one Hamiltonian path.
+cost flips 14 edges.  Ties use the displayed carrier order.  Both gauges are
+transitive with score histogram `0,...,6`, no directed triangle, singleton
+SCCs, and one Hamiltonian path.
 
 The challenged assumption is that a continued-fraction copy should act on a
 bare node or raw histogram.  Here it acts exactly on literal coordinates and
-`Q` orbits; the endpoint-coupled `P` carrier also happens to descend on this
+`Q` orbits; the endpoint-coupled `bar P` carrier also happens to descend on this
 finite image.  The action preserves no LRC gap, owner, wall, or loneliness
 predicate.  It is one centered consecutive CF word, not an arbitrary
 `GL_2(Z)` word, and it does not classify the global `n=10` metagraph. ∎

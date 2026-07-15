@@ -66,9 +66,12 @@ complement lines L_n = X_n/<kappa>  --boundary--> Sym^2(M_n).
 THM-828/832 add two further sorts:
 
 ```text
-raw-address cells K_n = X_n/ker(Lambda_n),
+raw-address cells K_n = X_n/~_Lambda,
 decorated defect sectors (D,F_D),  F_D=set of literal equal-address pairs.
 ```
+
+Here `u ~_Lambda v` means `Lambda_n(u)=Lambda_n(v)`; this is a nonlinear
+kernel-pair quotient, not the kernel of a linear map.
 
 Nodes classify tournaments and forget the observer Hamiltonian path.  Lines
 retain two tiling endpoints and colour.  Raw-address cells compare recursive
@@ -91,13 +94,15 @@ difference.  None can silently substitute for another.
 5. **Sector to collision fibre.**  Map the four-bit coordinate back to `D`
    and filter THM-828's exact witness table.  Sector masses are
    `2,2,2,2,2,4,4,4,4,6,26` in sorted order.
-6. **Oriented tiling to chirality.**  Take the sign of the first nonzero
-   layerwise skew moment `J_tau`.  This one bit separates all 58 doubletons.
+6. **Collision endpoint to chirality.**  On the 116 endpoints only, take the
+   sign of the first nonzero layerwise skew moment `J_tau`.  This one bit
+   separates all 58 doubletons; define a default before using it elsewhere.
 7. **Collision pair to a sufficient node coordinate.**  The marginal merged
    node has 53 values and its complement-partner marginal has 54.  Their
-   coupled coordinate `P=(nu(u),nu(u xor FULL))` has 58 singleton values.
+   ordered coordinate `P^->=(nu(u),nu(u xor FULL))`, and also its unordered
+   version `bar P`, has 58 singleton values.
 8. **Centered-CF copy.**  THM-838 derives the literal coordinate copy
-   `Phi:X_9->X_10`.  It preserves all 58 `Q` and `P` cells, retains defect
+   `Phi:X_9->X_10`.  It preserves all 58 `Q` and `bar P` cells, retains defect
    rank four, and exposes exactly the `span(b0,b1)` half to target raw-S2.
 
 The missing map is now general continuation, not static lookup: given a
@@ -108,8 +113,8 @@ or undergo an arbitrary centered-CF word?
 
 | carrier | preserves | destroys / cannot decide |
 |---|---|---|
-| literal tiling | all fixed-path arc bits | tournament isomorphism quotient is not yet taken |
-| ordinary class | unmarked tournament | observer path, converse orientation |
+| literal tiling | all fixed-path arc bits and its tournament class | LRC metric/owner/wall data and future continuation not supplied |
+| ordinary class | the unmarked tournament, distinct from its converse unless self-converse | vertex labels, observer path, complement partner |
 | merged node | isomorphism up to converse, fibre mass if weighted | literal path, line endpoint coupling, deletion continuation |
 | complement line | two endpoint tilings modulo simultaneous swap, colour | a chosen endpoint orientation |
 | raw `Lambda_9` cell | three lower node-pairs, `UABC`, raw S2 | chirality on exactly 58 cells |
@@ -131,6 +136,13 @@ surviving linear carrier is already constant on the entire B3 nerve.  The
 lesson is recursive: quotient labels locate equality, kernel rows retain the
 witness needed to compose it.
 
+The incoming THM-830 deletion-deck audit makes the three roles intrinsic at
+the marked-path level: a chord `(a,b)` survives vertex deletion with role
+multiplicities `n-a`, `a-b-1`, and `b-1`, summing to `n-2`.  Its exact replay
+through `n=14` reports binary deck rank nine at `n=9`.  This is the right
+finite operator for the next continuation-purity test, but the current
+THM-830 theorem file still marks the full proof integration in progress.
+
 ### `A+B+C-D-E-F+G`, `A+B-C`, and the odd seven-term mode
 
 The full recursion is the B3 face nerve.  On the defect carrier it reads
@@ -150,16 +162,31 @@ coordinate missing precisely on the Smith balance wall.
 
 ### Transitivity flow and the wiggly dictionary
 
-THM-810 now gives exact organizing coordinates for nodes and edges:
+THM-810 now gives exact organizing coordinates for ordinary classes and
+edges:
 
-- node stationary mass is `H/(|Aut| 2^m)`;
-- weighted wiggly degree is `m H/|Aut|`;
+- ordinary-class stationary mass is `H/(|Aut| 2^m)`;
+- its weighted wiggly degree is `m H/|Aut|`;
 - a flip changes the score axis by `4(d_loser-d_winner)+8`;
 - margin-two flips are exactly level edges;
 - one unit of electrical current crosses every transitivity-axis cut.
 
-This supplies an objective node order: score-axis value, score sequence,
-blue/mixed/pure-black type, Hamiltonian-path count, then canonical word.  It
+Incoming THM-833 sharpens “flow” to an exact OU law.  If
+`x=sum_i(2d_i-(n-1))^2`, then a uniformly chosen arc flip satisfies
+
+```text
+E[Delta x | T] = -8/(n(n-1)) (x-n(n-1)).
+```
+
+The dynamical centre is the random-tournament value `x_*=n(n-1)`, not the
+maximally regular score class.  For the size-eight face support in THM-834,
+only the first two of eleven sector barycentres lie on the transitive side of
+`x_*=56`; nine lie on the overdistributed side, where mean drift reverses.
+
+For a non-self-converse merged node, the corresponding fibre mass and degree
+have an extra factor two; a self-converse node does not.  This supplies an
+objective node order: score-axis value, score sequence,
+blue/mixed/pure-black type, ordinary `H/|Aut|`, then canonical word.  It
 also supplies an exact local edge orientation.  THM-834 places the 58 n9
 pairs and their 348 distinct face tilings: they occupy 155 n8 nodes and 87
 distinct exclusively-black projected complement-line node pairs.  The
@@ -180,8 +207,9 @@ layerwise moment word and owner/Bezout sidecar.
 
 ### Positional moments and additive reconstruction
 
-Raw counts first fail at n9 only by reflection chirality.  One skew sign
-repairs the actual fibres.  THM-825's stronger per-state `(M0,M1,M2)` codec is
+At `n=9` the 58 residual full lower-address collisions are exactly
+reflection-chirality pairs.  One skew sign repairs these actual fibres.
+THM-825's stronger per-state `(M0,M1,M2)` codec is
 unconditionally literal through n15 and first fails at n16 on
 `{0,4,5}` versus `{1,2,6}`.  This is the clean additive-combinatorics ladder:
 actual minimal separator, robust moment separator, then literal word.
@@ -189,8 +217,10 @@ actual minimal separator, robust moment separator, then literal word.
 ### Coding, matroid, and sheaf language
 
 The 14D syndrome is a binary parity-check code; reflection cuts it to 6D; the
-realized sectors span a 4D subcode.  The seven face restrictions define a
-representable rank-four matroid with exact-region ranks `(0,0,0,3,2,3,4)`.
+realized sectors span a 4D subcode.  The 28 cell-coordinate functionals
+define a representable rank-four binary matroid; its seven Venn blocks have
+ranks `(0,0,0,3,2,3,4)`.  Treating the seven blocks themselves as elements
+instead gives a rank polymatroid, not this matroid.
 The punctures are not linear-code holes: three have many compatible bases and
 die nonlinearly at literal S2.  This makes “linear code plus nonlinear stalk”
 the most economical current description.
@@ -250,8 +280,9 @@ the most economical current description.
 
 ## Guardrails
 
-- Raw-address equality implies `v in {u,sigma u}`; the raw address does not
-  globally descend to the reflection quotient.
+- On the canonical apex-zero bank `X_9^0`, `Lambda_9(u)=Lambda_9(v)` implies
+  `v in {u,sigma u}`; this is not an all-size claim, and the raw address does
+  not globally descend to the reflection quotient.
 - A sector is not an isomorphism-class node, and cube adjacency is not a
   blue/black metagraph edge.
 - Full rank on an overlap proves linear recovery, not nonlinear fibre purity.

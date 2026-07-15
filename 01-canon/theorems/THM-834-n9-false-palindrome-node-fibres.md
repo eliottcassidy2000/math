@@ -17,11 +17,11 @@ verification:
 # THM-834 — exact node fibres and black-flow placement
 
 For a size-nine tiling `u`, let `T(u)` be its tournament in the fixed
-Hamiltonian-path chart and let `c(u)` be the least upper-triangle adjacency
-integer among every relabelling of `T(u)`.  Write
+Hamiltonian-path chart.  For any tournament `T`, let `c(T)` be its least
+upper-triangle adjacency integer among every vertex relabelling.  Write
 
 ```text
-nu(u) = {c(u),c(T(u)^op)}                                (1)
+nu(u) = {c(T(u)),c(T(u)^op)}                             (1)
 ```
 
 as a sorted pair, with a repeated entry for a self-converse class.  On the
@@ -39,10 +39,12 @@ self-converse ordinary class; on four pairs they present two distinct
 ordinary classes exchanged by converse.
 
 The bare projection `nu` is therefore not injective on collision pairs.  It
-becomes injective after retaining the complement-partner node:
+becomes injective after retaining the complement-partner node.  Distinguish
+the ordered and unordered versions
 
 ```text
-P(u) = (nu(u),nu(u xor FULL)).                            (3)
+P^->(u) = (nu(u),nu(u xor FULL)),
+bar P(u) = {nu(u),nu(u xor FULL)}.                        (3)
 ```
 
 The first coordinate of (3) has 53 values and the second has 54, but both the
@@ -72,7 +74,7 @@ path gives a presentation in the fixed-path tiling chart, and two paths give
 the same tiling exactly when an automorphism identifies them.  Hence
 
 ```text
-F(C) = {u : c(u)=C},       |F(C)| = H(C)/|Aut(C)|.        (5)
+F(C) = {u : c(T(u))=C},    |F(C)| = H(C)/|Aut(C)|.        (5)
 ```
 
 For a merged node `m={C,C^op}` its full tiling fibre is
@@ -109,7 +111,7 @@ Their ordinary-class invariants `(H,|Aut|,H/|Aut|)` are respectively
 This proves concretely that a node is an unmarked tournament, whereas a
 collision pair remembers two marked Hamiltonian-path presentations.
 
-## Why the endpoint-coupled coordinate is minimal here
+## A sufficient two-marginal repair
 
 On one chosen presentation from each of the 58 pairs, the two coordinate
 fibres in (3) are
@@ -119,15 +121,17 @@ nu(u):            53 values, multiplicity {1:48,2:5},
 nu(u xor FULL):   54 values, multiplicity {1:51,2:2,3:1}.
 ```
 
-Neither marginal is sufficient.  Their ordered joint coordinate has 58
+Neither marginal is sufficient.  The ordered `P^->` coordinate has 58
 values; forgetting which marginal is first still leaves 58 values, and none
 is a loop.  Reflection swaps the literal endpoints coherently and creates no
 failure.  THM-838 further proves that all 58 coupled cells remain distinct
 under the centered-CF copy `X_9 -> X_10`.
 
-This does not say that `P` is a global invariant of every metagraph line or
-that it always descends under continued-fraction actions.  It is an exact
-minimal repair on this 58-pair bank.  The 53-versus-54 counts also depend on
+This does not say that `P^->` or `bar P` is a global invariant of every
+metagraph line or that either always descends under continued-fraction
+actions.  It is an exact
+two-marginal repair on this 58-pair bank, with no claim of minimality among
+all possible repairs.  The 53-versus-54 counts also depend on
 which complement chart is called direct; the coupled coordinate does not.
 
 ## Placement through the six size-eight face presentations
@@ -140,8 +144,10 @@ tilings.  In the exact `2^21` size-eight atlas they occupy
 ```
 
 Project each face tiling to the merged node of its complement partner.  The
-174 face selections collapse to 87 distinct projected complement-line node
-pairs, all black and none blue.  Their occurrence multiplicities are
+174 marked-face complement-line selections (three per witness) collapse to
+87 distinct projected complement-line node-pair codes.  Every code occurs in
+the black code set and not in the blue code set.  These are projected codes,
+not 87 asserted literal lines.  Their occurrence multiplicities are
 
 ```text
 58 x 1 + 29 x 4 = 174,                                   (11)
@@ -156,11 +162,12 @@ absolute jumps are
 count     :32 52  72   4  13   1.                        (12)
 ```
 
-Thus this defect bank has no internal blue left-right rail at all: after
-projection, its complete selected incidence is black.  The imbalance is
-also quantitative—142 of the 174 occurrences change the transitivity axis,
-while 32 are level.  This is a statement about the selected face bank, not a
-claim that the global size-eight metagraph lacks blue symmetry.
+Thus the selected node-pair codes have no internal blue left-right rail:
+after projection, their complete incidence is exclusively black.  The
+imbalance is also quantitative—142 of the 174 marked-face occurrences change
+the transitivity axis, while 32 are level.  This is a statement about the
+selected face bank, not a claim that the global size-eight metagraph lacks
+blue symmetry.
 
 ## An objective sector order and its obstruction
 
@@ -179,13 +186,27 @@ It runs from more transitive to more distributed support in the precise
 THM-810 coordinate, but it is an order of decorated sectors, not a total
 order of all isomorphism classes.  The JSON gives for every sector its exact
 axis mean, local-depth mean, `H/|Aut|` mean, node count, black-line count,
-category histogram, and jump histogram.  Individual nodes can analogously
-be ordered by
+category histogram, and jump histogram.  A compatible proposed total order
+on individual nodes is
 
 ```text
 (-x, score sequence, colour stratum, local depth,
  H/|Aut|, canonical merged key).                         (14)
 ```
+
+Incoming THM-833 supplies the dynamical centre of this order.  For the
+size-eight single-arc-flip walk the exact OU equilibrium is
+
+```text
+x_* = n(n-1) = 56.
+```
+
+Exactly the first two sector barycentres in (13), `220/3` and `68`, lie above
+56; the other nine, beginning with `1660/39`, lie below it, and none is level.
+Thus “toward distributed” is not one global drift direction.  Above 56 the
+mean flip drift decreases `x`; below 56 it increases `x`, back toward the
+random-tournament centre.  The maximally distributed end is an entropic tail,
+not the stationary endpoint of the flow.
 
 The defect cube does **not** supply the missing metagraph geometry.  Among
 the 14 cube-adjacent sector pairs, all 14 have a black bridge and none a blue
@@ -200,20 +221,21 @@ noncube: (38720/1599)= 24.215134....                     (15)
 ```
 
 Orienting cube edges down the axis produces three local maxima and three
-local minima; the top sector reaches only two of eleven sectors by directed
-cube paths.  Hence a monotone transitive-to-balanced flow cannot be recovered
+local minima; the top sector reaches only two of eleven sectors, including
+itself, by directed cube paths.  Hence a monotone transitive-to-balanced flow cannot be recovered
 from defect-coordinate adjacency alone.  The black metagraph bridges are
 the missing non-cubical incidence.
 
 ## Tournament Analysis and preservation boundary
 
-At node level the pairwise observable is THM-810's transitivity-axis change;
-the switch is whether the observer retains the marked Hamiltonian path, and
-ties are ordered by `(H/|Aut|,canonical key)`.  The full size-eight audit
-records 4,643 climbs, 2,548 level flips, and 2,553 descents for full-arc
-flips; in the marked-wiggly relation it records 3,133 climbs, 2,027 levels,
-and 2,148 descents.  The selected 87 relations are then disintegrated by
-sector and by (12).  The directed cube is not a tournament and is therefore
+For every marked size-eight face tournament, the tournament vertices are its
+eight path positions, the pairwise observable is arc orientation, converse
+reverses every edge, and the fixed path `8->...->1` is a Hamiltonian path.
+Aggregated over the 348 selected endpoint occurrences, the audit records
+4,643 climbs, 2,548 level flips, and 2,553 descents for full-arc flips; in the
+marked-wiggly relation it records 3,133 climbs, 2,027 levels, and 2,148
+descents.  The 87 projected codes are then disintegrated by sector and by
+(12).  The directed defect cube is not a tournament and is therefore
 reported by its maxima, minima, reachability, and bridge distances rather
 than assigned spurious tournament fingerprints.
 
