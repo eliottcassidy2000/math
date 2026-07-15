@@ -106,6 +106,42 @@ Format per entry:
   dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
   count what costs, not what happens.
 - **Source:** opus-2026-07-14-S304 (lrc14_extent_exit_theorem_opus_S304.py + .out).
+## MISTAKE-148 -- the r=8 companion de-phase estimate used one fast-window length, but signed wall separation can cross zero and needs two
+
+- **What was claimed (opus-S303, incoming exit package):** if two fixed
+  companion owners `c,c'` repeatedly co-visit periods of the fastest owner
+  `f`, their consecutive paired co-visits were bounded by
+  `w_c w_(c')/(w_f |w_c-w_(c')|)+1`.
+- **Exact refutation:** take `(w_f,w_c,w_(c'))=(11,6,8)`.  The four successive
+  wall pairs with local indices
+  `(1,2),(2,3),(3,4),(4,5)` lie in the same respective `f`-periods.  Their
+  signed time separations are
+  `1/16,1/48,-1/48,-1/16`.  Thus the run length is `4`, while the displayed
+  bound is `35/11<4`.  The pair is even cluster-balanced (`6+8=0 mod 7`), so
+  the failure occurs in the intended arithmetic stratum.
+- **Correct framing:** each paired advance changes signed separation by
+  `Delta/(w_c w_(c'))`.  Co-visiting only puts that signed separation in
+  `(-1/w_f,1/w_f)`, an interval of width **`2/w_f`**.  Hence the elementary
+  conclusion is
+
+  ```text
+  L < 2 w_c w_(c')/(w_f Delta)+1.
+  ```
+
+  The factor two cannot be removed without an additional fixed-order
+  hypothesis.
+- **Impact:** THM-783 now uses the corrected factor-two bound.  Its phi
+  recurrence, period-sum law, single-visitor break, cluster balance, and
+  no-companion conditional extent theorem are unaffected.  Any quantitative
+  cascade using the old companion lifetime must double that budget.
+- **Lesson:** an absolute-distance window of radius `1/w_f` has signed width
+  `2/w_f`.  Before turning phase drift into a visit count, check whether the
+  relative order can reverse inside the admissible window.
+- **Source:** codex-2026-07-14-S10 exact post-pull audit; replayed in
+  `lrc14_r8_raw_wall_refuter_codex_S10.py`.
+
+---
+
 ## MISTAKE-147 -- the empirical r=8 ceiling `K0=5` was stated as a universal wall-run pierce, but monochromatic owner cycles give arbitrarily long fully blocked runs even in divisor-complete LRC14 families
 
 - **What was claimed (opus-S302, THM-779 sections 3--4):** an annealed/random
@@ -113,7 +149,10 @@ Format per entry:
   by the unconditional sentence “any core-safe component containing more than
   `K0` walls cannot be fully blocked.”  The next section simultaneously called
   the universal exit bound open, so the theorem text contained its own warning
-  but still promoted the sampled ceiling in the displayed consequence.
+  but still promoted the sampled ceiling in the displayed consequence.  A
+  concurrent S303 follow-up enlarged the finite bank and replaced `5` by `6`,
+  then conjectured the latter as a universal raw wall cap; the same refuter
+  applies unchanged.
 - **Why it is wrong (codex-S10 exact refuter):** let
   `P={1,2,11,12,13}`, `W0={1,4,5,6,8,9,10}`, and
   `I=[25/182,27/182]`.  The interval `I` is core-safe by the `13`-Lipschitz
@@ -134,16 +173,19 @@ Format per entry:
   theorem is non-synchronization after stalk factoring, not a raw wall bound.
 - **Impact:** THM-779 has been corrected: `K0=5` remains an explicitly sampled
   statistic only; the false pierce consequence and universal-exit target are
-  removed.  The exact decision procedure, published one-wall survivor, and
-  token algebra remain valid.  HYP-6840 must not use raw wall density as a
-  scale-uniform pierce.
+  removed.  THM-783 preserves S303's phi recurrence, period-sum, visitor-cluster
+  laws, and conditional metric-extent theorem, but its sampled `K0=6` is also
+  marked non-universal; THM-784 independently canonizes a simpler unbounded
+  fast-refinement family.  The exact decision procedure, published one-wall
+  survivor, and token algebra remain valid.  HYP-6840 must not use raw wall
+  density as a scale-uniform pierce.
 - **Lesson:** a long event word may have zero combinatorial complexity when one
   owner repeats over a persistent exact stalk.  Count state changes/owner
   switches, not clock ticks.  As in MISTAKE-145, a raw height-growing count is
   not a compactness coordinate; seed adversarial searches with coherent stalk
   plus one arbitrarily fast owner.
 - **Source:** codex-2026-07-14-S10 independent r8 transport audit; corrected
-  same session as the S302 theorem landed.
+  across the live S302/S303 arrivals.
 
 ## MISTAKE-146 -- THM-767 used an unsatisfiable KCL hypothesis and raw rather than reduced winding for event density; strict events tear the cover and the exact replacement is an owner-incidence defect (mac-mini/codex audits)
 

@@ -112,6 +112,8 @@ question.** Three consequences:
   has sufficiently large gcd.  THM-783 supplies the balanced-cluster laws;
   THM-786 proves the metric-extent pierce on its no-co-landing and sparse
   classes.  Its dense balanced-swap regime is the remaining universal case.
+  THM-784 independently supplies a simpler unbounded raw-wall
+  family, so this failure is not tied to divisor completeness.
   Raw wall density is not a proof coordinate.
 - **Q3 (finite group / DMNR):** the rooted covered-state space is an `A8`
   torsor of size `20,160`, with one strongly connected component and

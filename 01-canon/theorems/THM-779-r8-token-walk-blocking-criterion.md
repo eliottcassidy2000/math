@@ -8,8 +8,11 @@ depends_on:
   - THM-767   # zero-variance at the prime lens; chamber locking
   - THM-771   # the exact seven-owner defect frame
 related: [HYP-2603, HYP-6835, HYP-6840, THM-777, THM-778, THM-783, THM-784, THM-786, THM-788, MISTAKE-147, MISTAKE-148]
-verification: 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
-  (+ 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out)
+verification:
+  - 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
+  - 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out
+  - 04-computation/lrc14_r8_raw_wall_refuter_codex_S10.py
+  - 05-knowledge/results/lrc14_r8_raw_wall_refuter_codex_S10.out
 ---
 
 # THM-779 — the r=8 token-walk blocking criterion

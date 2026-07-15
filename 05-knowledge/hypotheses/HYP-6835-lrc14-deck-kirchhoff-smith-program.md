@@ -11,8 +11,9 @@ depends_on:
   - THM-778   # centered-Christoffel endpoint word and exact global wall ranks
   - THM-779   # r=8 piece-surjectivity/wall-rainbow token-walk criterion
   - THM-780   # explicit global safe-measure floor and rho bound
+  - THM-783   # visitor-cluster laws and conditional metric-extent pierce
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
-related: [THM-745, THM-754, THM-778, THM-779, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146, MISTAKE-147]
+related: [THM-745, THM-754, THM-778, THM-779, THM-783, THM-784, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146, MISTAKE-147]
 ---
 
 # HYP-6835 — the deck Kirchhoff–Smith program
@@ -161,6 +162,13 @@ residual counts owner switches after stalk factoring.  On the positive side,
 THM-778 classifies simultaneous midpoint walls: equal 2-adic valuation and
 large gcd force a double-owner deletion inside the core-safe interval and
 therefore pierce the deck.
+
+**THM-783 visitor-cluster update.**  The wall phi recurrence, period-sum law,
+single-visitor break, cluster balance, and conditional extent bound are valid
+after the S302/S303 scope correction.  They do not bound raw wall count: the
+persistent-stalk refuter has visitor-free fast-owner periods.  Their correct
+role is to constrain the stalk-quotiented owner-switch skeleton and to pierce
+metric components longer than the conditional extent.
 
 ## 5. Lean targets (decide-friendly)
 

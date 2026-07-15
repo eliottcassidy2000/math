@@ -128,6 +128,40 @@
   path orbits, automorphism stabilizers, simultaneous line orbits, and node
   phases to identify exactly where black drift is created.  Then audit `n=8`
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
+## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk-quotiented r=8 dynamics
+
+- **Source:** THM-780/782/783/784/786/788; corrected THM-779; MISTAKE-147/148;
+  HYP-6820/6835/6840.
+- **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
+  `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
+  twelve-core has `|G'|>=182^(-12)` and the normalized `rho` regime is
+  genuinely bounded.  THM-782 specializes this to an anchored `72^(-10)`
+  return packet in every ten-core.
+- **Collar progress:** THM-790 gives the even-maximum sporadic collar a bounded
+  rational clock, occupied top teeth with repeated ordered flank types, and a
+  seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
+  for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero
+  survivors over 117 grouped event times.  Open: make the tear uniform in
+  quotient height and in `w=13c`, then splice it with the center/high-order
+  clock dichotomy.
+- **r=8 correction and surviving structure:** raw covered-wall count is
+  unbounded even for divisor-complete families; the exact refuter is a fixed
+  seven-token permutation stalk plus owner `182m+1`.  The rooted redundancy
+  graph is an `A8` torsor with 20,160 states and one SCC.  THM-783's phi
+  recurrence, period-sum, single-visitor, cluster-balance, and conditional
+  extent laws survive on the corrected coordinate.  A one-step paired strand
+  has signed width `2/w_f` (MISTAKE-148), but general co-visits can skip indices;
+  the sampled `K0=6` is not universal.
+- **Next theorem target:** define minimal persistent stalks over each metric
+  core-safe component, contract stalk-redundant walls, and prove a bound or
+  forced tear for the remaining owner-switch/visitor-cluster skeleton using
+  THM-778's centered schedule and THM-779/783's cocycles.  THM-784 supplies an
+  independent simpler unbounded-run family, confirming that this quotient is
+  necessary rather than an artefact of the divisor-complete construction.
+- **Tournament guardrail:** wall-event tournaments are transitive and forget
+  the stalk; the normalized `A8` graph forgets the metric base.  The faithful
+  carrier is `(core component, labelled minimal stalk, event word, redundancy
+  root/visitor cluster)`, not runners alone.
 
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 
@@ -149,7 +183,7 @@
   `node <- HP/Aut tiling <- owner-to-sheet assignments <- endpoint transport`.
   Test continuation purity at each arrow; the first expected failure is at the
   mask-to-owner lift, where reflection and next-wall futures are multivalued.
-  HYP-6845's new wall `phi`-recurrence belongs in the endpoint-transport field,
+  THM-783's wall `phi`-recurrence belongs in the endpoint-transport field,
   not in the merged node or path-orbit address.
 
 ## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
@@ -182,6 +216,10 @@
   root word is a first-return signal, not a long-run survivor. Raw wall count is
   nevertheless unbounded in other families (THM-784). The correct word is the
   decorated active-period normal form of THM-788, not the uncontracted event word.
+  root word is a first-return signal, not a long-run survivor.  After
+  MISTAKE-147, the open exit lemma is stalk-quotiented: combine THM-783's
+  visitor clusters with an exact schedule-versus-hop-word question under
+  THM-778.
 - **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
   compile the five-return half into centered Farey/Christoffel substitutions.
   Prove a prefix loses coverage, a simultaneous event tears the stalk, or the

@@ -83,8 +83,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | prime-lens endpoint transport | Pairwise midpoint clocks are centered mechanical words with an Euclidean parity cocycle; centered Beatty ranks reconstruct every simultaneous wall and drive the exact `F_7` skew product.  The named r=8 row has 10 simple covered walls with palindromic owner word `162,108,108,206,197,197,206,108,108,162` | THM-778 + 6,400-pair/five-movie exact audit |
 | merged-node tiling fibres | A fixed-path tiling maps to its canonical class and converse-merged node; the inverse node fibre is intrinsically `union HP(T)/Aut(T)`.  All n=3..7 atlases round-trip.  For `n7-a267`, `H=175` and `|Aut|=7` explain the exact 25 masks. | THM-781 + 33,866-tiling exact audit |
-| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls. Raw wall count is unbounded: `{1,2,3,4,5,8,10}` is a fixed rainbow on `(5/16,7/20)`, and `560N+1` inserts `21N` covered walls. The no-companion extent bound survives; the original de-phase/serving bound is false. After contracting empty fastest periods, `(A,f,g)` give the proved count and extent upper bounds. | THM-779/783/784/786/788; MISTAKE-147/148 |
-| eight-owner `c=7` buffer rigidity | Local full deck blocking exists on positive intervals, so finite raw-run caps cannot prove exit. VERIFIED `1/7+O(gcd/w)` buffer telemetry and the proved zero-sum visitor law remain; the open target is a bound on active zero-sum visitor packets plus incidence with the core-safe component. | HYP-6840 + THM-783/788 |
+| prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; the redundancy cocycle gives an exact event-word test and rooted states form an `A8` torsor. Raw wall length is unbounded: a divisor-complete persistent seven-stalk family has `2m` covered walls, and an independent simpler family has `21N`. The live target is the stalk-quotiented owner-switch/visitor skeleton. | THM-779/784; MISTAKE-147; exact refuter/A8 audit |
+| r=8 visitor/extent laws | Phi recurrence, period-sum, single-visitor break, cluster balance, no-companion extent pierce, signed visitor-set difference, and the factor-two fixed-companion span are proved. If the six companion speeds sum to less than `g`, an explicit extent bound follows; THM-788 contracts empty fastest periods to active normal form. General alternating companions remain open. | THM-783/786/788; MISTAKE-147/148 |
+| eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is subsumed by THM-779's integer token walk. The global `1/7+O(gcd/w)` partner-buffer law remains VERIFIED but must be restricted to the core-safe exit set; whole-core blocking and the general-density stalk-quotiented switch bound remain OPEN. | HYP-6840 + THM-779/783/784/786/788 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; phase pigeonhole gives the height-free floor `182^(-12)`; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`, while that sharp global value remains CONJECTURAL | THM-777/780 |
@@ -97,8 +98,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| ten-core phase/erosion packet | PROVED symmetric packet measure `>=2*72^(-10)`, component width `>=72^(-10)/(5 maxU)`, pointwise thickness tax, and erosion `E_U subset H minus R_U` under tightness. Exact admissible row has the entire natural return set trapped at one deep anchor but an escape at another deep time; local refinement is not the missing lemma. | THM-782/789 |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty. The two-sheet residual is now global deep-component selection/noncontainment, not scalar measure or fixed-anchor packet width; unbounded shallow descent and higher-sheet packets also remain. | THM-759/763/765/766/768/769/770/772/774/775/776/782/789; HYP-6820 |
+| ten-core phase/erosion packet | PROVED symmetric packet measure `>=2*72^(-10)`, component width `>=72^(-10)/(5 maxU)`, pointwise thickness tax, and erosion `E_U subset H minus R_U` under tightness. An exact admissible row traps the entire natural return set at one deep anchor but escapes at another; global component selection, not local refinement, is the missing lemma. | THM-782/789 |
+| even-maximum two-sheet collar | PROVED rational blocker clock `q<=4R-2`, center/effective-order dichotomy, uniform occupied top teeth with repeated disjoint flank types, and a `Z/13` moving-edge carrier. FINITE-EXACT: forced `w=13` has no packet for `U subset [1,24]` (1,144,066 cores; zero full-word survivors). Uniform tear remains open. | THM-791 + exact 117-event-group certificate |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, the full two-sheet speed box through 100, and the forced-`w=13` quotient box through 24 are empty. Residuals are global eroded-packet noncontainment, uniform collar tear, unbounded shallow descent, and higher-sheet packets. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/791; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -141,12 +143,14 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    the right deep component, or force a dyadic/effective-order descent. For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
-   *Prime-lens refinement:* THM-784 refutes raw wall-count exit and MISTAKE-148
-   withdraws the fixed-index de-phase shortcut. THM-788 replaces the wall word
-   by decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb free
-   fastest-owner refinement and `V` packets are ordered zero-sum visitors.
-   Bound `A`, then intersect the resulting metric interval with the core-safe
-   base. A continued-fraction digit is useful only through this labelled fibre.
+   *Prime-lens refinement:* THM-778 supplies the full Euclidean endpoint word;
+   THM-779/784 rule out raw wall count, and MISTAKE-148 withdraws fixed-index
+   de-phasing. After persistent stalks are contracted, THM-788 replaces the
+   word by decorated normal form `E_0,V_1,...,V_A,E_A`, where `E` blocks absorb
+   free fastest-owner refinement and `V` packets are ordered zero-sum visitors.
+   Bound `A`, retain the redundancy roots, then intersect the resulting metric
+   interval with the core-safe base. A continued-fraction digit is useful only
+   through this labelled fibre action.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
 4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
@@ -216,6 +220,14 @@ selection/noncontainment theorem (or
 quantitative seam-guard bounds that put the reconstructed ten-core/full packet
 inside a certified base), not an unstructured search over ten-even/two-odd
 tuples.
+
+THM-790 now clocks the remaining even-maximum collar more sharply.  Its
+eleven-speed maximizer has denominator at most `4R-2`; safe mass occupies many
+top teeth with repeated disjoint flank owners; and a forced odd `13c` exception
+produces a labelled moving edge cover on thirteen quotient sheets.  For `c=1`
+and `U subset [1,24]`, an exact sweep of all 1,144,066 cores and 117 grouped
+event times leaves zero survivors.  This is a new finite slice, not the missing
+uniform automaton tear.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

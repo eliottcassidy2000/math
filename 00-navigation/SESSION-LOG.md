@@ -191,6 +191,59 @@ Finally, the raw endpoint-bit packet has the closed bivariate kernel
 variances `(n-1)/2,(n-3)/2`.  This replaces the one-dimensional black-sea
 metaphor by an exact symmetric probability cloud whose iso-class
 disintegration creates the observed currents.
+## codex-2026-07-14-S10 -- heavy phase cells, a clocked sporadic collar, and the stalk-quotiented r=8 frontier
+
+Prompt (owner): repeat the frontier session, pull/push often, and work multiple
+remaining mathematical pieces.
+
+THM-780 is now quantitative: if a `d`-speed orbit has a `beta`-deep point and
+`alpha<beta`, its strict `alpha`-safe set has measure at least
+`ceil(1/(beta-alpha))^(-d)`.  For twelve cores this is `182^(-12)`, so the
+THM-777 rho bridge is globally bounded (crudely, `<5.046*10^27`).  THM-782's
+incoming specialization converts the same idea into an anchored `72^(-10)`
+return packet inside every ten-speed two-sheet quotient core.
+
+THM-790 advances the exact even-maximum sporadic collar.  Its eleven-speed
+maximizer has denominator `q<=4R-2`, with a center/high-effective-order
+dichotomy; uniform safe mass occupies many top teeth with repeated disjoint
+flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
+edge cover on `Z/13Z`.  The `w=13`, `U subset [1,24]` automaton is empty:
+1,144,066 cores, 101,850 initial covers, 117 grouped event times, zero full-word
+survivors (also zero among 20,604 primitive divisor-complete initial liars).
+
+The r=8 audit changed the target.  THM-779's sampled raw wall ceiling is false:
+`P={1,2,11,12,13}`, a fixed seven-owner permutation stalk, and owner
+`182m+1` give `2m` consecutive covered walls on one divisor-complete core-safe
+interval.  The normalized covered states form an `A8` torsor of size 20,160,
+with one SCC and 5,760 monochromatic seven-cycles.  The correct coordinate is a
+minimal persistent-stalk/owner-switch skeleton, not clock ticks.
+
+The live S303 pull was retained as THM-783 after resolving its collision with
+the existing THM-782.  Its phi recurrence, period-sum law, single-visitor
+break, cluster balance, and conditional metric-extent theorem survive.  Two
+scope corrections were required: the sampled `K0=6` is refuted by the same
+persistent stalk, and the original de-phase argument applies only to explicit
+one-step paired strands, where signed width `2/w_f` gives the corrected bound.
+THM-784 independently canonizes a simpler family with unbounded raw blocking-
+wall runs, while THM-785 reserves the cyclic-triangle metagraph-flow thread.
+The balanced example `(f,c,c')=(11,6,8)` has four paired co-visits while the
+old expression is `35/11<4`; the corrected expression is `59/11`.
+
+Tournament Analysis challenged runners as vertices throughout.  Heavy phase
+cells, character obligations, endpoint events, minimal stalks, top teeth, and
+thirteen sheet obligations each preserve different theorem predicates.  The
+wall tournament is transitive and loses the stalk; the `A8` graph loses the
+metric base.  The faithful object is the labelled incidence skew product
+recorded in the S10 reflection.
+
+HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
+proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear,
+structured noncontainment of THM-782's phase packet in every admissible folded
+diamond, and a stalk-quotiented visitor/switch bound joining THM-778/779/783.
+
+FILES: THM-783/784/786/788; corrected THM-779; MISTAKE-147/148; exact collar and raw-wall
+scripts/outputs; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+`lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---
 
@@ -272,7 +325,7 @@ reconstruction lemma is supplied.
 
 ---
 
-## opus-2026-07-14-S303 -- THM-783 (renumbered from colliding 782): THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
+## opus-2026-07-14-S303 -- THM-783: THE SCOPE-CORRECTED VISITOR-CLUSTER EXIT PACKAGE (phi recurrence; period-sum law; unconditional single-visitor break; cluster balance; conditional one-step de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; raw K0 refuted by MISTAKE-147)
 
 Prompt (owner): keep going; prove the unconditional exit lemma.
 
@@ -284,22 +337,30 @@ samples conflated with violation -- fixed, rerun clean). (3) SINGLE-VISITOR BREA
 (unconditional tooth): in the fastest owner f's periods every other owner walls 0/1 times, so
 one visitor forces w^{-1} = 0 mod 7 -- impossible; the run dies (45 periods, 0 occurrences).
 (4) CLUSTER BALANCE: visitor sets need zero inverse-sum; pairs w_c + w_c2 = 0 mod 7 (6/6).
-(5) DE-PHASE: fixed pairs co-visit <= w_c w_c2/(w_f Delta) + 1. (6) CONDITIONAL EXTENT:
+(5) DE-PHASE (factor-two corrected by MISTAKE-148): fixed paired co-visits obey
+`L<2 w_c w_c2/(w_f Delta)+1`; signed separation can cross order. (6) CONDITIONAL EXTENT:
 absent balanced co-landings at the second-fastest owner g's walls, run extent < 1/w_g + 2/w_f
 => the r=8 pierce UNCONDITIONAL for that configuration class.
 
-CENSUS (heights to 10^4): generic max 5; synchronized {2}+odds (the loophole candidate whose
-period-sums cancel by design) max 4 -- WORSE than generic, killed by within-period
-phi-equations exactly as predicted; near-ratio 4; same-residue 6; annealed peak 6. K0 := 6.
+CENSUS (heights to 10^4): generic max 5; synchronized {2}+odds (the sampled loophole candidate
+whose period-sums cancel by design) max 4; near-ratio 4; same-residue 6; annealed peak 6.
+**Scope correction (codex-S10, exact):** `6` is a finite-bank statistic, not a universal `K0`.
+THM-779/MISTAKE-147's fixed seven-owner stalk plus owner `182m+1` has `2m` consecutive covered
+walls; all complete fast-owner periods are visitor-free, so the proved laws remain valid while
+the raw count diverges.
 
-DAVENPORT INSIGHT: D(Z_7) = 7 -- the seven non-f inverses ALWAYS contain a zero-sum subset;
-balance is algebraically unavoidable; the exit lemma's remaining content is GEOMETRIC: bound
-consecutive balanced CO-LANDINGS (de-phase + cascade congruences n = 4 or 0 + handover
-triple-balance = the proved machinery). Sharp conjecture: every blocking run <= 6 walls.
+DAVENPORT INSIGHT: D(Z_7) = 7 -- the seven non-f inverses always contain a zero-sum subset;
+balance is algebraically unavoidable.  The corrected remaining content is geometric: after
+factoring persistent stalks and visitor-free repetitions, bound genuine balanced co-landings or
+owner switches (de-phase + cascade congruences `n=4` or `0` + handover triple-balance).
 
 HYGIENE: THM-780/781 were taken at claim time, and codex-S9 had already pushed
 THM-782 before this package landed.  First-pusher ownership is preserved by
-renumbering the exit package to THM-783.
+renumbering the exit package to THM-783.  THM-784 is the subsequently proved unbounded-raw-wall
+theorem, THM-785 is reserved for cyclic-triangle flow, THM-786 is the extent-
+form exit theorem, THM-787 is the transitivity-flow theorem, THM-788 is the
+active-period reduction, THM-789 is two-sheet erosion, and the collar theorem
+is THM-790.
 
 FILES: 01-canon/theorems/THM-783-exit-lemma-package.md; 04-computation/
 lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.

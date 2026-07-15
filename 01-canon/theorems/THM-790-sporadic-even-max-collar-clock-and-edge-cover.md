@@ -1,5 +1,5 @@
 ---
-id: THM-783
+id: THM-790
 title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover carrier, and no w=13 packet through quotient height 24
 status: PROVED (quantifier-exact reductions) + VERIFIED (finite-exact w=13 closure for U subset [1,24]; does not exclude the unbounded collar)
 source: codex-2026-07-14-S10
@@ -8,13 +8,13 @@ depends_on:
   - THM-772
   - THM-775
   - THM-780
-related: [THM-774, THM-776, THM-778, HYP-6820]
+related: [THM-774, THM-776, THM-778, THM-782, HYP-6820]
 verification:
   - 04-computation/lrc13_w13_sheet_edge_cover_h24_codex_S10.py
   - 05-knowledge/results/lrc13_w13_sheet_edge_cover_h24_codex_S10.out
 ---
 
-# THM-783 — Sporadic even-maximum collar reductions
+# THM-790 — Sporadic even-maximum collar reductions
 
 Let a primitive tight twelve-speed set lie in the two-sheet packet
 
