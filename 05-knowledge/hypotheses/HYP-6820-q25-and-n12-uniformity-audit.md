@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts, the entire proper scale-one Hamming-six chart plus all common dilations closed except for the doubled-AP equality family `2c[12]`, and the first ramified face `c=2` closed except for its ordinary-AP equality presentation `[12]`; the remaining common-sheet H5 presentation bank is finite with `min D_i<=21<max D_i<=10,584`, is {2,3,7}-smooth, and has no private prime power; effective order is the exact H6 ramification degree, every H6 branch containing order one is finite-decidable, and THM-860 makes the entire primitive proper AP-centred H6 ramified branch finite-decidable with `2<=c<=2,177,280`; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and both the universal single-column endpoint-grid template and every fixed two-column unit endpoint family refuted in the relaxed model for the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the primitive H6 metric context trees at `c>=3`, radius-seven endpoint/third-moment and correlated AP-window residuals, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts, the entire proper scale-one Hamming-six chart plus all common dilations closed except for the doubled-AP equality family `2c[12]`, and the first ramified face `c=2` closed except for its ordinary-AP equality presentation `[12]`; the remaining common-sheet H5 presentation bank is finite with `min D_i<=21<max D_i<=10,584`, is {2,3,7}-smooth, and has no private prime power; effective order is the exact H6 ramification degree, every H6 branch containing order one is finite-decidable, and THM-860 makes the entire primitive proper AP-centred H6 ramified branch finite-decidable with `2<=c<=1,008`; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and both the universal single-column endpoint-grid template and every fixed two-column unit endpoint family refuted in the relaxed model for the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the primitive H6 metric context trees at `c>=3`, radius-seven endpoint/third-moment and correlated AP-window residuals, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
@@ -11,7 +11,7 @@ progress_note: >-
   across common dilation, identifies D as the deck-mask ramification degree,
   and makes every H6 order-one gate finite-decidable. THM-860 supplies the
   hereditary five-order lcm identity, all six-colour relative cuts, the
-  optimized scale bound c<=2,177,280, and a finite exact recursion for every
+  joint-cut and scalar-owner scale bound c<=1,008, and a finite exact recursion for every
   primitive proper AP-centred ramification language. THM-861 evaluates its
   first ramified face: a 41,882,982-node exact tree leaves only the ordinary
   AP [12], so every sporadic c=2 packet is loose. THM-862 classifies the next
@@ -941,8 +941,12 @@ c/min(D_i) divides 2^5*3^3*5*7=30,240.
 ```
 
 Six-colour attenuation supplies `min D_i<=77`; the all-six relative cut
-sharpens this to `min D_i<=72`, hence `c<=2,177,280`.  Range zero at a large prime means a common factor, not prime
-absence; individual H6 orders are not asserted smooth.  Every fixed
+sharpens this to `min D_i<=72`.  Joint enumeration of all 63 cuts leaves 8,449
+normalized order words and 18,405 multiplier rows, with order-only cap 1,120.
+All four scale-1,120 extremals fail the exact scalar owner-capacity condition,
+and the next arithmetic scale is 1,008; hence `c<=1,008`.  Range zero at a
+large prime means a common factor, not prime absence; individual H6 orders are
+not asserted smooth.  Every fixed
 order/unit presentation has six labelled progressions modulo `13c`, and the
 THM-815 component cap makes its exact insertion tree finite.  The unique
 worst root has longest component `31/1430`, so a labelled progression has at
@@ -1413,7 +1417,7 @@ descent; THM-857 completes THM-815's scale-one radius-six recursion over every
 root and leaves only `2[12]`. THM-859 conjugates this tree across every common
 dilation and proves that the scale quotient fails precisely at effective order
 `D>1`; branches containing `D=1` form a finite family of finite exact trees.
-THM-860 then bounds every primitive proper AP-centred ramified scale by `2,177,280`
+THM-860 then bounds every primitive proper AP-centred ramified scale by `1,008`
 and transports each order/unit language to a finite exact component tree.
 THM-861 closes its `c=2` face: the only cover is the ordinary AP `[12]`.
 No proper primitive or mixed-parity unramified H6 chamber remains; the finite
@@ -1502,8 +1506,9 @@ deciding objects are therefore:
   closes every proper scale-one H6 row except the doubled AP equality. THM-859
   makes common dilation an exact action conjugacy and identifies the
   `Z/DZ` phase action as the missing sidecar at ramification. THM-860 adds the
-  prime-power upper-set layer, bounds primitive proper AP-centred H6 scale by
-  `2,177,280`, and proves that the resulting labelled progression/component
+  prime-power upper-set layer, jointly optimizes all 63 relative cuts, excludes
+  the four scale-1,120 arithmetic extremals by scalar owner capacity, bounds
+  primitive proper AP-centred H6 scale by `1,008`, and proves that the resulting labelled progression/component
   bank is finite. THM-861 then evaluates the complete `c=2` fibre and finds
   only the ordinary AP `[12]`; its sparse signed cycle routes sheet parity but
   cannot replace the literal component/ray state that decides coverage. The

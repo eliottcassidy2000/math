@@ -1,13 +1,15 @@
 ---
 id: THM-860
 title: Primitive Hamming-six finite ramification reduction
-status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=2,177,280 and belongs to a finite exact component recursion; no emptiness claim
+status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=1,008 and belongs to a finite exact component recursion; no emptiness claim
 source: codex-2026-07-15-S14/S15 primitive-H6 transport and independent audit
 depends_on: [THM-765, THM-810, THM-815, THM-857, THM-858, THM-859]
 related: [THM-823, THM-840, THM-861, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.py
   - 05-knowledge/results/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.out
+  - 04-computation/lrc13_hamming_six_joint_ramification_cap_codex_S10.py
+  - 05-knowledge/results/lrc13_hamming_six_joint_ramification_cap_codex_S10.out
 ---
 
 # THM-860 — primitive Hamming-six is finite-ramified
@@ -106,10 +108,30 @@ Choose a numerically least order `D_*`.  Since `c=lcm_i D_i`, (9) implies
 c/D_* divides 2^5*3^3*5*7=30,240.                     (10)
 ```
 
-Together with the sharpened pivot in (8),
+Together with the sharpened pivot in (8), this first gives the coarse product
+bound
 
 ```text
-                         c<=2,177,280.                  (11)
+                         c<=2,177,280.
+```
+
+Jointly imposing all `63` cuts is far stronger.  After dividing the six
+orders by their common gcd, the complete exact arithmetic relaxation has
+`8,449` normalized order words and `18,405` admissible common multipliers.
+Its sharp order-only cap is `1,120`, attained by exactly four sorted words:
+
+```text
+(20,35,56,80,1120,1120),      (20,35,80,224,280,1120),
+(20,35,80,280,1120,1120),     (20,35,112,160,280,1120).
+```
+
+None of these four words admits even the unit-independent scalar owner
+capacity required by common-sheet coverage.  The next arithmetic scale is
+`1,008`.  Consequently every packet in the theorem satisfies the much smaller
+exact bound
+
+```text
+                              c<=1,008.                 (11)
 ```
 
 The last line of (9) is a **valuation-range** statement, not a prime
@@ -188,7 +210,7 @@ entire primitive AP-centred Hamming-six branch is finite-decidable.  At
 `2[12]`; hence any primitive row satisfying (2) has
 
 ```text
-2<=c<=2,177,280.                                       (19)
+2<=c<=1,008.                                           (19)
 ```
 
 This is a finite reduction, not a zero-row verdict.
@@ -447,7 +469,83 @@ all-six refinement in (8) gives
 c<=72*30,240=2,177,280,
 ```
 
-which is (11).
+which is the preliminary product bound above.
+
+The exact joint optimization is still finite and much smaller.  Put
+
+```text
+g=gcd(D_1,...,D_6),                    D_i=g d_i.        (40a)
+```
+
+Then `gcd(d_1,...,d_6)=1`.  Every prime at least eleven has valuation range
+zero, so it cancels into `g`; the normalized orders are supported on
+`{2,3,5,7}` within the ranges in (9).  For every proper colour set `S`, the
+common factor cancels exactly:
+
+```text
+D_i/gcd(D_i,lcm_(j notin S)D_j)
+ =d_i/gcd(d_i,lcm_(j notin S)d_j).                     (40b)
+```
+
+Only the all-six cut changes with `g`, while (8) leaves
+`g min_i d_i<=72`.  Thus it is enough to enumerate the normalized valuation
+profiles and then
+
+```text
+1<=g<=floor(72/min_i d_i),                  13 does not divide g. (40c)
+```
+
+For each prime, fix the dyadic profile by simultaneous colour relabelling and
+align every distinct permutation of the later profiles.  If a partial-prime
+word fails a cut it can be discarded permanently: adjoining another prime
+multiplies each relative order by some integer, and (33) says its individual
+`rho` contribution cannot increase.  The complete exact census is
+
+| stage | raw distinct words | all-cut survivors |
+|---|---:|---:|
+| admissible `2` profiles | 38 | 38 |
+| admissible `3` profiles | 10 | 10 |
+| admissible `5` profiles | 2 | 2 |
+| admissible `7` profiles | 3 | 3 |
+| aligned through `2,3` | 3,509 | 1,221 |
+| aligned through `2,3,5` | 6,977 | 2,913 |
+| aligned through `2,3,5,7` | 47,915 | 8,449 |
+
+The first alignment represents all `14,364` dyadic/ternary profile
+alignments.  Applying (40c) gives `18,405` feasible `(d,g)` pairs.  Their
+largest common scale is `1,120`, and the four words displayed before (11) are
+all the maximizers.  Their all-six cut sums, in the same order, are
+
+```text
+281/280,       561/560,       1,       1.              (40d)
+```
+
+It remains legitimate to use label information, because common-sheet coverage
+was already forced in the proof of (7).  For an order `D`, provider label `r`,
+and owner `o`, define
+
+```text
+N_D(r,o)=#{z in Z:-D<z<=D and z=D r o^(-1) (mod 13)}.  (40e)
+```
+
+At common scale `c`, that provider's sheet mask has cardinality
+`(c/D)N_D(r,o)`.  Hence the union bound forces, at every owner,
+
+```text
+sum_i (c/D_i)N_(D_i)(r_i,o)>=c.                        (40f)
+```
+
+Capacities depend only on label ratios.  Normalize the label on the first
+order slot to one and exhaust the remaining `11P5=55,440` ordered distinct
+labels.  For the four scale-`1,120` words, the largest possible minimum of the
+left side of (40f) is respectively
+
+```text
+1046,       1047,       1045,       1049,              (40g)
+```
+
+all strictly below `1,120`.  Thus none has a common-sheet presentation.  The
+next scale in the complete arithmetic census is `1,008`, proving (11).
 
 ### 4. Exact finite verifier
 
@@ -463,6 +561,17 @@ The stored verifier independently performs four exact jobs:
 4. replays every mask in (26) and computes (27) from exact breakpoint
    denominators.
 
+The joint-cap verifier independently enumerates all `63` cuts, every normalized
+prime-profile alignment and common multiplier in (40c), the four extremal
+words, all `4*55,440` normalized label assignments in (40f), and the pairwise
+Tournament Analysis loss audit.  Its two completed tournaments are transitive
+on every extremal word.  The raw-order gauge has zero or one tie; after
+conditioning a pair on the other four orders, all fifteen pairs tie.  The
+fixed slot-order tie path gives score histogram `{0:1,...,5:1}`, zero directed
+triangles, six singleton SCCs, and one Hamiltonian path, while flipping
+fourteen or fifteen raw edges.  This is positive evidence that the decisive
+object is the `63`-hyperedge cut system, not a completed order tournament.
+
 Normal and optimized Python runs are byte-identical to the stored output.
 The frozen integrity data are
 
@@ -474,6 +583,13 @@ root FNV-64     321c8da774c59420
 c=2 FNV-64      b2aad8bd497eb595.                       (41)
 ```
 
+The additional joint certificate has
+
+```text
+joint source SHA-256  e33b99d4e40496f44ee8588663120764e292e933ea567f9beaa10c5c7ddde50c
+joint output SHA-256  9de3c311176a1491f64b560256cf0dc21760401bbbedd47e43938a4c0813d622. (41a)
+```
+
 Reproduce with
 
 ```bash
@@ -481,6 +597,10 @@ python3 04-computation/lrc13_hamming_six_primitive_ramification_verifier_codex_S
   cmp - 05-knowledge/results/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.out
 python3 -O 04-computation/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.py |
   cmp - 05-knowledge/results/lrc13_hamming_six_primitive_ramification_verifier_codex_S15.out
+python3 04-computation/lrc13_hamming_six_joint_ramification_cap_codex_S10.py |
+  cmp - 05-knowledge/results/lrc13_hamming_six_joint_ramification_cap_codex_S10.out
+python3 -O 04-computation/lrc13_hamming_six_joint_ramification_cap_codex_S10.py |
+  cmp - 05-knowledge/results/lrc13_hamming_six_joint_ramification_cap_codex_S10.out
 ```
 
 This completes the proof. ∎
@@ -502,8 +622,10 @@ tournament destroy at least one required operation.  The `c=2` signed cycle
 is informative precisely because it retains edge parity, but even there it
 does not decide component coverage at arbitrary heights.
 
-THM-860 makes every primitive proper AP-centred H6 language finite-decidable.  It
-does **not** run the resulting metric recursions for all presentations, prove
-that the `64` `c=2` contexts are loose, classify all `c=3` contexts, close the
-finite ramified H5 metric bank, cross the seven-comb wall, or prove global
-`n=12` sporadic-branch emptiness.
+THM-860 makes every primitive proper AP-centred H6 language finite-decidable.
+THM-861 subsequently proves that the only `c=2` cover is the ordinary AP
+presentation `[12]`, and THM-862 classifies all `1,504` common-sheet contexts
+at `c=3` without running their terminal metric recursion.  This theorem does
+**not** close those `c=3` trees, the remaining `4<=c<=1,008` trees, the finite
+ramified H5 metric bank, the seven-comb wall, or global `n=12`
+sporadic-branch emptiness.

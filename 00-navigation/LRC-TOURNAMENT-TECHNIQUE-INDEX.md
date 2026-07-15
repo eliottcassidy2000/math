@@ -277,7 +277,12 @@ obligations, and proof-carrier interfaces.
   whole tree and that an order-`D` insertion creates exactly `D` deck masks;
   hence transport is exact at `D=1` and genuinely ramified at `D>1`.
   THM-860 bounds every primitive proper AP-centred ramified language by
-  `c<=2,177,280`. Its `c=2` pair object is not a tournament: the signed ratio
+  `c<=1,008`. Its exact joint-cut audit is a sharp warning against pairwise
+  compression: the four order-only extremals lie at `c=1,120`, but after
+  conditioning any pair on the other four orders all fifteen pair comparisons
+  tie and the fixed tie completion is transitive, while the 63-cut
+  prime-power hypergraph and scalar owner capacities exclude every extremal.
+  Its `c=2` pair object is not a tournament: the signed ratio
   relation `o/r in {+2,-2}` is exactly one six-cycle/SCC on each of 64 rows.
   Completing absent pairs by an increasing-label tie path is lossy; sheet
   parity on the sparse cycle is the preserved pair datum. THM-861 evaluates

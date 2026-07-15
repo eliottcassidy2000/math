@@ -240,7 +240,7 @@
   action through common dilation, proves that effective order `D` is exactly
   the number of deck masks created by one insertion, and makes the H6 gate
   containing `D=1` finite-decidable. THM-860 makes every primitive proper
-  AP-centred `D>1` language finite-decidable as well: `c<=2,177,280`, with at
+  AP-centred `D>1` language finite-decidable as well: `c<=1,008`, with at
   most 37 first heights per labelled ray. THM-861 evaluates all 64
   all-order-two `c=2` signed-cycle contexts in a `41,882,982`-node exact tree;
   the sole cover is the ordinary AP `[12]`, so that sporadic face is empty.

@@ -231,6 +231,18 @@ Kakeya-needle correction in concrete form: local incidence says which sheets a
 periodic needle germ touches, while global comb placement decides whether all
 safe intervals are pierced.
 
+The arbitrary-scale H6 arithmetic base now makes the same point without any
+metric recursion.  Normalize the six effective orders as `D_i=g d_i`.  The
+complete 63-cut prime-power hypergraph has only 8,449 normalized words and
+18,405 admissible multipliers; its four largest order-only rows lie at scale
+1,120.  If the six order slots are made tournament vertices, however, every
+complement-conditioned pair in all four rows ties, and the fixed tie completion
+is transitive.  The multi-colour cuts still distinguish the words, and exact
+scalar owner capacities exclude all four.  The next arithmetic scale gives
+`c<=1,008`.  Thus “proof obligations” and prime-power upper sets are sometimes
+better vertices than runners, arcs, or even sheet providers: the theorem lives
+on a cut hypergraph whose pair shadow is maximally uninformative.
+
 A separate implementation supplies a smaller crosscheck of that action tree:
 all 52 `f=2` roots whose exact first-speed cap is at most 156 close in
 `9,888,159` states, with zero covering prefix and 1,323 independent

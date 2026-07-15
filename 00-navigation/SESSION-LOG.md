@@ -65154,3 +65154,43 @@ rank-four sectors; genuine increasing-size CF cocycle state with phase and
 owner tokens; and only then a metric fibre product with LRC gap/owner/wall
 data.  None of the tournament carriers computed here preserves loneliness,
 and LRC(14) remains open.
+## codex-2026-07-15-S10 continuation -- joint relative cuts collapse the primitive H6 scale cap to 1,008
+
+HONEST VERDICT: the requested uniform `q<=25` statement is false (THM-762/764),
+and global `n=12` sporadic-branch emptiness remains open.  The live mainline now
+does prove the entire `c=2` primitive AP-centred H6 sporadic face empty
+(THM-861): its only cover is the ordinary AP `[12]`.  THM-862 classifies, but
+does not metrically close, the 1,504 scale-three arithmetic lanes.
+
+This continuation sharply reduces the remaining primitive H6 scale bank.
+Writing `D_i=g d_i`, all proper relative cuts depend only on `d`; only the
+all-six cut sees `g`, and `g min(d)<=72`.  Exact prime-profile alignment uses
+`38,10,2,3` admissible profiles at `2,3,5,7`.  Monotone partial-prime pruning
+against all 63 cuts gives
+
+```text
+2x3:     3,509 raw -> 1,221 survivors
++5:      6,977 raw -> 2,913 survivors
++7:     47,915 raw -> 8,449 survivors
+multiplier rows: 18,405.
+```
+
+The sharp order-only cap is `c=1,120`, with exactly four sorted extremals.
+For each, simultaneous label multiplication normalizes one label to one, so
+all `11P5=55,440` assignments can be scanned exactly.  None satisfies even the
+unit-independent scalar owner-capacity inequality; best floors are
+`1046,1047,1045,1049 < 1120`.  The next arithmetic scale is 1,008, proving
+`c<=1,008` under THM-860's hypotheses.  This replaces the former coarse product
+bound 2,177,280 without claiming a metric verdict for any surviving scale.
+
+TOURNAMENT / ASSUMPTION CHALLENGE: use the six order slots as vertices, compare
+raw orders or complement-conditioned relative `rho`, and complete ties by slot
+order.  Every extremal gives a transitive tournament with score histogram
+`{0:1,...,5:1}`, no directed triangle, singleton SCCs, and one Hamiltonian
+path.  Yet every conditioned pair ties, and 14 or 15 raw edges flip.  The
+decisive object is the 63-hyperedge system of prime-power upper-set cut
+obligations plus owner fibres, not a runner tournament.  Pair completion
+preserves a scalar ranking and tie path but destroys the multi-colour cover
+debt.  This agrees with the newly pulled `c=2` signed-cycle result, the `c=3`
+affine toothpick-code result, and the H-drift/j4 signal: operation-specific
+pair or Walsh codecs are useful stalks, while literal metric fibres remain.
