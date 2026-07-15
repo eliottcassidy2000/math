@@ -1,3 +1,10 @@
+## kind-pasteur-2026-07-15-S128 (cont.21) -- THM-854: NO-HOLES COMPLETENESS PROVED (F3 exchange descent: equal-degree flip = exact dc3 = -1; full step-8 E4 progression all n) + THE RANK-2 POLYGONAL LAW (Delta_d(j) = C(j+d,d) - (j-1)T_d - (d+1); diagonals decoded; A000127 + Fibonacci-analogue verified) + locker parity at mechanism level (c_odd = 2,4,12,40,136 EVEN; involution must mix lengths)
+
+Prompt (owner): prove locker parity via divisor pairing; prove no-holes via the F3 exchange walk; polygonal vs polyhedral diagonals.
+
+Details in THM-854 and HYP-6940; referee script noholes_locker_polygonal_kps_S128c21.py/.out (lemma exhaustive n=4..6; tables 14 terms / 5 diagonals; spectra n=5..9).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.20) -- THM-853: SEQUENCE ATLAS TO CANON (six terms n=5..10) + DEEP-WELL CORRIDOR LAW PROVED (m({1..12};lam) = (2H_12/13)(1-13lam) on [1/14,1/13]; covering-min margin 2H_12/2379 exact) + THE LOCKER TOURNAMENT D_n (divisibility as edges; H = 5,9,33,109,469, H = 1 mod 4 five-for-five OUTSIDE the stratum -- divisor-pairing conjecture) + creative bundle (3-triangular = 3 staircase corners; XOR-SAT engine note; Smith chart/Moebius/Stern-Brocot)
 
 Prompt (owner): harvest n=10 (done cont.19); sequences to canon; Farey-14 law + LRC; locker/squares; 3-triangular/4-square; nomograms; binary conditions as edges.
