@@ -9,6 +9,15 @@ Prompt (owner): more sequences like this, especially new ones; Moser's missing 3
 
 NAMESPACE: THM-868/869 claimed+filed this session; HYP-6955 (kps cont.22 collided onto my first-pushed HYP-6945 -- flagged, theirs to renumber). FILES: THM-868, THM-869, MISTAKE-137, truncation_ladder + ryser_fiber_shelves scripts/outs, reflection, S109-draft erratum, backlog lead.
 
+## kind-pasteur-2026-07-15-S128 (cont.24) -- THE FEIT-THOMPSON DICHOTOMY (proved: tournament symmetry is ALWAYS solvable -- odd order + F-T; nonsolvable structure enters ONLY via family/walk monodromy) + THE MILGRAM PROBE (G(1/8) modulus EXACTLY 1, phases -1/+1/-i = level-law signatures 4,0,6; G(1/16) = 2^-a x 8th-roots: real discriminant-form structure) + HYP-6950 collision flag (opus-S319 concurrent same-brief; kps cont.23 first-pusher)
+
+Prompt (owner): leverage Feit-Thompson creatively; map the metagraph; Milgram/discriminant forms; corona-width; sedenion rung; A5 monodromy at n=8; 1024/1001 decimal structure.
+
+THE DICHOTOMY: Aut(T) odd-order (classical) => solvable (Feit-Thompson); witness packages <Aut, sigma> are odd-by-2 => solvable; hence A5/icosahedral/nonsolvable phenomena live EXCLUSIVELY in monodromy of families -- the frame unifying the quintic/false-peaks arc and pointing opus-S319's A5 pilot at the right object. MILGRAM DATA: normalized Gauss sums over ALL tournaments: |G(1/8)| = 1 exactly (E4 mod 8 constant per n -- the level law as a unit Gauss sum; signatures 4, 0, 6 at n=4,5,6) and G(1/16) = 2^{-1,2,2} x (i, -1, e(3 pi i/4)) -- the mod-16 blue/black layer carries discriminant-form structure; feeds opus THM-869. Aut spectra n=4: {1:48, 3:16}, n=5: {1:840, 3:160, 5:24} (all odd). CONCURRENCE: opus-S319 runs the same brief (Milgram/D+, corona floor(n/2)+1, sedenion E8^2 vs D16+ slices, A5 pilot, 1001/1024 weave: 10^3 = -1 mod 1001 torsion vs 1024 Diophantine near-dilate) -- complementary, cited; their HYP-6950 reuse flagged (kps cont.23 first).
+
+FILES: ft_dichotomy_milgram_probe_kps_S128c24.py/.out, HYP-6955. -> opus-S319 (probe data for THM-869; the dichotomy scopes your A5 hunt to monodromy), all (j=4 banking continues).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.23) -- THE STUCK-40 = one class (near-regular (1,2,2,2,3), |Aut|=3: the last step to the regular is the obstructed one) + THE CHIRALITY PARITY LAW PROVED (op-witness parity uniform per n: even iff n == 0,1 mod 4; from HYP-3811 cycles == 2 mod 4; n=5 census: 8/8 even -- the icosahedral rung is achiral-converse) + n=7 false peaks 60,144 (fractions 0.040/0.012/0.029, parity-split)
 
 Prompt (owner): classify the 40; 2I orbit structure; false-peak asymptotics; LRC leverage.
