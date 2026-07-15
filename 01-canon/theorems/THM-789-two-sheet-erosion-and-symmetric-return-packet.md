@@ -363,7 +363,9 @@ return incidence on each branch, not only descend inside one phase cell.
 
 THM-797 implements the first arithmetic branch of this prescription.  An odd
 exception-divisor grid class outside its explicit acceptance shell gives an
-immediate global escape; at `q=13` only full and aligned-five folded supports
-survive.  Its sharp aligned row traps every global maximizer but escapes at a
-different threshold component, confirming that the branch set in this section
-must contain all closed deep components and their endpoint owners.
+immediate global escape.  Its q=13 signed walls eliminate double-13 and full
+support, leaving only the exact signed complement of the off-divisor
+exception.  A sharp post-wall row traps every exception-divisor grid but
+escapes at a core-generated denominator, confirming that the branch set in
+this section must contain all closed deep components, their endpoint owners,
+and non-divisor denominators.

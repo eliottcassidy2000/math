@@ -474,15 +474,18 @@ THM-792 advances the exact even-maximum sporadic collar.  Its eleven-speed
 maximizer has denominator `q<=4R-2`, with a center/high-effective-order
 dichotomy; uniform safe mass occupies many top teeth with repeated disjoint
 flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
-edge cover on `Z/13Z`.  The `w=13`, `U subset [1,24]` automaton is empty:
-1,144,066 cores, 101,850 initial covers, 117 grouped event times, zero full-word
-survivors (also zero among 20,604 primitive divisor-complete initial liars).
-In fact every initial cover tears by `3/8` after 38 groups, and every
-divisor-complete one by `4/11` after 36.  Writing `e=e^0+C` turns the carrier
+edge cover on `Z/13Z`.  The entire `w=13c`, `U subset [1,24]` multiplier lane
+is empty.  At `c=1`, 101,850 initial covers among 1,144,066 cores all tear by
+`3/8` (divisor-complete by `4/11`); at `c=3`, all 2,528 initial covers tear by
+`1/7`; every odd `c>=5` fails in the first chamber because `13c>2 max(U)`.
+Writing `e=e^0+C` turns the carrier
 into an `A_12` root-current walk in the 50,388-state seven-chip simplex;
 coverage is exactly `e>=0` and
 `K=K_0+<e^0,C>+||C||^2/2`.  All 14,184 initial `K=0` covers still tear, so cut
-current—not minimum energy—is the exact quotient.
+current—not minimum energy—is the exact quotient.  The smaller tropical
+transfer `T(W)=(c_W,b_W)` composes by
+`(c_U+c_V,min(b_U,c_U+b_V))` and preserves block survival together with
+`e^0`.  The height-24 atlas has 280 endpoint-zero words, none abstractly safe.
 
 The r=8 audit changed the target.  THM-779's sampled raw wall ceiling is false:
 `P={1,2,11,12,13}`, a fixed seven-owner permutation stalk, and owner
@@ -542,14 +545,16 @@ and oriented safe germs, where two replacement colours may share obligations.
 
 The next live pull supplied THM-797's odd-divisor selector.  For every odd
 `q`, a deep unit class outside the explicit opposite-colour exception shell is
-already a global erosion escape.  At the mandatory `q=13`, hypothetical
-containment forces either full six-class folded support or the aligned five-
-class pattern.  The gate is sharp: for
-`U=(1,2,3,4,7,9,10,11,12,16)` and `(x,y)=(13,5)`, both global maximizers
-`5/13,8/13` are trapped, but the threshold endpoint `7/33` escapes.  Thus the
-geometric carrier must retain every owner-labelled closed deep component, not
-only the argmax orbit.  The exact replay checks 10,971,770 odd-grid triples and
-the complete eight-component survivor with rational arithmetic.
+already a global erosion escape.  Its q=13 signed-wall upgrade is much sharper:
+one-sided leakage forces both signs in every rejected folded class, so double-
+13 and full support are impossible.  The sole survivor has
+`U mod 13=(Z/13Z)^*\{+/-y}` exactly, with `M(U)>=2/13`, `x<=2B-1`,
+`y<=B-1`, and `13B+2xy<=2B(x+y)`.  The post-wall row
+`U=(1,2,4,6,7,9,10,11,12,16)`, `(x,y)=(13,5)` silences every
+exception-divisor grid but escapes at `6/17`.  Thus the geometric carrier must
+retain every owner-labelled closed deep component and core-generated
+denominator, not only the argmax orbit or exception divisors.  The exact replay
+checks 10,971,770 odd-grid triples and all 352,716 signed residue multisets.
 
 The folded route also gained a global theorem and an exact quotient boundary.
 For `delta=2/(143B)`, tightness forces
@@ -597,16 +602,17 @@ degree vector tear at different times/sheets, so the energy is a current
 coordinate, not a proof quotient.
 
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
-proved.  The next exact pieces are a uniform `w=13c` collar-automaton tear;
-all-component eroded-packet noncontainment on the full/aligned-five `q=13`
-survivors; a stalk- and holonomy-quotiented collision-path bound joining
+proved.  The next exact pieces are a uniform-in-quotient-height collar tear
+after the `w=13c`, height-24 multiplier lane; all-component eroded-packet
+noncontainment on the exact signed-complement q=13 survivor, with non-divisor
+denominators retained; a stalk- and holonomy-quotiented collision-path bound joining
 THM-778/779/783/786/788/794; a Hamming-radius-two shallow sheet--tooth
 obstruction extending THM-795; and a scale-normal argument for clustered
 comparable-size far frequencies after THM-799 closes the fully lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149; exact collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
-scripts/outputs plus the exact marginal-holonomy and odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+scripts/outputs plus the exact tropical-transfer, marginal-holonomy, and signed-wall odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

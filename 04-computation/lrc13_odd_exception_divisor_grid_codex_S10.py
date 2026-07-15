@@ -4,12 +4,14 @@
 At an odd rational grid p/q, nearest-integer parity can be read directly
 from balanced residues.  When q divides one odd exception this becomes an
 exception-divisor sieve.  The mandatory q=13 grid in THM-772 then gives a
-six-vertex folded-class obstruction.  All arithmetic below is integral or
+six-vertex folded-class obstruction; its one-sided walls recover the signed
+residue multiset and a sharp metric pin.  All arithmetic below is integral or
 uses Fraction; there is no floating-point or sampled-circle step.
 """
 
 from fractions import Fraction as F
-from itertools import combinations
+from hashlib import sha256
+from itertools import combinations, combinations_with_replacement
 from math import gcd
 
 
@@ -18,6 +20,8 @@ BETA = F(1, 11)
 GAMMA = BETA - ALPHA
 U0 = (1, 2, 3, 4, 7, 9, 10, 11, 12, 16)
 X0, Y0 = 13, 5
+U1 = (1, 2, 4, 6, 7, 9, 10, 11, 12, 16)
+X1, Y1 = 13, 5
 
 
 def norm(z: F) -> F:
@@ -178,6 +182,86 @@ def audit_q13_corollary() -> tuple[int, int, int, dict[int, int]]:
         double_divisor_successes,
         inverse,
     )
+
+
+def audit_q13_signed_wall_census() -> dict[str, object]:
+    """Exhaust signed residue multisets after the folded support gate.
+
+    A rejected q=13 grid wall can be locally tight only when its owner class
+    occurs with both residue signs.  There are C(21,10)=352716 multisets of
+    ten nonzero residues modulo 13; this census applies that exact wall rule
+    after the folded support gate for every possible missing class.
+    """
+    classes = set(range(1, 7))
+    profiles = 0
+    off_divisor_gate_pairs = 0
+    off_divisor_wall_survivors: list[tuple[int, tuple[int, ...]]] = []
+    double_divisor_gate_profiles = 0
+    double_divisor_wall_survivors = 0
+    for residues in combinations_with_replacement(range(1, 13), 10):
+        profiles += 1
+        counts = {residue: residues.count(residue) for residue in range(1, 13)}
+        support = {folded_class(residue, 13) for residue in residues}
+
+        if support == classes:
+            double_divisor_gate_profiles += 1
+            double_wall = all(counts[c] and counts[13 - c] for c in classes)
+            double_divisor_wall_survivors += int(double_wall)
+
+        for missing in classes:
+            gate = classes - support <= {missing}
+            if not gate:
+                continue
+            off_divisor_gate_pairs += 1
+            wall = all(
+                counts[c] and counts[13 - c]
+                for c in support
+                if c != missing
+            )
+            if wall:
+                off_divisor_wall_survivors.append((missing, residues))
+
+    expected = [
+        (
+            missing,
+            tuple(
+                residue
+                for residue in range(1, 13)
+                if folded_class(residue, 13) != missing
+            ),
+        )
+        for missing in range(1, 7)
+    ]
+    off_divisor_wall_survivors.sort()
+    assert off_divisor_wall_survivors == expected
+    assert double_divisor_wall_survivors == 0
+    digest = sha256(repr(tuple(off_divisor_wall_survivors)).encode()).hexdigest()
+    return {
+        "profiles": profiles,
+        "off_gate_pairs": off_divisor_gate_pairs,
+        "off_survivors": tuple(off_divisor_wall_survivors),
+        "double_gate_profiles": double_divisor_gate_profiles,
+        "double_survivors": double_divisor_wall_survivors,
+        "digest": digest,
+    }
+
+
+def audit_narrow_endpoint_owner(limit: int = 200) -> int:
+    """Verify the equality case of the aligned metric pin.
+
+    Normalize the accepted grid by yp=+1.  At displacement 1/(13B), among
+    starting residues +/-2,...,+/-6 and speeds u<=B, clearance can reach
+    1/13 only for the max speed B starting at residue -2.
+    """
+    tests = 0
+    for B in range(1, limit + 1):
+        for speed in range(1, B + 1):
+            for residue in (-6, -5, -4, -3, -2, 2, 3, 4, 5, 6):
+                clearance = norm(F(residue, 13) + F(speed, 13 * B))
+                assert clearance >= ALPHA
+                assert (clearance == ALPHA) == (speed == B and residue == -2)
+                tests += 1
+    return tests
 
 
 def breakpoint_candidates(speeds: tuple[int, ...]) -> set[F]:
@@ -469,13 +553,131 @@ def audit_sharp_survivor() -> dict[str, object]:
     }
 
 
+def odd_divisors(value: int) -> tuple[int, ...]:
+    return tuple(
+        divisor
+        for divisor in range(3, value + 1, 2)
+        if value % divisor == 0
+    )
+
+
+def folded_deep_and_shell(
+    speeds: tuple[int, ...], q: int, x: int, y: int
+) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    units = range(1, q)
+    deep = tuple(
+        sorted(
+            {
+                folded_class(p, q)
+                for p in units
+                if gcd(p, q) == 1 and deep_unit_predicate(speeds, p, q)
+            }
+        )
+    )
+    shell = tuple(
+        sorted(
+            {
+                folded_class(p, q)
+                for p in units
+                if gcd(p, q) == 1 and direct_sheet_predicate(p, q, x, y)
+            }
+        )
+    )
+    return deep, shell
+
+
+def audit_signed_wall_survivor() -> dict[str, object]:
+    """A row passing the signed q=13 wall but escaping at q=17."""
+    assert len(U1) == 10 and len(set(U1)) == 10 and gcd(*U1) == 1
+    assert all(any(speed % modulus == 0 for speed in U1) for modulus in range(2, 13))
+    assert all(speed % 13 != 0 for speed in U1)
+    B = max(U1)
+
+    residues = tuple(sorted(speed % 13 for speed in U1))
+    expected_residues = tuple(residue for residue in range(1, 13) if residue not in (5, 8))
+    assert residues == expected_residues
+    support_multiplicity = tuple(
+        sum(folded_class(speed, 13) == c for speed in U1)
+        for c in range(1, 7)
+    )
+    assert support_multiplicity == (2, 2, 2, 2, 0, 2)
+    for c in (1, 2, 3, 4, 6):
+        assert c in residues and 13 - c in residues
+
+    value, maximizers = exact_loneliness(U1)
+    assert value == F(2, 13)
+    assert maximizers == (F(5, 13), F(8, 13))
+    assert X1 % 13 == 0 and Y1 % 13 != 0
+    assert X1 <= 2 * B - 1 and Y1 <= B - 1
+    assert 13 * B + 2 * X1 * Y1 <= 2 * B * (X1 + Y1)
+    rho = (value - ALPHA) / B
+    astar_left = F(1, X1 * Y1) + 2 * rho
+    astar_right = F(2, 13 * X1) + F(2, 13 * Y1)
+    assert rho == F(1, 208)
+    assert astar_left == F(1, 40) <= astar_right == F(36, 845)
+
+    divisors = tuple(sorted(set(odd_divisors(X1)) | set(odd_divisors(Y1))))
+    assert divisors == (5, 13)
+    divisor_rows = {
+        q: folded_deep_and_shell(U1, q, X1, Y1)
+        for q in divisors
+    }
+    assert divisor_rows == {
+        5: ((), ()),
+        13: ((5,), (5,)),
+    }
+    for deep, shell in divisor_rows.values():
+        assert set(deep) <= set(shell)
+
+    witness = F(6, 17)
+    witness_phi = phi(U1, witness)
+    witness_q = folded_q(X1, Y1, witness)
+    assert witness_phi == F(2, 17) > BETA
+    assert witness_q == F(10, 17) < F(11, 13)
+    deep17, shell17 = folded_deep_and_shell(U1, 17, X1, Y1)
+    assert folded_class(6, 17) in deep17
+    assert folded_class(6, 17) not in shell17
+
+    payload = (
+        U1,
+        residues,
+        value,
+        maximizers,
+        tuple(divisor_rows.items()),
+        witness,
+        witness_phi,
+        witness_q,
+    )
+    digest = sha256(repr(payload).encode()).hexdigest()
+    return {
+        "B": B,
+        "residues": residues,
+        "support_multiplicity": support_multiplicity,
+        "value": value,
+        "maximizers": maximizers,
+        "rho": rho,
+        "astar_left": astar_left,
+        "astar_right": astar_right,
+        "divisor_rows": divisor_rows,
+        "witness": witness,
+        "witness_phi": witness_phi,
+        "witness_q": witness_q,
+        "deep17": deep17,
+        "shell17": shell17,
+        "digest": digest,
+    }
+
+
 def main() -> None:
     moduli, units, grid_tests = audit_general_odd_grid()
     divisor_tests = audit_divisor_specialization()
     q13_assertions, off_successes, double_successes, inverse = (
         audit_q13_corollary()
     )
+    wall = audit_q13_signed_wall_census()
+    endpoint_tests = audit_narrow_endpoint_owner()
     sharp = audit_sharp_survivor()
+    signed = audit_signed_wall_survivor()
 
     print("Odd exception-divisor grid / global deep-component replay")
     print(
@@ -504,6 +706,27 @@ def main() -> None:
         "q13_corollary: E_U subset H minus R_U with exactly one "
         "13-divisible exception forces "
         "C\\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C"
+    )
+    print(
+        "q13_signed_wall_census: "
+        f"residue_multisets={wall['profiles']} "
+        f"off_divisor_gate_pairs={wall['off_gate_pairs']} "
+        f"double_divisor_gate_profiles={wall['double_gate_profiles']} PASS"
+    )
+    print(
+        "q13_signed_wall_survivors: "
+        f"off_divisor={len(wall['off_survivors'])} "
+        f"double_divisor={wall['double_survivors']} "
+        f"digest={wall['digest']}"
+    )
+    print(
+        "q13_signed_wall_conclusion: full support and double-13 are empty; "
+        "for each missing class c the unique residue multiset is "
+        "(Z/13Z)^*\\{+/-c}"
+    )
+    print(
+        f"narrow_endpoint_owner_tests={endpoint_tests} PASS; "
+        "normalized y=B equality forces the max-speed residue -2"
     )
     print()
     print(f"sharp_survivor_U={U0}")
@@ -545,6 +768,29 @@ def main() -> None:
         f"{sharp['component_minima']} margins={sharp['component_margins']}"
     )
     print()
+    print(f"signed_wall_survivor_U={U1}")
+    print(
+        f"signed_residues_mod13={signed['residues']} "
+        f"folded_multiplicity={signed['support_multiplicity']} "
+        f"B={signed['B']} M(U)={signed['value']} "
+        f"maximizers={signed['maximizers']}"
+    )
+    print(
+        f"metric_pin=(x<=2B-1,y<=B-1,13B+2xy<=2B(x+y))=PASS "
+        f"rho={signed['rho']} Astar={signed['astar_left']}"
+        f"<={signed['astar_right']}"
+    )
+    print(
+        f"all_exception_divisor_grids={signed['divisor_rows']} "
+        "have D_q subset A_q"
+    )
+    print(
+        f"nondivisor_escape_t={signed['witness']} "
+        f"phi={signed['witness_phi']} Q={signed['witness_q']}<11/13; "
+        f"q17_deep={signed['deep17']} q17_shell={signed['shell17']}"
+    )
+    print(f"signed_wall_survivor_digest={signed['digest']}")
+    print()
     print("Tournament Analysis (vertices = six folded mod-13 obligations)")
     print("  pairwise observable A: core residue multiplicity")
     print("  switch/gauge B: inversion c -> c^(-1)")
@@ -554,8 +800,8 @@ def main() -> None:
     print("  SCC sizes: (1,1,1,1,1,1)")
     print("  Hamiltonian-path counts: 1 / 1")
     print(f"  edge flips between gauges: {sharp['edge_flips']}")
-    print("  preserved by decorated carrier: missing-class/deep-grid/exception-shell incidence")
-    print("  destroyed by bare tournament: class identities, inversion, widths, and E_U subset H verdict")
+    print("  preserved by decorated carrier: signed-wall/missing-class/deep-grid/exception-shell incidence")
+    print("  destroyed by bare tournament: sign occupancy, class identities, inversion, widths, and E_U subset H verdict")
     print("Component Tournament (vertices = four reflection-paired E_U components)")
     print("  pairwise observable A: escape margin 11/13-min_C Q")
     print("  switch/gauge B: component width")

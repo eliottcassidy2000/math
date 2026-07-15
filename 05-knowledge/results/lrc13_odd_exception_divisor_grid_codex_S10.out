@@ -5,6 +5,10 @@ divisor_specialization_tests=143346 PASS; q|x accepts exactly odd nonzero y-resi
 q13_folded_support: subset/y_assertions=832 off_divisor_containment_profiles=24 double_divisor_containment_profiles=1 PASS
 q13_inversion={1: 1, 2: 6, 3: 4, 4: 3, 5: 5, 6: 2}
 q13_corollary: E_U subset H minus R_U with exactly one 13-divisible exception forces C\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C
+q13_signed_wall_census: residue_multisets=352716 off_divisor_gate_pairs=340170 double_divisor_gate_profiles=34332 PASS
+q13_signed_wall_survivors: off_divisor=6 double_divisor=0 digest=6d1065da21735e471b238e0c1222cdb1063946c55f8a74d0646dc4fcb1d3efc9
+q13_signed_wall_conclusion: full support and double-13 are empty; for each missing class c the unique residue multiset is (Z/13Z)^*\{+/-c}
+narrow_endpoint_owner_tests=201000 PASS; normalized y=B equality forces the max-speed residue -2
 
 sharp_survivor_U=(1, 2, 3, 4, 7, 9, 10, 11, 12, 16)
 primitive=True divisor_complete_2_12=True no_13_multiple=True B=16 M(U)=2/13 maximizers=(Fraction(5, 13), Fraction(8, 13))
@@ -18,6 +22,13 @@ E_U_components=8 ((Fraction(12, 77), Fraction(7, 44)), (Fraction(23, 110), Fract
 component_endpoint_owners=(((7,), (12,)), ((10,), (9,)), ((16,), (10,)), ((10, 12), (10, 12)), ((10, 12), (10, 12)), ((10,), (16,)), ((9,), (10,)), ((12,), (7,)))
 reflection_orbit_(minQ,argmin)=((Fraction(60, 77), Fraction(12, 77)), (Fraction(8, 33), Fraction(7, 33)), (Fraction(159, 176), Fraction(67, 176)), (Fraction(15, 22), Fraction(9, 22))) margins=(Fraction(67, 1001), Fraction(259, 429), Fraction(-131, 2288), Fraction(47, 286))
 
+signed_wall_survivor_U=(1, 2, 4, 6, 7, 9, 10, 11, 12, 16)
+signed_residues_mod13=(1, 2, 3, 4, 6, 7, 9, 10, 11, 12) folded_multiplicity=(2, 2, 2, 2, 0, 2) B=16 M(U)=2/13 maximizers=(Fraction(5, 13), Fraction(8, 13))
+metric_pin=(x<=2B-1,y<=B-1,13B+2xy<=2B(x+y))=PASS rho=1/208 Astar=1/40<=36/845
+all_exception_divisor_grids={5: ((), ()), 13: ((5,), (5,))} have D_q subset A_q
+nondivisor_escape_t=6/17 phi=2/17 Q=10/17<11/13; q17_deep=(6,) q17_shell=()
+signed_wall_survivor_digest=2b5e7a6e4593f998fd28eeb124fb5eaaba8b00747782084ee11004b457ebb546
+
 Tournament Analysis (vertices = six folded mod-13 obligations)
   pairwise observable A: core residue multiplicity
   switch/gauge B: inversion c -> c^(-1)
@@ -27,8 +38,8 @@ Tournament Analysis (vertices = six folded mod-13 obligations)
   SCC sizes: (1,1,1,1,1,1)
   Hamiltonian-path counts: 1 / 1
   edge flips between gauges: 5
-  preserved by decorated carrier: missing-class/deep-grid/exception-shell incidence
-  destroyed by bare tournament: class identities, inversion, widths, and E_U subset H verdict
+  preserved by decorated carrier: signed-wall/missing-class/deep-grid/exception-shell incidence
+  destroyed by bare tournament: sign occupancy, class identities, inversion, widths, and E_U subset H verdict
 Component Tournament (vertices = four reflection-paired E_U components)
   pairwise observable A: escape margin 11/13-min_C Q
   switch/gauge B: component width

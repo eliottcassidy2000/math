@@ -1,7 +1,7 @@
 ---
 id: THM-797
-title: Odd-exception divisor grids, the q=13 folded-support gate, and the global-component correction
-status: PROVED (general odd-grid residue-shell lemma and q=13 support corollaries) + VERIFIED (sharp aligned survivor, exact deep components, and global erosion witness)
+title: Odd-exception divisor grids, the q=13 signed-wall gate, and the global-component correction
+status: PROVED (general odd-grid residue shell, q=13 signed-wall rigidity, and metric pin) + VERIFIED (sharp support and signed-wall survivors, exact deep components, and global erosion witnesses)
 source: codex-2026-07-14-S10 global-erosion selection analysis
 depends_on:
   - THM-772   # two-sheet packet arithmetic and mandatory deep exception
@@ -13,7 +13,7 @@ verification:
   - 05-knowledge/results/lrc13_odd_exception_divisor_grid_codex_S10.out
 ---
 
-# THM-797 — Odd-exception divisor grids and the q=13 support gate
+# THM-797 — Odd-exception divisor grids and the q=13 signed-wall gate
 
 Use THM-772's two-sheet notation
 
@@ -211,13 +211,134 @@ This proves the following uniform eliminations before any height search:
 The only q=13-invisible cases are full six-class support and the **aligned
 five-class** pattern in (15).
 
-## 3. Sharpness of the residue gate and the global-component correction
+## 3. The signed-wall upgrade and the aligned metric pin
+
+The two support patterns left by (15) are not equally viable.  The signs
+discarded by folded support supply a second, local obstruction.
+
+### Theorem 2 — signed-wall rigidity
+
+Assume that the two-sheet packet is hypothetically tight and label the
+exceptions so that `13|x`.  Put `B=max(U)`.  Then:
+
+1. `13` does not divide `y`;
+2. full six-class support is impossible;
+3. the support is aligned five-class and, as a multiset of signed residues,
+
+   ```text
+   {u mod 13:u in U}
+     =(Z/13Z)^* minus {+y,-y};                            (17)
+   ```
+
+   in particular every one of the ten displayed residues occurs exactly
+   once;
+4. at `p=y^(-1) mod 13`,
+
+   ```text
+   phi_U(p/13)=2/13,       M(U)>=2/13;                    (18)
+   ```
+
+5. the exceptions obey the sharpened metric bounds
+
+   ```text
+   x<=2B-1,                y<=B-1,                        (19)
+   13B+2xy<=2B(x+y).                                      (20)
+   ```
+
+Thus the full-support and double-13 branches are empty.  The only q=13
+survivor is not merely folded-aligned: it is the exact signed complement of
+the exception pair `+/-y`.
+
+### Proof
+
+First suppose `13` divides both exceptions.  For any folded class `c` in
+`S(U)`, choose `p` with folded class `c^(-1)`.  Then
+
+```text
+phi_U(p/13)=1/13,
+```
+
+and the minimum owners are exactly the core runners congruent to `+c` or
+`-c`.  The double-divisor shell is empty, so `p/13` lies in the open
+complement of `H_(x,y)`.  If all minimum owners have the same signed residue
+after multiplication by `p`, move a sufficiently small distance in the
+direction that increases their absolute residues.  Every minimum owner then
+has clearance greater than `1/13`; all other core runners start at clearance
+at least `2/13` and remain above `1/13`.  This produces a one-sided interval
+of `G_U` in the open complement of `H_(x,y)`, contradicting tightness.
+
+Consequently every present folded class must be represented by both signs.
+The support gate (16) requires all six classes, hence at least twelve core
+runners, impossible.  This proves `13` does not divide `y`.
+
+Now the q=13 shell contains only the folded numerator `y^(-1)`.  Repeat the
+same one-sided argument for every present class `c` other than the folded
+class of `y`: its inverse grid point lies outside the shell, so both signed
+residues `+c,-c` must occur in `U`.  Full support would require ten runners
+on the five rejected classes and at least one more on the accepted class, so
+it is impossible.  In the aligned pattern the five present classes require
+exactly ten runners.  Hence each sign occurs once and (17) follows.
+
+Choose the sign of `p` so that `yp=1 mod 13`.  Multiplication by `p` turns
+(17) into the ten signed residues
+
+```text
++/-2,+/-3,+/-4,+/-5,+/-6.
+```
+
+This proves (18).  The centered interval of radius
+
+```text
+(2/13-1/13)/B=1/(13B)                                   (21)
+```
+
+about `p/13` lies in `G_U`, hence in `H_(x,y)`.  The connected `x`-eligible
+tooth there has radius `2/(13x)` because `13|x`.  The `y`-error is `+1/13`,
+so its eligible tooth extends only `1/(13y)` in the narrow direction.
+Containment of (21) in both teeth gives
+
+```text
+x<=2B,                   y<=B.                            (22)
+```
+
+The first inequality is strict because `x` is odd and `2B` is even.  Equality
+in the second would put the core speed `B=y` in the folded class omitted by
+(17).  Thus (19) follows.
+
+There is also an endpoint-owner version of this last strictness.  If one
+temporarily assumes `y=B`, the narrow endpoint is
+
+```text
+p/13+1/(13B).
+```
+
+Among the normalized residues `+/-2,...,+/-6`, a core runner can have
+clearance at most `1/13` there only when it is the speed `B` with normalized
+residue `-2`.  Tightness would therefore force
+
+```text
+[Bp]_13=-2,             equivalently B=-2y mod 13,        (23)
+```
+
+which is also incompatible with `B=y` and `13` not dividing `y`.  This is
+the signed endpoint owner hidden by the folded support quotient.
+
+Finally (18) gives
+
+```text
+rho=(M(U)-1/13)/B >= 1/(13B).
+```
+
+Substitution in THM-772's inequality `(A*)`, followed by multiplication by
+`13Bxy`, gives (20). ∎
+
+## 4. Sharpness of the residue gate and the global-component correction
 
 The aligned pattern really can trap the entire prime grid.  Take
 
 ```text
 U_0=(1,2,3,4,7,9,10,11,12,16),
-(x,y)=(13,5).                                             (17)
+(x,y)=(13,5).                                             (24)
 ```
 
 This core is primitive, contains a multiple of every `m=2,...,12`, has no
@@ -225,7 +346,7 @@ This core is primitive, contains a multiple of every `m=2,...,12`, has no
 
 ```text
 M(U_0)=2/13,
-argmax phi_(U_0)={5/13,8/13}.                             (18)
+argmax phi_(U_0)={5/13,8/13}.                             (25)
 ```
 
 The breakpoint certificate is finite and lossless: `phi_U` is piecewise
@@ -240,13 +361,13 @@ The row also satisfies every earlier two-sheet arithmetic tax:
 x,y<=11B,             min(x,y)<=11B-36,
 rho=(M(U_0)-1/13)/B=1/208,
 1/(xy)+2rho=1/40 <= 36/845
-             =2/(13x)+2/(13y).                           (19)
+             =2/(13x)+2/(13y).                           (26)
 ```
 
 The folded support multiplicities on the classes `1,...,6` are
 
 ```text
-(2,2,3,2,0,1).                                           (20)
+(2,2,3,2,0,1).                                           (27)
 ```
 
 Thus `S(U_0)=C\{5}` and the missing class is exactly the class of `y`.
@@ -254,7 +375,7 @@ The only deep thirteenth numerators are `p=5,8`; at both,
 
 ```text
 phi_(U_0)(p/13)=2/13,
-Q_(9,4)(p/13)=12/13.                                     (21)
+Q_(9,4)(p/13)=12/13.                                     (28)
 ```
 
 So every point visible to the q=13 gate lies inside the folded diamond.
@@ -264,10 +385,10 @@ Nevertheless global escape is immediate at another component endpoint:
 ```text
 t=7/33,
 phi_(U_0)(t)=1/11,
-Q_(9,4)(t)=8/33<11/13.                                   (22)
+Q_(9,4)(t)=8/33<11/13.                                   (29)
 ```
 
-Thus `t in E_(U_0)\H_(13,5)`, and since `0 in R_(U_0)`, (22) proves the full
+Thus `t in E_(U_0)\H_(13,5)`, and since `0 in R_(U_0)`, (29) proves the full
 erosion failure (0).
 
 This sharp row also lies in the exact **sporadic max-peel regime**.  Its full
@@ -290,50 +411,94 @@ The complete closed `1/11`-superlevel set has eight components:
 [12/77,7/44],       [23/110,7/33],
 [67/176,43/110],    {9/22},
 {13/22},             [67/110,109/176],
-[26/33,87/110],      [37/44,65/77].                       (23)
+[26/33,87/110],      [37/44,65/77].                       (30)
 ```
 
 Their endpoint-owner pairs are
 
 ```text
 7->12, 10->9, 16->10, {10,12},
-{10,12}, 10->16, 9->10, 12->7.                           (24)
+{10,12}, 10->16, 9->10, 12->7.                           (31)
 ```
 
 They form four reflection orbits.  The orbit containing the global maxima
 `5/13,8/13` is entirely trapped: its minimum `Q` is `159/176>11/13`.
-The second orbit contains (22) and escapes with a large margin.  Therefore
+The second orbit contains (29) and escapes with a large margin.  Therefore
 **selecting only global maximizers is insufficient**.  The faithful global
 state must retain every closed `1/11`-superlevel component, including
 threshold endpoints and endpoint owners.
 
-## 4. What remains after the support gate
+### Sharpness after the signed-wall upgrade
+
+The signed-wall theorem is still not a closure theorem.  Replace `U_0` by
+
+```text
+U_1=(1,2,4,6,7,9,10,11,12,16),
+(x,y)=(13,5).                                             (32)
+```
+
+This row is primitive, divisor-complete through 12, has no 13-multiple, and
+has `B=16`.  Its signed residues are exactly
+
+```text
+U_1 mod 13=(Z/13Z)^* minus {5,8};                         (33)
+```
+
+so it satisfies the full conclusion (17), not only folded alignment.  Exact
+breakpoint enumeration gives
+
+```text
+M(U_1)=2/13,        argmax phi_(U_1)={5/13,8/13}.         (34)
+```
+
+It obeys (19)--(20) and THM-772's original size and `(A*)` taxes.  Moreover
+**every nontrivial odd divisor grid of either exception is silent**:
+
+```text
+q=5:       D_5(U_1)=empty       because 5|10,
+q=13:      D_13(U_1)={+/-5} subset A_13(13,5).            (35)
+```
+
+Nevertheless the non-divisor grid `q=17` supplies
+
+```text
+t=6/17,       phi_(U_1)(t)=2/17,
+Q_(9,4)(t)=10/17<11/13.                                  (36)
+```
+
+Thus (36) proves the full erosion failure (0).  This row is an exact no-go
+for any strategy using only exception-divisor grids, q=13 signed walls, and
+the scalar arithmetic taxes: the escaping denominator is generated by a
+different global component.
+
+## 5. What remains after the signed-wall gate
 
 THM-789 showed why refining one trapped deep anchor cannot prove global
 noncontainment.  Theorem 1 supplies a different global selector whenever an
 odd exception divisor has a deep unit class outside the other exception's
-explicit shell.  The q=13 specialization eliminates most residue supports,
-but (17)--(21) prove the gate is sharp.
+explicit shell.  The q=13 signed-wall specialization leaves only the exact
+residue complement (17), while (32)--(36) prove that even this gate is sharp.
 
 The remaining two-sheet program should therefore branch on two axes:
 
-1. **arithmetic divisor grids:** test every useful odd divisor of an exception
-   through (1)--(6), with q=13 always first; and
+1. **arithmetic grids:** use exception divisors through (1)--(6), with q=13
+   always first, but retain non-divisor denominators generated by the core;
+   (35)--(36) prove that exception divisors alone are incomplete; and
 2. **geometric deep components:** when a grid is silent, enumerate or bound
    the owner-labelled components of `E_U` and compare their minimum folded-
    diamond margins, rather than refining only an argmax component.
 
-For the mandatory q=13 branch, only full six-class support and aligned
-five-class support need this second stage.  No claim of complete two-sheet or
-uniform `n=12` closure is made here.
+For the mandatory q=13 branch, only the signed aligned-five pattern (17) needs
+this second stage.  No claim of complete two-sheet or uniform `n=12` closure
+is made here.
 
-## 5. Tournament Analysis and challenged assumptions
+## 6. Tournament Analysis and challenged assumptions
 
 There are two useful but deliberately decorated tournament views.
 
 ### Folded residue obligations
 
-Take the six folded classes in `C` as vertices.  For (17), orient by core
+Take the six folded classes in `C` as vertices.  For (24), orient by core
 multiplicity, breaking ties by the numerical class order; use inversion
 
 ```text
@@ -350,12 +515,15 @@ and after the switch the paths are
 The gauges differ on five edges.  Both tournaments are transitive: score
 histogram `0,...,5`, zero directed triangles, singleton SCCs, and one
 Hamiltonian path.  The bare fingerprints do not expose the missing class or
-the exception shell; the decorated incidence `(class,multiplicity,inverse,
-accepted-by-y)` does.
+the exception shell; the decorated incidence `(class,signed occupancy,
+multiplicity,inverse,accepted-by-y)` does.  The signed-wall proof sharpens
+this information audit: folded support alone regards both `U_0` and `U_1` as
+aligned survivors, while the twelve signed residue slots immediately reject
+`U_0` and retain only the exact complement (33).
 
 ### Deep-component alternatives
 
-Take the four reflection orbits in (23) as vertices.  The first pairwise
+Take the four reflection orbits in (30) as vertices.  The first pairwise
 observable is escape margin
 
 ```text
@@ -378,9 +546,12 @@ Runner vertices lose the divisor grid; residue vertices lose component
 geometry; a single global-max vertex loses alternative components; bare
 tournaments lose all metric signs.  The minimal carrier suggested by this
 theorem is a bipartite incidence object between folded divisor obligations and
-owner-labelled deep components, with exact escape margins as a sidecar.  This
-is the assumption challenge: the underlying object is a family of global
-alternatives, not one privileged deepest point.
+owner-labelled deep components, with signed wall occupancy and exact escape
+margins as sidecars.  The all-divisor-grid-silent row (32) adds a further
+warning: restricting arithmetic vertices to divisors of the exceptions loses
+the detecting `q=17` obligation.  This is the assumption challenge: the
+underlying object is a family of global alternatives and core-generated
+denominators, not one privileged deepest point or one fixed divisor list.
 
 ## Exact replay
 
@@ -388,6 +559,23 @@ The verifier exhausts every odd `q=3,...,101`, every unit numerator, and every
 odd pair of speed classes modulo `2q`: `10,971,770` exact tests of the direct
 lifted predicate, the balanced-residue shell, and the folded diamond, with no
 failures.  It separately checks `143,346` divisor specializations, all `832`
-q=13 support/exception profiles, the exact breakpoint certificate (18), every
-component in (23), the witness (22), and both tournament fingerprints.  No
-floating point or sampled-circle verdict enters the proof.
+q=13 support/exception profiles, all `352,716` signed ten-residue multisets
+(`340,170` off-divisor support-gate pairs and `34,332` double-divisor full-
+support profiles), and `201,000` endpoint-owner cases.  The signed-wall census
+leaves exactly six off-divisor profiles and no double-divisor profile, with
+digest
+
+```text
+6d1065da21735e471b238e0c1222cdb1063946c55f8a74d0646dc4fcb1d3efc9.
+```
+
+The replay also checks the breakpoint certificates (25) and (34), every
+component in (30), witnesses (29) and (36), all exception-divisor grids of
+(32), and both tournament fingerprints.  The signed-wall survivor row has
+digest
+
+```text
+2b5e7a6e4593f998fd28eeb124fb5eaaba8b00747782084ee11004b457ebb546.
+```
+
+No floating point or sampled-circle verdict enters the proof.

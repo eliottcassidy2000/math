@@ -230,6 +230,15 @@
   aligned-five support patterns by selecting among all deep components and
   transporting their signed tooth address or exact eroded margin. Fixed-anchor
   refinement and raw component tournaments are insufficient by THM-789. Then
+  margin.  Apply THM-797's odd-divisor grid and signed walls first: at
+  mandatory `q=13`, double-13 and full support are impossible, and the sole
+  survivor has the exact signed residue complement
+  `U mod 13=(Z/13Z)^*\{+/-y}` with `x<=2B-1,y<=B-1`.  Its sharp post-wall row
+  traps every exception-divisor grid but escapes at denominator 17, so the
+  selector must range over all owner-labelled closed `1/11`-superlevel
+  components and core-generated denominators. Fixed-anchor refinement,
+  argmax-only choice, divisor-only grids, and raw component tournaments are
+  insufficient by THM-789/797. Then
   treat the `s=3`
   three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
@@ -285,13 +294,15 @@
   is insufficient.
 - **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
-  seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
-  for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero
-  survivors; all initial covers already tear by `3/8` (38 groups), and all
-  divisor-complete ones by `4/11` (36 groups).  The carrier reduces exactly to
+  seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13c` automaton
+  tears for all `U subset [1,24]` uniformly in odd `c`: `c=1` has 101,850
+  initial covers and tears by `3/8`; `c=3` has 2,528 and tears by `1/7`; every
+  `c>=5` fails in the first chamber by `13c>2 max(U)`.  The carrier reduces exactly to
   an `A_12` cumulative root walk `e=e^0+C` inside the 50,388-state seven-chip
-  simplex; coverage is the singleton-cut system `e>=0`.  Open: make the tear uniform in
-  quotient height and in `w=13c`, then splice it with the center/high-order
+  simplex; coverage is the singleton-cut system `e>=0`.  Its tropical block
+  transfer `T(W)=(c_W,b_W)` composes by min-plus convolution and preserves
+  survival together with `e^0`; no height-24 endpoint-zero word is abstractly
+  safe.  Open: make the tear uniform in quotient height, then splice it with the center/high-order
   clock dichotomy.  The collision energy `K=sum binom(d_j-1,2)` obeys the
   THM-785 endpoint-defect flux and THM-787 step-eight law.  Exact equal-energy
   liars show that current across `K`-cuts must retain the event/root word.
@@ -357,10 +368,12 @@
   global component escapes.  Retain signed tooth/slope addresses: THM-789's
   `(13,9)`/`(17,13)` liar has the same raw signed tournament and scalar eroded
   measure but different middle-component incidence.  Run THM-797's odd-
-  divisor shell first; only full/aligned-five support survives at `q=13`.
-  Then branch over every owner-labelled deep component, not only global
-  maximizers: the aligned `(13,5)` row traps both maximizers but escapes at
-  `7/33`.  Do not recurse only inside a chosen anchor.
+  divisor shell and signed-wall pin first; only the exact signed complement of
+  `+/-y` survives at `q=13`.  Then branch over every owner-labelled deep
+  component and core-generated denominator, not only global maximizers or
+  divisors of the exceptions: the post-wall `(13,5)` row traps every such
+  divisor grid but escapes at `6/17`.  Do not recurse only inside a chosen
+  anchor or a fixed divisor list.
 - **Transverse-tail target:** THM-798 refutes every raw component-count versus
   divisor-scale bound even on a primitive four-far family.  THM-799 replaces
   it by the composable shadow state `(safe mass,full component count)` and

@@ -1,8 +1,9 @@
 w=13 moving sheet-edge cover certificate through quotient height 24
 strict w-ineligibility / closed U-danger endpoint convention
-script_sha256=ad62249988ebb5558ee664d5b5794793ae7db8ba49e7f0a1dcd5c0c234bb1d07
+script_sha256=6e39914e7cdf1806b6b0867d290a0c376596fabfeaf578eaf09f16c58401aa8c
 event_atlas_sha256=b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca
 decision_atlas_sha256=01dafb23a9562fc14f21dbe85bc36d6dcb4e93e4b346dde65a74e82fe2addf0c
+tropical_transfer_atlas_sha256=4b049c6b89305c097080ffa9e36e9c76104669d1798ca3dc6b6ed081ae4e1a4e
 
 methodology:
   sheet vertices: j in Z/13Z, tau=(s+j)/13
@@ -45,5 +46,21 @@ Tournament Analysis / assumption challenge:
   last_covered_chamber_K_histogram={0: 15270, 1: 45098, 2: 26853, 3: 9518, 4: 4254, 5: 204, 6: 511, 7: 127, 9: 1, 10: 12, 11: 2}
   energy liar (1, 2, 3, 4, 5, 6, 7, 8, 20, 23): degrees=(6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1) X_sheet=80 first_tear=4/23 missing_sheet=1
   energy liar (1, 2, 3, 4, 5, 6, 8, 10, 11, 14): degrees=(6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1) X_sheet=80 first_tear=2/11 missing_sheet=7
+
+Tropical Dirichlet transfer / exact block composition:
+  T(W)=(c_W,b_W), b_W,j=min over grouped prefix currents C_s,j
+  T(UV)=(c_U+c_V,min(b_U,c_U+b_V)) coordinatewise
+  prescribed e_initial survives W iff e_initial+b_W>=0
+  some abstract seven-chip state survives iff D(W)=-sum(b_W)<=7
+  full_word_D_histogram={10: 40, 11: 278, 12: 1129, 13: 3112, 14: 7919, 15: 11774, 16: 20655, 17: 17839, 18: 21989, 19: 9610, 20: 7505}
+  divisor_complete_full_word_D_histogram={10: 24, 11: 90, 12: 463, 13: 935, 14: 2652, 15: 2945, 16: 5523, 17: 2683, 18: 4094, 19: 587, 20: 616}
+  D_at_actual_first_tear_histogram={1: 29674, 2: 20776, 3: 23430, 4: 15153, 5: 7783, 6: 3530, 7: 1210, 8: 279, 9: 14, 10: 1}
+  divisor_complete_D_at_actual_first_tear_histogram={1: 3989, 2: 4608, 3: 5799, 4: 3443, 5: 1568, 6: 824, 7: 310, 8: 65, 9: 6}
+  abstract_full_word_seven_chip_survivors=0/101850
+  endpoint_zero_words=280 safe_endpoint_zero_words=0
+  divisor_abstract_full_word_seven_chip_survivors=0/20612
+  divisor_endpoint_zero_words=58 safe_endpoint_zero_words=0
+  abstract_first_D_gt_7_histogram=[('1/5', 157), ('5/24', 281), ('4/19', 1353), ('3/14', 1632), ('5/23', 957), ('2/9', 6010), ('5/22', 3874), ('4/17', 3902), ('5/21', 12339), ('1/4', 43222), ('6/23', 3998), ('5/19', 3402), ('4/15', 7144), ('3/11', 3531), ('5/18', 1405), ('2/7', 4226), ('5/17', 602), ('3/10', 657), ('7/23', 238), ('6/19', 146), ('7/22', 725), ('1/3', 1379), ('8/23', 20), ('7/20', 38), ('6/17', 14), ('5/14', 187), ('4/11', 247), ('7/19', 8), ('3/8', 110), ('2/5', 36), ('9/22', 5), ('7/17', 1), ('10/23', 2), ('5/11', 2)] survivors=0
+  divisor_abstract_first_D_gt_7_histogram=[('1/5', 10), ('5/24', 12), ('4/19', 247), ('3/14', 106), ('5/23', 78), ('2/9', 2188), ('5/22', 1291), ('4/17', 942), ('5/21', 3139), ('1/4', 9157), ('6/23', 331), ('5/19', 474), ('4/15', 725), ('3/11', 345), ('5/18', 240), ('2/7', 440), ('5/17', 89), ('3/10', 161), ('7/23', 29), ('6/19', 1), ('7/22', 211), ('1/3', 273), ('7/20', 1), ('6/17', 5), ('5/14', 62), ('4/11', 34), ('3/8', 18), ('2/5', 1), ('9/22', 1), ('5/11', 1)] survivors=0
 
 FINAL: PASS - every static edge-cover liar tears by 3/8 (divisor-complete by 4/11)

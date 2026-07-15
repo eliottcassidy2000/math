@@ -58,6 +58,18 @@ the exact carrier is
     e=e^0+C,    cover iff C_j >= -e^0_j for every j,
     K=K_0+<e^0,C>+||C||^2/2.
 
+For a grouped root word W, retain only its endpoint current c_W and its
+coordinatewise prefix-current floor b_W.  This tropical Dirichlet transfer
+composes exactly by
+
+    T(UV)=(c_U+c_V, min(b_U,c_U+b_V)).
+
+A prescribed initial state survives the entire word iff e^0+b_W>=0.  Some
+abstract seven-chip allocation survives iff D(W)=-sum(b_W)<=7.  The atlas
+audits this identity, the full transfer census, and endpoint-zero words.  It
+also shows the scalar deficit is not an actual-state quotient at first tear,
+although the pair (e^0,T(W)) is predicate-exact and compositional.
+
 The full height-24 atlas tears much earlier than the end of the ineligible
 interval: every initial cover tears by the event at 3/8, and every
 divisor-complete initial cover tears by 4/11.
@@ -112,6 +124,25 @@ EXPECTED_PRETEAR_ENERGY_HISTOGRAM = {
     0: 15270, 1: 45098, 2: 26853, 3: 9518, 4: 4254, 5: 204,
     6: 511, 7: 127, 9: 1, 10: 12, 11: 2,
 }
+EXPECTED_FULL_TRANSFER_DEFICIT_HISTOGRAM = {
+    10: 40, 11: 278, 12: 1129, 13: 3112, 14: 7919, 15: 11774,
+    16: 20655, 17: 17839, 18: 21989, 19: 9610, 20: 7505,
+}
+EXPECTED_DIVISOR_FULL_TRANSFER_DEFICIT_HISTOGRAM = {
+    10: 24, 11: 90, 12: 463, 13: 935, 14: 2652, 15: 2945,
+    16: 5523, 17: 2683, 18: 4094, 19: 587, 20: 616,
+}
+EXPECTED_FIRST_TEAR_TRANSFER_DEFICIT_HISTOGRAM = {
+    1: 29674, 2: 20776, 3: 23430, 4: 15153, 5: 7783,
+    6: 3530, 7: 1210, 8: 279, 9: 14, 10: 1,
+}
+EXPECTED_DIVISOR_FIRST_TEAR_TRANSFER_DEFICIT_HISTOGRAM = {
+    1: 3989, 2: 4608, 3: 5799, 4: 3443, 5: 1568,
+    6: 824, 7: 310, 8: 65, 9: 6,
+}
+EXPECTED_TRANSFER_DIGEST = (
+    "4b049c6b89305c097080ffa9e36e9c76104669d1798ca3dc6b6ed081ae4e1a4e"
+)
 
 
 def set_gcd(values: tuple[int, ...]) -> int:
@@ -208,6 +239,74 @@ def slide_endpoints(
     return departure[0], entry[0]
 
 
+def compose_tropical_transfer(
+    left: tuple[tuple[int, ...], tuple[int, ...]],
+    right: tuple[tuple[int, ...], tuple[int, ...]],
+) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    """Compose endpoint current and coordinatewise prefix-current floor.
+
+    A grouped root word W has transfer (c_W,b_W), where c_W is its total
+    current and b_W is the coordinatewise minimum over all prefix currents,
+    including the empty prefix.  Concatenation obeys
+
+        (c_U,b_U)*(c_V,b_V)
+          = (c_U+c_V, min(b_U,c_U+b_V)).
+    """
+    c_left, b_left = left
+    c_right, b_right = right
+    assert len(c_left) == len(b_left) == len(c_right) == len(b_right)
+    return (
+        tuple(a + b for a, b in zip(c_left, c_right)),
+        tuple(min(floor, offset + other_floor)
+              for floor, offset, other_floor
+              in zip(b_left, c_left, b_right)),
+    )
+
+
+def tropical_transfer(
+    word: tuple[tuple[int, ...], ...]
+) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    current = [0] * MODULUS
+    prefix_floor = [0] * MODULUS
+    for increment in word:
+        assert len(increment) == MODULUS and sum(increment) == 0
+        for sheet in range(MODULUS):
+            current[sheet] += increment[sheet]
+            prefix_floor[sheet] = min(prefix_floor[sheet], current[sheet])
+    return tuple(current), tuple(prefix_floor)
+
+
+def transfer_deficit(transfer: tuple[tuple[int, ...], tuple[int, ...]]) -> int:
+    """Least number of initial chips needed to survive the whole word."""
+    _, prefix_floor = transfer
+    assert max(prefix_floor) <= 0
+    return sum(max(0, -value) for value in prefix_floor)
+
+
+def audit_tropical_transfer_identity() -> None:
+    """Exact composition and seven-chip survival audit on a root-word canary."""
+    roots = []
+    for departure, entry in ((0, 2), (3, 0), (2, 5), (5, 3), (7, 11)):
+        root = [0] * MODULUS
+        root[departure] -= 1
+        root[entry] += 1
+        roots.append(tuple(root))
+    word = tuple(roots)
+    for split in range(len(word) + 1):
+        assert compose_tropical_transfer(
+            tropical_transfer(word[:split]), tropical_transfer(word[split:])
+        ) == tropical_transfer(word)
+    endpoint, floor = tropical_transfer(word)
+    deficit = transfer_deficit((endpoint, floor))
+    assert any(endpoint) and deficit == -sum(floor)
+    for extra in range(3):
+        initial = tuple(-value + (extra if sheet == 0 else 0)
+                        for sheet, value in enumerate(floor))
+        assert min(initial) >= 0
+        assert all(initial[sheet] + floor[sheet] >= 0
+                   for sheet in range(MODULUS))
+
+
 def audit_collision_flux_identity() -> None:
     """Audit every locally possible covered simple-slide degree pair."""
     for departure_degree in range(2, 21):
@@ -231,6 +330,7 @@ def main() -> None:
     initial_edges, event_groups, event_digest = build_atlas(candidates)
 
     decision_digest = sha256()
+    transfer_digest = sha256()
     total = 0
     initial_covers = 0
     survivors = 0
@@ -245,6 +345,18 @@ def main() -> None:
     first_failure_missing_cardinalities: Counter[int] = Counter()
     initial_energy_histogram: Counter[int] = Counter()
     pretear_energy_histogram: Counter[int] = Counter()
+    transfer_deficit_histogram: Counter[int] = Counter()
+    divisor_transfer_deficit_histogram: Counter[int] = Counter()
+    first_tear_transfer_deficit_histogram: Counter[int] = Counter()
+    divisor_first_tear_transfer_deficit_histogram: Counter[int] = Counter()
+    abstract_first_failure_histogram: Counter[str] = Counter()
+    divisor_abstract_first_failure_histogram: Counter[str] = Counter()
+    abstract_seven_chip_survivors = 0
+    divisor_abstract_seven_chip_survivors = 0
+    endpoint_zero_words = 0
+    divisor_endpoint_zero_words = 0
+    safe_endpoint_zero_words = 0
+    divisor_safe_endpoint_zero_words = 0
     energy_liar_records = {}
     latest_tear_time = None
     latest_tear_cores: set[tuple[int, ...]] = set()
@@ -252,6 +364,7 @@ def main() -> None:
     latest_divisor_tear_cores: set[tuple[int, ...]] = set()
 
     audit_collision_flux_identity()
+    audit_tropical_transfer_identity()
 
     for core in combinations(candidates, CORE_SIZE):
         total += 1
@@ -281,6 +394,13 @@ def main() -> None:
             failure_missing = 0
             initial_excess = tuple(degree - 1 for degree in degrees)
             current = [0] * MODULUS
+            prefix_floor = [0] * MODULUS
+            abstract_failure_label = "survive"
+            has_torn = False
+            audit_word = (
+                [] if initial_covers <= 64 or core in ENERGY_LIAR_CORES
+                else None
+            )
 
             for time, updates in event_groups:
                 changed = False
@@ -301,12 +421,27 @@ def main() -> None:
                     continue
                 for sheet in range(MODULUS):
                     current[sheet] += increment[sheet]
+                    prefix_floor[sheet] = min(prefix_floor[sheet], current[sheet])
                     assert degrees[sheet] == initial_degree_vector[sheet] + current[sheet]
                 assert sum(current) == sum(increment) == 0
-                failure_missing = missing_mask(degrees)
-                if failure_missing:
+                if audit_word is not None:
+                    audit_word.append(tuple(increment))
+
+                deficit_now = -sum(prefix_floor)
+                assert deficit_now == sum(max(0, -value)
+                                          for value in prefix_floor)
+                if abstract_failure_label == "survive" and deficit_now > 7:
+                    abstract_failure_label = fmt_fraction(time)
+
+                chamber_missing = missing_mask(degrees)
+                if not has_torn and chamber_missing:
                     failure_label = fmt_fraction(time)
+                    failure_missing = chamber_missing
+                    has_torn = True
                     pretear_energy_histogram[collision_energy(before_degrees)] += 1
+                    first_tear_transfer_deficit_histogram[deficit_now] += 1
+                    if is_divisor:
+                        divisor_first_tear_transfer_deficit_histogram[deficit_now] += 1
                     for sheet in range(MODULUS):
                         if failure_missing & (1 << sheet):
                             # The singleton cut has overdrawn its initial
@@ -325,7 +460,10 @@ def main() -> None:
                             latest_divisor_tear_cores = {core}
                         elif time == latest_divisor_tear_time:
                             latest_divisor_tear_cores.add(core)
-                    break
+                    continue
+
+                if has_torn:
+                    continue
 
                 # Grouped current/energy identity.  This includes simultaneous
                 # events, for which increment can have entries larger than one.
@@ -343,6 +481,43 @@ def main() -> None:
                     + sum(value * value for value in current) // 2
                 )
                 assert energy_after == integrated_energy
+
+            transfer = (tuple(current), tuple(prefix_floor))
+            if audit_word is not None:
+                assert tropical_transfer(tuple(audit_word)) == transfer
+                for split in range(len(audit_word) + 1):
+                    assert compose_tropical_transfer(
+                        tropical_transfer(tuple(audit_word[:split])),
+                        tropical_transfer(tuple(audit_word[split:])),
+                    ) == transfer
+            full_deficit = transfer_deficit(transfer)
+            transfer_digest.update(
+                (",".join(map(str, core))
+                 + "|c=" + ",".join(map(str, current))
+                 + "|b=" + ",".join(map(str, prefix_floor))
+                 + f"|D={full_deficit}|abstract_tear={abstract_failure_label}\n"
+                 ).encode()
+            )
+            transfer_deficit_histogram[full_deficit] += 1
+            abstract_first_failure_histogram[abstract_failure_label] += 1
+            if is_divisor:
+                divisor_transfer_deficit_histogram[full_deficit] += 1
+                divisor_abstract_first_failure_histogram[
+                    abstract_failure_label
+                ] += 1
+            is_abstract_safe = full_deficit <= 7
+            is_endpoint_zero = not any(current)
+            abstract_seven_chip_survivors += int(is_abstract_safe)
+            endpoint_zero_words += int(is_endpoint_zero)
+            safe_endpoint_zero_words += int(
+                is_abstract_safe and is_endpoint_zero
+            )
+            if is_divisor:
+                divisor_abstract_seven_chip_survivors += int(is_abstract_safe)
+                divisor_endpoint_zero_words += int(is_endpoint_zero)
+                divisor_safe_endpoint_zero_words += int(
+                    is_abstract_safe and is_endpoint_zero
+                )
 
             if failure_label == "survive":
                 survivors += 1
@@ -371,6 +546,7 @@ def main() -> None:
     print(f"script_sha256={script_digest}")
     print(f"event_atlas_sha256={event_digest}")
     print(f"decision_atlas_sha256={decision_hexdigest}")
+    print(f"tropical_transfer_atlas_sha256={transfer_digest.hexdigest()}")
     print()
     print("methodology:")
     print("  sheet vertices: j in Z/13Z, tau=(s+j)/13")
@@ -465,6 +641,71 @@ def main() -> None:
         )
     print()
 
+    print("Tropical Dirichlet transfer / exact block composition:")
+    print("  T(W)=(c_W,b_W), b_W,j=min over grouped prefix currents C_s,j")
+    print("  T(UV)=(c_U+c_V,min(b_U,c_U+b_V)) coordinatewise")
+    print("  prescribed e_initial survives W iff e_initial+b_W>=0")
+    print("  some abstract seven-chip state survives iff D(W)=-sum(b_W)<=7")
+    print(
+        "  full_word_D_histogram="
+        + str(dict(sorted(transfer_deficit_histogram.items())))
+    )
+    print(
+        "  divisor_complete_full_word_D_histogram="
+        + str(dict(sorted(divisor_transfer_deficit_histogram.items())))
+    )
+    print(
+        "  D_at_actual_first_tear_histogram="
+        + str(dict(sorted(first_tear_transfer_deficit_histogram.items())))
+    )
+    print(
+        "  divisor_complete_D_at_actual_first_tear_histogram="
+        + str(dict(sorted(
+            divisor_first_tear_transfer_deficit_histogram.items()
+        )))
+    )
+    print(
+        f"  abstract_full_word_seven_chip_survivors="
+        f"{abstract_seven_chip_survivors}/{initial_covers}"
+    )
+    print(
+        f"  endpoint_zero_words={endpoint_zero_words} "
+        f"safe_endpoint_zero_words={safe_endpoint_zero_words}"
+    )
+    print(
+        f"  divisor_abstract_full_word_seven_chip_survivors="
+        f"{divisor_abstract_seven_chip_survivors}/{divisor_initial_covers}"
+    )
+    print(
+        f"  divisor_endpoint_zero_words={divisor_endpoint_zero_words} "
+        f"safe_endpoint_zero_words={divisor_safe_endpoint_zero_words}"
+    )
+    abstract_failures = [
+        (label, count)
+        for label, count in abstract_first_failure_histogram.items()
+        if label != "survive"
+    ]
+    abstract_failures.sort(key=lambda row: F(*map(int, row[0].split("/"))))
+    divisor_abstract_failures = [
+        (label, count)
+        for label, count in divisor_abstract_first_failure_histogram.items()
+        if label != "survive"
+    ]
+    divisor_abstract_failures.sort(
+        key=lambda row: F(*map(int, row[0].split("/")))
+    )
+    print(
+        "  abstract_first_D_gt_7_histogram="
+        + str(abstract_failures)
+        + f" survivors={abstract_first_failure_histogram['survive']}"
+    )
+    print(
+        "  divisor_abstract_first_D_gt_7_histogram="
+        + str(divisor_abstract_failures)
+        + f" survivors={divisor_abstract_first_failure_histogram['survive']}"
+    )
+    print()
+
     assert total == 1_144_066
     assert initial_covers == 101_850
     assert survivors == 0
@@ -480,6 +721,32 @@ def main() -> None:
     assert latest_divisor_tear_cores == LATEST_DIVISOR_TEAR_CORES
     assert dict(initial_energy_histogram) == EXPECTED_INITIAL_ENERGY_HISTOGRAM
     assert dict(pretear_energy_histogram) == EXPECTED_PRETEAR_ENERGY_HISTOGRAM
+    assert (dict(transfer_deficit_histogram)
+            == EXPECTED_FULL_TRANSFER_DEFICIT_HISTOGRAM)
+    assert (dict(divisor_transfer_deficit_histogram)
+            == EXPECTED_DIVISOR_FULL_TRANSFER_DEFICIT_HISTOGRAM)
+    assert (dict(first_tear_transfer_deficit_histogram)
+            == EXPECTED_FIRST_TEAR_TRANSFER_DEFICIT_HISTOGRAM)
+    assert (dict(divisor_first_tear_transfer_deficit_histogram)
+            == EXPECTED_DIVISOR_FIRST_TEAR_TRANSFER_DEFICIT_HISTOGRAM)
+    assert abstract_seven_chip_survivors == 0
+    assert divisor_abstract_seven_chip_survivors == 0
+    assert endpoint_zero_words == 280 and safe_endpoint_zero_words == 0
+    assert (divisor_endpoint_zero_words == 58
+            and divisor_safe_endpoint_zero_words == 0)
+    assert sum(transfer_deficit_histogram.values()) == initial_covers
+    assert sum(divisor_transfer_deficit_histogram.values()) == divisor_initial_covers
+    assert sum(first_tear_transfer_deficit_histogram.values()) == initial_covers
+    assert (sum(divisor_first_tear_transfer_deficit_histogram.values())
+            == divisor_initial_covers)
+    assert (sum(abstract_first_failure_histogram.values()) == initial_covers)
+    assert (sum(divisor_abstract_first_failure_histogram.values())
+            == divisor_initial_covers)
+    assert abstract_seven_chip_survivors == abstract_first_failure_histogram["survive"]
+    assert (divisor_abstract_seven_chip_survivors
+            == divisor_abstract_first_failure_histogram["survive"])
+    assert safe_endpoint_zero_words <= abstract_seven_chip_survivors
+    assert divisor_safe_endpoint_zero_words <= divisor_abstract_seven_chip_survivors
     assert set(energy_liar_records) == set(ENERGY_LIAR_CORES)
     for core, (failure_label, missing_sheet) in ENERGY_LIAR_CORES.items():
         degrees, energy, actual_label, actual_mask = energy_liar_records[core]
@@ -491,6 +758,8 @@ def main() -> None:
         assert event_digest == EXPECTED_EVENT_DIGEST
     if EXPECTED_DECISION_DIGEST != "TO_BE_FILLED":
         assert decision_hexdigest == EXPECTED_DECISION_DIGEST
+    if EXPECTED_TRANSFER_DIGEST != "TO_BE_FILLED":
+        assert transfer_digest.hexdigest() == EXPECTED_TRANSFER_DIGEST
     print(
         "FINAL: PASS - every static edge-cover liar tears by 3/8 "
         "(divisor-complete by 4/11)"

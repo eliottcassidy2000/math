@@ -1,7 +1,7 @@
 ---
 id: THM-792
-title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover/root-current carrier, and no w=13 packet through quotient height 24
-status: PROVED (quantifier-exact reductions and cut-current/energy identities) + VERIFIED (finite-exact w=13 closure for U subset [1,24], by 3/8 in general and 4/11 in the divisor-complete subatlas; does not exclude the unbounded collar)
+title: The sporadic even-maximum collar has a bounded rational blocker clock, repeated top-tooth flank types, a Z/13 moving edge-cover/root-current carrier, and no w=13c packet through quotient height 24
+status: PROVED (quantifier-exact reductions, uniform-in-c boundary obstruction, and cut-current/tropical-transfer identities) + VERIFIED (finite-exact c=1,3 closure for U subset [1,24], with every odd c>=5 excluded statically; does not exclude the unbounded quotient-height collar)
 source: codex-2026-07-14-S10
 depends_on:
   - THM-668-pair-sum-ruler-witness-structure
@@ -12,6 +12,8 @@ related: [THM-774, THM-776, THM-778, THM-782, THM-785, THM-787, THM-790, THM-791
 verification:
   - 04-computation/lrc13_w13_sheet_edge_cover_h24_codex_S10.py
   - 05-knowledge/results/lrc13_w13_sheet_edge_cover_h24_codex_S10.out
+  - 04-computation/lrc13_w13c_sheet_edge_cover_h24_codex_S10.py
+  - 05-knowledge/results/lrc13_w13c_sheet_edge_cover_h24_codex_S10.out
 ---
 
 # THM-792 — Sporadic even-maximum collar reductions
@@ -402,7 +404,105 @@ factor remains in the 50,388-state safety automaton.  Unbounded quotient
 height enlarges the generating clocks and word length, not the chip state
 space.
 
-## 4. The `w=13`, quotient-height-24 automaton tears by a short prefix
+### 3.3 The tropical Dirichlet transfer of a root word
+
+The full root word can itself be compressed without losing **block survival**.
+Let a grouped word be
+
+```text
+W=(z_1,...,z_m),          C_s=sum_(r<=s) z_r,
+c_W=C_m,                  (b_W)_j=min_(0<=s<=m)(C_s)_j.  (26)
+```
+
+Call `T(W)=(c_W,b_W)` its tropical Dirichlet transfer.  If `UV` is
+concatenation, then exactly
+
+```text
+T(UV)=(c_U+c_V, min(b_U,c_U+b_V)),                        (27)
+```
+
+where the minimum is coordinatewise.  Indeed, a prefix of `UV` is either a
+prefix of `U` or all of `U` followed by a prefix of `V`.  Consequently an
+initial seven-chip state survives every chamber of `W` precisely when
+
+```text
+e^0+b_W>=0.                                               (28)
+```
+
+There exists *some* abstract nonnegative initial state of total mass seven
+that survives `W` if and only if
+
+```text
+D(W)=sum_j max(0,-(b_W)_j)=-sum_j(b_W)_j <= 7.            (29)
+```
+
+Necessity follows by summing the coordinatewise lower bounds
+`e^0_j>=-(b_W)_j`; for sufficiency, start with `e^0=-b_W` and distribute the
+remaining chips arbitrarily.  Thus `(e^0,T(W))` is predicate-exact and
+compositional for block survival.  The scalar `D(W)` is only the existential
+projection that forgets the actual initial allocation.
+
+This has an exact cut/cycle interpretation.  Regard every root
+`delta_b-delta_a` as the boundary of the oriented edge `[a,b]` in `K_13`, and
+let `J_s` be the prefix edge chain.  Then
+
+```text
+C_s=partial J_s,
+<p,C_s>=sum_(r<=s)(p(b_r)-p(a_r))                         (30)
+```
+
+for every nodal potential `p`.  The thirteen singleton potentials are already
+a complete dual family for the present coverage predicate.  Endpoint current
+alone forgets a cycle lift; `b_W` retains its deepest prefix excursion across
+every singleton cut.  Arithmetic realizability still requires the ordered
+clock word, but survival under concatenation does not.
+
+The height-24 verifier audits (27)--(29) and gives a useful method boundary.
+For all 101,850 initially covered words, full-interval `D(W)` lies between 10
+and 20, so no abstract seven-chip state survives; the 20,612 divisor-complete
+words have the same conclusion.  There are 280 endpoint-zero words (58
+divisor-complete), but every one has `D(W)>7`, so the atlas contains no safe
+endpoint-zero loop analogous to THM-794's diagonal return.  At the **actual
+first tear**, however, only 294 words have `D>=8`; most tears depend on the
+specific `e^0`.  Hence `D` alone is not a quotient, while the compositional
+pair `(e^0,T(W))` is the correct smaller state.
+
+## 4. Every `w=13c` quotient-height-24 automaton tears
+
+There is no tight two-sheet packet
+
+```text
+A=2U union {13c,y},       |U|=10,
+U subset {1,...,24},      c odd.                          (31)
+```
+
+This is uniform in the odd multiplier `c` and imposes no bound on `y`.
+Indeed, the first interval on which `13c` is ineligible is
+
+```text
+2/(13c)<s<11/(13c).                                      (32)
+```
+
+Immediately to the right of its left endpoint, if `B=max(U)` and
+`13c>2B`, then `0<us<1` for every `u in U`.  Hence every Cayley edge is
+
+```text
+E_u={0,-u^(-1)},                                         (33)
+```
+
+and ten such edges meet at most eleven of the thirteen sheets.  Coverage is
+impossible.  Since `B<=24`, every odd `c>=5` is excluded by this static
+boundary obstruction.  (The stronger condition `13c>=11B` makes (33)
+constant on the entire first interval.)
+
+Only `c=1,3` remain.  The `c=1` sweep below has 101,850 initial covers and all
+tear by `3/8`.  The companion uniform verifier finds 2,528 initial covers for
+`c=3` (468 divisor-complete); every one tears by `1/7`.  It also audits all
+odd `c=1,3,...,19`, the phase-coset event formula (12), and the tropical
+transfer.  Thus (31) is empty for every odd `c`.  This closes the multiplier
+direction at quotient height 24; it does not bound `B`.
+
+### 4.1 The `c=1` automaton tears by a short prefix
 
 There is no tight two-sheet packet
 
@@ -481,12 +581,20 @@ count: 15270  45098  26853  9518  4254  204  511  127  1  12   2.
 ```
 
 So neither small nor large energy separates survivors; the exact separation
-is the first violated cut in (19).  The canonical event and decision digests
-remain
+is the first violated cut in (19).  The canonical c=1 event, decision, and
+tropical-transfer digests are
 
 ```text
 b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca
-01dafb23a9562fc14f21dbe85bc36d6dcb4e93e4b346dde65a74e82fe2addf0c.
+01dafb23a9562fc14f21dbe85bc36d6dcb4e93e4b346dde65a74e82fe2addf0c
+4b049c6b89305c097080ffa9e36e9c76104669d1798ca3dc6b6ed081ae4e1a4e.
+```
+
+The uniform-in-c verifier has event/decision digests
+
+```text
+d51dbb090ee095368f1b240ade9c23168532d6f2db41479348f052c263f465d9
+39449f2c4d98e920ef5768b245fa66f84ae8f3278e6afd5fb9eb99611b599b49.
 ```
 
 Hence every possible bounded core has a chamber containing an uncovered
@@ -506,12 +614,14 @@ The challenged vertex sets are:
 - top teeth with ordered flank-owner sets for (7)--(8);
 - thirteen sheet vertices with labelled Cayley edges for (9)--(13);
 - thirteen sheet cuts and `A_12` root currents for (17)--(23);
+- tropical block transfers `(e^0,c_W,b_W)` for (26)--(29);
 - proof obligations `(tooth side, owner)` or `(event, overlap chip)`.
 
 The first quotient preserves repeated collar incidence; the second preserves
 the exact sheet-cover predicate.  Neither is faithfully replaceable by a raw
-runner orientation.  The new target is a finite automaton tear or congruence
-obstruction, not another scalar measure or tournament score.
+runner orientation.  The new target is a uniform-in-height arithmetic-language
+exclusion under the compositional transfer, not another scalar measure or
+tournament score.
 
 ## 6. Scope
 
@@ -525,9 +635,9 @@ hypothetical even-maximum collar row simultaneously carries:
 3. in the deep branch, a seven-chip moving edge cover on `Z/13Z`, equivalently
    a cut-constrained `A_12` root-current walk driven by an exact
    Christoffel/phase-coset word;
-4. for the forced exception `w=13`, an exact tear for every quotient core
-   through height 24, by `3/8` in general and `4/11` in the divisor-complete
-   subatlas.
+4. for every forced exception `w=13c`, an exact tear for every quotient core
+   through height 24: `c=1` by `3/8` (divisor-complete by `4/11`), `c=3` by
+   `1/7`, and every odd `c>=5` at the initial boundary.
 
 These are the next finite/arithmetic coordinates on which a uniform exclusion
 can act.
