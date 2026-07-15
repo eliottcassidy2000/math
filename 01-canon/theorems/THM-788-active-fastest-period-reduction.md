@@ -1,15 +1,22 @@
 ---
 id: THM-788
-title: Active-fastest-period reduction for prime-seven blocking runs
-status: PROVED (elementary wall-mesh counting plus THM-783's period-sum law; independently audited, including 2,000 random tuples / 4,626 covered runs with zero inequality violations)
+title: Active-fastest-period counting reduction for prime-seven blocking runs; the active count itself is unbounded
+status: PROVED (elementary wall-mesh counting plus THM-783's period-sum law; independently audited, including 2,000 random tuples / 4,626 covered runs with zero inequality violations) + CORRECTED INTERPRETATION (THM-794/MISTAKE-149 refutes boundedness of A even at R=2)
 source: codex-2026-07-14-S10 with balanced-cascade parallel analysis; numbered after concurrent THM-785/786/787 claims
 depends_on:
   - THM-779   # simple covered-wall criterion
   - THM-783   # period-sum and single-visitor laws, at corrected scope
-related: [THM-778, THM-784, THM-786, HYP-6840, HYP-6845, HYP-6850, MISTAKE-147]
+related: [THM-778, THM-784, THM-786, THM-794, HYP-6840, HYP-6845, HYP-6850, MISTAKE-147, MISTAKE-149]
 ---
 
 # THM-788 — active-fastest-period reduction
+
+> **Correction (THM-794/MISTAKE-149).**  Every inequality proved below is
+> sound, but the original compactness interpretation is false.  THM-794 has
+> `A>=H-1` while `R=ceil(f/g)=2`: every active period repeats the same full
+> seven-visitor packet and acts only by diagonal sheet translation.  Thus (1)
+> and (2) are counting reductions conditional on `A`; they do not identify a
+> uniformly bounded invariant.
 
 ## Theorem
 
@@ -48,8 +55,10 @@ bounds
 
 `K <= (C+1)ceil(f/g) + 7C + 14`.
 
-Thus the corrected cascade target is the number of **active** fastest periods
-after empty fastest-owner refinement has been contracted, not raw wall count.
+Historically this suggested targeting the number of **active** fastest
+periods after empty fastest-owner refinement was contracted.  THM-794 shows
+that target is still too fine: full-support packet holonomy can repeat
+arbitrarily often as a gauge motion.
 
 ## Proof
 
@@ -115,11 +124,18 @@ from each of seven slower owners.  THM-783's period-sum law says that their
 inverse residues sum to zero.  A singleton inverse residue is nonzero modulo
 7, so the visitor count is at least two and at most seven.  ∎
 
-## Why this is the right quotient
+## Why this is a sound reduction but not the final quotient
 
 THM-784 has `A=0`: its `21N` fast walls are a long empty refinement inside one
 fixed slow rainbow chamber.  Formula (1) correctly allows raw wall count to
 grow like `f/g`, while (2) keeps metric extent at the slow scale.
+
+THM-794 supplies the opposite extreme.  Its `H-1` periods are all active and
+each contains every slower owner, but the packet word and normalized token
+state are identical from period to period up to common sheet translation.
+Here `R=2` is fixed while `A` diverges, and the extent tends to `1/49` rather
+than shrinking at the `1/g` scale.  Consequently neither empty-period
+contraction nor active-period counting quotients all free refinement.
 
 For Tournament Analysis, take wall events as vertices, chronological order as
 the pairwise observable, and time orientation as the gauge.  The event
@@ -139,12 +155,17 @@ each. Contract the `E_j` blocks while decorating them by absorbed length; the
 `V_j` packets are fibre/hyperedge data not supplied by the transitive
 tournament.
 
-The retained proof object is therefore the owner-labelled tie-free Hamiltonian
+The data retained by this theorem are the owner-labelled tie-free Hamiltonian
 path together with one absolute slow scale (`g`, or `1/g`), the ratio `f/g`,
 the decorated f-block word, and each active packet's zero-sum visitor set.
+THM-794 proves that these data must be quotiented further by packet return maps
+that are diagonal deck translations.  SCC transitions in the normalized
+collision transducer, with metric lift data as a sidecar, are a sharper open
+candidate.
 
 This challenges the assumption that event vertices at the finest available
 resolution are canonical. Decorated period/block vertices preserve the
-LRC-relevant visitor predicate and slow metric; undecorated period vertices do
-not. The raw event tournament obscures both by treating arbitrarily fine
-same-owner subdivision as new complexity.
+visitor predicate and slow metric, but even they treat a repeated central
+holonomy cycle as new complexity. The raw event tournament loses more: it
+treats both same-owner subdivision and packet repetition as a longer
+transitive path.

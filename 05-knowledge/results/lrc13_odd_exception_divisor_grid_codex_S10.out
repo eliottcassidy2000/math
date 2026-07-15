@@ -1,0 +1,39 @@
+Odd exception-divisor grid / global deep-component replay
+general_odd_grid: q=3..101 odd moduli=50 unit_numerators=2106 (p,x,y)_tests=10971770 PASS
+equivalence: lifted eligibility+opposite nearest parity <=> balanced residues in the 2q/13 shell with opposite parity <=> folded diamond
+divisor_specialization_tests=143346 PASS; q|x accepts exactly odd nonzero y-residues in |s|<=floor(2q/13), and accepts none when q|y
+q13_folded_support: subset/y_assertions=832 off_divisor_containment_profiles=24 double_divisor_containment_profiles=1 PASS
+q13_inversion={1: 1, 2: 6, 3: 4, 4: 3, 5: 5, 6: 2}
+q13_corollary: exactly one 13-divisible exception forces C\S(U) subset {fold(y)}; two 13-divisible exceptions force S(U)=C
+
+sharp_survivor_U=(1, 2, 3, 4, 7, 9, 10, 11, 12, 16)
+primitive=True divisor_complete_2_12=True no_13_multiple=True B=16 M(U)=2/13 maximizers=(Fraction(5, 13), Fraction(8, 13))
+exceptions=(13, 5) bounds=(<=11B, min<=11B-36)=PASS rho=1/208 Astar=1/40<=36/845
+folded_support_multiplicity=(2, 2, 3, 2, 0, 1) missing_class=5=fold(y)
+q13_deep_numerators=(5, 8) phi=2/13 Q=12/13 (all trapped)
+erosion_escape_t=7/33 phi=1/11 Q=8/33<11/13; 0 in R_U, so t notin H minus R_U
+E_U_components=8 ((Fraction(12, 77), Fraction(7, 44)), (Fraction(23, 110), Fraction(7, 33)), (Fraction(67, 176), Fraction(43, 110)), (Fraction(9, 22), Fraction(9, 22)), (Fraction(13, 22), Fraction(13, 22)), (Fraction(67, 110), Fraction(109, 176)), (Fraction(26, 33), Fraction(87, 110)), (Fraction(37, 44), Fraction(65, 77)))
+component_endpoint_owners=(((7,), (12,)), ((10,), (9,)), ((16,), (10,)), ((10, 12), (10, 12)), ((10, 12), (10, 12)), ((10,), (16,)), ((9,), (10,)), ((12,), (7,)))
+reflection_orbit_(minQ,argmin)=((Fraction(60, 77), Fraction(12, 77)), (Fraction(8, 33), Fraction(7, 33)), (Fraction(159, 176), Fraction(67, 176)), (Fraction(15, 22), Fraction(9, 22))) margins=(Fraction(67, 1001), Fraction(259, 429), Fraction(-131, 2288), Fraction(47, 286))
+
+Tournament Analysis (vertices = six folded mod-13 obligations)
+  pairwise observable A: core residue multiplicity
+  switch/gauge B: inversion c -> c^(-1)
+  tie Hamiltonian paths: (5, 6, 1, 2, 4, 3) / (5, 2, 1, 3, 6, 4)
+  score histogram: (0, 1, 2, 3, 4, 5)
+  directed 3-cycles: 0 / 0
+  SCC sizes: (1,1,1,1,1,1)
+  Hamiltonian-path counts: 1 / 1
+  edge flips between gauges: 5
+  preserved by decorated carrier: missing-class/deep-grid/exception-shell incidence
+  destroyed by bare tournament: class identities, inversion, widths, and E_U subset H verdict
+Component Tournament (vertices = four reflection-paired E_U components)
+  pairwise observable A: escape margin 11/13-min_C Q
+  switch/gauge B: component width
+  tie Hamiltonian paths: (2, 0, 3, 1) / (3, 1, 0, 2)
+  score histograms: (0,1,2,3) / (0,1,2,3)
+  directed 3-cycles: 0 / 0; SCC sizes: (1,1,1,1); HP counts: 1 / 1
+  edge flips between gauges: 5
+  preserved by decorated carrier: exact intervals, endpoint owners, and margins
+  destroyed by bare tournament: metric values and the sign of escape
+PASS
