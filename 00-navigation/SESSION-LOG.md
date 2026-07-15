@@ -1,3 +1,37 @@
+## opus-2026-07-15-S311 -- THE TRANSITIVE STAR BY FORMULA (neighbour H-multiset = {2^(g-1)+1 : weight n-g}, exact n=4..7) + THE ALL-n BLACK SELF-LINE LAW (2*selfK = SC for ALL n >= 5 -- the odd-n restriction was an artifact; verified 8, 12, 88) + the 1001 = 7x11x13 prime-lens note + the toothpick numeration-recursion lens filed (HYP-6890)
+
+Prompt (owner): work the named next steps; merge 1001-related past work; inspirations
+arXiv:1004.3036, github dobriban/BH, OEIS A139250; keep working toward the metagraph
+completely by formula.
+
+THE POINTERS DECODED: arXiv:1004.3036 = Applegate-Pol-Sloane, the TOOTHPICK sequence
+(A139250): 2-adic corner-growth recursion a(2^k+i) = 2a(i) + a(i+1), GF Prod(1 + x^(2^k-1)
++ 2x^(2^k)) -- the numeration-driven-recursion model joining Zeckendorf/Ostrowski (S310);
+dobriban/BH = Benjamini-Hochberg: adopted as METHOD (separator scans now report #candidates
+scanned alongside hits -- the S308 misguidedness discipline, statistically formalized);
+1001 = C(14,4) = 7 x 11 x 13: the kps THM-738 1001-body tree's size IS the product of the
+top three prime moduli of {2..14} (prime-lens ledger entry).
+
+THE MATH: [1] THE TRANSITIVE STAR FORMULA (exact n=4..7): the transitive's wiggly-neighbour
+H-multiset is EXACTLY {2^(g-1)+1 with multiplicity n-g : g = 2..n-1} -- one-arc-reversed
+transitive tournaments carry toothpick-flavoured power-of-two-plus-one H; the class-level
+refinement is FINER (n=4: the two gap-2 flips land in TWO distinct H=3 classes -- my
+one-class-per-gap guess died in referee, the H-multiset law survived). Combined with F1/F2:
+the transitive's degree (m), star weights (n-g), neighbour H values, and stationary mass
+(1/2^m) are now ALL by formula -- the first fully-formula'd node neighbourhood.
+[2] THE SHARPENED SELF-LINE LAW: quasi-fixed counts #{t : kappa t iso t} = 2, 8, 16, 88 at
+n = 4,5,6,7 vs SC = 2, 8, 12, 88: equal except n=6 -- and the excess is exactly 2*selfB =>
+restricted to BLACK (non-grid-sym) self-lines: 2*selfK = SC at n = 5, 6, AND 7 (8, 12, 88).
+S306/S310's 'fails at even n' compared the wrong count (it included blue self-lines). THE
+LAW IS ALL-n (n >= 5): #{non-grid-sym t : kappa(t) iso t} = SC(n), a 2-to-1 weighted
+bijection target: flip-quasi-fixed non-symmetric tilings <-> self-converse classes. n=4
+exceptional (0 vs 2). The Klein-four action (kappa, sigma, kappa-sigma = the reversal
+realizer rho-conjugation) + pair-counting (Sum sigma_kappa(c)|Aut(c)| = #{(t,pi): pi T(t) =
+T(kappa t)}) is the named proof frame.
+
+FILES: 05-knowledge/results/transitive_star_formula_opus_S311.out; HYP-6890. opus; S311.
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.11) -- THM-833 PROVED: THE ORNSTEIN-UHLENBECK LAW OF THE WIGGLY LAYER -- every arc flip has dc3 = d_u - d_v - 1, and the uniform-random-flip drift is EXACTLY E[dc3|T] = -(8/(n(n-1)))(c3 - C(n,3)/4): linear mean reversion toward the RANDOM mean (not the regular end -- that sits n(n-1)/8 beyond); fluctuation-dissipation exact; + the c_k(s) INTERVAL-TOTIENT TRIANGLE (B_s integer skeleton) + chi_7 honest negative (Fano lead opened)
 
 Prompt (owner): B_s as an integer family; chi_7 odd mode vs blue/black parity laws; think Ornstein-Uhlenbeck drift.

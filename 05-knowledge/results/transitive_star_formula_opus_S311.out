@@ -1,0 +1,8 @@
+n=4: transitive star formula {H = 2^(g-1)+1: weight n-g, one class per gap}: False  (star: {3: 2, 5: 1})
+   quasi-fixed #{t: kappa t iso t} = 2 vs SC = 2: EQUAL
+n=5: transitive star formula {H = 2^(g-1)+1: weight n-g, one class per gap}: False  (star: {3: 3, 5: 2, 9: 1})
+   quasi-fixed #{t: kappa t iso t} = 8 vs SC = 8: EQUAL
+n=6: transitive star formula {H = 2^(g-1)+1: weight n-g, one class per gap}: False  (star: {3: 4, 5: 3, 9: 2, 17: 1})
+   quasi-fixed #{t: kappa t iso t} = 16 vs SC = 12: NOT EQUAL
+n=7: transitive star formula {H = 2^(g-1)+1: weight n-g, one class per gap}: False  (star: {3: 5, 5: 4, 9: 3, 17: 2, 33: 1})
+   quasi-fixed #{t: kappa t iso t} = 88 vs SC = 88: EQUAL
