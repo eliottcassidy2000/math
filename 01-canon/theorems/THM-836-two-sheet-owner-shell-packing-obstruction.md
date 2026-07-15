@@ -1,5 +1,5 @@
 ---
-id: THM-835
+id: THM-836
 title: Thin two-sheet owner shells force a modular packing obstruction
 status: RESERVED — candidate exact reduction; proof and replay are in progress and no branch deduction may use this file
 source: codex-2026-07-15-S10 continuation
@@ -7,7 +7,7 @@ depends_on: [THM-797, THM-824]
 related: [THM-774, THM-803, HYP-6820]
 ---
 
-# THM-835 — thin two-sheet owner-shell packing obstruction
+# THM-836 — thin two-sheet owner-shell packing obstruction
 
 This namespace is reserved for an exact candidate consequence of THM-797's
 signed-wall exit obligations, with THM-824's centre-membership guard retained.
