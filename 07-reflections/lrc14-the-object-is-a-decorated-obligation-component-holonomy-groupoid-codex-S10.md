@@ -53,19 +53,16 @@ The failure is structural: a bounded denominator deck is an observer of one
 residue fibre, not a scale-uniform model of the row.
 
 The statement that the `n=12` sporadic branch is empty **uniformly is still
-open in this repository**.  THM-795 removes the entire Hamming-one star around
-every shallow arithmetic-progression dilation, at every lift height,
-THM-800 removes the residue-preserving Hamming-two star, and THM-804 forces
-every tight Hamming-three lift back to common scale. THM-806 closes that
-scale-one triple chart, so the entire AP-centred Hamming-three star is loose
-at arbitrary height. THM-810 then identifies the first shallow/deep seam:
-at Hamming four, oriented scalar coverage forces either common scale or four
-order-three labels on a coset of `<5>`, the latter normalizing to an `s=3`
-packet. THM-797 proves a general odd-divisor grid obstruction and a strong
-`q=13` support gate in the two-sheet branch. These theorems do not close the
-scale-one Hamming-four chart, the quartic `s=3` packet, higher Hamming radii,
-every binding scale, or every owner-labelled deep component. A finite census,
-a shallow rigidity theorem, and a uniform branch theorem are three different
+open in this repository**.  THM-795/800/804/806 close the AP-centred
+Hamming-one through Hamming-three stars, and THM-810/815/816 now close both
+the common-scale and quartic order-three branches at Hamming four.  At radius
+five, THM-815/820 give only the two explicit scale-one boxes above; radius six
+is recursively finite, and radius seven is the first discrepancy wall.  The
+arbitrary-scale five-/six-owner deck interfaces and general higher radii remain
+unclassified.  On the deep side, THM-797 gives an odd-divisor grid obstruction
+and a strong `q=13` support gate, while THM-817 makes the exact return-cell
+selector finite but does not prove its uniform failure.  A finite census, a
+shallow rigidity theorem, and a uniform branch theorem are three different
 statements.
 
 Those corrections do not merely narrow the frontier.  They identify the
@@ -170,6 +167,25 @@ are splice sheets and replacement teeth (THM-795).  Sometimes they are odd
 divisor classes and owner-labelled deep components (THM-797).  Sometimes they
 are collision events and packet prefixes (THM-794).  Runners are labels on
 these incidences, not universally the vertices.
+
+The repository's larger lens and carrier-pullback atlases can now be read as a
+crosswalk into this state rather than as a list of analogies:
+
+| Candidate vertices | Fields they naturally occupy | What their quotient loses alone |
+|---|---|---|
+| runners or replacement labels | owner labels in `I`, residues and scale in `A` | simultaneous component coverage and metric placement |
+| gaps, fixed sections, or cover arcs | components in `C`, endpoints and widths in `M` | arithmetic owner provenance and legal future insertions |
+| section boundaries or wall-crossing events | event incidence in `I`, tie/carry word in `W`, metric wall in `M` | between-event component geometry |
+| residues, divisor classes, or sheet colours | arithmetic and ramification in `A` | coherent scale and persistent owner incidence |
+| Fourier modes, Fejer atoms, or Haar packets | certificate shadows in `M` and discharge rules in `K` | isolated endpoint owners and equality placement |
+| matroid circuits, cocircuits, or topes | incidence constraints in `I` and proof exits in `K` | exact phase lengths unless metrically decorated |
+| proof obligations or residual routes | obligations in `O` and continuation semantics in `K` | the row itself unless every forgotten coordinate is reconstructed or discharged |
+
+This explicitly challenges the runner-vertex default.  The exact predicate is
+preserved by the operation-closed residual state; each alternative vertex set
+is useful only as one typed projection of it.  See also
+`00-navigation/LRC-LENS-MAP.md` and
+`00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`.
 
 ### 2.2 Reversible arrows and holonomy
 

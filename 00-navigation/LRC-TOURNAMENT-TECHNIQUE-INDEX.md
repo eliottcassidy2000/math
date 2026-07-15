@@ -207,6 +207,13 @@ obligations, and proof-carrier interfaces.
   gauge. The resulting tournament is transitive with score histogram
   `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
   one Hamiltonian path. These fingerprints certify collapse, not rigidity.
+- **Theorem-bearing comparison:** Odd gcd-deck lifts supply a positive control.
+  Orient lift vertices by signed circular phase displacement.  The resulting
+  cyclic tournament has one SCC and genuine directed cycles because it is
+  induced by the deck group action; together with the metric radius
+  `(D-1)/(2D)`, its wrap certifies that the deck cannot lie in a short arc.
+  Without the group action and radius sidecar, the same cycle data is only
+  telemetry.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
   branch, empty THM-820's two finite boxes, extend common-sheet exclusion above

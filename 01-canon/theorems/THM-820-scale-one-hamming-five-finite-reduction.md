@@ -599,7 +599,7 @@ Hamming six   c41767013f5403a00004609ba31b165896a9a94416e0693393aecd9915737ccc
 The replay byte-matches the stored output, whose SHA-256 is
 
 ```text
-fb5f88213b591b69a6f6565b91776f9ab00ffa03fa6df35ebebb5a4264268eab.
+f0c27f4f771a807624350dd8818480c76e849a5ae7ed88462a61851fda941b69.
 ```
 
 The result was initially headed for THM-819, but live `main` assigned THM-819

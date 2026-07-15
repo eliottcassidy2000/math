@@ -179,10 +179,12 @@ sentences.
 
 The current frontier has four honest branches:
 
-1. **Shallow n=12:** THM-795 removes the Hamming-one star around every AP
-   dilation at every scale. Construct a decreasing height/owner invariant for
-   the remaining Hamming-radius-at-least-two packets; another raw box is not
-   recursion.
+1. **Shallow n=12:** THM-795/800/804/806/810/815/816 close the full
+   AP-centred Hamming-one through Hamming-four stars. Exhaust THM-815/820's
+   finite scale-one Hamming-five boxes and Hamming-six tree, classify the
+   arbitrary-scale five-/six-owner deck interfaces, and replace the failed
+   discrepancy coefficient at the seven-comb wall by a decreasing
+   height/owner potential.
 2. **Deep two-sheet:** prove global erosion noncontainment by selecting a deep
    component, or force the dyadic seam tree into the existing finite bases.
 3. **Prime-seven r=8:** quotient zero reduced-holonomy packet loops, prove an
