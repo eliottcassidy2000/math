@@ -59,7 +59,7 @@ silently quotiented.
 
 ### The chart has two inequivalent directions to infinity
 
-The far-dilation action is only the radial direction. THM-794 supplies a
+The far-dilation action is only the radial direction. THM-798 supplies a
 transverse frequency refinement. For prime `N>110`, the ray
 
 ```text
@@ -86,10 +86,10 @@ The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
 It is the smallest current proposed payload that distinguishes radial replication
-from transverse refinement while remembering why THM-794 closes the whole
+from transverse refinement while remembering why THM-798 closes the whole
 prime ray by the capped peel.
 
-THM-795 identifies the exact rate law behind that closure. If the old fiber has
+THM-799 identifies the exact rate law behind that closure. If the old fiber has
 safe mass `mu` and `r_top` components, including isolated equality points, a
 new frequency `N` leaves at least `6mu/7-2r_top/(7N)` safe mass and creates at
 most `N+r_top` components. A named interval
@@ -144,7 +144,7 @@ certificate calculus. The nonterminal boundary must make all four certified
 mass bounds or cap tests fail, slow the peel relative to wall creation, or
 retain owner correlations that the two-number state intentionally erased.
 
-THM-795 now makes one genuine boundary face uniform. For a nine-speed small
+THM-799 now makes one genuine boundary face uniform. For a nine-speed small
 core `C subset {1,...,14}`, write `S=sum(C)`. If
 
 ```text
@@ -170,7 +170,7 @@ at some level of the cumulative scale flag. Infinity has become a recursive
 cluster tree: fully lacunary flags are terminal; only clustered or projectively
 coupled faces require the owner-labelled stalk.
 
-This is not peculiar to dimension four. The optimized THM-795 corollary closes
+This is not peculiar to dimension four. The optimized THM-799 corollary closes
 fully lacunary flags in every far-count stratum. The least factors supplied by
 the same rational certificate are
 
@@ -728,7 +728,7 @@ commutator is not an error term to hide: it is the missing sidecar. In the
 current frontier, THM-773 gives a commuting square for cover truth but not next
 events; THM-778 supplies the missing event transport; THM-779 supplies its local
 survival observation; THM-781 inverts the merged tiling node set-valuedly;
-THM-780 transports strict margin into uniform safe mass; THM-795 gives a sharper
+THM-780 transports strict margin into uniform safe mass; THM-799 gives a sharper
 fixed-base safe-mass/component enclosure but not owner correlations; THM-775
 gives one for dyadic safe-child descent; and THM-776 gives one for bounded
 two-sheet truth after reversing the quantifiers. This is a more precise notion

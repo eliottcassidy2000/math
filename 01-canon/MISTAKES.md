@@ -11,6 +11,17 @@ Format per entry:
 
 ---
 
+## MISTAKE-149 -- counting full active fastest periods still counts a diagonal sheet-translation gauge (THM-788, corrected by THM-794)
+
+> **Namespace claim stub.**  THM-794 gives an exact family with arbitrarily
+> many consecutive active fastest periods while `ceil(f/g)=2`.  Each period
+> carries all seven visitors and induces only a common token translation.
+> Therefore active-period count, like empty fast refinement before it, is not
+> a compactness coordinate.  The full formulas, impact audit, and replacement
+> invariant are being integrated with THM-794.
+
+---
+
 ## MISTAKE-147 -- an adversarial census ceiling on covered walls was treated as a scale-free exit constant; fast refinement makes the raw count unbounded (THM-779/783, corrected by THM-784)
 
 - **What was claimed:** THM-779 promoted the annealed maximum `K0=5` to the
@@ -48,9 +59,25 @@ Format per entry:
   THM-784 and `lrc14_unbounded_blocking_runs_codex_S10.py` with stored exact
   output; independent extreme-ratio certificates and reported census in
   opus-S304.
-  output.
 
 ### Independent S304 ratio-box certificate
+
+- **What was claimed (opus-S303):** an adversarial census (heights to `10^4`,
+  including targeted packets) capped all blocking runs at six walls; `K0=6`
+  was adopted as a working constant.
+- **Why it is wrong:** uniform eight-subsets of `[1,10^4]` almost never have
+  extreme speed ratio.  Same-owner steps are phi-free, so a much faster owner
+  refines a fixed seven-owner rainbow chamber into arbitrarily many covered
+  walls.  Exact S304 certificates are
+  `{10,12,17,18,22,32,39,2445}` (41 walls) and
+  `{8,10,18,24,32,34,39,3887}` (14 walls).
+- **Correct framing:** both certificate extents lie below `1/w_g+2/w_f`.
+  Extent, active periods, and metric core incidence survive fast refinement;
+  raw wall count does not.  The stored S304 script replays these two rows but
+  does not regenerate its reported `0.589` extent census.
+- **Lesson:** uniform sampling boxes ratios as surely as ranges box sizes.
+  Adversarial seeds must include extreme-ratio tuples, and a bounded invariant
+  must quotient any free same-owner refinement.
 
 ## MISTAKE-148 -- the co-landing “de-phase/serving” bound assumed locked wall indices and fixed order; balanced pairs can flip order and exceed it (THM-783/786)
 
@@ -74,8 +101,11 @@ Format per entry:
   factor-one drift bound is elementary. Allowing order flips gives a signed
   window of width `2/f`, hence only a factor-two bound. Applying either inside
   a blocking run requires a separately proved pairing/order hypothesis. The
-  safe scale-sensitive reduction is THM-788: contract empty f-refinement and
-  count active f-periods without assuming a de-phase law.
+  unconditional fixed-companion endpoint span also has factor two.  THM-786's
+  residue-transversal and `g`-period packet-polytope bounds then close named
+  aggregate profiles without assuming locked indices; THM-788 contracts empty
+  f-refinement and counts active periods.  Their exact `(69,29)` marginal
+  no-go shows why the remaining proof must retain common Beatty order/carry.
 - **Impact:** THM-783 §4 and THM-786 §3's serving/sparse conclusions are
   withdrawn. The anchored recurrence, period-sum, single-visitor law, and the
   conditional no-companion extent theorem stand. Subtracting two visitor-set
@@ -85,34 +115,8 @@ Format per entry:
   finished outside the explicitly proved no-companion class.
 - **Source:** codex-2026-07-14-S10 parallel referee audit, exact rational replay;
   corrected THM-783/786 and THM-788.
-- **What was claimed (opus-S303):** adversarial census (heights to 10^4, incl. targeted
-  packets) capped all blocking runs at 6 walls; "K0 := 6" was adopted as the working
-  constant and the sharp conjecture "every blocking run <= 6 walls" was stated.
-- **Why it is wrong:** the census sampled 8-subsets of [1, 10^4] UNIFORMLY -- such draws
-  essentially never produce extreme speed RATIOS (w_f/w_g > 3). But same-owner steps are
-  phi-free: when the fastest owner dwarfs the rest, the seven slow tokens are constant on
-  long stretches, and whenever they form a rainbow EVERY f-wall passes -- runs grow like
-  w_f/w_g. Exact certificates: {10,12,17,18,22,32,39,2445}: 41-wall run;
-  {8,10,18,24,32,34,39,3887}: 14-wall run.
-- **The correct framing (THM-786):** the invariant is run EXTENT. Both
-  certificates' extents `(0.01620,0.00334)` lie below
-  `1/w_g+2/w_f=(0.02646,0.02616)`.  The extent bound is proved on the stated
-  no-companion class; its universal form remains conjectural.  S304 also
-  reported a `0.589` adversarial-census peak, but the stored script does not
-  regenerate that census or annealing run, so the table is not a replayable
-  certificate.
-- **Impact:** no downstream consumer used `K0=6` quantitatively in the few
-  hours it stood; THM-779/783 carry correction banners.
-- **Lesson (MISTAKE-137/139/140/141/145 genus -- the SIXTH instance, new dimension):**
-  uniform sampling boxes RATIOS as surely as ranges box sizes. The standing adversarial
-  seed rule now includes EXTREME-RATIO tuples alongside near-dilates (140) and
-  single-high-frequency runners (145). And: when a quantity can be inflated by a FREE
-  dynamic (same-owner steps), the bounded invariant must quotient that dynamic out --
-  count what costs, not what happens.
-- **Source:** opus-2026-07-14-S304; its exact script/output replay the two
-  certificates only.
 
-## MISTAKE-148 -- the r=8 companion de-phase/serving estimate used one fast-window length, but the endpoint span needs two
+### Factor-two endpoint-span certificate
 
 - **What was claimed (opus-S303 and repeated in the first THM-786):** if two fixed
   companion owners `c,c'` repeatedly co-visit periods of the fastest owner

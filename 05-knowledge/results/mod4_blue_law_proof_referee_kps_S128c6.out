@@ -1,0 +1,24 @@
+========================================================================================
+n = 4
+(1) OCF mod-4 corollary H=1+2*c_odd (mod 4): True (all 8 tilings)
+(2) grid-sym <=> rho anti-automorphism: True
+(3) grid-sym c_odd parities {even,odd}: {0: 4}  [even-n law: True]
+(4) classes by (type, H mod 4): {('MX', 1): 1, ('PB', 1): 1, ('PBk', 3): 2}
+    even-n stratum law (PB/MX => H=1 mod 4): HOLDS
+    bonus certificate: H=3 mod 4 classes are all PBk: HOLDS
+========================================================================================
+n = 5
+(1) OCF mod-4 corollary H=1+2*c_odd (mod 4): True (all 64 tilings)
+(2) grid-sym <=> rho anti-automorphism: True
+(3) grid-sym c_odd parities {even,odd}: {0: 8, 1: 8}  [odd n: both allowed]
+(4) classes by (type, H mod 4): {('MX', 1): 3, ('MX', 3): 2, ('PB', 1): 1, ('PB', 3): 2, ('PBk', 1): 2, ('PBk', 3): 2}
+========================================================================================
+n = 6
+(1) OCF mod-4 corollary H=1+2*c_odd (mod 4): True (all 1024 tilings)
+(2) grid-sym <=> rho anti-automorphism: True
+(3) grid-sym c_odd parities {even,odd}: {0: 64}  [even-n law: True]
+(4) classes by (type, H mod 4): {('MX', 1): 10, ('PB', 1): 2, ('PBk', 1): 20, ('PBk', 3): 24}
+    even-n stratum law (PB/MX => H=1 mod 4): HOLDS
+    bonus certificate: H=3 mod 4 classes are all PBk: HOLDS
+
+REFEREE COMPLETE

@@ -277,6 +277,14 @@ def main():
         return
 
     import multiprocessing as mp
+    # keep the machine awake for the duration of the run (process-scoped, auto-released on exit;
+    # the first overnight attempt died to system sleep with zero completed bodies)
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000000 | 0x00000001)  # ES_CONTINUOUS|ES_SYSTEM_REQUIRED
+        print("sleep inhibitor armed (ES_CONTINUOUS|ES_SYSTEM_REQUIRED)", flush=True)
+    except Exception as e:
+        print("sleep inhibitor unavailable: %r" % (e,), flush=True)
     done = set()
     if os.path.exists(STATE):
         with open(STATE, encoding="utf-8") as f:

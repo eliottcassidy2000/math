@@ -1,0 +1,62 @@
+LRC13 HAMMING-ONE FULL-RESIDUE RIGIDITY — EXACT REPLAY
+arithmetic=fractions.Fraction floating_point=none global_M_enumeration=none
+
+CORE_SAFE_INTERVAL_AUDIT
+r= 1 B=12 t=1/14 mu=   1/7 rho=   1/182 T=    14 binders=[2, 12] vector=[2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2]
+r= 2 B=12 t=7/15 mu=  2/15 rho= 11/2340 T=180/11 binders=[4, 11] vector=[7, 6, 2, 5, 3, 4, 4, 3, 5, 2, 6]
+r= 3 B=12 t=5/16 mu=   1/8 rho=  5/1248 T=  96/5 binders=[6, 10] vector=[5, 6, 4, 7, 2, 3, 8, 3, 2, 7, 4]
+r= 4 B=12 t=4/17 mu=  2/17 rho=   3/884 T=  68/3 binders=[8, 9] vector=[4, 8, 5, 3, 7, 6, 2, 2, 6, 7, 3]
+r= 5 B=12 t=7/18 mu=   1/9 rho=   1/351 T=    27 binders=[8, 10] vector=[7, 4, 3, 8, 6, 5, 2, 9, 2, 5, 6]
+r= 6 B=12 t=3/19 mu=  2/19 rho=  7/2964 T= 228/7 binders=[7, 12] vector=[3, 6, 9, 7, 4, 2, 5, 8, 8, 5, 2]
+r= 7 B=12 t=1/7 mu=   1/7 rho=   1/182 T=    14 binders=[1, 6, 8] vector=[1, 2, 3, 3, 2, 1, 1, 2, 3, 3, 2]
+r= 8 B=12 t=1/8 mu=   1/8 rho=  5/1248 T=  96/5 binders=[1, 7, 9] vector=[1, 2, 3, 4, 3, 2, 1, 1, 2, 3, 4]
+r= 9 B=12 t=1/9 mu=   1/9 rho=   1/351 T=    27 binders=[1, 8, 10] vector=[1, 2, 3, 4, 4, 3, 2, 1, 1, 2, 3]
+r=10 B=12 t=1/10 mu=  1/10 rho=   1/520 T=    40 binders=[1, 9, 11] vector=[1, 2, 3, 4, 5, 4, 3, 2, 1, 1, 2]
+r=11 B=12 t=1/11 mu=  1/11 rho=   1/858 T=    66 binders=[1, 10, 12] vector=[1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1]
+r=12 B=11 t=1/12 mu=  1/12 rho=  1/1716 T=   132 binders=[1, 11] vector=[1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]
+
+WIDTH_RESIDUAL
+low_atoms=[(1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (6, 2)] count=7
+all other r<=6 rows satisfy w>T and escape by interval/tooth width
+
+LOW_ATOM_EXACT_WITNESSES
+r= 1 k= 1 w= 14 t=1/16 clearance=  1/8 binders=[2, 14] vector=[2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 2]
+r= 2 k= 1 w= 15 t=9/19 clearance= 2/19 binders=[4, 15] vector=[9, 8, 2, 7, 3, 6, 4, 5, 5, 4, 6, 2]
+r= 3 k= 1 w= 16 t=6/17 clearance= 2/17 binders=[6, 11] vector=[6, 5, 7, 4, 2, 8, 3, 3, 8, 2, 4, 6]
+r= 4 k= 1 w= 17 t=5/19 clearance= 2/19 binders=[8, 11] vector=[5, 9, 4, 6, 8, 3, 2, 7, 7, 2, 3, 9]
+r= 5 k= 1 w= 18 t=4/19 clearance= 2/19 binders=[9, 10] vector=[4, 8, 7, 3, 5, 9, 6, 2, 2, 6, 9, 4]
+r= 6 k= 1 w= 19 t=4/23 clearance= 2/23 binders=[11, 12] vector=[4, 8, 11, 7, 3, 5, 9, 10, 6, 2, 2, 7]
+r= 6 k= 2 w= 32 t=7/44 clearance= 1/11 binders=[12, 32] vector=[7, 14, 21, 16, 9, 5, 12, 19, 18, 11, 4, 4]
+
+UNIFORM_SYMBOLIC_BRANCHES
+SAFE_INTERVAL: rho=(mu-1/13)/B and w>T=1/(13*rho) imply 2*rho>2/(13*w), so a connected core-safe interval cannot lie in one w-tooth
+R_GE_7 r= 7: r does not divide k -> t=1/7 has clearance >=1/7; r divides k -> w>=14r=98>T=14
+R_GE_7 r= 8: r does not divide k -> t=1/8 has clearance >=1/8; r divides k -> w>=14r=112>T=96/5
+R_GE_7 r= 9: r does not divide k -> t=1/9 has clearance >=1/9; r divides k -> w>=14r=126>T=27
+R_GE_7 r=10: r does not divide k -> t=1/10 has clearance >=1/10; r divides k -> w>=14r=140>T=40
+R_GE_7 r=11: r does not divide k -> t=1/11 has clearance >=1/11; r divides k -> w>=14r=154>T=66
+R_GE_7 r=12: r does not divide k -> t=1/12 has clearance >=1/12; r divides k -> w>=14r=168>T=132
+DILATED_DECK: D=c/gcd(c,w)>=2 -> circular_span=1-1/D>=1/2>2/13; therefore full closed-danger incidence forces D=1 and c|w
+GERM_CLOSURE: the surviving complementary owner is -1/13 at every lifted splice; a left half-germ is core-safe, and closedness of {||wt||<=1/13} carries danger to the splice
+DESCENT: 13 does not divide c and w congruent cr (mod 13), together with c|w, give w/c=r+13k; k=0 restores the AP and k>=1 is the loose W_k(r) branch
+
+BOUNDED_DECK_TELEMETRY_NOT_A_PROOF
+c_range=2..64 excluding multiples of 13
+nondivisible_rows=22680 false_full_covers=0
+deck_order_histogram={2: 360, 3: 480, 4: 360, 5: 576, 6: 240, 7: 648, 8: 384, 9: 504, 10: 288, 11: 600, 12: 240, 14: 288, 15: 384, 16: 384, 17: 576, 18: 216, 19: 648, 20: 288, 21: 432, 22: 240, 23: 528, 24: 192, 25: 480, 27: 432, 28: 288, 29: 672, 30: 192, 31: 720, 32: 384, 33: 240, 34: 192, 35: 288, 36: 144, 37: 432, 38: 216, 40: 192, 41: 480, 42: 144, 43: 504, 44: 240, 45: 288, 46: 264, 47: 552, 48: 192, 49: 504, 50: 240, 51: 384, 53: 624, 54: 216, 55: 480, 56: 288, 57: 432, 58: 336, 59: 696, 60: 192, 61: 720, 62: 360, 63: 432, 64: 384}
+dangerous_sheet_count_histogram={1: 132, 2: 540, 3: 876, 4: 1500, 5: 1476, 6: 2796, 7: 1980, 8: 3636, 9: 3252, 10: 4668, 11: 108, 12: 852, 14: 252, 15: 60, 16: 180, 17: 36, 18: 108, 19: 36, 20: 36, 21: 36, 22: 12, 23: 12, 24: 12, 25: 12, 27: 12, 28: 12, 29: 12, 30: 12, 31: 12, 32: 12}
+max_danger_fraction=1/2 first_row=(c=2,r=1,h=1,w=15)
+telemetry_checksum=2698944164100
+
+SHEET_MARGIN_TOURNAMENT_TELEMETRY
+representative=(c=12,r=6,h=5,w=137,inverse_a=11) deck_order=12
+phase_norms=['53/156', '1/13', '77/156', '7/78', '17/52', '10/39', '25/156', '11/26', '1/156', '16/39', '9/52', '19/78']
+danger_margins=['-41/156', '0', '-5/12', '-1/78', '-1/4', '-7/39', '-1/12', '-9/26', '11/156', '-1/3', '-5/52', '-1/6']
+closed_danger_mask=[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+danger_first_score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+danger_first_directed_triangles=0 scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths=1
+tie_gauge_hamiltonian_path=[8, 1, 3, 6, 10, 11, 5, 4, 0, 9, 7, 2]
+edge_flips_under_margin_switch=66
+interpretation=both scalar gauges are transitive telemetry; the exact all-sheets-dangerous bit and the interval/tooth metric are external sidecars
+
+PASS: all finite atoms and exact telemetry reproduced; uniform branches are algebraic as labelled.

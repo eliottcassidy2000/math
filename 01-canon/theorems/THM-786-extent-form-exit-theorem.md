@@ -1,7 +1,7 @@
 ---
 id: THM-786
-title: The corrected extent-form exit theorem — exact wall-count refuters; the no-co-landing extent bound; factor-two companion spans; and an ultra-sparse companion-density bound
-status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse bound when the companion speed-sum is below g) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, and sparse threshold sum<c<f are withdrawn) + CONJECTURE (the universal extent bound) + OPEN (active-period/general-density bound and core incidence)
+title: The corrected extent-form exit theorem — factor-two companion spans, residue transversals, and two-scale packet polytopes
+status: PROVED (exact 41-wall certificate; no-co-landing extent theorem; factor-two fixed-companion span; signed visitor-set difference law; ultra-sparse/fractional balanced-cluster-transversal bounds; g-period packet-polytope separation) + EXACT NO-GO (the two marginal density relaxations do not couple) + REPORTED SAMPLE, NOT REPLAYABLE FROM THE STORED SCRIPT (the 0.589 extent census) + CORRECTED (the original factor-one serving bound, unsigned swap rule, and sparse threshold sum<c<f are withdrawn) + CONJECTURE (the universal extent bound) + OPEN (Beatty-order coupling, active-period bound, and core incidence)
 source: opus-2026-07-14-S304 package, exact-scope correction by codex-2026-07-14-S10
 depends_on:
   - THM-783   # the visitor laws this refines
@@ -12,6 +12,10 @@ verification:
   - 05-knowledge/results/lrc14_extent_exit_theorem_opus_S304.out
   - 04-computation/lrc14_r8_raw_wall_refuter_codex_S10.py
   - 05-knowledge/results/lrc14_r8_raw_wall_refuter_codex_S10.out
+  - 04-computation/lrc14_r8_balanced_cluster_transversal_codex_S10.py
+  - 05-knowledge/results/lrc14_r8_balanced_cluster_transversal_codex_S10.out
+  - 04-computation/lrc14_r8_g_period_packet_polytope_codex_S10.py
+  - 05-knowledge/results/lrc14_r8_g_period_packet_polytope_codex_S10.out
 ---
 
 # THM-786 — the extent-form exit theorem
@@ -19,8 +23,8 @@ verification:
 > **Correction (codex-S10 referee audit).** The no-companion extent theorem in
 > §2 is sound. The original factor-one serving/de-phase bound, unsigned swap
 > rule, and `sum c<f` sparse completion are withdrawn; see MISTAKE-148.
-> Sections 3a--3c replace them with proved factor-two, signed-balance, and
-> `sum c<g` statements. The census in §4 is finite unreproduced evidence only,
+> Sections 3a--3d replace them with proved factor-two, signed-balance,
+> `sum c<g`, and residue-transversal statements. The census in §4 is finite unreproduced evidence only,
 > so §5 still does not finish the general r=8 pierce. THM-788 gives a
 > complementary sound reduction through the number of active fastest periods.
 
@@ -144,6 +148,222 @@ M < (6-S/g+2S/f)/(1-S/g),                               (U)
 and part (2c) converts (U) into an explicit extent bound. The earlier
 condition `S<f` is insufficient for this density argument and is withdrawn.
 
+### (3d) The balanced-cluster fractional-transversal bound
+
+The all-companion count in (3c) throws away the residue equation.  Define the
+balanced-cluster hypergraph
+
+```text
+B_g(C)={B subset C, B nonempty:
+        g^(-1)+sum_(c in B)c^(-1)=0 (mod 7)}.
+```
+
+Let nonnegative rational weights `lambda_c` fractionally hit this hypergraph:
+
+```text
+sum_(c in B)lambda_c >= 1       for every B in B_g(C).
+```
+
+Put
+
+```text
+W_lambda=sum_(c in C)lambda_c c,      Lambda=sum_(c in C)lambda_c.
+```
+
+For `M` consecutive interior `g`-walls with balanced visitor periods, write
+`B_i` for the other visitors in the period containing the `i`th wall.  Then
+`B_i in B_g(C)`.  The periods are disjoint and contain at most one wall of
+each companion.  If `N_c` is the number of their `c`-walls, all these walls
+lie in an interval of length
+
+```text
+ell < (M-1)/g+2/f.
+```
+
+Fractional covering and midpoint-grid counting give
+
+```text
+M <= sum_i sum_(c in B_i)lambda_c
+  =  sum_c lambda_c N_c
+  <  W_lambda ell+Lambda.
+```
+
+Consequently, whenever `W_lambda<g`,
+
+```text
+M < (Lambda-W_lambda/g+2W_lambda/f)/(1-W_lambda/g).      (T)
+```
+
+An ordinary hitting set `T subset C` is the special case
+`lambda_c=1_(c in T)`.  Part (3c) is the still coarser choice `T=C`.
+
+This strictly extends the `sum C<g` regime.  For
+
+```text
+g=9,       f=10,       C={1,2,3,4,5,6},       sum C=21,
+```
+
+the nine balanced clusters are exactly those in the companion certificate,
+and `T={1,2,5}` hits all of them with speed weight `8<g`.  It is also the
+minimum fractional-speed-weight cover: the three disjoint balanced clusters
+`{5}`, `{1,4}`, and `{2,6}` force cost at least `5+1+2=8`.  Formula (T) gives
+
+```text
+M < 167/5,       hence M<=33.
+```
+
+Thus the general-density obstruction is not governed by the total companion
+speed.  It is governed more sharply by the minimum speed-weight of a
+fractional transversal of the residue-balanced cluster hypergraph.
+
+The exact threshold has a useful dual form.  Let `W_*` be the minimum of
+`W_lambda`.  Finite linear-programming duality gives
+
+```text
+W_* = max {sum_(B in B_g(C)) y_B:
+           y_B>=0,  sum_(B containing c)y_B<=c for every c in C}.   (T*)
+```
+
+Consequently `W_*>=g` if and only if there is a probability distribution `p`
+on balanced clusters such that
+
+```text
+Prob_(B~p)[c in B] <= c/g             for every companion c.      (Cap)
+```
+
+Indeed, a dual solution of mass at least `g` can be scaled to mass exactly
+`g` and divided by `g`; conversely `(Cap)` times `g` is dual feasible.  Thus
+the high-transversal profiles are exactly those whose balance law admits a
+stationary cluster mixture compatible with every individual wall-grid
+capacity.  Any argument using only cluster balance and aggregate companion
+counts is sharp at this boundary.
+
+The boundary is nonempty at the smallest possible profile.  For
+`g=8,C={1,...,6}`, the minimum fractional cover is the integral set
+`{1,2,6}` of weight `9>g`.  The disjoint balanced clusters `{1,3}`, `{2,4}`,
+and `{6}` give the matching dual lower bound `1+2+6=9`.  After scaling, the
+probabilities `(1/9,2/9,2/3)` on those three clusters satisfy `(Cap)`.  Hence
+part (3d) is a genuine reduction, not a universal completion.
+
+### (3e) The orthogonal g-period packet polytope
+
+There is a second exact marginal that can close high-transversal profiles.
+Let
+
+```text
+x_0 < x_1 < ... < x_T
+```
+
+be consecutive `g`-walls in a blocking run, so the `T` open `g`-periods are
+complete.  Put
+
+```text
+q=floor(f/g),       theta=f/g-q,
+s_a=a^(-1) (mod 7).
+```
+
+Each `g`-period contains `q+epsilon` `f`-walls, with
+`epsilon in {0,1}`, and at most one wall from each `c in C`.  If `D subset C`
+is its companion set, THM-783's period-sum law says
+
+```text
+(q+epsilon)s_f + sum_(c in D)s_c = 0 (mod 7).            (P0)
+```
+
+Let `P` be the convex hull in `R^7` of all allowed packet vectors
+`(epsilon,1_D)` satisfying (P0), and define the target frequency vector
+
+```text
+r=(theta,(c/g)_(c in C)).
+```
+
+The empirical mean `v_bar` of the `T` actual packet vectors belongs to `P`.
+For every owner `a!=g`, the number of `a`-walls in the open interval
+`(x_0,x_T)` differs from `aT/g` by strictly less than one.  Therefore
+
+```text
+||v_bar-r||_infinity < 1/T.                              (P1)
+```
+
+If `delta=dist_infinity(r,P)>0`, then
+
+```text
+T < 1/delta.                                             (P2)
+```
+
+More certifiably, if `h dot v<=b` for every allowed packet while
+`h dot r=b+eta`, `eta>0`, then
+
+```text
+T < ||h||_1/eta.                                         (P3)
+```
+
+This is proved by applying `h` to (P1).  It is orthogonal to (3d): (3d)
+counts companion clusters inside `f`-periods containing `g`, whereas (P0)
+counts complete `g`-period packets containing many `f`-walls.
+
+For the dense exact example
+
+```text
+f=65, g=64, C=(26,33,40,47,54,61),
+```
+
+every companion inverse is `3` and `s_f=4`, so every allowed packet obeys
+
+```text
+|D|-epsilon=1.
+```
+
+At `r`, the left side is `261/64-1/64=65/16`, giving
+`eta=49/16` and `||h||_1=7`.  Hence `T<16/7`: at most two complete
+`g`-periods, or three consecutive `g`-walls.  The cluster-transversal
+marginal does not see this example—its balanced-cluster hypergraph is all
+pairs and has fractional speed-weight `261/2>g`.
+
+### (3f) Exact coupling no-go: both marginals can survive
+
+The two marginal reductions still do not finish the problem.  Consider
+
+```text
+f=69, g=29, C=(4,5,12,13,16,27).
+```
+
+For the `f`-period cluster hypergraph, singleton clusters `{13}` and `{27}`
+force cost `40`, while the disjoint balanced edges `{5,12}` and `{4,16}`
+force another `5+4`.  The hitting set `{4,5,13,27}` attains the resulting
+optimum
+
+```text
+W_*=49>g.
+```
+
+The mixture assigning probabilities `24/29` to `{27}` and `5/29` to
+`{5,13,16}` satisfies every capacity inequality `(Cap)`.  Thus (3d) is
+exactly inconclusive.
+
+The target `r` of (3e) lies **inside** its packet polytope as well.  The
+following allowed packets, with the displayed integer multiplicities out of
+29, have total epsilon count `11` and companion marginals exactly
+`(4,5,12,13,16,27)`:
+
+```text
+2*(0,{5,13})             1*(0,{5,27})
+6*(0,{12,27})            2*(0,{5,12,16,27})
+7*(0,{13,16,27})         4*(1,{4,12,13,27})
+7*(1,{16,27}).
+```
+
+Hence `delta=0`.  The 24 singleton `{27}` clusters can also be split into
+blocks `5,5,5,5,4` by the other five clusters, well below the fixed-companion
+span ceiling `284/23`.  Since every cluster is balanced, the signed
+entrant/leaver law is automatic.
+
+This is an exact no-go for the current marginals, not an actual blocking-run
+construction.  It identifies the missing object: the two packet descriptions
+must be coupled through the **same** centered Beatty event word, including
+local order and carry.  Neither residue balance, individual density, fixed
+span, nor the two separate frequency polytopes retain that coupling.
+
 ## (4) The adversarial extent census (SESSION-REPORTED; not replayed by the stored script)
 
 Maximal run extent as a fraction of 1/w_g + 2/w_f, quarter-period windows:
@@ -172,7 +392,10 @@ used to validate the corrected laws in part (3).
 > **Every closed core-safe component of length ≥ 1/w_g + 2/w_f contains a wall
 > where blocking fails — a full 1/14-witness moment — PROVED whenever the run
 > covering it would fall in class (2b).** In the ultra-sparse class `S<g`, part
-> (3c) instead gives a finite explicit multiple of the same meshes. Components
+> (3c), and more generally whenever (3d) has `W_lambda<g`, an explicit finite
+> multiple of the same meshes follows.  Part (3e) gives an independent finite
+> bound whenever the `g`-period target has positive distance from its packet
+> polytope. Components
 > shorter than the relevant bound are finite
 > per-family checks (the THM-779 integer walk, O(#walls)).
 
@@ -185,14 +408,17 @@ bound shrinks proves that every core-safe component is pierced.
 
 THM-788 proves that bounding the number `A` of active fastest periods gives a
 ratio-sensitive extent and wall bound after empty fastest-owner blocks are
-contracted. Independently, the general-density case `S>=g` asks us to combine
-the factor-two span (S), the signed
-change law (B), and the exact token supportability equation of THM-779 without
-assuming a fixed companion or an unsigned handover. The remaining problem is
-to control how several companion spans can alternate and overlap while every
-visitor set stays balanced. This is both a Diophantine-combinatorial question
-and a geometric core-incidence question; the universal extent conjecture
-remains open and is not finished by the stored census.
+contracted.  Part (3d) now removes every residue profile whose minimum
+speed-weight fractional transversal is below `g`, even when `sum C>=g`;
+part (3e) independently removes profiles separated by their complete
+`g`-period packet polytope.  The exact tuple in (3f) proves that high-
+transversal, polytope-admissible profiles remain.  For them the missing
+invariant is the common centered-Beatty order coupling the `f`-period cluster
+word to the `g`-period packet word, together with the factor-two spans (S),
+the signed law (B), and THM-779's token supportability equation.  This is both
+a Diophantine-combinatorial coupling question and a geometric core-incidence
+question; the universal extent conjecture remains open and is not finished by
+the stored census.
 
 ## (7) Tournament/quotient audit
 

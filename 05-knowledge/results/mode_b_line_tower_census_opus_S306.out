@@ -1,0 +1,27 @@
+================================================================================================
+PART 1 -- the Mode-B line tower (referee)
+================================================================================================
+  n=5->3: fiber 2^5 exact: True; p.kappa=kappa.p: True; p.sigma=sigma.p: True; induced-subtournament: True; Dx leg-measurable: True
+  n=6->4: fiber 2^7 exact: True; p.kappa=kappa.p: True; p.sigma=sigma.p: True; induced-subtournament: True; Dx leg-measurable: True
+  n=7->5: fiber 2^9 exact: True; p.kappa=kappa.p: True; p.sigma=sigma.p: True; induced-subtournament: True; Dx leg-measurable: True
+
+================================================================================================
+PART 2 -- the three-object census
+================================================================================================
+ n   tilings  nodes   SC  A000570  merged   lines   blue   black  selfB  selfK  mselfB  mselfK   lvlK
+ 3         2      2    2        2       2       1      1       0      0      0       0       0
+ 4         8      4    2        2       3       4      2       2      1      0       1       0
+ 5        64     12    8        8      10      32      8      24      0      4       0       4
+ 6      1024     56   12       12      34     512     32     480      2      6       2      24
+ 7     32768    456   88       88     272   16384    256   16128      0     44       0     114
+
+================================================================================================
+PART 3 -- descent kernels (class-level Markov structure of p)
+================================================================================================
+  n=5->3: kernel support sizes: min 1, max 2 (child classes: 2); rows with FULL support: 8/12
+    transitive row: {1: 1} (child transitive id 1) -> transitive descends to transitive: True
+  n=6->4: kernel support sizes: min 1, max 4 (child classes: 4); rows with FULL support: 31/56
+    transitive row: {3: 1} (child transitive id 3) -> transitive descends to transitive: True
+  n=7->5: kernel support sizes: min 1, max 11 (child classes: 12); rows with FULL support: 0/456
+    transitive row: {11: 1} (child transitive id 11) -> transitive descends to transitive: True
+done

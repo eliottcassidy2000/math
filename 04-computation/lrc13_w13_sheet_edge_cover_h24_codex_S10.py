@@ -51,6 +51,16 @@ For a covered simple slide from departure sheet a to entry sheet b,
 Delta K=d_b-d_a+1.  Two explicit cores have the same labelled initial degree
 vector and X_sheet but different first tears, proving that this energy is a
 useful flux coordinate rather than a sufficient quotient.
+
+Writing e^0=d^0-1 and C for cumulative entry-minus-departure sheet current,
+the exact carrier is
+
+    e=e^0+C,    cover iff C_j >= -e^0_j for every j,
+    K=K_0+<e^0,C>+||C||^2/2.
+
+The full height-24 atlas tears much earlier than the end of the ineligible
+interval: every initial cover tears by the event at 3/8, and every
+divisor-complete initial cover tears by 4/11.
 """
 
 from __future__ import annotations
@@ -83,6 +93,25 @@ ENERGY_LIAR_CORES = {
     (1, 2, 3, 4, 5, 6, 8, 10, 11, 14): ("2/11", 7),
 }
 ENERGY_LIAR_DEGREES = (6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1)
+PREFIX_TEAR_TIME = F(3, 8)
+DIVISOR_PREFIX_TEAR_TIME = F(4, 11)
+LATEST_TEAR_CORES = {
+    (1, 2, 3, 5, 6, 7, 8, 9, 10, 11),
+    (1, 2, 3, 5, 6, 7, 8, 9, 11, 20),
+    (1, 2, 5, 6, 7, 8, 9, 10, 14, 22),
+}
+LATEST_DIVISOR_TEAR_CORES = {
+    (1, 2, 6, 7, 8, 9, 10, 14, 22, 24),
+    (2, 6, 8, 10, 14, 16, 18, 20, 22, 24),
+}
+EXPECTED_INITIAL_ENERGY_HISTOGRAM = {
+    0: 14184, 1: 43927, 2: 26518, 3: 11036, 4: 4838, 5: 201,
+    6: 922, 7: 193, 9: 1, 10: 28, 11: 2,
+}
+EXPECTED_PRETEAR_ENERGY_HISTOGRAM = {
+    0: 15270, 1: 45098, 2: 26853, 3: 9518, 4: 4254, 5: 204,
+    6: 511, 7: 127, 9: 1, 10: 12, 11: 2,
+}
 
 
 def set_gcd(values: tuple[int, ...]) -> int:
@@ -169,6 +198,16 @@ def collision_energy(degrees: tuple[int, ...]) -> int:
     return sum(choose_two(degree - 1) for degree in degrees)
 
 
+def slide_endpoints(
+    old: tuple[int, int], new: tuple[int, int]
+) -> tuple[int, int]:
+    """Return the unique departure and entry sheets of one edge slide."""
+    departure = tuple(set(old) - set(new))
+    entry = tuple(set(new) - set(old))
+    assert len(departure) == len(entry) == 1
+    return departure[0], entry[0]
+
+
 def audit_collision_flux_identity() -> None:
     """Audit every locally possible covered simple-slide degree pair."""
     for departure_degree in range(2, 21):
@@ -204,7 +243,13 @@ def main() -> None:
     failure_histogram: Counter[str] = Counter()
     initial_missing_cardinalities: Counter[int] = Counter()
     first_failure_missing_cardinalities: Counter[int] = Counter()
+    initial_energy_histogram: Counter[int] = Counter()
+    pretear_energy_histogram: Counter[int] = Counter()
     energy_liar_records = {}
+    latest_tear_time = None
+    latest_tear_cores: set[tuple[int, ...]] = set()
+    latest_divisor_tear_time = None
+    latest_divisor_tear_cores: set[tuple[int, ...]] = set()
 
     audit_collision_flux_identity()
 
@@ -231,25 +276,73 @@ def main() -> None:
             initial_covers += 1
             divisor_initial_covers += int(is_divisor)
             primitive_divisor_initial_covers += int(is_primitive_divisor)
+            initial_energy_histogram[collision_energy(initial_degree_vector)] += 1
             failure_label = "survive"
             failure_missing = 0
+            initial_excess = tuple(degree - 1 for degree in degrees)
+            current = [0] * MODULUS
 
             for time, updates in event_groups:
                 changed = False
+                before_degrees = tuple(degrees)
+                increment = [0] * MODULUS
                 for speed, old, new in updates:
                     if not ((core_mask >> (speed - 1)) & 1):
                         continue
                     changed = True
+                    departure, entry = slide_endpoints(old, new)
+                    increment[departure] -= 1
+                    increment[entry] += 1
                     for sheet in old:
                         degrees[sheet] -= 1
                     for sheet in new:
                         degrees[sheet] += 1
                 if not changed:
                     continue
+                for sheet in range(MODULUS):
+                    current[sheet] += increment[sheet]
+                    assert degrees[sheet] == initial_degree_vector[sheet] + current[sheet]
+                assert sum(current) == sum(increment) == 0
                 failure_missing = missing_mask(degrees)
                 if failure_missing:
                     failure_label = fmt_fraction(time)
+                    pretear_energy_histogram[collision_energy(before_degrees)] += 1
+                    for sheet in range(MODULUS):
+                        if failure_missing & (1 << sheet):
+                            # The singleton cut has overdrawn its initial
+                            # excess-chip capacity by exactly one.
+                            assert current[sheet] == -initial_degree_vector[sheet]
+                            assert initial_excess[sheet] + current[sheet] == -1
+                    if latest_tear_time is None or time > latest_tear_time:
+                        latest_tear_time = time
+                        latest_tear_cores = {core}
+                    elif time == latest_tear_time:
+                        latest_tear_cores.add(core)
+                    if is_divisor:
+                        if (latest_divisor_tear_time is None
+                                or time > latest_divisor_tear_time):
+                            latest_divisor_tear_time = time
+                            latest_divisor_tear_cores = {core}
+                        elif time == latest_divisor_tear_time:
+                            latest_divisor_tear_cores.add(core)
                     break
+
+                # Grouped current/energy identity.  This includes simultaneous
+                # events, for which increment can have entries larger than one.
+                energy_before = collision_energy(before_degrees)
+                energy_after = collision_energy(tuple(degrees))
+                local_flux = sum(
+                    (before_degrees[sheet] - 1) * increment[sheet]
+                    for sheet in range(MODULUS)
+                ) + sum(value * value for value in increment) // 2
+                assert energy_after - energy_before == local_flux
+                integrated_energy = (
+                    collision_energy(initial_degree_vector)
+                    + sum(initial_excess[sheet] * current[sheet]
+                          for sheet in range(MODULUS))
+                    + sum(value * value for value in current) // 2
+                )
+                assert energy_after == integrated_energy
 
             if failure_label == "survive":
                 survivors += 1
@@ -295,6 +388,15 @@ def main() -> None:
     print(f"initial_chamber_edge_covers={initial_covers}")
     print(f"full_moving_edge_cover_survivors={survivors}")
     print(
+        f"prefix_event_groups_through_{fmt_fraction(PREFIX_TEAR_TIME)}="
+        f"{sum(time <= PREFIX_TEAR_TIME for time, _ in event_groups)}"
+    )
+    print(
+        f"latest_first_tear={fmt_fraction(latest_tear_time)} "
+        f"cores_at_latest_tear={len(latest_tear_cores)}"
+    )
+    print("latest_tear_cores=" + str(sorted(latest_tear_cores)))
+    print(
         f"divisor_complete_rows={divisor_rows} "
         f"initial_covers={divisor_initial_covers} survivors={divisor_survivors}"
     )
@@ -302,6 +404,20 @@ def main() -> None:
         f"primitive_divisor_complete_rows={primitive_divisor_rows} "
         f"initial_covers={primitive_divisor_initial_covers} "
         f"survivors={primitive_divisor_survivors}"
+    )
+    print(
+        f"divisor_prefix_event_groups_through_"
+        f"{fmt_fraction(DIVISOR_PREFIX_TEAR_TIME)}="
+        f"{sum(time <= DIVISOR_PREFIX_TEAR_TIME for time, _ in event_groups)}"
+    )
+    print(
+        f"latest_divisor_complete_first_tear="
+        f"{fmt_fraction(latest_divisor_tear_time)} "
+        f"cores_at_latest_tear={len(latest_divisor_tear_cores)}"
+    )
+    print(
+        "latest_divisor_complete_tear_cores="
+        + str(sorted(latest_divisor_tear_cores))
     )
     print(
         "initial_missing_sheet_cardinality_histogram="
@@ -331,6 +447,16 @@ def main() -> None:
     print("  required sidecar: sheet degrees, runner labels, simultaneous updates")
     print("  collision energy: K=sum binom(d_j-1,2), X_sheet=8K")
     print("  simple-slide flux: Delta K=d_entry-d_departure+1")
+    print("  cumulative current: e=e_initial+C; cover iff C_j>=-e_initial_j")
+    print("  quadratic cocycle: K=K_initial+<e_initial,C>+||C||^2/2")
+    print(
+        "  initial_cover_K_histogram="
+        + str(dict(sorted(initial_energy_histogram.items())))
+    )
+    print(
+        "  last_covered_chamber_K_histogram="
+        + str(dict(sorted(pretear_energy_histogram.items())))
+    )
     for core in ENERGY_LIAR_CORES:
         degrees, energy, failure_label, failure_mask = energy_liar_records[core]
         print(
@@ -348,6 +474,12 @@ def main() -> None:
     assert primitive_divisor_initial_covers == 20_604
     assert divisor_survivors == 0
     assert primitive_divisor_survivors == 0
+    assert latest_tear_time == PREFIX_TEAR_TIME
+    assert latest_tear_cores == LATEST_TEAR_CORES
+    assert latest_divisor_tear_time == DIVISOR_PREFIX_TEAR_TIME
+    assert latest_divisor_tear_cores == LATEST_DIVISOR_TEAR_CORES
+    assert dict(initial_energy_histogram) == EXPECTED_INITIAL_ENERGY_HISTOGRAM
+    assert dict(pretear_energy_histogram) == EXPECTED_PRETEAR_ENERGY_HISTOGRAM
     assert set(energy_liar_records) == set(ENERGY_LIAR_CORES)
     for core, (failure_label, missing_sheet) in ENERGY_LIAR_CORES.items():
         degrees, energy, actual_label, actual_mask = energy_liar_records[core]
@@ -359,7 +491,10 @@ def main() -> None:
         assert event_digest == EXPECTED_EVENT_DIGEST
     if EXPECTED_DECISION_DIGEST != "TO_BE_FILLED":
         assert decision_hexdigest == EXPECTED_DECISION_DIGEST
-    print("FINAL: PASS - every static edge-cover liar tears during the exact event word")
+    print(
+        "FINAL: PASS - every static edge-cover liar tears by 3/8 "
+        "(divisor-complete by 4/11)"
+    )
 
 
 if __name__ == "__main__":

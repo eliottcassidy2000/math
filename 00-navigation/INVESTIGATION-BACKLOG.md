@@ -20,23 +20,23 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded positive-length good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-794 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-798 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-794; MISTAKE-145).
-- **Terminal transverse face:** THM-795 generalizes the successful cap calculation. A base good-set
+  (THM-798; MISTAKE-145).
+- **Terminal transverse face:** THM-799 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-795's enclosure operator
+- **Recursive certificate pull:** Iterate THM-799's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
   to four canonical certificates. Classify rows on which every certified mass
   bound or cap test fails; those are precisely where endpoint-owner correlations must
   re-enter the state.
-- **Uniform four-far terminal cone:** THM-795 now proves that every nine-small
+- **Uniform four-far terminal cone:** THM-799 now proves that every nine-small
   chart closes whenever successive far coordinates satisfy the cumulative
   `412`-lacunarity inequalities. The exact rational comparison is
   `4455873/4453855>1`, while `411` fails the same calculation. Therefore every
@@ -59,14 +59,14 @@
   `{1,...,13}\{6}`; the explicitly listed scale/tooth rows and five seeded
   searches find no lower value. THM-780 proves the weaker global floor
   `182^(-12)`, so the ratio coordinate is uniformly bounded; the sharp
-  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-795
+  `7/858` value and practical `rho<469` cutoff remain conjectural. THM-799
   separately gives a much stronger fixed-base transition. The residual task is
   owner/residue/deck transport inside the enormous bounded ratio domain.
 - **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound follows from
-  `c*` alone; THM-794 refutes the proposed raw-component route, while
+  `c*` alone; THM-798 refutes the proposed raw-component route, while
   THM-777/780 give qualitative ratio compactness without an effective
   endpoint-owner classification.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
@@ -81,7 +81,7 @@
   primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
   explicitly listed finite probes find no lower value, but the sharp global
   value remains a conjecture. THM-780 proves the crude global floor
-  `182^(-12)`; THM-795 separately proves that one high-frequency
+  `182^(-12)`; THM-799 separately proves that one high-frequency
   insertion over a fixed positive-mass base cannot cause decay. Do not promote
   the proposed `rho<469` ratio bound outside strata where the floor is proved,
   or mistake that ratio bound for an endpoint/residue classification.
@@ -244,12 +244,17 @@
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13` automaton tears
   for all `U subset [1,24]`: 1,144,066 cores, 101,850 initial covers, zero
-  survivors over 117 grouped event times.  Open: make the tear uniform in
+  survivors; all initial covers already tear by `3/8` (38 groups), and all
+  divisor-complete ones by `4/11` (36 groups).  The carrier reduces exactly to
+  an `A_12` cumulative root walk `e=e^0+C` inside the 50,388-state seven-chip
+  simplex; coverage is the singleton-cut system `e>=0`.  Open: make the tear uniform in
   quotient height and in `w=13c`, then splice it with the center/high-order
   clock dichotomy.  The collision energy `K=sum binom(d_j-1,2)` obeys the
   THM-785 endpoint-defect flux and THM-787 step-eight law.  Exact equal-energy
-  liars show that current across `K`-cuts must retain runner labels and the
-  event word.
+  liars show that current across `K`-cuts must retain the event/root word.
+  Reframe the uniform task as emptiness of the intersection between the
+  regular safe-current language and the divisor-complete arithmetic clock
+  language.
 - **r=8 correction and surviving structure:** raw covered-wall count is
   unbounded even for divisor-complete families; the exact refuter is a fixed
   seven-token permutation stalk plus owner `182m+1`.  The rooted redundancy
@@ -257,15 +262,26 @@
   recurrence, period-sum, single-visitor, cluster-balance, and conditional
   extent laws survive on the corrected coordinate.  THM-786 now proves the
   factor-two span for one fixed companion serving consecutive `g`-walls even
-  when indices skip, plus an explicit ultra-sparse bound when `sum c<g`.
-  Alternation among several companions is still uncontrolled; the sampled
+  when indices skip.  Its fractional-transversal refinement closes any residue
+  profile whose balanced-cluster hypergraph has speed-weight `<g`, strictly
+  beyond the old `sum c<g` class.  The exact `g=9,C={1,...,6}` row has total
+  companion speed 21 but optimal transversal weight 8.  An orthogonal
+  `g`-period packet polytope closes the high-transversal dense row
+  `(f,g)=(65,64)`.  The exact `(69,29)` tuple survives both marginals and the
+  fixed-span laws, so high-transversal alternation is now precisely a common
+  Beatty-order/carry coupling problem; the sampled
   `K0=6` is not universal, and its reported `0.589` extent census is not
   regenerated by the stored script.
 - **Next theorem target:** define minimal persistent stalks over each metric
   core-safe component, contract stalk-redundant walls, and prove a bound or
   forced tear for the remaining owner-switch/visitor-cluster skeleton using
   THM-778's centered schedule, THM-779's supportability equation, and
-  THM-783/786's signed balance/span laws.  THM-784 supplies an
+  THM-783/786's signed balance/span/transversal laws.  First classify the
+  finite residue-profile LPs with optimal speed-weight at least `g`, then
+  intersect them with the complete-`g`-period packet polytopes.  For the rows
+  surviving both, build the joint transportation automaton retaining local
+  centered-Beatty order and carry; separate marginals provably cannot work.
+  THM-784 supplies an
   independent simpler unbounded-run family, confirming that this quotient is
   necessary rather than an artefact of the divisor-complete construction.
 - **Parallel folded target:** orient the connected components of the deep set

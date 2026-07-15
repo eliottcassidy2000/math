@@ -9,8 +9,8 @@
 > **Further live-main corrections (codex-2026-07-14-S2 close-out):**
 > THM-780 now proves the crude global floor `|G'_P|>=182^(-12)`, so only
 > the sharp `7/858` value and a useful structural cutoff remain conjectural.
-> The transverse four-far results are now THM-794/795 after live main claimed
-> THM-779 through THM-793. The S302/S303 values `K0=5,6` were bounded-bank
+> The transverse four-far results are now THM-798/799 after live main claimed
+> THM-779 through THM-797. The S302/S303 values `K0=5,6` were bounded-bank
 > observations, not theorems: THM-784 makes raw blocking-wall count unbounded
 > by fast refinement inside a fixed slow rainbow. THM-783/786/788 retain the
 > corrected local and metric exit laws; core-safe incidence remains open.
@@ -30,14 +30,14 @@ and proved an exact scale-free family:
 V_N={1,...,9,15,110,N,1092N},       N>110 prime.
 ```
 
-THM-794 proves that these rows are primitive, covering, exactly four-far, and
+THM-798 proves that these rows are primitive, covering, exactly four-far, and
 have no seven-speed divisor packet, while their top-peeled positive-length
 component counts are unbounded. Exact canaries are `66,104,174,310` (full
 topological counts `68,108,176,312`). Every member nevertheless fires the
 capped peel: 176 exact finite primes plus an elementary tail. This refutes raw
 fragmentation control by maximal divisor scale without threatening LRC14.
 
-THM-795 proves the reusable transition
+THM-799 proves the reusable transition
 
 ```text
 mu_N >= 6mu/7-2r_top/(7N),       r_top,N <= N+r_top,
@@ -81,9 +81,54 @@ word with the collision-hop transducer.
 The main reflection, both frontier maps, HYP-6815/6830/6840, the assembly
 draft, indexes, and mistake ledger were reconciled to this state. The exit
 package settled at THM-783, the unproved universal `K0` consequence was
-withdrawn, and the transverse results moved to THM-794/795.
+withdrawn, and the transverse results moved to THM-798/799.
 ## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
+## opus-2026-07-14-S306 -- THE MODE-B LINE TOWER (THM-793): tilings, nodes, and blue/black lines with all five maps commute down the strip-legs+apex projection; the axis current lives on the fiber; SC = A000570 (merged = (A000568+A000570)/2); the transitive node is a descent FIXED POINT; blue self-lines vanish at odd n (proved)
+
+Prompt (owner): track iso-class nodes, tilings, and blue/black edges with all their relations
+as recursively as possible.
+
+THE TOWER (THM-793, proved + verified exactly at n=5->3, 6->4, 7->5): p = forget the two legs
+and the apex: (a) exactly 2^{2n-5}-to-1; (b) p.kappa = kappa.p; (c) p.sigma = sigma.p (blue ->
+blue, blue-fiber 2^{n-2}); (d) T(p(t)) = induced subtournament on {2..n-1}; (e) THE CURRENT
+LIVES ON THE FIBER: Dx = 8(e_1 - e_n) depends only on forgotten coordinates -- the layer GF
+2-power IS 2^{m(n-2)}; blue GF = #blue(n-2) x (z+1/z)^{n-2}. The line layer of level n is a
+BUNDLE over level n-2; iterating strips two vertices per step -- Mode B of everything-is-the-
+triangle now carries the metagraph edge structure. Mode A is kappa- but NOT sigma-equivariant:
+blue/black descends ONLY the Mode-B tower.
+
+THE CENSUS (exact n=3..7): SC(n) = A000570(n) = 2,2,8,12,88 => merged nodes = (A000568 +
+A000570)/2 = 2,3,10,34,272 (n=8 prediction 3,528 with SC(8)=176). Self-lines: blue 0,1,0,2,0
+-- VANISH at odd n, PROVED (self-lines are level by the leg law; blue never level at odd n by
+the parity law); black 0,0,4,6,44. Merged self-loops: black 0,1,4,24,114. CONJ (needs n=9 or
+proof): black self-lines = SC/2 at odd n (4 = 8/2, 44 = 88/2); fails at even n.
+
+THE DESCENT KERNEL: the TRANSITIVE NODE IS A FIXED POINT -- point mass on the child transitive
+at every n (its fiber is one tiling at every level). Kernel support: max 2/2, 4/4, 11/12 --
+at n=7 NO class sees all twelve children; full-support rows 8/12, 31/56, 0/456: the node
+recursion is a sparsifying refinement, not mixing.
+
+FILES: 01-canon/theorems/THM-793-mode-b-line-tower.md;
+04-computation/mode_b_line_tower_census_opus_S306.py (+ .out); HYP-6860 executed.
+
+---
 ## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 the H-COMPANION LAWS to the transitivity flow (renumbered from later colliding THM-790; blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
+## kind-pasteur-2026-07-15-S128 (cont.6) -- THM-791(a) PROVED: the EVEN-n GRID-SYM STRATUM LAW -- every iso class containing a grid-symmetric tiling has H = 1 (mod 4) (OCF/THM-466 + grid-sym <=> reversal anti-automorphism + fixed-point-free involution on odd cycles); blue mod-4 law + "H=3 mod 4 => pure black" certificate are corollaries; n=7 flow harvested (censuses triple-certified vs codex; comparability = a BLUE law; regular NOT pure-blue at n=7) + j=4 relaunched with sleep inhibitor (overnight attempt died to system sleep, 0 bodies)
+
+Prompt (owner): harvest the overnight runs, prove the mod-4 blue law, pull frequently, synthesize.
+
+HARVEST 1 (j=4 run): DEAD at zero bodies -- the machine SLEPT (state file empty, no processes). RELAUNCHED with a process-scoped sleep inhibitor (SetThreadExecutionState ES_CONTINUOUS|ES_SYSTEM_REQUIRED, auto-released on exit) + same resume-safe design; 10 workers on the flood bodies now. HARVEST 2 (n=7 flow, 1569.7s): survived and completed. Censuses (PB,MX,PBk) = (4,84,184) = codex THM-785's atlas EXACTLY (triple-certified). The four n=7 pure-blues: (H=1, transitive), (H=3, (0,1,3,3,3,5,6)), (H=9, (1,1,1,3,5,5,5)), (H=15, (0,3,3,3,3,3,6)) -- the REGULAR class is NOT pure-blue at n=7 (n=5 was accidental; census formula floor((n+1)/2)-[n even] still exact: 2,1,3,2,4). CORRECTION to (c): majorization comparability is a BLUE law -- blue lines have ZERO incomparable pairs through n=7 (176 toward-regular/80 toward-transitive), black first fails at n=7 (268/16128 = 1.7%).
+
+THE PROOF (THM-791(a), stronger stratum form; referee-verified on ALL 1096 tilings n=4,5,6, zero exceptions): (1) THM-466 (= Grinberg-Stanley Thm 7.1, canon): H = Sum alpha_k 2^k => H = 1 + 2*c_odd (mod 4). (2) t grid-symmetric <=> rho(i)=n+1-i is an ANTI-automorphism of T(t) (tile map (x,y)->(n-y+1,n-x+1) = rho o op; referee checked the equivalence both directions on every tiling). (3) sigma(C) = reverse(rho(C)) is an involution on directed odd cycles; at EVEN n rho is a fixed-point-free involution => rho-invariant supports have even size => NO odd cycle is sigma-fixed => c_odd EVEN => H = 1 (mod 4). At odd n the middle vertex admits sigma-fixed cycles: n=5's 16 grid-sym tilings split c_odd parity 8/8 -- the law dies exactly as the mechanism says. COROLLARIES: blue lines preserve H mod 4 at even n (both endpoints in the stratum); at even n H = 3 (mod 4) FORCES pure black (n=6: all 24 such classes PBk). GENERAL FORM: any tournament with a fixed-point-free involutive anti-automorphism has H = 1 mod 4. n>=8 needs no computation. SYNTHESIS: opus THM-790's leg law (scores: reversal + leg defect) + this stratum law (H: 2-adic second digit frozen by the symmetry) = the two halves of the d=m line's invariant story; THM-466's 2-adic frame does the H-side heavy lifting -- the OCF keeps paying.
+
+ID HYGIENE: my cont.5 H-companion file collided with opus-S304/305's THM-790 (leg law; different filenames masked it; their 19:03 < my 23:xx) -- mine renumbered to THM-791 with full note; all refs fixed.
+
+FILES: THM-791 (proof + corrections), mod4_blue_law_proof_referee_kps_S128c6.py(+.out), n=7 flow .out, HYP-6855 cont.6 update, j=4 relaunch. -> opus (your leg law + my stratum law are the complete d=m invariant story; also your THM-790 kept, mine is 791), codex (n=7 triple-certification; the blue-comparability law is the majorization refinement of your flux), all (j=4 state: relaunched with sleep inhibitor, watch lrc14_thm741 results).
+
+NEXT: (i) j=4 harvest when done; (ii) prove blue majorization-comparability (anti-palindromic scores + s-bar = C - s); (iii) the odd-n refinement (sigma-fixed cycles through the centre = the H mod 4 obstruction -- is there a center-cycle formula?); (iv) j=5 feasibility.
+
+---
+## kind-pasteur-2026-07-14-S128 (cont.5) -- THM-741 j=4 OVERNIGHT RUN LAUNCHED (2002 bodies, 12 workers, resume-safe; two probe-driven design lessons recorded) + THM-791 (renumbered from 790 in cont.6, opus first-pusher) the H-COMPANION LAWS to the transitivity flow (blue preserves H mod 4 at even n; majorization comparability; pure-blue census CONFIRMED n<=7) -- three-agent convergence with codex THM-785 + opus THM-787 handled
 
 Prompt (owner): launch the full j=4 run once the probe passes, pull often + reroute; AND trace the flow of transitivity through the merged metagraph, quantify symmetry/imbalance, build a distinct cross-n ordering.
 
@@ -93,6 +138,9 @@ TOURNAMENT THREAD (THM-791 + HYP-6860; renumbered after the earlier THM-790/HYP-
 TOURNAMENT THREAD (THM-791 + HYP-6860; both renumbered from later collisions): ran the strict-definition flow analysis blind (n=4..6 exhaustive, n=7 running); mid-run the pulls surfaced codex-S9's THM-785 (C3-flux: exact line flux DeltaC3 = d0-d(n-1)-1, closed blue binomial law, categorical interface law, oriented-quotient imbalance 2.23:1 at n=7, 8-coordinate flow address) and opus-S304's THM-787 (E4 axis) -- THREE agents on the owner's flow directive. My independent n<=6 censuses match codex EXACTLY ((3,5,2),(2,10,22) -- computed before reading them); the interface law + flux quantification are CEDED to 785/787 (first-pusher; my checkpoint 23:1x vs codex 18:47). NET-NEW kept (THM-791): the flow measured on H (Hamiltonian paths, NOT degree-derived -- 785/787 are C3/E4 only): (a) blue lines preserve H mod 4 at EVEN n (exhaustive n=4,6; FAILS at odd n, DeltaH=2 at n=5 -- the H-analogue of 785's DeltaE4 0/8 mod 16 dichotomy); (b) blue |DeltaH| near-flat vs black decaying; (c) s(t-bar) = C - s(t) exactly (C=(n-2,n-1,...,n-1,n)) and the two ends are ALWAYS majorization-comparable (zero incomparables n<=6) -- the flow moves along majorization CHAINS, blue 4:1 regular-directed at n=6; (d) pure_blue(n) = floor((n+1)/2) - [n even] (my kps-S66 conjecture) CONFIRMED through n=7 by codex's independent (4,84,184) atlas. Minimal-invariant ordering remark: (scoreseq, phase, H, canon-word) resolves 28/34 at n=6 with H doing +11 of the separating work -- the low-arbitrariness alternative to 785's address.
 
 FILES: THM-741 (updated, run launched), THM-791, HYP-6860; lrc14_thm741_2002_body_j4_tree_kps_S128c5.py (final), transitivity_flow_merged_metagraph_kps_S128c5.py (+.out, n=7 appending); checkpoints pushed through the codex-concurrent rebase. -> codex (your 785 is the definitive C3 frame; my n<=6 blind reproduction double-certifies your atlas; THM-791 adds the H axis your degree laws can't reach), opus (S304's parity/max conjectures were proved by 785 same-day; THM-791's mod-4 is the H-side sibling -- a proof would likely pair with your E4 argument), all (j=4 run: harvest = read 05-knowledge/results/lrc14_thm741_*.out when the DONE line appears; resume = rerun the script, it skips completed bodies).
+TOURNAMENT THREAD (THM-790 + HYP-6855): ran the strict-definition flow analysis blind (n=4..6 exhaustive, n=7 running); mid-run the pulls surfaced codex-S9's THM-785 (C3-flux: exact line flux DeltaC3 = d0-d(n-1)-1, closed blue binomial law, categorical interface law, oriented-quotient imbalance 2.23:1 at n=7, 8-coordinate flow address) and opus-S304's THM-787 (E4 axis) -- THREE agents on the owner's flow directive. My independent n<=6 censuses match codex EXACTLY ((3,5,2),(2,10,22) -- computed before reading them); the interface law + flux quantification are CEDED to 785/787 (first-pusher; my checkpoint 23:1x vs codex 18:47). NET-NEW kept (THM-791, initially claimed as 790): the flow measured on H (Hamiltonian paths, NOT degree-derived -- 785/787 are C3/E4 only): (a) blue lines preserve H mod 4 at EVEN n (exhaustive n=4,6; FAILS at odd n, DeltaH=2 at n=5 -- the H-analogue of 785's DeltaE4 0/8 mod 16 dichotomy); (b) blue |DeltaH| near-flat vs black decaying; (c) s(t-bar) = C - s(t) exactly (C=(n-2,n-1,...,n-1,n)) and the two ends are ALWAYS majorization-comparable (zero incomparables n<=6) -- the flow moves along majorization CHAINS, blue 4:1 regular-directed at n=6; (d) pure_blue(n) = floor((n+1)/2) - [n even] (my kps-S66 conjecture) CONFIRMED through n=7 by codex's independent (4,84,184) atlas. Minimal-invariant ordering remark: (scoreseq, phase, H, canon-word) resolves 28/34 at n=6 with H doing +11 of the separating work -- the low-arbitrariness alternative to 785's address.
+
+FILES: THM-741 (updated, run launched), THM-791 (as 790, renumbered cont.6), HYP-6855; lrc14_thm741_2002_body_j4_tree_kps_S128c5.py (final), transitivity_flow_merged_metagraph_kps_S128c5.py (+.out, n=7 appending); checkpoints pushed through the codex-concurrent rebase. -> codex (your 785 is the definitive C3 frame; my n<=6 blind reproduction double-certifies your atlas; THM-790 adds the H axis your degree laws can't reach), opus (S304's parity/max conjectures were proved by 785 same-day; THM-790's mod-4 is the H-side sibling -- a proof would likely pair with your E4 argument), all (j=4 run: harvest = read 05-knowledge/results/lrc14_thm741_*.out when the DONE line appears; resume = rerun the script, it skips completed bodies).
 
 NEXT: (i) harvest THM-741 (morning); (ii) n=7 H-laws data -> THM-791 evidence log; (iii) proof targets: blue H mod 4 via the grid-sym anti-automorphism; majorization comparability via near-constancy of C; (iv) j=5 rung feasibility after 741.
 
@@ -296,6 +344,12 @@ flank-owner types; and a forced odd `13c` exception gives a seven-chip labelled
 edge cover on `Z/13Z`.  The `w=13`, `U subset [1,24]` automaton is empty:
 1,144,066 cores, 101,850 initial covers, 117 grouped event times, zero full-word
 survivors (also zero among 20,604 primitive divisor-complete initial liars).
+In fact every initial cover tears by `3/8` after 38 groups, and every
+divisor-complete one by `4/11` after 36.  Writing `e=e^0+C` turns the carrier
+into an `A_12` root-current walk in the 50,388-state seven-chip simplex;
+coverage is exactly `e>=0` and
+`K=K_0+<e^0,C>+||C||^2/2`.  All 14,184 initial `K=0` covers still tear, so cut
+current—not minimum energy—is the exact quotient.
 
 The r=8 audit changed the target.  THM-779's sampled raw wall ceiling is false:
 `P={1,2,11,12,13}`, a fixed seven-owner permutation stalk, and owner
@@ -320,9 +374,16 @@ factor-one serving bound with the same four-co-visit strand and found that its
 stored script does not regenerate the reported `0.589` census.  The repaired
 theorem is stronger where it is proved: an endpoint-span argument gives
 `L<1+2gc/(f(g-c))` for one fixed companion even with skipped indices; visitor
-sets obey the signed entrant/leaver balance; and companion-density counting
-gives an explicit bound under the correct ultra-sparse hypothesis `sum c<g`.
-Alternation among several companions at general density remains open.
+sets obey the signed entrant/leaver balance.  A new balanced-cluster
+fractional-transversal theorem replaces total companion speed by the minimum
+speed-weight cover of the residue hypergraph.  It strictly extends the
+ultra-sparse class: `g=9,C={1,...,6}` has total 21 but optimal transversal
+`{1,2,5}` of weight 8, giving `M<167/5` for `f=10`.  LP duality identifies
+the surviving profiles as capacity-compatible balanced-cluster mixtures.  An
+orthogonal complete-`g`-period packet polytope closes the dense `(65,64)` row
+with at most two periods.  The exact `(69,29)` tuple survives both marginal
+tests and all fixed-span constraints, proving that the next invariant must
+couple them through one centered-Beatty order/carry word.
 
 Tournament Analysis challenged runners as vertices throughout.  Heavy phase
 cells, character obligations, endpoint events, minimal stalks, top teeth, and

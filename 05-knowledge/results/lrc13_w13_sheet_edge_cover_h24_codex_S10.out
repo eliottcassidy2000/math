@@ -1,6 +1,6 @@
 w=13 moving sheet-edge cover certificate through quotient height 24
 strict w-ineligibility / closed U-danger endpoint convention
-script_sha256=0ba9a027c49386ede940f3ef47ed82e4957b4f076e249dded1cf6e44982db9b7
+script_sha256=ad62249988ebb5558ee664d5b5794793ae7db8ba49e7f0a1dcd5c0c234bb1d07
 event_atlas_sha256=b7b9f5930d28c2dd7e34464851fe00af941561252585d8889b8737682de01cca
 decision_atlas_sha256=01dafb23a9562fc14f21dbe85bc36d6dcb4e93e4b346dde65a74e82fe2addf0c
 
@@ -16,8 +16,14 @@ candidate_speeds=23 range=[1,24] excluding=13 event_groups=117
 all_10_subsets=1144066 expected=1144066
 initial_chamber_edge_covers=101850
 full_moving_edge_cover_survivors=0
+prefix_event_groups_through_3/8=38
+latest_first_tear=3/8 cores_at_latest_tear=3
+latest_tear_cores=[(1, 2, 3, 5, 6, 7, 8, 9, 10, 11), (1, 2, 3, 5, 6, 7, 8, 9, 11, 20), (1, 2, 5, 6, 7, 8, 9, 10, 14, 22)]
 divisor_complete_rows=131183 initial_covers=20612 survivors=0
 primitive_divisor_complete_rows=131149 initial_covers=20604 survivors=0
+divisor_prefix_event_groups_through_4/11=36
+latest_divisor_complete_first_tear=4/11 cores_at_latest_tear=2
+latest_divisor_complete_tear_cores=[(1, 2, 6, 7, 8, 9, 10, 14, 22, 24), (2, 6, 8, 10, 14, 16, 18, 20, 22, 24)]
 initial_missing_sheet_cardinality_histogram={0: 101850, 1: 389835, 2: 436215, 3: 185606, 4: 29298, 5: 1257, 6: 5}
 first_failure_missing_sheet_cardinality_histogram={1: 486185, 2: 441478, 3: 185833, 4: 29308, 5: 1257, 6: 5}
 initial_failures=1042216
@@ -33,7 +39,11 @@ Tournament Analysis / assumption challenge:
   required sidecar: sheet degrees, runner labels, simultaneous updates
   collision energy: K=sum binom(d_j-1,2), X_sheet=8K
   simple-slide flux: Delta K=d_entry-d_departure+1
+  cumulative current: e=e_initial+C; cover iff C_j>=-e_initial_j
+  quadratic cocycle: K=K_initial+<e_initial,C>+||C||^2/2
+  initial_cover_K_histogram={0: 14184, 1: 43927, 2: 26518, 3: 11036, 4: 4838, 5: 201, 6: 922, 7: 193, 9: 1, 10: 28, 11: 2}
+  last_covered_chamber_K_histogram={0: 15270, 1: 45098, 2: 26853, 3: 9518, 4: 4254, 5: 204, 6: 511, 7: 127, 9: 1, 10: 12, 11: 2}
   energy liar (1, 2, 3, 4, 5, 6, 7, 8, 20, 23): degrees=(6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1) X_sheet=80 first_tear=4/23 missing_sheet=1
   energy liar (1, 2, 3, 4, 5, 6, 8, 10, 11, 14): degrees=(6, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1) X_sheet=80 first_tear=2/11 missing_sheet=7
 
-FINAL: PASS - every static edge-cover liar tears during the exact event word
+FINAL: PASS - every static edge-cover liar tears by 3/8 (divisor-complete by 4/11)

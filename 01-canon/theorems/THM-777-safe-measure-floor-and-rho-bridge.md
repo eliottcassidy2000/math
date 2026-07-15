@@ -7,7 +7,7 @@ depends_on:
   - LRC(<=13)  # M(P) >= 1/13 for 12-cores (the Lipschitz tail)
   - THM-755    # v* = r_P/(pi |G'_P|) (the bridge's target)
   - THM-780    # explicit global floor 182^(-12)
-related: [THM-757, THM-761, THM-767, THM-780, THM-783, THM-784, THM-792, THM-794, THM-795, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
+related: [THM-757, THM-761, THM-767, THM-780, THM-783, THM-784, THM-792, THM-794, THM-795, THM-798, THM-799, HYP-6830, HYP-6835, HYP-6840, MISTAKE-141, MISTAKE-145]
 verification: 04-computation/lrc14_gprime_floor_decision_opus_S301.py
   (+ 05-knowledge/results/lrc14_gprime_floor_decision_opus_S301.out)
 ---
@@ -72,7 +72,7 @@ pair-sum endpoint arithmetic; this factorization is diagnostic, not a proof.)
 
 ## (4) Fixed-base exclusion and finite adversarial probes
 
-- **Fixed-base tooth insertion (PROVED, THM-795):** for every fixed 11-speed
+- **Fixed-base tooth insertion (PROVED, THM-799):** for every fixed 11-speed
   base `B` with safe mass `mu>0` and `r_B` components,
   `|G'_{B union {N}}|>=6mu/7-2r_B/(7N)`. Hence
   `liminf_{N->infinity}|G'_{B union {N}}|>=6mu/7>0`; one new high frequency over
@@ -124,7 +124,7 @@ converges to ≥ 0.048.
 
 - CLOSES: the global regime-2 boundedness question, with an explicit but huge
   cutoff, by THM-780 plus (1), and rules out one high-frequency insertion over
-  any fixed base as a safe-mass-decay mechanism, by THM-795.
+  any fixed base as a safe-mass-decay mechanism, by THM-799.
 - LEAVES OPEN: the sharp asymptotic value and uniqueness in (5), plus a
   structurally useful rather than astronomical cutoff and atlas.
   The honest route to it: |G'| < ε forces near-perfect comb covering, which
@@ -132,7 +132,7 @@ converges to ≥ 0.048.
   covers); the census minimizer's structure (near-AP, one gap) is where that
   argument should land.
 - SEPARATES SIGNAL FROM NOISE: the sharp-floor route remains viable but unproved; the
-  raw-`r_P` route is refuted (MISTAKE-145). THM-795 rigorously removes fixed-base
+  raw-`r_P` route is refuted (MISTAKE-145). THM-799 rigorously removes fixed-base
   tooth insertion from the decay mechanisms. The unresolved possibilities are
   varying-base degeneration and iterated or multiscale insertion are no longer
   candidates for making safe mass tend to zero, by THM-780, but they can still
