@@ -1,15 +1,25 @@
 ---
-id: THM-865
+id: THM-867  # renumbered from 865 (mac-mini first-pushed 865/866 during my network outage)
 title: THE LEVEL COMPLETENESS THEOREM — the populated axis levels are exactly the full step-8 progression from the (near-)regular floor to the transitive ceiling (n³−n)/3, with residue x ≡ 0 (mod 8) at odd n and x ≡ n (mod 8) at even n; proof = the leftmost-tie-split walk: any tie splits with Δx = +8 exactly (F3 with zero margin), ties at scores 0 and n−1 are impossible (the mutual arc), and the LEFTMOST tie is always Landau-legal to split (tightness of its prefix forces the bottom-i to be {0,…,i−1} with s_{i+1} = i−1, violating Landau at i+1) — so every non-transitive score sequence climbs by exactly +8, and the walk from the floor visits EVERY level
 status: PROVED (one-paragraph argument below) + REFEREED (n = 3..9: the walk from the floor visits exactly the census levels — walk == census, all splits legal, all steps +8, 7/7)
 source: opus-2026-07-15-S317 (owner: prove the no-holes completeness via the F3 exchange walk); completes S316's level-law probe (HYP-6935)
 depends_on:
   - THM-855 F3 (the per-flip drop law: the +8 tie-split is the zero-margin case)
-related: [THM-790 (the d=m line layer's mod-16 selection rule — a FLIP-layer constraint, now cleanly separated from the level lattice), HYP-6935 (the residue laws, proved there)]
+related: [THM-790 (the d=m line layer's mod-16 selection rule — a FLIP-layer constraint, now cleanly separated from the level lattice), HYP-6935 (residue laws), THM-866 (mac-mini statement slot), kps cont.21 (first proof)]
 verification: 05-knowledge/results/level_completeness_vandermonde_opus_S317.out
 ---
 
-# THM-865 — the level completeness theorem
+# THM-867 — the level completeness theorem (the leftmost-tie-split proof)
+
+> **THE TRIPLE CONVERGENCE (2026-07-15):** three agents proved/claimed the
+> no-holes completeness independently the same day: kind-pasteur cont.21
+> (proof, filed first), mac-mini S109 (THM-866, claim + draft — the number
+> that owns the STATEMENT slot), and this file (the leftmost-tie-split proof
+> + walk==census referee, written during a network outage). PROPOSED MERGE:
+> THM-866 carries the statement; this file contributes the one-paragraph
+> leftmost-tie proof and the 7/7 referee; cross-check kps's route for
+> independence. Triple-certified theorems are the strongest kind — keep all
+> three proofs.
 
 **Statement.** Let L(n) = {Σ_v (2s_v − (n−1))² : s a score sequence on n
 vertices}. Then L(n) is EXACTLY the arithmetic progression with step 8 from

@@ -73,6 +73,6 @@ golden) and S316's 2-adic OCF tower (each digit needs one more layer):
 **the repo's recurring meta-pattern is exact truncation laws — finite-depth
 shadows with Pascal-structured discrepancies.**
 
-Cross-refs: THM-865 (the level walk this session), HYP-6935 (S316 parity
+Cross-refs: THM-867 (the level walk this session), HYP-6935 (S316 parity
 probes), the-farey-14-row (S315), everything-is-the-triangle (the
 foundation), eureka-zeckendorf-simplex-cuboid.
