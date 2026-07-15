@@ -1,0 +1,14 @@
+THM-789 exact local-trapping verification
+U=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12)
+M(U)=2/17 maximizer_count=2 t0_is_maximizer=True
+t0=4/17 clearance_numerators_mod17=(4, 8, 5, 3, 6, 2, 2, 6, 7, 3) phi=2/17
+odd_nearest=(3,2) determinant=-1
+Q(t0)=15/17 H_symmetric_radius=8/1989
+R_U=(-1/858,1/858)
+cell_difference_subset=(-1/864,1/864)
+lipschitz_radius=3/884
+escape_tau=14/19 phi=2/19 Q=11/19
+component_choice_margins: trapped=-8/221 escape=66/247
+component_margin_tournament: vertices=2 scores=(0,1) cycles=0 sccs=2 hp_count=1 edge_flips=0
+information_destroyed_by_fixed_anchor=global_deep-component_choice
+PASS
