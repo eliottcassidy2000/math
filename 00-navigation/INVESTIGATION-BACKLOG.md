@@ -147,10 +147,12 @@
   scale-one radius-five chart is closed at arbitrary lift height.  The live
   shallow obligations are now an arbitrary-AP-scale radius-five deck descent,
   followed by the residual primitive scale-one radius-six tree.  THM-815 C.1
-  isolates `2[12]` on the nonprimitive slice; C.2 closes fourteen
-  three-antipodal-pair primitive-core rows.  Retain equality flags, oriented
-  AP-cusp handoffs, height parity, and shortcut-seam ancestry on the 909
-  primitive-core rows plus the exceptional mixed-parity odd-label branch.
+  isolates `2[12]` on the nonprimitive slice; C.2 closes all twenty
+  three-antipodal-pair primitive-core rows, fourteen by AP-cusp reduction and
+  six by 2,653,600-state residual-component recursion.  Retain equality flags,
+  oriented AP-cusp handoffs, height parity, and shortcut-seam ancestry on the
+  903 `f<=2` primitive-core rows plus the exceptional mixed-parity odd-label
+  branch, for 904 open label patterns.
   At radius seven replace the failed mean-density coefficient by the
   fractional covering LP on residual-component--comb incidence.  Seek a
   Farkas-dual component weighting whose overlap refund is positive whenever
@@ -235,14 +237,18 @@
   endpoints through oriented deck ramification. THM-815 C.1 has split the
   finite H6 tree uniformly on its nonprimitive slice: only the genuine tight
   AP orbit `2[12]` survives.  THM-815 C.2 stratifies the 923 primitive-core
-  rows by antipodal AP cusps and closes fourteen of the twenty `f=3` rows.
-  The live primitive-core bank is 903 rows with at most two full antipodal
-  pairs plus six product-`1/16` three-pair rows; the exceptional mixed-parity
-  odd-label branch is separate, giving 910 open label patterns globally.
-  First combine left/right cusp handoffs on the six product-`1/16` rows, then
-  use divisor/zero-debt pins on `f<=2`, join the oriented AP-germ cycle word to
-  the Hunter/Kruskal edge word, and transport the recursion across scale. In
-  parallel, audit any proposed compression by its literal kernel pair.
+  rows by antipodal AP cusps and closes all twenty `f=3` rows.  Germ cycles and
+  ten fixed-coordinate trees close fourteen; six exact residual-component
+  trees close the product-`1/16` remainder in 2,653,600 states, with 208
+  independent closed-danger checks.  The live primitive-core bank is exactly
+  the 903 rows with at most two full antipodal pairs; the exceptional
+  mixed-parity odd-label branch is separate, giving 904 open scale-one H6
+  label patterns, while `2[12]` is the nonprimitive equality.  Use divisor/zero-debt
+  pins on `f<=2`, join the oriented AP-germ cycle word to the incoming
+  Hunter/Kruskal tropical vertex/edge-defect word, and transport the recursion
+  across scale.  The six contracting-cycle rows closed only after restoring
+  the literal residual endpoint union, so audit every proposed defect-graph
+  compression by its operation kernel pair.
   THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while

@@ -9,7 +9,8 @@ HONEST VERDICT: LRC(14), the remaining primitive/all-scale H6 branches, the
 radius-seven chart, and the full j=4 sweep remain open.  The session instead
 identified the exact typed state needed by several operations, removed three
 misleading scalar extrapolations, and integrated a live closure of fourteen
-primitive-core H6 label rows.
+primitive-core H6 label rows.  The subsequent S14 exact continuation closes
+the remaining six `f=3` rows as recorded in the next entry.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
@@ -46,9 +47,11 @@ LIVE-PULL H6 DUAL: THM-815 C.2 turns each antipodal AP cusp into a vertex germ
 cap and each oriented owner/provider handoff into a multiplicative edge.  If
 all caps are evaded, a directed cycle of product at most one is necessary.
 In logarithmic coordinates this is the min-plus cycle dual of Hunter's
-max-plus spanning tree.  It closes 14 of the 20 three-antipodal-pair rows,
-leaving 903 rows with at most two pairs, six open three-pair rows, and the
-exceptional mixed-parity branch.  The accompanying THM-836 pull also proves
+max-plus spanning tree.  It closes 14 of the 20 three-antipodal-pair rows;
+the subsequent exact component recursion closes the six rows beyond that
+quotient.  The remaining primitive label bank is 903 rows with at most two
+pairs plus the exceptional mixed-parity pattern.  The accompanying THM-836
+pull also proves
 that no universal one-numerator endpoint-grid column can close the remaining
 shell-five congruence classes; future certificates must be lift-dependent,
 multicolumn, or off the endpoint grids.
@@ -167,10 +170,14 @@ full pair gives two oriented thirteenth-grid safe cusps.  A height-independent
 germ-owner handoff and its weighted cycle products close six of the twenty
 `f=3` rows and force `u_5=18` and/or `u_6=19` in eight.  Ten exact slice trees
 close those eight in 3,699 states, depth counts `10,228,2176,1236,49,0`, with
-no covering prefix and trace `f8c84654...a5c227e`.  Thus fourteen `f=3` rows
-are loose.  Scope is exact: 909 primitive-core rows plus the odd-label
-mixed-parity primitive branch remain, so the global open label-pattern count
-is 910 rather than 909.
+no covering prefix and trace `f8c84654...a5c227e`.  Six residual
+product-`1/16` rows were then exhausted by exact longest-component recursion:
+aggregate depth nodes `6,494,46813,2531670,74415,202,0`, or `2,653,600`
+states, with zero covering prefixes and 208 independent closed-danger
+reconstructions.  Thus all twenty `f=3` rows are loose.  Scope is exact: 903
+primitive-core `f<=2` rows plus the odd-label mixed-parity primitive pattern
+remain, or 904 open label patterns; `2[12]` is the separate nonprimitive
+equality.
 
 KAKEYA/OBJECT REFRAME: for a core `P`, retain the literal components of
 `E(P)`, labelled periodic danger combs, endpoint owners, and future operation
@@ -201,6 +208,13 @@ H-DRIFT/TOURNAMENT: the exact all-n pointwise law is
 `E[Delta H|T]=(a_(n-2)-(n-1)H)/C(n,2)=2(K-nH)/C(n,2)`, where `K` is the
 odd-cycle-forest partition function.  At `n=6,H=23` the drift takes both
 `4/3` and `-4/15`, refuting H-fibre constancy and scalar mean reversion.
+The second exact Krylov step is
+`S K=a_(n-3)+a_(n-2)-C(n,2)H`, generated together with every coefficient by
+`S a_j=(j+1)a_(j+1)+(n-j)a_(j-1)-(n-1)a_j`.  `(H,K)` closes `K` drift through
+`n=7` only because its ambient kernel `(1,-5,4)` is unrealized.  The first and
+unique `n=8` split is `(H,K)=(345,2820)`, with drifts `-240/7,-60/7`.
+The pointwise gained/lost OCF current was checked on 6,340 node-edge
+incidences; the `K`-gradient multiset separates all 272 merged `n=7` nodes.
 Concurrent THM-855 F6 supplies the complementary exact second-moment closure
 for the score-axis walk, a separate collar-event lead rather than the cover
 inequality itself.  The user's black self-line premise was tested
@@ -240,7 +254,11 @@ ARTIFACTS: THM-815 C.1; HYP-6820 and frontier/backlog/lens updates;
 `lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp/.out`
 (hashes `ee57510a...e2e8bf1`, `aa87c107...769ed`);
 `lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.py/.out`
-(`f3e96760...836d7dd`, `5783697e...56188c`);
+(`ce7ab289...f616bfe`, `0e9e8c94...b3638b`);
+`lrc13_hamming_six_open_f3_exact_closure_codex_S14.cpp/.out`
+(`af8fd1cc...314d87`, `a267b5cd...4c3e43`);
+`h_drift_K_second_krylov_referee_codex_S14.py/.out` plus the n=8 output
+(`aa4098e...aa0e`, `e47872bd...b183`, `2e9992de...06b86`);
 `lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py/.out`
 (`b6fce3d5...bbb233`, `9f2bdae7...00ad0b`);
 `lrc14_fano_chi7_flood_needle_obstruction_codex_S11.py/.out`

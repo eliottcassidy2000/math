@@ -1,12 +1,13 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts; the remaining common-sheet presentation bank is finite with `min D_i<=21<max D_i<=42,336`, is {2,3,7}-smooth, and has no private prime power; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, and 14 of 923 primitive-core H6 label rows are now closed by antipodal AP-pin handoff; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and the universal single-column endpoint-grid template refuted in the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the remaining 909 primitive-core H6 rows plus the exceptional mixed-parity branch, arbitrary-scale H6 transport, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts; the remaining common-sheet presentation bank is finite with `min D_i<=21<max D_i<=42,336`, is {2,3,7}-smooth, and has no private prime power; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, and all 20 three-antipodal-pair rows among the 923 primitive-core H6 label rows are uniformly loose; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and the universal single-column endpoint-grid template refuted in the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the remaining 903 primitive-core `f<=2` H6 rows plus the exceptional mixed-parity branch, arbitrary-scale H6 transport, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 progress_note: >-
-  THM-815 C.2 closes 14 of the 20 primitive-core H6 rows with three full
-  antipodal missing pairs; 909 primitive-core row patterns plus the separate
-  odd-label mixed-parity branch remain. THM-836 §6B also rules out a
+  THM-815 C.2 closes all 20 primitive-core H6 rows with three full antipodal
+  missing pairs; 903 primitive-core `f<=2` row patterns plus the separate
+  odd-label mixed-parity branch remain, for 904 open label patterns. THM-836
+  §6B also rules out a
   U-independent single-numerator endpoint-grid proof in each remaining
   shell-five class, without closing those classes.
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
@@ -576,13 +577,29 @@ proper lift satisfies the cap, so they close immediately. In the other eight,
 the cap forces `u_5=18` and/or `u_6=19`; ten fixed-coordinate
 longest-component trees close those slices in `3,699` exact states, with
 aggregate depth counts `10,228,2176,1236,49,0` and no covering prefix. Hence
-the primitive-core row bank falls from 923 to 909. The remaining bank is 903
-rows with `f<=2`, six product-`1/16` `f=3` rows, and the separate odd-label
-row with mixed height parity. The latter can be a primitive packet although
-its retained core has gcd two, so the global open label-pattern count is 910,
-not 909. The cusp count is a routing grade, not a quotient: it forgets pair
-signs, germ owners, exact endpoints, divisor obligations, heights, and
-component overlap.
+fourteen rows close by the AP-germ reduction.
+
+The six product-`1/16` rows show exactly where that quotient stops: their
+contracting cycles satisfy the one-step handoff constraints.  Restoring the
+literal residual endpoint union and numerically ordering all six remaining
+combs gives six exact longest-component trees with aggregate depth counts
+
+```text
+6,494,46813,2531670,74415,202,0,                       (B6b)
+```
+
+or `2,653,600` states.  Every prefix is noncovering, none reaches depth six,
+and independent closed-danger complements reproduce all six roots and all 202
+deepest dead leaves, for 208 crosschecks.  Thus all twenty `f=3` rows are
+loose and the primitive-core row bank falls from 923 to the 903 rows with
+`f<=2`.  The separate odd-label row with mixed height parity can be a primitive
+packet although its retained core has gcd two, so the open scale-one H6
+label-pattern count is 904.  The doubled AP `2[12]` is the separate
+nonprimitive equality.  The cusp count is a routing grade, not a quotient: it
+forgets pair signs, germ owners, exact endpoints, divisor obligations, heights,
+and component overlap.  The six-root closure therefore supports, rather than
+replaces, the incoming tropical defect-graph view: edge/cycle data routes the
+search, while the residual endpoint state is the operation-complete carrier.
 
 At seven remaining combs THM-815's single-comb discrepancy coefficient changes
 sign.  THM-856 proves the correct second-order functional is the
@@ -1106,10 +1123,12 @@ The uniform theorem now has two explicit residuals:
    descent without assuming common scale. THM-815 Part C also makes scale-one
    radius six finite, and Part C.1 proves that every nonprimitive row other
    than the genuine `2[12]` equality is loose.  Part C.2 further closes
-   fourteen of the twenty three-antipodal-pair primitive-core rows; 909 such
-   rows plus the exceptional odd-label mixed-parity branch remain.  Extend
-   the two-sided cusp/component handoff across those rows, then transport the
-   result across AP scale. At radius
+   all twenty three-antipodal-pair primitive-core rows, using six
+   residual-component trees after the germ quotient closes or slices the
+   first fourteen.  The 903 primitive-core `f<=2` rows plus the exceptional
+   odd-label mixed-parity branch remain.  Extend the cusp/component and
+   tropical defect-graph carrier across those rows, then transport the result
+   across AP scale. At radius
    seven the discrepancy deficit `13-2m` changes sign, so a new potential must
    use overlap debt, owner diversity, or signed component/comb incidence rather
    than mean danger density alone. This is a method wall within the scale-one
@@ -1276,9 +1295,11 @@ deciding objects are therefore:
   the packet to the core `[6]` plus combs `7,...,12`; the resulting weighted
   component--comb incidence has four zero-overlap-debt unique-owner pins and
   closes every row except the doubled AP.  In the primitive-core atlas,
-  oriented AP cusps and weighted handoff cycles close fourteen of the twenty
-  `f=3` rows; the remaining scale-one chamber has 909 primitive-core row
-  patterns plus the exceptional mixed-parity odd-label branch.
+  oriented AP cusps and weighted handoff cycles reduce fourteen of the twenty
+  `f=3` rows to immediate or fixed-coordinate closures.  Exact residual
+  endpoint trees close the six contracting-cycle rows, so the remaining
+  scale-one chamber has 903 primitive-core `f<=2` row patterns plus the
+  exceptional mixed-parity odd-label branch.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

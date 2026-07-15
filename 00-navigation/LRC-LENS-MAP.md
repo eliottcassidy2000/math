@@ -32,10 +32,13 @@ oriented thirteenth-grid cusp.  If `f` counts full antipodal missing pairs,
 there are exactly `2f` such cusps in the retained-core safe set.  Comparing an
 owner tooth's reach with incoming provider starts gives a weighted digraph,
 not a tournament; directed-cycle products plus ten fixed-coordinate trees
-close fourteen of the twenty `f=3` rows.  The antipodal count is only a
-stratification: it destroys pair signs, exact endpoints, divisor obligations,
-height parity, and overlap.  The remaining primitive scale-one bank consists
-of 909 primitive-core rows plus the exceptional odd-label mixed-parity branch.
+close fourteen of the twenty `f=3` rows.  For the six rows on which that local
+quotient is silent, an exact longest-component recursion on literal endpoints
+and labelled unplaced combs closes all `2,653,600` states.  Hence all twenty
+`f=3` rows are loose.  The antipodal count is only a stratification: it
+destroys pair signs, exact endpoints, divisor obligations, height parity, and
+overlap.  The remaining primitive scale-one bank consists of 903
+primitive-core `f<=2` rows plus the exceptional odd-label mixed-parity pattern.
 
 THM-856 makes the first useful quadratic projection of this debt: the
 Hunter--Kounias maximum-spanning-tree functional on the symmetric weights
@@ -72,6 +75,12 @@ This addendum also records three quotient decisions from the same session:
   transitive while the cover verdict remains non-pairwise.  Use components,
   owner pins, grid numerators, or proof obligations as vertices; retain the
   higher-order incidence as a sidecar.
+- THM-848's H-drift hierarchy is another controlled-forgetting test.  The
+  arc-flip generator acts tridiagonally on the Walsh coefficients `a_j`;
+  `(H,K)` closes the second drift only accidentally through `n=7`, and exactly
+  one `(H,K)` fibre splits at `n=8`.  The pointwise `K` current is the
+  gained-minus-lost odd-cycle-forest incidence, so an operation profile is a
+  better carrier than a scalar class count.
 
 Packet fields to add where available:
 
@@ -94,6 +103,10 @@ pair_common_scale
 pair_mod13_sawtooth
 pair_endpoint_discrepancy
 shell_lift_dependent_column_packet
+walsh_krylov_stalk
+odd_cycle_edge_current
+operation_profile
+quotient_boundary_witness
 ```
 
 ## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens

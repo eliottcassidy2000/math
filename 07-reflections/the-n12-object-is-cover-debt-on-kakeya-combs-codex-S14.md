@@ -18,10 +18,10 @@ the shape of the remaining object:
    the remaining order bank is finite but not yet classified.
 2. The nonprimitive scale-one Hamming-six branch contracts exactly.  Its only
    possible tight row is the doubled AP `2[12]`; every other nonprimitive row
-   is loose.  A subsequent AP-germ reduction closes fourteen of the twenty
-   primitive-core rows with three full antipodal missing pairs.  Primitive H6
-   remains open on 909 primitive-core rows plus the exceptional mixed-parity
-   odd-label branch.
+   is loose.  A subsequent AP-germ reduction plus six exact residual trees
+   closes all twenty primitive-core rows with three full antipodal missing
+   pairs.  Primitive H6 remains open on 903 primitive-core rows with at most
+   two full pairs, plus the exceptional mixed-parity odd-label pattern.
 3. THM-836's local `s=5` shell is exactly four congruence classes, and the full
    class `d=11 mod 52` is uniformly impossible by one explicit divisor-grid
    witness.  The classes `15,37,41 mod 52` remain open uniformly, and the
@@ -165,9 +165,21 @@ cusp, compare the owner's tooth reach with the first incoming provider tooth.
 The resulting weighted handoff graph is not a tournament: a pair can carry
 both directions or neither because its two cusp gauges differ.  Directed-cycle
 products close six of the twenty `f=3` rows; eight more force one of ten fixed
-coordinates, and exact slice trees close all ten in 3,699 states.  Six
-product-`1/16` rows survive.  This is the first place where a projective AP
-grid cusp, rather than a runner or whole component, is the right local vertex.
+coordinates, and exact slice trees close all ten in 3,699 states.  The local
+cycle quotient stops on six product-`1/16` rows.  Returning to the faithful
+state—literal residual endpoints plus the labelled remaining-comb bank—closes
+those six in exact depth counts
+
+```text
+6, 494, 46813, 2531670, 74415, 202, 0,
+```
+
+or `2,653,600` states, with no covering prefix and no depth-six state.
+Independent closed-danger complements reconstruct the six roots and all 202
+deepest leaves.  Thus all twenty `f=3` rows are loose.  This is the first place
+where a projective AP grid cusp, rather than a runner or whole component, is
+the right local vertex—and also a clean example of that vertex quotient
+reaching its limit before the full cover-debt packet does.
 
 ## 3. The deep shell is an incidence problem too
 
@@ -305,6 +317,25 @@ E[Delta H|T]
 
 where `K` is a cycle-length-weighted OCF partition function.  `H` alone loses
 the endpoint coefficient and even the sign of the drift at `n=6,H=23`.
+The next Krylov step is exact as well.  If `S` sums the increments over all arc
+flips and `A_T(x)=sum_j a_j(T)x^j`, then
+
+```text
+S a_j=(j+1)a_(j+1)+(n-j)a_(j-1)-(n-1)a_j,
+S A=(1-x)((1+x)A'-(n-1)A),
+S K=a_(n-3)+a_(n-2)-C(n,2)H.
+```
+
+So the functional form is a finite tridiagonal Walsh/Krylov ladder, not an
+all-`n` two-scalar law.  Through `n=7`, `(H,K)` happens to determine `S K`
+because the ambient kernel direction `(1,-5,4)` is absent from the realized
+tournament locus.  At `n=8` it appears in exactly one of 1,727 `(H,K)` fibres:
+`(H,K)=(345,2820)` has two `K` drifts, `-240/7` and `-60/7`.  This is a precise
+next-size boundary, not a heuristic failure of mean reversion.  Pointwise,
+`Delta_e K` is four times the gained-minus-lost odd-cycle-forest weight after
+deleting the affected cycle vertices; 6,340 incidences through `n=7` verify
+that current law.
+
 Likewise, the proposed all-`n` black self-line law loses its first untested
 case at `n=8` (`404` versus `SC(8)=176`), while only the Klein-four orbit
 structure survives.  Both corrections point away from scalar class counts and
@@ -363,20 +394,31 @@ not a switched tournament.  The remaining seven-comb lemma is a maximum-tree
 statement on those projective edge packets, followed by a mechanical-word
 argument on any consecutive/AP-window residual.
 
+The resulting unification is operation-indexed.  The H6 germ graph uses a
+min-plus directed-cycle obstruction; the seven-comb wall uses a max-plus
+graphic-matroid basis; the H-drift stalk uses a tridiagonal flip generator;
+and the flood atlas uses the full `K_7` edge module.  In each case a scalar
+score orders candidates, but the proof lives in which value is incident to
+which cusp, endpoint, flip, or edge.  The closest common object is therefore a
+typed operation profile over literal cover obligations, not a tournament on
+runners.
+
 ## 7. The sharpened next obligations
 
 The shortest honest route to the requested theorem is now:
 
-1. **Primitive H6:** extend the two-sided AP-germ/component handoff from the
-   fourteen closed `f=3` rows to the six product-`1/16` rows, then the 903
-   rows with `f<=2`, while keeping the exceptional mixed-parity odd-label
-   branch separate.  Do not quotient by the antipodal count alone.
+1. **Primitive H6:** extend the now-complete `f=3` stratum to the 903 rows with
+   `f<=2`, while keeping the exceptional mixed-parity odd-label pattern
+   separate.  The six-row closure shows the fallback carrier to use when the
+   germ-cycle quotient is silent: exact residual endpoints with their
+   labelled unplaced combs.
 2. **Finite ramified H5 sheets:** classify the THM-858 strip
-   `min D_i<=21<max D_i<=42,336`.  Every order is `{2,3,7}`-smooth, every maximal
-   prime power is shared, and all complement-lcm relative-capacity cuts hold.
-   The complete bank through 21 is already reduced to the closed legacy
-   languages; the next recursion should act on the decorated prime-power
-   carrier hypergraph rather than enumerate the full rectangular order box.
+   `min D_i<=21<max D_i<=42,336`.  Every order is `{2,3,7}`-smooth, every
+   maximal prime power is shared, and all complement-lcm relative-capacity
+   cuts hold.  The complete bank through 21 is already reduced to the closed
+   legacy languages; the next recursion should act on the decorated
+   prime-power carrier hypergraph rather than enumerate the full rectangular
+   order box.
 3. **Deep `s=5`:** the uniform single-numerator endpoint-grid template is
    impossible in all three remaining classes.  Seek a U-dependent or
    multi-column incidence certificate, a non-endpoint denominator, or the
