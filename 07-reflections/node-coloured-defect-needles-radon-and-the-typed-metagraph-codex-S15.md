@@ -827,8 +827,9 @@ m_i=D_i/gcd(D_i,lcm(D_j:j notin S)).                    (6.15)
 ```
 
 Singleton and top-prime cuts eliminate every new language through order 21
-and bound the remaining bank by 42,336, but both natural pair gauges remain
-transitive.  Here the vertices should be prime-power carrier obligations, and
+and bound the remaining bank by 10,584 (the sharp cut-only valuation ranges at
+`2,3,7` are `3,2,1`), but both natural pair gauges remain transitive.  Here the
+vertices should be prime-power carrier obligations, and
 the hyperedges are complement fibres with affine owner intervals.  The H6
 cycle, Hunter tree, and ramification cut are therefore three different
 matroidal/hypergraphic shadows of the same preservation rule; none licenses a
