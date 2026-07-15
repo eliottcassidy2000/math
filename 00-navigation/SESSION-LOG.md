@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.20) -- THM-853: SEQUENCE ATLAS TO CANON (six terms n=5..10) + DEEP-WELL CORRIDOR LAW PROVED (m({1..12};lam) = (2H_12/13)(1-13lam) on [1/14,1/13]; covering-min margin 2H_12/2379 exact) + THE LOCKER TOURNAMENT D_n (divisibility as edges; H = 5,9,33,109,469, H = 1 mod 4 five-for-five OUTSIDE the stratum -- divisor-pairing conjecture) + creative bundle (3-triangular = 3 staircase corners; XOR-SAT engine note; Smith chart/Moebius/Stern-Brocot)
+
+Prompt (owner): harvest n=10 (done cont.19); sequences to canon; Farey-14 law + LRC; locker/squares; 3-triangular/4-square; nomograms; binary conditions as edges.
+
+CORRIDOR LAW: THM-826's k=12 first segment keeps exactly the i+j=13 gaps; 13 prime => pair-sum 2H_12/13 (THM-819) => m LINEAR on the whole corridor [1/14, 1/13] containing every deep-well threshold: at the covering-min 14/183 the margin is 2H_12/2379 (referee exact at 4 points). LOCKER: D_n = the covering lattice (q|w) as one canonical tournament per n; never SC/qf/gridsym yet H = 1 mod 4 always (n=5..9) -- the THM-791 stratum does NOT explain it; conjectured mechanism = divisor-pairing involution (the locker fact: squares alone end toggled). BUNDLE: staircase tile counts are triangular => Gauss 3-triangular = the three Venn corners; the Burnside engine = XOR-SAT tractability (P-slice of a GI-hard census; mirrors disjoint-vs-Venn); Smith chart = Moebius nomogram, shared Stern-Brocot orbit with our breakpoints.
+
+FILES: THM-853, HYP-6935, locker_tournament_and_corridor_kps_S128c20.py/.out. -> all (corridor law immediately usable; locker parity = clean target; atlas canon-fixed).
+
+---
 ## opus-2026-07-15-S314+S315 -- THM-864 THE BEAT-LOCALIZATION LEMMA REFEREE-GRADE (sub-orbit exact APs + signed sawtooth cancellation; err <= 13 kappa rho/(y(p+q-1)) + dust; referee 111/111, worst 0.0044) + THE SWEEPS RUN (12 prefixes reported (2 complete), 762 patterns, 6,420,296 packets each PROVEN non-tight by exact rational certificate, 47 fallbacks (all resolved non-tight), 0 unresolved -- ZERO tight candidates; multi-cluster handoff list WRITTEN) + THE FAREY-14 LAW (depth-13 extremal ratios = 14th Farey row units, phi(14) = 6 per block, Y* = floor(x/14); Fibonacci edge law Y*(F_n,F_{n+1}) = F_{n-7} exact; golden = the depth-infinity FOIL, klein-S124 sharpened) (HYP-6925)
 
 Prompts (owner): [S314] prove the beat-localization lemma referee-grade and run the two

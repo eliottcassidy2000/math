@@ -1,0 +1,14 @@
+corridor lam=1/14: m=6617/194040 pred=6617/194040 OK
+corridor lam=14/183: m=6617/2536380 pred=6617/2536380 OK
+corridor lam=15/196: m=6617/2716560 pred=6617/2716560 OK
+corridor lam=1/13: m=0 pred=0 OK
+covering-min margin: m({1..12}; 14/183) = 6617/2536380 = 2H_12/2379: 6617/2536380
+CORRIDOR LAW: EXACT
+
+THE LOCKER TOURNAMENT D_n: tile (x,y) bit=1 iff y | x  (base path fixed)
+n=5: scores=[0, 2, 2, 3, 3] c3= 2 H=   5  SC:False  quasi-fixed:False  gridsym:False  (H mod 4 = 1)
+n=6: scores=[0, 2, 2, 3, 4, 4] c3= 3 H=   9  SC:False  quasi-fixed:False  gridsym:False  (H mod 4 = 1)
+n=7: scores=[0, 2, 3, 3, 4, 4, 5] c3= 6 H=  33  SC:False  quasi-fixed:False  gridsym:False  (H mod 4 = 1)
+n=8: scores=[0, 2, 3, 4, 4, 5, 5, 5] c3=10 H= 109  SC:False  quasi-fixed:False  gridsym:False  (H mod 4 = 1)
+n=9: scores=[0, 3, 3, 4, 4, 5, 5, 6, 6] c3=16 H= 469  SC:False  quasi-fixed:False  gridsym:False  (H mod 4 = 1)
+DONE
