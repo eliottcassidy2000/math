@@ -581,6 +581,18 @@ certificate clauses, and proof obligations.
 - **Deliverable:** a conditional-current table with an orbit-stabilizer formula
   that predicts the sign after node-fibre disintegration.
 
+- **Delivered master law by THM-810:** the four-variable polynomial joining
+  `(Delta C3,q0,q1,epsilon)` factors into two boundary bits and `n-4` internal
+  four-state packets.  It proves
+  `Cov(q_i,epsilon^2)=-(n-4)/8`, strict negative covariance after conditioning
+  on black, and the support bound
+  `|epsilon|<=n-4-q0+1_(q1-q0=1)`.  The node orbit polynomial
+  `(C3,H_u(q,|epsilon|)/2)` separates every node through `n=7`.  Curvature is
+  not an edge codec: it gives 7,248/8,064 black orbits at `n=7`, while the
+  reflection-orbit `(B2,B3)` address gives all 8,064.  Source-normalized
+  outward black flow dominates in every nonempty source-`q` stratum at
+  `n=6,7`; `n=8` is now the decisive conjecture test.
+
 ### MPA-37 — Give the gap face an intrinsic tournament semantics
 
 - **Delivered distinction:** the middle `d_B:(a,b)->(a-1,b)` face is a valid

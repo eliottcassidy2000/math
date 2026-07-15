@@ -1,0 +1,55 @@
+THM-810 BLACK MOBIUS/SMITH CURVATURE DISINTEGRATION
+==================================================================================
+master: 2^(M-2n+5) u^(n-2)(1+w v/u)(1+w/(uv))
+        * (1+v/u+1/(uv)+zw/u^2)^(n-4)
+B3 gives leg totals (lambda,epsilon); q gives positional cross-leg overlap.
+
+n=4: lines=4 black=2 black reflection orbits=1
+  master/B3-current/flux failures=0/0/0
+  Cov(q0,epsilon^2) all/black=0/0
+  node cells q/q+C3/|eps|/joint/joint+C3=3/3/2/3/3
+  black orbit cells node+qpair/+|eps|/orbit(B2,B3)=1/1/1
+  literal B2+B3 residual cells/excess=0/0; reflection failures=0
+  loop B2+B3 excess=0; source-q outward-dominance failures=0
+
+n=5: lines=32 black=24 black reflection orbits=12
+  master/B3-current/flux failures=0/0/0
+  Cov(q0,epsilon^2) all/black=-1/8/-1/18
+  node cells q/q+C3/|eps|/joint/joint+C3=8/10/8/8/10
+  black orbit cells node+qpair/+|eps|/orbit(B2,B3)=12/12/12
+  literal B2+B3 residual cells/excess=0/0; reflection failures=0
+  loop B2+B3 excess=0; source-q outward-dominance failures=0
+
+n=6: lines=512 black=480 black reflection orbits=240
+  master/B3-current/flux failures=0/0/0
+  Cov(q0,epsilon^2) all/black=-1/4/-4/15
+  node cells q/q+C3/|eps|/joint/joint+C3=29/32/32/32/34
+  black orbit cells node+qpair/+|eps|/orbit(B2,B3)=203/208/240
+  literal B2+B3 residual cells/excess=0/0; reflection failures=0
+  loop B2+B3 excess=0; source-q outward-dominance failures=0
+  source-q rates:
+    q=0: outward=18/32=9/16 reverse=56/292=14/73
+    q=1: outward=10/86=5/43 reverse=12/298=6/149
+    q=3: outward=8/14=4/7 reverse=10/50=1/5
+    q=4: outward=2/2=1 reverse=0/2=0
+
+n=7: lines=16384 black=16128 black reflection orbits=8064
+  master/B3-current/flux failures=0/0/0
+  Cov(q0,epsilon^2) all/black=-3/8/-1480/3969
+  node cells q/q+C3/|eps|/joint/joint+C3=235/249/263/266/272
+  black orbit cells node+qpair/+|eps|/orbit(B2,B3)=7206/7248/8064
+  literal B2+B3 residual cells/excess=16/16; reflection failures=0
+  loop B2+B3 excess=0; source-q outward-dominance failures=0
+  source-q rates:
+    q=0: outward=518/1042=259/521 reverse=1282/7454=641/3727
+    q=1: outward=414/2546=207/1273 reverse=992/9406=496/4703
+    q=2: outward=26/2256=13/1128 reverse=42/5712=1/136
+    q=3: outward=220/836=5/19 reverse=294/2268=7/54
+    q=4: outward=50/80=5/8 reverse=188/608=47/152
+    q=5: outward=26/36=13/18 reverse=0/12=0
+
+TOURNAMENT ANALYSIS (node information carriers)
+  vertices=('C3', 'black_q_polynomial', 'black_absolute_epsilon_polynomial', 'black_joint_curvature', 'C3_black_joint_curvature')
+  observable=number of unordered merged-node pairs separated by the carrier
+  switches=('retention', 'retention_per_log2_cells'); edge flips=10
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1} C3=0 SCC=[1, 1, 1, 1, 1] Hpaths=1

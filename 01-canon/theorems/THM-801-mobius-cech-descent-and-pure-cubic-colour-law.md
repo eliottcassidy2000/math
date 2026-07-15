@@ -1,7 +1,7 @@
 ---
 id: THM-801
 title: The seven-term tiling recursion lifts to exact three-face Cech descent, pure cubic colour interaction, and tournament/Smith Mobius curvature
-status: PROVED (three-face tiling and line descent, colour laws, interval-face Mobius and Smith identities) + FINITE-EXACT (Omega/B2 codec and node/fibre classifications through n=7)
+status: PROVED (three-face tiling and line descent, colour laws, interval-face Mobius and Smith identities) + FINITE-EXACT (Omega/B2 codec through n=8; other node/fibre classifications through n=7)
 source: codex-2026-07-15-S12
 depends_on: [THM-442, THM-553, THM-785, THM-790, THM-796]
 related: [THM-549, THM-550, THM-781, THM-805, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6880]
@@ -9,6 +9,8 @@ verification:
   - 04-computation/mobius_cech_metagraph_codec_codex_S12.py
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.out
   - 05-knowledge/results/mobius_cech_metagraph_codec_codex_S12.json
+  - 04-computation/mobius_cech_n8_frontier_codex_S13.cpp
+  - 05-knowledge/results/mobius_cech_n8_frontier_codex_S13.out
 ---
 
 # THM-801 — Möbius/Čech descent for the merged metagraph
@@ -143,11 +145,18 @@ membership strata `A,B,C,AB,AC,BC,ABC`.  The finite exact classifications are:
 | 5 | 32 | 32 | 32 | 32 |
 | 6 | 512 | 509 | 510 | 512 |
 | 7 | 16,384 | 16,031 | 16,308 | 16,384 |
+| 8 | 1,048,576 | not computed | not computed | 1,048,576 |
 
 At `n=7`, the missing gap face removes 277 of `Xi`'s 353 collision excess.
 The remaining 76 double collisions are all separated by `S2`.  This proves
-finite injectivity of `Omega+S2` through `n=7`, not an all-size or Markov-state
+finite injectivity of `Omega+S2` through `n=8`, not an all-size or Markov-state
 claim.
+
+The `n=8` row is proved by THM-809 without an upper class atlas.  The weaker
+lower-only key consisting of the three ordered face-node pairs, UABC colour,
+and S2 has excess ladder `418,252,148,74,52,0,0` as the five crossing layers
+and fixed layer are adjoined.  Hence `tau=7` is the first complete separator;
+the upper node pair and fixed layer are unnecessary at this size.
 
 Disintegrating literal lines inside their 6,126 coloured upper node-pair
 fibres gives:
@@ -428,6 +437,13 @@ the merged node pair.  Hence every black node-pair fibre has a sign-symmetric
 `epsilon` histogram and even zero multiplicity.  Signed `epsilon` cannot by
 itself cause THM-785's oriented quotient drift; only its absolute strata and
 their unequal fibre allocation can correlate with that drift.
+
+THM-810 subsequently gives the complete joint polynomial of
+`(Delta C3,q0,q1,epsilon)`.  It proves that B3 determines the two linear Smith
+currents while `q` is their positional quadratic overlap, with
+`Cov(q_i,epsilon^2)=-(n-4)/8`.  Its curvature node polynomial is complete
+through `n=7`, but its black edge carrier is not: reflection-orbit B2/B3 data
+remain necessary for positional identity.
 
 ## 9. What an exact recursive fibre must preserve
 
