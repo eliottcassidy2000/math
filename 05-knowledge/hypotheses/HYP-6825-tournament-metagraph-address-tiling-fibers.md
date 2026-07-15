@@ -1,7 +1,7 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: PROVED general Hamiltonian-path fibre inverse (THM-781) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
+status: PROVED general Hamiltonian-path fibre inverse (THM-781) and cyclic-triangle flow laws (THM-785) + VERIFIED FINITE objective atlas n=3..7; general structural-address completeness conjecture open
 source: codex-2026-07-14-S4
 artifacts:
   - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
@@ -24,6 +24,10 @@ artifacts:
   - 01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md
   - 04-computation/tournament_tiling_metagraph_fibre_inverse_codex_S8.py
   - 05-knowledge/results/tournament_tiling_metagraph_fibre_inverse_codex_S8.json
+  - 01-canon/theorems/THM-785-cyclic-triangle-flow-on-blue-black-metagraph.md
+  - 04-computation/merged_metagraph_transitivity_flow_codex_S9.py
+  - 05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.json
+  - 07-reflections/symmetry-lives-before-the-quotient-black-drift-as-disintegration-codex-S9.md
 related:
   - HYP-2245
   - HYP-2989
@@ -36,6 +40,7 @@ related:
   - THM-773
   - THM-778
   - THM-781
+  - THM-785
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -248,6 +253,47 @@ target.  In the ten-wall movie every covered-wall gap contains at least three
 other walls, so these are isolated first returns rather than a consecutive
 blocking chain.  A continuation-complete address must therefore distinguish
 the current `SURJ`/hop state from the later return mask.
+
+## Cyclic-triangle flow order
+
+THM-785 adds the missing mathematical horizontal coordinate to the exact
+node/fibre dictionary.  If `d_i` are the scores, then
+
+```text
+sum_i (d_i-(n-1)/2)^2 = n(n^2-1)/12 - 2 C3.
+```
+
+Thus `C3` orders the merged nodes from the unique transitive root to exactly
+the regular/near-regular score locus.  On an explorer complement line,
+
+```text
+Delta C3 = d_0-d_(n-1)-1.
+```
+
+Blue symmetry forces `d_i+d_(n-1-i)=n-1` and reduces this to `2d_0-n`;
+black lines retain the transverse defect
+`epsilon=d_0+d_(n-1)-(n-1)`.  THM-785 proves closed binomial laws for the blue
+step distribution, the full step distribution, and the black absolute-defect
+distribution for every `n`.
+
+The categorical line topology is exactly
+
+```text
+pure_blue --blue-- mixed --black-- pure_black,
+```
+
+but increasing `C3` need not follow that categorical arrow.  At `n=7`, all
+six blue boundary supports point from pure-blue to mixed, whereas black
+boundary flow has `2798` pure-black-to-mixed instances against `1254` in the
+opposite direction (`1075` versus `522` projected supports).  The labelled
+line ensemble remains centrally symmetric; the asymmetry appears after
+iso-class projection and `C3` orientation.
+
+Every node now has a stored `flow_rank` ordered first by `C3`, then phase and
+rooted blue/black position, score/Landau shape, weighted line refinement, and
+finally the exact HYP-6825 address.  All balanced nodes through `n=7` have a
+nondecreasing `C3` path whose colour word is `B* K*`.  Extending that reach law
+beyond `n=7` remains open.
 
 ## Preservation statement
 

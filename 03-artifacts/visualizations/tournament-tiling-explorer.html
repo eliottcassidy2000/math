@@ -109,11 +109,18 @@
 let N=5, VERTS, TILES, TRANS_MAP, tilings, groups, canonSigs, classTransposeTarget, classPairs;
 let parentClassMap=[]; // parentClassMap[ci] = parent class index at n-1, or -1 if n<=3
 let parentVertexOrbits=[]; // parentVertexOrbits[ci] = number of vertex orbits in this class's rep
-let addressAtlas=null;
+let addressAtlas=null,flowAtlas=null;
 
 function addressSizeData(){return addressAtlas?.sizes?.find(r=>r.n===N)||null;}
 function addressForMask(mask){return addressSizeData()?._byMask?.[mask]||null;}
 function addressNode(rank){return addressSizeData()?.nodes?.find(node=>node.rank===rank)||null;}
+function flowForNode(nodeRef,n=N){
+  const size=flowAtlas?.sizes?.find(r=>r.n===n)||null;
+  if(!size)return null;
+  return typeof nodeRef==='number'
+    ?size._byRank?.[nodeRef]||null
+    :size._byNodeId?.[nodeRef]||null;
+}
 
 // Exact public two-way correspondence (THM-781).  The forward direction is a
 // function.  Its inverse deliberately returns the complete tiling fibre.
@@ -134,6 +141,7 @@ function mergedNodeToTilings(nodeRef,n=N){
 }
 window.tilingToMergedNode=tilingToMergedNode;
 window.mergedNodeToTilings=mergedNodeToTilings;
+window.mergedNodeToFlow=flowForNode;
 function addressPrefix(mask){
   const rec=addressForMask(mask);
   return rec?`a${String(rec.node_rank).padStart(2,'0')}/`:'';
@@ -733,13 +741,18 @@ function onBitsChanged(){
   const rec=addressForMask(mask),box=document.getElementById('address-display');
   if(rec){
     const node=addressNode(rec.node_rank);
+    const flow=flowForNode(rec.node_id);
     const localWord=node?.local_path_word||'root';
     const lineWord=node?.blueblack_root_word||'root';
-    box.textContent=`node ${rec.node_id} · global tiling ${rec.global_index}/${tilings.length-1} · fibre ${rec.fibre_index}/${(node?.tiling_count||1)-1} · local depth/path ${node?.local_depth}:${localWord} · blue/black path ${node?.blueblack_root_distance}:${lineWord}`;
+    const flowText=flow?` · C3 ${flow.cyclic_triangles}/${flow.cyclic_triangle_maximum} · phase ${flow.category} · flow rank ${flow.flow_rank}/${flowForNodeCount(N)-1}`:'';
+    box.textContent=`node ${rec.node_id}${flowText} · global tiling ${rec.global_index}/${tilings.length-1} · fibre ${rec.fibre_index}/${(node?.tiling_count||1)-1} · local depth/path ${node?.local_depth}:${localWord} · blue/black path ${node?.blueblack_root_distance}:${lineWord}`;
   }else{
     box.textContent='Exact address atlas unavailable. Generate it with 04-computation/tournament_tiling_metagraph_address_codex_S4.py.';
   }
   updateGlow(mask);
+}
+function flowForNodeCount(n=N){
+  return flowAtlas?.sizes?.find(r=>r.n===n)?.nodes_in_flow_order?.length||1;
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -775,6 +788,20 @@ fetch('../../05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.j
       for(const rec of size.tiling_map)size._byMask[rec.mask]=rec;
     }
     buildOverview();onBitsChanged();
+  })
+  .catch(()=>onBitsChanged());
+fetch('../../05-knowledge/results/merged_metagraph_transitivity_flow_codex_S9.json')
+  .then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();})
+  .then(data=>{
+    flowAtlas=data;
+    for(const size of flowAtlas.sizes){
+      size._byNodeId={};size._byRank={};
+      for(const node of size.nodes_in_flow_order){
+        size._byNodeId[node.node_id]=node;
+        size._byRank[node.HYP6825_rank]=node;
+      }
+    }
+    onBitsChanged();
   })
   .catch(()=>onBitsChanged());
 </script>

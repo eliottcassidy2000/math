@@ -44,6 +44,38 @@ FILES: THM-786, THM-787, MISTAKE-147, correction banners (THM-779/783);
 04-computation/metagraph_transitivity_flow_opus_S304.py (+ .outs); HYP-6850 executed.
 
 ---
+## codex-2026-07-14-S9 -- THM-785 cyclic-triangle flow and black quotient drift
+
+Organized every converse-merged tournament node through `n=7` on the exact
+cyclic-triangle spectrum.  The score identity
+`sum(d_i-(n-1)/2)^2=n(n^2-1)/12-2C3` proves that the unique transitive node and
+the regular/near-regular score nodes are the two ends.  For the explorer's
+fixed-path complement lines, the exact flux is
+`Delta C3=d0-dlast-1=2(d0-n/2)-epsilon`.
+
+Blue reflection forces `epsilon=0` and gives a closed binomial step law.  A
+second binomial formula gives all complement steps, and another gives the
+black absolute endpoint-defect distribution.  Exhaustive `n=3..7` audits have
+zero identity or distribution failures.  Line colour enforces the exact
+category topology `pure_blue --blue-- mixed --black-- pure_black`, but this is
+not the same as `C3` direction: at `n=7`, all six blue boundary supports point
+outward, while black boundary flow has 2,798 pure-black-to-mixed instances
+against 1,254 in the other direction (supports 1,075 versus 522).  The labelled
+ensemble remains centrally symmetric; the drift is created by iso-class
+projection and orientation.
+
+The new exact JSON orders nodes by a flow address beginning with `C3`, phase,
+and rooted blue/black position, then score/Landau shape, weighted line
+refinement, and HYP-6825's exact fallback.  The browser displays `C3`, phase,
+and flow rank beside the existing forward/inverse fibre address.  All balanced
+nodes through `n=7` are nondecreasing-`C3` reachable by a two-phase `B*K*`
+path; general reach is open.  MPA-30 proposes disintegrating the symmetric
+endpoint-bit measure over path/automorphism/line-orbit fibres to explain the
+black drift.  Concurrent THM-784 reinforces the information boundary: static
+nodes and raw event counts both miss owner-labelled metric refinement.
+
+---
+
 ## codex-2026-07-14-S8 -- THM-781 PROVED: merged-node fibres are Hamiltonian paths modulo automorphisms
 
 Turned HYP-6825's stored bidirectional atlas into intrinsic forward and inverse

@@ -108,6 +108,26 @@
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
 
+## Lead codex-2026-07-14-S9: cyclic-triangle flow and black quotient drift
+
+- **Source:** THM-785; HYP-6825; THM-781; MPA-30.
+- **General theorem:** `C3` is exact inverse score variance and its maximum is
+  exactly the regular/near-regular score locus.  Complement-line flux is
+  `d0-dlast-1=2(d0-n/2)-epsilon`, with complement negating both coordinates.
+- **Blue law:** anti-diagonal symmetry forces `epsilon=0` and produces a closed
+  binomial distribution of `|Delta C3|`; odd sizes have no blue ties.
+- **Black law:** the full step distribution and black `|epsilon|` distribution
+  are closed binomial sums.  At `n=7`, black boundary flow oriented toward
+  larger `C3` nevertheless reverses from pure-black to mixed by a net 1,544
+  instances and 553 projected supports.
+- **Objective order:** sort by `(C3, PB/M/PK phase, rooted line distance/word,
+  score/Landau orbit, weighted line-WL, exact HYP-6825 rank)`.  The JSON stores
+  this `flow_rank` for every node through `n=7`.
+- **Next pull:** disintegrate the symmetric `(R,X,Y)` endpoint-bit measure over
+  path orbits, automorphism stabilizers, simultaneous line orbits, and node
+  phases to identify exactly where black drift is created.  Then audit `n=8`
+  and the conjecture that every balanced node has a nondecreasing `B*K*` path.
+
 ## Lead codex-2026-07-14-S8: direct merged-node tiling fibres via Hamiltonian paths
 
 - **Source:** THM-781; HYP-6825; THM-773/778; tournament-tiling explorer.
