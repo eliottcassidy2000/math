@@ -26,7 +26,8 @@ let
 P_n(e)=(blue/black colour, unordered merged-node endpoint pair). (1)
 ```
 
-Every complement/reflection-equivariant tiling embedding acts canonically on
+Every complement/reflection-equivariant tiling embedding acts canonically and
+injectively on
 
 ```text
 Q_n=E_n/<sigma_n>.                                      (2)
@@ -35,24 +36,35 @@ Q_n=E_n/<sigma_n>.                                      (2)
 It need not act on the coarser projected edge cells `P_n(E_n)`.  The centered-
 Christoffel embedding `X_5->X_6` in THM-812 descends to `P_5`, but the immediate
 next embedding `X_6->X_7` fails on 51 of 187 source cells.  This is the first
-exact boundary between an edge identity codec and an action carrier.
+exact boundary in this centered replication sequence between an edge
+observation codec and an action carrier.
 
 ## 1. General reflection-orbit action lemma
 
-Suppose `Phi:X_m->X_n` satisfies
+Suppose the embedding `Phi:X_m->X_n` satisfies
 
 ```text
 Phi kappa_m=kappa_n Phi,       Phi sigma_m=sigma_n Phi.  (3)
 ```
 
-The first identity induces `bar(Phi):E_m->E_n`.  Since `P_n sigma_n=P_n`,
+The first identity induces an injection `bar(Phi):E_m->E_n`, and the second
+then induces an injection
 
 ```text
-[e]_sigma -> P_n(bar(Phi)(e))                           (4)
+Phi_Q:Q_m->Q_n.                                         (4)
 ```
 
-is a well-defined function `Q_m->P_n(E_n)`.  It descends further through
-`P_m` if and only if (4) is constant on all `Q_m` points contained in each
+Indeed, equality of two target complement or reflection orbits lifts through
+the injective equivariant map to equality of the corresponding source orbit.
+Write `pi_n:Q_n->P_n(E_n)` for the coloured unordered-node-pair observation.
+Then
+
+```text
+[e]_sigma -> P_n(bar(Phi)(e))=pi_n(Phi_Q([e]_sigma))    (4a)
+```
+
+is a well-defined observation of the action.  It descends further through
+`P_m` if and only if (4a) is constant on all `Q_m` points contained in each
 `P_m` fibre.
 
 This proves the lemma.  Notice what it does not say: the map (4) need not be
@@ -124,8 +136,9 @@ The one-tiles of line 132 are `(4,1),(6,3)`.  Those of line 370 are
 Both lines are individually staircase-fixed, so (10) is not the old black
 reflection-pair ambiguity.
 
-The core choice is not responsible.  Keep the centered leg map fixed and
-enumerate every core-local reflection-intertwining coordinate copy: each
+The core choice is not responsible within the following natural core-local
+family.  Keep the centered leg map fixed and enumerate coordinate copies in
+which each
 target two-cycle may map in either orientation to the source core two-cycle
 or constantly to either fixed bit, and each target fixed bit may map to either
 source fixed bit.  Of 64 candidates, exactly 40 are surjective.  All 40 split
@@ -138,8 +151,9 @@ them fail descent.  The sole accidental success is `K(12,29)`, whose four
 lines form two reflection orbits and happen to share target `K(21,84)`.  Every
 single-`Q` cell descends.
 
-As the general lemma predicts, all 272 `Q_6` cells act with zero failures.
-Their images occupy 268 target `P_7` cells, with four double collisions:
+As the general lemma predicts, all 272 `Q_6` cells act injectively on 272
+distinct `Q_7` cells.  Their subsequent images under the observation `pi_7`
+occupy 268 target `P_7` cells, with four double collisions:
 
 ```text
 target P       source Q representatives
@@ -149,9 +163,10 @@ K(189,245)     55,325
 K(242,260)     198,454.                                 (11)
 ```
 
-Therefore `Q` is a safe action carrier but is not asserted to be an injective
-address.  Equation (4), not accidental injectivity at one size, is the
-recursive invariant.
+Therefore `Q` is the universal reflection-invariant action carrier for an
+equivariant embedding, while `P` is a possibly noninjective observation.
+Equation (4), followed by the observation criterion (4a), is the recursive
+invariant.
 
 ## 5. Composition and the Mobius sector
 
@@ -161,7 +176,9 @@ Composing (7) with THM-812's map gives
 rho_(5,7)=(0,1,2,2,2,3,0,4,4,5,4,0,5,4,5).            (12)
 ```
 
-All 20 `P_5` cells still map to 20 distinct `P_7` cells because `P_5=Q_5`.
+Because `P_5=Q_5`, all 20 `P_5` cells necessarily have well-defined target
+`P_7` observations.  The fact that these are 20 distinct target cells is
+additional finite-exact data, not a consequence of descent alone.
 Bare nodes remain nonfunctorial: ten source nodes meet 36 target nodes, with
 support histogram
 
@@ -183,8 +200,10 @@ core 0:  2,5,10,16,18,18; degree-3 collision {73,143,187},
 core 1:  2,5,11,17,18,18; degree-3 collision {35,145}.   (15)
 ```
 
-Degree at most four is again node-identifying.  This two-step stability is
-evidence for a quartic node-indicator sector, not a universal closure theorem.
+Degree at most four is again node-identifying for these two fixed-core `n=7`
+node-indicator families on the original five variables.  This two-step
+stability is evidence for a quartic node-indicator sector, not a universal
+closure theorem.
 For arbitrary functions, target total degree is not closed: a high-degree
 target monomial can collapse to a low-degree source monomial when several
 coordinates share one `rho` image.  The exact closed packet for source degree

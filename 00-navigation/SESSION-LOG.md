@@ -818,6 +818,19 @@ transport theorem: the required object still couples it to THM-808's
 owner/root action and retains the metric component, threshold side, wall
 schedule, gcd, and carry.
 
+THM-813 proves the first action/observation boundary in the same centered
+sequence. The `X_6->X_7` copy splits 51/187 projected coloured-edge cells,
+including four blue cells, and its first witness survives all 40 core-local
+lifts in the audited natural family. The correct action object is
+`Q_n=E_n/<sigma>`: equivariant embeddings act injectively on `Q`, while colour
+plus unordered endpoint nodes is only an observation `pi_n:Q_n->P_n`. At
+`n=5`, `pi_5` is bijective; at `n=6` it merges 52 independent obligations and
+the next action separates 51. Exact replay and independent enumeration match.
+The coefficient analogue is the `rho`-saturated packet
+`{B:|rho(B)|<=D}`, not bounded target degree. LRC transport must retain `Q`
+and that path/core packet before adjoining owner/root, metric, gcd/tie,
+threshold, schedule, and carry fields.
+
 THM-807 now proves the next deep-selector split. The exact zero return
 component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
 endpoint/cusp selector, equivalent to full erosion when the closed return set
@@ -866,7 +879,7 @@ Hamming-three star; and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/808/809/810/811/812/813; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three/four, affine-packet, anti-grid/component-selector,

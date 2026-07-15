@@ -819,6 +819,17 @@ not an LRC transport theorem.  The missing LRC state is therefore even more
 specific: couple THM-812's path/core action to THM-808's owner/root action and
 retain metric component, threshold side, wall schedule, gcd, and carry.
 
+THM-813 then separates action from observation.  Reflection-orbit line cells
+`Q_n=E_n/<sigma>` transport injectively under every equivariant embedding;
+colour plus unordered endpoint nodes is only an observation
+`pi_n:Q_n->P_n`.  The first centered step works because `pi_5` is bijective.
+At `n=6`, `pi_6` merges 52 independent obligations, and the next step splits
+51 of those fibres.  A recursive state must therefore retain `Q`, not merely
+the projected coloured edge cell.  Likewise, a low source-degree Möbius
+sector pulls back from the `rho`-saturated target packet, which may contain
+high target degrees.  Static edge identity and bounded-degree truncation are
+both observations of the transported stalk, not the stalk itself.
+
 The LRC evidence falls cleanly into the same ledger:
 
 | level | present examples | legitimate use |

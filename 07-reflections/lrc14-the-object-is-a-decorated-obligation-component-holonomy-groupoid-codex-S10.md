@@ -282,6 +282,20 @@ transports no LRC metric predicate: the prospective LRC morphism is the fibre
 product of this path/core action with THM-808's owner/root action, plus the
 metric component, threshold side, wall schedule, gcd, and carry.
 
+THM-813 identifies the action object inside that path/core half.  Put
+`Q_n=E_n/<sigma>` for reflection orbits of literal complement lines and let
+`pi_n:Q_n->P_n` observe only colour and the unordered endpoint-node pair.
+Every equivariant embedding acts injectively on `Q`; it acts on `P` exactly
+when `pi_n Phi_Q` is constant on each `pi_m` fibre.  At `n=5`, `pi_5` is
+bijective, explaining THM-812.  At `n=6`, `P_6` merges 52 independent
+`Q_6` obligations, and the next centered action separates 51 of them.  Thus
+`Q` is the reflection-invariant action carrier and `P` is telemetry.  On the
+Möbius side, source degree at most `D` requires the saturated target packet
+`{B:|rho(B)|<=D}`, which can contain high target degrees; a fixed-degree stalk
+is not automatically composition-closed.  The LRC fibre product must retain
+`Q` and this path/core coefficient packet before owner/root and metric data
+are attached.
+
 ## 3. THM-794/802, THM-795/800/804/806, and THM-797/803 are one recursion in three regimes
 
 These structural theorems look different only after their common

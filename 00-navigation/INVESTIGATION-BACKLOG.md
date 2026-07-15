@@ -544,11 +544,16 @@
   transport, but all 20 projected coloured edge cells do, injectively.  The
   general Boolean pullback is subset-image pushforward, and one fixed-core
   collision surviving degree at most three requires three quartic
-  cross-leg/apex coefficients.  The
-  next theorem is closure of a finite coefficient sector under arbitrary
-  Euclidean words, coupled to THM-808's owner/root action and the LRC metric
-  stalk.
-- **Open theorem:** Test transition/continuation completeness at `n=8` and
+  cross-leg/apex coefficients.
+- **Action/observation boundary (THM-813):** The next centered copy embeds
+  `X_6->X_7`, but 51/187 projected coloured edge cells split, including four
+  blue cells; the first witness persists across all 40 core-local lifts in the
+  audited natural family.  The finer reflection-orbit carrier `Q_6` acts
+  injectively on all 272 obligations, while projection to `P_7` merges four
+  pairs.  Retain `Q`; treat colour plus unordered endpoint nodes as the
+  observation `pi`.  For coefficients, retain the exact `rho`-saturated
+  packet `{B:|rho(B)|<=D}` rather than assuming bounded target degree closes.
+- **Open theorem:** Test continuation minimization of the `Q`-action and
   all-size reconstruction, then attach the
 - **Bounded continuation minimization (S11):** On literal lines over
   `3<=n<=7`, stable labelled endpoint/reflection refinement sends the `n=7`
