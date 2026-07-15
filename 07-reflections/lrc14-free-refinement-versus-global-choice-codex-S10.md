@@ -170,10 +170,10 @@ support, and source-fibre density are different gauges. A flow statement must
 name which measure it preserves, just as an exit statement must distinguish
 raw wall count from metric extent and active interaction.
 
-There is also a live namespace warning: the checkout contains a second
-`THM-790-H-companion-laws-to-the-transitivity-flow.md`, whose Hamiltonian-path
-claims are finite-verified rather than generally proved. The two scopes must
-be kept separate until the ID collision is repaired.
+The former namespace collision is repaired: the later Hamiltonian-path
+companion is now `THM-791-H-companion-laws-to-the-transitivity-flow.md`, while
+the earlier reserved THM-790 remains the generally proved blue-parity theorem.
+Their scopes remain separate.
 
 The common strategic rule is now precise:
 

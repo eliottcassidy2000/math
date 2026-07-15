@@ -1,5 +1,5 @@
 ---
-id: THM-790
+id: THM-791
 title: The H-COMPANION to the transitivity flow — the same blue/black complement-line flow measured on the project's Rédei invariant H (Hamiltonian-path count) instead of the degree-derived C3/E4 axes of THM-785/787. (a) VERIFIED LAW (even n): blue lines preserve H mod 4 (ΔH ≡ 0 mod 4; n=4,6 exhaustive), while at odd n ΔH ≡ 0 mod 2 only (Rédei-trivial; ΔH=2 occurs at n=5 — the mod-4 law is genuinely a parity-of-n phenomenon, the H-analogue of THM-785's ΔE4 ≡ 0/8 mod 16 dichotomy); (b) the blue |ΔH| distribution is near-flat vs the decaying black one; (c) score majorization-comparability: s(t) and s(t̄) are majorization-COMPARABLE for every tiling (zero incomparable pairs, exhaustive n ≤ 6) — finer than the 1-D C3 flux, following the exact affine law s(t̄) = C − s(t), C = (n−2, n−1, …, n−1, n) (= THM-785 §2's degree transformation); (d) the pure-blue census formula pure_blue(n) = ⌊(n+1)/2⌋ − [n even] (kps-S66 conjecture) is CONFIRMED through n=7 (2,1,3,2,4; n=7 count 4 = codex THM-785 §6's independent atlas)
 status: CLAIMED+VERIFIED (kind-pasteur-2026-07-14-S128 cont.5): (a),(b) exhaustive n=4..6, n=7 job running (single-threaded canonicalization behind the THM-741 overnight run); (c) exhaustive n≤6, n=7 pending; (d) n≤7 via two independent atlases (mine n≤6 + codex n=7). No general-n proofs yet — the mod-4 blue law and the comparability law are the two proof targets; note H is NOT a function of the degree sequence, so none of this follows from THM-785/787
 source: kind-pasteur-2026-07-14-S128 (cont.5; owner directive: trace the flow of transitivity, quantify symmetry/imbalance, build the ordering)
@@ -7,11 +7,11 @@ depends_on: []
 related:
   - THM-785 (codex-S9: C3 flux, closed blue binomial law, categorical interface (13)/(14), oriented quotient imbalance, the flow address (15)) — the frame this companions; my independent n≤6 run reproduced its interface law and node censuses (PB,M,PK) = (3,5,2), (2,10,22) exactly before reading it
   - THM-787 (opus-S304: E4 axis, blue-avoids-pure-black proved, parity/max conjectures proved by 785)
-  - HYP-6855 (this session's log entry); kps-S66/HYP-4997 (blue/black line counts; the pure-blue census conjecture now confirmed)
+  - HYP-6860 (renumbered from the later colliding HYP-6855 session entry); kps-S66/HYP-4997 (blue/black line counts; the pure-blue census conjecture now confirmed)
   - MINIMAL-INVARIANT ORDERING remark: the 4-stage order (score-seq via (Σs² desc, lex), phase PB<MX<PBk, H, canonical word) resolves 3/10/28 of 3/10/34 classes at n=4/5/6 before the single arbitrary stage (canonical word breaks 0/1/6 residual ties) — a low-coordinate alternative to THM-785's 8-coordinate flow address when minimal arbitrariness is the goal; H does real separating work in it (stage gains +0/+2/+11)
 ---
 
-# THM-790 — the H-companion laws
+# THM-791 — the H-companion laws
 
 THM-785/787 put the transitivity flow on degree-derived axes (C3, E4). H — the Hamiltonian-path
 count, the invariant this project is built on (Rédei; tilings·|Aut| = H) — is not determined by
