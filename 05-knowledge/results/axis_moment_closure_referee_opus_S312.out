@@ -1,0 +1,9 @@
+n=4: F5 drift True | F6a second-moment True | F6b quadratic True
+   E[x] = 12 (predict 12) | Var(x) = 48 (predict 48) -> True
+   F6d: E[Delta^3] constant per x at this n (no witness)
+n=5: F5 drift True | F6a second-moment True | F6b quadratic True
+   E[x] = 20 (predict 20) | Var(x) = 120 (predict 120) -> True
+   F6d third-moment split x-values: 3 (closure fails at [8, 16, 32])
+n=6: F5 drift True | F6a second-moment True | F6b quadratic True
+   E[x] = 30 (predict 30) | Var(x) = 240 (predict 240) -> True
+   F6d third-moment split x-values: 7 (closure fails at [14, 22, 30, 38]...)

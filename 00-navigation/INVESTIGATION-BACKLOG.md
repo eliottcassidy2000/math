@@ -930,6 +930,12 @@ Math. Proc. Camb. Phil. Soc. 180 (2026) 343–361; Perarnau–Serra survey arXiv
 ancestor of [banks + a-priori tail]. LRC classical proofs only n ≤ 6 published + n = 7,8
 computer-assisted + 9–13 announced (the repo's citation basis, confirmed current).
 
+### LEAD: the seven-comb wall as a second-moment problem (opus-S312, F6 transport)
+- **Source:** THM-810 F6 (exact axis-walk moment closure + exact fluctuation-dissipation) x LRC14-FRONTIER item 3 (seven-comb wall: first-moment potential stalls at density 14/13).
+- **Status:** OPEN - the transport dictionary is written (F6's LRC paragraph); the missing input is THM-815's event-sampling law (which tooth/comb gets hit, size-biased?) to compute E[delta Phi] for Phi = (K-K*)^2 and convex degree-weights.
+- **Next step:** extract the exact event-transition kernel from THM-815 Part C's recursion at radius 7; compute the drift of K and K^2 under it; check whether a variance-corrected potential is strictly decreasing where the linear one stalls.
+- **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-810 F5/F6, the level-mean gap (same problem shape).
+
 ### LEAD (klein-2026-07-09-S233 → RESOLVED S234 as THM-685): the RELATION-LATTICE RESUMMATION → the Kronecker transfer
 - **Source:** THM-684 S233 addendum → **THM-685 (S234)**; `lrc14_relation_lattice_resummation_klein_S234.py`
 - **Status:** CLOSED at S234, better than asked: (i) became the elementary TRANSFER THEOREM |LM(q) − q·μ(S)| ≤ K(S) ≤ Σv (no ET/Weyl needed — the line is closed since v is integer; q arbitrary, primality nowhere); (ii) done exact (all 78+286 connected constants as Fractions; c₂(doubling) = 5/98 = boxeph's μ₂ − (6/7)²); (iii) done (deep well μ = 4637/194040, K = 24, lattice series churns ±0.5/order → the series is DIAGNOSTIC, μ-exact + transfer is the certificate object).

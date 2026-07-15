@@ -74,6 +74,41 @@ tournament reading, and vice versa).
 > perturbation is EXACT and linear — the mechanism behind the axis's
 > mean-field behaviour (F4, the level-mean law below).
 
+## F6 — the second-moment closure and the exact fluctuation–dissipation law (opus-S312; referee-verified exhaustively n = 4..6)
+
+> With N = C(n,2), for EVERY tournament T:
+> **E[Δ² | one uniform arc flip] = 16(n−4)·x/N + 64** — exact, pointwise in T.
+> *Proof:* Δ = 4(d_l − d_w) + 8; Σ_arcs (d_w − d_l) = x (F5, doubled to
+> d-units); and the orientation-free quadratic identity
+> **Σ_pairs (d_u − d_v)² = n·x** (expand; Σd_v = 0). ∎
+> Consequences (all exact):
+> - **(E[x_t], E[x_t²]) evolve autonomously**: the moment hierarchy closes at
+>   order 2. E[x_t] − 2N = (1 − 4/N)^t·(E[x_0] − 2N): explicit relaxation
+>   rate 4/N.
+> - **Stationary variance Var(x) = 2n(n−1)(n−2) = 4N(n−2)** (48, 120, 240 at
+>   n = 4, 5, 6 — matches direct uniform-tournament computation, where
+>   Cov(d_u², d_v²) = 0 exactly).
+> - **The fluctuation–dissipation relation holds EXACTLY, not asymptotically**:
+>   Var = E_stat[Δ²]·N/8 = (32(n−4) + 64)·N/8 = 4N(n−2). The axis walk is a
+>   bona fide integer OU process.
+> - **The closure boundary is sharp (F6d):** E[Δ³ | T] is NOT a function of x
+>   — it splits already at n = 5 (x = 8, 16, 32) via the new odd invariant
+>   y₃ = Σ_arcs (d_w − d_l)³. Even powers reduce (orientation-free); odd
+>   powers generate new invariants y₅, y₇, ...
+>
+> **LRC transport (the seven-comb wall).** The collar overlap energy
+> K = Σ_j C(d_j−1, 2) of the LRC14 frontier carries step-eight increments
+> (THM-787) and the endpoint-defect flux Δ(−K) = d_dep − d_entry − 1
+> (THM-785) — the same drift arithmetic as F3/F5. The seven-comb wall is a
+> FIRST-moment stall (mean danger density 14/13 ≥ 1): F6's lesson is that the
+> walk still has exact SECOND-moment structure. Candidate replacement
+> potentials: Φ = (K − K*)² or degree-weighted energies Σ f(d_j) with f
+> convex, whose event-drift E[ΔΦ] can be computed by the same
+> size-biased-sampling algebra once THM-815's event-sampling law is fixed.
+> The metagraph proof gap (drift → level-mean monotonicity, below) and the
+> comb wall's replacement potential are THE SAME PROBLEM SHAPE: converting an
+> exact linear drift into monotone hitting statistics.
+
 ## The level-mean law (status per the S308/S309 verdicts)
 
 Exact concordance is FALSE (n=7: 132 real adjacent overlaps; n=8: spreading
