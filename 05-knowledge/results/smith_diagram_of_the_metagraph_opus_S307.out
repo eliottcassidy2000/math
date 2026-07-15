@@ -1,0 +1,27 @@
+===== n = 4: G_n has 4 nodes; source = transitive, sink rail = 1 class(es) at x_min
+  TRANSITIVITY RESISTANCE R_4 = 3/7 = 0.428571
+  current split: spine 0.4286, ribs 1.1429, sea 0.0000 (total edge-current 1.5714)
+  max-current edge: classes 0(SC, x=4, H=5) -- 3(SC, x=20, H=1), mult 1, current 0.4286
+  potential-vs-axis concordance: 5/5 = 1.000
+  weighted spanning-tree complexity kappa(G_4) = 21
+
+===== n = 5: G_n has 12 nodes; source = transitive, sink rail = 1 class(es) at x_min
+  TRANSITIVITY RESISTANCE R_5 = 112209451/437566662 = 0.256440
+  current split: spine 2.0906, ribs 1.5329, sea 0.0927 (total edge-current 3.7162)
+  max-current edge: classes 2(SC, x=8, H=13) -- 5(SC, x=0, H=15), mult 9, current 0.5064
+  potential-vs-axis concordance: 58/58 = 1.000
+  weighted spanning-tree complexity kappa(G_5) = 12993979594752
+
+===== n = 6: G_n has 56 nodes; source = transitive, sink rail = 5 class(es) at x_min
+  TRANSITIVITY RESISTANCE R_6 = 70371720145091824229604758284304495179059224150174713/645368808972357932440048760574609161434148423901759450 = 0.109041
+  current split: spine 0.4338, ribs 1.8410, sea 2.3937 (total edge-current 4.6685)
+  max-current edge: classes 35(SC, x=38, H=17) -- 55(SC, x=70, H=1), mult 1, current 0.1062
+  potential-vs-axis concordance: 1345/1345 = 1.000
+  weighted spanning-tree complexity kappa(G_6) = 517791957596878118212189247086650897066168141769474730717617675995589422419094043664125091940824906515566034944
+
+===== n = 7: G_n has 456 nodes; source = transitive, sink rail = 3 class(es) at x_min
+  TRANSITIVITY RESISTANCE R_7 ~= 0.069902 (float; n=7)
+  current split: spine 1.3554, ribs 2.8598, sea 3.7091 (total edge-current 7.9244)
+  max-current edge: classes 293(SC, x=8, H=159) -- 395(SC, x=0, H=189), mult 135, current 0.0988
+  potential-vs-axis concordance: 92502/92634 = 0.999
+
