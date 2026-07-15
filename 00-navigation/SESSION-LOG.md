@@ -1,3 +1,38 @@
+## opus-2026-07-15-S319 -- THM-869: MILGRAM FORMALIZED (coset-constancy 3-liner; Gauss phase = the residue law; the D_n+ unimodular ladder) + THE CORONA LAW (first-bite = double-zero = 2(n-1)^2 + 5n - 2; widths 0,0,5,16 exact; my S318 conjecture refuted) + THE SEDENION RUNG EXACT (E8^2 vs D16+ isospectral, Sigma=0 slices diverge 252/240 & 23662/23790: the ambiguity the score hyperplane breaks) + A5 PILOT NEGATIVE (85 classes, no golden eigenvalues; refined to the Weyl/icosian carrier) + THE 1001/1024 WEAVE (torsion vs Diophantine resonance) (HYP-6950)
+
+Prompt (owner): the four THM-868 next steps + prior work on 2^10 = 1024 (10-periodic,
+3-digit shifts) and 1001 multiplication (abcabc).
+
+[M] MILGRAM: q(v+2w) = q(v) + 4[(v,w) + q(w)] and both terms vanish mod 2 on the
+Sigma=0 slice => q mod 8 constant on the all-odd coset; coset Gauss sum G = 2^(n-1)
+e^(pi i n/4): the residue law IS the phase (verified 4, -2, 0, 2 at n = 4,6,8,10).
+Ladder: D_n+ unimodular iff 8 | n: E8, D16+, D24+ -- tournaments follow the D+ branch;
+the Leech needs glue that integer scores cannot see (as A8's glue at n=9).
+[C] THE CORONA LAW: the cheapest illegal configuration is TWO zero scores + minimal
+rest ((n/2-2) ones + (n/2) threes): first-bite = 2(n-1)^2 + (5n-2); width formula exact
+at n = 8 (5) and n = 10 (16); ZERO corona for n <= 6 (double-zero exceeds the ceiling);
+cubic growth. My S318 floor(n/2)+1 guess refuted -- one more single-point-fit lesson.
+[S] SEDENION: the rank-16 uniqueness loss (two even unimodular lattices, isospectral --
+Witt/Milnor) is the lattice face of the sedenions' zero divisors; THE SCORE HYPERPLANE
+BREAKS THE ISOSPECTRALITY: Sigma=0 slices 252 vs 240 (norm 2), 23662 vs 23790 (norm 4).
+Tournaments live in D16+ and can SEE the degeneration the theta functions hide.
+[A5] PILOT (honest negative): the n=8 floor level (70-root shell) has 85 classes, 361
+wiggly edges, irregular degrees, NO golden/sqrt5 eigenvalues: the flip layer carries no
+icosahedral signature; the monodromy hunt moves to the Weyl/icosian action on the root
+shell THROUGH the THM-868 bridge. BH: 1 carrier, 0 hits.
+[N] 1001/1024: 10^3 = -1 mod 1001 (torsion; abcabc; 143x7 = 1001 = the S313 knife-edge)
+vs 2^10 ~ 10^3 (Diophantine; CF convergent 10/3 of log2 10; 2.4% = the 3-digit drift):
+the two THM-863/864 resonance species in the multiplicative lattice. m = 10 at n = 6:
+the 1024-tiling staircase.
+
+NEXT (named): the corona's interior stratification (k=2 vs k=3 violation strata); the
+n=24 Niemeier selection (which of the 24 classes does the score slice distinguish? the
+Leech is root-free: separable at norm 2); the Weyl-side A5 hunt; the Milgram Lean-face
+(the 3-line lemma is decide-able).
+
+FILES: THM-869; 2 result files; HYP-6950. opus; S319.
+
+---
 ## mac-mini-2026-07-15-S110 -- THM-868: THE GEOMETRIC LADDER (run-filtration = geometric series in v/u; 2^n and Fibonacci as telescoped limits; exact deficit GFs; 7 NEW SEQUENCES + OEIS-confirmed layers) + THM-869: THE MORSE SHELVES (stuck <=> odd-n upset-saturated {0,+-2}; even-n empty; a=2 shelf built at n=9; quintic reading corrected) + RYSER FIBER MONODROMY (digit 1 monodromy-carried exactly from n=5; 0/240 flipping edges at n=4/5; one necessary condition, no local law)
 
 Prompt (owner): more sequences like this, especially new ones; Moser's missing 32nd region; keep the rank-truncation perspective abstractly; relate the +8 climb to the Cayley-Dickson tower and the geometry/topology of quintic unsolvability; search past ideas, extend beyond.
