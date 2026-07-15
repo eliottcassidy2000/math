@@ -1,8 +1,8 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six and a downstream nonprimitive H6 contraction addendum + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, and a 136,288-prefix nonprimitive H6 chamber certificate)
-source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, and a primitive-core three-antipodal-pair H6 reduction + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, and ten primitive-core H6 slice trees with 3,699 total states)
+source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, THM-845, HYP-6820]
 verification:
@@ -12,6 +12,8 @@ verification:
   - 05-knowledge/results/lrc13_scale_one_hamming_four_collar_closure_codex_S10.out
   - 04-computation/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.cpp
   - 05-knowledge/results/lrc13_hamming_six_nonprimitive_contraction_scout_codex_S11.out
+  - 04-computation/lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.py
+  - 05-knowledge/results/lrc13_hamming_six_primitive_ap_pin_scout_codex_S14.out
 proof_companion:
   - 07-reflections/lrc13-hamming-four-independent-collar-doubling-proof-codex-S10.md
 ---
@@ -106,7 +108,8 @@ density is `14/13`; the coefficient
 `13-2m` changes sign, so this union-bound recursion becomes noncoercive before
 the first lift.  Part C by itself made no claim of radius-five or radius-six
 emptiness.  Downstream THM-845 closes radius five, and the addendum below closes
-only the nonprimitive slice of radius six.  Primitive radius six remains open.
+only the nonprimitive slice of radius six.  Primitive radius six remains open
+outside the partial reduction in C.2 below.
 The density barrier is a limitation of this method, not a proof that the
 radius-seven chart is intrinsically infinite.
 
@@ -212,6 +215,183 @@ Consequently, among **nonprimitive** scale-one Hamming-six packets, `2[12]`
 is the only possible tight packet.  This addendum makes no claim about
 primitive scale-one H6 packets, arbitrary-scale H6 packets, or global `n=12`
 sporadic emptiness. ∎
+
+### C.2 Addendum: antipodal AP pins close fourteen primitive-core H6 rows
+
+Continue with (C1), but now restrict to missing-label rows whose retained core
+is primitive, `gcd(P)=1`.  Put
+
+```text
+P=[12] minus R,
+f(R)=#{r in {1,...,6}:{r,13-r} subset R}.              (C7)
+```
+
+Exactly one of the `C(12,6)=924` missing-label rows has a nonprimitive retained
+core, namely (C2).  The other 923 primitive-core rows split as follows:
+
+```text
+f                  0      1      2      3
+number of rows    63    480    360     20.              (C8)
+```
+
+This is deliberately a statement about the retained core, not merely the gcd
+of the completed packet.  Every packet over these 923 cores is primitive.
+Conversely, on the exceptional row (C2), mixed height parity makes `W`
+primitive even though `P` has gcd two.  Those mixed-parity packets are outside
+this addendum and remain open; C.1 treated only the all-odd-height,
+nonprimitive branch.
+
+This statistic has a direct AP-grid meaning.  For `a in {1,...,12}`, the
+point `a/13` belongs to the strict-safe set `E_P` exactly when the antipodal
+pair `{a^(-1),-a^(-1)}` is contained in `R`.  Hence precisely `2f(R)` of the
+twelve nonzero thirteenth-grid points lie in `E_P`.
+
+#### The oriented germ handoff lemma
+
+Fix a full pair and orient one of its labels as `r`.  Set `a=r^(-1) mod 13`,
+and write `[x]` for the representative of `x mod 13` in
+`{-6,...,-1,1,...,6}`.  Define
+
+```text
+c(z)=z-1 if z>0,                 c(z)=12+z if z<0,
+ell_r(P)=min_(p in P) c([ap])/p, B_r(P)=2/ell_r(P).     (C9)
+```
+
+The left-hand germ of `E_P` at `t_0=a/13` has exact reach
+`ell_r(P)/13`.  The danger tooth of the owner lift `u_r` has left reach
+`2/(13u_r)`.  For every other missing label `s`, its first leftward danger
+tooth begins at distance `c([as])/(13u_s)` from `t_0`.  Consequently, if the
+completed packet is tight, then for every oriented owner `r` either
+
+```text
+u_r <= B_r(P),                                           (C10)
+```
+
+or there is an `s in R minus {r}` such that
+
+```text
+u_s >= c([as])u_r/2.                                    (C11)
+```
+
+Indeed, if (C10) fails, the owner tooth stops strictly inside the core-safe
+germ.  Unless some other tooth has begun by that point, the interval between
+the two endpoints is strict-safe for the completed packet.  Comparing the two
+exact reaches gives (C11).  This argument is height-independent.
+
+For an `f=3` row all six missing labels are oriented owners.  If no owner
+uses (C10), choose one provider in (C11) for every owner.  The resulting
+functional digraph has a directed cycle.  Multiplication around that cycle
+forces the product of its edge weights `c([as])/2` to be at most one.  Exact
+enumeration of the 409 simple directed cycles in each of the twenty complete
+six-vertex handoff graphs gives
+
+```text
+minimum cycle product       1/16       1       3/2
+number of rows                  6       2        12.     (C12)
+```
+
+In each of the two product-one rows, every edge on either nonexpanding cycle
+has weight one.  Equality in the multiplied inequalities would force two
+distinct-residue lifts to be equal, which is impossible.  Thus fourteen rows
+cannot avoid a boundary exit.  In six of them (C10) admits no proper lift at
+all, so the rows are already loose:
+
+```text
+{1,2,3,10,11,12}   {1,3,4,9,10,12}   {1,3,5,8,10,12}
+{1,4,6,7,9,12}     {2,3,4,9,10,11}   {2,3,5,8,10,11}.  (C13)
+```
+
+For the other eight rows, enumerating the proper lifts `u_r=r+13h_r` below
+the exact boundary caps in (C10) leaves only the following alternatives:
+
+```text
+R={1,2,5,8,11,12}     => u_5=18
+R={1,4,5,8,9,12}      => u_5=18
+R={1,5,6,7,8,12}      => u_5=18
+R={2,3,6,7,10,11}     => u_6=19
+R={2,4,6,7,9,11}      => u_6=19
+R={2,5,6,7,8,11}      => u_5=18 or u_6=19
+R={3,4,6,7,9,10}      => u_6=19
+R={4,5,6,7,8,9}       => u_5=18 or u_6=19.             (C14)
+```
+
+The six rows not decided by the germ-cycle argument are exactly
+
+```text
+{1,2,4,9,11,12}   {1,2,6,7,11,12}   {1,3,6,7,10,12}
+{2,4,5,8,9,11}    {3,4,5,8,9,10}    {3,5,6,7,8,10}.   (C15)
+```
+
+Their minimum cycle product is `1/16`; no looseness claim is made for them.
+
+#### Exact exhaustion of the ten boundary slices
+
+There are ten fixed-coordinate slices in (C14), because each of the two
+disjunctive rows contributes two.  In a fixed slice, adjoin the displayed
+speed to `P`, then numerically order the five remaining lifts.  At a depth-`j`
+prefix, let `L_j` be the longest component of its strict-safe set.  If a tight
+completion existed, the next lift would obey (8) with `m=5-j`.  Enumerating
+every unused residue class, every proper congruent lift above the preceding
+one, and every lift up to this exact cap therefore includes every tight
+completion exactly once.  The fixed speed need not be the smallest speed; it
+is already part of the prefix, while the other five are sorted among
+themselves.
+
+The ten exact trees are:
+
+```text
+R                  fixed    root L      depth nodes          depth edges
+12581112           u5=18    19/585      1,28,301,119,11,0    28,301,119,11,0
+1458912            u5=18    101/2574    1,22,196,119,0,0     22,196,119,0,0
+1567812            u5=18    5/117       1,21,194,95,1,0      21,194,95,1,0
+23671011           u6=19    21/494      1,20,170,130,5,0     20,170,130,5,0
+2467911            u6=19    11/247      1,20,166,66,0,0      20,166,66,0,0
+3467910            u6=19    87/2717     1,30,334,166,4,0     30,334,166,4,0
+456789             u5=18    7/156       1,20,171,196,14,0    20,171,196,14,0
+456789             u6=19    11/247      1,20,172,80,3,0      20,172,80,3,0
+2567811            u5=18    19/468      1,21,192,115,3,0     21,192,115,3,0
+2567811            u6=19    4/117       1,26,280,150,8,0     26,280,150,8,0
+aggregate                              10,228,2176,1236,49,0 228,2176,1236,49,0
+```
+
+All ten trees have zero covering prefixes and no depth-five state.  At every
+one of their 3,699 states, an independent complement-of-closed-danger-union
+construction reproduces the recursive strict-safe interval union exactly.
+The frozen tree trace is
+
+```text
+f8c8465455fdbf1f21aec0438a8894c11f56accf53579dc84658a703aa5c227e. (C16)
+```
+
+Thus each single forced slice is empty, and the union of the two slices
+exhausts each disjunctive row in (C14).  All eight rows in (C14) are loose.
+Together with (C13), this closes fourteen of the twenty primitive-core `f=3`
+rows and reduces that missing-label frontier from 923 rows to 909.  The
+remaining primitive-core scope is the 903 rows with `f<=2` and the six rows in
+(C15).  The exceptional mixed-parity packets just noted are a separate open
+branch.  This is not a proof of primitive scale-one H6 emptiness. ∎
+
+The statistic `f` should not be mistaken for a geometric quotient.  It is
+invariant not only under reflection `r -> 13-r`, but under every multiplication
+by a unit modulo 13 and, for six-element rows, under `R <-> P` (full and empty
+antipodal pairs exchange in equal numbers).  It preserves the number of
+antipodal AP cusps and their forced germ owners.  It destroys the identities
+and signs of the pairs, the retained speeds, exact safe endpoints and longest
+components, divisor obligations, height congruences, and Kakeya overlap.
+These label operations need not even preserve the primitive-core domain, and
+they are not common integer dilations of a normalized scale-one packet.
+
+There is a precise tournament-related lesson.  The pairwise observable is the
+provider start `c([as])/(13u_s)` versus the owner reach `2/(13u_r)`, the switch
+is (C11), and the gauge is the oriented left germ at `a=r^(-1)`.  Thresholding
+does not produce a tournament: a vertex pair can carry both arrows or neither
+because its two orientations use different gauges.  Accordingly score
+histograms, SCCs, and Hamiltonian-path counts are not proof invariants here;
+the weighted directed-cycle products in (C12) are.  The increasing
+`(speed,label)` path is a tie-free enumeration device for the slice recursion,
+not a quotient of the cover predicate.  The faithful global carrier remains
+the residual endpoint union together with the labelled bank of unplaced
+danger combs.
 
 ## 1. Strict-safe components
 

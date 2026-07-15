@@ -1,0 +1,53 @@
+LRC14 SHELL-FIVE UNIVERSAL ENDPOINT-GRID TEMPLATE OBSTRUCTION
+arithmetic=integer+fractions.Fraction optimizer=none SAT=none floating_point=none sampled_circle=none
+scope=one_unit_numerator_chosen_uniformly_before_the_seven_free_lifts
+not_claimed=absence_of_U_dependent_endpoint_grid_witnesses
+
+LOW_SPEED_SKELETON
+speed_count=35 speeds=(1, 2, 4, 5, 8, 11, 12, 14, 15, 17, 18, 21, 24, 25, 27, 28, 30, 31, 34, 37, 38, 40, 41, 43, 44, 47, 50, 51, 53, 54, 56, 57, 60, 63, 64)
+exact_components=((Fraction(89, 583), Fraction(109, 704)), (Fraction(47, 154), Fraction(219, 704)), (Fraction(243, 704), Fraction(164, 473)), (Fraction(309, 473), Fraction(461, 704)), (Fraction(485, 704), Fraction(107, 154)), (Fraction(595, 704), Fraction(494, 583)))
+no_jump_step_bounds=((Fraction(2, 13), Fraction(9, 583)), (Fraction(4, 13), Fraction(31, 704)), (Fraction(9, 26), Fraction(9, 352))) forbidden_width=2/11
+centers_positive_half=(2/13,4/13,9/26)
+
+RESIDUE_PARITY_CENTER_VIEW
+free_mod26_states=(14, 1, 2, 15, 4, 17, 18, 5, 8, 21, 24, 11, 12, 25)
+free_safe_center_numerators_mod26=(4, 8, 9, 17, 18, 22)
+after_forced_owner_states=((11, 22, (19, 20, 22), (8, 18)), (15, 22, (19, 20, 22), (8, 18)), (37, 9, (6, 7, 9), (8, 18)), (41, 9, (6, 7, 9), (8, 18)))
+interpretation=exact_center_robust_slopes_reduce_to_plus_or_minus_4/13
+
+ALL_SIZE_LOCALIZATION
+candidate_pool=all_free_raw_lifts_union_{B-3,B-2,B}
+2_over_13_branch=empty_by_oppositely_signed_forced_B-3_and_B-2
+I4=[4/13-9/(143(B-2)),4/13+9/(143(B-3))]
+I9_class15=[9/26-9/(143(B-10)),9/26-2/(143(B-2))]
+I9_classes37_41=[9/26+2/(143(B-3)),9/26+7/(286(B-18))]
+plus_reflections_under_t_to_1-t
+least_class_rows=((15, 100, ((Fraction(331, 1078), Fraction(329, 1067)), (Fraction(19, 55), Fraction(373, 1078)))), (37, 243, ((Fraction(815, 2651), Fraction(271, 880)), (Fraction(457, 1320), Fraction(857, 2475)))), (41, 269, ((Fraction(301, 979), Fraction(901, 2926)), (Fraction(1013, 2926), Fraction(956, 2761)))))
+positive_linear_margins=(('c2_left', 1287), ('c2_right', 1326), ('c4_left', 1365), ('c4_right', 143), ('c9_left_class15', 3874), ('c9_right_classes37_41', 3120))
+
+UNIT_ENDPOINT_GRIDS
+q=5d:no_unit_grid_point_in_localized_intervals
+q=13d:no_unit_grid_point_in_localized_intervals
+q13_direct_obstruction=balanced_j_[p]_13_and_u=abs([p_inverse*j]_(13d))
+q13_direct_properties=raw_u_in_{1,12},u<=13d/2<B,phase<=6/(13d)<1/11
+grid_audit_k_limit=24 rows=75 first=(15, 100, (Fraction(331, 1078), Fraction(329, 1067)), (Fraction(19, 55), Fraction(373, 1078))) last=(1289, 8381, (Fraction(3151, 10241), Fraction(28357, 92158)), (Fraction(31901, 92158), Fraction(31844, 91993)))
+grid_rows_sha256=7f394a7508957a6451da8e90d8c349713e2604b02ad9656c840e389a835bcc22 inverse_rows_sha256=3f0fdbc938effd88a5fe07907f6e129d3234459e12b5f3844e1d8b87dc6200dd
+
+FINITE_FULL_POOL_REPLAY
+rows=((15, 100, 57, ((75, 0), (195, 0))), (67, 438, 239, ((335, 0), (871, 0))), (119, 776, 421, ((595, 0), (1547, 0))), (37, 243, 134, ((185, 0), (481, 0))), (89, 581, 316, ((445, 0), (1157, 0))), (141, 919, 498, ((705, 0), (1833, 0))), (41, 269, 148, ((205, 0), (533, 0))), (93, 607, 330, ((465, 0), (1209, 0))), (145, 945, 512, ((725, 0), (1885, 0))))
+rows_sha256=48af42db9d3c009be756c0b8b64131dd07c65a4590355114fabaf6309c2b2f9c
+scope_guard=finite_rows_are_replay_only_not_the_source_of_all_size_quantifiers
+
+TOURNAMENT_ANALYSIS
+vertices=('skeleton', 'free-progression', 'forced-owner', 'grid-gap')
+observable_order=('skeleton', 'free-progression', 'forced-owner', 'grid-gap') switch_order=('grid-gap', 'forced-owner', 'free-progression', 'skeleton') edge_flips=6
+score_histogram=(0, 1, 2, 3) directed_cycles=0 SCCs=4 Hamiltonian_paths=1
+tie_Hamiltonian_path=logical_dependency_order
+telemetry_only=binary_order_forgets_signed_phase_margins_and_grid_arithmetic
+challenged_assumption=vertices_are_proof_obligations_not_runners
+
+VERDICT
+classes_mod52=(15,37,41):uniform_single_unit_numerator_template_fails_for_q=5d_and_q=13d
+classes_not_closed=U_dependent_or_multi_numerator_divisor_arguments_remain_possible
+certificate_sha256=0d98f73ab6f70094c26210a94efa5dc6bc78c19ae5fefb6e12ca138eeabaf457
+PASS

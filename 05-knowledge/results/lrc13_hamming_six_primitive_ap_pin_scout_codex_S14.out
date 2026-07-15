@@ -1,0 +1,81 @@
+================================================================================================
+LRC13 PRIMITIVE-CORE SCALE-ONE HAMMING-SIX AP-PIN REDUCTION
+================================================================================================
+NONPRIMITIVE CONTRACTION AUDIT
+retained_core_gcd>1 rows=1/924 missing={1,3,5,7,9,11} core={2,4,6,8,10,12}
+height_parity criterion=all six odd; gcd exactly 2
+divide_by_two={1,...,6} union {6+i+13k_i}
+independent deepest-leaf endpoint reconstructions=2/2 cap=28 outgoing=0
+compiled canonical C++ replay checked separately byte-for-byte against stored output
+
+PRIMITIVE-CORE 923-ROW ATLAS
+scope warning: primitive packet != primitive retained core
+the exceptional odd-label row with mixed height parity lies outside this atlas
+antipodal_full_pair_f={0: 63, 1: 480, 2: 360, 3: 20}
+interior_AP_gridpoints={0: 63, 2: 480, 4: 360, 6: 20}
+f interpretation: 2f points a/13 lie in E_P; their one-sided germ owners are +/-a^(-1)
+root_longest_values=89 root_first_cap_range=(108, 468)
+clean_modulus_Q_size={0: 1, 1: 26, 2: 137, 3: 274, 4: 285, 5: 160, 6: 40}
+clean_modulus_signatures=182
+clean-modulus owner law: q in Q(P) => some lift is divisible by q
+Q-liar: Q={7,8,9} but L=3/65,cap=220 versus L=3/52,cap=176
+Kakeya base ledger: rows with zero-debt component=919; with unique full owner=916
+f=0 primitive transversals=63; every zero-debt component is degree-one, count range=4..22
+no_unique_full_owner_rows={2,3,6,7,11,12};{2,6,7,8,11,12};{3,4,5,9,10,11};{4,5,7,8,9,10};{4,5,8,9,11,12};{5,7,8,9,10,11};{5,7,8,9,11,12}
+no_zero_debt_rows={4,5,7,8,9,10};{4,5,8,9,11,12};{5,7,8,9,10,11};{5,7,8,9,11,12}
+
+F=3 HEIGHT-INDEPENDENT GERM HANDOFF
+left coefficient c(z)=z-1 for z>0, 12+z for z<0
+owner r either exits: u_r<=2/min_(p in P)c(a*p)/p, or hands to s:
+u_s >= c(a*s)u_r/2, where a=r^(-1) mod 13
+minimum_cycle_product_histogram={Fraction(1, 16): 6, Fraction(1, 1): 2, Fraction(3, 2): 12}
+bounded direct height-{1,2} local checks=608
+boundary_closed_6={1,2,3,10,11,12};{1,3,4,9,10,12};{1,3,5,8,10,12};{1,4,6,7,9,12};{2,3,4,9,10,11};{2,3,5,8,10,11}
+forced_slice_rows_8:
+  {1,2,5,8,11,12} => u_5=18
+  {1,4,5,8,9,12} => u_5=18
+  {1,5,6,7,8,12} => u_5=18
+  {2,3,6,7,10,11} => u_6=19
+  {2,4,6,7,9,11} => u_6=19
+  {2,5,6,7,8,11} => u_5=18 or u_6=19
+  {3,4,6,7,9,10} => u_6=19
+  {4,5,6,7,8,9} => u_5=18 or u_6=19
+cycle_open_6={1,2,4,9,11,12};{1,2,6,7,11,12};{1,3,6,7,10,12};{2,4,5,8,9,11};{3,4,5,8,9,10};{3,5,6,7,8,10}
+
+TEN FIXED-COORDINATE SLICE REPLAYS (8 ROWS)
+  R={1,2,5,8,11,12} fixed=u_5=18 rootL=19/585 nodes=1,28,301,119,11,0 edges=28,301,119,11,0 covering=0
+  R={1,4,5,8,9,12} fixed=u_5=18 rootL=101/2574 nodes=1,22,196,119,0,0 edges=22,196,119,0,0 covering=0
+  R={1,5,6,7,8,12} fixed=u_5=18 rootL=5/117 nodes=1,21,194,95,1,0 edges=21,194,95,1,0 covering=0
+  R={2,3,6,7,10,11} fixed=u_6=19 rootL=21/494 nodes=1,20,170,130,5,0 edges=20,170,130,5,0 covering=0
+  R={2,4,6,7,9,11} fixed=u_6=19 rootL=11/247 nodes=1,20,166,66,0,0 edges=20,166,66,0,0 covering=0
+  R={3,4,6,7,9,10} fixed=u_6=19 rootL=87/2717 nodes=1,30,334,166,4,0 edges=30,334,166,4,0 covering=0
+  R={4,5,6,7,8,9} fixed=u_5=18 rootL=7/156 nodes=1,20,171,196,14,0 edges=20,171,196,14,0 covering=0
+  R={4,5,6,7,8,9} fixed=u_6=19 rootL=11/247 nodes=1,20,172,80,3,0 edges=20,172,80,3,0 covering=0
+  R={2,5,6,7,8,11} fixed=u_5=18 rootL=19/468 nodes=1,21,192,115,3,0 edges=21,192,115,3,0 covering=0
+  R={2,5,6,7,8,11} fixed=u_6=19 rootL=4/117 nodes=1,26,280,150,8,0 edges=26,280,150,8,0 covering=0
+aggregate_depth_nodes=10,228,2176,1236,49,0 total=3699
+aggregate_edges=228,2176,1236,49,0
+closed-danger component crosschecks=3699
+slice_trace_sha256=f8c8465455fdbf1f21aec0438a8894c11f56accf53579dc84658a703aa5c227e
+slice verdict: all 10 slices empty; therefore all 8 forced-slice rows are loose
+FINAL REDUCTION: 14 of 20 primitive-core f=3 rows closed; row frontier 923 -> 909
+SCOPE: the other 903 f<=2 rows and the six listed product-1/16 f=3 rows remain open
+the exceptional odd-label row with primitive mixed-parity packets is separate and open
+
+REFLECTION / ASSUMPTION CHALLENGE / TOURNAMENT ANALYSIS
+f is invariant under r->13-r, every unit dilation mod 13, and R-complement
+f preserves antipodal AP-cusp count and forced germ ownership only
+f destroys pair identities, signs, core endpoints/L, divisor obligations, and Kakeya overlap
+these actions need not preserve the primitive-core domain or exact LRC geometry
+they are not common integer dilations of the normalized scale-one packet
+pairwise observable=provider start c(a*s)/(13u_s) versus owner reach 2/(13u_r)
+switch=edge r->s when the exact handoff inequality holds; gauge=oriented AP left germ
+tie Hamiltonian path=increasing (speed,label), used only to enumerate remaining lifts
+the handoff carrier is a weighted digraph, not a tournament; cycle products are proof-bearing
+faithful global carrier=residual endpoint union x labelled remaining comb bank
+
+PROVENANCE
+THM815_sha256=9687bfd7cd0ea38ec62f52828118ddac9160a011d4c5691116e5989a3da23015
+contraction_source_sha256=ee57510a4796e23da1408b383af1146478f067a5e0e98d2ad52220e55e2e8bf1
+contraction_output_sha256=aa87c107ff7e5fdc6cb6a3803ecc0751ac41c267dd59540e4bd6dd764f7769ed
+script_sha256=f3e96760d546ebe967b2052d2a2ba6c3d57b1805c60b9b57ec8d621fd836d7dd

@@ -1,7 +1,7 @@
 ---
 id: THM-836
 title: Thin two-sheet owner shells force a modular packing obstruction
-status: PROVED (directional owner-exit law, modular packing, empty s=1,3 shells, exact local s=5 classification, and the uniform d=11 mod 52 divisor exclusion) + VERIFIED (fraction-exact endpoint/shell replay and finite d=15 endpoint-grid census)
+status: PROVED (directional owner-exit law, modular packing, empty s=1,3 shells, exact local s=5 classification, the uniform d=11 mod 52 divisor exclusion, and the universal single-numerator q=5d,13d template obstruction in the other three classes) + VERIFIED (fraction-exact endpoint/shell replay and finite d=15 endpoint-grid census)
 source: codex-2026-07-15-S10 continuation
 depends_on: [THM-772, THM-797, THM-803, THM-824]
 related: [THM-774, THM-803, HYP-6820]
@@ -10,6 +10,8 @@ verification:
   - 05-knowledge/results/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.out
   - 04-computation/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.py
   - 05-knowledge/results/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.out
+  - 04-computation/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py
+  - 05-knowledge/results/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.out
 ---
 
 # THM-836 — thin two-sheet owner-shell packing obstruction
@@ -475,6 +477,167 @@ conditions are adjoined.  Statement (S5.14) is finite at exactly `d=15`; it
 does not eliminate the entire class `d=15 mod 52`, and no uniform conclusion
 is asserted for the remaining classes `15,37,41` beyond (S5.12).
 
+## 6B. The other endpoint grids have no universal single numerator
+
+The successful numerator in (S5.6) is chosen from `d` alone and is deep for
+every admissible choice of the seven free lifts.  It is natural to seek the
+same kind of one-column certificate in the other three classes.  There is an
+all-size obstruction to precisely that template.
+
+For `d mod 52` in `{15,37,41}`, define the possible-lift pool
+
+```text
+P_d={u<=B:u mod 13 in {1,2,4,5,8,11,12}}
+       union {B-3,B-2,B},
+T_d={t:||ut||>=1/11 for every u in P_d}.                (S5.15)
+```
+
+If one numerator `p=p(d)` is to lie in `E_U` for **every** signed-complement
+lift allowed by (S5.4), then `p/q` must lie in `T_d`.  This quantifier is
+important: (S5.15) does not model a numerator chosen after a particular `U`
+is known.
+
+The following fixed low-speed skeleton gives a useful global coordinate on
+`T_d`:
+
+```text
+S={u<=64:u mod 13 in {1,2,4,5,8,11,12}}.               (S5.16)
+```
+
+Intersecting its thirty-five closed deep sets, by exact endpoint comparison,
+gives exactly the six intervals
+
+```text
+[89/583,109/704], [47/154,219/704], [243/704,164/473],
+```
+
+and their reflections under `t -> 1-t`.  They contain respectively the
+centres
+
+```text
+2/13,                     4/13,                    9/26. (S5.17)
+```
+
+This is a finite rational lemma, not a sampled-circle observation.  Since
+`B>=100`, every speed in (S5.16) really belongs to `P_d`.
+
+Here is the all-size step from the skeleton to the thin intervals.  Write
+`t=c+x`, with `c` one of (S5.17).  Along a fixed raw residue, successive
+speeds differ by `13`; along a fixed residue-parity state they differ by
+`26`.  On the three skeleton intervals one has respectively
+
+```text
+13|x|<=9/583,          13|x|<=31/704,
+26|x|<=9/352,                                             (S5.18)
+```
+
+all strictly below the forbidden-arc width `2/11`.  Therefore a signed phase
+moving toward zero cannot jump from the positive deep arc to the negative
+deep arc between consecutive lifts.  If every lift is deep, its last phase
+must remain on the original side of the `1/11` wall.  Applying this no-jump
+observation to the last available lift gives
+
+| centre | sign of `x` | lift progression | last lift | phase at `x=0` | forced bound |
+|---:|:---:|:---|---:|---:|:---|
+| `2/13` | `x<0` | `u=1 mod 13` | `B-8` | `+2/13` | `x>=-9/(143(B-8))` |
+| `2/13` | `x>0` | `u=12 mod 13` | `B-10` | `-2/13` | `x<=9/(143(B-10))` |
+| `4/13` | `x<0` | `u=4 mod 13` | `B-5` | `+3/13` | `x>=-20/(143(B-5))` |
+| `4/13` | `x>0` | `u=12 mod 13` | `B-10` | `-4/13` | `x<=31/(143(B-10))` |
+| `9/26` | `x<0` | `u=12 mod 26` | `B-10` if `d=15`; `B-23` otherwise | `+2/13` | `x>=-9/(143u)` |
+| `9/26` | `x>0` | `u=17 mod 26` | `B-5` if `d=15`; `B-18` otherwise | `-3/26` | `x<=7/(286u)` |
+
+All congruences on `d` in this table are modulo `52`.  Endpoints are retained:
+landing exactly on a `1/11` wall is deep, so every displayed inequality is
+non-strict.
+
+The forced shell owners now finish the localization.  At `2/13`, the phases
+of `B-3` and `B-2` are `-1/13` and `+1/13`.  Inside the first two bounds in
+the table, their deep conditions would require simultaneously
+
+```text
+x<=-2/(143(B-3)),          x>=2/(143(B-2)),              (S5.19)
+```
+
+which is impossible.  At `4/13`, their phases are `-2/13` and `+2/13`, so
+they leave only
+
+```text
+I_4(d)=[4/13-9/(143(B-2)), 4/13+9/(143(B-3))].           (S5.20)
+```
+
+At `9/26`, parity selects one of two one-sided intervals:
+
+```text
+I_9(d)=[9/26-9/(143(B-10)),9/26-2/(143(B-2))], d=15 mod 52,
+
+I_9(d)=[9/26+2/(143(B-3)),9/26+7/(286(B-18))],
+                                                    d=37 or 41 mod 52. (S5.21)
+```
+
+There is no hidden jump to the far deep arc in this last step.  For example,
+the tightest four comparisons reduce to
+
+```text
+31(B-3)<35(B-10),       20(B-2)<35(B-5),
+9(B-3)<24(B-23),        7(B-2)<48(B-5),                 (S5.22)
+```
+
+and hold already at the least relevant values `B=100,243`; their linear
+margins increase thereafter.  The remaining signed-phase bounds are weaker.
+Consequently
+
+```text
+T_d subset I_4(d) union I_9(d)
+               union (1-I_9(d)) union (1-I_4(d)).        (S5.23)
+```
+
+The endpoint-grid arithmetic is now decisive.  For `q=5d`, the centre of
+`qI_4` is `20d/13`, whose distance to the nearest integer is `1/13` because
+`d=+/-2 mod 13`, while
+
+```text
+45d/(143(B-3))<1/13.                                    (S5.24)
+```
+
+Thus `qI_4` contains no integer.  For `q=13d`, its centre is the integer
+`4d` and its larger radius is less than one; the only possible numerator is
+`4d`, which is not a unit modulo `13d`.
+
+For `I_9`, the `q=5d` centre is `45d/26`.  In the class `15`, its fractional
+part is `25/26` and the interval lies to its left, with left radius less than
+`25/26`.  In classes `37,41`, the interval lies to its right, the fractional
+part is respectively `1/26,25/26`, and its right radius satisfies
+
+```text
+35d/(286(B-18))<1/26.                                   (S5.25)
+```
+
+Hence again there is no integer numerator.  On the `q=13d` grid the centre
+`9d/2` is a half-integer and both relevant outer radii are less than `1/2`.
+Reflection sends `p` to `q-p` and preserves unit status, so it adds no grid
+point.  We have proved the uniform template obstruction
+
+```text
+d mod 52 in {15,37,41}, q in {5d,13d}
+ ==> no unit p mod q has p/q in T_d.                     (S5.26)
+```
+
+There is also a short independent proof of the `q=13d` half of (S5.26).
+Given a unit `p`, let `j=[p]_13` be balanced, so `1<=|j|<=6`, and let
+`v=[p^(-1)j]_(13d)` be balanced.  Then `v=1 mod 13`; hence
+`u=|v|` has raw class `1` or `12`, lies below `13d/2<B`, and satisfies
+
+```text
+||pu/(13d)||=|j|/(13d)<=6/(13d)<1/11.                   (S5.27)
+```
+
+Thus some admissible free lift always kills the proposed universal column.
+
+Statement (S5.26) closes neither congruence class nor the sporadic branch.  A
+numerator depending on the actual seven lifts, several numerators whose
+incidences are combined, or a non-endpoint denominator can still yield a
+contradiction.  What is closed is the direct analogue of (S5.6) on both
+mandatory endpoint grids for every uniformly remaining shell-five class.
 ## 7. Why the theorem carrier is not a tournament
 
 The exact carrier is the incidence object
@@ -527,13 +690,27 @@ The shell-five continuation verifier, also using only integers and
    transitive.  This tournament forgets the unit-numerator/signed-lift
    incidence that proves the exclusion.
 
+The universal-grid-template verifier then:
+
+1. reconstructs the thirty-five-speed skeleton (S5.16) and its six exact
+   closed components;
+2. checks every signed phase, no-jump step, forced-owner bound, and positive
+   linear margin used in (S5.18)--(S5.23);
+3. replays the endpoint-grid gaps through the first `25` members of each
+   open congruence class, including the direct inverse construction (S5.27),
+   while (S5.18)--(S5.25) provide the all-size proof; and
+4. directly scans the entire possible-lift pool at three representatives of
+   each class, finding no universal unit numerator on either grid.  These
+   nine scans are consistency checks, not finite extrapolation.
 No optimizer, floating point, or sampled-circle verdict is used.  The replay
 certifies the arithmetic and endpoint calculus; the proof above supplies the
 all-size quantifiers.  The theorem assumes the signed-wall complement and the
 guarded containment (2)--(3).  It does not prove those predicates for an
 arbitrary core, does not show the remaining `s>=5` branch empty, does not
 uniformly eliminate the classes `15,37,41 mod 52`, and does not establish
-LRC(14).  The `d=15` census additionally assumes THM-772 divisor completeness
+LRC(14).  It does uniformly eliminate only the U-independent, single-unit-
+numerator endpoint-grid template in those classes.  The `d=15` census
+additionally assumes THM-772 divisor completeness
 and THM-803 parity-twisted support; it is not a consequence of (2)--(3) alone.
 
 Reproduce with
@@ -541,6 +718,7 @@ Reproduce with
 ```bash
 python3 04-computation/lrc14_two_sheet_owner_shell_packing_obstruction_codex_S10.py
 python3 04-computation/lrc14_shell_five_local_classification_and_divisor_witness_codex_S10.py
+python3 04-computation/lrc14_shell_five_uniform_grid_template_obstruction_codex_S10.py
 ```
 
 The frozen artifact digests are
@@ -556,4 +734,11 @@ shell-five continuation output
         50cd0f1761d202ef6a8565d58c6d70951221101f55649ea27e8cf9e52e9cbbfb,
 shell-five continuation certificate
         b5b0d682307e61c71eded52fb94f286d8ecd33f8f9c0a00abbce164e2b20b7f4.
+
+shell-five universal-grid source
+        b6fce3d5cd02a7f0c50b7027291a37386b357997745098d6c720d08469bbb233,
+shell-five universal-grid output
+        9f2bdae79fdd71039d86bb322ecc6c12494b87a0f98cc89070b35f7bea00ad0b,
+shell-five universal-grid certificate
+        0d98f73ab6f70094c26210a94efa5dc6bc78c19ae5fefb6e12ca138eeabaf457.
 ```

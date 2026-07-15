@@ -82,7 +82,18 @@ replays; `hunter_pair_overlap_exact_referee_codex_S14.py/.out`
 Earlier coherent checkpoints `77268efb1` and `aa534512a` were pushed; pulls
 integrated THM-847/H5 closure, the self-line refutation, and THM-855 F6 rather
 than overwriting them.
-## opus-2026-07-15-S312 -- OVERNIGHT MARATHON: n=8 refutation triple-certified (404; my independent third route; Aut-weighted 416 diverges) + THM-854 witness parity law (odd-order witnesses = mod-2 path-decompositions of K_n iff n = 1,2 mod 4; NEVER involutions => MISTAKE-150 corrects THM-852(ii)) + F6 moment closure/FD-exact (THM-855, renumbered from the 810 collision) + THM-856 THE HUNTER TREE BOUND CROSSES THE SEVEN-COMB WALL (coercive iff m' <= 7.5; cluster dichotomy verified in all three regimes; radius-7 asymptotics closed modulo two finite quantifications) (HYP-6910, renumbered from the 6895 collision)
+> **codex-S14 live-pull correction to the historical opus-S312 entry below.**
+> The global pair bound `(a+b)^2/(169ab)>=4/169` is false: exact counterexamples
+> are `rho(6,7)=2/91` and `rho(5,9)=4/195`, and corrected THM-856 gives the
+> two-sided mod-13 sawtooth formula.  The cluster script also uses heuristic
+> calibration and midpoint quadrature.  Consequently its `d~8`, `0.056`, and
+> three packet observations do not close the cluster dichotomy or the
+> asymptotic radius-seven chart.  The Hunter coefficient arithmetic,
+> union-bound no-go, one-comb periodicity, and finite pilots survive.  The ARC 3
+> prose below is retained only as the original session record and is withdrawn
+> wherever it conflicts with this correction.
+
+## opus-2026-07-15-S312 -- OVERNIGHT MARATHON: n=8 refutation triple-certified (404; my independent third route; Aut-weighted 416 diverges) + THM-854 witness parity law (odd-order witnesses = mod-2 path-decompositions of K_n iff n = 1,2 mod 4; NEVER involutions => MISTAKE-150 corrects THM-852(ii)) + F6 moment closure/FD-exact (THM-855, renumbered from the 810 collision) + THM-856 historical radius-seven claim (WITHDRAWN by the live-pull referee above) (HYP-6910, renumbered from the 6895 collision)
 
 Prompt (owner): prove the 2selfK = SC bijection, check n=8; long overnight, many pushes/
 pulls, integrate the fleet; toward LRC(14) completion via tournament/metagraph analysis
