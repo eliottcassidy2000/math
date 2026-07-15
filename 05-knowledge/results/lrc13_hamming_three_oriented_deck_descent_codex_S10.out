@@ -1,0 +1,13 @@
+THM-804 exact oriented-deck replay
+phase prime: 13; left germ: (-1/13,1/13]
+direct CRT/grid identities checked: 296640
+capacity inequalities checked through D=100000: 92308; f=1/3 only D=[3]; f+g=3/7 only D=[7]
+order-2 cross ratios: [2, 11]; 3-cycle products: [5, 8]
+order-3 cross ratios: [3, 5, 8, 10]; mutual ratios: [5, 8]
+scalar owner-capacity CSP rows through D=40: 11143660; survivors: 220 (all D=(1,1,1))
+tournament telemetry (vertices are owner/replacement obligations)
+  labels=(1, 2, 11) D=(2, 2, 2): left=((0, 1, 2), 0, (1, 1, 1), 1), right=((0, 1, 2), 0, (1, 1, 1), 1), gauge_flips=0/3
+  labels=(1, 2, 11) D=(2, 7, 7): left=((0, 1, 2), 0, (1, 1, 1), 1), right=((0, 1, 2), 0, (1, 1, 1), 1), gauge_flips=0/3
+  labels=(1, 5, 8) D=(3, 3, 3): left=((0, 1, 2), 0, (1, 1, 1), 1), right=((0, 1, 2), 0, (1, 1, 1), 1), gauge_flips=0/3
+  labels=(6, 7, 12) D=(12, 5, 11): left=((1, 1, 1), 1, (3,), 3), right=((0, 1, 2), 0, (1, 1, 1), 1), gauge_flips=1/3
+PASS — exact replay complete
