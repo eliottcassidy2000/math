@@ -258,12 +258,14 @@ assembly lemma for the other twenty floods.
    radius five two explicit uniform collar boxes and THM-845 empties both;
    THM-844/847 also empty the bounded all-three and mixed common-sheet
    languages. THM-858 reduces every higher common-sheet H5 row to a finite
-   `{2,3,7}`-smooth bank with maximum effective order `42,336`. THM-857 closes
+   `{2,3,7}`-smooth bank with maximum effective order `10,584`. THM-857 closes
    the entire proper scale-one radius-six chart: the unique covering terminal
-   is `2[12]`, and no primitive scale-one H6 bank remains. Transport its literal
-   component/progression action and shortcut witnesses across arbitrary AP
-   scale and common sheets; there is no remaining scale-one label census. At
-   scale-one radius seven the mean danger density is
+   is `2[12]`, and no primitive scale-one H6 bank remains. THM-859 conjugates
+   that complete recursion across every common dilation, proves `D` is the
+   deck-mask ramification degree, and reduces every H6 branch containing an
+   order-one colour to a finite exact recursion.  The open transport problem is
+   therefore the genuinely ramified `D>1` metric language, not common dilation.
+   At scale-one radius seven the mean danger density is
    `14/13`, so the same potential ceases to decrease. THM-856 supplies the
    Hunter maximum-tree overlap functional and proves its ideal coefficient is
    positive for seven combs.  Its S14 referee shows that the actual edge state

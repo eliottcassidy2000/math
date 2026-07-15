@@ -25,13 +25,10 @@ The unique cover is missing `{1,3,5,7,9,11}` with ordered lifts
 `14,16,18,20,22,24`, exactly `2[12]`.  Thus the 923 primitive retained-core
 roots and every mixed-parity completion of the exceptional even core have zero
 covers.  This subsumes both the intermediate 909-row AP-germ frontier and the
-later 903-row plus exceptional-root residual at scale one; it does not
-transport through arbitrary AP scale/common sheets or cross the seven-comb
-wall.
-covers.  This subsumes the earlier 909-row AP-germ residual at scale one; it
-does not by itself transport through ramified common sheets or cross the
-seven-comb wall. THM-859 below subsequently supplies the exact common-dilation
-conjugacy and identifies `D>1` as the transport boundary.
+later 903-row plus exceptional-root residual at scale one.  THM-859 below
+supplies exact common-dilation conjugacy and identifies `D>1` as the precise
+ramified transport boundary; neither theorem crosses that boundary or the
+seven-comb wall.
 
 TOURNAMENT/ASSUMPTION CHALLENGE: vertices as missing labels, ordered either by
 least proper lift or by the exact five-comb cap after that lift, give transitive
@@ -110,21 +107,14 @@ iso-class nodes, tilings, blue/black lines, factor edges, the three signed B3
 recursions, H drift, toothpick/ladder structure, Fano/chi7, j=4 floods, and
 Kakeya needles; test the claimed all-n black self-line law.
 
-HONEST VERDICT AT THIS CHECKPOINT: LRC(14), the then-remaining primitive/all-scale H6 branches, the
-radius-seven chart, and the full j=4 sweep remain open.  The session instead
-identified the exact typed state needed by several operations, removed three
-misleading scalar extrapolations, and integrated a live closure of fourteen
-primitive-core H6 label rows.  The subsequent S14 exact continuation closes
-the remaining six `f=3` rows as recorded in the next entry.
-primitive-core H6 label rows.  THM-857 in the later S10 continuation above
-subsequently closes the complete proper scale-one H6 chart.
-HONEST VERDICT AT THIS CHECKPOINT: LRC(14), arbitrary-scale/common-sheet H6
-transport, the radius-seven endpoint field, and the full j=4 sweep remain open.
-The session identified the exact typed state needed by several operations,
-removed three misleading scalar extrapolations, and integrated the historical
-closure of all twenty three-antipodal-pair primitive-core H6 rows. THM-857 in
-the later S10 continuation above subsequently closes the complete proper
-scale-one H6 chart.
+HONEST VERDICT AT THIS CHECKPOINT: LRC(14), the then-remaining primitive and
+ramified H6 branches, the radius-seven endpoint field, and the full j=4 sweep
+remained open.  The session identified the exact typed state needed by several
+operations, removed three misleading scalar extrapolations, and integrated a
+live closure of fourteen primitive-core H6 label rows.  The subsequent S14
+continuation closed the remaining six `f=3` rows.  THM-857 later closed the
+complete proper scale-one H6 chart, and THM-859 transported it across every
+common dilation; only the genuinely ramified `D>1` H6 languages remain.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
@@ -210,8 +200,9 @@ multicolumn, or off the endpoint grids.
 
 LIVE-PULL H5: THM-858's complement-lcm fibre cuts close every new common-sheet
 language through effective order 21 and bound the entire residual order bank
-by 42,336.  Every surviving order is `{2,3,7}`-smooth and has no private prime
-power.  Its transitive pair tournaments lose the rejecting subset cut; the
+by 10,584.  The sharpened valuation ranges are respectively `3,2,1` at
+primes `2,3,7`; every surviving order is `{2,3,7}`-smooth and has no private
+prime power.  Its transitive pair tournaments lose the rejecting subset cut; the
 faithful object is a prime-power carrier hypergraph with complement fibres and
 affine owner intervals.
 
@@ -328,7 +319,7 @@ close substantial residuals and sharpen the remaining object.  THM-847's
 contexts; with THM-844/845 this makes the full effective-order-at-most-twelve
 common-sheet H5 bank empty at arbitrary lift height.  The live THM-858 pull
 then eliminates every new language through effective order 21 and makes the
-rest uniformly finite: `min D_i<=21<max D_i<=42,336`, all orders are
+rest uniformly finite: `min D_i<=21<max D_i<=10,584`, all orders are
 `{2,3,7}`-smooth, no maximal prime power is private, and every relative
 complement-lcm capacity cut holds.  For scale-one H6,
 nonprimitivity forces the six odd labels to be lifted at odd heights and gcd
