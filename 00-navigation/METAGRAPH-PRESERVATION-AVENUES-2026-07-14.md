@@ -490,24 +490,45 @@ certificate clauses, and proof obligations.
 
 ### MPA-32 — Minimize the recursive three-sorted address
 
-- **Delivered exact carrier:** THM-796 separates merged nodes `M_n`, tiling
+- **Delivered exact carrier and bounded minimization:** THM-796 separates merged nodes `M_n`, tiling
   half-edges `X_n`, and complement lines `L_n`; it adds reflection defect,
   same/converse-sheet loop holonomy, and the simultaneous high/low half-edge
   tensor.  Independently sorting endpoint pairs loses coupling at `n=4`, and
-  bare node transfer fails Markov composition at `n=5`.
-- **Pull:** define bounded continuation equivalence under the operation
-  alphabet `{d_top,d_bottom,complement,reflection}` and observations
-  `(node,line colour,defect,loop sheet)`.  Minimize the resulting automata for
-  `n<=7`; compare their cells with rooted weighted line-WL and canonical codes.
+  bare node transfer fails Markov composition at `n=5`.  The S11 audit then
+  minimizes literal lines over `3<=n<=7` under labelled or unordered-successor endpoint
+  deletion plus reflection.  At `n=7`, node boundary recursively refines
+  `6076->16359` cells, while `Xi` refines `16031->16382`; the latter leaves
+  exactly the phase deck pairs `0x12ca/0x12cb` and `0x146c/0x146d`.
+- **Finding:** in the labelled-face language, adding colour, class sheet, and
+  exact defect to node boundary gives the same stable partition; adding sheet
+  and defect to `Xi` also gives the same partition.  The exact phase address
+  is singleton and agrees with the literal-line control.  Both residual pairs
+  have the same defect because their deck move flips the reflection-fixed
+  apex, so phase and defect are transverse.  Together the four residual lines
+  form a commuting phase/reflection square of parallel black edges between a
+  non-self-converse two-sheet node and a self-converse node.  Their unique
+  class isomorphisms fix the path endpoints and are reflection-conjugate
+  5-cycles on the interior vertices.  Under unordered successor cells,
+  node boundary and `Xi` retain `8310` and `16380` cells respectively.
+- **Next pull:** extend the operation alphabet to inverse lifts, internal
+  deletion/repair, and an explicit terminal proof-obligation predicate; then
+  run `n=8` and compare the stable line partition directly with rooted weighted
+  line-WL and primitive face rows.  First enumerate endpoint-fixed interior
+  permutations that absorb the phase-deck face complement; this can expose
+  candidate `n=8` obstructions before full node canonicalization.
 - **Old thread:** HYP-3513 Nerode; HYP-3106 controlled forgetting; MPA-02/04/12;
   THM-781/793/796; line-metagraph simultaneous-isomorphism work.
 - **Must preserve:** the named line, simultaneous half-edge coupling, exact
   defect ancestry, class-sheet holonomy, path witness, and every declared
   future observation.  Record which of these fields minimization proves
-  redundant rather than dropping it in advance.
-- **Deliverable:** the first minimal continuation-complete address at each
-  audited `n`, all collisions of line-WL against it, and a conjectural finite
-  grammar or obstruction to stabilization as `n` grows.
+  redundant rather than dropping it in advance.  On an LRC pullback, keep
+  class-sheet holonomy distinct from reduced token return and metric component
+  translation; finite-state closure does not imply metric closure.
+- **Delivered artifact:**
+  `three_sorted_metagraph_continuation_minimization_codex_S11.py/.out` is the
+  first minimal bounded address for the declared forward operation languages.
+  Line-WL collision comparison, inverse operations, and a stabilization
+  theorem or obstruction remain open.
 
 ### MPA-33 — Push the exact `B3` line descent beyond its first phase witness
 
@@ -675,8 +696,10 @@ certificate clauses, and proof obligations.
 
 ## Recommended next three pulls
 
-1. Join `MPA-34/35`: find the first `Omega+B2` collision at `n=8`, then explain
-   it by the smallest missing corewise Möbius coefficient.
+1. Join `MPA-32/34/35`: test the two-face continuation residual against the
+   three-face `Omega+B2` codec, then find its first `n=8` collision and explain
+   it by an endpoint-fixed interior permutation or the smallest missing
+   corewise Möbius coefficient.  Include inverse lifts and internal deletion.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
 3. Join `MPA-28/38`: make continued-fraction substitutions act on the labelled

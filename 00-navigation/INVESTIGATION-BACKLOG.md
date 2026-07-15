@@ -550,6 +550,29 @@
   stalk.
 - **Open theorem:** Test transition/continuation completeness at `n=8` and
   all-size reconstruction, then attach the
+- **Bounded continuation minimization (S11):** On literal lines over
+  `3<=n<=7`, stable labelled endpoint/reflection refinement sends the `n=7`
+  node-boundary carrier `6076->16359` cells and `Xi` `16031->16382`.
+  Colour, loop sheet, and exact defect do not further split the labelled node
+  carrier; sheet and defect do not further split `Xi`.  The two remaining
+  `Xi` cells are exactly phase deck pairs, have common defect `0x06a6`, and
+  are separated by the coherent endpoint bit.  The four lines form a
+  commuting phase/reflection square of parallel black edges between one
+  non-self-converse two-sheet node and one self-converse node.  Its unique
+  endpoint-class identifications fix both path ends and act by reflection-
+  conjugate 5-cycles on the interior vertices.  Unordered face successors
+  retain only `8310` node cells and `16380` `Xi` cells.  This delivers the
+  forward part of MPA-32; inverse lifts, internal deletion, direct line-WL
+  comparison, endpoint-fixed interior-permutation classification, and `n=8`
+  remain open.
+- **Component-obligation join:** The independent S10 LRC synthesis proposes
+  objects `(P,C,O,I;A,M,W,K)` with reversible holonomy inside exact strata and
+  certified descent/branching between strata.  This matches THM-796's
+  groupoid-valued recursion but adds two fields the finite metagraph cannot
+  supply: reduced token/sheet return and metric component translation.  Keep
+  both distinct from same/converse class-sheet holonomy; a zero reduced return
+  can still move the metric base (THM-794).
+- **Open theorem:** Test connectivity/WL completeness at `n=8`, then attach the
   address as a base-chart label to the affine incidence object
   `X={(u,t,c,lambda):u=ct,Phi(u,t)>=lambda}`.  The stalk must retain observer
   cut, gap/sector metric, closed threshold wall, endpoint owner, scale/carry,

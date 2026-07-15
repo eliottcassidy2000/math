@@ -34,6 +34,8 @@ artifacts:
   - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
   - 04-computation/merged_metagraph_recursive_three_sort_audit_codex_S2.py
   - 05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out
+  - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
+  - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
   - 07-reflections/the-merged-metagraph-is-a-three-sorted-recursive-incidence-object-codex-S2.md
 related:
   - HYP-2245
@@ -370,6 +372,13 @@ sidecars.  HYP-6815's slope suspension should therefore carry the metagraph
 address as a constructible chamber label with metric/owner/monodromy stalks,
 not identify the 4-coordinate object with a bare node.
 
+The concurrent component-obligation synthesis sharpens “monodromy stalk” into
+three distinct fields: metagraph class-sheet holonomy `h_class`, reduced
+token/sheet return `h_red`, and metric component translation `Delta_M`.
+THM-796 computes only the first.  A recursively exact LRC address must retain
+the latter two (plus component-obligation incidence) until a continuation,
+reconstruction, or annihilation theorem discharges them.
+
 ## Three-sorted recursive incidence
 
 THM-796 separates the atlas into tiling endpoints `T_n`, complement-line
@@ -397,6 +406,31 @@ marginals recover the coloured line fibres, both `D_n` branching matrices,
 and colour descent with zero failures.  It has 16,031 cells for 16,384 `n=7`
 lines (maximum multiplicity four); the exact lower-line pair plus the binary
 coherent endpoint phase resolves every remaining collision.
+
+The bounded Nerode audit now tests that last assertion recursively rather than
+only statically.  On all literal lines at `3<=n<=7`, stable refinement under
+labelled top deletion, bottom deletion, and reflection sends the `n=7` node-
+boundary partition from `6076` to `16359` cells.  Adding colour, loop sheet,
+or exact defect produces the same stable partition.  Starting from `Xi_n`
+instead gives `16382` cells; adding sheet and defect again changes nothing.
+The only two collision cells are the phase-deck pairs
+`0x12ca/0x12cb` and `0x146c/0x146d`, both with defect `0x06a6`.
+The coherent phase bit separates them and agrees with the singleton literal-
+line partition.  Because the deck move flips the reflection-fixed apex,
+`1+sigma_n` necessarily loses that bit.  Phase and defect are therefore
+transverse recursive coordinates, not successive resolutions of one scalar.
+The four lines form a commuting `C2 x C2` square under phase and reflection.
+They are parallel black lines from a non-self-converse node with two
+151-presentation class sheets to a self-converse 57-presentation node; phase
+changes only the marked-path presentation within fixed ordinary endpoints.
+The unique class isomorphisms fix both path endpoints and act as reflection-
+conjugate 5-cycles on the interior vertices.
+
+When the two face successors are retained only as an unordered multiset, the
+node-boundary and `Xi_n` partitions have `8310` and `16380` cells.  This
+unordered-face gauge keeps the current observation and unary reflection; it
+does not quotient current line states.  The comparison isolates exactly which
+loss comes from forgetting the end labels.
 
 The blue/black face recursion is closed for all `n`.  Upper-, low-face-, and
 high-face-blue are pairwise independent, although upper blue forces the two
@@ -437,11 +471,21 @@ and one Hamiltonian path.  The challenged assumption is that tournament
 vertices must be runners or arcs; here they are quotient carriers/proof
 obligations.
 
+For the bounded continuation audit, the vertices are node boundary, colour,
+sheet, defect, `Xi`, `Xi+defect`, phase, and exact line.  Separated `n=7` line
+pairs after stable labelled refinement are the pairwise observable; total
+retention and retention per cell are the switches.  Both carrier tournaments
+are transitive with score histogram `{0:1,...,7:1}`, no directed triangles,
+singleton SCCs, and one Hamiltonian path, with 20 edge flips between switches.
+
 ## Open boundary
 
-1. Test whether rooted weighted blue/black 1-WL remains complete at `n=8`;
-   if not, classify the first twins by line-class, spectrum, or 2-WL.  Existing
-   nauty class machinery may avoid a full `8!` per-tiling canonicalization.
+1. Extend bounded continuation minimization and rooted weighted blue/black
+   1-WL to `n=8`; test whether either remains complete and compare their first
+   twins.  Existing nauty class machinery may avoid a full `8!` per-tiling
+   canonicalization.  Before building the full atlas, enumerate endpoint-fixed
+   interior permutations that conjugate a tiling endpoint to its phase-deck
+   mate; the `n=7` obstruction is a unique 5-cycle pair.
 2. Prove or refute connectivity of the projected blue/black line graph for all
    `n`.
 3. Prove that local quotient depth always equals minimum tiling weight/MFAS;

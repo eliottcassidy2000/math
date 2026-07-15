@@ -1,7 +1,7 @@
 ---
 id: THM-796
 title: Three-sorted recursive incidence of tilings, complement lines, and converse-merged tournament nodes
-status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, and census through n=7)
+status: PROVED (general pullback/torsor, incidence, defect/parity, one-face and Mode-B recursions, and colour laws) + FINITE-EXACT (node/line coupling, loop holonomy, non-lumpability, bounded continuation minimization, and census through n=7)
 source: codex-2026-07-15-S9/S11 (independent S9 and S2 audits, reconciled)
 depends_on: [THM-280, THM-345, THM-643, THM-781, THM-793]
 related: [THM-477, THM-785, THM-790, HYP-6815, HYP-6825, HYP-6865, HYP-6870]
@@ -11,6 +11,8 @@ verification:
   - 05-knowledge/results/three_sorted_metagraph_recursion_codex_S9.json
   - 04-computation/merged_metagraph_recursive_three_sort_audit_codex_S2.py
   - 05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out
+  - 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py
+  - 05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out
   - 03-artifacts/visualizations/tournament-tiling-explorer.html
   - 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
 ---
@@ -615,6 +617,13 @@ span through `(T,v)` and must retain the `Aut(T)` orbit and stabilizer of `v`.
 Deleting an internal path vertex also needs a repaired Hamiltonian path of
 `T-v`, because the shortcut can point backward.
 
+Deletion and quotient descent are not invertible and therefore are not arrows
+of the fixed-size groupoid.  The graded tower is more precisely a
+**groupoid-valued recursion**: each fixed stratum has its reversible symmetry
+groupoid, while endpoint deletion, arbitrary deletion spans, and certified
+quotients are functors or correspondences between strata.  A well-founded
+condensation requires a separately proved complexity decrease.
+
 The information hierarchy proved above is
 
 ```text
@@ -633,6 +642,91 @@ marked states agree only if every continuation word in
 weighted line-WL and primitive face row are strong finite approximations, not
 proofs of continuation equivalence for arbitrary `n`.
 
+### 12.1 Finite-exact continuation minimization
+
+This prescription can be computed without guessing an address.  On
+
+```text
+Omega_[3,7]=disjoint union_(3<=k<=7) L_k,                 (12.2)
+```
+
+start with equality of a declared current observation `O`.  Repeatedly refine
+a cell by the current cells of `r(ell),d_L(ell),d_H(ell)`, using a terminal
+symbol when a face is undefined.  The stable partition is the coarsest
+refinement of `O` stable under every legal bounded continuation.  A second,
+different predicate retains only the unordered multiset of the two face
+successor cells.  It still retains `O` and unary reflection, so it is
+unordered-successor semantics, not a quotient of current states by
+reflection.  In particular, ordered face fields already present in `O` stay
+ordered.  Complement is already the identity on `L_k`.
+
+The exact `n=7` minimization is:
+
+| current observation | initial cells | stable labelled faces | stable unordered successors |
+|---|---:|---:|---:|
+| node boundary | 6,076 | 16,359 | 8,310 |
+| + blue/black colour | 6,126 | 16,359 | 8,310 |
+| + loop class sheet | 6,128 | 16,359 | 8,310 |
+| + exact reflection defect | 8,091 | 16,359 | 8,311 |
+| `Xi_n` joint node/face/colour cell | 16,031 | 16,382 | 16,380 |
+| `Xi_n` + sheet + defect | 16,270 | 16,382 | 16,380 |
+| lower-line pair + coherent phase | 16,384 | 16,384 | 16,384 |
+| literal line | 16,384 | 16,384 | 16,384 |
+
+These are partition equalities where the numbers coincide in the nested
+rows, not accidental equal cell counts.  Thus colour, sheet, and defect supply
+no further distinction after labelled recursive node-boundary refinement.
+That common stable partition still has 23 nonsingleton cells: 22 pairs and one
+four-line cell, containing 48 lines total (25 excess representatives).
+`Xi_n` leaves only two collision pairs.  They are
+
+```text
+0x12ca / 0x12cb: lower lines (53,150), epsilon 1/0, defect 0x06a6,
+0x146c / 0x146d: lower lines (150,163), epsilon 1/0, defect 0x06a6. (12.3)
+```
+
+Each pair consists of the two deck mates from (3.5): the canonical masks
+differ by the apex flip, while the coherent common-core phase changes.  Their
+reflection defects agree because the apex is fixed by `r_n` and is therefore
+annihilated by `1+r_n`.  This makes phase and defect transverse coordinates:
+even exact defect ancestry cannot replace the torsor phase.
+
+The four lines form one commuting involution square:
+
+```text
+rho_n=(12ca 12cb)(146c 146d),
+r_n  =(12ca 146c)(12cb 146d).                            (12.4)
+```
+
+All are parallel black cross-lines between `n7-a264`, a non-self-converse node
+with two ordinary class-sheet fibres of size 151, and `n7-a270`, a
+self-converse node with one fibre of size 57.  The deck involution changes the
+marked Hamiltonian-path presentation inside fixed ordinary endpoint classes;
+reflection exchanges the two 151-element converse sheets.  Thus the first
+failure of recursively refined `Xi_n` is precisely observer-path descent data,
+not node, class, colour, sheet, or defect data.
+
+For each deck pair the endpoint-class isomorphism is unique.  It fixes the two
+Hamiltonian-path endpoints and acts as a 5-cycle on the five interior
+vertices; the two 5-cycles are conjugate by path reflection:
+
+```text
+(0,2,3,5,1,4,6),       (0,2,5,1,3,4,6).                 (12.5)
+```
+
+Consequently the first hidden phase is an endpoint-fixed cyclic relabelling
+of the interior path, not merely a collision of canonical codes.  Whether
+such interior cycles generate phase-blind families for larger `n` is open.
+
+Making only the successor refinement unordered creates two additional `Xi_n`
+collision pairs with the face-line order exchanged.  The current `Xi_n`
+observation remains ordered; this is not the full reflection quotient of line
+states.
+
+The minimization is finite-exact only.  It does not include extension words,
+internal-vertex deletion/repair, metric LRC observations, or `n>=8`, and it
+does not assert that the displayed partitions stabilize with `n`.
+
 ## 13. Tournament Analysis and the LRC preservation boundary
 
 The native relation is symmetric, weighted, coloured, and looped.  Forcing the
@@ -650,6 +744,18 @@ retention and retention per partition cell, with the displayed list as the tie
 Hamiltonian path.  At `n=7` both carrier tournaments are transitive, have score
 histogram `{0:1,...,7:1}`, zero directed triangles, singleton SCCs, and one
 Hamiltonian path; the gauges flip 18 edges.
+
+For the bounded continuation audit the vertices are the eight information
+carriers in the rows of the table in Section 12.1, while literal `n=7` lines
+are the sample states.  The pairwise observable is the sign of the difference
+in separated line-pair utility.  Total separation and separation per cell are
+the switches; the table order breaks ties.  Both scalar-ranked tournaments are
+transitive with score histogram `{0:1,...,7:1}`, zero directed triangles,
+singleton SCCs, and one Hamiltonian path, with 20 edge flips.  The retention
+path is `phase,exact,Xi,Xi+defect,node,colour,sheet,defect`; the economy path is
+the displayed carrier order.  Transitivity follows from scalar ranking, so
+these fingerprints are consistency telemetry rather than a structural
+tournament theorem.
 
 The challenged assumption is that vertices must be runners or arcs.  Depending
 on the predicate, viable vertices include node classes, Hamiltonian paths,
@@ -671,6 +777,20 @@ widths, observer phase, runner owners, exact wall side, scale/residue, inverse
 winding, endpoint ties, chronology, and carry.  These remain stalk fields
 unless fibre-purity, reconstruction, annihilation, or a named residual theorem
 proves that a field can be discarded.
+
+The class-sheet bit in (11.1) must not be mistaken for the full LRC holonomy.
+The concurrent component-obligation synthesis distinguishes at least
+
+```text
+h_class : same/converse tournament sheet of one merged line loop,
+h_red   : reduced combinatorial sheet/token return modulo a declared gauge,
+Delta_M : metric translation of the component and endpoint phases.          (13.2)
+```
+
+A loop may have trivial `h_red` and nonzero `Delta_M`; THM-794 supplies such
+repeated packet transport.  THM-796 determines `h_class` only.  Any pullback to
+the LRC suspension must therefore attach the other two coordinates rather than
+calling a closed finite-state loop metrically closed.
 
 The exact preservation rule is therefore recursive: keep precisely enough
 data to make the next intended operation well-defined, recurse on literal

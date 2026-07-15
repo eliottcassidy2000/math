@@ -95,7 +95,21 @@ obligations, and proof-carrier interfaces.
   deletion is regular on tilings/lines but only a non-Markov weighted span on
   nodes; exact edge transport retains simultaneous high/low half-edge
   coupling.  Mode-B distinguishes inherited from fresh blackness.  Merged
-  loops additionally retain same-class/converse-sheet holonomy.
+  loops additionally retain same-class/converse-sheet holonomy.  On an LRC
+  pullback this is only `h_class`; reduced token return `h_red` and metric
+  translation `Delta_M` remain separate stalk coordinates.
+- **Bounded continuation result:** S11 minimizes each declared carrier on
+  literal lines over `3<=n<=7`.  At `n=7`, labelled recursive node boundary
+  has `16359/16384` cells and `Xi` has `16382/16384`; colour, loop sheet, and
+  exact defect add no separation to their respective stable nested carriers.
+  The two remaining `Xi` pairs are the phase-torsor deck mates
+  `0x12ca/0x12cb` and `0x146c/0x146d`, both invisible to defect because the
+  deck move flips the reflection-fixed apex.  Phase and reflection organize
+  them into one commuting square of parallel black edges across the
+  non-self-converse/self-converse boundary; the unique endpoint-class
+  isomorphisms are reflection-conjugate interior 5-cycles.  Unordered successor refinement
+  retains `8310` node cells and `16380` `Xi` cells while leaving ordered fields
+  in the current observation intact.
 - **Preserves:** local flip depth; lexicographic spine/rib/sea and blue/black
   path words; named line, weight, defect, loop and class sheet; simultaneous
   half-edge coupling; recursive parent multiplicities; exact class/converse
@@ -118,8 +132,16 @@ obligations, and proof-carrier interfaces.
   line support/weight, lower-face support/weight/normalization, and exact node.
   Its two `n=7` gauges are transitive with the same score histogram and flip
   18 edges.
+- **Continuation carrier tournament:** vertices are node boundary, colour,
+  sheet, defect, `Xi`, `Xi+defect`, phase, and exact line.  The pairwise
+  observable compares separated `n=7` sample-line pairs after stable labelled
+  refinement.  Retention and separation-per-cell rankings are transitive by
+  construction, have the standard score histogram and one Hamiltonian path,
+  and flip 20 edges; the fingerprints are consistency telemetry.
 - **Next pull:** Minimize bounded continuation equivalence under endpoint
-  deletion, complement, and reflection, comparing the exact cells with line-WL.
+  extension, internal deletion/repair, complement, and reflection at `n=8`,
+  comparing the exact cells with line-WL.  Enumerate endpoint-fixed interior
+  permutations absorbing phase complement before full `n=8` canonicalization.
   Then disintegrate THM-785's exact endpoint-bit flux law over
   `HP/Aut`, line-orbit, and category fibres to predict the black drift, then run
   the rooted weighted line-WL/flow audit at `n=8`; classify the first twins by
@@ -130,6 +152,7 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-6825, HYP-6815, THM-761, THM-781, THM-785, THM-793, THM-796, HYP-2245, HYP-2989, HYP-3106,
   HYP-3513; `tournament_tiling_metagraph_address_codex_S4.py/.out/.json`;
   `merged_metagraph_recursive_three_sort_audit_codex_S2.py/.out`;
+  `three_sorted_metagraph_continuation_minimization_codex_S11.py/.out`;
   `the-metagraph-needs-a-stalk-...codex-S4.md`.
 
 ## LTT-432 - Scale-Quotient Peel / Good-Period Certificate Tournament

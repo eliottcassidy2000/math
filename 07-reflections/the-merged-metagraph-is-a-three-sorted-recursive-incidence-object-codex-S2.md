@@ -396,7 +396,11 @@ system:
    diagonal.
 5. `delta_n` refines colour into a linear defect and remembers black ancestry.
 6. Loop incidence carries same-sheet/converse-switch holonomy.
-7. `tilde E_n` is the endpoint-coupled transport tensor; `E_n` is its
+7. The lower-line pair plus one coherent phase bit is an exact recursive line
+   address.
+8. `Xi_n` jointly retains the upper endpoints, both face endpoints, and the
+   three-colour word.
+9. `tilde E_n` is the one-face endpoint-coupled tensor; `E_n` is its
    independently sorted node-edge marginal.
 
 One can call the resulting node picture a colored Bratteli diagram, but its
@@ -419,6 +423,13 @@ different parents.  Arbitrary vertex deletion also needs the vertex's
 automorphism orbit and stabilizer; internal path deletion needs a repaired
 Hamiltonian path because its shortcut can face backward.
 
+Deletion is not reversible, so the whole tower is not itself a groupoid.  The
+accurate phrase is **groupoid-valued recursion**: complement, reflection, and
+isomorphism transport form the reversible core inside a fixed stratum;
+deletion and certified quotient/descent are functors or spans between strata.
+A decreasing condensation graph must be proved, not inferred from the word
+“recursion.”
+
 This suggests a recursive definition rather than another hand-picked tuple.
 Take the operation alphabet `{d_top,d_bottom,tau,sigma}` and a declared set of
 terminal observations.  Two marked states have the same exact address only
@@ -426,6 +437,66 @@ when every legal continuation word produces the same observations.  This is a
 finite-state/Nerode description at a bounded level.  Weighted line-WL is one
 computable approximation to it, but the non-Markov audit proves that node
 identity alone is not stable under continuations.
+
+The first exact minimization makes that definition operational.  On literal
+lines in `L_3 disjoint-union ... disjoint-union L_7`, refine a chosen current
+observation until it is stable under top deletion, bottom deletion, and
+reflection.  At `n=7` the labelled-face cell counts are
+
+```text
+node boundary   6076 -> 16359       Xi             16031 -> 16382
++ colour        6126 -> 16359       Xi+sheet+delta 16270 -> 16382
++ loop sheet    6128 -> 16359       phase address  16384 -> 16384
++ exact defect  8091 -> 16359       literal line   16384 -> 16384.
+```
+
+The first four stable partitions are equal, as are the two `Xi` partitions.
+This is a useful warning about the word “preserve.”  Colour, class sheet, and
+defect are mathematically different coordinates with different algebraic
+laws, but for this bounded labelled-face observation language they add no
+line separation beyond the bounded future tree of node boundaries.  They cannot
+be discarded globally: changing the operation alphabet, asking a direct
+colour/defect theorem, changing the face-successor semantics, moving to
+`n>=8`, or pulling back to metric LRC states changes the equivalence relation.  Necessary
+information is therefore not an absolute list of fields.  It is a congruence
+relative to `(operations, terminal predicates, gauge)`.
+
+Only two `Xi` collision pairs survive.  Both are phase-torsor deck pairs:
+
+```text
+0x12ca/0x12cb over face lines (53,150),
+0x146c/0x146d over face lines (150,163).
+```
+
+In each pair the exact reflection defect is the same (`0x06a6`) and the
+coherent phase bit is opposite.  The deck move is the upper apex flip, and
+that coordinate is fixed by reflection, so `1+sigma` cannot see it.  This is
+the precise reason the defect tower cannot replace the phase torsor.  The four
+lines form a commuting involution square: phase swaps within the displayed
+pairs, while reflection swaps the two pairs.  They are parallel black lines
+between one non-self-converse node, whose two ordinary class sheets contain
+151 tiling presentations each, and a self-converse node with 57 presentations.
+Phase changes only the marked-path presentation inside fixed ordinary endpoint
+classes; reflection exchanges the two 151-element converse sheets.  The
+class-identifying relabelling for each phase pair is unique, fixes both path
+endpoints, and cycles all five interior vertices.  The two interior 5-cycles
+are reflection-conjugate.  This reframes the next search: classify endpoint-
+fixed interior permutations that absorb simultaneous complement of both
+faces.  Such a permutation is an algebraic witness for phase blindness and
+may be enumerable without constructing the full next-size node atlas.
+
+This suggests a better recursive ontology: node data are observations, lines are
+continuation states, tilings are witnesses, and phase is descent data gluing
+the two face witnesses.  The object is organized by what operations can be
+performed, not by which marks happen to appear in one graph drawing.
+
+If top and bottom successor cells are retained only as an unordered multiset,
+the same carriers give `8310,8310,8310,8311,16380,16380,16384,16384` cells.  This
+does not quotient current states by reflection, and ordered fields already in
+the current `Xi` observation stay ordered; it changes only the refinement of
+future branches.  The large loss shows that named future face order is real
+transport data unless the target theorem is invariant under exchanging the
+two ends.
 
 The S9 carrier Tournament Analysis makes the information comparison explicit.
 Its vertices are
@@ -441,6 +512,20 @@ Hamiltonian path.  At `n=7` both tournaments are transitive with score
 histogram `{0:1,...,7:1}`, zero directed triangles, singleton SCCs, and one
 Hamiltonian path, but the gauges flip 18 edges.  This is diagnostic telemetry,
 not a replacement for the three-sorted relation.
+
+The continuation-carrier tournament uses node boundary, colour, sheet,
+defect, `Xi`, `Xi+defect`, phase, and exact line as vertices.  Its pairwise
+observable is the sign of the difference in `n=7` line pairs separated after
+stable labelled refinement; total separation and separation per cell are the
+switches.  Both tournaments are transitive with score histogram
+`{0:1,...,7:1}`, no directed
+triangles, singleton SCCs, and one Hamiltonian path, but they flip 20 edges.
+Total retention orders the unique path
+`phase, exact, Xi, Xi+defect, node, colour, sheet, defect`; economy follows
+the declared carrier order.  Transitivity is forced by scalar ranking and is
+therefore a consistency check.  The switch reversal is still the point: a
+nearly exact recursive quotient can be more economical than an exact name,
+but only the latter closes the final phase pairs.
 
 ## What this changes about the four-coordinate LRC object
 
@@ -472,15 +557,66 @@ simple support
 The hierarchy is recursive: what must be retained at one level is exactly the
 information needed to make the next intended operation well-defined.
 
+## Cross-thread convergence: component obligations and three holonomies
+
+The independently developed LRC14 component-obligation synthesis reaches the
+same preservation law from circle geometry rather than tournament tilings.  It
+proposes a typed packet
+
+```text
+(P,C,O,I;A,M,W,K)
+```
+
+consisting of a normalized packet/chart, a safe component or endpoint germ,
+active obligations, their labelled incidence, and arithmetic, metric,
+transport, and proof decorations.  This is not yet a minimality theorem, but
+it identifies what the metagraph atlas must sit **over**.  The correspondence
+is structural:
+
+```text
+merged node M_n          quotient chart/base P,
+tiling half-edge X_n     marked observer/witness transport W,
+line instance L_n        reversible event/obligation pairing,
+line-node incidence      component-obligation incidence I,
+defect and phase         arithmetic/transport decorations A,W,
+continuation observation proof predicate and residual debt K.
+```
+
+The comparison also corrects an ambiguity.  “Holonomy” has at least three
+typed meanings:
+
+```text
+h_class : same or converse tournament class sheet of a merged loop,
+h_red   : reduced token/sheet return modulo the declared gauge,
+Delta_M : metric translation of the component and endpoint phases.
+```
+
+THM-796 computes `h_class`.  THM-794 shows why the other two cannot be merged:
+a full packet can have trivial reduced return while translating its metric
+base by a nonzero amount.  A closed loop in a finite collision automaton need
+not be a closed loop in the LRC suspension.
+
+This leads to a sharper quotient test.  Before discarding a field, prove one
+of the following: the theorem-facing observation is constant on its fibres;
+the field is reconstructed by retained transport; a metric/Fourier/Hall/dual
+certificate annihilates its effect; every legal continuation has the same
+terminal result; or the ambiguity is emitted as a named residual obligation.
+This five-way rule unifies the metagraph stalk, controlled forgetting, and the
+component-obligation program without pretending that any one finite quotient
+is the underlying four-coordinate object.
+
 ## Reproducibility
 
 Run:
 
 ```bash
 python3 04-computation/merged_metagraph_recursive_three_sort_audit_codex_S2.py --stdout
+python3 04-computation/three_sorted_metagraph_recursion_codex_S9.py
+python3 04-computation/three_sorted_metagraph_continuation_minimization_codex_S11.py --stdout
+node 04-computation/test_tournament_tiling_explorer_line_api_codex_S9.js
 ```
 
-The verifier consumes the exact `n=3..7` address atlases, checks every tiling
-and line instance, verifies the general identities and formulas above, and
-writes
-`05-knowledge/results/merged_metagraph_recursive_three_sort_audit_codex_S2.out`.
+The independent verifiers consume the exact `n=3..7` address atlases, check
+every tiling and line instance, verify the general identities and formulas
+above, and write the S2, S9, and S11 result artifacts.  The JavaScript test
+checks the browser's literal tiling/line/node inverse API through `n=6`.

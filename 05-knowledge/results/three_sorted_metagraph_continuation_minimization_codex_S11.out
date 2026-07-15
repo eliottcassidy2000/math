@@ -1,0 +1,66 @@
+THM-796 BOUNDED CONTINUATION MINIMIZATION
+states are literal complement lines at n=3..7; operations are top/bottom deletion and reflection
+labelled gauge distinguishes faces; unordered-successor gauge retains their cell multiset
+carriers: plain=node boundary; colour=plain+blue/black; sheet=colour+loop sheet;
+defect=sheet+exact reflection defect; xi=joint upper/two-face node-colour cell;
+xi_defect=xi+sheet+defect; phase=two lower lines+coherent bit for n>=5 (exact fallback below);
+exact=literal line; unordered mode unorders successor cells, not ordered fields already in O
+
+N=7 CARRIER REFINEMENT
+carrier initial[cells,max,excess-lines,pairs] labelled[rounds,cells,max,excess-lines,pairs] unordered[rounds,cells,max,excess-lines,pairs]
+plain [6076, 16, 10308, 20188] [3,16359,4,25,28] [2,8310,4,8074,8104]
+colour [6126, 16, 10258, 20038] [3,16359,4,25,28] [2,8310,4,8074,8104]
+sheet [6128, 16, 10256, 20022] [3,16359,4,25,28] [2,8310,4,8074,8104]
+defect [8091, 6, 8293, 8974] [3,16359,4,25,28] [2,8311,4,8073,8100]
+xi [16031, 4, 353, 387] [2,16382,2,2,2] [2,16380,2,4,4]
+xi_defect [16270, 4, 114, 117] [2,16382,2,2,2] [2,16380,2,4,4]
+phase [16384, 1, 0, 0] [0,16384,1,0,0] [0,16384,1,0,0]
+exact [16384, 1, 0, 0] [0,16384,1,0,0] [0,16384,1,0,0]
+
+BASE OBSERVATION BY SIZE (initial -> stable labelled / stable unordered-successor cells)
+n plain colour sheet defect xi xi_defect phase exact
+3 1->1/1 1->1/1 1->1/1 1->1/1 1->1/1 1->1/1 1->1/1 1->1/1
+4 3->3/3 3->3/3 3->3/3 3->3/3 4->4/4 4->4/4 4->4/4 4->4/4
+5 20->30/20 20->30/20 20->30/20 20->30/20 32->32/32 32->32/32 32->32/32 32->32/32
+6 183->506/270 187->506/270 189->506/270 251->506/270 509->512/511 509->512/511 512->512/512 512->512/512
+7 6076->16359/8310 6126->16359/8310 6128->16359/8310 8091->16359/8311 16031->16382/16380 16270->16382/16380 16384->16384/16384 16384->16384/16384
+
+N=7 COLLISION RESIDUA
+stable labelled plain collision_cell_histogram={2: 22, 4: 1}
+partition equalities: labelled plain=colour=sheet=defect; unordered plain=colour=sheet;
+both gauges xi=xi_defect and phase=exact
+xi stable labelled collision_cells=2
+  cell 1: mask=0x12ca phase=(7, 53, 150, 1) defect=0x06a6 ; mask=0x12cb phase=(7, 53, 150, 0) defect=0x06a6
+  cell 2: mask=0x146c phase=(7, 150, 163, 1) defect=0x06a6 ; mask=0x146d phase=(7, 150, 163, 0) defect=0x06a6
+xi stable unordered collision_cells=4
+  cell 1: mask=0x064e phase=(7, 151, 50, 1) defect=0x14aa ; mask=0x12e5 phase=(7, 50, 151, 0) defect=0x14aa
+  cell 2: mask=0x064f phase=(7, 151, 50, 0) defect=0x14aa ; mask=0x12e4 phase=(7, 50, 151, 1) defect=0x14aa
+  cell 3: mask=0x12ca phase=(7, 53, 150, 1) defect=0x06a6 ; mask=0x12cb phase=(7, 53, 150, 0) defect=0x06a6
+  cell 4: mask=0x146c phase=(7, 150, 163, 1) defect=0x06a6 ; mask=0x146d phase=(7, 150, 163, 0) defect=0x06a6
+residual labelled Xi square:
+  rho=(12ca 12cb)(146c 146d), reflection=(12ca 146c)(12cb 146d); involutions commute
+  all four are black cross-lines on nodes (264 non-SC,270 SC), defect=0x06a6
+  endpoint class-sheet fibre sizes at those nodes are 151,151 and 57
+  rho changes the marked-path presentation inside fixed ordinary endpoint classes;
+  reflection exchanges the two 151-element converse sheets at node 264
+  unique rho isomorphisms fix path endpoints and are reflection-conjugate 5-cycles
+  interior permutations=((0, 2, 3, 5, 1, 4, 6), (0, 2, 5, 1, 3, 4, 6))
+
+TOURNAMENT ANALYSIS (stable labelled n=7 partitions)
+carriers=('plain', 'colour', 'sheet', 'defect', 'xi', 'xi_defect', 'phase', 'exact')
+separated_pairs=(134209508, 134209508, 134209508, 134209508, 134209534, 134209534, 134209536, 134209536)
+retention score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} directed_3cycles=0 SCCs=[1, 1, 1, 1, 1, 1, 1, 1] HP=1
+economy score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} directed_3cycles=0 SCCs=[1, 1, 1, 1, 1, 1, 1, 1] HP=1
+edge_flips=20
+tie_order=('plain', 'colour', 'sheet', 'defect', 'xi', 'xi_defect', 'phase', 'exact')
+retention_Hamiltonian_path=('phase', 'exact', 'xi', 'xi_defect', 'plain', 'colour', 'sheet', 'defect')
+economy_Hamiltonian_path=('plain', 'colour', 'sheet', 'defect', 'xi', 'xi_defect', 'phase', 'exact')
+
+PRESERVATION VERDICT
+for each carrier, stable labelled = its coarsest stable refinement on bounded states n=3..7
+for each carrier, stable unordered = coarsest branching-multiset refinement on those states
+unordered refinement retains O and unary reflection; it is not a state/reflection quotient
+phase and exact induce singleton partitions; n=3,4 use an exact-mask phase fallback
+the tested combinatorial line state does not encode metric phase, owners, h_red, or Delta_M
+
+ALL ASSERTIONS PASSED

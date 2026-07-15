@@ -63276,3 +63276,53 @@ and reflection, comparing continuation-complete cells with rooted weighted
 line-WL.  For LRC14 the metagraph remains a constructible atlas over the
 `(u,t,c,lambda)` suspension; metric width, owners, endpoint side, scale,
 residue, wall chronology, inverse winding, and carry remain stalk fields.
+
+During close-out, integrated the concurrent S9 theorem rather than replacing
+it: the final THM-796 also retains the explicit `C2` line-phase address,
+primitive weighted face coordinate, universal two-face `Xi` tensor, distinct
+strong-lumpability audit, six-atom three-colour law, explorer inverse APIs, and
+the HYP-6865 Smith-voltage cross-coordinate.  The S9 and S2 tables measure
+different quotients and now appear side by side.
+
+The later S10 component-obligation reflection supplied one final correction.
+The fixed-size metagraph symmetry is a groupoid, but deletion/descent is a
+noninvertible functor or span, so the tower is groupoid-valued recursion.  It
+also separates class-sheet holonomy, reduced token/sheet return, and metric
+component translation.  THM-796 computes the first only; the other two remain
+LRC stalk fields, since THM-794 has trivial reduced return with nonzero metric
+translation.
+
+### S11 continuation minimization
+
+Executed MPA-32's forward bounded experiment rather than leaving the Nerode
+proposal conceptual.  The new verifier minimizes, for each initial carrier,
+the line partition on `L_3 disjoint-union ... disjoint-union L_7` under named
+top/bottom deletion and reflection, plus an unordered-successor semantics.
+At `n=7`, labelled node boundary refines `6076->16359` cells and `Xi`
+`16031->16382`.  The stable node partitions obtained after adding colour,
+loop sheet, or exact defect are equal; `Xi` and `Xi+sheet+defect` are also
+equal.
+
+The remaining labelled `Xi` ambiguity is exactly two phase-torsor deck pairs:
+`0x12ca/0x12cb` over lower lines `(53,150)` and `0x146c/0x146d` over
+`(150,163)`.  Both have defect `0x06a6`; the coherent phase bit separates
+them.  This is structural rather than numerical: the deck operation flips the
+reflection-fixed apex, which `1+reflection` annihilates.  Hence the defect
+tower and the phase torsor are transverse information channels.  The four
+lines form one commuting phase/reflection square of parallel black edges from
+a non-self-converse two-sheet node (`151+151` tiling presentations) to a
+self-converse node (`57` presentations); phase moves only the marked-path
+witness inside fixed ordinary endpoint classes.  Each class-identifying
+isomorphism is unique, fixes both path endpoints, and cycles the five interior
+vertices; reflection conjugates the two 5-cycles.  This supplies a cheaper
+next-size search target: endpoint-fixed interior permutations absorbing the
+phase complement, before a full `n=8` class atlas.
+
+The unordered-successor variant retains `8310` node-boundary and `16380` `Xi`
+cells.  It keeps ordered fields in the current observation and unary
+reflection, so it is not a state reflection quotient.  An independent audit
+replayed the output byte-for-byte and found no arithmetic or transition bug;
+wording was tightened to state that minimization is carrier-relative and
+bounded to `3<=n<=7`.  The continuation-carrier tournaments use information
+carriers, not runners, and flip 20 edges between total-retention and
+separation-per-cell scalar rankings.
