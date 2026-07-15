@@ -208,15 +208,17 @@
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
   literal strict-safe endpoint words make the three ordered faces injective.
-  The final residual itself still has fourteen collision pairs.  The first
-  `H1.5` probe shows that the codec lattice is not a chain.  Joining `H1` to
+  The final residual itself still has fourteen collision pairs. An
+  **UNREPLAYED EXPLORATORY** `H1.5` probe (no stored artifact) reports that the
+  codec lattice is not a chain. Joining `H1` to
   ordered residue-owner words (`EO`) makes the three-face join injective, but
   the full codec still has one exact-`M`-mixed doubleton: replacing speed `14`
   by `27` in face `1245` preserves the residue-owner word while a height-one
   insertion gives `M=3/31` versus `4/29`.  Across heights `1..500` the child
   owner words agree only at `1,6,7,8`, literal components never agree, and no
-  residual becomes empty.  Thus EO is non-Markov for geometry and exact `M`,
-  but this is not yet a tight/loose Nerode liar.  Continue with actual
+  residual becomes empty. If reproduced, this would show that EO is non-Markov
+  for geometry and exact `M`, but not yet a tight/loose Nerode liar. Do not use
+  these figures as a theorem until a replay artifact is stored. Continue with actual
   multi-comb terminal languages rather than treating either bounded face
   injectivity or this quantitative liar as a full-box theorem.  A runner
   tournament is telemetry: THM-820's
@@ -233,10 +235,12 @@
   arbitrary lifts.  Extend common-sheet exclusion above order twelve, then run
   exact residual-comb erosion on the all-order-three and mixed order-one
   survivors; do not promote scalar attenuation or the coset cycle to a metric
-  closure.  THM-816's discrepancy algebra extends formally to five combs as
-  `B_5(E)=110K/(39L)`, with root first-speed bounds `349..678`, but 96 parity
-  contexts already produce 5,848 first-level states and one easy context has
-  breadth `1,45,1262,20703` through depth three.  The finite computation needs
+  closure. An **UNREPLAYED EXPLORATORY** feasibility note extends THM-816's
+  discrepancy algebra formally to five combs as `B_5(E)=110K/(39L)` and reports
+  root first-speed bounds `349..678`, 5,848 first-level states across 96 parity
+  contexts, and breadth `1,45,1262,20703` through depth three in one context.
+  Regenerate and store this probe before treating those figures as certified.
+  The finite computation needs
   endpoint masks, memoized residuals, or symmetry reduction before a direct
   recursion is credible.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
@@ -268,14 +272,15 @@
   pair-indexed circular cell/component sum arc. Its fixed `(13,5)` census gives
   mixed fibres for every tested coarser positional/width/owner shadow. Seek a
   height-independent contradiction or decreasing invariant on those signed
-  sum arcs with owner ancestry. At the fixed ratio `(13d,5d)`, THM-824 replaces
-  the full symmetric-return conjunction by the exact monotone radius budget
-  `rho_(C,d)(E)+rho_d(R)<=2/169`; prove that inequality fails for every
-  admissible core (equivalently, that its signed slack is negative). For
-  arbitrary odd ratios, first classify target-component
-  symmetric switches before proposing another scalar.  THM-816 has already
-  removed the quartic `s=3` equality shell; the remaining higher-sheet work is
-  outside that special four-exception coset and still lives on loose-set
+  sum arcs with owner ancestry. On the common `(13d,5d)` ratio, first try to
+  prove that every admissible arithmetic
+  core violates THM-824's scalar radius budget; in parallel determine which
+  other odd exception ratios have a separated equal-radius target and hence
+  the same no-switch factorization.  A proof only for the global symmetric
+  union must still be joined to the nonsymmetric satellite obligations.
+  THM-816 has already removed the quartic `s=3` equality shell; the remaining
+  higher-sheet work is outside that special four-exception coset and still
+  lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor

@@ -579,14 +579,16 @@ why a residue owner without its denominator chart cannot be a transport state.
 Connecting these arithmetic witness owners to the signed cell endpoints is a
 new fibre-product obligation, not something THM-829 assumes.
 
-On the shallow fibre, the exploratory `H1.5` owner-incidence word exhibits the
-same separation.  Three ordered faces reconstruct every bounded row, while a
+On the shallow fibre, an unreplayed exploratory `H1.5` owner-incidence note (no
+stored artifact) reports the same separation. Three ordered faces reportedly
+reconstruct every bounded row, while a
 single full word can preserve owner residues through a named insertion and
 still change the exact maximum from `3/31` to `4/29`.  Adding child-incidence
 data makes the bounded codec injective and removes compression.  The first
 off-diagonal `A/B/C=414/4/0` split of THM-818 says why: attachment roles are
 oriented charts, not an unordered cover.  THM-825's quadratic positional
 moments give a literal static chart through `n=15`, but not its transition
-maps.  The surviving object is consequently a ramified cover together with a
+maps. The H1.5 report is not a theorem dependency until reproduced. The
+surviving object is consequently a ramified cover together with a
 family of operation-dependent coarse moduli spaces, not one universal
 tournament quotient.

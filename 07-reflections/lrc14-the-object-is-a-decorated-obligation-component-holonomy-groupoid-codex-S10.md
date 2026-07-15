@@ -1242,7 +1242,8 @@ columns, and it explicitly forgets the LRC continuation predicate.  The right
 future join is therefore a fibre product between the metric endpoint atlas and
 the primitive column/Bezout-row transport, not replacement of either one.
 
-The first `H1.5` experiment makes the shallow side equally non-linear.  Let
+An unreplayed exploratory `H1.5` experiment (recorded without a stored artifact)
+suggests that the shallow side is equally non-linear. Let
 `EO` join `H1` to the ordered residue-owner word of every residual component.
 Three ordered faces make EO injective on the height-two bank, but one full EO
 doubleton mixes exact maxima.  Replacing speed `14` by `27` on face `1245`
@@ -1256,11 +1257,12 @@ there is no linear ladder
 H1 < owner incidence < literal endpoints.
 ```
 
-There is a lattice of observations, each pure for different maps.  EO is
-coordinate-complete after three static restrictions but not Markov for exact
-geometry; EOI is Markov on the tested operations only by becoming literal.
-No tested continuation empties either liar residual, so terminal Nerode
-impurity remains open.
+If reproduced, there is a lattice of observations, each pure for different
+maps. EO would be coordinate-complete after three static restrictions but not
+Markov for exact geometry; EOI would be Markov on the reported operations only
+by becoming literal. No reported continuation empties either liar residual, so
+terminal Nerode impurity remains open. None of these H1.5 claims is a theorem
+dependency until a replay artifact is stored.
 
 Two live-main results reinforce the distinction.  THM-818's canonical
 first-off-diagonal relation splits by face role as `414/4/0`; unordered face

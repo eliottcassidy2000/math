@@ -63601,9 +63601,11 @@ component/obligation carrier is the proof state.
 Pulled and rebased repeatedly against the live research surface while working
 the remaining shallow and deep pieces in parallel.  The honest frontier is
 unchanged at the top level: the claimed uniform `q<=25` theorem is false and
-uniform emptiness of the `n=12` sporadic branch remains open.  This continuation
-proved a new deep compression theorem and sharpened two shallow computation
-targets without promoting either to branch closure.
+uniform emptiness of the `n=12` sporadic branch remains open. This continuation
+proved a new deep compression theorem and recorded two unreplayed shallow
+exploratory probes without promoting either to branch closure. The `H1.5` and
+five-comb figures below have no stored source/output artifact and are not
+canonical dependencies; they must be regenerated before theorem use.
 
 THM-824 identifies the fixed folded target exactly:
 
@@ -63634,10 +63636,11 @@ tournaments make this distinction visible: `radius_pair` is first in the
 evaluation gauge, owner-decorated inputs first in the transport gauge, with
 six edge flips; both rankings are transitive and are planning telemetry.
 
-The Hamming-five `H1.5` probe retained ordered endpoint-owner incidence and
-all face roles.  The codec lattice is not the expected linear ladder.  The
-join `EO=H1` plus residue-owner words has an injective ordered three-face join,
-yet its full observation has one exact-`M`-mixed doubleton:
+The unreplayed Hamming-five `H1.5` probe reportedly retained ordered endpoint-
+owner incidence and all face roles. It suggests that the codec lattice is not
+the expected linear ladder. The reported join `EO=H1` plus residue-owner words
+has an injective ordered three-face join, yet its full observation has one
+exact-`M`-mixed doubleton:
 
 ```text
 missing labels R=(1,4,5,6,12), face C=1245,
@@ -63647,20 +63650,21 @@ missing labels R=(1,4,5,6,12), face C=1245,
 A height-one insertion preserves the child owner word but splits `M=3/31`
 from `4/29`; at height two the owner words split and both maxima are `1/6`.
 Through heights `1..500`, owner words agree only at `1,6,7,8`, literal
-components never agree, and neither residual is empty.  A two-comb scan through
-500 also found no terminal split.  This proves that EO is non-Markov for exact
-geometry and exact `M`, not that it fails terminal tight/loose continuation
-equivalence.  Adding operation-indexed child incidence (`EOI`) is already
+components never agree, and neither residual is empty. A reported two-comb
+scan through 500 also found no terminal split. If reproduced, this would show
+that EO is non-Markov for exact geometry and exact `M`, not that it fails
+terminal tight/loose continuation equivalence. Adding operation-indexed child
+incidence (`EOI`) is reportedly already
 injective and supplies no compression.  The replacement-label tournament is
 also a liar checksum: increasing and decreasing gauges flip eight silent
 edges while both exact rows retain the same two live handoffs.
 
-The THM-816 discrepancy calculation extends algebraically from four to five
-combs as `B_5(E)=110K/(39L)`.  On the twelve directed flag roots it bounds the
-first new speed between 349 and 678.  This proves finiteness of each next
-branch but not practical closure: 96 parity contexts already have 5,848
-first-level states, and an easiest context grows with breadth
-`1,45,1262,20703` through depth three.  The next implementation should encode
+The unreplayed five-comb note extends the THM-816 discrepancy calculation
+formally from four to five combs as `B_5(E)=110K/(39L)`. It reports first-speed
+bounds `349..678` on twelve directed flag roots, 5,848 first-level states in 96
+parity contexts, and breadth `1,45,1262,20703` through depth three in one
+context. These figures are feasibility guidance, not a certified finite
+reduction. The next implementation should encode
 endpoint-cell masks, memoize residual equivalence, and quotient declared
 symmetries before attempting the final two combs.
 
@@ -63844,3 +63848,24 @@ does not transfer to the overlapping multi-scale bodies that remain here.
 Its `THM-826` identifier currently collides with the independently pushed B3
 deletion-deck theorem, so this session records the mathematical connection
 without using that identifier in the LRC14 dependency chain.
+
+Final fresh replay validation was byte-identical to every stored certificate.
+The SHA-256 matrix is:
+
+```text
+q<=25 refutation       97f4d43e54b8072b86275f602e8627e1f80b4af0ff092653ff4196009558bd22
+S105 bank              f9c40cd618eb10c4a96831d5f434977070114f65fb5c29d4e686c624cabde7a5
+THM-815 component      994b605c63f214e0752e760aff0edb8b37bb0288228e83e62627fbec252876c1
+THM-815 collar         f098acc358f534f4edf75e1affcaa03ff0bf9cda83f058d5fc86cfc984d2dca0
+THM-816 recursion      44139737be134ee0d2774b654617ff2ffb669a8685666c6594911a4f4869a1f3
+THM-816 endpoints      2d6acc01fe1a1d86b79c110513be2eac0905493197e862327976eefafb9f70b9
+THM-820 H5             f0c27f4f771a807624350dd8818480c76e849a5ae7ed88462a61851fda941b69
+THM-821 stalks         bc7b53c51792cd790c2ebeb77b1cf8142a996a7f4aa26d261bc2d66b24275e16
+THM-822 H5 height<=2  d08d0702d7a9b1f6c96f4889c68631de10ddfdefc0793ae32a9610ab98f2bf4a
+THM-823 common sheet   f9d2372dff0c80499f95229353970afb0f8aa22d981d34634a56a7ab1083a795
+THM-824 radius budget  7c2c4b124893f07659918f9da45903cee7fc93acfeacc0c5b2b8ec327a125e6b
+```
+
+The THM-822 C++ replay also agreed at `-O3` and under ASan/UBSan.  These
+validations certify the finite statements above; they do not promote the open
+H5 boxes, arbitrary lifts, or global n=12 branch to proved closure.

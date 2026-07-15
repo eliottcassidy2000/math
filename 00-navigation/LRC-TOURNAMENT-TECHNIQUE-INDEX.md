@@ -86,12 +86,14 @@ obligations, and proof-carrier interfaces.
   `H0` (labelled live relation) and `H1` (plus integer centres) coincide and
   mix exact `M`; literal endpoint stalks `H2` make the bounded three-face join
   injective, while the final residual alone still has fourteen collision
-  pairs.  The first `H1.5` probe shows that the codecs form a lattice, not a
-  chain: `EO=H1` joined to ordered residue-owner incidence has an injective
+  pairs. An **UNREPLAYED EXPLORATORY** `H1.5` probe (no stored artifact) reports
+  that the codecs form a lattice, not a chain: `EO=H1` joined to ordered
+  residue-owner incidence has an injective
   three-face join, yet its full word has one exact-`M`-mixed doubleton.  A
   height-one continuation preserves that owner word while splitting
-  `M=3/31` from `4/29`; no tested continuation empties either residual, so
-  this proves non-Markov exact geometry but not a terminal tight/loose liar.
+  `M=3/31` from `4/29`; no reported continuation empties either residual. If
+  reproduced, this would show non-Markov exact geometry but not a terminal
+  tight/loose liar. It is not a theorem dependency until a replay is stored.
   `EOI`, which adds operation-indexed child incidence, is already injective
   and gives no compression.  THM-818's canonical first-off-diagonal split
   `A/B/C=414/4/0` independently warns that face roles are ordered.  THM-825
