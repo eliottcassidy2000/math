@@ -4,7 +4,7 @@ title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph
 status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures, B3 continuation, one n9->n10 defect-bank transport, and its first closed lift/face words classified by THM-801/809/828/832/834/838/839/842/843/846; exact gap-tournament and half-defect carrier proved by THM-830
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-840, THM-842, THM-843, THM-846, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-830, THM-832, THM-833, THM-834, THM-838, THM-839, THM-840, THM-842, THM-843, THM-846, THM-849, THM-850, THM-851, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address

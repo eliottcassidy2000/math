@@ -288,7 +288,10 @@ reflection-fixed locus.
 1. **n10 codec preflight.**  Carry the rank-four sectors through the next
    relation join before building a full n9 atlas.  Retain second moments as
    the unconditional repair and test whether the residual kernel grows by
-   new position modes or by node-fibre continuation.
+   new position modes or by node-fibre continuation.  Share the resulting
+   node-coloured composition table with THM-851's independently reserved
+   coherent-refinement calculation; that thread asks for constant composition
+   numbers, while this one asks for preservation under a named lift.
 2. **Two-word CF operation semigroup.**  Compose two consecutive lift/face
    closed words.  Minimize the decorated 58-cell state separately for Q,
    coupled `bar P`, and each node marginal; record apex, seam, and theta-sheet
@@ -314,6 +317,18 @@ reflection-fixed locus.
   half-tiling; use even/odd recursion on the defect basis, not only cell count.
 - **HYP-3809 parity skeleton / even black graph:** test whether sector mass or
   cube degree refines black even-degree pairing.
+- **THM-849 black self-line obstruction (reserved):** if its n8 obstruction
+  survives audit, intersect its Klein-four realizer weights with THM-843's
+  218-node omitted cap rather than treating self-converse symmetry as a node
+  scalar.
+- **THM-850 chi-seven B3 charge (reserved):** test the proposed face weights
+  `(1,2,4) mod 7` on the eleven defect sectors and on the closed A/B/C words.
+  A residue law for face roles would be a new sidecar candidate for the
+  `A+B+C-D-E-F+G` recursion, but no link is assumed before its proof lands.
+- **THM-851 coherent node-coloured defect closure (reserved):** compare its
+  coarsest constant-composition refinement with the operation kernels of
+  THM-846.  Equitable composition and deterministic continuation are distinct
+  tests and may demand different minimal states.
 - **THM-805/826 Tutte-Farey profiles:** both succeeded by retaining labelled
   atoms before summing; use them as models for a fibre-valued generating
   function, not as a claim of direct equivalence.
