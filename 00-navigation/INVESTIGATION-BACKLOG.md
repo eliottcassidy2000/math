@@ -829,11 +829,15 @@
   fixed-`E_2` screen now closes the flood triangle `(5,6)`, `(5,7)`, `(6,7)`
   exactly.  Their completed-family containment shadows, three residual bases, and 260 exact
   one-speed sweeps close every completion containing `{8,...,14}` and at least
-  five small labels.  Every unresolved completion therefore has at most four
-  small labels and at least two speeds above `14`.  Eighteen whole
+  five small labels.  The thirteen residual four-small bases reduce by THM-732
+  to 1,788 positive one-external nodes and 29,183 finite exact pairs; all pairs
+  are positive, so every completion with at least four small labels is lonely.
+  Every unresolved completion therefore has at most three small labels and at
+  least three speeds above `14`.  Eighteen whole
   empty-obligation floods remain.  The Fano/`chi_7` audit organizes them but supplies no symmetry
-  quotient, so port the numeric screen edge by edge or prove a new monotone
-  transport inequality.
+  quotient.  The next direct vertices are the 22 unshadowed three-small bases;
+  alternatively port the numeric screen edge by edge or prove a new monotone
+  three-external-speed transport inequality.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
   phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
   and `lrc14_band_scale_quotient_codex_S1.py/.out`.

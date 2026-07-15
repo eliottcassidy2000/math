@@ -15,6 +15,8 @@ verification:
   - 05-knowledge/results/chi7_radon_carry_alias_codex_S15.out
   - 04-computation/lrc14_j4_flood_reroot_shadow_codex_S16.py
   - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
+  - 04-computation/lrc14_j4_next_anchor_shadow_frontier_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_next_anchor_shadow_frontier_codex_S16.out
   - 04-computation/lrc14_fano_flag_heawood_radon_repair_codex_S15.py
   - 05-knowledge/results/lrc14_fano_flag_heawood_radon_repair_codex_S15.out
 ---
@@ -528,6 +530,25 @@ at least five small labels is strictly lonely.  Hence the unresolved metric
 tail has at most four small labels and at least two speeds above `14`.  This is
 a genuine shadow reduction, not a closure of any remaining whole edge body;
 THM-741 stays `CLAIMED`.
+
+The three certified edges themselves form the triangle on `{5,6,7}`.  This
+point triple is noncollinear in the Fano plane (`5 xor 6=3`, not `7`), and its
+three edges lie on three different Fano lines.  Thus even the observed metric
+anchor cluster is a Heawood-hexagon index, not a Fano-line orbit.  Its exact
+containment shadow is governed by the ordinary graph condition
+`|K intersect {5,6,7}|>=2`: at four small labels it covers `22/35` sets and
+leaves `13`.  The next-anchor audit proves that all thirteen residual
+two-external-speed tails reduce to a bank of `29,183` exact interval measures,
+without invoking another Fano edge or symmetry.  All `29,183` are strictly
+positive.  The global minimum is `482219/29008980`, at
+`K=1235,(a,b)=(15,46)`, and there are zero covering failures.  A deterministic
+`65`-sample sparse/full interval replay has zero mismatches and manifest hash
+`ce5122bd547452c916da92da507ea449753d870883c004508bbc67394ef78a89`.
+Thus every completed family containing `H={8,...,14}` and at least four small
+labels is strictly lonely.  The unresolved metric tail has at most three
+small labels and at least three speeds above `14`; the number of uniformly
+closed whole edge bodies remains three.  Again the closure comes from exact
+interval geometry plus ordinary containment, not the Fano/Heawood carrier.
 
 Equations (20)-(21) still say only that operation depth four is the first
 depth with neutral repeated-role words beyond the balanced `ABC` word.  The

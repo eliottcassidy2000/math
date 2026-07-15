@@ -35,8 +35,13 @@ sector invisible to point-star plus Fano-triangle sums and are not symmetry
 quotients of the closed edge.  Re-root descent nevertheless gives a genuine
 completed-family transport: the three closed anchors plus 260 exact residual
 one-speed sweeps prove that every family containing `{8,...,14}` and at least
-five small labels is lonely.  Thus every unresolved flood completion has at
-most four small labels and at least two speeds above `14`.
+five small labels is lonely.  The remaining thirteen four-small bases admit a
+uniform THM-732 two-speed reduction to 29,183 finite exact pairs; every pair is
+strictly positive, with minimum `482219/29008980`, and 65 deterministic
+sparse/full replays agree.  Thus every family containing `{8,...,14}` and at
+least four small labels is lonely.  Every unresolved flood completion now has
+at most three small labels and at least three speeds above `14`; this direct
+shadow theorem still closes no fourth whole flood body.
 
 At the seven-comb wall the corrected Hunter state is now exact.  After
 subtracting independent single and pair densities, its lower bound is
@@ -108,7 +113,9 @@ Status cautions: THM-724's addendum closes its genuine single-killer case, but T
 on an unproved global far-element monotonicity statement; THM-741 remains explicitly `CLAIMED` for
 the 2002-body theorem.  Its edge-`(5,6)`, edge-`(5,7)`, and edge-`(6,7)`
 addenda are exact proved banks, not an unconditional assembly lemma for the
-other eighteen floods.
+other eighteen floods.  Its four-small addendum is also exact, but is a
+completed-family shadow theorem rather than a uniform closure of another
+root-edge body.
 
 ## 1. Status by piece
 

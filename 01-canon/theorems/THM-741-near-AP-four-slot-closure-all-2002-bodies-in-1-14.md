@@ -22,6 +22,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_flood_67_exact_codex_S15.out
   - 04-computation/lrc14_j4_flood_reroot_shadow_codex_S16.py
   - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
+  - 04-computation/lrc14_j4_next_anchor_shadow_frontier_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_next_anchor_shadow_frontier_codex_S16.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -264,4 +266,151 @@ singleton SCCs, and one Hamiltonian path, namely
 This quotient retains the one-speed proof horizon but destroys the interval
 comb and exact clearance.  Challenging the old vertex choice is essential:
 root edges are presentation charts glued by re-root triangles, not intrinsic
-vertices of a completed-family transport. ∎
+vertices of a completed-family transport.
+
+## Next-anchor set system and the four-small exact closure (codex-S16)
+
+The three certified anchors form the triangle
+
+```text
+A={56,57,67}
+```
+
+on `T={5,6,7}`; put `O={1,2,3,4}`.  A small-label set `K` is outside the
+containment shadow exactly when `|K intersect T|<=1`.  Therefore the exact
+shadow census by `k=|K|` is
+
+| `k` | all `K` | shadowed | unshadowed |
+|---:|---:|---:|---:|
+| 2 | 21 | 3 | 18 |
+| 3 | 35 | 13 | 22 |
+| 4 | 35 | 22 | 13 |
+| 5 | 21 | 18 | 3 |
+| 6 | 7 | 7 | 0 |
+
+Indeed the unshadowed count is
+`C(4,k)+3 C(4,k-1)`.  This makes the marginal value of a new edge completely
+explicit.  For an `OO` edge inside `{1,2,3,4}`, its gains in the five rows
+`k=2,...,6` are
+
+```text
+C(2,k-2)+3 C(2,k-3) = (1,5,7,3,0),                       (B3)
+```
+
+whereas for an `OT` edge the gains are
+
+```text
+C(3,k-2) = (1,3,3,1,0).                                  (B4)
+```
+
+Thus every `OO` edge has the maximum possible four-small gain `7`, versus
+`3` for every `OT` edge.
+
+The low-CPU verifier also computes exact root, `E1`, and `E2` data without
+entering any `v3` tree.  Ordering first by four-small gain and then by the
+exact `E2` node count gives
+
+```text
+OO: 34:62282, 24:78826, 23:105089, 14:120308,
+    13:128042, 12:150592;
+
+OT: 47:21428, 37:25232, 45:32118, 35:37872,
+    27:41163, 46:43067, 36:45861, 17:48818,
+    25:60258, 15:71554, 26:78388, 16:100967.               (B5)
+```
+
+For the bicriterion `(four-small gain high,E2 low)`, the single-edge Pareto
+frontier is exactly `{34,47}`.  If the next computation must close a whole
+flood edge, `(3,4)` is therefore the coverage-first choice: it has gain `7`
+and the smallest `E2` bank, `62,282`, among all gain-seven edges.  This is a
+proof-work recommendation, not a proof that its deeper tree is smallest.
+
+There is a stronger no-go against running that whole body merely to clear the
+four-small stratum.  For each of the `13` presently unshadowed four-sets, put
+`P=H union K`; two external speeds `15<=a<b` remain.  If `G(P)` has `r`
+components and measure `m`, choose the least `V` with
+
+```text
+2/V < 5m/(S2*r).                                          (B6)
+```
+
+For `a,b>=V`, two applications of THM-732 leave at least
+
+```text
+5m/7-(S2*r/7)(1/a+1/b)>0.
+```
+
+For each `15<=a<V`, compute `G(P+a)` exactly, with component count `r_a` and
+measure `m_a`.  Then THM-732 closes every
+
+```text
+b > S2*r_a/(6m_a),                                        (B7)
+```
+
+leaving only the integer pairs below that cap for exact evaluation.  Every
+one of the `1,788` intermediate `a` nodes has `m_a>0`.  The finite obligations
+are
+
+```text
+K:     1234 1235 1236 1237 1245 1246 1247 1345 1346 1347 2345 2346 2347
+pairs: 5793 4137 3295 2263 1832 2752  971 2476 2209 1223  884  938  410,
+```
+
+for exactly `29,183` candidate pairs.  Exact rational interval subtraction
+finds all `29,183` strictly positive, with zero covering failures.  The global
+minimum is
+
+```text
+482219/29008980
+```
+
+at `K=1235`, `a=15`, `b=46`, i.e. for the family
+`{1,2,3,5,8,9,10,11,12,13,14,15,46}`.  As an independent kernel check, five
+flat-index quantiles in each of the thirteen `K`-banks (`65` samples total)
+were replayed using full interval subtraction instead of the sparse measure
+path.  All `65` agree exactly; the canonical sample manifest has SHA-256
+
+```text
+ce5122bd547452c916da92da507ea449753d870883c004508bbc67394ef78a89.
+```
+
+Consequently:
+
+> **Four-small shadow.** Every 13-speed family containing
+> `H={8,9,10,11,12,13,14}` and at least four labels from `{1,...,7}` is
+> strictly lonely.
+
+Together with the containment triangle, this closes all `35` four-small
+completed families uniformly over their two unbounded external speeds.  The
+unresolved flood tail is now confined to at most three small labels,
+equivalently at least three speeds above `14`.  This closes no additional
+whole flood body: exactly three of the `21` literal edges are still certified
+uniformly, and eighteen remain.
+
+If two more `OO` anchors were desired for the smaller-label frontier, the
+three perfect-matching pairs have combined exact `E2` counts
+
+```text
+12+34:212874,       13+24:206868,       14+23:225397;
+```
+
+the matching `(13,24)` is smallest by this first-layer proxy.
+
+Tournament Analysis uses the `18` unresolved root edges only as proof-job
+vertices.  Since the four-small stratum is now closed directly, the pair
+observable is the lexicographic vector
+`(Delta gain_3,Delta gain_4,-Delta E2)`; orient toward larger gain and then
+smaller `E2`, with lexicographic edge order for a true tie.  It is transitive, with score
+histogram `{0,...,17}:1`, no directed 3-cycles, eighteen singleton SCCs,
+`81` flips against the raw lex gauge, and one Hamiltonian path, beginning
+
+```text
+34 -> 24 -> 23 -> 14 -> 13 -> 12 -> 47 -> ... -> 16.
+```
+
+This scheduler retains containment gain and first-layer work but destroys
+`v3` geometry, bottom margins, and final-family identity.  The next direct
+frontier has the `22` unshadowed three-small `K`-bases as vertices; runners,
+Fano flags, and root charts discard that final-family quotient.  If a whole
+edge must be run next, `(3,4)` remains the coverage-first choice: it gains five
+three-small sets and has the least `E2` count among all gain-five edges. ∎

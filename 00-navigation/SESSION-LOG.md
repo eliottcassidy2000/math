@@ -1,3 +1,42 @@
+## codex-2026-07-15-S16 continuation -- exact four-small shadow and c=3 depth-two metric census
+
+HONEST VERDICT: the global `n=12` sporadic branch remains open.  Two finite
+frontiers nevertheless moved exactly.  For the primitive scale-three
+Hamming-six bank, all 1,504 arithmetic contexts have now been evaluated
+through metric depth two.  The depth ledger is
+`1,504,146,912,14,992,263`; no prefix covers, exactly one depth-two lane is
+cap-dead, and 14,992,262 reach depth three.  The unique dead certificate is
+context 1448, insertions `14,38`, longest component `115/5434`, cap `63`,
+least future speed `70`.  An independent closed-danger reconstruction agrees.
+The logical second layer has 4,307,561 literal `(R,x1,x2)` geometries, a
+3.48045-fold execution cache but not a proof-state quotient.  Raw depth-three
+pilots project 568.6M--1.426B nodes and 2.33--12.65 uncached CPU-hours; three
+light full-depth pilots gate more than 99% at depth three and die by depth
+five.  The next safe computation is geometry-batched depth three, not a blind
+billion-node run.
+
+For the `j=4` flood tail, the exact anchor triangle `{56,57,67}` shadows 22 of
+35 four-small bases.  THM-732 reduces each of the thirteen residual bases to a
+finite two-external-speed bank.  All 1,788 one-external nodes are positive and
+all 29,183 remaining exact rational pair measures are strictly positive; the
+global minimum is `482219/29008980` at `K=1235,(a,b)=(15,46)`.  Sixty-five
+deterministic sparse/full interval replays agree exactly.  Hence every family
+containing `{8,...,14}` and at least four labels from `{1,...,7}` is lonely.
+The unresolved completed-family tail now has at most three small labels and at
+least three speeds above 14.  This closes no additional whole root body:
+THM-741 remains `CLAIMED`, with exactly 3 of 21 flood bodies proved and 18
+open.
+
+The conceptual synthesis is an operation-congruence test: a proposed quotient
+must intertwine every legal labelled transition and retain the terminal
+predicate.  H-drift passes after the Mobius radial change of variable;
+Farey/toothpick totals and the proposed black self-line equality do not.  The
+`chi_7`/Fano carrier is an atlas with carry and Heawood-cycle sidecars, while a
+Kakeya needle needs offset, owner, sheet, component incidence, future ray, and
+chronology.  Tournament vertices were challenged throughout: root edges and
+arithmetic lanes are useful job schedulers, whereas literal components plus
+labelled future languages remain the proof carrier.
+
 ## codex-2026-07-15-S16 continuation -- flood re-root descent closes the five-small shadow
 
 THM-741 remains `CLAIMED`: only two of its 21 whole flood bodies were exact at
