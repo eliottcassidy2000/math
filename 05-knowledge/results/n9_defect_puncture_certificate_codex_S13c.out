@@ -1,0 +1,30 @@
+THM-839 N=9 DEFECT PUNCTURE CERTIFICATE / THM-828 FULL REPLAY
+R8 rows/offdiag=5997416/3900264 H support/max=876512/26
+L[d] support/max=249149/5360 syndromes(total/nonzero)=16384/16383
+shard=0/1 processed=16383
+AC matches=9540 B-kernel=636 upper-colour=636
+D support face-pair/AC/B/full=319/45/16/11 max L_A/L_C/C-bucket/AC-per-D=4104/4104/16/7944
+S2 prefix tau3,tau4,tau5,tau6,tau7,tau8,fixed9=636,636,88,82,68,58,58
+full witnesses=58 endpoints=116 reflection-fixed-pairs=58 pair-FNV1a64=0x53b4b074be8ae851
+face-difference-nonzero ABC=111:58,101:0
+pure-black UABC=KKKK=58 three-cross=58 distinct-six-node-triples=58
+D multiplicities=192486:6,8c2c0c:2,95088a:2,11b4600:2,18e4e8a:4,1976a0c:4,4483414:4,4511092:2,4c41818:26,5c67a9e:2,5df5e18:4, weights=8:44,12:8,16:6, first-M1 tau5/tau6/tau7=38/12/8 J-vectors=11 zero-sum/clock=42/8 witness-table=rederived
+reflection-defect span rank=4 occupied/missing=11/4 missing=1026286,4dd3c9e,54a5692,5537214
+occupied-cube graph edges/diameter=14/5 degrees=1:1,2:4,3:5,4:1 coordinate-edges=4,3,3,4
+missing-sector gates d:LA/LC/AC/B/S2=1026286:0/0/0/0/0,4dd3c9e:8/8/4/4/0,54a5692:1028/1028/7944/504/0,5537214:12/12/4/4/0,
+post-B parity bases/tests/chi-low-high-equal/upper-black=636/1810/1810/636
+reflection action pointwise/swap-fixed/cycle-points/cycles=0/388/248/124 raw-S2-equal fixed/cycles=58/0
+face puncture 1026286 dA/dB/dC=84883/1946/204c5 L_A/L_B/L_C=0/4144/0
+puncture 4dd3c9e B/prefix/chi/killer=4/[4,4,4,4,4,0,0]/1110x4/tau8 lo=0010002 hi=0100080 fixed/cycle=4/0
+puncture 54a5692 B/prefix/chi/killer=504/[504,504,4,4,0,0,0]/000x500+100x4/tau7 lo=0020400 hi=1080000 fixed/cycle-points=256/248
+puncture 5537214 B/prefix/chi/killer=4/[4,4,4,4,0,0,0]/100x2+101x2/tau7 lo=0020004 hi=1002000 fixed/cycle=4/0
+black curvature tuple-preserved/Smith-wall=58/58 q-pairs=(0,0):13,(0,1):5,(0,2):8,(1,1):5,(1,2):2,(1,3):2,(2,3):6,(3,3):3,(3,4):2,(3,5):10,(4,5):1,(5,7):1,
+raw-codec fibres singletons/doubletons/cells/excess/max=134217612/58/134217670/58/2
+TOURNAMENT ANALYSIS vertices=11 occupied reflection-defect sectors
+  observable=(first skew layer,Hamming weight,fibre multiplicity); switches=structural/empirical; tie-path=hex D
+  both gauges: score histogram 0..10 once, C3=0, SCC=1^11, Hamiltonian paths=1; edge flips=22
+PUNCTURE TOURNAMENT ANALYSIS vertices=4 proof obligations
+  observable=(gate kind,killer layer,B-mass); switches=structural/empirical; tie-path=hex D
+  both gauges: score histogram 0..3 once, C3=0, SCC=1^4, Hamiltonian paths=1; edge flips=4
+  preserves=B-gate and raw-S2 truth; destroys=node fibre, future continuation, LRC metric
+  challenged assumption=punctures are not absent nodes; use local parity obligations as vertices

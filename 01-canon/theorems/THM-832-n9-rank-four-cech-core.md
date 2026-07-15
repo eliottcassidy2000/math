@@ -4,7 +4,7 @@ title: The n=9 false-palindrome defect is a rank-four constant Cech core on ever
 status: PROVED LINEAR CORE + FINITE-EXACT WITNESS-FIBRE AUDIT
 source: codex-2026-07-15-S13
 depends_on: [THM-801, THM-828]
-related: [THM-553, THM-810, HYP-3234, HYP-6880]
+related: [THM-553, THM-810, THM-839, HYP-3234, HYP-6880]
 verification:
   - 04-computation/n9_rank_four_cech_core_codex_S13.py
   - 05-knowledge/results/n9_rank_four_cech_core_codex_S13.out

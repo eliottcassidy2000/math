@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "theorem": "THM-839",
+  "R8_rows": 5997416,
+  "R8_off_diagonal": 3900264,
+  "syndrome_dimension": 14,
+  "nonzero_syndromes": 16383,
+  "face_pair_supported_syndromes": 319,
+  "AC_matches": 9540,
+  "B_kernel": 636,
+  "upper_colour": 636,
+  "S2_prefix": [636, 636, 88, 82, 68, 58, 58],
+  "collision_pairs": 58,
+  "distinct_endpoints": 116,
+  "reflection_mate_pairs": 58,
+  "difference_sectors": 11,
+  "pure_black_KKKK": 58,
+  "three_cross_pairs": 58,
+  "distinct_six_node_face_triples": 58,
+  "first_J_layer_tau5_tau6_tau7": [38, 12, 8],
+  "reflection_defect_rank": 4,
+  "occupied_reflection_defect_sectors": 11,
+  "missing_reflection_defect_sectors": ["0x1026286", "0x4dd3c9e", "0x54a5692", "0x5537214"],
+  "occupied_cube_graph": {"connected": true, "edges": 14, "diameter": 5, "degree_histogram": {"1": 1, "2": 4, "3": 5, "4": 1}, "coordinate_edge_counts": [4, 3, 3, 4]},
+  "puncture_certificate": {
+    "post_B_bases": 636, "active_layer_tests": 1810, "chi_low_high_equal": 1810, "upper_black": 636,
+    "reflection_action": {"pointwise_fixed": 0, "endpoint_swap_fixed": 388, "cycle_points": 248, "two_cycles": 124, "raw_S2_equal_fixed": 58, "raw_S2_equal_cycle_points": 0},
+    "holes": {
+      "0x1026286": {"gate": "A/C face support", "dA": "0x084883", "dB": "0x001946", "dC": "0x0204c5", "L_A": 0, "L_B": 4144, "L_C": 0},
+      "0x4dd3c9e": {"B_bases": 4, "prefix": [4,4,4,4,4,0,0], "chi_words": {"1110": 4}, "killer_tau": 8, "low_mask": "0x0010002", "high_mask": "0x0100080", "swap_fixed": 4, "cycle_points": 0},
+      "0x54a5692": {"B_bases": 504, "prefix": [504,504,4,4,0,0,0], "chi_words": {"000": 500, "100": 4}, "first_fail": {"5": 500, "7": 4}, "killer_tau": 7, "low_mask": "0x0020400", "high_mask": "0x1080000", "swap_fixed": 256, "cycle_points": 248, "two_cycles": 124},
+      "0x5537214": {"B_bases": 4, "prefix": [4,4,4,4,0,0,0], "chi_words": {"100": 2, "101": 2}, "killer_tau": 7, "low_mask": "0x0020004", "high_mask": "0x1002000", "swap_fixed": 4, "cycle_points": 0}
+    },
+    "tournament_analysis": {"vertices": "four proof obligations", "observable": ["gate kind", "killer layer", "B mass"], "switches": ["structural", "empirical"], "tie_hamiltonian_path": "hex D", "directed_triangles": 0, "scc_sizes": [1,1,1,1], "hamiltonian_paths": 1, "edge_flips": 4}
+  },
+  "black_curvature_tuple_preserved": 58,
+  "smith_balance_wall": 58,
+  "raw_codec_fibres": {"singletons": 134217612, "doubletons": 58, "cells": 134217670, "collision_excess": 58, "maximum": 2},
+  "tournament_analysis": {"vertices": "11 occupied reflection-defect sectors", "observable": ["first skew layer", "Hamming weight", "fibre multiplicity"], "switches": ["structural", "empirical"], "tie_hamiltonian_path": "hex D", "directed_3cycles": 0, "scc_sizes": [1,1,1,1,1,1,1,1,1,1,1], "hamiltonian_paths": 1, "edge_flips": 22},
+  "pair_fnv1a64": "0x53b4b074be8ae851"
+}

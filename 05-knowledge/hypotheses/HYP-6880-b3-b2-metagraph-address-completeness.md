@@ -1,10 +1,10 @@
 ---
 id: HYP-6880
 title: Joined B3-face and folded-B2 sidecars form a recursively useful metagraph address
-status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838
+status: OPEN GENERAL/TRANSPORT CLAIM; exact through n=8, with n9 kernel/punctures and one n9->n10 defect-bank transport classified by THM-801/809/828/832/834/838/839
 source: codex-2026-07-15-S12/S13/S11
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-832, THM-833, THM-834, THM-838, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
+related: [THM-805, THM-811, THM-812, THM-813, THM-814, THM-818, THM-828, THM-832, THM-833, THM-834, THM-838, THM-839, HYP-2685, HYP-3234, HYP-6825, HYP-6870, HYP-6885]
 ---
 
 # HYP-6880 — joined B3/B2 metagraph address
@@ -168,11 +168,21 @@ literal reflection orbits and coupled endpoint-node cells remain distinct,
 and eight static chirality signs reverse.  THM-834 gives the exact quotient
 placement.  The 116 endpoints occupy 53 converse-merged nodes, five of which
 contain two collision pairs.  The bare node quotient is insufficient, as is
-its 54-valued complement-partner marginal, but their coupled `P` coordinate
+its 54-valued complement-partner marginal, but their coupled `bar P` coordinate
 has 58 singleton values.  The six face presentations occupy 155 size-eight
 nodes and select 87 exclusively black projected complement-line node pairs.
 The defect cube is therefore neither a node set nor the metagraph: it is a
 decorated carrier whose stalk maps into node and line fibres.
+
+THM-839 explains every puncture in that stalk.  One sector has empty A/C
+face-kernel support.  On each of the other three, an active raw-S2 layer is a
+two-toggle packet and equality is exactly one complement-pair parity
+obligation.  Uniform killer layers are `tau=8,7,7`; in particular one `tau=7`
+bit kills all 504 bases of `54a5692`.  The 636 post-B bases decompose under
+reflection into 388 endpoint-swap fixed points and 124 two-cycles.  Exactly
+58 fixed points also satisfy every ordered `01/10` balance bit.  The nonlinear
+stalk is therefore a balanced reflection-fixed locus, not an unexplained
+punctured code.
 
 ## Continued-fraction connection
 

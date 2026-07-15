@@ -225,27 +225,32 @@ The punctures are not linear-code holes: three have many compatible bases and
 die nonlinearly at literal S2.  This makes “linear code plus nonlinear stalk”
 the most economical current description.
 
+THM-839 now resolves the nonlinear stalk locally.  On all 636 post-B bases,
+every active difference layer toggles two ordered states and their reflected
+coordinates.  Raw-S2 equality is exactly the complement-pair condition
+`chi_tau=1`.  The dominant missing point has 504 bases but one uniform
+`tau=7` parity obligation kills all of them.  Reflection acts with 388
+endpoint-swap fixed bases and 124 two-cycles; only 58 fixed bases also satisfy
+every balance bit.  Thus the final 58 are a balanced fixed locus, not merely a
+reflection-fixed locus.
+
 ## Critical next computations, in order
 
 1. **Continuation purity.**  Apply endpoint deletion, middle gap contraction,
    complement, reflection, and one inverse lift to `(D,F_D)`.  Minimize only
    after the composite action; compare against a bare four-bit sector.
-2. **Explain the four punctures.**  The point `54a5692` contributes 504 of 636
-   B-compatible candidates yet zero survivors.  Compute its first literal-S2
-   failure layer and its base-permutation cycle types; compare with the eleven
-   realized sectors.
-3. **Full node-axis neighbourhood.**  THM-834 has placed the collision bank
+2. **Full node-axis neighbourhood.**  THM-834 has placed the collision bank
    and shown its selected relations are all black.  Expand one metagraph ball
    around its 155 face nodes, retain blue and black incidence separately, and
    quantify where global blue symmetry re-enters the black-only bank.
-4. **n10 codec preflight.**  Carry the rank-four sectors through the next
+3. **n10 codec preflight.**  Carry the rank-four sectors through the next
    relation join before building a full n9 atlas.  Retain second moments as
    the unconditional repair and test whether the residual kernel grows by
    new position modes or by node-fibre continuation.
-5. **General CF-word action.**  Factor the literal coordinate action of two
+4. **General CF-word action.**  Factor the literal coordinate action of two
    consecutive continued-fraction digits, determine its semigroup on the
    four-bit core, and classify which words preserve the coupled `P` descent.
-6. **Metric fibre product.**  Couple literal `Q` orbit, skew chirality,
+5. **Metric fibre product.**  Couple literal `Q` orbit, skew chirality,
    THM-829 Bezout row, owner/root labels, and actual witness intervals.  Prove
    a preservation lemma before claiming any implication for LRC(14).
 
