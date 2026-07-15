@@ -294,14 +294,16 @@ def main():
                 except Exception:
                     pass
     bodies = [E for E in combinations(range(1, 15), 9) if E not in done]
-    # HEAVY-FIRST (minimize makespan): flood bodies (Q empty) first, then descending V1.
+    # LIGHT-FIRST (revised cont.8): the 21 flood bodies (Q empty) proved to be >8h EACH at j=4
+    # (heavy-first starved the resume file across three run deaths). Non-flood bodies first
+    # (V1 ascending) so completions accrue; floods last, over however many sessions they need.
     order = []
     for E in bodies:
         QE = [q for q in range(2, 15) if not any(w % q == 0 for w in E)]
         _, rE, mE = good_norm(E)
         thr = 3 * mE / (S2 * rE)
         V1 = minV(4, thr.numerator, thr.denominator)
-        order.append((0 if not QE else 1, -V1, E))
+        order.append((1 if not QE else 0, V1, E))
     order.sort()
     bodies = [E for _, _, E in order]
     workers = max(2, (os.cpu_count() or 8) - 2)

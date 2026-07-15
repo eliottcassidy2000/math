@@ -1,0 +1,31 @@
+============================================================================================
+(1)+(2) closed form vs brute force; specializations
+============================================================================================
+n=4 closed==brute: True | kappa=2=(n-2)!:OK forests=6=(n-1)!:OK conn=3 acyc=4=2^(n-2):OK chrom(3)=12=3*2^2:OK
+n=5 closed==brute: True | kappa=6=(n-2)!:OK forests=24=(n-1)!:OK conn=21 acyc=8=2^(n-2):OK chrom(3)=24=3*2^3:OK
+n=6 closed==brute: True | kappa=24=(n-2)!:OK forests=120=(n-1)!:OK conn=315 acyc=16=2^(n-2):OK chrom(3)=48=3*2^4:OK
+n=7 closed==brute: True | kappa=120=(n-2)!:OK forests=720=(n-1)!:OK conn=9765 acyc=32=2^(n-2):OK chrom(3)=96=3*2^5:OK
+
+============================================================================================
+(3) THE HARMONIC LADDER: m({1..k}; 1/(k+2)) vs H_k / C(k+2,2), exact
+============================================================================================
+k= 2  m({1..k};1/4) = 1/4                 H_k/C(k+2,2) = 1/4                 EQUAL
+k= 3  m({1..k};1/5) = 2/15                H_k/C(k+2,2) = 11/60               ** DIFFER ratio=0.727273
+k= 4  m({1..k};1/6) = 5/36                H_k/C(k+2,2) = 5/36                EQUAL
+k= 5  m({1..k};1/7) = 2/35                H_k/C(k+2,2) = 137/1260            ** DIFFER ratio=0.525547
+k= 6  m({1..k};1/8) = 7/80                H_k/C(k+2,2) = 7/80                EQUAL
+k= 7  m({1..k};1/9) = 44/945              H_k/C(k+2,2) = 121/1680            ** DIFFER ratio=0.646465
+k= 8  m({1..k};1/10) = 69/1400             H_k/C(k+2,2) = 761/12600           ** DIFFER ratio=0.816032
+k= 9  m({1..k};1/11) = 20/693              H_k/C(k+2,2) = 7129/138600         ** DIFFER ratio=0.561089
+k=10  m({1..k};1/12) = 671/15120           H_k/C(k+2,2) = 671/15120           EQUAL
+k=11  m({1..k};1/13) = 92/5005             H_k/C(k+2,2) = 83711/2162160       ** DIFFER ratio=0.474776
+k=12  m({1..k};1/14) = 6617/194040         H_k/C(k+2,2) = 6617/194040         EQUAL
+HARMONIC LADDER: NOT the identity -- see ratios
+
+============================================================================================
+(4) Sudler landscape (float sanity): argmax of |T(N_n;1,e)| vs good set of {1..n-2}
+============================================================================================
+n= 7: |T| SMALLEST at theta=['0.4000', '0.2500', '0.2000'] (good:[False, False, False]); good-set thetas have |T|-rank mean 3384.50 of 4999
+n=14: |T| SMALLEST at theta=['0.2500', '0.4000', '0.2000'] (good:[False, False, False]); good-set thetas have |T|-rank mean 3023.72 of 4999
+
+REFEREE DONE
