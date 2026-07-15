@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-15-S128 (cont.13, overnight) -- THE BLACK SELF-LINE LAW IS REFUTED AT n=8: 2selfK = SC fails (404 != 176; pipeline certified against 8/12/88) -- opus S311's 'all n >= 5' law was a small-n coincidence; WHAT SURVIVES: the Klein-four skeleton (404 = 4x101), the INVOLUTION LEMMA (odd-|Aut| coset => involutive witnesses; at odd n ALL quasi-fixed classes have trivial Aut), selfB(8) = 4 (blue self-lines are even-n only); the new open object selfK(n) = 4, 6, 44, 202
+
+Prompt (owner): prove the 2selfK = SC bijection and check at n=8; long overnight session, many pushes/pulls, integrate concurrent agents, toward LRC(14).
+
+THE CHECK CAME FIRST AND KILLED THE PROOF TARGET (the right order): built the two-pass n=8 engine (invariant filter (sorted scores, c3): 2,097,152 tilings -> 195,004 survivors; exact iso with degree-bucket backtracking) and the Burnside-affine engine (per sigma, 'sigma T(t) = T(kappa t)' is an affine GF(2) system; sum of 2^dim = Aut-weighted count W). RESULTS: n=8 non-gridsym quasi-fixed = 404 != 176 = SC(8); total X = 412 != 184 = SC + 2selfB (both S311 laws fail). CERTIFICATION: the identical pipeline reproduces 8/12/88 at n=5,6,7 and gridsym-qf = 0 at odd n (opus's counts, independently). PUSHED IMMEDIATELY (opus-S312 runs the same prompt concurrently -- stopped them building a bijection that does not exist; also flagged their HYP-6895 reuse, kps cont.12 is first-pusher).
+
+WHAT WAS PROVED BEFORE THE REFUTATION (THM-852, stands): (i) kappa is 'converse modulo the base path' (T(kappa t) = P u A-bar vs T^op = P^op u A-bar) -- quasi-fixedness and SC-ness are the two twisted diagonals of the Klein-four action {1, g, kappa, g kappa} on tilings; (ii) THE INVOLUTION LEMMA: a witness coset sigma Aut with sigma^2 in Aut and |Aut| odd contains a 2-power-order element; trivial Aut => the unique witness is an INVOLUTION; Burnside-affine W = |X| exactly at n=5,7 => at odd n every quasi-fixed class has trivial Aut => every black self-line carries a unique involutive kappa-twisted symmetry (the mirror of SC's involutive anti-automorphism); (iii) Klein-4 orbits on X_ngs all have full size 4 (n=5: 2, n=6: 3; and 404 = 0 mod 4 at n=8 -- the granularity survives the refutation).
+
+NEW OPEN: what does selfK(n) = 4, 6, 44, 202 count? (202 = 2 x 101; the SC/2 halving breaks UPWARD at n=8: 202 > 88.) The involution-witness census at n=8 is the natural decoder.
+
+J=4: 171/2002 complete, 171/171 clean (light-first steady; floods queued).
+
+FILES: THM-852 (structure + refutation), HYP-6905, thm852_selfline_sc_bijection_kps_S128c13.py/.out; two checkpoints pushed mid-session. -> opus-S312 (the law is dead as stated -- redirect to the selfK decoder or the involution census; your S311 HYPs need the n=8 bound noted; HYP-6895 is kps's), opus/codex/klein (the Burnside-affine engine is reusable for ANY twisted-fixed-point count: affine GF(2) per sigma, exact, n=8-fast), all (LRC(14) main line unaffected: j=4 accrues; the metagraph formula atlas gained the involution lemma + lost a false law -- net positive).
+
+---
 ## opus-2026-07-15-S311 -- THE TRANSITIVE STAR BY FORMULA (neighbour H-multiset = {2^(g-1)+1 : weight n-g}, exact n=4..7) + THE ALL-n BLACK SELF-LINE LAW (2*selfK = SC for ALL n >= 5 -- the odd-n restriction was an artifact; verified 8, 12, 88) + the 1001 = 7x11x13 prime-lens note + the toothpick numeration-recursion lens filed (HYP-6890)
 
 Prompt (owner): work the named next steps; merge 1001-related past work; inspirations
