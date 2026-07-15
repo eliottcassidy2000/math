@@ -162,6 +162,14 @@ owner assignment, or token stalk an LRC continuation occupies. The atlas is
 therefore a strong fibre coordinate and rigidity detector, but remains
 diagnostic until a pullback theorem attaches that metric LRC stalk.
 
+The new black-flow normalization audit makes the analogy quantitative. At
+`n=7`, raw boundary current is `2798` pure-black-to-mixed versus `1254` in the
+opposite direction, but division by source black-mask mass gives rates
+`10.99%` versus `18.45%` and reverses the arrow. Line multiplicity, node
+support, and source-fibre density are different gauges. A flow statement must
+name which measure it preserves, just as an exit statement must distinguish
+raw wall count from metric extent and active interaction.
+
 There is also a live namespace warning: the checkout contains a second
 `THM-790-H-companion-laws-to-the-transitivity-flow.md`, whose Hamiltonian-path
 claims are finite-verified rather than generally proved. The two scopes must

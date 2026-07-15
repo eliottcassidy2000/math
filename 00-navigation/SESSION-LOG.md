@@ -80,6 +80,10 @@ sharper: `C3/E4`, blue parity, and the half-tiling recursion give exact finite
 fibre coordinates, but still lack the owner/metric pullback. A live duplicate
 THM-790 ID separates the proved blue-parity theorem from the finite-verified
 Hamiltonian-path companion and must not be scope-merged.
+The subsequent THM-785 density audit adds a parallel guardrail: its raw
+`2798:1254` black boundary current reverses after source-fibre normalization,
+so line multiplicity, support count, and density are distinct tournament
+gauges, just as raw wall count and metric exit complexity are distinct here.
 
 FILES: THM-784/788/789; corrected THM-779/782/783/786; MISTAKE-147/148;
 `lrc14_unbounded_blocking_runs_codex_S10.py`,
