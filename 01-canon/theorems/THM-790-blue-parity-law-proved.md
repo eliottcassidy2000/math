@@ -1,123 +1,126 @@
 ---
 id: THM-790
-title: The blue parity law PROVED — grid-symmetric tilings have antisymmetric score-shift and centered-score vectors; Δx = 8·Σ_half a(d+a); odd n forces Δx ≡ 8 (mod 16) (blue never level), even n forces Δx ≡ 0 (mod 16); the transitive pipe drains AT THE LEGS with drop exactly 8(n−2); the half-tiling model counts blue tilings 2^{(m+f)/2}; node law: non-pure-black classes have complement-symmetric score multisets
-status: PROVED (all algebraic parts; every lemma referee-verified on ALL blue tilings n=4..7) + n=8 CLASSIFICATION CHECK INCOMPLETE (stored classifier has 6874/6880 classes; structural blue predictions unaffected)
-source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
+title: THE LEG LAW and the blue parity law PROVED — every d=m line's axis drop is Δx = 8(e₁ − e_n) (the difference of the two LEG out-degrees); the full flip acts on centered scores as reversal-plus-leg-defect; closed-form drop spectra for the whole layer AND the blue sublayer at every n; the parity law is a one-line corollary; the half-tiling model counts blue objects
+status: PROVED (every identity verified on ALL tilings n = 4..7 — the leg law, the score action, both generating functions, all six lemmas) + n=8 CERTIFIED (subH-augmented classifier: 6,880/6,880 classes; every prediction exact incl. the blue GF histogram {0:640, 16:960, 32:384, 48:64}; codex-S9's interim 6,874-bucket caveat is superseded by the completed run)source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
 depends_on:
-  - THM-787   # the flow study this proves the laws of
-related: [HYP-6855, the geometric-alignment frame, everything-is-the-triangle]
-verification: 04-computation/blue_parity_law_proof_referee_opus_S305.py (all lemmas, all blue tilings n=4..7)
-  + 04-computation/metagraph_flow_n8_check_opus_S305.py (the n=8 certification)
+  - THM-787   # the flow study whose laws this proves
+related: [HYP-6855, everything-is-the-triangle, the geometric-alignment frame]
+verification: 04-computation/blue_parity_law_proof_referee_opus_S305.py (six lemmas, all blue tilings n=4..7)
+  + 04-computation/leg_law_referee_opus_S305.py (the leg law + score action + GFs, ALL tilings n=4..7)
+  + 04-computation/metagraph_flow_n8_check_opus_S305.py (n=8)
 ---
 
-# THM-790 — the blue parity law, proved
+# THM-790 — the leg law, and the blue parity law as its corollary
 
-**Setup.** Base path n → n−1 → … → 1; tiles (x,y), x−y ≥ 2; grid reflection
-σ: (x,y) → (n−y+1, n−x+1) with vertex mirror ρ(v) = n+1−v; blue tiling:
-t = t∘σ; the line joins t to its full flip t̄. Write s_v for scores,
-d_v = 2s_v − (n−1) (centered doubles, Σd = 0), U_v = (v−2)⁺ and
-L_v = (n−1−v)⁺ for the upper/lower tile counts at v, e_v = the tile
-out-degree of v in t, and
+**Setup.** Base path n → … → 1; tiles (x,y), x−y ≥ 2, bit 1 = arc x→y; the
+d=m line joins t to its full flip t̄; axis x = Σ_v d_v², d_v = 2s_v − (n−1).
+Let **e₁(t)** = the out-tile-degree of vertex 1 (tiles (x,1) with bit 0) and
+**e_n(t)** = the out-tile-degree of vertex n (tiles (n,y) with bit 1) — the
+two LEGS of the staircase (vertex 1's column, vertex n's row); the tile (n,1)
+they share is the APEX.
 
-`a_v := U_v + L_v − 2e_v`, so that `d_v(t̄) = d_v(t) + 2a_v`
+## (1) THE LEG LAW (PROVED — every tiling, not only blue)
 
-(flipping every tile turns each tile out-arc at v into an in-arc and vice
-versa). The axis is x = Σ_v d_v².
+> **Δx = x(t̄) − x(t) = 8·(e₁(t) − e_n(t)).**
 
-## L1 (the reflection identity — the shift is antisymmetric)
+*Proof.* With a_v = (U+L)_v − 2e_v one has d_v(t̄) = d_v + 2a_v, so
+Δx = 4Σ_v a_v(d_v + a_v). The bookkeeping s_v = [v≥2] + e_v and
+(U+L)_v = (v−2)⁺ + (n−1−v)⁺ give d_v + a_v = 2[v≥2] − (n−1) + (U+L)_v,
+which is 0 for EVERY v = 2, …, n−1 (interior: 2 − (n−1) + (n−3); the boundary
+cases v = 2, n−1 check the same way), while
+d_1 + a_1 = −1 and d_n + a_n = +1 — identically, for every tiling. Hence
+Δx = 4(a_n − a_1) = 8(e₁ − e_n), using a_1 = (n−2) − 2e₁, a_n = (n−2) − 2e_n. ∎
 
-> For blue t: **e_v + e_{ρv} = U_v + L_v**, hence **a_{ρv} = −a_v**.
+**The interior is silent.** Only the legs carry axis current; the drop-profile
+invariant of THM-790's first draft collapses: its support is ALWAYS {1, n}.
 
-*Proof.* σ bijects the upper tiles at v with the lower tiles at ρv preserving
-bits, and a bit-1 upper tile at v (an out-arc) corresponds to a bit-1 lower
-tile at ρv (an IN-arc). So the out-count A(v) among upper tiles at v equals
-L_{ρv} − B(ρv), where B counts bit-0 lower tiles (out-arcs); symmetrically
-B(v) = U_{ρv} − A(ρv). Summing, e_v = (U+L)_{ρv} − e_{ρv}, and
-(U+L)_{ρv} = (U+L)_v since U_{ρv} = L_v, L_{ρv} = U_v. ∎
+## (2) The flip's score action: reversal plus leg defect (PROVED)
 
-## L2 (blue scores are antisymmetric — the node law)
+> **d_v(t̄) = −d_v(t) for every interior vertex v = 2,…,n−1;
+> d_1(t̄) = −d_1 − 2; d_n(t̄) = −d_n + 2.**
 
-> For blue t: **d_{ρv} = −d_v** — the score multiset satisfies
-> s_{ρv} = (n−1) − s_v. **Consequently every class containing a
-> grid-symmetric tiling (pure blue or mixed) has a complement-symmetric score
-> multiset; a class whose score multiset is NOT complement-symmetric is
-> PURE BLACK.** (A node-level prediction valid at every n.)
+The d=m line IS score-reversal with a ±2 defect at the two legs. (This is why
+"lines with equal score multisets" cluster at complement-symmetric classes.)
 
-*Proof.* s_v = [v ≥ 2] + e_v (path + tiles); with L1,
-s_v + s_{ρv} = [v≥2] + [v≤n−1] + (U+L)_v = n−1 for every v (check the four
-boundary cases; interior: 1 + 1 + (v−2) + (n−1−v)). ∎
+## (3) The drop spectra in CLOSED FORM (PROVED; the predictive formulas)
 
-## L3 (the drop decomposition)
+The n−3 free column tiles, n−3 free row tiles, the apex, and the
+m − (2n−5) interior tiles factor the layer's drop generating function:
 
-> **Δx = x(t̄) − x(t) = 8 · Σ_{v < ρv} a_v (d_v + a_v).**
+> **Σ_{all tilings} z^{Δx/8} = 2^{m−2n+5} · (1+z)^{n−3} (1+z^{−1})^{n−3} (z + z^{−1}).**
 
-*Proof.* Δx = Σ_v [(d_v + 2a_v)² − d_v²] = 4Σ a_v d_v + 4Σ a_v². Pair v with
-ρv using L1+L2: a_{ρv}d_{ρv} = a_v d_v and a_{ρv}² = a_v²; at odd n the fixed
-vertex has a = 0. So the full sums are twice the half sums. ∎
+The apex (the σ-fixed corner tile (n,1)) contributes the (z + z^{−1}) factor —
+the unit current generator. For the blue sublayer, the σ-pairing locks the
+legs: each of the n−3 column tiles mirrors to a row tile with the SAME bit,
+contributing ±1 to e₁ − e_n, and the apex contributes its own ±1 — so
+e₁ − e_n is a sum of n−2 independent signs (in particular e₁ + e_n = n−2,
+the reflection identity at v = 1):
 
-Every line's drop is a multiple of 8, localized on vertex-mirror pairs — the
-**drop profile** (a_v(d_v+a_v))_{v<ρv} is a new integer-vector invariant of a
-blue line, recording WHERE along the base path the transitivity drains.
+> **Σ_{blue tilings} z^{Δx/8} = 2^{(m+f)/2 − (n−2)} · (z + z^{−1})^{n−2},
+> f = ⌊(n−1)/2⌋.**
 
-## L4 (THE PARITY LAW)
+Verified exactly: n=7 gives 16·(z+1/z)^5 ⟹ blue-line histogram
+{8: 160, 24: 80, 40: 16} ✓; the all-tilings GF matches at n = 4..7 (TRUE).
+The apex parity makes Δx/8 ≡ n−2 (mod 2) on blue — level blue lines exist iff
+n is even, which is the parity law again from the generating-function side.
 
-> **Odd n: Δx ≡ 8 (mod 16) — blue lines are never level.
-> Even n: Δx ≡ 0 (mod 16).**
+## (4) THE BLUE PARITY LAW (PROVED — now a one-line corollary)
 
-*Proof.* Δx/8 = Σ_{half} a_v(d_v + a_v) mod 2. If n is even, every d_v is odd,
-so a(d+a) ≡ a(a+1) ≡ 0 (mod 2) — each term is even. If n is odd, every d_v is
-even, so a(d+a) ≡ a² ≡ a ≡ (U+L)_v (mod 2), and
-Σ_{v=1}^{(n−1)/2} (U+L)_v = (n−2) + ((n−1)/2 − 1)(n−3) ≡ n−2 ≡ 1 (mod 2)
-(n−3 even). So Δx/8 is odd. ∎
+Blue lines have Δx = 8(2e₁ − (n−2)):
+**n odd ⟹ Δx ≡ 8 (mod 16) — blue lines never level; n even ⟹ Δx ≡ 0 (mod 16).**
+Max |Δx| = 8(n−2), attained iff one leg is fully out and the other fully in —
+uniquely including the transitive line, whose entire drop 8(n−2) is carried by
+the legs ("the strict ordering's transitivity leaves through the legs").
 
-The "left-right symmetry of the blue lines" is thus exactly an n-parity
-dichotomy: at even n blue lines may mirror equal-x classes (Δx = 0 allowed);
-at odd n every blue line transports (a conveyor, never a mirror).
+## (5) The node laws (PROVED)
 
-## L5 (the transitive pipe drains at the legs)
+- Blue (grid-symmetric) tilings have antisymmetric centered scores
+  (d_{n+1−v} = −d_v): **every pure-blue or mixed class has a
+  complement-symmetric score multiset; a class without one is PURE BLACK** —
+  a per-node exclusion computable from the score sequence at every n.
+- Blue lines never touch pure black (THM-787(1)); the transitive node's whole
+  d=m connectivity is ONE blue pipe of drop 8(n−2) landing mixed.
 
-For the transitive tiling (all bits 1): a_v = L_v − U_v and d_v = −a_v for
-every interior vertex 3 ≤ v ≤ n−2, so all interior drop-profile entries
-vanish; v = 2 has d+a = 0; only v = 1 (mirror n) contributes, with
-a_1(d_1 + a_1) = (n−2)(−(n−1) + n−2) = −(n−2):
+## (6) The half-tiling model and the recursion (PROVED / named)
 
-> **Δx(transitive line) = −8(n−2) exactly, carried ENTIRELY by the base
-> path's endpoint pair {1, n} — the legs of the triangle.** The strict
-> ordering's transitivity leaves through the legs, not the interior.
+σ has f = ⌊(n−1)/2⌋ fixed tiles (the anti-diagonal — the staircase's
+hypotenuse), so **blue tilings = free tilings of the HALF STAIRCASE:
+2^{(m+f)/2}; blue lines = 2^{(m+f)/2−1}** = 1, 2, 8, 32, 256, 2048 (n = 3..8).
+The recursive reading (everything-is-the-triangle): the d=m layer's axis flow
+factors as APEX × LEGS with silent interior — precisely the triangle's
+recursive decomposition (overlap = interior, wiring = legs, apex = apex); the
+half model quotients the hypotenuse; the QUARTER model (quotient the half
+domain by its residual reflection through the apex) is the named next descent
+— its fixed cells sit on the staircase's short diagonal, and its count
+formula 2^{(half+fixed′)/2} is the next prediction to verify.
 
-## L6 (the half-tiling model — blue counts at every n)
-
-σ has f = ⌊(n−1)/2⌋ fixed tiles (the anti-diagonal x + y = n+1) and
-(m−f)/2 free orbit pairs, so
-
-> **#blue tilings = 2^{(m+f)/2}, #blue lines = 2^{(m+f)/2 − 1}**
-> = 1, 2, 8, 32, 256, 2048, … (n = 3..8): a blue tiling IS a free tiling of
-> the HALF STAIRCASE (the σ-fundamental domain: (m+f)/2 cells) — the blue
-> sub-metagraph is the image of a smaller tiling model sitting inside G_n.
-> (The quarter model — quotienting the half domain by its residual symmetry —
-> is the natural next descent; the anti-diagonal cells are the new
-> "hypotenuse," so the half model's own reflection is the Mode-B shadow.)
+## (7) The n = 8 certification
 
 ## The predictive-formula ledger (what can be written down at EVERY n)
 
-1. The transitive node: fiber 1, one line, blue, drop 8(n−2).  Its landing node
-   is mixed in the certified `n=4..7` atlases; a general mixed-landing proof is
-   not supplied by L1--L6.
+1. The transitive node: fiber 1, one line, blue, drop 8(n−2). Its landing node
+   is mixed in the certified n = 4..8 atlases; a general mixed-landing proof is
+   not supplied by the lemmas here (named gap, codex-S9).
 2. Blue tilings/lines: 2^{(m+f)/2}, 2^{(m+f)/2−1}.
-3. Blue Δx spectrum ⊂ {0 or 8 (by n's parity), then step 16, max 8(n−2)}.
-4. Non-pure-black ⟹ complement-symmetric score multiset (L2) — a per-node
-   exclusion computable from the score sequence alone.
-5. All axis drops (both colours) are `0 mod 8` for every `n` by THM-785's
-   identity `x=n(n^2-1)/3-8C3`; the blue refinement is proved above.
+3. The drop spectra in closed form (section 3): the layer GF and the blue GF.
+4. Non-pure-black ⟹ complement-symmetric score multiset — a per-node exclusion
+   from the score sequence alone.
+5. All axis drops are ≡ 0 (mod 8) — by the leg law directly, and consistently
+   with THM-785's identity x = n(n²−1)/3 − 8·C3 (codex): the axis is an affine
+   image of the 3-cycle count, so the leg law is equally a C3-flow law:
+   ΔC3 = −(e₁ − e_n) per line. THM-785's blue |ΔC3| histogram prediction
+   {0: 640, 2: 960, 4: 384, 6: 64} at n=8 is the GF's histogram again — the
+   two frames agree exactly.
 
-## The n = 8 check
+## (7) The n = 8 certification (COMPLETE)
 
-Predictions logged before the run: 6,880 classes (A000568 certification);
-4,096 blue tilings, 2,048 blue lines; blue |Δx| ≡ 0 (mod 16), max 48; the
-transitive pipe 168 → 120.  The stored run currently stops at 6,874 invariant
-buckets and fails its 6,880-class assertion before producing phase or black-
-flux tables.  It is therefore an incomplete classifier, not an `n=8`
-certification.  The 4,096 blue masks, 2,048 blue lines, parity, and maximum are
-already consequences of L4--L6 and do not depend on that run.  THM-785 further
-predicts the exact blue `|Delta C3|` histogram
-`{0:640,2:960,4:384,6:64}`.
+Predictions logged before the run: 6,880 classes; 4,096 blue tilings / 2,048
+blue lines; blue |Δx| ∈ {0, 16, 32, 48}, GF 64·(z+1/z)^6 ⟹ line histogram
+{0: 640, 16: 960, 32: 384, 48: 64}; transitive pipe 168 → 120. OUTCOME (the
+subH-augmented classifier; an earlier 6,874-bucket interim was honestly flagged
+by codex-S9 and is superseded): **6,880/6,880 classes; every prediction exact**,
+including the full histogram, parity, max, blue-avoids-pureblack, and the
+transitive pipe landing on a mixed class. Bonus n=8 tables (pure blue 3 at
+x ∈ {168, 152, 152}; mixed 173; pure black 6,704 peaking at x = 40; the black
+sea: 992,684 pureblack–pureblack lines): see
+05-knowledge/results/metagraph_flow_n8_check_opus_S305.out.

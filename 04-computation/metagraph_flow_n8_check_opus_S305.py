@@ -17,7 +17,7 @@ refl = np.array([ti[(n-y+1, n-x+1)] for (x, y) in tiles])
 POP = np.array([bin(i).count('1') for i in range(256)], dtype=np.int64)
 FULLV = (1 << n) - 1
 N = 1 << m
-CH = 1 << 18
+CH = 1 << 15
 
 def feats(bits):
     """bits: (B,) int64 tilings -> per-vertex packed keys sorted + arc sums."""
@@ -74,7 +74,50 @@ def feats(bits):
             common = POP[adj[:, u] & adj[:, v]]
             a1 += h * (s[:, u] * 8 + s[:, v]) * (common + 1)
             a2 += h * common * common
-    return key, a1, a2, s
+    # vectorized Hamiltonian-path count (level-by-level subset DP)
+    adjbit = [[(adj[:, v] >> u) & 1 for u in range(n)] for v in range(n)]
+    import itertools as _it
+    levels = {1: {}}
+    for v in range(n):
+        arr = np.zeros(B, dtype=np.int64); arr += 0
+        levels[1][(1 << v, v)] = None  # placeholder replaced below
+    levels = {1: {(1 << v, v): np.ones(B, dtype=np.int64) for v in range(n)}}
+    for size in range(1, n):
+        nxt = {}
+        for (mask, v), arr in levels[size].items():
+            for u in range(n):
+                bu = 1 << u
+                if mask & bu: continue
+                w = adjbit[v][u]
+                tgt = (mask | bu, u)
+                contrib = arr * w
+                if tgt in nxt: nxt[tgt] += contrib
+                else: nxt[tgt] = contrib.copy()
+        del levels[size]
+        levels[size + 1] = nxt
+    Hv = np.zeros(B, dtype=np.int64)
+    for (mask, v), arr in levels[n].items(): Hv += arr
+    # deleted-vertex sub-H multiset (eight 7-vertex DPs), sorted per tiling
+    subH = np.zeros((B, n), dtype=np.int64)
+    for w in range(n):
+        verts = [v for v in range(n) if v != w]
+        lv = {(1 << v, v): np.ones(B, dtype=np.int64) for v in verts}
+        for size in range(1, n-1):
+            nxt = {}
+            for (mask, v), arr in lv.items():
+                for u in verts:
+                    bu = 1 << u
+                    if mask & bu: continue
+                    contrib = arr * adjbit[v][u]
+                    tgt = (mask | bu, u)
+                    if tgt in nxt: nxt[tgt] += contrib
+                    else: nxt[tgt] = contrib.copy()
+            lv = nxt
+        col = np.zeros(B, dtype=np.int64)
+        for (mask, v), arr in lv.items(): col += arr
+        subH[:, w] = col
+    subH.sort(axis=1)
+    return key, a1, a2, s, Hv, subH
 
 # pass 1: bucket all tilings
 buckets = {}
@@ -82,9 +125,9 @@ cls_of = np.zeros(N, dtype=np.int32)
 rep = []
 for lo in range(0, N, CH):
     bits = np.arange(lo, min(lo+CH, N), dtype=np.int64)
-    key, a1, a2, s = feats(bits)
+    key, a1, a2, s, Hv, subH = feats(bits)
     for j in range(bits.shape[0]):
-        k = (key[j].tobytes(), int(a1[j]), int(a2[j]))
+        k = (key[j].tobytes(), int(a1[j]), int(a2[j]), int(Hv[j]), subH[j].tobytes())
         c = buckets.get(k)
         if c is None:
             c = len(buckets); buckets[k] = c; rep.append(int(bits[j]))

@@ -1,6 +1,18 @@
-n=8: 6874 classes (A000568(8) = 6880): FAIL
-Traceback (most recent call last):
-  File "C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\metagraph_flow_n8_check_opus_S305.py", line 94, in <module>
-    assert C == 6880
-           ^^^^^^^^^
-AssertionError
+n=8: 6880 classes (A000568(8) = 6880): OK
+blue tilings = 4096 (predicted 4096: OK)
+pure blue 3, mixed 173, pure black 6704
+  pureblue  axis histogram: {168: 1, 152: 2}
+  mixed     axis histogram: {152: 1, 136: 3, 120: 8, 104: 10, 88: 14, 72: 26, 56: 28, 40: 33, 24: 35, 8: 15}
+  pureblack axis histogram: {160: 6, 152: 8, 144: 14, 136: 26, 128: 44, 120: 76, 112: 108, 104: 172, 96: 220, 88: 392, 80: 396, 72: 588, 64: 628, 56: 864, 48: 740, 40: 896, 32: 622, 24: 572, 16: 262, 8: 70}
+blue lines = 2048 (predicted 2048: OK)
+BLUE |dx| histogram: {0: 640, 16: 960, 32: 384, 48: 64}
+  parity law (all = 0 mod 16): OK
+  max = 48 (predicted 48: OK)
+BLACK |dx| histogram: {0: 214400, 8: 380928, 16: 260160, 24: 133120, 32: 46720, 40: 10240, 48: 960}
+  ('BLACK', 'mixed', 'mixed'): 772
+  ('BLACK', 'mixed', 'pureblack'): 53072
+  ('BLACK', 'pureblack', 'pureblack'): 992684
+  ('BLUE', 'mixed', 'mixed'): 2045
+  ('BLUE', 'mixed', 'pureblue'): 3
+blue-avoids-pureblack: OK
+transitive node x = 168; lines: [('BLUE', 120)] (predicted [('BLUE', 120)])
