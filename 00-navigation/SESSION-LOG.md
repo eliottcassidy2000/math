@@ -64380,11 +64380,15 @@ LRC predicate it preserves and the information it destroys.
 
 A concurrent live-main pull added THM-852/HYP-6905, which refutes the proposed
 all-size black self-line law `2 selfK=SC` at `n=8` (`404!=176`) while retaining
-the Klein-four orbit and involution skeleton. It does not change any LRC
-closure above. It is nevertheless relevant signal for the tournament lane:
-an exact small-size count identity can fail at the next size even when its
-group-action scaffold survives, just as a transitive erosion tournament can
-change hundreds of edges without carrying cover truth.
+the Klein-four orbit scaffold. A later pull added THM-854/MISTAKE-150 and
+corrected the proposed involution corollary: a witness square realizes the
+base-path pair flip rather than an automorphism, no witness through `n=7` is an
+involution, and odd witness order is possible only for `n=1,2 mod 4`. None of
+this changes an LRC closure above. It is nevertheless relevant signal for the
+tournament lane: an exact small-size identity can fail at the next size and a
+valid group action can still miss its affine operation cocycle, just as a
+transitive erosion tournament can change hundreds of edges without carrying
+cover truth.
 
 The next pull added the S13g exact artifact for the still-reserved THM-853
 closed continued-fraction return semigroup: `46,126` maps, `3,149`

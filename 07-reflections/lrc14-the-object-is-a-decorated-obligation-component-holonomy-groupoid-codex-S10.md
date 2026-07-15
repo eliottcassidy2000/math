@@ -82,10 +82,15 @@ corresponding failure is already ternary: an ordered three-component switch and
 a winding guard are required where any binary runner ranking is too small.
 The concurrent THM-852/HYP-6905 pull supplies an independent tournament
 guardrail: the attractive small-size law `2 selfK=SC` fails at `n=8`
-(`404!=176`) even though its Klein-four orbit and involution skeleton survive.
-It does not alter an LRC theorem, but it reinforces the same discipline:
-small-size metagraph numerology is a shadow until the operation and terminal
-predicate are proved on its fibres.
+(`404!=176`) even though its Klein-four orbit skeleton survives. The subsequent
+THM-854/MISTAKE-150 correction removes the claimed involutive-witness
+corollary: a witness square carries the nonzero base-path pair flip, and no
+witness through `n=7` is an involution. What survives is an affine iteration
+cocycle and the parity law that odd witness order requires
+`n=1,2 mod 4`. It does not alter an LRC theorem, but it reinforces the same
+discipline: small-size metagraph numerology and even a correct group action are
+shadows until the operation cocycle and terminal predicate are retained on
+their fibres.
 The concurrent S13g computation attached to the reserved THM-853 stub gives a
 second, operation-level warning. Its three closed continued-fraction returns
 generate `46,126` literal maps and `20,419` future-refinement classes on the
