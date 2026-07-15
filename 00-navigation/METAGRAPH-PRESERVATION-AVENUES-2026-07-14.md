@@ -731,19 +731,50 @@ certificate clauses, and proof obligations.
 - **Deliverable:** a proved marked Tutte specialization or a clean no-go
   separating the two electrical levels.
 
+### MPA-40 — Unit-inversion witness stalk under continued fractions
+
+- **Delivered arithmetic stalk by THM-819:** at the sub-tight interval-core
+  threshold, every good component is anchored at a primitive fraction `a/q`
+  with `q=k+1`.  Its two endpoint owners are exactly
+  `j+=a^(-1) mod q` and `j-=q-j+`, and its oriented extents are
+  `delta/j+` and `delta/j-`.  The total measure is the shadow obtained only
+  after summing this labelled stalk.  For the LRC(14) interval body `q=13`,
+  every nonzero residue is present; at composite moduli the missing nonunits
+  are genuine absent witnesses, not a congruence correction.
+- **Continued-fraction action:** a CF digit is a unimodular transformation of
+  the primitive lattice column `(a,q)`.  Therefore the candidate transported
+  object is `(a,q;j+,j-;left extent,right extent)`, not `q`, the harmonic sum,
+  or the unordered owner pair.  Inversion `a->a^(-1)` and reflection
+  `a->q-a` are exact operations on this stalk.  Changing the denominator can
+  change the unit set, so a fixed-modulus residue quotient is not functorial
+  under an arbitrary Euclidean word.
+- **Pull:** compute the piecewise-rational action of the centered words used in
+  THM-808/812/813 on the primitive witness intervals, then form the fibre
+  product with THM-808's duplicate-root stalk and THM-813's literal
+  reflection-orbit carrier `Q`.  Test commutation with reflection and whether
+  endpoint-owner changes are exactly the failures of projected metagraph
+  descent.  No canonical map from these residues to tournament nodes is yet
+  claimed.
+- **Must preserve:** primitive numerator and denominator, orientation, both
+  inverse owners, the two unequal interval extents, and the CF matrix.  The
+  total primitive harmonic sum destroys the continuation data.
+- **Deliverable:** an exact modular-CF action table at `q=13`, followed by a
+  proof or smallest refuter for descent to `Q x root`; keep the LRC metric
+  predicate as a separate stalk until a preservation lemma is proved.
+
 ## Recommended next three pulls
 
-1. Join `MPA-32/34/35`: compare `n=8` continuation cells with THM-809's
-   injective lower `Lambda` and its 418-to-zero layer genealogy.  Include
-   inverse lifts and internal deletion, then test static injectivity at `n=9`
-   and explain the first pre-separation or genuine collision by an endpoint-
-   fixed interior permutation or the smallest missing corewise Möbius
-   coefficient.
+1. Join `MPA-32/34/35`: execute THM-818's ordered three-way join on the exact
+   `R_8` kernel relation, apply the canonical-apex/upper-colour/S2 ladder, and
+   explain every survivor by an endpoint-fixed interior permutation or the
+   smallest missing corewise Möbius coefficient.  Then add inverse lifts and
+   internal deletion to distinguish static exactness from continuation.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
-3. Join `MPA-28/38`: extend THM-813's canonical reflection-orbit line action
+3. Join `MPA-28/38/40`: extend THM-813's canonical reflection-orbit line action
    through the ten-wall centered-CF word, auditing which coarser edge/node and
    `rho`-saturated coefficient quotients satisfy fibre-purity under the
    composite; then form the literal-witness fibre product with THM-808's
-   owner/root stalk and THM-816's dynamic residual-component/danger-comb
-   incidence, using THM-810's equality clock only as boundary telemetry.
+   owner/root stalk, THM-819's primitive inverse-owner stalk, and THM-816's
+   dynamic residual-component/danger-comb incidence, using THM-810's equality
+   clock only as boundary telemetry.

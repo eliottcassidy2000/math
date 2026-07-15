@@ -24,7 +24,7 @@ H_8(x) = (nu_8(x), nu_8(kappa x), chi_8(x)),
 R_8    = {(x,y) in X_8^2 : H_8(x)=H_8(y)}.                 (1)
 ```
 
-Then the search for distinct oriented `n=9` tilings with equal lower B3 node
+Then the search for distinct oriented `n=9` tilings with equal lower face-`H_8`
 data is exactly a three-way equijoin of copies of `R_8` along their pairwise
 `n=7` overlaps.  It is not necessary to enumerate and sort all `2^27`
 apex-zero complement-line representatives (or all `2^28` oriented tilings).
@@ -88,7 +88,8 @@ following filters in this order:
    case is the simultaneous-complement duplicate.  A mixed pair is not a pair
    of canonical apex-zero representatives for the ordered codec; independently
    complementing its apex-one member swaps every ordered endpoint pair, and
-   the resulting canonical case is already represented in the both-zero join;
+   any collision obtained after that canonicalization is already represented
+   in the both-zero join;
 3. require equality of the upper colour bit `chi_9(u)=chi_9(v)`.  Together
    with the three face-colour coordinates already equal in `H_8`, this is
    exactly equality of the full `UABC` word;

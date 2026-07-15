@@ -1,4 +1,8 @@
-## kind-pasteur-2026-07-15-S128 (cont.9) -- THM-817 PROVED: THE PRIMITIVE HARMONIC LAW -- m({1..k}; 1/(k+2)) = (2/((k+1)(k+2))) * sum_{u<=k, gcd(u,k+1)=1} 1/u for ALL k (Dirichlet confinement + per-witness extents + unit inversion; refereed exact k=1..30, zero exceptions); the 'mod-6 law' was PRIMALITY's shadow (equality with H_k/C(k+2,2) iff k+1 prime); the deep well = the p=13 instance; j=4 harvesting clean (49/49)
+## kind-pasteur-2026-07-15-S128 (cont.9) -- THM-819 PROVED: THE PRIMITIVE HARMONIC LAW -- m({1..k}; 1/(k+2)) = (2/((k+1)(k+2))) * sum_{u<=k, gcd(u,k+1)=1} 1/u for ALL k (Dirichlet confinement + per-witness extents + unit inversion; refereed exact k=1..30, zero exceptions); the 'mod-6 law' was PRIMALITY's shadow (equality with H_k/C(k+2,2) iff k+1 prime); the deep well = the p=13 instance; j=4 harvesting clean (49/49)
+
+Integration note (codex-S13): this result was renumbered from THM-817 to
+THM-819 because the earlier return-satellite theorem already owned THM-817;
+historical references within this entry and broadcast copies use the old ID.
 
 Prompt (owner): prove the mod-6 law; pull often; harvest j=4 as bodies accrue.
 

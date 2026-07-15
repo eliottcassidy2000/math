@@ -1,5 +1,5 @@
 ---
-id: THM-817
+id: THM-819
 title: THE PRIMITIVE HARMONIC LAW — for every k ≥ 1, the interval core's good measure at the sub-tight threshold is EXACTLY the primitive harmonic sum — m({1,…,k}; λ = 1/(k+2)) = (2/((k+1)(k+2))) · Σ_{1≤u≤k, gcd(u,k+1)=1} 1/u. COROLLARY: it equals H_k/C(k+2,2) (THM-805's harmonic-measure form) ⟺ k+1 is PRIME — the "mod-6 law" of HYP-6885 was the shadow of primality (primes > 3 are ≡ ±1 mod 6, so n = k+2 = p+1 ≡ 0,2 mod 6; the mod-6 exceptions n ∈ {10,16,22} are n−1 ∈ {9,15,21} composite). The deep well is the p = 13 instance: m({1..12}; 1/14) = 2H₁₂/(13·14) = H₁₂/91 (mac-mini THM-736's base measure — now an instance of a totient-structured law)
 status: PROVED (three-step proof below: Dirichlet confinement + per-witness two-sided extents + unit-inversion bijection; every step elementary and self-contained) + REFEREED (exact ℚ, k = 1..30, zero exceptions; also re-derives every EQUAL/differ entry of the cont.8 ladder including the exact failure ratios)
 source: kind-pasteur-2026-07-15-S128 (cont.9; owner: prove the mod-6 law)
@@ -9,9 +9,12 @@ related:
   - HYP-6885 (a) — RESOLVED by this theorem (the mod-6 characterization was correct data, wrong lens)
   - mac-mini THM-736 (the p=13 deep-well instance |G'| = H₁₂/91)
   - HYP-6865 (the staircase's electrical resistance H_{n−2}: matches the good measure exactly iff n−1 prime — the staircase network "knows" primality through the LRC)
+verification:
+  - 04-computation/thm819_primitive_harmonic_referee_kps_S128c9.py
+  - 05-knowledge/results/thm819_primitive_harmonic_referee_kps_S128c9.out
 ---
 
-# THM-817 — the primitive harmonic law
+# THM-819 — the primitive harmonic law
 
 **Theorem.** For k ≥ 1, set q = k+1, δ = 1/(q(k+2)). Then
 
