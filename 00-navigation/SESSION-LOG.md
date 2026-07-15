@@ -64478,7 +64478,9 @@ Incoming work was integrated rather than overwritten: THM-847 closes the
 bounded mixed H5 language; THM-852 refutes the n8 self-line/SC extrapolation;
 THM-854 corrects its invalid involution corollary with the exact witness-order
 path-XOR parity law; the S14 H-drift formula shows exact drift needs a
-length-weighted OCF endpoint coordinate, not H alone; THM-851 reserves the
+length-weighted OCF endpoint coordinate, not H alone; and THM-810's incoming
+F6 law closes the first two score-axis flip moments exactly while leaving
+sheet/node provenance outside that scalar closure.  THM-851 reserves the
 complementary node-coloured constant-composition refinement.  The THM-842/845
 namespace collision was resolved by first-pusher ordering, leaving each
 theorem ID unique.

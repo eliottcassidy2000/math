@@ -4,7 +4,7 @@ title: The closed continued-fraction lift/face returns form a 46,126-map identit
 status: PROVED EXACT COORDINATE MONOID/CAYLEY FLOW + FINITE-EXACT Q FUTURE-CONGRUENCE CLASSIFICATION
 source: codex-2026-07-15-S13g
 depends_on: [THM-828, THM-838, THM-840, THM-842, THM-846]
-related: [THM-813, THM-843, THM-851, THM-852, THM-854, HYP-6880]
+related: [THM-810, THM-813, THM-843, THM-851, THM-852, THM-854, HYP-6880]
 verification:
   - 04-computation/n9_closed_cf_return_semigroup_codex_S13g.py
   - 05-knowledge/results/n9_closed_cf_return_semigroup_codex_S13g.out

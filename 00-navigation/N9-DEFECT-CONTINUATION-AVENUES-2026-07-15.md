@@ -234,6 +234,20 @@ cells, but every fibre is still even under reflection.  Thus the selected
 bank is internally black yet globally almost spanning, and curvature still
 does not replace mirror position.
 
+The incoming THM-810 F6 closure now makes the longitudinal statement exact to
+second order.  For a uniform arc flip, with `N=binom(n,2)`,
+
+```text
+E[(Delta x)^2 | T] = 16(n-4)x/N + 64,
+Var_random(x)=2n(n-1)(n-2).
+```
+
+Together with THM-833's affine first drift, the score axis is a closed
+two-moment observable.  THM-843 still shows why this is not a node address:
+reflection-even curvature fibres survive, and the defect shell needs blue/
+black provenance.  The right use is a fluctuation budget along a typed path,
+not replacement of the path or its sheet.
+
 ### Continued fractions and owner transport
 
 THM-778 says a continued-fraction digit is safe only with its token action.
