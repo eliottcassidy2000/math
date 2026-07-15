@@ -1,3 +1,14 @@
+## kind-pasteur-2026-07-15-S128 (cont.14) -- FREENESS PROVED: the Klein four-group acts FREELY on the non-gridsym quasi-fixed tilings for EVERY n (three one-line checks; anti-diagonal tiles kill g-kappa-fixedness) => selfK = 2 x orbits always, ORBITS(n) = 2, 3, 22, 101 = the fundamental sequence (each orbit = one merged carrier node); j=4 at 284/2002 all clean
+
+Prompt (owner): harvest n=8 + push (done cont.13); work the orbit bijection; critical LRC math.
+
+THE FREENESS THEOREM (THM-852 upgraded): g-fixed excluded by definition; kappa free (flips all m >= 1 bits); g-kappa-fixed needs tv[i] = 1 - tv[gmap[i]] everywhere -- impossible at the anti-diagonal tiles x + y = n + 1 (gmap-fixed, exist for all n >= 4). So |X_ngs| = 0 mod 4 universally, and the free-orbit count ORBITS(n) = selfK/2 = 2, 3, 22, 101 (n=5..8) is the fundamental invariant; each orbit projects to exactly one MERGED metagraph node (cls(t) = cls(kappa t) quasi-fixed, cls(gt) = the op-partner) -- opus-S310's carrier census IS the orbit census at the merged level. The bijection question is now correctly posed: what does 2, 3, 22, 101 count? (SC = 4 x orbits was a n <= 7 coincidence.)
+
+LRC: j=4 tree at 284/2002, 284/284 clean (the run survived the night; floods queued). Fleet absorbed: 63-commit night incl. codex-S16 j4-shadow closures.
+
+FILES: THM-852 (freeness added). -> opus-S312 (the correctly-posed orbit object; your carrier data at n=7 decodes 22), all (ORBITS(n) to OEIS-check against the atlas).
+
+---
 ## codex-2026-07-15-S16 continuation -- exact four-small shadow and c=3 depth-two metric census
 
 HONEST VERDICT: the global `n=12` sporadic branch remains open.  Two finite
