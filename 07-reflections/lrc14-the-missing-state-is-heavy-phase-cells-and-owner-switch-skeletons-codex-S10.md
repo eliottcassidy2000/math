@@ -971,10 +971,12 @@ still missing.
    exact owner-labelled endpoint/cusp set of size at most `200B^2+22B`. Prove
    that some selector point escapes uniformly, or show that the joint selector
    obligations are incompatible with THM-775's terminal ownership tree.
-   THM-807 reserves a linear central-return selector, exact in the connected
-   return branch, but its proof and replay remain under audit. If valid, it
-   isolates disconnected return satellites as the source of the quadratic
-   component interaction rather than removing the uniform obligation.
+   THM-807 proves a linear central-return selector of size at most `42B-2`,
+   exact in the connected-return branch. It isolates disconnected return
+   satellites as the source of the quadratic component interaction rather
+   than removing the uniform obligation. Its exact method-boundary rows also
+   silence every multiplier grid through `d=7`, or every even grid through
+   `d=18`, before escaping through the component selector.
 3. **The even-maximum collar.**  THM-792 gives a bounded rational clock,
    repeated ordered flank types, and—on the forced `13`-multiple subbranch—a
    moving edge-cover automaton.  It excludes every `w=13c` through quotient

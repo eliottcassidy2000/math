@@ -747,14 +747,16 @@ be a Markov state.  The LRC design consequence is to add overlap-phase data to
 the proposed component/stalk/event tensor and audit gluing across divisor,
 deletion, and packet charts; this is a preservation rule, not an LRC theorem.
 
-THM-807 has now been reserved for the next deep-selector split. Its proposed
-linear endpoint/cusp gate uses only the mandatory central return component and
-would become equivalent to the full erosion predicate when the closed return
-set is connected. This reframes THM-803's quadratic selector: the extra state
-is carried by disconnected return satellites and their component incidences,
-not by component count alone. A second proposed construction makes longer
-`13d` grid ladders silent or trapped, again as method boundaries rather than
-tight packets. Both parts remain claimed and are excluded from closure.
+THM-807 now proves the next deep-selector split. The exact zero return
+component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
+endpoint/cusp selector, equivalent to full erosion when the closed return set
+is connected. Deduplicating the two cusp grids sharpens its size to at most
+`42B-2gcd(x,y)<=42B-2`. This reframes THM-803's quadratic selector: the extra
+state is carried by disconnected return satellites and their component
+incidences, not by component count alone. Exact signed-complement rows make
+all multiplier grids through `d=7`, or every even grid through `d=18`, silent
+or trapped before their connected-return selectors escape. Both rows are loose
+method boundaries, not tight packets.
 
 The final live-main joins sharpened this picture.  A referee audit found no
 fatal issue in THM-786's corrected factor-two span, signed visitor law, or
@@ -771,8 +773,8 @@ coordinate, not a proof quotient.
 HONEST FRONTIER: neither LRC(14) nor uniform n=12 sporadic-branch emptiness is
 proved.  The next exact pieces are a uniform-in-quotient-height collar tear
 after the `w=13c`, height-24 multiplier lane; uniform failure or incompatibility
-of THM-803's exact signed-complement all-component selector (THM-807's
-connected-return compression is audit-in-progress); a quotient by the
+of THM-803's exact signed-complement all-component selector after THM-807's
+connected-return compression; a quotient by the
 full affine diagonal-isotropy subgroupoid joining
 THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
 radius at least four after THM-804 (THM-806 is an audit-in-progress attack,
@@ -780,11 +782,12 @@ not closure); and a scale-normal argument for
 clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
-FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804 plus claimed THM-806/807; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/807 plus claimed THM-806; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
-Hamming-two/three, affine-packet, anti-grid/component-selector, and signed-wall
-odd-grid cross-audits; HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
+Hamming-two/three, affine-packet, anti-grid/component-selector,
+connected-return/grid-ladder, and signed-wall odd-grid cross-audits;
+HYP-6835/6840; updated frontier/backlog/CF/metagraph maps; and
 `lrc14-the-missing-state-is-heavy-phase-cells-and-owner-switch-skeletons-codex-S10.md`.
 
 ---

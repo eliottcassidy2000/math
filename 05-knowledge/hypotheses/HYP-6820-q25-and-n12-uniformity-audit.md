@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, uniformly loose in the AP Hamming-one/two stars, and reduced at Hamming three to the scale-one chart; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, and an exact finite all-component erosion selector; branch emptiness remains OPEN at scale-one triple lifts, Hamming radius at least four, the unbounded selector/collar residual, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, shallow-exact through lift height twelve, uniformly loose in the AP Hamming-one/two stars, and reduced at Hamming three to the scale-one chart; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact finite all-component erosion selector, and a linear exact connected-return compression; branch emptiness remains OPEN at scale-one triple lifts, Hamming radius at least four, the unbounded selector/collar residual, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -29,6 +29,7 @@ depends_on:
   - THM-800
   - THM-803
   - THM-804
+  - THM-807
   - HYP-6750
   - HYP-6775
 related:
@@ -38,7 +39,6 @@ related:
   - HYP-6815
   - THM-771
   - THM-806
-  - THM-807
   - MISTAKE-143
 ---
 

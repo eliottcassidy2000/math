@@ -359,14 +359,17 @@ charts are silent, transport to the exact all-component selector before
 declaring a trap. The selector is now constructed; proving its uniform failure
 or incompatibility is the remaining theorem.
 
-The THM-807 reservation challenges a further implicit vertex choice. The
+THM-807 challenges a further implicit vertex choice. The
 quadratic selector treats every deep-component/return-component pair as a
 potential vertex, but the central return component is mandatory and connected.
-It should support a linear necessary selector, becoming exact if no satellite
-return component exists. On this view the extra vertices are not runners or
-deep components alone: they are satellite-labelled return incidences. The
-claim is still being audited, so the present theorem-facing carrier retains all
-of them.
+It supports a linear necessary selector of size at most `42B-2`, becoming
+exact if no satellite return component exists. On this view the extra vertices
+are not runners or deep components alone: they are satellite-labelled return
+incidences. Exact signed-complement rows silence every multiplier grid through
+`d=7`, or every even grid through `d=18`, while their connected-return
+selectors escape. Thus denominator vertices are a strict telemetry quotient
+even after a long ladder, and the theorem-facing carrier retains the full
+component incidence.
 
 ## 4. The transverse-tooth state and the shape of infinity
 
@@ -530,6 +533,11 @@ role is now sharper.
   `(12,5,11)` changes a directed triangle into a transitive tournament after
   one edge flip, while the capacity verdict is unchanged.  The theorem lives
   in the oriented cover inequalities, not in that triangle.
+- THM-807's all-multiplier grid row gives two transitive eight-vertex gauges
+  differing by nine edges; its even-grid row gives two transitive ten-vertex
+  gauges differing by seven edges. Both have singleton SCCs and one
+  Hamiltonian path, while the owner-labelled component selector detects the
+  escape missed by the ranked grid obligations.
 
 Thus cycles can signal holonomy and edge flips can signal observer dependence,
 but neither is automatically an obstruction or a witness.
@@ -557,6 +565,42 @@ decorated tournament is one local chart of the obligation groupoid.  If a
 pair is genuinely incomparable because the carrier is bipartite or
 hypergraphic, forcing an orientation is information loss; retain the coloured
 incidence graph instead.
+
+The exact invariant on such a chart is a **pointed tropical prefix transfer**.
+For an ordered event word `W=(alpha_1,...,alpha_m)` on atomic obligation
+coordinates, set
+
+```text
+C_k=sum_(s<=k) alpha_s,
+c_W=C_m,
+b_W(o)=min_(0<=k<=m) C_k(o),
+T(W)=(c_W,b_W).
+```
+
+Then, coordinatewise,
+
+```text
+T(UV)=(c_U+c_V,min(b_U,c_U+b_V)),
+x survives every prefix of W iff x+b_W>=0.                       (39)
+```
+
+This is THM-792's exact root-current transfer, now read as the common local
+invariant. For a THM-803 component, order its endpoints and cusps
+`t_0,...,t_m`, take `x=Q(t_0)-11/13`, and put
+`alpha_i=Q(t_i)-Q(t_(i-1))`. Piecewise affinity gives
+
+```text
+x+b_W=min_(t in C)(Q(t)-11/13),                                  (40)
+```
+
+so the pointed transfer retains the erosion sign exactly, including a
+singleton component. THM-804 supplies the multiplicative companion: residue
+gains on an owner cycle must telescope to one, and the forbidden `+/-2` cycle
+products close the nontrivial deck-order cases. At deck order one that gain
+obstruction becomes trivial, explaining why THM-806 must retain the ordered
+metric collar word. The transfer does not certify that a word is arithmetically
+realizable; phase cell, owner/return provenance, and component address remain
+the sidecar.
 
 ### 6.3 The transition metagraph
 

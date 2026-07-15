@@ -71,14 +71,25 @@ iff Q_(a,b)(t)>=11/13 for every t in Lambda(U;x,y),                (3)
 and one may choose
 
 ```text
-|Lambda(U;x,y)| <= 2L+2max(x,y).                                  (4)
+g=gcd(a,b)=gcd(x,y),
+|Lambda(U;x,y)| <= 2L+2max(x,y)-2g.                               (4)
 ```
+
+More precisely, if `C_U` is not the whole circle and has `s` components,
+then the deduplicated selector has
+
+```text
+|Lambda|=2s+|(C_U intersect Cusp(a,b)) minus boundary(C_U)|,
+Cusp(a,b)={k/(2a)} union {k/(2b)}.
+```
+
+If `C_U` is the whole circle, `|Lambda|=|Cusp(a,b)|`.
 
 In a hypothetical tight two-sheet packet, THM-772 therefore gives the
 **linear necessary selector**
 
 ```text
-|Lambda(U;x,y)| <= 42B.                                           (5)
+|Lambda(U;x,y)| <= 42B-2g <= 42B-2.                               (5)
 ```
 
 Every non-cusp endpoint in (2) retains an exact owner label.  It comes from
@@ -108,10 +119,14 @@ connected arc (or the whole circle), and mergers can only reduce the number
 of components.  Hence `C_U` has at most `L` components and at most `2L`
 endpoints.
 
-The breakpoints of `Q_(a,b)` are precisely the `2a+2b=2max(x,y)` cusps in
-(2).  Between consecutive cusps `Q` is affine.  Its minimum on each component
-of `C_U` is consequently attained at an endpoint or cusp, proving (3)--(4).
-THM-772 gives `L<=10B` and `max(x,y)<=11B`, proving (5).  Boundaries of
+The two cusp grids in (2) have `2a` and `2b` points, with intersection of
+size `gcd(2a,2b)=2g`.  Their union therefore has exactly
+`2a+2b-2g=2max(x,y)-2g` points.  Between consecutive cusps `Q` is affine.
+Its minimum on each component of `C_U` is consequently attained at an
+endpoint or cusp, proving (3)--(4); endpoint/cusp coincidences and component
+mergers can only improve the bound.  Since `x,y` are odd,
+`gcd(a,b)=gcd(x,y)`.  THM-772 gives `L<=10B` and
+`max(x,y)<=11B`, proving (5).  Boundaries of
 `E_U` have the first form in (6), and thickening by `J_B` supplies the final
 shift.  A boundary left after merging constituent arcs is still a boundary
 of one constituent, proving the owner assertion. ∎
@@ -136,7 +151,7 @@ iff Q_(a,b)(t)>=11/13 for every t in Lambda(U;x,y).              (8)
 ```
 
 Thus THM-803's general quadratic selector improves from
-`200B^2+22B` to `42B` on every connected-return core.
+`200B^2+22B` to `42B-2gcd(x,y)` on every connected-return core.
 
 ### Proof
 
