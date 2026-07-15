@@ -187,6 +187,16 @@
   exception `s=3` interface together.  The predicate carrier is the bipartite
   owner-sheet incidence with half-open germ orientation and parity, not a
   runner tournament or scalar capacity table.
+  Hamming-two AP star; and THM-804 forces common scale for every tight
+  three-replacement lift.  The first unresolved base is the genuine scale-one
+  Hamming-three chart, followed by radius at least four.  Build its bipartite
+  sheet--tooth incidence graph with one-sided germ orientation and seek a Hall
+  defect, a normalized floor, or a new descent tied to a decreasing invariant.
+  Audit THM-806's proposed bounds before using its finite box; it is claimed,
+  not proved. THM-810 separately reserves a four-replacement scalar
+  classification: either all deck orders are one or every order is three and
+  the labels form a coset of `<5>={1,5,8,12}`. Its proof and replay are still
+  being transcribed, so the radius-four branch remains open.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put
@@ -405,7 +415,8 @@
 
 ## Lead codex-2026-07-14-S7: Euclidean endpoint blocks on the absent-owner stalk
 
-- **Source:** THM-778/773; HYP-6835/6825; THM-536/637/745; HYP-4078/6280.
+- **Source:** THM-778/773/808; HYP-6835/6825; THM-536/637/745;
+  HYP-4078/6280.
 - **Proved structure:** Owner midpoint clocks merge by the exact centered
   mechanical count `ceil((v(2i+1)-u)/(2u))`.  The common gcd gives repeated
   blocks, odd/odd reduced ratios give exactly `gcd(u,v)` ties, and Euclidean
@@ -437,16 +448,16 @@
   MISTAKE-147/149, the open exit lemma is stalk- and holonomy-quotiented:
   combine THM-783's visitor clusters with an exact centered-schedule versus
   ordered-hop/return-map question under THM-778.
-  nevertheless unbounded in other families (THM-784). THM-788's decorated
-  active-period word is an intermediate normal form, not the final quotient:
-  THM-794 repeats a full active owner cycle by diagonal sheet translation.
-  The root word is a first-return signal, not a long-run survivor.  After
-  MISTAKE-149, combine THM-783's visitor constraints with a schedule-versus-
-  hop-word question only after central return holonomy is removed.
-- **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
-  compile the five-return half into centered Farey/Christoffel substitutions.
-  Prove a prefix loses coverage, a simultaneous event tears the stalk, or the
-  fibre state descends.  Test the proposed state by continuation minimization.
+- **Root transport proved (THM-808):** A centered-Christoffel block with owner
+  counts `c_a` acts on the duplicated prime-sheet root by
+  `d'=d-sum c_a w_a^(-1)`. The repeated three-wall block starts twice from the
+  same literal mask `31115` and reaches different masks; the two source roots
+  distinguish the witnessed futures. The root is an exact affine transport
+  coordinate, not a claim that `(mask,root)` is continuation-complete.
+- **Next theorem:** Prove a prefix loses coverage, a simultaneous event tears
+  the stalk, or the fibre state descends. Test the owner-labelled mask/root
+  state by continuation minimization while retaining centered block, inverse
+  steps, carry, and the metric core-safe component.
 - **Guardrail:** Standard continued fractions retain a reduced ratio but lose
   common scale, midpoint coset, ties, owner action, metric component, and core
   safety.  Use the full centered packet in the new CF frontier map.
@@ -480,7 +491,8 @@
 
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension
 
-- **Source:** HYP-6825/HYP-6815; THM-761; HYP-2245/2989/3106/3513; exact
+- **Source:** HYP-6825/HYP-6815; THM-761/796/801/809;
+  HYP-2245/2989/3106/3513; exact
   tournament-tiling explorer atlas.
 - **Finite result:** The converse-merged blue/black complement-line graph is
   connected at `n=3..7`; rooted weighted 1-WL separates all merged nodes
@@ -499,7 +511,13 @@
   separates inherited from fresh blackness.  Loops carry same/converse-sheet
   holonomy and are nonhereditary.  All identities are exact-audited through
   `n=7`; general linear/incidence statements are proved for every `n`.
-- **Open theorem:** Test connectivity/WL completeness at `n=8`, then attach the
+- **n=8 lower codec (THM-809):** The lower-first recursive address is
+  finite-exactly injective on all `2^20=1,048,576` complement lines. The 418
+  lower-face collisions fall successively to 252, 148, 74, 52, and zero by
+  the `tau=7` layer. This proves static identification at `n=8`, not an
+  all-size or continuation-complete state.
+- **Open theorem:** Test transition/continuation completeness at `n=8` and
+  all-size reconstruction, then attach the
   address as a base-chart label to the affine incidence object
   `X={(u,t,c,lambda):u=ct,Phi(u,t)>=lambda}`.  The stalk must retain observer
   cut, gap/sector metric, closed threshold wall, endpoint owner, scale/carry,

@@ -48,6 +48,8 @@ related:
   - THM-804
   - THM-806
   - THM-807
+  - THM-808
+  - THM-809
   - THM-810
   - THM-812
   - HYP-6820
@@ -783,6 +785,17 @@ finite separator to an all-size Markov state.  For LRC this is a design rule,
 not a transfer theorem: component, divisor, deletion, and packet charts may be
 locally exact yet fail to glue unless their shared owner/phase data agrees on
 overlaps.
+
+THM-809 now extends the finite separation result to every one of the
+`2^20` complement lines at `n=8`: a lower-first recursive address becomes
+injective by the `tau=7` layer. THM-808 simultaneously gives the needed
+dynamic warning. A centered-Christoffel owner-count block acts affinely on the
+prime-sheet redundancy root, but the same literal mask and same block can have
+different target masks; distinct source roots repair the displayed collision.
+Static reconstruction, transported root, and continuation completeness are
+therefore three different levels. The LRC carrier needs the fibre product of
+the face/mask address with the owner-labelled sheet root, event word, carry,
+and metric component—not a concatenation of independent tournament scores.
 
 The LRC evidence falls cleanly into the same ledger:
 

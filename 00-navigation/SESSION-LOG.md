@@ -756,6 +756,16 @@ one fixed-core pair, repaired by exactly three quartic cross-leg/apex
 coefficients. This remains an analogy, not an LRC implication. Its relevance
 is the preservation boundary: independently of THM-810, the first faithful
 transport again requires an edge/incidence fibre plus quartic stalk data.
+THM-808/809 now separate identification from transport even more sharply.
+The lower-first recursive address is finite-exactly injective on all
+`2^20` complement lines at `n=8`, but the prime-sheet wall movie contains two
+occurrences of the same literal mask `31115` and the same centered three-event
+block with different target masks. The duplicated sheet root obeys the exact
+affine cocycle `d'=d-sum c_a w_a^(-1)` and distinguishes this witnessed pair.
+Thus a static codec, an exact transported stalk coordinate, and a complete
+continuation state are three different claims. The LRC analogue must glue the
+face/mask address to owner-labelled root, event word, carry, and metric
+component over a common literal path orbit.
 
 THM-807 now proves the next deep-selector split. The exact zero return
 component is `[-2/(143B),2/(143B)]`; thickening by it gives a linear necessary
@@ -806,6 +816,14 @@ clustered comparable-size far frequencies after THM-799 closes the fully
 lacunary flags.
 
 FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/806/807/810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
+THM-778/779/783/786/788/794/802; the genuine scale-one Hamming-three chart and
+radius at least four after THM-804 (THM-806 is an audit-in-progress attack;
+THM-810's order-three coset interface is reserved but not yet available as a
+radius-four theorem); and a scale-normal argument for
+clustered comparable-size far frequencies after THM-799 closes the fully
+lacunary flags.
+
+FILES: THM-783/784/786/789/791/792/794/795/797/798/799/800/802/803/804/807/808/809 plus claimed THM-806 and reserved THM-810; corrected THM-779; MISTAKE-147/148/149; exact `w=13c` collar,
 raw-wall, balanced-transversal, packet-polytope, and erosion-liar
 scripts/outputs plus the exact tropical-transfer, marginal-holonomy,
 Hamming-two/three, affine-packet, anti-grid/component-selector,

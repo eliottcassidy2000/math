@@ -236,6 +236,29 @@ triple intersections.  THM-801's `Omega+S2` codec is finitely injective through
 `n=7` but is not an all-size Markov theorem; the analogous LRC address must be
 tested for transition exactness before it is used for descent.
 
+### 2.6 Static reconstruction and transported stalks are different theorems
+
+THM-809 extends the finite codec frontier: the lower-first recursive address
+is injective on all `2^20` complement lines at `n=8`. The 418 residual
+lower-face collisions vanish by the `tau=7` layer. This is strong static
+reconstruction, but neither an all-size theorem nor transition exactness.
+
+THM-808 supplies the complementary dynamic fact on the prime-sheet side. If a
+centered-Christoffel block has owner counts `c_a`, then the duplicated sheet
+root moves affinely by
+
+```text
+d'=d-sum_a c_a w_a^(-1) mod p.                                  (1a)
+```
+
+The same literal mask `31115` and the same three-event block occur twice with
+different target masks; their distinct source roots repair that witnessed
+collision. Thus a mask codec can identify the chart while failing to transport
+it, and a root can repair one transition without becoming a complete state.
+The typed combined carrier is a fibre product over the literal path orbit:
+Čech mask/face address on one side, owner-labelled sheet root and event block
+on the other, with metric component and carry retained above both.
+
 ## 3. THM-794/802, THM-795/800/804, and THM-797/803 are one recursion in three regimes
 
 These structural theorems look different only after their common
