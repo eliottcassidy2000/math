@@ -30,7 +30,9 @@ related:
   - THM-772   # proved unit-grid obligation carrier
   - THM-773   # proved prime-seven truth/transport carrier split
   - THM-774   # proved folded-diamond metric compression
-  - THM-775   # CLAIMED dyadic deletion descent
+  - THM-775   # proved dyadic deletion tower and exact Z/4 seam
+  - THM-776   # finite-exact two-sheet exclusion through height 100
+  - THM-778   # CLAIMED centered-Christoffel endpoint-order decoder
   - THM-779   # proved four-far transverse falsifier and capped family
   - THM-780   # proved recursive good-set-state transport
   - THM-777   # proved rho bridge and bounded-height floor; global floor conjectural
@@ -75,16 +77,21 @@ owner-colored threshold loop, rational gap metric, embedded marked relation
 lattice, and the action of the next permitted proof operation.  Uniform wall
 stratification and transport of those fibers over the chart remain open.
 
-The concurrent THM-772/773/774/775 programs sharpen the word "retain." A quotient
+The concurrent THM-772/773/774/775/776/778 programs sharpen the word "retain." A quotient
 need not preserve the same data for every task. THM-773's stored prime-seven
 audit shows that six finite-field moments recognize exact-cover truth while
 forgetting which of the `7!` owner assignments occurs and what the next event
 does. THM-772's unit-grid audit instead needs simultaneous obligation columns
 across moduli; its pairwise tournament does not preserve their joint splice.
-THM-774 proves an `l1` folded metric for the two-sheet equality packet. THM-772,
-THM-773, and THM-774 are proved; THM-775's proposed dyadic deletion recursion
-remains under audit. The status split matters: a carrier theorem is not
-automatically an LRC14 assembly theorem.
+THM-774 proves an `l1` folded metric for the two-sheet equality packet. THM-775
+proves that every imprimitive-deletion branch becomes a finite dyadic quotient
+chain with binary safe-child fibers and divisor-complete quotients. THM-776
+preserves the bounded two-sheet
+truth predicate by reversing the quantifiers into an atom/runner incidence
+hypergraph and proves that packet empty through height 100. THM-778 proposes a
+centered-Christoffel decoder for endpoint order, but remains CLAIMED. The
+status and payload splits matter: none of these carrier theorems is by itself
+an LRC14 assembly theorem.
 
 ## 1. The outer four-far cone
 
@@ -240,11 +247,15 @@ For prime `N>110`, set
 V_N={1,...,9,15,110,N,1092N}.
 ```
 
+In this discussion `r_P` denotes the positive-length interval count `r_+(P)`;
+the larger full topological count is written `r_top(P)`.
+
 These rows are primitive, covering, and exactly `f=4`. No divisor is shared
-by seven speeds, but the good-set component count of the top-peeled core
+by seven speeds, but the positive-length good-set component count of the top-peeled core
 `{1,...,9,15,110,N}` is unbounded: the fixed safe interval
 `[1/14,111/1540]` is cut by at least `N/1540-8/7` full `N`-teeth. Exact counts are
-`66,104,174,310` at `N=211,503,1009,2003`. Thus high-support coherent dilation and
+`66,104,174,310` at `N=211,503,1009,2003`; including isolated equality points,
+the topological counts are `68,108,176,312`. Thus high-support coherent dilation and
 high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
@@ -257,7 +268,8 @@ must retain at least the normalized cap load
 divisor-support profile and endpoint/tooth ownership.
 
 THM-780 turns this diagnosis into a reusable terminal face. If the base good set
-has state `(mu,r_B)`, adjoining frequency `N` sends it to a state satisfying
+has conservative state `(mu,r_B)` with `r_B:=r_top(B)`, adjoining frequency
+`N` and putting `r_N:=r_top(B union {N})` gives
 `mu_N>=6mu/7-2r_B/(7N)` and `r_N<=N+r_B`; no endpoint list is needed for those
 bounds. A sufficiently fast proportional peel `aN` then closes by THM-755 at an
 explicit rational threshold. One named safe interval supplies a convenient
@@ -280,11 +292,23 @@ THM-777 locates the remaining compactness coordinate more precisely. For every
 listed scale and tooth samples plus five seeded searches are finite evidence,
 not a global theorem.
 Thus THM-779 refutes raw topological compactness, THM-780 proves transport of a
-positive `(mu,r)` state, and THM-777 reduces the unclassified global obstruction
+positive `(mu,r_top)` state, and THM-777 reduces the unclassified global obstruction
 to safe-mass collapse in shape space. In fact THM-780 proves that no single
 high-frequency insertion over a fixed positive-mass base can cause that collapse.
 The next theorem must prove a uniform floor or classify and descend every
 varying-base or correlated multiscale sequence with `|G'_P| -> 0`.
+
+The same task-indexed distinction now has a bounded exact test on the two-sheet
+face. THM-776 atomizes the bad locus for each odd pair and keeps only the
+inclusion-minimal incidence hypergraph between bad atoms and possible quotient
+speeds. It forgets atom positions and widths, yet preserves the bounded LRC
+predicate exactly; every odd pair through height 100 has transversal number 12,
+while the packet provides only ten core speeds. This is finite-exact, not a
+uniform descent. THM-775 supplies a different carrier for the unbounded part:
+its dyadic quotient chain and binary sheet fibers preserve parity ownership,
+safe-child maps, eligibility radii, and divisor obligations while discarding
+absolute atom positions. The missing landing theorem must connect the terminal
+hereditarily primitive chain base to an atom-incidence deficit such as THM-776's.
 
 There is also an exact compressed local coordinate.  At a fixed time put
 `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and `rho_i={14x_i}`.  If
@@ -571,6 +595,15 @@ explicit legal transition or residual debt, not the Boolean field "some
 8. **Information-minimal assembly.** Prove which fields of the truth, metric,
    functor, and proof carriers can be reconstructed or discharged on each
    current theorem lane.
+9. **Dyadic-chain landing.** Use THM-775's finite quotient chain and binary
+   safe-child fibers to force its terminal hereditarily primitive two-sheet
+   base into THM-774/776's folded atom-incidence deficit, or prove a
+   height-independent lower bound
+   greater than ten for the corresponding transversal number.
+10. **Prime-sheet event decoder.** Audit THM-778's centered mechanical word,
+    tie blocks, cyclic carry, and global multi-owner reconstruction. THM-773's
+    moments already decide cover truth; the new decoder is needed only if it
+    really transports the next owner event.
 
 ## Tournament Analysis and assumption challenge
 

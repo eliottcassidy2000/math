@@ -333,7 +333,8 @@ The theorem-facing object is a saturated sheet-incidence hypergraph.  At the
 first seam the four sheet vertices carry the literal disjoint `2+1+1`
 partition (11).  At later seams, assign the newly blocked half to the newest
 odd guard and recursively assign the safe half below it.  This gives a
-canonical disjoint ownership partition on a binary sheet tree.
+canonical disjoint ownership partition on the binary lift fibers over the
+quotient chain.
 
 It is important not to overstate that conclusion: old guards may also be
 dangerous on parts of the newly blocked half.  Beyond the first `Z/4` seam,
@@ -343,9 +344,9 @@ A runner tournament may orient an edge by which guard owns the lower-labelled
 sheet, with circle reflection as the switch/gauge and binary sheet order as
 the tie Hamiltonian path.  Those tournaments are transitive at a fixed seam;
 they discard the capacity saturation, the safe-half recursion, and the unit
-columns used in the divisor transfer.  The binary sheet tree plus its
-speed-incidence sidecar is the smallest quotient here known to preserve the
-LRC covering predicate.
+columns used in the divisor transfer.  The quotient chain together with its
+binary sheet-fiber and speed-incidence sidecars is the smallest carrier here
+known to preserve the LRC covering predicate.
 
 This also records the challenged assumption: the natural recursive vertices
 are neither runners nor arcs, but proof obligations indexed by sheets.  The
@@ -360,5 +361,5 @@ quotients stay primitive and divisor-complete, ending at a hereditarily
 primitive base.  This does not yet exclude a tower or its terminal base
 uniformly.  It converts the remaining problem into one of proving that no
 primitive divisor-complete terminal core can support the folded cover of
-THM-774, or that the canonical binary ownership tree cannot persist at
-unbounded height.
+THM-774, or that the binary safe-child fibers cannot persist along an
+unbounded-height chain.

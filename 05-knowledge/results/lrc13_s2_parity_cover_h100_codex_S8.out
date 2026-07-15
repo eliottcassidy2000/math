@@ -1,6 +1,6 @@
 THM-776 finite-exact s=2 parity-cover certificate
 strict core-safe / closed exception-danger endpoint convention
-script_sha256=9cfac8e8db703271327249e2c0d6a02e36f62b479a540106ac7bd095ef87240b
+script_sha256=01cd8d93fd24e754f5c72e2e147871b8b548671d41167f4abc8c83c460394e23
 height=100 quotient_umax=50 odd_pair_max=99
 endpoints=6876 open_atoms=6875 odd_pairs=1225
 grid_sha256=6da3195bf93d5446d6eb66e6bcbf29d65e3069e0d12d3a13551db7addcf6d7ac

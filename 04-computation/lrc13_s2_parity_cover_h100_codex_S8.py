@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Finite-exact THM-769 s=2 parity-cover exclusion through height 100.
+"""Finite-exact THM-776 s=2 parity-cover exclusion through height 100.
 
 For
 
     A = 2U union {x,y},  |U|=10,  x,y odd,
 
-THM-769 says that A is tight at 1/13 exactly when the loose set
+Using THM-769, A is tight at 1/13 exactly when the loose set
 
     G_U = {tau : min_(u in U) ||u tau|| > 1/13}
 

@@ -21,6 +21,7 @@ compression; the declared tie path is printed with the fingerprints.
 """
 
 from collections import Counter, defaultdict
+from bisect import bisect_right
 from fractions import Fraction as F
 from itertools import permutations
 from math import gcd, isqrt
@@ -88,6 +89,28 @@ def max_divisor_packet(body):
                 candidates.add(d)
                 candidates.add(v // d)
     return max(sum(v % d == 0 for v in body) for d in candidates if d >= 2)
+
+
+def safe_component_counts(body):
+    """Return (positive-length components, isolated safe equality points)."""
+    ivs = good_intervals(body)
+    starts = [a for a, _ in ivs]
+    endpoints = set()
+    for v in body:
+        for k in range(v):
+            endpoints.add((k + LAM) / v)
+            endpoints.add((k + 1 - LAM) / v)
+    isolated = {
+        t
+        for t in endpoints
+        if 0 <= t < 1
+        and all(circle_dist(v * t) >= LAM for v in body)
+        and not (
+            (i := bisect_right(starts, t) - 1) >= 0
+            and t <= ivs[i][1]
+        )
+    }
+    return len(ivs), len(isolated)
 
 
 def cap_data(body):
@@ -215,21 +238,27 @@ def main():
     print("\nScale-free fragmentation falsifier for HYP-6830:")
     fixed_core = tuple(range(1, 10)) + (15, 110)
     assert (F(1, 14), F(111, 1540)) in good_intervals(fixed_core)
-    expected_components = {211: 66, 503: 104, 1009: 174, 2003: 310}
+    expected_components = {
+        211: (66, 2),
+        503: (104, 4),
+        1009: (174, 2),
+        2003: (310, 2),
+    }
     for N, expected in expected_components.items():
         assert is_prime(N)
         core = fixed_core + (N,)
         body = core + (1092 * N,)
-        components = len(good_intervals(core))
+        components, singletons = safe_component_counts(core)
         core_packet = max_divisor_packet(core)
         body_packet = max_divisor_packet(body)
         cap, peel_ratio = cap_data(body)
-        assert components == expected
+        assert (components, singletons) == expected
         assert core_packet == 5 and body_packet == 6
         assert primitive(body) and is_covering(body) and cap
         assert sum(v > 14 for v in body) == 4
         print(
-            f"  N={N:4d}: core_components={components:2d}, "
+            f"  N={N:4d}: core_components_positive={components:3d}, "
+            f"isolated_equalities={singletons}, core_components_topological={components + singletons:3d}, "
             f"max_divisor_packet(core/body)={core_packet}/{body_packet}, "
             f"far_count=4, peel_ratio={peel_ratio}, "
             "primitive_covering=True, capped_peel=True"
@@ -261,10 +290,10 @@ def main():
     print(
         "  finite capped base: primes 113..1259, "
         f"capped={len(finite_caps)}/{len(finite_caps)}, "
-        f"min(v|G'|/r)={min_ratio} at N={min_ratio_N}"
+        f"min(v|G'|/r_positive)={min_ratio} at N={min_ratio_N}"
     )
     print(
-        "  elementary tail: |G'|>=3/5390-2/(7N), r<=N+170; "
+        "  elementary tail: |G'|>=3/5390-2/(7N), r_top<=N+170; "
         f"PI_LO*v|G'|>r for N>{tail_root} (hence N>=1265)"
     )
     print("  conclusion: every prime N>110 in the four-far family is capped")

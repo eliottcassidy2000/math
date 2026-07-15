@@ -657,8 +657,9 @@ E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty.  (14.4)
 The global twelve-speed question has therefore recursed to a nine-core
 cover/noncover across two nearby thresholds.  A proof need not classify all
 twelve speeds at once: it may show that the `1/12` inner collar in (14.4)
-cannot cross the `1/13` cover in (14.3), or that such a crossing forces the
-dyadic seam reserved in THM-775 and then descends.
+cannot cross the `1/13` cover in (14.3), or first prove that such a crossing
+enters THM-775's imprimitive-deletion hypothesis. Once that hypothesis holds,
+the dyadic seam and finite safe-child descent are proved.
 
 ### Viewpoint ledger
 

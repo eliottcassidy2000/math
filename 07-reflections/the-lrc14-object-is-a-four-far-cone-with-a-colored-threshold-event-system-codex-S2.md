@@ -4,6 +4,10 @@
 HYP-6780, the completed Lean THM-755 chain, HYP-6785, and the exact endpoint
 sidecar audit. Updated after the exact HYP-6830 fragmentation falsifier.*
 
+Throughout, `r_+` means the number of positive-length safe intervals and
+`r_top` counts all closed-set components, including isolated equality points.
+An unadorned `r_P` in a peel ratio means `r_+(P)`.
+
 ## 1. First challenge the word "four-dimensional"
 
 There is a literal four-dimensional object at the current frontier, but it is
@@ -61,12 +65,13 @@ C={1,...,9},       g_N=(15,110,N,1092N)
 ```
 
 lies in `X_C`, is primitive and covering, and has no divisor packet of size
-seven. Yet after peeling `1092N`, the core good set has unbounded component
-count. The fixed base `{1,...,9,15,110}` has a safe interval
+seven. Yet after peeling `1092N`, the core good set has unbounded
+positive-length component count. The fixed base `{1,...,9,15,110}` has a safe interval
 `[1/14,111/1540]`; the `N`-runner cuts it by at least
 `N/1540-8/7` disjoint teeth.
-Exact component counts are `66,104,174,310` for
-`N=211,503,1009,2003`.
+Exact positive-length component counts are `66,104,174,310` for
+`N=211,503,1009,2003`; the corresponding closed-set topological counts are
+`68,108,176,312`, with the difference carried by isolated equality points.
 
 So the first four-dimensional object is not merely an ordered cone with a
 radial boundary. Its fiber cellulation refines without bound along a
@@ -83,12 +88,14 @@ from transverse refinement while remembering why THM-779 closes the whole
 prime ray by the capped peel.
 
 THM-780 identifies the exact rate law behind that closure. If the old fiber has
-safe mass `mu` and `r` components, a new frequency `N` leaves at least
-`6mu/7-2r/(7N)` safe mass and creates at most `N+r` components. A named interval
+safe mass `mu` and `r_top` components, including isolated equality points, a
+new frequency `N` leaves at least `6mu/7-2r_top/(7N)` safe mass and creates at
+most `N+r_top` components. A named interval
 is only one way to certify the initial state. A peel of speed `aN` therefore sees
-a bounded normalized wall load and becomes terminal once `a` crosses an explicit
-state-dependent threshold. In this chart, increasing geometric complexity can
-decrease proof difficulty.
+a bounded normalized wall load and, for sufficiently large `N`, becomes terminal
+once `a` crosses an explicit state-dependent threshold. The Fourier cap itself
+uses the smaller positive-length count `r_+<=r_top`. In this chart, increasing
+geometric complexity can decrease proof difficulty.
 
 There is a stronger exclusion hidden in the same inequality:
 `liminf_N |G'_{B union {N}}|>=6|G'_B|/7>0` for every fixed positive-mass base.
@@ -277,9 +284,9 @@ sheet action and closed boundary convention retained.
 
 ### Truth compression is not transport compression
 
-The concurrent THM-772/773/774/775 programs make the preservation hierarchy
-more exact. THM-772, THM-773, and THM-774 are proved; THM-775's dyadic descent
-remains claimed.
+The concurrent THM-772/773/774/775/776/778 programs make the preservation
+hierarchy more exact. THM-772 through THM-776 are proved at their stated
+scopes; THM-778's endpoint-order decoder remains claimed.
 
 At prime sheet size seven, THM-773's stored audit shows that the six nontrivial
 finite-field moments recognize exactly the 5,040 permutation states among all
@@ -297,22 +304,45 @@ is simultaneous compatibility of all unit-fraction columns, including the
 modulus-6/12 splice. That carrier is a hypergraph of proof obligations; its
 pairwise tournament loses the joint column. THM-774 proves a second compression
 for the two-sheet packet: after folding `(x,y)` to `(a,b)=((x+y)/2,(x-y)/2)`,
-eligibility and opposite colour should become one `l1` distance inequality.
+eligibility and opposite colour become one exact `l1` distance inequality.
 Its exact endpoint and measure audit shows that the folded metric preserves the
 local obstruction but still not the cross-modulus transport data.
 
-THM-775 then proposes a genuinely recursive use of the same carrier. An
-imprimitive deletion should force a unique dyadic seam, lift the owner field from
-`Z/2` to an exact `2+1+1` tiling on `Z/4`, and transfer divisor completeness to a
-smaller quotient. If completed, the descent datum is not merely `gcd=2`; it is
-the labelled seam plus the quotient's persistent unit-grid obligations.
+THM-775 proves a genuinely recursive use of the same carrier. An imprimitive
+deletion forces a unique dyadic seam, lifts the owner field from `Z/2` to an
+exact `2+1+1` tiling on `Z/4`, and transfers divisor completeness to a smaller
+quotient. Iteration gives a finite dyadic quotient chain with binary safe-child
+fibers, ending at a hereditarily primitive base. The descent datum is not merely
+`gcd=2`; it is the labelled safe-child map plus eligibility radii and persistent
+unit-grid obligations. The theorem does not exclude the terminal base or the
+full tower.
+
+THM-776 takes a different quotient of the same two-sheet geometry. For each odd
+pair through height 100, it atomizes the failure locus and retains only the
+inclusion-minimal incidence hypergraph between bad atoms and possible core
+speeds. Atom positions and widths disappear, but the bounded containment
+predicate survives exactly. Every such hypergraph has transversal number 12,
+so ten core speeds cannot cover it. The result is a finite-exact square in the
+folded parameter space, not a uniform theorem above height 100. A useful next
+map would send the terminal dyadic-chain base from THM-775 to a certified
+transversal deficit of this kind.
+
+THM-778 points at the information missing on the prime-seven face. THM-773's
+moments decide exact cover truth but deliberately forget endpoint order.
+Centered mechanical words and a Euclidean skew product may reconstruct that
+event schedule, including odd/odd ties and cyclic carry. Only the pairwise
+formula is currently derived; global reconstruction remains CLAIMED. It should
+therefore be treated as a proposed transport carrier, not as a proved truth
+certificate or closure.
 
 The resulting rule is task-indexed. Preserve only moments for exact-cover truth,
-the full owner stalk for future events, the obligation hypergraph for persistent
-unit-grid compatibility, and the folded metric for the proposed local two-sheet
-obstruction. For normalized-band compactness, retain safe mass and component
-load; THM-777 proves their bridge but not a global mass floor. "Keep everything"
-and "find one invariant" are both too coarse.
+the full owner/event stalk for future events, the obligation hypergraph for
+persistent unit-grid compatibility, the dyadic quotient chain and binary
+safe-child fibers for descent, and the folded metric or atom-incidence
+hypergraph for the local two-sheet obstruction. For normalized-band
+compactness, retain safe mass and component load; THM-777 proves their bridge
+but not a global mass floor. "Keep
+everything" and "find one invariant" are both too coarse.
 
 ### A smaller local address than the edge table
 
@@ -435,9 +465,9 @@ tournament determines it.
 ### To preserve the capped-envelope decision
 
 For peeled speed `v_peel` and peeled core `B`, retain the projective comparison
-`v_peel*|G'_B|/r_B > 1/pi`, equivalently `pi*v_peel*|G'_B| > r_B`, or its exact
-comparison bit. A single lift in the endpoint audit changed the cap status
-with zero endpoint edge flips.
+`v_peel*|G'_B|/r_+(B) > 1/pi`, equivalently
+`pi*v_peel*|G'_B| > r_+(B)`, or its exact comparison bit. A single lift in the
+endpoint audit changed the cap status with zero endpoint edge flips.
 
 ### To preserve deletion, peel, or scale transport
 
@@ -601,6 +631,26 @@ Which sidecar repairs the first failure?
 This turns failed invariants into useful output. A failure names the next
 coordinate rather than merely disqualifying an analogy.
 
+One can make this a preservation contract. For a representation `R` and a
+named operation `F`, do not ask whether `R` is complete in the abstract. Ask
+for a decoder of the smallest post-operation observable:
+
+```text
+speed packet --R--> compressed state
+     | F                 | F_R
+     v                   v
+next packet  --O--> required observable.
+```
+
+The square may commute by reconstruction, by exact cancellation of the
+forgotten fiber, or by a descent certificate. If it does none of these, its
+commutator is not an error term to hide: it is the missing sidecar. In the
+current frontier, THM-773 gives a commuting square for cover truth but not next
+events; THM-780 gives one for safe-mass/component enclosures but not owner
+correlations; THM-775 gives one for dyadic safe-child descent; THM-776 gives one
+for bounded two-sheet truth after reversing the quantifiers. This is a more
+precise notion of an invariant than equality of static labels.
+
 It also suggests replacing one linear proof ledger by a bicomplex:
 
 ```text
@@ -662,25 +712,32 @@ samples from an infinite box.
 1. Extend THM-780 beyond its positive-good-state/proportional-peel face: stratify
    sequences by safe-mass decay relative to component, wall-creation, and peel rates; attach
    endpoint owners, and prove every residual state is bounded or recursively descends.
-2. Classify the seven-exception `1/7` chambers left after THM-767's
+2. Land THM-775's terminal hereditarily primitive dyadic-chain base in a
+   height-independent version of THM-776's atom-incidence deficit, or exhibit
+   the first packet whose obligation hypergraph has transversal number at most
+   ten.
+3. Complete or refute THM-778's global centered-Christoffel reconstruction.
+   The test is whether the proposed Euclidean skew product predicts the next
+   owner and free-sheet future, not merely the pairwise merged word.
+4. Classify the seven-exception `1/7` chambers left after THM-767's
    event-pierce/chamber-locking lane and formalize the terminating excessive-gcd
    descent `c -> c/g`.
-3. Formalize the semilinear four-cone and colored endpoint-loop criterion.
-4. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
+5. Formalize the semilinear four-cone and colored endpoint-loop criterion.
+6. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
    split, merge, or reorder and find the smallest sidecar transporting truth,
    `M`, measure, and component topology along the action.
-5. Construct a comparison theorem between cubical zero-state reachability and
+7. Construct a comparison theorem between cubical zero-state reachability and
    an empty protected edge in the endogenous pair-sum blocker complex,
    including the data transported between presentations.
-6. Test a finite-jet theorem on affine rays outside THM-761's sheet regime;
+8. Test a finite-jet theorem on affine rays outside THM-761's sheet regime;
    THM-764 refutes a uniform `q<=25` terminal window.
-7. Prove a four-circuit localization lemma: outside known coherent faces, a
+9. Prove a four-circuit localization lemma: outside known coherent faces, a
    blocker-complete point forces a bounded-height marked relation involving all
    four far coordinates.
-8. Build an observability matrix over the actual `f=4` cone, not a curated row
+10. Build an observability matrix over the actual `f=4` cone, not a curated row
    bank, and find the smallest sidecar portfolio separating every
    truth/metric/peel-changing fiber pair.
-9. Use the existing 2002-core runner as a base case only after its output and
+11. Use the existing 2002-core runner as a base case only after its output and
    coverage protocol are present and resumable.
 
 ## 11. What this session did not prove

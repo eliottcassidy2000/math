@@ -64,25 +64,28 @@ Format per entry:
 ## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted by exact tooth families and an independent scale-free census
 
 - **What was claimed (opus-S299, as the OPEN "load-bearing sentence" of the two-regime
-  splice, never promoted past OPEN):** a 12-core's good-set component count r_P is
-  large only via dilation structure -- r_P <= B(c*) with c* the largest scale dividing
-  >= 7 elements.
+  splice, never promoted past OPEN):** a 12-core's positive-length good-set
+  component count `r_+(P)` is
+  large only via dilation structure -- `r_+(P) <= B(c*)` with c* the largest
+  scale dividing >= 7 elements.
 - **Why it is wrong:** a SINGLE high-frequency runner fragments a fixed safe interval
   without creating any seven-member divisor packet. The first exact falsifier
-  `P_N={1,...,11,N}` has `c*=1` and unbounded `r_P` (component counts
+  `P_N={1,...,11,N}` has `c*=1` and unbounded `r_+` (positive-length counts
   `18,22,38,72` at `N=101,211,503,1009`). THM-779 strengthens this inside the literal
   four-far covering chart: `P_N={1,...,9,15,110,N}` has the exact safe interval
-  `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and counts
-  `66,104,174,310` at `N=211,503,1009,2003`; adjoining `1092N` makes the row
+  `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and
+  positive-length counts `66,104,174,310` at `N=211,503,1009,2003` (the full
+  topological counts are `68,108,176,312`); adjoining `1092N` makes the row
   primitive, covering, and exactly four-far. Independently, the opus-S300 census
-  finds median `r_P` growing from 60 to 1700 as height grows from 50 to 1600.
+  finds median `r_+` growing from 60 to 1700 as height grows from 50 to 1600.
 - **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
-  rho(P) = v*(P)/maxP = r_P/(pi |G'_P| maxP). It is scale-invariant on dilates
+  rho(P) = v*(P)/maxP = r_+(P)/(pi |G'_P| maxP). It is scale-invariant on dilates
   (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
-  measured maximum at the `{1,...,12}` shape. THM-779 proves the entire chart-native
-  prime falsifier family has empty top bands. None of this proves a global rho bound:
+  measured maximum at the `{1,...,12}` shape. THM-779 proves the chosen top peel
+  lies above its band edge throughout the chart-native prime falsifier family;
+  the underlying band need not be empty. None of this proves a global rho bound:
   the remaining proposed
-  obligation is a `|G'|` floor off classified tight families, using `r_P<=Sum(P)`.
+  obligation is a `|G'|` floor off classified tight families, using `r_+(P)<=Sum(P)`.
 - **Impact:** none downstream -- the claim lived a few hours as OPEN, was consumed by
   nobody, and both refutations landed before any theorem cited it. HYP-6830 carries
   the correction and the ratio study.

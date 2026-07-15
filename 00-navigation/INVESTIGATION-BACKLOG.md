@@ -19,7 +19,7 @@
   `r_P≤sum P≤|P|max P`); (iv) gcd-descent bookkeeping. All corrections are in HYP-6830/THM-767.
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
-  members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
+  members, but the top-peeled core has unbounded positive-length good-set components (`66,104,174,310` exactly at
   `N=211,503,1009,2003`). THM-779 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
   (THM-779; MISTAKE-145).
@@ -54,7 +54,7 @@
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-779/777/778; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-777/779/780; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S301/S9 floor update:** THM-777 proves the bridge
@@ -102,6 +102,14 @@
   `8/117`, and finite-exactly closes all `92,378` ten-cores in `[1,19]` against
   unbounded odd exceptions (`767,700` intrinsic runner tests, zero universal
   incidence).
+- **Dyadic/height-100 progress:** THM-775 proves that every failure of
+  hereditary primitivity in the two-sheet quotient is a unique dyadic seam and
+  that iteration gives a finite dyadic quotient chain with binary safe-child
+  fibers, primitive divisor-complete quotients, and a hereditarily primitive
+  terminal base. THM-776 independently proves every 10-even/2-odd twelve-set
+  of raw height at most 100
+  has `M>1/13`, with no primitivity or divisor-completeness filter. Its exact
+  atom-incidence dual has transversal number 12 for all 1,225 odd pairs.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -114,26 +122,28 @@
   nine-core collar
   `E_(1/13)(U^-) subset D_R union {Q>=11/13}` together with
   `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
-  impossible or force THM-775's dyadic seam/descent.  Then treat the `s=3`
-  three-colour edge.  The exact object is loose-set component x sheet-owner
-  incidence with closed endpoints, not a residue condition at one binding
-  point.
-- **Open deep theorem:** rule out the persistent folded colour covers in
-  THM-769.  Start with `s=2`: for `A=2U union {x,y}`, the two odd runners must
-  both cover all of `G_U` under the doubled danger map and have opposite
-  nearest-integer parity everywhere.  Then treat the `s=3` three-colour edge.
-  The exact object is loose-set component x sheet-owner incidence with closed
-  endpoints, not a residue condition at one binding point.
+  impossible on the hereditarily primitive terminal base. Equivalently, prove
+  a height-independent version of THM-776's transversal-number lower bound or
+  show that THM-775's dyadic chain lands in one of THM-774/776's certified
+  regions. Then treat the `s=3` three-colour edge. The exact object is
+  loose-set component x sheet-owner incidence with closed endpoints, not a
+  residue condition at one binding point.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
   transfer for the `s=2,3` equality packets, including quotient primitivity,
   divisor completeness, exact local shells, and speed bounds. THM-774 proves the
   two-sheet folded-diamond identity and sharp `8/117` measure obstruction. These
   are complementary carriers: the first preserves cross-modulus obligation
   compatibility, while the second gives an exact local metric `l1` compression.
-- **S9 claimed recursion:** THM-775 proposes that failure of hereditary primitivity
-  in the two-sheet quotient forces a unique dyadic deletion seam, lifts to an exact
-  `2+1+1` cover on `Z/4`, and transfers divisor completeness to a smaller quotient.
-  Capacity, strictness, and iteration still require independent audit.
+- **S9 proved recursion:** THM-775 proves that failure of hereditary primitivity
+  in the two-sheet quotient forces a unique dyadic deletion seam, lifts to an
+  exact `2+1+1` ownership partition on `Z/4`, transfers divisor completeness,
+  and iterates to a finite terminal base. It does not exclude that base or the
+  full tower uniformly.
+- **S7 transport proposal:** THM-778 remains CLAIMED. Its pairwise centered
+  mechanical-word formula is derived, but global multi-owner reconstruction,
+  odd/odd tie blocks, cyclic carry, and prediction of the next owner/free-sheet
+  future still need exact audit. THM-773's moment certificate already preserves
+  cover truth; THM-778 is needed only for event transport.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all

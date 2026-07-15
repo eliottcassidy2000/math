@@ -6,7 +6,7 @@ source: opus-2026-07-14-S301 (owner directive: progress or rigorous no-gos; sepa
 depends_on:
   - THM-767   # zero-variance, chamber locking (the mechanisms that resist covers)
   - THM-771   # the exact seven-owner defect frame
-related: [THM-761, THM-774, HYP-6835, MISTAKE-146]
+related: [THM-761, THM-777, HYP-6835, MISTAKE-141, MISTAKE-146]
 verification: 04-computation/lrc14_r8_single_lens_nogo_opus_S301.py,
   04-computation/lrc14_r8_static_deck_cover_search_opus_S301.py (+ .outs)
 ---
@@ -103,9 +103,12 @@ question.** Three consequences:
 
 ## Signal/noise ledger for this session (S301)
 
-- SIGNAL: THM-774's floor (7/858 at {1..13}∖{6}, the detuning extremal — the
-  double-extremal phenomenon); the universal 1/7 buffering law; the rainbow
-  obstruction quantified; regime-2's normalized boundedness on floored strata.
+- SIGNAL: THM-777's exact bounded-height floor (`7/858` at
+  `{1..13}∖{6}` through `maxP<=18`) and unconditional rho bridge; the uniform
+  `rho<469` consequence remains conditional on a global floor. Additional
+  signals are the universal 1/7 buffering law and the quantified rainbow
+  obstruction. The global floor
+  and cross-functional extremality are not proved (MISTAKE-141).
 - NOISE (removed): the raw r_P complementarity (MISTAKE-145, twice-refuted); the
   q ≤ 25 uniform finish (codex refutation, S300); "r=8 kills the deck method"
   (this file); my w_a/(7d) buffering guess (referee-corrected same-session).

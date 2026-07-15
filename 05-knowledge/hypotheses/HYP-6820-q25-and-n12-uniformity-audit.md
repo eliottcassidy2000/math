@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, shallow-exact through height twelve, and sharply constrained in the two-sheet branch, but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, shallow-exact through height twelve, and two-sheet-exact through raw height 100 with a proved dyadic deletion tower, but branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -19,6 +19,8 @@ depends_on:
   - THM-770
   - THM-772
   - THM-774
+  - THM-775
+  - THM-776
   - HYP-6750
   - HYP-6775
 related:
@@ -267,6 +269,26 @@ E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty.
 
 This isolates where the sporadic hypothesis genuinely adds information.
 
+THM-775 proves the arithmetic descent that was previously only proposed. If a
+one-element deletion of the two-sheet quotient is imprimitive, its gcd is two
+and the deleted element is the unique odd member:
+
+```text
+U=2V union {u}.
+```
+
+The first four lifts carry an exact `2+1+1` ownership partition, and iteration
+gives a finite dyadic chain of primitive divisor-complete quotients with binary
+safe-child fibers, ending at a hereditarily primitive base. This does not
+exclude the chain or its terminal base.
+
+THM-776 supplies a complementary finite-exact landing region. For every
+10-even/2-odd twelve-set with raw height at most 100, the odd-pair failure locus
+atomizes into an incidence hypergraph whose transversal number is 12, while the
+packet has only ten quotient speeds. Thus every such set has `M>1/13`, without
+assuming primitivity or divisor completeness. Above height 100, no uniform
+transversal lower bound has yet been proved.
+
 THM-770 settles a very large but still bounded part of the shallow branch.
 For the labelled packets
 
@@ -290,11 +312,13 @@ The uniform theorem now has two explicit residuals:
 1. **Shallow descent.**  Prove that a primitive full-nonzero-residue packet
    with `chi_13=0` descends into THM-770's height-twelve box, or extend its
    owner-CSP by a scale-free coherence argument.
-2. **Deep colour cover.**  Rule out THM-769's persistent folded cover at
-   `s=2` after THM-772's primitive divisor transfer and THM-774's sharp diamond
-   containment and exact `max(U)<=19` closure, and rule out the higher-sheet
-   analogues (or prove a dyadic or effective-order descent to a smaller
-   primitive tight packet).
+2. **Deep colour cover.** Rule out THM-769's persistent folded cover at `s=2`
+   after THM-772's primitive divisor transfer, THM-774's sharp diamond and
+   `max(U)<=19` closure, THM-775's proved dyadic tower, and THM-776's raw
+   height-100 exclusion. The next theorem must land every terminal
+   hereditarily primitive base in a certified region or prove that the
+   bad-atom transversal number stays above ten uniformly. Then rule out the
+   higher-sheet analogues.
 
 Equivalently in the original top-peel language, prove that every primitive
 nonextremal eleven-speed core below THM-763's finite height has at least one
@@ -343,7 +367,11 @@ deciding objects are therefore:
 - the off-sheet-runner by sheet incidence cover, with effective orders
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
 - in the two-sheet equality packet, the folded half-frequency diamond together
-  with the exact locations of the quotient loose components.
+  with the exact locations of the quotient loose components;
+- for dyadic descent, the quotient chain and binary safe-child fibers with
+  eligibility radii and divisor obligations;
+- for bounded two-sheet truth, the inclusion-minimal bad-atom/quotient-speed
+  incidence hypergraph, which can forget metric positions after atomization.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

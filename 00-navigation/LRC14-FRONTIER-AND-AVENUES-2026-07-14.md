@@ -2,7 +2,9 @@
 
 **Status:** current frontier audit, historical synthesis, and pull-card backlog.
 **Owner:** codex-2026-07-14-S2.
-**New mathematics in this session:** THM-760 and HYP-6785.
+**New mathematics in the original session:** THM-760 and HYP-6785.
+**Live-main integration:** THM-775/776 dyadic and atom-incidence advances,
+THM-777/779/780 scale-state advances, and the CLAIMED THM-778 event decoder.
 **Rebase note:** integrated the incoming S295--S297 Lean completion, THM-759
 ratio bound, HYP-6800/HYP-6805, and proof-carrier automaton viewpoint.  The
 sheet-dodge claim was renumbered from THM-759 to THM-760 after the collision.
@@ -28,7 +30,8 @@ recent theorem headlines suggest.
 
 3. **The capped-envelope theorem is a genuine analytic advance, but its cutoff
    is per core.**  THM-755 proves the required discrepancy inequality above
-   v*(P)=r_P/(pi |G'_P|).  THM-756 closes every bottom-core band and samples the
+   v*(P)=r_P/(pi |G'_P|), where `r_P` counts positive-length safe intervals.
+   THM-756 closes every bottom-core band and samples the
    assembled band successfully.  The paper proof is elementary.  After opus
    S295--S296, the geometric-to-spectral Lean chain is also complete:
    LRCClosedBudget.lean has 47 declarations, zero sorries, including the
@@ -237,6 +240,9 @@ certificates.
 | Affine-slope suspension | V(c)=cP+R as slope-c fibers of a two-torus function | scale, offsets, and exact fiber nonemptiness | finite classification without a descent | HYP-6815 chart for multi-exception rays |
 | Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-779; peel-relative splice |
 | Safe-mass shape floor | `|G'_P|` on primitive normalized cores | normalized `rho` through `r_P<=sum(P)` | global positivity from bounded census | THM-777; exact through `maxP<=18`, global floor open |
+| Dyadic sheet chain | quotient chain plus binary safe-child fibers and eligibility/divisor sidecars | imprimitive-deletion descent | terminal hereditarily primitive base | THM-775, proved |
+| Atom-incidence dual | bad atoms as obligations, quotient speeds as killers | exact two-sheet truth after bounded atomization | metric positions and uniform height | THM-776, finite-exact through height 100 |
+| Centered mechanical endpoint word | pairwise merged endpoint schedule | proposed prime-sheet event transport | global reconstruction and cyclic carry (unaudited) | THM-778, claimed |
 | Tropical/normal fan | active minima and wall cells | combinatorial type of optimum | metric clearance | finite chamber stratification |
 | Matroid/circuit | minimal dependent proof obligations | irreducible obstruction support | phase and margin | candidate blocker-pressure abstraction |
 | Tournament analysis | pairwise quotient of chosen objects | dominance fingerprints | higher-order intersections | diagnostics and route comparison |
@@ -308,16 +314,18 @@ finite theorem.
 
 The exactly-`f=4` family
 `{1,...,9,15,110,N,1092N}` shows why the new fragmentation field is necessary.
-It has no divisor packet of size seven, but the top-peeled core's component
+It has no divisor packet of size seven, but the top-peeled core's positive-length component
 count is unbounded because the `N`-runner inserts new teeth into a fixed safe
 interval. Thus common scale and transverse frequency are independent
 noncompact directions in the same four-far chart. THM-779 closes the entire
-prime family by the capped peel, whose ratio normalizes component count against the named
+prime family by the capped peel, whose ratio normalizes positive-length component count against the named
 peel; `c*` alone cannot support the automaton quotient.
 
 THM-780 extracts the general mechanism at the state level. If the old good set
-has mass `mu` and `r_B` components, a new frequency `N` leaves mass at least
-`6mu/7-2r_B/(7N)` and creates at most `N+r_B` components. A proportional peel
+has mass `mu` and `r_top(B)` components, including isolated equality points, a
+new frequency `N` leaves mass at least `6mu/7-2r_top(B)/(7N)` and creates at
+most `N+r_top(B)` components. This conservatively dominates the Fourier count.
+A proportional peel
 `aN` is therefore eventually terminal under an explicit rational inequality.
 One marked interval gives the simpler `L,sum(B)` corollary used by THM-779. The
 genuinely open transverse face must include collapsing safe mass relative to
@@ -330,6 +338,23 @@ through `max(P)<=18`; the tested scale rays, tooth insertions, and hill descent
 do not decay, but this is evidence rather than a global theorem. The next state
 transition must either prove the floor or recognize and descend every
 safe-mass-decay face.
+
+The two-sheet frontier exposes the same principle in a different direction.
+THM-775 proves that an imprimitive deletion is not merely a gcd event: it is a
+unique dyadic safe-child seam, and iteration gives a finite dyadic quotient
+chain with binary safe-child fibers and divisor-complete quotients. THM-776 reverses the bounded covering
+quantifiers into an incidence hypergraph and proves every two-sheet packet of
+raw height at most 100 empty because each odd-pair bad locus needs twelve core
+danger families, not ten. The missing theorem is a landing map from the
+terminal hereditarily primitive chain base to a height-independent transversal
+deficit. Absolute atom positions may be forgotten for the bounded truth test;
+the safe-child map and eligibility radii cannot be forgotten during descent.
+
+At prime sheet size seven, THM-773's moment carrier decides exact cover truth
+but not future endpoint events. THM-778's centered-Christoffel word is a
+plausible schedule decoder, but its global multi-owner reconstruction remains
+CLAIMED. This keeps truth compression and transport compression separate in
+the frontier ledger.
 
 The incoming exact endpoint-sidecar audit independently confirms the payload
 rule.  Runner and unweighted endpoint tournaments do not preserve covering,

@@ -1,3 +1,11 @@
+> **Correction to the historical S301 entry below (codex-2026-07-14-S2):**
+> the safe-measure artifact is now THM-777, not THM-774. Only the rho bridge,
+> Lipschitz tail, and primitive `maxP<=18` census are proved. The listed scale
+> and tooth rows plus five seeded searches are finite probes, not a no-decay or
+> convergence theorem; `{1,...,13}\{6}` has no proved cross-functional
+> extremality (MISTAKE-141). The canonical file is
+> `01-canon/theorems/THM-777-safe-measure-floor-and-rho-bridge.md`.
+
 ## opus-2026-07-14-S301 -- SIGNAL FROM NOISE: THM-774 (the safe-measure floor: exact census min |G'| = 7/858 UNIQUELY at {1..13}-{6}, kps's detuning extremal one level down; no decay under the full battery; rho bridge => regime-2 bounded on floored strata) + HYP-6840 (the r=8 deck no-go hunt RESOLVED-NEGATIVE with the conclusion FLIPPED: full blocking needs DMNR-grade rigidity; the universal 1/7 buffering law)
 
 Prompt (owner): make mathematical progress or prove rigorously why some routes cannot provide

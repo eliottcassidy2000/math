@@ -16,11 +16,11 @@ Let `B` be a nonempty finite set of distinct positive integer speeds. Write
 
 ```text
 mu  = |G'_B|,
-r_B = number of components of G'_B.
+r_B = full topological component count of G'_B.
 ```
 
 For a positive integer `N` not in `B`, put `P_N=B union {N}`, and write
-`mu_N=|G'_{P_N}|` and `r_N=r(P_N)`. Then
+`mu_N=|G'_{P_N}|` and `r_N=r_top(P_N)`. Then
 
 ```text
 mu_N >= 6mu/7 - 2r_B/(7N),              (1)
@@ -29,6 +29,9 @@ r_N  <= N+r_B.                           (2)
 
 This is the invariant-level form: the state `(|G'_B|,r_B)` controls a
 transverse frequency insertion without retaining every endpoint.
+Here `r_B` and `r_N` include isolated equality points. THM-755 needs only the
+number `r_+` of positive-length interval components, so `r_+<=r_N` makes this
+state deliberately conservative and every cap consequence below valid.
 In particular, if `mu>0`, then
 
 ```text
@@ -131,7 +134,8 @@ q*aN*mu_N-r_N
 
 Conditions (7)-(8) make this strictly positive. The same calculation with
 (3)-(4) gives (9). Since `q<pi`, either inequality implies
-`pi*aN*mu_N>r_N`, exactly THM-755's strict capped-envelope criterion. ∎
+`pi*aN*mu_N>r_N=r_top(P_N)`. Since `r_+(P_N)<=r_top(P_N)`, this stronger
+inequality implies THM-755's strict capped-envelope criterion. ∎
 
 ## Iterated transport and the order gauge
 
@@ -141,7 +145,7 @@ frequencies `N_1,...,N_k` not already present. Put
 ```text
 B_j  = B_{j-1} union {N_j},
 mu_j = |G'_{B_j}|,
-r_j  = r(B_j).
+r_j  = r_top(B_j).
 ```
 
 Repeated application of (1)-(2) gives
@@ -220,8 +224,9 @@ used by this proof operation is
 (safe mass, safe component count, new wall rate, named peel rate).
 ```
 
-No single coordinate in that tuple is a compactness invariant. The quotient
-`r_N/(aN mu_N)`, rather than `r_N`, is theorem-facing.
+No single coordinate in that tuple is a compactness invariant. The exact
+theorem-facing cap load is `r_+(P_N)/(aN mu_N)`; the state above certifies it by
+the conservative upper load `r_N/(aN mu_N)`.
 
 ## Assumption challenge and Tournament Analysis
 
@@ -255,6 +260,7 @@ THM-780 proves that positive safe mass persists under one high-frequency
 insertion over a fixed base, and proves eventual closure only when the
 peel rate is large enough relative to it. It does not give a uniform lower
 bound for `|G'_B|` over arbitrary cores, classify sublinear peels, or prove the
-global HYP-6830 splice. It makes the remaining obstruction more precise:
-varying-base degeneration or iterated/multiscale insertion coupled to collapse
-of safe mass relative to component and peel rates.
+global HYP-6830 splice. It makes the safe-mass-decay mechanisms more precise:
+they require varying-base degeneration or iterated/multiscale insertion. Other
+global failures can still come from a sublinear/nonproportional peel or owner
+alignment erased by this two-number state.

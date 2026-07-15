@@ -26,7 +26,7 @@ klein-S309's THM-758 far-count split:
 > **COVERING = [≤3 elements > 14] ∪ [≥4 elements > 14]**
 > - **≤3-far ⟹ ≥10 speeds in {1..14} ⟹ kps THM-738** (the 1001-body exact-ℚ tree, PROVED).
 > - **≥4-far remains OPEN in general.** THM-755 gives a finite interval only after a core is
->   fixed. Under dilation `P -> cP`, the good-set measure is unchanged, its component count is
+>   fixed. Under dilation `P -> cP`, the good-set measure is unchanged, its positive-length component count is
 >   multiplied by `c`, and the cutoff obeys `v*(cP)=c v*(P)`. Therefore no uniform raw speed
 >   cutoff follows.
 
@@ -83,10 +83,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | (13−r)-speed common-factor core + r ≤ 6 exceptions | PROVED when the exact Σg_a budget fires; c ≥ 43 is uniform only for coprime exceptions | THM-761 (opus-S299) + battery |
 | r = 7 unramified deck stratum (`7\mid c/g_a` for every owner) | PROVED above reduced-shape bound `max_a(w_a/g_a)>=7 max(P)`; the S299 wall is closed at a switching time | THM-771; corrected core of THM-767; MISTAKE-146 |
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
+| prime-sheet endpoint transport | CLAIMED: pairwise midpoint merges have a centered mechanical-word formula; Euclidean/global multi-owner reconstruction, tie blocks, and cyclic carry remain under audit | THM-778 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
-| raw fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-779; HYP-6830 correction; MISTAKE-145 |
+| raw positive-length fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-779; HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
-| positive good-set state `(mu,r)` + frequency N + proportional peel aN | PROVED transition `mu_N>=6mu/7-2r/(7N)`, `r_N<=N+r`, hence eventually capped under an explicit rational threshold; one marked interval is a corollary | THM-780 (THM-779 is a full-family instance) |
+| positive good-set state `(mu,r_top)` + frequency N + proportional peel aN | PROVED conservative transition `mu_N>=6mu/7-2r_top/(7N)`, `r_top,N<=N+r_top`, hence eventually capped under an explicit rational threshold; one marked interval is a corollary | THM-780 (THM-779 is a full-family instance) |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
@@ -94,8 +95,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
-| dyadic deletion descent from the two-sheet packet | CLAIMED: an imprimitive deletion should force a unique `Z/4` seam and recursive divisor-complete quotient | THM-775 |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and divisor-complete folded/higher-sheet packets remain | THM-759/765/766/768--772/774; HYP-6820 |
+| dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
+| two-sheet parity-cover packet through raw height 100 | FINITE-EXACT EMPTY: every 10-even/2-odd twelve-set has `M>1/13`; no primitivity or divisor filter is assumed | THM-776 + exact atom/CNF atlas |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice and two-sheet height-100 square empty, but higher shallow lifts, the terminal dyadic base above height 100, and higher-sheet packets remain | THM-759/765/766/768--772/774--776; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -129,8 +131,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
    strict-danger set. In the tight `s=2` quotient, THM-772 now forces a
    primitive divisor-complete ten-core and THM-774 turns the two odd colours
-   into a sharp folded diamond. Prove that no such diamond contains the whole
-   loose-component word, or force a dyadic/effective-order descent. For higher
+   into a sharp folded diamond. THM-775 now forces every imprimitive-deletion
+   route into a finite dyadic quotient chain with binary safe-child fibers, and
+   THM-776 excludes the full two-sheet packet through raw height 100. Prove that the terminal
+   hereditarily primitive base lands in the atom-incidence deficit uniformly,
+   or that the corresponding transversal number always exceeds ten. For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
@@ -184,6 +189,25 @@ comparison is now finite-exact for every ten-core `U subset [1,19]`: the widest
 component intrinsically caps each odd exception, and all `767,700` permitted
 core/odd incidences fail individual coverage.  This closes the whole low-core
 slice with odd speeds unbounded, but supplies no global bound on `max(U)`.
+
+THM-775 now proves the complementary recursive arithmetic statement. Every
+imprimitive deletion of a two-sheet quotient forces the unique dyadic seam
+`U=2V union {u}` with `u` odd; iteration gives a finite dyadic quotient chain
+with binary safe-child fibers whose quotients remain primitive and
+divisor-complete. This does not eliminate the terminal hereditarily primitive
+base. THM-776 attacks that endpoint from
+the dual direction: after atomizing each odd pair's bad locus, its exact
+incidence hypergraph has transversal number 12 for all 1,225 pairs through
+height 100, whereas a packet supplies only ten quotient speeds. Consequently
+every 10-even/2-odd twelve-set of height at most 100 has `M>1/13`. Above height
+100 the uniform transversal lower bound, or a quantitative landing of the
+dyadic chain into the finite atlas, remains open.
+
+On the prime-seven face, THM-773's moments decide exact cover truth but not the
+endpoint schedule. THM-778 reserves a centered-Christoffel/Euclidean skew
+product intended to recover that transport data. Only its pairwise formula is
+currently derived, so it is a claimed decoder rather than a usable closure
+lemma.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

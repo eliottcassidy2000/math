@@ -139,8 +139,9 @@ equality precisely there.
 \section{The loose half ($F\ge 4$): the capped envelope and the band}\label{sec:loose}
 
 The engine is a one-page Fourier bound. For a core $P$ (twelve speeds), let
-$G'_P\subset[0,1)$ be its $1/14$-safe set, $|G'_P|$ its measure, $r_P$ its number of
-components, and for $v\ge 1$ let
+$G'_P\subset[0,1)$ be its $1/14$-safe set, $|G'_P|$ its measure, and $r_P$ its number of
+positive-length interval components (isolated equality points do not enter the
+Fourier jump count). For $v\ge 1$ let
 $\operatorname{disc}_v=\sum_{\ell\neq0}|\widehat{\mathbf 1}_{G'_P}(\ell v)|^2$ be the peel
 discrepancy; the certificate of \textsc{thm}-731/732 (klein, kps) gives
 $M(P\cup\{v\})\ge 1/14$ whenever $\operatorname{disc}_v<6|G'_P|^2$.
@@ -209,13 +210,15 @@ Theorem~\ref{thm:capped}/\textsc{thm}-753, closes by a sheet witness
 protocol of Theorem~\ref{thm:band} decides. The proposed argument for a global band
 bound from raw component count and maximal common-factor scale fails: for prime $N>110$,
 $\{1,\ldots,9,15,110,N,1092N\}$ is covering, primitive, exactly four-far, and has no
-seven-member divisor packet, while the component count of its top-peeled good set tends
+seven-member divisor packet, while the positive-length component count of its top-peeled good set tends
 to infinity (\textsc{thm}-779; \textsc{hyp}-6830). The same theorem proves every member
 of this prime family is nevertheless closed by the capped peel. This does not refute a bounded
 peel-relative domain; it shows that any proof must retain normalized cap load and
 endpoint ownership. More generally, \textsc{thm}-780 proves that base good-set mass
-$\mu$ and component count $r$ obey $\mu_N\ge6\mu/7-2r/(7N)$ and
-$r_N\le N+r$ after a new frequency $N$; a fixed safe interval is a convenient
+$\mu$ and full topological component count $r_{\rm top}$ obey
+$\mu_N\ge6\mu/7-2r_{\rm top}/(7N)$ and
+$r_{{\rm top},N}\le N+r_{\rm top}$ after a new frequency $N$; this is a conservative
+upper state for the Fourier count $r_P\le r_{\rm top}$. A fixed safe interval is a convenient
 corollary. Any sufficiently fast proportional peel is therefore eventually
 terminal at an explicit rational threshold. In particular, for every fixed
 positive-mass base, $\liminf_N\mu_N\ge6\mu/7>0$; any safe-mass-decay sequence

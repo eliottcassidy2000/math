@@ -29,8 +29,10 @@ Then:
    stratum, with nine-core `{1,...,9}` and far speeds
    `{15,110,N,1092N}`.
 2. No nontrivial integer divides seven members. The largest divisor packet has
-   size five in `P_N` and six in `V_N`.
-3. If `r(P)` denotes the number of connected components of
+   size five in `P_N` and six in `V_N`. Under HYP-6830's convention that
+   `c*(S)` is the largest scale dividing at least seven speeds, or one if none
+   exists, `c*(P_N)=c*(V_N)=1`.
+3. If `r_+(P)` denotes the number of positive-length interval components of
 
    ```text
    G'_P={t in R/Z : ||pt||>=1/14 for every p in P},
@@ -39,10 +41,10 @@ Then:
    then
 
    ```text
-   r(P_N) >= N/1540 - 8/7.
+   r_+(P_N) >= N/1540 - 8/7.
    ```
 
-   In particular `r(P_N)` is unbounded although the maximal high-support
+   In particular `r_+(P_N)` is unbounded although the maximal high-support
    divisor scale is identically absent.
 4. Nevertheless every `V_N` is closed by its top peel: the THM-755 capped
    envelope fires at `v=1092N`, and hence `M(V_N)>1/14`. This holds for the
@@ -98,8 +100,8 @@ An open real interval of length `L` contains at least `L-1` integers. Hence at
 least `N/1540-8/7` full, pairwise disjoint danger teeth lie inside `J`. Each is
 an open gap in `G'_{P_N}`. In the circle, only the two end pieces of `J` can
 possibly reconnect outside `J`; the internal teeth still give at least as many
-global good-set components as full gaps. This proves the stated lower bound and
-the unboundedness. ∎
+global positive-length good-set components as full gaps. This proves the stated
+lower bound and the unboundedness. ∎
 
 For the capped closure, first handle the finite base by exact rational interval
 arithmetic. The companion script checks all `176` primes
@@ -108,8 +110,8 @@ arithmetic. The companion script checks all `176` primes
 113 <= N < 1265
 ```
 
-and verifies `PI_LO*(1092N)*|G'_{P_N}|>r(P_N)` in every case, where
-`PI_LO=333/106<pi`. The smallest exact ratio `v|G'|/r` in this base is
+and verifies `PI_LO*(1092N)*|G'_{P_N}|>r_+(P_N)` in every case, where
+`PI_LO=333/106<pi`. The smallest exact ratio `v|G'|/r_+` in this base is
 
 ```text
 8523034/28875, attained at N=113.
@@ -124,16 +126,17 @@ The infinite tail is elementary. At most `N|J|+2=N/1540+2` of the
 ```
 
 The union of the danger arcs of runners `p in P_N` has at most `sum(P_N)`
-components, so
+components. Hence both the full topological count `r_top` and the
+positive-length count satisfy
 
 ```text
-r(P_N) <= sum(P_N) = N+170.
+r_+(P_N) <= r_top(P_N) <= sum(P_N) = N+170.
 ```
 
 Consequently
 
 ```text
-PI_LO*(1092N)*|G'_{P_N}|-r(P_N)
+PI_LO*(1092N)*|G'_{P_N}|-r_+(P_N)
  >= (PI_LO*1092*6/(7*1540)-1)N
     -(PI_LO*1092*2/7+170),
 ```
@@ -151,16 +154,20 @@ the fourth claim. ∎
 ## What the theorem does and does not say
 
 This is not a counterexample to LRC14: the top peel closes the entire family.
-At the four component-count canaries `N=211,503,1009,2003`, the counts are
-respectively `66,104,174,310`, and the exact ratios `v|G'_P|/r(P)` are
+The count `r_+` is the THM-755/Fourier convention: isolated equality points
+have zero measure and create no jump interval. At the four component-count
+canaries `N=211,503,1009,2003`, the positive-length counts are respectively
+`66,104,174,310`, while the full closed-set topological counts are
+`68,108,176,312`; the differences `2,4,2,2` are isolated equality points. The
+exact ratios `v|G'_P|/r_+(P)` are
 
 ```text
 63068083/152460, 727151/1155,
 76395787/100485, 11045593/13020
 ```
 
-The theorem refutes the proposed implication `r(P)<=B(c*(P))`; it supports a
-peel-relative coordinate such as `r(P)/(v|G'_P|)`, not a raw component bound.
+The theorem refutes the proposed implication `r_+(P)<=B(c*(P))`; it supports a
+peel-relative coordinate such as `r_+(P)/(v|G'_P|)`, not a raw component bound.
 Its universal capped closure is specific to this family and is not a finiteness
 or descent theorem for the general exactly-`f=4` chart.
 

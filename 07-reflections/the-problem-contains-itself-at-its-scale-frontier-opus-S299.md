@@ -27,7 +27,8 @@ V_N={1,...,9,15,110,N,1092N},       N>110 prime.
 No divisor is shared by seven speeds, while the good-set component count of
 the top-peeled core tends to infinity. The fixed safe interval
 `[1/14,111/1540]` alone is cut by at least `N/1540-8/7` full `N`-teeth; exact counts
-are `66,104,174,310` at `N=211,503,1009,2003`. The rows are primitive,
+are `66,104,174,310` at `N=211,503,1009,2003` for positive-length intervals
+(`68,108,176,312` including isolated equality points). The rows are primitive,
 covering, exactly `f=4`, and THM-779 proves every prime member fires the
 top-peel THM-755 certificate.
 

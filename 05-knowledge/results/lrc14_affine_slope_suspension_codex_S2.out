@@ -13,12 +13,12 @@ HYP-6780 positive-measure core cylinder:
   c=5: |G|=6617/194040, components=60=5*12
 
 Scale-free fragmentation falsifier for HYP-6830:
-  N= 211: core_components=66, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=63068083/152460, primitive_covering=True, capped_peel=True
-  N= 503: core_components=104, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=727151/1155, primitive_covering=True, capped_peel=True
-  N=1009: core_components=174, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=76395787/100485, primitive_covering=True, capped_peel=True
-  N=2003: core_components=310, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=11045593/13020, primitive_covering=True, capped_peel=True
-  finite capped base: primes 113..1259, capped=176/176, min(v|G'|/r)=8523034/28875 at N=113
-  elementary tail: |G'|>=3/5390-2/(7N), r<=N+170; PI_LO*v|G'|>r for N>11734415/9278 (hence N>=1265)
+  N= 211: core_components_positive= 66, isolated_equalities=2, core_components_topological= 68, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=63068083/152460, primitive_covering=True, capped_peel=True
+  N= 503: core_components_positive=104, isolated_equalities=4, core_components_topological=108, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=727151/1155, primitive_covering=True, capped_peel=True
+  N=1009: core_components_positive=174, isolated_equalities=2, core_components_topological=176, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=76395787/100485, primitive_covering=True, capped_peel=True
+  N=2003: core_components_positive=310, isolated_equalities=2, core_components_topological=312, max_divisor_packet(core/body)=5/6, far_count=4, peel_ratio=11045593/13020, primitive_covering=True, capped_peel=True
+  finite capped base: primes 113..1259, capped=176/176, min(v|G'|/r_positive)=8523034/28875 at N=113
+  elementary tail: |G'|>=3/5390-2/(7N), r_top<=N+170; PI_LO*v|G'|>r for N>11734415/9278 (hence N>=1265)
   conclusion: every prime N>110 in the four-far family is capped
 
 Fixed-core far-coordinate dilation monoid:

@@ -12,10 +12,14 @@ depends_on:
   - THM-780   # invariant-level good-set-state transverse-tooth cap
   - THM-777   # rho bridge and exact bounded-height safe-mass floor
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
-related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-146]
+related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-145, MISTAKE-146]
 ---
 
 # HYP-6830 — scale uniformization of the ≥4-far covering endgame
+
+Throughout the capped-envelope discussion, `r_P` means the number `r_+(P)` of
+positive-length safe intervals used by THM-755. Write `r_top(P)` when isolated
+closed-threshold equality points are also counted.
 
 ## The proposed splice, with its failed bridge isolated
 
@@ -79,9 +83,11 @@ This family has all the scope properties needed to refute the proposed bridge.
    Inside `J`, the `N`-runner removes the disjoint open danger teeth centered at
    `k/N` with radius `1/(14N)`. The admissible center interval has length
    `N/1540-1/7`, so it contains at least `N/1540-8/7` integers. Every resulting
-   full tooth separates two components of `G'_{P_N}`. Thus `r_{P_N}` is
+   full tooth separates positive-length components of `G'_{P_N}`. Thus `r_{P_N}` is
    unbounded although `c*(P_N)=1`. Exact interval arithmetic gives component counts
-   `66,104,174,310` for `N=211,503,1009,2003`.
+   `66,104,174,310` for `N=211,503,1009,2003`. These are `r_+`; the full
+   topological counts are `68,108,176,312`, with `2,4,2,2` isolated equality
+   points.
 3. **It occurs inside the covering endgame.** Every `V_N` is primitive because it
    contains `1`. Speeds `2,...,9` carry their own moduli, `110` carries `10` and
    `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
@@ -115,12 +121,12 @@ replacement theorem is claimed here.
 ## A terminal transverse face (THM-780)
 
 The falsifier mechanism itself admits a general theorem. For a fixed base `B`,
-put `mu=|G'_B|` and let `r_B` be the number of components of `G'_B`. After
+put `mu=|G'_B|` and let `r_B=r_top(B)` include singleton components. After
 adjoining frequency `N`,
 
 ```text
 |G'_{B union {N}}| >= 6mu/7-2r_B/(7N),
-r(B union {N}) <= N+r_B.
+r_top(B union {N}) <= N+r_B.
 ```
 
 Thus the old good-set state `(mu,r_B)`, rather than every endpoint, is sufficient
@@ -129,7 +135,7 @@ portable corollary
 
 ```text
 |G'_{B union {N}}| >= 6L/7-2/(7N),
-r(B union {N}) <= N+sum(B).
+r_top(B union {N}) <= N+sum(B).
 ```
 
 Consequently, for every fixed base with `mu>0`,
@@ -140,7 +146,8 @@ the base or use correlated iterated/multiscale insertions.
 A proportional peel `aN` closes beyond an explicit rational threshold
 whenever `(333/106)*a*6L/7>1`. This proves that transverse wall proliferation
 alone is a terminal face: it can make raw components unbounded while keeping
-the theorem-facing load `r/(aN|G'|)` bounded. For THM-779, `L=1/1540`,
+the exact cap load `r_+/(aN|G'|)` bounded by the conservative state load
+`r_top/(aN|G'|)`. For THM-779, `L=1/1540`,
 `a=1092`, and the exact crossing is `11734415/9278<1265`.
 
 This does not prove the global splice. It sharpens its negation space. A truly
@@ -158,10 +165,13 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
 - `rho` is **scale-invariant on dilates** (9.334... at every `c` for `c*{1..12}`) and
   `O(1)` on every tested family: spread scale-free 2.0–3.0, partial dilates 1.9,
   deep-well shape 1.22, GW 12-core 8.06;
-- an adversarial hill-climb over `c* <= 42` cores **converged back to {1..12}**:
-  measured max `rho = 9.335` at the interval shape itself — the same extremal that
-  carries the covering-min and the H-band corners;
-- THM-779 proves that the entire chart-native prime family has an empty top band;
+- five seeded 500-step hill descents found no safe measure below the bounded
+  census minimum; one seed was that minimizer and one spread seed stopped at
+  height 727, so this is heuristic finite evidence, not convergence. The
+  separate stated-bank ratio study measured `rho <= 9.335`, with its maximum at
+  the interval shape; no global ratio extremum follows;
+- THM-779 proves that the chosen top peel `1092N` lies above its band edge for
+  every member of the chart-native prime family; the band itself need not be empty;
   the other high-frequency falsifier is compatible with the same candidate on its
   audited range. Neither fact proves the ratio-coordinate conjecture globally;
 - THM-777 proves the bridge `rho <= 12/(pi |G'_P|)`, the unconditional tail
