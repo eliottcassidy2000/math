@@ -1,0 +1,48 @@
+(1) THE FIBONACCI EDGE LAW: Y*(F_n, F_{n+1}) vs F_{n-7}
+   n=9: Y*(34,55) = 1 at (q,p)=(13,21); F_2 = 1  OK
+   n=10: Y*(55,89) = 2 at (q,p)=(13,21); F_3 = 2  OK
+   n=11: Y*(89,144) = 3 at (q,p)=(13,21); F_4 = 3  OK
+   n=12: Y*(144,233) = 5 at (q,p)=(13,21); F_5 = 5  OK
+   n=13: Y*(233,377) = 8 at (q,p)=(13,21); F_6 = 8  OK
+   n=14: Y*(377,610) = 13 at (q,p)=(13,21); F_7 = 13  OK
+   ALL n=9..25: True
+
+(2) THE FAREY-14 LAW: top Y*/x ratio classes (x = 2003, y/x in (1, 13))
+   coarse scan top-10 (Y*, ratio, nearest p/14):
+      Y* = 143 = 0.07139x  ratio 11.92861  ~ 167/14 = 11.92857 (gcd(p,14) = 1)
+      Y* = 143 = 0.07139x  ratio 6.07139  ~ 85/14 = 6.07143 (gcd(p,14) = 1)
+      Y* = 143 = 0.07139x  ratio 4.92861  ~ 69/14 = 4.92857 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 10.92911  ~ 153/14 = 10.92857 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 10.78582  ~ 151/14 = 10.78571 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 9.64304  ~ 135/14 = 9.64286 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 8.35696  ~ 117/14 = 8.35714 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 7.21418  ~ 101/14 = 7.21429 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 7.07089  ~ 99/14 = 7.07143 (gcd(p,14) = 1)
+      Y* = 142 = 0.07089x  ratio 3.92911  ~ 55/14 = 3.92857 (gcd(p,14) = 1)
+   refined at candidate extremals:
+      near 17/14  (r = 1.21429): max Y* = 142 = 0.07089x at y = 2432
+      near 19/14  (r = 1.35714): max Y* = 142 = 0.07089x at y = 2718
+      near 23/14  (r = 1.64286): max Y* = 142 = 0.07089x at y = 3291
+      near 25/14  (r = 1.78571): max Y* = 142 = 0.07089x at y = 3577
+      near 27/14  (r = 1.92857): max Y* = 143 = 0.07139x at y = 3863
+      near phi+1  (r = 2.61803): max Y* = 111 = 0.05542x at y = 5230
+      near phi+2  (r = 3.61803): max Y* = 111 = 0.05542x at y = 7233
+      near 2phi   (r = 3.23607): max Y* = 115 = 0.05741x at y = 6481
+   benchmarks: 1/14 = 0.07143; ||13 phi||-rate = 0.03444 -> 0.03444/q-scaled; phi(14) = 6 unit classes per 14-block: p mod 14 in {1,3,5,9,11,13}
+
+(3) golden-pair sawtooth: 169*rho - 4 scaled, vs (F_{n+2} mod 13): Pisano pi(13) = 28
+   n= 8: s mod 13 =  3, d mod 13 =  0, 169rho-4 = +4.20e-02, kernel = +2.308
+   n= 9: s mod 13 = 11, d mod 13 =  8, 169rho-4 = -9.63e-03, kernel = -1.385
+   n=10: s mod 13 =  1, d mod 13 =  8, 169rho-4 = -5.72e-03, kernel = -2.154
+   n=11: s mod 13 = 12, d mod 13 =  3, 169rho-4 = -1.40e-03, kernel = -1.385
+   n=12: s mod 13 =  0, d mod 13 = 11, 169rho-4 = -6.56e-04, kernel = -1.692
+   n=13: s mod 13 = 12, d mod 13 =  1, 169rho-4 = +0.00e+00, kernel = +0.000
+   n=14: s mod 13 = 12, d mod 13 = 12, 169rho-4 = +0.00e+00, kernel = +0.000
+   n=15: s mod 13 = 11, d mod 13 =  0, 169rho-4 = +3.65e-05, kernel = +1.692
+   n=16: s mod 13 = 10, d mod 13 = 12, 169rho-4 = +1.14e-05, kernel = +1.385
+   n=17: s mod 13 =  8, d mod 13 = 12, 169rho-4 = +6.79e-06, kernel = +2.154
+   n=18: s mod 13 =  5, d mod 13 = 11, 169rho-4 = +1.67e-06, kernel = +1.385
+   n=19: s mod 13 =  0, d mod 13 = 10, 169rho-4 = -1.06e-06, kernel = -2.308
+
+(4) numerology kill: phi^-6 vs AP floor 2833/50700
+   phi^-6 = 0.0557281; 2833/50700 = 0.0558777; difference = -0.0001496 -> NOT equal (coincidence killed)
