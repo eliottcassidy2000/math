@@ -1,0 +1,73 @@
+m : t_m (odd cycles through top vertex m) ; cumulative alpha_1(D_m) ; parity
+m= 3: t_m=       0 (par 0)  alpha1(D_3)=        0 (par 0)  ALL=       0
+      by_len(odd): {}
+      exits: divisors(m)=[] + {2}
+      by_exit  (odd): {}
+      by_exit  PARITY: {}
+      by_entry PARITY: {}
+      odd-parity (exit,entry) cells: []
+m= 4: t_m=       0 (par 0)  alpha1(D_4)=        0 (par 0)  ALL=       0
+      by_len(odd): {}
+      exits: divisors(m)=[2] + {3}
+      by_exit  (odd): {}
+      by_exit  PARITY: {}
+      by_entry PARITY: {}
+      odd-parity (exit,entry) cells: []
+m= 5: t_m=       2 (par 0)  alpha1(D_5)=        2 (par 0)  ALL=       3
+      by_len(odd): {3: 2}
+      exits: divisors(m)=[] + {4}
+      by_exit  (odd): {4: 2}
+      by_exit  PARITY: {4: 0}
+      by_entry PARITY: {2: 1, 3: 1}
+      odd-parity (exit,entry) cells: [(4, 2), (4, 3)]
+m= 6: t_m=       2 (par 0)  alpha1(D_6)=        4 (par 0)  ALL=       4
+      by_len(odd): {3: 1, 5: 1}
+      exits: divisors(m)=[2, 3] + {5}
+      by_exit  (odd): {3: 1, 5: 1}
+      by_exit  PARITY: {3: 1, 5: 1}
+      by_entry PARITY: {4: 0}
+      odd-parity (exit,entry) cells: [(3, 4), (5, 4)]
+m= 7: t_m=       8 (par 0)  alpha1(D_7)=       12 (par 0)  ALL=      16
+      by_len(odd): {3: 3, 5: 5}
+      exits: divisors(m)=[] + {6}
+      by_exit  (odd): {6: 8}
+      by_exit  PARITY: {6: 0}
+      by_entry PARITY: {2: 0, 3: 0, 4: 0, 5: 0}
+      odd-parity (exit,entry) cells: []
+m= 8: t_m=      28 (par 0)  alpha1(D_8)=       40 (par 0)  ALL=      51
+      by_len(odd): {3: 4, 5: 14, 7: 10}
+      exits: divisors(m)=[2, 4] + {7}
+      by_exit  (odd): {2: 9, 4: 15, 7: 4}
+      by_exit  PARITY: {2: 1, 4: 1, 7: 0}
+      by_entry PARITY: {3: 0, 5: 0, 6: 0}
+      odd-parity (exit,entry) cells: [(2, 6), (4, 3), (7, 3), (7, 6)]
+m= 9: t_m=      96 (par 0)  alpha1(D_9)=      136 (par 0)  ALL=     196
+      by_len(odd): {3: 6, 5: 31, 7: 59}
+      exits: divisors(m)=[3] + {8}
+      by_exit  (odd): {3: 58, 8: 38}
+      by_exit  PARITY: {3: 0, 8: 0}
+      by_entry PARITY: {2: 1, 4: 1, 5: 1, 6: 0, 7: 1}
+      odd-parity (exit,entry) cells: [(8, 2), (8, 4), (8, 5), (8, 7)]
+m=10: t_m=     322 (par 0)  alpha1(D_10)=      458 (par 0)  ALL=     623
+      by_len(odd): {3: 6, 5: 49, 7: 163, 9: 104}
+      exits: divisors(m)=[2, 5] + {9}
+      by_exit  (odd): {2: 119, 5: 126, 9: 77}
+      by_exit  PARITY: {2: 1, 5: 0, 9: 1}
+      by_entry PARITY: {3: 1, 4: 0, 6: 1, 7: 1, 8: 1}
+      odd-parity (exit,entry) cells: [(2, 3), (2, 4), (2, 6), (2, 7), (2, 8), (5, 3), (5, 7), (9, 3), (9, 4), (9, 7)]
+m=11: t_m=     451 (par 1)  alpha1(D_11)=      909 (par 1)  ALL=     936
+      by_len(odd): {3: 3, 5: 27, 7: 149, 9: 272}
+      exits: divisors(m)=[] + {10}
+      by_exit  (odd): {10: 451}
+      by_exit  PARITY: {10: 1}
+      by_entry PARITY: {2: 1, 3: 0, 4: 0, 5: 0, 6: 1, 7: 1, 8: 1, 9: 1}
+      odd-parity (exit,entry) cells: [(10, 2), (10, 6), (10, 7), (10, 8), (10, 9)]
+m=12: t_m=    5272 (par 0)  alpha1(D_12)=     6181 (par 1)  ALL=   10418
+      by_len(odd): {3: 15, 5: 193, 7: 1187, 9: 2805, 11: 1072}
+      exits: divisors(m)=[2, 3, 4, 6] + {11}
+      by_exit  (odd): {2: 656, 3: 1091, 4: 1715, 6: 1568, 11: 242}
+      by_exit  PARITY: {2: 0, 3: 1, 4: 1, 6: 0, 11: 0}
+      by_entry PARITY: {5: 1, 7: 0, 8: 0, 9: 0, 10: 1}
+      odd-parity (exit,entry) cells: [(2, 5), (2, 8), (2, 9), (2, 10), (3, 5), (3, 7), (3, 8), (3, 9), (3, 10), (4, 5), (4, 7), (4, 8), (6, 7), (6, 9), (11, 7), (11, 8), (11, 9), (11, 10)]
+
+SUMMARY alpha_1(D_n) parity: PARITY FAILURE -- LAW REFUTED

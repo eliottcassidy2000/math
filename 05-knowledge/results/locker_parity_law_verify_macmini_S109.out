@@ -1,0 +1,45 @@
+(A) t_m via subset-DP, with exit cells:
+m= 3: t_m=         0 (par 0)  by_exit={2: 0}
+m= 4: t_m=         0 (par 0)  by_exit={2: 0, 3: 0}
+       divisor-pairing parity: ['2<->2: 0/0 MATCH']   m-1 cell: 0
+m= 5: t_m=         2 (par 0)  by_exit={4: 2}
+m= 6: t_m=         2 (par 0)  by_exit={2: 0, 3: 1, 5: 1}
+       divisor-pairing parity: ['2<->3: 0/1 MISMATCH']   m-1 cell: 1
+m= 7: t_m=         8 (par 0)  by_exit={6: 8}
+m= 8: t_m=        28 (par 0)  by_exit={2: 9, 4: 15, 7: 4}
+       divisor-pairing parity: ['2<->4: 1/1 MATCH']   m-1 cell: 0
+m= 9: t_m=        96 (par 0)  by_exit={3: 58, 8: 38}
+       divisor-pairing parity: ['3<->3: 0/0 MATCH']   m-1 cell: 0
+m=10: t_m=       322 (par 0)  by_exit={2: 119, 5: 126, 9: 77}
+       divisor-pairing parity: ['2<->5: 1/0 MISMATCH']   m-1 cell: 1
+m=11: t_m=       451 (par 1)  by_exit={10: 451}
+m=12: t_m=      5272 (par 0)  by_exit={2: 656, 3: 1091, 4: 1715, 6: 1568, 11: 242}
+       divisor-pairing parity: ['2<->6: 0/0 MATCH', '3<->4: 1/1 MATCH']   m-1 cell: 0
+m=13: t_m=      9999 (par 1)  by_exit={12: 9999}
+m=14: t_m=     53840 (par 0)  by_exit={2: 21298, 7: 24088, 13: 8454}
+       divisor-pairing parity: ['2<->7: 0/0 MATCH']   m-1 cell: 0
+m=15: t_m=    423430 (par 0)  by_exit={3: 190524, 5: 164609, 14: 68297}
+       divisor-pairing parity: ['3<->5: 0/1 MISMATCH']   m-1 cell: 1
+m=16: t_m=   4101613 (par 1)  by_exit={2: 668687, 4: 1664889, 8: 1336815, 15: 431222}
+       divisor-pairing parity: ['2<->8: 1/1 MATCH', '4<->4: 1/1 MATCH']   m-1 cell: 0
+
+(B) H(D_n) Held-Karp vs OCF digit (H mod 4 = 1 + 2*alpha1 mod 4):
+n= 3: H=             1  H mod 4 = 1  alpha1=       0 (par 0)  pred 1  OK
+n= 4: H=             1  H mod 4 = 1  alpha1=       0 (par 0)  pred 1  OK
+n= 5: H=             5  H mod 4 = 1  alpha1=       2 (par 0)  pred 1  OK
+n= 6: H=             9  H mod 4 = 1  alpha1=       4 (par 0)  pred 1  OK
+n= 7: H=            33  H mod 4 = 1  alpha1=      12 (par 0)  pred 1  OK
+n= 8: H=           109  H mod 4 = 1  alpha1=      40 (par 0)  pred 1  OK
+n= 9: H=           469  H mod 4 = 1  alpha1=     136 (par 0)  pred 1  OK
+n=10: H=          1721  H mod 4 = 1  alpha1=     458 (par 0)  pred 1  OK
+n=11: H=          4027  H mod 4 = 3  alpha1=     909 (par 1)  pred 3  OK   <-- LAW BREAKS (H = 3 mod 4)
+n=12: H=         28851  H mod 4 = 3  alpha1=    6181 (par 1)  pred 3  OK   <-- LAW BREAKS (H = 3 mod 4)
+n=13: H=         83817  H mod 4 = 1  alpha1=   16180 (par 0)  pred 1  OK
+n=14: H=        400569  H mod 4 = 1  alpha1=   70020 (par 0)  pred 1  OK
+n=15: H=       3141317  H mod 4 = 1  alpha1=  493450 (par 0)  pred 1  OK
+
+DONE
+m=17: t_m=5037556 (par 0) by_exit={16: 5037556}
+m=18: t_m=88568440 (par 0) by_exit={2: 12649266, 3: 19038282, 6: 34652367, 9: 18142913, 17: 4085612}
+m=19: t_m=148162470 (par 0) by_exit={18: 148162470}
+DONE

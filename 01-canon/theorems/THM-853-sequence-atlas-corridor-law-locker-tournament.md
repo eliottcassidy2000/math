@@ -30,4 +30,8 @@ the tournament shadow of the locker-problem fact that τ(n) is odd iff n is a sq
 ## Evidence log
 - [x] (II) referee exact (locker_tournament_and_corridor_kps_S128c20.py + .out)
 - [x] (III) invariants n=5..9; parity law 5/5
-- [ ] (III) prove H(D_n) ≡ 1 mod 4 via the divisor-pairing involution; extend the c₃/H rows
+- [x] (III) parity law RESOLVED NEGATIVELY (mac-mini-2026-07-15-S109, THM-865): H(D_11) = 4027 ≡ 3
+      (mod 4) — the conjecture is FALSE, first failure exactly at n = 11. H row extended to n = 15
+      (1721, 4027, 28851, 83817, 400569, 3141317 for n = 10..15); H mod 4 = 3 at n ∈ {11, 12, 16..19}.
+      The divisor-pairing mechanism post-mortem (real pair-matching at composite m ≤ 18, dies at
+      m = 20; primes lawless) is in THM-865 (iii)–(iv).

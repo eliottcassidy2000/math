@@ -1,0 +1,41 @@
+(1) populated levels vs predicted progression:
+  n= 4: #levels=   3  floor=4  ceil=20  progression(step 8): EXACT MATCH
+  n= 5: #levels=   6  floor=0  ceil=40  progression(step 8): EXACT MATCH
+  n= 6: #levels=   9  floor=6  ceil=70  progression(step 8): EXACT MATCH
+  n= 7: #levels=  15  floor=0  ceil=112  progression(step 8): EXACT MATCH
+  n= 8: #levels=  21  floor=8  ceil=168  progression(step 8): EXACT MATCH
+  n= 9: #levels=  31  floor=0  ceil=240  progression(step 8): EXACT MATCH
+  n=10: #levels=  41  floor=10  ceil=330  progression(step 8): EXACT MATCH
+  n=11: #levels=  56  floor=0  ceil=440  progression(step 8): EXACT MATCH
+  n=12: #levels=  71  floor=12  ceil=572  progression(step 8): EXACT MATCH
+  n=13: #levels=  92  floor=0  ceil=728  progression(step 8): EXACT MATCH
+  n=14: #levels= 113  floor=14  ceil=910  progression(step 8): EXACT MATCH
+
+(2) F3 exchange-walk mechanics (tie-splitting flips):
+  n= 8: 200 random walks: every step +8, all terminate at transitive ceiling. OK
+  n= 9: 200 random walks: every step +8, all terminate at transitive ceiling. OK
+  n=10: 200 random walks: every step +8, all terminate at transitive ceiling. OK
+  n=11: 200 random walks: every step +8, all terminate at transitive ceiling. OK
+
+(3) floors:
+  n= 3: circulant scores=[1, 1, 1] x=0 floor=0 OK
+  n= 4: circulant scores=[1, 1, 2, 2] x=4 floor=4 OK
+  n= 5: circulant scores=[2, 2, 2, 2, 2] x=0 floor=0 OK
+  n= 6: circulant scores=[2, 2, 2, 3, 3, 3] x=6 floor=6 OK
+  n= 7: circulant scores=[3, 3, 3, 3, 3, 3, 3] x=0 floor=0 OK
+  n= 8: circulant scores=[3, 3, 3, 3, 4, 4, 4, 4] x=8 floor=8 OK
+  n= 9: circulant scores=[4, 4, 4, 4, 4, 4, 4, 4, 4] x=0 floor=0 OK
+  n=10: circulant scores=[4, 4, 4, 4, 4, 5, 5, 5, 5, 5] x=10 floor=10 OK
+  n=11: circulant scores=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] x=0 floor=0 OK
+  n=12: circulant scores=[5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6] x=12 floor=12 OK
+
+  distinct-scores => transitive (exhaustive n<=6):
+    n=3: violations=0 OK
+    n=4: violations=0 OK
+    n=5: violations=0 OK
+    n=6: violations=0 OK
+
+(4) ceiling residues, n <= 60:
+   violations: none -- ceiling  = 0 / n (mod 8) as required. OK
+
+ALL CHECKS PASSED
