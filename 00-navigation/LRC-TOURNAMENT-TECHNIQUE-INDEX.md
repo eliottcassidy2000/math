@@ -39,6 +39,54 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-435 - Operation-Kernel Pairs / Residual-Interval Automaton
+
+- **Move:** For an observation `H:X->Y`, replace fibre counts by its literal
+  kernel pair `R_H={(x,x'):H(x)=H(x')}`, retaining the ordered projections
+  needed by the next operation.  On a Hamming-five packet the action state is
+  the strict-safe interval union
+  `E_S={t:min_(q in P union S)||qt||>1/13}` and insertion is the commuting,
+  idempotent map `T_u(E)=E intersect Safe(u)`.  Relative to a finite remaining
+  bank `V`, define continuation equivalence by equality of the terminal verdict
+  `T_C(E)=empty` for every legal `C subset V`; this is a finite
+  Myhill--Nerode congruence, not a metaphorical state compression.
+- **LRC use:** THM-820 reduces every hypothetical tight scale-one Hamming-five
+  row to two finite boxes, but its collar tournament does not decide either
+  box.  The exact closure engine should minimize reachable `(E_S,V)` states or
+  meet them in the middle as a two-comb residual versus a three-comb cover.
+  Literal labelled four-coordinate faces have ordered restriction maps and
+  unique gluing, so THM-818's kernel-pair/Cech join is also a legitimate audit
+  of any proposed Hamming-five quotient.  Normalized component summaries do
+  not inherit that gluing automatically.
+- **Preserves:** exact emptiness after every named continuation, literal
+  replacement labels and speeds, ordered face overlaps, open/closed endpoint
+  flags, component endpoints and widths, and the remaining operation bank.
+- **Forgets / guardrail:** A runner or residue tournament forgets integer band
+  centre and reciprocal scale.  THM-820 gives two five-cycles with the same
+  labelled live graph and completed-tournament fingerprints but different
+  centres (`9` versus `22`) and different exact maxima; its top-four SCC can
+  persist at unbounded scale.  Component count, total mass, unordered
+  endpoints, or fibre sizes likewise cannot be joined until terminal purity
+  is proved.  For deep signed cells, a Cech interpretation remains only an
+  analogy until literal restriction and effective gluing maps are supplied.
+- **Pairwise observable:** left owner-exit handoff, oriented provider-to-owner.
+  The live five-cycle examples use increasing-label and decreasing-label
+  completions of silent pairs.  In the first gauge the score histogram is
+  `{1:1,2:3,3:1}`, with four directed triangles, one size-five SCC, and
+  thirteen Hamiltonian paths; the reverse gauge has the same score and
+  triangles and eleven paths.  Deleting one live cycle edge supplies the
+  common tie Hamiltonian path.  These fingerprints diagnose a liar fibre;
+  they are not the terminal predicate.
+- **Next pull:** On the `25,344` height-at-most-two Hamming-five rows, build
+  kernel relations for (i) the labelled handoff graph, (ii) graph plus integer
+  centres, (iii) an endpoint-owner component word, and (iv) literal `E_S`.
+  Report exact-maximum and tight/loose purity, then preflight the three-face
+  ordered join.  In parallel, minimize the reachable residual automaton and
+  use its two-plus-three join against THM-820's two boxes.
+- **Pointers:** THM-818, THM-820, THM-815, THM-817, HYP-6820;
+  `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
+  `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
+
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 
 - **Move:** At a binding scale `Q=13s`, split the tight core into the on-sheet
