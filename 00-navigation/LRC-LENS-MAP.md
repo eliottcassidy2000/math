@@ -6,13 +6,14 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
-## Addendum 2026-07-15: component--comb cover debt / Kakeya-needle lens
+## Addendum 2026-07-15: ramified component-cover sheaf / Kakeya-comb lens
 
-The Hamming-five closures and the nonprimitive Hamming-six contraction sharpen
-the central packet-sheaf claim.  For a current core `P`, the monotone proof
-state is the literal component union `E(P)`, the remaining labelled periodic
-danger combs, active endpoints, and the last speed.  On a component `I`, the
-new useful potential is the overlap debt
+The Hamming-five ramification theorem and the complete scale-one Hamming-six
+closure sharpen the central packet-sheaf claim.  For a current core `P`, the
+monotone proof state is the literal component union `E(P)`, the remaining
+labelled periodic danger combs, active endpoints, last speed, and common-sheet
+fibre when present.  On a component `I`, the useful potential is the overlap
+debt
 
 ```text
 omega_I(S)=sum_(u in S)|I intersect D_u|
@@ -20,25 +21,29 @@ omega_I(S)=sum_(u in S)|I intersect D_u|
 ```
 
 The discrepancy ladder controls the first term; coverage and unique-owner
-rigidity live in the second.  At the doubled-AP H6 equality, division by two
-gives core `{1,...,6}` and combs `{7,...,12}`.  Its twelve components have four
-zero-debt unique-owner pins.  Exact descent plus a 136,288-state deepest-prefix
-tree closes every nonprimitive H6 packet except `2[12]`; primitive H6 remains
-open.  “Kakeya needles” here means periodic one-dimensional comb teeth acting
-on disconnected components, not a transfer of planar Kakeya dimension theory.
+rigidity live in the second.  THM-857's exact recursion ranges over all 924
+scale-one H6 deletion roots and all unbounded proper heights.  Its
+580,919,164-node logical tree has exactly one covering terminal, `2[12]`; the
+other twenty terminals are loose.  Thus the former 909 primitive-root residual
+and the exceptional mixed-parity fibre are closed at scale one, not merely
+stratified.  At equality, division by two gives core `{1,...,6}` and combs
+`{7,...,12}`; its twelve components have four zero-debt unique-owner pins.
+“Kakeya needles” here means periodic one-dimensional comb teeth acting on
+disconnected components, not a transfer of planar Kakeya dimension theory.
 
-The primitive-core H6 continuation identifies a sharper local vertex: an
+The earlier primitive-core H6 continuation identifies a sharper local vertex: an
 oriented thirteenth-grid cusp.  If `f` counts full antipodal missing pairs,
 there are exactly `2f` such cusps in the retained-core safe set.  Comparing an
 owner tooth's reach with incoming provider starts gives a weighted digraph,
 not a tournament; directed-cycle products plus ten fixed-coordinate trees
-close fourteen of the twenty `f=3` rows.  For the six rows on which that local
-quotient is silent, an exact longest-component recursion on literal endpoints
-and labelled unplaced combs closes all `2,653,600` states.  Hence all twenty
-`f=3` rows are loose.  The antipodal count is only a stratification: it
-destroys pair signs, exact endpoints, divisor obligations, height parity, and
-overlap.  The remaining primitive scale-one bank consists of 903
-primitive-core `f<=2` rows plus the exceptional odd-label mixed-parity pattern.
+first closed fourteen of the twenty `f=3` rows.  For the six rows on which
+that local quotient is silent, an exact longest-component recursion on literal
+endpoints and labelled unplaced combs closes all `2,653,600` states.  A later
+independent subcertificate closes all 52 `f=2` roots with first-speed cap at
+most 156 in `9,888,159` states.  THM-857 subsumes both partial charts at scale
+one by closing all 924 deletion roots.  The antipodal count and root cap remain
+useful routing strata, but destroy pair signs, exact endpoints, divisor
+obligations, height parity, and overlap.
 
 THM-858 supplies the common-sheet H5 version of the same incidence lesson.
 For a nonempty colour set `S`, set
@@ -93,7 +98,16 @@ This addendum also records three quotient decisions from the same session:
   additive potential, but `m(E)` and `V1(E)` have full 21-dimensional edge
   orbit spans; the combined point-plus-Fano incidence space has rank only 13.
   Fano incidence is organization, not symmetry, and its eight invisible edge
-  directions contain proof-relevant numerical curl.
+  directions contain proof-relevant numerical curl.  A portable fixed-`E_2`
+  lower bound nevertheless closes edge `(5,7)` exactly: 28,847 residual
+  sweeps are all positive with minimum `7/858`.  This proves one flood, not a
+  Fano transport to the other twenty.
+- In the shell-five incidence, each unit endpoint column sees a labelled set
+  of dangerous raw lift classes.  Every fixed pair has a simultaneous
+  relaxed matching; the sole singleton support is the class-`41` family
+  `p=+/-(45d+1)/26`, and both signs share one concrete raw-`4` killer.  The
+  carrier is column--raw-class incidence with lift labels, not a column
+  tournament.  Divisor completeness and parity support remain extra layers.
 - Scalar tournament gauges on H5 contexts, shell classes, and flood bodies are
   transitive while the cover verdict remains non-pairwise.  Use components,
   owner pins, grid numerators, or proof obligations as vertices; retain the
@@ -116,6 +130,11 @@ nonprimitive_contraction_target
 antipodal_AP_cusp_count
 oriented_germ_handoff_graph
 weighted_cycle_product
+all_root_component_tree_hash
+common_sheet_fibre
+prime_power_carrier_hyperedge
+complement_lcm_relative_order
+affine_owner_interval
 farey_one_kink_stalk
 fano_organization_not_symmetry
 fano_edge_module_invisible_dimension
@@ -126,6 +145,8 @@ pair_common_scale
 pair_mod13_sawtooth
 pair_endpoint_discrepancy
 shell_lift_dependent_column_packet
+shell_column_raw_class_incidence
+flood_fixed_E2_bulk_bound
 relative_ramification_order
 complement_lcm_fibre
 prime_power_carrier_hypergraph

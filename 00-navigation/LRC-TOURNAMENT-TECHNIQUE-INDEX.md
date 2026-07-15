@@ -211,9 +211,15 @@ obligations, and proof-carrier interfaces.
   and 395 edge flips.  The proper order-one boundary `3b+39` is invisible to
   the coset or comb tournament but explicit in the labelled progression
   sidecar.
-- **Next pull:** Derive the arbitrary-scale Hamming-five oriented-deck
-  classification and separate the tight AP orbit `2[12]` from non-AP rows in
-  the finite Hamming-six tree. At seven remaining scale-one combs, replace mean danger
+  THM-857 repeats the warning over all 924 H6 deletion roots.  The raw least-
+  lift and core-conditioned five-comb-cap gauges are both transitive with
+  standard six-vertex score histogram, zero triangles, singleton SCCs, and one
+  Hamiltonian path; nevertheless 4,500 edges flip, with 406 conditioned ties.
+  The exact component recursion distinguishes the unique cover `2[12]` from
+  all 923 primitive retained-core roots; neither tournament does.
+- **Next pull:** Derive the arbitrary-scale Hamming-five/Hamming-six oriented-
+  deck transport, using THM-857's complete scale-one H6 tree as the frozen
+  boundary language. At seven remaining scale-one combs, replace mean danger
   density by an overlap-debt or owner-diversity potential. On the deep side,
   seek a contradiction in the adaptive signed-cell by deep-component
   incidence. Use THM-821's exact atomic margin to prove that every admissible
@@ -229,7 +235,7 @@ obligations, and proof-carrier interfaces.
   only telemetry; the theorem-bearing carrier has deck, winding, and metric
   sidecars.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821, THM-824, THM-831, THM-844, THM-845, THM-847,
+  THM-821, THM-824, THM-831, THM-844, THM-845, THM-847, THM-857,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
@@ -266,6 +272,8 @@ obligations, and proof-carrier interfaces.
   levels bounds the `2,3,7` ranges by `5,2,1`, hence every remaining order by
   42,336.  The scalar cone is infinite, but its common-sheet sublanguage is a
   finite `{2,3,7}`-smooth prime-power carrier hypergraph with no singleton top edge.
+  THM-857 independently closes the full proper scale-one H6 chart by exact
+  component recursion; arbitrary-sheet transport of that result remains open.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies
@@ -305,13 +313,17 @@ obligations, and proof-carrier interfaces.
   capacity tournaments are transitive on all 185 residual rows despite 574
   flips, while a top-prime hyperedge cut rejects every row. Pairwise comparison
   forgets the rejecting subset, its complement fibre, and affine interval
-  phase.
+  phase. THM-857 gives the parallel six-comb failure: both scalar root gauges
+  are transitive on all 924 rows despite 4,500 edge flips, while the exact
+  higher-order component union has one covering terminal.
 - **Pairwise observable:** For diagnostic residue-obligation vertices, compare
   atomic cells exclusively ownable after the other ten groups are erased.
   The exact observable ties on every pair in the height-12 census. For the
   THM-858 five-colour order audit, compare
   `rho(D_i)-rho(D_j)`, `rho(m)=ceil(2m/13)/m`; the conditioned gauge first
-  quotients both orders by the lcm of the other three colours.
+  quotients both orders by the lcm of the other three colours. For THM-857,
+  compare missing labels by least proper lift, then by the exact five-comb cap
+  after that lift is intersected with the deletion core.
 - **Switch/gauge:** Use residue order `1->2->...->12` only as a declared tie
   gauge. The resulting tournament is transitive with score histogram
   `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
@@ -326,14 +338,15 @@ obligations, and proof-carrier interfaces.
   telemetry.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
-  branch, transport THM-845's component/comb recursion across AP scale and
+  branch, transport THM-845/857's component/comb recursions across AP scale and
   classify the finite THM-858 strip
   `min D_i<=21<max D_i<=42,336`. The next shallow object is
   the `{2,3,7}` prime-power carrier hypergraph decorated by complement-lcm
   fibres, affine owner intervals, and active boundary words, not a
   raw global cell mask. Then treat the ramified higher-`s`
-  packets outside THM-816's closed quartic coset. Enumerate the finite
-  scale-one Hamming-six tree and cross the seven-comb density wall. For the
+  packets outside THM-816's closed quartic coset. Use the already completed
+  THM-857 scale-one H6 tree as a boundary condition and cross the seven-comb
+  density wall. For the
   common `(13d,5d)` branch, first derive THM-836's signed-complement and
   guarded-containment hypotheses, then continue the uniform arithmetic
   violation of THM-824's intrinsic radius budget from its sharp starting shell
@@ -341,7 +354,7 @@ obligations, and proof-carrier interfaces.
   sixteen viable no-switch folds and its ternary obstruction elsewhere.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
   THM-817, THM-820, THM-823, THM-824, THM-829, THM-831, THM-836, THM-837,
-  THM-840, THM-844, THM-845, THM-847, THM-858, HYP-6775, HYP-6820;
+  THM-840, THM-844, THM-845, THM-847, THM-857, THM-858, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

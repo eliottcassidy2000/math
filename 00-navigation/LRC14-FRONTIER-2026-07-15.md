@@ -25,10 +25,13 @@ through `n=7`; the full Hamiltonian-gradient multiset classifies merged nodes
 through `n=8`; path-relative complement needs a separate holonomy stalk; and
 the depth-11 chi-seven address simplex splits into a 48-dimensional residue
 base plus 30 A/B/C carry contrasts.  These are operation-specific codecs, not
-metric witnesses.  The j=4 computation remains only at its recorded partial
-progress (`171/2002` clean bodies at the last integrated audit), and the 21
-flood bodies retain an eight-dimensional edge sector invisible to point-star
-plus Fano-triangle sums.
+metric witnesses.  The broad j=4 computation remains at its recorded partial
+progress (`171/2002` clean bodies at the last integrated audit), but the new
+portable exact lane closes flood edge `(5,7)` uniformly: all 28,847 residual
+bottom sweeps are positive, with minimum `7/858`.  Thus one of the 21 flood
+bodies is closed and twenty remain.  They retain an eight-dimensional edge
+sector invisible to point-star plus Fano-triangle sums and are not symmetry
+quotients of the closed edge.
 
 At the seven-comb wall the corrected Hunter state is now exact.  After
 subtracting independent single and pair densities, its lower bound is
@@ -85,8 +88,9 @@ gcd-descent bookkeeping, and (iv) scale-free transverse fragmentation. HYP-6830'
 (MISTAKE-145 and the exact four-far falsifier below).
 
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
-on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
-unfinished evidence checklist. Neither may be used as an unconditional assembly lemma.
+on an unproved global far-element monotonicity statement; THM-741 remains explicitly `CLAIMED` for
+the 2002-body theorem.  Its edge-`(5,7)` addendum is an exact proved bank, not an unconditional
+assembly lemma for the other twenty floods.
 
 ## 1. Status by piece
 
@@ -128,6 +132,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | folded-target component and switch frontier | PROVED SHARP / VERIFIED ALL-SIZE: for `A>B`, reduce by `g=gcd(A,B)` to coprime opposite-parity half-frequencies `(alpha,beta)`. THM-831 gives every primitive target component by an exact Bezout-offset ball formula. The nonempty primitive symmetric-return predicate has a lossless no-switch radius factorization exactly for `4<=alpha<=9` (sixteen antipodal two-ball rows); `alpha<=3` is empty, while every `alpha>=10` has a strictly negative ordered switch triple, already at offsets `+/-1,+/-3`. The abstract factorization also requires the sharp winding guard `4h<1`, automatic for every folded component but false for arbitrary large balls. A common gcd creates raw deck switches while multiplication by `g` preserves the quotient-scaled criterion. The exact replay checks 518 primitive pairs, 6,160 compact packets, all endpoint and winding cases, and the four `alpha=10` witnesses. This classifies the legal scalar quotient; it does not force an LRC core to violate it or factor one nonsymmetric satellite. | THM-831 + exact formula/switch/packet replay |
 | fixed-ratio thin owner shells | PROVED SHARP FOR THIS LOCAL STEP + FINITE-EXACT: for ten distinct speeds with THM-836's exact signed-complement residues and guarded `(13d,5d)` containment, the two directional exit coefficients are both permutations of `(9,20,31,42,53,64,75,86,97,108)`. In the band `B<13d`, the two coefficient-nine owners force `delta(d)<=11s(13d+s)/(2(117d+11s))`, `s=2B-13d`. Modular alignment empties `s=1,3`. At `s=5`, local feasibility is exactly `d mod 52 in {11,15,37,41}`, with omitted signed class `{3,10}` and owners `{B-3,B-2}`. The explicit grid `q=5d`, `p=(45d-1)/26` uniformly eliminates `d=11 mod 52`; a 1,605,632-row exact census eliminates the single value `d=15`, but not its full congruence class. The classes `15,37,41 mod 52` remain open uniformly. | THM-836 + exact shell/divisor-grid replays |
 | shell-five universal endpoint-grid template | PROVED NO-GO FOR THIS METHOD: in each open class `d mod 52 in {15,37,41}`, the points deep for every possible free lift and the three forced owners lie in four exact intervals around `4/13` and `9/26`. Neither mandatory endpoint grid `q=5d` nor `q=13d` has a unit point there; the `q=13d` half also has a direct inverse construction showing that every proposed unit column is killed by an allowed raw-class-`1` or `12` lift. Thus the U-independent single-numerator analogue of the `d=11` proof is uniformly impossible. This closes no class: a witness may depend on the actual lift set, combine columns, or use another denominator. | THM-836 §6B + exact skeleton/grid replay |
+| shell-five fixed two-column endpoint family | PROVED NO-GO IN THE RELAXED MODEL: every unit `q=13d` column has free danger support at least three; every nonforced unit `q=5d` column has support at least two except `d=41 mod 52`, `p=+/-(45d+1)/26`, whose support is exactly `{4}`. A labelled matching argument therefore jointly kills any fixed pair of unit endpoint columns by one relaxed shell-admissible lift set. The 432-row all-size affine certificate has minimum strict margin `1/6545`. This does not impose THM-772 divisor completeness or THM-803 parity support, so it closes no structured shell class. | THM-836 §6C + exact support/matching replay |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | shallow AP Hamming-one star at arbitrary height | PROVED scale-free: every proper residue-preserving one-coordinate lift of `{1,...,12}`, and of every unit AP dilation, is loose. Every residual non-AP shallow packet differs from every AP dilation in at least two labelled coordinates. | THM-795 + exact core-threshold/atom/deck replay |
 | shallow AP Hamming-two star at arbitrary height | PROVED scale-free: oriented half-open splice decks force both replacements back to the common AP scale at exact tightness; the normalized proper double lift then has the sharp floor `M>=2/25>1/13`. Thus every residual shallow packet has labelled Hamming radius at least three from every AP dilation. | THM-800 + exact 600,756-row replay |
@@ -139,14 +144,15 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | Hamming-five arbitrary-scale deck boundary | PROVED STRUCTURAL / UNIFORMLY FINITE COMMON-SHEET ORDER BANK: every scalar cover has `sum 1/D_i>3/13`, hence some `D_i<=21`, but the family `(1,2,3,5,10):(2,5,13q+1,2,13q+1)` refutes any scalar all-order cutoff. THM-858 adds the relative-ramification cuts `sum_(i in S) ceil(2m_i/13)/m_i>=1`, `m_i=D_i/gcd(D_i,lcm(S^c))`. In the new branch with some `13<D_i<=21`, singleton cuts reduce 2,055 scalar rows to 185 and top-prime cuts reject all 185; a literal replay independently finds zero covers among 51,360 unit words. Applying the same cuts across adjacent valuation levels gives `range(v_2,v_3,v_7)<=(5,2,1)`, so every common-sheet order is at most `21*2^5*3^2*7=42,336`. Any unclassified row lies in `min D_i<=21<max D_i<=42,336`, is `{2,3,7}`-smooth, has no private prime power, and obeys every relative cut. | THM-816/823/837/844/845/847/858 + exact C++/Fraction replays |
 | all arbitrary-height order-three Hamming-five contexts | PROVED / FINITE-EXACT EMPTY: THM-844 applies THM-815's longest-component cap to every labelled prefix in all 96 contexts left by THM-823. The exact recursion visits 28,876 states, finds no covering prefix, and dies at depth four with no depth-five terminal; it strictly improves the earlier `K/L` cap at every visited state. THM-837's original 75,371-state single-context calculation becomes a 213-state subcase. Raw and longest-component-marginal comb tournaments are transitive in every context but flip 492 edges; the theorem-bearing carrier is the active component--comb incidence with exact endpoints, remaining CRT progressions, and last speed. | THM-815/823/837/844 + exact Fraction replay |
 | all arbitrary-height mixed order-one/order-three Hamming-five contexts | PROVED / FINITE-EXACT EMPTY: after normalization the order-one speed is `3(b+13h)`, with proper lifts exactly `h>=1`, so all five obligations lie in labelled step-39 progressions. THM-847 exhausts the `3*8*4=96` contexts in 31,715 exact states, with no covering prefix or depth-five terminal; a standalone replay and a literal census of all 63,360 marked mixed sheet presentations agree. Both tournament gauges are transitive but flip 395 edges. The faithful carrier is again active component--remaining-comb incidence with endpoints, progression labels, and last speed. | THM-815/816/823/847 + two Fraction replays |
-| scale-one Hamming-six finite recursion / seven-comb wall | PROVED finite-decidability, with the nonprimitive slice now closed except for equality: THM-815's discrepancy recursively bounds every next proper scale-one lift through radius six, with initial cap `x_1<=468`. A nonprimitive H6 row necessarily lifts exactly the six odd labels at odd heights; division by two reduces it to `[12]`, a closed H1--H5 row, or one top-half H6 chamber. A 136,288-prefix exact component recursion closes that chamber, so `2[12]` is the only possible tight nonprimitive H6 row. Primitive scale-one H6 remains open. Seven remaining combs are the precise first-moment density barrier because `13-2m` changes sign. | THM-815 Part C/C.1 + exact root-component/nonprimitive-contraction replays |
-| primitive-core H6 antipodal AP-germ and residual closure | PROVED COMPLETE `f=3` CLOSURE + FINITE-EXACT: excluding the exceptional odd-label retained core, the 923 primitive-core missing-label rows split by full antipodal-pair count `f` as `63,480,360,20`. Each full pair supplies two interior thirteenth-grid cusps and oriented germ-owner handoff inequalities. Weighted directed-cycle products close six of the twenty `f=3` rows and force `u_5=18` and/or `u_6=19` in eight more; ten fixed-coordinate trees close those eight in 3,699 states. The six product-`1/16` rows left by that quotient are closed by six exact residual-component trees with depth nodes `6,494,46813,2531670,74415,202,0` (`2,653,600` states), zero covering prefix, no depth-six state, and 208 independent closed-danger checks. Thus all twenty `f=3` rows are loose and the primitive-core row frontier is `923 -> 903`. The 903 rows with `f<=2` plus the exceptional odd-label mixed-parity primitive branch give 904 open label patterns; `2[12]` is the separate nonprimitive equality. | THM-815 C.2 + exact AP-pin/slice/six-root replays |
+| scale-one Hamming-six exact closure / seven-comb wall | PROVED / FINITE-EXACT, UNIFORM IN LIFT HEIGHT: THM-857 applies THM-815's longest-component cap at every labelled prefix over all `C(12,6)=924` deletion roots and every unbounded proper lift progression. Its logical tree has `580,919,164` nodes and `580,918,240` candidate edges; twenty terminals are certified loose and the unique covering terminal is the doubled AP `2[12]`, arising from missing odd labels lifted to `14,16,...,24`. An independent implementation reconstructs closed danger unions and hashes each labelled root tree. Hence all 923 primitive retained-core roots, the mixed-parity exceptional fibre, and every other proper scale-one H6 row are loose. Arbitrary AP scale/common sheets remain open. Seven remaining combs are still the precise first-moment density barrier because `13-2m` changes sign. | THM-815 Part C/C.1/C.2, THM-857 + exact primary/closed-danger replays |
+| primitive-core H6 antipodal AP-germ reduction | PROVED STRUCTURAL PRECURSOR, SUBSUMED FOR SCALE ONE BY THM-857: excluding the exceptional odd-label retained core, the 923 primitive-core missing-label rows split by full antipodal-pair count `f` as `63,480,360,20`. AP-germ cycle products and ten exact fixed-coordinate trees first closed fourteen `f=3` rows and reduced the apparent row frontier `923 -> 909`. THM-857's literal component recursion now closes those 909 rows and the exceptional mixed-parity branch too. The germ graph remains informative—the min-plus cycle dual of the Hunter max-plus tree—but `f`, cusp products, and binary orientations are lossy shadows of exact component--remaining-comb incidence. | THM-815 C.2, THM-857 + exact AP-pin/slice and component replays |
+| primitive-core H6 low-cap independent subcertificate | PROVED / FINITE-EXACT, SUBSUMED BY THM-857: a separate implementation enumerates the 360 `f=2` roots, freezes every one of the 52 roots with first-speed cap at most 156, and closes them in `9,888,159` exact states with zero covering prefixes and 1,323 independent closed-danger checks. This is an implementation-level crosscheck of the full theorem, not a surviving frontier. | THM-815 C.3, THM-857 + exact `f=2` replay |
 | Hunter-tree second-order seven-comb functional | PROVED functional/ideal coefficient + FINITE-EXACT pilots, not radius-seven closure: single-comb density bounds are information-theoretically empty at seven, while Hunter--Kounias gives ideal coefficient `(165-22m)/169`, positive at `m=7` and negative at `m=8`. The live-pull referee corrected the global pair law to the two-sided sawtooth `4/169+[Q(a+b)-Q(|a-b|)]/(169ab)` for the reduced pair `(a,b)`; in particular `mu(D_6 intersect D_7)=2/91<4/169`, so the original one-sided Bezout floor and raw-speed deficit lemma are false. For a `c_E`-component prefix, the projective pullback error at common scale `g` is at most `2c_E/g`. Remaining: a maximum-tree lemma on reduced-ratio/mod-13 edge packets and an AP-window argument for correlated residuals. | corrected THM-856 + exact overlap referee/pilots |
 | dyadic deletion descent from the two-sheet packet | PROVED: every imprimitive-deletion branch is a factor-2 seam and a finite dyadic quotient chain with binary safe-child fibers, a unique first `Z/4` seam, primitive divisor-complete quotients, and a hereditarily primitive terminal base; terminal exclusion remains open | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
 | ten-core phase-cell / erosion packet | PROVED anchored/symmetric return packet, pointwise thickness tax, and global gap/Kneser budgets `mu(E)+sum min(g_i,4/(143B))<=mu(H)` and `mu(E)+mu(R)<=mu(H)`. Exact liars show that fixed anchors, raw component tournaments, exception-divisor grids, and signed residue support all lose the escape predicate. THM-803 now constructs the exact all-component selector on `K_U=E_U+closure(R_U)` and a sharp row for which every grid and global maximizer is silent but the nonmaximal component `7/22` escapes. The remaining theorem is uniform failure or incompatibility of those finite selector obligations, not construction of the selector. | THM-782/789/797/803 + exact trap/erosion-liar/anti-grid/component certificates |
 | even-maximum two-sheet collar | PROVED rational blocker clock, top-tooth incidence, and a `Z/13` moving-edge carrier. Its exact quotient is an `A_12` root-current walk in the 50,388-state seven-chip simplex, with coverage iff all singleton cut capacities remain nonnegative. The tropical block transfer `T(W)=(c_W,b_W)` composes exactly and preserves survival with the actual initial allocation. FINITE-EXACT/UNIFORM-IN-MULTIPLIER: at quotient height 24, `c=1` tears by `3/8`, `c=3` by `1/7`, and every odd `c>=5` fails in the initial chamber. Uniform quotient-height exclusion remains open. | THM-792 + exact root-current/tropical `w=13c` certificates |
-| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every common-sheet H5 survivor language with all effective orders at most 21; the nonprimitive scale-one H6 slice except the doubled AP equality; all twenty three-antipodal-pair primitive-core H6 label rows; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-858 proves that the entire remaining common-sheet effective-order bank is finite, with `min D_i<=21<max D_i<=42,336`, all orders `{2,3,7}`-smooth, and no private prime power. THM-815 C.1/C.2 leave 903 primitive-core `f<=2` H6 rows plus the exceptional mixed-parity branch, or 904 open scale-one H6 label patterns. Exact endpoints are Markov only for monotone insertion. On the deep side THM-824/831 classify the radius/switch scalar, while THM-836 excludes shells `s=1,3`, uniformly eliminates `d=11 mod 52` at `s=5`, and proves that no `U`-independent single unit numerator on `q=5d` or `13d` can close the other three classes. The classes `15,37,41 mod 52` remain open and now require a lift-dependent, multicolumn, or non-endpoint certificate. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847/858; HYP-6820 |
+| n=12 sporadic branch | OPEN globally. Closed: the bounded shallow slice; the full AP-centred Hamming-one through Hamming-four stars at arbitrary height and scale; the proper scale-one Hamming-five chart; every common-sheet H5 survivor language with all effective orders at most 21; the **entire proper scale-one Hamming-six chart except the genuine equality `2[12]`**; every two-sheet core in `[1,19]` with unbounded odd exceptions; and the other named finite banks. THM-858 proves that the entire remaining common-sheet H5 effective-order bank is finite, with `min D_i<=21<max D_i<=42,336`, all orders `{2,3,7}`-smooth, and no private prime power. THM-857 removes the former 909 primitive-root plus mixed-parity scale-one residual; what remains on H6 is transport across arbitrary AP scale/common sheets, not another scale-one label census. Exact endpoints are Markov only for monotone insertion. On the deep side THM-824/831 classify the radius/switch scalar, while THM-836 excludes shells `s=1,3`, uniformly eliminates `d=11 mod 52` at `s=5`, and proves that no `U`-independent single unit numerator on `q=5d` or `13d` can close the other three classes. The classes `15,37,41 mod 52` remain open and now require a lift-dependent, multicolumn, or non-endpoint certificate. | THM-759/763/765/766/768/769/770/772/774/775/776/782/786/789/792/795/797/800/803/804/806/807/810/815/816/817/820/821/822/823/824/831/836/837/840/844/845/847/857/858; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -239,15 +245,12 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    charts finite exact trees, with first caps `146` and `468`. THM-820 gives
    radius five two explicit uniform collar boxes and THM-845 empties both;
    THM-844/847 also empty the bounded all-three and mixed common-sheet
-   languages. Classify effective orders above twelve. THM-815 C.1 now proves
-   that a nonprimitive radius-six row is either the genuine `2[12]` equality
-   orbit or loose.  THM-815 C.2 closes all twenty three-antipodal-pair
-   primitive-core rows: oriented AP-germ handoffs and ten fixed-coordinate
-   trees close fourteen, while six exact residual-component trees close the
-   product-`1/16` remainder in 2,653,600 states.  Continue through the 903
-   `f<=2` rows and the exceptional odd-label mixed-parity branch;
-   build the radius-six analogue of THM-810's oriented deck classification. At
-   scale-one radius seven the mean danger density is
+   languages. THM-858 reduces every remaining common-sheet H5 language to a
+   finite `{2,3,7}`-smooth order strip. THM-857 now closes the entire proper
+   scale-one radius-six chart: the unique covering terminal is `2[12]`.
+   Transport its literal component/progression action and shortcut witnesses
+   across arbitrary AP scale and common sheets; there is no remaining
+   scale-one label census. At scale-one radius seven the mean danger density is
    `14/13`, so the same potential ceases to decrease. THM-856 supplies the
    Hunter maximum-tree overlap functional and proves its ideal coefficient is
    positive for seven combs.  Its S14 referee shows that the actual edge state
@@ -257,8 +260,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    mechanical words.  THM-855 F6's fluctuation--dissipation law remains a
    separate lead for the collar event walk. The parallel six-exception/seven-exception sheet
    wall is a structural clue, not yet an identification theorem.
-4. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
-   rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
+4. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; port the
+   exact edge-`(5,7)` bulk screen across the other twenty flood bodies rather than promote THM-741
+   globally; attach machine-verifiable certificates and exact scope metadata.
 5. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
    `finite-exact for stated bank`, `verified sample`, `conditional`, or `open`.
 
@@ -571,15 +575,13 @@ residue-obligation, collar-cycle, and component-order tournaments are
 telemetry: the proof-facing state is the operation-indexed residual interval
 union with its remaining labelled tooth bank, endpoint owners, and exact
 widths. Seven is the first scale-one radius where mean danger density exceeds
-one. The nonprimitive H6 contraction leaves `2[12]` as its only possible
-tight row.  Inside the primitive-core atlas, AP-cusp handoff cycles and ten
-fixed-coordinate trees close fourteen of the twenty `f=3` rows, and six exact
-residual-component trees close the product-`1/16` remainder.  All twenty are
-loose.  The 903 primitive-core `f<=2` patterns plus the exceptional
-mixed-parity odd-label branch remain, for 904 open scale-one H6 label patterns;
-`2[12]` is the separate nonprimitive equality.  The finite smooth-ramified H5
-presentation bank, remaining primitive and arbitrary-scale H6 transport, deep
-two-sheet, and general higher-sheet branches remain.
+one. THM-857 now completes the radius-six decision tree over all 924 deletion
+roots: among 580,919,164 logical states, `2[12]` is the unique covering
+terminal. The former AP-cusp reduction remains a useful min-plus chart, but
+its 909-row residual and the exceptional mixed-parity row are no longer open
+at scale one. The finite smooth-ramified H5 presentation bank, arbitrary-
+scale/common-sheet H6 transport, radius seven, deep two-sheet, and general
+higher-sheet branches remain.
 
 For the historical viewpoint atlas behind this synthesis, use
 `00-navigation/LRC-LENS-MAP.md`; for the current predicate-preserving carrier,
@@ -590,14 +592,13 @@ claim that every listed analogy has theorem status.
 
 > **LRC(14) is open.  The AP-centred Hamming-four star, proper scale-one
 > Hamming-five chart, entire effective-order-at-most-21 Hamming-five
-> common-sheet bank, nonprimitive scale-one Hamming-six slice away from the
-> doubled AP, and all twenty three-antipodal-pair primitive-core H6 rows are
-> closed.  The live obstruction is finite ramified H5 language erosion,
-> arbitrary-scale deck transport, and signed-cell/component compatibility
-> in the remaining 903 primitive-core `f<=2` H6 rows, the mixed-parity branch,
-> and the deep and higher-sheet branches.**
+> common-sheet bank, and the full proper scale-one Hamming-six chart away
+> from the doubled AP equality are closed.  The live obstruction is finite
+> ramified H5 language erosion, arbitrary-scale/common-sheet H6 transport,
+> the seven-comb wall, and signed-cell/component compatibility in the deep
+> and higher-sheet branches.**
 
 *Controlling corrections: HYP-6780, MISTAKE-143, MISTAKE-149, THM-762/764,
-THM-768--770, THM-794/795/797/800--804/806/807/810/815--817/820--824/831/836/837/840/844/845/847/858,
+THM-768--770, THM-794/795/797/800--804/806/807/810/815--817/820--824/831/836/837/840/844/845/847/857/858,
 and the updated THM-758. Earlier
 S297/S310/S312 closure language and the companion S297 reflection must be read through these corrections.*

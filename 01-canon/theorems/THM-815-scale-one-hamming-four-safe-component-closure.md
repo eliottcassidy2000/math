@@ -1,8 +1,8 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, complete closure of the primitive-core three-antipodal-pair H6 stratum, and closure of the first eleven two-antipodal-pair rows + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, ten primitive-core H6 slice trees with 3,699 total states, six residual H6 trees with 2,653,600 total states, and eleven `f=2` trees with 1,517,085 total states)
-source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction, residual six-row exact closure, and first `f=2` cap-stratum closure
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six, a nonprimitive H6 contraction addendum, complete closure of the primitive-core three-antipodal-pair H6 stratum, and an independent 52-root two-antipodal-pair subcertificate + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, an independent 768,735-row C++ collar certificate, a 136,288-prefix nonprimitive H6 chamber certificate, ten primitive-core H6 slice trees with 3,699 total states, six residual H6 trees with 2,653,600 total states, and 52 `f=2` trees with 9,888,159 total states)
+source: codex-2026-07-15-S10 Hamming-four continuation; codex-2026-07-15-S11 nonprimitive H6 addendum; codex-2026-07-15-S14 primitive AP-pin reduction, residual six-row exact closure, and independent `f=2` cap-stratum replay
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, THM-845, HYP-6820]
 verification:
@@ -424,7 +424,7 @@ so 904 missing-label patterns retain open primitive assignments.  The packet
 `2[12]` remains the nonprimitive AP equality from C.1.  This is not a proof of
 primitive scale-one H6 emptiness or global `n=12` sporadic emptiness. ∎
 
-### C.3 Addendum: the first two-antipodal-pair cap stratum is loose
+### C.3 Addendum: the cap-at-most-156 two-antipodal-pair stratum is loose
 
 Now take the 360 primitive-core missing-label rows with `f=2`.  For a row `R`
 and retained core `P=[12] minus R`, let `L(P)` be the exact longest component
@@ -434,11 +434,18 @@ of `E_P`.  Before any replacement is placed, (C17) is
 C_1(R)=floor(132/(13L(P))).                              (C19)
 ```
 
-The exact root census has `113<=C_1(R)<=396`.  Exactly eleven rows satisfy
-`C_1(R)<=132`; in lexicographic atlas indexing they are
+The exact root census has `113<=C_1(R)<=396`.  Exactly 52 rows satisfy
+`C_1(R)<=156`; grouped by exact cap, their lexicographic atlas indices are
 
 ```text
-5, 47, 62, 71, 74, 76, 77, 128, 158, 331, 346.          (C20)
+113: 77
+132: 5,47,62,71,74,76,128,158,331,346
+138: 11,17,20,23,26                 139: 359
+141: 257                            142: 326
+148: 319,2,4                        151: 174,350,356,347
+152: 32,38,41,44,53,56,61,69,70,72,73,75
+155: 280,169,323,358,301
+156: 8,10,14,16,19,22,25,176,278.                       (C20)
 ```
 
 Run the same numerically ordered, labelled longest-component recursion used
@@ -446,20 +453,19 @@ above, now on each entire row rather than on a fixed-coordinate slice.  The
 frozen aggregate depth census is
 
 ```text
-11, 599, 39415, 1414388, 62443, 229, 0,                 (C21)
+52, 3202, 232351, 9302397, 348886, 1271, 0,             (C21)
 ```
 
-or `1,517,085` states.  Every covering count is zero and no state reaches
+or `9,888,159` states.  Every covering count is zero and no state reaches
 depth six.  Per-row node counts, 128-bit traces, and cache sizes are frozen;
 the complement of the full closed-danger union independently reconstructs
-all eleven roots and the 229 deepest dead leaves, giving 240 crosschecks.
+all 52 roots and the 1,271 deepest dead leaves, giving 1,323 crosschecks.
 
-Consequently all eleven primitive-core `f=2` rows with `C_1<=132` are loose.
-The primitive-core frontier falls from 903 to 892 rows.  Adding the exceptional
-odd-row mixed-parity pattern gives 893 open scale-one H6 label patterns;
-`2[12]` remains the separate nonprimitive equality.  This closes a root-cap
-sub-stratum, not all `f=2` rows, arbitrary-scale H6, or the global sporadic
-branch. ∎
+Consequently all 52 primitive-core `f=2` rows with `C_1<=156` are loose.
+THM-857 subsequently closes the entire proper scale-one H6 chart, so C.3 is
+now an independently implemented subcertificate rather than a remaining-row
+count.  It does not transport that closure to arbitrary AP scale/common
+sheets or prove the global sporadic branch. ∎
 
 The statistic `f` should not be mistaken for a geometric quotient.  It is
 invariant not only under reflection `r -> 13-r`, but under every multiplication
@@ -887,6 +893,15 @@ width and endpoint ownership.  It is not naturally antisymmetric, so forcing
 it into a tournament destroys the cover predicate.  Tournament Analysis is
 faithful telemetry at the collar sidecar and deliberately not substituted
 for the component proof.
+
+## Downstream radius-six closure
+
+THM-857 completes Part C's proper scale-one Hamming-six tree over all 924
+deletion roots and all unbounded lift heights.  Its unique covering terminal
+is the doubled AP `2[12]`; every other proper scale-one H6 packet is loose.
+Thus C.1's nonprimitive contraction and C.2's AP-germ cuts are now structural
+precursors to a full scale-one theorem.  Arbitrary-scale/common-sheet
+transport and the seven-comb wall remain outside that downstream result.
 
 ## Reproduction
 

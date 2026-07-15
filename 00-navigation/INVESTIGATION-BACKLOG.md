@@ -144,16 +144,15 @@
   THM-815 component cap separately at every prefix.  The exact tree has
   772,543 states, the exceptional top-four branch dies before depth five, and
   all nine terminal doubling rows are strictly loose.  Thus the full proper
-  scale-one radius-five chart is closed at arbitrary lift height.  The live
-  shallow obligations are now an arbitrary-AP-scale radius-five deck descent,
-  followed by the residual primitive scale-one radius-six tree.  THM-815 C.1
-  isolates `2[12]` on the nonprimitive slice; C.2 closes all twenty
-  three-antipodal-pair primitive-core rows, fourteen by AP-cusp reduction and
-  six by 2,653,600-state residual-component recursion.  Retain equality flags,
-  oriented AP-cusp handoffs, height parity, and shortcut-seam ancestry on the
-  903 `f<=2` primitive-core rows plus the exceptional mixed-parity odd-label
-  branch, for 904 open label patterns.
-  At radius seven replace the failed mean-density coefficient by the
+  scale-one radius-five chart is closed at arbitrary lift height.  THM-857 now
+  closes the entire proper scale-one radius-six chart as well: its exact
+  all-root recursion has `580,919,164` logical nodes and one covering terminal,
+  the equality `2[12]`.  The former 909 primitive-root residual and exceptional
+  mixed-parity fibre are empty at scale one.  The live shallow obligation is
+  transport of the closed H5/H6 insertion action through arbitrary AP scale
+  and common-sheet ramification, retaining equality flags, component endpoints,
+  labelled future progressions, and shortcut witnesses.  At radius seven
+  replace the failed mean-density coefficient by the
   fractional covering LP on residual-component--comb incidence.  Seek a
   Farkas-dual component weighting whose overlap refund is positive whenever
   seven combs cover; this is a theorem-facing potential, unlike a tournament
@@ -228,27 +227,23 @@
   explicit `q=5d`, `p=(45d-1)/26` grid uniformly removes `11 mod 52`; the
   value `d=15` is finite-exact empty, but its congruence class is not closed.
   THM-836 §6B proves a sharp no-go: on `15,37,41 mod 52`, neither endpoint
-  grid has a unit numerator deep for the entire possible-lift pool.  Continue
-  with a U-dependent or multi-column signed-lift/divisor incidence, or a
-  non-endpoint denominator; do not retry the uniform one-column template.
-- **Open shallow theorem:** THM-845 has finished both THM-820 scale-one
-  branches.  Prove the arbitrary-scale radius-five descent, transporting the
-  proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
-  endpoints through oriented deck ramification. THM-815 C.1 has split the
-  finite H6 tree uniformly on its nonprimitive slice: only the genuine tight
-  AP orbit `2[12]` survives.  THM-815 C.2 stratifies the 923 primitive-core
-  rows by antipodal AP cusps and closes all twenty `f=3` rows.  Germ cycles and
-  ten fixed-coordinate trees close fourteen; six exact residual-component
-  trees close the product-`1/16` remainder in 2,653,600 states, with 208
-  independent closed-danger checks.  The live primitive-core bank is exactly
-  the 903 rows with at most two full antipodal pairs; the exceptional
-  mixed-parity odd-label branch is separate, giving 904 open scale-one H6
-  label patterns, while `2[12]` is the nonprimitive equality.  Use divisor/zero-debt
-  pins on `f<=2`, join the oriented AP-germ cycle word to the incoming
-  Hunter/Kruskal tropical vertex/edge-defect word, and transport the recursion
-  across scale.  The six contracting-cycle rows closed only after restoring
-  the literal residual endpoint union, so audit every proposed defect-graph
-  compression by its operation kernel pair.
+  grid has a unit numerator deep for the entire possible-lift pool.  Section
+  6C strengthens this: every fixed pair of unit endpoint columns is jointly
+  killable in the relaxed shell-admissible model.  Continue with a U-dependent
+  three-or-more-column signed-lift/divisor incidence, use the structured
+  divisor/parity restrictions, or change denominator; do not retry a fixed
+  one- or two-column endpoint template.
+- **Open shallow theorem:** THM-845 has finished both THM-820 scale-one H5
+  branches, and THM-857 has finished all 924 proper scale-one H6 deletion
+  roots away from the genuine equality `2[12]`.  Prove the arbitrary-scale
+  H5/H6 descent by transporting the proof-facing action
+  `E_S -> E_S intersect Safe(u)` and its exact residual endpoints through
+  oriented deck ramification.  The AP-cusp cycle word and Hunter/Kruskal edge
+  word remain useful diagnostics, but there is no remaining primitive
+  scale-one label bank to enumerate.  The transport state must retain the
+  common sheet, complement-lcm fibre, literal component word, labelled future
+  progression, last speed, and equality/shortcut ancestry.  In parallel,
+  audit any proposed compression by its literal kernel pair.
   THM-822 has completed that
   audit on the `25,344` height-at-most-two rows: all are loose; the labelled
   live relation and integer-centre refinement coincide and mix exact `M`, while
@@ -810,9 +805,12 @@
   an unsafe quotient.
 - **Parallel exact rung:** implement and finish the still-CLAIMED THM-741 2002-body run.  Completion would
   extend the proved far-count closure from `f<=3` to `f<=4` without relying on the projective theorem.
-  The resume ledger currently records `171/2002` clean bodies; the 21 empty-obligation flood bodies
-  are deliberately last and remain unproved.  The Fano/`chi_7` audit organizes those floods but
-  supplies neither a symmetry quotient nor a pruning certificate.
+  The resume ledger currently records `171/2002` clean bodies.  A portable
+  fixed-`E_2` screen now closes flood edge `(5,7)` exactly: 28,847 bottom
+  sweeps, minimum `7/858`, zero failures.  Twenty empty-obligation floods
+  remain.  The Fano/`chi_7` audit organizes them but supplies no symmetry
+  quotient, so port the numeric screen edge by edge or prove a new monotone
+  transport inequality.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
   phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
   and `lrc14_band_scale_quotient_codex_S1.py/.out`.
@@ -962,7 +960,7 @@ computer-assisted + 9–13 announced (the repo's citation basis, confirmed curre
 - **Source:** THM-855 F6 (exact axis-walk moment closure + exact fluctuation-dissipation) x LRC14-FRONTIER item 3 (seven-comb wall: first-moment potential stalls at density 14/13).
 - **Status:** OPEN - the transport dictionary is written (F6's LRC paragraph); the missing input is THM-815's event-sampling law (which tooth/comb gets hit, size-biased?) to compute E[delta Phi] for Phi = (K-K*)^2 and convex degree-weights.
 - **NO-GO (opus-S312, proved):** at the seven-comb wall itself, NO per-comb bound of the schema |I cap D_x| <= alpha*L + beta(x) can be coercive: alpha < 2/13 is FALSE for large x (equidistribution: the comb's density on any fixed interval tends to exactly 2/13), and alpha = 2/13 gives total 14L/13 >= L -- always satisfied, no constraint on x. The union-bound schema is information-theoretically empty at m' >= 7. Surviving routes, each with a repo carrier: (i) JOINT pair statistics -- comb-comb overlaps are mechanical-word/three-distance objects (THM-778); (ii) RESTRICTED density -- D_x on the prefix's safe set E, not on an interval (density on E can differ from 2/13; the selector machinery THM-803/817/821 lives here); (iii) GLOBAL accounting -- multi-component + arithmetic relations forced by tightness (THM-792 root currents). The F6/K-transport targets the COLLAR EVENT WALK (a different sub-problem than this covering bound) -- do not conflate the two walls.
-- **Next step:** enumerate the exact vertex/edge defect language on the primitive scale-one H6 prefix bank, quotient it only under the insertion/peel operation congruence, and classify every negative certificate by its Kruskal rank word.  Prove that each recurrent negative class either gains `11mu(E)/169` under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
+- **Next step:** use THM-857's complete scale-one H6 prefix/certificate language as a frozen input rather than enumerating another primitive-root bank.  Lift its exact component--comb states to common-sheet fibres, then classify the seven-comb vertex/edge defect language only under insertion/peel operation congruence.  Prove that each recurrent negative Kruskal class either gains `11mu(E)/169` under transport or belongs to a named AP/mechanical-word stalk handled by THM-778.  The separate THM-855 F6 event-walk lead remains open but is not the covering bound.
 - **Cross-refs:** THM-785 (endpoint-defect flux), THM-787 (step-eight increments), THM-855 F5/F6, the level-mean gap (same problem shape).
 
 ### LEAD (klein-2026-07-09-S233 → RESOLVED S234 as THM-685): the RELATION-LATTICE RESUMMATION → the Kronecker transfer

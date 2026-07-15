@@ -1,3 +1,51 @@
+## codex-2026-07-15-S10 continuation -- THM-857 closes the full proper scale-one H6 chart
+
+HONEST VERDICT: the requested uniform `q<=25` statement remains false and
+global n=12 sporadic-branch emptiness remains open.  This continuation makes a
+large exact advance on the shallow frontier: every proper scale-one Hamming-six
+packet is strictly loose except the genuine doubled-AP equality `2[12]`.
+
+THM-857 orders the six proper residue lifts numerically and recursively carries
+the exact open strict-safe components.  THM-815's longest-component inequality
+bounds every next lift without a height cutoff.  A full safe tooth certifies a
+future ordering contradiction; otherwise a streaming exact child component can
+certify that the next cap is already below the least legal future lift.  Over
+all `C(12,6)=924` deletion roots the frozen logical census is
+
+```text
+nodes = 924, 83,881, 8,906,315, 559,202,706,
+        12,671,505, 53,812, 21
+total nodes = 580,919,164
+candidate edges = 580,918,240
+covering terminals = 1
+loose terminals = 20
+```
+
+The unique cover is missing `{1,3,5,7,9,11}` with ordered lifts
+`14,16,18,20,22,24`, exactly `2[12]`.  Thus the 923 primitive retained-core
+roots and every mixed-parity completion of the exceptional even core have zero
+covers.  This subsumes the earlier 909-row AP-germ residual at scale one; it
+does not transport through arbitrary AP scale/common sheets or cross the
+seven-comb wall.
+
+TOURNAMENT/ASSUMPTION CHALLENGE: vertices as missing labels, ordered either by
+least proper lift or by the exact five-comb cap after that lift, give transitive
+six-vertex tournaments on every root.  The switch flips 4,500 edges and has
+406 conditioned ties, but cannot separate the exceptional root from the 923
+empty primitive roots.  AP cusps give a min-plus directed-cycle relaxation;
+Hunter edges give a max-plus spanning-tree relaxation.  The theorem-bearing
+object is higher-order: literal component union, remaining labelled
+progressions, last speed, and exact shortcut witness.  Together with THM-858,
+this reframes the frontier as a ramified component-cover automaton: THM-857
+solves the metric fibre over scale one, while THM-858 bounds the arithmetic H5
+ramification base.
+
+ARTIFACTS: THM-857; primary exact C++ source/stored output; independent
+closed-danger-union replay; updated frontier, backlog, lens/tournament maps,
+HYP-6820, results index, and cover-debt reflection.  Primary source/output
+SHA-256 are `58a8c4d516e340fa5bcb426a646ab0006f1ba91cd1697ab6b22d580ebaf65222`
+and `63b3851ce74a0906821e990c81fe1195d9ea8a6bbf0dc6ff8115f7760d4b3ef7`.
+
 ## codex-2026-07-15-S15 -- typed metagraph preservation: node-coloured defect closure, Walsh H drift, path holonomy, chi7 carry-Radon algebra, and the tropical Hunter defect graph
 
 Prompt (owner): take the 14-runner/metagraph mathematics further; preserve
@@ -5,12 +53,14 @@ iso-class nodes, tilings, blue/black lines, factor edges, the three signed B3
 recursions, H drift, toothpick/ladder structure, Fano/chi7, j=4 floods, and
 Kakeya needles; test the claimed all-n black self-line law.
 
-HONEST VERDICT: LRC(14), the remaining primitive/all-scale H6 branches, the
+HONEST VERDICT AT THIS CHECKPOINT: LRC(14), the then-remaining primitive/all-scale H6 branches, the
 radius-seven chart, and the full j=4 sweep remain open.  The session instead
 identified the exact typed state needed by several operations, removed three
 misleading scalar extrapolations, and integrated a live closure of fourteen
 primitive-core H6 label rows.  The subsequent S14 exact continuation closes
 the remaining six `f=3` rows as recorded in the next entry.
+primitive-core H6 label rows.  THM-857 in the later S10 continuation above
+subsequently closes the complete proper scale-one H6 chart.
 
 METAGRAPH/TOURNAMENT: THM-851 proves that the exact-defect/merged-node arrow
 colour, refined by its ordered two-factor deck, recovers every literal arrow
@@ -141,9 +191,10 @@ output.  Source/output SHA-256 are respectively
 `7d77552c0873a59532a509fe08f88b924c625ce5a308c7f5d00a0166c7dc98f1` and
 `19ec318f781f883d2e1b25119fd3a726616559b894dc196317d19ac745172134`.
 
-Honest limit: this does not classify the remaining finite strip, erode its new
-metric lift languages, close other arbitrary-scale H5 deck ramifications,
-close primitive/all-scale H6, or prove global `n=12` sporadic emptiness.
+Honest limit at that checkpoint: this did not classify the remaining finite
+strip, erode its new metric lift languages, close other arbitrary-scale H5
+deck ramifications, or prove global `n=12` sporadic emptiness.  THM-857 above
+has since removed the scale-one H6 residual, but not arbitrary-scale transport.
 
 ## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: finite ramified H5 bank; nonprimitive H6 closed except `2[12]`; all twenty primitive-core `f=3` rows closed; shell, H-drift, toothpick, Fano, and flood carriers
 
@@ -166,7 +217,8 @@ exactly two.  Division contracts the packet to `[12]`, a closed H1--H5 row, or
 one top-half H6 chamber.  A frozen 136,288-prefix recursion closes that chamber
 with depth counts `1,54,3612,130515,2104,2,0`, no covering prefix, and trace
 `919c6848d4e1187a2cef093e58982ae6`.  Thus `2[12]` is the only possible tight
-nonprimitive scale-one H6 packet.  Primitive/all-scale H6 remains open.
+nonprimitive scale-one H6 packet.  At this checkpoint primitive/all-scale H6
+remained open; THM-857 above later closes the primitive scale-one complement.
 
 PRIMITIVE-CORE H6: among the 923 rows with primitive retained core, the number
 `f` of full antipodal missing pairs has distribution `63,480,360,20`.  Each
@@ -182,6 +234,10 @@ reconstructions.  Thus all twenty `f=3` rows are loose.  Scope is exact: 903
 primitive-core `f<=2` rows plus the odd-label mixed-parity primitive pattern
 remain, or 904 open label patterns; `2[12]` is the separate nonprimitive
 equality.
+no covering prefix and trace `f8c84654...a5c227e`.  Thus fourteen `f=3` rows
+are loose.  Historical scope at that checkpoint: 909 primitive-core rows plus
+the odd-label mixed-parity primitive branch remained, for 910 label patterns.
+THM-857 above subsequently closes all of them at scale one.
 
 KAKEYA/OBJECT REFRAME: for a core `P`, retain the literal components of
 `E(P)`, labelled periodic danger combs, endpoint owners, and future operation

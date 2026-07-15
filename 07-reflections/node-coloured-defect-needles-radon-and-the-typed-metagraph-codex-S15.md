@@ -565,9 +565,11 @@ cap; exact fixed-coordinate recursions then close the remaining forced slices.
 That local quotient closes fourteen rows.  On the six product-`1/16` rows it
 is silent, but restoring the literal residual endpoints and labelled
 remaining-comb bank closes all six by exact longest-component recursion in
-`2,653,600` states.  Thus all twenty three-pair rows are loose.  The remaining
-scale-one primitive bank is 903 rows with at most two full pairs plus the
-exceptional mixed-parity pattern.
+`2,653,600` states.  Thus all twenty three-pair rows are loose.  THM-857 then
+closes the full proper scale-one H6 chart over all 924 deletion roots, leaving
+only the doubled-AP equality `2[12]`; the apparent 903-row plus mixed-parity
+residual was a quotient artefact.  A separate 52-root low-cap replay supplies
+an independent implementation-level subcertificate.
 
 This produces a useful tree/cycle duality:
 
@@ -782,13 +784,12 @@ that can be joined and then subjected to (9.1).
 6. Attach owner-event cocycles and clearance margins to the four-far scale
    action. Test whether the resulting packet is a congruence under peel and
    insertion, rather than only under static residue classification.
-7. Build the seven-comb coloured graph (6.7) on every surviving scale-one H6
-   prefix, beginning with the 903 `f<=2` rows and the exceptional mixed-parity
-   branch left by THM-815 C.2.
-   Classify its projective edge types, rational-period stalks, Kruskal rank
-   word, and first negative Hunter certificate. Test whether failed packets
-   share a finite operation-stable edge language before invoking an AP-window
-   argument.
+7. Build the seven-comb coloured graph (6.7) on the arbitrary-scale/common-
+   sheet H6 transport states and on genuine radius-seven prefixes; THM-857
+   leaves no proper scale-one H6 row bank.  Classify its projective edge types,
+   rational-period stalks, Kruskal rank word, and first negative Hunter
+   certificate. Test whether failed packets share a finite operation-stable
+   edge language before invoking an AP-window argument.
 8. Join the Hunter tree word to the AP-pin cycle word. Test whether every
    negative tree certificate either has an expanding directed handoff cycle
    or descends to one of the six now-certified product-`1/16` base rows.

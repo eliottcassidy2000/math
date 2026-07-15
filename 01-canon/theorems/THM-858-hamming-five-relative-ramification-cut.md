@@ -453,5 +453,5 @@ prove that common-sheet presentations themselves are absent, since the known
 all-one/all-three/mixed equality languages remain before their metric lifts
 are tested.  It does not classify the finite strip (15), close the arbitrary
 metric lifts of any new presentation there, handle other arbitrary-scale
-Hamming-five deck ramifications, close primitive or all-scale Hamming six, or
+Hamming-five deck ramifications, close arbitrary-scale/common-sheet Hamming six, or
 settle the global `n=12` sporadic branch.
