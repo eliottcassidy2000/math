@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent exact endpoint and Tournament Analysis replay for THM-842."""
+"""Independent exact endpoint and Tournament Analysis replay for THM-845."""
 
 from __future__ import annotations
 
@@ -138,7 +138,7 @@ def flips(
 
 
 def main() -> None:
-    print("THM842_HAMMING_FIVE_TERMINAL_ENDPOINT_CROSSCHECK")
+    print("THM845_HAMMING_FIVE_TERMINAL_ENDPOINT_CROSSCHECK")
     print(f"terminal_rows={len(TERMINALS)} delta={DELTA}")
     certificate: list[str] = []
     total_flips = 0

@@ -1,4 +1,4 @@
-THM842_SCALE_ONE_HAMMING_FIVE_ROWWISE_COMPONENT_CLOSURE
+THM845_SCALE_ONE_HAMMING_FIVE_ROWWISE_COMPONENT_CLOSURE
 first_prefixes=40590 first_global_second_cap=233 exceptional_label_prefixes=984 exceptional_killed_before_v=897 exceptional_v_choices=415
 nodes depth0..5=0,40590,612221,111675,7255,9, full_loose=9 full_tight=0 branchA_full=9 branchB_full=0
 exceptional_branch_nodes depth0..5=0,0,415,178,1,0,

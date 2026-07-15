@@ -1,5 +1,5 @@
 ---
-id: THM-842
+id: THM-845
 title: Scale-one Hamming-five row-wise safe-component closure
 status: PROVED (exact row-wise THM-815 recursion inside the exhaustive THM-820 dichotomy) + FINITE-EXACT (772,543-row state certificate, independent open-safe/closed-danger full-tree replays, nine Fraction-exact terminal rows, and Tournament Analysis)
 source: codex-2026-07-15-S10 continuation
@@ -14,7 +14,7 @@ verification:
   - 05-knowledge/results/lrc13_hamming_five_terminal_endpoint_crosscheck_codex_S10.out
 ---
 
-# THM-842 — scale-one Hamming-five row-wise safe-component closure
+# THM-845 — scale-one Hamming-five row-wise safe-component closure
 
 Put
 
@@ -216,7 +216,7 @@ retain the continuation state.
 
 ## 5. Scope and next boundary
 
-THM-842 closes the **scale-one** Hamming-five chart at arbitrary lift height.
+THM-845 closes the **scale-one** Hamming-five chart at arbitrary lift height.
 It does not by itself classify a five-coordinate packet at arbitrary AP scale:
 the ramified deck interfaces outside common scale still require descent.
 

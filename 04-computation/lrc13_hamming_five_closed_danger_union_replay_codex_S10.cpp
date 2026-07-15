@@ -1,4 +1,4 @@
-// Independent closed-danger-union replay for THM-842.
+// Independent closed-danger-union replay for THM-845.
 //
 // Unlike the primary verifier, this program does not propagate intersections
 // of open safe bands.  At every prefix it reconstructs all CLOSED danger teeth
@@ -491,7 +491,7 @@ int main() {
       chrono::duration<double>(chrono::steady_clock::now() - start).count();
   cerr << "runtime_s=" << seconds
        << " method=closed_danger_union_recomputed_at_every_prefix\n";
-  cout << "THM842_HAMMING_FIVE_CLOSED_DANGER_UNION_REPLAY\n";
+  cout << "THM845_HAMMING_FIVE_CLOSED_DANGER_UNION_REPLAY\n";
   cout << "method=union_closed_danger_teeth_then_take_open_complementary_gaps\n";
   cout << "core_rows=" << core_rows << " root_global_cap=" << maximum_root_cap
        << " root_cap_maximizers=" << maximum_root_cap_count << '\n';
@@ -511,5 +511,5 @@ int main() {
        << '\n';
   cout << "certificate_sha256=" << observed_certificate_sha << '\n';
   cout << "PASS: independent closed-danger-union replay byte-matches the "
-          "primary THM-842 certificate\n";
+          "primary THM-845 certificate\n";
 }

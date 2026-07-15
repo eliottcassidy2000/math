@@ -5,7 +5,7 @@ THM-823 leaves 96 common-sheet all-order-three contexts: three quartet
 cosets, four forward-flag labels, four opposite-pair unit words, and two
 units on the fifth label.  THM-837 closes one context with a total-residual
 K/L discrepancy recursion.  This replay uses the stronger longest-component
-bound isolated in THM-815 and applied row-wise in THM-842.
+bound isolated in THM-815 and applied row-wise in THM-845.
 
 Every endpoint and decision is exact.  Residuals are ordered unions of open
 Fraction intervals in (0,1/2); the reflection quotient halves both component

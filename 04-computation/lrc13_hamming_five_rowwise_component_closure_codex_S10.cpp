@@ -1,4 +1,4 @@
-// Exact row-wise safe-component closure replay for THM-842.
+// Exact row-wise safe-component closure replay for THM-845.
 //
 // This production source was promoted from the independently developed
 // /tmp prototype. It intersects THM-815's exact prefix-dependent discrepancy
@@ -355,7 +355,7 @@ int main() {
     throw runtime_error("frozen state census mismatch");
 
   cerr << "runtime_s=" << sec << " max_rss_note=precomputed_bands_dominate\n";
-  cout << "THM842_SCALE_ONE_HAMMING_FIVE_ROWWISE_COMPONENT_CLOSURE\n";
+  cout << "THM845_SCALE_ONE_HAMMING_FIVE_ROWWISE_COMPONENT_CLOSURE\n";
   cout << "first_prefixes=" << all_first
        << " first_global_second_cap=" << first_maxcap
        << " exceptional_label_prefixes=" << exc_first

@@ -44,7 +44,7 @@ depends_on:
   - THM-836
   - THM-837
   - THM-840
-  - THM-842
+  - THM-845
   - HYP-6750
   - HYP-6775
 related:
@@ -482,7 +482,7 @@ telemetry have different integer centres and exact maxima.  The finite-box
 closure must act on exact residual interval unions and remaining danger teeth,
 not the collar graph alone.
 
-THM-842 supplies exactly that missing recursion.  At every prefix it chooses a
+THM-845 supplies exactly that missing recursion.  At every prefix it chooses a
 longest strict-safe component and applies THM-815's discrepancy bound to the
 least remaining speed, while retaining THM-820's exhaustive doubling versus
 exceptional-cycle dichotomy.  The exact state counts at depths one through
@@ -507,7 +507,7 @@ ratio band, and their `111,006` ordered kernel rows include `3,810` fibres
 mixing exact `M`; one shared relation has maxima `1/4` and `12/37`.  Literal
 strict-safe component endpoint words `H2` make the bounded three-face join
 injective, while the final residual alone still has fourteen collision pairs.
-This is a static bounded reconstruction theorem.  THM-842 subsequently shows
+This is a static bounded reconstruction theorem.  THM-845 subsequently shows
 that the literal residual endpoint word is sufficient for arbitrary-height
 scale-one recursion, while the coarser `H0=H1` quotient is not.  What remains
 unproved is transport of that state across AP-scale ramification: the next
@@ -875,7 +875,7 @@ The uniform theorem now has two explicit residuals:
    order-three coset interface; THM-815 and THM-816 close those alternatives
    independently.  THM-820 has now classified the radius-five collar cycles
    and anchored recursion and reduced the full scale-one chart to the two
-   explicit branches above.  THM-842 empties them by the commuting idempotent
+   explicit branches above.  THM-845 empties them by the commuting idempotent
    action `T_u(E)=E intersect Safe(u)` on literal residual interval unions,
    with a row-wise component-length cap. THM-840 permits exact endpoints as the
    Markov state for this monotone insertion action, but requires the labelled
@@ -954,7 +954,7 @@ while THM-795/800/804/806 close the first three Hamming directions.  THM-810
 isolates the radius-four ramification and THM-815/816 close both of its
 branches.  THM-820 makes the scale-one radius-five warning finite and rejects
 its full height-one face; THM-822 rejects the full height-at-most-two slice and
-locates the static kernel boundary. THM-842 closes the two complete boxes at
+locates the static kernel boundary. THM-845 closes the two complete boxes at
 arbitrary lift height. THM-840 identifies the operation-congruence boundary,
 and THM-837 closes one of the 96 arbitrary-height order-three contexts by the
 resulting active-endpoint recursion. The other 95 contexts and all-scale

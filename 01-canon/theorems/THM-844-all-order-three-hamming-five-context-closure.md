@@ -4,7 +4,7 @@ title: All order-three Hamming-five common-sheet contexts close by longest-compo
 status: PROVED (uniform arbitrary-height closure of all 96 THM-823 all-order-three contexts) + FINITE-EXACT (28,876-state endpoint certificate and Tournament Analysis)
 source: codex-2026-07-15-S10 continuation and integration audit
 depends_on: [THM-815, THM-823, THM-837]
-related: [THM-820, THM-822, THM-842, HYP-6820]
+related: [THM-820, THM-822, THM-845, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_all_order_three_context_closure_codex_S10.py
   - 05-knowledge/results/lrc13_hamming_five_all_order_three_context_closure_codex_S10.out

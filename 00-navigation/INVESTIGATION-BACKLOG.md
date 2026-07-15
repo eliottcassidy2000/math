@@ -140,7 +140,7 @@
   `a{1,2,4,8}` SCC and the two reciprocal-mass bounds sharpen it to
   `x<=228`, `v<=1986`, `max_top<=7944`.  All `792` height-one rows are loose,
   with unique minimum `2[11] union {11}` at `1/12`; the next odd lift is the
-  doubled AP `2[12]`.  THM-842 now exhausts the joint boxes by applying the
+  doubled AP `2[12]`.  THM-845 now exhausts the joint boxes by applying the
   THM-815 component cap separately at every prefix.  The exact tree has
   772,543 states, the exceptional top-four branch dies before depth five, and
   all nine terminal doubling rows are strictly loose.  Thus the full proper
@@ -224,7 +224,7 @@
   `E_S -> E_S intersect Safe(u)` on exact residual interval unions with the
   remaining labelled speed bank.  Build its minimized continuation automaton
   or a two-plus-three meet-in-the-middle cover join.  In parallel, audit any
-- **Open shallow theorem:** THM-842 has finished both THM-820 scale-one
+- **Open shallow theorem:** THM-845 has finished both THM-820 scale-one
   branches.  Prove the arbitrary-scale radius-five descent, transporting the
   proof-facing action `E_S -> E_S intersect Safe(u)` and its exact residual
   endpoints through oriented deck ramification.  Then split the finite H6 tree
