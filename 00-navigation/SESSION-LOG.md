@@ -1,3 +1,47 @@
+## codex-2026-07-15-S15/S16 continuation -- THM-862 classifies the scale-three H6 sheet stalk
+
+HONEST VERDICT: global `n=12` sporadic-branch emptiness remains open.  The
+complete primitive `c=3` Hamming-six common-sheet bank is now exact, and its
+first metric layer is frozen, but the terminal metric recursion has not been
+run.
+
+Direct CRT masks and the signed-provider NAE law agree on all 94,448
+order-three set/unit states.  Excluding the nonprimitive all-order-one row,
+the bank is
+
+```text
+effective orders       presentations      unit contexts
+1^2 3^4                    84                  336
+1 3^5                      84                  672
+3^6                        44                  496
+total                     212                1,504.
+```
+
+Every surviving unit fibre is an affine binary code cut out by disjoint signed
+pair equations and free coordinates.  Multiplication by `F_13^*` and global
+unit flip give 20 presentation orbits, 136 multiplier context orbits, and 68
+sheet orbits.  Inversion is not an action: only 352 of 1,504 contexts map back.
+Most importantly, the sheet quotient is not metric.  One all-order-three
+context, its global unit flip, and its label-doubled image have exact maxima
+`1/4`, `7/26`, and `14/65`.  Thus all 1,504 arithmetic lanes must be retained.
+
+There are 110 distinct retained-core roots.  Exact root components and
+THM-815's cap give 146,912 admissible first edges: 20,640 order-one and 126,272
+order-three.  The `c=2` depth profile suggests about 15.05 million depth-two
+nodes and about 984.25 million logical nodes for planning only; these are not
+`c=3` censuses.  The next certified computation is a complete sharded
+depth-two scout followed by primary and independent component recursions.
+
+TOURNAMENT/ASSUMPTION AUDIT: the natural order-three provider graphs are sparse
+or bidirected, not tournaments.  Their signed incidence and affine matching
+code preserve the full local sheet predicate but destroy continuous component
+geometry.  The faithful object is the orbit bundle consisting of a signed
+sheet template, every arithmetic lane over it, literal strict-safe components,
+remaining labelled step-39 rays, last speed, and shortcut ancestry.  This is
+also the Kakeya guardrail: local needle-germ incidence does not decide global
+comb coverage.  “Toothpick” here means the affine matching code only; THM-841's
+local Farey/toothpick self-similarity remains refuted.
+
 ## codex-2026-07-15-S14/S15 continuation -- THM-861 closes the scale-two primitive H6 fibre
 
 HONEST VERDICT: the global `n=12` sporadic branch remains open, but its first

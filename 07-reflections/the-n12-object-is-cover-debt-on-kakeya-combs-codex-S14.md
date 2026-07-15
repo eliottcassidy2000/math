@@ -24,8 +24,11 @@ the shape of the remaining object:
    removing all 909 formerly open primitive-core rows and the exceptional
    mixed-parity branch at scale one. THM-860 makes every primitive ramified
    language finite, and THM-861 evaluates all 64 `c=2` signed-cycle roots:
-   the only cover is the ordinary AP `[12]`. Transport remains open from
-   `c=3` onward.
+   the only cover is the ordinary AP `[12]`. THM-862 classifies the full
+   `c=3` common-sheet stalk into 212 presentations and 1,504 arithmetic
+   contexts.  Its 68 affine matching-code templates are genuine sheet
+   equivalences but not metric equivalences; the terminal recursion remains
+   open from `c=3` onward.
 3. THM-836's local `s=5` shell is exactly four congruence classes, and the full
    class `d=11 mod 52` is uniformly impossible by one explicit divisor-grid
    witness.  The classes `15,37,41 mod 52` remain open uniformly, and the
@@ -205,6 +208,28 @@ is inconsistent.  The arithmetic stalk is perfectly viable on all 64 roots;
 the metric fibre kills 63 roots and every non-AP height.  This is the cleanest
 current example of a tournament-related carrier refining the search without
 being the underlying cover object.
+
+Scale three makes the missing coordinate explicit.  The direct CRT sheet
+predicate on all 94,448 order-three set/unit states is equivalent to a signed
+provider NAE law, and every surviving unit fibre is an affine code of disjoint
+pair equations plus free bits.  That is the precise valid content of the
+“toothpick” picture here: a matching code, not THM-841's refuted local Farey
+recurrence.  Multiplicative label changes and the global unit flip reduce the
+1,504 contexts to 68 sheet templates.  But one such orbit contains proper
+packets with exact maxima
+
+```text
+1/4,        7/26,        14/65.
+```
+
+Therefore provider-graph isomorphism, affine-code isomorphism, and sheet
+equivalence all destroy the continuous metric fibre.  The faithful scale-three
+object is a bundle: one signed template, every arithmetic lane over it,
+literal safe components, six labelled step-39 rays, the last numerical speed,
+and shortcut ancestry.  Its exact first layer has 146,912 edges.  This is the
+Kakeya-needle correction in concrete form: local incidence says which sheets a
+periodic needle germ touches, while global comb placement decides whether all
+safe intervals are pierced.
 
 A separate implementation supplies a smaller crosscheck of that action tree:
 all 52 `f=2` roots whose exact first-speed cap is at most 156 close in
@@ -478,10 +503,12 @@ The shortest honest route to the requested theorem is now:
 1. **Ramified H6 transport:** THM-859 proves that common dilation conjugates
    THM-857's full action tree and that order `D` is exactly the number of deck
    masks created by insertion. THM-860 bounds the presentation base and
-   THM-861 closes the full `c=2` fibre except for `[12]`. Evaluate THM-862's
+   THM-861 closes the full `c=2` fibre except for `[12]`. THM-862 classifies the
    scale-three bank: `336` two-order-one/four-order-three, `672`
-   one-order-one/five-order-three, and `496` all-order-three unit contexts.
-   Then lift surviving states
+   one-order-one/five-order-three, and `496` all-order-three unit contexts,
+   with 68 sheet templates and 146,912 exact first edges. Run the complete
+   sharded depth-two scout and then the primary/independent metric recursion
+   over all 1,504 arithmetic lanes. Then lift surviving states
    across `D>1` fibres without losing literal components, phase masks, labelled
    future progressions, last-speed order, equality ancestry, or the shortcut
    witness.  There is no remaining primitive scale-one label census.
@@ -508,8 +535,10 @@ The object underneath these obligations is a ramified sheaf of periodic combs
 over literal safe components, carrying owner, scale, residue, future-action
 data, and on sheeted branches the complement-lcm fibre.  The newer theorems
 meet at that description: THM-857 resolves the literal metric stalk at scale
-one, THM-858/860 bound arithmetic ramification, and THM-861 resolves the first
-nontrivial fibre without collapsing its sparse sheet cycle.  The older
+one, THM-858/860 bound arithmetic ramification, THM-861 resolves the first
+nontrivial fibre without collapsing its sparse sheet cycle, and THM-862 proves
+that the next signed-sheet/affine-code quotient is still too coarse for the
+metric action.  The older
 viewpoints—Farey gaps, sheets, tournaments, Fano masks, continued fractions,
 matroid circuits, tropical cycles/trees, and Kakeya needles—are useful charts
 precisely to the extent that they preserve this cover-debt packet.
@@ -561,11 +590,12 @@ scale-one base and finds a unique empty terminal, the equality section
 `2[12]`. THM-859 proves that common dilation is an exact action conjugacy and
 that `D=c/gcd(c,w)` is the ramification degree of its failure: an order-`D`
 insertion acts through `D` distinct deck masks. THM-858 bounds the nontrivial
-H5 ramification base, THM-860 bounds the primitive H6 base, and THM-861
-computes the complete `c=2` metric fibre with unique AP terminal `[12]`. The
-central missing theorem is now narrower: construct the phase-decorated
-transport functor on the remaining `D>1` fibres, beginning with THM-862's
-scale-three contexts, so that it commutes with the required legal
+H5 ramification base, THM-860 bounds the primitive H6 base, THM-861 computes
+the complete `c=2` metric fibre with unique AP terminal `[12]`, and THM-862
+classifies the `c=3` sheet stalk and first metric layer. The central missing
+theorem is now narrower: execute the phase-decorated component recursion on
+THM-862's 1,504 scale-three arithmetic lanes, then construct its transport
+functor on the remaining `D>1` fibres so that it commutes with the required legal
 operations and preserves terminal emptiness and certificate witnesses.  Merely
 matching order multisets, tournament fingerprints, component counts, or
 pairwise overlaps cannot supply that transport.

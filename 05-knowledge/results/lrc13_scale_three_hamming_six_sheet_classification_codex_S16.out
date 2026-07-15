@@ -1,0 +1,47 @@
+SCALE_THREE_HAMMING_SIX_SHEET_CLASSIFICATION
+arithmetic=integer+rational floating_point=none metric_recursion=not_run
+direct_NAE_states=94448 mismatches=0
+all_order_one_presentations_excluded_nonprimitive=924
+presentations=212 by_type={(0, 6): 44, (1, 5): 84, (2, 4): 84}
+contexts=1504 by_type={(0, 6): 496, (1, 5): 672, (2, 4): 336}
+units_per_presentation={((0, 6), 8): 26, ((0, 6), 16): 18, ((1, 5), 8): 84, ((2, 4), 4): 84}
+presentation_payload_sha256=c9986998e204cac28b931e48b1796f4ab442248eebad80bf178455f4c976d268
+context_payload_sha256=19ab08538ac5513bd57694ec2f168c4ae3237e8b651c470c6be2e459a58fab4c
+presentation_multiplier_orbits=20 size_by_type={(0, 6): {2: 1, 6: 1, 12: 3}, (1, 5): {12: 7}, (2, 4): {6: 2, 12: 6}}
+context_multiplier_orbits=136 size_by_type={(0, 6): {2: 2, 6: 10, 12: 36}, (1, 5): {12: 56}, (2, 4): {6: 8, 12: 24}}
+context_C12xC2_orbits=68 size_by_type={(0, 6): {4: 1, 12: 5, 24: 18}, (1, 5): {24: 28}, (2, 4): {12: 4, 24: 12}}
+global_unit_flip_fixed=0 multiplier_flip_stabilizers=0
+canonical_C12xC2_representatives=68 split=k4:16,k5:28,k6:24
+canonical_scheme k4:C=1,5,8,12 B=23|24|26|27|29|2.11|46|49 words=1111|1221
+canonical_scheme k5:C=1,2,5,8,12 B=3|4|6|7|9|10|11 words=11111|11221|12111|12221
+canonical_scheme k6:representatives_and_words_are_the_five_matching_code_rows
+inversion_presentations=86/212 by_type={(0, 6): 2, (2, 4): 84} fixed=6
+inversion_contexts=352/1504 by_type={(0, 6): 16, (2, 4): 336} fixed=24
+inversion_then_flip_fixed=0
+C_orbit k=4 C=(1, 5, 8, 12) orbit=3 stabilizer=(1, 5, 8, 12) unit_solutions=4 graph=(8, ((-1, 4), (1, 4)), (2, 2, 2, 2), (2, 2, 2, 2), (2, 0, 4), (4,))
+C_orbit k=5 C=(1, 2, 5, 8, 12) orbit=12 stabilizer=(1,) unit_solutions=8 graph=(10, ((-1, 5), (1, 5)), (2, 2, 2, 2, 2), (0, 2, 2, 3, 3), (4, 2, 4), (4, 1))
+C_orbit k=6 C=(1, 2, 3, 4, 9, 10) orbit=12 stabilizer=(1,) unit_solutions=8 graph=(12, ((-1, 6), (1, 6)), (2, 2, 2, 2, 2, 2), (1, 1, 2, 2, 3, 3), (5, 8, 2), (6,))
+C_orbit k=6 C=(1, 2, 3, 5, 8, 12) orbit=12 stabilizer=(1,) unit_solutions=16 graph=(14, ((-1, 7), (1, 7)), (2, 2, 2, 2, 3, 3), (1, 1, 3, 3, 3, 3), (6, 4, 5), (4, 2))
+C_orbit k=6 C=(1, 2, 5, 6, 8, 11) orbit=12 stabilizer=(1,) unit_solutions=8 graph=(12, ((-1, 6), (1, 6)), (2, 2, 2, 2, 2, 2), (1, 1, 2, 2, 3, 3), (5, 8, 2), (6,))
+C_orbit k=6 C=(1, 2, 5, 8, 11, 12) orbit=6 stabilizer=(1, 12) unit_solutions=16 graph=(12, ((-1, 6), (1, 6)), (2, 2, 2, 2, 2, 2), (0, 0, 2, 2, 4, 4), (7, 4, 4), (4, 1, 1))
+C_orbit k=6 C=(1, 3, 4, 9, 10, 12) orbit=2 stabilizer=(1, 3, 4, 9, 10, 12) unit_solutions=8 graph=(12, ((-1, 6), (1, 6)), (2, 2, 2, 2, 2, 2), (2, 2, 2, 2, 2, 2), (3, 12, 0), (6,))
+matching_code C=(1, 5, 8, 12) equations=((1, 12, 1), (5, 8, 1)) free=() dimension=2
+matching_code C=(1, 2, 5, 8, 12) equations=((1, 12, 1), (5, 8, 1)) free=(2,) dimension=3
+matching_code C=(1, 2, 3, 4, 9, 10) equations=((1, 2, 1), (4, 9, 1), (3, 10, 1)) free=() dimension=3
+matching_code C=(1, 2, 3, 5, 8, 12) equations=((5, 8, 1), (1, 12, 1)) free=(2, 3) dimension=4
+matching_code C=(1, 2, 5, 6, 8, 11) equations=((1, 6, -1), (5, 8, 1), (2, 11, 1)) free=() dimension=3
+matching_code C=(1, 2, 5, 8, 11, 12) equations=((5, 8, 1), (1, 12, 1)) free=(2, 11) dimension=4
+matching_code C=(1, 3, 4, 9, 10, 12) equations=((4, 9, 1), (3, 10, 1), (1, 12, 1)) free=() dimension=3
+metric_guardrail base_packet=(1, 4, 15, 16, 18, 19, 21, 22, 24, 25, 33, 36) M=1/4 witnesses=(Fraction(7, 20), Fraction(13, 20))
+metric_guardrail flip_packet=(14, 15, 17, 18, 21, 24, 29, 32, 33, 35, 36, 38) M=7/26 witnesses=(Fraction(1, 52), Fraction(51, 52))
+metric_guardrail multiplier2_packet=(3, 9, 19, 25, 27, 28, 30, 31, 33, 34, 36, 37) M=14/65 witnesses=(Fraction(32, 65), Fraction(33, 65))
+distinct_metric_roots=110 by_type={(2, 4): 84, (1, 5): 66, (0, 6): 44}
+first_layer type=(2, 4) contexts=336 D1=10440 D3=22268 total=32708 per_context_min=53 per_context_max=161
+first_layer type=(1, 5) contexts=672 D1=10200 D3=54396 total=64596 per_context_min=66 per_context_max=152
+first_layer type=(0, 6) contexts=496 D1=0 D3=49608 total=49608 per_context_min=68 per_context_max=183
+first_layer total=146912 D1=20640 D3=126272 root_cap_range=4752/13..1188
+first_layer_payload_sha256=ffcbb5fea8769eb026e05c7da717708146ba03be55881c705cf25d0845b50d4a
+planning_only_c2_depth2_projection=47148908896/3133 floor=15049125
+planning_only_c2_full_tree_projection=984250077
+verdict=sheet_bank_classified_metric_bank_open
+source_sha256=f87b0436c509313d5d90f5f9abe2d06b591e9ab639b5988bf206e4115cd7f39b

@@ -285,6 +285,15 @@ obligations, and proof-carrier interfaces.
   covers, while all other roots/heights are loose. Thus even the exact sparse
   relation is routing telemetry; the faithful carrier adds literal strict-safe
   components, remaining labelled step-26 rays, last speed, and shortcut ancestry.
+  THM-862 sharpens this failure at `c=3`.  Its natural vertices are the
+  order-three owner-sheet obligations and its signed provider relation uses
+  ratios `{4,5,8,9}`; the seven canonical graphs are sparse or bidirected, not
+  tournaments, and their full cover predicate collapses to affine disjoint-pair
+  codes.  Multiplication and global unit flip give 68 exact sheet templates,
+  yet one orbit contains packets with `M=1/4,7/26,14/65`.  Hence even the
+  labelled signed graph plus affine code is only a sheet carrier.  Metric
+  recursion must retain all 1,504 arithmetic lanes, literal components,
+  step-39 rays, last speed, and shortcut ancestry.
   On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies

@@ -14,7 +14,11 @@ progress_note: >-
   optimized scale bound c<=2,177,280, and a finite exact recursion for every
   primitive proper AP-centred ramification language. THM-861 evaluates its
   first ramified face: a 41,882,982-node exact tree leaves only the ordinary
-  AP [12], so every sporadic c=2 packet is loose. THM-836 §§6B--6C also rule out
+  AP [12], so every sporadic c=2 packet is loose. THM-862 classifies the next
+  `c=3` common-sheet stalk into 212 presentations and 1,504 arithmetic
+  contexts, whose unit fibres are affine matching codes. Its 68 sheet orbits
+  are not metric quotients; the exact first layer has 146,912 edges and the
+  metric recursion remains open. THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
   the three structured shell-five classes.
@@ -68,6 +72,7 @@ depends_on:
   - THM-859
   - THM-860
   - THM-861
+  - THM-862
   - HYP-6750
   - HYP-6775
 related:
@@ -90,6 +95,7 @@ related:
   - THM-859
   - THM-860
   - THM-861
+  - THM-862
   - MISTAKE-143
 ---
 
