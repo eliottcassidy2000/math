@@ -1,7 +1,7 @@
 ---
 id: THM-802
 title: Affine lifting of prefix-legal diagonal loops and noncentral packets on a fixed five-core-safe interval
-status: PROVED (general affine phase-cell lifting lemma; exact all-height wall order, prefix legality, reduced return, fixed metric/core incidence, and LRC lift) + VERIFIED (H=1 through 300; 406,350 walls and 406,650 chambers; exhaustive 181,440-word legality census and tournament fingerprints)
+status: PROVED (general affine phase-cell lifting lemma; existential realization of all five unequal one-fast-owner multiplicity classes; exact all-height wall order, prefix legality, reduced return, fixed metric/core incidence, and LRC lift) + VERIFIED (H=1 through 300; 406,350 walls and 406,650 chambers; finite-exact k=2 through 6 class audit; exhaustive 181,440-word legality census and tournament fingerprints)
 source: codex-2026-07-14-S10 reduced-holonomy continuation
 depends_on:
   - THM-779   # normalized collision transition and prefix-legality equation
@@ -82,7 +82,10 @@ Formula (L4) converges uniformly to (L1) as `M/L -> alpha_0` and
 inequalities therefore gives one open `U` and `L_0` on which the complete
 wall word is still `omega`.  Shrinking `U` slightly ensures that both
 endpoints of every retained block stay in the same nearest-integer cell, so
-owner `a` has exactly `d_a` walls.
+owner `a` has exactly `d_a` walls.  Since the pairs `(d_a,beta_a)` are
+distinct, each speed difference is a nonzero affine function of `L`; enlarging
+`L_0` makes every speed positive and avoids all of their finitely many
+possible equality scales.
 
 By (L2), the boundary tokens are
 
@@ -101,7 +104,128 @@ This lemma is the structural result: a phase-realizable collision loop is an
 inflatable object.  THM-794 is its equal-multiplicity instance.  The family
 below proves that the inflatable language is already strictly larger.
 
-## 2. Explicit unequal-multiplicity family
+## 2. Corollary — all five unequal one-fast-owner classes occur
+
+Fix a five-owner core `P` and any nonempty open interval `J` contained in its
+strict core-safe set.  For every
+
+```text
+k in {2,3,4,5,6},                                     (C1)
+```
+
+there are pairwise distinct integers `beta_a`, with
+
+```text
+d=(1,1,1,1,1,1,1,k),
+beta_a=1 (mod 7) for 0<=a<=6,
+beta_7=k (mod 7),                                      (C2)
+```
+
+such that the affine lifting lemma produces `Theta(L)` consecutive blocked
+packets inside `J` for all sufficiently large multiples of seven `L`.  One
+packet has owner word
+
+```text
+omega_k=(7,0,1,2,3,4,5,6, 7,7,...,7),                 (C3)
+```
+
+with `k-1` final occurrences of owner seven.  Its owner-count vector is
+`(1,1,1,1,1,1,1,k)`, and its reduced return is the identity.  Thus every
+unequal residue multiplicity `k=2,...,6` occurs in a phase-realizable
+diagonal-loop language, already after restricting to one faster owner and
+seven unit-rate owners.
+
+This corollary is existential.  It asserts no effective upper bound on the
+chosen `|beta_a|` or on the onset scale `L_0`.
+
+### Proof
+
+Choose an irrational `alpha_0 in J`, fix `k` as in (C1), and put
+
+```text
+u=k^(-1) (mod 7),        theta_0=1/(4k).
+```
+
+Prescribe the `k` limiting walls of owner seven at
+
+```text
+theta_0+h/k,       0<=h<k,                              (C4)
+```
+
+and prescribe the singleton wall of owner `j`, `0<=j<=6`, at
+
+```text
+theta_j=theta_0+(j+1)/(8k).                             (C5)
+```
+
+The first fast wall occurs at `2/(8k)`, the seven singleton walls at
+`3/(8k),...,9/(8k)`, and the second fast wall at `10/(8k)`.  All later fast
+walls follow in order and remain below one.  Hence the strict merge word is
+exactly (C3).
+
+Choose desired nearest-integer residues
+
+```text
+N_7=0 (mod 7),       N_j=u+j (mod 7), 0<=j<=6.          (C6)
+```
+
+The corresponding normalized initial offsets are
+
+```text
+r_7=0,               r_j=-(u+j) (mod 7).               (C7)
+```
+
+The seven singleton offsets in (C7) run through all of `F_7`, and owner seven
+duplicates the zero, so the initial state is covered.  At the first fast wall
+the prefix sum is zero.  Before singleton `j` it is `u+j`, cancelling
+`r_j`.  After all seven singletons it is again `u`; the one previous fast
+event contributes the same `u`, so every remaining consecutive fast event is
+legal.  Finally
+
+```text
+1*1=1,            k*u=1 (mod 7),                        (C8)
+```
+
+which proves the diagonal return.
+
+It remains only to realize the prescribed phases with integers satisfying
+(C2).  For each fixed nonzero residue `b mod 7`, the forward orbit
+
+```text
+{(b+7n)alpha_0 mod 7 : n>=0}                            (C9)
+```
+
+is dense in `R/7Z`, because its rotation step is `7alpha_0` on a circle of
+length seven and `alpha_0` is irrational.  For a singleton owner, choose a
+small target neighborhood of
+
+```text
+N_j+1/2-theta_j;
+```
+
+for owner seven choose one about
+
+```text
+N_7+1/2-k theta_0=N_7+1/4.
+```
+
+The neighborhoods can be chosen disjoint from all relevant half-integer
+boundaries and small enough to preserve the strict order (C4)--(C5).  Every
+target neighborhood is hit infinitely often, so the choices below can also
+be made pairwise distinct.  Density (C9), with
+`b=1` for the singleton owners and `b=k` for owner seven, supplies distinct
+positive choices `beta_a=b+7n` hitting those neighborhoods.  Their actual
+nearest integers have the required residues (C6), even though their absolute
+integer lifts are immaterial.  All hypotheses of the affine lifting lemma now
+hold.  Shrink its phase interval `U` inside `J`; the resulting packet count is
+`Theta(L)` and its metric lift stays core-safe. ∎
+
+The five rows in (C1) are the nonzero unequal count residues left after a
+same-owner block of seven events is treated as its own zero-return refinement.
+The next subsection supplies an explicit quantitative representative of the
+first row `k=2`.
+
+## 3. Explicit unequal-multiplicity family
 
 For every integer `H>=1`, put
 
@@ -216,9 +340,9 @@ E_H > 1/g+2/f.                                        (13)
 Thus THM-794's failure of the universal extent target is not confined to
 uniform once-per-owner packets.
 
-## Proof
+## 4. Proof of the explicit family
 
-### 1. The boundary phase cell and the complete event list
+### 4.1. The boundary phase cell and the complete event list
 
 Every block boundary in (3) lies in `I`, because
 
@@ -273,7 +397,7 @@ For `L=105H` and (3),
 The weaker fourth inequality follows as well.  This proves (6), simplicity,
 and completeness of the global event list.
 
-### 2. Prefix legality and the nonuniform reduced return
+### 4.2. Prefix legality and the nonuniform reduced return
 
 At `x=M/L`, combine (2), (8), and (14):
 
@@ -321,7 +445,7 @@ therefore gives `r'=r`; in absolute coordinates every token changes by `-1`.
 Induction across the `H` blocks proves coverage of every wall and chamber in
 `I`, including its two generic endpoints.
 
-### 3. Metric/core incidence and the LRC lift
+### 4.3. Metric/core incidence and the LRC lift
 
 On `I`, the exact minimum clearances of the five core speeds are
 
@@ -346,7 +470,7 @@ obstruction assertion for (10).  Since every member of `W` is nonzero modulo
 seven, it is distinct from `7P`; direct inspection of (1) gives thirteen
 distinct positive speeds.
 
-### 4. Ratio and extent
+### 4.4. Ratio and extent
 
 The largest `beta` among the first seven owners is `22`, so (11) follows, and
 
@@ -365,7 +489,7 @@ The first wall is `z_(7,0)(14H)` and the last is
 
 which is positive for every `u>=0`.  This finishes the proof. ∎
 
-## The computable reduced state that survives this audit
+## 5. The computable reduced state that survives this audit
 
 The construction isolates a minimal useful packet certificate:
 
@@ -407,7 +531,7 @@ owner-seven event; only the displayed slot is legal from (7).  Thus
 multiplicity preserves return but destroys prefix legality, and the
 first-owner tournament still destroys the decisive repeated-owner insertion.
 
-## Tournament Analysis
+## 6. Tournament Analysis
 
 Three vertex choices expose the quotient boundary.
 

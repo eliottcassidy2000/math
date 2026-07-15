@@ -23,6 +23,19 @@ H=10: L=1050 W=(1051, 1072, 1030, 1044, 1065, 1037, 1058, 2102) walls=90 wall_ex
 H=100: L=10500 W=(10501, 10522, 10480, 10494, 10515, 10487, 10508, 21002) walls=900 wall_extent=199/21002 mesh_bound=21023/110491522 refutes=True
 H=300: L=31500 W=(31501, 31522, 31480, 31494, 31515, 31487, 31508, 63002) walls=2700 wall_extent=599/63002 mesh_bound=63023/992974522 refutes=True
 
+AFFINE UNEQUAL-MULTIPLICITY CLASSES (FINITE EXACT ABSTRACT AUDIT)
+density choice of beta: existential; no effective beta bound claimed
+k=2: inverse=4 walls=9 state=(3, 2, 1, 0, 6, 5, 4, 0) word=(7, 0, 1, 2, 3, 4, 5, 6, 7)
+  strict_times=(Fraction(1, 8), Fraction(3, 16), Fraction(1, 4), Fraction(5, 16), Fraction(3, 8), Fraction(7, 16), Fraction(1, 2), Fraction(9, 16), Fraction(5, 8)); nearest_residues=(4, 5, 6, 0, 1, 2, 3, 0); count*step=(1,1,1,1,1,1,1,1)
+k=3: inverse=5 walls=10 state=(2, 1, 0, 6, 5, 4, 3, 0) word=(7, 0, 1, 2, 3, 4, 5, 6, 7, 7)
+  strict_times=(Fraction(1, 12), Fraction(1, 8), Fraction(1, 6), Fraction(5, 24), Fraction(1, 4), Fraction(7, 24), Fraction(1, 3), Fraction(3, 8), Fraction(5, 12), Fraction(3, 4)); nearest_residues=(5, 6, 0, 1, 2, 3, 4, 0); count*step=(1,1,1,1,1,1,1,1)
+k=4: inverse=2 walls=11 state=(5, 4, 3, 2, 1, 0, 6, 0) word=(7, 0, 1, 2, 3, 4, 5, 6, 7, 7, 7)
+  strict_times=(Fraction(1, 16), Fraction(3, 32), Fraction(1, 8), Fraction(5, 32), Fraction(3, 16), Fraction(7, 32), Fraction(1, 4), Fraction(9, 32), Fraction(5, 16), Fraction(9, 16), Fraction(13, 16)); nearest_residues=(2, 3, 4, 5, 6, 0, 1, 0); count*step=(1,1,1,1,1,1,1,1)
+k=5: inverse=3 walls=12 state=(4, 3, 2, 1, 0, 6, 5, 0) word=(7, 0, 1, 2, 3, 4, 5, 6, 7, 7, 7, 7)
+  strict_times=(Fraction(1, 20), Fraction(3, 40), Fraction(1, 10), Fraction(1, 8), Fraction(3, 20), Fraction(7, 40), Fraction(1, 5), Fraction(9, 40), Fraction(1, 4), Fraction(9, 20), Fraction(13, 20), Fraction(17, 20)); nearest_residues=(3, 4, 5, 6, 0, 1, 2, 0); count*step=(1,1,1,1,1,1,1,1)
+k=6: inverse=6 walls=13 state=(1, 0, 6, 5, 4, 3, 2, 0) word=(7, 0, 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7)
+  strict_times=(Fraction(1, 24), Fraction(1, 16), Fraction(1, 12), Fraction(5, 48), Fraction(1, 8), Fraction(7, 48), Fraction(1, 6), Fraction(3, 16), Fraction(5, 24), Fraction(3, 8), Fraction(13, 24), Fraction(17, 24), Fraction(7, 8)); nearest_residues=(6, 0, 1, 2, 3, 4, 5, 0); count*step=(1,1,1,1,1,1,1,1)
+
 PREFIX-LEGALITY CENSUS
 multiplicity words: 181440
 legal from displayed reduced state: 3
@@ -46,5 +59,5 @@ circular tie path: (0, 2, 1, 4, 6, 7, 3, 5)
 marked/circular edge flips: 9
 preserved by owner multiplicity: reduced return congruence only
 destroyed by owner multiplicity: prefix legality and raw event insertion order
-canonical_sha256=431910fda5eef26208bf411ce79a371e5bce88b0871a83cd25c709453f64c335
+canonical_sha256=bfd12358d876ae591b1bac666b5b52386156169743771fc909707cefd5ca6e85
 SUMMARY: ALL EXACT CHECKS PASSED

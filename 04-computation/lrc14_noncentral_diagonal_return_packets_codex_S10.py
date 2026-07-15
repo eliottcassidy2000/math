@@ -14,8 +14,11 @@ The packet count vector is (1,1,1,1,1,1,1,2).  Its inverse-step
 products are all one modulo seven, so it is a reduced collision return, but
 it is not THM-794's once-per-owner packet.  The script independently
 enumerates every midpoint wall, checks every wall and chamber, audits the
-five-core incidence, exhausts all owner words with this multiplicity, and
-computes the marked/circular tournament fingerprints.
+five-core incidence, verifies the finite prefix/order data for all five
+one-fast unequal multiplicity classes k=2,...,6, exhausts all owner words
+with the explicit k=2 multiplicity, and computes the marked/circular
+tournament fingerprints.  The density choice of beta in the general class
+corollary is existential and no effective search bound is claimed here.
 """
 
 from __future__ import annotations
@@ -39,7 +42,7 @@ STEPS = (1, 1, 1, 1, 1, 1, 1, 4)
 REDUCED_STATE = (0, 4, 3, 1, 5, 2, 6, 0)
 PACKET_WORD = (7, 2, 5, 3, 0, 6, 4, 1, 7)
 FIRST_OWNER_WORD = (7, 2, 5, 3, 0, 6, 4, 1)
-EXPECTED_DIGEST = "431910fda5eef26208bf411ce79a371e5bce88b0871a83cd25c709453f64c335"
+EXPECTED_DIGEST = "bfd12358d876ae591b1bac666b5b52386156169743771fc909707cefd5ca6e85"
 
 
 def floor_q(x: Q) -> int:
@@ -154,6 +157,83 @@ def prefix_legality(
         (total - counts[owner] * STEPS[owner]) % P for owner in range(8)
     )
     return tuple(counts), defects
+
+
+def unequal_multiplicity_class_audit() -> tuple[tuple, ...]:
+    """Finite-exact abstract audit of THM-802's k=2,...,6 corollary.
+
+    The density step choosing beta is intentionally not assigned an effective
+    search bound.  This routine verifies every finite datum to which that
+    non-effective step is applied: strict target order, covered initial state,
+    every prefix equation, and the diagonal return.
+    """
+    rows = []
+    for fast_count in range(2, 7):
+        fast_step = pow(fast_count, -1, P)
+        steps = (1,) * 7 + (fast_step,)
+        counts_target = (1,) * 7 + (fast_count,)
+        state = tuple((-(fast_step + owner)) % P for owner in range(7)) + (0,)
+        word = (7,) + tuple(range(7)) + (7,) * (fast_count - 1)
+
+        assert Counter(state) == Counter({0: 2, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1})
+        total = 0
+        counts = [0] * 8
+        for owner in word:
+            before = (state[owner] + total - counts[owner] * steps[owner]) % P
+            assert before == 0
+            total = (total + steps[owner]) % P
+            counts[owner] += 1
+        assert tuple(counts) == counts_target
+        assert tuple(counts[a] * steps[a] % P for a in range(8)) == (1,) * 8
+        assert all(
+            (total - counts[a] * steps[a]) % P == 0 for a in range(8)
+        )
+
+        theta_zero = Q(1, 4 * fast_count)
+        events = [
+            (theta_zero + Q(visit, fast_count), 7)
+            for visit in range(fast_count)
+        ]
+        events.extend(
+            (theta_zero + Q(owner + 1, 8 * fast_count), owner)
+            for owner in range(7)
+        )
+        events.sort()
+        assert tuple(owner for _, owner in events) == word
+        assert all(Q(0) < time < Q(1) for time, _ in events)
+        assert all(events[i][0] < events[i + 1][0] for i in range(len(events) - 1))
+
+        nearest_residues = tuple((fast_step + owner) % P for owner in range(7)) + (0,)
+        target_phases = tuple(
+            Q(nearest_residues[owner], 1)
+            + Q(1, 2)
+            - (theta_zero + Q(owner + 1, 8 * fast_count))
+            for owner in range(7)
+        ) + (Q(1, 4),)
+        assert tuple(
+            nearest_integer_or_none(target) % P for target in target_phases
+        ) == nearest_residues
+        assert all(
+            Q(nearest_residues[owner], 1) + Q(1, 2) - target_phases[owner]
+            == theta_zero + Q(owner + 1, 8 * fast_count)
+            for owner in range(7)
+        )
+        assert (
+            Q(nearest_residues[7], 1) + Q(1, 2) - target_phases[7]
+        ) / fast_count == theta_zero
+
+        rows.append(
+            (
+                fast_count,
+                fast_step,
+                state,
+                word,
+                tuple(time for time, _ in events),
+                nearest_residues,
+                target_phases,
+            )
+        )
+    return tuple(rows)
 
 
 def core_minimum(speed: int) -> Q:
@@ -439,9 +519,15 @@ def tournament_audit() -> dict:
 
 def main() -> None:
     rows = tuple(audit_height(height) for height in range(H_MIN, H_MAX + 1))
+    unequal_classes = unequal_multiplicity_class_audit()
     census = word_census()
     tournaments = tournament_audit()
-    canonical = "\n".join(repr(row) for row in rows) + "\n"
+    canonical = (
+        "\n".join(repr(row) for row in rows)
+        + "\nUNEQUAL_CLASSES\n"
+        + "\n".join(repr(row) for row in unequal_classes)
+        + "\n"
+    )
     digest = sha256(canonical.encode()).hexdigest()
     if EXPECTED_DIGEST != "TO_BE_FILLED":
         assert digest == EXPECTED_DIGEST
@@ -471,6 +557,19 @@ def main() -> None:
             f"H={height}: L={row[1]} W={row[2]} walls={row[3]} "
             f"wall_extent={row[4]} mesh_bound={row[5]} "
             f"refutes={row[4] > row[5]}"
+        )
+    print()
+    print("AFFINE UNEQUAL-MULTIPLICITY CLASSES (FINITE EXACT ABSTRACT AUDIT)")
+    print("density choice of beta: existential; no effective beta bound claimed")
+    for row in unequal_classes:
+        fast_count, fast_step, state, word, times, nearest, _ = row
+        print(
+            f"k={fast_count}: inverse={fast_step} walls={len(word)} "
+            f"state={state} word={word}"
+        )
+        print(
+            f"  strict_times={times}; nearest_residues={nearest}; "
+            "count*step=(1,1,1,1,1,1,1,1)"
         )
     print()
     print("PREFIX-LEGALITY CENSUS")
