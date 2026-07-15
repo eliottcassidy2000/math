@@ -9,6 +9,8 @@ verification:
   - 04-computation/mobius_cech_n9_relation_preflight_codex_S13.py
   - 05-knowledge/results/mobius_cech_n9_relation_preflight_codex_S13.out
   - 05-knowledge/results/mobius_cech_n9_relation_preflight_codex_S13.json
+  - 04-computation/mobius_cech_join_regression_codex_S13.py
+  - 05-knowledge/results/mobius_cech_join_regression_codex_S13.out
 ---
 
 # THM-818 — the `n=9` frontier is a relation join, not a line scan
@@ -141,6 +143,25 @@ used for planning require `239,896,640` bytes for rows plus two aligned
 16-byte projection indexes, and `335,855,296` bytes with three indexes.  The
 exact census therefore passes the declared single-machine gate
 `|R_8| <= 30,000,000` comfortably.
+
+## One-level-down exact replay
+
+The same ordered, role-specific join was executed one level lower without
+using THM-809's collision list as input.  The `n=7` observation kernel has
+`113,632` rows, `80,864` off-diagonal.  Its exact three-way join gives
+
+```text
+nontrivial ordered triangles                 1,672
+after requiring both upper apex bits zero      836
+after requiring equal upper colour              836
+canonical unordered upper pairs                 418.
+```
+
+The final `418` is exactly THM-809's independently obtained base-collision
+count.  The fact that upper colour removes nothing at this size is a
+regression result, not a reason to omit that logically necessary filter at
+`n=9`.  Runtime is about 2.2 seconds with maximum RSS about 101 MB in the
+stored Python implementation.
 
 ## Why `n=9` is the last count-plus-first-moment size
 

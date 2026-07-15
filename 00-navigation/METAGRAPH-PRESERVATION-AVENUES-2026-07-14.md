@@ -583,7 +583,10 @@ certificate clauses, and proof obligations.
   off-diagonal.  Lower-base collisions are precisely compatible triangles in
   `R_8^3`, followed by the both-apex-zero, upper-colour, and full-S2 filters.
   This passes the single-machine memory gate; the triangle join itself remains
-  open.  At `n=9`, count plus first positional moment is still guaranteed to
+  open.  The identical join one level down takes `113,632` `R_7` rows to
+  `1,672` ordered triangles, `836` apex-zero pairs, and exactly the `418`
+  unordered THM-809 collisions, validating the ordered role-specific overlap
+  convention.  At `n=9`, count plus first positional moment is still guaranteed to
   reconstruct every layer; `{0,3}` versus `{1,2}` makes `n=10` the first
   unconditional ambiguity.
 

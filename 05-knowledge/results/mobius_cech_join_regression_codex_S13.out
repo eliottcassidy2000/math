@@ -1,0 +1,15 @@
+THM-818 ORDERED CECH-JOIN REGRESSION R7 -> N8
+========================================================================
+R7 rows=113632 off-diagonal=80864
+nontrivial ordered triangles=1672
+both-apex-zero=836
+upper-colour-equal=836
+canonical unordered pairs=418
+
+TOURNAMENT ANALYSIS (filter carriers as planning vertices)
+  vertices=('nontrivial_triangles', 'both_apex_zero', 'upper_colour', 'unordered_pairs')
+  observable=number of raw nontrivial triangles rejected by the filter carrier
+  switches=('rejection retention', 'rejection per surviving cell'); flips=0
+  retention scores={0: 1, 1: 1, 2: 1, 3: 1} C3=0 SCC=[1, 1, 1, 1] Hpaths=1
+
+Verdict: exact replay recovers THM-809's 418 base collisions.
