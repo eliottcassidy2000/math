@@ -1,5 +1,5 @@
 ---
-id: THM-836
+id: THM-838
 title: Centered-CF transport preserves the n=9 rank-four defect but exposes two dimensions to n=10 raw S2
 status: PROVED RECURSIVE COORDINATE COPY + FINITE-EXACT DEFECT/Q/P TRANSPORT
 source: codex-2026-07-15-S13/engine
@@ -11,7 +11,7 @@ verification:
   - 05-knowledge/results/continued_fraction_n9_defect_transport_codex_S13.json
 ---
 
-# THM-836 — centered-CF transport exposes half the defect
+# THM-838 — centered-CF transport exposes half the defect
 
 Continue THM-812/813's centered Christoffel coordinate-copy recursion along
 the consecutive pairs

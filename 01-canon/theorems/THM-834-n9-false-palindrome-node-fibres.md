@@ -4,7 +4,7 @@ title: The 58 n=9 false-palindrome pairs occupy 53 converse-merged tournament no
 status: PROVED FINITE-EXACT FORWARD/INVERSE-FIBRE MAP + n8 BLACK-FLOW PLACEMENT
 source: codex-2026-07-15-S13b
 depends_on: [THM-810, THM-828, THM-832]
-related: [THM-796, THM-809, THM-833, THM-836, HYP-3809, HYP-6880]
+related: [THM-796, THM-809, THM-833, THM-838, HYP-3809, HYP-6880]
 verification:
   - 04-computation/n9_false_palindrome_node_forward_map_codex_S13b.py
   - 05-knowledge/results/n9_false_palindrome_node_forward_map_codex_S13b.out
@@ -122,7 +122,7 @@ nu(u xor FULL):   54 values, multiplicity {1:51,2:2,3:1}.
 Neither marginal is sufficient.  Their ordered joint coordinate has 58
 values; forgetting which marginal is first still leaves 58 values, and none
 is a loop.  Reflection swaps the literal endpoints coherently and creates no
-failure.  THM-836 further proves that all 58 coupled cells remain distinct
+failure.  THM-838 further proves that all 58 coupled cells remain distinct
 under the centered-CF copy `X_9 -> X_10`.
 
 This does not say that `P` is a global invariant of every metagraph line or
@@ -166,7 +166,7 @@ claim that the global size-eight metagraph lacks blue symmetry.
 
 For each realized `D` sector, average over its supporting face-node
 presentations.  Order first by decreasing mean score-axis coordinate, then
-by increasing mean local metagraph depth, decreasing mean `H/|Aut|`, and the
+by increasing mean local metagraph depth, increasing mean `H/|Aut|`, and the
 four-bit cube coordinate as a final exact tie-breaker.  The resulting order
 is
 
@@ -184,7 +184,7 @@ be ordered by
 
 ```text
 (-x, score sequence, colour stratum, local depth,
- -H/|Aut|, canonical merged key).                        (14)
+ H/|Aut|, canonical merged key).                         (14)
 ```
 
 The defect cube does **not** supply the missing metagraph geometry.  Among

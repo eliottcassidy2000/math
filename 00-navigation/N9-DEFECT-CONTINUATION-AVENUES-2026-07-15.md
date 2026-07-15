@@ -1,6 +1,6 @@
 # The `n=9` defect continuation frontier
 
-**Status:** working atlas after THM-828/832/834/836, codex-2026-07-15-S13.
+**Status:** working atlas after THM-828/832/834/838, codex-2026-07-15-S13.
 The exact static join, its linear Cech core, one centered-CF continuation,
 and the collision-fibre-to-node placement are complete.  This file records the
 object dictionary, preservation ledger, and ranked pull list for continuation
@@ -96,7 +96,7 @@ difference.  None can silently substitute for another.
 7. **Collision pair to a sufficient node coordinate.**  The marginal merged
    node has 53 values and its complement-partner marginal has 54.  Their
    coupled coordinate `P=(nu(u),nu(u xor FULL))` has 58 singleton values.
-8. **Centered-CF copy.**  THM-836 derives the literal coordinate copy
+8. **Centered-CF copy.**  THM-838 derives the literal coordinate copy
    `Phi:X_9->X_10`.  It preserves all 58 `Q` and `P` cells, retains defect
    rank four, and exposes exactly the `span(b0,b1)` half to target raw-S2.
 
@@ -172,7 +172,7 @@ THM-778 says a continued-fraction digit is safe only with its token action.
 THM-812 constructs a literal coordinate-copy action; THM-813 proves that
 projected node/edge cells cease to be functorial while literal reflection
 orbits remain safe.  THM-829 closes inverse-owner transport by
-`v'=Av,b'=bA^-1`.  THM-836 carries the rank-four core through the next
+`v'=Av,b'=bA^-1`.  THM-838 carries the rank-four core through the next
 centered consecutive word exactly: rank `4->4`, raw-S2 kernel rank two, all
 58 literal `Q` orbits and coupled `P` cells distinct.  Static chirality is
 not functorial—eight signs reverse—so the next fibre product must retain the
