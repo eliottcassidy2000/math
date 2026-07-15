@@ -75,6 +75,12 @@ The first decisive computation is `n=8`: either retain injectivity on all
 1,048,576 lines or save the first collision with its core, path-orbit
 stabilizer, and lowest missing Möbius bidegree.  See MPA-34/35.
 
+The `codex-2026-07-15-S13` continuation has reserved the streaming experiment
+`mobius_cech_n8_frontier_codex_S13.py/.out`.  The reservation makes no finite
+claim: it records that class certification, converse merging, literal
+collision witnesses, and collision-local stalk refinement must all remain in
+the same audit.
+
 ## Continued-fraction connection
 
 THM-778 supplies the exact analogy and the guardrail.  A continued-fraction
