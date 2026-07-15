@@ -1,0 +1,25 @@
+(1) MILGRAM: q mod 8 on the all-odd Sigma=0 coset; Gauss sums
+   n=4: q mod 8 values on coset: [4] (constant: True); |G| = 8.000, phase*4/pi = 4.0
+   n=6: q mod 8 values on coset: [6] (constant: True); |G| = 32.000, phase*4/pi = -2.0
+   n=8: q mod 8 values on coset: [0] (constant: True); |G| = 128.000, phase*4/pi = 0.0
+   n=10: q mod 8 values on coset: [2] (constant: True); |G| = 512.000, phase*4/pi = 2.0
+
+(2) CORONA WIDTHS (even n; conjecture floor(n/2)+1):
+   n=4: corona levels (0<legal<total): []; width = 0 (conjecture 3); ceiling = 20
+   n=6: corona levels (0<legal<total): []; width = 0 (conjecture 4); ceiling = 70
+   n=8: corona levels (0<legal<total): [136, 144, 152, 160, 168]; width = 5 (conjecture 5); ceiling = 168
+   n=10: corona levels (0<legal<total): [210, 218, 226, 234, 242, 250, 258, 266, 274, 282, 290, 298, 306, 314, 322, 330]; width = 16 (conjecture 6); ceiling = 330
+
+(3) SEDENION RUNG: E8^2 vs D16+ Sigma=0 slices (isospectral lattices):
+   E8 counts: norm2 = 240 (240?), norm4 = 2160 (2160?)
+   norm 2: E8^2 slice = 252, D16+ slice = 240  -> DIFFER: True
+   norm 4: E8^2 slice = 23662, D16+ slice = 23790  -> DIFFER: True
+   (full-lattice theta series are EQUAL -- the Sigma=0 slice breaks isospectrality: the degeneration tournaments can see)
+
+(4) NUMERATION: 1001 and 1024
+   10^3 mod 1001 = 1000 (= -1 mod 1001: torsion order 2: abc x 1001 = abcabc; alternating-block tests for 7, 11, 13)
+   143 x 7 = 1001 (the S313 knife-edge equation)
+   T_5 = 15?? T_5 = 15; C(5,2) = 10 = m at n=6; m at n=7 = C(6,2) = 15 => tiling space 2^15 at n=7?? m = C(n-1,2): n=6: 10, n=7: 15
+   m = 10 at n = 6 (not 7): 2^10 = 1024 tilings at n = 6 -- correction
+   CF of log2(10) = [3, 3, 9, 2, 2, 4]: convergents 3, 10/3 (2^10 ~ 10^3), 93/28, ...
+   2^10/10^3 = 1.024: the 3-digit-shift drift per decade = the near-dilate offset of the 10/3 convergent
