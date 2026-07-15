@@ -9746,3 +9746,19 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 6. Locker tournament aftermath (THM-865): is there ANY invariant family where digit 1 of H is lawful?
    (D_n refutes the divisor-pairing route; the exit-cell pair-matching at composite m <= 18 remains
    unexplained data -- prove or kill the pair-matching for m in {8,9,12,14,16,18} as a finite curiosity.)
+
+## Lead mac-mini-2026-07-15-S110: ladder/shelves/monodromy follow-ups
+**Source:** THM-868/869, HYP-6955, reflection where-solvability-actually-lives. **Status:** open leads.
+1. OEIS submissions, batch 2: the seven new sequences of THM-868's table (b-files from the .out).
+2. ARNOLD TEST (finite, sharp): on the Ryser complex of the (1,2,2,2,3) fiber at n=5, is alpha_1
+   parity constant on commutator loops? If yes: the flip-character is abelianizable (a cochain
+   law exists after all); if no: a genuine nonabelian monodromy obstruction -- either way a theorem.
+3. Shelf census: closed form for stuck(n, a) (40; 16800; a=2 counts at n=9 -- the construction
+   space is a product of two constrained fibers); is stuck(n,1)/fiber -> const?
+4. A362193 bijection: d=3 Moser rows = Grassmannian permutations avoiding a pattern (they have
+   one descent = rank-2 flavor); find the map.
+5. The necessary condition (flips => odd exactly-1-arc 5-cycle count): prove it or find the
+   n=6 counterexample; if true generally, the flip character is a mod-2 linking number.
+6. u-substitution grammar: test whether the OCF digit tower / Farey-14 depth tower admit a
+   substitution variable making them geometric (predict NO for OCF digits >= 1 -- that absence
+   IS the Toda-decay theorem, restated).
