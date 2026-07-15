@@ -649,13 +649,13 @@
   labelled assignment, event step, and endpoint schedule are required for transport.
 - **Pull list:** 39 bounded cards in
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
-  first pull is the MPA-32/34/35 join: compare `n=8` continuation cells with
-  THM-809's injective lower `Lambda` and its layer genealogy.  THM-818 has now
-  reduced the `n=9` static step to a three-way join over the exact
-  `5,997,416`-row kernel relation `R_8`; execute its ordered-overlap join and
-  apply apex/upper-colour/S2 filters instead of scanning `2^27` tilings.
-  Materialize every survivor as a face-labelled zigzag of witnessed collision
-  rows, so births, deaths, and phase transport are tested rather than inferred
+  first pull is now the MPA-32/34/35/38 continuation join.  THM-818 reduced
+  the `n=9` static step to the exact `5,997,416`-row kernel relation `R_8`, and
+  THM-828 completed it: 58 disjoint reflection doubletons remain, supported on
+  eleven sectors spanning a punctured rank-four mirror-defect cube, and one
+  skew chirality bit repairs them.  Act on all fifteen nonzero cube sectors
+  by inverse lift, internal deletion, and the centered-CF coordinate copies;
+  keep every survivor as a face-labelled zigzag rather than infer transport
   from counts.  Then extend THM-813's canonical
   `Q`-orbit action through the ten-wall CF word, minimize only after composing
   the operations, and join it to THM-808's owner/root stalk.  Follow with the

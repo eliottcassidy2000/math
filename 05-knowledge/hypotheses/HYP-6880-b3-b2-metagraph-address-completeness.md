@@ -115,10 +115,10 @@ research question is whether `Omega+S2` identifies a small closed sector of
 these coefficients.  Static equality must be tested separately from equality
 under future deletion, complement, reflection, and lift operations.
 
-The first undecided finite size is now `n=9`.  The exact next question is not
-merely whether the codec collides, but whether the decisive `tau=n-1` layer
-continues to remove every lower-node collision and whether its positional
-moment, rather than raw counts, first becomes necessary.
+THM-828 now decides the first previously open finite size `n=9`.  Raw counts
+do not remove every lower-node collision: they leave exactly 58 disjoint
+doubletons, all reflection mates.  A single antisymmetric positional
+chirality bit repairs them all.
 
 THM-818 removes the exponential outer scan from that question.  Define the
 oriented face observation
@@ -137,12 +137,22 @@ projections are therefore part of the address's recursive structure.  Fibre
 cardinalities alone destroy precisely the gluing information needed at the
 next size.
 
-This also identifies the positional boundary without awaiting the join.  At
+THM-828 factors this join through a 14-dimensional raw-S2 difference code and
+then through the unique gluing of its `A/C` faces.  It finds 9,540 literal
+overlap matches, 636 B-compatible candidates, and 58 final pairs.  Their
+eleven difference masks span a punctured four-dimensional reflection-defect
+cube; one absent sector is forbidden by face-H support and three pass B
+compatibility but fail literal S2.  The raw address therefore determines the
+reflection orbit but needs one sheet-orientation bit to determine the literal
+tiling.
+
+This also identifies the positional boundary exactly.  At
 `n=9`, each nonfixed layer has at most three positions and the four-position
 fixed layer has only three free after apex orientation, so per-state count and
 first moment reconstruct the literal layer.  At `n=10`, `{0,3}` and `{1,2}`
-first defeat count-plus-sum.  Thus raw-S2 injectivity remains open at `n=9`,
-but an exact first-moment repair is already proved available there.
+first defeat count-plus-sum.  Static raw-S2 injectivity is now refuted at
+`n=9`, while a minimal one-bit skew repair is proved there.  Continuation
+purity under lift, deletion, and centered-CF copy remains open.
 
 ## Continued-fraction connection
 

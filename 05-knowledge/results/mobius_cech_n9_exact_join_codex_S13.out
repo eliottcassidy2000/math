@@ -1,0 +1,19 @@
+THM-828 EXACT N=9 TWO-FACE JOIN
+R8 rows/offdiag=5997416/3900264 H support/max=876512/26
+L[d] support/max=249149/5360 syndromes(total/nonzero)=16384/16383
+shard=0/1 processed=16383
+AC matches=9540 B-kernel=636 upper-colour=636
+D support face-pair/AC/B/full=319/45/16/11 max L_A/L_C/C-bucket/AC-per-D=4104/4104/16/7944
+S2 prefix tau3,tau4,tau5,tau6,tau7,tau8,fixed9=636,636,88,82,68,58,58
+full witnesses=58 endpoints=116 reflection-fixed-pairs=58 pair-FNV1a64=0x53b4b074be8ae851
+face-difference-nonzero ABC=111:58,101:0
+pure-black UABC=KKKK=58 three-cross=58 distinct-six-node-triples=58
+D multiplicities=192486:6,8c2c0c:2,95088a:2,11b4600:2,18e4e8a:4,1976a0c:4,4483414:4,4511092:2,4c41818:26,5c67a9e:2,5df5e18:4, weights=8:44,12:8,16:6, first-M1 tau5/tau6/tau7=38/12/8 J-vectors=11 zero-sum/clock=42/8 file=05-knowledge/results/mobius_cech_n9_exact_join_witnesses_codex_S13.tsv
+reflection-defect span rank=4 occupied/missing=11/4 missing=1026286,4dd3c9e,54a5692,5537214
+occupied-cube graph edges/diameter=14/5 degrees=1:1,2:4,3:5,4:1 coordinate-edges=4,3,3,4
+missing-sector gates d:LA/LC/AC/B/S2=1026286:0/0/0/0/0,4dd3c9e:8/8/4/4/0,54a5692:1028/1028/7944/504/0,5537214:12/12/4/4/0,
+black curvature tuple-preserved/Smith-wall=58/58 q-pairs=(0,0):13,(0,1):5,(0,2):8,(1,1):5,(1,2):2,(1,3):2,(2,3):6,(3,3):3,(3,4):2,(3,5):10,(4,5):1,(5,7):1,
+raw-codec fibres singletons/doubletons/cells/excess/max=134217612/58/134217670/58/2
+TOURNAMENT ANALYSIS vertices=11 occupied reflection-defect sectors
+  observable=(first skew layer,Hamming weight,fibre multiplicity); switches=structural/empirical; tie-path=hex D
+  both gauges: score histogram 0..10 once, C3=0, SCC=1^11, Hamiltonian paths=1; edge flips=22

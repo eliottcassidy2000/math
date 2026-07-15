@@ -1,10 +1,10 @@
 ---
 id: THM-818
 title: The n=9 lower-codec collision search is an exact three-way Cech join over a 5,997,416-row n=8 equality relation
-status: PROVED REDUCTION + FINITE-EXACT R8 CENSUS; the n=9 join remains open
+status: PROVED REDUCTION + FINITE-EXACT R8 CENSUS; exact n=9 join completed by THM-828
 source: codex-2026-07-15-S13
 depends_on: [THM-553, THM-796, THM-801, THM-809]
-related: [THM-811, THM-814, HYP-6880]
+related: [THM-811, THM-814, THM-825, THM-828, HYP-6880]
 verification:
   - 04-computation/mobius_cech_n9_relation_preflight_codex_S13.py
   - 05-knowledge/results/mobius_cech_n9_relation_preflight_codex_S13.out
@@ -37,9 +37,9 @@ The equality relation in (1) has exactly
 |R_8| = 5,997,416,       |R_8 \ Delta| = 3,900,264.       (2)
 ```
 
-Of its rows, `5,216` are blue and `5,992,200` are black.  The complete join
-has **not** yet been executed; (1)--(2), the reduction, and the memory
-preflight are the claims proved here.
+Of its rows, `5,216` are blue and `5,992,200` are black.  This theorem proves
+the reduction and relation census.  THM-828 subsequently executes the
+complete join and classifies its 58 final doubletons.
 
 ## Exact three-face reduction
 
@@ -86,12 +86,10 @@ following filters in this order:
 1. remove the all-diagonal locus `r_A,r_B,r_C in Delta`, which is precisely
    `u=v`;
 2. retain pairs whose reconstructed upper apex bits are **both** zero
-   (equivalently the two marked B-face apex coordinates vanish); the both-one
-   case is the simultaneous-complement duplicate.  A mixed pair is not a pair
-   of canonical apex-zero representatives for the ordered codec; independently
-   complementing its apex-one member swaps every ordered endpoint pair, and
-   any collision obtained after that canonicalization is already represented
-   in the both-zero join;
+   (equivalently the two marked B-face apex coordinates vanish), because the
+   codec domain consists of canonical apex-zero representatives.  The exact
+   relation does contain `285,244` rows in each mixed-apex orientation, but
+   those rows lie outside this canonical comparison domain;
 3. require equality of the upper colour bit `chi_9(u)=chi_9(v)`.  Together
    with the three face-colour coordinates already equal in `H_8`, this is
    exactly equality of the full `UABC` word;
@@ -198,7 +196,9 @@ This separates two questions which were previously conflated:
 - whether raw counts already distinguish every `n=9` collision;
 - whether a small, guaranteed-exact positional repair exists if they do not.
 
-The answer to the second is yes before the join is run.
+THM-828 answers the first: raw counts leave exactly 58 disjoint reflection
+doubletons.  It answers the second more sharply: one antisymmetric chirality
+bit, smaller than the full first-moment sidecar, repairs all 58.
 
 ## Structural interpretation
 
@@ -241,8 +241,8 @@ witnesses `(x,y)`; nodes are merely their quotient labels.  This reduction is
 finite and exact, but it is neither an all-size Markov theorem nor a proof of
 the fourteen-runner case.
 
-The next computation is now sharply specified: materialize or stream the
-off-diagonal part of `R_8`, build indexes for the three projections in (3),
-execute the exact join, apply the four filters above, and report the
-layer-by-layer `S2` collision genealogy together with the three THM-809 face
-codes of every survivor. ∎
+THM-828 carries out this target by a stronger difference-syndrome
+factorization: raw-S2 equality restricts `u xor v` to a 14-dimensional code,
+and the `A/C` faces then glue the upper pair uniquely.  The complete join has
+9,540 overlap matches, 636 B-compatible candidates, and 58 final pairs.  Its
+survivor differences span a punctured rank-four reflection-defect cube. ∎

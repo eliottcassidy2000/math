@@ -582,13 +582,23 @@ certificate clauses, and proof obligations.
   labels.  Exact census gives `5,997,416` rows, only `3,900,264`
   off-diagonal.  Lower-base collisions are precisely compatible triangles in
   `R_8^3`, followed by the both-apex-zero, upper-colour, and full-S2 filters.
-  This passes the single-machine memory gate; the triangle join itself remains
-  open.  The identical join one level down takes `113,632` `R_7` rows to
+  This passes the single-machine memory gate.  The identical join one level down takes `113,632` `R_7` rows to
   `1,672` ordered triangles, `836` apex-zero pairs, and exactly the `418`
   unordered THM-809 collisions, validating the ordered role-specific overlap
   convention.  At `n=9`, count plus first positional moment is still guaranteed to
   reconstruct every layer; `{0,3}` versus `{1,2}` makes `n=10` the first
   unconditional ambiguity.
+- **Delivered complete `n=9` decision by THM-828:** raw-S2 equality first
+  restricts `u xor v` to a 14-dimensional parity code, after which the `A/C`
+  faces cover and glue the upper pair uniquely.  The exact ladder is 9,540
+  A/C matches, 636 B-compatible candidates, and 58 final disjoint
+  doubletons.  Every doubleton is `{u,sigma u}`, is pure black, has three
+  cross-node faces, and lies on the Smith wall.  The eleven occupied
+  differences span a punctured rank-four mirror-defect cube.  One skew
+  chirality bit repairs every pair, proving that position—not another scalar
+  curvature—is the missing datum.  The next pull is continuation: act on this
+  15-sector cube by the THM-812/813 centered-CF copies, inverse lifts, and
+  internal deletion before minimizing it.
 
 ### MPA-35 — Minimize the corewise Boolean Möbius stalk
 
@@ -641,6 +651,14 @@ certificate clauses, and proof obligations.
   disintegrate these 17 cells by endpoint-node orbit/stabilizer and
   `(abs(epsilon),lambda)` to explain the odds sandwich rather than merely
   census it.
+- **`n=9` curvature disintegration boundary by THM-828:** all 58 residual
+  raw-codec doubletons preserve the complete `(q0,q1,S,epsilon)` tuple and lie
+  on `epsilon=0`, even though their eleven difference masks occupy a
+  structured rank-four cube.  Curvature cannot orient these two reflection
+  sheets.  The certified missing coordinate is the sign of the first nonzero
+  layerwise skew moment.  Thus further scalar curvature refinement is the
+  wrong repair precisely on the Smith wall; couple curvature to positional
+  chirality or a literal `Q`-orbit stalk.
 - **Must preserve:** apex orientation, raw-bit convention, both line endpoints,
   literal multiplicity, and reflection pairing.  Signed epsilon alone cannot
   explain quotient drift.
@@ -797,11 +815,12 @@ certificate clauses, and proof obligations.
 
 ## Recommended next three pulls
 
-1. Join `MPA-32/34/35`: execute THM-818's ordered three-way join on the exact
-   `R_8` kernel relation, apply the canonical-apex/upper-colour/S2 ladder, and
-   explain every survivor by an endpoint-fixed interior permutation or the
-   smallest missing corewise Möbius coefficient.  Then add inverse lifts and
-   internal deletion to distinguish static exactness from continuation.
+1. Join `MPA-32/34/35/38`: THM-828 has completed THM-818's static join and
+   isolated a punctured rank-four mirror-defect cube.  Apply the centered-CF
+   coordinate copies, inverse lifts, and internal deletion to its fifteen
+   nonzero sectors; test whether the cube is invariant, splits into THM-813
+   `Q` orbits, or maps into THM-814's positional-curvature kernel.  Minimize
+   only after composing these operations.
 2. Join `MPA-30/36`: use the exact Smith/Möbius coordinates to explain black
    drift after orbit/fibre disintegration, where signed symmetry itself cannot.
 3. Join `MPA-28/38/40`: extend THM-813's canonical reflection-orbit line action
