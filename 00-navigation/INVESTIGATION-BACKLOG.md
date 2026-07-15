@@ -147,7 +147,14 @@
   scale-one radius-five chart is closed at arbitrary lift height.  The live
   shallow obligations are now an arbitrary-AP-scale radius-five deck descent,
   followed by separation of the genuine `2[12]` orbit from non-AP rows in the
-  finite scale-one radius-six tree.
+  finite scale-one radius-six tree.  In that tree retain equality flags and
+  shortcut-seam ancestry and test the rigidity target: every tight terminal
+  reconstructs `2[12]`; primitivity would then remove the sole equality orbit.
+  At radius seven replace the failed mean-density coefficient by the
+  fractional covering LP on residual-component--comb incidence.  Seek a
+  Farkas-dual component weighting whose overlap refund is positive whenever
+  seven combs cover; this is a theorem-facing potential, unlike a tournament
+  score or total danger mass.
 - **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
   primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
   and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
@@ -262,10 +269,20 @@
   language after normalization, and THM-847 closes all 96 proper mixed
   one-plus-order-three contexts in 31,715 states. Thus THM-823's complete
   effective-order-at-most-twelve common-sheet bank is empty. Extend
-  common-sheet classification above order twelve; do not promote scalar
-  attenuation to a metric closure. Retain active boundary words: a global cell
-  mask without activation bits miscounts components and invalidates the
-  recursive discrepancy bound.
+  common-sheet classification above order twelve. A concrete next carrier is
+  the common-sheet incidence nerve whose vertices are labelled progression
+  obligations and whose edges carry gcd/Bezout transport gains. Starting from
+  THM-823's pivot `min D_i<=21`, prove that every compatible simplex either
+  descends to the now-closed bounded languages, has nonzero cycle holonomy,
+  leaves a strict residual component, or forces divisor descent. Do not promote
+  scalar attenuation or a gain-free coset tournament to a metric closure.
+  Retain active boundary words: a global cell mask without activation bits
+  miscounts components and invalidates the recursive discrepancy bound.
+  The incoming S13g closed-return computation is a useful non-LRC analogy:
+  three generators already produce `46,126` maps and `20,419`
+  future-refinement classes, so one seam bit is not operation-closed. Do not
+  import its finite counts; import the requirement that the proposed gain
+  quotient be a congruence for every named scale, lift, and descent operation.
 - **Open deep theorem:** rule out the remaining persistent folded covers in
   THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
   deletion inequality automatic.  For an even maximum `2R`, put

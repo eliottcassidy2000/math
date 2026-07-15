@@ -80,6 +80,20 @@ mixed proper-lift boundary `3b+39` lives in that progression sidecar and is
 invisible to the coset tournament. On the deep folded side, THM-831 shows the
 corresponding failure is already ternary: an ordered three-component switch and
 a winding guard are required where any binary runner ranking is too small.
+The concurrent THM-852/HYP-6905 pull supplies an independent tournament
+guardrail: the attractive small-size law `2 selfK=SC` fails at `n=8`
+(`404!=176`) even though its Klein-four orbit and involution skeleton survive.
+It does not alter an LRC theorem, but it reinforces the same discipline:
+small-size metagraph numerology is a shadow until the operation and terminal
+predicate are proved on its fibres.
+The concurrent S13g computation attached to the reserved THM-853 stub gives a
+second, operation-level warning. Its three closed continued-fraction returns
+generate `46,126` literal maps and `20,419` future-refinement classes on the
+58-cell defect bank; only the identity and `B` are simultaneously Q-injective
+and full-descent in the recorded census. This is finite metagraph telemetry,
+not an LRC transfer theorem, but it demonstrates why one iterated seam bit is
+not a recursively closed state. The analogue worth importing is the question:
+which congruence is stable under the whole named operation semigroup?
 
 ## 0. Two corrections before any synthesis
 

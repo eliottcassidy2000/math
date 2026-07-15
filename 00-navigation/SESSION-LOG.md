@@ -64378,6 +64378,24 @@ proof obligations are legitimate vertices only with the metric/arithmetic
 stalk that makes the next operation Markov. Each quotient must record both the
 LRC predicate it preserves and the information it destroys.
 
+A concurrent live-main pull added THM-852/HYP-6905, which refutes the proposed
+all-size black self-line law `2 selfK=SC` at `n=8` (`404!=176`) while retaining
+the Klein-four orbit and involution skeleton. It does not change any LRC
+closure above. It is nevertheless relevant signal for the tournament lane:
+an exact small-size count identity can fail at the next size even when its
+group-action scaffold survives, just as a transitive erosion tournament can
+change hundreds of edges without carrying cover truth.
+
+The next pull added the S13g exact artifact for the still-reserved THM-853
+closed continued-fraction return semigroup: `46,126` maps, `3,149`
+idempotents, and `20,419` future-refinement classes on the 58-cell Q bank. Only
+identity and `B` are both Q-injective and full-descent in that census, and the
+artifact explicitly challenges the assumption that one iterated seam bit is
+a closed recursive state. No LRC metric field is present, so this is not used
+in any proof above. Its valid transfer is methodological: the next H5
+gain-labelled nerve must be audited under the whole scale/ramification
+operation semigroup, not one preferred insertion or deletion.
+
 The exact remaining frontier is now:
 
 - unbounded-effective-order common-sheet and other arbitrary-scale H5 deck
