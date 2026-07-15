@@ -164,6 +164,19 @@ function complementLineToTilings(lineRef,n=N){
   return Number.isSafeInteger(index)&&size._lineByIndex?.[index]
     ?size._lineByIndex[index].tilings.slice():[];
 }
+function complementLineToMergedNodes(lineRef,n=N){
+  const size=addressSizeDataFor(n);
+  if(!size)return[];
+  const index=Number.isSafeInteger(lineRef)?lineRef:lineRef?.index;
+  const line=Number.isSafeInteger(index)?size._lineByIndex?.[index]||null:null;
+  return line?line.endpointNodeRanks.map(rank=>size._byRank[rank]):[];
+}
+function mergedNodeToComplementLines(nodeRef,color=null,n=N){
+  const size=addressSizeDataFor(n),node=size?resolveAddressNode(size,nodeRef):null;
+  if(!node||![null,'blue','black'].includes(color))return[];
+  return(size._linesByNode?.[node.rank]||[])
+    .filter(line=>color===null||line.color===color).slice();
+}
 function mergedNodePairToComplementLines(nodeA,nodeB,color=null,n=N){
   const size=addressSizeDataFor(n);
   if(!size||![null,'blue','black'].includes(color))return[];
@@ -192,11 +205,14 @@ function auditComplementLineAPI(n=N){
       line.endpointNodeRanks[0],line.endpointNodeRanks[1],line.color,n
     );
     if(!queried.some(candidate=>candidate.index===line.index))failures.push(`pair-fibre:${line.index}`);
+    const endpointNodes=complementLineToMergedNodes(line,n);
+    if(endpointNodes.length!==2||endpointNodes.some((node,i)=>node.rank!==line.endpointNodeRanks[i]))failures.push(`line-nodes:${line.index}`);
     const incidenceTotal=line.incidence.reduce((sum,item)=>sum+item.multiplicity,0);
     if(incidenceTotal!==2||(line.isLoop&&line.incidence.length!==1))failures.push(`incidence:${line.index}`);
   }
   for(const node of size.nodes){
-    const incident=lines.reduce((sum,line)=>sum+line.incidence
+    const nodeLines=mergedNodeToComplementLines(node,null,n);
+    const incident=nodeLines.reduce((sum,line)=>sum+line.incidence
       .filter(item=>item.nodeRank===node.rank)
       .reduce((subtotal,item)=>subtotal+item.multiplicity,0),0);
     if(incident!==node.tiling_masks.length)failures.push(`degree:${node.id}`);
@@ -207,6 +223,8 @@ window.tilingToMergedNode=tilingToMergedNode;
 window.mergedNodeToTilings=mergedNodeToTilings;
 window.tilingToComplementLine=tilingToComplementLine;
 window.complementLineToTilings=complementLineToTilings;
+window.complementLineToMergedNodes=complementLineToMergedNodes;
+window.mergedNodeToComplementLines=mergedNodeToComplementLines;
 window.mergedNodePairToComplementLines=mergedNodePairToComplementLines;
 window.mergedMetagraphSupportedSizes=mergedMetagraphSupportedSizes;
 window.auditComplementLineAPI=auditComplementLineAPI;
@@ -854,7 +872,7 @@ window.metagraphAddressReady=fetch('../../05-knowledge/results/tournament_tiling
     addressAtlas=data;
     for(const size of addressAtlas.sizes){
       size._byMask={};size._byRank={};size._byNodeId={};
-      size._lineByIndex={};size._lineFibres={};
+      size._lineByIndex={};size._lineFibres={};size._linesByNode={};
       for(const node of size.nodes){
         size._byRank[node.rank]=node;
         size._byNodeId[node.id]=node;
@@ -882,6 +900,8 @@ window.metagraphAddressReady=fetch('../../05-knowledge/results/tournament_tiling
             ]
         };
         size._lineByIndex[index]=line;
+        for(const rank of new Set(ranks))
+          (size._linesByNode[rank]||(size._linesByNode[rank]=[])).push(line);
         for(const color of [line.color,'*']){
           const key=complementLineKey(color,ranks[0],ranks[1]);
           (size._lineFibres[key]||(size._lineFibres[key]=[])).push(line);

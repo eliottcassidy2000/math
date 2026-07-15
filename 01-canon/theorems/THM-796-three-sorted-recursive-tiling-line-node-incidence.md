@@ -96,11 +96,14 @@ exposes the executable maps
 ```text
 tilingToMergedNode, mergedNodeToTilings,
 tilingToComplementLine, complementLineToTilings,
+complementLineToMergedNodes, mergedNodeToComplementLines,
 mergedNodePairToComplementLines.
 ```
 
 The line descriptor keeps both endpoints even for a loop and records incidence
-multiplicity two at its single node.
+multiplicity two at its single node.  The exact browser atlas currently covers
+`n=3..6`; the same relations through `n=7` are stored in the offline theorem
+JSON.
 
 ## 2. Exact two-face pullback of tilings
 
