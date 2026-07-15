@@ -36,9 +36,10 @@ destroys the magnitudes and incidence of c_ij and therefore cannot replace
 the coloured graph or certify Hunter positivity by itself.  That information
 loss is an intentional assumption challenge required by AGENTS.md.
 
-Scope: these are six finite exact packet audits.  Positive Hunter values in
-four packets and negative values in two packets do not prove a uniform
-radius-seven theorem and do not classify all projective-ratio packets.
+Scope: the kernel, covariance, scalar-floor, and coherent-margin identities
+are all-size algebraic certificates.  The packet sign census itself contains
+only six finite exact audits; four positive and two negative values do not
+classify all projective-ratio packets or close the full radius-seven chart.
 """
 
 from __future__ import annotations
@@ -152,6 +153,96 @@ def projective_pair(x: int, y: int) -> tuple[int, int, int]:
 def projective_defect(a: int, b: int) -> F:
     assert 1 <= a <= b and gcd(a, b) == 1
     return F(q13(a + b) - q13(b - a), 169 * a * b)
+
+
+def determinant(matrix: tuple[tuple[int | F, ...], ...]) -> F:
+    """Fraction-exact determinant for the small projective kernel audit."""
+    rows = [[F(value) for value in row] for row in matrix]
+    total = F(1)
+    for column in range(len(rows)):
+        pivot = next(
+            (row for row in range(column, len(rows)) if rows[row][column]), None
+        )
+        if pivot is None:
+            return F(0)
+        if pivot != column:
+            rows[column], rows[pivot] = rows[pivot], rows[column]
+            total = -total
+        value = rows[column][column]
+        total *= value
+        for index in range(column, len(rows)):
+            rows[column][index] /= value
+        for row in range(column + 1, len(rows)):
+            scale = rows[row][column]
+            for index in range(column, len(rows)):
+                rows[row][index] -= scale * rows[column][index]
+    return total
+
+
+def projective_kernel_certificate() -> tuple[int, ...]:
+    """Prove the mod-13 sawtooth numerator is PSD of rank six."""
+    kernel = tuple(
+        tuple(q13(row + column) - q13(row - column) for column in range(13))
+        for row in range(13)
+    )
+    assert all(kernel[i][j] == kernel[j][i] for i in range(13) for j in range(13))
+    assert all(sum(row) == 0 for row in kernel)
+    assert all(kernel[row][0] == 0 for row in range(13))
+    for column in range(1, 7):
+        assert all(
+            kernel[row][column] + kernel[row][-column % 13] == 0
+            for row in range(13)
+        )
+
+    # Restrict to the odd basis e_i-e_-i.  The displayed closed form and
+    # positive leading minors give a rational Sylvester certificate.
+    odd_block = tuple(
+        tuple(
+            kernel[i][j]
+            - kernel[i][-j % 13]
+            - kernel[-i % 13][j]
+            + kernel[-i % 13][-j % 13]
+            for j in range(1, 7)
+        )
+        for i in range(1, 7)
+    )
+    assert odd_block == tuple(
+        tuple(8 * min(i, j) * (13 - 2 * max(i, j)) for j in range(1, 7))
+        for i in range(1, 7)
+    )
+    normalized_minors = tuple(
+        determinant(tuple(row[:size] for row in odd_block[:size])) / (8**size)
+        for size in range(1, 7)
+    )
+    expected = (11, 117, 1183, 10985, 85683, 371293)
+    assert normalized_minors == expected
+    return expected
+
+
+def coherent_scale_margin() -> F:
+    """Universal coefficient in the coherent common-scale Hunter bound."""
+    reciprocal_squares = sum((F(1, value * value) for value in range(1, 8)), F(0))
+    residue_margin = F(11) - 6 * reciprocal_squares
+    assert residue_margin == F(56719, 29400)
+    hunter_margin = residue_margin / 169
+    assert hunter_margin == F(4363, 382200)
+    return hunter_margin
+
+
+def projective_edge_floor() -> F:
+    """Sharp scalar floor after reducing a projective speed pair."""
+    exceptional = tuple(
+        (F(q13(a + b) - q13(b - a), a * b), a, b)
+        for a in range(1, 23)
+        for b in range(a, 23)
+        if a * b <= 22 and gcd(a, b) == 1
+    )
+    assert len(exceptional) == 31
+    assert min(exceptional) == (F(-11, 6), 1, 12)
+    # For ab>=23, Q(a+b)-Q(b-a)>=-42>=-11ab/6.
+    floor = F(-11, 6 * 169)
+    assert floor == F(-11, 1014)
+    return floor
 
 
 class DSU:
@@ -427,6 +518,28 @@ def audit_packet(name: str, speeds: tuple[int, ...], core: Intervals) -> PacketA
         pair_masses[edge] = restricted
         credits[edge] = credit
 
+    density = F(2, 13)
+    restricted_gram = [[F(0) for _ in range(order)] for _ in range(order)]
+    for i in range(order):
+        diagonal = (1 - 2 * density) * masses[i] + density * density * e
+        assert diagonal == F(22, 169) * e + F(9, 13) * anomalies[i]
+        restricted_gram[i][i] = diagonal
+    for i, j in combinations(range(order), 2):
+        direct = (
+            pair_masses[(i, j)]
+            - density * masses[i]
+            - density * masses[j]
+            + density * density * e
+        )
+        completed = credits[(i, j)] - density * (anomalies[i] + anomalies[j])
+        assert direct == completed
+        restricted_gram[i][j] = restricted_gram[j][i] = direct
+    frozen_gram = tuple(tuple(row) for row in restricted_gram)
+    for size in range(1, order + 1):
+        for indices in combinations(range(order), size):
+            principal = tuple(tuple(frozen_gram[i][j] for j in indices) for i in indices)
+            assert determinant(principal) >= 0
+
     pair_tree_prim = prim_max_tree(pair_masses, order)
     pair_tree_kruskal, _ = kruskal_max_tree(pair_masses, order)
     assert pair_tree_prim == pair_tree_kruskal
@@ -473,6 +586,15 @@ def audit_packet(name: str, speeds: tuple[int, ...], core: Intervals) -> PacketA
 
 def edge_name(edge: Edge) -> str:
     return f"A{edge[0] + 1}A{edge[1] + 1}"
+
+
+def sign_census(values: tuple[F, ...]) -> tuple[int, int, int]:
+    """Return positive, zero, and negative counts in that order."""
+    return (
+        sum(value > 0 for value in values),
+        sum(value == 0 for value in values),
+        sum(value < 0 for value in values),
+    )
 
 
 def print_packet(audit: PacketAudit, reference: TournamentFingerprint | None) -> None:
@@ -552,6 +674,16 @@ def main() -> None:
     print("edge=h(projective ratio), eta(endpoint pullback), c=e*h+eta")
     print("identity=Hunter=11e/169-sum(s_i)+MST(c)")
     print("kruskal_word=graphic-rank increments at descending distinct c levels")
+    print(
+        "projective_H13=PSD rank 6; even kernel dimension 7; "
+        f"normalized_odd_minors={projective_kernel_certificate()}"
+    )
+    print(
+        f"coherent_common_scale_bound=L>={coherent_scale_margin()}*e-26*c_E/g"
+    )
+    print(
+        f"global_projective_covariance=PSD; sharp_edge_floor={projective_edge_floor()}"
+    )
 
     audits = tuple(audit_packet(name, speeds, core) for name, speeds in PACKETS)
     signs = tuple(audit.hunter > 0 for audit in audits)
@@ -582,9 +714,26 @@ def main() -> None:
     print("\nCROSS-PACKET VERDICT")
     print(f"hunter_signs={signs} expected=(True,True,True,True,False,False)")
     print("all_interval_masses=exact Fraction; direct/decomposition identities=PASS")
+    print("restricted node-edge covariance Gram: all principal minors nonnegative=PASS")
     print("Prim=Kruskal and Kruskal threshold-rank integral=MST(c): PASS")
+    for audit in audits:
+        colours = tuple(audit.edge_colours.values())
+        contributing_levels = tuple(
+            level
+            for level, row in enumerate(audit.thresholds, start=1)
+            for _ in range(row.rank_increment)
+        )
+        print(
+            f"  {audit.name}: h(+0-)={sign_census(tuple(x.h for x in colours))} "
+            f"eta(+0-)={sign_census(tuple(x.eta for x in colours))} "
+            f"c(+0-)={sign_census(tuple(x.credit for x in colours))} "
+            f"kruskal_contributing_levels={contributing_levels}"
+        )
     print("Tournament quotient is transitive in all six packets and is NOT sufficient for MST(c)")
-    print("HONEST SCOPE: six finite pilots only; uniform radius-seven closure remains open")
+    print(
+        "HONEST SCOPE: all-size algebraic certificates plus six finite packet verdicts; "
+        "full radius-seven closure remains open"
+    )
 
 
 if __name__ == "__main__":

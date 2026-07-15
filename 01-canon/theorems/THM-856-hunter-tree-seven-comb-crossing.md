@@ -1,12 +1,12 @@
 ---
 id: THM-856
 title: Hunter tree functional at the seven-comb wall — the first-moment schema is empty, while the ideal independent-density Hunter coefficient is positive for seven combs and negative for eight; exact pair overlap is a two-sided mod-13 sawtooth around 4/169, so uniform radius-seven closure still requires projective-ratio and restricted-overlap control
-status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, the `2c_E/g` projective pullback bound, and the exact node/edge anomaly decomposition + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the radius-seven chart.
-source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge defect decomposition added by codex-2026-07-15-S15
+status: PROVED Hunter/Kounias functional, first-moment no-go, ideal-density coefficient, exact one-comb periodicity, corrected exact global pair-overlap formula, the `2c_E/g` projective pullback bound, exact node/edge anomaly and tropical recursion laws, the rank-six projective Gram kernel, and an explicit asymptotic closure of coherent pairwise-coprime common-scale seven-comb packets + FINITE-EXACT radius-seven pilots. The original S312 claims that global pair overlap is at least 4/169, that its leading term is `(a+b)^2/(169ab)`, that near-equal speeds are precisely the global minimum, and that a raw-speed `C(E)/x_min` deficit lemma can hold uniformly are REFUTED by the S14 correction below. NOT a closure of the full radius-seven chart.
+source: opus-2026-07-15-S312; corrected by codex-2026-07-15-S14 after live-pull referee; node/edge covariance, tropical recursion, and coherent-ray closure added by codex-2026-07-15-S15
 depends_on:
   - THM-815 Part C   # the recursion whose union bound dies at 7 combs
 related: [THM-778 (mechanical words — the near-equal residual's tool), THM-855 F6 (the moment-closure lens that led here), LRC14-FRONTIER item 3]
-verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out
+verification: 05-knowledge/results/seven_comb_resonance_pilot_opus_S312.out, hunter_tree_wall_crossing_opus_S312.out, hunter_pair_overlap_exact_referee_codex_S14.out, seven_comb_node_edge_defect_algebra_codex_S15.out
 ---
 
 # THM-856 — the Hunter tree bound at the seven-comb wall
@@ -176,6 +176,313 @@ number or average of nonnegative edges.  Equations (3.7)--(3.9) turn the open
 uniform step into a finite-type projective edge-classification problem once
 the rational-prefix periodic tables for `s_i` and `eta_ij` are fixed.
 
+## 3.6 The defects form a restricted covariance algebra
+
+There is a canonical all-packet completion of the coloured graph.  Put
+`p=2/13` and define centered functions on the circle by
+
+```text
+F_E=1_E-e,                  F_i=1_(D_(x_i))-p.
+```
+
+Then the vertex and global projective defects are ordinary correlations:
+
+```text
+s_i=<F_E,F_i>,              h_ij=<F_i,F_j>.                (3.9a)
+```
+
+In particular, for every packet, not only a coherent common-scale packet, the
+matrix with off-diagonal entries `h_ij` and diagonal `22/169` is positive
+semidefinite.  Its rank need not be six.
+
+The additional prefix information is the centered third moment
+
+```text
+theta_(Eij)=integral F_E F_i F_j.
+```
+
+Expanding the indicators gives the exact ANOVA identities
+
+```text
+eta_ij=p(s_i+s_j)+theta_(Eij),
+c_ij=e h_ij+p(s_i+s_j)+theta_(Eij).                         (3.9b)
+```
+
+Equivalently, the restricted Gram matrix
+
+```text
+G^E_ij=integral_E F_i F_j
+      =c_ij-p(s_i+s_j),                         i!=j,
+G^E_ii=p(1-p)e+(1-2p)s_i
+      =22e/169+9s_i/13                                      (3.9c)
+```
+
+is positive semidefinite.  Thus valid node/edge colours lie in a constrained
+Gram cone.  For every pair,
+
+```text
+|c_ij-2(s_i+s_j)/13|^2
+ <=(22e/169+9s_i/13)(22e/169+9s_j/13),                     (3.9d)
+```
+
+and all higher principal-minor inequalities also hold.  This is a stronger
+structural statement than the separate error bound (3.4): `s_i` is the
+prefix--comb covariance, `h_ij` the comb--comb covariance, and the genuinely
+new edge stalk is the prefix--comb--comb correlation `theta_(Eij)`.
+
+For a tree `T`, (3.9b) also rewrites the defect evaluator as
+
+```text
+L_H=(165-22m)e/169
+    +max_T [sum_(ij in T)(e h_ij+theta_(Eij))
+             +sum_i(2 deg_T(i)/13-1)s_i].                  (3.9e)
+```
+
+Node colours therefore couple to tree degree; erasing node--edge incidence
+loses even this covariance form.
+
+## 3.7 The projective sawtooth is a six-channel odd kernel
+
+The numerator in (3.6) has more structure than its sign table suggests.  On
+`Z/13`, put
+
+```text
+H_(r,s)=Q(r+s)-Q(r-s).                                      (3.10)
+```
+
+Let `C_Q` be circular convolution by the even function `Q` and let
+`(Rf)(s)=f(-s)`.  Then
+
+```text
+H=C_Q(R-I).                                                 (3.11)
+```
+
+Consequently `H` is symmetric, every row sums to zero, and it kills the
+seven-dimensional reflection-even subspace.  On the odd basis
+`u_i=e_i-e_(-i)`, `1<=i<=6`, its Gram matrix is
+
+```text
+u_i^T H u_j = 8 min(i,j)(13-2 max(i,j)).                    (3.12)
+```
+
+The six normalized leading principal minors are
+
+```text
+11, 117, 1183, 10985, 85683, 371293,
+```
+
+so the odd restriction is positive definite.  Hence `H` is positive
+semidefinite of rank six and its kernel is exactly the even sector.
+Equivalently,
+
+```text
+H_(r,s)=2 sum_(k=1)^6
+  sin(2 pi k r/13) sin(2 pi k s/13) / sin(pi k/13)^2.       (3.13)
+```
+
+This follows directly by Fourier transforming `Q`; (3.12) and its integer
+minors give a rational certificate independent of trigonometric numerics.
+
+If a packet has one common scale `x_i=g a_i` and the `a_i` are pairwise
+coprime, its global projective defects are therefore off-diagonal entries of a
+six-dimensional Gram matrix:
+
+```text
+h_ij=<z(a_i),z(a_j)>,
+z_k(a)=sqrt(2) sin(2 pi k a/13)/(13a sin(pi k/13)).          (3.14)
+```
+
+This is a sufficient coherent-reduction condition for the explicit rank-six
+completion, not a characterization of every packet.  When pairwise gcd
+reductions disagree, the general `L^2` Gram completion from (3.9a) still
+exists, but these six residue coordinates do not assemble directly into one
+packet.  Even under (3.14), the restricted credits `c_ij` need not be positive
+semidefinite: the third moments in (3.9b) are additional edge data.  Thus the
+residue sawtooth is a six-channel reflection-odd current, not an arbitrary
+13-by-13 sign table, but it is only one layer of the Hunter state.
+
+There is also a sharp all-packet scalar floor.  For every reduced coprime pair,
+
+```text
+h_ij >= -11/1014,                                           (3.14a)
+```
+
+with equality at projective ratio `1:12`.  Indeed the numerator in (3.3) is
+at least `-42`; this proves the claim when `a_ij b_ij>=23`, and the 31 coprime
+pairs with product at most 22 have unique minimum
+`[Q(a+b)-Q(b-a)]/(ab)=-11/6` at `(1,12)`.  A seven-vertex tree has six edges,
+so for every speed packet
+
+```text
+11/169+MST(h)>=0.                                           (3.14b)
+```
+
+Thus projective defects alone can consume, but cannot cross, the ideal
+seven-comb margin.  This bound is deliberately non-strict: `1:12` edges can
+occur along multiplicative chains, while alternative maximum-tree edges may
+improve the packet.  Strict uniform progress has to use ratio consistency,
+the node covariances `s_i`, or the third moments `theta_(Eij)`.
+
+## 3.8 Exact recursion and the edge-order tournament
+
+Write `tau(G)=MST(c)` for a finite weighted graph, with `tau=-infinity` when
+no spanning tree exists and `tau(K_1)=0`.  Splitting spanning trees according
+to whether they use a nonloop edge `e` gives tropical deletion--contraction:
+
+```text
+tau(G)=max(tau(G without e), c_e+tau(G/e)).                 (3.15)
+```
+
+Parallel labelled edges created by contraction must remain separate when
+tree multiplicity or tie structure matters; for the value alone they may be
+merged by taking their maximum.  A bridge makes the deletion branch
+`-infinity`, and a loop is simply deleted.
+
+There is also an exact node-insertion recursion.  Add a new comb vertex `v`
+to the complete weighted graph on `V`, and write `d_i=c_(iv)`.  Then
+
+```text
+tau(G+v)=max_(pi partition of V)
+  [sum_(B in pi) tau(G[B]) + sum_(B in pi) max_(i in B)d_i]. (3.16)
+```
+
+Indeed, deleting `v` from a spanning tree leaves a forest whose components
+are the blocks `B`; each block has exactly one edge back to `v`.  Conversely,
+optimal trees inside the blocks plus one maximizing `v`-edge per block form a
+spanning tree.  For a noncomplete graph, restrict to blocks for which `G[B]`
+is connected and which meet the star of `v`.
+
+Put
+
+```text
+Delta_G(pi)=tau(G)-sum_(B in pi)tau(G[B]).
+```
+
+Then the insertion surplus is
+
+```text
+Gamma_v(G)=tau(G+v)-tau(G)
+ =max_pi [sum_(B in pi) max_(i in B)d_i-Delta_G(pi)],        (3.17)
+```
+
+and the Hunter defect updates exactly by
+
+```text
+L_(m+1)=L_m-22e/169-s_v+Gamma_v(G).                         (3.18)
+```
+
+The full induced-tree profile `S -> tau(G[S])`, equivalently its partition-
+defect profile, is therefore a recursively sufficient node colour for adding
+one comb at fixed `E`.  This is not a finite-state or minimality theorem, and
+if the prefix set changes then `e`, `s`, and `c` must also be transported.
+
+Tournament Analysis becomes exact only after changing its vertex set and
+retaining a sidecar.  Put the graph edges at tournament vertices, orient
+`e -> f` when `c_e>c_f`, and declare a fixed endpoint gauge inside ties.  A
+tie Hamiltonian path is a compatible descending order `e_1,...,e_N`.  With
+`rho` the graphic-matroid rank, define
+
+```text
+k_j=rho({e_1,...,e_j})-rho({e_1,...,e_(j-1)}) in {0,1}.     (3.19)
+```
+
+Greedy accepts exactly the edges with `k_j=1`, so
+
+```text
+sum_j k_j=m-1,            tau(G)=sum_j c_(e_j)k_j.          (3.20)
+```
+
+Individual `k_j` values inside a tie level depend on its gauge.  The invariant
+block count at level `lambda` is
+
+```text
+k_lambda=rho(E_(>=lambda))-rho(E_(>lambda)),                (3.21)
+```
+
+which is the rank jump already used in (3.9).  After contracting the
+components formed by higher-credit edges, a level-`lambda` edge that becomes a
+loop lies in no maximum tree, a bridge of the level quotient lies in every
+maximum tree, and every other nonloop level edge is optional.  This gives an
+exact recursive three-colour classification of edge roles.
+
+The edge-order tournament plus the graphic circuit/rank sidecar preserves the
+Hunter evaluator.  The tournament alone does not: away from ties it is always
+transitive, and attaching the same ordered values to a different incidence
+pattern changes (3.19).  Moreover, the present `(lambda,k_lambda)` vector
+evaluates `tau(G)` but does not determine future node insertions; (3.16) needs
+the induced-subgraph profile.  A useful coarse signed grade is
+
+```text
+delta_+(c)=m-1-rho({e:c_e>0})=kappa({e:c_e>0})-1,           (3.22)
+```
+
+the exact number of nonpositive edges Kruskal must still add.  Positive
+credits contain a spanning tree exactly when every nontrivial vertex cut has
+a positive crossing credit.
+
+## 3.9 A coherent common-scale family closes asymptotically
+
+The Gram form gives a genuine uniform subcase of the open radius-seven step.
+Let `E` be a fixed union of `c_E` circle intervals, of measure `e`, and let
+
+```text
+x_i=g a_i,        i=1,...,7,
+gcd(a_i,a_j)=1    for i!=j,                                (3.23)
+```
+
+with the seven speeds distinct.  Then every pair has the same common scale
+`g`, so (3.14) is one coherent Gram packet.  A uniformly random labelled
+spanning tree of `K_7` contains each edge with probability `2/7`.  Therefore
+
+```text
+MST(h) >= (2/7)sum_(i<j)h_ij
+       = (1/7)(|sum_i z(a_i)|^2-sum_i|z(a_i)|^2)
+       >= -1/(7*169) sum_i Q(2a_i)/a_i^2.                  (3.24)
+```
+
+The same full-cell/partial-cell proof as (3.4), now for one comb, gives
+
+```text
+|s_i|<=2c_E/(g a_i),             |eta_ij|<=2c_E/g.         (3.25)
+```
+
+Take an `h`-maximizing tree in the definition of `MST(c)`.  It has six edges,
+so its endpoint discrepancy is at least `-12c_E/g`.  Equations
+(3.8), (3.24), and (3.25) yield the sharper packet-dependent bound
+
+```text
+L_H >= e/169 [11-(1/7)sum_i Q(2a_i)/a_i^2]
+       -(2c_E/g)[6+sum_i 1/a_i].                           (3.26)
+```
+
+For a uniform form, sort the distinct positive integers `a_(i)`, so
+`a_(i)>=i`, and use `Q<=42`.  Then
+
+```text
+11-(1/7)sum_i Q(2a_i)/a_i^2
+ >= 11-6sum_(i=1)^7 1/i^2
+  = 56719/29400.
+```
+
+Also `sum_i 1/a_i<=7`.  Hence
+
+```text
+L_H >= (4363/382200)e - 26c_E/g.                           (3.27)
+```
+
+In particular Hunter proves noncoverage whenever
+
+```text
+g > 26c_E*382200/(4363e).                                  (3.28)
+```
+
+This is an all-scale closure along every fixed coherent ray (3.23), leaving
+only finitely many common scales on that ray.  It is not a raw-speed theorem:
+if the pairwise gcd reductions disagree, the common Gram packet and the common
+endpoint error `2c_E/g` both disappear.  Such incoherent packets, together
+with the finite initial scales in (3.28), remain part of the full radius-seven
+frontier.
+
 ## 4. The periodicity lemma (the finite table for E-restricted masses)
 
 For a prefix safe set E with rational endpoints and a scale-one lift
@@ -196,6 +503,19 @@ packets {499..505}, {32..38}: Hunter −0.001, −0.017 while actual uncovered =
 0.055, 0.040 — still far from tight.  These are exact finite witnesses that
 the functional can succeed and fail.  In view of (3.3), they do not prove
 that consecutive packets are the unique failure locus.
+
+The S15 node/edge replay checks all six packets directly with exact interval
+arithmetic.  The four random packets have connected positive-credit graphs,
+and their Kruskal trees use six positive edges.  In both consecutive packets
+all 21 endpoint discrepancies and all 21 total credits are negative, even
+though the projective terms `h_ij` are positive on 14 and 18 edges respectively.
+Their failure is therefore prefix-coupled, not visible in the global sawtooth
+sign.  Conditional-overlap tournaments on the seven proof events are
+transitive in all six packets (score histogram `0,...,6`, singleton SCCs, no
+directed triangles, one Hamiltonian path); this fingerprint occurs on both
+sides of Hunter positivity and is a deliberately lossy quotient.  The
+historical high consecutive stress packet `{499,...,505}` has residues
+`5,...,11`, not the scale-one chart `6,...,12`, and is retained with that scope.
 
 ## 6. What remains for a radius-7 closure (named residuals)
 

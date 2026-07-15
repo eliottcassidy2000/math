@@ -652,6 +652,74 @@ sum of edge-credit thresholds times jumps in the graphic rank
 a vertex-period and edge-threshold incidence language.  An edge histogram or
 average pair density is not sufficient.
 
+The S15 refinement identifies the algebra behind those colours.  With
+`p=2/13`, `F_E=1_E-e`, and `F_i=1_(D_(x_i))-p`,
+
+```text
+s_i=<F_E,F_i>,                 h_ij=<F_i,F_j>,
+theta_(Eij)=integral F_E F_i F_j,
+c_ij=e h_ij+p(s_i+s_j)+theta_(Eij).                       (B9)
+```
+
+Thus the completed restricted matrix
+
+```text
+G^E_ij=c_ij-p(s_i+s_j),                         i!=j,
+G^E_ii=22e/169+9s_i/13                                  (B10)
+```
+
+is PSD for every packet.  The edge discrepancy is not free noise: after its
+node contribution is removed, it is the centered prefix--comb--comb third
+moment.  All principal minors of (B10) constrain admissible node and edge
+colours.
+
+The global projective covariance has two further exact forms.  For arbitrary
+gcd patterns, `h_ij=<F_i,F_j>` has a PSD completion with constant diagonal
+`22/169`.  On `Z/13`, the sawtooth numerator is
+
+```text
+H_(r,s)=Q(r+s)-Q(r-s)=C_Q(R-I),                            (B11)
+```
+
+a rank-six PSD kernel whose kernel is the seven-dimensional reflection-even
+sector.  A common-scale packet with pairwise-coprime quotients therefore has
+an explicit six-dimensional sine Gram realization.  The sharp scalar floor
+is `h_ij>=-11/1014`, at reduced ratio `1:12`; six such edge floors exactly
+cancel, but cannot cross, the ideal `11/169` margin.
+
+The tree functional is recursively closed by more than its present value.
+Tropical deletion--contraction is exact, while insertion of a vertex `v` obeys
+
+```text
+MST(G+v)=max_(pi partition of V)
+ [sum_(B in pi)MST(G[B])+sum_(B in pi)max_(i in B)c_(iv)]. (B12)
+```
+
+Hence the induced-subtree/partition-defect profile is sufficient for the next
+comb insertion.  Ordering graph edges by credit gives a transitive tournament;
+its graphic-rank derivative is the Kruskal acceptance word.  The tournament
+alone loses incidence.  After higher levels are contracted, a level edge is a
+loop (in no maximum tree), a bridge (in every maximum tree), or an optional
+nonloop (in some but not all), giving an exact three-colour edge classifier.
+
+Finally, the rank-six realization closes a genuine infinite family.  If seven
+distinct residual speeds have the coherent form `x_i=g a_i` with pairwise-
+coprime `a_i`, then
+
+```text
+L_H >= e/169[11-(1/7)sum_i Q(2a_i)/a_i^2]
+       -(2c_E/g)[6+sum_i 1/a_i]
+    >= (4363/382200)e-26c_E/g.                            (B13)
+```
+
+Every fixed coherent ray is therefore loose beyond an explicit common scale;
+only finitely many `g` remain on it.  This does not close incoherent pairwise-
+gcd packets.  In the exact six-packet replay, all four Hunter successes have
+positive-credit spanning trees.  Both consecutive failures instead have all
+21 endpoint and total credits negative despite 14 and 18 positive projective
+terms.  Their conditional-overlap tournaments are still transitive, locating
+the failure in the joined third-moment edge field.
+
 THM-840 now separates those operations exactly.  The THM-822 quantitative
 liar pair has the same `H0=H1`, but inserting the same labelled speed `(6,19)`
 creates different handoffs; neither coarse observation is insertion-Markov.

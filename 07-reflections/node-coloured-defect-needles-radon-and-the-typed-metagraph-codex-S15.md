@@ -496,6 +496,114 @@ Hunter pair defects must remain coupled to the two comb vertices and the
 prefix endpoints. In each case, a marginal contains every scalar value and
 still loses the operation.
 
+The node and edge defects are, more precisely, moments of one centered
+indicator algebra. Put `p=2/13`, `F_E=1_E-e`, and
+`F_i=1_(D_(x_i))-p`. Then
+
+```text
+s_i=<F_E,F_i>,                    h_ij=<F_i,F_j>,
+theta_(Eij)=integral F_E F_i F_j,
+c_ij=e h_ij+p(s_i+s_j)+theta_(Eij).                         (6.9a)
+```
+
+The completed restricted edge matrix is a Gram matrix:
+
+```text
+G^E_ij=c_ij-p(s_i+s_j),                         i!=j,
+G^E_ii=22e/169+9s_i/13.                                   (6.9b)
+```
+
+Therefore it is positive semidefinite, coupling every node colour to every
+incident edge through all principal-minor inequalities. The previously named
+endpoint error is
+`eta_ij=p(s_i+s_j)+theta_(Eij)`: its irreducible part is a third centered
+moment. This is the exact sense in which the prefix supplies a new stalk. It
+also aligns the Kakeya algebra with the tournament Walsh viewpoint: both are
+graded moment algebras of centered Boolean observables, although one lives on
+the circle and the other on the arc cube.
+
+The projective part nevertheless has an exact compression. On `Z/13`, its
+numerator kernel is
+
+```text
+H_(r,s)=Q(r+s)-Q(r-s)=C_Q(R-I).                             (6.9c)
+```
+
+It annihilates the seven-dimensional reflection-even sector and is positive
+definite on the six-dimensional odd sector. In the basis
+`u_i=e_i-e_(-i)`, its matrix is
+
+```text
+u_i^T H u_j=8 min(i,j)(13-2 max(i,j)).                      (6.9d)
+```
+
+Thus `H` is a rank-six positive-semidefinite Gram kernel. For a common-scale,
+pairwise-coprime packet the global `h_ij` values are inner products of six
+residue sine channels. Pairwise gcd changes break that direct common
+embedding, and the endpoint terms `eta_ij` remain outside it. The correct
+split is a low-rank reflection-odd residue current plus a prefix-coupled
+metric correlation.
+
+For arbitrary gcd patterns the `L^2` covariance Gram from (6.9a) survives,
+with diagonal `22/169`, though its rank can grow. The exact scalar floor is
+`h_ij>=-11/1014`, attained at reduced ratio `1:12`. Consequently every
+seven-vertex tree has projective sum at least `-11/169`, exactly the negative
+of the ideal Hunter margin. The projective layer alone therefore reaches a
+nonnegative wall but supplies no uniform strict slack; strictness must come
+from ratio consistency or the joined `s,theta` stalk.
+
+The tropical evaluator is itself recursively describable. If
+`tau(G)=MST(c)` and a new comb vertex `v` has incident credits `d_i`, then
+
+```text
+tau(G+v)=max_(pi partition of V)
+ [sum_(B in pi)tau(G[B])+sum_(B in pi)max_(i in B)d_i].      (6.9e)
+```
+
+Deleting `v` from a tree proves the formula. It shows exactly what insertion
+must preserve: induced subtree values and best incident credits on every
+partition block. The current tree value or threshold word alone is not closed
+under the next insertion.
+
+Equivalently, put graph edges at tournament vertices and order them by credit.
+The resulting tournament is transitive away from its declared tie gauge. With
+the graphic-matroid rank sidecar, its binary derivative
+
+```text
+k_j=r({e_1,...,e_j})-r({e_1,...,e_(j-1)})
+```
+
+has six ones and gives `MST(c)=sum_j c_(e_j)k_j`. Without endpoint incidence,
+the same transitive tournament cannot determine the word. At each credit
+level, contracting higher levels gives a three-way edge classification: loops
+occur in no maximum tree, bridges in every maximum tree, and other nonloops in
+some but not all. This is a literal tournament/metagraph correspondence: edge
+order is the tournament shadow and graphic circuits are the information it
+destroys.
+
+The Gram form also closes a real seven-comb subfamily. For a fixed prefix `E`
+with `c_E` components and `e=mu(E)`, suppose the seven residual frequencies
+are `x_i=g a_i` with the `a_i` pairwise coprime. Uniform-tree averaging, the
+single-comb endpoint bound, and the pair pullback bound give
+
+```text
+L_H >= e/169[11-(1/7)sum_i Q(2a_i)/a_i^2]
+       -(2c_E/g)[6+sum_i 1/a_i]
+    >= (4363/382200)e-26c_E/g.                              (6.9f)
+```
+
+Hence every fixed coherent ray is Hunter-positive beyond an explicit common
+scale. This is new asymptotic territory, but not the full radius-seven chart:
+incoherent pairwise gcd patterns do not share one Gram or endpoint scale.
+
+The exact six-packet replay makes the two layers visible. All four positive
+Hunter pilots have connected positive-credit graphs. Both consecutive pilots
+have all 21 `eta_ij<0` and all 21 `c_ij<0`, although 14 and 18 of their 21
+global projective defects are positive. Their conditional-overlap tournaments
+remain transitive with the same coarse fingerprint as the successful pilots.
+The signed-credit connectivity grade, not that tournament fingerprint,
+detects the change.
+
 This also distinguishes linear tomography from tropical selection. The
 Radon transform first adds valued atoms along affine lines. Hunter first
 forms restricted pair atoms and then selects a maximum tree. Averaging edge
@@ -707,6 +815,10 @@ line count:             |L_n|=2^(m_n-1)                 (m_n>0)
 cyclic triangles:       C3=binom(n,3)-sum_i binom(d_i,2)
 mean Hamilton paths:    mu_n=n!/2^(n-1)
 H drift:                b_H=2(K-nH)/binom(n,2)
+projective H13 kernel:  rank=6, kernel=reflection-even sector
+restricted covariance: G^E_ij=c_ij-(2/13)(s_i+s_j) is PSD
+Hunter defect:          L_m=(165-22m)e/169-sum_i s_i+MST(c)
+Kruskal derivative:     MST(c)=sum_j c_(e_j) Delta r_j
 score OU law:           E[Delta x|T]=-8(x-n(n-1))/(n(n-1))
 defect composition:     delta_total=delta_1+delta_2
 black endpoint parity:  4 | Q_black, 2 | selfK
@@ -746,9 +858,10 @@ that can be joined and then subjected to (9.1).
    prefix, beginning with the 903 `f<=2` rows, six open `f=3` rows, and the
    exceptional mixed-parity branch left by THM-815 C.2.
    Classify its projective edge types, rational-period stalks, Kruskal rank
-   word, and first negative Hunter certificate. Test whether failed packets
-   share a finite operation-stable edge language before invoking an AP-window
-   argument.
+   word, and first negative Hunter certificate. Remove the now-finite coherent
+   pairwise-coprime common-scale rays first; test whether the remaining
+   incoherent gcd packets share a finite operation-stable edge language before
+   invoking an AP-window argument.
 8. Join the Hunter tree word to the AP-pin cycle word. Test whether every
    negative tree certificate either has an expanding directed handoff cycle
    or descends to one of the six product-`1/16` rows. Retain exact endpoints

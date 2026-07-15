@@ -920,6 +920,33 @@ certificate clauses, and proof obligations.
   in graphic-matroid rank `m-kappa(F_l)`.  Only connectivity-changing levels
   contribute, but a histogram of edge values is insufficient because it
   loses their incidence on comb vertices.
+- **Exact node-edge moment algebra:** with centered danger indicators `F_i`
+  and centered prefix indicator `F_E`, `s_i=<F_E,F_i>` and
+  `h_ij=<F_i,F_j>`.  The restricted matrix
+  `G^E_ij=c_ij-(2/13)(s_i+s_j)` has diagonal
+  `22mu(E)/169+9s_i/13` and is PSD.  The remaining endpoint stalk is the
+  third moment `integral F_E F_i F_j`, so node and edge colours obey all Gram
+  principal-minor constraints rather than varying independently.
+- **Exact residue factor:** the projective numerator
+  `H_(r,s)=Q(r+s)-Q(r-s)` on `Z/13` is `C_Q(R-I)`.  It kills the seven
+  reflection-even channels and is positive definite on the six odd channels.
+  This gives a six-dimensional Gram description for common-scale pairwise-
+  coprime packets.  Pairwise gcd changes and endpoint discrepancies are
+  separate stalks and prevent promotion to an arbitrary-packet Gram theorem.
+- **Exact recursive/tournament carrier:** tropical deletion--contraction holds,
+  and insertion of a new comb is a maximum over set partitions of the old
+  vertices, summing induced subtree values and one best new edge per block.
+  Ordering graph edges by credit gives a transitive edge-vertex tournament;
+  adjoining the graphic-matroid rank derivative recovers the Kruskal word and
+  `MST(c)`.  Without the circuit/incidence sidecar the tournament is lossy.
+- **Coherent-ray closure and exact replay:** for seven pairwise-coprime reduced
+  speeds at common scale `g`,
+  `L_H>=(4363/382200)mu(E)-26c_E/g`; every fixed such ray closes beyond an
+  explicit scale.  In six exact pilots, the four successes have connected
+  positive-credit graphs.  Both consecutive failures have all 21 endpoint
+  discrepancies and credits negative although their projective defects are
+  mostly positive.  Conditional-overlap tournaments remain transitive on both
+  sides, so signed-credit cut rank is the relevant coarse classifier.
 - **Incoming cycle-dual by THM-815 C.2:** an antipodal AP cusp gives each
   owner vertex an exact germ cap `B_r(P)` and each oriented provider edge a
   multiplicative weight `c([as])/2`.  If every vertex avoids its cap, a
@@ -940,10 +967,12 @@ certificate clauses, and proof obligations.
   as the boundary input for the seven-comb vertex/edge colours and for
   arbitrary-sheet transport.  Include rational-period words for single and
   endpoint anomalies, and join each Kruskal rank word to its directed AP-
-  handoff cycle word.  Quotient by projective type only after checking
-  operation congruence under the next insertion/peel; test whether every
-  recurrent negative tree class is an expanding handoff class or an AP/
-  mechanical-word stalk.
+  handoff cycle word.  Remove coherent common-scale rays by the proved
+  asymptotic bound, then classify the remaining pairwise-gcd incidence
+  patterns.  Quotient by
+  projective type only after checking operation congruence under the next
+  insertion/peel; test whether every recurrent negative tree class is an
+  expanding handoff class or an AP/mechanical-word stalk.
 - **Must preserve:** prefix component endpoints, comb vertex identity,
   reduced pair ratio, common scale, mod-13 phase, endpoint discrepancy, and
   the incidence of each credit in the threshold graphs; for AP pins also keep

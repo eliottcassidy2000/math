@@ -91,6 +91,20 @@ not a raw-speed inequality.  It also supplies the nonlinear analogue of the
 factor/gradient preservation rule: marginal values are insufficient when
 their incidence with sources, targets, or endpoints is forgotten.
 
+The exact S15 replay verifies this decomposition on all six historical pilots.
+The four positive packets contain positive-credit spanning trees; both
+consecutive failures have all 21 endpoint and total credits negative despite
+14 and 18 positive projective sawtooth terms.  The projective numerator matrix
+is a rank-six PSD kernel on the reflection-odd `Z/13` sector.  At full packet
+scope, centered danger indicators give the PSD completion
+`G^E_ij=c_ij-(2/13)(s_i+s_j)`; the irreducible endpoint field is a centered
+prefix--comb--comb third moment.  Tropical
+deletion--contraction, a set-partition node-insertion law, and an edge-order
+tournament with graphic-rank sidecar now give exact recursive forms.  Uniform
+tree averaging closes every fixed pairwise-coprime common-scale seven-comb ray
+beyond the explicit bound `L_H>=(4363/382200)e-26c_E/g`.  The bare conditional-
+overlap tournament is transitive in all six pilots and loses the Hunter verdict.
+
 LIVE-PULL H6 DUAL: THM-815 C.2 turns each antipodal AP cusp into a vertex germ
 cap and each oriented owner/provider handoff into a multiplicative edge.  If
 all caps are evaded, a directed cycle of product at most one is necessary.
@@ -107,11 +121,12 @@ even half is the Reynolds-invariant `A+B-C` chart.  The odd chart must retain
 the geometrically distinct equal-size corner, written
 `A+B+D-C-E-F+G`; scalar cancellation of C against D loses transport.
 
-ARTIFACTS: THM-848/849/850/851/854/856; five exact S15 scripts plus the
+ARTIFACTS: THM-848/849/850/851/854/856; six exact S15 scripts plus the
 chi7 charge referee and their stored outputs; the holistic reflection
 `node-coloured-defect-needles-radon-and-the-typed-metagraph-codex-S15.md`;
 MPA-42 and frontier/backlog/index corrections.  Fast exact replays and syntax
-checks passed, including the pulled AP-pin and shell-template audits; the
+checks passed, including the pulled AP-pin, shell-template, and exact
+seven-comb node/edge audits; the
 expensive n=8 H-gradient and self-line outputs were reused from their
 hash-guarded exact runs.
 
