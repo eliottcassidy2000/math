@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-twelve common-sheet H5 survivor language uniformly loose at arbitrary lift height; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, and 14 of 923 primitive-core H6 label rows are now closed by antipodal AP-pin handoff; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and the universal single-column endpoint-grid template refuted in the other three; global emptiness remains OPEN in unbounded-order H5 descent, the remaining 909 primitive-core H6 rows plus the exceptional mixed-parity branch, arbitrary-scale H6 transport, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, and every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts; the remaining common-sheet presentation bank is finite with `min D_i<=21<max D_i<=42,336`, is {2,3,7}-smooth, and has no private prime power; the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; nonprimitive scale-one H6 is uniformly loose except for the doubled-AP equality, and 14 of 923 primitive-core H6 label rows are now closed by antipodal AP-pin handoff; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and the universal single-column endpoint-grid template refuted in the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the remaining 909 primitive-core H6 rows plus the exceptional mixed-parity branch, arbitrary-scale H6 transport, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-815 C.2 closes 14 of the 20 primitive-core H6 rows with three full
@@ -54,6 +54,7 @@ depends_on:
   - THM-845
   - THM-847
   - THM-856
+  - THM-858
   - HYP-6750
   - HYP-6775
 related:
@@ -71,6 +72,7 @@ related:
   - THM-845
   - THM-847
   - THM-856
+  - THM-858
   - MISTAKE-143
 ---
 
@@ -661,8 +663,9 @@ by THM-845 (zero-height faces reduce to already closed lower Hamming radii).
 THM-847 now closes every proper mixed one-plus-order-three lift; its order-one
 speed is exactly `3(b+13h)`, `h>=1`, while `h=0` is THM-816's Hamming-four
 face.  Thus every survivor language with all five effective orders at most
-twelve is closed.  Remaining work is unbounded common-sheet classification,
-not a stronger scalar cutoff.
+twelve is closed.  At that stage the apparent remaining work was unbounded
+common-sheet classification, not a stronger scalar cutoff; THM-858 below turns
+that apparent unboundedness into a finite ramification bank.
 
 THM-837 performs that metric erosion on one of the 96 all-order-three
 directed-flag/parity contexts, namely `C={1,5,8,12}`, `b=10`, bits
@@ -690,8 +693,60 @@ before depth five.  A standalone implementation reproduces the certificate,
 and an independent literal sheet census finds exactly those contexts among all
 `63,360` marked mixed presentations.  Both tournament gauges remain transitive
 while 395 edges flip.  Together THM-844/845/847 empty THM-823's complete
-effective-order-at-most-twelve common-sheet bank; unbounded common sheets and
-arbitrary deck descent outside that bank remain.
+effective-order-at-most-twelve common-sheet bank; before THM-858, common sheets
+outside that bank and arbitrary deck descent remained.
+
+THM-858 reaches the least-order pivot without asserting a false all-order
+cutoff.  For every nonempty colour set `S`, put
+
+```text
+L=lcm(D_j:j notin S),        m_i=D_i/gcd(D_i,L).
+```
+
+The complement misses some sheet at some owner, and colour `i` meets the
+resulting `L`-fibre in at most `ceil(2m_i/13)/m_i` of its points.  Hence every
+common-sheet cover obeys
+
+```text
+sum_(i in S) ceil(2m_i/13)/m_i>=1.                     (B8)
+```
+
+Singleton cuts forbid private maximal prime powers.  In the exact new bank
+through effective order 21 they reject 1,870 of 2,055 scalar rows; top-prime
+cuts reject the remaining 185, and a separate literal census finds zero
+covers among 51,360 unit words.  THM-823's uniform order-one classification
+supplies the branch omitted by that source.  Therefore all common-sheet
+languages through order 21 are the already closed all-one, all-three, and
+mixed languages.  Any new common-sheet row must have
+
+```text
+min D_i<=21<max D_i<=42,336,
+every D_i {2,3,7}-smooth,
+D_i divides lcm(D_j:j!=i),
+and all cuts (B8).                                      (B9)
+```
+
+The upper endpoint is structural.  Apply (B8) at each adjacent `p`-adic
+valuation level.  For `p=2`, the only possible upper-set sizes are `2,3,4`,
+with level gaps at most `1,1,3`; for `p=3`, sizes `3,4` have gaps at most one;
+for `p=7`, only size four is possible and its gap is one.  Thus
+
+```text
+range(v_2)<=5,             range(v_3)<=2,
+range(v_7)<=1.                                            (B10)
+```
+
+Comparing every order primewise with THM-823's order `D_*<=21` gives
+`D_i<=D_*2^5 3^2 7<=42,336`.  The common-sheet presentation bank is therefore
+uniformly finite, though the arbitrary metric lifts in its surviving
+languages are not decided by this arithmetic bound.
+
+Raw and complement-conditioned capacity tournaments are transitive on all
+185 residual rows despite 574 edge flips.  The rejecting operation is a
+subset/complement cut, so the faithful carrier is instead the maximal-prime-
+power hypergraph decorated by complement-lcm fibres and affine owner-sheet
+intervals.  This is a genuine finite reduction of the H5 common-sheet object, not a
+global H5 or `n=12` closure.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -1044,8 +1099,10 @@ The uniform theorem now has two explicit residuals:
    tooth bank as soon as deletion or replacement is allowed. THM-837 first
    closes one all-order-three context with this state, and THM-844 closes all
    96 by the stronger longest-component recursion. THM-847 closes all 96 mixed
-   contexts, and THM-845 supplies all order one.  Classify and erode the
-   unbounded-order common-sheet languages.  Prove the remaining arbitrary-AP-scale
+   contexts, and THM-845 supplies all order one. THM-858 extends this closure
+   through effective order 21 and reduces every remaining common-sheet row to
+   the finite `{2,3,7}`-smooth strip (B9). Classify and erode that shared-
+   prime-power/complement-fibre language. Prove the remaining arbitrary-AP-scale
    descent without assuming common scale. THM-815 Part C also makes scale-one
    radius six finite, and Part C.1 proves that every nonprimitive row other
    than the genuine `2[12]` equality is loose.  Part C.2 further closes
@@ -1132,8 +1189,9 @@ arbitrary lift height. THM-840 identifies the operation-congruence boundary,
 and THM-837 closes one of the 96 arbitrary-height order-three contexts by the
 resulting active-endpoint recursion. THM-844 then closes all 96 with the
 state-wise longest-component cap, while THM-847 closes all 96 mixed contexts.
-Unbounded common sheets and all-scale deck descent remain the shallow H5
-residual; THM-815 also makes scale-one radius six recursively finite and its
+THM-858 closes every new common-sheet row through order 21.  The shallow H5
+residual is the finite smooth-ramified strip (B9) plus other all-scale deck
+descent; THM-815 also makes scale-one radius six recursively finite and its
 C.1 addendum closes the entire nonprimitive slice away from `2[12]`.  The
 remaining scale-one H6 chamber is primitive, and the discrepancy deficit is
 lost at seven. Arbitrary
@@ -1203,8 +1261,12 @@ deciding objects are therefore:
   of a three-coset cycle with a parity fibre, together with the symbolic
   order-one alternatives. THM-837 closes one of the 96 all-order-three metric
   contexts, THM-844 strengthens the cap and closes all 96, THM-845 closes all
-  order one, and THM-847 closes all 96 mixed contexts. Only unbounded-order
-  common-sheet languages remain on this shallow deck edge.
+  order one, and THM-847 closes all 96 mixed contexts. THM-858 adds the
+  complement-lcm fibre cut, closes every new order-through-21 row, and shows
+  that the live language is a finite `{2,3,7}`-smooth bank with
+  `max D_i<=42,336` and no private maximal prime power. On this edge the useful alternate vertices are prime-power
+  carrier hyperedges; they must retain complement fibres and affine interval
+  phase to preserve common-sheet coverage.
   The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict

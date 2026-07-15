@@ -261,7 +261,12 @@ obligations, and proof-carrier interfaces.
   effective-order-at-most-twelve common-sheet bank leaves all-one rows,
   forward all-three flags of the cycle `H->2H->4H->H`, and mixed one-plus-three
   quartets. THM-845, THM-844, and THM-847 respectively close those three
-  languages. On the deep two-sheet
+  languages. THM-858 then closes every new row through effective order 21 by
+  complement-lcm fibre cuts.  Iterating those cuts over adjacent valuation
+  levels bounds the `2,3,7` ranges by `5,2,1`, hence every remaining order by
+  42,336.  The scalar cone is infinite, but its common-sheet sublanguage is a
+  finite `{2,3,7}`-smooth prime-power carrier hypergraph with no singleton top edge.
+  On the deep two-sheet
   side, THM-824 proves that the **assembled symmetric return union** at ratio
   `(13d,5d)` has an exact two-radius evaluation quotient. THM-831 classifies
   that primitive no-switch quotient exactly on the sixteen folds
@@ -295,10 +300,18 @@ obligations, and proof-carrier interfaces.
   monotone addition but not for common deletion or exact `M`. The labelled
   future tooth bank may be forgotten only in the first operation class.
   THM-836's owner rankings are transitive in both directional gauges but lose
-  the simultaneous left/right minima and their mod-13 packing.
+  the simultaneous left/right minima and their mod-13 packing. THM-858 gives
+  the parallel five-deck failure sharply: raw and complement-conditioned
+  capacity tournaments are transitive on all 185 residual rows despite 574
+  flips, while a top-prime hyperedge cut rejects every row. Pairwise comparison
+  forgets the rejecting subset, its complement fibre, and affine interval
+  phase.
 - **Pairwise observable:** For diagnostic residue-obligation vertices, compare
   atomic cells exclusively ownable after the other ten groups are erased.
-  The exact observable ties on every pair in the height-12 census.
+  The exact observable ties on every pair in the height-12 census. For the
+  THM-858 five-colour order audit, compare
+  `rho(D_i)-rho(D_j)`, `rho(m)=ceil(2m/13)/m`; the conditioned gauge first
+  quotients both orders by the lcm of the other three colours.
 - **Switch/gauge:** Use residue order `1->2->...->12` only as a declared tie
   gauge. The resulting tournament is transitive with score histogram
   `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
@@ -314,9 +327,10 @@ obligations, and proof-carrier interfaces.
 - **Next pull:** Prove a uniform negative margin on the signed max-speed-cell
   by deep-component incidence in the persistent `s=2` cover; in the shallow
   branch, transport THM-845's component/comb recursion across AP scale and
-  extend common-sheet exclusion above order twelve. THM-844/845/847 discharge
-  every bounded survivor language, so the next shallow object is the
-  unbounded-order common-sheet/deck language. Use active boundary words, not a
+  classify the finite THM-858 strip
+  `min D_i<=21<max D_i<=42,336`. The next shallow object is
+  the `{2,3,7}` prime-power carrier hypergraph decorated by complement-lcm
+  fibres, affine owner intervals, and active boundary words, not a
   raw global cell mask. Then treat the ramified higher-`s`
   packets outside THM-816's closed quartic coset. Enumerate the finite
   scale-one Hamming-six tree and cross the seven-comb density wall. For the
@@ -327,7 +341,7 @@ obligations, and proof-carrier interfaces.
   sixteen viable no-switch folds and its ternary obstruction elsewhere.
 - **Pointers:** THM-769, THM-770, THM-765, THM-810, THM-815, THM-816,
   THM-817, THM-820, THM-823, THM-824, THM-829, THM-831, THM-836, THM-837,
-  THM-840, THM-844, THM-845, THM-847, HYP-6775, HYP-6820;
+  THM-840, THM-844, THM-845, THM-847, THM-858, HYP-6775, HYP-6820;
   `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
 
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk

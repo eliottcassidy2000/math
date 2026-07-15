@@ -1,6 +1,7 @@
 # The n=12 object is cover debt on periodic Kakeya combs
 
-*codex-2026-07-15-S14.  Companion to HYP-6820, THM-815/823/836/841/844/845/847,
+*codex-2026-07-15-S14, with codex-S10 relative-ramification continuation.
+Companion to HYP-6820, THM-815/823/836/841/844/845/847/858,
 and the exact Fano/chi7 flood and Hamming-six contraction audits.*
 
 ## 0. Honest verdict
@@ -11,8 +12,10 @@ global statement.  It did, however, remove several named residuals and change
 the shape of the remaining object:
 
 1. THM-847 closes the last effective-order-at-most-twelve Hamming-five
-   common-sheet language.  All-one, all-three, and mixed one-plus-three are now
-   uniformly empty at arbitrary lift height.
+   common-sheet language. THM-858 proves that no new language appears through
+   effective order 21. All-one, all-three, and mixed one-plus-three are the
+   complete list through 21 and are uniformly empty at proper lift height;
+   the remaining order bank is finite but not yet classified.
 2. The nonprimitive scale-one Hamming-six branch contracts exactly.  Its only
    possible tight row is the doubled AP `2[12]`; every other nonprimitive row
    is loose.  A subsequent AP-germ reduction closes fourteen of the twenty
@@ -30,6 +33,27 @@ the shape of the remaining object:
    a symmetry quotient and not a local three-needle closure.
 
 This is progress toward the sporadic theorem, not the theorem itself.
+
+The H5 continuation first changes “unbounded orders” from a vague size
+condition to an arithmetic incidence condition, and then removes the
+unboundedness.  If `S` is any nonempty colour set and
+`m_i=D_i/gcd(D_i,lcm(S^c))`, common-sheet coverage forces
+
+```text
+sum_(i in S) ceil(2m_i/13)/m_i>=1.
+```
+
+Thus no order has a private maximal prime power.  After the exact order-21
+census, every live order is `{2,3,7}`-smooth and any new row has
+`min D_i<=21<max D_i`.  Reapply the cut across adjacent valuation levels:
+the `2,3,7` exponent ranges are at most `5,2,1`.  Comparison with the order at
+most 21 gives `max D_i<=42,336`, so the presentation bank is uniformly finite.
+On the 185 last order-21 residuals, both raw and
+complement-conditioned order tournaments are transitive despite 574 edge
+flips, while a top-prime subset cut rejects every row.  The H5 analogue of
+cover debt is therefore a prime-power carrier hypergraph decorated by
+complement-lcm fibres and affine owner intervals.  A pair tournament sees the
+relative ranking but not the fibre on which union coverage fails.
 
 ## 1. Reframing the branch
 
@@ -347,8 +371,12 @@ The shortest honest route to the requested theorem is now:
    fourteen closed `f=3` rows to the six product-`1/16` rows, then the 903
    rows with `f<=2`, while keeping the exceptional mixed-parity odd-label
    branch separate.  Do not quotient by the antipodal count alone.
-2. **Unbounded H5 sheets:** classify common-sheet presentations with an
-   effective order above twelve.  The entire bounded bank is already empty.
+2. **Finite ramified H5 sheets:** classify the THM-858 strip
+   `min D_i<=21<max D_i<=42,336`.  Every order is `{2,3,7}`-smooth, every maximal
+   prime power is shared, and all complement-lcm relative-capacity cuts hold.
+   The complete bank through 21 is already reduced to the closed legacy
+   languages; the next recursion should act on the decorated prime-power
+   carrier hypergraph rather than enumerate the full rectangular order box.
 3. **Deep `s=5`:** the uniform single-numerator endpoint-grid template is
    impossible in all three remaining classes.  Seek a U-dependent or
    multi-column incidence certificate, a non-endpoint denominator, or the

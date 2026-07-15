@@ -66,7 +66,83 @@ checks passed, including the pulled AP-pin and shell-template audits; the
 expensive n=8 H-gradient and self-line outputs were reused from their
 hash-guarded exact runs.
 
-## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive scale-one H6 closed except `2[12]`; exact shell-five and H-drift refinements; toothpick and Fano shortcuts decided
+## codex-2026-07-15-S10 continuation -- THM-858 relative ramification uniformly bounds the H5 common-sheet order bank
+
+The all-order Hamming-five common-sheet problem now has a uniform
+complement-lcm cut.  For every nonempty colour set `S`, let
+
+```text
+L=lcm(D_j:j notin S),          m_i=D_i/gcd(D_i,L).
+```
+
+Every common-sheet cover satisfies
+
+```text
+sum_(i in S) ceil(2m_i/13)/m_i>=1.
+```
+
+Proof: THM-810/823 imply that the complement misses some sheet at some owner.
+On the resulting `L`-fibre, colour `i` samples one gcd coset of an affine
+half-open interval of length `2D_i/13`, hence covers at most
+`ceil(2m_i/13)/m_i` of the fibre.  Singleton cuts give
+`D_i|lcm(D_j:j!=i)`.  A twice-carried top prime power is necessarily dyadic
+with relative orders `(2,2)`; a three-carried top odd prime power is necessarily
+ternary with `(3,3,3)`; maximal seven-powers have at least four carriers; no
+prime at least eleven survives.  A top five-power would force all orders into
+`{5,10,15,20}`.
+
+The exact new bank `2<=D_i<=21`, `D_i!=13`, with some `D_i>12`, contains 2,055
+scalar rows.  Singleton cuts reject 1,870.  The remaining 185 occupy eight
+order patterns; top-prime cuts reject them as `{2:20,3:40,5:125}`.  A literal
+independent pass over all 51,360 unit words finds zero common-sheet covers,
+with best minimum sheet coverage `4/5`.  Direct and affine membership agree on
+264,960 tests and owner capacities on 18,288 tests.  THM-823 supplies the
+uniform order-one handoff, which this source deliberately does not enumerate.
+Together with THM-844/845/847, no new proper sporadic common-sheet language
+occurs through effective order 21.
+
+The remaining common-sheet strip is exact:
+
+```text
+min D_i<=21<max D_i<=42,336,
+all D_i {2,3,7}-smooth,
+no private maximal prime power,
+all complement-lcm cuts active.
+```
+
+The upper bound is another consequence of the same cuts, not a computation to
+height 42,336.  Across adjacent `p`-adic valuation levels, the possible upper-
+set sizes and exact ceiling capacities force
+
+```text
+range(v_2)<=5,             range(v_3)<=2,
+range(v_7)<=1.
+```
+
+THM-823 supplies an order `D_*<=21`; comparison prime by prime gives
+`D_i<=D_*2^5 3^2 7<=42,336`.  Thus the scalar family has infinite cones but
+its common-sheet effective-order sublanguage is uniformly finite.
+
+Tournament Analysis used raw and complement-conditioned relative-capacity
+gauges.  Both are transitive on all 185 residual rows even though 574 edges
+flip.  The rejecting object is higher-order: prime-power carrier hyperedges
+decorated by complement-lcm fibres and affine owner-sheet intervals.  This
+challenges colours/runners as the default vertices and records exactly what a
+bare pair tournament destroys.
+
+Artifacts: THM-858;
+`lrc13_hamming_five_effective_order_21_common_sheet_census_codex_S10.cpp/.out`;
+HYP-6820, frontier, tournament-index, backlog, reflection, and results-index
+updates.  `-O3`/`-O0` and sanitizer runs are byte-identical to the stored
+output.  Source/output SHA-256 are respectively
+`7d77552c0873a59532a509fe08f88b924c625ce5a308c7f5d00a0166c7dc98f1` and
+`19ec318f781f883d2e1b25119fd3a726616559b894dc196317d19ac745172134`.
+
+Honest limit: this does not classify the remaining finite strip, erode its new
+metric lift languages, close other arbitrary-scale H5 deck ramifications,
+close primitive/all-scale H6, or prove global `n=12` sporadic emptiness.
+
+## codex-2026-07-15-S14 -- n=12 cover-debt/Kakeya-comb session: bounded H5 bank empty; nonprimitive H6 closed except `2[12]`; fourteen primitive-core H6 rows closed; shell template, H-drift, toothpick, and Fano carriers decided
 
 Prompt (owner): prove the n=12 sporadic branch empty; work longer with frequent
 pulls/pushes; consider H-drift, toothpick self-similarity, Fano/`chi_7`, the

@@ -1,0 +1,77 @@
+Hamming-five effective-order-at-most-21 common-sheet census
+scope=1_in_R_subset_F13star size_R=5 orders={2,...,12,14,...,21} at_least_one_order_above_12
+orientation=(-D,D] exact_integer_capacity_and_centered_CRT
+normalization=presentations_containing_label_1_not_orbit_quotient
+
+METHOD
+scalar_filter=integer_scaled_by_232792560
+relative_cut: for S nonempty, T=complement, L_T=lcm(T), m_i=D_i/gcd(D_i,L_T), require sum_S ceil(2m_i/13)/m_i>=1
+affine_sheet_formula: k=e*ell+e*o^(-1)*13^(-1) (mod D), eligible k form one consecutive cyclic interval
+singleton_consequence=D_i_divides_lcm_of_other_four
+literal_crosscheck=all_unit_words_on_every_lcm_redundant_row
+
+SCALAR CENSUS
+conceptual rows: 817112670
+scalar rows: 4245
+scalar rows all orders <=12: 2190
+scalar rows with an order >12: 2055
+all five four-colour deletions have a strict scalar-deficit owner: 2055
+singleton-cut rejections: 1870
+lcm-redundant rows: 185
+lcm-redundant order patterns: 8
+  (2,2,5,20,20): 50
+  (2,2,9,9,18): 40
+  (2,2,10,20,20): 30
+  (2,3,3,10,15): 20
+  (2,3,3,18,18): 10
+  (3,3,3,5,15): 20
+  (3,3,3,18,18): 10
+  (3,10,10,15,15): 5
+
+RAMIFICATION CUT CENSUS
+top-prime cut rejections: {2:20,3:40,5:125}
+relative-cut-admissible rows: 0
+uniform corollary: every D_i divides lcm(other D_j); private maximal prime powers are impossible
+uniform prime corollary: primes >=11 cannot divide a surviving order; a twice-maximal prime power is the dyadic quotient (2,2)
+uniform odd corollary: a three-carrier maximal odd prime power can only be p=3 with relative quotients (3,3,3)
+combined prime-support corollary: every still-open effective order is {2,3,7}-smooth; p=5 would force all five orders into {5,10,15,20}, rejected here
+
+AFFINE/LITERAL AUDIT
+direct-versus-affine membership checks: 264960
+owner-capacity checks: 18288
+literal unit words on lcm-redundant rows: 51360
+literal common-sheet unit words: 0
+minimum uncovered-sheet deficit histogram: {3:1120,4:3120,5:7120,6:15600,7:9520,8:5240,9:1960,10:4320,11:640,12:1280,13:160,14:1280}
+best minimum covered fraction: 4/5 (words=1120)
+
+TOURNAMENT ANALYSIS
+vertices=replacement colours
+raw pair observable=ceil(2D_i/13)/D_i - ceil(2D_j/13)/D_j
+conditioned pair observable=the same after quotienting each order by gcd with the other-three lcm
+switch=raw_to_complement-conditioned; tie Hamiltonian order=increasing replacement label
+raw fingerprint count=185 scores={0:1,1:1,2:1,3:1,4:1} triangles=0 SCC-size-hist={1:5} Hamiltonian-paths=1
+conditioned fingerprint count=185 scores={0:1,1:1,2:1,3:1,4:1} triangles=0 SCC-size-hist={1:5} Hamiltonian-paths=1
+edge-flip histogram: {0:8,1:17,2:38,3:49,4:38,5:28,6:7}
+total raw/conditioned edge flips: 574
+raw ties=610 conditioned ties=1850
+tournament verdict=both gauges are always transitive despite 574 switches; pair rankings do not encode the rejecting subset cut
+
+ASSUMPTION CHALLENGE
+challenged default=vertices need not be runners or replacement colours
+faithful carrier=prime-power ramification hyperedges together with complement lcm fibres and affine owner-sheet intervals
+preserved by carrier=common-sheet predicate, gcd/Bezout fibre, owner deficit, interval phase, and relative capacity cut
+destroyed by bare tournament=which complement misses which sheet, the top-prime carrier set, affine phase, and union capacity
+
+VERDICT
+common-sheet rows with all 2<=D_i<=21 and some D_i>12: 0
+combined with THM-823: no new common-sheet language exists through effective order 21
+remaining shallow frontier: min D_i<=21, max D_i>=22, with every private-prime-power and relative-ramification cut excluded
+
+CERTIFICATES
+scalar hash: af4231c32cc90281
+singleton-cut hash: db7a88e6f2a9c01f
+ramification-cut hash: 6e6bc7e113010f55
+affine audit hash: e63f60d1e08af843
+literal audit hash: 1d686b9eff3986e5
+tournament hash: c7e27dac56d0f7c3
+payload hash: fb30afb76cb41691

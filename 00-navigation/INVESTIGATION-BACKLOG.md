@@ -274,14 +274,20 @@
   longest-component cap and closes all 96 in 28,876 states, with no cover and
   no depth-five terminal. THM-845 closes the all-order-one/common-scale
   language after normalization, and THM-847 closes all 96 proper mixed
-  one-plus-order-three contexts in 31,715 states. Thus THM-823's complete
-  effective-order-at-most-twelve common-sheet bank is empty. Extend
-  common-sheet classification above order twelve. A concrete next carrier is
-  the common-sheet incidence nerve whose vertices are labelled progression
-  obligations and whose edges carry gcd/Bezout transport gains. Starting from
-  THM-823's pivot `min D_i<=21`, prove that every compatible simplex either
-  descends to the now-closed bounded languages, has nonzero cycle holonomy,
-  leaves a strict residual component, or forces divisor descent. Do not promote
+  one-plus-order-three contexts in 31,715 states. THM-858 then proves the
+  complement-lcm fibre cut
+  `sum_(i in S)ceil(2m_i/13)/m_i>=1`, closes every new common-sheet row through
+  effective order 21, and reduces the live branch to
+  `min D_i<=21<max D_i<=42,336` with `{2,3,7}`-smooth orders and no private
+  maximal prime power.  The upper bound follows by applying the cut at every
+  adjacent valuation level: the `2,3,7` valuation ranges are at most `5,2,1`.
+  Extend common-sheet classification in this finite strip. A
+  concrete next carrier is the prime-power carrier hypergraph whose hyperedges
+  are decorated by complement-lcm fibres, affine owner intervals, and
+  gcd/Bezout transport gains. Enumerate valuation profiles and relative-cut-
+  admissible carrier hypergraphs before unit words; then prove that every
+  compatible decorated system either descends to the now-closed languages, has nonzero cycle
+  holonomy, leaves a strict residual component, or forces divisor descent. Do not promote
   scalar attenuation or a gain-free coset tournament to a metric closure.
   Retain active boundary words: a global cell mask without activation bits
   miscounts components and invalidates the recursive discrepancy bound.
