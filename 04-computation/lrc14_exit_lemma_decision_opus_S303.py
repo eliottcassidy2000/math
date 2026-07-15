@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """THM-783: the exit-lemma decision (opus-2026-07-14-S303; renumbered after collision).
 
-Owner directive: prove the unconditional exit lemma (THM-779 sec 5). This script
-first REFEREES the new algebra, then runs the decisive experiment.
+HISTORICAL/CORRECTION NOTE (codex-S10, THM-784/MISTAKE-147): this script
+referees necessary algebraic identities and records a bounded adversarial
+census. It is not a decisive experiment and does not prove a universal exit
+constant. A fixed slow rainbow plus an arbitrarily fast owner gives unbounded
+raw wall runs. THM-783 now states the corrected scopes.
 
 THE ALGEBRA (canonized in THM-783):
-  phi-recurrence: in a blocking run, with wall i = (m_i + 1/2)/w_{o_i} and
-  phi_i = w_{o_i}^{-1} m_i (mod 7): blocking propagates from wall i to wall i+1
-  iff  phi_{i+1} = phi_i + w_{o_i}^{-1} (mod 7).  Same-owner steps satisfy it
-  identically; every owner switch is one determined mod-7 equation.
+  phi-recurrence: starting from a covered simple wall i, if the next global
+  event coordinate is also simple, its wall is covered iff
+  phi_{i+1} = phi_i + w_{o_i}^{-1} (mod 7). Same-owner steps satisfy it
+  identically. The checks below test necessity on observed blocking runs; they
+  do not independently test the iff or the needed anchor/simplicity hypotheses.
   PERIOD-SUM LAW: telescoping over one period of any owner b walling twice:
   sum over a != b of n_a * w_a^{-1} = 0 (mod 7), n_a = #a-walls in the period
   (a Beatty count taking two adjacent values).
@@ -18,13 +22,13 @@ THE ALGEBRA (canonized in THM-783):
   owner's count alternate in lockstep; mod-7 cancellation reduces to
   sum over odd owners of +-w^{-1} = 0 mod 7, ONE tunable condition).
 
-THE DECISION: a large adversarial census (heights to 10^4) with targeted
-synchronized/near-ratio/mod-7-tuned seeds. Either runs stay bounded (supporting
-an unconditional K) or a packet family explodes (a genuine r=8 blocking family
-=> Q1 positive). All integer arithmetic.
+THE CENSUS: 300 sampled tuples (heights to 10^4) plus a 600-step anneal, with
+targeted synchronized/near-ratio/mod-7-tuned seeds, in windows of length 1/5.
+The observed maximum 6 is telemetry for those banks only. The script does not
+test the withdrawn de-phase claim or the corrected conditional extent theorem.
 
-PARTS: 1 referee vs S302 checker; 2 phi-recurrence == wall condition; 3 the
-census + packet experiments; 4 period-sum law verification; 5 verdict.
+PARTS: 1 referee vs S302 checker; 2 recurrence necessity on covered runs; 3 the
+bounded census + packet experiments; 4 period-sum samples; 5 telemetry summary.
 """
 import sys, os, random
 from fractions import Fraction as F
