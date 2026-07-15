@@ -78,6 +78,13 @@ with a tooth of `D_(u_r)` records which exception blocks that obligation.
 This is precisely the owner-sheet carrier isolated in THM-810, represented on
 the original time circle so that all overlaps remain visible.
 
+THM-810's lift-invariant `q=39` clock is consistent with this formulation,
+not an obstruction to (3). At each of its eight points two opposite core
+speeds have distance exactly `1/13`, so the point lies on the boundary of
+`E_R`, not in its strict interior. The clock explains why perturbing a common
+equality witness cannot prove looseness. The recursion below instead proves
+that some open core-safe component survives all four lifted exception combs.
+
 ## 2. A sharp interval-comb discrepancy lemma
 
 Let `E` be a union of `K` disjoint open intervals of total length `L`.  Put

@@ -1,0 +1,35 @@
+LRC13 RETURN SATELLITES — EXACT MAX-SPEED CELL CLASSIFIER
+arithmetic=integer+fractions.Fraction floating_point=none
+
+CELL_THEOREM
+coordinate=d=(k+e)/B, -2/143<e<2/143
+cell_interval=intersection_u [(-2B/143-[uk]_B)/u,(2B/143-[uk]_B)/u]
+component_count=N_R<=B
+gcd_sieve=N_R<=min_u gcd(u,B)*(2*floor(4B/(143*gcd(u,B)))+1)
+independent_random_crosschecks=213 component_histogram={1: 213}
+
+ADAPTIVE_SELECTOR
+bound=2*c_E*N_R+2*max(x,y)-2*gcd(x,y)
+coarse_bound=2*L*B+2W-2g<=20B^2+22B-2g
+satellite_row_old_L2_bound=12852476 adaptive_LN_bound=15234 coarse_scale_bound=5131850
+
+SIGNED_COMPLEMENT_METHOD_LIMIT
+U_0=(1, 2, 3, 4, 7, 500, 503, 504, 505, 506)
+properties=primitive,divisor_complete_2..12,exact_signed_complement_5_8,full_parity_twisted_support
+scalar_taxes_x13_y5=lhs_at_M_upper_1/5_261/16445<=rhs_36/845
+cell_label=-1 interval=[-2/1001,-141/71500] scaled=[-1/91,7/3250] owners=((7,),(500,))
+cell_label=0 interval=[-1/36179,1/36179] scaled=[-2/143,2/143] owners=((506,),(506,))
+cell_label=1 interval=[141/71500,2/1001] scaled=[-7/3250,1/91] owners=((500,),(7,))
+gcd_label_bound=29 actual_components=3
+central_selector_witness=s_479/616 d_1/36179 t_1575487/2026024 Q_226661/2026024 margin_1487667/2026024
+family_table_(B,satellite_pairs,components)=((506, 1, 3), (360866, 721, 1443), (721226, 1441, 2883), (1081586, 2161, 4323), (1441946, 2881, 5763), (1802306, 3601, 7203))
+exact_family_law=B=506+360360n => N_R=3+1440n
+
+TOURNAMENT_TELEMETRY
+vertices=return_components pair_observable=centre_order switch=width_order tie=signed_cell_label
+centre_order=(-1, 0, 1) width_order=(-1, 1, 0) edge_flips=1
+both_fingerprints=scores_(0,1,2),cycles_0,SCCs_(1,1,1),Hamiltonian_paths_1
+destroyed_by_bare_tournament=reciprocal_satellite_owner_handoffs_500_to_7_and_7_to_500
+
+sha256=286777a892bb16a926fc2dffcb08c8832987da6682cfd3cfed0331cf9a5795f6
+PASS: exact satellite cells compress the selector; signed-complement arithmetic permits linearly many satellites.
