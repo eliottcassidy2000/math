@@ -63685,3 +63685,63 @@ classify other odd ratios with the same separated-ball geometry; on the
 shallow branch, minimize the literal residual action or build the five-comb
 meet-in-the-middle engine.  Neither task can be replaced by a runner
 tournament, a scalar deck cover, or a static codec.
+## codex-2026-07-15-S10 — Hamming-four closure, six-comb recursion, and exact return cells
+
+THM-815 closes the other side of THM-810's dichotomy.  The sharp interval-
+danger-comb discrepancy, followed through exact longest safe components,
+forces every hypothetical scale-one four-lift into
+`x<=105,v<=118,w<=83,z<=50`.  Six nested censuses contain 666,705 exact rows.
+The final 35,640 component-containment rows have zero tight packets, and an
+independent all-endpoint replay again has zero failures.  Combined with
+THM-816, this proves every AP-centred residue-preserving Hamming-four packet
+loose at arbitrary height and scale.  A concurrent independent collar proof
+reaches the same conclusion through a different finite reduction: `626,962`
+all-large cycle rows plus `141,773` recursively doubled anchored rows, again
+zero tight packets. Its C++ certificate is byte-stable across `-O3/-O0`.
+The collar sidecar has a genuine four-cycle with scores `(2,2,1,1)`, two
+triangles, one SCC, and five Hamiltonian paths, but its method-limit packet has
+`M=3/19`; changing the declared switch gives two or four edge flips.  The cycle
+is useful finite-reduction telemetry, not the cover predicate.
+
+The same proof gives a new exact frontier theorem.  While at most six danger
+combs remain, their mean density is below one and the discrepancy recursively
+bounds the least remaining speed.  Every scale-one Hamming-five/six chart is
+therefore a finite rational decision tree.  Exact first-root scans give
+`min L=1/52,x_1<=146` at radius five and
+`min L=31/1430,x_1<=468` at radius six.  At seven combs the coefficient
+`13-2m` changes sign.  This is the first discrepancy-unbounded shallow radius
+and strikingly parallels the independent six-exception/seven-exception sheet
+wall, without yet proving that the two walls are the same theorem.
+
+THM-817 resolves the disconnected-return geometry exactly.  Every component
+of `closure(R_U)` is one signed maximum-speed cell with explicit interval and
+left/right endpoint owners.  The THM-803 selector sharpens from
+`200B^2+22B` to `2c_E N_R+2W-2g<=20B^2+22B-2g`.  A primitive,
+divisor-complete, exact signed-complement family has `N_R=3+1440n`, so the
+current arithmetic and scalar gates cannot force connected, bounded, or
+sublinear return geometry.  Its explicit central erosion escape shows that it
+is a method limit, not a tight candidate.  Centre/width tournaments remain
+transitive and lose the reciprocal satellite endpoint-owner handoff; the
+faithful carrier is signed return cell by deep-component incidence.
+
+The canonical frontier, HYP-6820, backlog, Tournament Technique Index, and S10
+syntheses now use the common recursive object
+
+```text
+(exact residual interval union,
+ remaining labelled combs,
+ endpoint owners and widths).
+```
+
+The global n=12 sporadic branch remains open.  Its shallow residual is the
+finite radius-five/six trees plus the discrepancy-unbounded radius-seven-and-
+higher charts; its deep residual is the adaptive signed-cell/component
+selector, unbounded dyadic/collar assembly, and general higher sheets.
+
+Post-rebase, THM-819 supplied a complementary exact base law:
+`m({1,...,k};1/(k+2))` is the primitive harmonic sum with its labelled
+primitive-fraction/inverse-owner witness stalk.  The `k=12` deep-well measure
+is therefore the prime-13 instance, not an isolated numerical coincidence.
+This strengthens the arithmetic provenance of safe components but does not
+replace their endpoint widths or their incidence with future danger combs; it
+fits as a source-stalk coordinate under the recursive carrier above.

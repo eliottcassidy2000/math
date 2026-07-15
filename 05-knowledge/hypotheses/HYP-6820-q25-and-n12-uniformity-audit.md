@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP Hamming-one/two/three/four stars uniformly loose, the scale-one Hamming-five chart reduced to two explicit finite boxes, its complete height-at-most-two slice loose, and the arbitrary-scale deck interface reduced to a least-order pivot plus bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact all-component erosion selector, linear central-return compression, an exact max-speed-cell classification of every satellite, a finite-exact proof that the fixed folded atomic predicate factors through signed cell/component sum arcs, and an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`; branch emptiness remains OPEN in the full Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, uniform violation or transport of the exact radius/sum-arc selectors, other odd ratios, collar residuals, and higher-sheet packets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars uniformly loose, the scale-one Hamming-five chart reduced to two joint finite boxes with its complete height-at-most-two slice loose, scale-one Hamming six recursively finite, seven the first discrepancy-unbounded scale-one radius, and the arbitrary-scale five-deck interface reduced to a least-order pivot plus a bounded common-sheet survivor orbit; the two-sheet branch has finite bases, raw/parity support and anti-grid gates, an exact adaptive max-speed-cell/component selector, a pair-indexed uniform atomic-stalk factorization, an all-size two-radius factorization of the full symmetric return union at ratio `(13d,5d)`, and a sharp linear-satellite method limit; THM-829 gives related contragredient arithmetic-owner transport but is not yet joined to metric endpoint owners; branch emptiness remains OPEN in the Hamming-five boxes, unbounded common-sheet and survivor-strictness problems, all-scale descent, uniform violation or transport of the exact radius/sum-arc selectors, other odd ratios, the deep dyadic/collar residuals, and higher sheets
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -373,20 +373,46 @@ pairs.  After removing the common gcd, this becomes an `s=3` deep packet with
 eight on-sheet speeds and four exceptions.  Hence Hamming four is the first
 literal shallow/deep gluing interface.
 
-THM-815 and THM-816 now close both sides of that interface.  In the
-common-scale chart, the all-large collar graph forces the unique band word
-`(2,2,2,5)` and the missing-label orbit `a{1,2,4,8}`.  Reciprocal mass bounds
-make this chart finite; exact component containment rejects `626,962`
-all-large rows.  Otherwise the collar recursively forces
-`14<=x<=24`, `v<=2x`, `w<=2v`, `z<=2w`, and rejects another `141,773` rows.
-In the exceptional chart, the exact residual open interval union plus its
-labelled incidence to the next danger comb obeys a sharp discrepancy bound.
-The resulting `7,909`-state recursion leaves every one of its 34 terminal
-residuals nonempty, and an independent `132,510`-row endpoint-cell audit
-agrees.  The lift-invariant `q=39` clock lies on the boundary of the strict
-core-safe set, so it is a method boundary rather than a counterexample.  Thus
-every proper residue-preserving AP perturbation through Hamming radius four is
-uniformly loose; radius five is the first unresolved shallow chart.
+THM-815 and THM-816 now close both sides of that interface uniformly.  In the
+common-scale branch, the sharp interval-comb discrepancy recursively bounds
+the four numerical lifts by
+
+```text
+x<=105,       v<=118,       w<=83,       z<=50,
+```
+
+after which a 35,640-row component-containment census and an independent
+35,640-row endpoint-cell replay leave no tight row.  In the order-three branch,
+the same discrepancy on a dynamic residual interval union reduces every coset
+and parity pattern to 7,909 exact recursive states, with all 34 terminal
+residuals nonempty; an independent 132,510-row endpoint implementation agrees.
+The eight `q=39` equality-clock points from THM-810 lie on the boundary of the
+strict core-safe set, so they are compatible with a surviving open component
+elsewhere.  Thus the entire AP-centred, residue-preserving Hamming-four star is
+loose at arbitrary height and scale.
+
+The common-scale conclusion has a genuinely independent proof companion.  Its
+collar cycle first reduces every all-large row to the band word `(2,2,2,5)`, a
+least lift at most `245`, and spread at most four, rejecting `626,962` rows.
+Otherwise one lift lies in `[14,24]` and the other three obey a recursive
+doubling box; all `141,773` such rows also fail component containment.  The
+combined 768,735-row C++ certificate agrees with the discrepancy proof while
+using a different unbounded-to-finite reduction.
+
+The recursion has a further exact consequence.  With `m<=6` proper scale-one
+lifts, every prefix before the last has at most eleven speeds and hence a
+positive strict-safe component by settled `LRC(<=13)`.  If the remaining
+`r=m-j` combs cover a longest component of length `L_j`, their next speed is at
+most
+
+```text
+floor(22r/[13(13-2r)L_j]).
+```
+
+Therefore radii five and six are finite exact decision trees.  Their first
+component scans give caps `146` and `468`.  At radius seven the coefficient
+`13-2r` changes sign, so this specific recursion supplies no initial cap; this
+is a method boundary, not a proof that the chart is intrinsically infinite.
 
 THM-820 gives the first uniform radius-five reduction.  For a proper
 scale-one five-lift packet with ordered replacements `x<v<w<y<z`, every
@@ -636,14 +662,22 @@ K_U=E_U+closure(R_U).
 
 Containment is equivalent to `K_U subset H_(x,y)` and is decided exactly at
 the component endpoints of `K_U` together with the cusps `k/(2a),k/(2b)` of
-the folded diamond.  This selector has the scale-normal bound
+the folded diamond.  THM-817 decomposes `closure(R_U)` exactly into `N_R`
+signed cells, each inside one maximum-speed tooth with labelled left/right
+endpoint owners.  Substituting those cells into the same proof gives the
+adaptive scale-normal bound
 
 ```text
-|Sigma(U;x,y)|<=200 max(U)^2+22 max(U).
+|Sigma(U;x,y)|<=2c_E N_R+2W-2g
+               <=20 max(U)^2+22 max(U)-2g.
 ```
 
 Thus the continuum selection problem is finite for each core, without a raw
-height bound.  The current mandatory regression is
+height bound.  The factor `N_R` cannot be replaced by a constant using the
+present arithmetic/scalar gates: THM-817's primitive divisor-complete signed-
+complement family has `N_R=3+1440n=Theta(max(U))`.  It also has an explicit
+central erosion escape, so it is a method limit rather than a tight candidate.
+The current mandatory regression is
 
 ```text
 U_*=(2,4,6,7,9,10,11,12,14,16),       (x,y)=(13,5).
@@ -743,7 +777,8 @@ sheet-fiber, incidence, component, and phase-cell sidecars.
 
 The uniform theorem now has two explicit residuals:
 
-1. **Finish the finite scale-one radius-five action and extend descent.**
+1. **Finish the finite scale-one radius-five action, enumerate radius six,
+   and extend descent.**
    THM-795/800/804/806 close the complete AP-centred Hamming-one through
    Hamming-three stars.  THM-810 splits radius four into common scale and one
    order-three coset interface; THM-815 and THM-816 close those alternatives
@@ -756,7 +791,12 @@ The uniform theorem now has two explicit residuals:
    operation-indexed kernel pair; literal labelled four-coordinate faces glue
    uniquely, but component counts, unordered endpoints, and tournament nodes
    do not.  Then prove the arbitrary-AP-scale five-deck descent, allowing for
-   new sheet interfaces rather than assuming common scale.
+   new sheet interfaces rather than assuming common scale. THM-815 Part C also
+   makes scale-one radius six a finite exact recursion; enumerate it. At radius
+   seven the discrepancy deficit `13-2m` changes sign, so a new potential must
+   use overlap debt, owner diversity, or signed component/comb incidence rather
+   than mean danger density alone. This is a method wall within the scale-one
+   chart, not a claim that arbitrary higher-radius decks have been classified.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
    `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
@@ -766,10 +806,10 @@ The uniform theorem now has two explicit residuals:
    `E_U not subset H_(x,y) minus R_U`. THM-789 proves that fixed-anchor packet
    refinement alone cannot do this, while THM-797 proves it whenever an odd
    exception-divisor grid leaves the explicit acceptance shell. THM-803 adds
-   raw/parity support and the complete `26/52/78` anti-shell ladder. THM-807
-   isolates the linear central-return selector, and THM-817 classifies every
-   satellite as a signed max-speed cell, giving the adaptive exact bound
-   `2c_E N_R+2W-2g`.  THM-821 proves for `(x,y)=(13,5)` that each atomic
+   raw/parity support and the complete `26/52/78` anti-shell ladder. THM-817
+   makes the endpoint/cusp selector adaptive with size
+   `2c_E N_R+2W-2g<=20B^2+22B-2g`, while proving that the current gates permit
+   `N_R=Theta(B)`. THM-821 proves for `(x,y)=(13,5)` that each atomic
    verdict factors through its exact circular cell/component sum arc and that
    the tested cell, component, width, owner, and event projections all mix.
    THM-824 proves that their full symmetric union at ratio `(13d,5d)` instead
@@ -814,8 +854,10 @@ isolates the radius-four ramification and THM-815/816 close both of its
 branches.  THM-820 makes the scale-one radius-five warning finite and rejects
 its full height-one face; THM-822 rejects the full height-at-most-two slice and
 locates the static kernel boundary.  The two complete boxes and all-scale
-descent remain the shallow residual, alongside the remaining deep sheet
-packets.
+descent remain the shallow residual; THM-815 also makes scale-one radius six
+recursively finite and loses its discrepancy deficit at seven. Arbitrary
+higher-radius decks and the remaining deep sheet packets are still
+unclassified.
 
 ## F. Information-preservation / Tournament Analysis
 
@@ -866,7 +908,9 @@ deciding objects are therefore:
   The exact action state is `(E_S,V)`, the literal residual
   interval union together with its remaining labelled operation bank; its
   continuation equivalence is equality of the terminal emptiness verdict
-  after every legal future subset of `V`.
+  after every legal future subset of `V`. Endpoint owners and widths decorate
+  this operation-closed carrier, and its discrepancy potential stays coercive
+  through six remaining combs.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and

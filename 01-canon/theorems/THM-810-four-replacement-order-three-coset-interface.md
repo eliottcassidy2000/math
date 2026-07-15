@@ -5,7 +5,7 @@ status: PROVED (all-order scalar classification by symbolic attenuation/capacity
 source: codex-2026-07-15-S10 quartic continuation
 depends_on:
   - THM-804
-related: [THM-769, THM-770, THM-800, THM-806, HYP-6820]
+related: [THM-769, THM-770, THM-800, THM-806, THM-815, THM-816, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_four_oriented_deck_codex_S10.py
   - 05-knowledge/results/lrc13_hamming_four_oriented_deck_codex_S10.out
@@ -355,6 +355,14 @@ invisible on a common eight-point clock and that strict looseness cannot be
 obtained by perturbing those clock witnesses.  A uniform closure must find a
 different core-safe component or prove that the four lifted exception combs
 cannot cover all such components.
+
+**Forward closure.** THM-816 carries out exactly that second alternative: a
+sharp interval-comb discrepancy makes the dynamic residual-component recursion
+finite and proves that every parity-compatible arbitrary lift leaves an open
+core-safe component. THM-815 independently closes the common-scale branch of
+Theorem 1. Consequently the two alternatives classified here now give the full
+AP-centred Hamming-four closure. The `q=39` clock remains useful boundary
+telemetry, not an open residual.
 
 ## 5. Tournament Analysis and assumption challenge
 

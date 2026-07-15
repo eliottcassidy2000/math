@@ -1,13 +1,17 @@
 ---
 id: THM-815
 title: Scale-one Hamming-four safe-component closure
-status: PROVED (sharp interval-comb discrepancy ladder, full Hamming-four closure, and finite-recursion theorem through radius six) + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, 35,640 final containment rows, and an independent 35,640-row full-endpoint replay)
+status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, and an independent 768,735-row C++ collar certificate)
 source: codex-2026-07-15-S10 Hamming-four continuation
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
 related: [THM-770, THM-800, THM-804, THM-810, THM-816, HYP-6820]
 verification:
   - 04-computation/lrc13_h4_scale_one_component_ladder_codex_S10.py
   - 05-knowledge/results/lrc13_h4_scale_one_component_ladder_codex_S10.out
+  - 04-computation/lrc13_scale_one_hamming_four_collar_closure_codex_S10.cpp
+  - 05-knowledge/results/lrc13_scale_one_hamming_four_collar_closure_codex_S10.out
+proof_companion:
+  - 07-reflections/lrc13-hamming-four-independent-collar-doubling-proof-codex-S10.md
 ---
 
 # THM-815 — Scale-one Hamming-four safe-component closure
@@ -381,6 +385,38 @@ The smallest margin of its deterministically first selected witnesses is
 `1/1274`, on `R=(1,3,4,10)` with labelled lifts `(14,16,17,49)` and witness
 `99/2548`.  This statistic is not asserted to be the packet's exact maximum;
 the audit only needs one strict endpoint-cell witness per row.
+
+### Independent collar/doubling proof
+
+A separately derived proof is retained in the companion listed above.  It
+starts from the same owner collar but uses it as the main reduction rather
+than as telemetry.  If every lift exceeds `24`, the handoff digraph forces the
+unique cyclic band word `(2,2,2,5)` and missing-label packet
+`a{1,2,4,8}`.  Ratio bands bound the spread by four, and an eight-runner safe
+interval bounds the least lift by `245`.  Exact containment rejects all
+`626,962` rows in this all-large box.
+
+Outside that branch the collar forces a least lift `14<=x<=24` and the
+recursive doubling box
+
+```text
+x<v<=2x,             v<w<=2v,             w<z<=2w.
+```
+
+The independent C++ verifier rejects all `141,773` rows in this anchored box,
+for `768,735` exact rows and zero tight packets in total.  Its branch digests
+are
+
+```text
+all-large  27c45d31f19370b8b3c30e79f378b5b3ed9b1f9538062ac2f80e7dd056a6a64e
+anchored   07594ab0e69196583fdf667b4d54c8a048a1b4d2b2a87924d26a7da4d8bc7542
+```
+
+and the stored-output SHA-256 is
+`f098acc358f534f4edf75e1affcaa03ff0bf9cda83f058d5fc86cfc984d2dca0`.
+This proof shares the exact component-containment terminal predicate but has a
+different unbounded-to-finite reduction, providing a genuine independent
+cross-check of Part A.
 
 ## 5. The collar four-cycle is a structural sidecar
 

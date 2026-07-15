@@ -1,6 +1,7 @@
 ---
-id: THM-815
-title: Scale-one Hamming-four collar closure
+theorem: THM-815
+artifact_type: independent proof companion
+title: Independent collar/doubling proof of the scale-one Hamming-four closure
 status: PROVED (collar-cycle classification, reciprocal finite reduction, and recursive doubling) + FINITE-EXACT (768,735 component-containment rows)
 source: codex-2026-07-15-S10 Hamming-four continuation
 depends_on:
@@ -12,7 +13,12 @@ verification:
   - 05-knowledge/results/lrc13_scale_one_hamming_four_collar_closure_codex_S10.out
 ---
 
-# THM-815 — Scale-one Hamming-four collar closure
+# THM-815 independent proof companion — collar/doubling closure
+
+The canonical theorem statement and the discrepancy/component proof are in
+`THM-815-scale-one-hamming-four-safe-component-closure.md`.  This companion
+retains a separately derived collar/doubling proof and its independent C++
+certificate; it deliberately has no second theorem ID.
 
 Put `delta=1/13` and `[12]={1,...,12}`.
 

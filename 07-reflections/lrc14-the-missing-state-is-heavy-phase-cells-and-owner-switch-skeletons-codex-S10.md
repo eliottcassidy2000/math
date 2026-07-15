@@ -53,6 +53,10 @@ related:
   - THM-810
   - THM-811
   - THM-812
+  - THM-815
+  - THM-816
+  - THM-817
+  - THM-819
   - HYP-6820
   - HYP-6835
   - HYP-6840
@@ -60,6 +64,47 @@ related:
 ---
 
 # The missing state is heavy phase cells, owner-switch skeletons, and packet holonomy
+
+## 2026-07-15 addendum: the residual carrier has become a proof state
+
+THM-815 and THM-816 close both alternatives left by THM-810.  The entire
+AP-centred residue-preserving Hamming-four star is loose at arbitrary height
+and scale: common-scale lifts are bounded and eliminated by the exact
+safe-component ladder, while every order-three quartic coset lift leaves an
+open residual component.  A concurrent collar/doubling proof independently
+rejects 768,735 common-scale rows after a different unbounded reduction.  The
+old statements below that call either branch
+open are superseded.  The same discrepancy recursion makes scale-one Hamming
+five and six finite exact decision trees; its coefficient changes sign at
+seven remaining combs.
+
+THM-817 sharpens the deep side in the same language.  Every return component
+is one signed maximum-speed tooth with exact interval and endpoint owners, and
+the erosion selector has adaptive size `2c_E N_R+2W-2g`.  A primitive signed-
+complement family has `N_R=Theta(B)`, so current arithmetic and scalar gates do
+not force connected returns, but an explicit central escape shows that family
+is not a tight candidate.
+
+The cumulative correction is conceptual.  A static clock, residue deck,
+runner tournament, or component ranking is a projection.  The operation-
+closed proof state is
+
+```text
+(exact residual interval union,
+ remaining labelled danger combs,
+ endpoint owners and widths),
+```
+
+updated by `E -> E minus D_u`.  Its discrepancy potential is genuinely
+well-founded while fewer than seven combs remain.  This is the metric instance
+of the transported-stalk principle developed later in the reflection.
+
+Concurrent THM-819 supplies an exact arithmetic source stalk for the interval
+core: the sub-tight good measure is a primitive harmonic sum, with primitive
+fraction and inverse-owner pair before summation.  It explains the prime-13
+deep-well measure, while also illustrating the same guardrail: the summed
+measure is not enough for later component/comb transport; the labelled witness
+and unequal endpoint extents must survive.
 
 ## Honest status
 
@@ -401,7 +446,9 @@ by the quarter anti-grid `11/52`. Every residual must have full
 parity-twisted support and silence on the universal `26,52,78` ladder. More
 importantly, with `K_U=E_U+closure(R_U)`, the entire erosion predicate is
 equivalent to its values at owner-labelled component endpoints and folded
-cusps, at most `200B^2+22B` points. The sharp replacement row
+cusps. THM-817 later factors the return geometry into `N_R` signed maximum-
+speed cells and sharpens the count to
+`2c_E N_R+2W-2g<=20B^2+22B-2g`. The sharp replacement row
 
 ```text
 U=(2,4,6,7,9,10,11,12,14,16),       (x,y)=(13,5)
@@ -1000,7 +1047,7 @@ the irreducible sidecar.
 The branch is finite in principle, but the following uniform arguments are
 still missing.
 
-1. **Shallow full-residue rigidity at Hamming radius four and beyond.** THM-770
+1. **Shallow full-residue rigidity beyond Hamming radius four.** THM-770
    closes lift height twelve, THM-795 closes every arbitrary-height
    Hamming-one star around an AP dilation, and THM-800 closes the full
    Hamming-two star.  Its proof first forces both replacement deck orders to
@@ -1010,30 +1057,29 @@ still missing.
    scale-one triple lift: a uniform collar forces one replacement into
    `[14,24]`, two-comb geometry sharpens the remaining box to `v<=262`,
    `w<=12v`, and a larger 5,713,539-row superset replay has zero tight rows.
-   Thus radius at least four is the first shallow residual. THM-810 proves its
-   first deck classification: scalar capacity leaves only common scale or the
+   THM-810 then classifies radius four: scalar capacity leaves only common scale or the
    all-order-three labels in a coset of `<5>={1,5,8,12}`. Exact sheet overlap
    leaves four parity patterns, and division by the common gcd turns the latter
-   into an `s=3` deep packet. The scale-one quadruple chart and arbitrary lifts
-   of the coset interface remain; four least-CRT base rows are loose but do not
-   give uniform radius-four closure.  Every coset has eight lift-invariant
-   `q=39` equality points pinned by an opposite pair of core speeds.  Since
-   each is a strict local cusp, the missing field is not lift height on that
-   clock but the identity and exception-comb incidence of a different
-   core-safe component.
+   into an `s=3` deep packet. THM-815/816 close both alternatives uniformly;
+   the `q=39` equality points are boundary telemetry, while open components
+   survive elsewhere. THM-815 also makes radii five and six finite exact trees
+   with initial caps `146` and `468`. The first discrepancy-unbounded shallow
+   chart is radius seven, where mean danger density exceeds one.
 2. **The two-sheet folded branch.**  One must exclude every primitive
    divisor-complete quotient core, not only `max(U)<=19` or the bounded-height
    bank.  THM-797's q=13 signed walls leave only the exact signed complement of
    `+/-y`, with `M(U)>=2/13` and strong exception-speed caps.  On that survivor,
    THM-803 further forces full parity-twisted support and the complete
    `26,52,78` anti-grid ladder, then decides the full erosion predicate on an
-   exact owner-labelled endpoint/cusp set of size at most `200B^2+22B`. Prove
+   exact owner-labelled endpoint/cusp selector. THM-817 decomposes its return
+   factor into signed maximum-speed cells and gives the adaptive bound
+   `2c_E N_R+2W-2g<=20B^2+22B-2g`. Prove
    that some selector point escapes uniformly, or show that the joint selector
    obligations are incompatible with THM-775's terminal ownership tree.
-   THM-807 proves a linear central-return selector of size at most `42B-2`,
-   exact in the connected-return branch. It isolates disconnected return
-   satellites as the source of the quadratic component interaction rather
-   than removing the uniform obligation. Its exact method-boundary rows also
+   THM-807 proves a linear central-return selector in the connected-return
+   branch. THM-817's exact family has `N_R=Theta(B)`, so present arithmetic
+   gates cannot discard satellites, but no quadratic lower bound is asserted.
+   Its exact method-boundary rows also
    silence every multiplier grid through `d=7`, or every even grid through
    `d=18`, before escaping through the component selector.
 3. **The even-maximum collar.**  THM-792 gives a bounded rational clock,

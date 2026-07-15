@@ -103,7 +103,52 @@ obligations, and proof-carrier interfaces.
   HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
   `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
   `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
+## LTT-436 - Dynamic Residual Component/Comb State / Return-Cell Incidence
 
+- **Move:** Replace a static safe-set snapshot by the operation-closed state
+  `(E, C, O)`: the exact residual open interval union `E`, the remaining
+  labelled danger combs `C`, and endpoint-owner/width data `O`.  A transition
+  adjoins one speed by `E -> E minus D_u`.  On the two-sheet side, first split
+  `closure(R_U)` into signed maximum-speed cells, then form its incidence with
+  every deep component.
+- **LRC use:** THM-815 closes every scale-one Hamming-four lift and proves
+  finite-recursion through Hamming radius six. THM-816 closes the quartic
+  order-three interface left by THM-810. THM-817 compresses the deep erosion
+  selector to `2c_E N_R+2W-2g` without assuming connected returns.
+- **Preserves:** strict survival of at least one interval; exact component
+  lengths and endpoints; lift magnitude and residue label; left/right endpoint
+  owners; signed return-cell label; and the next cover obligation.  This is the
+  smallest current carrier known to preserve the terminal escape predicate
+  under the actual recursive operation.
+- **Forgets / guardrail:** A runner or residue tournament loses interval width
+  and lift height. A collar-exit tournament loses global cover truth. A static
+  equality clock sees only boundary cusps. Centre- or width-order tournaments
+  on return cells lose reciprocal endpoint-owner handoffs and their incidence
+  with deep components. The dynamic carrier is bipartite, not naturally
+  antisymmetric; forcing it into a tournament destroys the cover predicate.
+- **Pairwise observable:** At the collar sidecar, use the exact half-open owner-
+  exit handoff. At the quartic sidecar, compare which labelled comb removes
+  more of the current residual. At the return sidecar, compare signed cell
+  centres.
+- **Switch/gauge:** Reverse the live collar handoffs; switch quartic raw overlap
+  to conditional residual overlap; switch return-cell centre order to width
+  order.  Use numerical label only as the declared tie Hamiltonian path.
+- **Fingerprints:** THM-815's sharp collar row has scores `(2,2,1,1)`, two
+  triangles, one four-vertex SCC, five Hamiltonian paths, and four flips, yet
+  is loose with `M=3/19`. THM-816's raw/conditional four-comb tournaments are
+  transitive while terminal flip counts range from zero to three. THM-817's
+  three return-cell tournaments are transitive with one edge flip and one
+  Hamiltonian path. In every case the tournament is telemetry; the interval/
+  comb or cell/component incidence proves the theorem.
+- **Next pull:** Exhaust the finite Hamming-five/six trees. At seven remaining
+  combs, replace mean danger density by an overlap-debt or owner-diversity
+  potential. On the deep side, seek a contradiction in the adaptive signed-
+  cell by deep-component incidence; do not assume `N_R=O(1)`, since THM-817
+  permits `N_R=Theta(B)` under all current arithmetic/scalar gates.
+- **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817,
+  HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
+  `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`, and
+  `lrc13_return_satellites_cell_classifier_codex_S10.py`.
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 
 - **Move:** At a binding scale `Q=13s`, split the tight core into the on-sheet
@@ -116,7 +161,8 @@ obligations, and proof-carrier interfaces.
   THM-770 proves the shallow full-residue branch exactly through lift height 12.
   THM-810 isolates the quartic `s=3` coset, THM-816 closes it uniformly by
   dynamic residual-comb erosion, and THM-815 closes the complementary
-  common-scale chart.  THM-817 classifies every `s=2` return satellite as a
+  common-scale chart. This does not close general three-sheet covers.
+  THM-817 classifies every `s=2` return satellite as a
   signed max-speed cell with endpoint owners.  THM-820 reduces the first
   shallow five-owner scale-one chart to two finite boxes and shows why its
   top-four SCC requires reciprocal metric mass beyond the collar graph.
@@ -158,7 +204,8 @@ obligations, and proof-carrier interfaces.
   order twelve, and apply exact residual-comb erosion to THM-823's
   all-order-three and mixed order-one survivors.  The mod-39 clock supplies
   only equality witnesses, not strictness.  Then treat the ramified higher-`s`
-  packets outside THM-816's closed quartic coset.  For the common
+  packets outside THM-816's closed quartic coset. Enumerate the finite
+  scale-one Hamming-six tree and cross the seven-comb density wall. For the common
   `(13d,5d)` branch, first test a uniform arithmetic violation of THM-824's
   radius budget; separately classify odd ratios whose folded target has the
   separated equal-ball geometry needed by the no-switch proof.

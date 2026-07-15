@@ -9,7 +9,7 @@ depends_on:
   - THM-789
   - THM-797
   - THM-803
-related: [HYP-6820]
+related: [THM-817, HYP-6820]
 verification:
   - 04-computation/lrc13_connected_return_linear_selector_codex_S10.py
   - 05-knowledge/results/lrc13_connected_return_linear_selector_codex_S10.out
@@ -346,3 +346,11 @@ component/cusp incidence object in (2): it remembers exactly whether
 `E_U+closure(R_U)` lies in the folded diamond.  Outside that branch one must
 also retain the noncentral return-component incidence, and the general
 quadratic selector remains the honest carrier.
+
+**Forward sharpening.** THM-817 classifies those noncentral components as
+signed maximum-speed cells and gives the exact adaptive carrier
+`2c_E N_R+2W-2g`.  It also constructs a primitive signed-complement family
+with `N_R=Theta(B)`, so connectedness cannot be inferred from the present
+arithmetic/scalar gates.  This supersedes “quadratic” as a claim about
+necessary complexity: satellites provide the second factor, but no quadratic
+lower bound for a minimal selector is asserted.

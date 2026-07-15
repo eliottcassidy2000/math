@@ -9,6 +9,7 @@ depends_on:
   - THM-789
   - THM-797
 related:
+  - THM-817
   - HYP-6820
 verification:
   - 04-computation/lrc13_antigrid_all_component_selector_codex_S10.py
@@ -485,3 +486,9 @@ tournament fingerprints.  Its canonical digest is
 ```
 
 No floating-point or sampled-circle verdict enters the proof.
+
+**Forward sharpening.** THM-817 proves that every component of
+`closure(R_U)` is one signed maximum-speed cell with exact endpoint owners.
+Substitution into Theorem 4 improves the universal bound to the adaptive
+`2c_E N_R+2W-2g<=20B^2+22B-2g`.  The selector points and containment
+equivalence proved here are unchanged.

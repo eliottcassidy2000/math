@@ -4,6 +4,33 @@
 **Status:** holistic frontier synthesis and proposed proof interface; not a proof
 of LRC14 or of the uniform twelve-runner sporadic branch.
 
+## 2026-07-15 status correction
+
+THM-815/816 now close the scale-one Hamming-four chart and the exact quartic
+order-three `s=3` interface left by THM-810.  Therefore the AP-centred,
+residue-preserving Hamming-four star is uniformly loose; only general higher-
+sheet packets remain, not this specific three-sheet seam. THM-815 has both a
+component-discrepancy proof and an independent 768,735-row collar/doubling
+certificate.  THM-815 also turns
+scale-one Hamming five and six into finite exact decision trees.  Seven is the
+first radius where the interval-comb discrepancy loses positive cover deficit.
+
+THM-817 replaces the coarse disconnected-return discussion by an exact cell
+theorem.  Every component of `closure(R_U)` is a signed maximum-speed tooth,
+and the all-component selector is bounded by
+`2c_E N_R+2W-2g<=20B^2+22B-2g`.  The present arithmetic gates permit
+`N_R=Theta(B)`, so satellites cannot be quotiented away, but their bare centre-
+or width-order tournaments lose reciprocal endpoint-owner handoffs.
+
+These results instantiate the proposed groupoid-valued recursion more
+concretely than the original synthesis did: within the shallow metric stratum,
+the active object is the dynamic residual interval union with remaining
+labelled comb incidence and endpoint widths.  The transition
+`E -> E minus D_u` preserves the escape predicate and carries a decreasing
+discrepancy potential through six remaining combs.  Older statements below
+that list Hamming four or the quartic interface as open are superseded by this
+addendum.
+
 ## 0. Two corrections before any synthesis
 
 The historical conjecture that every covering thirteen-speed row has a good
@@ -507,8 +534,9 @@ A credible proof must combine, rather than substitute among:
 - sheet ramification and effective deck orders;
 - odd divisor and half-grid shells, beginning with but not ending at `q=13`;
   and
-- the scale-one Hamming-four chart and THM-810's quartic order-three `s=3`
-  interface, after THM-795/800/804/806 close every smaller chart.
+- the finite Hamming-five/six component trees and a new invariant at the
+  seven-comb density wall, after THM-795/800/804/806/815/816 close every
+  smaller AP-centred chart including THM-810's quartic interface.
 
 The next local theorem should say that a fully saturated sheet-tooth incidence
 either exposes a negative margin, forces a common divisor and descends, or
@@ -520,8 +548,10 @@ is empty” must not be written before that trichotomy is uniform in the scale.
 After THM-797's signed complement, impose THM-803's full parity-twisted support
 and complete universal `26,52,78` anti-grid ladder. Then evaluate its exact
 selector on the owner-labelled components of `K_U=E_U+closure(R_U)`. The
-desired theorem is a uniform negative-margin or incompatibility result on at
-most `200B^2+22B` selector obligations, not construction of that selector.
+desired theorem is a uniform negative-margin or incompatibility result on
+THM-817's adaptive signed-cell obligations
+`2c_E N_R+2W-2g`, not construction of that selector. Current arithmetic gates
+allow `N_R=Theta(B)`, so connected-return reduction is not uniform.
 The sharp `U_*` row, whose grids and maximizers are silent but whose nonmaximal
 `7/22` component escapes, is the mandatory unit test.
 

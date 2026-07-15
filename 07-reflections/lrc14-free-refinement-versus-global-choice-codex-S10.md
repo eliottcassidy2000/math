@@ -15,6 +15,18 @@ sporadic branch remains open: the branch is finite in principle and sharply
 sheet-stratified, but its remaining deep covers are not captured by a bounded
 denominator, raw height, scalar measure, or one local phase packet.
 
+**2026-07-15 update.** THM-815/816 close both Hamming-four alternatives left
+by THM-810, so every AP-centred residue-preserving packet through radius four
+is uniformly loose.  THM-815 has independent component-discrepancy and
+collar/doubling certificates.  The same exact component/comb discrepancy makes radii
+five and six finite-decidable, and loses coercivity at seven remaining combs.
+THM-817 decomposes every disconnected return into signed maximum-speed cells
+and sharpens the deep selector to `2c_E N_R+2W-2g`; an exact family with
+`N_R=Theta(B)` proves that global choice must retain those satellites rather
+than assume them away.  The refined common rule is: quotient free refinement,
+then recurse on the full residual interval union with labelled comb and
+endpoint-owner incidence.
+
 ## What each historical viewpoint really retained
 
 | viewpoint | exact gain | information it loses |

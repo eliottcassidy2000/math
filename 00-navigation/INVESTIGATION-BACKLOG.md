@@ -265,6 +265,51 @@
   outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
+  HYP-6820; exact endpoint-splice, component-comb, return-cell, and tooth-winding atlases.
+- **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
+  THM-768/769 split the shallow full-residue fibre from deep sheet covers, and
+  THM-770 closes the shallow box through lift height twelve. THM-795/800 and
+  THM-804/806 close every AP-centred Hamming-one/two/three packet uniformly.
+  THM-810 reduces Hamming four to common scale or one order-three quartic coset;
+  THM-815/816 close both alternatives at arbitrary height.  The THM-815 branch
+  has two independent finite reductions: a component-discrepancy ladder and a
+  collar-cycle/doubling box with 768,735 certified rows.  Their common terminal
+  state is the exact residual interval union plus the remaining labelled danger
+  combs, endpoint owners, and widths—not the bare deck or tournament.
+- **New shallow finite boundary:** THM-815's discrepancy recursion makes every
+  scale-one Hamming-five and Hamming-six chart a finite rational decision tree.
+  Exact root scans give first-speed caps `146` and `468`. At Hamming seven the
+  coefficient `13-2m` changes sign, so mean danger density no longer yields an
+  initial cap.  Finish the two finite trees, then seek a new overlap/owner
+  potential at the seven-comb wall. This is a method boundary, not a claimed
+  radius-seven counterfamily.
+- **Deep progress:** THM-772 gives primitive divisor-complete two-/three-sheet
+  quotients and relative speed bounds. THM-774 identifies the exact two-sheet
+  folded diamond and closes all ten-cores in `[1,19]` against unbounded odd
+  exceptions. THM-775 gives the dyadic seam recursion; THM-776 closes the full
+  height-100 packet. THM-782/789 supply symmetric return mass, component-width
+  floors, a pointwise thickness tax, and global erosion budgets, while exact
+  liars rule out fixed anchors and raw component rankings. THM-797/803 add the
+  signed/parity support gates, the complete `26/52/78` anti-grid ladder, and an
+  exact all-component selector.
+- **Return-cell sharpening:** THM-807 isolates the mandatory central return
+  cell. THM-817 proves that every satellite is one signed maximum-speed cell,
+  with exact endpoint owners, and sharpens the selector to
+  `2c_E N_R+2W-2g<=20B^2+22B-2g`. Its primitive divisor-complete signed-
+  complement family has `N_R=3+1440n`, so current arithmetic/scalar gates do
+  not imply connected, bounded, or sublinear return geometry. The family has
+  an explicit central escape and is a method limit, not a tight candidate.
+- **Open shallow theorem:** enumerate the finite radius-five/six trees and
+  prove a decreasing overlap/owner invariant at radius seven and above. The
+  target carrier is dynamic component--comb incidence; the Hamming-four collar
+  tournament is strongly connected on an explicit loose row and is telemetry.
+- **Open deep theorem:** rule out every surviving folded cover by proving
+  failure of the adaptive signed-return-cell by deep-component selector, or
+  force the dyadic/collar descent into THM-774/776's finite bases. For an even
+  maximum `2R`, retain the exact nine-core collar
+  `E_(1/13)(U^-) subset D_R union {Q>=11/13}` and its `1/12` witness obligation.
+  Then treat general higher-sheet colour covers; THM-816 closes only the
+  specific quartic `s=3` interface produced by THM-810.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
   transfer for the `s=2,3` equality packets, including quotient primitivity,
   divisor completeness, exact local shells, and speed bounds. THM-774 proves the
@@ -288,8 +333,12 @@
   `U mod 13=(Z/13Z)^*\{+/-y}` with `x<=2B-1,y<=B-1`.  Its sharp post-wall row
   traps every exception-divisor grid but is caught at `11/52`, so it is sharp
   only for the THM-797 gates. THM-803 forces full parity-twisted support and
-  proves the complete erosion predicate equivalent to at most `200B^2+22B`
-  owner-labelled component endpoints/cusps. Its sharp `U_*` row passes every
+  proves the complete erosion predicate equivalent to finitely many owner-
+  labelled component endpoints/cusps. THM-817 represents every return
+  component as one signed maximum-speed cell and sharpens the selector to
+  `2c_E N_R+2W-2g<=20B^2+22B-2g`. Its exact family with
+  `N_R=3+1440n` rules out deriving connected or sublinear return geometry from
+  the present gates. Its sharp `U_*` row passes every
   ordinary and anti-grid plus both maximizers but escapes at `7/22`. Prove
   uniform failure or incompatibility of those selector obligations. Fixed-
   anchor refinement, argmax-only choice, and bare component tournaments remain
@@ -334,7 +383,7 @@
   and the conjecture that every balanced node has a nondecreasing `B*K*` path.
 ## Lead codex-2026-07-14-S10: heavy phase cells, collar edge transport, and stalk/holonomy-quotiented r=8 dynamics
 
-- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799/800/802/803/804;
+- **Source:** THM-780/782/783/784/786/788/789/792/794/795/797/798/799/800/802/803/804/806/807/810/815/816/817;
   corrected THM-779; MISTAKE-147/148/149; HYP-6820/6835/6840.
 - **Global substrate proved:** a `beta`-deep `d`-speed orbit has strict
   `alpha`-safe mass at least `ceil(1/(beta-alpha))^(-d)`.  Hence every
@@ -346,6 +395,13 @@
   component-tournament liars show that global selection must retain signed
   tooth/slope and return incidence; refining one anchor or ranking raw margins
   is insufficient.
+- **Shallow closure and new density wall:** THM-810 splits Hamming four into
+  common scale and one order-three coset interface. THM-815/816 close both
+  branches uniformly by recursively transporting the full residual interval
+  union against labelled danger combs. THM-815 also proves finite-decidability
+  at radii five and six, with first caps `146` and `468`; seven combs are where
+  the mean-density discrepancy loses coercivity.  The next shallow invariant
+  must see overlap and owner incidence, not merely total danger mass.
 - **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13c` automaton
@@ -415,7 +471,10 @@
   that prime-grid gate at `q=13`. THM-803 next forces full parity-twisted
   support and the universal
   `26,52,78` anti-grids, then decides the entire erosion predicate on a finite
-  owner-labelled endpoint/cusp selector. Prove that some selector obligation
+  owner-labelled endpoint/cusp selector. THM-817 refines its return factor to
+  signed maximum-speed cells with endpoint owners and adaptive size
+  `2c_E N_R+2W-2g`; linearly many cells survive the current arithmetic gates.
+  Prove that some selector obligation
   escapes uniformly, or that their joint incidence is incompatible with the
   packet arithmetic. The sharp `U_*` row shows why: every grid and maximizer
   is silent, but the nonmaximal singleton `7/22` escapes. Orienting the
