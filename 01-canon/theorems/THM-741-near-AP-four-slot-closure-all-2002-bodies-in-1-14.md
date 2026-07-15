@@ -19,6 +19,8 @@ verification:
   - 04-computation/lrc14_j4_flood_portable_pruner_codex_S14.py
   - 05-knowledge/results/lrc14_j4_flood_57_exact_codex_S14.out
   - 05-knowledge/results/lrc14_j4_flood_67_exact_codex_S15.out
+  - 04-computation/lrc14_j4_flood_reroot_shadow_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -141,4 +143,107 @@ closed uniformly over all four added speeds.  This is a literal second edge,
 not a Fano or tournament transport of `(5,7)`: the eight-dimensional Heawood
 cycle sector and the metric interval data forbid that quotient.  Thus two of
 the 21 flood bodies are exact, and nineteen still require independent closure;
-THM-741 remains `CLAIMED`. ∎
+THM-741 remains `CLAIMED`.
+
+## Re-root descent and the five-small shadow (codex-S16)
+
+There is nevertheless a rigorous transport, but it acts on **completed
+families**, not on Fano-equivalent root bodies.  Put
+
+```text
+H={8,9,10,11,12,13,14},        E_e=H union e
+```
+
+for an edge `e` of `K_7`.  If the uniform four-extension theorem has been
+proved for `E_e`, then every 13-speed family `S` containing `E_e` is closed:
+literally `S=E_e union X` with `|X|=4`, so it is one of the already certified
+extensions.  In particular, the exact `(5,7)` and `(6,7)` rows cast upward
+**anchor shadows** across every other choice of root edge.
+
+This also exposes a descent obstruction for the Fano carrier.  Given any
+small-label triple `{a,b,c}`, the single actual family
+
+```text
+H union {a,b,c,15,16,17}
+```
+
+is a four-extension of each of `E_ab,E_ac,E_bc`.  Hence a scalar attached only
+to the root edge and claimed to descend to completed-family data must agree on
+the three edges of every triangle of `K_7`.  The seven Fano triangles alone
+give seven disjoint 3-edge components: their equality system has rank `14`
+and quotient dimension `7`.  The other `28` triangles are connected on all
+`21` edges (degree `8`, `84` transition adjacencies), so their equality system
+has rank `20` and quotient dimension `1`.  Therefore
+
+> every root-edge-only invariant of completed flood families is constant.
+
+The same `28` noncollinear triples index THM-850's Heawood hexagons, but the
+maps are different: alternating cycle currents recover an edge **carrier**,
+whereas re-root equalities coequalize presentation charts.  This proves why
+the Fano/Heawood coordinates can organize inputs yet cannot be a nonconstant
+symmetry quotient of the final LRC predicate.
+
+The anchor shadows have a concrete metric payoff.  Consider a completed
+13-speed family containing `H` and exactly five labels `K subset {1,...,7}`;
+its last speed is then one integer `w>=15`.  Of the `C(7,5)=21` sets `K`,
+exactly `14` contain `(5,7)` or `(6,7)` and are already in an anchor shadow.
+The seven residual sets are
+
+```text
+12345, 12346, 12347, 12356, 12456, 13456, 23456.          (B1)
+```
+
+For `P=H union K`, let `G(P)` have `r` components and measure `m`.  THM-732
+and `S2=99/70>sqrt(2)` give, uniformly for the remaining speed,
+
+```text
+|G(P) minus D_w| >= 6m/7-S2*r/(7w)>0
+whenever w>S2*r/(6m).                                     (B2)
+```
+
+The exact verifier sweeps every integer from `15` through the floor of this
+cap.  Across (B1) the seven caps are respectively
+
+```text
+122, 97, 83, 80, 71, 62, 39,
+```
+
+for `456` exact interval sweeps in total.  Every measure is positive; the
+smallest swept value is `16607/840840`, at `K=12345,w=23`.  At the first
+integer beyond each cap, the rational lower bounds in (B2) are also checked
+strictly positive, so the conclusion is genuinely uniform in unbounded `w`,
+not a bounded experiment.
+
+For six small labels, six of the seven possible sets contain an anchor.  The
+sole residual final family is
+
+```text
+H union {1,2,3,4,5,6},
+```
+
+whose exact good set has `12` components and measure
+`57191/2522520>0`.  Consequently:
+
+> **Five-small shadow.** Every 13-speed family containing `H` and at least
+> five labels from `{1,...,7}` is strictly lonely.
+
+The unresolved flood tail is therefore confined to completed families with
+at most four small labels, equivalently at least two speeds above `14`.  This
+does not close any one of the nineteen root bodies uniformly, and THM-741
+remains `CLAIMED`.
+
+Tournament Analysis uses the seven residual bases (B1), not runners and not
+root edges, as vertices.  The pair observable is the exact cap difference
+`C(K')-C(K)`, `C=S2*r/(6m)`; orient from lower to higher cap, using
+lexicographic order for ties.  All caps are distinct, so the tournament is
+transitive: score histogram `{0,...,6}:1`, no directed 3-cycles, seven
+singleton SCCs, and one Hamiltonian path, namely
+
+```text
+23456 -> 13456 -> 12456 -> 12356 -> 12347 -> 12346 -> 12345.
+```
+
+This quotient retains the one-speed proof horizon but destroys the interval
+comb and exact clearance.  Challenging the old vertex choice is essential:
+root edges are presentation charts glued by re-root triangles, not intrinsic
+vertices of a completed-family transport. ∎

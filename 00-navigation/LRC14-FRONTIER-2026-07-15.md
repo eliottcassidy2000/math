@@ -32,7 +32,11 @@ first has 28,847 residual bottom sweeps, all positive with minimum `7/858`;
 the second has 73,323, all positive with minimum `97/4004`.  Thus two of the
 21 flood bodies are closed and nineteen remain.  They retain an eight-dimensional edge
 sector invisible to point-star plus Fano-triangle sums and are not symmetry
-quotients of the closed edge.
+quotients of the closed edge.  Re-root descent nevertheless gives a genuine
+completed-family transport: the two closed anchors plus 456 exact residual
+one-speed sweeps prove that every family containing `{8,...,14}` and at least
+five small labels is lonely.  Thus every unresolved flood completion has at
+most four small labels and at least two speeds above `14`.
 
 At the seven-comb wall the corrected Hunter state is now exact.  After
 subtracting independent single and pair densities, its lower bound is

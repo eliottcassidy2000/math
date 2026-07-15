@@ -378,6 +378,18 @@ minimum `97/4004`.  These are two of the 21 floods; the other nineteen must be
 transported or recomputed because their numerical weights have no nontrivial
 `GL(3,2)` stabilizer.
 
+There is now one exact transport, but it lives after re-rooting the completed
+family.  A small-label triple presents the same final family from each of its
+three root edges.  Fano triples alone leave seven chart components; the 28
+non-Fano triples connect all 21 root edges, so every edge-only scalar that
+descends to the final family is forced to be constant.  The positive remnant
+is containment: the two closed anchors cast upward shadows.  They close 14 of
+the 21 five-small sets; 456 exact one-speed sweeps plus the THM-732 tail close
+the other seven, and the sole unanchored six-small family is directly loose.
+Thus every unresolved flood completion has at most four small labels and at
+least two speeds above 14.  This is a reduction of the common tail, not a
+symmetry closure of any remaining root body.
+
 ## 6. Tournament threads after the audit
 
 The recurring tournament failure is now precise.  Scalar gauges often produce

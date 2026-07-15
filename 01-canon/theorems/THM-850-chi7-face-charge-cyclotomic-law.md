@@ -12,6 +12,8 @@ verification:
   - 05-knowledge/results/lrc14_fano_chi7_flood_needle_obstruction_codex_S11.out
   - 04-computation/chi7_radon_carry_alias_codex_S15.py
   - 05-knowledge/results/chi7_radon_carry_alias_codex_S15.out
+  - 04-computation/lrc14_j4_flood_reroot_shadow_codex_S16.py
+  - 05-knowledge/results/lrc14_j4_flood_reroot_shadow_codex_S16.out
   - 04-computation/lrc14_fano_flag_heawood_radon_repair_codex_S15.py
   - 05-knowledge/results/lrc14_fano_flag_heawood_radon_repair_codex_S15.out
 ---
@@ -494,6 +496,36 @@ Nineteen literal flood edges remain.  This is a useful positive control for
 the carrier diagnosis: the rank-eight cycle repair encodes either input
 completely, yet no known function of those coordinates supplies its positive
 clearance margin without the interval recursion.
+
+There is now a sharper **descent no-go** and a limited positive transport.
+A completed family is not rooted at a unique flood edge.  For every small
+triple `{a,b,c}`, the same 13-speed family
+
+```text
+{8,...,14} union {a,b,c,15,16,17}
+```
+
+is a four-extension from each of the root charts `ab,ac,bc`.  Thus any
+edge-only scalar that descends to completed-family data must agree on every
+triangle of `K_7`.  The seven Fano triangles alone leave seven components
+(equality rank `14`), while the `28` noncollinear triangles connect all `21`
+edges (equality rank `20`).  Their coequalizer is one-dimensional: only a
+constant edge scalar descends.  The coincidence with the `28` Heawood
+hexagons is exact at the index level but not at the map level.  Hexagon
+currents recover the eight-dimensional carrier; triangle re-root equalities
+identify alternative presentations.  This formally rules out promoting the
+recovered Fano/Heawood edge field to a nonconstant invariant of the final LRC
+family.
+
+The positive transport is ordinary containment.  Since the literal `(5,7)`
+and `(6,7)` bodies are uniformly closed, every completed family containing
+either is closed, even when it was reached from another root edge.  Together
+with `456` exact one-speed sweeps on the seven anchor-avoiding five-subsets and
+the THM-732 tail inequality, this proves that every flood-universe family with
+at least five small labels is strictly lonely.  Hence the unresolved metric
+tail has at most four small labels and at least two speeds above `14`.  This is
+a genuine shadow reduction, not a closure of any remaining whole edge body;
+THM-741 stays `CLAIMED`.
 
 Equations (20)-(21) still say only that operation depth four is the first
 depth with neutral repeated-role words beyond the balanced `ABC` word.  The

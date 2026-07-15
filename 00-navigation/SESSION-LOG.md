@@ -1,3 +1,24 @@
+## codex-2026-07-15-S16 continuation -- flood re-root descent closes the five-small shadow
+
+THM-741 remains `CLAIMED`: only two of its 21 whole flood bodies were exact at
+this checkpoint.  A new transport does close a shared subtail.  A completed
+family with a small-label triple is simultaneously a four-extension from all
+three edges of that triple.  The seven Fano triangles leave seven components
+on the 21 root charts, but the 28 non-Fano triangles connect all charts; hence
+every root-edge-only scalar descending to completed-family data is constant.
+This formally separates THM-850's carrier recovery from a false symmetry
+quotient.
+
+Literal containment supplies the useful transport.  The exact `(5,7)` and
+`(6,7)` body closures shadow 14 of the 21 five-small sets.  On the seven
+residual twelve-speed bases, 456 exact one-speed sweeps are all positive, with
+global swept minimum `16607/840840`; THM-732 closes every larger speed.  The
+sole unanchored six-small family has good-set measure `57191/2522520>0`.
+Therefore every final family containing `{8,...,14}` and at least five labels
+from `{1,...,7}` is strictly lonely.  Every unresolved flood completion now
+has at most four small labels, equivalently at least two speeds above `14`.
+This closes no additional whole root edge.
+
 ## codex-2026-07-15-S15/S16 continuation -- THM-862 classifies the scale-three H6 sheet stalk
 
 HONEST VERDICT: global `n=12` sporadic-branch emptiness remains open.  The

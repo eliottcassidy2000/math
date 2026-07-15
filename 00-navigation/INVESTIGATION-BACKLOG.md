@@ -822,9 +822,12 @@
 - **Parallel exact rung:** implement and finish the still-CLAIMED THM-741 2002-body run.  Completion would
   extend the proved far-count closure from `f<=3` to `f<=4` without relying on the projective theorem.
   The resume ledger currently records `171/2002` clean bodies.  A portable
-  fixed-`E_2` screen now closes flood edge `(5,7)` exactly: 28,847 bottom
-  sweeps, minimum `7/858`, zero failures.  Twenty empty-obligation floods
-  remain.  The Fano/`chi_7` audit organizes them but supplies no symmetry
+  fixed-`E_2` screen now closes flood edges `(5,7)` and `(6,7)` exactly.  Their
+  completed-family containment shadows, seven residual bases, and 456 exact
+  one-speed sweeps close every completion containing `{8,...,14}` and at least
+  five small labels.  Every unresolved completion therefore has at most four
+  small labels and at least two speeds above `14`.  Nineteen whole
+  empty-obligation floods remain.  The Fano/`chi_7` audit organizes them but supplies no symmetry
   quotient, so port the numeric screen edge by edge or prove a new monotone
   transport inequality.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
