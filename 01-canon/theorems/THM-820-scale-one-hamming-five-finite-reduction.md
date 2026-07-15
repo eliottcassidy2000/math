@@ -1,7 +1,7 @@
 ---
 id: THM-820
 title: Scale-one Hamming-five finite collar reduction
-status: PROVED (uniform two-box reduction) + FINITE-EXACT (792 height-one H5 rows, 924 height-one H6 rows, and 201,376 five-cycle band rows)
+status: PROVED (uniform two-box reduction, sharpened by intersection with THM-815) + FINITE-EXACT (792 height-one H5 rows, 924 height-one H6 rows, and 201,376 five-cycle band rows)
 source: codex-2026-07-15-S10 radius-five continuation
 depends_on:
   - LRCUpTo13  # only the settled seven-speed 1/8 and eight-speed 1/9 bounds
@@ -114,6 +114,33 @@ R=(1,3,5,7,9,11),                  B=2[12].               (11)
 This is a doubled AP, not a new non-AP residual.  It is a method boundary:
 radius five approaches a scale-changing AP face, and at radius six the face
 is reached exactly.
+
+### E. Sharp joint boxes with the component-discrepancy bound
+
+THM-815 Part C independently proves that the least numerical lift in every
+hypothetical tight scale-one Hamming-five row satisfies
+
+```text
+x<=146.                                                   (E1)
+```
+
+Intersecting (E1) with the two alternatives above sharpens the actual finite
+search without changing the collar proof. In branch A,
+
+```text
+(x,v,w,y,z)<=(146,292,584,1168,2336).                   (E2)
+```
+
+In branch B, retain the sharper reciprocal-envelope bounds from (7):
+
+```text
+x<=146,                 v<=1986,
+max{v,w,y,z}<=4v<=7944.                                  (E3)
+```
+
+Thus (E2)--(E3), rather than either theorem's standalone bounds, are the
+current sharp explicit enumeration boxes obtained by combining the component
+and collar reductions. No emptiness claim is made for either box.
 
 ## 1. Complete residues and the periodic danger estimate
 

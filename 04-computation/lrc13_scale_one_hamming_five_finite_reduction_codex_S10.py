@@ -287,6 +287,19 @@ def finite_reduction_constants() -> None:
     print("exceptional_box=v<=1986 max_top<=4v<=7944")
     print()
 
+    # Intersect the collar alternatives with THM-815 Part C's independent
+    # component-discrepancy cap x<=146.
+    sharp_x = 146
+    sharp_doubling = (sharp_x, 2 * sharp_x, 4 * sharp_x,
+                      8 * sharp_x, 16 * sharp_x)
+    assert sharp_doubling == (146, 292, 584, 1168, 2336)
+    assert envelope == 1986 and 4 * envelope == 7944
+    print("THM815_COMPONENT_INTERSECTION")
+    print("sharp_least_replacement_bound=x<=146")
+    print(f"sharp_doubling_box_caps={sharp_doubling}")
+    print(f"sharp_exceptional_box=x<=146 v<={envelope} max_top<={4 * envelope}")
+    print("interpretation=current_joint_enumeration_boxes_not_H5_closure")
+    print()
 
 def inverse_mod13(x: int) -> int:
     return pow(x % P, -1, P)

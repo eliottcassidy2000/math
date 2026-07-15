@@ -103,6 +103,7 @@ obligations, and proof-carrier interfaces.
   HYP-6820; `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py/.out`;
   `lrc13_hamming_five_height_two_kernel_pairs_codex_S10.cpp/.out`;
   `lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md`.
+
 ## LTT-436 - Dynamic Residual Component/Comb State / Return-Cell Incidence
 
 - **Move:** Replace a static safe-set snapshot by the operation-closed state
@@ -113,8 +114,10 @@ obligations, and proof-carrier interfaces.
   every deep component.
 - **LRC use:** THM-815 closes every scale-one Hamming-four lift and proves
   finite recursion through scale-one Hamming radius six. THM-816 closes the
-  quartic order-three interface left by THM-810. THM-817 compresses the deep erosion
-  selector to `2c_E N_R+2W-2g` without assuming connected returns.
+  quartic order-three interface left by THM-810. THM-820 puts every tight
+  scale-one Hamming-five row in one of two explicit uniform boxes. THM-817
+  compresses the deep erosion selector to `2c_E N_R+2W-2g` without assuming
+  connected returns.
 - **Preserves:** strict survival of at least one interval; exact component
   lengths and endpoints; lift magnitude and residue label; left/right endpoint
   owners; signed return-cell label; and the next cover obligation.  This is the
@@ -138,19 +141,23 @@ obligations, and proof-carrier interfaces.
   is loose with `M=3/19`. THM-816's raw/conditional four-comb tournaments are
   transitive while terminal flip counts range from zero to three. THM-817's
   two tournaments on three return-cell vertices are transitive with one edge
-  flip and one Hamiltonian path. In every case the tournament is telemetry;
-  the interval/comb or cell/component incidence proves the theorem.
-- **Next pull:** Exhaust the finite scale-one Hamming-five/six trees and derive
-  the corresponding arbitrary-scale oriented-deck classification. At seven
-  remaining scale-one combs, replace mean danger density by an overlap-debt or
-  owner-diversity potential. On the deep side, seek a contradiction in the
-  adaptive signed-cell by deep-component incidence; do not assume `N_R=O(1)`,
-  since THM-817 permits `N_R=Theta(B)` under all current arithmetic/scalar
-  gates.
-- **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817,
+  flip and one Hamiltonian path. THM-820 has two realized five-cycles with the
+  same labelled live graph but centres `9` and `22` and different maxima. In
+  every case the tournament is telemetry; the interval/comb or cell/component
+  incidence proves the theorem.
+- **Next pull:** Exhaust THM-820's two scale-one Hamming-five boxes and the
+  finite Hamming-six tree, then derive the arbitrary-scale oriented-deck
+  classification. At seven remaining scale-one combs, replace mean danger
+  density by an overlap-debt or owner-diversity potential. On the deep side,
+  seek a contradiction in the adaptive signed-cell by deep-component
+  incidence; do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)`
+  under all current arithmetic/scalar gates.
+- **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
+  `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`, and
   `lrc13_return_satellites_cell_classifier_codex_S10.py`.
+
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 
 - **Move:** At a binding scale `Q=13s`, split the tight core into the on-sheet

@@ -63747,3 +63747,33 @@ is therefore the prime-13 instance, not an isolated numerical coincidence.
 This strengthens the arithmetic provenance of safe components but does not
 replace their endpoint widths or their incidence with future danger combs; it
 fits as a source-stalk coordinate under the recursive carrier above.
+
+A later shared-main pull supplied THM-820's independent Hamming-five collar
+dichotomy. Standalone, it gives a doubling box through top speed `6208` or an
+exceptional top-four cycle through `7944`, rejects all 792 height-one H5 rows,
+and identifies the unique height-one H6 minimum as the doubled AP `2[12]`.
+Intersecting its branch inequalities with THM-815's sharper `x<=146` bound
+gives the actual current boxes
+
+```text
+(146,292,584,1168,2336)
+```
+
+or
+
+```text
+x<=146,        v<=1986,        max(v,w,y,z)<=7944.
+```
+
+This joint corollary is now stated in THM-820 and asserted by its replay. The
+two results are complementary: component discrepancy supplies the sharp first
+coordinate, while collar topology supplies explicit bounds on all remaining
+coordinates. Neither box has yet been exhausted.
+
+THM-820 also sharpens the tournament warning. Its centre-9 and centre-22
+five-cycles have identical ordered labels and live edges but different exact
+maxima; a top-four SCC persists at unbounded metric scale. The concurrently
+published operation-kernel card therefore remains LTT-435, while the broader
+component/comb and return-cell carrier was renumbered LTT-436 under the
+first-pusher rule. Together they identify the exact shallow state as a residual
+interval union plus legal labelled continuations, endpoint owners, and widths.

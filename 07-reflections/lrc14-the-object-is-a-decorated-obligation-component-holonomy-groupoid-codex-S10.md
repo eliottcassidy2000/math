@@ -14,6 +14,12 @@ component-discrepancy proof and an independent 768,735-row collar/doubling
 certificate.  THM-815 also turns
 scale-one Hamming five and six into finite exact decision trees.  Seven is the
 first radius where the interval-comb discrepancy loses positive cover deficit.
+THM-820 supplies an independent collar decomposition of radius five; combined
+with THM-815 it leaves the explicit doubling box
+`(146,292,584,1168,2336)` and exceptional box `x<=146,v<=1986,max<=7944`. The
+literal continuation kernel of `(E_S,V)` is the finite automaton semantics of
+the decorated component-obligation state proposed here; no nontrivial minimized
+quotient has yet been proved.
 
 THM-817 replaces the coarse disconnected-return discussion by an exact cell
 theorem. Every component of `closure(R_U)` is a signed maximum-speed cell

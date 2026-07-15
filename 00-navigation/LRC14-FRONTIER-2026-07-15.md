@@ -207,10 +207,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    then cross the seven-comb wall.**
    THM-815/816 close every AP-centred Hamming-four packet.  THM-815's
    discrepancy recursion makes the scale-one radius-five and radius-six
-   charts finite exact trees, with
-   first caps `146` and `468`; enumerate those trees with prefix certificates
-   and build the radius-five/six analogue of THM-810's oriented deck
-   classification. At scale-one radius seven the mean danger density is
+   charts finite exact trees, with first caps `146` and `468`. THM-820 gives
+   radius five two explicit uniform collar boxes, so minimize its residual
+   automaton or meet the boxes in the middle as a two-comb versus three-comb
+   cover; enumerate radius six and build the radius-five/six analogue of
+   THM-810's oriented deck classification. At scale-one radius seven the mean danger density is
    `14/13`, so the same potential ceases to decrease. Seek a replacement
    potential using overlap debt, owner diversity, or signed component/comb
    incidence. The parallel six-exception/seven-exception sheet

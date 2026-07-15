@@ -277,13 +277,15 @@
   state is the exact residual interval union plus the remaining labelled danger
   combs, endpoint owners, and widths—not the bare deck or tournament.
 - **New shallow finite boundary:** THM-815's discrepancy recursion makes every
-  scale-one Hamming-five and Hamming-six chart a finite rational decision tree.
-  Exact root scans give first-speed caps `146` and `468`. At scale-one Hamming
-  seven the coefficient `13-2m` changes sign, so mean danger density no longer
-  yields an initial cap. Finish the two finite trees and classify arbitrary
-  five-/six-owner deck ramification, then seek a new overlap/owner potential at
-  the seven-comb wall. This is a method boundary, not a claimed radius-seven
-  counterfamily.
+  scale-one Hamming-five and Hamming-six chart a finite rational decision tree,
+  with first-speed caps `146` and `468`. Intersecting the H5 bound with
+  THM-820's constructive collar dichotomy gives the doubling box
+  `(146,292,584,1168,2336)`, or the exceptional top-four cycle with `v<=1986`
+  and maximum lift at most `7944`. All 792 height-one H5 rows are loose; the
+  height-one H6 minimum is the unique doubled AP `2[12]`. At
+  scale-one Hamming seven the coefficient `13-2m` changes sign. Exhaust the H5
+  boxes and H6 tree, classify arbitrary five-/six-owner deck ramification, then
+  seek a new overlap/owner potential at the seven-comb wall.
 - **Deep progress:** THM-772 gives primitive divisor-complete two-/three-sheet
   quotients and relative speed bounds. THM-774 identifies the exact two-sheet
   folded diamond and closes all ten-cores in `[1,19]` against unbounded odd
@@ -300,11 +302,12 @@
   complement family has `N_R=3+1440n`, so current arithmetic/scalar gates do
   not imply connected, bounded, or sublinear return geometry. The family has
   an explicit central escape and is a method limit, not a tight candidate.
-- **Open shallow theorem:** enumerate the finite scale-one radius-five/six
-  trees, classify arbitrary five-/six-owner deck ramification, and prove a
-  decreasing overlap/owner invariant at scale-one radius seven and above. The
-  target carrier is dynamic component--comb incidence; the Hamming-four collar
-  tournament is strongly connected on an explicit loose row and is telemetry.
+- **Open shallow theorem:** enumerate THM-820's two scale-one Hamming-five
+  boxes and the finite Hamming-six tree, classify arbitrary five-/six-owner deck
+  ramification, and prove a decreasing overlap/owner invariant at scale-one
+  radius seven and above. The exact carrier is the residual interval union plus
+  its legal continuation bank. THM-820's tournament-identical centre-9/centre-
+  22 five-cycles and unbounded top-four SCC family rule out a bare collar graph.
 - **Open deep theorem:** rule out every surviving folded cover by proving
   failure of the adaptive signed-return-cell by deep-component selector, or
   force the dyadic/collar descent into THM-774/776's finite bases. For an even
@@ -402,10 +405,11 @@
   branches uniformly by recursively transporting the full residual interval
   union against labelled danger combs. THM-815 also proves finite-decidability
   at scale-one radii five and six, with first caps `146` and `468`; seven combs
-  are where the mean-density discrepancy loses coercivity. The next shallow
-  work must separately classify arbitrary deck ramification and find an
-  invariant that sees overlap and owner incidence, not merely total danger
-  mass.
+  are where the mean-density discrepancy loses coercivity. THM-820 makes the
+  radius-five residual explicitly bounded in two collar boxes and exposes the
+  doubled-AP seam. The next shallow work must exhaust those boxes, separately
+  classify arbitrary deck ramification, and find an invariant that sees
+  overlap and owner incidence, not merely total danger mass.
 - **Collar progress:** THM-792 gives the even-maximum sporadic collar a bounded
   rational clock, occupied top teeth with repeated ordered flank types, and a
   seven-chip labelled edge cover on `Z/13Z`.  The forced `w=13c` automaton

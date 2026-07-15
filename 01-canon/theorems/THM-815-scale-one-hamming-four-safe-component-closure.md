@@ -4,7 +4,7 @@ title: Scale-one Hamming-four safe-component closure
 status: PROVED by two independent reductions (sharp interval-comb component ladder; collar-cycle/doubling box), with a finite-recursion theorem through radius six + FINITE-EXACT (666,705 nested Hamming-four rows, two higher-radius initial censuses, two 35,640-row component/endpoint replays, and an independent 768,735-row C++ collar certificate)
 source: codex-2026-07-15-S10 Hamming-four continuation
 depends_on: [LRC(<=13), THM-795, THM-800, THM-804, THM-806, THM-810, THM-816]
-related: [THM-770, THM-800, THM-804, THM-810, THM-816, HYP-6820]
+related: [THM-770, THM-800, THM-804, THM-810, THM-816, THM-820, HYP-6820]
 verification:
   - 04-computation/lrc13_h4_scale_one_component_ladder_codex_S10.py
   - 05-knowledge/results/lrc13_h4_scale_one_component_ladder_codex_S10.out
@@ -96,7 +96,11 @@ m=6: min L_0=31/1430, uniquely at R=(2,3,5,6,8,12),
 ```
 
 These bounds leave respectively `40,590` and `194,040` labelled first-prefix
-states.  For `m=7`, the initial mean danger density is `14/13`; the coefficient
+states. THM-820 supplies an independent collar dichotomy at `m=5`; intersecting
+its branch inequalities with `x_1<=146` gives the explicit joint boxes
+`(146,292,584,1168,2336)` and
+`x<=146,v<=1986,max(v,w,y,z)<=7944`. For `m=7`, the initial mean danger
+density is `14/13`; the coefficient
 `13-2m` changes sign, so this union-bound recursion becomes noncoercive before
 the first lift.  No claim of radius-five or radius-six emptiness is made here,
 and the density barrier is a limitation of this method, not a proof that the

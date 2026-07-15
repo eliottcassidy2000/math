@@ -78,6 +78,13 @@ open are superseded.  The same discrepancy recursion makes scale-one Hamming
 five and six finite exact decision trees; its coefficient changes sign at
 seven remaining combs.
 
+THM-820 makes the first of those trees explicitly bounded by a doubling or
+exceptional top-four collar branch. Intersecting with THM-815 sharpens the
+boxes to `(146,292,584,1168,2336)` and `x<=146,v<=1986,max<=7944`. Its two
+five-cycles with identical live tournament data but integer centres `9` and
+`22` are a direct witness that the missing state includes metric band centre
+and the whole legal-continuation kernel, not only owner-switch topology.
+
 THM-817 sharpens the deep side in the same language. Every return component
 is one signed maximum-speed cell inside a tooth, with exact interval and
 endpoint owners, and
