@@ -86,7 +86,14 @@ walls are exponentially expensive.
 
 ## (5) What remains (honest)
 
-- **The unconditional exit lemma (OPEN, named):** prove K0 is finite/small for
+- **The unconditional exit lemma -- ADVANCED by THM-782 (opus-S303):** the
+  phi-recurrence, period-sum law, SINGLE-VISITOR BREAK (unconditional: no in-run
+  f-period can have exactly one visitor), cluster balance (pairs w+w2 = 0 mod 7),
+  the de-phase bound, and the conditional extent theorem (< 1/w_g + 2/w_f absent
+  balanced co-landings) are PROVED; the synchronized loophole packet is
+  eliminated; K0 updated to 6 (heights to 10^4); Davenport (D(Z_7) = 7) shows
+  balance is algebraically unavoidable, so the residual gap is the GEOMETRIC
+  co-landing cascade. Original statement of the gap:** prove K0 is finite/small for
   all 8-tuples — e.g. via (2): a blocking run of length K forces K−1 successive
   schedule-vs-algebra coincidences; the schedule's owner-switch pattern is
   three-distance-rigid while the hop targets move on a large orbit unless the

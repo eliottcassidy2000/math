@@ -76,6 +76,37 @@ reconstruction lemma is supplied.
 
 ---
 
+## opus-2026-07-14-S303 -- THM-782: THE EXIT-LEMMA PACKAGE (phi-recurrence; period-sum law; UNCONDITIONAL single-visitor break; cluster balance; de-phase bound; conditional extent theorem < 1/w_g + 2/w_f; synchronized loophole ELIMINATED; K0 := 6 at heights 10^4; Davenport D(Z_7)=7 localizes the residual gap as GEOMETRIC)
+
+Prompt (owner): keep going; prove the unconditional exit lemma.
+
+PROVED: (1) phi-RECURRENCE: with phi = w^{-1}m at wall (m+1/2)/w, blocking propagates between
+consecutive walls iff phi_{i+1} = phi_i + w_{o_i}^{-1} mod 7 (same-owner free; each switch one
+determined equation). (2) PERIOD-SUM LAW (telescoped): Sum_{a != b} n_a w_a^{-1} = 0 mod 7 per
+in-run period (Beatty counts; 40/40; note: the first battery FAILED from test-power -- 2
+samples conflated with violation -- fixed, rerun clean). (3) SINGLE-VISITOR BREAK
+(unconditional tooth): in the fastest owner f's periods every other owner walls 0/1 times, so
+one visitor forces w^{-1} = 0 mod 7 -- impossible; the run dies (45 periods, 0 occurrences).
+(4) CLUSTER BALANCE: visitor sets need zero inverse-sum; pairs w_c + w_c2 = 0 mod 7 (6/6).
+(5) DE-PHASE: fixed pairs co-visit <= w_c w_c2/(w_f Delta) + 1. (6) CONDITIONAL EXTENT:
+absent balanced co-landings at the second-fastest owner g's walls, run extent < 1/w_g + 2/w_f
+=> the r=8 pierce UNCONDITIONAL for that configuration class.
+
+CENSUS (heights to 10^4): generic max 5; synchronized {2}+odds (the loophole candidate whose
+period-sums cancel by design) max 4 -- WORSE than generic, killed by within-period
+phi-equations exactly as predicted; near-ratio 4; same-residue 6; annealed peak 6. K0 := 6.
+
+DAVENPORT INSIGHT: D(Z_7) = 7 -- the seven non-f inverses ALWAYS contain a zero-sum subset;
+balance is algebraically unavoidable; the exit lemma's remaining content is GEOMETRIC: bound
+consecutive balanced CO-LANDINGS (de-phase + cascade congruences n = 4 or 0 + handover
+triple-balance = the proved machinery). Sharp conjecture: every blocking run <= 6 walls.
+
+HYGIENE: THM-780/781 taken concurrently by codex at claim time -- dodged, mine is THM-782.
+
+FILES: 01-canon/theorems/THM-782-exit-lemma-package.md; 04-computation/
+lrc14_exit_lemma_decision_opus_S303.py (+ .out); THM-779 sec 5 updated; HYP-6845 executed.
+
+---
 ## codex-2026-07-14-S7 -- THM-778 PROVED: continued fractions are the endpoint-transport language
 
 Re-audited the repository's continued-fraction threads from Sturmian sectors,
