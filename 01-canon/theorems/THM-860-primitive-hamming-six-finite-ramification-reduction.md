@@ -1,7 +1,7 @@
 ---
 id: THM-860
 title: Primitive Hamming-six finite ramification reduction
-status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=2,328,480 and belongs to a finite exact component recursion; no emptiness claim
+status: PROVED STRUCTURAL + FINITE-EXACT — every primitive proper AP-centred H6 packet at or below 1/13 has c<=2,177,280 and belongs to a finite exact component recursion; no emptiness claim
 source: codex-2026-07-15-S14/S15 primitive-H6 transport and independent audit
 depends_on: [THM-765, THM-810, THM-815, THM-857, THM-858, THM-859]
 related: [THM-823, THM-840, HYP-6820]
@@ -80,10 +80,12 @@ Its five-colour complement need not be known to miss a sheet.  It is instead
 supplied by (5), which makes `m_i=1`.  For `|S|>=2`, the complement has at
 most four colours and THM-858's missed-fibre argument does transport.
 
-Six-colour attenuation also gives
+Six-colour attenuation gives the first pivot, and the all-six instance of (7)
+sharpens it:
 
 ```text
-sum_i 1/D_i>1/13,                         min_i D_i<=77. (8)
+sum_i 1/D_i>1/13,                         min_i D_i<=77,
+sum_i rho(D_i)>=1,                        min_i D_i<=72. (8)
 ```
 
 ### B. Optimized valuation ranges and the common-scale cap
@@ -104,10 +106,10 @@ Choose a numerically least order `D_*`.  Since `c=lcm_i D_i`, (9) implies
 c/D_* divides 2^5*3^3*5*7=30,240.                     (10)
 ```
 
-Together with (8),
+Together with the sharpened pivot in (8),
 
 ```text
-                         c<=2,328,480.                  (11)
+                         c<=2,177,280.                  (11)
 ```
 
 The last line of (9) is a **valuation-range** statement, not a prime
@@ -186,7 +188,7 @@ entire primitive AP-centred Hamming-six branch is finite-decidable.  At
 `2[12]`; hence any primitive row satisfying (2) has
 
 ```text
-2<=c<=2,328,480.                                       (19)
+2<=c<=2,177,280.                                       (19)
 ```
 
 This is a finite reduction, not a zero-row verdict.
@@ -341,7 +343,26 @@ Six-colour scalar coverage and (31) give
 ```
 
 If every order were at least `78`, the last sum would be at most `6/78=1/13`,
-a contradiction.  This proves (8).
+a contradiction, proving the first pivot in (8).
+
+For the sharper pivot, take `S` to be all six colours in (7), so `T` is
+empty and `m_i=D_i`.  For every `m>=73` with `13` not dividing `m`,
+
+```text
+rho(m)<1/6.                                             (32a)
+```
+
+Indeed `m=73,...,77` is a direct ceiling check, `m=78` is excluded by
+`13` not dividing `c`, and for `m>=79`,
+
+```text
+rho(m)<2/13+1/m<2/13+1/78=1/6.
+```
+
+If all six orders were at least `73`, their all-colour cut would therefore
+have sum strictly below one.  Hence `min_i D_i<=72`; note that
+`rho(72)=1/6`, so this is the exact threshold supplied by that one cut.  This
+completes (8).
 
 ### 3. Full upper-set optimization
 
@@ -415,8 +436,14 @@ v_p(c/D_*)=max_i v_p(D_i)-v_p(D_*)
            <=range_i v_p(D_i).                          (40)
 ```
 
-There is no thirteen-adic factor.  Multiplying (40) gives (10), and (8)
-gives (11).
+There is no thirteen-adic factor.  Multiplying (40) gives (10), and the
+all-six refinement in (8) gives
+
+```text
+c<=72*30,240=2,177,280,
+```
+
+which is (11).
 
 ### 4. Exact finite verifier
 
@@ -427,8 +454,8 @@ The stored verifier independently performs four exact jobs:
    ranges `5,3,1,1,0` and their cut-level extremal words;
 2. reconstructs closed danger unions for all `924` six-cores, proving
    (16)--(18);
-3. enumerates all `c=2` order/label rows by direct affine sheet masks and
-   reproduces (22)--(24); and
+3. enumerates all primitive-compatible non-all-one `c=2` order/label rows by
+   direct affine sheet masks and reproduces (22)--(24); and
 4. replays every mask in (26) and computes (27) from exact breakpoint
    denominators.
 
@@ -436,9 +463,9 @@ Normal and optimized Python runs are byte-identical to the stored output.
 The frozen integrity data are
 
 ```text
-source SHA-256  6e51c6d7487b07b8e115320df16dec1b355c6b41c95fc8bb55af45d619928161
-output SHA-256  c99965afdc8300e8e46e9bfc76b849c61c60d9fb745a24796ed367235ebbf85e
-payload FNV-64  b3faace3116a3ab0
+source SHA-256  d91e8e9be79b0339e80958ac3cedd1a6cc3efd7ccc25009673d0592978069a95
+output SHA-256  15626665176d97acbed7e68b197d8c274c457b6965387c5e727705177e23245d
+payload FNV-64  4ef6d591ed02b211
 root FNV-64     321c8da774c59420
 c=2 FNV-64      b2aad8bd497eb595.                       (41)
 ```

@@ -5,8 +5,8 @@ The four independent finite checks are:
 
 1. optimize the full primewise upper-set relative cuts on six valuations;
 2. reconstruct the longest strict-safe root component for all C(12,6) cores;
-3. enumerate every c=2 order/label common-sheet presentation and audit its
-   signed-doubling graph; and
+3. enumerate every primitive-compatible non-all-one c=2 order/label
+   common-sheet presentation and audit its signed-doubling graph; and
 4. replay the explicit c=3 mixed-order common-sheet false positive and its
    exact lonely-runner maximum.
 
@@ -108,13 +108,25 @@ def valuation_optimization() -> None:
             f"extremals={extremals}"
         )
 
+    # The attenuation pivot is 77.  The all-six relative cut is sharper:
+    # rho(72)=1/6, while rho(m)<1/6 for every allowed m>=73.  The finite
+    # boundary checks below complement the analytic m>=79 estimate in THM-860.
+    attenuation_pivot = 77
+    all_six_pivot = 72
+    assert rho(all_six_pivot) == F(1, 6)
+    assert all(rho(m) < F(1, 6) for m in range(73, 78))
+    assert 78 % 13 == 0
+
     quotient_multiplier = 2**5 * 3**3 * 5 * 7
-    scale_cap = 77 * quotient_multiplier
+    scale_cap = all_six_pivot * quotient_multiplier
     assert quotient_multiplier == 30_240
-    assert scale_cap == 2_328_480
+    assert attenuation_pivot * quotient_multiplier == 2_328_480
+    assert scale_cap == 2_177_280
     emit(
         "quotient_divisor=2^5*3^3*5*7="
-        f"{quotient_multiplier} scale_cap=77*{quotient_multiplier}={scale_cap}"
+        f"{quotient_multiplier} attenuation_pivot={attenuation_pivot} "
+        f"all_six_pivot={all_six_pivot} "
+        f"scale_cap={all_six_pivot}*{quotient_multiplier}={scale_cap}"
     )
     emit(
         "rho_table="

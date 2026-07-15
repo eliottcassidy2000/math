@@ -15,7 +15,8 @@ primitivity and `M(A)<=1/13` make every leave-one-out core primitive.
 Consequently `lcm(D_j:j!=i)=c` for every effective order word.  This identity
 is also the missing singleton case of the six-colour relative cuts; all larger
 colour sets have complements of size at most four and inherit THM-858's
-missed-fibre proof. Six-colour attenuation gives `min D_i<=77`.
+missed-fibre proof. Six-colour attenuation first gives `min D_i<=77`; the
+all-six relative cut sharpens this to `min D_i<=72`.
 
 The independently audited full upper-set argument sharpens the adjacent
 valuation ranges from `(8,4,1,2)` to
@@ -28,7 +29,7 @@ range(v_p)=0 for p>=11, p!=13.
 Thus `c/min D_i | 2^5*3^3*5*7=30,240` and
 
 ```text
-c<=2,328,480.
+c<=2,177,280.
 ```
 
 Range zero at a large prime means a common factor, not prime absence. Every
@@ -49,9 +50,9 @@ The `c=3` mixed-order guardrail common-covers all three sheets but has exact
 `M=5/29` at `t=+/-1/58`, refuting “common sheets imply common scale” without
 threatening LRC. Normal and optimized Python runs reproduce the stored output
 byte-for-byte. Source/output SHA-256 are
-`6e51c6d7487b07b8e115320df16dec1b355c6b41c95fc8bb55af45d619928161` and
-`c99965afdc8300e8e46e9bfc76b849c61c60d9fb745a24796ed367235ebbf85e`;
-payload FNV-64 is `b3faace3116a3ab0`.
+`d91e8e9be79b0339e80958ac3cedd1a6cc3efd7ccc25009673d0592978069a95` and
+`15626665176d97acbed7e68b197d8c274c457b6965387c5e727705177e23245d`;
+payload FNV-64 is `4ef6d591ed02b211`.
 
 FAITHFUL CARRIER: prime-power valuation upper sets -> complement-lcm owner
 fibres -> labelled CRT progressions -> literal strict-safe components. The
@@ -108,6 +109,16 @@ closed-danger-union replay; updated frontier, backlog, lens/tournament maps,
 HYP-6820, results index, and cover-debt reflection.  Primary source/output
 SHA-256 are `58a8c4d516e340fa5bcb426a646ab0006f1ba91cd1697ab6b22d580ebaf65222`
 and `63b3851ce74a0906821e990c81fe1195d9ea8a6bbf0dc6ff8115f7760d4b3ef7`.
+A fresh monolithic optimized primary replay completed in `4077.18` seconds
+and byte-matched that stored output.  The independent closed-danger replay
+then completed all 924 roots in eight shards; its combiner revalidated every
+range, local manifest, root order, frozen counter, shortcut witness, and the
+sole `2[12]` cover.  The canonical all-root manifest is
+`480ca266dba54d7dfa76a68baecd56b26f3294095d36786ab04c0dfd5b135dee`;
+the replay source/combiner/output SHA-256 values are respectively
+`585c50601ef3c392a2afb020242115a7215d233878639c80d355984a8a16bd27`,
+`dd383b53015bea5e7aa76c1109ca4f382ca411611be726910951d8c4bf6b07e7`,
+and `6d7316ceb1fe15987bb527f75ff7938ceef60a118facdbf697315da336a393be`.
 
 ## codex-2026-07-15-S10 continuation -- THM-859 identifies H6 ramification and the order-one gate
 
