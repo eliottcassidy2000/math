@@ -41,6 +41,23 @@ forgotten only after the arc is formed, not before the next speed replacement
 or descent. THM-821 proves neither descent sufficiency nor restriction/gluing
 maps.
 
+THM-824 shows exactly when a further controlled forgetting is legal.  At the
+fixed ratio `(13d,5d)`, the full return set is symmetric and the folded target
+has two short components with no symmetric cross-switch.  The global
+containment predicate therefore factors through only two extremal radii:
+
+```text
+rho_(C,d)(E)+rho_d(R)<=2/169.
+```
+
+This is not evidence that scalarization is generally safe.  It is evidence
+that scalarization must be earned by a no-switch theorem.  One signed
+satellite is nonsymmetric, arbitrary odd ratios can have a nontrivial
+target-component switch carrier, and endpoint owners remain necessary for
+transport even when they are redundant for the fixed global evaluation.
+Thus target components and their symmetric-switch hyperedges are another
+natural vertex set inside `(C,I;M,W,K)`, not a rival universal object.
+
 These results instantiate the proposed groupoid-valued recursion more
 concretely than the original synthesis did: within the shallow metric stratum,
 the active object is the dynamic residual interval union with remaining

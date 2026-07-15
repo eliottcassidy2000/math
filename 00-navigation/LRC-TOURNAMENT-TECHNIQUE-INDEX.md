@@ -120,7 +120,10 @@ obligations, and proof-carrier interfaces.
   compresses the deep erosion selector to `2c_E N_R+2W-2g` without assuming
   connected returns. THM-821 proves that, for every positive odd exception pair,
   every return-cell/deep-component atom factors exactly through its
-  pair-indexed circular sum arc and endpoint/cusp minimum.
+  pair-indexed circular sum arc and endpoint/cusp minimum. THM-824 proves a
+  stronger global quotient at the fixed ratio `(13d,5d)`: symmetry of the full
+  return set and a two-target-cell no-switch lemma reduce all atoms together
+  to one exact additive radius budget.
 - **Preserves:** strict survival of at least one interval; exact component
   lengths and endpoints; lift magnitude and residue label; left/right endpoint
   owners; signed return-cell label; and the next cover obligation.  This is the
@@ -129,22 +132,32 @@ obligations, and proof-carrier interfaces.
   claimed.
   For each THM-821 functional, the
   pair plus exact sum arc, selector argmin, and signed margin are lossless
-  verdict coordinates; the pair index itself cannot be discarded.
+  verdict coordinates; the pair index itself cannot be discarded. For
+  THM-824's fixed ratio and full symmetric return union, the extremal deep
+  target radius and return radius are lossless for the global containment
+  verdict, but not for transport under replacement or descent.
 - **Forgets / guardrail:** A runner or residue tournament loses interval width
   and lift height. A collar-exit tournament loses global cover truth. A static
   equality clock sees only boundary cusps. Centre- or width-order tournaments
   on return cells lose reciprocal endpoint-owner handoffs and their incidence
   with deep components. THM-821 gives explicit opposite-verdict fibres for a
   fixed complete return cell and, separately, for one exact deep interval.
+  THM-824 does not contradict those liars: an individual signed satellite is
+  nonsymmetric. Its scalar collapse begins only after the full `+/-` return
+  union and the empty cross-cell switch relation are proved. Arbitrary odd
+  pairs can have more target cells and must retain their switch/deck data.
   The dynamic carrier is bipartite, not naturally
   antisymmetric; forcing it into a tournament destroys the cover predicate.
 - **Pairwise observable:** At the collar sidecar, use the exact half-open owner-
   exit handoff. At the quartic sidecar, compare which labelled comb removes
   more of the current residual. At the return sidecar, compare signed cell
-  centres.
+  centres. For folded targets, put target components at the vertices and mark
+  a symmetric switch when `t-r,t,t+r` occupy different components.
 - **Switch/gauge:** Reverse the live collar handoffs; switch quartic raw overlap
   to conditional residual overlap; switch return-cell centre order to width
-  order.  Use numerical label only as the declared tie Hamiltonian path.
+  order. At `(13,5)`, the cross-target switch relation is empty, so use
+  `5/13 -> 8/13` only as a declared two-vertex tie Hamiltonian path. Use
+  numerical label only as a declared gauge, never as the containment proof.
 - **Fingerprints:** THM-815's sharp collar row has scores `(2,2,1,1)`, two
   triangles, one four-vertex SCC, five Hamiltonian paths, and four flips, yet
   is loose with `M=3/19`. THM-816's raw/conditional four-comb tournaments are
@@ -156,6 +169,9 @@ obligations, and proof-carrier interfaces.
   incidence proves the theorem. THM-821's tournament on sixteen forgetful
   signatures is transitive in both gauges and flips 41 edges, while the exact
   9,974-atom fibre table—not the ranking—locates the mixed projections.
+  THM-824's two target cells have no cross-switch edge; its tie-completed
+  tournament is trivially transitive, while the no-switch inequality plus the
+  exact radii—not that orientation—prove the scalar factorization.
 - **Next pull:** Exhaust THM-820's two scale-one Hamming-five boxes and the
   finite Hamming-six tree, then derive the arbitrary-scale oriented-deck
   classification. At seven remaining scale-one combs, replace mean danger
@@ -164,14 +180,18 @@ obligations, and proof-carrier interfaces.
   incidence. Use THM-821's exact atomic margin to prove that every admissible
   `(U,x,y)` has at least one failing stalk;
   do not assume `N_R=O(1)`, since THM-817 permits `N_R=Theta(B)` under all
-  current arithmetic/scalar gates.
+  current arithmetic/scalar gates. At fixed ratio `(13d,5d)`, instead prove
+  THM-824's radius inequality fails, equivalently that its signed slack is
+  negative. For other pairs, classify the
+  target-component symmetric-switch carrier before proposing another scalar.
 - **Pointers:** THM-803, THM-807, THM-810, THM-815, THM-816, THM-817, THM-820,
-  THM-821,
+  THM-821, THM-824,
   HYP-6820; `lrc13_h4_scale_one_component_ladder_codex_S10.py`,
   `lrc13_scale_one_hamming_five_finite_reduction_codex_S10.py`,
   `lrc13_quartic_s3_recursive_comb_closure_codex_S11.py`,
   `lrc13_return_satellites_cell_classifier_codex_S10.py`, and
-  `lrc14_signed_cell_stalk_purity_codex_S10.py`.
+  `lrc14_signed_cell_stalk_purity_codex_S10.py`, and
+  `lrc14_fixed_pair_symmetric_radius_budget_codex_S10.py`.
 
 ## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
 

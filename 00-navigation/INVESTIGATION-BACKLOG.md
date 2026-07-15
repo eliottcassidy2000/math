@@ -267,71 +267,17 @@
   for every positive odd `(x,y)` that each atomic verdict factors through the
   pair-indexed circular cell/component sum arc. Its fixed `(13,5)` census gives
   mixed fibres for every tested coarser positional/width/owner shadow. Seek a
-  height-independent contradiction or
-  decreasing invariant on those signed sum arcs with owner ancestry.  THM-816 has already
+  height-independent contradiction or decreasing invariant on those signed
+  sum arcs with owner ancestry. At the fixed ratio `(13d,5d)`, THM-824 replaces
+  the full symmetric-return conjunction by the exact monotone radius budget
+  `rho_(C,d)(E)+rho_d(R)<=2/169`; prove that inequality fails for every
+  admissible core (equivalently, that its signed slack is negative). For
+  arbitrary odd ratios, first classify target-component
+  symmetric switches before proposing another scalar.  THM-816 has already
   removed the quartic `s=3` equality shell; the remaining higher-sheet work is
   outside that special four-exception coset and still lives on loose-set
   component by sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
-  HYP-6820; exact endpoint-splice, component-comb, return-cell, and tooth-winding atlases.
-- **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
-  THM-768/769 split the shallow full-residue fibre from deep sheet covers, and
-  THM-770 closes the shallow box through lift height twelve. THM-795/800 and
-  THM-804/806 close every AP-centred Hamming-one/two/three packet uniformly.
-  THM-810 reduces Hamming four to common scale or one order-three quartic coset;
-  THM-815/816 close both alternatives at arbitrary height.  The THM-815 branch
-  has two independent finite reductions: a component-discrepancy ladder and a
-  collar-cycle/doubling box with 768,735 certified rows.  Their common terminal
-  state is the exact residual interval union plus the remaining labelled danger
-  combs, endpoint owners, and widths—not the bare deck or tournament.
-- **New shallow finite boundary:** THM-815's discrepancy recursion makes every
-  scale-one Hamming-five and Hamming-six chart a finite rational decision tree,
-  with first-speed caps `146` and `468`. Intersecting the H5 bound with
-  THM-820's constructive collar dichotomy gives the doubling box
-  `(146,292,584,1168,2336)`, or the exceptional top-four cycle with `v<=1986`
-  and `x<=146`, with maximum lift at most `7944`.  All 792 height-one H5 rows
-  are loose; the height-one H6 minimum is the unique doubled AP `2[12]`.  At
-  height at most two, THM-822 rejects all 25,344 H5 rows; its `H0/H1` kernel
-  mixes exact `M`, while literal endpoint faces H2 are injective only on this
-  static bank.  At scale-one Hamming seven the coefficient `13-2m` changes
-  sign. Exhaust the H5
-  boxes and H6 tree, classify arbitrary five-/six-owner deck ramification, then
-  seek a new overlap/owner potential at the seven-comb wall.
-- **Deep progress:** THM-772 gives primitive divisor-complete two-/three-sheet
-  quotients and relative speed bounds. THM-774 identifies the exact two-sheet
-  folded diamond and closes all ten-cores in `[1,19]` against unbounded odd
-  exceptions. THM-775 gives the dyadic seam recursion; THM-776 closes the full
-  height-100 packet. THM-782/789 supply symmetric return mass, component-width
-  floors, a pointwise thickness tax, and global erosion budgets, while exact
-  liars rule out fixed anchors and raw component rankings. THM-797/803 add the
-  signed/parity support gates, the complete `26/52/78` anti-grid ladder, and an
-  exact all-component selector. THM-821 factors every odd-pair selector
-  into pair-indexed atomic circular sum arcs and proves that return-only,
-  component-only, owner, width, and event-shape projections have mixed fibres.
-- **Return-cell sharpening:** THM-807 isolates the mandatory central return
-  cell. THM-817 proves that every satellite is one signed maximum-speed cell,
-  with exact endpoint owners, and sharpens the selector to
-  `2c_E N_R+2W-2g<=20B^2+22B-2g`. Its primitive divisor-complete signed-
-  complement family has `N_R=3+1440n`, so current arithmetic/scalar gates do
-  not imply connected, bounded, or sublinear return geometry. The family has
-  an explicit central escape and is a method limit, not a tight candidate.
-  THM-821 upgrades that escape to a uniform failing central atomic stalk and
-  audits 9,974 `(13,5)` atoms (492 successes, 9,482 failures); the audit does
-  not yet give all-core/all-pair noncontainment.
-- **Open shallow theorem:** enumerate THM-820's two scale-one Hamming-five
-  boxes and the finite Hamming-six tree, classify arbitrary five-/six-owner deck
-  ramification, and prove a decreasing overlap/owner invariant at scale-one
-  radius seven and above. The exact carrier is the residual interval union plus
-  its legal continuation bank. THM-820's tournament-identical centre-9/centre-
-  22 five-cycles and unbounded top-four SCC family rule out a bare collar graph.
-- **Open deep theorem:** rule out every surviving folded cover by proving that
-  each admissible `(U,x,y)` has at least one negative-margin atomic
-  return-cell plus deep-component stalk,
-  or force the dyadic/collar descent into THM-774/776's finite bases. For an even
-  maximum `2R`, retain the exact nine-core collar
-  `E_(1/13)(U^-) subset D_R union {Q>=11/13}` and its `1/12` witness obligation.
-  Then treat general higher-sheet colour covers; THM-816 closes only the
-  specific quartic `s=3` interface produced by THM-810.
 - **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
   transfer for the `s=2,3` equality packets, including quotient primitivity,
   divisor completeness, exact local shells, and speed bounds. THM-774 proves the

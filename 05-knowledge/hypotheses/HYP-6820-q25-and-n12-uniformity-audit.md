@@ -774,6 +774,10 @@ It does not yet identify those witness owners with the endpoint owners of the
 signed max-speed cells, so it is related transport infrastructure rather than
 a new closure step in this audit.
 
+The next all-pair object is therefore the target-component symmetric-switch
+hypergraph together with its deck and metric sidecars, not a bare runner
+tournament.
+
 These results reveal the faithful carrier more precisely than “ten even plus
 two odd.”  It is a folded bad-atom/core-tooth incidence hypergraph equipped
 with a binary safe-child map, divisor unit columns, every owner-labelled deep

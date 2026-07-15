@@ -63808,18 +63808,26 @@ classification is closed while common sheets above order twelve and
 arbitrary-lift strictness remain open; all-scale Hamming five still needs
 sheet-compatible metric incidence, not another scalar capacity threshold.
 
-The latest pull also reserved THM-824 for a fixed `(13,5)` symmetric-radius
-compression.  An independent exact breakpoint check confirms the provisional
-target identity
+The latest pull finalized THM-824's fixed-ratio symmetric-radius compression.
+Its exact target identity is
 
 ```text
 {t:||9t||+||4t||>=11/13}
   =[63/169,67/169] union [102/169,106/169],
 ```
 
-two radius-`2/169` arcs centred at `5/13` and `8/13`.  The advertised global
-Minkowski-radius equivalence and replay are still in progress, so this session
-does not promote or use THM-824.  It does expose a useful next carrier for the
+two radius-`2/169` arcs centred at `5/13` and `8/13`.  For every nonempty
+compact deep set `E` and compact symmetric return set `R` containing zero,
+the no-switch lemma proves the all-size equivalence
+
+```text
+E+R subset H_(13,5) iff rho_C(E)+rho_0(R)<=2/169,
+```
+
+and multiplication gives the exact common-dilate `(13d,5d)` phase budget.
+The 12,159-packet and 214-core replay has zero direct/radius mismatches.  This
+does not prove uniform budget failure, treat one nonsymmetric satellite, or
+classify arbitrary odd ratios.  It does expose a useful next carrier for the
 all-pair problem: put the connected target arcs, rather than runners, at the
 vertices of the **symmetric-switch hypergraph**, recording whether
 `e-r,e,e+r` can occupy different target components.  An empty switch carrier
@@ -63827,3 +63835,12 @@ permits a theorem-bearing radius scalar; a nonempty carrier must retain its
 deck translation and metric sidecar.  This reconciles the positive cyclic
 deck tournament with the repeated negative results for bare runner and
 component tournaments.
+
+The same pull exposed a relevant positive control from the interval-core
+lane: the new Farey-profile file gives the complete piecewise-linear measure
+of `{t:min_(1<=j<=k)||jt||>=lambda}` by disjoint consecutive-Farey gap atoms.
+That clean scalarization explains why interval cores are tractable, but it
+does not transfer to the overlapping multi-scale bodies that remain here.
+Its `THM-826` identifier currently collides with the independently pushed B3
+deletion-deck theorem, so this session records the mathematical connection
+without using that identifier in the LRC14 dependency chain.
