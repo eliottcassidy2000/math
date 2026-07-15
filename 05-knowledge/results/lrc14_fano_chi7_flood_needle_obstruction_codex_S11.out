@@ -1,0 +1,46 @@
+FANO/CHI7/J=4 FLOOD/FAREY-NEEDLE EXACT AUDIT
+method: exact Fraction interval unions + exhaustive finite incidence/group audit
+bodies audited: 2002 ; flood bodies: 21
+flood characterization: {8,...,14} union {a,b}, 1<=a<b<=7
+fano lines: ((1, 2, 3), (1, 4, 5), (1, 6, 7), (2, 4, 6), (2, 5, 7), (3, 4, 7), (3, 5, 6))
+edge partition: 21 K7 edges = 7 Fano lines x 3 edges
+B3/chi7 signs: ++-+--+
+negative Fano line: (3, 5, 6) ; positive complement/cap: (1, 2, 4, 7)
+flood rows (edge, line, r(E), m(E), V1(E)):
+  (1, 2)  line=(1, 2, 3)  r=32  m=319927/2522520  V1=476
+  (1, 3)  line=(1, 2, 3)  r=30  m=3319/25740  V1=439
+  (1, 4)  line=(1, 4, 5)  r=30  m=335047/2522520  V1=426
+  (1, 5)  line=(1, 4, 5)  r=26  m=6716/45045  V1=329
+  (1, 6)  line=(1, 6, 7)  r=30  m=365567/2522520  V1=391
+  (1, 7)  line=(1, 6, 7)  r=22  m=384011/2522520  V1=273
+  (2, 3)  line=(1, 2, 3)  r=30  m=358427/2522520  V1=399
+  (2, 4)  line=(2, 4, 6)  r=30  m=31789/194040  V1=346
+  (2, 5)  line=(2, 5, 7)  r=26  m=409261/2522520  V1=303
+  (2, 6)  line=(2, 4, 6)  r=30  m=413747/2522520  V1=345
+  (2, 7)  line=(2, 5, 7)  r=22  m=52147/315315  V1=251
+  (3, 4)  line=(3, 4, 7)  r=28  m=433607/2522520  V1=308
+  (3, 5)  line=(3, 5, 6)  r=24  m=652/3465  V1=241
+  (3, 6)  line=(3, 5, 6)  r=28  m=504167/2522520  V1=265
+  (3, 7)  line=(3, 4, 7)  r=20  m=53619/280280  V1=198
+  (4, 5)  line=(1, 4, 5)  r=24  m=514471/2522520  V1=222
+  (4, 6)  line=(2, 4, 6)  r=28  m=518957/2522520  V1=257
+  (4, 7)  line=(3, 4, 7)  r=20  m=261193/1261260  V1=183
+  (5, 6)  line=(3, 5, 6)  r=24  m=563009/2522520  V1=203
+  (5, 7)  line=(2, 5, 7)  r=16  m=581453/2522520  V1=131
+  (6, 7)  line=(1, 6, 7)  r=20  m=24289/105105  V1=164
+GL(3,2) maps audited: 168
+Fano-automorphism stabilizers: r=1 (identity only), m=1 (identity only), V1=1 (identity only)
+Tournament Analysis vertices: 21 flood bodies/K7 edges (not runners)
+pair observable: V1(F)-V1(E); switch: E->F iff V1(E)<V1(F); tie: lexicographic
+fingerprint: score_hist={0..20:1}, directed_3cycles=0, SCC_sizes=21x1, edge_flips_vs_lex=187, Hamiltonian_paths=1
+tie Hamiltonian path (increasing V1): ((5, 7), (6, 7), (4, 7), (3, 7), (5, 6), (4, 5), (3, 5), (2, 7), (4, 6), (3, 6), (1, 7), (2, 5), (3, 4), (1, 5), (2, 6), (2, 4), (1, 6), (2, 3), (1, 4), (1, 3), (1, 2))
+three endpoint needles: 104 distinct weak-order mask paths; max masks=4; max negative-line points=2
+flood modular carrier: Q(E)=empty, Qb=empty, lcm(Qb)=1 on all 21 bodies
+scope: no Fano symmetry quotient; no local 3-needle realization of the full chi7 carrier
+scope: this diagnoses but does not close the exact-geometry flood sweeps
+quotients: body keeps (r,m,V1); obligation keeps lcm filter; needle keeps local switch order
+destroyed: lower-tree geometry; exact intervals; speed identity/cross-gap gluing, respectively
+source_sha256=cecb046b54de0cb60decd23094ccbdfbb3a911315086a8d9822c43ca5f0e91a8
+thm741_dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+payload_sha256=b60fec541aa5da1644ea4c30844f2ddcdb41ed9b1eeebc7e52c094383fdd66bc
+VERDICT: ALL EXACT ASSERTIONS PASSED
