@@ -1,0 +1,16 @@
+GLUE PART 1a: the corner-max table M*(k) (supp-3/4, heights <= 4)
+  top-6: [('5/686', (2, 1, 1)), ('5/686', (2, 1, -1)), ('5/686', (2, -1, 1)), ('5/686', (2, -1, -1)), ('5/686', (1, 2, 1)), ('5/686', (1, 2, -1))]
+  SUM over table: supp-3 total = 0.41788, supp-4 total = 0.09385
+  crude all-relations mass bound (if EVERY tabled relation were present): 0.15355 per assignment-set
+GLUE PART 1b: pair-deviation extremes dev*(p,q)
+  top-5: [('0.0510', (1, 2)), ('0.0272', (2, 3)), ('0.0272', (1, 3)), ('0.0204', (3, 4)), ('0.0204', (2, 5))]
+
+PART 2: THE CYCLIC 2-PAGE BOOK — page assignment by parallel classes (spine = Z_n)
+  n=5: within-class crossings = 0 (0 iff parallel⟹noncross); circulant=True; row X[0] = [0, 0, 1, 1, 0]; MIN over class-2-colorings = 1 vs Z(n) = 1 == OPTIMAL; best pages = [0, 1, 1, 0, 0]
+  n=7: within-class crossings = 0 (0 iff parallel⟹noncross); circulant=True; row X[0] = [0, 0, 2, 3, 3, 2, 0]; MIN over class-2-colorings = 9 vs Z(n) = 9 == OPTIMAL; best pages = [0, 1, 1, 1, 0, 0, 0]
+  n=9: within-class crossings = 0 (0 iff parallel⟹noncross); circulant=True; row X[0] = [0, 0, 3, 5, 6, 6, 5, 3, 0]; MIN over class-2-colorings = 36 vs Z(n) = 36 == OPTIMAL; best pages = [0, 1, 1, 1, 1, 0, 0, 0, 0]
+  n=11: within-class crossings = 0 (0 iff parallel⟹noncross); circulant=True; row X[0] = [0, 0, 4, 7, 9, 10, 10, 9, 7, 4, 0]; MIN over class-2-colorings = 100 vs Z(n) = 100 == OPTIMAL; best pages = [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+  n=13: within-class crossings = 0 (0 iff parallel⟹noncross); circulant=True; row X[0] = [0, 0, 5, 9, 12, 14, 15, 15, 14, 12, 9, 5, 0]; MIN over class-2-colorings = 225 vs Z(n) = 225 == OPTIMAL; best pages = [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+GLUE PART 1c: pruned exact scan of primitive quadruples, maxspeed in (32, 44]
+  checked=132 skipped-by-prune=93334  worstA=0.03401@(1, 2, 21, 42)  worstB=0.04878@(1, 2, 4, 41)  caps A=0.08333 B=0.11905  [11s]
+[total 155.0s]

@@ -1,5 +1,17 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S27: THM-913 parallel-class book drawing + glue progress
+- **Status:** the Z_n book construction achieves Z(n) exactly (n = 5..13; contiguous
+  class-split; optimal by AAFRS 2012); the caps verified to maxspeed 44 (prune 99.86%);
+  residue-6 sign closed fleet-side (codex 32/343), stronger-constant track continues.
+- **Next:** (i) the circulant MAX-CUT proof for general odd n (the crossing-profile closed
+  form: n=9 row [0,0,3,5,6,6,5,3,0] — near-quadratic ramp; prove contiguous split = max-cut);
+  (ii) even n (spine Z_n with the doubled class structure); (iii) the per-lattice
+  simultaneity bound for full cap universality (the crude 0.154 all-relations bound is loose
+  — bound max SIMULTANEOUS short-relation mass per rank-3 lattice); (iv) cron-extend the
+  pruned scan (trivially parallel; 44 → 100 cheap); (v) write the book-drawing engineering
+  note (round-robin scheduling face — the mandate's ranking-application angle).
+
 ## Lead death-star-2026-07-16-S26: THM-911 (renum. from 910) — the Bernoulli ladder complete; caps sharp; glue named
 - **Status:** B₃ proved (1.002), B₅ derived+validated (lattice-corrected), THM-905's candidates
   EXACTLY ATTAINED (1/12, 5/42, 40/441 exact ℚ) + dilation invariance ⟹ the three caps are
