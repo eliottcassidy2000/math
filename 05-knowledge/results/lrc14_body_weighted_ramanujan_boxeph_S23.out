@@ -1,0 +1,60 @@
+==========================================================================
+PART A/B -- the body-weighted expansion on six bodies (exact set identity
+            + machine-precision transform referee)
+  [core {1..12} @ 1/14 (THM-873 sanity)] (A) effective-arc system == direct bad set: True; #arcs = 46 == sum phi(l) over D(E) = 46: True; bad measure = 187423/194040
+  [core {1..12} @ 1/14 (THM-873 sanity)] (B) transform identity max|err| over h<=40: 8.25e-16; shadows=30 (fully swallowed arcs=0)
+  [deep well {1..12,182} @ 1/14] (A) effective-arc system == direct bad set: True; #arcs = 220 == sum phi(l) over D(E) = 220: True; bad measure = 189403/194040
+  [deep well {1..12,182} @ 1/14] (B) transform identity max|err| over h<=40: 3.02e-15; shadows=196 (fully swallowed arcs=156)
+  [multikiller {1..10,13,22,84} @ 1/14] (A) effective-arc system == direct bad set: True; #arcs = 134 == sum phi(l) over D(E) = 134: True; bad measure = 102878/105105
+  [multikiller {1..10,13,22,84} @ 1/14] (B) transform identity max|err| over h<=40: 1.20e-15; shadows=120 (fully swallowed arcs=66)
+  [shifted core {2..14} @ 1/14] (A) effective-arc system == direct bad set: True; #arcs = 64 == sum phi(l) over D(E) = 64: True; bad measure = 46/49
+  [shifted core {2..14} @ 1/14] (B) transform identity max|err| over h<=40: 1.53e-15; shadows=62 (fully swallowed arcs=0)
+  [worst |core|=1 body {1..11,13,84} @ 1/14] (A) effective-arc system == direct bad set: True; #arcs = 124 == sum phi(l) over D(E) = 124: True; bad measure = 104542/105105
+  [worst |core|=1 body {1..11,13,84} @ 1/14] (B) transform identity max|err| over h<=40: 1.31e-15; shadows=116 (fully swallowed arcs=60)
+  [cascade stress {4,6,9} @ 1/5] (A) effective-arc system == direct bad set: True; #arcs = 14 == sum phi(l) over D(E) = 14: True; bad measure = 73/90
+  [cascade stress {4,6,9} @ 1/5] (B) transform identity max|err| over h<=40: 5.37e-16; shadows=4 (fully swallowed arcs=1)
+  [wild {3,5,7,26,55} @ 1/8] (A) effective-arc system == direct bad set: True; #arcs = 88 == sum phi(l) over D(E) = 88: True; bad measure = 31589/40040
+  [wild {3,5,7,26,55} @ 1/8] (B) transform identity max|err| over h<=40: 1.48e-15; shadows=58 (fully swallowed arcs=41)
+
+==========================================================================
+PART C -- the peel form and the restricted-torsion census
+  [deep well peel {1..12} + 182] (C) peel identity max|err|: 4.80e-17
+      new-level census (level: survive/straddle/swallow of phi(l)):
+        l=  13:  12 /   0 /   0   of 12
+        l=  14:   0 /   2 /   4   of 6
+        l=  26:   0 /   0 /  12   of 12
+        l=  91:   0 /   0 /  72   of 72
+        l= 182:   0 /   0 /  72   of 72
+      restricted Ramanujan sums (whole survivors), levels with S nonempty:
+        l=  13: |S|= 12, max_h |c_l^S(h)| = 12.000 (trivial 12), full-sum max |c_l(h)| = 12
+  [peel {1..11,13} + 84] (C) peel identity max|err|: 1.02e-17
+      new-level census (level: survive/straddle/swallow of phi(l)):
+        l=  12:   4 /   0 /   0   of 4
+        l=  14:   0 /   0 /   6   of 6
+        l=  21:   0 /   0 /  12   of 12
+        l=  28:   0 /   0 /  12   of 12
+        l=  42:   0 /   0 /  12   of 12
+        l=  84:   0 /   0 /  24   of 24
+      restricted Ramanujan sums (whole survivors), levels with S nonempty:
+        l=  12: |S|=  4, max_h |c_l^S(h)| = 4.000 (trivial 4), full-sum max |c_l(h)| = 4
+  [peel {1..10,13,22} + 84] (C) peel identity max|err|: 2.96e-17
+      new-level census (level: survive/straddle/swallow of phi(l)):
+        l=  12:   4 /   0 /   0   of 4
+        l=  14:   0 /   2 /   4   of 6
+        l=  21:   0 /   0 /  12   of 12
+        l=  28:   0 /   0 /  12   of 12
+        l=  42:   0 /   0 /  12   of 12
+        l=  84:   0 /   0 /  24   of 24
+      restricted Ramanujan sums (whole survivors), levels with S nonempty:
+        l=  12: |S|=  4, max_h |c_l^S(h)| = 4.000 (trivial 4), full-sum max |c_l(h)| = 4
+
+==========================================================================
+PART D -- disc_13({1..12}; 1/14): EXACT rational value via autocorrelation,
+          cross-checked against the h-sum of the expansion
+  disc_13 EXACT = 104999803919/6363107150400 = 1.650134e-02
+  h-sum |h| <=   2000: 1.649774e-02  (-> exact from below: True)
+  h-sum |h| <=   8000: 1.650045e-02  (-> exact from below: True)
+  h-sum |h| <=  32000: 1.650112e-02  (-> exact from below: True)
+  (fleet-quoted 1.648e-2 [opus-S271/kps THM-873] agrees to its printed precision: True)
+
+ALL CHECKS PASSED
