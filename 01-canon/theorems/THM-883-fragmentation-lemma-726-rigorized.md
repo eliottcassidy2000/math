@@ -40,12 +40,12 @@ M < 1/13 and j ≤ 6 embeds in an EXPLICIT finite box (Lemmas 2–3). Sweeping i
 | 2 | 12 | 13 | none |
 | 3 | 66 | 446–447 | none |
 | 4 | 220 | 4,801–5,280 | none |
-| 5, 6 | 495/792 | sweep running (box proved finite) | — |
+| 5 | 495 | 26,352 (39.25M branches) | none |
+| 6 | 792 | NOT elementary: ~450h/shard (boxeph-S31 concurs) — joins j ≥ 7 on the density chain | — |
 
 (j ≤ 4 swept twice — exact rationals and certified floats — agreeing; this range contains
 the lcm-carrier extremals {1..11,13,84} etc. and the whole THM-726 Step-2 census.) Hence
-**for j ≤ 4 unconditionally, and for j = 5,6 modulo a mechanical sweep of a proved-finite
-box: every multi-killer covering 13-set has M ≥ 1/13** — the certification's infinite
+**for j ≤ 4 unconditionally, and now for j = 5 (full box swept, 39.25M branches, zero violations): every multi-killer covering 13-set with j ≤ 5 has M ≥ 1/13** — j = 6, whose box is finite but ~450h-deep (the 13−2j = 1 stage factor), joins j ≥ 7 on the density chain (boxeph THM-885); a fast j = 6 needs an interior-stage covering cut (named, backlogged) — the certification's infinite
 "monotone tail" is eliminated; what remains is bookkeeping, not mathematics.
 
 **j ≥ 7 (the vacuous regime).** 13 − 2j < 0: the measure inequality is silent, and this

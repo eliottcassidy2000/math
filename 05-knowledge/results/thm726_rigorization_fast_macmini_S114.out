@@ -10,3 +10,10 @@ j>=7 probe: trials 7107; M < 1/13 configs found: NONE
 
 HARVEST (S115): j=5: small parts 495; branches 39,253,757; leaves 26,352; VIOLATIONS: NONE
 (j=6 relaunched parallelized; verdict appended below when complete)
+
+FINAL j=6 VERDICT (S116, converging with boxeph-S31): the S114/S115 6-worker sweep hit the same
+wall as boxeph's shards (~450h projected; the 13-2j = 1 stage factor makes dense cores ~2h each).
+Workers killed. HONEST BOUNDARY: the elementary Fragmentation tile is j <= 5 -- FULLY PROVED
+(j=2: 13 leaves; j=3: 446; j=4: ~5k; j=5: 39.25M branches / 26,352 leaves -- ZERO violations,
+no covering hypothesis). j = 6 joins j >= 7 on the density chain (boxeph THM-885 ledger);
+a future fast j=6 needs an interior-stage covering cut (m = 2..5), per boxeph.

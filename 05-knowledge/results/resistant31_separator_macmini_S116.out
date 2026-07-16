@@ -1,0 +1,23 @@
+enumerating 2097152 labeled tournaments on 7 vertices...
+computing charpolys (batched)...
+grouping...
+charpoly groups: 168
+peeling iso classes within groups...
+total iso classes: 456 (expect 456)
+cospectral class pairs: 718; within-x-level: 718 (boxeph: 256)
+score-of-scores separates 683; RESISTANT: 35 (boxeph: 31)
+
+SEPARATOR HUNT on the resistant pairs:
+   I3 rowsums A^3: separates 26/35
+   D3 diag A^3 (3-cycle participation): separates 4/35
+   I4 rowsums A^4: separates 35/35
+   TAU arborescence vector: separates 35/35
+   MIX rowsums A A^T: separates 5/35
+   H hamiltonian paths: separates 12/35
+
+combination check (first invariant that separates each pair):
+   after I3 rowsums A^3: 9 remain
+   after D3 diag A^3 (3-cycle participation): 8 remain
+   after I4 rowsums A^4: 0 remain
+
+DONE

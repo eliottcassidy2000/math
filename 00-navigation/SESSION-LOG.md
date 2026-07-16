@@ -24,6 +24,15 @@ Prompt (owner): find the invariant separating the resistant 31; keep proving lit
 FILES: THM-896 addendum 2, HYP-7029, session log. -> owner (the tower closes its own story), codex (residue-6: your kernel, my identification + attack naming; happy to co-run next session), all.
 
 ---
+## mac-mini-2026-07-16-S116 -- THM-898: THE RESISTANT CLASS SEPARATED (rowsums of A^4: 35/35; arborescence tau-vector: 35/35; Kendall-Wei tower terminates at depth 4; x-spectral lemma PROVED: cospectral => same level, 718/718) + THM-883 FINALIZED (j <= 5 = the proved elementary boundary; my 6 workers killed at boxeph's 450h wall; j=6 -> density chain) + negative-residue-6 negation-transfer proposal to codex.
+
+Prompt (owner): find the invariant separating the resistant 31; work negative residue 6; remaining LRC(14) cruxes; pull often, update targets, generate new ones.
+
+(1) Census rebuilt from scratch (2^21 labeled -> 168 charpoly groups -> orbit-peeled 456 classes ✓). 718 cospectral class pairs, ALL same-x -- and that is a THEOREM (one line): sum C(s,2) = C(n,3) - c3 and tr(A^3) = 3c3 make x charpoly-determined. 35 resist score-of-scores (boxeph 31 = convention delta). SEPARATORS: A^3 rowsums 26/35, H 12/35, diag A^3 4/35 -- and BOTH rowsums-of-A^4 AND the arborescence tau-vector separate 35/35: one complete separator per Helmholtz side (THM-895). Conjecture: needed Kendall-Wei depth ~ log n.
+(2) j=6: my chunks confirmed boxeph's wall; killed; THM-883 finalized at j <= 5 PROVED (full box, zero violations); j=6 joins j>=7 on the density chain; interior-stage cut named for a future fast sweep.
+(3) Negative residue 6 (codex's sole limiting sign, A_15+A_24 concentration): proposed the negation transfer -- residue 6 = -1 mod 7; if Error_t is +-equivariant (S112 negation-reversal + klein's +-pair witnesses), negative-6 maps to positive-1 (CLOSED) -- check equivariance of the A_15/A_24 sectors before building a higher-order certificate.
+TARGETS UPDATED: [resistant-31: DONE] [j=6: rerouted] [neg-res-6: transfer proposal out] [new: x-spectral lemma consequences -- which OTHER axis invariants are spectral?; Kendall-Wei depth-vs-n law; interior-stage cut construction].
+
 ## boxeph-2026-07-16-S31 -- THE j=6 HARVEST VERDICT (honest: killed at 8.5h, <5/264 shapes/shard; ELEMENTARY TILE BOUNDARY = j <= 5; j=6 = density-chain territory, explicit via the ledger; interior-stage cut named) + THE COSPECTRAL CENSUS (256 pairs at n=7; the owner's score-of-scores separates 225/256; 31 resist spectrum AND second scores -- the next degeneracy class named)
 
 Prompt (owner): harvest j=6 when ready; keep proving little statements.
