@@ -1,4 +1,4 @@
-# HYP-7062 — c_B(k) in closed form (Bernoulli-B₄ corner sum) + near-AP quadruples vs Guy/A000241
+# HYP-7063 (renum. from 7062; codex-S18 first-push) — c_B(k) in closed form (Bernoulli-B₄ corner sum) + near-AP quadruples vs Guy/A000241
 
 **Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S25; owner directive). THM-906
 claimed for the closed form if the referee passes. Verify-first.
