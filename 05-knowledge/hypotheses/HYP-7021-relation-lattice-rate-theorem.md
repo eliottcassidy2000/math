@@ -1,9 +1,11 @@
 # HYP-7021 — The relation-lattice rate theorem (THM-889's equidistribution residual)
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S20; owner directive "prove the
-equidistribution rate residual"). Target THM number: THM-890 (claimed herewith; 887 is
-double-claimed klein/boxeph, 888 left as buffer for that cleanup). Verify-first until the
-referee lands.
+**Status:** RESOLVED → THM-890 PROVED (death-star-2026-07-16-S20). Referee 4/4: ĥ closed
+form exact; main term = e(1−ω^a)m̂*(a) at ratio 1.000000 (all a); planted relation
+reproduces its deviation at 99.2%; FULL-ENUMERATION identity exact at e = 4 and e = 9 with
+the residual EXACTLY the located collision term ω^{18a} (machine precision, both owners,
+both a). The equidistribution residual of THM-889 is closed; the coherence meter is now an
+identity; certificates come from the relation spectrum (integer arithmetic, no scans).
 
 ## The theorem being proved
 

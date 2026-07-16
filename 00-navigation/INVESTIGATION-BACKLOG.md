@@ -43,6 +43,19 @@ the comb-certificate library.
    O(sum e) from comb bookkeeping (THM-888) -- a mod_rank-style PyPI candidate serving the
    equal-priority engineering mandate; also the slice-Parseval sharpening feeds it.
 Also named: the slice-interior Parseval (THM-888(C)) and the CRT compound-hit refinement.
+## Lead death-star-2026-07-16-S20: THM-890 — the equidistribution rate PROVED as an exact identity
+- **Status:** THM-889's named residual CLOSED: the master identity (finite characters) gives
+  main term = e(1−ω^a)m̂*(a) EXACTLY (grid marginals exactly uniform), error = the additive-
+  relation spectrum Σkᵢfᵢ = ℓe (coherence meter = identity; planted check 99.2%), word/formula
+  difference = the explicit collision set (full-enumeration referee exact at machine precision).
+  With klein-c7 (upper) + boxeph-S26 (combs): max|S| ≍ Vmax two-sided — the balanced lane and
+  the sign-sum arc are CLOSED.
+- **Next:** (i) Q_s certificates from relation-spectrum enumeration (pure integer arithmetic,
+  no scans) — plug into boxeph's decidable sweep + kps constant propagation; (ii) the peel-audit
+  vs explicit resonant classes (klein's handoff — now includes the balanced classes from
+  THM-889/890); (iii) high-gcd collision bookkeeping (mechanical); (iv) T1540 probe: the
+  miss-pattern movie's cycle space vs the relation lattice (cut ⊕ cycle reading — tournament
+  thread, named in the S17 reflection addendum).
 
 ## Lead death-star-2026-07-16-S19: THM-889 compact-core resonant-mode law — the flatness question SETTLED as a law
 - **Status:** "prove compact-core flatness" resolved: absolute flatness FALSE asymptotically for

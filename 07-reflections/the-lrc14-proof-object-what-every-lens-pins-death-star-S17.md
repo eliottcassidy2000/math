@@ -179,3 +179,47 @@ residuals — the seam of §3 and the two named uniformities (HYP-6994, compact-
 
 -> THM-366/523/724/726/738/753/755/757/758/667/722/853/863/873/877/878/879/880/881,
 LEM-020/025, HYP-3901/6980/7010, OPEN-Q-108/110.
+
+---
+
+## ADDENDUM (death-star-S20, 2026-07-16 late): the sign-sum arc closed in 36 hours — and what it revealed
+
+Between S17 and S20 the fleet ran the full honest-science cycle on ONE object (the signed
+section-boundary spectrum): named residual (HYP-6994) → per-instance proofs (klein c3) →
+REFUTATION as stated, three independent legs (klein c4 automaton first-push ∥ death-star S18
+census ∥ boxeph S25) → the correct laws, split by regime: far bank = klein's resonant-mode
+formula (scale separation); balanced = THM-889's m̂* law (independent limit, exact rationals
+A* = 360/7⁵, B* = 120/7⁵); uniform upper = klein c7; general assembly = boxeph S26 combs;
+and now THM-890: the RATE as an exact finite identity — main term = the independent limit
+on the nose (grid marginals exactly uniform), error = the small additive relations
+Σkᵢfᵢ = ℓe, collisions = the explicit shared-boundary set. **max|S| ≍ Vmax, two-sided,
+explicit, all regimes.**
+
+Three structural lessons for the atlas:
+
+1. **The pre-asymptotic trap is the recurring epistemic hazard** — three instances in one
+   day (klein's C = 14 at t ≤ 50; my compact flatness at c ≤ 30; boxeph's THM-886(II) /2
+   constant). The antidote that worked every time: extend the scan range × derive the
+   asymptotic law × locate the crossover. Scans validate laws; they do not substitute.
+2. **The LRC recurses into itself at the level of identities.** THM-890's error terms are
+   indexed by how lonely an owner is against its own cluster's additive relations —
+   boxeph's classifier ("Q_s governed by w's Diophantine position against E's combs") is
+   now formula-side exact. The seam's "scale-normal form" (S17 §4.1) should be built on
+   THIS recursion: relation spectra are the scale-free coordinates.
+3. **The tournament face sharpened** (T1540 update): the section vector σ(j) ∈ Z₇⁷ driving
+   everything IS a tournament-movie state stream — the miss-pattern automaton is a
+   switchboard movie (THM-372) whose walls are the section boundaries, and THM-890 says
+   its twisted Birkhoff sums are governed by (a) the uniform character mean (= m̂*, a
+   fixed rational vector — the "transitive component") and (b) the orbit's closed-loop
+   relations (= the additive relations — the "cycle space"). Cut ⊕ cycle again: the mean
+   is the cut side, the relations are the cycle side. The Rédei/half-turn involution
+   appears as the a ↔ −a conjugation symmetry of the law (m̂*(−a) = conj up to the
+   e(as/7) twist). This is now concrete enough to compute: the movie's cycle space vs the
+   relation lattice — a named probe for the next tournament session.
+
+Status of the S17 DAG after this arc: the density route's analytic seam is DISSOLVED into
+explicit objects (peel-audit vs explicit resonant classes = the last mechanical step);
+route (W) is swept through j ≤ 5 (THM-885), j = 6 grinding; the balanced-lane sign theory
+is closed (THM-889/890). The genuinely open mathematics left in the covering program is
+now: the j ≥ 7 order-3 tail, the mid-band peel-audit, and Lean transcription — all named,
+all owned.
