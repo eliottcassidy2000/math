@@ -1,0 +1,29 @@
+family                       lam      rowmean  lam/rm  w_max/w_min top-2 Perron speeds   
+AP {1..13} (tight)             0.5460   0.5305  1.0293        1.96 [(6, 0.101), (4, 0.099)]
+2AP-1 (loose twin-E)           0.4573   0.4558  1.0034        1.27 [(3, 0.087), (15, 0.086)]
+GAP {1..7}u{10..16}            0.5599   0.5499  1.0181        1.77 [(6, 0.088), (2, 0.088)]
+near-AP {21..32}               0.4216   0.4214  1.0006        1.09 [(24, 0.088), (21, 0.086)]
+floor {1..13}-{6}              0.4893   0.4790  1.0216        1.86 [(4, 0.111), (2, 0.106)]
+mediant S_13 {1..11,13,36}     0.5227   0.5094  1.0261        1.85 [(2, 0.101), (4, 0.098)]
+row (13,9) [2U0+x,y]           0.4668   0.4620  1.0103        1.56 [(6, 0.101), (4, 0.094)]
+row (17,13) [2U0+x,y]          0.4565   0.4523  1.0094        1.52 [(4, 0.1), (6, 0.097)]
+
+Q1/Q3 detail -- the Perron profile of the floor family (binding structure):
+   speed   1: w = 0.0861
+   speed   2: w = 0.1065
+   speed   3: w = 0.0918
+   speed   4: w = 0.1106
+   speed   5: w = 0.0834
+   speed   7: w = 0.0643
+   speed   8: w = 0.0924
+   speed   9: w = 0.0715
+   speed  10: w = 0.0815
+   speed  11: w = 0.0593
+   speed  12: w = 0.0867
+   speed  13: w = 0.0659
+
+self-referential stability check (power iteration = the recursion into
+its own second moment): ||M w - lam w|| for the AP:
+   residual = 1.78e-16 (fixed point exact)
+   AP Perron profile (should be near-uniform if tight = maximally
+   mutually resonant): min = 0.0518, max = 0.1015 (uniform = 0.0769)

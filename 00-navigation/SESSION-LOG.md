@@ -1,3 +1,35 @@
+## opus-2026-07-16-S326 -- THM-894 LRC'S KENDALL-WEI (the resonance matrix over the cluster's own speeds; Perron pair = the self-referential classifier; THE SPECTRAL EXCESS lambda/<row> orders the families with AP MAXIMAL 1.0293 and near-AP rank-1 flat 1.0006; the E-twins separate 1.029/1.003; ambient U0-rows separate at level 2 consistent with THM-893) + THE KIKUCHI LADDER WEAVE (arXiv:2607.14068: even covers = the repo's F2/E_n functor; Kikuchi lifts = the 1001-body move; DEPTH-AS-THE-RESOURCE unified with the Moore bound as its price-of-level meta-theorem; extension program: level-3 tensor for the m'=8 wall, even-cover deck, Niemeier/Moore) (HYP-7030)
+
+Prompt (owner): formalize LRC's Kendall-Wei (the self-referential resonance vector);
+deeply consider arXiv:2607.14068 and weave with repo work; extend usefully.
+
+THE FORMALIZATION: M[i][j] = rho(x_i, x_j) (THM-863 sawtooth law, diag 2/13) over the
+cluster's OWN speeds; Perron (lambda, w): each speed's resonance centrality defined
+through all others -- the owner's recursion-into-second-moment as a fixed point
+(residual 1e-16). THE SPECTRAL EXCESS lambda/<row sum>: AP 1.0293 (max) > mediant
+1.0261 > floor 1.0216 > GAP 1.0181 > U0-rows 1.010 > 2AP-1 1.0034 > near-AP 1.0006:
+feedback-structuredness beyond the first moment; the E = 1469 twins separated; the GAP
+drops below the coherent families. The U0 twins' AMBIENT rows separate at level 2
+(0.4668 vs 0.4565) -- THM-893-consistent. NEGATIVES (BH 2/2): tight != uniform profile;
+Perron mass ~ 1/speed shadow.
+
+THE PAPER: even-uniform hypergraph Moore bound (Bandeira-Kunisky-Nizic-Nikolac-
+Pesenti-Wang): even covers certified by Kikuchi level-l spectral norms. THE WEAVE:
+(1) even covers = cycle-space parity = the repo's E_n dual + locker functor; (2)
+Kikuchi l-subset lifts = the C(14,4) = 1001 body tree (the deck IS a Kikuchi ladder,
+independently discovered); (3) DEPTH-AS-THE-RESOURCE is ONE phenomenon (alpha-depth/
+twins, OCF 2-adic tower, Vandermonde truncation, Hunter crossing) and the Moore bound
+is its price-of-level meta-theorem shape -- with THM-891/893 as the infinite-price
+case (folded shadows: no level suffices; the frame-carrying lift is required); (4)
+even-uniformity = the even-n half-coset door (THM-868's E8); (5) shared spectral-
+certification style. EXTENSIONS (fleet-ready): the level-3 triple-overlap tensor to
+cross the m' = 8 wall (the tree bound dies at 22m' <= 165); the even-cover relaxation
+of the F7 token criterion; the Niemeier/Moore question at n = 24.
+
+FILES: THM-894; the-kikuchi-ladder reflection; lrc_kendall_wei .py/.out; HYP-7030.
+opus; S326.
+
+---
 ## boxeph-2026-07-16-S29 -- THE INVARIANT MEAN PROVED (THM-892; renumbered from 891 after the earlier-pushed codex claim surfaced): <Q_s> in CLOSED FORM = (pi^2/P^2) sum (J_2/3) phi^{-1} sum mu (P/d) N(P/d) -- Jordan totients x the signed endpoint COINCIDENCE SPECTRUM; refereed exact (5e-14, four cluster types); khat_P = -csc^2/(2P^2) EXACTLY (bound -> identity upgrade for THM-886/888); THE CONSTANT IS pi^2/3 (measured 2.83-3.42 bracketing 3.2899; deviation = class imbalance, corollary named); GENERIC-FRAME THEOREM free by Markov + CONTEMPLATION (the week's /3-appearances; klein cont.8's composition defect = curl) + FIVE NEW N-GOALS
 
 Prompt (owner): prove the unit-average <Q_s> closed form; keep proving little statements; contemplate pull-encountered ideas; create new goals.
