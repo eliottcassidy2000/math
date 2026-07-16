@@ -1,0 +1,9 @@
+(A) identity A(h) = sum_{d|h} d M_d: max diff over h=1..60, v in {17, 84, 182}:
+   max |A - sum d M_d| = 1.78e-15 OK
+(B) Moebius partial sums |sum_{m<=M} mu(m)/m| (classical <= 1): ['0.1667', '0.1333', '0.0004', '0.0205', '0.0308']
+(C) block mass: disc_v contribution by divisor-block d (deep well, primes + resonant v):
+   v= 17: disc ~ 1.052e-02 ; top |block| L1-mass: [(1, '0.135'), (2, '0.132'), (3, '0.086'), (5, '0.082')]
+   v=199: disc ~ 6.645e-05 ; top |block| L1-mass: [(1, '0.011'), (2, '0.009'), (3, '0.006'), (4, '0.005')]
+   v= 84: disc ~ 1.184e-03 ; top |block| L1-mass: [(7, '0.088'), (4, '0.042'), (3, '0.035'), (2, '0.024')]
+   v=182: disc ~ 7.767e-04 ; top |block| L1-mass: [(7, '0.035'), (2, '0.020'), (4, '0.013'), (1, '0.009')]
+DONE

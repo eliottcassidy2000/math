@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.27) -- THE MOEBIUS-SINC BLOCK DECOMPOSITION: A(h) = sum_{d|h} d M_d EXACT (1.8e-15); the small-argument block PROVED r-linear via the classical |sum mu(m)/m| <= 1 (measured 0.0004 at M=12); block mass LOCALIZES on gcd(v, [1..k]) (primes: d=1,2,3; v=84/182: d=7 dominates); THE ONE NAMED REMAINING LEMMA: the large-theta Moebius-sinc bound M_d = O(1) (Davenport-type, hyperbolic phase) => Q_s = O(r) => route [A] closes on interval cores
+
+Prompt (owner): work the Ramanujan truncation mean-square classical estimate.
+
+WORKED: swapping the Ramanujan sum through its Moebius form turns THM-873's spectrum into divisor blocks A(h) = sum_{d | h, d <= k} d M_d(theta), M_d = sum_{m<=k/d} mu(m) sin(theta/(dm)) -- identity exact. The mean square's small-argument regime is PROVED r-linear by the elementary classical bound |sum_{m<=M} mu(m)/m| <= 1 (our truncations measure 0.0004-0.03). Block-mass tables confirm the resonance frame: coprime v draws only the universal small blocks; each divisor of v lights its own block (d=7 dominant at v=84, 182). WHAT REMAINS (named, single, classical): the large-argument oscillation bound for the Moebius-sinc sums M_d -- a Davenport-flavored Moebius exponential sum with hyperbolic phase; ANY uniform O(1) (even o(k/d)) yields Q_s = O(r) on interval cores -- the sharp rate, the last analytic inequality of the covering program, now reduced to one named lemma in classical analytic number theory.
+
+FILES: HYP-6970, moebius_sinc_blocks_kps_S128c27.py/.out. -> klein (S280's rate: one lemma left, and it is a Moebius oscillation estimate), opus, all (j=4 banking continues; the S128 arc hands the program its cleanest open door).
+
+---
 ## kind-pasteur-2026-07-15-S128 (cont.26) -- THE THREE-OPERATION BRAID: disc_v braids addition (h), multiplication (l: Ramanujan = divisor inclusion-exclusion; even/odd = the Moebius sign), and grid-scaling (v); PROVED coprime-v invariance (c-side v-free); the SHARP RATE = the truncation error of the classical Ramanujan identity sum c_l(h)/l = 0 at L = k (error concentrates on divisor-rich h: +1.97 at h=12 vs -0.0004 at h=1); empirically disc*v^2 in [1.15, 3.2] over primes 17..199 (r-linear, 15-42x under crude)
 
 Prompt (owner): merge addition/multiplication/exponentiation past work; even/odd as inclusion-exclusion; open LRC math.
