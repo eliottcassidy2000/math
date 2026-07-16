@@ -1,0 +1,22 @@
+(A) THE k x k' BOX SWEEP (|entries| <= 8)
+   box triples realized: 4435 (entries <= 3000)
+   swept 4435 triples; WORST q_est = 0.462775 at (2, 8, 11)
+   triples with q_est > 47/100: NONE
+   (scan cross-check: q(1,4,7) exact = 81/175 = 0.46286; box must contain it: True)
+
+(B) THE CYCLIC 2-PAGE BOOK DRAWING
+   n : blocked-drawing crossings vs Guy Z(n) [A000241]
+    4:    1 vs Z =    0
+    5:    3 vs Z =    1
+    6:   11 vs Z =    3
+    7:   21 vs Z =    9
+    8:   48 vs Z =   18
+    9:   76 vs Z =   36
+   10:  140 vs Z =   60
+   11:  200 vs Z =  100
+   12:  325 vs Z =  150
+   HYPERCUBE FRAMING: page assignments = codes in 2^C(n,2) (the tournament cube);
+   crossings = a quadratic form over GF(2)-codes; Z(n) = its ground energy;
+   the interleaved quadruples are the reflection-even stratum (T1545/S118).
+
+DONE
