@@ -1,0 +1,17 @@
+(A) THE DEFINITIVE ERODED-DIAMOND DEPTH TEST
+   TWIN-A (11,2): H has 4 components, mu(H) = 8/169 = 0.047337
+   TWIN-B (15,2): H has 4 components, mu(H) = 8/169 = 0.047337
+   scalar measures EQUAL (canon calibration): True
+   U0 deep set (depth 1/11): 6 components, mu = 0.025318
+   ERODED TWIN-A (11,2): 2 components, mu = 0.012626
+   ERODED TWIN-B (15,2): 2 components, mu = 0.012626
+
+   alpha-vectors (depth 25) and per-depth twin separations:
+   RAW H: max sep depth 0-9: 0.2307; 10-17: 1908.3772; 18-24: 23935.7776
+   ERODED: max sep depth 0-9: 0.0000; 10-17: 0.0000; 18-24: 0.0000
+
+(B) THE RELATION SECOND MOMENT: Kendall-Wei/Perron per class vs H, x
+   n=5: corr(lambda, H) = +0.8730; corr(lambda, -x) = +0.9284; lambda range [0.0000, 2.0000]
+      per-level lambda spreads (x: min..max): {8: (np.float64(1.839), np.float64(1.864)), 16: (np.float64(1.659), np.float64(1.719)), 24: (np.float64(1.395), np.float64(1.395)), 32: (np.float64(1.0), np.float64(1.0))}
+   n=6: corr(lambda, H) = +0.8444; corr(lambda, -x) = +0.9360; lambda range [0.0000, 2.4340]
+      per-level lambda spreads (x: min..max): {6: (np.float64(2.414), np.float64(2.434)), 14: (np.float64(2.312), np.float64(2.335)), 22: (np.float64(2.165), np.float64(2.232)), 30: (np.float64(2.0), np.float64(2.111)), 38: (np.float64(1.839), np.float64(2.008)), 46: (np.float64(1.659), np.float64(1.719)), 54: (np.float64(1.0), np.float64(1.395)), 62: (np.float64(1.0), np.float64(1.0))}
