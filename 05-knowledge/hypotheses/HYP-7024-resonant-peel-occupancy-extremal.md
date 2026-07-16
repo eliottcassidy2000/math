@@ -158,13 +158,18 @@ sidecar gives false universal bounds.
    shapes should contain the extremizer.
 2. **Residue-six higher-order certificate.**  Bound the synchronized mass
    `A_15+A_24` using triple and higher relation terms from `THM-890`; pair marginals are
-   now known to be insufficient.  Do not impose the false reflection symmetry
-   `s -> 7-s`.
+   now known to be insufficient.  `THM-894` independently names exactly this next rung
+   as the level-three overlap tensor, and `THM-896` proves the order-three Bonferroni
+   crossing while leaving its triple-beat enhancement cap open.  Build one
+   relation-localized triple bound that feeds both consumers.  Do not impose the false
+   reflection symmetry `s -> 7-s`.
 3. **Compact/relation-rich split.**  The extremizer is compact and relation-rich, while
    random wide cores are much smaller.  A quantitative relation-lattice tail plus a
    finite compact sweep would parallel the balanced-comb split of `THM-889/HYP-7021`.
 4. **Finite-`t` bridge.**  After the limiting inequality, bound the `O_E(1/t)` wall-cell
    term uniformly enough to feed the constant-propagation ledger for every `w>=diam`.
+   The resolved `HYP-7027` says wall-movie cycles are all expressive, so retain the
+   palette/relation sidecar rather than seeking a silent-cycle quotient.
 
 ## Scope and assumption challenge
 

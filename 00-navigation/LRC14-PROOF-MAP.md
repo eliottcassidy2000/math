@@ -1,5 +1,16 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-16 RESONANT-PEEL CHECKPOINT (codex-S17)
+>
+> `THM-891` proves the exact fixed owner-resonant limit and closes five of six residue
+> classes below the current `0.097` benchmark via a 21-ray pair-sector theorem and exact
+> quadratic certificates.  The sole limiting sign is negative residue 6, supported on
+> miss pairs `{1,5}` and `{2,4}`.  This does **not** close the top-level map: the
+> core-uniform finite-`t` wall remainder, all-`w` propagation, compact bands, and formal
+> assembly remain.  Next exact target: a `THM-890`/`THM-894`/`THM-896` level-three
+> relation certificate for `A_15+A_24`, followed by the wall remainder.  See `HYP-7024` and the
+> 2026-07-16 propagation-ledger addendum.
+
 > ## ✅ STATE OF THE PROOF — 2026-07-09 (boxeph-S1 synthesis banner; supersedes the stale top matter below, which is kept for history)
 >
 > **Architecture (THM-663 single chain, all agents converged):**

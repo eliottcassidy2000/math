@@ -4,7 +4,7 @@ title: Exact cross-section cancellation for a resonant far peel
 status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-sector ray law, and universal 0.097 closures for residues 1 through 5 and the positive side of residue 6 are rigorous. The negative side of residue 6 and the sharp diameter-free extremal remain open.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
-related: [THM-888, THM-889, THM-892, HYP-7021, HYP-7024]
+related: [THM-888, THM-889, THM-890, THM-892, THM-894, THM-896, HYP-7021, HYP-7024, HYP-7027]
 verification: 04-computation/lrc14_resonant_cross_section_cancellation_codex_S17.py -> 05-knowledge/results/lrc14_resonant_cross_section_cancellation_codex_S17.out
 ---
 
@@ -362,12 +362,30 @@ the sector-zero boundary and remains fixed.  For the consecutive core, for examp
   functional of the signed coincidence spectrum `N(h)`.  This is the exact arithmetic
   carrier missing from the failed relation-blind collision moment.  `THM-892` controls
   generic frames; `THM-891` computes the exceptional owner-resonant signed limit.
+- `THM-892`'s S30 deviation addendum makes that complement sharper: its quadratic mean
+  is a universal `pi^2/3` term plus a signed coincidence-class imbalance.  The present
+  pair rays resolve every two-coordinate imbalance needed for residues `2,3,4`; the
+  surviving `A_15+A_24` term is genuinely beyond pair marginals.
+- `THM-894` independently names the level-three overlap tensor as the next LRC
+  self-composition.  The negative residue-six kernel supplies its concrete target:
+  certify the synchronized miss mass `A_15+A_24` using triple/higher relation data.
+- `THM-896` subsequently proves that order-three Bonferroni is coercive through its
+  `m'<=11` wall and names the remaining triple-beat upper bound.  Its overlap observable
+  is not identical to `A_15+A_24`, but the required relation-localized enhancement cap
+  is the same analytic rung and should be developed once for both consumers.
+- The resolved `HYP-7027` wall-movie probe proves that wall cycles are never silent and
+  that recurrence tracks the relation spectrum.  Therefore the finite-`t` remainder
+  should retain the expressive wall palette rather than quotienting cycles away.
 - The constant-propagation ledger closes the coarse tail at `3.4 diam`.  A universal
   form of `HYP-7024`, plus a finite-`t` remainder bound, would attack the factor-17.6
   loss and could contract that residual band toward the natural `w>=diam` boundary.
   Pair rays now close limiting residues `1,...,5` and the positive side of `6` at the
   ledger's `0.097` slack.  The negative side of `6` and the uniform wall remainder are
   the honest remainder.
+
+The `0.097` statement is only the current owner-resonant benchmark.  It does not replace
+the ledger's all-`w` `0.2729 diam/w` envelope, certify every row margin, or make the
+`O_E(1/t)` remainder uniform in the core.
 
 ## 9. Tournament and assumption challenge
 

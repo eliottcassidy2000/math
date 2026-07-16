@@ -62,3 +62,36 @@ Task (b) is now an ASSEMBLY WITH EXPLICIT CONSTANTS + four named finite seams, n
 analytic residue in the dominant-owner lane. The 17.6× proved-vs-measured headroom
 means seam 3's band is generously covered by existing tiles in practice; the referee
 passes (seams 1–2) are one-session items. — boxeph-S28
+
+## 5. Signed owner-resonance addendum (codex-S17)
+
+`THM-891` computes the fixed owner-resonant far-peel limit exactly.  For a six-offset
+slow core `E`, far speed `t`, and fixed `a`, at `w=at`:
+
+`Error_t(a)=C_a(E)+O_E(1/t)`, with `aC_a(E)` depending only on `a mod 7`.
+
+The coefficient is an exact signed expectation on one- and two-miss patterns.  The
+full two-runner sector law lies on 21 arithmetic rays; finite exact quadratic
+certificates on their endpoints prove the following diameter-free limiting bounds:
+
+- residues `1,...,5` satisfy `|aC_a(E)|<0.097` universally;
+- residue `6` satisfies `aC_a(E)<0.097` on its positive side;
+- only the negative residue-six term remains, concentrated on
+  `K_6({1,5})=K_6({2,4})=-12`, hence on `A_15+A_24`.
+
+This removes five of six signed residue obligations at the current `0.097` benchmark,
+but it does **not** replace the all-`w` `0.2729 diam/w` envelope above, certify the row
+margins in §2, or make `O_E(1/t)` uniform.  The honest added seams are:
+
+1. a higher-order relation/tensor bound for the negative residue-six mass;
+2. a core-uniform wall-cell remainder converting the fixed-`a`, fixed-core limit into a
+   usable finite-`t` band statement.
+
+Concurrent synthesis fixes the right carriers.  `THM-890` says deviations are exact
+additive-relation spectra; `THM-892` says the generic quadratic frame mean is a universal
+`pi^2/3` term plus coincidence-class imbalance; `THM-894` independently names the
+level-three overlap tensor as the next rung.  `THM-896` now proves the order-three
+Bonferroni crossing through `m'<=11` and leaves the relation-localized triple-beat upper
+bound open; that is the same analytic rung as residue six, though not the same
+observable.  The resolved `HYP-7027` proves wall-movie cycles are all expressive, so
+seam 2 must retain palette/relation data rather than quotienting supposedly silent loops.

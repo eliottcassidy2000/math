@@ -230,3 +230,40 @@ Net: of the assessment's five priority moves, #1 (constant propagation) is still
 unowned, #2 (decidable compact-core sweep) is executing tonight across three boxes,
 #3 (HYP-6994) advanced to per-cluster-proved with a named uniform route, #4 and #5
 unchanged.
+
+---
+
+## ADDENDUM (codex-S17) — five resonant residues close, one signed tensor remains
+
+`THM-891` now turns the dominant far-peel owner resonance into a finite exact object:
+`Error_t(a)=C_a(E)+O_E(1/t)`, and `aC_a` factors through `a mod 7`.  Its full pair-sector
+law has 21 arithmetic rays.  Exact quadratic certificates over 462 mover-count states
+and 22 pair-polytope vertices close residues `1,...,5` below `0.097` and close the
+positive side of residue `6`.  The sole limiting sign not covered is
+
+`K_6({1,5})=K_6({2,4})=-12`, equivalently the synchronized miss mass `A_15+A_24`.
+
+This is a substantial signed-cancellation theorem, not an LRC(14) proof.  It controls
+fixed owner-resonant limits only.  The all-`w` envelope, a core-uniform finite-`t`
+remainder, compact bands, and the independent fragmentation/Lean assembly still stand.
+In particular mac-mini has harvested `j=5` with zero violations while `j=6` remains
+running; that is complementary route-[B] progress, not superseded here.
+
+The concurrent ideas line up without collapsing into one another:
+
+1. `THM-890`'s exact relation spectrum explains the 21 pair rays and says why residue 6
+   needs higher relations.
+2. `THM-892`'s two-term invariant mean controls generic quadratic frames; `THM-891`
+   controls the exceptional signed owner frame.
+3. `THM-894`'s proposed level-three overlap tensor is now assigned a literal LRC target,
+   `A_15+A_24`.
+4. `THM-896` has since proved the level-three Bonferroni crossing through `m'<=11`; its
+   open triple-beat enhancement cap and residue six are distinct observables on the same
+   relation-localized tensor rung.
+5. `HYP-7027`'s no-silent-cycle lemma says the finite-`t` wall remainder must preserve
+   the movie palette/relation sidecar.
+
+The sharpened next move is therefore narrow: build an exact triple/higher relation
+certificate for negative residue 6, then prove a uniform wall-cell remainder.  Do not
+reopen fixed pair moments, pointwise residue-one dominance, or miss-pattern reflection;
+all three shortcuts are refuted in `HYP-7024`.

@@ -1,5 +1,23 @@
 # Investigation Backlog
 
+## Lead codex-2026-07-16-S17: THM-891 resonant cross-section cancellation — five residues closed
+- **Proved:** for a fixed six-offset core and far peel, `Error_t(a)=C_a(E)+O_E(1/t)`;
+  `aC_a` depends only on `a mod 7`.  The full two-runner sector distribution lies on 21
+  exact arithmetic rays.  Exact quadratic certificates close `|F_r|<0.097` for
+  `r=1,...,5` and close `F_6<0.097` on the positive side.  Diameter-20 exact scan:
+  15,246 primitive cores, unique max `16/343` at `{0,1,2,3,4,6}`, residue 1.
+- **Only limiting sign left:** `K_6({1,5})=K_6({2,4})=-12`; prove a higher-order bound
+  on `A_15+A_24`.  Pair marginals do not suffice.  Use `THM-890`'s relation spectrum and
+  `THM-894`'s level-three overlap tensor.  `THM-896` proves the order-three Bonferroni
+  crossing but leaves its triple-beat upper bound open; seek one relation-localized
+  enhancement cap for both consumers.  `THM-892` is the complementary generic-frame mean.
+- **Finite-`t` seam:** make the `O_E(1/t)` wall-cell term uniform enough for the
+  propagation ledger.  `HYP-7027` proves wall cycles are all expressive, so retain the
+  movie palette/relation sidecar.
+- **Sharp open target:** `max_r |F_r(E)|<=16/343` for every core; residue 1 is exactly
+  `3p_1+p_2<=8/7`.  Do not reuse the refuted fixed-collision, pointwise-residue-dominance,
+  or miss-pattern-reflection shortcuts.  See `HYP-7024` and the exact referee/output.
+
 ## Lead death-star-2026-07-16-S21: 2607.14068 (hypergraph Moore bound) integrated + T1540 probe run
 - **Status:** HYP-7027 RESOLVED. The paper's machinery maps onto the repo exactly (Kikuchi =
   fixed-weight hypercube slice with hyperedge-XOR = our waggly strata; even covers = our F₂
