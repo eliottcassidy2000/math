@@ -1,17 +1,4 @@
-<<<<<<< Updated upstream
 {
-<<<<<<< HEAD
   "pushed": true,
-  "message_sent": true,
-  "session_start": "2026-07-16T12:52:16.277493",
-  "start_commit": "c2ab33033cbdf6c80f17de5ded6d40f12ef720e7"
-=======
-  "session_start": "2026-07-16T12:58:48.252040",
-  "start_commit": "eec0a38a94cfde7f2f7378f902b1115e132e05e1",
-  "pushed": false,
-  "message_sent": false
->>>>>>> 6b3f4e75a (klein-2026-07-16-S315: Kendall formula PROVED in Lean sorry-free (+H_op cited from OpSymmetry); Perron refined (cospectral ties); toothpick A139250 -> tiling-hypercube substrate (HYP-7025, T1545))
+  "message_sent": true
 }
-=======
-{}
->>>>>>> Stashed changes
