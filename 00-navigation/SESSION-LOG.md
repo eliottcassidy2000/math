@@ -66780,3 +66780,32 @@ FILES: `THM-905`, `HYP-7062`; corrected reflection wording in `THM-904/HYP-7061`
 their verifier. -- codex-S18 checkpoint
 
 ---
+## codex-2026-07-16-S19 -- HYP-7084: owner doubling becomes a parallel-class current; synchronized deck closed sharply
+
+Pulled and integrated THM-913's completed Green/circulant proof, LEM-030's discrete
+Riesz polarization, the general-cluster THM-887 comb/CRT law, Opus HYP-7100's
+parallel/torsion-class grammar, and the refreshed LRC(14) ledger.  For
+`q=floor(14{tx})=2c+eta`, `u=2c` turns the doubled target into endpoint `u+eta` of an
+oriented edge of the parallel-class circle.  Exact `M=mu0+mu1`, `J=mu0-mu1`
+decomposition gives average plus divergence.  The K7 crossing Laplacian has dual norms
+`22/203` and `6/29`, hence `Delta^2<=(16/29)E_pc`; the exact bank refutes raw energy as
+the closure (5,346/6,900 threshold rows, 6,312 after the sharp occupied/miss cone).
+
+Restoring the sidecar yields the exact THM-727 form
+`Delta_F(2t)=C_2(E)+(1/t)sum_p(P_{m_-}({tp})-P_{m_+}({tp}))` on a finite fourteen-cell
+palette.  The synchronized walls `p=k/7` depend only on five slow residues and `t mod7`:
+3,234 residue rows plus all 461 primitive residue multisets prove the sharp universal
+`-23/784<=G_sync<=229/5488`; both coefficient extrema are contiguous five-arcs and both
+feasible extrema occur at `D=7,t=8`.  The dangerous row splits into closed limit
+`2209/144060`, synchronized deck `229/5488`, and noncommon wall `797/36015`.
+
+The remaining finite owner crux is now only the noncommon gcd-sheet endpoint sum, the
+real-space palette counterpart of THM-887's compound comb/CRT resonances.  Its exact
+`D<=10,D<t<=4D` range is `[-8087/246960,269/6860]`, explicitly finite evidence rather
+than a universal claim.  The next proof should retain owner subsets/gcd sheets; the
+scalar class energy and the class-risk tournament both destroy that information.
+
+FILES: HYP-7084; THM-891/913 addenda;
+`lrc14_owner_packet_parallel_class_current_codex_S19.py/.out`.
+
+---

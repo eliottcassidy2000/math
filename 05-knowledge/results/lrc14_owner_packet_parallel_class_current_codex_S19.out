@@ -1,0 +1,94 @@
+HYP-7084: OWNER PACKET ON THE PARALLEL-CLASS CIRCLE
+============================================================================
+PASS  direct K_7 chord census gives the THM-913 circulant kernel
+PASS  adjacent class bundles have zero crossing cost
+PASS  crossing Laplacian row sum is 10
+PASS  current dual potential solves Lh=delta_0-delta_6
+PASS  symmetric dual potential solves Lh=delta_0+delta_6-2/7
+PASS  adjacent-current dual norm is 6/29
+PASS  adjacent-average dual norm is 22/203
+PASS  combined seven-row certificate constant is 16/29
+PASS  all six occupied/miss cone norms are exact
+PASS  global positive incidence-cone constant
+
+Positive incidence-cone norms by forbidden distance
+  d=1: norm=16/203, support=(0, 2, 3, 4, 5), potential=(Fraction(3, 29), Fraction(3, 203), Fraction(4, 203), Fraction(4, 203), Fraction(3, 203))
+  d=2: norm=139/1799, support=(0, 3, 4, 5), potential=(Fraction(174, 1799), Fraction(59, 3598), Fraction(53, 3598), Fraction(15, 1799))
+  d=3: norm=496/6545, support=(0, 2, 4, 5), potential=(Fraction(123, 1309), Fraction(13, 1309), Fraction(104, 6545), Fraction(7, 935))
+  d=4: norm=496/6545, support=(0, 2, 3, 5), potential=(Fraction(123, 1309), Fraction(7, 935), Fraction(104, 6545), Fraction(13, 1309))
+  d=5: norm=139/1799, support=(0, 2, 3, 4), potential=(Fraction(174, 1799), Fraction(15, 1799), Fraction(53, 3598), Fraction(59, 3598))
+  d=6: norm=16/203, support=(0, 2, 3, 4, 5), potential=(Fraction(3, 29), Fraction(3, 203), Fraction(4, 203), Fraction(4, 203), Fraction(3, 203))
+  global positive constant: 22620786/48779885
+PASS  3,234 residue rows give the synchronized-wall coefficient range
+PASS  both synchronized coefficient extrema are contiguous five-arcs
+PASS  all 461 primitive five-speed residue multisets occur by diameter 35
+PASS  distinct-speed feasibility gives the universal synchronized-wall range
+
+Synchronized x=k/7 wall theorem
+  residue coefficient maximum: (Fraction(229, 686), ((0, 1, 2, 3, 4), 6))
+  residue coefficient minimum: (Fraction(-23, 98), ((0, 1, 2, 5, 6), 1))
+  feasible t>D maximum: (Fraction(229, 5488), ((0, 3, 4, 5, 6), 1, 7, 8, Fraction(229, 686)))
+  feasible t>D minimum: (Fraction(-23, 784), ((0, 1, 2, 5, 6), 1, 7, 8, Fraction(-23, 98)))
+PASS  6,900 exact owner-doubling rows
+PASS  96,600 structural occupied/miss zeros
+PASS  bounded-bank correction maximum matches HYP-7083
+PASS  bounded bank attains both universal synchronized-wall extrema
+
+Exact packet extrema
+  correction_max  : (Fraction(2173, 27440), ((0, 3, 4, 5, 6, 7), 8))  decimal=0.079190962
+  correction_min  : (Fraction(-31, 1029), ((0, 1, 2, 3, 5, 6), 7))  decimal=-0.030126336
+  symmetric_max   : (Fraction(5903, 82320), ((0, 3, 4, 5, 6, 7), 8))  decimal=0.071707969
+  symmetric_min   : (Fraction(-571, 20580), ((0, 1, 2, 3, 5, 6), 7))  decimal=-0.027745384
+  current_max     : (Fraction(1019, 45864), ((0, 1, 4, 6, 7, 9), 13))  decimal=0.022217862
+  current_min     : (Fraction(-47, 2205), ((0, 2, 5, 6, 7, 9), 13))  decimal=-0.021315193
+  energy_max      : (Fraction(1198, 11025), ((0, 2, 3, 4, 6, 8), 10))  decimal=0.108662132
+  ratio_max       : (Fraction(1377, 11000), ((0, 2, 4, 5, 7, 8), 10))  decimal=0.125181818
+  limit_max       : (Fraction(37, 2401), ((0, 1, 2, 4, 5, 7), 8))  decimal=0.015410246
+  limit_min       : (Fraction(-29, 5145), ((0, 1, 2, 3, 5, 10), 11))  decimal=-0.005636540
+  wall_max        : (Fraction(12877, 192080), ((0, 2, 4, 5, 7, 8), 10))  decimal=0.067039775
+  wall_min        : (Fraction(-1783, 49392), ((0, 2, 4, 6, 8, 9), 10))  decimal=-0.036098963
+  wall_abs_max    : (Fraction(12877, 192080), ((0, 2, 4, 5, 7, 8), 10))  decimal=0.067039775
+  common_wall_max : (Fraction(229, 5488), ((0, 3, 4, 5, 6, 7), 8))  decimal=0.041727405
+  common_wall_min : (Fraction(-23, 784), ((0, 1, 2, 5, 6, 7), 8))  decimal=-0.029336735
+  residual_wall_max: (Fraction(269, 6860), ((0, 2, 4, 5, 6, 8), 12))  decimal=0.039212828
+  residual_wall_min: (Fraction(-8087, 246960), ((0, 2, 4, 6, 8, 9), 10))  decimal=-0.032746194
+  residual_wall_abs_max: (Fraction(269, 6860), ((0, 2, 4, 5, 6, 8), 12))  decimal=0.039212828
+  energy threshold: 272861/16000000  decimal=0.017053813
+  raw threshold passes: 5346/6900
+  cone threshold: 91793987593/4524157200000  decimal=0.020289743
+  cone/negative upper certificates: 6312/6900
+  worst energy-only upper bound: 0.2448499966065353
+
+Dangerous-row endpoint current
+  row: ((0, 3, 4, 5, 6, 7), 8)
+  closed residue-two limit: 2209/144060
+  finite wall remainder: 36797/576240
+  slow wall count: 126
+  contributions by simultaneous owner set:
+    (3, 4, 5, 6, 7): 229/5488  decimal=+0.041727405
+    (7,): 171/9604  decimal=+0.017805081
+    (4,): 83/5488  decimal=+0.015123907
+    (3, 6): -1/112  decimal=-0.008928571
+    (6,): -5/1029  decimal=-0.004859086
+    (4, 6): 19/5488  decimal=+0.003462099
+    (5,): -13/27440  decimal=-0.000473761
+
+Tournament Analysis
+  vertices: seven parallel classes
+  observable: largest positive source contribution
+  switch: largest local crossing-Laplacian load; numeric tie gauge
+  positive risks: {0: Fraction(229, 19110), 1: Fraction(37, 1764), 2: Fraction(47, 2744), 3: Fraction(253, 12348), 4: Fraction(401, 16464), 5: Fraction(2173, 135828), 6: Fraction(3, 196)}
+  energy risks: {0: Fraction(8069, 705600), 1: Fraction(653, 39200), 2: Fraction(5039, 352800), 3: Fraction(633, 39200), 4: Fraction(4889, 352800), 5: Fraction(671, 22050), 6: Fraction(97459, 6914880)}
+  fingerprint: {'positive_path': (4, 1, 3, 2, 5, 6, 0), 'energy_path': (5, 1, 3, 2, 6, 4, 0), 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_triangles': 0, 'scc_sizes': (1, 1, 1, 1, 1, 1, 1), 'edge_flips': 8, 'hamiltonian_path_count': 1}
+PASS  both class-risk tournaments are transitive
+PASS  class-risk SCCs are singletons
+PASS  class-risk tie paths are unique
+
+VERDICT
+  PROVED: the owner-doubling packet is an adjacent-edge current on C_7.
+  PROVED: Delta_F(2t)^2 <= (16/29) E_pc for the THM-913 Laplacian energy.
+  PROVED: Delta_F(2t)=C_2(E)+a finite 14-cycle slow-wall endpoint sum.
+  PROVED: -23/784 <= synchronized-wall term <= 229/5488, sharp.
+  EXACT BANK: D<=10 and D<t<=4D, 6,900 rows; all three identities pass.
+  NEGATIVE: the raw E_pc threshold does not certify every scanned row.
+  OPEN: bound the noncommon gcd-lattice wall sum with its relation sidecar.

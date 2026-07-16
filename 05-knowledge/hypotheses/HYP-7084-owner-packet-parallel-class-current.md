@@ -122,6 +122,14 @@ row `E=(0,3,4,5,6,7),t=8`; its synchronized deck supplies `229/5488`, while
 the closed limit supplies `2209/144060` and the noncommon wall remainder is
 `797/36015`.
 
+Both coefficient extremizers are contiguous five-arcs in `Z_7`.  The incoming
+`LEM-030` discrete Riesz theorem therefore explains the extremal geometry.
+It does not replace the finite proof here: the stationary sector-zero boundary
+breaks translation invariance, and the synchronized coefficient is not yet
+written as a pure symmetric pair energy.  This is a useful warning against
+silently importing the book-drawing polarization without its fixed-boundary
+sidecar.
+
 After removing (5), the bounded-bank noncommon remainder lies in
 `[-0.03275,0.03922]`, with finite maximum `269/6860`; this is evidence, not a
 universal bound.  Its owner sets are precisely gcd-sheet intersections.  This
@@ -131,7 +139,7 @@ concurrent Opus `HYP-7100` proposal that resolution into parallel/torsion
 classes is the shared LRC grammar.  A scalar class energy loses this owner-set
 sidecar; the remaining proof must retain it.
 
-Reserved verifier/output:
+Verification:
 `04-computation/lrc14_owner_packet_parallel_class_current_codex_S19.py` and
 `05-knowledge/results/lrc14_owner_packet_parallel_class_current_codex_S19.out`.
 The remaining task is a universal signed bound for the noncommon gcd-lattice

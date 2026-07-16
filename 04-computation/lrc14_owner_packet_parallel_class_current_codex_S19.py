@@ -344,6 +344,14 @@ def common_wall_bounds():
     }
 
 
+def is_cyclic_arc(vertices):
+    vertex_set = set(vertices)
+    return len(vertex_set) == len(vertices) and any(
+        vertex_set == {(start + offset) % 7 for offset in range(len(vertices))}
+        for start in SECTORS
+    )
+
+
 def solve_linear(matrix, vector):
     size = len(vector)
     augmented = [list(matrix[row]) + [vector[row]] for row in range(size)]
@@ -614,6 +622,11 @@ def main():
         "3,234 residue rows give the synchronized-wall coefficient range",
         synchronized_bounds["coefficient_maximum"][0] == Fraction(229, 686)
         and synchronized_bounds["coefficient_minimum"][0] == Fraction(-23, 98),
+    )
+    check(
+        "both synchronized coefficient extrema are contiguous five-arcs",
+        is_cyclic_arc(synchronized_bounds["coefficient_maximum"][1][0])
+        and is_cyclic_arc(synchronized_bounds["coefficient_minimum"][1][0]),
     )
     check(
         "all 461 primitive five-speed residue multisets occur by diameter 35",
