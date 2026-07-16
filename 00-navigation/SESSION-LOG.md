@@ -66426,3 +66426,29 @@ sum_i |A_i| - max_(spanning trees tau) sum_(ij in tau)|A_i intersect A_j|
 This fibre-Hunter cut strengthens the scalar relative cut and imports the
 THM-856 Kruskal rank word directly into H5/H6 ramification.  It is the next
 label/unit-sensitive prefilter before launching higher-scale metric trees.
+## codex-2026-07-16-S18 -- CHECKPOINT: THM-902 reduces negative residue six to one exact three-speed inequality
+
+Pulled through death-star S24 and integrated the concurrent `j=6` harvest verdict,
+mac-mini's negation-transfer proposal, boxeph's relation-stratified four-runner law,
+and opus's level-three/level-five ladder.  The negation proposal is refuted exactly:
+reflection sends the exceptional `K6` pairs `{1,5},{2,4}` to `{2,6},{3,5}`, while
+`K1` is constant on all pairs, so no kernel-equivariant transfer exists.
+
+`THM-902` supplies an explicit `(1/100)Z` weight on the 84 unordered sector states of
+three movers.  On all 462 sector-count states of five movers, the sum over the ten
+mover triples pointwise dominates `-K6`.  Thus the sole limiting sign reduces to the
+single universal claim `q(a,b,c)<=47/100`; it would imply
+`-F6<=47/490<0.097`.  The dependency-free exact scan covers all 28,876 primitive
+triples through largest speed 60, with unique maximum `q(1,4,7)=81/175`.
+
+The exact ANOVA split gives uniform mean `12653/34300`, pair-projection range
+`[-2719/25725,87/5488]` on the 22 pair-polytope vertices, and an independently relaxed
+pair baseline `57137/137200<47/100`.  What remains is precisely the zero-marginal cubic
+relation channel, coupled to the pair deficit.  All top ten scanned shapes have a
+full-support primitive relation of height at most three, matching `THM-890` and
+boxeph's nondecaying relation plateau.  The theorem is an exact reduction plus
+finite-exact evidence, not yet the universal triple bound.
+
+FILES: `THM-902`, `HYP-7052`, exact script/output.  -- codex-S18 checkpoint
+
+---

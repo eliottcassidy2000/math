@@ -1,0 +1,65 @@
+THM-902 / HYP-7052: RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION
+==============================================================================
+
+[1] Exact 462-state pointwise certificate
+PASS  84 explicit unordered triple weights
+PASS  462 weak sector compositions
+PASS  every pointwise certificate inequality
+PASS  every state contains ten unordered mover triples
+  minimum integer slack: 0
+
+[2] Exact primitive triple scan
+PASS  primitive triple count through 60
+PASS  unique scanned maximizer
+PASS  scanned maximum is q(1,4,7)=81/175
+PASS  scanned maximum clears 47/100
+PASS  top value is stable from diameter 40 to 60
+  top ten (q, speeds, shortest full-support relation)
+    81/175 (1, 4, 7) (-1, 2, -1)
+    62361/134750 (5, 7, 11) (-3, -1, 2)
+    102041/220500 (5, 7, 9) (-1, 2, -1)
+    28503/61600 (2, 8, 11) (-1, 3, -2)
+    1247/2695 (1, 7, 11) (-3, 2, -1)
+    8419/18200 (3, 12, 13) (-1, -3, 3)
+    59837/129360 (7, 11, 12) (-3, 3, -1)
+    18698/40425 (3, 11, 21) (-3, -3, 2)
+    1133/2450 (1, 7, 12) (-2, 2, -1)
+    11327/24500 (5, 9, 21) (-3, -3, 2)
+  conditional five-triple-core bound: 162/1715
+PASS  conditional scanned bound is below 0.097
+
+[3] Exact ANOVA split and pair-ray channel
+PASS  singleton channel has zero mean
+PASS  pair channel has zero row sums
+PASS  cubic channel has zero coordinate marginals
+  uniform mean: 12653/34300
+  pair-projection range on the 22 pair vertices: -2719/25725 87/5488
+  independently relaxed uniform+three-pair baseline: 57137/137200
+PASS  pair baseline alone stays below 47/100
+  Remaining theorem: couple the zero-marginal cubic relation channel to
+  the pair deficit; independent maximization of the channels is invalid.
+
+[4] Negation/reflection transfer audit
+  exceptional K6 pairs: [(1, 5), (2, 4)]
+  reflected pairs: [(2, 6), (3, 5)]
+PASS  exceptional support is not reflection-stable
+PASS  K1 is constant on reflected pairs and cannot reproduce K6=-12
+
+[5] Tournament Analysis on strongest relation shapes
+  observable: q(u)-q(v)
+  switch/gauge: larger exact q; lexicographic tie orientation
+  fingerprint: {'scores': {(1, 4, 7): 5, (5, 7, 11): 4, (5, 7, 9): 3, (2, 8, 11): 2, (1, 7, 11): 1, (3, 12, 13): 0}, 'score_histogram': {0: ((3, 12, 13),), 1: ((1, 7, 11),), 2: ((2, 8, 11),), 3: ((5, 7, 9),), 4: ((5, 7, 11),), 5: ((1, 4, 7),)}, 'directed_triangles': 0, 'components': (((1, 4, 7),), ((1, 7, 11),), ((2, 8, 11),), ((3, 12, 13),), ((5, 7, 9),), ((5, 7, 11),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 4, 7), (5, 7, 11), (5, 7, 9), (2, 8, 11), (1, 7, 11), (3, 12, 13))}
+PASS  obstruction tournament has no directed triangle
+PASS  obstruction tournament SCCs are singletons
+PASS  tie Hamiltonian path is unique
+  Assumption challenge: relation shapes preserve the triple certificate value
+  but destroy the other movers and wall chronology. Runners, arcs, residues,
+  and scalar relation height were all considered and rejected as faithful vertices.
+
+VERDICT
+  PROVED: explicit rational triple observable pointwise dominates -K6.
+  PROVED: universal q<=47/100 would give -F6<=47/490<0.097.
+  FINITE-EXACT: 28,876 primitive triples through speed 60; unique max 81/175.
+  PROVED: pair projection is a 21-ray channel plus a zero-marginal cubic remainder.
+  REFUTED: negation transfers negative residue 6 to closed positive residue 1.
+  OPEN: bound the cubic relation channel uniformly, then the finite-t wall remainder.
