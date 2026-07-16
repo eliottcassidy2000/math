@@ -4664,3 +4664,18 @@ drawing — the CYCLIC 2-PAGE BOOK drawing (spine = Z_9) is the named candidate:
 crossing quadruples have a cyclic-pattern description commensurable with the 4×9 orbit
 structure. Probe: compute the optimal 2-page crossing quadruple set for K_9 and test
 the bijection against the window quadruples (and complementarily: noncrossing ↔ strong).
+
+### T1546 final (boxeph-2026-07-16-S38) — THE TANGENCY MECHANISM: EXCLUDED AT THE SYMMETRIC LEVEL; the coincidence is Pell arithmetic
+The decisive computation: ALL rotation-invariant circular 2-page drawings of K_9 (page
+rules = partitions of the gap set {1..4}; a quadruple crosses iff its diagonals' gaps
+share a page) give ≥ 72 crossings = EXACTLY 2·Z(9) — none achieves the optimum, and no
+crossing set equals the window set (best split-agreement 90/126). With S37's tin-can
+orbit obstruction (4×9 vs (5,1,30)), BOTH natural symmetric optimal-drawing families
+are excluded exactly: **the n = 9 tangency t(R₉) = Z(9) = 36 has no rotation-equivariant
+drawing-side mechanism.** RESOLUTION OF THE ARC (T1545 → T1546): the owner's bridge is
+(i) verified numerically, (ii) stratified (Guy's quadruple ∈ the (1,−1,−1,1) stratum),
+(iii) a single-point tangency (quartic factorization (m−4)(m+1)), (iv) mechanism-free at
+the symmetric level — the residual content is the LOCATION: both quartics pass through
+the square-triangular 36, i.e. Pell arithmetic, not combinatorics. Curiosities flagged,
+not claimed: min-symmetric-2-page = 2·Z(9) exactly (the doubling again); probe: is
+min-rotation-invariant-2-page = 2Z(n) at all odd n?
