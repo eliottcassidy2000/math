@@ -1,0 +1,93 @@
+THM-891 / HYP-7024: EXACT RESONANT CROSS-SECTION CANCELLATION
+==============================================================================
+
+[1] Seven-microcell identity
+PASS  microcell formula over a<=70, all 49 section pairs
+      Therefore a*J_a(c,s) depends only on a mod 7 and vanishes at 0 mod 7.
+
+[2] Exact slow-core coefficient tables
+PASS  consecutive residue table
+PASS  perforated extremal residue table
+  consecutive {0,1,2,3,4,5}
+    p1=11/42, p2=37/105, 3p1+p2=239/210
+    r=1: r*C_r = -239/5145 = -0.046452866861
+    r=2: r*C_r = 209/20580 = 0.010155490768
+    r=3: r*C_r = -39/6860 = -0.005685131195
+    r=4: r*C_r = 47/20580 = 0.002283770651
+    r=5: r*C_r = -4/1715 = -0.002332361516
+    r=6: r*C_r = 83/6860 = 0.012099125364
+PASS  binding r=1 identity for consecutive {0,1,2,3,4,5}
+  extremal {0,1,2,3,4,6}
+    p1=1/4, p2=11/28, 3p1+p2=8/7
+    r=1: r*C_r = -16/343 = -0.046647230321
+    r=2: r*C_r = 3/343 = 0.008746355685
+    r=3: r*C_r = -1/2058 = -0.000485908649
+    r=4: r*C_r = 17/1372 = 0.012390670554
+    r=5: r*C_r = 13/4116 = 0.003158406220
+    r=6: r*C_r = 31/4116 = 0.007531584062
+PASS  binding r=1 identity for extremal {0,1,2,3,4,6}
+PASS  sharp candidate equality 3p1+p2=8/7
+PASS  candidate constant is below 0.097
+
+[3] Finite far-peel referee for the consecutive core, w=t
+  t= 25: Error(t)=-13/300 = -0.043333333333, Error-C1=107/34300 = 0.003119533528
+  t= 50: Error(t)=-689/14700 = -0.046870748299, Error-C1=-43/102900 = -0.000417881438
+  t=100: Error(t)=-169/3675 = -0.045986394558, Error-C1=4/8575 = 0.000466472303
+  t=200: Error(t)=-449/9800 = -0.045816326531, Error-C1=131/205800 = 0.000636540330
+  t=400: Error(t)=-391/8400 = -0.046547619048, Error-C1=-13/137200 = -0.000094752187
+PASS  finite values converge at the predicted O(1/t) scale on the audit ladder
+
+[4] Refuted collision shortcut
+  collision mass (1,8) = 1/4
+  collision mass (2,9) = 2/9
+PASS  pair-collision mass is not universally 1/7
+
+[5] Exhaustive primitive-core scan through diameter 20
+PASS  primitive core count
+PASS  sharp scanned maximum
+PASS  unique scanned maximizer
+PASS  scanned maximizer core
+  top ten (max |r*C_r|, core, winning residue, signed coefficient, p1, p2)
+    (Fraction(16, 343), (0, 1, 2, 3, 4, 6), 1, Fraction(-16, 343), Fraction(1, 4), Fraction(11, 28))
+    (Fraction(239, 5145), (0, 1, 2, 3, 4, 5), 1, Fraction(-239, 5145), Fraction(11, 42), Fraction(37, 105))
+    (Fraction(223, 5145), (0, 2, 3, 4, 5, 6), 1, Fraction(-223, 5145), Fraction(8, 35), Fraction(79, 210))
+    (Fraction(169, 4116), (0, 2, 4, 5, 6, 8), 1, Fraction(-169, 4116), Fraction(1, 5), Fraction(341, 840))
+    (Fraction(169, 4116), (0, 2, 3, 4, 6, 8), 1, Fraction(-169, 4116), Fraction(4, 21), Fraction(73, 168))
+    (Fraction(209, 5145), (0, 1, 2, 3, 5, 6), 1, Fraction(-209, 5145), Fraction(22, 105), Fraction(11, 30))
+    (Fraction(206, 5145), (0, 1, 2, 4, 5, 6), 1, Fraction(-206, 5145), Fraction(83, 420), Fraction(163, 420))
+    (Fraction(67, 1715), (0, 1, 3, 4, 5, 6), 1, Fraction(-67, 1715), Fraction(4, 21), Fraction(27, 70))
+    (Fraction(40, 1029), (0, 2, 3, 4, 6, 12), 1, Fraction(-40, 1029), Fraction(4, 21), Fraction(8, 21))
+    (Fraction(235, 6174), (0, 3, 6, 8, 9, 12), 1, Fraction(-235, 6174), Fraction(89, 504), Fraction(29, 72))
+  per-residue exact maxima
+    r=1: (Fraction(16, 343), (0, 1, 2, 3, 4, 6), Fraction(-16, 343))
+    r=2: (Fraction(74, 2401), (0, 1, 2, 4, 5, 7), Fraction(74, 2401))
+    r=3: (Fraction(2671, 96040), (0, 2, 6, 7, 8, 10), Fraction(2671, 96040))
+    r=4: (Fraction(61, 2940), (0, 1, 2, 3, 4, 15), Fraction(61, 2940))
+    r=5: (Fraction(367, 20580), (0, 2, 6, 8, 10, 15), Fraction(367, 20580))
+    r=6: (Fraction(199, 12005), (0, 1, 4, 5, 7, 11), Fraction(-199, 12005))
+  winning residues through D=14: {1: 1963, 2: 15, 3: 3, 4: 0, 5: 0, 6: 0}
+  winning residues through D=20: {1: 15211, 2: 27, 3: 8, 4: 0, 5: 0, 6: 0}
+PASS  residue-1 pointwise dominance is false
+
+[6] Tournament Analysis on resonance residues
+  observable: |r*C_r|-|q*C_q| per core
+  switch/gauge: strict primitive-core majority; lexicographic tie orientation
+  D=14 fingerprint: {'edges': {(2, 4), (1, 2), (3, 4), (6, 5), (1, 5), (4, 6), (1, 4), (2, 3), (4, 5), (2, 6), (3, 6), (1, 6), (2, 5), (1, 3), (3, 5)}, 'scores': {1: 5, 2: 4, 3: 3, 4: 2, 5: 0, 6: 1}, 'score_histogram': {0: (5,), 1: (6,), 2: (4,), 3: (3,), 4: (2,), 5: (1,)}, 'directed_triangles': 0, 'components': ((1,), (2,), (3,), (4,), (5,), (6,)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': (1, 2, 3, 4, 6, 5)}
+  D=20 fingerprint: {'edges': {(2, 4), (1, 2), (3, 4), (6, 5), (1, 5), (4, 6), (1, 4), (2, 3), (4, 5), (2, 6), (3, 6), (1, 6), (2, 5), (1, 3), (3, 5)}, 'scores': {1: 5, 2: 4, 3: 3, 4: 2, 5: 0, 6: 1}, 'score_histogram': {0: (5,), 1: (6,), 2: (4,), 3: (3,), 4: (2,), 5: (1,)}, 'directed_triangles': 0, 'components': ((1,), (2,), (3,), (4,), (5,), (6,)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': (1, 2, 3, 4, 6, 5)}
+  edge flips D=14 -> D=20: 0
+PASS  majority tournament is stable
+PASS  majority tournament has no directed 3-cycle
+PASS  majority tournament SCCs are singletons
+PASS  tie Hamiltonian path is unique
+PASS  stable tie Hamiltonian path
+  Assumption challenge: residues preserve the resonant LRC error ordering, while
+  destroying finite-t aliases, wall chronology, and core arithmetic. Miss patterns,
+  not runners or arcs, are the faithful carrier of the exact coefficient.
+
+VERDICT
+  PROVED: exact cross-section limit kernel and seven-residue reduction.
+  PROVED: consecutive-core max coefficient 239/5145 < 0.097.
+  FINITE-EXACT: 15,246 primitive cores through D=20; unique max 16/343.
+  REFUTED: fixed pair-collision first moment and universal residue-1 dominance.
+  OPEN CRUX: prove all-core max_r |r*C_r| <= 16/343, including the
+  separate residue-2 through residue-6 miss-pattern inequalities.
