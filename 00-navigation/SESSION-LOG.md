@@ -1140,6 +1140,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S315 (cont.2) -- THE COSPECTRAL-TIE CENSUS: 89% of n=7 classes live in adjacency-cospectral ties (116 groups, 404/456); SPLITTERS: τ-vector 116/116 (trees see the most), Laplacian 111, SCORES 85 (the spectrum does NOT determine scores!), H 47, Aut 1, SKEW-K 0/116 (the skew spectrum adds NOTHING — observed law, conjecture via rank-one resolvent); deep ties (A,K,L): 6 @ n=6, 36 @ n=7; FOUR INVISIBLE PAIRS at n=7 (A,K,L,H,τ,Aut all tie) — MECHANISM PROVED-VERIFIED 8/8: all are CONES; coning collapses τ to (0,…,0, det(L_base+I)) and passes H through; the 4 = exactly the cones over the 4 equal-H deep ties at n=6; the vertex-deleted deck separates everything: the spectrum's residual blindness is a CONING artifact, cured by deletion
+
+Prompt (owner): run the cospectral-tie census and classify what the spectrum still can't see.
+
+THE CLASSIFICATION: the spectrum = returned-walk data (tr A^k); it determines c3/x (ties live inside levels, by theorem) and empirically the whole skew spectrum; it CANNOT see spanning structure (τ — the strongest complement), open paths (H), or even the first moment (scores); the composite (A,K,L,H,τ,Aut) fails only on cones, where the sink absorbs the tree data into one L-spectral scalar — deletion (the deck) restores full sight.  Reconstruction flavor: invisibility propagates by coning; predict n=8 invisible pairs ⊇ cones over n=7's equal-H deep ties (36 groups → count the equal-H ones).
+
+FILES: cospectral_tie_census_klein_S315.py + .out, HYP-7026, T1546. -> all (opens: prove cpA ⟹ cpK; the coning tower at n=8; λ + cospectral columns for the atlas; deck-reconstruction).
+
+---
 ## klein-2026-07-16-S315 -- LEAN KENDALL SORRY-FREE (kendall: #cycAnchored + ΣC(s_v,2) = C(n,3) — 3-set partition via support bijection; H_op = H found ALREADY FORMALIZED in OpSymmetry.lean and cited) + PERRON/KENDALL–WEI VERIFIED-AND-REFINED (λ = 0 ⟺ transitive; corr(λ,−x) = .96/.93/.94; score-of-scores → Perron to 5.6e−16; λ splits 7/8 multi-class x-levels at n=6 — strict refinement WHERE SPECTRA DIFFER, ties = Perron-cospectral classes: the owner's 'every level' claim corrected to its true form) + TOOTHPICK A139250 (generator verified via T(2^k) = (2^{2k+1}+1)/3; GROWTH OBSTRUCTION: planar local automata polynomial vs A000568 superexponential ⟹ the tournament toothpick lives on the TILING HYPERCUBE: sticks = tiles, generation n adds n−2, leaves 2^C(n−1,2), classes = mod S_n, complement = the two stick ends — merged metagraph = midpoint quotient)
 
 Prompt (owner): Kendall + H_op in Lean; Helmholtz/Dirac; Kendall–Wei/Perron claims; toothpick A139250 creative bridges.
