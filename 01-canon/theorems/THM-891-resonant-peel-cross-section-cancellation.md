@@ -359,6 +359,20 @@ obstruction.  At `w=2t`, writing `q=floor(14{tx})` gives
 signed fourteen-half-sector packet in `HYP-7083`.  This reduces the first bounded owner
 band from an unspecified wall term to one explicit miss-label/parity incidence.
 
+`HYP-7084` identifies the packet's class geometry exactly.  If `q=2c+eta` and
+`u=2c mod 7`, doubling chooses the endpoint `u+eta` of the oriented edge
+`u->u+1` on the `THM-913` parallel-class circle.  Symmetric mass and parity current
+give an exact average-plus-divergence decomposition.  The `K_7` crossing Laplacian
+proves `Delta_F(2t)^2<=(16/29)E_pc`, but the exact bank refutes that scalar energy as a
+closure.  Restoring wall chronology gives the sharper identity
+
+`Delta_F(2t)=C_2(E)+(1/t) sum_p(P_{m_-}({tp})-P_{m_+}({tp}))`,
+
+where the `P_m` are a finite fourteen-cell miss-pattern palette.  The synchronized
+walls `p=k/7` are residue-only and satisfy the sharp universal bound
+`-23/784<=G_sync<=229/5488`.  The honest remainder is now the noncommon gcd-lattice
+wall sum, the real-space counterpart of the general-cluster `THM-887` comb/CRT law.
+
 - `THM-883` finds the owner comb in each section.  This theorem composes the sections
   before taking absolute values and identifies their exact cancellation.
 - `THM-884` observes ratios `0.022--0.060` in full finite audits.  The value

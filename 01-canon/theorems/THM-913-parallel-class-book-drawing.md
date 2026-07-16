@@ -35,3 +35,12 @@ contiguous half-rounds — Guy's conjectured optimum realized by exactly the add
 structure that makes near-APs extremal in the LRC covering program. The two extremal
 worlds (crossing minimization, additive-energy maximization) share one object: the
 parallel-class circle.
+
+The finite LRC owner packet supplies a second exact face (`HYP-7084`).  Writing
+`floor(14{tx})=2c+eta` sends the source sector to the adjacent class endpoint
+`2c+eta`; hence the doubling correction is an average plus an oriented current on this
+same class circle.  The Green/Laplacian kernel above gives a rigorous energy comparison,
+but `xi(1)=0` warns that the proof-bearing current itself runs along zero-crossing class
+adjacencies.  The exact census confirms the warning: crossing energy alone is too coarse,
+while the retained fourteen-cell wall palette isolates the sharp synchronized term and
+the remaining gcd-sheet currents.
