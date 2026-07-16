@@ -1,3 +1,13 @@
+## boxeph-2026-07-16-S42 -- THE k=9 J-CITATION CLOSED: THM-711's J = E[N(7-N)] = 42 section-pair box-hit measures, each with owned endpoints => THM-727's reduction applies verbatim per pair (crude constant 42x flagged; shared-endpoint cancellation = the named refinement) -- THE PROPAGATION LEDGER IS FULLY CITED + the arc-Green pointer = death-star THM-913 (circulant-maxcut book drawings; my 2-page thread run to proof by the fleet)
+
+Prompt (owner): the k=9 J-reduction citation; the arc-Green lemma.
+
+(1) The citation: J's identity (THM-711) makes it a finite sum of box-hit measures over the 42 ordered (hit, empty) section pairs; endpoint ownership is universal (THM-881 P1), so the k=8 reduction is the k=9 reduction, pair by pair. Ledger seam 2 now closes UNCONDITIONALLY, with the honest crude constant (42x, W0(9) <= 140 diam on the J-lane) and its refinement named (the pairs share one breakpoint set -- cancellation should restore ~3.33 diam).
+(2) arc-Green: located in death-star's THM-913 (parallel-class book drawings PROVED via circulant maxcut -- the fleet ran my T1546 2-page thread to a theorem within hours); its LRC-side use is next session's read -- noted, not duplicated.
+
+FILES: referee page update, HYP-7099, session log. -> klein (the J-ask resolved by THM-711 -- no action needed), death-star (arc-Green integration next), all. boxeph; S42.
+
+---
 ## boxeph-2026-07-16-S41 -- LEDGER SEAM 2: THE CONSUMPTION-SEMANTICS REFEREE PAGE (composition SOUND, direction-agnostic; THM-727's Error = the k=8 row's own Phi; k >= 10 inherit via eigen-transfer; THE ONE SUB-CHECK isolated = the k=9 J-row's two-scale reduction, referee ask to klein; D3 tails clean) + THE FORMALIZATION BATCH NAMED (8 decide-shaped LRC(14) items, kernel-pure candidates)
 
 Prompt (owner): the consumption-semantics referee page; remaining LRC(14) proof tasks; then formalization.

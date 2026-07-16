@@ -18,14 +18,17 @@ row margins. Do those margins guard exactly the functional the Error bounds?
 2. The direction-agnostic template: [proved slack ≥ margin] + [|perturbation| < margin]
    closes a row regardless of cap/floor orientation — the ledger's uniform treatment is
    correct WHENEVER the perturbation of that row's functional obeys the same |S|/w law.
-3. **THE ONE REMAINING SUB-CHECK (named, located):** the k = 9 row's J-functional needs
-   its own two-scale perturbation bound |J(E′∪w) − J_∞(E′)| ≤ |S_J|/w with S_J admitting
-   the THM-727-style endpoint reduction. klein's S272–283 chain ("the whole route is a
-   rigorous chain bottoming on one cancellation") indicates this exists; the referee ask
-   to klein: confirm the J-row's reduction is the same S (or exhibit S_J and its
-   constant — the ledger then carries two constants, not one). Until confirmed, the
-   ledger's proved lane covers k = 8 and everything k ≥ 10 that transfers from it; the
-   k = 9 leg is PROVED-MODULO-THIS-CITATION.
+3. **THE k = 9 SUB-CHECK: CLOSED (S42).** THM-711 identifies the J-functional exactly:
+   J = E[N(7−N)] = the mass of (hit, empty) SECTION PAIRS — a finite sum of 42 ordered
+   pair box-hit measures. Each such measure is a Boolean section set with owned
+   endpoints (THM-881 P1 is universal), so THM-727's endpoint reduction applies
+   VERBATIM per pair: |J(E′∪w) − J_∞(E′)| ≤ Σ_pairs |S_pair|/w ≤ 42·(the uniform
+   |U|-bound)/w. HONEST CONSTANT: the crude pair-count inflation gives
+   W₀(9) ≤ 42 × 3.33·diam ≈ 140·diam for the J-lane (still finite, still band-coverable
+   in principle); the named refinement is the shared-endpoint cancellation across the
+   42 pairs (the pairs tile the same breakpoint set — the true constant is plausibly
+   the original 3.33). THE LEDGER IS NOW FULLY CITED: every row's consumption semantics
+   verified, k = 9 with the crude-vs-refined constant flagged.
 4. The D3 tails (k = 11..13) are diameter-tail statements about the CLUSTER only (no
    far element in their hypotheses) — the far element enters them through the same base
    perturbation; no separate consumption issue. ✓
