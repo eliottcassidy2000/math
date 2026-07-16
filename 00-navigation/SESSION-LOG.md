@@ -1,3 +1,35 @@
+## opus-2026-07-16-S329 -- THM-900 THE GUY / SQUARE-TRIANGULAR WEAVE (Z(2k+1) = T_{k-1}^2 = sum of cubes, verified n = 5..21; Z(9) = 36 = the square-triangular meeting point; Z(13) = 225 = T_5^2) + THE QUADRUPLE CLOSED FORMS (midpoint quadruples = floor(n(n-2)(2n-5)/24): the S328 blockers quantified; E(AP) formula = S321's 1469) + THE BOTH-CLEAN TIGHTNESS (greedy FAILS below 25000: Sidon and ratio-cleanliness FIGHT through the Farey-14 channels: THE EMPTINESS CONJECTURE + the packing proof route -- if proved, prefix recursions are PROVABLY essential) (HYP-7055)
+
+Prompt (owner): the both-clean search; near-AP quadruples vs square-triangular numbers
+and Guy's conjecture formula.
+
+[G] Guy's Z(n) = (1/4)floor(n/2)floor((n-1)/2)floor((n-2)/2)floor((n-3)/2): at odd n
+the factors pair: Z(2k+1) = (k(k-1)/2)^2 = T_{k-1}^2 = Nicomachus sum of the first
+k-1 cubes: 1, 9, 36, 100, 225, 441, 784, 1296, 2025 (n = 5..21, 9/9). Z(9) = 36 =
+T_8 = 6^2: the second nonzero square-triangular (Pell: 1, 36, 1225, 41616, ...): the
+unique small point where Guy's squares-of-triangulars meets the triangular-squares;
+K_9 = the smallest complete graph whose crossing number is square + triangular +
+cube-sum. Z(13) = 225 = 15^2 = T_5^2 (the LRC vertex count's entry in the ledger).
+[Q] E(AP_n) = n(n+1)(2n+1)/3 - n^2 (1469 at 13 ✓ S321); unordered midpoint quadruples
+= floor(n(n-2)(2n-5)/24): 95, 125, 161 exact at n = 12, 13, 14 (self-correction: my
+first guess 2C(n,3)+C(n,2) was the ordered count's cousin -- refit exactly). THE
+EXTREMAL ANALOGY: Guy minimizes cyclic interleaving (optimum T^2); Sidon minimizes
+additive midpoints (optimum 0): the two quadruple-extremal problems on the program's
+two axes (multiplicative/cyclic vs additive).
+[S] the both-clean greedy (Sidon + Y* >= 40 + no 13-mult, two step pools, range to
+25000): FAILS to build 13. Diagnosis: the constraints fight -- Sidon forces spread,
+spread pushes 78 pairwise ratios into the small-rational web, and the clean channels
+are the thin Farey-14 gaps (S315): THE EMPTINESS CONJECTURE (joint regime empty at
+accessible scales); proof route = Farey-channel packing pigeonhole. If proved: the
+prefix decompositions are PROVABLY essential (THM-897's discovery upgraded).
+
+NEXT (named): the packing proof or SAT search; the threshold trade-off curve; the
+Guy-side metagraph probe (cyclic-quadruple count as a class invariant, n = 7).
+
+FILES: THM-900 (renumbered from 899); bothclean_search_guy_weave .py/.out; HYP-7055.
+opus; S329.
+
+---
 ## death-star-2026-07-16-S25 -- THM-906: THE c_B(k) CORNER FORM (the residue-6 kernel's named computation DONE: c_B(k) = -(1/(24 prod k_i)) sum_corners (-1)^# B4({k.eps}) -- Bernoulli-B4 alternating corner sum, the quartic analog of THM-880's B2 law; 3-line Fourier derivation; refereed R/c_B = 0.998 at the plateau-dominant regime (exact-Q strata, wide boxes); constants exact rationals over 7^4 (45/2401); the 1/prod k_i + corner-spread PROVE boxeph's taller-relations-smaller-plateau law; = the machinery codex-HYP-7062's universal relation-stratified proofs need) + THE PARALLEL-CHORD LAW PROVED (the owner's Guy/A000241 probe): kernel quadruples v1+v2 = v3+v4 = PARALLEL CHORDS on the residue circle = the pairing-complement of Guy's crossing quadruples; Qcirc(Z_n) = n floor((n-2)^2/4)/2 EXACTLY (pairs in a sum class are automatically disjoint => Qcirc = sum_s C(r(s),2); = n(n-1)(n-3)/8 odd n; GUY'S FLOOR-PRODUCT SPECIES, coinciding with Z(12) = 150); Qlin({1..n}) = quarter-square partial sums = ZARANKIEWICZ'S ATOMS (A002620); the near-AP quadruple ladder 125 (AP) > 95 (deep well) > 83 (GW) >> 7 (random) quantifies the kernel's near-AP concentration = the E4 face of THM-730's AP-extremality -- the T-crossing-numbers tangent's 'same species' intuition is now two exact formulas
 
 Prompt (owner): see how near-AP quadruples relate to Guy's conjecture and A000241; work the additive-relation-stratified residue-6 kernel.
