@@ -1,7 +1,7 @@
 ---
 id: THM-891
 title: Exact cross-section cancellation for a resonant far peel
-status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, and consecutive-core constant are rigorous. The diameter-20 extremal statement is finite-exact evidence, not a universal theorem.
+status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-collision law, low-miss bound, and universal 0.097 closures for residues 1 and 5 are rigorous. The diameter-20 extremal statement is finite-exact evidence, not a universal theorem.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
 related: [THM-888, THM-889, THM-892, HYP-7021, HYP-7024]
@@ -69,6 +69,29 @@ Thus every owner resonance of this asymptotic family satisfies
 This proves the signed cross-section mechanism behind the exact `THM-884` audit.  The
 sectionwise absolute-value constant `0.8287` from the colliding `THM-887` is a valid
 uniform envelope, but it discards precisely the signs retained above.
+
+There is also an exact arithmetic law for any two distinct positive speeds.  Divide
+`a,b` by their gcd and call the coprime pair `A,B`.  If `r=A mod 7`, then
+
+`Pr(sector(ax)=sector(bx))
+ = 1/7` when `A != B mod 7`, and
+
+`Pr(sector(ax)=sector(bx))
+ = 1/7 + r(7-r)/(7AB)` when `A = B mod 7`.
+
+In particular every pair-collision mass is at least `1/7`, but it is not fixed.  For a
+six-offset core this implies the universal low-miss estimate
+
+> **`p_1+p_2 <= 45/49`.**
+
+The same pair geometry also gives `p_1<=5/7`.  Consequently the exact residue-one
+identity and the residue-five kernel norm imply
+
+> **`|F_1(E)| <= 230/2401 < 0.097` and
+> `|F_5(E)| <= 225/2401 < 0.097`.**
+
+Thus residues `1` and `5` of the owner-resonant limiting problem close universally at
+the propagation slack, although the sharp `16/343` conjecture remains open.
 
 ## 2. Conditioning identity
 
@@ -166,7 +189,64 @@ not promoted to a theorem outside the finite box.  `HYP-7024` records the sharp
 all-core target and two important negative findings: pair-collision mass is arithmetic,
 not universally `1/7`, and residue `1` does not dominate pointwise on every core.
 
-## 7. Synthesis with the concurrent routes
+## 7. Exact pair-collision law
+
+Let `I_s=1_[s/7,(s+1)/7)` and let `c_k` be the Fourier coefficient of `I_0`.
+The same-sector indicator is `sum_s I_s(u)I_s(v)`.  Summing the translated Fourier
+series over `s` kills every pair of frequencies except `k+l=0 mod 7`.  Integrating on
+the line `(u,v)=(ax,bx)` and writing `a=gA`, `b=gB`, `(A,B)=1`, leaves
+
+`1/7 + 7 sum_(h != 0, 7|(B-A)h) c_(Bh)c_(-Ah)`.
+
+If `A != B mod 7`, the surviving `h` are multiples of seven and the sine factor in
+`c_(Ah)` vanishes, giving exactly `1/7`.  If `A=B mod 7`, then
+`Bh=Ah+7m`; the phase `(-1)^m` cancels the identical sign change of the sine, so every
+remaining term is nonnegative and
+
+`Pr(same)=1/7 + 7/(pi^2 AB) sum_(h!=0) sin^2(pi A h/7)/h^2`.
+
+Using `sum_(h!=0) sin^2(pi h theta)/h^2=pi^2 theta(1-theta)` at
+`theta=r/7` yields the claimed correction `r(7-r)/(7AB)`.  A stationary-versus-moving
+pair has mass exactly `1/7` directly.
+
+Now let `C(x)` count colliding pairs among the six core points.  Summing the fifteen
+pair laws gives `E[C]>=15/7`.  On the event `N<=2` (mass `p_1+p_2`), six points occupy
+at least five sectors and hence `C<=1`; always `C<=15`.  Therefore
+
+`15/7 <= E[C] <= (p_1+p_2)+15(1-p_1-p_2)`,
+
+which rearranges to `p_1+p_2<=45/49`.
+
+There is a second universal consequence.  Choose any two positive runners.  The event
+counted by `p_1` forces these runners into distinct nonzero sectors.  Write `D` for
+their same-sector event and `H_j` for the event that both lie in sector `j`.  Inclusion-
+exclusion gives
+
+`Pr(distinct and nonzero)=5/7-Pr(D)+2Pr(H_0)`.
+
+Time reversal `x->1-x` gives `Pr(H_0)=Pr(H_6)`, while the two disjoint events `H_0`
+and `H_6` lie inside `D`.  Hence `Pr(D)>=2Pr(H_0)`, proving `p_1<=5/7`.  Since
+
+`F_1=-2(3p_1+p_2)/49`
+
+and `3p_1+p_2=2p_1+(p_1+p_2)`, the two bounds yield
+
+`|F_1| <= 2(10/7+45/49)/49 = 230/2401 < 0.097`.
+
+For residue five, the exact integer kernel `49F_5` has absolute value at most `5` on
+every singleton miss pattern and at most `4` on every pair miss pattern.  Therefore
+
+`|F_5| <= (5p_1+4p_2)/49 <= 5(p_1+p_2)/49
+         <= 225/2401 < 0.097`.
+
+This does not prove `HYP-7024`: the signed residue kernels need more than the scalar
+collision count, and residues `2,3,4,6` remain open even at the propagation slack.  A
+second tempting shortcut also fails.  Inversion `x->1-x` does not
+induce a symmetry of the six inner miss patterns because the stationary point lies on
+the sector-zero boundary and remains fixed.  For the consecutive core, for example,
+`B_1=1/35` but the naively paired `B_5=1/28`.
+
+## 8. Synthesis with the concurrent routes
 
 - `THM-883` finds the owner comb in each section.  This theorem composes the sections
   before taking absolute values and identifies their exact cancellation.
@@ -187,8 +267,10 @@ not universally `1/7`, and residue `1` does not dominate pointwise on every core
 - The constant-propagation ledger closes the coarse tail at `3.4 diam`.  A universal
   form of `HYP-7024`, plus a finite-`t` remainder bound, would attack the factor-17.6
   loss and could contract that residual band toward the natural `w>=diam` boundary.
+  The pair law now closes limiting residues `1` and `5` at the ledger's `0.097` slack;
+  limiting residues `2,3,4,6` and the uniform wall remainder are the honest remainder.
 
-## 8. Tournament and assumption challenge
+## 9. Tournament and assumption challenge
 
 The computation treats the six nonzero residues as vertices.  Its pairwise observable
 is `|rC_r|-|qC_q|`; majority over primitive cores supplies the binary relation, and

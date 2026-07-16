@@ -1,8 +1,9 @@
 # HYP-7024 — the resonant-peel miss-pattern extremal
 
-**Status:** MIXED / OPEN (codex-2026-07-16-S17).  `THM-891` proves the exact reduction.
-The sharp uniform inequality is finite-exact through diameter 20.  Two tempting
-shortcuts were refuted.
+**Status:** MIXED / OPEN (codex-2026-07-16-S17).  `THM-891` proves the exact reduction
+and closes residues 1 and 5 at the non-sharp `0.097` propagation slack.  The sharp
+uniform inequality is finite-exact through diameter 20.  Three tempting shortcuts were
+refuted.
 
 ## Exact target
 
@@ -51,9 +52,9 @@ The two leading cores are stable from diameter 12 through diameter 20.  The majo
 tournament on residues is also stable from diameter 14 to 20, with the unique path
 `1 -> 2 -> 3 -> 4 -> 6 -> 5`.
 
-## Refuted shortcuts
+## Pair law and refuted shortcuts
 
-### 1. Fixed collision first moment — false
+### 1. Fixed collision first moment — false, with an exact replacement
 
 Let `C(x)` count colliding runner pairs.  Then `p_1=Pr(C=0)` and `p_2=Pr(C=1)`, so the
 binding target is `3Pr(C=0)+Pr(C=1)<=8/7`.  It was tempting to use
@@ -63,8 +64,37 @@ false: the exact collision masses are
 - `(a,b)=(1,8)`: `1/4`;
 - `(a,b)=(2,9)`: `2/9`.
 
-The collision moment retains the same short arithmetic relations isolated by
-`HYP-7021`; a relation-blind moment LP cannot prove the target.
+After dividing a positive pair `(a,b)` by its gcd to the coprime pair `(A,B)`, the
+replacement law proved in `THM-891` is
+
+`Pr(same sector)=1/7 + [A=B mod 7] (A mod 7)(7-A mod 7)/(7AB)`.
+
+Thus every pair mass is at least `1/7`.  If `C` counts collisions among the six core
+points, `E[C]>=15/7`; comparing `C<=1` on the event `N<=2` with the global `C<=15`
+proves the useful but non-sharp bound
+
+`p_1+p_2<=45/49`.
+
+For any two positive runners, the `p_1` event puts them in distinct nonzero sectors.
+If `D` is their same-sector event and `H_j` is their common-sector-`j` event, then
+
+`Pr(distinct and nonzero)=5/7-Pr(D)+2Pr(H_0)<=5/7`,
+
+because time reversal equates `H_0` and `H_6` and both are disjoint subsets of `D`.
+Thus `p_1<=5/7`, and
+
+`|F_1|=2(3p_1+p_2)/49
+      <=2(2(5/7)+45/49)/49=230/2401<0.097`.
+
+The residue-five singleton and pair kernel norms are respectively `5` and `4`, so
+
+`|F_5|<=(5p_1+4p_2)/49<=225/2401<0.097`.
+
+This closes limiting residues `1` and `5` at the propagation slack, not at the sharp
+`16/343` target.
+
+The excess term retains the same short arithmetic relations isolated by `HYP-7021`
+and the coincidence divisor spectrum of `THM-892`.
 
 ### 2. Pointwise residue-one dominance — false
 
@@ -77,17 +107,26 @@ Residue three wins eight diameter-20 cores.  Thus the global theorem needs the s
 `r=1` occupancy inequality plus separate signed inequalities for residues `2,...,6`;
 it cannot conclude them from pointwise dominance.
 
+### 3. Miss-pattern inversion symmetry — false
+
+The map `x->1-x` inverts every moving point, but the stationary point at the
+sector-zero boundary stays fixed.  Consequently it does not permute the six inner
+miss patterns.  Already for `{0,1,2,3,4,5}`, `B_1=1/35` while the naively reflected
+`B_5=1/28`.  Symmetrizing the residue kernels without carrying the stationary-boundary
+sidecar gives false universal bounds.
+
 ## Proof program
 
 1. **Relation-stratified collision moments.**  Expand pair and higher collision masses
-   by the congruence lattice, using the `HYP-7021` short-relation parameter and
-   `THM-892` signed coincidence spectrum rather than a fictitious fixed first moment.
+   from the exact pair law by the congruence lattice, using the `HYP-7021`
+   short-relation parameter and `THM-892` signed coincidence spectrum rather than a
+   fictitious fixed first moment.
    The relation-poor stratum should have independent slack; finitely many short-relation
    shapes should contain the extremizer.
-2. **Signed miss-pattern LP.**  For each residue `2,...,6`, use the exact `K_r` table,
-   reflection symmetry `s -> 7-s`, and realizable factorial moments of the missed set.
-   The target constants in the evidence table are far below `16/343`, leaving room for
-   a non-sharp certificate.
+2. **Signed miss-pattern LP.**  For residues `2,3,4,6`, use the exact `K_r` table,
+   stationary-boundary-aware transforms, and realizable factorial moments of the
+   missed set.  Do not impose the false reflection symmetry `s -> 7-s`.  The finite-box
+   constants are far below `16/343`, leaving room for a non-sharp certificate.
 3. **Compact/relation-rich split.**  The extremizer is compact and relation-rich, while
    random wide cores are much smaller.  A quantitative relation-lattice tail plus a
    finite compact sweep would parallel the balanced-comb split of `THM-889/HYP-7021`.

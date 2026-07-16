@@ -200,7 +200,7 @@ def finite_error(offsets, peel):
     return scaled_error / peel
 
 
-def pair_collision_mass(first_speed, second_speed):
+def pair_state_mass(first_speed, second_speed, predicate):
     positive = tuple(speed for speed in (first_speed, second_speed) if speed > 0)
     period_scale = lcm(*positive) if positive else 1
     states = [0, 0]
@@ -212,11 +212,11 @@ def pair_collision_mass(first_speed, second_speed):
         events.append((event_step, runner_index, 1, speed, event_step))
     heapify(events)
     previous = 0
-    collision_numerator = 0
+    accepted_numerator = 0
     while events:
         event_position = events[0][0]
-        if states[0] == states[1]:
-            collision_numerator += event_position - previous
+        if predicate(states):
+            accepted_numerator += event_position - previous
         while events and events[0][0] == event_position:
             _, runner_index, event_index, speed, event_step = heappop(events)
             states[runner_index] = (states[runner_index] + 1) % 7
@@ -233,7 +233,37 @@ def pair_collision_mass(first_speed, second_speed):
                     ),
                 )
         previous = event_position
-    return Fraction(collision_numerator, 7 * period_scale)
+    return Fraction(accepted_numerator, 7 * period_scale)
+
+
+def pair_collision_mass(first_speed, second_speed):
+    return pair_state_mass(
+        first_speed, second_speed, lambda states: states[0] == states[1]
+    )
+
+
+def pair_distinct_nonzero_mass(first_speed, second_speed):
+    return pair_state_mass(
+        first_speed,
+        second_speed,
+        lambda states: states[0] != 0
+        and states[1] != 0
+        and states[0] != states[1],
+    )
+
+
+def pair_collision_closed_form(first_speed, second_speed):
+    if first_speed == 0 or second_speed == 0:
+        return Fraction(1, 7)
+    common_divisor = gcd(first_speed, second_speed)
+    first_reduced = first_speed // common_divisor
+    second_reduced = second_speed // common_divisor
+    if (first_reduced - second_reduced) % 7 != 0:
+        return Fraction(1, 7)
+    residue = first_reduced % 7
+    return Fraction(1, 7) + Fraction(
+        residue * (7 - residue), 7 * first_reduced * second_reduced
+    )
 
 
 def primitive(positive_speeds):
@@ -469,12 +499,68 @@ def main():
         < Fraction(1, 7),
     )
 
-    print("\n[4] Refuted collision shortcut")
+    print("\n[4] Exact pair law; two universal slack closures")
     collision_18 = pair_collision_mass(1, 8)
     collision_29 = pair_collision_mass(2, 9)
     print(f"  collision mass (1,8) = {collision_18}")
     print(f"  collision mass (2,9) = {collision_29}")
     check("pair-collision mass is not universally 1/7", collision_18 == Fraction(1, 4) and collision_29 == Fraction(2, 9))
+    check(
+        "closed pair-collision formula through speed 80",
+        all(
+            pair_collision_mass(first, second)
+            == pair_collision_closed_form(first, second)
+            for first in range(80)
+            for second in range(first + 1, 81)
+        ),
+    )
+    consecutive_distribution = missed_count_distribution(consecutive_patterns)
+    low_miss_bound = Fraction(45, 49)
+    print("  pair lower bound gives p1+p2 <= 45/49")
+    check(
+        "consecutive core obeys the universal low-miss bound",
+        consecutive_distribution[1] + consecutive_distribution[2] <= low_miss_bound,
+    )
+    check(
+        "two positive runners are distinct and nonzero for mass at most 5/7",
+        all(
+            pair_distinct_nonzero_mass(first, second) <= Fraction(5, 7)
+            for first in range(1, 80)
+            for second in range(first + 1, 81)
+        ),
+    )
+    singleton_bound = Fraction(5, 7)
+    residue_one_bound = 2 * (2 * singleton_bound + low_miss_bound) / 49
+    residue_five_singleton_norm = max(
+        abs(KERNEL_NUMERATORS[5, (section,)]) for section in INNER_SECTIONS
+    )
+    residue_five_pair_norm = max(
+        abs(KERNEL_NUMERATORS[5, missed])
+        for missed in combinations(INNER_SECTIONS, 2)
+    )
+    residue_five_bound = residue_five_singleton_norm * low_miss_bound / 49
+    print(f"  p1 <= 5/7 and |F1| <= {residue_one_bound}")
+    print(
+        "  residue-5 kernel norms (singletons, pairs) =",
+        (residue_five_singleton_norm, residue_five_pair_norm),
+    )
+    print(f"  |F5| <= {residue_five_bound}")
+    check(
+        "residue 1 closes below the 0.097 propagation slack",
+        residue_one_bound == Fraction(230, 2401)
+        and residue_one_bound < Fraction(97, 1000),
+    )
+    check(
+        "residue 5 closes below the 0.097 propagation slack",
+        residue_five_pair_norm <= residue_five_singleton_norm
+        and residue_five_bound == Fraction(225, 2401)
+        and residue_five_bound < Fraction(97, 1000),
+    )
+    print("  consecutive singleton masses B1 and B5:", consecutive_patterns[(1,)], consecutive_patterns[(5,)])
+    check(
+        "stationary sector 0 breaks naive inversion symmetry on miss patterns",
+        consecutive_patterns[(1,)] != consecutive_patterns[(5,)],
+    )
 
     print("\n[5] Exhaustive primitive-core scan through diameter 20")
     scan = scan_cores(20)
@@ -519,10 +605,14 @@ def main():
     print("\nVERDICT")
     print("  PROVED: exact cross-section limit kernel and seven-residue reduction.")
     print("  PROVED: consecutive-core max coefficient 239/5145 < 0.097.")
+    print("  PROVED: exact pair-collision law and p1+p2 <= 45/49.")
+    print("  PROVED: residues 1 and 5 are universally below 0.097 in the limit.")
     print("  FINITE-EXACT: 15,246 primitive cores through D=20; unique max 16/343.")
-    print("  REFUTED: fixed pair-collision first moment and universal residue-1 dominance.")
-    print("  OPEN CRUX: prove all-core max_r |r*C_r| <= 16/343, including the")
-    print("  separate residue-2 through residue-6 miss-pattern inequalities.")
+    print("  REFUTED: fixed collision moment, miss-pattern inversion symmetry, and")
+    print("           universal residue-1 dominance.")
+    print("  OPEN SHARP CRUX: prove all-core max_r |r*C_r| <= 16/343.")
+    print("  OPEN SLACK CRUX: residues 2, 3, 4, and 6 still need signed bounds,")
+    print("  followed by a uniform finite-t wall remainder.")
 
 
 if __name__ == "__main__":

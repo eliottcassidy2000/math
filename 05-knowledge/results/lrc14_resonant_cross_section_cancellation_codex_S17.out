@@ -37,10 +37,21 @@ PASS  candidate constant is below 0.097
   t=400: Error(t)=-391/8400 = -0.046547619048, Error-C1=-13/137200 = -0.000094752187
 PASS  finite values converge at the predicted O(1/t) scale on the audit ladder
 
-[4] Refuted collision shortcut
+[4] Exact pair law; two universal slack closures
   collision mass (1,8) = 1/4
   collision mass (2,9) = 2/9
 PASS  pair-collision mass is not universally 1/7
+PASS  closed pair-collision formula through speed 80
+  pair lower bound gives p1+p2 <= 45/49
+PASS  consecutive core obeys the universal low-miss bound
+PASS  two positive runners are distinct and nonzero for mass at most 5/7
+  p1 <= 5/7 and |F1| <= 230/2401
+  residue-5 kernel norms (singletons, pairs) = (5, 4)
+  |F5| <= 225/2401
+PASS  residue 1 closes below the 0.097 propagation slack
+PASS  residue 5 closes below the 0.097 propagation slack
+  consecutive singleton masses B1 and B5: 1/35 1/28
+PASS  stationary sector 0 breaks naive inversion symmetry on miss patterns
 
 [5] Exhaustive primitive-core scan through diameter 20
 PASS  primitive core count
@@ -87,7 +98,11 @@ PASS  stable tie Hamiltonian path
 VERDICT
   PROVED: exact cross-section limit kernel and seven-residue reduction.
   PROVED: consecutive-core max coefficient 239/5145 < 0.097.
+  PROVED: exact pair-collision law and p1+p2 <= 45/49.
+  PROVED: residues 1 and 5 are universally below 0.097 in the limit.
   FINITE-EXACT: 15,246 primitive cores through D=20; unique max 16/343.
-  REFUTED: fixed pair-collision first moment and universal residue-1 dominance.
-  OPEN CRUX: prove all-core max_r |r*C_r| <= 16/343, including the
-  separate residue-2 through residue-6 miss-pattern inequalities.
+  REFUTED: fixed collision moment, miss-pattern inversion symmetry, and
+           universal residue-1 dominance.
+  OPEN SHARP CRUX: prove all-core max_r |r*C_r| <= 16/343.
+  OPEN SLACK CRUX: residues 2, 3, 4, and 6 still need signed bounds,
+  followed by a uniform finite-t wall remainder.
