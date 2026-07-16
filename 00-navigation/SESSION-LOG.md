@@ -46,6 +46,7 @@ FILES: HYP-7027 (resolved), t1540_movie_returns_vs_relations_deathstar_S21.py + 
 
 ---
 ## boxeph-2026-07-16-S29 -- THE INVARIANT MEAN PROVED (THM-892; renumbered from 891 after the earlier-pushed codex claim surfaced): <Q_s> in CLOSED FORM = (pi^2/P^2) sum (J_2/3) phi^{-1} sum mu (P/d) N(P/d) -- Jordan totients x the signed endpoint COINCIDENCE SPECTRUM; refereed exact (5e-14, four cluster types); khat_P = -csc^2/(2P^2) EXACTLY (bound -> identity upgrade for THM-886/888); THE CONSTANT IS pi^2/3 (measured 2.83-3.42 bracketing 3.2899; deviation = class imbalance, corollary named); GENERIC-FRAME THEOREM free by Markov + CONTEMPLATION (the week's /3-appearances; klein cont.8's composition defect = curl) + FIVE NEW N-GOALS
+## boxeph-2026-07-16-S29 -- THE INVARIANT MEAN PROVED (THM-892, renum. from 891): <Q_s> in CLOSED FORM = (pi^2/P^2) sum (J_2/3) phi^{-1} sum mu (P/d) N(P/d) -- Jordan totients x the signed endpoint COINCIDENCE SPECTRUM; refereed exact (5e-14, four cluster types); khat_P = -csc^2/(2P^2) EXACTLY (bound -> identity upgrade for THM-886/888); THE CONSTANT IS pi^2/3 (measured 2.83-3.42 bracketing 3.2899; deviation = class imbalance, corollary named); GENERIC-FRAME THEOREM free by Markov + CONTEMPLATION (the week's /3-appearances; klein cont.8's composition defect = curl) + FIVE NEW N-GOALS
 
 Prompt (owner): prove the unit-average <Q_s> closed form; keep proving little statements; contemplate pull-encountered ideas; create new goals.
 
@@ -83,6 +84,7 @@ NEXT (named): lambda per merged class n = 7/8 (H-tie splitting); the lambda-drif
 (F5/F6 analogue under arc flips); LRC's self-referential classifier formalized.
 
 FILES: THM-893; eroded_diamond_depth_test .py/.out; HYP-7025. opus; S325.
+FILES: THM-892, HYP-7026, backlog Lead boxeph-S29, lrc14_invariant_mean_boxeph_S29.py/.out, session log. -> klein (cont.8 convergence: your defect = my curl; the tower is named), death-star (the /3 ancestry), kps (ledger seams stand), all. j=6 shards persist.
 
 ---
 ## boxeph-2026-07-16-S28 -- G1 EXECUTED: THE CONSTANT-PROPAGATION LEDGER (task (b) in assembly form): THM-727 x klein-cont.7-uniform x C_ell = 0.9285 compose to Error(w) <= 0.2729 diam/w PROVED => EVERY density row k = 8..13 closes for far elements w >= 3.4 diam (explicit per-row W0 table; k=11 bar flagged); finite remainder = THM-755/756 bands + sweeps; FOUR mechanical seams named + THE INTERSUBJECTIVE-OBJECT REFLECTION (owner's frame: five universal-frame conjectures died this week, five vector-law repairs survived -- canonized as heuristic; tournaments = pure relation; <Q_s> unit-average named as the invariant mean)
