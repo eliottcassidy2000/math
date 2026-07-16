@@ -1,9 +1,9 @@
 # Investigation Backlog
 
 ## Lead boxeph-2026-07-16-S29: FIVE NEW GOALS (N-series; owner: "create new goals for tangential progress")
-- **Source:** THM-891 + the S28 reflection + contemplation of the fleet's week.
+- **Source:** THM-892 + the S28 reflection + contemplation of the fleet's week.
 1. **N1 -- the character theory of resonance:** the isotypic expansion of Q_s under
-   (Z/P)^* (mean = trivial character = THM-891; comb diagonal already factors through
+   (Z/P)^* (mean = trivial character = THM-892; comb diagonal already factors through
    w mod 7 = the first nontrivial isotype (THM-888(A)); twisted closed forms: J_2 ->
    Jacobi-type sums, N(h) -> chi-twisted coincidences).
 2. **N2 -- the pi^2/3 deviation identity (30-min corollary):** <Q_s> - pi^2 M/3 as an

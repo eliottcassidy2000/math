@@ -4,7 +4,7 @@ title: Exact cross-section cancellation for a resonant far peel
 status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, and consecutive-core constant are rigorous. The diameter-20 extremal statement is finite-exact evidence, not a universal theorem.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
-related: [THM-888, THM-889, HYP-7021, HYP-7024]
+related: [THM-888, THM-889, THM-892, HYP-7021, HYP-7024]
 verification: 04-computation/lrc14_resonant_cross_section_cancellation_codex_S17.py -> 05-knowledge/results/lrc14_resonant_cross_section_cancellation_codex_S17.out
 ---
 
@@ -179,6 +179,11 @@ not universally `1/7`, and residue `1` does not dominate pointwise on every core
 - `HYP-7021` retains short arithmetic relations for balanced owner combs.  Those
   relations are also necessary here: the attempted fixed collision-moment shortcut is
   false precisely on relation-rich pairs such as `(1,8)`.
+- `THM-892` (the incoming invariant-mean theorem, renumbered after the `THM-891`
+  collision) proves that the frame-averaged quadratic law is a divisor-lattice
+  functional of the signed coincidence spectrum `N(h)`.  This is the exact arithmetic
+  carrier missing from the failed relation-blind collision moment.  `THM-892` controls
+  generic frames; `THM-891` computes the exceptional owner-resonant signed limit.
 - The constant-propagation ledger closes the coarse tail at `3.4 diam`.  A universal
   form of `HYP-7024`, plus a finite-`t` remainder bound, would attack the factor-17.6
   loss and could contract that residual band toward the natural `w>=diam` boundary.

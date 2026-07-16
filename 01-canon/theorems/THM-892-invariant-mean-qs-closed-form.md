@@ -1,5 +1,5 @@
 ---
-id: THM-891
+id: THM-892
 title: THE INVARIANT MEAN ⟨Q_s⟩ — CLOSED FORM (the frame-average of the second moment over all dilation frames; the reflection's named statement, proved) — (K) k̂_P(n) = −csc²(πn/P)/(2P²) EXACTLY (upgrading THM-886(III)/888 from bound to IDENTITY), so Q_s(w) = (π²/P²)Σ_{n≠0}csc²(πn/P)|S(nw)|² exactly; (C\*) Σ_{u∈(Z/q)\*}csc²(πu/q) = J₂(q)/3 (Jordan totient; Möbius + MI0); (P) Σ_{m∈dZ_P}|S(m)|² = (P/d)·N(P/d) with N(h) = Σ_{k,k'}ε_kε_k'[p_k ≡ p_k' mod h] the SIGNED ENDPOINT COINCIDENCE SPECTRUM; hence ⟨Q_s⟩ = (π²/P²)·Σ_{g|P,g<P}(J₂(P/g)/3)·φ(P/g)⁻¹·Σ_{g|d|P}μ(d/g)(P/d)N(P/d) — π² times an explicit rational functional of the coincidence spectrum on the divisor lattice. REFEREED EXACT (rel. err ≤ 5e-14 vs direct φ(P)-frame averages, four cluster types). EMPIRICAL LAW: ⟨Q_s⟩/M = 3.18/3.00/2.83/3.42 across family/two-owner/balanced/family-120 — THE INVARIANT MEAN IS UNIFORMLY ~3M while single-frame values fluctuate [1.2, 3300]: the objective part of Q_s IS the O(M) law. COROLLARY (generic-frame theorem, Markov): for every cluster, at least (1−1/λ) of all coprime dilation frames have Q_s(w) ≤ λ·⟨Q_s⟩ ≈ 3λM — the measure-theoretic complement to the Diophantine classifier
 status: PROVED ((K) discrete second difference, 3 lines; (C\*) Möbius over MI0; (P) subgroup orthogonality; the assembly is bookkeeping) + REFEREED EXACT on four clusters (every lemma separately + the final identity at 1e-14–1e-16)
 source: boxeph-2026-07-16-S29 (owner directive: prove the unit-average closed form; the-intersubjective-object reflection's named statement)
@@ -8,7 +8,10 @@ related: [THM-884(E)/THM-879(i) (the N(h) are signed versions of the v-grid coin
 script: 04-computation/lrc14_invariant_mean_boxeph_S29.py -> 05-knowledge/results/lrc14_invariant_mean_boxeph_S29.out
 ---
 
-# THM-891 — the invariant mean of the second moment
+# THM-892 — the invariant mean of the second moment
+
+**Namespace note.** Renumbered from `THM-891` after rebase exposed the earlier-pushed
+`THM-891` cross-section-cancellation claim (`cb88cc992`).  The mathematics is unchanged.
 
 **(K) The kernel is exactly the cosecant.** For n ≠ 0: k̂_P(n) = −csc²(πn/P)/(2P²).
 *Proof.* K(j/P) = (j/P)(1−j/P) has discrete second difference Δ²K = −2/P² + (2/P)δ_0

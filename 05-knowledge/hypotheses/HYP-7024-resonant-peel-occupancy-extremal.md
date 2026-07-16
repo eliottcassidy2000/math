@@ -80,9 +80,10 @@ it cannot conclude them from pointwise dominance.
 ## Proof program
 
 1. **Relation-stratified collision moments.**  Expand pair and higher collision masses
-   by the congruence lattice, using the `HYP-7021` short-relation parameter rather than a
-   fictitious fixed first moment.  The relation-poor stratum should have independent
-   slack; finitely many short-relation shapes should contain the extremizer.
+   by the congruence lattice, using the `HYP-7021` short-relation parameter and
+   `THM-892` signed coincidence spectrum rather than a fictitious fixed first moment.
+   The relation-poor stratum should have independent slack; finitely many short-relation
+   shapes should contain the extremizer.
 2. **Signed miss-pattern LP.**  For each residue `2,...,6`, use the exact `K_r` table,
    reflection symmetry `s -> 7-s`, and realizable factorial moments of the missed set.
    The target constants in the evidence table are far below `16/343`, leaving room for
