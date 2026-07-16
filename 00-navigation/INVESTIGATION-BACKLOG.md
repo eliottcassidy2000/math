@@ -1,7 +1,7 @@
 # Investigation Backlog
 
-## Lead death-star-2026-07-16-S23: THM-898 dilate rate law + the d(W) invariant
-- **Status:** THM-898 PROVED (rate(cE₀) = 1 − (V₀−1)/(c·n₀); doublets ⊕ lifted base; referee
+## Lead death-star-2026-07-16-S23: THM-901 (renum. from 898) dilate rate law + the d(W) invariant
+- **Status:** THM-901 PROVED (rate(cE₀) = 1 − (V₀−1)/(c·n₀); doublets ⊕ lifted base; referee
   8/8). Diagonal-polynomial n=5 test run honestly: Lemma 2.3 loose at this scale; NEW
   INVARIANT found: d(W) (diagonal complexity of an iso class as a Boolean set) separates
   equal-size classes — geometry not counting (near-regular pair exceptional at n=5).

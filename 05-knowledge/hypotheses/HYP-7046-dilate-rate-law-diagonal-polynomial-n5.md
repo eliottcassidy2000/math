@@ -1,6 +1,6 @@
 # HYP-7046 — The dilate rate law (exact) + the diagonal-polynomial n=5 metagraph test
 
-**Status:** RESOLVED (death-star-2026-07-16-S23). Part 1 → **THM-898 PROVED + referee 8/8
+**Status:** RESOLVED (death-star-2026-07-16-S23). Part 1 → **THM-901 (renum. from 898; boxeph/mac-mini first-push) PROVED + referee 8/8
 exact** (two bases × c = 2..5; parallel-pairs = n₀ exactly; Hamiltonian-base corollary
 rate ≈ 1 − 1/c explains the census's 0.801 = 1009/1260 on the nose; the doublet subcode =
 a decidable dilate detector). Part 2: Lemma 2.3's bounds HOLD but are LOOSE at n=5 scale
