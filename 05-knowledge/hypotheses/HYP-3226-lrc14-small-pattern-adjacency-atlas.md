@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+<<<<<<< Updated upstream
   - HYP-3245
   - HYP-3243
   - HYP-3242
@@ -34,6 +35,9 @@ related:
   - HYP-3216
   - HYP-3215
   - HYP-3214
+=======
+  - HYP-3227
+>>>>>>> Stashed changes
   - HYP-3225
   - HYP-3224
   - HYP-3223
@@ -258,6 +262,7 @@ HYP-3214 Fejer/Delsarte F_7 positive-definite sidecar
 HYP-3222 Hermite-Biehler / Perron gluing sidecar
 HYP-3223 Green-current / Lorentzian trap classifiers
 HYP-3225 Green-current / Lorentzian trap fingerprints
+<<<<<<< Updated upstream
 HYP-3227 conductance graph / Fiedler defect island
 S75 comb-overlap Gram kernel / single-arc peeling sidecar
 HYP-3230 three-gap / Stern-Brocot cap-kernel recursion
@@ -280,6 +285,9 @@ HYP-3239 D7 Borsuk-Ulam sign-irrep refinement
 HYP-3215 induction-base and 23/27/14 modulus route
 HYP-3228 shell magic / Delsarte contact vector
 HYP-3245 equioscillation / autocorrelation motif atoms
+=======
+HYP-3227 equioscillation / autocorrelation motif atoms
+>>>>>>> Stashed changes
 ```
 
 Incoming S283 added an additive-resonance coordination layer around Skewes,
@@ -367,6 +375,7 @@ conductance and the only minimizers of Kirchhoff and effective-resistance
 profiles.  The required sidecar is explicit negative covariance leakage plus
 the bottleneck effective-resistance row that explains each non-AP trap.
 
+<<<<<<< Updated upstream
 Incoming HYP-3219/HYP-3237 add M096-M097.  M096 says the odd de Moivre cubic
 obstruction should be carried as Brouwer trace sign times SOS magnitude, not
 forced into a pure square certificate.  M097 says the proof architecture splits
@@ -431,6 +440,14 @@ order rather than evidence for a cyclic obstruction.
 ## Assumption Challenge
 
 Alternate vertex sets considered:
+=======
+The planned scout will mine recent hypotheses, results, reflections, and
+coordination notes for compact motifs such as `2,6,12,20,30,42`, `11/12`
+trap counts, doubled AP rows, Worpitzky kernels, edge-flip quotients,
+Perron/HB exact legs, Chebyshev level-7 factors, Fejer/AP autocorrelation
+atoms, Johnson pair-Pascal clocks, p-adic/Selberg sidecars, and
+Collatz two-block analogues.  Each motif must be classified by:
+>>>>>>> Stashed changes
 
 ```text
 motif families

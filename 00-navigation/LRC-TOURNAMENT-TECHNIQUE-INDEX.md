@@ -7570,12 +7570,17 @@ quotient_legality_status
   Welch/ETF simplex, difference-set two-level autocorrelation,
   CAZAC/Zadoff-Chu, Golay complementary pair, Barker low-sidelobe row,
   equiripple/Remez FIR, and tournament out-correlation.
+<<<<<<< Updated upstream
 - **LRC use:** HYP-3245 extends HYP-3214's exact bridge
+=======
+- **LRC use:** HYP-3227 extends HYP-3214's exact bridge
+>>>>>>> Stashed changes
   `Fejer F_7 = (de Moivre cubic)^2 = Chebyshev equioscillation =
   positive-definite Delsarte kernel = triangular AP autocorrelation`.  It
   then compares each HYP-3202 local trap to the AP ordinary
   support-autocorrelation row.  Every non-AP trap loses short-lag mass
   (`d=1..7`) and gains the same outward-lag mass (`d=8..14`); HYP-3225's
+<<<<<<< Updated upstream
   sidecar class controls the ripple.  HYP-3243 contributes finite
   chamber/state-lift proof-carrier labels, HYP-3242 contributes
   danger-nerve/cover-hole topology labels, HYP-3241 contributes saddle-index
@@ -7597,6 +7602,13 @@ quotient_legality_status
   payload, AP interval equality row, HYP-3224 normal-fan target, HYP-3225 trap
   sidecar class, HYP-3244 controlled-forgetting descent payload, and the
   two-clock warning separating 7-sector coverage from 14-clock cap.
+=======
+  sidecar class controls the ripple.
+- **Preserves:** Fejer double-zero payload, autocorrelation/positive-definite
+  payload, AP interval equality row, HYP-3224 normal-fan target, HYP-3225 trap
+  sidecar class, and the two-clock warning separating 7-sector coverage from
+  14-clock cap.
+>>>>>>> Stashed changes
 - **Forgets / guardrail:** raw runner or arc tournaments forget the
   autocorrelation lags.  Raw autocorrelation distance from AP is too weak.
   The proof-facing object is signed transport plus sidecar discharge.  Do not
@@ -7612,6 +7624,7 @@ quotient_legality_status
   equiripple_FIR_Remez -> tournament_out_correlation`.
 - **Next hook:** Test the signed transport lemma over the full bounded k=8
   bank: low-lag deficit plus outward surplus should control AP support gap,
+<<<<<<< Updated upstream
   Toeplitz `lambda_min` slack, HYP-3228 shell-magic deficit, HYP-3236 Green
   resistance slack, Vitali/Brouwer core-wall sign, Brouwer trace-sign/SOS
   factorization, HYP-3238 even-positive/odd-negative compression debt,
@@ -7650,6 +7663,13 @@ quotient_legality_status
   `parent_aut_word_orbit_id`, `rectangle_hourglass_residue`,
   `tail_tip_deletion_signature`, and `controlled_forgetting_span_status`.
 - **Pointers:** HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3231, HYP-3229, HYP-3228, HYP-3227, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
+=======
+  Toeplitz `lambda_min` slack, or ordered-tail `q0+q6` loss after HYP-3225
+  sidecar class is retained.  Feed each accepted motif to HYP-3226 with
+  preserved payload, destroyed coordinate, repair sidecar, and terminal-risk
+  fields.
+- **Pointers:** HYP-3227, HYP-3214, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
+>>>>>>> Stashed changes
   HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
   HYP-3163, HYP-3132, LTI-309, LTT-209, T1309, OPEN-Q-108.
 
