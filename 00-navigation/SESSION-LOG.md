@@ -5,6 +5,33 @@ Prompt (owner): find the H-drift's coordinate; pull often; synthesize.
 CHAIN: pulled and reread THM-250 (near-transitive flip formula) -- it regenerates the transitive drift exactly (11/5 at n=5 from the 2^{skip-1}+1 star); the residual Q = C(n,2)E[dH] + H proved QUANTIZED IN SIXES across all fibers (12,12,12,6,6,0,0,-6 at n=5 incl. the split) => an integer second coordinate; fitting with pentagon weight: 5E[dH] = 12 - H - 6c5 -- EXACT on every class, and the cont.12 fiber-split mystery (H=15: -21/5 vs -3) resolves as c5 = 3 vs 2. n=4 (pentagon-free): 6E[dH] = 12 - 4H exact. SYNTHESIS: the flow's generator is graded by the odd-cycle tower, the same tower as THM-466's 2-adic H digits (the OCF keeps paying); 'H-fiber-constant' (cont.12) was (H,c5)-affineness in disguise. CONJECTURE: C(n,2)E[dH] = a_n - b_n H - sum w_j c_j (finite odd-cycle functional); VERIFY n=6,7 (c7 enters?) = named next.
 
 FILES: HYP-6985. -> all (the coordinate atlas gains its missing entry; n=6/7 verification is one script away; j=4 banking continues).
+## opus-2026-07-16-S322 -- THM-883 THE VERBLUNSKY WALL COORDINATES: the tight locus's exact alpha-vector = THE ALTERNATING HARMONIC COUNTDOWN (1/6, -1/5, 1/4, -1/3, 1/2, -1); moments = Ramanujan sums; Phi_6^OPUC = Phi_14; the half-turn = the Verblunsky sign law (exact); THE MAXIMIN = THE VERBLUNSKY TERMINATION TIME (blow-up curve computed, rate ~3.5); wall coordinates discriminate the loose species (floor family = near-period-2 boundary-hugging = two-atom deep-well geometry) (HYP-6985)
+
+Prompt (owner): build the OPUC/Blaschke coordinate and the Verblunsky wall coordinates.
+
+Built on kps's a-dictionary-of-loop-maps (Szego = Blaschke composition; s(2,7) = 1/14 the
+Dedekind quantum; HYP-3793 'tight = atomic = the orbit reaching the circle'). RESULTS:
+[V] EXACT (rational Gram-Schmidt on Ramanujan-sum moments c_14(k)/6): alpha_n = (-1)^n/(6-n) -- the alternating harmonic countdown; Phi_6 = the 14th cyclotomic;
+|alpha_5| = 1 exact termination. Heptagon: alpha_n = -1/(6-n); the THM-882 half-turn
+z -> -z acts as alpha_n -> (-1)^(n+1) alpha_n and maps one vector to the other EXACTLY:
+the cyclotomic transport is a Verblunsky sign flip. General-q conjecture named (the
+prime case = the known one-point-deleted Geronimus family; q = 14 adds Mobius signs).
+[F] the criticality flow: alpha_5(delta) of the AP safe measure: 1-|alpha_5| = 0.93,
+0.89, 0.79, 1.5e-4, 3.8e-7, 3.9e-9 as delta -> 1/14: THE MAXIMIN IS THE TERMINATION
+TIME of the Verblunsky orbit (kps's metaphor now a computed blow-up curve, empirical
+exponent ~3.5).
+[W] wall coordinates at 1/14: floor {1..13}-{6}: near-period-2 boundary-hugging
+(0.49, -1.00, 0.51, -1.00, ...) = the classical two-band signature: the deep well's
+two-effective-atom geometry read instantly from alpha; GAP: alpha_5 spike -0.92;
+near-AP: spread-small. Finite-gap/isospectral-torus note (the OPUC cousin of the S319
+slice-isospectrality).
+
+NEXT (named): general-q closed form; the exact blow-up exponent (six linearly-shrinking
+arcs => derivable); the SELECTOR RE-COORDINATIZATION (run THM-797/803/817 signed
+families through the alpha-map: period-2 signatures may classify two-sheet survivors);
+alpha as the LRC continuation state (Markov test vs THM-840's negative).
+
+FILES: THM-883; verblunsky_wall_coordinates .py/.out; HYP-6985. opus; S322.
 
 ---
 ## boxeph-2026-07-16-S24 -- THE DECIDABLE COMPACT-CORE SWEEP EXECUTED: j = 5 multikiller stratum CLOSED (independent implementation of the THM-883 fragmentation box; 29.8M branches, ZERO sub-1/13 configs covering OR not; GW window = exactly j in {2,3}) + j = 6 handed off (covering-only lcm-restricted, 3 shards running on this box, ~5-6h; stratum meanwhile covered by THM-663 mod glue) + THE DOUBLING LAW PROVED (F_N = 2 G_N mod 1 at every odd N, site map = x2^{-1} on unit labels -- THM-882 addendum, joint w/ death-star HYP-7013) + THM-885 (the covering-case j-decomposition audit) + MISTAKE-153
