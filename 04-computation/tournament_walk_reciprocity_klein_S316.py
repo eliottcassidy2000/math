@@ -177,3 +177,17 @@ print()
 fails=[nm for nm,c in OK if not c]
 print(f"=== {len(OK)} checks, {len(OK)-len(fails)} passed ===")
 for f in fails: print("FAILED:",f)
+
+# ---- the symmetrization-collapse sequence: # distinct cpK among n-tournament classes
+print()
+print("distinct skew charpolys (cpK) per n  [new sequence; n=8 value from the n8 census]:")
+for n in (3,4,5,6):
+    reps,pairs=census(n)
+    ks=set()
+    for bits in reps:
+        A=matA(bits,pairs,n)
+        K=[[A[j][i]-A[i][j] for j in range(n)] for i in range(n)]
+        ks.add(tuple(charpoly(K)))
+    print(f"  n={n}: classes {len(reps)}, distinct cpK {len(ks)}")
+print("  n=7: classes 456, distinct cpK 11   (computed above)")
+print("  n=8: classes 6880, distinct cpK 50  (n8_invisible_census_klein_S316)")

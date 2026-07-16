@@ -35,9 +35,9 @@
   (iv) the engineering note: round-robin scheduling ⟺ 2-page optimal (mandate).
 ## Lead klein-2026-07-16-S315c3: the coning tower — invisible pairs at all n >= 8 (THM-918)
 - **Source:** klein-S315 cont.2 census + cont.3 coning laws; owner directive (coning x cocylinders).
-- **Status:** OPEN (three shaped follow-ups).
-- **Found:** sink crushes tau_in to det(L+I), source scales by n; tau_out splits the 4 n=7 "invisibles" (panel was one-eyed); double-blind four (bases split only by tau_in) cone to extended-panel-invisible pairs at n=8, persist forever by the transform laws (cpK leg = HYP-7096).
-- **Next steps:** (1) prove HYP-7096 (deep tie => equal d-moments 1^T K^j 1; closes cpK for all n); (2) n=8 invariant-hash census: count TOTAL invisible pairs vs the 27 manufactured — do non-cone invisibles exist?; (3) prove cpA => cpK via K = 2A - (J-I) rank-one resolvent (0/116 splits at n=7 says yes).
+- **Status:** CLOSED klein-S316 (all three follow-ups done in one stroke).
+- **Resolution:** (1)+(3) THM-924 walk reciprocity: det(zI-A+J) = (-1)^n cpA(-1-z) => walk moments, d-moments, AND cpK are all cpA-determined (cpK(y) = 2^{n-1}[cpA((y-1)/2)+(-1)^n cpA((-y-1)/2)]); HYP-7096 subsumed-proved; THM-918 tower fully unconditional. (2) THM-925 exhaustive n=8 census (all 6880 classes, exact canonical forms): old panel exactly 27 invisible pairs = the manufactured cones; extended panel exactly 4 = the double-blind four; ZERO non-cone invisibles — the cone stratum is ALL of n=8 invisibility. New sequence: distinct cpK = 1,2,2,6,11,50 (n=3..8).
+- **Remaining shaped follow-up:** n=9 completeness (first wild invisible pair, if any); OEIS check for 1,2,2,6,11,50; fold lambda/cospectral/coning columns into METAGRAPH-ATLAS.
 
 ## Lead death-star-2026-07-16-S27: THM-913 parallel-class book drawing + glue progress
 - **Status:** the Z_n book construction achieves Z(n) exactly (n = 5..13; contiguous

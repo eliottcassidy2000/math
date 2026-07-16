@@ -1,0 +1,39 @@
+[    0.0s] n=7 orbit-sweep census...
+[   11.3s] n=7 classes: 456 (expect 456)
+[   11.5s] extension tournaments: 58368
+[   11.5s] cpA batch...
+[   11.8s] cpL batch...
+[   12.1s] H batch DP...
+[   17.7s] tau batches...
+[   19.2s] tau float-vs-Bareiss sample check OK
+[   19.2s] bucketing...
+[   19.6s] extended-panel buckets: 6876; old-panel buckets: 6853
+[   19.6s] canonicalizing within buckets...
+[   21.3s]   2000/6876 buckets
+[   22.9s]   4000/6876 buckets
+[   24.9s]   6000/6876 buckets
+[   26.0s] TOTAL n=8 classes found: 6880 (expect 6880)
+
+================================================================================
+OLD one-eyed panel (cpA,cpL,H,tau_in): 27 invisible groups, 27 pairs
+EXTENDED two-eyed panel (+tau_out):    4 invisible groups, 4 pairs
+================================================================================
+
+EXTENDED-panel invisible groups (the census truth at n=8):
+  H=  23 tau_in=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7560)) tau_out=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7560))
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+  H=  29 tau_in=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7616)) tau_out=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7616))
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+  H=  31 tau_in=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7644)) tau_out=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(7644))
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+       scores=(0, 2, 3, 3, 4, 4, 5, 7) SINK
+  H=  43 tau_in=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(8568)) tau_out=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(8568))
+       scores=(0, 3, 3, 3, 4, 4, 4, 7) SINK
+       scores=(0, 3, 3, 3, 4, 4, 4, 7) SINK
+
+cone groups (all members have a sink): 4; NON-cone groups: 0
+n=8 cpA-tie groups: 1460 covering 6817 classes (of 6880); distinct cpA: 1523
+n=8 distinct cpK values: 50  (symmetrization collapse; n=7 had 11)
+[   26.8s] DONE
