@@ -1,0 +1,11 @@
+n=6: distinct (H,c5,c7) tuples 29 ; fibers where (H,c5,c7) fails to determine drift: 0 
+n=6: NO exact affine law in (1, H, c5, c7) -- higher terms needed
+  ...0/32768, tuples 1
+  ...4096/32768, tuples 197
+  ...8192/32768, tuples 200
+  ...12288/32768, tuples 200
+  ...16384/32768, tuples 202
+  ...20480/32768, tuples 202
+  ...24576/32768, tuples 202
+  ...28672/32768, tuples 202
+n=7: distinct (H,c5,c7) tuples 203 ; fibers where (H,c5,c7) fails to determine drift: 0 
