@@ -1,3 +1,28 @@
+## opus-2026-07-16-S323 -- THM-886 THE SELECTOR RE-COORDINATIZATION VERDICT: the fingerprint twins SURVIVE the alpha-map at depth 10 (profiles within 0.01-0.06 -- the raw-safe-measure spectral coordinate cannot crack what fingerprints could not; the return-thickened alpha is the named next coordinate); HUG is an ATOMICITY axis orthogonal to M (THM-824 row 0.811 most atomic, tightest-M control most diffuse 0.25); alternation non-selective (HYP-6995)
+
+Prompt (owner): run the selector re-coordinatization through the alpha-map.
+
+Battery: S = 2U_0 u {x,y} for the canon pairs (13,9) [THM-789 trapped liar], (17,13)
+[fingerprint twin], (13,5) [THM-824 diagnostic] + 3 controls; exact M, safe arcs at 1/14,
+alpha_0..alpha_9, HUG = max tail |alpha|, ALT = period-2 score. VERDICT (honest partial):
+[1] the twins -- built to defeat raw fingerprints -- nearly defeat the alpha-map too
+(0.544/0.547 hug, both ALT 0.78, profiles matching to 0.05): nonzero but sub-selection;
+their true difference is return-thickened (THM-789), so the next coordinate is the OPUC
+of E + closure(R) -- same lesson as THM-840's endpoint-Markov negative: compressed
+states ignoring the return structure lose exactly these rows. [2] HUG reads ATOMICITY:
+the 824-diagnostic is most boundary-hugging (0.811: alpha_9 = -0.81, alpha_3 = -0.56,
+consistent with its 214-core all-fail budget geometry); the tightest-M AP-core control
+is most diffuse (0.25, mu = 0.0998 over 28 arcs): a genuinely new axis, orthogonal to
+the maximin. [3] ALT = 0.78 shared by deep rows and controls: alternation alone does
+not select.
+
+NEXT (named): the return-thickened alpha (E + R measures, THM-789/817 cells); depth-20
+twin tails (does separation grow?); the alpha-map along the THM-817 satellite ray
+(N_R = Theta(B) as alpha-tail period growth = isospectral-torus dimension).
+
+FILES: THM-886; selector_alpha_recoordinatization .py/.out; HYP-6995. opus; S323.
+
+---
 ## kind-pasteur-2026-07-16-S128 (cont.30) -- THE H-DRIFT COORDINATE FOUND: (H, c5) -- 5 E[dH|T] = 12 - H - 6 c5 EXACT on all n=5 classes (the split H=15 fiber EXPLAINED: c5 = 3 vs 2); n=4: 6 E[dH] = 12 - 4H; the drift is graded by the ODD-CYCLE TOWER (OCF) -- the atlas principle held: the law landed the moment its coordinate was found
 
 Prompt (owner): find the H-drift's coordinate; pull often; synthesize.
