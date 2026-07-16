@@ -1,0 +1,14 @@
+THE COMPLETE PEEL-RESIDUE AUDIT:  S(w) = w*Error is P-periodic; Error = S/w
+   t |   P   | max_r |S(r)| | argmax r | resonant? | D0_res = max|S|/0.097 | D0/t
+    50 |  2100 |     2.3435 |     50 |    (1, 1) |     24.2 |  0.48
+   100 |  2100 |     4.6463 |    800 |    (1, 8) |     47.9 |  0.48
+   200 |  4200 |     9.1633 |    200 |    (1, 1) |     94.5 |  0.47
+PASS the max-|S| residues are RESONANT classes (ell*r = t*a mod P with small a, ell) at every t — THM-883's classes are exactly the worst peels
+PASS D0_res grows LINEARLY in t (D0/t = ['0.48', '0.48', '0.47']): the structured band must extend to c*diam — FINITE, so the route SURVIVES with a quantified band enlargement (not the sqrt(diam) band THM-729 hoped for)
+
+VERDICT: for every peel w > D0_res: |Error(w)| <= max|S|/w < 0.097, resonant or not.
+Below D0_res: the finite structured band (S275-style) must cover [26, D0_res] —
+its length is c*diam with c ~ 0.47 (vs the old sqrt-diam band).
+PASS first representative of the worst class beyond the band (w = 200): |Error| = 0.04582 < 0.097 — safe
+
+=== 3 checks, 3 passed ===
