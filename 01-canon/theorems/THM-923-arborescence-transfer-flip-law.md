@@ -46,14 +46,25 @@ forests plus the new arc v→u are exactly the new arborescences at v. ∎
 | linearizes the other's drift? | — | NO (Q3 negative) |
 
 The n=7 threshold is SHARED: both drifts lose their small-n coordinate exactly when
-7-cycles exist. Conjecture (with HYP-7105): the τ-drift at n=7 is determined by
-(τ, c₇)-type extensions — the odd-cycle tower enters the determinant side too, one
-rung later. Pending: the minimal n=7 partner (running).
+7-cycles exist. RESOLVED (arb_n7_tuples run, 427 (H,c5,c7,τ) states): the minimal n=7
+partner is **H itself** — (τ,H) DETERMINES the τ-drift (417 fibers, 0 splits) while
+(τ,c5) fails (6), (τ,c7) fails (10), and even (τ,c5,c7) fails (by exactly 1 collision:
+H carries odd-cycle COLLECTION information beyond the counts — the OCF's higher 2-adic
+digits, visible dynamically). Census-only fails (224).
+
+**THE ONE-WAY COUPLING LAW (n ≤ 7, exhaustive).** The flip walk's drift structure is
+hierarchic: E[ΔH|T] = f_n(H, c₅, c₇) — the permanental block is autonomous and never
+listens to τ (Q3 negative) — while E[Δτ|T] = g_n(τ, H) — the determinantal coordinate
+listens ONLY to the permanental one (τ alone suffices for n ≤ 6; H joins at n = 7).
+H is the environment; τ is driven, with no back-reaction at drift level.
 
 ## Evidence log
 - [x] referee: 1,388 tournaments (all n=4,5; 75 random each n=6..9), zero failures
 - [x] census engine (arb_census_engine_kps_S128c33.out): Q1–Q4 as in status
 - [x] autonomy n=7: FAILS 33/298 (arb_autonomy_n7_kps_S128c33.out); n≤6 HOLDS (arb_subcoord_paley .out)
 - [x] Paley closed form p=3,7,11 + BEST cross-check (arb_subcoord_paley_kps_S128c33.out)
-- [ ] minimal n=7 partner coordinate (arb_n7_tuples_kps_S128c33.py — running)
+- [x] minimal n=7 partner = H: (τ,H) determines (417 fibers); (τ,c5,c7) fails by 1
+      (arb_n7_tuples_kps_S128c33.py; tuples saved to n7_tau_census_tuples.json)
 - [ ] the g_n profile (τ-drift vs τ curve): shape/convexity, n=5,6 — small named follow-up
+- [ ] n=8 rung ((τ,H) still closed? needs bit-packed engine) — named future
+- [ ] class-level transfer on circulants (the parallel-class reflection's item 2)
