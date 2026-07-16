@@ -1,9 +1,10 @@
-# HYP-7052 — the residue-six triple observable
+# HYP-7061 — the residue-six triple observable
 
-**Status:** MIXED / OPEN (codex-2026-07-16-S18).  `THM-902`'s explicit pointwise
-triple reduction is finite-exact.  Its universal three-speed bound remains open.
+**Status:** MIXED / OPEN (codex-2026-07-16-S18).  `THM-904`'s explicit pointwise
+triple reduction is finite-exact.  Its universal three-speed bound remains open.  This
+file was renumbered from `HYP-7052` after pulling boxeph's earlier claim of that ID.
 
-For the rational weight `beta` in `THM-902`, set
+For the rational weight `beta` in `THM-904`, set
 
 ```text
 q(a,b,c)=integral beta(sec(a x),sec(b x),sec(c x)) dx.
@@ -30,12 +31,12 @@ identity of the fourth/fifth movers and finite-`t` wall chronology.  The alterna
 four-runner box carrier in `THM-898-fourrunner-boxhit-relation-stratified` retains more
 geometry but encounters the same nondecaying additive-relation plateaus.
 
-The proposed `x -> 1-x` / negation transfer is refuted at the exact kernel table:
-`{1,5},{2,4}` reflect to `{2,6},{3,5}`, whereas residue one assigns the same pair kernel
-to all 15 pairs.  The failure localizes precisely the absolute-section information that
-the triple observable must retain.
+The proposed `x -> 1-x` / negation transfer is refuted by `THM-903`: time reflection
+acts within a fixed residue class.  In the pinned stationary-point frame it sends
+`s -> 6-s`, so `{1,5},{2,4}` are exactly the reflection-fixed inner pairs.  The hard
+support is therefore reflection-even, explaining structurally why the triple observable
+must retain a cubic channel.
 
 Next proof step: perform the exact ANOVA/Fourier split of `beta`; bound its one- and
 two-coordinate projections using the 21 pair rays; then enumerate short primitive
 three-term relations and bound the absolutely summable zero-marginal cubic tail.
-

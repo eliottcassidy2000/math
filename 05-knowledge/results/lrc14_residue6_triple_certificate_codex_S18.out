@@ -1,4 +1,4 @@
-THM-902 / HYP-7052: RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION
+THM-904 / HYP-7061: RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION
 ==============================================================================
 
 [1] Exact 462-state pointwise certificate
@@ -39,11 +39,11 @@ PASS  pair baseline alone stays below 47/100
   Remaining theorem: couple the zero-marginal cubic relation channel to
   the pair deficit; independent maximization of the channels is invalid.
 
-[4] Negation/reflection transfer audit
+[4] Pinned reflection audit
   exceptional K6 pairs: [(1, 5), (2, 4)]
-  reflected pairs: [(2, 6), (3, 5)]
-PASS  exceptional support is not reflection-stable
-PASS  K1 is constant on reflected pairs and cannot reproduce K6=-12
+  pinned-reflection images: [(1, 5), (2, 4)]
+PASS  exceptional support is the pinned fixed locus
+PASS  same fixed pairs have K1=-2 and K6=-12, so no residue transfer
 
 [5] Tournament Analysis on strongest relation shapes
   observable: q(u)-q(v)
@@ -61,5 +61,6 @@ VERDICT
   PROVED: universal q<=47/100 would give -F6<=47/490<0.097.
   FINITE-EXACT: 28,876 primitive triples through speed 60; unique max 81/175.
   PROVED: pair projection is a 21-ray channel plus a zero-marginal cubic remainder.
+  PROVED: pinned reflection fixes the hard support and acts within residue 6.
   REFUTED: negation transfers negative residue 6 to closed positive residue 1.
   OPEN: bound the cubic relation channel uniformly, then the finite-t wall remainder.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact verifier for THM-902 and HYP-7052.
+"""Exact verifier for THM-904 and HYP-7061.
 
 The negative residue-six kernel from THM-891 is pointwise dominated by a
 rational observable on the 84 unordered sector states of three moving
@@ -339,7 +339,7 @@ def check(label, condition):
 
 
 def main():
-    print("THM-902 / HYP-7052: RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION")
+    print("THM-904 / HYP-7061: RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION")
     print("=" * 78)
 
     print("\n[1] Exact 462-state pointwise certificate")
@@ -414,18 +414,18 @@ def main():
     print("  Remaining theorem: couple the zero-marginal cubic relation channel to")
     print("  the pair deficit; independent maximization of the channels is invalid.")
 
-    print("\n[4] Negation/reflection transfer audit")
+    print("\n[4] Pinned reflection audit")
     exceptional_pairs = {(1, 5), (2, 4)}
     reflected_pairs = {
-        tuple(sorted(7 - section for section in missed))
+        tuple(sorted((6 - section) % 7 for section in missed))
         for missed in exceptional_pairs
     }
     print("  exceptional K6 pairs:", sorted(exceptional_pairs))
-    print("  reflected pairs:", sorted(reflected_pairs))
-    check("exceptional support is not reflection-stable", reflected_pairs != exceptional_pairs)
+    print("  pinned-reflection images:", sorted(reflected_pairs))
+    check("exceptional support is the pinned fixed locus", reflected_pairs == exceptional_pairs)
     check(
-        "K1 is constant on reflected pairs and cannot reproduce K6=-12",
-        all(KERNEL_NUMERATORS[1, pair] == -2 for pair in reflected_pairs)
+        "same fixed pairs have K1=-2 and K6=-12, so no residue transfer",
+        all(KERNEL_NUMERATORS[1, pair] == -2 for pair in exceptional_pairs)
         and all(KERNEL_NUMERATORS[6, pair] == -12 for pair in exceptional_pairs),
     )
 
@@ -448,6 +448,7 @@ def main():
     print("  PROVED: universal q<=47/100 would give -F6<=47/490<0.097.")
     print("  FINITE-EXACT: 28,876 primitive triples through speed 60; unique max 81/175.")
     print("  PROVED: pair projection is a 21-ray channel plus a zero-marginal cubic remainder.")
+    print("  PROVED: pinned reflection fixes the hard support and acts within residue 6.")
     print("  REFUTED: negation transfers negative residue 6 to closed positive residue 1.")
     print("  OPEN: bound the cubic relation channel uniformly, then the finite-t wall remainder.")
 

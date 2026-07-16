@@ -1,14 +1,15 @@
 ---
-id: THM-902
+id: THM-904
+renumber_note: was THM-902 at the first checkpoint; renumbered after the same pull exposed mac-mini's independently chosen THM-902 and boxeph's earlier HYP-7052
 title: THE RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION — an explicit rational 84-weight observable on unordered three-runner sector states pointwise dominates the negative K6 miss kernel; the remaining limiting inequality is the single three-speed bound q(a,b,c) <= 47/100
-status: CLAIMED / CHECKPOINT STUB — exact pointwise reduction and primitive triple scan through 60 computed; independent verifier and relation-tail proof still being completed
+status: PROVED exact pointwise reduction; FINITE-EXACT primitive triple scan through 60; universal relation-lattice bound open
 source: codex-2026-07-16-S18
-depends_on: [THM-891, THM-890, THM-898-fourrunner-boxhit-relation-stratified]
-related: [THM-894, THM-896-level3-crossing, HYP-7024, HYP-7052]
+depends_on: [THM-891, THM-899-lattice-law-boxhit-constants, THM-903-reflection-frame-residue6]
+related: [THM-898-fourrunner-boxhit-relation-stratified, THM-905, HYP-7024, HYP-7061]
 verification: 04-computation/lrc14_residue6_triple_certificate_codex_S18.py -> 05-knowledge/results/lrc14_residue6_triple_certificate_codex_S18.out
 ---
 
-# THM-902 — the residue-six triple-certificate reduction
+# THM-904 — the residue-six triple-certificate reduction
 
 This file reserves the exact theorem and filename before the long relation-tail audit.
 The proved finite algebra and the still-open analytic step are deliberately separated.
@@ -72,10 +73,11 @@ floating LP support row found so far have relation height at most 21, agreeing w
 THM-890 and the relation-stratified plateau in the explicit
 `THM-898-fourrunner-boxhit-relation-stratified` file.
 
-The proposed negation shortcut does not replace (3).  Reflection sends the exceptional
-miss pairs `{1,5},{2,4}` to `{2,6},{3,5}`, while `K_1` is constant `-2` on every pair;
-there is therefore no kernel-equivariant transfer from the negative residue-six face to
-the already-closed positive residue-one face.
+The proposed negation shortcut does not replace (3).  `THM-903` proves that time
+reflection acts **within** each residue class, not from residue six to residue one.  In
+the stationary-point frame the correct pinned reflection is `s -> 6-s`; its fixed
+inner pairs are exactly `{1,5}` and `{2,4}`, the exceptional negative `K_6` support.
+Thus the missing channel is reflection-even cubic data rather than a residue transfer.
 
 ## Honest boundary
 
@@ -85,4 +87,3 @@ the already-closed positive residue-one face.
 - [x] negation-transfer proposal decided negatively at the kernel level;
 - [ ] prove `q(a,b,c)<=47/100` for all primitive triples by relation stratification;
 - [ ] compose the limiting closure with a core-uniform finite-`t` wall remainder.
-
