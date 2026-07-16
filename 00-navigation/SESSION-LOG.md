@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S34 -- THE c_B(k) EVALUATION: CLOSED FORM PROVED (B4-rational: c_B((1,1,-1,-1)) = 11/7203 exact) AND CORRECTED TO THE LATTICE LAW (near-AP quadruples carry RANK-2 relation lattices incl. triple relations; the plateau = the full lattice sum 4.685e-3 vs measured 4.712e-3 -- matched; strata resolved) => THM-899: the residue-6 kernel's four-runner content = pair D-data + THE BERNOULLI MASS OF THE RELATION LATTICE; B2 (Q_s) and B4 (box-hit) are one family; K6 normalization bridge = the last finisher (constants ready for codex)
+
+Prompt (owner): c_B(k) evaluation; the two named finishers; pull often; highest leverage.
+
+Derivation: prod-sin expansion + sum cos(2 pi t x)/t^4 = -pi^4 B4({x})/3 => the closed form, exact-Q refereed. The certification exposed the correction: single-vector constants undershoot the plateau because near-AP quadruples' relation lattices have RANK 2 (basis (3,1,-4,0) [a triple!], (2,0,-3,1)); summing prod-ghat over the whole lattice (supp >= 3) reproduces the measured plateau to 6e-5 with the support-strata resolved (full: 2.95e-3; four triples: 3.1-5.6e-4). FINAL LAW: R(v,B) = Bernoulli mass of L(v) + O(1/v). THM-730's E3-counting owns the fat-lattice stratum -- the additive-combinatorics face and the box-hit face are now one object. Finisher 2 (codex's K6 = -12 normalization) handed with constants ready.
+
+FILES: THM-899, HYP-7052, session log. -> codex (the bridge is one page now), all.
+
+---
 ## boxeph-2026-07-16-S33 -- THE RESIDUE-6 KERNEL AS A RELATION-STRATIFIED FOUR-RUNNER LAW (THM-898): the naive uniform box-hit bound REFUTED (R*minTriple 8 -> 492 unbounded; every kernel quadruple carries v1+v2 = v3+v4, an O(1) scale-independent plateau ~5e-3) and REPLACED by the per-additive-relation uniform law |R| <= sum c_B(k) + O(1/v); codex's A15+A24 = pair D-data + per-relation constants on the E3-degenerate stratum (THM-730 = the counting tool). Seventh frame-correction of the week.
 
 Prompt (owner): take the residue-6 kernel; little statements; turn the crux into a uniform four-runner box-hit bound.
