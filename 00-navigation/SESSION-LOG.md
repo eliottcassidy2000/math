@@ -1,3 +1,9 @@
+## mac-mini-2026-07-16-S122 -- THM-921: THE IL_6 SHELF CENSUS (exhaustive; ground 384 @ Q=3, shelf 768 @ Q=4; EXACT frustration profiles; THE PALINDROMIC CLASS (1,1,2,2) SEPARATES SHELF FROM GROUND: 0 vs 3 per minimum) -- the reflection-even stratum conjecture CONFIRMED; three landscapes, one law: excess concentrates on involution-fixed strata. + epsilon-table honest negative (crude slice-at-N too lossy; residual sharpened to the true per-triple lambda_2, mechanical).
+
+Prompt (owner): IL_n shelf census vs the reflection-even stratum; self-directed tasks; aim to complete LRC(14); then formalization.
+
+LRC(14) covering route [A] at close: [codex scan] + [THM-912 line table] + [THM-917 box sweep] + [THM-920 lambda_2 page] = referee grade modulo the sharpened per-triple truncation certificate (named, mechanical: exact lattice-basis lambda_2 into THM-920's lemma). Beyond route [A]: opus's level-5 wall and the finite-Vmax glue (bounded-spread half closed by S58's arc-count lemma; large-spread = THM-518 Weyl) remain the named non-covering items. Formalization handoff: the Fragmentation Lemma (THM-883) is the 20-line kernel-friendly first target; LRCTailDiameter.lean is the pattern.
+
 ## boxeph-2026-07-16-S40 -- LEDGER SEAM 1 CLOSED: k = 11 margin = +0.12 (LEM-009 l.25) => W0(11) = 2.27 diam, inside the envelope: THE PROPAGATION TABLE IS COMPLETE (every density row k = 8..13 closes at w >= 3.4 diam, proved chain, no gaps)
 
 Prompt (owner): take the k=11 bar; keep proving little statements.

@@ -1,0 +1,20 @@
+(A) IL_n SHELF CENSUS
+   n=6 exhaustive (2^15): local minima by energy: {3: 384, 4: 768}  (Z = 3)
+   frustration profile per (shelf energy, quadruple gap-class):
+      Q=3, class (1, 1, 1, 3): frustrated 768 over 384 minima = 2.000 per min (class size 6)
+      Q=3, class (1, 2, 1, 2): frustrated 384 over 384 minima = 1.000 per min (class size 3)
+      Q=4, class (1, 1, 2, 2): frustrated 2304 over 768 minima = 3.000 per min (class size 6)
+      Q=4, class (1, 2, 1, 2): frustrated 768 over 768 minima = 1.000 per min (class size 3)
+   reflection-even reading: gap-classes that are PALINDROMES (reversal-fixed) are the
+   even stratum: palindromic classes = [(1, 1, 2, 2)] of [(1, 1, 1, 3), (1, 1, 2, 2), (1, 2, 1, 2)]
+
+(B) THE EPSILON TABLES (truncation certificates for the S120 box sweep)
+   triple      q_est    margin    tail_cert(N=400)   CLEAR?
+   (2, 8, 11): 0.4628   0.0072    9.68469          NO
+   (1, 4, 7): 0.4629   0.0071    13.52834          NO
+   (1, 2, 7): 0.4080   0.0620    22.54886          NO
+   (3, 40, 43): 0.3000   0.1700    0.52648          NO
+   (5, 61, 66): 0.3000   0.1700    0.20746          NO
+   VERDICT: epsilon-certificates need tightening on flagged cases
+
+DONE
