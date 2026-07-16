@@ -1,0 +1,16 @@
+(1) THE KILLER-CLASS STRATIFICATION OF THE CORONA (even n):
+   n=8: dying orbits = 122; killer-index census (first violated prefix k): {2: 61, 3: 19, 4: 17, 5: 12, 6: 13}
+   n=10: dying orbits = 1448; killer-index census (first violated prefix k): {2: 645, 3: 197, 4: 181, 5: 131, 6: 106, 7: 88, 8: 100}
+
+(2) THE PARALLEL-CLASS JOINT-CELL STRUCTURE OF THE TIGHT AP:
+   t =  1/14: class addresses [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; min dist = 1/14 (all >= 1/14: True)
+   t =  3/14: class addresses [0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2]; min dist = 1/14 (all >= 1/14: True)
+   t =  5/14: class addresses [0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4]; min dist = 1/14 (all >= 1/14: True)
+   t =  9/14: class addresses [0, 1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8]; min dist = 1/14 (all >= 1/14: True)
+   t = 11/14: class addresses [0, 1, 2, 3, 3, 4, 5, 6, 7, 7, 8, 9, 10]; min dist = 1/14 (all >= 1/14: True)
+   t = 13/14: class addresses [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; min dist = 1/14 (all >= 1/14: True)
+
+(3) THE DICTIONARY (exact checks):
+   lcm(1..13) = 360360 = 2^3*3^2*5*7*11*13; 360360/14 = 25740 (the tight times sit on the 14-grid INSIDE the 360360-cell lattice: 25740 cells per tight step)
+   S330 escape prefix gcd = 30 (a packet INSIDE the 30Z parallel class: the dilate escape = travel along one class)
+   metagraph side: Q_10's edge set resolves into 10 wiggly parallel classes (each a perfect matching of 1024 tilings: 512 edges each; total 5120 = 10*2^9 edges = the tiling-space 1-factorization)
