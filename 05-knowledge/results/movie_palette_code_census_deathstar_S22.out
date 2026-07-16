@@ -1,0 +1,46 @@
+THE MOVIE PALETTE CODE CENSUS  (palette code = cycle code of the movie graph)
+
+-- species: EXACT DILATE (max coherence, non-primitive) --
+  5x[2,3,5,7,11,13]: [n,k,d] = [1260, 1009, 2]  rate=0.801  contig<= 252  kappa=3 (x3)  V=252  moore~5  [1s]
+-- species: CONSECUTIVE compact (difference-coherent) --
+  [10..15]: [n,k,d] = [434, 1, 434]  rate=0.002  contig<= None  kappa=4 (x13)  V=434  moore~nan  [1s]
+  [20..25]: [n,k,d] = [840, 22, 37]  rate=0.026  contig<= 37  kappa=4 (x13)  V=819  moore~19  [1s]
+  [30..35]: [n,k,d] = [1274, 246, 2]  rate=0.193  contig<= 37  kappa=4 (x13)  V=1029  moore~20  [1s]
+  [50..55]: [n,k,d] = [2114, 1002, 2]  rate=0.474  contig<= 37  kappa=4 (x13)  V=1113  moore~14  [1s]
+-- species: PLANTED single relation --
+  24+48=72 (gcd-24 sub): [n,k,d] = [3724, 127, 10]  rate=0.034  contig<= 311  kappa=3 (x2)  V=3598  moore~24  [1s]
+  23+48=71 only: [n,k,d] = [4032, 15, 337]  rate=0.004  contig<= 337  kappa=3 (x1)  V=4018  moore~24  [3s]
+-- species: GENERIC incoherent --
+  generic c=10: [n,k,d] = [1162, 1, 1162]  rate=0.001  contig<= None  kappa=3 (x1)  V=1162  moore~nan  [2s]
+  generic c=20: [n,k,d] = [2198, 1, 2198]  rate=0.000  contig<= None  kappa=5 (x3)  V=2198  moore~nan  [4s]
+  generic c=30: [n,k,d] = [3458, 1, 3458]  rate=0.000  contig<= None  kappa=5 (x2)  V=3458  moore~nan  [9s]
+  generic c=50: [n,k,d] = [5894, 85, 2]  rate=0.014  contig<= 2485  kappa=5 (x1)  V=5810  moore~25  [2s]
+-- species: FAR BANK --
+  [0..5,20]: [n,k,d] = [154, 1, 154]  rate=0.006  contig<= None  kappa=3 (x6)  V=154  moore~nan  [1s]
+  [0..5,50]: [n,k,d] = [378, 43, 2]  rate=0.114  contig<= 7  kappa=3 (x6)  V=336  moore~17  [1s]
+-- species: THE TIGHT AP + GW-flavored --
+  AP [0..6]: [n,k,d] = [84, 1, 84]  rate=0.012  contig<= None  kappa=3 (x9)  V=84  moore~nan  [2s]
+  [0..5,12] GW-ish: [n,k,d] = [112, 1, 112]  rate=0.009  contig<= None  kappa=3 (x6)  V=112  moore~nan  [1s]
+-- species: RANDOM baseline --
+  random#0: [n,k,d] = [5390, 295, 2]  rate=0.055  contig<= 1920  kappa=3 (x1)  V=5096  moore~25  [2s]
+  random#1: [n,k,d] = [8008, 29, 85]  rate=0.004  contig<= 3010  kappa=5 (x1)  V=7980  moore~26  [2s]
+
+SUMMARY (d vs kappa):
+  d=  2  kappa=5  rate=0.014  generic c=50
+  d=  2  kappa=4  rate=0.193  [30..35]
+  d=  2  kappa=4  rate=0.474  [50..55]
+  d=  2  kappa=3  rate=0.801  5x[2,3,5,7,11,13]
+  d=  2  kappa=3  rate=0.114  [0..5,50]
+  d=  2  kappa=3  rate=0.055  random#0
+  d= 10  kappa=3  rate=0.034  24+48=72 (gcd-24 sub)
+  d= 37  kappa=4  rate=0.026  [20..25]
+  d= 84  kappa=3  rate=0.012  AP [0..6]
+  d= 85  kappa=5  rate=0.004  random#1
+  d=112  kappa=3  rate=0.009  [0..5,12] GW-ish
+  d=154  kappa=3  rate=0.006  [0..5,20]
+  d=337  kappa=3  rate=0.004  23+48=71 only
+  d=434  kappa=4  rate=0.002  [10..15]
+  d=1162  kappa=3  rate=0.001  generic c=10
+  d=2198  kappa=5  rate=0.000  generic c=20
+  d=3458  kappa=5  rate=0.000  generic c=30
+[total 37.8s]

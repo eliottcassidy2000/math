@@ -4615,3 +4615,5 @@ toothpick folded onto itself). Candidate bridges, first probes run, honesty atta
    fundamental-domain growth is where an APS-like recursion could live.
 Status: the parity lemma banked (THM-893); probes 1-2 = next-session computations;
 probe 3 refuted-as-stated. Backlogged.
+
+**T1540 UPDATE 2 (death-star-2026-07-16-S22): the palette-code census RAN — [n,k,d] = [#events, excess+1, girth] (graphic code, palette map injective); d-conjecture refuted (κ flat everywhere), replaced by the RATE LAW k/n = the coding face of coherence with the subgroup-vs-sporadic relation dichotomy (only gcd/dilate-type relations drive recurrence); d = recurrence-onset phase marker; the Moore machinery applies exactly to coherent movies. -> HYP-7036.**

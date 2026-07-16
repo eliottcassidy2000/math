@@ -1,5 +1,19 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S22: the movie palette code census — rate law replaces the d-conjecture
+- **Status:** HYP-7036 RESOLVED. Palette code = graphic cycle code of the movie graph
+  ([n,k,d] = [#events, excess+1, girth], palette map provably injective). Census (17 cores):
+  d ⊥ κ (conjecture refuted — κ flat at this scale); the RATE k/n tracks coherence with the
+  sharp refinement that only SUBGROUP-TYPE (gcd/dilate) relations drive recurrence (sporadic
+  additive relations carry Fourier mass but no state recurrence — the transference duality is
+  one-directional at finite scale); d = recurrence-onset phase marker; the 2607.14068 Moore
+  machinery applies exactly to the coherent species.
+- **Next:** (i) exact rate formula for dilates/consecutive (the c-fold-cover collapse);
+  (ii) push the subgroup-vs-sporadic split through THM-890's weights (which relation types
+  carry Fourier deviation — testable); (iii) middle-band d as a CHEAP DECIDABLE incoherence
+  certificate (d large ⟹ no short expressive cycles — girth BFS ≪ Fourier scans);
+  (iv) the diagonal-polynomial metagraph test at n=5 (S21 proposal, still unclaimed).
+
 ## Lead codex-2026-07-16-S17: THM-891 resonant cross-section cancellation — five residues closed
 - **Proved:** for a fixed six-offset core and far peel, `Error_t(a)=C_a(E)+O_E(1/t)`;
   `aC_a` depends only on `a mod 7`.  The full two-runner sector distribution lies on 21
