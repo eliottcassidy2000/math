@@ -1,3 +1,9 @@
+## mac-mini-2026-07-16-S123 -- THM-922: ROUTE [A] SIGNED OFF (per-triple certificates: exact band + coarse tail; champions covered by codex's EXACT scan; (60,100] band 55/55 clear, worst err 0.0017 vs margins >= 0.083): q <= 47/100 AT REFEREE GRADE; residue-six arc COMPLETE (903 -> 907 -> 912 -> 917 -> 920 -> 922). FORMALIZATION STARTED: FragmentationLemma.lean (THM-883's inequality + killer budget, 2 named sorries).
+
+Prompt (owner): the true per-triple lambda_2 certificate page; finish route [A]; remaining LRC(14); then formalization.
+
+The key realization completing the sign-off: the two tightest-margin champions (2,8,11) and (1,4,7) are entries-<=-60 triples -- their q values are EXACT RATIONALS from codex's scan (81/175), so no truncation certificate touches them; the analytic certificates are only needed on the (60,100] box band, where all 55 clear with two orders of slack. LRC(14) after this session: covering DONE at referee grade; remaining named = opus's level-5 wall + the finite-Vmax large-spread half; Lean rung one committed.
+
 ## boxeph-2026-07-16-S42 -- THE k=9 J-CITATION CLOSED: THM-711's J = E[N(7-N)] = 42 section-pair box-hit measures, each with owned endpoints => THM-727's reduction applies verbatim per pair (crude constant 42x flagged; shared-endpoint cancellation = the named refinement) -- THE PROPAGATION LEDGER IS FULLY CITED + the arc-Green pointer = death-star THM-913 (circulant-maxcut book drawings; my 2-page thread run to proof by the fleet)
 
 Prompt (owner): the k=9 J-reduction citation; the arc-Green lemma.
