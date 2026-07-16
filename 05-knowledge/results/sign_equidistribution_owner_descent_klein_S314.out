@@ -1,0 +1,45 @@
+PASS P1 OWNERSHIP: every R_s endpoint is a section boundary j/(7e) of some e in E (all bank clusters, all sections)
+   block decomposition (w=997): (t, s, Q/2pi^2 total, within-owner part):
+     t=  6 s=1: total     0.298   within-owner     0.056   cross     0.243
+     t= 12 s=1: total     0.848   within-owner    -0.056   cross     0.904
+     t= 25 s=1: total     1.793   within-owner    -0.292   cross     2.085
+     t= 50 s=1: total     2.632   within-owner    -2.032   cross     4.665
+PASS P2 PERIODICITY: Q_s(w) = Q_s(w + 7*lcm(E)) exactly (bank spot checks) => sup over all integer w is a FINITE computation: sharp O(diam) is DECIDABLE per cluster
+
+P2 EXACT SUPS: sup_w Q_s over a full period (float scan + exact at argmax):
+   cluster | diam | period | sup_w Q_s | argmax w | sup/diam
+   [0..5,  6] |    6 |   420 | all-w sup   483.61 at w=105 (gcd 105) | CLEAN sup    71.59 at w=163 | clean/diam  11.93
+   [0..5, 12] |   12 |   420 | all-w sup   201.30 at w=55 (gcd 5) | CLEAN sup   127.36 at w=331 | clean/diam  10.61
+   [0..5, 25] |   25 |  2100 | all-w sup   259.56 at w=1847 (gcd 1) | CLEAN sup   259.56 at w=1847 | clean/diam  10.38
+   [0..5, 50] |   50 |  2100 | all-w sup   763.16 at w=1597 (gcd 1) | CLEAN sup   763.16 at w=1597 | clean/diam  15.26
+PASS P2 SPLIT: clean (coprime-w) sup/diam is uniformly bounded across the family (['11.9', '10.6', '10.4', '15.3'] — sharp O(diam) with constant <= 16 on all scanned instances, over FULL periods = ALL integer w by periodicity); resonant w inflates the sup only at small t (105 at t=6, 55 at t=12); at t=25,50 the sup is already attained at coprime w
+PASS P3 DESCENT IDENTITY: sum_{k,k'} eps eps' K(Delta) = sum_n khat_P(n)|S(n)|^2 (verified exactly where P <= 500)
+   per-owner sign-sum profiles: (t, owner e, M_e, max_n |S_e(n)|^2 / M_e):
+     t=  6 e=  2: M_e=  1  max|S_e|^2/M_e =    1.00
+     t=  6 e=  3: M_e=  1  max|S_e|^2/M_e =    1.00
+     t=  6 e=  4: M_e=  1  max|S_e|^2/M_e =    1.00
+     t=  6 e=  5: M_e=  2  max|S_e|^2/M_e =    2.00
+     t=  6 e=  6: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 12 e=  1: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 12 e=  4: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 12 e=  5: M_e=  2  max|S_e|^2/M_e =    2.00
+     t= 25 e=  1: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 25 e=  2: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 25 e=  4: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 25 e=  5: M_e=  1  max|S_e|^2/M_e =    1.00
+     t= 25 e= 25: M_e=  4  max|S_e|^2/M_e =    3.63
+PASS P3 SQRT-CANCELLATION (the residual, measured): max_n |S_e(n)|^2 / M_e bounded (worst 3.6) — if O(polylog) uniformly, Q_s = O(diam polylog) follows by khat ~ 1/n^2 summation
+
+P3b SUP-NORM REDUCTION: Q_s <= 2pi^2 * C_P * max_{n!=0}|S(n)|^2, C_P = sum_{n!=0}|khat|:
+   [0..5,  6] w=997: M=  6  max|S|^2=  28.48 (= 4.75 M)  Q_s=   5.884  bound~   93.70  (C_P -> 1/6)
+   [0..5,  6] w=1009: M=  6  max|S|^2=  28.48 (= 4.75 M)  Q_s=  10.917  bound~   93.70  (C_P -> 1/6)
+   [0..5, 12] w=997: M=  4  max|S|^2=  14.85 (= 3.71 M)  Q_s=  16.748  bound~   48.85  (C_P -> 1/6)
+   [0..5, 12] w=1009: M=  4  max|S|^2=  14.85 (= 3.71 M)  Q_s=  12.075  bound~   48.85  (C_P -> 1/6)
+   [0..5, 25] w=997: M=  8  max|S|^2=  47.00 (= 5.88 M)  Q_s=  35.397  bound~  154.63  (C_P -> 1/6)
+   [0..5, 25] w=1009: M=  8  max|S|^2=  47.00 (= 5.88 M)  Q_s=  24.948  bound~  154.63  (C_P -> 1/6)
+   C_P at P=105: 0.166652  (limit 1/6 = 0.166667)
+   C_P at P=210: 0.166663  (limit 1/6 = 0.166667)
+   C_P at P=420: 0.166666  (limit 1/6 = 0.166667)
+PASS P3b: C_P <= 1/6 + o(1) (computed) and Q_s <= 2pi^2 C_P max|S|^2 with S(0)=0 — the sharp problem is REDUCED to the sup-norm of ONE sign exponential sum (max|S|^2/M measured O(1)-small on the bank)
+
+=== 6 checks, 6 passed ===

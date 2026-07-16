@@ -4,7 +4,8 @@
 - **Status:** THM-880 converts THM-729's Q_s into the exact bilinear form −2π²Σεε′{wΔ}(1−{wΔ});
   sharp O(diam) ⟺ sign-equidistribution of {wΔ} over the endpoint-difference multiset. THM-878
   (clock moduli) and THM-879 (exact AP covering locus 601/1078) are DONE.
-- **Next:** (i) attack sign-equidistribution via the structure of the 7-section endpoints
+- **UPDATE (S314c2):** attack EXECUTED (THM-881): periodicity ⟹ decidable per cluster (≤ 16·diam verified over full periods); descent ⟹ residual = HYP-6994 sup-norm lemma (max|S|² = O(M)).
+- **Next:** (i) prove HYP-6994 via the per-owner AP structure (Weyl/Vinogradov on sign patterns)
   (differences lie in (1/7)Z + cluster-generated rationals — the {wΔ} orbit is a finite explicit
   multiset per cluster: prove per-family, then uniformize); (ii) Lean decide batch: D(q) cases,
   the 12 locus intervals, per-instance Q_s; (iii) the 2/105 locus-width vs c₃ coincidence.

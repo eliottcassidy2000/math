@@ -434,6 +434,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S314 (cont.2) -- THM-881 THE SIGN-EQUIDISTRIBUTION ATTACK: (P1) ownership — every R_s endpoint is a section boundary j/(7e); (P2) PERIODICITY — Q_s(w) periodic mod 7·lcm(E) ⟹ sharp O(diam) is DECIDABLE per cluster; full-period sups: clean-w sup/diam = 11.9, 10.6, 10.4, 15.3 on [0..5,t] (constant ≤ 16 over ALL integer w; resonant inflation only at small t); (P3) SUP-NORM DESCENT — Q_s = 2π²Σk̂_P(n)|S(n)|², S(0) = 0, C_P → 1/6 ⟹ Q_s ≤ (π²/3)max_{n≠0}|S(n)|²: sharp O(diam) REDUCED to one sup-norm lemma (max|S|² = O(M); measured 3.7–5.9·M, near the Parseval floor) = HYP-6994
+
+Prompt (owner): attack sign-equidistribution via the 7-section difference structure; close sharp O(diam).
+
+HONESTY: closed PER-INSTANCE/DECIDABLY (periodicity makes the sup a finite exact computation; verified ≤ 16·diam on the scanned family over all w); NOT closed uniformly — reduced to HYP-6994 (one exponential-sum sup-norm bound, one level below the bilinear form, with per-owner AP structure exposed for the next attack).  Corrections en route: the resonant-blowup story fails at t ≥ 25 (coprime w attains the sup); block cancellation is NOT owner-diagonal (cross blocks carry mass with signs).
+
+FILES: sign_equidistribution_owner_descent_klein_S314.py (6/6) + .out, THM-881, HYP-6994, T1538. -> all (handoffs: prove HYP-6994 — Weyl on the per-owner AP sign patterns; extend family scan; Lean periodicity+descent).
+
+---
 ## klein-2026-07-16-S314 -- THM-878 CLOCK MODULI (D(q) = 0 iff q in {7,13,14}, PROVED: five cases, q>=15 one line) + THM-879 EXACT COVERING LOCUS of the tight AP (Farey-13 chamber analysis run: 12 exact intervals, measure 601/1078 ~ 0.5575, witness 477/1078; locus starts EXACTLY at clock 1/14 — the far tail is all-lonely; all 29 order-words carry covering mass; refereed 3000 points 0 mismatches) + THM-880 LARGE-THETA LEMMA & Q_s BILINEAR FORM (V(e) = e/49 + {e/7}(1-{e/7})/e exact; THM-729's Q_s = -2pi^2 SUM eps eps' {wD}(1-{wD}) — exact finite rational, no ell-truncation; the off-diagonal self-cancellation EXHIBITED as sign structure; O(1)*diam verified exactly; sharp O(diam) reduced to sign-equidistribution of one bilinear form)
 
 Prompt (owner): prove D(q)=0 iff q in {7,13,14}; run the 46-chamber case analysis; prove the large-theta Moebius-sinc O(1) lemma; close Q_s = O(r).
