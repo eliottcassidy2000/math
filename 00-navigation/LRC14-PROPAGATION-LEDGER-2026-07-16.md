@@ -90,7 +90,7 @@ margins in §2, or make `O_E(1/t)` uniform.  The honest added seams are:
 Concurrent synthesis fixes the right carriers.  `THM-890` says deviations are exact
 additive-relation spectra; `THM-892` says the generic quadratic frame mean is a universal
 `pi^2/3` term plus coincidence-class imbalance; `THM-894` independently names the
-level-three overlap tensor as the next rung.  `THM-896` now proves the order-three
+level-three overlap tensor as the next rung.  `THM-896-level3-crossing` now proves the order-three
 Bonferroni crossing through `m'<=11` and leaves the relation-localized triple-beat upper
 bound open; that is the same analytic rung as residue six, though not the same
 observable.  The resolved `HYP-7027` proves wall-movie cycles are all expressive, so

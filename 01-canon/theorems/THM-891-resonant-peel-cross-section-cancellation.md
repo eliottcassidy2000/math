@@ -4,7 +4,7 @@ title: Exact cross-section cancellation for a resonant far peel
 status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-sector ray law, and universal 0.097 closures for residues 1 through 5 and the positive side of residue 6 are rigorous. The negative side of residue 6 and the sharp diameter-free extremal remain open.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
-related: [THM-888, THM-889, THM-890, THM-892, THM-894, THM-896, HYP-7021, HYP-7024, HYP-7027]
+related: [THM-888, THM-889, THM-890, THM-892, THM-894, THM-896-level3-crossing, HYP-7021, HYP-7024, HYP-7027]
 verification: 04-computation/lrc14_resonant_cross_section_cancellation_codex_S17.py -> 05-knowledge/results/lrc14_resonant_cross_section_cancellation_codex_S17.out
 ---
 
@@ -369,7 +369,7 @@ the sector-zero boundary and remains fixed.  For the consecutive core, for examp
 - `THM-894` independently names the level-three overlap tensor as the next LRC
   self-composition.  The negative residue-six kernel supplies its concrete target:
   certify the synchronized miss mass `A_15+A_24` using triple/higher relation data.
-- `THM-896` subsequently proves that order-three Bonferroni is coercive through its
+- `THM-896-level3-crossing` subsequently proves that order-three Bonferroni is coercive through its
   `m'<=11` wall and names the remaining triple-beat upper bound.  Its overlap observable
   is not identical to `A_15+A_24`, but the required relation-localized enhancement cap
   is the same analytic rung and should be developed once for both consumers.

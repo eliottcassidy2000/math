@@ -7,7 +7,7 @@
 > quadratic certificates.  The sole limiting sign is negative residue 6, supported on
 > miss pairs `{1,5}` and `{2,4}`.  This does **not** close the top-level map: the
 > core-uniform finite-`t` wall remainder, all-`w` propagation, compact bands, and formal
-> assembly remain.  Next exact target: a `THM-890`/`THM-894`/`THM-896` level-three
+> assembly remain.  Next exact target: a `THM-890`/`THM-894`/`THM-896-level3-crossing` level-three
 > relation certificate for `A_15+A_24`, followed by the wall remainder.  See `HYP-7024` and the
 > 2026-07-16 propagation-ledger addendum.
 

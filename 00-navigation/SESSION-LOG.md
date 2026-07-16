@@ -1,3 +1,55 @@
+## codex-2026-07-16-S17 -- THM-891 EXACT RESONANT CROSS-SECTION CANCELLATION: fixed far-peel owner resonances reduce to seven signed miss-pattern coefficients; the full two-runner sector law has 21 arithmetic rays; exact quadratic certificates close residues 1 through 5 below 0.097 and the positive side of residue 6; only negative residue 6 (`A_15+A_24`) remains at the limiting slack; HYP-7024 sharp target finite-exact through diameter 20
+
+Prompt (owner): pull frequently, synthesize other agents' work, and attack the
+mathematical cruxes of LRC(14).
+
+PROVED (`THM-891`): for slow core `E={0,e1,...,e5}`, far speed `t`, and fixed owner
+multiplier `a`, `Error_t(a)=C_a(E)+O_E(1/t)`.  The exact microcell law makes `aC_a`
+depend only on `a mod 7`.  For `{0,1,2,3,4,5}`, the largest coefficient is
+`239/5145=0.0464529`.  Exact finite values at `t=25,50,100,200,400` converge at the
+predicted `O(1/t)` scale.
+
+PAIR ARITHMETIC: for coprime reduced positive speeds `A,B`, same-sector mass is `1/7`
+unless `A=B mod 7`, when it is `1/7+r(7-r)/(7AB)`.  More strongly, the full unordered
+sector-pair distribution is `U+D_(A mod 7,B mod 7)/(AB)`, hence lies on one of 21
+segments from uniform to a product-minimal endpoint.  Consequences:
+`p1+p2<=45/49`, `p1<=5/7`, `|F1|<=230/2401`, `|F5|<=225/2401`.
+
+EXACT QUADRATIC CERTIFICATES (462 mover-count states x 22 pair-polytope vertices):
+`-40/441<=F2<=230/2401`, `-230/2401<=F3<=19/196`, and
+`-2/21<=F4<=232/2401`.  Also `F6<=230/2401`.  Therefore only the negative residue-six
+kernel remains; it is concentrated exactly at
+`K6({1,5})=K6({2,4})=-12`, so the named higher-order target is `A15+A24`.
+
+FINITE-EXACT EVIDENCE (`HYP-7024`): all 15,246 primitive cores of diameter at most 20;
+unique maximum `16/343` at `{0,1,2,3,4,6}`, residue 1.  The residue majority tournament
+is transitive at diameters 14 and 20 with path `1->2->3->4->6->5`, zero edge flips,
+zero directed triangles, singleton SCCs, and one Hamiltonian path.  The tournament is
+telemetry; miss patterns are the faithful coefficient carrier.
+
+REFUTED: fixed pair-collision mass `1/7`; pointwise residue-one dominance; and naive
+miss-pattern reflection under `x->1-x` (the stationary boundary breaks it; already
+`B1=1/35 != B5=1/28` for the consecutive core).
+
+CONCURRENT SYNTHESIS: death-star's `THM-890` relation-lattice identity explains the 21
+pair rays and locates the higher-order remainder; boxeph's `THM-892` two-term invariant
+mean is the generic quadratic-frame complement; opus's `THM-894` names the level-three
+overlap tensor; `THM-896-level3-crossing` proves order-three Bonferroni coercive through
+`m'<=11` while leaving its triple-beat enhancement cap open; resolved `HYP-7027` proves
+wall movies have no silent cycles, so finite-`t` control must retain palette data.
+
+HONEST REMAINDER: (i) prove a relation-localized triple/higher certificate for negative
+residue 6; (ii) make `O_E(1/t)` uniform enough for the propagation ledger; (iii) the
+sharp all-core `16/343` inequality remains open.  This is a fixed owner-resonant limit
+theorem, not an all-`w` LRC(14) proof.  `j=5` was independently harvested clean by
+mac-mini; `j=6` remains running.  Fresh `THM-896` collision noted; citations here use
+the explicit `THM-896-level3-crossing` slug.
+
+FILES: `THM-891`, `HYP-7024`, exact `.py/.out`, hypothesis/result indices, propagation
+ledger/frontier/proof-map/backlog addenda.  Checkpoints were repeatedly rebased and
+pushed to `origin/main`.  -- codex-S17
+
+---
 ## opus-2026-07-16-S327 -- THM-896 THE LEVEL-3 CROSSING: the m' = 8 wall FALLS (order-3 Bonferroni is a treeless LOWER bound; coefficient wall coercive m' <= 11 with the 19/2197 knife-edge at 11; REFEREED: 3/3 exact radius-8 certificates, tight to 8-16%; ladder price schedule 6.5 -> 7.5 -> 11.5) + the triple sawtooth (baseline (2/13)^3 exact, resonance ENHANCEMENTS 2-3.3x: the triple beat lemma named) + THE FERTILITY FIELD (anti-toothpick: growth symmetry-suppressed, fertility ~ 32/|Aut| Burnside shadow, max at mid-level) (HYP-7035)
 
 Prompt (owner): compute the level-3 triple-overlap tensor, cross the m' = 8 wall; the

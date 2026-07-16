@@ -8,7 +8,7 @@
   15,246 primitive cores, unique max `16/343` at `{0,1,2,3,4,6}`, residue 1.
 - **Only limiting sign left:** `K_6({1,5})=K_6({2,4})=-12`; prove a higher-order bound
   on `A_15+A_24`.  Pair marginals do not suffice.  Use `THM-890`'s relation spectrum and
-  `THM-894`'s level-three overlap tensor.  `THM-896` proves the order-three Bonferroni
+  `THM-894`'s level-three overlap tensor.  `THM-896-level3-crossing` proves the order-three Bonferroni
   crossing but leaves its triple-beat upper bound open; seek one relation-localized
   enhancement cap for both consumers.  `THM-892` is the complementary generic-frame mean.
 - **Finite-`t` seam:** make the `O_E(1/t)` wall-cell term uniform enough for the

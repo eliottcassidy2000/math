@@ -257,7 +257,7 @@ The concurrent ideas line up without collapsing into one another:
    controls the exceptional signed owner frame.
 3. `THM-894`'s proposed level-three overlap tensor is now assigned a literal LRC target,
    `A_15+A_24`.
-4. `THM-896` has since proved the level-three Bonferroni crossing through `m'<=11`; its
+4. `THM-896-level3-crossing` has since proved the level-three Bonferroni crossing through `m'<=11`; its
    open triple-beat enhancement cap and residue six are distinct observables on the same
    relation-localized tensor rung.
 5. `HYP-7027`'s no-silent-cycle lemma says the finite-`t` wall remainder must preserve

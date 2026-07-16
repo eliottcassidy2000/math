@@ -159,7 +159,7 @@ sidecar gives false universal bounds.
 2. **Residue-six higher-order certificate.**  Bound the synchronized mass
    `A_15+A_24` using triple and higher relation terms from `THM-890`; pair marginals are
    now known to be insufficient.  `THM-894` independently names exactly this next rung
-   as the level-three overlap tensor, and `THM-896` proves the order-three Bonferroni
+   as the level-three overlap tensor, and `THM-896-level3-crossing` proves the order-three Bonferroni
    crossing while leaving its triple-beat enhancement cap open.  Build one
    relation-localized triple bound that feeds both consumers.  Do not impose the false
    reflection symmetry `s -> 7-s`.
