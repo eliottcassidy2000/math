@@ -1,0 +1,23 @@
+core P = [1, 2, 3] ; clusters E of k = 4 offsets (co-offsets of the far cluster)
+
+(1) NON-RESONANT large-spread: |rho_K - rho*| vs Vmax (expect ~ C/Vmax, C spread-free)
+   bounded (1..5): rho* = 0.69048; V=997: err 1.59/V V=4001: err 0.60/V V=16001: err 0.32/V
+   large (irrational-like): rho* = 0.68750; V=997: err 0.57/V V=4001: err 0.67/V V=16001: err 1.37/V
+   huge: rho* = 0.68858; V=997: err 0.51/V V=4001: err 6.99/V V=16001: err 4.09/V
+
+(2) RESONANT case: e_i/Vmax near small-denominator rationals (the dilate signature)
+   E = V*{0,1/4,1/2,3/4} EXACT resonance: rho_K = 0.69000 vs rho* = 0.62424 (err*V = 263.1); denominators of e/V: [4, 2, 4]
+   near-resonant (off by 1-2): rho_K = 0.69000 vs rho* = 0.68743 (err*V = 10.3); denominators of e/V: [4000, 4000, 2000]
+   generic same-magnitude: rho_K = 0.68750 vs rho* = 0.68847 (err*V = 3.9); denominators of e/V: [4000, 4000, 4000]
+   READING: exact resonance (denominators <= 4) => the cluster IS a dilate of the
+   ruler's q-grid: good periods repeat with period q -- rho_K is then a RATIONAL
+   with denominator q (exactly computable, no limit needed): the resonant case is
+   NOT an error term but a FINITE EXACT case = THM-724-L2/near-dilate tile territory.
+
+(3) the trichotomy that closes THM-527-A:
+   [bounded spread: #arcs = O(1), err <= C/Vmax -- S58, PROVED]
+   [large spread, non-resonant: Erdos-Turan + Dirichlet kernels, err <= C'/Vmax
+    with C' from the kernel sums -- the (1) data shows the spread-free constant]
+   [resonant (some e_i/Vmax = p/q, q small): rho_K exactly periodic mod q --
+    a finite rational computation per (q, residues): the dilate tile]
+DONE

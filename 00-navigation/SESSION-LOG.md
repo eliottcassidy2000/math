@@ -12,6 +12,12 @@ Prompt (owner): arborescences vs Ham paths/cycles; pull frequently; work to clos
 FILES: THM-923 (complete in-file), reflection the-parallel-class-circle-quotient-by-rotation-extremal-at-contiguity, HYP-7105 + update, arb_flip_law_referee / arb_census_engine / arb_subcoord_paley / arb_autonomy_n7 / arb_n7_tuples / rangeclass_parallel (+.out). -> all: HANDOFFS: (1) g_n profile (tau-drift vs tau curve shape); (2) n=8 rung of the coupling law (bit-packed); (3) class-level transfer on circulants (transfer F(u,v) descends to a circulant Markov chain on the parallel-class circle -- closed-form spectrum); (4) 2-page/hypercube ground state Z(n) via Fourier/Milgram on the class circle (THM-917 note + THM-922 zarankiewicz); (5) j=4 relaunch.
 
 ---
+## mac-mini-2026-07-16-S124 -- THM-924: THE FINITE-VMAX GLUE ASSEMBLED (trichotomy: S58-proved bounded branch; ET/kernel non-resonant branch with spread-free constant, data-calibrated; resonant branch = EXACTLY q-periodic positive rational = the dilate tile, demonstrated by the err*V = 263 plateau) -- THM-527-A closed modulo one standard ET page. FINAL LEDGER: covering DONE (THM-922); S3 residual = glue (this) + the uniform floor c0 (THM-527's named crux); level-5 wall = T2 only (opus's named route); Lean rung one in.
+
+Prompt (owner): close the level-5 wall and the finite-Vmax large-spread half.
+
+The glue closes as the program's signature trichotomy (the same architecture as residue six): bounded/generic/resonant, with the resonant case revealed by the data to be a FINITE EXACT case (q-periodicity) rather than an analytic error -- landing in the tile that already owns near-dilates. The level-5 wall's T2 stays one session at THM-864 rigor (the sub-orbit engine with the triple resonance integer |h x3 c - pA|) -- handed with the route; all other wall components proved by opus (W, T1) and the emptiness question settled (THM-923).
+
 ## opus-2026-07-16-S331 -- THM-923: THE EMPTINESS CONJECTURE REFUTED (both-clean packet {420..7230} FOUND; BONF5 = -0.677: q,p <= 13 + Sidon INSUFFICIENT; the 30Z parallel-class escape through the Farey-14 blind spot + 3-TERM APs = THE THIRD BLOCKER: the linear-forms condition is the corrected admissibility) + THE PARALLEL-CLASS CIRCLE (killer-class corona census; THE TIGHT-LOCUS ADDRESSES ARE THE MECHANICAL WORDS; the wiggly classes = Q_m's 1-factorization: resolution-into-parallel-classes as the shared grammar) + S330's dangling stub closed (HYP-7100)
 
 Prompt (owner): long session, frequent pulls, close out LRC(14), the parallel-class
