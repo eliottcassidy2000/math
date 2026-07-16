@@ -1,6 +1,7 @@
 # HYP-7084 — the owner packet as a parallel-class current
 
-**Status:** CLAIMED / IN PROGRESS (codex-2026-07-16-S19).
+**Status:** EXACT REDUCTION PROVED; RAW CROSSING-ENERGY CLOSURE REFUTED
+(codex-2026-07-16-S19).  The endpoint-potential sharpening is in progress.
 
 This note reserves the exact class-circle reformulation of `HYP-7083`.  On the
 one-miss set of `F=E union {t}`, write
@@ -22,7 +23,7 @@ M_s(u)=mu_s^0(u)+mu_s^1(u),
 J_s(u)=mu_s^0(u)-mu_s^1(u).
 ```
 
-The claimed exact decomposition is
+The exact decomposition is
 
 ```text
 Delta_F(2t)
@@ -31,15 +32,46 @@ Delta_F(2t)
 ```
 
 Thus the parity remainder is the same-label trace of the discrete divergence
-of an oriented current on `C_7`.  This quotient preserves the exact finite
-owner correction and its miss-label incidence.  It destroys slow-wall order,
-the additive relation lattice of `E`, and most crossing information in the
-book drawing; the `THM-913` circulant crossing energy is therefore only a
-candidate norm until a comparison inequality is proved.
+of an oriented current on `C_7`.  For the `THM-913` crossing profile
+
+```text
+xi=(0,0,2,3,3,2,0),
+```
+
+let `L_xi` be its circulant Laplacian and set
+
+```text
+E_pc=sum_s [M_s^T L_xi M_s + J_s^T L_xi J_s].
+```
+
+The adjacent-current and adjacent-average dual norms are exactly `6/29` and
+`22/203`, giving the proved comparison
+
+```text
+Delta_F(2t)^2 <= (16/29) E_pc.                                (3)
+```
+
+The exact `HYP-7083` bank verifies the decomposition, the polarized energy
+identity, and (3) on all `6,900` doubling rows.  It also refutes raw energy as
+the closure: only `5,346/6,900` rows meet the energy threshold needed for
+`0.097`; the worst energy-only upper bound is `0.24485`.  More revealingly,
+the current term itself stays between `-0.02132` and `0.02222`, while the
+symmetric term reaches `0.07171`.  At the dangerous row
+`E=(0,3,4,5,6,7),t=8`, the correction splits as
+
+```text
+2173/27440 = 5903/82320 + 11/1470.
+```
+
+So the finite crux is mostly symmetric adjacent-endpoint aliasing, not raw
+half-sector parity.  This quotient preserves the exact correction and its
+miss-label incidence, but destroys slow-wall order, the additive relation
+lattice of `E`, and individual chord crossings.  The next sharpening restores
+those sidecars by subtracting the closed `THM-891` residue-two limit and writing
+the residual as an exact slow-wall endpoint potential on the fourteen-cycle.
 
 Reserved verifier/output:
 `04-computation/lrc14_owner_packet_parallel_class_current_codex_S19.py` and
 `05-knowledge/results/lrc14_owner_packet_parallel_class_current_codex_S19.out`.
-The immediate tasks are to verify the decomposition fraction-exactly on the
-`HYP-7083` bank and test whether any circulant energy controls the diagonal
-divergence with a constant strong enough for `0.097`.
+The remaining task is a universal bound for that endpoint potential; a scalar
+crossing energy cannot supply it by itself.
