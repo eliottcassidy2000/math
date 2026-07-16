@@ -1,0 +1,37 @@
+Q1: separation power of the invariant tuples
+  (sz,H,c3,Aut,SC): 28 cells (max cell 4) of 56
+  +d(W): 30 cells (max cell 4) of 56
+  +d(W)+aff: 30 cells (max cell 4) of 56
+
+Q2: affine dimension vs exceptionality
+  EXC: sz=5 H=5 SC=False d=2 clb=1 aff=3 (m=10)
+  EXC: sz=5 H=5 SC=True d=2 clb=1 aff=3 (m=10)
+  EXC: sz=5 H=5 SC=False d=2 clb=1 aff=3 (m=10)
+  EXC: sz=9 H=9 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=9 H=9 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=9 H=9 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=9 H=9 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=11 H=11 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=11 H=11 SC=False d=2 clb=1 aff=6 (m=10)
+  EXC: sz=11 H=33 SC=False d=2 clb=1 aff=9 (m=10)
+  EXC: sz=11 H=33 SC=False d=2 clb=1 aff=9 (m=10)
+  EXC: sz=15 H=45 SC=True d=3 clb=2 aff=8 (m=10)
+  EXC: sz=29 H=29 SC=True d=3 clb=2 aff=10 (m=10)
+  EXC: sz=33 H=33 SC=True d=3 clb=2 aff=10 (m=10)
+  EXC: sz=37 H=37 SC=True d=3 clb=2 aff=10 (m=10)
+  EXC: sz=41 H=41 SC=True d=3 clb=2 aff=10 (m=10)
+  EXC: sz=43 H=43 SC=False d=3 clb=2 aff=10 (m=10)
+  EXC: sz=43 H=43 SC=False d=3 clb=2 aff=10 (m=10)
+  classes with full-possible affine dim: 42/56
+
+Q3: structured unions
+  all-SC tilings: |W|=240 d(W)=6 clb=4
+  c3-parity 0: |W|=640 d(W)=8 clb=6
+  c3-parity 1: |W|=384 d(W)=8 clb=4
+  [9s]
+
+Q4: THE F7 BRIDGE TEST — movie state sets, avg degree vs F7 diagonal degree
+  [3..7] consec: V=126 events=126 avg-deg=2.00 d7(S)=9  ratio avg/d7=0.22
+  small generic: V=252 events=252 avg-deg=2.00 d7(S)=12  ratio avg/d7=0.17
+  dilate 2x[1..5]: V=70 events=140 avg-deg=2.00 d7(S)=9  ratio avg/d7=0.22
+[total 49.7s]

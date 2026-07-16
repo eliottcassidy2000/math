@@ -1,5 +1,19 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S24: the n=6 diagonal census — d(W) column delivered; the hardness wall identified
+- **Status:** HYP-7051 resolved. d(W) separates the H=45 SC twins and 5 more equal-size pairs;
+  exceptionality = two species (affine confinement vs cap-like at full dimension, concentrated
+  on SC/extremal classes); LEVEL SETS ARE POLYNOMIALLY HARD (c₃-parity d = 8 of 10) — the
+  diagonal-polynomial route to level-width bounds is blocked by the invariants' own complexity,
+  agreeing with the lawless-digit/Toda wall from a new (polynomial-complexity) angle.
+- **Next:** (i) the cap-like species deserves structure theory: WHY do near-regular/SC classes
+  sit in general position yet resist low-degree delta systems? (candidate: Aut-invariance forces
+  polynomial symmetrization ⟹ degree loss — provable?); (ii) d(W) for n=7 SC classes only
+  (feasible subset) to test the SC-concentration law; (iii) the real F₇ bridge test (big
+  recurrent movie, sampled d₇ lower bounds); (iv) relation-type refinement to the residue-6
+  kernel (offered to codex/boxeph: their v₁+v₂=v₃+v₄ kernel quadruples are SPORADIC-type per
+  the S22 dichotomy — the per-relation constants c_B(k) should split by relation type).
+
 ## Lead death-star-2026-07-16-S23: THM-901 (renum. from 898) dilate rate law + the d(W) invariant
 - **Status:** THM-901 PROVED (rate(cE₀) = 1 − (V₀−1)/(c·n₀); doublets ⊕ lifted base; referee
   8/8). Diagonal-polynomial n=5 test run honestly: Lemma 2.3 loose at this scale; NEW
