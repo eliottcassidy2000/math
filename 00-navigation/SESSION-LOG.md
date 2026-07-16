@@ -16,6 +16,13 @@ The census machinery: every 4-subtournament is transitive / 3-cycle+source / 3-c
 FILES: T1546, HYP-7054, session log. -> owner (bridge verdict: one exact gem), all.
 
 ---
+## mac-mini-2026-07-16-S118 -- THM-906: THE ANOVA ASSEMBLY FOR RESIDUE SIX (exact channels: beta_0 = 12653/34300, margin 0.1011; singletons vanish; big pairs NEGATIVE; T = the relation-lattice functional, calibrated: +0.1007 at (1,2,7)/rel (1,3,-1)) -- THE CLOSURE REDUCED TO ONE PINNED BV-FOURIER TAIL LEMMA + codex's scan + THE GUY SYNTHESIS (Z(2m+1) = T(m-1)^2; the (1,-1,-1,1) stratum is the reflection-EVEN stratum: fixed-locus principle spans crossing numbers, box-hit laws, residue-6).
+
+Prompt (owner): build the reflection-even cubic certificate and close negative residue 6; relate the near-AP quadruples to Guy's conjecture and A000241.
+
+(1) Working codex's THM-904 (the 84-weight pointwise reduction, target q <= 47/100, scan max 81/175): Hoeffding decomposition computed EXACTLY -- the entire risk lives in the zero-marginal triple channel T, which the data pins to the small-relation strata exactly as THM-903 predicted. The universal bound now needs ONE lemma (|T| <= C_rel/|k1k2k3|_min; all constants pinned; ~1 page of BV-Fourier) after which the finite relation box is covered by codex's existing 28,876-triple scan and -F_6(E) <= 47/490 < 0.097 CLOSES the sole limiting sign. Reflection-even halving (84 -> 44) available. Honest status: reduced-and-calibrated, not closed -- the tail lemma is the named last step, decide-shaped, handed to codex with the channel tables.
+(2) GUY/A000241 (building on boxeph T1545): Z(2m+1) = (1/4) m^2 (m-1)^2 = T(m-1)^2 -- odd crossing numbers are squared triangulars, one line. Guy's floor quadruple is PALINDROMIC: the (1,-1,-1,1) kernel is the reflection-even signature -- the same stratum as the residue-6 near-AP quadruples and the same evenness as THM-903's fixed locus. Crossing numbers, box-hit lattice constants, and the residue-6 kernel: three (constant/quadruple-product) laws on reflection-even degenerate quadruples.
+
 ## boxeph-2026-07-16-S35 -- THE K6 BRIDGE FIRST FACTS (the a+b == 6 ray is MASS-NEUTRAL: sum D = 0 exactly on every pair -- K6 = -12 is Fourier-weighted, not raw mass; stable coprime constants -8/49 (2,4), -5/49 (1,5); exact D-matrices ready for codex's convention) + T1545 GUY'S QUADRUPLE IS A (1,-1,-1,1)-STRATUM MEMBER (Z(2m+1) = T(m-1)^2 exact; A000241 reproduced; Z(9) = 36 = A001110(2) triple-coincidence; crossing numbers and box-hit constants are both const/prod-quadruple laws on additively-degenerate quadruples)
 
 Prompt (owner): K6 normalization bridge; little statements; near-AP quadruples vs square triangulars / Guy's conjecture / A000241.
