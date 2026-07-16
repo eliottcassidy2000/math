@@ -1,0 +1,9 @@
+RIGORIZED THM-726 (fast sweep, exact-confirmed leaves), j = 2..6
+  j=2: small parts 12; branches 369; leaves 13; VIOLATIONS: NONE
+  j=3: small parts 66; branches 22444; leaves 446; VIOLATIONS: NONE
+  j=4: small parts 220; branches 729393; leaves 4801; VIOLATIONS: NONE
+RIGORIZED THM-726 (fast sweep, exact-confirmed leaves), j = 2..6
+  j=2: small parts 12; branches 369; leaves 13; VIOLATIONS: NONE
+  j=3: small parts 66; branches 22444; leaves 446; VIOLATIONS: NONE
+  j=4: small parts 220; branches 729393; leaves 4801; VIOLATIONS: NONE
+j>=7 probe: trials 7107; M < 1/13 configs found: NONE

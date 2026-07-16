@@ -92,7 +92,17 @@ touches `14/183`; every shorter core (multi-killer) sits at `≥1/13`, because a
 core `{1..k}` has its *own* higher LRC floor `1/(k+1)` and the outliers cannot drag it below
 `1/13`.
 
-## Honest status
+## Honest status — UPDATED 2026-07-16 (mac-mini S114, THM-882)
+
+**Step 1 (far-element monotonicity) is now REPLACED by a proved lemma**: THM-882's
+Fragmentation Lemma bounds every outlier explicitly (w_min <= 2j/((13-2j) ell_max);
+last outlier <= 2/(13 ell_max); recursion non-vacuous by LRC(<=13)), making the
+configuration space provably finite for j <= 6. Exact sweep: j <= 4 complete (zero
+violations), j = 5,6 running on the proved-finite box; j >= 7 (never in this file's
+census) is loose-tile territory, probed 0/7107. The "certified" qualifier below is
+superseded for j <= 4 and reduces to mechanical sweep completion for j = 5,6.
+
+## Honest status (original)
 
 - **Unconditional given the two inputs:** far-element monotonicity (Step 1, verified +
   THM-717/720) and the finite check (Step 2, 64317 configs). Both are the standard certified

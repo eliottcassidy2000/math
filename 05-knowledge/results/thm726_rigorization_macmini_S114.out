@@ -1,0 +1,4 @@
+RIGORIZED THM-726 -- exact enumeration, j = 2..6 (|P| = 11..7)
+  j=2: small parts 12; branches 368; leaf configs checked 12; VIOLATIONS (M < 1/13): NONE
+  j=3: small parts 66; branches 23820; leaf configs checked 447; VIOLATIONS (M < 1/13): NONE
+  j=4: small parts 220; branches 821060; leaf configs checked 5280; VIOLATIONS (M < 1/13): NONE
