@@ -1,0 +1,25 @@
+========================================================================
+T2 ENGINE VERIFICATION (identity exact-asserted on every triple)
+========================================================================
+triples: 108; identity: all exact; DK inequality all families: True; assembled bound covers err: 108/108
+
+q* vs y3* vs err/bound (sample, sorted by q*):
+  A= 19 B= 24 C=  42: err=+2.966e-05 bound=6.819e-02 ratio= 0.00  q*=   1  y3*=  0
+  A= 19 B= 24 C=  43: err=+1.419e-02 bound=7.871e-02 ratio= 0.18  q*=   1  y3*=  0
+  A= 19 B= 24 C=  44: err=-1.368e-04 bound=7.692e-02 ratio= 0.00  q*=   1  y3*=  0
+  A= 19 B= 24 C=  55: err=+4.317e-03 bound=5.207e-02 ratio= 0.08  q*=   1  y3*=  0
+  A= 19 B= 24 C=  61: err=-1.111e-03 bound=4.695e-02 ratio= 0.02  q*=   1  y3*=  0
+  A= 19 B= 24 C=  62: err=+8.153e-03 bound=5.459e-02 ratio= 0.15  q*=   1  y3*=  0
+  A= 19 B= 24 C=  67: err=+8.331e-03 bound=4.274e-02 ratio= 0.19  q*=   1  y3*=  0
+  A= 19 B= 24 C=  82: err=+1.798e-03 bound=4.128e-02 ratio= 0.04  q*=   1  y3*=  0
+  A=120 B=143 C= 252: err=+1.190e-04 bound=1.446e-02 ratio= 0.01  q*=   7  y3*=  0
+  A=120 B=143 C= 341: err=+2.234e-05 bound=1.069e-02 ratio= 0.00  q*=   7  y3*=  1
+  A= 73 B= 90 C= 444: err=+1.947e-04 bound=7.037e-03 ratio= 0.03  q*=   7  y3*=  0
+  A= 87 B=101 C= 465: err=-1.965e-04 bound=6.719e-03 ratio= 0.03  q*=   9  y3*=  1
+  A=120 B=143 C= 527: err=+9.545e-05 bound=6.916e-03 ratio= 0.01  q*=   9  y3*=  1
+  A=120 B=143 C= 318: err=+1.223e-04 bound=9.825e-03 ratio= 0.01  q*=  11  y3*=  0
+  A=120 B=143 C= 463: err=-5.948e-04 bound=6.748e-03 ratio= 0.09  q*=  14  y3*=  0
+  A=120 B=143 C= 244: err=+1.671e-04 bound=1.280e-02 ratio= 0.01  q*=  16  y3*=  0
+
+resonant (y3*=0):   n=77, max|err|=1.419e-02, median q*=1
+near-res (1<=y3*<=3): n=31, max|err|=3.599e-04, median q*=3

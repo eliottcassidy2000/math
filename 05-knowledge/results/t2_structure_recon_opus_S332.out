@@ -1,0 +1,50 @@
+========================================================================
+(S1-S3) THE EXACT COMPONENT STRUCTURE OF W = D_A cap D_B (coprime):
+  A=  19 B=  24: kappa=   7 (pred 7: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 4, Bezout-matched: 2
+      step 5/24 on m-runs [-3, -2]  <- ['B*/A - 1/(AB)', 'B~/B']
+      step 1243/5928 on m-runs [0]  <- ??
+      step 4/19 on m-runs [1, 2]  <- ['B~/B + 1/(AB)', 'B*/A']
+      step 11/52 on m-runs [-1]  <- ??
+  A=  50 B=  63: kappa=  17 (pred 17: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 3, Bezout-matched: 2
+      step 34/63 on m-runs [-8, -7, -6, -5, -4, -3, -2, 0]  <- ['B~/B', 'B*/A - 1/(AB)']
+      step 27/50 on m-runs [1, 2, 3, 4, 5, 6, 7]  <- ['B~/B + 1/(AB)', 'B*/A']
+      step 443/819 on m-runs [-1]  <- ??
+  A=  87 B= 101: kappa=  29 (pred 29: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 4, Bezout-matched: 2
+      step 65/101 on m-runs [-14, -13, -12, -11, -10, -9, -8, -7]...  <- ['B*/A - 1/(AB)', 'B~/B']
+      step 24509/38077 on m-runs [1]  <- ??
+      step 56/87 on m-runs [2, 3, 4, 5, 6, 7, 8, 9]...  <- ['B~/B + 1/(AB)', 'B*/A']
+      step 846/1313 on m-runs [-1]  <- ??
+  A= 120 B= 143: kappa=  41 (pred 41: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 4, Bezout-matched: 2
+      step 56/143 on m-runs [-20, -19, -18, -17, -16, -15, -14, -13]...  <- ['B~/B', 'B*/A - 1/(AB)']
+      step 29121/74360 on m-runs [1]  <- ??
+      step 47/120 on m-runs [2, 3, 4, 5, 6, 7, 8, 9]...  <- ['B~/B + 1/(AB)', 'B*/A']
+      step 729/1859 on m-runs [-1]  <- ??
+  A=  55 B=  89: kappa=  23 (pred 23: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 4, Bezout-matched: 2
+      step 55/89 on m-runs [-11, -10, -9, -8, -7, -6, -5, -4]...  <- ['B~/B', 'B*/A - 1/(AB)']
+      step 7866/12727 on m-runs [2]  <- ??
+      step 34/55 on m-runs [3, 4, 5, 6, 7, 8, 9, 10]  <- ['B~/B + 1/(AB)', 'B*/A']
+      step 716/1157 on m-runs [-1]  <- ??
+  A= 144 B= 233: kappa=  57 (pred 57: True); mu exact match: True; m-tags match: False; distinct consecutive steps: 4, Bezout-matched: 2
+      step 144/233 on m-runs [-28, -27, -26, -25, -24, -23, -22, -21]...  <- ['B*/A - 1/(AB)', 'B~/B']
+      step 134785/218088 on m-runs [6]  <- ??
+      step 89/144 on m-runs [7, 8, 9, 10, 11, 12, 13, 14]...  <- ['B*/A', 'B~/B + 1/(AB)']
+      step 1873/3029 on m-runs [-1]  <- ??
+
+========================================================================
+(S4) BASELINE T2-U: err <= 4 kappa_W / (13 C), unconditional:
+(S5) resonance shape: err vs y* = min |qC - rA - sB|, q<=13, |r|,|s|<=13
+  baseline holds on all 64 triples; worst |err|/bound = 0.3052
+
+  resonance correlation (in-band triples, sorted by y*):
+   y*  :  max |err|         mean |err|        (n)   scaled max*169/(A+B) hmm
+   y*=0 (exact res)  : max 1.419e-02  mean 3.229e-03  (n=46)
+   y*<=3             : max 8.890e-04  mean 1.835e-04  (n=17)
+   3<y*<=10          : max 2.614e-04  mean 2.614e-04  (n=1)
+
+  worst 6 triples by |err| (for Layer-2 targeting):
+   A= 19 B= 24 C=  43: err=+1.419e-02 y*=  0 kappa=7
+   A= 50 B= 63 C= 113: err=+1.413e-02 y*=  0 kappa=17
+   A= 87 B=101 C= 188: err=+1.411e-02 y*=  0 kappa=29
+   A= 55 B= 89 C= 144: err=+1.410e-02 y*=  0 kappa=23
+   A= 19 B= 24 C=  67: err=+8.331e-03 y*=  0 kappa=7
+   A= 50 B= 63 C= 176: err=+8.201e-03 y*=  0 kappa=17
