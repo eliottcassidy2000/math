@@ -30,6 +30,28 @@ FILES: THM-900 (renumbered from 899); bothclean_search_guy_weave .py/.out; HYP-7
 opus; S329.
 
 ---
+
+## codex-2026-07-16-S18 -- CHECKPOINT: THM-909 claims full limiting residue-six closure
+
+The seven-shift residue quotient becomes complete after restoring exact pair sidecars.
+For a zero residue coordinate, the quotient coordinate is an ordinary runner sector and
+is exactly uniform.  This closes 1,470 of 1,505 zero-containing projective directions at
+`204/2401`; three rational unordered pair-ray rows close the remaining 35 sparse
+directions.  The 675 bad no-zero directions collapse under permutation and projective
+scaling to twenty orbits.  On each, the affine determinant
+`d_ij=r_j*z_i-r_i*z_j mod 7` is shift-invariant, so its quotient expectation equals an
+ordinary labeled pair-sector expectation and lies on the exact THM-891 ray segment.
+
+Rational pointwise certificates on all twenty orbit representatives close with large
+margin; the worst is `(1,1,1,1,4)` at `3240009/48020000=0.06747...`.  Combining all
+branches covers 2,801/2,801 directions and gives the universal limiting estimate
+`-F6<=32/343=0.093294...<0.097`.  This closes the sole limiting sign in THM-891, not
+the finite-t wall remainder or full LRC(14).  Literal solver-free verification is being
+banked before promotion from claimed to proved.
+
+FILES: `THM-909`, `HYP-7065`; exact verifier in progress. -- codex-S18 checkpoint
+
+---
 ## death-star-2026-07-16-S25 -- THM-906: THE c_B(k) CORNER FORM (the residue-6 kernel's named computation DONE: c_B(k) = -(1/(24 prod k_i)) sum_corners (-1)^# B4({k.eps}) -- Bernoulli-B4 alternating corner sum, the quartic analog of THM-880's B2 law; 3-line Fourier derivation; refereed R/c_B = 0.998 at the plateau-dominant regime (exact-Q strata, wide boxes); constants exact rationals over 7^4 (45/2401); the 1/prod k_i + corner-spread PROVE boxeph's taller-relations-smaller-plateau law; = the machinery codex-HYP-7062's universal relation-stratified proofs need) + THE PARALLEL-CHORD LAW PROVED (the owner's Guy/A000241 probe): kernel quadruples v1+v2 = v3+v4 = PARALLEL CHORDS on the residue circle = the pairing-complement of Guy's crossing quadruples; Qcirc(Z_n) = n floor((n-2)^2/4)/2 EXACTLY (pairs in a sum class are automatically disjoint => Qcirc = sum_s C(r(s),2); = n(n-1)(n-3)/8 odd n; GUY'S FLOOR-PRODUCT SPECIES, coinciding with Z(12) = 150); Qlin({1..n}) = quarter-square partial sums = ZARANKIEWICZ'S ATOMS (A002620); the near-AP quadruple ladder 125 (AP) > 95 (deep well) > 83 (GW) >> 7 (random) quantifies the kernel's near-AP concentration = the E4 face of THM-730's AP-extremality -- the T-crossing-numbers tangent's 'same species' intuition is now two exact formulas
 
 Prompt (owner): see how near-AP quadruples relate to Guy's conjecture and A000241; work the additive-relation-stratified residue-6 kernel.
