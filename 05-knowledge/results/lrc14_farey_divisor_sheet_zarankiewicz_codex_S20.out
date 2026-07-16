@@ -1,0 +1,83 @@
+HYP-7085: FAREY DIVISOR SHEETS AND THE ZARANKIEWICZ GUARDRAIL
+==============================================================================
+PASS  Z(7,7)=81
+PASS  Z(7,8)=108
+PASS  Z(8,8)=144
+PASS  deletion averaging propagates Woodall's K_7,7 value to K_7,8 and K_8,8
+PASS  cut-open waveform reflection P_Rm(1-z)=-P_m(z)
+PASS  6,900 exact owner-doubling rows
+PASS  34,791 proper owner-set entries
+PASS  25 primitive owner quotient shapes
+PASS  all proper owner sets have at most four vertices
+PASS  only unconditional small-part Zarankiewicz values occur
+PASS  affine colored K_8,7 fiber identities
+PASS  30,702 proper sheets have zero crossing number
+PASS  both individual signed extrema occur on planar incidence graphs
+PASS  every quotient shape attains both contribution signs
+PASS  the same K_4,7 quotient arc carries both signs
+PASS  a fixed core and owner set flip sign under the far-phase address
+PASS  the fixed sign flip has the same balanced class-parity census
+PASS  an identical full class-parity word carries opposite signs
+PASS  row residual extrema reproduce HYP-7084
+PASS  1,259 distinct proper owner words
+PASS  49,483 exact owner-word frequency evaluations
+PASS  the full bounded-bank frequency scan stays strictly inside 1/2
+
+Exact divisor-sheet theorem
+  wall coordinate: 7x=h/d reduced
+  exact owners: S_d(A)={a in A:d|a}
+  owner-set columns: k mod 7g, g=gcd(S)
+  column count: N_A(S)=7 sum_(T subset A\S) (-1)^|T| gcd(g,T)
+  parity count: N_eta=7 sum_T (-1)^|T| E_eta(gcd(g,T),t)
+  E_0(h,t)=c ceil(delta/2), E_1(h,t)=c floor(delta/2)
+  where c=gcd(h,t), delta=h/c
+  signed word: sum_k [P_m-( {tk/(7g)} )-P_m+( {tk/(7g)} )]/t
+  total swept walls: 954471
+  affine K_8,7 fiber checks: 906171
+
+Affine colored K_8,7 fiber
+  h=a+jd with a in U_d and j in Z_7
+  A_e^+(j)=floor(ea/d)+ej mod 7
+  A_e^-(j)=A_e^+(j)-1_[d|e]
+  A_2t(j)=2A_t(j)+floor(2{ta/d}) mod 7
+  score: pointed rainbow-completion switch, not a crossing count
+  reflection: W_S(-k;b)=W_S(k;R(b)), R(b)=-b-1
+  actual stationary pin 0 reflects to adjacent pin 6, so no cancellation
+
+Zarankiewicz guardrail
+  ordinary exact values: cr(K_7,7)=81, cr(K_7,8)=108, cr(K_8,8)=144
+  proper-sheet Z values: [0, 9, 18, 42]
+  planar proper sheets: 30702/34791 = 0.882470
+  individual minimum: {'row': ((1, 3, 5, 6, 7), 8), 'owners': (7,), 'value': Fraction(-53, 1372), 'size': 1, 'gcd': 7, 'quotient': (1,), 'columns': 42, 'parity_counts': (21, 21), 'z_exact': 0, 'z_full': 0, 'cut': 2, 'energy': 0}
+  individual maximum: {'row': ((3, 5, 7, 8, 9), 12), 'owners': (9,), 'value': Fraction(131, 4116), 'size': 1, 'gcd': 9, 'quotient': (1,), 'columns': 42, 'parity_counts': (21, 21), 'z_exact': 0, 'z_full': 0, 'cut': 2, 'energy': 0}
+  same K_4,7 minimum: {'row': ((2, 3, 4, 6, 8), 10), 'owners': (2, 4, 6, 8), 'value': Fraction(-43, 3430), 'size': 4, 'gcd': 2, 'quotient': (1, 2, 3, 4), 'columns': 7, 'parity_counts': (7, 0), 'z_exact': 18, 'z_full': 84, 'cut': 2, 'energy': 7}
+  same K_4,7 maximum: {'row': ((1, 2, 4, 6, 8), 12), 'owners': (2, 4, 6, 8), 'value': Fraction(15, 686), 'size': 4, 'gcd': 2, 'quotient': (1, 2, 3, 4), 'columns': 7, 'parity_counts': (7, 0), 'z_exact': 18, 'z_full': 84, 'cut': 2, 'energy': 7}
+  fixed-core owner t=8/t=9: -53/1372 11/882
+  their parity counts: (21, 21) (21, 21)
+  identical eta-word sign flip: {6: (Fraction(23, 4116), (0, 0, 0, 0, 0, 0, 0)), 8: (Fraction(-37, 5488), (0, 0, 0, 0, 0, 0, 0))}
+  planar row-sum range: -1441/41160 172/5145
+  positive-Z row-sum range: -97/4116 15/686
+  full residual range: -8087/246960 269/6860
+  full-frequency coefficient range: (Fraction(-1019, 2058), (4, 6, 7, 8, 9), (9,), 47, 9) (Fraction(89, 196), (1, 3, 7, 9, 10), (10,), 15, 10)
+  coefficient extrema by owner size:
+    1 [(Fraction(-1019, 2058), (4, 6, 7, 8, 9), (9,), 47, 9), (Fraction(89, 196), (1, 3, 7, 9, 10), (10,), 15, 10)]
+    2 [(Fraction(-99, 343), (2, 5, 7, 8, 10), (5, 10), 20, 5), (Fraction(37, 98), (3, 4, 5, 9, 10), (5, 10), 15, 5)]
+    3 [(Fraction(-153, 686), (1, 2, 3, 6, 9), (3, 6, 9), 20, 3), (Fraction(139, 686), (1, 2, 4, 7, 8), (2, 4, 8), 12, 2)]
+    4 [(Fraction(-62, 343), (2, 3, 6, 8, 10), (2, 6, 8, 10), 12, 2), (Fraction(90, 343), (1, 2, 4, 6, 8), (2, 4, 6, 8), 12, 2)]
+  correlations with |residual|: {'z_exact': -0.011623021649710404, 'z_full': -0.01130367309156015, 'cut': -0.045929342205856594, 'energy': -0.04489153053259565}
+
+Tournament Analysis
+  vertices: proper owner-set cardinalities 1,2,3,4
+  observable: largest positive signed owner-word contribution
+  switch: largest Zarankiewicz load; exact-column tie gauge
+  positive risks: {1: Fraction(131, 4116), 2: Fraction(37, 1470), 3: Fraction(139, 6860), 4: Fraction(15, 686)}
+  Zarankiewicz risks: {1: (0, 63), 2: (0, 28), 3: (42, 14), 4: (18, 7)}
+  fingerprint: {'positive_path': (1, 2, 4, 3), 'zarankiewicz_path': (3, 4, 1, 2), 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_triangles': 0, 'scc_sizes': (1, 1, 1, 1), 'edge_flips': 5, 'hamiltonian_path_count': 1}
+
+VERDICT
+  PROVED: noncommon walls split exactly into Farey/divisor owner sheets.
+  PROVED: each owner set is a signed cyclic column word with the stated N_A(S).
+  CORRECTED: K_7,7, K_7,8, and K_8,8 are known ordinary crossing cases.
+  REFUTED: Zarankiewicz value, parity, cut, or crossing energy determines the sign.
+  EVIDENCE: every bounded-bank owner word satisfies |t G_S|<1/2.
+  NEXT: prove an adjacent-pin signed-word cap, starting with planar singleton sheets.
