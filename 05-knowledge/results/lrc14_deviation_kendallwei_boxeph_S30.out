@@ -1,0 +1,14 @@
+==========================================================================
+PART 1 -- N2: the deviation identity
+  [family{1..6,60}] P=420 M=42: <Q_s> = 133.443318; universal (pi^2/3)M(1+1/P) = 138.503448; deviation = -5.060131; identity err 4.3e-16
+  [two-owner] P=1260 M=46: <Q_s> = 137.896825; universal (pi^2/3)M(1+1/P) = 151.454040; deviation = -13.557216; identity err 0.0e+00
+  [balanced] P=2940 M=36: <Q_s> = 101.911419; universal (pi^2/3)M(1+1/P) = 118.475537; deviation = -16.564118; identity err 4.2e-16
+  [family{1..6,120}] P=840 M=68: <Q_s> = 232.619134; universal (pi^2/3)M(1+1/P) = 223.977356; deviation = +8.641779; identity err 2.4e-16
+
+==========================================================================
+PART 2 -- the Kendall-Wei / Perron atlas
+  n=4: classes 4 (A000568 ok: True); SC = 2 (A000568 == SC mod 2: True); (i) lambda=0 iff transitive: True; (ii) corr(lambda, -xvar) = +0.9561; (iii) multi-class levels 0, all with lambda-spread > 0: True
+  n=5: classes 12 (A000568 ok: True); SC = 8 (A000568 == SC mod 2: True); (i) lambda=0 iff transitive: True; (ii) corr(lambda, -xvar) = +0.9284; (iii) multi-class levels 2, all with lambda-spread > 0: True
+  n=6: classes 56 (A000568 ok: True); SC = 12 (A000568 == SC mod 2: True); (i) lambda=0 iff transitive: True; (ii) corr(lambda, -xvar) = +0.9360; (iii) multi-class levels 11, all with lambda-spread > 0: True
+  n=7: classes 456 (A000568 ok: True); SC = 88 (A000568 == SC mod 2: True); (i) lambda=0 iff transitive: True; (ii) corr(lambda, -xvar) = +0.9472; (iii) multi-class levels 41, all with lambda-spread > 0: False
+done

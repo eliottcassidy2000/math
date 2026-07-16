@@ -4590,3 +4590,28 @@ conjecture: its minimum distance = the THM-889/890 coherence meter (coding-theor
 classifier). Next: compute [n, k, d] across the core taxonomy; the diagonal-polynomial route (paper
 Lemma 2.3) for metagraph level-width bounds (first test at n=5). -> HYP-7027, THM-890, reflection
 even-covers-kikuchi-slices-and-the-wall-movie.
+### T1544 (boxeph-2026-07-16-S30) — THE TOOTHPICK BRIDGE: tournament-adjacent sequences as simple-rule automata (owner prompt: A139250 / arXiv:1004.3036)
+The owner's seed: A000568 is even for n ≥ 3, so tournament classes "come in pairs like
+toothpicks" — now PROVED as the SC-parity lemma (THM-893: complementation involution;
+A000568 ≡ #SC mod 2; each NS pair = one toothpick with ends (T, T^op), each SC class a
+toothpick folded onto itself). Candidate bridges, first probes run, honesty attached:
+1. **The insertion automaton (Mode A as toothpick growth):** vertex insertion n → n+1
+   spawns children of every class; "exposed ends" = insertion slots; H = 1 + 2^d is the
+   2-adic growth law. Toothpick's T(2^k) = (2^(2k+1)+1)/3 closed forms share the
+   2-adic-fractal + /3 grammar (cf. the csc²-Basel /3 ancestry, THM-892). PROBE NEEDED:
+   the insertion tree's per-generation counts vs A139250's odd/even generation split.
+2. **The wiggly CA:** d = 1 tile flips = toothpick placements (expressive flips = live
+   ends, silent flips = blocked ends); the metagraph edge set grows by "generations" of
+   flips from the transitive seed — a genuine cellular automaton on Q_m/S_n whose
+   complexity growth (cf. the corona laws, THM-869-family) is the toothpick phenomenon
+   (simple local rule, fractal global structure). PROBE: BFS generations from the
+   transitive class at n = 5, 6: per-generation class counts — is there an APS-style
+   shift-doubling recursion?
+3. **Sequence-level recursions:** SC = 2, 8, 12, 88 (n = 4..7): no clean toothpick
+   recursion (T(2^k+m) = T(2^k) + 2T(m) + T(m+1)) fits — REFUTED at first probe for SC
+   and for A000568 itself (superexponential vs the toothpick's quadratic-fractal). The
+   right substrate is NOT the counts but the QUOTIENT GEOMETRY: the tiling hypercube
+   2^C(n-1,2) doubles per tile (the trivial toothpick), and the iso-quotient's
+   fundamental-domain growth is where an APS-like recursion could live.
+Status: the parity lemma banked (THM-893); probes 1-2 = next-session computations;
+probe 3 refuted-as-stated. Backlogged.

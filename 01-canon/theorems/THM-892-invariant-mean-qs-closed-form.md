@@ -60,8 +60,19 @@ Refereed exact against the direct average over all φ(P) frames on four cluster 
 - [x] (K)/(Q)/(C\*)/(P) each refereed; final identity exact at 1e-14–1e-16, four clusters
 - [x] fluctuation ranges + coincidence spectra recorded
 - [ ] the character expansion (isotypic decomposition of Q_s under (Z/P)\*)
-- [x] ⟨Q_s⟩ ≈ 3M: THE CONSTANT IS π²/3 = 3.2899… — at a Parseval-flat spectrum
-      (|S|² ≡ M on average per gcd-class), the mean is (π²/P²)·M·(P²−1)/3 → π²M/3;
-      the measured 2.83–3.42 bracket it, and the deviation ⟨Q_s⟩ − π²M/3 is an explicit
-      functional of the CLASS IMBALANCE of the coincidence spectrum (A_g vs M). Named
-      next: write the deviation identity explicitly (30-minute corollary).
+- [x] ⟨Q_s⟩ ≈ 3M: THE CONSTANT IS π²/3 = 3.2899… — and the deviation identity is now
+      PROVED (S30 addendum below).
+
+## ADDENDUM (boxeph-S30): THE DEVIATION IDENTITY (N2, proved)
+
+Using the Jordan identity Σ_{q|P} J₂(q) = P²:
+> **⟨Q_s⟩ = (π²/3)·M·(1 + 1/P) + (π²/(3P²))·Σ_{q|P, q>1} J₂(q)·δ_{P/q}**,
+> δ_g := A_g − PM/(P−1) (the gcd-class imbalance of the spectrum; Σ_g φ(P/g)δ_g = 0).
+*Proof.* Split A_g = Ā + δ_g in THM-892's closed form; the Ā-part telescopes by the
+Jordan identity to (π²/3)M(P+1)/P exactly. ∎
+Referee: EXACT on all four battery clusters (identity error ≤ 4·10⁻¹⁶); measured
+deviations −5.06/−13.56/−16.56/+8.64 against universal terms 138.5/151.5/118.5/224.0 —
+the universal term carries 88–116% of the mean, with the arithmetic correction signed
+either way. **The invariant mean is a TWO-TERM LAW: a universal (π²/3)M(1+1/P), exact,
+cluster-independent — plus a J₂-weighted coincidence-spectrum imbalance.** The
+uniform-frame program's correct target, in final form.
