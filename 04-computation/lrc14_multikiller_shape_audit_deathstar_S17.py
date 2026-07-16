@@ -408,11 +408,32 @@ def part_BC(kk, time_budget=None):
         print(f"  k={kk} (j={j}): ALL ENUMERATED SHAPES CLEAR — shape-complete on the strata run.")
     return all_fails
 
+def k9_single_shape(miss):
+    """Run ONE k=9 shape to completion (cron banking unit; ~10-20 min each).
+    Usage: python3 ... --k9-shape 4,6,10   (comma-separated missing elements)"""
+    P = [v for v in range(1, 13) if v not in miss]
+    R = set(range(2, 15)) - covered_moduli(P)
+    G_P = good_set(P)
+    m, r, _ = ivset_stats(G_P)
+    wits = witness_list(P)
+    st = {'nodes': 0, 'leaves': 0, 'exact': 0, 'maxW': 0}
+    t0 = time.time()
+    fails = audit_rec(P, wits, G_P, R, 4, 12, [], st)
+    print(f"K9SHAPE miss={tuple(miss)}: R={sorted(R)} m={m} r={r} st={st} "
+          f"fails={len(fails)} [{time.time()-t0:.1f}s]")
+    for S, M, why in fails:
+        print(f"  *** {S}: {M} ({why})")
+    return fails
+
 if __name__ == "__main__":
-    part_E()
-    print()
-    part_A()
-    print()
-    part_BC(10)
-    print()
-    part_BC(9, time_budget=7200)
+    if len(sys.argv) > 2 and sys.argv[1] == "--k9-shape":
+        k9_single_shape(sorted(int(x) for x in sys.argv[2].split(",")))
+    else:
+        part_E()
+        print()
+        part_A()
+        print()
+        part_BC(10)
+        print()
+        print("PART C (k=9, j=4): run per-shape via --k9-shape a,b,c (cron bank; "
+              "220 shapes, ~10-20 min each). See results file scope note.")

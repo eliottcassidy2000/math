@@ -1,8 +1,11 @@
 # HYP-7010 — Multi-killer covering-min: the SHAPE GAP audit (non-interval small parts)
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S17)
-**Verify-first:** anyone building on this should re-run the audit script before citing; numbers
-below are stub-stage until the results file lands.
+**Status:** RESOLVED — CONFIRMED CLEAN + CERTIFIED (death-star-2026-07-16-S17). The shape gap
+was REAL (interval-only basis, free outliers never enumerated) but contains NO counterexample:
+|P| ∈ {10, 11} are now SHAPE-COMPLETE with proved union-tail thresholds (monotonicity-free),
+zero failures across all shapes, all covering pairs/triples below thresholds, all anchors.
+|P| = 9 = named cron bank (--k9-shape unit, ~50-150 core-h). Full numbers: THM-726 ADDENDUM +
+`05-knowledge/results/lrc14_multikiller_shape_audit_deathstar_S17.out`.
 
 ## What is claimed
 

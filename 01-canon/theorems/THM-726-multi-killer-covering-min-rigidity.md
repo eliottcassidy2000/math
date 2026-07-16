@@ -1,7 +1,7 @@
 ---
 id: THM-726
 title: Multi-killer covering-min rigidity — every primitive covering 13-set with ≥2 far outliers has M ≥ 1/13 > 14/183, hence the single-killer deep well {1..12,182} is the UNIQUE global covering-min. Proved by far-element monotonicity (min at the smallest lcm-carrier outliers) + a finite check (64317 configs) + THM-724. Completes the covering-min rigidity with THM-724 (the single-killer half)
-status: PROVED-BY-CERTIFICATION (finite check + monotone tail; the standard covering-min proof shape). The uniform bound M ≥ 1/13 for genuine multi-killer is unconditional GIVEN far-element monotonicity (verified on extremals + THM-720 looseness dichotomy) and the finite check. Combined with THM-724 (single-killer, deep well unique) ⟹ deep well is the unique global covering-min. A closed-form (non-enumeration) inequality is NOT available (the balance provably undershoots — the multi-killer optimum is global, not at the core witness); this matches the certified-not-closed status of the whole covering-min.
+status: PROVED-BY-CERTIFICATION, UPGRADED (see ADDENDUM death-star-S17/HYP-7010): on |P| ∈ {10,11} (j = 2,3) the bound M ≥ 1/13 is now SHAPE-COMPLETE and MONOTONICITY-FREE — all small-part shapes (free outliers included), exhaustive below proved union-tail thresholds, zero failures; far-element monotonicity is no longer an input there. |P| = 9 (j = 4): legacy interval-core certification (this file's original Step 2) + named cron bank to shape-complete. |P| ≤ 8: open strata (union-tail dies at j = 6.5; needs the d=3/moment-order-3 pincer). Combined with THM-724 ⟹ deep well is the unique global covering-min on |P| ≥ 10 unconditionally-certified. A closed-form (non-enumeration) inequality is still NOT available (the balance provably undershoots).
 source: mac-mini-2026-07-13-S70 (the E4 extension of THM-724, prompted by owner: prove the multi-killer rigidity)
 depends_on:
   - THM-724   # single-killer covering-min rigidity (the other half)
@@ -118,3 +118,61 @@ superseded for j <= 4 and reduces to mechanical sweep completion for j = 5,6.
 Credits: kps-S127cont58/HYP-6225 (enumeration, core-length monotonicity target, lcm-carriers),
 THM-724 (single-killer half), THM-717/720 (far-element monotonicity), THM-366 (sieve),
 opus-S253 (balance, multi-constraint framing).
+
+---
+
+## ADDENDUM (death-star-2026-07-16-S17, HYP-7010): shape-completion at |P| ∈ {10, 11} — monotonicity ELIMINATED as an input on these strata
+
+**The gap this closes.** Step 2's finite check enumerated **interval cores {1..k} only**
+(k = 9,10,11, carrier-multiple outliers ≤ 220). Non-interval small parts `P ⊊ {1..12}` admit
+**free outliers** (outliers carrying no missing modulus — impossible for interval cores), e.g.
+`{1..12}\{6} ∪ {w, 182m}` is primitive covering multi-killer for EVERY `w ≥ 13`. These shapes
+were never in the certification basis; and Step 1 (far-element monotonicity) was
+verified-not-proved.
+
+**The replacement (no monotonicity anywhere).** UNION-TAIL LEMMA (the 1/13-threshold version
+of opus-S32's simultaneous-peel; elementary, proof in the script header): if a core has exact
+closed 1/13-good set `G` with measure `m > 0` and `r` components, then any `j ≤ 6` additional
+speeds all `≥ W` with `W > 2jr/(m(13−2j))` leave positive good measure, hence `M ≥ 1/13`
+unconditionally. (Each speed `w` removes at most `(2/13)|I| + 2/(13w)` from each component `I`.)
+The audit recursion applies this at every node with the CURRENT exact `(m, r)` — outliers
+below the threshold are enumerated exhaustively (witness pre-filter, exact-interval decision
+fallback, exact-M referee on any failure); outliers above are cleared by the lemma. No
+monotonicity in outlier values is assumed at any point.
+
+**Results (`lrc14_multikiller_shape_audit_deathstar_S17.py` + `.out`):**
+- **|P| = 11 (j = 2): SHAPE-COMPLETE.** All 12 shapes `{1..12}\{a}`; per-shape exact
+  `m ∈ [7/429, 1/13]`, thresholds `W_all ≤ 382`; 383 below-threshold covering pairs
+  enumerated, ALL clear (every one by explicit rational witness; exact fallback needed 0
+  times); everything above cleared by the lemma. **Zero failures.**
+- **|P| = 10 (j = 3): SHAPE-COMPLETE.** All 66 shapes; ~10⁶ recursion nodes with per-node
+  exact (m, r); ~17k leaf decisions, all cleared by explicit witnesses. **Zero failures.**
+- **Flagship anchors exact:** `{1..14}\{a}` (a = 1..7, all covering, outliers {13,14}) have
+  M = 1/8, 2/17, 2/19, 2/19, 2/21, 2/23, 1/11 — all ≥ 1/13 ✓. Free-outlier family
+  `{1..12}\{6} ∪ {w,182}` clears for ALL w (enumerated + tails). Self-tests: deep well
+  14/183, `{1..11,13,84}` = 7/89, `{1..13}\{6}∪{182}` = 2/23 all reproduced exactly.
+- **New exact data:** the 1/13 measure atlas m(good({1..12}\{a})) = 1/13, 1/26, 20/429,
+  9/286, 254/6435, 7/429, 383/4290, 472/9009, 311/5005, 94/3003, 461/8190, 92/5005
+  (a = 1..12) — hardest shapes a ∈ {6,12}; a = 1 exactly 1/13.
+- **|P| = 9 (j = 4): NOT completed this session** — per-shape cost ≥ 10-20 min × 220 shapes
+  (≈ 50-150 core-hours) = a cron bank, not a session job. The script supports per-shape
+  invocation (`--k9-shape a,b,c`; further parallelizable by top-level w₁ ranges). Until the
+  bank completes, |P| = 9 retains the legacy interval-core certification + adversarial sweeps.
+
+**Consequences for the covering-min chain.** With THM-724 Case 1 (covering + exactly one
+outlier ≥ 13 forces `S = {1..12, 182m}`, the deep-well ladder, unconditional):
+
+> Every primitive covering 13-set with `≥ 10` elements in `{1..12}` has `M ≥ 14/183`, with
+> equality iff the deep well — **certification now shape-complete and monotonicity-free on
+> these strata.**
+
+The S111 low-M rigidity assembly's "outlier-threshold bookkeeping" resolves as: covering +
+`≤ 1` element `≥ 13` ⟹ `P = {1..12}` and `182 | f` (13 and 14 must both divide the unique
+outlier) ⟹ the ladder — the `> 14` wording in the assembly is superfluous; the `≥ 13` count
+is the correct dichotomy variable. Note `{1..14}\{a}` sets are multi-killer in this taxonomy
+(outliers {13,14}) and all clear 1/13 (anchors above), so no near-AP tile is needed for the
+covering-min on |P| ≥ 10 — only for loneliness statements elsewhere.
+
+*Addendum artifacts:* `04-computation/lrc14_multikiller_shape_audit_deathstar_S17.py`,
+`05-knowledge/results/lrc14_multikiller_shape_audit_deathstar_S17.out`, HYP-7010.
+Additional credit: opus-S32 (simultaneous-peel template at 1/14).

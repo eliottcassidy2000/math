@@ -4550,3 +4550,21 @@ n = 3j+2, deficit exactly 1 -- Moser's missing 32nd region = the unique minimal 
 difference diagonal = A060488 (4-block ordered tricoverings) -- bijection wanted. Full note:
 03-artifacts/drafts/figurate-two-axes-macmini-S109.md. Status: verified + partially canonizable;
 OEIS submissions pending.
+
+## T1540: The chamber-word tournament movie and the ledger-spectrum dictionary (death-star-2026-07-16-S17)
+Two named merge candidates from the proof-object synthesis (see the S17 reflection), tournament-facing:
+(a) The 46-word Farey-14 chamber alphabet (klein S313c5, THM-878/879) IS the state space of the
+gap-comparison TOURNAMENT MOVIE: a wall word = the ranking tournament of gap sizes; difference walls
+(order changes, THM-373 wall times m/(2|si-sj|)) = the order-combinatorial skeleton; boxeph's
+sum-handoffs ((vi+vj)t in Z, THM-722) = the metric skeleton. Sum vs difference walls = the +- pair
+(negation = word reversal = the only surviving word symmetry, mac-mini S112). The half-turn t -> t+1/2
+is load-bearing everywhere it appears: deck map of the 2-adic descent (THM-580), Redei/locker involution
+fixed point (witness pairs (j,q-j), fixed point q/2 <-> all-odd <-> t=1/2), opus-S321's tight times
+1/2 + k/7, and now the flat=2xgood Jacobian (THM-882/HYP-7012). Probe: formalize the movie's wall-word
+transition graph as a tournament-analysis switchboard (THM-372) and check whether the 46-word graph's
+structure predicts the covering locus's 12 intervals. Status: TANGENT, no claims.
+(b) LEDGER-SPECTRUM DICTIONARY: THM-722's chain-mass distribution (time side, threshold-free) vs
+LEM-020's multiplicity spectrum mu_k (multiplicity side). Both exact, both see the mid-band. Conjecture
+shape: chain masses = a moment transform of mu_k (deepest handoff <-> 13-fold stack; chain
+equioscillation <-> maxmult<=2 rigidity). First computation: both objects on the same family bank
+(AP, deep well, ladder, compressed, V_c, GW). Status: TANGENT, computation named, unclaimed.

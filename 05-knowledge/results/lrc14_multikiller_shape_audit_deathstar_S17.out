@@ -107,3 +107,16 @@ PART B: k=10 (j=3) — all shapes, recursive exhaust + proved tails
   miss=(4, 12): R=[12, 13, 14] m≈0.04985 r=16 nodes=22898 leaves=948 exact=0 maxW=383 fails=0  [20.5s]
   miss=(10, 12): R=[10, 12, 13, 14] m≈0.04968 r=16 nodes=23096 leaves=334 exact=0 maxW=353 fails=0  [20.9s]
   miss=(4, 6): R=[13, 14] m≈0.04779 r=16 nodes=25042 leaves=2892 exact=0 maxW=2251 fails=0  [22.8s]
+  miss=(6, 10): R=[10, 13, 14] m≈0.04762 r=16 nodes=25169 leaves=1336 exact=0 maxW=372 fails=0  [23.0s]
+
+  k=10 (j=3): ALL 66 SHAPES CLEAR — shape-complete. [66th line + this summary harvested from
+  the session task buffer after SIGINT; the per-shape lines above are the live tee stream.
+  Totals: 66/66 shapes, 0 failures, exact-fallback used 0 times (all leaf decisions cleared
+  by explicit rational witnesses); every above-threshold stratum cleared by the union-tail
+  lemma with per-node exact (m, r).]
+
+PART C (k=9, j=4): NOT RUN TO COMPLETION THIS SESSION — scope decision (death-star-S17):
+  per-shape cost ~10-20 min x 220 shapes ≈ 50+ core-hours = a cron-scale bank, not a session
+  job. The script supports per-shape invocation for parallel banking (see --k9-shape flag).
+  Until the bank completes, |P| = 9 retains only the legacy interval-core certification
+  (kps-S127cont58 / mac-mini-S70) + the fleet's adversarial sweeps.

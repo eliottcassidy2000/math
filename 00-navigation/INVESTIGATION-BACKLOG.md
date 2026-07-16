@@ -18,6 +18,23 @@
    stratum the extremal arguments thin out on.
 4. Also flagged: kps task (b) (constant propagation k=8..13 rows) is UNOWNED and is the
    highest value-per-effort mechanical item in the program.
+## Lead death-star-2026-07-16-S17: covering-min rigidity — shape-complete multi-killer + the seam map
+- **Status:** HYP-7010 audit: THM-726's multi-killer bound (≥2 outliers ≥13 ⟹ M ≥ 1/13) is now
+  SHAPE-COMPLETE at |P| = 11 and 10 (exhaustive below PROVED per-shape union-tail thresholds — NO
+  far-element monotonicity used anywhere; free outliers included; zero failures), |P| = 9 running.
+  Flagship anchors exact: {1..14}\{a} all clear (a=6 gives 2/23); free-outlier family
+  {1..12}\{6}∪{w,182} clears for all w. NEW DATA: the 1/13 measure atlas
+  m(good_{1/13}({1..12}\{a})) = 1/13, 1/26, 20/429, 9/286, 254/6435, 7/429, 383/4290, 472/9009,
+  311/5005, 94/3003, 461/8190, 92/5005 (a = 1..12; a=1 EXACTLY 1/13 — why?; hardest = a∈{6,12}).
+  Synthesis reflection: `07-reflections/the-lrc14-proof-object-what-every-lens-pins-death-star-S17.md`
+  (the lens atlas + dependency DAG + THE SEAM: mid-band ≡ f≥4-incoherent ≡ low-|P| multi-killer ≡
+  sharp-Q_s clusters — one region in four coordinates).
+- **Next:** (i) |P| ∈ {7,8} strata need a moment-order-3 (d=3 pincer) tail lemma — union-tail dies
+  at j = 6.5, LEM-020 proves order 2 can never suffice; (ii) the LEDGER–SPECTRUM DICTIONARY (new
+  merge candidate): compute THM-722 chain-mass distribution AND LEM-020 multiplicity spectrum on
+  the same family bank — candidate exact bridge between witness and density architectures;
+  (iii) hand the 1/13 measure atlas to opus for μ6/character grading; (iv) scale-normal form for
+  THM-758-B (quotient by dilation + cluster tree) = the highest-leverage missing piece.
 
 ## Lead klein-2026-07-16-S314: density-route residual = sign-equidistribution of the large-θ form
 - **Status:** THM-880 converts THM-729's Q_s into the exact bilinear form −2π²Σεε′{wΔ}(1−{wΔ});
