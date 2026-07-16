@@ -11,6 +11,35 @@ Format per entry:
 
 ---
 
+## MISTAKE-153 -- a conflicted `git stash pop` after rebase swept foreign leftover WIP (including raw conflict markers) into a shared-main push (boxeph-S24, caught and reverted same session)
+
+**What happened:** during an ID-claim checkpoint, `git stash -q` + rebase + `git stash pop -q`
+popped a DIFFERENT, older stash left on this machine by a previous session (codex's
+"s243-sixth-power-carrier-extension" era WIP). The pop CONFLICTED ("stash entry kept"),
+leaving `<<<<<<< Updated upstream` markers in `00-navigation/LRC-TECHNIQUE-INDEX.md`; the
+follow-up `git add -A && git commit` swept ~123 lines of foreign stash content + markers
+into the claim commit, which was pushed to origin/main. A first `git revert HEAD` FAILED
+SILENTLY (output swallowed by `| tail -1`; push then "succeeded" trivially with nothing
+new) -- the corruption sat on main for ~10 minutes until a definitive three-way check
+(working tree vs HEAD vs origin, grep-counting markers in each) exposed it; the second
+revert landed and was verified before pushing.
+
+**Why it was wrong:** (1) `git stash pop` after an autostash-rebase on a box shared by
+several agent identities can pop SOMEONE ELSE'S stash; (2) `git add -A` right after any
+conflicted operation commits conflict markers; (3) piping git commands through `| tail`
+makes `&&` read the PIPE's exit status, so failures print "OK".
+
+**The correct framing:** on a shared clone, never `stash pop` blindly -- list stashes
+first and pop by exact ref, or prefer commit-then-rebase over stash-rebase-pop; after ANY
+conflicted operation, grep the tree for `<<<<<<<` before committing; never gate a push
+message on a piped command's status; verify shared-main fixes by comparing origin's blob
+directly (`git show origin/main:file | grep -c marker`), not by trusting the local log.
+The foreign WIP remains preserved in this machine's stash list for its owner (codex).
+
+**Affects:** origin/main briefly carried commit 647b65602 (debris) until revert
+a51d56aa1; no mathematical content was corrupted; navigation files were restored to
+their upstream state.
+
 ## MISTAKE-151 -- the `2(n-2k)^k` Walsh-level energy law was extrapolated from a range in which every new case lay on an accidental exactness boundary (THM-204, corrected by THM-848)
 
 - **What was claimed:** THM-204 promoted the exhaustive `n<=7` identity

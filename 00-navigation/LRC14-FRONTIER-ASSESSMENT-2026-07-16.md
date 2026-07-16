@@ -193,3 +193,40 @@ views refine the exact structure of the object".
 
 *boxeph-2026-07-16-S23. Sources: THM-366..884 as cited; session log 07-14..07-16; klein's
 LRC14-FINISH-MAP-2026-07-13 (architecture unchanged; status superseded as described).*
+
+---
+
+## ADDENDUM (boxeph-S24, same night, ~02:15) — the frontier moved again
+
+1. **The doubling law (2× mechanism COMPLETE).** Same-night triple convergence on the
+   6617 identity resolved into one theorem: F_N = 2·G_N mod 1 EXACTLY at every odd N,
+   with the site permutation u ↦ u·2⁻¹ on (Z/N)\* labels (THM-882 addendum, joint with
+   death-star HYP-7013's pointwise N = 13 map). ×2 on points = ×2⁻¹ on site labels: one
+   element, two actions. Fails at every even N.
+2. **The multi-killer sweep (this session).** Independent implementation of the
+   THM-883-macmini fragmentation box: j = 2, 3, 4 cross-validated (zero covering
+   violations; the box's entire sub-1/13 content identified as the KNOWN non-covering
+   Goddyn–Wong tight families, M = 1/14 at the tight-locus 14ths — the covering
+   hypothesis is load-bearing exactly against GW). j = 5: ~27M branches, ZERO
+   sub-1/13 configs of any kind (covering or not). j = 6 running. See THM-885.
+3. **HYP-6994 (the [A]-sharp seam) is now per-cluster PROVED on a bank** (klein S314
+   cont.3): the w-freeness lemma (coprime w sweeps Z_P) makes the sup-norm question ONE
+   exhaustive scan per cluster for ALL w simultaneously — executed with C = 14 on five
+   clusters ⟹ Q_s ≤ (14π²/3)M there. The Weyl-dipole route FAILS (caught honestly).
+   Residual: the uniform statement, three named routes (miss-pattern automaton induction
+   flagged most promising). This matches this document's "uniformity, not existence"
+   reading — the per-instance side is now fully decidable AND cheap.
+4. **death-star's companion synthesis** (their S17 reflection, same owner prompt): a
+   24-lens atlas + dependency DAG, and the sharpest seam statement yet: the open region
+   is ONE region in FOUR coordinate systems — mid-band (Vmax/14, 9Vmax/14) =
+   f ≥ 4-incoherent = low-|P| multi-killer = sharp-Q_s clusters. Their shape-audit
+   (THM-726 addendum, |P| ∈ {10,11} monotonicity-free) double-witnesses the fragmentation
+   sweeps and resolves the S111 outlier-threshold bookkeeping.
+5. **ID hygiene alert:** THM-882 now has THREE claimant files (mine adjudicated
+   first-push by mac-mini's renumber note; opus's cyclotomic-face and klein's
+   hyp6994-weyl-assault need next-free numbers — proposed 886/887 in my S24 letter).
+
+Net: of the assessment's five priority moves, #1 (constant propagation) is still
+unowned, #2 (decidable compact-core sweep) is executing tonight across three boxes,
+#3 (HYP-6994) advanced to per-cluster-proved with a named uniform route, #4 and #5
+unchanged.
