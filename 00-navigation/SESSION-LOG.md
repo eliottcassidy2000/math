@@ -42,6 +42,38 @@ Prompt (owner): find the invariant separating the resistant 31; work negative re
 (3) Negative residue 6 (codex's sole limiting sign, A_15+A_24 concentration): proposed the negation transfer -- residue 6 = -1 mod 7; if Error_t is +-equivariant (S112 negation-reversal + klein's +-pair witnesses), negative-6 maps to positive-1 (CLOSED) -- check equivariance of the A_15/A_24 sectors before building a higher-order certificate.
 TARGETS UPDATED: [resistant-31: DONE] [j=6: rerouted] [neg-res-6: transfer proposal out] [new: x-spectral lemma consequences -- which OTHER axis invariants are spectral?; Kendall-Wei depth-vs-n law; interior-stage cut construction].
 
+## opus-2026-07-16-S328 -- THM-897 THE LEVEL-5 WALL (coercive m' <= 15; THE FULL 13-COMB PROBLEM INSIDE at 35035/371293 = 9.44%, 35035 = 5x7^2x11x13; ladder complete 6.5/7.5/11.5/15.5) + THE TRIPLE BEAT LEMMA T1 PROVED (3 lines from THM-815; 4/4 refereed) + THE ADMISSIBILITY DISCOVERY (3 exact 13-packet negatives: the 13-multiple, ADDITIVE QUADRUPLES (lift-immune), a 7-dilate cluster: the level-5 regime is JOINTLY delimited by the additive (S321) and multiplicative (THM-863) axes -- the program's two coordinate systems are its top rung's two admissibility conditions) (HYP-7045)
+
+Prompt (owner): prove the triple beat lemma and compute the level-5 wall.
+
+[W] W5(m')/13^5 = 57067, 46013, 35035, 23309, 9867 at m' = 11..15; dead -6435 at 16.
+THE FULL SCALE-ONE PROBLEM (13 combs, no prefix) is a level-5 statement with 9.44%
+margin; the numerator factors 5x7^2x11x13.
+[T1] PROVED: |mu(W cap D3) - (2/13)mu(W)| <= 22 kappa_W/(169 x3) -- THM-815's
+discrepancy per component, both sides; applied to W = D1 cap D2 cap E with kappa_W <=
+2(x1+x2)/13 + kappa_E; refereed 4/4 with 5-50x slack.
+[T2] cascade empirics: mu3/((2/13)mu2) in [0.93, 3.25]; consecutive peak 3.254;
+(77,143,169) exactly 1.000; proof route = the sub-orbit engine at the triple resonance
+integer |h x3 c - p A| (one session at THM-864 rigor).
+[R] the honest boundary, three exact referees: packet(residues 1..13): BONF5 = -0.319
+(S5 7x: the 13-multiple aligns with the grid = the THM-769 deep fibre); packet(no
+13-mult, lifts 20-60): -0.095 with S2 EXACT to 4 digits but S4/S5 at 1.4x/3.7x --
+ADDITIVE QUADRUPLES (x_i + x_j = x_k + x_l), immune to lift size = the S321 energy
+axis; packet(greedy Sidon): -0.642 (S5 12x) -- the construction made 7 elements
+divisible by 7: a DILATE cluster = the THM-863 ratio axis. THE DISCOVERY: the level-5
+equidistribution regime = jointly additive-Sidon AND ratio-non-resonant: the two
+coordinate systems this program built are exactly the two admissibility conditions of
+its own top rung. Whether ANY 13-packet at accessible scale satisfies both = named
+open (if empty, the full-problem certificate is genuinely asymptotic and the prefix
+recursions remain the effective route -- and the ladder explains WHY).
+
+NEXT (named): the both-clean 13-packet search (Sidon x ratio-clean x no 13-multiple);
+T2 referee-grade; the quadruple LOWER bound (the level-4 hypertree = Hunter's move one
+rung up).
+
+FILES: THM-897; level5_wall_triple_beat .py/.out (4 computations); HYP-7045. opus; S328.
+
+---
 ## boxeph-2026-07-16-S31 -- THE j=6 HARVEST VERDICT (honest: killed at 8.5h, <5/264 shapes/shard; ELEMENTARY TILE BOUNDARY = j <= 5; j=6 = density-chain territory, explicit via the ledger; interior-stage cut named) + THE COSPECTRAL CENSUS (256 pairs at n=7; the owner's score-of-scores separates 225/256; 31 resist spectrum AND second scores -- the next degeneracy class named)
 
 Prompt (owner): harvest j=6 when ready; keep proving little statements.

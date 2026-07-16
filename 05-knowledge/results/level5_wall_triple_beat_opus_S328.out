@@ -1,0 +1,42 @@
+(A) THE LEVEL-5 WALL W5(m)/13^5:
+   m' = 11: W5 =   57067 COERCIVE
+   m' = 12: W5 =   46013 COERCIVE
+   m' = 13: W5 =   35035 COERCIVE   <-- THE FULL PROBLEM
+   m' = 14: W5 =   23309 COERCIVE
+   m' = 15: W5 =    9867 COERCIVE
+   m' = 16: W5 =   -6435 dead
+   m' = 17: W5 =  -26949 dead
+   m'=13 margin: 35035/371293 = 0.0944; factor: 5x7^2x11x13 = 35035
+
+   13-comb packet (residues 1..13 lifted): S1..S5 exact (this is heavy: C(13,5) = 1287 quintuple intersections)
+   S2 = 1.873600
+   S3 = 1.175534
+   S4 = 0.782047
+   S5 = 0.799555
+   BONF5 >= -0.319443   actual uncovered = 0.120016   not coercive
+
+(B) T1 (scale-separated triple beat): |mu(W cap D3) - (2/13)muW| <= 22 kappa_W/(169 x3)
+   (40,67,1201): err = 0.0001440  cap = 0.0019510  dominates: True
+   (33,90,2003): err = 0.0000298  cap = 0.0014298  dominates: True
+   (51,52,1500): err = 0.0000714  cap = 0.0013886  dominates: True
+   (29,41,601): err = 0.0002612  cap = 0.0025992  dominates: True
+
+(C) same-scale triples: mu3 vs the cascade (2/13)*mu2 (enhancement ratio):
+   (150,151,152): mu2 = 0.023671  mu3 = 0.011849  mu3/((2/13)mu2) = 3.254
+   (99,199,300): mu2 = 0.023661  mu3 = 0.007227  mu3/((2/13)mu2) = 1.985
+   (77,143,169): mu2 = 0.023669  mu3 = 0.003641  mu3/((2/13)mu2) = 1.000
+   (200,201,403): mu2 = 0.023670  mu3 = 0.007893  mu3/((2/13)mu2) = 2.167
+   (101,137,211): mu2 = 0.023671  mu3 = 0.003380  mu3/((2/13)mu2) = 0.928
+no-13-multiple packet: [334, 372, 408, 419, 448, 462, 478, 574, 583, 586, 701, 707, 758]
+S2 = 1.845901 (equid: 1.846154)
+S3 = 1.098995 (equid: 1.041420)
+S4 = 0.572494 (equid: 0.400546)
+S5 = 0.414610 (equid: 0.110920)
+BONF5 >= -0.095209  actual = 0.107563  not coercive
+SIDON packet (13 speeds, distinct residues, no repeated sums/diffs):
+[301, 308, 322, 350, 385, 455, 511, 630, 742, 882, 980, 1281, 1498]
+S2 = 1.851215 (equid: 1.846154)
+S3 = 1.242664 (equid: 1.041420)
+S4 = 1.063445 (equid: 0.400546)
+S5 = 1.313787 (equid: 0.110920)
+BONF5 >= -0.641790  actual = 0.105546  not coercive
