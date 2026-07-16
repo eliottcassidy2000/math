@@ -1,0 +1,30 @@
+collecting n=7 deep ties...
+equal-H pairs inside deep-tied (A,K,L) groups at n=7: 27
+CONED to n=8: full-panel (A,K,L,H,tau) INVISIBLE pairs manufactured: 27/27
+pairs where ONLY cpK broke the tie after coning: 0
+structural lemmas (30 random): cpA(cone)=x*cpA True; H(cone)=H True; tau collapse True; cpL(cone)(x)=x*cpL(x-1) True
+SUSPENSIONS (source+sink) of the 4 equal-H n=6 deep-tied pairs: 4/4 full-panel invisible at n=8 (suspension = both circles of the cocylinder collapsed to points)
+cocone lemma tau(cocone) = (0, n*tau(base)) (20 random): True  -- the sink is a black hole (tau collapses), the source is a mirror (tau scales by n)
+
+tau_out (win-tree vector) on the manufactured n=8 invisible pairs:
+  tau_out SPLITS 23/27, ties 4/27
+  n=7 invisible pairs re-derived as cones: 4; tau_out splits 4 of them
+  d-moment sequences 1^T K^j 1 (j<7) EQUAL for 27/27 base pairs (explains cpK(cone) ties via the border-determinant resolvent)
+pairs where ONLY cpK broke the tie after coning: 0
+structural lemmas (30 random): cpA(cone)=x*cpA True; H(cone)=H True; tau collapse True; cpL(cone)(x)=x*cpL(x-1) True
+SUSPENSIONS (source+sink) of the 4 equal-H n=6 deep-tied pairs: 4/4 full-panel invisible at n=8 (suspension = both circles of the cocylinder collapsed to points)
+cocone lemma tau(cocone) = (0, n*tau(base)) (20 random): True  -- the sink is a black hole (tau collapses), the source is a mirror (tau scales by n)
+
+tau_out (win-tree vector) on the manufactured n=8 invisible pairs:
+  tau_out SPLITS 23/27, ties 4/27
+  n=7 invisible pairs re-derived as cones: 4; tau_out splits 4 of them
+  d-moment sequences 1^T K^j 1 (j<7) EQUAL for 27/27 base pairs (explains cpK(cone) ties via the border-determinant resolvent)
+
+THE DOUBLE-BLIND FOUR (n=8 pairs tied on A,K,L,H,tau_in AND tau_out):
+  base pair: H=23, tau_in split=True, tau_out tied=True  (tau_in: (0, 96, 108, 180, 192, 432, 576) vs (0, 72, 120, 216, 240, 288, 648))
+  base pair: H=29, tau_in split=True, tau_out tied=True  (tau_in: (0, 78, 102, 132, 294, 408, 606) vs (0, 66, 114, 222, 264, 276, 678))
+  base pair: H=31, tau_in split=True, tau_out tied=True  (tau_in: (0, 78, 78, 156, 312, 390, 624) vs (0, 42, 168, 228, 246, 258, 696))
+  base pair: H=43, tau_in split=True, tau_out tied=True  (tau_in: (0, 222, 240, 246, 354, 420, 498) vs (0, 174, 240, 282, 420, 426, 438))
+  MECHANISM confirmed for all 4: base split ONLY by tau_in; the cone launders exactly that witness: True
+  RUNG n=9: 4/4 stay tied on the EXTENDED panel (A,K,L,H,tau_in,tau_out) after another cone -- with the transform lemmas (cpA,cpL shift; H fixed; tau_in collapse; tau_out scale x8) this persists for ALL n>=8.
+  joint-tau blind pairs at n=7 itself: 0/27 (the joint tree-panel first goes blind at n=8, and only via the cone construction)

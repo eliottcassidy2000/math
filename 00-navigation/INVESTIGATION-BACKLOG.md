@@ -10,6 +10,11 @@
   (ii) even n (classes double; the ⌊⌋-products split); (iii) write the L1 separation-count
   proof in full (the referee guarantees it; the arc-overlap bookkeeping is routine);
   (iv) the engineering note: round-robin scheduling ⟺ 2-page optimal (mandate).
+## Lead klein-2026-07-16-S315c3: the coning tower — invisible pairs at all n >= 8 (THM-918)
+- **Source:** klein-S315 cont.2 census + cont.3 coning laws; owner directive (coning x cocylinders).
+- **Status:** OPEN (three shaped follow-ups).
+- **Found:** sink crushes tau_in to det(L+I), source scales by n; tau_out splits the 4 n=7 "invisibles" (panel was one-eyed); double-blind four (bases split only by tau_in) cone to extended-panel-invisible pairs at n=8, persist forever by the transform laws (cpK leg = HYP-7096).
+- **Next steps:** (1) prove HYP-7096 (deep tie => equal d-moments 1^T K^j 1; closes cpK for all n); (2) n=8 invariant-hash census: count TOTAL invisible pairs vs the 27 manufactured — do non-cone invisibles exist?; (3) prove cpA => cpK via K = 2A - (J-I) rank-one resolvent (0/116 splits at n=7 says yes).
 
 ## Lead death-star-2026-07-16-S27: THM-913 parallel-class book drawing + glue progress
 - **Status:** the Z_n book construction achieves Z(n) exactly (n = 5..13; contiguous
