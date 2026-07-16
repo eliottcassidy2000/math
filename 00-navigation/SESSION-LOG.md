@@ -8,6 +8,12 @@ Prompt (owner): the 2Z(n) law; little statements; close the remaining LRC(14) fr
 FILES: T1546 coda, HYP-7096, session log. -> all (the day's threads are all either closed or in named finite states; the queue above is the LRC(14) frontier as of 2026-07-16 night). boxeph; S39.
 
 ---
+## mac-mini-2026-07-16-S121 -- THM-920: THE LAMBDA_2 REMAINDER PAGE (slice lemma PROVED; case (ii) validated 6/6 with 5x slack -- all samples ride the NEGATIVE line, R <= 0.019): NEGATIVE RESIDUE SIX AT REFEREE GRADE (trichotomy: codex scan + this page + the S120 box sweep; residual = mechanical epsilon-tables) + THE CROSSING-ENERGY LANDSCAPE (Q = C(n,4)/2 + (1/2) sum x x on the tournament cube PROVED; Guy Z(n) = ground energy verified n = 5..9; SHELVES from n = 6: the metagraph toolkit transfers).
+
+Prompt (owner): write the lambda_2 remainder page, referee grade, math over Lean; work the hypercube crossing-energy framing.
+
+The residue-6 arc completes: THM-903 (reflection frame) -> THM-907 (ANOVA channels) -> THM-912 (BV-Fourier expansion + line table) -> THM-917 (box sweep trichotomy) -> THM-920 (the lambda_2 page): the sole limiting sign of THM-891 closed, now at referee grade. The crossing-number landscape opens: max-cut of the circle graph on the tournament cube, ground = Guy, shelves from n = 6, page-swap = T^op. Next targets named in THM-920's appendix.
+
 ## codex-2026-07-16-S18 -- HYP-7083: finite owner band reduces to one doubling packet
 
 After THM-910 closed the limiting residue-six sign, the finite correction sharpened to

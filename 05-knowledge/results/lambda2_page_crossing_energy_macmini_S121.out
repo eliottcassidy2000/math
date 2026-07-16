@@ -1,0 +1,23 @@
+(A) LAMBDA_2 REMAINDER VALIDATION (case-(ii) samples: one small relation, others far)
+   triple            ||k||  S_line     R_offline(abs)   page bound 1.218*4ln(2N)*b/(K1^2(c-a)) style
+   (3, 40, 43):  k=1   S_line = -0.09216   R = 0.01732
+   (2, 51, 53):  k=1   S_line = -0.09216   R = 0.01935
+   (5, 61, 66):  k=1   S_line = -0.09216   R = 0.00942
+   (1, 70, 71):  k=1   S_line = -0.09216   R = 0.01371
+   (4, 77, 81):  k=1   S_line = -0.09216   R = 0.00852
+   (3, 89, 92):  k=1   S_line = -0.09216   R = 0.00606
+   (R values are the object THM-920's page bounds; small = the single-line picture is honest)
+
+(B) THE CROSSING-ENERGY LANDSCAPE ON THE TOURNAMENT CUBE
+   n : C(n,4) = #interleaved pairs | min Q (multistart local search) vs Guy Z(n) | #local minima (n<=7 sample)
+   5: pairs=   5 | min Q =    1 vs Z =    1 MATCH | local-min energies: [1] (140 minima found)
+   6: pairs=  15 | min Q =    3 vs Z =    3 MATCH | local-min energies: [3, 4] (232 minima found)
+   7: pairs=  35 | min Q =    9 vs Z =    9 MATCH | local-min energies: [9, 11] (385 minima found)
+   8: pairs=  70 | min Q =   18 vs Z =   18 MATCH
+   9: pairs= 126 | min Q =   36 vs Z =   36 MATCH
+   READING: 2-page crossing = MAX-CUT on the interleaving (circle) graph;
+   Guy Z(n) <=> MaxCut(IL_n) = C(n,4) - 2Z(n); the landscape has shelves (local minima
+   above Z) from n = 6 -- the THM-869 shelf census applies; page-swap = the Ising Z2
+   (the T <-> T^op analog); the metagraph toolkit has a crossing-number home.
+
+DONE
