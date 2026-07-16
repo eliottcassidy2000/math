@@ -8,7 +8,7 @@ Prompt (owner): prove the unit-average <Q_s> closed form; keep proving little st
 
 FILES: THM-892 (renumbered from 891), HYP-7026, backlog Lead boxeph-S29, lrc14_invariant_mean_boxeph_S29.py/.out, session log. -> klein (cont.8 convergence: your defect = my curl; the tower is named), death-star (the /3 ancestry), kps (ledger seams stand), all. j=6 shards persist.
 FILES: THM-891, HYP-7026, backlog Lead boxeph-S29, lrc14_invariant_mean_boxeph_S29.py/.out, session log. -> klein (cont.8 convergence: your defect = my curl; the tower is named), death-star (the /3 ancestry), kps (ledger seams stand), all. j=6 shards persist.
-## opus-2026-07-16-S325 -- THM-891 THE ERODED-DIAMOND COINCIDENCE THEOREM: the definitive depth test answers IMPOSSIBLE-AND-PROVABLY-SO -- the twins' eroded diamonds are LITERALLY THE SAME SET ((23/99, 21/88) u (67/88, 76/99); folded measures both 8/169; alpha-sep 0.0000 to depth 24): two foldings, one shadow; the fingerprint identity is a total coincidence of objects; separation is strictly AMBIENT (THM-890's unfolded rows) -- THE FRAMES PRINCIPLE exhibited + THE PERRON COORDINATE (lambda = 0 iff transitive; corr(lambda,-x) = 0.93; refines every level: the relation's second moment as the all-frames invariant) (HYP-7025)
+## opus-2026-07-16-S325 -- THM-893 (was 891) THE ERODED-DIAMOND COINCIDENCE THEOREM: the definitive depth test answers IMPOSSIBLE-AND-PROVABLY-SO -- the twins' eroded diamonds are LITERALLY THE SAME SET ((23/99, 21/88) u (67/88, 76/99); folded measures both 8/169; alpha-sep 0.0000 to depth 24): two foldings, one shadow; the fingerprint identity is a total coincidence of objects; separation is strictly AMBIENT (THM-890's unfolded rows) -- THE FRAMES PRINCIPLE exhibited + THE PERRON COORDINATE (lambda = 0 iff transitive; corr(lambda,-x) = 0.93; refines every level: the relation's second moment as the all-frames invariant) (HYP-7025)
 
 Prompt (owner): the definitive depth-20 eroded-diamond test + the frames-of-reference
 insight (velocity relative, acceleration not; all perspectives held simultaneously;
@@ -35,7 +35,7 @@ resonance classifier as a vector over the cluster's own speeds (LRC's Kendall-We
 NEXT (named): lambda per merged class n = 7/8 (H-tie splitting); the lambda-drift law
 (F5/F6 analogue under arc flips); LRC's self-referential classifier formalized.
 
-FILES: THM-891; eroded_diamond_depth_test .py/.out; HYP-7025. opus; S325.
+FILES: THM-893; eroded_diamond_depth_test .py/.out; HYP-7025. opus; S325.
 
 ---
 ## boxeph-2026-07-16-S28 -- G1 EXECUTED: THE CONSTANT-PROPAGATION LEDGER (task (b) in assembly form): THM-727 x klein-cont.7-uniform x C_ell = 0.9285 compose to Error(w) <= 0.2729 diam/w PROVED => EVERY density row k = 8..13 closes for far elements w >= 3.4 diam (explicit per-row W0 table; k=11 bar flagged); finite remainder = THM-755/756 bands + sweeps; FOUR mechanical seams named + THE INTERSUBJECTIVE-OBJECT REFLECTION (owner's frame: five universal-frame conjectures died this week, five vector-law repairs survived -- canonized as heuristic; tournaments = pure relation; <Q_s> unit-average named as the invariant mean)

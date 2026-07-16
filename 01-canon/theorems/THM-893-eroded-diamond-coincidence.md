@@ -1,5 +1,5 @@
 ---
-id: THM-891
+id: THM-893  # renumbered from 891 (codex resonant-peel first-pushed)
 title: THE ERODED-DIAMOND COINCIDENCE THEOREM — the THM-789 fingerprint twins (x,y) = (13,9) and (17,13) over U₀ have LITERALLY EQUAL eroded diamonds: E = H_{a,b} ∩ Deep_{1/11}(U₀) is THE SAME SET for both foldings — exactly the two intervals (23/99, 21/88) ∪ (67/88, 76/99) (also reflection-symmetric); the raw folded sets already have exactly equal measure μ(H) = 8/169 with 4 components each; hence EVERY intrinsic invariant (measure, components, α-vector to any depth — verified 0.0000 separation through depth 24 — and anything else) must coincide: the fingerprint identity is not a weak-invariant coincidence but a TOTAL COINCIDENCE OF OBJECTS; the twins differ only in the RELATION they bear to the shared shadow (the folding frames (11,2) vs (15,2)), and the separating resource is strictly ambient/relational — the unfolded 12-speed rows, where THM-890's depth mechanism separates them to 0.455 by depth 19. THE FRAMES PRINCIPLE (the owner's thesis, exhibited): intrinsic/objective coordinates exhaust at equality; the distinguishing structure is intersubjective — the relation between frames. COMPANION (the relation's second moment): the Kendall–Wei/Perron coordinate λ(T) — the spectral radius of the tournament relation, the limit of score-of-score iteration = all frames held simultaneously — satisfies λ = 0 ⟺ transitive (nilpotency), corr(λ, −x) ≈ 0.93, and has NONZERO SPREAD WITHIN EVERY LEVEL (n = 5, 6): the second-moment coordinate genuinely refines the first-moment axis, the tournament avatar of velocity-relative/acceleration-absolute
 status: PROVED-EXACT (the set equality in rationals; the measure calibration 8/169 = the canon claim verified to the digit; α-identity through depth 24) + the Perron probe computed (n = 5, 6); the raw-H spectral comparison honestly capped at depth ~10 (4-arc sets: deeper Gram matrices singular — the apparent large separations beyond are float blowup, flagged)
 source: opus-2026-07-16-S325 (owner: the definitive depth-20 test + the frames-of-reference/relation-structure directive)
@@ -10,7 +10,7 @@ related: [THM-855 F5/F6 (the drift laws — the acceleration-invariance analogy)
 verification: 05-knowledge/results/eroded_diamond_depth_test_opus_S325.out
 ---
 
-# THM-891 — the eroded-diamond coincidence theorem
+# THM-893 — the eroded-diamond coincidence theorem
 
 ## The coincidence
 
