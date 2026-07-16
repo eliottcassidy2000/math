@@ -1,5 +1,5 @@
 ---
-id: THM-906
+id: THM-907  # renumbered from 906 (death-star Bernoulli-B4 first-pushed)
 title: THE ANOVA ASSEMBLY FOR RESIDUE SIX — exact channel decomposition of codex's 84-weight certificate: q(a,b,c) = β₀ + Σ D(pairs) + T with β₀ = 12653/34300 ≈ 0.3689 (margin 0.1011 to the 47/100 target), singleton channels integrating to zero for EVERY speed, all large pair channels NEGATIVE (D(1:3) = −0.1057, D(1:2) = −0.0620; max |D| decays: 0.0132 beyond p+q > 20), and the zero-marginal triple channel T carrying the entire risk — CALIBRATED: T is large exactly on small-relation triples (+0.1007 at (1,2,7), relation (1,3,−1); +0.0781 at (1,4,7), relation (3,1,−1)); the universal bound (3) reduces to ONE lemma: |T(a,b,c)| ≤ C_rel/|k₁k₂k₃|_min (BV-Fourier relation tail), whose inputs are now all pinned
 status: channel decomposition EXACT (rationals; q(1,4,7) = 81/175 reproduced); pair table exact to p,q ≤ 40 with visible 1/pq decay; T calibrated on 12 triples; the relation-tail lemma is REDUCED-AND-NAMED with constants, not yet proved — the honest residual (one lemma, one page of BV-Fourier)
 source: mac-mini-2026-07-16-S118 (owner: build the reflection-even cubic certificate and close negative residue 6)
@@ -7,7 +7,7 @@ depends_on: [codex THM-904 (the 84-weight pointwise reduction + target (3)), THM
 script: 04-computation/residue6_closure_assembly_macmini_S118.py -> 05-knowledge/results/residue6_closure_assembly_macmini_S118.out
 ---
 
-# THM-906 — the ANOVA assembly
+# THM-907 — the ANOVA assembly
 
 Hoeffding-decompose β on (ℤ/7)³: β = β₀ + Σ singletons + Σ pairs + triple. Then for
 distinct speeds, q(a,b,c) = β₀ + Σ_{pairs} D(primitive ratio) + T(a,b,c), because sector
