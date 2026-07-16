@@ -1,0 +1,16 @@
+family | P | max|S| | argmax | resonant | max|S|/max(diam,26) | verdict
+  [0..5,6]               |      420 |   1.0000 |      175 |        ('e=5', 7, 5) |  0.0385 | SAFE
+  [0..5,12]              |      420 |   0.9116 |      230 |      ('e=12', 5, 24) |  0.0351 | SAFE
+  [0..5,25]              |     2100 |   1.5714 |      900 |      ('e=25', 12, 5) |  0.0604 | SAFE
+PASS CRT method == direct scan on [0,1,2,3,5,11,13] (max 1.500557 vs 1.500557; nonempty R_s, P = 30030)
+  [0,2,5,11,17,29,47]    | 17841670 |   2.3892 | 17491984 |                 None |  0.0508 | SAFE
+PASS CRT max dominates 200k random residues (sample max 2.2295 <= CRT 2.3892)
+PASS deep well {1..12,182}: numpy argmax confirmed exactly (3.995053 vs 3.995053)
+  deep well {1..12,182}  |  2522520 |   3.9951 |  1627080 | ('compound gcd=10920',) |  0.0221 | SAFE
+PASS near-AP {1..11,13,84}: numpy argmax confirmed exactly (2.401559 vs 2.401559)
+  near-AP {1..11,13,84}  |  2522520 |   2.4016 |   313053 | ('compound gcd=39',) |  0.0289 | SAFE
+
+PASS ALL families audited are SAFE: max|S|/max(diam, 26) < 0.097 slack — the route survives on every assembly family (margins ['0.038', '0.035', '0.060', '0.051', '0.022', '0.029'])
+PASS every worst residue is a resonance: single-owner classes for the AP-like families, compound/product resonances for the coprime and 13-offset families
+
+=== 6 checks, 6 passed ===

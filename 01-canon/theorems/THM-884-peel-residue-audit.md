@@ -36,6 +36,27 @@ assembling THM-883's resonant-mode formula (as an upper bound at resonant r) wit
 THM-727's uncoupled diagonal off resonance — a short write-up once the route owners
 confirm the exact slack per leg (0.097 assumed here from THM-729's cap₉ − 0.397).
 
+## Addendum (cont.6): the one-shot audits for the remaining assembly families — ALL SAFE
+
+| family | P | max\|S\| | worst residue | max\|S\|/max(diam,26) | verdict |
+|---|---|---|---|---|---|
+| [0..5,6] | 420 | 1.0000 | (e=5)-resonance | 0.0385 | SAFE |
+| [0..5,12] | 420 | 0.9116 | (e=12, 5, 24) | 0.0351 | SAFE |
+| [0..5,25] | 2100 | 1.5714 | (e=25, 12, 5) | 0.0604 | SAFE |
+| [0,2,5,11,17,29,47] | **17,841,670** | 2.3892 | CRT-product | 0.0508 | SAFE |
+| deep well {1..12,182} | 2,522,520 | 3.9951 | compound (gcd 10920) | 0.0221 | SAFE |
+| near-AP {1..11,13,84} | 2,522,520 | 2.4016 | compound (gcd 39) | 0.0289 | SAFE |
+
+Methods: direct exact scans (small P); numpy full-period sweeps with exact Fraction
+confirmation of the argmax (P = 2.5M); and for the pairwise-coprime family a **CRT
+factorization of the audit** — each endpoint contribution depends on (r mod 7, r mod e)
+with independent coordinates, so max_r S = max_ρ Σ_e max_u H_e^ρ(u) EXACTLY in O(Σ7e)
+work (validated against a direct scan on [0,1,2,3,5,11,13] and 200k random residues):
+the 17.8M-period family audits in seconds. Worst residues: single-owner resonant classes
+for AP-like families; compound/product resonances for coprime and 13-offset families.
+Verdict uses the route's band floor w ≥ max(diam, 26) (THM-729's band starts at 26).
+**Margins 0.022–0.060, all under the 0.097 slack — every named assembly family is safe.**
+
 **The arc completed:** THM-880 (exact bilinear form) → THM-881 (periodicity/descent) →
 THM-882 (per-instance scans; dipole route honestly killed) → THM-883 (resonant-mode
 theorem; two refutations) → THM-884 (the audit: the refuted worst case lands inside the

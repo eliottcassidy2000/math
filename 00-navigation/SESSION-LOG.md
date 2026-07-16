@@ -565,6 +565,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S314 (cont.6) -- THM-884 ADDENDUM: ONE-SHOT AUDITS FOR ALL REMAINING ASSEMBLY FAMILIES — ALL SAFE: [0..5,6/12/25] direct-exact; [0,2,5,11,17,29,47] (P = 17,841,670!) via the CRT FACTORIZATION OF THE AUDIT (pairwise-coprime offsets ⟹ per-prime coordinates independent ⟹ max_r S = max_ρ Σ_e max_u H_e^ρ(u) EXACT in O(Σ7e) — the 17.8M-period audit runs in seconds; validated vs direct scan + 200k samples); deep well {1..12,182} and near-AP {1..11,13,84} (P = 2,522,520) via numpy full sweeps + exact argmax confirmation.  Margins: 0.038, 0.035, 0.060, 0.051, 0.022, 0.029 — all under the 0.097 slack with the band floor w ≥ max(diam, 26).  Worst residues: single-owner resonances (AP-like) / compound-product resonances (coprime, 13-offset)
+
+Prompt (owner): run the one-shot audits for the other assembly families.
+
+VERDICT: the density route survives on EVERY named assembly family, with margins 1.6x–4.4x.  The CRT-factorized audit is the new tool (any pairwise-coprime family audits in O(Σ7e) exactly — no period sweep).  6/6 checks.  In-session fixes: verdict floor w ≥ 26 (the [0..5,6] "over-slack" was an artifact of using diam = 6 < the band floor); CRT validation family upgraded to a nonempty-R_s 7-runner set; product-resonance classification.
+
+FILES: peel_audit_all_families_klein_S314.py (6/6) + .out, THM-884 addendum, T1542. -> all (remaining: per-leg slack confirmation by route owners; uniform max|S| ≤ C·diam write-up; the CRT-audit generalizes to prime-power-coprime families via coordinate blocks).
+
+---
 ## klein-2026-07-16-S314 (cont.5) -- THM-884 THE PEEL-RESIDUE AUDIT: the density route SURVIVES THM-883's resonant classes with a factor-2 margin — S(w) = w·Error is P-PERIODIC (one line) so the complete audit = one exact finite max per family; executed t = 50/100/200: worst residues ARE the resonant classes (argmax r = t, class (1,1)); max|S| = 0.047·t LINEAR (the resonant mode is the whole worst case); since peels have w ≥ diam: |Error| ≤ max|S|/w ≤ 0.047 < 0.097 slack — every residue class safe, NO band enlargement, S275 band unchanged
 
 Prompt (owner): audit the density route's actual peel residues against the resonant classes.
