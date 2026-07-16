@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-16-S128 (cont.30) -- THE H-DRIFT COORDINATE FOUND: (H, c5) -- 5 E[dH|T] = 12 - H - 6 c5 EXACT on all n=5 classes (the split H=15 fiber EXPLAINED: c5 = 3 vs 2); n=4: 6 E[dH] = 12 - 4H; the drift is graded by the ODD-CYCLE TOWER (OCF) -- the atlas principle held: the law landed the moment its coordinate was found
+
+Prompt (owner): find the H-drift's coordinate; pull often; synthesize.
+
+CHAIN: pulled and reread THM-250 (near-transitive flip formula) -- it regenerates the transitive drift exactly (11/5 at n=5 from the 2^{skip-1}+1 star); the residual Q = C(n,2)E[dH] + H proved QUANTIZED IN SIXES across all fibers (12,12,12,6,6,0,0,-6 at n=5 incl. the split) => an integer second coordinate; fitting with pentagon weight: 5E[dH] = 12 - H - 6c5 -- EXACT on every class, and the cont.12 fiber-split mystery (H=15: -21/5 vs -3) resolves as c5 = 3 vs 2. n=4 (pentagon-free): 6E[dH] = 12 - 4H exact. SYNTHESIS: the flow's generator is graded by the odd-cycle tower, the same tower as THM-466's 2-adic H digits (the OCF keeps paying); 'H-fiber-constant' (cont.12) was (H,c5)-affineness in disguise. CONJECTURE: C(n,2)E[dH] = a_n - b_n H - sum w_j c_j (finite odd-cycle functional); VERIFY n=6,7 (c7 enters?) = named next.
+
+FILES: HYP-6985. -> all (the coordinate atlas gains its missing entry; n=6/7 verification is one script away; j=4 banking continues).
+
+---
 ## boxeph-2026-07-16-S24 -- THE DECIDABLE COMPACT-CORE SWEEP EXECUTED: j = 5 multikiller stratum CLOSED (independent implementation of the THM-883 fragmentation box; 29.8M branches, ZERO sub-1/13 configs covering OR not; GW window = exactly j in {2,3}) + j = 6 handed off (covering-only lcm-restricted, 3 shards running on this box, ~5-6h; stratum meanwhile covered by THM-663 mod glue) + THE DOUBLING LAW PROVED (F_N = 2 G_N mod 1 at every odd N, site map = x2^{-1} on unit labels -- THM-882 addendum, joint w/ death-star HYP-7013) + THM-885 (the covering-case j-decomposition audit) + MISTAKE-153
 
 Prompt (owner): take the decidable compact-core sweep next; keep proving little statements.
