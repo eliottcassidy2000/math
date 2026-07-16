@@ -1,0 +1,52 @@
+THM-908 / HYP-7064: SEVEN-SHIFT RESIDUE-SIX SIEVE
+==============================================================================
+
+[1] Exact F7^5 kernel tables
+PASS  7^5 labelled mover states
+PASS  THM-905 majorant dominates the signed kernel
+PASS  signed kernel range is {-6,-2,0,1,12}
+  signed state histogram: {-6: 120, -2: 4680, 0: 10687, 1: 600, 12: 720}
+
+[2] Exact 2,801-direction projective census
+PASS  projective direction count
+PASS  signed ceiling histogram
+PASS  906 directions close below 0.097
+PASS  1,895 directions retain lift debt
+  signed ceiling histogram: {62: 5, 50: 60, 48: 175, 36: 1075, 34: 580, 32: 65, 26: 60, 25: 270, 24: 280, 23: 120, 22: 30, 21: 60, 20: 10, 18: 10, 8: 1}
+  positive-majorant ceiling histogram: {72: 5, 50: 60, 48: 175, 42: 20, 38: 270, 37: 100, 36: 1380, 31: 100, 30: 440, 27: 10, 26: 220, 25: 15, 24: 6}
+
+[3] Distinct nonzero residue theorem
+PASS  120 projective distinct-nonzero directions
+PASS  every distinct-nonzero ceiling is exactly 25
+  diameter-free bound: -F6 <= 25/343 = 0.0728862973760933
+PASS  25/343 clears 0.097
+
+[4] Independent rational change-of-variables referees
+PASS  seven-shift identity at (1, 2, 3, 4, 5)
+    (1, 2, 3, 4, 5) E[L6]= -83/140 -F6= -83/6860
+PASS  seven-shift identity at (2, 3, 4, 5, 6)
+    (2, 3, 4, 5, 6) E[L6]= 11/28 -F6= 11/1372
+PASS  seven-shift identity at (1, 8, 16, 24, 32)
+    (1, 8, 16, 24, 32) E[L6]= -157/672 -F6= -157/32928
+PASS  seven-shift identity at (7, 14, 21, 28, 29)
+    (7, 14, 21, 28, 29) E[L6]= -139/588 -F6= -139/28812
+PASS  seven-shift identity at (11, 12, 13, 14, 15)
+    (11, 12, 13, 14, 15) E[L6]= 39409/140140 -F6= 39409/6866860
+
+[5] Tournament Analysis: signed kernel -> positive majorant
+  vertices (one per signed ceiling): ((1, 0, 0, 0, 0), (1, 0, 2, 5, 6), (1, 0, 0, 0, 6), (1, 0, 0, 1, 3), (1, 0, 1, 3, 4), (1, 0, 0, 1, 1), (1, 1, 1, 3, 3), (1, 0, 1, 2, 6), (1, 0, 0, 2, 3), (1, 0, 1, 1, 2), (1, 0, 0, 1, 2), (1, 0, 0, 0, 1), (1, 1, 1, 5, 5), (1, 1, 1, 1, 2), (1, 1, 1, 1, 1))
+  observable: affine-line ceiling difference
+  switch/gauge: signed L6 -> positive 6H+6J+H6; larger ceiling wins
+  signed fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1}, 'directed_triangles': 0, 'components': (((1, 0, 0, 0, 0),), ((1, 0, 2, 5, 6),), ((1, 0, 0, 0, 6),), ((1, 0, 0, 1, 3),), ((1, 0, 1, 3, 4),), ((1, 0, 0, 1, 1),), ((1, 1, 1, 3, 3),), ((1, 0, 1, 2, 6),), ((1, 0, 0, 2, 3),), ((1, 0, 1, 1, 2),), ((1, 0, 0, 1, 2),), ((1, 0, 0, 0, 1),), ((1, 1, 1, 5, 5),), ((1, 1, 1, 1, 2),), ((1, 1, 1, 1, 1),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 0, 0, 0, 0), (1, 0, 2, 5, 6), (1, 0, 0, 0, 6), (1, 0, 0, 1, 3), (1, 0, 1, 3, 4), (1, 0, 0, 1, 1), (1, 1, 1, 3, 3), (1, 0, 1, 2, 6), (1, 0, 0, 2, 3), (1, 0, 1, 1, 2), (1, 0, 0, 1, 2), (1, 0, 0, 0, 1), (1, 1, 1, 5, 5), (1, 1, 1, 1, 2), (1, 1, 1, 1, 1))}
+  positive fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1}, 'directed_triangles': 0, 'components': (((1, 0, 0, 0, 0),), ((1, 0, 2, 5, 6),), ((1, 0, 0, 0, 6),), ((1, 0, 0, 1, 3),), ((1, 0, 1, 3, 4),), ((1, 0, 0, 1, 1),), ((1, 1, 1, 3, 3),), ((1, 0, 1, 2, 6),), ((1, 0, 0, 2, 3),), ((1, 0, 1, 1, 2),), ((1, 0, 0, 1, 2),), ((1, 0, 0, 0, 1),), ((1, 1, 1, 5, 5),), ((1, 1, 1, 1, 2),), ((1, 1, 1, 1, 1),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 0, 0, 0, 0), (1, 0, 2, 5, 6), (1, 0, 0, 0, 6), (1, 0, 0, 1, 1), (1, 0, 0, 1, 3), (1, 0, 1, 3, 4), (1, 1, 1, 3, 3), (1, 0, 0, 0, 1), (1, 0, 0, 2, 3), (1, 0, 1, 2, 6), (1, 0, 0, 1, 2), (1, 0, 1, 1, 2), (1, 1, 1, 5, 5), (1, 1, 1, 1, 1), (1, 1, 1, 1, 2))}
+  switch edge flips: 9
+PASS  both ceiling tournaments are transitive
+PASS  both tie Hamiltonian paths are unique
+  Assumption challenge: residue directions preserve the exact line ceiling
+  but erase z(u), quotient speeds, relations, and finite-t wall chronology.
+
+VERDICT
+  PROVED: exact seven-shift affine-line identity for the signed K6 kernel.
+  PROVED: 906/2801 projective residue directions close below 0.097.
+  PROVED: distinct nonzero residues give -F6<=25/343<0.097.
+  OPEN: restore lift/relation sidecars on the remaining 1,895 directions.

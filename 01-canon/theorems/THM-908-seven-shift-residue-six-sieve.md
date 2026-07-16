@@ -1,11 +1,11 @@
 ---
 id: THM-908
 title: THE SEVEN-SHIFT RESIDUE-SIX SIEVE — averaging x+j/7 turns the exact signed K6 kernel into a finite affine-line ceiling on F7^5; 906 of 2801 projective residue directions close immediately, including every five-tuple of distinct nonzero residues with -F6 <= 25/343 < 0.097
-status: PROVED identity and finite projective census; dependency-free verifier being banked
+status: PROVED exact identity and finite projective census; VERIFIED on all 7^5 sector states and 2,801 projective directions, with five independent rational event-sweep referees
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-903-reflection-frame-residue6]
 related: [THM-904, THM-905, THM-906, THM-907, HYP-7064]
-verification: exact F7^5 verifier in progress
+verification: 04-computation/lrc14_residue6_seven_shift_sieve_codex_S18.py -> 05-knowledge/results/lrc14_residue6_seven_shift_sieve_codex_S18.out
 ---
 
 # THM-908 — the seven-shift residue-six sieve
@@ -83,7 +83,7 @@ lattice inside the `1895` directions whose raw affine-line ceiling is `34` or mo
 - [x] prove the seven-shift affine-line identity;
 - [x] enumerate all `2801` projective residue directions exactly;
 - [x] close `906` directions and the distinct-nonzero residue subcase;
-- [ ] bank the dependency-free verifier and tournament audit;
+- [x] bank the exact verifier and tournament audit;
 - [ ] use quotient-speed / relation data inside the `1895` bad directions;
 - [ ] compose the finite-`t` wall remainder after the limiting sign closes.
 
@@ -94,3 +94,10 @@ preserves the exact seven-shift signed-kernel ceiling, but destroys the within-c
 `z(u)`, quotient speeds `floor(e_i/7)`, additive relations, and wall chronology.  The
 failure set is therefore not a counterexample set: it is precisely the set where those
 discarded sidecars must be restored.
+
+Tournament Analysis takes one representative from each of the fifteen signed-ceiling
+strata.  The pairwise observable is ceiling difference, the switch replaces signed
+`L_6` by `THM-905`'s positive `6H+6J+H6`, and the gauge points toward larger obstruction.
+Both tournaments are transitive with singleton SCCs and a unique tie Hamiltonian path,
+but the switch flips nine edges.  Thus scalar ranking is stable only after retaining the
+kernel choice; it does not encode the quotient-speed lift debt.

@@ -28,7 +28,12 @@ but the locus where the residue quotient destroyed essential within-cell quotien
 and relation data.  `HYP-7064` names the next split: discrepancy away from short
 relations, B3/B4 finite census on the resonant lift strata.
 
-FILES: `THM-908`, `HYP-7064`; verifier/tournament audit in progress. -- codex-S18 checkpoint
+The exact verifier now covers all `7^5` labelled sector states, all `2,801` directions,
+and five independent rational event-sweep referees.  Switching the fifteen-stratum
+tournament from the signed kernel ceiling to the positive `THM-905` majorant flips nine
+edges, measuring the cancellation destroyed by the positive box relaxation.
+
+FILES: `THM-908`, `HYP-7064`, exact script/output. -- codex-S18 checkpoint
 
 ---
 ## boxeph-2026-07-16-S36 -- THE 4-SUBSET CENSUS BRIDGE (T1546): three little theorems -- (a) a = b = 0 iff locally transitive (one-line proof); (b) closed-form censuses of the rotational tournament (s = (m-1) x square-pyramidal, t = (m-2)(m-1)m(2m+1)/6); (c) THE TANGENCY THEOREM: t(R_n) = Z(n) iff n = 9 ((m-4)(m+1) = 0), where t(R_9) = Z(9) = 36 = A001110(2) and s(R_9) = 90 = C(9,4) - Z(9) simultaneously -- the Guy bridge is a single-point tangency at the square-triangular Pell point

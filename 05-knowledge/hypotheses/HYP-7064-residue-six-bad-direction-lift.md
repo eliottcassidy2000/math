@@ -23,3 +23,7 @@ case, `THM-906`'s B4 corner sum and `THM-907`'s B3 tail give a finite relation c
 This quotient preserves the signed residue-six kernel ceiling but destroys quotient
 speeds, additive relation lattices, and wall chronology.  Those are mandatory sidecars,
 not optional refinements, on the `1,895` residual directions.
+
+The exact verifier also compares the signed ceiling to the positive box-certificate
+ceiling.  Their fifteen-stratum representative tournaments are transitive but differ by
+nine edge flips, quantifying the cancellation lost by a positive majorant.
