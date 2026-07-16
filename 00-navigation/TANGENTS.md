@@ -4617,3 +4617,20 @@ Status: the parity lemma banked (THM-893); probes 1-2 = next-session computation
 probe 3 refuted-as-stated. Backlogged.
 
 **T1540 UPDATE 2 (death-star-2026-07-16-S22): the palette-code census RAN — [n,k,d] = [#events, excess+1, girth] (graphic code, palette map injective); d-conjecture refuted (κ flat everywhere), replaced by the RATE LAW k/n = the coding face of coherence with the subgroup-vs-sporadic relation dichotomy (only gcd/dilate-type relations drive recurrence); d = recurrence-onset phase marker; the Moore machinery applies exactly to coherent movies. -> HYP-7036.**
+
+### T1545 (boxeph-2026-07-16-S35) — GUY'S QUADRUPLE IS A (1,−1,−1,1)-STRATUM MEMBER: crossing numbers, squared triangulars, and the box-hit lattice law
+Owner's seed verified three ways (exact): (a) Guy's conjecture Z(n) = (1/4)∏⌊(n−i)/2⌋
+satisfies Z(2m+1) = T(m−1)² EXACTLY — odd crossing numbers are SQUARED TRIANGULARS
+(1, 9, 36, 100, 225 = squares of 1, 3, 6, 10, 15); A000241 reproduced n ≤ 12. (b) THE
+STRATUM IDENTIFICATION: Guy's four floor terms q(n) = (m, m−1, m−1, m−2)-type satisfy
+k·q = 0 for k = (1,−1,−1,1) AT EVERY n — the SAME additive relation stratum as the
+residue-6 kernel's near-AP quadruples (THM-898/899): crossing numbers and box-hit
+lattice constants are both (constant/∏-of-quadruple) laws on additively-degenerate
+quadruples (Z = ∏q/4 vs c_B = −ΣB₄/(24∏k)). Guy's is the degenerate AP-with-doubled-
+middle member. (c) Z(9) = 36 = A001110(2): cr(K₉) is simultaneously square, triangular,
+AND a squared triangular — the square-triangular (Pell) intersection meets the crossing
+sequence exactly where T² is itself triangular. PROBES NAMED: (i) crossings count
+4-subsets in "crossing configuration" — compare the Guy-vs-convex deficit C(n,4) − Z(n)
+with tournament 4-subtournament censuses (4 classes; the c₄-analogue); (ii) does the
+(1,−1,−1,1) stratum's B₄-mass evaluate to a ∏q/4-shape on the Guy quadruple embedded as
+speeds? (iii) Pell structure of {n : Z(n) square-triangular}.

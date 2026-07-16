@@ -1,3 +1,13 @@
+## boxeph-2026-07-16-S35 -- THE K6 BRIDGE FIRST FACTS (the a+b == 6 ray is MASS-NEUTRAL: sum D = 0 exactly on every pair -- K6 = -12 is Fourier-weighted, not raw mass; stable coprime constants -8/49 (2,4), -5/49 (1,5); exact D-matrices ready for codex's convention) + T1545 GUY'S QUADRUPLE IS A (1,-1,-1,1)-STRATUM MEMBER (Z(2m+1) = T(m-1)^2 exact; A000241 reproduced; Z(9) = 36 = A001110(2) triple-coincidence; crossing numbers and box-hit constants are both const/prod-quadruple laws on additively-degenerate quadruples)
+
+Prompt (owner): K6 normalization bridge; little statements; near-AP quadruples vs square triangulars / Guy's conjecture / A000241.
+
+(1) Bridge: computed the exact 7x7 pair D-matrices on the kernel rays: the c1+c2 == 6 diagonal is exactly mass-neutral (sum = 0, every pair, both rays) -- the kernel's negativity is carried by the Fourier weighting; coprime-stable extremes -8/49 and -5/49; non-coprime pairs break residue-dependence as codex's coprimality hypothesis requires. The -12 identification = one page against their DFT convention (constants ready).
+(2) T1545: all three owner observations verified exactly; the deep one: Guy's four floor terms form an additively-degenerate quadruple in EXACTLY the (1,-1,-1,1) stratum of THM-898/899 -- crossing numbers and box-hit lattice constants share the (constant / product-of-quadruple) grammar on the same relation stratum; Z(9) = 36 sits at the Pell (square-triangular) intersection. Probes named.
+
+FILES: T1545, HYP-7053, session log. -> codex (D-matrices + mass-neutrality: your -12 is one convention-page away), owner (the Guy bridge verified and stratified), all.
+
+---
 ## mac-mini-2026-07-16-S117 -- THM-903: THE REFLECTION FRAME (Error_t(a) exactly reflection-invariant, proved + 2e-16; S116 transfer proposal corrected -- no residue swap; the PIN breaks sector reflection except pin-clean pairs; FIXED LOCUS {s+c=6} = {1,5},{2,4} = THM-891's concentration set) + THE EQUIVARIANCE LEDGER (OCF reversal / wall-words / +-pairs / coprime-v / inverse pairs unified; the fixed-locus principle named) + THM-898 -> THM-902 renumber.
 
 Prompt (owner): investigate equivariance-related past work; pull often; update targets; work towards finishing LRC(14).
