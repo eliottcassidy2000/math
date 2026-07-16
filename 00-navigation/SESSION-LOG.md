@@ -1,3 +1,37 @@
+## opus-2026-07-16-S331 -- THM-923: THE EMPTINESS CONJECTURE REFUTED (both-clean packet {420..7230} FOUND; BONF5 = -0.677: q,p <= 13 + Sidon INSUFFICIENT; the 30Z parallel-class escape through the Farey-14 blind spot + 3-TERM APs = THE THIRD BLOCKER: the linear-forms condition is the corrected admissibility) + THE PARALLEL-CLASS CIRCLE (killer-class corona census; THE TIGHT-LOCUS ADDRESSES ARE THE MECHANICAL WORDS; the wiggly classes = Q_m's 1-factorization: resolution-into-parallel-classes as the shared grammar) + S330's dangling stub closed (HYP-7100)
+
+Prompt (owner): long session, frequent pulls, close out LRC(14), the parallel-class
+circle abstractly + applications to niche repo problems.
+
+[R] the S330 DFS (recovered: died at depth 11) rerun wider: FOUND {420, 450, 510, 570,
+690, 870, 1230, 1770, 2370, 3210, 4170, 5190, 7230}: the emptiness conjecture REFUTED
+by construction (the S330 'algorithmic failure' suspicion was right). Its exact BONF5 =
+-0.677 (S4 2.8x, S5 12x): the search's own cleanliness is INSUFFICIENT. Diagnosis:
+gcd = 30 (the packet walks the 30Z parallel class; reduced ratios 15/14... = q = 14
+near-dilates: ONE step past the q <= 13 horizon: the S315 Farey-14 blind spot is
+exploitable and the DFS found it) + 3-term APs ({450, 510, 570}: a+c = 2b evades
+distinct-four Sidon): THE THIRD BLOCKER = small linear forms. Corrected admissibility:
+dissociativity + horizon-20; the upgraded DFS running (max depth 1 in [300, 40000]): the corrected regime is
+thin. The blocker-filter iteration (counterexample -> constraint) converges rung by
+exact rung; with S330's geometric escape: nonempty at exponential scale (T1-cascade),
+thin-to-empty at accessible scale: the two-scale picture of the full-problem
+certificate.
+[P] the parallel-class circle: each speed = a torsion parallel class; LRC = 13 classes
+interacting; killer-class census (the corona's interior): k = 2 takes ~half (n = 8:
+61/122; n = 10: 645/1448), tail to k = n-2. THE GEM: the tight-locus address vectors
+(floor(vp/14) per class) = the six centered MECHANICAL WORDS, from all-zeros (1/14) to
+the staircase [0..12] (13/14): THM-778's transport objects are the coordinates of the
+loneliest moments. The metagraph identification: the m wiggly classes ARE Q_m's
+parallel classes (the tiling-space 1-factorization): the shared grammar; mac-mini
+THM-921's involution-stratum law = its reversal-class instance (pulled mid-session).
+
+NEXT (named): the full-clean verdict + BONF5; the per-SPEED killer stratification; the
+360360-cell address system off the tight locus; the two-scale certificate theorem
+(exponential-nonempty + accessible-thin, unified).
+
+FILES: THM-923; 3 result files; HYP-7100 (+HYP-7065 closed). opus; S331.
+
+---
 ## mac-mini-2026-07-16-S123 -- THM-922: ROUTE [A] SIGNED OFF (per-triple certificates: exact band + coarse tail; champions covered by codex's EXACT scan; (60,100] band 55/55 clear, worst err 0.0017 vs margins >= 0.083): q <= 47/100 AT REFEREE GRADE; residue-six arc COMPLETE (903 -> 907 -> 912 -> 917 -> 920 -> 922). FORMALIZATION STARTED: FragmentationLemma.lean (THM-883's inequality + killer budget, 2 named sorries).
 
 Prompt (owner): the true per-triple lambda_2 certificate page; finish route [A]; remaining LRC(14); then formalization.
