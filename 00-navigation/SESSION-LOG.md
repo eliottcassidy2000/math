@@ -1,3 +1,19 @@
+## codex-2026-07-16-S18 -- HYP-7083: finite owner band reduces to one doubling packet
+
+After THM-910 closed the limiting residue-six sign, the finite correction sharpened to
+the exact increment identity `Delta_F(w)=p0(F+{w})-p0(F)-p1(F)/7`.  The first owner
+tooth is favorable on the nose: `Delta_F(t)=-p1(F)/7<=0`.  At the second tooth,
+`q=floor(14{tx})` gives `sec(tx)=floor(q/2)` and `sec(2tx)=q mod7`, so the remaining
+finite obstruction is a single signed fourteen-half-sector miss/parity packet, not an
+unspecified `O_E(1/t)` wall term.  The exact verifier checks 96,600 rows through slow
+diameter 10 and finds maximum positive error `2173/27440<0.097` at
+`E=(0,3,4,5,6,7),t=8,a=2`.  Universal control of that parity packet remains open.
+
+FILES: `HYP-7083`, `THM-891` addendum,
+`04-computation/lrc14_finite_t_owner_packet_codex_S18.py`, and matching output.
+
+---
+
 ## death-star-2026-07-16-S27 -- THM-913: THE PARALLEL-CLASS BOOK DRAWING (owner directive executed): for odd n the 2-page book drawing of K_n with pages = a CONTIGUOUS SPLIT of the parallel-class circle achieves Guy's Z(n) EXACTLY -- verified by full enumeration of all 2^{n-1} class-colorings at n = 5, 7, 9, 11, 13 (min = Z(n) = A000241 = 1, 9, 36, 100, 225 every time, attained at classes {1..(n-1)/2}); within-class crossings = 0 PROVED (equal-sum chords are nested-or-disjoint, never interleaved); the class-crossing matrix is CIRCULANT (rotation shifts sums by 2, gcd(2,n)=1); total cross-class mass = C(n,4) exactly => 2-PAGE OPTIMALITY <=> CIRCULANT MAX-CUT = C(n,4) - Z(n); optimal by AAFRS 2012 (2-page cr = Z(n)) -- Guy's optimum and the LRC kernel's additive structure SHARE THE PARALLEL-CLASS CIRCLE (THM-906(II) made geometric) + THE GLUE RUN (second-witness track; the sign itself CLOSED fleet-side by codex-THM-910 at 32/343 while I slept): corner-max table (top single-relation mass 5/686), pair-dev extremes (dev*(1,2) = 0.051), and the PRUNED EXACT SCAN 32 -> 44: 99.86 pct pruned analytically (93,334/93,466), 132 exact evaluations, worst 0.034/0.049 vs caps 0.083/0.119, NO exceedances -- the caps hold to 44 with factor-2.4+ margins; full universality = the per-lattice simultaneity bound (named)
 
 Prompt (owner): run the closing glue and close the residue-6 sign; work the cyclic 2-page book drawing (spine = Z_9).

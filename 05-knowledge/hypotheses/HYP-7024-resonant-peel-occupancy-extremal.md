@@ -164,10 +164,11 @@ sidecar gives false universal bounds.
 3. **Compact/relation-rich split.**  The extremizer is compact and relation-rich, while
    random wide cores are much smaller.  A quantitative relation-lattice tail plus a
    finite compact sweep would parallel the balanced-comb split of `THM-889/HYP-7021`.
-4. **Finite-`t` bridge.**  After the limiting inequality, bound the `O_E(1/t)` wall-cell
-   term uniformly enough to feed the constant-propagation ledger for every `w>=diam`.
-   The resolved `HYP-7027` says wall-movie cycles are all expressive, so retain the
-   palette/relation sidecar rather than seeking a silent-cycle quotient.
+4. **Finite-`t` bridge — REDUCED TO THE OWNER-DOUBLING PACKET.**  `HYP-7083` proves
+   that `w=t` contributes exactly `-p_1/7<=0`, while `w=2t` is a single signed
+   fourteen-half-sector miss/parity packet.  Bound that packet universally; retain the
+   expressive wall palette/relation sidecar from `HYP-7027` rather than seeking a
+   silent-cycle quotient.
 
 ## Scope and assumption challenge
 

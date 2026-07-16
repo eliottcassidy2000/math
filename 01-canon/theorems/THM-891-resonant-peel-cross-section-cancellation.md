@@ -346,6 +346,19 @@ the sector-zero boundary and remains fixed.  For the consecutive core, for examp
 
 ## 8. Synthesis with the concurrent routes
 
+### 8.1 Exact finite owner-tooth reduction
+
+For `F=E union {t}`, the finite correction is exactly
+
+`Delta_F(w)=p_0(F union {w})-p_0(F)-p_1(F)/7`.
+
+At the first owner tooth `w=t`, the duplicated phase cannot fill the unique missed
+sector, so `Delta_F(t)=-p_1(F)/7<=0`.  It is therefore never an upper propagation
+obstruction.  At `w=2t`, writing `q=floor(14{tx})` gives
+`sec(tx)=floor(q/2)` and `sec(2tx)=q mod 7`; the whole finite remainder becomes the
+signed fourteen-half-sector packet in `HYP-7083`.  This reduces the first bounded owner
+band from an unspecified wall term to one explicit miss-label/parity incidence.
+
 - `THM-883` finds the owner comb in each section.  This theorem composes the sections
   before taking absolute values and identifies their exact cancellation.
 - `THM-884` observes ratios `0.022--0.060` in full finite audits.  The value

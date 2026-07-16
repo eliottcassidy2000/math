@@ -1,0 +1,52 @@
+THM-891 / HYP-7083: FINITE-t OWNER PACKET
+========================================================================
+PASS  integer event sweep matches the legacy exact arc evaluator
+PASS  increment identity (0, 1, 2, 3, 4, 5), t=7, a=1
+PASS  increment identity (0, 1, 2, 3, 4, 5), t=7, a=2
+PASS  increment identity (0, 1, 2, 3, 4, 5), t=7, a=3
+PASS  a=1 duplicate tooth is exactly -p1/7 for (0, 1, 2, 3, 4, 5), t=7
+PASS  increment identity (0, 1, 2, 4, 6, 8), t=12, a=1
+PASS  increment identity (0, 1, 2, 4, 6, 8), t=12, a=2
+PASS  increment identity (0, 1, 2, 4, 6, 8), t=12, a=3
+PASS  a=1 duplicate tooth is exactly -p1/7 for (0, 1, 2, 4, 6, 8), t=12
+PASS  increment identity (0, 2, 4, 5, 7, 8), t=10, a=1
+PASS  increment identity (0, 2, 4, 5, 7, 8), t=10, a=2
+PASS  increment identity (0, 2, 4, 5, 7, 8), t=10, a=3
+PASS  a=1 duplicate tooth is exactly -p1/7 for (0, 2, 4, 5, 7, 8), t=10
+PASS  96,600 exact owner-ratio rows
+PASS  6,900 exact a=1 duplicate identities
+PASS  bounded-bank positive maximum
+PASS  all bounded-bank errors lie below 0.097
+
+Per-multiplier exact extrema
+  a= 1: min=-411/6860, max=-99/7105, maxabs=411/6860
+  a= 2: min=-31/1029, max=2173/27440, maxabs=2173/27440
+  a= 3: min=-16/735, max=3887/92610, maxabs=3887/92610
+  a= 4: min=-691/35280, max=437/13720, maxabs=437/13720
+  a= 5: min=-235/12348, max=1/45, maxabs=1/45
+  a= 6: min=-23/1470, max=61/2940, maxabs=61/2940
+  a= 7: min=-127/10290, max=479/41160, maxabs=127/10290
+  a= 8: min=-1837/123480, max=121/12348, maxabs=1837/123480
+  a= 9: min=-683/61740, max=3203/169785, maxabs=3203/169785
+  a=10: min=-941/61740, max=1171/82320, maxabs=941/61740
+  a=11: min=-689/75460, max=65/6468, maxabs=65/6468
+  a=12: min=-493/61740, max=65/5488, maxabs=65/5488
+  a=13: min=-5281/802620, max=149/17836, maxabs=149/17836
+  a=14: min=-149/19404, max=1/210, maxabs=149/19404
+  overall positive: (Fraction(2173, 27440), ((0, 3, 4, 5, 6, 7), 8, 2, Fraction(2173, 27440)))
+  overall absolute: (Fraction(2173, 27440), ((0, 3, 4, 5, 6, 7), 8, 2, Fraction(2173, 27440)))
+
+Tournament Analysis
+  observable: difference of bounded-bank multiplier risks
+  switch: positive error -> absolute error; numeric tie gauge
+  fingerprint: {'positive_path': (2, 3, 4, 5, 6, 9, 10, 12, 7, 11, 8, 13, 14, 1), 'absolute_path': (2, 1, 3, 4, 5, 6, 9, 10, 8, 7, 12, 11, 13, 14), 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}, 'directed_triangles': 0, 'scc_sizes': (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 'hamiltonian_path_count': 1, 'edge_flips': 16}
+PASS  both scalar risk tournaments are transitive
+PASS  risk tournaments have singleton SCCs
+PASS  risk tournaments have unique tie Hamiltonian paths
+
+VERDICT
+  PROVED: Delta_F(w)=p0(F+{w})-p0(F)-p1(F)/7.
+  PROVED: the a=1 owner tooth is -p1(F)/7 <= 0, never an upper obstruction.
+  PROVED: the a=2 tooth is the 14-half-sector packet q=floor(14{tx}).
+  FINITE-EXACT: D<=10, D<t<=4D, a<=14; max positive 2173/27440 < 0.097.
+  OPEN: a universal upper bound for the a=2 parity packet.
