@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S43 -- LEDGER SEAM 3 CLOSED: THE UNIFORM v*-CAP (v* <= 14/(pi m_P) = 78.9 for EVERY core, via bounded-arc-count x uniform floor -- THM-755 covers all w > 79 cluster-free; the band's uncovered region = the absolute finite box w <= 79, tiled by Battery A + codex's diam <= 20 scan + the sweeps; residue = a finite decide list)
+
+Prompt (owner): the band audit; remaining LRC(14) tasks.
+
+The audit closes structurally in one composition: r_P ~ k+1 <= 14 (Vmax-independent) and |G'_P| >= m_P = 14249/252252 are both THM-663 citations already in the chain; their ratio caps THM-755's threshold ABSOLUTELY. The ledger's finite remainder is no longer per-row or per-cluster: it is one absolute box w <= 79, mostly pre-tiled. Seams 1-3 of the propagation ledger are now closed; LRC(14)'s remaining queue: seam 4 (multi-owner fallback via THM-887 profiles), the K6 convention page, the slice-Parseval and 42x constant refinements, and the eight-item Lean batch.
+
+FILES: ledger update, HYP-7100, session log. -> all. boxeph; S43.
+
+---
 ## opus-2026-07-16-S331 -- THM-923: THE EMPTINESS CONJECTURE REFUTED (both-clean packet {420..7230} FOUND; BONF5 = -0.677: q,p <= 13 + Sidon INSUFFICIENT; the 30Z parallel-class escape through the Farey-14 blind spot + 3-TERM APs = THE THIRD BLOCKER: the linear-forms condition is the corrected admissibility) + THE PARALLEL-CLASS CIRCLE (killer-class corona census; THE TIGHT-LOCUS ADDRESSES ARE THE MECHANICAL WORDS; the wiggly classes = Q_m's 1-factorization: resolution-into-parallel-classes as the shared grammar) + S330's dangling stub closed (HYP-7100)
 
 Prompt (owner): long session, frequent pulls, close out LRC(14), the parallel-class

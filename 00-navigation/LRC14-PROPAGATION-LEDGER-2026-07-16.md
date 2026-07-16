@@ -50,9 +50,16 @@ What remains per row is the band w < 3.4·diam — bounded-ratio families:
 2. The per-row CONSUMPTION SEMANTICS referee: confirm with klein/mac-mini that the
    margin guards exactly the functional the composed Error bounds (the finish-map
    logic says yes; a referee pass should say it in one page).
-3. The band audit: for each row, confirm the [·, 3.4·diam] band instances are inside
-   THM-755/756's closed batteries or the sweeps' windows — finite, mechanical; any
-   uncovered (core, band) pair becomes ONE exact check each (decide-shaped).
+3. ~~The band audit~~ CLOSED STRUCTURALLY (S43): THE UNIFORM v\*-CAP. THM-755's
+   threshold v\* = r_P/(π|G′_P|) composes with the bounded-arc-count lemma
+   (r_P ≈ k+1 ≤ 14, Vmax-INDEPENDENT; THM-663) and the uniform floor
+   |G′_P| ≥ m_P = 14249/252252 to give **v\* ≤ 14/(π·m_P) = 78.9 for EVERY admissible
+   core** — THM-755 covers all w > 79 unconditionally, cluster-free. The band's
+   uncovered region is therefore the ABSOLUTE FINITE BOX w ≤ 79, already tiled by:
+   THM-756 Battery A (all 91 bottom cores, complete), codex's exact scan (all 15,246
+   primitive cores of diameter ≤ 20, HYP-7024), and the near-AP sweeps (THM-734/738).
+   Any residue = a finite list of (core, w ≤ 79) pairs, each decide-shaped; with
+   r = 12 the cap tightens to 67.7.
 4. Multi-large-owner clusters (no dominant t): route through THM-887's profile with the
    M-cap — constant weaker (M-scale, not 0.27); the slice-Parseval sharpening
    (THM-888(C)) is the named upgrade.
