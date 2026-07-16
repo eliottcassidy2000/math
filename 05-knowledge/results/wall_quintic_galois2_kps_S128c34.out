@@ -1,0 +1,8 @@
+f(x) = 4x^5 -170x^4 +4300x^3 -77680x^2 +930376x -5569395
+Frobenius shapes: {(1, 1, 1, 2): 1, (1, 1, 1, 1, 1): 1, (5,): 2, (1, 4): 4, (2, 3): 3, (1, 2, 2): 1, (1, 1, 3): 1}
+irreducible over Q: YES (irreducible mod p for some p)
+disc(f) = 5464809247518238003211462653184
+|disc| perfect square? False ; sign +
+disc factorization (partial): {2: 8, 7: 2} cofactor 435651247410573820409077061
+VERDICT: Galois group = S5 -- the level-5 wall location 15.6306... is NOT solvable by radicals
+DONE
