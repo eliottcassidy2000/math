@@ -1,6 +1,6 @@
 # THM-918 — The Coning Tower: the sink is a black hole, the source is a mirror; spectrally invisible pairs exist at every n ≥ 8
 
-**Status:** PROVED (transform laws + persistence induction for the panel (cpA, cpL, H, τ_in, τ_out)); VERIFIED (the cpK leg, exhaustively at n = 8, 9; census-scale counts at n ≤ 9)
+**Status:** PROVED IN FULL (transform laws + persistence induction; the cpK leg upgraded from VERIFIED to PROVED by THM-924: cpA determines cpK, so cpA-cospectral cones are cpK-cospectral unconditionally). Census-scale counts VERIFIED at n ≤ 9.
 **Instance:** klein-2026-07-16-S315 (cont.3)
 **Files:** `04-computation/coning_tower_klein_S315.py`, `05-knowledge/results/coning_tower_klein_S315.out`
 **Depends on:** the cospectral-tie census (klein-S315 cont.2, `cospectral_tie_census_klein_S315.py`, HYP-7026); matrix-tree; LEM-003 orbit-stabilizer context not needed here.
@@ -34,7 +34,7 @@ Let a **deep tie** be an (cpA, cpK, cpL)-cospectral pair of iso classes. At n = 
 
 ## The tower theorem
 
-**For every n ≥ 8 there exist non-isomorphic tournaments on n vertices agreeing on cpA, cpL, H, τ_in, and τ_out** (PROVED: seed = the double-blind four at n = 8; induction step = laws 1–5: cpA and cpL shift functorially, H is fixed, τ_in stays collapsed at the shared value `det(L+I)` since cpL is tied, τ_out scales by the shared factor n). **Including cpK the statement is VERIFIED at n = 8, 9** and conjectured for all n (HYP-7096): the border determinant gives `cpK(C(T))(x) = x · cpK(T)(x) + 𝟙ᵀ adj(xI − K) 𝟙`, so the cpK leg persists iff the **d-moment sequence** `𝟙ᵀ K^j 𝟙` propagates its equality up the tower — it held 27/27 at the base and through both verified rungs (`𝟙ᵀK²𝟙 = −Σ d_v²` is the x-level, forced; higher j empirical).
+**For every n ≥ 8 there exist non-isomorphic tournaments on n vertices agreeing on cpA, cpL, H, τ_in, and τ_out** (PROVED: seed = the double-blind four at n = 8; induction step = laws 1–5: cpA and cpL shift functorially, H is fixed, τ_in stays collapsed at the shared value `det(L+I)` since cpL is tied, τ_out scales by the shared factor n). **Including cpK the statement is now PROVED for all n via THM-924** (cpA determines cpK outright; the d-moment route below is superseded but kept for the mechanism): the border determinant gives `cpK(C(T))(x) = x · cpK(T)(x) + 𝟙ᵀ adj(xI − K) 𝟙`, so the cpK leg persists iff the **d-moment sequence** `𝟙ᵀ K^j 𝟙` propagates its equality up the tower — it held 27/27 at the base and through both verified rungs (`𝟙ᵀK²𝟙 = −Σ d_v²` is the x-level, forced; higher j empirical).
 
 ## Reading
 

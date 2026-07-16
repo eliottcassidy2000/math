@@ -1,0 +1,10 @@
+PASS L1 det(zI-A+J)=(-1)^n cpA(-1-z) — exact, all classes n<=6 + random n=8..10
+PASS L2 walk resolvent = cpA-ratio (walk moments cpA-determined) — exact, all classes n<=6 + random n=8..10
+PASS L3 cpK = 2^{n-1}[cpA((y-1)/2)+(-1)^n cpA((-y-1)/2)] (cpA => cpK) — exact, all classes n<=6 + random n=8..10
+PASS L4 d-moment resolvent = 1 - 2^n cpA/cpK (HYP-7096 PROVED, stronger) — exact, all classes n<=6 + random n=8..10
+PASS L5 cpL_in*(x-n) = (-1)^n x cpL_out(n-x) (panel reversal-closed) — exact, all classes n<=6 + random n=8..10
+PASS L3 verified on ALL 456 classes at n=7
+   n=7: cpA-tie groups 116 (404 classes) | cpK-tie groups 11 (456 classes)
+PASS the symmetrization LOSES information: cpK-ties strictly coarser than cpA-ties (11 groups/456 classes vs 116/404) — cpA => cpK but NOT conversely
+
+=== 7 checks, 7 passed ===
