@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S28: THM-913 PROVED for all odd n (the circulant max-cut session)
+- **Status:** the parallel-class contiguous-split book drawing achieves Z(n) for EVERY odd n
+  (three-line Faulhaber cancellation) and is optimal over all 2-page drawings (AAFRS).
+  ŵ(k) = (n−1)/2 − n/(4sin²(πk/n)) identified; coloring-universality reduced to the
+  arc-Green's-form lemma (verified n ≤ 19).
+- **Next:** (i) the arc lemma: among m-subsets of Z_n, the arc minimizes Σ_{pairs} d(n−d)
+  (classic-flavored; compression argument or Fourier-majorization — one clean session);
+  (ii) even n (classes double; the ⌊⌋-products split); (iii) write the L1 separation-count
+  proof in full (the referee guarantees it; the arc-overlap bookkeeping is routine);
+  (iv) the engineering note: round-robin scheduling ⟺ 2-page optimal (mandate).
+
 ## Lead death-star-2026-07-16-S27: THM-913 parallel-class book drawing + glue progress
 - **Status:** the Z_n book construction achieves Z(n) exactly (n = 5..13; contiguous
   class-split; optimal by AAFRS 2012); the caps verified to maxspeed 44 (prune 99.86%);

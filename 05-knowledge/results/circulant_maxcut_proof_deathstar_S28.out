@@ -1,0 +1,17 @@
+L1 referee: xi(d) = (d-1)(n-1-d)/2 for all odd n <= 31, all d
+  PASS (all n <= 31)
+L2 referee: F(contiguous) = Z(n), symbolic-in-m check via exact sums, m <= 60
+  PASS (m <= 60; the 3-line Faulhaber cancellation is exact)
+  PASS (arc bookkeeping m <= 24)
+L4: (a) w-hat closed form; (b) exhaustive coloring optimality, odd n <= 19
+  n=9: w-hat[1..4] = [-15.234422, -1.445622, 1.0, 1.680045];  -n/(4 sin^2(pi k/n)) at k=1..4 = [-19.234422, -5.445622, -3.0, -2.319955]
+  n=13: w-hat[1..4] = [-50.746765, -9.048552, -1.390871, 1.201553];  -n/(4 sin^2(pi k/n)) at k=1..4 = [-56.746765, -15.048552, -7.390871, -4.798447]
+  n=5: exhaustive min over 2^4 colorings = 1 vs Z(n) = 1 == CONTIG-OPTIMAL
+  n=7: exhaustive min over 2^6 colorings = 9 vs Z(n) = 9 == CONTIG-OPTIMAL
+  n=9: exhaustive min over 2^8 colorings = 36 vs Z(n) = 36 == CONTIG-OPTIMAL
+  n=11: exhaustive min over 2^10 colorings = 100 vs Z(n) = 100 == CONTIG-OPTIMAL
+  n=13: exhaustive min over 2^12 colorings = 225 vs Z(n) = 225 == CONTIG-OPTIMAL
+  n=15: exhaustive min over 2^14 colorings = 441 vs Z(n) = 441 == CONTIG-OPTIMAL
+  n=17: exhaustive min over 2^16 colorings = 784 vs Z(n) = 784 == CONTIG-OPTIMAL
+  n=19: exhaustive min over 2^18 colorings = 1296 vs Z(n) = 1296 == CONTIG-OPTIMAL
+[total 14.7s]

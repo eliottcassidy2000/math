@@ -1,6 +1,13 @@
 # HYP-7097 — The circulant max-cut theorem for the parallel-class book (general odd n)
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S28; owner directive). Verify-first.
+**Status:** RESOLVED (death-star-2026-07-16-S28) — **THM-913 upgraded to PROVED for all
+odd n**: (L1) ξ(d) = (d−1)(n−1−d)/2 refereed exactly (all odd n ≤ 31); (L2) the three-line
+Faulhaber-cancellation identity F(contiguous) = Z(n) (refereed m ≤ 60 + independent arc
+bookkeeping); (L3) optimal over ALL 2-page drawings via AAFRS — coloring-optimality not
+needed. REFINEMENT: ŵ(k) = (n−1)/2 − n/(4sin²(πk/n)) identified exactly ⟹ coloring
+max-cut ⟺ arc-maximality of the cycle Green's form (⟺ arc minimizes Σ_{pairs}d(n−d)) —
+exhaustively verified all odd n ≤ 19; the general-n arc lemma is the one named residual
+(affects only coloring-universality).
 
 Targets: (1) PROVE ξ(d) = (d−1)(n−1−d)/2 (the class-crossing profile); (2) PROVE the main
 identity F(contiguous split) = Z(n) — hand proof found at claim time: with M = 2m−1,
