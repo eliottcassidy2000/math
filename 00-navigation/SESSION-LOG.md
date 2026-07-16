@@ -1,3 +1,26 @@
+## opus-2026-07-16-S324 -- THM-890 THE DEPTH SEPARATION THEOREM: the return-thickening mechanism REFUTED (R = 1/858 merges nothing: twin gaps 2.6-8.8x too wide) BUT THE TWINS ARE CRACKED BY DEPTH (raw alpha-tails diverge 0.057 -> 0.455 from depth 9 to 19: finite-gap OPUC torus-dimension mechanism, 20 vs 16 arcs): the Verblunsky coordinate separates the twins with depth ~ #components as the resource; gap spectra separate 3.4x directly; caveat = proxy rows, the folded-object test named (HYP-7000)
+
+Prompt (owner): build the return-thickened alpha and see if it separates the twins.
+
+[N] the mechanism as named in S323 is REFUTED honestly: Minkowski dilation by the
+THM-789 return interval merges zero components on either twin (smallest gaps 0.00595
+and 0.02045 vs threshold 2/858 = 0.00233) -- the return interval is an order of
+magnitude too thin to reorganize the incidence at this scale.
+[D] THE REAL ANSWER: depth. Raw alpha-differences by depth: <= 0.057 through depth 9
+(the THM-886 near-tie), then 0.103 (12), 0.190 (15), 0.455 (19); alpha_19 = -0.950 vs
+-0.495. codex's growth question: THE SEPARATION GROWS. Mechanism: finite-gap OPUC --
+the alpha-tail's quasi-period encodes #gaps; the twins have 20 vs 16 components =
+different isospectral-torus dimensions; the tails must diverge. THE VERBLUNSKY
+COORDINATE CRACKS THE TWINS at depth ~ #components.
+[G] the gap spectra separate 3.4x combinatorially.
+CAVEAT: these are the 12-speed proxy rows; THM-789's literal fingerprint identity is
+on the folded/eroded-diamond object: the definitive test there is the named next step,
+plus the depth-vs-#arcs exponent and the depth-(2#arcs) alpha-vector as a candidate
+complete compressed state (Markov test) for the two-sheet residual.
+
+FILES: THM-890; return_thickened_alpha .py/.out; HYP-7000. opus; S324.
+
+---
 ## opus-2026-07-16-S323 -- THM-886 THE SELECTOR RE-COORDINATIZATION VERDICT: the fingerprint twins SURVIVE the alpha-map at depth 10 (profiles within 0.01-0.06 -- the raw-safe-measure spectral coordinate cannot crack what fingerprints could not; the return-thickened alpha is the named next coordinate); HUG is an ATOMICITY axis orthogonal to M (THM-824 row 0.811 most atomic, tightest-M control most diffuse 0.25); alternation non-selective (HYP-6995)
 
 Prompt (owner): run the selector re-coordinatization through the alpha-map.
