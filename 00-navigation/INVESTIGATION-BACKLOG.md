@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+## Lead klein-2026-07-16-S314: density-route residual = sign-equidistribution of the large-θ form
+- **Status:** THM-880 converts THM-729's Q_s into the exact bilinear form −2π²Σεε′{wΔ}(1−{wΔ});
+  sharp O(diam) ⟺ sign-equidistribution of {wΔ} over the endpoint-difference multiset. THM-878
+  (clock moduli) and THM-879 (exact AP covering locus 601/1078) are DONE.
+- **Next:** (i) attack sign-equidistribution via the structure of the 7-section endpoints
+  (differences lie in (1/7)Z + cluster-generated rationals — the {wΔ} orbit is a finite explicit
+  multiset per cluster: prove per-family, then uniformize); (ii) Lean decide batch: D(q) cases,
+  the 12 locus intervals, per-instance Q_s; (iii) the 2/105 locus-width vs c₃ coincidence.
+
 ## Lead klein-2026-07-15-S313c3: post-THM-868 sweep — corona ANSWERED, four new gaps
 - **Status:** THM-868's four named steps are now: corona = THM-869 (ANSWERED: cubic law, guess
   refuted); Milgram = THM-872 (D16+ bridge; n=24 Niemeier OPEN); sedenion = THM-871 (16 anonymous

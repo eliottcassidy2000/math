@@ -1,0 +1,18 @@
+PASS cases q <= 14: S2(a/q) = 6/7 for ALL primitive a iff q in {7,13,14}; else STRICTLY > for all a
+PASS case q >= 15 (one line): a=1 adjacent pairs alone give 12(1/7 - 1/q) > 6/7 iff q > 14 (algebra: 12/7 - 12/q > 6/7 iff q > 14; sampled to 3000)
+PASS REFEREE: D(q) = A(q) - 6/7 = 0 iff q in {7,13,14}, exact, q = 2..119  => THM-878
+PASS (L1) sum sin^2(pi l theta)/l^2 = pi^2 theta(1-theta)/2 (numeric, 5 thetas, err < 2e-5)
+PASS (L2) V(e) = e/49 + {e/7}(1-{e/7})/e EXACT for e = 1..2000 (Moebius-sinc closed form)
+PASS (L3) sum_{l!=0} e(lt)/l^2 = 2 pi^2 B2({t}) (numeric)
+PASS Q_s = -2pi^2 sum eps eps' {wD}(1-{wD}) == the l-sum (6 random arc systems, w in {97,397,997}; rel err < 3e-3 at LMAX=3000)
+
+THM-729 clusters, EXACT Q_s (w = 997) and the transport bound:
+  cluster | diam | s | #arcs r | Q_s exact | Q/diam | w*maxu
+  [0, 1, 2, 3, 4, 5, 6]        |    6 | 4 |   3 |    38.900 |   6.48 |    21.4
+  [0, 1, 2, 3, 4, 5, 12]       |   12 | 3 |   7 |    34.371 |   2.86 |    28.5
+  [0, 1, 2, 3, 4, 5, 25]       |   25 | 2 |   6 |    83.657 |   3.35 |    17.1
+  [0, 1, 2, 3, 4, 5, 50]       |   50 | 6 |  15 |   150.735 |   3.01 |    17.1
+  [0, 2, 5, 11, 17, 29, 47]    |   47 | 2 |  20 |   375.537 |   7.99 |     6.1
+PASS EXACT Q_s on the S280-convention clusters (no truncation, no LMAX): Q_s/diam = O(1) (ratios ['6.48', '2.86', '3.35', '3.01', '7.99']) — the empirical law of THM-729, now exact-rational and Lean-shaped
+
+=== 8 checks, 8 passed ===

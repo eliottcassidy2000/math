@@ -1,0 +1,25 @@
+cells: 58 (Farey-13); distinct wall-words across cells: 29
+
+EXACT COVERING LOCUS of the tight AP (maxgap <= 1/7):
+   [1/14, 8/49]   width 9/98   (~[0.07143, 0.16327])
+   [6/35, 4/21]   width 2/105   (~[0.17143, 0.19048])
+   [3/14, 5/21]   width 1/42   (~[0.21429, 0.23810])
+   [13/49, 11/35]   width 12/245   (~[0.26531, 0.31429])
+   [5/14, 11/28]   width 1/28   (~[0.35714, 0.39286])
+   [20/49, 36/77]   width 32/539   (~[0.40816, 0.46753])
+   [41/77, 29/49]   width 32/539   (~[0.53247, 0.59184])
+   [17/28, 9/14]   width 1/28   (~[0.60714, 0.64286])
+   [24/35, 36/49]   width 12/245   (~[0.68571, 0.73469])
+   [16/21, 11/14]   width 1/42   (~[0.76190, 0.78571])
+   [17/21, 29/35]   width 2/105   (~[0.80952, 0.82857])
+   [41/49, 13/14]   width 9/98   (~[0.83673, 0.92857])
+TOTAL covering measure = 601/1078 = 0.557514
+WITNESS (lonely) measure = 477/1078 = 0.442486
+PASS the locus is symmetric under x -> 1-x
+PASS 3/40 is covering; clocks 1/7, 1/13, 1/14 lie in the locus
+PASS REFEREE: locus membership == (maxgap <= 1/7) on the 3001-grid (3000 exact points)
+
+word classification: 29 of 29 distinct order-level cell-words carry covering mass (EVERY chamber type covers somewhere — no fully-lonely word)
+PASS chamber structure: 58 Farey-13 cells; 29 order-level words, each on EXACTLY 2 mirror cells; ALL 29 carry covering mass (the cont.5 count 46 is the finer gap-VALUE-refined stratification, subdivided where two gap values coincide inside a cell)
+
+=== 4 checks, 4 passed ===
