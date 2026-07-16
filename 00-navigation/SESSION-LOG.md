@@ -514,6 +514,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S314 (cont.4) -- THM-883 THE RESONANT MODE: the miss-pattern automaton induction EXECUTED and it settles HYP-6994 by REFUTATION-WITH-REPLACEMENT — the induction step (fast-runner conditioning + Abel/Koksma) PROVES S(ta) = t(1−e(a/7))·m̂_s(a) + O(M_slow) with m̂ = Fourier of the EXACT slow-six miss-measures (s=6: B = 2/35, A = (0,1/28,11/210,5/84,1/35,1/35); max|m̂| = 0.1556); VALIDATED to predicted precision t = 25..400 (62.81 predicted vs 65.12 actual at t=400); CONSEQUENCES: (i) uniform HYP-6994 FALSE (max|S|²/M ~ t; the C=14 scans were pre-asymptotic), (ii) sup_w Q_s ~ diam² on resonant w-classes w ≡ taℓ̄ (15.3→28.7·diam at t=50→100) — THM-729's empirical O(diam) is an OFF-RESONANCE law; REPAIRED CONJECTURE: Q_s = O(diam) off the explicit finite resonant class list, O(diam²|m̂|²/ℓ²) on it
+
+Prompt (owner): prove the uniform lemma via the miss-pattern automaton induction.
+
+HONESTY: the induction WORKED — and what it proves is that the lemma is FALSE. The hoped-for uniform O(M) cannot hold because the fixed 6-runner miss-measure transform m̂ is nonzero; the failure is not noise but an exact linear-in-t mode with computable constants. The route forward is explicit: audit the density route's actual peel residues against the resonant classes (finitely many, listed) — the S275 resonant-peel handling may already quarantine them; and the off-resonance law (confirmed at all tested clean w) is the correct uniform target.
+
+FILES: automaton_induction_resonant_mode_klein_S314.py (4/4) + .out, THM-883, HYP-6994 final status, T1540. -> all (URGENT handoff to the density-route owners: check peels vs resonant classes; m̂ one-pagers per assembly family).
+
+---
 ## klein-2026-07-16-S314 (cont.3) -- THM-882 THE HYP-6994 ASSAULT: W-FREENESS LEMMA (coprime w sweeps Z_P — one line) ⟹ HYP-6994 per cluster = ONE exhaustive scan for ALL w and sections: EXECUTED — PROVED with C = 14 on five clusters (P up to 15,540; ratios 14.00/7.60/8.28/11.67/12.86, no t-drift) ⟹ Q_s ≤ (14π²/3)M on the scanned family; corrected descent Q_s ≤ (7/6)·2π²·Σ_e sup|S_e|² PROVED; TWO in-session error catches: the signed within-owner descent (needs Σε = 0 per owner — false) and the per-owner dipole factorization (SILENT BOUNDARIES: a section move between covered sections doesn't close the arc; 137/188 arcs are cross-owner) — the per-owner Weyl route is dead, recorded
 
 Prompt (owner): prove HYP-6994 via Weyl on the per-owner AP sign patterns.

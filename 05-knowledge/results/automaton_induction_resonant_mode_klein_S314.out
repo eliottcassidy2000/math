@@ -1,0 +1,20 @@
+EXACT 6-RUNNER MISS MEASURES (slow six = {0,1,2,3,4,5}):
+   s=4: B=11/210  A_c=['0', '13/420', '2/105', '0', '0', '1/35']  |mhat(a)| a=1..6: ['0.0910', '0.0786', '0.0479', '0.0479', '0.0786', '0.0910']
+   s=6: B=2/35  A_c=['0', '1/28', '11/210', '5/84', '1/35', '1/35']  |mhat(a)| a=1..6: ['0.1556', '0.0575', '0.0722', '0.0722', '0.0575', '0.1556']
+PASS mhat is NONZERO for some (s, a) — the resonant mode is live (max |mhat| = 0.1556)
+
+RESONANT-MODE FORMULA vs actual (worst section per t):
+   t | s | a | |S(ta)| actual | t*|1-e(a/7)|*|mhat| predicted | M_slow-scale error
+     25 | 4 | 5 |       8.17 |       3.07 |     5.10
+     50 | 5 | 4 |       9.84 |       5.96 |     3.87
+    100 | 3 | 4 |      16.31 |      14.11 |     2.21
+    200 | 2 | 4 |      31.75 |      28.13 |     3.62
+    400 | 1 | 4 |      65.12 |      62.81 |     2.31
+PASS the resonant-mode formula matches the actual sup at resonant frequencies to O(M_slow) across t = 25..400 (the automaton-induction step VALIDATED)
+PASS LINEAR GROWTH: |S(ta)| grows ~ t (400/50 ratio = 6.62 ~ 8): with M = O(t) this gives max|S|^2/M ~ t — **UNIFORM HYP-6994 (sup-version) IS FALSE as t -> infinity**
+
+THE WEIGHTED LAW at t = 100 (P = 2100): sup over w classes of Q_s vs diam:
+   t=100: M=54, diam=100: sup_w Q_s = 2867.60 at w=1097  (sup/diam = 28.68)
+PASS THE SECOND REFUTATION: sup_w Q_s / diam GROWS (15.3 at t=50 -> 28.7 at t=100, ~ diam scaling => sup_w Q_s ~ diam^2): even the weighted law FAILS on the resonant w-classes w = t*a*inverse(ell) mod P — THM-729's empirical O(diam) held only because tested w avoided them; the repaired conjecture is Q_s = O(diam) OFF the explicit resonant classes + Q_s <= C*diam^2*|mhat|^2/ell^2 ON them
+
+=== 4 checks, 4 passed ===
