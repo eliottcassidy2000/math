@@ -307,10 +307,89 @@ def run_harmonic_law_correction():
                 status.append("<< the predicted HYP-6885 counterexample (26 = 2 mod 6)")
         print(f"  n={n:>2}: m={str(mG):>20} closed-form OK; {' '.join(status)}")
 
+def run_doubling_law():
+    """PART 8 (S24 addendum, joint with death-star HYP-7013): THE DOUBLING LAW.
+    For every ODD N: F_N = 2*G_N mod 1 EXACTLY, componentwise; the induced site
+    permutation is u -> u * 2^{-1} on ordered (Z/N)^* labels (label u = left
+    denominator i; u even: image label u/2; u odd: image label (N+u)/2).
+    Verified endpoint-exactly per site. Even N: the label map needs 2
+    invertible mod N -- fails, and F != 2G (checked)."""
+    print()
+    print("=" * 72)
+    print("PART 8 -- THE DOUBLING LAW: F = 2G mod 1 (odd N), site map u -> u/2")
+    for N in range(3, 18):
+        F, mF = flat_set(N)
+        G, mG = good_set(N)
+        # double each G component, fold mod 1, merge
+        d = []
+        for lo, hi in G:
+            a, b = 2 * lo, 2 * hi
+            if b <= 1:
+                d.append((a, b))
+            elif a >= 1:
+                d.append((a - 1, b - 1))
+            else:
+                d.append((a, Fr(1))); d.append((Fr(0), b - 1))
+        d.sort()
+        m = []
+        for lo, hi in d:
+            if m and lo <= m[-1][1]:
+                m[-1][1] = max(m[-1][1], hi)
+            else:
+                m.append([lo, hi])
+        m = [(a, b) for a, b in m]
+        eq = (m == F)
+        if N % 2 == 1:
+            assert eq, f"doubling law FAILS at odd N={N}"
+            # per-site label map: G component at site with left denom i maps to
+            # F component at left denom i/2 (i even) or (N+i)/2 (i odd)
+            ok_sites = 0
+            adj = farey_adjacencies(N - 1)
+            sites = [(L, R) for (L, R) in adj if L.denominator + R.denominator == N]
+            kap = Fr(2, N + 1)
+
+            def Fpiece(L, R):
+                """the proved per-cell flat interval at cell (L, R), i+j=N"""
+                i, j = L.denominator, R.denominator
+                if i < j:
+                    return (L + kap / (2 * i),
+                            L + (1 - i * kap) / (i * (j - i)))
+                else:
+                    return (R - (1 - j * kap) / (j * (i - j)),
+                            R - kap / (2 * j))
+
+            piece_at_label = {}
+            for (L, R) in sites:
+                piece_at_label[L.denominator] = Fpiece(L, R)
+            for (L, R) in sites:
+                i, j = L.denominator, R.denominator
+                lam = Fr(1, N + 1)
+                gcomp = (L + lam / i, R - lam / j)
+                x, y = 2 * gcomp[0], 2 * gcomp[1]
+                k = int(x)
+                x, y = x - k, y - k
+                target_label = i // 2 if i % 2 == 0 else (N + i) // 2
+                okc = piece_at_label.get(target_label) == (x, y)
+                ok_sites += okc
+                if not okc:
+                    print(f"    site i={i} -> label {target_label}: doubled "
+                          f"({x},{y}) vs piece {piece_at_label.get(target_label)}")
+            # the label map must be a bijection on labels
+            labels = sorted(piece_at_label)
+            image = sorted((i // 2 if i % 2 == 0 else (N + i) // 2) for i in labels)
+            print(f"  N={N:>2} (odd):  F == 2G: {eq};  per-site doubled-G == F-piece "
+                  f"at label u*2^-1: {ok_sites}/{len(sites)}; label map bijective: "
+                  f"{image == labels}")
+            assert ok_sites == len(sites) and image == labels
+        else:
+            print(f"  N={N:>2} (EVEN): F == 2G: {eq} (must be False)")
+            assert not eq
+
 if __name__ == "__main__":
     run_N13()
     run_generalN()
     run_harmonic_identities()
     run_harmonic_law_correction()
+    run_doubling_law()
     print()
     print("ALL CHECKS PASSED")

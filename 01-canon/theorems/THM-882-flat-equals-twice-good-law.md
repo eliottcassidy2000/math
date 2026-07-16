@@ -107,21 +107,60 @@ composite N drops the non-unit terms — THM-819's prime criterion. ∎
   1/14-lonely time: the covering adversary's playground has measure exactly twice the
   reward. Any pair-energy (second-moment) instrument is blind to the distinction — the
   quantitative face of LEM-020's "minimal certifying moment order = 3".
-- **The mechanism is mod-N halving, not a kink symmetry.** The per-cell ratios
-  max(i,j)/|i−j| are non-uniform (7, 8/3, 9/5, 10/7, 11/9, 12/11), so no pointwise
-  measure-doubling map exists; the doubling is the invertibility of 2 in (Z/N)*. Note
-  −2 ≡ 11 is a primitive root mod 13: the site map i ↦ N−2i is a primitive-root walk,
-  and (i,j) ↦ (i, j−i) is the Stern–Brocot parent step — the overhang trades each Farey
-  pair for its mediant-parent pair.
+- **The mechanism is 2 ∈ (Z/N)\*, in two projections.** [CORRECTED same night —
+  death-star-S17's HYP-7013, verified here exactly against this file's interval systems:]
+  the pointwise doubling map DOES exist: **F = 2G mod 1 exactly** (12 components to 12
+  components, injective on G — no half-pair collisions — so λ(F) = 2λ(G) with the 2 as
+  the Jacobian). What this file's per-cell ratios max(i,j)/|i−j| (7, 8/3, 9/5, 10/7,
+  11/9, 12/11 — non-uniform) show is that the doubling map is NOT SITE-PRESERVING: it
+  permutes the 12 Farey cells, and the unit-halving identity of (e) is the site-level
+  bookkeeping of the same map. One object, two projections: ×2 acting on points (the
+  2-adic deck map, THM-580 frame) vs on site indices (i ↦ N−2i, a primitive-root walk;
+  −2 ≡ 11 generates (Z/13)\*). The original phrasing "no pointwise measure-doubling map
+  exists" was an overclaim — only site-preserving maps are excluded. (i,j) ↦ (i, j−i)
+  is the Stern–Brocot parent step — the overhang trades each Farey pair for its
+  mediant-parent pair.
 - **Even-n exclusivity.** For LRC(n) the 2× law needs n even. The parity of n enters
   through the unit group of Z/(n−1) — a different clock from the mod-14 tight-locus μ₆
   (opus-S320): the flat geometry runs on the N = 13 clock, the tight locus on the n = 14
   clock; the pair (13, 14) = (walk modulus, threshold modulus) is the coprime gear pair
   183 = 13·14 + 1 rides on.
 
+## ADDENDUM (boxeph-S24, same night, joint with death-star HYP-7013): THE DOUBLING LAW, PROVED
+
+**Theorem (general odd N).** F_N = 2·G_N mod 1 EXACTLY, and the doubling map induces the
+site permutation **u ↦ u·2⁻¹ on ordered (Z/N)\* labels** (label u = left denominator):
+2·[G-piece at label u] = [F-piece at label u·2⁻¹], every site. For even N it fails
+(2 not invertible).
+
+*Proof.* Label the (i, j)-site by u = i. Case i even: 2·(a/i) = a/i′ reduced, i′ = i/2;
+the doubled G-piece has left endpoint a′/i′ + κ/(2i′) (since κ/i = κ/(2i′)) and length
+2·κ/(2ij) = κ/(2·i′·(j′−i′)) with j′ = N − i′ (because i′(j′−i′) = (i/2)(N−i) = ij/2);
+the numerator is the right one: from bi − aj = 1, a′ ≡ −j⁻¹ ≡ −(j′)⁻¹ mod i′ (as
+j′ − j = i′), which is the defining congruence of the unique (i′, j′)-cell; and no
+doubled piece straddles an integer (no Farey cell straddles 1/2). So the doubled piece
+coincides with the PROVED F-piece [a′/i′ + κ/(2i′), a′/i′ + (1−i′κ)/(i′(j′−i′))].
+Case j even mirrors under t ↦ 1−t (which commutes with doubling and swaps ordered
+sites). The label map u ↦ u/2 (u even), u ↦ (N+u)/2 (u odd) is exactly ×2⁻¹ on (Z/N)\*
+— a bijection — so the doubled G-pieces enumerate every F-piece exactly once:
+F = 2G, and injectivity gives λ(F) = 2λ(G) with the 2 as the Jacobian. ∎
+
+Machine verification (script Part 8): F = 2G exact at every odd N = 3..17 (component
+lists identical; per-site doubled-piece = F-piece at label u·2⁻¹, 2/2, 4/4, 6/6, 6/6,
+10/10, 12/12, 8/8, 16/16 sites; label bijectivity exact); F ≠ 2G at every even N = 4..16.
+NOTE: at N = 3 adjacent doubled pieces abut at 1/2 and merge (1 component from 2 pieces)
+— the per-piece identity is the invariant statement. Credit: death-star-S17 (HYP-7013)
+found the N = 13 pointwise map the same night this file's site analysis landed; this
+addendum is the reconciliation both flagged: ×2 on points (2-adic deck map) and ×2⁻¹ on
+site labels (this file's unit halving) are the same element of (Z/N)\* in two actions.
+Statement (5)'s original wording "no pointwise measure-doubling map exists" was an
+overclaim (only SITE-PRESERVING maps are excluded) — corrected in place above.
+
 ## Evidence log
 - [x] N = 13: 12/12 cell predictions exact; word structure 12/12 + 34/34; measures exact
 - [x] N = 3..17: 2× law ⟺ N odd, exact ratios both ways
 - [x] unit identities N ≤ 25; harmonic-law criterion n ≤ 28 incl. the n = 26 counterexample
+- [x] THE DOUBLING LAW (addendum): F = 2G mod 1 at every odd N ≤ 17, per-site
+      endpoint-exact, label map = ×2⁻¹ bijective; fails at every even N
 - [ ] Lean: the per-cell solve is decide-shaped (rational linear algebra); the unit
       bijection is Finset bookkeeping — a candidate for the certificate batch

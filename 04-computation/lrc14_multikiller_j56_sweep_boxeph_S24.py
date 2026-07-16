@@ -126,7 +126,7 @@ def is_covering(S):
 # ------------------------------------------------------------ the tree
 
 class Sweep:
-    def __init__(self, j, wcap_hard=10**7):
+    def __init__(self, j, wcap_hard=10**7, shard=0, nshards=1):
         self.j = j
         self.branches = 0
         self.leaves = 0
@@ -134,12 +134,20 @@ class Sweep:
         self.noncov_below = []
         self.wcap_hard = wcap_hard
         self.maxdepth_w = 0
+        self.shard = shard
+        self.nshards = nshards
 
     def run(self):
         j = self.j
-        for P in combinations(range(1, 13), 13 - j):
+        shapes = [P for idx, P in enumerate(combinations(range(1, 13), 13 - j))
+                  if idx % self.nshards == self.shard]
+        for si, P in enumerate(shapes):
             gs = good_set_f(P)
             self.recurse(list(P), [], gs, 12, j)
+            if (si + 1) % 20 == 0:
+                print(f"    [j={j} shard {self.shard}/{self.nshards}] "
+                      f"{si+1}/{len(shapes)} shapes, {self.branches} branches, "
+                      f"{self.leaves} leaves", flush=True)
         return self
 
     def recurse(self, P, W, gs, w_prev, m):
@@ -216,17 +224,27 @@ class Sweep:
                       flush=True)
 
 def main():
-    js = [int(x) for x in sys.argv[1:]] or [2, 3, 4, 5, 6]
-    print("j | shapes | branches | float-leaves | covering M<1/13 | noncov M<1/13 | max w")
+    args = sys.argv[1:]
+    shard, nshards = 0, 1
+    if "--shard" in args:
+        i = args.index("--shard")
+        shard, nshards = int(args[i + 1]), int(args[i + 2])
+        args = args[:i] + args[i + 3:]
+    js = [int(x) for x in args] or [2, 3, 4, 5, 6]
+    print(f"SHARD {shard}/{nshards}", flush=True)
+    print("j | shapes | branches | float-leaves | covering M<1/13 | noncov M<1/13 | max w",
+          flush=True)
     for j in js:
-        sw = Sweep(j).run()
+        sw = Sweep(j, shard=shard, nshards=nshards).run()
         from math import comb
-        print(f"{j} | {comb(12, 13 - j):>6} | {sw.branches:>10} | {sw.leaves:>8} | "
-              f"{len(sw.violations):>4} | {len(sw.noncov_below):>4} | {sw.maxdepth_w}",
+        print(f"RESULT j={j} shard={shard}/{nshards} | branches {sw.branches} | "
+              f"leaves {sw.leaves} | covering-viol {len(sw.violations)} | "
+              f"noncov-below {len(sw.noncov_below)} | maxw {sw.maxdepth_w}",
               flush=True)
         if sw.violations:
-            print("  !! THM-726/883 COVERING VIOLATIONS FOUND -- report to fleet")
-    print("done")
+            print("  !! THM-726/883 COVERING VIOLATIONS FOUND -- report to fleet",
+                  flush=True)
+    print(f"done shard {shard}/{nshards}", flush=True)
 
 if __name__ == "__main__":
     main()

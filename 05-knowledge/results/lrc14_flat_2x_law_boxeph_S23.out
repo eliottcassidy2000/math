@@ -98,4 +98,22 @@ per-site closed form (all N): m({1..N-1}; 1/(N+1)) =
   n=27: m= 21656804/3475100475 closed-form OK; 
   n=28: m=324830637/41644002400 closed-form OK; harmonic law fails (N=27 composite)
 
+========================================================================
+PART 8 -- THE DOUBLING LAW: F = 2G mod 1 (odd N), site map u -> u/2
+  N= 3 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 2/2; label map bijective: True
+  N= 4 (EVEN): F == 2G: False (must be False)
+  N= 5 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 4/4; label map bijective: True
+  N= 6 (EVEN): F == 2G: False (must be False)
+  N= 7 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 6/6; label map bijective: True
+  N= 8 (EVEN): F == 2G: False (must be False)
+  N= 9 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 6/6; label map bijective: True
+  N=10 (EVEN): F == 2G: False (must be False)
+  N=11 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 10/10; label map bijective: True
+  N=12 (EVEN): F == 2G: False (must be False)
+  N=13 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 12/12; label map bijective: True
+  N=14 (EVEN): F == 2G: False (must be False)
+  N=15 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 8/8; label map bijective: True
+  N=16 (EVEN): F == 2G: False (must be False)
+  N=17 (odd):  F == 2G: True;  per-site doubled-G == F-piece at label u*2^-1: 16/16; label map bijective: True
+
 ALL CHECKS PASSED
