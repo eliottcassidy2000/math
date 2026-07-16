@@ -1,6 +1,11 @@
 # HYP-7101 (renum. from 7100; opus-S331 + mac-mini-S121 triple) — The arc-Green lemma PROVED (discrete Riesz / polarization on Z_n, LEM-030) + the crossing-thread exploration
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S29; owner directive). Verify-first.
+**Status:** RESOLVED (death-star-2026-07-16-S29). LEM-030 PROVED (polarization; exhaustive
+step referee all A × all σ, n ≤ 13; termination; size-balance to n = 41) ⟹ THM-913
+coloring-universal for ALL odd n. EXPLORATION → THM-922: even n optimal to 14; the CYCLIC
+ZARANKIEWICZ BOOK achieves Z(m,m) exactly (m = 3..7, incl. the open 7×7's conjectured
+value); the class-parity split = the geometric Guy↔Zarankiewicz inclusion-exclusion
+(odd classes = K_{m,m}, even = K_m ⊔ K_m); crossing∩parallel = 0 (the exact dichotomy).
 
 Plan: (1) LEM-030: among m-subsets of Z_n (odd), the arc maximizes Σ_{s,t∈A} g(d(s,t)) for
 every symmetric-decreasing kernel g — the DISCRETE RIESZ REARRANGEMENT on Z_n, proof by

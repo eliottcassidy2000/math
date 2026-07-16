@@ -1,5 +1,17 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S29: LEM-030 + THM-922 — the crossing thread closes odd-n and opens bipartite
+- **Status:** arc-Green PROVED (polarization/discrete Riesz; THM-913 universal all odd n);
+  the cyclic Zarankiewicz book achieves Z(m,m) (m ≤ 7; the 7×7 meets the open conjecture);
+  class-parity = the geometric Guy↔Zarankiewicz inclusion-exclusion; even-n optimal to 14.
+- **Next:** (i) the odd-class ξ-profile + Faulhaber identity for the bipartite case (general-m
+  proof of THM-922(I) — same three-line shape); (ii) the even-n complete identity (bicirculant
+  algebra); (iii) 7×7 significance: the cyclic book gives a natural extremal-candidate FAMILY
+  for the open Zarankiewicz cases — check K_{7,8}, K_{8,8} vs Z(7,8), Z(8,8); (iv) LEM-030 as
+  a covering-program tool (tent-kernel pair energies are symmetric-decreasing — polarization
+  applies to the LRC witness-measure optimizations); (v) the mixed-class interactions in the
+  parity decomposition (the cr(K_{2m}) vs Z(m,m) + 2Z(m) counting identity, exact ledger).
+
 ## Lead death-star-2026-07-16-S28: THM-913 PROVED for all odd n (the circulant max-cut session)
 - **Status:** the parallel-class contiguous-split book drawing achieves Z(n) for EVERY odd n
   (three-line Faulhaber cancellation) and is optimal over all 2-page drawings (AAFRS).

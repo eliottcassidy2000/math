@@ -1,0 +1,29 @@
+P1 referee: polarization monotonicity, exhaustive (all A, all reflections)
+  n=5: PASS
+  n=7: PASS
+  n=9: PASS
+  n=11: PASS
+  n=13: PASS
+P2 referee: iterated polarization terminates at an arc (random battery)
+  PASS (300 random trials all reach arcs)
+Size balance: F(m-arc split) minimized at m = (n-1)/2 (exact, odd n <= 41)
+  PASS
+
+EXPLORATION A: EVEN n — class structure and the coloring minimum vs Z(n)
+  n=6: class sizes [2, 3] within-class = 0 min-coloring = 3 vs Z(n) = 3 == OPTIMAL
+  n=8: class sizes [3, 4] within-class = 0 min-coloring = 18 vs Z(n) = 18 == OPTIMAL
+  n=10: class sizes [4, 5] within-class = 0 min-coloring = 60 vs Z(n) = 60 == OPTIMAL
+  n=12: class sizes [5, 6] within-class = 0 min-coloring = 150 vs Z(n) = 150 == OPTIMAL
+  n=14: class sizes [6, 7] within-class = 0 min-coloring = 315 vs Z(n) = 315 == OPTIMAL
+
+EXPLORATION B: CYCLIC BIPARTITE K_{m,m} (parts = parities on Z_{2m}) vs Zarankiewicz
+  K_3,3: classes = 3 odd sums (sizes [3]) within = 0 min-coloring = 1 vs Z(m,m) = 1 == ZARANKIEWICZ
+  K_4,4: classes = 4 odd sums (sizes [4]) within = 0 min-coloring = 4 vs Z(m,m) = 4 == ZARANKIEWICZ
+  K_5,5: classes = 5 odd sums (sizes [5]) within = 0 min-coloring = 16 vs Z(m,m) = 16 == ZARANKIEWICZ
+  K_6,6: classes = 6 odd sums (sizes [6]) within = 0 min-coloring = 36 vs Z(m,m) = 36 == ZARANKIEWICZ
+  K_7,7: classes = 7 odd sums (sizes [7]) within = 0 min-coloring = 81 vs Z(m,m) = 81 == ZARANKIEWICZ
+
+EXPLORATION C: the 4-subset inclusion-exclusion ledger (odd n)
+  n=9: 4-subsets = 126 = C(n,4); parallel-pairing marks = 54 (Qcirc check: n*floor((n-2)^2/4)/2 = 54); crossing pairings = 126 (one each); overlap crossing&parallel = 0
+  n=13: 4-subsets = 715 = C(n,4); parallel-pairing marks = 195 (Qcirc check: n*floor((n-2)^2/4)/2 = 195); crossing pairings = 715 (one each); overlap crossing&parallel = 0
+[total 2.2s]
