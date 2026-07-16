@@ -144,3 +144,42 @@ Verification:
 `05-knowledge/results/lrc14_owner_packet_parallel_class_current_codex_S19.out`.
 The remaining task is a universal signed bound for the noncommon gcd-lattice
 part of (4); a scalar crossing energy cannot supply it by itself.
+
+## S20 divisor-sheet and colored-fiber sharpening
+
+`HYP-7085` proves that every wall has a unique reduced coordinate `7x=h/d`
+and exact owner set `{a:d|a}`.  For a fixed proper owner set `S`, `g=gcd(S)`,
+the remainder is a signed cyclic word on the exact columns `k mod 7g`, with
+
+```text
+N_A(S)=7 sum_(T subset A\S)(-1)^|T| gcd(g,T).
+```
+
+Writing `h=a+jd`, `a in U_d`, makes every seven-column unit fiber an affine
+edge-colored `K_{8,7}` on rows `0,A,t,2t`; its score is pointed rainbow
+completion.  This is the precise merge with the parallel-class circle and the
+cyclic Zarankiewicz book.  It also proves the guardrail: 88.25% of proper bank
+words have planar owner-incidence graphs, including both individual extrema,
+and even an identical full binary class-parity word can carry opposite signs.
+The cut-open reflection gives adjacent-pin symmetrization, not cancellation.
+
+The sharpened crux is therefore an adjacent-pin discrepancy bound retaining
+the full source address, miss word, outside-divisibility mask, and column
+order.  A full residue-frequency scan of all 1,259 proper words in the bounded
+bank gives `-1019/2058<=tG_S<=89/196`, but the apparent local cap
+`|tG_S|<=1/2` is false: `A=(7,8,9,10,11), S=(11),t=44` gives
+`tG_S=-216/343`.  The correct finite object is the least-speed envelope: for
+each residue `r mod 7g`, divide the periodic coefficient by the least
+representative `t>max(A)`.  The remaining target is a divisor-summed bound for
+those normalized adjacent-pin envelopes, not a wordwise coefficient cap.  The
+failure is infinite, not sporadic: on `A_g=(g-4,...,g),S=(g),t=4g`, the
+seven-class phase lock and four-row Farey grid give the exact recurrence
+`C_4(g+84)=C_4(g)-149/49`, while `G_S` tends to `-149/16464`.  More
+importantly for the one-sided LRC bound, `t=2g` gives
+`C_2(g+84)=C_2(g)+62/49`, `G_S->31/4116`, and already
+`C_2(33)=53/98>1/2`.  Reflection nevertheless yields the correct local
+density scale: singleton sheets satisfy
+`-N/(14t)<=G_S<=11N/(196t)` and pair sheets satisfy
+`|G_S|<=N/(14t)`.  The exact aggregate counts are the binomial inversion
+`M_r=sum_(k>=r)(-1)^(k-r)binom(k,r)7sum_(|T|=k)gcd(T)`; what remains is to
+recover far-address sign cancellation beyond this divisor charge.

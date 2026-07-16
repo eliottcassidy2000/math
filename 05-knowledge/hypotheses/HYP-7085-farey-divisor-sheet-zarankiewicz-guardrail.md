@@ -1,8 +1,10 @@
 # HYP-7085 — Farey divisor sheets and the Zarankiewicz guardrail
 
 **Status:** EXACT DIVISOR-SHEET / COLORED-FIBER REDUCTION PROVED; ORDINARY
-ZARANKIEWICZ AND CLASS-PARITY CLOSURES REFUTED; THE ADJACENT-PIN SIGNED-WORD
-BOUND REMAINS OPEN (codex-2026-07-16-S20).
+ZARANKIEWICZ AND CLASS-PARITY CLOSURES REFUTED; EXACT ADJACENT-PIN DENSITY
+BOUNDS PROVED; THE DIVISOR-SUMMED FAR-ADDRESS BOUND REMAINS OPEN; THE
+PROVISIONAL COEFFICIENT CAP IS REFUTED AND REPLACED BY AN EXACT LEAST-SPEED
+ENVELOPE (codex-2026-07-16-S20).
 
 Let `A={a_1,...,a_5}` be the positive slow core and `t>max(A)`.  This note
 refines the noncommon owner-wall remainder in `HYP-7084`.
@@ -113,6 +115,20 @@ primitive `P_m` in (3) integrates this colored score.  Thus the natural
 Zarankiewicz object is a **colored** `K_{8,7}` with ordered columns and
 distinguished rows, not its ordinary uncolored drawing.
 
+For a unit `a in U_d`, call its seven-column sum the **pinned cyclic rainbow
+discrepancy** `D_b(d,a;t)`.  It is equivalently a colored
+Dedekind--Rademacher sum: it retains the root pin `b`, cyclic color order,
+pre/post miss flag, and far source address.  The exact owner word is
+
+```text
+tG_S=sum_(d|g, d>=2, S_d(A)=S) sum_(a in U_d) D_0(d,a;t),
+D_0(d,d-a;t)=D_6(d,a;t).                                   (7a)
+```
+
+Thus opposite unit fibers are precisely the adjacent-pin symmetrization of
+the cut-open parallel-class circle.  Ordinary crossing number is the quotient
+obtained after discarding every field in `D_b` that carries its sign.
+
 ## 4. What the Zarankiewicz values do and do not say
 
 The ordinary crossing-number status in the incoming notes needed correction:
@@ -185,6 +201,83 @@ The actual pin is `b=0`, while `R(0)=6`.  Paired columns therefore give
 of the parallel-class circle and explains structurally why the adjacent class
 has crossing profile `xi(1)=0` while the signed owner current remains nonzero.
 
+There is also an exact owner-order gauge.  Let `c in (Z_7)^5` be the five slow
+row colors and put `Phi_z(c)=P_(m(c))(z)`, with the stationary pin retained.
+A wall with owner set `S` moves `c` to `c+1_S`.  For every ordering
+`pi=(s_1,...,s_r)` of `S`,
+
+```text
+Phi_z(c)-Phi_z(c+1_S)
+ =sum_(j=1)^r [Phi_z(c+1_{s_1,...,s_(j-1)})
+                -Phi_z(c+1_{s_1,...,s_j})].                 (10a)
+```
+
+Thus a simultaneous owner wall is a path-independent exact gradient on the
+five-row color cube; the ordering is a gauge that may be chosen to expose
+runnerwise or reflection pairing.  Exact enumeration of the one-row color
+edges on the fourteen-cell palette gives
+
+```text
+max single-edge |Delta Phi|=51/686.                         (10b)
+```
+
+This is the correct Hamiltonian-path role suggested by Tournament Analysis:
+the path orders proof obligations inside one owner fiber, rather than ranking
+runners globally.  It can reassemble multi-owner sheets into runner currents,
+but it cannot by itself close singleton sheets, where there is no ordering
+freedom.
+
+The adjacent-pin gauge also gives rigorous local bounds.  Exact enumeration of
+all five-row color states, owner masks, and the fourteen phase endpoints gives
+the paired ranges
+
+```text
+|S|     min[W(k;0)+W(k;6)]     max[W(k;0)+W(k;6)]
+ 1              -1/7                    11/98
+ 2              -1/7                     1/7
+ 3             -13/98                   45/343
+ 4             -13/98                   15/98.              (10c)
+```
+
+The exact column set is invariant under `k -> -k`.  Its only possible proper
+fixed point is the half-turn; there reflection makes its score exactly half a
+paired score.  If `N=N_A(S)`, (10c) therefore implies in particular
+
+```text
+-N/(14t) <= G_S <= 11N/(196t)        for |S|=1,
+|G_S| <= N/(14t)                     for |S|=2.              (10d)
+```
+
+Since `N<=7g`, the singleton absolute value is `<1/2` and its positive side is
+`<11/28`.  Distinct pair owners force `max(S)>=2g`, hence the pair bound is
+`<1/4`.  The higher-cardinality rows of (10c) similarly give absolute caps
+`<13/84` and `<15/112`.  These are the first universal sheet estimates that
+use the parallel-class reflection, but they remain too coarse when summed.
+
+The correct no-double-counting charge is explicit.  Let `M_r(A)` be the number
+of slow wall positions having exactly `r` owners and put
+
+```text
+I_k=7 sum_(T subset A, |T|=k) gcd(T).
+```
+
+Every `k`-fold wall intersection is counted once for each `k`-subset of its
+owners, so binomial inversion gives
+
+```text
+M_r=sum_(k=r)^5 (-1)^(k-r) binom(k,r) I_k.                  (10e)
+```
+
+Consequently
+
+```text
+sum_(|S|=1) G_S <= 11M_1/(196t),
+sum_(|S|=2) G_S <= M_2/(14t).                              (10f)
+```
+
+This is the honest divisor-simultaneity aggregate.  Its remaining loss is now
+precise: it discards alignment of the far addresses and signs across sheets.
+
 ## 6. The sharpened remaining crux
 
 The full bounded-bank frequency scan evaluates every residue frequency on all
@@ -195,17 +288,119 @@ The full bounded-bank frequency scan evaluates every residue frequency on all
 ```
 
 with both extrema on singleton, hence planar, sheets.  The lower value is
-`-1/2+5/1029`.  This supports, but does not prove, the local conjecture
+`-1/2+5/1029`.  This is a diameter-10 box artifact, not evidence for a
+universal cap.  The first larger diameter already gives the exact refutation
 
 ```text
-|t G_S(A,t)| <= 1/2.                                       (11)
+A=(7,8,9,10,11), S=(11), t=44:
+t G_S=-216/343=-(6/7)^3,   G_S=-54/3773.                   (11)
 ```
 
-Even (11) alone does not sum to the required global propagation bound without
-using divisor-sheet simultaneity.  The next proof-bearing target is an
-**adjacent-pin discrepancy bound** for (3), beginning with singleton and pair
-sheets.  Those graphs are always planar, yet they carry the largest signed
-coefficients; the outside mask and full far address must stay in the state.
+There are 70 exact columns, 38 with nonzero local score.  Thus the periodic
+coefficient can accumulate with the sheet denominator; it is the wrong
+normalization.
+
+This is not an isolated or merely favorable negative miss.  For every `g>=5`,
+take the consecutive-tail singleton family
+
+```text
+A_g=(g-4,g-3,g-2,g-1,g),  S=(g),
+C_g^(m)=mg G_S(A_g,mg),  m in {2,4}.
+```
+
+The far phases are locked to `mk/7`, the parallel-class circle coordinate.  For
+an exact singleton column, the four outside rows occupy
+`k-ceil(ck/g) mod 7`, `c=1,2,3,4`, while the owner moves from `k-1` to `k`.
+The local word therefore depends only on `k mod 7` and the four ceilings.
+Partitioning `0<=k/g<7` at the rational breakpoints of those ceilings gives a
+degree-one quasipolynomial in `g` with period dividing
+`lcm(1,2,3,4)*7=84`.  Exact evaluation of its 84 residue classes gives
+
+```text
+C_(g+84)^(2)=C_g^(2)+62/49,
+C_(g+84)^(4)=C_g^(4)-149/49.                               (12)
+```
+
+Consequently `tG_S` is unbounded in both signs even on planar `K_(1,N)` owner
+graphs.  The positive half-cap already fails at `g=33,t=66`, where
+
+```text
+tG_S=53/98,  G_S=53/6468.                                  (13)
+```
+
+The normalized currents instead have finite phase-locked limits
+
+```text
+G_S(A_g,2g) -> 31/4116,
+G_S(A_g,4g) -> -149/16464.                                 (14)
+```
+
+Pair sheets have the same phenomenon.  On `g=11 mod 84`, set
+
+```text
+A=(g,2g-3,2g-2,2g-1,2g), S=(g,2g), t=3g.
+```
+
+Then the owner incidence is again planar and the exact phase ray satisfies
+
+```text
+C_(g+84)=C_g+797/343,  G_S -> 797/86436.                   (14a)
+```
+
+Thus neither singleton nor pair coefficients admit even a one-sided constant
+cap; the normalized density bounds (10d)--(10f) are essential.
+
+The number `84=12*7` is exactly the merge of the four-row Farey breakpoint
+grid with the seven-vertex parallel-class circle.  Ordinary Zarankiewicz value
+is identically zero on this family and cannot see the drift.
+
+There is, however, an exact finite replacement.  Put `D=max(A)`, `p=7g`, and
+write the numerator of (3) as the periodic coefficient
+
+```text
+C_(A,S)(r)=sum_(k in K_A(S))
+  [P_(m_k^-)({rk/p})-P_(m_k^+)({rk/p})],   r mod p.
+```
+
+For `0<=r<p`, the least admissible far speed in that residue is
+
+```text
+tau_D(r)=r+p(floor((D-r)/p)+1).                             (15)
+```
+
+Every `t>D` with `t=r mod p` has the same numerator, so
+
+```text
+max_(t>D, t=r mod p) |G_S(A,t)|=|C_(A,S)(r)|/tau_D(r).       (16)
+```
+
+Consequently the infinite far-speed problem for a fixed word is exactly the
+finite `p`-entry **least-speed envelope**.  This is the normalization that the
+diameter-10 coefficient scan omitted.
+
+The fourteen-cell palette also gives a universal, though presently too weak,
+guardrail.  Since every primitive difference is piecewise linear on the common
+half-sector grid, exact endpoint enumeration gives
+
+```text
+max_(m,n,z) |P_m(z)-P_n(z)|=135/1372.                       (17)
+```
+
+For a realized proper owner set, choosing one outside speed shows
+`N_A(S)<=7(g-1)`.  Hence
+
+```text
+|G_S(A,t)| <= 135 N_A(S)/(1372 t)
+             <= 945(g-1)/(1372 t) < 945/1372.               (18)
+```
+
+The bound (18) is not remotely summable enough to close the global remainder,
+but it cleanly separates local palette size from divisor multiplicity.  The
+next proof-bearing target is a **divisor-summed adjacent-pin discrepancy bound**
+for the least-speed envelopes (16), beginning with singleton and pair sheets.
+Those graphs are always planar, yet they carry the largest coefficients; the
+outside mask, full far address, and simultaneous charge across divisors must
+stay in the state.
 
 Tournament Analysis uses owner cardinalities `1,2,3,4` as vertices.  Positive
 signed risk orders them `(1,2,4,3)`, whereas Zarankiewicz risk orders them

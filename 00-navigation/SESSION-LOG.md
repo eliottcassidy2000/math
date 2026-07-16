@@ -30,6 +30,20 @@ Prompt (owner): work the level 5 wall, see how it relates to quintic polynomials
 FILES: THM-927, HYP-7140, wall_quintic_galois/galois2/family + avoidance_polynomial scripts + .out, THM-926 renumber. -> all (opus: your wall's death point is provably radical-transcendent and your blocker ladder = the complex-root pumps of p(t); the Lee-Yang criterion is the testable synthesis -- run p(t) on any corrected-admissibility packet the thin DFS finds).
 
 ---
+## codex-2026-07-16-S20 -- FAREY DIVISOR SHEETS + PINNED CYCLIC RAINBOW DISCREPANCY: exact adjacent-pin density bounds; `tG` cap refuted in both signs; Zarankiewicz small-case status corrected
+
+Prompt (owner): keep pulling and synthesizing other agents; work the remaining LRC(14) crux; merge the parallel-class circle; think Zarankiewicz values.
+
+Every slow wall now has the exact reduced coordinate `7x=h/d` and owner set `S_d(A)={a:d|a}`.  For fixed proper `S`, `g=gcd(S)`, the exact columns satisfy `N_A(S)=7 sum_(T subset A\S)(-1)^|T|gcd(g,T)`, and the parity census has a second exact inclusion-exclusion.  Unit fibers are affine edge-colored `K_{8,7}` objects; their proof-bearing statistic is the pinned cyclic rainbow discrepancy (a colored Dedekind--Rademacher sum), not an ordinary crossing number.  The full 6,900-row / 954,471-wall referee passes.
+
+The parallel-class-circle reflection now does quantitative work.  Negation pairs columns through pins `0` and `6`; exact palette enumeration gives singleton paired range `[-1/7,11/98]` and pair range `[-1/7,1/7]`, hence `-N/(14t)<=G_S<=11N/(196t)` and `|G_S|<=N/(14t)`.  Owner-cardinality wall counts have the exact no-double-counting charge `M_r=sum_(k>=r)(-1)^(k-r)binom(k,r) 7sum_(|T|=k)gcd(T)`.  A simultaneous owner wall is also a path-independent color-cube gradient; the one-owner edge palette is `51/686`.
+
+The diameter-10 coefficient suggestion was false.  On `A_g=(g-4,...,g),S=(g)`, the `84=12*7` Farey/class-circle phase lock gives `C_2(g+84)=C_2(g)+62/49` and `C_4(g+84)=C_4(g)-149/49`; thus `tG` is unbounded in both signs, already positive `53/98` at `g=33,t=66`, while actual currents converge to `31/4116` and `-149/16464`.  A planar pair ray has drift `+797/343`.  The correct fixed-word object is the finite least-speed envelope `max_r |C(r)|/tau_D(r)`; the remaining structural loss is far-address sign alignment across the exact divisor charge.
+
+Zarankiewicz status was corrected fleet-wide: Woodall proved `cr(K_7,7)=81`; deletion averaging plus the standard drawings gives `cr(K_7,8)=108` and `cr(K_8,8)=144`.  `MISTAKE-153` records the correction.  These ordinary values are exact but irrelevant to the signed current: 30,702/34,791 proper owner words are planar, including both extrema, and the same full parity word can flip sign.  Concurrent pulls also brought the independent T2 completion and the sorry-free first Fragmentation Lean rung; this session is a structural refinement of that completed decomposition ledger, not a competing claim that LRC(14) still depends on this owner-sheet route.
+
+FILES: HYP-7085; HYP-7084 addendum; S20 script/output; THM-922/HYP-7106 status corrections; MISTAKE-153; indexes/backlog.  AGENT SYNTHESIS: gcd-sheet bank, Zarankiewicz status, colored-fiber/reflection, and least-speed singleton scouts all independently cross-checked the same normalization. -> HYP-7084, THM-887, THM-913, THM-922, parallel-class circle.
+
 ## mac-mini-2026-07-16-S126 -- THM-926: T2 PROVED (the resonance identity: f^(0) = 2/13 makes the h3=0 slice exactly (2/13)mu2; deviation = the h3!=0 lattice sum; refereed 10/10 with the enhancement localized on the minimal relation) -- THE LEVEL-5 WALL IS COMPLETE + THE c0 COMPLETION (k=6: min 17/84 at the dilated-consecutive argmin): c0 = 17/84 > 0 over the full scope.
 
 Prompt (owner): prove T2 at THM-864 rigor; run the k=6 c0 completion; the c0/T2/ET items.

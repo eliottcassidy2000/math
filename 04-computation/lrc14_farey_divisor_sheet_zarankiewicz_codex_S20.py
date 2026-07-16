@@ -24,8 +24,8 @@ from collections import defaultdict
 from fractions import Fraction
 from functools import cache
 from importlib.util import module_from_spec, spec_from_file_location
-from itertools import combinations
-from math import gcd, sqrt
+from itertools import combinations, product
+from math import comb as binomial, gcd, sqrt
 
 
 OWNER_PATH = "04-computation/lrc14_owner_packet_parallel_class_current_codex_S19.py"
@@ -115,6 +115,190 @@ def crossing_energy(residues):
 
 def reflect_section(section):
     return (-section - 1) % 7
+
+
+def least_far_speed(diameter, frequency, period):
+    return frequency + period * ((diameter - frequency) // period + 1)
+
+
+def primitive_pair_bound():
+    missed_sets = tuple(
+        missed
+        for missed_size in range(7)
+        for missed in combinations(range(1, 7), missed_size)
+    )
+    return max(
+        abs(
+            OWNER_MODULE.owner_wave_primitive(first_missed, phase)
+            - OWNER_MODULE.owner_wave_primitive(second_missed, phase)
+        )
+        for numerator in range(14)
+        for phase in (Fraction(numerator, 14),)
+        for first_missed in missed_sets
+        for second_missed in missed_sets
+    )
+
+
+def missed_from_sections(sections, stationary_pin):
+    counts = [0, 0, 0, 0, 0, 0, 0]
+    counts[stationary_pin] = 1
+    for section in sections:
+        counts[section] += 1
+    return tuple(section for section in range(7) if counts[section] == 0)
+
+
+def single_owner_primitive_bound():
+    transition_pairs = set()
+    for sections in product(range(7), repeat=5):
+        for moving_index in range(5):
+            after_sections = tuple(
+                (
+                    (section + 1) % 7
+                    if runner_index == moving_index
+                    else section
+                )
+                for runner_index, section in enumerate(sections)
+            )
+            transition_pairs.add(
+                (
+                    missed_from_sections(sections, 0),
+                    missed_from_sections(after_sections, 0),
+                )
+            )
+    return max(
+        abs(
+            OWNER_MODULE.owner_wave_primitive(missed_before, phase)
+            - OWNER_MODULE.owner_wave_primitive(missed_after, phase)
+        )
+        for numerator in range(14)
+        for phase in (Fraction(numerator, 14),)
+        for missed_before, missed_after in transition_pairs
+    )
+
+
+def adjacent_pin_pair_ranges():
+    transition_states = {owner_size: set() for owner_size in range(1, 5)}
+    for before_sections in product(range(7), repeat=5):
+        for owner_size in range(1, 5):
+            for owner_indices in combinations(range(5), owner_size):
+                owner_index_set = frozenset(owner_indices)
+                after_sections = tuple(
+                    (section + 1) % 7
+                    if runner_index in owner_index_set
+                    else section
+                    for runner_index, section in enumerate(before_sections)
+                )
+                transition_states[owner_size].add(
+                    (
+                        missed_from_sections(before_sections, 0),
+                        missed_from_sections(after_sections, 0),
+                        missed_from_sections(before_sections, 6),
+                        missed_from_sections(after_sections, 6),
+                    )
+                )
+    ranges = {}
+    for owner_size, states in transition_states.items():
+        values = []
+        for missed_before_zero, missed_after_zero, missed_before_six, missed_after_six in states:
+            for numerator in range(14):
+                phase = Fraction(numerator, 14)
+                values.append(
+                    OWNER_MODULE.owner_wave_primitive(missed_before_zero, phase)
+                    - OWNER_MODULE.owner_wave_primitive(missed_after_zero, phase)
+                    + OWNER_MODULE.owner_wave_primitive(missed_before_six, phase)
+                    - OWNER_MODULE.owner_wave_primitive(missed_after_six, phase)
+                )
+        ranges[owner_size] = (min(values), max(values))
+    return ranges
+
+
+def consecutive_tail_singleton_coefficient(owner_speed, far_multiple):
+    speeds = tuple(range(owner_speed - 4, owner_speed + 1))
+    coefficient = Fraction(0)
+    for wall_column in range(7 * owner_speed):
+        owners = tuple(
+            speed
+            for speed in speeds
+            if (speed * wall_column) % owner_speed == 0
+        )
+        if owners != (owner_speed,):
+            continue
+        missed_before = missed_pattern(
+            speeds,
+            wall_column,
+            owner_speed,
+            before=True,
+        )
+        missed_after = missed_pattern(
+            speeds,
+            wall_column,
+            owner_speed,
+            before=False,
+        )
+        phase = Fraction(far_multiple * wall_column, 7)
+        coefficient += (
+            OWNER_MODULE.owner_wave_primitive(missed_before, phase)
+            - OWNER_MODULE.owner_wave_primitive(missed_after, phase)
+        )
+    return coefficient
+
+
+def phase_locked_pair_coefficient(owner_gcd):
+    speeds = (
+        owner_gcd,
+        2 * owner_gcd - 3,
+        2 * owner_gcd - 2,
+        2 * owner_gcd - 1,
+        2 * owner_gcd,
+    )
+    owners = (owner_gcd, 2 * owner_gcd)
+    coefficient = Fraction(0)
+    for wall_column in range(7 * owner_gcd):
+        exact_owners = tuple(
+            speed
+            for speed in speeds
+            if (speed * wall_column) % owner_gcd == 0
+        )
+        if exact_owners != owners:
+            continue
+        missed_before = missed_pattern(
+            speeds,
+            wall_column,
+            owner_gcd,
+            before=True,
+        )
+        missed_after = missed_pattern(
+            speeds,
+            wall_column,
+            owner_gcd,
+            before=False,
+        )
+        phase = Fraction(3 * wall_column, 7)
+        coefficient += (
+            OWNER_MODULE.owner_wave_primitive(missed_before, phase)
+            - OWNER_MODULE.owner_wave_primitive(missed_after, phase)
+        )
+    return coefficient
+
+
+def owner_cardinality_wall_counts(speeds):
+    intersection_totals = {
+        subset_size: 7
+        * sum(
+            gcd_all(subset)
+            for subset in combinations(speeds, subset_size)
+        )
+        for subset_size in range(1, 6)
+    }
+    return {
+        owner_size: sum(
+            (-1) ** (subset_size - owner_size)
+            * binomial(subset_size, owner_size)
+            * intersection_totals[subset_size]
+            for subset_size in range(owner_size, 6)
+        )
+        for owner_size in range(1, 6)
+    }
 
 
 @cache
@@ -355,6 +539,8 @@ def order_fingerprint(first_scores, switched_scores):
 def full_owner_frequency_scan():
     minimum = None
     maximum = None
+    envelope_minimum = None
+    envelope_maximum = None
     by_size = {}
     word_count = 0
     frequency_count = 0
@@ -408,10 +594,37 @@ def full_owner_frequency_scan():
                         by_size[owner_size][0] = record
                     if coefficient > by_size[owner_size][1][0]:
                         by_size[owner_size][1] = record
+                    least_speed = least_far_speed(
+                        diameter,
+                        frequency,
+                        7 * owner_gcd,
+                    )
+                    contribution = coefficient / least_speed
+                    envelope_record = (
+                        contribution,
+                        speeds,
+                        owners,
+                        frequency,
+                        least_speed,
+                        owner_gcd,
+                        coefficient,
+                    )
+                    if (
+                        envelope_minimum is None
+                        or contribution < envelope_minimum[0]
+                    ):
+                        envelope_minimum = envelope_record
+                    if (
+                        envelope_maximum is None
+                        or contribution > envelope_maximum[0]
+                    ):
+                        envelope_maximum = envelope_record
                     frequency_count += 1
     return {
         "minimum": minimum,
         "maximum": maximum,
+        "envelope_minimum": envelope_minimum,
+        "envelope_maximum": envelope_maximum,
         "by_size": by_size,
         "word_count": word_count,
         "frequency_count": frequency_count,
@@ -448,15 +661,93 @@ def main():
                 ) != -OWNER_MODULE.owner_wave_primitive(missed, phase):
                     raise AssertionError(("primitive reflection", missed, phase))
     check("cut-open waveform reflection P_Rm(1-z)=-P_m(z)", True)
+    palette_bound = primitive_pair_bound()
+    check(
+        "the exact common-phase primitive-pair bound is 135/1372",
+        palette_bound == Fraction(135, 1372),
+    )
+    single_owner_bound = single_owner_primitive_bound()
+    check(
+        "the single-owner color-cube edge bound is 51/686",
+        single_owner_bound == Fraction(51, 686),
+    )
+    paired_ranges = adjacent_pin_pair_ranges()
+    check(
+        "adjacent-pin paired ranges are exact for all proper owner sizes",
+        paired_ranges
+        == {
+            1: (Fraction(-1, 7), Fraction(11, 98)),
+            2: (Fraction(-1, 7), Fraction(1, 7)),
+            3: (Fraction(-13, 98), Fraction(45, 343)),
+            4: (Fraction(-13, 98), Fraction(15, 98)),
+        },
+    )
+    consecutive_tail_coefficients = {
+        far_multiple: {
+            owner_speed: consecutive_tail_singleton_coefficient(
+                owner_speed,
+                far_multiple,
+            )
+            for owner_speed in range(5, 173)
+        }
+        for far_multiple in (2, 4)
+    }
+    check(
+        "the phase-locked tail has period-84 drifts +62/49 and -149/49",
+        all(
+            consecutive_tail_coefficients[2][owner_speed + 84]
+            - consecutive_tail_coefficients[2][owner_speed]
+            == Fraction(62, 49)
+            and consecutive_tail_coefficients[4][owner_speed + 84]
+            - consecutive_tail_coefficients[4][owner_speed]
+            == Fraction(-149, 49)
+            for owner_speed in range(5, 89)
+        ),
+    )
+    check(
+        "the positive coefficient cap already fails at g=33 and t=66",
+        consecutive_tail_coefficients[2][33] == Fraction(53, 98),
+    )
+    phase_locked_pair_values = {
+        owner_gcd: phase_locked_pair_coefficient(owner_gcd)
+        for owner_gcd in (11, 95, 179)
+    }
+    check(
+        "a planar pair sheet has positive period-84 drift 797/343",
+        phase_locked_pair_values
+        == {
+            11: Fraction(12, 49),
+            95: Fraction(881, 343),
+            179: Fraction(1678, 343),
+        },
+    )
 
     entries = []
     rows = []
     wall_count = 0
     affine_fiber_checks = 0
+    cardinality_count_checks = 0
     for diameter in range(5, 11):
         for speeds in combinations(range(1, diameter + 1), 5):
             if speeds[-1] != diameter or not OWNER_MODULE.primitive(speeds):
                 continue
+            direct_cardinality_counts = {
+                owner_size: sum(
+                    len(record[0]) == owner_size
+                    for record in owner_word_skeleton(tuple(speeds))
+                )
+                for owner_size in range(1, 6)
+            }
+            if direct_cardinality_counts != owner_cardinality_wall_counts(speeds):
+                raise AssertionError(
+                    (
+                        "owner-cardinality binomial inversion",
+                        speeds,
+                        direct_cardinality_counts,
+                        owner_cardinality_wall_counts(speeds),
+                    )
+                )
+            cardinality_count_checks += 1
             for far_speed in range(diameter + 1, 4 * diameter + 1):
                 contributions, columns, fiber_check_count = owner_word_data(
                     speeds, far_speed
@@ -552,6 +843,10 @@ def main():
         {entry["z_exact"] for entry in entries} == {0, 9, 18, 42},
     )
     check("affine colored K_8,7 fiber identities", affine_fiber_checks == 906171)
+    check(
+        "owner-cardinality wall counts satisfy exact binomial inversion",
+        cardinality_count_checks > 0,
+    )
 
     entry_minimum = min(entries, key=lambda entry: entry["value"])
     entry_maximum = max(entries, key=lambda entry: entry["value"])
@@ -626,6 +921,21 @@ def main():
         == (Fraction(-37, 5488), (0, 0, 0, 0, 0, 0, 0)),
     )
 
+    cap_refuter_speeds = (7, 8, 9, 10, 11)
+    cap_refuter_owners = (11,)
+    cap_refuter_far_speed = 44
+    cap_refuter_contributions, cap_refuter_columns, _ = owner_word_data(
+        cap_refuter_speeds,
+        cap_refuter_far_speed,
+    )
+    cap_refuter_contribution = cap_refuter_contributions[cap_refuter_owners]
+    check(
+        "diameter eleven refutes the bounded-bank coefficient cap",
+        len(cap_refuter_columns[cap_refuter_owners]) == 70
+        and cap_refuter_far_speed * cap_refuter_contribution == Fraction(-216, 343)
+        and cap_refuter_contribution == Fraction(-54, 3773),
+    )
+
     planar_minimum = min(rows, key=lambda row: row["planar_sum"])
     planar_maximum = max(rows, key=lambda row: row["planar_sum"])
     crossing_minimum = min(rows, key=lambda row: row["crossing_sum"])
@@ -643,7 +953,7 @@ def main():
         frequency_scan["frequency_count"] == 49483,
     )
     check(
-        "the full bounded-bank frequency scan stays strictly inside 1/2",
+        "the diameter-ten frequency scan stays strictly inside 1/2",
         frequency_scan["minimum"][0] == Fraction(-1019, 2058)
         and frequency_scan["maximum"][0] == Fraction(89, 196),
     )
@@ -657,6 +967,22 @@ def main():
     print("  E_0(h,t)=c ceil(delta/2), E_1(h,t)=c floor(delta/2)")
     print("  where c=gcd(h,t), delta=h/c")
     print("  signed word: sum_k [P_m-( {tk/(7g)} )-P_m+( {tk/(7g)} )]/t")
+    print("  least representative: tau_D(r)=r+7g(floor((D-r)/(7g))+1)")
+    print("  fixed-word envelope: max_r |C_A,S(r)|/tau_D(r)")
+    print("  primitive-pair bound:", palette_bound)
+    print("  single-owner color-cube edge bound:", single_owner_bound)
+    print("  adjacent-pin paired ranges:", paired_ranges)
+    print("  singleton: -N/(14t)<=G_S<=11N/(196t)<11/28")
+    print("  pair: |G_S|<=N/(14t)<1/4")
+    print("  divisor charge: M_r=sum_(k>=r)(-1)^(k-r) binom(k,r) I_k")
+    print("  where I_k=7 sum_(|T|=k) gcd(T)")
+    print("  universal proper-sheet bound: |G_S|<=135 N_A(S)/(1372 t)<945/1372")
+    print("  phase-locked tail: A_g=(g-4,...,g), S=(g)")
+    print("  t=2g drift: C_2(g+84)=C_2(g)+62/49; G_S -> 31/4116")
+    print("  positive cap refuter: g=33, t=66, C_2=53/98, G_S=53/6468")
+    print("  t=4g drift: C_4(g+84)=C_4(g)-149/49; G_S -> -149/16464")
+    print("  planar pair ray: A=(g,2g-3,2g-2,2g-1,2g), S=(g,2g), t=3g")
+    print("  on g=11 mod 84: C(g+84)=C(g)+797/343; G_S -> 797/86436")
     print("  total swept walls:", wall_count)
     print("  affine K_8,7 fiber checks:", affine_fiber_checks)
 
@@ -691,6 +1017,18 @@ def main():
     )
     print("  full residual range:", row_minimum["residual"], row_maximum["residual"])
     print("  full-frequency coefficient range:", frequency_scan["minimum"], frequency_scan["maximum"])
+    print(
+        "  all-far-speed envelope range through diameter ten:",
+        frequency_scan["envelope_minimum"],
+        frequency_scan["envelope_maximum"],
+    )
+    print(
+        "  diameter-eleven coefficient-cap refuter:",
+        cap_refuter_speeds,
+        cap_refuter_owners,
+        cap_refuter_far_speed * cap_refuter_contribution,
+        cap_refuter_contribution,
+    )
     print("  coefficient extrema by owner size:")
     for owner_size, extrema in sorted(frequency_scan["by_size"].items()):
         print("   ", owner_size, extrema)
@@ -731,8 +1069,12 @@ def main():
     print("  PROVED: each owner set is a signed cyclic column word with the stated N_A(S).")
     print("  CORRECTED: K_7,7, K_7,8, and K_8,8 are known ordinary crossing cases.")
     print("  REFUTED: Zarankiewicz value, parity, cut, or crossing energy determines the sign.")
-    print("  EVIDENCE: every bounded-bank owner word satisfies |t G_S|<1/2.")
-    print("  NEXT: prove an adjacent-pin signed-word cap, starting with planar singleton sheets.")
+    print("  REFUTED: the diameter-ten artifact |t G_S|<1/2 fails at diameter eleven.")
+    print("  PROVED: one planar singleton family has coefficients unbounded both ways.")
+    print("  PROVED: multi-owner walls are path-independent sums of single color-cube edges.")
+    print("  PROVED: reflection gives exact density-scaled singleton and pair bounds.")
+    print("  PROVED: each fixed word's infinite far-speed problem is a finite least-speed envelope.")
+    print("  NEXT: bound the divisor-summed adjacent-pin envelope, not its unnormalized coefficient.")
 
 
 if __name__ == "__main__":

@@ -4122,3 +4122,23 @@ covering adversary's playground is the polytope, and covering analysis = Kroneck
 
 **Affects:** LEM-020 addendum (corrected in place), reflection
 the-coverage-spectrum-one-grammar-four-instruments.md (statement softened by this entry).
+
+## MISTAKE-153 — K_{7,7}, K_{7,8}, and K_{8,8} were called open Zarankiewicz cases (death-star-S29/S30; corrected by codex-S20)
+
+**What happened:** THM-922 labeled `K_{7,7}` open, and HYP-7106/S30 described the
+class-coloring computations `108` and `144` as meeting open ordinary crossing-number
+cases.  The numerical values and restricted class-coloring minima were correct, but the
+literature status was not checked.
+
+**Correction:** Woodall's cyclic-order computation proved `cr(K_{7,7})=81` in 1993.
+Deleting one vertex from an eight-vertex part gives
+`(8-2)cr(K_{8,n}) >= 8cr(K_{7,n})`; hence `cr(K_{7,8})>=108` and then
+`cr(K_{8,8})>=144`.  Zarankiewicz drawings attain both bounds.  Thus all three values
+are theorems.  S30 still proves a useful restricted result: its cyclic parallel-class
+coloring minima equal the ordinary optima.
+
+**Lesson:** distinguish an open general conjecture from a finite case already settled by
+computation and deletion averaging; and distinguish ordinary crossing number from a
+book/class-coloring restriction.  Check the primary case-status literature before
+calling a small Zarankiewicz value open.  Source: D. R. Woodall, *J. Graph Theory* 17
+(1993), 657--671, doi:`10.1002/jgt.3190170602`.

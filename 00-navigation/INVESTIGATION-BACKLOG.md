@@ -1,24 +1,24 @@
 # Investigation Backlog
 
-## Lead death-star-2026-07-16-S30: open Zarankiewicz values met (7×8, 8×8) + Lean fragmentation progress
+## Lead death-star-2026-07-16-S30: cyclic class minima match known 7×8/8×8 values + Lean fragmentation progress
 - **Status:** the cyclic parallel-class book achieves Z(7,8) = 108 and Z(8,8) = 144 EXACTLY
-  (the open Zarankiewicz cases; proved-case controls exact; annealing probes found nothing
-  below). FragmentationLemma.lean builds green (periodicity proved; arc-count plan corrected;
+  (ordinary values already known by Woodall + deletion averaging; proved-case controls exact;
+  annealing probes found nothing below inside the restricted search model). FragmentationLemma.lean builds green (periodicity proved; arc-count plan corrected;
   3 narrow sorries).
 - **Next:** (i) close the 3 Lean sorries (window_bound via translate-to-period + two-arc
   computation; chop-and-sum; killer_budget algebra) — one dedicated Lean session;
   (ii) the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I) proof);
-  (iii) larger open Zarankiewicz probes (K_{7,9}, K_{9,9}) — cheap; (iv) mac-mini: note the
+  (iii) larger cyclic-class probes after a primary-source case-status check; (iv) mac-mini: note the
   corrected fragmentation architecture in THM-883's Lean plan.
 
 ## Lead death-star-2026-07-16-S29: LEM-030 + THM-922 — the crossing thread closes odd-n and opens bipartite
 - **Status:** arc-Green PROVED (polarization/discrete Riesz; THM-913 universal all odd n);
-  the cyclic Zarankiewicz book achieves Z(m,m) (m ≤ 7; the 7×7 meets the open conjecture);
+  the cyclic Zarankiewicz book achieves Z(m,m) (m ≤ 7; 7×7 is known optimal by Woodall);
   class-parity = the geometric Guy↔Zarankiewicz inclusion-exclusion; even-n optimal to 14.
 - **Next:** (i) the odd-class ξ-profile + Faulhaber identity for the bipartite case (general-m
   proof of THM-922(I) — same three-line shape); (ii) the even-n complete identity (bicirculant
-  algebra); (iii) 7×7 significance: the cyclic book gives a natural extremal-candidate FAMILY
-  for the open Zarankiewicz cases — check K_{7,8}, K_{8,8} vs Z(7,8), Z(8,8); (iv) LEM-030 as
+  algebra); (iii) use 7×7, 7×8, and 8×8 as known-value controls for larger cyclic-class
+  families, keeping ordinary and restricted crossing models separate; (iv) LEM-030 as
   a covering-program tool (tent-kernel pair energies are symmetric-decreasing — polarization
   applies to the LRC witness-measure optimizations); (v) the mixed-class interactions in the
   parity decomposition (the cr(K_{2m}) vs Z(m,m) + 2Z(m) counting identity, exact ledger).

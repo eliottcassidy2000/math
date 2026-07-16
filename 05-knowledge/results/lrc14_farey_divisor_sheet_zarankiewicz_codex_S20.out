@@ -5,12 +5,19 @@ PASS  Z(7,8)=108
 PASS  Z(8,8)=144
 PASS  deletion averaging propagates Woodall's K_7,7 value to K_7,8 and K_8,8
 PASS  cut-open waveform reflection P_Rm(1-z)=-P_m(z)
+PASS  the exact common-phase primitive-pair bound is 135/1372
+PASS  the single-owner color-cube edge bound is 51/686
+PASS  adjacent-pin paired ranges are exact for all proper owner sizes
+PASS  the phase-locked tail has period-84 drifts +62/49 and -149/49
+PASS  the positive coefficient cap already fails at g=33 and t=66
+PASS  a planar pair sheet has positive period-84 drift 797/343
 PASS  6,900 exact owner-doubling rows
 PASS  34,791 proper owner-set entries
 PASS  25 primitive owner quotient shapes
 PASS  all proper owner sets have at most four vertices
 PASS  only unconditional small-part Zarankiewicz values occur
 PASS  affine colored K_8,7 fiber identities
+PASS  owner-cardinality wall counts satisfy exact binomial inversion
 PASS  30,702 proper sheets have zero crossing number
 PASS  both individual signed extrema occur on planar incidence graphs
 PASS  every quotient shape attains both contribution signs
@@ -18,10 +25,11 @@ PASS  the same K_4,7 quotient arc carries both signs
 PASS  a fixed core and owner set flip sign under the far-phase address
 PASS  the fixed sign flip has the same balanced class-parity census
 PASS  an identical full class-parity word carries opposite signs
+PASS  diameter eleven refutes the bounded-bank coefficient cap
 PASS  row residual extrema reproduce HYP-7084
 PASS  1,259 distinct proper owner words
 PASS  49,483 exact owner-word frequency evaluations
-PASS  the full bounded-bank frequency scan stays strictly inside 1/2
+PASS  the diameter-ten frequency scan stays strictly inside 1/2
 
 Exact divisor-sheet theorem
   wall coordinate: 7x=h/d reduced
@@ -32,6 +40,22 @@ Exact divisor-sheet theorem
   E_0(h,t)=c ceil(delta/2), E_1(h,t)=c floor(delta/2)
   where c=gcd(h,t), delta=h/c
   signed word: sum_k [P_m-( {tk/(7g)} )-P_m+( {tk/(7g)} )]/t
+  least representative: tau_D(r)=r+7g(floor((D-r)/(7g))+1)
+  fixed-word envelope: max_r |C_A,S(r)|/tau_D(r)
+  primitive-pair bound: 135/1372
+  single-owner color-cube edge bound: 51/686
+  adjacent-pin paired ranges: {1: (Fraction(-1, 7), Fraction(11, 98)), 2: (Fraction(-1, 7), Fraction(1, 7)), 3: (Fraction(-13, 98), Fraction(45, 343)), 4: (Fraction(-13, 98), Fraction(15, 98))}
+  singleton: -N/(14t)<=G_S<=11N/(196t)<11/28
+  pair: |G_S|<=N/(14t)<1/4
+  divisor charge: M_r=sum_(k>=r)(-1)^(k-r) binom(k,r) I_k
+  where I_k=7 sum_(|T|=k) gcd(T)
+  universal proper-sheet bound: |G_S|<=135 N_A(S)/(1372 t)<945/1372
+  phase-locked tail: A_g=(g-4,...,g), S=(g)
+  t=2g drift: C_2(g+84)=C_2(g)+62/49; G_S -> 31/4116
+  positive cap refuter: g=33, t=66, C_2=53/98, G_S=53/6468
+  t=4g drift: C_4(g+84)=C_4(g)-149/49; G_S -> -149/16464
+  planar pair ray: A=(g,2g-3,2g-2,2g-1,2g), S=(g,2g), t=3g
+  on g=11 mod 84: C(g+84)=C(g)+797/343; G_S -> 797/86436
   total swept walls: 954471
   affine K_8,7 fiber checks: 906171
 
@@ -59,6 +83,8 @@ Zarankiewicz guardrail
   positive-Z row-sum range: -97/4116 15/686
   full residual range: -8087/246960 269/6860
   full-frequency coefficient range: (Fraction(-1019, 2058), (4, 6, 7, 8, 9), (9,), 47, 9) (Fraction(89, 196), (1, 3, 7, 9, 10), (10,), 15, 10)
+  all-far-speed envelope range through diameter ten: (Fraction(-53, 1372), (1, 3, 5, 6, 7), (7,), 8, 8, 7, Fraction(-106, 343)) (Fraction(131, 4116), (3, 5, 7, 8, 9), (9,), 12, 12, 9, Fraction(131, 343))
+  diameter-eleven coefficient-cap refuter: (7, 8, 9, 10, 11) (11,) -216/343 -54/3773
   coefficient extrema by owner size:
     1 [(Fraction(-1019, 2058), (4, 6, 7, 8, 9), (9,), 47, 9), (Fraction(89, 196), (1, 3, 7, 9, 10), (10,), 15, 10)]
     2 [(Fraction(-99, 343), (2, 5, 7, 8, 10), (5, 10), 20, 5), (Fraction(37, 98), (3, 4, 5, 9, 10), (5, 10), 15, 5)]
@@ -79,5 +105,9 @@ VERDICT
   PROVED: each owner set is a signed cyclic column word with the stated N_A(S).
   CORRECTED: K_7,7, K_7,8, and K_8,8 are known ordinary crossing cases.
   REFUTED: Zarankiewicz value, parity, cut, or crossing energy determines the sign.
-  EVIDENCE: every bounded-bank owner word satisfies |t G_S|<1/2.
-  NEXT: prove an adjacent-pin signed-word cap, starting with planar singleton sheets.
+  REFUTED: the diameter-ten artifact |t G_S|<1/2 fails at diameter eleven.
+  PROVED: one planar singleton family has coefficients unbounded both ways.
+  PROVED: multi-owner walls are path-independent sums of single color-cube edges.
+  PROVED: reflection gives exact density-scaled singleton and pair bounds.
+  PROVED: each fixed word's infinite far-speed problem is a finite least-speed envelope.
+  NEXT: bound the divisor-summed adjacent-pin envelope, not its unnormalized coefficient.
