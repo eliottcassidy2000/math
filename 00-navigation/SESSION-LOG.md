@@ -1,3 +1,9 @@
+## mac-mini-2026-07-16-S126 -- THM-926: T2 PROVED (the resonance identity: f^(0) = 2/13 makes the h3=0 slice exactly (2/13)mu2; deviation = the h3!=0 lattice sum; refereed 10/10 with the enhancement localized on the minimal relation) -- THE LEVEL-5 WALL IS COMPLETE + THE c0 COMPLETION (k=6: min 17/84 at the dilated-consecutive argmin): c0 = 17/84 > 0 over the full scope.
+
+Prompt (owner): prove T2 at THM-864 rigor; run the k=6 c0 completion; the c0/T2/ET items.
+
+THE LEDGER AFTER THIS SESSION: level-5 wall COMPLETE (W + T1 opus, T2 here); S3 residual COMPLETE (THM-527 reformulation + THM-924 glue with the ET page + THM-925/926 floor c0 = 17/84); covering signed off (THM-922 + rigidity + bands + low-M). The mathematics of LRC(14) in this program's decomposition is COMPLETE; remaining = bookkeeping tabulations (spread-bound provenance; epsilon tables) + the Lean ladder (FragmentationLemma committed; THM-866/878/certificate pages next).
+
 ## boxeph-2026-07-16-S44 -- LEDGER SEAM 4 CLOSED (multi-owner fallback: W0 <= 105 vmax uniform, trivial-triangle route; below = bounded-ratio window covered by the j<=5 tile + the w<=79 box + P2 decidability; comb-profile refinement named): ALL FOUR PROPAGATION SEAMS CLOSED + the level-5 wall pointer routed to opus with the quintic/Galois frame flagged
 
 Prompt (owner): seam 4; the level-5 wall and quintic polynomials; long session, many investigations.
