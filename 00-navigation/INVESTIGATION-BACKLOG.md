@@ -1,5 +1,19 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S18: HYP-6994 refuted as stated — the corrected density-route targets
+- **Status:** RESOLVED-REFUTED (HYP-7017): exact full-Z_P scans show max|S|²/M ~ t/4 and
+  sup_w Q_s/diam up to 59.3 on the far bank [0..5,t] (klein's t ≤ 50 values reproduced exactly;
+  the C = 14/16 uniformity was a small-t artifact; worst-w = the spectral peak, w* ≥ diam).
+  Mechanism: window-dipole combs; peaks at small integer combos of speeds (n* = 3(t+1), 4t−3
+  verified); resonant-w set ≤ 1.7%, arithmetic (near-commensurate = sheet territory). COMPACT
+  CORES ARE FLAT (max|S|²/M ≈ 9–18 bounded, c = 3..30).
+- **Next:** (i) PROVE compact-core flatness (balanced owners ⟹ window decorrelation) — the
+  corrected uniform target, and exactly the stratum the assembly needs (HYP-7016 j ≥ 7 seam);
+  (ii) formalize the non-resonant uniformity Q_s ≤ C·diam off the explicit peak classes and
+  route resonant (cluster, w) pairs to THM-757/759; (iii) full-s census + larger-c compact
+  scans (partial scans were lower bounds); (iv) klein: restate HYP-6994 → 6994′ per the S18
+  letter when next touching THM-881/882.
+
 ## Lead boxeph-2026-07-16-S23: the post-assessment frontier — three named openings
 - **Source:** `00-navigation/LRC14-FRONTIER-ASSESSMENT-2026-07-16.md` (the 07-16 lens ledger),
   THM-882/884, THM-881 (klein), THM-883 (mac-mini fragmentation).

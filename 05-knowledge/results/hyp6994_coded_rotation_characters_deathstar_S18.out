@@ -1,0 +1,66 @@
+T1: exact vs idealized per-owner words (collision census)
+  t=6 s=3 owner=1: M_e(true)=0 M_e(ideal)=0 mismatches=0
+  t=6 s=3 owner=2: M_e(true)=1 M_e(ideal)=1 mismatches=0
+  t=6 s=3 owner=3: M_e(true)=1 M_e(ideal)=1 mismatches=0
+  t=6 s=3 owner=4: M_e(true)=1 M_e(ideal)=2 mismatches=1
+  t=6 s=3 owner=5: M_e(true)=4 M_e(ideal)=4 mismatches=0
+  t=6 s=3 owner=6: M_e(true)=1 M_e(ideal)=3 mismatches=2
+  t=12 s=3 owner=1: M_e(true)=1 M_e(ideal)=1 mismatches=0
+  t=12 s=3 owner=2: M_e(true)=1 M_e(ideal)=2 mismatches=1
+  t=12 s=3 owner=3: M_e(true)=1 M_e(ideal)=2 mismatches=1
+  t=12 s=3 owner=4: M_e(true)=2 M_e(ideal)=4 mismatches=2
+  t=12 s=3 owner=5: M_e(true)=5 M_e(ideal)=6 mismatches=1
+  t=12 s=3 owner=12: M_e(true)=4 M_e(ideal)=9 mismatches=5
+  t=25 s=3 owner=1: M_e(true)=1 M_e(ideal)=1 mismatches=0
+  t=25 s=3 owner=2: M_e(true)=1 M_e(ideal)=2 mismatches=1
+  t=25 s=3 owner=3: M_e(true)=1 M_e(ideal)=2 mismatches=1
+  t=25 s=3 owner=4: M_e(true)=1 M_e(ideal)=3 mismatches=2
+  t=25 s=3 owner=5: M_e(true)=4 M_e(ideal)=5 mismatches=1
+  t=25 s=3 owner=25: M_e(true)=2 M_e(ideal)=7 mismatches=5
+[0.1s]
+
+T2: peak scaling on the FAR bank [0..5,t] (worst s each; full scan where feasible)
+  t=6: max|S|^2/M = 14.00 (s=6, n*=105, M=14, P=420, full=True) owner-res:[1, 3, 5]
+  t=12: max|S|^2/M = 7.60 (s=6, n*=114, M=12, P=420, full=True) owner-res:[1, 2, 3]
+  t=25: max|S|^2/M = 8.28 (s=4, n*=795, M=12, P=2100, full=True) owner-res:[1, 3, 5]
+  t=37: max|S|^2/M = 12.86 (s=6, n*=2469, M=24, P=15540, full=True) owner-res:[1, 3]
+  t=50: max|S|^2/M = 11.67 (s=6, n*=1597, M=30, P=2100, full=True) owner-res:[1]
+  t=75: max|S|^2/M = 18.58 (s=6, n*=1278, M=42, P=2100, full=True) owner-res:[1, 2, 3]
+  t=100: max|S|^2/M = 24.24 (s=6, n*=397, M=54, P=2100, full=True) owner-res:[1]
+  t=150: max|S|^2/M = 37.44 (s=6, n*=1503, M=78, P=2100, full=True) owner-res:[1, 3]
+  t=200: max|S|^2/M = 51.63 (s=6, n*=603, M=106, P=4200, full=True) owner-res:[1, 3]
+
+T3: COMPACT CORES E = [0, c..c+5]: peak scaling as c grows (partial scans)
+  c=3: max|S|^2/M >= 8.97 (s=1, n*=2892, M=12, P=5880, full=True)
+  c=5: max|S|^2/M >= 9.34 (s=5, n*=9976, M=16, P=17640, full=False)
+  c=8: max|S|^2/M >= 16.36 (s=6, n*=1960, M=24, P=360360, full=False)
+  c=12: max|S|^2/M >= 15.55 (s=4, n*=16245, M=50, P=2598960, full=False)
+  c=17: max|S|^2/M >= 13.34 (s=1, n*=5760, M=42, P=31337460, full=False)
+  c=23: max|S|^2/M >= 16.67 (s=3, n*=7150, M=90, P=79115400, full=False)
+  c=30: max|S|^2/M >= 17.56 (s=3, n*=41283, M=112, P=136345440, full=False)
+
+T4: THE WEIGHTED VERDICT — Q_s(w) anatomy on the far ladder (worst s per t)
+  Q_s(w) = 2 pi^2 sum_{n!=0} khat_P(n w mod P)-reindexed |S(n)|^2 computed as
+  sum_k(pairwise bilinear THM-880 form); here via spectrum + exact kernel DFT.
+  t=12: M=12 P=420 s*=6 sup|S|^2/M=7.60 n*=114 | sup_w Q_s/M=9.10 (w*=67) | sup_{w>=diam} Q_s/M=9.10 | sup_w Q_s/diam=9.10
+  t=25: M=12 P=2100 s*=4 sup|S|^2/M=8.28 n*=795 | sup_w Q_s/M=12.64 (w*=401) | sup_{w>=diam} Q_s/M=12.64 | sup_w Q_s/diam=6.06
+  t=50: M=30 P=2100 s*=6 sup|S|^2/M=11.67 n*=1597 | sup_w Q_s/M=25.44 (w*=503) | sup_{w>=diam} Q_s/M=25.44 | sup_w Q_s/diam=15.26
+  t=100: M=54 P=2100 s*=6 sup|S|^2/M=24.24 n*=303 | sup_w Q_s/M=53.10 (w*=397) | sup_{w>=diam} Q_s/M=53.10 | sup_w Q_s/diam=28.68
+  t=150: M=78 P=2100 s*=6 sup|S|^2/M=37.44 n*=597 | sup_w Q_s/M=35.85 (w*=439) | sup_{w>=diam} Q_s/M=35.85 | sup_w Q_s/diam=18.64
+  t=200: M=106 P=4200 s*=6 sup|S|^2/M=51.63 n*=797 | sup_w Q_s/M=111.96 (w*=797) | sup_{w>=diam} Q_s/M=111.96 | sup_w Q_s/diam=59.34
+
+T5: NORMALIZATION REFEREE — brute ell-sum vs spectral bilinear, t=12
+  w=1: brute(l<=2e5)=1.268777  spectral=2.537674  bilinear=2.537674  M=12
+  w=13: brute(l<=2e5)=26.064983  spectral=52.130087  bilinear=52.130087  M=12
+  w=199: brute(l<=2e5)=9.245029  spectral=18.490178  bilinear=18.490178  M=12
+
+T6: THE RESONANT-W SET — distribution of Q_s(w)/diam over coprime w, per t
+  t=50: frac{Q/diam > 16} = 0.0000  t=50: frac{Q/diam > 24} = 0.0000  median=1.47 p99=12.70 n*=1597
+      top-w: [(503, 15.3, 'P-n*+0'), (1597, 15.3, 'n*+0'), (547, 14.3, 'P-n*+44'), (1553, 14.3, 'n*+-44'), (197, 12.7, ''), (1903, 12.7, ''), (853, 11.8, ''), (1247, 11.8, '')]
+  t=100: frac{Q/diam > 16} = 0.0083  t=100: frac{Q/diam > 24} = 0.0083  median=0.98 p99=14.95 n*=303
+      top-w: [(1703, 28.7, ''), (397, 28.7, ''), (1097, 28.7, ''), (1003, 28.7, ''), (1891, 14.9, ''), (209, 14.9, ''), (491, 14.9, ''), (1609, 14.9, '')]
+  t=150: frac{Q/diam > 16} = 0.0083  t=150: frac{Q/diam > 24} = 0.0000  median=0.80 p99=15.95 n*=597
+      top-w: [(439, 18.6, ''), (1661, 18.6, ''), (611, 17.1, 'n*+14'), (1489, 17.1, 'P-n*+-14'), (899, 15.9, ''), (1201, 15.9, ''), (1949, 15.1, ''), (151, 15.1, '')]
+  t=200: frac{Q/diam > 16} = 0.0167  t=200: frac{Q/diam > 24} = 0.0083  median=0.66 p99=21.52 n*=797
+      top-w: [(797, 59.3, 'n*+0'), (3403, 59.3, 'P-n*+0'), (2003, 59.3, ''), (2197, 59.3, ''), (3209, 27.0, ''), (991, 27.0, ''), (3791, 27.0, ''), (409, 27.0, '')]
+[total 30.5s]
