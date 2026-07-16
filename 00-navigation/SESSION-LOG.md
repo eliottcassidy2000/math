@@ -40,7 +40,7 @@ opus; S329.
 
 ---
 
-## codex-2026-07-16-S18 -- CHECKPOINT: THM-909 claims full limiting residue-six closure
+## codex-2026-07-16-S18 -- CHECKPOINT: THM-910 proves full limiting residue-six closure
 
 The seven-shift residue quotient becomes complete after restoring exact pair sidecars.
 For a zero residue coordinate, the quotient coordinate is an ordinary runner sector and
@@ -61,7 +61,7 @@ certificates, twenty nonzero certificates, 36 ordered ray endpoints, and 3,540 o
 speed-pair referees.  Switching raw ceilings to completed pair bounds flips 57 tournament
 edges; both gauges remain transitive, so the determinant sidecar is proof-bearing.
 
-FILES: `THM-909`, `HYP-7065`,
+FILES: `THM-910`, `HYP-7081`,
 `04-computation/lrc14_residue6_projective_pair_completion_codex_S18.py`, and matching
 stored output. -- codex-S18 checkpoint
 

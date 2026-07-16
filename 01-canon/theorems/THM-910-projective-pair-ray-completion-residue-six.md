@@ -1,14 +1,15 @@
 ---
-id: THM-909
+id: THM-910
+renumber_note: was THM-909 at first claim; renumbered after pulling mac-mini's independently claimed BV-Fourier theorem
 title: THE PROJECTIVE PAIR-RAY COMPLETION OF RESIDUE SIX — after the seven-shift signed quotient, exact zero-coordinate marginals and affine-invariant labeled pair-ray certificates close every one of the 2,801 projective speed-residue directions, proving the universal limiting bound -F6 <= 32/343 < 0.097
 status: PROVED and solver-free VERIFIED — all 7^5 states, 2,801 projective directions, 1,505 zero-direction marginal rows, three sparse unordered-pair certificates, twenty nonzero invariant-pair certificates, 36 ordered ray endpoints, and 3,540 ordered-pair referees pass exactly
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-908]
-related: [THM-903-reflection-frame-residue6, THM-904, THM-905, THM-906, THM-907, HYP-7065]
+related: [THM-903-reflection-frame-residue6, THM-904, THM-905, THM-906, THM-907, THM-909, HYP-7081]
 verification: 04-computation/lrc14_residue6_projective_pair_completion_codex_S18.py -> 05-knowledge/results/lrc14_residue6_projective_pair_completion_codex_S18.out
 ---
 
-# THM-909 — the projective pair-ray completion
+# THM-910 — the projective pair-ray completion
 
 This theorem closes the **limiting negative residue-six sign** left by `THM-891`.
 It does not yet compose the finite-`t` wall remainder and therefore does not by itself

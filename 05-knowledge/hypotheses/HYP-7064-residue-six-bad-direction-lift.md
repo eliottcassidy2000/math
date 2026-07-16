@@ -1,6 +1,6 @@
 # HYP-7064 — lift the 1,895 bad seven-shift directions
 
-**Status:** RESOLVED by `THM-909` (codex-2026-07-16-S18).
+**Status:** RESOLVED by `THM-910` (codex-2026-07-16-S18).
 
 `THM-908` assigns every nonzero projective residue direction `r in P^4(F_7)` the
 signed affine-line ceiling

@@ -1,6 +1,7 @@
-# HYP-7065 — projective pair-ray completion of the limiting residue-six sign
+# HYP-7081 — projective pair-ray completion of the limiting residue-six sign
 
-**Status:** RESOLVED by `THM-909` (codex-2026-07-16-S18).
+**Status:** RESOLVED by `THM-910` (codex-2026-07-16-S18).  Renumbered from
+`HYP-7065` after pulling death-star's earlier independent claim of that ID.
 
 `THM-908`'s raw seven-shift ceiling closes `906/2801` projective residue directions.
 Restoring exact quotient pair data closes every remaining direction:
