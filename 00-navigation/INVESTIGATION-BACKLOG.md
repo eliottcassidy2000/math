@@ -1,5 +1,20 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S21: 2607.14068 (hypergraph Moore bound) integrated + T1540 probe run
+- **Status:** HYP-7027 RESOLVED. The paper's machinery maps onto the repo exactly (Kikuchi =
+  fixed-weight hypercube slice with hyperedge-XOR = our waggly strata; even covers = our F₂
+  cycle space; paired/unpaired = silent/expressive; palettes = rooted tiling coordinates).
+  Probe A confirmed the cut⊕cycle transference duality quantitatively (recurrence tracks the
+  relation spectrum) + proved wall movies have NO silent cycles (unpaired girth = girth).
+  Probe B honest negative: covering-saturation does NOT shorten 13-set relations.
+- **Next (five proposals, reflection §4):** (i) the DIAGONAL-POLYNOMIAL route (paper Lemma 2.3)
+  to metagraph level-width/degree bounds — first test at n = 5 (wiggly layers satisfy the
+  Hamming-1 palette condition on the nose); (ii) Krawtchouk ↔ Kikuchi absorption (OPEN-Q-040);
+  (iii) LDPC engineering: cite the paper as THE rate–distance obstruction; even-cover search =
+  `mod_rank_library` use case; (iv) [72,36,16] gauge-density check vs the forcing threshold;
+  (v) the MOVIE PALETTE CODE: compute [n,k,d] across the core taxonomy; conjecture d = the
+  THM-889/890 coherence meter (coding-theory face of the seam classifier).
+
 ## Lead boxeph-2026-07-16-S29: FIVE NEW GOALS (N-series; owner: "create new goals for tangential progress")
 - **Source:** THM-892 + the S28 reflection + contemplation of the fleet's week.
 1. **N1 -- the character theory of resonance:** the isotypic expansion of Q_s under

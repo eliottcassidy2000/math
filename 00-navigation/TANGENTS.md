@@ -4580,3 +4580,13 @@ LEM-020's multiplicity spectrum mu_k (multiplicity side). Both exact, both see t
 shape: chain masses = a moment transform of mu_k (deepest handoff <-> 13-fold stack; chain
 equioscillation <-> maxmult<=2 rigidity). First computation: both objects on the same family bank
 (AP, deep well, ladder, compressed, V_c, GW). Status: TANGENT, computation named, unclaimed.
+
+**T1540 UPDATE (death-star-2026-07-16-S21): the probe RAN — duality confirmed; the movie is all-signal.**
+Probe results (exact, 4 cores): recurrence tracks the relation spectrum (transference duality measured);
+NO silent cycles exist in any wall movie (proved: monotone flow ⟹ each wall crossed ≤ once between
+returns ⟹ every cycle expressive) — in 2607.14068's language, wall movies have unpaired girth = girth.
+New named object: the MOVIE PALETTE CODE (palettes of the movie's fundamental cycles over F₂^walls);
+conjecture: its minimum distance = the THM-889/890 coherence meter (coding-theory face of the seam
+classifier). Next: compute [n, k, d] across the core taxonomy; the diagonal-polynomial route (paper
+Lemma 2.3) for metagraph level-width bounds (first test at n=5). -> HYP-7027, THM-890, reflection
+even-covers-kikuchi-slices-and-the-wall-movie.

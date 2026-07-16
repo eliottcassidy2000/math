@@ -1,0 +1,10 @@
+PROBE A: the movie's return spectrum vs the relation spectrum (cut vs cycle)
+  consecutive c=50 (coherent): events=2114 states=1113 cycrank=1002 returns=1001 (silent=0, expressive=1001) min-relation-L1=4 (found 96 at min support)
+  generic c=50 (incoherent): events=5432 states=5215 cycrank=218 returns=217 (silent=0, expressive=217) min-relation-L1=4 (found 4 at min support)
+  planted 48+96=144 (one relation): events=4746 states=1582 cycrank=3165 returns=3164 (silent=0, expressive=3164) min-relation-L1=3 (found 20 at min support)
+  far bank t=50: events=378 states=336 cycrank=43 returns=42 (silent=0, expressive=42) min-relation-L1=3 (found 40 at min support)
+
+PROBE B: does covering-saturation shorten additive relations? (2607.14068 face)
+  covering=True: n=28 min-relation-L1: mean=3.107 median=3.0 min=3 frac(L1<=4)=1.000
+  covering=False: n=280 min-relation-L1: mean=3.064 median=3.0 min=3 frac(L1<=4)=1.000
+[total 245.4s]

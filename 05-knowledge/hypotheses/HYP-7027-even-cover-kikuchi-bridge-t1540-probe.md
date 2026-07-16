@@ -1,7 +1,14 @@
 # HYP-7027 — arXiv:2607.14068 (even-uniform hypergraph Moore bound) × this repo, + the T1540 cut⊕cycle probe
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S21; owner directive: run the T1540
-probe + deeply integrate the paper). Verify-first until results land.
+**Status:** RESOLVED (death-star-2026-07-16-S21). Probe A: the transference duality
+CONFIRMED quantitatively (cycle-rank fraction tracks the relation spectrum: 47%/4%/67%/11%
+across coherent/incoherent/planted/far cores) + a clean lemma: the wall movie has NO silent
+cycles (monotone flow ⟹ every wall crossed ≤ once per return ⟹ every cycle expressive —
+for wall movies, the paper's unpaired girth = girth). Probe B: HONEST NEGATIVE — covering
+vs non-covering 13-sets have identical relation statistics (the Moore forcing principle
+needs hypergraph density, not 13-element scale; do not chase the naive version); the real
+target = the movie's PALETTE CODE (wall-system scale). Five extension proposals filed in
+the reflection. Full bridge: 07-reflections/even-covers-kikuchi-slices-and-the-wall-movie.
 
 ## The paper (read in full, exact statements)
 
