@@ -9788,3 +9788,16 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
    OEIS check numerators/denominators; its GF is THM-874's F(x).
 5. LRC(15) prep: the depth-14 corridor is now exact; the deep-well margin analysis at the
    (conjectural) LRC(15) covering-min wants the analog of THM-853(II)'s margin 2H_12/2379.
+
+## Lead mac-mini-2026-07-15-S112: post-THM-877 items
+**Source:** THM-877, HYP-6990. **Status:** open.
+1. THE v-GRID QUESTION (the analytic core in one line): does restricting h to the resonance
+   grid remove the (6/pi^2) log L of THM-877(3)? Compute the exact grid-restricted second
+   moment via the closed form T_L(h) = sum_{d|h} M(floor(L/d)) -- the grid intersects few
+   divisor-rich h, so plausibly YES; a proof would finish klein-S280's Q_s = O(r).
+2. The Ostrowski transpose law: state and prove the correct inversion duality for k-truncated
+   gap words (index-window <-> value-window); connects THM-819 inverse pairs to THM-639's
+   palindrome/wall-count frame.
+3. Mertens-strength refinement: with M(y) << exp(-c sqrt(log y)), the diagonal terms of S(L)
+   are O(1) -- the log lives entirely in the g-sum (common factors), i.e. in CORRELATIONS
+   between divisor windows; quantify per-g for the grid question.

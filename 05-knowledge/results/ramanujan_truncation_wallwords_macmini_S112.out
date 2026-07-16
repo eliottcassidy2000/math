@@ -1,0 +1,26 @@
+(I) RAMANUJAN TRUNCATION
+   closed form T_L(h) = sum_{d|h} M(L/d) == direct sum (L=5,12,30; h<40): True
+   kps cont.26 reproduction at L=12: h=12: 1.9662  h=30: 2.2996  h=1: -0.000433
+   vanishing by L=800: h=12: -0.003214  h=30: 0.016488
+   limit mean-square S(L) (exact), with S(L)/log L:
+      L=   6: S =   1.8128   S/log L = 1.0117   S/log^2 L = 0.5647
+      L=  12: S =   2.2222   S/log L = 0.8943   S/log^2 L = 0.3599
+      L=  25: S =   2.6697   S/log L = 0.8294   S/log^2 L = 0.2577
+      L=  50: S =   3.0813   S/log L = 0.7876   S/log^2 L = 0.2013
+      L= 100: S =   3.4974   S/log L = 0.7594   S/log^2 L = 0.1649
+      L= 200: S =   3.9202   S/log L = 0.7399   S/log^2 L = 0.1396
+      L= 400: S =   4.3400   S/log L = 0.7244   S/log^2 L = 0.1209
+      L= 800: S =   4.7615   S/log L = 0.7123   S/log^2 L = 0.1066
+   finite-H check L=12: (1/H)sum T^2 = 2.2212 vs S(L) = 2.2222  (H=20000)
+   finite-H check L=50: (1/H)sum T^2 = 3.0592 vs S(L) = 3.0813  (H=20000)
+
+(II) WALL-WORDS UNDER THE UNIT ACTION
+   q <= 60 exhaustive, k = 5, 8, 12:
+   k= 5: NEGATION = dihedral (reversal) class: True;  INVERSION in dihedral class: False (first fail q=9);  other units in dihedral class: 16/26708 = 0.001
+   k= 8: NEGATION = dihedral (reversal) class: True;  INVERSION in dihedral class: False (first fail q=11);  other units in dihedral class: 4/26672 = 0.000
+   k=12: NEGATION = dihedral (reversal) class: True;  INVERSION in dihedral class: False (first fail q=15);  other units in dihedral class: 16/26500 = 0.001
+
+DONE
+
+ADDENDUM (exact identity referee): S(L) == sum_{g<=L} phi(g)/g^2 for L = 6,12,25,50,100,200,400,800: ALL TRUE
+(proof: Gauss (d,e) = sum_{g|(d,e)} phi(g) + the unit identity sum_{a<=y} M(floor(y/a))/a = 1, applied twice)
