@@ -1,0 +1,58 @@
+============================================================================
+THE GENERAL-CLUSTER RESONANCE LAW -- multi-comb referees
+  [family {1..6,60}] s=0 P=420 M=42; owners: 1(M=6,R=0), 3(M=2,R=2), 5(M=4,R=4), 6(M=5,R=5), 60(M=25,R=22)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.855
+      w=    11 gcd=  1: Q_s/M =     0.50; law bound/M =      64.4 (cover True); resonance score/M =    1.86
+      w=    59 gcd=  1: Q_s/M =     0.77; law bound/M =      65.4 (cover True); resonance score/M =    1.86
+      w=    61 gcd=  1: Q_s/M =     3.22; law bound/M =      65.2 (cover True); resonance score/M =    1.86
+      w=   127 gcd=  1: Q_s/M =    11.77; law bound/M =      64.6 (cover True); resonance score/M =    1.86
+      w=   187 gcd=  1: Q_s/M =    21.21; law bound/M =      64.6 (cover True); resonance score/M =    1.86
+  [two-owner {1..5,36,60}] s=0 P=1260 M=46; owners: 3(M=2,R=2), 5(M=1,R=1), 36(M=19,R=19), 60(M=24,R=20)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.945
+      w=    11 gcd=  1: Q_s/M =     0.40; law bound/M =      85.1 (cover True); resonance score/M =    1.57
+      w=    37 gcd=  1: Q_s/M =     1.61; law bound/M =      81.6 (cover True); resonance score/M =    1.25
+      w=    71 gcd=  1: Q_s/M =     1.52; law bound/M =      85.3 (cover True); resonance score/M =    1.57
+      w=   109 gcd=  1: Q_s/M =     0.97; law bound/M =      85.1 (cover True); resonance score/M =    1.57
+      w=   125 gcd=  5: Q_s/M =     2.61; law bound/M =      86.3 (cover True); resonance score/M =    1.57
+  [two-large {1..5,56,84}] s=0 P=5880 M=72; owners: 1(M=1,R=0), 3(M=1,R=1), 5(M=1,R=1), 56(M=38,R=31), 84(M=31,R=28)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.998
+      w=    11 gcd=  1: Q_s/M =     0.34; law bound/M =     125.2 (cover True); resonance score/M =    2.51
+      w=    57 gcd=  3: Q_s/M =     5.56; law bound/M =     129.7 (cover True); resonance score/M =    2.51
+      w=    85 gcd=  5: Q_s/M =     6.57; law bound/M =     114.8 (cover True); resonance score/M =    1.67
+      w=   115 gcd=  5: Q_s/M =     0.72; law bound/M =     127.9 (cover True); resonance score/M =    2.51
+      w=   253 gcd=  1: Q_s/M =     3.47; law bound/M =     114.8 (cover True); resonance score/M =    1.67
+  [balanced {12,15,20,21,28,30,35}] s=0 P=2940 M=36; owners: 12(M=5,R=5), 15(M=6,R=6), 20(M=1,R=1), 21(M=7,R=7), 28(M=2,R=2), 30(M=6,R=6), 35(M=9,R=9)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.800
+      w=    11 gcd=  1: Q_s/M =     0.40; law bound/M =      71.1 (cover True); resonance score/M =    0.28
+      w=   421 gcd=  1: Q_s/M =     1.01; law bound/M =      71.1 (cover True); resonance score/M =    0.28
+      w=    61 gcd=  1: Q_s/M =     0.78; law bound/M =      71.1 (cover True); resonance score/M =    0.28
+  [balanced {12,15,20,21,28,30,35}] s=1 P=2940 M=40; owners: 12(M=5,R=5), 15(M=7,R=7), 20(M=3,R=3), 21(M=10,R=10), 28(M=7,R=7), 30(M=3,R=3), 35(M=5,R=5)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.524
+  [balanced {12,15,20,21,28,30,35}] s=2 P=2940 M=18; owners: 12(M=2,R=2), 15(M=1,R=1), 20(M=1,R=1), 21(M=2,R=2), 28(M=4,R=4), 30(M=2,R=2), 35(M=6,R=6)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.710
+  [balanced {12,15,20,21,28,30,35}] s=3 P=2940 M=20; owners: 12(M=6,R=6), 15(M=2,R=2), 21(M=2,R=2), 28(M=4,R=4), 35(M=6,R=6)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 1.000
+  [balanced {12,15,20,21,28,30,35}] s=4 P=2940 M=18; owners: 12(M=2,R=2), 15(M=1,R=1), 20(M=1,R=1), 21(M=2,R=2), 28(M=4,R=4), 30(M=2,R=2), 35(M=6,R=6)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.710
+  [balanced {12,15,20,21,28,30,35}] s=5 P=2940 M=40; owners: 12(M=5,R=5), 15(M=7,R=7), 20(M=3,R=3), 21(M=10,R=10), 28(M=7,R=7), 30(M=3,R=3), 35(M=5,R=5)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.524
+  [balanced {12,15,20,21,28,30,35}] s=6 P=2940 M=36; owners: 12(M=5,R=5), 15(M=6,R=6), 20(M=1,R=1), 21(M=7,R=7), 28(M=2,R=2), 30(M=6,R=6), 35(M=9,R=9)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.800
+  [near-AP {8,9,10,12,14,15,18}] s=0 P=17640 M=20; owners: 8(M=6,R=5), 9(M=3,R=3), 10(M=3,R=3), 12(M=1,R=1), 14(M=2,R=1), 15(M=3,R=2), 18(M=2,R=2)
+      (I) per-owner comb identity S_e(ea) = nu_e(a): True
+      (II) per-owner profile: violations 0; (III) summed profile: violations 0, worst ratio 0.756
+      w=    11 gcd=  1: Q_s/M =     0.91; law bound/M =      40.4 (cover True); resonance score/M =    0.18
+      w=    64 gcd=  8: Q_s/M =     4.19; law bound/M =      35.0 (cover True); resonance score/M =    0.14
+      w=  2521 gcd=  1: Q_s/M =     1.72; law bound/M =      43.6 (cover True); resonance score/M =    0.23
+
+done

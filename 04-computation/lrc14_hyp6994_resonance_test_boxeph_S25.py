@@ -260,4 +260,5 @@ def part2():
         print(f"    w={w:>5}: Q_s = {q:9.1f};  C1*M + mode-hit sum = {12*M + res:9.1f}  "
               f"(cover: {q <= 12*M + res + 1e-6})")
 
-part2()
+if __name__ == '__main__':
+    part2()

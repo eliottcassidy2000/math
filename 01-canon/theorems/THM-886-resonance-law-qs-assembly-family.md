@@ -30,11 +30,15 @@ Note ν̂(a) is 7-periodic in a with the 7|a modes small (Σ N_c = −2 here): t
 has FULL-STRENGTH teeth at every ta, a ≢ 0 mod 7 — no a-decay.
 
 **(II) Off-mode profile.** For m ∉ tZ:
-> |S(m)| ≤ C_f + R/(2 sin(π‖m/t‖)).
+> |S(m)| ≤ C_f + R/sin(π‖m/t‖).
 *Proof:* each per-class active index set is a union of runs (integer intervals in Z_t);
-a run's exponential sum at frequency m/t is geometric, bounded by 1/(2sin(π‖m/t‖));
-R runs total; frame endpoints contribute ≤ C_f. ∎ (Refereed: 0 violations over all
-m ∈ Z_P at t = 600; worst ratio 0.707 — near-sharp.)
+a run's exponential sum at frequency m/t is geometric, |1−ζ^L|/|1−ζ| ≤ 2/|1−ζ| =
+1/sin(π‖m/t‖); R runs total; frame endpoints contribute ≤ C_f. ∎ (Refereed: 0
+violations at the PROVEN constant; empirically even the twice-stronger /2-form held at
+t = 600 with ratio 0.707 — the honest theorem states the proven constant.
+CORRECTED in S26: the file originally stated the /2-form, which the proof does not give;
+the general-cluster referee exposed per-owner violations of the /2-form — MISTAKE-grade
+lesson: state the constant the proof gives, not the one the first instance survives.)
 
 **(III) Kernel DFT.** k̂_P(n), the Z_P-DFT of {x}(1−{x}), satisfies |k̂_P(n)| ≤
 1/(2P² sin²(πn/P)) ≤ 1/(8ñ²) (second-difference/double-Abel: the discrete second
