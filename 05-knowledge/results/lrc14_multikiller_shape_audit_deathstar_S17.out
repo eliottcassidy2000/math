@@ -1,0 +1,109 @@
+==============================================================================
+PART E: flagship anchors (exact)
+==============================================================================
+  self-test deep well: M = 14/183 = 0.076503  [OK]
+  self-test THM-726 min (interval k=11): M = 7/89 = 0.078652  [OK]
+  self-test HYP-6660 near-AP-with-far: M = 2/23 = 0.086957  [OK]
+
+  {1..14}\{a} family (multi-killer by the >=13 definition, j=2):
+    a=1: covering=True  M = 1/8 = 0.125000  >= 1/13 OK
+    a=2: covering=True  M = 2/17 = 0.117647  >= 1/13 OK
+    a=3: covering=True  M = 2/19 = 0.105263  >= 1/13 OK
+    a=4: covering=True  M = 2/19 = 0.105263  >= 1/13 OK
+    a=5: covering=True  M = 2/21 = 0.095238  >= 1/13 OK
+    a=6: covering=True  M = 2/23 = 0.086957  >= 1/13 OK
+    a=7: covering=True  M = 1/11 = 0.090909  >= 1/13 OK
+  [E1 time 0.4s]
+
+  free-outlier family S = {1..12}\{6} + {w, 182}, w = 13..400:
+    ALL w clear 1/13 (witness or exact interval).
+  [E2 time 0.0s]
+
+==============================================================================
+PART A: k=11 (j=2) — all 12 shapes, exhaustive below PROVED union-tail thresholds
+==============================================================================
+  shape P = {1..12}\{1}: R=[13, 14] m=1/13≈0.07692 r=12 W_all=70 pairs=2 exact=0  [0.0s]
+  shape P = {1..12}\{2}: R=[13, 14] m=1/26≈0.03846 r=12 W_all=139 pairs=13 exact=0  [0.1s]
+  shape P = {1..12}\{3}: R=[13, 14] m=20/429≈0.04662 r=14 W_all=134 pairs=11 exact=0  [0.1s]
+  shape P = {1..12}\{4}: R=[13, 14] m=9/286≈0.03147 r=14 W_all=198 pairs=36 exact=0  [0.1s]
+  shape P = {1..12}\{5}: R=[13, 14] m=254/6435≈0.03947 r=18 W_all=203 pairs=34 exact=0  [0.2s]
+  shape P = {1..12}\{6}: R=[13, 14] m=7/429≈0.01632 r=14 W_all=382 pairs=214 exact=0  [0.2s]
+  shape P = {1..12}\{7}: R=[7, 13, 14] m=383/4290≈0.08928 r=16 W_all=80 pairs=17 exact=0  [0.1s]
+  shape P = {1..12}\{8}: R=[8, 13, 14] m=472/9009≈0.05239 r=14 W_all=119 pairs=3 exact=0  [0.1s]
+  shape P = {1..12}\{9}: R=[9, 13, 14] m=311/5005≈0.06214 r=16 W_all=115 pairs=1 exact=0  [0.1s]
+  shape P = {1..12}\{10}: R=[10, 13, 14] m=94/3003≈0.03130 r=14 W_all=199 pairs=10 exact=0  [0.1s]
+  shape P = {1..12}\{11}: R=[11, 13, 14] m=461/8190≈0.05629 r=20 W_all=158 pairs=3 exact=0  [0.1s]
+  shape P = {1..12}\{12}: R=[12, 13, 14] m=92/5005≈0.01838 r=14 W_all=339 pairs=39 exact=0  [0.2s]
+
+  k=11 (j=2): EVERY primitive covering multi-killer config with either outlier
+  below its proved tail threshold CLEARS 1/13; all larger outliers clear by the
+  union-tail lemma. SHAPE-COMPLETE at k=11.
+
+==============================================================================
+PART B: k=10 (j=3) — all shapes, recursive exhaust + proved tails
+==============================================================================
+  miss=(1, 7): R=[7, 13, 14] m≈0.16620 r=16 nodes=1811 leaves=171 exact=0 maxW=137 fails=0  [1.8s]
+  miss=(7, 9): R=[7, 9, 13, 14] m≈0.15874 r=18 nodes=2491 leaves=43 exact=0 maxW=127 fails=0  [2.6s]
+  miss=(7, 11): R=[7, 11, 13, 14] m≈0.15556 r=22 nodes=4015 leaves=75 exact=0 maxW=157 fails=0  [5.2s]
+  miss=(7, 8): R=[7, 8, 13, 14] m≈0.14716 r=16 nodes=2301 leaves=38 exact=0 maxW=121 fails=0  [2.2s]
+  miss=(1, 2): R=[13, 14] m≈0.14103 r=12 nodes=1410 leaves=31 exact=0 maxW=95 fails=0  [1.0s]
+  miss=(1, 9): R=[9, 13, 14] m≈0.13906 r=16 nodes=2619 leaves=22 exact=0 maxW=127 fails=0  [2.6s]
+  miss=(3, 7): R=[7, 13, 14] m≈0.13590 r=18 nodes=3535 leaves=437 exact=0 maxW=178 fails=0  [3.8s]
+  miss=(1, 11): R=[11, 13, 14] m≈0.13321 r=20 nodes=4583 leaves=38 exact=0 maxW=167 fails=0  [5.3s]
+  miss=(5, 10): R=[5, 10, 13, 14] m≈0.13231 r=16 nodes=2839 leaves=14 exact=0 maxW=123 fails=0  [2.7s]
+  miss=(7, 10): R=[7, 10, 13, 14] m≈0.12937 r=16 nodes=3084 leaves=56 exact=0 maxW=155 fails=0  [3.0s]
+  miss=(1, 8): R=[8, 13, 14] m≈0.12932 r=14 nodes=2284 leaves=23 exact=0 maxW=111 fails=0  [1.9s]
+  miss=(9, 11): R=[9, 11, 13, 14] m≈0.12930 r=22 nodes=5895 leaves=1 exact=0 maxW=215 fails=0  [7.4s]
+  miss=(5, 7): R=[7, 13, 14] m≈0.12875 r=22 nodes=6021 leaves=911 exact=0 maxW=235 fails=0  [7.4s]
+  miss=(2, 7): R=[7, 13, 14] m≈0.12774 r=16 nodes=3208 leaves=362 exact=0 maxW=159 fails=0  [3.0s]
+  miss=(1, 3): R=[13, 14] m≈0.12354 r=14 nodes=2601 leaves=56 exact=0 maxW=124 fails=0  [2.2s]
+  miss=(8, 9): R=[8, 9, 13, 14] m≈0.12308 r=16 nodes=3346 leaves=0 exact=0 maxW=142 fails=0  [3.1s]
+  miss=(4, 7): R=[7, 13, 14] m≈0.12075 r=18 nodes=4563 leaves=658 exact=0 maxW=195 fails=0  [4.8s]
+  miss=(8, 11): R=[8, 11, 13, 14] m≈0.11917 r=20 nodes=5732 leaves=11 exact=0 maxW=177 fails=0  [6.6s]
+  miss=(7, 12): R=[7, 12, 13, 14] m≈0.11865 r=16 nodes=3690 leaves=52 exact=0 maxW=187 fails=0  [3.4s]
+  miss=(1, 5): R=[13, 14] m≈0.11639 r=18 nodes=4884 leaves=151 exact=0 maxW=172 fails=0  [5.0s]
+  miss=(3, 9): R=[9, 13, 14] m≈0.10876 r=18 nodes=5645 leaves=60 exact=0 maxW=170 fails=0  [5.8s]
+  miss=(1, 4): R=[13, 14] m≈0.10839 r=14 nodes=3409 leaves=111 exact=0 maxW=131 fails=0  [2.8s]
+  miss=(1, 10): R=[10, 13, 14] m≈0.10823 r=14 nodes=3415 leaves=23 exact=0 maxW=132 fails=0  [2.8s]
+  miss=(3, 11): R=[11, 13, 14] m≈0.10757 r=20 nodes=7194 leaves=111 exact=0 maxW=203 fails=0  [8.1s]
+  miss=(6, 7): R=[7, 13, 14] m≈0.10559 r=18 nodes=6116 leaves=1155 exact=0 maxW=269 fails=0  [6.4s]
+  miss=(5, 9): R=[9, 13, 14] m≈0.10503 r=20 nodes=7571 leaves=167 exact=0 maxW=231 fails=0  [8.4s]
+  miss=(5, 11): R=[11, 13, 14] m≈0.10415 r=24 nodes=11121 leaves=160 exact=0 maxW=237 fails=0  [14.6s]
+  miss=(9, 10): R=[9, 10, 13, 14] m≈0.10370 r=16 nodes=4893 leaves=12 exact=0 maxW=168 fails=0  [4.7s]
+  miss=(2, 9): R=[9, 13, 14] m≈0.10060 r=16 nodes=5281 leaves=71 exact=0 maxW=162 fails=0  [5.0s]
+  miss=(3, 8): R=[8, 13, 14] m≈0.09901 r=16 nodes=5445 leaves=72 exact=0 maxW=211 fails=0  [5.1s]
+  miss=(10, 11): R=[10, 11, 13, 14] m≈0.09878 r=20 nodes=8581 leaves=28 exact=0 maxW=220 fails=0  [9.7s]
+  miss=(4, 8): R=[8, 13, 14] m≈0.09668 r=16 nodes=5705 leaves=71 exact=0 maxW=183 fails=0  [5.3s]
+  miss=(1, 12): R=[12, 13, 14] m≈0.09530 r=14 nodes=4476 leaves=12 exact=0 maxW=160 fails=0  [3.7s]
+  miss=(2, 11): R=[11, 13, 14] m≈0.09475 r=20 nodes=9389 leaves=138 exact=0 maxW=217 fails=0  [10.7s]
+  miss=(4, 11): R=[11, 13, 14] m≈0.09475 r=20 nodes=9305 leaves=126 exact=0 maxW=231 fails=0  [10.5s]
+  miss=(4, 9): R=[9, 13, 14] m≈0.09361 r=18 nodes=7692 leaves=118 exact=0 maxW=197 fails=0  [7.9s]
+  miss=(1, 6): R=[13, 14] m≈0.09324 r=14 nodes=4698 leaves=139 exact=0 maxW=153 fails=0  [3.8s]
+  miss=(5, 8): R=[8, 13, 14] m≈0.09186 r=20 nodes=9854 leaves=174 exact=0 maxW=240 fails=0  [11.0s]
+  miss=(2, 8): R=[8, 13, 14] m≈0.09085 r=14 nodes=4989 leaves=74 exact=0 maxW=170 fails=0  [4.1s]
+  miss=(11, 12): R=[11, 12, 13, 14] m≈0.08632 r=20 nodes=11471 leaves=37 exact=0 maxW=313 fails=0  [13.1s]
+  miss=(3, 5): R=[13, 14] m≈0.08609 r=20 nodes=11393 leaves=519 exact=0 maxW=238 fails=0  [12.8s]
+  miss=(2, 3): R=[13, 14] m≈0.08508 r=14 nodes=5774 leaves=189 exact=0 maxW=181 fails=0  [4.7s]
+  miss=(8, 10): R=[8, 10, 13, 14] m≈0.08369 r=16 nodes=7705 leaves=59 exact=0 maxW=202 fails=0  [7.0s]
+  miss=(2, 4): R=[13, 14] m≈0.08275 r=14 nodes=6126 leaves=287 exact=0 maxW=187 fails=0  [5.0s]
+  miss=(6, 11): R=[11, 13, 14] m≈0.08193 r=20 nodes=12766 leaves=265 exact=0 maxW=266 fails=0  [14.2s]
+  miss=(9, 12): R=[9, 12, 13, 14] m≈0.08052 r=18 nodes=10669 leaves=82 exact=0 maxW=268 fails=0  [10.8s]
+  miss=(3, 6): R=[13, 14] m≈0.08003 r=16 nodes=8429 leaves=381 exact=0 maxW=206 fails=0  [7.6s]
+  miss=(6, 9): R=[9, 13, 14] m≈0.07845 r=18 nodes=11322 leaves=280 exact=0 maxW=285 fails=0  [11.4s]
+  miss=(3, 4): R=[13, 14] m≈0.07809 r=16 nodes=9015 leaves=465 exact=0 maxW=223 fails=0  [8.3s]
+  miss=(2, 5): R=[13, 14] m≈0.07793 r=18 nodes=11321 leaves=553 exact=0 maxW=238 fails=0  [11.4s]
+  miss=(3, 10): R=[10, 13, 14] m≈0.07792 r=16 nodes=9018 leaves=123 exact=0 maxW=213 fails=0  [8.2s]
+  miss=(4, 5): R=[13, 14] m≈0.07094 r=20 nodes=16958 leaves=1305 exact=0 maxW=311 fails=0  [18.7s]
+  miss=(8, 12): R=[8, 12, 13, 14] m≈0.07077 r=16 nodes=11016 leaves=119 exact=0 maxW=250 fails=0  [10.3s]
+  miss=(2, 10): R=[10, 13, 14] m≈0.06976 r=14 nodes=8798 leaves=156 exact=0 maxW=218 fails=0  [7.2s]
+  miss=(6, 8): R=[8, 13, 14] m≈0.06871 r=16 nodes=11709 leaves=328 exact=0 maxW=258 fails=0  [10.6s]
+  miss=(5, 12): R=[12, 13, 14] m≈0.06811 r=18 nodes=14927 leaves=139 exact=0 maxW=270 fails=0  [14.9s]
+  miss=(3, 12): R=[12, 13, 14] m≈0.06500 r=16 nodes=13153 leaves=99 exact=0 maxW=269 fails=0  [11.9s]
+  miss=(4, 10): R=[10, 13, 14] m≈0.06277 r=16 nodes=14243 leaves=361 exact=0 maxW=355 fails=0  [12.8s]
+  miss=(6, 12): R=[6, 12, 13, 14] m≈0.06034 r=14 nodes=11743 leaves=164 exact=0 maxW=262 fails=0  [9.4s]
+  miss=(2, 12): R=[12, 13, 14] m≈0.05684 r=14 nodes=13457 leaves=207 exact=0 maxW=273 fails=0  [10.9s]
+  miss=(5, 6): R=[13, 14] m≈0.05579 r=20 nodes=28112 leaves=2779 exact=0 maxW=375 fails=0  [31.5s]
+  miss=(2, 6): R=[13, 14] m≈0.05478 r=14 nodes=14598 leaves=920 exact=0 maxW=305 fails=0  [11.9s]
+  miss=(4, 12): R=[12, 13, 14] m≈0.04985 r=16 nodes=22898 leaves=948 exact=0 maxW=383 fails=0  [20.5s]
+  miss=(10, 12): R=[10, 12, 13, 14] m≈0.04968 r=16 nodes=23096 leaves=334 exact=0 maxW=353 fails=0  [20.9s]
+  miss=(4, 6): R=[13, 14] m≈0.04779 r=16 nodes=25042 leaves=2892 exact=0 maxW=2251 fails=0  [22.8s]
