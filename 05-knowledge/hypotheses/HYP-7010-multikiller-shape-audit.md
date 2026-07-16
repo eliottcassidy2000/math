@@ -4,8 +4,11 @@
 was REAL (interval-only basis, free outliers never enumerated) but contains NO counterexample:
 |P| ∈ {10, 11} are now SHAPE-COMPLETE with proved union-tail thresholds (monotonicity-free),
 zero failures across all shapes, all covering pairs/triples below thresholds, all anchors.
-|P| = 9 = named cron bank (--k9-shape unit, ~50-150 core-h). Full numbers: THM-726 ADDENDUM +
-`05-knowledge/results/lrc14_multikiller_shape_audit_deathstar_S17.out`.
+**CONVERGENCE (same night): mac-mini-S114's THM-883 Fragmentation Lemma = the sharper ℓ_max
+form of the same threshold mathematics, with the last-killer bound closing the box in all
+coordinates; their exact sweep completes j ≤ 4 — the k=9 cron unit here is SUPERSEDED, and
+|P| ∈ {10,11} is now double-witnessed by two independent implementations.** Full numbers:
+THM-726 ADDENDUM + `05-knowledge/results/lrc14_multikiller_shape_audit_deathstar_S17.out`.
 
 ## What is claimed
 

@@ -4560,7 +4560,7 @@ sum-handoffs ((vi+vj)t in Z, THM-722) = the metric skeleton. Sum vs difference w
 (negation = word reversal = the only surviving word symmetry, mac-mini S112). The half-turn t -> t+1/2
 is load-bearing everywhere it appears: deck map of the 2-adic descent (THM-580), Redei/locker involution
 fixed point (witness pairs (j,q-j), fixed point q/2 <-> all-odd <-> t=1/2), opus-S321's tight times
-1/2 + k/7, and now the flat=2xgood Jacobian (THM-882/HYP-7012). Probe: formalize the movie's wall-word
+1/2 + k/7, and now the flat=2xgood Jacobian (THM-882/HYP-7013). Probe: formalize the movie's wall-word
 transition graph as a tournament-analysis switchboard (THM-372) and check whether the 46-word graph's
 structure predicts the covering locus's 12 intervals. Status: TANGENT, no claims.
 (b) LEDGER-SPECTRUM DICTIONARY: THM-722's chain-mass distribution (time side, threshold-free) vs

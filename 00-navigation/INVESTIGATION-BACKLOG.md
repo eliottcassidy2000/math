@@ -29,12 +29,18 @@
   Synthesis reflection: `07-reflections/the-lrc14-proof-object-what-every-lens-pins-death-star-S17.md`
   (the lens atlas + dependency DAG + THE SEAM: mid-band ≡ f≥4-incoherent ≡ low-|P| multi-killer ≡
   sharp-Q_s clusters — one region in four coordinates).
-- **Next:** (i) |P| ∈ {7,8} strata need a moment-order-3 (d=3 pincer) tail lemma — union-tail dies
-  at j = 6.5, LEM-020 proves order 2 can never suffice; (ii) the LEDGER–SPECTRUM DICTIONARY (new
-  merge candidate): compute THM-722 chain-mass distribution AND LEM-020 multiplicity spectrum on
-  the same family bank — candidate exact bridge between witness and density architectures;
-  (iii) hand the 1/13 measure atlas to opus for μ6/character grading; (iv) scale-normal form for
-  THM-758-B (quotient by dilation + cluster tree) = the highest-leverage missing piece.
+- **RECONCILIATION (same night):** mac-mini-S114's THM-883 Fragmentation Lemma = the sharper
+  ℓ_max form of the same threshold mathematics; their exact sweep completes j ≤ 4 ⟹ the k=9
+  cron unit here is SUPERSEDED; |P| ∈ {10,11} double-witnessed (two independent
+  implementations, zero violations both). boxeph's LRC14-FRONTIER-ASSESSMENT-2026-07-16 is
+  the companion lens ledger to the S17 reflection.
+- **Next:** (i) j ≥ 7 strata (where 13−2j < 0 kills order-1 tails and LEM-020 kills order 2):
+  the moment-order-3 (d=3 pincer) tail lemma would replace the 0/7107 probes with proof;
+  (ii) the LEDGER–SPECTRUM DICTIONARY (new merge candidate): compute THM-722 chain-mass
+  distribution AND LEM-020 multiplicity spectrum on the same family bank — candidate exact
+  bridge between witness and density architectures; (iii) hand the 1/13 measure atlas to opus
+  for μ6/character grading (a=1 exactly 1/13 — why?); (iv) scale-normal form for THM-758-B
+  (quotient by dilation + cluster tree) = the highest-leverage missing piece.
 
 ## Lead klein-2026-07-16-S314: density-route residual = sign-equidistribution of the large-θ form
 - **Status:** THM-880 converts THM-729's Q_s into the exact bilinear form −2π²Σεε′{wΔ}(1−{wΔ});

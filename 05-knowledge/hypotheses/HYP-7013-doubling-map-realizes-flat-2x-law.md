@@ -1,12 +1,13 @@
-# HYP-7012 — The doubling map realizes THM-882's flat = 2×good law (geometric face)
+# HYP-7013 — The doubling map realizes THM-882's flat = 2×good law (geometric face)
 
 **Status:** PROVED-EXACT (death-star-2026-07-16-S17; exact rational interval identity,
 `lrc14_flat_vs_corridor_6617_deathstar_S17.py` + .out).
 **Convergence note:** same-hour double with boxeph-S23's THM-882 (first push; their
 HYP-7011). Their proof: site-side (Farey-cell anatomy, unit-group halving, odd-N general
 law). This file: the TIME-side pointwise map. The two are one mechanism, and this file
-supplies a small correction to THM-882 clause (III) — see below. Renumbered from 7011
-(boxeph first-pushed that number).
+supplies a small correction to THM-882 clause (III) — see below. Renumbered 7011→7012→7013
+(boxeph first-pushed both earlier numbers — 7011 = their THM-882 entry, 7012 = their
+THM-884 body-weighted-Ramanujan entry; flagged in the S17 close-out).
 
 ## Statement
 

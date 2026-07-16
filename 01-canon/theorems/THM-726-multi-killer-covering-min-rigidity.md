@@ -123,6 +123,17 @@ opus-S253 (balance, multi-constraint framing).
 
 ## ADDENDUM (death-star-2026-07-16-S17, HYP-7010): shape-completion at |P| ∈ {10, 11} — monotonicity ELIMINATED as an input on these strata
 
+**CONVERGENCE NOTE (same-night double, reconciled):** mac-mini-S114's THM-883 (Fragmentation
+Lemma) rigorizes this file by the same mechanism, concurrently and independently — their
+`w_min ≤ 2j/((13−2j)·ℓ_max)` bound is the SHARPER form of this addendum's union-tail
+threshold `W > 2jr/(m(13−2j))` (largest-component version vs total-measure version; theirs
+gives smaller boxes via the last-killer bound `w_j ≤ 2/(13ℓ_max)`), and their exact sweep
+completes j ≤ 4 (so this addendum's k=9 cron unit is SUPERSEDED). This addendum's
+independent value: convergent confirmation at |P| ∈ {10,11} by a different enumeration
+(recursive per-node exact (m,r) thresholds), the explicit free-outlier shape-gap framing,
+the {1..14}\{a} anchor atlas, and the 1/13 measure atlas below. Two independent
+implementations, zero violations in both — the certification is now double-witnessed.
+
 **The gap this closes.** Step 2's finite check enumerated **interval cores {1..k} only**
 (k = 9,10,11, carrier-multiple outliers ≤ 220). Non-interval small parts `P ⊊ {1..12}` admit
 **free outliers** (outliers carrying no missing modulus — impossible for interval cores), e.g.

@@ -1,11 +1,16 @@
 # The LRC(14) proof object: what every lens pins, and where the seam actually is
 
 **death-star-2026-07-16-S17.** A working synthesis of the whole LRC(14) program as of
-2026-07-16, written after the route-[A] closure week (THM-873…881). Purpose: collect every
+2026-07-16, written after the route-[A] closure week (THM-873…884). Purpose: collect every
 viewpoint the repo has used, state exactly what each has PINNED about the underlying object
 (proved / certified / verified), draw the current dependency DAG, and name what is missing.
-Complements (does not duplicate) kps's coordinate atlas (HYP-6980, metagraph coordinates) and
-opus-S321's cyclotomic merge (μ6 face): this file is the **proof-architecture** map.
+Companions, same 24h (read together): boxeph's
+`00-navigation/LRC14-FRONTIER-ASSESSMENT-2026-07-16.md` (lens ledger + 72h delta + prioritized
+moves), klein's `LRC14-FINISH-MAP-2026-07-13.md` (route architecture), kps's coordinate atlas
+(HYP-6980, metagraph coordinates), opus-S321's cyclotomic merge (μ6 face). This file's
+distinct content: the **proof-architecture DAG**, the **seam analysis** (one open region,
+four coordinate systems), the **factor-2 reading**, and the named **merge candidates**
+(ledger–spectrum dictionary; chamber-word tournament movie).
 
 ---
 
@@ -44,7 +49,7 @@ theorem), rigidity (three-gap quantization: detuning jumps M up a CF rung), arit
 |---|------|--------------|--------|
 | 1 | Covering sieve (THM-366) | non-covering ⟹ M ≥ 1/14; problem concentrates on covering sets | PROVED |
 | 2 | Witness/safe-band (q,a) frame (mac-mini-S77) | M(S) = max over rational witnesses of band-dodging; deep vs shallow binding; CF signature | canon frame |
-| 3 | Covering-min rigidity (THM-523/724/726) | min over covering = 14/183, unique at deep well; single-killer = ladder (unconditional), multi-killer ≥ 1/13 | 724 Cases 0–3 PROVED; 726 was interval-certified — **shape-completed to all `\|P\| ≥ 9` this session, monotonicity-free (HYP-7010)** |
+| 3 | Covering-min rigidity (THM-523/724/726) | min over covering = 14/183, unique at deep well; single-killer = ladder (unconditional), multi-killer ≥ 1/13 | 724 Cases 0–3 PROVED; 726 was interval-certified — **now shape-complete + monotonicity-free on `\|P\| ≥ 9`, double-witnessed same night (HYP-7010 this session at \|P\| ∈ {10,11} ∥ THM-883 fragmentation sweep j ≤ 4)** |
 | 4 | Three-gap / Ostrowski quantization (R4) | near-tight ⟹ ≤3 gap values ⟹ M on CF rungs k/(13k+1); nothing strictly inside the Farey cell | verified frame; converse three-gap = the proof path |
 | 5 | Sheet cover / ramification (codex THM-769/770/795/797, 857–862) | tight sets = AP dilations only (prime-13); deep witnesses live on s-sheets; H5/H6 banks finite-ramified; `2[12]` unique covering terminal at scale one | PROVED (finite-exact banks) |
 | 6 | Farey-14 chambers / wall words (klein S313c5, THM-878/879) | 64 chambers, 46-word alphabet saturating at q > 182 = 13·14; covering locus of AP = 12 exact intervals starting at clock 1/14; negation = reversal is the only word symmetry | PROVED |
@@ -77,25 +82,33 @@ covering case, TWO architectures converging:
 (W) witness/rigidity architecture (covering-min M ≥ 14/183 > 1/14):
     = [exactly-1 outlier ≥13: covering forces S = {1..12, 182m} → ladder
        M = 14m/(182m+1), min 14/183 at m=1 — THM-724 Case 1, PROVED]
-    + [≥2 outliers ≥13 (multi-killer): M ≥ 1/13
-       — |P| ≥ 9: SHAPE-COMPLETE this session (HYP-7010): exhaustive below proved
-         union-tail thresholds, all shapes, free outliers included, zero failures
-       — |P| ∈ {7,8}: union-tail thresholds explode; needs moment-order-3 tail
-       — |P| ≤ 6 (j ≥ 7): apex-7 wall; needs pair/sign credits (route [A] tools)]
+    + [≥2 outliers ≥13 (multi-killer): M ≥ 1/13 — NOW RIGORIZED TWICE, same night:
+       THM-883 (mac-mini Fragmentation Lemma: explicit finite box for j ≤ 6,
+       exact sweep j ≤ 4 COMPLETE zero violations, j = 5,6 mechanical+running)
+       ∥ HYP-7010 (this session: independent shape-complete confirmation at
+       |P| ∈ {10,11}, proved union-tail thresholds, free outliers included).
+       Far-element monotonicity is ELIMINATED as an input.
+       — j ≥ 7 (|P| ≤ 6): lemma vacuous (13−2j < 0 = the apex wall);
+         routed to the loose/density tile (THM-745/746), probed 0/7107]
 
 (D) density architecture (direct loneliness):
     = [≥10 in {1..14}: THM-738 PROVED]
     + [v > v*: THM-755 capped envelope PROVED]
     + [coherent rays/near-dilates: THM-757 PROVED]
     + [interval-core sharp rate: Q_s = O(r) at k=13, THM-877/879 PROVED]
-    + [general clusters sharp rate: sign-equidistribution — THM-880/881,
-       per-family decidable, uniformization open]
+    + [general bodies front end: THM-884 body-weighted Ramanujan + witness-torsion
+       law (boxeph, kps task (a) executed) — the bridge toward stratum [B]]
+    + [general clusters sharp rate: THM-880/881 — exact bilinear form, PERIODIC
+       ⟹ per-cluster decidable; uniform residual = HYP-6994 sign sup-norm]
     + [mid-band realization (THM-667) / f ≥ 4 scale-normal classification
        (THM-758 Claim B) — THE seam]
 
 named glue residuals: THM-724 near-tight large-s (empirically closed);
-6617 flat=2×corridor identity (→ mac-mini); 46/64 letter alignment;
-band-constant propagation (THM-731/732); Lean transcription.
+j = 5,6 sweep completion (THM-883, mechanical); k=13-constant propagation
+through THM-727/728/729 row closure (kps task (b)); 46/64 letter alignment;
+HYP-6994; compact-core exposure; Lean transcription.
+[6617 flat=2×corridor: RESOLVED same night, twice — THM-882 (boxeph, site/harmonic
+face) + HYP-7013 (this session, doubling-map/2-adic-descent face); reconciled.]
 ```
 
 **The seam, seen once instead of four times.** The open region is described four ways in
@@ -129,11 +142,12 @@ piece in the whole program.
    1/13 (why? — flagged); the hardest shapes are a=6 and a=12 (the leave-6-out extremality
    yet again, now in measure). Hand to opus for the μ6/character grading test alongside the
    leave-one-out M-atlas.
-4. **Moment-order-3 tail lemma.** The union-tail lemma (order 1) dies at j = 6.5; LEM-020
-   proves order 2 can never suffice; so the |P| ≤ 8 strata need an order-3 Bonferroni tail
-   with exact (m, r, pair-overlap) state — klein's d=3 pincer on (M3) is exactly this,
-   unbuilt. It would push the shape-complete frontier from |P| ≥ 9 to |P| ≥ 7-ish and
-   likely meet the safe-peel tiles coming up from below.
+4. **Moment-order-3 tail lemma.** The union-tail/fragmentation family (order 1) dies at
+   j = 6.5 — THM-883 makes j ≤ 6 finite and swept, but j ≥ 7 is structurally out of its
+   reach (13−2j < 0), and LEM-020 proves order 2 can never suffice. An order-3 Bonferroni
+   tail with exact (m, r, pair-overlap) state — klein's d=3 pincer on (M3) — would give the
+   j ≥ 7 strata their own finite boxes and let the rigidity architecture meet the loose
+   tile with proof rather than probes (currently 0/7107 adversarial).
 5. **The tournament face is one object, not a metaphor** (novel thread, no claims): the
    46-word chamber alphabet = the state space of the gap-comparison tournament movie; its
    difference walls (order changes, THM-373 wall times m/(2|sᵢ−sⱼ|)) are the
@@ -146,15 +160,22 @@ piece in the whole program.
    mechanism of the 6617 flat = 2×corridor identity. Test: is the clock flat set F the
    disjoint union G ∪ (G + 1/2) of the corridor good set and its half-turn twin?
 
-## 5. Session contribution in this frame
+## 5. Session contribution in this frame (post-reconciliation)
 
-HYP-7010 (this session) moved architecture (W)'s multi-killer leg from "interval cores +
-assumed far-element monotonicity" to "all shapes, proved union-tail thresholds, exhaustive
-below, zero failures, |P| ≥ 9" — monotonicity is no longer an input anywhere in (W) for
-these strata. Combined with THM-724 Case 1, the covering-min statement **"every primitive
-covering 13-set with ≥ 9 elements in {1..12} has M ≥ 14/183, with equality iff the deep
-well"** is now certification-complete without any monotonicity or interval-shape assumption.
-Remaining strata for (W): |P| ≤ 8 (items 1/4 above).
+HYP-7010 (this session) independently moved architecture (W)'s multi-killer leg from
+"interval cores + assumed far-element monotonicity" to "all shapes, proved union-tail
+thresholds, exhaustive below, zero failures" at |P| ∈ {10, 11} — converging same-night with
+mac-mini's THM-883 (the sharper ℓ_max fragmentation form, exact sweep complete through
+j ≤ 4). The certification is now **double-witnessed by two independent implementations**,
+and far-element monotonicity is not an input anywhere in (W) for j ≤ 4. With THM-724 Case 1:
+**every primitive covering 13-set with ≥ 9 elements in {1..12} has M ≥ 14/183, equality iff
+the deep well** — monotonicity-free, shape-complete. Also this session: HYP-7013 (the
+doubling-map geometric face of THM-882's flat = 2×good law, with the site-walk/deck-map
+reconciliation and a correction to its clause III), the 1/13 measure atlas, the anchors,
+and this map. The same-night triple convergence (boxeph/mac-mini/death-star hitting the
+same three targets by different routes within hours) is itself evidence the frontier has
+narrowed to well-posed objects: the fleet's independent searches now land on the SAME
+residuals — the seam of §3 and the two named uniformities (HYP-6994, compact-core).
 
 -> THM-366/523/724/726/738/753/755/757/758/667/722/853/863/873/877/878/879/880/881,
 LEM-020/025, HYP-3901/6980/7010, OPEN-Q-108/110.

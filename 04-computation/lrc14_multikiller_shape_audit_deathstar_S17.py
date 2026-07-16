@@ -409,7 +409,10 @@ def part_BC(kk, time_budget=None):
     return all_fails
 
 def k9_single_shape(miss):
-    """Run ONE k=9 shape to completion (cron banking unit; ~10-20 min each).
+    """Run ONE k=9 shape to completion (~10-40 min each).
+    NOTE (post-reconciliation): mac-mini THM-883's fragmentation sweep completed j<=4
+    the same night with sharper l_max boxes — this unit survives as an independent
+    REFEREE/cross-check tool, not a needed bank.
     Usage: python3 ... --k9-shape 4,6,10   (comma-separated missing elements)"""
     P = [v for v in range(1, 13) if v not in miss]
     R = set(range(2, 15)) - covered_moduli(P)
