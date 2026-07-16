@@ -1,0 +1,29 @@
+c=13 LANE SCAN: S_b = 13*{1..12} u {14b}, b = 1..400, 13∤b
+floor 14/183 = 0.076503; ILP boundary Vmax<=182 <=> b<=13
+
+15 LOWEST M over the lane:
+  b=   1 (14b=   14, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   2 (14b=   28, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   3 (14b=   42, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   4 (14b=   56, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   5 (14b=   70, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   6 (14b=   84, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   7 (14b=   98, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   8 (14b=  112, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=   9 (14b=  126, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=  10 (14b=  140, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=  11 (14b=  154, ILP )  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=  12 (14b=  168, ILP )  M =       1/13 = 0.076923  wit q=169 m=14  
+  b=  14 (14b=  196, OPEN)  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=  15 (14b=  210, OPEN)  M =       1/13 = 0.076923  wit q=169 m=1  
+  b=  16 (14b=  224, OPEN)  M =       1/13 = 0.076923  wit q=169 m=1  
+
+families below 14/183: 0   (of 370)
+
+lane min: M = 1/13 at b = 1 (wit q=169, m=1); margin over floor +0.000420
+
+designed-b spotlight:
+  b=  12: M =       1/13 = 0.076923  wit q=169 m=14
+  b= 170: M =       1/13 = 0.076923  wit q=169 m=1
+  b= 181: M =       1/13 = 0.076923  wit q=169 m=14
+  b= 350: M =       1/13 = 0.076923  wit q=169 m=14

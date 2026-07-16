@@ -1,0 +1,76 @@
+MULTI-KILLER STRATUM CENSUS (HYP-6295) — floor test vs 14/183 = 0.076503
+
+(a) unit tests
+  AP {1..13}                                   M =       1/14 = 0.071429  wit q=14 m=1  MK=False BELOW-FLOOR!! [expect 1/14 OK]
+  GW {1..11,13,24}                             M =       1/14 = 0.071429  wit q=28 m=2  MK=False BELOW-FLOOR!! [expect 1/14 OK]
+  deep well {1..12,182}                        M =     14/183 = 0.076503  wit q=183 m=14  MK=False =FLOOR [expect 14/183 OK]
+  ladder k=7 {1..12,91}                        M =       7/92 = 0.076087  wit q=92 m=7  MK=False BELOW-FLOOR!! [expect 7/92 OK]
+  compressed 2*{1..12}u{13}                    M =       1/13 = 0.076923  wit q=26 m=1  MK=True  [expect 1/13 OK]
+  baseline {2..14}                             M =        1/8 = 0.125000  wit q=16 m=1  MK=True  [expect 1/8 OK]
+
+(c1) the 14-far ladder {1..11, 13, 14m}, 6|m (12-duty on the killer)
+  {1..11,13,84} (m=6)                          M =       7/89 = 0.078652  wit q=89 m=37  MK=True 
+  {1..11,13,168} (m=12)                        M =     14/173 = 0.080925  wit q=173 m=72  MK=True 
+  {1..11,13,252} (m=18)                        M =     21/257 = 0.081712  wit q=257 m=107  MK=True 
+  {1..11,13,336} (m=24)                        M =     28/341 = 0.082111  wit q=341 m=142  MK=True 
+  {1..11,13,420} (m=30)                        M =       7/85 = 0.082353  wit q=425 m=177  MK=True 
+  {1..11,13,504} (m=36)                        M =     42/509 = 0.082515  wit q=509 m=212  MK=True 
+  {1..11,13,588} (m=42)                        M =     49/593 = 0.082631  wit q=593 m=247  MK=True 
+  {1..11,13,672} (m=48)                        M =     56/677 = 0.082718  wit q=677 m=282  MK=True 
+  {1..11,13,756} (m=54)                        M =     63/761 = 0.082786  wit q=761 m=317  MK=True 
+  {1..11,13,840} (m=60)                        M =     14/169 = 0.082840  wit q=845 m=352  MK=True 
+  {1..11,13,924} (m=66)                        M =     77/929 = 0.082885  wit q=929 m=387  MK=True 
+  {1..11,13,1008} (m=72)                       M =    84/1013 = 0.082922  wit q=1013 m=422  MK=True 
+  {1..11,13,1176} (m=84)                       M =    98/1181 = 0.082981  wit q=1181 m=492  MK=True 
+  {1..11,13,1260} (m=90)                       M =     21/253 = 0.083004  wit q=1265 m=527  MK=True 
+  {1..11,13,1344} (m=96)                       M =   112/1349 = 0.083024  wit q=1349 m=562  MK=True 
+  {1..11,13,1428} (m=102)                      M =   119/1433 = 0.083043  wit q=1433 m=597  MK=True 
+  {1..11,13,1512} (m=108)                      M =   126/1517 = 0.083059  wit q=1517 m=632  MK=True 
+  {1..11,13,1596} (m=114)                      M =   133/1601 = 0.083073  wit q=1601 m=667  MK=True 
+  {1..11,13,1680} (m=120)                      M =     28/337 = 0.083086  wit q=1685 m=702  MK=True 
+
+(c2) the 13-far mirror {1..11, 14, 156k} (12-duty on the 13-killer)
+  {1..11,14,156} (k=1)                         M =     13/157 = 0.082803  wit q=157 m=13  MK=True 
+  {1..11,14,312} (k=2)                         M =     26/313 = 0.083067  wit q=313 m=26  MK=True 
+  {1..11,14,468} (k=3)                         M =     39/469 = 0.083156  wit q=469 m=39  MK=True 
+  {1..11,14,624} (k=4)                         M =     52/625 = 0.083200  wit q=625 m=52  MK=True 
+  {1..11,14,780} (k=5)                         M =     65/781 = 0.083227  wit q=781 m=65  MK=True 
+  {1..11,14,936} (k=6)                         M =     78/937 = 0.083244  wit q=937 m=78  MK=True 
+  {1..11,14,1248} (k=8)                        M =   104/1249 = 0.083267  wit q=1249 m=104  MK=True 
+  {1..11,14,1404} (k=9)                        M =   117/1405 = 0.083274  wit q=1405 m=117  MK=True 
+  {1..11,14,1560} (k=10)                       M =   130/1561 = 0.083280  wit q=1561 m=130  MK=True 
+
+(d) designed adversaries (killers CRT-placed near the 183-band edge)
+  design {1..11, 7332, 2744}                   M =   611/7333 = 0.083322  wit q=7333 m=611  MK=True 
+  design {1..11, 7332, 2562+182=2744} alt      M =   611/7333 = 0.083322  wit q=7333 m=611  MK=True 
+
+(b) dropped-element scan {1..12}\{x} u {13a,14b}, a,b <= 24, covering+primitive+no-182
+   4328 families; 10 LOWEST M:
+   M =     7/89 = 0.078652  x=12 a= 1 b= 6  wit q=89 m=37  
+   M =   14/173 = 0.080925  x=12 a= 1 b=12  wit q=173 m=72  
+   M =     4/49 = 0.081633  x=12 a=15 b= 6  wit q=196 m=16  
+   M =   21/257 = 0.081712  x=12 a= 1 b=18  wit q=257 m=107  
+   M =   28/341 = 0.082111  x=12 a= 1 b=24  wit q=341 m=142  
+   M =     7/85 = 0.082353  x=12 a= 2 b= 6  wit q=85 m=7  
+   M =     7/85 = 0.082353  x=12 a= 3 b= 6  wit q=85 m=7  
+   M =     7/85 = 0.082353  x=12 a= 4 b= 6  wit q=85 m=7  
+   M =     7/85 = 0.082353  x=12 a= 5 b= 6  wit q=85 m=7  
+   M =     7/85 = 0.082353  x=12 a= 6 b= 6  wit q=85 m=7  
+   families below 14/183: 0
+   stratum min (this scan): 7/89 = 0.078652  margin over floor: +0.002149
+
+(e) random multi-killer sweep, Vmax <= 500, >=1 speed > 182
+   60 random multi-killer families (of 626 draws)
+   M =     40/201 = 0.199005  wit q=402 m=185 
+        fam=[31, 70, 77, 132, 142, 157, 168, 173, 196, 206, 207, 351, 460]
+   M =     82/401 = 0.204489  wit q=401 m=192 
+        fam=[3, 9, 70, 104, 174, 183, 204, 224, 287, 297, 314, 341, 437]
+   M =       9/44 = 0.204545  wit q=220 m=85 
+        fam=[29, 40, 42, 89, 99, 130, 172, 191, 252, 284, 353, 465, 470]
+   M =    131/635 = 0.206299  wit q=635 m=81 
+        fam=[28, 60, 68, 176, 225, 238, 248, 261, 276, 359, 381, 398, 403]
+   M =     45/218 = 0.206422  wit q=654 m=159 
+        fam=[52, 72, 79, 100, 121, 139, 191, 248, 303, 377, 406, 418, 455]
+   below 14/183: 0
+
+CENSUS COMPLETE.
