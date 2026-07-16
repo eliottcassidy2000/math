@@ -1,0 +1,28 @@
+family E_t = {1..6, t}; worst section reported
+    t     M       P |  max|S|^2/M  argmax | |S(t)|^2/M |S(2t)|^2/M |  Qs(1)/M  Qs(w*)/M
+    6    14     420 |       14.00     105 |       0.04        0.15 |     0.35      0.66
+   12    20     420 |        6.45     350 |       0.91        0.34 |     0.28      0.91
+   25    26    2100 |        9.67    1995 |       1.11        4.26 |     0.20      0.67
+   37    12   15540 |        9.66   10693 |       0.72        0.55 |     0.05      0.46
+   50    38    2100 |       10.00    1164 |       2.22        2.16 |     0.13      0.44
+   60    42     420 |        9.91     187 |       1.98        8.14 |     0.12      0.50
+  120    68     840 |       27.13     480 |       5.70        8.34 |     0.07      0.30
+  300   162    2100 |       58.32     907 |      14.59       30.42 |     0.03      0.12
+  600   320    4200 |      110.41    2393 |      32.03       62.28 |     0.02      0.06
+ 1200   628    8400 |      226.02    3600 |      62.35      129.11 |     0.01      0.03
+
+==========================================================================
+PART 2 -- lemma referees (family E_t = {1..6, t})
+  (L-khat) P=420: |khat(n)| <= 1/(4P^2 sin^2(pi n/P)): False; max |khat|*16*ntilde^2 = 2.000 (<= 1 iff the 1/(16n^2) bound holds)
+  (L-khat) P=840: |khat(n)| <= 1/(4P^2 sin^2(pi n/P)): False; max |khat|*16*ntilde^2 = 2.000 (<= 1 iff the 1/(16n^2) bound holds)
+  frame endpoints C_f = 16; t-owned M_t = 304; signed residue counts N = [-87, 100, -2, 9, -12, -2, -8]; total runs R = 35
+  (L-mode) S(ta) = S_frame(ta) + sum_c e(ac/7) N_c EXACT (a=1..7,11): True
+  mode amplitudes t|nu^(a)|-part: ['97.1', '138.1', '184.4', '184.4', '138.1', '97.1'] (vs measured |S(ta)|: ['101.2', '141.2', '187.2', '187.2', '141.2', '101.2'])
+  (L-profile) |S(m)| <= C_f + R/(2 sin(pi ||m/t||)) off-mode: violations = 0, worst ratio = 0.707
+  (L-low) |S(n)| <= min(M, 2 pi n lambda) for n < 200: True (lambda = 0.1431)
+  assembled resonance law check (upper-bound shape):
+    w=   11: Q_s =      18.8;  C1*M + mode-hit sum =    3850.0  (cover: True)
+    w= 1013: Q_s =     148.6;  C1*M + mode-hit sum =   13834.1  (cover: True)
+    w=  601: Q_s =   10463.1;  C1*M + mode-hit sum = 30140237.6  (cover: True)
+    w= 1207: Q_s =   42353.4;  C1*M + mode-hit sum =  658986.6  (cover: True)
+    w=  105: Q_s =     358.2;  C1*M + mode-hit sum =    7291.9  (cover: True)
