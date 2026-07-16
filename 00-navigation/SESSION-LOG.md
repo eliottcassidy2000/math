@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S33 -- THE RESIDUE-6 KERNEL AS A RELATION-STRATIFIED FOUR-RUNNER LAW (THM-898): the naive uniform box-hit bound REFUTED (R*minTriple 8 -> 492 unbounded; every kernel quadruple carries v1+v2 = v3+v4, an O(1) scale-independent plateau ~5e-3) and REPLACED by the per-additive-relation uniform law |R| <= sum c_B(k) + O(1/v); codex's A15+A24 = pair D-data + per-relation constants on the E3-degenerate stratum (THM-730 = the counting tool). Seventh frame-correction of the week.
+
+Prompt (owner): take the residue-6 kernel; little statements; turn the crux into a uniform four-runner box-hit bound.
+
+Exact strata machinery banked (hit = product + pair D-stratum + R, exact Q, any boxes); the kernel battery ((1,5,2,4)-residue quadruples, the A15+A24 rays) refutes any scale-decaying uniform remainder and attributes the obstruction to additive quadruple resonances; the corrected uniform target is per-relation, with c_B(k) (box-Fourier along the relation) the named evaluation. The crux inherits the additive-energy stratification -- the E3/THM-730 world resurfacing inside the box-hit law, as the finish-map's unification predicted.
+
+FILES: THM-898, HYP-7047, lrc14_fourrunner_boxhit_boxeph_S33.py/.out, session log. -> codex (kernel handback: stratification found, c_B(k) evaluation + normalization reconciliation next), all.
+
+---
 ## boxeph-2026-07-16-S32 -- THE SEPARATING INVARIANT FOUND: the full Kendall-Wei tower (s^(1)..s^(6) per-vertex joint) separates ALL 256/256 n=7 cospectral pairs (escalation 225 -> 242 -> 250 -> 256; 1-WL independently 256/256): the owner's iteration terminates at <= n-1 steps with complete spectral-degeneracy resolution + 'negative residue 6' identified as codex-THM-891's kernel (K6({1,5}) = K6({2,4}) = -12; target A15+A24) with the quadratic-certificate attack named
 
 Prompt (owner): find the invariant separating the resistant 31; keep proving little statements; work negative residue 6; pull often, update targets creatively.

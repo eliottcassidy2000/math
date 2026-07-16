@@ -1,0 +1,48 @@
+============================================================================
+FOUR-RUNNER BOX-HIT STRATA (kernel residue pattern (1,5,2,4) mod 7 + controls)
+-- kernel(1,5,2,4)
+   v=(8, 12, 9, 11) box=miss^4: dev=+2.155e-02 pair-part=+3.461e-02 R=-1.305e-02 R*minTriple=-10.339
+   v=(8, 12, 9, 11) box=sing 0000: dev=+1.149e-02 pair-part=+9.613e-04 R=+1.053e-02 R*minTriple=+8.337
+   v=(8, 12, 9, 11) box=sing resid: dev=+1.149e-02 pair-part=+9.613e-04 R=+1.053e-02 R*minTriple=+8.337
+   v=(15, 19, 16, 18) box=miss^4: dev=-5.596e-03 pair-part=+4.506e-03 R=-1.010e-02 R*minTriple=-43.639
+   v=(15, 19, 16, 18) box=sing 0000: dev=+7.102e-03 pair-part=+1.252e-04 R=+6.977e-03 R*minTriple=+30.141
+   v=(15, 19, 16, 18) box=sing resid: dev=+7.102e-03 pair-part=+1.252e-04 R=+6.977e-03 R*minTriple=+30.141
+   v=(22, 26, 23, 25) box=miss^4: dev=-6.944e-03 pair-part=+1.091e-03 R=-8.035e-03 R*minTriple=-101.644
+   v=(22, 26, 23, 25) box=sing 0000: dev=+5.078e-03 pair-part=+3.030e-05 R=+5.048e-03 R*minTriple=+63.854
+   v=(22, 26, 23, 25) box=sing resid: dev=+5.078e-03 pair-part=+3.030e-05 R=+5.048e-03 R*minTriple=+63.854
+   v=(29, 33, 30, 32) box=miss^4: dev=-6.252e-03 pair-part=+1.819e-03 R=-8.071e-03 R*minTriple=-224.698
+   v=(29, 33, 30, 32) box=sing 0000: dev=+4.808e-03 pair-part=+5.052e-05 R=+4.758e-03 R*minTriple=+132.453
+   v=(29, 33, 30, 32) box=sing resid: dev=+4.808e-03 pair-part=+5.052e-05 R=+4.758e-03 R*minTriple=+132.453
+   v=(36, 40, 37, 39) box=miss^4: dev=-5.491e-03 pair-part=+2.049e-03 R=-7.541e-03 R*minTriple=-391.727
+   v=(36, 40, 37, 39) box=sing 0000: dev=+5.139e-03 pair-part=+5.693e-05 R=+5.082e-03 R*minTriple=+264.007
+   v=(36, 40, 37, 39) box=sing resid: dev=+5.139e-03 pair-part=+5.693e-05 R=+5.082e-03 R*minTriple=+264.007
+   v=(50, 54, 44, 46) box=miss^4: dev=-1.066e-02 pair-part=+5.488e-04 R=-1.121e-02 R*minTriple=-1134.702
+   v=(50, 54, 44, 46) box=sing 0000: dev=+4.875e-03 pair-part=+1.524e-05 R=+4.859e-03 R*minTriple=+491.758
+   v=(50, 54, 44, 46) box=sing resid: dev=+4.875e-03 pair-part=+1.524e-05 R=+4.859e-03 R*minTriple=+491.758
+   v=(8, 19, 23, 32) box=miss^4: dev=+7.217e-03 pair-part=+1.231e-02 R=-5.089e-03 R*minTriple=-17.793
+   v=(8, 19, 23, 32) box=sing 0000: dev=+4.048e-03 pair-part=+3.419e-04 R=+3.706e-03 R*minTriple=+12.956
+   v=(8, 19, 23, 32) box=sing resid: dev=+4.048e-03 pair-part=+3.419e-04 R=+3.706e-03 R*minTriple=+12.956
+   v=(15, 26, 30, 39) box=miss^4: dev=+5.986e-02 pair-part=+5.913e-02 R=+7.294e-04 R*minTriple=+8.534
+   v=(15, 26, 30, 39) box=sing 0000: dev=+3.247e-03 pair-part=+1.642e-03 R=+1.604e-03 R*minTriple=+18.767
+   v=(15, 26, 30, 39) box=sing resid: dev=+3.247e-03 pair-part=+1.642e-03 R=+1.604e-03 R*minTriple=+18.767
+   v=(22, 40, 37, 46) box=miss^4: dev=-4.392e-03 pair-part=+8.789e-04 R=-5.270e-03 R*minTriple=-171.606
+   v=(22, 40, 37, 46) box=sing 0000: dev=+2.689e-03 pair-part=+2.441e-05 R=+2.665e-03 R*minTriple=+86.762
+   v=(22, 40, 37, 46) box=sing resid: dev=+2.689e-03 pair-part=+2.441e-05 R=+2.665e-03 R*minTriple=+86.762
+-- control(1,2,3,4)
+   v=(8, 9, 10, 11) box=miss^4: dev=-1.402e-02 pair-part=+1.102e-02 R=-2.504e-02 R*minTriple=-18.026
+   v=(8, 9, 10, 11) box=sing 0000: dev=+1.257e-02 pair-part=+3.061e-04 R=+1.226e-02 R*minTriple=+8.830
+   v=(8, 9, 10, 11) box=sing resid: dev=-4.165e-04 pair-part=-1.703e-04 R=-2.462e-04 R*minTriple=-0.177
+   v=(15, 16, 17, 18) box=miss^4: dev=-1.148e-02 pair-part=+4.970e-03 R=-1.645e-02 R*minTriple=-67.130
+   v=(15, 16, 17, 18) box=sing 0000: dev=+7.520e-03 pair-part=+1.380e-04 R=+7.382e-03 R*minTriple=+30.118
+   v=(15, 16, 17, 18) box=sing resid: dev=-4.165e-04 pair-part=+6.445e-05 R=-4.809e-04 R*minTriple=-1.962
+   v=(29, 30, 31, 32) box=miss^4: dev=-1.583e-02 pair-part=+7.787e-04 R=-1.661e-02 R*minTriple=-447.924
+   v=(29, 30, 31, 32) box=sing 0000: dev=+6.973e-03 pair-part=+2.163e-05 R=+6.951e-03 R*minTriple=+187.469
+   v=(29, 30, 31, 32) box=sing resid: dev=-4.165e-04 pair-part=-4.922e-08 R=-4.164e-04 R*minTriple=-11.231
+-- control(1,1,1,1)
+   v=(8, 15, 22, 29) box=miss^4: dev=-1.414e-02 pair-part=+5.847e-03 R=-1.999e-02 R*minTriple=-52.778
+   v=(8, 15, 22, 29) box=sing 0000: dev=+9.436e-03 pair-part=+1.624e-04 R=+9.273e-03 R*minTriple=+24.482
+   v=(8, 15, 22, 29) box=sing resid: dev=-4.165e-04 pair-part=-9.333e-05 R=-3.232e-04 R*minTriple=-0.853
+   v=(15, 22, 29, 36) box=miss^4: dev=-1.242e-02 pair-part=+4.114e-03 R=-1.654e-02 R*minTriple=-158.259
+   v=(15, 22, 29, 36) box=sing 0000: dev=+7.520e-03 pair-part=+1.143e-04 R=+7.406e-03 R*minTriple=+70.873
+   v=(15, 22, 29, 36) box=sing resid: dev=-4.165e-04 pair-part=-1.378e-06 R=-4.151e-04 R*minTriple=-3.973
+done
