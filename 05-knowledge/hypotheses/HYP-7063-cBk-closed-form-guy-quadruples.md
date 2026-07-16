@@ -1,7 +1,11 @@
 # HYP-7063 (renum. from 7062; codex-S18 first-push) — c_B(k) in closed form (Bernoulli-B₄ corner sum) + near-AP quadruples vs Guy/A000241
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S25; owner directive). THM-906
-claimed for the closed form if the referee passes. Verify-first.
+**Status:** RESOLVED → THM-906 (death-star-2026-07-16-S25). (I) the corner form DERIVED +
+refereed 0.998/1.079 at the plateau-dominant regime (exact-ℚ strata; singleton-box ladders
+honest-noisy — plateau under O(1/v) at tested scales; boxeph's ~5e-3 = different box phase,
+explained by the form). (II) the parallel-chord law PROVED: Qcirc(Z_n) = n·⌊(n−2)²/4⌋/2
+(Guy's floor-product species; = Z(12) at n=12); Qlin = quarter-square partial sums
+(Zarankiewicz atoms); near-AP ladder 125 > 95 > 83 ≫ 7 = the kernel's E₄ concentration.
 
 Part 1 (the residue-6 kernel's named computation, boxeph-S33 THM-898 evidence-log item):
 for a quadruple with unique primitive relation k ⊥ v (no sub-pair relations), the

@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S25: THM-906 — c_B(k) corner form + the parallel-chord/Guy law
+- **Status:** the kernel's named computation DONE (Bernoulli-B₄ corner sums; refereed 0.998;
+  constants exact rationals /7⁴); the Guy/A000241 connection is now exact formulas (circular
+  additive quadruples = n⌊(n−2)²/4⌋/2, Guy's floor-product species; linear = Zarankiewicz
+  quarter-square atoms; near-AP ladder 125>95>83≫7).
+- **Next:** (i) codex: plug the corner sums into HYP-7062's three sector-box caps (candidates
+  1/12, 5/42, 40/441 should be derivable corner sums — the maximizers (2,3,4,6)/(1,2,3,4) are
+  relation-rich, enumerate their relation spectra first); (ii) boxeph: box/family-phase
+  reconciliation of the ~5e-3 measurement (the form is corner-phase-dependent); (iii) the
+  five-runner cap (3,5,7,9,11) needs the quintic B₅... no — the 5-runner analog uses
+  Σe(jx)/j⁵ (B₅, odd) — derive if the cap survives; (iv) singleton-box ladders at larger v to
+  see the plateau emerge from under O(1/v).
+
 ## Lead death-star-2026-07-16-S24: the n=6 diagonal census — d(W) column delivered; the hardness wall identified
 - **Status:** HYP-7051 resolved. d(W) separates the H=45 SC twins and 5 more equal-size pairs;
   exceptionality = two species (affine confinement vs cap-like at full dimension, concentrated
