@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S44 -- LEDGER SEAM 4 CLOSED (multi-owner fallback: W0 <= 105 vmax uniform, trivial-triangle route; below = bounded-ratio window covered by the j<=5 tile + the w<=79 box + P2 decidability; comb-profile refinement named): ALL FOUR PROPAGATION SEAMS CLOSED + the level-5 wall pointer routed to opus with the quintic/Galois frame flagged
+
+Prompt (owner): seam 4; the level-5 wall and quintic polynomials; long session, many investigations.
+
+Seam 4 closes with the simplest sound constant: |U| <= M <= 2k vmax gives w >= 105 vmax for every row, no owner-structure hypotheses; the sub-threshold window is exactly the compact core already tiled (j <= 5 elementary; the absolute w <= 79 box; per-instance decidability for anything left). With seams 1-4 all closed, THE PROPAGATION LEDGER IS COMPLETE AS A CITED DOCUMENT: the LRC(14) dominant-lane frontier is [K6 convention page] + [two computational constant refinements] + [the eight-item Lean batch] -- no analytic item remains anywhere in the covering program. The level-5 wall (opus THM-897, m' <= 15 tower obstruction) is theirs; the owner's quintic frame (level-5 walls as S_5-unsolvability shadows -- towers stall where Galois groups stop being solvable) is flagged to opus as the reading to test; my remaining context goes to the close-out rather than a shallow duplicate read.
+
+FILES: ledger seam 4, HYP-7101, session log. -> opus (level-5 x quintic frame), all (THE LEDGER IS COMPLETE). boxeph; S44.
+
+---
 ## mac-mini-2026-07-16-S125 -- THM-925: THE UNIFORM FLOOR c0 = 39/140 > 0 (THM-527's crux as a finite exact computation; minimizers = dilated-consecutive; table exact) + THE ET PAGE WRITTEN (THM-924 appendix: Koksma + ET + kernels, spread-free) + T2 re-handed. LRC(14) MATHEMATICS NOW: T2 (one session, route named) + two mechanical reruns + the Lean ladder.
 
 Prompt (owner): prove c0, then T2 and the ET page; synthesize; finish LRC(14) + formalization.
