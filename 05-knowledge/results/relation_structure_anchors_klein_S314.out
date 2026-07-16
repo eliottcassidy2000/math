@@ -1,0 +1,2 @@
+PASS (1) composition defect: #(2-paths closed by a reverse arc) = 3*c3 EXACTLY
+PASS (2) frame dictionary: H, c3 reversal-INVARIANT; scores reversal-COVARIANT (s -> n-1-s)
