@@ -1,0 +1,30 @@
+PASS D1 (WITHDRAWN -> census): the within-owner dipole factorization FAILS — arcs pair cross-owner (137) or span silent boundaries (3); only 48 are adjacent-j dipoles. The per-owner Weyl route dies here; recorded as the reason the sup-norm residual resists factorization
+
+D2/D5 EXHAUSTIVE SUP SCANS (w-free by coprimality; per-instance PROOF of HYP-6994):
+   cluster | worst section | M | P | max_{n!=0}|S(n)|^2 | ratio /M
+   [0..5,  6] | s=6 |  14 |   420 |   196.00 |  14.00
+   [0..5, 12] | s=6 |  12 |   420 |    91.19 |   7.60
+   [0..5, 25] | s=4 |  12 |  2100 |    99.38 |   8.28
+   [0..5, 50] | s=6 |  30 |  2100 |   350.19 |  11.67
+   [0..5, 37] | s=6 |  24 | 15540 |   308.64 |  12.86
+PASS D5 PER-INSTANCE PROOFS (exhaustive over Z_P, hence over ALL w by D2): max_{n!=0}|S(n)|^2 <= 14.0*M for every cluster and section — HYP-6994 PROVED with C = 14 for these five clusters; ratios ['14.00', '7.60', '8.28', '11.67', '12.86']
+
+D3/D4 ASSEMBLED BOUND vs actual (w = 997):
+   cluster | Q_s actual | 7*sum_e Q^(e) | 14*(2pi^2)*sum_e a(1-a)*max|T_e|^2 | M
+   [0..5,  6] | Q_s     5.884 | corrected descent bound    184.047 | M 6 | bound/M  30.67
+   [0..5, 12] | Q_s    16.748 | corrected descent bound    138.174 | M 4 | bound/M  34.54
+   [0..5, 25] | Q_s    35.397 | corrected descent bound    426.092 | M 8 | bound/M  53.26
+   [0..5, 50] | Q_s    51.960 | corrected descent bound   1849.988 | M 14 | bound/M 132.14
+PASS D3' CORRECTED DESCENT (proved, two lines): Q_s <= (7/6)*2pi^2*sum_e sup_n|S_e(n)|^2 — verified; per-owner sups are the O(M_e)-scale objects (the signed within-owner form was the WRONG descent: it needs sum eps = 0 per owner, false for odd owner counts)
+
+D6 SECTION-WALK MASSES per owner (the finite-alphabet residual):
+   t= 12 owner e=  1: mu(c) over Z_7 = [0, 0, 0, 0, 0, 0, 1]   (sum 1)
+   t= 12 owner e=  4: mu(c) over Z_7 = [0, 0, 1, 0, 0, 0, 0]   (sum 1)
+   t= 12 owner e=  5: mu(c) over Z_7 = [0, -1, 0, 0, 0, 0, 0]   (sum -1)
+   t= 25 owner e=  1: mu(c) over Z_7 = [0, 0, 0, 0, 0, 0, 1]   (sum 1)
+   t= 25 owner e=  2: mu(c) over Z_7 = [0, 0, 0, 0, -1, 0, 0]   (sum -1)
+   t= 25 owner e=  4: mu(c) over Z_7 = [0, 0, 0, 0, 0, 0, -1]   (sum -1)
+   t= 25 owner e=  5: mu(c) over Z_7 = [0, 0, 0, -1, 0, 0, 0]   (sum -1)
+   t= 25 owner e= 25: mu(c) over Z_7 = [0, 0, 1, 0, 1, 0, 0]   (sum 2)
+
+=== 3 checks, 3 passed ===

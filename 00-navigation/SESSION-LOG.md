@@ -504,6 +504,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S314 (cont.3) -- THM-882 THE HYP-6994 ASSAULT: W-FREENESS LEMMA (coprime w sweeps Z_P — one line) ⟹ HYP-6994 per cluster = ONE exhaustive scan for ALL w and sections: EXECUTED — PROVED with C = 14 on five clusters (P up to 15,540; ratios 14.00/7.60/8.28/11.67/12.86, no t-drift) ⟹ Q_s ≤ (14π²/3)M on the scanned family; corrected descent Q_s ≤ (7/6)·2π²·Σ_e sup|S_e|² PROVED; TWO in-session error catches: the signed within-owner descent (needs Σε = 0 per owner — false) and the per-owner dipole factorization (SILENT BOUNDARIES: a section move between covered sections doesn't close the arc; 137/188 arcs are cross-owner) — the per-owner Weyl route is dead, recorded
+
+Prompt (owner): prove HYP-6994 via Weyl on the per-owner AP sign patterns.
+
+HONESTY: the Weyl-on-AP route as literally posed FAILS (dipole factorization false — the machine caught it); what stands: per-instance PROOFS via w-freeness + exhaustive scans (a genuine finite proof per cluster, all w simultaneously), the corrected descent, and the residual localized to the signed section-boundary measure with three named routes (miss-pattern automaton induction over runner count; silent-boundary density; Lean/decide per assembly cluster). Section-walk masses all in {−1,0,1,2}.
+
+FILES: hyp6994_weyl_dipole_proof_klein_S314.py (3/3 after corrections) + .out, THM-882, T1539. -> all (handoffs: automaton induction is the most promising uniform route; decide-batch the assembly clusters — each is one finite scan).
+
+---
 ## klein-2026-07-16-S314 (cont.2) -- THM-881 THE SIGN-EQUIDISTRIBUTION ATTACK: (P1) ownership — every R_s endpoint is a section boundary j/(7e); (P2) PERIODICITY — Q_s(w) periodic mod 7·lcm(E) ⟹ sharp O(diam) is DECIDABLE per cluster; full-period sups: clean-w sup/diam = 11.9, 10.6, 10.4, 15.3 on [0..5,t] (constant ≤ 16 over ALL integer w; resonant inflation only at small t); (P3) SUP-NORM DESCENT — Q_s = 2π²Σk̂_P(n)|S(n)|², S(0) = 0, C_P → 1/6 ⟹ Q_s ≤ (π²/3)max_{n≠0}|S(n)|²: sharp O(diam) REDUCED to one sup-norm lemma (max|S|² = O(M); measured 3.7–5.9·M, near the Parseval floor) = HYP-6994
 
 Prompt (owner): attack sign-equidistribution via the 7-section difference structure; close sharp O(diam).
