@@ -9801,3 +9801,15 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 3. Mertens-strength refinement: with M(y) << exp(-c sqrt(log y)), the diagonal terms of S(L)
    are O(1) -- the log lives entirely in the g-sum (common factors), i.e. in CORRELATIONS
    between divisor windows; quantify per-g for the grid question.
+
+## Lead mac-mini-2026-07-16-S113: post clock/sinc items
+**Source:** THM-878/879, HYP-7005. **Status:** open.
+1. The 6617 coincidence: lambda(F) = 6617/97020 vs THM-853(II)'s corridor margin 6617/2536380 --
+   same numerator; find the identity (flat bottom <-> corridor law as one rational object).
+2. The Moebius-sinc true growth: is sup_theta |sum mu(m) sin(theta/m)| ~ c log M (c ~ 8-9)?
+   Prove any o(M^eps) bound (Vaughan/van der Corput on the hyperbolic phase); the numeric target
+   is pinned. This is now THE k-uniform question.
+3. klein letter-convention merge: 46 vs 64 chamber words (S/M/L convention vs value-ranked);
+   one page to align, then the per-chamber deficit minima table becomes canon-ready.
+4. Q_s = O(r) at k = 13 is closed -- propagate: which THM-755/756 band constants improve with
+   the explicit sup table (6.37, 3.26, 2.76, ...)?

@@ -1,0 +1,45 @@
+(A) V-GRID SECOND MOMENT
+   L=13: S_generic=2.2932  S_v(v=10007)=2.2932 (emp 2.2909)  S_v(v=84)=18.5460 (emp 18.5447)  S_v(v=182)=12.2071 (emp 12.2058)
+   L=50: S_generic=3.0813  S_v(v=10007)=3.0813 (emp 3.0439)  S_v(v=84)=40.9933 (emp 40.9617)  S_v(v=182)=23.7852 (emp 23.7539)
+   L=200: S_generic=3.9202  S_v(v=10007)=3.9202 (emp 3.2658)  S_v(v=84)=59.2965 (emp 58.6905)  S_v(v=182)=44.7034 (emp 44.0955)
+   VERDICT: coprime v => S_v == S exactly (log persists); resonant v => AMPLIFIED (divisor collapse).
+   The (6/pi^2) log L is NOT absorbed by grid restriction; it must die in theta (part C).
+
+(B) THE CLOCK THEOREM  D(q) = 0 <=> q in {7, 13, 14}
+   flat set F: 12 intervals, total measure 6617/97020 = 0.06820; widest complement component W0 = 1/7 = 0.14286
+   q=7: whole primitive class flat: True
+   q=13: whole primitive class flat: True
+   q=14: whole primitive class flat: True
+   D(15) = 3/28 (klein: 3/28 at 15, 1/3 at 21, 72/91 at 91)
+   D(21) = 1/3 (klein: 3/28 at 15, 1/3 at 21, 72/91 at 91)
+   D(91) = 72/91 (klein: 3/28 at 15, 1/3 at 21, 72/91 at 91)
+   walk q <= 400000: exceptional q (entire class flat): NONE beyond {7,13,14}
+   tail lemma (q > 400000): need 2^omega(q)/phi(q) < W0/2 = 0.07143:
+      2^omega(q) <= 1.634 sqrt(q); phi(q) > q/(e^gamma lnln q + 3/lnln q) => ratio <= 1.634 sqrt(q) * 1.781 lnln(q)+.../q -> at q = 4e5: 0.01480 (< 0.07143: True)
+   Farey-14 chambers: 64; distinct wall-words: 64 (klein: 46); chambers inside F: 4
+
+(C) MOEBIUS-SINC
+   (i) k = 13 rigorous: sup_theta |M_d| <= squarefree-count(13/d); numeric sup (dense sweep):
+      d= 1: M0=13  trivial<=9  numeric sup ~ 6.3703  (Lipschitz 2.611, grid err <= 0.0026)
+      d= 2: M0= 6  trivial<=5  numeric sup ~ 3.2580  (Lipschitz 1.100, grid err <= 0.0011)
+      d= 3: M0= 4  trivial<=3  numeric sup ~ 2.7556  (Lipschitz 0.611, grid err <= 0.0006)
+      d= 4: M0= 3  trivial<=3  numeric sup ~ 2.7556  (Lipschitz 0.458, grid err <= 0.0005)
+      d= 5: M0= 2  trivial<=2  numeric sup ~ 1.7602  (Lipschitz 0.300, grid err <= 0.0003)
+      d= 6: M0= 2  trivial<=2  numeric sup ~ 1.7602  (Lipschitz 0.250, grid err <= 0.0003)
+      d= 7: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.143, grid err <= 0.0001)
+      d= 8: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.125, grid err <= 0.0001)
+      d= 9: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.111, grid err <= 0.0001)
+      d=10: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.100, grid err <= 0.0001)
+      d=11: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.091, grid err <= 0.0001)
+      d=12: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.083, grid err <= 0.0001)
+      d=13: M0= 1  trivial<=1  numeric sup ~ 1.0000  (Lipschitz 0.077, grid err <= 0.0001)
+   (ii) k-uniformity: sup_theta |sum_{m<=M} mu(m) sin(theta/m)| growth:
+      M=   25: sup ~ 7.942   sup/log M = 2.467   sup/sqrt(log M) = 4.426
+      M=   50: sup ~ 12.841   sup/log M = 3.283   sup/sqrt(log M) = 6.492
+      M=  100: sup ~ 19.100   sup/log M = 4.148   sup/sqrt(log M) = 8.901
+      M=  200: sup ~ 23.676   sup/log M = 4.469   sup/sqrt(log M) = 10.286
+      M=  400: sup ~ 49.271   sup/log M = 8.224   sup/sqrt(log M) = 20.129
+      M=  800: sup ~ 61.479   sup/log M = 9.197   sup/sqrt(log M) = 23.779
+      M= 1500: sup ~ 59.625   sup/log M = 8.153   sup/sqrt(log M) = 22.048
+
+DONE
