@@ -1,0 +1,71 @@
+THM-905 / HYP-7062: RESIDUE-SIX BOX-CERTIFICATE REDUCTION
+==============================================================================
+
+[1] Exact pointwise and occupation-expansion algebra
+PASS  462 weak sector compositions
+PASS  6H+6J+H6 dominates the negative K6 kernel
+PASS  pointwise certificate is sharp
+  minimum integer slack: 0
+PASS  occupation monomials equal their labelled box expansions
+
+[2] Exact primitive four-speed scan
+PASS  scanned four-speed union cap
+PASS  union cap is attained at (2,3,4,6)
+PASS  scanned singleton-six box cap
+PASS  singleton-six cap is attained at (1,2,3,4)
+  primitive tuples: 33919
+  nested union maxima: ((12, (Fraction(1, 12), (2, 3, 4, 6))), (20, (Fraction(1, 12), (2, 3, 4, 6))), (32, (Fraction(1, 12), (2, 3, 4, 6))))
+  nested singleton-six maxima: ((12, (Fraction(5, 42), (1, 2, 3, 4))), (20, (Fraction(5, 42), (1, 2, 3, 4))), (32, (Fraction(5, 42), (1, 2, 3, 4))))
+  top six union rows:
+    1/12 (2, 3, 4, 6) (((3, 4), (4, 5)), 9)
+    3/40 (2, 5, 8, 10) (((3, 2), (4, 2)), 4)
+    11/168 (1, 2, 3, 8) (((3, 4), (4, 2)), 6)
+    31/490 (1, 4, 5, 7) (((3, 4), (4, 3)), 7)
+    3/52 (3, 8, 12, 13) (((3, 1), (4, 3)), 4)
+    2/35 (4, 5, 6, 20) (((3, 2), (4, 1)), 3)
+  top six singleton-six rows:
+    5/42 (1, 2, 3, 4) (((3, 7), (4, 3)), 10)
+    1/14 (3, 4, 6, 12) (((3, 1), (4, 0)), 1)
+    1/14 (2, 3, 4, 6) (((3, 4), (4, 5)), 9)
+    1/14 (1, 2, 4, 8) (((3, 2), (4, 3)), 5)
+    27/392 (4, 7, 8, 16) (((3, 1), (4, 0)), 1)
+    6/91 (1, 2, 4, 13) (((3, 1), (4, 1)), 2)
+
+[3] Exact primitive five-speed scan
+PASS  scanned five-speed union cap
+PASS  five-speed cap is attained at (3,5,7,9,11)
+  primitive tuples: 41656
+  nested maxima: ((12, (Fraction(40, 441), (3, 5, 7, 9, 11))), (18, (Fraction(40, 441), (3, 5, 7, 9, 11))), (24, (Fraction(40, 441), (3, 5, 7, 9, 11))))
+  top six rows:
+    40/441 (3, 5, 7, 9, 11) (((3, 5), (4, 12), (5, 5)), 22)
+    436/5733 (1, 5, 7, 9, 13) (((3, 6), (4, 8), (5, 7)), 21)
+    116/1547 (1, 7, 11, 13, 17) (((3, 2), (4, 9), (5, 3)), 14)
+    11/147 (3, 5, 6, 7, 14) (((3, 2), (4, 10), (5, 5)), 17)
+    79/1078 (2, 5, 8, 11, 14) (((3, 5), (4, 8), (5, 5)), 18)
+    1/14 (3, 4, 5, 6, 7) (((3, 8), (4, 15), (5, 8)), 31)
+
+[4] Conditional residue-six closure
+  conditional 49(-F6) bound: 535/147
+  conditional -F6 bound: 535/7203
+  five-box cap actually sufficient after four-box caps: 34813/126000
+PASS  candidate caps imply -F6<0.097
+PASS  scanned five-box cap has ample slack
+
+[5] Tournament Analysis under target switch
+  vertices: ((1, 2, 3, 4), (1, 2, 3, 8), (1, 2, 4, 8), (1, 4, 5, 7), (2, 3, 4, 6), (2, 5, 8, 10), (3, 4, 6, 12))
+  observable: exact target-box mass difference
+  switch/gauge: exceptional complements -> singleton-six complement
+  exceptional-complement fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_triangles': 0, 'components': (((1, 2, 3, 4),), ((1, 2, 3, 8),), ((1, 2, 4, 8),), ((1, 4, 5, 7),), ((2, 3, 4, 6),), ((2, 5, 8, 10),), ((3, 4, 6, 12),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((2, 3, 4, 6), (2, 5, 8, 10), (1, 2, 3, 8), (1, 4, 5, 7), (1, 2, 3, 4), (3, 4, 6, 12), (1, 2, 4, 8))}
+  singleton-six-complement fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_triangles': 0, 'components': (((1, 2, 3, 4),), ((1, 2, 3, 8),), ((1, 2, 4, 8),), ((1, 4, 5, 7),), ((2, 3, 4, 6),), ((2, 5, 8, 10),), ((3, 4, 6, 12),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 2, 3, 4), (1, 2, 4, 8), (2, 3, 4, 6), (3, 4, 6, 12), (2, 5, 8, 10), (1, 2, 3, 8), (1, 4, 5, 7))}
+  target-switch edge flips: 12
+PASS  both scalar tournaments are transitive
+PASS  both have singleton SCCs
+  Assumption challenge: target boxes preserve (1) but erase the relation lattice;
+  the short-relation histogram is therefore retained as a non-tournament sidecar.
+
+VERDICT
+  PROVED: -K6 <= 6H+6J+H6 on every five-mover sector state.
+  PROVED: occupation expansion gives the exact three-box reduction.
+  FINITE-EXACT: four-speed caps through 32 and five-speed cap through 24.
+  CONDITIONAL: the three universal caps give -F6<=535/7203<0.097.
+  OPEN: prove the caps uniformly by Bernoulli relation-lattice stratification.

@@ -1,11 +1,11 @@
 ---
 id: THM-905
 title: THE RESIDUE-SIX BOX-CERTIFICATE REDUCTION — the remaining negative K6 kernel has the sharp pointwise majorant 6H+6J+H6, reducing the limiting sign to two four-runner and one five-runner sector-box inequalities
-status: CLAIMED / CHECKPOINT STUB — pointwise reduction proved exactly; finite scans identify sharp candidate box constants; universal box bounds remain open
+status: PROVED exact pointwise and occupation-expansion reduction; FINITE-EXACT on 33,919 primitive quadruples through 32 and 41,656 primitive quintuples through 24; universal box bounds open
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-903-reflection-frame-residue6]
 related: [THM-898-fourrunner-boxhit-relation-stratified, THM-899-lattice-law-boxhit-constants, THM-904, HYP-7062]
-verification: verifier and exact scan in progress
+verification: 04-computation/lrc14_residue6_box_certificate_codex_S18.py -> 05-knowledge/results/lrc14_residue6_box_certificate_codex_S18.out
 ---
 
 # THM-905 — the residue-six box-certificate reduction
@@ -56,7 +56,9 @@ Expanding the occupation monomials over mover subsets turns (1) into
   + sum_{|V|=4} P_V(S_c).                                      (2)
 ```
 
-The exact primitive scans currently support the three diameter-free bounds
+The dependency-free exact primitive scans cover all `33,919` primitive quadruples
+through largest speed `32` and all `41,656` primitive quintuples through largest speed
+`24`.  Their maxima support the three diameter-free bounds
 
 ```text
 P_V(S_a)+P_V(S_b)                         <= 1/12,
@@ -90,6 +92,6 @@ Hamiltonian path ranks finite obstructions but cannot itself prove the universal
 - [x] prove the sharp pointwise box certificate;
 - [x] derive the exact expectation reduction;
 - [x] identify finite-exact candidate constants;
-- [ ] bank the dependency-free verifier and extended scans;
+- [x] bank the dependency-free verifier and extended scans;
 - [ ] prove the three diameter-free box caps;
 - [ ] compose the finite-`t` wall remainder.

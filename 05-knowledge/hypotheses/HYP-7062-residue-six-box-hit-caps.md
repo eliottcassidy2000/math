@@ -17,9 +17,10 @@ P_E({0} union S_a)+P_E({0} union S_b) <= 40/441   (|E|=5).
 ```
 
 Together with `THM-905`, these imply `-F_6<=535/7203<0.097`, closing the sole
-limiting sign in `THM-891`.  The first two scanned maxima occur at compact primitive
-tuples `(2,3,4,6)` and `(1,2,3,4)` respectively.  The five-runner maximum found so far
-is `40/441` at `(3,5,7,9,11)`.
+limiting sign in `THM-891`.  The first two scanned maxima over all `33,919` primitive
+quadruples through largest speed `32` occur at compact tuples `(2,3,4,6)` and
+`(1,2,3,4)` respectively.  The five-runner maximum over all `41,656` primitive
+quintuples through largest speed `24` is `40/441` at `(3,5,7,9,11)`.
 
 The box carrier preserves the exceptional residue-six miss patterns but destroys the
 labels and the rest of the relation lattice.  Alternate vertices considered were
