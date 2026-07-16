@@ -1,0 +1,8 @@
+set                          |S| E     M          L=M-1/(n+1) saw-sum    maxtree  Y*min Y*med
+AP {1..13} (tight)            13  1469 1/14            0.0000    +0.6018   0.6684     0     0
+2AP-1 {1,3,..,25}             13  1469 1/2             0.4286    +0.1164   0.4156     0     0
+GAP 7x2 {1..7}u{10..16}       14  1546 2/17            0.0510    +0.6187   0.7151     0     0
+near-AP {21..32}              12  1156 21/53           0.3193    +0.0430   0.3036     0     1
+
+VERDICT: does any new coordinate order the matched-E twins correctly
+(AP tight vs 2AP-1 loose; near-AP tighter than GAP) where E cannot?

@@ -1,3 +1,30 @@
+## opus-2026-07-16-S321 -- THM-882: THE CYCLOTOMIC FACE (tight locus = roots of Phi_14 = Phi_7(-z): tight times = 1/2 + {+-1,+-2,+-3}/7 = the half-turn x the heptagon: THM-773 tokens and THM-873 mu6 spine are ONE object; Phi_6/Phi_7/Phi_14 triangulate the cyclotomic core) + THE COHERENCE SCALAR (saw(S) = Sum[rho - 4/169]: dilation-invariant, translation-VARIANT like L itself; separates S181's matched-E twins 5x: the S181 open call answered -- resonance geometry = (Freiman dim, saw) + Y*-spectrum) (HYP-6980)
+
+Prompt (owner): more coordinatizations; search past unrelated threads and merge them in.
+
+SURVEY: 2366 reflections; picked the additive-energy trilogy (S175/179/181), kps's
+OPUC/Blaschke loop-map dictionary, the adelic change-of-base thread. TWO MERGES EXECUTED:
+[Phi] the cyclotomic face: Phi_14 = Phi_7(-z) (verified): the tight locus IS minus the
+heptagon: the deck's F7 token machinery and the mu6 tight locus are one object; the 2x7
+factorization is geometric (half-turn x heptagon); with S52's 183 = Phi_6(14): the
+problem's cyclotomic core = {Phi_6, Phi_7, Phi_14}. [C] the coherence scalar: S181
+proved E necessary-not-sufficient and called for a 'coherence' coordinate that never
+got built; saw(S) = Sum_pairs[rho - 4/169] IS it: E is translation-INVARIANT (its exact
+blindness) while saw evaluates sum-positions mod 13 (translation-VARIANT, like L):
+exact battery: AP vs 2AP-1 (both E = 1469): saw +0.602 vs +0.116 (5x), maxtree 0.668
+vs 0.416; GAP stays unseparated by saw alone => Freiman dimension remains the second
+axis, exactly S181's 'dimension + coherence'. Note: S181's L-column was good-set
+measure, not maximin (normalization difference flagged; verdicts agree).
+
+NEXT (named): the OPUC/Blaschke coordinate (tight locus as degree-6 Blaschke zero-set;
+Verblunsky coefficients of the safe-set measure = wall coordinates -- kps's dictionary
+was ahead of its time); saw along the well atlas + signed selectors (is coherence the
+|(Z/14)* character|?); the Phi_7-transport of token walks through the half-turn (what
+does z -> -z do to THM-779 walks?).
+
+FILES: THM-882; resonance_coordinates .py/.out; HYP-6980. opus; S321.
+
+---
 ## kind-pasteur-2026-07-16-S128 (cont.29) -- THE COORDINATE ATLAS (HYP-6980): eleven coordinatizations in canon cataloged + six merge candidates from past threads, each with a named next computation; the rapidity/log linearization of the H-drift TESTED AND REFUTED (coeff spread [0.29, 0.56]; log/artanh worse) -- the H-drift awaits its coordinate; the atlas principle: every proved flow law rode a coordinate that made it linear or constant
 
 Prompt (owner): more ways to coordinatize; search past unrelated threads and merge.
