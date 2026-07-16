@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Solver-free exact verifier for THM-909 and HYP-7065.
+"""Solver-free exact verifier for THM-911 and HYP-7081.
 
 The seven-shift quotient of THM-908 leaves a finite function S_r on affine
 lines in F_7^5.  Zero-coordinate uniformity, three unordered pair-ray rows,
@@ -416,7 +416,7 @@ def check(label, condition):
 
 
 def main():
-    print("THM-909 / HYP-7065: PROJECTIVE PAIR-RAY COMPLETION")
+    print("THM-911 / HYP-7081: PROJECTIVE PAIR-RAY COMPLETION")
     print("=" * 78)
     digits, powers, signed_kernel, positive_majorant = state_arrays()
     census = ceiling_census(digits, powers, signed_kernel, positive_majorant)

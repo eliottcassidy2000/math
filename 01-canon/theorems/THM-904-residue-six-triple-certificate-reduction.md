@@ -2,7 +2,7 @@
 id: THM-904
 renumber_note: was THM-902 at the first checkpoint; renumbered after the same pull exposed mac-mini's independently chosen THM-902 and boxeph's earlier HYP-7052
 title: THE RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION — an explicit rational 84-weight observable on unordered three-runner sector states pointwise dominates the negative K6 miss kernel; the remaining limiting inequality is the single three-speed bound q(a,b,c) <= 47/100
-status: PROVED exact pointwise reduction; FINITE-EXACT primitive triple scan through 60; standalone universal relation-lattice sharpening open and bypassed for propagation by THM-910
+status: PROVED exact pointwise reduction; FINITE-EXACT primitive triple scan through 60; standalone universal relation-lattice sharpening open and bypassed for propagation by THM-911
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-899-lattice-law-boxhit-constants, THM-903-reflection-frame-residue6]
 related: [THM-898-fourrunner-boxhit-relation-stratified, THM-905, HYP-7024, HYP-7061]
@@ -13,7 +13,7 @@ verification: 04-computation/lrc14_residue6_triple_certificate_codex_S18.py -> 0
 
 This file reserves the exact theorem and filename before the long relation-tail audit.
 The proved finite algebra and the still-open analytic step are deliberately separated.
-`THM-910` independently closes the required limiting sign at `32/343`, so the open
+`THM-911` independently closes the required limiting sign at `32/343`, so the open
 three-speed inequality below is now a standalone sharpening rather than a blocker.
 
 Let `n=(n_0,...,n_6)` be the sector-count vector of the five moving runners and let

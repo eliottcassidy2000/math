@@ -1,17 +1,17 @@
 ---
 id: THM-905
 title: THE RESIDUE-SIX BOX-CERTIFICATE REDUCTION — the remaining negative K6 kernel has the sharp pointwise majorant 6H+6J+H6, reducing the limiting sign to two four-runner and one five-runner sector-box inequalities
-status: PROVED exact pointwise and occupation-expansion reduction; FINITE-EXACT on 33,919 primitive quadruples through 32 and 41,656 primitive quintuples through 24; standalone universal box bounds open and bypassed for propagation by THM-910
+status: PROVED exact pointwise and occupation-expansion reduction; FINITE-EXACT on 33,919 primitive quadruples through 32 and 41,656 primitive quintuples through 24; standalone universal box bounds open and bypassed for propagation by THM-911
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-903-reflection-frame-residue6]
-related: [THM-898-fourrunner-boxhit-relation-stratified, THM-899-lattice-law-boxhit-constants, THM-904, HYP-7062]
+related: [THM-898-fourrunner-boxhit-relation-stratified, THM-899-lattice-law-boxhit-constants, THM-904, THM-910, THM-911, HYP-7062]
 verification: 04-computation/lrc14_residue6_box_certificate_codex_S18.py -> 05-knowledge/results/lrc14_residue6_box_certificate_codex_S18.out
 ---
 
 # THM-905 — the residue-six box-certificate reduction
 
 This file claims the theorem number and records the proved algebra before the longer
-box-hit referee.  `THM-910` independently closes the required limiting sign at `32/343`,
+box-hit referee.  `THM-911` independently closes the required limiting sign at `32/343`,
 so the sharp universal box bounds remain an optional strengthening.  Let `n_s` be the
 number of the five moving runners in sector `s`, and
 put
