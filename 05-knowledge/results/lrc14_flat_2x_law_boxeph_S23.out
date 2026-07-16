@@ -1,0 +1,101 @@
+========================================================================
+PART 1 -- N = 13: exact censuses
+flat set: 12 intervals, measure 6617/97020  (claim 6617/97020: True)
+good set: 12 intervals, measure 6617/194040  (claim 6617/194040: True)
+H_12/91 == mG: True;   mF == 2*mG: True
+
+PART 2 -- per-cell verification on Farey-12 sites with i+j = 13
+sites found: 12 (expect 12)
+F intervals match prediction: 12/12; G match: 12/12; cl(G) c F: 12/12
+flat mass on i+j=13 sites: 6617/97020 == total 6617/97020: True  (=> zero 3-gap flat mass)
+
+PART 3 -- gap-word structure per cell (orbit of 13 points)
+two-gap cells: 12 (expect 12), word structure ok: 12/12
+three-gap cells: 34, alpha-beta adjacency present: 34/34
+
+PART 4 -- overhang anatomy: F = cl(G) + equal-measure overhang
+overhang measure = 6617/194040 == lambda(G) = 6617/194040: True
+per-site ratio |F cap cell| / |G cap cell| = max(i,j)/|j-i|:
+  all 12 sites: ratio == max(i,j)/|j-i|  [7, 8/3, 9/5, 10/7, 11/9, 12/11 x2]  OK
+
+========================================================================
+PART 5 -- the general-N law: flat = 2 x good iff N odd
+  N  n=N+1                   flat                   good      ratio  =2?
+  3      4                    1/2                    1/4          2  YES
+  4      5                    1/5                   2/15        3/2   no
+  5      6                   5/18                   5/36          2  YES
+  6      7                   1/14                   2/35        5/4   no
+  7      8                   7/40                   7/80          2  YES
+  8      9                   2/27                 44/945      35/22   no
+  9     10                 69/700                69/1400          2  YES
+ 10     11                  5/132                 20/693      21/16   no
+ 11     12               671/7560              671/15120          2  YES
+ 12     13                   2/65                92/5005      77/46   no
+ 13     14             6617/97020            6617/194040          2  YES
+ 14     15                  7/300             1666/96525   1287/952   no
+ 15     16             1205/32032             1205/64064          2  YES
+ 16     17                44/1785           11384/765765  4719/2846   no
+ 17     18         143327/3243240         143327/6486480          2  YES
+
+========================================================================
+PART 6 -- the unit-group harmonic identities (the mechanism)
+odd N: sum_{i unit < N/2} 1/(i(N-2i)) == 2 sum_{i unit < N/2} 1/(i(N-i)) == 2 H-mass
+  N= 3 (odd ): LHS=                 1 RHS=                 1 equal=True
+  N= 4 (EVEN): LHS=               1/2 RHS=               2/3 equal=False
+  N= 5 (odd ): LHS=               5/6 RHS=               5/6 equal=True
+  N= 6 (EVEN): LHS=               1/4 RHS=               2/5 equal=False
+  N= 7 (odd ): LHS=              7/10 RHS=              7/10 equal=True
+  N= 8 (EVEN): LHS=               1/3 RHS=            44/105 equal=False
+  N= 9 (odd ): LHS=            69/140 RHS=            69/140 equal=True
+  N=10 (EVEN): LHS=              5/24 RHS=             20/63 equal=False
+  N=11 (odd ): LHS=          671/1260 RHS=          671/1260 equal=True
+  N=12 (EVEN): LHS=               1/5 RHS=            92/385 equal=False
+  N=13 (odd ): LHS=        6617/13860 RHS=        6617/13860 equal=True
+  N=14 (EVEN): LHS=              7/40 RHS=         1666/6435 equal=False
+  N=15 (odd ): LHS=         1205/4004 RHS=         1205/4004 equal=True
+  N=16 (EVEN): LHS=            22/105 RHS=       11384/45045 equal=False
+  N=17 (odd ): LHS=     143327/360360 RHS=     143327/360360 equal=True
+  N=18 (EVEN): LHS=            69/560 RHS=       14838/85085 equal=False
+  N=19 (odd ): LHS=    751279/2042040 RHS=    751279/2042040 equal=True
+  N=20 (EVEN): LHS=             10/63 RHS=    543160/2909907 equal=False
+  N=21 (odd ): LHS=    451647/1847560 RHS=    451647/1847560 equal=True
+  N=22 (EVEN): LHS=          671/5040 RHS=    251306/1322685 equal=False
+  N=23 (odd ): LHS=    830139/2586584 RHS=    830139/2586584 equal=True
+  N=24 (EVEN): LHS=            46/385 RHS=  5160952/37182145 equal=False
+  N=25 (odd ): LHS= 15987925/59491432 RHS= 15987925/59491432 equal=True
+
+========================================================================
+PART 7 -- independent per-site re-derivation of THM-819's prime criterion
+(THM-819, kps cont.9, already proved this: m({1..k};1/(k+2)) =
+ (2/((k+1)(k+2))) sum_{units} 1/u; = H_k/C(k+2,2) iff k+1 prime.
+ This part re-verifies it through n = 28 via the Farey-cell route,
+ including the odd-composite-coprime-to-6 station n = 26.)
+per-site closed form (all N): m({1..N-1}; 1/(N+1)) =
+    (2/(N+1)) * sum_{i in (Z/N)^*, i<N/2} 1/(i(N-i))
+  n= 4: m=                 1/4 closed-form OK; harmonic law HOLDS (N=3 prime)
+  n= 5: m=                2/15 closed-form OK; 
+  n= 6: m=                5/36 closed-form OK; harmonic law HOLDS (N=5 prime)
+  n= 7: m=                2/35 closed-form OK; 
+  n= 8: m=                7/80 closed-form OK; harmonic law HOLDS (N=7 prime)
+  n= 9: m=              44/945 closed-form OK; 
+  n=10: m=             69/1400 closed-form OK; harmonic law fails (N=9 composite)
+  n=11: m=              20/693 closed-form OK; 
+  n=12: m=           671/15120 closed-form OK; harmonic law HOLDS (N=11 prime)
+  n=13: m=             92/5005 closed-form OK; 
+  n=14: m=         6617/194040 closed-form OK; harmonic law HOLDS (N=13 prime)
+  n=15: m=          1666/96525 closed-form OK; 
+  n=16: m=          1205/64064 closed-form OK; harmonic law fails (N=15 composite)
+  n=17: m=        11384/765765 closed-form OK; 
+  n=18: m=      143327/6486480 closed-form OK; harmonic law HOLDS (N=17 prime)
+  n=19: m=       14838/1616615 closed-form OK; 
+  n=20: m=     751279/40840800 closed-form OK; harmonic law HOLDS (N=19 prime)
+  n=21: m=     543160/61108047 closed-form OK; 
+  n=22: m=     451647/40646320 closed-form OK; harmonic law fails (N=21 composite)
+  n=23: m=     251306/30421755 closed-form OK; 
+  n=24: m=     276713/20692672 closed-form OK; harmonic law HOLDS (N=23 prime)
+  n=25: m=   5160952/929553625 closed-form OK; 
+  n=26: m= 15987925/1546777232 closed-form OK; harmonic law fails (N=25 composite) << the predicted HYP-6885 counterexample (26 = 2 mod 6)
+  n=27: m= 21656804/3475100475 closed-form OK; 
+  n=28: m=324830637/41644002400 closed-form OK; harmonic law fails (N=27 composite)
+
+ALL CHECKS PASSED
