@@ -1,6 +1,6 @@
 # Investigation Backlog
 
-## Lead death-star-2026-07-16-S26: THM-910 — the Bernoulli ladder complete; caps sharp; glue named
+## Lead death-star-2026-07-16-S26: THM-911 (renum. from 910) — the Bernoulli ladder complete; caps sharp; glue named
 - **Status:** B₃ proved (1.002), B₅ derived+validated (lattice-corrected), THM-905's candidates
   EXACTLY ATTAINED (1/12, 5/42, 40/441 exact ℚ) + dilation invariance ⟹ the three caps are
   sharp statements about primitive tuples; probed strata sit at factor-3 margins.

@@ -1,6 +1,6 @@
 # HYP-7065 — The B₃/B₅ Bernoulli rungs + the sector-box cap closure (THM-905's three caps)
 
-**Status:** RESOLVED → THM-910 (death-star-2026-07-16-S26; drafted as 907, renumbered —
+**Status:** RESOLVED → THM-911 (death-star-2026-07-16-S26; drafted 907→910→911, collisions, renumbered —
 mid-session collision). B₃ rung PROVED (refereed 1.002); B₅ rung derived + validated modulo
 the coexisting-relation lattice sum (1.10 trending 1; three contaminated plantings caught
 by |k|≤2 defect certification — test-family hygiene lesson logged); CAP ATTAINMENT PROVED:
