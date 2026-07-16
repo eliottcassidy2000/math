@@ -61,17 +61,50 @@ S₂(x) = Σ_{i<j} max(0, 1/7 − ‖(e_i−e_j)x‖).
 convex decreasing kernel, so by Fejes Tóth the regular 13-gon minimizes it:
 min = 13·(1/7 − 1/13) = **6/7 exactly, for ALL 13-point configurations** (4000 exact random
 trials; the tight AP attains it at x = 1/7). The universal pair-energy minimum EQUALS the
-covering budget. Hence **pair data can never certify loneliness** — the repo's second-moment
+covering budget. **CORRECTION (cont.5, MISTAKE-152):** the equality set is
+NOT just the regular 13-gon — tent is convex but not strictly, and the floor has a FLAT
+BOTTOM: S₂ = 6/7 exactly on the whole polytope P = {gaps: g_i ≤ 1/7, g_i + g_{i+1} ≥ 1/7}
+(adjacent-only overlap; 300 exact random points verified), which is precisely the
+maxmult ≤ 2 covering class of (RIGIDITY). Three characterizations coincide: S₂ = 6/7 ⟺
+spectrum (1/7, 6/7) ⟺ g ∈ P. The covering adversary's playground is this polytope; the
+covering case = (Kronecker line of the cluster) ∩ P. Hence **pair data can never certify loneliness** — the repo's second-moment
 wall ("unsigned OffLine bounds provably fail", the transform blindness memory), now pointwise,
 exact, and attributed: it is Fejes Tóth exactness. The minimal certifying moment order is 3.
 **(M3)** S₂ − overlap excess = Σ C(k−1,2)μ_k, so for covering x: **S₂ − 6/7 = the ≥3-fold
 mass** — one number measuring distance-from-rigidity both configurationally (FT deficit) and
 spectrally (champion-stack mass). The d = 3 pincer should be built on (M3), not on raw S₃.
 
+## Addendum 2 (cont.5): Ramanujan primitive mean and the wall-word chambers
+
+**(RAM)** The primitive-class average A(q) = (1/φ(q))Σ_{a prim} S₂(a/q) is an EXACT
+gcd-profile functional: A(q) = Σ_{i<j} W(q/gcd(d_ij,q))/φ(·), W(q') = Σ_{e|q'} μ(q'/e)V(e),
+V(e) = Σ_{j mod e} tent(j/e) (verified exact q ≤ 97). Classical truncation-mean estimate:
+|V(e) − e/49| ≤ 2/7, so W/φ → 1/49 (the random baseline) with divisor-bounded error.
+**For the tight AP, the mean FT-deficit D(q) = A(q) − 6/7 ≥ 0 vanishes EXACTLY at the clock
+moduli q ∈ {7, 13, 14}** — the entire primitive class sits on the flat bottom there — and is
+strictly positive at every other computed q (3/28 at 15, 1/3 at 21, …, 72/91 at 91):
+a Ramanujan-sum resonance meter over moduli.
+
+**(WORDS)** The three-distance gap word of {i·a/q} (the "mechanical wall-word"): negation acts
+as reversal (μ(−x) = μ(x): witnesses are ±pairs — certificates should live on the quotient,
+as in THM-870's Kakeya descent). **Numerator multiplication does NOT descend to words**
+(word(a) = word(b) ⇏ word(ma) = word(mb); explicit witnesses at q = 29, 41, 53, 101): the
+words are FAREY-14 CHAMBER invariants, not residue invariants — the alphabet saturates at
+**exactly 46 words for q > 182 = 13·14** (the narrowest chamber width 1/182; q = 101
+undersamples at 35). Residue symmetries (multiplication) and Farey/witness geometry (words)
+are cleanly separated by this test — the two sides of the covering route, and the reason
+zero-coset methods and witness-geometry methods feel orthogonal: they ARE (only ±1 survives
+on both).
+
 ## Next steps (named)
 1. Characterize ALL covering x with maxC = 2 across admissible clusters (are they exactly the
    clock witnesses of the sieve? the 5 found are all q ∈ {7, 13, 14}).
 2. The deficit identities are decide-shaped exact rational statements — Lean batch candidate
    alongside LRCDiscreteBonferroni.
-3. d = 3 pincer: combine (S) at d = 3 with the 3-speed floor c₃ = 2/105 (THM-863 T3) to squeeze
-   the spectrum between second- and third-moment constraints on covering sets.
+3. d = 3 pincer: build on (M3) — for covering x, S₂ − 6/7 = the ≥3-fold mass; combine with
+   c₃ = 2/105 (THM-863 T3).
+4. The 46-chamber decomposition: per-chamber spectrum combinatorics is constant — a finite
+   case analysis of the AP covering behavior over chambers (transitions only at Farey-14
+   boundaries); generalize the chamber count to other clusters.
+5. D(q) = 0 ⟺ q ∈ {7, 13, 14}: prove from the gcd-functional (finite divisor check) — then
+   the clock moduli are CHARACTERIZED by the vanishing of the Ramanujan mean deficit.

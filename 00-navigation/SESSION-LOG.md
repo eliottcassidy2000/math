@@ -415,6 +415,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-15-S313 (cont.5) -- FT FLAT BOTTOM (correction: equality set = the polytope P = {g_i <= 1/7, g_i+g_{i+1} >= 1/7}, NOT just regular — MISTAKE logged; covering case = Kronecker line ∩ P) + RAMANUJAN PRIMITIVE MEAN (A(q) = exact gcd-profile functional; mean FT-deficit D(q) vanishes EXACTLY at clock moduli {7,13,14} — a Ramanujan-sum resonance meter; classical estimate |V(e) − e/49| <= 2/7) + WALL-WORDS ANSWER: numerator multiplication does NOT descend to the mechanical words (explicit witnesses); words are FAREY-14 CHAMBER invariants — alphabet saturates at EXACTLY 46 words for q > 182 = 13·14 (narrowest chamber 1/182); negation = reversal is the only residue symmetry surviving on words; residue side ⊥ Farey side except ±1
+
+Prompt (owner): FT deficit; rational witness pair under negation; Ramanujan truncation mean-square classical estimate; does numerator multiplication permute the mechanical wall-words?
+
+MECHANISMS: tent kernel convex-not-strict => flat bottom (uniqueness claims need strict convexity — instructive mistake); negation: mu(−x) = mu(x), word reversal (certificates on the ±quotient, the THM-870 descent again); Ramanujan: primitive tent-sums via Mobius over divisors, W/phi → 1/49 baseline divisor-bounded; wall-words: three-distance law verified everywhere (<= 3 gap values, largest = sum), word-collisions beyond ± from q = 27 (#words < phi/2), descent fails (q=29: {1,2,27} share a word, doubles don't), saturation 35@101 → 46@211=401=1009 with threshold exactly 13·14 = 182. 9/9 exact checks.
+
+FILES: ft_polytope_ramanujan_wallwords_klein_S313.py + .out, LEM-020 addendum 2 + correction, MISTAKES entry, HYP-6957, T1536. -> all (opens: prove D(q)=0 iff q in {7,13,14} by finite divisor check; the 46-chamber case analysis; chamber counts for general clusters; d=3 pincer on (M3)).
+
+---
 ## klein-2026-07-15-S313 (cont.4b) -- ADDENDUM: THE FEJES TOTH FLOOR — the pair criterion S2 < 6/7 is VACUOUS and its vacuity is a theorem: min over ALL 13-point configurations of the pair-overlap energy = 13(1/7 − 1/13) = 6/7 EXACTLY (Fejes Toth, convex decreasing kernel, regular minimizer) = the covering budget; the tight AP attains it at x = 1/7. Pair data can NEVER certify loneliness — the second-moment wall made pointwise, exact, and attributed. Minimal certifying moment order = 3; (M3) S2 − excess = ΣC(k−1,2)mu_k: for covering x, S2 − 6/7 IS the ≥3-fold champion-stack mass — build the d=3 pincer on (M3). 11/11 checks. FILES: same script/.out, LEM-020 addendum.
 
 ---

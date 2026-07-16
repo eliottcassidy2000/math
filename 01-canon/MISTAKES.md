@@ -4044,3 +4044,19 @@ The fake pattern was pure index shift: F(n+2) − F(n+1) = F(n) makes any off-by
 (the recurrence reproduces itself under shifts). Before narrating "the deficit looks like X",
 check the index against the exact GF — the GF referee catches in one line what eyeballing cannot.
 **Status:** corrected in the S109 draft + THM-868; no downstream theorem used the wrong line.
+
+## MISTAKE-152 — "Fejes Tóth equality iff regular" overclaim (klein-S313 cont.4b, corrected cont.5 same day)
+
+**What happened:** LEM-020's cont.4b addendum claimed the pair-energy floor S₂ ≥ 6/7 has
+equality "iff the 13 points are regular." FALSE: the tent kernel is convex but NOT strictly
+convex, and the equality set is the full 12-dimensional polytope P = {g_i ≤ 1/7,
+g_i + g_{i+1} ≥ 1/7} (adjacent-only overlap) — S₂ = 13/7 − Σg = 6/7 identically there.
+Caught next continuation by sampling P directly (300 exact points, all at 6/7).
+
+**Lesson:** for piecewise-linear/merely-convex kernels, energy minima have FLAT BOTTOMS;
+"unique minimizer" claims require strict convexity. Always sample the suspected equality
+set's neighborhood before claiming uniqueness. The flat bottom was the better theorem: the
+covering adversary's playground is the polytope, and covering analysis = Kronecker line ∩ P.
+
+**Affects:** LEM-020 addendum (corrected in place), reflection
+the-coverage-spectrum-one-grammar-four-instruments.md (statement softened by this entry).
