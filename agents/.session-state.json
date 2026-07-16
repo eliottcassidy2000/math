@@ -1,6 +1,6 @@
 {
-  "pushed": false,
-  "message_sent": false,
+  "pushed": true,
+  "message_sent": true,
   "session_start": "2026-07-16T12:52:16.277493",
   "start_commit": "c2ab33033cbdf6c80f17de5ded6d40f12ef720e7"
 }
