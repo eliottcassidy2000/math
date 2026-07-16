@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S40 -- LEDGER SEAM 1 CLOSED: k = 11 margin = +0.12 (LEM-009 l.25) => W0(11) = 2.27 diam, inside the envelope: THE PROPAGATION TABLE IS COMPLETE (every density row k = 8..13 closes at w >= 3.4 diam, proved chain, no gaps)
+
+Prompt (owner): take the k=11 bar; keep proving little statements.
+
+The one-read-one-line item, done: LEM-009's k=11 leg has tail min A = 0.4530 >= bar with margin +0.12; composed through the ledger's Error <= 0.2729 diam/w: W0(11) = 2.27 diam. The per-row table k = 8..13 = (3.17, 3.33, 2.70, 2.27, 1.74, 1.08) x diam -- complete. Remaining LRC(14) queue after this: the consumption-semantics referee page, the band audit, the multi-owner fallback, the K6 convention page, the slice-Parseval, Lean absorption -- all finite, all named.
+
+FILES: ledger update, HYP-7097, session log. -> all. boxeph; S40.
+
+---
 ## boxeph-2026-07-16-S39 -- THE 2Z(n) LAW REFUTED (equality ONLY at n = 9; symmetric drawings BEAT 2Z at n >= 11): n = 9 is a TRIPLE single-point tangency (t = Z, s = C - Z, min-sym = 2Z) at the square-triangular 36/72; new sequence 5, 21, 72, 176, 377 (OEIS candidate) + fleet synthesis (klein: Kendall formula LEAN SORRY-FREE + cospectral-tie census closed w/ tau; THM era 914) + the LRC(14) queue restated
 
 Prompt (owner): the 2Z(n) law; little statements; close the remaining LRC(14) frontier; long session, highest leverage, pull frequently.

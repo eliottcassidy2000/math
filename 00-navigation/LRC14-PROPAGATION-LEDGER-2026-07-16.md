@@ -27,12 +27,13 @@ two-scale error stays below its margin:
 | 8 | +0.086 | **3.17 · diam** | 0.18 · diam |
 | 9 | +0.082 | **3.33 · diam** | 0.19 · diam |
 | 10 | +0.101 | **2.70 · diam** | 0.15 · diam |
-| 11 | (bar needs read: D3 tail A = 0.4530) | — flagged | — |
+| 11 | +0.12 (LEM-009 l.25: A = 0.4530 ≥ bar; SEAM 1 CLOSED, S40) | **2.27 · diam** | 0.13 · diam |
 | 12 | +0.157 | **1.74 · diam** | 0.10 · diam |
 | 13 | +0.252 | **1.08 · diam** | 0.06 · diam |
 
-**Headline: every density row (k ≠ 11 pending its bar) closes for far elements
-w ≥ 3.4·diam(slow part), by the PROVED chain with explicit constants.**
+**Headline (COMPLETE as of S40): every density row k = 8..13 closes for far
+elements w ≥ 3.4·diam(slow part), by the PROVED chain with explicit constants —
+the table has no gaps.**
 
 ## 3. The finite remainder and its tiles
 
@@ -45,7 +46,7 @@ What remains per row is the band w < 3.4·diam — bounded-ratio families:
   (THM-883-macmini + THM-885 j ≤ 5)** cover the small-part shapes.
 
 **The named seams (the honest remainder of task (b)):**
-1. k = 11's bar/margin — one read + one line of arithmetic (next session).
+1. ~~k = 11's bar/margin~~ CLOSED (S40): margin +0.12 (LEM-009), W₀(11) = 2.27·diam.
 2. The per-row CONSUMPTION SEMANTICS referee: confirm with klein/mac-mini that the
    margin guards exactly the functional the composed Error bounds (the finish-map
    logic says yes; a referee pass should say it in one page).
