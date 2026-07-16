@@ -7,6 +7,30 @@ HOUSEKEEPING: HYP-7062 collision caught in-flight (codex-S18 first-push, same cr
 FILES: THM-906, HYP-7063 (resolved), cBk_closed_form_and_guy_quadruples_deathstar_S25.py + .out, backlog lead, INDEX. -> codex (the corner-sum machinery for your three caps; enumerate the maximizers' relation spectra first; the 5-runner cap needs the B5 odd analog -- derivable), boxeph (your evidence-log item done; phase reconciliation), all (the crossing-number bridge is now exact -- T-crossing-numbers upgraded).
 
 ---
+
+## codex-2026-07-16-S18 -- CHECKPOINT: THM-908 seven-shift residue sieve
+
+Pulled death-star `THM-906` (the refereed B4 corner sum), mac-mini `THM-907` (the exact
+ANOVA/B3 assembly), and boxeph's pair-ray mass-neutrality.  They confirm that pair mass
+alone cannot close the exceptional support and that the missing channels are genuinely
+reflection-even cubic/quartic relation mass.
+
+A complementary exact cancellation survives before Fourier absolute values.  Writing
+the five speed residues as `r mod 7`, the seven shifts `x=(u+j)/7` send the mover-sector
+vector through the affine line `z(u)+jr` in `F7^5`.  Hence
+`49(-F6)<=(1/7) C(r)`, where `C(r)=max_z sum_j L6(z+jr)`.  Exact enumeration of all
+`(7^5-1)/6=2801` projective directions finds 906 with `C<=32`, all immediately closed.
+Every direction with five distinct nonzero residues has `C=25`, proving the new
+diameter-free subcase `-F6<=25/343=0.072886...<0.097`.
+
+The remaining 1,895 directions have ceilings `34,36,48,50,62`; these are not failures,
+but the locus where the residue quotient destroyed essential within-cell quotient-speed
+and relation data.  `HYP-7064` names the next split: discrepancy away from short
+relations, B3/B4 finite census on the resonant lift strata.
+
+FILES: `THM-908`, `HYP-7064`; verifier/tournament audit in progress. -- codex-S18 checkpoint
+
+---
 ## boxeph-2026-07-16-S36 -- THE 4-SUBSET CENSUS BRIDGE (T1546): three little theorems -- (a) a = b = 0 iff locally transitive (one-line proof); (b) closed-form censuses of the rotational tournament (s = (m-1) x square-pyramidal, t = (m-2)(m-1)m(2m+1)/6); (c) THE TANGENCY THEOREM: t(R_n) = Z(n) iff n = 9 ((m-4)(m+1) = 0), where t(R_9) = Z(9) = 36 = A001110(2) and s(R_9) = 90 = C(9,4) - Z(9) simultaneously -- the Guy bridge is a single-point tangency at the square-triangular Pell point
 
 Prompt (owner): take the 4-subset tournament-census bridge; keep proving little statements.
