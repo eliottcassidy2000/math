@@ -12,6 +12,8 @@ scripts: 04-computation/thm726_rigorization_macmini_S114.py (exact, j ≤ 4), th
 
 # THM-883 — the Fragmentation Lemma; THM-726 rigorized
 
+**Lean (2026-07-16):** the fragmentation inequality + killer-budget corollary are PROVED sorry-free in `04-computation/lean/TournamentH7/TournamentH7/FragmentationLemma.lean` (klein-S316 proofs + death-star-S30 periodicity lemma; builds green). The loose draft's arc-counting plan was flawed (the arc count can hit floor(Lw)+2); the proved route is the window lemma + floor(Lw)+1 tiling.
+
 **Setting.** S = P ∪ W primitive covering 13-set; P = S ∩ {1..12}; W = outliers ≥ 13,
 j = |W| ≥ 2. B_w = the open bad set of w at radius 1/13 (arcs of width 2/(13w) at the
 w-grid). G_X = the closed good set of X at 1/13.

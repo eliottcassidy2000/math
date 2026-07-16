@@ -67,3 +67,25 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 6. K(G) for the other odd-relevant groups (Z_q⋊Z₃ multiplier groups; the 16 sedenion classes as a
    "direction set"?).
 7. The 16 sedenion classes: full invariant table (c4 partially separates: 1105..1428).
+
+## 8. Spectral columns (klein-S315/S316: census, reciprocity, coning)
+
+**What the spectra see (exact censuses):**
+
+| n | classes | cpA-tie groups (classes in ties) | distinct cpA | distinct cpK |
+|---|---------|----------------------------------|--------------|--------------|
+| 6 | 56      | (census S315c2)                  | —            | 6            |
+| 7 | 456     | 116 (404 = 89%)                  | 152          | 11           |
+| 8 | 6880    | 1460 (6817 = 99.1%)              | 1523         | 50           |
+
+- **cpK is a FUNCTION of cpA** (THM-924: cpK(y) = 2^{n−1}[cpA((y−1)/2) + (−1)^n cpA((−y−1)/2)]);
+  walk moments and skew d-moments are cpA-determined too (walk reciprocity det(zI−A+J) = (−1)^n cpA(−1−z)).
+  Distinct-cpK sequence **1, 2, 2, 6, 11, 50** (n=3..8) = the symmetrization collapse about Re z = −1/2. New sequence.
+- **Splitter ranking at n=7** (S315c2): τ_in 116/116 > cpL 111 > scores 85 > H 47 > |Aut| 1 > cpK 0 (now a theorem).
+- **Invisibility = the cone stratum** (THM-918 construction + THM-925 completeness): at n=8, the
+  one-eyed panel (cpA,cpL,H,τ_in) has EXACTLY 27 invisible pairs = the manufactured cones; the
+  two-eyed panel (+τ_out) has EXACTLY 4 = the double-blind four (H=23,29,31,43; all with sink AND
+  source; τ_in = τ_out on them). Zero wild (non-cone) invisibles at n=8. Tower: invisible pairs at
+  every n ≥ 8 (cone transform laws; sink = black hole crushes τ_in to det(L+I), source = mirror scales by n).
+- **Open:** n=9 completeness (first wild pair?); OEIS submission for 1,2,2,6,11,50; per-level
+  spectral-tie distribution vs the H-gradient.

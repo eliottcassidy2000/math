@@ -1,30 +1,32 @@
-<<<<<<< HEAD
-/- FragmentationLemma.lean — mac-mini-2026-07-16-S123 (draft), restructured by
-   death-star-2026-07-16-S30 with the PERIODICITY architecture.
+/- FragmentationLemma.lean -- mac-mini-2026-07-16-S123 (statements),
+   death-star-2026-07-16-S30 (periodicity lemma + independent catch of the draft plan's
+   flaw), klein-2026-07-16-S316 (complete proofs; concurrent-edit merge).
 
-   THM-883's core counting inequality. IMPORTANT CORRECTION to the draft's proof plan:
-   the arc-COUNTING route (step 1 of the draft) is subtly flawed — the number of arcs
-   meeting I can reach ⌊Lw⌋ + 2 (two partial edge arcs), overshooting the claimed
-   constant (L·w + 1)·(2λ/w). The correct route is PERIODIC WINDOWING:
-     (A) badArcs is (1/w)-periodic (index shift);
-     (B) any window of length ≤ 1/w meets badArcs in measure ≤ 2λ/w
-         (translate into one period; the period's bad measure is exactly 2λ/w for λ ≤ ½);
-     (C) chop I into ⌈wL⌉ ≤ wL + 1 windows and add.
-   For λ ≥ ½ the target bound is trivial (vol ≤ L ≤ 2λL ≤ RHS).
-   The two remaining sorries are (B1) the periodic-window bound and (C1) the chop-and-sum;
-   both are localized with exact Mathlib tool pointers. -/
+   THM-883's core counting inequality, the first Lean target of the covering program.
+   Statement: an arc-grid of modulus w >= 1 and radius lam meets an interval I
+   of length L in measure at most (L*w + 1) * (2*lam/w).
+
+   NOTE (both sessions independently): the draft's arc-COUNTING route is subtly flawed --
+   the number of arcs meeting I can reach floor(L*w) + 2 (two partial edge arcs), which
+   overshoots the claimed constant.  The correct route is windowing:
+
+   WINDOW LEMMA -- badArcs meets any half-open window of length 1/w in measure at most
+   2*lam/w (split the window at the unique grid-cell boundary inside it; each piece sees
+   only one arc, and the two clipped arcs are complementary translates of a single arc,
+   so their lengths sum to at most one full arc).  Tile [x, x+L] by floor(L*w) + 1
+   windows.  The case lam > 1/2 is trivial (the bound exceeds L).  No sorries. -/
 import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue.EqHaar
 
-open MeasureTheory Set
+open MeasureTheory
 
 namespace LRC14
 
-/-- The bad arc set of modulus `w` at radius `lam`, lifted to ℝ. -/
+/-- The bad arc set of modulus `w` at radius `lam`, within the unit circle lifted to ℝ. -/
 def badArcs (w : ℕ) (lam : ℝ) : Set ℝ :=
   ⋃ a : ℤ, Set.Ioo ((a : ℝ) / w - lam / w) ((a : ℝ) / w + lam / w)
 
-/-- (A) `badArcs` is `(1/w)`-periodic: translation by `1/w` permutes the arcs. -/
+/-- `badArcs` is `(1/w)`-periodic: translation by `1/w` permutes the arcs.
+    (death-star-S30; API lemma, not needed by the proofs below.) -/
 theorem badArcs_periodic (w : ℕ) (hw : 1 ≤ w) (lam : ℝ) :
     (fun y => y + 1 / (w : ℝ)) ⁻¹' badArcs w lam = badArcs w lam := by
   ext y
@@ -34,7 +36,6 @@ theorem badArcs_periodic (w : ℕ) (hw : 1 ≤ w) (lam : ℝ) :
     refine ⟨a - 1, ?_, ?_⟩
     · have : ((a - 1 : ℤ) : ℝ) = (a : ℝ) - 1 := by push_cast; ring
       rw [this]
-      have hww : (0 : ℝ) < (w : ℝ) := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hw
       rw [sub_div]
       linarith [h1]
     · have : ((a - 1 : ℤ) : ℝ) = (a : ℝ) - 1 := by push_cast; ring
@@ -49,43 +50,6 @@ theorem badArcs_periodic (w : ℕ) (hw : 1 ≤ w) (lam : ℝ) :
     · have : ((a + 1 : ℤ) : ℝ) = (a : ℝ) + 1 := by push_cast; ring
       rw [this, add_div]
       linarith [h2]
-
-/-- (B) THE PERIODIC-WINDOW BOUND: a window of length `ℓ ≤ 1/w` meets `badArcs` in
-    measure at most `2·lam/w` (for `0 < lam ≤ 1/2`).
-    Tools: `badArcs_periodic` + `Real.volume_preserving_add_right` to translate the
-    window into `[0, 1/w]`; there only arcs `a = 0, 1` intersect, contributing
-    `[0, lam/w) ∪ ((1−lam)/w, 1/w]`, total `2·lam/w` (`Real.volume_Ioo`,
-    `measure_union_le`). -/
-theorem window_bound (w : ℕ) (hw : 1 ≤ w) (lam : ℝ)
-    (hlam : 0 < lam) (hlam2 : lam ≤ 1 / 2) (y ℓ : ℝ) (hℓ0 : 0 ≤ ℓ)
-    (hℓ : ℓ ≤ 1 / (w : ℝ)) :
-    volume (badArcs w lam ∩ Set.Icc y (y + ℓ))
-      ≤ ENNReal.ofReal (2 * lam / w) := by
-  sorry
-
-/-- (C) chop-and-sum: `Icc x (x+L)` is covered by `⌈w·L⌉ ≤ w·L + 1` windows of length
-    `1/w`; apply `window_bound` to each and sum (`measure_biUnion_finset_le`,
-    `Nat.ceil_le`, `ENNReal.ofReal` arithmetic). -/
-=======
-/- FragmentationLemma.lean -- mac-mini-2026-07-16-S123 (statements), klein-2026-07-16-S316 (proofs).
-   THM-883's core counting inequality, the first Lean target of the covering program.
-   Statement: an arc-grid of modulus w >= 1 and radius lam meets an interval I
-   of length L in measure at most (L*w + 1) * (2*lam/w).
-   Proof: WINDOW LEMMA -- badArcs meets any half-open window of length 1/w in measure
-   at most 2*lam/w (split the window at the unique grid-cell boundary inside it; each
-   piece sees only one arc, and the two clipped arcs are complementary translates of a
-   single arc, so their lengths sum to at most one full arc).  Tile [x, x+L] by
-   floor(L*w) + 1 windows.  The case lam > 1/2 is trivial (the bound exceeds L).
-   No sorries. -/
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-
-open MeasureTheory
-
-namespace LRC14
-
-/-- The bad arc set of modulus `w` at radius `lam`, within the unit circle lifted to ℝ. -/
-def badArcs (w : ℕ) (lam : ℝ) : Set ℝ :=
-  ⋃ a : ℤ, Set.Ioo ((a : ℝ) / w - lam / w) ((a : ℝ) / w + lam / w)
 
 /-- The window lemma: the arc-grid meets any half-open window of length `1/w`
     in measure at most `2*lam/w` (for `lam ≤ 1/2`). -/
@@ -204,7 +168,6 @@ lemma window_bound (w : ℕ) (hw : 1 ≤ w) (lam : ℝ) (hlam : 0 < lam)
         push_cast; ring
       have eb : ((a0 : ℝ) + 1) / w - lam / w = ((a0 : ℝ) / w - lam / w) + 1 / w := by
         push_cast; ring
-      have ec : c + 1 / w = c + 1 / w := rfl
       rw [ea, eb]
       rw [min_add_add_right]
       ring
@@ -236,40 +199,13 @@ lemma window_bound (w : ℕ) (hw : 1 ≤ w) (lam : ℝ) (hlam : 0 < lam)
 
 /-- THM-883 Lemma 1 (fragmentation): the arc-grid meets an interval `I = [x, x+L]`
     in measure at most `(L * w + 1) * (2 * lam / w)`. -/
->>>>>>> cad1dbf0a (klein-2026-07-16-S316: checkpoint - claim THM-925 (n=8 census COMPLETE: invisibility = exactly the cone stratum, 27/4 pairs, zero wild; distinct-cpK sequence 1,2,2,6,11,50))
 theorem fragmentation (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
     (hlam : 0 < lam) (hL : 0 ≤ L) :
     volume (badArcs w lam ∩ Set.Icc x (x + L))
       ≤ ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) := by
-<<<<<<< HEAD
-  have hww : (0 : ℝ) < (w : ℝ) := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hw
-  by_cases hhalf : lam ≤ 1 / 2
-  · -- main branch: periodic windowing
-    sorry
-  · -- trivial branch: lam > 1/2 makes the RHS at least L ≥ vol
-    push_neg at hhalf
-    have h1 : volume (badArcs w lam ∩ Set.Icc x (x + L)) ≤ volume (Set.Icc x (x + L)) :=
-      measure_mono Set.inter_subset_right
-    have h2 : volume (Set.Icc x (x + L)) = ENNReal.ofReal L := by
-      rw [Real.volume_Icc]; ring_nf
-    have h3 : L ≤ (L * w + 1) * (2 * lam / w) := by
-      have hlw : 0 ≤ L * w := mul_nonneg hL (le_of_lt hww)
-      have e1 : (L * w + 1) * (2 * lam / w) = 2 * lam * L + 2 * lam / w := by
-        field_simp
-      have e2 : L ≤ 2 * lam * L := by nlinarith
-      have e3 : 0 ≤ 2 * lam / w := by positivity
-      linarith
-    calc volume (badArcs w lam ∩ Set.Icc x (x + L))
-        ≤ ENNReal.ofReal L := h1.trans_eq h2
-      _ ≤ ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) := ENNReal.ofReal_le_ofReal h3
-
-/-- Killer budget (THM-883 Lemma 2 shape): if the arc-grids of `w₁ … w_j` cover
-    `[x, x+L]`, then `L(1 − 2jλ) ≤ 2λ Σ 1/wᵢ`. Follows from `fragmentation` by
-    monotonicity + finite subadditivity + algebra. -/
-=======
   have hw0 : (0:ℝ) < w := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hw
   have hy0 : (0:ℝ) ≤ 2 * lam / w := by positivity
-  rcases le_or_lt lam (1/2) with hsmall | hbig
+  rcases le_total lam (1/2) with hsmall | hbig
   · -- tile [x, x+L] by N = ⌊L*w⌋ + 1 windows of length 1/w
     set N : ℕ := Nat.floor (L * w) + 1 with hN
     have hLw0 : 0 ≤ L * w := mul_nonneg hL (le_of_lt hw0)
@@ -309,7 +245,7 @@ theorem fragmentation (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
           measure_biUnion_finset_le _ _
       _ ≤ ∑ _k ∈ Finset.range N, ENNReal.ofReal (2 * lam / w) :=
           Finset.sum_le_sum fun k _ => window_bound w hw lam hlam hsmall (x + k / w)
-      _ = (N : ℝ≥0∞) * ENNReal.ofReal (2 * lam / w) := by
+      _ = (N : ENNReal) * ENNReal.ofReal (2 * lam / w) := by
           rw [Finset.sum_const, Finset.card_range, nsmul_eq_mul]
       _ ≤ ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) := by
           rw [← ENNReal.ofReal_natCast N, ← ENNReal.ofReal_mul (by positivity)]
@@ -319,15 +255,16 @@ theorem fragmentation (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
           have : (N : ℝ) = (Nat.floor (L * w) : ℝ) + 1 := by
             rw [hN]; push_cast; ring
           linarith
-  · -- lam > 1/2: the bound already exceeds the whole interval length
+  · -- lam ≥ 1/2: the bound already exceeds the whole interval length
     calc volume (badArcs w lam ∩ Set.Icc x (x + L))
         ≤ volume (Set.Icc x (x + L)) := measure_mono Set.inter_subset_right
-      _ = ENNReal.ofReal L := by rw [Real.volume_Icc]; ring_nf
+      _ = ENNReal.ofReal L := by rw [Real.volume_Icc]; try ring_nf
       _ ≤ ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) := by
           apply ENNReal.ofReal_le_ofReal
           have hne : (w:ℝ) ≠ 0 := ne_of_gt hw0
           have e : (L * w + 1) * (2 * lam / w) = 2 * lam * L + 2 * lam / w := by
-            field_simp; ring
+            field_simp
+            try ring
           rw [e]
           have h1 : L ≤ 2 * lam * L := by nlinarith
           have h2 : (0:ℝ) < 2 * lam / w := by positivity
@@ -336,32 +273,24 @@ theorem fragmentation (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
 /-- Corollary (killer budget, THM-883 Lemma 2 shape): if a family of moduli
     `w₁ ≤ … ≤ w_j` covers `[x, x+L]` by their arc-grids, then
     `L * (1 - 2*j*lam) ≤ 2*lam * Σ 1/wᵢ`. -/
->>>>>>> cad1dbf0a (klein-2026-07-16-S316: checkpoint - claim THM-925 (n=8 census COMPLETE: invisibility = exactly the cone stratum, 27/4 pairs, zero wild; distinct-cpK sequence 1,2,2,6,11,50))
 theorem killer_budget (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
     (lam L x : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L)
     (hcover : Set.Icc x (x + L) ⊆ ⋃ i, badArcs (ws i) lam) :
     L * (1 - 2 * j * lam) ≤ 2 * lam * ∑ i, (1 : ℝ) / ws i := by
-<<<<<<< HEAD
-  -- vol(I) ≤ Σ vol(bad_i ∩ I) ≤ Σ (L·wᵢ + 1)(2λ/wᵢ) = 2λ(jL + Σ 1/wᵢ); rearrange.
-  sorry
-=======
   have hwpos : ∀ i : Fin j, (0:ℝ) < ws i := fun i => by
     exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one (hws i)
   -- measure chain: L = |I| ≤ Σ |bad_i ∩ I| ≤ Σ (L wᵢ + 1)(2 lam / wᵢ)
   have hchain : ENNReal.ofReal L
       ≤ ∑ i : Fin j, ENNReal.ofReal ((L * ws i + 1) * (2 * lam / ws i)) := by
     calc ENNReal.ofReal L
-        = volume (Set.Icc x (x + L)) := by rw [Real.volume_Icc]; ring_nf
+        = volume (Set.Icc x (x + L)) := by rw [Real.volume_Icc]; try ring_nf
       _ ≤ volume (⋃ i : Fin j, badArcs (ws i) lam ∩ Set.Icc x (x + L)) := by
           apply measure_mono
           intro t ht
-          obtain ⟨s, hs, hts⟩ := Set.mem_iUnion₂.mp
-            (Set.mem_iUnion₂.mp (by
-              have := hcover ht
-              rw [Set.mem_iUnion] at this
-              obtain ⟨i, hi⟩ := this
-              exact Set.mem_iUnion₂.mpr ⟨i, trivial, hi⟩))
-          exact Set.mem_iUnion.mpr ⟨s, hts, ht⟩
+          have := hcover ht
+          rw [Set.mem_iUnion] at this
+          obtain ⟨i, hi⟩ := this
+          exact Set.mem_iUnion.mpr ⟨i, hi, ht⟩
       _ ≤ ∑' i : Fin j, volume (badArcs (ws i) lam ∩ Set.Icc x (x + L)) :=
           measure_iUnion_le _
       _ = ∑ i : Fin j, volume (badArcs (ws i) lam ∩ Set.Icc x (x + L)) :=
@@ -370,11 +299,12 @@ theorem killer_budget (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
           Finset.sum_le_sum fun i _ =>
             fragmentation (ws i) (hws i) lam L x hlam hL
   -- convert to a real inequality
-  have hterm : ∀ i : Fin j, (L * ws i + 1) * (2 * lam / ws i) = 2 * lam * L + 2 * lam / ws i := by
+  have hterm : ∀ i : Fin j,
+      (L * ws i + 1) * (2 * lam / ws i) = 2 * lam * L + 2 * lam / ws i := by
     intro i
     have hne : ((ws i : ℝ)) ≠ 0 := ne_of_gt (hwpos i)
     field_simp
-    ring
+    try ring
   have hnonneg : ∀ i ∈ Finset.univ, (0:ℝ) ≤ (L * ws i + 1) * (2 * lam / ws i) := by
     intro i _
     rw [hterm i]
@@ -406,6 +336,5 @@ theorem killer_budget (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
             rw [mul_one_div]
   rw [hexp] at hreal
   nlinarith [hreal]
->>>>>>> cad1dbf0a (klein-2026-07-16-S316: checkpoint - claim THM-925 (n=8 census COMPLETE: invisibility = exactly the cone stratum, 27/4 pairs, zero wild; distinct-cpK sequence 1,2,2,6,11,50))
 
 end LRC14

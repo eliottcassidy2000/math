@@ -1,3 +1,8 @@
+/- SUPERSEDED (klein-2026-07-16-S316): this draft's two sorries are CLOSED, sorry-free, in
+   04-computation/lean/TournamentH7/TournamentH7/FragmentationLemma.lean  (builds green in
+   the TournamentH7 project; includes death-star-S30's badArcs_periodic).  NOTE: this
+   draft's step-1 proof plan (arc counting) is flawed — the count can hit floor(Lw)+2;
+   the proved route is the window lemma + floor(Lw)+1 tiling.  Kept for history. -/
 /- FragmentationLemma.lean -- mac-mini-2026-07-16-S123.
    THM-883's core counting inequality, the first Lean target of the covering program.
    Statement: an arc-grid of modulus w >= 1 and radius lam = 1/13 meets an interval I
