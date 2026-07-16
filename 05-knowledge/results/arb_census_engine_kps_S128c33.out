@@ -1,0 +1,44 @@
+n=3: census fibers 2 | tau_tot splits 0 | tau-vec splits 0
+   tau_tot parity: even 1 odd 1 ; mod4 {0: 0, 1: 0, 2: 1, 3: 1}
+   Q2 tau_tot affine in (1,H,c5,c7): YES [Fraction(3, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)]
+   Q3 H-drift affine in (1,H,c5,c7,tau_tot): YES [Fraction(2, 1), Fraction(-4, 3), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+   Q4a tau-drift affine in (1,tau_tot): YES [Fraction(3, 1), Fraction(-4, 3)]
+   Q4-pre: does (tau_tot,H,c5,c7) determine tau-drift? splits=0 of 2 states
+   Q4b tau-drift affine in (1,tau_tot,H,c5,c7): YES [Fraction(3, 1), Fraction(-4, 3), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+n=4: census fibers 3 | tau_tot splits 1 | tau-vec splits 1
+   tau_tot parity: even 6 odd 2 ; mod4 {0: 0, 1: 1, 2: 6, 3: 1}
+   Q2 tau_tot affine in (1,H,c5,c7): NO
+   Q3 H-drift affine in (1,H,c5,c7,tau_tot): YES [Fraction(2, 1), Fraction(-2, 3), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+   Q4a tau-drift affine in (1,tau_tot): NO
+   Q4-pre: does (tau_tot,H,c5,c7) determine tau-drift? splits=0 of 4 states
+   Q4b tau-drift affine in (1,tau_tot,H,c5,c7): YES [Fraction(7, 1), Fraction(-1, 1), Fraction(1, 3), Fraction(0, 1), Fraction(0, 1)]
+n=5: census fibers 8 | tau_tot splits 3 | tau-vec splits 3
+   tau_tot parity: even 34 odd 30 ; mod4 {0: 19, 1: 18, 2: 15, 3: 12}
+   Q2 tau_tot affine in (1,H,c5,c7): NO
+   Q3 H-drift affine in (1,H,c5,c7,tau_tot): YES [Fraction(12, 5), Fraction(-1, 5), Fraction(-6, 5), Fraction(0, 1), Fraction(0, 1)]
+   Q4a tau-drift affine in (1,tau_tot): NO
+   Q4-pre: does (tau_tot,H,c5,c7) determine tau-drift? splits=0 of 12 states
+   Q4b tau-drift affine in (1,tau_tot,H,c5,c7): NO
+n=6: census fibers 29 | tau_tot splits 16 | tau-vec splits 19
+   tau_tot parity: even 720 odd 304 ; mod4 {0: 352, 1: 232, 2: 368, 3: 72}
+   Q2 tau_tot affine in (1,H,c5,c7): NO
+   Q3 H-drift affine in (1,H,c5,c7,tau_tot): NO
+   Q4a tau-drift affine in (1,tau_tot): NO
+   Q4-pre: does (tau_tot,H,c5,c7) determine tau-drift? splits=0 of 52 states
+   Q4b tau-drift affine in (1,tau_tot,H,c5,c7): NO
+  n=7 ... 0/32768
+  n=7 ... 4096/32768
+  n=7 ... 8192/32768
+  n=7 ... 12288/32768
+  n=7 ... 16384/32768
+  n=7 ... 20480/32768
+  n=7 ... 24576/32768
+  n=7 ... 28672/32768
+n=7: census fibers 203 | tau_tot splits 135 | tau-vec splits 146
+   tau_tot parity: even 21504 odd 11264 ; mod4 {0: 12844, 1: 6588, 2: 8660, 3: 4676}
+   Q2 tau_tot affine in (1,H,c5,c7): NO
+   Q3 H-drift affine in (1,H,c5,c7,tau_tot): NO
+   Q4a tau-drift affine in (1,tau_tot): NO
+   Q4-pre: does (tau_tot,H,c5,c7) determine tau-drift? splits=0 of 427 states
+   Q4b tau-drift affine in (1,tau_tot,H,c5,c7): NO
+DONE

@@ -1,0 +1,28 @@
+n=5 per-tile SL%:
+   tile (5,1) range 4 dcut 0 : SL 12.50%
+   tile (4,1) range 3 dcut 0 : SL 12.50%
+   tile (3,1) range 2 dcut 0 : SL 6.25%
+   tile (5,2) range 3 dcut 0 : SL 12.50%
+   tile (4,2) range 2 dcut 1 : SL 12.50%
+   tile (5,3) range 2 dcut 0 : SL 6.25%
+  class summary (range: mean%% spread%% | by dcut):
+   r=2: mean 8.33 spread 6.25 | d0:['6.25', '6.25'] d1:['12.50']
+   r=3: mean 12.50 spread 0.00 | d0:['12.50', '12.50']
+   r=4: mean 12.50 spread 0.00 | d0:['12.50']
+n=6 per-tile SL%:
+   tile (6,1) range 5 dcut 0 : SL 7.03%
+   tile (5,1) range 4 dcut 0 : SL 7.42%
+   tile (4,1) range 3 dcut 0 : SL 6.84%
+   tile (3,1) range 2 dcut 0 : SL 2.15%
+   tile (6,2) range 4 dcut 0 : SL 7.42%
+   tile (5,2) range 3 dcut 1 : SL 7.03%
+   tile (4,2) range 2 dcut 1 : SL 2.34%
+   tile (6,3) range 3 dcut 0 : SL 6.84%
+   tile (5,3) range 2 dcut 1 : SL 2.34%
+   tile (6,4) range 2 dcut 0 : SL 2.15%
+  class summary (range: mean%% spread%% | by dcut):
+   r=2: mean 2.25 spread 0.20 | d0:['2.15', '2.15'] d1:['2.34', '2.34']
+   r=3: mean 6.90 spread 0.20 | d0:['6.84', '6.84'] d1:['7.03']
+   r=4: mean 7.42 spread 0.00 | d0:['7.42', '7.42']
+   r=5: mean 7.03 spread 0.00 | d0:['7.03']
+DONE

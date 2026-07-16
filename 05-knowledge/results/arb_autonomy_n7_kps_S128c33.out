@@ -1,0 +1,10 @@
+  ...0/32768 tau-values 1 splits 0
+  ...4096/32768 tau-values 256 splits 24
+  ...8192/32768 tau-values 258 splits 26
+  ...12288/32768 tau-values 258 splits 26
+  ...16384/32768 tau-values 262 splits 26
+  ...20480/32768 tau-values 262 splits 26
+  ...24576/32768 tau-values 289 splits 31
+  ...28672/32768 tau-values 289 splits 31
+n=7: distinct tau_tot values 298 ; AUTONOMY FAILS (splits 33)
+DONE

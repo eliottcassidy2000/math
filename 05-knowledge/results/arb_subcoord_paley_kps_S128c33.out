@@ -1,0 +1,12 @@
+== sub-coordinate minimality for tau-drift, n=4..6 exhaustive ==
+  n=4: tau:OK(4) (tau,H):OK(4) (tau,c5):OK(4) (tau,H,c5):OK(4) census-only:X(1) full:OK(4)
+  n=5: tau:OK(11) (tau,H):OK(12) (tau,c5):OK(12) (tau,H,c5):OK(12) census-only:X(16) full:OK(12)
+  n=6: tau:OK(43) (tau,H):OK(51) (tau,c5):OK(49) (tau,H,c5):OK(52) census-only:X(344) full:OK(52)
+== Paley closed form: tau_r(P_p) = p^{(p-3)/2} ((p+1)/4)^{(p-1)/2} ==
+  p=3: tau_r=1 (root-indep True), predicted 1 -> MATCH
+  p=7: tau_r=392 (root-indep True), predicted 392 -> MATCH
+  p=11: tau_r=3557763 (root-indep True), predicted 3557763 -> MATCH
+== BEST cross-check on the two regular n=7 classes ==
+  Paley7 {1,2,4}: tau=392, ec=50176
+  C7 {1,2,3}: tau=379, ec=48512
+DONE
