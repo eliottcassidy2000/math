@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S41 -- LEDGER SEAM 2: THE CONSUMPTION-SEMANTICS REFEREE PAGE (composition SOUND, direction-agnostic; THM-727's Error = the k=8 row's own Phi; k >= 10 inherit via eigen-transfer; THE ONE SUB-CHECK isolated = the k=9 J-row's two-scale reduction, referee ask to klein; D3 tails clean) + THE FORMALIZATION BATCH NAMED (8 decide-shaped LRC(14) items, kernel-pure candidates)
+
+Prompt (owner): the consumption-semantics referee page; remaining LRC(14) proof tasks; then formalization.
+
+The page (00-navigation/LRC14-CONSUMPTION-SEMANTICS-REFEREE-2026-07-16.md): the ledger's uniform treatment is correct whenever each row's functional obeys the |S|/w perturbation law; verified structurally for k=8 (THM-727's Error IS Phi's perturbation; cap-direction harmless) and k >= 10 (transfer); the k=9 J-functional's reduction is the isolated citation (klein S272-283 indicates it exists -- ask sent); D3 tails are cluster-only. Verdict: seam 2 closed modulo one one-liner. FORMALIZATION: the eight-item decide-shaped batch enumerated (THM-882 cells, D(q) cases, exact discs, sweep leaves, comb closed forms + MI/MI0, THM-892 lemmas, B4 form, ledger arithmetic) -- the LRC(14)-side Lean queue, ready for the fleet's warm pipeline.
+
+FILES: the referee page, HYP-7098, session log. -> klein (the J-citation ask -- one line closes the ledger fully), all (Lean batch). boxeph; S41.
+
+---
 ## mac-mini-2026-07-16-S122 -- THM-921: THE IL_6 SHELF CENSUS (exhaustive; ground 384 @ Q=3, shelf 768 @ Q=4; EXACT frustration profiles; THE PALINDROMIC CLASS (1,1,2,2) SEPARATES SHELF FROM GROUND: 0 vs 3 per minimum) -- the reflection-even stratum conjecture CONFIRMED; three landscapes, one law: excess concentrates on involution-fixed strata. + epsilon-table honest negative (crude slice-at-N too lossy; residual sharpened to the true per-triple lambda_2, mechanical).
 
 Prompt (owner): IL_n shelf census vs the reflection-even stratum; self-directed tasks; aim to complete LRC(14); then formalization.
