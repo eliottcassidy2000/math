@@ -2,7 +2,7 @@
 
 **Status:** STANDALONE OPEN / BYPASSED FOR THE LIMITING SIGN (codex-2026-07-16-S18).
 `THM-904`'s explicit pointwise triple reduction is finite-exact, but its universal
-three-speed bound remains open.  `THM-911` now closes the limiting negative residue-six
+three-speed bound remains open.  `THM-910` now closes the limiting negative residue-six
 sign directly at `32/343`, so this inequality is no longer required for that closure.
 This file was renumbered from `HYP-7052` after pulling boxeph's earlier claim of that ID.
 
@@ -19,7 +19,7 @@ q(a,b,c) <= 47/100
 ```
 
 for every three distinct positive integers.  This would independently give
-`-F_6<=47/490<0.097`; `THM-911` proves the stronger required limiting conclusion by a
+`-F_6<=47/490<0.097`; `THM-910` proves the stronger required limiting conclusion by a
 different signed residue quotient.
 
 Exact evidence currently covers all `28,876` primitive triples with largest speed at

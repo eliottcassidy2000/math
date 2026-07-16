@@ -2,7 +2,7 @@
 
 **Status:** PROPAGATION-SLACK PART RESOLVED / SHARP EXTREMAL OPEN.  `THM-891` proves
 the exact reduction and closes residues 1 through 5 plus the positive side of residue 6;
-`THM-911` closes the former negative side at `32/343<0.097`.  The sharp uniform
+`THM-910` closes the former negative side at `32/343<0.097`.  The sharp uniform
 `16/343` inequality is still only finite-exact through diameter 20, and the finite-`t`
 wall bridge remains open.  Three tempting shortcuts were refuted.
 
@@ -114,7 +114,7 @@ listed and proved in `THM-891`, give
 All six endpoints are below `0.097` in absolute value.  This is a diameter-free theorem:
 the verifier checks 462 sector-count states and the 22 exact pair-polytope vertices.
 
-### 3. Residue 6 was the only limiting slack obstruction; THM-911 closes it
+### 3. Residue 6 was the only limiting slack obstruction; THM-910 closes it
 
 The positive kernel bound gives
 
@@ -157,7 +157,7 @@ sidecar gives false universal bounds.
    fictitious fixed first moment.
    The relation-poor stratum should have independent slack; finitely many short-relation
    shapes should contain the extremizer.
-2. **Residue-six propagation certificate — RESOLVED by `THM-911`.**  Signed seven-shift
+2. **Residue-six propagation certificate — RESOLVED by `THM-910`.**  Signed seven-shift
    averaging followed by determinant-class pair-ray certificates proves the required
    `32/343` bound.  Triple/B3 and box/B4 routes remain standalone sharpenings, not
    propagation dependencies.

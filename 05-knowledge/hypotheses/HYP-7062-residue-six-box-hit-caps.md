@@ -16,7 +16,7 @@ P_V(S_c)          <= 5/42                    (|V|=4),
 P_E({0} union S_a)+P_E({0} union S_b) <= 40/441   (|E|=5).
 ```
 
-Together with `THM-905`, these would imply `-F_6<=535/7203<0.097`.  `THM-911` now
+Together with `THM-905`, these would imply `-F_6<=535/7203<0.097`.  `THM-910` now
 closes that limiting sign directly at `32/343`, so the sharp box caps remain interesting
 but are no longer required for propagation.  The first two scanned maxima over all `33,919` primitive
 quadruples through largest speed `32` occur at compact tuples `(2,3,4,6)` and
