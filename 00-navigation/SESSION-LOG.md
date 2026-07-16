@@ -8,6 +8,9 @@ finite obstruction is a single signed fourteen-half-sector miss/parity packet, n
 unspecified `O_E(1/t)` wall term.  The exact verifier checks 96,600 rows through slow
 diameter 10 and finds maximum positive error `2173/27440<0.097` at
 `E=(0,3,4,5,6,7),t=8,a=2`.  Universal control of that parity packet remains open.
+The concurrent pull also brings `THM-917`, an independent verified-grade closure of the
+triple route at `47/490`; it strengthens confidence in the limiting sign but does not
+remove this finite owner-doubling packet.
 
 FILES: `HYP-7083`, `THM-891` addendum,
 `04-computation/lrc14_finite_t_owner_packet_codex_S18.py`, and matching output.

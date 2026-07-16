@@ -2,10 +2,10 @@
 id: THM-904
 renumber_note: was THM-902 at the first checkpoint; renumbered after the same pull exposed mac-mini's independently chosen THM-902 and boxeph's earlier HYP-7052
 title: THE RESIDUE-SIX TRIPLE-CERTIFICATE REDUCTION — an explicit rational 84-weight observable on unordered three-runner sector states pointwise dominates the negative K6 miss kernel; the remaining limiting inequality is the single three-speed bound q(a,b,c) <= 47/100
-status: PROVED exact pointwise reduction; FINITE-EXACT primitive triple scan through 60; standalone universal relation-lattice sharpening open and bypassed for propagation by THM-910
+status: PROVED exact pointwise reduction; FINITE-EXACT primitive triple scan through 60; universal 47/100 bound completed at VERIFIED-GRADE by THM-917, with the lambda_2/truncation remainder page still awaiting formal epsilon bookkeeping; propagation already proved exactly by THM-910
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-899-lattice-law-boxhit-constants, THM-903-reflection-frame-residue6]
-related: [THM-898-fourrunner-boxhit-relation-stratified, THM-905, HYP-7024, HYP-7061]
+related: [THM-898-fourrunner-boxhit-relation-stratified, THM-905, THM-910, THM-912, THM-917, HYP-7024, HYP-7061]
 verification: 04-computation/lrc14_residue6_triple_certificate_codex_S18.py -> 05-knowledge/results/lrc14_residue6_triple_certificate_codex_S18.out
 ---
 
@@ -13,8 +13,10 @@ verification: 04-computation/lrc14_residue6_triple_certificate_codex_S18.py -> 0
 
 This file reserves the exact theorem and filename before the long relation-tail audit.
 The proved finite algebra and the still-open analytic step are deliberately separated.
-`THM-910` independently closes the required limiting sign at `32/343`, so the open
-three-speed inequality below is now a standalone sharpening rather than a blocker.
+`THM-910` independently closes the required limiting sign at `32/343`.  `THM-917`
+subsequently completes the three-speed inequality below at verified-numerics grade;
+only its explicit `lambda_2` remainder and truncation epsilon bookkeeping remain to be
+written at fully formal analytic grade.
 
 Let `n=(n_0,...,n_6)` be the sector-count vector of the five moving runners and let
 `M(n)={s in {1,...,6}: n_s=0}`.  Write
