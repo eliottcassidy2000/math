@@ -2961,33 +2961,6 @@ an E-only free component or a rank-2 mixed endpoint spine, with owner-current
 labels used only for genuine exceptions.
 
 ## Lead codex-2026-06-28: Euler-Mascheroni harmonic intercept firewall
-## Lead codex-2026-06-28: Equioscillation / autocorrelation atlas
-
-**Status:** EVIDENCE / exact motif scout plus synthesis; not proof
-(HYP-3227/T1309).
-
-Claimed files:
-`05-knowledge/hypotheses/HYP-3227-lrc14-equioscillation-autocorrelation-atlas.md`,
-`04-computation/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.py`,
-`05-knowledge/results/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.out`,
-and
-`07-reflections/lrc14-equioscillation-autocorrelation-atlas-codex-20260628.md`.
-
-Readout: HYP-3214's Fejer kernel is not just adjacent to autocorrelation:
-`F_7=(de Moivre cubic)^2` is the Chebyshev double-zero/equioscillation kernel,
-positive-definite Delsarte kernel, and triangular AP autocorrelation.  HYP-3227
-uses that equality model to define an out-correlation residual for HYP-3202
-traps.  Every non-AP local trap moves support-autocorrelation mass from lags
-`1..7` to lags `8..14`, with total residual zero.  The coarse transport is
-universal; the ripple type follows HYP-3225's Green/Rayleigh/Plucker classes.
-
-Next: prove or refute the signed transport lemma on the full bounded k=8
-bank.  Compare low-lag deficit and outward surplus with AP support,
-Toeplitz `lambda_min`, ordered-tail `q0+q6`, and HYP-3204 exchange-rate slack.
-Keep the two-clock guardrail from HYP-3214: 7-sector Fejer for coverage/LHS,
-14-clock Johnson pair-Pascal for cap/RHS.
-
-## Lead codex-2026-06-28: Small-pattern adjacency atlas
 
 **Status:** EVIDENCE / scalar guardrail audit; not proof
 (HYP-3430/T1391/LTI-391/LTT-291), extending HYP-3429 and the

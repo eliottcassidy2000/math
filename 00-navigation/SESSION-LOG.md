@@ -32930,7 +32930,6 @@ K(7,q)=1/49); my Verblunsky (S73d) = kps's OPUC Christoffel-Darboux facet. kps=F
 side (single-arc lemma + peeling recursion). REMAINING: the same closure for P∖{1} (no single arc). NOT a full
 proof; LRC(14) open, but the magic function is now BUILT (both sides) + the cap peels on speed 1 in closed form.
 ## codex-2026-06-28 -- HYP-3245 equioscillation / autocorrelation atlas
-## codex-2026-06-28 -- HYP-3227 equioscillation / autocorrelation atlas
 
 Owner prompt: see connections between equioscillation and out-correlation;
 think abstractly, find similar objects, and extend the LRC14 proof push.
@@ -33031,11 +33030,6 @@ HYP-3240 dilation-witness sidecar, HYP-3242 cover-hole survival, HYP-3243
 finite chamber/state-lift carrier status, HYP-3244 tiling lift/half-tiling
 descent status, or ordered-tail `q0+q6` loss after retaining HYP-3225 sidecar
 class.
-Added HYP-3227/T1309/LTI-309/LTT-209 and reflection
-`07-reflections/lrc14-equioscillation-autocorrelation-atlas-codex-20260628.md`.
-Next proof target: prove a signed out-correlation transport lemma from
-short-lag deficit plus outward surplus to AP support gap, Toeplitz slack, or
-ordered-tail `q0+q6` loss after retaining HYP-3225 sidecar class.
 
 ## kind-pasteur-2026-06-28-S31ao -- the cyclotomic Delsarte/Beurling-Selberg magic function IS the Fejer kernel
 

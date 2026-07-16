@@ -2848,8 +2848,6 @@ HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3227, HYP-3220, HYP-3219, HYP-3215, 
 T1324, LTI-324, LTT-224, OPEN-Q-108.
 **OPEN-Q-108 HYP-3245 equioscillation / autocorrelation addendum:**
 HYP-3245 turns HYP-3214's exact Fejer result into a finite trap signal.  The
-**OPEN-Q-108 HYP-3227 equioscillation / autocorrelation addendum:**
-HYP-3227 turns HYP-3214's exact Fejer result into a finite trap signal.  The
 level-7 object is simultaneously `(de Moivre cubic)^2`, the Chebyshev
 double-zero/equioscillation kernel, a positive-definite Delsarte kernel, and
 the triangular autocorrelation of an AP interval.  Against that AP row, every
@@ -2920,10 +2918,6 @@ obstruction, proof-carrier tournament rank, tiling witness lift status,
 half-tiling descent certificate, path-presentation fiber weight,
 parent-automorphism word orbit, rectangle/hourglass residue, tail/tip
 deletion signature, and controlled-forgetting span status. -> HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3231, HYP-3229, HYP-3228, HYP-3227, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3226, HYP-3225,
-AP support gap, Toeplitz `lambda_min` slack, ordered-tail `q0+q6` loss, or
-HYP-3204 exchange-rate slack.  Keep the HYP-3214 guardrail: the 7-sector
-Fejer kernel governs coverage/LHS, while the cap/RHS lives on the 14-clock
-Johnson pair-Pascal scheme. -> HYP-3227, HYP-3214, HYP-3226, HYP-3225,
 HYP-3224, HYP-3223, HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204,
 HYP-3203, HYP-3202, HYP-3163, HYP-3132, T1309, LTI-309, LTT-209,
 OPEN-Q-108.
