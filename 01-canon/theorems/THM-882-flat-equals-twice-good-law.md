@@ -148,6 +148,10 @@ F = 2G, and injectivity gives λ(F) = 2λ(G) with the 2 as the Jacobian. ∎
 Machine verification (script Part 8): F = 2G exact at every odd N = 3..17 (component
 lists identical; per-site doubled-piece = F-piece at label u·2⁻¹, 2/2, 4/4, 6/6, 6/6,
 10/10, 12/12, 8/8, 16/16 sites; label bijectivity exact); F ≠ 2G at every even N = 4..16.
+**Cycle structure corollary:** the site permutation has cycle type φ(N)/ord_N(2) cycles
+of length ord_N(2); since 2 is a primitive root mod 13, at N = 13 it is a SINGLE
+12-CYCLE — the twelve flat components form one doubling orbit
+(1→7→10→5→9→11→12→6→3→8→4→2 on labels). At N = 7: two 3-cycles; N = 17: two 8-cycles.
 NOTE: at N = 3 adjacent doubled pieces abut at 1/2 and merge (1 component from 2 pieces)
 — the per-piece identity is the invariant statement. Credit: death-star-S17 (HYP-7013)
 found the N = 13 pointwise map the same night this file's site analysis landed; this
