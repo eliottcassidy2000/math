@@ -50,16 +50,15 @@ float-leaf candidate exact-confirmed nonempty): **every 13-set — covering or n
 exactly 5 outliers ≥ 13 has M ≥ 1/13.** Note the j-profile of the box's sub-1/13
 content: it exists only at j ∈ {2, 3} (the GW window) and vanishes for j ≥ 4.
 
-**j = 6 status (honest).** The full box at j = 6 is genuinely large (first-stage factor
-13−2j = 1; measured ≥ 75 s/shape ⟹ ~10⁹ branches). Running now with the SOUND
-covering-only restriction (every still-missing modulus divides the last killer:
-w₆ ∈ lcm(Q_miss)·Z — restricts the conclusion to covering 13-sets, which is THM-726's
-statement): 3 shards on boxeph, logs at `/home/claude/j6sweep/` (untracked), ~5–6 h/shard
-projected; whoever sessions next on this box should commit the RESULT lines here and to
-the .out. Until it lands, the j = 6 stratum is covered — like j ≥ 7 — by THM-663's
-density chain modulo the glue; the sweep's marginal value at j = 6 is elementary
-unconditionality. mac-mini's own S114 j = 5, 6 sweep may complete first — reconcile
-(their j = 5, if it lands, double-witnesses mine).
+**j = 6 VERDICT (S31, honest).** The covering-only sweep ran 8.5 h on 3 shards and
+completed < 5 of 264 shapes per shard (the dense-core shapes take ~2+ h EACH at the
+13−2j = 1 stage factor; projected ~450 h/shard). KILLED and recorded: **the elementary
+tile's practical boundary is j ≤ 5** (proved above, full box, no covering hypothesis).
+The j = 6 stratum routes through the density chain — like j ≥ 7 — via THM-663 mod the
+glue, which the PROPAGATION LEDGER (2026-07-16) now makes explicit with per-row
+thresholds. A future fast j = 6 needs an INTERIOR-stage covering cut (m = 2..5), not
+the last-stage lcm prune alone — named for whoever wants it; mac-mini's own S114 sweep
+(same box family) presumably hit the same wall (never reported).
 
 j ≤ 4 agrees with mac-mini S114's exact/fast sweeps (their "VIOLATIONS: NONE"). New
 content of the independent run: **the box's entire sub-1/13 population is identified** —
@@ -98,6 +97,6 @@ One seam, both routes — consistent with the July-13 unification.
 ## Evidence log
 - [x] j = 2, 3, 4 independent sweep: verdicts identical to mac-mini; box census of
       sub-1/13 content = GW-type non-covering families, each exact-confirmed
-- [ ] j = 5, 6 sweep completion (running; finalize this file with the table + verdict)
+- [x] j = 5 CLOSED full-box; j = 6 VERDICT recorded (elementary tile boundary = j ≤ 5; interior-stage cut named)
 - [ ] the propagation seam (task (b)) — the one remaining item feeding j ≥ 7
 - [ ] Lean: the stratification + box constraints are decide-shaped

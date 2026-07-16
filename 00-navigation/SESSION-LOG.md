@@ -1,3 +1,13 @@
+## boxeph-2026-07-16-S31 -- THE j=6 HARVEST VERDICT (honest: killed at 8.5h, <5/264 shapes/shard; ELEMENTARY TILE BOUNDARY = j <= 5; j=6 = density-chain territory, explicit via the ledger; interior-stage cut named) + THE COSPECTRAL CENSUS (256 pairs at n=7; the owner's score-of-scores separates 225/256; 31 resist spectrum AND second scores -- the next degeneracy class named)
+
+Prompt (owner): harvest j=6 when ready; keep proving little statements.
+
+(1) j=6: not harvestable -- the dense-core shapes cost ~2h each at the 13-2j=1 stage factor (projected ~450h/shard). Killed; verdict recorded in THM-885 + /home/claude/j6sweep/README: the elementary fragmentation tile ends at j <= 5 (PROVED, full box); j = 6 joins j >= 7 on the density chain, which the propagation ledger prices explicitly. The named upgrade for a future fast j=6: an interior-stage (m=2..5) covering cut.
+(2) The cospectral census (THM-896 addendum): 256 exact within-level cospectral pairs at n = 7; score-of-scores (R o R rowsums -- the owner's object, non-spectral) separates 88%; 31 pairs resist both -- the refinement tower continues past the second moment; next separator named as an open.
+
+FILES: THM-885 verdict + evidence log, THM-896 addendum, HYP-7028, session log. -> mac-mini (your j=6 presumably hit the same wall -- the interior cut is the shared need), all.
+
+---
 ## codex-2026-07-16-S17 -- THM-891 EXACT RESONANT CROSS-SECTION CANCELLATION: fixed far-peel owner resonances reduce to seven signed miss-pattern coefficients; the full two-runner sector law has 21 arithmetic rays; exact quadratic certificates close residues 1 through 5 below 0.097 and the positive side of residue 6; only negative residue 6 (`A_15+A_24`) remains at the limiting slack; HYP-7024 sharp target finite-exact through diameter 20
 
 Prompt (owner): pull frequently, synthesize other agents' work, and attack the

@@ -46,6 +46,17 @@ canon (V_merged = (A000568 + SC)/2; NS/2 = 2, 22 at n = 5, 6 ✓). (This is the 
 the owner's toothpick prompt starts from: classes come in complement-pairs plus folded
 fixed points — see TANGENTS entry T-toothpick, boxeph-S30.)
 
+## ADDENDUM (S31): the cospectral census and the score-of-scores repair (partial)
+
+Full census at n = 7: **256 within-level cospectral pairs** (λ-tie + exact charpoly
+equality). The owner's R∘R invariant — the score-of-scores multiset (row sums of A²,
+NOT a spectral function) — separates **225 of the 256 (88%)**; **31 pairs resist both
+the spectrum and the second score vector** (the A²-entry multiset separates some but
+not all of those). So the owner's object both creates the refinement story and repairs
+most of its own n = 7 degeneracy; the 31 resistant pairs are the next degeneracy class
+(named: which entrywise power-invariant completes the separation?). Data in the S31
+tool log; reproduction: the S30 script + charpoly/matmul (10 lines).
+
 ## Evidence log
 - [x] enumeration exact (A000568 reproduced n ≤ 7); (i) proof + verified; (ii)/(iii)
       verified n ≤ 6, n = 7 in the .out; SC parity proved + verified
