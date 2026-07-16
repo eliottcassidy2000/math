@@ -1,0 +1,15 @@
+(A) coprime-v invariance c_l(hv) = c_l(h):
+   exact for v in {183, 361, 529} coprime to lcm(1..12): True
+(B) Ramanujan cancellation S_L(h) = sum_{l<=L} c_l(h)/l:
+   h= 1: L=12: -0.0004  L=50: -0.0205  L=200: -0.0308  L=800: +0.0035
+   h= 2: L=12: +0.1329  L=50: -0.0216  L=200: +0.0004  L=800: +0.0113
+   h= 6: L=12: +0.7996  L=50: +0.0296  L=200: -0.0158  L=800: +0.0113
+   h=12: L=12: +1.9662  L=50: +0.1958  L=200: +0.0244  L=800: -0.0032
+   h=30: L=12: +2.2996  L=50: +1.2534  L=200: +0.0399  L=800: +0.0165
+(C) disc_v for prime v > 12 on {1..12} at 1/14 (Ramanujan form, h-sum) and the r-linear rate:
+   v= 17: disc ~ 1.052e-02 ; crude r^2/(3v^2) = 1.661e-01 ; ratio (sharpening) = 15.8x ; disc*v^2 = 3.0411 (r-linear test: ~const)
+   v= 29: disc ~ 1.907e-03 ; crude r^2/(3v^2) = 5.707e-02 ; ratio (sharpening) = 29.9x ; disc*v^2 = 1.6041 (r-linear test: ~const)
+   v= 53: disc ~ 4.111e-04 ; crude r^2/(3v^2) = 1.709e-02 ; ratio (sharpening) = 41.6x ; disc*v^2 = 1.1547 (r-linear test: ~const)
+   v=101: disc ~ 3.136e-04 ; crude r^2/(3v^2) = 4.705e-03 ; ratio (sharpening) = 15.0x ; disc*v^2 = 3.1987 (r-linear test: ~const)
+   v=199: disc ~ 6.645e-05 ; crude r^2/(3v^2) = 1.212e-03 ; ratio (sharpening) = 18.2x ; disc*v^2 = 2.6316 (r-linear test: ~const)
+DONE

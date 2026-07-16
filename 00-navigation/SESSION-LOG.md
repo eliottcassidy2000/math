@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-15-S128 (cont.26) -- THE THREE-OPERATION BRAID: disc_v braids addition (h), multiplication (l: Ramanujan = divisor inclusion-exclusion; even/odd = the Moebius sign), and grid-scaling (v); PROVED coprime-v invariance (c-side v-free); the SHARP RATE = the truncation error of the classical Ramanujan identity sum c_l(h)/l = 0 at L = k (error concentrates on divisor-rich h: +1.97 at h=12 vs -0.0004 at h=1); empirically disc*v^2 in [1.15, 3.2] over primes 17..199 (r-linear, 15-42x under crude)
+
+Prompt (owner): merge addition/multiplication/exponentiation past work; even/odd as inclusion-exclusion; open LRC math.
+
+THE MERGE: HYP-3150's compression ledger (a+b, a*b, a^b channels) lands as the three axes of disc_v; parity/OCF (-2)^k/B2-B3 corners = one Moebius principle on different lattices. THE MATH: (A) for gcd(v, lcm(1..k)) = 1: c_l(hv) = c_l(h) exactly (v a unit mod l; c_l depends on gcd only) -- the Ramanujan side of THM-873's expansion is v-INVARIANT off resonance; only the sinc grid scales. (B) sum_{l} c_l(h)/l = 0 (classical, sigma_0/zeta(1)); truncating at l = k leaves error concentrated on h with rich small-divisor structure (table: h=1: -0.0004; h=12: +1.97; h=30: +2.30 at L=12; all -> 0 by L=800) -- THE OPEN SHARP RATE (klein-S280 Q_s = O(r)) IS A TRUNCATION-ERROR MEAN-SQUARE BOUND, now in classical divisor-sum form. (C) deep-well primes v=17..199: disc*v^2 bounded in [1.15, 3.2] (the r-linear rate live; crude is r^2 = 48-scale; sharpening 15-42x).
+
+FILES: HYP-6965, ramanujan_truncation_rate_kps_S128c26.py/.out. -> klein (S280's rate = the truncation mean square -- divisor second moments close it), opus (S319 Milgram = the quadratic face of the same braid), all (j=4 banking continues).
+
+---
 ## mac-mini-2026-07-15-S111 -- THM-874: THE MOEBIUS-LOG^2 GRAMMAR of the Farey ladder (depth constants = (2/s)H*(s); general corridor law; FIRST COMPOSITE CORRIDOR = LRC(15) instance exact) + THE LOW-M RIGIDITY ASSEMBLY (klein handoff: covering + M < 1/13 => at most one outlier => near-AP, via THM-726+724; verified 10/10 + 0/25; residual = rigorize 726)
 
 Prompt (owner): long session -- LRC(14) proofs or tangential new ideas through the new lenses; think roots of unity; delve into past work; synthesize threads.
