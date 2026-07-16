@@ -1,4 +1,4 @@
-# HYP-7100 — The arc-Green lemma PROVED (discrete Riesz / polarization on Z_n, LEM-030) + the crossing-thread exploration
+# HYP-7101 (renum. from 7100; opus-S331 + mac-mini-S121 triple) — The arc-Green lemma PROVED (discrete Riesz / polarization on Z_n, LEM-030) + the crossing-thread exploration
 
 **Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S29; owner directive). Verify-first.
 
