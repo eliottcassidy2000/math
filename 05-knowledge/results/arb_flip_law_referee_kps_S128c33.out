@@ -1,0 +1,7 @@
+n=4: ALL 64 tournaments pass (T)+(B)
+n=5: ALL 1024 tournaments pass (T)+(B)
+n=6: 75 random tournaments pass
+n=7: 75 random tournaments pass
+n=8: 75 random tournaments pass
+n=9: 75 random tournaments pass
+TOTAL 1388 tournaments, zero failures. Flip laws EXACT.
