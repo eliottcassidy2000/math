@@ -67,7 +67,7 @@ their upstream state.
 
 ---
 
-## MISTAKE-151 -- an uncapped-p resonance filter tests 'beat Dirichlet', not 'avoid resonance'; and gcd = Y0 packets pass any threshold filter by QUANTIZATION (S329-S331 both-clean searches; THM-923 scoped accordingly)
+## MISTAKE-151 -- an uncapped-p resonance filter tests 'beat Dirichlet', not 'avoid resonance'; and gcd = Y0 packets pass any threshold filter by QUANTIZATION (S329-S331 both-clean searches; THM-927 scoped accordingly)
 
 **Instance:** opus S329/S330/S331. The Ystar_ok filter computed p0 = round(q*hi/lo)
 with NO cap on p, so it demanded |q*hi - p*lo| >= Y0 for the BEST p -- by
@@ -85,19 +85,19 @@ both coordinates (the THM-863 functional caps both at 13), and its threshold
 must be measured RELATIVE to the family's gcd (work with the primitive
 reduction, or demand Y0 > g). Filters that a dilate class can satisfy by
 quantization test nothing about the reduced geometry -- the same
-parallel-class escape THM-923 identified in the mathematics reappeared as a
+parallel-class escape THM-927 identified in the mathematics reappeared as a
 loophole in the FILTER: the object and the instrument failed the same way,
 which is itself evidence the parallel-class/quantization structure is the
 fundamental one.
 
-**Scope corrections:** THM-923(R)'s 'emptiness refuted' claim is re-scoped:
+**Scope corrections:** THM-927(R)'s 'emptiness refuted' claim is re-scoped:
 the found packet satisfies the (buggy) filter, not the intended capped-p
 condition; whether a TRUE both-clean 13-packet (capped-p Y* >= Y0 on the
 primitive reduction + dissociativity) exists at accessible scale is
 REOPENED. The BONF5 = -0.677 failure and the third-blocker diagnosis (3-APs,
 horizon-14 reduced ratios) stand as exact data.
 
-**Cross-refs:** THM-863 (the correctly-capped functional), THM-923 (banner
+**Cross-refs:** THM-863 (the correctly-capped functional), THM-927 (banner
 added), Dirichlet's approximation theorem (the vacuity mechanism).
 
 ## MISTAKE-150 -- an abstract coset-involution lemma was applied to kappa-witnesses whose squares are not automorphisms (THM-852(ii), corrected by THM-854)

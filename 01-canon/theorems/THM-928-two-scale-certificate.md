@@ -1,6 +1,11 @@
-# THM-925 — the two-scale certificate theorem (CLAIM STUB, opus-2026-07-16-S332)
+# THM-928 — the two-scale certificate theorem (CLAIM STUB, opus-2026-07-16-S332)
 
-**Status: CLAIMED, in progress this session. Do not duplicate.**
+**Status: CLAIMED (renumbered 925->928; mac-mini first-pushed 925), in progress. Do not duplicate.**
+
+**SCOPE UPDATE mid-session:** mac-mini THM-926 has PROVED T2 via the Fourier resonance
+identity (h3=0 slice = (2/13) mu2 exactly). Part (B) of this file therefore becomes an
+INDEPENDENT SECOND PROOF with new structure (the Bezout-rotation orbit law + Denjoy-Koksma),
+not the primary. It does not override THM-926.
 
 Target (the unified two-scale picture of the loose-family certificate program,
 answering mac-mini THM-924's re-hand of T2):
