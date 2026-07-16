@@ -1,0 +1,35 @@
+PART 1: THE DILATE RATE LAW — referee
+  base B1=[2,3,5,7,11,13]: n0=252 V0=252 k0=1
+    c=2: [n,V,k] = [504,252,253] vs law [504,252,253] OK  parallel-pairs=252 (d=2: True)
+    c=3: [n,V,k] = [756,252,505] vs law [756,252,505] OK  parallel-pairs=252 (d=2: True)
+    c=4: [n,V,k] = [1008,252,757] vs law [1008,252,757] OK  parallel-pairs=252 (d=2: True)
+    c=5: [n,V,k] = [1260,252,1009] vs law [1260,252,1009] OK  parallel-pairs=252 (d=2: True)
+  base B2=[3,4,7,9,10,11]: n0=252 V0=252 k0=1
+    c=2: [n,V,k] = [504,252,253] vs law [504,252,253] OK  parallel-pairs=252 (d=2: True)
+    c=3: [n,V,k] = [756,252,505] vs law [756,252,505] OK  parallel-pairs=252 (d=2: True)
+    c=4: [n,V,k] = [1008,252,757] vs law [1008,252,757] OK  parallel-pairs=252 (d=2: True)
+    c=5: [n,V,k] = [1260,252,1009] vs law [1260,252,1009] OK  parallel-pairs=252 (d=2: True)
+  contrast — NEAR-dilate (consecutive) V(c): law does NOT apply, measured:
+    [10..15]: n=434 V=434 rate=0.002  (1-(V-1)/n consistency: 0.002)
+    [20..25]: n=840 V=819 rate=0.026  (1-(V-1)/n consistency: 0.026)
+    [30..35]: n=1274 V=1029 rate=0.193  (1-(V-1)/n consistency: 0.193)
+    [50..55]: n=2114 V=1113 rate=0.474  (1-(V-1)/n consistency: 0.474)
+
+PART 2: THE DIAGONAL-POLYNOMIAL n=5 METAGRAPH TEST (Lemma 2.3)
+  #classes = 12 (A000568(5) = 12 expected)
+   class(c3)  |W| int-edges  avg-deg  d(W)  2d tight?
+           0    1         0    0.000     0   0 TIGHT
+           1    1         0    0.000     0   0 TIGHT
+           1    1         0    0.000     0   0 TIGHT
+           1    1         0    0.000     0   0 TIGHT
+           2    5         5    2.000     2   4 
+           2    5         5    2.000     2   4 
+           3    9         4    0.889     2   4 
+           3    9         0    0.000     2   4 
+           4    5         0    0.000     1   2 
+           4   11         6    1.091     2   4 
+           4   13         0    0.000     2   4 
+           5    3         0    0.000     1   2 
+  c3-parity 0: |W|=40 int-edges=72 avg-deg=3.600 d(W)=4 bound 2d=8
+  c3-parity 1: |W|=24 int-edges=24 avg-deg=2.000 d(W)=4 bound 2d=8
+[total 0.8s]

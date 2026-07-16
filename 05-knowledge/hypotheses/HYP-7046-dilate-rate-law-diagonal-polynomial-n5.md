@@ -1,7 +1,16 @@
 # HYP-7046 — The dilate rate law (exact) + the diagonal-polynomial n=5 metagraph test
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S23; owner directive). HYP-7037..45
-burned by fleet (opus at 7045); claiming 7046. Verify-first until results land.
+**Status:** RESOLVED (death-star-2026-07-16-S23). Part 1 → **THM-898 PROVED + referee 8/8
+exact** (two bases × c = 2..5; parallel-pairs = n₀ exactly; Hamiltonian-base corollary
+rate ≈ 1 − 1/c explains the census's 0.801 = 1009/1260 on the nose; the doublet subcode =
+a decidable dilate detector). Part 2: Lemma 2.3's bounds HOLD but are LOOSE at n=5 scale
+(tight only on singletons; cannot see zero-silent-flip classes; c₃-parity sets: bound 8 vs
+actual 3.6/2.0) — NOT yet a theory of level widths; the tool's regime is larger n. THE
+UNEXPECTED FIND: d(W) (diagonal complexity, min delta-realizing degree) is a NEW GEOMETRIC
+class invariant — it separates equal-size classes (two |W|=5, c₃=2 classes need d=2 while
+the |W|=5, c₃=4 class needs d=1; the counting bound is tight for 10/12 classes, the
+near-regular pair exceptional). Named follow-ups: n=6 (m=10, 56 classes) is the real
+Lemma-2.3 test; the near-dilate V(c) asymptote; d(W) column for the n=6 atlas.
 
 ## Part 1 — the dilate rate law (paper derivation, to referee)
 

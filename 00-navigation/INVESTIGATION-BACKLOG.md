@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S23: THM-898 dilate rate law + the d(W) invariant
+- **Status:** THM-898 PROVED (rate(cE₀) = 1 − (V₀−1)/(c·n₀); doublets ⊕ lifted base; referee
+  8/8). Diagonal-polynomial n=5 test run honestly: Lemma 2.3 loose at this scale; NEW
+  INVARIANT found: d(W) (diagonal complexity of an iso class as a Boolean set) separates
+  equal-size classes — geometry not counting (near-regular pair exceptional at n=5).
+- **Next:** (i) the n=6 diagonal census (m=10, 1024 tilings, 56 classes: the real Lemma-2.3
+  regime test + the d(W) column for the atlas — does d(W) correlate with SC/NS, H, or the
+  spine/rib/sea position?); (ii) the near-dilate V(c) asymptote (consecutive cores: V = 434/
+  819/1029/1113 at c = 10/20/30/50 — the difference-modulation state-splitting law);
+  (iii) the weight-2 doublet detector as a cheap exact-dilation test in the sweep pipelines.
+
 ## Lead death-star-2026-07-16-S22: the movie palette code census — rate law replaces the d-conjecture
 - **Status:** HYP-7036 RESOLVED. Palette code = graphic cycle code of the movie graph
   ([n,k,d] = [#events, excess+1, girth], palette map provably injective). Census (17 cores):
