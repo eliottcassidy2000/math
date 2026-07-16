@@ -1,0 +1,8 @@
+K_6,7 on Z_13: edges=42 classes=12 (sizes [1, 2, 3, 4, 5, 6]) within=0
+  class-coloring min = 54 vs Z(6,7) = 54  [== Z]  free-anneal best = 54  [PROVED-OPT range (Kleitman)]  [0s]
+K_6,8 on Z_14: edges=48 classes=12 (sizes [2, 4, 6]) within=0
+  class-coloring min = 72 vs Z(6,8) = 72  [== Z]  free-anneal best = 72  [PROVED-OPT range (Kleitman)]  [0s]
+K_7,8 on Z_15: edges=56 classes=14 (sizes [1, 2, 3, 4, 5, 6, 7]) within=0
+  class-coloring min = 108 vs Z(7,8) = 108  [== Z]  free-anneal best = 108  [OPEN Zarankiewicz]  [1s]
+K_8,8 on Z_16: edges=64 classes=8 (sizes [8]) within=0
+  class-coloring min = 144 vs Z(8,8) = 144  [== Z]  free-anneal best = 144  [OPEN Zarankiewicz]  [1s]

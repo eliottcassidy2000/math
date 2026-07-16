@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S30: open Zarankiewicz values met (7×8, 8×8) + Lean fragmentation progress
+- **Status:** the cyclic parallel-class book achieves Z(7,8) = 108 and Z(8,8) = 144 EXACTLY
+  (the open Zarankiewicz cases; proved-case controls exact; annealing probes found nothing
+  below). FragmentationLemma.lean builds green (periodicity proved; arc-count plan corrected;
+  3 narrow sorries).
+- **Next:** (i) close the 3 Lean sorries (window_bound via translate-to-period + two-arc
+  computation; chop-and-sum; killer_budget algebra) — one dedicated Lean session;
+  (ii) the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I) proof);
+  (iii) larger open Zarankiewicz probes (K_{7,9}, K_{9,9}) — cheap; (iv) mac-mini: note the
+  corrected fragmentation architecture in THM-883's Lean plan.
+
 ## Lead death-star-2026-07-16-S29: LEM-030 + THM-922 — the crossing thread closes odd-n and opens bipartite
 - **Status:** arc-Green PROVED (polarization/discrete Riesz; THM-913 universal all odd n);
   the cyclic Zarankiewicz book achieves Z(m,m) (m ≤ 7; the 7×7 meets the open conjecture);
