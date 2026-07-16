@@ -57,6 +57,17 @@ most of its own n = 7 degeneracy; the 31 resistant pairs are the next degeneracy
 (named: which entrywise power-invariant completes the separation?). Data in the S31
 tool log; reproduction: the S30 script + charpoly/matmul (10 lines).
 
+## ADDENDUM 2 (S32): THE TOWER COMPLETES — the separating invariant found
+
+Escalation census on all 256 cospectral pairs: A²-rowsums 225/256; A³-rowsums 242/256;
+joint (s,s²) 226; joint (s,s²,s³) 250; **the FULL KENDALL–WEI TOWER — the per-vertex
+joint vector (s⁽¹⁾,…,s⁽⁶⁾), rowsums of A through A⁶ — separates 256/256.** Independently,
+1-WL (out,in)-refinement also separates 256/256. So at n = 7 the owner's iteration
+s → s² → … terminates at ≤ 6 = n−1 iterates with COMPLETE resolution of the spectral
+degeneracy: the entrywise tower sees everything the spectrum misses. (Two independent
+completions; the joint-vector form is the Kendall–Wei-native one. Conjecture for the
+schedule: n−1 iterates suffice at every n — test at n = 8 when a box has the budget.)
+
 ## Evidence log
 - [x] enumeration exact (A000568 reproduced n ≤ 7); (i) proof + verified; (ii)/(iii)
       verified n ≤ 6, n = 7 in the .out; SC parity proved + verified

@@ -1,3 +1,13 @@
+## boxeph-2026-07-16-S32 -- THE SEPARATING INVARIANT FOUND: the full Kendall-Wei tower (s^(1)..s^(6) per-vertex joint) separates ALL 256/256 n=7 cospectral pairs (escalation 225 -> 242 -> 250 -> 256; 1-WL independently 256/256): the owner's iteration terminates at <= n-1 steps with complete spectral-degeneracy resolution + 'negative residue 6' identified as codex-THM-891's kernel (K6({1,5}) = K6({2,4}) = -12; target A15+A24) with the quadratic-certificate attack named
+
+Prompt (owner): find the invariant separating the resistant 31; keep proving little statements; work negative residue 6; pull often, update targets creatively.
+
+(1) THE TOWER COMPLETES (THM-896 addendum 2): escalation census on all 256 cospectral pairs: A^2-rowsums 225, A^3-rowsums 242, joint(s,s2) 226, joint(s,s2,s3) 250, FULL TOWER (s..s^6 joint per-vertex) 256/256 -- and 1-WL (out,in)-refinement independently 256/256. The Kendall-Wei escalation resolves its own degeneracy completely in <= n-1 iterates at n = 7; conjectured schedule n-1 at all n (n=8 test named).
+(2) NEGATIVE RESIDUE 6 identified: codex-S17 THM-891's named residual -- exact quadratic certificates closed F1..F5 and only the residue-6 kernel remains, concentrated at K6({1,5}) = K6({2,4}) = -12, target A15+A24 (the a+b == 6 mod 7 resonant rays). The session's budget went to the tower census; the identification + the named attack (extend codex's 462-state x 22-vertex quadratic certificates to the F6 LOWER bound on the two rays) is handed to next-session/codex.
+
+FILES: THM-896 addendum 2, HYP-7029, session log. -> owner (the tower closes its own story), codex (residue-6: your kernel, my identification + attack naming; happy to co-run next session), all.
+
+---
 ## boxeph-2026-07-16-S31 -- THE j=6 HARVEST VERDICT (honest: killed at 8.5h, <5/264 shapes/shard; ELEMENTARY TILE BOUNDARY = j <= 5; j=6 = density-chain territory, explicit via the ledger; interior-stage cut named) + THE COSPECTRAL CENSUS (256 pairs at n=7; the owner's score-of-scores separates 225/256; 31 resist spectrum AND second scores -- the next degeneracy class named)
 
 Prompt (owner): harvest j=6 when ready; keep proving little statements.
