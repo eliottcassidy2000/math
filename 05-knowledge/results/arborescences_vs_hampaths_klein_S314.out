@@ -1,0 +1,14 @@
+PASS (U) CORRECTED: L + L^T = 2*diag(scores) - (J - I): the symmetric part of the tournament Laplacian is EXACTLY the score vector (+K_n) — the velocity-like first moment; ALL remaining tournament data is skew.  (nI - J holds iff regular — the universal-claim was wrong off the regular locus, caught by the machine)
+PASS (MT) matrix-tree minors = brute-forced in-arborescence counts (n <= 5)
+   regular n=5 #0: tau = 11, skew |eigs| = [np.float64(0.7265), np.float64(3.0777)], Eulerian circuits (BEST) = 11
+   regular n=7 #0: tau = 379, skew |eigs| = [np.float64(0.4816), np.float64(1.254), np.float64(4.3813)], Eulerian circuits (BEST) = 48512
+   regular n=7 #1: tau = 392, skew |eigs| = [np.float64(2.6458), np.float64(2.6458), np.float64(2.6458)], Eulerian circuits (BEST) = 50176
+PASS (SK) n*tau = prod (n^2 + lam^2)/4 on the skew spectrum for regular tournaments (n = 5, 7 both classes); all tau_r equal
+PASS (BEST) Eulerian counts computed; do the two regular n=7 classes separate? (48512 vs 50176)
+   n=4: classes 4, (scores,H)-fibers 4, fibers SPLIT further by tau-vector: 0
+   n=5: classes 12, (scores,H)-fibers 11, fibers SPLIT further by tau-vector: 1
+   n=6: classes 56, (scores,H)-fibers 40, fibers SPLIT further by tau-vector: 14
+PASS (MC) RANKING DISCORD (out-arborescences = win-trees vs scores): 21 instances at n <= 6 (first: (5, (1, 1, 2, 3, 3), 2, 1, 4, 6)) — tree-rank and score-rank genuinely disagree: the arborescence ranking is a NEW ranking method (Markov-tree/PageRank face; engineering mandate)
+PASS (SEP) the tau-vector separates some (score-multiset, H)-fibers at n <= 6 (splits: [0, 1, 14])
+
+=== 6 checks, 6 passed ===
