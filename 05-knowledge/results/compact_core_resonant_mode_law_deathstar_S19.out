@@ -1,0 +1,48 @@
+P1: independent-limit miss-measures (exact Z_7^5 enumeration; pin sigma_0 = 0)
+  B count = 120 (predict 120): OK
+  A_c counts = {5: 360, 4: 360, 3: 360, 2: 360, 1: 360} (predict 360 each, c not in {0,6}): OK
+  A* = 360/16807 = 0.021420, B* = 120/16807 = 0.007140, A* = 3B*: True
+  max_a |1-w^a||m*(a)| = 0.0495
+
+P3a: CONSECUTIVE compact cores [0, c..c+5] (difference-slow family)
+  c=30 E=[0, 30, 31, 32, 33, 34, 35] s=3: M=112  max-probe |S| = 30.73  (|S|^2/M = 8.43)
+      owner 33: max at n=195 (a=5): |S|=30.73 vs law-pred 2.33 (ratio 13.20)
+      owner 34: max at n=195 (a=4): |S|=30.73 vs law-pred 2.10 (ratio 14.64)
+      owner 35: max at n=195 (a=4): |S|=30.73 vs law-pred 2.16 (ratio 14.22)
+  c=100 E=[0, 100, 101, 102, 103, 104, 105] s=3: M=366  max-probe |S| = 100.32  (|S|^2/M = 27.49)
+      owner 103: max at n=615 (a=6): |S|=100.32 vs law-pred 1.17 (ratio 85.54)
+      owner 104: max at n=615 (a=6): |S|=100.32 vs law-pred 1.18 (ratio 84.72)
+      owner 105: max at n=615 (a=6): |S|=100.32 vs law-pred 1.20 (ratio 83.91)
+  c=300 E=[0, 300, 301, 302, 303, 304, 305] s=3: M=1064  max-probe |S| = 296.37  (|S|^2/M = 82.55)
+      owner 303: max at n=1815 (a=6): |S|=296.37 vs law-pred 3.45 (ratio 85.91)
+      owner 304: max at n=1815 (a=6): |S|=296.37 vs law-pred 3.46 (ratio 85.63)
+      owner 305: max at n=1815 (a=6): |S|=296.37 vs law-pred 3.47 (ratio 85.35)
+  c=1000 E=[0, 1000, 1001, 1002, 1003, 1004, 1005] s=3: M=3552  max-probe |S| = 982.27  (|S|^2/M = 271.64)
+      owner 1003: max at n=6015 (a=6): |S|=982.27 vs law-pred 11.42 (ratio 86.02)
+      owner 1004: max at n=6015 (a=6): |S|=982.27 vs law-pred 11.43 (ratio 85.93)
+      owner 1005: max at n=6015 (a=6): |S|=982.27 vs law-pred 11.44 (ratio 85.85)
+  c=2000 E=[0, 2000, 2001, 2002, 2003, 2004, 2005] s=3: M=7108  max-probe |S| = 1962.11  (|S|^2/M = 541.62)
+      owner 2003: max at n=12015 (a=6): |S|=1962.11 vs law-pred 22.80 (ratio 86.04)
+      owner 2004: max at n=12015 (a=6): |S|=1962.11 vs law-pred 22.82 (ratio 86.00)
+      owner 2005: max at n=12015 (a=6): |S|=1962.11 vs law-pred 22.83 (ratio 85.95)
+
+P3b: GENERIC-RATIO compact cores (incoherent)
+  c=30 E=[0, 30, 42, 57, 85, 123, 177] s=3: M=120  max-probe |S| = 31.08  (|S|^2/M = 8.05)
+      owner 85: max at n=514 (a=6): |S|=21.88 vs law-pred 0.97 (ratio 22.61)
+      owner 123: max at n=783 (a=6): |S|=28.48 vs law-pred 1.40 (ratio 20.34)
+      owner 177: max at n=1119 (a=6): |S|=31.08 vs law-pred 2.02 (ratio 15.42)
+  c=100 E=[0, 100, 138, 191, 284, 413, 588] s=3: M=406  max-probe |S| = 69.84  (|S|^2/M = 12.01)
+      owner 284: max at n=1652 (a=6): |S|=64.98 vs law-pred 3.23 (ratio 20.10)
+      owner 413: max at n=1614 (a=4): |S|=69.84 vs law-pred 25.49 (ratio 2.74)
+      owner 588: max at n=1764 (a=3): |S|=64.14 vs law-pred 36.30 (ratio 1.77)
+  c=300 E=[0, 300, 412, 573, 850, 1239, 1762] s=3: M=1126  max-probe |S| = 152.13  (|S|^2/M = 20.55)
+      owner 850: max at n=5136 (a=6): |S|=152.13 vs law-pred 9.68 (ratio 15.72)
+      owner 1239: max at n=2478 (a=2): |S|=89.82 vs law-pred 87.45 (ratio 1.03)
+      owner 1762: max at n=8810 (a=5): |S|=135.25 vs law-pred 124.36 (ratio 1.09)
+
+P3b continued (foreground rerun): the c=1000 GENERIC core — THE LAW AT SCALE
+  c=1000 E=[0, 1000, 1371, 1910, 2831, 4130, 5871] s=3: M=3996  max-probe |S| = 456.19  (|S|^2/M = 52.08)
+      owner 2831: max at n=5662 (a=2): |S|=211.60 vs law-pred 199.81 (ratio 1.06)   [n = 2e EXACTLY]
+      owner 4130: max at n=8260 (a=2): |S|=306.01 vs law-pred 291.49 (ratio 1.05)   [n = 2e EXACTLY]
+      owner 5871: max at n=23484 (a=4): |S|=456.19 vs law-pred 362.40 (ratio 1.26)  [top owner, mild coherence excess]
+  slope check: max|S|/Vmax = 456.19/5871 = 0.0777 — inside the predicted band [0.014, 0.099].

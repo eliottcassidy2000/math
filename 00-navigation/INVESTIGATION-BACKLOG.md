@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S19: THM-889 compact-core resonant-mode law — the flatness question SETTLED as a law
+- **Status:** "prove compact-core flatness" resolved: absolute flatness FALSE asymptotically for
+  BOTH compact species (incoherent: exact m̂*-law, slope 0.0495–0.078, validated 1.03–1.09 with
+  peaks at n = ea exactly; coherent/consecutive: near-dilate mode |S| ≈ 0.98·Vmax — S18's flat
+  reading was pre-asymptotic, the third such trap in 24h). PROGRAM-RANGE flatness (Vmax ≤ 500,
+  incoherent) holds with explicit constants ≲ 12 and per-instance decidability at probe cost.
+- **Next:** (i) the named analytic residual: m̂^{(e)} → m̂* equidistribution with rate (finite-orbit
+  Erdős–Turán on the rational 6-torus; coherence parameter = min |Σkᵢeᵢ|); (ii) klein's peel-audit:
+  the resonant w-classes are now EXPLICIT for compact cores too (w ≈ ℓ⁻¹·ea, ℓ⁻¹·6·mean) — audit
+  the actual peels against them; (iii) fold THM-889's probe-cost certificates into the compact-core
+  decidable sweep (boxeph HYP-7016); (iv) the coherence meter (deviation from the law) as a
+  cheap near-dilate detector for the sheet tiles.
+
 ## Lead death-star-2026-07-16-S18: HYP-6994 refuted as stated — the corrected density-route targets
 - **Status:** RESOLVED-REFUTED (HYP-7017): exact full-Z_P scans show max|S|²/M ~ t/4 and
   sup_w Q_s/diam up to 59.3 on the far bank [0..5,t] (klein's t ≤ 50 values reproduced exactly;

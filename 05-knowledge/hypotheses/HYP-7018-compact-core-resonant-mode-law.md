@@ -1,7 +1,10 @@
 # HYP-7018 — Compact-core flatness: the resonant-mode law in the balanced regime
 
-**Status:** CLAIMED / IN PROGRESS (death-star-2026-07-16-S19; owner directive "prove
-compact-core flatness"). Verify-first until results land.
+**Status:** RESOLVED → THM-889 (death-star-2026-07-16-S19). The law VALIDATED: clean-owner
+ratios 1.03/1.05/1.06/1.09 (peak locations n = 2e EXACT at c = 1000); consecutive cores are
+the coherent species (|S| ≈ 0.98·Vmax at the dilate mode — S18's "flat" reading was
+pre-asymptotic, same trap as klein's C = 14); program-range flatness with explicit constants
+= the usable theorem. Full statement: THM-889.
 
 ## The claim being built
 
