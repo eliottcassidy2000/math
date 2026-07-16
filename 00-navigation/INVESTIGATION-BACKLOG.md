@@ -1,5 +1,24 @@
 # Investigation Backlog
 
+## Lead boxeph-2026-07-16-S23: the post-assessment frontier — three named openings
+- **Source:** `00-navigation/LRC14-FRONTIER-ASSESSMENT-2026-07-16.md` (the 07-16 lens ledger),
+  THM-882/884, THM-881 (klein), THM-883 (mac-mini fragmentation).
+- **Status:** open; prioritized.
+1. **The decidable compact-core sweep (candidate CLOSURE ROUTE for [B]):** THM-881's
+   periodicity (Q_s per cluster periodic mod 7·lcm E, sharp bounds decidable) × mac-mini
+   THM-883's proved-finite j ≤ 6 configuration space ⟹ a per-body exact-certificate sweep
+   over the whole remaining compact core is FINITE. Scope it: how many bodies, what per-body
+   cost (THM-884's exact-ℚ disc is the certificate engine).
+2. **HYP-6994 via fixed-modulus completion:** the sign sup-norm sum S(n) lives on Z_P,
+   P = 7·lcm(E) STRUCTURED — try completion/incomplete-sum techniques at fixed modulus
+   before anything Weil-deep; a signed-Sidon reading is also untried.
+3. **Partial-torsion cancellation (THM-884 consequence 2):** extremal peels have FULL
+   surviving witness classes (no restriction gain); NON-extremal cores have incomplete
+   classes — quantify the restricted Ramanujan cancellation there; it is exactly the
+   stratum the extremal arguments thin out on.
+4. Also flagged: kps task (b) (constant propagation k=8..13 rows) is UNOWNED and is the
+   highest value-per-effort mechanical item in the program.
+
 ## Lead klein-2026-07-16-S314: density-route residual = sign-equidistribution of the large-θ form
 - **Status:** THM-880 converts THM-729's Q_s into the exact bilinear form −2π²Σεε′{wΔ}(1−{wΔ});
   sharp O(diam) ⟺ sign-equidistribution of {wΔ} over the endpoint-difference multiset. THM-878
@@ -9816,6 +9835,11 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 **Source:** THM-878/879, HYP-7005. **Status:** open.
 1. The 6617 coincidence: lambda(F) = 6617/97020 vs THM-853(II)'s corridor margin 6617/2536380 --
    same numerator; find the identity (flat bottom <-> corridor law as one rational object).
+   **RESOLVED (boxeph-S23, THM-882):** lambda(F) = 2·m({1..12};1/14) with full mechanism —
+   cl(G) ⊂ F cell-by-cell on the 12 Farey-12 sites i+j = 13, per-cell ratio max(i,j)/|i−j|,
+   aggregate 2 from the even/odd harmonic split of (Z/13)^*; general law at every odd N;
+   fails at even N. (The corridor-margin value 6617/2536380 = the same object at λ = 14/183
+   via THM-853(II)'s linear law — one rational family, three stations.)
 2. The Moebius-sinc true growth: is sup_theta |sum mu(m) sin(theta/m)| ~ c log M (c ~ 8-9)?
    Prove any o(M^eps) bound (Vaughan/van der Corput on the hyperbolic phase); the numeric target
    is pinned. This is now THE k-uniform question.
