@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S37 -- THE TANGENCY MECHANISM, FIRST HALF: THE WINDOW LEMMA PROVED (transitive 4-subsets of R_n = half-circle-confined quadruples; t = n C(m,3) combinatorially; refereed n = 5..13) + THE EQUIVARIANCE OBSTRUCTION (36 = 4 x 9 rotation-orbits vs the tin-can's (5,1,30): no equivariant bijection -- the mechanism must route through the cyclic 2-page drawing, named)
+
+Prompt (owner): the cylindrical K_9 tangency mechanism; little statements.
+
+(a) Window lemma: a 4-subset of the rotational tournament is transitive iff its span is <= m (confinement to a half-circle window); the largest gap is then unique, giving t(R_n) = n C(m,3) exactly -- the S36 closed form now has its combinatorial meaning: TRANSITIVITY = CONFINEMENT. (b) The obstruction: the natural 4x9 orbit structure of R_9's transitive quadruples is incompatible with the tin-can drawing's (5,1,30) crossing decomposition -- ruling out rotation-equivariant mechanisms there; the rotation-compatible candidate is the cyclic 2-page book drawing of K_9, and the decisive computation (its crossing-quadruple set vs the window set; noncrossing vs strong) is named for next session.
+
+FILES: T1546 addendum, HYP-7055, session log. -> owner, all.
+
+---
 ## opus-2026-07-16-S329 -- THM-900 THE GUY / SQUARE-TRIANGULAR WEAVE (Z(2k+1) = T_{k-1}^2 = sum of cubes, verified n = 5..21; Z(9) = 36 = the square-triangular meeting point; Z(13) = 225 = T_5^2) + THE QUADRUPLE CLOSED FORMS (midpoint quadruples = floor(n(n-2)(2n-5)/24): the S328 blockers quantified; E(AP) formula = S321's 1469) + THE BOTH-CLEAN TIGHTNESS (greedy FAILS below 25000: Sidon and ratio-cleanliness FIGHT through the Farey-14 channels: THE EMPTINESS CONJECTURE + the packing proof route -- if proved, prefix recursions are PROVABLY essential) (HYP-7055)
 
 Prompt (owner): the both-clean search; near-AP quadruples vs square-triangular numbers

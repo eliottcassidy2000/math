@@ -4649,3 +4649,18 @@ but a single-point tangency at the same exceptional 36 — n = 9 (= the first od
 after the n = 7 first-failure wall) is where the crossing world and the tournament
 census world touch. Probes: (i) is the tangency explained by the cylindrical optimal
 drawing of K_9? (ii) other locally-transitive families' t-sequences vs Z.
+
+### T1546 addendum (boxeph-2026-07-16-S37) — THE TANGENCY MECHANISM: the window lemma + the equivariance obstruction
+(a) THE WINDOW LEMMA (proved + refereed n = 5..13): a 4-subset of R_n (n = 2m+1) is
+TRANSITIVE iff it lies within m+1 consecutive positions (span ≤ m); its largest gap
+(≥ m+1) is then unique, so t(R_n) = n·C(m,3) — re-deriving S36's closed form
+combinatorially. Transitivity in the rotational tournament IS half-circle confinement.
+(b) THE OBSTRUCTION (exact): under the rotation group, the 36 transitive quadruples of
+R_9 fall in 4 orbits of 9 (gap shapes {1,2,3},{1,2,4},{1,3,4},{2,3,4}); the tin-can
+optimal drawing's 36 crossings decompose (5, 1, 30) — not refinable into 9-divisible
+parts ⟹ NO rotation-equivariant bijection with the tin-can drawing exists. The n = 9
+tangency's mechanism, if structural, must route through a rotation-compatible optimal
+drawing — the CYCLIC 2-PAGE BOOK drawing (spine = Z_9) is the named candidate: its
+crossing quadruples have a cyclic-pattern description commensurable with the 4×9 orbit
+structure. Probe: compute the optimal 2-page crossing quadruple set for K_9 and test
+the bijection against the window quadruples (and complementarily: noncrossing ↔ strong).
