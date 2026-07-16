@@ -1,9 +1,10 @@
 # HYP-7024 — the resonant-peel miss-pattern extremal
 
 **Status:** MIXED / OPEN (codex-2026-07-16-S17).  `THM-891` proves the exact reduction
-and closes residues 1 and 5 at the non-sharp `0.097` propagation slack.  The sharp
-uniform inequality is finite-exact through diameter 20.  Three tempting shortcuts were
-refuted.
+and closes residues 1 through 5 and the positive side of residue 6 at the non-sharp
+`0.097` propagation slack.  Only the negative side of residue 6 remains at that slack.
+The sharp uniform inequality is finite-exact through diameter 20.  Three tempting
+shortcuts were refuted.
 
 ## Exact target
 
@@ -93,10 +94,42 @@ The residue-five singleton and pair kernel norms are respectively `5` and `4`, s
 This closes limiting residues `1` and `5` at the propagation slack, not at the sharp
 `16/343` target.
 
+### 2. Full pair-sector rays close residues 2, 3, and 4
+
+For coprime positive speeds `A,B`, their full unordered sector-pair distribution is
+independent-uniform when either speed is zero modulo seven.  Otherwise it has the form
+
+`P(A,B)=U+D_(A mod 7,B mod 7)/(AB)`.
+
+Hence it lies on one of 21 line segments from `U` to the product-minimal representative
+of its unordered nonzero residue pair.  Exact quadratic weights on sector-pair counts,
+listed and proved in `THM-891`, give
+
+`-40/441 <= F_2 <= 230/2401`,
+
+`-230/2401 <= F_3 <= 19/196`,
+
+`-2/21 <= F_4 <= 232/2401`.
+
+All six endpoints are below `0.097` in absolute value.  This is a diameter-free theorem:
+the verifier checks 462 sector-count states and the 22 exact pair-polytope vertices.
+
+### 3. Residue 6 is now the only limiting slack obstruction
+
+The positive kernel bound gives
+
+`F_6 <= (6p_1+2p_2)/49 <=230/2401<0.097`.
+
+On the negative side, `K_6({1,5})=K_6({2,4})=-12`; all other pair kernels are `2`,
+and singleton kernels are `-1` except `K_6({3})=6`.  Thus the remaining non-sharp crux
+is a higher-order bound on the synchronized miss mass `A_15+A_24`.  The exact pair-ray
+relaxation is insufficient, so this is where the higher relation spectrum of the
+concurrent `THM-890` must enter.
+
 The excess term retains the same short arithmetic relations isolated by `HYP-7021`
 and the coincidence divisor spectrum of `THM-892`.
 
-### 2. Pointwise residue-one dominance — false
+### 4. Pointwise residue-one dominance — false
 
 Residue one wins on `15,211/15,246` diameter-20 cores, but not all.  For example,
 `E={0,3,5,6,7,8}` is won by residue two:
@@ -107,7 +140,7 @@ Residue three wins eight diameter-20 cores.  Thus the global theorem needs the s
 `r=1` occupancy inequality plus separate signed inequalities for residues `2,...,6`;
 it cannot conclude them from pointwise dominance.
 
-### 3. Miss-pattern inversion symmetry — false
+### 5. Miss-pattern inversion symmetry — false
 
 The map `x->1-x` inverts every moving point, but the stationary point at the
 sector-zero boundary stays fixed.  Consequently it does not permute the six inner
@@ -123,10 +156,10 @@ sidecar gives false universal bounds.
    fictitious fixed first moment.
    The relation-poor stratum should have independent slack; finitely many short-relation
    shapes should contain the extremizer.
-2. **Signed miss-pattern LP.**  For residues `2,3,4,6`, use the exact `K_r` table,
-   stationary-boundary-aware transforms, and realizable factorial moments of the
-   missed set.  Do not impose the false reflection symmetry `s -> 7-s`.  The finite-box
-   constants are far below `16/343`, leaving room for a non-sharp certificate.
+2. **Residue-six higher-order certificate.**  Bound the synchronized mass
+   `A_15+A_24` using triple and higher relation terms from `THM-890`; pair marginals are
+   now known to be insufficient.  Do not impose the false reflection symmetry
+   `s -> 7-s`.
 3. **Compact/relation-rich split.**  The extremizer is compact and relation-rich, while
    random wide cores are much smaller.  A quantitative relation-lattice tail plus a
    finite compact sweep would parallel the balanced-comb split of `THM-889/HYP-7021`.

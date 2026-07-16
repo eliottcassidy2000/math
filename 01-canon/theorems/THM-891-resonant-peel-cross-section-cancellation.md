@@ -1,7 +1,7 @@
 ---
 id: THM-891
 title: Exact cross-section cancellation for a resonant far peel
-status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-collision law, low-miss bound, and universal 0.097 closures for residues 1 and 5 are rigorous. The diameter-20 extremal statement is finite-exact evidence, not a universal theorem.
+status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-sector ray law, and universal 0.097 closures for residues 1 through 5 and the positive side of residue 6 are rigorous. The negative side of residue 6 and the sharp diameter-free extremal remain open.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
 related: [THM-888, THM-889, THM-892, HYP-7021, HYP-7024]
@@ -90,8 +90,19 @@ identity and the residue-five kernel norm imply
 > **`|F_1(E)| <= 230/2401 < 0.097` and
 > `|F_5(E)| <= 225/2401 < 0.097`.**
 
-Thus residues `1` and `5` of the owner-resonant limiting problem close universally at
-the propagation slack, although the sharp `16/343` conjecture remains open.
+The full pair-sector law has only 21 arithmetic rays.  Exact quadratic certificates on
+their endpoints additionally give
+
+| residue | rigorous interval for `F_r=rC_r` |
+|---:|---:|
+| 2 | `-40/441 <= F_2 <= 230/2401` |
+| 3 | `-230/2401 <= F_3 <= 19/196` |
+| 4 | `-2/21 <= F_4 <= 232/2401` |
+
+Every endpoint has absolute value below `0.097`.  Finally the raw residue-six kernel
+gives `F_6<=230/2401<0.097`.  Therefore residues `1,...,5` close universally and only
+the **negative** side of residue `6` remains in the owner-resonant limiting problem.
+The sharp `16/343` conjecture remains open for every residue.
 
 ## 2. Conditioning identity
 
@@ -186,10 +197,11 @@ The same exact event sweep was run over all `15,246` primitive cores
 
 at `E={0,1,2,3,4,6}`, in residue `r=1`.  This is below the propagation slack but is
 not promoted to a theorem outside the finite box.  `HYP-7024` records the sharp
-all-core target and two important negative findings: pair-collision mass is arithmetic,
-not universally `1/7`, and residue `1` does not dominate pointwise on every core.
+all-core target and the sole remaining limiting slack obligation, `F_6>-0.097`.
 
-## 7. Exact pair-collision law
+## 7. Exact pair-sector laws and quadratic certificates
+
+### 7.1 Collision law
 
 Let `I_s=1_[s/7,(s+1)/7)` and let `c_k` be the Fourier coefficient of `I_0`.
 The same-sector indicator is `sum_s I_s(u)I_s(v)`.  Summing the translated Fourier
@@ -208,6 +220,78 @@ remaining term is nonnegative and
 Using `sum_(h!=0) sin^2(pi h theta)/h^2=pi^2 theta(1-theta)` at
 `theta=r/7` yields the claimed correction `r(7-r)/(7AB)`.  A stationary-versus-moving
 pair has mass exactly `1/7` directly.
+
+### 7.2 The 21 pair-sector rays
+
+The preceding calculation refines without summing over equal sectors.  Let `P_ij(A,B)`
+be the probability that the unordered sector pair of two positive runners is `{i,j}`;
+thus the independent distribution `U` has diagonal masses `1/49` and off-diagonal
+masses `2/49`.  Before symmetrizing, Fourier expansion gives
+
+`P^lab_ij(A,B)=1/49
+ + sum_(h!=0) c_i(Bh)c_j(-Ah)`.
+
+After multiplication by `AB`, every nonconstant summand depends only on
+`alpha=A mod 7` and `beta=B mod 7`: changing `A` by seven flips both its sine and
+half-interval phase by the same sign.  If either residue is zero, the sine vanishes and
+`P(A,B)=U`.  Otherwise, for a fixed unordered residue pair `{alpha,beta}`,
+
+`P(A,B)=U+D_(alpha,beta)/(AB)`.
+
+Let `(A_0,B_0)` be the coprime representative of that residue pair with least product
+`m=A_0B_0`.  Then
+
+`P(A,B)=(1-m/(AB))U + (m/(AB))P(A_0,B_0)`.
+
+Thus every positive pair distribution lies in the convex hull of `U` and 21 endpoint
+distributions.  The product-minimal representatives, with residue keys in triangular
+order, are
+
+`11:1,8; 12:1,2; 13:1,3; 14:1,4; 15:1,5; 16:1,6;
+ 22:2,9; 23:2,3; 24:2,11; 25:2,5; 26:2,13;
+ 33:3,10; 34:3,4; 35:3,5; 36:3,13;
+ 44:4,11; 45:4,5; 46:4,13; 55:5,12; 56:5,6; 66:6,13`.
+
+This is the two-coordinate specialization of the concurrent `THM-890` relation-lattice
+identity: the only primitive relation is `(B,-A)`, its residue class selects the ray,
+and its Fourier weight is exactly proportional to `1/(AB)`.
+
+### 7.3 Exact quadratic certificates for residues 2, 3, and 4
+
+For a sector-count state `m=(m_0,...,m_6)` of the five moving runners, define
+
+`n_ii=binom(m_i,2)` and `n_ij=m_i m_j` for `i<j`.
+
+There are `462` such compositions.  Extend `K_r(M)` by zero when the inner miss set
+`M` has size other than one or two, so `49F_r=E[K_r(M)]`.  Each row below specifies an
+integer weight `w_ij`, a denominator `d`, and a sign.  Omitted weights are zero.
+
+| `r,sign` | `d` | nonzero `ij:w_ij` | `L` |
+|---|---:|---|---:|
+| `2,+` | 2 | `05:1, 06:4, 13:4, 14:1, 15:3, 16:2, 24:1, 35:3, 46:1, 56:3` | `230/49` |
+| `2,-` | 1 | `03:1, 06:1, 15:1, 23:1, 25:1, 26:1, 33:1, 44:2, 45:2, 66:1` | `40/9` |
+| `3,+` | 10 | `01:2, 03:17, 05:1, 06:10, 11:3, 12:-1, 13:15, 14:-3, 15:3, 16:-2, 22:1, 23:29, 24:4, 25:10, 26:2, 33:5, 34:-4, 35:4, 36:4, 44:9, 45:-3, 46:18, 55:3, 56:-2, 66:3` | `19/4` |
+| `3,-` | 1 | `02:1, 06:2, 15:1, 16:1, 25:1, 35:1, 36:1, 44:1, 45:3` | `230/49` |
+| `4,+` | 5 | `04:5, 06:9, 13:3, 14:10, 15:9, 16:1, 23:3, 24:6, 26:1, 34:3, 36:8` | `232/49` |
+| `4,-` | 1 | `05:1, 14:2, 15:1, 22:3, 25:-2, 26:1, 35:3, 45:1, 55:3` | `14/3` |
+
+Writing `beta_ij=w_ij/d`, exact enumeration verifies for every composition
+
+`sign K_r(M(m)) <= sum_(i<=j) beta_ij n_ij(m)`.
+
+Exact evaluation on `U` and the 21 ray endpoints verifies
+
+`10 E_P[beta] <= L`.
+
+An actual core has ten positive runner pairs, each on one of those segments.  Averaging
+the pointwise inequality and summing the ten pair expectations therefore proves
+
+`sign 49F_r <= L`.
+
+Dividing the six displayed `L` values by `49` gives exactly the interval table in the
+statement.  This is a finite exact certificate, not a diameter scan.
+
+### 7.4 Low-miss consequences and the remaining sign
 
 Now let `C(x)` count colliding pairs among the six core points.  Summing the fifteen
 pair laws gives `E[C]>=15/7`.  On the event `N<=2` (mass `p_1+p_2`), six points occupy
@@ -239,9 +323,21 @@ every singleton miss pattern and at most `4` on every pair miss pattern.  Theref
 `|F_5| <= (5p_1+4p_2)/49 <= 5(p_1+p_2)/49
          <= 225/2401 < 0.097`.
 
+For residue six the largest singleton and pair kernels on the positive side are `6`
+and `2`, so
+
+`F_6 <= (6p_1+2p_2)/49
+     = (4p_1+2(p_1+p_2))/49
+     <= 230/2401 < 0.097`.
+
+The negative side is concentrated: singleton kernels are `-1` except at sector `3`,
+and the only negative pair kernels are `K_6({1,5})=K_6({2,4})=-12`.  Consequently the
+sole limiting slack crux is a higher-order bound on `A_15+A_24`; the pair-distribution
+relaxation alone does not close it.
+
 This does not prove `HYP-7024`: the signed residue kernels need more than the scalar
-collision count, and residues `2,3,4,6` remain open even at the propagation slack.  A
-second tempting shortcut also fails.  Inversion `x->1-x` does not
+collision count, and the sharp constant remains open.  A second tempting shortcut also
+fails.  Inversion `x->1-x` does not
 induce a symmetry of the six inner miss patterns because the stationary point lies on
 the sector-zero boundary and remains fixed.  For the consecutive core, for example,
 `B_1=1/35` but the naively paired `B_5=1/28`.
@@ -258,7 +354,9 @@ the sector-zero boundary and remains fixed.  For the consecutive core, for examp
   linear, signed cross-section counterpart.
 - `HYP-7021` retains short arithmetic relations for balanced owner combs.  Those
   relations are also necessary here: the attempted fixed collision-moment shortcut is
-  false precisely on relation-rich pairs such as `(1,8)`.
+  false precisely on relation-rich pairs such as `(1,8)`.  Its resolution as the
+  concurrent `THM-890` supplies the exact relation-spectrum language used by the pair
+  rays and identifies residue-six's higher-order remainder.
 - `THM-892` (the incoming invariant-mean theorem, renumbered after the `THM-891`
   collision) proves that the frame-averaged quadratic law is a divisor-lattice
   functional of the signed coincidence spectrum `N(h)`.  This is the exact arithmetic
@@ -267,8 +365,9 @@ the sector-zero boundary and remains fixed.  For the consecutive core, for examp
 - The constant-propagation ledger closes the coarse tail at `3.4 diam`.  A universal
   form of `HYP-7024`, plus a finite-`t` remainder bound, would attack the factor-17.6
   loss and could contract that residual band toward the natural `w>=diam` boundary.
-  The pair law now closes limiting residues `1` and `5` at the ledger's `0.097` slack;
-  limiting residues `2,3,4,6` and the uniform wall remainder are the honest remainder.
+  Pair rays now close limiting residues `1,...,5` and the positive side of `6` at the
+  ledger's `0.097` slack.  The negative side of `6` and the uniform wall remainder are
+  the honest remainder.
 
 ## 9. Tournament and assumption challenge
 

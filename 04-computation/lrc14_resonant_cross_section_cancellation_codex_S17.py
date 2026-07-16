@@ -16,7 +16,9 @@ image section is s, then
 It depends only on a modulo 7.  The limiting scaled coefficient a*C_a(E) is a
 signed expectation over the slow core's one- and two-miss patterns.  This file
 computes that coefficient exactly, compares it with finite far peels, and scans
-all primitive five-speed cores in [1,20].
+all primitive five-speed cores in [1,20].  It also verifies the 21-ray theorem
+for full two-runner sector distributions and exact quadratic certificates that
+close residues 2, 3, and 4 below the propagation slack.
 
 Tournament Analysis is diagnostic rather than the proof engine here.  Vertices
 are the six nonzero owner-resonance residues.  On each core the pairwise
@@ -33,6 +35,7 @@ canonical binary relation for this scalar extremal problem.
 """
 
 from fractions import Fraction
+from functools import cache
 from heapq import heapify, heappop, heappush
 from itertools import combinations, permutations
 from math import gcd, lcm
@@ -40,6 +43,7 @@ from math import gcd, lcm
 
 RESIDUES = tuple(range(1, 7))
 INNER_SECTIONS = tuple(range(1, 7))
+PAIR_TYPES = tuple((first, second) for first in range(7) for second in range(first, 7))
 EXPECTED_CONSECUTIVE = (
     Fraction(-239, 5145),
     Fraction(209, 20580),
@@ -85,6 +89,68 @@ KERNEL_NUMERATORS = {
     for residue in RESIDUES
     for size in (1, 2)
     for missed in combinations(INNER_SECTIONS, size)
+}
+
+UNIFORM_PAIR_DISTRIBUTION = {
+    pair_type: Fraction(1 if pair_type[0] == pair_type[1] else 2, 49)
+    for pair_type in PAIR_TYPES
+}
+
+PAIR_RAY_MINIMIZERS = {
+    (1, 1): (1, 8),
+    (1, 2): (1, 2),
+    (1, 3): (1, 3),
+    (1, 4): (1, 4),
+    (1, 5): (1, 5),
+    (1, 6): (1, 6),
+    (2, 2): (2, 9),
+    (2, 3): (2, 3),
+    (2, 4): (2, 11),
+    (2, 5): (2, 5),
+    (2, 6): (2, 13),
+    (3, 3): (3, 10),
+    (3, 4): (3, 4),
+    (3, 5): (3, 5),
+    (3, 6): (3, 13),
+    (4, 4): (4, 11),
+    (4, 5): (4, 5),
+    (4, 6): (4, 13),
+    (5, 5): (5, 12),
+    (5, 6): (5, 6),
+    (6, 6): (6, 13),
+}
+
+PAIR_CERTIFICATES = {
+    (2, 1): (
+        2,
+        (0, 0, 0, 0, 0, 1, 4, 0, 0, 4, 1, 3, 2, 0, 0, 1, 0, 0, 0, 0, 3, 0, 0, 0, 1, 0, 3, 0),
+        Fraction(230, 49),
+    ),
+    (2, -1): (
+        1,
+        (0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 2, 2, 0, 0, 0, 1),
+        Fraction(40, 9),
+    ),
+    (3, 1): (
+        10,
+        (0, 2, 0, 17, 0, 1, 10, 3, -1, 15, -3, 3, -2, 1, 29, 4, 10, 2, 5, -4, 4, 4, 9, -3, 18, 3, -2, 3),
+        Fraction(19, 4),
+    ),
+    (3, -1): (
+        1,
+        (0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 3, 0, 0, 0, 0),
+        Fraction(230, 49),
+    ),
+    (4, 1): (
+        5,
+        (0, 0, 0, 0, 5, 0, 9, 0, 0, 3, 10, 9, 1, 0, 3, 6, 0, 1, 0, 3, 0, 8, 0, 0, 0, 0, 0, 0),
+        Fraction(232, 49),
+    ),
+    (4, -1): (
+        1,
+        (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1, 0, 3, 0, 0, -2, 1, 0, 0, 3, 0, 0, 1, 0, 3, 0, 0),
+        Fraction(14, 3),
+    ),
 }
 
 
@@ -200,7 +266,8 @@ def finite_error(offsets, peel):
     return scaled_error / peel
 
 
-def pair_state_mass(first_speed, second_speed, predicate):
+@cache
+def pair_sector_distribution(first_speed, second_speed):
     positive = tuple(speed for speed in (first_speed, second_speed) if speed > 0)
     period_scale = lcm(*positive) if positive else 1
     states = [0, 0]
@@ -212,11 +279,10 @@ def pair_state_mass(first_speed, second_speed, predicate):
         events.append((event_step, runner_index, 1, speed, event_step))
     heapify(events)
     previous = 0
-    accepted_numerator = 0
+    pair_numerators = {pair_type: 0 for pair_type in PAIR_TYPES}
     while events:
         event_position = events[0][0]
-        if predicate(states):
-            accepted_numerator += event_position - previous
+        pair_numerators[tuple(sorted(states))] += event_position - previous
         while events and events[0][0] == event_position:
             _, runner_index, event_index, speed, event_step = heappop(events)
             states[runner_index] = (states[runner_index] + 1) % 7
@@ -233,7 +299,20 @@ def pair_state_mass(first_speed, second_speed, predicate):
                     ),
                 )
         previous = event_position
-    return Fraction(accepted_numerator, 7 * period_scale)
+    return {
+        pair_type: Fraction(numerator, 7 * period_scale)
+        for pair_type, numerator in pair_numerators.items()
+    }
+
+
+def pair_state_mass(first_speed, second_speed, predicate):
+    return sum(
+        mass
+        for pair_type, mass in pair_sector_distribution(
+            first_speed, second_speed
+        ).items()
+        if predicate(pair_type)
+    )
 
 
 def pair_collision_mass(first_speed, second_speed):
@@ -264,6 +343,77 @@ def pair_collision_closed_form(first_speed, second_speed):
     return Fraction(1, 7) + Fraction(
         residue * (7 - residue), 7 * first_reduced * second_reduced
     )
+
+
+def pair_ray_closed_form(first_speed, second_speed):
+    common_divisor = gcd(first_speed, second_speed)
+    first_reduced = first_speed // common_divisor
+    second_reduced = second_speed // common_divisor
+    if first_reduced % 7 == 0 or second_reduced % 7 == 0:
+        return UNIFORM_PAIR_DISTRIBUTION
+    residue_key = tuple(sorted((first_reduced % 7, second_reduced % 7)))
+    ray_pair = PAIR_RAY_MINIMIZERS[residue_key]
+    ray_product = ray_pair[0] * ray_pair[1]
+    ray_vertex = pair_sector_distribution(*ray_pair)
+    ray_scale = Fraction(ray_product, first_reduced * second_reduced)
+    return {
+        pair_type: UNIFORM_PAIR_DISTRIBUTION[pair_type]
+        + ray_scale
+        * (ray_vertex[pair_type] - UNIFORM_PAIR_DISTRIBUTION[pair_type])
+        for pair_type in PAIR_TYPES
+    }
+
+
+def moving_state_compositions(total=5, sections=7, prefix=()):
+    if sections == 1:
+        yield prefix + (total,)
+        return
+    for first_count in range(total + 1):
+        yield from moving_state_compositions(
+            total - first_count, sections - 1, prefix + (first_count,)
+        )
+
+
+def pair_type_counts(state):
+    return tuple(
+        (
+            state[first] * (state[first] - 1) // 2
+            if first == second
+            else state[first] * state[second]
+        )
+        for first, second in PAIR_TYPES
+    )
+
+
+def verify_pair_certificate(residue, sign):
+    denominator, integer_weights, claimed_bound = PAIR_CERTIFICATES[residue, sign]
+    if len(integer_weights) != len(PAIR_TYPES):
+        return False
+    weights = tuple(Fraction(weight, denominator) for weight in integer_weights)
+    for state in moving_state_compositions():
+        missed = tuple(
+            section for section in INNER_SECTIONS if state[section] == 0
+        )
+        kernel = KERNEL_NUMERATORS.get((residue, missed), 0)
+        weighted_pairs = sum(
+            weight * count
+            for weight, count in zip(weights, pair_type_counts(state))
+        )
+        if weighted_pairs < sign * kernel:
+            return False
+    ray_vertices = [UNIFORM_PAIR_DISTRIBUTION] + [
+        pair_sector_distribution(*PAIR_RAY_MINIMIZERS[key])
+        for key in sorted(PAIR_RAY_MINIMIZERS)
+    ]
+    worst_pair_sum = max(
+        10
+        * sum(
+            weight * distribution[pair_type]
+            for weight, pair_type in zip(weights, PAIR_TYPES)
+        )
+        for distribution in ray_vertices
+    )
+    return worst_pair_sum == claimed_bound
 
 
 def primitive(positive_speeds):
@@ -499,7 +649,7 @@ def main():
         < Fraction(1, 7),
     )
 
-    print("\n[4] Exact pair law; two universal slack closures")
+    print("\n[4] Exact pair rays; five full slack closures")
     collision_18 = pair_collision_mass(1, 8)
     collision_29 = pair_collision_mass(2, 9)
     print(f"  collision mass (1,8) = {collision_18}")
@@ -511,6 +661,32 @@ def main():
             pair_collision_mass(first, second)
             == pair_collision_closed_form(first, second)
             for first in range(80)
+            for second in range(first + 1, 81)
+        ),
+    )
+    check(
+        "21 pair-ray minimizers are product-minimal",
+        len(PAIR_RAY_MINIMIZERS) == 21
+        and all(
+            gcd(*ray_pair) == 1
+            and tuple(sorted((ray_pair[0] % 7, ray_pair[1] % 7)))
+            == residue_key
+            and not any(
+                gcd(first, second) == 1
+                and tuple(sorted((first % 7, second % 7))) == residue_key
+                and first * second < ray_pair[0] * ray_pair[1]
+                for first in range(1, ray_pair[0] * ray_pair[1])
+                for second in range(first + 1, ray_pair[0] * ray_pair[1])
+            )
+            for residue_key, ray_pair in PAIR_RAY_MINIMIZERS.items()
+        ),
+    )
+    check(
+        "full pair-sector ray law through speed 80",
+        all(
+            pair_sector_distribution(first, second)
+            == pair_ray_closed_form(first, second)
+            for first in range(1, 80)
             for second in range(first + 1, 81)
         ),
     )
@@ -555,6 +731,38 @@ def main():
         residue_five_pair_norm <= residue_five_singleton_norm
         and residue_five_bound == Fraction(225, 2401)
         and residue_five_bound < Fraction(97, 1000),
+    )
+    pair_certificate_bounds = {}
+    for residue in (2, 3, 4):
+        for sign in (1, -1):
+            check(
+                f"residue {residue} {'upper' if sign == 1 else 'lower'} pair certificate",
+                verify_pair_certificate(residue, sign),
+            )
+            pair_certificate_bounds[residue, sign] = (
+                PAIR_CERTIFICATES[residue, sign][2] / 49
+            )
+        print(
+            f"  residue {residue}: "
+            f"-{pair_certificate_bounds[residue, -1]} <= F{residue} "
+            f"<= {pair_certificate_bounds[residue, 1]}"
+        )
+        check(
+            f"residue {residue} closes below the 0.097 propagation slack",
+            max(
+                pair_certificate_bounds[residue, -1],
+                pair_certificate_bounds[residue, 1],
+            )
+            < Fraction(97, 1000),
+        )
+    residue_six_upper_bound = (
+        4 * singleton_bound + 2 * low_miss_bound
+    ) / 49
+    print(f"  F6 <= {residue_six_upper_bound}")
+    check(
+        "positive side of residue 6 closes below the 0.097 propagation slack",
+        residue_six_upper_bound == Fraction(230, 2401)
+        and residue_six_upper_bound < Fraction(97, 1000),
     )
     print("  consecutive singleton masses B1 and B5:", consecutive_patterns[(1,)], consecutive_patterns[(5,)])
     check(
@@ -606,12 +814,13 @@ def main():
     print("  PROVED: exact cross-section limit kernel and seven-residue reduction.")
     print("  PROVED: consecutive-core max coefficient 239/5145 < 0.097.")
     print("  PROVED: exact pair-collision law and p1+p2 <= 45/49.")
-    print("  PROVED: residues 1 and 5 are universally below 0.097 in the limit.")
+    print("  PROVED: residues 1 through 5 are universally below 0.097 in the limit.")
+    print("  PROVED: the positive side of residue 6 is also below 0.097.")
     print("  FINITE-EXACT: 15,246 primitive cores through D=20; unique max 16/343.")
     print("  REFUTED: fixed collision moment, miss-pattern inversion symmetry, and")
     print("           universal residue-1 dominance.")
     print("  OPEN SHARP CRUX: prove all-core max_r |r*C_r| <= 16/343.")
-    print("  OPEN SLACK CRUX: residues 2, 3, 4, and 6 still need signed bounds,")
+    print("  OPEN SLACK CRUX: the negative side of residue 6 remains,")
     print("  followed by a uniform finite-t wall remainder.")
 
 
