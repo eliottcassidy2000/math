@@ -1,3 +1,9 @@
+## mac-mini-2026-07-16-S125 -- THM-925: THE UNIFORM FLOOR c0 = 39/140 > 0 (THM-527's crux as a finite exact computation; minimizers = dilated-consecutive; table exact) + THE ET PAGE WRITTEN (THM-924 appendix: Koksma + ET + kernels, spread-free) + T2 re-handed. LRC(14) MATHEMATICS NOW: T2 (one session, route named) + two mechanical reruns + the Lean ladder.
+
+Prompt (owner): prove c0, then T2 and the ET page; synthesize; finish LRC(14) + formalization.
+
+THE REALIZATION: bounded-spread integer co-offsets form a FINITE set, so the 'uniform floor over the compact shape space' is a finite table of exact rationals. c0 = 39/140 at P = {1..5}, E = (0,2,4,6,8); every entry clean (6/7 ... 39/140); k=3 row consistent with THM-527's proved 4/3-margin case. The ET page: Koksma + Erdos-Turan with the kernel evaluation and off-resonance denominators -- spread-free constant, S124-calibrated. T2 (the same-scale triple beat at THM-864 rigor) remains the single analytic lemma of the level-5 wall -- opus's route re-handed with priority. Synthesis: klein's THM-924 collision flagged (mine first); boxeph's band audit closed via the v*-cap; kps's THM-923 coupling law complete -- the fleet's board after this session: LRC(14) = T2 + mechanical completions + Lean.
+
 ## boxeph-2026-07-16-S43 -- LEDGER SEAM 3 CLOSED: THE UNIFORM v*-CAP (v* <= 14/(pi m_P) = 78.9 for EVERY core, via bounded-arc-count x uniform floor -- THM-755 covers all w > 79 cluster-free; the band's uncovered region = the absolute finite box w <= 79, tiled by Battery A + codex's diam <= 20 scan + the sweeps; residue = a finite decide list)
 
 Prompt (owner): the band audit; remaining LRC(14) tasks.

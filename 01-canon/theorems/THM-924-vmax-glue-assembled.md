@@ -44,3 +44,17 @@ calibrated in the .out).
   opus THM-923 (two-scale picture).
 - **Lean**: rung one committed (FragmentationLemma.lean); rungs two/three named
   (THM-866 walk, THM-878 clock).
+
+
+## Appendix (S125) — the ET page, written
+
+**Lemma (branch 2).** For non-resonant large-spread E (no e_i/Vmax within 1/(qQ₀) of a
+rational p/q with q ≤ Q₀): with x_j = (j+½)/Vmax and the good-set indicator's bounded
+variation V_G (≤ 2·#arcs of the FIXED finite union defining maxgap > 2/7 intersected
+with G_P — a P-and-diff quantity, Vmax-free), Koksma's inequality gives
+|ρ_K − ρ*| ≤ V_G · D*_{Vmax}(x·E), and Erdős–Turán bounds the star discrepancy of the
+AP-orbit by (k/H) + Σ_{h ≤ H} (c/h)·Π-kernel terms |sin(πhe_i)/ (Vmax·sin(πhe_i/Vmax))|,
+each ≤ 1/(Vmax·‖he_i/Vmax‖) — off-resonance ‖he_i/Vmax‖ ≥ 1/(qQ₀)-scale for h ≤ H = Q₀,
+so the sum is ≤ c·Q₀²·log Q₀/Vmax: **|ρ_K − ρ*| ≤ C(Q₀, P, diffs)/Vmax, spread-free**,
+matching the S124 calibration (err·Vmax = 0.3–7). Resonant e_i are branch 3 (exact
+q-periodicity). ∎ (Constants tabulated in the S124 .out.)
