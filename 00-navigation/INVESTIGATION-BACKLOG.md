@@ -1,5 +1,27 @@
 # Investigation Backlog
 
+## Lead boxeph-2026-07-16-S27: FIVE HIGH-LEVERAGE GOALS (self-set, owner-directed "come up with your own goals")
+- **Source:** the S23-S27 arc (THM-882/884/885/886/887/888) + the assessment.
+- **Status:** open; G1 is my next-session intent.
+1. **G1 -- OWN kps task (b), the constant propagation (k = 8..13 rows):** unowned for 12+ h,
+   the glue seam both j >= 7 and route [A] rest on; THM-887(V)/THM-888 built the uniform
+   front end (explicit per-cluster constants, scan-free); consume them through THM-727/729
+   into row closures. THE single highest-leverage mechanical item in the program.
+2. **G2 -- the fragmentation interior sharpening + j=6 harvest:** shards persist at
+   /home/claude/j6sweep/; the m = 2..5 interior stages need a covering-aware cut; harvest
+   RESULT lines into THM-885 on completion.
+3. **G3 -- Lean decide-batches for the new exact objects:** D(q) cases (THM-878), THM-882
+   per-cell solves, exact discs (THM-884), sweep leaf certificates (THM-885), comb
+   certificates (THM-888(A)) -- all decide-shaped; the citation skeleton wants them.
+4. **G4 -- the torsion-sieve grammar (reflection + theorem candidate):** THM-878's D(q),
+   THM-882's flat/good doubling, the mu6 tight locus, and the mode combs are ONE
+   "torsion vs threshold" grammar; candidate little theorem: the comb structure of D(q)
+   itself (D as a function on moduli = a comb diagonal?).
+5. **G5 -- engineering: the comb-certificate library:** scan-free Q_s certificates in
+   O(sum e) from comb bookkeeping (THM-888) -- a mod_rank-style PyPI candidate serving the
+   equal-priority engineering mandate; also the slice-Parseval sharpening feeds it.
+Also named: the slice-interior Parseval (THM-888(C)) and the CRT compound-hit refinement.
+
 ## Lead death-star-2026-07-16-S19: THM-889 compact-core resonant-mode law — the flatness question SETTLED as a law
 - **Status:** "prove compact-core flatness" resolved: absolute flatness FALSE asymptotically for
   BOTH compact species (incoherent: exact m̂*-law, slope 0.0495–0.078, validated 1.03–1.09 with

@@ -1,0 +1,28 @@
+============================================================================
+THE SHARP OFF-RESONANCE CONSTANT -- referees
+  (MI)/(MI0) multiplication identities: True
+  (B) slice collapse exact: True
+
+============================================================================
+SHARP BOUND vs EXACT vs CRUDE LAW (S26 battery, coprime w)
+  [family {1..6,60}] w=   11: exact Q_s/M =    0.50; SHARP/M =   106.14 (x 213.1 over exact); cover: True
+  [family {1..6,60}] w=   59: exact Q_s/M =    0.77; SHARP/M =   108.14 (x 141.1 over exact); cover: True
+  [family {1..6,60}] w=   61: exact Q_s/M =    3.22; SHARP/M =   107.87 (x  33.5 over exact); cover: True
+  [family {1..6,60}] w=  127: exact Q_s/M =   11.77; SHARP/M =   106.70 (x   9.1 over exact); cover: True
+  [family {1..6,60}] w=  187: exact Q_s/M =   21.21; SHARP/M =   106.79 (x   5.0 over exact); cover: True
+  [two-owner {1..5,36,60}] w=   11: exact Q_s/M =    0.40; SHARP/M =   146.51 (x 367.1 over exact); cover: True
+  [two-owner {1..5,36,60}] w=   37: exact Q_s/M =    1.61; SHARP/M =   139.43 (x  86.6 over exact); cover: True
+  [two-owner {1..5,36,60}] w=   71: exact Q_s/M =    1.52; SHARP/M =   146.78 (x  96.5 over exact); cover: True
+  [two-owner {1..5,36,60}] w=  109: exact Q_s/M =    0.97; SHARP/M =   146.51 (x 150.8 over exact); cover: True
+  [two-large {1..5,56,84}] w=   11: exact Q_s/M =    0.34; SHARP/M =   226.69 (x 675.5 over exact); cover: True
+  [two-large {1..5,56,84}] w=  253: exact Q_s/M =    3.47; SHARP/M =   206.06 (x  59.4 over exact); cover: True
+  [two-large {1..5,56,84}] w=  113: exact Q_s/M =    3.10; SHARP/M =   235.43 (x  75.9 over exact); cover: True
+  [balanced {12,15,20,21,28,30,35}] w=   11: exact Q_s/M =    0.40; SHARP/M =   118.23 (x 295.2 over exact); cover: True
+  [balanced {12,15,20,21,28,30,35}] w=  421: exact Q_s/M =    1.01; SHARP/M =   118.22 (x 116.9 over exact); cover: True
+  [balanced {12,15,20,21,28,30,35}] w=   61: exact Q_s/M =    0.78; SHARP/M =   118.20 (x 151.4 over exact); cover: True
+  [near-AP {8,9,10,12,14,15,18}] w=   11: exact Q_s/M =    0.91; SHARP/M =    57.20 (x  63.1 over exact); cover: True
+  [near-AP {8,9,10,12,14,15,18}] w= 2521: exact Q_s/M =    1.72; SHARP/M =    63.41 (x  36.8 over exact); cover: True
+  worst sharp/exact ratio on battery: 675.5
+done
+  (A) comb-diagonal closed form exact: True
+      note: arg = q7*e*r*wbar/P = r*wbar/7 mod 1 -> depends on wbar mod 7 ONLY
