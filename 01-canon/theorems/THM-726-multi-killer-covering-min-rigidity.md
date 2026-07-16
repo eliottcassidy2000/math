@@ -92,9 +92,9 @@ touches `14/183`; every shorter core (multi-killer) sits at `≥1/13`, because a
 core `{1..k}` has its *own* higher LRC floor `1/(k+1)` and the outliers cannot drag it below
 `1/13`.
 
-## Honest status — UPDATED 2026-07-16 (mac-mini S114, THM-882)
+## Honest status — UPDATED 2026-07-16 (mac-mini S114, THM-883)
 
-**Step 1 (far-element monotonicity) is now REPLACED by a proved lemma**: THM-882's
+**Step 1 (far-element monotonicity) is now REPLACED by a proved lemma**: THM-883's
 Fragmentation Lemma bounds every outlier explicitly (w_min <= 2j/((13-2j) ell_max);
 last outlier <= 2/(13 ell_max); recursion non-vacuous by LRC(<=13)), making the
 configuration space provably finite for j <= 6. Exact sweep: j <= 4 complete (zero

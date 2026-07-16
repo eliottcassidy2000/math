@@ -1,5 +1,5 @@
 ---
-id: THM-882
+id: THM-883  # renumbered from 882 (boxeph flat-law first-pushed 882)
 title: THE FRAGMENTATION LEMMA AND THE RIGORIZATION OF THM-726 — an arc-grid of modulus w intersects an interval I in measure ≤ (|I|w+1)·2/(13w), so if a covering 13-set with j ≥ 2 outliers has M < 1/13, every component of the core's good set obeys ℓ·(13−2j) ≤ 2Σ1/w: the smallest outlier is EXPLICITLY BOUNDED (w_min ≤ 2j/((13−2j)·ℓ_max)), the recursion never dies early (LRC(≤13) keeps every intermediate good set nonempty), and the last outlier must swallow whole components inside single arcs (w_j ≤ 2/(13·ℓ_max)); hence for j ≤ 6 the multi-killer configuration space is PROVABLY FINITE with explicit bounds — THM-726's unproved "far-element monotonicity" (Step 1) is replaced by a theorem, and the exact sweep of the resulting finite box finds NO configuration below 1/13 (j ≤ 4 complete: 5,260 leaves; j = 5,6 sweep launched on the proved-finite box; j ≥ 7 vacuous-regime probe: 7,107 adversarial trials, none below 1/13 — routed to the loose/density tile)
 status: Fragmentation Lemma + explicit finiteness PROVED (all j ≤ 6); exact sweep COMPLETE for j ≤ 4 (zero violations; contains every known extremal and the kps-S127cont58 census range); j = 5,6 sweep running on the proved-finite box (mechanical; bounds proved); j ≥ 7 outside the lemma's range — probed (0/7107) and covered by the loose/density tile (THM-745/746, S58 closure)
 source: mac-mini-2026-07-16-S114 (owner: "rigorize THM-726 and close the last covering residual")
@@ -10,7 +10,7 @@ related: [THM-724 (single-killer half, untouched), THM-869 (the shelf/overload p
 scripts: 04-computation/thm726_rigorization_macmini_S114.py (exact, j ≤ 4), thm726_rigorization_fast_macmini_S114.py (certified-float sweep), thm726_j7plus_probe_macmini_S114.py -> 05-knowledge/results/thm726_rigorization*_macmini_S114.out
 ---
 
-# THM-882 — the Fragmentation Lemma; THM-726 rigorized
+# THM-883 — the Fragmentation Lemma; THM-726 rigorized
 
 **Setting.** S = P ∪ W primitive covering 13-set; P = S ∩ {1..12}; W = outliers ≥ 13,
 j = |W| ≥ 2. B_w = the open bad set of w at radius 1/13 (arcs of width 2/(13w) at the
