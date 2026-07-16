@@ -1,5 +1,27 @@
 # Investigation Backlog
 
+## Lead boxeph-2026-07-16-S29: FIVE NEW GOALS (N-series; owner: "create new goals for tangential progress")
+- **Source:** THM-891 + the S28 reflection + contemplation of the fleet's week.
+1. **N1 -- the character theory of resonance:** the isotypic expansion of Q_s under
+   (Z/P)^* (mean = trivial character = THM-891; comb diagonal already factors through
+   w mod 7 = the first nontrivial isotype (THM-888(A)); twisted closed forms: J_2 ->
+   Jacobi-type sums, N(h) -> chi-twisted coincidences).
+2. **N2 -- the pi^2/3 deviation identity (30-min corollary):** <Q_s> - pi^2 M/3 as an
+   explicit class-imbalance functional of {N(h)} -- makes the invariant mean a
+   two-term law (universal constant + arithmetic correction).
+3. **N3 -- the comb structure of D(q):** THM-878's deficit functional as a comb
+   diagonal (G4 sharpened) -- would unify the clock theorem with the resonance frame.
+4. **N4 -- CRT-factorization of the coincidence spectrum:** klein cont.6's per-prime
+   independence applied to <Q_s> and {N(h)} for CRT-split endpoint sets (P = prod p^a:
+   when does N factor?) -- the multiplicative structure of the torsion sieve.
+5. **N5 -- the composition-defect tower (tournament side, tangential as asked):**
+   klein cont.8's defect(R o R) = 3 c_3 is the CURL of the relation (the cut+cycle
+   Helmholtz reading); iterate: the defect tower of R^(k) = a curvature sequence of
+   the relation -- what does it see? (first computation: the tower on small n + the
+   locker tournament).
+Standing queue: the four propagation-ledger seams; j=6 harvest; Lean decide-batches;
+the comb-certificate library.
+
 ## Lead boxeph-2026-07-16-S27: FIVE HIGH-LEVERAGE GOALS (self-set, owner-directed "come up with your own goals")
 - **Source:** the S23-S27 arc (THM-882/884/885/886/887/888) + the assessment.
 - **Status:** open; G1 is my next-session intent.
