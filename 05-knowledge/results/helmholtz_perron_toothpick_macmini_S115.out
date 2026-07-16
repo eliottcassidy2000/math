@@ -1,0 +1,23 @@
+(A) THE HELMHOLTZ IDENTITY -- exact check on random + exhaustive tournaments
+   gradient energy == x/(4n) on 400 random tournaments n=3..9: True
+   (proof: sum_(u<v) (d_u-d_v)^2 = n sum d^2 - (sum d)^2 = n x; /(2n)^2 = x/(4n))
+   cycle energy = C(n,2) - x/(4n); harmonic part = 0 (complete graph).
+
+(B) KENDALL-WEI / PERRON
+   n=5: labeled 1024; lambda=0 count 120 (= n! = 120: True)  corr(lambda, -x) = 0.9313
+        x-levels: 6; levels with lambda-spread > 0: 2  (all nonterminal levels split: False)
+        per-level (x: lam-range): {0: (np.float64(2.0), np.float64(2.0)), 8: (np.float64(1.839), np.float64(1.864)), 16: (np.float64(1.659), np.float64(1.719)), 24: (np.float64(1.395), np.float64(1.395)), 32: (np.float64(1.0), np.float64(1.0)), 40: (np.float64(0.0), np.float64(0.0))}
+        corr(lambda, cycle-energy) = 0.9313
+   n=6: labeled 32768; lambda=0 count 720 (= n! = 720: True)  corr(lambda, -x) = 0.9218
+        x-levels: 9; levels with lambda-spread > 0: 7  (all nonterminal levels split: True)
+        corr(lambda, cycle-energy) = 0.9218
+
+(C) TOOTHPICK / AUTOMATA PROBES
+   A000568 == A002785 (mod 2) for n <= 12: True  [involution T <-> T^op: proved]
+   merged metagraph counts V(G_n/Z2) n=3..12: [2, 3, 10, 34, 272, 3528, 97144, 4870920, 452017376, 77054862880]
+   OEIS candidate string: 2,3,10,34,272,3528,97144,4870920,452017376,77054862880
+   v_2(A000568): [(3, 1), (4, 2), (5, 2), (6, 3), (7, 3), (8, 5), (9, 4), (10, 6), (11, 5), (12, 7)]
+   generation increments (new mass per n): [2, 8, 44, 400, 6424, 184656]...
+   SC counts A002785 even for n >= 3 too: pairs within SC = quasi-fixed structure (THM-852 frame)
+
+DONE

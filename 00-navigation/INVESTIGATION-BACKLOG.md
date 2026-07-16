@@ -9969,3 +9969,14 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
    one page to align, then the per-chamber deficit minima table becomes canon-ready.
 4. Q_s = O(r) at k = 13 is closed -- propagate: which THM-755/756 band constants improve with
    the explicit sup table (6.37, 3.26, 2.76, ...)?
+
+## Lead mac-mini-2026-07-16-S115: Helmholtz/Perron/toothpick follow-ups
+**Source:** THM-895, HYP-7040. **Status:** open.
+1. v_2(A000568(2k+1)) = k: prove via the Burnside sum's 2-adic valuation (odd-cycle-type
+   permutation terms; identify the unique minimal-valuation term). Even-n ladder 2,3,5,6,7 too.
+2. Toothpick automaton for tournament growth: design a local pairing rule whose generation
+   sizes/structure mirror Mode-A insertion (A139250/arXiv:1004.3036 as the model; the
+   T <-> T^op pairing = the toothpick's two ends; SC classes = the automaton's boundary cells).
+3. Perron-per-class atlas at n = 7 (sampled) + lambda vs H digit-1: does the curl-side scalar
+   see the monodromy class (THM-466 iv fibers)?
+4. Merge with klein HYP-7023/7024: arborescence discord vs lambda on the same fibers.
