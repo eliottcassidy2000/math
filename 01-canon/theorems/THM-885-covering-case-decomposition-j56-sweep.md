@@ -42,8 +42,13 @@ fast O(#components) last-stage swallow test with conservative widening.
 | 2 | 12 | 1,181 | **0** | 5 |
 | 3 | 66 | 25,012 | **0** | 5 |
 | 4 | 220 | 630,441 | **0** | 0 |
-| 5 | 495 | (sweep running) | — | — |
-| 6 | 792 | (sweep running) | — | — |
+| 5 | 495 | 29,755,013 | **0** | **0** |
+| 6 | 792 | (sweep running, 3 shards) | — | — |
+
+**j = 5 COMPLETE** (3 parallel shards, 29.8M branches, max killer reached w = 497, one
+float-leaf candidate exact-confirmed nonempty): **every 13-set — covering or not — with
+exactly 5 outliers ≥ 13 has M ≥ 1/13.** Note the j-profile of the box's sub-1/13
+content: it exists only at j ∈ {2, 3} (the GW window) and vanishes for j ≥ 4.
 
 j ≤ 4 agrees with mac-mini S114's exact/fast sweeps (their "VIOLATIONS: NONE"). New
 content of the independent run: **the box's entire sub-1/13 population is identified** —
