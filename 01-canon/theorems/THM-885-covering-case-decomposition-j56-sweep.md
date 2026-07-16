@@ -1,7 +1,7 @@
 ---
 id: THM-885
 title: THE COVERING-CASE DECOMPOSITION OF LRC(14), AND THE j = 5, 6 SWEEP COMPLETION — stratify every covering 13-set by j = #outliers ≥ 13. (j ≤ 1) impossible or single-killer: THM-724 (PROVED, Lean, M ≥ 14/183). (2 ≤ j ≤ 6) the fragmentation box (THM-883-macmini Lemmas 1–3): INDEPENDENT second implementation sweeps the whole box — j = 2, 3, 4 CROSS-VALIDATED (0 covering violations; the box's entire sub-1/13 content is the KNOWN non-covering Goddyn–Wong-type tight families, M = 1/14 at the tight-locus 14ths) and j = 5, 6 COMPLETED (RESULTS BELOW) ⟹ every covering 13-set with 2 ≤ j ≤ 6 has M ≥ 1/13. (j ≥ 7) THM-663's density chain covers every covering-saturated set uniformly, modulo the ONE named upstream item THM-527-A (finite-Vmax glue), whose large-spread half is now the Q_s-rate chain (THM-727/728/729) with the k = 13 instance PROVED (THM-879) and rows k = 8..12 pending constant propagation. NET: the covering case of LRC(14) = [proved strata j ≤ 6, elementary + finite] ⊕ [j ≥ 7 = THM-663 modulo the propagation seam]
-status: DRAFT — j = 5, 6 sweep running (this file finalizes on completion); j ≤ 4 cross-validation DONE (independent implementation, identical verdicts to mac-mini S114); decomposition audit DONE (every stratum's covering theorem named with honest hypotheses)
+status: j ≤ 5 PROVED (j ≤ 4 cross-validated vs mac-mini S114, identical verdicts, sub-1/13 box census new; j = 5 CLOSED full-box: 29.8M branches, zero sub-1/13 configs covering or not); decomposition audit DONE (every stratum's covering theorem named with honest hypotheses); j = 6 covering-only sweep IN PROGRESS (handoff: /home/claude/j6sweep/ on boxeph, ~5-6h; stratum meanwhile covered by THM-663 modulo glue); j ≥ 7 = THM-663 modulo the Q_s-propagation seam
 source: boxeph-2026-07-16-S24 (owner directive: take the decidable compact-core sweep; keep proving little statements)
 depends_on:
   - THM-883 (mac-mini)  # fragmentation lemmas 1-3 (the box)
@@ -43,12 +43,23 @@ fast O(#components) last-stage swallow test with conservative widening.
 | 3 | 66 | 25,012 | **0** | 5 |
 | 4 | 220 | 630,441 | **0** | 0 |
 | 5 | 495 | 29,755,013 | **0** | **0** |
-| 6 | 792 | (sweep running, 3 shards) | — | — |
+| 6 | 792 | covering-only sweep IN PROGRESS | — | — |
 
 **j = 5 COMPLETE** (3 parallel shards, 29.8M branches, max killer reached w = 497, one
 float-leaf candidate exact-confirmed nonempty): **every 13-set — covering or not — with
 exactly 5 outliers ≥ 13 has M ≥ 1/13.** Note the j-profile of the box's sub-1/13
 content: it exists only at j ∈ {2, 3} (the GW window) and vanishes for j ≥ 4.
+
+**j = 6 status (honest).** The full box at j = 6 is genuinely large (first-stage factor
+13−2j = 1; measured ≥ 75 s/shape ⟹ ~10⁹ branches). Running now with the SOUND
+covering-only restriction (every still-missing modulus divides the last killer:
+w₆ ∈ lcm(Q_miss)·Z — restricts the conclusion to covering 13-sets, which is THM-726's
+statement): 3 shards on boxeph, logs at `/home/claude/j6sweep/` (untracked), ~5–6 h/shard
+projected; whoever sessions next on this box should commit the RESULT lines here and to
+the .out. Until it lands, the j = 6 stratum is covered — like j ≥ 7 — by THM-663's
+density chain modulo the glue; the sweep's marginal value at j = 6 is elementary
+unconditionality. mac-mini's own S114 j = 5, 6 sweep may complete first — reconcile
+(their j = 5, if it lands, double-witnesses mine).
 
 j ≤ 4 agrees with mac-mini S114's exact/fast sweeps (their "VIOLATIONS: NONE"). New
 content of the independent run: **the box's entire sub-1/13 population is identified** —
