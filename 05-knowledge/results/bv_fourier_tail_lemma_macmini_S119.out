@@ -1,0 +1,34 @@
+||W||_inf over nonzero residues = 37.7545
+zero-marginality check: max |W(0,.,.)| = 9.00e-15
+
+line sums S_k (primitive, all k_i != 0, |k_i| <= 6, certified):
+   S_(1, 1, 1) = -0.112974 (+-1.1e-06)
+   S_(1, -1, 1) = -0.092157 (+-1.1e-06)
+   S_(1, 1, -1) = -0.092157 (+-1.1e-06)
+   S_(1, -1, -1) = -0.092157 (+-1.1e-06)
+   S_(2, 2, 1) = -0.067208 (+-2.7e-07)
+   S_(1, 2, 2) = -0.067208 (+-2.7e-07)
+   S_(2, 1, 2) = -0.067208 (+-2.7e-07)
+   S_(1, -2, -2) = -0.066009 (+-2.7e-07)
+   S_(2, 2, -1) = -0.066009 (+-2.7e-07)
+   S_(2, -1, 2) = -0.066009 (+-2.7e-07)
+   S_(3, 3, -2) = +0.058682 (+-6.0e-08)
+   S_(2, -3, -3) = +0.058682 (+-6.0e-08)
+   S_(3, -2, 3) = +0.058682 (+-6.0e-08)
+   S_(1, -1, -2) = -0.057719 (+-5.4e-07)
+   max positive line sum = +0.058682
+
+calibration: relations of (1,2,7): (1,3,-1) [1+6-7], (3,2,-1) [3+4-7], (5,1,-1), ...
+   S_(1, 3, -1) = -0.015321
+   S_(3, 2, -1) = +0.004084
+   S_(5, 1, -1) = +0.023087
+   sum of first three lines = +0.011851  vs measured T(1,2,7) = +0.100714
+   direct lattice sum (|n|<=260) T(1,2,7) = +0.099967  (measured +0.100714)
+
+ASSEMBLED VERDICT (q <= beta0 + pair-sum + T):
+   beta0 = 0.368892; target 0.47; margin 0.101108
+   worst single line: +0.058682; worst measured pair-sum+T (codex scan max residual: 81/175 - beta0 = 0.093965)
+   line-based sup estimate: beta0 + maxS + max positive pair D (+0.0159) + second-line corrections
+   = 0.4435  (< 0.47: True)
+
+DONE
