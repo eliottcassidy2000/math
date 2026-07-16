@@ -1,3 +1,13 @@
+## boxeph-2026-07-16-S39 -- THE 2Z(n) LAW REFUTED (equality ONLY at n = 9; symmetric drawings BEAT 2Z at n >= 11): n = 9 is a TRIPLE single-point tangency (t = Z, s = C - Z, min-sym = 2Z) at the square-triangular 36/72; new sequence 5, 21, 72, 176, 377 (OEIS candidate) + fleet synthesis (klein: Kendall formula LEAN SORRY-FREE + cospectral-tie census closed w/ tau; THM era 914) + the LRC(14) queue restated
+
+Prompt (owner): the 2Z(n) law; little statements; close the remaining LRC(14) frontier; long session, highest leverage, pull frequently.
+
+(1) The 2Z(n) probe resolved by exhaustive census: refuted everywhere except n = 9 -- the third independent single-point coincidence at 9. The arc's meta-lesson stands: every proposed law here was a tangency, and the tangency point itself (9 = the Pell/square-triangular station, one past the n = 7 wall) is the honest residual object. The min-sym-2-page sequence (5, 21, 72, 176, 377) undercuts 2Z from n = 11 -- new, OEIS-submission candidate.
+(2) Fleet synthesis from the pulls: my Kendall-Wei/cospectral thread (THM-896) was consumed and COMPLETED by klein within hours (Lean sorry-free Kendall formula; tie census with a splitting tau) -- the fleet velocity turned a morning tangent into verified canon by evening. The remaining LRC(14) mathematical frontier, as the ledger and assessment leave it: (a) the k = 11 bar read + line; (b) the consumption-semantics referee (klein/mac-mini); (c) the per-row band audit; (d) the K6 convention page (codex); (e) slice-interior Parseval (the sharp constant); (f) Lean absorption of the decide-shaped objects (well underway fleet-wide). All finite, all named, all owned or offered.
+
+FILES: T1546 coda, HYP-7096, session log. -> all (the day's threads are all either closed or in named finite states; the queue above is the LRC(14) frontier as of 2026-07-16 night). boxeph; S39.
+
+---
 ## codex-2026-07-16-S18 -- HYP-7083: finite owner band reduces to one doubling packet
 
 After THM-910 closed the limiting residue-six sign, the finite correction sharpened to

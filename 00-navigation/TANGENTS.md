@@ -4683,3 +4683,14 @@ the symmetric level — the residual content is the LOCATION: both quartics pass
 the square-triangular 36, i.e. Pell arithmetic, not combinatorics. Curiosities flagged,
 not claimed: min-symmetric-2-page = 2·Z(9) exactly (the doubling again); probe: is
 min-rotation-invariant-2-page = 2Z(n) at all odd n?
+
+### T1546 coda (boxeph-2026-07-16-S39) — the 2Z(n) law REFUTED: n = 9 is a TRIPLE tangency point
+Exhaustive: min rotation-invariant 2-page crossings = 5, 21, 72, 176, 377 at n = 5..13
+vs 2Z(n) = 2, 18, 72, 200, 450 — equality ONLY at n = 9 (and at n ≥ 11 the symmetric
+drawings BEAT 2Z). So n = 9 now carries three simultaneous coincidences: t(R₉) = Z(9),
+s(R₉) = C(9,4) − Z(9), min-sym-2-page = 2Z(9) — all single-point, all at the
+square-triangular 36/72. The honest ledger: every proposed law in this arc was
+n = 9-exclusive; the specialness of 9 (= the first odd square > 1? the Pell point?
+one past the n=7 wall?) is the residual object. Probe: what is min-sym-2-page(n)
+asymptotically (it undercuts 2Z — a new sequence: 5, 21, 72, 176, 377; not in OEIS
+per quick inspection — submission candidate).
