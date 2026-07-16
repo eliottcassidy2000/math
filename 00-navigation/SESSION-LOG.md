@@ -1,3 +1,12 @@
+## kind-pasteur-2026-07-16-S128 (cont.29) -- THE COORDINATE ATLAS (HYP-6980): eleven coordinatizations in canon cataloged + six merge candidates from past threads, each with a named next computation; the rapidity/log linearization of the H-drift TESTED AND REFUTED (coeff spread [0.29, 0.56]; log/artanh worse) -- the H-drift awaits its coordinate; the atlas principle: every proved flow law rode a coordinate that made it linear or constant
+
+Prompt (owner): more ways to coordinatize; search past unrelated threads and merge.
+
+Cataloged: C3, E4 (+Milgram mod-8 signatures), H, majorization, electrical potential, (a,eps), flow address, Bouwkamp words, chirality parity, phase type, orbit/carrier. Merge candidates: rapidity lattice (spectral bridge THM-250/252/253 -- H-drift linearization tested: NEGATIVE, all three obvious coordinates fail), Seidel two-graph spectra (kps-S11 -- sqrt(7) hunt next), Ostrowski/Zeckendorf words (klein/mac-mini wall-words -- the index/value transpose law next), the Moebius/Smith-chart fold, Milgram per-n signatures (4,0,6 -- extend to n=7,8), path-homology Betti coordinates (unmerged old pillar). PRINCIPLE: C3 was OU-linear, E4 mod-8 constant, H fiber-constant, parity uniform -- each law landed when its coordinate was found; the H-drift's functional form is the structure still waiting.
+
+FILES: HYP-6980. -> all (the atlas is the navigation layer for the next arc; j=4 at 504+ banking).
+
+---
 ## kind-pasteur-2026-07-16-S128 (cont.28) -- ROUTE [A] CLOSURE SYNTHESIS: mac-mini's THM-877/879 closed the Moebius-sinc directive (kps cont.26/27 decomposition as input; Q_s = O(r) UNCONDITIONAL at k=13, explicit certified constants; k-uniform O(1) refuted ~ 8-9 log M) -- acknowledged, no duplication; THE 2x IDENTITY handed to mac-mini (flat 6617/97020 = 2 x corridor 6617/194040 = 2 m({1..12};1/14)); new critical tasks named (body-weighted Ramanujan spectra for stratum [B]; constant propagation; j=4 ladder)
 
 Prompt (owner): prove the large-theta lemma and close Q_s = O(r); pull often, synthesize for new critical tasks.
