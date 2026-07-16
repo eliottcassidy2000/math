@@ -1,0 +1,21 @@
+A. THM-885 UNIFORM BOUND vs the exact audited maxima:
+   family | t | main term t*SUM_s max_a | + C2 remainder | bound | audited max
+   [0..5,6]    |   6 |    4.972 |    260.2 |    265.2 |  1.0000   (OK)
+   [0..5,12]   |  12 |    9.945 |    281.0 |    290.9 |  0.9116   (OK)
+   [0..5,25]   |  25 |   20.719 |    312.5 |    333.2 |  1.5714   (OK)
+   [0..5,50]   |  50 |   41.437 |    354.9 |    396.4 |  2.3435   (OK)
+   deep well   | 182 |   61.429 |   1722.5 |   1783.9 |  3.9951   (OK)
+   near-AP     |  84 |   23.387 |   1537.1 |   1560.4 |  2.4016   (OK)
+PASS THM-885 bound dominates every exact audited max (uniform, linear main term t*SUM_s max_a |1-e||mhat| + Abel/Koksma remainder)
+   slow-six linear constant SUM_s max_a = 0.8287 (measured max|S|/t was ~0.047: cross-section cancellation gives the factor ~7 slack — the bound is uniform, not sharp)
+
+B. THE RETURNED THICKENED ALPHA (exact witness-locus measure W):
+   AP {1..13}                : W = 477/1078 = 0.442486
+   2AP-1 {1,3..25}           : W = 477/1078 = 0.442486
+   GAP 7x2 {1..7}u{10..16}   : W = 424423/630630 = 0.673014
+   near-AP {21..32}          : W = 13823/24255 = 0.569903
+PASS W is AFFINE-INVARIANT: W(AP) = W(2AP-1) = 477/1078 EXACTLY (dilation = the y=2x substitution; translation = a rigid rotation of all positions by cx — gaps blind to it): W lives in E's invariance class, NOT L's — the affine twins are invisible BY THEOREM
+PASS affine invariance verified both ways: W(2S) = W(S) and W(S+1) = W(S), exact
+PASS W SEPARATES THE SAW-BLIND PAIR: GAP 7x2 (0.6730) vs near-AP {21..32} (0.5699), ratio 1.181, exact rationals — W and saw are COMPLEMENTARY coordinates (orthogonal invariance classes): (Freiman dim, saw, W) separates all S181 twins
+
+=== 4 checks, 4 passed ===

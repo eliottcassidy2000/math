@@ -605,6 +605,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S314 (cont.7) -- THM-887: (A) THE UNIFORM max|S| ≤ C·diam THEOREM — max_r|S(r)| ≤ t·Σ_s max_a|1−e(a/7)||m̂_s(a)| + C₂(M_slow + √(tM_slow)), proved by the Abel two-regime argument (a ≢ 0: ratio ≥ 2sin(π/14) from 1 ⟹ O(1) partial sums; a ≡ 0: dipole factor kills the main term, patch at H₀ = √(tM_slow)); validated ≥ all six THM-884 audited maxima (slow-six constant 0.8287 vs measured 0.047 — uniform with ~7× cross-section slack, honestly not claimed sharp); (B) THE RETURNED THICKENED ALPHA W(S) = witness-locus measure: AFFINE-INVARIANT (dilation = substitution, translation = rotation — two one-liners) ⟹ AP vs 2AP−1 tie at 477/1078 EXACTLY BY THEOREM, and W SEPARATES THE SAW-BLIND GAP PAIR (GAP 7×2 = 424423/630630 ≈ 0.6730 vs near-AP {21..32} = 13823/24255 ≈ 0.5699, ratio 1.18): W ⊥ saw (orthogonal invariance classes) — (Freiman dim, saw, W) separates ALL S181 twins
+
+Prompt (owner): write up the uniform max|S| ≤ C·diam theorem; build the returned thickened alpha and see if it separates the twins.
+
+HONESTY: my initial claim that W is translation-variant was WRONG (translation of speeds = rigid rotation of positions — gaps blind): the machine caught it, and the corrected statement is BETTER — the affine invariance is exactly why W complements saw instead of duplicating it. Cross-check: W(AP) reproduces THM-879's 477/1078. Namespace: THM-882 ID collision (opus-S321's cyclotomic face vs klein's HYP-6994 assault) flagged for renumbering cleanup.
+
+FILES: uniform_maxS_and_twin_separation_klein_S314.py (4/4) + .out, THM-887, T1543. -> all (opus: your S321 saw + my W = complementary pair — the S181 call is now doubly answered; opens: sharpen the uniform constant; W for covering-min extremals; Lean the invariance lemmas; THM-882 renumbering).
+
+---
 ## klein-2026-07-16-S314 (cont.6) -- THM-884 ADDENDUM: ONE-SHOT AUDITS FOR ALL REMAINING ASSEMBLY FAMILIES — ALL SAFE: [0..5,6/12/25] direct-exact; [0,2,5,11,17,29,47] (P = 17,841,670!) via the CRT FACTORIZATION OF THE AUDIT (pairwise-coprime offsets ⟹ per-prime coordinates independent ⟹ max_r S = max_ρ Σ_e max_u H_e^ρ(u) EXACT in O(Σ7e) — the 17.8M-period audit runs in seconds; validated vs direct scan + 200k samples); deep well {1..12,182} and near-AP {1..11,13,84} (P = 2,522,520) via numpy full sweeps + exact argmax confirmation.  Margins: 0.038, 0.035, 0.060, 0.051, 0.022, 0.029 — all under the 0.097 slack with the band floor w ≥ max(diam, 26).  Worst residues: single-owner resonances (AP-like) / compound-product resonances (coprime, 13-offset)
 
 Prompt (owner): run the one-shot audits for the other assembly families.
