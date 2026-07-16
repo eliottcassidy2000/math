@@ -126,7 +126,13 @@ def is_covering(S):
 # ------------------------------------------------------------ the tree
 
 class Sweep:
-    def __init__(self, j, wcap_hard=10**7, shard=0, nshards=1):
+    def __init__(self, j, wcap_hard=10**7, shard=0, nshards=1, covering_only=False):
+        # covering_only: SOUND for the covering theorem (THM-726 form): a
+        # covering S gives every q <= 14 a multiple, so at the LAST stage every
+        # still-missing modulus divides the final killer: w_j is a multiple of
+        # lcm(Q_miss). Restricts the conclusion to COVERING 13-sets (used for
+        # j = 6 where the full box is too wide; j <= 5 ran unrestricted).
+        self.covering_only = covering_only
         self.j = j
         self.branches = 0
         self.leaves = 0
@@ -143,14 +149,16 @@ class Sweep:
                   if idx % self.nshards == self.shard]
         for si, P in enumerate(shapes):
             gs = good_set_f(P)
-            self.recurse(list(P), [], gs, 12, j)
-            if (si + 1) % 20 == 0:
+            qmiss = frozenset(q for q in range(2, 15)
+                              if not any(v % q == 0 for v in P))
+            self.recurse(list(P), [], gs, 12, j, qmiss)
+            if (si + 1) % 5 == 0:
                 print(f"    [j={j} shard {self.shard}/{self.nshards}] "
                       f"{si+1}/{len(shapes)} shapes, {self.branches} branches, "
                       f"{self.leaves} leaves", flush=True)
         return self
 
-    def recurse(self, P, W, gs, w_prev, m):
+    def recurse(self, P, W, gs, w_prev, m, qmiss=frozenset()):
         """m killers remaining; gs = inward-conservative good set of P u W."""
         if m == 0:
             self.leaf(P, W)
@@ -187,7 +195,14 @@ class Sweep:
             # exact confirmation in the leaf. O(#components) per w.
             DELTA = 1e-6
             comps = gs
-            for w in range(lo, hi + 1):
+            wr = range(lo, hi + 1)
+            if self.covering_only and qmiss:
+                from math import lcm
+                L = 1
+                for q in qmiss:
+                    L = lcm(L, q)
+                wr = range(((lo + L - 1) // L) * L, hi + 1, L)
+            for w in wr:
                 self.branches += 1
                 ok = True
                 for a, b in comps:
@@ -203,7 +218,8 @@ class Sweep:
         for w in range(lo, hi + 1):
             self.branches += 1
             gs2 = subtract_arcs_f(gs, w)
-            self.recurse(P, W + [w], gs2, w, m - 1)
+            q2 = frozenset(q for q in qmiss if w % q != 0)
+            self.recurse(P, W + [w], gs2, w, m - 1, q2)
             if w > self.maxdepth_w:
                 self.maxdepth_w = w
 
@@ -235,7 +251,11 @@ def main():
     print("j | shapes | branches | float-leaves | covering M<1/13 | noncov M<1/13 | max w",
           flush=True)
     for j in js:
-        sw = Sweep(j, shard=shard, nshards=nshards).run()
+        cov_only = (j >= 6)
+        sw = Sweep(j, shard=shard, nshards=nshards, covering_only=cov_only).run()
+        if cov_only:
+            print(f"  (j={j} ran with covering-only last-stage lcm restriction)",
+                  flush=True)
         from math import comb
         print(f"RESULT j={j} shard={shard}/{nshards} | branches {sw.branches} | "
               f"leaves {sw.leaves} | covering-viol {len(sw.violations)} | "

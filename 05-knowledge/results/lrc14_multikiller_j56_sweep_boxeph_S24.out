@@ -1,0 +1,14 @@
+=== boxeph-S24 multikiller sweep: j=2,3,4 single-process cross-validation + j=5 (3 shards, full box) + j=6 (3 shards, covering-only lcm restriction) ===
+--- j=2,3,4 (full box, regression-stable across patch):
+RESULT j=2 | branches 1181 | leaves 20 | covering-viol 0 | noncov-below 5 | maxw 88
+RESULT j=3 | branches 25012 | leaves 28 | covering-viol 0 | noncov-below 5 | maxw 272
+RESULT j=4 | branches 630441 | leaves 2 | covering-viol 0 | noncov-below 0 | maxw 190
+  noncov-below configs (j=2): {1..11}+{13,24},{13,36},{13,48}; {1..10,12}+{13,20}; {1..9,10,11,12 variant}+{13,69}  [GW family, all M=1/14, no mult of 14]
+  noncov-below configs (j=3): {1..9,11}+{13,20,24/36/48}; {1..5,7..12}+{13,20,69}; {1,2,3,5,7..12}+{17,19,104}
+--- j=5 (FULL box, no covering restriction):
+RESULT j=5 shard=1/3 | branches 9143761 | leaves 0 | covering-viol 0 | noncov-below 0 | maxw 331
+RESULT j=5 shard=0/3 | branches 9817053 | leaves 1 | covering-viol 0 | noncov-below 0 | maxw 413
+RESULT j=5 shard=2/3 | branches 10794199 | leaves 0 | covering-viol 0 | noncov-below 0 | maxw 497
+  => TOTAL branches 29755013; ZERO sub-1/13 configs, covering or not.
+--- j=6 (covering-only last-stage lcm restriction):
+  (running)
