@@ -1139,6 +1139,15 @@ DECODE: each free Klein orbit carries ONE quasi-fixed class K (= cls t = cls kap
 J=4: 296/2002 bodies complete, all clean; 6,333,681 bottom exact sweeps; 103,257,529 exact E3 bodies; 115.9 CPU-hours; max completed V1 = 141 (light-first working as designed; floods queued last).
 
 FILES: orbit_decode_carriers_kps_S128c16.py/.out, HYP-6915. -> opus-S312 (orbitsSC/orbitsNS rows + the flip; your S310 histogram is stratum-consistent), all (n=8 fourth entries = the named next step).
+## klein-2026-07-16-S315 -- LEAN KENDALL SORRY-FREE (kendall: #cycAnchored + ΣC(s_v,2) = C(n,3) — 3-set partition via support bijection; H_op = H found ALREADY FORMALIZED in OpSymmetry.lean and cited) + PERRON/KENDALL–WEI VERIFIED-AND-REFINED (λ = 0 ⟺ transitive; corr(λ,−x) = .96/.93/.94; score-of-scores → Perron to 5.6e−16; λ splits 7/8 multi-class x-levels at n=6 — strict refinement WHERE SPECTRA DIFFER, ties = Perron-cospectral classes: the owner's 'every level' claim corrected to its true form) + TOOTHPICK A139250 (generator verified via T(2^k) = (2^{2k+1}+1)/3; GROWTH OBSTRUCTION: planar local automata polynomial vs A000568 superexponential ⟹ the tournament toothpick lives on the TILING HYPERCUBE: sticks = tiles, generation n adds n−2, leaves 2^C(n−1,2), classes = mod S_n, complement = the two stick ends — merged metagraph = midpoint quotient)
+
+Prompt (owner): Kendall + H_op in Lean; Helmholtz/Dirac; Kendall–Wei/Perron claims; toothpick A139250 creative bridges.
+
+BUILD NOTE: the 'infinite hang' was a ~5-minute olean-load baseline under my own timeouts — bisection found real errors (namespace misplacement: appendix landed after `end Tournament`; the rw-at-* footgun) and the rest was patience.  Helmholtz thread: the L + Lᵀ = 2diag(s) − (J−I) decomposition (cont.9) IS the Helmholtz/Hodge split (gradient = scores, curl = skew/cyclic) — connected to boxeph's intersubjective-object reflection.
+
+FILES: lean CompositionDefect.lean (Kendall appended, sorry-free), perron_toothpick_klein_S315.py + .out, HYP-7025, T1545. -> all (opens: cospectral tie census; λ into the atlas; staircase corner-recursion vs toothpick T(2^k); monad-formalizer: kendall is ready for downstream use).
+
+---
 ## klein-2026-07-16-S314 (cont.9) -- LEAN: CompositionDefect.lean SORRY-FREE (8476 jobs): op involution, s_op + s = n−1, dev_op = −dev, xLevel_op = xLevel (the second moment is frame-free, FORMALLY), card_cyc_op (reversal bijection), and #cyc = 3·c3 (min-anchored rotations — the composition-defect identity machine-checked) + ARBORESCENCES vs H: symmetric Laplacian = 2diag(s) − (J−I) (scores are the symmetric part; skew is the rest — the frame decomposition in matrix form; my nI−J overclaim caught and corrected); regular skew formula nτ = Π(n²+λ²)/4 (n = 5,7); Paley₇ τ = 392 vs C₇{1,2,3} τ = 379, BEST Eulerian 50176 vs 48512; tree-rank ≠ score-rank (21 discords, new ranking method — engineering); τ-vector splits 14 (scores,H)-fibers at n=6
 
 Prompt (owner): prioritize open LRC14/tournament math; formalize composition-defect + invariance in Lean; H vs spanning trees/arborescences → unexpected concepts.

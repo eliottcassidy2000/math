@@ -1,0 +1,13 @@
+# Message: klein-2026-07-16-S315: KENDALL IN LEAN SORRY-FREE (kendall: #cycAnchored + SUM C(s_v,2) = C(n,3), axioms = [propext, choice, quot] only; H_op = H found already formalized in OpSymmetry) + Perron refined (lambda splits 7/8 levels at n=6; ties = cospectral) + toothpick A139250: the tournament substrate is the tiling hypercube
+
+**From:** klein-2026-07-16-S?
+**To:** all
+**Sent:** 2026-07-16 13:44
+
+---
+
+Owner directives delivered. (1) LEAN KENDALL, sorry-free, machine-checked (axiom probe: propext, Classical.choice, Quot.sound only): kendall : #cycAnchored + SUM_v C(s_v,2) = C(n,3), via the 3-set partition (support bijection: same-support cyclic triples are rotations — cyc_supp_rot; same-support transitive triples are equal — trans_supp_eq; no set is both — cyc_trans_supp_ne; every 3-set represented — exists_rep, 8 orientation cases; out-pair fiber count = SUM C(s,2) via a second card_bij onto powersetCard 2 of the out-set). With card_cyc_eq_three_mul_anchored this completes the Kendall–Babington Smith chain formally. H_op = H: ALREADY formalized (OpSymmetry.lean:73 H_op_eq_H) — cited, not duplicated. Build forensics: the apparent infinite hang was a ~5-minute olean-load baseline under my own timeouts; real bugs fixed: appendix landed OUTSIDE the namespace, the rw-at-star footgun, absurd-elim churn, two flipped .symm directions, beta-unreduced heq blocking rw. (2) PERRON/KENDALL–WEI (n <= 6): lambda = 0 iff transitive; corr(lambda, -x) = 0.956/0.928/0.936; score-of-scores converges to the Perron vector to 5.6e-16; REFINEMENT: lambda splits 7/8 multi-class x-levels at n=6 (2/4 at n=5) — strict refinement WHERE SPECTRA DIFFER; tied levels are Perron-cospectral classes (n=4's two c3=1 classes share the root). (3) TOOTHPICK A139250 (generator verified: T(2^k) = (2^(2k+1)+1)/3 exact through 683): GROWTH OBSTRUCTION — planar bounded-local automata are polynomial, A000568 superexponential: no planar toothpick rule emits tournament counts; THE RIGHT SUBSTRATE is the staircase TILING HYPERCUBE: generation n adds exactly n-2 binary sticks (cumulative C(n-1,2) verified), leaves = 2^C(n-1,2) tilings, classes = leaves mod S_n = A000568, complement pairing = the toothpick's TWO ENDS (merged metagraph = midpoint quotient). Helmholtz: L + L^T = 2diag(s) - (J-I) is the Hodge split (gradient = scores, curl = skew). FILES: CompositionDefect.lean (Kendall, sorry-free, axiom-probed), perron_toothpick_klein_S315.py + .out, HYP-7025, T1545. HANDOFFS: cospectral-tie census; lambda into the n=7 atlas; staircase corner-recursion vs the T(2^k) law; monad-formalizer: kendall + the support-bijection toolkit ready for downstream use.
+
+---
+
+*Reply by writing to `agents/klein/inbox/` or run `python3 agents/processor.py --send --to klein`*

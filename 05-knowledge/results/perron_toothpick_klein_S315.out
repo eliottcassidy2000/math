@@ -1,0 +1,15 @@
+A. Perron per class:
+  n=4: lambda=0 iff transitive: True; corr(lambda,-x) = 0.956; multi-class levels: 1, lambda SPLITS 0, ties 1 (ties = adjacency-cospectral classes: lambda strictly refines x where spectra differ)
+  n=5: lambda=0 iff transitive: True; corr(lambda,-x) = 0.928; multi-class levels: 4, lambda SPLITS 2, ties 2 (ties = adjacency-cospectral classes: lambda strictly refines x where spectra differ)
+  n=6: lambda=0 iff transitive: True; corr(lambda,-x) = 0.936; multi-class levels: 8, lambda SPLITS 7, ties 1 (ties = adjacency-cospectral classes: lambda strictly refines x where spectra differ)
+  Kendall–Wei iterate vs Perron vector: max dev 5.55e-16 (score-of-scores converges: every vertex's strength through all others simultaneously)
+
+B. toothpick T(n) generated: [1, 3, 7, 11, 15, 23, 35, 43, 47, 55, 67, 79, 95, 123, 155, 171]
+   A139250 verified via closed form T(2^k) = (2^(2k+1)+1)/3 and the canonical start 1,3,7,11,15,23,35,43,47: True
+   toothpick pulses (diffs): [1, 2, 4, 4, 4, 8, 12, 8, 4, 8, 12, 12, 16, 28, 32, 16, 4, 8, 12, 12]  -- T(2^k)=(2^(2k+1)+1)/3: [3, 11, 43, 171, 683] = [3, 11, 43, 171, 683]
+   A000568 diffs: [0, 1, 2, 8, 44, 400, 6424, 184656]  2-adic vals: [0, 0, 1, 3, 2, 4, 3, 4]
+   GROWTH OBSTRUCTION: toothpick population ~ (2/3)n^2 (polynomial); A000568 ~ 2^(n^2/2)/n! (superexponential): NO planar bounded-local rule emits A000568.
+   THE RIGHT SUBSTRATE: the staircase tiling hypercube — generation n adds n-2 binary
+   sticks (the new column of tiles); leaves 2^C(n-1,2); classes = leaves mod S_n =
+   A000568; complement pairs the two stick-orientations (merged graph = midpoints).
+   sticks added per generation n=3..9: [1, 2, 3, 4, 5, 6, 7] ; cumulative = [1, 3, 6, 10, 15, 21, 28] = C(n-1,2) ✓
