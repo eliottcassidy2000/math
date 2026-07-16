@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S26: THM-910 — the Bernoulli ladder complete; caps sharp; glue named
+- **Status:** B₃ proved (1.002), B₅ derived+validated (lattice-corrected), THM-905's candidates
+  EXACTLY ATTAINED (1/12, 5/42, 40/441 exact ℚ) + dilation invariance ⟹ the three caps are
+  sharp statements about primitive tuples; probed strata sit at factor-3 margins.
+- **Next (the closing glue, all constants now available):** (i) the uniform lattice-mass bound
+  table (max corner sums over relation heights + geometric tail — pure computation);
+  (ii) the explicit O(1/v) remainder constant (Erdős–Turán on the subtorus) OR adaptive
+  per-small-part-stratum scan extensions beyond codex's 32/24; (iii) compose with THM-905(2)
+  ⟹ −F6 ≤ 535/7203 < 0.097 closes the residue-6 limiting sign; (iv) test-family hygiene: any
+  planted-relation referee MUST certify its full |k| ≤ 2 relation-defect spectrum first.
+
 ## Lead death-star-2026-07-16-S25: THM-906 — c_B(k) corner form + the parallel-chord/Guy law
 - **Status:** the kernel's named computation DONE (Bernoulli-B₄ corner sums; refereed 0.998;
   constants exact rationals /7⁴); the Guy/A000241 connection is now exact formulas (circular

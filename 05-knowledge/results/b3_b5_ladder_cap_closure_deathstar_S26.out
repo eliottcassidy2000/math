@@ -1,0 +1,25 @@
+RUNG REFEREE
+  B5 k=(1, 1, 1, -1, -2) secs=(0, 2, 4, 6, 1): closed = -41/806736 ≈ -5.082208e-05
+  B3 k=(1, 1, -2)+free secs=(0, 2, 4, 6): closed = 3/9604 ≈ 3.123698e-04
+    v=[9, 13, 11, 15]: R = 7.713051e-04  R/closed = 2.469
+    v=[37, 55, 46, 41]: R = -4.172027e-04  R/closed = -1.336
+    v=[75, 109, 92, 83]: R = -7.536369e-05  R/closed = -0.241
+
+CAP TABLE: exact P-values on dangerous families vs candidates
+  candidates: A = 1/12 ≈ 0.08333, B = 5/42 ≈ 0.11905, C = 40/441 ≈ 0.09070
+  -- cap A/B on dilate ladders (dilation-invariance check + base values)
+    (2, 3, 4, 6): A-val = 1/12 ≈ 0.08333 (OK)  B-val = 1/14 ≈ 0.07143 (OK)
+    (10, 15, 20, 30): A-val = 1/12 ≈ 0.08333 (OK)  B-val = 1/14 ≈ 0.07143 (OK)
+    (22, 33, 44, 66): A-val = 1/12 ≈ 0.08333 (OK)  B-val = 1/14 ≈ 0.07143 (OK)
+    (1, 2, 3, 4): A-val = 1/21 ≈ 0.04762 (OK)  B-val = 5/42 ≈ 0.11905 (OK)
+    (5, 10, 15, 20): A-val = 1/21 ≈ 0.04762 (OK)  B-val = 5/42 ≈ 0.11905 (OK)
+    (11, 22, 33, 44): A-val = 1/21 ≈ 0.04762 (OK)  B-val = 5/42 ≈ 0.11905 (OK)
+  -- large one-relation family (limit ≈ independent + tiny mass)
+    (61, 108, 82, 87): A-val ≈ 0.02465  B-val ≈ 0.02033  (indep 48/2401 = 0.01999, 24/2401 = 0.01000)
+  -- commensurate-mixed (small ratio pair + large): v = (n,2n,a,b)
+    (3, 6, 50, 77): A-val ≈ 0.01515  B-val ≈ 0.01588
+    (5, 10, 81, 123): A-val ≈ 0.01797  B-val ≈ 0.01749
+  -- cap C on the quintuple maximizer ladder
+    (3, 5, 7, 9, 11): C-val = 40/441 ≈ 0.09070 (OK)
+    (9, 15, 21, 27, 33): C-val = 40/441 ≈ 0.09070 (OK)
+[total 17.4s]
