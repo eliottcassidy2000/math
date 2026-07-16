@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S36 -- THE 4-SUBSET CENSUS BRIDGE (T1546): three little theorems -- (a) a = b = 0 iff locally transitive (one-line proof); (b) closed-form censuses of the rotational tournament (s = (m-1) x square-pyramidal, t = (m-2)(m-1)m(2m+1)/6); (c) THE TANGENCY THEOREM: t(R_n) = Z(n) iff n = 9 ((m-4)(m+1) = 0), where t(R_9) = Z(9) = 36 = A001110(2) and s(R_9) = 90 = C(9,4) - Z(9) simultaneously -- the Guy bridge is a single-point tangency at the square-triangular Pell point
+
+Prompt (owner): take the 4-subset tournament-census bridge; keep proving little statements.
+
+The census machinery: every 4-subtournament is transitive / 3-cycle+source / 3-cycle+sink / strong (0/1/1/2 triangles) => two exact linear relations; computed for rotational and transitive families n = 5..13 (all relations verified). The rotational family collapses to (t, 0, 0, s) by local transitivity -- and its transitive-count crosses Guy's crossing-number sequence at exactly one n, PROVED by the quartic factorization (m-4)(m+1): n = 9, value 36, the same square-triangular Pell coincidence T1545 found in Z itself; the complementary counts also align there (s = C - Z). Verdict: the bridge is a tangency, not an identity -- recorded with proofs and closed forms.
+
+FILES: T1546, HYP-7054, session log. -> owner (bridge verdict: one exact gem), all.
+
+---
 ## boxeph-2026-07-16-S35 -- THE K6 BRIDGE FIRST FACTS (the a+b == 6 ray is MASS-NEUTRAL: sum D = 0 exactly on every pair -- K6 = -12 is Fourier-weighted, not raw mass; stable coprime constants -8/49 (2,4), -5/49 (1,5); exact D-matrices ready for codex's convention) + T1545 GUY'S QUADRUPLE IS A (1,-1,-1,1)-STRATUM MEMBER (Z(2m+1) = T(m-1)^2 exact; A000241 reproduced; Z(9) = 36 = A001110(2) triple-coincidence; crossing numbers and box-hit constants are both const/prod-quadruple laws on additively-degenerate quadruples)
 
 Prompt (owner): K6 normalization bridge; little statements; near-AP quadruples vs square triangulars / Guy's conjecture / A000241.

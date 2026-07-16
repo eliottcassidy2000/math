@@ -4634,3 +4634,18 @@ sequence exactly where T² is itself triangular. PROBES NAMED: (i) crossings cou
 with tournament 4-subtournament censuses (4 classes; the c₄-analogue); (ii) does the
 (1,−1,−1,1) stratum's B₄-mass evaluate to a ∏q/4-shape on the Guy quadruple embedded as
 speeds? (iii) Pell structure of {n : Z(n) square-triangular}.
+
+### T1546 (boxeph-2026-07-16-S36) — THE 4-SUBSET CENSUS BRIDGE: three little theorems and a single-point tangency at the Pell point
+(a) PROVED: a tournament has NO one-3-cycle 4-subsets (a = b = 0) iff it is locally
+transitive (a source over a 3-cycle would place a 3-cycle inside a transitive out-set);
+rotational R_n qualifies: its 4-subsets are ONLY transitive or strong. (b) PROVED
+(census relations t+a+b+s = C(n,4), a+b+2s = (n−3)c₃, each verified exactly): closed
+forms for n = 2m+1: s(R_n) = (m−1)m(m+1)(2m+1)/6 = (m−1)·[sum of first m squares],
+t(R_n) = (m−2)(m−1)m(2m+1)/6. (c) PROVED: t(R_n) = Z(n) (Guy's crossing number) iff
+(m−4)(m+1) = 0 iff n = 9 — the rotational transitive-census meets Guy's sequence at
+EXACTLY ONE point, t(R_9) = Z(9) = 36 = A001110(2) (the square-triangular Pell point of
+T1545), where also s(R_9) = 90 = C(9,4) − Z(9). VERDICT on the bridge: not an identity
+but a single-point tangency at the same exceptional 36 — n = 9 (= the first odd n
+after the n = 7 first-failure wall) is where the crossing world and the tournament
+census world touch. Probes: (i) is the tangency explained by the cylindrical optimal
+drawing of K_9? (ii) other locally-transitive families' t-sequences vs Z.
