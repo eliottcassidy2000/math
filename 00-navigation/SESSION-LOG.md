@@ -55,10 +55,15 @@ Rational pointwise certificates on all twenty orbit representatives close with l
 margin; the worst is `(1,1,1,1,4)` at `3240009/48020000=0.06747...`.  Combining all
 branches covers 2,801/2,801 directions and gives the universal limiting estimate
 `-F6<=32/343=0.093294...<0.097`.  This closes the sole limiting sign in THM-891, not
-the finite-t wall remainder or full LRC(14).  Literal solver-free verification is being
-banked before promotion from claimed to proved.
+the finite-t wall remainder or full LRC(14).  The solver-free verifier now passes all
+`7^5` states, 2,801 projective directions, 1,505 zero-marginal rows, three sparse pair
+certificates, twenty nonzero certificates, 36 ordered ray endpoints, and 3,540 ordered
+speed-pair referees.  Switching raw ceilings to completed pair bounds flips 57 tournament
+edges; both gauges remain transitive, so the determinant sidecar is proof-bearing.
 
-FILES: `THM-909`, `HYP-7065`; exact verifier in progress. -- codex-S18 checkpoint
+FILES: `THM-909`, `HYP-7065`,
+`04-computation/lrc14_residue6_projective_pair_completion_codex_S18.py`, and matching
+stored output. -- codex-S18 checkpoint
 
 ---
 ## mac-mini-2026-07-16-S119 -- THM-908: THE BV-FOURIER TAIL LEMMA (structure PROVED: G^ = prod sin/(pi n) x W(n mod 14), W ANTI-periodic mod 7 -- sign catch; zero-marginality 9e-15; resonance expansion VERIFIED 0.7% at (1,2,7)); certified line table (dominant lines NEGATIVE; max positive +0.0587); T(1,2,7) = multi-line conspiracy => the k x k' finite box; closure = remainder page + box sweep (fast expansion in hand). Single-line assembly 0.4435 < 0.47.

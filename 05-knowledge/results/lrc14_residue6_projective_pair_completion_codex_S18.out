@@ -1,0 +1,119 @@
+THM-909 / HYP-7065: PROJECTIVE PAIR-RAY COMPLETION
+==============================================================================
+
+[1] Exact labeled pair-ray law
+PASS  3,540 ordered speed pairs through 60
+PASS  36 ordered nonzero residue endpoints
+  product-minimal endpoint representatives: {(1, 1): (1, 8), (1, 2): (1, 2), (1, 3): (1, 3), (1, 4): (1, 4), (1, 5): (1, 5), (1, 6): (1, 6), (2, 1): (2, 1), (2, 2): (2, 9), (2, 3): (2, 3), (2, 4): (2, 11), (2, 5): (2, 5), (2, 6): (2, 13), (3, 1): (3, 1), (3, 2): (3, 2), (3, 3): (3, 10), (3, 4): (3, 4), (3, 5): (3, 5), (3, 6): (3, 13), (4, 1): (4, 1), (4, 2): (11, 2), (4, 3): (4, 3), (4, 4): (4, 11), (4, 5): (4, 5), (4, 6): (4, 13), (5, 1): (5, 1), (5, 2): (5, 2), (5, 3): (5, 3), (5, 4): (5, 4), (5, 5): (5, 12), (5, 6): (5, 6), (6, 1): (6, 1), (6, 2): (13, 2), (6, 3): (13, 3), (6, 4): (13, 4), (6, 5): (6, 5), (6, 6): (6, 13)}
+
+[2] Zero-coordinate uniform-marginal census
+PASS  1,505 zero-containing directions
+PASS  exact zero-marginal histogram
+PASS  1,470 directions satisfy U<=204
+  U(r) numerator histogram: {380: 5, 252: 20, 248: 10, 204: 60, 202: 60, 200: 60, 198: 20, 196: 60, 194: 60, 188: 60, 187: 120, 184: 15, 176: 30, 170: 60, 166: 120, 164: 90, 160: 120, 159: 180, 156: 110, 148: 70, 145: 20, 138: 50, 136: 30, 126: 50, 115: 20, 81: 5}
+  uniform-marginal bound: 204/2401 = 0.0849645980841316
+
+[3] Three sparse zero-direction pair certificates
+PASS  35 sparse directions
+PASS  three sparse permutation/projective orbits
+PASS  sparse pointwise row (1, 0, 0, 0, 0)
+PASS  sparse ray bound (1, 0, 0, 0, 0)
+    (1, 0, 0, 0, 0) orbit 5 minimum slack 0 -F6 bound 57756/866761
+PASS  sparse pointwise row (1, 6, 0, 0, 0)
+PASS  sparse ray bound (1, 6, 0, 0, 0)
+    (1, 6, 0, 0, 0) orbit 10 minimum slack 0 -F6 bound 291/4802
+PASS  sparse pointwise row (1, 2, 4, 0, 0)
+PASS  sparse ray bound (1, 2, 4, 0, 0)
+    (1, 2, 4, 0, 0) orbit 20 minimum slack 0 -F6 bound 912/12005
+
+[4] Twenty nonzero affine-invariant pair certificates
+PASS  675 bad nonzero directions
+PASS  twenty exact symmetry-orbit counts
+PASS  twenty literal invariant certificates
+PASS  invariant pointwise row (1, 1, 1, 1, 4)
+PASS  invariant ray bound (1, 1, 1, 1, 4)
+    (1, 1, 1, 1, 4) orbit 5 minimum numerator slack 5 E[S] cap 3240009/140000 -F6 cap 3240009/48020000
+PASS  invariant pointwise row (1, 1, 1, 2, 2)
+PASS  invariant ray bound (1, 1, 1, 2, 2)
+    (1, 1, 1, 2, 2) orbit 10 minimum numerator slack 3 E[S] cap 29488829/1400000 -F6 cap 29488829/480200000
+PASS  invariant pointwise row (1, 1, 1, 2, 3)
+PASS  invariant ray bound (1, 1, 1, 2, 3)
+    (1, 1, 1, 2, 3) orbit 20 minimum numerator slack 2 E[S] cap 91010791/4200000 -F6 cap 91010791/1440600000
+PASS  invariant pointwise row (1, 1, 1, 2, 4)
+PASS  invariant ray bound (1, 1, 1, 2, 4)
+    (1, 1, 1, 2, 4) orbit 20 minimum numerator slack 4 E[S] cap 20287637/1000000 -F6 cap 20287637/343000000
+PASS  invariant pointwise row (1, 1, 1, 3, 4)
+PASS  invariant ray bound (1, 1, 1, 3, 4)
+    (1, 1, 1, 3, 4) orbit 20 minimum numerator slack 3 E[S] cap 9319917/500000 -F6 cap 9319917/171500000
+PASS  invariant pointwise row (1, 1, 1, 3, 6)
+PASS  invariant ray bound (1, 1, 1, 3, 6)
+    (1, 1, 1, 3, 6) orbit 20 minimum numerator slack 2 E[S] cap 38447/2240 -F6 cap 38447/768320
+PASS  invariant pointwise row (1, 1, 1, 4, 4)
+PASS  invariant ray bound (1, 1, 1, 4, 4)
+    (1, 1, 1, 4, 4) orbit 10 minimum numerator slack 4 E[S] cap 128943727/6000000 -F6 cap 128943727/2058000000
+PASS  invariant pointwise row (1, 1, 1, 4, 5)
+PASS  invariant ray bound (1, 1, 1, 4, 5)
+    (1, 1, 1, 4, 5) orbit 20 minimum numerator slack 4 E[S] cap 141051889/7000000 -F6 cap 141051889/2401000000
+PASS  invariant pointwise row (1, 1, 1, 4, 6)
+PASS  invariant ray bound (1, 1, 1, 4, 6)
+    (1, 1, 1, 4, 6) orbit 20 minimum numerator slack 3 E[S] cap 132849671/7000000 -F6 cap 132849671/2401000000
+PASS  invariant pointwise row (1, 1, 1, 5, 6)
+PASS  invariant ray bound (1, 1, 1, 5, 6)
+    (1, 1, 1, 5, 6) orbit 20 minimum numerator slack 2 E[S] cap 14316517/700000 -F6 cap 14316517/240100000
+PASS  invariant pointwise row (1, 1, 2, 2, 3)
+PASS  invariant ray bound (1, 1, 2, 2, 3)
+    (1, 1, 2, 2, 3) orbit 30 minimum numerator slack 4 E[S] cap 533951707/25200000 -F6 cap 533951707/8643600000
+PASS  invariant pointwise row (1, 1, 2, 3, 3)
+PASS  invariant ray bound (1, 1, 2, 3, 3)
+    (1, 1, 2, 3, 3) orbit 30 minimum numerator slack 4 E[S] cap 1387062611/63000000 -F6 cap 1387062611/21609000000
+PASS  invariant pointwise row (1, 1, 2, 3, 4)
+PASS  invariant ray bound (1, 1, 2, 3, 4)
+    (1, 1, 2, 3, 4) orbit 60 minimum numerator slack 3 E[S] cap 14345981/750000 -F6 cap 14345981/257250000
+PASS  invariant pointwise row (1, 1, 2, 3, 5)
+PASS  invariant ray bound (1, 1, 2, 3, 5)
+    (1, 1, 2, 3, 5) orbit 60 minimum numerator slack 3 E[S] cap 1518187/80000 -F6 cap 1518187/27440000
+PASS  invariant pointwise row (1, 1, 2, 3, 6)
+PASS  invariant ray bound (1, 1, 2, 3, 6)
+    (1, 1, 2, 3, 6) orbit 60 minimum numerator slack 3 E[S] cap 124989727/6000000 -F6 cap 124989727/2058000000
+PASS  invariant pointwise row (1, 1, 2, 4, 5)
+PASS  invariant ray bound (1, 1, 2, 4, 5)
+    (1, 1, 2, 4, 5) orbit 60 minimum numerator slack 3 E[S] cap 132624899/7000000 -F6 cap 132624899/2401000000
+PASS  invariant pointwise row (1, 1, 2, 4, 6)
+PASS  invariant ray bound (1, 1, 2, 4, 6)
+    (1, 1, 2, 4, 6) orbit 60 minimum numerator slack 2 E[S] cap 43746833/2100000 -F6 cap 43746833/720300000
+PASS  invariant pointwise row (1, 1, 2, 5, 5)
+PASS  invariant ray bound (1, 1, 2, 5, 5)
+    (1, 1, 2, 5, 5) orbit 30 minimum numerator slack 4 E[S] cap 63547207/3000000 -F6 cap 63547207/1029000000
+PASS  invariant pointwise row (1, 1, 3, 4, 5)
+PASS  invariant ray bound (1, 1, 3, 4, 5)
+    (1, 1, 3, 4, 5) orbit 60 minimum numerator slack 3 E[S] cap 29449449/1400000 -F6 cap 29449449/480200000
+PASS  invariant pointwise row (1, 1, 3, 5, 6)
+PASS  invariant ray bound (1, 1, 3, 5, 6)
+    (1, 1, 3, 5, 6) orbit 60 minimum numerator slack 4 E[S] cap 52057153/2800000 -F6 cap 52057153/960400000
+PASS  worst invariant orbit is (1,1,1,1,4)
+PASS  worst invariant ceiling bound
+
+[5] Universal limiting closure
+PASS  621 raw no-zero closures
+PASS  all 2,801 projective directions covered
+  branch bounds: {'raw affine ceiling': Fraction(32, 343), 'zero marginal': Fraction(204, 2401), 'sparse pair rows': Fraction(912, 12005), 'invariant pair rows': Fraction(3240009, 48020000)}
+  universal limiting bound: 32/343 0.09329446064139942
+PASS  universal bound is 32/343
+PASS  universal bound clears 0.097
+
+[6] Tournament Analysis: raw ceiling -> completed pair bound
+  observable: rigorous obstruction-bound difference
+  switch/gauge: raw affine ceiling -> completed pair-ray cap; larger wins
+  raw fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1}, 'directed_triangles': 0, 'components': (((1, 1, 1, 1, 4),), ((1, 1, 1, 2, 2),), ((1, 1, 1, 2, 3),), ((1, 1, 1, 2, 4),), ((1, 1, 1, 3, 4),), ((1, 1, 1, 3, 6),), ((1, 1, 1, 4, 4),), ((1, 1, 1, 4, 5),), ((1, 1, 1, 4, 6),), ((1, 1, 1, 5, 6),), ((1, 1, 2, 2, 3),), ((1, 1, 2, 3, 3),), ((1, 1, 2, 3, 4),), ((1, 1, 2, 3, 5),), ((1, 1, 2, 3, 6),), ((1, 1, 2, 4, 5),), ((1, 1, 2, 4, 6),), ((1, 1, 2, 5, 5),), ((1, 1, 3, 4, 5),), ((1, 1, 3, 5, 6),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 1, 1, 1, 4), (1, 1, 1, 2, 3), (1, 1, 1, 2, 4), (1, 1, 1, 4, 4), (1, 1, 1, 4, 5), (1, 1, 1, 5, 6), (1, 1, 2, 2, 3), (1, 1, 2, 3, 3), (1, 1, 2, 3, 6), (1, 1, 2, 4, 6), (1, 1, 1, 2, 2), (1, 1, 1, 3, 4), (1, 1, 1, 3, 6), (1, 1, 1, 4, 6), (1, 1, 2, 3, 4), (1, 1, 2, 3, 5), (1, 1, 2, 4, 5), (1, 1, 2, 5, 5), (1, 1, 3, 4, 5), (1, 1, 3, 5, 6))}
+  completed fingerprint: {'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1}, 'directed_triangles': 0, 'components': (((1, 1, 1, 1, 4),), ((1, 1, 1, 2, 2),), ((1, 1, 1, 2, 3),), ((1, 1, 1, 2, 4),), ((1, 1, 1, 3, 4),), ((1, 1, 1, 3, 6),), ((1, 1, 1, 4, 4),), ((1, 1, 1, 4, 5),), ((1, 1, 1, 4, 6),), ((1, 1, 1, 5, 6),), ((1, 1, 2, 2, 3),), ((1, 1, 2, 3, 3),), ((1, 1, 2, 3, 4),), ((1, 1, 2, 3, 5),), ((1, 1, 2, 3, 6),), ((1, 1, 2, 4, 5),), ((1, 1, 2, 4, 6),), ((1, 1, 2, 5, 5),), ((1, 1, 3, 4, 5),), ((1, 1, 3, 5, 6),)), 'hamiltonian_path_count': 1, 'tie_hamiltonian_path': ((1, 1, 1, 1, 4), (1, 1, 2, 3, 3), (1, 1, 1, 2, 3), (1, 1, 1, 4, 4), (1, 1, 2, 2, 3), (1, 1, 2, 5, 5), (1, 1, 1, 2, 2), (1, 1, 3, 4, 5), (1, 1, 2, 4, 6), (1, 1, 2, 3, 6), (1, 1, 1, 5, 6), (1, 1, 1, 2, 4), (1, 1, 1, 4, 5), (1, 1, 2, 3, 4), (1, 1, 1, 4, 6), (1, 1, 2, 3, 5), (1, 1, 2, 4, 5), (1, 1, 1, 3, 4), (1, 1, 3, 5, 6), (1, 1, 1, 3, 6))}
+  switch edge flips: 57
+PASS  both bound tournaments are transitive
+PASS  both tie Hamiltonian paths are unique
+  Assumption challenge: raw pair marginals fail before signed averaging;
+  determinant-class pair sidecars suffice only after the seven-shift quotient.
+
+VERDICT
+  PROVED: every zero-containing projective direction closes.
+  PROVED: all 675 nonzero collision directions close in twenty orbits.
+  PROVED: universal limiting -F6<=32/343<0.097.
+  OPEN: compose this limiting sign closure with the finite-t wall remainder.

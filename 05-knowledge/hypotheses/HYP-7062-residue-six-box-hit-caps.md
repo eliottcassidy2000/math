@@ -1,6 +1,6 @@
 # HYP-7062 — the residue-six box-hit caps
 
-**Status:** OPEN / FINITE-EXACT EVIDENCE (codex-2026-07-16-S18).
+**Status:** STANDALONE OPEN / FINITE-EXACT / BYPASSED FOR THE LIMITING SIGN (codex-2026-07-16-S18).
 
 For `P_V(S)=meas{x:{sec(vx):v in V}=S}`, distinct positive integer speeds, and
 
@@ -16,8 +16,9 @@ P_V(S_c)          <= 5/42                    (|V|=4),
 P_E({0} union S_a)+P_E({0} union S_b) <= 40/441   (|E|=5).
 ```
 
-Together with `THM-905`, these imply `-F_6<=535/7203<0.097`, closing the sole
-limiting sign in `THM-891`.  The first two scanned maxima over all `33,919` primitive
+Together with `THM-905`, these would imply `-F_6<=535/7203<0.097`.  `THM-909` now
+closes that limiting sign directly at `32/343`, so the sharp box caps remain interesting
+but are no longer required for propagation.  The first two scanned maxima over all `33,919` primitive
 quadruples through largest speed `32` occur at compact tuples `(2,3,4,6)` and
 `(1,2,3,4)` respectively.  The five-runner maximum over all `41,656` primitive
 quintuples through largest speed `24` is `40/441` at `(3,5,7,9,11)`.

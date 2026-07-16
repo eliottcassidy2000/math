@@ -1,10 +1,10 @@
 ---
 id: THM-891
 title: Exact cross-section cancellation for a resonant far peel
-status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, pair-sector ray law, and universal 0.097 closures for residues 1 through 5 and the positive side of residue 6 are rigorous. The negative side of residue 6 and the sharp diameter-free extremal remain open.
+status: PROVED. The far-peel limit, exact miss-pattern formula, seven-residue reduction, consecutive-core constant, and pair-sector ray law are rigorous. THM-909 now closes the former negative residue-six gap, so every limiting residue satisfies the universal 0.097 propagation bound. The sharp 16/343 extremal and finite-t wall composition remain open.
 source: codex-2026-07-16-S17
 depends_on: [THM-727, THM-883, THM-884, THM-887-uniform-maxS-and-affine-witness-coordinate]
-related: [THM-888, THM-889, THM-890, THM-892, THM-894, THM-896-level3-crossing, HYP-7021, HYP-7024, HYP-7027]
+related: [THM-888, THM-889, THM-890, THM-892, THM-894, THM-896-level3-crossing, THM-908, THM-909, HYP-7021, HYP-7024, HYP-7027]
 verification: 04-computation/lrc14_resonant_cross_section_cancellation_codex_S17.py -> 05-knowledge/results/lrc14_resonant_cross_section_cancellation_codex_S17.out
 ---
 
@@ -100,9 +100,11 @@ their endpoints additionally give
 | 4 | `-2/21 <= F_4 <= 232/2401` |
 
 Every endpoint has absolute value below `0.097`.  Finally the raw residue-six kernel
-gives `F_6<=230/2401<0.097`.  Therefore residues `1,...,5` close universally and only
-the **negative** side of residue `6` remains in the owner-resonant limiting problem.
-The sharp `16/343` conjecture remains open for every residue.
+gives `F_6<=230/2401<0.097`.  Therefore residues `1,...,5` and the positive side of
+residue `6` close universally by the present theorem.  The negative side was the
+remaining owner-resonant limiting problem at this checkpoint; `THM-909` subsequently
+closes it at `32/343<0.097`.  The sharp `16/343` conjecture remains open for every
+residue.
 
 ## 2. Conditioning identity
 

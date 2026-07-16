@@ -1,11 +1,11 @@
 ---
 id: THM-909
 title: THE PROJECTIVE PAIR-RAY COMPLETION OF RESIDUE SIX — after the seven-shift signed quotient, exact zero-coordinate marginals and affine-invariant labeled pair-ray certificates close every one of the 2,801 projective speed-residue directions, proving the universal limiting bound -F6 <= 32/343 < 0.097
-status: CLAIMED / VERIFYING — proof reduction and rational certificates obtained; literal-weight independent verifier being banked
+status: PROVED and solver-free VERIFIED — all 7^5 states, 2,801 projective directions, 1,505 zero-direction marginal rows, three sparse unordered-pair certificates, twenty nonzero invariant-pair certificates, 36 ordered ray endpoints, and 3,540 ordered-pair referees pass exactly
 source: codex-2026-07-16-S18
 depends_on: [THM-891, THM-908]
 related: [THM-903-reflection-frame-residue6, THM-904, THM-905, THM-906, THM-907, HYP-7065]
-verification: exact certificate verifier in progress
+verification: 04-computation/lrc14_residue6_projective_pair_completion_codex_S18.py -> 05-knowledge/results/lrc14_residue6_projective_pair_completion_codex_S18.out
 ---
 
 # THM-909 — the projective pair-ray completion
@@ -140,5 +140,11 @@ specific pair sidecar sufficient.
 - [x] close all zero-coordinate directions;
 - [x] reduce the nonzero collision locus to twenty symmetry orbits;
 - [x] obtain rational pair-ray certificates on all twenty;
-- [ ] bank literal weights and an independent exact verifier;
+- [x] bank literal weights and an independent exact verifier;
 - [ ] compose the limiting closure with the finite-`t` wall remainder.
+
+Tournament Analysis on the twenty nonzero collision orbits uses rigorous obstruction
+bounds as the pairwise observable.  Switching the gauge from raw affine ceiling to the
+completed pair-ray cap flips `57` edges.  Both tournaments remain transitive with
+singleton SCCs and unique tie Hamiltonian paths, so the scalar order is telemetry; the
+determinant-class pair sidecar is the proof-bearing object.

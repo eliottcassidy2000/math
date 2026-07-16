@@ -1,6 +1,6 @@
 # HYP-7064 — lift the 1,895 bad seven-shift directions
 
-**Status:** OPEN after an exact finite residue reduction (codex-2026-07-16-S18).
+**Status:** RESOLVED by `THM-909` (codex-2026-07-16-S18).
 
 `THM-908` assigns every nonzero projective residue direction `r in P^4(F_7)` the
 signed affine-line ceiling
@@ -14,11 +14,11 @@ Exactly `906/2801` directions have `C(r)<=32` and hence satisfy
 directions have ceiling `34,36,48,50`, or `62`.  Every direction with five distinct
 nonzero residues is already closed more sharply at `25/343`.
 
-The proposed next lemma is a lift-sensitive improvement on the bad directions: the
-within-cell trajectory `z(u)=sec(eu/7)` cannot remain on a maximizing affine coset for
-enough measure unless the quotient speeds carry a short additive relation.  In the
-nonresonant case, discrepancy should lower the average below `33`; in the resonant
-case, `THM-906`'s B4 corner sum and `THM-907`'s B3 tail give a finite relation census.
+The successful lift is simpler than the proposed discrepancy/B3/B4 split.  A zero
+residue supplies an exactly uniform quotient coordinate; this plus three unordered
+pair-ray rows closes all zero-containing directions.  With no zero residue, the affine
+determinants `r_j z_i-r_i z_j` have expectations governed by the labeled pair-ray law;
+twenty rational orbit certificates close the remaining `675` directions.
 
 This quotient preserves the signed residue-six kernel ceiling but destroys quotient
 speeds, additive relation lattices, and wall chronology.  Those are mandatory sidecars,

@@ -1,10 +1,10 @@
 # HYP-7024 — the resonant-peel miss-pattern extremal
 
-**Status:** MIXED / OPEN (codex-2026-07-16-S17).  `THM-891` proves the exact reduction
-and closes residues 1 through 5 and the positive side of residue 6 at the non-sharp
-`0.097` propagation slack.  Only the negative side of residue 6 remains at that slack.
-The sharp uniform inequality is finite-exact through diameter 20.  Three tempting
-shortcuts were refuted.
+**Status:** PROPAGATION-SLACK PART RESOLVED / SHARP EXTREMAL OPEN.  `THM-891` proves
+the exact reduction and closes residues 1 through 5 plus the positive side of residue 6;
+`THM-909` closes the former negative side at `32/343<0.097`.  The sharp uniform
+`16/343` inequality is still only finite-exact through diameter 20, and the finite-`t`
+wall bridge remains open.  Three tempting shortcuts were refuted.
 
 ## Exact target
 
@@ -114,17 +114,18 @@ listed and proved in `THM-891`, give
 All six endpoints are below `0.097` in absolute value.  This is a diameter-free theorem:
 the verifier checks 462 sector-count states and the 22 exact pair-polytope vertices.
 
-### 3. Residue 6 is now the only limiting slack obstruction
+### 3. Residue 6 was the only limiting slack obstruction; THM-909 closes it
 
 The positive kernel bound gives
 
 `F_6 <= (6p_1+2p_2)/49 <=230/2401<0.097`.
 
 On the negative side, `K_6({1,5})=K_6({2,4})=-12`; all other pair kernels are `2`,
-and singleton kernels are `-1` except `K_6({3})=6`.  Thus the remaining non-sharp crux
-is a higher-order bound on the synchronized miss mass `A_15+A_24`.  The exact pair-ray
-relaxation is insufficient, so this is where the higher relation spectrum of the
-concurrent `THM-890` must enter.
+and singleton kernels are `-1` except `K_6({3})=6`.  The original pair-ray relaxation
+is insufficient in that frame.  `THM-908/909` instead average the signed kernel over
+the seven shifts first and then restore affine-invariant labeled pair data, proving
+
+`-F_6<=32/343<0.097`.
 
 The excess term retains the same short arithmetic relations isolated by `HYP-7021`
 and the coincidence divisor spectrum of `THM-892`.
@@ -156,13 +157,10 @@ sidecar gives false universal bounds.
    fictitious fixed first moment.
    The relation-poor stratum should have independent slack; finitely many short-relation
    shapes should contain the extremizer.
-2. **Residue-six higher-order certificate.**  Bound the synchronized mass
-   `A_15+A_24` using triple and higher relation terms from `THM-890`; pair marginals are
-   now known to be insufficient.  `THM-894` independently names exactly this next rung
-   as the level-three overlap tensor, and `THM-896-level3-crossing` proves the order-three Bonferroni
-   crossing while leaving its triple-beat enhancement cap open.  Build one
-   relation-localized triple bound that feeds both consumers.  Do not impose the false
-   reflection symmetry `s -> 7-s`.
+2. **Residue-six propagation certificate — RESOLVED by `THM-909`.**  Signed seven-shift
+   averaging followed by determinant-class pair-ray certificates proves the required
+   `32/343` bound.  Triple/B3 and box/B4 routes remain standalone sharpenings, not
+   propagation dependencies.
 3. **Compact/relation-rich split.**  The extremizer is compact and relation-rich, while
    random wide cores are much smaller.  A quantitative relation-lattice tail plus a
    finite compact sweep would parallel the balanced-comb split of `THM-889/HYP-7021`.

@@ -1,8 +1,10 @@
 # HYP-7061 — the residue-six triple observable
 
-**Status:** MIXED / OPEN (codex-2026-07-16-S18).  `THM-904`'s explicit pointwise
-triple reduction is finite-exact.  Its universal three-speed bound remains open.  This
-file was renumbered from `HYP-7052` after pulling boxeph's earlier claim of that ID.
+**Status:** STANDALONE OPEN / BYPASSED FOR THE LIMITING SIGN (codex-2026-07-16-S18).
+`THM-904`'s explicit pointwise triple reduction is finite-exact, but its universal
+three-speed bound remains open.  `THM-909` now closes the limiting negative residue-six
+sign directly at `32/343`, so this inequality is no longer required for that closure.
+This file was renumbered from `HYP-7052` after pulling boxeph's earlier claim of that ID.
 
 For the rational weight `beta` in `THM-904`, set
 
@@ -16,9 +18,9 @@ The target is
 q(a,b,c) <= 47/100
 ```
 
-for every three distinct positive integers.  This would give
-`-F_6<=47/490<0.097` for every resonant slow core and close the only limiting sign in
-`THM-891`.
+for every three distinct positive integers.  This would independently give
+`-F_6<=47/490<0.097`; `THM-909` proves the stronger required limiting conclusion by a
+different signed residue quotient.
 
 Exact evidence currently covers all `28,876` primitive triples with largest speed at
 most 60.  The unique maximum is `q(1,4,7)=81/175`.  The observed support stabilizes on
