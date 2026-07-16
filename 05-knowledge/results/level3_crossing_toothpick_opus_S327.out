@@ -1,0 +1,41 @@
+(A) level-3 coefficient wall (units 1/2197, muE = 1):
+   m' =  7: 2197 - 338m' + 52C(m',2) - 8C(m',3) =   643 COERCIVE
+   m' =  8: 2197 - 338m' + 52C(m',2) - 8C(m',3) =   501 COERCIVE
+   m' =  9: 2197 - 338m' + 52C(m',2) - 8C(m',3) =   355 COERCIVE
+   m' = 10: 2197 - 338m' + 52C(m',2) - 8C(m',3) =   197 COERCIVE
+   m' = 11: 2197 - 338m' + 52C(m',2) - 8C(m',3) =    19 COERCIVE
+   m' = 12: 2197 - 338m' + 52C(m',2) - 8C(m',3) =  -187 dead
+   m' = 13: 2197 - 338m' + 52C(m',2) - 8C(m',3) =  -429 dead
+
+   prefix [1, 2, 3, 4]: mu(E) = 13/21 ~ 0.61905
+   exact order-3 Bonferroni on radius-8 packets (S1, S2, S3 exact):
+   packet 1: BONF3 >= +0.14613  actual = 0.15987  COERCIVE
+   packet 2: BONF3 >= +0.14850  actual = 0.16161  COERCIVE
+   packet 3: BONF3 >= +0.12563  actual = 0.14919  COERCIVE
+
+(B) triple overlaps rho3 vs (2/13)^3 = 0.003641 (global, sample):
+   (101,137,211): rho3 = 0.003380
+   (150,151,152): rho3 = 0.011849
+   (99,199,300): rho3 = 0.007227
+   (77,143,169): rho3 = 0.003641
+
+(C) THE FERTILITY FIELD n = 5 -> 6 (one-vertex extensions per class):
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\level3_crossing_toothpick_opus_S327.py", line 139, in <module>
+    c = B5['cls_of'][t]
+        ~~~~~~~~~~~~^^^
+KeyError: 64
+   (101,137,211): rho3 = 0.003380
+   (150,151,152): rho3 = 0.011849
+   (99,199,300): rho3 = 0.007227
+   (77,143,169): rho3 = 0.003641
+
+(C) THE FERTILITY FIELD n = 5 -> 6 (one-vertex extensions per class):
+   x-level -> fertility list (5-classes):
+      x =   0: [7]
+      x =   8: [13, 21, 23]
+      x =  16: [21, 24]
+      x =  24: [23, 23]
+      x =  32: [13, 13, 13]
+      x =  40: [21]
+   total extension pairs = 215; distinct 6-classes = 56; mean fertility = 17.92

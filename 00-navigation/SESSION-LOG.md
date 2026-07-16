@@ -1,3 +1,34 @@
+## opus-2026-07-16-S327 -- THM-896 THE LEVEL-3 CROSSING: the m' = 8 wall FALLS (order-3 Bonferroni is a treeless LOWER bound; coefficient wall coercive m' <= 11 with the 19/2197 knife-edge at 11; REFEREED: 3/3 exact radius-8 certificates, tight to 8-16%; ladder price schedule 6.5 -> 7.5 -> 11.5) + the triple sawtooth (baseline (2/13)^3 exact, resonance ENHANCEMENTS 2-3.3x: the triple beat lemma named) + THE FERTILITY FIELD (anti-toothpick: growth symmetry-suppressed, fertility ~ 32/|Aut| Burnside shadow, max at mid-level) (HYP-7035)
+
+Prompt (owner): compute the level-3 triple-overlap tensor, cross the m' = 8 wall; the
+toothpick/automaton creative probe (A139250, arXiv:1004.3036); lambda/self-composition
+noted (confirmation of THM-893's Perron findings).
+
+[A] THE CROSSING: Bonferroni's odd truncation (-S3) is a valid lower bound with NO tree
+(the parity supplies the sign that forced Hunter's tree at level 2 -- the ladder
+alternates: odd truncations work directly, even ones need trees). Coefficient wall:
+2197 - 338m' + 52C(m',2) - 8C(m',3) > 0 iff m' <= 11 (643, 501, 355, 197, 19; dead
+-187 at 12). REFEREE (exact Q, prefix {1,2,3,4}, mu(E) = 13/21, three random radius-8
+packets): bounds +0.14613/+0.14850/+0.12563 vs actual 0.15987/0.16161/0.14919 --
+coercive AND tight (8-16%): the m' = 8 wall crossed with certificates; radii 8-11
+asymptotically closed modulo the triple error budget.
+[T] triple sawtooth: (77,143,169) hits (2/13)^3 = 0.003641 exactly; (150,151,152):
+3.3x; (99,199,300): 2x: resonances ENHANCE, and S3 enters negatively: the needed lemma
+is the TRIPLE BEAT UPPER BOUND (sub-orbit APs at the joint relation -- the THM-864
+machinery's expected to transfer).
+[F] THE FERTILITY FIELD (5 -> 6, exact): 7 (regular, min = the Burnside shadow 32/5),
+13-24 (mid-levels, max 24 at x = 16), 21 (transitive): SYMMETRY SUPPRESSES GROWTH --
+the anti-toothpick verdict (A139250 grows at exposed ends; the metagraph at asymmetric
+middles). The paired-diagram reading stands: A000568 even = reversal-pair toothpicks,
+SC = unpaired centers; the 5 -> 6 extension graph: 215 incidences, mean parent 3.84.
+
+NEXT (named): the triple beat lemma (level-3 THM-864); level-5's wall (does -S5 reach
+m' = 13 -- the whole scale-one problem?); fertility 6 -> 7 Burnside regression.
+
+FILES: THM-896 (renumbered from 895; helmholtz-perron was first); level3_crossing_
+toothpick .py/.out; HYP-7035. opus; S327.
+
+---
 ## mac-mini-2026-07-16-S115 (in progress) -- THM-895: THE HELMHOLTZ IDENTITY (gradient energy = x/(4n) EXACT; the axis IS the Hodge gradient side; +8 walk = gradient ascent) + PERRON CENSUS (lambda = 0 <=> transitive proved, count n!; corr(lambda,-x) = 0.9313/0.9218; all interior x-levels split at n=6) + TOOTHPICK PROBES (merged counts = A059735 identified; v_2(A000568(2k+1)) = k law candidate; parity involution proved). j=5 sweep HARVESTED (39.25M branches, 26,352 leaves, ZERO violations); j=6 running on 6 workers (THM-883 finalization pending harvest).
 
 Prompt (owner): Helmholtz + arborescences; pull frequently, check j=5,6 supersession/efficiency; Kendall-Wei self-compositions (lambda = 0 iff transitive, corr ~0.93, level-splitting); A139250 toothpick automata isomorphisms (A000568 evenness as paired diagrams; SC counts; force many tournament-adjacent aspects).
