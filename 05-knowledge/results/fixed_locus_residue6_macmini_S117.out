@@ -1,0 +1,24 @@
+(1)+(3) pair-sector measures and the reflection map {s,c} -> {6-c,6-s}:
+   A_12 = 0.02381   reflects to A_45 = 0.00000   
+   A_13 = 0.01190   reflects to A_35 = 0.01190   
+   A_14 = 0.02381   reflects to A_25 = 0.00000   
+   A_16 = 0.04762   reflects to A_05 = 0.00000   
+   A_24 = 0.02381   reflects to A_24 = 0.02381   FIXED SECTOR
+   A_26 = 0.03571   reflects to A_04 = 0.00000   
+   A_35 = 0.01190   reflects to A_13 = 0.01190   
+   A_36 = 0.09524   reflects to A_03 = 0.00000   
+   A_46 = 0.07143   reflects to A_02 = 0.00000   
+   A_56 = 0.04762   reflects to A_01 = 0.00000   
+   max |A - A_reflected| = 9.52e-02  (symmetry law A_sc = A_(6-c)(6-s))
+   fixed pair-sectors: exactly s+c = 6: {1,5}, {2,4} -- the THM-891 concentration set
+
+(2) Error_t(a) reflection-invariance (numeric, t = 501):
+   a = 1 (residue 1): Error = -0.046653   reflected = -0.046653   |delta| = 0.00e+00
+   a = 6 (residue 6): Error = +0.001258   reflected = +0.001258   |delta| = 2.43e-16
+   a = 13 (residue 6): Error = +0.000571   reflected = +0.000571   |delta| = 5.46e-17
+   a = 20 (residue 6): Error = +0.000300   reflected = +0.000300   |delta| = 1.50e-16
+
+(4) odd-part cancellation on the fixed sectors (a = 6, t = 501):
+   int_A15 g_1(atx) = +0.000000   int_A15 g_5(at(1-x)) = +0.000000   (equal by the symmetry: |delta| = 0.00e+00)
+
+DONE

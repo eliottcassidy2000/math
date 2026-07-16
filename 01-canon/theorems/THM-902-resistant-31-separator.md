@@ -1,5 +1,5 @@
 ---
-id: THM-898
+id: THM-902  # renumbered from 898 (boxeph-S33 first-push)
 title: THE RESISTANT CLASS IS SEPARATED — at n=7 the cospectral pairs that survive score-of-scores are ALL split by the fourth Kendall–Wei iterate (sorted rowsums of A⁴: 35/35) and, independently, by the arborescence τ-vector (35/35); the third iterate gets 26/35, H only 12/35. BONUS LEMMA (proved): cospectral ⟹ equal x for ALL tournaments — Σs² = 2C(n,3) − (2/3)tr(A³) + C(n,2) is a spectral function (Kendall c₃ + trace), so "within-level" is automatic
 status: census machine-exact (456 classes reproduced from scratch; 168 charpoly groups; 718 cospectral class pairs, all same-x confirming the lemma; 35 resist score-of-scores — boxeph's 31 is a pair-counting convention delta, flagged); separator results exact; x-spectral lemma PROVED (one line)
 source: mac-mini-2026-07-16-S116 (owner: "find the invariant that separates the resistant 31")
@@ -7,7 +7,7 @@ depends_on: [boxeph HYP-7028 (the census + the question), THM-895 (Kendall–Wei
 script: 04-computation/resistant31_separator_macmini_S116.py -> 05-knowledge/results/resistant31_separator_macmini_S116.out
 ---
 
-# THM-898 — the resistant class separated
+# THM-902 — the resistant class separated
 
 Full n=7 rebuild: 2^21 labeled → 168 charpoly groups → orbit-peeled to the 456 classes.
 718 cospectral class pairs (all pairs within groups; boxeph's 256/31 used a tighter pair
