@@ -20,4 +20,4 @@ named item: rendering μ(D_a ∩ D_b) = muNum/(14ab) as a Lean measure fact.
 - [x] multi-parent inequality: Lean kernel-pure + 25 exact Python instances
 - [x] c = 9 (2-parent) and c = 10 (2/3-parent) consecutive negatives, exact
 - [x] all-k closed form in-kernel; assembly skeleton in-kernel
-- [x] arc-measure rendering LANDED (S74) + THE CAST BRIDGE LANDED (S75, consecutive_credit_closed kernel-pure): ofReal(1/49 + r(6−r)/(49k(k+1))) ≤ volume(D_k ∩ D_{k+1} ∩ window) — the closed-form credit end-to-end in the kernel; last residual = the per-runner upper bound μ(dangerR v ∩ window) ≤ 1/7
+- [x] arc-measure rendering (S74) + cast bridge (S75) + THE PER-RUNNER BOUND (S76, danger_measure_le kernel-pure): μ(dangerR v ∩ window) ≤ 1/7 every v ≥ 1 (tooth cover Icc(−⌈v/2⌉,⌈v/2⌉); interior teeth 1/(7v); extreme teeth ≤ ofReal(1/2 − (M−ρ)/v) — 1/(14v) even, nonpositive odd). ALL c = 8 INGREDIENTS IN-KERNEL; the end-to-end composition (restrict-measure plumbing) is the one named final item

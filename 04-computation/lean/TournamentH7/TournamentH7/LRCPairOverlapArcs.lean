@@ -374,8 +374,187 @@ theorem consecutive_credit_closed (k : ℕ) (hk : 1 ≤ k) :
     _ ≤ volume ((dangerR k ∩ dangerR (k + 1)) ∩ Ioo (-(1:ℝ)/2) (1/2)) :=
         consecutive_overlap_credit k (k / 7) hk hJ
 
+/-! ## The per-runner mass bound (boxeph-S76): the skeleton's other hypothesis -/
+
+/-- One tooth of runner `v`. -/
+def tooth (v : ℕ) (m : ℤ) : Set ℝ :=
+  Ioo (((m : ℝ) - 1/14) / v) (((m : ℝ) + 1/14) / v)
+
+theorem mem_tooth_of_danger {v : ℕ} (hv : 1 ≤ v) {t : ℝ} {m : ℤ}
+    (h : |(v : ℝ) * t - m| < 1/14) : t ∈ tooth v m := by
+  have hvR : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  rw [abs_lt] at h
+  constructor
+  · rw [div_lt_iff₀ hvR]
+    linarith [h.1]
+  · rw [lt_div_iff₀ hvR]
+    linarith [h.2]
+
+theorem danger_window_cover (v : ℕ) (hv : 1 ≤ v) :
+    dangerR v ∩ Ioo (-(1:ℝ)/2) (1/2)
+      ⊆ ⋃ m ∈ Finset.Icc (-(((v + 1) / 2 : ℕ) : ℤ)) (((v + 1) / 2 : ℕ) : ℤ),
+          (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2)) := by
+  rintro t ⟨⟨m, hm⟩, htW⟩
+  have hvR : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  have h2M : v ≤ 2 * ((v + 1) / 2) := by omega
+  have h2MR : (v : ℝ) ≤ 2 * (((v + 1) / 2 : ℕ) : ℝ) := by exact_mod_cast h2M
+  obtain ⟨hW1, hW2⟩ := htW
+  have habs := abs_lt.mp hm
+  have hvt1 : (v : ℝ) * (-(1:ℝ)/2) < (v : ℝ) * t := by
+    apply mul_lt_mul_of_pos_left _ hvR
+    linarith
+  have hvt2 : (v : ℝ) * t < (v : ℝ) * (1/2) := by
+    apply mul_lt_mul_of_pos_left _ hvR
+    linarith
+  simp only [Set.mem_iUnion, Finset.mem_Icc]
+  refine ⟨m, ⟨?_, ?_⟩, mem_tooth_of_danger hv hm, hW1, hW2⟩
+  · by_contra hcon
+    push_neg at hcon
+    have hmZ : (m : ℤ) ≤ -(((v + 1) / 2 : ℕ) : ℤ) - 1 := by omega
+    have hmR : (m : ℝ) ≤ -(((v + 1) / 2 : ℕ) : ℝ) - 1 := by exact_mod_cast hmZ
+    nlinarith [habs.1, habs.2]
+  · by_contra hcon
+    push_neg at hcon
+    have hmZ : (((v + 1) / 2 : ℕ) : ℤ) + 1 ≤ m := by omega
+    have hmR : (((v + 1) / 2 : ℕ) : ℝ) + 1 ≤ (m : ℝ) := by
+      have h0 : (((((v + 1) / 2 : ℕ) : ℤ) + 1 : ℤ) : ℝ) ≤ ((m : ℤ) : ℝ) :=
+        Int.cast_le.mpr hmZ
+      push_cast at h0
+      exact h0
+    nlinarith [habs.1, habs.2]
+
+theorem tooth_measure_le (v : ℕ) (hv : 1 ≤ v) (m : ℤ) :
+    volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2)) ≤ ENNReal.ofReal (1 / (7 * v)) := by
+  have hvR : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  calc volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ volume (tooth v m) := measure_mono Set.inter_subset_left
+    _ = ENNReal.ofReal (((m : ℝ) + 1/14) / v - ((m : ℝ) - 1/14) / v) := Real.volume_Ioo
+    _ = ENNReal.ofReal (1 / (7 * v)) := by
+        congr 1
+        field_simp
+        ring
+
+theorem tooth_top_le (v : ℕ) (_hv : 1 ≤ v) (M : ℤ) :
+    volume (tooth v M ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := by
+  have hsub : tooth v M ∩ Ioo (-(1:ℝ)/2) (1/2)
+      ⊆ Ioo (((M : ℝ) - 1/14) / v) (1/2) := by
+    rintro t ⟨⟨h1, _⟩, ⟨_, h4⟩⟩
+    exact ⟨h1, h4⟩
+  calc volume (tooth v M ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ volume (Ioo (((M : ℝ) - 1/14) / v) (1/2)) := measure_mono hsub
+    _ = ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := Real.volume_Ioo
+
+theorem tooth_bot_le (v : ℕ) (_hv : 1 ≤ v) (M : ℤ) :
+    volume (tooth v (-M) ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := by
+  have hsub : tooth v (-M) ∩ Ioo (-(1:ℝ)/2) (1/2)
+      ⊆ Ioo (-(1:ℝ)/2) ((((-M : ℤ) : ℝ) + 1/14) / v) := by
+    rintro t ⟨⟨_, h2⟩, ⟨h3, _⟩⟩
+    exact ⟨h3, h2⟩
+  calc volume (tooth v (-M) ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ volume (Ioo (-(1:ℝ)/2) ((((-M : ℤ) : ℝ) + 1/14) / v)) := measure_mono hsub
+    _ = ENNReal.ofReal ((((-M : ℤ) : ℝ) + 1/14) / v - (-(1:ℝ)/2)) := Real.volume_Ioo
+    _ = ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := by
+        congr 1
+        push_cast
+        ring
+
+/-- **The per-runner mass bound**: each danger set carries at most `1/7` of the
+unit window — the second hypothesis of `good_pos_of_path_credits`. -/
+theorem danger_measure_le (v : ℕ) (hv : 1 ≤ v) :
+    volume (dangerR v ∩ Ioo (-(1:ℝ)/2) (1/2)) ≤ ENNReal.ofReal (1/7) := by
+  have hvR : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  set M : ℕ := (v + 1) / 2 with hM
+  have hM1 : 1 ≤ M := by omega
+  have hins : Finset.Icc (-(M : ℤ)) (M : ℤ)
+      = insert (-(M : ℤ)) (insert (M : ℤ)
+          (Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1))) := by
+    ext x
+    simp only [Finset.mem_Icc, Finset.mem_insert]
+    omega
+  have hcard : (Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1)).card = 2 * M - 1 := by
+    rw [Int.card_Icc]
+    omega
+  have hsum : ∑ m ∈ Finset.Icc (-(M : ℤ)) (M : ℤ),
+        volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2))
+      ≤ ENNReal.ofReal (((2 * M - 1 : ℕ) : ℝ) * (1 / (7 * v)))
+        + 2 * ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := by
+    rw [hins]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_insert, Finset.mem_Icc]
+      omega)]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_Icc]
+      omega)]
+    have hbody : ∑ m ∈ Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1),
+          volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2))
+        ≤ ENNReal.ofReal (((2 * M - 1 : ℕ) : ℝ) * (1 / (7 * v))) := by
+      calc ∑ m ∈ Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1),
+            volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2))
+          ≤ ∑ _m ∈ Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1),
+              ENNReal.ofReal (1 / (7 * v)) :=
+            Finset.sum_le_sum fun m _ => tooth_measure_le v hv m
+        _ = ENNReal.ofReal (((2 * M - 1 : ℕ) : ℝ) * (1 / (7 * v))) := by
+            rw [Finset.sum_const, hcard, nsmul_eq_mul,
+              ← ENNReal.ofReal_natCast (2 * M - 1),
+              ← ENNReal.ofReal_mul (by positivity)]
+    have htop := tooth_top_le v hv (M : ℤ)
+    have hbot := tooth_bot_le v hv (M : ℤ)
+    calc volume (tooth v (-(M : ℤ)) ∩ Ioo (-(1:ℝ)/2) (1/2))
+          + (volume (tooth v (M : ℤ) ∩ Ioo (-(1:ℝ)/2) (1/2))
+            + ∑ m ∈ Finset.Icc (-(M : ℤ) + 1) ((M : ℤ) - 1),
+                volume (tooth v m ∩ Ioo (-(1:ℝ)/2) (1/2)))
+        ≤ ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v)
+          + (ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v)
+            + ENNReal.ofReal (((2 * M - 1 : ℕ) : ℝ) * (1 / (7 * v)))) := by
+          exact add_le_add hbot (add_le_add htop hbody)
+      _ = ENNReal.ofReal (((2 * M - 1 : ℕ) : ℝ) * (1 / (7 * v)))
+          + 2 * ENNReal.ofReal (1/2 - ((M : ℝ) - 1/14) / v) := by
+          ring
+  have hchain := (measure_mono (danger_window_cover v hv)).trans
+    ((measure_biUnion_finset_le _ _).trans hsum)
+  refine hchain.trans ?_
+  -- final arithmetic, split by parity
+  rcases Nat.even_or_odd v with ⟨w, hw⟩ | ⟨w, hw⟩
+  · -- even v = w + w : M = w, boundary teeth carry exactly 1/(14v) each
+    have hMw : M = w := by omega
+    have hw1 : 1 ≤ w := by omega
+    have hw0 : (0:ℝ) < (w : ℝ) := by exact_mod_cast hw1
+    have hwR : ((w : ℝ)) * 2 = (v : ℝ) := by
+      exact_mod_cast (by omega : w * 2 = v)
+    have hB : (1:ℝ)/2 - ((M : ℝ) - 1/14) / v = 1 / (14 * v) := by
+      rw [hMw, ← hwR]
+      field_simp
+      ring
+    have hA : ((2 * M - 1 : ℕ) : ℝ) = (v : ℝ) - 1 := by
+      have h1 : 2 * M - 1 = v - 1 := by omega
+      rw [h1, Nat.cast_sub hv, Nat.cast_one]
+    have hv1R : (1:ℝ) ≤ (v : ℝ) := by exact_mod_cast hv
+    have hfin : ((v:ℝ) - 1) * (1 / (7 * (v:ℝ))) + (1 / (14 * (v:ℝ)) + 1 / (14 * (v:ℝ)))
+        = 1/7 := by
+      field_simp
+      ring
+    rw [hB, hA, two_mul,
+      ← ENNReal.ofReal_add (by positivity) (by positivity),
+      ← ENNReal.ofReal_add (mul_nonneg (by linarith) (by positivity)) (by positivity),
+      hfin]
+  · -- odd v = 2w + 1 : M = w + 1, boundary teeth are empty (nonpositive length)
+    have hMw : M = w + 1 := by omega
+    have hvw : (v : ℝ) = 2 * (w : ℝ) + 1 := by exact_mod_cast hw
+    have hB : (1:ℝ)/2 - ((M : ℝ) - 1/14) / v ≤ 0 := by
+      rw [hMw, sub_nonpos, le_div_iff₀ hvR, hvw]
+      push_cast
+      linarith
+    have hA : ((2 * M - 1 : ℕ) : ℝ) = (v : ℝ) := by
+      exact_mod_cast (by omega : 2 * M - 1 = v)
+    have hfin : (v:ℝ) * (1 / (7 * (v:ℝ))) = 1/7 := by
+      field_simp
+    rw [ENNReal.ofReal_of_nonpos hB, mul_zero, add_zero, hA, hfin]
+
 #print axioms consecutive_overlap_credit
 #print axioms consecutive_credit_closed
+#print axioms danger_measure_le
 
 end
 
