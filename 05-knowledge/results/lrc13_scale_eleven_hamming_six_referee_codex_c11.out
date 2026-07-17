@@ -1,0 +1,18 @@
+scale-eleven independent Python referee
+mask digest 4b279eb771d5feffcfc356a7f58042d3ed306124627b5cae268d1137659d008a
+hereditary divisor words 57; labelled order contexts 52668
+hereditary state words 1771500; labelled contexts 1636866000
+scalar capacity 66 all-D11 contexts on 66 supports
+owner-local bank 66 all-D11 contexts on 66 supports
+owner-local bank digest 23c46e44b78b27dba2b7b6b6426e69b19f301d06f3ac4c7b97da5aaf856f4ecf
+multiplication orbits 7; sizes 12,12,12,4,12,12,2
+exact covariance permutes providers, D11 units, owners, and owner sheets
+literal representative unit words 7000000; represented words 66000000
+global common-sheet survivors 0
+ordinary split 64; profile 0:996640 1:3360; owner 560; empty pair nerve
+quadratic split 2; profile 0:998200 2:1800; owner 600; nerve 3K2
+orbit-profile digest b1b66c5ab3cfc90c8ba0ba6f85e8818bd32c0598606974980224879dfb416f2d
+pair observable owner-obligation intersection; multiplication gauge; sorted tie path
+completed tournaments transitive: scores 0,1,2,3,4,5; cycles 0; SCC 1^6; flips 0; paths 1
+faithful vertices are owner obligations (or dually unit words), not raw runners
+sheet bits and completed tournaments erase the empty-nerve versus 3K2 distinction

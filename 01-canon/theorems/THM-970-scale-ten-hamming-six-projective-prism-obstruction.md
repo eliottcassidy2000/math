@@ -4,7 +4,7 @@ title: Scale-ten Hamming-six projective-prism owner-obligation obstruction
 status: PROVED FINITE-EXACT — the complete 821,620,800-context primitive proper AP-centred common-scale-ten Hamming-six sheet bank is empty; exact reduction leaves only the 64 all-order-ten sign transversals, whose owner-obligation nerve is the triangular-prism graph K6 minus C6 and has no common face
 source: codex-2026-07-17 scale-ten exact C++ certificate and independent Python referee
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860]
-related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, THM-969, HYP-6820]
+related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, THM-969, THM-974, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_ten_hamming_six_frontier_scout_codex_c10.cpp
   - 05-knowledge/results/lrc13_scale_ten_hamming_six_frontier_scout_codex_c10.out
@@ -286,4 +286,6 @@ and the concatenated obligation-profile digest
 `e0acf11ba6826b6f9af49354c2a873679ec966e1abf51d6b9b925f730ea05538`.
 
 Therefore the primitive proper AP-centred common-scale-ten Hamming-six bank is
-empty.  ∎
+empty.  THM-974 subsequently closes scale eleven; the next common-scale face
+is `c=12`.  None of these scale theorems is a global sporadic-classification
+bridge.  ∎

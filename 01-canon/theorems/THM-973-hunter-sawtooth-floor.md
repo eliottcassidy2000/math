@@ -1,5 +1,5 @@
 ---
-id: THM-964
+id: THM-973
 title: THE HUNTER–SAWTOOTH FLOOR — the 7-wall's measure estimate on nearly-equal pairs, closed: Hunter's inequality is tree-feasible at exactly k = 7, giving μ(U₇) ≥ Σ path-tree consecutive-pair overlaps; the sawtooth pair floor ρ(r) (exact, λ = 1/14, tabulated) bounds each edge; minimizing over ∏r_i ≤ 13 gives the explicit global floor μ(U₇) ≥ 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))); Markov over window positions converts it to a dead-position bound ≤ 0.908924 < 1 — the wall closes modulo window choice (BlockSplitLift's machinery)
 status: sawtooth-sum formula verified vs direct intervals 40/40 exact; Hunter floor violated 0/30 on random 7-blocks (exact μ(U₇) range [0.3152, 0.3747]); floor table + minimization exact
 source: opus-2026-07-17-S341 (owner: work the measure estimate on one pair of nearly-equal runners)
@@ -7,7 +7,7 @@ depends_on: [boxeph LRCTreeHunter (tree_hunter_add_le = link (H) kernel-pure + m
 scripts: 04-computation/hunter_sawtooth_floor_opus_S341.py -> 05-knowledge/results/hunter_sawtooth_floor_opus_S341.out
 ---
 
-# THM-964 — the Hunter–sawtooth floor
+# THM-973 — the Hunter–sawtooth floor
 
 **The chain (each link exact).**
 (H) Hunter's inequality — μ(∪A_i) ≤ ΣμA_i − Σ_tree μ(A_i ∩ A_j), any sets,

@@ -422,8 +422,9 @@ primitive proper AP-centred common-scale-four Hamming-six face.  It does not
 close any `c>=5` face, the ramified Hamming-five bank,
 non-AP-centred/deep-sheet branches, or global `n=12` sporadic emptiness.
 
-THM-958, THM-960, THM-962, THM-963, THM-969, and THM-970 subsequently answer
-`c=5,6,7,8,9,10`.  The next scale frontier is therefore `c=11`.  The successful later proofs
+THM-958, THM-960, THM-962, THM-963, THM-969, THM-970, and THM-974
+subsequently answer `c=5,6,7,8,9,10,11`.  The next scale frontier is therefore
+`c=12`.  The successful later proofs
 confirm that the right first question is whether the owner-sheet obligation
 hypergraph contracts to a small signed or algebraic carrier before any metric
 recursion is launched.

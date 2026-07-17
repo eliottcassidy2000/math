@@ -916,7 +916,12 @@ cycles.  Their owner-obligation intersection graph is `K3,3`, so a
 distance-two incompatible pair occurs in every owner triple.  A separately
 implemented Python referee reproduces the divisor counts, the `66=64+2`
 capacity split, the `3040/960/96` unit profile, and the pair spectrum
-`6x0,6x8,3x16`.  This endpoint is exact native C++, not yet Lean.
+`6x0,6x8,3x16`.  `LRCScaleEightOwnerNerve.lean` now formalizes the terminal
+quotient without `native_decide`: a 16,384-row ordinary-`decide` core proves
+distance-two owner obligations disjoint, and a six-cycle pigeonhole lemma
+kills every triple and the sixfold intersection.  Its public theorems audit
+to the standard trio.  The native certificate remains responsible for
+reducing all 215,728,128 literal contexts to that signed-cycle quotient.
 
 THM-969 closes `c=9`.  The `482,294,736` literal contexts reduce to `1,186`
 scalar rows and then `76` owner-local contexts: 64 all-order-nine signed
@@ -924,6 +929,9 @@ cycles and one 12-context mixed orbit.  Exact replay of `3,048,192` unit
 fibres has zero survivors.  The faithful owner-obligation nerves are `3K2`
 and, on the mixed orbit's order-nine owners, `2K2`.  Optimized, unoptimized,
 and sanitizer C++ runs agree with an independent Python reconstruction.
+`LRCScaleNineOwnerNerve.lean` kernel-checks both finite nerve tables and their
+abstract empty-total-intersection consumers without `native_decide`; the raw
+bank-to-nerve completeness reduction remains computational.
 
 THM-970 closes `c=10`.  The two-prime hereditary grammar has `3,002,076`
 divisor contexts and `821,620,800` literal contexts.  Scalar capacity leaves
@@ -935,8 +943,17 @@ nerve is `K6` minus `C6`, the triangular prism, with no triple faces.  Raw
 runners and completed tournaments lose the disjoint-obligation meaning of
 those cycle edges.
 
-Thus the AP-centred common-scale H6 faces `c=3,...,10` are closed.  This does
-not touch `c>=11`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
+THM-974 closes `c=11`.  The prime-order hereditary grammar has 57 divisor
+words and `1,636,866,000` labelled literal contexts.  Scalar capacity and
+owner-local feasibility leave 66 all-order-eleven supports.  Literal replay
+of all `66,000,000` remaining unit words gives zero survivors: 64 supports
+have pairwise-disjoint owner obligations, while the quadratic-residue and
+nonresidue supports have intersection graph `3K2`.  An independent Python
+referee proves the exact provider/unit/owner/sheet covariance before reducing
+to seven multiplication orbits.
+
+Thus the AP-centred common-scale H6 faces `c=3,...,11` are closed.  This does
+not touch `c>=12`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
 branches of the global `n=12` problem.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal

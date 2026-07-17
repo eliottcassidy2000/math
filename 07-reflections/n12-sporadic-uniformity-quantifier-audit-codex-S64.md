@@ -73,8 +73,8 @@ faces:
    theorems close AP-centred stars at stated radii/scales; they are not a
    completeness theorem saying that every sporadic packet is AP-centred.
 4. On the AP-centred proper Hamming-six common-sheet face, the exact recursions
-   and owner obstructions close scales `c=1,...,10` (THM-857/861/862,
-   THM-957/958/960/962/963/969/970).  This still leaves `c>=11`, the finite ramified H5
+   and owner obstructions close scales `c=1,...,11` (THM-857/861/862,
+   THM-957/958/960/962/963/969/970/974).  This still leaves `c>=12`, the finite ramified H5
    metric bank, radius-seven and higher correlated component languages,
    non-AP-centred/deep two-sheet packets, shell-five transport, dyadic/collar
    residuals, and higher sheets.

@@ -4,7 +4,7 @@ title: Scale-nine Hamming-six two-orbit obligation-nerve obstruction
 status: PROVED FINITE-EXACT — the complete 482,294,736-context primitive proper AP-centred common-scale-nine Hamming-six sheet bank is empty; exact reductions leave 64 all-order-nine signed cycles and one 12-context mixed orbit, and their owner-obligation nerves contain incompatible pairs
 source: codex-2026-07-17 scale-nine exact C++ certificate and independent Python referee
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860]
-related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, THM-970, HYP-6820]
+related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, THM-970, THM-974, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_nine_hamming_six_frontier_scout_codex_c9.cpp
   - 05-knowledge/results/lrc13_scale_nine_hamming_six_frontier_scout_codex_c9.out
@@ -369,11 +369,18 @@ eedac03346bb2fd21f37510f41f0ac92b8aa9bceda37dda5014539cb3e1bdc6e  C++ output
 83e7bc3efcf55646896b2604bf04546dd3329c97c6229a58c10fd8e01fd9fc55  Python output. (27)
 ```
 
-This is not yet a Lean-kernel proof.  The best formalization target is far
-smaller than the raw bank: formalize the nine-state mask table, the 76-context
-owner-local reduction, and then the pairwise emptiness statements in
-(17) and (20).  The terminal theorem needs only one empty obligation pair in
-each structural bank.
+`LRCScaleNineOwnerNerve.lean` now kernel-checks the terminal combinatorial
+step.  It defines exact pair and induced-subfamily nerves; verifies by ordinary
+`decide` that the all-order-nine table is `3K2` and the mixed order-nine
+subtable is `2K2`; and proves abstractly that either reported nerve forces the
+total owner intersection empty.  There is no `sorry` or `native_decide`; the
+axiom audit is at most the standard foundational trio.
+
+The module deliberately does not recheck the preceding nine-state mask table,
+the `482,294,736`-to-`76` reduction, or the literal pair counts.  Those remain
+the frozen C++/Python completeness certificate.  The next formalization layer
+would be the mask-to-exact-nerve bridge, not another brute-force terminal
+theorem.
 
 ## Scope guardrail
 
@@ -384,5 +391,5 @@ close common scales `10<=c<=840`, arbitrary non-AP Hamming-six packets, the rema
 Hamming-five bank, deep-sheet languages outside this chart, the seven-wall
 continuum-to-grid problem, the block-partition trichotomy, or global LRC(14).
 
-THM-970 subsequently closes `c=10`.  The next AP-centred common-scale
-Hamming-six frontier is `c=11`.  ∎
+THM-970 and THM-974 subsequently close `c=10,11`.  The next AP-centred
+common-scale Hamming-six frontier is `c=12`.  ∎

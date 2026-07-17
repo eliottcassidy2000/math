@@ -418,19 +418,26 @@ source SHA-256  af1d3d9d4b7b7537ca47ee3b54ec1c6f1494a61f733813d8ea9df78f49b6f5e2
 output SHA-256  7c0f14abc913a8eb9776232790f82fd5cac959e591a0a621d094ee02bb6438a4. (35)
 ```
 
-The certificate is exact native C++: integer CRT arithmetic, finite mask
+The bank-reduction certificate is exact native C++: integer CRT arithmetic, finite mask
 dynamic programming, exhaustive 48-bit literal unions, and exhaustive finite
 nerve checks.  It uses no floating point, randomness, heuristic pruning, or
 `assert` whose removal under optimization changes the checks (`require`
 terminates explicitly).  Normal and unoptimized builds are byte-identical,
 and sanitizer replay is clean.
 
-This is not yet a Lean-kernel proof.  The best formalization target is much
-smaller than the 215-million-row census: formalize (17)--(23), prove the
-distance-two owner intersections empty, and derive the `K_{3,3}` obstruction.
-The native checker currently validates that symbolic quotient against every
-literal all-order-eight owner row and separately validates that all mixed
-orders die owner-locally.
+`LRCScaleEightOwnerNerve.lean` now kernel-checks the terminal symbolic
+quotient.  Its reduced four-digit truth table has `2^6*4^4=16,384` rows and
+uses ordinary `decide` to prove distance-two owner obligations disjoint after
+forgetting the two private digits.  A separate six-cycle pigeonhole theorem
+shows that any three distinct owners contain such a pair, hence the sixfold
+intersection is empty.  The module has no `sorry` or `native_decide`; all four
+public theorems audit to `propext`, `Classical.choice`, and `Quot.sound`.
+
+The native checker still supplies the preceding completeness bridge: it
+validates the symbolic quotient against every literal all-order-eight owner
+row and separately proves that all mixed orders die owner-locally.  Thus the
+terminal `K_{3,3}` contradiction is kernel-pure, while the 215-million-context
+reduction remains a frozen finite-exact certificate.
 
 ## Scope guardrail
 
@@ -442,5 +449,6 @@ Hamming-five metric bank, deep-sheet languages outside this chart, the
 seven-wall continuum-to-grid problem, or the block-partition trichotomy.
 
 In particular, THM-963 makes a real finite frontier advance but is not a proof
-of global LRC(14).  THM-969 and THM-970 subsequently close `c=9,10`; the next
-AP-centred common-scale Hamming-six frontier is `c=11`.  ∎
+of global LRC(14).  THM-969, THM-970, and THM-974 subsequently close
+`c=9,10,11`; the next AP-centred common-scale Hamming-six frontier is `c=12`.
+∎

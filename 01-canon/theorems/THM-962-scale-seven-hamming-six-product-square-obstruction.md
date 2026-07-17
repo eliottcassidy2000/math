@@ -4,7 +4,7 @@ title: Scale-seven Hamming-six product-character and square-sum obstruction
 status: PROVED STRUCTURAL + FINITE-EXACT + LEAN TERMINAL BRICK GREEN — all 108,673,488 primitive proper AP-centred c=7 leave-one-out order/unit contexts fail necessary common-sheet coverage; capacity forces all six effective orders to seven, a row-product character kills 922 of 924 supports, and a mod-seven square-sum contradiction kills the two quadratic-coset exceptions; the final square-sum obstruction is kernel-checked in Lean with no sorry/native_decide
 source: codex-2026-07-17-S63 scale-seven product/square audit
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860]
-related: [THM-862, THM-957, THM-958, THM-960, THM-963, THM-969, THM-970, HYP-6820]
+related: [THM-862, THM-957, THM-958, THM-960, THM-963, THM-969, THM-970, THM-974, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_seven_hamming_six_product_obstruction_codex_S63.py
   - 05-knowledge/results/lrc13_scale_seven_hamming_six_product_obstruction_codex_S63.out
