@@ -6,12 +6,22 @@
   then periodized through `Int.fract`. The resulting survivor is measurable,
   its indicator is one-periodic, and its mass on one period is exactly the cast
   rational region length. These facts instantiate the centered-primitive and
-  eta/q duality theorems from `LRCLocalDensityBlockGluing`.
+  eta/q duality theorems from `LRCLocalDensityBlockGluing`. The final section
+  specializes this provider to the concrete `rationalCircleSurvivor` and
+  `rationalCircleChart`; their normalization and unit-chart premises are now
+  unconditional, so only exact numeric region evaluation remains external.
 
   The exact-measure bridge needs precisely the rational measure discipline:
   `Norm region` for live, ordered, disjoint intervals, plus `regionInUnit region`
   to identify the listed chart with the fundamental period. No component-count
   topology is used.
+
+  For the concrete moving circle charts, the unconditional normalization
+  theorem discharges both measure premises. In particular, neither
+  `BoundaryFaithfulRotation` nor cut-balance is an analytic assumption; those
+  invariants remain confined to component-count transport. Zarankiewicz
+  relation constraints can therefore narrow the later numeric region census
+  without entering this provider interface.
 
   Assumption challenge: the periodicization quotient uses neither runners nor
   arcs as tournament vertices. It preserves survivor membership modulo one and
@@ -244,6 +254,336 @@ theorem rationalRegion_eta_q_duality
     (rationalRegionDensity region) (periodicRationalRegion_indicator_periodic region)
     (periodicRationalRegion_period_density region hnorm hunit)
 
+/-! ## Concrete rational-circle analytic providers -/
+
+/-- One-periodic real set represented by the recursive rational circle
+survivor. -/
+def periodicRationalCircleSurvivor
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : Set ℝ :=
+  periodicRationalRegion (rationalCircleSurvivor shift tooth toothCount)
+
+/-- One-periodic real set represented by the normalized rational circle
+chart. -/
+def periodicRationalCircleChart
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : Set ℝ :=
+  periodicRationalRegion (rationalCircleChart shift tooth toothCount)
+
+/-- Exact real density ledger of the recursive rational circle survivor. -/
+noncomputable def rationalCircleSurvivorDensity
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : ℝ :=
+  rationalRegionDensity (rationalCircleSurvivor shift tooth toothCount)
+
+/-- Exact real density ledger of the normalized rational circle chart. -/
+noncomputable def rationalCircleChartDensity
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : ℝ :=
+  rationalRegionDensity (rationalCircleChart shift tooth toothCount)
+
+/-- The rational length ledger, hence its real density cast, is invariant
+under interval-list permutation. -/
+theorem rationalRegionDensity_eq_of_perm {left right : Region}
+    (hperm : left.Perm right) :
+    rationalRegionDensity left = rationalRegionDensity right := by
+  unfold rationalRegionDensity LonelyRunner.RatIntervals.length
+  congr 1
+  exact (hperm.map (fun interval => max 0 (interval.2 - interval.1))).sum_eq
+
+/-- A sorted rational circle translation preserves the exact density
+ledger. -/
+theorem rationalRegionDensity_sortedTranslateCirc
+    (shift : ℚ) (region : Region) (hunit : RegionInUnit region) :
+    rationalRegionDensity (sortedTranslateCirc shift region) =
+      rationalRegionDensity region := by
+  calc
+    rationalRegionDensity (sortedTranslateCirc shift region) =
+        rationalRegionDensity (translateCirc shift region) :=
+      rationalRegionDensity_eq_of_perm (sortedTranslateCirc_perm shift region)
+    _ = rationalRegionDensity region := by
+      unfold rationalRegionDensity
+      rw [length_translateCirc]
+      intro interval hinterval
+      have hbounds := hunit interval hinterval
+      linarith
+
+/-- Recharting changes coordinates and interval order, but not survivor
+density. -/
+theorem rationalCircleChartDensity_eq_survivorDensity
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleChartDensity shift tooth toothCount =
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  unfold rationalCircleChartDensity rationalCircleSurvivorDensity
+  cases toothCount with
+  | zero => rfl
+  | succ toothCount =>
+      simpa [rationalCircleChart, rationalCircleRechart] using
+        rationalRegionDensity_sortedTranslateCirc
+          (shift (toothCount + 1))
+          (rationalCircleSurvivor shift tooth (toothCount + 1))
+          (regionInUnit_rationalCircleSurvivor shift tooth (toothCount + 1))
+
+/-- The recursive survivor supplies all THM-933 analytic hypotheses without
+an additional topology or normalization assumption. -/
+theorem rationalCircleSurvivor_analytic_provider
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    MeasurableSet (periodicRationalCircleSurvivor shift tooth toothCount) ∧
+      Function.Periodic
+        (fun t =>
+          (periodicRationalCircleSurvivor shift tooth toothCount).indicator
+            (fun _ => (1 : ℝ)) t) 1 ∧
+      (volume (periodicRationalCircleSurvivor shift tooth toothCount ∩
+        Ioc (0 : ℝ) 1)).toReal =
+          rationalCircleSurvivorDensity shift tooth toothCount := by
+  simpa [periodicRationalCircleSurvivor, rationalCircleSurvivorDensity] using
+    rationalRegion_analytic_provider
+      (rationalCircleSurvivor shift tooth toothCount)
+      (norm_rationalCircleSurvivor shift tooth toothCount)
+      (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
+
+/-- The normalized moving chart supplies all THM-933 analytic hypotheses
+without an additional topology or normalization assumption. -/
+theorem rationalCircleChart_analytic_provider
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    MeasurableSet (periodicRationalCircleChart shift tooth toothCount) ∧
+      Function.Periodic
+        (fun t =>
+          (periodicRationalCircleChart shift tooth toothCount).indicator
+            (fun _ => (1 : ℝ)) t) 1 ∧
+      (volume (periodicRationalCircleChart shift tooth toothCount ∩
+        Ioc (0 : ℝ) 1)).toReal =
+          rationalCircleChartDensity shift tooth toothCount := by
+  simpa [periodicRationalCircleChart, rationalCircleChartDensity] using
+    rationalRegion_analytic_provider
+      (rationalCircleChart shift tooth toothCount)
+      (norm_rationalCircleChart shift tooth toothCount)
+      (regionInUnit_rationalCircleChart shift tooth toothCount)
+
+/-- Concrete measurability of the recursive rational circle survivor. -/
+theorem measurableSet_periodicRationalCircleSurvivor
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    MeasurableSet (periodicRationalCircleSurvivor shift tooth toothCount) :=
+  (rationalCircleSurvivor_analytic_provider shift tooth toothCount).1
+
+/-- Concrete measurability of the normalized rational circle chart. -/
+theorem measurableSet_periodicRationalCircleChart
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    MeasurableSet (periodicRationalCircleChart shift tooth toothCount) :=
+  (rationalCircleChart_analytic_provider shift tooth toothCount).1
+
+/-- Concrete one-periodicity of the recursive survivor indicator. -/
+theorem periodicRationalCircleSurvivor_indicator_periodic
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Function.Periodic
+      (fun t =>
+        (periodicRationalCircleSurvivor shift tooth toothCount).indicator
+          (fun _ => (1 : ℝ)) t) 1 :=
+  (rationalCircleSurvivor_analytic_provider shift tooth toothCount).2.1
+
+/-- Concrete one-periodicity of the normalized chart indicator. -/
+theorem periodicRationalCircleChart_indicator_periodic
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Function.Periodic
+      (fun t => (periodicRationalCircleChart shift tooth toothCount).indicator
+        (fun _ => (1 : ℝ)) t) 1 :=
+  (rationalCircleChart_analytic_provider shift tooth toothCount).2.1
+
+/-- Exact one-period mass of the recursive rational circle survivor. -/
+theorem periodicRationalCircleSurvivor_period_density
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleSurvivor shift tooth toothCount ∩
+      Ioc (0 : ℝ) 1)).toReal =
+        rationalCircleSurvivorDensity shift tooth toothCount :=
+  (rationalCircleSurvivor_analytic_provider shift tooth toothCount).2.2
+
+/-- Exact one-period mass of the normalized rational circle chart. -/
+theorem periodicRationalCircleChart_period_density
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleChart shift tooth toothCount ∩
+      Ioc (0 : ℝ) 1)).toReal =
+        rationalCircleChartDensity shift tooth toothCount :=
+  (rationalCircleChart_analytic_provider shift tooth toothCount).2.2
+
+/-- The chart period mass is the survivor density, so recharting introduces
+no analytic debt. -/
+theorem periodicRationalCircleChart_period_density_eq_survivorDensity
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleChart shift tooth toothCount ∩
+      Ioc (0 : ℝ) 1)).toReal =
+        rationalCircleSurvivorDensity shift tooth toothCount := by
+  rw [periodicRationalCircleChart_period_density,
+    rationalCircleChartDensity_eq_survivorDensity]
+
+/-- The survivor's centered primitive is one-periodic. -/
+theorem rationalCircleSurvivor_centeredPrimitive_periodic
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Function.Periodic
+      (centeredPrimitive (periodicRationalCircleSurvivor shift tooth toothCount)
+        (rationalCircleSurvivorDensity shift tooth toothCount)) 1 := by
+  rcases rationalCircleSurvivor_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact centeredPrimitive_periodic _ hmeasurable _ hperiodic hdensity
+
+/-- The moving chart's centered primitive is one-periodic. -/
+theorem rationalCircleChart_centeredPrimitive_periodic
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Function.Periodic
+      (centeredPrimitive (periodicRationalCircleChart shift tooth toothCount)
+        (rationalCircleChartDensity shift tooth toothCount)) 1 := by
+  rcases rationalCircleChart_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact centeredPrimitive_periodic _ hmeasurable _ hperiodic hdensity
+
+/-- Every length-one survivor window has exactly the symbolic survivor
+density. -/
+theorem rationalCircleSurvivor_retainedWindow_one_eq_density
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) (startPoint : ℝ) :
+    retainedWindow (periodicRationalCircleSurvivor shift tooth toothCount)
+        1 startPoint =
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  rcases rationalCircleSurvivor_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact retainedWindow_one_eq_density _ hmeasurable _ startPoint hperiodic hdensity
+
+/-- Every length-one chart window has exactly the symbolic chart density. -/
+theorem rationalCircleChart_retainedWindow_one_eq_density
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) (startPoint : ℝ) :
+    retainedWindow (periodicRationalCircleChart shift tooth toothCount)
+        1 startPoint =
+      rationalCircleChartDensity shift tooth toothCount := by
+  rcases rationalCircleChart_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact retainedWindow_one_eq_density _ hmeasurable _ startPoint hperiodic hdensity
+
+/-- At full-period scale, survivor `eta` is its exact symbolic density. -/
+theorem rationalCircleSurvivor_fixedScaleEta_one
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    fixedScaleEta (periodicRationalCircleSurvivor shift tooth toothCount) 1 =
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  rcases rationalCircleSurvivor_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact fixedScaleEta_one _ hmeasurable _ hperiodic hdensity
+
+/-- At full-period scale, chart `eta` is its exact symbolic density. -/
+theorem rationalCircleChart_fixedScaleEta_one
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    fixedScaleEta (periodicRationalCircleChart shift tooth toothCount) 1 =
+      rationalCircleChartDensity shift tooth toothCount := by
+  rcases rationalCircleChart_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact fixedScaleEta_one _ hmeasurable _ hperiodic hdensity
+
+/-- Every positive-scale survivor deficit is bounded by its primitive
+discrepancy. -/
+theorem rationalCircleSurvivor_fixedScaleEta_deficit_le_primitiveDiscrepancy
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) {ell : ℝ} (hell : 0 < ell) :
+    ell * (rationalCircleSurvivorDensity shift tooth toothCount -
+      fixedScaleEta (periodicRationalCircleSurvivor shift tooth toothCount) ell) ≤
+        primitiveDiscrepancy
+          (periodicRationalCircleSurvivor shift tooth toothCount)
+          (rationalCircleSurvivorDensity shift tooth toothCount) := by
+  rcases rationalCircleSurvivor_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact fixedScaleEta_deficit_le_primitiveDiscrepancy
+    _ hmeasurable _ hperiodic hdensity hell
+
+/-- Every positive-scale chart deficit is bounded by its primitive
+discrepancy. -/
+theorem rationalCircleChart_fixedScaleEta_deficit_le_primitiveDiscrepancy
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) {ell : ℝ} (hell : 0 < ell) :
+    ell * (rationalCircleChartDensity shift tooth toothCount -
+      fixedScaleEta (periodicRationalCircleChart shift tooth toothCount) ell) ≤
+        primitiveDiscrepancy
+          (periodicRationalCircleChart shift tooth toothCount)
+          (rationalCircleChartDensity shift tooth toothCount) := by
+  rcases rationalCircleChart_analytic_provider shift tooth toothCount with
+    ⟨hmeasurable, hperiodic, hdensity⟩
+  exact fixedScaleEta_deficit_le_primitiveDiscrepancy
+    _ hmeasurable _ hperiodic hdensity hell
+
+/-- Survivor eta/q equality is attained at some scale `0 < ell ≤ 1`. -/
+theorem rationalCircleSurvivor_eta_q_attained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    ∃ ell ∈ Ioc (0 : ℝ) 1,
+      ell * (rationalCircleSurvivorDensity shift tooth toothCount -
+        fixedScaleEta (periodicRationalCircleSurvivor shift tooth toothCount) ell) =
+          primitiveDiscrepancy
+            (periodicRationalCircleSurvivor shift tooth toothCount)
+            (rationalCircleSurvivorDensity shift tooth toothCount) := by
+  simpa [periodicRationalCircleSurvivor, rationalCircleSurvivorDensity] using
+    rationalRegion_eta_q_attained
+      (rationalCircleSurvivor shift tooth toothCount)
+      (norm_rationalCircleSurvivor shift tooth toothCount)
+      (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
+
+/-- Chart eta/q equality is attained at some scale `0 < ell ≤ 1`. -/
+theorem rationalCircleChart_eta_q_attained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    ∃ ell ∈ Ioc (0 : ℝ) 1,
+      ell * (rationalCircleChartDensity shift tooth toothCount -
+        fixedScaleEta (periodicRationalCircleChart shift tooth toothCount) ell) =
+          primitiveDiscrepancy
+            (periodicRationalCircleChart shift tooth toothCount)
+            (rationalCircleChartDensity shift tooth toothCount) := by
+  simpa [periodicRationalCircleChart, rationalCircleChartDensity] using
+    rationalRegion_eta_q_attained
+      (rationalCircleChart shift tooth toothCount)
+      (norm_rationalCircleChart shift tooth toothCount)
+      (regionInUnit_rationalCircleChart shift tooth toothCount)
+
+/-- Full attained eta/q duality for the recursive rational circle survivor. -/
+theorem rationalCircleSurvivor_eta_q_duality
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    primitiveDiscrepancy
+        (periodicRationalCircleSurvivor shift tooth toothCount)
+        (rationalCircleSurvivorDensity shift tooth toothCount) =
+      fixedScaleDeficitSup
+        (periodicRationalCircleSurvivor shift tooth toothCount)
+        (rationalCircleSurvivorDensity shift tooth toothCount) := by
+  simpa [periodicRationalCircleSurvivor, rationalCircleSurvivorDensity] using
+    rationalRegion_eta_q_duality
+      (rationalCircleSurvivor shift tooth toothCount)
+      (norm_rationalCircleSurvivor shift tooth toothCount)
+      (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
+
+/-- Full attained eta/q duality for the normalized rational circle chart. -/
+theorem rationalCircleChart_eta_q_duality
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    primitiveDiscrepancy
+        (periodicRationalCircleChart shift tooth toothCount)
+        (rationalCircleChartDensity shift tooth toothCount) =
+      fixedScaleDeficitSup
+        (periodicRationalCircleChart shift tooth toothCount)
+        (rationalCircleChartDensity shift tooth toothCount) := by
+  simpa [periodicRationalCircleChart, rationalCircleChartDensity] using
+    rationalRegion_eta_q_duality
+      (rationalCircleChart shift tooth toothCount)
+      (norm_rationalCircleChart shift tooth toothCount)
+      (regionInUnit_rationalCircleChart shift tooth toothCount)
+
 /-! ## Axiom audit -/
 
 #print axioms ratCast_mem_rationalRegionSet
@@ -255,5 +595,14 @@ theorem rationalRegion_eta_q_duality
 #print axioms rationalRegion_fixedScaleEta_attained
 #print axioms rationalRegion_eta_q_attained
 #print axioms rationalRegion_eta_q_duality
+#print axioms rationalCircleChartDensity_eq_survivorDensity
+#print axioms rationalCircleSurvivor_analytic_provider
+#print axioms rationalCircleChart_analytic_provider
+#print axioms rationalCircleSurvivor_centeredPrimitive_periodic
+#print axioms rationalCircleChart_centeredPrimitive_periodic
+#print axioms rationalCircleSurvivor_eta_q_attained
+#print axioms rationalCircleChart_eta_q_attained
+#print axioms rationalCircleSurvivor_eta_q_duality
+#print axioms rationalCircleChart_eta_q_duality
 
 end LRC14.LocalDensityBlockGluing
