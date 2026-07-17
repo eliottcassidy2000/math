@@ -147,3 +147,55 @@ The denominator quotient preserves bad-neighborhood row degrees but destroys cyc
 phase intersections.  Closing these saturated patterns therefore needs a parity/two-
 adic or explicit intersection argument; no unsupported Zarankiewicz `K_{2,t}`-free
 assumption is introduced.
+
+## Exact phase, topology, and relation sharpening — S32--S37
+
+The next formalization pass separates three previously conflated residuals.
+
+First, THM-933's generic rational-tooth machinery is now closed at the topology,
+analytic-provider, and exact-density-recursion levels.  Canonical adjacent coalescing
+makes every rational survivor seam-free and `BoundaryFaithfulRotation` automatic;
+the exact density is `1 - sum overlap_k`, with each overlap an explicit rational clip
+sum.  This does **not** yet identify an arbitrary actual speed-block safe set with the
+rational recursion or instantiate its component-measure and numerical certificates.
+Those concrete realization steps remain formalization work, not an open seam lemma.
+
+Second, `TournamentH7.LRCDetunedOverlap` now proves the local-density debt principle
+on the parallel-class circle: pair-overlap cardinality pays the same amount of excess
+three-row bad degree, phase by phase, and the certificate produces an actual lonely
+time through `ThreeDetunedInstanceClearing`.  In the primitive uniform q-three case,
+`TournamentH7.LRCEndgameUniformThreePhase` proves `g=3` and the equivalences
+
+```text
+no common good branch
+  <-> cyclic permutation obstruction
+  <-> three full pairwise-disjoint bad rows partition the branch circle.
+```
+
+After signing to residue one modulo three, `3/14` clearance of the normalized sum
+frequency suffices.  The kernel-checked tuple `p=(1,29,28)` at `u=1/7`, normalized to
+`(1,-29,28)`, simultaneously has harmonic `1/11` clearance, the cyclic obstruction,
+and zero sum frequency.  Hence existing structural hypotheses do not contradict the
+obstruction at an arbitrary cited witness; the remaining q-three problem is to select
+a different harmonic-good phase.
+
+Third, the below-`40` Sidon collision now returns an explicit signed support-at-most-
+four coefficient certificate.  THM-939 proves complementary exclusion results on the
+chain-dense core: below-mass-two relations cannot top out above the dense pair, and
+unit relations cannot top out four positions above it.  The newly pulled leverage
+identity closes the alternating-binomial and Bonferroni certificate algebra, including
+the exact equilibrium and kill threshold.  What is still missing is the concrete
+sweep/singular-series identification and strict support-`3,4,5` tail budget under those
+relation traps.
+
+The sharp honest residual after these pulls is therefore:
+
+1. the nonterminating q-two two-adic pair tower;
+2. a q-two triple with a distinct reduced-denominator companion at most `8`, now to be
+   attacked by the exact phase-overlap debt rather than degree bounds alone;
+3. primitive `g=3` cyclic q-three witness selection (the scalar `3/14` gate is only a
+   sufficient selector, not an automatic consequence);
+4. trapped relation-budget supply: concrete relation-mass/sweep encoding plus the
+   support-`3,4,5` strict three-quarter tail bound.
+
+This is a sharpening of the capstone interface, not a proof of LRC(14).

@@ -57,7 +57,11 @@ have cardinality at most `26`, `13`, and `7`.  More than `26` support-`≥3` rel
 produces an explicit pair shared by two distinct supports.  The same module proves the
 tiny-scale floor: thirteen injective positive speeds below `40` give two distinct
 two-index sets with equal speed sum.  The proof uses the sharp range `[3,77]` (the
-former `[3,79]` wording was a typo).
+former `[3,79]` wording was a typo).  This collision is now converted to an explicit
+nonzero coefficient vector in `{-1,0,1}`, with support at most four and zero dot
+product.  A signed version applies to integer tuples with distinct absolute values,
+so the formal result carries the relation coefficients rather than only the two
+equal-pair supports.
 
 This quotient preserves exact-support size, pair-owner incidence, multiplicity load,
 and the collision graph.  It destroys relation coefficients, Fourier/Bernoulli signs,
@@ -78,6 +82,19 @@ the equilibrium budget, leaving a machine-checked strict three-quarter socket fo
 still-open `T_s(H)`, `s=3,4,5`, bounds.  The module does not claim that the analytic
 singular-series identity with concrete discrete `B5` is already formalized.
 
+`TournamentH7.LRCLeverageIdentity` independently closes the finite depth-spectrum
+algebra: the exact alternating-binomial leverage identity, two-sided Bonferroni
+inequalities, the positive odd-truncation certificate theorem, the coefficients
+`E_2,E_3,E_4`, equilibrium `2052/16807`, leverage `792`, and exact kill threshold
+`57/369754` are kernel-checked.  This removes the abstract Bonferroni algebra from the
+residual, but not the packet sweep encoding or the singular-series relation-mass
+identification consumed by `LRCB5RelationBudget`.
+
+THM-939's `TournamentH7.LRCDenseCoreRelationTrap` further narrows where the remaining
+tails must be proved: above the dense pair there are no top-supported below-mass-two
+relations, and unit-coefficient relations are trapped in the bottom four positions.
+`TrappedDenseCoreB5Supply` exports exactly these theorem hypotheses to the B5 supplier.
+
 `TournamentH7.LRCB5RelationEndgame` is the proof-producing consumer of that missing
 bridge.  A `B5RelationBudgetCertificate` contains a modulus, four exact-support masses,
 the equality of the signed model with the concrete integer `B5`, and the quarter / three-
@@ -85,6 +102,12 @@ quarter bounds.  It proves integer `B5 > 0`, turns certificate supply on the pri
 dissociated `ChainDenseCore` into `DenseCoreDissociatedB5Supply`, and machine-checks
 `lrc14_from_twoThree_detuned_and_relationBudget`.  Exact degree arithmetic has reduced
 the triple dispatch to a `q=2` row with a distinct `q≤8` companion or the uniform
-`(3,3,3)` pattern.  Thus, after `LRCUpTo13`, the remaining mathematics is exposed exactly
-as those phase-sensitive detuned patterns, the nonterminating pair tower, and construction
-of the relation certificates; no sign, cast, or endgame composition step is left informal.
+`(3,3,3)` pattern.  The latter is now primitive modulus `3`, and failure is exactly a
+cyclic matching, equivalently a saturated pairwise-disjoint partition of the three
+parallel-class rows.  A normalized sum-frequency clearance of `3/14` is sufficient,
+but the checked `(1,29,28)` example at `u=1/7` shows that an arbitrary harmonic-good
+witness can realize the obstruction with zero normalized sum frequency.  Thus, after
+`LRCUpTo13`, the remaining mathematics is exposed exactly as q-two phase/overlap or
+two-adic dispatch, q-three witness selection, and construction of the trapped
+relation-budget certificates; no sign, cast, or endgame composition step is left
+informal.

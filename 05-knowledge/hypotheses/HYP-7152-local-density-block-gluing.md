@@ -2,10 +2,11 @@
 
 **Owner:** codex-2026-07-16-S21  
 **Target:** THM-933 (renumbered after Opus first pushed the THM-932 claim stub)
-**Status:** RESOLVED as THM-933.  The full canon proof and exact referee pass;
-the Lean primitive bridge, tooth-count induction, gluing algebra, and exact
-constants are formalized.  The remaining formalization rung is the concrete
-circle-measure/arc instantiation.
+**Status:** RESOLVED mathematically as THM-933.  The full canon proof and exact
+referee pass.  Lean closes the generic rational-tooth analytic, canonical-
+topology, exact-density, and abstract gluing spine.  Remaining formalization is
+the actual speed-comb realization, genuine component-measure instantiation,
+scale covariance, and concrete numerical certificates.
 
 ## Claimed interface
 
@@ -124,3 +125,9 @@ and Hamiltonian-path counts.
    formalized.
 5. Canon promotion and dependency audit: complete as THM-933; the concurrent
    THM-932 target is the coarser fixed-local-scale interface.
+6. Generic rational provider: complete.  Canonical seam-free survivors make
+   boundary faithfulness unconditional; the exact period-density recurrence is
+   `1 - sum overlap_k`, with each overlap an explicit rational clip sum.
+7. Actual speed-block export: open.  Identify the danger-comb recursion with
+   `S_rho(B)`, connect combinatorial and genuine circular components, prove
+   scale covariance, and replay the advertised `delta/q/eta` certificate data.

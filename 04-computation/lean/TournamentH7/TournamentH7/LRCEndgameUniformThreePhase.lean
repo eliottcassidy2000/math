@@ -515,6 +515,14 @@ theorem phaseCounterexample_residue_one :
     norm_num [phaseCounterexampleNormalized, phaseCounterexampleSigns,
       phaseCounterexampleSpeeds]
 
+theorem phaseCounterexample_normalized_cyclicObstruction :
+    ThreeClassCyclicObstruction phaseCounterexampleNormalized ((1 : ℝ) / 7) := by
+  apply (cyclicObstruction_sign_iff phaseCounterexampleSpeeds
+    phaseCounterexampleSigns ((1 : ℝ) / 7) (by
+      intro i
+      fin_cases i <;> simp [phaseCounterexampleSigns])).mpr
+  exact phaseCounterexample_cyclicObstruction
+
 /-- The normalized signed sum frequency vanishes exactly because
 `1 + 28 = 29`. -/
 theorem phaseCounterexample_frequency_zero :
@@ -552,6 +560,7 @@ theorem phaseCounterexample_not_frequency_clear :
 #print axioms exists_threeClassClear_of_frequency_clear
 #print axioms phaseCounterexample_harmonic_clear
 #print axioms phaseCounterexample_cyclicObstruction
+#print axioms phaseCounterexample_normalized_cyclicObstruction
 #print axioms phaseCounterexample_frequency_zero
 #print axioms phaseCounterexample_not_frequency_clear
 

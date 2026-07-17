@@ -90,6 +90,131 @@ theorem card_three_union_add_pair_inter_le {α : Type*} [DecidableEq α]
   have hpair := Finset.card_union_add_card_inter first second
   omega
 
+/-- Two overlap credits incident to the first row can be charged
+simultaneously. -/
+theorem card_three_union_add_two_first_inter_le
+    {α : Type*} [DecidableEq α] (first second third : Finset α) :
+    (first ∪ second ∪ third).card + (first ∩ second).card +
+        (first ∩ third).card ≤
+      first.card + second.card + third.card := by
+  have hfirstSecond := Finset.card_union_add_card_inter first second
+  have hstep := Finset.card_union_add_card_inter (first ∪ second) third
+  have hsubset : first ∩ third ⊆ (first ∪ second) ∩ third := by
+    intro x hx
+    rw [Finset.mem_inter] at hx ⊢
+    exact ⟨Finset.mem_union_left second hx.1, hx.2⟩
+  have hcredit := Finset.card_le_card hsubset
+  omega
+
+/-- Exact finite-carrier gluing with two star-overlap credits. -/
+theorem exists_outside_three_of_two_first_overlapDebt
+    {α : Type*} [DecidableEq α]
+    (branches first second third : Finset α)
+    (hdebt : first.card + second.card + third.card <
+      branches.card + (first ∩ second).card + (first ∩ third).card) :
+    ∃ c ∈ branches, c ∉ first ∧ c ∉ second ∧ c ∉ third := by
+  have hunionCredit :=
+    card_three_union_add_two_first_inter_le first second third
+  have hunion_lt : (first ∪ second ∪ third).card < branches.card := by
+    omega
+  have hnotsub : ¬ branches ⊆ first ∪ second ∪ third := by
+    intro hsub
+    exact (Nat.not_le_of_lt hunion_lt) (Finset.card_le_card hsub)
+  rw [Finset.not_subset] at hnotsub
+  obtain ⟨c, hcBranches, hcUnion⟩ := hnotsub
+  simp only [Finset.mem_union, not_or] at hcUnion
+  exact ⟨c, hcBranches, hcUnion.1.1, hcUnion.1.2, hcUnion.2⟩
+
+/-- Exact finite-carrier block gluing: the three local row sizes may exceed
+the carrier size provided one measured pair overlap pays that excess. -/
+theorem exists_outside_three_of_exact_overlapDebt {α : Type*} [DecidableEq α]
+    (branches first second third : Finset α)
+    (hdebt :
+      first.card + second.card + third.card <
+          branches.card + (first ∩ second).card ∨
+      first.card + second.card + third.card <
+          branches.card + (first ∩ third).card ∨
+      first.card + second.card + third.card <
+          branches.card + (second ∩ third).card) :
+    ∃ c ∈ branches, c ∉ first ∧ c ∉ second ∧ c ∉ third := by
+  have good_of_credit (credit : ℕ)
+      (hunionCredit :
+        (first ∪ second ∪ third).card + credit ≤
+          first.card + second.card + third.card)
+      (hcredit : first.card + second.card + third.card <
+        branches.card + credit) :
+      ∃ c ∈ branches, c ∉ first ∧ c ∉ second ∧ c ∉ third := by
+    have hunion_lt : (first ∪ second ∪ third).card < branches.card := by
+      omega
+    have hnotsub : ¬ branches ⊆ first ∪ second ∪ third := by
+      intro hsub
+      exact (Nat.not_le_of_lt hunion_lt) (Finset.card_le_card hsub)
+    rw [Finset.not_subset] at hnotsub
+    obtain ⟨c, hcBranches, hcUnion⟩ := hnotsub
+    simp only [Finset.mem_union, not_or] at hcUnion
+    exact ⟨c, hcBranches, hcUnion.1.1, hcUnion.1.2, hcUnion.2⟩
+  rcases hdebt with h12 | h13 | h23
+  · exact good_of_credit (first ∩ second).card
+      (card_three_union_add_pair_inter_le first second third) h12
+  · apply good_of_credit (first ∩ third).card
+    · simpa [Finset.union_assoc, Finset.union_left_comm, Finset.union_comm,
+        Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using
+        card_three_union_add_pair_inter_le first third second
+    · exact h13
+  · apply good_of_credit (second ∩ third).card
+    · simpa [Finset.union_assoc, Finset.union_left_comm, Finset.union_comm,
+        Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using
+        card_three_union_add_pair_inter_le second third first
+    · exact h23
+
+/-- Exact phase-local debt condition using the observed row cardinalities,
+rather than their universal arithmetic upper bounds. -/
+def ThreeDetunedExactOverlapDebtPaid (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ) : Prop :=
+  (detunedBadBranches δ₁ g u).card + (detunedBadBranches δ₂ g u).card +
+      (detunedBadBranches δ₃ g u).card <
+    g.toNat +
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₂ g u).card ∨
+  (detunedBadBranches δ₁ g u).card + (detunedBadBranches δ₂ g u).card +
+      (detunedBadBranches δ₃ g u).card <
+    g.toNat +
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₃ g u).card ∨
+  (detunedBadBranches δ₁ g u).card + (detunedBadBranches δ₂ g u).card +
+      (detunedBadBranches δ₃ g u).card <
+    g.toNat +
+      (detunedBadBranches δ₂ g u ∩ detunedBadBranches δ₃ g u).card
+
+/-- The exact overlap-debt condition is precisely strong enough to produce a
+common good branch. -/
+theorem hasThreeDetunedGoodBranch_of_exactOverlapDebt
+    (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ)
+    (hdebt : ThreeDetunedExactOverlapDebtPaid δ₁ δ₂ δ₃ g u) :
+    HasThreeDetunedGoodBranch δ₁ δ₂ δ₃ g u := by
+  have hbranches : (Finset.Ico (0 : ℤ) g).card = g.toNat := by
+    rw [Int.card_Ico]
+    congr 1
+    omega
+  have hdebt' :
+      (detunedBadBranches δ₁ g u).card +
+          (detunedBadBranches δ₂ g u).card +
+          (detunedBadBranches δ₃ g u).card <
+        (Finset.Ico (0 : ℤ) g).card +
+          (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₂ g u).card ∨
+      (detunedBadBranches δ₁ g u).card +
+          (detunedBadBranches δ₂ g u).card +
+          (detunedBadBranches δ₃ g u).card <
+        (Finset.Ico (0 : ℤ) g).card +
+          (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₃ g u).card ∨
+      (detunedBadBranches δ₁ g u).card +
+          (detunedBadBranches δ₂ g u).card +
+          (detunedBadBranches δ₃ g u).card <
+        (Finset.Ico (0 : ℤ) g).card +
+          (detunedBadBranches δ₂ g u ∩ detunedBadBranches δ₃ g u).card := by
+    simpa [ThreeDetunedExactOverlapDebtPaid, hbranches] using hdebt
+  exact exists_outside_three_of_exact_overlapDebt
+    (Finset.Ico (0 : ℤ) g)
+    (detunedBadBranches δ₁ g u) (detunedBadBranches δ₂ g u)
+    (detunedBadBranches δ₃ g u) hdebt'
+
 /-- At a fixed phase, some pairwise overlap pays the full excess of the three
 row-degree budget above the number of branch classes. -/
 def ThreeDetunedOverlapDebtPaid (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ) : Prop :=
@@ -230,6 +355,29 @@ theorem HasThreeDetunedGoodBranch.clearances
     exact not_lt.mp fun hlt => hc3 (by
       rw [detunedBadBranches, Finset.mem_filter]
       exact ⟨hcIco, n, hlt⟩)
+
+/-- Exact observed row density and overlap, verified phase by phase, supplies
+the tuple-specific clearing interface. -/
+theorem threeDetunedInstanceClearing_of_exactOverlapDebt
+    (δ₁ δ₂ δ₃ g : ℤ)
+    (hdebt : ∀ u : ℝ, ThreeDetunedExactOverlapDebtPaid δ₁ δ₂ δ₃ g u) :
+    DetunedD3.ThreeDetunedInstanceClearing δ₁ δ₂ δ₃ g := by
+  intro u
+  exact (hasThreeDetunedGoodBranch_of_exactOverlapDebt
+    δ₁ δ₂ δ₃ g u (hdebt u)).clearances
+
+/-- Actual LRC consumer for the exact local-density row ledger. -/
+theorem lonely14_of_three_detuned_exactOverlapDebt (cite : LRCUpTo13)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₁ i₂ i₃ : Fin 13) (h12 : i₁ ≠ i₂) (h13 : i₁ ≠ i₃) (h23 : i₂ ≠ i₃)
+    (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
+    (hdebt : ∀ u : ℝ,
+      ThreeDetunedExactOverlapDebtPaid (v i₁) (v i₂) (v i₃) g u) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  DetunedD3.lonely14_of_three_detuned_instance cite v hv g hg
+    i₁ i₂ i₃ h12 h13 h23 hdvd
+    (threeDetunedInstanceClearing_of_exactOverlapDebt
+      (v i₁) (v i₂) (v i₃) g hdebt)
 
 /-- The exact overlap-debt ledger, verified phase by phase, supplies the
 tuple-specific clearing interface. -/
@@ -392,9 +540,15 @@ theorem uniformThreeBadPartition_of_noGoodBranch
 
 #print axioms card_three_union_lt_of_pair_overlap
 #print axioms card_three_union_add_pair_inter_le
+#print axioms card_three_union_add_two_first_inter_le
+#print axioms exists_outside_three_of_two_first_overlapDebt
+#print axioms exists_outside_three_of_exact_overlapDebt
+#print axioms hasThreeDetunedGoodBranch_of_exactOverlapDebt
 #print axioms hasThreeDetunedGoodBranch_of_overlapDebt
 #print axioms hasThreeDetunedGoodBranch_of_pairOverlap
 #print axioms HasThreeDetunedGoodBranch.clearances
+#print axioms threeDetunedInstanceClearing_of_exactOverlapDebt
+#print axioms lonely14_of_three_detuned_exactOverlapDebt
 #print axioms threeDetunedInstanceClearing_of_overlapDebt
 #print axioms lonely14_of_three_detuned_overlapDebt
 #print axioms threeDetunedInstanceClearing_of_pairOverlap

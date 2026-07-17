@@ -78,16 +78,20 @@ unit/live invariants, and the end-to-end component cap are also kernel-checked.
 from only `Norm region` and `regionInUnit region`, rational periodization is measurable,
 its indicator is exactly one-periodic, its one-period density is the rational region
 volume, and the centered primitive plus attained `eta/q` duality are instantiated.
-Concrete blocks need only supply/evaluate their normalized rational regions.
+For the recursive rational-circle survivors it also proves the exact overlap clip
+ledger `density_N = 1 - sum_{k<N} overlap_k`, its period-volume counterpart, and
+contained/full-width and disjoint/zero-loss sufficient certificates.
 
-The topology provider is reduced to one exact seam condition.  Normalization of every
-rational survivor/chart and pairwise separation after translation are unconditional.
-`PositiveRotationTopologyCertificate` is equivalent to `BoundaryFaithfulRotation`,
-and the reduced atlas/component-cap theorems consume precisely that hypothesis.  Norm
-alone cannot prove it because adjacent nonmaximal pieces may share a seam that rotation
-moves onto the cut.  The remaining choice is concrete seam avoidance or canonical
-coalescing before recharting; Zarankiewicz pair-owner bounds are orthogonal to this
-one-cut/two-piece obstruction.
+`TournamentH7.LRCCanonicalCircleAtlas` closes the former topology seam: adjacent
+coalescing preserves the exact carrier, produces seam-free normalized charts, and
+makes `BoundaryFaithfulRotation` automatic throughout the actual rational survivor
+recursion.  `canonical_rational_circle_component_count_le_tooth_count` is therefore
+hypothesis-free.  The remaining THM-933 Lean work is concrete instantiation, not
+generic topology or measure theory: realize the actual speed danger comb as this
+rational recursion, connect its combinatorial component count to the genuine circular
+component decomposition, formalize scale covariance, and certify the numerical
+`delta/q/eta/component` data.  Nominal tooth width cannot replace the exact clip
+overlap without a containment certificate.
 
 ## Landed addendum — THM-932 closed recurrence (codex-S22)
 
@@ -156,6 +160,38 @@ degree patterns: without a `q=2` row, nongenericity forces `(3,3,3)`; with `q=2`
 distinct companion has `q≤8`, sharply at `(2,8,8)`.  The final checked capstone is
 `lrc14_from_twoThree_detuned_and_relationBudget`; only those phase-sensitive triple
 patterns, the nonterminating pair tower, and the relation-certificate supplier remain.
+
+## Landed addendum — signed relations and exact detuned phase debt (codex-S32--S37)
+
+`TournamentH7.LRCZarankiewiczGuardrail` now turns the below-`40` equal-pair collision
+into an explicit nonzero coefficient vector with coefficients in `{-1,0,1}`, support
+at most four, and zero dot product.  The signed-speed variant assumes distinct
+absolute values and returns the same certificate against the original integer tuple.
+
+`TournamentH7.LRCDetunedOverlap` upgrades row-degree counting to an exact local-density
+ledger on the parallel-class circle.  A chosen pair intersection pays its full
+cardinality against supercritical three-row bad-degree debt; if that inequality holds
+phase by phase, the resulting tuple-specific clearing feeds the harmonic reduction to
+an actual LRC(14) witness.  Uniform q-three failure is exactly a full pairwise-disjoint
+three-row partition.
+
+`TournamentH7.LRCEndgameUniformThreePhase` proves that the primitive uniform q-three
+branch has modulus `g=3`; failure is equivalent both to a cyclic permutation matching
+the three unit speeds to the three branch classes and to the saturated bad-row
+partition.  After signing each speed to residue one modulo three, `3/14` clearance of
+the normalized sum frequency is sufficient.  A kernel-checked warning example
+`p=(1,29,28)`, `u=1/7`, normalized to `(1,-29,28)`, has harmonic `1/11` clearance,
+the exact cyclic obstruction, and zero normalized sum frequency.  Thus the unresolved
+q-three task is witness selection, not a pointwise contradiction at an arbitrary
+harmonic-good phase.
+
+After the live THM-938/939 pull, the B5 supplier may additionally assume the proved
+dense-core relation traps: low-mass relations cannot top out above the dense pair and
+unit-coefficient relations are confined to its bottom four positions.  The leverage
+identity, Bonferroni certificate theorem, and equilibrium constants are kernel-checked.
+The genuine remaining B5 mathematics is the concrete sweep/singular-series encoding
+and strict support-`3,4,5` tail control under those traps; the relation-budget consumer
+and endgame compositions are already formal.
 
 ## Landed addendum — the leverage identity (kind-pasteur-S128c37)
 

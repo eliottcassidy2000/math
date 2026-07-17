@@ -1,12 +1,12 @@
 ---
 id: THM-933
 title: THE SHARP LOCAL-DENSITY BLOCK-GLUING THEOREM — exact primitive discrepancy inside blocks, component debt across gaps; LRC(14) lacunary threshold sharpened from 15 to 7 and the uniform all-n threshold from 19 to 8
-status: PROVED (elementary circle proof in-file; exact-rational referee passes; Lean proof spine formalized, sorry-free, standard axioms only)
+status: PROVED (paper proof and exact-rational referee pass; Lean closes the generic rational-tooth analytic, canonical-topology, exact-density, and abstract gluing spine, sorry-free with standard axioms, while concrete speed-block realization and numerical delta/q/eta certificates remain external)
 source: codex-2026-07-16-S21 (HYP-7152; owner asked for the local-density block-gluing theorem, frequent pulls, concrete steps, and formalization)
 depends_on: [THM-928 (comparison and certified packet), THM-930 and HYP-7104 (within-block certificate suppliers; not needed for the abstract proof)]
 script: 04-computation/lrc14_local_density_block_gluing_codex_S21.py
 output: 05-knowledge/results/lrc14_local_density_block_gluing_codex_S21.out
-formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCLocalDensityBlockGluing.lean
+formalization: [04-computation/lean/TournamentH7/TournamentH7/LRCLocalDensityBlockGluing.lean, 04-computation/lean/TournamentH7/TournamentH7/LRCCanonicalCircleAtlas.lean, 04-computation/lean/TournamentH7/TournamentH7/LRCRationalRegionProvider.lean]
 ---
 
 # THM-933 — The sharp local-density block-gluing theorem
@@ -46,8 +46,10 @@ H_B(u) = integral_0^u (1_{S_rho(B)}(t) - delta(B)) dt,
 q(B)   = sup_R H_B - inf_R H_B.
 ```
 
-The function `H_B` is continuous, piecewise linear, and one-periodic.  Thus
-`q(B)` is finite and is obtained at endpoints of the danger teeth.
+The function `H_B` is continuous and one-periodic, so `q(B)` is finite and
+attained on one period.  For finite speed blocks it is also piecewise linear
+and the exact referee searches danger-tooth endpoints; the current Lean
+development does not yet formalize that endpoint reduction.
 
 **Theorem (local-density block gluing).**  Let `B_1,...,B_m` be nonempty
 blocks and choose certified density floors
@@ -543,6 +545,10 @@ it carries either `q` or a coercive fixed-scale `eta` profile.
   `mem_rationalCircleChart_succ_iff`, and
   `rational_circle_component_count_le_tooth_count`: concrete sorted rational
   recharts, exact rotation semantics, and the end-to-end component cap;
+- `canonicalRationalCircularToothAtlas` and
+  `canonical_rational_circle_component_count_le_tooth_count`: seam-free
+  canonical recharts close boundary faithfulness and the rational-survivor
+  component cap without an external topology hypothesis;
 - `lowerBound_le_actual`: every nonnegative-density recurrence propagates a
   certified lower bound;
 - `weightedDebt_eq_suffix_sum` and `lowerBound_eq_closed`: the recursive ledger
@@ -558,27 +564,27 @@ primitive identity, extrema/minimizers, full `eta/q` duality, rational one-tooth
 split, recursive sorted rotation charts, membership transport, component
 summation, and closed recurrence are kernel-checked.
 
-The next collaborative closure removes the generic analytic provider obligation.
-`TournamentH7.LRCRationalRegionProvider` periodizes any normalized rational
-`Region`, proves measurability, exact indicator one-periodicity, and the half-open
-one-period density identity, and instantiates the centered primitive, attained
-`eta/q` extrema, and full duality.  Its only premises are `Norm region` and
-`regionInUnit region`.  A concrete block must now supply its normalized rational
-region and evaluate the resulting rational density/deficit; no fresh measure-
-theoretic proof is needed.
+The generic rational-tooth analytic, density, and topology providers are now
+closed.  `TournamentH7.LRCRationalRegionProvider` proves measurability, exact
+one-periodicity, period density, attained `eta/q` extrema, and full duality.  It
+also proves the exact deletion ledger
 
-The topology provider is also reduced sharply.  Theorems
-`regionSeparated_translateCirc_of_norm` and
-`norm_rationalCircleChart_and_survivor` make translated-piece separation and all
-chart/survivor normalization automatic.  Moreover
-`positiveRotationTopologyCertificate_iff_boundaryFaithfulRotation` identifies the
-only remaining condition: the raw wrap-split count must equal the boundary
-correction.  `rationalCircularToothAtlasOfBoundaryFaithfulRotations` and
-`rational_circle_component_count_le_tooth_count_of_boundaryFaithful` consume exactly
-that condition.
+```text
+length(survivor_{k+1}) + overlap_k = length(survivor_k)
+length(survivor_N) = 1 - sum_{k<N} overlap_k,
+```
 
-`Norm` plus unit containment does **not** imply boundary faithfulness: two adjacent
-nonmaximal pieces may share a seam that rotation moves onto the cut.  Thus the exact
-remaining topology task is either to prove seam avoidance for the concrete survivor
-sequence or to canonicalize/coalesce adjacent pieces before recharting.  This is a
-one-cut/two-piece obstruction, so Zarankiewicz pair-owner bounds do not address it.
+where every `overlap_k` is an explicit rational clip sum on the current chart.
+`TournamentH7.LRCCanonicalCircleAtlas` proves seam-free recursion, automatic
+`BoundaryFaithfulRotation`, and the unconditional canonical component cap for
+the actual rational survivor sequence.  Thus the former seam hypothesis and
+the generic measure-theoretic provider are no longer residual obligations.
+
+The remaining Lean surface is concrete rather than topological: realize the
+actual speed danger combs as this rational recursion, prove the endpoint-safe
+relation to `S_rho(B)` and `N = sum B`, connect the combinatorial component count
+to the genuine circular component decomposition used by
+`local_to_component_sum`, formalize scale covariance, and certify the numerical
+`delta/q/eta/component` data used in Sections 5--7.  Full-width subtraction is
+valid only when the exact overlap equals the tooth width; otherwise the clip
+ledger, not the nominal width, is the correct density decrement.
