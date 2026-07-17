@@ -185,6 +185,37 @@ theorem detunedBadBranches_mem_of_modEq_reducedDenominator
     linear_combination (p : ℝ) * hkR
   rwa [heq]
 
+/-- Two low-denominator bad rows with the same reduced denominator are equal
+as soon as they meet.  Thus their only possible phase relation is equality or
+disjointness; for q-two this is the exact same-parity/opposite-parity split. -/
+theorem detunedBadBranches_eq_of_overlap_same_reducedDenominator
+    (δ₁ δ₂ g q : ℤ) (u : ℝ) (hg : 1 ≤ g) (hq7 : q ≤ 7)
+    (hq1 : g / (Int.gcd δ₁ g : ℤ) = q)
+    (hq2 : g / (Int.gcd δ₂ g : ℤ) = q)
+    (hoverlap :
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₂ g u).Nonempty) :
+    detunedBadBranches δ₁ g u = detunedBadBranches δ₂ g u := by
+  obtain ⟨c, hc⟩ := hoverlap
+  have ⟨hc1, hc2⟩ := Finset.mem_inter.mp hc
+  ext x
+  constructor
+  · intro hx
+    have hxIco := detunedBadBranches_subset_Ico δ₁ g u hx
+    have hxmod : x ≡ c [ZMOD q] := by
+      simpa [hq1] using detunedBadBranches_pair_modEq_of_q_le_seven
+        δ₁ g u hg (by simpa [hq1] using hq7) hx hc1
+    apply detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ₂ g u hg hc2 hxIco
+    simpa [hq2] using hxmod.symm
+  · intro hx
+    have hxIco := detunedBadBranches_subset_Ico δ₂ g u hx
+    have hxmod : x ≡ c [ZMOD q] := by
+      simpa [hq2] using detunedBadBranches_pair_modEq_of_q_le_seven
+        δ₂ g u hg (by simpa [hq2] using hq7) hx hc2
+    apply detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ₁ g u hg hc1 hxIco
+    simpa [hq1] using hxmod.symm
+
 theorem exists_Ico_modEq_two_three (g a b : ℤ) (hg6 : 6 ≤ g) :
     ∃ c ∈ Finset.Ico (0 : ℤ) g, c ≡ a [ZMOD 2] ∧ c ≡ b [ZMOD 3] := by
   let c : ℤ := (3 * a + 4 * b) % 6
@@ -241,6 +272,44 @@ theorem Ico_zero_filter_modEq_card_of_dvd
   have hdiv : r * k / r = k := Int.mul_ediv_cancel_left k hr.ne'
   rw [hdiv]
   omega
+
+/-- A nonempty q-two bad row attains its universal half-circle bound exactly. -/
+theorem two_mul_detunedBadBranches_card_eq_of_nonempty
+    (δ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2 : g / (Int.gcd δ g : ℤ) = 2)
+    (hbad : (detunedBadBranches δ g u).Nonempty) :
+    2 * (detunedBadBranches δ g u).card = g.toNat := by
+  obtain ⟨c, hc⟩ := hbad
+  have hrow : detunedBadBranches δ g u =
+      {x ∈ Finset.Ico (0 : ℤ) g | x ≡ c [ZMOD 2]} := by
+    ext x
+    constructor
+    · intro hx
+      rw [Finset.mem_filter]
+      refine ⟨detunedBadBranches_subset_Ico δ g u hx, ?_⟩
+      simpa [hq2] using detunedBadBranches_pair_modEq_of_q_le_seven
+        δ g u hg (by omega) hx hc
+    · intro hx
+      have hx' := Finset.mem_filter.mp hx
+      apply detunedBadBranches_mem_of_modEq_reducedDenominator δ g u hg
+        hc hx'.1
+      simpa [hq2] using hx'.2.symm
+  have h2dvd : (2 : ℤ) ∣ g := by
+    have hfactor := Int.mul_ediv_cancel' (Int.gcd_dvd_right δ g)
+    rw [hq2] at hfactor
+    exact ⟨(Int.gcd δ g : ℤ), by simpa [mul_comm] using hfactor.symm⟩
+  have hcard := Ico_zero_filter_modEq_card_of_dvd
+    g 2 c (by omega) (by norm_num) h2dvd
+  have hfactor := (badCount_of_q_two (δ := δ) (g := g) (by omega) hq2).2
+  have hfactorZ := Int.mul_ediv_cancel' (Int.gcd_dvd_right δ g)
+  rw [hq2] at hfactorZ
+  have hdiv : g / 2 = (Int.gcd δ g : ℤ) := by
+    calc
+      g / 2 = ((Int.gcd δ g : ℤ) * 2) / 2 :=
+        congrArg (fun x : ℤ => x / 2) hfactorZ.symm
+      _ = (Int.gcd δ g : ℤ) := by omega
+  rw [hrow, hcard, hdiv]
+  simpa using hfactor
 
 theorem detunedBadBranches_two_three_inter_eq_modEq
     (δ₂ δ₃ g : ℤ) (u : ℝ) (hg : 1 ≤ g) (hg6 : 6 ≤ g)
@@ -398,6 +467,192 @@ theorem six_mul_detunedBadBranches_two_three_inter_card_eq
   rw [hq2] at hfactor2
   rw [hq3] at hfactor3
   omega
+
+/-- The only local obstruction left by a `(2,2,3)` denominator pattern: both
+q-two rows are nonempty and occupy opposite parity classes. -/
+def TwoTwoThreePhaseOpposition (δ₂a δ₂b g : ℤ) (u : ℝ) : Prop :=
+  (detunedBadBranches δ₂a g u).Nonempty ∧
+  (detunedBadBranches δ₂b g u).Nonempty ∧
+  Disjoint (detunedBadBranches δ₂a g u) (detunedBadBranches δ₂b g u)
+
+/-- Away from opposite q-two parity rows, every `(2,2,3)` phase has a common
+good branch.  If the q-two rows meet, they coincide and contribute an exact
+half-circle overlap credit; if either is empty, the observed degree sum is
+already subcritical. -/
+theorem hasThreeDetunedGoodBranch_two_two_three_of_not_opposition
+    (δ₂a δ₂b δ₃ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2a : g / (Int.gcd δ₂a g : ℤ) = 2)
+    (hq2b : g / (Int.gcd δ₂b g : ℤ) = 2)
+    (hq3 : g / (Int.gcd δ₃ g : ℤ) = 3)
+    (hnot : ¬ TwoTwoThreePhaseOpposition δ₂a δ₂b g u) :
+    HasThreeDetunedGoodBranch δ₂a δ₂b δ₃ g u := by
+  have hg0 : (0 : ℤ) < g := hg
+  have hbad2a := two_mul_badCount_eq δ₂a g hg0 hq2a
+  have hbad2b := two_mul_badCount_eq δ₂b g hg0 hq2b
+  have hbad3 := three_mul_badCount_eq δ₃ g hg0 hq3
+  have hcard2a := detunedBadBranches_card_le δ₂a g hg u
+  have hcard2b := detunedBadBranches_card_le δ₂b g hg u
+  have hcard3 := detunedBadBranches_card_le δ₃ g hg u
+  by_cases hrow2a : (detunedBadBranches δ₂a g u).Nonempty
+  · by_cases hrow2b : (detunedBadBranches δ₂b g u).Nonempty
+    · by_cases hoverlap :
+        (detunedBadBranches δ₂a g u ∩
+          detunedBadBranches δ₂b g u).Nonempty
+      · have hroweq := detunedBadBranches_eq_of_overlap_same_reducedDenominator
+          δ₂a δ₂b g 2 u hg (by norm_num) hq2a hq2b hoverlap
+        have hinter : detunedBadBranches δ₂a g u ∩
+            detunedBadBranches δ₂b g u = detunedBadBranches δ₂a g u := by
+          rw [hroweq]
+          simp
+        have hintercard := two_mul_detunedBadBranches_card_eq_of_nonempty
+          δ₂a g u hg hq2a hrow2a
+        apply hasThreeDetunedGoodBranch_of_overlapDebt δ₂a δ₂b δ₃ g u hg
+        unfold ThreeDetunedOverlapDebtPaid
+        left
+        rw [hinter]
+        omega
+      · exfalso
+        apply hnot
+        refine ⟨hrow2a, hrow2b, Finset.disjoint_left.mpr ?_⟩
+        intro c hc2a hc2b
+        exact hoverlap ⟨c, Finset.mem_inter.mpr ⟨hc2a, hc2b⟩⟩
+    · apply hasThreeDetunedGoodBranch_of_card_sum_lt δ₂a δ₂b δ₃ g u
+      have hzero : (detunedBadBranches δ₂b g u).card = 0 := by
+        rw [Finset.card_eq_zero]
+        exact Finset.not_nonempty_iff_eq_empty.mp hrow2b
+      omega
+  · apply hasThreeDetunedGoodBranch_of_card_sum_lt δ₂a δ₂b δ₃ g u
+    have hzero : (detunedBadBranches δ₂a g u).card = 0 := by
+      rw [Finset.card_eq_zero]
+      exact Finset.not_nonempty_iff_eq_empty.mp hrow2a
+    omega
+
+/-- Opposite nonempty q-two rows cover the whole branch circle, independently
+of the q-three row. -/
+theorem not_hasThreeDetunedGoodBranch_two_two_three_of_opposition
+    (δ₂a δ₂b δ₃ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2a : g / (Int.gcd δ₂a g : ℤ) = 2)
+    (hq2b : g / (Int.gcd δ₂b g : ℤ) = 2)
+    (hopposite : TwoTwoThreePhaseOpposition δ₂a δ₂b g u) :
+    ¬ HasThreeDetunedGoodBranch δ₂a δ₂b δ₃ g u := by
+  intro hgood
+  obtain ⟨c, hcIco, hc2a, hc2b, -⟩ := hgood
+  have hcard2a := two_mul_detunedBadBranches_card_eq_of_nonempty
+    δ₂a g u hg hq2a hopposite.1
+  have hcard2b := two_mul_detunedBadBranches_card_eq_of_nonempty
+    δ₂b g u hg hq2b hopposite.2.1
+  have hbranches : (Finset.Ico (0 : ℤ) g).card = g.toNat := by
+    rw [Int.card_Ico]
+    congr 1
+    omega
+  have hsubset : detunedBadBranches δ₂a g u ∪
+      detunedBadBranches δ₂b g u ⊆ Finset.Ico (0 : ℤ) g :=
+    Finset.union_subset
+      (detunedBadBranches_subset_Ico δ₂a g u)
+      (detunedBadBranches_subset_Ico δ₂b g u)
+  have hcover : detunedBadBranches δ₂a g u ∪
+      detunedBadBranches δ₂b g u = Finset.Ico (0 : ℤ) g := by
+    apply Finset.eq_of_subset_of_card_le hsubset
+    rw [hbranches, Finset.card_union_of_disjoint hopposite.2.2]
+    omega
+  have hcUnion : c ∈ detunedBadBranches δ₂a g u ∪
+      detunedBadBranches δ₂b g u := by
+    rw [hcover]
+    exact hcIco
+  rcases Finset.mem_union.mp hcUnion with hc | hc
+  · exact hc2a hc
+  · exact hc2b hc
+
+/-- Exact local normal form for `(2,2,3)`: failure is equivalent to opposite
+q-two parity rows. -/
+theorem not_hasThreeDetunedGoodBranch_two_two_three_iff_opposition
+    (δ₂a δ₂b δ₃ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2a : g / (Int.gcd δ₂a g : ℤ) = 2)
+    (hq2b : g / (Int.gcd δ₂b g : ℤ) = 2)
+    (hq3 : g / (Int.gcd δ₃ g : ℤ) = 3) :
+    ¬ HasThreeDetunedGoodBranch δ₂a δ₂b δ₃ g u ↔
+      TwoTwoThreePhaseOpposition δ₂a δ₂b g u := by
+  constructor
+  · intro hfail
+    by_contra hnot
+    exact hfail (hasThreeDetunedGoodBranch_two_two_three_of_not_opposition
+      δ₂a δ₂b δ₃ g u hg hq2a hq2b hq3 hnot)
+  · exact not_hasThreeDetunedGoodBranch_two_two_three_of_opposition
+      δ₂a δ₂b δ₃ g u hg hq2a hq2b
+
+/-- Kernel-checked warning that the `(2,2,3)` phase obstruction is genuine:
+at `g=6`, the q-two rows of `3` and `27` cover alternating branch classes at
+`u=11/100`, irrespective of the third row.  Taking `δ₃=2` gives the literal
+reduced-denominator triple `(2,2,3)`. -/
+theorem no_three_detuned_goodBranch_three_twentySeven
+    (δ₃ : ℤ) :
+    ¬ HasThreeDetunedGoodBranch 3 27 δ₃ 6 ((11 : ℝ) / 100) := by
+  rintro ⟨c, hcIco, hc1, hc2, -⟩
+  have hcBounds := Finset.mem_Ico.mp hcIco
+  have hc0 : 0 ≤ c := hcBounds.1
+  have hc6 : c < 6 := hcBounds.2
+  interval_cases c
+  · apply hc1
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 0, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+  · apply hc2
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 5, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+  · apply hc1
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 1, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+  · apply hc2
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 14, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+  · apply hc1
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 2, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+  · apply hc2
+    rw [detunedBadBranches, Finset.mem_filter]
+    refine ⟨by norm_num, 23, ?_⟩
+    norm_num [abs_of_nonneg, abs_of_nonpos]
+
+theorem twoTwoThree_phaseOpposition_counterexample :
+    TwoTwoThreePhaseOpposition 3 27 6 ((11 : ℝ) / 100) :=
+  (not_hasThreeDetunedGoodBranch_two_two_three_iff_opposition
+    3 27 2 6 ((11 : ℝ) / 100) (by norm_num) (by norm_num)
+      (by norm_num) (by norm_num)).mp
+    (no_three_detuned_goodBranch_three_twentySeven 2)
+
+/-- Global `(2,2,3)` clearing is now reduced to the exact phase-selection
+obligation that the two q-two rows are not opposite at every harmonic phase. -/
+theorem threeDetunedInstanceClearing_two_two_three_of_no_opposition
+    (δ₂a δ₂b δ₃ g : ℤ) (hg : 1 ≤ g)
+    (hq2a : g / (Int.gcd δ₂a g : ℤ) = 2)
+    (hq2b : g / (Int.gcd δ₂b g : ℤ) = 2)
+    (hq3 : g / (Int.gcd δ₃ g : ℤ) = 3)
+    (hphase : ∀ u : ℝ, ¬ TwoTwoThreePhaseOpposition δ₂a δ₂b g u) :
+    DetunedD3.ThreeDetunedInstanceClearing δ₂a δ₂b δ₃ g := by
+  intro u
+  exact (hasThreeDetunedGoodBranch_two_two_three_of_not_opposition
+    δ₂a δ₂b δ₃ g u hg hq2a hq2b hq3 (hphase u)).clearances
+
+theorem lonely14_of_three_detuned_two_two_three_of_no_opposition
+    (cite : LRCUpTo13)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₂a i₂b i₃ : Fin 13)
+    (h22 : i₂a ≠ i₂b) (h2a3 : i₂a ≠ i₃) (h2b3 : i₂b ≠ i₃)
+    (hdvd : ∀ j, j ≠ i₂a → j ≠ i₂b → j ≠ i₃ → g ∣ v j)
+    (hq2a : g / (Int.gcd (v i₂a) g : ℤ) = 2)
+    (hq2b : g / (Int.gcd (v i₂b) g : ℤ) = 2)
+    (hq3 : g / (Int.gcd (v i₃) g : ℤ) = 3)
+    (hphase : ∀ u : ℝ,
+      ¬ TwoTwoThreePhaseOpposition (v i₂a) (v i₂b) g u) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  DetunedD3.lonely14_of_three_detuned_instance cite v hv g hg
+    i₂a i₂b i₃ h22 h2a3 h2b3 hdvd
+    (threeDetunedInstanceClearing_two_two_three_of_no_opposition
+      (v i₂a) (v i₂b) (v i₃) g (by omega) hq2a hq2b hq3 hphase)
 
 /-- Two q-three rows cannot saturate together with one q-two row: the q-two
 row earns an exact `g/6` overlap credit from each of them. -/
@@ -686,10 +941,17 @@ theorem lrc14_from_afterTwoThreeCRT_and_relationBudget
 
 #print axioms detunedBadBranches_pair_modEq_of_q_le_seven
 #print axioms detunedBadBranches_mem_of_modEq_reducedDenominator
+#print axioms detunedBadBranches_eq_of_overlap_same_reducedDenominator
+#print axioms two_mul_detunedBadBranches_card_eq_of_nonempty
 #print axioms detunedBadBranches_two_three_overlap
 #print axioms detunedBadBranches_two_three_inter_eq_modEq
 #print axioms detunedBadBranches_two_three_inter_card_eq
 #print axioms six_mul_detunedBadBranches_two_three_inter_card_eq
+#print axioms not_hasThreeDetunedGoodBranch_two_two_three_iff_opposition
+#print axioms no_three_detuned_goodBranch_three_twentySeven
+#print axioms twoTwoThree_phaseOpposition_counterexample
+#print axioms threeDetunedInstanceClearing_two_two_three_of_no_opposition
+#print axioms lonely14_of_three_detuned_two_two_three_of_no_opposition
 #print axioms threeDetunedInstanceClearing_two_three_three
 #print axioms threeDetunedInstanceClearing_two_three_of_three_mul_badCount_lt
 #print axioms threeDetunedInstanceClearing_two_three_four_le
