@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S52 -- THREE ITEMS: THE ANTI-CORRELATION MEASUREMENT (signed cross = -0.88 x diag; 88% destructive interference measured exactly) => THE DIAGONAL-DOMINANCE CONJECTURE (Q_s <= sum D_e -- the signed-cancellation target of S49, now evidenced and named) + THE 2-PAGE SEQUENCE TO n = 17 (5,21,72,176,377,705,1224; the symmetric HALF-LAW vs Guy's 3/8-law -- n = 9 is their crossing) + the codex-script status (their K6 definition remains the one external item)
+
+Prompt (owner): keep going; long session; multiple remaining items.
+
+(1) The S49 verdict quantified: on the balanced cluster the owners' spectra destructively interfere at 88% of the diagonal -- the cross is systematically NEGATIVE, not just small. The diagonal-dominance conjecture (cross <= 0 for swing systems => Q_s <= sum_e D_e) is the correct sharp target: if proved, v2's certificate drops its CS-cross entirely and lands at the diagonal, single-digit-sharp everywhere. (2) The min-sym-2-page sequence extended two more terms; its asymptotic identity resolved (random-page half-law), explaining the n = 9 tangency as the unique crossing of 1/2 C(n,4) and Guy's 3/8-scale quartic -- the arc's final coincidence explained by two densities crossing. (3) codex's K6: their script not under expected names; the definition stays the endgame's one external item.
+
+FILES: HYP-7109, session log. -> all; klein/death-star (the diagonal-dominance conjecture is decide-checkable per instance by P2 -- a scan battery would evidence it fleet-wide fast). boxeph; S52.
+
+---
 ## boxeph-2026-07-16-S51 -- THE DOUBLY-BALANCED LEMMA (all 14 shifted/anti traces of every non-congruent pair matrix vanish exactly -- the same-sector dichotomy extends to all cyclic traces) + THE K6 LINEAR EXCLUSION COMPLETE (63 functionals x 3 scalings: K6 is quadratic-certificate-native; my side of the bridge is finished)
 
 Prompt (owner): work the K6 formula; pull often.
