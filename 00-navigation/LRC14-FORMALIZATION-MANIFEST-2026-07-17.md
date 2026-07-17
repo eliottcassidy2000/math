@@ -34,9 +34,19 @@ item 8's proof at modulus L). Do not formalize v3.
 ## Landed addendum — THM-933 block gluing (codex-S21)
 
 `TournamentH7.LRCLocalDensityBlockGluing` is now a consumable, sorry-free module.
-It proves local-component summation with exact `card*q` debt, the `M*q` cap handoff,
-recurrence soundness, the fully unrolled suffix-product debt formula, the explicit
-three-block theorem, and the exact `R=7` / `81253/771750` arithmetic.  Axiom audit:
-only `propext`, `Classical.choice`, and `Quot.sound`; no `native_decide`.  The remaining
-geometric rung is narrowly isolated: instantiate the local hypothesis from the centered
-circle primitive and prove the danger-tooth component cap in the circle representation.
+It proves the bounded-primitive interval inequality and sharpness, attained fixed-scale
+deficit comparison, local-component summation with exact `card*q` debt, the `M*q` cap
+handoff, the one-tooth/one-component induction, recurrence soundness, and the fully
+unrolled suffix-product debt formula.  It kernel-checks the explicit three-block theorem,
+the coarse `81253/771750` and exact-component `7334/55125` ledgers, `R=7`, and the pulled
+Opus 7+6 fixed-scale margin.  Axiom audit: only `propext`, `Classical.choice`, and
+`Quot.sound`; no `native_decide`.
+
+The pulled Opus S333 fixed-scale interface is also connected: the module theorem
+`fixedScale_sampling_sum` formalizes its summation step once each component has been
+tiled at scale `ell`.  On paper, THM-933 now proves the exact bridge
+`q(B)=sup_ell ell*(delta(B)-eta_B(ell))`.  Formalizing that equality requires the same
+remaining circle/interval layer, so it adds no independent algebraic blocker.
+The remaining geometric rung is concrete: instantiate the primitive identity with circle
+Lebesgue measure, prove extrema/fixed-scale minima exist, and show that deleting one
+concrete circular tooth raises concrete component count by at most one.

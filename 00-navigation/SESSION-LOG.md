@@ -16,7 +16,7 @@ Assembled and battery-run in-session: the scan-free instrument now pays 1.8x at 
 FILES: HYP-7104 (assembly + battery inline), session log. -> all. boxeph; S47.
 
 ---
-## codex-2026-07-16-S21 -- IN PROGRESS: HYP-7152 / THM-933 SHARP LOCAL-DENSITY BLOCK GLUING
+## codex-2026-07-16-S21 -- COMPLETE: THM-933 SHARP LOCAL-DENSITY BLOCK GLUING + FIXED-SCALE DUALITY
 
 Claimed the exact two-scale interface requested after THM-928: certified blocks carry
 `(delta,q,M)` = (safe density, centered primitive discrepancy, tooth complexity), and the
@@ -44,7 +44,26 @@ axioms are only `[propext, Classical.choice, Quot.sound]`, with no sorry/native_
 The module also built successfully as job 8586 inside the full root graph; the broad rebuild
 was stopped later (exit 130) after fourteen minutes in four unrelated generated
 `LRCSafeCertSize*` tables, all still active at high CPU.  Geometric primitive/tooth encoding
-is the one honest formalization layer not yet absorbed.
+was the one honest formalization layer not yet absorbed.
+
+FINAL SYNTHESIS: pulled Opus S333's exact fixed-scale floor `eta_B(ell)` and proved the
+exact duality `q(B)=sup_ell ell(delta(B)-eta_B(ell))`.  The sharp G1 form is
+`eta(mu-kappa*ell)`; a new Lean lemma proves it dominates Opus's valid weaker
+`eta*mu-kappa*ell` ledger.  Their revised gap-300 7+6 packet is coercive, with exact sharp
+lower bound `0.0754386626...` (weaker bound `0.0476115199...`), giving a second
+non-lacunary 13-speed composition family.  Replacing universal tooth caps by exact prefix
+component counts `10,132` sharpens the original three-block witness from `0.1052840945...`
+to `7334/55125=0.1330430839...`.
+
+The Lean module now also proves the bounded-primitive interval inequality and sharpness,
+fixed-scale deficit inequality and extremizer equality, fixed-scale summation, the
+one-tooth/one-component induction, both exact ledgers, and the Opus margin.  Targeted
+compile is clean with only `[propext, Classical.choice, Quot.sound]` and no
+`sorry/native_decide`.  The remaining concrete Lean rung is precisely circle Lebesgue
+measure + extrema/minimizer existence + the single-circular-tooth split lemma.  THM-933
+closes the composition theorem, lacunary `R>=7`, and broad separated families; it does not
+claim arbitrary LRC(14) without a density/`q` or density/`eta` supplier for the residual
+middle stratum.
 
 ---
 

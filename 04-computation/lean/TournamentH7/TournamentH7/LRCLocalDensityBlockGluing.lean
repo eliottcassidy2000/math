@@ -9,11 +9,15 @@
 
       density * length(J) - discrepancy
 
-  inside the next certified block.  This file proves the two reusable pieces
-  downstream of that input:
+  inside the next certified block.  This file proves the reusable pieces
+  around that input:
 
+  * a bounded centered primitive gives the one-interval discrepancy inequality,
+    with equality when an interval joins an upper extremum to a lower extremum;
   * summing the local inequality over components pays exactly card * q, and a
     component cap turns this into M * q;
+  * if each newly deleted tooth raises component count by at most one, N teeth
+    leave at most N components;
   * any sequence of nonnegative-density recurrence steps is bounded below by
     the recursive product-minus-weighted-debt ledger.
 
@@ -26,6 +30,87 @@ import Mathlib.Tactic
 open scoped BigOperators
 
 namespace LRC14.LocalDensityBlockGluing
+
+section PrimitiveBridge
+
+variable {Point : Type*}
+
+/-- The analytic core of THM-933 Lemma 1.  Once retained interval measure is
+represented as a difference of a bounded centered primitive, its oscillation
+is a valid additive discrepancy loss. -/
+theorem primitive_interval_lower
+    (primitive : Point → ℝ) (startPoint endPoint : Point)
+    (density intervalLength retained lowerValue upperValue : ℝ)
+    (hlower : ∀ point, lowerValue ≤ primitive point)
+    (hupper : ∀ point, primitive point ≤ upperValue)
+    (hidentity :
+      retained - density * intervalLength =
+        primitive endPoint - primitive startPoint) :
+    density * intervalLength - (upperValue - lowerValue) ≤ retained := by
+  have hstart := hupper startPoint
+  have hend := hlower endPoint
+  linarith
+
+/-- The primitive loss is sharp when the oriented interval starts at an upper
+extremum and ends at a lower extremum. -/
+theorem primitive_interval_sharp
+    (primitive : Point → ℝ) (startPoint endPoint : Point)
+    (density intervalLength retained lowerValue upperValue : ℝ)
+    (hstart : primitive startPoint = upperValue)
+    (hend : primitive endPoint = lowerValue)
+    (hidentity :
+      retained - density * intervalLength =
+        primitive endPoint - primitive startPoint) :
+    retained = density * intervalLength - (upperValue - lowerValue) := by
+  rw [hstart, hend] at hidentity
+  linarith
+
+/-- An attained fixed-scale deficit lies below the primitive oscillation.
+Taking the supremum over scales and using `primitive_interval_sharp` is the
+paper proof of `q = sup_ell ell * (delta - eta ell)`. -/
+theorem fixedScale_deficit_le_discrepancy
+    (primitive : Point → ℝ) (startPoint endPoint : Point)
+    (density eta intervalLength retained lowerValue upperValue : ℝ)
+    (hlower : ∀ point, lowerValue ≤ primitive point)
+    (hupper : ∀ point, primitive point ≤ upperValue)
+    (heta : retained = eta * intervalLength)
+    (hidentity :
+      retained - density * intervalLength =
+        primitive endPoint - primitive startPoint) :
+    intervalLength * (density - eta) ≤ upperValue - lowerValue := by
+  have hstart := hupper startPoint
+  have hend := hlower endPoint
+  have hprimitive :
+      primitive startPoint - primitive endPoint ≤ upperValue - lowerValue :=
+    sub_le_sub hstart hend
+  calc
+    intervalLength * (density - eta)
+        = density * intervalLength - eta * intervalLength := by ring
+    _ = density * intervalLength - retained := by rw [heta]
+    _ = primitive startPoint - primitive endPoint := by linarith
+    _ ≤ upperValue - lowerValue := hprimitive
+
+/-- At a fixed-scale minimizer whose arc joins primitive extrema, the
+fixed-scale deficit equals the primitive discrepancy exactly. -/
+theorem fixedScale_extremizer_eq_discrepancy
+    (primitive : Point → ℝ) (startPoint endPoint : Point)
+    (density eta intervalLength retained lowerValue upperValue : ℝ)
+    (heta : retained = eta * intervalLength)
+    (hstart : primitive startPoint = upperValue)
+    (hend : primitive endPoint = lowerValue)
+    (hidentity :
+      retained - density * intervalLength =
+        primitive endPoint - primitive startPoint) :
+    intervalLength * (density - eta) = upperValue - lowerValue := by
+  have hsharp := primitive_interval_sharp primitive startPoint endPoint
+    density intervalLength retained lowerValue upperValue hstart hend hidentity
+  calc
+    intervalLength * (density - eta)
+        = density * intervalLength - eta * intervalLength := by ring
+    _ = density * intervalLength - retained := by rw [heta]
+    _ = upperValue - lowerValue := by linarith
+
+end PrimitiveBridge
 
 section ComponentSum
 
@@ -73,7 +158,75 @@ theorem local_to_complexity_sum
     _ ≤ ∑ component ∈ components, kept component :=
       local_to_component_sum components length kept density discrepancy hlocal
 
+/-- Fixed-scale sampling form (Opus S333 G1, after each component is tiled by
+length-`ell` test intervals): summing the component losses pays
+`eta * card * ell`.  THM-933's primitive form and this fixed-scale form are
+dual certificate interfaces. -/
+theorem fixedScale_sampling_sum
+    (components : Finset ι) (length kept : ι → ℝ) (eta ell : ℝ)
+    (hlocal : ∀ component ∈ components,
+      eta * (length component - ell) ≤ kept component) :
+      eta * ((∑ component ∈ components, length component)
+        - (components.card : ℝ) * ell)
+      ≤ ∑ component ∈ components, kept component := by
+  have hsumConst :
+      (∑ _component ∈ components, ell) = (components.card : ℝ) * ell := by
+    rw [Finset.sum_const, nsmul_eq_mul]
+  calc
+    eta * ((∑ component ∈ components, length component)
+          - (components.card : ℝ) * ell)
+        = eta * ((∑ component ∈ components, length component)
+            - ∑ _component ∈ components, ell) := by rw [hsumConst]
+    _ = eta * (∑ component ∈ components,
+          (length component - ell)) := by rw [Finset.sum_sub_distrib]
+    _ = ∑ component ∈ components,
+          eta * (length component - ell) := by rw [Finset.mul_sum]
+    _ ≤ ∑ component ∈ components, kept component :=
+      Finset.sum_le_sum fun component hcomponent => hlocal component hcomponent
+
+/-- Opus's `eta * mass - loss` ledger is a valid weakening of the sharper
+`eta * (mass - loss)` bound whenever `eta ≤ 1` and the loss is nonnegative. -/
+theorem fixedScale_weaker_loss
+    (mass boundaryLoss eta : ℝ) (heta : eta ≤ 1) (hloss : 0 ≤ boundaryLoss) :
+    eta * mass - boundaryLoss ≤ eta * (mass - boundaryLoss) := by
+  have hnonnegative : 0 ≤ (1 - eta) * boundaryLoss :=
+    mul_nonneg (sub_nonneg.mpr heta) hloss
+  calc
+    eta * mass - boundaryLoss
+        = eta * (mass - boundaryLoss) - (1 - eta) * boundaryLoss := by ring
+    _ ≤ eta * (mass - boundaryLoss) := sub_le_self _ hnonnegative
+
 end ComponentSum
+
+section ComponentCap
+
+/-- Abstract geometric ledger behind THM-933 Lemma 3.  The complement of one
+deleted tooth has at most one component; if every additional tooth raises the
+count by at most one, the complement of `toothCount` teeth has at most
+`toothCount` components. -/
+theorem component_count_le_tooth_count
+    (componentCount : ℕ → ℕ)
+    (hfirst : componentCount 1 ≤ 1)
+    (hstep : ∀ toothCount, 1 ≤ toothCount →
+      componentCount (toothCount + 1) ≤ componentCount toothCount + 1)
+    (toothCount : ℕ) :
+    1 ≤ toothCount → componentCount toothCount ≤ toothCount := by
+  induction toothCount with
+  | zero => omega
+  | succ previousCount inductionHypothesis =>
+      intro _
+      by_cases hzero : previousCount = 0
+      · subst previousCount
+        simpa using hfirst
+      · have hpositive : 1 ≤ previousCount := Nat.one_le_iff_ne_zero.mpr hzero
+        calc
+          componentCount (previousCount + 1)
+              ≤ componentCount previousCount + 1 :=
+                hstep previousCount hpositive
+          _ ≤ previousCount + 1 :=
+            Nat.add_le_add_right (inductionHypothesis hpositive) 1
+
+end ComponentCap
 
 section Recurrence
 
@@ -194,9 +347,28 @@ theorem exact_three_block_ledger :
         - (193 / 8575 + 193 / 6174)
       = 81253 / 771750 := by norm_num
 
+/-- Kernel check of the stronger ledger using exact prefix component counts
+`10` and `132` instead of tooth caps `15` and `375`. -/
+theorem exact_three_block_component_ledger :
+    (53 / 105 : ℚ) * (3 / 5) * (386 / 735)
+        - (386 / 25725 + 4246 / 385875)
+      = 7334 / 55125 := by norm_num
+
 /-- The exact THM-933 block-gluing floor is positive. -/
 theorem exact_three_block_margin_pos :
     (0 : ℚ) < 81253 / 771750 := by norm_num
+
+/-- Exact arithmetic for the sharp fixed-scale Opus S333 7+6 witness. -/
+theorem opus_fixedScale_two_block_ledger :
+    (274025490881738650 / 1001359472502594621 : ℚ)
+        * (12208485893419843 / 38882590600758450 - 1724 / 45000)
+      = 60354211840721383388269695262412
+        / 800043501647462161192289496375975 := by norm_num
+
+/-- The fixed-scale 7+6 composition margin is strictly positive. -/
+theorem opus_fixedScale_two_block_margin_pos :
+    (0 : ℚ) < 60354211840721383388269695262412
+      / 800043501647462161192289496375975 := by norm_num
 
 /-- The direct exact safe measure dominates the proved block-gluing floor. -/
 theorem exact_measure_dominates_ledger :
@@ -208,6 +380,13 @@ end ExactArithmetic
 
 #print axioms local_to_component_sum
 #print axioms local_to_complexity_sum
+#print axioms fixedScale_sampling_sum
+#print axioms primitive_interval_lower
+#print axioms primitive_interval_sharp
+#print axioms fixedScale_deficit_le_discrepancy
+#print axioms fixedScale_extremizer_eq_discrepancy
+#print axioms fixedScale_weaker_loss
+#print axioms component_count_le_tooth_count
 #print axioms lowerBound_eq_product_sub_weightedDebt
 #print axioms weightedDebt_eq_suffix_sum
 #print axioms lowerBound_eq_closed
@@ -216,7 +395,10 @@ end ExactArithmetic
 #print axioms six_pow_twelve_gt_seven_pow_eleven
 #print axioms ratio_seven_margin_pos
 #print axioms exact_three_block_ledger
+#print axioms exact_three_block_component_ledger
 #print axioms exact_three_block_margin_pos
+#print axioms opus_fixedScale_two_block_ledger
+#print axioms opus_fixedScale_two_block_margin_pos
 #print axioms exact_measure_dominates_ledger
 
 end LRC14.LocalDensityBlockGluing

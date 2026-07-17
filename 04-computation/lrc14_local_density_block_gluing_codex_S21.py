@@ -21,6 +21,7 @@ within-block endpoint order, which is retained exactly in the q sidecar.
 """
 
 from collections import Counter
+from bisect import bisect_right
 from fractions import Fraction
 from itertools import combinations, permutations
 
@@ -104,6 +105,68 @@ def primitive_data(safe):
     return density, discrepancy, values
 
 
+class SafePrefix:
+    """Exact cumulative safe measure with logarithmic arc queries."""
+
+    def __init__(self, safe):
+        self.starts = [left for left, _ in safe]
+        self.ends = [right for _, right in safe]
+        self.cumulative = [F(0)]
+        for left, right in safe:
+            self.cumulative.append(self.cumulative[-1] + right - left)
+        self.total = self.cumulative[-1]
+
+    def cdf(self, point):
+        index = bisect_right(self.starts, point) - 1
+        if index < 0:
+            return F(0)
+        clipped = min(max(point - self.starts[index], F(0)),
+                      self.ends[index] - self.starts[index])
+        return self.cumulative[index] + clipped
+
+    def arc(self, start, length):
+        assert 0 <= start < 1 and 0 <= length <= 1
+        end = start + length
+        if end <= 1:
+            return self.cdf(end) - self.cdf(start)
+        return self.total - self.cdf(start) + self.cdf(end - 1)
+
+
+def eta_at_length(safe, length):
+    """Exact fixed-scale local density floor eta(length)."""
+    assert 0 < length <= 1
+    candidates = {F(0)}
+    for interval in safe:
+        for endpoint in interval:
+            candidates.add(endpoint % 1)
+            candidates.add((endpoint - length) % 1)
+    prefix = SafePrefix(safe)
+    retained = min(prefix.arc(start, length) for start in candidates)
+    return retained / length
+
+
+def primitive_deficit_extremizer(certificate):
+    """An arc attaining q = length * (delta - eta(length))."""
+    values = certificate["values"]
+    maximum = max(value for _, value in values)
+    minimum = min(value for _, value in values)
+    candidates = []
+    for start, value_start in values:
+        if value_start != maximum:
+            continue
+        for end, value_end in values:
+            if value_end != minimum:
+                continue
+            length = (end - start) % 1
+            if length == 0:
+                length = F(1)
+            candidates.append((length, start, end))
+    length, start, end = min(candidates)
+    eta = eta_at_length(certificate["safe"], length)
+    assert certificate["q"] == length * (certificate["density"] - eta)
+    return length, eta, start, end
+
+
 def block_certificate(speeds, denominator, label):
     safe = safe_intervals(speeds, denominator)
     density, discrepancy, values = primitive_data(safe)
@@ -170,6 +233,20 @@ def gluing_bound(certificates):
             debt += term
             terms.append((certificate["label"], earlier_teeth, suffix, term))
         earlier_teeth += certificate["M"]
+    return density_product - debt, density_product, debt, terms
+
+
+def gluing_bound_with_component_caps(certificates, component_caps):
+    """Closed ledger using certified prefix-component caps instead of tooth sums."""
+    assert len(component_caps) == len(certificates) - 1
+    density_product = product(certificate["density"] for certificate in certificates)
+    debt = F(0)
+    terms = []
+    for index, certificate in enumerate(certificates[1:], start=1):
+        suffix = product(later["density"] for later in certificates[index + 1 :])
+        term = certificate["q"] * component_caps[index - 1] * suffix
+        debt += term
+        terms.append((certificate["label"], component_caps[index - 1], suffix, term))
     return density_product - debt, density_product, debt, terms
 
 
@@ -337,7 +414,12 @@ all_speeds = [speed for block in blocks for speed in block]
 assert len(all_speeds) == 13 and len(set(all_speeds)) == 13
 rows, actual = verify_block_recurrence(blocks, certificates, 14)
 bound, density_product, debt, terms = gluing_bound(certificates)
+component_caps = [row[1] for row in rows[1:]]
+component_bound, _, component_debt, component_terms = (
+    gluing_bound_with_component_caps(certificates, component_caps)
+)
 assert actual >= bound > 0
+assert actual >= component_bound > bound
 for stage, components, prefix_sum, current, step_floor in rows:
     print(
         f"  stage {stage}: previous components={components}, "
@@ -352,6 +434,10 @@ for label, earlier_teeth, suffix, term in terms:
         f"({float(term):.9f}); M_previous={earlier_teeth}, suffix={suffix}"
     )
 print(f"  THM-933 lower bound = {bound} ({float(bound):.9f})")
+print(
+    f"  exact-component strengthening = {component_bound} "
+    f"({float(component_bound):.9f}); caps={component_caps}, debt={component_debt}"
+)
 print(f"  exact common-safe measure = {actual} ({float(actual):.9f})")
 print("  verdict: POSITIVE; not covered by a runner-by-runner 7-lacunary hypothesis")
 
@@ -394,12 +480,63 @@ print(
     f"  exact primitive q sidecar = {packet_certificate['q']} "
     f"({float(packet_certificate['q']):.9f})"
 )
+dual_length, dual_eta, dual_start, dual_end = primitive_deficit_extremizer(
+    packet_certificate
+)
+probe_length = F(4, 300)
+probe_eta = eta_at_length(packet_certificate["safe"], probe_length)
+assert packet_certificate["q"] >= probe_length * (
+    packet_certificate["density"] - probe_eta
+)
+print(
+    f"  eta/q dual extremizer: ell={dual_length} ({float(dual_length):.9f}), "
+    f"eta(ell)={dual_eta} ({float(dual_eta):.9f}), start={dual_start}, end={dual_end}"
+)
+print(
+    f"  exact duality q=ell*(delta-eta(ell)): PASS; "
+    f"Opus probe eta(4/300)={probe_eta} ({float(probe_eta):.9f})"
+)
 print(
     f"  safe components={len(packet_certificate['safe'])}, "
     f"tooth cap M={packet_certificate['M']}; d<=delta and scale law make it glueable"
 )
 
-print("\n[5] Tournament Analysis on block vertices")
+print("\n[5] Pulled Opus-S333 fixed-scale 7+6 composition")
+opus_first_speeds = [300, 406, 511, 652, 862, 963, 1074]
+opus_second_template = [862, 963, 1074, 1357, 1459, 1571]
+opus_second_scale = 300
+opus_first = block_certificate(opus_first_speeds, 13, "Opus-B7")
+opus_second = block_certificate(opus_second_template, 13, "Opus-B6-template")
+opus_template_length = F(2, 300)
+opus_actual_length = opus_template_length / opus_second_scale
+opus_eta = eta_at_length(opus_second["safe"], opus_template_length)
+opus_components = len(opus_first["safe"])
+opus_sharp_bound = opus_eta * (
+    opus_first["density"] - opus_components * opus_actual_length
+)
+opus_weaker_bound = (
+    opus_first["density"] * opus_eta - opus_components * opus_actual_length
+)
+assert 0 <= opus_eta <= 1
+assert opus_sharp_bound > opus_weaker_bound > 0
+print(
+    f"  B1 density={opus_first['density']} ({float(opus_first['density']):.9f}), "
+    f"components={opus_components}"
+)
+print(
+    f"  eta_B2(1/45000)=eta_template(2/300)={opus_eta} "
+    f"({float(opus_eta):.9f})"
+)
+print(
+    f"  sharp G1 bound eta*(mu-kappa*ell)={opus_sharp_bound} "
+    f"({float(opus_sharp_bound):.9f})"
+)
+print(
+    f"  weaker Opus ledger mu*eta-kappa*ell={opus_weaker_bound} "
+    f"({float(opus_weaker_bound):.9f}); both certify 13 non-lacunary speeds"
+)
+
+print("\n[6] Tournament Analysis on block vertices")
 fingerprint = tournament_fingerprint(certificates)
 print("  observable: debt(A then B)=q(B)M(A); gauge chooses smaller debt")
 for first, second, forward, backward, source in fingerprint["pairs"]:
@@ -417,11 +554,12 @@ best_bound, best_order = fingerprint["best_order"]
 print(f"  best full-ledger order={best_order}, bound={float(best_bound):.9f}")
 assert best_order == ("A", "B", "C") and best_bound == bound
 
-print("\n[6] Referee verdict")
+print("\n[7] Referee verdict")
 print("  primitive interval lemma: EXACT (finite endpoint extrema)")
 print("  scale covariance: EXACT (direct recomputation on all three blocks)")
 print("  component cap and every recurrence step: PASS")
-print("  closed-form gluing bound and positive 13-speed witness: PASS")
+print("  coarse and exact-component closed ledgers: PASS")
+print("  primitive and fixed-scale positive 13-speed witnesses: PASS")
 print("  lacunary improvement R>=7 and uniform R>=8: PASS")
 print("  assumption challenge: blocks preserve (delta,q,M), not endpoint order")
 print("  SCOPE: proves the composition theorem and new families, not arbitrary LRC(14) alone")

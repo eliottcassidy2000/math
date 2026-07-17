@@ -16,6 +16,7 @@ THM-933 EXACT REFEREE: SHARP LOCAL-DENSITY BLOCK GLUING
   debt at B: q*M_previous*suffix = 193/8575 (0.022507289); M_previous=15, suffix=386/735
   debt at C: q*M_previous*suffix = 193/6174 (0.031260123); M_previous=375, suffix=1
   THM-933 lower bound = 81253/771750 (0.105284095)
+  exact-component strengthening = 7334/55125 (0.133043084); caps=[10, 132], debt=10036/385875
   exact common-safe measure = 55063/330750 (0.166479214)
   verdict: POSITIVE; not covered by a runner-by-runner 7-lacunary hypothesis
 
@@ -29,9 +30,17 @@ THM-933 EXACT REFEREE: SHARP LOCAL-DENSITY BLOCK GLUING
   exact BONF5 lower density d = 624500321285438209432944191/15959187221015235325636692600 (0.039131086)
   exact safe density delta = 399621659482177660831785634791/3393987149002573379252069959600 (0.117744011)
   exact primitive q sidecar = 495710884720685026577242468200179/263539708132900820325543980292980400 (0.001880972)
+  eta/q dual extremizer: ell=7672/25883 (0.296410772), eta(ell)=336204506043392033965426561919/3018043048388642309502980419200 (0.111398181), start=22047/25883, end=3836/25883
+  exact duality q=ell*(delta-eta(ell)): PASS; Opus probe eta(4/300)=180679014438799128498899/2360548744347156414246624 (0.076541107)
   safe components=2030, tooth cap M=15130; d<=delta and scale law make it glueable
 
-[5] Tournament Analysis on block vertices
+[5] Pulled Opus-S333 fixed-scale 7+6 composition
+  B1 density=12208485893419843/38882590600758450 (0.313983346), components=1724
+  eta_B2(1/45000)=eta_template(2/300)=274025490881738650/1001359472502594621 (0.273653467)
+  sharp G1 bound eta*(mu-kappa*ell)=60354211840721383388269695262412/800043501647462161192289496375975 (0.075438663)
+  weaker Opus ledger mu*eta-kappa*ell=634854785244528135261499260168683/13334058360791036019871491606266250 (0.047611520); both certify 13 non-lacunary speeds
+
+[6] Tournament Analysis on block vertices
   observable: debt(A then B)=q(B)M(A); gauge chooses smaller debt
   A/B: forward=0.042857143, reverse=25.959183673; edge source=A
   A/C: forward=0.001250405, reverse=1038.367346939; edge source=A
@@ -41,11 +50,12 @@ THM-933 EXACT REFEREE: SHARP LOCAL-DENSITY BLOCK GLUING
   edge flips versus density-only gauge=2
   best full-ledger order=('A', 'B', 'C'), bound=0.105284095
 
-[6] Referee verdict
+[7] Referee verdict
   primitive interval lemma: EXACT (finite endpoint extrema)
   scale covariance: EXACT (direct recomputation on all three blocks)
   component cap and every recurrence step: PASS
-  closed-form gluing bound and positive 13-speed witness: PASS
+  coarse and exact-component closed ledgers: PASS
+  primitive and fixed-scale positive 13-speed witnesses: PASS
   lacunary improvement R>=7 and uniform R>=8: PASS
   assumption challenge: blocks preserve (delta,q,M), not endpoint order
   SCOPE: proves the composition theorem and new families, not arbitrary LRC(14) alone

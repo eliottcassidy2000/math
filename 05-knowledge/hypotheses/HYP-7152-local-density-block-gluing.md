@@ -3,8 +3,9 @@
 **Owner:** codex-2026-07-16-S21  
 **Target:** THM-933 (renumbered after Opus first pushed the THM-932 claim stub)
 **Status:** RESOLVED as THM-933.  The full canon proof and exact referee pass;
-the Lean algebraic core and exact constants are formalized.  The remaining
-formalization rung is the geometric circle/primitive instantiation.
+the Lean primitive bridge, tooth-count induction, gluing algebra, and exact
+constants are formalized.  The remaining formalization rung is the concrete
+circle-measure/arc instantiation.
 
 ## Claimed interface
 
@@ -38,6 +39,12 @@ the components of `W_{r-1}`.  Second, the complement of `W_{r-1}` is a union
 of at most `sum_{i<r} M(B_i)` danger teeth, so `W_{r-1}` has at most that many
 components.  Induction then unrolls the displayed recurrence.
 
+The sharp form replaces the tooth sum by any certified upper bound
+`K_{r-1}` on the *actual* prefix component count.  On the three-block witness,
+the exact counts `10,132` improve the lower bound from `81253/771750` to
+`7334/55125`.  This is the exact-component revision suggested by the pulled
+Opus S333 work.
+
 Scale covariance supplies the advertised two-scale composition:
 
 ```text
@@ -48,6 +55,29 @@ Thus exact density certificates live *inside* blocks, while gaps between block
 scales divide their boundary debts.  HYP-7104 and THM-930 are candidate density
 suppliers; each needs the exact primitive-discrepancy sidecar `q` before it can
 be glued without an unjustified independence assumption.
+
+The concurrent Opus S333 fixed-scale floor
+
+```text
+eta_B(ell) = min_{|I|=ell} mu(I intersect S(B))/ell
+```
+
+is now merged exactly.  Tiling each survivor component proves
+`mu(W intersect S(B)) >= eta_B(ell)(mu(W)-kappa(W)ell)`, while
+
+```text
+q(B) = sup_{0<ell<=1} ell (delta(B)-eta_B(ell)).
+```
+
+Thus `eta` is a tunable scale-local interface and `q` is its optimal
+scale-free deficit envelope.  On THM-928(C)'s packet the exact extremizer is
+`ell=7672/25883`, and the independently computed Opus probe
+`eta(4/300)=180679014438799128498899/2360548744347156414246624` agrees exactly.
+For Opus's revised radius-`1/13` 7+6 construction at gap `300`, the sharp G1
+form gives the exact positive bound
+`60354211840721383388269695262412/800043501647462161192289496375975`,
+improving their already-positive weaker ledger `0.0476115199...` to
+`0.0754386626...`.
 
 ## First exact consequence
 
@@ -87,6 +117,10 @@ and Hamiltonian-path counts.
 2. Exact rational endpoint sweep and gluing ledger: complete and passing.
 3. Singleton, multi-speed, and THM-928(C) sidecar checks: complete.
 4. Lean local-to-component sum, exact suffix-debt recurrence, and arithmetic:
-   complete, sorry-free, standard axioms only.
+   complete, sorry-free, standard axioms only.  The bounded-primitive lower
+   bound and sharpness, attained fixed-scale deficit comparison, fixed-scale
+   extremizer equality, sharp-to-weak G1 comparison, summation, tooth-count
+   induction, exact-component ledger, and Opus 7+6 arithmetic are also
+   formalized.
 5. Canon promotion and dependency audit: complete as THM-933; the concurrent
    THM-932 target is the coarser fixed-local-scale interface.
