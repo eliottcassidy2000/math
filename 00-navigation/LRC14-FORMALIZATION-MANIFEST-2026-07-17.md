@@ -301,6 +301,10 @@ cyclic phase/wall timing, not static overlap.  `LRCPairTowerReduction` likewise
 reduces the many-crossing branch to one dynamic harmonic-safe-component
 selector.  The sharpest checked capstone exposes exactly those four dynamic
 selectors plus the clean-modulus pair/depth budget; it is not an LRC(14) proof.
+`LRCZarankiewiczSixNineThirteen` now also proves the exact values
+`z(m,13;2,2)=27,30,33,37` for `m=6,7,8,9`, with explicit sharp witnesses.
+These values control distinct support families but do not by themselves count
+the multiplier activity needed by B5.
 `TournamentH7.LRCLeverageDemo` (same session) is the worked consumer template:
 the {1,2,3} sweep's 13 exact cells as `![...]` data; `demo_B1_pos` (B1 = 4/7)
 feeds `goodMass_pos_of_bonferroni_pos` to conclude positive good mass without
@@ -402,7 +406,10 @@ of cardinality `c`, the citation supplies the sharp interval radius
 A common affine obstruction wall is escapable whenever its frequency image spans
 one danger chamber.  Thus the genuine pair residue is no longer an unspecified
 infinite tower: it is a nonempty doubled core together with multiple obstruction
-walls that have not yet been reduced to one common affine wall.
+walls.  Explicit all-nonzero q22/q244 examples refute any automatic common-wall
+or nonchaining reduction.  On simultaneous saturated failures the surviving
+invariant is instead prefix refinement of the bad-branch partition; this is the
+next selector-counting carrier.
 
 On the B5 side, the normalized pair floor has been translated exactly into
 coverage language.  At `cleanModulus(v,height)`, the pair input is
@@ -415,10 +422,21 @@ and the other input is the signed harmful-depth budget.  `CoverageCapped(6)`
 offers a second exact consumer through the live-versus-depth-six census.
 `LRCArcWire` identifies this cap with absence of seven simultaneous bad arcs;
 seven bad rows force all 21 pairwise integer near-proportionality constraints.
+`LRCSevenOverlapRelations` retains their cross-products as edge colors and
+proves the exact Plucker relation.  `LRCSevenOverlapDenseCore` then checks off
+the first relation-budget consequences: above the dense pair, a nonzero base
+color costs at least three units on its two high spokes, two unit spokes force
+a zero base color, and a nonzero lower triangle costs at least five spoke units.
 The cap is not uniform in `q`: when `q > 14 max |v_i|`, the point `p=1` is the
 near-zero catastrophe and all runners can be bad.  The remaining supplier is
 therefore a modulus-window plus finite rigidity problem on the trapped dense
 core, not a global moment inequality.
+
+THM-950 removes the cap assumption from a second concrete route:
+`B5 >= liveCount - 792 * #{p : 6 <= bandCount p}` unconditionally.
+`CensusB5Certificate` and its dense-core capstone are now wired.  This checks
+off the endgame composition step; the remaining mathematics is exactly the
+weighted live-versus-deep census at one usable modulus.
 
 `LRCB5CertificateAudit` also proves that the older abstract
 `B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its

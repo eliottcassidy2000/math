@@ -55,6 +55,31 @@ Referee (deepcount_referee_deathstar_S42.out): window uniqueness PASS (30k, zero
 
 ---
 
+## codex-2026-07-17-S50 -- exact Zarankiewicz values and dense-core color mass
+
+The K2,2-free incidence table is now formal through the middle range:
+`LRCZarankiewiczSixNineThirteen.lean` proves the sharp values
+`z(m,13;2,2)=27,30,33,37` for `m=6,7,8,9`.  The upper proof double-counts
+right-degree collisions and the lower proof supplies explicit finite witnesses.
+This checks the static values but also confirms the limitation relevant to B5:
+they control distinct supports, not how many rational multipliers activate a
+support.
+
+`LRCSevenOverlapDenseCore.lean` turns the colored Plucker relation into explicit
+dense-core budget.  After permuting by absolute speed, every overlap triple is
+an exact relation on the positive ordered speeds.  Above the dense pair, a
+nonzero lower determinant forces at least three units of determinant mass on
+the two incident high spokes; two unit spokes force the lower edge color to
+vanish; and a nonzero lower triangle forces total spoke mass at least five.
+These are kernel-pure relation-budget sockets, not merely uncolored incidence
+bounds.
+
+The remaining bridge is activity-weighted: charge these determinant colors
+over the multipliers counted by the THM-950 deep census.  Bare Zarankiewicz
+values alone cannot supply that phase multiplicity.
+
+---
+
 ## codex-2026-07-17-S48 -- deep census capstone and colored overlap relations
 
 Pulled the q-window/rigidity and THM-950 deep-count work into the active B5
