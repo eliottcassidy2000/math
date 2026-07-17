@@ -1,0 +1,17 @@
+(I) THE TWO-VARIABLE FOLDED IDENTITY, exact battery:
+   400 random pairs (ratios <= 13, all gcds): 400 exact, 0 mismatches
+
+(II) consequences if (I) holds:
+   mu = 1/49 + [fold(S%14g) - fold(D%14g)]/(196ab); folds in [0, 49g^2]
+   FLOOR: mu >= 1/49 - fold(D%14g)_max-effect/(196ab) >= 1/49 - g^2/(4ab)
+        = 1/49 - 1/(4 a' b' * 196/...)  [a'=a/g, b'=b/g: 1/49 - 49g^2/(196ab)]
+   re-deriving the S341 floor table from (I):
+   ratio <= 13: min = 1/91 at (2, 26) (S341 table check)
+   ratio <= 8: min = 1/77 at (2, 11) (S341 table check)
+   ratio <= 5: min = 1/77 at (3, 11) (S341 table check)
+   ratio <= 3: min = 1/63 at (4, 9) (S341 table check)
+   ratio <= 2: min = 1/63 at (5, 9) (S341 table check)
+
+(III) the fold is the triangle: fold_14(r) = r(14-r) = the staircase
+   leg product at the lam = 1/14 modulus; boxeph's consecutive form is
+   the b = a+1 slice (fold_14 with D%14 = 1: fold=13 constant).
