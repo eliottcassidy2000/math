@@ -895,6 +895,90 @@ theorem cutF_piece_bounds {interval toothInterval piece : ℚ × ℚ}
   · rcases List.mem_singleton.mp hright with rfl
     exact ⟨le_max_left _ _, le_rfl⟩
 
+theorem norm_cons_region {interval : ℚ × ℚ} {region : Region}
+    (hinterval : interval.1 < interval.2) (hnorm : Norm region)
+    (hjoin : ∀ next ∈ region, interval.2 ≤ next.1) :
+    Norm (interval :: region) := by
+  rcases region with _ | ⟨next, remaining⟩
+  · exact hinterval
+  · exact ⟨hinterval, hjoin next (List.mem_cons_self ..), hnorm⟩
+
+theorem norm_append_region : ∀ {left : Region}, Norm left →
+    ∀ {right : Region}, Norm right →
+    (∀ leftInterval ∈ left, ∀ rightInterval ∈ right,
+      leftInterval.2 ≤ rightInterval.1) →
+    Norm (left ++ right) := by
+  intro left
+  induction left with
+  | nil => intro _ right hright _; simpa using hright
+  | cons interval left inductionHypothesis =>
+      intro hleft right hright hjoin
+      have htail : Norm (left ++ right) :=
+        inductionHypothesis (norm_tail hleft) hright
+          (fun leftInterval hleftInterval rightInterval hrightInterval =>
+            hjoin leftInterval (List.mem_cons_of_mem _ hleftInterval)
+              rightInterval hrightInterval)
+      apply norm_cons_region (norm_head_lt hleft) htail
+      intro next hnext
+      rw [List.mem_append] at hnext
+      rcases hnext with hnext | hnext
+      · exact norm_head_le hleft next hnext
+      · exact hjoin interval (List.mem_cons_self ..) next hnext
+
+theorem norm_cutF_region {interval toothInterval : ℚ × ℚ}
+    (htooth : toothInterval.1 ≤ toothInterval.2) :
+    Norm (cutF interval toothInterval) := by
+  have hmiddle :
+      min interval.2 toothInterval.1 ≤
+        max interval.1 toothInterval.2 := by
+    linarith [min_le_right interval.2 toothInterval.1,
+      le_max_right interval.1 toothInterval.2]
+  unfold cutF cut
+  by_cases hleft : interval.1 < min interval.2 toothInterval.1
+  · by_cases hright : max interval.1 toothInterval.2 < interval.2
+    · rw [List.filter_cons_of_pos (by simpa using hleft),
+          List.filter_cons_of_pos (by simpa using hright), List.filter_nil]
+      exact ⟨hleft, hmiddle, hright⟩
+    · rw [List.filter_cons_of_pos (by simpa using hleft),
+          List.filter_cons_of_neg (by simpa using hright), List.filter_nil]
+      exact hleft
+  · by_cases hright : max interval.1 toothInterval.2 < interval.2
+    · rw [List.filter_cons_of_neg (by simpa using hleft),
+          List.filter_cons_of_pos (by simpa using hright), List.filter_nil]
+      exact hright
+    · rw [List.filter_cons_of_neg (by simpa using hleft),
+          List.filter_cons_of_neg (by simpa using hright), List.filter_nil]
+      trivial
+
+theorem norm_diff1F_region : ∀ {region : Region}, Norm region →
+    ∀ {toothInterval : ℚ × ℚ},
+      toothInterval.1 ≤ toothInterval.2 →
+      Norm (diff1F region toothInterval) := by
+  intro region
+  induction region with
+  | nil => intro _ toothInterval _; trivial
+  | cons interval region inductionHypothesis =>
+      intro hnorm toothInterval htooth
+      rw [show diff1F (interval :: region) toothInterval =
+          cutF interval toothInterval ++ diff1F region toothInterval by rfl]
+      apply norm_append_region
+        (norm_cutF_region htooth)
+        (inductionHypothesis (norm_tail hnorm) htooth)
+      intro leftPiece hleftPiece rightPiece hrightPiece
+      have hleftBounds := cutF_piece_bounds hleftPiece
+      unfold diff1F at hrightPiece
+      rw [List.mem_flatMap] at hrightPiece
+      obtain ⟨source, hsource, hrightPiece⟩ := hrightPiece
+      have hrightBounds := cutF_piece_bounds hrightPiece
+      have hsourceOrder := norm_head_le hnorm source hsource
+      linarith
+
+theorem norm_deleteAnchoredTooth
+    (region : Region) (tooth : AnchoredCircularTooth)
+    (hnorm : Norm region) :
+    Norm (deleteAnchoredTooth region tooth) := by
+  exact norm_diff1F_region hnorm (le_of_lt tooth.width_pos)
+
 theorem regionInUnit_diff1F
     (region : Region) (toothInterval : ℚ × ℚ)
     (hunit : RegionInUnit region) :
@@ -1062,6 +1146,148 @@ def IntervalsSeparated (left right : ℚ × ℚ) : Prop :=
 def RegionSeparated (region : Region) : Prop :=
   region.Pairwise IntervalsSeparated
 
+theorem regionLive_of_norm : ∀ {region : Region},
+    Norm region → RegionLive region := by
+  intro region hnorm interval hinterval
+  induction region with
+  | nil => simp at hinterval
+  | cons head tail inductionHypothesis =>
+      rcases List.mem_cons.mp hinterval with rfl | htail
+      · exact norm_head_lt hnorm
+      · exact inductionHypothesis (norm_tail hnorm) htail
+
+theorem pairwise_interval_data_of_norm
+    {region : Region} (hnorm : Norm region) (hunit : RegionInUnit region) :
+    region.Pairwise fun left right =>
+      (0 ≤ left.1 ∧ left.1 < left.2 ∧ left.2 ≤ 1) ∧
+      (0 ≤ right.1 ∧ right.1 < right.2 ∧ right.2 ≤ 1) ∧
+      left.2 ≤ right.1 := by
+  induction region with
+  | nil => simp
+  | cons head tail inductionHypothesis =>
+      rw [List.pairwise_cons]
+      constructor
+      · intro right hright
+        have hheadUnit := hunit head (List.mem_cons_self ..)
+        have hrightUnit := hunit right (List.mem_cons_of_mem _ hright)
+        exact
+          ⟨⟨hheadUnit.1, norm_head_lt hnorm, hheadUnit.2⟩,
+            ⟨hrightUnit.1,
+              regionLive_of_norm (norm_tail hnorm) right hright,
+              hrightUnit.2⟩,
+            norm_head_le hnorm right hright⟩
+      · apply inductionHypothesis (norm_tail hnorm)
+        intro interval hinterval
+        exact hunit interval (List.mem_cons_of_mem _ hinterval)
+
+theorem regionSeparated_wrapOne {interval : ℚ × ℚ}
+    (hwidth : interval.2 - interval.1 ≤ 1) :
+    RegionSeparated (wrapOne interval) := by
+  unfold RegionSeparated wrapOne
+  set floorValue : ℤ := ⌊interval.1⌋ with hfloorValue
+  by_cases hend : interval.2 - (floorValue : ℚ) ≤ 1
+  · simp [hend]
+  · have hfloor : (floorValue : ℚ) ≤ interval.1 := by
+      simpa [hfloorValue] using Int.floor_le interval.1
+    simp only [hend, if_false]
+    rw [List.pairwise_cons]
+    constructor
+    · intro piece hpiece
+      rw [List.mem_singleton] at hpiece
+      subst piece
+      unfold IntervalsSeparated
+      right
+      dsimp
+      linarith
+    · simp
+
+/-- Ordered disjoint intervals in one unit chart remain separated after the
+same circle translation, even when either interval crosses the chart cut. -/
+theorem intervalsSeparated_wrapOne_of_order
+    (shift : ℚ) {left right leftPiece rightPiece : ℚ × ℚ}
+    (hleft : 0 ≤ left.1 ∧ left.1 < left.2 ∧ left.2 ≤ 1)
+    (hright : 0 ≤ right.1 ∧ right.1 < right.2 ∧ right.2 ≤ 1)
+    (horder : left.2 ≤ right.1)
+    (hleftPiece : leftPiece ∈
+      wrapOne (left.1 + shift, left.2 + shift))
+    (hrightPiece : rightPiece ∈
+      wrapOne (right.1 + shift, right.2 + shift)) :
+    IntervalsSeparated leftPiece rightPiece := by
+  by_contra hseparated
+  unfold IntervalsSeparated at hseparated
+  have hseparated' := not_or.mp hseparated
+  have hseparated :
+      rightPiece.1 < leftPiece.2 ∧ leftPiece.1 < rightPiece.2 :=
+    ⟨lt_of_not_ge hseparated'.1, lt_of_not_ge hseparated'.2⟩
+  have hleftWidth :
+      (left.2 + shift) - (left.1 + shift) ≤ 1 := by
+    linarith
+  have hrightWidth :
+      (right.2 + shift) - (right.1 + shift) ≤ 1 := by
+    linarith
+  have hleftPieceUnit :=
+    wrapOne_in_unit hleftWidth hleftPiece
+  have hrightPieceUnit :=
+    wrapOne_in_unit hrightWidth hrightPiece
+  have hleftPieceLive :=
+    wrapOne_live (by linarith [hleft.2.1]) hleftPiece
+  have hrightPieceLive :=
+    wrapOne_live (by linarith [hright.2.1]) hrightPiece
+  let overlapPoint : ℚ := max leftPiece.1 rightPiece.1
+  have hoverlapNonnegative : 0 ≤ overlapPoint := by
+    exact le_trans hleftPieceUnit.1 (le_max_left _ _)
+  have hoverlapLtOne : overlapPoint < 1 := by
+    apply max_lt
+    · exact lt_of_lt_of_le hleftPieceLive hleftPieceUnit.2
+    · exact lt_of_lt_of_le hrightPieceLive hrightPieceUnit.2
+  have hoverlapLeft :
+      mem overlapPoint (wrapOne (left.1 + shift, left.2 + shift)) := by
+    exact ⟨leftPiece, hleftPiece, le_max_left _ _,
+      max_lt hleftPieceLive hseparated.1⟩
+  have hoverlapRight :
+      mem overlapPoint (wrapOne (right.1 + shift, right.2 + shift)) := by
+    exact ⟨rightPiece, hrightPiece, le_max_right _ _,
+      max_lt hseparated.2 hrightPieceLive⟩
+  obtain ⟨leftInteger, hleftLower, hleftUpper⟩ :=
+    (mem_wrapOne hoverlapNonnegative hoverlapLtOne hleftWidth).mp
+      hoverlapLeft
+  obtain ⟨rightInteger, hrightLower, hrightUpper⟩ :=
+    (mem_wrapOne hoverlapNonnegative hoverlapLtOne hrightWidth).mp
+      hoverlapRight
+  have hintegerOrderRat :
+      (leftInteger : ℚ) < (rightInteger : ℚ) := by
+    linarith
+  have hintegerOrder : leftInteger < rightInteger := by
+    exact_mod_cast hintegerOrderRat
+  have hintegerGapRat :
+      (rightInteger : ℚ) - (leftInteger : ℚ) < 1 := by
+    linarith [hleft.1, hright.2.2]
+  have hintegerGap : rightInteger - leftInteger < 1 := by
+    exact_mod_cast hintegerGapRat
+  omega
+
+/-- `Norm` plus containment in one unit chart already supplies the separation
+field of every rational rotation certificate. -/
+theorem regionSeparated_translateCirc_of_norm
+    (shift : ℚ) (region : Region)
+    (hnorm : Norm region) (hunit : RegionInUnit region) :
+    RegionSeparated (translateCirc shift region) := by
+  unfold translateCirc wrap translate
+  rw [List.flatMap_map]
+  unfold RegionSeparated
+  rw [List.pairwise_flatMap]
+  constructor
+  · intro interval hinterval
+    apply regionSeparated_wrapOne
+    have hbounds := hunit interval hinterval
+    linarith
+  · apply (pairwise_interval_data_of_norm hnorm hunit).imp
+    intro left right hdata
+    rcases hdata with ⟨hleft, hright, horder⟩
+    intro leftPiece hleftPiece rightPiece hrightPiece
+    exact intervalsSeparated_wrapOne_of_order shift hleft hright horder
+      hleftPiece hrightPiece
+
 theorem intervalsSeparated_symmetric {left right : ℚ × ℚ} :
     IntervalsSeparated left right → IntervalsSeparated right left := by
   intro hseparated
@@ -1148,6 +1374,72 @@ components. -/
 def boundaryCorrection (region : Region) : ℕ :=
   if boundaryPiecesJoined region then 1 else 0
 
+/-- Whether wrapping one translated interval creates a second cut-open piece,
+recorded as a natural number so the total list-length change is exact. -/
+def wrapSplitIndicator (interval : ℚ × ℚ) : ℕ :=
+  if interval.2 - (⌊interval.1⌋ : ℚ) ≤ 1 then 0 else 1
+
+def wrapSplitCount (region : Region) : ℕ :=
+  (region.map wrapSplitIndicator).sum
+
+def rotationSplitCount (shift : ℚ) (region : Region) : ℕ :=
+  wrapSplitCount (translate shift region)
+
+theorem intervalComponentCount_wrapOne (interval : ℚ × ℚ) :
+    intervalComponentCount (wrapOne interval) =
+      1 + wrapSplitIndicator interval := by
+  unfold intervalComponentCount wrapOne wrapSplitIndicator
+  by_cases hend : interval.2 - (⌊interval.1⌋ : ℚ) ≤ 1
+  · simp [hend]
+  · simp [hend]
+
+theorem intervalComponentCount_wrap (region : Region) :
+    intervalComponentCount (wrap region) =
+      intervalComponentCount region + wrapSplitCount region := by
+  induction region with
+  | nil => simp [intervalComponentCount, wrap, wrapSplitCount]
+  | cons interval region inductionHypothesis =>
+      rw [show wrap (interval :: region) = wrapOne interval ++ wrap region by
+        rfl]
+      rw [intervalComponentCount]
+      simp only [List.length_append]
+      unfold intervalComponentCount at inductionHypothesis
+      rw [show List.length (wrapOne interval) =
+          intervalComponentCount (wrapOne interval) by rfl,
+        intervalComponentCount_wrapOne, inductionHypothesis]
+      simp [intervalComponentCount, wrapSplitCount, Nat.add_assoc,
+        Nat.add_left_comm, Nat.add_comm]
+
+theorem intervalComponentCount_translate (shift : ℚ) (region : Region) :
+    intervalComponentCount (translate shift region) =
+      intervalComponentCount region := by
+  simp [intervalComponentCount, translate]
+
+/-- Raw wrapping changes list length by exactly the number of source intervals
+split by the new chart cut. -/
+theorem intervalComponentCount_translateCirc (shift : ℚ) (region : Region) :
+    intervalComponentCount (translateCirc shift region) =
+      intervalComponentCount region + rotationSplitCount shift region := by
+  unfold translateCirc rotationSplitCount
+  rw [intervalComponentCount_wrap, intervalComponentCount_translate]
+
+/-- The minimal remaining topology invariant: every extra raw wrap piece is
+accounted for by the unique boundary merge in the cut-open chart.  This is the
+maximal-component condition at the moving parallel-class circle cut. -/
+def BoundaryFaithfulRotation (shift : ℚ) (region : Region) : Prop :=
+  rotationSplitCount shift region =
+    boundaryCorrection (translateCirc shift region)
+
+theorem positivePieceBalance_iff_boundaryFaithfulRotation
+    (shift : ℚ) (region : Region) :
+    (intervalComponentCount (translateCirc shift region) =
+        intervalComponentCount region +
+          boundaryCorrection (translateCirc shift region)) ↔
+      BoundaryFaithfulRotation shift region := by
+  rw [intervalComponentCount_translateCirc]
+  unfold BoundaryFaithfulRotation
+  omega
+
 theorem circularComponentCount_add_boundaryCorrection (region : Region) :
     circularComponentCount region + boundaryCorrection region =
       intervalComponentCount region := by
@@ -1201,6 +1493,26 @@ structure PositiveRotationTopologyCertificate
     intervalComponentCount (translateCirc shift region) =
       intervalComponentCount region +
         boundaryCorrection (translateCirc shift region)
+
+/-- Once the source list is a normalized unit-chart presentation, the positive
+rotation certificate is equivalent to the single boundary-faithfulness bit. -/
+theorem positiveRotationTopologyCertificate_iff_boundaryFaithfulRotation
+    (shift : ℚ) (region : Region)
+    (hnorm : Norm region) (hunit : RegionInUnit region) :
+    PositiveRotationTopologyCertificate shift region ↔
+      BoundaryFaithfulRotation shift region := by
+  constructor
+  · intro hcertificate
+    exact
+      (positivePieceBalance_iff_boundaryFaithfulRotation shift region).mp
+        hcertificate.pieceBalance
+  · intro hboundaryFaithful
+    exact
+      { separated :=
+          regionSeparated_translateCirc_of_norm shift region hnorm hunit
+        pieceBalance :=
+          (positivePieceBalance_iff_boundaryFaithfulRotation shift region).mpr
+            hboundaryFaithful }
 
 theorem rotationCutBalance_of_positiveCertificate
     (shift : ℚ) (region : Region)
@@ -1320,6 +1632,69 @@ theorem regionInUnit_rationalCircleChart
   regionInUnit_rationalCircleChart_of_survivor shift tooth toothCount
     (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
 
+/-- Deletion preservation and rotation separation make every recursive
+survivor and every sorted rechart a `Norm` presentation, without a topology
+certificate hypothesis. -/
+theorem norm_rationalCircleChart_and_survivor
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth) :
+    ∀ toothCount,
+      Norm (rationalCircleChart shift tooth toothCount) ∧
+        Norm (rationalCircleSurvivor shift tooth toothCount) := by
+  intro toothCount
+  induction toothCount with
+  | zero =>
+      constructor <;>
+        norm_num [rationalCircleChart, rationalCircleRechart,
+          rationalCircleSurvivor, LonelyRunner.RatIntervals.Norm]
+  | succ toothCount inductionHypothesis =>
+      have hsurvivor :
+          Norm (rationalCircleSurvivor shift tooth (toothCount + 1)) := by
+        rw [rationalCircleSurvivor_succ]
+        exact norm_deleteAnchoredTooth _ _ inductionHypothesis.1
+      constructor
+      · change Norm
+          (sortedTranslateCirc (shift (toothCount + 1))
+            (rationalCircleSurvivor shift tooth (toothCount + 1)))
+        apply norm_sortedTranslateCirc_of_separated
+        · exact regionLive_of_norm hsurvivor
+        · exact regionSeparated_translateCirc_of_norm _ _ hsurvivor
+            (regionInUnit_rationalCircleSurvivor shift tooth
+              (toothCount + 1))
+      · exact hsurvivor
+
+theorem norm_rationalCircleChart
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Norm (rationalCircleChart shift tooth toothCount) :=
+  (norm_rationalCircleChart_and_survivor shift tooth toothCount).1
+
+theorem norm_rationalCircleSurvivor
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    Norm (rationalCircleSurvivor shift tooth toothCount) :=
+  (norm_rationalCircleChart_and_survivor shift tooth toothCount).2
+
+theorem regionSeparated_rationalCircleSurvivor_translateCirc
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    RegionSeparated
+      (translateCirc (shift toothCount)
+        (rationalCircleSurvivor shift tooth toothCount)) :=
+  regionSeparated_translateCirc_of_norm _ _
+    (norm_rationalCircleSurvivor shift tooth toothCount)
+    (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
+
+theorem positiveRotationTopologyCertificate_rationalCircleSurvivor_iff
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    PositiveRotationTopologyCertificate (shift toothCount)
+        (rationalCircleSurvivor shift tooth toothCount) ↔
+      BoundaryFaithfulRotation (shift toothCount)
+        (rationalCircleSurvivor shift tooth toothCount) :=
+  positiveRotationTopologyCertificate_iff_boundaryFaithfulRotation _ _
+    (norm_rationalCircleSurvivor shift tooth toothCount)
+    (regionInUnit_rationalCircleSurvivor shift tooth toothCount)
+
 theorem rationalCircleChart_count_preserved
     (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
     (hbalance : ∀ toothCount, 1 ≤ toothCount →
@@ -1383,6 +1758,21 @@ def rationalCircularToothAtlasOfPositiveCertificates
         (boundaryPiecesJoined_rationalCircleSurvivor_eq_false
           shift tooth toothCount hpositive)
         (htopology toothCount hpositive) }
+
+/-- Final reduced constructor: normalization and rotated-piece separation are
+derived internally.  The only external positive-stage input is that the raw
+cut split is exactly the boundary merge correction. -/
+def rationalCircularToothAtlasOfBoundaryFaithfulRotations
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (hboundaryFaithful : ∀ toothCount, 1 ≤ toothCount →
+      BoundaryFaithfulRotation (shift toothCount)
+        (rationalCircleSurvivor shift tooth toothCount)) :
+    CircularToothAtlas :=
+  rationalCircularToothAtlasOfPositiveCertificates shift tooth
+    fun toothCount hpositive =>
+      (positiveRotationTopologyCertificate_rationalCircleSurvivor_iff
+        shift tooth toothCount).mpr
+          (hboundaryFaithful toothCount hpositive)
 
 /-- The recursive survivor really removes the next anchored tooth, pointwise. -/
 theorem mem_rationalCircleSurvivor_succ
@@ -1477,6 +1867,21 @@ theorem rational_circle_component_count_le_tooth_count
           (rationalCircleSurvivor shift tooth toothCount) ≤ toothCount :=
   circular_component_count_le_tooth_count
     (rationalCircularToothAtlasOfPositiveCertificates shift tooth htopology)
+    toothCount
+
+/-- End-to-end component cap with the sharp remaining rotation hypothesis. -/
+theorem rational_circle_component_count_le_tooth_count_of_boundaryFaithful
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (hboundaryFaithful : ∀ count, 1 ≤ count →
+      BoundaryFaithfulRotation (shift count)
+        (rationalCircleSurvivor shift tooth count))
+    (toothCount : ℕ) :
+    1 ≤ toothCount →
+      circularComponentCount
+          (rationalCircleSurvivor shift tooth toothCount) ≤ toothCount :=
+  circular_component_count_le_tooth_count
+    (rationalCircularToothAtlasOfBoundaryFaithfulRotations
+      shift tooth hboundaryFaithful)
     toothCount
 
 end ComponentCap
@@ -1656,11 +2061,16 @@ end ExactArithmetic
 #print axioms fixedScale_weaker_loss
 #print axioms mem_deleteAnchoredTooth
 #print axioms circularComponentCount_deleteAnchoredTooth_le_add_one
+#print axioms regionSeparated_translateCirc_of_norm
+#print axioms intervalComponentCount_translateCirc
+#print axioms positiveRotationTopologyCertificate_iff_boundaryFaithfulRotation
+#print axioms norm_rationalCircleChart_and_survivor
 #print axioms mem_rationalCircleChart_succ_iff
 #print axioms rationalCircleChart_count_preserved
 #print axioms component_count_le_tooth_count
 #print axioms circular_component_count_le_tooth_count
 #print axioms rational_circle_component_count_le_tooth_count
+#print axioms rational_circle_component_count_le_tooth_count_of_boundaryFaithful
 #print axioms lowerBound_eq_product_sub_weightedDebt
 #print axioms weightedDebt_eq_suffix_sum
 #print axioms lowerBound_eq_closed
