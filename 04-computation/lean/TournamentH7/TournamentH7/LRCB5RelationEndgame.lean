@@ -1,4 +1,4 @@
-import TournamentH7.LRCDenseCoreEndgame
+import TournamentH7.LRCEndgameParameterDischargeTwoThree
 import TournamentH7.LRCB5RelationBudget
 
 /-!
@@ -84,11 +84,22 @@ theorem lrc14_from_four_detuned_and_relationBudget
   lrc14_from_four_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_relationBudget hsupply)
 
+/-- **Sharpest THM-935-shaped capstone.**  Degree arithmetic reduces the
+three-detuned residual to a `q = 2` row with a distinct `q ≤ 8` companion or
+the uniform `(3,3,3)` pattern; relation-budget certificates are required only
+on the primitive dissociated chain-dense core. -/
+theorem lrc14_from_twoThree_detuned_and_relationBudget
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreRelationBudgetSupply) : LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_relationBudget hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms B5RelationBudgetCertificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms lrc14_from_four_detuned_and_relationBudget
+#print axioms lrc14_from_twoThree_detuned_and_relationBudget
 
 end LRC14Grand
 end LonelyRunner

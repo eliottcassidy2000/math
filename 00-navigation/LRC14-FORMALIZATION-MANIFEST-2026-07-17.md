@@ -145,3 +145,9 @@ alphabet is now exactly `q∈{2,3}`; together with the nonterminating two-adic p
 and relation-budget certificate supply on the primitive dissociated `ChainDenseCore`,
 `lrc14_from_four_detuned_and_relationBudget` implies LRC(14).  Every new theorem in this
 addendum audits with only `propext`, `Classical.choice`, and `Quot.sound`.
+
+`TournamentH7.LRCEndgameParameterDischargeTwoThree` further classifies the saturated
+degree patterns: without a `q=2` row, nongenericity forces `(3,3,3)`; with `q=2`, a
+distinct companion has `q≤8`, sharply at `(2,8,8)`.  The final checked capstone is
+`lrc14_from_twoThree_detuned_and_relationBudget`; only those phase-sensitive triple
+patterns, the nonterminating pair tower, and the relation-certificate supplier remain.

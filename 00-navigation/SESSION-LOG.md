@@ -11,6 +11,38 @@ Prompt (owner): discharge the two endgame parameters and complete the LRC 14 pro
 (D) Infrastructure: this box OOM-killed LRCWindowData22's native_decide (20.7GB VM / 7GB RAM; lake reported only "targets logged failures" -- the real signal was in dmesg). Fixed with an 8GB swapfile (/swapfile2, left mounted). Namespace: THM-934 collision resolved by first-push (kps 21:18 vs mine 21:51) -> renumbered mine to THM-937, refs propagated (kps's own 934 notes untouched).
 
 FILES: THM-937, HYP-7161 (updated), LRCChainDichotomy.lean (merged), referee script+.out, reflection (entry-constant-fourteen-echo), backlog lead, manifest ref fix. NEXT: (i) pair lift (S20 cite_blockchain_lonely) -> dense core shrinks to triples-plus; (ii) GLevel lift (S22) -> the 7-wall; (iii) merge ChainDenseCore growth caps with klein's W*(r) finite windows; (iv) DenseCoreDissociatedB5Supply is the sharpest B5 target -- kps's generic law (THM-934) supplies exactly this shape on the bulk. death-star; S33.
+## codex-2026-07-16-S31 -- DETUNED TRIPLE DEGREE TAXONOMY SHARP: `(3,3,3)` OR `q=2` WITH `q<=8` COMPANION
+
+Integrated Curie's second detuned pass and composed it with the THM-935 relation-budget
+endgame.  New `LRCEndgameParameterDischargeTwoThree.lean` proves exact q=2/q=3 bad-
+count formulas, the uniform q>=9 bound, and two structural consequences for an exactly-
+three-detuned nongeneric family:
+
+1. if no reduced denominator is 2, all three denominators are exactly 3;
+2. if a denominator is 2, a distinct companion denominator is at most 8.
+
+The cutoff is sharp for degree-only arithmetic because `(2,8,8)` has total bad degree
+exactly `g`.  Every other denominator pattern is generic and is already closed by the
+proved three-detuned dispatch.  The new residual
+`DeepExceptionalDetunedDispatchTwoThree` therefore contains only the nonterminating
+two-adic pair tower, a q=2 row with a distinct q<=8 companion, or `(3,3,3)`.
+
+`LRCB5RelationEndgame.lean` now adds the combined foundational-only theorem
+`lrc14_from_twoThree_detuned_and_relationBudget`.  After the sanctioned `LRCUpTo13`
+citation, the two exact mathematical suppliers are the preceding detuned residual and
+THM-935 relation-budget certificates on the primitive dissociated `ChainDenseCore`.
+
+ZARANKIEWICZ / ASSUMPTION AUDIT: taking detuned coordinates and branch classes as the
+bipartite vertices preserves row degrees and the union-bound cover predicate, but loses
+cyclic phase intersections.  A stronger K_{2,t}-style estimate is therefore unavailable
+from denominator data alone.  The saturated `(2,8,8)` and `(3,3,3)` patterns identify
+exactly where a parity/two-adic or explicit intersection argument must replace degree
+counting.
+
+FILES: `LRCEndgameParameterDischargeTwoThree.lean`, `LRCB5RelationEndgame.lean`, package
+root, THM-935, HYP-7161, formalization manifest, session log. Curie/codex; S31.
+
+---
 ## codex-2026-07-16-S30 -- THM-933 RATIONAL ANALYTIC PROVIDER CLOSED; TOPOLOGY REDUCED TO BOUNDARY-FAITHFUL SEAMS
 
 Merged Raman's rational-region provider and Newton's topology audit, then checked the

@@ -83,6 +83,8 @@ bridge.  A `B5RelationBudgetCertificate` contains a modulus, four exact-support 
 the equality of the signed model with the concrete integer `B5`, and the quarter / three-
 quarter bounds.  It proves integer `B5 > 0`, turns certificate supply on the primitive
 dissociated `ChainDenseCore` into `DenseCoreDissociatedB5Supply`, and machine-checks
-`lrc14_from_four_detuned_and_relationBudget`.  Thus, after `LRCUpTo13`, the remaining
-mathematics is exposed exactly as the reduced detuned dispatch plus construction of these
-relation certificates; no sign, cast, or endgame composition step is left informal.
+`lrc14_from_twoThree_detuned_and_relationBudget`.  Exact degree arithmetic has reduced
+the triple dispatch to a `q=2` row with a distinct `q≤8` companion or the uniform
+`(3,3,3)` pattern.  Thus, after `LRCUpTo13`, the remaining mathematics is exposed exactly
+as those phase-sensitive detuned patterns, the nonterminating pair tower, and construction
+of the relation certificates; no sign, cast, or endgame composition step is left informal.

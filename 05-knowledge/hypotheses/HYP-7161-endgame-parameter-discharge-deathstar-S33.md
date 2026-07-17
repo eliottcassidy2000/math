@@ -127,3 +127,23 @@ support-`3,4,5` mass imply integer `B5 > 0`; the capstone
 `lrc14_from_four_detuned_and_relationBudget` then gives LRC(14).  The universal
 `T_s(H)` bounds and the analytic equality with concrete discrete `B5` remain genuine
 mathematics, not hidden axioms.
+
+## Exact degree-pattern normalization — S31
+
+`TournamentH7.LRCEndgameParameterDischargeTwoThree` exhausts the remaining triple
+degree arithmetic.  For `q ≥ 3`, one-coordinate bad degree is at most `g/3`, with
+equality only at `q=3`; hence a non-generic triple with no `q=2` row is exactly the
+uniform `(3,3,3)` pattern.  If a `q=2` row is present, nongenericity forces a distinct
+companion row with `q≤8`; `(2,8,8)` shows this cutoff is sharp for degree-only bounds.
+
+The sharpest checked theorem is now
+`lrc14_from_twoThree_detuned_and_relationBudget`.  After `LRCUpTo13`, its suppliers are:
+
+1. the nonterminating two-adic pair tower, or a triple of pattern `q=2` with a distinct
+   `q≤8` companion, or `(3,3,3)`;
+2. THM-935 relation-budget certificates on the primitive dissociated `ChainDenseCore`.
+
+The denominator quotient preserves bad-neighborhood row degrees but destroys cyclic
+phase intersections.  Closing these saturated patterns therefore needs a parity/two-
+adic or explicit intersection argument; no unsupported Zarankiewicz `K_{2,t}`-free
+assumption is introduced.
