@@ -30,3 +30,13 @@ instrument of record (1.8–51× exact, covering); v3-naive (ℓ¹ CRT cross) is
 worse than CS (7.6–251×): the ℓ¹ product-sum discards in-slice cancellation; v4 = per-
 slice CS with joint L-coset SP masses is the named successor (the L-coset SP lemma is
 item 8's proof at modulus L). Do not formalize v3.
+
+## Landed addendum — THM-933 block gluing (codex-S21)
+
+`TournamentH7.LRCLocalDensityBlockGluing` is now a consumable, sorry-free module.
+It proves local-component summation with exact `card*q` debt, the `M*q` cap handoff,
+recurrence soundness, the fully unrolled suffix-product debt formula, the explicit
+three-block theorem, and the exact `R=7` / `81253/771750` arithmetic.  Axiom audit:
+only `propext`, `Classical.choice`, and `Quot.sound`; no `native_decide`.  The remaining
+geometric rung is narrowly isolated: instantiate the local hypothesis from the centered
+circle primitive and prove the danger-tooth component cap in the circle representation.

@@ -37,6 +37,15 @@ loss; this proof moved to THM-933 and supplies the sharp optimal primitive loss 
 closed formula, constants, and referee.  No file was overwritten; THM-933 explicitly feeds
 the concurrent THM-932 interface.
 
+FORMALIZATION CHECKPOINT: `LRCLocalDensityBlockGluing.lean` proves the component-sum,
+complexity handoff, recurrence soundness, exact suffix-product debt formula, three-block
+formula, `R=7` arithmetic, and exact demo ledger.  Targeted compile passes warning-free;
+axioms are only `[propext, Classical.choice, Quot.sound]`, with no sorry/native_decide.
+The module also built successfully as job 8586 inside the full root graph; the broad rebuild
+was stopped later (exit 130) after fourteen minutes in four unrelated generated
+`LRCSafeCertSize*` tables, all still active at high CPU.  Geometric primitive/tooth encoding
+is the one honest formalization layer not yet absorbed.
+
 ---
 
 ## death-star-2026-07-16-S32 -- THE LEAN QUEUE RUN + THE GLOBAL AUDIT: (1) the sorry audit resolved -- the LRC14 assembly chain (3122 jobs to lrc14_endgame) builds with ZERO sorry warnings; every earlier grep count was a comment false-positive ('never by sorry', 'sorry-free') -- the audit lesson: only the BUILD is authoritative; (2) RUNG THREE: killer_box_thirteenth ADDED to FragmentationLemma -- THM-883's concrete box at the LRC(14) radius: j <= 6 arc-grids at lam = 1/13 with moduli >= W covering a length-L component => W <= 2j/(L(13-2j)) -- the EXACT constant behind the THM-883/885 finite sweeps, two lines from killer_bound via the 1/13 substitution and a div-identity; BUILDS GREEN; (3) THE AXIOM CERTIFICATION (S32AxiomAudit.lean): lrc14_endgame, killer_box_thirteenth, and fragmentation depend ONLY on [propext, Classical.choice, Quot.sound] -- NO sorryAx anywhere in the chain. THE HONEST FORMALIZATION BOUNDARY, certified: the surface = exactly the two designed hypothesis-parameters of the endgame (hfloor: witness floor; hpartA: G2 => reach) + the LRC(<=13) citation node (owner policy, a Prop parameter, never a sorry) -- their ingredients are machine-checked per the assembly's inline module map; the remaining discharge = the named glue (fuel-checker soundness instantiation module 6 -> skeleton; the census case-split bookkeeping) -- the genuine remaining project, now with its fragmentation-box constant formalized

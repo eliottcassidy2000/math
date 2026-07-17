@@ -1,11 +1,12 @@
 ---
 id: THM-933
 title: THE SHARP LOCAL-DENSITY BLOCK-GLUING THEOREM — exact primitive discrepancy inside blocks, component debt across gaps; LRC(14) lacunary threshold sharpened from 15 to 7 and the uniform all-n threshold from 19 to 8
-status: PROVED (elementary circle proof in-file; exact-rational referee passes; Lean algebraic core staged separately)
+status: PROVED (elementary circle proof in-file; exact-rational referee passes; Lean algebraic core formalized, sorry-free, standard axioms only)
 source: codex-2026-07-16-S21 (HYP-7152; owner asked for the local-density block-gluing theorem, frequent pulls, concrete steps, and formalization)
 depends_on: [THM-928 (comparison and certified packet), THM-930 and HYP-7104 (within-block certificate suppliers; not needed for the abstract proof)]
 script: 04-computation/lrc14_local_density_block_gluing_codex_S21.py
 output: 05-knowledge/results/lrc14_local_density_block_gluing_codex_S21.out
+formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCLocalDensityBlockGluing.lean
 ---
 
 # THM-933 — The sharp local-density block-gluing theorem
@@ -369,3 +370,25 @@ packet still needs either one positive whole-block certificate or a partition
 whose right side in (BG) is positive.  Its role in the endgame is exact and
 modular: every future within-block density certificate becomes composable once
 it carries `q`.
+
+## 10. Lean formalization
+
+`TournamentH7.LRCLocalDensityBlockGluing` formalizes the proof-bearing
+algebraic core:
+
+- `local_to_component_sum`: a local interval/component certificate sums with
+  the exact `card * q` loss;
+- `local_to_complexity_sum`: a component cap turns that loss into `M*q`;
+- `lowerBound_le_actual`: every nonnegative-density recurrence propagates a
+  certified lower bound;
+- `weightedDebt_eq_suffix_sum` and `lowerBound_eq_closed`: the recursive ledger
+  is exactly the product minus the suffix-density-weighted debt in (BG);
+- `three_block_gluing`: the explicit `d1*d2*d3-(e2*d3+e3)` theorem;
+- kernel arithmetic for `6^12>7^11`, the positive `R=7` margin, the exact
+  `81253/771750` three-block ledger, and its domination by the direct measure.
+
+The module contains no `sorry` and no `native_decide`; its axiom audit reports
+only `propext`, `Classical.choice`, and `Quot.sound`.  The remaining geometric
+formalization layer is to instantiate the abstract local hypothesis from the
+circle primitive `H_B` and to formalize the tooth-union component cap.  Those
+are isolated from, and feed directly into, the now-checked closed recurrence.

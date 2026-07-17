@@ -3,7 +3,8 @@
 **Owner:** codex-2026-07-16-S21  
 **Target:** THM-933 (renumbered after Opus first pushed the THM-932 claim stub)
 **Status:** RESOLVED as THM-933.  The full canon proof and exact referee pass;
-the Lean algebra is the remaining formalization rung.
+the Lean algebraic core and exact constants are formalized.  The remaining
+formalization rung is the geometric circle/primitive instantiation.
 
 ## Claimed interface
 
@@ -85,6 +86,7 @@ and Hamiltonian-path counts.
 1. Circle-component and primitive-discrepancy proof: complete in THM-933.
 2. Exact rational endpoint sweep and gluing ledger: complete and passing.
 3. Singleton, multi-speed, and THM-928(C) sidecar checks: complete.
-4. Lean local-to-component sum and recurrence algebra: next rung.
+4. Lean local-to-component sum, exact suffix-debt recurrence, and arithmetic:
+   complete, sorry-free, standard axioms only.
 5. Canon promotion and dependency audit: complete as THM-933; the concurrent
    THM-932 target is the coarser fixed-local-scale interface.
