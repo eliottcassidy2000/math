@@ -1,0 +1,9 @@
+composed-atom referee (box 200):
+  (307, 425, 541, 671) H=10: true=1.690e-04  composed-bound=1.054e+03  valid=True
+  (307, 425, 541, 671) H=40: true=7.835e-05  composed-bound=1.054e+03  valid=True
+  (800, 944, 1413, 2147) H=10: true=5.769e-05  composed-bound=4.656e+02  valid=True
+  (800, 944, 1413, 2147) H=40: true=2.831e-05  composed-bound=4.656e+02  valid=True
+  (541, 1087, 1943, 3310) H=10: true=2.825e-05  composed-bound=2.063e+03  valid=True
+  (541, 1087, 1943, 3310) H=40: true=2.022e-05  composed-bound=2.063e+03  valid=True
+NOTE: the composed bound lacks the H-floors (it is the H-free envelope); validity true<=bound is the structural check; the floored version tightens by ~1/H as in T3.
+DONE

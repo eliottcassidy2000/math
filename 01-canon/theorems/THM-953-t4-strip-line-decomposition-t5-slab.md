@@ -38,6 +38,32 @@ recursion terminates in two-pole atoms with all separations explicit. The remain
 is the plane-level gcd/zero-coordinate bookkeeping and constant assembly — one focused
 audit-grade pass.
 
+
+## The hardened composition (cont.44 — audit-grade structure)
+
+**The composed-atom theorem.** Both levels of T₄ are two-pole sums: the INNER slice at
+separation Δ^in_k = |k|/(v₁′v₂′) (THM-946(I) verbatim), and — the hardening's key — the
+OUTER k-line itself: u(m) = u_k + mv₄″, t(m) = t_k − mv₃″ are two linear forms with poles
+separated by Δ^out_k = |k|/(v₃″v₄″). Hence
+
+> T₄ ≤ Σ_{g₃₄|k, k≠0} (1/π²)·Atom(v₂′,v₁′; Δ^in_k) · (1/π²)·Atom(v₄″,v₃″; Δ^out_k)
+
+with Atom = THM-946's corrected lemma (1). REFEREED (t4_composed_atom_referee, box 200,
+3 quadruples): true ≤ composed bound everywhere (the H-free structural check; the floored
+version supplies the 1/H exactly as in T₃ — cont.41's envelope measurement).
+
+**The floor cases** mirror T₃'s hardened tree on each level independently: which of the
+four coordinates exceeds H splits into inner-pair cases (THM-952's subcases A/B/C verbatim
+on (h₁,h₂)) and outer-pair cases (the same subcases on (u,t), with the congruence-averaging
+lemma applied to the OUTER orbit — r_out(k) = the least-abs residue of the k-line's
+near-pole in u). The averaging lemma is rank-free and covers both levels; no new mechanism
+appears at support 4. The k-sum converges against both atoms' (1+Δ)⁻¹ decays with the two
+L factors, giving the L³ of the assembled bound.
+
+With this, T₄'s tree matches T₃'s audit grade structurally; the remaining delta to a
+fully-audited T₄ is transcribing the eight (inner × outer) floor combinations with their
+constants — mechanical, each a copy of a THM-952 subcase.
+
 ## Named next
 - The codex-style audit of (II)-(III)'s case tree (invited; claims calibrated for it).
 - The T₅ plane bookkeeping pass.
