@@ -402,6 +402,49 @@ Those graphs are always planar, yet they carry the largest coefficients; the
 outside mask, full far address, and simultaneous charge across divisors must
 stay in the state.
 
+## 7. The slice-Parseval splice
+
+The concurrent `HYP-7103` result supplies the correct quadratic sidecar for
+this target.  In the `THM-888` owner-frequency notation it proves, for every
+owner `e` and residue class `r`,
+
+```text
+sum_(m=r mod e) |S_e(m)|^2=(P/e) C_hat_e(r),                 (19)
+```
+
+where `C_hat_e(r)` is the `r`-twisted same-class endpoint-coincidence sum.
+This is exact coset Parseval, not an envelope: it removes the former
+quadratic-in-owner-count floor and improved the tested two-owner tail by a
+factor `636`.
+
+The compatible linear splice to prove is a regrouping of the colored divisor
+sheet into owner-frequency slices of the form
+
+```text
+T_e(r)=sum_(m=r mod e) K_hat_P(m) S_e(m).
+```
+
+Once that Fourier identity is matched exactly to (3), (19) gives immediately
+
+```text
+|T_e(r)|^2
+ <= [sum_(m=r mod e)|K_hat_P(m)|^2] (P/e) C_hat_e(r).        (20)
+```
+
+Equation (20) would be the sharp norm input missing from (18), but it is not itself
+the desired uniform signed estimate.  It controls one fixed far-address class
+in `L2`; summing its square roots independently would again discard the
+adjacent-pin signs and divisor simultaneity.  The remaining crux is now
+precisely to prove the colored regrouping and combine (20) with (10e), retaining
+the common twist `r=t` and the pre/post miss labels across all divisor charges.
+
+This also challenges a tempting identification: the Parseval owner `e` is a
+frequency-slice owner and should not be silently identified with the reduced
+Farey denominator `d`.  The regrouping preserves the fixed-address LRC
+functional and the twisted coincidence mass, while ordinary Zarankiewicz
+crossing numbers discard both.  Thus `HYP-7103` strengthens the divisor-sheet
+route without reviving the refuted crossing-energy quotient.
+
 Tournament Analysis uses owner cardinalities `1,2,3,4` as vertices.  Positive
 signed risk orders them `(1,2,4,3)`, whereas Zarankiewicz risk orders them
 `(3,4,1,2)`; the switch flips five of six edges.  Both are transitive with
@@ -415,5 +458,5 @@ matching result file.
 External status source: D. R. Woodall, *J. Graph Theory* 17 (1993), 657--671,
 doi:`10.1002/jgt.3190170602`.
 
--> `HYP-7084`, `THM-887`, `THM-913`, cyclic Zarankiewicz `THM-922`, and the
-parallel-class-circle reflection.
+-> `HYP-7084`, `THM-887`, `THM-913`, cyclic Zarankiewicz `THM-922`,
+`HYP-7103`, and the parallel-class-circle reflection.

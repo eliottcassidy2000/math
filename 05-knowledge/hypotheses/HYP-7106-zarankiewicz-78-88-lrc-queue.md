@@ -21,6 +21,36 @@ restricted statement that the cyclic parallel-class colorings attain those alrea
 known optima; its free-edge annealing is evidence inside the search model, not a proof
 of an open ordinary case.
 
+**General even-lift lemma.**  Write
+
+```text
+Z(p,q)=floor(p/2)floor((p-1)/2)floor(q/2)floor((q-1)/2).
+```
+
+If `cr(K_{p,2k-1})=Z(p,2k-1)`, deletion averaging in the second part gives
+
+```text
+(2k-2)cr(K_{p,2k}) >= 2k cr(K_{p,2k-1})
+                         = (2k-2)Z(p,2k).
+```
+
+The standard drawing supplies the reverse inequality, so exactness propagates from
+every odd part to its next even part.  Applying this in both coordinates to Woodall's
+`K_{7,7}` theorem gives exactly the `K_{7,8}`, `K_{8,7}`, and `K_{8,8}` square.
+
+The propagation stops at the next odd part.  From an exact `2k` case, deletion gives
+only
+
+```text
+cr(K_{p,2k+1}) >= [(2k+1)/(2k-1)] Z(p,2k),
+```
+
+which lies below `Z(p,2k+1)` by
+`floor(p/2)floor((p-1)/2) k/(2k-1)`.  For `K_{7,9}` this is the real gap
+`36/7`, hence only the integer lower bound `139` versus the drawing value `144`.
+This arithmetic odd-step deficit is the precise point where parallel-class
+constructions cease to determine the ordinary crossing value.
+
 **Lean status update.**  Klein-S316 completed `window_bound`, the main chop-and-sum
 branch, and `killer_budget` in the shared file, merging the concurrent S30 periodicity
 work.  `FragmentationLemma.lean` is therefore sorry-free; the next formalization rungs
