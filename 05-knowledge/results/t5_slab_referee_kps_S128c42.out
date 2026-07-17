@@ -1,0 +1,8 @@
+T5 slab/complement split (box 60):
+  (307, 425, 541, 671, 800) H=10 K0=3000: slab=7.43e-05 (26182 pts, near-line frac 60%) comp=2.08e-04 (183756)  env=8.071e-07
+  (307, 425, 541, 671, 800) H=40 K0=3000: slab=9.05e-06 (18568 pts, near-line frac 43%) comp=4.99e-05 (150284)  env=6.747e-07
+  (541, 800, 1087, 1943, 2570) H=10 K0=3000: slab=2.38e-05 (4766 pts, near-line frac 38%) comp=1.14e-04 (70172)  env=2.237e-07
+  (541, 800, 1087, 1943, 2570) H=40 K0=3000: slab=2.52e-06 (3380 pts, near-line frac 37%) comp=2.47e-05 (56868)  env=1.774e-07
+  (671, 944, 1413, 2147, 3310) H=10 K0=3000: slab=1.28e-05 (3218 pts, near-line frac 56%) comp=8.33e-05 (56532)  env=1.399e-07
+  (671, 944, 1413, 2147, 3310) H=40 K0=3000: slab=1.68e-06 (2354 pts, near-line frac 56%) comp=1.92e-05 (45744)  env=1.214e-07
+DONE
