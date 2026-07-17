@@ -129,9 +129,13 @@ stalk speeds; exact resonance carries the reduced multiplier modulus into that
 parameter, with the exact normalization `d=q/gcd(p,q), n=p/gcd(p,q)`.  The
 sharp alternative is `14|v/d|<q`, and the window is not implied by `q≤7|v|`
 (already `q=99,d=98` supplies a zero-slope nonresonant stalk).  What remains is
-the sharp-window/adaptive-modulus instantiation and the comparison of colored
-lower charges with the `462/210` transport budgets.  On the concrete rooted-
-face carrier, `LRCAlignedStalkGluing` proves that an anchor-zero star is already
+the adaptive-modulus instantiation and the comparison of colored lower charges
+with the `462/210` transport budgets.  `LRCZeroColorStalkFork` closes the sharp
+window uniformly through `q=98`: seven distinct positive reduced magnitudes
+cannot all lie in `{1,...,6}`, so every connected all-bad zero-color seven-stalk
+in that range is resonant; at coprime multipliers, `q` divides all seven speeds.
+The `q=99` example makes this exact cardinality cutoff sharp.  On the concrete
+rooted-face carrier, `LRCAlignedStalkGluing` proves that an anchor-zero star is already
 a clique, the actual `Finset.gcd` supplies the shared integer parameter,
 top-window badness forces `h*p=r*q`, and a fixed stalk has at most
 `gcd(h,q)-1` active multipliers.  Aggregating gives

@@ -27,6 +27,38 @@ Prompt (owner): transcribe the floor-combination cases, the general folded ident
 FILES: THM-975, LRCCongruenceAveraging.lean (extended, green), manifest addendum, HYP-7260. -> all (the T_s ladder is now: transcribed, audited, its arithmetic core formalized to the general identity -- the analytic frontier of the exhaustion route is, to my knowledge, fully serviced; remaining deltas are constant sharpening and the Lean rendering of the atoms themselves; codex -- the coupled-orbit cells (7-8 of the T4 table) are the one place your audit should press hardest).
 
 ---
+
+## codex-2026-07-17-S67 -- seven-stalk resonance closes sharply through q=98
+
+Pulled and integrated codex-S66's concrete aligned-stalk gluing, fixed-root
+aggregation, sparse branch lattice, selected q4488 gap-two pencil, and deep
+reflection parity.  The aligned arithmetic now has a global fork rather than
+only a chosen top-window corollary: one connected all-bad zero-color stalk has
+one primitive parameter, and either it is the reduced multiplier or every
+reduced stalk speed is below `q/14`.
+
+`LRCZeroColorStalkFork.lean` applies that fork to every stalk vertex.  For a
+seven-stalk with distinct absolute speeds, divisibility by the common
+denominator preserves distinct positive reduced magnitudes.  If `q <= 98`, the
+small branch would inject seven values into `{1,...,6}`, contradiction.  Hence
+the reduced modulus divides every stalk speed; for coprime `p,q`, `q` itself
+divides all seven.  The published `q=99,d=98` family proves this cutoff sharp
+for the naked cardinality argument.
+
+Tournament audit: the faithful carrier is the connected zero-color component
+plus its primitive rational label.  Switching only the runner graph erases the
+label and resonance equation, so no orientation tournament is used; the tie
+Hamiltonian path is a spanning zero-color path.  Alternate vertices considered
+were runners, zero edges, rooted faces, primitive labels, and proof obligations.
+Rooted faces retain reuse multiplicity but not the common parameter; the chosen
+labelled component retains exactly the predicate needed by the fork.
+
+This closes the finite-modulus aligned window, not LRC14.  The honest remaining
+sockets are adaptive access to `q <= 98` (or control of the explicit large-q
+small-speed branch), the summed gcd budget, colored payment against `462/210`,
+the depth-six/seven residue, and a strict adaptive live floor.
+
+---
 ## death-star-2026-07-17-S51 -- THM-972 THE RELATION LOCK BY COEFFICIENT WEIGHT (Lean kernel-pure x6): witnesses inherit EVERY vanishing integer relation of the speeds with sum|alpha| <= 14 -- the master principle under the whole S46-S50 lock series; sum-triples {a,b,a+b} lock ALWAYS (weight 3, even with sparse pairs); the pair boundary corrects to weight 14 ((1,13),(3,11),(5,9) have EMPTY branches); the mediant chain (g i', g j', g(i'+j')) collapses to the 14(i'+j') narrow band with count 2*floor((q-1)/(14(i'+j'))) -- THE TRIPLE LAYER'S FIRST EXACT RUNG
 
 Prompt (owner): work the next steps, think projective 6-cycle and triangular prisms.

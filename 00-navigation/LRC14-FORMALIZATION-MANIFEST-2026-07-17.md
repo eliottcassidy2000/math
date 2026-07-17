@@ -563,6 +563,18 @@ selected-root/top-window coverage lemma, a usable bound for this summed gcd
 budget, a colored payment inequality against the reuse factors, the depth-
 six/seven payment, and the adaptive live floor.
 
+`LRCZeroColorStalkFork` now removes the sharp-window socket completely on the
+first finite modulus range.  Applying the primitive-parameter fork at every
+vertex of a seven-stalk, the nonresonant branch would put seven distinct
+positive reduced magnitudes in `{1,...,6}` whenever `q <= 98`; a kernel-checked
+pigeonhole rules this out.  Thus every connected all-bad zero-color seven-stalk
+at `q <= 98` is exactly resonant, and for coprime `p,q` the modulus divides all
+seven speeds.  The example at `q=99` shows that `98` is the sharp uniform cutoff
+for this cardinality argument.  The adaptive-modulus supplier must therefore
+either choose inside this finite range or retain the explicit large-modulus
+small-reduced-speed branch; colored `462/210` payment and depth-six/seven debt
+remain separate.
+
 `LRCB5CertificateAudit` also proves that the older abstract
 `B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its
 unrealized mass fields can always be manufactured.  It remains only as a
