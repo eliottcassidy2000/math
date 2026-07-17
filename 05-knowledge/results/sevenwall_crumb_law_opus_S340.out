@@ -1,0 +1,13 @@
+THE 7-WALL CRUMB LAW (exact, fee-scale windows):
+  300 windows at L = 3/(2V): dead (fully covered) = 1, live = 299  (100% live)
+  rescuing-pair gcd distribution: {3: 17, 1: 174, 2: 43, '5+': 57, 4: 7}
+  rescuing-pair adjacency: {'non-adj': 188, 'adjacent': 110}
+  rescuing-pair ratio: median 1.56, p90 3.44
+
+  scan: dead-window FRACTION per block (how much of the circle is dead
+  at fee scale -- the window-choice freedom upstream must beat this):
+  25 blocks x 140 positions: dead fraction median 0.01, max 0.07, min 0.00
+
+  -> if max dead-fraction < 1: window choice ALWAYS exists at fee
+     scale; the 7-wall crumb is a POSITIONAL pigeonhole, not a
+     per-window analytic bound.

@@ -1403,3 +1403,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `block_reduction_G0_opus_S339.out` | [STORED] | THM-959 corrected prescribed block-tower reduction: uniform worst ratio is 1, corrected G0(6,6)=2198, 60/60 tower referees, and exact floor transfer; no claim that the complement is one seven-block. | (self) |
 | `lrc13_scale_six_hamming_six_common_sheet_codex_S62.out` | [STORED] | THM-960 literal 37,710,288-context scale-six common-sheet exhaustion: zero covers; unit-free relaxation leaves 64 all-order-six supports. | (self) |
 | `lrc13_scale_six_hamming_six_structure_codex_S62.out` | [STORED] | THM-960 independent affine-flat audit: recurring 64 signed cycles, octahedral owner nerve, 16 zero-owner and 48 two-owner unit words, no triple intersection, full tournament telemetry. | (self) |
+| `block_reduction_G0_opus_S339.out` | [STORED] | THM-956: proven G0 junction table + entry-length law + 60/60 tower verification + floor transfer. | (self) |
+| `sevenwall_crumb_law_opus_S340.out` | [STORED] | HYP-7230: 7-wall crumb law -- 299/300 live windows; dead fraction max 7%; rescuing pair = close pair (median ratio 1.56 = 13^(1/6)). | (self) |
