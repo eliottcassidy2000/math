@@ -27,12 +27,62 @@ def supportPairs (support : Finset (Fin 13)) : Finset (Finset (Fin 13)) :=
 def PairUnique (supports : Finset (Finset (Fin 13))) : Prop :=
   (supports : Set (Finset (Fin 13))).PairwiseDisjoint supportPairs
 
+/-- The supports owning a fixed unordered index pair. -/
+def pairOwners (supports : Finset (Finset (Fin 13))) (pair : Finset (Fin 13)) :
+    Finset (Finset (Fin 13)) :=
+  supports.filter fun support => pair ∈ supportPairs support
+
 theorem supportPairs_subset_univPairs (support : Finset (Fin 13)) :
     supportPairs support ⊆ (Finset.univ : Finset (Fin 13)).powersetCard 2 := by
   intro pair hpair
   have hcard : pair.card = 2 := (Finset.mem_powersetCard.mp
     (show pair ∈ support.powersetCard 2 from hpair)).2
   exact Finset.mem_powersetCard.mpr ⟨Finset.subset_univ pair, hcard⟩
+
+/-- Exact double counting: total pair load across supports equals total owner
+multiplicity across the `78` unordered runner pairs. -/
+theorem pair_load_eq_sum_owners (supports : Finset (Finset (Fin 13))) :
+    ∑ support ∈ supports, (support.card.choose 2) =
+      ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+        (pairOwners supports pair).card := by
+  calc
+    ∑ support ∈ supports, (support.card.choose 2) =
+        ∑ support ∈ supports,
+          ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+            if pair ∈ supportPairs support then 1 else 0 := by
+      apply Finset.sum_congr rfl
+      intro support _hsupport
+      calc
+        support.card.choose 2 = (supportPairs support).card := by
+          simp [supportPairs]
+        _ = ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+              if pair ∈ supportPairs support then 1 else 0 :=
+          Finset.card_eq_sum_ite (supportPairs_subset_univPairs support)
+    _ = ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+          ∑ support ∈ supports, if pair ∈ supportPairs support then 1 else 0 := by
+      rw [Finset.sum_comm]
+    _ = ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+          (pairOwners supports pair).card := by
+      apply Finset.sum_congr rfl
+      intro pair _hpair
+      simp [pairOwners]
+
+/-- If every unordered pair has at most `multiplicity` owners, total relation
+pair load is at most `78 * multiplicity`. -/
+theorem pair_load_le_78_mul (supports : Finset (Finset (Fin 13)))
+    (multiplicity : ℕ)
+    (howners : ∀ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+      (pairOwners supports pair).card ≤ multiplicity) :
+    ∑ support ∈ supports, (support.card.choose 2) ≤ 78 * multiplicity := by
+  rw [pair_load_eq_sum_owners]
+  calc
+    ∑ pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+        (pairOwners supports pair).card ≤
+        ∑ _pair ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
+          multiplicity := by
+      exact Finset.sum_le_sum fun pair hpair => howners pair hpair
+    _ = 78 * multiplicity := by
+      norm_num [Finset.card_powersetCard, Nat.choose]
 
 theorem pair_load_le_78 (supports : Finset (Finset (Fin 13)))
     (hunique : PairUnique supports) :
@@ -103,13 +153,37 @@ theorem not_pairUnique_of_26_lt_card (supports : Finset (Finset (Fin 13)))
   intro hunique
   exact (Nat.not_lt_of_ge (card_le_26_of_three_le supports hunique hsize)) hmany
 
+/-- Failure of pair uniqueness is an explicit parallel-class collision: two
+distinct supports own the same unordered index pair. -/
+theorem exists_shared_pair_of_not_pairUnique (supports : Finset (Finset (Fin 13)))
+    (hcollision : ¬ PairUnique supports) :
+    ∃ first ∈ supports, ∃ second ∈ supports, first ≠ second ∧
+      ∃ pair, pair ∈ supportPairs first ∧ pair ∈ supportPairs second := by
+  simp only [PairUnique, Set.PairwiseDisjoint, Set.Pairwise, Function.onFun,
+    not_forall] at hcollision
+  obtain ⟨first, hfirst, second, hsecond, hne, hnotDisjoint⟩ := hcollision
+  obtain ⟨pair, hpairFirst, hpairSecond⟩ :=
+    Finset.not_disjoint_iff.mp hnotDisjoint
+  exact ⟨first, hfirst, second, hsecond, hne, pair, hpairFirst, hpairSecond⟩
+
+/-- The support-`≥3` collision alternative in witness form. -/
+theorem exists_shared_pair_of_26_lt_card (supports : Finset (Finset (Fin 13)))
+    (hsize : ∀ support ∈ supports, 3 ≤ support.card) (hmany : 26 < supports.card) :
+    ∃ first ∈ supports, ∃ second ∈ supports, first ≠ second ∧
+      ∃ pair, pair ∈ supportPairs first ∧ pair ∈ supportPairs second :=
+  exists_shared_pair_of_not_pairUnique supports
+    (not_pairUnique_of_26_lt_card supports hsize hmany)
+
 /-! ## Axiom audit -/
 
 #print axioms pair_load_le_78
+#print axioms pair_load_eq_sum_owners
+#print axioms pair_load_le_78_mul
 #print axioms card_le_26_of_three_le
 #print axioms card_le_13_of_four_le
 #print axioms card_le_7_of_five_le
 #print axioms not_pairUnique_of_26_lt_card
+#print axioms exists_shared_pair_of_26_lt_card
 
 end LRCZarankiewiczGuardrail
 end LonelyRunner
