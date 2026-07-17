@@ -325,5 +325,195 @@ theorem lrc14_of_quadCore (cite : LRCUpTo13) (hquad : QuadCoreObligation) :
 #print axioms lonely_or_quadCore
 #print axioms lrc14_of_quadCore
 
+
+/-- **The closed lifted core**: every disjunct an explicit fee failure — the interior
+triple fee (`j ≤ 9`), the top-triple fee at `ε = 0` (`j = 10`), or the top-pair fee
+at `ε = 0` (`j = 11`).  No deferred corners. -/
+def QuadDenseCoreClosed (w : Fin 13 → ℤ) : Prop :=
+  ∃ j : Fin 12,
+    w j.succ < 3 * w j.castSucc ∧
+    (∀ k : Fin 12, j < k → 3 * w k.castSucc ≤ w k.succ) ∧
+    (∀ k : Fin 12, j ≤ k →
+      2 * (12 - ((k : ℕ) : ℤ)) * w k.succ < 21 * (((k : ℕ) : ℤ) + 2) * w k.castSucc) ∧
+    (((∃ h2 : (j : ℕ) + 2 < 13, w ⟨(j : ℕ) + 2, h2⟩ < 21 * w j.succ) ∨
+      (∃ _h1 : 1 ≤ (j : ℕ),
+        (13 - ((j : ℕ) : ℤ)) * w j.castSucc
+          < 13 * (((j : ℕ) : ℤ) + 1) * w ⟨(j : ℕ) - 1, by omega⟩))) ∧
+    ((∃ h3 : (j : ℕ) + 3 < 13,
+        ¬ ((([w j.castSucc, w j.succ, w ⟨(j : ℕ) + 2, by omega⟩].map fun (u : ℤ) =>
+            (2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * ((if (j : ℕ) = 0 then 1 else w ⟨(j : ℕ) - 1, by omega⟩) : ℤ) : ℝ))) / 7
+              + 3 / (7 * (u : ℝ))
+              + (3 / (2 * (w ⟨(j : ℕ) + 3, h3⟩ : ℝ)))
+                * ((u : ℝ) * (2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+                  * ((if (j : ℕ) = 0 then 1 else w ⟨(j : ℕ) - 1, by omega⟩) : ℤ) : ℝ))) + 3))).sum
+          < 2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * ((if (j : ℕ) = 0 then 1 else w ⟨(j : ℕ) - 1, by omega⟩) : ℤ) : ℝ))
+            - 3 / (2 * (w ⟨(j : ℕ) + 3, h3⟩ : ℝ)))) ∨
+     ((j : ℕ) = 10 ∧ ∃ _h1 : 1 ≤ (j : ℕ),
+        ¬ ((([w j.castSucc, w j.succ, w ⟨12, by omega⟩].map fun (u : ℤ) =>
+            (2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * (w ⟨(j : ℕ) - 1, by omega⟩ : ℝ)))) / 7 + 3 / (7 * (u : ℝ)))).sum
+          < 2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * (w ⟨(j : ℕ) - 1, by omega⟩ : ℝ))))) ∨
+     ((j : ℕ) = 11 ∧ ∃ _h1 : 1 ≤ (j : ℕ),
+        ¬ ((([w j.castSucc, w j.succ].map fun (u : ℤ) =>
+            (2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * (w ⟨(j : ℕ) - 1, by omega⟩ : ℝ)))) / 7 + 3 / (7 * (u : ℝ)))).sum
+          < 2 * (((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1)
+              * (w ⟨(j : ℕ) - 1, by omega⟩ : ℝ))))))
+
+/-- **THE CLOSED DICHOTOMY**: the `j ≥ 10` corner discharged by the `ε = 0`,
+empty-tail instance of the generic block split. -/
+theorem lonely_or_quadCoreClosed (cite : LRCUpTo13) (w : Fin 13 → ℤ)
+    (hpos : ∀ i, 0 < w i) (hmono : Monotone w) :
+    (∃ t : ℝ, Lonely 14 w t) ∨ QuadDenseCoreClosed w := by
+  rcases lonely_or_quadCore cite w hpos hmono with hlonely | hcore
+  · exact Or.inl hlonely
+  obtain ⟨j, hjbad, hladder, hfee, hobstruct, hlast⟩ := hcore
+  rcases hlast with hj10 | hint
+  swap
+  · exact Or.inr ⟨j, hjbad, hladder, hfee, hobstruct, Or.inl hint⟩
+  · have hj1 : 1 ≤ (j : ℕ) := by omega
+    have hj12 : (j : ℕ) < 12 := j.isLt
+    set B : ℤ := w ⟨(j : ℕ) - 1, by omega⟩ with hBdef
+    have hB : 0 < B := hpos _
+    have hBR : (0 : ℝ) < (B : ℝ) := by exact_mod_cast hB
+    set δ : ℝ := ((13 : ℝ) - (j : ℕ)) / (14 * (((j : ℕ) : ℝ) + 1) * (B : ℝ)) with hδdef
+    have hcited : ∀ i : Fin 13, (i : ℕ) < (j : ℕ) → |w i| ≤ B := fun i hi => by
+      rw [abs_of_pos (hpos i)]
+      exact hmono (by show (i : ℕ) ≤ (j : ℕ) - 1; omega)
+    by_cases hjeq : (j : ℕ) = 10
+    · set ws : List ℤ := [w j.castSucc, w j.succ, w ⟨12, by omega⟩] with hws
+      by_cases hfee0 : ((ws.map fun (u : ℤ) =>
+          (2 * δ) / 7 + 3 / (7 * (u : ℝ)))).sum < 2 * δ
+      · left
+        apply lonely_of_block_split cite w (fun i => (hpos i).ne') (j : ℕ)
+          (by omega) B hB hcited ws
+          (by
+            intro u hu
+            rcases List.mem_cons.mp hu with rfl | hu
+            · exact hpos _
+            rcases List.mem_cons.mp hu with rfl | hu
+            · exact hpos _
+            rcases List.mem_singleton.mp hu with rfl
+            exact hpos _)
+          [] (by intro u hu; exact absurd hu (List.not_mem_nil))
+          0 le_rfl
+          ?_ ?_ trivial
+        · intro i
+          rcases lt_trichotomy ((i : ℕ)) ((j : ℕ)) with hlt | heq | hgt
+          · exact Or.inl hlt
+          · refine Or.inr (Or.inl ?_)
+            have hieq : i = j.castSucc := Fin.ext heq
+            rw [hieq, abs_of_pos (hpos j.castSucc)]
+            exact List.mem_cons_self ..
+          · rcases Nat.eq_or_lt_of_le hgt with heq1 | hgt1
+            · refine Or.inr (Or.inl ?_)
+              have hieq : i = j.succ := Fin.ext (by show (i : ℕ) = (j : ℕ) + 1; omega)
+              rw [hieq, abs_of_pos (hpos j.succ)]
+              exact List.mem_cons_of_mem _ (List.mem_cons_self ..)
+            · refine Or.inr (Or.inl ?_)
+              have hi12 : (i : ℕ) = 12 := by have := i.isLt; omega
+              have hieq : i = ⟨12, by omega⟩ := Fin.ext hi12
+              rw [hieq, abs_of_pos (hpos ⟨12, by omega⟩)]
+              exact List.mem_cons_of_mem _
+                (List.mem_cons_of_mem _ (List.mem_singleton.mpr rfl))
+        · have hmap : (ws.map fun (u : ℤ) =>
+              (2 * δ) / 7 + 3 / (7 * (u : ℝ))
+                + (0 : ℝ) * ((u : ℝ) * (2 * δ) + 3))
+              = ws.map fun (u : ℤ) => (2 * δ) / 7 + 3 / (7 * (u : ℝ)) := by
+            apply List.map_congr_left
+            intro u _
+            ring
+          rw [hmap]
+          simpa using hfee0
+      · right
+        refine ⟨j, hjbad, hladder, hfee, hobstruct,
+          Or.inr (Or.inl ⟨hjeq, hj1, ?_⟩)⟩
+        rw [hws] at hfee0
+        exact hfee0
+    · have hjeq11 : (j : ℕ) = 11 := by omega
+      set ws : List ℤ := [w j.castSucc, w j.succ] with hws
+      by_cases hfee0 : ((ws.map fun (u : ℤ) =>
+          (2 * δ) / 7 + 3 / (7 * (u : ℝ)))).sum < 2 * δ
+      · left
+        apply lonely_of_block_split cite w (fun i => (hpos i).ne') (j : ℕ)
+          (by omega) B hB hcited ws
+          (by
+            intro u hu
+            rcases List.mem_cons.mp hu with rfl | hu
+            · exact hpos _
+            rcases List.mem_singleton.mp hu with rfl
+            exact hpos _)
+          [] (by intro u hu; exact absurd hu (List.not_mem_nil))
+          0 le_rfl
+          ?_ ?_ trivial
+        · intro i
+          rcases lt_trichotomy ((i : ℕ)) ((j : ℕ)) with hlt | heq | hgt
+          · exact Or.inl hlt
+          · refine Or.inr (Or.inl ?_)
+            have hieq : i = j.castSucc := Fin.ext heq
+            rw [hieq, abs_of_pos (hpos j.castSucc)]
+            exact List.mem_cons_self ..
+          · refine Or.inr (Or.inl ?_)
+            have hi12 : (i : ℕ) = (j : ℕ) + 1 := by have := i.isLt; omega
+            have hieq : i = j.succ := Fin.ext hi12
+            rw [hieq, abs_of_pos (hpos j.succ)]
+            exact List.mem_cons_of_mem _ (List.mem_singleton.mpr rfl)
+        · have hmap : (ws.map fun (u : ℤ) =>
+              (2 * δ) / 7 + 3 / (7 * (u : ℝ))
+                + (0 : ℝ) * ((u : ℝ) * (2 * δ) + 3))
+              = ws.map fun (u : ℤ) => (2 * δ) / 7 + 3 / (7 * (u : ℝ)) := by
+            apply List.map_congr_left
+            intro u _
+            ring
+          rw [hmap]
+          simpa using hfee0
+      · right
+        refine ⟨j, hjbad, hladder, hfee, hobstruct,
+          Or.inr (Or.inr ⟨hjeq11, hj1, ?_⟩)⟩
+        rw [hws] at hfee0
+        exact hfee0
+
+/-- **The closed quad-core obligation**. -/
+def QuadCoreClosedObligation : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+    LRC14.CoveringFamily v →
+    GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+      (Finset.univ.image k).card ≤ 12) →
+    (∀ d : ℤ, 2 ≤ d → ∀ a : ℤ, (∀ i, d ∣ (v i - a)) → d ∣ a) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      QuadDenseCoreClosed (fun i => |v (σ i)|)) →
+    ∃ t : ℝ, Lonely 14 v t
+
+theorem residualObligation_of_quadCoreClosed (cite : LRCUpTo13)
+    (hquad : QuadCoreClosedObligation) : ResidualObligation := by
+  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse hcres
+  set va : Fin 13 → ℤ := fun i => |v i| with hva
+  have hva_pos : ∀ i, 0 < va i := fun i => abs_pos.mpr (hv i)
+  set σ : Equiv.Perm (Fin 13) := Tuple.sort va with hσ
+  set w : Fin 13 → ℤ := va ∘ σ with hw
+  have hw_mono : Monotone w := Tuple.monotone_sort va
+  have hw_pos : ∀ i, 0 < w i := fun i => hva_pos (σ i)
+  rcases lonely_or_quadCoreClosed cite w hw_pos hw_mono with ⟨t, ht⟩ | hcore
+  · refine ⟨t, (LRC14.lonely_abs_iff 14 v t).mp ?_⟩
+    exact (LRC14.lonely_comp_equiv 14 va t σ).mp ht
+  · exact hquad v hv hcov hgap hcomp hdist hlarge hdiv hcoarse hcres
+      ⟨σ, hw_mono, hcore⟩
+
+theorem lrc14_of_quadCoreClosed (cite : LRCUpTo13)
+    (hquad : QuadCoreClosedObligation) : LRC14.LRC14Statement :=
+  lrc14_grand_assembly cite (residualObligation_of_quadCoreClosed cite hquad)
+
+#print axioms lonely_or_quadCoreClosed
+#print axioms lrc14_of_quadCoreClosed
+
 end LRC14Grand
 end LonelyRunner

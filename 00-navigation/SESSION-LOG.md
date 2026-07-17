@@ -1,3 +1,16 @@
+## death-star-2026-07-17-S36 -- THM-942 THE SINGLES RUNG + THE CLOSED CORNER (Lean kernel-pure, standard trio; S33-S36 ladder audit green): the deviation ledger's k=1 term computed EXACTLY (unit bijection; D_i in [-13/7, 0]; CONSTANT -13/7 at 14|q) => the deviation debt lives entirely at |T| >= 2; QuadDenseCore's deferred j>=10 disjunct discharged (eps=0 top blocks) => EVERY dense-core disjunct is now an explicit fee failure
+
+Prompt (owner): prove the trapped-D_T singles rung and close the j>=10 corner, also close any other remaining LRC 14 proof formalization completion tasks you can think of.
+
+(A) THM-942A (LRCDeviationSingles.lean): bandSize_eq (the band = [(q+13)/14, 13q/14], N-division => omega carries everything); jointFail_singleton_eq -- the unit bijection p -> (v_i p) mod q permutes nonzero residues (Bezout inverse constructed directly, no ZMod transfer): N_i = q-1-bandSize EXACT under gcd=1; deviation_singleton_bounds: -13/7 <= D_i <= 0 for ALL q >= 14 (integer sandwich 6q-6 <= 7*bandSize <= 6q+7); deviation_singleton_of_dvd: at 14|q the deviation is the CONSTANT -13/7. Consequence: the k=1 ledger term is in [-169/7, 0] = o(q) -- THE DEVIATION DEBT OF THM-940'S IDENTIFICATION IS CARRIED ENTIRELY BY |T| >= 2; the trapped-D_T obligation starts at pairs.
+
+(B) THM-942B (LRCBlockSplitLift.lean extension): lonely_or_quadCoreClosed -- the j>=10 corner via the eps=0 empty-tail instance of THM-941's generic engine (j=10: top triple; j=11: top pair; fee sum_u [2d/7 + 3/(7u)] < 2d). QuadDenseCoreClosed: every dense-core disjunct an explicit fee failure -- NO DEFERRED CORNERS. Wire: lrc14_of_quadCoreClosed, strictly sharper than THM-941.
+
+(C) SWEEP: S36AxiomAudit.lean -- one audit over the whole S33-S36 arc (lrc14_of_denseCore/tripleCore/quadCore/quadCoreClosed, lrc14_from_four_detuned_and_trapped_B5, the traps, the identification, the singles): every entry [propext, Classical.choice, Quot.sound], zero sorryAx. Referee: singles exact-count/bounds/constant PASS (3000 gcd-filtered (v,q)); corner fees checked honestly (no closures in uniform-random mix -- the fat-mass arithmetic predicts closures only for structurally-heavy top families; the value is closing the LAST non-fee disjunct).
+
+FILES: THM-942, HYP-7173 (confirmed), LRCDeviationSingles.lean, LRCBlockSplitLift.lean (extended), S36AxiomAudit.lean, referee+.out, root imports. NEXT: (i) the PAIR deviations D_{ij} -- the correlation heart (three-distance/continued-fraction structure; the trap forbids the integer-relation-driven part above the dense pair -- the remainder is pure equidistribution); (ii) multi-block chains via the generic engine; (iii) the manifest items (klein 1+2+2/3 of 6 done); (iv) codex: mass_k identification with D_T sums now has the k=1 term pinned. death-star; S36.
+
+---
 ## boxeph-2026-07-17-S59 -- THE OPPOSITE-PRICING SESSION: the negation-pairing lemma EXACT (cross(P-w) = cross(w); census halves) + inversion pairing REFUTED (the tails' w <-> w-bar symmetry stops at the cross) + THE OPPOSITE-PRICING SUM RULE (positive-cross mass priced by negative with the closed-form THM-892 mean as net debit, all clusters) + the universal cap REFUTED (S58's candidate: single-cluster luck; 231 > 99, 331 > 118) -- the frame-law's boundary conditions are now complete
 
 Prompt (owner): another similar session; consider the opposite-pricing law.

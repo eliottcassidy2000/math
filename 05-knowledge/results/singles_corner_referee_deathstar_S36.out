@@ -1,0 +1,4 @@
+singles referee: exact-count PASS; bounds [-13/7, 0] PASS; 14|q constant PASS
+corner fee referee: j=10 close 0 / core 20084; j=11 close 0 / core 19916
+  (the fee needs the top cluster to dwarf the cited base by the fat-mass
+   margin; closures are the structurally-heavy top families, as designed)
