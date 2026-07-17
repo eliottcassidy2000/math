@@ -1,0 +1,2 @@
+subset-expansion referee (40 random (v,q)): PASS (moment=subset=equilibrium+deviation, exact rationals)
+quad-core referee: PASS [singles 0 | pair 0 | triple-block 5 | quad-core 108325] of 108330
