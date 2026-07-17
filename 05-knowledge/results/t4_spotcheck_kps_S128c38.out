@@ -1,0 +1,8 @@
+(307,425,541,671) H=10: T4(box 120) = 1.506e-04  envelope*H/ln^3 = 3.553e-06
+(307,425,541,671) H=30: T4(box 120) = 8.331e-05  envelope*H/ln^3 = 5.896e-06
+(800,944,1413,2147) H=10: T4(box 120) = 5.070e-05  envelope*H/ln^3 = 7.772e-07
+(800,944,1413,2147) H=30: T4(box 120) = 3.778e-05  envelope*H/ln^3 = 1.737e-06
+(541,1087,1943,3310) H=10: T4(box 120) = 2.178e-05  envelope*H/ln^3 = 2.885e-07
+(541,1087,1943,3310) H=30: T4(box 120) = 1.713e-05  envelope*H/ln^3 = 6.807e-07
+scale note: T4 magnitudes vs T3 ~1e-5: support-4 tails are ~100x smaller; weighted |E4|=2/7 x 715 subsets still << budget
+DONE
