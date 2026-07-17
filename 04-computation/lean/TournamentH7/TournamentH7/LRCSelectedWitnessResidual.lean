@@ -45,7 +45,6 @@ theorem not_dvd_of_one_lt_reducedDenominator
     exact Nat.gcd_eq_right_iff_dvd.mpr habs
   have hgabs : (g.natAbs : ℤ) = g := by
     rw [Int.natAbs_of_nonneg (le_of_lt hg)]
-    exact Int.toNat_of_nonneg (le_of_lt hg)
   have hqone : g / (Int.gcd x g : ℤ) = 1 := by
     rw [hgcd, hgabs]
     exact Int.ediv_self (ne_of_gt hg)
@@ -355,6 +354,41 @@ theorem lrc14_from_residualSelectedWitnessSupplies_and_normalizedRelationBudget
         hpairs h22 h244 h333))
     (denseCoreDissociatedB5Supply_of_normalizedRelationBudget hsupply)
 
+/-- Residual-selected capstone with THM-950's unconditional uniform census.
+The pair and phase selectors are needed only on their final residue families,
+while the dense core needs one usable modulus whose live count beats `792`
+times its full depth-at-least-six count. -/
+theorem lrc14_from_residualSelectedWitnessSupplies_and_censusB5
+    (cite : LRCUpTo13)
+    (hpairs : NonterminatingPairTowerSupply)
+    (h22 : ResidualTwoTwoSelectedWitnessSupply)
+    (h244 : ResidualTwoFourFourSelectedWitnessSupply)
+    (h333 : ResidualUniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_residualSelectedWitnessSupplies
+        hpairs h22 h244 h333))
+    (denseCoreDissociatedB5Supply_of_census hsupply)
+
+/-- Sharp residual-selected composition with the exact weighted census.  The
+dense core now pays `choose (bandCount - 1) 5` at each multiplier rather than
+the uniform depth-thirteen envelope. -/
+theorem lrc14_from_residualSelectedWitnessSupplies_and_weightedCensusB5
+    (cite : LRCUpTo13)
+    (hpairs : NonterminatingPairTowerSupply)
+    (h22 : ResidualTwoTwoSelectedWitnessSupply)
+    (h244 : ResidualTwoFourFourSelectedWitnessSupply)
+    (h333 : ResidualUniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreWeightedCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_residualSelectedWitnessSupplies
+        hpairs h22 h244 h333))
+    (denseCoreDissociatedB5Supply_of_weightedCensus hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms residualSelectedWitnessSupplies_of_selectedWitnessSupplies
@@ -367,6 +401,8 @@ theorem lrc14_from_residualSelectedWitnessSupplies_and_normalizedRelationBudget
 #print axioms lrc14_from_residualSelectedWitnessSupplies_and_relationBudget
 #print axioms lrc14_from_residualSelectedWitnessSupplies_and_deviationBudget
 #print axioms lrc14_from_residualSelectedWitnessSupplies_and_normalizedRelationBudget
+#print axioms lrc14_from_residualSelectedWitnessSupplies_and_censusB5
+#print axioms lrc14_from_residualSelectedWitnessSupplies_and_weightedCensusB5
 
 end
 end LRC14Grand

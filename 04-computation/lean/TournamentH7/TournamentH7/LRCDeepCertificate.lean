@@ -64,6 +64,23 @@ theorem lonely_of_census_capped5 (v : Fin 13 → ℤ) (q : ℕ) (hq : 0 < q)
     exact_mod_cast hlive
   exact lonely_of_Mreach_ge v hv (mreach_ge_of_B5_pos v q hq hpos)
 
+/-- **The unconditional weighted census pipeline.**  No coverage cap is
+needed: THM-950 charges every multiplier of depth at least six at the sharp
+universal pointwise cost `792`.  Thus one finite, decidable live/deep race
+already produces an actual lonely time. -/
+theorem lonely_of_weighted_census (v : Fin 13 → ℤ) (q : ℕ) (hq : 0 < q)
+    (hv : ∀ i, v i ≠ 0)
+    (hrace : 792 * ((Finset.Ioo 0 q).filter
+      (fun p => 6 ≤ bandCount v q p)).card < liveCount v q) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hraceZ :
+      792 * (((Finset.Ioo 0 q).filter
+        (fun p => 6 ≤ bandCount v q p)).card : ℤ) <
+        (liveCount v q : ℤ) := by
+    exact_mod_cast hrace
+  exact lonely_of_Mreach_ge v hv
+    (mreach_ge_of_B5_pos v q hq (B5_pos_of_live_beats_deep v q hraceZ))
+
 /-- **The demo**: the arithmetic family `v_i = i + 2` is certified lonely
 END-TO-END through the census funnel at `q = 31` — cap and census both by
 `decide`; the first loneliness proof in the corpus produced by the B5 pipeline
@@ -81,6 +98,7 @@ theorem census_demo :
 /-! ## Axiom audit -/
 #print axioms lonely_of_census
 #print axioms lonely_of_census_capped5
+#print axioms lonely_of_weighted_census
 #print axioms census_demo
 
 end LRC14Concrete

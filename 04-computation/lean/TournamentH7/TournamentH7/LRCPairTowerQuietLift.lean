@@ -50,7 +50,7 @@ private theorem gcd_eight_eq_one_of_not_two_dvd (a : ℤ)
     exact_mod_cast hdiv
   have hcop := Nat.prime_two.coprime_pow_of_not_dvd (m := 3) haNat
   rw [Nat.coprime_iff_gcd_eq_one] at hcop
-  simpa [Int.gcd] using hcop
+  simpa [Int.gcd_def] using hcop
 
 private theorem gcd_sixteen_eq_one_of_not_two_dvd (a : ℤ)
     (ha : ¬ (2 : ℤ) ∣ a) :
@@ -61,7 +61,7 @@ private theorem gcd_sixteen_eq_one_of_not_two_dvd (a : ℤ)
     exact_mod_cast hdiv
   have hcop := Nat.prime_two.coprime_pow_of_not_dvd (m := 4) haNat
   rw [Nat.coprime_iff_gcd_eq_one] at hcop
-  simpa [Int.gcd] using hcop
+  simpa [Int.gcd_def] using hcop
 
 /-! ## Extraction of the genuine quiet leaf -/
 
@@ -251,11 +251,55 @@ theorem lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_devi
     cite (manyLiftFailurePairTowerSupply_of_beyondQuietLift cite hremaining)
     h22 h244 h333 hsupply
 
+/-- THM-951-facing capstone with the genuine quiet two-row leaf removed from
+the pair hypothesis and the cap-free live-versus-all-deep census as the
+dense-core socket.  This keeps the two reductions independent: the quiet-lift
+argument deletes a concrete valuation leaf, while the census adapter removes
+the former signed-deviation interface. -/
+theorem lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_censusB5
+    (cite : LRCUpTo13)
+    (hremaining : ManyLiftFailureBeyondQuietLiftSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_censusB5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+        (nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour
+          (manyLiftFailurePairTowerSupply_of_beyondQuietLift cite hremaining)
+          h244)
+        h22 h244 h333))
+    hsupply
+
+/-- Sharpest quiet-lift capstone: after deleting the proved valuation leaf,
+the dense core is charged by its exact depth-sensitive B5 debt rather than
+`792` times every depth-at-least-six multiplier. -/
+theorem lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_weightedCensusB5
+    (cite : LRCUpTo13)
+    (hremaining : ManyLiftFailureBeyondQuietLiftSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreWeightedCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_weightedCensusB5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+        (nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour
+          (manyLiftFailurePairTowerSupply_of_beyondQuietLift cite hremaining)
+          h244)
+        h22 h244 h333))
+    hsupply
+
 /-! ## Axiom audit -/
 
 #print axioms lonely14_of_pairTower_quietLift
 #print axioms manyLiftFailurePairTowerSupply_of_beyondQuietLift
 #print axioms lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_deviationBudget
+#print axioms lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_censusB5
+#print axioms lrc14_from_pairTowerBeyondQuietLift_and_selectedWitnessSupplies_and_weightedCensusB5
 
 end
 end LRC14Grand

@@ -44,13 +44,21 @@ B5 = Σ(−1)^d S_d                                    [THM-671 discrete Bonferr
        moment certificates: gap 328× → 1.077× capped     [THM-945]
        MOMENT WALL: moments alone can never finish        [THM-945, legal witness]
   = liveCount − #{bandCount = 6}   on cap-6 strata   [THM-945 exact identity]
+  = liveCount − Σ_p C(bandCount(p)−1,5)             [exact weighted identity]
   ≥ liveCount − 792·#{bandCount ≥ 6}  UNCONDITIONALLY [THM-950 census criterion]
 ```
 
-**The census pipeline (S43)**: `CoverageCapped` decidable + `lonely_of_census`:
-cap + live > deep by `decide` ⟹ B5 > 0 ⟹ Mreach ≥ 1/14 ⟹ Lonely — end-to-end
-machine certificates with no witness search (`census_demo`: the first loneliness
-proof in the corpus produced by the funnel).
+The pointwise costs at depths `6,...,13` are exactly
+`1,6,21,56,126,252,462,792`; thus `792` is sharp at depth thirteen but
+coarse for every shallower event.  `LRCWeightedDeepCensus` proves that the
+exact weighted race is equivalent to `B5 > 0`, while THM-950 is its uniform
+corollary.  Neither identity supplies a modulus or a live-count floor.
+
+**The census pipeline (S43)**: `CoverageCapped` decidable + `lonely_of_census`,
+and now the uncapped exact weighted consumer:
+cap + live > depth-six, or weighted cost < live, by `decide` ⟹ B5 > 0 ⟹
+Mreach ≥ 1/14 ⟹ Lonely.  These are end-to-end certificates for a supplied
+tuple and modulus, not a universal `DenseCoreCensusB5Supply`.
 
 ## The killer/witness arc (all LEAN)
 
@@ -59,7 +67,67 @@ arcs at rationals; 7-overlap = 21 integer constraints) → q-window + witness-la
 rigidity (THM-949: witnesses ∈ [1,v]; n_j ≥ 3n_i on [3,13] — the residual's own
 ratio window; 7-chains force n_top ≥ 729) → pinned-p counting (THM-950: one bad p
 per witness at q ≤ 7v; deep sets = finite checks) → codex S48: overlapDet colors +
-Plücker relations on bad triples (the trap's target shape).
+Plücker relations on bad triples → activity-weighted colored event fibers and
+gcd-spaced fixed-color fibers (the trap's target shape).
+
+## The rooted-seven activity bridge (LEAN ledger; supplier still open)
+
+At depth `c`, rooting at one bad runner produces `C(c−1,6)` seven-stalks and
+the exact B5 debt is `C(c−1,5)`.  Hence
+
+```text
+C(c−1,5) / C(c−1,6) = 6/(c−6),
+C(c−1,5) ≤ 3 C(c−1,6) for 8 ≤ c ≤ 13,
+weightedDeepCost ≤ N6 + 3 N7 + 3 rootedSevenActivity.
+```
+
+Equality in the high-depth inequality occurs only at `c=8`.  The exact
+unpaid combinatorial residue is depth six (one unit, no seven-stalk), depth
+seven (six units versus one possible three-unit colored charge, or one unit
+after the five-unit nonzero-triangle charge), and rank-one/aligned stalks.
+`LRCSevenOverlapActivity` proves the eventwise aligned/colored partition and
+the three-/five-unit *lower* spoke-mass charges.  This is not yet a payment
+theorem: the same edge mass may be reused by several rooted stalks, and no
+global transport upper budget has been proved.
+
+`LRCOverlapColorFibers` supplies the first multiplicity control.  For positive
+pair speeds `a,b`, every determinant is divisible by `gcd(a,b)`, and on
+`q ≤ 7a` each fixed-color multiplier fiber has cardinality at most
+`gcd(a,b)` (at most one for a coprime pair).  What remains is a no-reuse
+aggregation together with witness gluing on zero-color connected stalks and
+separate depth-six/depth-seven handling.  `LRCAlignedResonance` proves the
+arithmetic end of the aligned target: `q ∣ hp` iff
+`q/gcd(h,q) ∣ p`, hence exactly `gcd(h,q)−1` nonzero multipliers resonate;
+it also proves the strict integer-closeness atom that forces `hp=rq` in the
+top window.  What remains is to derive one shared parameter
+`n_i=(v_i/h)r` from the zero colors and glue that local law into a non-reusing
+stalk ledger.  The aligned aggregation is not yet a current supplier theorem.
+
+## Tournament/carrier audit
+
+The static runner tournament is not faithful here.  At fixed `(q,p)`, after
+positive-speed normalization the sign of `overlapDet(i,j)` merely orders the
+witness slopes `n_i/v_i`, so it is transitive modulo zero-color ties: there
+are no directed cycles, SCCs are singleton after tie-breaking, and the
+Hamiltonian path is unique up to orders within tie blocks.  Forgetting
+magnitude destroys the Plücker law, gcd spacing, and multiplier activity.  The
+preferred carrier is the fibered movie of wall events/rooted seven-stalks
+`(p,i,n_i,D_ij)`.
+
+| Carrier | Preserves | Loses if quotienting too early |
+|---|---|---|
+| multiplier–runner incidence hypergraph | live/depth and event multiplicity | determinant colors and repeated color fibers |
+| fibered colored wall event / rooted seven-stalk | phase, witnesses, colors, Plücker, depth, activity | faithful current carrier |
+| relation circuit / oriented matroid | exact coefficients and elimination | multiplier multiplicity unless fibered |
+| pair-tower wall/prefix carrier | wall order and prefix refinement | phase timing in a runner graph |
+| selected-phase safe-cell/branch incidence | existential common branch | intersection geometry in a scalar tournament |
+| Fano/`χ₇` address atlas | compact labels for the 21 edges of `K₇` | metric weights and Heawood-cycle data; needs the full colored graph or a sidecar |
+| translated Kakeya needle / arithmetic stalk | direction, intercept, and repeated wall hits | a direction-only quotient loses phase offset and multiplicity |
+
+The challenged assumption is therefore that tournament vertices must be
+runners.  Multiplier events, wall crossings, rooted stalks, relation circuits,
+and proof obligations are the useful alternate vertex sets; each quotient
+must state which LRC predicate it preserves.
 
 ## The parallel analytic arcs (paper → Lean in progress)
 
@@ -78,6 +146,10 @@ Plücker relations on bad triples (the trap's target shape).
   component budget, and clean-534 discrepancy.  The top `24/12` path caps and
   anchored ratio quotient are LEAN.  The covariance producer is reduced to one
   wrapped-tooth clip identity; the seven finite ratio DAG replays remain.
+- **codex-S57 weighted/colored census**: the exact depth ledger, rooted-seven
+  comparison, fixed-color gcd fibers, and aligned resonance count are LEAN.
+  The remaining step is a multiplicity-aware transport/no-reuse theorem, not
+  another pointwise Plücker estimate.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
   form — the analytic instrument layer; manifest items 11–13 decide-shaped.
 
@@ -121,4 +193,10 @@ Plücker relations on bad triples (the trap's target shape).
    THM-949), (iii) the live floor at the chosen q — the program's nucleus,
    shared with item 1's exhaustion face.
 
-Everything else in the program is either kernel-checked or a named finite task.
+**S57 weighted-census refinement.**  The dense-core socket may now be stated
+as `DenseCoreWeightedCensusB5Supply`, strictly weaker than the old uniform
+`792·deepCount` socket.  Its remaining arithmetic is: prevent reuse of colored
+spoke mass across rooted stalks, glue zero-color witnesses on connected stalks,
+and handle depths six and seven before applying the adaptive-modulus live floor.
+
+No theorem in this picture proves LRC(14) without the named suppliers above.

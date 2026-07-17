@@ -3,6 +3,7 @@ import TournamentH7.LRCB5NormalizedBridge
 import TournamentH7.LRCMomentCertificates
 import TournamentH7.LRCArcWire
 import TournamentH7.LRCDeepCount
+import TournamentH7.LRCWeightedDeepCensus
 import TournamentH7.LRCB5DeviationBudget
 
 /-!
@@ -200,6 +201,32 @@ theorem CensusB5Certificate.b5_pos {v : Fin 13 → ℤ}
   LRC14Concrete.B5_pos_of_live_beats_deep
     v certificate.q certificate.live_beats_deep
 
+/-- **Sharp unconditional census certificate.**  This replaces THM-950's
+uniform charge `792` per deep multiplier by the exact depth-sensitive debt
+`choose (bandCount - 1) 5`; the conversion below proves that it is never
+harder to supply than the uniform certificate. -/
+structure WeightedCensusB5Certificate (v : Fin 13 → ℤ) where
+  q : ℕ
+  q_pos : 0 < q
+  weighted_cost_lt_live :
+    LRC14Concrete.weightedDeepCost v q < LRC14Concrete.liveCount v q
+
+/-- The exact weighted census is equivalent to concrete integer `B5`
+positivity, so this adapter loses no information. -/
+theorem WeightedCensusB5Certificate.b5_pos {v : Fin 13 → ℤ}
+    (certificate : WeightedCensusB5Certificate v) :
+    0 < LRC14Concrete.B5 v certificate.q :=
+  (LRC14Concrete.weightedDeepCost_lt_liveCount_iff_B5_pos
+    v certificate.q).mp certificate.weighted_cost_lt_live
+
+/-- Every coarse THM-950 certificate canonically refines to the exact weighted
+one, since both routes already establish the same integer `B5` positivity. -/
+def WeightedCensusB5Certificate.ofCensus {v : Fin 13 → ℤ}
+    (certificate : CensusB5Certificate v) : WeightedCensusB5Certificate v :=
+  ⟨certificate.q, certificate.q_pos,
+    (LRC14Concrete.weightedDeepCost_lt_liveCount_iff_B5_pos
+      v certificate.q).mpr certificate.b5_pos⟩
+
 /-- THM-935 certificate supply only on the primitive, dissociated,
 chain-dense core isolated by the current endgame. -/
 def DenseCoreRelationBudgetSupply : Prop :=
@@ -282,6 +309,37 @@ def DenseCoreCensusB5Supply : Prop :=
       ChainDenseCore (fun i => |v (σ i)|)) →
     Nonempty (CensusB5Certificate v)
 
+/-- Exact weighted-census supply on the primitive dissociated chain-dense
+core.  Compared with `DenseCoreCensusB5Supply`, this is the sharp consumer for
+rooted-seven activity: it asks for the actual depth ledger rather than a
+worst-case `792` envelope. -/
+def DenseCoreWeightedCensusB5Supply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.tupleGcd v = 1 →
+    LRC14.CoveringFamily v → GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13,
+      (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ),
+      (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1 / 13 - 1 / 14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
+    (∀ g : ℤ, 2 ≤ g →
+      nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      ChainDenseCore (fun i => |v (σ i)|)) →
+    Nonempty (WeightedCensusB5Certificate v)
+
+/-- The coarse supplier implies the exact weighted supplier.  Thus replacing
+the former socket by the latter is a genuine weakening of the endgame input. -/
+theorem denseCoreWeightedCensusB5Supply_of_census
+    (hsupply : DenseCoreCensusB5Supply) : DenseCoreWeightedCensusB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨WeightedCensusB5Certificate.ofCensus certificate⟩
+
 /- The direct THM-940 alternative on the same primitive, dissociated,
 chain-dense core.  It asks only for the literal signed subset-deviation
 surplus, with no relation-mass identification. -/
@@ -339,6 +397,16 @@ theorem denseCoreDissociatedB5Supply_of_coverageCapped
 dense-core B5 interface. -/
 theorem denseCoreDissociatedB5Supply_of_census
     (hsupply : DenseCoreCensusB5Supply) :
+    DenseCoreDissociatedB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨certificate.q, certificate.q_pos, certificate.b5_pos⟩
+
+/-- The sharp weighted census supplier feeds the same raw positive-`B5`
+interface without the uniform deep-event overcharge. -/
+theorem denseCoreDissociatedB5Supply_of_weightedCensus
+    (hsupply : DenseCoreWeightedCensusB5Supply) :
     DenseCoreDissociatedB5Supply := by
   intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   obtain ⟨certificate⟩ :=
@@ -404,6 +472,16 @@ theorem lrc14_from_twoThree_detuned_and_censusB5
   lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_census hsupply)
 
+/-- **Sharp weighted-census capstone.**  The remaining dense-core mathematics
+is exactly one modulus whose live multipliers beat the true depth-five debt.
+No coverage cap and no uniform `792` charge remain. -/
+theorem lrc14_from_twoThree_detuned_and_weightedCensusB5
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreWeightedCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_weightedCensus hsupply)
+
 /-- Direct THM-940 capstone using the signed subset-deviation surplus. -/
 theorem lrc14_from_twoThree_detuned_and_deviationBudget
     (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
@@ -420,15 +498,20 @@ theorem lrc14_from_twoThree_detuned_and_deviationBudget
 #print axioms CoverageCappedB5Certificate.b5_pos
 #print axioms CoverageCappedB5Certificate.of_noSeven
 #print axioms CensusB5Certificate.b5_pos
+#print axioms WeightedCensusB5Certificate.b5_pos
+#print axioms WeightedCensusB5Certificate.ofCensus
+#print axioms denseCoreWeightedCensusB5Supply_of_census
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget
 #print axioms denseCoreDissociatedB5Supply_of_coverageCapped
 #print axioms denseCoreDissociatedB5Supply_of_census
+#print axioms denseCoreDissociatedB5Supply_of_weightedCensus
 #print axioms lrc14_from_four_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_normalizedRelationBudget
 #print axioms lrc14_from_twoThree_detuned_and_coverageCappedB5
 #print axioms lrc14_from_twoThree_detuned_and_censusB5
+#print axioms lrc14_from_twoThree_detuned_and_weightedCensusB5
 #print axioms B5DeviationBudgetCertificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_deviationBudget
 #print axioms lrc14_from_twoThree_detuned_and_deviationBudget

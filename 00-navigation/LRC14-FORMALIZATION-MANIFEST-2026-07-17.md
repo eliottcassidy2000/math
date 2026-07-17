@@ -438,6 +438,73 @@ THM-950 removes the cap assumption from a second concrete route:
 off the endgame composition step; the remaining mathematics is exactly the
 weighted live-versus-deep census at one usable modulus.
 
+`LRCWeightedDeepCensus` now records the sharp identity behind this coarse
+criterion:
+
+```text
+B5(v,q) = liveCount(v,q)
+          - sum_{0<p<q} choose(bandCount(v,q,p)-1, 5).
+```
+
+The exact costs at depths `6,...,13` are
+`1,6,21,56,126,252,462,792`.  Thus `792` is pointwise sharp at depth thirteen,
+but charging it to every depth-at-least-six event discards most of the census
+geometry.  The exact weighted race is equivalent to `B5>0`; this equivalence
+is a consumer, not a supplier, and does not produce a usable modulus or a
+live-count floor.
+
+The same module formalizes the rooted-seven comparison.  A depth-`c` event,
+rooted at one bad runner, contains `choose(c-1,6)` seven-stalks, while its debt
+is `choose(c-1,5)`, with ratio `6/(c-6)`.  Therefore three units per rooted
+stalk cover all debt for `8 <= c <= 13`, sharply at `c=8`, and globally
+
+```text
+weightedDeepCost <= exactDepthCount(6)
+                  + 3*exactDepthCount(7)
+                  + 3*rootedSevenActivity.
+```
+
+The honest residue is consequently depth six (one unit and no seven-stalk),
+depth seven (six units versus one possible three-unit colored charge, improved
+to a one-unit residue when the five-unit nonzero-triangle charge applies), and
+rank-one/aligned stalks.  This is only the exact *shape* of a future payment:
+the present lower spoke-mass bounds can be reused by multiple rooted stalks,
+so a no-reuse incidence or global transport upper bound is still required.
+
+`LRCSevenOverlapActivity` preserves multiplier activity rather than passing to
+a static support graph.  For each fixed ordered triple it partitions bad
+multipliers exactly into zero-base-color aligned events and nonzero colored
+events; colored events contribute at least three units of high-spoke mass,
+nonzero lower triangles contribute at least five, and two unit spokes force
+the aligned side.  These are activity-weighted lower bounds, not a closure of
+`DenseCoreCensusB5Supply`.
+
+`LRCOverlapColorFibers` adds the first arithmetic multiplicity theorem.  For
+positive pair speeds `a,b`, every `overlapDet` color is divisible by
+`gcd(a,b)`.  Equality of two colors places the first witnesses in one residue
+class modulo `a/gcd(a,b)`; on the short window `q <= 7a`, witness uniqueness
+therefore gives
+
+```text
+# {bad multipliers with one fixed pair color} <= gcd(a,b),
+```
+
+and at most one event for coprime pair speeds.  The next theorem must aggregate
+these fixed-color fibers without reusing spoke mass and must route zero-color
+aligned fibers by their gcd resonance, while retaining separate depth-six and
+depth-seven ledgers.  The static Zarankiewicz values for distinct supports do
+not provide this multiplier-fiber control and hence do not improve `792` by
+themselves.
+
+`LRCAlignedResonance` now proves the arithmetic end of the aligned target:
+`q ∣ hp` iff `q/gcd(h,q) ∣ p`, so the resonant nonzero multiplier set has
+exactly `gcd(h,q)-1` members.  It also proves the strict integer-closeness
+atom that turns the scaled top-window estimate into `hp=rq`.  This is not yet
+a supplier theorem.  A proof-facing bridge must still derive and glue the
+shared parameter `n_i=(v_i/h)r` from zero colors on a connected stalk, then
+combine the resulting aligned count with the colored-fiber bound and a
+non-reusing rooted-stalk incidence ledger.
+
 `LRCB5CertificateAudit` also proves that the older abstract
 `B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its
 unrealized mass fields can always be manufactured.  It remains only as a
@@ -454,14 +521,41 @@ S <= 64(1+log(2+Delta))/(A B (1+Delta))
      + 6/(1+A Delta) + 6/(1+B Delta).
 ```
 
-The logarithm is necessary.  This leaves `T3` open at a punctured near-pole
-congruence sum and leaves `T4/T5` open at affine resonance strips and slabs.
-Even conditional tail estimates yield only `small support relation OR B5>0`;
-the structured relation branch is still a separate LRC obligation.  The natural
-quotient here has slice cosets and pole windows as vertices and retains affine
-offsets; a runner tournament destroys those offsets, so the honest higher object
-is an oriented-matroid resonance arrangement unless a preservation theorem for
-an elimination-order tournament is found.
+The logarithm is necessary.  KPS S128c40's later punctured near-pole
+congruence lemma closes `T3`.  The `T4` affine resonance strip, `T5` resonance
+slab, and the structured small-relation branch remain open.  Even conditional tail
+estimates yield only `small support relation OR B5>0`; the relation alternative
+is still a separate LRC obligation.  There is no current universal exhaustion
+or paper-level `DenseCore*Supply` theorem.
+
+The carrier audit explains why the remaining aggregation is delicate.  At a
+fixed `(q,p)`, after positive-speed normalization, orienting runners by the
+sign of `overlapDet(i,j)` only orders the witness slopes `n_i/v_i`.  The
+resulting tournament is transitive modulo zero-color ties: it has no directed
+cycles, singleton SCCs after tie-breaking, and a Hamiltonian path unique up to
+orders inside tie blocks.  Forgetting colors destroys determinant magnitude,
+the exact Plücker relation, gcd spacing, and multiplier activity.  The faithful
+current object is a fibered movie of wall events/rooted seven-stalks carrying
+`(p,i,failWitness_i,overlapDet_ij)`.  Related quotients have distinct losses:
+
+- multiplier–runner incidence preserves live/depth multiplicity but loses
+  colors if projected to a support graph;
+- relation circuits/oriented-matroid data preserve exact coefficients and
+  elimination but lose multiplier multiplicity unless fibered;
+- pair-tower wall/prefix events preserve phase order and partition refinement,
+  which a static runner graph destroys;
+- safe-cell/branch incidence preserves the selected-phase existential
+  intersection, which scalar tournament data destroys;
+- Fano/`χ₇` labels are an address atlas for the 21 edges of `K₇`, not a
+  metric quotient: full colored-edge data or a Heawood-cycle sidecar is needed.
+- translated Kakeya needles/arithmetic stalks preserve direction, phase
+  intercept, and repeated wall hits; retaining only directions loses exactly
+  the offset and multiplicity needed by the census.
+
+Thus tournament vertices need not be runners: multiplier events, wall
+crossings, rooted stalks, relation circuits, and proof obligations are all
+viable carriers, but every proposed quotient must state the LRC predicate it
+preserves and the activity or offset information it destroys.
 
 ## Addendum (boxeph-S65): item 13
 
@@ -560,6 +654,7 @@ other parity class supplies a common good branch.  Thus the local phase
 geometry of every `(2,2,q)` pattern is completely classified.  What remains
 globally is selecting a harmonic-good phase that avoids these named opposition
 events, not solving an unstructured three-row incidence problem.
+
 ## Landed addendum — weighted pair floor and obstruction compatibility (codex-S51–S53)
 
 The continuous support-two debt now has a complete exact finite certificate.
