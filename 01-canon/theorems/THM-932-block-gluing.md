@@ -1,10 +1,11 @@
 ---
 id: THM-932
 title: THE LOCAL-DENSITY BLOCK-GLUING THEOREM — locally-certified blocks compose across scale gaps: μ(∩ W_{B_i}) ≥ m₁·∏η_i − Σ κ(V_{i−1})·ℓ_i with every input exactly computable; the cascade (THM-928A) is the all-singleton case (single-speed local density is EXACT: η_x(k/x) = 1 − 2λ); the LOCALIZATION SCALE of a certificate: the THM-928(C) packet has η_X = 0 below 1/862 but η_X > 0 from ℓ = 1/300 — the uncovered set is spread at the SLOWEST runner's resolution; the reduction corollary: any packet with a big enough scale gap splits into independently certifiable blocks, so the certificate program's remaining hard case is the GAP-FREE bounded-ratio core
-status: lemmas G1/G2/G3 PROVED (proofs in-file) + verified exactly (40+40+12 configs, 0 violations); dilation law exact; composition demos: v1 honest-negative at gaps 18–28 (diagnosed: crude block-κ overcounts 30×), sharp-input v2 at gap 300 — see results block; Lean draft CascadeGluing.lean staged (3 rungs above the proved fragmentation)
+status: lemmas G1/G2/G3 PROVED (proofs in-file) + verified exactly (40+40+12 configs, 0 violations); G1/cascade formalized sorry-free in TournamentH7/CascadeGluing.lean and the full recurrence in TournamentH7/LRCCascadeGluing.lean; dilation law exact; composition demos: v1 honest-negative at gaps 18–28 (diagnosed: crude block-κ overcounts 30×), sharp-input v2 at gap 300 — see results block
 source: opus-2026-07-16-S333 (owner: prove the local-density block-gluing theorem; aim to close LRC(14) mathematics then formalization)
 depends_on: [THM-928 (the two-scale certificate this composes), THM-883/FragmentationLemma.lean (the proved Lean rung below the cascade step)]
-scripts: 04-computation/block_gluing_opus_S333.py, block_gluing2_opus_S333.py → 05-knowledge/results/*.out; 04-computation/lean-drafts/CascadeGluing.lean
+scripts: 04-computation/block_gluing_opus_S333.py, block_gluing2_opus_S333.py → 05-knowledge/results/*.out
+formalization: 04-computation/lean/TournamentH7/TournamentH7/CascadeGluing.lean; 04-computation/lean/TournamentH7/TournamentH7/LRCCascadeGluing.lean
 ---
 
 # THM-932 — the local-density block-gluing theorem
@@ -103,13 +104,25 @@ RESULTS:
 >
 > three-block 5+4+4 at junction gaps 104.4/46.0: bound +0.024575 (COERCIVE); exact mu(V3) = 0.114998, holds True, nonempty True
 
-## Formalization (the Lean rung)
+## Formalization (closed)
 
-`04-computation/lean-drafts/CascadeGluing.lean` (this session): three
-statements above the PROVED `fragmentation`
-(TournamentH7/FragmentationLemma.lean, sorry-free):
-`cascade_step` (a one-step corollary of fragmentation — THM-928(A)'s L1
-in complement form), `window_floor_sample` (G1, single interval, tiling
-proof plan), `union_floor_sample` (G1 full). Draft grade with honest
-sorries + proof plans, in the repo's established draft-then-close
-pipeline (mac-mini → death-star/klein pattern).
+Klein S317's first-pushed `TournamentH7.CascadeGluing` closes the original
+draft sorry-free:
+
+- `cascade_step`: the complement lower bound from the proved fragmentation
+  theorem, including the measurable lifted arc grid and exact ENNReal subtraction;
+- `window_floor_sample`: the full `floor(L/ell)` half-open tiling argument,
+  with endpoint-null conversion back to closed intervals;
+- `union_floor_sample`: G1 over a finite disjoint interval union, discarding
+  short components only after proving their real contributions nonpositive;
+
+The independently developed `TournamentH7.LRCCascadeGluing` was reduced after
+pulling that work and now contributes only the nonduplicate recurrence layer:
+
+- `block_gluing_sharp_closed`: the fully unrolled sharp recurrence with
+  `eta_i*kappa_i*ell_i` losses and suffix density products;
+- `block_gluing_closed`: Opus's published coarser recurrence, derived formally
+  from `0<=eta_i<=1` and nonnegative component losses.
+
+The module has no `sorry` and no `native_decide`; every declaration's axiom
+audit is exactly `[propext, Classical.choice, Quot.sound]`.

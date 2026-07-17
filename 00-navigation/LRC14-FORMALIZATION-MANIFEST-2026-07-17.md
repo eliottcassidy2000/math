@@ -55,3 +55,12 @@ remaining circle/interval layer, so it adds no independent algebraic blocker.
 The remaining geometric rung is concrete: instantiate the primitive identity with circle
 Lebesgue measure, prove extrema/fixed-scale minima exist, and show that deleting one
 concrete circular tooth raises concrete component count by at most one.
+
+## Landed addendum — THM-932 closed recurrence (codex-S22)
+
+The pull exposed Klein S317's first-pushed `TournamentH7.CascadeGluing`, which already
+closes Opus S333's three measure-theoretic draft sorries.  The parallel codex module was
+therefore reduced to genuinely new integration: `TournamentH7.LRCCascadeGluing` derives
+the sharp and coarser closed multi-stage ledgers from G1-shaped one-step bounds by reusing
+THM-933's suffix-debt algebra.  The targeted build is sorry-free and reports only
+`propext`, `Classical.choice`, and `Quot.sound`.
