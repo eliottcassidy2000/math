@@ -9,8 +9,8 @@ elementary: the equilibrium mass is `2052 / 16807`, while exact supports
 `2,3,4,5` enter with signed coefficients `24/343`, `-24/49`, `-2/7`, and
 `-1`.
 
-This module checks the resulting absolute-debt implication and the useful
-budget split at pair horizon `H = 30`.  It intentionally does not assert the
+This module checks both the resulting absolute-debt implication and the sharp
+one-sided budget split at pair horizon `H = 30`.  It intentionally does not assert the
 singular-series identity for the concrete discrete `B5`; that analytic bridge
 remains a separate proof obligation.
 -/
@@ -45,6 +45,11 @@ def relationDebt (mass2 mass3 mass4 mass5 : ℝ) : ℝ :=
 /-- The support-three/four/five portion of the absolute debt. -/
 def higherRelationDebt (mass3 mass4 mass5 : ℝ) : ℝ :=
   tripleWeight * |mass3| + quadWeight * |mass4| + |mass5|
+
+/-- The signed support-three/four/five contribution which actually harms the
+lower bound.  Negative values help the depth-five model and consume no budget. -/
+def harmfulHigherContribution (mass3 mass4 mass5 : ℝ) : ℝ :=
+  tripleWeight * mass3 + quadWeight * mass4 + mass5
 
 theorem equilibrium_pos : 0 < equilibrium := by
   norm_num [equilibrium]
@@ -88,6 +93,40 @@ theorem pair_tail_horizon_thirty_lt_quarter :
     pairWeight * (13 / 30 : ℝ) < equilibrium / 4 := by
   norm_num [pairWeight, equilibrium]
 
+/-- Exact pair-tail expenditure at horizon thirty. -/
+theorem pair_tail_horizon_thirty_eq :
+    pairWeight * (13 / 30 : ℝ) = 52 / 1715 := by
+  norm_num [pairWeight]
+
+/-- Exact higher-support budget remaining after the full proved pair tail. -/
+theorem remaining_after_pair_tail_eq :
+    equilibrium - pairWeight * (13 / 30 : ℝ) = 7712 / 84035 := by
+  norm_num [equilibrium, pairWeight]
+
+/-- The exact remainder is slightly stronger than the convenient
+three-quarter socket. -/
+theorem remaining_after_pair_tail_eq_three_quarters_add_margin :
+    equilibrium - pairWeight * (13 / 30 : ℝ) =
+      3 * equilibrium / 4 + 17 / 84035 := by
+  norm_num [equilibrium, pairWeight]
+
+/-- Sharp one-sided horizon-thirty consumer.  The pair coefficient is positive,
+so only a lower bound on `mass2` is needed; the higher supports enter through
+their signed harmful combination rather than through absolute values. -/
+theorem relationModel_pos_of_signed_horizon_thirty_split
+    (mass2 mass3 mass4 mass5 : ℝ)
+    (hpair : -(13 / 30 : ℝ) ≤ mass2)
+    (hhigher : harmfulHigherContribution mass3 mass4 mass5 < 7712 / 84035) :
+    0 < relationModel mass2 mass3 mass4 mass5 := by
+  have hweight : (0 : ℝ) ≤ pairWeight := weights_nonnegative.1
+  have hpairWeighted : -(52 / 1715 : ℝ) ≤ pairWeight * mass2 := by
+    have := mul_le_mul_of_nonneg_left hpair hweight
+    norm_num [pairWeight] at this ⊢
+    exact this
+  dsimp [relationModel, harmfulHigherContribution, equilibrium, pairWeight,
+    tripleWeight, quadWeight] at hpairWeighted hhigher ⊢
+  linarith
+
 /-- A direct socket for the remaining `T_s(H)`, `s=3,4,5`, estimates: the
 proved pair-tail quarter plus a strict three-quarter higher-support bound
 forces positivity. -/
@@ -100,13 +139,33 @@ theorem relationModel_pos_of_quarter_threeQuarter_split
   rw [relationDebt_eq_pair_add_higher]
   linarith
 
+/-- Strongest direct horizon-thirty consumer: the actual pair estimate leaves
+the exact higher-support allowance `7712/84035`. -/
+theorem relationModel_pos_of_exact_horizon_thirty_split
+    (mass2 mass3 mass4 mass5 : ℝ)
+    (hpair : |mass2| ≤ 13 / 30)
+    (hhigher : higherRelationDebt mass3 mass4 mass5 < 7712 / 84035) :
+    0 < relationModel mass2 mass3 mass4 mass5 := by
+  apply relationModel_pos_of_debt_lt
+  rw [relationDebt_eq_pair_add_higher]
+  have hpairWeighted : pairWeight * |mass2| ≤ 52 / 1715 := by
+    have hweight : (0 : ℝ) ≤ pairWeight := weights_nonnegative.1
+    calc
+      pairWeight * |mass2| ≤ pairWeight * (13 / 30) :=
+        mul_le_mul_of_nonneg_left hpair hweight
+      _ = 52 / 1715 := pair_tail_horizon_thirty_eq
+  norm_num [equilibrium]
+  linarith
+
 /-! ## Axiom audit -/
 
 #print axioms equilibrium_sub_debt_le_model
 #print axioms relationModel_pos_of_debt_lt
 #print axioms equilibrium_le_debt_of_model_nonpos
 #print axioms pair_tail_horizon_thirty_lt_quarter
+#print axioms relationModel_pos_of_signed_horizon_thirty_split
 #print axioms relationModel_pos_of_quarter_threeQuarter_split
+#print axioms relationModel_pos_of_exact_horizon_thirty_split
 
 end
 end LRCB5RelationBudget

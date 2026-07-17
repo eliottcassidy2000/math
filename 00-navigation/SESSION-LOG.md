@@ -73,6 +73,26 @@ proof work continues below this checkpoint.
 
 ---
 
+## codex-2026-07-17-S45 -- EXACT FIRST PAIR SHEET + SHARP SIGNED B5 BUDGET
+
+The pair tower now has an exact first-sheet ledger:
+`nonMultCard(v,2g)=nonMultCard(v,g)+liftFailureCard(v,g)`.  A nongeneric pair
+is `(2,2)`; its old rows become q4, while every new wall crossing becomes q2.
+Consequently exactly one crossing is the already isolated `(2,4,4)` selected-
+witness socket, and the honest pair residual begins at two simultaneous wall
+crossings.  The capstone is restated directly with that supplier.
+
+The H=30 relation budget was sharpened from sign-blind absolute debt to the
+exact one-sided condition: `mass2 >= -13/30` and
+`(24/49)mass3+(2/7)mass4+mass5 < 7712/84035`.  Favorable higher-support signs
+now help rather than being charged.  Common selected-witness infrastructure
+records an important boundary: on a fixed three-row decomposition the selected
+witness is equivalent to the original lonely-runner conclusion, so the three
+suppliers remain genuine phase-selection obligations, not a weakened theorem.
+All targeted Lean audits use only the standard foundational axioms.
+
+---
+
 ## codex-2026-07-17-S38--S41 -- EXACT PARALLEL-CLASS VALUES REDUCE THE DETUNED TRIPLE FRONTIER TO `(2,2,q)`, `(2,4,4)`, AND UNIFORM q3; THM-940 DISCRETE B5 IDENTITY INTEGRATED
 
 Prompt (owner): prove the local-density block-gluing theorem, pull frequently, work the

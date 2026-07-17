@@ -1005,6 +1005,7 @@ def TwoTwoSelectedWitnessSupply : Prop :=
     ∀ i₂a i₂b iₓ : Fin 13,
     i₂a ≠ i₂b → i₂a ≠ iₓ → i₂b ≠ iₓ →
     (∀ j, j ≠ i₂a → j ≠ i₂b → j ≠ iₓ → g ∣ v j) →
+    ¬ g ∣ v iₓ →
     g / (Int.gcd (v i₂a) g : ℤ) = 2 →
     g / (Int.gcd (v i₂b) g : ℤ) = 2 →
     ∃ u : ℝ,
@@ -1055,7 +1056,7 @@ theorem deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
       have hdvd := dvd_of_nonMultCard_three_of_selected
         v g hcard i₂a i₂b iₓ h2ab h2ax h2bx hδ2a hδ2b hδx
       apply lonely14_of_three_detuned_selectedWitness v g hg i₂a i₂b iₓ hdvd
-      exact h22 v hv g hg i₂a i₂b iₓ h2ab h2ax h2bx hdvd hq2a hq2b
+      exact h22 v hv g hg i₂a i₂b iₓ h2ab h2ax h2bx hdvd hδx hq2a hq2b
     · obtain ⟨i₂, i₄a, i₄b, h24a, h24b, h4ab, hδ2, hδ4a, hδ4b,
         hq2, hq4a, hq4b⟩ := h244pattern
       have hdvd := dvd_of_nonMultCard_three_of_selected

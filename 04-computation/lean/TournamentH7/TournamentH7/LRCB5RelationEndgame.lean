@@ -6,8 +6,8 @@ import TournamentH7.LRCB5RelationBudget
 
 This module is the formal consumer for THM-935.  A certificate supplies a
 positive modulus, exact-support relation masses, the exact identity between
-their signed model and the concrete integer `B5`, and the proved quarter / open
-three-quarter tail split.  The checked budget then gives `B5 > 0`, which feeds
+their signed model and the concrete integer `B5`, and the sharp one-sided
+horizon-thirty tail split.  The checked budget then gives `B5 > 0`, which feeds
 the chain-dense endgame without any additional analytic assumption.
 -/
 
@@ -29,8 +29,9 @@ structure B5RelationBudgetCertificate (v : Fin 13 → ℤ) where
   b5_eq_scaled_model :
     (LRC14Concrete.B5 v q : ℝ) =
       ((q : ℝ) - 1) * relationModel mass2 mass3 mass4 mass5
-  pair_budget : pairWeight * |mass2| ≤ equilibrium / 4
-  higher_budget : higherRelationDebt mass3 mass4 mass5 < 3 * equilibrium / 4
+  pair_mass_lower_bound : -(13 / 30 : ℝ) ≤ mass2
+  harmful_higher_budget :
+    harmfulHigherContribution mass3 mass4 mass5 < 7712 / 84035
 
 /-- Every relation-budget certificate produces the integer positivity witness
 consumed by the discrete Bonferroni endgame. -/
@@ -39,8 +40,8 @@ theorem B5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
     0 < LRC14Concrete.B5 v certificate.q := by
   have hmodel : 0 < relationModel certificate.mass2 certificate.mass3
       certificate.mass4 certificate.mass5 :=
-    relationModel_pos_of_quarter_threeQuarter_split _ _ _ _
-      certificate.pair_budget certificate.higher_budget
+    relationModel_pos_of_signed_horizon_thirty_split _ _ _ _
+      certificate.pair_mass_lower_bound certificate.harmful_higher_budget
   have hqR : (1 : ℝ) < certificate.q := by
     exact_mod_cast certificate.one_lt_q
   have hscale : (0 : ℝ) < (certificate.q : ℝ) - 1 := by
