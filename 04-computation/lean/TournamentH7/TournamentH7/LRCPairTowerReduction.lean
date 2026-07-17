@@ -22,7 +22,7 @@
   No `sorry`; no `native_decide`.
 -/
 
-import TournamentH7.LRCEndgameTwoEight
+import TournamentH7.LRCSelectedWitnessObstructions
 
 namespace LonelyRunner
 namespace LRC14Grand
@@ -307,6 +307,155 @@ def ManyLiftFailurePairTowerSupply : Prop :=
     nonMultCard v g = 2 → 2 ≤ liftFailureCard v g →
     ¬ genericCount v g → ∃ t : ℝ, Lonely 14 v t
 
+/-- Harmonic safety on coordinates which remain in the divisible core after
+doubling. -/
+def PairTowerCoreGoodAt (v : Fin 13 → ℤ) (g : ℤ) (u : ℝ) : Prop :=
+  ∀ j, 2 * g ∣ v j → ∀ n : ℤ,
+    (1 : ℝ) / 14 ≤ |((v j / (2 * g) : ℤ) : ℝ) * u - n|
+
+/-- Exact fixed-phase obstruction on the first doubled sheet.  Either two
+active fresh q-two rows occupy opposite parity sheets, or one fresh q-two row
+and the inherited q-four pair form the saturated `(2,4,4)` prefix code. -/
+def PairTowerParallelObstruction
+    (v : Fin 13 → ℤ) (g : ℤ) (first second : Fin 13) (u : ℝ) : Prop :=
+  (∃ i j : Fin 13,
+      (g ∣ v i ∧ ¬ 2 * g ∣ v i) ∧
+      (g ∣ v j ∧ ¬ 2 * g ∣ v j) ∧ i ≠ j ∧
+      TwoTwoThreePhaseOpposition (v i) (v j) (2 * g) u) ∨
+  (∃ i : Fin 13,
+      (g ∣ v i ∧ ¬ 2 * g ∣ v i) ∧
+      ¬ HasThreeDetunedGoodBranch
+        (v i) (v first) (v second) (2 * g) u)
+
+/-- Minimal dynamic pair-tower crux.  Vertices are harmonic-safe components
+and divisibility-wall events; the selector must avoid both complete binary
+prefix codes on one component. -/
+def ManyLiftFailurePhaseSelector : Prop :=
+  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+    ∀ first second : Fin 13,
+    first ≠ second →
+    ¬ g ∣ v first → ¬ g ∣ v second →
+    (∀ j, j ≠ first → j ≠ second → g ∣ v j) →
+    g / (Int.gcd (v first) g : ℤ) = 2 →
+    g / (Int.gcd (v second) g : ℤ) = 2 →
+    2 ≤ liftFailureCard v g →
+    ∃ u : ℝ,
+      PairTowerCoreGoodAt v g u ∧
+      ¬ PairTowerParallelObstruction v g first second u
+
+/-- The wall-event phase selector implies the many-crossing loneliness
+supplier.  This is the exact fixed-phase block-gluing consumer. -/
+theorem manyLiftFailurePairTowerSupply_of_phaseSelector
+    (hselector : ManyLiftFailurePhaseSelector) :
+    ManyLiftFailurePairTowerSupply := by
+  intro v _ g hg hcard hmany hnongeneric
+  obtain ⟨first, second, hne, hdvd, hfirst, hsecond,
+      hqFirst, hqSecond⟩ :=
+    nonGeneric_pair_q_two v g hg hcard hnongeneric
+  obtain ⟨u, hcore, hnoObstruction⟩ :=
+    hselector v g hg first second hne hfirst hsecond hdvd
+      hqFirst hqSecond hmany
+  have hfreshNonempty :
+      (Finset.univ.filter fun i => g ∣ v i ∧ ¬ 2 * g ∣ v i).Nonempty := by
+    rw [← Finset.card_pos]
+    simpa [liftFailureCard] using (show 0 < liftFailureCard v g by omega)
+  obtain ⟨defaultIndex, hdefaultMem⟩ := hfreshNonempty
+  have hdefault : g ∣ v defaultIndex ∧ ¬ 2 * g ∣ v defaultIndex := by
+    simpa using hdefaultMem
+  obtain ⟨fresh, hfresh, hmode⟩ :
+      ∃ i : Fin 13, (g ∣ v i ∧ ¬ 2 * g ∣ v i) ∧
+        ((detunedBadBranches (v i) (2 * g) u).Nonempty ∨
+          ∀ j : Fin 13, (g ∣ v j ∧ ¬ 2 * g ∣ v j) →
+            ¬ (detunedBadBranches (v j) (2 * g) u).Nonempty) := by
+    by_cases hactive : ∃ i : Fin 13,
+        (g ∣ v i ∧ ¬ 2 * g ∣ v i) ∧
+          (detunedBadBranches (v i) (2 * g) u).Nonempty
+    · obtain ⟨i, hi, hrow⟩ := hactive
+      exact ⟨i, hi, Or.inl hrow⟩
+    · refine ⟨defaultIndex, hdefault, Or.inr ?_⟩
+      intro j hj hrow
+      exact hactive ⟨j, hj, hrow⟩
+  have hgood :
+      HasThreeDetunedGoodBranch
+        (v fresh) (v first) (v second) (2 * g) u := by
+    by_contra hfail
+    exact hnoObstruction (Or.inr ⟨fresh, hfresh, hfail⟩)
+  obtain ⟨branch, hbranch, hfreshGood, hfirstGood, hsecondGood⟩ := hgood
+  have hallFreshGood : ∀ j : Fin 13,
+      (g ∣ v j ∧ ¬ 2 * g ∣ v j) →
+      branch ∉ detunedBadBranches (v j) (2 * g) u := by
+    intro j hj
+    rcases hmode with hfreshActive | hallEmpty
+    · by_cases hjActive : (detunedBadBranches (v j) (2 * g) u).Nonempty
+      · by_cases hjFresh : j = fresh
+        · subst j
+          exact hfreshGood
+        · have hnotOpposition :
+              ¬ TwoTwoThreePhaseOpposition
+                (v fresh) (v j) (2 * g) u := by
+            intro hopposition
+            exact hnoObstruction (Or.inl
+              ⟨fresh, j, hfresh, hj, Ne.symm hjFresh, hopposition⟩)
+          have hnotDisjoint :
+              ¬ Disjoint
+                (detunedBadBranches (v fresh) (2 * g) u)
+                (detunedBadBranches (v j) (2 * g) u) := by
+            intro hdisjoint
+            exact hnotOpposition ⟨hfreshActive, hjActive, hdisjoint⟩
+          have hinter :
+              (detunedBadBranches (v fresh) (2 * g) u ∩
+                detunedBadBranches (v j) (2 * g) u).Nonempty := by
+            obtain ⟨c, hleft, hright⟩ :=
+              Finset.not_disjoint_iff.mp hnotDisjoint
+            exact ⟨c, Finset.mem_inter.mpr ⟨hleft, hright⟩⟩
+          have hqFresh := odd_harmonic_lifts_to_q_two
+            (v fresh) g hg hfresh.1 hfresh.2
+          have hqJ := odd_harmonic_lifts_to_q_two
+            (v j) g hg hj.1 hj.2
+          have hrowsEq :=
+            detunedBadBranches_eq_of_overlap_same_reducedDenominator
+              (v fresh) (v j) (2 * g) 2 u (by omega) (by norm_num)
+              hqFresh hqJ hinter
+          rw [hrowsEq] at hfreshGood
+          exact hfreshGood
+      · intro hjBranch
+        exact hjActive ⟨branch, hjBranch⟩
+    · intro hjBranch
+      exact hallEmpty j hj ⟨branch, hjBranch⟩
+  refine ⟨(u + (branch : ℝ)) / ((2 * g : ℤ) : ℝ), ?_⟩
+  intro i n
+  by_cases hiFirst : i = first
+  · subst i
+    exact not_lt.mp fun hlt => hfirstGood (by
+      rw [detunedBadBranches, Finset.mem_filter]
+      exact ⟨hbranch, n, hlt⟩)
+  by_cases hiSecond : i = second
+  · subst i
+    exact not_lt.mp fun hlt => hsecondGood (by
+      rw [detunedBadBranches, Finset.mem_filter]
+      exact ⟨hbranch, n, hlt⟩)
+  have hdivG : g ∣ v i := hdvd i hiFirst hiSecond
+  by_cases hdivDouble : 2 * g ∣ v i
+  · have hvalue :
+        (v i : ℝ) * ((u + (branch : ℝ)) / ((2 * g : ℤ) : ℝ)) - n =
+          ((v i / (2 * g) : ℤ) : ℝ) * u -
+            (((n - (v i / (2 * g)) * branch : ℤ)) : ℝ) := by
+      have hspeed : (v i : ℝ) =
+          (2 * g : ℝ) * ((v i / (2 * g) : ℤ) : ℝ) := by
+        have : v i = 2 * g * (v i / (2 * g)) :=
+          (Int.mul_ediv_cancel' hdivDouble).symm
+        exact_mod_cast this
+      rw [hspeed]
+      push_cast
+      field_simp
+      ring
+    rw [hvalue]
+    exact hcore i hdivDouble (n - (v i / (2 * g)) * branch)
+  · have hbranchGood := hallFreshGood i ⟨hdivG, hdivDouble⟩
+    exact not_lt.mp fun hlt => hbranchGood (by
+      rw [detunedBadBranches, Finset.mem_filter]
+      exact ⟨hbranch, n, hlt⟩)
+
 /-- The exact cardinality identity turns the many-wall-event supplier into
 the earlier four-or-more doubled-level interface. -/
 theorem fourOrMorePairLiftSupply_of_manyLiftFailure
@@ -389,6 +538,15 @@ theorem nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour
   nonterminatingPairTowerSupply_of_fourOrMore_and_twoFourFour
     (fourOrMorePairLiftSupply_of_manyLiftFailure hmany) h244
 
+/-- Final pair-tower reduction to the dynamic wall-event selector and the
+already named singleton `(2,4,4)` supplier. -/
+theorem nonterminatingPairTowerSupply_of_phaseSelector_and_twoFourFour
+    (hselector : ManyLiftFailurePhaseSelector)
+    (h244 : TwoFourFourSelectedWitnessSupply) :
+    NonterminatingPairTowerSupply :=
+  nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour
+    (manyLiftFailurePairTowerSupply_of_phaseSelector hselector) h244
+
 /-- Refined supplier-level capstone: the pair obligation begins only at a
 first doubled level with at least four nonmultiples. -/
 theorem lrc14_from_fourOrMorePairLift_and_selectedWitnessSupplies_and_relationBudget
@@ -417,6 +575,43 @@ theorem lrc14_from_manyLiftFailure_and_selectedWitnessSupplies_and_relationBudge
     (nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour hmany h244)
     h22 h244 h333 hsupply
 
+/-- Sharpest current checked capstone.  The remaining mathematical inputs are
+the dynamic pair wall-event selector, the three phase-selection suppliers, and
+the normalized pair/higher-depth deviation budget on the dense core. -/
+theorem lrc14_from_pairPhaseSelector_and_selectedWitnessSupplies_and_normalizedBudget
+    (cite : LRCUpTo13)
+    (hselector : ManyLiftFailurePhaseSelector)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreNormalizedRelationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+        (nonterminatingPairTowerSupply_of_phaseSelector_and_twoFourFour
+          hselector h244)
+        h22 h244 h333))
+    (denseCoreDissociatedB5Supply_of_normalizedRelationBudget hsupply)
+
+/-- Fully obstruction-normalized capstone.  Static parallel-class counting has
+been discharged exactly; the three phase inputs ask only for a harmonic-good
+phase outside the corresponding saturated partition. -/
+theorem lrc14_from_pairPhaseSelector_and_parallelAvoidanceSupplies_and_normalizedBudget
+    (cite : LRCUpTo13)
+    (hselector : ManyLiftFailurePhaseSelector)
+    (h22 : TwoTwoParallelAvoidanceSupply)
+    (h244 : TwoFourFourParallelAvoidanceSupply)
+    (h333 : UniformThreeParallelAvoidanceSupply)
+    (hsupply : DenseCoreNormalizedRelationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_pairPhaseSelector_and_selectedWitnessSupplies_and_normalizedBudget
+    cite hselector
+    (twoTwoSelectedWitnessSupply_of_parallelAvoidance h22)
+    (twoFourFourSelectedWitnessSupply_of_parallelAvoidance h244)
+    (uniformThreeSelectedWitnessSupply_of_parallelAvoidance h333)
+    hsupply
+
 /-! ## Axiom audit -/
 
 #print axioms q_two_lifts_to_q_four
@@ -425,10 +620,14 @@ theorem lrc14_from_manyLiftFailure_and_selectedWitnessSupplies_and_relationBudge
 #print axioms pairTower_firstStep_dichotomy
 #print axioms nonGeneric_pair_q_two
 #print axioms fourOrMorePairLiftSupply_of_manyLiftFailure
+#print axioms manyLiftFailurePairTowerSupply_of_phaseSelector
 #print axioms nonterminatingPairTowerSupply_of_fourOrMore_and_twoFourFour
 #print axioms nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour
+#print axioms nonterminatingPairTowerSupply_of_phaseSelector_and_twoFourFour
 #print axioms lrc14_from_fourOrMorePairLift_and_selectedWitnessSupplies_and_relationBudget
 #print axioms lrc14_from_manyLiftFailure_and_selectedWitnessSupplies_and_relationBudget
+#print axioms lrc14_from_pairPhaseSelector_and_selectedWitnessSupplies_and_normalizedBudget
+#print axioms lrc14_from_pairPhaseSelector_and_parallelAvoidanceSupplies_and_normalizedBudget
 
 end LRC14Grand
 end LonelyRunner

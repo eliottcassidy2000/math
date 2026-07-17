@@ -283,6 +283,24 @@ signed rational subset-deviation ledger.  The remaining B5 theorem is now the
 quantitative trapped-`D_T` bound / relation-supported identification, not the
 finite subset expansion or equilibrium algebra.  None of these statements is
 a completed proof of LRC(14); the listed suppliers remain explicit hypotheses.
+
+The S45--S46 normalization makes those hypotheses substantially more concrete.
+`LRCB5NormalizedBridge` Möbius-inverts the support aggregates exactly and uses
+S36's nonpositive singleton deviations as credit.  At the canonical clean
+modulus from `LRCB5CleanModulus`, coprimality and every coefficient-height-H
+modular-to-integer relation transfer are automatic.  The dense-core certificate
+therefore owes only `normalizedMass2 >= -13/30` and the equivalent depth-moment
+average `< -65218/84035`; depths `0..6` contribute credit and depths `7..13`
+contribute debt.  No separate analytic equality field remains.
+
+`LRCSelectedWitnessTwoTwo`, `LRCSelectedWitnessTwoFourFour`, and
+`LRCSelectedWitnessUniformThree` classify every fixed-phase failure as a
+saturated parallel-class partition.  `LRCParallelClassZarankiewicz` proves that
+these are equality cases of `z(3,g;2,1)=g`; hence the remaining information is
+cyclic phase/wall timing, not static overlap.  `LRCPairTowerReduction` likewise
+reduces the many-crossing branch to one dynamic harmonic-safe-component
+selector.  The sharpest checked capstone exposes exactly those four dynamic
+selectors plus the clean-modulus pair/depth budget; it is not an LRC(14) proof.
 `TournamentH7.LRCLeverageDemo` (same session) is the worked consumer template:
 the {1,2,3} sweep's 13 exact cells as `![...]` data; `demo_B1_pos` (B1 = 4/7)
 feeds `goodMass_pos_of_bonferroni_pos` to conclude positive good mass without

@@ -124,6 +124,41 @@ All targeted Lean audits use only the standard foundational axioms.
 
 ---
 
+## codex-2026-07-17-S46 -- OBSTRUCTION-NORMALIZED CAPSTONE + CONCRETE THM-940 DEPTH BUDGET
+
+Frequent pulls integrated death-star S36's exact singleton-deviation rung and
+S37's pair-deviation/multi-block claim.  The pair tower is now reduced past the
+cardinality supplier: after the exact first-sheet identity, its two-or-more-
+crossing branch is consumed by a single `ManyLiftFailurePhaseSelector`, asking
+for a harmonic-safe component which avoids the saturated dyadic prefix codes
+`{1/2,1/2}` and `{1/2,1/4,1/4}`.
+
+All three selected-witness failures are classified exactly.  `(2,2,q)` fails
+iff the appropriate q-two pair occupies opposite parity sheets; `(2,4,4)` and
+uniform `(3,3,3)` fail iff their rows form the complete pairwise-disjoint
+parallel-class partition.  These attain `z(3,g;2,1)=g`, so static incidence has
+no slack.  New avoidance-supply adapters isolate the genuine task: choose a
+harmonic-good phase outside that saturated partition.  Arbitrary citation
+witnesses do not suffice; explicit nonzero counterexamples confirm phase
+selection is essential.
+
+On the B5 side, THM-940's support aggregates now Möbius-invert in Lean to the
+THM-935 model.  Singleton deviations are favorable, not debt.  The exact open
+quantitative socket is `M2 >= -13/30` plus the harmful depth-moment average
+`< -65218/84035`; the depth polynomial is nonpositive through depth 6 and
+strictly positive at depths 7--13.  An explicit clean modulus `q_H = 1 mod 14`
+is coprime to every speed, exceeds `H sum|v|`, and turns every height-H modular
+relation into an exact relation for THM-939.  Thus a concrete dense-core
+certificate now chooses only H and proves the pair/depth inequalities.
+
+Zarankiewicz sharpening is also exact: `z(4,13;2,2)=19` on the needed upper
+side, and pair-unique support-five families have cardinality at most 3, not 7.
+The final foundational-only capstone takes the pair phase selector, the three
+parallel-partition avoidance supplies, and the normalized clean-modulus depth
+budget.  These remain hypotheses; this session does not claim LRC(14) proved.
+
+---
+
 ## codex-2026-07-17-S38--S41 -- EXACT PARALLEL-CLASS VALUES REDUCE THE DETUNED TRIPLE FRONTIER TO `(2,2,q)`, `(2,4,4)`, AND UNIFORM q3; THM-940 DISCRETE B5 IDENTITY INTEGRATED
 
 Prompt (owner): prove the local-density block-gluing theorem, pull frequently, work the

@@ -139,3 +139,36 @@ the named Props `TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply
 and `UniformThreeSelectedWitnessSupply` are now the exact unchecked inputs.
 Each selected-witness Prop includes the ambient nonzero-speed hypothesis; without it a
 zero harmonic quotient makes `ThreeDetunedHarmonicGoodAt` impossible.
+
+## S45--S46 exact normalization
+
+The former absolute quarter/three-quarter certificate is no longer the sharpest
+consumer.  `TournamentH7.LRCB5NormalizedBridge` starts directly from THM-940,
+normalizes each support aggregate by `q-1`, and performs the triangular Möbius
+inversion in the kernel.  Singleton deviations need only be nonpositive and hence
+help.  The exact residual inequalities are
+
+```text
+normalizedMass2 >= -13/30,
+(24/49)M3 + (2/7)M4 + M5 < 7712/84035.
+```
+
+The second inequality is equivalent to a depth-spectrum statement.  For
+`P(d)=C(d,5)-C(d,4)+C(d,3)-(319/343)C(d,2)`, the required average is
+`(q-1)^(-1) sum_p P(bandCount(p)) < -65218/84035`.  Lean checks `P(d)<=0` for
+`d<=6` and `P(d)>0` for `7<=d<=13`; the mathematical crux is therefore exactly
+control of depth-seven-and-higher multipliers with credit retained from lower
+depths.  `LRCB5CleanModulus` supplies explicit `q_H=1 mod 14`, coprime to every
+speed and larger than `H sum|v|`, so all height-H modular relations are genuine
+integer relations subject to THM-939.  `NormalizedB5RelationBudgetCertificate`
+now contains only H and the two inequalities above.
+
+On the detuned side, the first two-adic sheet satisfies the exact wall-count
+identity.  One crossing is `(2,4,4)`; two or more crossings reduce to a dynamic
+harmonic-safe-component selector avoiding the complete dyadic prefix codes.
+The three selected-witness failures are exactly parity opposition for `(2,2,q)`
+and complete disjoint partitions for `(2,4,4)` and `(3,3,3)`.  They attain the
+Zarankiewicz equality `z(3,g;2,1)=g`, so no static incidence improvement can
+select the phase.  The final obstruction-normalized capstone retains these
+dynamic selectors and the depth budget as explicit hypotheses; LRC(14) is not
+yet proved.

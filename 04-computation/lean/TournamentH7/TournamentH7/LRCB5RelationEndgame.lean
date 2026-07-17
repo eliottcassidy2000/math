@@ -1,5 +1,5 @@
 import TournamentH7.LRCEndgameParameterDischargeTwoThree
-import TournamentH7.LRCB5RelationBudget
+import TournamentH7.LRCB5NormalizedBridge
 
 /-!
 # Relation-budget certificates feed the chain-dense LRC(14) endgame
@@ -16,6 +16,8 @@ namespace LRC14Grand
 
 open LonelyRunner
 open LRCB5RelationBudget
+open LRCB5NormalizedBridge
+open LRCB5CleanModulus
 open scoped Classical
 
 /-- A proof-producing THM-935 certificate for one concrete speed tuple. -/
@@ -51,6 +53,26 @@ theorem B5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
     positivity
   exact_mod_cast hreal
 
+/-- Concrete THM-940 certificate at the canonical clean modulus.  The modulus,
+coprimality, singleton sign, and finite-height modular-to-exact relation bridge
+are automatic; only the normalized pair and harmful depth budgets remain. -/
+structure NormalizedB5RelationBudgetCertificate (v : Fin 13 → ℤ) where
+  height : ℕ
+  pair_lower_bound : -(13 / 30 : ℚ) ≤
+    normalizedMass2 v (cleanModulus v height)
+  harmful_depth_budget :
+    harmfulDepthMoment v (cleanModulus v height) /
+      ((cleanModulus v height : ℚ) - 1) < -(65218 / 84035)
+
+/-- The normalized certificate feeds the concrete integer B5 directly; no
+separate relation-mass identification premise remains. -/
+theorem NormalizedB5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
+    (certificate : NormalizedB5RelationBudgetCertificate v)
+    (hv : ∀ i, v i ≠ 0) :
+    0 < LRC14Concrete.B5 v (cleanModulus v certificate.height) :=
+  B5_pos_at_cleanModulus_of_pair_and_depth_budget v hv certificate.height
+    certificate.pair_lower_bound certificate.harmful_depth_budget
+
 /-- THM-935 certificate supply only on the primitive, dissociated,
 chain-dense core isolated by the current endgame. -/
 def DenseCoreRelationBudgetSupply : Prop :=
@@ -71,6 +93,27 @@ def DenseCoreRelationBudgetSupply : Prop :=
       ChainDenseCore (fun i => |v (σ i)|)) →
     Nonempty (B5RelationBudgetCertificate v)
 
+/-- Stronger concrete supplier on the same primitive, dissociated,
+chain-dense core.  Its open mathematics is exactly a coprime modulus together
+with the normalized pair and signed higher-support estimates. -/
+def DenseCoreNormalizedRelationBudgetSupply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.tupleGcd v = 1 →
+    LRC14.CoveringFamily v → GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13,
+      (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ),
+      (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1 / 13 - 1 / 14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
+    (∀ g : ℤ, 2 ≤ g →
+      nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      ChainDenseCore (fun i => |v (σ i)|)) →
+    Nonempty (NormalizedB5RelationBudgetCertificate v)
+
 /-- The structured relation-budget supplier discharges the raw positive-B5
 supplier used by `LRCDenseCoreEndgame`. -/
 theorem denseCoreDissociatedB5Supply_of_relationBudget
@@ -81,6 +124,18 @@ theorem denseCoreDissociatedB5Supply_of_relationBudget
     hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   exact ⟨certificate.q, lt_trans Nat.zero_lt_one certificate.one_lt_q,
     certificate.b5_pos⟩
+
+/-- The normalized THM-940 supplier discharges the raw positive-B5 supplier
+without routing through the older abstract equality certificate. -/
+theorem denseCoreDissociatedB5Supply_of_normalizedRelationBudget
+    (hsupply : DenseCoreNormalizedRelationBudgetSupply) :
+    DenseCoreDissociatedB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨cleanModulus v certificate.height,
+    lt_of_lt_of_le (by omega) (fourteen_le_cleanModulus v certificate.height hv),
+    certificate.b5_pos hv⟩
 
 /-- **THM-935-shaped current capstone.**  The sanctioned LRC(≤13) citation,
 the sharply reduced `q=2,3`/two-adic exceptional dispatch, and relation-budget
@@ -101,12 +156,24 @@ theorem lrc14_from_twoThree_detuned_and_relationBudget
   lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_relationBudget hsupply)
 
+/-- Concrete normalized-THM-940 capstone.  The B5 side now exposes only the
+pair lower tail and signed higher-depth budget at a coprime modulus. -/
+theorem lrc14_from_twoThree_detuned_and_normalizedRelationBudget
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreNormalizedRelationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_normalizedRelationBudget hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms B5RelationBudgetCertificate.b5_pos
+#print axioms NormalizedB5RelationBudgetCertificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
+#print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget
 #print axioms lrc14_from_four_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_relationBudget
+#print axioms lrc14_from_twoThree_detuned_and_normalizedRelationBudget
 
 end LRC14Grand
 end LonelyRunner

@@ -218,3 +218,24 @@ five precise remaining inputs are those three selection Props,
 `NonterminatingPairTowerSupply`, and `DenseCoreRelationBudgetSupply`.
 The three witness Props explicitly assume all ambient speeds are nonzero; the previous
 omission admitted a zero quotient and made the harmonic-good conclusion false.
+
+### S45--S46 sharpened residual
+
+The pair tower now splits by the exact number of first-sheet wall crossings.
+One crossing is the existing `(2,4,4)` branch; the true residual has at least two
+and is reduced to `ManyLiftFailurePhaseSelector`, a harmonic-safe-component
+avoidance statement for the saturated dyadic prefix codes.
+
+The three selected-witness Props are replaced by exact obstruction-avoidance
+forms: parity-pair opposition for `(2,2,q)`, the complete `(2,4,4)` partition,
+and the complete uniform-q-three partition.  These are equality cases of the
+three-row Zarankiewicz value, so the missing lemma must retain cyclic phase or
+wall-crossing chronology.
+
+The dense B5 supplier is now concrete.  THM-940 plus Möbius inversion and S36's
+singleton sign reduce it to two inequalities at an explicit clean modulus:
+the pair lower tail `M2 >= -13/30` and the harmful depth-moment average
+`< -65218/84035`.  The clean modulus automatically supplies coprimality and
+turns every bounded-height modular relation into a THM-939 integer relation.
+The remaining high-height/depth-seven tail is still open; no LRC(14) conclusion
+is asserted without these suppliers.
