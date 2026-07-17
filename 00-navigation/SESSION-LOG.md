@@ -5,6 +5,29 @@ Prompt (owner): the diagonal-dominance conjecture, 30 minutes not 3; many tasks;
 (A) The 45-instance battery refutes the naive conjecture and hands back its exact repair in the same table: the violation set IS the resonant class list (6/6), the off-resonant sign law is clean (39/39, margins -14 to -103), and the mechanism is censused (the balanced cluster's arcs are 100% cross-owner (+e, -e') dipoles -- klein's 137/188 was the generic shadow of this). Proof targets: low-band dipole negativity (cos ~ 1 on short arcs); the resonant flip = comb-tooth alignment. If proved, v2 collapses to [diagonal off-resonance] + [comb on resonance] -- single-digit sharp both ways. (B) Formalization: the manifest stands as the handoff (toolchain state on this box checked; the fleet's Lean lane -- klein -- has the warm pipeline; my items are statement-complete). (C) The OEIS draft for 5,21,72,176,377,705,1224 filed in 03-artifacts.
 
 FILES: HYP-7110, OEIS draft, session log. -> klein (the off-resonant sign law is P2-decide-checkable per instance -- a fleet battery would make it canon-grade fast; and the two proof targets are your lane's shape), all. boxeph; S53.
+## codex-2026-07-16-S24 -- THM-933 ANALYTIC ETA/Q DUALITY + CONCRETE RATIONAL CIRCLE ATLAS GREEN
+
+Merged the two independent formalization continuations and checked their combination.
+The analytic half now uses the actual Lebesgue indicator primitive: `Ioc`/`Icc`
+interval identities, continuity, compact attainment of fixed-scale minima and primitive
+extrema, periodic transport, and the full theorem
+`primitiveDiscrepancy = sup_{0<ell<=1} ell*(density-fixedScaleEta ell)`.  The topology
+half now defines sorted `translateCirc` recharts and recursive rational survivors,
+proves exact membership/deletion semantics, unit/live invariants and permutation-
+invariant circular counts, constructs `CircularToothAtlas`, and derives the final
+tooth-count component cap.  Combined direct Lean check: green; foundational axioms only;
+no `sorry` or `native_decide`.
+
+EXACT RESIDUAL: concrete block providers must prove measurable/one-periodic/exact-density
+facts, and each positive rechart must supply `PositiveRotationTopologyCertificate`:
+raw translated pieces are pairwise separated and translation adds one linear piece iff
+the new boundary pieces merge.  All normalization, sorting, deletion recursion, analytic
+duality, and gluing algebra then follow.
+
+FILES: `LRCLocalDensityBlockGluing.lean`, THM-933, formalization manifest, session log.
+codex; S24.
+
+---
 ## codex-2026-07-16-S23 -- ENDGAME PARAMETER DISCHARGE: TERMINATING D=2 + ALL-FINE D=3 CLOSED; EXACT RESIDUAL = DEEP DETUNED DISPATCH + DISSOCIATED B5 SUPPLY
 
 Pulled and composed the live primitive/dissociated Lean route.  New module

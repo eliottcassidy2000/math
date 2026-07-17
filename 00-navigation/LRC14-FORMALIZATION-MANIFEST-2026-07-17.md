@@ -59,14 +59,22 @@ Opus 7+6 fixed-scale margin.  Axiom audit: only `propext`, `Classical.choice`, a
 The pulled Opus S333 fixed-scale interface is also connected: the module theorem
 `fixedScale_sampling_sum` formalizes its summation step once each component has been
 tiled at scale `ell`.  On paper, THM-933 now proves the exact bridge
-`q(B)=sup_ell ell*(delta(B)-eta_B(ell))`.  Formalizing that equality requires the same
-remaining circle/interval layer, so it adds no independent algebraic blocker.
+`q(B)=sup_ell ell*(delta(B)-eta_B(ell))`.  That bridge is now formalized for a
+measurable one-periodic survivor of the advertised one-period density:
+`centeredPrimitive_interval_identity`, compact attainment of both `eta` and `q`, and
+`primitiveDiscrepancy_eq_fixedScaleDeficitSup` close the analytic layer.
 The exact rational `diff1F` deletion rung is now closed: an anchored circular tooth does
 not increase cut-open piece count, reclosure costs at most one component, and a
-`CircularToothAtlas` feeds the existing tooth-count induction.  The remaining geometric
-rung is to instantiate the primitive identity with circle Lebesgue measure, prove
-extrema/fixed-scale minima exist, and construct normalized rotation charts preserving the
-actual circle component count.
+`CircularToothAtlas` feeds the existing tooth-count induction.  Concrete
+`sortedTranslateCirc` charts, recursive rational survivors, exact rotation membership,
+unit/live invariants, and the end-to-end component cap are also kernel-checked.
+
+The remaining THM-933 provider surface is now exactly two local certificates, not proof
+glue: (1) for each concrete speed block, prove measurability, one-periodicity of its
+indicator, and the advertised one-period density; (2) at each positive rechart stage,
+supply `PositiveRotationTopologyCertificate`, namely pairwise separation of the raw
+translated pieces and the exact statement that translation creates one extra linear
+piece iff the new chart has a boundary merge.
 
 ## Landed addendum — THM-932 closed recurrence (codex-S22)
 

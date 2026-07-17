@@ -526,6 +526,11 @@ it carries either `q` or a coercive fixed-scale `eta` profile.
   `fixedScale_deficit_le_discrepancy`: the bounded-primitive bridge;
 - `fixedScale_extremizer_eq_discrepancy`: exact `eta/q` equality at an
   attained minimizing arc joining primitive extrema;
+- `centeredPrimitive_interval_identity` and `centeredPrimitive_Icc_identity`:
+  the concrete Lebesgue indicator primitive formula for both endpoint conventions;
+- `fixedScaleEta_attained`, `primitiveDiscrepancy_attained`, and
+  `primitiveDiscrepancy_eq_fixedScaleDeficitSup`: compact attainment and the full
+  analytic identity `q = sup_ell ell*(density-eta(ell))`;
 - `fixedScale_weaker_loss`: the sharp G1 bound implies Opus's coarser ledger;
 - `component_count_le_tooth_count`: the induction from one-tooth splitting to
   the universal tooth-count component cap;
@@ -534,6 +539,10 @@ it carries either `q` or a coercive fixed-scale `eta` profile.
   cut-chart subtraction and the concrete one-circular-tooth split;
 - `circular_component_count_le_tooth_count`: the tooth-count cap for any
   normalized rotation atlas of successive circle survivors;
+- `rationalCircularToothAtlasOfPositiveCertificates`,
+  `mem_rationalCircleChart_succ_iff`, and
+  `rational_circle_component_count_le_tooth_count`: concrete sorted rational
+  recharts, exact rotation semantics, and the end-to-end component cap;
 - `lowerBound_le_actual`: every nonnegative-density recurrence propagates a
   certified lower bound;
 - `weightedDebt_eq_suffix_sum` and `lowerBound_eq_closed`: the recursive ledger
@@ -544,11 +553,12 @@ it carries either `q` or a coercive fixed-scale `eta` profile.
   the direct measure.
 
 The module contains no `sorry` and no `native_decide`; its axiom audit reports
-only `propext`, `Classical.choice`, and `Quot.sound`.  The concrete rational
-one-tooth split is now kernel-checked.  The remaining geometric formalization
-layer is narrower: instantiate the abstract primitive identity with circle
-Lebesgue measure, prove extrema/minimizers exist in that representation, and
-construct the normalized rotation atlas that preserves actual circle component
-count while matching half-open rational interval subtraction.  The primitive
-inequality, sharpness, fixed-scale deficit comparison, tooth-count induction,
-component summation, and closed recurrence are all kernel-checked.
+only `propext`, `Classical.choice`, and `Quot.sound`.  The concrete Lebesgue
+primitive identity, extrema/minimizers, full `eta/q` duality, rational one-tooth
+split, recursive sorted rotation charts, membership transport, component
+summation, and closed recurrence are kernel-checked.  The exact remaining
+provider obligations are: for each concrete block, prove its survivor is
+measurable and one-periodic with the advertised density; and for each positive
+rotation stage, prove `PositiveRotationTopologyCertificate` (raw translated
+pieces are pairwise separated, and the linear piece count gains exactly the
+new boundary-merge bit).
