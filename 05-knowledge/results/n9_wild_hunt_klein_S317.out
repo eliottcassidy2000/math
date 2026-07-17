@@ -1,0 +1,105 @@
+[    15.0s] n=7 classes: 456
+[    26.7s] n=8 panels done
+[    37.0s] n=8 classes: 6880
+[    37.1s] n=8 tie-pair predictions: {'cones_oneeyed': 265, 'cocones_oneeyed': 27, 'cones_ext': 27, 'cocones_ext': 27, 'both_ext': 4}
+[    37.1s]   => predicted n=9 one-eyed invisible >= cones 265 + cocones 27 (overlap = both-tied)
+[    37.1s]   => predicted n=9 extended invisible >= cones(tau_out-tied) 27 + cocones(tau_in-tied) 27 - both 4
+[    37.2s] extension sweep over 6880 x 256 = 1,761,280 ...
+[    80.2s]   chunk 1/27: buckets ext=22953 one=22897
+[   190.6s]   chunk 5/27: buckets ext=85155 one=85000
+[   291.6s]   chunk 9/27: buckets ext=118521 one=118326
+[   383.2s]   chunk 13/27: buckets ext=153033 one=152838
+[   447.9s]   chunk 17/27: buckets ext=172707 one=172485
+[   523.1s]   chunk 21/27: buckets ext=185485 one=185251
+[   626.3s]   chunk 25/27: buckets ext=190742 one=190507
+[   687.9s] panel sweep done: ext buckets 191501, one-eyed 191266
+[   691.7s] exact spot-validation of batch panels OK (25 samples)
+[   691.7s] canonicalizing (extended panel buckets = full partition)...
+[   724.8s]   ext: 20000/191501 buckets, classes so far 20021
+[   761.1s]   ext: 40000/191501 buckets, classes so far 40027
+[   793.8s]   ext: 60000/191501 buckets, classes so far 60027
+[   827.3s]   ext: 80000/191501 buckets, classes so far 80027
+[   862.2s]   ext: 100000/191501 buckets, classes so far 100027
+[   915.7s]   ext: 120000/191501 buckets, classes so far 120027
+[  1011.0s]   ext: 140000/191501 buckets, classes so far 140027
+[  1047.9s]   ext: 160000/191501 buckets, classes so far 160027
+[  1092.8s]   ext: 180000/191501 buckets, classes so far 180028
+[  1142.5s] TOTAL n=9 classes: 191536 (expect 191536)
+[  1157.1s]   one: 20000/191266 buckets, classes so far 20077
+[  1164.7s]   one: 40000/191266 buckets, classes so far 40104
+[  1183.9s]   one: 60000/191266 buckets, classes so far 60140
+[  1199.4s]   one: 80000/191266 buckets, classes so far 80184
+[  1210.2s]   one: 100000/191266 buckets, classes so far 100231
+[  1218.1s]   one: 120000/191266 buckets, classes so far 120234
+[  1224.9s]   one: 140000/191266 buckets, classes so far 140234
+[  1227.3s]   one: 160000/191266 buckets, classes so far 160234
+[  1228.5s]   one: 180000/191266 buckets, classes so far 180262
+[  1230.0s] one-eyed grouping total (consistency): 191536
+
+==========================================================================================
+n=9 ONE-EYED panel (cpA,cpL,H,tau_in): 264 invisible groups, 277 pairs
+n=9 EXTENDED panel (+tau_out):        35 invisible groups, 35 pairs
+predictions from n=8: {'cones_oneeyed': 265, 'cocones_oneeyed': 27, 'cones_ext': 27, 'cocones_ext': 27, 'both_ext': 4}
+==========================================================================================
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 1, 3, 4, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 4, 5, 7, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 1, 3, 4, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 3, 4, 5, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 1, 3, 4, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 5, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 1, 4, 4, 4, 5, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 4, 5, 7, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 3, 4, 4, 5, 7, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 3, 4, 4, 4, 7, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 3, 4, 5, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 2, 3, 4, 4, 4, 5, 6, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 4, 4, 4, 4, 4, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['SINK+SRC', 'SINK+SRC'] scores[0]=(0, 3, 3, 4, 4, 4, 5, 5, 8) 
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 3, 4, 4, 4, 4, 4, 5, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 3, 4, 4, 4, 4, 4, 5, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 3, 3, 4, 4, 4, 5, 5, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 3, 4, 4, 4, 4, 4, 5, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 4, 4, 4, 4, 4, 4, 4, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 4, 4, 4, 4, 4, 4, 4, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 4, 4, 4, 4, 4, 4, 4, 5) *** WILD ***
+  group size 2: tags=['CORE', 'CORE'] scores[0]=(3, 3, 3, 4, 4, 4, 5, 5, 5) *** WILD ***
+
+WILD candidate groups: 8
+  WILD group exact re-verify: panels identical = True; members gid=[1168683, 1491485]
+    member: class8=4565 pattern=00101011
+    member: class8=5826 pattern=00011101
+  WILD group exact re-verify: panels identical = True; members gid=[1415199, 1585693]
+    member: class8=5528 pattern=00011111
+    member: class8=6194 pattern=00011101
+  WILD group exact re-verify: panels identical = True; members gid=[1422619, 1422889]
+    member: class8=5557 pattern=00011011
+    member: class8=5558 pattern=00101001
+  WILD group exact re-verify: panels identical = True; members gid=[1514556, 1579291]
+    member: class8=5916 pattern=00111100
+    member: class8=6169 pattern=00011011
+  WILD group exact re-verify: panels identical = True; members gid=[1518607, 1563919]
+    member: class8=5932 pattern=00001111
+    member: class8=6109 pattern=00001111
+  WILD group exact re-verify: panels identical = True; members gid=[1536271, 1581854]
+    member: class8=6001 pattern=00001111
+    member: class8=6179 pattern=00011110
+  WILD group exact re-verify: panels identical = True; members gid=[1539343, 1594653]
+    member: class8=6013 pattern=00001111
+    member: class8=6229 pattern=00011101
+  WILD group exact re-verify: panels identical = True; members gid=[1700451, 1708141]
+    member: class8=6642 pattern=01100011
+    member: class8=6672 pattern=01101101
+[  1231.2s] DONE

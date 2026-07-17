@@ -1,0 +1,45 @@
+[     9.7s] n=7 classes: 456
+[    18.3s] n=8 panels done
+[    27.8s] n=8 classes: 6880
+wild pairs recovered from census: 8
+
+pair | non-iso | deck splits | c3 | tr(A^4) equal | |Aut| | op-partner
+(1168683,1491485) | True | False | 28=28 | True | 1,1
+(1415199,1585693) | True | False | 28=28 | True | 1,1
+(1422619,1422889) | True | False | 27=27 | True | 1,1
+(1514556,1579291) | True | False | 28=28 | True | 1,1
+(1518607,1563919) | True | False | 29=29 | True | 1,1
+(1536271,1581854) | True | False | 29=29 | True | 1,1
+(1539343,1594653) | True | False | 29=29 | True | 1,1
+(1700451,1708141) | True | False | 27=27 | True | 3,3
+
+pair 0: op-image is pair [0] (self-paired = op-closed pair)
+pair 1: op-image is pair [1] (self-paired = op-closed pair)
+pair 2: op-image is pair [2] (self-paired = op-closed pair)
+pair 3: op-image is pair [3] (self-paired = op-closed pair)
+pair 4: op-image is pair [4] (self-paired = op-closed pair)
+pair 5: op-image is pair [5] (self-paired = op-closed pair)
+pair 6: op-image is pair [6] (self-paired = op-closed pair)
+pair 7: op-image is pair [7] (self-paired = op-closed pair)
+pair 7: op-image is pair [7] (self-paired = op-closed pair)
+
+pair | full-panel deck splits | c5 | member self-complementary?
+(1168683,1491485) | True | 156 vs 156 | SC: False,False
+(1415199,1585693) | True | 156 vs 156 | SC: False,False
+(1422619,1422889) | True | 139 vs 139 | SC: False,False
+(1514556,1579291) | True | 158 vs 158 | SC: False,False
+(1518607,1563919) | True | 159 vs 159 | SC: False,False
+(1536271,1581854) | True | 165 vs 165 | SC: False,False
+(1539343,1594653) | True | 159 vs 159 | SC: False,False
+(1700451,1708141) | True | 144 vs 144 | SC: False,False
+
+CHIRALITY VERIFICATION: member2 iso to member1^op; cpL_in == cpL_out; tau_in == tau_out
+(1168683,1491485): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1415199,1585693): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1422619,1422889): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1514556,1579291): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1518607,1563919): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1536271,1581854): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1539343,1594653): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+(1700451,1708141): T2 ~= T1^op: True | cpL self-dual: True | tau balanced: True
+ALL EIGHT are chirality pairs with self-dual L-spectrum and balanced tree vectors: True
