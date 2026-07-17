@@ -1,6 +1,6 @@
 # The current LRC14 object is a light-relation representation with an owner-obligation nerve
 
-*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974/976/977/978.
+*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974/976/977/978/980.
 This is a research map, not a new global theorem.*
 
 ## 1. Two exact objects have finally met
@@ -79,6 +79,7 @@ With that convention, the exact scale sequence is:
 | `13` | no primitive common-scale face | THM-860: every retained and replacement speed would be divisible by 13 |
 | `14` | fourteen local sheets at one owner | THM-977: scalar capacity leaves 576 rows, but every owner-local union misses at least two sheets; no global nerve remains |
 | `15` | labelled owner-feasibility subset and maximum-union vector | THM-978: 2,184 scalar rows have 0, 1, 2, or 4 feasible owners, never all six |
+| `16` | labelled owner-feasibility subset and maximum-union vector | THM-980 (independent replay pending): 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owners fail |
 
 The carrier changes because each quotient is legal only after checking which
 predicate it preserves.  At scale ten, projectivization is legal because the
@@ -125,7 +126,68 @@ proof is the absolute threshold statement encoded by the labelled feasibility
 subset.  This identifies a new pre-nerve layer between local sheet incidence
 and the global obligation nerve.
 
-## 4. A relation-rich / relation-poor dichotomy
+Scale sixteen strengthens that layer: the primary literal reconstruction has
+no row with more than two locally feasible owners.  Its completed owner
+tournament is again always transitive.  Keeping the exact ordered pair
+observable would let one reconstruct the labelled maximum-union vector, but
+the orientation alone forgets the deficit magnitudes and the absolute
+sixteen-sheet threshold.  A tournament can serialize the obstruction; it
+cannot replace it.
+
+## 4. The pre-nerve filtration is a projection/gluing problem
+
+The earlier two-object description should be refined by one layer.  Fix a
+scalar context `sigma`, and for each owner `o` let
+
+```text
+R_o(sigma)={ union_i M_{i,o}(e_i) : e_i ranges over the locally allowed
+                                         unit states of provider i },
+m_o(sigma)=max{|A|:A in R_o(sigma)},
+F(sigma)={o:m_o(sigma)=c}.
+```
+
+Here the choices `e_i` are allowed to depend on `o`.  Thus `F(sigma)=Owners`
+is necessary but not sufficient for one global unit word: it tests the six
+owner projections separately and deliberately forgets covariance between
+them.  If some owner is absent from `F(sigma)`, however, the global fibre is
+immediately empty.  This is exactly what closes scales fourteen through
+sixteen.
+
+Only after all projections are nonempty should one form the global product
+`U_sigma` of covariant unit words and the inverse-image obligations
+
+```text
+O_o(sigma)={u in U_sigma : the o-projection of u is the full c-sheet mask}.
+```
+
+The resulting proof object is a filtration:
+
+```text
+scalar capacity
+    -> owner-local reachable families (R_o,m_o,F)
+    -> globally covariant unit fibre U_sigma
+    -> obligation nerve N_sigma
+    -> metric continuation.
+```
+
+Scale fourteen dies in the second layer at every owner; scales fifteen and
+sixteen die there because `F(sigma)` is always a proper labelled subset.
+Scales eight through twelve reach the nerve layer, where pairwise conflicts or
+higher nonfaces close them.  This explains why one universal graph was never
+quite the underlying object: the honest carrier is a finite projection/gluing
+system, and the nerve is its derived compatibility invariant only after local
+nonemptiness.
+
+Categorically flavored language is useful here but should not be oversold.
+The local reachable families are projections of a finite global word fibre;
+the proof asks whether six prescribed full-mask sections glue to one word.
+This wording preserves the crucial quantifier order and suggests reusable
+algorithms: compute projection images, delete empty obligations, then build
+only the surviving part of the nerve.  It also identifies the smallest
+unsatisfiable certificate: an empty projection, a minimal nerve nonface, or a
+later metric obstruction, in that order.
+
+## 5. A relation-rich / relation-poor dichotomy
 
 The light-relation theorem suggests a principled split before any large
 metric recursion.
@@ -151,18 +213,21 @@ not in a dissociated live-floor theorem.
 This dichotomy aligns two formerly competing proof programs.  Algebraic locks
 handle resonance; analytic overlap handles the absence of light resonance.
 
-## 5. A proposed recursive state
+## 6. A proposed recursive state
 
 The global sporadic completeness bridge still needs a state that survives
 legal insertions and deletions without losing labels.  A candidate state is
 
 ```text
-S=(span L_14(v), sigma, N_sigma,
+S=(span L_14(v), sigma, (R_o,m_o,F)_o, U_sigma, N_sigma,
    labelled safe components and remaining rays,
    denominator debt n*m-q).
 ```
 
-The last coordinate is positive and quantized on the sporadic branch;
+The pre-nerve coordinates retain the quantifier order that was invisible in
+the earlier state: local unit choices may vary with the owner, whereas a point
+of `U_sigma` is one shared choice.  The last coordinate is positive and
+quantized on the sporadic branch;
 `LRCSporadicDiscreteCap.lean` turns it into the improved top-speed cap.  The
 nerve records exact simultaneous compatibility.  The component/ray payload
 records continuation semantics.  No single coordinate is currently known to
@@ -182,7 +247,7 @@ coordinate without increasing any earlier coordinate, or lands in a closed
 scale/ramification language.  This is a concrete falsifiable program, not a
 claim that such an order has already been proved.
 
-## 6. Immediate proof targets
+## 7. Immediate proof targets
 
 1. Formalize the mask-to-nerve bridges at scales eight through twelve.  The
    terminal `c=8` and `c=9` nerve contradictions are already kernel-pure;
@@ -190,15 +255,17 @@ claim that such an order has already been proved.
    reductions remain the honest trust surface.
 2. Extend THM-972 from sum triples to a circuit-indexed counting lemma for
    all primitive weight-at-most-fourteen relations.
-3. Compute `L_14(v)` and its circuit incidence on the eliminated `c=14,15`
-   scalar banks and on the live `c=16` scale; use circuit rank to choose algebraic
-   versus analytic dispatch before any metric recursion.
+3. Compute `L_14(v)` and its circuit incidence on the eliminated
+   `c=14,15,16` scalar banks and the live `c=17` scale; use circuit rank to
+   choose algebraic versus analytic dispatch before any metric recursion.
 4. Instrument the existing metric insertion trees with the proposed state and
    search for an actual decreasing transition statistic.
 5. Keep the global quantifier boundary explicit: closing common scales does
    not classify arbitrary non-AP-centred or deep sporadic packets.
 
-The conceptual compression is now clear: the problem is not fundamentally a
-tournament on runners.  It is a finite representation problem for light
-integer relations whose obstruction is read in an owner-labelled
-intersection nerve, with tournaments supplying useful but lossy telemetry.
+The conceptual compression is now clearer: the problem is not fundamentally
+a tournament on runners.  It is a finite projection/gluing problem for
+representations of light integer relations.  Its earliest obstruction is an
+empty owner projection; if those projections survive, the obstruction is read
+in an owner-labelled intersection nerve; tournaments supply useful but lossy
+telemetry at either layer.
