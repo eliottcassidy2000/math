@@ -1,4 +1,4 @@
-# opus-2026-07-17-S339 -- HYP-7220: THE BLOCK-STRUCTURE REDUCTION constant.
+# THM-959 / opus-S339 corrected by codex-S62: block-tower constants.
 # THM-955 gives a <=6-block a safe width in any window; the glue jumps a
 # junction when nextmin * width >= 2.  This script derives the PROVEN
 # junction constant G0 (worst case over block shapes) and verifies the
@@ -12,8 +12,8 @@
 #   glue condition: m_{i+1} * W_i >= 2, i.e. junction G = m_{i+1}/M_i >=
 #     2 / (M_i W_i)  -- so G0 = sup over shapes of 2/(M W).
 # We tabulate 2/(M_i W_i) exactly for k = 1..6, r = 1..13, and entry
-# lengths L in the range produced upstream (L * m_prevblock ~ 6/7-ish
-# after a glue jump: L >= 2/m_i at entry by the previous glue), then
+# lengths L in the range produced upstream (with the size-dependent entry
+# invariant m_i * L_i >= l_k), then
 # verify towers at the tabulated G0 exactly.
 from fractions import Fraction
 from math import floor
@@ -36,24 +36,28 @@ def subtract_comb(V, x):
         if cur < b: out.append((cur, b))
     return out
 
+print("THM-959 CORRECTED PRESCRIBED BLOCK-TOWER REDUCTION")
 print("(1) THE PROVEN JUNCTION CONSTANT (worst 2/(M*W) over shapes):")
 # entry window: the glue guarantees m_i * L_i >= 2 at entry; scale-free:
 # set l = m * L (>= 2), rho = M/m (<= 13 by compression within a block).
 # W = [(1-k/7) L - 2k/(7m)] / (1 + S L + 2k), S <= k M:
 # M*W = [(1-k/7) l rho - 2k rho/7] / (1 + k rho l + 2k)   [all over m-units]
-# worst at l = 2 (smallest entry window) and rho = 13:
+# For fixed k,l the displayed M*W lower bound is INCREASING in rho, since
+# it has the form a*rho/(c+d*rho).  Thus rho=1 is the uniform worst case;
+# the original rho=13 substitution was backwards.  No within-block upper
+# ratio cap is needed for this estimate.
 # entry length requirement: (1-k/7) l > 2k/7  <=>  l > 2k/(7-k); take
-# l_k = max(2, 4k/(7-k)) (factor-2 margin), rho = 13 worst:
+# l_k = max(2, 4k/(7-k)) (factor-2 margin), rho = 1 worst:
 lk = {k: max(F(2), F(4*k, 7-k)) for k in range(1, 7)}
 MW = {}
 for k in range(1, 7):
-    l, rho = lk[k], F(13)
+    l, rho = lk[k], F(1)
     num = (1 - F(k,7)) * l * rho - F(2*k,7) * rho
     den = 1 + k * rho * l + 2 * k
     MW[k] = num / den
     print(f"   k={k}: entry l_k = {lk[k]}, M*W >= {MW[k]} = {float(MW[k]):.5f}")
 # junction table: G0[src][tgt] = l_tgt / (M*W)[src]
-print("   G0(src k -> tgt k) table (worst case, rho = 13):")
+print("   G0(src k -> tgt k) table (uniform worst case, rho = 1):")
 G0 = {}
 for ks in range(1, 7):
     G0[ks] = {kt: lk[kt] / MW[ks] for kt in range(1, 7)}
@@ -106,5 +110,5 @@ for _ in range(5):
 print()
 print("REDUCTION: residual families with all blocks <= 6 at G0 junctions are")
 print("LONELY (THM-955 + glue, proven constants). The dense core is exactly")
-print("the single >=7-comparable-block families -- where the 7-wall's")
-print("pair-overlap crumb (mac-mini's lane) is the one missing ingredient.")
+print("packets admitting no such prescribed <=6-block partition; identifying")
+print("that complement with one >=7 comparable block needs a separate lemma.")

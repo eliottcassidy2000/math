@@ -1,6 +1,7 @@
 (1) THE CLUSTER GAP LEMMA, exact battery:
-   400 random (k<=6, window, ratio<=200) configs: violations = 0
+   positive-bound rows = 291/400 by k = {1: 75, 2: 63, 3: 64, 4: 54, 5: 35, 6: 0}; violations = 0
    worst widest/bound ratio = 1.391 (k=1)
+   targeted positive k=6 rows = 100; violations = 0; worst ratio = 29.453
 
 (2) THE BLOCK NESTED CASCADE 6+6+1 (end-to-end exact):
    G=  60: 13 speeds (max 592,140); nested witness t = 545891/1184280; min dist = 11/120 >= 1/14: True

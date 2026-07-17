@@ -422,8 +422,9 @@ primitive proper AP-centred common-scale-four Hamming-six face.  It does not
 close any `c>=5` face, the ramified Hamming-five bank,
 non-AP-centred/deep-sheet branches, or global `n=12` sporadic emptiness.
 
-THM-958 subsequently answers the next question at `c=5`: its common-sheet bank
-is already empty.  The next scale frontier is therefore `c=6`.  The right
+THM-958 subsequently answers `c=5`, and THM-960 answers `c=6`: both
+common-sheet banks are already empty.  The next scale frontier is therefore
+`c=7`.  The right
 first question remains whether the owner-sheet obligation hypergraph contracts
 to a small signed carrier before any metric recursion is launched.
 

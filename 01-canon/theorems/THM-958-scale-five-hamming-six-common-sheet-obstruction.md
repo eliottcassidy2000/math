@@ -276,7 +276,8 @@ The decisive vertices are not runners:
   lossy even though its fingerprints are rigid.
 
 THM-958 closes only the primitive proper AP-centred common-scale-five
-Hamming-six face.  It does not close `c>=6`, the ramified Hamming-five bank,
+Hamming-six face.  THM-960 subsequently closes `c=6`; this theorem does not
+close higher scales, and the combined results do not close `c>=7`, the ramified Hamming-five bank,
 non-AP-centred/deep-sheet branches, or global `n=12` sporadic emptiness.  Since
 the common-sheet bank is empty, a scale-five metric component recursion would
 have zero roots and is unnecessary.

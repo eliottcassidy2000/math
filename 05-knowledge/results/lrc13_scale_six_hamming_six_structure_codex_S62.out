@@ -1,0 +1,20 @@
+THM-960 SCALE-SIX HAMMING-SIX AFFINE-NERVE AUDIT
+local_table={0: ((0, (12,)), (1, (10, 11)), (2, (8, 9)), (4, (6, 7)), (8, (4, 5)), (16, (2, 3)), (32, (1,))), 1: ((0, (12,)), (1, (2, 3)), (2, (4, 5)), (4, (6, 7)), (8, (8, 9)), (16, (10, 11)), (32, (1,)))}
+owner_locally_feasible_supports=64
+supports_equal_signed_doubling_C6=True
+support_multiplier_orbits=(4, 12, 12, 12, 12, 12)
+unit_contexts=4096
+per_support_owner_profile={0:16,2:48}
+owner_nerve=octahedral_graph_K6_minus_3_cycle_antipodes
+compatible_edge_witnesses=4_each_across_12_edges
+minimal_obstructions=3_opposite_pairs_plus_8_octahedral_triangles
+triangle_cycle_split=6_consecutive_plus_2_alternating
+PROFILE_VARIANTS={((0, 16), (2, 48)): 64}
+PAIR_NERVE_VARIANTS={(12, 3): 64}
+MINIMAL_OBSTRUCTION_VARIANTS={(3, 8): 64}
+tournament_joint_fingerprints=5
+tournament_scores=(1, 2, 2, 3, 3, 4)
+tournament_directed_triangles=6
+tournament_SCCs=(6,)
+tournament_sparse_flip_hist={2: 8, 3: 52, 4: 4}
+tournament_Hamilton_path_hist={29: 32, 31: 20, 37: 12}

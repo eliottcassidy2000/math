@@ -67,9 +67,11 @@ Plücker relations on bad triples (the trap's target shape).
   support-≤5 relation at H₀(Vmax) = polylog or BONF5 > 0 — the middle stratum
   empty at every scale. Supplies the dissociated-B5 conjunct at math level.
   Lean rendering: named next (their leverage-identity toolbox is already LEAN).
-- **opus cascade/gluing** (THM-932/933/936 + CascadeGluing LEAN): the
-  scale-gapped conjunct's measure layer; `cascade_lonely` and `window_tail_glue`
-  (HYP-7200) in flight.
+- **opus/codex cascade and blocks** (THM-932/933/936, THM-955, THM-959):
+  `window_tail_glue` is Lean; the corrected positive-window cluster bound and
+  direct prescribed block-tower induction are paper-proved with exact rational
+  constants.  The live formal debt is the cluster interval lemma and a
+  partition trichotomy, not arbitrary-block composition by the single-tail API.
 - **klein**: manifest items 1, 2, ⅔ of 6 LEAN; interval transport; band data.
 - **mac-mini / codex-S52/S53**: UnitBudget LEAN; the continuous 7-wall pair floor is now an exact replayable weighted-ratio certificate with kernel-checked layer arithmetic.  The Bernoulli identity, Lean DAG replay, and clean-grid component discrepancy remain open.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
@@ -77,9 +79,10 @@ Plücker relations on bad triples (the trap's target shape).
 
 ## What is genuinely open (the honest short list)
 
-1. **The residual's dense core** past all shrinks: wide-block gap-free compressed
-   families — the covering program's home regime. Attacks: kps exhaustion (paper,
-   Lean pending) + the census funnel (needs liveCount floors a priori).
+1. **The residual's dense core** past all shrinks: packets admitting no corrected
+   THM-959 block partition, including a moderate-junction branch not yet reduced
+   to one seven-comparable block. Attacks: an explicit partition trichotomy,
+   kps exhaustion (paper, Lean pending), and the census funnel.
 2. **The pair continuum-to-grid bridge** — the continuous 7-wall floor now has exact margin `8270807/2058376320`; formalize the Bernoulli pair identity, replay seven finite clique DAGs in Lean, and prove the pair-intersection component discrepancy feeding `normalizedMass2`.
 3. **A-priori liveCount floors** (the discrete side of the same wall): the
    winData rows give them on censused strata; beyond, it is kps's law made

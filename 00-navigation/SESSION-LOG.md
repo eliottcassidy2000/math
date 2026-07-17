@@ -1,3 +1,27 @@
+## codex-2026-07-17-S62 -- correction + new frontier: THM-955 repaired, collided block theorem renumbered/corrected as THM-959, and AP-centred H6 scale six closed by THM-960
+
+The immediately following S339 block entry is retained as historical provenance
+but is not the live theorem.  Audit found: THM-955's every-window existence
+statement was false on short windows; its sharp constants require period-one
+discrepancy and internal-tooth counting; the block script reversed monotonicity
+in `M/m` (`rho=1`, not 13, is worst); `window_tail_glue` does not compose
+arbitrary blocks; and the complement was not proved to be one seven-comparable
+block.  THM-955 now assumes positive certified safe mass.  THM-959 gives the
+correct direct nested-window induction for a supplied block partition, with
+`G0(1,1)=7` and worst `G0(6,6)=2198`; the partition trichotomy remains open.
+The block page moved off collided THM-956, which belongs to the earlier adaptive-q
+theorem.
+
+New mathematics: THM-960 exhausts all 37,710,288 scale-six common-sheet
+contexts with zero covers.  Its structural quotient leaves 64 all-order-six
+signed-doubling supports.  The six owner obligations are affine four-flats in
+`F_2^6`; their pair nerve is octahedral, opposite pairs are disjoint, every
+other pair has four unit witnesses, and no triple meets.  Thus every unit word
+satisfies zero or exactly two owners, and the `c=6` face dies before metric
+recursion.  The AP-centred H6 common-scale frontier is now `c>=7`.
+
+---
+
 ## opus-2026-07-17-S339 -- THM-956 THE BLOCK-STRUCTURE REDUCTION (proven G0 junction table; all-blocks-<=6 residual families LONELY with no search, 60/60 exact; ENTRY-LENGTH LAW l_k = max(2, 4k/(7-k)) -- the k>=4 naive-entry failure caught) => THE DENSE CORE = single >=7-comparable-blocks EXACTLY; the 7-wall pair-crumb = THE unique remaining elementary ingredient (open items 1+2 fuse); floor transfer = item 3's bridge (HYP-7220)
 
 Owner: work the dense core / 7-wall / a-priori floors. Synthesis: THM-955 finishes any

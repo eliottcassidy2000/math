@@ -760,7 +760,17 @@ doubling cycle plus the two alternating triples, which are the zero-provider
 SCCs.  A completed tournament retains only pair telemetry and destroys these
 decisive three-owner hyperedges.
 
-Thus `c=3`, `c=4`, and `c=5` are closed.  This does not touch `c>=6`, the finite
+THM-960 closes `c=6` before metric recursion as well.  Its literal 36-bit mask
+census exhausts `37,710,288` contexts with zero covers.  The independent
+order quotient reduces `3,002,076` rows to 64 all-order-six signed-doubling
+supports.  Each owner obligation is an affine four-flat in `F_2^6`; the pair
+nerve is octahedral, opposite flats are disjoint, every other pair meets in
+four words, and no triple meets.  Hence 16 unit words satisfy zero owners and
+48 satisfy exactly two.  The same eight cycle triples from `c=5` reappear,
+strengthened by three antipodal pair obstructions.  The completed tournament
+again sees the signed cycle but loses the decisive affine equations and nerve.
+
+Thus `c=3`, `c=4`, `c=5`, and `c=6` are closed.  This does not touch `c>=7`, the finite
 ramified H5 bank, or non-AP-centred/deep-sheet branches of the global `n=12`
 problem.
 
@@ -845,8 +855,16 @@ direct witness search.  The dense-core relation endgame also consumes the
 unconditional weighted census certificate above, so the unresolved content is
 the live-versus-deep supply theorem, not another assembly interface.  On the
 scale side, `window_tail_glue` and `norm_glue` now compose any certified base
-window with a `7/3`-nested tail; only the cluster-gap base-window lemma remains
-to make that block cascade uniform.
+window with a `7/3`-nested tail.  THM-955 now proves the cluster-gap width under
+its necessary positive-numerator hypothesis; its original unconditional wording
+and raw-tooth constant derivation were false and have been corrected.  THM-959
+then proves a direct nested induction for every supplied partition into blocks
+of size at most six, with corrected uniform junction table
+`G0(1,1)=7,...,G0(6,6)=2198`.  The original `2030` value came from reversing
+the monotonicity in `M/m`, and the old claim that the complement is exactly one
+seven-comparable block has been withdrawn.  What remains is the partition
+trichotomy for packets admitting no corrected block tower and the Lean proof of
+the positive-window cluster lemma—not the gluing operation.
 
 LEM-034 and LEM-035 independently refine the boundary side of the same state.
 Endpoint classes adjacent to a section have forced signs, while class-zero

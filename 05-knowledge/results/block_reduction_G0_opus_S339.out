@@ -1,30 +1,31 @@
+THM-959 CORRECTED PRESCRIBED BLOCK-TOWER REDUCTION
 (1) THE PROVEN JUNCTION CONSTANT (worst 2/(M*W) over shapes):
-   k=1: entry l_k = 2, M*W >= 130/203 = 0.64039
-   k=2: entry l_k = 2, M*W >= 26/133 = 0.19549
-   k=3: entry l_k = 3, M*W >= 39/434 = 0.08986
-   k=4: entry l_k = 16/3, M*W >= 312/6013 = 0.05189
-   k=5: entry l_k = 10, M*W >= 130/4627 = 0.02810
-   k=6: entry l_k = 24, M*W >= 12/1015 = 0.01182
-   G0(src k -> tgt k) table (worst case, rho = 13):
-     src k=1: ->k1:      3.1  ->k2:      3.1  ->k3:      4.7  ->k4:      8.3  ->k5:     15.6  ->k6:     37.5
-     src k=2: ->k1:     10.2  ->k2:     10.2  ->k3:     15.3  ->k4:     27.3  ->k5:     51.2  ->k6:    122.8
-     src k=3: ->k1:     22.3  ->k2:     22.3  ->k3:     33.4  ->k4:     59.4  ->k5:    111.3  ->k6:    267.1
-     src k=4: ->k1:     38.5  ->k2:     38.5  ->k3:     57.8  ->k4:    102.8  ->k5:    192.7  ->k6:    462.5
-     src k=5: ->k1:     71.2  ->k2:     71.2  ->k3:    106.8  ->k4:    189.8  ->k5:    355.9  ->k6:    854.2
-     src k=6: ->k1:    169.2  ->k2:    169.2  ->k3:    253.8  ->k4:    451.1  ->k5:    845.8  ->k6:   2030.0
+   k=1: entry l_k = 2, M*W >= 2/7 = 0.28571
+   k=2: entry l_k = 2, M*W >= 2/21 = 0.09524
+   k=3: entry l_k = 3, M*W >= 3/56 = 0.05357
+   k=4: entry l_k = 16/3, M*W >= 24/637 = 0.03768
+   k=5: entry l_k = 10, M*W >= 10/427 = 0.02342
+   k=6: entry l_k = 24, M*W >= 12/1099 = 0.01092
+   G0(src k -> tgt k) table (uniform worst case, rho = 1):
+     src k=1: ->k1:      7.0  ->k2:      7.0  ->k3:     10.5  ->k4:     18.7  ->k5:     35.0  ->k6:     84.0
+     src k=2: ->k1:     21.0  ->k2:     21.0  ->k3:     31.5  ->k4:     56.0  ->k5:    105.0  ->k6:    252.0
+     src k=3: ->k1:     37.3  ->k2:     37.3  ->k3:     56.0  ->k4:     99.6  ->k5:    186.7  ->k6:    448.0
+     src k=4: ->k1:     53.1  ->k2:     53.1  ->k3:     79.6  ->k4:    141.6  ->k5:    265.4  ->k6:    637.0
+     src k=5: ->k1:     85.4  ->k2:     85.4  ->k3:    128.1  ->k4:    227.7  ->k5:    427.0  ->k6:   1024.8
+     src k=6: ->k1:    183.2  ->k2:    183.2  ->k3:    274.8  ->k4:    488.4  ->k5:    915.8  ->k6:   2198.0
 
 (2) END-TO-END exact verification: towers with proven-G0 junctions:
    60/60 towers lonely with exact witnesses at proven G0 junctions
 
 (3) THE FLOOR TRANSFER (item-3 bridge, exact): width delta in a window
     => >= ceil(delta*D) - 1 points of any 1/D-grid inside it:
-   delta=0.02379 D= 3457: grid pts = 82, floor bound = 82, holds: True
-   delta=0.01090 D= 3961: grid pts = 43, floor bound = 43, holds: True
-   delta=0.03171 D= 2866: grid pts = 91, floor bound = 90, holds: True
-   delta=0.03766 D= 2503: grid pts = 94, floor bound = 94, holds: True
-   delta=0.00991 D= 2184: grid pts = 21, floor bound = 21, holds: True
+   delta=0.00396 D= 3481: grid pts = 14, floor bound = 13, holds: True
+   delta=0.02577 D=  219: grid pts = 6, floor bound = 5, holds: True
+   delta=0.01090 D= 2540: grid pts = 28, floor bound = 27, holds: True
+   delta=0.01487 D= 3440: grid pts = 51, floor bound = 51, holds: True
+   delta=0.00793 D= 3283: grid pts = 26, floor bound = 26, holds: True
 
 REDUCTION: residual families with all blocks <= 6 at G0 junctions are
 LONELY (THM-955 + glue, proven constants). The dense core is exactly
-the single >=7-comparable-block families -- where the 7-wall's
-pair-overlap crumb (mac-mini's lane) is the one missing ingredient.
+packets admitting no such prescribed <=6-block partition; identifying
+that complement with one >=7 comparable block needs a separate lemma.

@@ -1,0 +1,62 @@
+THM-960 SCALE-SIX HAMMING-SIX COMMON-SHEET EXHAUSTION
+admissible state words 40812
+admissible order words 3249
+order contexts 3002076
+capacity order contexts 5838
+owner-locally-feasible order contexts 64
+tested 37710288
+survived 0
+surviving label sets 0
+patterns
+1,1,1,1,6,6 tested=55440 survived=0 order_contexts=13860 capacity=0 owner_local=0
+1,1,1,2,3,6 tested=443520 survived=0 order_contexts=110880 capacity=0 owner_local=0
+1,1,1,2,6,6 tested=221760 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,1,1,3,6,6 tested=443520 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,1,1,6,6,6 tested=147840 survived=0 order_contexts=18480 capacity=0 owner_local=0
+1,1,2,2,3,3 tested=332640 survived=0 order_contexts=83160 capacity=0 owner_local=0
+1,1,2,2,3,6 tested=665280 survived=0 order_contexts=166320 capacity=0 owner_local=0
+1,1,2,2,6,6 tested=332640 survived=0 order_contexts=83160 capacity=0 owner_local=0
+1,1,2,3,3,6 tested=1330560 survived=0 order_contexts=166320 capacity=0 owner_local=0
+1,1,2,3,6,6 tested=1330560 survived=0 order_contexts=166320 capacity=0 owner_local=0
+1,1,2,6,6,6 tested=443520 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,1,3,3,6,6 tested=1330560 survived=0 order_contexts=83160 capacity=0 owner_local=0
+1,1,3,6,6,6 tested=887040 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,1,6,6,6,6 tested=221760 survived=0 order_contexts=13860 capacity=0 owner_local=0
+1,2,2,2,3,3 tested=221760 survived=0 order_contexts=55440 capacity=84 owner_local=0
+1,2,2,2,3,6 tested=443520 survived=0 order_contexts=110880 capacity=1008 owner_local=0
+1,2,2,2,6,6 tested=221760 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,2,2,3,3,3 tested=443520 survived=0 order_contexts=55440 capacity=336 owner_local=0
+1,2,2,3,3,6 tested=1330560 survived=0 order_contexts=166320 capacity=0 owner_local=0
+1,2,2,3,6,6 tested=1330560 survived=0 order_contexts=166320 capacity=0 owner_local=0
+1,2,2,6,6,6 tested=443520 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,2,3,3,3,6 tested=1774080 survived=0 order_contexts=110880 capacity=0 owner_local=0
+1,2,3,3,6,6 tested=2661120 survived=0 order_contexts=166320 capacity=168 owner_local=0
+1,2,3,6,6,6 tested=1774080 survived=0 order_contexts=110880 capacity=0 owner_local=0
+1,2,6,6,6,6 tested=443520 survived=0 order_contexts=27720 capacity=0 owner_local=0
+1,3,3,3,6,6 tested=1774080 survived=0 order_contexts=55440 capacity=168 owner_local=0
+1,3,3,6,6,6 tested=1774080 survived=0 order_contexts=55440 capacity=0 owner_local=0
+1,3,6,6,6,6 tested=887040 survived=0 order_contexts=27720 capacity=0 owner_local=0
+1,6,6,6,6,6 tested=177408 survived=0 order_contexts=5544 capacity=0 owner_local=0
+2,2,2,2,3,3 tested=55440 survived=0 order_contexts=13860 capacity=30 owner_local=0
+2,2,2,2,3,6 tested=110880 survived=0 order_contexts=27720 capacity=324 owner_local=0
+2,2,2,2,6,6 tested=55440 survived=0 order_contexts=13860 capacity=0 owner_local=0
+2,2,2,3,3,3 tested=147840 survived=0 order_contexts=18480 capacity=108 owner_local=0
+2,2,2,3,3,6 tested=443520 survived=0 order_contexts=55440 capacity=348 owner_local=0
+2,2,2,3,6,6 tested=443520 survived=0 order_contexts=55440 capacity=0 owner_local=0
+2,2,2,6,6,6 tested=147840 survived=0 order_contexts=18480 capacity=680 owner_local=0
+2,2,3,3,3,3 tested=221760 survived=0 order_contexts=13860 capacity=90 owner_local=0
+2,2,3,3,3,6 tested=887040 survived=0 order_contexts=55440 capacity=144 owner_local=0
+2,2,3,3,6,6 tested=1330560 survived=0 order_contexts=83160 capacity=192 owner_local=0
+2,2,3,6,6,6 tested=887040 survived=0 order_contexts=55440 capacity=96 owner_local=0
+2,2,6,6,6,6 tested=221760 survived=0 order_contexts=13860 capacity=36 owner_local=0
+2,3,3,3,3,6 tested=887040 survived=0 order_contexts=27720 capacity=0 owner_local=0
+2,3,3,3,6,6 tested=1774080 survived=0 order_contexts=55440 capacity=756 owner_local=0
+2,3,3,6,6,6 tested=1774080 survived=0 order_contexts=55440 capacity=48 owner_local=0
+2,3,6,6,6,6 tested=887040 survived=0 order_contexts=27720 capacity=192 owner_local=0
+2,6,6,6,6,6 tested=177408 survived=0 order_contexts=5544 capacity=0 owner_local=0
+3,3,3,3,6,6 tested=887040 survived=0 order_contexts=13860 capacity=612 owner_local=0
+3,3,3,6,6,6 tested=1182720 survived=0 order_contexts=18480 capacity=12 owner_local=0
+3,3,6,6,6,6 tested=887040 survived=0 order_contexts=13860 capacity=342 owner_local=0
+3,6,6,6,6,6 tested=354816 survived=0 order_contexts=5544 capacity=0 owner_local=0
+6,6,6,6,6,6 tested=59136 survived=0 order_contexts=924 capacity=64 owner_local=64
+label multiplicity histogram

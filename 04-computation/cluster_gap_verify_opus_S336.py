@@ -1,6 +1,7 @@
 # opus-2026-07-17-S336 -- HYP-7190 part 2: THE CLUSTER GAP LEMMA (exact).
-# Any k <= 6 positive speeds B leave, inside EVERY window [a,b], a safe
-# subinterval (all ||w t|| >= 1/14) of width
+# Whenever the displayed numerator is positive, any k <= 6 positive speeds B
+# leave, inside the window [a,b], a safe subinterval
+# (all ||w t|| >= 1/14) of width
 #   delta >= [ (1 - k/7)(b-a) - k/(7 m) ] / (1 + k + (b-a) * Sum_B x)
 # (union bound on covered measure + pigeonhole on <= 1 + k + (b-a)Sum x
 # components).  This powers the BLOCK nested cascade: junctions of ratio
@@ -30,6 +31,8 @@ random.seed(3360)
 print("(1) THE CLUSTER GAP LEMMA, exact battery:")
 worst = None
 viol = 0
+positive = 0
+positive_by_k = {k: 0 for k in range(1, 7)}
 for trial in range(400):
     k = random.randint(1, 6)
     m = random.randint(2, 400)
@@ -43,13 +46,42 @@ for trial in range(400):
     widest = max((hi - lo for lo, hi in V), default=F(0))
     Sx = sum(B)
     bound = (F(7 - k, 7) * L - F(k, 7 * B[0])) / (1 + k + L * Sx)
-    ok = widest >= bound
-    if not ok: viol += 1
+    # A nonpositive bound makes no existence claim; audit only theorem rows.
+    if bound > 0:
+        positive += 1
+        positive_by_k[k] += 1
+        if widest < bound:
+            viol += 1
     r = float(widest / bound) if bound > 0 else float('inf')
     if bound > 0 and (worst is None or r < worst[0]):
         worst = (r, k, B[:3], float(L))
-print(f"   400 random (k<=6, window, ratio<=200) configs: violations = {viol}")
+print(f"   positive-bound rows = {positive}/400 by k = {positive_by_k}; violations = {viol}")
 print(f"   worst widest/bound ratio = {worst[0]:.3f} (k={worst[1]})")
+
+# The original length range has no positive k=6 row.  Force B[0]=m and
+# mL>6, the exact positivity threshold for k=6, to exercise that boundary.
+rng6 = random.Random(3361)
+k6_viol = 0
+k6_worst = None
+for _ in range(100):
+    m = rng6.randint(2, 400)
+    rho = rng6.choice([2, 5, 13, 50, 200])
+    B = [m] + sorted(rng6.sample(range(m + 1, max(m + 6, m * rho)), 5))
+    a = F(rng6.randint(0, 1000), 1009)
+    L = F(rng6.randint(43, 84), 7 * m)
+    V = [(a, a + L)]
+    for x in B:
+        V = subtract_comb(V, x)
+    widest = max((hi - lo for lo, hi in V), default=F(0))
+    bound = (F(1, 7) * L - F(6, 7 * m)) / (7 + L * sum(B))
+    assert bound > 0
+    if widest < bound:
+        k6_viol += 1
+    ratio = float(widest / bound)
+    if k6_worst is None or ratio < k6_worst:
+        k6_worst = ratio
+print(f"   targeted positive k=6 rows = 100; violations = {k6_viol}; "
+      f"worst ratio = {k6_worst:.3f}")
 
 print()
 print("(2) THE BLOCK NESTED CASCADE 6+6+1 (end-to-end exact):")

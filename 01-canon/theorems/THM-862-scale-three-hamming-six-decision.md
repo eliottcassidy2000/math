@@ -1,10 +1,10 @@
 ---
 id: THM-862
 title: Scale-three Hamming-six common-sheet classification and exact terminal closure
-status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts with exact affine toothpick codes; the complete no-height-cutoff metric recursion visits 950,540,566 candidate edges, finds zero covering terminals and two certified nonempty terminals, and therefore closes every primitive proper AP-centred c=3 Hamming-six packet as strictly loose. This theorem closes only that face; the subsequent THM-957 and THM-958 close c=4 and c=5, while c>=6, H5 ramification, non-AP-centred/deep-sheet branches, and global n=12 sporadic emptiness remain open.
+status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts with exact affine toothpick codes; the complete no-height-cutoff metric recursion visits 950,540,566 candidate edges, finds zero covering terminals and two certified nonempty terminals, and therefore closes every primitive proper AP-centred c=3 Hamming-six packet as strictly loose. This theorem closes only that face; the subsequent THM-957, THM-958, and THM-960 close c=4, c=5, and c=6, while c>=7, H5 ramification, non-AP-centred/deep-sheet branches, and global n=12 sporadic emptiness remain open.
 source: codex-2026-07-15-S15/S16 c=3 transport audit; terminal closure codex-2026-07-17-S57
 depends_on: [THM-810, THM-815, THM-823, THM-857, THM-859, THM-860, THM-861]
-related: [THM-844, THM-847, THM-858, THM-957, THM-958, HYP-6820]
+related: [THM-844, THM-847, THM-858, THM-957, THM-958, THM-960, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.py
   - 05-knowledge/results/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.out
@@ -835,8 +835,8 @@ This theorem proves the complete primitive `c=3` **common-sheet**
 classification, the affine unit codes, the exact sheet orbit bank, both cached
 prefix layers, and the full terminal recursion over all `1,504` arithmetic
 languages.  It closes the primitive proper AP-centred Hamming-six face at
-common scale three.  THM-957 and THM-958 separately close `c=4` and `c=5`.
-This theorem does **not** close `c>=6`, the finite smooth-ramified Hamming-five bank, radius seven
+common scale three.  THM-957, THM-958, and THM-960 separately close `c=4`,
+`c=5`, and `c=6`.  This theorem does **not** close `c>=7`, the finite smooth-ramified Hamming-five bank, radius seven
 and higher, non-AP-centred/deep-sheet packets, or global `n=12`
 sporadic-branch emptiness.
 
