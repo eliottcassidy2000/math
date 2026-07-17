@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S50 -- THE 42x J-REFINEMENT DONE: J = N(7-N) as ONE BV function with universal jump bound |Delta J| <= 12 (range {0,6,10,12}, one line; census-corrected my in-head 8 -- coincident movers) => W0(9) <= 40 diam PROVED (from 140); THE LEDGER'S CONSTANTS ARE ALL FINAL: (3.17, 40, 2.70, 2.27, 1.74, 1.08) diam. Endgame remaining: codex's K6 formula + the manifest
+
+Prompt (owner): the 42x J-refinement; many little tasks; close the endgame.
+
+The refinement is the telescoping the crude bound ignored: instead of 42 separate pair-measures, J is one bounded-variation functional whose endpoint weights are its jumps -- and the jump bound is a range statement (J only takes four values), giving the layer-split reduction to the +-1 theorem in one line. The census kept the constant honest (coincident section boundaries defeat the naive +-1-mover count; 12 is universal). With this, every number in the propagation ledger is final and proved; the LRC(14) endgame is [one formula from codex] + [the ten-item formalization manifest + v2] -- nothing else remains anywhere in the program.
+
+FILES: referee page (J-refinement closed), HYP-7107, session log. -> all; codex (yours is the last formula). boxeph; S50.
+
+---
 ## boxeph-2026-07-16-S49 -- V4 REFUTED (22-1072x): THE CERTIFICATE LINE CLOSES AT ITS HONEST BOUNDARY -- the cross-slack is NEAR-ORTHOGONALITY (signed cancellation of k-hat-weighted inner products between owners' comb-concentrated spectra), invisible to every absolute bound; v2 (1.8-51x) is the final instrument of record; the manifest finalized (formalize v2 + ten items; v3/v4 excluded with mechanisms). The absolute-vs-signed frontier of the original Q_s story reproduces one level down -- the week's deepest recursion, and its fitting last theorem-shaped fact
 
 Prompt (owner): v4; remaining statements; formalization into best possible state.

@@ -23,12 +23,16 @@ row margins. Do those margins guard exactly the functional the Error bounds?
    pair box-hit measures. Each such measure is a Boolean section set with owned
    endpoints (THM-881 P1 is universal), so THM-727's endpoint reduction applies
    VERBATIM per pair: |J(E′∪w) − J_∞(E′)| ≤ Σ_pairs |S_pair|/w ≤ 42·(the uniform
-   |U|-bound)/w. HONEST CONSTANT: the crude pair-count inflation gives
-   W₀(9) ≤ 42 × 3.33·diam ≈ 140·diam for the J-lane (still finite, still band-coverable
-   in principle); the named refinement is the shared-endpoint cancellation across the
-   42 pairs (the pairs tile the same breakpoint set — the true constant is plausibly
-   the original 3.33). THE LEDGER IS NOW FULLY CITED: every row's consumption semantics
-   verified, k = 9 with the crude-vs-refined constant flagged.
+   |U|-bound)/w. REFINED CONSTANT (S50, the 42× refinement DONE): treat J = N(7−N) as ONE
+   BV function — its far-perturbation is ONE endpoint sum whose integer weights are the
+   jumps ΔJ, and since J takes values only in {0, 6, 10, 12} (N = 0..7 ↦ N(7−N)),
+   every jump satisfies |ΔJ| ≤ 12 UNIVERSALLY (one line; jump census confirms: maxima
+   10/6/12/10 across the battery, coincident movers included). Splitting the weight-12
+   signed measure into ≤ 12 unit layers, klein's ±1 uniform theorem applies per layer:
+   Error_J ≤ 12·0.2729·diam/w ⟹ **W₀(9) ≤ 40·diam** — a 3.5× proved improvement over
+   the crude 140·diam (the further push toward 3.33 needs the layers' joint cancellation
+   — optional). THE LEDGER IS FULLY CITED with all constants final: W₀ =
+   (3.17, 40[J-lane], 2.70, 2.27, 1.74, 1.08)·diam for k = 8..13.
 4. The D3 tails (k = 11..13) are diameter-tail statements about the CLUSTER only (no
    far element in their hypotheses) — the far element enters them through the same base
    perturbation; no separate consumption issue. ✓
