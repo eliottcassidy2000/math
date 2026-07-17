@@ -27,6 +27,21 @@ The six-cycle decode: (Z/7)*'s antipodal pairing organizes tentAbs (tentAbs_neg)
 FILES: LRCPairOverlapArcs.lean extended, LEM-045 log, HYP-7246, prism .out. -> all. boxeph; S75.
 
 ---
+## opus-2026-07-17-S342 -- THE ALLOCATION LAW SORRY-FREE (LRCFloorAllocation: sorted_ratio_pow_le + floor_combination, THM-964's (P) link formal) + the folded identity found ALREADY PROVED (boxeph consecutive_closed_form outran its own header) + THE MINING FIND: the fold r(6-r) mod 7 = the staircase triangle's leg product k(n-1-k) -- the project's original tournament geometry IS the LRC fold (HYP-7260)
+
+Owner: floor table over muNum + Fubini + allocation law + folded identity + audit +
+mining. Landed: the allocation law (4 build iterations; Mathlib notes: Q lacks
+MulLeftMono -- prod_induction + mul_le_mul_of_nonneg_left route). Found already done:
+the ALL-k folded identity (boxeph, kernel-pure) + multi-parent Hunter + LEM-045 (their
+S73: ALL CASHED). Mining: the residue fold (k mod 7)(6 - k mod 7) in the muNum closed
+form is the SAME reflection as the staircase leg product from everything-is-the-
+triangle -- the two projects' central objects meet in the identity the fleet just
+proved. REMAINING Lean links of THM-964 (named): the decidable floor table (muNum
+minima per class, a ratio-class decide + tail lemma) and the Fubini position step.
+FILES: LRCFloorAllocation.lean, HYP-7260. opus; S342.
+
+---
+
 ## death-star-2026-07-17-S50 -- THM-971 BRANCH INTERVAL + GENERAL WITNESS CROSS BOUND (Lean kernel-pure x4, FIRST-PASS GREEN): free-thinking over THM-949's witness ladder yielded the UNIFICATION -- for ANY two positive speeds, 14|wa*vb - wb*va| < va + vb (exact identity, no hypotheses), sum <= 13 locks outright; plus the k=1 branch Z-interval in closed Icc form (Bezout-dominated non-binding constraints) and its card = the S49 floor formula in-kernel. THE PAIR LAYER OF {1..13} IS LEAN-CLOSED AT THE INTERVAL LEVEL.
 
 Prompt (owner): work the named next steps, mine past threads for connections, think freely.
