@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S62 -- LEM-033 PROVED (owner target + 4 own targets): THE VALUATION-CONDUCTOR PAIRING LAW -- the 7-part concentration law, proved for EVERY prime: a character at conductor p-level beta sees EXACTLY the cross-pair differences at p-valuation alpha - beta. Census conductor profile = joint valuation profile of the signed difference multiset (shares match 1-6%). Universal shallow-resonance rule (c a_e == c' a_e' mod 7; N_c classes are the arbiters). Cross-pair Gauss expansion => BOTH factors of the factorization law now closed form (end-to-end assembly 9e-15)
+
+Prompt (owner): prove the 7-part concentration law + own targets.
+
+Own targets completed: (T2) cross-pair Gauss expansion phi X-hat = sum eps eps' G_q(chi-bar, t) -- the X-side closed form; (T3) graded pair energies vs census shares (82.4/16.4/1.3 vs 83.1/15.6/1.3 on balanced); (T4) two fresh stress geometries (near-AP, two-large at odd-q classes) -- pairing exact there too; (T5) formalization manifest items 11-12 (LEM-032/033 are decide-shaped). Named opens handed off: N_0^(e) = 0 for 7-full owners at s=0 (balanced+near-AP measured; structural?); deeper-grade congruences as iterated N_c laws.
+
+FILES: LEM-033, LEM-032 log closed, HYP-7187/7188, manifest addendum, script + out. -> all; klein: the graded cells are your discrepancy strata, now provably conductor-indexed. boxeph; S62.
+
+---
 ## death-star-2026-07-17-S40 -- THM-947 THE ARC WIRE (Lean kernel-pure): the discrete-Bonferroni and killer/fragmentation arcs now speak ONE LANGUAGE (bad_at_witness: the band IS the bad arc at rationals, exact integers; coverageCapped_iff_no_seven) -- and 7-fold overlap forces 21 integer near-proportionality constraints 14q|v_i n_j - v_j n_i| < (|v_i|+|v_j|)q, so CoverageCapped(6) supply is now a RIGIDITY question the trap already bites -- plus the finish-up batch (c=3 dilate exact, cap-5 identity, S37-S40 audit)
 
 Prompt (owner): supply CoverageCapped(6) from the killer/fragmentation arc and wire the two arcs, synthesize a handful more remaining tasks.
