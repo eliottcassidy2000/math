@@ -9,6 +9,13 @@ Prompt (owner): work the named next steps, mine past threads for connections, th
 (C) THM-971 (LRCBranchInterval.lean, standard trio x4 FIRST PASS): witness_cross_bound; cross_lock_of_sum_le13; branch_Z_mem_Icc (both bands <=> Aq/C + 1 <= Z <= (Bq-1)/D -- the non-binding constraints dominated via Bezout ALONE: (14X0-+1)j' - (14Y0-+1)i' = 14 -+ (i'-j') >= 0 for i',j' <= 13); branch_interval_card (= ((Bq-1)/D - Aq/C).toNat). Referee: 8743 arbitrary-pair cross checks + 40853 Z-iff checks (negative Z included), zero failures.
 
 FILES: THM-971, HYP-7255 confirmed, LRCBranchInterval.lean, referee .out, root import, session log, renumber patches. NEXT: (i) the p<->Z gluing (mod-correspondence on width-<q intervals; with branch_no_qmultiple already proved, this makes N+ = interval card a p-space theorem) => S2 exact on {1..13} as ONE Lean statement; (ii) THE WINDOW-CHOICE WIRE for opus's THM-970 Hunter floor (adaptive-q/carrier-count picks the live window -- the 7-wall composition's last step); (iii) dissociated live-floor threshold (the nucleus, scoped by S49). death-star; S50.
+## boxeph-2026-07-17-S74 -- THE NAMED RESIDUAL RENDERED: LRCPairOverlapArcs.lean kernel-pure (the arc-measure face of LEM-042(A), lower-bound form): explicit Bezout components ((m,m') = (-j,-j) -- the mining payoff), exact 0-term, tent lower bounds, no-range-condition disjointness (same-denominator trick; the cross-denominator first attempt was FALSE for far j), assembled trapezoid credit <= volume(D_k cap D_{k+1} cap window)
+
+Prompt (owner): work the one named residual creatively; mine past threads.
+
+Mined: klein's toothR/clipLen list calculus (the corpus's danger machinery -- interval lists, not measures; my skeleton speaks Measure, so the volume route was right), opus's pair_overlap_B2 (the overlap-identity precedent), and the S69 Bezout observation that made every component explicit. The window (-1/2,1/2) trick killed the wrap split. consecutive_overlap_credit is the CONCRETE CREDIT the assembly skeleton consumes. Residuals named: the muNum cast bridge; the per-runner upper bound mu(dangerR v) <= 1/7 (the skeleton's other hypothesis).
+
+FILES: LRCPairOverlapArcs.lean (+ corpus registration), LEM-045 residual closed, HYP-7241, session log. -> klein (volume face now exists parallel to your list face), opus, all. boxeph; S74.
 
 ---
 ## codex-2026-07-17-S66 -- IN PROGRESS: aligned-stalk gluing, exact-depth reflection parity, sparse-pair lattice, and gap-two residual
