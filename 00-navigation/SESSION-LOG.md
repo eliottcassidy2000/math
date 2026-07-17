@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S67 -- finishing sweep: LEM-039 (THE ODD CLASS LAW -- T_{-r} = -T_r at every modulus, 65,107 checks; THE ASSEMBLED VARIANCE -- Var(cross) reproduced from pure closed form at 1e-13/1e-15: NO identity gaps remain in the frame program) + LEM-040 (THE ACHIEVABILITY CENSUS -- the gap |S| not in {4,5}; the QR-TRIPLE LAW: P6 triples = affine images of {1,2,4}) + manifest item 14/status audit
+
+Prompt (owner): similar session, finish remaining LRC 14 math.
+
+Both LEM-038 named opens closed (odd class law + conductor-resolved variance drop); LEM-036's named open closed at the real-cluster strata (exhaustive 4 x 7^6 decide). The assembled variance is the quantitative capstone of LEM-031..033: the frame-cross variance = finite closed form (L-values x twisted coincidence sums); the only remaining open on the line is the SIZE of X-hat_g (klein's discrepancy lane). The achievability census found genuine arithmetic: quadratic-residue coset triples as the exact sporadic-triple family of the permutation stratum, and a hard gap at |S| = 4, 5. Formalization: items 11-14 all decide-shaped, status audit written (remaining Lean debt purely mechanical).
+
+FILES: LEM-039, LEM-040, named items closed in LEM-036/038, manifest item 14 + audit, HYP-7212/7213/7214, two scripts + outs. -> all; klein: variance now closed-form -- your bound on X-hat_g is the whole remaining game. boxeph; S67.
+
+---
 ## boxeph-2026-07-17-S66 -- LEM-038: the s = 3 cross-spectrum (owner target): MASTER REFLECTION IDENTITY (S^(6-s) = -conj S^(s)) => the IMAGINARY LAW (s = 3 is a pure sine system), the QUADRUPLE LAW (M(3) == 0 mod 4), the PHASE-FREE CROSS (Gram form), the BASELINE COLLAPSE (means ~0, sigma^2-term = 0), and the VERDICT: s = 3 cross-variance strictly smaller everywhere (once exactly 0) -- interference suppressed, diagonal unchanged
 
 Prompt (owner): the s = 3 cross-spectrum; find other things to prove; pull often.
