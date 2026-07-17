@@ -1,3 +1,18 @@
+## death-star-2026-07-17-S48 -- THM-963 THE RATIONAL-RATIO LOCK (Lean kernel-pure x5): reduced ratio i'+j' <= 13 locks witnesses on the Bezout ray j'*w_a = i'*w_b; <= 3 branches through i'+j' <= 27 (ALL 78 pairs of {1..13}); witness-mod bridge; exact pair count 2*floor((q-1)/(14*max(i',j'))) -- 49/78 pairs of the canonical family CLOSED FORM; the discrete face of boxeph LEM-044's mu-law, both faces kernel-pure the same session (their LRCTreeHunter.lean landed mid-session)
+
+Prompt (owner): work the named next steps in tandem with other agents, pull often during computations/builds and sharpen targets.
+
+(A) TANDEM SHARPENING: opening pull surfaced boxeph LEM-044 (consecutive closed form mu(D_k cap D_{k+1}) = 1/49 + r(6-r)/(49k(k+1)), edge cap 1/14 at reduced (1,2), tree-hunter ceiling c <= 12). Recognized it as the CONTINUOUS LIMIT of my S47 discrete law -- checked k=2 -> 1/21, k=3 -> 1/28 match exactly -- and sharpened the S47 named next step (non-chain subsets) into THE RATIONAL-RATIO LOCK: the right generalization is reduced rational ratios, not integer ratios.
+
+(B) THM-963 (LRCRationalLock.lean, standard trio x5): rational_lock (i'+j' <= 13; exact identity j'*X_a - i'*X_b = (i'w_b - j'w_a)q + strict triangle; THM-960 = case i'=1); rational_branch_bound (i'+j' <= 27 => |j'w_a - i'w_b| <= 1: at most 3 branches; max over {1..13} pairs is 25); witness_mod_bridge (only s in {floor, floor+1} can win the strict band -- retro-closes the witness<->mod gap in THM-961); rational_pair_fail_iff (gcd(i',j')=1: joint fail <=> GCD-speed narrow band at max(i',j')); rational_pair_count (= 2*floor((q-1)/(14*max)) at gcd(g,q)=1, composing THM-961's transport + count).
+
+(C) LEDGER STATUS: pair layer on {1..13}: 49/78 locked pairs CLOSED FORM; 29 sparse pairs are <= 3-branch (k = 0 locked ray + k = +-1 Bezout branches). Recon (rationallock_recon_deathstar_S48.out): lock 3958/3958 PASS, branches 7469/7469 PASS, count exact on 461 (pair, q) cases, bridge table k=2..8 matches boxeph mu including the 7|k zero-excess boundary = the locked/sparse boundary k <= 6.
+
+(D) LEAN CRAFT: linear_combination sign is -this when the key identity is derived by moving the relation across; open Classical in must precede the DOCSTRING, not sit between docstring and theorem; simp-after-closing-rw = No goals error.
+
+FILES: THM-963, HYP-7240 confirmed, LRCRationalLock.lean, recon .py/.out, root import, session log. NEXT: (i) SPARSE-BRANCH COUNTS: each k = +-1 Bezout branch is another AP-instant family -- count = floor-form via the same bridge machinery; closes the FULL pair layer of {1..13}; (ii) triple layer: divisor chains covered by chain iff; mixed triples need the 2D branch lattice; (iii) assemble S2 = sum over 78 pairs in closed form => the B5 pair term EXACT on the canonical family => the live floor with explicit q-threshold (the nucleus, now within reach on canonical strata). death-star; S48.
+
+---
 ## boxeph-2026-07-17-S72 -- FORMALIZATION LANDED: LRCTreeHunter.lean (kernel-pure, corpus-registered, 8475 jobs green): tree_hunter_add_le (Hunter over ARBITRARY parent-pointer spanning trees -- subsumes klein's path + star as one-line corollaries; the formal engine of the c <= 12 route) + consecutive_form_upto_63 (LEM-044 closed form in-kernel, two full residue periods) + window7_unique_zero (the c = 8 pigeonhole)
 
 Prompt (owner): keep working remaining LRC 14 math, then formalization.
