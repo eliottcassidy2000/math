@@ -1,0 +1,37 @@
+THE SPORADIC CLASSIFICATION -- LEM-036 referee (boxeph S65)
+==============================================================================
+  [family56] e=56 (m=8): columns by |S_r| {0:7, 6:1}; full columns [(1, 0)]; survivors 6 (= census 6)
+  [family63] e=63 (m=9): columns by |S_r| {0:8, 6:1}; full columns [(1, 0)]; survivors 6 (= census 6)
+  [family70] e=70 (m=10): columns by |S_r| {0:9, 6:1}; full columns [(1, 0)]; survivors 6 (= census 6)
+  [family77] e=77 (m=11): columns by |S_r| {0:9, 1:1, 6:1}; full columns [(1, 0)]; survivors 7 (= census 7)
+      SPORADIC r=9: S_r = [5]; o = [0, 1, 2, 3, 4, 4]
+  [family84] e=84 (m=12): columns by |S_r| {0:9, 1:1, 6:2}; full columns [(1, 0), (2, 0)]; survivors 13 (= census 13)
+      SPORADIC r=10: S_r = [5]; o = [0, 1, 2, 3, 4, 4]
+  [family91] e=91 (m=13): columns by |S_r| {0:11, 6:2}; full columns [(1, 0), (2, 0)]; survivors 12 (= census 12)
+  [family98] e=98 (m=14): columns by |S_r| {0:12, 6:2}; full columns [(1, 0), (2, 0)]; survivors 12 (= census 12)
+  [family105] e=105 (m=15): columns by |S_r| {0:13, 6:2}; full columns [(1, 0), (2, 0)]; survivors 12 (= census 12)
+  [balanced] e=21 (m=3): columns by |S_r| {0:2, 1:1}; full columns NONE; survivors 1 (= census 1)
+      SPORADIC r=2: S_r = [3]; o = [0, 2, 6, 4, 5, 2]; constant coords [(28, 4), (35, 2)]
+  [balanced] e=28 (m=4): columns by |S_r| {0:4}; full columns NONE; survivors 0 (= census 0)
+  [balanced] e=35 (m=5): columns by |S_r| {0:4, 1:1}; full columns NONE; survivors 1 (= census 1)
+      SPORADIC r=2: S_r = [4]; o = [4, 5, 0, 1, 4, 4]; constant coords [(21, 1), (28, 4)]
+  [near-AP] e=14 (m=2): columns by |S_r| {0:1, 1:1}; full columns NONE; survivors 1 (= census 1)
+      SPORADIC r=0: S_r = [6]; o = [6, 6, 6, 6, 6, 6]
+  [two-large] e=56 (m=8): columns by |S_r| {0:4, 1:3, 2:1}; full columns NONE; survivors 5 (= census 5)
+      SPORADIC r=0: S_r = [6]; o = [6, 6, 6, 6, 6, 6]; constant coords [(84, 6)]
+      SPORADIC r=1: S_r = [1, 4]; o = [0, 0, 0, 0, 0, 3]; constant coords [(84, 3)]
+      SPORADIC r=3: S_r = [1]; o = [0, 0, 1, 1, 1, 3]; constant coords [(84, 3)]
+      SPORADIC r=7: S_r = [5]; o = [0, 1, 2, 3, 4, 3]; constant coords [(84, 3)]
+  [two-large] e=84 (m=12): columns by |S_r| {0:6, 1:4, 2:2}; full columns NONE; survivors 8 (= census 8)
+      SPORADIC r=0: S_r = [6]; o = [6, 6, 6, 6, 6, 6]; constant coords [(56, 6)]
+      SPORADIC r=1: S_r = [1, 3]; o = [0, 0, 0, 0, 0, 4]; constant coords [(56, 4)]
+      SPORADIC r=2: S_r = [1, 5]; o = [0, 0, 0, 0, 0, 2]; constant coords [(56, 2)]
+      SPORADIC r=4: S_r = [1]; o = [0, 0, 0, 1, 1, 4]; constant coords [(56, 4)]
+      SPORADIC r=10: S_r = [5]; o = [0, 1, 2, 3, 4, 4]; constant coords [(56, 4)]
+      SPORADIC r=11: S_r = [5]; o = [0, 1, 2, 3, 4, 2]; constant coords [(56, 2)]
+  GRAND: 12 full columns, 15 sporadic columns, 99 dead columns
+
+  full-column theorem verified BOTH directions on every column;
+  |S_r| = 7 never occurs; count law exact on every owner.
+==============================================================================
+done
