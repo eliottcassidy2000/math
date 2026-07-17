@@ -9,7 +9,9 @@
   eta/q duality theorems from `LRCLocalDensityBlockGluing`. The final section
   specializes this provider to the concrete `rationalCircleSurvivor` and
   `rationalCircleChart`; their normalization and unit-chart premises are now
-  unconditional, so only exact numeric region evaluation remains external.
+  unconditional. Exact deletion density is reduced further to a finite sum of
+  rational chart-tooth clip lengths, so only evaluation of those explicit
+  rational sums remains external.
 
   The exact-measure bridge needs precisely the rational measure discipline:
   `Norm region` for live, ordered, disjoint intervals, plus `regionInUnit region`
@@ -37,6 +39,7 @@ import TournamentH7.LRCLocalDensityBlockGluing
 
 namespace LRC14.LocalDensityBlockGluing
 
+open scoped BigOperators
 open MeasureTheory Set
 open LonelyRunner.RatIntervals
 
@@ -325,6 +328,368 @@ theorem rationalCircleChartDensity_eq_survivorDensity
           (rationalCircleSurvivor shift tooth (toothCount + 1))
           (regionInUnit_rationalCircleSurvivor shift tooth (toothCount + 1))
 
+/-! ### Exact anchored-deletion length and density ledger -/
+
+/-- Removing degenerate interval pairs does not change the rational length
+ledger. -/
+theorem length_filterLive_eq (region : Region) :
+    length (region.filter fun interval => decide (interval.1 < interval.2)) =
+      length region := by
+  induction region with
+  | nil => rfl
+  | cons interval region inductionHypothesis =>
+      by_cases hinterval : interval.1 < interval.2
+      · rw [List.filter_cons_of_pos (by simpa using hinterval)]
+        unfold length at inductionHypothesis ⊢
+        simp only [List.map_cons, List.sum_cons]
+        rw [inductionHypothesis]
+      · rw [List.filter_cons_of_neg (by simpa using hinterval)]
+        unfold length at inductionHypothesis ⊢
+        simp only [List.map_cons, List.sum_cons]
+        rw [inductionHypothesis, max_eq_left (by
+          push Not at hinterval
+          linarith)]
+        ring
+
+/-- The computational filtered cut has the same exact rational length as the
+unfiltered two-piece cut. -/
+theorem length_cutF_eq_cut (interval toothInterval : ℚ × ℚ) :
+    length (cutF interval toothInterval) =
+      length (cut interval toothInterval) := by
+  exact length_filterLive_eq _
+
+/-- Exact filtered partition identity. For a live subtrahend, the retained
+pieces plus the clipped overlap equal the original rational length. No `Norm`
+or containment hypothesis is needed because this is an exact list ledger. -/
+theorem length_diff1F_add_inter_exact
+    (region : Region) {toothInterval : ℚ × ℚ}
+    (htooth : toothInterval.1 ≤ toothInterval.2) :
+    length (diff1F region toothInterval) +
+        length (inter region [toothInterval]) =
+      length region := by
+  have hfiltered : length (diff1F region toothInterval) =
+      length (diff1 region toothInterval) := by
+    induction region with
+    | nil => rfl
+    | cons interval region inductionHypothesis =>
+        unfold diff1F diff1 at inductionHypothesis ⊢
+        simp only [List.flatMap_cons]
+        rw [length_append, length_append, inductionHypothesis,
+          length_cutF_eq_cut]
+  rw [hfiltered]
+  exact length_diff1_add_inter region htooth
+
+/-- Universal exact anchored-tooth deletion ledger. The actual loss is the
+overlap with `[0,tooth.width)`, not necessarily the full tooth width. -/
+theorem length_deleteAnchoredTooth_add_overlap
+    (region : Region) (tooth : AnchoredCircularTooth) :
+    length (deleteAnchoredTooth region tooth) +
+        length (inter region [((0 : ℚ), tooth.width)]) =
+      length region := by
+  exact length_diff1F_add_inter_exact region tooth.width_pos.le
+
+/-- Intersection with one interval is the explicit sum of its per-source
+clip lengths. -/
+theorem length_inter_singleton_eq_clip_sum
+    (region : Region) (interval : ℚ × ℚ) :
+    length (inter region [interval]) =
+      (region.map fun source =>
+        max 0 (min source.2 interval.2 - max source.1 interval.1)).sum := by
+  induction region with
+  | nil => simp [inter, length]
+  | cons source region inductionHypothesis =>
+      rw [show inter (source :: region) [interval] =
+        [clip source interval] ++ inter region [interval] by rfl]
+      rw [length_append, inductionHypothesis]
+      simp [length, clip]
+
+/-- Rational amount removed by the next anchored tooth from the current
+normalized circle chart. -/
+def rationalCircleToothOverlapLength
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : ℚ :=
+  length (inter (rationalCircleChart shift tooth toothCount)
+    [((0 : ℚ), (tooth toothCount).width)])
+
+/-- Real cast of the exact rational next-tooth overlap ledger. -/
+noncomputable def rationalCircleToothOverlapDensity
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : ℝ :=
+  (rationalCircleToothOverlapLength shift tooth toothCount : ℝ)
+
+/-- Fully explicit rational clip-sum formula for the next-tooth overlap. Unit
+chart containment removes the redundant `max interval.1 0` endpoint. -/
+theorem rationalCircleToothOverlapLength_eq_clip_sum
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleToothOverlapLength shift tooth toothCount =
+      ((rationalCircleChart shift tooth toothCount).map fun interval =>
+        max 0 (min interval.2 (tooth toothCount).width - interval.1)).sum := by
+  rw [rationalCircleToothOverlapLength, length_inter_singleton_eq_clip_sum]
+  congr 1
+  apply List.map_congr_left
+  intro interval hinterval
+  have hnonnegative :=
+    (regionInUnit_rationalCircleChart shift tooth toothCount interval hinterval).1
+  rw [max_eq_left hnonnegative]
+
+/-- Coordinate recharting preserves the underlying exact rational length, not
+only its real density cast. -/
+theorem rationalCircleChart_length_eq_survivor_length
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    length (rationalCircleChart shift tooth toothCount) =
+      length (rationalCircleSurvivor shift tooth toothCount) := by
+  have hdensity :=
+    rationalCircleChartDensity_eq_survivorDensity shift tooth toothCount
+  unfold rationalCircleChartDensity rationalCircleSurvivorDensity
+    rationalRegionDensity at hdensity
+  exact_mod_cast hdensity
+
+/-- Exact rational survivor recurrence: the next length plus the actual
+chart-tooth overlap equals the current survivor length. -/
+theorem rationalCircleSurvivor_length_succ_add_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) +
+        rationalCircleToothOverlapLength shift tooth toothCount =
+      length (rationalCircleSurvivor shift tooth toothCount) := by
+  rw [rationalCircleSurvivor_succ]
+  unfold rationalCircleToothOverlapLength
+  rw [length_deleteAnchoredTooth_add_overlap]
+  exact rationalCircleChart_length_eq_survivor_length shift tooth toothCount
+
+/-- Subtraction form of the exact rational survivor recurrence. -/
+theorem rationalCircleSurvivor_length_succ_eq_sub_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) =
+      length (rationalCircleSurvivor shift tooth toothCount) -
+        rationalCircleToothOverlapLength shift tooth toothCount := by
+  linarith [rationalCircleSurvivor_length_succ_add_overlap
+    shift tooth toothCount]
+
+/-- Closed exact rational length formula: density evaluation is reduced to a
+finite sum of explicit anchored chart-tooth overlaps. -/
+theorem rationalCircleSurvivor_length_eq_one_sub_sum_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth) :
+    ∀ toothCount,
+      length (rationalCircleSurvivor shift tooth toothCount) =
+        1 - ∑ count ∈ Finset.range toothCount,
+          rationalCircleToothOverlapLength shift tooth count := by
+  intro toothCount
+  induction toothCount with
+  | zero => simp [rationalCircleSurvivor, length]
+  | succ toothCount inductionHypothesis =>
+      rw [rationalCircleSurvivor_length_succ_eq_sub_overlap,
+        inductionHypothesis, Finset.sum_range_succ]
+      ring
+
+/-- The next-tooth overlap is always nonnegative. -/
+theorem rationalCircleToothOverlapLength_nonneg
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    0 ≤ rationalCircleToothOverlapLength shift tooth toothCount := by
+  exact length_nonneg _
+
+/-- A normalized chart can overlap an anchored tooth by at most the tooth's
+full width. -/
+theorem rationalCircleToothOverlapLength_le_width
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleToothOverlapLength shift tooth toothCount ≤
+      (tooth toothCount).width := by
+  unfold rationalCircleToothOverlapLength
+  rw [length_inter_comm]
+  have hbound := length_inter_le_left
+    [((0 : ℚ), (tooth toothCount).width)]
+    (norm_rationalCircleChart shift tooth toothCount)
+  simpa [length, max_eq_right (tooth toothCount).width_pos.le] using hbound
+
+/-- A concrete sufficient containment certificate for full-width loss: one chart
+interval starts at the anchor and covers the whole tooth. -/
+def RationalCircleAnchoredToothContained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : Prop :=
+  ∃ interval ∈ rationalCircleChart shift tooth toothCount,
+    interval.1 = 0 ∧ (tooth toothCount).width ≤ interval.2
+
+/-- A concrete unit-chart disjointness certificate for zero loss: every chart
+interval starts at or to the right of the tooth endpoint. -/
+def RationalCircleAnchoredToothDisjoint
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) : Prop :=
+  ∀ interval ∈ rationalCircleChart shift tooth toothCount,
+    (tooth toothCount).width ≤ interval.1
+
+/-- The containment certificate makes the actual overlap equal the full tooth
+width. -/
+theorem rationalCircleToothOverlapLength_eq_width_of_contained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hcontained : RationalCircleAnchoredToothContained shift tooth toothCount) :
+    rationalCircleToothOverlapLength shift tooth toothCount =
+      (tooth toothCount).width := by
+  rw [rationalCircleToothOverlapLength_eq_clip_sum]
+  apply le_antisymm
+  · rw [← rationalCircleToothOverlapLength_eq_clip_sum]
+    exact rationalCircleToothOverlapLength_le_width shift tooth toothCount
+  · obtain ⟨interval, hinterval, hleft, hright⟩ := hcontained
+    apply List.single_le_sum
+    · intro value hvalue
+      rw [List.mem_map] at hvalue
+      obtain ⟨source, _hsource, rfl⟩ := hvalue
+      exact le_max_left _ _
+    · rw [List.mem_map]
+      refine ⟨interval, hinterval, ?_⟩
+      rw [min_eq_right hright, hleft, sub_zero,
+        max_eq_right (tooth toothCount).width_pos.le]
+
+/-- The disjointness certificate makes the actual overlap vanish. -/
+theorem rationalCircleToothOverlapLength_eq_zero_of_disjoint
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hdisjoint : RationalCircleAnchoredToothDisjoint shift tooth toothCount) :
+    rationalCircleToothOverlapLength shift tooth toothCount = 0 := by
+  rw [rationalCircleToothOverlapLength_eq_clip_sum]
+  apply List.sum_eq_zero
+  intro value hvalue
+  rw [List.mem_map] at hvalue
+  obtain ⟨interval, hinterval, rfl⟩ := hvalue
+  apply max_eq_left
+  have hleft := hdisjoint interval hinterval
+  have hright := min_le_right interval.2 (tooth toothCount).width
+  linarith
+
+/-- Minimal algebraic certificate for the naive full-width recurrence: it is
+exact precisely when the actual chart-tooth overlap has full width. -/
+theorem rationalCircleSurvivor_length_succ_eq_sub_width_iff_overlap_eq_width
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) =
+        length (rationalCircleSurvivor shift tooth toothCount) -
+          (tooth toothCount).width ↔
+      rationalCircleToothOverlapLength shift tooth toothCount =
+        (tooth toothCount).width := by
+  rw [rationalCircleSurvivor_length_succ_eq_sub_overlap]
+  constructor <;> intro hypothesis <;> linarith
+
+/-- Minimal algebraic certificate for zero density loss: deletion preserves
+length precisely when the actual chart-tooth overlap is zero. -/
+theorem rationalCircleSurvivor_length_succ_eq_iff_overlap_eq_zero
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) =
+        length (rationalCircleSurvivor shift tooth toothCount) ↔
+      rationalCircleToothOverlapLength shift tooth toothCount = 0 := by
+  rw [rationalCircleSurvivor_length_succ_eq_sub_overlap]
+  constructor <;> intro hypothesis <;> linarith
+
+/-- Under full containment, the naive full-tooth-width recurrence is exact. -/
+theorem rationalCircleSurvivor_length_succ_eq_sub_width_of_contained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hcontained : RationalCircleAnchoredToothContained shift tooth toothCount) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) =
+      length (rationalCircleSurvivor shift tooth toothCount) -
+        (tooth toothCount).width := by
+  rw [rationalCircleSurvivor_length_succ_eq_sub_overlap,
+    rationalCircleToothOverlapLength_eq_width_of_contained
+      shift tooth toothCount hcontained]
+
+/-- Under chart-tooth disjointness, deletion leaves the rational length
+unchanged. -/
+theorem rationalCircleSurvivor_length_succ_eq_of_disjoint
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hdisjoint : RationalCircleAnchoredToothDisjoint shift tooth toothCount) :
+    length (rationalCircleSurvivor shift tooth (toothCount + 1)) =
+      length (rationalCircleSurvivor shift tooth toothCount) := by
+  rw [rationalCircleSurvivor_length_succ_eq_sub_overlap,
+    rationalCircleToothOverlapLength_eq_zero_of_disjoint
+      shift tooth toothCount hdisjoint, sub_zero]
+
+/-- Exact real-density recurrence obtained by casting the rational deletion
+ledger. -/
+theorem rationalCircleSurvivorDensity_succ_add_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleSurvivorDensity shift tooth (toothCount + 1) +
+        rationalCircleToothOverlapDensity shift tooth toothCount =
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  unfold rationalCircleSurvivorDensity rationalRegionDensity
+    rationalCircleToothOverlapDensity
+  exact_mod_cast rationalCircleSurvivor_length_succ_add_overlap
+    shift tooth toothCount
+
+/-- Subtraction form of the exact real-density recurrence. -/
+theorem rationalCircleSurvivorDensity_succ_eq_sub_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleSurvivorDensity shift tooth (toothCount + 1) =
+      rationalCircleSurvivorDensity shift tooth toothCount -
+        rationalCircleToothOverlapDensity shift tooth toothCount := by
+  linarith [rationalCircleSurvivorDensity_succ_add_overlap
+    shift tooth toothCount]
+
+/-- Closed exact real-density formula. The sole remaining numeric data are
+the casts of the explicit rational clip sums. -/
+theorem rationalCircleSurvivorDensity_eq_one_sub_sum_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth) :
+    ∀ toothCount,
+      rationalCircleSurvivorDensity shift tooth toothCount =
+        1 - ∑ count ∈ Finset.range toothCount,
+          rationalCircleToothOverlapDensity shift tooth count := by
+  intro toothCount
+  unfold rationalCircleSurvivorDensity rationalRegionDensity
+    rationalCircleToothOverlapDensity
+  rw [rationalCircleSurvivor_length_eq_one_sub_sum_overlap]
+  push_cast
+  rfl
+
+/-- The exact overlap is nonnegative after casting to real density. -/
+theorem rationalCircleToothOverlapDensity_nonneg
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    0 ≤ rationalCircleToothOverlapDensity shift tooth toothCount := by
+  unfold rationalCircleToothOverlapDensity
+  exact_mod_cast rationalCircleToothOverlapLength_nonneg shift tooth toothCount
+
+/-- Successive exact survivor densities are monotone nonincreasing. -/
+theorem rationalCircleSurvivorDensity_succ_le
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    rationalCircleSurvivorDensity shift tooth (toothCount + 1) ≤
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  linarith [rationalCircleSurvivorDensity_succ_add_overlap
+      shift tooth toothCount,
+    rationalCircleToothOverlapDensity_nonneg shift tooth toothCount]
+
+/-- Full containment specializes the exact density recurrence to subtraction
+of the full tooth width. -/
+theorem rationalCircleSurvivorDensity_succ_eq_sub_width_of_contained
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hcontained : RationalCircleAnchoredToothContained shift tooth toothCount) :
+    rationalCircleSurvivorDensity shift tooth (toothCount + 1) =
+      rationalCircleSurvivorDensity shift tooth toothCount -
+        ((tooth toothCount).width : ℝ) := by
+  unfold rationalCircleSurvivorDensity rationalRegionDensity
+  exact_mod_cast rationalCircleSurvivor_length_succ_eq_sub_width_of_contained
+    shift tooth toothCount hcontained
+
+/-- Chart-tooth disjointness specializes the exact density recurrence to no
+density loss. -/
+theorem rationalCircleSurvivorDensity_succ_eq_of_disjoint
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ)
+    (hdisjoint : RationalCircleAnchoredToothDisjoint shift tooth toothCount) :
+    rationalCircleSurvivorDensity shift tooth (toothCount + 1) =
+      rationalCircleSurvivorDensity shift tooth toothCount := by
+  unfold rationalCircleSurvivorDensity rationalRegionDensity
+  exact_mod_cast rationalCircleSurvivor_length_succ_eq_of_disjoint
+    shift tooth toothCount hdisjoint
+
 /-- The recursive survivor supplies all THM-933 analytic hypotheses without
 an additional topology or normalization assumption. -/
 theorem rationalCircleSurvivor_analytic_provider
@@ -424,6 +789,44 @@ theorem periodicRationalCircleChart_period_density_eq_survivorDensity
         rationalCircleSurvivorDensity shift tooth toothCount := by
   rw [periodicRationalCircleChart_period_density,
     rationalCircleChartDensity_eq_survivorDensity]
+
+/-- Exact one-period measure recurrence under the next anchored deletion. -/
+theorem periodicRationalCircleSurvivor_period_density_succ_eq_sub_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleSurvivor shift tooth (toothCount + 1) ∩
+        Ioc (0 : ℝ) 1)).toReal =
+      (volume (periodicRationalCircleSurvivor shift tooth toothCount ∩
+        Ioc (0 : ℝ) 1)).toReal -
+        rationalCircleToothOverlapDensity shift tooth toothCount := by
+  rw [periodicRationalCircleSurvivor_period_density,
+    periodicRationalCircleSurvivor_period_density]
+  exact rationalCircleSurvivorDensity_succ_eq_sub_overlap
+    shift tooth toothCount
+
+/-- Closed exact one-period survivor mass formula in terms of the finite
+rational overlap ledger. -/
+theorem periodicRationalCircleSurvivor_period_density_eq_one_sub_sum_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleSurvivor shift tooth toothCount ∩
+        Ioc (0 : ℝ) 1)).toReal =
+      1 - ∑ count ∈ Finset.range toothCount,
+        rationalCircleToothOverlapDensity shift tooth count := by
+  rw [periodicRationalCircleSurvivor_period_density,
+    rationalCircleSurvivorDensity_eq_one_sub_sum_overlap]
+
+/-- The moving chart has the same closed exact period-mass formula as its
+survivor. -/
+theorem periodicRationalCircleChart_period_density_eq_one_sub_sum_overlap
+    (shift : ℕ → ℚ) (tooth : ℕ → AnchoredCircularTooth)
+    (toothCount : ℕ) :
+    (volume (periodicRationalCircleChart shift tooth toothCount ∩
+        Ioc (0 : ℝ) 1)).toReal =
+      1 - ∑ count ∈ Finset.range toothCount,
+        rationalCircleToothOverlapDensity shift tooth count := by
+  rw [periodicRationalCircleChart_period_density_eq_survivorDensity,
+    rationalCircleSurvivorDensity_eq_one_sub_sum_overlap]
 
 /-- The survivor's centered primitive is one-periodic. -/
 theorem rationalCircleSurvivor_centeredPrimitive_periodic
@@ -596,6 +999,15 @@ theorem rationalCircleChart_eta_q_duality
 #print axioms rationalRegion_eta_q_attained
 #print axioms rationalRegion_eta_q_duality
 #print axioms rationalCircleChartDensity_eq_survivorDensity
+#print axioms length_deleteAnchoredTooth_add_overlap
+#print axioms rationalCircleToothOverlapLength_eq_clip_sum
+#print axioms rationalCircleSurvivor_length_succ_add_overlap
+#print axioms rationalCircleSurvivor_length_eq_one_sub_sum_overlap
+#print axioms rationalCircleToothOverlapLength_eq_width_of_contained
+#print axioms rationalCircleToothOverlapLength_eq_zero_of_disjoint
+#print axioms rationalCircleSurvivorDensity_succ_add_overlap
+#print axioms rationalCircleSurvivorDensity_eq_one_sub_sum_overlap
+#print axioms periodicRationalCircleSurvivor_period_density_eq_one_sub_sum_overlap
 #print axioms rationalCircleSurvivor_analytic_provider
 #print axioms rationalCircleChart_analytic_provider
 #print axioms rationalCircleSurvivor_centeredPrimitive_periodic
