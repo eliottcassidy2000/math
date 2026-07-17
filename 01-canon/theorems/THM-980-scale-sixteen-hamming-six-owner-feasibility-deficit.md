@@ -1,5 +1,5 @@
 ---
-id: THM-979
+id: THM-980
 title: Scale-sixteen Hamming-six owner-feasibility deficit
 status: CLAIMED — a literal C++ reconstruction currently finds that the complete 13,806,600,192-context primitive proper AP-centred common-scale-sixteen Hamming-six bank reduces to 2,540 scalar rows and that no row is owner-locally feasible at more than two of its six owners; independent replay and frozen-build validation are in progress
 source: codex-2026-07-17-S66 scale-sixteen exact C++ certificate in progress
@@ -9,7 +9,7 @@ verification:
   - 04-computation/lrc13_scale_sixteen_hamming_six_frontier_scout_codex_c16.cpp
 ---
 
-# THM-979 — scale sixteen has at least four impossible owners
+# THM-980 — scale sixteen has at least four impossible owners
 
 This namespace is reserved for the exact scale-sixteen continuation of the
 primitive proper AP-centred common-scale Hamming-six classification.
