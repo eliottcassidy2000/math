@@ -19,6 +19,36 @@ two-miss patterns:
 
 `F_r(E)=sum_s B_s K_r({s})/49 + sum_(s<c) A_{s,c}K_r({s,c})/49`.
 
+### K6 convention bridge
+
+The kernel is intrinsically a miss-pattern object, not a Fourier coefficient
+of a raw two-runner section matrix.  If
+
+```text
+n_r(c,s)=#{0<=u<r: rc+u=s mod 7},
+kappa_r(c,s)=7n_r(c,s)-r,
+```
+
+then the exact two-miss convention is
+
+```text
+K_r({s,c})=kappa_r(c,s)+kappa_r(s,c).                         (K)
+```
+
+For `r=6`, the source block omits exactly the residue `6-c`, so
+`kappa_6(c,s)=-6` iff `s+c=6 mod 7`, and equals `1` otherwise.  Consequently
+
+```text
+K_6({1,5})=K_6({2,4})=-12,
+K_6({s,c})=2 for every other two-miss pattern.
+```
+
+The label `{s,c}` names sections missed by the full five-mover core.  Its mass
+`A_{s,c}` is higher-order occupancy data and is not determined by a pair
+marginal `D(c_1,c_2)`.  Relation-lattice constants such as `THM-899` are needed
+only to reconstruct these masses, not to normalize the universal coefficient
+`-12`.  This resolves the `HYP-7102` convention question.
+
 The sharp conjecture is
 
 > **`max_(1<=r<=6) |F_r(E)| <= 16/343` for every six-offset core `E`,**

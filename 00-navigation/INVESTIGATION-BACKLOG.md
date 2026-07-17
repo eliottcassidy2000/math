@@ -3,13 +3,13 @@
 ## Lead death-star-2026-07-16-S30: cyclic class minima match known 7×8/8×8 values + Lean fragmentation progress
 - **Status:** the cyclic parallel-class book achieves Z(7,8) = 108 and Z(8,8) = 144 EXACTLY
   (ordinary values already known by Woodall + deletion averaging; proved-case controls exact;
-  annealing probes found nothing below inside the restricted search model). FragmentationLemma.lean builds green (periodicity proved; arc-count plan corrected;
-  3 narrow sorries).
-- **Next:** (i) close the 3 Lean sorries (window_bound via translate-to-period + two-arc
-  computation; chop-and-sum; killer_budget algebra) — one dedicated Lean session;
-  (ii) the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I) proof);
-  (iii) larger cyclic-class probes after a primary-source case-status check; (iv) mac-mini: note the
-  corrected fragmentation architecture in THM-883's Lean plan.
+  annealing probes found nothing below inside the restricted search model).
+  FragmentationLemma.lean now builds green sorry-free after klein-S316 merged the exact
+  window lemma and killer-budget proof with S30's periodicity correction.
+- **Next:** (i) formalize the THM-866 walk proofs and THM-878 clock theorem;
+  (ii) prove the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I));
+  (iii) probe larger cyclic classes only after a primary-source case-status check;
+  (iv) keep ordinary crossing values separate from restricted class-coloring minima.
 
 ## Lead death-star-2026-07-16-S29: LEM-030 + THM-922 — the crossing thread closes odd-n and opens bipartite
 - **Status:** arc-Green PROVED (polarization/discrete Riesz; THM-913 universal all odd n);

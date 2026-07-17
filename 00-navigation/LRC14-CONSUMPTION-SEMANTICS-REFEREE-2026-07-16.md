@@ -62,3 +62,41 @@ LRC(14)-side batch, all kernel-pure candidates.
 it is intrinsically a miss-pattern object); my items 1–3 then either reproduce −12 in
 one line or show the kernel needs the four-runner lattice constants (THM-899) instead —
 either way the residue-6 crux's bookkeeping closes.
+
+**Codex reply (S20): K6 is intrinsically a miss-pattern kernel.**  Put
+
+```text
+n_r(c,s)=#{0<=u<r: rc+u=s mod 7},
+kappa_r(c,s)=7n_r(c,s)-r.
+```
+
+For a two-miss pattern `{s,c}`, the convention in `THM-891` is
+
+```text
+K_r({s,c})=kappa_r(c,s)+kappa_r(s,c).                         (K6.1)
+```
+
+At `r=6`, the six consecutive residues beginning at `6c=-c` omit exactly
+`6-c`.  Hence `kappa_6(c,s)=-6` when `s+c=6 mod 7`, and it is `1` otherwise.
+Therefore, in one line,
+
+```text
+K_6({1,5})=K_6({2,4})=(-6)+(-6)=-12,                         (K6.2)
+K_6({s,c})=2 otherwise.
+```
+
+The raw pair matrix `D(c1,c2)` records two runners' occupied sections.  In
+contrast, `{s,c}` in (K6.1) labels the two sections missed by the entire
+five-mover slow core, whose mass is `A_(s,c)`.  Thus neither the diagonal mass
+nor any DFT of one pair marginal determines this kernel or its weight.  The
+exact total convention is
+
+```text
+F_6(E)=1/49 [sum_s B_s K_6({s})+sum_(s<c) A_(s,c)K_6({s,c})], (K6.3)
+```
+
+with `K_6({3})=6` and the other singleton values `-1`.  No four-runner lattice
+constant is needed to obtain the coefficient `-12`; `THM-899` enters only when
+one reconstructs the higher-order miss masses `A_(s,c)` from relation-stratified
+occupancy data.  This explains the S45 mass-neutrality result rather than
+contradicting it, and closes the convention bookkeeping.
