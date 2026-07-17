@@ -50,7 +50,8 @@ theorem exactDepthCount_mod_two_eq_midpointCount
       refine ⟨⟨⟨Nat.sub_pos_of_lt hpq, Nat.sub_lt hq hp0⟩, ?_⟩, ?_⟩
       · rw [bandCount_reflect v q p hq hp0 hpq]
         exact hdepth
-      · omega
+      · unfold reflect
+        omega
     · intro p hp
       unfold reflect
       unfold paired s at hp
@@ -64,7 +65,7 @@ theorem exactDepthCount_mod_two_eq_midpointCount
   have hsplit :
       (s.filter fun p => 2 * p = q).card + paired.card = s.card := by
     simpa [paired] using
-      (Finset.filter_card_add_filter_neg_card_eq_card
+      (Finset.card_filter_add_card_filter_not
         (s := s) (p := fun p => 2 * p = q))
   have hmid :
       s.filter (fun p => 2 * p = q) =
@@ -101,7 +102,7 @@ theorem midpoint_not_inBand_iff_evenSpeed
               (m : ℤ) + (2 * (m : ℤ)) * c := by
           ring
         rw [hsplit, Int.add_mul_emod_self_left]
-        exact Int.emod_eq_of_lt (by positivity) (by push_cast; omega)
+        exact Int.emod_eq_of_lt (by positivity) (by omega)
       unfold inBand
       rw [hres]
       constructor <;> push_cast <;> omega
@@ -153,15 +154,13 @@ theorem exactDepthCount_mod_two_even
     have hset :
         ((Finset.Ioo 0 (m + m)).filter fun p =>
           bandCount v (m + m) p = depth ∧ 2 * p = m + m) = ∅ := by
-      ext p
-      simp only [Finset.mem_filter, Finset.mem_Ioo, Finset.not_mem_empty]
-      constructor
-      · rintro ⟨_, hpdepth, hfixed⟩
-        have hp : p = m := by omega
-        subst p
-        exact (hdepth hpdepth).elim
-      · intro hfalse
-        exact hfalse.elim
+      apply Finset.eq_empty_iff_forall_notMem.mpr
+      intro p hp
+      simp only [Finset.mem_filter, Finset.mem_Ioo] at hp
+      obtain ⟨_, hpdepth, hfixed⟩ := hp
+      have hp : p = m := by omega
+      subst p
+      exact hdepth hpdepth
     rw [hset]
     simp
 

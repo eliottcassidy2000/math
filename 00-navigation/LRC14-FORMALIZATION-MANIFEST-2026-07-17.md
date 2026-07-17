@@ -510,9 +510,12 @@ every nonzero absolute color occurs exactly zero or two times.  Reflected
 sparse relations count as one projective relation.  This parity is a rigidity
 input, not a supplier: it does not improve the global live-versus-debt ratio
 without a quantitative payment bound.  `LRCDeepReflectionParity` additionally
-proves that every exact-depth stratum is even at odd modulus, especially depths
-six and seven.  It removes singleton depth tails but does not pay either
-two-event orbit.
+gives the all-modulus parity law: an exact-depth stratum is odd precisely when
+it contains the reflection midpoint.  At `q=2m,p=m`, bad runners are exactly
+the even-speed runners, so midpoint depth is the number of even speeds.  Odd
+moduli have no midpoint, hence every depth stratum is even, especially depths
+six and seven.  This classifies singleton depth tails but does not pay either a
+two-event orbit or the possible midpoint.
 
 `LRCOverlapColorFibers` adds the first arithmetic multiplicity theorem.  For
 positive pair speeds `a,b`, every `overlapDet` color is divisible by

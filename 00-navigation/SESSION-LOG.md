@@ -162,10 +162,13 @@ under the per-face top window.  Overlapping faces keep their true multiplicity:
 this is the previously missing aligned accounting theorem, not yet a global
 payment theorem.
 
-(B) **DEPTH REFLECTION.** `LRCDeepReflectionParity.lean` proves that at odd
-modulus every exact-depth multiplier stratum is even, in particular the unpaid
-depth-six and depth-seven strata.  The reflection graph is a matching on
-multiplier events; it removes singleton tails but pays no two-event debt.
+(B) **DEPTH REFLECTION, NOW ALL-q.** `LRCDeepReflectionParity.lean` proves that
+an exact-depth cardinality modulo two is exactly the membership indicator of
+the possible reflection midpoint.  At `q=2m,p=m`, a runner is bad iff its speed
+is even, so midpoint depth is exactly the number of even speeds.  Odd moduli
+have no midpoint; all exact-depth strata are even, including the unpaid depths
+six and seven.  The reflection graph classifies every singleton tail but pays
+neither a two-event orbit nor the possible midpoint.
 
 (C) **THE SPARSE PAIR LAYER IS NOW A p-SPACE THEOREM.**
 `LRCSparseBranchLattice.lean` closes the interval-to-multiplier step left after

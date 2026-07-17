@@ -112,9 +112,13 @@ not by itself improve the live/debt ratio, since live and colored activity
 mirror together.
 
 `LRCDeepReflectionParity` applies the same orbit principle to every exact-depth
-stratum: for odd `q`, `exactDepthCount(v,q,d)` is even for every `d`, in
-particular at depths six and seven.  This removes singleton tails from a future
-payment argument, but two-event quanta still carry their full debt.
+stratum at every modulus: its cardinality modulo two is exactly the membership
+of the possible reflection midpoint.  At `q=2m,p=m`, a runner is bad exactly
+when its speed is even, so the unique odd-cardinality depth is the number of
+even speeds.  For odd `q`, every stratum is even, in particular depths six and
+seven.  This removes unexplained singleton tails from a future payment
+argument, but paired events and a possible classified midpoint still carry
+their full debt.
 
 `LRCOverlapColorFibers` supplies the first multiplicity control.  For positive
 pair speeds `a,b`, every determinant is divisible by `gcd(a,b)`, and on
@@ -202,9 +206,9 @@ must state which LRC predicate it preserves.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
   zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd
-  budget, and odd-depth parity are LEAN.  The remaining step is a quantitative
-  root/window/payment theorem and adaptive live floor, not another pointwise
-  Plücker identity or incidence count.
+  budget, and all-q reflection-midpoint parity are LEAN.  The remaining step is
+  a quantitative root/window/payment theorem and adaptive live floor, not
+  another pointwise Plücker identity or incidence count.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
   form — the analytic instrument layer; manifest items 11–13 decide-shaped.
 
@@ -256,9 +260,9 @@ must state which LRC predicate it preserves.
 **S57/S66 weighted-census refinement.**  The dense-core socket may now be stated
 as `DenseCoreWeightedCensusB5Supply`, strictly weaker than the old uniform
 `792·deepCount` socket.  Reuse multiplicities, zero-color gluing, fixed-root
-Fubini, per-face gcd resonance budgets, and odd-depth parity are now exact.  Its
-remaining arithmetic is: choose a root/window covering the relevant events,
-bound the summed gcd budgets, pay the colored `462/210` transport factors,
+Fubini, per-face gcd resonance budgets, and all-q midpoint parity are now
+exact.  Its remaining arithmetic is: choose a root/window covering the
+relevant events, bound the summed gcd budgets, pay the colored `462/210` transport factors,
 handle depths six and seven, and supply the adaptive-modulus live floor.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
