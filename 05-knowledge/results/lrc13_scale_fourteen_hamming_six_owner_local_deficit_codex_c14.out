@@ -1,0 +1,25 @@
+scale-fourteen AP-centred Hamming-six owner-local deficit
+divisor grammar 1,2,7,14; literal states 14
+states (D,e) (1,0) (2,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (14,1) (14,3) (14,5) (14,9) (14,11) (14,13)
+supports 924
+hereditary order words 3249
+hereditary labelled order contexts 3002076
+hereditary state words per support 6703884
+literal state-grammar FNV64 3f93d84053a6bdd3
+hereditary labelled state contexts 6194388816
+scalar-capacity contexts 576 on 36 supports
+scalar pattern two D2 providers plus four D7/D14 providers; sixteen contexts per support
+multiplication orbits [1,2,3,5,10,11]:12; [1,2,3,6,7,11]:12; [1,2,4,5,8,11]:12 (telemetry; no quotient)
+owner-local rows 3456; feasible rows 0
+maximum reachable sheet-union histogram 10:96 11:1056 12:2304
+owner-local contexts 0
+global literal unit fibres 0; global common-sheet survivors 0
+tournament N/A: the owner-local gate is empty, so there is no owner-obligation global fibre or pair-intersection observable to orient
+challenged vertices fourteen sheet positions preserve the exact owner-local cover deficit; runner/provider or divisor vertices destroy shared-unit incidence, while owner-obligation vertices arise only after a global fibre survives
+local D14 mask table at owner one (units 1,3,5,9,11,13; ratios 1..12 in hex)
+  e=1: 2003 3000 1800 c00 600 300 180 c0 60 30 18 c
+  e=3: 422 21 201 210 2010 2100 108 1008 1080 84 804 840
+  e=5: 1202 240 48 9 801 900 120 24 2004 2400 480 90
+  e=9: 92 480 2400 2004 24 120 900 801 9 48 240 1200
+  e=11: 842 804 84 1080 1008 108 2100 2010 210 201 21 420
+  e=13: e 18 30 60 c0 180 300 600 c00 1800 3000 2001
