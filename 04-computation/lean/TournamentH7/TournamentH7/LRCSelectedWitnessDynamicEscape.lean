@@ -741,12 +741,13 @@ theorem twoFourFour_selectedWitness_or_small_normalized_frequency
   · exact Or.inr ⟨a₂, a₄a, a₄b, hres₂, hres₄a, hres₄b,
       hwall, Or.inr (lt_of_not_ge hlarge)⟩
 
-/-- Arithmetic sharpening of the q244 residual after both scalar exits.  The
-q-two numerator is forced below `22B/3`.  The zero combined-frequency branch
-is an exact signed support-three relation among the selected speeds; otherwise
-the same signed sum is a nonzero multiple of `g`, bounded between `g` and
-`11*g*B`.  The normalized scalars are linked back to all three original speeds
-by exact scale identities. -/
+/-- Arithmetic sharpening of the q244 residual after all four scalar exits.
+The three normalized row frequencies are forced below their exact thresholds
+`22B/3, 44B/3, 44B/3`.  Via `q*|delta| = g*|a|`, this is the symmetric original
+speed bound `3|delta| < 11gB` for every selected row, independent of whether
+its reduced denominator is two or four.  The zero combined-frequency branch
+is an exact signed support-three relation; otherwise the signed sum is a
+nonzero multiple of `g`, bounded between `g` and `11*g*B`. -/
 theorem twoFourFour_selectedWitness_or_signed_small_relation
     (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
     (g : ℤ) (hg : 2 ≤ g) (i₂ i₄a i₄b : Fin 13)
@@ -782,6 +783,11 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
               numeratorTwo numeratorFourA numeratorFourB : ℝ) * u - integer| <
             3 / 14) ∧
       3 * |(numeratorTwo : ℝ)| < 22 * B ∧
+      3 * |(numeratorFourA : ℝ)| < 44 * B ∧
+      3 * |(numeratorFourB : ℝ)| < 44 * B ∧
+      3 * |(v i₂ : ℝ)| < 11 * (g : ℝ) * B ∧
+      3 * |(v i₄a : ℝ)| < 11 * (g : ℝ) * B ∧
+      3 * |(v i₄b : ℝ)| < 11 * (g : ℝ) * B ∧
       (signTwo * v i₂ + signFourA * v i₄a + signFourB * v i₄b = 0 ∨
         (signTwo * v i₂ + signFourA * v i₄a +
             signFourB * v i₄b ≠ 0 ∧
@@ -796,7 +802,7 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
       hsignTwo, hsignFourA, hsignFourB,
       hresTwo, hresFourA, hresFourB,
       hscaleTwo, hscaleFourA, hscaleFourB, hidentity,
-      hqTwoWall, -, -, hwall⟩ :=
+      hqTwoWall, hqFourAWall, hqFourBWall, hwall⟩ :=
     exists_twoFourFour_normalized_signed_failureWall
       (v i₂) (v i₄a) (v i₄b) g hg hq2 hq4a hq4b
   let frequency : ℤ := twoFourFourPhaseFrequency
@@ -813,12 +819,53 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
     rw [hzero, Int.cast_zero, abs_zero, mul_zero] at habsScale
     have hspeedReal : (v i₂ : ℝ) ≠ 0 := by exact_mod_cast hv i₂
     linarith [abs_pos.mpr hspeedReal]
+  have habsScaleFourA :
+      (4 : ℝ) * |(v i₄a : ℝ)| = (g : ℝ) * |(numeratorFourA : ℝ)| :=
+    normalized_abs_scale (v i₄a) g 4 signFourA numeratorFourA
+      (by omega) (by norm_num) hsignFourA hscaleFourA
+  have hnumeratorFourA : numeratorFourA ≠ 0 := by
+    intro hzero
+    rw [hzero, Int.cast_zero, abs_zero, mul_zero] at habsScaleFourA
+    have hspeedReal : (v i₄a : ℝ) ≠ 0 := by exact_mod_cast hv i₄a
+    linarith [abs_pos.mpr hspeedReal]
+  have habsScaleFourB :
+      (4 : ℝ) * |(v i₄b : ℝ)| = (g : ℝ) * |(numeratorFourB : ℝ)| :=
+    normalized_abs_scale (v i₄b) g 4 signFourB numeratorFourB
+      (by omega) (by norm_num) hsignFourB hscaleFourB
+  have hnumeratorFourB : numeratorFourB ≠ 0 := by
+    intro hzero
+    rw [hzero, Int.cast_zero, abs_zero, mul_zero] at habsScaleFourB
+    have hspeedReal : (v i₄b : ℝ) ≠ 0 := by exact_mod_cast hv i₄b
+    linarith [abs_pos.mpr hspeedReal]
   by_cases hqTwoLarge : 22 * B ≤ 3 * |(numeratorTwo : ℝ)|
   · exact Or.inl (selectedWitness_of_cite_and_oneSeventh_scalarWall
       cite v hv g i₂ i₄a i₄b h24a h24b h4ab hdvd B hB0 hB
         numeratorTwo hnumeratorTwo hqTwoLarge hqTwoWall)
   have hqTwoSmall : 3 * |(numeratorTwo : ℝ)| < 22 * B :=
     lt_of_not_ge hqTwoLarge
+  by_cases hqFourALarge : 44 * B ≤ 3 * |(numeratorFourA : ℝ)|
+  · exact Or.inl (selectedWitness_of_cite_and_twoSevenths_scalarWall
+      cite v hv g i₂ i₄a i₄b h24a h24b h4ab hdvd B hB0 hB
+        numeratorFourA hnumeratorFourA hqFourALarge hqFourAWall)
+  have hqFourASmall : 3 * |(numeratorFourA : ℝ)| < 44 * B :=
+    lt_of_not_ge hqFourALarge
+  by_cases hqFourBLarge : 44 * B ≤ 3 * |(numeratorFourB : ℝ)|
+  · exact Or.inl (selectedWitness_of_cite_and_twoSevenths_scalarWall
+      cite v hv g i₂ i₄a i₄b h24a h24b h4ab hdvd B hB0 hB
+        numeratorFourB hnumeratorFourB hqFourBLarge hqFourBWall)
+  have hqFourBSmall : 3 * |(numeratorFourB : ℝ)| < 44 * B :=
+    lt_of_not_ge hqFourBLarge
+  have hgReal : (0 : ℝ) < g := by
+    exact_mod_cast (show (0 : ℤ) < g by omega)
+  have hspeedTwoSmall : 3 * |(v i₂ : ℝ)| < 11 * (g : ℝ) * B := by
+    have hscaled := mul_lt_mul_of_pos_left hqTwoSmall hgReal
+    nlinarith [habsScale]
+  have hspeedFourASmall : 3 * |(v i₄a : ℝ)| < 11 * (g : ℝ) * B := by
+    have hscaled := mul_lt_mul_of_pos_left hqFourASmall hgReal
+    nlinarith [habsScaleFourA]
+  have hspeedFourBSmall : 3 * |(v i₄b : ℝ)| < 11 * (g : ℝ) * B := by
+    have hscaled := mul_lt_mul_of_pos_left hqFourBSmall hgReal
+    nlinarith [habsScaleFourB]
   by_cases hzero : frequency = 0
   · right
     refine ⟨signTwo, signFourA, signFourB,
@@ -826,7 +873,8 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
       hsignTwo, hsignFourA, hsignFourB,
       hresTwo, hresFourA, hresFourB,
       hscaleTwo, hscaleFourA, hscaleFourB, hidentity, hwall,
-      hqTwoSmall, Or.inl ?_⟩
+      hqTwoSmall, hqFourASmall, hqFourBSmall,
+      hspeedTwoSmall, hspeedFourASmall, hspeedFourBSmall, Or.inl ?_⟩
     exact show signedSum = 0 by rw [hidentity', hzero, mul_zero]
   by_cases hlarge : 11 * B ≤ |(frequency : ℝ)|
   · left
@@ -839,8 +887,6 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
       intro hsumZero
       have hproductZero : g * frequency = 0 := by rw [← hidentity', hsumZero]
       exact hzero ((mul_eq_zero.mp hproductZero).resolve_left (by omega))
-    have hgReal : (0 : ℝ) < g := by
-      exact_mod_cast (show (0 : ℤ) < g by omega)
     have hidentityReal : (signedSum : ℝ) = (g : ℝ) * (frequency : ℝ) := by
       exact_mod_cast hidentity'
     have hfrequencyAbsOne : (1 : ℝ) ≤ |(frequency : ℝ)| := by
@@ -863,7 +909,8 @@ theorem twoFourFour_selectedWitness_or_signed_small_relation
       hsignTwo, hsignFourA, hsignFourB,
       hresTwo, hresFourA, hresFourB,
       hscaleTwo, hscaleFourA, hscaleFourB, hidentity, hwall,
-      hqTwoSmall, Or.inr ?_⟩
+      hqTwoSmall, hqFourASmall, hqFourBSmall,
+      hspeedTwoSmall, hspeedFourASmall, hspeedFourBSmall, Or.inr ?_⟩
     exact ⟨hsumNonzero, hsumLower, hsumSmall⟩
 
 end
