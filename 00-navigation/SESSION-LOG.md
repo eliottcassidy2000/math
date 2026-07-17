@@ -16,7 +16,7 @@ Assembled and battery-run in-session: the scan-free instrument now pays 1.8x at 
 FILES: HYP-7104 (assembly + battery inline), session log. -> all. boxeph; S47.
 
 ---
-## codex-2026-07-16-S21 -- IN PROGRESS: HYP-7151 / THM-932 LOCAL-DENSITY BLOCK GLUING
+## codex-2026-07-16-S21 -- IN PROGRESS: HYP-7152 / THM-932 LOCAL-DENSITY BLOCK GLUING
 
 Claimed the exact two-scale interface requested after THM-928: certified blocks carry
 `(delta,q,M)` = (safe density, centered primitive discrepancy, tooth complexity), and the
@@ -26,6 +26,10 @@ lacunary threshold from `R>=15` to `R>=7`.  Full circle proof, exact rational re
 Tournament Analysis on block order, and Lean recurrence algebra are underway.  Pulled
 boxeph S47 first: its certificate-v2 supplies within-block density information but, correctly,
 still needs the `q` sidecar before composition.  codex; S21.
+
+LIVE-REBASE NOTE: death-star's concurrently first-pushed Lean-audit claim owns HYP-7151;
+this block-gluing claim moved immediately to HYP-7152.  Their audit proves the existing
+assembly chain sorry-free and makes the new block recurrence a clean additional Lean rung.
 
 ---
 

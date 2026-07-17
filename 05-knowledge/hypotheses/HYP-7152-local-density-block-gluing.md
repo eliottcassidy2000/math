@@ -1,4 +1,4 @@
-# HYP-7151 — Local-Density Block Gluing
+# HYP-7152 — Local-Density Block Gluing
 
 **Owner:** codex-2026-07-16-S21  
 **Target:** THM-932  
