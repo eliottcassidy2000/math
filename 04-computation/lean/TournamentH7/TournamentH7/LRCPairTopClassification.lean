@@ -28,6 +28,19 @@ theorem pairDeficit_eq_primitiveDeficit (first second : ℤ) :
       primitiveDeficit (reducedFirst first second) (reducedSecond first second) := by
   rfl
 
+/-- Equal nonzero magnitudes have zero negative pair weight.  This does not
+permit quotienting multiplicities in the path-count theorem: two repeated
+magnitude classes can still create many cross edges of one ratio color. -/
+theorem pairDeficit_eq_zero_of_natAbs_eq
+    (first second : ℤ) (hfirst : first ≠ 0)
+    (hequal : first.natAbs = second.natAbs) :
+    pairDeficit first second = 0 := by
+  have habsPos : 0 < first.natAbs := Int.natAbs_pos.mpr hfirst
+  unfold pairDeficit pairKernel reducedFirst reducedSecond
+  rw [← hequal]
+  simp only [Nat.gcd_self, Nat.div_self habsPos]
+  norm_num [bernoulliResidue14]
+
 theorem bernoulli_difference_abs_le (first second : ℤ) :
     |bernoulliResidue14 (first - second) -
       bernoulliResidue14 (first + second)| ≤ (12 / 49 : ℚ) := by
@@ -380,6 +393,7 @@ theorem pairDeficit_top_path_caps
     rw [Finset.mem_filter] at hsupport
     exact hone support hsupport.1 hsupport.2
 #print axioms bernoulli_difference_abs_le
+#print axioms pairDeficit_eq_zero_of_natAbs_eq
 #print axioms primitiveDeficit_le_envelope
 #print axioms product_lt_thirty_three_of_ratio11_lt
 #print axioms primitive_top_colors
