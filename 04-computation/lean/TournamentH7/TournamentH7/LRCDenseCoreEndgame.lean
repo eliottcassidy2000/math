@@ -13,7 +13,7 @@
   certificate.
 -/
 
-import TournamentH7.LRCEndgameParameterDischarge
+import TournamentH7.LRCEndgameParameterDischargeFour
 import TournamentH7.LRCChainDichotomy
 
 namespace LonelyRunner
@@ -90,11 +90,22 @@ theorem lrc14_from_deep_detuned_and_denseCore_dissociated_B5
         (exceptionalDetunedDispatch_of_deep cite hdeep))
       hB5)
 
+/-- **Sharpened narrowest machine-checked endgame surface.**  After the exact
+`q ≥ 4` bad-count arithmetic, exceptional triples need dispatch only when one
+reduced denominator is `2` or `3`; positive B5 is still required only on the
+primitive dissociated chain-dense core. -/
+theorem lrc14_from_four_detuned_and_denseCore_dissociated_B5
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchFour)
+    (hB5 : DenseCoreDissociatedB5Supply) : LRC14.LRC14Statement :=
+  lrc14_from_deep_detuned_and_denseCore_dissociated_B5 cite
+    (deepExceptionalDetunedDispatch_of_four cite hdeep) hB5
+
 /-! ## Axiom audit -/
 
 #print axioms denseCoreDissociatedB5Supply_of_dissociated
 #print axioms residualObligationPrimitive_of_denseCore_dissoc_B5
 #print axioms lrc14_from_deep_detuned_and_denseCore_dissociated_B5
+#print axioms lrc14_from_four_detuned_and_denseCore_dissociated_B5
 
 end LRC14Grand
 end LonelyRunner
