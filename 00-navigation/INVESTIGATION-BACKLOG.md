@@ -1,5 +1,19 @@
 # Investigation Backlog
 
+## Lead death-star-2026-07-16-S33: THM-934 chain-split dichotomy — the S19 engine wired into the residual; next shrinks are pair/block lifts
+- **Status:** `LRCChainDichotomy.lean` (THM-934) wires kps-S19 `cite_chain_lonely` into the
+  grand assembly: LRC14Statement ⟸ cite + DenseCoreObligation (residual + explicit dense
+  certificate: ratio-<3 pair at j, ratios ≥ 3 above, entry fee 2(12−k)w(k+1) < 21(k+2)w(k)
+  failing ∀ k ≥ j). Entry constants c_m = 21(m+1)/(2(13−m)); c_7 = 14 exactly (the Vmax echo);
+  c_1, c_2 < 3 (fee binds only from m = 3 up). Referee 200k PASS. Build status: see session log.
+- **Next:** (i) the PAIR lift — rerun the dichotomy over kps-S20 `cite_blockchain_lonely`
+  (BLevel singles+pairs): dense core shrinks to triples-plus; needs the pair-dodge fee
+  (entry w·L ≥ 13/7, output 1/(14w')) folded into the search; (ii) the GLevel lift (S22,
+  ≤6-blocks) — dense core shrinks to the 7-wall; (iii) consume `ChainDenseCore`'s growth
+  caps (w12/wj < ∏c_m) in the finite middle-band exhaustion (klein's W*(r) windows —
+  the two parameterizations should be merged); (iv) the 7-wall itself: Hunter + JointRateCore
+  pair-floor (mac-mini's named per-cell obligation) — not mine unless freed.
+
 ## Lead death-star-2026-07-16-S30: cyclic class minima match known 7×8/8×8 values + Lean fragmentation progress
 - **Status:** the cyclic parallel-class book achieves Z(7,8) = 108 and Z(8,8) = 144 EXACTLY
   (ordinary values already known by Woodall + deletion averaging; proved-case controls exact;
