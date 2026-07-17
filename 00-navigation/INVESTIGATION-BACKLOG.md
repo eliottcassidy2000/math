@@ -6,7 +6,10 @@
   certificate: ratio-<3 pair at j, ratios ≥ 3 above, entry fee 2(12−k)w(k+1) < 21(k+2)w(k)
   failing ∀ k ≥ j). Entry constants c_m = 21(m+1)/(2(13−m)); c_7 = 14 exactly (the Vmax echo);
   c_1, c_2 < 3 (fee binds only from m = 3 up). Referee 200k PASS. Build status: see session log.
-- **Next:** (i) the PAIR lift — rerun the dichotomy over kps-S20 `cite_blockchain_lonely`
+- **S34 UPDATE:** pair lift DONE (THM-938, `LRCPairLiftDichotomy.lean`): dense core → TripleDenseCore
+  (21×-jump or entry-fail); j=11 cores close. Generic-law bridge DONE (THM-939,
+  `LRCDenseCoreRelationTrap.lean`): A1/A2 relation traps + TrappedDenseCoreB5Supply adapter.
+- **Next:** (i) [DONE S34 → THM-938] the PAIR lift — rerun the dichotomy over kps-S20 `cite_blockchain_lonely`
   (BLevel singles+pairs): dense core shrinks to triples-plus; needs the pair-dodge fee
   (entry w·L ≥ 13/7, output 1/(14w')) folded into the search; (ii) the GLevel lift (S22,
   ≤6-blocks) — dense core shrinks to the 7-wall; (iii) consume `ChainDenseCore`'s growth
