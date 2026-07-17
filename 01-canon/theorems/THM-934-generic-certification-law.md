@@ -1,5 +1,5 @@
 ---
-id: THM-932
+id: THM-934  # renumbered from 932 (opus block-gluing first-pushed 932 at 18:49 vs 18:57)
 title: THE GENERIC CERTIFICATION LAW — level-5 certification is GENERIC, not thin: 200/200 uniformly random 13-packets in [300, 4000] have BONF5 > 0 (each verified in EXACT rational arithmetic via the depth-spectrum sweep), so LRC(14) holds for all of them by the level-5 wall — and the stratification shows WHY the "thin regime" picture was wrong: packets with incidental blockers still certify at rate 1.000 (with 3-APs: 24 packets, mean BONF5 = 0.0832; with Sidon violations: 74, mean 0.0864; with small ratios p,q ≤ 13: 49, mean 0.0867; fully clean: 82, mean 0.0879) — an ACCIDENTAL blocker costs ~5×10⁻³ of certificate margin against μ₀ ≈ 0.135, two orders inside the leverage-identity budget (THM-930: kill requires weighted deep-coverage tail Σ C(d−1,5)μ_d > μ₀, i.e. SYSTEMATIC coordinated structure: the tight core's tail is 9.72, geometric dilates 0.55, opus-30Z 0.72 — versus ~10⁻³ per incidental resonance). THE DIVISION OF LABOR made quantitative: LRC(14) = (i) the GENERIC BULK, certified wholesale at level 5 (this law; opus THM-928(C) and THM-930(III) are its constructive witnesses); (ii) the LACUNARY stratum, PROVED for all n at ratio ≥ 19 (opus THM-928(A) cascade); (iii) the STRUCTURED ARITHMETIC SLIVER — near-AP/covering families (routes [A]/[B], signed off; THM-741 bounded-body ladder) — which is exactly where the extremizers live (the tight system's anti-Lee-Yang spectrum, THM-929). The remaining open composition: certify the MIDDLE strata (mildly structured: neither generic-random, nor 15-lacunary, nor near-AP) or prove the three strata exhaust — the precise shape of the finite-Vmax glue question
 status: 200/200 exact-rational certificates (seeded, reproducible); stratification exact per packet; the division-of-labor frame synthesizes proved components (THM-928(A), route-[A] signoff, THM-741) with the two new certified regimes
 source: kind-pasteur-2026-07-16-S128 (cont.35; owner: Lee-Yang criterion + keep completing LRC(14) tasks)
@@ -13,7 +13,7 @@ related:
 script: 04-computation/packet_density_kps_S128c35.py -> 05-knowledge/results/packet_density_kps_S128c35.out
 ---
 
-# THM-932 — the generic certification law
+# THM-934 — the generic certification law (renumbered from 932)
 
 Uniformly random 13-subsets of [300, 4000], N = 200 (seed 20260716): every one has
 BONF5 > 0 in exact rational arithmetic — level-5 Bonferroni certifies LRC(14) for the
