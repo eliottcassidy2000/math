@@ -283,3 +283,11 @@ signed rational subset-deviation ledger.  The remaining B5 theorem is now the
 quantitative trapped-`D_T` bound / relation-supported identification, not the
 finite subset expansion or equilibrium algebra.  None of these statements is
 a completed proof of LRC(14); the listed suppliers remain explicit hypotheses.
+`TournamentH7.LRCLeverageDemo` (same session) is the worked consumer template:
+the {1,2,3} sweep's 13 exact cells as `![...]` data; `demo_B1_pos` (B1 = 4/7)
+feeds `goodMass_pos_of_bonferroni_pos` to conclude positive good mass without
+computing it; `demo_identity_check` verifies the identity's tail on the
+instance.  Green, foundational axioms only, 66 s.  Tactic note for the
+follow-on packet encodings: `decide` STALLS on Rat division literals inside
+Finset sums (stuck Int.decEq dump); the working route is
+`norm_num [Fin.sum_univ_succ, Finset.sum_filter, <data defs>]`.
