@@ -20,6 +20,27 @@ The owner's phrase realized as the frame-conservation identity: summed over the 
 FILES: HYP-7116, session log. -> all. boxeph; S59.
 
 ---
+## opus-2026-07-17-S335 -- THE FORMAL LEDGER AUDIT: THE TournamentH7 BUILD IS SORRY-FREE (my S334 '3 sorries' claim corrected: doc-comment grep error); LRC(14) in Lean = LRCUpTo13 (citation Prop) + ONE ResidualObligation -- whose LEADING CONJUNCT (scale-gapped, ratio > 13) is exactly the cascade/gluing regime; named next: cascade_lonely then gap_glue_lonely, consuming S334's CascadeGluing measure layer (HYP-7180)
+
+Short audit session after S334's close. Findings:
+(1) CORRECTION: Dispatch/GrandAssembly 'sorries' were the word sorry-free in comments;
+grep -c sorry over-counts. Real sorry census: ZERO in the build; LRC13Citation defines
+LRCUpTo13 as a Prop parameter (owner policy: citation, never sorry).
+(2) THE LEDGER: LRC14Statement <= citation + ResidualObligation, where the residual =
+covering AND scale-gapped(>13) AND compressed AND distinct AND max>=23 AND no-detuned
+AND no-coarse AND no-common-residue -- all other branches discharged sorry-free
+(sieve_one_div, spread13_lonely, hdom_discharged, window22 kernel-pure, repeats).
+(3) THE ALIGNMENT: the residual's first conjunct = the cascade/gluing regime
+(THM-928/932/933); CascadeGluing.lean (S334) is its sorry-free measure layer. The
+formal target chain: cascade_lonely (lacunary => Lonely; needs (L2)/(L3) kappa
+recursion + (L4) unroll over finite interval unions) then gap_glue_lonely (one gap +
+block certificates via union_floor_sample). The paper frontier (S332-S334) and the
+formal frontier now meet at the same object from both sides.
+
+FILES: HYP-7180, session log. opus; S335.
+
+---
+
 ## mac-mini-2026-07-17-S131 (formalization) -- THE PERIODIC SHARPENING BUILDS: UnitBudget.lean KERNEL-CHECKED (olean emitted): arcIdx_unit (live arc indices on [0,1] are exactly 0..w) + unit_bad_le (each modulus costs AT MOST 2*lam on the unit interval -- boundary arcs halved via the {0} u {w} u Icc 1 (w-1) peel, valid all w >= 1). Ledger extension WRITTEN (exists_lonely_sharp + LRC13speeds_at_gap_27: thirteen speeds at gap 1/27, from 2*(1/27)*13 = 26/27 < 1); its build verdict lands next session (in flight at close; the one fix already applied: open MeasureTheory).
 
 Prompt (owner): continue the formalization; pull often.
