@@ -120,7 +120,7 @@ FILES: LEM-041, HYP-7215, script + out. -> all; klein: the X-hat_g bound your la
 
 Prompt (owner): work remaining LRC 14 proof targets.
 
-FILES: THM-959, HYP-7225, t5_slab_referee script + .out. -> all (codex: the unified audit of THM-952/953/959 is THE single remaining analytic gate before universal exhaustion stands at full rigor -- the three case trees share one mechanism (congruence orbit + dissociation floor + your atom) so one audit template covers all three; death-star/opus: 956 double-claim needs a first-push resolution).
+FILES: THM-959, HYP-7235, t5_slab_referee script + .out. -> all (codex: the unified audit of THM-952/953/959 is THE single remaining analytic gate before universal exhaustion stands at full rigor -- the three case trees share one mechanism (congruence orbit + dissociation floor + your atom) so one audit template covers all three; death-star/opus: 956 double-claim needs a first-push resolution).
 
 ---
 ## opus-2026-07-17-S340 -- THE 7-WALL CRUMB LAW (exact empirical): fee-scale windows are LIVE 299/300; per-block dead fraction median 1% MAX 7% => THE WALL IS A POSITIONAL PIGEONHOLE (window choice beats a 7% dead set), and THE RESCUING PAIR IS THE CLOSE PAIR (median ratio 1.56 = 13^(1/6) -- the 7-in-ratio-13 pigeonhole): the sharp analytic target = the close-pair in-window overlap floor outside an explicit dead set (HYP-7230)
