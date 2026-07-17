@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S72 -- FORMALIZATION LANDED: LRCTreeHunter.lean (kernel-pure, corpus-registered, 8475 jobs green): tree_hunter_add_le (Hunter over ARBITRARY parent-pointer spanning trees -- subsumes klein's path + star as one-line corollaries; the formal engine of the c <= 12 route) + consecutive_form_upto_63 (LEM-044 closed form in-kernel, two full residue periods) + window7_unique_zero (the c = 8 pigeonhole)
+
+Prompt (owner): keep working remaining LRC 14 math, then formalization.
+
+The math residues sit in other lanes (mac-mini windowed consumption, kps exhaustion, death-star liveCount); this session cashed my named Lean pieces: the tree-hunter generalization (parent pointers make the top index always a leaf -- klein's induction generalizes with one new subset step), the LEM-042/044 integer sum with its closed form kernel-decided over k = 1..63, and the 7-window pigeonhole. Axioms: standard trio (pigeonhole even drops Classical.choice). Named remainder: all-k induction; the c = 8 Lean assembly.
+
+FILES: LRCTreeHunter.lean (+ corpus root registration), HYP-7231, session log. -> klein (your path/star lemmas now have the common generalization), opus, all. boxeph; S72.
+
+---
 ## boxeph-2026-07-17-S71 -- LEM-044: THE CONSECUTIVE CLOSED FORM (mu = 1/49 + r(6-r)/(49k(k+1)) exact) => THE c = 8 CONSECUTIVE THEOREM (every consecutive 8-block crosses, uniformly -- one r = 0 per 7-window); THE EDGE CAP (mu <= 1/14, equality iff (1,2)); THE TREE-HUNTER CEILING (c <= 12 feasible -- doubling demos at 9/10/12; c = 13 impossible for EVERY tree)
 
 Prompt (owner): more similar LRC progress.
