@@ -141,12 +141,51 @@ theorem exists_common_witnessSlope_of_zero_connected
   exact (overlapDet_eq_zero_iff_witnessSlope_eq
     v q p root index (hv root) (hv index)).mp hzero |>.symm
 
+/-- A common rational slope has one primitive integer numerator/denominator.
+The denominator divides every speed in the stalk and every witness is the
+same numerator times the reduced speed.  This is the exact local parameter
+needed by the aligned-resonance count. -/
+theorem exists_common_primitiveWitnessParameter_of_zero_connected
+    (v : Fin 13 → ℤ) (hv : ∀ index, v index ≠ 0) (q p : ℕ)
+    (stalk : Finset (Fin 13)) (root : Fin 13) (hroot : root ∈ stalk)
+    (hconnected : ∀ index ∈ stalk,
+      Relation.ReflTransGen
+        (fun left right => overlapDet v q p left right = 0) root index) :
+    ∃ denominator : ℕ, ∃ numerator : ℤ,
+      0 < denominator ∧ numerator.natAbs.Coprime denominator ∧
+      ∀ index ∈ stalk,
+        (denominator : ℤ) ∣ v index ∧
+        failWitness v q p index =
+          (v index / (denominator : ℤ)) * numerator := by
+  obtain ⟨slope, hslope⟩ :=
+    exists_common_witnessSlope_of_zero_connected
+      v hv q p stalk root hroot hconnected
+  refine ⟨slope.den, slope.num, slope.den_pos, slope.reduced, ?_⟩
+  intro index hindex
+  have hslopeDivInt :
+      slope = Rat.divInt (failWitness v q p index) (v index) := by
+    rw [Rat.divInt_eq_div]
+    exact (hslope index hindex).symm
+  obtain ⟨scale, hwitness, hspeed⟩ :=
+    Rat.num_den_mk (hv index) hslopeDivInt
+  have hdenominator : (slope.den : ℤ) ≠ 0 := by
+    exact_mod_cast slope.den_nz
+  have hdivides : (slope.den : ℤ) ∣ v index := by
+    refine ⟨scale, ?_⟩
+    simpa [mul_comm] using hspeed
+  refine ⟨hdivides, ?_⟩
+  have hquotient : v index / (slope.den : ℤ) = scale :=
+    Int.ediv_eq_of_eq_mul_left hdenominator hspeed
+  rw [hquotient]
+  exact hwitness
+
 #print axioms overlapDet_eq_zero_iff_witnessSlope_eq
 #print axioms overlapDet_zero_trans
 #print axioms overlapZeroSetoid
 #print axioms overlapDet_zero_of_reflTransGen
 #print axioms exists_common_witnessSlope_of_pairwise_zero
 #print axioms exists_common_witnessSlope_of_zero_connected
+#print axioms exists_common_primitiveWitnessParameter_of_zero_connected
 
 end LRC14Concrete
 end LonelyRunner
