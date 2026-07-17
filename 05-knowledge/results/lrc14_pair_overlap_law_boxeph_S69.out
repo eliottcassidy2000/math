@@ -1,0 +1,31 @@
+THE PAIR-OVERLAP LAW -- referee (boxeph S69)
+==============================================================================
+PART A -- exact formula vs brute sweep
+  formula == brute on 204 pairs (exact rationals)
+
+PART B/C -- the 1/49 equidistribution value and the domain map
+  consecutive: (1,2): 1/14 (=1/14); (2,3): 1/21 (=1/21); (3,4): 1/28 (=1/28); (4,5): 1/35 (=1/35); (5,6): 1/42 (=1/42); (6,7): 1/49 (=1/49)
+               (7,8): 1/49 (=1/49); (8,9): 11/504 (>1/49)
+  min over consecutive a' <= 200: 1/49 >= 1/49: True
+  reduced pairs a',b' <= 14 with mu < 1/49: 23; smallest failing ratio b'/a' = 1.600 (e.g. [(5, 8)])
+  spot: mu(D_1, D_12) = 1/84 (= 1/84 < 1/49: True)
+  all reduced pairs with ratio <= 3/2 pass the 1/49 floor: False
+  all reduced pairs with ratio <= 2/1 pass the 1/49 floor: False
+  all reduced pairs with ratio <= 5/2 pass the 1/49 floor: False
+  all reduced pairs with ratio <= 3/1 pass the 1/49 floor: False
+  all reduced pairs with ratio <= 7/2 pass the 1/49 floor: False
+  all reduced pairs with ratio <= 4/1 pass the 1/49 floor: False
+
+PART D -- crossing the 7-wall with exact pair credits
+  block [50, 51, 52, 53, 54, 55, 56]: TRUE good = 0.29890; hunter ledger floor = 0 + credits 0.12271 = 0.12271 > 0: True (<= true: True)
+  block [100, 101, 102, 103, 104, 105, 106]: TRUE good = 0.29800; hunter ledger floor = 0 + credits 0.12251 = 0.12251 > 0: True (<= true: True)
+  block [35, 42, 49, 56, 63, 70, 77]: TRUE good = 0.29833; hunter ledger floor = 0 + credits 0.13075 = 0.13075 > 0: True (<= true: True)
+  block [70, 84, 98, 112, 126, 140, 154]: TRUE good = 0.29833; hunter ledger floor = 0 + credits 0.13075 = 0.13075 > 0: True (<= true: True)
+
+PART E -- the window face (measured): min_I mu(I)/|I| vs |I|
+  (a,b)=(50,51): |I| = 1/2: min_I mu/|I| = 0.00000  (period value 0.02045)
+  (a,b)=(50,51): |I| = 1/5: min_I mu/|I| = 0.00000  (period value 0.02045)
+  (a,b)=(50,51): |I| = 1/10: min_I mu/|I| = 0.00000  (period value 0.02045)
+  (a,b)=(50,51): |I| = 1/25: min_I mu/|I| = 0.00000  (period value 0.02045)
+==============================================================================
+done

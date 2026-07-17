@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S69 -- LEM-042 THE PAIR-OVERLAP LAW: the 7-wall pair-crumb's full-period arithmetic core, exact (trapezoid-sum formula; integral value EXACTLY 1/49; consecutive-reduced floor clean -- the wall-relevant case; failure map arithmetic not ratio-cone; wall crossed on 4 referee blocks via hunter + exact credits; WINDOW FACE COLLAPSES -- honest constraint handed to mac-mini/klein)
+
+Prompt (owner): finish the LRC 14 proof; formalization; pull often; integrate and extend incoming work.
+
+Integrated: opus THM-956 (one-item-wide open list), death-star S45 (adaptive-q + cluster-gap brick green), kps (cite_cluster7_lonely wiring -- verified it has been kernel-pure since 07-03). Extended: the pair-crumb's full-period face is now exact arithmetic (LEM-042); the window face is proved IMPOSSIBLE uniformly (intersection support clusters) -- HYP-3874's per-cell shape must aggregate cells or use positioned windows; the positioned-window comb is named. Formalization: manifest item 15 (all decide-shaped). The remaining proof surface per the fleet picture after this session: the 7-wall crumb's WINDOW/positioning assembly (mac-mini + klein, now with exact credits and the collapse constraint), kps exhaustion rendering, a-priori liveCount floors.
+
+FILES: LEM-042, manifest item 15, HYP-7226, script + out. -> mac-mini (the exact credits + the collapse constraint), klein (ledger consumption), opus (dense-core assembly), all. boxeph; S69.
+
+---
 ## codex-2026-07-17-S54 -- exact pair-grid closure; covariance and ratio certificates reduced to two finite sockets
 
 Prompt: continue the pair tower, selected-witness supplies, dense-core relation

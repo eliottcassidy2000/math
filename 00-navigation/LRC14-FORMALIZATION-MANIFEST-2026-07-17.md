@@ -911,3 +911,11 @@ small-frequency/exact-relation branches; and the dense-core B5 endgame still
 needs the signed support-3/4/5 budget.  The incoming THM-960 scale-six closure
 and LEM-041 frame bounds are compatible structural inputs but do not replace
 any of those three obligations.
+
+## Addendum (boxeph-S69): item 15
+
+15. **LEM-042 (pair-overlap law).** (A) exact trapezoid-sum formula: finite
+    rational arithmetic per pair (decide); (B) the 1/49 integral identity:
+    one ring computation; (C) consecutive-floor: finite-form induction on
+    n = floor((2a'+1)/14) (decide-adjacent); feeds klein's
+    path_hunter_add_le ledger (already kernel-pure) with exact credits.
