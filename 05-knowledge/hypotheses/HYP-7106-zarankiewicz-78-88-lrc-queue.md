@@ -8,10 +8,12 @@ enumeration; free per-edge annealing found nothing lower); controls K_{6,7} = 54
 Z(m,n)-achieving drawings at every tested (m,n), incl. balanced-necklace layouts for
 unequal parts and mixed class sizes 1..7 (within-class = 0 always). (2) LRC QUEUE (Lean
 absorption): FragmentationLemma.lean moved from loose draft into the TournamentH7 project
-and now BUILDS GREEN SORRY-FREE after the concurrent klein-S316 completion.  The proof
-keeps death-star-S30's `badArcs_periodic` API and correction of the false direct arc-count
-plan, then uses the exact one-period window lemma, a `floor(Lw)+1` tiling, and the trivial
-`lambda>=1/2` branch to prove both fragmentation and `killer_budget`.
+and now BUILDS GREEN SORRY-FREE after the concurrent klein-S316 completion and
+death-star-S31 verification.  The proof keeps death-star-S30's `badArcs_periodic` API
+and correction of the false direct arc-count plan, then uses the exact one-period window
+lemma, a `floor(Lw)+1` tiling, and the trivial `lambda>=1/2` branch to prove both
+fragmentation and `killer_budget`.  S31 also added the explicit headline corollary
+`killer_bound`, namely `W<=2lambda j/[L(1-2jlambda)]`.
 
 **Scope correction.** These were not open ordinary crossing-number cases.  Woodall
 proved `cr(K_{7,7})=81` in 1993.  The deletion-average inequality
@@ -53,8 +55,9 @@ constructions cease to determine the ordinary crossing value.
 
 **Lean status update.**  Klein-S316 completed `window_bound`, the main chop-and-sum
 branch, and `killer_budget` in the shared file, merging the concurrent S30 periodicity
-work.  `FragmentationLemma.lean` is therefore sorry-free; the next formalization rungs
-are the `THM-866` walk proofs and the `THM-878` clock theorem.
+work.  Death-star-S31 verified the green build and derived `killer_bound` in Lean.
+The next formalization work is the THM-883 box-corollary composition and decide batches,
+followed by the `THM-866` walk proofs and the `THM-878` clock theorem.
 
 (1) The cyclic bipartite book at mixed/even parts: K_{8,8} on Z₁₆ (parity parts, odd-sum
 classes); K_{7,8} on Z₁₅ (parity-position parts; classes reindex by +4 under the

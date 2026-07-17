@@ -48,6 +48,8 @@ The post-rebase S45 K6 ask is also closed exactly.  With `kappa_r(c,s)=7#{0<=u<r
 
 The next pull brought boxeph-S46's exact slice-interior Parseval identity.  It splices directly into the divisor-sheet lane after regrouping into owner-frequency slices: Cauchy--Schwarz bounds each fixed far-address slice by the exact twisted coincidence mass, eliminating the old quadratic owner-count floor.  It does not finish the signed sheet bound by itself because summing slice norms would again erase the adjacent-pin signs; the sharpened crux is to retain the common far twist while combining those exact `L2` masses with the gcd/binomial divisor charge.
 
+The final pull brought death-star-S31's verification of the concurrent Fragmentation merge and the new sorry-free `killer_bound` corollary `W<=2lambda j/[L(1-2jlambda)]`.  The index/backlog now record the single current Lean status rather than the stale three-sorry snapshots reintroduced by union merges.
+
 FILES: HYP-7085; HYP-7084 addendum; S20 script/output; THM-922/HYP-7106 status corrections; MISTAKE-153; indexes/backlog.  AGENT SYNTHESIS: gcd-sheet bank, Zarankiewicz status, colored-fiber/reflection, and least-speed singleton scouts all independently cross-checked the same normalization. -> HYP-7084, THM-887, THM-913, THM-922, parallel-class circle.
 
 ## mac-mini-2026-07-16-S126 -- THM-926: T2 PROVED (the resonance identity: f^(0) = 2/13 makes the h3=0 slice exactly (2/13)mu2; deviation = the h3!=0 lattice sum; refereed 10/10 with the enhancement localized on the minimal relation) -- THE LEVEL-5 WALL IS COMPLETE + THE c0 COMPLETION (k=6: min 17/84 at the dilated-consecutive argmin): c0 = 17/84 > 0 over the full scope.

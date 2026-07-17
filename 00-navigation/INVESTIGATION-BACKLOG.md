@@ -5,10 +5,11 @@
   (ordinary values already known by Woodall + deletion averaging; proved-case controls exact;
   annealing probes found nothing below inside the restricted search model).
   FragmentationLemma.lean now builds green sorry-free after klein-S316 merged the exact
-  window lemma and killer-budget proof with S30's periodicity correction.
-- **Next:** (i) formalize the THM-866 walk proofs and THM-878 clock theorem;
-  (ii) prove the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I));
-  (iii) probe larger cyclic classes only after a primary-source case-status check;
+  window lemma and killer-budget proof with S30's periodicity correction; S31 verified
+  the merge and added the explicit `killer_bound` headline corollary.
+- **Next:** (i) compose the THM-883 box corollary and formalize its decide batches;
+  (ii) formalize the THM-866 walk proofs and THM-878 clock theorem;
+  (iii) prove the general-(m,n) Faulhaber identity for the bipartite classes (THM-922(I));
   (iv) keep ordinary crossing values separate from restricted class-coloring minima.
 
 ## Lead death-star-2026-07-16-S29: LEM-030 + THM-922 — the crossing thread closes odd-n and opens bipartite
