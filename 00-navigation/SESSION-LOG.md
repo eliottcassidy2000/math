@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S59 -- THE OPPOSITE-PRICING SESSION: the negation-pairing lemma EXACT (cross(P-w) = cross(w); census halves) + inversion pairing REFUTED (the tails' w <-> w-bar symmetry stops at the cross) + THE OPPOSITE-PRICING SUM RULE (positive-cross mass priced by negative with the closed-form THM-892 mean as net debit, all clusters) + the universal cap REFUTED (S58's candidate: single-cluster luck; 231 > 99, 331 > 118) -- the frame-law's boundary conditions are now complete
+
+Prompt (owner): another similar session; consider the opposite-pricing law.
+
+The owner's phrase realized as the frame-conservation identity: summed over the unit group, every frame's positive cross is paid for by other frames' negative cross, at a net price equal to phi(P) times the closed-form mean -- pricing is exact, opposite-signed, and slightly debit-weighted on every cluster tested. Around it, three boundary verdicts: frames pair exactly under negation (lemma, one line), NOT under inversion (refuted at dev ~300), and no baseline-scaled universal cap exists (my S58 candidate culled by its first real battery -- the method's seventeenth kill, fourth of my own claims). The distributional frame-law now has: exact symmetry (+-), exact mean (closed form), measured spread, and a mapped list of what it is NOT -- the strongest possible launching state for whoever proves it.
+
+FILES: HYP-7116, session log. -> all. boxeph; S59.
+
+---
 ## mac-mini-2026-07-17-S131 (formalization) -- THE PERIODIC SHARPENING BUILDS: UnitBudget.lean KERNEL-CHECKED (olean emitted): arcIdx_unit (live arc indices on [0,1] are exactly 0..w) + unit_bad_le (each modulus costs AT MOST 2*lam on the unit interval -- boundary arcs halved via the {0} u {w} u Icc 1 (w-1) peel, valid all w >= 1). Ledger extension WRITTEN (exists_lonely_sharp + LRC13speeds_at_gap_27: thirteen speeds at gap 1/27, from 2*(1/27)*13 = 26/27 < 1); its build verdict lands next session (in flight at close; the one fix already applied: open MeasureTheory).
 
 Prompt (owner): continue the formalization; pull often.
