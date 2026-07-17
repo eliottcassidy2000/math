@@ -11,6 +11,29 @@ Format per entry:
 
 ---
 
+## MISTAKE-157 -- three packet sign profiles were promoted to universal positive association and support-budget sharpness
+
+**What was claimed:** the exact support decomposition observed nonnegative aggregate
+`M3,M4,M5` and near-unit absolute-vs-signed slack on three 13-speed packets.  This
+was promoted to the conjectural law `M(A) >= 0` for every individual support
+`|A| >= 3`, and the absolute support budget was described as universally sharp.
+
+**Why it is wrong:** exact rational counterexamples occur at every relevant size:
+`M({1,2,15})=-4/1715`, `M({1,2,3,28})=-5/4116`, and
+`M({1,2,3,4,32})=-109/806736`.  The triple failure is infinite:
+`M({1,2,N})=k[N mod 28]/(686N)`, with negative residues exactly `15..27`.
+In particular `M({1,2,15+28m})=-12/[343(15+28m)]` for all `m>=0`.
+
+**Correct framing:** the Möbius decomposition and the three packet autopsies are
+valid exact computations; near-sharpness is a property of those packets.  A
+universal argument must retain signed higher-support information.  Pair masses are
+symmetric, so the faithful combinatorial object is a signed support hypergraph (with
+a cyclic 28-residue boundary walk in the explicit family), not a runner tournament.
+
+**Impact:** THM-948 retains the exact packet data but removes the universal law.
+HYP-7195 is refuted in its positive-association form.  No Lean theorem was affected.
+Source: codex-S50/S52, 2026-07-17.
+
 ## MISTAKE-156 -- a logarithm-free two-pole convolution estimate was promoted to `T3/T4/T5` tail bounds and universal B5 exhaustion
 
 **What was claimed:** the former collided tail page asserted a universal estimate
