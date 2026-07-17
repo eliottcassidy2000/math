@@ -219,7 +219,8 @@ theorem B5_race_scoreboard (v : Fin 13 → ℤ) (q : ℕ) (hq : 14 ≤ q)
       ≤ ∑ T ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2, deviation v q T := by
     have hcount : ((Finset.univ : Finset (Fin 13)).powersetCard 2).card = 78 := by
       rw [Finset.card_powersetCard]
-      simp
+      simp only [Finset.card_univ, Fintype.card_fin]
+      rfl
     calc -(78 * (((q : ℚ) - 1) / 49))
         = ∑ _T ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2,
             -(((q : ℚ) - 1) / 49) := by
@@ -238,7 +239,8 @@ theorem B5_race_scoreboard (v : Fin 13 → ℤ) (q : ℕ) (hq : 14 ≤ q)
       ≤ ∑ T ∈ (Finset.univ : Finset (Fin 13)).powersetCard 4, deviation v q T := by
     have hcount : ((Finset.univ : Finset (Fin 13)).powersetCard 4).card = 715 := by
       rw [Finset.card_powersetCard]
-      simp
+      simp only [Finset.card_univ, Fintype.card_fin]
+      rfl
     calc -(715 * (((q : ℚ) - 1) / 2401))
         = ∑ _T ∈ (Finset.univ : Finset (Fin 13)).powersetCard 4,
             -(((q : ℚ) - 1) / 2401) := by

@@ -1,3 +1,14 @@
+## death-star-2026-07-17-S38 -- THM-944 THE DILATE COUNT + THE B5 RACE SCOREBOARD (Lean kernel-pure): a ChainDenseCore family has AT MOST 12 doubling pairs, ALL confined below the dense pair (counting lemma + THM-939 trap at the explicit (1,-2) vector) -- and the race for B5-positivity is now ONE formal inequality with proved even floors, exact dilate content, and the odd tails isolated as exactly two named rationals per family
+
+Prompt (owner): count below-pair dilates and close the B5 race on explicit strata.
+
+(A) THE COUNT (THM-944.1-2, LRCB5Race.lean): dilatePairs_card_le -- doubling pairs in an injective positive 13-family number <= 12 (each pair determined by its top; the minimum is never a top); dilate_top_below_pair -- on chain-dense families every doubling top sits <= j+1 (A1 instantiated at coeff = (1 at t, -2 at s)). Together: <= 12 dilate pairs, all in the bottom block -- the count formal.
+
+(B) THE RACE (THM-944.4): B5_race_scoreboard -- for q >= 14, all-gcd-1, with tail3/tail5 NAMING the odd deviation sums: B5 >= (q-1)*2052/16807 - 78(q-1)/49 - 715(q-1)/2401 - tail3 - tail5. Signs proved: k=1 HELPS (singles <= 0 by THM-942A); k=2/k=4 pay at worst the proved floors -(q-1)/7^k each; two-sided per-subset bounds (deviation_lower/deviation_upper_of_mem) landed. HONEST: the trivial even floors alone do NOT make the RHS positive (78/49 > equilibrium) -- closing outright still needs the odd tails = the equidistribution heart, now isolated as TWO named rationals per family; sharper per-stratum k=2 floors (THM-943A's exact dilate mass at 14|q with the (A) count) slot into the frame without changes.
+
+Referee (b5race_referee_deathstar_S38.py/.out): counting PASS (30k), confinement PASS (3766 chain-dense), scoreboard PASS exactly (tails = true sums). FILES: THM-944, HYP-7182 confirmed, LRCB5Race.lean, referee+.out, root import. NEXT: (i) tail3/tail5 bounds on explicit strata -- the isolated equidistribution obligation (per-triple ceilings via deviation_upper_of_mem give tail3 <= 286[(q-1)/7 - (q-1)/343] unconditionally-PROVED but too big; the gap to close is a factor ~40); (ii) THM-943A generalization to c-dilates (c = 3.. covers the ratio-3 ladder's exact steps); (iii) kps/codex: the scoreboard is relationModel with masses = my deviation sums -- the identification is now term-by-term. death-star; S38.
+
+---
 ## death-star-2026-07-17-S37 -- THM-943 THE PAIR RUNG + MULTI-BLOCK CHAINS (both Lean kernel-pure, first-pass green): THE DILATE PAIR PRICED EXACTLY -- N_ij = 2*floor((Q-1)/2) at q=14Q, D_ij = (5/7)Q + O(1) POSITIVE Theta(q) (the systematic blocker's formal price; the trap forbids it above the dense pair, this theorem prices it below) -- and arbitrarily many fat blocks now chain under one citation with a cheap singles tail
 
 Prompt (owner): prove the pair deviations D_{ij} rung and run the multi-block chains.
