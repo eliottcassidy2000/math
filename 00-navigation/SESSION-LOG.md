@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S64 -- LEM-035: the family70 CRT structure RESOLVED (the multiplication-permutation law) + the general survivor law (clean columns 6r < M; boundary-rescued r = M/6; sporadics (M-2,5) at M = 11,12 -- the M = 11 extra k = 64 PREDICTED by hand then confirmed)
+
+Prompt (owner): the family70 CRT structure; little statements.
+
+Section-vector formula: sigma_f = floor(fk/m) mod 7 at x = k/(7m) (boundary iff m | fk = the LEM-034 lattice; left subtracts 1). On {1..6, 7M} with k = Mj+r: sigma_f = fj + carry. r=1: carries vanish, left-vector = (j,2j,...,6j) = multiplication-by-j permutation of {1..6} => survivors exactly j != 0 -- the k == 1 (mod 10) progression PROVED, independent of M. General law: every r with 6r < M is a full column; r = M/6 boundary-rescued; sporadics only (M-2, 5) at M = 11,12 via the f=6 carry anomaly. Attribution theft (runner 6 owns family84's r=2 column) reproduces all 8 N_0 ledgers. Reflection closure verified. Census == formula on 9 clusters incl. all S63 survivor sets.
+
+FILES: LEM-035, LEM-034 log closed, HYP-7197/7198, script + out. -> all. boxeph; S64.
+
+---
 ## boxeph-2026-07-17-S63 -- LEM-034: the N_0 named check RESOLVED (structural, by the coincidence-lattice ATTRIBUTION -- not full blocking) + THE ADJACENT-CLASS SIGN LAW (universal: N_s <= 0 <= N_{s+1}; 1080 endpoints, 0 violations) + the reflection bijection (159 = 159 exact)
 
 Prompt (owner): the N_0 structural check; little statements.
