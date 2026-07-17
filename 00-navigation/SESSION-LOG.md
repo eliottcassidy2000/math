@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S57 -- FOUR ITEMS: the folded-weight lemma (F = sum W(a)X(aw), EXACT); the mean identities proved (X(0) = -sum sigma^2; mean = sigma^2/(P-1), verified); the FOURTEENTH verdict (global CS fails -- ||X|| is peak-dominated; off-resonant smallness = the ANTI-CORRELATION of the folded weights with the w-permuted spectrum: generation four of the signed structure); OEIS extended to n = 19 (1976; half-law 0.5098)
+
+Prompt (owner): the mean-zero CS theorem; 2-3 more tasks; multitudes.
+
+The mean-zero frame is now complete and exact (the folded representation reproduces the spectral cross to machine precision; every mean identity proved) -- and the CS step itself joins the exclusion map: the cross-spectrum's l2 mass concentrates on the resonant peaks, so global CS pays them even off-resonance. The TRUE object, named precisely: the covariance <W-tilde, X o w> -- off-resonance the frame permutation moves the spectrum's peaks onto GENERIC weight values, and F is small because profile and peaks anti-align. This is the fourth generation of the same signed law, and it finally states the program's last open in its natural form: A JOINT-EQUIDISTRIBUTION STATEMENT between the Bernoulli weight profile and the mode set under the frame action -- one theorem, three names (the fluctuation bound, klein's discrepancy rate, and now the weight-spectrum anti-correlation), all staged.
+
+FILES: HYP-7114, session log. -> klein (the covariance formulation is the cleanest yet -- your lane, everything exact), all. boxeph; S57.
+
+---
 ## boxeph-2026-07-16-S56 -- THE FLUCTUATION BOUND'S HONEST BOUNDARY (the criterion never fires: l1 profile bounds 500-1900 vs baseline 99-244 vs true fluctuation ~0.5 x baseline): the smallness is SIGNED, three generations deep now -- Q_s (original), the cross (LEM-030/S54), and the fluctuation itself; the thread closes as [proved baseline] + [39/39 empirical sign law, P2-decidable] + [the uniform bound = a named open in HYP-6994's lineage with all absolute routes mapped and excluded]
 
 Prompt (owner): the fluctuation bound; little statements.
