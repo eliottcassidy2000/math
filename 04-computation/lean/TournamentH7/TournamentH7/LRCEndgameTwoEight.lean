@@ -310,6 +310,28 @@ theorem reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
     rw [hzero]
     omega
 
+/-- A nonempty observed row of reduced denominator at most seven is exactly
+one reduced residue class. -/
+theorem detunedBadBranches_eq_filter_modEq_of_nonempty_q_le_seven
+    (δ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq7 : g / (Int.gcd δ g : ℤ) ≤ 7)
+    (hbad : (detunedBadBranches δ g u).Nonempty) :
+    ∃ c ∈ detunedBadBranches δ g u,
+      detunedBadBranches δ g u =
+        {x ∈ Finset.Ico (0 : ℤ) g |
+          x ≡ c [ZMOD g / (Int.gcd δ g : ℤ)]} := by
+  obtain ⟨c, hc⟩ := hbad
+  refine ⟨c, hc, ?_⟩
+  ext x
+  constructor
+  · intro hx
+    exact Finset.mem_filter.mpr ⟨(Finset.mem_filter.mp hx).1,
+      detunedBadBranches_pair_modEq_of_q_le_seven δ g u hg hq7 hx hc⟩
+  · intro hx
+    have hx' := Finset.mem_filter.mp hx
+    exact detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ g u hg hc hx'.1 hx'.2.symm
+
 /-- Every `q≥4` row costs at most one quarter of the q-two complement sheet,
 and the inequality is strict unless `q=4`.  The cases are: one-class rigidity
 for q=4..7, the parity-sliced q-eight theorem, and the universal q≥9 bound. -/
@@ -629,6 +651,111 @@ theorem no_three_detuned_goodBranch_two_seven_nine :
     refine ⟨by norm_num, 7, ?_⟩
     norm_num [abs_of_nonneg, abs_of_nonpos]
 
+/-- Exact parallel-class normal form for a failing `(2,4,4)` phase.  The rows
+are one mod-two class plus two distinct mod-four classes, both of parity
+opposite to the q-two row.  Hence the degrees are `g/2,g/4,g/4`, all pair
+intersections vanish, and the elementary incidence bound is attained. -/
+theorem qTwo_four_four_failure_normal_form
+    (δ₂ δ₄a δ₄b g : ℤ) (u : ℝ) (hg : 2 ≤ g)
+    (hq2 : g / (Int.gcd δ₂ g : ℤ) = 2)
+    (hq4a : g / (Int.gcd δ₄a g : ℤ) = 4)
+    (hq4b : g / (Int.gcd δ₄b g : ℤ) = 4)
+    (hnogood : ¬ HasThreeDetunedGoodBranch δ₂ δ₄a δ₄b g u) :
+    ∃ c₂ c₄a c₄b,
+      c₂ ∈ detunedBadBranches δ₂ g u ∧
+      c₄a ∈ detunedBadBranches δ₄a g u ∧
+      c₄b ∈ detunedBadBranches δ₄b g u ∧
+      detunedBadBranches δ₂ g u =
+        {x ∈ Finset.Ico (0 : ℤ) g | x ≡ c₂ [ZMOD 2]} ∧
+      detunedBadBranches δ₄a g u =
+        {x ∈ Finset.Ico (0 : ℤ) g | x ≡ c₄a [ZMOD 4]} ∧
+      detunedBadBranches δ₄b g u =
+        {x ∈ Finset.Ico (0 : ℤ) g | x ≡ c₄b [ZMOD 4]} ∧
+      ¬ c₂ ≡ c₄a [ZMOD 2] ∧
+      ¬ c₂ ≡ c₄b [ZMOD 2] ∧
+      ¬ c₄a ≡ c₄b [ZMOD 4] := by
+  have hg0 : (0 : ℤ) < g := by omega
+  have hg1 : (1 : ℤ) ≤ g := by omega
+  have hbad2 := two_mul_badCount_eq δ₂ g hg0 hq2
+  have hbad4a :=
+    four_mul_badCount_eq_of_reducedDenominator_four δ₄a g hg0 hq4a
+  have hbad4b :=
+    four_mul_badCount_eq_of_reducedDenominator_four δ₄b g hg0 hq4b
+  have hbudget : DetunedD3.badCount δ₂ g + DetunedD3.badCount δ₄a g +
+      DetunedD3.badCount δ₄b g ≤ g.toNat := by omega
+  have hno2a : ¬ (detunedBadBranches δ₂ g u ∩
+      detunedBadBranches δ₄a g u).Nonempty := by
+    intro hinter
+    exact hnogood (hasThreeDetunedGoodBranch_of_pairOverlap
+      δ₂ δ₄a δ₄b g u hg1 hbudget (Or.inl hinter))
+  have hno2b : ¬ (detunedBadBranches δ₂ g u ∩
+      detunedBadBranches δ₄b g u).Nonempty := by
+    intro hinter
+    exact hnogood (hasThreeDetunedGoodBranch_of_pairOverlap
+      δ₂ δ₄a δ₄b g u hg1 hbudget (Or.inr (Or.inl hinter)))
+  have hno4ab : ¬ (detunedBadBranches δ₄a g u ∩
+      detunedBadBranches δ₄b g u).Nonempty := by
+    intro hinter
+    exact hnogood (hasThreeDetunedGoodBranch_of_pairOverlap
+      δ₂ δ₄a δ₄b g u hg1 hbudget (Or.inr (Or.inr hinter)))
+  have hnotCardLt : ¬
+      (detunedBadBranches δ₂ g u).card +
+        (detunedBadBranches δ₄a g u).card +
+        (detunedBadBranches δ₄b g u).card < g.toNat := by
+    intro hlt
+    exact hnogood (hasThreeDetunedGoodBranch_of_card_sum_lt
+      δ₂ δ₄a δ₄b g u hlt)
+  have hcard2 := detunedBadBranches_card_le δ₂ g hg1 u
+  have hcard4a := detunedBadBranches_card_le δ₄a g hg1 u
+  have hcard4b := detunedBadBranches_card_le δ₄b g hg1 u
+  have hsatur2 : 2 * (detunedBadBranches δ₂ g u).card = g.toNat := by omega
+  have hsatur4a : 4 * (detunedBadBranches δ₄a g u).card = g.toNat := by omega
+  have hsatur4b : 4 * (detunedBadBranches δ₄b g u).card = g.toNat := by omega
+  have hnonempty2 : (detunedBadBranches δ₂ g u).Nonempty := by
+    rw [← Finset.card_pos]
+    omega
+  have hnonempty4a : (detunedBadBranches δ₄a g u).Nonempty := by
+    rw [← Finset.card_pos]
+    omega
+  have hnonempty4b : (detunedBadBranches δ₄b g u).Nonempty := by
+    rw [← Finset.card_pos]
+    omega
+  obtain ⟨c₂, hc₂, hrow2⟩ :=
+    detunedBadBranches_eq_filter_modEq_of_nonempty_q_le_seven
+      δ₂ g u hg1 (by omega) hnonempty2
+  obtain ⟨c₄a, hc₄a, hrow4a⟩ :=
+    detunedBadBranches_eq_filter_modEq_of_nonempty_q_le_seven
+      δ₄a g u hg1 (by omega) hnonempty4a
+  obtain ⟨c₄b, hc₄b, hrow4b⟩ :=
+    detunedBadBranches_eq_filter_modEq_of_nonempty_q_le_seven
+      δ₄b g u hg1 (by omega) hnonempty4b
+  have hpar2a : ¬ c₂ ≡ c₄a [ZMOD 2] := by
+    intro hmod
+    apply hno2a
+    refine ⟨c₄a, Finset.mem_inter.mpr ⟨?_, hc₄a⟩⟩
+    apply detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ₂ g u hg1 hc₂ (detunedBadBranches_subset_Ico δ₄a g u hc₄a)
+    simpa [hq2] using hmod
+  have hpar2b : ¬ c₂ ≡ c₄b [ZMOD 2] := by
+    intro hmod
+    apply hno2b
+    refine ⟨c₄b, Finset.mem_inter.mpr ⟨?_, hc₄b⟩⟩
+    apply detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ₂ g u hg1 hc₂ (detunedBadBranches_subset_Ico δ₄b g u hc₄b)
+    simpa [hq2] using hmod
+  have hmod4ab : ¬ c₄a ≡ c₄b [ZMOD 4] := by
+    intro hmod
+    apply hno4ab
+    refine ⟨c₄b, Finset.mem_inter.mpr ⟨?_, hc₄b⟩⟩
+    apply detunedBadBranches_mem_of_modEq_reducedDenominator
+      δ₄a g u hg1 hc₄a (detunedBadBranches_subset_Ico δ₄b g u hc₄b)
+    simpa [hq4a] using hmod
+  refine ⟨c₂, c₄a, c₄b, hc₂, hc₄a, hc₄b, ?_, ?_, ?_,
+    hpar2a, hpar2b, hmod4ab⟩
+  · simpa [hq2] using hrow2
+  · simpa [hq4a] using hrow4a
+  · simpa [hq4b] using hrow4b
+
 /-- Selected nonmultiples exhaust an exactly-three detuned set. -/
 theorem dvd_of_nonMultCard_three_of_selected
     (v : Fin 13 → ℤ) (g : ℤ)
@@ -875,6 +1002,7 @@ theorem lrc14_from_finalResidues_and_relationBudget
 #print axioms lonely14_of_three_detuned_two_four_eight
 #print axioms lonely14_of_three_detuned_two_eight_eight
 #print axioms no_three_detuned_goodBranch_two_seven_nine
+#print axioms qTwo_four_four_failure_normal_form
 #print axioms deepExceptionalDetunedDispatchAfterTwoThreeCRT_of_afterTwoEight
 #print axioms lrc14_from_afterTwoEight_and_relationBudget
 #print axioms reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven

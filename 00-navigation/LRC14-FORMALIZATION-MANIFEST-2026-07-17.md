@@ -221,3 +221,50 @@ Remaining consumer step: the sweep encoding (a packet's finite cell list with
 depths, exact rational lengths) feeding `leverage_identity` — decide-shaped,
 same pattern as item 3; then `goodMass_pos_of_bonferroni_pos` turns the
 THM-930/934 certificates (incl. the two certified packets) into kernel facts.
+
+## Landed addendum — exact parallel-class values and final residue frontier (codex-S38--S41)
+
+`TournamentH7.LRCEndgameTwoThreeSix` computes the first exact phase-sensitive
+Zarankiewicz value on the parallel-class circle.  Every nonempty q-two row and
+q-three row intersect in one mod-six class of cardinality `g/6`.  That credit
+closes every `(2,3,q)` triple with `q≥4`, the exact `(2,3,3)` double-credit case,
+and feeds actual LRC witnesses through `ThreeDetunedInstanceClearing`.
+
+The same module classifies `(2,2,3)` exactly: failure at a fixed phase is
+equivalent to two nonempty disjoint q-two rows, i.e. complementary parity
+classes.  The kernel-checked example `(δ₂a,δ₂b,δ₃,g,u)=(3,27,2,6,11/100)`
+realizes the obstruction.  Thus a phase-uniform common-branch theorem is false;
+the residual is harmonic-witness selection.
+
+`TournamentH7.LRCEndgameTwoEight` proves the q-eight parity refinement: two bad
+branches of the same parity are congruent mod eight.  Consequently a q-eight
+row occupies at most `g/8` of the parity sheet complementary to a nonempty
+q-two row.  This closes `(2,4,8)` and `(2,8,8)`, then generalizes: observed
+q≤7 rows occupy one reduced residue class (in particular q-seven costs `g/7`,
+not the raw universal `2g/7`), and every q-two triple whose two companions have
+denominator at least four clears unless both are q-four.  The explicit
+`(2,7,9,g,u)=(2,7,9,4,11/100)` example realizes the `(2,4,4)` obstruction.
+Moreover `qTwo_four_four_failure_normal_form` proves every failing phase is
+exactly one mod-two class plus two distinct opposite-parity mod-four classes,
+with degrees `g/2,g/4,g/4` and no pair intersection.  This attains the
+elementary incidence value rather than forcing more overlap.  The use of
+**observed** degrees is essential: the raw `badCount` pattern claim is refuted
+at `g=56` by denominators `(2,4,7)`, whose coarse counts sum to `58≥56`.
+
+The foundational-only capstone
+`lrc14_from_finalResidues_and_relationBudget` therefore exposes the exact
+phase-uniform detuned frontier as:
+
+1. the nonterminating two-adic pair tower;
+2. `(2,2,q)` complementary-parity witness selection;
+3. `(2,4,4)` complementary-mod-four witness selection;
+4. primitive uniform q-three cyclic witness selection;
+5. `DenseCoreRelationBudgetSupply`.
+
+The live THM-940 pull also closes the discrete half of item 5:
+`TournamentH7.LRCB5SubsetExpansion` proves `B5` equals its support-grouped
+joint-failure sum and exactly equals equilibrium `(q-1)·2052/16807` plus the
+signed rational subset-deviation ledger.  The remaining B5 theorem is now the
+quantitative trapped-`D_T` bound / relation-supported identification, not the
+finite subset expansion or equilibrium algebra.  None of these statements is
+a completed proof of LRC(14); the listed suppliers remain explicit hypotheses.

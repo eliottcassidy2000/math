@@ -184,18 +184,25 @@ four coefficient certificate.  THM-939 proves complementary exclusion results on
 chain-dense core: below-mass-two relations cannot top out above the dense pair, and
 unit relations cannot top out four positions above it.  The newly pulled leverage
 identity closes the alternating-binomial and Bonferroni certificate algebra, including
-the exact equilibrium and kill threshold.  What is still missing is the concrete
-sweep/singular-series identification and strict support-`3,4,5` tail budget under those
-relation traps.
+the exact equilibrium and kill threshold.  THM-940 additionally proves the concrete
+finite subset expansion of `B5` and its exact rational subset-deviation identity.
+What is still missing is the quantitative trapped-deviation / relation-supported
+identification and strict support-`3,4,5` tail budget under those relation traps.
 
 The sharp honest residual after these pulls is therefore:
 
 1. the nonterminating q-two two-adic pair tower;
-2. a q-two triple with a distinct reduced-denominator companion at most `8`, now to be
-   attacked by the exact phase-overlap debt rather than degree bounds alone;
-3. primitive `g=3` cyclic q-three witness selection (the scalar `3/14` gate is only a
+2. `(2,2,q)` witness selection: at a bad phase the two q-two rows are exactly
+   complementary parity classes, and `(3,27,2; g=6,u=11/100)` realizes this;
+3. `(2,4,4)` witness selection: every other q-two triple is closed by exact CRT,
+   one-class q≤7 rigidity, or q-eight parity slicing, while
+   `(2,7,9; g=4,u=11/100)` realizes the surviving obstruction; every failure is
+   forced into the exact disjoint mod-two/mod-four partition of degrees
+   `g/2,g/4,g/4`;
+4. primitive `g=3` cyclic q-three witness selection (the scalar `3/14` gate is only a
    sufficient selector, not an automatic consequence);
-4. trapped relation-budget supply: concrete relation-mass/sweep encoding plus the
-   support-`3,4,5` strict three-quarter tail bound.
+5. trapped relation-budget supply: THM-940 supplies the concrete subset ledger; the
+   support-`3,4,5` trapped-deviation strict three-quarter bound remains.
 
-This is a sharpening of the capstone interface, not a proof of LRC(14).
+`lrc14_from_finalResidues_and_relationBudget` machine-checks exactly this capstone.
+This is a sharpening of the interface, not a proof of LRC(14).

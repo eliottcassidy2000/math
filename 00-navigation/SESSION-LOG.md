@@ -1,3 +1,42 @@
+## codex-2026-07-17-S38--S41 -- EXACT PARALLEL-CLASS VALUES REDUCE THE DETUNED TRIPLE FRONTIER TO `(2,2,q)`, `(2,4,4)`, AND UNIFORM q3; THM-940 DISCRETE B5 IDENTITY INTEGRATED
+
+Prompt (owner): prove the local-density block-gluing theorem, pull frequently, work the
+Zarankiewicz values, and continue collaboratively toward LRC(14) formalization.
+
+Frequent mainline pulls integrated THM-938/939, the leverage identity, THM-940's exact
+subset expansion, and THM-941's block lift.  The generic THM-933 rational-tooth spine
+was audited honestly: exact overlap recurrence, canonical seam-free topology, component
+cap, attained eta/q duality, and abstract gluing are green; actual speed-comb realization,
+genuine component-measure instantiation, scale covariance, and numerical certificates
+remain concrete formalization work.
+
+The detuned parallel-class circle advanced substantially.  `LRCDetunedOverlap` now has
+exact overlap-debt and two-credit gluing consumers.  `LRCEndgameTwoThreeSix` proves the
+q2/q3 intersection is one mod-6 class of size g/6, closes every `(2,3,q)` with q≥3,
+and proves `(2,2,3)` failure iff the q2 rows are complementary parity classes.  The
+checked `(3,27,2; g=6,u=11/100)` phase shows that obstruction is genuine.
+
+`LRCEndgameTwoEight` proves same-parity q8 branches coincide mod 8, so a q8 row costs at
+most g/8 inside the q2-complement sheet.  It closes `(2,4,8)`, `(2,8,8)`, and then the
+full observed-degree range: q≤7 rows occupy one class (q7 costs g/7, not raw 2g/7), and
+any q2 triple with both companions q≥4 clears unless both are q4.  The checked
+`(2,7,9; g=4,u=11/100)` phase proves `(2,4,4)` is a genuine phase obstruction.
+Every failing `(2,4,4)` phase is now proved to be the exact disjoint mod-two/mod-four
+partition of degrees g/2,g/4,g/4; the raw-count shortcut is explicitly false at
+`g=56`, denominators `(2,4,7)`, where coarse `badCount` totals 58.
+The foundational-only theorem `lrc14_from_finalResidues_and_relationBudget` now leaves
+exactly the nonterminating two-adic pair tower, witness selection for `(2,2,q)`,
+`(2,4,4)`, and uniform q3, plus `DenseCoreRelationBudgetSupply`.  THM-940 supplies the
+finite B5 subset/deviation identity; the quantitative trapped support-3/4/5 deviation
+bound remains.  This is the sharpest checked capstone, not a completed LRC(14) proof.
+
+FILES: `LRCDetunedOverlap.lean`, `LRCEndgameUniformThreePhase.lean`,
+`LRCEndgameTwoThreeSix.lean`, `LRCEndgameTwoEight.lean`, root imports, THM-933/935,
+HYP-7152/7161, formalization manifest, session log.  All targeted Lean audits report
+only `propext`, `Classical.choice`, and `Quot.sound`; no `sorry`/`native_decide`.
+
+---
+
 ## boxeph-2026-07-16-S58 -- THE FULL-FRAME SIGN CENSUS CORRECTS MY OWN S53 LAW (fifteenth verdict, self-applied): cross <= 0 in only 59.8% of ALL 672 frames -- the battery was small-w-biased; the sign is a heavy-tailed distribution (mean -3.01, sd 56.6), not a thin-resonance dichotomy. SURVIVES SHARPER: the baseline identity; the closed-form frame-mean; and a UNIVERSAL candidate -- cross(w) < baseline = 210.6 on every frame (max 185.5), i.e. Q_s < sum D_e + (pi^2/3) sum sigma^2 for ALL w on this cluster
 
 Prompt (owner): the joint-equidistribution theorem; little statements.

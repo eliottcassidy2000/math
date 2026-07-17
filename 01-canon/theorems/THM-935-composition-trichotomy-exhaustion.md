@@ -80,7 +80,15 @@ and proves that absolute relation debt below `2052/16807` forces positivity.  At
 `H=30`, the proved pair tail `(24/343)(13/30)` is strictly less than one quarter of
 the equilibrium budget, leaving a machine-checked strict three-quarter socket for the
 still-open `T_s(H)`, `s=3,4,5`, bounds.  The module does not claim that the analytic
-singular-series identity with concrete discrete `B5` is already formalized.
+singular-series relation-mass identity is already formalized.
+
+THM-940's `TournamentH7.LRCB5SubsetExpansion` now closes the exact **discrete**
+identity that was formerly missing: concrete integer `B5` is the alternating
+support-grouped sum of joint-failure counts and, over `ℚ`, is exactly
+`(q-1)·2052/16807` plus the signed subset-deviation ledger.  Thus the remaining
+bridge is narrower: identify/bound the trapped relation-supported contribution to
+those concrete deviations (especially support `3,4,5`), rather than derive the
+finite subset expansion or equilibrium constant.
 
 `TournamentH7.LRCLeverageIdentity` independently closes the finite depth-spectrum
 algebra: the exact alternating-binomial leverage identity, two-sided Bonferroni
@@ -100,14 +108,22 @@ bridge.  A `B5RelationBudgetCertificate` contains a modulus, four exact-support 
 the equality of the signed model with the concrete integer `B5`, and the quarter / three-
 quarter bounds.  It proves integer `B5 > 0`, turns certificate supply on the primitive
 dissociated `ChainDenseCore` into `DenseCoreDissociatedB5Supply`, and machine-checks
-`lrc14_from_twoThree_detuned_and_relationBudget`.  Exact degree arithmetic has reduced
-the triple dispatch to a `q=2` row with a distinct `q≤8` companion or the uniform
-`(3,3,3)` pattern.  The latter is now primitive modulus `3`, and failure is exactly a
+`lrc14_from_finalResidues_and_relationBudget`.  Exact **observed-row** arithmetic
+(not the coarser raw `badCount` ledger) has reduced the triple dispatch to
+`(2,2,q)`, `(2,4,4)`, or the uniform `(3,3,3)` pattern.  The q-two/q-three CRT
+intersection is exactly `g/6`; q-eight costs only `g/8` inside the complementary
+parity sheet; hence every other q-two triple has a common branch.  Explicit checked
+phases show that both surviving q-two patterns can genuinely cover the branch circle,
+so their remaining task is harmonic-witness selection, not another phase-uniform
+cardinality bound.  A failing `(2,4,4)` phase is further forced to be the exact disjoint
+mod-two/mod-four partition of degrees `g/2,g/4,g/4`.  The qualifier “observed-row” is
+necessary: raw `badCount` arithmetic falsely retains `(2,4,7)` (at `g=56`, coarse count
+`28+14+16=58`).  The q-three branch is primitive modulus `3`, and failure is exactly a
 cyclic matching, equivalently a saturated pairwise-disjoint partition of the three
 parallel-class rows.  A normalized sum-frequency clearance of `3/14` is sufficient,
 but the checked `(1,29,28)` example at `u=1/7` shows that an arbitrary harmonic-good
 witness can realize the obstruction with zero normalized sum frequency.  Thus, after
-`LRCUpTo13`, the remaining mathematics is exposed exactly as q-two phase/overlap or
-two-adic dispatch, q-three witness selection, and construction of the trapped
-relation-budget certificates; no sign, cast, or endgame composition step is left
-informal.
+`LRCUpTo13`, the remaining mathematics is exposed exactly as the nonterminating
+two-adic pair tower, witness selection for `(2,2,q)`, `(2,4,4)`, and uniform q-three,
+and the trapped subset-deviation bound supplying relation-budget certificates; no
+sign, cast, finite subset-expansion, or endgame composition step is left informal.
