@@ -48,6 +48,128 @@ def pairDanger (v : Fin 13 → ℤ) (T : Finset (Fin 13)) : Set UnitAddCircle :=
   {x | ∀ i ∈ T,
     x ∈ LRCCommensuration.danger (v i) (0 : UnitAddCircle) (1 / 14)}
 
+/-- Number of complete rational grid points lying in one continuous pair event. -/
+noncomputable def pairDangerGridCount
+    (v : Fin 13 → ℤ) (q : ℕ) (T : Finset (Fin 13)) : ℕ := by
+  classical
+  exact ((Finset.range q).filter fun p : ℕ =>
+    (((p : ℝ) / q : ℝ) : UnitAddCircle) ∈ pairDanger v T).card
+
+/-- The exact dictionary between the integer safe-band predicate and membership
+of the rational grid point in the open circle-danger comb.  The proof reduces a
+possibly negative numerator modulo `q`, then uses the canonical circle norm of
+that nonnegative residue. -/
+theorem grid_mem_danger_iff_not_inBand
+    (v : Fin 13 → ℤ) (q p : ℕ) (i : Fin 13) (hq : 0 < q) :
+    (((p : ℝ) / q : ℝ) : UnitAddCircle) ∈
+        LRCCommensuration.danger (v i) 0 (1 / 14) ↔
+      ¬ inBand v q p i := by
+  simp only [LRCCommensuration.danger, LRCCommensuration.runnerMap,
+    Set.mem_preimage, Metric.mem_ball, add_zero, dist_zero_right]
+  rw [← AddCircle.coe_zsmul]
+  simp only [zsmul_eq_mul]
+  rw [← mul_div_assoc]
+  change ‖((((v i : ℝ) * (p : ℝ) / (q : ℝ)) : ℝ) : UnitAddCircle)‖ < 1 / 14 ↔ _
+  let numerator : ℤ := v i * (p : ℤ)
+  let residue : ℤ := numerator % (q : ℤ)
+  let residueNat : ℕ := residue.toNat
+  have hqZ : (0 : ℤ) < (q : ℤ) := by exact_mod_cast hq
+  have hqR : (0 : ℝ) < (q : ℝ) := by exact_mod_cast hq
+  have hresidue0 : 0 ≤ residue := Int.emod_nonneg numerator (by omega)
+  have hresidueq : residue < (q : ℤ) := Int.emod_lt_of_pos numerator hqZ
+  have hresidueCast : (residueNat : ℤ) = residue := Int.toNat_of_nonneg hresidue0
+  have hdecomp : numerator =
+      (q : ℤ) * (numerator / (q : ℤ)) + residue := by
+    simpa [mul_comm] using (Int.mul_ediv_add_emod numerator (q : ℤ)).symm
+  have hdecompR : (numerator : ℝ) =
+      (q : ℝ) * ((numerator / (q : ℤ) : ℤ) : ℝ) + (residue : ℝ) := by
+    exact_mod_cast hdecomp
+  have hreal : (numerator : ℝ) / (q : ℝ) =
+      ((numerator / (q : ℤ) : ℤ) : ℝ) + (residue : ℝ) / (q : ℝ) := by
+    nth_rw 1 [hdecompR]
+    field_simp [ne_of_gt hqR]
+  have hintegerZero :
+      ((((numerator / (q : ℤ) : ℤ) : ℝ) : ℝ) : UnitAddCircle) = 0 := by
+    rw [show ((numerator / (q : ℤ) : ℤ) : ℝ) =
+      (numerator / (q : ℤ)) • (1 : ℝ) by simp [zsmul_eq_mul]]
+    rw [AddCircle.coe_zsmul, AddCircle.coe_period, smul_zero]
+  have hcircle :
+      ((((numerator : ℝ) / (q : ℝ)) : ℝ) : UnitAddCircle) =
+        ((((residueNat : ℝ) / (q : ℝ)) : ℝ) : UnitAddCircle) := by
+    rw [hreal, AddCircle.coe_add, hintegerZero, zero_add]
+    have hresidueReal : (residue : ℝ) = (residueNat : ℝ) := by
+      exact_mod_cast hresidueCast.symm
+    rw [hresidueReal]
+  have hnum : (v i : ℝ) * (p : ℝ) = (numerator : ℝ) := by
+    dsimp [numerator]
+    push_cast
+    ring
+  rw [hnum, hcircle, LonelyRunner.norm_natCast_div]
+  have hresidueNatqZ : (residueNat : ℤ) < (q : ℤ) := by
+    rw [hresidueCast]
+    exact hresidueq
+  have hresidueNatq : residueNat < q := by exact_mod_cast hresidueNatqZ
+  rw [Nat.mod_eq_of_lt hresidueNatq]
+  unfold inBand
+  change
+    ((min residueNat (q - residueNat) : ℕ) : ℝ) / (q : ℝ) < 1 / 14 ↔
+      ¬((q : ℤ) ≤ 14 * residue ∧ 14 * residue ≤ 13 * (q : ℤ))
+  rw [← hresidueCast]
+  have hlow : (residueNat : ℝ) / (q : ℝ) < 1 / 14 ↔
+      14 * (residueNat : ℤ) < (q : ℤ) := by
+    constructor
+    · intro h
+      have hscaled := (div_lt_iff₀ hqR).mp h
+      norm_num at hscaled
+      exact_mod_cast
+        (show 14 * (residueNat : ℝ) < (q : ℝ) by nlinarith)
+    · intro h
+      have hscaled : 14 * (residueNat : ℝ) < (q : ℝ) := by exact_mod_cast h
+      apply (div_lt_iff₀ hqR).mpr
+      norm_num
+      nlinarith
+  have hhigh : ((q - residueNat : ℕ) : ℝ) / (q : ℝ) < 1 / 14 ↔
+      13 * (q : ℤ) < 14 * (residueNat : ℤ) := by
+    constructor
+    · intro h
+      have hscaled := (div_lt_iff₀ hqR).mp h
+      push_cast [Nat.cast_sub hresidueNatq.le] at hscaled
+      norm_num at hscaled
+      exact_mod_cast
+        (show 13 * (q : ℝ) < 14 * (residueNat : ℝ) by nlinarith)
+    · intro h
+      have hscaled : 13 * (q : ℝ) < 14 * (residueNat : ℝ) := by
+        exact_mod_cast h
+      apply (div_lt_iff₀ hqR).mpr
+      push_cast [Nat.cast_sub hresidueNatq.le]
+      norm_num
+      nlinarith
+  by_cases hside : residueNat ≤ q - residueNat
+  · rw [min_eq_left hside, hlow]
+    omega
+  · rw [min_eq_right (by omega), hhigh]
+    omega
+
+/-- The complete discrete pair-failure count is exactly the number of rational
+circle-grid points lying in the continuous pair-danger event. -/
+theorem allGridJointFail_eq_pairDanger_gridCount
+    (v : Fin 13 → ℤ) (q : ℕ) (T : Finset (Fin 13)) (hq : 0 < q) :
+    allGridJointFail v q T = pairDangerGridCount v q T := by
+  classical
+  unfold allGridJointFail pairDangerGridCount pairDanger
+  apply congrArg Finset.card
+  ext p
+  simp only [Finset.mem_filter, Finset.mem_range, Set.mem_setOf_eq]
+  constructor
+  · rintro ⟨hp, h⟩
+    refine ⟨hp, ?_⟩
+    intro i hi
+    exact (grid_mem_danger_iff_not_inBand v q p i hq).2 (h i hi)
+  · rintro ⟨hp, h⟩
+    refine ⟨hp, ?_⟩
+    intro i hi
+    exact (grid_mem_danger_iff_not_inBand v q p i hq).1 (h i hi)
+
 /-- Continuous pair correlation on one period. -/
 def pairContinuumCorrelation (v : Fin 13 → ℤ) (T : Finset (Fin 13)) : ℝ :=
   (volume (pairDanger v T)).toReal
@@ -410,10 +532,10 @@ theorem rawPairGridDiscrepancy_of_intervalLedgers
   intro T hT
   exact rawPairGridDiscrepancy_of_intervalLedger v q T hq (hledgers T hT).some
 
-/-- Strict-open linear component ledger.  Cutting circular components at zero
-
-can at most double their number, so the honest cap is
-`2 * (|vᵢ|+|vⱼ|)`; the sharp open-interval lemma charges only `1/q` each. -/
+/-- Strict-open linear component ledger, with the always-dangerous grid point
+`p = 0` recorded separately.  The interval components cover the punctured
+section `(0,1)`; their endpoint errors plus the zero atom fit in the cut budget
+`2 * (|vᵢ|+|vⱼ|)`. -/
 structure OpenPairIntervalLedger
     (v : Fin 13 → ℤ) (q : ℕ) (T : Finset (Fin 13)) where
   componentCount : ℕ
@@ -422,17 +544,16 @@ structure OpenPairIntervalLedger
   left_nonneg : ∀ component, 0 ≤ left component
   right_le_one : ∀ component, right component ≤ 1
   left_le_right : ∀ component, left component ≤ right component
-  componentCount_le : componentCount ≤ 2 * ∑ i ∈ T, (v i).natAbs
+  componentCount_succ_le : componentCount + 1 ≤ 2 * ∑ i ∈ T, (v i).natAbs
   allGrid_count_eq :
     allGridJointFail v q T =
-      ∑ component, openIntervalGridCount q (left component) (right component)
+      1 + ∑ component, openIntervalGridCount q (left component) (right component)
   continuum_eq :
     pairContinuumCorrelation v T =
       ∑ component, (right component - left component)
 
-/-- The strongest elementary raw endpoint lemma in this scratch file: an
-exact strict-open component ledger directly yields the desired
-`2(|vᵢ|+|vⱼ|)/q` complete-grid discrepancy. -/
+/-- An exact strict-open component ledger, including its distinguished zero
+atom, directly yields the desired `2(|vᵢ|+|vⱼ|)/q` complete-grid discrepancy. -/
 theorem rawPairGridDiscrepancy_of_openIntervalLedger
     (v : Fin 13 → ℤ) (q : ℕ) (T : Finset (Fin 13)) (hq : 0 < q)
     (ledger : OpenPairIntervalLedger v q T) :
@@ -440,41 +561,46 @@ theorem rawPairGridDiscrepancy_of_openIntervalLedger
       pairCutWeight v T / q := by
   have hqR : (0 : ℝ) < q := by exact_mod_cast hq
   have hid : allPairGridDensity v q T - pairContinuumCorrelation v T =
-      ∑ component,
+      (1 : ℝ) / q + ∑ component,
         ((openIntervalGridCount q (ledger.left component) (ledger.right component) : ℝ) / q -
           (ledger.right component - ledger.left component)) := by
     unfold allPairGridDensity
     rw [ledger.allGrid_count_eq, ledger.continuum_eq]
     push_cast
-    rw [Finset.sum_div]
+    rw [add_div, Finset.sum_div]
     simp_rw [Finset.sum_sub_distrib]
+    ring
   rw [hid]
   calc
-    |∑ component,
+    |(1 : ℝ) / q + ∑ component,
         ((openIntervalGridCount q (ledger.left component) (ledger.right component) : ℝ) / q -
           (ledger.right component - ledger.left component))|
-        ≤ ∑ component,
+        ≤ |(1 : ℝ) / q| + ∑ component,
             |(openIntervalGridCount q (ledger.left component) (ledger.right component) : ℝ) / q -
-              (ledger.right component - ledger.left component)| :=
-          Finset.abs_sum_le_sum_abs _ _
-    _ ≤ ∑ _component : Fin ledger.componentCount, (1 : ℝ) / (q : ℝ) := by
-          apply Finset.sum_le_sum
-          intro component hcomponent
+              (ledger.right component - ledger.left component)| := by
+          refine (abs_add_le _ _).trans ?_
+          gcongr
+          exact Finset.abs_sum_le_sum_abs _ _
+    _ ≤ (1 : ℝ) / q +
+          ∑ _component : Fin ledger.componentCount, (1 : ℝ) / (q : ℝ) := by
+          rw [abs_of_pos (div_pos (by norm_num) hqR)]
+          gcongr with component hcomponent
           exact openIntervalGridCount_discrepancy q hq
             (ledger.left component) (ledger.right component)
             (ledger.left_nonneg component) (ledger.right_le_one component)
             (ledger.left_le_right component)
-    _ = (ledger.componentCount : ℝ) * ((1 : ℝ) / (q : ℝ)) := by
+    _ = ((ledger.componentCount : ℝ) + 1) * ((1 : ℝ) / (q : ℝ)) := by
           rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+          ring
     _ ≤ (2 * ∑ i ∈ T, |(v i : ℝ)|) * ((1 : ℝ) / (q : ℝ)) := by
           have hmass : ((∑ i ∈ T, (v i).natAbs : ℕ) : ℝ) =
               ∑ i ∈ T, |(v i : ℝ)| := by
             push_cast
             simp
-          have hcomponent : (ledger.componentCount : ℝ) ≤
+          have hcomponent : (ledger.componentCount : ℝ) + 1 ≤
               2 * ∑ i ∈ T, |(v i : ℝ)| := by
             rw [← hmass]
-            exact_mod_cast ledger.componentCount_le
+            exact_mod_cast ledger.componentCount_succ_le
           gcongr
     _ = pairCutWeight v T / q := by
           unfold pairCutWeight
