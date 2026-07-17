@@ -394,6 +394,16 @@ zero-or-small normalized support-three frequency, not arbitrary phase search.
 This still is not a closure: the small-frequency alternative requires arithmetic
 routing into the relation traps or a separate low-frequency selector.
 
+`LRCPairTowerGapTwoProducer` now gives the analogous unconditional q4488
+producer.  One anchor failure and the four denominator equations canonically
+produce signed primitive q4/q8 numerators.  The parallel-class rectangle proves
+the two q8 rows have a common residue type after a possible sign flip, both q4
+matching walls then hold at every failing phase, and the two derived frequencies
+cannot both vanish.  Hence either the sharp LRC(9) gate `15B <= 2|F|` fires for
+one wall, or both walls lie in the explicit zero/small relation residual, with
+at least one frequency nonzero.  The former common-q8-signing premise is closed;
+the joint small/exact relation branch is the honest remaining gap-two residue.
+
 `LRCPairTowerReduction` has two additional unconditional exits.  Phase zero
 escapes both complete binary-prefix obstructions when the doubled harmonic core
 is empty, and `liftFailureCard = 11` forces exactly that situation.  For a core
@@ -467,9 +477,13 @@ weightedDeepCost <= exactDepthCount(6)
 The honest residue is consequently depth six (one unit and no seven-stalk),
 depth seven (six units versus one possible three-unit colored charge, improved
 to a one-unit residue when the five-unit nonzero-triangle charge applies), and
-rank-one/aligned stalks.  This is only the exact *shape* of a future payment:
-the present lower spoke-mass bounds can be reused by multiple rooted stalks,
-so a no-reuse incidence or global transport upper bound is still required.
+rank-one/aligned stalks.  `LRCSevenStalkReuseBudget` now closes the missing
+incidence count exactly: through rooted six-faces a spoke is reused
+`choose(m-1,5)` times and a lower pair `choose(m-2,4)` times, hence at most
+`462` and `210` times for twelve lower vertices.  These are global transport
+upper budgets, not yet a payment theorem: the available three-/five-unit lower
+charges must still beat those reuse factors while retaining the separate
+depth-six and depth-seven ledgers.
 
 `LRCSevenOverlapActivity` preserves multiplier activity rather than passing to
 a static support graph.  For each fixed ordered triple it partitions bad
@@ -502,21 +516,30 @@ therefore gives
 # {bad multipliers with one fixed pair color} <= gcd(a,b),
 ```
 
-and at most one event for coprime pair speeds.  The next theorem must aggregate
-these fixed-color fibers without reusing spoke mass and must route zero-color
-aligned fibers by their gcd resonance, while retaining separate depth-six and
-depth-seven ledgers.  The static Zarankiewicz values for distinct supports do
-not provide this multiplier-fiber control and hence do not improve `792` by
+and at most one event for coprime pair speeds.  The exact reuse double count is
+now available, but the next theorem must compare the resulting `462/210`
+transport budgets with the colored lower charges and retain separate depth-six
+and depth-seven ledgers.  The static Zarankiewicz values for distinct supports
+do not provide this multiplier-fiber control and hence do not improve `792` by
 themselves.
 
-`LRCAlignedResonance` now proves the arithmetic end of the aligned target:
+`LRCAlignedResonance` proves the arithmetic end of the aligned target:
 `q ∣ hp` iff `q/gcd(h,q) ∣ p`, so the resonant nonzero multiplier set has
 exactly `gcd(h,q)-1` members.  It also proves the strict integer-closeness
-atom that turns the scaled top-window estimate into `hp=rq`.  This is not yet
-a supplier theorem.  A proof-facing bridge must still derive and glue the
-shared parameter `n_i=(v_i/h)r` from zero colors on a connected stalk, then
-combine the resulting aligned count with the colored-fiber bound and a
-non-reusing rooted-stalk incidence ledger.
+atom that turns the scaled top-window estimate into `hp=rq`.
+`LRCZeroColorGluing` supplies the proof-facing bridge: zero determinant is
+equality of rational witness slopes, connected zero-color stalks are cliques,
+and every such stalk has one primitive numerator/denominator with the
+denominator dividing every stalk speed.  Exact resonance then carries the
+reduced multiplier modulus into that parameter.  The sharp dichotomy is
+resonance or `14|v/d| < q`; in the resonant branch primitive coprimality gives
+the exact identities `d=q/gcd(p,q)` and `n=p/gcd(p,q)`, so at coprime `p,q`
+the modulus divides every stalk speed.  The window is genuinely additional:
+`q=99,p=1,d=98,n=1` with speeds `98s` for `s=1,...,7` gives an all-bad
+zero-slope stalk satisfying `q <= 7*98` but no resonance.  What remains is to
+make the sharp window available at the chosen adaptive modulus and combine the
+divisor route with the `462/210` colored transport budget and the
+depth-six/seven residue.
 
 `LRCB5CertificateAudit` also proves that the older abstract
 `B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its
@@ -694,12 +717,14 @@ margin = 8270807/2058376320.
 the nine threshold-count premises.  `LRCPairRatioLayerArithmetic` checks the
 exact rational value and margin.  `LRCPairContinuumBridge` proves that the
 proposed full pair-grid discrepancy budget at `cleanModulus v 534` is at most
-`5/1246`, strictly below that margin.  The remaining pair-floor formalization
-is therefore sharply localized: prove the Bernoulli covariance identity in
-the repository's danger-set language, replay or reflect the seven finite DAGs
-inside Lean, and prove that a pair danger intersection has at most
-`|v_i|+|v_j|` half-open circle components.  No higher-support estimate is
-claimed by this pair theorem.
+`5/1246`, strictly below that margin.  The Bernoulli covariance identity is now
+closed in `LRCB5CombReindexing` and `LRCPairCovarianceReindexer`: circular teeth
+permute the strict rational comb, tooth pairs reindex through the cyclic
+difference hom with uniform gcd fibers, and every nonzero speed pair has the
+exact `pairKernel` covariance.  The component/endpoint side is also closed.
+The stored finite replays are now Lean through tau3 and tau4; five threshold
+replays (tau5--tau9) remain.  No higher-support estimate is claimed by this
+pair theorem.
 
 The incoming LEM-038 central-section cross-spectrum is the relevant signal for
 the still-open higher supports: reflection makes every owner spectrum purely
@@ -1044,30 +1069,38 @@ the clean-534 consumer.  This is the same strict endpoint technology used by
 the corrected positive-window cluster work, but it does not imply THM-959's
 still-open partition trichotomy.
 
-The continuous pair formula is also no longer an unspecified analytic bridge.
+The continuous pair formula is no longer an open analytic bridge.
 `LRCB5MergeLength` replaces the linear merge by the quadratic all-clips sum;
-`LRCB5PairOverlapSum` evaluates the target cyclic ledger by the Bernoulli/Raabe
-identity; and `LRCB5DifferenceFibers` proves that the cyclic difference map is
-surjective with exactly gcd-many preimages per class.  Thus the only remaining
-covariance lemma is the local equality between the clips of two possibly split
-boundary teeth and `pairOverlap` at their cyclic start difference, packaged as
-`PairOverlapReindexing`.
+`LRCB5PairOverlapSum` evaluates the cyclic ledger by Bernoulli/Raabe;
+`LRCB5DifferenceFibers` proves uniform gcd fibers; and
+`LRCB5CombReindexing` closes the split-boundary tooth identity and the full
+`PairOverlapReindexing` statement.  `LRCPairCovarianceReindexer` consequently
+exports the unconditional pair-correlation and family `pairKernel` identities.
 
 For the finite layer certificates, `LRCPairTopClassification` proves the top
 ratio colors `{12,13}` and `{13}` and their actual `24/12` path caps on thirteen
 distinct magnitudes.  `LRCAnchoredCliqueTransfer` and
 `LRCPairRatioQuotient` prove the concrete absolute-speed anchor injection and
 reduce every middle threshold to a finite allowed-ratio clique exclusion.  A
-finite-cover theorem separates envelope enumeration from the seven stored DAG
-replays.  Those seven replays and the wrapped-tooth identity are the exact two
-remaining THM-954 producer sockets.
+finite-cover theorem separates envelope enumeration from the stored graph
+replays.  Tau3 is closed by its edgeless quotient.  Tau4 is closed by an exact
+60-ratio replay whose active component maps to the eight-class Wagner circle;
+the graph contains 18 four-cycles, so a raw `K_{2,2}` Zarankiewicz cap is false
+and Wagner triangle-freeness is the faithful certificate.  The exact remaining
+THM-954 producer socket is the five finite replays tau5--tau9.
 
-This completion is deliberately local.  The `(4,4,8,8)` valuation-gap-two
-pair-tower wall still needs phase chronology; selected-witness escape still has
-small-frequency/exact-relation branches; and the dense-core B5 endgame still
-needs the signed support-3/4/5 budget.  The incoming THM-960 scale-six closure
-and LEM-041 frame bounds are compatible structural inputs but do not replace
-any of those three obligations.
+This completion is deliberately local.  The `(4,4,8,8)` valuation-gap-two wall
+now has an unconditional phase-independent producer and a large-frequency
+escape, but its joint zero/small relation branch remains.  The q22 opposition
+selector and the q244/q333 zero-or-small branches also remain, as does the
+dense-core signed support-3/4/5 payment.  The incoming scale closures and frame
+bounds are compatible structural inputs but do not replace those obligations.
+
+`LRCRealRelationLock` adds the continuous coefficient-weight lock used by all
+of these scalar branches: at an arbitrary real phase, every integer speed
+relation with total absolute coefficient weight at most fourteen transfers
+exactly to the selected integer witnesses.  It closes the real-error-to-exact-
+relation step, but it does not eliminate a nonzero small frequency by itself.
 
 ## Addendum (boxeph-S69): item 15
 
