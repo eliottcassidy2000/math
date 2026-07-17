@@ -80,6 +80,88 @@ theorem card_three_union_lt_of_pair_overlap {α : Type*} [DecidableEq α]
       Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using
       pair_saving second third first h23
 
+/-- Exact one-pair overlap ledger for three finite bad rows.  The chosen
+intersection is credited against the total row-degree debt. -/
+theorem card_three_union_add_pair_inter_le {α : Type*} [DecidableEq α]
+    (first second third : Finset α) :
+    (first ∪ second ∪ third).card + (first ∩ second).card ≤
+      first.card + second.card + third.card := by
+  have hunion := Finset.card_union_le (first ∪ second) third
+  have hpair := Finset.card_union_add_card_inter first second
+  omega
+
+/-- At a fixed phase, some pairwise overlap pays the full excess of the three
+row-degree budget above the number of branch classes. -/
+def ThreeDetunedOverlapDebtPaid (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ) : Prop :=
+  DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+      DetunedD3.badCount δ₃ g <
+    g.toNat +
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₂ g u).card ∨
+  DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+      DetunedD3.badCount δ₃ g <
+    g.toNat +
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₃ g u).card ∨
+  DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+      DetunedD3.badCount δ₃ g <
+    g.toNat +
+      (detunedBadBranches δ₂ g u ∩ detunedBadBranches δ₃ g u).card
+
+/-- Local-density block gluing on the parallel-class circle: a possibly
+supercritical total bad-degree budget still leaves a good branch whenever one
+pair intersection is larger than the degree excess.  The credited pair may
+depend on the phase. -/
+theorem hasThreeDetunedGoodBranch_of_overlapDebt
+    (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hdebt : ThreeDetunedOverlapDebtPaid δ₁ δ₂ δ₃ g u) :
+    HasThreeDetunedGoodBranch δ₁ δ₂ δ₃ g u := by
+  let first := detunedBadBranches δ₁ g u
+  let second := detunedBadBranches δ₂ g u
+  let third := detunedBadBranches δ₃ g u
+  let branches := Finset.Ico (0 : ℤ) g
+  have hfirst : first.card ≤ DetunedD3.badCount δ₁ g :=
+    detunedBadBranches_card_le δ₁ g hg u
+  have hsecond : second.card ≤ DetunedD3.badCount δ₂ g :=
+    detunedBadBranches_card_le δ₂ g hg u
+  have hthird : third.card ≤ DetunedD3.badCount δ₃ g :=
+    detunedBadBranches_card_le δ₃ g hg u
+  have hbranches : branches.card = g.toNat := by
+    dsimp [branches]
+    rw [Int.card_Ico]
+    congr 1
+    omega
+  have good_of_credit (credit : ℕ)
+      (hunionCredit :
+        (first ∪ second ∪ third).card + credit ≤
+          first.card + second.card + third.card)
+      (hcredit :
+        DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+            DetunedD3.badCount δ₃ g < g.toNat + credit) :
+      HasThreeDetunedGoodBranch δ₁ δ₂ δ₃ g u := by
+    have hunion_lt : (first ∪ second ∪ third).card < branches.card := by
+      rw [hbranches]
+      omega
+    have hnotsub : ¬ branches ⊆ first ∪ second ∪ third := by
+      intro hsub
+      exact (Nat.not_le_of_lt hunion_lt) (Finset.card_le_card hsub)
+    rw [Finset.not_subset] at hnotsub
+    obtain ⟨c, hcBranches, hcUnion⟩ := hnotsub
+    simp only [Finset.mem_union, not_or] at hcUnion
+    exact ⟨c, hcBranches, hcUnion.1.1, hcUnion.1.2, hcUnion.2⟩
+  rcases hdebt with h12 | h13 | h23
+  · apply good_of_credit (first ∩ second).card
+      (card_three_union_add_pair_inter_le first second third)
+    simpa [first, second, third] using h12
+  · apply good_of_credit (first ∩ third).card
+    · simpa [Finset.union_assoc, Finset.union_left_comm, Finset.union_comm,
+        Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using
+        card_three_union_add_pair_inter_le first third second
+    · simpa [first, second, third] using h13
+  · apply good_of_credit (second ∩ third).card
+    · simpa [Finset.union_assoc, Finset.union_left_comm, Finset.union_comm,
+        Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using
+        card_three_union_add_pair_inter_le second third first
+    · simpa [first, second, third] using h23
+
 /-- A pair intersection upgrades the weak saturated degree budget `≤ g` to a
 strict union bound, hence produces a common good branch. -/
 theorem hasThreeDetunedGoodBranch_of_pairOverlap
@@ -148,6 +230,30 @@ theorem HasThreeDetunedGoodBranch.clearances
     exact not_lt.mp fun hlt => hc3 (by
       rw [detunedBadBranches, Finset.mem_filter]
       exact ⟨hcIco, n, hlt⟩)
+
+/-- The exact overlap-debt ledger, verified phase by phase, supplies the
+tuple-specific clearing interface. -/
+theorem threeDetunedInstanceClearing_of_overlapDebt
+    (δ₁ δ₂ δ₃ g : ℤ) (hg : 1 ≤ g)
+    (hdebt : ∀ u : ℝ, ThreeDetunedOverlapDebtPaid δ₁ δ₂ δ₃ g u) :
+    DetunedD3.ThreeDetunedInstanceClearing δ₁ δ₂ δ₃ g := by
+  intro u
+  exact (hasThreeDetunedGoodBranch_of_overlapDebt
+    δ₁ δ₂ δ₃ g u hg (hdebt u)).clearances
+
+/-- Direct LRC consumer for the local-density overlap ledger.  This is the
+finite parallel-class analogue of paying block debt with local overlap. -/
+theorem lonely14_of_three_detuned_overlapDebt (cite : LRCUpTo13)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₁ i₂ i₃ : Fin 13) (h12 : i₁ ≠ i₂) (h13 : i₁ ≠ i₃) (h23 : i₂ ≠ i₃)
+    (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
+    (hdebt : ∀ u : ℝ,
+      ThreeDetunedOverlapDebtPaid (v i₁) (v i₂) (v i₃) g u) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  DetunedD3.lonely14_of_three_detuned_instance cite v hv g hg
+    i₁ i₂ i₃ h12 h13 h23 hdvd
+    (threeDetunedInstanceClearing_of_overlapDebt
+      (v i₁) (v i₂) (v i₃) g (by omega) hdebt)
 
 /-- A phase-by-phase pair collision supplies the instance-clearing interface
 consumed by the harmonic LRC reduction. -/
@@ -285,8 +391,12 @@ theorem uniformThreeBadPartition_of_noGoodBranch
 /-! ## Axiom audit -/
 
 #print axioms card_three_union_lt_of_pair_overlap
+#print axioms card_three_union_add_pair_inter_le
+#print axioms hasThreeDetunedGoodBranch_of_overlapDebt
 #print axioms hasThreeDetunedGoodBranch_of_pairOverlap
 #print axioms HasThreeDetunedGoodBranch.clearances
+#print axioms threeDetunedInstanceClearing_of_overlapDebt
+#print axioms lonely14_of_three_detuned_overlapDebt
 #print axioms threeDetunedInstanceClearing_of_pairOverlap
 #print axioms lonely14_of_three_detuned_pairOverlap
 #print axioms uniformThreeBadPartition_of_noGoodBranch

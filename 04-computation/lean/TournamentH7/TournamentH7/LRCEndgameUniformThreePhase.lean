@@ -462,6 +462,79 @@ theorem exists_threeClassClear_of_frequency_clear
   obtain ⟨n, hn⟩ := frequency_bad_of_cyclicObstruction a u hresidue hobs
   exact (not_lt_of_ge (hfrequency n)) hn
 
+/-! ## A sharp witness-selection counterexample -/
+
+/-- Three primitive denominator-three speeds for which the harmonic witness
+`u = 1/7` realizes the cyclic obstruction. -/
+def phaseCounterexampleSpeeds : Fin 3 → ℤ := ![1, 29, 28]
+
+/-- The unique coordinatewise signs normalizing the example to residue one
+modulo three. -/
+def phaseCounterexampleSigns : Fin 3 → ℤ := ![1, -1, 1]
+
+def phaseCounterexampleNormalized : Fin 3 → ℤ :=
+  fun i => phaseCounterexampleSigns i * phaseCounterexampleSpeeds i
+
+/-- Ten harmonic quotient speeds simultaneously clear `1/11` at `u = 1/7`.
+Together with the cyclic obstruction below, this shows that an arbitrary
+`LRC(10)` witness need not be the phase selected by the q-three finish. -/
+def phaseCounterexampleHarmonics : Fin 10 → ℤ :=
+  ![1, 2, 3, 4, 5, 6, 8, 10, 11, 13]
+
+theorem phaseCounterexample_harmonic_clear :
+    Lonely 11 phaseCounterexampleHarmonics ((1 : ℝ) / 7) := by
+  have hdiv : ∀ i, ¬ ((7 : ℤ) ∣ phaseCounterexampleHarmonics i) := by
+    intro i
+    fin_cases i <;> norm_num [phaseCounterexampleHarmonics]
+  simpa using sieve_frac 11 7 1 phaseCounterexampleHarmonics
+    (by norm_num) (by norm_num) (by norm_num) hdiv
+
+theorem phaseCounterexample_units :
+    ∀ i, ¬ (3 : ℤ) ∣ phaseCounterexampleSpeeds i := by
+  intro i
+  fin_cases i <;> norm_num [phaseCounterexampleSpeeds]
+
+/-- The identity matching kills branch classes zero, one, and two with
+speeds `1`, `29`, and `28`, respectively. -/
+theorem phaseCounterexample_cyclicObstruction :
+    ThreeClassCyclicObstruction phaseCounterexampleSpeeds ((1 : ℝ) / 7) := by
+  refine ⟨Equiv.refl (Fin 3), ?_⟩
+  intro c
+  fin_cases c
+  · refine ⟨0, ?_⟩
+    norm_num [threeClassPhase, phaseCounterexampleSpeeds]
+  · refine ⟨11, ?_⟩
+    norm_num [threeClassPhase, phaseCounterexampleSpeeds]
+  · refine ⟨20, ?_⟩
+    norm_num [threeClassPhase, phaseCounterexampleSpeeds]
+
+theorem phaseCounterexample_residue_one :
+    ∀ i, (3 : ℤ) ∣ phaseCounterexampleNormalized i - 1 := by
+  intro i
+  fin_cases i <;>
+    norm_num [phaseCounterexampleNormalized, phaseCounterexampleSigns,
+      phaseCounterexampleSpeeds]
+
+/-- The normalized signed sum frequency vanishes exactly because
+`1 + 28 = 29`. -/
+theorem phaseCounterexample_frequency_zero :
+    threePhaseFrequency phaseCounterexampleNormalized = 0 := by
+  norm_num [threePhaseFrequency, phaseCounterexampleNormalized,
+    phaseCounterexampleSigns, phaseCounterexampleSpeeds, Fin.sum_univ_succ]
+
+/-- Hence the sufficient `3/14` scalar gate is not forced by harmonic
+clearance plus the structural q-three hypotheses.  The remaining task is
+witness selection, not a pointwise contradiction of the cyclic normal form. -/
+theorem phaseCounterexample_not_frequency_clear :
+    ¬ ∀ n : ℤ,
+      3 / 14 ≤
+        |(threePhaseFrequency phaseCounterexampleNormalized : ℝ) *
+          ((1 : ℝ) / 7) - n| := by
+  intro hclear
+  have hzero := hclear 0
+  rw [phaseCounterexample_frequency_zero] at hzero
+  norm_num at hzero
+
 /-! ## Axiom audit -/
 
 #print axioms reducedDenominator_three_normalForm
@@ -477,6 +550,10 @@ theorem exists_threeClassClear_of_frequency_clear
 #print axioms uniformThreeBadPartition_iff_cyclicObstruction
 #print axioms frequency_bad_of_cyclicObstruction
 #print axioms exists_threeClassClear_of_frequency_clear
+#print axioms phaseCounterexample_harmonic_clear
+#print axioms phaseCounterexample_cyclicObstruction
+#print axioms phaseCounterexample_frequency_zero
+#print axioms phaseCounterexample_not_frequency_clear
 
 end LRC14Grand
 end LonelyRunner
