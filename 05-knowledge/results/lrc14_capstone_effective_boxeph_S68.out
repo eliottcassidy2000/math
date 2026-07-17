@@ -1,0 +1,34 @@
+THE EFFECTIVE FRAME THEOREM -- capstone referee (boxeph S68)
+==============================================================================
+[family60] P=420 M=42: (A) W-hat_g(chi_0) == (pi^2/P^2)J_2/3 (max err 9.3e-15); total weight 3.289849 == (pi^2/3)(1-P^-2) = 3.289849 (err 3.6e-15)
+    (B) class Parseval exact on 23 classes (worst rel err 3.5e-16)
+    (C) VARIANCE ENVELOPE: Var = 4060.3 <= 9947.1 (tightness x2.45) -- PROVED, all constants arithmetic
+    (D) Chebyshev (mean +3.98, sd 63.7): 2sigma: 6 <= 24; 3sigma: 4 <= 11; 5sigma: 0 <= 4  (of 96 frames)
+    (E) per-character bound |c-hat| <= sum_g Wbound_g * min(sqrt(E_g), A_g):
+        cond= 420: |c-hat| =  20.169 <=    40.9 (x2.0)
+        cond= 420: |c-hat| =  20.169 <=    40.9 (x2.0)
+        cond= 140: |c-hat| =  12.466 <=    44.8 (x3.6)
+    (F) energy by class (top 4 of 23): g=1: 2109.9, g=2: 488.7, g=3: 92.4, g=4: 79.6
+
+[two-owner] P=1260 M=46: (A) W-hat_g(chi_0) == (pi^2/P^2)J_2/3 (max err 1.8e-13); total weight 3.289866 == (pi^2/3)(1-P^-2) = 3.289866 (err 2.1e-13)
+    (B) class Parseval exact on 35 classes (worst rel err 6.0e-16)
+    (C) VARIANCE ENVELOPE: Var = 3563.1 <= 11574.5 (tightness x3.25) -- PROVED, all constants arithmetic
+    (D) Chebyshev (mean -5.60, sd 59.7): 2sigma: 16 <= 72; 3sigma: 6 <= 32; 5sigma: 0 <= 12  (of 288 frames)
+    (E) per-character bound |c-hat| <= sum_g Wbound_g * min(sqrt(E_g), A_g):
+        cond=  35: |c-hat| =  10.717 <=    69.7 (x6.5)
+        cond=  35: |c-hat| =  10.717 <=    69.7 (x6.5)
+        cond=  15: |c-hat| =   9.839 <=    69.1 (x7.0)
+    (F) energy by class (top 4 of 35): g=1: 1652.5, g=2: 633.0, g=4: 462.1, g=3: 235.2
+
+[balanced] P=2940 M=36: (A) W-hat_g(chi_0) == (pi^2/P^2)J_2/3 (max err 1.7e-13); total weight 3.289868 == (pi^2/3)(1-P^-2) = 3.289868 (err 9.9e-14)
+    (B) class Parseval exact on 35 classes (worst rel err 9.4e-16)
+    (C) VARIANCE ENVELOPE: Var = 3202.7 <= 8731.0 (tightness x2.73) -- PROVED, all constants arithmetic
+    (D) Chebyshev (mean -3.01, sd 56.6): 2sigma: 34 <= 168; 3sigma: 8 <= 75; 5sigma: 0 <= 27  (of 672 frames)
+    (E) per-character bound |c-hat| <= sum_g Wbound_g * min(sqrt(E_g), A_g):
+        cond= 735: |c-hat| =   8.769 <=    58.7 (x6.7)
+        cond= 735: |c-hat| =   8.769 <=    58.7 (x6.7)
+        cond= 245: |c-hat| =   7.450 <=    68.4 (x9.2)
+    (F) energy by class (top 4 of 35): g=1: 1367.0, g=2: 500.3, g=3: 258.2, g=4: 151.9
+
+==============================================================================
+done

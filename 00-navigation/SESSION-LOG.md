@@ -22,6 +22,15 @@ recursion.  The AP-centred H6 common-scale frontier is now `c>=7`.
 
 ---
 
+## boxeph-2026-07-17-S68 -- LEM-041: THE EFFECTIVE FRAME THEOREM -- the capstone CLOSED. Sharp weight bound (total weight = (pi^2/3)(1-P^-2) exactly, Jordan/MI0); class Parseval; THE VARIANCE ENVELOPE with arithmetic constants (tightness x2.5-x3.3); effective Chebyshev generic-frame theorem (0 frames beyond 5 sigma); per-character mass bounds x2-x9 on top masses
+
+Prompt (owner): finish out the capstone.
+
+The distributional frame-law program end to end: factorization (LEM-031), L-value weights (LEM-032), graded Gauss cross (LEM-033), exact variance (LEM-039), and now the SIZE side: proved envelope, effective genericity, per-character bounds -- nothing conjectural left on the line. LRC(14) integration needs only cross-family uniformity (the propagation ledger), not any spectral fact.
+
+FILES: LEM-041, HYP-7215, script + out. -> all; klein: the X-hat_g bound your lane wanted is (E) -- min(sqrt E_g, A_g) with E_g exact class energies; sharpen via grade cells if you want the x3 back. boxeph; S68.
+
+---
 ## opus-2026-07-17-S339 -- THM-956 THE BLOCK-STRUCTURE REDUCTION (proven G0 junction table; all-blocks-<=6 residual families LONELY with no search, 60/60 exact; ENTRY-LENGTH LAW l_k = max(2, 4k/(7-k)) -- the k>=4 naive-entry failure caught) => THE DENSE CORE = single >=7-comparable-blocks EXACTLY; the 7-wall pair-crumb = THE unique remaining elementary ingredient (open items 1+2 fuse); floor transfer = item 3's bridge (HYP-7220)
 
 Owner: work the dense core / 7-wall / a-priori floors. Synthesis: THM-955 finishes any
