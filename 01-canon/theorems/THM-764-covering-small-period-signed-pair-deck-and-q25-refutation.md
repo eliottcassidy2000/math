@@ -1,8 +1,8 @@
 ---
 id: THM-764
 title: The covering small-period signed-pair deck and the failure of the q<=25 bound
-status: PROVED (elementary residue criterion; exact residual certificates are computer-checked over integers and rational intervals)
-source: codex-2026-07-14-S3
+status: PROVED (elementary residue criterion; exact residual certificates and the zero-free saturated-deck translation family are computer-checked over integers and rational intervals; the explicit row, full q=2..25 obstruction orbit, primitivity, and q=27 witness are Lean-checked)
+source: codex-2026-07-14-S3; strengthened codex-2026-07-17-S58
 depends_on:
   - THM-366   # covering/non-covering divisor gate
   - THM-668   # exact rational maximizer audit used by the companion script
@@ -153,6 +153,98 @@ Companion artifacts:
 ```text
 04-computation/lrc14_q25_uniformity_refutation_codex_S3.py
 05-knowledge/results/lrc14_q25_uniformity_refutation_codex_S3.out
+```
+
+## Strong zero-free obstruction and the collision-surplus form
+
+The zero-owner and coherent-packet explanations can both be removed.  Put
+
+```text
+S0=(43,55,61,70,73,79,83,99,103,104,109,113,156).
+```
+
+Exact integer and interval checks give:
+
+```text
+gcd(S0)=1,                 S0 is covering,
+Z_q(S0)=empty,             B_q(S0)=U_q       for every 15<=q<=25,
+first rational witness=2/27,
+M(S0)=43/199,
+diameter(S0)=113,          max(S0)/min(S0)=156/43<4,
+max common-prime packet=3,
+all leave-one-out gcds=1,  longest arithmetic progression has length 3.
+```
+
+It also passes the exact S312 band-residual predicate.  Thus removing zero
+owners, bounding diameter or ratio, demanding gcd incoherence, bounding prime
+packets, excluding long progressions, or demanding substantial looseness does
+not restore the `q<=25` conclusion.  Every runner of `S0` owns a private signed
+card somewhere in `q=15,...,25`; deleting that runner exposes a bounded-period
+witness with twelve-speed clearance strictly above `1/13`, which reattachment
+blocks at signed distance one.
+
+The packet bound three is best possible under the zero-free hypotheses.  A
+covering row has owners of `8`, `12`, and `10`.  They must be distinct: a shared
+owner of `8,12` is divisible by `24`, one of `8,10` is divisible by `20`, and
+one of `12,10` is divisible by `15`, contradicting zero-freeness in the target
+range.  The three owners are all even.
+
+There is an infinite exact obstruction orbit.  Let
+
+```text
+L=lcm(2,...,25)=26771144400,
+S_k={s+kL:s in S0},        k>=0.
+```
+
+Translation by `kL` preserves every covering, zero-owner, and signed-card
+obligation through denominator 25.  It also preserves primitivity because the
+base differences include `27` and `40`, preserves diameter `113`, and preserves
+maximum common-prime packet three.  The last assertion follows by checking the
+gcd of the differences in every four-subset: every nontrivial gcd has only
+prime factors `2,3,5`, all divide `L`, and the common base residue is nonzero.
+Meanwhile
+
+```text
+max(S_k)/min(S_k) -> 1,
+clearance at t=1/(199+2kL) is (43+kL)/(199+2kL) -> 1/2.
+```
+
+So failure of the bounded-period code can coexist with asymptotically maximal
+metric clearance.
+
+`TournamentH7.LRCQ25Obstruction` formalizes the exact inclusive-band statement,
+not a strict or floating-point proxy.  It proves in Lean that `S0` and every
+`S_k` are covering and primitive, are zero-free on `15<=q<=25`, have no witness
+for the full range `2<=q<=25`, and that multiplier `2` at denominator `27`
+does witness `S0` and supplies the genuine `Mreach>=1/14` conclusion.  The
+module uses kernel `decide`, contains no `sorry` or `native_decide`, and its
+theorems audit only to the standard foundational trio.
+
+The exact positive replacement has a simple collision formulation.  For a
+zero-free covering row define
+
+```text
+N_q=#{s in S:gcd(s,q)=1},
+C_q=N_q-|B_q(S)|,          h_q=phi(q)/2.
+```
+
+For `15<=q<=28`, the deck criterion is equivalently
+
+```text
+q has a witness  <=>  C_q>N_q-h_q.                     (4)
+```
+
+In particular `N_q<h_q` is a residue-blind sufficient condition.  At the
+prime moduli `17,19,23`, `S0` has `N_q=13` and collision surpluses `5,4,2`,
+respectively—equality in the nonwitness threshold in all three cases.  The
+strict inequality in (4) is sharp.
+
+Strengthening artifacts:
+
+```text
+04-computation/lrc14_q25_zero_free_saturated_deck_codex_S58.py
+05-knowledge/results/lrc14_q25_zero_free_saturated_deck_codex_S58.out
+04-computation/lean/TournamentH7/TournamentH7/LRCQ25Obstruction.lean
 ```
 
 ## What replaces the failed bound

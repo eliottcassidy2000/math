@@ -1,11 +1,13 @@
-// Exact scale-three Hamming-six depth-two metric scout.
+// Exact scale-three Hamming-six metric recursion.
 //
 // Reconstruct all 1,504 primitive common-sheet contexts independently from
 // the literal CRT sheet predicate, enumerate their step-39 replacement rays
-// in numerical order, and apply THM-815's longest-component cap at depths zero
-// and one.  Every cap-admissible depth-two child is intersected exactly and
-// classified by its exact four-comb continuation cap.  There is no height
-// cutoff and no floating point.
+// in numerical order, and apply THM-815's longest-component cap at every
+// expanded prefix.  At --depth 2 the detailed cache/tournament scout is
+// emitted.  At --depth 6 the generic recursion reaches every terminal; a
+// contained full safe band and the streaming longest-component cap are used
+// only as proof-preserving noncoverage certificates.  There is no height
+// cutoff and no floating point in either mode.
 //
 // Geometry is cached at (missing-label set, x1) and (missing-label set,x1,x2).
 // The cache never identifies proof states: every context and every remaining
@@ -373,10 +375,12 @@ int ray_base(Context const &context, int position) {
 }
 
 int next_ray_speed(Context const &context, int position, int last_speed) {
-  int speed = ray_base(context, position);
+  long long speed = ray_base(context, position);
   if (speed <= last_speed)
-    speed += 39 * ((last_speed - speed) / 39 + 1);
-  return speed;
+    speed += 39LL * ((last_speed - speed) / 39 + 1);
+  if (speed > numeric_limits<int>::max())
+    throw runtime_error("next ray speed exceeds integer carrier");
+  return (int)speed;
 }
 
 struct Candidate {
@@ -386,13 +390,19 @@ struct Candidate {
 
 vector<Candidate> candidates(Context const &context, unsigned used_mask,
                              int last_speed, long long cap) {
+  if (cap > numeric_limits<int>::max())
+    throw runtime_error("candidate cap exceeds integer carrier");
   vector<Candidate> answer;
   for (int position = 0; position < 6; ++position) {
     if (used_mask & (1u << position))
       continue;
     int speed = next_ray_speed(context, position, last_speed);
-    for (; speed <= cap; speed += 39)
+    for (; speed <= cap;) {
       answer.push_back({speed, position});
+      if (speed > cap - 39)
+        break;
+      speed += 39;
+    }
   }
   sort(answer.begin(), answer.end(), [](Candidate a, Candidate b) {
     return tie(a.speed, a.position) < tie(b.speed, b.position);
@@ -631,6 +641,8 @@ struct GenericStats {
   unsigned long long candidate_edges = 0;
   unsigned long long covers = 0;
   unsigned long long loose = 0;
+  long long maximum_cap = 0;
+  int maximum_candidate_speed = 0;
 };
 
 void generic_recurse(Context const &context, vector<Interval> const &components,
@@ -652,12 +664,15 @@ void generic_recurse(Context const &context, vector<Interval> const &components,
 
   Interval longest = longest_component(components);
   long long cap = discrepancy_cap(6 - depth, longest.hi - longest.lo);
+  stats.maximum_cap = max(stats.maximum_cap, cap);
   vector<Candidate> next = candidates(context, used_mask, last_speed, cap);
   if (next.empty())
     ++stats.dead[depth];
   stats.candidate_edges += next.size();
 
   for (Candidate candidate : next) {
+    stats.maximum_candidate_speed =
+        max(stats.maximum_candidate_speed, candidate.speed);
     unsigned child_used = used_mask | (1u << candidate.position);
     vector<Interval> child;
     if (early_gates && depth_limit == 6) {
@@ -746,11 +761,15 @@ int run_generic(vector<Context> const &contexts, int context_start,
     aggregate.candidate_edges += stats.candidate_edges;
     aggregate.covers += stats.covers;
     aggregate.loose += stats.loose;
+    aggregate.maximum_cap = max(aggregate.maximum_cap, stats.maximum_cap);
+    aggregate.maximum_candidate_speed =
+        max(aggregate.maximum_candidate_speed, stats.maximum_candidate_speed);
     cout << "GENERIC_ROW|" << index << "|" << type_word(stratum(context))
          << "|" << array_word(stats.nodes) << "|" << array_word(stats.dead)
          << "|" << array_word(stats.full_tooth) << "|"
          << array_word(stats.streaming_cap) << "|" << stats.candidate_edges
-         << "|" << stats.covers << "|" << stats.loose << "\n";
+         << "|" << stats.covers << "|" << stats.loose << "|"
+         << stats.maximum_cap << "|" << stats.maximum_candidate_speed << "\n";
     int completed = index - context_start + 1;
     if (completed <= 3 || completed % 25 == 0 || index + 1 == context_end) {
       double seconds = chrono::duration<double>(chrono::steady_clock::now() -
@@ -768,6 +787,8 @@ int run_generic(vector<Context> const &contexts, int context_start,
        << "|streaming_cap=" << array_word(aggregate.streaming_cap)
        << "|candidate_edges=" << aggregate.candidate_edges
        << "|covers=" << aggregate.covers << "|loose=" << aggregate.loose
+       << "|maximum_cap=" << aggregate.maximum_cap
+       << "|maximum_candidate_speed=" << aggregate.maximum_candidate_speed
        << "\nGENERIC_SHARD_DONE\n";
   return 0;
 }
@@ -811,7 +832,10 @@ int main(int argc, char **argv) {
       depth_limit > 6 ||
       context_start > (int)contexts.size())
     throw runtime_error("invalid context range");
-  int context_end = min<int>(contexts.size(), context_start + context_limit);
+  // Avoid signed overflow when the default context_limit is INT_MAX.
+  int available_contexts = (int)contexts.size() - context_start;
+  int selected_contexts = min(context_limit, available_contexts);
+  int context_end = context_start + selected_contexts;
 
   if (depth_limit != 2)
     return run_generic(contexts, context_start, context_end, depth_limit,

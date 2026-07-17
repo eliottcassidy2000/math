@@ -1,10 +1,10 @@
 ---
 id: THM-862
-title: Scale-three Hamming-six common-sheet classification and exact metric plan
-status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts, with an exact affine toothpick-code classification; its exact metric prefix has 146,912 first edges and 14,992,263 second edges, of which exactly one dies at depth two, while 22,262 and 4,307,561 literal geometries cache those layers; a bounded depth-three raw/batch prototype agrees exactly and gives 1.599x CPU speedup on an eight-context root block; the full metric bank remains open
-source: codex-2026-07-15-S15/S16 c=3 transport audit
+title: Scale-three Hamming-six common-sheet classification and exact terminal closure
+status: PROVED STRUCTURAL + FINITE-EXACT — the primitive c=3 common-sheet bank has 212 presentations and 1,504 unit contexts with exact affine toothpick codes; the complete no-height-cutoff metric recursion visits 950,540,566 candidate edges, finds zero covering terminals and two certified nonempty terminals, and therefore closes every primitive proper AP-centred c=3 Hamming-six packet as strictly loose. This theorem closes only that face; the subsequent THM-952 closes c=4, while c>=5, H5 ramification, non-AP-centred/deep-sheet branches, and global n=12 sporadic emptiness remain open.
+source: codex-2026-07-15-S15/S16 c=3 transport audit; terminal closure codex-2026-07-17-S57
 depends_on: [THM-810, THM-815, THM-823, THM-857, THM-859, THM-860, THM-861]
-related: [THM-844, THM-847, THM-858, HYP-6820]
+related: [THM-844, THM-847, THM-858, THM-952, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.py
   - 05-knowledge/results/lrc13_scale_three_hamming_six_sheet_classification_codex_S16.out
@@ -18,6 +18,10 @@ verification:
   - 04-computation/lrc13_scale_three_hamming_six_depth_three_geometry_batch_codex_S16.cpp
   - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_three_geometry_batch_codex_S16.out
   - 05-knowledge/results/lrc13_scale_three_hamming_six_depth_three_benchmark_codex_S16.md
+  - 04-computation/lrc13_scale_three_hamming_six_terminal_combine_codex_S57.py
+  - 05-knowledge/results/lrc13_scale_three_hamming_six_terminal_census_codex_S57.out
+  - 04-computation/lrc13_scale_three_terminal_packet_certificate_codex_S57.py
+  - 05-knowledge/results/lrc13_scale_three_terminal_packet_certificate_codex_S57.out
 ---
 
 # THM-862 — the scale-three sheet stalk is classified
@@ -38,10 +42,8 @@ D_r=3/gcd(3,w_r) in {1,3}.                              (2)
 
 For `D_r=3`, write `e_r=w_r mod 3 in {+1,-1}`.  An order-one unit is
 trivial.  THM-810/823's germ argument makes common-sheet coverage a necessary
-condition for (1).  This theorem classifies that condition completely and
-freezes the exact first layer of the remaining metric recursion.
-
-It does **not** run that recursion to its terminals.
+condition for (1).  This theorem classifies that condition completely and now
+runs every resulting arithmetic continuation to an exact terminal verdict.
 
 ## Theorem
 
@@ -218,7 +220,7 @@ The respective witness pairs are
 
 Thus both `T_a` and `J` are only sheet-equivariant.
 
-### E. Exact first metric layer and the remaining run
+### E. Exact first metric layer and terminal recursion
 
 For a fixed context, the complete proper replacement rays are
 
@@ -275,11 +277,10 @@ while its logical nodes per root predict
 1504*(41882982/64)=984,250,077 logical nodes.            (20)
 ```
 
-Equations (19)--(20) are workload estimates, not `c=3` censuses.  They say to
-run a complete depth-two scout before an overnight full tree and to shard the
-`1,504` canonical contexts.  A proof run must retain every arithmetic lane,
-use THM-857's complete-tooth and streaming-cap certificates, and be checked
-by an independent closed-danger reconstruction.
+Equations (19)--(20) were workload estimates, not `c=3` censuses.  They led to
+the sharded terminal run in Part H.  That run retains every arithmetic lane and
+uses THM-857's complete-tooth and streaming-cap certificates; its exact total
+is slightly below the root-based estimate.
 
 Two exact representation reductions and one shortcut guardrail refine that
 plan.  Before the first order-three insertion every speed is divisible by
@@ -474,12 +475,87 @@ interval engine.  It also independently rebuilds the unique dead geometry
 and its cap certificate.  The exact count is only `56,862` below the estimate
 in (19), a relative error under `0.38%`.
 
-This near-total survival is a negative computational result with a positive
-design consequence.  A blind full logical recursion is still predicted near
-one billion nodes.  The next run should first batch literal third-child
-geometry, retain all arithmetic lanes over that cache, and benchmark the
-complete-tooth and streaming-cap collapse at depth three.  Nothing in this
-part proves terminal looseness.
+This near-total depth-two survival was a negative computational result with a
+positive design consequence: the full recursion had to retain arithmetic
+lanes while exploiting only proof-preserving geometric shortcuts.  Part H now
+records the completed run; nothing in the depth-two census alone implied that
+terminal verdict.
+
+### H. Exact terminal census and scale-three closure
+
+The generic engine applies (17) at every expanded prefix and enumerates all six
+labelled step-39 replacement rays in increasing numerical order.  Its complete
+depth-zero through depth-six node vector is
+
+```text
+(1,504, 146,912, 14,992,263, 931,412,556,
+ 3,984,352, 4,481, 2),                                  (20l)
+```
+
+with `950,540,566` candidate edges.  The sheet-stratum split is
+
+| stratum | contexts | nodes at depths `0,...,6` | candidate edges | covers | nonempty terminals |
+|---|---:|---|---:|---:|---:|
+| `1^2 3^4` | 336 | `336,32708,3408353,214874008,691319,758,0` | 219,007,146 | 0 | 0 |
+| `1 3^5` | 672 | `672,64596,6469464,391549538,1609804,1240,0` | 399,694,642 | 0 | 0 |
+| `3^6` | 496 | `496,49608,5114446,324989010,1683229,2483,2` | 331,838,778 | 0 | 2 |
+
+Every shortcut has a one-sided proof meaning.  A contained complete safe band
+after the third or later insertion leaves a component too long for the
+remaining numerically larger combs; this certifies `879,373,305` depth-three
+nodes.  The streaming version of (17) certifies the vector
+
+```text
+(0,0,1,50,593,411,3,980,598,4,479,2).                  (20m)
+```
+
+The single depth-two entry is exactly (20i).  At depth six the same exact
+intersection routine detects a nonempty interval rather than materializing an
+unneeded full list.  The two such terminals are contexts `888` and `1502`,
+both in the all-order-three stratum.  Fully ungated replay of context `888`
+reproduces its complete node/dead/edge vector and the same loose verdict;
+context `1502` has a separate ungated referee in the S57 audit.
+
+For a concrete terminal certificate, context `888` follows the labelled path
+`9:1,10:4,2:19,3:22,12:23,4:25` and ends at
+
+```text
+{1,3,4,15,18,19,21,22,23,24,25,33}.
+```
+
+An independent closed-danger complement reconstruction gives exactly twenty
+safe components, and its exact maximin is `1/9`, attained at
+`4/27,8/27,19/27,23/27`.  Thus the rare terminal survivor is not a near-cover
+or an accounting ambiguity; it is substantially looser than `1/13`.
+
+Most importantly,
+
+```text
+covering terminals = 0.                                (20n)
+```
+
+The largest discrepancy cap encountered is only `6,324`, and the largest
+enumerated candidate speed is `6,317`.  These extrema are recomputed per row,
+max-aggregated by each shard and the independent combiner, and lie far below
+the checked 32-bit carrier boundary.
+
+The recursion has no lift-height cutoff and uses exact rational endpoints.
+If a terminal residual is nonempty, it contains a time at which all twelve
+speeds have strict clearance above `1/13`, so that packet is loose.  If it were
+empty, it would be a covering/tight terminal.  THM-815's cap proves that every
+tight continuation occurs among the enumerated rays.  Therefore (20n) proves:
+
+> Every primitive proper AP-centred common-scale-three Hamming-six packet
+> satisfying the necessary common-sheet classification has `M(A)>1/13`.
+
+The four root-aligned shards cover contexts
+`0:100`, `100:508`, `508:1004`, and `1004:1504`.  The independent combiner
+rejects a duplicate or missing index, checks every row and shard sum, freezes
+the full 1,504-row hash, and rederives (20l)--(20n).  The exact ray-order
+tournament is transitive at each materialized prefix—zero directed cycles,
+singleton SCCs, and one Hamiltonian path—but no tournament quotient is used.
+The proof state remains the literal component union, unused labelled rays,
+last speed, and shortcut ancestry.
 
 ## Proof
 
@@ -599,7 +675,7 @@ without relying only on that observation.  The verifier obtains them from
 the complete piecewise-linear candidate set with denominators
 `2u`, `u+v`, and `|u-v|`.
 
-### 4. Exact recursion plan
+### 4. Exact recursion and terminal certificates
 
 The CRT gives (15)--(16).  Distinct labels have distinct residues modulo
 thirteen, so every terminal has one numerical replacement order.  Before the
@@ -620,6 +696,16 @@ translation by the reciprocal of the current prefix gcd, time reversal
 `t->-t`, common dilation, and permutation of already inserted speeds are
 genuine metric equivariances.  Multiplicative residue relabelling, unit reflection,
 provider-graph isomorphism, and inversion are not.
+
+At every prefix the next legal member of each unused ray is determined by the
+last numerical speed.  Formula (17) bounds the finitely many admissible members.
+If an exact child intersection is nonempty at depth six, the packet is strictly
+loose.  If a child contains a component whose (17) cap is already below the
+least possible next ray, no covering continuation exists; the complete-safe-
+band shortcut is the special case (20a1).  These implications justify every
+early verdict counted in (20m).  Induction on the six unused labels therefore
+makes the depth-six search exhaustive, and the zero cover count (20n) proves
+the scale-three closure.
 
 ### 5. Why the cache and projector are exact
 
@@ -739,18 +825,20 @@ Nine earlier raw pilots project `568.6M--1.426B` ungated depth-three logical
 nodes and `2.33--12.65` uncached CPU-hours, while three light full-depth pilots
 gate over 99% at depth three and die by depth five.  These are workload
 projections, not bounds or a census.  The prototype validates root-block
-sharding and metric transposition; it proves no additional lane loose and
-does not change the open terminal verdict.
+sharding and metric transposition; by itself it proved no additional lane
+loose.  The later unbatched exact terminal census in Part H supersedes its open
+planning status.
 
 ## Scope guardrail and reproduction
 
 This theorem proves the complete primitive `c=3` **common-sheet**
-classification, the affine unit codes, the exact sheet orbit bank, and the
-first two metric layers, including their exact geometry-cache fibres and the
-first-layer Walsh projectors.  It does not compute the full depth-three
-census or terminal recursion, prove that any of the `1,504` languages is
-strictly loose, count covering terminals, close `c>=4`, or prove global
-`n=12` sporadic-branch emptiness.
+classification, the affine unit codes, the exact sheet orbit bank, both cached
+prefix layers, and the full terminal recursion over all `1,504` arithmetic
+languages.  It closes the primitive proper AP-centred Hamming-six face at
+common scale three.  THM-952 separately closes `c=4`.  This theorem does
+**not** close `c>=5`, the finite smooth-ramified Hamming-five bank, radius seven
+and higher, non-AP-centred/deep-sheet packets, or global `n=12`
+sporadic-branch emptiness.
 
 Reproduce the frozen output with
 
@@ -796,6 +884,28 @@ python3 \
   > /tmp/thm862-depth2-crosscheck.out
 cmp /tmp/thm862-depth2-crosscheck.out \
   05-knowledge/results/lrc13_scale_three_hamming_six_depth_two_geometry_cache_crosscheck_codex_S16.out
+
+# Complete terminal recursion; these four cuts are retained-root aligned.
+/tmp/thm862-depth2 --context-start 0 --context-limit 100 --depth 6 \
+  > /tmp/thm862-terminal-0.out
+/tmp/thm862-depth2 --context-start 100 --context-limit 408 --depth 6 \
+  > /tmp/thm862-terminal-1.out
+/tmp/thm862-depth2 --context-start 508 --context-limit 496 --depth 6 \
+  > /tmp/thm862-terminal-2.out
+/tmp/thm862-depth2 --context-start 1004 --context-limit 500 --depth 6 \
+  > /tmp/thm862-terminal-3.out
+python3 \
+  04-computation/lrc13_scale_three_hamming_six_terminal_combine_codex_S57.py \
+  /tmp/thm862-terminal-{0,1,2,3}.out \
+  > /tmp/thm862-terminal.out
+cmp /tmp/thm862-terminal.out \
+  05-knowledge/results/lrc13_scale_three_hamming_six_terminal_census_codex_S57.out
+
+python3 \
+  04-computation/lrc13_scale_three_terminal_packet_certificate_codex_S57.py \
+  > /tmp/thm862-terminal-packet.out
+cmp /tmp/thm862-terminal-packet.out \
+  05-knowledge/results/lrc13_scale_three_terminal_packet_certificate_codex_S57.out
 ```
 
 Frozen SHA-256 values are
@@ -807,9 +917,14 @@ output  c8413de89655592b5009aad83596330750d9b5ca9cb407af692fd06f5e353ba8
 cache source  ee7813878c7e589a30c32657c93c4d5ce106470ceaa6c125b5f09f7290797ec7
 cache output  69632620030da8ec7f2d2584f37b9f450e1a3da28b6186ec48971f9b2032d72c
 
-depth-two source    4c6144e14d12a4badf734d26844a26980dadd29f5553e1c7927bb23a74d66ca9
+shared C++ source   b1b01dfdef4fba032d8641b65dad0747e43eed536821d4ab62c2137601008a9e
 depth-two combiner  a946796336fb798f2e02e841a9839a6bd0ab2a33077ab352dc58ce2b98473edd
-depth-two output    04b34203c3dd47d6d836523e74bb5671105cfbfd0617b948bc7b7273f4795c87
+depth-two output    b3f2dc605e5a7f24e1ea796dd0721388657fac6cb0d2f59038b367b5c3e13b38
+
+terminal combiner   a62579afde20a35e1c1ab3fafc8ff2306ca866a26154d865d85d4dce37d4c695
+terminal output     ffc41d5eb38ae3c7338ea75dd0498ae7b7dc3d3e443584d34a8a59f5d554022e
+packet referee      a7e7d1d4a07eea6f5abea76f16649392b9d653d4a87602071cf8f24f272bcdbd
+packet output       bd20c2bc414e0dd9262c89dc04bdb3a06cf8fb246cf8b214d1c23af5119dc5f1
 
 independent source  8cee05a32b863c369fff2f0f09fcb0f247648778fac27c6ea8eb3500cf272fa6
 independent output  935cf7b809e178378230329ccdf1ffe027b20f7243105865fe9bc174aad0a58b

@@ -560,7 +560,6 @@ other parity class supplies a common good branch.  Thus the local phase
 geometry of every `(2,2,q)` pattern is completely classified.  What remains
 globally is selecting a harmonic-good phase that avoids these named opposition
 events, not solving an unstructured three-row incidence problem.
-
 ## Landed addendum — weighted pair floor and obstruction compatibility (codex-S51–S53)
 
 The continuous support-two debt now has a complete exact finite certificate.
@@ -627,3 +626,223 @@ rational heart (tent_second_difference, J2_divisor_sum -- klein S318). The
 remaining Lean debt on this line: transcribe the twisted Bernoulli moment
 (LEM-032(C)(iii)), the kernel-average identities (LEM-033), and the finite
 exhaustions (LEM-040) -- all mechanical; no analytic content remains.
+## Landed addendum — signed support correction, exact phase residuals, and complete lacunary wiring (codex-S50--S56)
+
+The exact packet support decomposition has been scope-corrected as THM-948.
+Its Möbius identity and three packet autopsies remain exact, but the proposed
+universal law `M(A) >= 0` for `|A| >= 3` is false. Kernel-independent exact
+referees give negative masses at supports three, four, and five. At support
+three the full family is known:
+
+```text
+M({1,2,N}) = k[N mod 28]/(686N),
+```
+
+positive on residues `1..13`, zero on `0,14`, and negative on `15..27`.
+Thus a universal B5 supplier must preserve signed support data. The correct
+combinatorial carrier is a signed support hypergraph; pair mass is symmetric,
+so a runner tournament has no canonical orientation and loses the first
+sign-bearing information.
+
+The coverage-capped B5 interface now has honest modulus semantics.
+`not_coverageCapped_six_at_cleanModulus` proves that the cofinal clean modulus
+is never capped at six: multiplier one is bad for all thirteen runners.
+`CoverageCappedB5Certificate` therefore stores an arbitrary usable modulus.
+At any such capped `q>1`, `small_speed_card_le_six_of_coverageCapped` proves
+that at most six speeds satisfy `14|v_i|<q`. The clean relation ruler and the
+moderate coverage ruler are two different regimes; a future supplier must
+compose them rather than identify them.
+
+The q333 phase branch is now sign-normalized automatically. Its scalar
+frequency satisfies the exact identity
+
+```text
+3F = a0+a1+a2.
+```
+
+Failure therefore splits into an actual selected witness, an exact
+unit-coefficient support-three relation when `F=0`, or a nonzero integer with
+`|F|<11B`. A normalized coordinate gap of `33B` forces the witness. The small
+nonzero branch remains open; residues impose no further divisibility on `F`.
+
+For q244 the normalized rows retain all three scale identities, individual
+danger walls, and the exact signed-speed dictionary
+
+```text
+epsilon2*v2 + epsilonA*v4A + epsilonB*v4B = gF.
+```
+
+After the q2, both q4, and combined-frequency exits, every unresolved row obeys
+
+```text
+3|a2| < 22B,       3|a4A|,3|a4B| < 44B,
+3|v2|,3|v4A|,3|v4B| < 11gB.
+```
+
+The remaining signed sum is either zero—an exact `{+1,-1}` support-three
+relation—or a nonzero multiple of `g` of magnitude in `[g,11gB)`. A checked
+fixed-phase example `(-14,5,9)` at `g=4,u=5/12` shows the zero-frequency branch
+is genuine. The preserved object is the affine branch-residue cover and its
+row walls, not a runner tournament.
+
+Finally, the nested-gap theorem is complete and connected to the capstone.
+`LRCLacunaryNest.lonely_of_pos_lacunary` covers every positive thirteen-tuple
+with consecutive ratios at least `7/3`; the formerly missing `v0=1` case starts
+in the exact safe gap `[1/14,13/14]` before nesting the other twelve speeds.
+`LRCLacunaryWiring` transports through signs and a sorting permutation and
+defines `NonLacunaryDenseCoreObligation`. The checked implication is now
+
+```text
+LRCUpTo13 + NonLacunaryDenseCoreObligation -> LRC14Statement,
+```
+
+where the residual certificate contains `ChainDenseCore` and explicitly
+`not SevenThreeLacunary`. All new Lean modules are sorry-free, avoid
+`native_decide`, and audit to `propext`, `Classical.choice`, and `Quot.sound`.
+Here the faithful vertices are the twelve adjacent scale gaps carrying their
+ratios and nested widths; an order tournament on runners discards both.
+
+## Landed addendum — scale-three terminal closure and exact obstruction laws (codex-S57--S59)
+
+THM-862's planned `c=3` computation is now a terminal theorem rather than a
+depth-two prefix.  The exact no-height-cutoff recursion covers all `1,504`
+primitive proper AP-centred Hamming-six arithmetic contexts and has node vector
+
+```text
+1,504;146,912;14,992,263;931,412,556;3,984,352;4,481;2.
+```
+
+Across `950,540,566` candidate edges it finds zero covering terminals.  The two
+depth-six terminals, contexts `888` and `1502`, are certified nonempty and hence
+strictly loose.  Full-safe-band and streaming-cap shortcuts preserve the
+literal component predicate; ungated terminal replays referee the two leaves.
+The hardened replay records maximum cap `6,324` and maximum candidate speed
+`6,317`, both checked before conversion to the integer carrier.
+An independent endpoint script reconstructs context `888` as
+`{1,3,4,15,18,19,21,22,23,24,25,33}`, finds twenty safe components, and proves
+its exact maximin is `1/9` at `4/27,8/27,19/27,23/27`.
+The independent combiner verifies nonoverlapping coverage of contexts
+`0,...,1503`, every row/shard sum, the stratum totals, and a frozen row hash.
+Therefore the primitive proper AP-centred common-scale-three H6 face is closed.
+
+THM-952 now closes the next face.  At `c=4`, exhaustive literal sheet masks
+reject every mixed-order presentation and leave exactly 64 all-order-four
+supports with four unit words apiece.  Their exact carrier is
+
+```text
+directed provider C6 + two variable K3s + zero perfect matching,
+```
+
+with the two triangles carrying an affine rank-four parity code.  The 256
+resulting labelled step-52 contexts have complete node vector
+
+```text
+256;25,132;2,577,024;163,876,444;496,938;643;0.
+```
+
+Across `166,976,181` candidate edges the no-height-cutoff recursion finds zero
+covers; every branch is cap-dead by depth five.  Four contiguous frozen shards,
+exact row and tree accounting, checked integer maxima, warning/sanitizer runs,
+and an ungated context-255 replay referee the result.  The ungated check is one
+full context, not a claim about an ungated run of the whole bank.  The completed
+tournament has five fingerprints but destroys the edge colouring and unit code;
+the proof carrier remains the literal owner-sheet incidence followed by strict-
+safe components and labelled future rays.
+
+Thus both `c=3` and `c=4` are closed.  This does not touch `c>=5`, the finite
+ramified H5 bank, or non-AP-centred/deep-sheet branches of the global `n=12`
+problem.
+
+The false `q<=25` proposal now has a much stronger exact guardrail.  The row
+
+```text
+(43,55,61,70,73,79,83,99,103,104,109,113,156)
+```
+
+is primitive, covering, zero-free at every `q=15,...,25`, and has a complete
+signed deck at every such modulus.  It has first rational witness `2/27`, exact
+`M=43/199`, diameter `113`, ratio below four, maximum common-prime packet three,
+all deletion gcds one, and every deletion strictly above `1/13`; reattaching
+the deleted runner privately blocks its displayed witness.  Translation by
+`k*lcm(2,...,25)` preserves the entire bounded-period blocker code,
+primitivity, diameter, and packet cap while its ratio tends to one and an
+explicit clearance tends to `1/2`.  The strongest exact local replacement is
+
+```text
+C_q=N_q-|B_q(S)| > N_q-phi(q)/2,
+```
+
+equivalent to a witness for a zero-free covering row at `15<=q<=28`.  The
+faithful object is an irredundant runner--signed-card--modulus incidence
+hypergraph; two transitive runner gauges flip 47 of 78 edges and retain none of
+the cross-modulus private-owner circuit.
+
+`LRCQ25Obstruction.lean` now kernel-checks the full explicit statement: the
+base row and every common translate are covering and primitive, zero-free on
+`15<=q<=25`, and have no inclusive-band witness for any `2<=q<=25`; multiplier
+`2` at `q=27` gives the honest LRC14 witness and `Mreach` floor.  The module is
+sorry-free, avoids `native_decide`, and audits to the standard foundational
+trio.
+
+Finally, THM-948's support-three structure now includes the complete doubling
+locus.  For `d=gcd(a,b)`, `A=a/d`, `B=b/d`,
+
+```text
+M({a,2a,b})=C(A mod 14,B mod 28)/(686AB),
+C=0  iff  7|A or 14|B,
+sign C=centeredSign_14(A)*centeredSign_28(B) when C!=0.
+```
+
+Fourier coefficients of `g(x)=1_{||x||<1/14}-1/7` and
+`H(x)=g(x)g(2x)`, followed by the periodic Bernoulli identity, prove the
+formula; all `392` residue cells, `5,028` endpoint triples, `267` midpoint
+all-face triples, and `54` dilations pass exact referees.  This removes two
+entire divisor hyperplanes from the B5 support-three tail and gives every other
+doubling triple an exact sign.  The carrier is a signed support hyperedge with
+its `(A mod14,B mod28)` Fourier cell, not a runner tournament.
+
+`LRCExactDoublingTriple.lean` now proves the denominator-cleared `/48`
+Bernoulli coefficient identity, audits all `392` cells once, and lifts
+integrality, zero/sign, reflection, and the infinite negative family to
+arbitrary residues.  It is sorry-free and avoids `native_decide`.  The analytic
+Fourier/integral equality connecting concrete support mass to this closed
+Bernoulli interface remains an explicit paper-level boundary.
+
+## Concurrent mainline integration — witness rigidity, deep census, and owner survivors
+
+THM-949 and THM-950 materially sharpen the residual while this manifest is
+being assembled.  Inside `q<=14v`, a bad runner has an integer witness in
+`[1,v]`; simultaneous bad runners with speed ratio at least three inherit a
+factor-three witness ladder, so seven consecutive overlaps force a top witness
+at least `729` times the bottom one.  For `q<=7v`, a fixed witness supports at
+most one bad multiplier.  Consequently a windowed bottom runner injects the
+deep-multiplier set into a finite witness range.  The unconditional Lean theorem
+
+```text
+B5 >= liveCount - 792 * #{p : bandCount(p) >= 6}
+```
+
+replaces the former need for a global pointwise cap by an exact `792:1` census
+target.  The remaining composition problem is to combine this injection and
+ladder pinning with the nonlacunary dense-core strata strongly enough that live
+multipliers beat deep ones uniformly.
+
+THM-951 separately closes the proof plumbing for explicit capped rows:
+`CoverageCapped(6)` plus `deepSixCount<liveCount` now yields a lonely time
+end-to-end, and a finite `decide` example passes through the B5 funnel without
+direct witness search.  The dense-core relation endgame also consumes the
+unconditional weighted census certificate above, so the unresolved content is
+the live-versus-deep supply theorem, not another assembly interface.  On the
+scale side, `window_tail_glue` and `norm_glue` now compose any certified base
+window with a `7/3`-nested tail; only the cluster-gap base-window lemma remains
+to make that block cascade uniform.
+
+LEM-034 and LEM-035 independently refine the boundary side of the same state.
+Endpoint classes adjacent to a section have forced signs, while class-zero
+crossings of a `7m` owner have a co-lattice of simultaneous owners.  Genuine
+survivors can therefore be reassigned by the minimum-owner convention.  On
+`{1,...,6,7M}`, survivor columns reduce to multiplication permutations of
+`{1,...,6}` with explicit carry and boundary corrections.  The formalization
+interface must retain both the intrinsic surviving boundary and its attributed
+owner; either quotient alone loses information consumed by the signed comb
+ledger.

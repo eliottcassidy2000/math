@@ -1,8 +1,8 @@
 ---
 id: THM-948
-title: THE EXACT PACKET SUPPORT DECOMPOSITION AND SIGN AUDIT — exact rational Möbius masses and B5 identity on three packets; packet-level near-sharpness measured; universal positive association refuted by an infinite support-three family
-status: The subset-Möbius decomposition and the direct B5 identity are exact rational equalities on all three audited packets. Their aggregate absolute-vs-signed slack is 1.000–1.001 on those packets only. The proposed universal law M(A) >= 0 for |A| >= 3 is refuted at supports 3, 4, and 5; support 3 has a complete infinite modulo-28 counterfamily.
-source: kind-pasteur-2026-07-17-S128 cont.39; corrected by codex-S50/S52
+title: THE EXACT PACKET SUPPORT DECOMPOSITION AND SIGN AUDIT — exact rational Möbius masses and B5 identity on three packets; universal positive association refuted; the complete two-parameter doubling-triple Fourier law
+status: The subset-Möbius decomposition and the direct B5 identity are exact rational equalities on all three audited packets. Their aggregate absolute-vs-signed slack is 1.000–1.001 on those packets only. The proposed universal law M(A) >= 0 for |A| >= 3 is refuted at supports 3, 4, and 5. Support three has both the complete {1,2,N} modulo-28 family and the exact {a,2a,b} two-residue Fourier law, including its full zero locus and sign; the complete finite Bernoulli coefficient law and its arbitrary-residue lifts are Lean-checked, while the analytic Fourier/integral identification remains external.
+source: kind-pasteur-2026-07-17-S128 cont.39; corrected and strengthened by codex-S50/S52/S59
 depends_on:
   - THM-935 (the E_s identity this makes exactly computable)
   - THM-930 (depth-spectrum sweep, the direct side of the referee)
@@ -14,6 +14,9 @@ script:
   - 04-computation/exact_support_decomposition_kps_S128c39.py -> 05-knowledge/results/exact_support_decomposition_kps_S128c39.out
   - 04-computation/exact_support_sign_counterexample_codex_S50.py -> 05-knowledge/results/exact_support_sign_counterexample_codex_S50.out
   - 04-computation/exact_support_triple_sawtooth_codex_S51.py -> 05-knowledge/results/exact_support_triple_sawtooth_codex_S51.out
+  - 04-computation/exact_support_a2a_b_fourier_codex_S59.py -> 05-knowledge/results/exact_support_a2a_b_fourier_codex_S59.out
+  - 04-computation/lean/TournamentH7/TournamentH7/LRCExactDoublingTriple.lean
+formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCExactDoublingTriple.lean
 ---
 
 # THM-948 — exact packet support decomposition and sign audit
@@ -90,13 +93,84 @@ and half-integer-centered tooth discrepancy functions. An endpoint sweep through
 `N=2000` and an independent midpoint-cell engine through `N=300` referee the exact
 closed formula.
 
-## IV. Structural reading
+## IV. Complete doubling-triple Fourier law
+
+The one-parameter sawtooth is a slice of a two-parameter theorem.  Let `a,b`
+be positive with `{a,2a,b}` distinct, and put
+
+```text
+d=gcd(a,b),                 A=a/d, B=b/d.
+```
+
+There is an explicit integer table `C` on
+`(Z/14Z) x (Z/28Z)` such that
+
+```text
+M({a,2a,b})=C(A mod 14,B mod 28)/(686AB).               (1)
+```
+
+Its complete zero and sign laws are
+
+```text
+C=0  <=>  7|A or 14|B,
+sign C = centeredSign_14(A) * centeredSign_28(B)         (C != 0).
+```
+
+Thus the experimentally suggested implication `7|A => M=0` is true, but it
+has the additional and exact `14|B` branch; together they are the full
+converse.
+
+The proof is Fourier-exact.  For
+
+```text
+g(x)=1_{||x||<1/14}-1/7,       H(x)=g(x)g(2x),
+```
+
+the support mass is the third centered moment
+
+```text
+M({A,2A,B})=integral H(At)g(Bt)dt
+            =sum_(k!=0) Hhat(Bk) ghat(Ak),
+```
+
+because `(A,B)=1`.  The coefficients are
+
+```text
+ghat(n)=sin(pi n/7)/(pi n),
+Hhat(n)=[sin(pi n/14)-(1/7)sin(pi n/7)
+         -(2/7)1_{2|n}sin(pi n/14)]/(pi n).
+```
+
+The absolutely convergent sine-pair series reduces by the periodic Bernoulli
+`B2` identity to (1).  Exact rational evaluation of all `14*28` residue cells
+proves the zero/sign statement.  Independent referees compare the closed form
+with 5,028 endpoint-sweep triples, every two- and three-face midpoint cell in
+267 further triples, and 54 common dilations.
+
+`TournamentH7.LRCExactDoublingTriple` formalizes the denominator-cleared
+Bernoulli side.  A single finite audit proves all `392` cells integral, their
+zero/sign laws and both residue reflections; subsequent theorems lift these to
+arbitrary natural residues, prove `C(A,B)=0` exactly when `7|A or 14|B`, and
+recover the infinite negative `15 mod 28` family at the closed-form interface.
+It is sorry-free, avoids `native_decide`, and audits to the standard
+foundational trio.  Its scope deliberately begins after the analytic identity
+between the concrete support mass and the Bernoulli expression.
+
+For B5 this is a genuine relation-tail simplification: every support-three
+term containing a doubling pair has an exactly known sign or vanishes on the
+two divisor hyperplanes.  It is not a universal positivity theorem; outside
+the zero locus half of the centered residue quadrants are negative.
+
+## V. Structural reading
 
 The sign-bearing datum first appears on supports of size three. Pair mass is
 symmetric, so orienting it by runner labels creates an arbitrary tournament and
-destroys the Möbius sign. The faithful quotient is a signed support hypergraph
-decorated, in the `{1,2,N}` family, by the cyclic 28-residue boundary walk. Its
-antipodal involution `r -> 28-r` reverses the mass sign.
+destroys the Möbius sign. The faithful quotient is a signed support hypergraph.
+In the `{1,2,N}` family it carries the cyclic 28-residue boundary walk; on the
+full doubling locus it carries the Fourier cell `(A mod 14,B mod 28)` and the
+intersection of the frequency lattices `A*Z` and `B*Z`.  Its antipodal residue
+involutions reverse the mass sign, while the Fourier zero divisors give the two
+exact vanishing branches.
 
 For the opus-30Z packet the exact autopsy remains useful: the leading fees come
 from the Schur triple `{420,450,870}` and the AP clusters `{450,510,570}` and

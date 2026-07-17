@@ -1,0 +1,78 @@
+LRC14 q<=25 ZERO-FREE SATURATED-DECK AUDIT -- exact certificate
+source=codex-S58
+S0=(43, 55, 61, 70, 73, 79, 83, 99, 103, 104, 109, 113, 156)
+primitive=True covering=True all_speeds_above_14=True
+diameter=113 ratio=156/43 < 4
+covering_owners=((2, (70, 104, 156)), (3, (99, 156)), (4, (104, 156)), (5, (55, 70)), (6, (156,)), (7, (70,)), (8, (104,)), (9, (99,)), (10, (70,)), (11, (55, 99)), (12, (156,)), (13, (104, 156)), (14, (70,)))
+q15_25_zero_free_complete_decks:
+  q=15 cards=(1, 2, 4, 7) zeros=() unit_count=9 owner_multiplicities=(3, 2, 2, 2) collision_excess=5 full_deck_threshold=5 good_multipliers=()
+  q=16 cards=(1, 3, 5, 7) zeros=() unit_count=10 owner_multiplicities=(4, 3, 2, 1) collision_excess=6 full_deck_threshold=6 good_multipliers=()
+  q=17 cards=(1, 2, 3, 4, 5, 6, 7, 8) zeros=() unit_count=13 owner_multiplicities=(3, 2, 2, 2, 1, 1, 1, 1) collision_excess=5 full_deck_threshold=5 good_multipliers=()
+  q=18 cards=(1, 5, 7) zeros=() unit_count=9 owner_multiplicities=(4, 3, 2) collision_excess=6 full_deck_threshold=6 good_multipliers=()
+  q=19 cards=(1, 2, 3, 4, 5, 6, 7, 8, 9) zeros=() unit_count=13 owner_multiplicities=(3, 2, 2, 1, 1, 1, 1, 1, 1) collision_excess=4 full_deck_threshold=4 good_multipliers=()
+  q=20 cards=(1, 3, 7, 9) zeros=() unit_count=9 owner_multiplicities=(3, 3, 2, 1) collision_excess=5 full_deck_threshold=5 good_multipliers=()
+  q=21 cards=(1, 2, 4, 5, 8, 10) zeros=() unit_count=10 owner_multiplicities=(3, 2, 2, 1, 1, 1) collision_excess=4 full_deck_threshold=4 good_multipliers=()
+  q=22 cards=(1, 3, 5, 7, 9) zeros=() unit_count=8 owner_multiplicities=(2, 2, 2, 1, 1) collision_excess=3 full_deck_threshold=3 good_multipliers=()
+  q=23 cards=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) zeros=() unit_count=13 owner_multiplicities=(2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1) collision_excess=2 full_deck_threshold=2 good_multipliers=()
+  q=24 cards=(1, 5, 7, 11) zeros=() unit_count=9 owner_multiplicities=(4, 3, 1, 1) collision_excess=5 full_deck_threshold=5 good_multipliers=()
+  q=25 cards=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) zeros=() unit_count=11 owner_multiplicities=(2, 1, 1, 1, 1, 1, 1, 1, 1, 1) collision_excess=1 full_deck_threshold=1 good_multipliers=()
+prime_collision_thresholds_sharp: q17=5 q19=4 q23=2 (witness iff strict excess)
+residue_blind_positive_repair: zero-free q with unit_count < phi(q)/2 implies a q-witness
+private_signed_cards (every runner is deletion-critical):
+  speed=43 private=((16, 5), (17, 8), (23, 3), (24, 5), (25, 7))
+  speed=55 private=((17, 4), (19, 2))
+  speed=61 private=((23, 8), (25, 11))
+  speed=70 private=((19, 6), (23, 1))
+  speed=73 private=((17, 5), (21, 10), (23, 4), (24, 1), (25, 2))
+  speed=79 private=((21, 5), (22, 9), (23, 10))
+  speed=83 private=((19, 7), (25, 8))
+  speed=99 private=((23, 7), (25, 1))
+  speed=103 private=((17, 1), (19, 8), (25, 3))
+  speed=104 private=((19, 9),)
+  speed=109 private=((20, 9), (21, 4), (23, 6), (25, 9))
+  speed=113 private=((19, 1), (22, 3), (23, 2), (25, 12))
+  speed=156 private=((23, 5), (25, 6))
+deletion_witness_circuit=(removed_speed,q,a,12_speed_clearance,reattached_private_card):
+  ((43, 16, 13, Fraction(1, 8), 5), (55, 17, 13, Fraction(2, 17), 4), (61, 23, 3, Fraction(2, 23), 8), (70, 19, 16, Fraction(2, 19), 6), (73, 17, 7, Fraction(2, 17), 5), (79, 21, 17, Fraction(2, 21), 5), (83, 19, 11, Fraction(2, 19), 7), (99, 23, 10, Fraction(2, 23), 7), (103, 17, 1, Fraction(2, 17), 1), (104, 19, 17, Fraction(2, 19), 9), (109, 20, 9, Fraction(3, 20), 9), (113, 19, 1, Fraction(2, 19), 1), (156, 23, 14, Fraction(2, 23), 5))
+  every deletion is strictly above the 1/13 twelve-speed threshold, while reattachment blocks it at signed distance 1
+first_rational_witness=(27, 2, Fraction(2, 27))
+M_exact=43/199 at t=1/199 and 198/199
+prime_packet_counts_ge2=((2, 3), (3, 2), (5, 2), (11, 2), (13, 2))
+max_common_prime_packet=3 (sharp under covering + q15_25 zero-free)
+sharpness_reason=owners of 8,12,10 are distinct: lcm(8,12)=24, lcm(8,10)=40 is 20-divisible, lcm(12,10)=60 is 15-divisible
+leave_one_out_gcds=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+longest_arithmetic_progression=(43, 61, 79) length=3
+S312_exact_band_residual=True
+leave_component_vector=(180, 180, 176, 174, 176, 178, 176, 176, 174, 170, 174, 174, 160)
+weakest_22_over_7_certificate=removed:156 r-(22/7)w|G|:772736564603330753479/8195092871425309185 > 0
+translation_orbit:
+  L=lcm(2,...,25)=26771144400
+  S_k=S0+kL preserves every residue/covering/deck obligation through q=25
+  primitive_for_all_k=True because gcd(70-43,83-43)=gcd(27,40)=1
+  diameter_for_all_k=113
+  ratio=(156+kL)/(43+kL) -> 1
+  explicit_clearance=(43+kL)/(199+2kL) at t=1/(199+2kL) -> 1/2
+  no_four_common_prime_packet_certificate=nontrivial_difference_gcd_quads:246/715 gcd_hist:{2: 155, 3: 34, 4: 15, 5: 1, 6: 34, 9: 1, 10: 5, 12: 1}
+  every_nontrivial_quad_gcd_has_only_2,3,5_factors_and_nonzero_common_residue
+  max_common_prime_packet_for_all_k=3
+  sample_k=0 min=43 max=156 ratio=156/43 explicit_clearance=43/199
+  sample_k=1 min=26771144443 max=26771144556 ratio=26771144556/26771144443 explicit_clearance=26771144443/53542288999
+  sample_k=10 min=267711444043 max=267711444156 ratio=267711444156/267711444043 explicit_clearance=267711444043/535422888199
+TOURNAMENT ANALYSIS (lossy telemetry)
+  vertices=runners; exact carrier=runner x (signed-card or covering-obligation) incidence hypergraph
+  alternatives_considered=moduli,signed_cards,zero_events,gaps,fixed_sections,section_boundaries,wall_events,residues,cover_arcs,Fourier_modes,matroid_circuits,proof_obligations
+  pairwise_observable=lexicographic role dominance
+  switch/gauges=deck-private-first -> small-divisor-covering-first
+  tie_Hamiltonian_path=43->55->61->70->73->79->83->99->103->104->109->113->156
+  preserved=ranked private-card/unit-incidence/covering counts
+  destroyed=which card is owned, cross-q compatibility, metric clearance, and higher-denominator behavior
+  deck-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} directed_3cycles=0 SCCs=((43,), (55,), (61,), (70,), (73,), (79,), (83,), (99,), (103,), (104,), (109,), (113,), (156,)) Hamiltonian_paths=1 Hamiltonian_path=(43, 73, 109, 113, 79, 103, 61, 83, 55, 99, 156, 70, 104)
+  covering-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} directed_3cycles=0 SCCs=((43,), (55,), (61,), (70,), (73,), (79,), (83,), (99,), (103,), (104,), (109,), (113,), (156,)) Hamiltonian_paths=1 Hamiltonian_path=(156, 70, 104, 99, 55, 43, 73, 109, 113, 79, 103, 61, 83)
+  edge_flips=47/78
+  verdict=the bipartite incidence code carries q<=25; its translation orbit proves the tournament cannot carry metric truth
+FINAL VERDICT
+zero_owner_exclusion_repairs_q25=False
+primitive_or_covering_or_ratio_or_bounded_diameter_or_small_prime_packet_repairs_q25=False
+coherent_sheet_exclusion_repairs_q25=False
+near_tightness_note={1,...,12,182} already has M=14/183 and first witness 2/27
+strongest_correct_replacement=zero-owner plus collision-surplus/signed-deck criterion, not a raw structural scalar

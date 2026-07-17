@@ -6,6 +6,176 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
+## Addendum 2026-07-17: the constraint-state fibration and the false runner-vertex default
+
+The latest exact corrections make the common object more concrete.  A useful
+LRC14 proof state is not merely a speed set and is not naturally a tournament
+on thirteen runners.  It is the operation-indexed packet
+
+```text
+S=(E,V,G,P,R,O),
+```
+
+where `E` is the literal union of surviving safe components, `V` is the
+remaining labelled danger-comb bank, `G` is the ordered quantitative scale-gap
+chain, `P` is the residue/phase/ramification fibre, `R` is the signed small-
+support relation ledger, and `O` is the joint proof-obligation incidence
+hypergraph.  Legal operations include insertion of a labelled comb, common
+dilation, sign and permutation transport, quotienting a common sheet, and
+selection of a period or phase row.  Two packets may be identified only after
+proving continuation equivalence for the operations still legal.  The target
+predicate is that some legal continuation or selected phase leaves a point of
+`E`; at a terminal insertion state it is simply `E` nonempty.
+
+This is a **constraint-state fibration** as a research description, not a new
+formal category claim: projective scale and denominator regime form the base,
+while interval geometry, residue sheets, and signed relation data are fibres
+that change under the allowed operations.  It sharpens the earlier packet-
+sheaf language by naming the minimum sidecars repeatedly forced back into the
+proof after a quotient failed.
+
+The main historical lenses are now comparable without pretending that one
+scalar invariant contains the others:
+
+| lens | exact information preserved | information destroyed if used alone |
+|---|---|---|
+| literal circle components | endpoint order, width, owner, exact tooth containment | projective scale and arithmetic reason for repeated components |
+| modulus / denominator deck | zero owners, unit classes, sheet order, divisor gates | interval width, simultaneous component ownership, affine phase |
+| q333 / q244 affine rows | branch residues, individual danger walls, signed frequency identity | higher-support overlap and global component geometry |
+| Möbius support / Fourier tails | exact signed support masses and resonance circuits | location of a lonely witness and component ancestry |
+| nested scale gaps | adjacent ratios, nested safe widths, sign/permutation transport | dense-core residue structure and support cancellation |
+| Hamming insertion recursion | the full continuation language and terminal cover verdict | a short human proof unless a decreasing state invariant is extracted |
+| pole-window / singular-series analysis | near-resonance location, coefficient height, tail scale | which literal component or multiplier obligation supplies the witness |
+| runner tournament | a chosen pair order or conflict telemetry | scale, widths, multiplier identity, joint blockers, and first sign-bearing support data |
+
+Eight recent results force this six-field packet rather than merely suggest it.
+
+1. Exact support mass is signed.  In particular
+   `M({1,2,N})=k[N mod 28]/(686N)` changes sign across the residue circle.
+   More generally `M({a,2a,b})` is an exact function of
+   `(a/gcd(a,b) mod14,b/gcd(a,b) mod28)` and vanishes precisely on two divisor
+   hyperplanes.
+   Pair mass is symmetric, so no runner-pair gauge can recover the first
+   sign-bearing datum; it lives on support-three hyperedges in `R`.
+2. A clean relation modulus and a coverage-capped modulus are different
+   rulers.  At a clean modulus multiplier one is bad for all thirteen speeds,
+   while a usable cap-six modulus forces at most six speeds below its scale.
+   The multiplier--bad-arc incidence belongs to `O`; collapsing the two
+   moduli destroys the quantifier needed by either theorem.
+3. The complete `7/3`-lacunary branch is driven by the twelve adjacent ratios
+   and their nested interval widths.  Sorting runners gives an order, but its
+   tournament forgets the numerical threshold.  The residual certificate must
+   explicitly retain `not SevenThreeLacunary` in `G`.
+4. The zero-free saturated `q<=25` obstruction is irredundant across moduli:
+   every runner privately owns a signed card, and deleting it exposes a strict
+   witness that reattachment blocks.  Translating all speeds by the common
+   period keeps this code while metric clearance tends to `1/2`.  Thus `O`
+   must retain runner--card--modulus incidence; neither a scalar coherence
+   profile nor a runner tournament preserves the obstruction.
+5. The completed scale-three and scale-four Hamming-six recursions close
+   `950,540,566` and `166,976,181` candidate edges only by retaining `(E,V)`
+   and shortcut ancestry.  At scale three all ray-order tournaments are
+   transitive, yet only the literal state distinguishes `929,966,716` dead
+   certificates from two nonempty terminals.  At scale four, the exact sheet
+   carrier contracts to a directed `C6`, two signed triangles, and a zero
+   perfect matching, but its completed tournament forgets precisely that edge
+   colouring and the four-word affine unit fibre.  Both metric banks close
+   only after restoring the literal component/ray state.
+6. The q-window and witness-ladder theorem turns simultaneous bad runners into
+   a positive integer witness vector: a factor-three speed ladder forces the
+   same factor-three ladder in its witnesses, so seven overlaps force the top
+   witness above `729`.  The speed gaps in `G` and multiplier obligations in
+   `O` are therefore coupled; neither coordinate alone sees the rigidity.
+7. The deep-count census gives an unconditional potential
+   `B5 >= liveCount - 792*deepCount`, where deep means coverage at least six.
+   A windowed bottom runner injects deep multipliers into its finite witness
+   range.  This is the first coercive two-coordinate candidate resembling the
+   missing operation-monotone potential: prove `liveCount>792*deepCount`, rather
+   than impose a pointwise coverage cap.  THM-951 already composes the capped
+   census end-to-end into a lonely-runner certificate on explicit families,
+   while the dense-core capstone consumes the unconditional weighted form.
+8. Boundary-owner sign and survivor laws show why attribution is part of the
+   state.  Class-adjacent endpoints have forced signs, but a genuine survivor
+   may be credited to a smaller co-lattice owner; on `{1,...,6,7M}` the survivor
+   columns are multiplication-permutation orbits with carry corrections.  A
+   quotient preserving only the union `E` loses the signed owner ledger, while
+   a quotient preserving only owner counts loses the intrinsic survivors.
+
+### Tournament Analysis after challenging the vertex set
+
+The challenged assumption is that tournament vertices should be runners or
+arcs.  Several other vertex sets are legitimate, but only for a named
+predicate and with a named sidecar:
+
+| vertices | pairwise observable and gauge | what it can preserve | indispensable sidecar |
+|---|---|---|---|
+| adjacent scale gaps | which ratio is larger; orient toward the larger log-gap | lacunary bottlenecks and a maximum-gap Hamiltonian ordering | actual ratios and nested widths |
+| safe components | earlier endpoint or larger escape margin | handoff order and candidate owner flow | both endpoints, widths, and labelled comb incidence |
+| multiplier obligations `(q,a)` | overlap or conflict of bad-runner sets; orient by asymmetric remainder | cap pressure and possible witness priority | joint blocker hyperedges and the modulus label |
+| residue/phase rows | signed frequency or wall slack; orient toward positive slack | q333/q244 branch flow | affine offsets and zero-frequency relation flag |
+| support circuits | inclusion or coefficient-height priority | relation elimination order | signed hyperedge mass; pair edges alone are insufficient |
+| pole windows / Fourier modes | containment or distance to a resonance pole | tail-elimination order | coefficient, denominator, and puncture width |
+| insertion obligations | which action leaves the longer residual | a heuristic decision order | literal action state `(E,V)` and future-operation bank |
+
+Ties in any such gauge may be broken by a deterministic label order to obtain a
+Hamiltonian path for telemetry, but that path is not a proof certificate unless
+continuation equivalence is separately established.  Existing fingerprints
+reinforce the warning: several shell, flood, and order gauges are transitive
+with singleton SCCs and one Hamiltonian path while exact cover verdicts differ;
+the scale-three sheet action has only 68 sheet orbits but 1,504 arithmetically
+distinct metric contexts.  Conversely, weighted cusp and owner graphs can
+carry useful directed cycles, but are digraphs or hypergraphs rather than
+tournaments.  Score histograms, cycle counts, SCCs, edge flips, and Hamiltonian-
+path counts should therefore be reported as quotient diagnostics, never as an
+unlabelled replacement for `S`.
+
+### What the current frontier is actually missing
+
+The unresolved proof is now a compatibility problem between fibres, not a
+search for one more universal scalar:
+
+- q333 leaves the nonzero integer band `0<|F|<11B`; q244 leaves a bounded
+  three-speed signed sum, including a genuine zero-relation branch;
+- the B5 route now has the exact supplier inequality
+  `B5 >= liveCount-792*deepCount`; it still needs a uniform or stratum-wise
+  proof that live multipliers beat the pinned deep census by `792:1`, compatible
+  with signed support masses and the distinct clean/coverage moduli;
+- nested single-runner gaps and the rational window-plus-lacunary-tail glue are
+  formalized; the missing block-cascade input is now the cluster-gap base-window
+  lemma and its uniform dense-core supply, not the gluing operation itself;
+- the primitive `n=12` sporadic problem is finite and ramification-stratified,
+  but its scale-five and higher AP-centred metric languages, finite H5 bank,
+  and non-AP-centred/deep-sheet continuations must be closed
+  or replaced by a uniform decreasing invariant;
+- the final nonlacunary dense core needs a theorem that composes its component,
+  phase, support, and scale certificates without dropping their labels.
+
+The strongest plausible next invariant is therefore an **operation-monotone
+obligation potential** on `(E,V,G,P,R,O)`: it must decrease under every legal
+insertion or else produce a witness/relation exit, and equality must force one
+of the already classified AP or sheet packets.  Component overlap debt,
+signed support mass, affine wall slack, and scale-gap width are candidate
+coordinates of that potential.  None is monotone alone; the missing theorem is
+the coercive coupling among them.
+
+Packet fields to add where available:
+
+```text
+constraint_state_fibration
+literal_safe_component_union
+remaining_labelled_comb_bank
+quantitative_scale_gap_chain
+residue_phase_ramification_fibre
+signed_support_relation_ledger
+joint_proof_obligation_hypergraph
+legal_operation_bank
+continuation_equivalence_scope
+alternate_tournament_vertex_set
+pairwise_observable_and_gauge
+tournament_destroyed_payload
+operation_monotone_obligation_potential
+```
+
 ## Addendum 2026-07-15: ramified component-cover sheaf / Kakeya-comb lens
 
 The Hamming-five ramification theorem and the complete scale-one Hamming-six
@@ -380,7 +550,7 @@ positive-open residual
 
 | Lens family | What it preserves | What it destroys or hides | Required sidecar / repair | What it points at |
 |---|---|---|---|---|
-| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 jointly optimizes all 63 relative cuts, excludes every arithmetic row at scales 1,120, 1,008, and 882 by scalar owner capacity, bounds primitive proper AP-centred H6 by `c<=840`, and gives a finite tree for each language; THM-861 solves the complete `c=2` fibre with unique AP cover `[12]`; THM-862 classifies the `c=3` sheet stalk into 68 affine matching-code templates and exactly evaluates `146,912`/`14,992,263` first/second edges. Geometry caches them to `22,262`/`4,307,561` keys, but only one second-layer lane dies and all labelled future languages must survive. A bounded depth-three raw/batch prototype agrees on 1,685,358 lanes with 1.599x CPU speedup; THM-858 bounds the finite H5 ramification base |
+| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 jointly optimizes all 63 relative cuts, excludes every arithmetic row at scales 1,120, 1,008, and 882 by scalar owner capacity, bounds primitive proper AP-centred H6 by `c<=840`, and gives a finite tree for each language; THM-861 solves the complete `c=2` fibre with unique AP cover `[12]`; THM-862 closes all 1,504 `c=3` contexts in a `950,540,566`-edge exact terminal recursion; THM-952 closes all 256 `c=4` contexts in a `166,976,181`-edge recursion after contracting the sheet carrier to a directed cycle plus affine two-triangle code. THM-858 bounds the finite H5 ramification base; the next common-scale H6 face is `c=5` |
 | Labelled packet / reduction lens | theorem route, exact packet identity, AP/GW boundary atoms, C27/K33/covering family | local topology and certificate economy if scalarized | route label, exact `M`, qdiv, packet family, residual sector | packet sheaf base |
 | Equivalence triad lens | count shadow, retained scissors/fiber data, observer-cut orbit, limiting distribution law, first failed interaction order | proof predicate if equinumerosity, equidecomposability, or equidistribution is used alone | `cardinal_shadow`, `scissors_fiber`, `observer_cut_orbit`, `distribution_law`, `interaction_order_defect`, `residual_debt_name` | forgetting-cost invariant |
 | Tournament / metagraph / observer lens | pairwise comparator, wall-crossing relation, marked source/phase order | thresholds, endpoints, scale, family route if vertices are raw runners | marked vertices, retained observable, tie Hamiltonian path, lost-coordinate ledger | relation walk over packet base |

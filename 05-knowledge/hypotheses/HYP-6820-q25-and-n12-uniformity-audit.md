@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite and sheet-stratified, with the full AP-centred Hamming-one through Hamming-four stars, the proper scale-one Hamming-five chart, every effective-order-at-most-21 common-sheet H5 survivor language reduced to the already closed all-one/all-three/mixed lifts, the entire proper scale-one Hamming-six chart plus all common dilations closed except for the doubled-AP equality family `2c[12]`, and the first ramified face `c=2` closed except for its ordinary-AP equality presentation `[12]`; the remaining common-sheet H5 presentation bank is finite with `min D_i<=21<max D_i<=10,584`, is {2,3,7}-smooth, and has no private prime power; effective order is the exact H6 ramification degree, THM-860 makes the entire primitive proper AP-centred H6 ramified branch finite-decidable with `2<=c<=840`, and THM-862 evaluates the complete `c=3` metric prefix through depth two (`146,912` then `14,992,263` edges, exactly one dead); the operation boundary is exact—literal endpoints are Markov for monotone insertion, while H0/H1 are not and endpoints alone fail deletion; the two-sheet branch has exact sum-arc, target-switch, and thin owner-shell carriers, with the first shell-five congruence class excluded and both the universal single-column endpoint-grid template and every fixed two-column unit endpoint family refuted in the relaxed model for the other three; global emptiness remains OPEN in the finite smooth-ramified H5 bank and its metric languages, the primitive H6 terminal trees at `c>=3`, radius-seven endpoint/third-moment and correlated AP-window residuals, uniform radius/sum-arc exclusion, lift-dependent `s=5` deep-shell certificates, dyadic/collar residuals, and higher sheets
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, now even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified. The full AP-centred Hamming-one through Hamming-four stars, proper scale-one Hamming-five chart, and every effective-order-at-most-21 common-sheet H5 language are closed. The unramified Hamming-six chart and common dilations leave only the doubled-AP equalities; the first ramified face c=2 leaves only the ordinary AP; every primitive proper AP-centred c=3 and c=4 Hamming-six context is now closed with no equality exception. THM-862's c=3 recursion visits 950,540,566 candidate edges over 1,504 contexts, while THM-952's c=4 recursion visits 166,976,181 candidate edges over 256 contexts; both are complete, exact, and find zero covering terminals. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584; THM-860 makes primitive proper AP-centred H6 finite-decidable for 2<=c<=840. Global emptiness remains OPEN at c>=5, in the smooth-ramified H5 metric bank, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
@@ -17,11 +17,17 @@ progress_note: >-
   AP [12], so every sporadic c=2 packet is loose. THM-862 classifies the next
   `c=3` common-sheet stalk into 212 presentations and 1,504 arithmetic
   contexts, whose unit fibres are affine matching codes. Its 68 sheet orbits
-  are not metric quotients. Its exact first two layers have 146,912 and
-  14,992,263 edges, cached by 22,262 and 4,307,561 literal geometries; exactly
-  one second-layer lane is cap-dead. A bounded depth-three raw/batch prototype
-  matches 1,685,358 logical lanes and reduces CPU by 1.599x on an eight-context
-  root block, but the terminal recursion remains open.
+  are not metric quotients. Its exact terminal recursion has depth vector
+  1,504;146,912;14,992,263;931,412,556;3,984,352;4,481;2 and
+  950,540,566 candidate edges. It finds zero covering terminals and two
+  certified nonempty terminals, so every primitive proper AP-centred c=3 H6
+  packet is strictly loose. Literal components and every labelled arithmetic
+  lane are retained; the numerical ray tournament is telemetry only.
+  THM-952 classifies the c=4 sheet stalk into 64 directed-cycle supports and
+  256 affine two-triangle unit contexts. Its complete exact terminal recursion
+  visits 166,976,181 candidate edges and is cap-dead by depth five, with zero
+  covering terminals. Thus the primitive proper AP-centred c=4 H6 face is
+  also empty; the next unevaluated common-scale face is c=5.
   THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
@@ -77,6 +83,7 @@ depends_on:
   - THM-860
   - THM-861
   - THM-862
+  - THM-952
   - HYP-6750
   - HYP-6775
 related:
@@ -100,6 +107,7 @@ related:
   - THM-860
   - THM-861
   - THM-862
+  - THM-952
   - MISTAKE-143
 ---
 
@@ -142,6 +150,44 @@ The second has no prime common to seven speeds, every leave-one-out gcd is one,
 and exact `M=101/470`; coherence or near-tightness therefore cannot rescue the
 claim.  Both pass the rational analogue of S312's band-residual predicate.
 MISTAKE-143 corrects the universal wording.
+
+The stronger zero-free saturated-deck row
+
+```text
+S0={43,55,61,70,73,79,83,99,103,104,109,113,156}
+```
+
+removes the main tempting repairs simultaneously.  Every denominator
+`15,...,25` is zero-free and has a complete signed deck; nevertheless `S0` is
+primitive and covering, has diameter `113`, ratio below four, all deletion
+gcds one, maximum common-prime packet three, and exact `M=43/199`, with first
+rational witness `2/27`.  It passes the exact S312 band-residual predicate and
+every runner has a private signed card.  Each deletion exposes a rational
+witness with twelve-speed clearance strictly above `1/13`, while reattachment
+blocks it at signed distance one.  For
+
+```text
+L=lcm(2,...,25),             S_k=S0+kL,
+```
+
+the whole obstruction through denominator 25, primitivity, diameter, and
+packet cap persist for every `k>=0`, while the ratio tends to one and the
+clearance at `1/(199+2kL)` tends to `1/2`.  Hence zero-owner exclusion,
+coherence, bounded diameter/ratio, gcd incoherence, and near-tightness cannot
+turn the failed observation into a theorem.
+
+There is, however, an exact positive replacement inside each zero-free deck.
+Put
+
+```text
+N_q=#{s:gcd(s,q)=1},        C_q=N_q-|B_q(S)|,
+h_q=phi(q)/2.
+```
+
+For a covering row and `15<=q<=28`, a `q`-witness exists exactly when
+`C_q>N_q-h_q`.  In particular `N_q<h_q` is a residue-blind sufficient
+condition.  The strict collision threshold is sharp for `S0` at the primes
+`17,19,23`, where equality holds with surpluses `5,4,2`.
 
 The historical banks now have exact scope:
 
@@ -961,18 +1007,40 @@ signed-doubling Hamiltonian-cycle contexts. THM-861 evaluates their complete
 unbounded step-26 metric trees in `41,882,982` logical nodes. The unique cover
 replaces labels `7,...,12` by `1,3,...,11`, producing exactly `[12]`; every
 sporadic `c=2` packet is loose. Thus “arbitrary-scale H6 transport” has become
-“evaluate the finite primitive H6 metric context bank at `c>=3`,” beginning
-with the THM-862 scale-three bank.  At `c=3`, the complete exact prefix has
-`146,912` first edges and `14,992,263` second edges.  A literal cache reduces
-those layers to `22,262` and `4,307,561` geometries, but only one depth-two
-lane is cap-dead and the other `14,992,262` reach depth three.  This proves
-that sheet classification alone does not create early metric collapse and
-makes third-child geometry batching the next computation.
+“evaluate the finite primitive H6 metric context bank at `c>=3`.”  THM-862 now
+closes the first such bank.  At `c=3`, its complete exact terminal recursion
+has node vector
 
-The first bounded implementation of that batching now agrees with raw
-evaluation on 1,685,358 depth-three lanes and literal endpoint crosschecks;
-it is an execution result, not a terminal census.  Complete retained-root
-blocks remain to be sharded.
+```text
+1,504;146,912;14,992,263;931,412,556;3,984,352;4,481;2
+```
+
+and `950,540,566` candidate edges.  There are zero covering terminals; the two
+depth-six terminals, contexts `888` and `1502`, are exactly certified nonempty.
+Therefore every primitive proper AP-centred common-scale-three Hamming-six
+packet in the necessary common-sheet bank has `M>1/13`.  The computation has
+no height cutoff and retains every labelled step-39 ray language.  A sharded
+combiner checks all 1,504 indices, row accounting, frozen hashes, and the exact
+stratum totals; ungated terminal replays referee the two nonempty leaves.
+
+THM-952 closes the next bank as well.  At `c=4`, exact common-sheet exhaustion
+rejects every mixed effective-order word and leaves 64 all-order-four label
+supports with four unit words each.  Their faithful edge-coloured carrier is
+a directed provider `C6`, two variable `K3` components carrying an affine
+rank-four parity code, and a zero `3K2` matching.  The resulting 256 labelled
+step-52 contexts have complete node vector
+
+```text
+256;25,132;2,577,024;163,876,444;496,938;643;0
+```
+
+and `166,976,181` candidate edges.  Every branch is cap-dead by depth five,
+so there are zero covering terminals and no height cutoff.  The combiner
+checks four contiguous shards, every row and frozen hash, and the tree identity;
+an ungated replay of context 255 agrees on its proof counts and verdict but is
+not represented as a full ungated-bank audit.  Therefore every primitive
+proper AP-centred common-scale-four Hamming-six packet has `M>1/13`.  The next
+AP-centred H6 metric bank begins at `c=5`.
 
 ## D. The two-sheet branch is now a folded dyadic cover
 
@@ -1436,8 +1504,9 @@ dilation and proves that the scale quotient fails precisely at effective order
 THM-860 then bounds every primitive proper AP-centred ramified scale by `840`
 and transports each order/unit language to a finite exact component tree.
 THM-861 closes its `c=2` face: the only cover is the ordinary AP `[12]`.
-No proper primitive or mixed-parity unramified H6 chamber remains; the finite
-ramified metric context bank at `c>=3` is open, and the discrepancy deficit is lost at seven. Arbitrary
+No proper primitive or mixed-parity unramified H6 chamber remains; THM-862 and
+THM-952 close the complete common-scale-three and common-scale-four H6 faces.
+The finite ramified metric context bank at `c>=5` is open, and the discrepancy deficit is lost at seven. Arbitrary
 higher-radius decks and the remaining deep sheet packets are still
 unclassified.
 
@@ -1528,9 +1597,14 @@ deciding objects are therefore:
   bank is finite. THM-861 then evaluates the complete `c=2` fibre and finds
   only the ordinary AP `[12]`; its sparse signed cycle routes sheet parity but
   cannot replace the literal component/ray state that decides coverage.
-  THM-862 evaluates the complete `c=3` prefix through two insertions; its
-  `14,992,263` second edges have one dead lane and `4,307,561` cache geometries,
-  but no terminal verdict. The
+  THM-862 evaluates the complete `c=3` terminal language: `950,540,566`
+  candidate edges over all `1,504` contexts, zero covering terminals, and two
+  exactly nonempty depth-six terminals.  This closes the primitive proper
+  AP-centred H6 face at scale three while preserving literal components and
+  every remaining labelled ray. THM-952 then classifies the `c=4` sheet fibre
+  as a directed six-cycle plus two signed triangles, and its complete
+  `166,976,181`-edge recursion closes all 256 contexts with zero covers;
+  `c>=5` remains open. The
   earlier oriented AP cusps and weighted handoff cycles remain explanatory
   local vertices, but their intermediate 909-row frontier and eventual
   903-row plus exceptional-root residual were quotient artefacts rather than

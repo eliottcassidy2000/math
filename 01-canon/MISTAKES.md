@@ -29,10 +29,15 @@ valid exact computations; near-sharpness is a property of those packets.  A
 universal argument must retain signed higher-support information.  Pair masses are
 symmetric, so the faithful combinatorial object is a signed support hypergraph (with
 a cyclic 28-residue boundary walk in the explicit family), not a runner tournament.
+On the full doubling locus, after `d=gcd(a,b)`, `A=a/d`, `B=b/d`, the corrected
+law is
+`M({a,2a,b})=C(A mod14,B mod28)/(686AB)`: it vanishes exactly when `7|A` or
+`14|B`, and otherwise its sign is the product of the two centered residue
+signs.  This supplies exact signed structure, not positivity.
 
 **Impact:** THM-948 retains the exact packet data but removes the universal law.
 HYP-7195 is refuted in its positive-association form.  No Lean theorem was affected.
-Source: codex-S50/S52, 2026-07-17.
+Source: codex-S50/S52/S59, 2026-07-17.
 
 ## MISTAKE-156 -- a logarithm-free two-pole convolution estimate was promoted to `T3/T4/T5` tail bounds and universal B5 exhaustion
 
@@ -568,7 +573,7 @@ it), MISTAKE-033.
 - **Source:** codex-2026-07-14-S3; THM-765 computational audit;
   `lrc13_n12_tight_census_codex_S3.cpp` and stored output.
 
-## MISTAKE-143 — the sampled `q<=25` good-period observation was promoted to a uniform band-residual dichotomy; exact residuals and 91 rows of the historical S105 bank refute it (codex-2026-07-14-S3)
+## MISTAKE-143 — the sampled `q<=25` good-period observation was promoted to a uniform band-residual dichotomy; exact residuals, a zero-free saturated-deck orbit, and 91 rows of the historical S105 bank refute it (codex-2026-07-14-S3; strengthened codex-S58)
 
 - **What was claimed:** S312's commentary changed `120/120` randomly generated
   rows into “every band-residual family is loose, hence has a good period” with
@@ -584,12 +589,24 @@ it), MISTAKE-033.
   `26*{1,...,12} union {339}` first witnesses at `2/27`.  Independently, exact
   replay of S105's own capped interval-core generator finds `91/8260` rows
   whose least witness denominator exceeds 25 (maximum 38).
+- **Stronger obstruction:**
+  `S0={43,55,61,70,73,79,83,99,103,104,109,113,156}` is zero-free and has a
+  complete signed deck at every `q=15,...,25`, although it is primitive,
+  covering, has diameter `113`, ratio below four, all deletion gcds one,
+  maximum common-prime packet three, and exact `M=43/199`.  Translating every
+  speed by `k*lcm(2,...,25)` preserves the entire bounded-period obstruction,
+  primitivity, diameter, and packet cap, while the ratio tends to one and an
+  explicit clearance tends to `1/2`.  Thus zero-owner exclusion, coherence,
+  bounded geometry, and even strong looseness do not repair the claim.
 - **The correct framing:** for covering families and `15<=q<=28`, THM-762
   gives an exact zero-owner/signed-unit-pair-deck criterion.  The `q<=25`
   statement is false, not merely unproved.  S105 does have the exact bound
   `q<=38` on its stated 8,260-row capped bank, but no raw fixed denominator can
   be global (THM-566).  Small-period certificates must be adaptive or coupled
-  to a scale/residue classification.
+  to a scale/residue classification.  In a zero-free row, writing
+  `N_q=#{s:(s,q)=1}`, `C_q=N_q-|B_q(S)|`, and `h_q=phi(q)/2`, the exact positive
+  statement is `q`-witness iff `C_q>N_q-h_q`; hence `N_q<h_q` is a useful
+  residue-blind sufficient condition.
 - **Impact:** LRC(14) is unaffected: both displayed counterexamples are lonely,
   and the coherent sheet is already closed by THM-760.  The correction removes
   the proposed good-period terminal from THM-758's open `f>=4` assembly and
@@ -601,7 +618,8 @@ it), MISTAKE-033.
   all named banks and seed coherent as well as gcd-incoherent blocker decks.
 - **Source:** codex-2026-07-14-S3; THM-762;
   `lrc14_q25_uniformity_refutation_codex_S3.py` and
-  `lrc14_s105_q25_bank_audit_codex_S3.py` with stored exact outputs.
+  `lrc14_s105_q25_bank_audit_codex_S3.py` with stored exact outputs;
+  codex-S58, `lrc14_q25_zero_free_saturated_deck_codex_S58.py` and output.
 
 ## MISTAKE-142 -- THM-744's C2-inflation bookkeeping was UNSOUND: a first-order-sized charge (Sum_seg 2j/W) was placed at second order (added to C2, i.e. divided by W^2); the stated W0 = 336/462 was never established by the proof (opus-2026-07-13-S278, self-caught)
 

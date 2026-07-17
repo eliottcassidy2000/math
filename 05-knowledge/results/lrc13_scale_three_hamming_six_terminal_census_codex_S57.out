@@ -1,0 +1,31 @@
+SCALE_THREE_HAMMING_SIX_TERMINAL_EXACT_CENSUS
+arithmetic=integer+rational floating_point=none height_cutoff=none depth_limit=6 early_gates=1
+contexts=1504 by_type={2,4:336, 1,5:672, 0,6:496}
+nodes_depth0..6=1504,146912,14992263,931412556,3984352,4481,2
+dead_depth0..6=0,0,1,929966716,3980598,4479,0
+full_tooth_depth0..6=0,0,0,879373305,0,0,0
+streaming_cap_depth0..6=0,0,1,50593411,3980598,4479,2
+candidate_edges=950540566
+maximum_cap=6324 maximum_candidate_speed=6317
+covers=0 nonempty_terminal_certificates=2
+nonempty_terminal_contexts=888,1502
+stratum=2,4 contexts=336 nodes=336,32708,3408353,214874008,691319,758,0 candidate_edges=219007146 covers=0 loose=0
+stratum=1,5 contexts=672 nodes=672,64596,6469464,391549538,1609804,1240,0 candidate_edges=399694642 covers=0 loose=0
+stratum=0,6 contexts=496 nodes=496,49608,5114446,324989010,1683229,2483,2 candidate_edges=331838778 covers=0 loose=2
+TOURNAMENT_ANALYSIS
+vertices=labelled_future_rays pair_observable=least_legal_speed_difference switch=sign gauge=numerical_order
+fingerprints=transitive_at_each_materialized_prefix directed_cycles=0 SCCs=singletons Hamiltonian_paths=1 ties=0
+terminal_recursion_uses_tournament_quotient=0
+ASSUMPTION_AUDIT
+challenged_vertices=runners->missing_labels->signed_sheet_providers->labelled_ray_states->prefix_obligations
+faithful_state=literal_components+remaining_labelled_step39_rays+last_speed+shortcut_ancestry
+destroyed_by_ray_order=component_widths+sheet_units+future_language;_therefore_order_is_telemetry_only
+row_payload_sha256=601655a592c4a9041bc7fb861031adf72d1f85bbdfd3769e50ed4d818978d5a1
+primary_source_sha256=b1b01dfdef4fba032d8641b65dad0747e43eed536821d4ab62c2137601008a9e
+combiner_source_sha256=a62579afde20a35e1c1ab3fafc8ff2306ca866a26154d865d85d4dce37d4c695
+shards=4
+shard range=0:100 sha256=0b9c4b7ce8105c01081733f69b9e5cff4b7e5951cfaf084eccebdbe9ae98ed85
+shard range=100:508 sha256=0c7cb635efc403a6292d9739b3e04714d28c040ca3464a9a5913ddfce2289751
+shard range=508:1004 sha256=0d3579d36c9ec1a9664fb6a3c4e1bbbc0443a7a7ed8cdebb04e02b312a454363
+shard range=1004:1504 sha256=a2cd23f2c41a83ca8167f3b4352f9c1fb4c64dc85e716d9de75af02f6f7bcc94
+verdict=all_1504_scale_three_H6_contexts_have_no_covering_terminal
