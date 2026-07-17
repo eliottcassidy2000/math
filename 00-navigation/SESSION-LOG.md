@@ -25,6 +25,41 @@ Prompt (owner): run the pinned-p counting and close CoverageCapped(6) on explici
 Referee (deepcount_referee_deathstar_S42.out): window uniqueness PASS (30k, zero collisions); census floor PASS (60 families vs direct B5). FILES: THM-950, HYP-7196 confirmed, LRCDeepCount.lean, referee .out, root import. NEXT: (i) the per-stratum finite check as a decide-able procedure (enumerate n_bot in [1, v_bot], verify tower + band membership -- a decidable CoverageCapped certificate generator); (ii) resonant-q classification (the {14,28,42 at q=56} pattern: q | 2 v_bot resonances); (iii) liveCount floors from the existing census machinery (winData rows ARE live-multiplier certificates) x this criterion = the full loop. death-star; S42.
 
 ---
+
+## codex-2026-07-17-S48 -- deep census capstone and colored overlap relations
+
+Pulled the q-window/rigidity and THM-950 deep-count work into the active B5
+route.  `LRCDeepCount.lean` proves the unconditional pointwise ledger floor
+and hence
+`B5 >= liveCount - 792 * #{p : 6 <= bandCount p}`.  The relation endgame now
+has a first-class `CensusB5Certificate`, a dense-core supplier, and a THM-950
+capstone requiring exactly one usable modulus whose live count beats that
+weighted deep count.  The THM-947 constructor was also repaired: it had
+mistakenly stored a height as its modulus, whereas the clean cofinal modulus is
+provably never cap-six.  It now accepts an arbitrary positive usable modulus.
+
+The parallel-class/Zarankiewicz layer gained the exact three-row
+inclusion-exclusion ledger and all three standard envelopes.  The seven-overlap
+layer retains the colored pair determinant
+`v_i n_j - v_j n_i`, proves its sharp bound and Plucker triangle identity, and
+packages the resulting sparse support-three relation.  This is the faithful
+quotient for overlap counting: bare support or sign graphs discard the
+coefficient ratio needed by the relation budget.
+
+The common-wall pair-tower hypothesis was challenged and refuted concretely.
+For doubled modulus four with fresh speeds `2,14` and inherited q4 speeds
+`13,29`, the q22 frequency is `-3` while the two q244 frequencies are `11` and
+`7`; the exact obstruction intervals overlap and chain without sharing a
+common affine wall.  What survives on an overlap is prefix refinement:
+cancelling the common complement row from simultaneous saturated partitions
+gives `Bad(A) = Bad(C) disjoint-union Bad(D)`.  Thus the next selector should
+charge refinement incidences, not assume a common frequency or nonchaining.
+
+The honest remaining B5 task is now the concrete live/deep census (or the
+stronger cap-six census) on the primitive dissociated dense core.  The honest
+pair-tower task is the non-aligned zero/small-frequency refinement geometry.
+
+---
 ## boxeph-2026-07-17-S63 -- LEM-034: the N_0 named check RESOLVED (structural, by the coincidence-lattice ATTRIBUTION -- not full blocking) + THE ADJACENT-CLASS SIGN LAW (universal: N_s <= 0 <= N_{s+1}; 1080 endpoints, 0 violations) + the reflection bijection (159 = 159 exact)
 
 Prompt (owner): the N_0 structural check; little statements.

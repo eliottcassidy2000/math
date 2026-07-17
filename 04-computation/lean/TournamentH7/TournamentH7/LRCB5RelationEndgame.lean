@@ -2,6 +2,7 @@ import TournamentH7.LRCEndgameParameterDischargeTwoThree
 import TournamentH7.LRCB5NormalizedBridge
 import TournamentH7.LRCMomentCertificates
 import TournamentH7.LRCArcWire
+import TournamentH7.LRCDeepCount
 
 /-!
 # Relation-budget certificates feed the chain-dense LRC(14) endgame
@@ -137,17 +138,16 @@ structure CoverageCappedB5Certificate (v : Fin 13 → ℤ) where
 /-- THM-947 constructor in the killer-arc language: exclude one rational
 multiplier meeting seven bad arcs, then supply the exact THM-945 census. -/
 def CoverageCappedB5Certificate.of_noSeven
-    (v : Fin 13 → ℤ) (height : ℕ)
-    (hnoSeven : ¬ ∃ p ∈ Finset.Ioo 0 (cleanModulus v height),
-      7 ≤ LRC14Concrete.bandCount v (cleanModulus v height) p)
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 0 < q)
+    (hnoSeven : ¬ ∃ p ∈ Finset.Ioo 0 q,
+      7 ≤ LRC14Concrete.bandCount v q p)
     (hlive :
-      ((Finset.Ioo 0 (cleanModulus v height)).filter fun p =>
-        LRC14Concrete.bandCount v (cleanModulus v height) p = 6).card <
-        LRC14Concrete.liveCount v (cleanModulus v height)) :
+      ((Finset.Ioo 0 q).filter fun p =>
+        LRC14Concrete.bandCount v q p = 6).card <
+        LRC14Concrete.liveCount v q) :
     CoverageCappedB5Certificate v := by
-  refine ⟨height, ?_, hlive⟩
-  exact (LRC14Concrete.coverageCapped_iff_no_seven
-    v (cleanModulus v height)).2 hnoSeven
+  exact ⟨q, hq, (LRC14Concrete.coverageCapped_iff_no_seven v q).2 hnoSeven,
+    hlive⟩
 
 theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
     (certificate : CoverageCappedB5Certificate v) :
@@ -160,6 +160,25 @@ theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
   rw [LRC14Concrete.B5_eq_live_sub_deepSix v
     certificate.q certificate.capped]
   omega
+
+/-- Unconditional THM-950 census certificate.  No coverage cap is assumed:
+all multipliers of depth at least six are charged at the sharp universal
+pointwise cost `792`. -/
+structure CensusB5Certificate (v : Fin 13 → ℤ) where
+  q : ℕ
+  q_pos : 0 < q
+  live_beats_deep :
+    792 * (((Finset.Ioo 0 q).filter fun p =>
+      6 ≤ LRC14Concrete.bandCount v q p).card : ℤ) <
+      (LRC14Concrete.liveCount v q : ℤ)
+
+/-- The unconditional census certificate produces the positive B5 modulus
+consumed by the dense-core endgame. -/
+theorem CensusB5Certificate.b5_pos {v : Fin 13 → ℤ}
+    (certificate : CensusB5Certificate v) :
+    0 < LRC14Concrete.B5 v certificate.q :=
+  LRC14Concrete.B5_pos_of_live_beats_deep
+    v certificate.q certificate.live_beats_deep
 
 /-- THM-935 certificate supply only on the primitive, dissociated,
 chain-dense core isolated by the current endgame. -/
@@ -222,6 +241,27 @@ def DenseCoreCoverageCappedB5Supply : Prop :=
       ChainDenseCore (fun i => |v (σ i)|)) →
     Nonempty (CoverageCappedB5Certificate v)
 
+/-- THM-950 supply on the same dense core.  This version removes the
+seven-wall cap entirely; its sole combinatorial obligation is the explicit
+live-versus-all-deep census. -/
+def DenseCoreCensusB5Supply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.tupleGcd v = 1 →
+    LRC14.CoveringFamily v → GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13,
+      (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ),
+      (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1 / 13 - 1 / 14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
+    (∀ g : ℤ, 2 ≤ g →
+      nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      ChainDenseCore (fun i => |v (σ i)|)) →
+    Nonempty (CensusB5Certificate v)
+
 /-- The structured relation-budget supplier discharges the raw positive-B5
 supplier used by `LRCDenseCoreEndgame`. -/
 theorem denseCoreDissociatedB5Supply_of_relationBudget
@@ -248,6 +288,16 @@ theorem denseCoreDissociatedB5Supply_of_normalizedRelationBudget
 /-- The exact cap-six census also discharges the raw dense-core B5 supplier. -/
 theorem denseCoreDissociatedB5Supply_of_coverageCapped
     (hsupply : DenseCoreCoverageCappedB5Supply) :
+    DenseCoreDissociatedB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨certificate.q, certificate.q_pos, certificate.b5_pos⟩
+
+/-- The unconditional THM-950 census supplier also discharges the raw
+dense-core B5 interface. -/
+theorem denseCoreDissociatedB5Supply_of_census
+    (hsupply : DenseCoreCensusB5Supply) :
     DenseCoreDissociatedB5Supply := by
   intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   obtain ⟨certificate⟩ :=
@@ -292,6 +342,16 @@ theorem lrc14_from_twoThree_detuned_and_coverageCappedB5
   lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_coverageCapped hsupply)
 
+/-- THM-950 capstone.  The B5 branch is reduced to one explicit modulus whose
+live multipliers outnumber `792` times every multiplier of depth at least six;
+no separate coverage-cap hypothesis remains. -/
+theorem lrc14_from_twoThree_detuned_and_censusB5
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreCensusB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_census hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms B5RelationBudgetCertificate.b5_pos
@@ -300,13 +360,16 @@ theorem lrc14_from_twoThree_detuned_and_coverageCappedB5
 #print axioms not_coverageCapped_six_at_cleanModulus
 #print axioms CoverageCappedB5Certificate.b5_pos
 #print axioms CoverageCappedB5Certificate.of_noSeven
+#print axioms CensusB5Certificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget
 #print axioms denseCoreDissociatedB5Supply_of_coverageCapped
+#print axioms denseCoreDissociatedB5Supply_of_census
 #print axioms lrc14_from_four_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_normalizedRelationBudget
 #print axioms lrc14_from_twoThree_detuned_and_coverageCappedB5
+#print axioms lrc14_from_twoThree_detuned_and_censusB5
 
 end LRC14Grand
 end LonelyRunner
