@@ -1,4 +1,6 @@
-# THM-935 — THE GAP-FREE CORE TAXONOMY (CLAIM STUB, opus-2026-07-16-S334)
+# THM-936 — THE GAP-FREE CORE TAXONOMY (CLAIM STUB, opus-2026-07-16-S334)
+
+> renumbered 935->936 (kps composition-trichotomy first-pushed 935 at 21:55 vs 22:25)
 
 **Status: CLAIMED, in progress this session. Do not duplicate.**
 
