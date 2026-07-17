@@ -249,6 +249,46 @@ theorem fourRowParallelPartition_of_failure
       ⟨branch, Finset.mem_inter.mpr ⟨hthird, hfourth⟩⟩)))))
   exact ⟨hcover, h12, h13, h14, h23, h24, h34⟩
 
+/-- The exact-cover half of a parallel partition already forces failure;
+neither a cardinality budget nor pairwise disjointness is needed in this
+direction. -/
+theorem failure_of_fourRowParallelPartition
+    (δ₁ δ₂ δ₃ δ₄ g : ℤ) (u : ℝ)
+    (hpartition :
+      FourRowParallelPartition (Finset.Ico (0 : ℤ) g)
+        (detunedBadBranches δ₁ g u) (detunedBadBranches δ₂ g u)
+        (detunedBadBranches δ₃ g u) (detunedBadBranches δ₄ g u)) :
+    ¬ HasFourDetunedGoodBranch δ₁ δ₂ δ₃ δ₄ g u := by
+  rintro ⟨branch, hbranch, hfirst, hsecond, hthird, hfourth⟩
+  have hbad :
+      branch ∈ detunedBadBranches δ₁ g u ∪ detunedBadBranches δ₂ g u ∪
+        detunedBadBranches δ₃ g u ∪ detunedBadBranches δ₄ g u := by
+    rw [hpartition.cover]
+    exact hbranch
+  simp only [Finset.mem_union] at hbad
+  rcases hbad with ((hbad | hbad) | hbad) | hbad
+  · exact hfirst hbad
+  · exact hsecond hbad
+  · exact hthird hbad
+  · exact hfourth hbad
+
+/-- **Static gap-two failure wall.**  Under the sharp four-row cardinality
+budget, failure of local-density branch gluing is equivalent to the four
+actual bad rows forming their exact pairwise-disjoint parallel partition of
+the branch circle. -/
+theorem failure_iff_fourRowParallelPartition
+    (δ₁ δ₂ δ₃ δ₄ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hbudget :
+      DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+        DetunedD3.badCount δ₃ g + DetunedD3.badCount δ₄ g ≤ g.toNat) :
+    (¬ HasFourDetunedGoodBranch δ₁ δ₂ δ₃ δ₄ g u) ↔
+      FourRowParallelPartition (Finset.Ico (0 : ℤ) g)
+        (detunedBadBranches δ₁ g u) (detunedBadBranches δ₂ g u)
+        (detunedBadBranches δ₃ g u) (detunedBadBranches δ₄ g u) := by
+  constructor
+  · exact fourRowParallelPartition_of_failure δ₁ δ₂ δ₃ δ₄ g u hg hbudget
+  · exact failure_of_fourRowParallelPartition δ₁ δ₂ δ₃ δ₄ g u
+
 theorem four_four_eight_eight_failure_parallel_partition
     (δ₄a δ₄b δ₈a δ₈b g : ℤ) (u : ℝ) (hg : 2 ≤ g)
     (hq4a : g / (Int.gcd δ₄a g : ℤ) = 4)
@@ -384,6 +424,8 @@ theorem lonely14_of_four_detuned_selectedWitness
 
 #print axioms hasFourDetunedGoodBranch_of_pairOverlap
 #print axioms fourRowParallelPartition_of_failure
+#print axioms failure_of_fourRowParallelPartition
+#print axioms failure_iff_fourRowParallelPartition
 #print axioms four_four_eight_eight_failure_parallel_partition
 #print axioms lonely14_of_four_detuned_selectedWitness
 
