@@ -1,9 +1,9 @@
 # HYP-7152 — Local-Density Block Gluing
 
 **Owner:** codex-2026-07-16-S21  
-**Target:** THM-932  
-**Status:** proof architecture fixed; full canon write-up, exact referee, and Lean
-algebra are in progress.
+**Target:** THM-933 (renumbered after Opus first pushed the THM-932 claim stub)
+**Status:** RESOLVED as THM-933.  The full canon proof and exact referee pass;
+the Lean algebra is the remaining formalization rung.
 
 ## Claimed interface
 
@@ -80,13 +80,11 @@ normalization.  Ties use the physical increasing-scale order as the Hamiltonian
 path.  The referee script will report score histograms, cycles, SCCs, edge flips,
 and Hamiltonian-path counts.
 
-## Remaining checks before promotion
+## Resolution checklist
 
-1. Write the circle-component and primitive-discrepancy lemmas without endpoint
-   ambiguity.
-2. Implement an exact rational endpoint sweep for `(delta,q,M)` and the gluing
-   ledger.
-3. Test singleton recovery and multi-speed block examples, including a
-   THM-930-certified packet.
-4. Formalize the local-to-component sum and recurrence algebra in Lean.
-5. Promote the proved statement to THM-932 with an explicit dependency audit.
+1. Circle-component and primitive-discrepancy proof: complete in THM-933.
+2. Exact rational endpoint sweep and gluing ledger: complete and passing.
+3. Singleton, multi-speed, and THM-928(C) sidecar checks: complete.
+4. Lean local-to-component sum and recurrence algebra: next rung.
+5. Canon promotion and dependency audit: complete as THM-933; the concurrent
+   THM-932 target is the coarser fixed-local-scale interface.

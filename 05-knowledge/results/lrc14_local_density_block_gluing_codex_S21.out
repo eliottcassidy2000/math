@@ -1,0 +1,51 @@
+==============================================================================
+THM-933 EXACT REFEREE: SHARP LOCAL-DENSITY BLOCK GLUING
+==============================================================================
+
+[1] Primitive discrepancy and scale covariance
+  A: template=[1, 2, 3, 4, 5], scale=1, delta=53/105 (0.504761905), q=53/735 (0.072108844), M=15; endpoint pairs=484; direct scale check=PASS
+  B: template=[1, 2, 4, 5], scale=30, delta=3/5 (0.600000000), q=1/350 (0.002857143), M=360; endpoint pairs=324; direct scale check=PASS
+  C: template=[1, 3, 5, 7], scale=900, delta=386/735 (0.525170068), q=193/2315250 (0.000083360), M=14400; endpoint pairs=784; direct scale check=PASS
+
+[2] Exact non-lacunary 13-speed block composition
+  stage 1: previous components=1, prefix tooth sum=15, actual=0.504761905, one-step floor=0.504761905
+  stage 2: previous components=10, prefix tooth sum=375, actual=0.304761905, one-step floor=0.274285714
+  stage 3: previous components=132, prefix tooth sum=14775, actual=0.166479214, one-step floor=0.149048267
+  speeds = [1, 2, 3, 4, 5, 30, 60, 120, 150, 900, 2700, 4500, 6300]
+  product density = 20458/128625 (0.159051506)
+  debt at B: q*M_previous*suffix = 193/8575 (0.022507289); M_previous=15, suffix=386/735
+  debt at C: q*M_previous*suffix = 193/6174 (0.031260123); M_previous=375, suffix=1
+  THM-933 lower bound = 81253/771750 (0.105284095)
+  exact common-safe measure = 55063/330750 (0.166479214)
+  verdict: POSITIVE; not covered by a runner-by-runner 7-lacunary hypothesis
+
+[3] Singleton corollaries (exact constants)
+  delta({x})=6/7 and q({x})=6/(49x): PASS at x=1,2,7,19
+  R>=7: mu > 199455593/13841287201 (0.014410191); integer check 6^12 - 7^11 = 199455593 > 0
+  uniform R>=8 criterion: exact PASS for n=3..500; analytic proof uses e^2<8
+
+[4] THM-928(C) certificate receives its missing local sidecar
+  stronger radius = 1/13 (hence also an LRC(14) certificate)
+  exact BONF5 lower density d = 624500321285438209432944191/15959187221015235325636692600 (0.039131086)
+  exact safe density delta = 399621659482177660831785634791/3393987149002573379252069959600 (0.117744011)
+  exact primitive q sidecar = 495710884720685026577242468200179/263539708132900820325543980292980400 (0.001880972)
+  safe components=2030, tooth cap M=15130; d<=delta and scale law make it glueable
+
+[5] Tournament Analysis on block vertices
+  observable: debt(A then B)=q(B)M(A); gauge chooses smaller debt
+  A/B: forward=0.042857143, reverse=25.959183673; edge source=A
+  A/C: forward=0.001250405, reverse=1038.367346939; edge source=A
+  B/C: forward=0.030009718, reverse=41.142857143; edge source=B
+  scores={'A': 2, 'B': 1, 'C': 0}; histogram={0: 1, 1: 1, 2: 1}
+  directed 3-cycles=0; SCC sizes=[1, 1, 1]; Hamiltonian paths=1: [('A', 'B', 'C')]
+  edge flips versus density-only gauge=2
+  best full-ledger order=('A', 'B', 'C'), bound=0.105284095
+
+[6] Referee verdict
+  primitive interval lemma: EXACT (finite endpoint extrema)
+  scale covariance: EXACT (direct recomputation on all three blocks)
+  component cap and every recurrence step: PASS
+  closed-form gluing bound and positive 13-speed witness: PASS
+  lacunary improvement R>=7 and uniform R>=8: PASS
+  assumption challenge: blocks preserve (delta,q,M), not endpoint order
+  SCOPE: proves the composition theorem and new families, not arbitrary LRC(14) alone
