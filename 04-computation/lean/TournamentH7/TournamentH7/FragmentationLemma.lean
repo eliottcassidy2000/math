@@ -337,4 +337,44 @@ theorem killer_budget (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
   rw [hexp] at hreal
   nlinarith [hreal]
 
+/-- Rung two (death-star-S31): THE EXPLICIT KILLER BOUND — THM-883's headline form.
+    If `j` arc-grids with moduli all `≥ W` cover an interval of length `L > 0` and
+    `2jλ < 1`, then `W ≤ 2λj / (L(1−2jλ))`: the smallest killer is explicitly bounded
+    by the covered component's length. Two lines from `killer_budget`. -/
+theorem killer_bound (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
+    (lam L x : ℝ) (hlam : 0 < lam) (hL : 0 < L) (hj : 2 * (j : ℝ) * lam < 1)
+    (W : ℕ) (hW1 : 1 ≤ W) (hWle : ∀ i, W ≤ ws i)
+    (hcover : Set.Icc x (x + L) ⊆ ⋃ i, badArcs (ws i) lam) :
+    (W : ℝ) ≤ 2 * lam * j / (L * (1 - 2 * j * lam)) := by
+  have hWpos : (0:ℝ) < (W : ℝ) := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hW1
+  have hkb := killer_budget j ws hws lam L x hlam hL.le hcover
+  rcases Nat.eq_zero_or_pos j with hj0 | hjpos
+  · -- j = 0: the budget forces L ≤ 0, contradicting hL
+    exfalso
+    subst hj0
+    simp only [Nat.cast_zero, Finset.univ_eq_empty, Finset.sum_empty, mul_zero] at hkb
+    nlinarith [hkb]
+  · have hsum : ∑ i : Fin j, (1:ℝ) / ws i ≤ (j : ℝ) / W := by
+      have hterm : ∀ i : Fin j, (1:ℝ) / ws i ≤ 1 / W := by
+        intro i
+        apply one_div_le_one_div_of_le hWpos
+        exact_mod_cast hWle i
+      calc ∑ i : Fin j, (1:ℝ) / ws i ≤ ∑ _i : Fin j, (1:ℝ) / W :=
+            Finset.sum_le_sum fun i _ => hterm i
+        _ = (j : ℝ) * (1 / W) := by
+            rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+        _ = (j : ℝ) / W := by rw [mul_one_div]
+    have hmargin : (0:ℝ) < 1 - 2 * (j : ℝ) * lam := by linarith
+    have hchain : L * (1 - 2 * (j : ℝ) * lam) ≤ 2 * lam * ((j : ℝ) / W) := by
+      calc L * (1 - 2 * (j : ℝ) * lam) ≤ 2 * lam * ∑ i : Fin j, (1:ℝ) / ws i := hkb
+        _ ≤ 2 * lam * ((j : ℝ) / W) := by
+            apply mul_le_mul_of_nonneg_left hsum (by positivity)
+    have hden : (0:ℝ) < L * (1 - 2 * (j : ℝ) * lam) := mul_pos hL hmargin
+    rw [le_div_iff₀ hden]
+    have h2 : 2 * lam * ((j : ℝ) / W) = 2 * lam * (j : ℝ) / W := by ring
+    rw [h2] at hchain
+    have h3 : L * (1 - 2 * (j : ℝ) * lam) * (W : ℝ) ≤ 2 * lam * (j : ℝ) :=
+      (le_div_iff₀ hWpos).mp hchain
+    nlinarith [h3]
+
 end LRC14
