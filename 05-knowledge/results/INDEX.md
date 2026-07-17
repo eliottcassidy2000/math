@@ -1392,3 +1392,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `bothclean_v2_weighted_opus_S332.out` | [STORED] | THM-928(C): THE FIRST ACCESSIBLE-SCALE FULL-PROBLEM LEVEL-5 CERTIFICATE -- {300..2208}, BONF5 >= +0.039131 > 0 exact. | (self) |
 | `block_gluing_opus_S333.out` | [STORED] | THM-932: G1/G2/G3 verified exact (0 violations); eta profile of X (localization scale 1/300, deserts below 1/862); dilation law; v1 demo honest-negative. | (self) |
 | `block_gluing2_opus_S333.out` | [STORED] | THM-932: sharp-input composition demos at gap 300 (7+6 and 5+4+4) -- the coercive regime. | (self) |
+| `gapfree_core_taxonomy_opus_S334.out` | [STORED] | THM-936: gap-free core census (exact, lam=1/14) -- strata + witness-denominator law + every-packet-lonely verdict. | (self) |

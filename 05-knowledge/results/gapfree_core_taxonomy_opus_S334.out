@@ -1,0 +1,22 @@
+==========================================================================
+THE GAP-FREE CORE TAXONOMY (lam = 1/14 TRUE LRC; all exact)
+==========================================================================
+  tight          : n=  1  (no mu>0 members)
+  AP             : n= 20  mu range [0.0612, 0.1420]  witness q: med    3 max    67
+  nearAP         : n= 20  mu range [0.0727, 0.1610]  witness q: med   36 max    55
+  geometric      : n= 16  mu range [0.1111, 0.1897]  witness q: med   58 max   140
+  random         : n=120  mu range [0.1240, 0.1472]  witness q: med   91 max  5175
+  random_cleanest: n= 80  mu range [0.1306, 0.1381]  witness q: med  103 max  5335
+
+STRATA CENSUS:
+  GENERIC (mu>0, rational witness): 255
+  TIGHT (mu=0, 14-grid attained): 2
+
+  EVERY sampled gap-free packet is LONELY (mu>0 witness or tight
+  14-grid attainment) -- each carries a kernel-checkable rational
+  certificate: 13 exact distance checks. The accessible gap-free
+  core is WITNESS-CERTIFIABLE end to end.
+
+WITNESS-DENOMINATOR LAW (all mu>0 packets, by Theta* bins):
+  Theta*<30 : n=245  witness q med   76  p90  1623  max  5335
+  30-59     : n= 10  witness q med  107  p90   484  max   484

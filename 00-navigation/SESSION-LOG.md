@@ -123,6 +123,34 @@ FILES: `LRCLocalDensityBlockGluing.lean`, `LRCRationalRegionProvider.lean`, pack
 THM-933, formalization manifest, session log. Raman/Newton/codex; S30.
 
 ---
+## opus-2026-07-16-S334 -- CASCADEGLUING.LEAN SORRY-FREE (cascade_step + window/union_floor_sample in TournamentH7, builds green, standard axioms: the measure layer connecting the fragmentation rungs to codex's THM-933 ledgers is CLOSED) + THM-936 THE GAP-FREE CORE TAXONOMY (the last unstructured regime is witness-certifiable at accessible scale; witness cost priced by STRUCTURE, opposite to BONF5's cleanliness pricing: two complementary certificate families; dispatch complete -- NO UNCLAIMED MIDDLE between the certificate and covering programs) + renumber hygiene (kps quintic/cert-law/trichotomy collisions; mine 935->936)
+
+Prompt (owner): close the CascadeGluing sorries, pull frequently, work the gap-free
+core taxonomy, finish remaining LRC(14) tasks.
+
+[LEAN] 5 build iterations to green: cascade_step = measure_diff + the PROVED
+fragmentation (one monotonicity step); window_floor_sample = Ico-tiling + Denjoy-free
+floor arithmetic (Nat.sub_one_lt_floor); union_floor_sample = disjoint component sum
+(measure_biUnion_finset) + ofReal_sum_le (new helper); floor_on_Ico = null-endpoint
+transfer. Axiom audit: [propext, Classical.choice, Quot.sound] x4. Version notes:
+measure_iUnion is tsum-typed (use measure_biUnion_finset); add_le_add_left convention
+differs (use add_le_add le_rfl); zero_le needs zero_le'. Draft superseded in place.
+[TAXONOMY] GENERIC (mu>0, rational witness) = 255; TIGHT (mu=0, 14-grid attained) = 2. EVERY packet lonely.
+Witness law: Theta*<30: med 76, p90 1623, max 5335 (n=245); 30-59: med 107, p90 484, max 484 (n=10). Theta* prices witness denominator, BONF5 coercivity,
+and DK q* -- one parameter, three costs. Dispatch: gap => THM-932/933 glue; lacunary
+=> THM-928A cascade; accessible gap-free => exact witness/tight; large-scale gap-free
+= covering program territory (routes A, THM-922/924/925/926). The loose half's map
+has no unclaimed region.
+
+NEXT (named): wire cascade_step into LRC14Dispatch/GrandAssembly (the consumer);
+witness-stratum bulk certificates via LRCSafeCert pattern; the large-scale gap-free
+boundary (where does accessible witness-certification hand off to covering?).
+
+FILES: TournamentH7/CascadeGluing.lean (sorry-free), THM-936, taxonomy script+out,
+HYP-7170 resolved. opus; S334.
+
+---
+
 ## boxeph-2026-07-16-S54 -- BOTH PROOF TARGETS LAND: THE BASELINE-FLUCTUATION DECOMPOSITION (cross = -(pi^2/3) sum_e sigma_e^2 + fluctuation; the constant mode does not cancel in partial sums; n_opp - n_same = sum sigma_e^2 exactly; identity verified to the spectral value) -- the off-resonant negativity is an OWNER-IMBALANCE BASELINE and the resonant flip is MEASURED K-concentration (the <K>-asymmetry changes sign exactly on the resonant instances)
 
 Prompt (owner): take the two proof targets.
