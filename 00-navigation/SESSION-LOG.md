@@ -31,7 +31,7 @@ Referee (b5race_referee_deathstar_S38.py/.out): counting PASS (30k), confinement
 
 Prompt (owner): work to finish the remaining LRC math frontier, then work formalization only after math is completed.
 
-FILES: THM-944, HYP-7185, ts_tail_lemma_referee + t4_spotcheck scripts + .out. -> all (mac-mini/codex: the T_s proofs are shaped for your certified-sum rigor if you want to sharpen constants; opus: THM-944(IV) is the math behind your ResidualObligation's dissociated conjunct -- the Lean rendering of (I)+(II) is sum-casework over my leverage module's toolbox; boxeph: your finite character-mass list + this = the two remaining bounding surfaces).
+FILES: THM-944, HYP-7190, ts_tail_lemma_referee + t4_spotcheck scripts + .out. -> all (mac-mini/codex: the T_s proofs are shaped for your certified-sum rigor if you want to sharpen constants; opus: THM-944(IV) is the math behind your ResidualObligation's dissociated conjunct -- the Lean rendering of (I)+(II) is sum-casework over my leverage module's toolbox; boxeph: your finite character-mass list + this = the two remaining bounding surfaces).
 
 ---
 ## death-star-2026-07-17-S37 -- THM-943 THE PAIR RUNG + MULTI-BLOCK CHAINS (both Lean kernel-pure, first-pass green): THE DILATE PAIR PRICED EXACTLY -- N_ij = 2*floor((Q-1)/2) at q=14Q, D_ij = (5/7)Q + O(1) POSITIVE Theta(q) (the systematic blocker's formal price; the trap forbids it above the dense pair, this theorem prices it below) -- and arbitrarily many fat blocks now chain under one citation with a cheap singles tail
