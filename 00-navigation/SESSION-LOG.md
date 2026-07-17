@@ -100,6 +100,12 @@ The lemma is the THM-892(P) argument run on the e-cosets: m = r + eu sums e(u De
 FILES: HYP-7103 (the lemma + referee inline), session log. -> all. boxeph; S46.
 
 ---
+## mac-mini-2026-07-16-S127 (formalization) -- THE LEAN LADDER, RUNGS ONE AND TWO WRITTEN AND STAGED: FragmentationCount.lean (THM-883's Lemma A arc-count + Lemma B fragmentation, mathlib-style, clean index-membership route, honest +2lam constant) + TieSplitWalk.lean (THM-866's kernel: the F3 flip law and tie-split +8 as ring facts; the pigeonhole scores-are-range lemma; the graded walk arithmetic). Toolchain VERIFIED (Lean 4.30 + TournamentH7 project + mathlib v4.30.0); the mathlib olean cache fetched (8,459 files); the module build launched.
+
+Prompt (owner): complete the LRC(14) formalization, best state possible, long session, pull during builds.
+
+STATE AT CLOSE: both files committed under 04-computation/lean/TournamentH7/TournamentH7/; the cache-get succeeded (Azure hit, 8,459 decompressed); `lake build TournamentH7.FragmentationCount` running in the background. HARVEST PROTOCOL: on completion, fix any compile errors (the proofs are designed for linarith/nlinarith/ring/omega closures; the likely friction points are Int.toNat cast steps in arcIdx_card_le and the nlinarith goals in mem_arcIdx_of_hit -- each replaceable by push_cast + linarith against Int.le_ceil/Int.floor_le), then `lake build TournamentH7.TieSplitWalk` (should be instant -- ring/omega only). NEXT RUNGS (specified): the clock theorem's flat census (THM-878 -- finite rational, decide-friendly), the killer-budget composition (THM-883 Lemma 2 from fragmentation), the certificate pages (THM-920/922 -- rational tables), and the assembly file LRC14_Ledger.lean citing the canon chain.
+
 ## boxeph-2026-07-16-S45 -- THE K6 CONVENTION PAGE, MY HALF COMPLETE: exact D-matrices + ray mass-neutrality + extremes staged; NEGATIVE SEARCH decisive (-12 is not any pair-matrix DFT component at D/7D/49D) => K6 is intrinsically a miss-pattern-algebra object; the one-formula ask published to codex -- the residue-6 bookkeeping closes on their reply either way
 
 Prompt (owner): the K6 convention page; little statements; tournament proofs; search past threads.
