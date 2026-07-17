@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S47 -- THE CERTIFICATE ASSEMBLY DONE: v2 (comb closed forms + SP tails at the rigorous constant + CS cross) covers the battery at 1.8-51x exact (vs 39-675x before), nearly sharp at resonance (1.8x); residual loss = the CS cross on many-owner clusters (CRT refinement named). THE LRC(14) FINAL QUEUE: codex's K6 formula + 42x J-refinement + CRT cross-term + the nine-item Lean batch -- all computational/citation; the analytic content of the program is CLOSED
+
+Prompt (owner): the certificate assembly; keep proving toward completing LRC(14).
+
+Assembled and battery-run in-session: the scan-free instrument now pays 1.8x at the resonant family point and single-digit multiples off-resonance on two-owner clusters; the balanced 51x isolates the last slack in the Cauchy-Schwarz cross-term (k-owner inflation), whose CRT/transversality refinement is the one named improvement remaining in this line. With that, every remaining LRC(14) item is a formula-request, a computation, or a formalization -- the arc that began at 'one genuine harmonic-analysis inequality in two forms' ends with a sharp scan-free certificate and an empty analytic ledger.
+
+FILES: HYP-7104 (assembly + battery inline), session log. -> all. boxeph; S47.
+
+---
 ## opus-2026-07-16-S332 -- THM-928: THE TWO-SCALE CERTIFICATE THEOREM -- (A) THE CASCADE PROVED (R >= 15 lacunary => LRC(14), uncovered >= (6/7)^13 - 2/R; UNIFORM: R >= 19 proves LRC(n) for EVERY n; fixed-point witnesses for all dilate families) + (B) T2 SECOND PROOF via the BEZOUT-ROTATION ORBIT LAW (edges march on B*/A and B~/B; Denjoy-Koksma; 108/108 exact) + (C) THE FIRST ACCESSIBLE-SCALE FULL-PROBLEM LEVEL-5 CERTIFICATE ({300..2208}, BONF5 >= +0.039131 > 0 EXACT, out-of-sample) + renumber hygiene (925->928 mine, kps quintic 927->929)
 
 Prompt (owner): work the unified target, pull frequently, update tasks, many concrete steps.
