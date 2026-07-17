@@ -198,36 +198,43 @@ theorem tier_envelope_caps :
     (12 / 49 : ℚ) ≤ tau9 * (3455 + 1) := by
   norm_num [tau3, tau4, tau5, tau6, tau7, tau8, tau9]
 
+set_option maxRecDepth 100000 in
 theorem tau3FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau3 ratio → ratio ∈ tau3FiniteRatios :=
   finiteAllowedRatios_cover tau3 53
     (by norm_num [tau3]) (by norm_num [tau3])
 
+set_option maxRecDepth 100000 in
 theorem tau4FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau4 ratio → ratio ∈ tau4FiniteRatios :=
   finiteAllowedRatios_cover tau4 129
     (by norm_num [tau4]) (by norm_num [tau4])
 
+set_option maxRecDepth 100000 in
 theorem tau5FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau5 ratio → ratio ∈ tau5FiniteRatios :=
   finiteAllowedRatios_cover tau5 431
     (by norm_num [tau5]) (by norm_num [tau5])
 
+set_option maxRecDepth 100000 in
 theorem tau6FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau6 ratio → ratio ∈ tau6FiniteRatios :=
   finiteAllowedRatios_cover tau6 767
     (by norm_num [tau6]) (by norm_num [tau6])
 
+set_option maxRecDepth 100000 in
 theorem tau7FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau7 ratio → ratio ∈ tau7FiniteRatios :=
   finiteAllowedRatios_cover tau7 1843
     (by norm_num [tau7]) (by norm_num [tau7])
 
+set_option maxRecDepth 100000 in
 theorem tau8FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau8 ratio → ratio ∈ tau8FiniteRatios :=
   finiteAllowedRatios_cover tau8 2447
     (by norm_num [tau8]) (by norm_num [tau8])
 
+set_option maxRecDepth 100000 in
 theorem tau9FiniteRatios_cover :
     ∀ ratio, ratioAllowed tau9 ratio → ratio ∈ tau9FiniteRatios :=
   finiteAllowedRatios_cover tau9 3455
