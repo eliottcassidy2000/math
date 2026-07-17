@@ -2,8 +2,8 @@
    THE NESTED-GAP LACUNARY BRANCH: the first UNIVERSAL (quantifier-level)
    loneliness branch beyond the corpus's per-certificate gates.
 
-     `lonely_of_pos_lacunary` : positive speeds with v 0 ≥ 2 and every
-     consecutive ratio ≥ 7/3 (as 7·v i ≤ 3·v (i+1)) are lonely at 1/14.
+     `lonely_of_pos_lacunary` : every positive speed family whose consecutive
+     ratios are ≥ 7/3 (as 7·v i ≤ 3·v (i+1)) is lonely at 1/14.
 
    PROOF (pure ℚ floor arithmetic): maintain a rational interval [a, b]
    inside a SAFE GAP of every processed comb (`arcSafe (1/14) w 0`).  Step:
@@ -110,9 +110,9 @@ theorem nest_step_arith (u v : ℤ) (hu : 0 < u) (hr : 7 * u ≤ 3 * v) :
   rw [mul_div_assoc', le_div_iff₀ huQ]
   nlinarith
 
-/-- **THE UNIVERSAL LACUNARY BRANCH**: positive speeds, first ≥ 2, every
-consecutive ratio ≥ 7/3 — lonely at 1/14, with a rational witness. -/
-theorem lonely_of_pos_lacunary (v : Fin 13 → ℤ)
+/-- The original whole-period nested proof: positive speeds, first at least
+two, and every consecutive ratio at least `7/3`. -/
+theorem lonely_of_pos_lacunary_of_two_le (v : Fin 13 → ℤ)
     (hpos : ∀ i, 0 < v i) (h0 : 2 ≤ v 0)
     (hchain : ∀ i : Fin 12, 7 * v i.castSucc ≤ 3 * v i.succ) :
     ∃ t : ℝ, Lonely 14 v t := by
@@ -150,9 +150,94 @@ theorem lonely_of_pos_lacunary (v : Fin 13 → ℤ)
   have := norm_ge_of_arcSafe (le_of_lt (hpos i)) (by norm_num) hsafe hx1 hx2
   simpa using this
 
+/-- The unit head already has the full safe gap `[1/14,13/14]`.  Nesting the
+remaining twelve speeds inside that gap removes the artificial `v 0 ≥ 2`
+condition from the original whole-period proof. -/
+theorem lonely_of_pos_lacunary_of_head_one (v : Fin 13 → ℤ)
+    (hpos : ∀ i, 0 < v i) (h0 : v 0 = 1)
+    (hchain : ∀ i : Fin 12, 7 * v i.castSucc ≤ 3 * v i.succ) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have harith : ∀ i : Fin 12,
+      2 ≤ ((v i.succ : ℤ) : ℚ) * ((6/7) / ((v i.castSucc : ℤ) : ℚ)) :=
+    fun i => nest_step_arith _ _ (hpos _) (hchain i)
+  let tail : Fin 12 → ℤ := fun i => v i.succ
+  set ws : List ℤ := List.ofFn tail with hws
+  have hpos' : ∀ w ∈ ws, 0 < w := by
+    intro w hw
+    rw [hws, List.mem_ofFn] at hw
+    obtain ⟨i, rfl⟩ := hw
+    exact hpos i.succ
+  have hfirst :
+      2 ≤ ((tail 0 : ℤ) : ℚ) * ((13/14 : ℚ) - 1/14) := by
+    rw [show ((13/14 : ℚ) - 1/14) = 6/7 by norm_num]
+    simpa [tail, h0] using harith (0 : Fin 12)
+  have hnest : NestOK ws ((13/14 : ℚ) - 1/14) := by
+    rw [hws]
+    simp only [List.ofFn_succ, List.ofFn_zero, Fin.succ]
+    exact ⟨hfirst,
+      by simpa [tail] using harith (1 : Fin 12),
+      by simpa [tail] using harith (2 : Fin 12),
+      by simpa [tail] using harith (3 : Fin 12),
+      by simpa [tail] using harith (4 : Fin 12),
+      by simpa [tail] using harith (5 : Fin 12),
+      by simpa [tail] using harith (6 : Fin 12),
+      by simpa [tail] using harith (7 : Fin 12),
+      by simpa [tail] using harith (8 : Fin 12),
+      by simpa [tail] using harith (9 : Fin 12),
+      by simpa [tail] using harith (10 : Fin 12),
+      by simpa [tail] using harith (11 : Fin 12), trivial⟩
+  obtain ⟨aF, bF, haF, hbF, habF, hall⟩ :=
+    nested_gap_chain ws hpos' (1/14) (13/14) (by norm_num) hnest
+  have hsafeHead : arcSafe (1/14) 1 0 (1/14) (13/14) := by
+    norm_num [arcSafe]
+  refine ⟨((aF : ℚ) : ℝ), lonely_of_norm_forall ?_⟩
+  intro i
+  by_cases hi : i = 0
+  · subst i
+    have hx1 : (((1/14 : ℚ) : ℝ)) ≤ ((aF : ℚ) : ℝ) := by
+      exact_mod_cast haF
+    have hx2 : ((aF : ℚ) : ℝ) ≤ (((13/14 : ℚ) : ℝ)) := by
+      exact_mod_cast (le_trans habF hbF)
+    have hsafe := norm_ge_of_arcSafe (s := (1 : ℤ)) (cTar := 0)
+      (by norm_num) (by norm_num) hsafeHead hx1 hx2
+    simpa [h0] using hsafe
+  · have hiPos : 1 ≤ (i : ℕ) := by omega
+    let source : Fin 12 := ⟨(i : ℕ) - 1, by omega⟩
+    have hsource : source.succ = i := by
+      apply Fin.ext
+      dsimp [source]
+      omega
+    obtain ⟨lo, hi', hlo, hhi, hsafe⟩ := hall (tail source) (by
+      rw [hws, List.mem_ofFn]
+      exact ⟨source, rfl⟩)
+    have htail : tail source = v i := by simp [tail, hsource]
+    rw [htail] at hsafe
+    have hx1 : ((lo : ℚ) : ℝ) ≤ ((aF : ℚ) : ℝ) := by exact_mod_cast hlo
+    have hx2 : ((aF : ℚ) : ℝ) ≤ ((hi' : ℚ) : ℝ) := by
+      exact_mod_cast (le_trans habF hhi)
+    have hsafe' := norm_ge_of_arcSafe (le_of_lt (hpos i)) (by norm_num)
+      hsafe hx1 hx2
+    simpa using hsafe'
+
+/-- **THE UNIVERSAL LACUNARY BRANCH**: every positive thirteen-speed family
+with consecutive ratios at least `7/3` is lonely at `1/14`, with a rational
+witness.  Positivity leaves only `v 0 = 1` or `2 ≤ v 0`; the two preceding
+nested-gap constructions cover those cases exactly. -/
+theorem lonely_of_pos_lacunary (v : Fin 13 → ℤ)
+    (hpos : ∀ i, 0 < v i)
+    (hchain : ∀ i : Fin 12, 7 * v i.castSucc ≤ 3 * v i.succ) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  by_cases h0 : v 0 = 1
+  · exact lonely_of_pos_lacunary_of_head_one v hpos h0 hchain
+  · apply lonely_of_pos_lacunary_of_two_le v hpos (by
+      have hp0 := hpos 0
+      omega) hchain
+
 /-! ## Axiom audit -/
 #print axioms nested_gap_step
 #print axioms nested_gap_chain
+#print axioms lonely_of_pos_lacunary_of_two_le
+#print axioms lonely_of_pos_lacunary_of_head_one
 #print axioms lonely_of_pos_lacunary
 
 end LRC14
