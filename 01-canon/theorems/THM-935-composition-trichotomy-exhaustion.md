@@ -105,8 +105,10 @@ relations, and unit-coefficient relations are trapped in the bottom four positio
 
 `TournamentH7.LRCB5RelationEndgame` is the proof-producing consumer of that missing
 bridge.  A `B5RelationBudgetCertificate` contains a modulus, four exact-support masses,
-the equality of the signed model with the concrete integer `B5`, and the quarter / three-
-quarter bounds.  It proves integer `B5 > 0`, turns certificate supply on the primitive
+the scaled equality `B5=(q-1)·relationModel`, and the quarter / three-quarter bounds.
+The `(q-1)` factor is mandatory: the former unscaled interface could not contain an
+integer `B5` under its strict subunit debt budget.  The corrected certificate proves
+integer `B5 > 0`, turns certificate supply on the primitive
 dissociated `ChainDenseCore` into `DenseCoreDissociatedB5Supply`, and machine-checks
 `lrc14_from_finalResidues_and_relationBudget`.  Exact **observed-row** arithmetic
 (not the coarser raw `badCount` ledger) has reduced the triple dispatch to
@@ -135,3 +137,5 @@ one phase that is simultaneously harmonic-good and branch-good, which
 Together with `NonterminatingPairTowerSupply` and `DenseCoreRelationBudgetSupply`,
 the named Props `TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply`,
 and `UniformThreeSelectedWitnessSupply` are now the exact unchecked inputs.
+Each selected-witness Prop includes the ambient nonzero-speed hypothesis; without it a
+zero harmonic quotient makes `ThreeDetunedHarmonicGoodAt` impossible.

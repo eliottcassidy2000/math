@@ -1001,7 +1001,7 @@ def NonterminatingPairTowerSupply : Prop :=
 
 /-- Joint harmonic/detuned phase selection for the `(2,2,q)` residue. -/
 def TwoTwoSelectedWitnessSupply : Prop :=
-  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+  ∀ (v : Fin 13 → ℤ), (∀ i, v i ≠ 0) → ∀ (g : ℤ), 2 ≤ g →
     ∀ i₂a i₂b iₓ : Fin 13,
     i₂a ≠ i₂b → i₂a ≠ iₓ → i₂b ≠ iₓ →
     (∀ j, j ≠ i₂a → j ≠ i₂b → j ≠ iₓ → g ∣ v j) →
@@ -1013,7 +1013,7 @@ def TwoTwoSelectedWitnessSupply : Prop :=
 
 /-- Joint harmonic/detuned phase selection for the extremal `(2,4,4)` residue. -/
 def TwoFourFourSelectedWitnessSupply : Prop :=
-  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+  ∀ (v : Fin 13 → ℤ), (∀ i, v i ≠ 0) → ∀ (g : ℤ), 2 ≤ g →
     ∀ i₂ i₄a i₄b : Fin 13,
     i₂ ≠ i₄a → i₂ ≠ i₄b → i₄a ≠ i₄b →
     (∀ j, j ≠ i₂ → j ≠ i₄a → j ≠ i₄b → g ∣ v j) →
@@ -1026,7 +1026,7 @@ def TwoFourFourSelectedWitnessSupply : Prop :=
 
 /-- Joint harmonic/detuned phase selection for the uniform q-three residue. -/
 def UniformThreeSelectedWitnessSupply : Prop :=
-  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+  ∀ (v : Fin 13 → ℤ), (∀ i, v i ≠ 0) → ∀ (g : ℤ), 2 ≤ g →
     ∀ i₁ i₂ i₃ : Fin 13,
     i₁ ≠ i₂ → i₁ ≠ i₃ → i₂ ≠ i₃ →
     (∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j) →
@@ -1055,13 +1055,13 @@ theorem deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
       have hdvd := dvd_of_nonMultCard_three_of_selected
         v g hcard i₂a i₂b iₓ h2ab h2ax h2bx hδ2a hδ2b hδx
       apply lonely14_of_three_detuned_selectedWitness v g hg i₂a i₂b iₓ hdvd
-      exact h22 v g hg i₂a i₂b iₓ h2ab h2ax h2bx hdvd hq2a hq2b
+      exact h22 v hv g hg i₂a i₂b iₓ h2ab h2ax h2bx hdvd hq2a hq2b
     · obtain ⟨i₂, i₄a, i₄b, h24a, h24b, h4ab, hδ2, hδ4a, hδ4b,
         hq2, hq4a, hq4b⟩ := h244pattern
       have hdvd := dvd_of_nonMultCard_three_of_selected
         v g hcard i₂ i₄a i₄b h24a h24b h4ab hδ2 hδ4a hδ4b
       apply lonely14_of_three_detuned_selectedWitness v g hg i₂ i₄a i₄b hdvd
-      exact h244 v g hg i₂ i₄a i₄b h24a h24b h4ab hdvd hq2 hq4a hq4b
+      exact h244 v hv g hg i₂ i₄a i₄b h24a h24b h4ab hdvd hq2 hq4a hq4b
     · have hcard' := hcard
       rw [nonMultCard] at hcard'
       obtain ⟨i₁, i₂, i₃, h12, h13, h23, hfilter⟩ :=
@@ -1084,7 +1084,7 @@ theorem deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
       have hdvd := dvd_of_nonMultCard_three_of_selected
         v g hcard i₁ i₂ i₃ h12 h13 h23 hδ1 hδ2 hδ3
       apply lonely14_of_three_detuned_selectedWitness v g hg i₁ i₂ i₃ hdvd
-      exact h333 v g hg i₁ i₂ i₃ h12 h13 h23 hdvd
+      exact h333 v hv g hg i₁ i₂ i₃ h12 h13 h23 hdvd
         (hallThree i₁ hδ1) (hallThree i₂ hδ2) (hallThree i₃ hδ3)
 
 /-- Sharp supplier-level capstone: after `LRCUpTo13`, only the pair tower,

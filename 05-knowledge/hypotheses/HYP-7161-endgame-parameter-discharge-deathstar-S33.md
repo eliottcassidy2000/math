@@ -121,7 +121,8 @@ Besides `LRCUpTo13`, its exact two suppliers are now:
 2. positive `B5` on the primitive dissociated `ChainDenseCore`.
 
 `TournamentH7.LRCB5RelationBudget` and `TournamentH7.LRCB5RelationEndgame` replace the
-second raw supplier by THM-935-shaped proof data.  The exact relation model equality,
+second raw supplier by THM-935-shaped proof data.  The exact scaled equality
+`B5=(q-1)·relationModel`,
 the proved support-two quarter budget at `H=30`, and a strict three-quarter bound on the
 support-`3,4,5` mass imply integer `B5 > 0`; the capstone
 `lrc14_from_four_detuned_and_relationBudget` then gives LRC(14).  The universal
@@ -215,3 +216,5 @@ eliminates the phase-uniform formulation entirely.  For each surviving triple fa
 `lonely14_of_three_detuned_selectedWitness` consumes that single witness.  Thus the
 five precise remaining inputs are those three selection Props,
 `NonterminatingPairTowerSupply`, and `DenseCoreRelationBudgetSupply`.
+The three witness Props explicitly assume all ambient speeds are nonzero; the previous
+omission admitted a zero quotient and made the harmonic-good conclusion false.

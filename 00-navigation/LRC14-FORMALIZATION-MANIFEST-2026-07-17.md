@@ -145,8 +145,11 @@ proves that absolute relation debt below `2052/16807` forces positivity.  The `H
 support-two tail is strictly below one quarter of that budget, leaving a checked strict
 three-quarter socket for the open support-`3,4,5` tails.  New
 `TournamentH7.LRCB5RelationEndgame` packages the analytic identity and those bounds as a
-proof-producing certificate, derives concrete integer `B5 > 0`, and feeds the
-chain-dense endgame.
+proof-producing certificate at a modulus `q>1`.  Its exact equality is correctly
+normalized as `B5 = (q-1)·relationModel`; the earlier unscaled equality was
+uninhabitable because the budget traps the model strictly between `0` and `1` while
+`B5` is integral.  The scaled certificate derives concrete integer `B5 > 0` and feeds
+the chain-dense endgame.
 
 In parallel, `TournamentH7.LRCEndgameParameterDischargeFour` proves the exact
 `q≥4` bad-count inequality for three detuned coordinates.  The exceptional triple
@@ -270,6 +273,8 @@ Accordingly items 2--4 above are now named Props
 `TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply`, and
 `UniformThreeSelectedWitnessSupply`; item 1 is `NonterminatingPairTowerSupply`.
 These four Props plus the relation-budget supply are the exact checked inputs.
+All three selected-witness Props now explicitly retain the ambient nonzero-speed
+hypothesis; omitting it made each statement false by allowing a zero harmonic quotient.
 
 The live THM-940 pull also closes the discrete half of item 5:
 `TournamentH7.LRCB5SubsetExpansion` proves `B5` equals its support-grouped

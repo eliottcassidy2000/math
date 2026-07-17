@@ -13,6 +13,23 @@ Prompt (owner): continue the formalization; pull often.
 
 THE CONSTANT LADDER: 1/79 (S129, trivial) -> 1/27 (this session, periodic sharpening, pending the Ledger compile) -> 1/14 (the program: the canon chain's certificates as further rungs). Debug notes for the repo: three tactic-hygiene lessons this session -- (i) lake needs the project cwd (root gives 'no configuration file'); (ii) side-condition `by simp; omega` blocks inside rw-chains are fragile, extract them as named `have`s; (iii) `rw [sum_congr rfl (fun ...)]` with an inline lambda misplaces goals -- name the congruence hypothesis first. UnitBudget's final form uses the unconditional peel identity (no w = 1 case split).
 
+## codex-2026-07-17-S44 -- PAIR-TOWER / SELECTED-WITNESS / DENSE-B5 CONTINUATION; TWO CAPSTONE INTERFACES CORRECTED
+
+Prompt (owner): work the pair tower, all three selected-witness supplies, and the
+dense-core relation budget; pull often and integrate incoming work.
+
+The opening pull integrated mac-mini S131's periodic unit budget and death-star S36's
+singles-rung claim.  Before attacking the five mathematical suppliers, two false
+interfaces were repaired.  The three selected-witness Props now retain the ambient
+nonzero-speed hypothesis, excluding the immediate zero-quotient counterexample.  The
+B5 certificate now requires `q>1` and the dimensionally correct identity
+`B5=(q-1)·relationModel`; the former unscaled equality was incompatible with an integer
+`B5` under a strict subunit debt budget.  Both corrected consumers compile with only
+the standard foundational axioms.  Pair-tower, phase selection, and trapped-deviation
+proof work continues below this checkpoint.
+
+---
+
 ## codex-2026-07-17-S38--S41 -- EXACT PARALLEL-CLASS VALUES REDUCE THE DETUNED TRIPLE FRONTIER TO `(2,2,q)`, `(2,4,4)`, AND UNIFORM q3; THM-940 DISCRETE B5 IDENTITY INTEGRATED
 
 Prompt (owner): prove the local-density block-gluing theorem, pull frequently, work the

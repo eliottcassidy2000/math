@@ -21,13 +21,14 @@ open scoped Classical
 /-- A proof-producing THM-935 certificate for one concrete speed tuple. -/
 structure B5RelationBudgetCertificate (v : Fin 13 → ℤ) where
   q : ℕ
-  q_pos : 0 < q
+  one_lt_q : 1 < q
   mass2 : ℝ
   mass3 : ℝ
   mass4 : ℝ
   mass5 : ℝ
-  b5_eq_model :
-    (LRC14Concrete.B5 v q : ℝ) = relationModel mass2 mass3 mass4 mass5
+  b5_eq_scaled_model :
+    (LRC14Concrete.B5 v q : ℝ) =
+      ((q : ℝ) - 1) * relationModel mass2 mass3 mass4 mass5
   pair_budget : pairWeight * |mass2| ≤ equilibrium / 4
   higher_budget : higherRelationDebt mass3 mass4 mass5 < 3 * equilibrium / 4
 
@@ -40,9 +41,13 @@ theorem B5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
       certificate.mass4 certificate.mass5 :=
     relationModel_pos_of_quarter_threeQuarter_split _ _ _ _
       certificate.pair_budget certificate.higher_budget
+  have hqR : (1 : ℝ) < certificate.q := by
+    exact_mod_cast certificate.one_lt_q
+  have hscale : (0 : ℝ) < (certificate.q : ℝ) - 1 := by
+    linarith
   have hreal : (0 : ℝ) < (LRC14Concrete.B5 v certificate.q : ℝ) := by
-    rw [certificate.b5_eq_model]
-    exact hmodel
+    rw [certificate.b5_eq_scaled_model]
+    positivity
   exact_mod_cast hreal
 
 /-- THM-935 certificate supply only on the primitive, dissociated,
@@ -73,7 +78,8 @@ theorem denseCoreDissociatedB5Supply_of_relationBudget
   intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   obtain ⟨certificate⟩ :=
     hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
-  exact ⟨certificate.q, certificate.q_pos, certificate.b5_pos⟩
+  exact ⟨certificate.q, lt_trans Nat.zero_lt_one certificate.one_lt_q,
+    certificate.b5_pos⟩
 
 /-- **THM-935-shaped current capstone.**  The sanctioned LRC(≤13) citation,
 the sharply reduced `q=2,3`/two-adic exceptional dispatch, and relation-budget
