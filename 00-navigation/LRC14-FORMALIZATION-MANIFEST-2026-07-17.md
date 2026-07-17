@@ -560,3 +560,55 @@ other parity class supplies a common good branch.  Thus the local phase
 geometry of every `(2,2,q)` pattern is completely classified.  What remains
 globally is selecting a harmonic-good phase that avoids these named opposition
 events, not solving an unstructured three-row incidence problem.
+
+## Landed addendum — weighted pair floor and obstruction compatibility (codex-S51–S53)
+
+The continuous support-two debt now has a complete exact finite certificate.
+For a primitive positive ratio `(a,b)`, the centered danger-arc covariance is
+
+```text
+[B2({(a-b)/14}) - B2({(a+b)/14})]/(ab).
+```
+
+Anchoring one runner turns every strict threshold clique into a clique of
+oriented primitive ratios.  Seven deterministic coloring/branch proof DAGs
+certify the required clique exclusions from thresholds `2/441` down through
+`1/14112`; the checker reconstructs every exact rational graph and replays all
+reachable branches.  The top layers need no planarity: each fixed ratio color
+is a path forest, so colors `12` and `13` contribute at most `24` edges, and
+color `13` alone contributes at most `12`.  The resulting layer cake is
+
+```text
+negative pair mass <= 176738453/411675264 < 13/30,
+margin = 8270807/2058376320.
+```
+
+`LRCWeightedRatioLayer` kernel-checks the entire abstract weighted sum from
+the nine threshold-count premises.  `LRCPairRatioLayerArithmetic` checks the
+exact rational value and margin.  `LRCPairContinuumBridge` proves that the
+proposed full pair-grid discrepancy budget at `cleanModulus v 534` is at most
+`5/1246`, strictly below that margin.  The remaining pair-floor formalization
+is therefore sharply localized: prove the Bernoulli covariance identity in
+the repository's danger-set language, replay or reflect the seven finite DAGs
+inside Lean, and prove that a pair danger intersection has at most
+`|v_i|+|v_j|` half-open circle components.  No higher-support estimate is
+claimed by this pair theorem.
+
+The incoming LEM-038 central-section cross-spectrum is the relevant signal for
+the still-open higher supports: reflection makes every owner spectrum purely
+imaginary at section `s=3`, so the cross term becomes a phase-free real Gram
+form and the owner-imbalance baseline vanishes.  Its census shows that this
+suppresses interference but not the diagonal energy.  Accordingly it may
+sharpen the support-three/support-five signed budget, but it cannot be folded
+into THM-952 as extra pair slack without a new diagonal estimate.  The named
+next statistic is the reflection-orbit cancellation law for `N(h)`.
+
+On the pair tower, two simultaneous `(2,4,4)` failures sharing their inherited
+q4 pair force the two fresh q2 bad rows to be identical.  They therefore cannot
+coexist with q22 opposition.  Equivalently, at every fixed phase the q244
+failure vertices form an independent set in the q22 opposition graph.  This
+is the surviving compatibility invariant after explicit cyclic-nerve examples
+refute a common-wall or nonchaining assumption.  Combined with the incoming
+quiet-lift theorem, the honest tower frontier is the valuation-gap-two wall
+with phase chronology/overlap information, not another union-bound debt
+calculation.

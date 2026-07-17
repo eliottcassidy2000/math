@@ -1,0 +1,19 @@
+METHOD exact Fraction ratio layers; deterministic bitset clique audit
+VERTICES oriented primitive ratios; symmetric threshold graph, no tournament gauge
+RATIOS 1489 LEVELS 482 CUT 1/14112
+CLIQUE TIERS
+  size=3 threshold=2/441 next=3/490 oriented=24 edges=6 next_cap=2 witness=[(12, 1), (27, 1)]
+  size=4 threshold=5/2646 next=4/1911 oriented=64 edges=78 next_cap=3 witness=[(2, 9), (12, 1), (8, 3)]
+  size=5 threshold=1/1764 next=12/20825 oriented=290 edges=1170 next_cap=4 witness=[(180, 1), (110, 1), (40, 1), (25, 1)]
+  size=6 threshold=1/3136 next=6/18473 oriented=544 edges=3327 next_cap=5 witness=[(180, 1), (320, 1), (110, 1), (40, 1), (25, 1)]
+  size=7 threshold=5/37632 next=4/30037 oriented=1456 edges=15714 next_cap=6 witness=[(768, 1), (432, 1), (96, 1), (64, 3), (40, 1), (12, 1)]
+  size=8 threshold=1/9996 next=10/99617 oriented=2020 edges=27885 next_cap=7 witness=[(264, 1), (176, 3), (374, 3), (44, 9), (22, 17), (11, 18), (11, 4)]
+  size=9 threshold=1/14112 next=6/84329 oriented=2978 edges=53229 next_cap=8 witness=[(288, 1), (768, 1), (544, 1), (96, 17), (64, 3), (48, 11), (12, 1), (8, 3)]
+LAYER_CAPS tail=78; Turan k=8..3; top=42,22,12
+TOTAL 175847381/411675264 = 0.427150709254176
+TARGET 13/30 = 0.433333333333333
+MARGIN 12726167/2058376320 = 0.006182624079158
+PATH_ONLY_CAPS tail=78; Turan k=8..3; top=42,24,12
+PATH_ONLY_TOTAL 176738453/411675264 = 0.429315211418678
+PATH_ONLY_MARGIN 8270807/2058376320 = 0.004018121914656
+STATUS PASS; finite clique replay and continuum-to-grid Lean bridges remain

@@ -7,6 +7,56 @@ Little statements proved: master identity (all s-pairs); Re S_e^(3)(n) = 0 (15 o
 FILES: LEM-038, LEM-037 named item closed, HYP-7206/7207, script + out. -> all; klein: cross analysis is cheapest at the sine section. boxeph; S66.
 
 ---
+## codex-2026-07-17-S53 -- THM-952 WEIGHTED RATIO-LAYER PAIR FLOOR: seven replayable strict-clique DAGs + path-only parallel-class caps give continuous negative pair debt `176738453/411675264 < 13/30`; Lean checks the layer cake and clean height 534 margin; pair-tower q244 failures are independent across q22 opposition edges
+
+Prompt (owner): continue the pair tower, three selected-witness supplies, and
+dense-core relation budget; pull often and integrate incoming work.
+
+The support-two route moved from a numerical observation to an exact proof
+package.  The primitive-ratio Bernoulli checker enumerates every negative
+ratio above `1/14112`; seven compact coloring/branch DAGs prove the strict
+anchored clique exclusions without trusting a maximum-clique solver.  Fresh
+generation is byte-identical.  The top parallel-class-circle layers use only
+the elementary fact that a fixed multiplicative ratio color is a path forest,
+so the `{12,13}` layer costs at most 24 and the `13` layer at most 12.  The
+conservative total is `176738453/411675264`, leaving exact margin
+`8270807/2058376320` below `13/30`.  Raw uncolored Zarankiewicz is deliberately
+not used: multiplicative rectangles create legal K2,2s and erase the ratio
+color needed by the proof.
+
+Formalization landed in three pieces.  `LRCPairRatioLayerArithmetic` checks the
+exact totals and margins.  `LRCWeightedRatioLayer` proves the abstract finite
+layer-cake theorem from seven Turan count caps and the two path caps.
+`LRCPairContinuumBridge` proves that the proposed aggregate grid discrepancy at
+`cleanModulus v 534` is at most `5/1246`, strictly inside the certified margin.
+The remaining pair socket is now exactly the Bernoulli danger-set identity,
+Lean replay/reflection of the seven finite DAGs, and the pair-intersection
+component ledger; higher support remains separate.
+
+The later pull added boxeph's LEM-038.  Its central-section pure-sine/Gram law
+is recorded as the most compatible next lens for the signed support-three and
+support-five budget: it removes owner phases and the imbalance baseline, but
+its own census shows the diagonal is unchanged, so it is not silently counted
+as additional pair margin.
+
+The upstream S47 quiet-lift/deviation checkpoint was pulled and integrated.
+`LRCPairTowerCompatibility` now specializes its no-triple-wall law to the
+principal tower: on any q22 opposition edge, failure of one fresh row against
+the fixed inherited q4 pair forces a good q244 branch for the other.  Thus the
+q244-failure set is independent in the q22 opposition graph.  This complements
+the incoming quiet-lift deletion and leaves the exact valuation-gap-two wall;
+explicit cyclic nerves still forbid a common-wall Helly shortcut.
+
+FILES: THM-952, `LRCPairRatioLayerArithmetic.lean`,
+`LRCWeightedRatioLayer.lean`, `LRCPairContinuumBridge.lean`,
+`LRCPairTowerCompatibility.lean`, S52 exact audit, S53 checker/methodology/
+seven proof DAGs/output, result index, formalization picture/manifest, session
+log.  HONEST NEXT: construct the half-open pair interval ledger and aggregate
+it to `normalizedMass2`; formalize the Bernoulli pair formula; then attack the
+support-three/support-five signed budget and the valuation-gap-two phase wall.
+
+---
+
 ## death-star-2026-07-17-S43 -- THM-951 THE DECIDABLE CENSUS PIPELINE + THE COHESIVE PICTURE (integration session): CoverageCapped DECIDES; lonely_of_census composes THM-945/950 with the Mreach consumer -- cap + live > deep by decide => B5 > 0 => Lonely; census_demo (v_i = i+2, q = 31) is THE FIRST LONELINESS PROOF IN THE CORPUS PRODUCED BY THE B5 FUNNEL; and the whole formalization now has ONE MAP (LRC14-FORMALIZATION-PICTURE-2026-07-17.md)
 
 Prompt (owner): keep working a long session to complete the LRC proof formalization, pull often and integrate incoming work and extend it and make a whole cohesive picture.

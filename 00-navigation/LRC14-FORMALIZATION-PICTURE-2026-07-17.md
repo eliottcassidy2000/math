@@ -71,7 +71,7 @@ Plücker relations on bad triples (the trap's target shape).
   scale-gapped conjunct's measure layer; `cascade_lonely` and `window_tail_glue`
   (HYP-7200) in flight.
 - **klein**: manifest items 1, 2, ⅔ of 6 LEAN; interval transport; band data.
-- **mac-mini**: UnitBudget LEAN; the 7-wall pair-floor per-cell obligation (open).
+- **mac-mini / codex-S52/S53**: UnitBudget LEAN; the continuous 7-wall pair floor is now an exact replayable weighted-ratio certificate with kernel-checked layer arithmetic.  The Bernoulli identity, Lean DAG replay, and clean-grid component discrepancy remain open.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
   form — the analytic instrument layer; manifest items 11–13 decide-shaped.
 
@@ -80,7 +80,7 @@ Plücker relations on bad triples (the trap's target shape).
 1. **The residual's dense core** past all shrinks: wide-block gap-free compressed
    families — the covering program's home regime. Attacks: kps exhaustion (paper,
    Lean pending) + the census funnel (needs liveCount floors a priori).
-2. **The 7-wall pair-floor** (mac-mini's lane) — for the measure route.
+2. **The pair continuum-to-grid bridge** — the continuous 7-wall floor now has exact margin `8270807/2058376320`; formalize the Bernoulli pair identity, replay seven finite clique DAGs in Lean, and prove the pair-intersection component discrepancy feeding `normalizedMass2`.
 3. **A-priori liveCount floors** (the discrete side of the same wall): the
    winData rows give them on censused strata; beyond, it is kps's law made
    uniform.

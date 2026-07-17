@@ -1,0 +1,36 @@
+COMMAND
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  04-computation/lrc14_weighted_ratio_clique_certificates_codex_S53.py \
+  check \
+  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53
+
+CHECK OUTPUT
+{"branches": 0, "bytes": 153, "edges": 0, "file": "strict_above_tau3.json", "nodes": 1, "threshold": "2/441", "vertices": 14}
+{"branches": 9, "bytes": 226, "edges": 66, "file": "strict_above_tau4.json", "nodes": 10, "threshold": "5/2646", "vertices": 60}
+{"branches": 51, "bytes": 637, "edges": 861, "file": "strict_above_tau5.json", "nodes": 52, "threshold": "1/1764", "vertices": 272}
+{"branches": 137, "bytes": 1519, "edges": 3048, "file": "strict_above_tau6.json", "nodes": 137, "threshold": "1/3136", "vertices": 534}
+{"branches": 1194, "bytes": 13328, "edges": 15654, "file": "strict_above_tau7.json", "nodes": 1173, "threshold": "5/37632", "vertices": 1454}
+{"branches": 1513, "bytes": 17787, "edges": 26217, "file": "strict_above_tau8.json", "nodes": 1508, "threshold": "1/9996", "vertices": 1990}
+{"branches": 2333, "bytes": 28636, "edges": 51627, "file": "strict_above_tau9.json", "nodes": 2326, "threshold": "1/14112", "vertices": 2960}
+negative_pair_mass_bound=176738453/411675264 (0.429315211418678)
+margin_to_13_over_30=8270807/2058376320 (0.004018121914656)
+runtime_seconds=3.783885
+
+MEASURED PROCESS
+CHECK_WALL=3.84 seconds
+CHECK_RSS_KB=19712
+GENERATE_WALL=7.45 seconds
+GENERATE_RSS_KB=21564
+REGENERATION_BYTE_IDENTICAL=YES
+
+SHA256
+ca567ef6d0f3949c865e962d282e7e65c253ff0c4e6c08d21cc3a8532044863c  04-computation/lrc14_weighted_ratio_clique_certificates_codex_S53.py
+1aa89f45d92aab0f6cb2d9f20b4464c4a283f7ed2f5c04c155816e864c50036c  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau3.json
+050ccedea35df973dc9a62d0d949e19e8dea002025aea29055b815295bbbd084  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau4.json
+b94fb92ec9e8607c9ac3d92321e08289163b4dc0fc4b70f1a4a9f0a8bde6500c  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau5.json
+a376b69f5394eb513db244c650a3dbd4434598fa766338a879a34925ff6c08b4  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau6.json
+685cf6cb6aaee2c13078af7ed7ad90bf45066227f25b936e231274f0bdfb9793  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau7.json
+850f2d8b4b05a73a11cf444484d91396c866faab94ac9cd88b2a7442af850b59  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau8.json
+0101d8d51bb7c36478d345fb030f34734ee732c63fb274e062180d34cc835d01  05-knowledge/results/lrc14_weighted_ratio_clique_certificates_codex_S53/strict_above_tau9.json
+
+STATUS PASS
