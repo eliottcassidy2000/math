@@ -233,12 +233,47 @@ theorem lonely_of_pos_lacunary (v : Fin 13 → ℤ)
       have hp0 := hpos 0
       omega) hchain
 
+/-- **THE WINDOW+TAIL GLUE** (opus-S337; the formal core of gap gluing):
+a base window certified safe for `base` plus a `NestOK` lacunary tail give
+a common rational time at which every modulus of `base ++ tail` is safe.
+The base certificate is exactly what census rows / ladder packs / the
+cluster-gap lemma provide; the tail is any 7/3-chain above the window. -/
+theorem window_tail_glue (base tail : List ℤ) (a b : ℚ) (hab : a ≤ b)
+    (hbase : ∀ w ∈ base, arcSafe (1/14) w 0 a b)
+    (htailPos : ∀ w ∈ tail, 0 < w)
+    (hnest : NestOK tail (b - a)) :
+    ∃ t : ℚ, ∀ w ∈ base ++ tail, ∃ lo hi : ℚ,
+      lo ≤ t ∧ t ≤ hi ∧ arcSafe (1/14) w 0 lo hi := by
+  obtain ⟨aF, bF, haF, hbF, habF, hall⟩ :=
+    nested_gap_chain tail htailPos a b hab hnest
+  refine ⟨aF, fun w hw => ?_⟩
+  rcases List.mem_append.mp hw with hwb | hwt
+  · exact ⟨a, b, haF, le_trans habF hbF, hbase w hwb⟩
+  · obtain ⟨lo, hi, hlo, hhi, hsafe⟩ := hall w hwt
+    exact ⟨lo, hi, hlo, le_trans habF hhi, hsafe⟩
+
+/-- The glue at the real level: the common time keeps every positive modulus
+of `base ++ tail` at circle distance ≥ 1/14. -/
+theorem norm_glue (base tail : List ℤ) (a b : ℚ) (hab : a ≤ b)
+    (hpos : ∀ w ∈ base ++ tail, 0 < w)
+    (hbase : ∀ w ∈ base, arcSafe (1/14) w 0 a b)
+    (hnest : NestOK tail (b - a)) :
+    ∃ t : ℝ, ∀ w ∈ base ++ tail,
+      (1 : ℝ) / 14 ≤ ‖(((w : ℝ) * t : ℝ) : UnitAddCircle)‖ := by
+  obtain ⟨t, ht⟩ := window_tail_glue base tail a b hab hbase
+    (fun w hw => hpos w (List.mem_append.mpr (Or.inr hw))) hnest
+  refine ⟨((t : ℚ) : ℝ), fun w hw => ?_⟩
+  obtain ⟨lo, hi, hlo, hhi, hsafe⟩ := ht w hw
+  have := norm_ge_of_arcSafe (le_of_lt (hpos w hw)) (by norm_num) hsafe
+    (x := ((t : ℚ) : ℝ)) (by exact_mod_cast hlo) (by exact_mod_cast hhi)
+  simpa using this
+
 /-! ## Axiom audit -/
 #print axioms nested_gap_step
 #print axioms nested_gap_chain
-#print axioms lonely_of_pos_lacunary_of_two_le
-#print axioms lonely_of_pos_lacunary_of_head_one
 #print axioms lonely_of_pos_lacunary
+#print axioms window_tail_glue
+#print axioms norm_glue
 
 end LRC14
 end LonelyRunner

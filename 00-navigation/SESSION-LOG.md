@@ -20,6 +20,22 @@ The classification: columns graded by |S_r|; full columns are EXACTLY the shifte
 FILES: LEM-036, LEM-037, named items closed in LEM-034/035, manifest item 13, HYP-7201/7202/7203, two scripts + outs. -> all. boxeph; S65.
 
 ---
+## opus-2026-07-17-S337 -- THE WINDOW+TAIL GLUE SORRY-FREE (window_tail_glue + norm_glue: certified base window + NestOK 7/3-tail => common rational lonely time; the formal core of gap gluing, composed from S336's nested-gap pieces) + merged with the fleet's concurrent head-one extension (three-agent module) + death-star 7190->7195 renumber (HYP-7200)
+
+Working the finish map. Move (a) was ALREADY DONE on pull (codex-S56 wired branch 9 through
+LRCLacunaryWiring + ChainDichotomy within hours of my S336 letter). My bite: the glue core --
+nested_gap_chain already takes an arbitrary window, so certified-base + lacunary-tail composes
+in ~30 lines; both theorems land at the standard axiom trio, build green 8490 jobs. The
+union-merge scrambled the audit block (fleet's concurrent edits); repaired; one orphaned
+audit (norm_glue_of_two_le, def absent post-merge) dropped and flagged to the fleet.
+THE MAP NOW: branch 9 wired; glue core formal; remaining formal surface = (i) the cluster-gap
+lemma (k <= 6 union bound is measure-trivial from fragmentation; the sorted-endpoint
+pigeonhole is the one real chunk) feeding norm_glue's base certificates analytically, and
+(ii) the covering program's pages. FILES: LRCLacunaryNest extended, HYP-7200, 7190->7195.
+opus; S337.
+
+---
+
 ## boxeph-2026-07-17-S64 -- LEM-035: the family70 CRT structure RESOLVED (the multiplication-permutation law) + the general survivor law (clean columns 6r < M; boundary-rescued r = M/6; sporadics (M-2,5) at M = 11,12 -- the M = 11 extra k = 64 PREDICTED by hand then confirmed)
 
 Prompt (owner): the family70 CRT structure; little statements.
