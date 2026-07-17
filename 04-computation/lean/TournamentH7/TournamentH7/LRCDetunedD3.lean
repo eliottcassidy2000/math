@@ -92,6 +92,18 @@ def ThreeDetunedClearing : Prop :=
       (∀ n : ℤ, (1 : ℝ) / 14 ≤ |(δ₂ : ℝ) * ((u + (c : ℝ)) / (g : ℝ)) - n|) ∧
       (∀ n : ℤ, (1 : ℝ) / 14 ≤ |(δ₃ : ℝ) * ((u + (c : ℝ)) / (g : ℝ)) - n|)
 
+/-- A proof-producing clearing interface for one fixed three-detuned tuple.
+Unlike `ThreeDetunedClearing`, this can consume phase-sensitive intersection
+or residue information specific to the tuple. -/
+def ThreeDetunedInstanceClearing (δ₁ δ₂ δ₃ g : ℤ) : Prop :=
+  ∀ u : ℝ, ∃ c : ℤ,
+    (∀ n : ℤ, (1 : ℝ) / 14 ≤
+      |(δ₁ : ℝ) * ((u + (c : ℝ)) / (g : ℝ)) - n|) ∧
+    (∀ n : ℤ, (1 : ℝ) / 14 ≤
+      |(δ₂ : ℝ) * ((u + (c : ℝ)) / (g : ℝ)) - n|) ∧
+    (∀ n : ℤ, (1 : ℝ) / 14 ≤
+      |(δ₃ : ℝ) * ((u + (c : ℝ)) / (g : ℝ)) - n|)
+
 /-- **THM-678 `d = 3`, the counting — PROVED.** The three-detuned clearing holds whenever the three
 per-coordinate counts sum to `< g`.  Three-set union bound over `LRCIntervalCount.bad_count_le`. -/
 theorem threeDetunedClearing : ThreeDetunedClearing := by
@@ -132,17 +144,15 @@ theorem threeDetunedClearing : ThreeDetunedClearing := by
   · intro n; refine not_lt.mp (fun h => hc3 ?_)
     rw [hbad₃, Finset.mem_filter]; exact ⟨hcIco, n, h⟩
 
-/-- **THM-678, `d = 3` generic — reduced to the counting.** A family `v = g·H ∪ {δ₁, δ₂, δ₃}` (`g ≥ 2`
-dividing all but `i₁, i₂, i₃`, generic counting) is lonely, GIVEN the LRC(≤13) citation and the
-three-detuned clearing obligation.  The LRC(10) reduction supplies the harmonic clearances
-(`1/11 ≥ 1/14` at every branch); `ThreeDetunedClearing` supplies the good branch;
-`lonely14_of_three_detuned_good` assembles them. -/
-theorem lonely14_of_three_detuned (cite : LRCUpTo13) (hclear : ThreeDetunedClearing)
+/-- **THM-678, `d = 3`, from an instance clearing.** The LRC(10) reduction
+supplies the harmonic clearances; any tuple-specific phase argument supplying
+`ThreeDetunedInstanceClearing` then gives the common branch and the LRC(14)
+witness. -/
+theorem lonely14_of_three_detuned_instance (cite : LRCUpTo13)
     (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
     (i₁ i₂ i₃ : Fin 13) (h12 : i₁ ≠ i₂) (h13 : i₁ ≠ i₃) (h23 : i₂ ≠ i₃)
     (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
-    (hδ1 : ¬ g ∣ v i₁) (hδ2 : ¬ g ∣ v i₂) (hδ3 : ¬ g ∣ v i₃)
-    (hcount : badCount (v i₁) g + badCount (v i₂) g + badCount (v i₃) g < g.toNat) :
+    (hclear : ThreeDetunedInstanceClearing (v i₁) (v i₂) (v i₃) g) :
     ∃ t : ℝ, Lonely 14 v t := by
   have hg0 : (0 : ℤ) < g := by omega
   -- the 10 harmonic coordinates, reindexed by an order embedding of the complement
@@ -184,8 +194,22 @@ theorem lonely14_of_three_detuned (cite : LRCUpTo13) (hclear : ThreeDetunedClear
       _ ≤ |(w k : ℝ) * u - n| := hu k n
       _ = |((v j / g : ℤ) : ℝ) * u - n| := by rw [hwk]
   -- the good branch from the clearing obligation, then the construction core
-  obtain ⟨c, hc1, hc2, hc3'⟩ := hclear (v i₁) (v i₂) (v i₃) g hg0 hδ1 hδ2 hδ3 hcount u
+  obtain ⟨c, hc1, hc2, hc3'⟩ := hclear u
   exact lonely14_of_three_detuned_good v g hg0 i₁ i₂ i₃ u c hdvd hharm hc1 hc2 hc3'
+
+/-- **THM-678, `d = 3` generic — reduced to the counting.** A family
+`v = g·H ∪ {δ₁, δ₂, δ₃}` in the generic count regime is lonely, given the
+uniform three-detuned clearing theorem. -/
+theorem lonely14_of_three_detuned (cite : LRCUpTo13) (hclear : ThreeDetunedClearing)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₁ i₂ i₃ : Fin 13) (h12 : i₁ ≠ i₂) (h13 : i₁ ≠ i₃) (h23 : i₂ ≠ i₃)
+    (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
+    (hδ1 : ¬ g ∣ v i₁) (hδ2 : ¬ g ∣ v i₂) (hδ3 : ¬ g ∣ v i₃)
+    (hcount : badCount (v i₁) g + badCount (v i₂) g + badCount (v i₃) g < g.toNat) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  lonely14_of_three_detuned_instance cite v hv g hg i₁ i₂ i₃ h12 h13 h23 hdvd
+    (fun u => hclear (v i₁) (v i₂) (v i₃) g (by omega)
+      hδ1 hδ2 hδ3 hcount u)
 
 /-- **THM-678 `d = 3` generic, unconditional.** A family `v = g·H ∪ {δ₁, δ₂, δ₃}` (`g ≥ 2` dividing all but
 `i₁, i₂, i₃`, generic counting `Σ badCount < g`) is lonely, from the LRC(≤13) citation alone — the counting

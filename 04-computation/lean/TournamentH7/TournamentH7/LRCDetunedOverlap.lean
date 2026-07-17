@@ -149,6 +149,43 @@ theorem HasThreeDetunedGoodBranch.clearances
       rw [detunedBadBranches, Finset.mem_filter]
       exact ⟨hcIco, n, hlt⟩)
 
+/-- A phase-by-phase pair collision supplies the instance-clearing interface
+consumed by the harmonic LRC reduction. -/
+theorem threeDetunedInstanceClearing_of_pairOverlap
+    (δ₁ δ₂ δ₃ g : ℤ) (hg : 1 ≤ g)
+    (hbudget : DetunedD3.badCount δ₁ g + DetunedD3.badCount δ₂ g +
+      DetunedD3.badCount δ₃ g ≤ g.toNat)
+    (hoverlap : ∀ u : ℝ,
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₂ g u).Nonempty ∨
+      (detunedBadBranches δ₁ g u ∩ detunedBadBranches δ₃ g u).Nonempty ∨
+      (detunedBadBranches δ₂ g u ∩ detunedBadBranches δ₃ g u).Nonempty) :
+    DetunedD3.ThreeDetunedInstanceClearing δ₁ δ₂ δ₃ g := by
+  intro u
+  exact (hasThreeDetunedGoodBranch_of_pairOverlap
+    δ₁ δ₂ δ₃ g u hg hbudget (hoverlap u)).clearances
+
+/-- Direct LRC consumer for the Zarankiewicz overlap saving.  The LRC(10)
+citation handles the harmonic coordinates, while a pairwise bad-row collision
+at every harmonic phase supplies the common branch. -/
+theorem lonely14_of_three_detuned_pairOverlap (cite : LRCUpTo13)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₁ i₂ i₃ : Fin 13) (h12 : i₁ ≠ i₂) (h13 : i₁ ≠ i₃) (h23 : i₂ ≠ i₃)
+    (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
+    (hbudget : DetunedD3.badCount (v i₁) g + DetunedD3.badCount (v i₂) g +
+      DetunedD3.badCount (v i₃) g ≤ g.toNat)
+    (hoverlap : ∀ u : ℝ,
+      (detunedBadBranches (v i₁) g u ∩
+        detunedBadBranches (v i₂) g u).Nonempty ∨
+      (detunedBadBranches (v i₁) g u ∩
+        detunedBadBranches (v i₃) g u).Nonempty ∨
+      (detunedBadBranches (v i₂) g u ∩
+        detunedBadBranches (v i₃) g u).Nonempty) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  DetunedD3.lonely14_of_three_detuned_instance cite v hv g hg
+    i₁ i₂ i₃ h12 h13 h23 hdvd
+    (threeDetunedInstanceClearing_of_pairOverlap
+      (v i₁) (v i₂) (v i₃) g (by omega) hbudget hoverlap)
+
 /-- Exact obstruction certificate for the uniform `(3,3,3)` row-degree
 pattern: the three bad rows partition all branch classes, attain size `g/3`,
 and are pairwise disjoint. -/
@@ -250,6 +287,8 @@ theorem uniformThreeBadPartition_of_noGoodBranch
 #print axioms card_three_union_lt_of_pair_overlap
 #print axioms hasThreeDetunedGoodBranch_of_pairOverlap
 #print axioms HasThreeDetunedGoodBranch.clearances
+#print axioms threeDetunedInstanceClearing_of_pairOverlap
+#print axioms lonely14_of_three_detuned_pairOverlap
 #print axioms uniformThreeBadPartition_of_noGoodBranch
 
 end
