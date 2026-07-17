@@ -23,7 +23,7 @@ sum_(k=2)^6 binom(6,k)16^k = 24,137,472
 literal state words per support.  Thus the unquotiented labelled bank has
 
 ```text
-924*24,137,472 = 22,304,224,128
+924*24,137,472 = 22,303,024,128
 ```
 
 state contexts.
