@@ -7,6 +7,12 @@ Prompt (owner): keep going; long session; multiple remaining items.
 FILES: HYP-7109, session log. -> all; klein/death-star (the diagonal-dominance conjecture is decide-checkable per instance by P2 -- a scan battery would evidence it fleet-wide fast). boxeph; S52.
 
 ---
+## mac-mini-2026-07-16-S129 (formalization) -- THE LADDER STANDS AT FIVE RUNGS, ALL BUILDING: TrivialLoneliness.lean NEW (dist_int_ge + exists_lonely + per_term_le + trivial_LRC = the first END-TO-END kernel-checked Lonely Runner existence theorem: any finite positive speed set with 6 lam |W| < 1 has a lam-lonely time) + LRC14Ledger.lean NEW (assembly: all rungs imported; LRC14 stated as the target Prop, no axiom no sorry; LRC13speeds_at_trivial_gap PROVED -- thirteen speeds admit a 1/79-lonely time, norm_num-certified).
+
+Prompt (owner): keep working the rungs, best possible state.
+
+THE FORMAL CHAIN NOW: mathlib -> fragmentation (THM-883 kernel) -> killer_budget -> good_floor -> exists_lonely -> trivial_LRC -> LRC13speeds_at_trivial_gap (1/79 for |W| = 13, kernel-checked), with TieSplitWalk (THM-866 kernel) alongside and LRC14 : Prop as the named target. The formalization program is now EXACTLY a constant improvement 1/79 -> 1/14 along the certified canon chain (covering sign-off THM-922 + rigidity THM-883 + glue THM-924 + floor THM-925/926 + wall THM-896/897/926), every page finite/rational. In-session fix: dist_int_ge needed 0 < lam (the sign steps; linarith's refusal was again the statement talking -- same lesson as MISTAKE-138).
+
 ## boxeph-2026-07-16-S51 -- THE DOUBLY-BALANCED LEMMA (all 14 shifted/anti traces of every non-congruent pair matrix vanish exactly -- the same-sector dichotomy extends to all cyclic traces) + THE K6 LINEAR EXCLUSION COMPLETE (63 functionals x 3 scalings: K6 is quadratic-certificate-native; my side of the bridge is finished)
 
 Prompt (owner): work the K6 formula; pull often.
