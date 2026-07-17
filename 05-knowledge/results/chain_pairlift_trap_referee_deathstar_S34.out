@@ -1,0 +1,4 @@
+trap referee (4000 dense-core families): inequalities PASS; A1 brute PASS; A2 sampled PASS
+pair-lift referee: PASS [singles 37059 | pair-dodge 377 | triple-core 162564] of 200000
+  the dodge closes 377/162941 = 0.2% of the former dense core in this mix
+planted pair-dodge families (20000): PASS
