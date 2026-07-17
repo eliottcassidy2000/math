@@ -11,6 +11,42 @@ one modulo four. -/
 def twoFourFourPhaseFrequency (a₂ a₄a a₄b : ℤ) : ℤ :=
   (2 * a₂ + a₄a + a₄b) / 4
 
+/-- The zero-frequency q244 residual is genuine at the fixed-phase interface.
+The normalized numerators `(-7,5,9)` are all one modulo four and have frequency
+zero, while the corresponding speed rows `(-14,5,9)` cover all four branches
+at `u=5/12`.  Thus residue arithmetic alone cannot discard the exact signed
+support-three relation.
+
+The natural vertices here are the four branch residue classes: the q-two row
+owns `{1,3}` and the q-four rows own `{2}` and `{0}`.  Orienting this exact
+partition as a runner tournament would erase the cover predicate. -/
+theorem twoFourFour_zero_frequency_fixedPhase_counterexample :
+    twoFourFourPhaseFrequency (-7) 5 9 = 0 ∧
+      ¬ HasThreeDetunedGoodBranch (-14) 5 9 4 ((5 : ℝ) / 12) := by
+  constructor
+  · norm_num [twoFourFourPhaseFrequency]
+  · rintro ⟨c, hcIco, hcTwo, hcFourA, hcFourB⟩
+    have hcBounds := Finset.mem_Ico.mp hcIco
+    have hc0 : 0 ≤ c := hcBounds.1
+    have hc4 : c < 4 := hcBounds.2
+    interval_cases c
+    · apply hcFourB
+      rw [detunedBadBranches, Finset.mem_filter]
+      refine ⟨by norm_num, 1, ?_⟩
+      norm_num [abs_of_nonneg, abs_of_nonpos]
+    · apply hcTwo
+      rw [detunedBadBranches, Finset.mem_filter]
+      refine ⟨by norm_num, -5, ?_⟩
+      norm_num [abs_of_nonneg, abs_of_nonpos]
+    · apply hcFourA
+      rw [detunedBadBranches, Finset.mem_filter]
+      refine ⟨by norm_num, 3, ?_⟩
+      norm_num [abs_of_nonneg, abs_of_nonpos]
+    · apply hcTwo
+      rw [detunedBadBranches, Finset.mem_filter]
+      refine ⟨by norm_num, -12, ?_⟩
+      norm_num [abs_of_nonneg, abs_of_nonpos]
+
 /-- The exact q244 residue cover has zero cyclic first moment. -/
 theorem twoFourFour_code_offset_dvd
     (c₂ c₄a c₄b : ℤ)
@@ -66,6 +102,50 @@ theorem normalizedPhaseBad_of_detunedBadBranch
       ring
     rw [heq, abs_neg] at hn
     exact hn
+
+/-- A bad normalized denominator-`q` row is contained in one integer-frequency
+wall of radius `q/14`.  Multiplication by `q` absorbs the branch offset into the
+integer witness. -/
+theorem integerFrequencyBad_of_normalizedBad
+    (numerator branch denominator : ℤ) (u : ℝ)
+    (hdenominator : 0 < denominator)
+    (hbad : ∃ integer : ℤ,
+      |(numerator : ℝ) *
+          ((u + (branch : ℝ)) / (denominator : ℝ)) - integer| < 1 / 14) :
+    ∃ integer : ℤ,
+      |(numerator : ℝ) * u - integer| < (denominator : ℝ) / 14 := by
+  obtain ⟨integer, hinteger⟩ := hbad
+  refine ⟨denominator * integer - numerator * branch, ?_⟩
+  have hdenominatorReal : (0 : ℝ) < denominator := by
+    exact_mod_cast hdenominator
+  have heq :
+      (numerator : ℝ) * u -
+          ((denominator * integer - numerator * branch : ℤ) : ℝ) =
+        (denominator : ℝ) *
+          ((numerator : ℝ) *
+            ((u + (branch : ℝ)) / (denominator : ℝ)) - integer) := by
+    push_cast
+    field_simp [ne_of_gt hdenominatorReal]
+    ring
+  rw [heq, abs_mul, abs_of_pos hdenominatorReal]
+  calc
+    (denominator : ℝ) *
+        |(numerator : ℝ) *
+          ((u + (branch : ℝ)) / (denominator : ℝ)) - integer| <
+      (denominator : ℝ) * (1 / 14) :=
+        mul_lt_mul_of_pos_left hinteger hdenominatorReal
+    _ = (denominator : ℝ) / 14 := by ring
+
+/-- The q-two specialization has radius `1/7`.  Unlike the combined q244 wall,
+this scalar wall does not suffer cancellation between selected speeds. -/
+theorem integerFrequencyBad_of_normalizedQTwoBad
+    (numerator branch : ℤ) (u : ℝ)
+    (hbad : ∃ integer : ℤ,
+      |(numerator : ℝ) * ((u + (branch : ℝ)) / 2) - integer| < 1 / 14) :
+    ∃ integer : ℤ,
+      |(numerator : ℝ) * u - integer| < 1 / 7 := by
+  convert integerFrequencyBad_of_normalizedBad
+    numerator branch 2 u (by norm_num) hbad using 1 <;> norm_num
 
 /-- A q2 or q4 reduced numerator can be independently signed to residue one
 modulo four. -/
@@ -129,6 +209,112 @@ theorem exists_signed_reducedNumerator_modFour
       rw [hpThree] at hpDecomp
       refine ⟨-(p / 4) - 1, ?_⟩
       omega
+
+/-- Absorbing a sign into a reduced numerator gives an exact scaling identity.
+This is the algebraic bridge from the normalized q244 frequency back to the
+three original selected speeds. -/
+theorem signed_reducedNumerator_scale
+    (delta modulus divisor denominator sign numerator : ℤ)
+    (hdelta : delta = divisor * (sign * numerator))
+    (hmodulus : modulus = divisor * denominator)
+    (hsign : sign = 1 ∨ sign = -1) :
+    denominator * (sign * delta) = modulus * numerator := by
+  rcases hsign with rfl | rfl
+  · rw [hdelta, hmodulus]
+    ring
+  · rw [hdelta, hmodulus]
+    ring
+
+/-- Absolute-value form of a normalized denominator scale. -/
+theorem normalized_abs_scale
+    (delta modulus denominator sign numerator : ℤ)
+    (hmodulus : 0 ≤ modulus)
+    (hdenominator : 0 ≤ denominator)
+    (hsign : sign = 1 ∨ sign = -1)
+    (hscale : denominator * (sign * delta) = modulus * numerator) :
+    (denominator : ℝ) * |(delta : ℝ)| =
+      (modulus : ℝ) * |(numerator : ℝ)| := by
+  have hscaleReal :
+      (denominator : ℝ) * ((sign : ℝ) * (delta : ℝ)) =
+        (modulus : ℝ) * (numerator : ℝ) := by
+    exact_mod_cast hscale
+  have hsignAbs : |(sign : ℝ)| = 1 := by
+    rcases hsign with rfl | rfl <;> norm_num
+  have hmodulusReal : (0 : ℝ) ≤ modulus := by exact_mod_cast hmodulus
+  have hdenominatorReal : (0 : ℝ) ≤ denominator := by
+    exact_mod_cast hdenominator
+  have habs := congrArg abs hscaleReal
+  rw [abs_mul, abs_mul, abs_mul, hsignAbs,
+    abs_of_nonneg hmodulusReal, abs_of_nonneg hdenominatorReal] at habs
+  norm_num only [one_mul] at habs
+  exact habs
+
+/-- Absolute-value form of the normalized q-two scale. -/
+theorem normalizedQTwo_abs_scale
+    (delta modulus sign numerator : ℤ)
+    (hmodulus : 0 ≤ modulus)
+    (hsign : sign = 1 ∨ sign = -1)
+    (hscale : 2 * (sign * delta) = modulus * numerator) :
+    (2 : ℝ) * |(delta : ℝ)| =
+      (modulus : ℝ) * |(numerator : ℝ)| :=
+  normalized_abs_scale delta modulus 2 sign numerator
+    hmodulus (by norm_num) hsign hscale
+
+/-- Exact q244 frequency dictionary.  Once the three primitive numerators are
+signed to residue one modulo four, the scalar wall frequency is not an
+auxiliary parameter: multiplying it by the common modulus gives the signed
+sum of the three selected speeds. -/
+theorem signed_sum_eq_modulus_mul_twoFourFourPhaseFrequency
+    (deltaTwo deltaFourA deltaFourB modulus : ℤ)
+    (signTwo signFourA signFourB
+      numeratorTwo numeratorFourA numeratorFourB : ℤ)
+    (hscaleTwo :
+      2 * (signTwo * deltaTwo) = modulus * numeratorTwo)
+    (hscaleFourA :
+      4 * (signFourA * deltaFourA) = modulus * numeratorFourA)
+    (hscaleFourB :
+      4 * (signFourB * deltaFourB) = modulus * numeratorFourB)
+    (hresTwo : (4 : ℤ) ∣ numeratorTwo - 1)
+    (hresFourA : (4 : ℤ) ∣ numeratorFourA - 1)
+    (hresFourB : (4 : ℤ) ∣ numeratorFourB - 1) :
+    signTwo * deltaTwo + signFourA * deltaFourA +
+        signFourB * deltaFourB =
+      modulus * twoFourFourPhaseFrequency
+        numeratorTwo numeratorFourA numeratorFourB := by
+  obtain ⟨kTwo, hkTwo⟩ := hresTwo
+  obtain ⟨kFourA, hkFourA⟩ := hresFourA
+  obtain ⟨kFourB, hkFourB⟩ := hresFourB
+  have hfrequencyDvd :
+      (4 : ℤ) ∣ 2 * numeratorTwo + numeratorFourA + numeratorFourB := by
+    refine ⟨2 * kTwo + kFourA + kFourB + 1, ?_⟩
+    omega
+  have hfrequency :
+      twoFourFourPhaseFrequency numeratorTwo numeratorFourA numeratorFourB * 4 =
+        2 * numeratorTwo + numeratorFourA + numeratorFourB :=
+    Int.ediv_mul_cancel hfrequencyDvd
+  have hfour :
+      4 * (signTwo * deltaTwo + signFourA * deltaFourA +
+          signFourB * deltaFourB) =
+        4 * (modulus * twoFourFourPhaseFrequency
+          numeratorTwo numeratorFourA numeratorFourB) := by
+    calc
+      4 * (signTwo * deltaTwo + signFourA * deltaFourA +
+          signFourB * deltaFourB) =
+        2 * (2 * (signTwo * deltaTwo)) +
+          4 * (signFourA * deltaFourA) +
+          4 * (signFourB * deltaFourB) := by ring
+      _ = 2 * (modulus * numeratorTwo) +
+          modulus * numeratorFourA + modulus * numeratorFourB := by
+            rw [hscaleTwo, hscaleFourA, hscaleFourB]
+      _ = modulus *
+          (2 * numeratorTwo + numeratorFourA + numeratorFourB) := by ring
+      _ = modulus *
+          (twoFourFourPhaseFrequency
+            numeratorTwo numeratorFourA numeratorFourB * 4) := by
+              rw [hfrequency]
+      _ = 4 * (modulus * twoFourFourPhaseFrequency
+          numeratorTwo numeratorFourA numeratorFourB) := by ring
+  omega
 
 /-- The q244 parallel partition forces its normalized scalar frequency into
 the open `3/14` neighborhood of an integer.  `hcode` is exactly the offset
@@ -261,6 +447,128 @@ theorem frequency_bad_of_twoFourFour_failure
       (twoFourFour_code_offset_dvd c₂ c₄a c₄b
         hparityA hparityB hdistinct)
       hbad₂ hbad₄a hbad₄b
+
+/-- Canonical q244 wall with its arithmetic content retained.  In addition to
+the failure wall, this version exposes the three independent signs and the
+exact signed-speed identity that the earlier existential interface discarded.
+Consequently a zero wall frequency is literally a support-three relation with
+coefficients in `{+1,-1}`. -/
+theorem exists_twoFourFour_normalized_signed_failureWall
+    (deltaTwo deltaFourA deltaFourB modulus : ℤ) (hmodulus : 2 ≤ modulus)
+    (hqTwo : modulus / (Int.gcd deltaTwo modulus : ℤ) = 2)
+    (hqFourA : modulus / (Int.gcd deltaFourA modulus : ℤ) = 4)
+    (hqFourB : modulus / (Int.gcd deltaFourB modulus : ℤ) = 4) :
+    ∃ signTwo signFourA signFourB
+        numeratorTwo numeratorFourA numeratorFourB : ℤ,
+      (signTwo = 1 ∨ signTwo = -1) ∧
+      (signFourA = 1 ∨ signFourA = -1) ∧
+      (signFourB = 1 ∨ signFourB = -1) ∧
+      (4 : ℤ) ∣ numeratorTwo - 1 ∧
+      (4 : ℤ) ∣ numeratorFourA - 1 ∧
+      (4 : ℤ) ∣ numeratorFourB - 1 ∧
+      2 * (signTwo * deltaTwo) = modulus * numeratorTwo ∧
+      4 * (signFourA * deltaFourA) = modulus * numeratorFourA ∧
+      4 * (signFourB * deltaFourB) = modulus * numeratorFourB ∧
+      signTwo * deltaTwo + signFourA * deltaFourA +
+          signFourB * deltaFourB =
+        modulus * twoFourFourPhaseFrequency
+          numeratorTwo numeratorFourA numeratorFourB ∧
+      (∀ u : ℝ,
+        ¬ HasThreeDetunedGoodBranch
+          deltaTwo deltaFourA deltaFourB modulus u →
+        ∃ integer : ℤ, |(numeratorTwo : ℝ) * u - integer| < 1 / 7) ∧
+      (∀ u : ℝ,
+        ¬ HasThreeDetunedGoodBranch
+          deltaTwo deltaFourA deltaFourB modulus u →
+        ∃ integer : ℤ, |(numeratorFourA : ℝ) * u - integer| < 2 / 7) ∧
+      (∀ u : ℝ,
+        ¬ HasThreeDetunedGoodBranch
+          deltaTwo deltaFourA deltaFourB modulus u →
+        ∃ integer : ℤ, |(numeratorFourB : ℝ) * u - integer| < 2 / 7) ∧
+      ∀ u : ℝ,
+        ¬ HasThreeDetunedGoodBranch
+          deltaTwo deltaFourA deltaFourB modulus u →
+        ∃ integer : ℤ,
+          |(twoFourFourPhaseFrequency
+              numeratorTwo numeratorFourA numeratorFourB : ℝ) * u - integer| <
+            3 / 14 := by
+  obtain ⟨divisorTwo, signTwo, numeratorTwo, hdivisorTwo, hdeltaTwo,
+      hmodulusTwo, hsignTwo, hresTwo⟩ :=
+    exists_signed_reducedNumerator_modFour deltaTwo modulus 2
+      (by omega) (Or.inl rfl) hqTwo
+  obtain ⟨divisorFourA, signFourA, numeratorFourA, hdivisorFourA,
+      hdeltaFourA, hmodulusFourA, hsignFourA, hresFourA⟩ :=
+    exists_signed_reducedNumerator_modFour deltaFourA modulus 4
+      (by omega) (Or.inr rfl) hqFourA
+  obtain ⟨divisorFourB, signFourB, numeratorFourB, hdivisorFourB,
+      hdeltaFourB, hmodulusFourB, hsignFourB, hresFourB⟩ :=
+    exists_signed_reducedNumerator_modFour deltaFourB modulus 4
+      (by omega) (Or.inr rfl) hqFourB
+  have hscaleTwo :
+      2 * (signTwo * deltaTwo) = modulus * numeratorTwo :=
+    signed_reducedNumerator_scale deltaTwo modulus divisorTwo 2
+      signTwo numeratorTwo hdeltaTwo hmodulusTwo hsignTwo
+  have hscaleFourA :
+      4 * (signFourA * deltaFourA) = modulus * numeratorFourA :=
+    signed_reducedNumerator_scale deltaFourA modulus divisorFourA 4
+      signFourA numeratorFourA hdeltaFourA hmodulusFourA hsignFourA
+  have hscaleFourB :
+      4 * (signFourB * deltaFourB) = modulus * numeratorFourB :=
+    signed_reducedNumerator_scale deltaFourB modulus divisorFourB 4
+      signFourB numeratorFourB hdeltaFourB hmodulusFourB hsignFourB
+  have hidentity :=
+    signed_sum_eq_modulus_mul_twoFourFourPhaseFrequency
+      deltaTwo deltaFourA deltaFourB modulus
+      signTwo signFourA signFourB numeratorTwo numeratorFourA numeratorFourB
+      hscaleTwo hscaleFourA hscaleFourB hresTwo hresFourA hresFourB
+  have hrowWalls : ∀ u : ℝ,
+      ¬ HasThreeDetunedGoodBranch
+          deltaTwo deltaFourA deltaFourB modulus u →
+      (∃ integer : ℤ, |(numeratorTwo : ℝ) * u - integer| < 1 / 7) ∧
+      (∃ integer : ℤ, |(numeratorFourA : ℝ) * u - integer| < 2 / 7) ∧
+      (∃ integer : ℤ, |(numeratorFourB : ℝ) * u - integer| < 2 / 7) := by
+    intro u hfail
+    obtain ⟨branchTwo, branchFourA, branchFourB,
+        hbranchTwo, hbranchFourA, hbranchFourB, -, -, -, -, -, -⟩ :=
+      qTwo_four_four_failure_normal_form
+        deltaTwo deltaFourA deltaFourB modulus u hmodulus
+          hqTwo hqFourA hqFourB hfail
+    have hbadTwo := normalizedPhaseBad_of_detunedBadBranch
+      deltaTwo modulus divisorTwo 2 signTwo numeratorTwo branchTwo u
+        hdivisorTwo (by norm_num) hdeltaTwo hmodulusTwo hsignTwo hbranchTwo
+    have hbadFourA := normalizedPhaseBad_of_detunedBadBranch
+      deltaFourA modulus divisorFourA 4 signFourA numeratorFourA branchFourA u
+        hdivisorFourA (by norm_num) hdeltaFourA hmodulusFourA
+          hsignFourA hbranchFourA
+    have hbadFourB := normalizedPhaseBad_of_detunedBadBranch
+      deltaFourB modulus divisorFourB 4 signFourB numeratorFourB branchFourB u
+        hdivisorFourB (by norm_num) hdeltaFourB hmodulusFourB
+          hsignFourB hbranchFourB
+    refine ⟨integerFrequencyBad_of_normalizedQTwoBad
+      numeratorTwo branchTwo u hbadTwo, ?_, ?_⟩
+    · convert integerFrequencyBad_of_normalizedBad
+        numeratorFourA branchFourA 4 u (by norm_num) hbadFourA using 1 <;>
+          norm_num
+    · convert integerFrequencyBad_of_normalizedBad
+        numeratorFourB branchFourB 4 u (by norm_num) hbadFourB using 1 <;>
+          norm_num
+  refine ⟨signTwo, signFourA, signFourB,
+    numeratorTwo, numeratorFourA, numeratorFourB,
+    hsignTwo, hsignFourA, hsignFourB,
+    hresTwo, hresFourA, hresFourB,
+    hscaleTwo, hscaleFourA, hscaleFourB, hidentity,
+    fun u hfail => (hrowWalls u hfail).1,
+    fun u hfail => (hrowWalls u hfail).2.1,
+    fun u hfail => (hrowWalls u hfail).2.2, ?_⟩
+  intro u hfail
+  exact frequency_bad_of_twoFourFour_failure
+    deltaTwo deltaFourA deltaFourB modulus u hmodulus hqTwo hqFourA hqFourB
+      divisorTwo divisorFourA divisorFourB signTwo signFourA signFourB
+      numeratorTwo numeratorFourA numeratorFourB
+      hdivisorTwo hdivisorFourA hdivisorFourB
+      hdeltaTwo hdeltaFourA hdeltaFourB
+      hmodulusTwo hmodulusFourA hmodulusFourB
+      hsignTwo hsignFourA hsignFourB hresTwo hresFourA hresFourB hfail
 
 /-- Denominator hypotheses alone canonically supply some normalized q244
 scalar wall.  The frequency may vanish; that exact support-three relation is

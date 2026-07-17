@@ -383,6 +383,76 @@ theorem uniformThreeBadPartition_iff_cyclicObstruction
 def threePhaseFrequency (a : Fin 3 → ℤ) : ℤ :=
   (∑ i, a i) / 3
 
+/-- The normalized frequency is not merely an integer quotient: for three
+residue-one representatives its defining numerator is exactly `3 * F`. -/
+theorem threePhaseFrequency_mul_three
+    (a : Fin 3 → ℤ) (hresidue : ∀ i, (3 : ℤ) ∣ a i - 1) :
+    threePhaseFrequency a * 3 = ∑ i, a i := by
+  apply Int.ediv_mul_cancel
+  obtain ⟨k0, hk0⟩ := hresidue 0
+  obtain ⟨k1, hk1⟩ := hresidue 1
+  obtain ⟨k2, hk2⟩ := hresidue 2
+  have hsum : (∑ i, a i) = a 0 + a 1 + a 2 := by
+    simp [Fin.sum_univ_succ, add_assoc]
+  rw [hsum]
+  refine ⟨k0 + k1 + k2 + 1, ?_⟩
+  omega
+
+/-- The zero-frequency residue is exactly a signed support-three relation.
+This is the interface to the chain-dense unit-relation traps: after the three
+coordinate signs are restored, no approximation remains. -/
+theorem threePhaseFrequency_eq_zero_iff_three_term_relation
+    (a : Fin 3 → ℤ) (hresidue : ∀ i, (3 : ℤ) ∣ a i - 1) :
+    threePhaseFrequency a = 0 ↔ a 0 + a 1 + a 2 = 0 := by
+  have hfactor := threePhaseFrequency_mul_three a hresidue
+  have hsum : (∑ i, a i) = a 0 + a 1 + a 2 := by
+    simp [Fin.sum_univ_succ, add_assoc]
+  rw [hsum] at hfactor
+  constructor <;> intro h
+  · rw [h] at hfactor
+    omega
+  · omega
+
+/-- Quantitative form of the same relation interface.  If the third signed
+representative dominates the other two by `33B`, then the normalized scalar
+frequency has the `11B` size required by dynamic interval escape.  Relabeling
+the three coordinates puts any proposed dominant coordinate in slot two. -/
+theorem threePhaseFrequency_large_of_third_gap
+    (a : Fin 3 → ℤ) (hresidue : ∀ i, (3 : ℤ) ∣ a i - 1)
+    (B : ℝ)
+    (hgap : 33 * B ≤
+      |(a 2 : ℝ)| - |(a 0 : ℝ)| - |(a 1 : ℝ)|) :
+    11 * B ≤ |(threePhaseFrequency a : ℝ)| := by
+  have hfactorZ := threePhaseFrequency_mul_three a hresidue
+  have hfactorR : (threePhaseFrequency a : ℝ) * 3 =
+      (a 0 : ℝ) + a 1 + a 2 := by
+    have hsum : (∑ i, a i) = a 0 + a 1 + a 2 := by
+      simp [Fin.sum_univ_succ, add_assoc]
+    rw [hsum] at hfactorZ
+    exact_mod_cast hfactorZ
+  have htriangle : |(a 2 : ℝ)| ≤
+      |(a 0 : ℝ) + a 1 + a 2| + |(a 0 : ℝ)| + |(a 1 : ℝ)| := by
+    calc
+      |(a 2 : ℝ)| =
+          |((a 0 : ℝ) + a 1 + a 2) + (-((a 0 : ℝ) + a 1))| := by
+            congr 1
+            ring
+      _ ≤ |(a 0 : ℝ) + a 1 + a 2| + |-((a 0 : ℝ) + a 1)| :=
+        abs_add_le _ _
+      _ = |(a 0 : ℝ) + a 1 + a 2| + |(a 0 : ℝ) + a 1| := by
+        rw [abs_neg]
+      _ ≤ |(a 0 : ℝ) + a 1 + a 2| +
+          (|(a 0 : ℝ)| + |(a 1 : ℝ)|) := by
+        exact add_le_add_right (abs_add_le _ _) _
+      _ = |(a 0 : ℝ) + a 1 + a 2| + |(a 0 : ℝ)| + |(a 1 : ℝ)| := by
+        ring
+  have hsumAbs : |(a 0 : ℝ) + a 1 + a 2| =
+      3 * |(threePhaseFrequency a : ℝ)| := by
+    rw [← hfactorR, abs_mul]
+    norm_num
+    ring
+  nlinarith
+
 /-- A saturated cyclic matching forces the normalized sum frequency into the
 open `3/14` neighborhood of an integer. -/
 theorem frequency_bad_of_cyclicObstruction
@@ -441,6 +511,36 @@ theorem frequency_bad_of_cyclicObstruction
   rw [threeClassPhase, abs_lt] at hn0 hn1 hn2
   simp only [threeClassPhase] at ⊢
   constructor <;> linarith
+
+/-- Primitive q333 denominator data canonically supplies a sign-normalized
+scalar failure wall.  Unlike the earlier large-frequency socket, this theorem
+does not require the original selected speeds themselves to be `1 mod 3`:
+each unit is independently signed, and cyclic-obstruction invariance transports
+the wall back to the original three speeds. -/
+theorem exists_uniformThree_normalized_failureWall
+    (p : Fin 3 → ℤ) (hunit : ∀ i, ¬ (3 : ℤ) ∣ p i) :
+    ∃ ε a : Fin 3 → ℤ,
+      (∀ i, ε i = 1 ∨ ε i = -1) ∧
+      (∀ i, a i = ε i * p i) ∧
+      (∀ i, (3 : ℤ) ∣ a i - 1) ∧
+      ∀ u : ℝ,
+        ¬ HasThreeDetunedGoodBranch (p 0) (p 1) (p 2) 3 u →
+        ∃ n : ℤ,
+          |(threePhaseFrequency a : ℝ) * u - n| < 3 / 14 := by
+  choose ε hε hresidue using fun i =>
+    exists_sign_mul_residue_one (p i) (hunit i)
+  let a : Fin 3 → ℤ := fun i => ε i * p i
+  refine ⟨ε, a, hε, fun i => rfl, ?_, ?_⟩
+  · intro i
+    exact hresidue i
+  · intro u hfail
+    have hpObstruction : ThreeClassCyclicObstruction p u :=
+      (noThreeDetunedGoodBranch_three_iff_cyclicObstruction
+        p u hunit).mp hfail
+    have haObstruction : ThreeClassCyclicObstruction a u := by
+      apply (cyclicObstruction_sign_iff p ε u hε).mpr
+      exact hpObstruction
+    exact frequency_bad_of_cyclicObstruction a u hresidue haObstruction
 
 /-- The minimal scalar escape inequality: if the normalized sum frequency is
 `3/14`-clear at `u`, then one of the exact three branches clears every unit
@@ -556,7 +656,11 @@ theorem phaseCounterexample_not_frequency_clear :
 #print axioms hasThreeDetunedGoodBranch_three_iff_no_cyclicObstruction
 #print axioms noThreeDetunedGoodBranch_three_iff_cyclicObstruction
 #print axioms uniformThreeBadPartition_iff_cyclicObstruction
+#print axioms threePhaseFrequency_mul_three
+#print axioms threePhaseFrequency_eq_zero_iff_three_term_relation
+#print axioms threePhaseFrequency_large_of_third_gap
 #print axioms frequency_bad_of_cyclicObstruction
+#print axioms exists_uniformThree_normalized_failureWall
 #print axioms exists_threeClassClear_of_frequency_clear
 #print axioms phaseCounterexample_harmonic_clear
 #print axioms phaseCounterexample_cyclicObstruction
