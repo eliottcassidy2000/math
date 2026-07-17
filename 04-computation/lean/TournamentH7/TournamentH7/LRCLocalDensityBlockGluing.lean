@@ -16,8 +16,8 @@
     with equality when an interval joins an upper extremum to a lower extremum;
   * summing the local inequality over components pays exactly card * q, and a
     component cap turns this into M * q;
-  * if each newly deleted tooth raises component count by at most one, N teeth
-    leave at most N components;
+  * exact rational interval subtraction proves the concrete cut-open-circle
+    one-tooth split, and its atlas feeds the N-tooth component cap;
   * any sequence of nonnegative-density recurrence steps is bounded below by
     the recursive product-minus-weighted-debt ledger.
 
@@ -26,6 +26,7 @@
 -/
 
 import Mathlib.Tactic
+import TournamentH7.LRCRegionDiff
 
 open scoped BigOperators
 
@@ -198,6 +199,152 @@ theorem fixedScale_weaker_loss
 
 end ComponentSum
 
+section CircularToothSplit
+
+open LonelyRunner.RatIntervals
+
+/-- The number of cut-open interval pieces.  For a normalized maximal region,
+this is its ordinary interval-component count. -/
+def intervalComponentCount (region : Region) : ℕ := List.length region
+
+/-- In a cut-open unit circle, the leftmost and rightmost pieces belong to one
+circular component when both boundary sides occur.  The length guard prevents
+the full-circle singleton `[(0, 1)]` from being incorrectly merged away. -/
+def boundaryPiecesJoined (region : Region) : Bool :=
+  decide (2 ≤ intervalComponentCount region) &&
+    region.any (fun interval => interval.1 == 0) &&
+    region.any (fun interval => interval.2 == 1)
+
+/-- Component count of a cut-open circular interval region: merge the two
+boundary pieces exactly when they are the two ends of one circular component. -/
+def circularComponentCount (region : Region) : ℕ :=
+  if boundaryPiecesJoined region then
+    intervalComponentCount region - 1
+  else
+    intervalComponentCount region
+
+theorem circularComponentCount_le_intervalComponentCount (region : Region) :
+    circularComponentCount region ≤ intervalComponentCount region := by
+  unfold circularComponentCount
+  split <;> omega
+
+/-- Cutting a circular component at one chart boundary creates at most one
+extra interval piece. -/
+theorem intervalComponentCount_le_circularComponentCount_add_one (region : Region) :
+    intervalComponentCount region ≤ circularComponentCount region + 1 := by
+  unfold circularComponentCount
+  split <;> omega
+
+/-- A connected circular tooth after rotating its initial endpoint to `0`.
+The endpoint convention is half-open, matching `RatIntervals`. -/
+structure AnchoredCircularTooth where
+  width : ℚ
+  width_pos : 0 < width
+  width_le_one : width ≤ 1
+
+/-- Delete an anchored circular tooth from a cut-open interval region. -/
+def deleteAnchoredTooth (region : Region) (tooth : AnchoredCircularTooth) : Region :=
+  diff1F region (0, tooth.width)
+
+/-- `deleteAnchoredTooth` is exact set subtraction in the cut-open chart. -/
+theorem mem_deleteAnchoredTooth {x : ℚ} {region : Region}
+    {tooth : AnchoredCircularTooth} :
+    mem x (deleteAnchoredTooth region tooth) ↔
+      mem x region ∧ ¬ ((0 : ℚ) ≤ x ∧ x < tooth.width) := by
+  simpa [deleteAnchoredTooth] using
+    (mem_diff1F (x := x) (L := region) (q := ((0 : ℚ), tooth.width)))
+
+/-- Subtracting an interval whose left endpoint is the chart boundary leaves
+at most one live piece of each input interval. -/
+theorem cutF_anchored_length_le_one
+    (interval : ℚ × ℚ) (tooth : AnchoredCircularTooth)
+    (hleft : 0 ≤ interval.1) :
+    List.length (cutF interval (0, tooth.width)) ≤ 1 := by
+  have hdead : ¬ interval.1 < min interval.2 0 := by
+    exact not_lt.mpr (le_trans (min_le_right _ _) hleft)
+  have hfilter := List.length_filter_le
+    (fun other : ℚ × ℚ => decide (other.1 < other.2))
+    [(max interval.1 tooth.width, interval.2)]
+  simpa [cutF, cut, hdead] using hfilter
+
+/-- Anchored tooth deletion cannot increase the cut-open piece count. -/
+theorem intervalComponentCount_deleteAnchoredTooth_le
+    (region : Region) (tooth : AnchoredCircularTooth)
+    (hleft : ∀ interval ∈ region, 0 ≤ interval.1) :
+    intervalComponentCount (deleteAnchoredTooth region tooth) ≤
+      intervalComponentCount region := by
+  induction region with
+  | nil => simp [intervalComponentCount, deleteAnchoredTooth, diff1F]
+  | cons interval region inductionHypothesis =>
+      have hhead : 0 ≤ interval.1 := hleft interval (List.mem_cons_self ..)
+      have htail : ∀ other ∈ region, 0 ≤ other.1 := by
+        intro other hother
+        exact hleft other (List.mem_cons_of_mem _ hother)
+      calc
+        intervalComponentCount
+              (deleteAnchoredTooth (interval :: region) tooth)
+            = List.length (cutF interval (0, tooth.width)) +
+                intervalComponentCount (deleteAnchoredTooth region tooth) := by
+                  simp [intervalComponentCount, deleteAnchoredTooth, diff1F]
+        _ ≤ 1 + intervalComponentCount region :=
+          Nat.add_le_add (cutF_anchored_length_le_one interval tooth hhead)
+            (inductionHypothesis htail)
+        _ = intervalComponentCount (interval :: region) := by
+          simp [intervalComponentCount, Nat.add_comm]
+
+/-- **Concrete one-circular-tooth split.**  Rotate the new connected tooth so
+it starts at the cut.  The old circular survivor can gain one cut-open piece;
+anchored subtraction gains none; closing the chart can only merge pieces.
+Hence deleting one circular tooth raises component count by at most one. -/
+theorem circularComponentCount_deleteAnchoredTooth_le_add_one
+    (region : Region) (tooth : AnchoredCircularTooth)
+    (hleft : ∀ interval ∈ region, 0 ≤ interval.1) :
+    circularComponentCount (deleteAnchoredTooth region tooth) ≤
+      circularComponentCount region + 1 := by
+  calc
+    circularComponentCount (deleteAnchoredTooth region tooth)
+        ≤ intervalComponentCount (deleteAnchoredTooth region tooth) :=
+      circularComponentCount_le_intervalComponentCount _
+    _ ≤ intervalComponentCount region :=
+      intervalComponentCount_deleteAnchoredTooth_le region tooth hleft
+    _ ≤ circularComponentCount region + 1 :=
+      intervalComponentCount_le_circularComponentCount_add_one region
+
+/-- The complement of the first anchored tooth in the full circle has at most
+one circular component. -/
+theorem firstCircularTooth_componentCount_le_one (tooth : AnchoredCircularTooth) :
+    circularComponentCount (deleteAnchoredTooth [(0, 1)] tooth) ≤ 1 := by
+  calc
+    circularComponentCount (deleteAnchoredTooth [(0, 1)] tooth)
+        ≤ intervalComponentCount (deleteAnchoredTooth [(0, 1)] tooth) :=
+      circularComponentCount_le_intervalComponentCount _
+    _ ≤ intervalComponentCount [(0, 1)] := by
+      apply intervalComponentCount_deleteAnchoredTooth_le
+      simp
+    _ = 1 := by simp [intervalComponentCount]
+
+/-- A concrete cut-chart atlas for successive circular tooth deletions.
+`chart n` is obtained by rotating the survivor after `n` deletions so that the
+next tooth starts at `0`.  The only topology-facing fields are that this
+recharting preserves circular component count and lists normalized unit-chart
+pieces; deletion itself is the exact `RatIntervals.diff1F` operation. -/
+structure CircularToothAtlas where
+  survivor : ℕ → Region
+  chart : ℕ → Region
+  tooth : ℕ → AnchoredCircularTooth
+  first_chart : chart 0 = [(0, 1)]
+  chart_normalized : ∀ toothCount, Norm (chart toothCount)
+  chart_in_unit : ∀ toothCount interval, interval ∈ chart toothCount →
+    0 ≤ interval.1 ∧ interval.2 ≤ 1
+  chart_count : ∀ toothCount,
+    circularComponentCount (chart toothCount) =
+      circularComponentCount (survivor toothCount)
+  delete_eq : ∀ toothCount,
+    survivor (toothCount + 1) =
+      deleteAnchoredTooth (chart toothCount) (tooth toothCount)
+
+end CircularToothSplit
+
 section ComponentCap
 
 /-- Abstract geometric ledger behind THM-933 Lemma 3.  The complement of one
@@ -225,6 +372,32 @@ theorem component_count_le_tooth_count
                 hstep previousCount hpositive
           _ ≤ previousCount + 1 :=
             Nat.add_le_add_right (inductionHypothesis hpositive) 1
+
+/-- Concrete circular-interval instantiation of
+`component_count_le_tooth_count`.  All count growth is discharged by
+`circularComponentCount_deleteAnchoredTooth_le_add_one`; consumers only supply
+the cut-chart atlas connecting their actual circle survivor to the rational
+interval presentation. -/
+theorem circular_component_count_le_tooth_count
+    (atlas : CircularToothAtlas) (toothCount : ℕ) :
+    1 ≤ toothCount →
+      circularComponentCount (atlas.survivor toothCount) ≤ toothCount := by
+  apply component_count_le_tooth_count
+      (fun count => circularComponentCount (atlas.survivor count))
+  · rw [atlas.delete_eq 0, atlas.first_chart]
+    exact firstCircularTooth_componentCount_le_one (atlas.tooth 0)
+  · intro previousCount _
+    rw [atlas.delete_eq previousCount]
+    calc
+      circularComponentCount
+            (deleteAnchoredTooth (atlas.chart previousCount)
+              (atlas.tooth previousCount))
+          ≤ circularComponentCount (atlas.chart previousCount) + 1 := by
+            apply circularComponentCount_deleteAnchoredTooth_le_add_one
+            intro interval hinterval
+            exact (atlas.chart_in_unit previousCount interval hinterval).1
+      _ = circularComponentCount (atlas.survivor previousCount) + 1 := by
+        rw [atlas.chart_count]
 
 end ComponentCap
 
@@ -386,7 +559,10 @@ end ExactArithmetic
 #print axioms fixedScale_deficit_le_discrepancy
 #print axioms fixedScale_extremizer_eq_discrepancy
 #print axioms fixedScale_weaker_loss
+#print axioms mem_deleteAnchoredTooth
+#print axioms circularComponentCount_deleteAnchoredTooth_le_add_one
 #print axioms component_count_le_tooth_count
+#print axioms circular_component_count_le_tooth_count
 #print axioms lowerBound_eq_product_sub_weightedDebt
 #print axioms weightedDebt_eq_suffix_sum
 #print axioms lowerBound_eq_closed
