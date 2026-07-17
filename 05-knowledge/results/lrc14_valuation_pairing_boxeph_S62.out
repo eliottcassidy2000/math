@@ -1,0 +1,53 @@
+THE VALUATION-CONDUCTOR PAIRING LAW -- LEM-033 referee (boxeph S62)
+==============================================================================
+PART 1+2 -- the pairing (incompatible cells vanish; partition exact)
+  [balanced g=1] q=2940 phi=672 pairs=1064 primes {2: 2, 3: 1, 5: 1, 7: 2}: incompatible-cell max = 2.57e-15 (3176 cells x chars); partition/joint max err = 7.46e-15; joint incompatible max = 1.55e-15
+  [balanced g=5] q=588 phi=168 pairs=1064 primes {2: 2, 3: 1, 7: 2}: incompatible-cell max = 5.90e-15 (668 cells x chars); partition/joint max err = 1.29e-14; joint incompatible max = 4.65e-15
+  [two-owner g=1] q=1260 phi=288 pairs=1174 primes {2: 2, 3: 2, 5: 1, 7: 1}: incompatible-cell max = 3.47e-15 (1416 cells x chars); partition/joint max err = 7.93e-15; joint incompatible max = 2.37e-15
+  [two-owner g=5] q=252 phi=72 pairs=1174 primes {2: 2, 3: 2, 7: 1}: incompatible-cell max = 8.44e-15 (300 cells x chars); partition/joint max err = 1.19e-14; joint incompatible max = 4.32e-15
+  [family g=1] q=420 phi=96 pairs=1058 primes {2: 2, 3: 1, 5: 1, 7: 1}: incompatible-cell max = 6.20e-15 (344 cells x chars); partition/joint max err = 1.35e-14; joint incompatible max = 2.53e-15
+  [family g=5] q=84 phi=24 pairs=1058 primes {2: 2, 3: 1, 7: 1}: incompatible-cell max = 3.55e-15 (68 cells x chars); partition/joint max err = 7.59e-15; joint incompatible max = 3.09e-15
+
+PART 1s -- stress geometries (odd-q classes; fresh 7-owner mixes)
+  [near-AP g=8] q=2205 phi=1008 pairs=328 primes {3: 2, 5: 1, 7: 2}: incompatible-cell max = 1.82e-15 (4596 cells x chars); partition/joint max err = 3.02e-14; joint incompatible max = 6.64e-16
+  [two-large g=8] q=735 phi=336 pairs=2776 primes {3: 1, 5: 1, 7: 2}: incompatible-cell max = 2.22e-14 (1084 cells x chars); partition/joint max err = 4.53e-14; joint incompatible max = 2.76e-14
+
+PART 3 -- owner-type / section-class selection rules at p = 7
+  [balanced] owner-type x grade-7 table (count, signed sum):
+    MIX:  j=0: 648/-128
+    FF:  j=1: 198/+18  j=2: 28/+16
+    MM:  j=0: 154/+26  j=1: 28/+4  j=2: 8/+0
+    UNIVERSAL RULE (grade>=1 iff c a_e == c' a_e' mod 7, a_e = (P/7e) mod 7): violations 0
+  [two-owner] owner-type x grade-7 table (count, signed sum):
+    FF:  j=0: 1006/-106  j=1: 168/+76
+    UNIVERSAL RULE (grade>=1 iff c a_e == c' a_e' mod 7, a_e = (P/7e) mod 7): violations 0
+  [family] owner-type x grade-7 table (count, signed sum):
+    FF:  j=0: 928/-136  j=1: 130/+62
+    UNIVERSAL RULE (grade>=1 iff c a_e == c' a_e' mod 7, a_e = (P/7e) mod 7): violations 0
+  [near-AP] owner-type x grade-7 table (count, signed sum):
+    MIX:  j=0: 72/-8
+    FF:  j=1: 222/-42  j=2: 34/+14
+    UNIVERSAL RULE (grade>=1 iff c a_e == c' a_e' mod 7, a_e = (P/7e) mod 7): violations 0
+  [two-large] owner-type x grade-7 table (count, signed sum):
+    MIX:  j=0: 354/-78  j=1: 54/+54  j=2: 6/+6
+    FF:  j=2: 6/+6
+    MM:  j=0: 2034/-138  j=1: 272/+44  j=2: 50/+14
+    UNIVERSAL RULE (grade>=1 iff c a_e == c' a_e' mod 7, a_e = (P/7e) mod 7): violations 0
+
+PART 4 -- census shares by beta_7 vs graded pair energy
+  [balanced] c-hat mass by beta_7 (conductor 7-level): beta=0: 1.3%, beta=1: 16.4%, beta=2: 82.4%
+      deficient-conductor fraction (beta_7 < 2) = 17.6%
+      graded pair energy (class g=1, Parseval/phi): j=0: 83.1%, j=1: 15.6%, j=2: 1.3%
+  [two-owner] c-hat mass by beta_7 (conductor 7-level): beta=0: 25.0%, beta=1: 75.0%
+      deficient-conductor fraction (beta_7 < 1) = 25.0%
+      graded pair energy (class g=1, Parseval/phi): j=0: 81.6%, j=1: 18.4%
+  [family] c-hat mass by beta_7 (conductor 7-level): beta=0: 16.9%, beta=1: 83.1%
+      deficient-conductor fraction (beta_7 < 1) = 16.9%
+      graded pair energy (class g=1, Parseval/phi): j=0: 85.7%, j=1: 14.3%
+
+PART 5 -- Gauss expansion + full closed-form assembly (family)
+  [family] Gauss expansion at cond=5 ord=2: phi X-hat direct = -6.2424-0.0000j; pair-Gauss sum = -6.2424+0.0000j (rel err 5.9e-16)
+  [family] Gauss expansion at cond=84 ord=6: phi X-hat direct = +3.3265-2.4113j; pair-Gauss sum = +3.3265-2.4113j (rel err 3.9e-16)
+  [family] FULL closed form (L-values x compatible cells only): c-hat direct = -11.9689-0.0000j; assembled = -11.9689+0.0000j (rel err 8.9e-15)
+==============================================================================
+done

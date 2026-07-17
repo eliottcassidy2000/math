@@ -99,5 +99,5 @@ prove the 7-part concentration from the comb structure of X.
 - [x] Parity at machine zero: 528 odd characters across three clusters
 - [x] Support law: 6 instances ≤ 2e-16; Parseval exact ×3; conjugation symmetry ×3
 - [x] Closed-form spectrum: worst 6.9e-14; S60 regression reproduced
-- [ ] the 7-part concentration law (named open, (E))
-- [ ] X̂_g(χ) closed form (the last open factor; χ-twist of the N(h) machinery)
+- [x] the 7-part concentration law — PROVED as LEM-033 (S62): valuation–conductor pairing, per prime, exact
+- [x] X̂_g(χ) closed form — LEM-033(3) (S62): cross-pair Gauss expansion over compatible grade cells

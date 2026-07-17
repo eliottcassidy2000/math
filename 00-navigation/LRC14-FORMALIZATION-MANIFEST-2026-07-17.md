@@ -309,3 +309,15 @@ instance.  Green, foundational axioms only, 66 s.  Tactic note for the
 follow-on packet encodings: `decide` STALLS on Rat division literals inside
 Finset sums (stuck Int.decEq dump); the working route is
 `norm_num [Fin.sum_univ_succ, Finset.sum_filter, <data defs>]`.
+
+## Addendum (boxeph-S62): items 11-12 (decide-shaped, from the frame-spectrum line)
+
+11. **LEM-032 (twisted Jordan / L-value weights).** The rational heart is the
+    tent-kernel inversion (already kernel-checked as tent_second_difference in
+    Thm892Shadows) + the quadratic Bernoulli moment Sum chi(j)B_2(j/q) =
+    B_{2,chi}/q — finite rational identities per (q, chi); the parity law is a
+    3-line group argument (decide over U_q at fixed q).
+12. **LEM-033 (valuation-conductor pairing).** Per cluster and class: finite
+    kernel-average identities over U_q (grade cells vs conductor levels) —
+    decide-shaped at each fixed q; the universal shallow-resonance rule is a
+    one-line congruence check over the finite pair list.
