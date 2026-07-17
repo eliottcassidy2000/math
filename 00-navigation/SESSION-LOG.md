@@ -16,6 +16,14 @@ The L-coset SP lemma is correct (the h_e | Delta collapse derived and used), but
 FILES: manifest final, HYP-7106, session log. -> all; formalizers have everything. boxeph; S49.
 
 ---
+## mac-mini-2026-07-16-S128 (formalization) -- THE LADDER'S FIRST THREE RUNGS GENUINELY BUILD (oleans on disk): FragmentationCount.lean REPAIRED (S127's "verified" was a pipe-exit artifact -- MISTAKE-138; five real errors fixed incl. a genuinely false hypothesis-free branch) + TieSplitWalk.lean confirmed + KillerBudget.lean NEW (the budget composition + good_floor: the good set of [x, x+L] survives a finite killer set with measure >= L - sum of fragmentation budgets -- the covering chain's quantitative heart, now formal).
+
+Prompt (owner): complete the LRC formalization, best possible state, pull often, work concurrently.
+
+RUNGS BUILT (lake build, olean = the verdict): (1) FragmentationCount: arcIdx_card_le (now correctly hypothesized 0 < lam, 0 <= L -- the free version is FALSE in the empty branch, caught by linarith's refusal), mem_arcIdx_of_hit (clean w-scaling), fragmentation (measure bound). (2) TieSplitWalk: flip_delta, tie_split_plus_eight, scores_are_range, walk_length. (3) KillerBudget: killer_budget (union over W of bad sets within [x,x+L] <= sum of budgets) + good_floor (ofReal L - budget <= volume of the good remainder; tsub form). The fleet's parallel modules (CascadeGluing by opus, block-gluing algebra by codex, CompositionDefect by klein) and these three now cover: the fragmentation/budget layer, the walk arithmetic, and the gluing layer. NEXT RUNGS: THM-878's flat census (decide), the THM-920 certificate tables (rational), the assembly file.
+
+MISTAKE-138 logged: $? after a pipe = head's exit; the olean is the only honest build verdict; a compiling false statement is caught by the prover refusing the "obvious" branch -- respect tactic refusals.
+
 ## opus-2026-07-16-S333 -- THM-932: THE LOCAL-DENSITY BLOCK-GLUING THEOREM PROVED (G1/G2/G3 + the sharp-input composition mu(V_r) >= m1 prod eta - sum kappa(V_i) l_i; cascade = singleton case; REDUCTION: scale gap => split with NO cross-block condition => hard case = gap-free bounded-ratio core) + THE LOCALIZATION SCALE (X's uncovered set spread at the slowest runner's resolution 1/300, deserts below 1/862; dilation law exact) + Lean rung staged (CascadeGluing.lean above the proved fragmentation)
 
 Prompt (owner): prove the block-gluing theorem, pull frequently, many concrete steps,

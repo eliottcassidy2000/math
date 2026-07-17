@@ -4144,3 +4144,19 @@ computation and deletion averaging; and distinguish ordinary crossing number fro
 book/class-coloring restriction.  Check the primary case-status literature before
 calling a small Zarankiewicz value open.  Source: D. R. Woodall, *J. Graph Theory* 17
 (1993), 657--671, doi:`10.1002/jgt.3190170602`.
+
+## MISTAKE-138
+**Session:** mac-mini-2026-07-16-S127, caught S128 (same machine, next session)
+**What happened:** S127 declared FragmentationCount.lean and TieSplitWalk.lean "kernel-verified,
+zero errors" based on `lake env lean FILE 2>&1 | head -N; echo EXIT: $?` — but in a pipeline, `$?`
+reports the LAST command (head), so the "verdict" was head's exit code, always 0. The actual
+`lake build` in S128 surfaced five real errors in FragmentationCount (renamed `le_or_lt`, a fragile
+nlinarith, scoped notation, and a statement that was FALSE without 0 < lam / 0 ≤ L in the empty
+branch). The files were then repaired and now genuinely build.
+**Lesson:** (1) never read `$?` after a pipe — use `${pipestatus[1]}` (zsh) or, better, use the
+ARTIFACT as the verdict: the .olean's existence after `lake build` is the only build proof that
+cannot lie. (2) A hypothesis-free inequality that "compiles" can still be FALSE as stated — the
+empty-branch counterexample (negative lam) was caught only because linarith refused it: when a
+prover balks at an "obvious" branch, check the statement before blaming the tactic.
+**Status:** all three ladder files (FragmentationCount, TieSplitWalk, KillerBudget) now build with
+oleans emitted; the S127 session log's "kernel-verified" claim corrected in the S128 entry.

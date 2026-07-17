@@ -1,11 +1,11 @@
-/- FragmentationCount.lean — mac-mini-2026-07-16-S127.
-   THM-883's kernel: the Fragmentation Lemma, formalized.
+/- FragmentationCount.lean — mac-mini-2026-07-16-S128 (S127 draft repaired: the S127
+   "verified" run trusted `$?` after a pipe — MISTAKE logged; this version builds under
+   `lake build`, olean emitted).
+   THM-883's kernel: the Fragmentation Lemma.
    Lemma A (arc count): the arc indices whose arc (a/w ± lam/w) can meet [x, x+L]
    number at most w*L + 2*lam + 1.
    Lemma B (fragmentation): the bad set of modulus w at radius lam meets [x, x+L]
-   in measure at most (w*L + 2*lam + 1) * (2*lam/w).
-   These are the inequalities behind the j ≤ 5 multi-killer sweep (THM-883) and the
-   killer-budget chain; the +2*lam carries the endpoint arcs honestly. -/
+   in measure at most (w*L + 2*lam + 1) * (2*lam/w). -/
 import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 import Mathlib.Data.Int.Interval
 
@@ -18,27 +18,29 @@ noncomputable def arcIdx (w : ℕ) (x L lam : ℝ) : Finset ℤ :=
   Finset.Icc ⌈(w : ℝ) * x - lam⌉ ⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋
 
 /-- **Lemma A.** `card (arcIdx) ≤ w*L + 2*lam + 1`. -/
-theorem arcIdx_card_le (w : ℕ) (x L lam : ℝ) :
+theorem arcIdx_card_le (w : ℕ) (x L lam : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L) :
     ((arcIdx w x L lam).card : ℝ) ≤ (w : ℝ) * L + 2 * lam + 1 := by
   classical
   unfold arcIdx
-  rcases le_or_lt (⌈(w : ℝ) * x - lam⌉ : ℤ) ⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ with h | h
+  set c : ℤ := ⌈(w : ℝ) * x - lam⌉ with hc
+  set f : ℤ := ⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ with hf
+  have h1 : ((w : ℝ) * x - lam) ≤ (c : ℝ) := hc ▸ Int.le_ceil _
+  have h2 : ((f : ℤ) : ℝ) ≤ (w : ℝ) * x + (w : ℝ) * L + lam := hf ▸ Int.floor_le _
+  by_cases h : c ≤ f
   · rw [Int.card_Icc]
-    have h1 : ((w : ℝ) * x - lam) ≤ (⌈(w : ℝ) * x - lam⌉ : ℝ) := Int.le_ceil _
-    have h2 : ((⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ : ℤ) : ℝ)
-        ≤ (w : ℝ) * x + (w : ℝ) * L + lam := Int.floor_le _
-    have hnn : (0 : ℤ) ≤ ⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ + 1 - ⌈(w : ℝ) * x - lam⌉ := by
-      omega
-    rw [Int.toNat_of_nonneg hnn |>.symm] at *
-    push_cast [Int.toNat_of_nonneg hnn]
+    have hnn : (0 : ℤ) ≤ f + 1 - c := by omega
+    have hcast : (((f + 1 - c).toNat : ℕ) : ℝ) = (f : ℝ) + 1 - (c : ℝ) := by
+      have h' : (((f + 1 - c).toNat : ℕ) : ℤ) = f + 1 - c := Int.toNat_of_nonneg hnn
+      have := congrArg (fun z : ℤ => (z : ℝ)) h'
+      push_cast at this
+      linarith [this]
+    rw [hcast]
     linarith
-  · rw [Finset.Icc_eq_empty (not_le.mpr h)]
-    have h1 : ((w : ℝ) * x - lam) ≤ (⌈(w : ℝ) * x - lam⌉ : ℝ) := Int.le_ceil _
-    have h2 : ((⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ : ℤ) : ℝ)
-        ≤ (w : ℝ) * x + (w : ℝ) * L + lam := Int.floor_le _
-    have h3 : ((⌊(w : ℝ) * x + (w : ℝ) * L + lam⌋ : ℝ))
-        < ((⌈(w : ℝ) * x - lam⌉ : ℝ)) := by exact_mod_cast h
+  · rw [Finset.Icc_eq_empty h]
+    have h3 : (f : ℝ) < (c : ℝ) := by exact_mod_cast lt_of_not_ge h
     simp only [Finset.card_empty, Nat.cast_zero]
+    have hw0 : (0 : ℝ) ≤ (w : ℝ) := Nat.cast_nonneg w
+    have hwL : (0 : ℝ) ≤ (w : ℝ) * L := mul_nonneg hw0 hL
     linarith
 
 /-- The bad set of modulus `w` at radius `lam`. -/
@@ -51,25 +53,29 @@ theorem mem_arcIdx_of_hit (w : ℕ) (hw : 0 < w) (x L lam : ℝ) (a : ℤ) (t : 
     (h3 : x ≤ t) (h4 : t ≤ x + L) :
     a ∈ arcIdx w x L lam := by
   have hwR : (0 : ℝ) < (w : ℝ) := by exact_mod_cast hw
+  have hwne : (w : ℝ) ≠ 0 := ne_of_gt hwR
+  have key2 : (w : ℝ) * t < (a : ℝ) + lam := by
+    have := mul_lt_mul_of_pos_left h2 hwR
+    have hexp : (w : ℝ) * ((a : ℝ) / w + lam / w) = (a : ℝ) + lam := by
+      field_simp
+    linarith [hexp ▸ this]
+  have key1 : (a : ℝ) - lam < (w : ℝ) * t := by
+    have := mul_lt_mul_of_pos_left h1 hwR
+    have hexp : (w : ℝ) * ((a : ℝ) / w - lam / w) = (a : ℝ) - lam := by
+      field_simp
+    linarith [hexp ▸ this]
+  have hxt : (w : ℝ) * x ≤ (w : ℝ) * t :=
+    mul_le_mul_of_nonneg_left h3 (le_of_lt hwR)
+  have htL : (w : ℝ) * t ≤ (w : ℝ) * x + (w : ℝ) * L := by
+    have := mul_le_mul_of_nonneg_left h4 (le_of_lt hwR)
+    linarith [this, mul_add (w : ℝ) x L]
   unfold arcIdx
   rw [Finset.mem_Icc]
   constructor
   · rw [Int.ceil_le]
-    have : (a : ℝ) > (t - lam / w) * 1 := by nlinarith
-    have hta : (w : ℝ) * t - lam < (a : ℝ) * 1 := by
-      have := mul_lt_mul_of_pos_left h2 hwR
-      have hw' : (w : ℝ) ≠ 0 := ne_of_gt hwR
-      field_simp at this
-      nlinarith
-    nlinarith
+    linarith
   · rw [Int.le_floor]
-    have hta : ((a : ℝ)) < (w : ℝ) * t + lam := by
-      have := mul_lt_mul_of_pos_left h1 hwR
-      have hw' : (w : ℝ) ≠ 0 := ne_of_gt hwR
-      field_simp at this
-      nlinarith
-    push_cast
-    nlinarith
+    linarith
 
 /-- **Lemma B / THM-883 Fragmentation.** -/
 theorem fragmentation (w : ℕ) (hw : 0 < w) (x L lam : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L) :
@@ -85,25 +91,30 @@ theorem fragmentation (w : ℕ) (hw : 0 < w) (x L lam : ℝ) (hlam : 0 < lam) (h
     rw [mem_Icc] at htI
     exact mem_biUnion (mem_arcIdx_of_hit w hw x L lam a t hta.1 hta.2 htI.1 htI.2)
       (by rw [mem_Ioo]; exact hta)
+  have harc : ∀ a : ℤ,
+      volume (Ioo ((a : ℝ) / w - lam / w) ((a : ℝ) / w + lam / w))
+        = ENNReal.ofReal (2 * (lam / w)) := by
+    intro a
+    rw [Real.volume_Ioo]
+    congr 1
+    ring
+  have hcard : ((arcIdx w x L lam).card : ENNReal)
+      = ENNReal.ofReal ((arcIdx w x L lam).card : ℝ) := by
+    simp
   calc volume (badSet w lam ∩ Icc x (x + L))
       ≤ volume (⋃ a ∈ arcIdx w x L lam,
           Ioo ((a : ℝ) / w - lam / w) ((a : ℝ) / w + lam / w)) := measure_mono hsub
     _ ≤ ∑ a ∈ arcIdx w x L lam,
           volume (Ioo ((a : ℝ) / w - lam / w) ((a : ℝ) / w + lam / w)) :=
         measure_biUnion_finset_le _ _
-    _ = ∑ _a ∈ arcIdx w x L lam, ENNReal.ofReal (2 * (lam / w)) := by
-        refine Finset.sum_congr rfl fun a _ => ?_
-        rw [Real.volume_Ioo]
-        congr 1
-        ring
-    _ = ((arcIdx w x L lam).card : ℝ≥0∞) * ENNReal.ofReal (2 * (lam / w)) := by
+    _ = ∑ _a ∈ arcIdx w x L lam, ENNReal.ofReal (2 * (lam / w)) :=
+        Finset.sum_congr rfl fun a _ => harc a
+    _ = ((arcIdx w x L lam).card : ENNReal) * ENNReal.ofReal (2 * (lam / w)) := by
         rw [Finset.sum_const, nsmul_eq_mul]
     _ ≤ ENNReal.ofReal ((w : ℝ) * L + 2 * lam + 1) * ENNReal.ofReal (2 * (lam / w)) := by
-        gcongr
-        rw [show ((arcIdx w x L lam).card : ℝ≥0∞)
-            = ENNReal.ofReal ((arcIdx w x L lam).card : ℝ) by
-          simp]
-        exact ENNReal.ofReal_le_ofReal (arcIdx_card_le w x L lam)
+        rw [hcard]
+        exact mul_le_mul_right'
+          (ENNReal.ofReal_le_ofReal (arcIdx_card_le w x L lam hlam hL)) _
     _ = ENNReal.ofReal (((w : ℝ) * L + 2 * lam + 1) * (2 * lam / w)) := by
         rw [← ENNReal.ofReal_mul (by positivity)]
         congr 1
