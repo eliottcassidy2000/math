@@ -73,3 +73,31 @@ detuned coordinates, not runners, arcs, or fixed circle sections.  This quotient
 preserves `nonMultCard`, reduced denominators, and immediate lift termination, while it
 forgets phase chronology and circle-component incidence; those data must remain in the
 actual tuple `v` and in the downstream lonely-time consumer.
+
+## Dense-core composition and verified THM-934 repair — codex-S25
+
+The clean build found that the THM-934 checkpoint had not completed elaboration; its
+four local compatibility failures are now repaired, and `lonely_or_denseCore`,
+`residualObligation_of_denseCore`, and `lrc14_of_denseCore` audit with foundational
+axioms only.
+
+`TournamentH7.LRCDenseCoreEndgame` then composes the two reductions at the correct
+logical level.  Inside `ResidualObligationPrimitive`, it first branches on a `d=2,3`
+detuning and consumes `MultiDetunedDispatch`; on the complementary dissociated branch,
+it sorts absolute speeds and consumes `lonely_or_denseCore`.  A successful chain split
+is transported directly back to the original tuple.  Only the other branch calls the
+new `DenseCoreDissociatedB5Supply`.  Thus no invalid implication “lonely implies
+positive B5” is used.
+
+The current narrowest checked theorem is
+`lrc14_from_deep_detuned_and_denseCore_dissociated_B5`.  Besides the sanctioned
+`LRCUpTo13` citation, its exact suppliers are:
+
+1. `DeepExceptionalDetunedDispatch` (nonterminating two-adic lift or a three-detuned
+   small reduced denominator);
+2. positive `B5` only on the primitive, dissociated residual whose sorted absolute
+   speeds satisfy `ChainDenseCore`.
+
+THM-935 identifies the likely mathematical content of supplier 2—universal
+support-`3,4,5` relation-lattice tails after the proved support-2 tail—but that
+relation-mass theorem is not yet the Lean supplier.

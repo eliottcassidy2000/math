@@ -101,3 +101,14 @@ proves the exact-support principle for `B5` and leaves only the universal
 support-`3,4,5` relation-lattice tails `T_s(H)` after the proved pair tail.  Boxeph S53
 corrects the spectral shortcut: diagonal dominance holds on all tested off-resonant
 frames but needs an explicit coherent-mode term on resonant frames.
+
+## Landed addendum — chain-dense endgame composition (codex-S25)
+
+`TournamentH7.LRCChainDichotomy` now genuinely compiles after repairing the four local
+Lean-4.30 compatibility gaps left by its in-flight checkpoint; its axiom audit is
+foundational only.  New module `TournamentH7.LRCDenseCoreEndgame` composes that split
+inside the primitive/dissociated assembly.  Its final theorem requires positive `B5`
+only when the sorted absolute speeds satisfy `ChainDenseCore`; a successful chain split
+produces loneliness directly and is never reinterpreted as a Bonferroni certificate.
+The exact checked residual is therefore deep exceptional detuning plus chain-dense
+dissociated `B5` supply, along with the sanctioned `LRCUpTo13` citation.

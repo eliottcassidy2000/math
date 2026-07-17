@@ -86,14 +86,18 @@ theorem chainOK_drop_aux (w : Fin 13 → ℤ) (hpos : ∀ i, 0 < w i) (m₀ : �
     have hdrop : (List.ofFn w).drop m = w ⟨m, hm⟩ :: (List.ofFn w).drop (m + 1) := by
       have hlen : m < (List.ofFn w).length := by simp; omega
       rw [List.drop_eq_getElem_cons hlen]
-      simp
+      simp only [List.getElem_ofFn]
     rw [hdrop]
     refine ⟨hentry, ?_⟩
     have hwm : (0 : ℝ) < (w ⟨m, hm⟩ : ℝ) := by exact_mod_cast hpos ⟨m, hm⟩
-    have hr : 3 * w ⟨m, hmlt⟩.castSucc ≤ w ⟨m, hmlt⟩.succ :=
-      hratio ⟨m, hmlt⟩ hm₀
+    have hr :
+        3 * w (⟨m, hmlt⟩ : Fin 12).castSucc ≤
+          w (⟨m, hmlt⟩ : Fin 12).succ :=
+      hratio (⟨m, hmlt⟩ : Fin 12) hm₀
     have hrR : 3 * (w ⟨m, hm⟩ : ℝ) ≤ (w ⟨m + 1, hm'⟩ : ℝ) := by
-      have h1 : (3 : ℝ) * ((w ⟨m, hmlt⟩.castSucc : ℤ) : ℝ) ≤ ((w ⟨m, hmlt⟩.succ : ℤ) : ℝ) := by
+      have h1 :
+          (3 : ℝ) * ((w (⟨m, hmlt⟩ : Fin 12).castSucc : ℤ) : ℝ) ≤
+            ((w (⟨m, hmlt⟩ : Fin 12).succ : ℤ) : ℝ) := by
         exact_mod_cast hr
       have hcs : (⟨m, hmlt⟩ : Fin 12).castSucc = (⟨m, hm⟩ : Fin 13) := rfl
       have hsc : (⟨m, hmlt⟩ : Fin 12).succ = (⟨m + 1, hm'⟩ : Fin 13) := rfl
@@ -218,8 +222,9 @@ theorem lonely_or_denseCore (cite : LRCUpTo13) (w : Fin 13 → ℤ)
       (fun i hi => absurd hi (by omega))
     refine chainOK_drop_aux w hpos 0 (fun j _ => hbad j) 12 0 hZ (le_refl 0) rfl _ ?_
     -- entry at m = 0, B = 1: w₀ ≥ 1 gives w₀·(2·13/14) = w₀·13/7 ≥ 13/7 > 3/2
-    have hw0 : (1 : ℝ) ≤ (w ⟨0, hZ⟩ : ℝ) := by exact_mod_cast hpos ⟨0, hZ⟩
-    push_cast
+    have hw0 : (1 : ℝ) ≤ (w (0 : Fin 13) : ℝ) := by
+      exact_mod_cast hpos (0 : Fin 13)
+    norm_num at ⊢
     nlinarith [hw0]
 
 /-- **The dense-core obligation**: the residual clauses verbatim, plus the explicit
@@ -254,8 +259,8 @@ theorem residualObligation_of_denseCore (cite : LRCUpTo13)
   have hw_pos : ∀ i, 0 < w i := fun i => hva_pos (σ i)
   rcases lonely_or_denseCore cite w hw_pos hw_mono with ⟨t, ht⟩ | hcore
   · -- the chain split closed it: transport back through sort and signs
-    refine ⟨t, (lonely_abs_iff 14 v t).mp ?_⟩
-    exact (lonely_comp_equiv 14 va t σ).mp ht
+    refine ⟨t, (LRC14.lonely_abs_iff 14 v t).mp ?_⟩
+    exact (LRC14.lonely_comp_equiv 14 va t σ).mp ht
   · -- the dense core: hand the certificate to the obligation
     exact hdense v hv hcov hgap hcomp hdist hlarge hdiv hcoarse hcres
       ⟨σ, hw_mono, hcore⟩

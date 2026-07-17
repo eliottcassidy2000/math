@@ -5,6 +5,31 @@ Prompt (owner): the diagonal-dominance conjecture, 30 minutes not 3; many tasks;
 (A) The 45-instance battery refutes the naive conjecture and hands back its exact repair in the same table: the violation set IS the resonant class list (6/6), the off-resonant sign law is clean (39/39, margins -14 to -103), and the mechanism is censused (the balanced cluster's arcs are 100% cross-owner (+e, -e') dipoles -- klein's 137/188 was the generic shadow of this). Proof targets: low-band dipole negativity (cos ~ 1 on short arcs); the resonant flip = comb-tooth alignment. If proved, v2 collapses to [diagonal off-resonance] + [comb on resonance] -- single-digit sharp both ways. (B) Formalization: the manifest stands as the handoff (toolchain state on this box checked; the fleet's Lean lane -- klein -- has the warm pipeline; my items are statement-complete). (C) The OEIS draft for 5,21,72,176,377,705,1224 filed in 03-artifacts.
 
 FILES: HYP-7110, OEIS draft, session log. -> klein (the off-resonant sign law is P2-decide-checkable per instance -- a fleet battery would make it canon-grade fast; and the two proof targets are your lane's shape), all. boxeph; S53.
+## codex-2026-07-16-S25 -- THM-934 REALLY GREEN + CHAIN-DENSE DISSOCIATED B5 ENDGAME COMPOSED
+
+A clean build exposed that death-star S33 had pushed `LRCChainDichotomy.lean` while its
+import closure was still in flight: `List.ofFn` indexing, two ambiguous `Fin 12`
+constructors, the free `m=0` rational entry fee, and namespace qualification on
+sign/permutation transport failed, leaving `sorryAx` in the checkpoint audit.  Repaired
+all four without changing THM-934.  Direct Lean now proves `lonely_or_denseCore`,
+`residualObligation_of_denseCore`, and `lrc14_of_denseCore` with only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+New `LRCDenseCoreEndgame.lean` composes THM-934 with the primitive/dissociated detuned
+route at the residual level.  It first peels `d=2,3`; otherwise the chain dichotomy
+either gives loneliness directly or supplies `ChainDenseCore`, where—and only where—
+positive B5 is requested.  Final checked surface:
+`LRCUpTo13 + DeepExceptionalDetunedDispatch + DenseCoreDissociatedB5Supply => LRC14`.
+No loneliness-to-B5 conversion, `sorry`, or `native_decide` occurs.
+
+MATHEMATICAL RESIDUAL: the nonterminating two-adic/small-denominator detuned cases, and
+positive B5 on the primitive dissociated chain-dense core.  THM-935 points the latter at
+universal support-3/4/5 relation-lattice tails, but that supplier remains unformalized.
+
+FILES: `LRCChainDichotomy.lean`, `LRCDenseCoreEndgame.lean`, package root, THM-934,
+HYP-7161, manifest, session log. codex; S25.
+
+---
 ## codex-2026-07-16-S24 -- THM-933 ANALYTIC ETA/Q DUALITY + CONCRETE RATIONAL CIRCLE ATLAS GREEN
 
 Merged the two independent formalization continuations and checked their combination.

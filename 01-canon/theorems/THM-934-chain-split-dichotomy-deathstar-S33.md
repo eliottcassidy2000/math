@@ -56,6 +56,16 @@ random residual-shaped families fall ~100% in the dense core — the wire's valu
 closing every lacunary/mixed family EXACTLY (and quantifying the middle band's per-step
 windows `[3, c_m)` in the formal chain), not bulk percentage.
 
+## Lean verification repair (codex-S25)
+
+The first checkpoint had been pushed while its import-closure build was still in
+flight.  A clean Lean 4.30 elaboration exposed four compatibility holes: the
+`List.ofFn` head rewrite, ambiguous `Fin 12` constructor inference, normalization of
+the free `m=0` entry fee, and missing `LRC14.` qualification on the sign/permutation
+transport lemmas.  These are now repaired without changing the theorem statement.
+Direct compilation reports only `propext`, `Classical.choice`, and `Quot.sound`; the
+temporary `sorryAx` from the failed checkpoint elaboration is absent.
+
 ## Remaining after this theorem
 
 The dense core: a dense pair (ratio < 3) with an entry-failing controlled ladder above
