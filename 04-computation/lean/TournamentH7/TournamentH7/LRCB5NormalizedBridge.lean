@@ -132,6 +132,136 @@ theorem normalizedMass2_lower_iff_pairDepthMoment
   rw [normalizedMass2_eq_pairDepthMoment v q hq]
   constructor <;> intro h <;> linarith
 
+theorem pair_floor_gap_to_horizon_thirty :
+    (1703 / 1470 : ℚ) - 6 / 7 = 443 / 1470 := by
+  norm_num
+
+/-- The pair-moment excess beyond the convex baseline.  Depth zero contributes
+one unit; depth `d ≥ 1` contributes `choose (d-1) 2`. -/
+def pairExcessTerm (depth : ℕ) : ℕ :=
+  if depth = 0 then 1 else (depth - 1).choose 2
+
+def pairExcessMoment (v : Fin 13 → ℤ) (q : ℕ) : ℕ :=
+  ∑ p ∈ Finset.Ioo 0 q,
+    pairExcessTerm (LRC14Concrete.bandCount v q p)
+
+def normalizedPairExcessMoment (v : Fin 13 → ℤ) (q : ℕ) : ℚ :=
+  (pairExcessMoment v q : ℚ) / ((q : ℚ) - 1)
+
+/-- The depth-at-least-three part of pair excess.  The term vanishes exactly
+at depths zero, one, and two. -/
+def shiftedPairDepthMoment (v : Fin 13 → ℤ) (q : ℕ) : ℕ :=
+  ∑ p ∈ Finset.Ioo 0 q,
+    (LRC14Concrete.bandCount v q p - 1).choose 2
+
+theorem pairExcessMoment_eq_live_add_shifted
+    (v : Fin 13 → ℤ) (q : ℕ) :
+    pairExcessMoment v q =
+      LRC14Concrete.liveCount v q + shiftedPairDepthMoment v q := by
+  unfold pairExcessMoment shiftedPairDepthMoment LRC14Concrete.liveCount
+  calc
+    ∑ p ∈ Finset.Ioo 0 q,
+        pairExcessTerm (LRC14Concrete.bandCount v q p) =
+      ∑ p ∈ Finset.Ioo 0 q,
+        ((if LRC14Concrete.bandCount v q p = 0 then 1 else 0) +
+          (LRC14Concrete.bandCount v q p - 1).choose 2) := by
+            apply Finset.sum_congr rfl
+            intro p _
+            by_cases hzero : LRC14Concrete.bandCount v q p = 0
+            · simp [pairExcessTerm, hzero]
+            · simp [pairExcessTerm, hzero]
+    _ = (∑ p ∈ Finset.Ioo 0 q,
+          if LRC14Concrete.bandCount v q p = 0 then 1 else 0) +
+        ∑ p ∈ Finset.Ioo 0 q,
+          (LRC14Concrete.bandCount v q p - 1).choose 2 := by
+            rw [Finset.sum_add_distrib]
+    _ = ((Finset.Ioo 0 q).filter fun p =>
+          LRC14Concrete.bandCount v q p = 0).card +
+        ∑ p ∈ Finset.Ioo 0 q,
+          (LRC14Concrete.bandCount v q p - 1).choose 2 := by
+            congr 1
+            simp only [Finset.card_filter]
+
+/-- Exact pointwise identity summed over multipliers:
+`S₂ + (q-1) = S₁ + excess`. -/
+theorem momentS_two_add_nonzero_eq_momentS_one_add_pairExcess
+    (v : Fin 13 → ℤ) (q : ℕ) :
+    LRC14Concrete.momentS v q 2 + (q - 1) =
+      LRC14Concrete.momentS v q 1 + pairExcessMoment v q := by
+  unfold LRC14Concrete.momentS pairExcessMoment
+  have hones : q - 1 = ∑ _p ∈ Finset.Ioo 0 q, 1 := by
+    simp [Nat.card_Ioo]
+  rw [hones, ← Finset.sum_add_distrib, ← Finset.sum_add_distrib]
+  apply Finset.sum_congr rfl
+  intro p _
+  have hdepth := LRC14Concrete.bandCount_le_thirteen v q p
+  interval_cases LRC14Concrete.bandCount v q p <;>
+    norm_num [pairExcessTerm, Nat.choose]
+
+/-- Exact normalized coverage identity requested by the pair budget:
+the pair moment equals the first moment minus one, plus live mass and the
+depth-at-least-three shifted moment. -/
+theorem normalizedPairDepthMoment_eq_first_sub_one_add_coverage_excess
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q) :
+    normalizedPairDepthMoment v q =
+      (LRC14Concrete.momentS v q 1 : ℚ) / ((q : ℚ) - 1) - 1 +
+        ((LRC14Concrete.liveCount v q : ℚ) +
+          (shiftedPairDepthMoment v q : ℚ)) / ((q : ℚ) - 1) := by
+  have hid := momentS_two_add_nonzero_eq_momentS_one_add_pairExcess v q
+  rw [pairExcessMoment_eq_live_add_shifted] at hid
+  have hidQ : (LRC14Concrete.momentS v q 2 : ℚ) + ((q : ℚ) - 1) =
+      (LRC14Concrete.momentS v q 1 : ℚ) +
+        ((LRC14Concrete.liveCount v q : ℚ) +
+          (shiftedPairDepthMoment v q : ℚ)) := by
+    have hq1 : 1 ≤ q := le_of_lt hq
+    exact_mod_cast hid
+  have hden : ((q : ℚ) - 1) ≠ 0 := by
+    have : (1 : ℚ) < q := by exact_mod_cast hq
+    linarith
+  dsimp [normalizedPairDepthMoment]
+  field_simp [hden]
+  linarith
+
+/-- With exact singleton equilibrium, the horizon-thirty pair floor is
+equivalent to an excess-overlap floor of exactly `443/1470`. -/
+theorem pairDepthMoment_target_iff_excess_of_first_moment
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q)
+    (hfirst : (LRC14Concrete.momentS v q 1 : ℚ) / ((q : ℚ) - 1) = 13 / 7) :
+    1703 / 1470 ≤ normalizedPairDepthMoment v q ↔
+      443 / 1470 ≤ normalizedPairExcessMoment v q := by
+  have hid := momentS_two_add_nonzero_eq_momentS_one_add_pairExcess v q
+  have hidQ : (LRC14Concrete.momentS v q 2 : ℚ) + ((q : ℚ) - 1) =
+      (LRC14Concrete.momentS v q 1 : ℚ) + (pairExcessMoment v q : ℚ) := by
+    have hq1 : 1 ≤ q := le_of_lt hq
+    exact_mod_cast hid
+  have hden : (0 : ℚ) < (q : ℚ) - 1 := by
+    have : (1 : ℚ) < q := by exact_mod_cast hq
+    linarith
+  have hfirst' : (LRC14Concrete.momentS v q 1 : ℚ) =
+      (13 / 7) * ((q : ℚ) - 1) := by
+    rw [div_eq_iff (ne_of_gt hden)] at hfirst
+    linarith
+  dsimp [normalizedPairDepthMoment, normalizedPairExcessMoment]
+  constructor <;> intro h
+  · apply (le_div_iff₀ hden).2
+    apply (le_div_iff₀ hden).1 at h
+    nlinarith
+  · apply (le_div_iff₀ hden).2
+    apply (le_div_iff₀ hden).1 at h
+    nlinarith
+
+/-- Direct live/depth form of the exact `443/1470` shortfall. -/
+theorem pairDepthMoment_target_iff_live_add_shifted_of_first_moment
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q)
+    (hfirst : (LRC14Concrete.momentS v q 1 : ℚ) / ((q : ℚ) - 1) = 13 / 7) :
+    1703 / 1470 ≤ normalizedPairDepthMoment v q ↔
+      443 / 1470 ≤
+        ((LRC14Concrete.liveCount v q : ℚ) +
+          (shiftedPairDepthMoment v q : ℚ)) / ((q : ℚ) - 1) := by
+  rw [pairDepthMoment_target_iff_excess_of_first_moment v q hq hfirst]
+  simp only [normalizedPairExcessMoment,
+    pairExcessMoment_eq_live_add_shifted, Nat.cast_add]
+
 /-- The support-one aggregate is the sum of the singleton deviations. -/
 theorem aggregateDeviation_one_eq_sum_singletons
     (v : Fin 13 → ℤ) (q : ℕ) :
@@ -139,6 +269,72 @@ theorem aggregateDeviation_one_eq_sum_singletons
       ∑ i, LRC14Concrete.deviation v q {i} := by
   rw [aggregateDeviation, Finset.powersetCard_one]
   simp
+
+/-- At a modulus congruent to one modulo fourteen, every coprime singleton
+deviation vanishes exactly. -/
+theorem deviation_singleton_eq_zero_of_mod_fourteen_eq_one
+    (v : Fin 13 → ℤ) (q : ℕ) (i : Fin 13)
+    (hq : 14 ≤ q) (hmod : q % 14 = 1)
+    (hgcd : Int.gcd (v i) (q : ℤ) = 1) :
+    LRC14Concrete.deviation v q {i} = 0 := by
+  have hq0 : 0 < q := by omega
+  unfold LRC14Concrete.deviation
+  rw [LRC14Concrete.jointFail_singleton_eq v q i hq0 hgcd,
+    Finset.card_singleton, LRC14Concrete.bandSize_eq q hq]
+  have hqform : q = 14 * (q / 14) + 1 := by omega
+  have hband : 13 * q / 14 - (q + 13) / 14 + 1 = 12 * (q / 14) := by
+    omega
+  rw [hband]
+  have hsub : q - 1 - 12 * (q / 14) = 2 * (q / 14) := by omega
+  rw [hsub]
+  have hqformQ : (q : ℚ) = 14 * ((q / 14 : ℕ) : ℚ) + 1 := by
+    exact_mod_cast hqform
+  push_cast
+  rw [hqformQ]
+  ring
+
+/-- Exact singleton equilibrium at every coprime `1 mod 14` modulus. -/
+theorem normalizedFirstDepthMoment_eq_thirteen_sevenths
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 14 ≤ q) (hmod : q % 14 = 1)
+    (hcoprime : ∀ i, Int.gcd (v i) (q : ℤ) = 1) :
+    (LRC14Concrete.momentS v q 1 : ℚ) / ((q : ℚ) - 1) = 13 / 7 := by
+  have haggregate : aggregateDeviation v q 1 = 0 := by
+    rw [aggregateDeviation_one_eq_sum_singletons]
+    simp [deviation_singleton_eq_zero_of_mod_fourteen_eq_one
+      v q _ hq hmod (hcoprime _)]
+  have hmoment := aggregateDeviation_eq_moment_sub_equilibrium v q 1
+  rw [haggregate] at hmoment
+  have hden : ((q : ℚ) - 1) ≠ 0 := by
+    have : (1 : ℚ) < q := by exact_mod_cast (show 1 < q by omega)
+    linarith
+  norm_num [Nat.choose] at hmoment ⊢
+  field_simp [hden]
+  linarith
+
+/-- The clean modulus has exact singleton equilibrium. -/
+theorem normalizedFirstDepthMoment_at_cleanModulus_eq_thirteen_sevenths
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (height : ℕ) :
+    (LRC14Concrete.momentS v (cleanModulus v height) 1 : ℚ) /
+        ((cleanModulus v height : ℚ) - 1) = 13 / 7 := by
+  apply normalizedFirstDepthMoment_eq_thirteen_sevenths
+  · exact fourteen_le_cleanModulus v height hv
+  · exact cleanModulus_mod_fourteen v height
+  · intro i
+    exact int_gcd_speed_cleanModulus_eq_one v height i
+
+/-- At the clean modulus, the pair floor is exactly a `443/1470` lower bound
+for live mass plus depth-at-least-three pair excess. -/
+theorem pairDepthMoment_target_at_cleanModulus_iff_coverage_excess
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (height : ℕ) :
+    1703 / 1470 ≤ normalizedPairDepthMoment v (cleanModulus v height) ↔
+      443 / 1470 ≤
+        ((LRC14Concrete.liveCount v (cleanModulus v height) : ℚ) +
+          (shiftedPairDepthMoment v (cleanModulus v height) : ℚ)) /
+            ((cleanModulus v height : ℚ) - 1) := by
+  exact pairDepthMoment_target_iff_live_add_shifted_of_first_moment
+    v (cleanModulus v height) (one_lt_cleanModulus v height hv)
+      (normalizedFirstDepthMoment_at_cleanModulus_eq_thirteen_sevenths
+        v hv height)
 
 /-- Nonpositive singleton deviations give a nonpositive normalized singleton
 aggregate. -/
@@ -433,6 +629,25 @@ theorem B5_pos_at_cleanModulus_of_depthMoment_budgets
       (one_lt_cleanModulus v height hv)).2 hpair
   · exact hdepth
 
+/-- Final coverage-language clean-modulus consumer.  The pair side is no
+longer an opaque moment: it is exactly live mass plus depth-at-least-three
+pair excess above the sharp `443/1470` floor. -/
+theorem B5_pos_at_cleanModulus_of_coverage_excess_and_depth_budget
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (height : ℕ)
+    (hcoverage : 443 / 1470 ≤
+      ((LRC14Concrete.liveCount v (cleanModulus v height) : ℚ) +
+        (shiftedPairDepthMoment v (cleanModulus v height) : ℚ)) /
+          ((cleanModulus v height : ℚ) - 1))
+    (hdepth :
+      harmfulDepthMoment v (cleanModulus v height) /
+          (((cleanModulus v height : ℕ) : ℚ) - 1) <
+        -(65218 / 84035)) :
+    0 < LRC14Concrete.B5 v (cleanModulus v height) := by
+  apply B5_pos_at_cleanModulus_of_depthMoment_budgets v hv height
+  · exact (pairDepthMoment_target_at_cleanModulus_iff_coverage_excess
+      v hv height).2 hcoverage
+  · exact hdepth
+
 /-! ## Axiom audit -/
 
 #print axioms normalized_B5_eq_equilibrium_add_aggregates
@@ -449,6 +664,7 @@ theorem B5_pos_at_cleanModulus_of_depthMoment_budgets
 #print axioms B5_pos_of_coprime_pair_and_depth_budget
 #print axioms B5_pos_at_cleanModulus_of_pair_and_depth_budget
 #print axioms B5_pos_at_cleanModulus_of_depthMoment_budgets
+#print axioms B5_pos_at_cleanModulus_of_coverage_excess_and_depth_budget
 
 end
 end LRCB5NormalizedBridge

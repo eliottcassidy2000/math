@@ -1,5 +1,6 @@
 import TournamentH7.LRCEndgameParameterDischargeTwoThree
 import TournamentH7.LRCB5NormalizedBridge
+import TournamentH7.LRCMomentCertificates
 
 /-!
 # Relation-budget certificates feed the chain-dense LRC(14) endgame
@@ -59,8 +60,10 @@ are automatic; only the second factorial-moment floor and harmful depth budget
 remain. -/
 structure NormalizedB5RelationBudgetCertificate (v : Fin 13 → ℤ) where
   height : ℕ
-  pair_depth_budget : 1703 / 1470 ≤
-    normalizedPairDepthMoment v (cleanModulus v height)
+  coverage_excess_budget : 443 / 1470 ≤
+    ((LRC14Concrete.liveCount v (cleanModulus v height) : ℚ) +
+      (shiftedPairDepthMoment v (cleanModulus v height) : ℚ)) /
+        ((cleanModulus v height : ℚ) - 1)
   harmful_depth_budget :
     harmfulDepthMoment v (cleanModulus v height) /
       ((cleanModulus v height : ℚ) - 1) < -(65218 / 84035)
@@ -71,8 +74,32 @@ theorem NormalizedB5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
     (certificate : NormalizedB5RelationBudgetCertificate v)
     (hv : ∀ i, v i ≠ 0) :
     0 < LRC14Concrete.B5 v (cleanModulus v certificate.height) :=
-  B5_pos_at_cleanModulus_of_depthMoment_budgets v hv certificate.height
-    certificate.pair_depth_budget certificate.harmful_depth_budget
+  B5_pos_at_cleanModulus_of_coverage_excess_and_depth_budget
+    v hv certificate.height certificate.coverage_excess_budget
+      certificate.harmful_depth_budget
+
+/-- THM-945 certificate at the canonical clean modulus.  On a depth-six
+capped stratum, concrete B5 is exactly live multipliers minus depth-six
+multipliers, so this strict census is both transparent and sharp. -/
+structure CoverageCappedB5Certificate (v : Fin 13 → ℤ) where
+  height : ℕ
+  capped : LRC14Concrete.CoverageCapped v (cleanModulus v height) 6
+  live_gt_deep_six :
+    ((Finset.Ioo 0 (cleanModulus v height)).filter fun p =>
+      LRC14Concrete.bandCount v (cleanModulus v height) p = 6).card <
+      LRC14Concrete.liveCount v (cleanModulus v height)
+
+theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
+    (certificate : CoverageCappedB5Certificate v) :
+    0 < LRC14Concrete.B5 v (cleanModulus v certificate.height) := by
+  have hcast :
+      (((Finset.Ioo 0 (cleanModulus v certificate.height)).filter fun p =>
+        LRC14Concrete.bandCount v (cleanModulus v certificate.height) p = 6).card : ℤ) <
+        (LRC14Concrete.liveCount v (cleanModulus v certificate.height) : ℤ) :=
+    Int.ofNat_lt.mpr certificate.live_gt_deep_six
+  rw [LRC14Concrete.B5_eq_live_sub_deepSix v
+    (cleanModulus v certificate.height) certificate.capped]
+  omega
 
 /-- THM-935 certificate supply only on the primitive, dissociated,
 chain-dense core isolated by the current endgame. -/
@@ -115,6 +142,26 @@ def DenseCoreNormalizedRelationBudgetSupply : Prop :=
       ChainDenseCore (fun i => |v (σ i)|)) →
     Nonempty (NormalizedB5RelationBudgetCertificate v)
 
+/-- THM-945 supply on the same dense core.  Its remaining mathematics is the
+seven-wall cap together with the exact live-versus-depth-six census. -/
+def DenseCoreCoverageCappedB5Supply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.tupleGcd v = 1 →
+    LRC14.CoveringFamily v → GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13,
+      (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ),
+      (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1 / 13 - 1 / 14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
+    (∀ g : ℤ, 2 ≤ g →
+      nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      ChainDenseCore (fun i => |v (σ i)|)) →
+    Nonempty (CoverageCappedB5Certificate v)
+
 /-- The structured relation-budget supplier discharges the raw positive-B5
 supplier used by `LRCDenseCoreEndgame`. -/
 theorem denseCoreDissociatedB5Supply_of_relationBudget
@@ -138,6 +185,17 @@ theorem denseCoreDissociatedB5Supply_of_normalizedRelationBudget
     lt_of_lt_of_le (by omega) (fourteen_le_cleanModulus v certificate.height hv),
     certificate.b5_pos hv⟩
 
+/-- The exact cap-six census also discharges the raw dense-core B5 supplier. -/
+theorem denseCoreDissociatedB5Supply_of_coverageCapped
+    (hsupply : DenseCoreCoverageCappedB5Supply) :
+    DenseCoreDissociatedB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨cleanModulus v certificate.height,
+    lt_of_lt_of_le (by omega) (fourteen_le_cleanModulus v certificate.height hv),
+    certificate.b5_pos⟩
+
 /-- **THM-935-shaped current capstone.**  The sanctioned LRC(≤13) citation,
 the sharply reduced `q=2,3`/two-adic exceptional dispatch, and relation-budget
 certificates only on the primitive dissociated chain-dense core imply LRC(14). -/
@@ -158,7 +216,7 @@ theorem lrc14_from_twoThree_detuned_and_relationBudget
     (denseCoreDissociatedB5Supply_of_relationBudget hsupply)
 
 /-- Concrete normalized-THM-940 capstone.  The B5 side now exposes only the
-second factorial-moment floor and signed higher-depth budget at a coprime
+sharp coverage-excess floor and signed higher-depth budget at a clean
 modulus. -/
 theorem lrc14_from_twoThree_detuned_and_normalizedRelationBudget
     (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
@@ -167,15 +225,27 @@ theorem lrc14_from_twoThree_detuned_and_normalizedRelationBudget
   lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_normalizedRelationBudget hsupply)
 
+/-- THM-945 capstone.  On the dense core, a depth-six cap and the strict
+live-versus-depth-six census suffice for the entire B5 branch. -/
+theorem lrc14_from_twoThree_detuned_and_coverageCappedB5
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreCoverageCappedB5Supply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_coverageCapped hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms B5RelationBudgetCertificate.b5_pos
 #print axioms NormalizedB5RelationBudgetCertificate.b5_pos
+#print axioms CoverageCappedB5Certificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget
+#print axioms denseCoreDissociatedB5Supply_of_coverageCapped
 #print axioms lrc14_from_four_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_relationBudget
 #print axioms lrc14_from_twoThree_detuned_and_normalizedRelationBudget
+#print axioms lrc14_from_twoThree_detuned_and_coverageCappedB5
 
 end LRC14Grand
 end LonelyRunner

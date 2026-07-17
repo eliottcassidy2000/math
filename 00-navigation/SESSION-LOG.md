@@ -67792,3 +67792,42 @@ incidence but deliberately destroys absolute endpoint phase; the atlas equality 
 required proof that this loss is harmless.  The measure/extrema bridge remains independent.
 
 ---
+## codex-2026-07-17-S47 -- pair tower, selected-wall frequencies, and exact dense-core B5 census
+
+Integrated three collaborative reductions, all Lean kernel-pure.  First, the
+pair tower now closes the maximal first-lift stratum: `liftFailureCard = 11`
+forces an empty doubled harmonic core, and phase zero avoids every q22/q244
+parallel obstruction.  More generally the citation gives the exact core-good
+interval radius `(1/(coreCard+1)-1/14)/B`, and one common affine obstruction
+wall is escapable when its scalar image crosses a full danger chamber.  This
+does not hide the remaining issue: already two fresh rows have independent wall
+density `2/7+3/7+3/7 = 8/7`, so a union bound cannot prove the selector.
+
+Second, q244 failure now forces a normalized radius-`3/14` scalar wall.  The
+q2/q4 denominator hypotheses automatically choose signed primitive numerators
+congruent to one modulo four.  The sharp citation interval selects the witness
+whenever the resulting frequency is nonzero and at least `11B`; a formal
+dichotomy leaves exactly a zero/small-frequency support-three stratum.  The
+same interval mechanism directly closes the large-frequency q333 stratum.
+
+Third, the normalized THM-940 pair socket has been made literal.  At the clean
+`1 mod 14` modulus every singleton deviation is zero, and
+`M2 >= -13/30` is equivalent to
+`(liveCount + shiftedDepthAtLeastThreePairs)/(q-1) >= 443/1470`.
+The endgame certificate now asks for that exact coverage-excess floor plus the
+signed harmful-depth budget.  Incoming THM-945 is wired as an independent
+cap-six certificate: under `bandCount <= 6`, `B5 = liveCount-deepSixCount`, so
+the dense-core branch reduces exactly to `liveCount > deepSixCount`.
+
+The remaining mathematical crux is therefore explicit: prove either the
+`443/1470` live/deep overlap floor and harmful-depth bound, or furnish the
+seven-wall cap and strict live-versus-depth-six census; simultaneously close
+the non-aligned, zero/small-frequency pair-tower walls.  Bare support
+Zarankiewicz counting has no static slack and must retain coefficient-ratio or
+wall-alignment data.  A tempting global semicircle switching model was also
+refuted: gcd reduction is edge-dependent, and explicit negative triangles and
+a negative `K7` occur.  Any faithful tournament/colored-incidence quotient must
+retain the reduced-ratio color on each edge; bare signs destroy the telescoping
+ratio constraint.
+
+---
