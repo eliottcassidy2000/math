@@ -1,0 +1,28 @@
+========================================================================
+ETA PROFILES of the base blocks (exact; scale unit 1/300):
+  B7 (7 combs): mu = 0.313983  kappa = 1724  eta(1/600, 1/300, 2/300, 4/300, 8/300) = 0.0103, 0.1306, 0.1753, 0.2447, 0.2696
+  B6 (6 combs): mu = 0.366949  kappa = 3174  eta(1/600, 1/300, 2/300, 4/300, 8/300) = 0.1379, 0.1952, 0.2737, 0.3189, 0.3409
+  B5 (5 combs): mu = 0.434894  kappa = 1388  eta(1/600, 1/300, 2/300, 4/300, 8/300) = 0.0567, 0.2182, 0.2932, 0.3601, 0.3894
+  B4 (4 combs): mu = 0.512995  kappa = 1126  eta(1/600, 1/300, 2/300, 4/300, 8/300) = 0.0630, 0.3132, 0.3556, 0.4424, 0.4699
+
+========================================================================
+(D2) TWO-BLOCK COMPOSITION 7+6, junction gap G = 300:
+  B1 = [300, 406, 511, 652, 862, 963, 1074]
+  B2 = 300 * [862, 963, 1074, 1357, 1459, 1571]  (gap min(B2)/max(B1) = 240.8)
+  block data: m1 = 0.313983, kappa(V1) = 1724 (exact); eta2 = 0.273653 at l2 = (2/300)/300
+  GLUED BOUND = m1*eta2 - kappa1*l2 = +0.047612   COERCIVE
+  EXACT mu(V) = 0.115395   bound holds: True
+
+========================================================================
+(D3) THREE-BLOCK COMPOSITION 5+4+4, gaps G2 = 300, G3 = 100:
+  B1 = [300, 406, 511, 652, 862]
+  B2 = [90000, 121800, 153300, 195600]  (gap 104.4)
+  B3 = 30000*[300, 406, 511, 652]  (gap 46.0; max speed 19,560,000)
+  block data: m1 = 0.434894 kappa(V1) = 1388; after B2: mu(V2) = 0.224594 kappa(V2) = 147356 (exact)
+  scales: eta2 = 0.4424 at (4/300)/300; eta3 = 0.3132 at (1/300)/30000
+  GLUED BOUND = m1 e2 e3 - k1 l2 e3 - kappa(V2) l3 = +0.024575   COERCIVE
+  intermediate check: mu(V2) >= m1*eta2 - k1*l2 = +0.130720: True
+  EXACT mu(V3) = 0.114998   bound holds: True   NONEMPTY: True
+
+  13 speeds, three bands, max ratio 65,200; within-band ratios < 3 (NOT lacunary),
+  gaps 300 (NOT single-band): certified by COMPOSITION alone.

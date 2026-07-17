@@ -1,3 +1,33 @@
+## opus-2026-07-16-S333 -- THM-932: THE LOCAL-DENSITY BLOCK-GLUING THEOREM PROVED (G1/G2/G3 + the sharp-input composition mu(V_r) >= m1 prod eta - sum kappa(V_i) l_i; cascade = singleton case; REDUCTION: scale gap => split with NO cross-block condition => hard case = gap-free bounded-ratio core) + THE LOCALIZATION SCALE (X's uncovered set spread at the slowest runner's resolution 1/300, deserts below 1/862; dilation law exact) + Lean rung staged (CascadeGluing.lean above the proved fragmentation)
+
+Prompt (owner): prove the block-gluing theorem, pull frequently, many concrete steps,
+aim to close LRC(14) mathematics then formalization.
+
+THE THEOREM: blocks B_1 < ... < B_r, eta_i = local density floor of W_{B_i} at scale l_i
+(exact breakpoint sweep), m1 = mu(W_{B_1}): mu(cap W_{B_i}) >= m1 prod eta_i - sum
+kappa(V_{i-1}) l_i. G1 tiling proof; G2 kappa(U cap V) <= kappa U + kappa V; G3
+eta_x(k/x) = 1 - 2 lam EXACT (periodicity) => cascade recovered as singleton case.
+All verified exact, 0 violations; dilation law eta_cB(l) = eta_B(c l) exact equality.
+HONEST ARC: v1 demo (crude G2 block-kappa, gaps 18-28) bound VALID but NEGATIVE:
+diagnosed 30x kappa overcount + relative-loss law loss/mu ~ c b/G => sharp-input form
+(kappa(V_i) exact as certified data) + gaps ~300 = the coercive regime (v2 demos).
+two-block 7+6 at junction gap 240.8: bound +0.047612 (COERCIVE); exact mu = 0.115395, bound holds: True; three-block 5+4+4 at junction gaps 104.4/46.0: bound +0.024575 (COERCIVE); exact mu(V3) = 0.114998, holds True, nonempty True.
+THE REDUCTION COROLLARY: gap => independent block certificates, NO cross-block
+admissibility. Remaining hard case = gap-free bounded-ratio core = S297's capped
+envelope from the other side. NEW INVARIANT: localization scale of a certificate
+(the eta profile). LEAN: CascadeGluing.lean draft -- cascade_step is a ONE-STEP
+corollary of klein's proved fragmentation; window/union_floor_sample stated with
+tiling plans (draft->close pipeline).
+
+NEXT (named): close the CascadeGluing sorries (cascade_step first -- it is one
+monotonicity step); the eta-profile of blocks as standing certificate metadata;
+the gap-free core taxonomy (bounded-ratio 13-packets: the last regime).
+
+FILES: THM-932, CascadeGluing.lean, 2 scripts + 2 result files, HYP-7160 resolved.
+opus; S333.
+
+---
+
 ## boxeph-2026-07-16-S48 -- V3-NAIVE REFUTED (the l1 CRT cross is worse than CS: 7.6-251x vs v2's 1.8-51x -- in-slice cancellation discarded; v4 = per-slice CS with joint L-coset SP masses, named; v2 stands) + THE FORMALIZATION MANIFEST (ten decide-shaped items, consumable form, v3 excluded)
 
 Prompt (owner): the CRT cross-term; many goals; toward formalization completion.

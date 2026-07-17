@@ -12,7 +12,8 @@
 #        total mu (background-grade compute); verify.
 from fractions import Fraction
 from math import floor
-import bisect
+import bisect, functools
+print = functools.partial(print, flush=True)
 
 F = Fraction
 lam = F(1, 13)
@@ -119,13 +120,13 @@ print(f"  EXACT mu(V) = {float(mu2):.6f}   bound holds: {mu2 >= bnd2}")
 
 print()
 print("=" * 72)
-print("(D3) THREE-BLOCK COMPOSITION 5+4+4, gaps G2 = G3 = 300:")
+print("(D3) THREE-BLOCK COMPOSITION 5+4+4, gaps G2 = 300, G3 = 100:")
 B1 = BASE5
 B2 = [300 * x for x in BASE4]
-B3 = [90000 * x for x in BASE4]
+B3 = [30000 * x for x in BASE4]
 print(f"  B1 = {B1}")
 print(f"  B2 = {B2}  (gap {B2[0]/B1[-1]:.1f})")
-print(f"  B3 = 90000*{BASE4}  (gap {B3[0]/B2[-1]:.1f}; max speed {B3[-1]:,})")
+print(f"  B3 = 30000*{BASE4}  (gap {B3[0]/B2[-1]:.1f}; max speed {B3[-1]:,})")
 W1, m1, k1, es1 = profiles['B5']
 WB4, mB4, kB4, esB4 = profiles['B4']
 # stage 1+2 exact
@@ -137,7 +138,7 @@ best = None
 for n2, d2 in [(1, 600), (1, 300), (2, 300), (4, 300)]:
     for n3, d3 in [(1, 600), (1, 300), (2, 300), (4, 300)]:
         l2 = F(n2, d2 * 300); e2v = esB4[(n2, d2)]
-        l3 = F(n3, d3 * 90000); e3v = esB4[(n3, d3)]
+        l3 = F(n3, d3 * 30000); e3v = esB4[(n3, d3)]
         b = m1 * e2v * e3v - k1 * l2 * e3v - k12 * l3
         if best is None or b > best[0]:
             best = (b, l2, e2v, l3, e3v, (n2, d2), (n3, d3))
@@ -145,7 +146,7 @@ bnd3, l2, e2v, l3, e3v, sc2, sc3 = best
 print(f"  block data: m1 = {float(m1):.6f} kappa(V1) = {k1}; after B2: "
       f"mu(V2) = {float(m12):.6f} kappa(V2) = {k12} (exact)")
 print(f"  scales: eta2 = {float(e2v):.4f} at ({sc2[0]}/{sc2[1]})/300; "
-      f"eta3 = {float(e3v):.4f} at ({sc3[0]}/{sc3[1]})/90000")
+      f"eta3 = {float(e3v):.4f} at ({sc3[0]}/{sc3[1]})/30000")
 print(f"  GLUED BOUND = m1 e2 e3 - k1 l2 e3 - kappa(V2) l3 = "
       f"{float(bnd3):+.6f}   {'COERCIVE' if bnd3 > 0 else 'not coercive'}")
 print(f"  intermediate check: mu(V2) >= m1*eta2 - k1*l2 = "
