@@ -134,6 +134,21 @@ structure CoverageCappedB5Certificate (v : Fin 13 → ℤ) where
       LRC14Concrete.bandCount v q p = 6).card <
       LRC14Concrete.liveCount v q
 
+/-- THM-947 constructor in the killer-arc language: exclude one rational
+multiplier meeting seven bad arcs, then supply the exact THM-945 census. -/
+def CoverageCappedB5Certificate.of_noSeven
+    (v : Fin 13 → ℤ) (height : ℕ)
+    (hnoSeven : ¬ ∃ p ∈ Finset.Ioo 0 (cleanModulus v height),
+      7 ≤ LRC14Concrete.bandCount v (cleanModulus v height) p)
+    (hlive :
+      ((Finset.Ioo 0 (cleanModulus v height)).filter fun p =>
+        LRC14Concrete.bandCount v (cleanModulus v height) p = 6).card <
+        LRC14Concrete.liveCount v (cleanModulus v height)) :
+    CoverageCappedB5Certificate v := by
+  refine ⟨height, ?_, hlive⟩
+  exact (LRC14Concrete.coverageCapped_iff_no_seven
+    v (cleanModulus v height)).2 hnoSeven
+
 theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
     (certificate : CoverageCappedB5Certificate v) :
     0 < LRC14Concrete.B5 v certificate.q := by
@@ -284,6 +299,7 @@ theorem lrc14_from_twoThree_detuned_and_coverageCappedB5
 #print axioms small_speed_card_le_six_of_coverageCapped
 #print axioms not_coverageCapped_six_at_cleanModulus
 #print axioms CoverageCappedB5Certificate.b5_pos
+#print axioms CoverageCappedB5Certificate.of_noSeven
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget
 #print axioms denseCoreDissociatedB5Supply_of_coverageCapped
