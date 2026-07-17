@@ -45,8 +45,44 @@ Exactly THM-946(IV): the T₄ resonance strip (Δ_{u,t} vanishes on cu+dt = 0) a
 resonance slab — genuine affine-coset estimates, not nesting. The conditional statement
 THM-946(V) now has one of its three suppositions discharged.
 
+
+## The hardened case tree (cont.43 — audit-grade, explicit constants)
+
+Notation: g = gcd(a,b), g₀ = gcd(g,c), δ = g/g₀, a′ = a/g, b′ = b/g, c′ = c/g₀,
+L̂ = 1 + ln(2+Vmax), T* = a′b′/c′. Per line t, at most ONE near-pole-in-h₁ point:
+h₁ = r(t) = least-absolute residue of −c′t·(a′)⁻¹ mod b′, h₂ = −(c′t+a′r)/b′ determined.
+
+**The congruence-averaging lemma** (the core; REFEREED near-sharp): for κ with
+gcd(κ,b′) = e, over one period t = 1..b′/e,
+Σ 1/max(1,|lst(κt mod b′)|) ≤ (2/e)(1 + ln(b′/(2e))) — average ≤ 2L̂/b′ per t.
+(200-random-orbit referee: max ratio 0.9508 — the constant is nearly attained.)
+
+**Subcase A** (δt ≤ H, |h₂| ≤ H ⟹ r > H by the floor):
+Σ ≤ (1/(π³Hδ))·Σ_t 1/(t·max(1,|h₂(t)|)) ≤ 2L̂/(π³Hδ),
+using |h₂| ≥ max(1, c′t/b′ − a′/2) and the split at 2T*.
+
+**Subcase B** (|h₂| > H): the range needs t > T_H ≈ Hb′/c′; beyond max(T_H, 2T*) the
+growth |h₂| ≥ c′t/(2b′) gives Σ ≤ 4/(π²δH); the window [T_H, 2T*) contributes
+≤ L̂/(π²δH)·ln(2a′/H)₊ ≤ L̂²-absorbable/(δH).
+
+**Subcase C** (δt > H; the wide case where pointwise bounds diverge): the z-factor gives
+1/(πH); the t-sum of 1/max(1,|r(t)|) over the range ≤ 2T* is priced by the AVERAGING
+LEMMA: ≤ (2T*)·(2L̂/b′) + 2L̂ = 4a′L̂/c′ + 2L̂ ≤ 6L̂ (using a′/c′ = ag₀/(cg) ≤ a/c < 1).
+Total: ≤ 6L̂/(π³H).
+
+**Assembly** (×2 signs, ×2 branches): NP(H) ≤ 4[2L̂/(π³Hδ) + 5L̂/(δH) + 6L̂/(π³H)] — every
+constant explicit. REFEREED: valid on 4 real triples × H ∈ {10,80,320} with proper 1/H
+decay, and on the ADVERSARIAL triple (97, 8633, 8536) engineered so the orbit hits
+r(1) = 1 (a′ = 1, b′ = 89, c′ = 88) — the boundary case the averaging lemma exists for.
+Script: t3_audit_hardening_kps_S128c43.py.
+
+With this, the T₃ near-pole treatment stands at THM-946(I)'s rigor grade (numbered
+constants, adversarial checks); the T₄/T₅ trees (THM-953/959) await the same pass —
+the subcase template transfers verbatim (the averaging lemma is rank-free).
+
 ## Evidence log
 - [x] referee: 6 triples × H ∈ {5,20,80,320}, envelope bounded, C/H decay confirmed
-- [ ] T₄ strip estimate (the resonance line cu+dt=0 neighborhood) — the named next
+- [x] hardened case tree with explicit constants + averaging lemma (cont.43; adversarial referee)
+- [ ] T₄/T₅ same hardening pass (template transfers; averaging lemma is rank-free)
 - [ ] Lean rendering of the congruence lemma (ZMod orbit + case bound; klein's Thm892
       toolbox fits)

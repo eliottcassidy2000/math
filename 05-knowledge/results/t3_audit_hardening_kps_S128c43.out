@@ -1,0 +1,20 @@
+== (A) congruence-averaging lemma referee ==
+  200 random (b',kappa): max ratio (period-sum / claimed bound) = 0.9508  (lemma HOLDS iff <= 1)
+== (B) subcase bounds vs true near-pole sums ==
+  (307,425,541) H=10: true NP(h1-branch)=9.960e-05  explicit bound=1.535e+01  ratio=0.000
+  (307,425,541) H=80: true NP(h1-branch)=4.463e-06  explicit bound=1.918e+00  ratio=0.000
+  (307,425,541) H=320: true NP(h1-branch)=6.247e-07  explicit bound=4.796e-01  ratio=0.000
+  (671,944,1413) H=10: true NP(h1-branch)=1.045e-05  explicit bound=1.736e+01  ratio=0.000
+  (671,944,1413) H=80: true NP(h1-branch)=2.829e-06  explicit bound=2.170e+00  ratio=0.000
+  (671,944,1413) H=320: true NP(h1-branch)=6.065e-07  explicit bound=5.426e-01  ratio=0.000
+  (313,741,1531) H=10: true NP(h1-branch)=8.295e-06  explicit bound=1.753e+01  ratio=0.000
+  (313,741,1531) H=80: true NP(h1-branch)=3.127e-06  explicit bound=2.191e+00  ratio=0.000
+  (313,741,1531) H=320: true NP(h1-branch)=6.209e-07  explicit bound=5.478e-01  ratio=0.000
+  (420,451,873) H=10: true NP(h1-branch)=1.763e-05  explicit bound=1.635e+01  ratio=0.000
+  (420,451,873) H=80: true NP(h1-branch)=7.361e-06  explicit bound=2.044e+00  ratio=0.000
+  (420,451,873) H=320: true NP(h1-branch)=7.538e-07  explicit bound=5.110e-01  ratio=0.000
+== (C) adversarial boundary: triple engineered so the orbit hits r=1 at t=1 ==
+  triple (97,8633,8536): a'=1 b'=89
+   H=10: true=7.705e-05 bound=2.117e+01 ratio=0.000
+   H=80: true=1.161e-05 bound=2.646e+00 ratio=0.000
+DONE
