@@ -1,18 +1,20 @@
 ---
-id: THM-927
+id: THM-929
 title: THE QUINTIC WALL — the level-5 Bonferroni wall of LRC(14) crosses the Abel–Ruffini threshold at exactly the rung the problem needs. (I) WALL PARITY: the wall polynomial W_k(x) = Σ_{j≤k}(−1)^j C(x,j) 2^j 13^{k−j} has NO real root at even k (W₂, W₄ verified root-free; classical Bonferroni forces even-truncation positivity at every integer), so the wall sequence is ODD-LEVEL: w₁ = 13/2 (RATIONAL), w₃ = 11.098925… (root of 4x³−90x²+1100x−6591 — CARDANO-expressible), w₅ = 15.630647… (root of 4x⁵−170x⁴+4300x³−77680x²+930376x−5569395); (II) UNSOLVABILITY (PROVED): the w₅ quintic is irreducible over Q with GALOIS GROUP S₅ — Dedekind-hygienic Frobenius shapes at unramified primes only: (2,3)×4, (1,1,1,2)×1, (1,4)×7, (5)×2, (1,1,3), (1,2,2), (1⁵) — the (2,3) class alone forces S₅; disc = 2⁸·7²·435651247410573820409077061, positive, NON-square ⟹ by Abel–Ruffini/Galois the level-5 wall location admits NO expression in radicals. ROBUST: the (2,q) family q = 5,7,9,11,13,15,17 is S₅ at EVERY q — structural, not numerology of 13. THE POINT: the Bonferroni price ladder (union 6.5 → tree 7.5 → B3 → B5, THM-897) first covers the 13 combs at level 5 (13 < w₅ < 16), and that is the FIRST level whose wall is radical-transcendent — LRC(14) sits exactly at the Abel–Ruffini rung of its own certificate ladder; (III) THE AVOIDANCE POLYNOMIAL OF THE TIGHT SYSTEM (exact on the grid D = 14·360360): for speeds {1..13} at λ = 1/14, p(t) = Σ(−1)^k S_k t^k has p(1) = 0 EXACTLY (integer-verified: the tight kill is a perfect depth-13 telescoping); S₁₃ = 1/91 EXACTLY = the origin window |t| < 1/182 — the deep well is the LAST SURVIVOR of the inclusion–exclusion; the enhancement profile S_k/equid_k = 1, 1.38, 5.49, 32.5, 211, 1419, 9679, 66588, … has consecutive ratio → 7 = 1/(2λ); the Bonferroni partial sums alternate (B_even ≥ 0 ≥ B_odd, forced) with magnitudes GROWING to ±11 at m = 6 before collapsing — NO truncation before full depth 13 certifies anything; Newton's inequalities fail at EVERY k and 12 of 13 roots are complex (only t = 1 real): the tight system is maximally ANTI-LEE-YANG — the polynomial-side quantification of why the equidistribution-calibrated level-5 regime (THM-897/926's admissibility) cannot see the tight extremizer
 status: (II) PROVED (irreducibility mod p + unramified Frobenius shapes + Dedekind; S₅ from the (2,3) class; family check 7/7); (I) verified exactly (no real roots at k = 2,4; classical Bonferroni argument for all even k); (III) machine-exact (all 8191 subsets, integer sweep, p(1) = 0 in integers)
 source: kind-pasteur-2026-07-16-S128 (cont.34; owner: work the level-5 wall, see how it relates to quintic polynomials)
 depends_on:
   - THM-897 (opus: the wall + admissibility ladder this analyzes)
-  - THM-926 (opus: the third blocker / linear-forms condition)
+  - THM-927 (opus: the third blocker / linear-forms condition; born 923, briefly 926)
 related:
   - THM-826/853 (the Farey profile — the λ < 1/14 side of the tight system)
   - HYP-6955 / false-peaks (the repo's other quintic threshold: A₅ obstruction begins at n = 5)
   - THM-922-route-A-signoff (the closed residue-six arc this sits beside)
 ---
 
-# THM-927 — the quintic wall
+# THM-929 — the quintic wall
+
+> **RENUMBER NOTE (opus S332):** born THM-927 (kps S128c34, pushed 17:39:18) but opus first-pushed THM-927 at 17:20:30 (parallel-class renumber); first-pusher rule -> this file is THM-929. Its depends_on reference to the third-blocker updated 926->927 (that file moved when mac-mini first-pushed 926). No content changed.
 
 ## (I) The wall family
 
