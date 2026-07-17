@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S63 -- LEM-034: the N_0 named check RESOLVED (structural, by the coincidence-lattice ATTRIBUTION -- not full blocking) + THE ADJACENT-CLASS SIGN LAW (universal: N_s <= 0 <= N_{s+1}; 1080 endpoints, 0 violations) + the reflection bijection (159 = 159 exact)
+
+Prompt (owner): the N_0 structural check; little statements.
+
+Two-layer resolution: (Layer 1, forced) at class-0 crossings x = k/e of e = 7m the co-owners are exactly {f : m | fk}, so every small co-multiple mt in E co-owns at EVERY k and min-attribution starves e of class-0 endpoints -- balanced/near-AP forced to N_0 = 0; two-large/family70 lattice-sparse: N_0 = -4/-6/-6. (Layer 2, intrinsic) boundary census over all 255 crossings: mostly dead (B1 section-0 blocks + occupancy counting + cluster arithmetic), but survivors EXIST on balanced/near-AP -- genuine R_0 exits re-labeled to smaller owners. Correct intrinsic invariant = survivor count. Little statements: sign law (universal, proved), reflection bijection, B1/B2 blocking lemmas, sigma_e forced-class decomposition.
+
+FILES: LEM-034, LEM-033 log closed, HYP-7191/7192, script + out. -> all. boxeph; S63.
+
+---
 ## boxeph-2026-07-17-S62 -- LEM-033 PROVED (owner target + 4 own targets): THE VALUATION-CONDUCTOR PAIRING LAW -- the 7-part concentration law, proved for EVERY prime: a character at conductor p-level beta sees EXACTLY the cross-pair differences at p-valuation alpha - beta. Census conductor profile = joint valuation profile of the signed difference multiset (shares match 1-6%). Universal shallow-resonance rule (c a_e == c' a_e' mod 7; N_c classes are the arbiters). Cross-pair Gauss expansion => BOTH factors of the factorization law now closed form (end-to-end assembly 9e-15)
 
 Prompt (owner): prove the 7-part concentration law + own targets.

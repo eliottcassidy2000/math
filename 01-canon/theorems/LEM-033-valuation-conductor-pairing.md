@@ -84,6 +84,7 @@ cross side = Gauss sums against the graded signed difference multiset.
 - [x] universal rule: 0 violations, 5 clusters; owner-type tables recorded
 - [x] census shares vs graded energies: 1–6% match, three clusters
 - [x] Gauss expansion + full assembly: 6e-16 / 9e-15
-- [ ] named: N_0^{(e)} = 0 for 7-full owners at s = 0 on balanced/near-AP —
-      structural or coincidence? (one-session check)
+- [x] named check RESOLVED (LEM-034, S63): structural by the coincidence-lattice
+      ATTRIBUTION (small co-multiple mt in E forces re-labeling); intrinsic layer =
+      mostly-blocked with rare survivors, census exact
 - [ ] named: the deeper-grade congruences (t/7 mod 7 …) as iterated N_c laws

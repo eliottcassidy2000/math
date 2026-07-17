@@ -1,0 +1,49 @@
+THE ADJACENT-CLASS SIGN LAW AND THE CLASS-0 LATTICE (boxeph S63)
+==============================================================================
+PART A -- the adjacent-class sign law (all clusters, all s)
+  [balanced] adjacent-class share of endpoints by s: 0.22 0.25 0.33 0.30 0.33 0.25 0.22
+  [two-owner] adjacent-class share of endpoints by s: 0.30 0.12 0.28 0.00 0.28 0.12 0.30
+  [family60] adjacent-class share of endpoints by s: 0.50 0.30 0.40 0.40 0.30 0.50
+  [near-AP] adjacent-class share of endpoints by s: 0.20 0.08 0.18 0.31 0.18 0.08 0.20
+  [two-large] adjacent-class share of endpoints by s: 0.21 0.23 0.13 0.35 0.13 0.23 0.21
+  [family70] adjacent-class share of endpoints by s: 0.57 0.60 0.62 0.50 0.62 0.60 0.57
+  TOTALS: 159 class-s endpoints (all exits), 159 class-(s+1) endpoints (all entries), of 1080 endpoints; violations = 0
+  N_s <= 0 <= N_{s+1} per owner: verified at s = 0, all clusters
+==============================================================================
+PART B -- the coincidence lattice + attribution lemma (Layer 1)
+  [balanced] owner 21 = 7*3: N_0 = +0; attribution-forced N_0 = 0 (small co-multiples [12, 15])
+  [balanced] owner 28 = 7*4: N_0 = +0; attribution-forced N_0 = 0 (small co-multiples [12, 20])
+  [balanced] owner 35 = 7*5: N_0 = +0; attribution-forced N_0 = 0 (small co-multiples [15, 20, 30])
+  [near-AP] owner 14 = 7*2: N_0 = +0; attribution-forced N_0 = 0 (small co-multiples [8, 10, 12])
+  [two-large] owner 56 = 7*8: N_0 = -4; attribution-free
+  [two-large] owner 84 = 7*12: N_0 = -6; attribution-free
+  [family70] owner 70 = 7*10: N_0 = -6; attribution-free
+  lattice rule own = {f : m | fk} exact; forced owners all N_0 = 0
+==============================================================================
+PART C -- boundary census at class-0 crossings of 7-full owners
+  (Layer 2: is x- in R_0 at all?  mechanism per crossing)
+  [balanced] e=21 (m=3, non-multiples of 3: 3): 21 crossings -> B1 10, other-zero 1, occupancy 9, SURVIVORS 1 at k = [11]
+  [balanced] e=28 (m=4, non-multiples of 4: 4): 28 crossings -> B1 11, other-zero 2, occupancy 15, SURVIVORS 0
+  [balanced] e=35 (m=5, non-multiples of 5: 3): 35 crossings -> B1 16, other-zero 1, occupancy 17, SURVIVORS 1 at k = [22]
+  [near-AP] e=14 (m=2, non-multiples of 2: 2): 14 crossings -> B1 9, other-zero 1, occupancy 3, SURVIVORS 1 at k = [12]
+  [two-large] e=56 (m=8, non-multiples of 8: 6): 56 crossings -> B1 9, other-zero 20, occupancy 22, SURVIVORS 5 at k = [9, 11, 33, 47, 48]
+  [two-large] e=84 (m=12, non-multiples of 12: 6): 84 crossings -> B1 11, other-zero 31, occupancy 34, SURVIVORS 8 at k = [13, 14, 16, 37, 62, 70, 71, 72]
+  [family70] e=70 (m=10, non-multiples of 10: 6): 70 crossings -> B1 13, other-zero 27, occupancy 24, SURVIVORS 6 at k = [11, 21, 31, 41, 51, 61]
+==============================================================================
+PART D -- survivors vs actual endpoints (Layer 1 x Layer 2)
+  [balanced] e=21: 1 survivors, all are endpoints (exits); 0 attributed to 21; owner N_0 = +0 (= -0: True)
+  [balanced] e=35: 1 survivors, all are endpoints (exits); 0 attributed to 35; owner N_0 = +0 (= -0: True)
+  [family70] e=70: 6 survivors, all are endpoints (exits); 6 attributed to 70; owner N_0 = -6 (= -6: True)
+  [near-AP] e=14: 1 survivors, all are endpoints (exits); 0 attributed to 14; owner N_0 = +0 (= -0: True)
+  [two-large] e=56: 5 survivors, all are endpoints (exits); 4 attributed to 56; owner N_0 = -4 (= -4: True)
+  [two-large] e=84: 8 survivors, all are endpoints (exits); 6 attributed to 84; owner N_0 = -6 (= -6: True)
+==============================================================================
+PART E -- sigma_e decomposition: forced classes vs mixed (s = 0)
+  [balanced] 12:sig=-5(N0=-3,N1=+0)  15:sig=-2(N0=+0,N1=+0)  20:sig=-1(N0=+0,N1=+0)  21:sig=+5(N0=+0,N1=+2)  28:sig=+0(N0=+0,N1=+0)  30:sig=+0(N0=-2,N1=+0)  35:sig=+3(N0=+0,N1=+1)
+  [two-owner] 3:sig=+2(N0=+0,N1=+0)  5:sig=-1(N0=+0,N1=+0)  36:sig=+3(N0=-4,N1=+1)  60:sig=-4(N0=-7,N1=+2)
+  [family60] 1:sig=+6(N0=+0,N1=+1)  3:sig=+0(N0=+0,N1=+0)  5:sig=+2(N0=+0,N1=+2)  6:sig=-5(N0=-2,N1=+0)  60:sig=-3(N0=-8,N1=+8)
+  [near-AP] 8:sig=+0(N0=-2,N1=+0)  9:sig=-3(N0=+0,N1=+0)  10:sig=+3(N0=+0,N1=+0)  12:sig=-1(N0=+0,N1=+0)  14:sig=+2(N0=+0,N1=+0)  15:sig=-3(N0=-2,N1=+0)  18:sig=+2(N0=+0,N1=+0)
+  [two-large] 1:sig=-1(N0=+0,N1=+0)  3:sig=-1(N0=+0,N1=+0)  5:sig=-1(N0=+0,N1=+0)  56:sig=+8(N0=-4,N1=+3)  84:sig=-5(N0=-6,N1=+2)
+  [family70] 3:sig=+1(N0=+0,N1=+1)  4:sig=+1(N0=+0,N1=+0)  6:sig=-6(N0=-2,N1=+0)  70:sig=+4(N0=-6,N1=+15)
+==============================================================================
+done
