@@ -79,7 +79,7 @@ With that convention, the exact scale sequence is:
 | `13` | no primitive common-scale face | THM-860: every retained and replacement speed would be divisible by 13 |
 | `14` | fourteen local sheets at one owner | THM-977: scalar capacity leaves 576 rows, but every owner-local union misses at least two sheets; no global nerve remains |
 | `15` | labelled owner-feasibility subset and maximum-union vector | THM-978: 2,184 scalar rows have 0, 1, 2, or 4 feasible owners, never all six |
-| `16` | labelled owner-feasibility subset and maximum-union vector | THM-980 (independent replay pending): 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owners fail |
+| `16` | labelled owner-feasibility subset and maximum-union vector | THM-980: 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owners fail |
 
 The carrier changes because each quotient is legal only after checking which
 predicate it preserves.  At scale ten, projectivization is legal because the
@@ -126,7 +126,7 @@ proof is the absolute threshold statement encoded by the labelled feasibility
 subset.  This identifies a new pre-nerve layer between local sheet incidence
 and the global obligation nerve.
 
-Scale sixteen strengthens that layer: the primary literal reconstruction has
+Scale sixteen strengthens that layer: two independent exact reconstructions have
 no row with more than two locally feasible owners.  Its completed owner
 tournament is again always transitive.  Keeping the exact ordered pair
 observable would let one reconstruct the labelled maximum-union vector, but

@@ -105,4 +105,5 @@ are faithful only inside one labelled owner DP.
 This closes only the primitive proper AP-centred common-scale-fifteen
 Hamming-six face under THM-860's hereditary-lcm and common-sheet conclusions.
 It does not close `c>=16`, H5 ramification, non-AP-centred/deep-sheet packets,
-or global sporadic emptiness.  The next common-scale frontier is `c=16`.  ∎
+or global sporadic emptiness.  Scale sixteen is subsequently closed by
+THM-980.  ∎

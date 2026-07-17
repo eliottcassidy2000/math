@@ -277,8 +277,8 @@ live floor.
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
 of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
-faces are certified through scale fifteen (scale thirteen is primitive-
-impossible), but scale sixteen and higher, ramified H5, non-AP/deep, and
+faces are certified through scale sixteen (scale thirteen is primitive-
+impossible), but scale seventeen and higher, ramified H5, non-AP/deep, and
 higher-sheet branches remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line

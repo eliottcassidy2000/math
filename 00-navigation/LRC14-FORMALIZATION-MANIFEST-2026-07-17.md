@@ -1001,9 +1001,15 @@ Thus the AP-centred common-scale H6 faces `c=3,...,11` are closed.  The live
 pull extended this: THM-976 independently certifies complete owner
 orthogonality at `c=12`; THM-860 makes `c=13` primitive-impossible; and THM-977
 closes `c=14` already at the owner-local gate, where every scalar row misses at
-least two of fourteen sheets.  This still does not prove uniform sporadic
-emptiness.  Scale fifteen and higher, the finite ramified H5 bank, and non-AP,
-deep, and higher-sheet branches remain parts of the global `n=12` problem.
+least two of fourteen sheets.  THM-978 now closes `c=15`: its 2,184 scalar rows
+have respectively 0, 1, 2, or 4 feasible owners, never all six.  The faithful
+terminal datum is the labelled feasibility subset and maximum-union vector;
+the induced owner tournament is always transitive and loses the absolute
+coverage threshold.  THM-980 closes `c=16` at the same pre-nerve layer: its
+2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owner
+projections are empty.  This still does not prove uniform sporadic emptiness.
+Scale seventeen and higher, the finite ramified H5 bank, and non-AP, deep, and
+higher-sheet branches remain parts of the global `n=12` problem.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal
 arithmetic sharpening.  THM-668 ruler data `q<=2b`, strict `mu>1/n`, and the
