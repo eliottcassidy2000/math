@@ -203,14 +203,22 @@ must state which LRC predicate it preserves.
   the sparse rational-pair branch interval now transports bijectively back to
   multiplier space, giving the complete finite-`q` three-branch count; the
   zero-width integral boundary requires `Int.toNat`, not a raw floor difference.
+- **death-star S52 two-circle probe**: for the canonical family `{1,...,13}`,
+  the integer and half-resonance circles are proved to lie inside the depth-six
+  set; exact recon says their union is the whole deep set.  The converse case
+  analysis is structured but remains Part II, and this canonical classifier is
+  not a uniform dense-core live floor.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
   zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd
   budget, and all-q reflection-midpoint parity are LEAN.  The remaining step is
   a quantitative root/window/payment theorem and adaptive live floor, not
   another pointwise Plücker identity or incidence count.
-- **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
-  form — the analytic instrument layer; manifest items 11–13 decide-shaped.
+- **boxeph L-frame** (LEM-032..037, LEM-045): the factorization law's both
+  factors are closed form, and the per-runner danger measure `<=1/7` is now
+  kernel-pure.  This completes the in-kernel ingredients of the `c=8`
+  multi-parent Hunter assembly; it does not by itself settle the dense-core
+  supplier above.
 
 ## What is genuinely open (the honest short list)
 
@@ -262,14 +270,15 @@ as `DenseCoreWeightedCensusB5Supply`, strictly weaker than the old uniform
 `792·deepCount` socket.  Reuse multiplicities, zero-color gluing, fixed-root
 Fubini, per-face gcd resonance budgets, and all-q midpoint parity are now
 exact.  Its remaining arithmetic is: choose a root/window covering the
-relevant events, bound the summed gcd budgets, pay the colored `462/210` transport factors,
-handle depths six and seven, and supply the adaptive-modulus live floor.
+relevant events, bound the summed gcd budgets, pay the colored `462/210`
+transport factors, handle depths six and seven, and supply the adaptive-modulus
+live floor.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
 of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
-faces are certified through scale fourteen (scale thirteen is primitive-
-impossible), but scale fifteen and higher, ramified H5, non-AP/deep, and
+faces are certified through scale fifteen (scale thirteen is primitive-
+impossible), but scale sixteen and higher, ramified H5, non-AP/deep, and
 higher-sheet branches remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
