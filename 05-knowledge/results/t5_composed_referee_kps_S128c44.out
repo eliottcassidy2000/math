@@ -1,0 +1,6 @@
+T5 collar/bulk partition (box 70):
+  (307, 425, 541, 671, 800): collar=3.171e-04 (37550 pts, 70%) bulk=1.360e-04 (352354 pts)  [partition exact by construction]
+    bulk/L^2 = 2.302e-06 (the bulk-lemma normalization; bounded across quintuples = the shell formula's check)
+  (671, 944, 1413, 2147, 3310): collar=1.190e-04 (10974 pts, 75%) bulk=4.044e-05 (100098 pts)  [partition exact by construction]
+    bulk/L^2 = 4.877e-07 (the bulk-lemma normalization; bounded across quintuples = the shell formula's check)
+DONE

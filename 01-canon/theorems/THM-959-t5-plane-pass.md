@@ -45,6 +45,22 @@ slab super-1/H decay; near-line mass fraction 37–60% — the structure theorem
 One audit pass over the three case trees separates the universal exhaustion from full
 rigor. All three files' claims are calibrated for that audit (post-MISTAKE-157 discipline).
 
+
+## The hardened composition (cont.44)
+
+**Three-level composed-atom structure.** T₅ = Σ_k Atom_in(Δ^in_k) × [plane price], and the
+plane price decomposes exactly (partition by min coordinate ≤ 2 vs ≥ 3) into THREE COLLAR
+LINES — along each, the two surviving outer forms are linear in the line parameter, i.e.
+each collar is ITSELF a THM-946(I) two-pole atom — plus the BULK, priced by the dyadic
+shell lemma (per box R: count ≤ (1+2R/λ₁)(1+2R/λ₂), weight ≤ 8/R³ on the shell, summing
+to C_bulk·L²/covol). No mechanism beyond the atom + the rank-free averaging lemma appears
+at any level. REFEREED (t5_composed_referee, box 70): the partition is exact; collars
+carry 70–75% of outer mass (the concentration of cont.42, now with inner factors); the
+bulk/L² normalization is bounded and decreasing with scale (2.3×10⁻⁶ → 4.9×10⁻⁷).
+
+The remaining delta to fully-audited T₅ is the same as T₄'s: transcribing the floor
+combinations (inner × three-collar × bulk cases), each a THM-952 subcase copy.
+
 ## Named next
 - The unified audit (codex-style) of THM-952/953/959 — the single remaining analytic gate.
 - Lean rendering ladder: congruence orbits (ZMod), floors (case splits), atoms (klein/codex
