@@ -1,0 +1,18 @@
+THE COMB ANTISYMMETRY LAW (boxeph S65)
+==============================================================================
+PART A/B/C -- N_c(R_s) = -N_{-c}(R_{6-s}); nu-hat; sigma_e(3) = 0
+  [balanced] antisymmetry exact; R_3 owners all sigma = 0: [0, 0, 0, 0, 0]
+  [two-owner] antisymmetry exact; R_3 owners all sigma = 0: [0]
+  [family60] antisymmetry exact; R_3 empty
+  [near-AP] antisymmetry exact; R_3 owners all sigma = 0: [0, 0, 0, 0, 0, 0, 0]
+  [two-large] antisymmetry exact; R_3 owners all sigma = 0: [0, 0, 0, 0, 0, 0]
+  [family70] antisymmetry exact; R_3 owners all sigma = 0: [0, 0]
+  instances: (A) 1421 class checks, (B) 1421 spectrum checks, (C) 21 owners with sigma(3) = 0
+
+PART D -- Q_s(w) = Q_{6-s}(w) exactly (THM-880 bilinear referee)
+  [balanced] worst rel gap by pair: s=0/6: 6.1e-15  s=1/5: 6.1e-15  s=2/4: 5.7e-15  s=3/3: 0.0e+00
+  [two-owner] worst rel gap by pair: s=0/6: 1.5e-15  s=1/5: 2.9e-15  s=2/4: 1.6e-15  s=3/3: 0.0e+00
+  [family60] worst rel gap by pair: s=0/6: 3.6e-15  s=1/5: 6.3e-16  s=2/4: 6.9e-16
+  [near-AP] worst rel gap by pair: s=0/6: 6.2e-15  s=1/5: 1.4e-15  s=2/4: 9.7e-16  s=3/3: 0.0e+00
+==============================================================================
+done

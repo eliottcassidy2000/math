@@ -79,5 +79,4 @@ intrinsic invariant for downstream use is the survivor count, not N₀.
 - [x] lattice rule own = {f : m | fk} exact; forced owners all N₀ = 0
 - [x] census complete (255 crossings, 7 owners, 4 geometries); survivors ⟺ endpoints
 - [x] named check RESOLVED (LEM-035, S64): the multiplication-permutation law — clean columns 6r < M, rescued column r = M/6, sporadics (M−2,5) at M = 11,12; M = 11 prediction k = 64 confirmed
-- [ ] named: σ_e forced-class decomposition as a LEM-030 refinement (N₁ = +15
-      inside σ = +4 at family70/owner 70 — the imbalance lives in the forced classes)
+- [x] named item RESOLVED (LEM-037, S65): comb antisymmetry N_c(s) = −N_{−c}(6−s); σ_e(3) = 0 identically; Q_s = Q_{6−s}

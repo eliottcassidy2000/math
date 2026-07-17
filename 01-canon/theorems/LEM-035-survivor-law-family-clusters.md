@@ -29,5 +29,4 @@ integer crossings reduces to a mod-7 carry computation:
 - [x] r = 1 family all M = 8..15; M = 10 completeness; M = 11 k = 64 prediction
 - [x] clean/rescued column law at M = 12..15; sporadic mechanism at M = 11, 12
 - [x] N₀ reproduced ×8; reflection closure at family70
-- [ ] named: sporadic classification for general E (beyond {1..6, 7M}) — the
-      slack-slot combinatorics at arbitrary carry vectors
+- [x] named check RESOLVED (LEM-036, S65): orbit reduction (φ, o); full-column theorem (shifted perms only); sporadic mechanisms decoded

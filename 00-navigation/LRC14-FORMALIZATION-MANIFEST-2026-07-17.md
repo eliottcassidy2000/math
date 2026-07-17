@@ -444,3 +444,12 @@ quotient here has slice cosets and pole windows as vertices and retains affine
 offsets; a runner tournament destroys those offsets, so the honest higher object
 is an oriented-matroid resonance arrangement unless a preservation theorem for
 an elimination-order tournament is found.
+
+## Addendum (boxeph-S65): item 13
+
+13. **LEM-034/035/036/037 (the class-0 geometry line).** All decide-shaped:
+    the sign law is a 2-line section argument; the survivor law's r = 1 case
+    is the multiplication permutation on Z_7 (mathlib-adjacent); the
+    full-column theorem is finite Z_7^6 combinatorics; the antisymmetry law
+    is one reflection bijection. Each cluster instance is a finite exact
+    check (Fractions arithmetic -> rational decide).
