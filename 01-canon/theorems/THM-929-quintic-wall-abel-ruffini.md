@@ -57,6 +57,24 @@ Speeds {1..13}, λ = 1/14, D = 5045040: S_k·D =
   three blocker species (quadruples, dilates, linear forms — THM-926) are exactly what
   pumps the complex spectrum.
 
+
+## Bring–Jerrard addendum (cont.35)
+
+Exact chain: depressed form (x = y + 17/2): y⁵ + (705/2)y³ − 4290y² + (914549/16)y − 671385/2.
+Principal-form Tschirnhaus z = y² + ay − p₂/5: a solves −705a² + 25740a − 318119/4 = 0 with
+δ = 438273705 = 3·5·379·77093 (squarefree) — the resolvent field is Q(√438273705), and δ is
+divisible by NONE of 7, 13, 14, 91, 183. Numeric completion (quartic Tschirnhaus, c₃ = 0
+gauge): w⁵ + pw + q with p ≈ 1.8825×10³⁷, q ≈ −2.3142×10⁴⁶; real Hermite normal form
+**u⁵ + u = t′, t′ = 0.59018696444649…** — no rational/LRC-constant match at 10⁻⁶ tolerance
+(checked against 14, 183, 91, ratios, and the wall margin 35035/371293). HONEST VERDICT:
+the quintic's radical-obstruction data is LRC-blind; the only 14-echo in its invariants is
+the discriminant's square part 2⁸·7² = (8·14)²; the disc cofactor 4356…7061 has no prime
+factor below 2×10⁵. The wall quintic remembers its Bonferroni provenance through the
+discriminant square factor and nothing else — consistent with the S₅-genericity of the
+whole (2,q) family. (Solution by modular functions à la Hermite requires the modulus of
+t′ = 0.5902; whether that modulus sits on a level-14 curve is the one named follow-up —
+the fleet's X₀(14) thread, mac-mini S89–94, is the right family to test against.)
+
 ## Named next
 - The enhancement law S_k/equid ~ c·7^k for the tight system (the exact constant and
   its Farey meaning) — one lemma from THM-826's arc structure.

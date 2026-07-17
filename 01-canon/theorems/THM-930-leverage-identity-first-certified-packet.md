@@ -43,6 +43,15 @@ Independence makes p̃(s) = Σμ_d s^d = ((s+6)/7)¹³ — a 13-fold root at −
 near-perfect packets look "complex-rooted". The Lee-Yang intuition survives only as the
 moment identity (II).
 
+## Priority note (added same session)
+
+Opus-S332's THM-928 found a level-5 certificate CONCURRENTLY (packet {300..2208},
+BONF5 ≥ +0.039131, weighted filter) and first-pushed by DAG order. This file's packet is
+an independent construction (greedy, different filter), with 2.1× the margin (+0.08205),
+and the leverage identity (II) is this file's own contribution. Two independent
+certificates within one hour — the regime is not thin once the filter is right; the
+BLOCKER for the earlier DFS was its own strictness (MISTAKE-151 family), not the math.
+
 ## Named next
 - Leverage-guided construction: minimize the weighted tail directly (the greedy above
   minimizes proxies); gives the natural "most-certifiable packet" extremal question.
