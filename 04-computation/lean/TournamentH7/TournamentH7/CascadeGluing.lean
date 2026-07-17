@@ -26,7 +26,11 @@ theorem ofReal_sum_le {ι : Type*} (s : Finset ι) (f : ι → ℝ) :
   | empty => simp
   | cons a s ha ih =>
       rw [Finset.sum_cons, Finset.sum_cons]
-      exact ENNReal.ofReal_add_le.trans (add_le_add_left ih _)
+      calc ENNReal.ofReal (f a + ∑ i ∈ s, f i)
+          ≤ ENNReal.ofReal (f a) + ENNReal.ofReal (∑ i ∈ s, f i) :=
+            ENNReal.ofReal_add_le
+        _ ≤ ENNReal.ofReal (f a) + ∑ i ∈ s, ENNReal.ofReal (f i) :=
+            add_le_add le_rfl ih
 
 /-- **THE CASCADE STEP (THM-928(A) L1, complement form)**: one speed `w` leaves
     at least `L·(1 − 2λ) − 2λ/w` of any interval of length `L` uncovered.
@@ -36,9 +40,9 @@ theorem cascade_step (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
     ENNReal.ofReal (L * (1 - 2 * lam) - 2 * lam / w)
       ≤ volume (Set.Icc x (x + L) \ badArcs w lam) := by
   set t := L * (1 - 2 * lam) - 2 * lam / w with ht
-  rcases le_or_lt t 0 with hneg | hpos
+  rcases le_total t 0 with hneg | hpos
   · rw [ENNReal.ofReal_of_nonpos hneg]
-    exact zero_le _
+    exact zero_le
   · have hw0 : (0:ℝ) < w := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hw
     have hwne : (w:ℝ) ≠ 0 := hw0.ne'
     have hfrag := fragmentation w hw lam L x hlam hL
@@ -58,20 +62,21 @@ theorem cascade_step (w : ℕ) (hw : 1 ≤ w) (lam L x : ℝ)
       · exact Or.inl ⟨hy, hb⟩
     have hnn : (0:ℝ) ≤ (L * w + 1) * (2 * lam / w) := by
       have h1 : (0:ℝ) ≤ L * w := mul_nonneg hL hw0.le
-      have h2 : (0:ℝ) ≤ 2 * lam / w := by positivity
+      have h2 : (0:ℝ) ≤ 2 * lam / w := div_nonneg (by linarith) hw0.le
       nlinarith
     have hbound_sum : t + (L * w + 1) * (2 * lam / w) = L := by
+      rw [ht]
       field_simp
       ring
     have h2 : ENNReal.ofReal t + ENNReal.ofReal ((L * w + 1) * (2 * lam / w))
         = ENNReal.ofReal L := by
-      rw [← ENNReal.ofReal_add hpos.le hnn, hbound_sum]
+      rw [← ENNReal.ofReal_add hpos hnn, hbound_sum]
     have h3 : ENNReal.ofReal t + volume (badArcs w lam ∩ Set.Icc x (x + L))
         ≤ volume (Set.Icc x (x + L) \ badArcs w lam)
           + volume (badArcs w lam ∩ Set.Icc x (x + L)) :=
       calc ENNReal.ofReal t + volume (badArcs w lam ∩ Set.Icc x (x + L))
           ≤ ENNReal.ofReal t + ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) :=
-            add_le_add_left hfrag _
+            add_le_add le_rfl hfrag
         _ = ENNReal.ofReal L := h2
         _ = volume (Set.Icc x (x + L)) := hIcc.symm
         _ ≤ _ := hsplit
@@ -87,7 +92,8 @@ theorem window_floor_sample (W : Set ℝ) (hW : MeasurableSet W)
                 ≤ volume (W ∩ Set.Icc a (a + l))) :
     ENNReal.ofReal (eta * (L - l)) ≤ volume (W ∩ Set.Icc x (x + L)) := by
   set N : ℕ := Nat.floor (L / l) with hN
-  have hLl : (0:ℝ) ≤ L / l := by positivity
+  have hL0 : (0:ℝ) ≤ L := le_trans hl.le hL
+  have hLl : (0:ℝ) ≤ L / l := div_nonneg hL0 hl.le
   -- the Icc floor transfers to the half-open window (endpoint is null)
   have htile : ∀ a : ℝ, ENNReal.ofReal (eta * l) ≤ volume (W ∩ Set.Ico a (a + l)) := by
     intro a
@@ -160,7 +166,7 @@ theorem window_floor_sample (W : Set ℝ) (hW : MeasurableSet W)
   calc ENNReal.ofReal (eta * (L - l))
       ≤ ENNReal.ofReal (eta * ((N:ℝ) * l)) :=
         ENNReal.ofReal_le_ofReal (mul_le_mul_of_nonneg_left hNge heta)
-    _ = (N : ℝ≥0∞) * ENNReal.ofReal (eta * l) := by
+    _ = (N : ENNReal) * ENNReal.ofReal (eta * l) := by
         rw [show eta * ((N:ℝ) * l) = (N:ℝ) * (eta * l) by ring,
             ENNReal.ofReal_mul (by positivity : (0:ℝ) ≤ (N:ℝ)),
             ENNReal.ofReal_natCast]
@@ -183,9 +189,9 @@ theorem union_floor_sample (W : Set ℝ) (hW : MeasurableSet W)
                 ≤ volume (W ∩ Set.Icc a (a + l))) :
     ENNReal.ofReal (eta * ((∑ i, ((endpoints i).2 - (endpoints i).1)) - k * l))
       ≤ volume (W ∩ ⋃ i, Set.Icc (endpoints i).1 (endpoints i).2) := by
-  have hdisj' : (↑(Finset.univ : Finset (Fin k)) : Set (Fin k)).PairwiseDisjoint
-      (fun i => W ∩ Set.Icc (endpoints i).1 (endpoints i).2) := by
-    intro i _ j _ hij
+  have hpair : Pairwise (Function.onFun Disjoint
+      (fun i => W ∩ Set.Icc (endpoints i).1 (endpoints i).2)) := by
+    intro i j hij
     have hd : Disjoint (Set.Icc (endpoints i).1 (endpoints i).2)
         (Set.Icc (endpoints j).1 (endpoints j).2) :=
       Set.disjoint_iff_inter_eq_empty.mpr (hdisj i j hij)
@@ -193,18 +199,13 @@ theorem union_floor_sample (W : Set ℝ) (hW : MeasurableSet W)
   have hmeas : ∀ i : Fin k,
       MeasurableSet (W ∩ Set.Icc (endpoints i).1 (endpoints i).2) :=
     fun i => hW.inter measurableSet_Icc
-  have hunion : W ∩ (⋃ i, Set.Icc (endpoints i).1 (endpoints i).2)
-      = ⋃ i ∈ (Finset.univ : Finset (Fin k)),
-          (W ∩ Set.Icc (endpoints i).1 (endpoints i).2) := by
-    rw [Set.inter_iUnion]
-    exact (Set.biUnion_univ _).symm
-  rw [hunion, measure_biUnion_finset hdisj' (fun i _ => hmeas i)]
+  rw [Set.inter_iUnion, measure_iUnion hpair hmeas, tsum_fintype]
   -- per-component floor, short components absorbed
   have hstep : ∀ i : Fin k,
       ENNReal.ofReal (eta * (((endpoints i).2 - (endpoints i).1) - l))
         ≤ volume (W ∩ Set.Icc (endpoints i).1 (endpoints i).2) := by
     intro i
-    rcases le_or_lt l ((endpoints i).2 - (endpoints i).1) with hcase | hcase
+    rcases le_total l ((endpoints i).2 - (endpoints i).1) with hcase | hcase
     · have h := window_floor_sample W hW l eta
         ((endpoints i).2 - (endpoints i).1) (endpoints i).1 hl heta hcase hfloor
       rwa [show (endpoints i).1 + ((endpoints i).2 - (endpoints i).1)
@@ -215,14 +216,17 @@ theorem union_floor_sample (W : Set ℝ) (hW : MeasurableSet W)
             ≤ eta * 0 := mul_le_mul_of_nonneg_left h1 heta
           _ = 0 := mul_zero eta
       rw [ENNReal.ofReal_of_nonpos hnp]
-      exact zero_le _
+      exact zero_le
   -- the real identity Σ η·(len_i − l) = η·(Σ len − k·l), then sum up
   have hid : eta * ((∑ i, ((endpoints i).2 - (endpoints i).1)) - k * l)
       = ∑ i, eta * (((endpoints i).2 - (endpoints i).1) - l) := by
-    rw [← Finset.mul_sum]
-    congr 1
-    rw [Finset.sum_sub_distrib, Finset.sum_const, Finset.card_univ,
-        Fintype.card_fin, nsmul_eq_mul]
+    have h1 : ∀ i : Fin k, eta * (((endpoints i).2 - (endpoints i).1) - l)
+        = eta * ((endpoints i).2 - (endpoints i).1) - eta * l := fun i => by ring
+    simp only [h1]
+    conv_rhs => rw [Finset.sum_sub_distrib]
+    rw [← Finset.mul_sum, Finset.sum_const, Finset.card_univ, Fintype.card_fin,
+        nsmul_eq_mul]
+    ring
   calc ENNReal.ofReal (eta * ((∑ i, ((endpoints i).2 - (endpoints i).1)) - k * l))
       = ENNReal.ofReal (∑ i, eta * (((endpoints i).2 - (endpoints i).1) - l)) := by
         rw [hid]
