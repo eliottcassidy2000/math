@@ -1,0 +1,13 @@
+== (1) identity referee: BONF_m == mu_0 + (-1)^m sum_{d>m} C(d-1,m) mu_d  (exact, all m=1..12) ==
+  identity holds on all 5 packets, all m: True
+== (2) THE CERTIFIED PACKET (exact rationals) ==
+  speeds: [307, 425, 541, 671, 800, 944, 1087, 1413, 1943, 2147, 2570, 3056, 3310]
+  BONF5 = 11882280671749727299498652729985/144812363687055259298722873214576 = 0.08205294333450536  > 0: True
+  mu_0 (good measure) = 117672094910664692133055713400657/868874182122331555792337239287456 = 0.13543053451448656
+  weighted tail sum_{d>=6} C(d-1,5) mu_d = 6625487268595189762294828145821/124124883160333079398905319898208 = 0.053377591179981185
+  audit: Sidon(sums distinct)=True ; has-3AP=False ; small ratio (p,q<=30)=None ; 7|x or 13|x: []
+== (3) tight-system atom decomposition ==
+  S_5 = 40761569/2522520 = 16.1591 ; origin-atom contribution C(13,5)*mu_13 = 99/7 = 14.1429 (87.5%)
+  BONF5 leverage of the origin atom: -C(12,5)*mu_13 = -792/91 = -8.703296703296703
+  kill threshold: an atom at depth 13 of mass > equid-BONF5/792 = 1.04e-04 breaks the certificate; deep well has 1/91 = 1.10e-02 (106x over)
+DONE
