@@ -173,7 +173,7 @@ theorem then feeds that dispatch into `lrc14_from_B5_dissoc`; every intermediate
 generic branch, B5 consumer, and witness step is already proved.  Honest boundary:
 besides `LRCUpTo13`, LRC(14) still needs (i) the nonterminating two-adic/small-denominator
 detuned supplier and (ii) positive B5 on the dissociated primitive residual.  A fresh
-pull integrated the conceptual effect of THM-934/935: the second surface can be narrowed
+pull integrated the conceptual effect of THM-937/935: the second surface can be narrowed
 to the chain-dense core and `B5` is controlled entirely by support-2--5 relations, with
 only the universal support-3/4/5 lattice tails still named after the proved pair tail.
 Boxeph S53 corrects S52: cross terms are destructive off resonance but constructive on
