@@ -276,6 +276,72 @@ theorem exists_bounded_four_relation_of_lt_40 (v : Fin 13 → ℕ)
       exact_mod_cast heq
     omega
 
+/-- Reorient a relation on absolute speeds to a relation on signed speeds. -/
+def orientCoefficient (v coeff : Fin 13 → ℤ) (i : Fin 13) : ℤ :=
+  coeff i * (v i).sign
+
+theorem orientCoefficient_bounded {v coeff : Fin 13 → ℤ}
+    (hv : ∀ i, v i ≠ 0)
+    (hcoeff : ∀ i, -1 ≤ coeff i ∧ coeff i ≤ 1) (i : Fin 13) :
+    -1 ≤ orientCoefficient v coeff i ∧ orientCoefficient v coeff i ≤ 1 := by
+  apply abs_le.mp
+  rw [orientCoefficient, abs_mul, Int.abs_sign_of_ne_zero (hv i), mul_one]
+  exact abs_le.mpr (hcoeff i)
+
+theorem orientCoefficient_ne_zero_iff {v coeff : Fin 13 → ℤ}
+    (hv : ∀ i, v i ≠ 0) (i : Fin 13) :
+    orientCoefficient v coeff i ≠ 0 ↔ coeff i ≠ 0 := by
+  have hsign : (v i).sign ≠ 0 := by
+    intro hzero
+    have habs : |v i| = 0 := by
+      rw [← Int.sign_mul_self_eq_abs]
+      simp [hzero]
+    exact hv i (abs_eq_zero.mp habs)
+  simp [orientCoefficient, hsign]
+
+theorem orientCoefficient_dot_eq_natAbs (v coeff : Fin 13 → ℤ) :
+    ∑ i, orientCoefficient v coeff i * v i =
+      ∑ i, coeff i * (v i).natAbs := by
+  apply Finset.sum_congr rfl
+  intro i _hi
+  rw [orientCoefficient, mul_assoc, Int.sign_mul_self_eq_abs,
+    Int.natCast_natAbs]
+
+/-- Signed LRC form of the tiny-scale floor.  Any thirteen nonzero speeds with
+distinct absolute values below `40` carry a nonzero support-at-most-four
+integer relation with coefficients in `{-1, 0, 1}`. -/
+theorem exists_signed_bounded_four_relation_of_natAbs_lt_40 (v : Fin 13 → ℤ)
+    (hv : ∀ i, v i ≠ 0)
+    (hsmall : ∀ i, (v i).natAbs < 40)
+    (hdistinct : ∀ i j, i ≠ j → |v i| ≠ |v j|) :
+    ∃ coeff : Fin 13 → ℤ,
+      (∃ i, coeff i ≠ 0) ∧
+      (∀ i, -1 ≤ coeff i ∧ coeff i ≤ 1) ∧
+      (Finset.univ.filter fun i => coeff i ≠ 0).card ≤ 4 ∧
+      ∑ i, coeff i * v i = 0 := by
+  have hinjective : Function.Injective (fun i => (v i).natAbs) := by
+    intro i j hij
+    by_contra hne
+    apply hdistinct i j hne
+    simpa only [Int.natCast_natAbs] using congrArg (fun n : ℕ => (n : ℤ)) hij
+  obtain ⟨coeff, hcoeffNonzero, hcoeffBounded, hsupport, hrelation⟩ :=
+    exists_bounded_four_relation_of_lt_40 (fun i => (v i).natAbs)
+      (fun i => Int.natAbs_pos.mpr (hv i)) hsmall hinjective
+  refine ⟨orientCoefficient v coeff, ?_, orientCoefficient_bounded hv hcoeffBounded,
+    ?_, ?_⟩
+  · obtain ⟨i, hi⟩ := hcoeffNonzero
+    exact ⟨i, (orientCoefficient_ne_zero_iff hv i).mpr hi⟩
+  · have hfilter :
+        (Finset.univ.filter fun i => orientCoefficient v coeff i ≠ 0) =
+          Finset.univ.filter fun i => coeff i ≠ 0 := by
+      ext i
+      simp only [Finset.mem_filter, Finset.mem_univ, true_and,
+        orientCoefficient_ne_zero_iff hv i]
+    rw [hfilter]
+    exact hsupport
+  · rw [orientCoefficient_dot_eq_natAbs]
+    exact hrelation
+
 /-! ## Axiom audit -/
 
 #print axioms pair_load_le_78
@@ -288,6 +354,7 @@ theorem exists_bounded_four_relation_of_lt_40 (v : Fin 13 → ℕ)
 #print axioms exists_shared_pair_of_26_lt_card
 #print axioms exists_small_support_relation_of_lt_40
 #print axioms exists_bounded_four_relation_of_lt_40
+#print axioms exists_signed_bounded_four_relation_of_natAbs_lt_40
 
 end LRCZarankiewiczGuardrail
 end LonelyRunner
