@@ -1,0 +1,2 @@
+q-window n>=1: PASS; ceiling n<=v: PASS; ladder 3n_i<=n_j on [3,13]: PASS; pin: PASS
+7-chain geometric (n_top >= 729 n_bot): PASS (18 overlap instances found)
