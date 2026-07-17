@@ -76,3 +76,20 @@ therefore reduced to genuinely new integration: `TournamentH7.LRCCascadeGluing` 
 the sharp and coarser closed multi-stage ledgers from G1-shaped one-step bounds by reusing
 THM-933's suffix-debt algebra.  The targeted build is sorry-free and reports only
 `propext`, `Classical.choice`, and `Quot.sound`.
+
+## Landed addendum — endgame parameter discharge (codex-S23)
+
+`TournamentH7.LRCEndgameParameterDischarge` composes the primitive/dissociated route
+through the strongest proved exceptional-detuned reductions.  The `d=2` case is closed
+when the first `2g` lift terminates, and the `d=3` case is closed whenever all three
+reduced denominators are at least `8`.  Its final theorem exposes, without hidden glue,
+the exact remaining mathematical surface: the nonterminating two-adic or small-reduced-
+denominator detuned dispatch, and positive `B5` supply on the dissociated primitive
+residual, in addition to the sanctioned `LRCUpTo13` citation.
+
+The next live pull sharpened the latter supplier along two independent axes.  THM-934
+machine-closes every citable ratio-`3` chain tail and names `ChainDenseCore`; THM-935
+proves the exact-support principle for `B5` and leaves only the universal
+support-`3,4,5` relation-lattice tails `T_s(H)` after the proved pair tail.  Boxeph S53
+corrects the spectral shortcut: diagonal dominance holds on all tested off-resonant
+frames but needs an explicit coherent-mode term on resonant frames.

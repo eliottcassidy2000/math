@@ -37,3 +37,39 @@ entry fee 2(12−k)w(k+1) < 21(k+2)w(k) failing ∀ k ≥ j}. Referee: 200k-tupl
 exhaustiveness PASS, 50k planted citable tails all closed
 (`chain_dichotomy_referee_deathstar_S33.out`). Lean build in progress at checkpoint
 time — VERIFY the build report in the session log before consuming.
+
+## Collaborative machine-checked discharge — codex-S23
+
+`TournamentH7.LRCEndgameParameterDischarge` now gives the sharpest composition
+available from the proved detuned reducers.  It closes two pieces of the exceptional
+dispatch without adding hypotheses:
+
+- if `nonMultCard v g = 2` and every `g`-multiple is already a `2*g`-multiple, the
+  existing two-detuned lift theorem supplies the lonely time;
+- if `nonMultCard v g = 3` and every exceptional coordinate has reduced denominator
+  at least `8`, the existing three-detuned coarse theorem supplies the lonely time.
+
+Consequently `lrc14_from_deep_detuned_and_dissociated_B5` reduces the complete sharp
+assembly to the sanctioned `cite : LRCUpTo13` plus exactly two named suppliers:
+
+1. `DeepExceptionalDetunedDispatch`: the nonterminating two-adic tower and the
+   three-detuned branch with a reduced denominator below `8`;
+2. `DissociatedB5Supply`: positive depth-five Bonferroni mass on the primitive,
+   covering, gap-family, compressed, distinct-absolute-speed, nonstructured,
+   nondetuned residual.
+
+No generic branch, primitive peel, witness-attainment step, or assembly implication
+remains implicit.  The subsequent live pull adds two orthogonal refinements.  THM-934
+closes every residual family with a citable ratio-`3` tail, leaving its explicit
+`ChainDenseCore`.  THM-935 proves that `B5` only sees exact-support `2`--`5` relations
+and reduces universal algorithmic exhaustion to the support-`3,4,5` lattice tails
+`T_s(H)`.  Boxeph S53 also refutes the unqualified S52 diagonal-dominance conjecture:
+cross terms are negative off resonance but positive on six resonant frames, where a
+mode-coherence correction is required.  These three facts sharpen the second supplier,
+not the now-closed detuned dispatch glue.
+
+**Assumption challenge.**  The quotient vertices here are divisibility levels and
+detuned coordinates, not runners, arcs, or fixed circle sections.  This quotient
+preserves `nonMultCard`, reduced denominators, and immediate lift termination, while it
+forgets phase chronology and circle-component incidence; those data must remain in the
+actual tuple `v` and in the downstream lonely-time consumer.
