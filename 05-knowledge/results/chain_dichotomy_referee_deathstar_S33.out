@@ -1,0 +1,20 @@
+referee 1 (dichotomy exhaustive, 200000 tuples): PASS  [split 12204 | dense 187796]
+referee 2: entry constants c_m = 21(m+1)/(2(13-m)) (split position m, B = w_{m-1})
+  c_1=7/4=1.75  c_2=63/22=2.86  c_3=21/5=4.2  c_4=35/6=5.83  c_5=63/8=7.88  c_6=21/2=10.5  c_7=14=14  c_8=189/10=18.9  c_9=105/4=26.2  c_10=77/2=38.5  c_11=63=63  c_12=273/2=136
+  dense-core top/dense-pair cap prod c_m (m = j+1..12):
+    j=0: w12/w_j < 2.335e+13
+    j=1: w12/w_j < 1.334e+13
+    j=2: w12/w_j < 4.659e+12
+    j=3: w12/w_j < 1.109e+12
+    j=4: w12/w_j < 1.901e+11
+    j=5: w12/w_j < 2.415e+10
+    j=6: w12/w_j < 2.3e+09
+    j=7: w12/w_j < 1.643e+08
+    j=8: w12/w_j < 8.691e+06
+    j=9: w12/w_j < 3.311e+05
+    j=10: w12/w_j < 8600
+    j=11: w12/w_j < 136.5
+referee 3 (planted citable tails all split-closed, 50000): PASS
+referee 4 (residual-shaped random, 100000): split-closed 0 (0.00%), dense-core 100000 (100.00%)
+  NOTE: uniform-random magnitudes rarely admit ratio-3 tails; the wire's value
+  is closing EVERY lacunary/mixed family exactly, not bulk percentage.

@@ -23,3 +23,17 @@ finite gap remains, and report the exact residual honestly.
 
 **Needs evidence:** whether the proved strata (lacunary ≥ 19, rigidity, block-gluing
 THM-933) jointly cover the residual class, or what exact sub-class remains.
+
+**S33 mid-session state (checkpoint):** frontier mapped — the fleet's minimal analytic
+target is `SafeMeasureFloorPrimitive` (opus S207; "prove the floor, not the rigidity",
+kps S127); the 7-wall crossing has Hunter (klein) + telescoping engine (mac-mini)
+proved with the pair-floor per-cell obligation open; the paper program's remaining
+items are codex's K6 formula + the manifest's ten Lean items (boxeph S49/S50).
+NEW THIS SESSION (→ THM-934): `LRCChainDichotomy.lean` — the split-search dichotomy
+wiring kps-S19's `cite_chain_lonely` into `ResidualObligation` (never wired before):
+LRC14Statement ⟸ cite + DenseCoreObligation, where the dense core adds to the
+residual the explicit certificate {dense pair ratio < 3 at j; ratios ≥ 3 above j;
+entry fee 2(12−k)w(k+1) < 21(k+2)w(k) failing ∀ k ≥ j}. Referee: 200k-tuple
+exhaustiveness PASS, 50k planted citable tails all closed
+(`chain_dichotomy_referee_deathstar_S33.out`). Lean build in progress at checkpoint
+time — VERIFY the build report in the session log before consuming.
