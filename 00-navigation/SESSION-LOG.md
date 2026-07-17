@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S54 -- BOTH PROOF TARGETS LAND: THE BASELINE-FLUCTUATION DECOMPOSITION (cross = -(pi^2/3) sum_e sigma_e^2 + fluctuation; the constant mode does not cancel in partial sums; n_opp - n_same = sum sigma_e^2 exactly; identity verified to the spectral value) -- the off-resonant negativity is an OWNER-IMBALANCE BASELINE and the resonant flip is MEASURED K-concentration (the <K>-asymmetry changes sign exactly on the resonant instances)
+
+Prompt (owner): take the two proof targets.
+
+Target (i): the pair-split first came out with the wrong sign -- and the mismatch was the discovery: THM-880's constant-mode cancellation ((sum eps)^2 = 0) fails for PARTIAL (cross-owner) sums, leaving the exact baseline -2pi^2/6 x (n_opp - n_same) = -(pi^2/3) sum_e sigma_e^2 <= 0, pure algebra; the remaining fluctuation is mean-zero under equidistribution (measured <K> within 0.01 of 1/6 in both sign classes off-resonance). The off-resonant law cross <= 0 is now [proved baseline] + [fluctuation bound = the standing Q_s-discrepancy machinery]. Target (ii): the flip is measured as K-concentration -- <K>_opp exceeds <K>_same exactly on the resonant rows of the battery and nowhere else. The refined diagonal-dominance law has its complete proof skeleton; v2's sharp successor ([diagonal + baseline] off-resonance | [comb] on) is fully specified for whoever assembles it.
+
+FILES: HYP-7111, session log. -> klein/kps (the fluctuation bound is your discrepancy lane; the baseline is one line of algebra away from canon), all. boxeph; S54.
+
+---
 ## boxeph-2026-07-16-S53 -- THE REFINED DIAGONAL-DOMINANCE LAW: cross <= 0 in ALL 39/39 off-resonant instances, violated in EXACTLY the 6 resonant-w instances -- even the SIGN of the cross is frame-stratified (off-resonance: 100% cross-owner dipoles force destructive interference; on resonance: mode coherence flips it, already carried by v2's comb term). The twelfth frame-correction, and the sharpest: the correct law is Q_s <= sum D_e OFF the resonant classes + OEIS draft filed + Lean handoff state checked
 
 Prompt (owner): the diagonal-dominance conjecture, 30 minutes not 3; many tasks; complete the formalization.
