@@ -1,0 +1,34 @@
+scale-fifteen AP-centred Hamming-six owner-local deficit
+divisor grammar 1,3,5,15; literal states 15
+states (D,e) (1,0) (3,1) (3,2) (5,1) (5,2) (5,3) (5,4) (15,1) (15,2) (15,4) (15,7) (15,8) (15,11) (15,13) (15,14)
+supports 924
+hereditary order words 3249
+hereditary labelled order contexts 3002076
+hereditary state words per support 11169600
+literal state-grammar FNV64 555244fbea49f335
+hereditary labelled state contexts 10320710400
+scalar-capacity contexts 2184 on 462 supports; multiplicity patterns 16
+scalar multiplicities n1,n3,n5,n15 0,0,2,4:12 0,1,3,2:48 0,1,4,1:84 0,2,1,3:144 0,2,2,2:276 0,2,3,1:24 0,2,4,0:6 0,3,0,3:12 0,3,1,2:36 0,3,2,1:36 0,3,3,0:12 0,4,0,2:18 0,4,1,1:792 0,4,2,0:180 1,3,1,1:336 1,3,2,0:168
+contexts-per-support histogram 1:192 2:120 3:24 4:24 6:24 8:24 11:24 18:12 37:12 54:6
+multiplication orbit-size histogram 6:1 12:38 (telemetry; no quotient)
+owner-local rows 13104; feasible rows 2544
+feasible-owner/context histogram 0:750 1:456 2:912 4:66
+maximum reachable sheet-union histogram 11:804 12:7512 13:1812 14:432 15:2544
+minimum owner maximum/context histogram 11:474 12:1692 13:18
+distinct exact owner max-union vectors 333; vector FNV64 7ef173744757e5d1
+owner-locally feasible at all six contexts 0
+global literal unit fibres 0; global common-sheet survivors 0
+tournament observable compare owner (feasible,max-union); tie gauge follows support-coordinate path 0->1->2->3->4->5
+tournament fingerprints all 2184 transitive: score histogram 0,1,2,3,4,5; directed triangles 0; SCCs 6; Hamiltonian paths 1
+tournament tie-edge histogram 2:96 3:96 4:360 6:144 7:1098 10:288 15:102
+tournament edge-flip histogram against tie path 0:231 1:132 2:198 3:246 4:432 5:319 6:272 7:172 8:145 9:22 10:9 11:5 12:1
+challenged vertices exact feasible-owner subset/max-union vector is faithful for the terminal local obstruction; its owner tournament loses deficit magnitudes, provider vertices lose shared-unit choices, and sheet vertices are faithful only inside one owner DP
+local D15 mask table at owner one (units 1,2,4,7,8,11,13,14; ratios 1..12 in hex)
+  e=1: 1c0 60 30 18 c 7 4003 6000 3000 1800 c00 600
+  e=2: 181 4080 4040 2040 2020 1030 1810 808 408 404 204 202
+  e=4: 111 801 880 88 4008 4440 444 2004 2200 220 22 1002
+  e=7: 1500 5000 4002 a 28 2a0 a80 2800 2001 5 14 50
+  e=8: 150 14 5 2001 2800 a80 2a0 28 a 4002 5000 1400
+  e=11: 1102 22 220 2200 2004 444 4440 4008 88 880 801 11
+  e=13: 302 204 404 408 808 1810 1030 2020 2040 4040 4080 81
+  e=14: 700 c00 1800 3000 6000 4003 7 c 18 30 60 c0

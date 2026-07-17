@@ -171,6 +171,8 @@ SCALAR_BANK = []
 SCALAR_PATTERNS = Counter()
 FEASIBLE_OWNER_COUNT = Counter()
 FEASIBLE_SUBSET_SIZE = Counter()
+FEASIBLE_COUNT_PATTERNS = Counter()
+FOUR_OWNER_CONTEXTS = []
 OWNER_MAXIMUM = Counter()
 TOURNAMENT_FLIPS = Counter()
 MAXIMUM_VECTOR_DIGESTER = sha256()
@@ -179,7 +181,8 @@ for labels in SUPPORTS:
         if not scalar_capacity(labels, orders):
             continue
         SCALAR_BANK.append((labels, orders))
-        SCALAR_PATTERNS[order_pattern(orders)] += 1
+        pattern = order_pattern(orders)
+        SCALAR_PATTERNS[pattern] += 1
         reachable = tuple(
             owner_reachable(labels, orders, owner) for owner in labels
         )
@@ -187,6 +190,9 @@ for labels in SUPPORTS:
         feasible = tuple(FULL in masks for masks in reachable)
         feasible_count = sum(feasible)
         FEASIBLE_OWNER_COUNT[feasible_count] += 1
+        FEASIBLE_COUNT_PATTERNS[pattern, feasible_count] += 1
+        if feasible_count == 4:
+            FOUR_OWNER_CONTEXTS.append((labels, orders))
         FEASIBLE_SUBSET_SIZE[sum(1 << index for index, hit in enumerate(feasible) if hit)] += 1
         OWNER_MAXIMUM.update(maxima)
         MAXIMUM_VECTOR_DIGESTER.update(bytes(maxima))
@@ -270,6 +276,12 @@ SCALAR_BANK_DIGEST = sha256(
         for labels, orders in SCALAR_BANK
     ).encode()
 ).hexdigest()
+FOUR_OWNER_DIGEST = sha256(
+    "\n".join(
+        f"{','.join(map(str, labels))}|{','.join(map(str, orders))}"
+        for labels, orders in FOUR_OWNER_CONTEXTS
+    ).encode()
+).hexdigest()
 
 
 print("scale-fifteen independent Python referee")
@@ -280,6 +292,7 @@ print(f"hereditary state words per support {STATE_WORDS_PER_SUPPORT}")
 print(f"hereditary labelled state contexts {len(SUPPORTS) * STATE_WORDS_PER_SUPPORT}")
 print(f"scalar contexts {len(SCALAR_BANK)} on {len(SCALAR_SUPPORTS)} supports across {len(SCALAR_PATTERNS)} patterns")
 print(f"locally feasible owners per context {dict(sorted(FEASIBLE_OWNER_COUNT.items()))}")
+print(f"four-owner contexts {len(FOUR_OWNER_CONTEXTS)} on {len({labels for labels, _ in FOUR_OWNER_CONTEXTS})} supports; patterns {dict(sorted(Counter(order_pattern(orders) for _, orders in FOUR_OWNER_CONTEXTS).items()))}")
 print(f"maximum reachable sheet-union histogram {dict(sorted(OWNER_MAXIMUM.items()))}")
 print(f"scalar support multiplication orbits {len(SUPPORT_ORBITS)} sizes {','.join(str(size) for _, size in SUPPORT_ORBITS)}")
 print(f"tournament pair observable maximum-union comparison; owner-label gauge and tie paths within equality blocks; transitive scores 0,1,2,3,4,5; cycles 0; SCC 1^6; paths 1")
@@ -290,3 +303,4 @@ print(f"mask_sha256 {MASK_DIGEST}")
 print(f"order_sha256 {ORDER_DIGEST}")
 print(f"scalar_bank_sha256 {SCALAR_BANK_DIGEST}")
 print(f"maximum_vector_sha256 {MAXIMUM_VECTOR_DIGESTER.hexdigest()}")
+print(f"four_owner_sha256 {FOUR_OWNER_DIGEST}")
