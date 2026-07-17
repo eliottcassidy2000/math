@@ -1,0 +1,23 @@
+CONSECUTIVE FORM / c=8 THEOREM / EDGE CAP / TREE-HUNTER (boxeph S71)
+==============================================================================
+PART A -- the consecutive closed form
+  mu(k, k+1) == 1/49 + r(6-r)/(49k(k+1)) exact for k = 1..400
+
+PART B -- the c = 8 consecutive theorem; the c = 9 boundary
+  excess > 0 for all v <= 200 (exactly one r = 0 per window); min excess 1.72e-05 at v = 200
+  block [1..8]: ledger = 0.105102 > 0: True; true good = 0.26582 >= ledger: True
+  block [13..20]: ledger = 0.002372 > 0: True; true good = 0.24966 >= ledger: True
+  block [50..57]: ledger = 0.000260 > 0: True; true good = 0.25073 >= ledger: True
+  c = 9 consecutive route: crossing v's = NONE (the pure consecutive-pair route dies at c = 9 for v >= 2)
+
+PART C -- the edge cap mu <= 1/14, equality iff reduced (1,2)
+  max over reduced pairs a < b <= 300: 1/14 at (1, 2); equality cases: [(1, 2)]
+
+PART D -- tree-hunter validity + the ceiling + doubling demos
+  tree-hunter inequality exact on 60 random family/tree instances
+  doubling c=9 [3, 6, 12, 24]...: credits 4/7 (= (c-1)/14: True) vs needed 2/7; ledger = 0.28571 > 0: True; true good = 0.40402 >= ledger: True
+  doubling c=10 [3, 6, 12, 24]...: credits 9/14 (= (c-1)/14: True) vs needed 3/7; ledger = 0.21429 > 0: True; true good = 0.36775 >= ledger: True
+  doubling c=12 [3, 6, 12, 24]...: credits 11/14 (= (c-1)/14: True) vs needed 5/7; ledger = 0.07143 > 0: True; true good = 0.30497 >= ledger: True
+  THE CEILING: at c = 13 max credits 12/14 vs needed 12/14 -- NOT strict: the tree-hunter cannot cross c = 13 (any tree, any family): False strict fails, PROVED by (C)
+==============================================================================
+done

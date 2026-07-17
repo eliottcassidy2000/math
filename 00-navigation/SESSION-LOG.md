@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S71 -- LEM-044: THE CONSECUTIVE CLOSED FORM (mu = 1/49 + r(6-r)/(49k(k+1)) exact) => THE c = 8 CONSECUTIVE THEOREM (every consecutive 8-block crosses, uniformly -- one r = 0 per 7-window); THE EDGE CAP (mu <= 1/14, equality iff (1,2)); THE TREE-HUNTER CEILING (c <= 12 feasible -- doubling demos at 9/10/12; c = 13 impossible for EVERY tree)
+
+Prompt (owner): more similar LRC progress.
+
+The wall program now has exact boundaries: c = 7 dichotomy (LEM-043) / c = 8 consecutive theorem (LEM-044) / c = 9..12 per-family tree-hunter decide / c = 13 provably beyond pair credits (the cap meets the requirement exactly). The c = 9 consecutive route is dead for all v (honest boundary). Tree-hunter refereed on 60 random family/tree instances; klein's path lemma extends by leaf-plucking (named Lean piece).
+
+FILES: LEM-044, LEM-043 named item resolved, HYP-7229/7230, script + out. -> klein (tree case named for Lean), opus (block sizes 8..12 now have proved/decidable pair routes), all. boxeph; S71.
+
+---
 ## boxeph-2026-07-17-S70 -- LEM-043: THE CONE FLOOR c0(7/3) = 1/63 (exact; defect bounds 1/49 -+ g/(7b) one line) => THE c = 7 WALL DICHOTOMY: every 7-block is lacunary (opus) or crosses by ONE hunter credit (good >= 1/63); c = 8 crosses on consecutive blocks (0.14293 > 1/7, hair-thin, strict); difference-comb/beat law + coverage synthesis (clustered->kps, loose->here, lacunary->opus, middle->decide)
 
 Prompt (owner): work the remaining proof surface; long session; pull often; integrate incoming.

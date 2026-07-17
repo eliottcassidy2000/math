@@ -21,6 +21,6 @@ regime; its uniform version is the named residue.
 - [x] defect bounds ±g/(7b) (500 exact pairs); c₀(7/3) = 1/63, c₀(13) = 1/91
 - [x] dichotomy on five blocks; c = 8 instance crosses (0.14293 > 1/7)
 - [x] difference-comb subset law; beat censuses; clustered beat-miss 3/3
-- [ ] named: uniform c ≥ 8 (needs strict-excess accounting or higher-order credits)
+- [x] named item RESOLVED (LEM-044, S71): c = 8 consecutive PROVED (strict excess, uniform in v); c = 9 consecutive route dead; c ≤ 12 tree-hunter feasible per family; c = 13 provably beyond every tree (edge cap)
 - [ ] named: Lean rendering — (A)/(B) are integer decides; (C) composes with
       path_hunter_add_le (already kernel-pure)
