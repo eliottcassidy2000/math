@@ -139,4 +139,60 @@ theorem unit_bad_le (w : ℕ) (hw : 0 < w) (lam : ℝ) (hlam : 0 < lam) (hlam1 :
           · rw [if_neg h]; positivity)).symm
     _ = ENNReal.ofReal (2 * lam) := by rw [hrealsum]
 
+/-- **The sharpened existence theorem.**  On `[0,1]`, each positive integer
+speed costs at most `2 * lam`; hence a total budget strictly below one leaves
+a common point outside every open bad arc. -/
+theorem exists_lonely_sharp (W : Finset ℕ) (hW : ∀ w ∈ W, 0 < w) (lam : ℝ)
+    (hlam : 0 < lam) (hlam1 : lam < 1) (hsmall : 2 * lam * W.card < 1) :
+    ∃ t ∈ Icc (0 : ℝ) 1, ∀ w ∈ W, ∀ a : ℤ, lam ≤ |(w : ℝ) * t - a| := by
+  classical
+  have hbad : volume ((⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1)
+      ≤ ENNReal.ofReal (2 * lam * W.card) := by
+    have hdistrib : (⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1
+        = ⋃ w ∈ W, (badSet w lam ∩ Icc (0 : ℝ) 1) := by
+      ext t
+      simp only [Set.mem_inter_iff, Set.mem_iUnion, exists_prop]
+      tauto
+    rw [hdistrib]
+    calc volume (⋃ w ∈ W, (badSet w lam ∩ Icc (0 : ℝ) 1))
+        ≤ ∑ w ∈ W, volume (badSet w lam ∩ Icc (0 : ℝ) 1) :=
+          MeasureTheory.measure_biUnion_finset_le _ _
+      _ ≤ ∑ _w ∈ W, ENNReal.ofReal (2 * lam) :=
+          Finset.sum_le_sum fun w hw => unit_bad_le w (hW w hw) lam hlam hlam1
+      _ = ENNReal.ofReal (2 * lam * W.card) := by
+          rw [Finset.sum_const, nsmul_eq_mul, ← ENNReal.ofReal_natCast (W.card),
+              ← ENNReal.ofReal_mul (Nat.cast_nonneg W.card)]
+          congr 1
+          ring
+  have hgood : (0 : ENNReal)
+      < volume (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam) := by
+    have hvol : volume (Icc (0 : ℝ) 1) = ENNReal.ofReal 1 := by
+      rw [Real.volume_Icc]
+      norm_num
+    have hcover : Icc (0 : ℝ) 1
+        ⊆ (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam)
+          ∪ ((⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1) := by
+      intro t ht
+      by_cases hb : t ∈ ⋃ w ∈ W, badSet w lam
+      · exact Or.inr ⟨hb, ht⟩
+      · exact Or.inl ⟨ht, hb⟩
+    have hsplit : volume (Icc (0 : ℝ) 1) ≤
+        volume (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam) +
+          volume ((⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1) :=
+      le_trans (MeasureTheory.measure_mono hcover)
+        (MeasureTheory.measure_union_le _ _)
+    rw [hvol] at hsplit
+    have hlt : ENNReal.ofReal (2 * lam * W.card) < ENNReal.ofReal 1 :=
+      (ENNReal.ofReal_lt_ofReal_iff one_pos).mpr hsmall
+    by_contra hzero
+    push_neg at hzero
+    have h0 : volume (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam) = 0 :=
+      le_antisymm hzero bot_le
+    rw [h0, zero_add] at hsplit
+    exact absurd (le_trans hsplit hbad) (not_le.mpr hlt)
+  rcases MeasureTheory.nonempty_of_measure_ne_zero (ne_of_gt hgood) with ⟨t, htIcc, htBad⟩
+  refine ⟨t, htIcc, fun w hw a => ?_⟩
+  have hnot : t ∉ badSet w lam := fun hmem => htBad (Set.mem_biUnion hw hmem)
+  exact dist_int_ge w (hW w hw) lam hlam t hnot a
+
 end LRC14
