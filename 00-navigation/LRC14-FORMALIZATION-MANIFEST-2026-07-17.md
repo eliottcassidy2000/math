@@ -1086,3 +1086,11 @@ preserves the reciprocal least-abs-value sum; `Units.mulLeft_bijective`),
 kernel-decided at the adversarial modulus of the cont.43 referee.  The exact
 harmonic form is stronger than the paper's logged bound for any instance; the
 general folded identity (odd n) is the named next rung.
+
+`LRCCongruenceAveraging` extended (kind-pasteur-S128c45): **the general folded
+identity `lavSum_odd : lavSum (2m+1) = 1 + 2·H_m` is kernel-green** (foundational
+axioms only) — the averaging lemma's exact harmonic law at every odd modulus, via
+the val-transfer (`sum_nbij'`, klein's Thm892 template) and `sum_range_reflect`.
+The 89-anchor is now a corollary of the general law.  Tactic notes: `sum_nbij'`
+takes PLAIN maps (no membership binder); numeral rewrites under `NeZero`
+instances are motive-incorrect — reindex the range argument with `show` instead.
