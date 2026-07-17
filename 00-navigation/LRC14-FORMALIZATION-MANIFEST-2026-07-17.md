@@ -479,6 +479,19 @@ nonzero lower triangles contribute at least five, and two unit spokes force
 the aligned side.  These are activity-weighted lower bounds, not a closure of
 `DenseCoreCensusB5Supply`.
 
+`LRCOverlapReflection` makes the multiplier movie equivariant under
+`p ↦ q-p`.  On bad runners the canonical witness satisfies
+`failWitness(q-p)=v-failWitness(p)`, so every determinant color and every
+sparse Plücker coefficient vector is negated while absolute spoke mass is
+preserved.  The only possible fixed multiplier has zero color.  It follows in
+Lean that both fixed-triple colored activity and nonzero-lower-triangle
+activity have even cardinality for every positive modulus.  Thus a colored
+exception has a two-event quantum; combined with the coprime fiber bound,
+every nonzero absolute color occurs exactly zero or two times.  Reflected
+sparse relations count as one projective relation.  This parity is a rigidity
+input, not a supplier: it does not improve the global live-versus-debt ratio
+without a non-reuse bound.
+
 `LRCOverlapColorFibers` adds the first arithmetic multiplicity theorem.  For
 positive pair speeds `a,b`, every `overlapDet` color is divisible by
 `gcd(a,b)`.  Equality of two colors places the first witnesses in one residue

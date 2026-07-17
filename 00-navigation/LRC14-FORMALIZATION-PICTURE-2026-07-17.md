@@ -90,6 +90,18 @@ the three-/five-unit *lower* spoke-mass charges.  This is not yet a payment
 theorem: the same edge mass may be reused by several rooted stalks, and no
 global transport upper budget has been proved.
 
+`LRCOverlapReflection` identifies the exact mirror action on this carrier.
+For every bad runner, `failWitness(q-p)=v-failWitness(p)`; consequently every
+determinant color and the entire sparse Plücker coefficient vector change
+sign.  Genuinely colored triple and nonzero-lower-triangle activity therefore
+has even cardinality for **every** positive modulus, not only odd moduli; an
+even modulus's half point is necessarily zero-colored.  Mirrored events carry
+one projective relation rather than two independent relations.  This rules out
+singleton colored exceptions; combined with the coprime fixed-color bound,
+every nonzero absolute color occurs in exactly `0` or `2` events.  This does
+not by itself improve the live/debt ratio, since live and colored activity
+mirror together.
+
 `LRCOverlapColorFibers` supplies the first multiplicity control.  For positive
 pair speeds `a,b`, every determinant is divisible by `gcd(a,b)`, and on
 `q ≤ 7a` each fixed-color multiplier fiber has cardinality at most

@@ -22,6 +22,50 @@ The math residues sit in other lanes (mac-mini windowed consumption, kps exhaust
 FILES: LRCTreeHunter.lean (+ corpus root registration), HYP-7231, session log. -> klein (your path/star lemmas now have the common generalization), opus, all. boxeph; S72.
 
 ---
+## codex-2026-07-17-S58 -- exact weighted B5 census + colored reflection orbits (Lean)
+
+Prompt: finish the remaining LRC(14) mathematics; pull/push often and adjust
+targets against the shared frontier.
+
+The dense-core consumer is now exact rather than uniformly overcharged:
+`B5 = liveCount - Σ_p choose(bandCount(p)-1,5)`, with depth costs
+`1,6,21,56,126,252,462,792`.  `LRCWeightedDeepCensus` proves the exact
+positivity equivalence and the rooted-seven bound
+`weightedDeepCost ≤ N6 + 3N7 + 3·rootedSevenActivity` (sharp only at depth 8).
+The capstones accept the strictly weaker `DenseCoreWeightedCensusB5Supply`.
+
+The colored wall carrier gained three arithmetic layers.  Fixed determinant
+colors are gcd-divisible and have at most `gcd(a,b)` multiplier occurrences on
+`q≤7a` (one when coprime).  The aligned resonance equation has exactly
+`gcd(h,q)-1` nonzero solutions, with a strict integer-closeness atom forcing
+`hp=rq`.  Finally `LRCOverlapReflection` proves
+`failWitness(q-p)=v-failWitness(p)`: colors and sparse Plücker vectors negate,
+absolute mass is preserved, and colored triple/triangle activity is even for
+every positive modulus.  Opposite signed color fibers have equal size; for a
+coprime pair every nonzero absolute color occurs exactly zero or two times.
+Mirrored events are one projective relation.
+
+Assumption challenge/tournament audit: the faithful vertices are multiplier
+wall events/rooted stalks, not runners.  Reflection is the gauge involution;
+the static sign tournament is transitive and loses color magnitude, gcd
+spacing, activity, and relation-orbit data.  Fano/`χ₇` labels remain an address
+atlas only; Kakeya needles must retain intercept and hit multiplicity.
+
+Honest scope: no LRC(14) supplier is closed here.  Remaining sockets are the
+nonterminating pair-wall selector, three residual selected-witness selectors,
+and the weighted dense-core supplier.  On the latter, the exact missing bridge
+is zero-color witness gluing plus a non-reusing rooted-stalk transport and the
+depth-six/seven/live-floor residue.  The earlier uniform `q≤25` target is
+false (THM-566/762/764); uniform n=12 sporadic emptiness remains open.
+
+FILES: `LRCWeightedDeepCensus.lean`, `LRCSevenOverlapActivity.lean`,
+`LRCOverlapColorFibers.lean`, `LRCAlignedResonance.lean`,
+`LRCOverlapReflection.lean`, weighted endgame capstones, formalization
+picture/manifest.  Kernel audit: new theorems use only `propext`,
+`Classical.choice`, and `Quot.sound`; no `sorry`/`native_decide`.
+
+---
+
 ## boxeph-2026-07-17-S71 -- LEM-044: THE CONSECUTIVE CLOSED FORM (mu = 1/49 + r(6-r)/(49k(k+1)) exact) => THE c = 8 CONSECUTIVE THEOREM (every consecutive 8-block crosses, uniformly -- one r = 0 per 7-window); THE EDGE CAP (mu <= 1/14, equality iff (1,2)); THE TREE-HUNTER CEILING (c <= 12 feasible -- doubling demos at 9/10/12; c = 13 impossible for EVERY tree)
 
 Prompt (owner): more similar LRC progress.
