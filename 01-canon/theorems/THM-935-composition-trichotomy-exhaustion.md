@@ -1,0 +1,47 @@
+---
+id: THM-935
+title: THE COMPOSITION TRICHOTOMY — exhaustion of the middle strata at the algorithmic level. (I) THE RELATION-MASS IDENTITY (PROVED + refereed to 10⁻⁸): for any 13-packet, B_m = B_m^eq + Σ_{s=2}^{m} (−1)^s E_s^{(m)} M_s, where M_s = Σ over relations h·v = 0 of exact support s of ∏_{i∈supp} c(h_i) (c(h) = sin(2πhλ)/(πh)), and E_s^{(5)} = 24/343, 24/49, −2/7, 1 for s = 2,3,4,5 — with the SUPPORT PRINCIPLE: relations among ≥ 6 speeds are INVISIBLE to BONF5 (they enter only S₆⁺), so the level-5 certificate is decided ENTIRELY by pair ratios and 3-, 4-, 5-term linear relations; (II) THE TRICHOTOMY ALGORITHM: compute B₅ exactly (depth-spectrum sweep); if > 0 → CERTIFIED; else enumerate small relations (reduced ratios ≤ 30; linear forms with coefficients ≤ 8) → STRUCTURED with explicit witness, routed to the classified strata (support 2 → dilate/lacunary = opus THM-928(A)/codex THM-933 territory; support 3–5 → linear-forms/near-AP = the covering program); else → MIDDLE. BATTERY (26 packets: tight, deep well, geometric ×2/×3, opus-30Z, exact APs, near-AP perturbations, 12 small-scale randoms at [13,182]–[80,1120], 6 large randoms): 9 CERTIFIED, 17 STRUCTURED-WITH-WITNESS, **ZERO MIDDLE** — exhaustion holds; every BONF5 failure surrenders its witness (opus-30Z surrenders exactly the 15/14 horizon escape; the one ratio-clean failure surrenders the support-3 form −5·134 − 2·690 + 2·1025 = 0); (III) PROVED FLOORS: (a) the s = 2 TAIL LEMMA: per pair, Σ_m |c(ma)c(mb)| ≤ 1/(6ab), so ratio-dissociation beyond H bounds the s=2 deviation by (24/343)·13/H — at H = 30 that is 0.0303, only 25% of the budget B₅^eq = 2052/16807 ≈ 0.12209; (b) the PIGEONHOLE FLOOR: max(V) < 40 forces a Sidon collision (78 pairwise sums in [3,79]) = a ±1-coefficient support-≤4 witness — tiny scales can NEVER be middle; (c) ERRATUM FIX to THM-930: B₅^eq = 2052/16807 (not 0.0821, which was the certified packet's value); the depth-13 kill threshold is 2052/(16807·792) ≈ 1.54×10⁻⁴ and the deep well is 71× over (not 106×); (IV) OBSERVATIONS: the certification TRANSITION ZONE localizes at scale ≈ [80, 1120] (barely-positive/negative certificates ±0.0003–0.02 there — the natural boundary for the block-gluing composition); geometric ratio-3 chains certify at plain level 5 while ratio-2 fails (the pure-BONF5 lacunary boundary sits in (2,3), complementing codex's cascade threshold 7)
+status: (I) PROVED (grouping the singular series by exact support; E_s from the binomial partial-sum identity) + refereed exactly at n = 3 (errors 7.5e-9, 9.4e-9 = box truncation only); (II) battery-complete, zero middle; (III)(a),(b) PROVED (three lines each); the UNIVERSAL exhaustion theorem is reduced to the named T_s(H) lattice-sum tail lemma for s = 3,4,5 (the fleet's THM-920-style certified-sum machinery — one focused session)
+source: kind-pasteur-2026-07-16-S128 (cont.36; owner: work the middle strata composition and prove exhaustion)
+depends_on:
+  - THM-930 (leverage identity/depth spectrum — the sweep engine + the erratum fixed here)
+  - THM-934 (generic certification — the bulk this composes with)
+related:
+  - THM-932/933 (opus/codex block-gluing: the SCALE-GAP composition axis; this file is the RELATION-CONTENT axis — together the two coordinates of the exhaustion program)
+  - THM-928(A) (lacunary cascade — where support-2 witnesses route)
+  - THM-897/926/929 (the wall, the blockers, the anti-Lee-Yang extremizer — the structured sliver's certificates)
+script: 04-computation/composition_trichotomy_kps_S128c36.py -> 05-knowledge/results/composition_trichotomy_kps_S128c36.out
+---
+
+# THM-935 — the composition trichotomy
+
+## (I) The identity
+
+Group the classical singular-series expansion of μ(∩_A B_v) by the exact support S of the
+relation h (h_i ≠ 0 exactly on S): summing the alternating binomial series over the 13−s
+free slots gives
+
+> **B_m = B_m^eq + Σ_{s=2}^{m} (−1)^s E_s^{(m)} M_s,  E_s^{(m)} = Σ_{j≤m−s} (−1)^j C(13−s,j)(2λ)^j.**
+
+At m = 5: E = (24/343, 24/49, −2/7, 1). Corollary (support principle): B₅ never sees
+relations of support ≥ 6. Corollary (budget): B₅ ≤ 0 requires Σ_s |E_s||M_s| ≥ 2052/16807.
+
+## (II) The algorithm and the battery
+
+CERTIFY (exact sweep) | SURRENDER (small-relation witness, box H₂ = 30 / H₃₄ = 8) | MIDDLE.
+26-packet battery: 9 | 17 | **0**. Witnesses match the known strata exactly (the 30Z packet
+surrenders (420,450) = 15/14 — THM-926's horizon escape, found automatically).
+
+## (III) Proved floors
+
+- s=2 tail: Σ_m |c(ma)c(mb)| ≤ Σ_m 1/(π²m²ab) = 1/(6ab); 78 pairs, ratio-dissociated
+  beyond H ⟹ s=2 deviation ≤ (24/343)(13/H). H = 30 spends 25% of budget.
+- Pigeonhole: max(V) < 40 ⟹ Sidon collision ⟹ ±1-coefficient support-≤4 witness.
+- B₅^eq = 2052/16807 exactly (THM-930 erratum: threshold 1.54×10⁻⁴; deep well 71× over).
+
+## Named next
+- T_s(H) for s = 3,4,5: uniform tails for rank-(s−1) relation-lattice sums with first
+  minimum > H — closes the gap from algorithmic to universal exhaustion (THM-920-style).
+- The transition zone [80,1120]: map it; feed the block-gluing (THM-932/933) composition
+  through it (their scale-gap axis × this relation axis = the full 2D program).
+- Ratio-2 vs ratio-3 pure-BONF5 boundary (the plain-certificate lacunary constant ∈ (2,3)).

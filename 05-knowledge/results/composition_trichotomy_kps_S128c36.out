@@ -1,0 +1,36 @@
+== (A) identity referee, V={1,2,3}, H=4000 ==
+  m=2: B_m exact 0.73809524 | eq 0.63265306 | eq + sum (-1)^s E_s M_s = 0.73809525  err 7.5e-09
+  m=3: B_m exact 0.69047619 | eq 0.62973761 | eq + sum (-1)^s E_s M_s = 0.69047618  err 9.4e-09
+== (B) THE COMPOSITION ALGORITHM ==
+  tight                  B5=-9.72391  STRUCTURED -> ratio/lacunary (witnesses: 78 ratio, 8112 linform; e.g. ((1, 2), (2, -1)))
+  deepwell               B5=-6.87034  STRUCTURED -> ratio/lacunary (witnesses: 67 ratio, 6896 linform; e.g. ((1, 2), (2, -1)))
+  geometric x2           B5=-0.26800  STRUCTURED -> ratio/lacunary (witnesses: 42 ratio, 1992 linform; e.g. ((5, 10), (2, -1)))
+  geometric x3           B5=+0.09509  CERTIFIED (level-5)
+  opus30Z                B5=-0.60160  STRUCTURED -> ratio/lacunary (witnesses: 15 ratio, 844 linform; e.g. ((420, 450), (15, -14)))
+  AP d=17                B5=-9.72391  STRUCTURED -> ratio/lacunary (witnesses: 78 ratio, 8112 linform; e.g. ((17, 34), (2, -1)))
+  AP+stranger            B5=-7.69233  STRUCTURED -> ratio/lacunary (witnesses: 78 ratio, 7316 linform; e.g. ((17, 34), (2, -1)))
+  near-AP pert           B5=-6.73027  STRUCTURED -> ratio/lacunary (witnesses: 67 ratio, 6896 linform; e.g. ((17, 34), (2, -1)))
+  small-scale [13,182]   B5=-0.60121  STRUCTURED -> ratio/lacunary (witnesses: 8 ratio, 658 linform; e.g. ((22, 27), (27, -22)))
+  small-scale [80,1120]  B5=-0.01675  STRUCTURED -> ratio/lacunary (witnesses: 1 ratio, 200 linform; e.g. ((615, 779), (19, -15)))
+  small-scale [20,280]   B5=-0.32988  STRUCTURED -> ratio/lacunary (witnesses: 9 ratio, 362 linform; e.g. ((23, 184), (8, -1)))
+  small-scale [40,560]   B5=-0.12146  STRUCTURED -> ratio/lacunary (witnesses: 2 ratio, 208 linform; e.g. ((104, 286), (11, -4)))
+  small-scale [80,1120]  B5=-0.01248  STRUCTURED -> linear-forms/near-AP (witnesses: 0 ratio, 204 linform; e.g. ((134, 690, 1025), (-5, -2, 2)))
+  small-scale [13,182]   B5=-0.59706  STRUCTURED -> ratio/lacunary (witnesses: 17 ratio, 570 linform; e.g. ((55, 66), (6, -5)))
+  small-scale [80,1120]  B5=+0.00094  CERTIFIED (level-5)
+  small-scale [20,280]   B5=-0.35972  STRUCTURED -> ratio/lacunary (witnesses: 21 ratio, 508 linform; e.g. ((32, 44), (11, -8)))
+  small-scale [80,1120]  B5=+0.02217  CERTIFIED (level-5)
+  small-scale [80,1120]  B5=-0.00035  STRUCTURED -> ratio/lacunary (witnesses: 3 ratio, 198 linform; e.g. ((340, 493), (29, -20)))
+  small-scale [20,280]   B5=-0.28842  STRUCTURED -> ratio/lacunary (witnesses: 8 ratio, 278 linform; e.g. ((64, 160), (5, -2)))
+  small-scale [40,560]   B5=-0.11374  STRUCTURED -> ratio/lacunary (witnesses: 3 ratio, 200 linform; e.g. ((81, 486), (6, -1)))
+  random [300,4000]      B5=+0.09311  CERTIFIED (level-5)
+  random [300,4000]      B5=+0.08572  CERTIFIED (level-5)
+  random [300,4000]      B5=+0.08614  CERTIFIED (level-5)
+  random [300,4000]      B5=+0.08672  CERTIFIED (level-5)
+  random [300,4000]      B5=+0.08686  CERTIFIED (level-5)
+  random [300,4000]      B5=+0.08504  CERTIFIED (level-5)
+VERDICT: certified 9 | structured-with-witness 17 | MIDDLE 0
+EXHAUSTION HOLDS (zero middle) on this battery
+== (C) the s=2 tail lemma constant + pigeonhole floor ==
+  |E2| * M2-tail(>H) <= (24/343)*13/H: at H=30: 0.03032  (vs B5_eq = 2052/16807 = 0.12209)
+  pigeonhole: max(V) < 40 => 78 pairwise sums in [3,2*40-1=79] => Sidon collision forced => +-1-coeff support<=4 relation
+DONE
