@@ -1,0 +1,24 @@
+EXACT SUPPORT-SIGN COUNTEREXAMPLES
+M_3(1, 2, 15) = -4/1715 = -0.002332361516
+M_4(1, 2, 3, 28) = -5/4116 = -0.001214771623
+M_5(1, 2, 3, 4, 32) = -109/806736 = -0.000135112354
+
+TRIPLE AUTOPSY
+mu(1, 2)=1/14; M_2=5/98
+mu(1, 15)=1/35; M_2=2/245
+mu(2, 15)=1/42; M_2=1/294
+mu(1, 2, 15)=1/105
+sum_pair_excess=46/735; P*sum=46/5145
+M_3=1/105 - P^3 - P*sum = -4/1715
+
+EXACT FINITE SIGN SCANS
+size=3, speeds=1..35: negative=482, zero=361, positive=5702; minimum=-61/17150 at (1, 2, 25)
+size=4, speeds=1..28: negative=47, zero=99, positive=20329; minimum=-5/4116 at (1, 2, 3, 28)
+size=5, speeds=1..20: negative=0, zero=0, positive=15504; minimum=242/252105 at (1, 5, 10, 15, 20)
+quintuple family (1,2,3,4,N), N=5..64: first negative at N=32, mass=-109/806736
+
+TOURNAMENT AUDIT
+pair observable M({i,j}) is symmetric: no canonical edge orientation
+faithful object: signed support hypergraph / cumulant complex
+tournament score/cycle/SCC/flip/Hamiltonian fingerprints: not well-defined
+PASS

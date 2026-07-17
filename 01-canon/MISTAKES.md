@@ -11,6 +11,75 @@ Format per entry:
 
 ---
 
+## MISTAKE-156 -- a logarithm-free two-pole convolution estimate was promoted to `T3/T4/T5` tail bounds and universal B5 exhaustion
+
+**What was claimed:** the former collided tail page asserted a universal estimate
+with main term `8(3+log(AB))/(AB(1+Delta))`, then described `T3` as proved and
+`T4/T5` as mechanical nesting.  It concluded that the middle stratum was empty
+and that the dissociated-B5 supplier had been discharged mathematically.
+
+**Why it is wrong:** for `A=B=1`, poles `0,N`, the exact convolution is
+`4 H_(N-1)/N + 2/N + 2/N^2`, hence grows as `4 log(N)/N`.  At `N=2^22` even
+the middle terms alone contradict the claimed constant-8 right side.  Moreover,
+support four and five produce affine separations `|cu+dt|/(ab)` and
+`|cu+dt+er|/(ab)` which vanish on unbounded resonance lines and planes; they
+are not homogeneous copies of the three-variable slice.
+
+**Correct framing:** THM-946 proves the corrected two-pole bound with main term
+`64(1+log(2+Delta))/(AB(1+Delta))` plus two near-pole terms.  `T3` still needs a
+punctured congruence sum, and `T4/T5` need uniform affine resonance-strip/slab
+lemmas.  Even those estimates would yield only `small support relation OR B5>0`;
+the structured relation branch remains open.
+
+**Impact:** no Lean theorem was invalidated; the overclaim was a paper-level
+status assertion.  The canonical page, hypothesis index, formalization manifest,
+and session log now state the corrected frontier.  Source: codex-S48/S49 audit,
+2026-07-17.
+
+## MISTAKE-155 -- the depth-six coverage certificate was placed at a cofinal clean modulus where it is impossible
+
+**What was claimed:** `CoverageCappedB5Certificate` used
+`CoverageCapped v (cleanModulus v height) 6` and was presented as the clean-ruler
+THM-945 supplier for the dense-core B5 endgame.
+
+**Why it is wrong:** for every nonzero tuple,
+`cleanModulus v height > 14*|v_i|` for every runner.  At the first multiplier
+`p=1`, each positive speed lies in the danger arc about zero and each negative
+speed in its wrapped copy.  Thus `bandCount v cleanModulus 1 = 13`, contradicting
+the claimed cap at six.  The certificate structure was empty on every tuple it
+was meant to serve.
+
+**Correct framing:** the coverage-capped census must use an arbitrary usable
+modulus in a bounded/moderate `q` window.  The cofinal clean modulus remains the
+right ruler for exact modular-to-integer relation transfer, but these are two
+different modulus regimes and require a two-ruler composition.  The corrected
+certificate stores its own `q`; Lean now proves the clean-ruler impossibility.
+
+**Impact:** the conditional capstone theorem was logically valid but vacuous at
+this interface; it supplied no LRC(14) instance.  The normalized clean-modulus
+certificate is unaffected.  Source: codex-S50 coverage audit, 2026-07-17.
+
+## MISTAKE-154 -- the old abstract B5 relation certificate had unconstrained mass fields and was only a repackaging of `B5>0`
+
+**What was claimed:** `B5RelationBudgetCertificate` was described as a structured
+relation-mass supplier whose fields encoded the pair and support-3/4/5 budgets.
+
+**Why it is wrong:** no field required `mass2`, `mass3`, `mass4`, or `mass5` to be
+realized by the tuple.  Given any `q>1` with `B5 v q>0`, one may set
+`mass2=-13/30`, `mass3=mass4=0`, and
+`mass5=7712/84035-B5/(q-1)` and satisfy every field.  Conversely its existing
+consumer already returns `B5>0`.  Lean proves the exact equivalence
+`Nonempty (B5RelationBudgetCertificate v) <-> exists q>1, B5 v q>0`.
+
+**Correct framing:** retain this type only as a deprecated audit target.  Use
+`NormalizedB5RelationBudgetCertificate`, whose fields are concrete depth moments
+at the clean modulus, or the corrected arbitrary-modulus coverage-capped census.
+
+**Impact:** again the endgame implication itself was true, but the old supplier
+name exposed no new mathematics and could conceal circular reasoning.  The
+normalized bridge and its capstones are unaffected.  Source: codex-S48 formal
+semantic audit, 2026-07-17.
+
 ## MISTAKE-153 -- a conflicted `git stash pop` after rebase swept foreign leftover WIP (including raw conflict markers) into a shared-main push (boxeph-S24, caught and reverted same session)
 
 **What happened:** during an ID-claim checkpoint, `git stash -q` + rebase + `git stash pop -q`
