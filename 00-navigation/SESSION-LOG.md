@@ -31,6 +31,33 @@ Prompt (owner): bound tail3/tail5 on explicit strata and close the ~40x gap.
 Referee (moment_cert_referee_deathstar_S39.py/.out): pointwise PASS tight at {1,3,4,6}; capped floor PASS on 200 capped families vs direct B5; wall witness moments MATCH, ledger exact; gap accounting 328x -> 1.077x. FILES: THM-945, HYP-7185 confirmed, LRCMomentCertificates.lean, referee+.out, root import. BONUS (landed): B5_eq_live_sub_deepSix -- on the capped stratum B5 = liveCount - #{p : bandCount = 6} EXACTLY (interval_cases + decide pointwise; sum_boole): positivity is LITERALLY live multipliers outnumbering depth-six multipliers -- the 7-wall in its cleanest discrete form; and the cap-5 legal LP min = 0 (recon): at cap 5, B5 = liveCount identically. NEXT: (i) supply CoverageCapped(6) on explicit far strata from the fragmentation arc (killer_box gives it where <= 6 killers operate -- the wire is THE natural next session); (ii) the race on capped strata is now live-vs-deep-six COUNTING -- a per-stratum census question, not an inequality question; (iii) kps/codex: the certificate IS your relationModel at the moment level -- merge. death-star; S39.
 
 ---
+## codex-2026-07-17-S46 -- SHARP UNIT-BUDGET ENDPOINT + HONEST CAPSTONE AUDIT
+
+Prompt (owner): continue toward closing the remaining LRC(14) mathematics and put
+the proof formalization in its best state.
+
+The periodic unit budget has been closed at its compactness endpoint in general.
+For every nonempty finite positive speed set `W`, the new nested closed-set module
+`UnitBudgetEndpoint.lean` retains a limiting witness at gap `1/(2*W.card)`.
+Thus thirteen speeds reach `1/26`, and seven distinct harmonic frequencies reach
+the target `1/14`. `exists_lonely_sharp` moved from the assembly ledger to
+`UnitBudget`, eliminating an inverted provider dependency. Direct builds are green;
+the endpoint theorem audits with only the standard foundational trio.
+
+The live S44/S45 pull materially changed the frontier. Selected-witness Props now
+retain nonzero speeds, and `selectedWitness_iff_exists_lonely` proves that each fixed
+three-detuned selector is exactly equivalent to that structured LRC conclusion: the
+labels `(2,2,q)`, `(2,4,4)`, `(3,3,3)` are not a finite residue bank because ten
+arbitrary harmonic quotient speeds remain. The pair tower is finite-layered:
+one newly exposed coordinate is the existing `(2,4,4)` branch, so the genuine pair
+residual begins at two simultaneous wall crossings / four doubled-modulus
+nonmultiples. THM-944 and the signed B5 consumer leave the odd deviation tails as
+the quantitative equidistribution heart. Work continues on exact q-two phase normal
+forms, the endpoint's citation-free seven-frequency harmonic subcase, and the
+full dependency build.
+
+---
+
 ## boxeph-2026-07-17-S61 -- LEM-032 PROVED (both owner targets): (A) THE PARITY LAW -- the S60 mod-7/mod-3 vanishings are PARITY zeros (every odd character dies; Legendre mod p odd iff p == 3 mod 4), S60's section-symmetry conjecture CORRECTED (the even mod-7 cubics carry mass on all three clusters); (C)/(D) THE TWISTED JORDAN LEMMA -- W-hat_g(chi) = (2/g^2) L_{P/g}(2, chi): the weight side of the factorization law is CLOSED FORM (Dirichlet L-values at s=2; Gauss x Bernoulli for primitive; T_5 = 8/sqrt5, T_13 = 8 sqrt13 exact)
 
 Prompt (owner): prove the mod-7 vanishing; evaluate the W_g character sums.

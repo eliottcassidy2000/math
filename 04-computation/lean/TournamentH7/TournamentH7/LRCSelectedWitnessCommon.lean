@@ -4,8 +4,11 @@
   The sanctioned LRC(<=13) citation supplies a phase clearing the ten harmonic
   quotients by `1/11`, hence by `1/14`.  The missing content of each supplier is
   exactly that this nonempty harmonic-good set is not contained in its explicit
-  parallel-class failure locus.  The periodic unit budget does not close this:
-  at the target gap it handles at most six frequencies, not ten.
+  parallel-class failure locus.  The *strict* periodic unit budget does not
+  close ten distinct frequencies: at the target gap its inequality handles at
+  most six.  Compactness at the exact endpoint does handle seven distinct
+  absolute frequency classes; that sharpened quotient statement is proved in
+  `LRCSelectedWitnessFrequencyEndpoint`.
 
   Assumption challenge: harmonic quotient frequencies, rather than runners or
   branch arcs, are the vertices preserved by this reduction.  Their danger-set
@@ -171,13 +174,18 @@ theorem selectedWitness_iff_exists_lonely
       v g hg i₁ i₂ i₃ hdvd
   · exact selectedWitness_of_lonely v g hg i₁ i₂ i₃ hdvd
 
-/-- The periodic unit-budget theorem cannot directly supply the ten harmonic
-quotients at the target gap: its strict budget is already supercritical. -/
+/-- The strict periodic unit-budget inequality cannot directly supply ten
+*distinct* harmonic frequencies at the target gap: its raw ten-label budget is
+already supercritical.  Repeated or sign-opposite quotients must first be
+collapsed to absolute frequency classes. -/
 theorem unitBudget_target_gap_ten_arithmetic :
     ¬ (2 * ((1 : ℝ) / 14) * 10 < 1) := by
   norm_num
 
-/-- At most six frequencies fit the current unit budget at gap `1/14`. -/
+/-- At most six frequencies fit the *strict* unit-budget inequality at gap
+`1/14`.  This does not contradict the compactness endpoint for seven distinct
+absolute frequencies, where equality `2 * (1/14) * 7 = 1` is retained as a
+limit. -/
 theorem unitBudget_target_gap_card_bound {cardinality : ℕ}
     (hbudget : 2 * ((1 : ℝ) / 14) * cardinality < 1) :
     cardinality ≤ 6 := by

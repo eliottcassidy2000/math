@@ -321,3 +321,58 @@ Finset sums (stuck Int.decEq dump); the working route is
     kernel-average identities over U_q (grade cells vs conductor levels) —
     decide-shaped at each fixed q; the universal shallow-resonance rule is a
     one-line congruence check over the finite pair list.
+## Landed addendum — honest supplier semantics and first pair-tower layer (codex-S44--S45)
+
+The selected-witness interfaces now carry the ambient nonzero-speed hypothesis;
+the omitted hypothesis made all three earlier formulations false by permitting a
+zero harmonic quotient. `TournamentH7.LRCSelectedWitnessCommon` then identifies
+their exact logical strength. The sanctioned `LRCUpTo13` citation supplies a
+harmonic-good phase for the ten quotient speeds, but selecting that phase outside
+the detuned failure locus is equivalent, for the fixed three-detuned decomposition,
+to the original LRC(14) conclusion. Thus these Props are honest residual names,
+not finite certificates and not a weakening of the branch theorem. The denominator
+labels retain three row types while forgetting ten arbitrary harmonic frequencies.
+
+`TournamentH7.LRCPairTowerReduction` replaces the misleading infinite-tower picture
+by a finite valuation-layer identity
+
+```text
+nonMultCard(v,2g) = nonMultCard(v,g) + liftFailureCard(v,g).
+```
+
+At a nongeneric two-row level both old rows are q-two. A singleton fresh layer
+becomes exactly `(2,4,4)` at `2g` and is absorbed by that selected-witness supplier;
+the pair residual therefore starts only when at least two coordinates cross the
+first wall, equivalently when the doubled modulus has at least four nonmultiples.
+The quotient preserves valuation transitions and exact row counts but still loses
+phase placement.
+
+On the B5 side, `LRCB5RelationBudget` now exposes the sharp signed consumer:
+the proved pair tail leaves exactly `7712/84035`, and only the harmful signed
+support-`3,4,5` combination spends it. THM-944 separately packages the concrete
+subset-deviation race; the unproved content remains odd-tail equidistribution, not
+the finite subset algebra.
+
+## Landed addendum — sharp elementary endpoint (codex-S46)
+
+`TournamentH7.UnitBudgetEndpoint` closes the strict endpoint of the periodic
+unit-interval budget. `exists_lonely_sharp` was moved to its natural provider
+module `UnitBudget`; Cantor intersection compactness applied to nested closed
+good sets proves the general sharp statement `exists_lonely_unit_endpoint`:
+every nonempty finite positive speed set `W` has a phase at gap
+`1/(2*W.card)`.  Its named corollaries include thirteen speeds at `1/26` and
+seven distinct frequencies at `1/14`. The module builds without `sorry` or
+`native_decide` and its axiom audit is exactly `propext`, `Classical.choice`,
+and `Quot.sound`.
+Consequently the unconditional formal ladder is now
+
+```text
+1/79 (coarse fragmentation) < 1/27 (strict rational anchor) < 1/26 (sharp
+periodic endpoint) < 1/14 (LRC14 target).
+```
+
+This improves the formal baseline: citation-free harmonic clearance is available
+through seven distinct absolute quotient frequencies, and failure of harmonic
+clearance forces at least eight. It does not by itself make the endpoint phase
+avoid a saturated detuned partition, so the selected-phase, many-wall pair-lift,
+and signed B5-tail suppliers remain.

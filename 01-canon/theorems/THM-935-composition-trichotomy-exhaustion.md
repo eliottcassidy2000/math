@@ -104,8 +104,14 @@ relations, and unit-coefficient relations are trapped in the bottom four positio
 `TrappedDenseCoreB5Supply` exports exactly these theorem hypotheses to the B5 supplier.
 
 `TournamentH7.LRCB5RelationEndgame` is the proof-producing consumer of that missing
-bridge.  A `B5RelationBudgetCertificate` contains a modulus, four exact-support masses,
-the scaled equality `B5=(q-1)·relationModel`, and the quarter / three-quarter bounds.
+bridge.  Its older `B5RelationBudgetCertificate` contains a modulus, four nominal
+real mass coordinates, the scaled equality `B5=(q-1)·relationModel`, the sharp
+one-sided pair bound `mass2 ≥ -13/30`, and the signed harmful-tail bound
+`harmfulHigherContribution(mass3,mass4,mass5) < 7712/84035`.  Those coordinates
+are not constrained to equal concrete relation masses: the formal semantic audit
+`nonempty_b5RelationBudgetCertificate_iff` proves that inhabiting the structure is
+equivalent to already having some positive concrete `B5`.  It is therefore an
+obsolete abstract compatibility interface, not a realization of the missing bridge.
 The `(q-1)` factor is mandatory: the former unscaled interface could not contain an
 integer `B5` under its strict subunit debt budget.  The corrected certificate proves
 integer `B5 > 0`, turns certificate supply on the primitive
