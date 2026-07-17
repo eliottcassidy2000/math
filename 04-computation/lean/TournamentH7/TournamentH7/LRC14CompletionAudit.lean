@@ -80,6 +80,6 @@ theorem lrc14_reduced_to_the_B5_obligation
     LRC14.LRC14Statement :=
   lrc14_from_B5 cite hB5
 
--- The machine-checked footprint: Lean foundations + the two window-22 native_decide facts, NO sorryAx.
+-- The machine-checked footprint: Lean foundations only, with NO native_decide and NO sorryAx.
 #print axioms lrc14_reduced_to_the_B5_obligation
 #print axioms lrc14_from_B5
