@@ -262,6 +262,196 @@ theorem eight_mul_detunedBadBranches_inter_qTwoComplement_card_le
     rw [hzero]
     omega
 
+/-- For reduced denominator at most seven, the observed bad row occupies at
+most one residue class, improving the universal q-seven count from `2g/7` to
+the sharp observed value `g/7`. -/
+theorem reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+    (δ g q : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hqpos : 0 < q) (hq7 : q ≤ 7)
+    (hq : g / (Int.gcd δ g : ℤ) = q) :
+    q.toNat * (detunedBadBranches δ g u).card ≤ g.toNat := by
+  by_cases hrow : (detunedBadBranches δ g u).Nonempty
+  · obtain ⟨c, hc⟩ := hrow
+    have hrowEq : detunedBadBranches δ g u =
+        {x ∈ Finset.Ico (0 : ℤ) g | x ≡ c [ZMOD q]} := by
+      ext x
+      constructor
+      · intro hx
+        rw [Finset.mem_filter]
+        refine ⟨detunedBadBranches_subset_Ico δ g u hx, ?_⟩
+        simpa [hq] using detunedBadBranches_pair_modEq_of_q_le_seven
+          δ g u hg (by simpa [hq] using hq7) hx hc
+      · intro hx
+        have hx' := Finset.mem_filter.mp hx
+        apply detunedBadBranches_mem_of_modEq_reducedDenominator
+          δ g u hg hc hx'.1
+        simpa [hq] using hx'.2.symm
+    have hfactorZ := Int.mul_ediv_cancel' (Int.gcd_dvd_right δ g)
+    rw [hq] at hfactorZ
+    have hqdvd : q ∣ g :=
+      ⟨(Int.gcd δ g : ℤ), by simpa [mul_comm] using hfactorZ.symm⟩
+    have hcard := Ico_zero_filter_modEq_card_of_dvd
+      g q c (by omega) hqpos hqdvd
+    have hdiv : g / q = (Int.gcd δ g : ℤ) := by
+      calc
+        g / q = ((Int.gcd δ g : ℤ) * q) / q :=
+          congrArg (fun x : ℤ => x / q) hfactorZ.symm
+        _ = (Int.gcd δ g : ℤ) := by
+          exact Int.mul_ediv_cancel (Int.gcd δ g : ℤ) (ne_of_gt hqpos)
+    have hfactorNat : q.toNat * Int.gcd δ g = g.toNat := by
+      have h := congrArg Int.toNat hfactorZ
+      rw [Int.toNat_mul (by positivity) (le_of_lt hqpos)] at h
+      simpa [Nat.mul_comm] using h
+    rw [hrowEq, hcard, hdiv]
+    simpa using le_of_eq hfactorNat
+  · have hzero : (detunedBadBranches δ g u).card = 0 := by
+      rw [Finset.card_eq_zero]
+      exact Finset.not_nonempty_iff_eq_empty.mp hrow
+    rw [hzero]
+    omega
+
+/-- Every `q≥4` row costs at most one quarter of the q-two complement sheet,
+and the inequality is strict unless `q=4`.  The cases are: one-class rigidity
+for q=4..7, the parity-sliced q-eight theorem, and the universal q≥9 bound. -/
+theorem four_mul_companion_slice_card_le_and_lt_unless_four
+    (δ₂ δₓ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2 : g / (Int.gcd δ₂ g : ℤ) = 2)
+    (hqx4 : 4 ≤ g / (Int.gcd δₓ g : ℤ))
+    (hrow2 : (detunedBadBranches δ₂ g u).Nonempty) :
+    4 * ((Finset.Ico (0 : ℤ) g \ detunedBadBranches δ₂ g u) ∩
+      detunedBadBranches δₓ g u).card ≤ g.toNat ∧
+    (g / (Int.gcd δₓ g : ℤ) ≠ 4 →
+      4 * ((Finset.Ico (0 : ℤ) g \ detunedBadBranches δ₂ g u) ∩
+        detunedBadBranches δₓ g u).card < g.toNat) := by
+  let slice := (Finset.Ico (0 : ℤ) g \ detunedBadBranches δ₂ g u) ∩
+    detunedBadBranches δₓ g u
+  have hsliceCard : slice.card ≤ (detunedBadBranches δₓ g u).card :=
+    Finset.card_le_card Finset.inter_subset_right
+  change 4 * slice.card ≤ g.toNat ∧
+    (g / (Int.gcd δₓ g : ℤ) ≠ 4 → 4 * slice.card < g.toNat)
+  by_cases hq7 : g / (Int.gcd δₓ g : ℤ) ≤ 7
+  · have hcases : g / (Int.gcd δₓ g : ℤ) = 4 ∨
+        g / (Int.gcd δₓ g : ℤ) = 5 ∨
+        g / (Int.gcd δₓ g : ℤ) = 6 ∨
+        g / (Int.gcd δₓ g : ℤ) = 7 := by omega
+    rcases hcases with hq4 | hq5 | hq6 | hq7eq
+    · have hrowBound :=
+        reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+          δₓ g 4 u hg (by norm_num) (by norm_num) hq4
+      change 4 * (detunedBadBranches δₓ g u).card ≤ g.toNat at hrowBound
+      constructor <;> omega
+    · have hrowBound :=
+        reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+          δₓ g 5 u hg (by norm_num) (by norm_num) hq5
+      change 5 * (detunedBadBranches δₓ g u).card ≤ g.toNat at hrowBound
+      constructor <;> omega
+    · have hrowBound :=
+        reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+          δₓ g 6 u hg (by norm_num) (by norm_num) hq6
+      change 6 * (detunedBadBranches δₓ g u).card ≤ g.toNat at hrowBound
+      constructor <;> omega
+    · have hrowBound :=
+        reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+          δₓ g 7 u hg (by norm_num) (by norm_num) hq7eq
+      change 7 * (detunedBadBranches δₓ g u).card ≤ g.toNat at hrowBound
+      constructor <;> omega
+  · have hq8le : 8 ≤ g / (Int.gcd δₓ g : ℤ) := by omega
+    by_cases hq8 : g / (Int.gcd δₓ g : ℤ) = 8
+    · have hsliceBound :=
+        eight_mul_detunedBadBranches_inter_qTwoComplement_card_le
+          δ₂ δₓ g u hg hq2 hq8 hrow2
+      change 8 * slice.card ≤ g.toNat at hsliceBound
+      constructor <;> omega
+    · have hq9 : 9 ≤ g / (Int.gcd δₓ g : ℤ) := by omega
+      have hbadBound := nine_mul_badCount_le_two_mul δₓ g (by omega) hq9
+      have hrowBound := detunedBadBranches_card_le δₓ g hg u
+      constructor <;> omega
+
+/-- Corrected observed-degree classification: with one q-two row and two
+companions of denominator at least four, every phase clears unless both
+companions have denominator exactly four. -/
+theorem hasThreeDetunedGoodBranch_two_companions_four_le_unless_four_four
+    (δ₂ δa δb g : ℤ) (u : ℝ) (hg : 1 ≤ g)
+    (hq2 : g / (Int.gcd δ₂ g : ℤ) = 2)
+    (hqa4 : 4 ≤ g / (Int.gcd δa g : ℤ))
+    (hqb4 : 4 ≤ g / (Int.gcd δb g : ℤ))
+    (hnot44 : g / (Int.gcd δa g : ℤ) ≠ 4 ∨
+      g / (Int.gcd δb g : ℤ) ≠ 4) :
+    HasThreeDetunedGoodBranch δ₂ δa δb g u := by
+  by_cases hrow2 : (detunedBadBranches δ₂ g u).Nonempty
+  · let available := Finset.Ico (0 : ℤ) g \ detunedBadBranches δ₂ g u
+    let sliceA := available ∩ detunedBadBranches δa g u
+    let sliceB := available ∩ detunedBadBranches δb g u
+    have havailable := two_mul_qTwoComplement_card_eq δ₂ g u hg hq2 hrow2
+    change 2 * available.card = g.toNat at havailable
+    have hboundA := four_mul_companion_slice_card_le_and_lt_unless_four
+      δ₂ δa g u hg hq2 hqa4 hrow2
+    change 4 * sliceA.card ≤ g.toNat ∧
+      (g / (Int.gcd δa g : ℤ) ≠ 4 → 4 * sliceA.card < g.toNat) at hboundA
+    have hboundB := four_mul_companion_slice_card_le_and_lt_unless_four
+      δ₂ δb g u hg hq2 hqb4 hrow2
+    change 4 * sliceB.card ≤ g.toNat ∧
+      (g / (Int.gcd δb g : ℤ) ≠ 4 → 4 * sliceB.card < g.toNat) at hboundB
+    have hstrict : 4 * sliceA.card < g.toNat ∨ 4 * sliceB.card < g.toNat := by
+      rcases hnot44 with ha | hb
+      · exact Or.inl (hboundA.2 ha)
+      · exact Or.inr (hboundB.2 hb)
+    have hunionCard := Finset.card_union_le sliceA sliceB
+    have hunionLt : (sliceA ∪ sliceB).card < available.card := by omega
+    have hnotsub : ¬ available ⊆ sliceA ∪ sliceB := by
+      intro hsub
+      exact (Nat.not_le_of_lt hunionLt) (Finset.card_le_card hsub)
+    rw [Finset.not_subset] at hnotsub
+    obtain ⟨c, hcAvailable, hcOutside⟩ := hnotsub
+    simp only [Finset.mem_union, not_or] at hcOutside
+    have hcNotA : c ∉ detunedBadBranches δa g u := by
+      intro hca
+      exact hcOutside.1 (Finset.mem_inter.mpr ⟨hcAvailable, hca⟩)
+    have hcNotB : c ∉ detunedBadBranches δb g u := by
+      intro hcb
+      exact hcOutside.2 (Finset.mem_inter.mpr ⟨hcAvailable, hcb⟩)
+    have hcAvailable' := hcAvailable
+    dsimp [available] at hcAvailable'
+    have hcParts := Finset.mem_sdiff.mp hcAvailable'
+    exact ⟨c, hcParts.1, hcParts.2, hcNotA, hcNotB⟩
+  · have hzero : (detunedBadBranches δ₂ g u).card = 0 := by
+      rw [Finset.card_eq_zero]
+      exact Finset.not_nonempty_iff_eq_empty.mp hrow2
+    have hbadA := seven_mul_badCount_le_two_mul δa g (by omega) hqa4
+    have hbadB := seven_mul_badCount_le_two_mul δb g (by omega) hqb4
+    have hcardA := detunedBadBranches_card_le δa g hg u
+    have hcardB := detunedBadBranches_card_le δb g hg u
+    apply hasThreeDetunedGoodBranch_of_card_sum_lt δ₂ δa δb g u
+    omega
+
+theorem threeDetunedInstanceClearing_two_companions_four_le_unless_four_four
+    (δ₂ δa δb g : ℤ) (hg : 1 ≤ g)
+    (hq2 : g / (Int.gcd δ₂ g : ℤ) = 2)
+    (hqa4 : 4 ≤ g / (Int.gcd δa g : ℤ))
+    (hqb4 : 4 ≤ g / (Int.gcd δb g : ℤ))
+    (hnot44 : g / (Int.gcd δa g : ℤ) ≠ 4 ∨
+      g / (Int.gcd δb g : ℤ) ≠ 4) :
+    DetunedD3.ThreeDetunedInstanceClearing δ₂ δa δb g := by
+  intro u
+  exact (hasThreeDetunedGoodBranch_two_companions_four_le_unless_four_four
+    δ₂ δa δb g u hg hq2 hqa4 hqb4 hnot44).clearances
+
+theorem lonely14_of_three_detuned_two_companions_four_le_unless_four_four
+    (cite : LRCUpTo13)
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (g : ℤ) (hg : 2 ≤ g)
+    (i₂ ia ib : Fin 13) (h2a : i₂ ≠ ia) (h2b : i₂ ≠ ib) (hab : ia ≠ ib)
+    (hdvd : ∀ j, j ≠ i₂ → j ≠ ia → j ≠ ib → g ∣ v j)
+    (hq2 : g / (Int.gcd (v i₂) g : ℤ) = 2)
+    (hqa4 : 4 ≤ g / (Int.gcd (v ia) g : ℤ))
+    (hqb4 : 4 ≤ g / (Int.gcd (v ib) g : ℤ))
+    (hnot44 : g / (Int.gcd (v ia) g : ℤ) ≠ 4 ∨
+      g / (Int.gcd (v ib) g : ℤ) ≠ 4) :
+    ∃ t : ℝ, Lonely 14 v t :=
+  DetunedD3.lonely14_of_three_detuned_instance cite v hv g hg
+    i₂ ia ib h2a h2b hab hdvd
+    (threeDetunedInstanceClearing_two_companions_four_le_unless_four_four
+      (v i₂) (v ia) (v ib) g (by omega) hq2 hqa4 hqb4 hnot44)
+
 /-- The parity-sliced q-eight value closes every `(2,4,8)` phase. -/
 theorem hasThreeDetunedGoodBranch_two_four_eight
     (δ₂ δ₄ δ₈ g : ℤ) (u : ℝ) (hg : 1 ≤ g)
@@ -477,6 +667,43 @@ theorem dvd_of_nonMultCard_three_of_selected
   · exact hj2 h
   · exact hj3 h
 
+/-- In an exactly-three detuned set, two selected distinct nonmultiples have a
+unique third companion, and every other coordinate is divisible by `g`. -/
+theorem exists_third_nonmultiple_of_nonMultCard_three
+    (v : Fin 13 → ℤ) (g : ℤ)
+    (hcard : nonMultCard v g = 3)
+    (i j : Fin 13) (hij : i ≠ j)
+    (hδi : ¬ g ∣ v i) (hδj : ¬ g ∣ v j) :
+    ∃ k : Fin 13, i ≠ k ∧ j ≠ k ∧ ¬ g ∣ v k ∧
+      ∀ x, x ≠ i → x ≠ j → x ≠ k → g ∣ v x := by
+  let detuned := Finset.univ.filter (fun x => ¬ g ∣ v x)
+  have hi : i ∈ detuned := by simp [detuned, hδi]
+  have hj : j ∈ detuned := by simp [detuned, hδj]
+  have hpairSub : ({i, j} : Finset (Fin 13)) ⊆ detuned := by
+    intro x hx
+    simp only [Finset.mem_insert, Finset.mem_singleton] at hx
+    rcases hx with rfl | rfl
+    · exact hi
+    · exact hj
+  have hdetunedCard : detuned.card = 3 := by
+    simpa [detuned, nonMultCard] using hcard
+  have hpairCard : ({i, j} : Finset (Fin 13)).card = 2 := Finset.card_pair hij
+  have hsum := Finset.card_sdiff_add_card_eq_card hpairSub
+  have hdiffCard : (detuned \ ({i, j} : Finset (Fin 13))).card = 1 := by
+    rw [hdetunedCard, hpairCard] at hsum
+    omega
+  obtain ⟨k, hkEq⟩ := Finset.card_eq_one.mp hdiffCard
+  have hkDiff : k ∈ detuned \ ({i, j} : Finset (Fin 13)) := by
+    rw [hkEq]
+    simp
+  have hkParts := Finset.mem_sdiff.mp hkDiff
+  have hkNe : k ≠ i ∧ k ≠ j := by
+    simpa only [Finset.mem_insert, Finset.mem_singleton, not_or] using hkParts.2
+  have hδk : ¬ g ∣ v k := by simpa [detuned] using hkParts.1
+  refine ⟨k, hkNe.1.symm, hkNe.2.symm, hδk, ?_⟩
+  exact dvd_of_nonMultCard_three_of_selected
+    v g hcard i j k hij hkNe.1.symm hkNe.2.symm hδi hδj hδk
+
 def HasTwoFourEightPattern (v : Fin 13 → ℤ) (g : ℤ) : Prop :=
   ∃ i₂ i₄ i₈ : Fin 13,
     i₂ ≠ i₄ ∧ i₂ ≠ i₈ ∧ i₄ ≠ i₈ ∧
@@ -544,6 +771,101 @@ theorem lrc14_from_afterTwoEight_and_relationBudget
     (deepExceptionalDetunedDispatchAfterTwoThreeCRT_of_afterTwoEight cite hdeep)
     hsupply
 
+/-- One selected q-two row has a distinct q-two companion; the third detuned
+row is retained explicitly because its phase still matters. -/
+def HasTwoTwoPattern (v : Fin 13 → ℤ) (g : ℤ) : Prop :=
+  ∃ i₂a i₂b iₓ : Fin 13,
+    i₂a ≠ i₂b ∧ i₂a ≠ iₓ ∧ i₂b ≠ iₓ ∧
+    ¬ g ∣ v i₂a ∧ ¬ g ∣ v i₂b ∧ ¬ g ∣ v iₓ ∧
+    g / (Int.gcd (v i₂a) g : ℤ) = 2 ∧
+    g / (Int.gcd (v i₂b) g : ℤ) = 2
+
+def HasTwoFourFourPattern (v : Fin 13 → ℤ) (g : ℤ) : Prop :=
+  ∃ i₂ i₄a i₄b : Fin 13,
+    i₂ ≠ i₄a ∧ i₂ ≠ i₄b ∧ i₄a ≠ i₄b ∧
+    ¬ g ∣ v i₂ ∧ ¬ g ∣ v i₄a ∧ ¬ g ∣ v i₄b ∧
+    g / (Int.gcd (v i₂) g : ℤ) = 2 ∧
+    g / (Int.gcd (v i₄a) g : ℤ) = 4 ∧
+    g / (Int.gcd (v i₄b) g : ℤ) = 4
+
+/-- Exact phase-uniform residue frontier.  The q-two branch has been reduced
+to `(2,2,q)` and `(2,4,4)`; the no-q-two branch is uniform `(3,3,3)`. -/
+def DeepExceptionalDetunedDispatchFinalResidues : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → ∀ g : ℤ, 2 ≤ g →
+    ((nonMultCard v g = 2 ∧ ¬ TwoAdicLiftTerminates v g) ∨
+      (nonMultCard v g = 3 ∧
+        (HasTwoTwoPattern v g ∨ HasTwoFourFourPattern v g ∨
+          AllDetuningDenominatorsThree v g))) →
+    ¬ genericCount v g →
+    ∃ t : ℝ, Lonely 14 v t
+
+/-- The observed-degree theorem turns the final residue interface into the
+earlier q-two/q-three dispatch.  This is the exact machine-checked denominator
+classification; no raw `badCount` classification is claimed. -/
+theorem deepExceptionalDetunedDispatchTwoThree_of_finalResidues
+    (cite : LRCUpTo13)
+    (hdeep : DeepExceptionalDetunedDispatchFinalResidues) :
+    DeepExceptionalDetunedDispatchTwoThree := by
+  intro v hv g hg hcase hnongeneric
+  rcases hcase with hpair | ⟨hcard, hpattern⟩
+  · exact hdeep v hv g hg (Or.inl hpair) hnongeneric
+  · rcases hpattern with hcompanion | hallThree
+    · obtain ⟨i₂, j, h2j, hδ2, hδj, hq2, -⟩ := hcompanion
+      obtain ⟨k, h2k, hjk, hδk, hdvd⟩ :=
+        exists_third_nonmultiple_of_nonMultCard_three
+          v g hcard i₂ j h2j hδ2 hδj
+      have hqj2 : 2 ≤ g / (Int.gcd (v j) g : ℤ) :=
+        reducedDetuningDenominator_ge_two hg hδj
+      have hqk2 : 2 ≤ g / (Int.gcd (v k) g : ℤ) :=
+        reducedDetuningDenominator_ge_two hg hδk
+      by_cases hqjEq2 : g / (Int.gcd (v j) g : ℤ) = 2
+      · exact hdeep v hv g hg
+          (Or.inr ⟨hcard, Or.inl
+            ⟨i₂, j, k, h2j, h2k, hjk, hδ2, hδj, hδk, hq2, hqjEq2⟩⟩)
+          hnongeneric
+      · by_cases hqkEq2 : g / (Int.gcd (v k) g : ℤ) = 2
+        · exact hdeep v hv g hg
+            (Or.inr ⟨hcard, Or.inl
+              ⟨i₂, k, j, h2k, h2j, hjk.symm, hδ2, hδk, hδj, hq2, hqkEq2⟩⟩)
+            hnongeneric
+        · have hqj3 : 3 ≤ g / (Int.gcd (v j) g : ℤ) := by omega
+          have hqk3 : 3 ≤ g / (Int.gcd (v k) g : ℤ) := by omega
+          by_cases hqjEq3 : g / (Int.gcd (v j) g : ℤ) = 3
+          · by_cases hqkEq3 : g / (Int.gcd (v k) g : ℤ) = 3
+            · exact lonely14_of_three_detuned_two_three_three cite v hv g hg
+                i₂ j k h2j h2k hjk hdvd hq2 hqjEq3 hqkEq3
+            · exact lonely14_of_three_detuned_two_three_four_le cite v hv g hg
+                i₂ j k h2j h2k hjk hdvd hq2 hqjEq3 (by omega)
+          · by_cases hqkEq3 : g / (Int.gcd (v k) g : ℤ) = 3
+            · exact lonely14_of_three_detuned_two_three_four_le cite v hv g hg
+                i₂ k j h2k h2j hjk.symm
+                (fun x hx2 hxk hxj => hdvd x hx2 hxj hxk)
+                hq2 hqkEq3 (by omega)
+            · have hqj4 : 4 ≤ g / (Int.gcd (v j) g : ℤ) := by omega
+              have hqk4 : 4 ≤ g / (Int.gcd (v k) g : ℤ) := by omega
+              by_cases hqjEq4 : g / (Int.gcd (v j) g : ℤ) = 4
+              · by_cases hqkEq4 : g / (Int.gcd (v k) g : ℤ) = 4
+                · exact hdeep v hv g hg
+                    (Or.inr ⟨hcard, Or.inr (Or.inl
+                      ⟨i₂, j, k, h2j, h2k, hjk, hδ2, hδj, hδk,
+                        hq2, hqjEq4, hqkEq4⟩)⟩) hnongeneric
+                · exact lonely14_of_three_detuned_two_companions_four_le_unless_four_four
+                    cite v hv g hg i₂ j k h2j h2k hjk hdvd hq2 hqj4 hqk4
+                    (Or.inr hqkEq4)
+              · exact lonely14_of_three_detuned_two_companions_four_le_unless_four_four
+                  cite v hv g hg i₂ j k h2j h2k hjk hdvd hq2 hqj4 hqk4
+                  (Or.inl hqjEq4)
+    · exact hdeep v hv g hg
+        (Or.inr ⟨hcard, Or.inr (Or.inr hallThree)⟩) hnongeneric
+
+theorem lrc14_from_finalResidues_and_relationBudget
+    (cite : LRCUpTo13)
+    (hdeep : DeepExceptionalDetunedDispatchFinalResidues)
+    (hsupply : DenseCoreRelationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_relationBudget cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite hdeep) hsupply
+
 /-! ## Axiom audit -/
 
 #print axioms detunedBadBranches_pair_modEq_of_q_eight_of_modEq_two
@@ -555,6 +877,11 @@ theorem lrc14_from_afterTwoEight_and_relationBudget
 #print axioms no_three_detuned_goodBranch_two_seven_nine
 #print axioms deepExceptionalDetunedDispatchAfterTwoThreeCRT_of_afterTwoEight
 #print axioms lrc14_from_afterTwoEight_and_relationBudget
+#print axioms reducedDenominator_mul_detunedBadBranches_card_le_of_le_seven
+#print axioms threeDetunedInstanceClearing_two_companions_four_le_unless_four_four
+#print axioms lonely14_of_three_detuned_two_companions_four_le_unless_four_four
+#print axioms deepExceptionalDetunedDispatchTwoThree_of_finalResidues
+#print axioms lrc14_from_finalResidues_and_relationBudget
 
 end
 end LRC14Grand
