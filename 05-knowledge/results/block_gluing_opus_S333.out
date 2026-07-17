@@ -1,0 +1,40 @@
+========================================================================
+(G1)-(G3) LEMMA VERIFICATION (exact, random configs):
+  G1 sampling:   40 configs, violations = 0
+  G2 components: 40 configs, violations = 0
+  G3 exactness eta_x(k/x) == 1-2lam == 11/13: 12 checks, violations = 0
+
+========================================================================
+ETA PROFILE OF THE CERTIFIED PACKET X (THM-928(C)), lam = 1/13:
+  mu(W_X) = 0.117744  kappa = 2030  (bound sum x = 15130)
+  eta_X(1/2208) = 0.000000
+  eta_X(1/862) = 0.000000
+  eta_X(1/300) = 0.007282
+  eta_X(2/300) = 0.044639   <-- localization scale reached (eta > 0)
+  eta_X(4/300) = 0.076541   <-- localization scale reached (eta > 0)
+  eta_X(8/300) = 0.087903
+  eta_X(16/300) = 0.104407
+  eta_X(1/8) = 0.108884
+  eta_X(1/2) = 0.115825
+
+========================================================================
+DILATION LAW eta_cB(l) = eta_B(c l) (exact check):
+  c=  7 l=1/2100: eta_cB = 0.313246  eta_B(cl) = 0.313246  equal: True
+  c=  7 l=1/700: eta_cB = 0.444742  eta_B(cl) = 0.444742  equal: True
+  c= 60 l=1/18000: eta_cB = 0.313246  eta_B(cl) = 0.313246  equal: True
+
+========================================================================
+THE MIXED-SCALE 13-SPEED COMPOSITION DEMO (blocks with gaps):
+  B1 = [300, 406, 511, 652]
+  B2 = [18000, 24360, 30660, 39120]  (gap min(B2)/max(B1) = 27.6)
+  B3 = [720000, 974400, 1226400, 1564800, 2068800]  (gap min(B3)/max(B2) = 18.4)
+  13 speeds, max ratio 6896 -- NOT lacunary (within-block ratios < 3), NOT single-band
+  EXACT uncovered mu(V) = 0.116245  (NONEMPTY: every runner gets >= 1/13-lonely)
+  block data: m1 = 0.512995 (kappa 1126); eta2 = 0.442428 at l2 = 4/18000; eta3 = 0.360067 at l3 = 4/720000; K1 = 1126, K2 = 68686
+  GLUED BOUND (sharp form)  = -0.389964
+  GLUED BOUND (simple form) = -0.550089
+  bound holds (exact >= sharp bound): True
+  bound POSITIVE (certificate!): False
+
+  -> a 13-speed family certified by COMPOSITION: block certificates +
+     scale gaps, no global search, no lacunarity. The two-scale law.
