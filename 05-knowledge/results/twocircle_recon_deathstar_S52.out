@@ -1,0 +1,3 @@
+two-circle certificate over q in [15,1200): 1185 moduli, mismatches = 0 PASS
+exact deep-count identity: mismatched q = [] PASS
+half-circle closed form: mismatched q = [] PASS
