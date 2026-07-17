@@ -179,6 +179,65 @@ theorem exists_common_primitiveWitnessParameter_of_zero_connected
   rw [hquotient]
   exact hwitness
 
+/-- One bad runner on a primitive common-slope stalk forces exact resonance
+once its reduced speed is at least the common-factor window. -/
+theorem primitiveWitnessParameter_resonates_of_bad
+    (v : Fin 13 → ℤ) (q p : ℕ) (index : Fin 13)
+    (denominator : ℕ) (numerator : ℤ)
+    (hvelocity : v index ≠ 0)
+    (hdenominator : 0 < denominator)
+    (hdivides : (denominator : ℤ) ∣ v index)
+    (hwitness : failWitness v q p index =
+      (v index / (denominator : ℤ)) * numerator)
+    (hbad : 14 *
+      |v index * (p : ℤ) - failWitness v q p index * (q : ℤ)| <
+        (q : ℤ))
+    (hwindow : (denominator : ℤ) * (q : ℤ) ≤
+      14 * |v index / (denominator : ℤ)|) :
+    (denominator : ℤ) * (p : ℤ) = numerator * (q : ℤ) := by
+  let reducedSpeed : ℤ := v index / (denominator : ℤ)
+  have hfactor : v index = (denominator : ℤ) * reducedSpeed := by
+    exact (Int.mul_ediv_cancel' hdivides).symm
+  have hdenominatorOne : (1 : ℤ) ≤ denominator := by exact_mod_cast hdenominator
+  have hqNonneg : (0 : ℤ) ≤ q := by positivity
+  have hqLe : (q : ℤ) ≤ (denominator : ℤ) * q := by
+    calc
+      (q : ℤ) = 1 * q := by ring
+      _ ≤ (denominator : ℤ) * q :=
+        Int.mul_le_mul_of_nonneg_right hdenominatorOne hqNonneg
+  have herror :
+      v index * (p : ℤ) - failWitness v q p index * (q : ℤ) =
+        reducedSpeed *
+          ((denominator : ℤ) * p - numerator * q) := by
+    rw [hfactor, hwitness]
+    dsimp [reducedSpeed]
+    ring
+  rw [herror, abs_mul] at hbad
+  have hbad' :
+      14 * |reducedSpeed| *
+          |(denominator : ℤ) * p - numerator * q| < (q : ℤ) := by
+    simpa [mul_assoc] using hbad
+  have hclose :
+      14 * |reducedSpeed| *
+          |(denominator : ℤ) * p - numerator * q| <
+        (denominator : ℤ) * q :=
+    lt_of_lt_of_le hbad' hqLe
+  have hscalePos : (0 : ℤ) < 14 * |reducedSpeed| := by
+    have hreducedNe : reducedSpeed ≠ 0 := by
+      intro hzero
+      apply hvelocity
+      rw [hfactor, hzero, mul_zero]
+    exact mul_pos (by omega) (abs_pos.mpr hreducedNe)
+  have hscaled :
+      14 * |reducedSpeed| *
+          |(denominator : ℤ) * p - numerator * q| <
+        14 * |reducedSpeed| * 1 :=
+    lt_of_lt_of_le hclose (by simpa [reducedSpeed] using hwindow)
+  have habs :
+      |(denominator : ℤ) * p - numerator * q| < 1 :=
+    (mul_lt_mul_iff_right₀ hscalePos).mp hscaled
+  exact sub_eq_zero.mp (Int.abs_lt_one_iff.mp habs)
+
 #print axioms overlapDet_eq_zero_iff_witnessSlope_eq
 #print axioms overlapDet_zero_trans
 #print axioms overlapZeroSetoid
@@ -186,6 +245,7 @@ theorem exists_common_primitiveWitnessParameter_of_zero_connected
 #print axioms exists_common_witnessSlope_of_pairwise_zero
 #print axioms exists_common_witnessSlope_of_zero_connected
 #print axioms exists_common_primitiveWitnessParameter_of_zero_connected
+#print axioms primitiveWitnessParameter_resonates_of_bad
 
 end LRC14Concrete
 end LonelyRunner
