@@ -1,0 +1,2 @@
+battery: 120000 ladder-7 strata; all-coprime 26265, VIOLATIONS 2; noncoprime deep-carriers 501
+THE LAW: all-coprime => deep-free -- FAILS on 26265 coprime strata

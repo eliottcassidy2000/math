@@ -57,6 +57,19 @@ support-three/support-five signed budget and the valuation-gap-two phase wall.
 
 ---
 
+## death-star-2026-07-17-S44 -- THM-953 THE SUPPLY NUCLEUS + THE MIRROR LEMMA; THE COPRIME LAW REFUTED-WITH-REPLACEMENT (open items 1-3 worked): the naive resonance law (all-coprime => deep-free) FAILS at Dirichlet rate (2/26265 coprime ladder strata; genuine co-approximations in MIRROR PAIRS p <-> q-p) -- the replacement is PROVED: bandCount(q-p) = bandCount(p), deep sets are symmetric, deep count EVEN at odd q; plus the decidable census-certificate constructor batch-feeding codex's capstone
+
+Prompt (owner): work all 3 items in the open list, pull often and see how progress has been updated by other agents, and do whatever tasks are most relevant to LRC 14 proof formalization completion.
+
+(A) ITEM TRACKING (pull-integrated): item 1 (exhaustion rendering) -- kps landed T3-unconditional (their punctured near-pole lemma; colliding numbers flagged again: my THM-949 + opus's HYP-7200 both first-pushed; suggested 952/7206+); item 2 (pair-floor) -- no mac-mini movement this window; item 3 (live floors) -- codex-S49's DenseCoreCensusB5Supply wired MY THM-950 criterion into the endgame supply chain: the a-priori question is now per-family census certificates.
+
+(B) THE HONEST SCIENCE (LRCResonanceNucleus.lean + resonance_law_referee .out): first battery (13290 coprime strata, 0 violations) suggested the clean law; the DOUBLED battery REFUTED it -- 2/26265 violations, both genuine Dirichlet co-approximations (t = p/q ~ n_i/v_i simultaneously; rate ~ q/7^7 matches), both in MIRROR PAIRS. Refutation recorded with mechanism; the replacement PROVED in Lean: bandCount_reflect (the band is negation-symmetric => deep multipliers pair up p <-> q-p; deep count even at odd q -- sharpening THM-950's census by parity). Plus CensusB5Certificate.of_decide + three batch demos (i+2 @ 31, 2i+3 @ 37, 3i+5 @ 31) certified through codex's capstone by decide -- the supply nucleus works wholesale.
+
+(C) THE REFINED PICTURE: the a-priori supply's heart stands as open item 3 in sharpened form -- "for each dense-core family, SOME q in the window has live > 792*deep" -- with the exceptional set now structurally understood (gcd-resonances + rare mirror-paired co-approximations). Picture doc updated.
+
+FILES: THM-953, HYP-7205 (refuted-with-replacement), LRCResonanceNucleus.lean, resonance_law_referee .out, root import, session log. NEXT: (i) adaptive-q supply (average over the q-window: the violation q's are family-specific; a pigeonhole over several q's may prove exists-q unconditionally -- THE named attack); (ii) kps exhaustion rendering continues (theirs); (iii) mirror-pair exploitation: the even-deep parity halves the census cost. death-star; S44.
+
+---
 ## death-star-2026-07-17-S43 -- THM-951 THE DECIDABLE CENSUS PIPELINE + THE COHESIVE PICTURE (integration session): CoverageCapped DECIDES; lonely_of_census composes THM-945/950 with the Mreach consumer -- cap + live > deep by decide => B5 > 0 => Lonely; census_demo (v_i = i+2, q = 31) is THE FIRST LONELINESS PROOF IN THE CORPUS PRODUCED BY THE B5 FUNNEL; and the whole formalization now has ONE MAP (LRC14-FORMALIZATION-PICTURE-2026-07-17.md)
 
 Prompt (owner): keep working a long session to complete the LRC proof formalization, pull often and integrate incoming work and extend it and make a whole cohesive picture.

@@ -83,6 +83,9 @@ Plücker relations on bad triples (the trap's target shape).
 2. **The pair continuum-to-grid bridge** — the continuous 7-wall floor now has exact margin `8270807/2058376320`; formalize the Bernoulli pair identity, replay seven finite clique DAGs in Lean, and prove the pair-intersection component discrepancy feeding `normalizedMass2`.
 3. **A-priori liveCount floors** (the discrete side of the same wall): the
    winData rows give them on censused strata; beyond, it is kps's law made
-   uniform.
+   uniform. SHARPENED (S44): the naive coprime law is REFUTED (Dirichlet-rate
+   mirror-paired exceptions); the question is now adaptive-q — for each family,
+   SOME q in the window with live > 792·deep (deep sets provably mirror-symmetric,
+   even at odd q — THM-953).
 
 Everything else in the program is either kernel-checked or a named finite task.
