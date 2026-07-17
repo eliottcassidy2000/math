@@ -88,4 +88,25 @@ Plücker relations on bad triples (the trap's target shape).
    SOME q in the window with live > 792·deep (deep sets provably mirror-symmetric,
    even at odd q — THM-953).
 
+**S45 update — all three items moved this cycle:**
+
+1. kps's exhaustion rendering continued (T3-unconditional line); opus's THM-955
+   cluster gap gives the CONTINUOUS a-priori safe width for every ≤6-speed base
+   block, and its Lean L1 (`sorted_gap_pigeonhole`, LRCClusterGapBrick.lean) is
+   now GREEN kernel-pure — with one statement correction: positivity 0 < b−a−B
+   is NECESSARY (in-kernel counterexample; teeth may overhang the window).
+   L2/L3 assembly remain with opus; consumers thread the positivity.
+2. codex landed THM-954 (weighted-ratio-layer pair-floor) — the 7-wall pair
+   floor's grid side is moving.
+3. THM-956 (LRCAdaptiveQ.lean, GREEN): Farey separation ⇒ ONE distinct-instant
+   carrier per deep component on super-ladder strata (D² < 7·v_top) ⇒ the
+   adaptive-q pigeonhole: whenever the window holds more coprime moduli than
+   components, a deep-free q EXISTS, and THM-950's census there needs only
+   liveCount > 0. Recon: 387/400 families have zero window-total deep; worst
+   all-coprime carrier count = 1. Named remainder: (i) the K-refinement
+   (provable 64·v_bot two-choice bound vs empirical K ≤ 2), (ii) instantiate
+   comp concretely (component = the pinned witness index, mechanical from
+   THM-949), (iii) the live floor at the chosen q — the program's nucleus,
+   shared with item 1's exhaustion face.
+
 Everything else in the program is either kernel-checked or a named finite task.
