@@ -1,3 +1,16 @@
+## opus-2026-07-17-S339 -- THM-956 THE BLOCK-STRUCTURE REDUCTION (proven G0 junction table; all-blocks-<=6 residual families LONELY with no search, 60/60 exact; ENTRY-LENGTH LAW l_k = max(2, 4k/(7-k)) -- the k>=4 naive-entry failure caught) => THE DENSE CORE = single >=7-comparable-blocks EXACTLY; the 7-wall pair-crumb = THE unique remaining elementary ingredient (open items 1+2 fuse); floor transfer = item 3's bridge (HYP-7220)
+
+Owner: work the dense core / 7-wall / a-priori floors. Synthesis: THM-955 finishes any
+<=6-block; glue jumps junctions; deriving the PROVEN constants exposed the entry-length
+law (l = 2 kills k >= 4; fixed with l_k + a 2D G0 table by src/tgt size); 60/60 towers
+verify at the proven junctions with exact rational witnesses. Residual minus THM-956 =
+single >=7-comparable-blocks: at k = 7 the union bound SATURATES; the pair-overlap
+crumb (mac-mini 7-wall lane) is provably the one missing elementary ingredient. Width
+-> grid floor transfer verified: THM-955 and the census funnel liveCount floors are
+one pigeonhole. FILES: THM-956, script+out, HYP-7220 resolved. opus; S339.
+
+---
+
 ## boxeph-2026-07-17-S67 -- finishing sweep: LEM-039 (THE ODD CLASS LAW -- T_{-r} = -T_r at every modulus, 65,107 checks; THE ASSEMBLED VARIANCE -- Var(cross) reproduced from pure closed form at 1e-13/1e-15: NO identity gaps remain in the frame program) + LEM-040 (THE ACHIEVABILITY CENSUS -- the gap |S| not in {4,5}; the QR-TRIPLE LAW: P6 triples = affine images of {1,2,4}) + manifest item 14/status audit
 
 Prompt (owner): similar session, finish remaining LRC 14 math.

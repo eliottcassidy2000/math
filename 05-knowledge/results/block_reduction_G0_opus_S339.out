@@ -1,0 +1,30 @@
+(1) THE PROVEN JUNCTION CONSTANT (worst 2/(M*W) over shapes):
+   k=1: entry l_k = 2, M*W >= 130/203 = 0.64039
+   k=2: entry l_k = 2, M*W >= 26/133 = 0.19549
+   k=3: entry l_k = 3, M*W >= 39/434 = 0.08986
+   k=4: entry l_k = 16/3, M*W >= 312/6013 = 0.05189
+   k=5: entry l_k = 10, M*W >= 130/4627 = 0.02810
+   k=6: entry l_k = 24, M*W >= 12/1015 = 0.01182
+   G0(src k -> tgt k) table (worst case, rho = 13):
+     src k=1: ->k1:      3.1  ->k2:      3.1  ->k3:      4.7  ->k4:      8.3  ->k5:     15.6  ->k6:     37.5
+     src k=2: ->k1:     10.2  ->k2:     10.2  ->k3:     15.3  ->k4:     27.3  ->k5:     51.2  ->k6:    122.8
+     src k=3: ->k1:     22.3  ->k2:     22.3  ->k3:     33.4  ->k4:     59.4  ->k5:    111.3  ->k6:    267.1
+     src k=4: ->k1:     38.5  ->k2:     38.5  ->k3:     57.8  ->k4:    102.8  ->k5:    192.7  ->k6:    462.5
+     src k=5: ->k1:     71.2  ->k2:     71.2  ->k3:    106.8  ->k4:    189.8  ->k5:    355.9  ->k6:    854.2
+     src k=6: ->k1:    169.2  ->k2:    169.2  ->k3:    253.8  ->k4:    451.1  ->k5:    845.8  ->k6:   2030.0
+
+(2) END-TO-END exact verification: towers with proven-G0 junctions:
+   60/60 towers lonely with exact witnesses at proven G0 junctions
+
+(3) THE FLOOR TRANSFER (item-3 bridge, exact): width delta in a window
+    => >= ceil(delta*D) - 1 points of any 1/D-grid inside it:
+   delta=0.02379 D= 3457: grid pts = 82, floor bound = 82, holds: True
+   delta=0.01090 D= 3961: grid pts = 43, floor bound = 43, holds: True
+   delta=0.03171 D= 2866: grid pts = 91, floor bound = 90, holds: True
+   delta=0.03766 D= 2503: grid pts = 94, floor bound = 94, holds: True
+   delta=0.00991 D= 2184: grid pts = 21, floor bound = 21, holds: True
+
+REDUCTION: residual families with all blocks <= 6 at G0 junctions are
+LONELY (THM-955 + glue, proven constants). The dense core is exactly
+the single >=7-comparable-block families -- where the 7-wall's
+pair-overlap crumb (mac-mini's lane) is the one missing ingredient.
