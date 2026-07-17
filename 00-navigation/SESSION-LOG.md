@@ -67188,3 +67188,19 @@ representation.  Parallel agents are closing the centered-primitive measure iden
 the one-tooth component topology, and auditing the global `hfloor`/`hpartA` endgame surface.
 
 ---
+## codex-2026-07-16-S22 cont.1 -- THM-933 CONCRETE TOOTH-DELETION TOPOLOGY CLOSED
+
+Integrated the parallel exact-rational topology rung into
+`LRCLocalDensityBlockGluing.lean`.  `diff1F` now has an anchored circular-tooth semantics;
+anchored deletion cannot increase cut-open interval pieces; circular reclosure costs at
+most one component; and `CircularToothAtlas` feeds the existing N-tooth induction.  The
+targeted build remains sorry-free and native-decide-free with only
+`[propext, Classical.choice, Quot.sound]`.
+
+The honest residual is smaller but explicit: construct normalized rotation charts for
+the actual circle survivors, preserving true component count and matching the half-open
+rational subtraction model.  This quotient preserves component multiplicity and tooth
+incidence but deliberately destroys absolute endpoint phase; the atlas equality is the
+required proof that this loss is harmless.  The measure/extrema bridge remains independent.
+
+---

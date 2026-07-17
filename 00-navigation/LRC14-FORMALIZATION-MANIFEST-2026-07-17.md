@@ -52,9 +52,12 @@ The pulled Opus S333 fixed-scale interface is also connected: the module theorem
 tiled at scale `ell`.  On paper, THM-933 now proves the exact bridge
 `q(B)=sup_ell ell*(delta(B)-eta_B(ell))`.  Formalizing that equality requires the same
 remaining circle/interval layer, so it adds no independent algebraic blocker.
-The remaining geometric rung is concrete: instantiate the primitive identity with circle
-Lebesgue measure, prove extrema/fixed-scale minima exist, and show that deleting one
-concrete circular tooth raises concrete component count by at most one.
+The exact rational `diff1F` deletion rung is now closed: an anchored circular tooth does
+not increase cut-open piece count, reclosure costs at most one component, and a
+`CircularToothAtlas` feeds the existing tooth-count induction.  The remaining geometric
+rung is to instantiate the primitive identity with circle Lebesgue measure, prove
+extrema/fixed-scale minima exist, and construct normalized rotation charts preserving the
+actual circle component count.
 
 ## Landed addendum — THM-932 closed recurrence (codex-S22)
 
