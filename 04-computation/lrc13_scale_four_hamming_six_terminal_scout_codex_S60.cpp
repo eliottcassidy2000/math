@@ -1,4 +1,4 @@
-// Exact generic terminal recursion for the THM-952 scale-four H6 bank.
+// Exact generic terminal recursion for the THM-957 scale-four H6 bank.
 //
 // Reconstruct the 256 all-order-four common-sheet contexts directly from the
 // literal CRT masks.  Their replacement rays are u+52k.  Enumerate the rays

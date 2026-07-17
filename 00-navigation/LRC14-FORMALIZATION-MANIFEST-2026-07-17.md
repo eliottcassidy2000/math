@@ -725,7 +725,7 @@ The independent combiner verifies nonoverlapping coverage of contexts
 `0,...,1503`, every row/shard sum, the stratum totals, and a frozen row hash.
 Therefore the primitive proper AP-centred common-scale-three H6 face is closed.
 
-THM-952 now closes the next face.  At `c=4`, exhaustive literal sheet masks
+THM-957 now closes the next face.  At `c=4`, exhaustive literal sheet masks
 reject every mixed-order presentation and leave exactly 64 all-order-four
 supports with four unit words apiece.  Their exact carrier is
 
@@ -749,7 +749,18 @@ tournament has five fingerprints but destroys the edge colouring and unit code;
 the proof carrier remains the literal owner-sheet incidence followed by strict-
 safe components and labelled future rays.
 
-Thus both `c=3` and `c=4` are closed.  This does not touch `c>=5`, the finite
+THM-958 closes `c=5` before any metric recursion.  The literal common-sheet
+scan exhausts `14,414,400` order/unit contexts and finds none.  Independently,
+sheet capacity kills two through four order-five colours; five would require a
+five-clique in a `K6,6`; and six reduce to the familiar 64 signed-cycle
+supports.  On each of those supports no unit word satisfies more than four of
+six all-different owner obligations.  The exact minimal obstruction is an
+eight-edge owner hypergraph: six consecutive length-three windows of the
+doubling cycle plus the two alternating triples, which are the zero-provider
+SCCs.  A completed tournament retains only pair telemetry and destroys these
+decisive three-owner hyperedges.
+
+Thus `c=3`, `c=4`, and `c=5` are closed.  This does not touch `c>=6`, the finite
 ramified H5 bank, or non-AP-centred/deep-sheet branches of the global `n=12`
 problem.
 

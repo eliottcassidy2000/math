@@ -1,4 +1,4 @@
-THM-952 SCALE-FOUR HAMMING-SIX SHEET-CYCLE EXACT REDUCTION
+THM-957 SCALE-FOUR HAMMING-SIX SHEET-CYCLE EXACT REDUCTION
 SECTION exhaustive common-sheet bank
 label_sets=924 state_words_per_label_set=3648 tested_contexts=3370752
 surviving_presentations=64 surviving_unit_contexts=256 order_strata={(D4^6):256} mixed_order_contexts=0
@@ -26,4 +26,4 @@ logical_first_edges=25132 per_context_range=[60,168]
 geometric_keys=12566 fibre_multiplicity={2:12566} exact_cache_factor=2
 terminal_metric_recursion=NOT_RUN verdict=OPEN
 SECTION integrity
-source_sha256=7286099316618a0af3c8ff3103aec3d95076ca9eef051f753ab944fe1d8fc006
+source_sha256=6f84e5c1f640c82f2caf4249fef5a106388b907f70b81dfd914db7c898a91df1

@@ -1,5 +1,5 @@
 ---
-id: THM-952
+id: THM-957
 title: Scale-four Hamming-six sheet-cycle and two-triangle reduction
 status: PROVED STRUCTURAL + FINITE-EXACT — the primitive proper AP-centred c=4 Hamming-six face is empty: the 64 all-order-four presentations give 256 unit contexts, and their complete no-height-cutoff metric recursion visits 166,976,181 candidate edges and finds zero covers
 source: codex-2026-07-17-S60 scale-four sheet-cycle audit
@@ -13,7 +13,7 @@ verification:
   - 05-knowledge/results/lrc13_scale_four_hamming_six_terminal_census_codex_S60.out
 ---
 
-# THM-952 — the scale-four sheet bank is a cycle plus two triangles
+# THM-957 — the scale-four sheet bank is a cycle plus two triangles
 
 Let `R subset F_13^*` have six elements, put `P=[12] minus R`, and consider
 the primitive proper AP-centred packet
@@ -422,9 +422,10 @@ primitive proper AP-centred common-scale-four Hamming-six face.  It does not
 close any `c>=5` face, the ramified Hamming-five bank,
 non-AP-centred/deep-sheet branches, or global `n=12` sporadic emptiness.
 
-The next scale frontier is therefore `c=5`, not another `c=4` quotient.  The
-right first question is again whether the owner-sheet obligation hypergraph
-contracts to a small signed carrier before any metric recursion is launched.
+THM-958 subsequently answers the next question at `c=5`: its common-sheet bank
+is already empty.  The next scale frontier is therefore `c=6`.  The right
+first question remains whether the owner-sheet obligation hypergraph contracts
+to a small signed carrier before any metric recursion is launched.
 
 ## Verification
 
@@ -460,15 +461,15 @@ Frozen integrity data:
 
 ```text
 sheet source SHA-256
-               7286099316618a0af3c8ff3103aec3d95076ca9eef051f753ab944fe1d8fc006
+               6f84e5c1f640c82f2caf4249fef5a106388b907f70b81dfd914db7c898a91df1
 sheet output SHA-256
-               5487800f528929bc3dc092bca2b19cc90c3526adb913b277254681a01caf0f26
+               6510faa7aa48c3c00ef2895a92b9e417616ee62b50f6194acfbd37799b7cdf2f
 terminal source SHA-256
-               2c7299f45403b87527624e99c852471663ec06c929b202dd47d23e36ce33cb57
+               f67334d7db973d7e68240dbe29c4be149191cb4407cf1f58e70c2ff5e3ea199d
 combiner SHA-256
-               3696bafa9ccd47d37aa0af8970dbbd9e66de1b17cd8b8262856f82096e8f073d
+               2cfa26540768b1b6abfb87c08cfede9a9d505079eac7a4649917d1615d2de01d
 terminal output SHA-256
-               2fe342a7ebf36f572f69326f8fa81c2133d818d0d22b3ddbb35e0e750831579e
+               c4551b10bd27e23ea7ec2a3977b770ff10d36dc6555b9b63461dff0f6949f410
 context payload SHA-256
                7a9f8134aa9edad191b74a824ac24aa96b564a8c11a167fde5af4e26882f3346
 parity payload FNV-64

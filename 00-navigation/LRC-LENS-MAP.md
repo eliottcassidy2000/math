@@ -80,7 +80,11 @@ Eight recent results force this six-field packet rather than merely suggest it.
    carrier contracts to a directed `C6`, two signed triangles, and a zero
    perfect matching, but its completed tournament forgets precisely that edge
    colouring and the four-word affine unit fibre.  Both metric banks close
-   only after restoring the literal component/ray state.
+   only after restoring the literal component/ray state.  At scale five the
+   owner-sheet fibre is even sharper: a finite capacity reduction leaves 64
+   supports, but eight minimal three-owner hyperedges make every unit word
+   inconsistent before metric heights exist.  This is direct evidence that
+   owner obligations, rather than runner pairs, are the right vertices.
 6. The q-window and witness-ladder theorem turns simultaneous bad runners into
    a positive integer witness vector: a factor-three speed ladder forces the
    same factor-three ladder in its witnesses, so seven overlaps force the top
@@ -143,8 +147,9 @@ search for one more universal scalar:
 - nested single-runner gaps and the rational window-plus-lacunary-tail glue are
   formalized; the missing block-cascade input is now the cluster-gap base-window
   lemma and its uniform dense-core supply, not the gluing operation itself;
-- the primitive `n=12` sporadic problem is finite and ramification-stratified,
-  but its scale-five and higher AP-centred metric languages, finite H5 bank,
+- the primitive `n=12` sporadic problem is finite and ramification-stratified;
+  its common-scale-five sheet bank is empty, but scale-six and higher
+  AP-centred metric languages, the finite H5 bank,
   and non-AP-centred/deep-sheet continuations must be closed
   or replaced by a uniform decreasing invariant;
 - the final nonlacunary dense core needs a theorem that composes its component,
@@ -550,7 +555,7 @@ positive-open residual
 
 | Lens family | What it preserves | What it destroys or hides | Required sidecar / repair | What it points at |
 |---|---|---|---|---|
-| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 jointly optimizes all 63 relative cuts, excludes every arithmetic row at scales 1,120, 1,008, and 882 by scalar owner capacity, bounds primitive proper AP-centred H6 by `c<=840`, and gives a finite tree for each language; THM-861 solves the complete `c=2` fibre with unique AP cover `[12]`; THM-862 closes all 1,504 `c=3` contexts in a `950,540,566`-edge exact terminal recursion; THM-952 closes all 256 `c=4` contexts in a `166,976,181`-edge recursion after contracting the sheet carrier to a directed cycle plus affine two-triangle code. THM-858 bounds the finite H5 ramification base; the next common-scale H6 face is `c=5` |
+| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 jointly optimizes all 63 relative cuts, excludes every arithmetic row at scales 1,120, 1,008, and 882 by scalar owner capacity, bounds primitive proper AP-centred H6 by `c<=840`, and gives a finite tree for each language; THM-861 solves the complete `c=2` fibre with unique AP cover `[12]`; THM-862 closes all 1,504 `c=3` contexts in a `950,540,566`-edge exact terminal recursion; THM-957 closes all 256 `c=4` contexts in a `166,976,181`-edge recursion after contracting the sheet carrier to a directed cycle plus affine two-triangle code; THM-958 proves the `c=5` common-sheet bank empty by a 14,414,400-row scan and an independent eight-hyperedge owner obstruction. THM-858 bounds the finite H5 ramification base; the next common-scale H6 face is `c=6` |
 | Labelled packet / reduction lens | theorem route, exact packet identity, AP/GW boundary atoms, C27/K33/covering family | local topology and certificate economy if scalarized | route label, exact `M`, qdiv, packet family, residual sector | packet sheaf base |
 | Equivalence triad lens | count shadow, retained scissors/fiber data, observer-cut orbit, limiting distribution law, first failed interaction order | proof predicate if equinumerosity, equidecomposability, or equidistribution is used alone | `cardinal_shadow`, `scissors_fiber`, `observer_cut_orbit`, `distribution_law`, `interaction_order_defect`, `residual_debt_name` | forgetting-cost invariant |
 | Tournament / metagraph / observer lens | pairwise comparator, wall-crossing relation, marked source/phase order | thresholds, endpoints, scale, family route if vertices are raw runners | marked vertices, retained observable, tie Hamiltonian path, lost-coordinate ledger | relation walk over packet base |

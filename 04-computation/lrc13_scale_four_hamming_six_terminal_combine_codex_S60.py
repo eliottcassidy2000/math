@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact shard combiner for the THM-952 scale-four terminal census.
+"""Exact shard combiner for the THM-957 scale-four terminal census.
 
 The combiner requires four contiguous 64-context shards and one fully ungated
 single-context replay.  It verifies raw file hashes, every row/summary total,
@@ -231,7 +231,7 @@ def main() -> None:
         ),
         "dead nodes are not exactly shortcut-certified nodes",
     )
-    require(aggregate.nodes[1] == 25_132, "THM-952 first-layer mismatch")
+    require(aggregate.nodes[1] == 25_132, "THM-957 first-layer mismatch")
 
     ungated_hash = digest(arguments.ungated)
     require(ungated_hash == EXPECTED_UNGATED_HASH, "ungated replay hash mismatch")
@@ -268,7 +268,7 @@ def main() -> None:
 
     repo = Path(__file__).resolve().parents[1]
     terminal_source = repo / "04-computation/lrc13_scale_four_hamming_six_terminal_scout_codex_S60.cpp"
-    print("THM-952 SCALE-FOUR HAMMING-SIX EXACT TERMINAL CENSUS")
+    print("THM-957 SCALE-FOUR HAMMING-SIX EXACT TERMINAL CENSUS")
     print("arithmetic=integer+rational floating_point=none height_cutoff=none")
     print(f"contexts={aggregate.nodes[0]} context_range=[0,256) shards=4")
     print(f"nodes={','.join(map(str, aggregate.nodes))}")

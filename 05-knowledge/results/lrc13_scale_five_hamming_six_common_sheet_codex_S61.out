@@ -1,0 +1,33 @@
+THM-958 SCALE-FIVE HAMMING-SIX COMMON-SHEET OBSTRUCTION
+arithmetic=integer+bitmask floating_point=none metric_heights=none
+SECTION literal exhaustive bank
+label_sets=924 state_words_per_label_set=15600
+tested_by_D5_count={2: 221760, 3: 1182720, 4: 3548160, 5: 5677056, 6: 3784704}
+tested_contexts=14414400
+surviving_presentations=0 surviving_unit_contexts=0
+SECTION capacity reduction
+D5_count_2_to_4=impossible_by_singleton_sheet_capacity
+D5_count_5=impossible_symmetric_nonzero_graph=K6,6_clique_number=2
+D5_count_6_capacity_supports=64 equal_c2_signed_cycle_bank=yes
+multiplicative_support_orbit_sizes=(12, 12, 12, 4, 12, 12)
+SECTION owner-obligation carrier
+zero_provider_graph=(edges=6,SCCs=(3,3),Hamiltonian_paths=0) count=64
+doubling_graph=(edges=6,SCCs=(6,),Hamiltonian_paths=6) count=64
+unit_words_per_support=4096 full_owner_covers=0 maximum_satisfied_owners=4
+per_support_satisfaction_profile={0:2332,1:1248,2:504,3:0,4:12,5:0,6:0}
+forbidden_owner_triples=8=(six_C6_windows)+(two_alternating_zero_SCCs)
+maximal_near_solutions=12 failed_pairs=three_C6_opposites multiplicity_each=4
+SECTION tournament audit
+observable=directed_zero_provider_arc switch=complete_missing_pairs
+tie_graph=K3,3 tie_gauge=lexicographically_first_tie_Hamiltonian_path
+completed_score_histogram={(1,2,2,3,3,4):64} directed_triangles={6:64} SCCs={(6,):64}
+sparse_edge_flip_histogram={2: 16, 3: 32, 4: 16}
+Hamiltonian_path_histogram={29: 16, 31: 32, 33: 16}
+joint_tournament_fingerprints=3
+SECTION workload and verdict
+metric_root_contexts=0 metric_first_edges=0 terminal_recursion=unnecessary
+verdict=common_sheet_bank_empty_scale_five_face_closed
+SECTION integrity
+local_mask_payload_fnv64=faf78482761e2de4
+support_payload_sha256=bc5aa59e155d645552b8614786c5b9bcbb91e4f83998308855a0963ba1b90538
+source_sha256=f01b08e43bf192ba9e5dc844eeda38a867a905e9b5d8b10feaca5821374eeaf7

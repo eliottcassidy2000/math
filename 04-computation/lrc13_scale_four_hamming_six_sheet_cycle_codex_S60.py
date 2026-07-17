@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact scale-four AP-centred Hamming-six sheet reduction (THM-952).
+"""Exact scale-four AP-centred Hamming-six sheet reduction (THM-957).
 
 The program performs five independent exact checks.
 
@@ -659,7 +659,7 @@ CONTEXT_PAYLOAD = "\n".join(
 PARITY_TEXT = "\n".join(PARITY_PAYLOAD) + "\n"
 
 
-emit("THM-952 SCALE-FOUR HAMMING-SIX SHEET-CYCLE EXACT REDUCTION")
+emit("THM-957 SCALE-FOUR HAMMING-SIX SHEET-CYCLE EXACT REDUCTION")
 emit("SECTION exhaustive common-sheet bank")
 emit(
     "label_sets=924 state_words_per_label_set=3648 "
