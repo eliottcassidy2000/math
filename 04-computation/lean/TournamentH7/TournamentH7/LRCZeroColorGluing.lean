@@ -1,4 +1,5 @@
 import TournamentH7.LRCSevenOverlapRelations
+import TournamentH7.LRCAlignedResonance
 
 /-!
 # Zero-color witness gluing
@@ -238,6 +239,71 @@ theorem primitiveWitnessParameter_resonates_of_bad
     (mul_lt_mul_iff_right₀ hscalePos).mp hscaled
   exact sub_eq_zero.mp (Int.abs_lt_one_iff.mp habs)
 
+/-- An exact primitive resonance carries the reduced multiplier modulus into
+the primitive denominator. -/
+theorem reduced_modulus_dvd_primitive_denominator_of_resonance
+    (p q denominator : ℕ) (numerator : ℤ) (hq : 0 < q)
+    (hresonance : (denominator : ℤ) * (p : ℤ) =
+      numerator * (q : ℤ)) :
+    q / Nat.gcd p q ∣ denominator := by
+  have hqDvdInt : (q : ℤ) ∣ (p : ℤ) * (denominator : ℤ) := by
+    refine ⟨numerator, ?_⟩
+    calc
+      (p : ℤ) * denominator = denominator * p := by ring
+      _ = numerator * q := hresonance
+      _ = q * numerator := by ring
+  have hqDvdNat : q ∣ p * denominator := by
+    exact_mod_cast hqDvdInt
+  exact (LRC14Grand.dvd_mul_iff_reduced_modulus_dvd
+    p q denominator hq).mp hqDvdNat
+
+/-- At a coprime multiplier, an exact primitive resonance forces the whole
+modulus into the primitive denominator. -/
+theorem modulus_dvd_primitive_denominator_of_coprime_resonance
+    (p q denominator : ℕ) (numerator : ℤ) (hq : 0 < q)
+    (hpq : p.Coprime q)
+    (hresonance : (denominator : ℤ) * (p : ℤ) =
+      numerator * (q : ℤ)) :
+    q ∣ denominator := by
+  simpa [hpq.gcd_eq_one] using
+    reduced_modulus_dvd_primitive_denominator_of_resonance
+      p q denominator numerator hq hresonance
+
+/-- A connected zero-color bad stalk at a coprime multiplier cannot remain a
+merely local alignment once the primitive window applies: the modulus divides
+every speed in the stalk. -/
+theorem modulus_dvd_stalk_speeds_of_zero_connected_bad_coprime
+    (v : Fin 13 → ℤ) (hv : ∀ index, v index ≠ 0)
+    (q p : ℕ) (hq : 0 < q) (hpq : p.Coprime q)
+    (stalk : Finset (Fin 13)) (root pivot : Fin 13)
+    (hroot : root ∈ stalk) (hpivot : pivot ∈ stalk)
+    (hconnected : ∀ index ∈ stalk,
+      Relation.ReflTransGen
+        (fun left right => overlapDet v q p left right = 0) root index)
+    (hpivotBad : ¬ inBand v q p pivot)
+    (hwindow : ∀ denominator : ℕ,
+      (denominator : ℤ) ∣ v pivot →
+      (denominator : ℤ) * (q : ℤ) ≤
+        14 * |v pivot / (denominator : ℤ)|) :
+    ∀ index ∈ stalk, (q : ℤ) ∣ v index := by
+  obtain ⟨denominator, numerator, hdenominator, _hcoprime,
+      hparameter⟩ :=
+    exists_common_primitiveWitnessParameter_of_zero_connected
+      v hv q p stalk root hroot hconnected
+  have hpivotParameter := hparameter pivot hpivot
+  have hresonance := primitiveWitnessParameter_resonates_of_bad
+    v q p pivot denominator numerator (hv pivot) hdenominator
+      hpivotParameter.1 hpivotParameter.2
+      (bad_at_witness v q p pivot hq hpivotBad)
+      (hwindow denominator hpivotParameter.1)
+  have hqDenominator : q ∣ denominator :=
+    modulus_dvd_primitive_denominator_of_coprime_resonance
+      p q denominator numerator hq hpq hresonance
+  have hqDenominatorInt : (q : ℤ) ∣ (denominator : ℤ) := by
+    exact_mod_cast hqDenominator
+  intro index hindex
+  exact hqDenominatorInt.trans (hparameter index hindex).1
+
 #print axioms overlapDet_eq_zero_iff_witnessSlope_eq
 #print axioms overlapDet_zero_trans
 #print axioms overlapZeroSetoid
@@ -246,6 +312,9 @@ theorem primitiveWitnessParameter_resonates_of_bad
 #print axioms exists_common_witnessSlope_of_zero_connected
 #print axioms exists_common_primitiveWitnessParameter_of_zero_connected
 #print axioms primitiveWitnessParameter_resonates_of_bad
+#print axioms reduced_modulus_dvd_primitive_denominator_of_resonance
+#print axioms modulus_dvd_primitive_denominator_of_coprime_resonance
+#print axioms modulus_dvd_stalk_speeds_of_zero_connected_bad_coprime
 
 end LRC14Concrete
 end LonelyRunner
