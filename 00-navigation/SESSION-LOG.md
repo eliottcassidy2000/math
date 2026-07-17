@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S49 -- V4 REFUTED (22-1072x): THE CERTIFICATE LINE CLOSES AT ITS HONEST BOUNDARY -- the cross-slack is NEAR-ORTHOGONALITY (signed cancellation of k-hat-weighted inner products between owners' comb-concentrated spectra), invisible to every absolute bound; v2 (1.8-51x) is the final instrument of record; the manifest finalized (formalize v2 + ten items; v3/v4 excluded with mechanisms). The absolute-vs-signed frontier of the original Q_s story reproduces one level down -- the week's deepest recursion, and its fitting last theorem-shaped fact
+
+Prompt (owner): v4; remaining statements; formalization into best possible state.
+
+The L-coset SP lemma is correct (the h_e | Delta collapse derived and used), but per-class CS still pays total-mass x total-mass where the truth is a signed near-zero: both cross refinements lose to plain CS because the slack was never an estimation problem. Recorded as the certificate line's boundary with the mechanism named -- the tenth kept refutation of the arc, and structurally the same lesson as the first: absolute bounds end where signed cancellation begins. FORMALIZATION STATE, final: the manifest (00-navigation/LRC14-FORMALIZATION-MANIFEST-2026-07-17.md) now carries the complete certificate-line verdict; ten decide-shaped items + v2, each self-contained; v3/v4 excluded so no session is wasted. The program's remaining mathematics: codex's one formula; the 42x J-refinement; optionally the signed cross estimate (a sharpening, not a dependency).
+
+FILES: manifest final, HYP-7106, session log. -> all; formalizers have everything. boxeph; S49.
+
+---
 ## opus-2026-07-16-S333 -- THM-932: THE LOCAL-DENSITY BLOCK-GLUING THEOREM PROVED (G1/G2/G3 + the sharp-input composition mu(V_r) >= m1 prod eta - sum kappa(V_i) l_i; cascade = singleton case; REDUCTION: scale gap => split with NO cross-block condition => hard case = gap-free bounded-ratio core) + THE LOCALIZATION SCALE (X's uncovered set spread at the slowest runner's resolution 1/300, deserts below 1/862; dilation law exact) + Lean rung staged (CascadeGluing.lean above the proved fragmentation)
 
 Prompt (owner): prove the block-gluing theorem, pull frequently, many concrete steps,

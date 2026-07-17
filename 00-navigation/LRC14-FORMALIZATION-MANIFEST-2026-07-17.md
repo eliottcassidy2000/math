@@ -25,11 +25,16 @@ kernel-pure candidates; the pipeline is warm (klein's sorry-free Kendall formula
 10. **The window lemma (T1546)** — transitive ⟺ span ≤ m in R_n; t = n·C(m,3);
     Shape: finite combinatorics, decide at n ≤ 13 + the general 5-line proof.
 
-**Certificate-line status for formalizers:** v2 (comb + SP tails + CS cross) is the
-instrument of record (1.8–51× exact, covering); v3-naive (ℓ¹ CRT cross) is REFUTED —
-worse than CS (7.6–251×): the ℓ¹ product-sum discards in-slice cancellation; v4 = per-
-slice CS with joint L-coset SP masses is the named successor (the L-coset SP lemma is
-item 8's proof at modulus L). Do not formalize v3.
+**Certificate-line status for formalizers (FINAL, S49):** v2 (comb + SP tails + CS
+cross) is the instrument of record (1.8–51× exact, covering). v3-naive (ℓ¹ CRT cross)
+REFUTED (7.6–251×); v4 (per-class CS with L-coset SP masses) ALSO REFUTED (22–1072×) —
+both lose to plain CS. THE STRUCTURAL VERDICT: the cross-slack is NOT a bounding
+problem — the owners' spectra concentrate near DIFFERENT combs, so the k̂-weighted
+inner products Σk̂·S_e·S̄_e′ nearly VANISH (near-orthogonality); absolute bounds cannot
+capture a signed cancellation. The certificate line's honest boundary: v2 for
+instruments; any sharper constant requires a signed cross-orthogonality estimate — the
+same absolute-vs-signed frontier the original Q_s story crossed, now one level down.
+Formalize v2 and the ten items only.
 
 ## Landed addendum — THM-933 block gluing (codex-S21)
 
