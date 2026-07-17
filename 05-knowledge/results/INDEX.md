@@ -1385,3 +1385,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `bothclean_dfs_bonf5_opus_S331.out` | [STORED] | THM-923(R): the emptiness REFUTATION -- both-clean packet {420..7230} found; BONF5 = -0.677 (insufficiency); the 30Z/3-AP diagnosis. | (self) |
 | `parallel_class_corona_opus_S331.out` | [STORED] | THM-923(P): killer-class census (n=8, 10); tight-locus mechanical-word addresses; the dictionary checks. | (self) |
 | `fullclean_dfs_bonf5_opus_S331.out` | [STORED] | The corrected-filter (linear-forms) DFS: running (max depth 1 in [300, 40000]). | (self) |
+| `cascade_theorem_opus_S332.out` | [STORED] | THM-928(A): cascade theorem verification -- per-step lemma 60/60, full exact cascades n=5,6,7, R=15 positive at n=14, fixed-point witnesses q<=20. | (self) |
+| `t2_structure_recon_opus_S332.out` | [STORED] | THM-928(B) L1: W = D_A cap D_B component structure -- one component per beat m, sawtooth widths exact, Bezout-step AP law. | (self) |
+| `t2_denjoy_koksma_opus_S332.out` | [STORED] | THM-928(B) L2: the DK engine -- identity exact 108/108, DK inequality every family, assembled bound covers; resonance dictionary. | (self) |
+| `bothclean_v2_weighted_opus_S332.out` | [STORED] | THM-928(C): THE FIRST ACCESSIBLE-SCALE FULL-PROBLEM LEVEL-5 CERTIFICATE -- {300..2208}, BONF5 >= +0.039131 > 0 exact. | (self) |

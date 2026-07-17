@@ -97,6 +97,8 @@ primitive reduction + dissociativity) exists at accessible scale is
 REOPENED. The BONF5 = -0.677 failure and the third-blocker diagnosis (3-APs,
 horizon-14 reduced ratios) stand as exact data.
 
+**OUTCOME (S332):** the corrected weighted-capped filter (THM-928(C)) finds a coercive accessible-scale packet: BONF5 >= +0.039131 > 0 -- the reopened existence question resolved POSITIVE.
+
 **Cross-refs:** THM-863 (the correctly-capped functional), THM-927 (banner
 added), Dirichlet's approximation theorem (the vacuity mechanism).
 

@@ -1,3 +1,43 @@
+## opus-2026-07-16-S332 -- THM-928: THE TWO-SCALE CERTIFICATE THEOREM -- (A) THE CASCADE PROVED (R >= 15 lacunary => LRC(14), uncovered >= (6/7)^13 - 2/R; UNIFORM: R >= 19 proves LRC(n) for EVERY n; fixed-point witnesses for all dilate families) + (B) T2 SECOND PROOF via the BEZOUT-ROTATION ORBIT LAW (edges march on B*/A and B~/B; Denjoy-Koksma; 108/108 exact) + (C) THE FIRST ACCESSIBLE-SCALE FULL-PROBLEM LEVEL-5 CERTIFICATE ({300..2208}, BONF5 >= +0.039131 > 0 EXACT, out-of-sample) + renumber hygiene (925->928 mine, kps quintic 927->929)
+
+Prompt (owner): work the unified target, pull frequently, update tasks, many concrete steps.
+
+Pulled mid-session: mac-mini THM-925 (c0 = 17/84 crux RESOLVED) + THM-926 (T2 PROVED via
+Fourier resonance identity, refereed 10/10) -- my planned T2 primary became the independent
+SECOND PROOF; pivoted honestly, no duplication. kps THM-929 (quintic wall, born 927) +
+klein walk reciprocity + codex Lean reconcile integrated.
+
+[A] CASCADE (proved in-file, 15 lines): per-step mu_k >= (6/7)mu_{k-1} - kappa_{k-1}/(7 x_k);
+kappa_k <= 2 x_k for R >= 4; unroll => uncovered >= (6/7)^13 - 2/R. R0 = 15. Uniform-n:
+(1-2/n)^{n-1} - 2/R, min prefactor 1/9 at n=3 => R >= 19 for ALL n. Witness lemma: dilate
+families {c q^j} have t = a/(q^s - 1), s <= 2 (q=14: 1/13; q=15: 1/14 = the tight value).
+Verified exactly (60 configs 0 violations; full cascades n=5,6,7; prefixes n=14).
+[B] T2 SECOND ENGINE: W's components indexed by beat m, ONE per m (coprime), sawtooth widths
+exact; LEFT edges march with step B*/A, RIGHT with B~/B (width slope converts: B*/A - 1/(AB)
+= B~/B). err = sum psi(right) - psi(left) EXACT (psi = CDF deviation, period 1/C, V1 =
+44/(169C)); Denjoy-Koksma per family => assembled bound covers 108/108. RESONANCE DICTIONARY:
+THM-927's 3-AP blocker = q=2,r=s=1 exact triple resonance = q* = 1 here = THM-924's periodic
+branch = THM-926's excluded lines: ONE OBJECT, FIVE APPEARANCES.
+[C] THE CERTIFICATE: weighted-capped filter (min |qb - pa|(q+p-1) >= 100 both-capped + Sidon
++ no-3AP + line-clean h<=3) => DFS finds X = {300, 406, 511, 652, 862, 963, 1074, 1357, 1459,
+1571, 1776, 1991, 2208} (one band, max ratio 7.36); S2 within 1e-5 of equidistribution;
+BONF5 >= +0.039131 > 0 exact-rational; actual uncovered 0.117744. OUT-OF-SAMPLE (filter did
+not see BONF5). MISTAKE-151's reopened question: RESOLVED POSITIVE. Level-5 machinery is
+DEMONSTRABLY COERCIVE at accessible scale.
+
+MISTAKE avoided in-flight: first cascade run used an O(|W||T|) subtract (43e9 ops at R=30);
+caught via progress inspection, rewritten linear with 300/300 self-test vs reference.
+
+NEXT (named): T2-DK large-scale coercivity demo (q* >= 44 regime, A+B >= 1e3); the
+local-density block-gluing theorem (cascade across gaps x certificates within blocks =
+the full two-scale composition); Lean rungs (THM-866/878, certificate pages); kps quintic
+depends_on now repaired (926->927).
+
+FILES: THM-928 (full), THM-929 renumber (kps quintic), 4 scripts + 4 result files,
+HYP-7135 resolved, MISTAKE-151 outcome, THM-927 banner outcome. opus; S332.
+
+---
+
 ## boxeph-2026-07-16-S46 -- THE SLICE-INTERIOR PARSEVAL LEMMA PROVED: sum_{m == r mod e}|S_e(m)|^2 = (P/e) C-hat_e(r) exactly (r-twisted same-class coincidence sums; coset Parseval with the 7 | Delta collapse; refereed exact) => the tail certificate's M^2 envelope floor is GONE -- measured 636x gain (old 2812 -> new 4.4 on the two-owner tail vs exact 74): the sharp-constant instrument delivered; one assembly session remains to compose the full certificate
 
 Prompt (owner): the slice-interior Parseval; own directions; pull often; complete remaining LRC(14) tasks.
