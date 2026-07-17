@@ -20,4 +20,4 @@ named item: rendering μ(D_a ∩ D_b) = muNum/(14ab) as a Lean measure fact.
 - [x] multi-parent inequality: Lean kernel-pure + 25 exact Python instances
 - [x] c = 9 (2-parent) and c = 10 (2/3-parent) consecutive negatives, exact
 - [x] all-k closed form in-kernel; assembly skeleton in-kernel
-- [x] arc-measure rendering LANDED (S74, LRCPairOverlapArcs.lean kernel-pure): consecutive_overlap_credit — trapezoid sum ≤ volume(D_k ∩ D_{k+1} ∩ window); residual = the muNum cast bridge (finite rational bookkeeping)
+- [x] arc-measure rendering LANDED (S74) + THE CAST BRIDGE LANDED (S75, consecutive_credit_closed kernel-pure): ofReal(1/49 + r(6−r)/(49k(k+1))) ≤ volume(D_k ∩ D_{k+1} ∩ window) — the closed-form credit end-to-end in the kernel; last residual = the per-runner upper bound μ(dangerR v ∩ window) ≤ 1/7

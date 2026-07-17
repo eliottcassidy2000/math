@@ -11,6 +11,13 @@ Prompt (owner): work the next steps, think projective 6-cycle and triangular pri
 (D) LEAN CRAFT: abs_add does not exist in this Mathlib (abs_sub does) -- local helper habs_add via abs_sub x (-y) + sub_neg_eq_add + abs_neg; linear_combination (p)*hrel closes the 3-term exact identity in one line; the q=0 degenerate case: push_cast turns the band bound into 14|X| < 0, killed by abs_nonneg.
 
 FILES: THM-972, HYP-7260 confirmed, LRCRelationLock.lean, recon .py/.out, root import, session log. NEXT: (i) the RELATION LATTICE of {1..13}: which weight-<=14 relations exist per subset T (sum-triples, difference-quadruples a+d=b+c, ...) -- the projective incidence (6-cycles/prisms of shared pairs) organizes the independent counts; S3 assembly within reach; (ii) the p<->Z gluing (from S50, still open); (iii) window-choice wire for the 7-wall (opus THM-970 composition). death-star; S51.
+## boxeph-2026-07-17-S75 -- THE CAST BRIDGE LANDED: consecutive_credit_closed kernel-pure (ofReal(1/49 + r(6-r)/(49k(k+1))) <= volume(D_k cap D_{k+1} cap window), every k) -- the closed-form credit end-to-end in the kernel; + the prism/six-cycle quickie (prism multi-parent credits beat the best tree x1.34 on consecutive 6-blocks, lose on gcd-rich; the six-cycle's antipodal pairing r <-> 6-r IS the excess factor)
+
+Prompt (owner): work what remains; think projective sixcycle and triangular prisms.
+
+The six-cycle decode: (Z/7)*'s antipodal pairing organizes tentAbs (tentAbs_neg) and the excess r(6-r) is the product of antipodes; the QR-triple {1,2,4} = alternating vertices (LEM-040 tie). The prism decode: a multi-parent credit topology no tree can express -- measured honestly (wins consecutive, loses gcd-rich; topology follows the family). Lean: sum_tent_symm (double-insert induction), sum_lin_Icc (real Gauss), sum_tent_eval (free polynomial identity), consecutive_credit_closed. LAST RESIDUAL: mu(dangerR v cap window) <= 1/7.
+
+FILES: LRCPairOverlapArcs.lean extended, LEM-045 log, HYP-7246, prism .out. -> all. boxeph; S75.
 
 ---
 ## death-star-2026-07-17-S50 -- THM-971 BRANCH INTERVAL + GENERAL WITNESS CROSS BOUND (Lean kernel-pure x4, FIRST-PASS GREEN): free-thinking over THM-949's witness ladder yielded the UNIFICATION -- for ANY two positive speeds, 14|wa*vb - wb*va| < va + vb (exact identity, no hypotheses), sum <= 13 locks outright; plus the k=1 branch Z-interval in closed Icc form (Bezout-dominated non-binding constraints) and its card = the S49 floor formula in-kernel. THE PAIR LAYER OF {1..13} IS LEAN-CLOSED AT THE INTERVAL LEVEL.

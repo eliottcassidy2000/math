@@ -230,7 +230,152 @@ theorem consecutive_overlap_credit (k J : ℕ) (hk : 1 ≤ k)
         intro t ht
         exact ⟨comp_subset_danger k hk j ht, comp_subset_window k hk j (habsJ j hj) ht⟩
 
+/-! ## The cast bridge (boxeph-S75): the credit in closed form
+
+The symmetric trapezoid sum evaluates to `1/49 + r(6−r)/(49k(k+1))`, `r = k mod 7`
+— the LEM-044 closed form, now as a volume lower bound.  The six-cycle of nonzero
+residues mod 7 organizes the bookkeeping: `tentAbs` pairs antipodal residues
+(`tentAbs_neg`), and the excess factor `r(6−r)` is the product of antipodes. -/
+
+theorem tentAbs_neg (k : ℕ) (j : ℤ) : tentAbs k (-j) = tentAbs k j := by
+  rcases eq_or_ne j 0 with rfl | hj
+  · simp
+  · rw [tentAbs, tentAbs, if_neg (neg_ne_zero.mpr hj), if_neg hj]
+    have habs : |((-j : ℤ) : ℝ)| = |(j : ℝ)| := by push_cast; exact abs_neg _
+    rw [habs]
+
+theorem tentAbs_nonneg (k : ℕ) (hk : 1 ≤ k) (j : ℤ)
+    (hj14 : 14 * |(j : ℝ)| ≤ 2 * k + 1) : 0 ≤ tentAbs k j := by
+  have hkR : (0 : ℝ) < (k : ℝ) := by exact_mod_cast hk
+  rw [tentAbs]
+  split_ifs with h
+  · positivity
+  · apply div_nonneg _ (by positivity)
+    linarith [abs_nonneg ((j : ℝ))]
+
+theorem sum_tent_symm (k : ℕ) : ∀ J : ℕ,
+    ∑ j ∈ Finset.Icc (-(J : ℤ)) (J : ℤ), tentAbs k j
+      = tentAbs k 0 + 2 * ∑ j ∈ Finset.Icc (1 : ℤ) (J : ℤ), tentAbs k j := by
+  intro J
+  induction J with
+  | zero => simp
+  | succ n ih =>
+    have hins1 : Finset.Icc (-((n + 1 : ℕ) : ℤ)) ((n + 1 : ℕ) : ℤ)
+        = insert (-((n + 1 : ℕ) : ℤ))
+            (insert ((n + 1 : ℕ) : ℤ) (Finset.Icc (-(n : ℤ)) (n : ℤ))) := by
+      ext x
+      simp only [Finset.mem_Icc, Finset.mem_insert]
+      push_cast
+      omega
+    have hins2 : Finset.Icc (1 : ℤ) ((n + 1 : ℕ) : ℤ)
+        = insert ((n + 1 : ℕ) : ℤ) (Finset.Icc (1 : ℤ) (n : ℤ)) := by
+      ext x
+      simp only [Finset.mem_Icc, Finset.mem_insert]
+      push_cast
+      omega
+    rw [hins1]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_insert, Finset.mem_Icc]
+      push_cast
+      omega)]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_Icc]
+      push_cast
+      omega)]
+    rw [hins2]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_Icc]
+      push_cast
+      omega)]
+    rw [ih, tentAbs_neg]
+    ring
+
+theorem sum_lin_Icc (c : ℝ) : ∀ q : ℕ,
+    ∑ j ∈ Finset.Icc (1 : ℤ) (q : ℤ), (c - (j : ℝ))
+      = (q : ℝ) * c - (q : ℝ) * ((q : ℝ) + 1) / 2 := by
+  intro q
+  induction q with
+  | zero => simp
+  | succ n ih =>
+    have hins : Finset.Icc (1 : ℤ) ((n + 1 : ℕ) : ℤ)
+        = insert ((n + 1 : ℕ) : ℤ) (Finset.Icc (1 : ℤ) (n : ℤ)) := by
+      ext x
+      simp only [Finset.mem_Icc, Finset.mem_insert]
+      push_cast
+      omega
+    rw [hins]
+    rw [Finset.sum_insert (by
+      simp only [Finset.mem_Icc]
+      push_cast
+      omega)]
+    rw [ih]
+    push_cast
+    ring
+
+/-- **The evaluated credit**: the symmetric trapezoid sum in closed form. -/
+theorem sum_tent_eval (k : ℕ) (hk : 1 ≤ k) :
+    ∑ j ∈ Finset.Icc (-((k / 7 : ℕ) : ℤ)) ((k / 7 : ℕ) : ℤ), tentAbs k j
+      = 1 / 49 + ((k % 7 : ℕ) : ℝ) * (6 - ((k % 7 : ℕ) : ℝ))
+          / (49 * (k : ℝ) * ((k : ℝ) + 1)) := by
+  have hkR : (0 : ℝ) < (k : ℝ) := by exact_mod_cast hk
+  have hk0 : ((k : ℝ)) ≠ 0 := ne_of_gt hkR
+  have hk10 : ((k : ℝ) + 1) ≠ 0 := by positivity
+  have hkqr : (k : ℝ) = 7 * ((k / 7 : ℕ) : ℝ) + ((k % 7 : ℕ) : ℝ) := by
+    exact_mod_cast (Nat.div_add_mod k 7).symm
+  rw [sum_tent_symm]
+  have hcong : ∀ j ∈ Finset.Icc (1 : ℤ) ((k / 7 : ℕ) : ℤ), tentAbs k j
+      = ((2 * (k : ℝ) + 1) / 14 - (j : ℝ)) / ((k : ℝ) * ((k : ℝ) + 1)) := by
+    intro j hj
+    rw [Finset.mem_Icc] at hj
+    have hj0 : j ≠ 0 := by omega
+    have hjpos : (0 : ℝ) < (j : ℝ) := by exact_mod_cast (by omega : (0 : ℤ) < j)
+    rw [tentAbs, if_neg hj0, abs_of_pos hjpos]
+  rw [Finset.sum_congr rfl hcong, ← Finset.sum_div, sum_lin_Icc]
+  rw [tentAbs, if_pos rfl]
+  have h70 : (7 * ((k / 7 : ℕ) : ℝ) + ((k % 7 : ℕ) : ℝ)) ≠ 0 := by
+    rw [← hkqr]; exact hk0
+  have h71 : (7 * ((k / 7 : ℕ) : ℝ) + ((k % 7 : ℕ) : ℝ) + 1) ≠ 0 := by
+    rw [← hkqr]; exact hk10
+  rw [hkqr]
+  field_simp [h70, h71]
+  ring
+
+/-- **The closed-form credit theorem**: the LEM-044 consecutive value is a volume
+lower bound for the pair overlap on the unit window — the concrete credit for
+`good_pos_of_path_credits`, end to end. -/
+theorem consecutive_credit_closed (k : ℕ) (hk : 1 ≤ k) :
+    ENNReal.ofReal (1 / 49 + ((k % 7 : ℕ) : ℝ) * (6 - ((k % 7 : ℕ) : ℝ))
+        / (49 * (k : ℝ) * ((k : ℝ) + 1)))
+      ≤ volume ((dangerR k ∩ dangerR (k + 1)) ∩ Ioo (-(1:ℝ)/2) (1/2)) := by
+  have hdiv : ((k / 7 : ℕ) : ℝ) * 7 ≤ (k : ℝ) := by
+    exact_mod_cast Nat.div_mul_le_self k 7
+  have hJ : 14 * ((k / 7 : ℕ) : ℝ) ≤ 2 * k + 1 := by linarith
+  have hnn : ∀ j ∈ Finset.Icc (-((k / 7 : ℕ) : ℤ)) ((k / 7 : ℕ) : ℤ),
+      0 ≤ tentAbs k j := by
+    intro j hj
+    rw [Finset.mem_Icc] at hj
+    apply tentAbs_nonneg k hk
+    have hcl : ((j : ℝ)) ≤ ((k / 7 : ℕ) : ℝ) := by
+      have h : ((j : ℤ) : ℝ) ≤ ((((k / 7 : ℕ) : ℤ)) : ℝ) := Int.cast_le.mpr hj.2
+      push_cast at h
+      exact h
+    have hcg : (-((k / 7 : ℕ) : ℝ)) ≤ (j : ℝ) := by
+      have h : (((-((k / 7 : ℕ) : ℤ)) : ℤ) : ℝ) ≤ ((j : ℤ) : ℝ) := Int.cast_le.mpr hj.1
+      push_cast at h
+      exact h
+    have h2 : |(j : ℝ)| ≤ ((k / 7 : ℕ) : ℝ) := abs_le.mpr ⟨hcg, hcl⟩
+    linarith
+  calc ENNReal.ofReal (1 / 49 + ((k % 7 : ℕ) : ℝ) * (6 - ((k % 7 : ℕ) : ℝ))
+          / (49 * (k : ℝ) * ((k : ℝ) + 1)))
+      = ENNReal.ofReal (∑ j ∈ Finset.Icc (-((k / 7 : ℕ) : ℤ)) ((k / 7 : ℕ) : ℤ),
+          tentAbs k j) := by rw [sum_tent_eval k hk]
+    _ = ∑ j ∈ Finset.Icc (-((k / 7 : ℕ) : ℤ)) ((k / 7 : ℕ) : ℤ),
+          ENNReal.ofReal (tentAbs k j) := ENNReal.ofReal_sum_of_nonneg hnn
+    _ ≤ volume ((dangerR k ∩ dangerR (k + 1)) ∩ Ioo (-(1:ℝ)/2) (1/2)) :=
+        consecutive_overlap_credit k (k / 7) hk hJ
+
 #print axioms consecutive_overlap_credit
+#print axioms consecutive_credit_closed
 
 end
 
