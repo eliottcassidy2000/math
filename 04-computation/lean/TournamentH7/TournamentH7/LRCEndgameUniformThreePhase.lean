@@ -31,7 +31,7 @@
   No `sorry`; no `native_decide`.
 -/
 
-import TournamentH7.LRCEndgameParameterDischargeTwoThree
+import TournamentH7.LRCDetunedOverlap
 
 namespace LonelyRunner
 namespace LRC14Grand
@@ -281,6 +281,104 @@ theorem exists_threeClassClear_iff_no_cyclicObstruction
     intro c
     simpa [σ] using hkiller c
 
+/-- The `Fin 3` cyclic phase model is exactly the concrete integer branch
+model used by the three-detuned endgame at primitive modulus three. -/
+theorem hasThreeDetunedGoodBranch_three_iff_no_cyclicObstruction
+    (a : Fin 3 → ℤ) (u : ℝ) (hunit : ∀ i, ¬ 3 ∣ a i) :
+    HasThreeDetunedGoodBranch (a 0) (a 1) (a 2) 3 u ↔
+      ¬ ThreeClassCyclicObstruction a u := by
+  constructor
+  · rintro ⟨c, hcIco, hc0, hc1, hc2⟩
+    rw [← exists_threeClassClear_iff_no_cyclicObstruction a u hunit]
+    have hcBounds := Finset.mem_Ico.mp hcIco
+    let branch : Fin 3 := ⟨c.toNat, by omega⟩
+    have hbranchInt : ((branch : ℕ) : ℤ) = c := by
+      dsimp [branch]
+      rw [Int.toNat_of_nonneg hcBounds.1]
+    have hbranchReal : ((branch : ℕ) : ℝ) = (c : ℝ) := by
+      exact_mod_cast hbranchInt
+    refine ⟨branch, ?_⟩
+    intro i n
+    have clear_of_not_bad (p : ℤ)
+        (hnot : c ∉ detunedBadBranches p 3 u) :
+        (1 : ℝ) / 14 ≤ |threeClassPhase p u branch - n| := by
+      exact not_lt.mp fun hlt => hnot (by
+        rw [detunedBadBranches, Finset.mem_filter]
+        refine ⟨hcIco, n, ?_⟩
+        rw [threeClassPhase, hbranchReal] at hlt
+        norm_num at hlt ⊢
+        exact hlt)
+    fin_cases i
+    · exact clear_of_not_bad (a 0) hc0
+    · exact clear_of_not_bad (a 1) hc1
+    · exact clear_of_not_bad (a 2) hc2
+  · intro hnobs
+    obtain ⟨branch, hclear⟩ :=
+      (exists_threeClassClear_iff_no_cyclicObstruction a u hunit).mpr hnobs
+    let c : ℤ := (branch : ℕ)
+    have hcIco : c ∈ Finset.Ico (0 : ℤ) 3 := by
+      rw [Finset.mem_Ico]
+      constructor
+      · exact Int.natCast_nonneg _
+      · dsimp [c]
+        exact_mod_cast branch.isLt
+    refine ⟨c, hcIco, ?_, ?_, ?_⟩
+    · intro hbad
+      obtain ⟨n, hn⟩ := (Finset.mem_filter.mp hbad).2
+      apply (not_lt_of_ge (hclear 0 n))
+      simpa [threeClassPhase, c] using hn
+    · intro hbad
+      obtain ⟨n, hn⟩ := (Finset.mem_filter.mp hbad).2
+      apply (not_lt_of_ge (hclear 1 n))
+      simpa [threeClassPhase, c] using hn
+    · intro hbad
+      obtain ⟨n, hn⟩ := (Finset.mem_filter.mp hbad).2
+      apply (not_lt_of_ge (hclear 2 n))
+      simpa [threeClassPhase, c] using hn
+
+/-- Failure of the concrete three-branch clearing is equivalent to the exact
+cyclic matching obstruction. -/
+theorem noThreeDetunedGoodBranch_three_iff_cyclicObstruction
+    (a : Fin 3 → ℤ) (u : ℝ) (hunit : ∀ i, ¬ 3 ∣ a i) :
+    ¬ HasThreeDetunedGoodBranch (a 0) (a 1) (a 2) 3 u ↔
+      ThreeClassCyclicObstruction a u := by
+  constructor
+  · intro hno
+    by_contra hnobs
+    exact hno ((hasThreeDetunedGoodBranch_three_iff_no_cyclicObstruction
+      a u hunit).mpr hnobs)
+  · intro hobs hgood
+    exact ((hasThreeDetunedGoodBranch_three_iff_no_cyclicObstruction
+      a u hunit).mp hgood) hobs
+
+/-- Exact synthesis of the Zarankiewicz and phase quotients at primitive
+uniform denominator three: a cyclic permutation obstruction is equivalent to
+the three concrete bad rows forming their full pairwise-disjoint partition of
+the parallel-class circle. -/
+theorem uniformThreeBadPartition_iff_cyclicObstruction
+    (a : Fin 3 → ℤ) (u : ℝ) (hunit : ∀ i, ¬ 3 ∣ a i)
+    (hq0 : (3 : ℤ) / (Int.gcd (a 0) 3 : ℤ) = 3)
+    (hq1 : (3 : ℤ) / (Int.gcd (a 1) 3 : ℤ) = 3)
+    (hq2 : (3 : ℤ) / (Int.gcd (a 2) 3 : ℤ) = 3) :
+    UniformThreeBadPartition (a 0) (a 1) (a 2) 3 u ↔
+      ThreeClassCyclicObstruction a u := by
+  constructor
+  · intro hpartition
+    apply (noThreeDetunedGoodBranch_three_iff_cyclicObstruction
+      a u hunit).mp
+    rintro ⟨c, hcIco, hc0, hc1, hc2⟩
+    have hcUnion : c ∈
+        detunedBadBranches (a 0) 3 u ∪ detunedBadBranches (a 1) 3 u ∪
+          detunedBadBranches (a 2) 3 u := by
+      rw [hpartition.cover]
+      exact hcIco
+    simp [hc0, hc1, hc2] at hcUnion
+  · intro hobs
+    apply uniformThreeBadPartition_of_noGoodBranch
+      (a 0) (a 1) (a 2) 3 u (by norm_num) hq0 hq1 hq2
+    exact (noThreeDetunedGoodBranch_three_iff_cyclicObstruction
+      a u hunit).mpr hobs
+
 /-- Residue-one representatives make the scalar phase frequency integral. -/
 def threePhaseFrequency (a : Fin 3 → ℤ) : ℤ :=
   (∑ i, a i) / 3
@@ -374,6 +472,9 @@ theorem exists_threeClassClear_of_frequency_clear
 #print axioms threeClassBad_branch_unique
 #print axioms cyclicObstruction_sign_iff
 #print axioms exists_threeClassClear_iff_no_cyclicObstruction
+#print axioms hasThreeDetunedGoodBranch_three_iff_no_cyclicObstruction
+#print axioms noThreeDetunedGoodBranch_three_iff_cyclicObstruction
+#print axioms uniformThreeBadPartition_iff_cyclicObstruction
 #print axioms frequency_bad_of_cyclicObstruction
 #print axioms exists_threeClassClear_of_frequency_clear
 
