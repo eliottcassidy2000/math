@@ -1393,3 +1393,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `block_gluing_opus_S333.out` | [STORED] | THM-932: G1/G2/G3 verified exact (0 violations); eta profile of X (localization scale 1/300, deserts below 1/862); dilation law; v1 demo honest-negative. | (self) |
 | `block_gluing2_opus_S333.out` | [STORED] | THM-932: sharp-input composition demos at gap 300 (7+6 and 5+4+4) -- the coercive regime. | (self) |
 | `gapfree_core_taxonomy_opus_S334.out` | [STORED] | THM-936: gap-free core census (exact, lam=1/14) -- strata + witness-denominator law + every-packet-lonely verdict. | (self) |
+| `nested_gap_verify_opus_S336.py.out` | [STORED] | HYP-7190: nested-gap construction exact (boundary chains at 7/3 land exactly 1/14 -- tight; 200 random ratio-3 chains). | (self) |
+| `cluster_gap_verify_opus_S336.out` | [STORED] | HYP-7190: cluster gap lemma 400/400 exact; block nested cascade 6+6+1 survives at G=4; exact witnesses at G=60/200. | (self) |

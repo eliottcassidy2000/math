@@ -1,0 +1,14 @@
+(1) THE CLUSTER GAP LEMMA, exact battery:
+   400 random (k<=6, window, ratio<=200) configs: violations = 0
+   worst widest/bound ratio = 1.391 (k=1)
+
+(2) THE BLOCK NESTED CASCADE 6+6+1 (end-to-end exact):
+   G=  60: 13 speeds (max 592,140); nested witness t = 545891/1184280; min dist = 11/120 >= 1/14: True
+   G= 200: 13 speeds (max 4,301,400); nested witness t = 43923/573520; min dist = 42423/573520 >= 1/14: True
+
+(3) junction-constant probe: smallest G with 20/20 success (6+6+1):
+   G =   4: 20/20 nested chains survive
+   G =   8: 20/20 nested chains survive
+   G =  15: 20/20 nested chains survive
+   G =  30: 20/20 nested chains survive
+   G =  60: 20/20 nested chains survive

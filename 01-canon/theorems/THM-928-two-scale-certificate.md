@@ -48,6 +48,24 @@ circle into x₁ arcs); step κ_k ≤ 4x_{k−1} + x_k ≤ (4/R + 1)x_k ≤ 2x_k
 κ_{k−1}/x_k ≤ 2x_{k−1}/x_k ≤ 2/R, so
 μ₁₃ ≥ (6/7)¹³ − (2/(7R))·Σ_{j≥0}(6/7)ʲ = (6/7)¹³ − 2/R. ∎
 
+**(A′) THE NESTED-GAP SHARPENING (S336): R ≥ 7/3 suffices — and it is tight.**
+A far better constant by a far simpler proof. Maintain a closed interval
+[a, b] inside a SAFE GAP of every processed comb (‖w t‖ ≥ 1/14 on all of
+[a, b]). One step: if w·(b − a) ≥ 2, the period [⌈wa⌉, ⌈wa⌉ + 1] fits inside
+[wa, wb], and its gap pulls back to a subinterval of length (6/7)/w. Since
+2/(6/7) = 7/3, consecutive ratios ≥ 7/3 sustain the recursion forever; any
+point of the final interval is a witness. No measure theory, no components —
+pure floor arithmetic, and the witness is RATIONAL with explicit denominator.
+TIGHT: boundary chains at ratio exactly 7/3 land min distance EXACTLY 1/14
+(verified exactly, nested_gap_verify_opus_S336; 200 random ratio-3 chains
+pass). Uniform-n version: gap 1/n, step length (1 − 2/n)/w, constant
+2/(1 − 2/n) = 2n/(n − 2) → 2: ratio ≥ 3 proves LRC(n) for ALL n ≥ 5
+simultaneously (n = 3: ratio 6; n = 4: ratio 4). LEAN: LRCLacunaryNest.lean
+(lonely_of_pos_lacunary — the first universal quantifier-level branch,
+reusing arcSafe/norm_ge_of_arcSafe). The measure cascade (A) retains value
+where the INTERVAL structure is unavailable (measure-only block data); for
+pure lacunarity (A′) supersedes it.
+
 **Uniform-n corollary.** The same algebra at gap 1/n (tooth width 2/(nx),
 per-component loss 2/(nx), geometric sum ≤ n/2) gives, for any n:
 uncovered ≥ (1 − 2/n)^{n−1} − 2/R. The prefactor's minimum over n is 1/9

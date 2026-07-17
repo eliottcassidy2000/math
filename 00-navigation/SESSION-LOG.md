@@ -60,6 +60,31 @@ nonmultiples. THM-944 and the signed B5 consumer leave the odd deviation tails a
 the quantitative equidistribution heart. Work continues on exact q-two phase normal
 forms, the endpoint's citation-free seven-frequency harmonic subcase, and the
 full dependency build.
+## opus-2026-07-17-S336 -- THE UNIVERSAL LACUNARY BRANCH, SORRY-FREE: lonely_of_pos_lacunary (all consecutive ratios >= 7/3 => Lonely 14, rational witness; LRCLacunaryNest.lean builds green, standard axioms) -- the FIRST quantifier-level loneliness branch; 7/3 is TIGHT (boundary chains land exactly 1/14); THM-928(A') paper addendum (sharpens R >= 15 to 7/3; ratio 3 proves LRC(n) all n >= 5) + THE CLUSTER GAP LEMMA (k <= 6 speeds: quantified safe width in every window; verified 400/400) + block cascade 6+6+1 survives at junction G = 4 -- the residual's scale-gapped conjunct now has its formal teeth (HYP-7190)
+
+Prompt (owner): finish the LRC(14) proof; keep working the route, highest-leverage angles.
+
+[LEAN] 4 build iterations. Design: NestOK recursive window ledger (replaced List.Chain'
++ head? -- both absent/awkward in this mathlib); nested_gap_step = one ceil + arcSafe
+algebra (Int.floor_intCast_add); the consumer unfolds List.ofFn to the literal and
+discharges 13 NestOK conjuncts via nest_step_arith. Reuses arcSafe/norm_ge_of_arcSafe
+(LRCWitnessCert) + lonely_of_norm_forall (LRC14CertRoute). All three theorems:
+[propext, Classical.choice, Quot.sound].
+[PAPER] THM-928(A'): the nested-gap proof (8 lines) with tightness; uniform-n ratio 3
+for n >= 5. [CLUSTER] the gap lemma: k <= 6 speeds leave width >=
+[(1-k/7)L - k/(7m)]/(1+k+L*Sum x) in every window (union bound + pigeonhole; 400/400
+exact, worst ratio 1.39); block cascade 6+6+1 end-to-end exact witnesses; junction
+probe: survives at G = 4 (20/20 down through all tested G).
+
+THE FINISH MAP after this session: residual = covering AND scale-gapped AND compressed
+AND distinct AND max>=23 AND no-detuned AND no-coarse AND no-common-residue. New bites:
+(a) wire lonely_of_pos_lacunary as assembly branch 9 => residual gains NOT-lacunary;
+(b) lonely_of_blocks (cluster-gap in Lean; union bound elementary) => residual shrinks
+to wide-block gap-free cores = the covering program's exact regime (routes A/THM-922/
+924/925/926 own it on paper; their formalization = the remaining long pole).
+
+FILES: LRCLacunaryNest.lean (sorry-free), THM-928(A'), nested_gap_verify +
+cluster_gap_verify scripts/outs, HYP-7190 resolved. opus; S336.
 
 ---
 

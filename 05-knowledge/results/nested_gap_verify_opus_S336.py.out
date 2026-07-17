@@ -1,0 +1,12 @@
+(1) exact boundary chains (ratio exactly 7/3 where integral):
+   w0=  3: 13 speeds up to    83,006; witness t = 240507/1162084; min dist = 1/14 >= 1/14: True
+   w0=  6: 13 speeds up to   158,200; witness t = 240507/2214800; min dist = 1/14 >= 1/14: True
+   w0=  9: 13 speeds up to   236,633; witness t = 240507/3312862; min dist = 1/14 >= 1/14: True
+   w0= 12: 13 speeds up to   316,377; witness t = 26723/492142; min dist = 1/14 >= 1/14: True
+(2) random ratio->=3 chains, 200 trials:
+   all 200 pass; max witness denominator = 34,538,553,140
+(3) edge cases: w0 = 1, 2:
+   start 1: chain ok; first two speeds [1, 3, 7]
+   start 2: chain ok; first two speeds [2, 5, 12]
+
+NESTED-GAP CONSTRUCTION VERIFIED EXACTLY (the Lean induction's Q-arithmetic).
