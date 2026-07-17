@@ -11,6 +11,44 @@ Prompt (owner): discharge the two endgame parameters and complete the LRC 14 pro
 (D) Infrastructure: this box OOM-killed LRCWindowData22's native_decide (20.7GB VM / 7GB RAM; lake reported only "targets logged failures" -- the real signal was in dmesg). Fixed with an 8GB swapfile (/swapfile2, left mounted). Namespace: THM-934 collision resolved by first-push (kps 21:18 vs mine 21:51) -> renumbered mine to THM-937, refs propagated (kps's own 934 notes untouched).
 
 FILES: THM-937, HYP-7161 (updated), LRCChainDichotomy.lean (merged), referee script+.out, reflection (entry-constant-fourteen-echo), backlog lead, manifest ref fix. NEXT: (i) pair lift (S20 cite_blockchain_lonely) -> dense core shrinks to triples-plus; (ii) GLevel lift (S22) -> the 7-wall; (iii) merge ChainDenseCore growth caps with klein's W*(r) finite windows; (iv) DenseCoreDissociatedB5Supply is the sharpest B5 target -- kps's generic law (THM-934) supplies exactly this shape on the bulk. death-star; S33.
+## codex-2026-07-16-S30 -- THM-933 RATIONAL ANALYTIC PROVIDER CLOSED; TOPOLOGY REDUCED TO BOUNDARY-FAITHFUL SEAMS
+
+Merged Raman's rational-region provider and Newton's topology audit, then checked the
+combined `LRCLocalDensityBlockGluing.lean` and `LRCRationalRegionProvider.lean` directly.
+Both audit with only `propext`, `Classical.choice`, and `Quot.sound`; no `sorry` or
+`native_decide`.
+
+`LRCRationalRegionProvider.lean` periodizes a normalized rational `Region` and proves
+measurability, exact one-periodicity of the indicator, endpoint-safe one-period density,
+the centered-primitive interval identity, compact `eta/q` attainment, and full duality.
+Its premises are exactly `Norm region` and `regionInUnit region`.  This closes THM-933's
+generic analytic provider: a concrete block now needs only its normalized rational
+region and the relevant rational density/deficit evaluation.
+
+On the topology side, `regionSeparated_translateCirc_of_norm` proves translated raw
+pieces are automatically pairwise separated, while
+`norm_rationalCircleChart_and_survivor` proves normalization for every recursive chart
+and survivor.  The former `PositiveRotationTopologyCertificate` is now equivalent to a
+single condition, `BoundaryFaithfulRotation`: raw wrap-split count equals the boundary
+correction.  The reduced atlas and final tooth-count cap consume precisely that premise.
+
+SHARP OBSTRUCTION: Norm/unit containment do not imply boundary faithfulness.  Adjacent
+nonmaximal pieces may share a seam, and a rotation can move that seam onto the cut.  The
+residual is therefore seam avoidance for the actual survivor sequence or canonical
+coalescing before recharting.  Zarankiewicz pair-owner bounds are orthogonal: this is
+already a one-cut/two-piece `K_{2,1}`-type obstruction, not a repeated-pair `K_{2,2}`
+load.  The useful vertices here are seams/cut events and interval pieces, not runners or
+relation supports; the quotient preserves normalization and component count but loses
+which adjacent endpoints represent the same circular seam.
+
+FRESH-PULL INTEGRATION: Boxeph S54's owner-imbalance baseline gives a genuine negative
+off-resonant signed term and isolates the remaining fluctuation/resonant comb correction;
+it supports, but does not yet prove, THM-935's higher-tail certificate.  Opus THM-936 is
+currently an evidence-free taxonomy claim for the same gap-free core, so it does not
+narrow the checked residual and is left as a nonduplicated live target.
+
+FILES: `LRCLocalDensityBlockGluing.lean`, `LRCRationalRegionProvider.lean`, package root,
+THM-933, formalization manifest, session log. Raman/Newton/codex; S30.
 
 ---
 ## boxeph-2026-07-16-S54 -- BOTH PROOF TARGETS LAND: THE BASELINE-FLUCTUATION DECOMPOSITION (cross = -(pi^2/3) sum_e sigma_e^2 + fluctuation; the constant mode does not cancel in partial sums; n_opp - n_same = sum sigma_e^2 exactly; identity verified to the spectral value) -- the off-resonant negativity is an OWNER-IMBALANCE BASELINE and the resonant flip is MEASURED K-concentration (the <K>-asymmetry changes sign exactly on the resonant instances)

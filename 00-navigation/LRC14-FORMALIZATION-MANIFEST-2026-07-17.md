@@ -69,12 +69,20 @@ not increase cut-open piece count, reclosure costs at most one component, and a
 `sortedTranslateCirc` charts, recursive rational survivors, exact rotation membership,
 unit/live invariants, and the end-to-end component cap are also kernel-checked.
 
-The remaining THM-933 provider surface is now exactly two local certificates, not proof
-glue: (1) for each concrete speed block, prove measurability, one-periodicity of its
-indicator, and the advertised one-period density; (2) at each positive rechart stage,
-supply `PositiveRotationTopologyCertificate`, namely pairwise separation of the raw
-translated pieces and the exact statement that translation creates one extra linear
-piece iff the new chart has a boundary merge.
+`TournamentH7.LRCRationalRegionProvider` now closes the generic analytic provider:
+from only `Norm region` and `regionInUnit region`, rational periodization is measurable,
+its indicator is exactly one-periodic, its one-period density is the rational region
+volume, and the centered primitive plus attained `eta/q` duality are instantiated.
+Concrete blocks need only supply/evaluate their normalized rational regions.
+
+The topology provider is reduced to one exact seam condition.  Normalization of every
+rational survivor/chart and pairwise separation after translation are unconditional.
+`PositiveRotationTopologyCertificate` is equivalent to `BoundaryFaithfulRotation`,
+and the reduced atlas/component-cap theorems consume precisely that hypothesis.  Norm
+alone cannot prove it because adjacent nonmaximal pieces may share a seam that rotation
+moves onto the cut.  The remaining choice is concrete seam avoidance or canonical
+coalescing before recharting; Zarankiewicz pair-owner bounds are orthogonal to this
+one-cut/two-piece obstruction.
 
 ## Landed addendum — THM-932 closed recurrence (codex-S22)
 

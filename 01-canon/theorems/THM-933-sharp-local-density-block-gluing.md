@@ -552,13 +552,33 @@ it carries either `q` or a coercive fixed-scale `eta` profile.
   exact-component three-block ledgers, the Opus 7+6 margin, and domination by
   the direct measure.
 
-The module contains no `sorry` and no `native_decide`; its axiom audit reports
+The modules contain no `sorry` and no `native_decide`; their axiom audits report
 only `propext`, `Classical.choice`, and `Quot.sound`.  The concrete Lebesgue
 primitive identity, extrema/minimizers, full `eta/q` duality, rational one-tooth
 split, recursive sorted rotation charts, membership transport, component
-summation, and closed recurrence are kernel-checked.  The exact remaining
-provider obligations are: for each concrete block, prove its survivor is
-measurable and one-periodic with the advertised density; and for each positive
-rotation stage, prove `PositiveRotationTopologyCertificate` (raw translated
-pieces are pairwise separated, and the linear piece count gains exactly the
-new boundary-merge bit).
+summation, and closed recurrence are kernel-checked.
+
+The next collaborative closure removes the generic analytic provider obligation.
+`TournamentH7.LRCRationalRegionProvider` periodizes any normalized rational
+`Region`, proves measurability, exact indicator one-periodicity, and the half-open
+one-period density identity, and instantiates the centered primitive, attained
+`eta/q` extrema, and full duality.  Its only premises are `Norm region` and
+`regionInUnit region`.  A concrete block must now supply its normalized rational
+region and evaluate the resulting rational density/deficit; no fresh measure-
+theoretic proof is needed.
+
+The topology provider is also reduced sharply.  Theorems
+`regionSeparated_translateCirc_of_norm` and
+`norm_rationalCircleChart_and_survivor` make translated-piece separation and all
+chart/survivor normalization automatic.  Moreover
+`positiveRotationTopologyCertificate_iff_boundaryFaithfulRotation` identifies the
+only remaining condition: the raw wrap-split count must equal the boundary
+correction.  `rationalCircularToothAtlasOfBoundaryFaithfulRotations` and
+`rational_circle_component_count_le_tooth_count_of_boundaryFaithful` consume exactly
+that condition.
+
+`Norm` plus unit containment does **not** imply boundary faithfulness: two adjacent
+nonmaximal pieces may share a seam that rotation moves onto the cut.  Thus the exact
+remaining topology task is either to prove seam avoidance for the concrete survivor
+sequence or to canonicalize/coalesce adjacent pieces before recharting.  This is a
+one-cut/two-piece obstruction, so Zarankiewicz pair-owner bounds do not address it.
