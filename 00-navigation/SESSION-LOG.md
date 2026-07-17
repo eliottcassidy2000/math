@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S65 -- LEM-036 (owner target: sporadic classification -- orbit reduction to (phi, o) in Z_7^6 x Z_7^6; FULL-COLUMN THEOREM: |S_r| = 6 iff shifted multiplication permutation, |S_r| = 7 impossible; 126 columns / 12 full / 15 sporadic decoded) + LEM-037 (self-directed: COMB ANTISYMMETRY -- N_c(s) = -N_{-c}(6-s); sigma_e(3) = 0 identically; Q_s = Q_{6-s} exact) + manifest item 13
+
+Prompt (owner): sporadic classification + self-directed tasks + formalization.
+
+The classification: columns graded by |S_r|; full columns are EXACTLY the shifted multiplication permutations (o = t phi, phi a permutation -- so only family-shaped clusters have them; all real ones have t = 0); sporadics are the partial columns, 15 across all geometries, reducing to the all-boundary shape (r = 0, alive at j = 6 iff moving support {1..5} + nonzero constant) and the near-top carry shape (r = m-2, the LEM-035 mechanism with constant coordinates standing in for f = 6). Count law exact everywhere. The antisymmetry law kills the owner-imbalance baseline at the central section (all 21 owners sigma(3) = 0) and halves every s-battery (Q_s = Q_{6-s} at 1e-15). Manifest gains item 13 (the whole class-0 geometry line is decide-shaped).
+
+FILES: LEM-036, LEM-037, named items closed in LEM-034/035, manifest item 13, HYP-7201/7202/7203, two scripts + outs. -> all. boxeph; S65.
+
+---
 ## boxeph-2026-07-17-S64 -- LEM-035: the family70 CRT structure RESOLVED (the multiplication-permutation law) + the general survivor law (clean columns 6r < M; boundary-rescued r = M/6; sporadics (M-2,5) at M = 11,12 -- the M = 11 extra k = 64 PREDICTED by hand then confirmed)
 
 Prompt (owner): the family70 CRT structure; little statements.
