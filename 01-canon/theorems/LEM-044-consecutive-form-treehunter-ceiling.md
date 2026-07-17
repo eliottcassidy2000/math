@@ -20,5 +20,4 @@ routes), which is where the program's other tools already live.
 ## Evidence log
 - [x] closed form k ≤ 400; c = 8 theorem + boundary; edge cap ≤ 300 + finite proof
 - [x] tree-hunter 60 instances; doubling demos c = 9, 10, 12; ceiling at 13
-- [ ] named: Lean — the tree case of hunter (leaf-plucking), the closed form
-      (integer decide per k), the c = 8 window argument (7-residue pigeonhole)
+- [x] Lean DONE (S72/S73, LRCTreeHunter.lean kernel-pure): tree_hunter_add_le + multi_parent_hunter_add_le; consecutive_closed_form ALL k (the induction, in-kernel); good_pos_of_path_credits (assembly skeleton); window7_unique_zero. Residual: the arc-measure rendering of LEM-042(A) to feed concrete credits

@@ -1,0 +1,10 @@
+MULTI-PARENT HUNTER + c = 9/10 CONSECUTIVE (boxeph S73)
+==========================================================================
+  multi-parent inequality exact on 25 random family/ancestor sets
+
+  c=9 (2-parent) v=50: credits 0.23512 vs need 0.28571; margin -0.05060; good 0.21162; all v tested cross: False; worst margin -0.05060 at v=50
+  c=10 (2-parent) v=50: credits 0.26577 vs need 0.42857; margin -0.16280; good 0.18101; all v tested cross: False; worst margin -0.16280 at v=50
+  c=10 (3-parent) v=50: credits 0.36091 vs need 0.42857; margin -0.06766; good 0.18101; all v tested cross: False; worst margin -0.06766 at v=50
+  c=11 (3-parent) v=50: credits 0.40542 vs need 0.57143; margin -0.16601; good 0.15910; all v tested cross: False; worst margin -0.16601 at v=50
+==========================================================================
+done

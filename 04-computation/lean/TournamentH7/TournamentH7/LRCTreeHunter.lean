@@ -136,7 +136,156 @@ theorem window7_unique_zero (v : ℕ) :
   · rintro j ⟨hj, hz⟩
     omega
 
+/-! ## The multi-parent (ancestor-set) Hunter — boxeph-S73
+
+Each index credits its intersection with the UNION of an arbitrary finite set
+`P i ⊆ {0, …, i−1}` of earlier indices.  `P i = ∅` recovers the union bound,
+`P i = {p i}` the tree/arborescence, `P i = {0, …, i−1}` the exact
+disjointification identity — one induction covers the whole interpolation. -/
+
+theorem multi_parent_hunter_add_le (μ : Measure α) (A : ℕ → Set α)
+    (P : ℕ → Finset ℕ) (hP : ∀ i, ∀ j ∈ P i, j < i)
+    (hA : ∀ i, MeasurableSet (A i)) (n : ℕ) :
+    μ (⋃ i ∈ Finset.range n, A i) + ∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j)
+      ≤ ∑ i ∈ Finset.range n, μ (A i) := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rcases Nat.eq_zero_or_pos n with hn | hn
+    · subst hn; simp
+    · have hUunion : (⋃ i ∈ Finset.range (n + 1), A i)
+          = (⋃ i ∈ Finset.range n, A i) ∪ A n := by
+        ext x
+        simp only [Set.mem_iUnion, Finset.mem_range, Set.mem_union]
+        constructor
+        · rintro ⟨i, hi, hx⟩
+          rcases Nat.lt_succ_iff_lt_or_eq.mp hi with h | h
+          · exact Or.inl ⟨i, h, hx⟩
+          · exact Or.inr (h ▸ hx)
+        · rintro (⟨i, hi, hx⟩ | hx)
+          · exact ⟨i, Nat.lt_succ_of_lt hi, hx⟩
+          · exact ⟨n, Nat.lt_succ_self n, hx⟩
+      set S : Set α := ⋃ i ∈ Finset.range n, A i with hS
+      have hkey : μ (S ∪ A n) + μ (S ∩ A n) = μ S + μ (A n) :=
+        measure_union_add_inter S (hA n)
+      have hsub : (⋃ j ∈ P n, A j) ∩ A n ⊆ S ∩ A n := by
+        apply Set.inter_subset_inter_left
+        rw [hS]
+        refine Set.iUnion₂_subset fun j hj => ?_
+        exact Set.subset_biUnion_of_mem (Finset.mem_range.mpr (hP n j hj))
+      have htop : μ (A n ∩ ⋃ j ∈ P n, A j) ≤ μ (S ∩ A n) := by
+        rw [Set.inter_comm]
+        exact measure_mono hsub
+      have hIco : ∑ i ∈ Finset.Ico 1 (n + 1), μ (A i ∩ ⋃ j ∈ P i, A j)
+          = (∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j))
+            + μ (A n ∩ ⋃ j ∈ P n, A j) := by
+        rw [Finset.sum_Ico_succ_top hn]
+      have hRange : ∑ i ∈ Finset.range (n + 1), μ (A i)
+          = (∑ i ∈ Finset.range n, μ (A i)) + μ (A n) := by
+        rw [Finset.sum_range_succ]
+      rw [hUunion, hIco, hRange]
+      calc μ (S ∪ A n) + ((∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j))
+              + μ (A n ∩ ⋃ j ∈ P n, A j))
+          ≤ μ (S ∪ A n) + ((∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j))
+              + μ (S ∩ A n)) :=
+            add_le_add (le_refl _) (add_le_add (le_refl _) htop)
+        _ = (μ (S ∪ A n) + μ (S ∩ A n))
+              + ∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j) := by ring
+        _ = (μ S + μ (A n)) + ∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j) := by
+            rw [hkey]
+        _ = (μ S + ∑ i ∈ Finset.Ico 1 n, μ (A i ∩ ⋃ j ∈ P i, A j)) + μ (A n) := by
+            ring
+        _ ≤ (∑ i ∈ Finset.range n, μ (A i)) + μ (A n) := add_le_add ih (le_refl _)
+
+/-! ## The all-k consecutive closed form (LEM-044(A), the named induction) -/
+
+/-- Evaluation of the shifted trapezoid sum: for `14n ≤ 2k`,
+`Σ_{i<n} 2·min(2k+1 − 14(i+1), 2k) = 2n(2k+1) − 14n(n+1)` (addition form). -/
+lemma sum_shifted (k : ℕ) : ∀ n, 14 * n ≤ 2 * k →
+    (∑ i ∈ Finset.range n, 2 * min (2 * k + 1 - 14 * (i + 1)) (2 * k))
+      + 14 * n * (n + 1) = 2 * n * (2 * k + 1) := by
+  intro n
+  induction n with
+  | zero => intro _; simp
+  | succ n ih =>
+    intro h
+    have hterm : min (2 * k + 1 - 14 * (n + 1)) (2 * k) = 2 * k + 1 - 14 * (n + 1) := by
+      omega
+    rw [Finset.sum_range_succ, hterm]
+    have hih := ih (by omega)
+    have hb : 14 * (n + 1) ≤ 2 * k + 1 := by omega
+    zify [hb] at hih ⊢
+    linear_combination hih
+
+/-- **The all-k consecutive closed form** (LEM-044(A)):
+`49·muNum k (k+1) = 14k(k+1) + 14r(6−r)`, `r = k mod 7` — for every `k ≥ 1`. -/
+theorem consecutive_closed_form (k : ℕ) (hk : 1 ≤ k) :
+    49 * muNum k (k + 1) = 14 * k * (k + 1) + 14 * (k % 7) * (6 - k % 7) := by
+  obtain ⟨q, r, hr, rfl⟩ : ∃ q r, r < 7 ∧ k = 7 * q + r :=
+    ⟨k / 7, k % 7, Nat.mod_lt _ (by norm_num), (Nat.div_add_mod k 7).symm⟩
+  have hmod : (7 * q + r) % 7 = r := by omega
+  rw [hmod]
+  set k := 7 * q + r with hkdef
+  have hrange : (k + (k + 1)) / 14 + 1 = q + 1 := by omega
+  have hq2k : 14 * q ≤ 2 * k := by omega
+  have hsum := sum_shifted k q hq2k
+  unfold muNum
+  rw [hrange, Finset.sum_range_succ']
+  have hf0 : (if (0 : ℕ) = 0 then min (k + (k + 1)) (2 * min k (k + 1))
+      else 2 * min (k + (k + 1) - 14 * 0) (2 * min k (k + 1))) = 2 * k := by
+    rw [if_pos rfl]
+    omega
+  have hfs : ∀ i ∈ Finset.range q,
+      (if i + 1 = 0 then min (k + (k + 1)) (2 * min k (k + 1))
+       else 2 * min (k + (k + 1) - 14 * (i + 1)) (2 * min k (k + 1)))
+        = 2 * min (2 * k + 1 - 14 * (i + 1)) (2 * k) := by
+    intro i _
+    rw [if_neg (Nat.succ_ne_zero i)]
+    omega
+  rw [Finset.sum_congr rfl hfs, hf0]
+  have hr6 : r ≤ 6 := by omega
+  rw [hkdef] at hsum ⊢
+  zify [hr6] at hsum ⊢
+  linear_combination (49 : ℤ) * hsum
+
+/-! ## The assembly skeleton: positive good measure from Hunter credits -/
+
+/-- ENNReal cancellation: `a + C ≤ T < 1 + C` forces `a < 1`. -/
+lemma lt_one_of_add_le {a C T : ENNReal} (h : a + C ≤ T) (hlt : T < 1 + C) :
+    a < 1 := by
+  by_contra hh
+  push_neg at hh
+  exact absurd hlt (not_lt.mpr (le_trans (add_le_add hh (le_refl C)) h))
+
+/-- **The general good-set positivity skeleton**: `n` events of measure ≤ 1/7 in a
+probability space whose path credits `C` satisfy `n/7 < 1 + C` leave a good set of
+positive measure.  At `n = 8` the hypothesis is exactly `1/7 < C` — the c = 8
+consecutive theorem's shape (LEM-044(B)); the concrete credits come from
+`consecutive_closed_form` once the arc measures are rendered. -/
+theorem good_pos_of_path_credits (μ : Measure α) [IsProbabilityMeasure μ]
+    (A : ℕ → Set α) (hA : ∀ i, MeasurableSet (A i)) (n : ℕ)
+    (hle : ∀ i ∈ Finset.range n, μ (A i) ≤ 1 / 7)
+    (hcred : (n : ENNReal) / 7
+      < 1 + ∑ i ∈ Finset.Ico 1 n, μ (A i ∩ A (i - 1))) :
+    0 < μ ((⋃ i ∈ Finset.range n, A i)ᶜ) := by
+  have hsum : ∑ i ∈ Finset.range n, μ (A i) ≤ (n : ENNReal) / 7 := by
+    calc ∑ i ∈ Finset.range n, μ (A i)
+        ≤ ∑ _i ∈ Finset.range n, (1 / 7 : ENNReal) := Finset.sum_le_sum hle
+      _ = (n : ENNReal) * (1 / 7) := by
+          rw [Finset.sum_const, Finset.card_range, nsmul_eq_mul]
+      _ = (n : ENNReal) / 7 := by rw [mul_one_div]
+  have hH := path_of_tree μ A hA n
+  have hlt1 : μ (⋃ i ∈ Finset.range n, A i) < 1 :=
+    lt_one_of_add_le (le_trans hH hsum) hcred
+  have hmeas : MeasurableSet (⋃ i ∈ Finset.range n, A i) :=
+    Finset.measurableSet_biUnion _ fun i _ => hA i
+  rw [measure_compl hmeas (measure_ne_top μ _), measure_univ]
+  exact tsub_pos_of_lt hlt1
+
 #print axioms tree_hunter_add_le
+#print axioms multi_parent_hunter_add_le
+#print axioms consecutive_closed_form
+#print axioms good_pos_of_path_credits
 #print axioms consecutive_form_upto_63
 #print axioms window7_unique_zero
 
