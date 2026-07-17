@@ -151,3 +151,32 @@ degree patterns: without a `q=2` row, nongenericity forces `(3,3,3)`; with `q=2`
 distinct companion has `q≤8`, sharply at `(2,8,8)`.  The final checked capstone is
 `lrc14_from_twoThree_detuned_and_relationBudget`; only those phase-sensitive triple
 patterns, the nonterminating pair tower, and the relation-certificate supplier remain.
+
+## Landed addendum — the leverage identity (kind-pasteur-S128c37)
+
+`TournamentH7.LRCLeverageIdentity` is green and kernel-pure (foundational axioms
+only; 63 s build).  It supplies the algebraic bridge `LRCB5RelationBudget`
+declared a separate obligation, at the level of an arbitrary finite cell
+decomposition (no measure theory):
+
+- `alternating_partial_choose`: ∑_{k≤m} (−1)^k C(d,k) = (−1)^m C(d−1,m) (Pascal
+  telescoping, general d ≥ 1, over ℚ).
+- `leverage_identity`: for weights `w` and depths `D` on `Fin N`, with
+  `binomMoment w D k = ∑_c C(D c, k)·w c`, the truncation
+  ∑_{k≤m}(−1)^k S_k = goodMass + (−1)^m·leveragedTail — THM-930's identity.
+- `bonferroni_odd_le` / `bonferroni_even_ge`: the two-sided Bonferroni
+  inequalities with the error term exact (nonneg weights).
+- `goodMass_pos_of_bonferroni_pos`: THE CERTIFICATE THEOREM — a positive
+  odd-level truncation forces positive good mass.  Instantiating `m = 5` with a
+  packet's sweep cells makes every exact-rational BONF5 > 0 verdict a
+  loneliness proof modulo only the sweep encoding.
+- Anchors: E₂ = 24/343, E₃ = 24/49, E₄ = −2/7 (THM-935's exact-support
+  weights), B₅-equilibrium = 2052/16807, C(12,5) = 792, and the kill threshold
+  2052/16807/792 = 57/369754 — the last CORRECTED BY LEAN (the informal
+  lowest-terms reduction 19/123354 in earlier notes was wrong; decimal 1.54e-4
+  unaffected).
+
+Remaining consumer step: the sweep encoding (a packet's finite cell list with
+depths, exact rational lengths) feeding `leverage_identity` — decide-shaped,
+same pattern as item 3; then `goodMass_pos_of_bonferroni_pos` turns the
+THM-930/934 certificates (incl. the two certified packets) into kernel facts.
