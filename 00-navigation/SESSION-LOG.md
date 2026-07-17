@@ -62,15 +62,102 @@ Mined: klein's toothR/clipLen list calculus (the corpus's danger machinery -- in
 FILES: LRCPairOverlapArcs.lean (+ corpus registration), LEM-045 residual closed, HYP-7241, session log. -> klein (volume face now exists parallel to your list face), opus, all. boxeph; S74.
 
 ---
-## codex-2026-07-17-S66 -- IN PROGRESS: aligned-stalk gluing, exact-depth reflection parity, sparse-pair lattice, and gap-two residual
+## codex-2026-07-17-S66 -- FIXED-ROOT ALIGNED CENSUS + COMPLETE SPARSE PAIR COUNT + q4488 CLOSE-PENCIL DICHOTOMY (five Lean modules, foundational axioms only)
 
 Prompt (owner): finish the remaining LRC(14) mathematics, pull often, and
 adjust targets against the live shared frontier.
 
-Namespace reserved while the new Lean modules and their axiom audits build.
-Honest current target: sharpen the weighted dense-core, pair-tower, and
-selected-witness interfaces; do not claim LRC(14) without the remaining
-supplier theorems.
+The session pulled twice during long Lean builds.  The first pull supplied the
+stronger connected zero-stalk primitive theorem and the unconditional q4488
+matching-wall producer; the target was changed immediately from duplicating
+those producers to composing and aggregating them.  The second pull integrated
+the independently certified scale-twelve and owner-local scale-fourteen
+sporadic closures.  No theorem below is presented as a proof of LRC(14).
+
+(A) **ALIGNED ROOTED STALKS, FROM LOCAL GLUING TO EXACT FUBINI.**
+`LRCAlignedStalkGluing.lean` proves that a zero-color anchor star is a clique,
+uses the actual `Finset.gcd` Bezout ledger to factor every canonical witness as
+`failWitness_i=(v_i/h)r`, and turns one bad top runner plus the sharp window into
+`hp=rq`.  Hence a fixed complete or anchor-certified stalk has at most
+`gcd(h,q)-1` active multipliers.  `LRCAlignedStalkAggregation.lean` then counts
+the bipartite multiplier--fixed-rooted-face incidence in both orders.  It gives
+the exact aligned/colored root-star partition, exact active spoke-reuse
+transport, anchor-star=complete on inserted faces, and
+
+```text
+zeroColorRootedFaceActivity
+  <= sum_face (gcd(gcdSpeeds(face),q)-1)
+```
+
+under the per-face top window.  Overlapping faces keep their true multiplicity:
+this is the previously missing aligned accounting theorem, not yet a global
+payment theorem.
+
+(B) **DEPTH REFLECTION.** `LRCDeepReflectionParity.lean` proves that at odd
+modulus every exact-depth multiplier stratum is even, in particular the unpaid
+depth-six and depth-seven strata.  The reflection graph is a matching on
+multiplier events; it removes singleton tails but pays no two-event debt.
+
+(C) **THE SPARSE PAIR LAYER IS NOW A p-SPACE THEOREM.**
+`LRCSparseBranchLattice.lean` closes the interval-to-multiplier step left after
+S49/S50: active-wall equivalence, exact interval cardinality, residue
+representative bijection, width-`<q` injectivity, positive-branch multiplier
+count, disjoint `k=0,+1,-1` families, and the complete finite-`q` joint-failure
+formula.  The historical raw floor difference needs correction: at the
+integral zero-width boundary `(i',j')=(1,13), q=14` it is `-1` although the
+branch is empty.  The uniform kernel statement is its `Int.toNat`.  A separate
+finite referee checked all reduced ordered pairs in `{1,...,13}`, all `q<80`,
+and sampled positive/negative coprime scales.
+
+(D) **q4488 PRODUCER--CONSUMER COMPOSITION.**  The live pull showed that
+`LRCPairTowerGapTwoProducer` already supplies common signed residue data,
+distinct q4 numerators, and both matching walls uniformly at every failing
+phase.  `LRCSelectedWitnessGapTwoResidual.lean` proves the exact affine law
+
+```text
+4(F_a-F_b)=a4b-a4a.
+```
+
+Both frequencies can vanish only on the forbidden equal-q4 diagonal, and a q4
+gap at least `60B` fires one sharp LRC(9) escape gate.  The composed theorem
+starts only from the denominator equations and one failing anchor and returns
+either a selected LRC(14) phase or the complete remaining branch: distinct q4
+anchors in the strict `60B` pencil together with the producer's joint
+zero/small two-frequency relation data.  Matching-wall production is closed;
+the close pencil is the honest residue.
+
+(E) **CARRIER / TOURNAMENT AUDIT.**  The useful weighted-census object is the
+decorated bipartite graph `(multiplier event) <-> (fixed rooted six-face)`, with
+root-spoke zero switch, witness, determinant magnitude, face gcd, phase, and
+multiplicity.  The sparse pair object is a Bezout branch plus an affine lattice
+point and residue; q4488 uses the two signed q4 anchors and their frequency
+order.  The static runner sign tournament is transitive modulo zero-color ties
+and forgets precisely the data the proofs consume.  Fano/`chi_7` is still an
+address atlas for the 21 flood edges, not metric transport; a Kakeya-needle
+quotient must retain intercept, residue, and repeated hits.  THM-841's literal
+toothpick/dyadic self-similarity is refuted (the correct object is a one-kink
+Farey stalk with totient multiplicity); H-drift needs the Walsh/operation
+profile beyond `(H,K)`; the j=4 portable bound closes only edge `(5,7)`, not the
+other twenty floods.  The proposed all-`n` black self-line law is also refuted
+at `n=8` (`404 != SC(8)=176`).
+
+**HONEST FRONTIER.**  For the weighted route, still supply a selected-root and
+sharp-window coverage theorem, control the summed gcd budgets, turn colored
+spoke mass plus the exact `462/210` reuse into payment, pay depths six/seven,
+and produce the adaptive live floor.  The selected route still has q22
+opposition, q244/q333 zero-small relations, and the q4488 close pencil.  Pair
+finite replays tau5--tau9 and the block partition trichotomy remain.  The
+universal `q<=25` proposal is false (THM-566/762/764).  Uniform emptiness of the
+`n=12` sporadic branch is still open even though proper AP-centred H6 faces are
+now closed through scale fourteen (scale thirteen primitive-impossible): scale
+fifteen+, ramified H5, and non-AP/deep/higher-sheet branches remain.
+
+FILES: `LRCAlignedStalkGluing.lean`, `LRCAlignedStalkAggregation.lean`,
+`LRCDeepReflectionParity.lean`, `LRCSparseBranchLattice.lean`,
+`LRCSelectedWitnessGapTwoResidual.lean`, root imports, cohesive picture,
+manifest, and lens-map packet fields.  Every new theorem was built with no
+`sorry`/`native_decide`; axiom audits report only the standard foundational
+trio where applicable.
 
 ---
 

@@ -483,7 +483,12 @@ incidence count exactly: through rooted six-faces a spoke is reused
 `462` and `210` times for twelve lower vertices.  These are global transport
 upper budgets, not yet a payment theorem: the available three-/five-unit lower
 charges must still beat those reuse factors while retaining the separate
-depth-six and depth-seven ledgers.
+depth-six and depth-seven ledgers.  `LRCAlignedStalkAggregation` now transposes
+the fixed-root incidence exactly: multiplier-first rooted-face activity equals
+the sum of the corresponding fixed-face multiplier fibers.  It partitions the
+carrier into an all-zero anchor star and a colored complement, and identifies
+the latter's spoke mass with the exact reuse transport.  Overlapping faces are
+counted with their true multiplicity; this is accounting, not yet payment.
 
 `LRCSevenOverlapActivity` preserves multiplier activity rather than passing to
 a static support graph.  For each fixed ordered triple it partitions bad
@@ -504,7 +509,10 @@ exception has a two-event quantum; combined with the coprime fiber bound,
 every nonzero absolute color occurs exactly zero or two times.  Reflected
 sparse relations count as one projective relation.  This parity is a rigidity
 input, not a supplier: it does not improve the global live-versus-debt ratio
-without a non-reuse bound.
+without a quantitative payment bound.  `LRCDeepReflectionParity` additionally
+proves that every exact-depth stratum is even at odd modulus, especially depths
+six and seven.  It removes singleton depth tails but does not pay either
+two-event orbit.
 
 `LRCOverlapColorFibers` adds the first arithmetic multiplicity theorem.  For
 positive pair speeds `a,b`, every `overlapDet` color is divisible by
@@ -539,7 +547,21 @@ the modulus divides every stalk speed.  The window is genuinely additional:
 zero-slope stalk satisfying `q <= 7*98` but no resonance.  What remains is to
 make the sharp window available at the chosen adaptive modulus and combine the
 divisor route with the `462/210` colored transport budget and the
-depth-six/seven residue.
+depth-six/seven residue.  The concrete rooted-face version is now formalized in
+`LRCAlignedStalkGluing`: an anchor-zero star is a clique, the actual
+`Finset.gcd` gives one integer witness parameter, and top-window badness forces
+`h*p=r*q`, so a fixed stalk has at most `gcd(h,q)-1` active multipliers.  The
+aggregation module sums this without changing multiplicity and proves
+
+```text
+zeroColorRootedFaceActivity
+  <= sum_face (gcd(gcdSpeeds(face),q)-1)
+```
+
+under the per-face window.  The exact remaining supplier sockets are a
+selected-root/top-window coverage lemma, a usable bound for this summed gcd
+budget, a colored payment inequality against the reuse factors, the depth-
+six/seven payment, and the adaptive live floor.
 
 `LRCB5CertificateAudit` also proves that the older abstract
 `B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its
@@ -571,8 +593,16 @@ resulting tournament is transitive modulo zero-color ties: it has no directed
 cycles, singleton SCCs after tie-breaking, and a Hamiltonian path unique up to
 orders inside tie blocks.  Forgetting colors destroys determinant magnitude,
 the exact Plücker relation, gcd spacing, and multiplier activity.  The faithful
-current object is a fibered movie of wall events/rooted seven-stalks carrying
-`(p,i,failWitness_i,overlapDet_ij)`.  Related quotients have distinct losses:
+current object is the decorated bipartite incidence graph
+
+```text
+(multiplier event p)  <-->  (fixed rooted six-face),
+```
+
+carrying root-spoke zero/nonzero state, witnesses, determinant magnitudes,
+face gcd, depth, and phase.  A lexicographic face order is only a tie
+Hamiltonian path; it is not the proof invariant.  Related quotients have
+distinct losses:
 
 - multiplier–runner incidence preserves live/depth multiplicity but loses
   colors if projected to a support graph;
@@ -585,8 +615,8 @@ current object is a fibered movie of wall events/rooted seven-stalks carrying
 - Fano/`χ₇` labels are an address atlas for the 21 edges of `K₇`, not a
   metric quotient: full colored-edge data or a Heawood-cycle sidecar is needed.
 - translated Kakeya needles/arithmetic stalks preserve direction, phase
-  intercept, and repeated wall hits; retaining only directions loses exactly
-  the offset and multiplicity needed by the census.
+  intercept, residue, and repeated wall hits; retaining only directions loses
+  exactly the offset and multiplicity needed by the census.
 
 Thus tournament vertices need not be runners: multiplier events, wall
 crossings, rooted stalks, relation circuits, and proof obligations are all
@@ -952,9 +982,13 @@ nonresidue supports have intersection graph `3K2`.  An independent Python
 referee proves the exact provider/unit/owner/sheet covariance before reducing
 to seven multiplication orbits.
 
-Thus the AP-centred common-scale H6 faces `c=3,...,11` are closed.  This does
-not touch `c>=12`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
-branches of the global `n=12` problem.
+Thus the AP-centred common-scale H6 faces `c=3,...,11` are closed.  The live
+pull extended this: THM-976 independently certifies complete owner
+orthogonality at `c=12`; THM-860 makes `c=13` primitive-impossible; and THM-977
+closes `c=14` already at the owner-local gate, where every scalar row misses at
+least two of fourteen sheets.  This still does not prove uniform sporadic
+emptiness.  Scale fifteen and higher, the finite ramified H5 bank, and non-AP,
+deep, and higher-sheet branches remain parts of the global `n=12` problem.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal
 arithmetic sharpening.  THM-668 ruler data `q<=2b`, strict `mu>1/n`, and the
@@ -1108,10 +1142,27 @@ THM-954 producer socket is the five finite replays tau5--tau9.
 
 This completion is deliberately local.  The `(4,4,8,8)` valuation-gap-two wall
 now has an unconditional phase-independent producer and a large-frequency
-escape, but its joint zero/small relation branch remains.  The q22 opposition
+escape.  `LRCSelectedWitnessGapTwoResidual` identifies the exact affine pencil
+
+```text
+4(F_a-F_b) = a4b-a4a.
+```
+
+Thus a normalized q4 gap at least `60B` fires one sharp selected-witness gate;
+the honest q4488 residue is the close nonzero q4 pencil/joint zero-small
+relation branch, not a missing matching-wall producer.  The q22 opposition
 selector and the q244/q333 zero-or-small branches also remain, as does the
 dense-core signed support-3/4/5 payment.  The incoming scale closures and frame
 bounds are compatible structural inputs but do not replace those obligations.
+
+The sparse rational-pair ledger has also crossed its last interval-to-phase
+boundary.  `LRCSparseBranchLattice` proves the residue bijection on every
+positive Bezout branch, injectivity from width `<q`, disjointness of the
+`k=0,±1` multiplier families, and the complete finite-`q` joint-failure count.
+The positive contribution is the `Int.toNat` of the floor difference.  This
+truncation is essential: at the integral zero-width boundary `(i',j')=(1,13),
+q=14`, the raw difference is `-1` while the actual branch is empty.  The older
+raw-floor wording in S49 is superseded by this kernel-checked formula.
 
 `LRCRealRelationLock` adds the continuous coefficient-weight lock used by all
 of these scalar branches: at an arbitrary real phase, every integer speed

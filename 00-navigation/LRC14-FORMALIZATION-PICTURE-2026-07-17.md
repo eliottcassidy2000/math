@@ -89,9 +89,15 @@ after the five-unit nonzero-triangle charge), and rank-one/aligned stalks.
 the three-/five-unit *lower* spoke-mass charges.  This is not yet a payment
 theorem.  `LRCSevenStalkReuseBudget` now gives the exact global transport
 double count: a spoke is reused `choose(m-1,5)` times and a lower pair
-`choose(m-2,4)` times, hence at most `462` and `210` times.  The open step is
-to beat those factors with the colored charges while preserving the separate
-depth-six and depth-seven residues.
+`choose(m-2,4)` times, hence at most `462` and `210` times.  These are exact
+reuse factors, not a non-reuse estimate.  `LRCAlignedStalkAggregation` adds the
+missing fixed-root Fubini identity: multiplier-first rooted activity equals the
+sum of the fixed rooted-face fibers.  It partitions that activity exactly into
+an all-zero root star and a colored complement, identifies the colored
+root-spoke mass with the imported reuse transport, and retains the actual
+overlap multiplicity on both sides.  The open step is to convert this ledger
+into a payment inequality while preserving the separate depth-six and
+depth-seven residues.
 
 `LRCOverlapReflection` identifies the exact mirror action on this carrier.
 For every bad runner, `failWitness(q-p)=v-failWitness(p)`; consequently every
@@ -104,6 +110,11 @@ singleton colored exceptions; combined with the coprime fixed-color bound,
 every nonzero absolute color occurs in exactly `0` or `2` events.  This does
 not by itself improve the live/debt ratio, since live and colored activity
 mirror together.
+
+`LRCDeepReflectionParity` applies the same orbit principle to every exact-depth
+stratum: for odd `q`, `exactDepthCount(v,q,d)` is even for every `d`, in
+particular at depths six and seven.  This removes singleton tails from a future
+payment argument, but two-event quanta still carry their full debt.
 
 `LRCOverlapColorFibers` supplies the first multiplicity control.  For positive
 pair speeds `a,b`, every determinant is divisible by `gcd(a,b)`, and on
@@ -119,8 +130,21 @@ parameter, with the exact normalization `d=q/gcd(p,q), n=p/gcd(p,q)`.  The
 sharp alternative is `14|v/d|<q`, and the window is not implied by `q≤7|v|`
 (already `q=99,d=98` supplies a zero-slope nonresonant stalk).  What remains is
 the sharp-window/adaptive-modulus instantiation and the comparison of colored
-lower charges with the `462/210` transport budgets.  The aligned aggregation
-is not yet a current supplier theorem.
+lower charges with the `462/210` transport budgets.  On the concrete rooted-
+face carrier, `LRCAlignedStalkGluing` proves that an anchor-zero star is already
+a clique, the actual `Finset.gcd` supplies the shared integer parameter,
+top-window badness forces `h*p=r*q`, and a fixed stalk has at most
+`gcd(h,q)-1` active multipliers.  Aggregating gives
+
+```text
+zeroColorRootedFaceActivity
+  <= sum_face (gcd(gcdSpeeds(face),q)-1)
+```
+
+under the per-face top window.  This is the first honest aligned aggregation
+theorem, but not a global supplier: a selected-root/top-window coverage lemma,
+a bound for the summed gcd budgets, the colored payment inequality, the
+depth-six/seven payment, and an adaptive live floor are still missing.
 
 ## Tournament/carrier audit
 
@@ -150,10 +174,11 @@ must state which LRC predicate it preserves.
 
 ## The parallel analytic arcs (paper → Lean in progress)
 
-- **kps UNIVERSAL EXHAUSTION** (THM-946 line): every packet surrenders a
-  support-≤5 relation at H₀(Vmax) = polylog or BONF5 > 0 — the middle stratum
-  empty at every scale. Supplies the dissociated-B5 conjunct at math level.
-  Lean rendering: named next (their leverage-identity toolbox is already LEAN).
+- **kps exhaustion line** (THM-946/952/953/959): the corrected two-pole atom,
+  punctured congruence estimate, leverage identity, and general odd folded sum
+  are rigorous, and `T3` is closed.  `T4`/`T5` have a coherent composed-atom
+  blueprint and finite referees, but the floor-case/Fubini transcription and
+  the structured small-relation alternative are not yet a universal supplier.
 - **opus/codex cascade and blocks** (THM-932/933/936, THM-955, THM-959):
   `window_tail_glue` is Lean; the corrected positive-window cluster bound and
   direct prescribed block-tower induction are paper-proved with exact rational
@@ -166,12 +191,16 @@ must state which LRC predicate it preserves.
   pair-grid ledger are LEAN, including the zero atom, circle volume, sharp
   component budget, and clean-534 discrepancy.  The top `24/12` path caps and
   anchored ratio quotient are LEAN.  Exact comb reindexing closes the covariance
-  producer, and tau3/tau4 ratio replays are LEAN; tau5--tau9 remain.
+  producer, and tau3/tau4 ratio replays are LEAN; tau5--tau9 remain.  Separately,
+  the sparse rational-pair branch interval now transports bijectively back to
+  multiplier space, giving the complete finite-`q` three-branch count; the
+  zero-width integral boundary requires `Int.toNat`, not a raw floor difference.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
-  zero-color primitive gluing, and aligned resonance count are LEAN.  The
-  remaining step is a quantitative payment/window theorem, not another
-  pointwise Plücker or incidence estimate.
+  zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd
+  budget, and odd-depth parity are LEAN.  The remaining step is a quantitative
+  root/window/payment theorem and adaptive live floor, not another pointwise
+  Plücker identity or incidence count.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
   form — the analytic instrument layer; manifest items 11–13 decide-shaped.
 
@@ -193,7 +222,10 @@ must state which LRC predicate it preserves.
 4. **Selected-witness relation residues** — q22 remains an opposition-avoidance
    selector; q244 and q333 remain explicit zero/small support-three frequencies.
    The q4488 common-sign and matching-wall producers are closed, and its large
-   branch escapes, leaving the joint zero/small two-frequency residual.
+   branch escapes.  The two q4-derived frequencies satisfy the exact affine law
+   `4(F_a-F_b)=a4b-a4a`; a q4 gap at least `60B` therefore closes.  The honest
+   q4488 residue is the close nonzero q4 pencil (equivalently the joint
+   zero/small two-frequency branch), not missing phase matching.
 
 **S45 update — all three items moved this cycle:**
 
@@ -219,9 +251,20 @@ must state which LRC predicate it preserves.
 
 **S57/S66 weighted-census refinement.**  The dense-core socket may now be stated
 as `DenseCoreWeightedCensusB5Supply`, strictly weaker than the old uniform
-`792·deepCount` socket.  Reuse multiplicities and zero-color gluing are now
-exact.  Its remaining arithmetic is: make the sharp primitive window available,
-pay the `462/210` transport factors, and handle depths six and seven before
-applying the adaptive-modulus live floor.
+`792·deepCount` socket.  Reuse multiplicities, zero-color gluing, fixed-root
+Fubini, per-face gcd resonance budgets, and odd-depth parity are now exact.  Its
+remaining arithmetic is: choose a root/window covering the relevant events,
+bound the summed gcd budgets, pay the colored `462/210` transport factors,
+handle depths six and seven, and supply the adaptive-modulus live floor.
+
+**Guardrails.**  The once-requested universal `q≤25` period bound is false
+(THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
+of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
+faces are certified through scale fourteen (scale thirteen is primitive-
+impossible), but scale fifteen and higher, ramified H5, non-AP/deep, and
+higher-sheet branches remain.  Neither the
+Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
+missing metric/multiplicity statements; the proposed all-`n` black self-line
+law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
 
 No theorem in this picture proves LRC(14) without the named suppliers above.
