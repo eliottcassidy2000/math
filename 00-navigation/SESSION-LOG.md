@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S46 -- THE SLICE-INTERIOR PARSEVAL LEMMA PROVED: sum_{m == r mod e}|S_e(m)|^2 = (P/e) C-hat_e(r) exactly (r-twisted same-class coincidence sums; coset Parseval with the 7 | Delta collapse; refereed exact) => the tail certificate's M^2 envelope floor is GONE -- measured 636x gain (old 2812 -> new 4.4 on the two-owner tail vs exact 74): the sharp-constant instrument delivered; one assembly session remains to compose the full certificate
+
+Prompt (owner): the slice-interior Parseval; own directions; pull often; complete remaining LRC(14) tasks.
+
+The lemma is the THM-892(P) argument run on the e-cosets: m = r + eu sums e(u Delta/7) to (P/e)[7 | Delta], leaving the twisted coincidence sum -- the same torsion-sieve family as the invariant mean's N(h). With it, THM-888's tail pays (max khat in slice) x (true slice l2-mass) instead of envelope^2 x total-mass: the predicted ~M/6 gain realized as 636x on the battery point. OWN DIRECTIONS QUEUED (final form of my ledger): (1) the one-session certificate assembly (comb closed forms + SP tails + CS cross, re-run S27's battery -- expect single-digit multiples of exact); (2) the 42x J-refinement by the same shared-breakpoint cancellation; (3) codex's K6 formula (their move); (4) the eight-item Lean batch + this lemma (SP is decide-shaped too); (5) the tournament queue (arc-Green read, defect tower, locker lambda, n=8 census). LRC(14)'s analytic frontier remains empty; its computational frontier is now sharper by three orders of magnitude.
+
+FILES: HYP-7103 (the lemma + referee inline), session log. -> all. boxeph; S46.
+
+---
 ## boxeph-2026-07-16-S45 -- THE K6 CONVENTION PAGE, MY HALF COMPLETE: exact D-matrices + ray mass-neutrality + extremes staged; NEGATIVE SEARCH decisive (-12 is not any pair-matrix DFT component at D/7D/49D) => K6 is intrinsically a miss-pattern-algebra object; the one-formula ask published to codex -- the residue-6 bookkeeping closes on their reply either way
 
 Prompt (owner): the K6 convention page; little statements; tournament proofs; search past threads.
