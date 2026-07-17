@@ -70,6 +70,21 @@ proof or as progress on the separate higher-support wall.
 
 ---
 
+## death-star-2026-07-17-S46 -- THM-960 THE RUNG LOCK AT THE LONELY-RUNNER THRESHOLD (Lean kernel-pure, 5 theorems): failing runners with exact integer ratio m <= 13 lock witnesses EXACTLY (w_j = m*w_i, zero choices; sharp at m = 14, kernel-checked witness v=1->14,q=15,p=1); ray propagation; ALL-INTEGER Farey collapse (no rationals) -- THM-956's comp map now concrete on exact-ratio strata; divisor-collapse heuristic HONESTLY REFUTED on compressed blocks with carrier-count salvage
+
+Prompt (owner): work on finishing out the remaining LRC 14 tasks creatively.
+
+(A) THE CREATIVE FIND: the lock threshold IS the lonely-runner denominator. Band 1/14 locks ratios m <= 13 = n (strict band bounds keep the chain 14|w_j - m w_i| q < (m+1)q <= 14q strict THROUGH m = 13); general LRC(n): band 1/(n+1) locks ratios <= n. First proved at m <= 12, recon showed zero breaks at 13, re-derivation showed the strict chain survives -- STRENGTHENED in-file, sharpness witness at 14 by kernel decide (propext only).
+
+(B) LRCRungLock.lean (standard trio x5): rung_lock, rung_lock_sharp_at_14, rung_lock_chain3 (bottom witness determines whole <= 13-ratio block), ray_fails_above (q | v_i p => all multiples fail: deep-over-rays free), carrier_instant_eq_of_shared_witness (D^2 <= 7 v_i + shared witness => SAME instant via the exact identity v_i(p1 q2 - p2 q1) = (v_i p1 - w q1) q2 - (v_i p2 - w q2) q1 -- ALL-INTEGER, replaced the planned rational Farey route and needs no LRCAdaptiveQ import).
+
+(C) HONEST REFUTATION-WITH-SALVAGE: HYP-7225(c) divisor collapse is FALSE on compressed block towers -- deep instants are COMMON (zero-deep 0/60 families vs 387/400 on S45 ladder strata!), K up to 1489 at D=300, carriers do NOT divide the tower scale. The compressed-block regime is NOT the sparse-deep regime; the component-injection abstraction is wrong there. SALVAGE (recon-verified): the CARRIER-COUNT pigeonhole survives -- worst 134 carriers vs 299 window moduli across 60 families, deep-free q exists in EVERY window; at such q the census needs only liveCount > 0. The nucleus is unchanged and now provably reachable on both spread (S45) and compressed (S46) recon strata.
+
+(D) FLEET: THM-956 namespace collision with opus flagged (mine first-push e4a4ede22 = parent of their range; suggested THM-959 for their block-structure reduction -- 957/958 taken by codex). Their G0 entry-length law + my corrected L1 positivity compose cleanly.
+
+Referee: runglock_recon_deathstar_S46.out (6221 lock pairs PASS; m=13 exhaustive clean q<500; m=14 breaks found; carrier salvage 60/60). FILES: THM-960, HYP-7225 updated, LRCRungLock.lean, recon .py/.out, root import, session log. NEXT: (i) THE LIVE FLOOR at the chosen deep-free q -- the nucleus, now the single genuine remainder on the discrete side; opus's floor transfer (width -> grid points) is the continuous face -- MEET IN THE MIDDLE; (ii) package carrier-count pigeonhole as a Lean corollary of THM-956 (count carriers not components -- trivial restatement, do with (i)); (iii) opus L2/L3 on corrected L1. death-star; S46.
+
+---
 ## codex-2026-07-17-S62 -- correction + new frontier: THM-955 repaired, collided block theorem renumbered/corrected as THM-959, and AP-centred H6 scale six closed by THM-960
 
 The immediately following S339 block entry is retained as historical provenance

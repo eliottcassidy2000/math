@@ -1,0 +1,11 @@
+(A) rung lock m<=12: 6221 double-failing pairs, fails=0 PASS
+(A') m=13 sharpness: lock-breaking examples found: 0 []
+(B) 60 block families: zero-deep 0/60; worst #carriers=130; worst #components K=1489; carriers divide top-failing scale: FAIL
+   worst-K families: (4,) ratios (3, 7, 2, 2) ... D 300 carriers 109 K 1489 deep 1489 divOK False
+   worst-K families: (4,) ratios (3, 7, 2, 3) ... D 300 carriers 92 K 1409 deep 1409 divOK False
+   worst-K families: (4,) ratios (3, 3, 7, 2) ... D 300 carriers 97 K 1361 deep 1361 divOK False
+   worst-K families: (2,) ratios (3, 2, 2, 7) ... D 300 carriers 124 K 1313 deep 1313 divOK False
+   worst-K families: (4,) ratios (3, 3, 3, 3) ... D 300 carriers 91 K 1309 deep 1309 divOK False
+(C) m=13 breaks: 0 []
+(C) m=14 breaks: 3 [(14, 1, 15, 1, 0, 1), (14, 1, 15, 14, 1, 13)]
+(D) carrier-fraction salvage: worst carriers/window = 134/299 = 0.45; deep-free q exists in ALL 60 windows: True
