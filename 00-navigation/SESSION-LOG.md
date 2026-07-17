@@ -1,3 +1,57 @@
+## codex-2026-07-17-S54 -- exact pair-grid closure; covariance and ratio certificates reduced to two finite sockets
+
+Prompt: continue the pair tower, selected-witness supplies, dense-core relation
+budget, and LRC(14) formalization; pull often and integrate incoming work.
+
+The support-two geometric bridge is now complete in Lean.  The rational
+strict-open comb, normalized two-pointer intersection, real carrier, circle
+volume, exact complete-grid count, and sharp endpoint budget construct every
+pair ledger for a nonzero speed family.  A necessary correction was exposed:
+phase zero is always pair-danger but belongs to no strict interval, so a ledger
+without a distinguished zero atom is false.  The exact count is `1 +` the
+strict-open interval sum.  `rawPairGridDiscrepancyAt_of_nonzero` is now
+unconditional, and the clean-534 `normalizedMass2` consumer needs only the
+continuous floor.
+
+The continuum covariance producer has been reduced without hidden analytic
+premises.  Exact merge length converts the linear merge to the quadratic clip
+sum; the cyclic Bernoulli/Raabe ledger is evaluated; and the tooth-index
+difference hom is surjective with every residue having exactly gcd-many
+preimages.  The sole remaining covariance statement is the local
+wrapped-tooth clip identity named `PairOverlapReindexing`.  On the graph side,
+the ratio-12/13 classification and fixed-color path forests prove the actual
+top caps `24` and `12`.  An anchored absolute-speed quotient now sends every
+middle threshold clique injectively to `allowedRatioGraph`; a finite-cover
+lemma separates exact envelope enumeration from replay of the seven stored
+coloring DAGs.
+
+Tournament audit: the pair observable is strict tooth overlap, switched to a
+binary relation by `weight > tau`; the meaningful tie path is the sorted
+left-endpoint/two-pointer cursor, not an arbitrary runner orientation.
+Fingerprints retained are additive path forests, clique caps, threshold flips,
+gcd-fiber sizes, and exact component counts.  Assumption challenge: vertices
+need not be runners.  Teeth, cyclic difference classes, primitive anchored
+ratios, and proof obligations each preserve the relevant pair carrier or
+threshold predicate.  Quotienting to open components destroys the zero phase
+unless its atom is recorded explicitly; quotienting to ratios destroys scale
+and higher-support phase chronology.
+
+Incoming correction integrated: THM-959 does not reduce the whole residual to
+one seven-comparable block.  The pair crumb closes the pair-grid ingredient of
+the B5 route but does not supply the still-open block partition trichotomy.
+The valuation-gap-two `(4,4,8,8)` phase chronology, small-frequency selected
+witnesses, and signed support-3/4/5 relation budget remain independent cruxes.
+
+FILES: `LRCRationalOpenComb.lean`, `LRCOpenPairLedger.lean`,
+`LRCB5PairOverlapSum.lean`, `LRCB5MergeLength.lean`,
+`LRCB5DifferenceFibers.lean`, `LRCPairCovarianceReindexer.lean`,
+`LRCPairTopClassification.lean`, `LRCAnchoredCliqueTransfer.lean`, and
+`LRCPairRatioQuotient.lean`.  HONEST NEXT: close the wrapped-tooth identity,
+then replay the seven finite ratio DAGs; do not count either as a full LRC(14)
+proof or as progress on the separate higher-support wall.
+
+---
+
 ## codex-2026-07-17-S62 -- correction + new frontier: THM-955 repaired, collided block theorem renumbered/corrected as THM-959, and AP-centred H6 scale six closed by THM-960
 
 The immediately following S339 block entry is retained as historical provenance

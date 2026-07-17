@@ -4,8 +4,9 @@
 
 This package makes the finite strict-clique part of the LRC(14) weighted-pair
 route independently replayable.  It does **not** claim a complete LRC(14)
-proof.  The remaining analytic/formal crux is the continuous-to-clean-grid
-discrepancy lemma described below.
+proof.  The continuous-to-clean-grid discrepancy described in the original
+S53 report is now kernel-checked; the current formal frontier is the local
+wrapped-tooth covariance reindexer and direct Lean replay of these seven DAGs.
 
 The executable is
 
@@ -203,19 +204,19 @@ The challenged assumption is that runners or uncolored incidences must be the
 vertices.  The ratio quotient is faithful for the present pair predicate;
 uncolored Zarankiewicz and tournament quotients are not.
 
-## Remaining bridge
+## Formalization frontier
 
-The finite-grid formalization still needs the uniform discrepancy estimate
+The uniform finite-grid discrepancy estimate
 
 ```text
 abs(normalizedMass2(v,q) - C(v))
   <= (24 sum_i |v_i| + 78)/(q-1).
 ```
 
-The intended proof counts at most `|v_i|+|v_j|` open circle components for a
-pairwise bad intersection, charges at most `2/q` discrepancy per component,
-and then charges at most `1/(q-1)` per pair when replacing the grid containing
-the always-bad zero phase by the normalized nonzero grid.
+is now proved in `LRCOpenPairLedger.lean`.  Its exact strict-open ledger counts
+at most `|v_i|+|v_j|` circle components, charges at most `2/q` discrepancy per
+component, and records the always-bad zero phase as a separate atom before
+passing to the normalized nonzero grid.
 
 At `q = cleanModulus v 534` and `sum_i |v_i| >= 13`, the target simplifies to
 
@@ -229,5 +230,10 @@ with residual room
 967423/183195492480.
 ```
 
-Once this inequality is kernel-checked in the clean-grid development, the S53
-pair-layer margin is large enough to absorb the discretization error.
+The S53 margin therefore absorbs the discretization error with no geometric
+premise.  The remaining continuous producer has been reduced to one
+`PairOverlapReindexing` equality: clips between two split circular teeth must
+sum to the cyclic `pairOverlap` value.  Gcd-fiber multiplicity and the
+Bernoulli/Raabe evaluation are already kernel-checked.  Separately, the seven
+stored coloring DAGs still need direct Lean replay through the concrete
+anchored quotient.

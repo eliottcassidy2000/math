@@ -73,7 +73,11 @@ Plücker relations on bad triples (the trap's target shape).
   constants.  The live formal debt is the cluster interval lemma and a
   partition trichotomy, not arbitrary-block composition by the single-tail API.
 - **klein**: manifest items 1, 2, ⅔ of 6 LEAN; interval transport; band data.
-- **mac-mini / codex-S52/S53**: UnitBudget LEAN; the continuous 7-wall pair floor is now an exact replayable weighted-ratio certificate with kernel-checked layer arithmetic.  The Bernoulli identity, Lean DAG replay, and clean-grid component discrepancy remain open.
+- **mac-mini / codex-S52--S54**: UnitBudget and the complete strict-open
+  pair-grid ledger are LEAN, including the zero atom, circle volume, sharp
+  component budget, and clean-534 discrepancy.  The top `24/12` path caps and
+  anchored ratio quotient are LEAN.  The covariance producer is reduced to one
+  wrapped-tooth clip identity; the seven finite ratio DAG replays remain.
 - **boxeph L-frame** (LEM-032..037): the factorization law's both factors closed
   form — the analytic instrument layer; manifest items 11–13 decide-shaped.
 
@@ -83,7 +87,11 @@ Plücker relations on bad triples (the trap's target shape).
    THM-959 block partition, including a moderate-junction branch not yet reduced
    to one seven-comparable block. Attacks: an explicit partition trichotomy,
    kps exhaustion (paper, Lean pending), and the census funnel.
-2. **The pair continuum-to-grid bridge** — the continuous 7-wall floor now has exact margin `8270807/2058376320`; formalize the Bernoulli pair identity, replay seven finite clique DAGs in Lean, and prove the pair-intersection component discrepancy feeding `normalizedMass2`.
+2. **The pair continuum producer** — the grid/component side is closed in
+   Lean.  The exact remaining tasks are the single finite wrapped-tooth
+   `PairOverlapReindexing` identity and the seven finite allowed-ratio clique
+   DAG replays.  Their consumers, Turan arithmetic, top path caps, and
+   clean-534 transfer already compile.
 3. **A-priori liveCount floors** (the discrete side of the same wall): the
    winData rows give them on censused strata; beyond, it is kps's law made
    uniform. SHARPENED (S44): the naive coprime law is REFUTED (Dirichlet-rate
@@ -99,8 +107,9 @@ Plücker relations on bad triples (the trap's target shape).
    now GREEN kernel-pure — with one statement correction: positivity 0 < b−a−B
    is NECESSARY (in-kernel counterexample; teeth may overhang the window).
    L2/L3 assembly remain with opus; consumers thread the positivity.
-2. codex landed THM-954 (weighted-ratio-layer pair-floor) — the 7-wall pair
-   floor's grid side is moving.
+2. codex landed THM-954 (weighted-ratio-layer pair-floor); S54 then closed the
+   strict-open pair-grid side completely and reduced the continuum side to one
+   finite clip reindexer plus seven finite clique DAG replays.
 3. THM-956 (LRCAdaptiveQ.lean, GREEN): Farey separation ⇒ ONE distinct-instant
    carrier per deep component on super-ladder strata (D² < 7·v_top) ⇒ the
    adaptive-q pigeonhole: whenever the window holds more coprime moduli than

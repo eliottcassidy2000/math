@@ -1,11 +1,12 @@
 # THM-954 — Weighted ratio layers bound the continuous LRC(14) pair debt
 
-**Status:** PROVED as an exact replayable finite certificate, with the final
-arithmetic kernel-checked in `TournamentH7/LRCPairRatioLayerArithmetic.lean`.
-The direct Lean replay of the seven certificate DAGs, the Bernoulli covariance
-identity, and the clean-grid discrepancy bridge remain explicit formalization
-tasks.  This theorem does **not** by itself prove the discrete
-`normalizedMass2 >= -13/30` socket.
+**Status:** PROVED as an exact replayable finite certificate.  Lean now checks
+the layer arithmetic, Turan consumer, the top `24/12` path caps, the concrete
+anchored ratio quotient, and the complete strict-open clean-grid discrepancy
+bridge.  The covariance identity is reduced to one finite wrapped-tooth clip
+reindexing, and the seven middle certificate DAGs still require direct Lean
+replay.  Until those two finite tasks land, this theorem does **not** by itself
+prove the discrete `normalizedMass2 >= -13/30` socket.
 
 ## Statement
 
@@ -147,32 +148,42 @@ Using the seven certified clique caps and the two path caps yields
 
 All arithmetic in this last display is proved by Lean.
 
-## Discrete clean-modulus corollary still to formalize
+## Discrete clean-modulus grid bridge formalized
 
 The intended consumer is the exact-support pair mass
-`normalizedMass2 v q`.  The remaining elementary estimate is
+`normalizedMass2 v q`.  The elementary estimate
 
 ```text
 |normalizedMass2(v,q) - C(|v|)|
   <= (24 sum_i |v_i| + 78)/(q-1).
 ```
 
-One pairwise bad-set intersection has at most `|v_i|+|v_j|` circular interval
-components.  Full `q`-grid discrepancy costs at most `2/q` per component, and
-removing the zero grid point costs at most `1/(q-1)` per pair.  Summing over
-the 78 pairs gives the displayed bound.  At
-`q = cleanModulus v 534`, nonzero speeds make this error at most
+is now kernel-checked in `TournamentH7/LRCOpenPairLedger.lean`.  The proof
+constructs the exact rational strict-open comb and its two-pointer pair merge,
+proves its real circle carrier and volume, counts the complete grid exactly,
+and records the distinguished zero atom omitted by the open intervals.  The
+theorems `openPairIntervalLedgersAt_of_nonzero` and
+`rawPairGridDiscrepancyAt_of_nonzero` supply the pairwise and aggregate bounds
+for every nonzero speed family.  At `q = cleanModulus v 534`, the error is at
+most
 
 ```text
 15/(7*534) = 5/1246 < 8270807/2058376320.
 ```
 
-Once that estimate and the covariance identity are connected to the existing
-definitions, THM-954 gives the strict clean-ruler socket
+Consequently
+`normalizedMass2_clean_534_gt_neg_target_of_continuum_floor'` has no geometric
+premise: it needs only the continuous pair floor.  That floor is now reduced by
+`LRCPairCovarianceReindexer.PairOverlapReindexing` to one explicit equality
+between the quadratic tooth-clip sum and the gcd-scaled cyclic overlap ledger.
+The gcd-fiber multiplicity and Bernoulli/Raabe evaluation are already proved;
+only the local wrapped-tooth identity remains.  Together with the seven ratio
+DAG replays, it will give the strict clean-ruler socket
 
 ```text
 normalizedMass2 v (cleanModulus v 534) > -13/30.
 ```
 
-The higher-support signed budget remains separate; no LRC(14) closure is
-claimed here.
+The higher-support signed budget, the valuation-gap-two pair-tower wall, and
+the small-frequency selected-witness branches remain separate; no LRC(14)
+closure is claimed here.

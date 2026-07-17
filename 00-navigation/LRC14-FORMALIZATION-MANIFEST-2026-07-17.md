@@ -875,3 +875,39 @@ survivors can therefore be reassigned by the minimum-owner convention.  On
 interface must retain both the intrinsic surviving boundary and its attributed
 owner; either quotient alone loses information consumed by the signed comb
 ledger.
+
+## S54 addendum — exact pair ledgers and the two finite THM-954 sockets
+
+The strict-open pair-grid bridge is no longer an open formalization item.
+`LRCRationalOpenComb` constructs the exact rational danger teeth and normalized
+pair merge, identifies their real carrier, and proves the circle volume.
+`LRCOpenPairLedger` then proves the exact complete-grid count with the mandatory
+zero atom, the sharp component/endpoint budget, the all-pair discrepancy, and
+the clean-534 consumer.  This is the same strict endpoint technology used by
+the corrected positive-window cluster work, but it does not imply THM-959's
+still-open partition trichotomy.
+
+The continuous pair formula is also no longer an unspecified analytic bridge.
+`LRCB5MergeLength` replaces the linear merge by the quadratic all-clips sum;
+`LRCB5PairOverlapSum` evaluates the target cyclic ledger by the Bernoulli/Raabe
+identity; and `LRCB5DifferenceFibers` proves that the cyclic difference map is
+surjective with exactly gcd-many preimages per class.  Thus the only remaining
+covariance lemma is the local equality between the clips of two possibly split
+boundary teeth and `pairOverlap` at their cyclic start difference, packaged as
+`PairOverlapReindexing`.
+
+For the finite layer certificates, `LRCPairTopClassification` proves the top
+ratio colors `{12,13}` and `{13}` and their actual `24/12` path caps on thirteen
+distinct magnitudes.  `LRCAnchoredCliqueTransfer` and
+`LRCPairRatioQuotient` prove the concrete absolute-speed anchor injection and
+reduce every middle threshold to a finite allowed-ratio clique exclusion.  A
+finite-cover theorem separates envelope enumeration from the seven stored DAG
+replays.  Those seven replays and the wrapped-tooth identity are the exact two
+remaining THM-954 producer sockets.
+
+This completion is deliberately local.  The `(4,4,8,8)` valuation-gap-two
+pair-tower wall still needs phase chronology; selected-witness escape still has
+small-frequency/exact-relation branches; and the dense-core B5 endgame still
+needs the signed support-3/4/5 budget.  The incoming THM-960 scale-six closure
+and LEM-041 frame bounds are compatible structural inputs but do not replace
+any of those three obligations.
