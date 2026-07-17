@@ -1,20 +1,17 @@
-# THM-959 / opus-S339 corrected by codex-S62: block-tower constants.
-# THM-955 gives a <=6-block a safe width in any window; the glue jumps a
-# junction when nextmin * width >= 2.  This script derives the PROVEN
-# junction constant G0 (worst case over block shapes) and verifies the
-# composed tower end-to-end exactly.
+# THM-959 / opus-S339 corrected by codex-S62 and sharpened by direct use of
+# THM-955: block-tower constants.  This script derives the exact source/target
+# junction table G0 and verifies the composed tower end-to-end exactly.
 #
 #   window entering block i: length L_i (starts 1 for the first block)
-#   THM-955 width out: W_i >= [(1-k/7) L_i - 2k/(7 m_i)] / (1 + S_i L_i + 2k)
-#     with S_i = sum of block speeds, m_i = min speed.  For the worst case
-#     write everything in units of M_i = max speed: m_i >= M_i / r (r =
-#     within-block ratio cap), S_i <= k M_i.
-#   glue condition: m_{i+1} * W_i >= 2, i.e. junction G = m_{i+1}/M_i >=
-#     2 / (M_i W_i)  -- so G0 = sup over shapes of 2/(M W).
-# We tabulate 2/(M_i W_i) exactly for k = 1..6, r = 1..13, and entry
-# lengths L in the range produced upstream (with the size-dependent entry
-# invariant m_i * L_i >= l_k), then
-# verify towers at the tabulated G0 exactly.
+#   direct THM-955 width out:
+#     W_i >= [(1-k/7) L_i - k/(7 m_i)] / (1 + k + S_i L_i),
+#     with S_i = sum of block speeds and m_i = min speed.
+#   in scale-free variables l=m_i L_i and rho=M_i/m_i, S_i<=kM_i:
+#     M_i W_i >= rho[(1-k/7)l-k/7]/[1+k+k rho l].
+# This is increasing in l and rho once its numerator is positive, so rho=1
+# is the uniform worst case and no within-block ratio cap is needed.
+# A source block of size s supplies M_i W_i>=mu_s.  A target block of size t
+# requires m_{i+1} W_i>=ell_t, hence G0(s,t)=ell_t/mu_s.
 from fractions import Fraction
 from math import floor
 import random
@@ -36,33 +33,41 @@ def subtract_comb(V, x):
         if cur < b: out.append((cur, b))
     return out
 
-print("THM-959 CORRECTED PRESCRIBED BLOCK-TOWER REDUCTION")
-print("(1) THE PROVEN JUNCTION CONSTANT (worst 2/(M*W) over shapes):")
-# entry window: the glue guarantees m_i * L_i >= 2 at entry; scale-free:
-# set l = m * L (>= 2), rho = M/m (<= 13 by compression within a block).
-# W = [(1-k/7) L - 2k/(7m)] / (1 + S L + 2k), S <= k M:
-# M*W = [(1-k/7) l rho - 2k rho/7] / (1 + k rho l + 2k)   [all over m-units]
-# For fixed k,l the displayed M*W lower bound is INCREASING in rho, since
-# it has the form a*rho/(c+d*rho).  Thus rho=1 is the uniform worst case;
-# the original rho=13 substitution was backwards.  No within-block upper
-# ratio cap is needed for this estimate.
-# entry length requirement: (1-k/7) l > 2k/7  <=>  l > 2k/(7-k); take
-# l_k = max(2, 4k/(7-k)) (factor-2 margin), rho = 1 worst:
-lk = {k: max(F(2), F(4*k, 7-k)) for k in range(1, 7)}
+print("THM-959 SHARPENED CORRECTED PRESCRIBED BLOCK-TOWER REDUCTION")
+print("(1) DIRECT-THM-955 ENTRY/OUTPUT CONSTANTS:")
+# Rational entry lengths chosen near the exact minimizers of ell/mu(ell).
+# For k=6 the real minimizer is 6+sqrt(43), with cost about 1103.825;
+# ell_6=13 gives the exact near-optimal integer cost 1105.
+lk = {
+    1: F(3, 4),
+    2: F(5, 4),
+    3: F(2),
+    4: F(3),
+    5: F(6),
+    6: F(13),
+}
 MW = {}
 for k in range(1, 7):
     l, rho = lk[k], F(1)
-    num = (1 - F(k,7)) * l * rho - F(2*k,7) * rho
-    den = 1 + k * rho * l + 2 * k
+    num = rho * ((1 - F(k, 7)) * l - F(k, 7))
+    den = 1 + k + k * rho * l
     MW[k] = num / den
-    print(f"   k={k}: entry l_k = {lk[k]}, M*W >= {MW[k]} = {float(MW[k]):.5f}")
+    assert num > 0
+    # The full-circle first-block floor dominates the propagated output floor.
+    first_floor = F((7 - k) * k, 7 * (1 + k * k))
+    assert first_floor >= MW[k]
+    print(f"   k={k}: ell_k={lk[k]}, mu_k={MW[k]} = {float(MW[k]):.6f}, "
+          f"first-block floor={first_floor}")
 # junction table: G0[src][tgt] = l_tgt / (M*W)[src]
-print("   G0(src k -> tgt k) table (uniform worst case, rho = 1):")
+print("   exact G0(src k -> tgt k)=ell_tgt/mu_src table:")
 G0 = {}
 for ks in range(1, 7):
     G0[ks] = {kt: lk[kt] / MW[ks] for kt in range(1, 7)}
     print("     src k=%d: " % ks + "  ".join(
-        f"->k{kt}:{float(G0[ks][kt]):9.1f}" for kt in range(1, 7)))
+        f"->k{kt}:{str(G0[ks][kt]):>7}" for kt in range(1, 7)))
+worst = max((G0[s][t], s, t) for s in range(1, 7) for t in range(1, 7))
+assert worst == (F(1105), 6, 6)
+print(f"   uniform maximum: G0({worst[1]},{worst[2]})={worst[0]}")
 print()
 print("(2) END-TO-END exact verification: towers with proven-G0 junctions:")
 random.seed(339)
@@ -109,6 +114,6 @@ for _ in range(5):
           f"floor bound = {bound}, holds: {npts >= bound}")
 print()
 print("REDUCTION: residual families with all blocks <= 6 at G0 junctions are")
-print("LONELY (THM-955 + glue, proven constants). The dense core is exactly")
+print("LONELY (direct THM-955 induction, proven constants). The dense core is exactly")
 print("packets admitting no such prescribed <=6-block partition; identifying")
 print("that complement with one >=7 comparable block needs a separate lemma.")
