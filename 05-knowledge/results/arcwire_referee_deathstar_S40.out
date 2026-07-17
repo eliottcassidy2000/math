@@ -1,0 +1,3 @@
+witness bound: PASS; pair constraint: PASS
+c=3 formula N3 = 2 floor((Q-1)/3), Q<200: PASS
+B5 = live - deepSix on 100 capped families: PASS

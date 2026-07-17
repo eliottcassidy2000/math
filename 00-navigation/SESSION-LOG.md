@@ -1,3 +1,16 @@
+## death-star-2026-07-17-S40 -- THM-947 THE ARC WIRE (Lean kernel-pure): the discrete-Bonferroni and killer/fragmentation arcs now speak ONE LANGUAGE (bad_at_witness: the band IS the bad arc at rationals, exact integers; coverageCapped_iff_no_seven) -- and 7-fold overlap forces 21 integer near-proportionality constraints 14q|v_i n_j - v_j n_i| < (|v_i|+|v_j|)q, so CoverageCapped(6) supply is now a RIGIDITY question the trap already bites -- plus the finish-up batch (c=3 dilate exact, cap-5 identity, S37-S40 audit)
+
+Prompt (owner): supply CoverageCapped(6) from the killer/fragmentation arc and wire the two arcs, synthesize a handful more remaining tasks.
+
+(A) THE WIRE (LRCArcWire.lean): bad_at_witness -- every band-failing runner carries a canonical integer witness with 14|v p - n q| < q: the discrete band IS the killer arc's ||v t|| < 1/14 at t = p/q, in exact integers (no reals); coverageCapped_iff_no_seven -- the cap = no rational meets seven bad arcs. seven_overlap_pair_constraint -- two simultaneous bads force 14q|v_i n_j - v_j n_i| < (|v_i|+|v_j|)q; seven force 21 such. HONEST STATUS of the supply: the cap does NOT follow unconditionally (at q > 14 max|v|, p=1 makes ALL runners bad -- the near-zero catastrophe), so the supply is a q-WINDOW + rigidity statement: on trapped strata the small-witness constraints are THM-939's forbidden low-mass relations; the residual supply question is now finite constraint-system rigidity, not analysis.
+
+(B) THE BATCH: dilateTripleCount_eq -- N3(Q) = 2 floor((Q-1)/3) at 14|q (the ratio-3 ladder's own step price; N_c = 2 floor((Q-1)/c) now proved c = 2, 3); B5_eq_live_capped5 -- B5 = liveCount identically on cap-5 strata; S40AxiomAudit -- the S37-S40 arc under one audit, all standard trio.
+
+(C) FLEET: collision THM-944/HYP-7185 flagged to kps (mine first-pushed S38/S39; suggested their T_s -> THM-946/HYP-7187 -- THM-946 left reserved for them); their UNIVERSAL EXHAUSTION (middle stratum empty at every scale) is the week's biggest news and composes with this wire: their BONF5>0 branch + my capped identities = the closing shape.
+
+Referee (arcwire_referee_deathstar_S40.out): witness bound PASS (20k), pair constraint PASS (20k), c=3 formula PASS (Q < 200), cap identity PASS (100 capped families). FILES: THM-947, HYP-7186 confirmed, LRCArcWire.lean, LRCDeviationPairs.lean +c3, LRCMomentCertificates.lean +cap5, S40AxiomAudit.lean, referee .out, root imports. NEXT: (i) the q-window lemma (q <= 14 min|v| kills the near-zero catastrophe -- quantify the usable window); (ii) 7-solvable constraint-system rigidity on trapped strata (finite; the trap kills small-witness systems); (iii) N_c general c; (iv) kps's exhaustion Lean rendering x my capped identities = the composition to watch. death-star; S40.
+
+---
 ## death-star-2026-07-17-S39 -- THM-945 THE OPTIMAL MOMENT CERTIFICATE + THE MOMENT WALL (Lean kernel-pure): the tail gap closes 328x -> 1.077x on the coverage-capped stratum (30 B5 >= 3(q-1) - 3S1 + 2S2 - 3S4, certificate tight at c = 1,3,4,6), and the remainder is PROVABLY not moment-closable -- the legal witness histogram on c in {0,1,3,13} matches the equidistributed moments with ledger -342/2401: THE COVERAGE CAP IS EXACTLY WHAT CLOSURE REQUIRES
 
 Prompt (owner): bound tail3/tail5 on explicit strata and close the ~40x gap.

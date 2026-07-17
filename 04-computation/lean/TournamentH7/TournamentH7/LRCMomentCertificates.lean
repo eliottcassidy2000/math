@@ -178,11 +178,27 @@ theorem B5_eq_live_sub_deepSix (v : Fin 13 → ℤ) (q : ℕ)
     norm_cast
   · rw [Finset.sum_boole]
 
+/-- **The cap-5 identity**: on the `bandCount ≤ 5` stratum, `B5 = liveCount`
+identically — the quintic certificate IS the live count; the race is pure census. -/
+theorem B5_eq_live_capped5 (v : Fin 13 → ℤ) (q : ℕ)
+    (hcap : CoverageCapped v q 5) :
+    B5 v q = (liveCount v q : ℤ) := by
+  have hcap6 : CoverageCapped v q 6 := fun p hp => le_trans (hcap p hp) (by omega)
+  rw [B5_eq_live_sub_deepSix v q hcap6]
+  have hzero : ((Finset.Ioo 0 q).filter fun p => bandCount v q p = 6) = ∅ := by
+    apply Finset.filter_eq_empty_iff.mpr
+    intro p hp
+    have := hcap p hp
+    omega
+  rw [hzero]
+  simp
+
 /-! ## Axiom audit -/
 #print axioms capped_cert_pointwise
 #print axioms B5_capped_floor
 #print axioms moment_wall
 #print axioms B5_eq_live_sub_deepSix
+#print axioms B5_eq_live_capped5
 
 end LRC14Concrete
 end LonelyRunner

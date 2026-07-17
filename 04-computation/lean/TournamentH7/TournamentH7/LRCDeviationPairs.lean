@@ -318,11 +318,72 @@ theorem jointFail_dilate_pair_eq (v : Fin 13 → ℤ) (Q : ℕ) (i j : Fin 13)
     · rw [hfp]
       exact hrcond
 
+/-- **The residue-level triple-dilate count**: at `q = 14Q`, the nonzero residues
+with both `s` and `(3s) mod q` outside the safe band number exactly `2·((Q−1)/3)` —
+the ratio-3 ladder's own exact step price (conjecturally `N_c = 2⌊(Q−1)/c⌋`). -/
+theorem dilateTripleCount_eq (Q : ℕ) (hQ : 1 ≤ Q) :
+    ((Finset.Ioo 0 (14 * Q)).filter fun s =>
+      ¬ (14 * Q ≤ 14 * s ∧ 14 * s ≤ 13 * (14 * Q)) ∧
+      ¬ (14 * Q ≤ 14 * ((3 * s) % (14 * Q)) ∧
+          14 * ((3 * s) % (14 * Q)) ≤ 13 * (14 * Q))).card
+      = 2 * ((Q - 1) / 3) := by
+  have hchar : (Finset.Ioo 0 (14 * Q)).filter (fun s =>
+      ¬ (14 * Q ≤ 14 * s ∧ 14 * s ≤ 13 * (14 * Q)) ∧
+      ¬ (14 * Q ≤ 14 * ((3 * s) % (14 * Q)) ∧
+          14 * ((3 * s) % (14 * Q)) ≤ 13 * (14 * Q)))
+      = Finset.Icc 1 ((Q - 1) / 3) ∪ Finset.Icc (41 * Q / 3 + 1) (14 * Q - 1) := by
+    ext s
+    simp only [Finset.mem_filter, Finset.mem_Ioo, Finset.mem_union, Finset.mem_Icc]
+    constructor
+    · rintro ⟨⟨hs0, hsq⟩, hout1, hout2⟩
+      by_cases hlow : s < Q
+      · left
+        have hmod : (3 * s) % (14 * Q) = 3 * s := Nat.mod_eq_of_lt (by omega)
+        rw [hmod] at hout2
+        omega
+      · right
+        have hhigh : 13 * Q < s := by omega
+        have h28 : 28 * Q ≤ 3 * s := by omega
+        have hmod : (3 * s) % (14 * Q) = 3 * s - 28 * Q := by
+          rw [Nat.mod_eq_sub_mod (by omega : 14 * Q ≤ 3 * s),
+            Nat.mod_eq_sub_mod (by omega : 14 * Q ≤ 3 * s - 14 * Q)]
+          have hsub : 3 * s - 14 * Q - 14 * Q = 3 * s - 28 * Q := by omega
+          rw [hsub]
+          exact Nat.mod_eq_of_lt (by omega)
+        rw [hmod] at hout2
+        omega
+    · intro h
+      rcases h with ⟨h1, h2⟩ | ⟨h1, h2⟩
+      · have hs0 : 0 < s := by omega
+        have hlow : s < Q := by omega
+        have hmod : (3 * s) % (14 * Q) = 3 * s := Nat.mod_eq_of_lt (by omega)
+        refine ⟨⟨hs0, by omega⟩, by omega, ?_⟩
+        rw [hmod]
+        omega
+      · have hhigh : 13 * Q < s := by omega
+        have hmod : (3 * s) % (14 * Q) = 3 * s - 28 * Q := by
+          rw [Nat.mod_eq_sub_mod (by omega : 14 * Q ≤ 3 * s),
+            Nat.mod_eq_sub_mod (by omega : 14 * Q ≤ 3 * s - 14 * Q)]
+          have hsub : 3 * s - 14 * Q - 14 * Q = 3 * s - 28 * Q := by omega
+          rw [hsub]
+          exact Nat.mod_eq_of_lt (by omega)
+        refine ⟨⟨by omega, by omega⟩, by omega, ?_⟩
+        rw [hmod]
+        omega
+  rw [hchar, Finset.card_union_of_disjoint]
+  · rw [Nat.card_Icc, Nat.card_Icc]
+    omega
+  · rw [Finset.disjoint_left]
+    intro s hs hs2
+    rw [Finset.mem_Icc] at hs hs2
+    omega
+
 /-! ## Axiom audit -/
 #print axioms jointFail_anti
 #print axioms jointFail_pair_lower
 #print axioms dilatePairCount_eq
 #print axioms jointFail_dilate_pair_eq
+#print axioms dilateTripleCount_eq
 
 end LRC14Concrete
 end LonelyRunner
