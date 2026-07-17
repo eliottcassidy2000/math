@@ -1,5 +1,6 @@
 import TournamentH7.LRCOpenPairLedger
 import TournamentH7.LRCB5PairOverlapSum
+import TournamentH7.LRCB5CombReindexing
 import TournamentH7.LRCPairCovarianceKernel
 
 /-!
@@ -12,7 +13,7 @@ namespace LonelyRunner
 namespace LRCPairCovarianceReindexer
 
 open RatIntervals LRCRationalOpenComb
-open LRCOpenPairLedger LRCB5PairOverlapSum
+open LRCOpenPairLedger LRCB5PairOverlapSum LRCB5CombReindexing
 open LRCB5PairGridBridge LRCPairCovarianceKernel
 
 /-- The sole finite geometric identity left in the pair covariance producer. -/
@@ -21,6 +22,15 @@ def PairOverlapReindexing (first second : ℤ) : Prop :=
     scaledPairOverlapLedger (Nat.gcd first.natAbs second.natAbs)
       (first.natAbs / Nat.gcd first.natAbs second.natAbs)
       (second.natAbs / Nat.gcd first.natAbs second.natAbs)
+
+/-- The finite comb reindexing premise holds for every pair of nonzero integer
+speeds. -/
+theorem pairOverlapReindexing
+    (first second : ℤ) (hfirst : first ≠ 0) (hsecond : second ≠ 0) :
+    PairOverlapReindexing first second := by
+  exact cast_length_ratOpenPairRegion_eq_scaledPairOverlapLedger
+    first.natAbs second.natAbs
+    (Int.natAbs_pos.mpr hfirst) (Int.natAbs_pos.mpr hsecond)
 
 /-- Once the explicit finite clip-sum reindexer is supplied, the circle pair
 correlation is exactly the rational Bernoulli kernel. -/
@@ -36,6 +46,17 @@ theorem pairContinuumCorrelation_sub_eq_pairKernel_of_reindexing
     (Int.natAbs_pos.mpr hfirst) (Int.natAbs_pos.mpr hsecond) hreindex]
   rw [pairKernel_cast]
   rfl
+
+/-- The circle pair correlation is unconditionally the rational Bernoulli
+kernel for two nonzero speeds. -/
+theorem pairContinuumCorrelation_sub_eq_pairKernel
+    (v : Fin 13 → ℤ) (first second : Fin 13)
+    (hfirst : v first ≠ 0) (hsecond : v second ≠ 0) :
+    pairContinuumCorrelation v {first, second} - 1 / 49 =
+      (pairKernel (v first) (v second) : ℝ) := by
+  exact pairContinuumCorrelation_sub_eq_pairKernel_of_reindexing
+    v first second hfirst hsecond
+      (pairOverlapReindexing (v first) (v second) hfirst hsecond)
 
 /-- Family-level form matching the producer premise of
 `correlation_lower_of_pairKernel_identity`. -/
@@ -53,8 +74,21 @@ theorem pairKernel_identity_of_reindexing
   exact pairContinuumCorrelation_sub_eq_pairKernel_of_reindexing
     v first second (hv first) (hv second) (hreindex first second hneq)
 
+/-- Family-level exact pair covariance identity with no geometric premise. -/
+theorem pairKernel_identity
+    (v : Fin 13 → ℤ) (hv : ∀ index, v index ≠ 0) :
+    ∀ first second, first ≠ second →
+      pairContinuumCorrelation v {first, second} - 1 / 49 =
+        (pairKernel (v first) (v second) : ℝ) := by
+  intro first second _hneq
+  exact pairContinuumCorrelation_sub_eq_pairKernel
+    v first second (hv first) (hv second)
+
+#print axioms pairOverlapReindexing
 #print axioms pairContinuumCorrelation_sub_eq_pairKernel_of_reindexing
+#print axioms pairContinuumCorrelation_sub_eq_pairKernel
 #print axioms pairKernel_identity_of_reindexing
+#print axioms pairKernel_identity
 
 end LRCPairCovarianceReindexer
 end LonelyRunner
