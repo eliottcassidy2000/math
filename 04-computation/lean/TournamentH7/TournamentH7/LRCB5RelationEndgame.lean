@@ -3,15 +3,17 @@ import TournamentH7.LRCB5NormalizedBridge
 import TournamentH7.LRCMomentCertificates
 import TournamentH7.LRCArcWire
 import TournamentH7.LRCDeepCount
+import TournamentH7.LRCB5DeviationBudget
 
 /-!
 # Relation-budget certificates feed the chain-dense LRC(14) endgame
 
 This module is the formal consumer for THM-935.  A certificate supplies a
-positive modulus, exact-support relation masses, the exact identity between
-their signed model and the concrete integer `B5`, and the sharp one-sided
-horizon-thirty tail split.  The checked budget then gives `B5 > 0`, which feeds
-the chain-dense endgame without any additional analytic assumption.
+modulus with at least one sampled phase, exact-support relation masses, the
+exact `(q-1)`-scaled identity between their signed model and the concrete
+integer `B5`, and the sharp one-sided horizon-thirty tail split.  The checked
+budget then gives `B5 > 0`, which feeds the chain-dense endgame without any
+additional analytic assumption.
 -/
 
 namespace LonelyRunner
@@ -160,6 +162,24 @@ theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
   rw [LRC14Concrete.B5_eq_live_sub_deepSix v
     certificate.q certificate.capped]
   omega
+/-- A nonvacuous certificate stated directly in THM-940's concrete subset-
+deviation ledger.  Unlike the relation-mass interface above, every term here
+is defined from `jointFail`; favorable signed deviation is retained instead of
+being charged through an absolute value. -/
+structure B5DeviationBudgetCertificate (v : Fin 13 → ℤ) where
+  q : ℕ
+  one_lt_q : 1 < q
+  deviation_surplus :
+    -(((q : ℚ) - 1) * (2052 / 16807)) <
+      LRC14Concrete.signedDeviationLedger v q
+
+/-- THM-940 turns the concrete deviation inequality into integer `B5`
+positivity without a relation-mass normalization or singular-series bridge. -/
+theorem B5DeviationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
+    (certificate : B5DeviationBudgetCertificate v) :
+    0 < LRC14Concrete.B5 v certificate.q :=
+  LRC14Concrete.B5_pos_of_signedDeviationLedger_lower v certificate.q
+    certificate.deviation_surplus
 
 /-- Unconditional THM-950 census certificate.  No coverage cap is assumed:
 all multipliers of depth at least six are charged at the sharp universal
@@ -262,6 +282,27 @@ def DenseCoreCensusB5Supply : Prop :=
       ChainDenseCore (fun i => |v (σ i)|)) →
     Nonempty (CensusB5Certificate v)
 
+/- The direct THM-940 alternative on the same primitive, dissociated,
+chain-dense core.  It asks only for the literal signed subset-deviation
+surplus, with no relation-mass identification. -/
+def DenseCoreDeviationBudgetSupply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.tupleGcd v = 1 →
+    LRC14.CoveringFamily v → GapFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
+    (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13,
+      (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ),
+      (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1 / 13 - 1 / 14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
+    (∀ g : ℤ, 2 ≤ g →
+      nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i => |v (σ i)|) ∧
+      ChainDenseCore (fun i => |v (σ i)|)) →
+    Nonempty (B5DeviationBudgetCertificate v)
+
 /-- The structured relation-budget supplier discharges the raw positive-B5
 supplier used by `LRCDenseCoreEndgame`. -/
 theorem denseCoreDissociatedB5Supply_of_relationBudget
@@ -303,6 +344,17 @@ theorem denseCoreDissociatedB5Supply_of_census
   obtain ⟨certificate⟩ :=
     hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   exact ⟨certificate.q, certificate.q_pos, certificate.b5_pos⟩
+
+/-- The literal signed-deviation supply feeds the same positive-B5 consumer
+without passing through normalized relation coordinates. -/
+theorem denseCoreDissociatedB5Supply_of_deviationBudget
+    (hsupply : DenseCoreDeviationBudgetSupply) :
+    DenseCoreDissociatedB5Supply := by
+  intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  obtain ⟨certificate⟩ :=
+    hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
+  exact ⟨certificate.q, lt_trans Nat.zero_lt_one certificate.one_lt_q,
+    certificate.b5_pos⟩
 
 /-- **THM-935-shaped current capstone.**  The sanctioned LRC(≤13) citation,
 the sharply reduced `q=2,3`/two-adic exceptional dispatch, and relation-budget
@@ -352,6 +404,13 @@ theorem lrc14_from_twoThree_detuned_and_censusB5
   lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
     (denseCoreDissociatedB5Supply_of_census hsupply)
 
+/-- Direct THM-940 capstone using the signed subset-deviation surplus. -/
+theorem lrc14_from_twoThree_detuned_and_deviationBudget
+    (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
+    (hsupply : DenseCoreDeviationBudgetSupply) : LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite hdeep
+    (denseCoreDissociatedB5Supply_of_deviationBudget hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms B5RelationBudgetCertificate.b5_pos
@@ -370,6 +429,9 @@ theorem lrc14_from_twoThree_detuned_and_censusB5
 #print axioms lrc14_from_twoThree_detuned_and_normalizedRelationBudget
 #print axioms lrc14_from_twoThree_detuned_and_coverageCappedB5
 #print axioms lrc14_from_twoThree_detuned_and_censusB5
+#print axioms B5DeviationBudgetCertificate.b5_pos
+#print axioms denseCoreDissociatedB5Supply_of_deviationBudget
+#print axioms lrc14_from_twoThree_detuned_and_deviationBudget
 
 end LRC14Grand
 end LonelyRunner

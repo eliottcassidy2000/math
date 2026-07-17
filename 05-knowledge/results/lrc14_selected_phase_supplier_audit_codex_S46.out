@@ -1,0 +1,15 @@
+LRC14 SELECTED-PHASE SUPPLIER EXACT-CELL AUDIT
+============================================================================
+harmonic_bank=C([1,11],10)=11 pattern_bank=473 delta_max=15 g_max=10
+cases=5203/5203 by_pattern={'333': 1320, '244': 1232, '22q': 2651}
+counterexamples=0 manifest_sha256=1f1f310c7dd9f79036c17b8b1222bf876ba62884e8a84e9dd1289f9699c3d4a2
+minimum_positive_cell_measure=97651/2522520 at A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11), pattern=22q, g=2, delta=(3, 13, 1), witness=15/154, branch=1
+VERDICT: NO COUNTEREXAMPLE ON THE STATED FINITE BANK; NOT A UNIFORM PROOF
+Tournament Analysis: not promoted; carrier is safe-cell/branch incidence hypergraph
+kept: exact joint witness predicate; destroyed by tournament: cell-branch incidence
+challenged vertices: proof obligations and activation cells, not runners/residue rows
+gap2_equality_obstruction=G=8,u=1/6,rows=((178, (1, 5)), (142, (0, 4)), (33, (2, 3)), (39, (6, 7))),partition=True
+adversarial_anchor=244,A=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13),g=4,delta=(34, 13, 47),measure=13042/423423,passing_endpoints=28,witness=1/14,branch=0,cells=289
+adversarial_anchor=333,A=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13),g=3,delta=(4, 46, 50),measure=451681/14504490,passing_endpoints=28,witness=1/14,branch=0,cells=333
+adversarial_anchor=22q,A=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13),g=6,delta=(39, 51, 2),measure=18103/504504,passing_endpoints=26,witness=1/14,branch=2,cells=197
+source_sha256=fd22e37a44d44cf797d044174a552f661606a0ab639d2e1a1a0a0c8cefd575da

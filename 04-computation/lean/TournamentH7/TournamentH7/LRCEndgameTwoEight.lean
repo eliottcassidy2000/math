@@ -1102,6 +1102,24 @@ theorem lrc14_from_selectedWitnessSupplies_and_relationBudget
     (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
       hpairs h22 h244 h333) hsupply
 
+/-- Concrete sharp capstone.  This version removes the analytic relation-mass
+normalization socket entirely: the dense core supplies THM-940's finite
+subset-deviation inequality, while the exceptional side supplies only the
+pair tower and the three genuinely joint selected-phase statements. -/
+theorem lrc14_from_selectedWitnessSupplies_and_deviationBudget
+    (cite : LRCUpTo13)
+    (hpairs : NonterminatingPairTowerSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreDeviationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_twoThree_detuned_and_denseCore_dissociated_B5 cite
+    (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite
+      (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+        hpairs h22 h244 h333))
+    (denseCoreDissociatedB5Supply_of_deviationBudget hsupply)
+
 /-! ## Axiom audit -/
 
 #print axioms detunedBadBranches_pair_modEq_of_q_eight_of_modEq_two
@@ -1121,6 +1139,7 @@ theorem lrc14_from_selectedWitnessSupplies_and_relationBudget
 #print axioms lrc14_from_finalResidues_and_relationBudget
 #print axioms deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
 #print axioms lrc14_from_selectedWitnessSupplies_and_relationBudget
+#print axioms lrc14_from_selectedWitnessSupplies_and_deviationBudget
 
 end
 end LRC14Grand

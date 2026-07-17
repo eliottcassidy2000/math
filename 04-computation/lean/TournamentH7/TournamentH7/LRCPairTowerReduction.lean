@@ -1059,6 +1059,34 @@ theorem pairTowerPhaseSelector_of_cite_and_commonWall
     v g i₄a i₄b center (pairTowerCitationRadius coreCard B)
       dangerRadius moment frequency hintervalRadius hdanger0 hdangerHalf
       hfrequency hinterval hfailureWall hwidth
+/-- Concrete pair-reduced capstone: the singleton first lift is `(2,4,4)`,
+the remaining pair hypothesis begins at four doubled-level nonmultiples, and
+the dense core supplies THM-940's literal subset-deviation inequality. -/
+theorem lrc14_from_fourOrMorePairLift_and_selectedWitnessSupplies_and_deviationBudget
+    (cite : LRCUpTo13)
+    (hmany : FourOrMorePairLiftSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreDeviationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_selectedWitnessSupplies_and_deviationBudget cite
+    (nonterminatingPairTowerSupply_of_fourOrMore_and_twoFourFour hmany h244)
+    h22 h244 h333 hsupply
+
+/-- Sharpest concrete first-sheet capstone, stated in the actual number of
+coordinates crossing the `g`/`2g` divisibility wall. -/
+theorem lrc14_from_manyLiftFailure_and_selectedWitnessSupplies_and_deviationBudget
+    (cite : LRCUpTo13)
+    (hmany : ManyLiftFailurePairTowerSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreDeviationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_selectedWitnessSupplies_and_deviationBudget cite
+    (nonterminatingPairTowerSupply_of_manyLiftFailure_and_twoFourFour hmany h244)
+    h22 h244 h333 hsupply
 
 /-! ## Axiom audit -/
 
@@ -1083,6 +1111,8 @@ theorem pairTowerPhaseSelector_of_cite_and_commonWall
 #print axioms exists_pairTowerCoreGoodAt_sharpInterval_of_cite
 #print axioms pairTowerPhaseSelector_of_coreInterval_and_commonWall
 #print axioms pairTowerPhaseSelector_of_cite_and_commonWall
+#print axioms lrc14_from_fourOrMorePairLift_and_selectedWitnessSupplies_and_deviationBudget
+#print axioms lrc14_from_manyLiftFailure_and_selectedWitnessSupplies_and_deviationBudget
 
 end LRC14Grand
 end LonelyRunner

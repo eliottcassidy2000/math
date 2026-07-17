@@ -471,3 +471,92 @@ an elimination-order tournament is found.
     full-column theorem is finite Z_7^6 combinatorics; the antisymmetry law
     is one reflection bijection. Each cluster instance is a finite exact
     check (Fractions arithmetic -> rational decide).
+
+## Landed addendum — sharp residual sockets and the first valuation-gap leaf (codex-S46)
+
+The proof-facing dense-core interface is now available in three rigorously
+distinguished forms.
+
+1. `B5RelationBudgetCertificate` is the original analytic total-model socket,
+   with the corrected scale `B5=(q-1)·relationModel` and the signed H=30
+   budget.
+2. `B5DeviationBudgetCertificate` is stated entirely in THM-940's concrete
+   `jointFail` ledger.  It uses the sharp one-sided condition
+   `-(q-1)·2052/16807 < signedDeviationLedger`, so favorable deviation is not
+   charged through an absolute value.  The capstone
+   `lrc14_from_selectedWitnessSupplies_and_deviationBudget` therefore contains
+   no hidden relation/singular-series identification.
+3. `B5NormalizedRelationDeviationBridge` is the honest normalized *discrete*
+   adapter.  It identifies the singleton, pair, triple, quadruple, and
+   quintuple deviation layers separately; its explicit `singletonDefect` is
+   exactly the support-one contribution.  The signed H=30 estimate is applied
+   to `harmfulHigherContribution-singletonDefect`, so no arbitrary mass can
+   silently absorb the missing term.  These masses are discrete layer
+   coordinates, not yet THM-935's continuous Fourier masses: a genuine
+   continuous-to-finite identification must add per-layer or aggregate
+   quadrature error as a separate theorem and budget it explicitly.
+
+S45 proved `selectedWitness_iff_exists_lonely`: on a fixed three-row
+decomposition the selected witness is exactly the original LRC conclusion,
+not a weaker lemma.  The new Props
+`ResidualTwoTwoSelectedWitnessSupply`,
+`ResidualTwoFourFourSelectedWitnessSupply`, and
+`ResidualUniformThreeSelectedWitnessSupply` expose the `¬genericCount`
+hypothesis at the point where the endgame consumes it.  This is useful proof
+normalization, but not a smaller mathematical frontier: the `(2,2,q)`,
+`(2,4,4)`, and `(3,3,3)` denominator patterns already force the bad-count sum
+to be at least `g`, hence force `¬genericCount`.  Both implication directions
+are formalized, so the residual and all-level supplier triples are equivalent.
+Their relation, direct-deviation, and normalized-budget capstones are alternate
+kernel-facing presentations of the same selected-phase obligation.
+
+The pair tower has its first genuinely new leaf.  `LRCPairTowerValuation`
+proves a finite-detuned-set union theorem for arbitrary `D`, using the
+`LRCUpTo13` citation only on the quotient complement.  At lift height three,
+two minimum-valuation harmonic rows and the original pair have denominators
+`(8,8,16,16)` and exact debt
+`2·(2/8)+2·(3/16)=7/8`; the factorized theorem
+`lonely14_of_pairTower_two_min_gap_three` closes this valuation-gap subcase.
+One minimum row is the exact `(2,4,4)` equality wall and is routed to the
+residual selected-phase supplier.  Two minimum rows with only a two-level gap
+also attain equality: the exact fixture at `G=8,u=1/6` partitions all eight
+branches.  Thus the next pair theorem must exploit phase selection/overlap,
+not another raw union bound.  The factorized gap-three family is now named
+`PairTowerTwoMinGapThreeLeaf`, proved outright, and removed from
+`ManyLiftFailureBeyondGapThreeSupply`; it is no longer merely a disconnected
+lemma outside the principal capstone.  `LRCPairTowerQuietLift` then derives
+this factorization from the intrinsic tower data: exactly two first-wall
+failures followed by termination at the `2g/4g` walls force all other rows to
+be divisible by `8g` and force odd quotients on the four exceptional rows.
+That genuine quiet-lift subfamily is removed from
+`ManyLiftFailureBeyondQuietLiftSupply`.
+
+The incoming THM-944 race scoreboard is now connected to the same endgame by
+`LRCB5RaceEndgame`.  `B5RaceTailCertificate` asks only for actual upper bounds
+on the support-three and support-five deviation sums and the strict positivity
+of the resulting explicit rational scoreboard.  The singleton sign and the
+support-two/support-four floors are theorems.  Consequently this scoreboard
+certificate exposes exactly two odd-tail inequalities; it does not rename
+them as an abstract `B5 > 0` supply.  The incoming clean-modulus depth bridge
+and cap-six census remain sharper complementary dense-core routes, while the
+corrected relation-tail program retains a structured-relation branch.
+
+The S46 exact-cell audit exhausts `5,203` corrected selected-phase instances
+(`1,320` uniform-q3, `1,232` `(2,4,4)`, `2,651` `(2,2,q)`) with exact rational
+endpoints and finds no counterexample; the minimum positive cell measure is
+`97651/2522520`.  This is finite evidence only.  The audit explicitly records
+that the predicate-preserving carrier is safe-cell/branch incidence, a
+bipartite hypergraph; a runner/residue tournament destroys the existential
+intersection needed by the proof.
+
+The audit also exposed uniform theorems, independently subsumed by the incoming
+`LRCSelectedWitnessTwoTwo`.  For `(2,2,q)` with third reduced denominator
+`q≥3`, failure is equivalent to the two q2 rows being nonempty and disjoint
+(opposite parity); the third row is irrelevant because its universal
+bad-count is strictly below `g/2`.  In the all-q2 variant, failure is equivalent
+to *some pair* of the three nonempty rows occupying opposite parity classes;
+if no pair is opposite, every nonempty row is the same half-circle and the
+other parity class supplies a common good branch.  Thus the local phase
+geometry of every `(2,2,q)` pattern is completely classified.  What remains
+globally is selecting a harmonic-good phase that avoids these named opposition
+events, not solving an unstructured three-row incidence problem.

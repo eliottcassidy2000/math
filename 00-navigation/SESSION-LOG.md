@@ -224,6 +224,65 @@ to wide-block gap-free cores = the covering program's exact regime (routes A/THM
 
 FILES: LRCLacunaryNest.lean (sorry-free), THM-928(A'), nested_gap_verify +
 cluster_gap_verify scripts/outs, HYP-7190 resolved. opus; S336.
+## codex-2026-07-17-S46 -- COMPLETE LOCAL `(2,2,q)` OPPOSITION GEOMETRY; GAP-THREE PAIR LEAF REMOVED; THM-944 ODD-TAIL ENDGAME WIRED
+
+Prompt (owner): continue the LRC(14) closeout, pull often, adjust targets, and
+finish as much remaining mathematics as possible.
+
+This session replaced three opaque edges of the formal frontier by exact
+objects.  First, the local `(2,2,q)` classification developed here was
+subsumed on rebase by the stronger incoming `LRCSelectedWitnessTwoTwo`.  For
+`q>=3`, failure is exactly opposition of the two
+q-two rows; the third row is too small to matter.  For the all-q-two case,
+failure is exactly the existence of an opposite pair among the three rows.  If
+no pair is opposite, all nonempty rows coincide with one parity class and the
+other class is a common good branch.  The useful carrier is therefore the
+three-row opposition graph with literal branch neighborhoods, not a tournament
+on runners; orienting its edges destroys the parity class needed by the proof.
+
+Second, `LRCPairTowerValuation` proves an arbitrary finite-detuned union
+consumer and the exact dyadic debt law.  The `(8,8,16,16)` two-minimum,
+valuation-gap-three leaf has debt `7/8` and is now a named
+`PairTowerTwoMinGapThreeLeaf`; `ManyLiftFailureBeyondGapThreeSupply` removes it
+from the remaining pair hypothesis and a capstone reinserts the proved leaf.
+`LRCPairTowerQuietLift` goes further: from exactly two fresh first-wall rows
+and termination at the next two doubled moduli it extracts the odd quotients,
+the gcd-one mod-8/mod-16 factors, and the `8g`-divisible tail, then invokes the
+gap-three leaf.  `ManyLiftFailureBeyondQuietLiftSupply` deletes this intrinsic
+tower subfamily from the remaining hypothesis.
+The gap-two `(4,4,8,8)` debt is exactly `1`, with an explicit branch partition,
+so another raw union bound cannot close that wall.
+
+Third, `LRCB5DeviationBudget` names THM-940's six discrete support layers and
+proves the sharp one-sided signed-deviation positivity test.  Its normalized
+relation-shaped bridge retains the singleton contribution explicitly; these
+are discrete deviation coordinates, not THM-935 continuous masses, and a
+continuous comparison still owes quadrature error.  The incoming THM-944
+scoreboard is connected to the actual LRC capstone by `LRCB5RaceEndgame`:
+`B5RaceTailCertificate` exposes exactly the support-three and support-five
+upper bounds plus the strict rational margin.  Singles and the even floors are
+already theorems.
+
+An audit corrected an overclaim before closeout.  Adding `¬genericCount` to the
+three selected-witness Props is a useful point-of-use presentation, but the
+exceptional denominator patterns already force nongenericity.  Automatic
+nongenericity lemmas and adapters in both directions prove that the residual
+and original supplier triples are equivalent; this is not a genuine reduction
+of the mathematical frontier.
+
+The exact-cell referee exhausts 5,203 rational instances (1,320 uniform q3,
+1,232 `(2,4,4)`, 2,651 `(2,2,q)`) with no counterexample and records three
+adversarial anchors.  Its verdict remains finite evidence, not uniform proof.
+The honest open core after this checkpoint is: global harmonic-phase selection
+avoiding the classified opposition events; pair-tower profiles beyond the
+proved singleton/gap-three leaves (especially the exact gap-two wall); and the
+support-three/support-five dense-core deviation bounds or an equivalent
+continuous-to-finite estimate.
+
+FILES: `LRCB5DeviationBudget.lean`, `LRCB5RaceEndgame.lean`,
+`LRCSelectedWitnessResidual.lean`,
+`LRCPairTowerReduction.lean`, `LRCPairTowerValuation.lean`, exact-cell script
+and stored output, root imports, result index, and formalization manifest.
 
 ---
 
