@@ -1045,3 +1045,13 @@ any of those three obligations.
     one ring computation; (C) consecutive-floor: finite-form induction on
     n = floor((2a'+1)/14) (decide-adjacent); feeds klein's
     path_hunter_add_le ledger (already kernel-pure) with exact credits.
+
+## Landed addendum — congruence-averaging core (kind-pasteur-S128c44)
+
+`TournamentH7.LRCCongruenceAveraging` (58 s, foundational axioms only): the
+arithmetic core of THM-952's averaging lemma — `lavSum_mul_unit` (unit rotation
+preserves the reciprocal least-abs-value sum; `Units.mulLeft_bijective`),
+`leastAbsVal_neg` (the fold pairing), and `lavSum_89 = 1 + 2·H₄₄` EXACTLY,
+kernel-decided at the adversarial modulus of the cont.43 referee.  The exact
+harmonic form is stronger than the paper's logged bound for any instance; the
+general folded identity (odd n) is the named next rung.
