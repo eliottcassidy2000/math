@@ -174,6 +174,39 @@ theorem exists_shared_pair_of_26_lt_card (supports : Finset (Finset (Fin 13)))
   exists_shared_pair_of_not_pairUnique supports
     (not_pairUnique_of_26_lt_card supports hsize hmany)
 
+/-! ## The tiny-scale relation floor -/
+
+/-- Thirteen distinct positive speeds below `40` cannot be Sidon: among the
+`78` unordered index pairs, two distinct pairs have the same sum.  The two
+pairs may share one endpoint (a support-three relation) or be disjoint (a
+support-four relation), exactly matching THM-935's small-scale floor. -/
+theorem exists_small_support_relation_of_lt_40 (v : Fin 13 → ℕ)
+    (hpositive : ∀ i, 0 < v i) (hsmall : ∀ i, v i < 40)
+    (hinjective : Function.Injective v) :
+    ∃ first second : Finset (Fin 13),
+      first ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2 ∧
+      second ∈ (Finset.univ : Finset (Fin 13)).powersetCard 2 ∧
+      first ≠ second ∧
+      (∑ i ∈ first, v i) = ∑ i ∈ second, v i := by
+  let pairs : Finset (Finset (Fin 13)) :=
+    (Finset.univ : Finset (Fin 13)).powersetCard 2
+  let possibleSums : Finset ℕ := Finset.Icc 2 77
+  have hcard : possibleSums.card < pairs.card := by
+    dsimp [possibleSums, pairs]
+    norm_num [Finset.card_powersetCard, Nat.choose]
+  have hmaps : Set.MapsTo (fun pair : Finset (Fin 13) => ∑ i ∈ pair, v i)
+      (pairs : Set (Finset (Fin 13))) (possibleSums : Set ℕ) := by
+    intro pair hpair
+    have hpairCard : pair.card = 2 :=
+      (Finset.mem_powersetCard.mp (show pair ∈ pairs from hpair)).2
+    obtain ⟨first, second, hne, rfl⟩ := Finset.card_eq_two.mp hpairCard
+    have hvaluesNe : v first ≠ v second := hinjective.ne hne
+    simp only [Finset.sum_insert, Finset.sum_singleton, Finset.mem_Icc]
+    constructor <;> omega
+  obtain ⟨first, hfirst, second, hsecond, hne, heq⟩ :=
+    Finset.exists_ne_map_eq_of_card_lt_of_maps_to hcard hmaps
+  exact ⟨first, hfirst, second, hsecond, hne, heq⟩
+
 /-! ## Axiom audit -/
 
 #print axioms pair_load_le_78
@@ -184,6 +217,7 @@ theorem exists_shared_pair_of_26_lt_card (supports : Finset (Finset (Fin 13)))
 #print axioms card_le_7_of_five_le
 #print axioms not_pairUnique_of_26_lt_card
 #print axioms exists_shared_pair_of_26_lt_card
+#print axioms exists_small_support_relation_of_lt_40
 
 end LRCZarankiewiczGuardrail
 end LonelyRunner
