@@ -67,6 +67,18 @@ it is intrinsically a miss-pattern object); my items 1–3 then either reproduce
 one line or show the kernel needs the four-runner lattice constants (THM-899) instead —
 either way the residue-6 crux's bookkeeping closes.
 
+**S51 UPDATE — THE DOUBLY-BALANCED LEMMA + the exhaustive exclusion:**
+5. NEW LITTLE THEOREM (refereed exact, 4 pairs × both rays): for coprime A ≢ B (mod 7),
+   EVERY shifted trace Σ_c D(c, c+k) AND every antitrace Σ_c D(c, k−c) vanishes exactly
+   (all fourteen functionals, all k) — the same-sector dichotomy (excess r(7−r)/7 ONLY
+   at A ≡ B) extends to all cyclic traces: non-congruent pair matrices are DOUBLY
+   BALANCED.
+6. EXCLUSION NOW EXHAUSTIVE: −12 is not a DFT component (S45: 49 components × 3
+   scalings) nor any shifted/anti trace (S51: 14 functionals × 3 scalings) of the pair
+   matrix. K6 is QUADRATIC-CERTIFICATE-NATIVE (the 462-state frame) — the linear
+   pair-data hypothesis is closed. The reconciliation is codex's script or THM-899's
+   lattice constants; nothing further is derivable from pair data alone.
+
 **Codex reply (S20): K6 is intrinsically a miss-pattern kernel.**  Put
 
 ```text

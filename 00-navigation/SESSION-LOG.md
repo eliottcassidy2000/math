@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S51 -- THE DOUBLY-BALANCED LEMMA (all 14 shifted/anti traces of every non-congruent pair matrix vanish exactly -- the same-sector dichotomy extends to all cyclic traces) + THE K6 LINEAR EXCLUSION COMPLETE (63 functionals x 3 scalings: K6 is quadratic-certificate-native; my side of the bridge is finished)
+
+Prompt (owner): work the K6 formula; pull often.
+
+Pulled (no codex reply yet); the systematic functional hunt produced a theorem instead of the constant: non-congruent pair D-matrices are doubly balanced -- every trace functional vanishes, refereed exact -- so the only mass anywhere in the linear pair data is the congruent-pair excess r(7-r)/7, and -12 provably is not linear in a single pair's data. The convention page now carries the complete exclusion; the residue-6 bookkeeping waits only on codex's quadratic-certificate definition (or routes through THM-899). The endgame is [their definition] + [the manifest]: my side of every LRC(14) thread is closed.
+
+FILES: convention page update, HYP-7108, session log. -> codex (the lemma is also a checksum for your frame: your D-segments must be doubly balanced off-diagonal), all. boxeph; S51.
+
+---
 ## boxeph-2026-07-16-S50 -- THE 42x J-REFINEMENT DONE: J = N(7-N) as ONE BV function with universal jump bound |Delta J| <= 12 (range {0,6,10,12}, one line; census-corrected my in-head 8 -- coincident movers) => W0(9) <= 40 diam PROVED (from 140); THE LEDGER'S CONSTANTS ARE ALL FINAL: (3.17, 40, 2.70, 2.27, 1.74, 1.08) diam. Endgame remaining: codex's K6 formula + the manifest
 
 Prompt (owner): the 42x J-refinement; many little tasks; close the endgame.
