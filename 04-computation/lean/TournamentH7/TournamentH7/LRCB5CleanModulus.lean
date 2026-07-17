@@ -88,6 +88,22 @@ theorem height_mass_lt_cleanModulus {n : ℕ} (speed : Fin n → ℤ)
   unfold cleanModulus
   nlinarith [Nat.zero_le (height * ∑ i, (speed i).natAbs)]
 
+/-- A clean modulus is not merely larger than the requested relation-height
+box: for a nonzero family it is larger than fourteen times every individual
+speed.  This useful scale fact also exposes why the first multiplier is a
+near-zero obstruction to any depth-six coverage cap at this ruler. -/
+theorem fourteen_natAbs_lt_cleanModulus {n : ℕ} (speed : Fin n → ℤ)
+    (height : ℕ) (hspeed : ∀ i, speed i ≠ 0) (i : Fin n) :
+    14 * (speed i).natAbs < cleanModulus speed height := by
+  have hprod : 0 < ∏ j, (speed j).natAbs := by
+    exact Finset.prod_pos fun j _ => Int.natAbs_pos.mpr (hspeed j)
+  have hdiv : (speed i).natAbs ∣ ∏ j, (speed j).natAbs := by
+    exact Finset.dvd_prod_of_mem _ (Finset.mem_univ i)
+  have hle : (speed i).natAbs ≤ ∏ j, (speed j).natAbs :=
+    Nat.le_of_dvd hprod hdiv
+  unfold cleanModulus
+  nlinarith [Nat.zero_le (height * ∑ j, (speed j).natAbs)]
+
 theorem speed_coprime_cleanModulus {n : ℕ} (speed : Fin n → ℤ)
     (height : ℕ) (i : Fin n) :
     Nat.Coprime (speed i).natAbs (cleanModulus speed height) := by
@@ -119,6 +135,7 @@ theorem int_gcd_speed_cleanModulus_eq_one {n : ℕ} (speed : Fin n → ℤ)
 #print axioms cleanModulus_mod_fourteen
 #print axioms fourteen_le_cleanModulus
 #print axioms height_mass_lt_cleanModulus
+#print axioms fourteen_natAbs_lt_cleanModulus
 #print axioms int_gcd_speed_cleanModulus_eq_one
 
 end LRCB5CleanModulus

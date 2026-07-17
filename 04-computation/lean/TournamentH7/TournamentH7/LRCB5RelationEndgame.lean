@@ -1,6 +1,7 @@
 import TournamentH7.LRCEndgameParameterDischargeTwoThree
 import TournamentH7.LRCB5NormalizedBridge
 import TournamentH7.LRCMomentCertificates
+import TournamentH7.LRCArcWire
 
 /-!
 # Relation-budget certificates feed the chain-dense LRC(14) endgame
@@ -78,27 +79,71 @@ theorem NormalizedB5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
     v hv certificate.height certificate.coverage_excess_budget
       certificate.harmful_depth_budget
 
-/-- THM-945 certificate at the canonical clean modulus.  On a depth-six
+/-- **Exact usable-ruler window for a depth-six cap.**  At any capped modulus
+`q > 1`, at most six speeds can lie strictly below `q/14`.  Otherwise the first
+multiplier alone is simultaneously bad for seven runners.  Equivalently, a
+cap-six search must keep `q` at most fourteen times at least seven of the
+absolute speeds; cofinal rulers are excluded before relation analysis begins. -/
+theorem small_speed_card_le_six_of_coverageCapped
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q)
+    (hcap : LRC14Concrete.CoverageCapped v q 6) :
+    ((Finset.univ : Finset (Fin 13)).filter fun i =>
+      14 * (v i).natAbs < q).card ≤ 6 := by
+  have hp : 1 ∈ Finset.Ioo 0 q := by
+    simp only [Finset.mem_Ioo]
+    exact ⟨by omega, hq⟩
+  have hsubset :
+      ((Finset.univ : Finset (Fin 13)).filter fun i => 14 * (v i).natAbs < q) ⊆
+        (Finset.univ.filter fun i : Fin 13 => ¬ LRC14Concrete.inBand v q 1 i) := by
+    intro i hi
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi ⊢
+    exact LRC14Concrete.not_inBand_one_of_fourteen_natAbs_lt v q i hi
+  have hcard := Finset.card_le_card hsubset
+  have hdepth := hcap 1 hp
+  unfold LRC14Concrete.bandCount at hdepth
+  omega
+
+/-- **Clean-ruler near-zero catastrophe.**  At the cofinal clean modulus the
+first multiplier is bad for all thirteen runners.  Consequently the clean
+ruler can never be coverage-capped at depth six.  The clean relation bridge
+and the cap-six bridge therefore require genuinely different modulus choices. -/
+theorem not_coverageCapped_six_at_cleanModulus (v : Fin 13 → ℤ)
+    (hv : ∀ i, v i ≠ 0) (height : ℕ) :
+    ¬ LRC14Concrete.CoverageCapped v (cleanModulus v height) 6 := by
+  intro hcap
+  have hp : 1 ∈ Finset.Ioo 0 (cleanModulus v height) := by
+    simp only [Finset.mem_Ioo]
+    exact ⟨by omega, one_lt_cleanModulus v height hv⟩
+  have hdepth := hcap 1 hp
+  have hthirteen : LRC14Concrete.bandCount v (cleanModulus v height) 1 = 13 :=
+    LRC14Concrete.bandCount_one_eq_thirteen_of_fourteen_natAbs_lt
+      v (cleanModulus v height) (fun i => fourteen_natAbs_lt_cleanModulus v height hv i)
+  omega
+
+/-- THM-945 certificate at an arbitrary **usable** modulus.  On a depth-six
 capped stratum, concrete B5 is exactly live multipliers minus depth-six
-multipliers, so this strict census is both transparent and sharp. -/
+multipliers, so this strict census is both transparent and sharp.  The modulus
+is deliberately not forced to be the cofinal clean ruler: the theorem above
+shows that choice would make this structure empty. -/
 structure CoverageCappedB5Certificate (v : Fin 13 → ℤ) where
-  height : ℕ
-  capped : LRC14Concrete.CoverageCapped v (cleanModulus v height) 6
+  q : ℕ
+  q_pos : 0 < q
+  capped : LRC14Concrete.CoverageCapped v q 6
   live_gt_deep_six :
-    ((Finset.Ioo 0 (cleanModulus v height)).filter fun p =>
-      LRC14Concrete.bandCount v (cleanModulus v height) p = 6).card <
-      LRC14Concrete.liveCount v (cleanModulus v height)
+    ((Finset.Ioo 0 q).filter fun p =>
+      LRC14Concrete.bandCount v q p = 6).card <
+      LRC14Concrete.liveCount v q
 
 theorem CoverageCappedB5Certificate.b5_pos {v : Fin 13 → ℤ}
     (certificate : CoverageCappedB5Certificate v) :
-    0 < LRC14Concrete.B5 v (cleanModulus v certificate.height) := by
+    0 < LRC14Concrete.B5 v certificate.q := by
   have hcast :
-      (((Finset.Ioo 0 (cleanModulus v certificate.height)).filter fun p =>
-        LRC14Concrete.bandCount v (cleanModulus v certificate.height) p = 6).card : ℤ) <
-        (LRC14Concrete.liveCount v (cleanModulus v certificate.height) : ℤ) :=
+      (((Finset.Ioo 0 certificate.q).filter fun p =>
+        LRC14Concrete.bandCount v certificate.q p = 6).card : ℤ) <
+        (LRC14Concrete.liveCount v certificate.q : ℤ) :=
     Int.ofNat_lt.mpr certificate.live_gt_deep_six
   rw [LRC14Concrete.B5_eq_live_sub_deepSix v
-    (cleanModulus v certificate.height) certificate.capped]
+    certificate.q certificate.capped]
   omega
 
 /-- THM-935 certificate supply only on the primitive, dissociated,
@@ -192,9 +237,7 @@ theorem denseCoreDissociatedB5Supply_of_coverageCapped
   intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   obtain ⟨certificate⟩ :=
     hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
-  exact ⟨cleanModulus v certificate.height,
-    lt_of_lt_of_le (by omega) (fourteen_le_cleanModulus v certificate.height hv),
-    certificate.b5_pos⟩
+  exact ⟨certificate.q, certificate.q_pos, certificate.b5_pos⟩
 
 /-- **THM-935-shaped current capstone.**  The sanctioned LRC(≤13) citation,
 the sharply reduced `q=2,3`/two-adic exceptional dispatch, and relation-budget
@@ -238,6 +281,8 @@ theorem lrc14_from_twoThree_detuned_and_coverageCappedB5
 
 #print axioms B5RelationBudgetCertificate.b5_pos
 #print axioms NormalizedB5RelationBudgetCertificate.b5_pos
+#print axioms small_speed_card_le_six_of_coverageCapped
+#print axioms not_coverageCapped_six_at_cleanModulus
 #print axioms CoverageCappedB5Certificate.b5_pos
 #print axioms denseCoreDissociatedB5Supply_of_relationBudget
 #print axioms denseCoreDissociatedB5Supply_of_normalizedRelationBudget

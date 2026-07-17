@@ -81,6 +81,56 @@ theorem bad_at_witness (v : Fin 13 → ℤ) (q : ℕ) (p : ℕ) (i : Fin 13)
     rw [habs, abs_of_nonpos (by omega)]
     omega
 
+/-- **The near-zero/wrap catastrophe at `p = 1`.**  If the ruler is wider than
+fourteen times one speed, that runner necessarily fails at the first
+multiplier.  Positive speeds lie in the bad arc about zero; negative speeds lie
+in its wrapped copy about one.  This is the exact obstruction that prevents a
+cofinal clean ruler from also satisfying a uniform coverage cap. -/
+theorem not_inBand_one_of_fourteen_natAbs_lt (v : Fin 13 → ℤ) (q : ℕ)
+    (i : Fin 13) (hsmall : 14 * (v i).natAbs < q) :
+    ¬ inBand v q 1 i := by
+  intro hband
+  unfold inBand at hband
+  simp only [Int.natCast_one, mul_one] at hband
+  have hq : (0 : ℤ) < (q : ℤ) := by
+    have : 0 < q := by omega
+    exact_mod_cast this
+  have hsmallZ : 14 * |v i| < (q : ℤ) := by
+    rw [← Int.natCast_natAbs]
+    exact_mod_cast hsmall
+  by_cases hv : 0 ≤ v i
+  · have hvq : v i < (q : ℤ) := by
+      rw [abs_of_nonneg hv] at hsmallZ
+      omega
+    rw [Int.emod_eq_of_lt hv hvq] at hband
+    rw [abs_of_nonneg hv] at hsmallZ
+    omega
+  · have hvneg : v i < 0 := by omega
+    have hvlow : 0 ≤ v i + (q : ℤ) := by
+      rw [abs_of_neg hvneg] at hsmallZ
+      omega
+    have hvhigh : v i + (q : ℤ) < (q : ℤ) := by omega
+    rw [Int.emod_eq_add_self_emod,
+      Int.emod_eq_of_lt hvlow hvhigh] at hband
+    rw [abs_of_neg hvneg] at hsmallZ
+    omega
+
+/-- If every speed is smaller than `q/14`, then the first multiplier has the
+maximal possible bad depth, thirteen.  This isolates the near-zero catastrophe
+before any seven-overlap determinant analysis: all canonical witnesses may be
+zero (or wrapped), so pair constraints alone contain no rigidity. -/
+theorem bandCount_one_eq_thirteen_of_fourteen_natAbs_lt
+    (v : Fin 13 → ℤ) (q : ℕ)
+    (hsmall : ∀ i, 14 * (v i).natAbs < q) :
+    bandCount v q 1 = 13 := by
+  unfold bandCount
+  have hall : (Finset.univ.filter fun i : Fin 13 => ¬ inBand v q 1 i) = Finset.univ := by
+    apply Finset.filter_eq_self.mpr
+    intro i _
+    exact not_inBand_one_of_fourteen_natAbs_lt v q i (hsmall i)
+  rw [hall]
+  simp
+
 /-- **THE 7-OVERLAP PAIR CONSTRAINT** (the interface lemma): two runners
 simultaneously bad at `p/q` force the integer near-proportionality
 `14·|v_i·n_j − v_j·n_i| < |v_i| + |v_j|` between their witnesses — cross-multiply
@@ -124,6 +174,26 @@ theorem seven_overlap_pair_constraint (v : Fin 13 → ℤ) (q : ℕ) (p : ℕ)
   nlinarith [habs, h1, h2, abs_nonneg (v i * nj - v j * ni),
     abs_nonneg (v j * (p : ℤ) - nj * (q : ℤ)), abs_nonneg (v i * (p : ℤ) - ni * (q : ℤ))]
 
+/-- **Small-speed exactification of the pair constraint.**  For two simultaneous
+bad runners whose absolute speeds sum to at most fourteen, the strict
+near-proportionality window contains no nonzero integer: their cross-witness
+determinant vanishes exactly.  This is a concrete relation-producing stratum;
+it is useful only away from the near-zero catastrophe above, where both
+witnesses can vanish and the resulting equality carries no rigidity. -/
+theorem pair_witness_relation_eq_zero_of_abs_add_le_fourteen
+    (v : Fin 13 → ℤ) (q : ℕ) (p : ℕ) (i j : Fin 13)
+    (hq : 0 < q) (hvi : v i ≠ 0) (hvj : v j ≠ 0)
+    (hbadi : ¬ inBand v q p i) (hbadj : ¬ inBand v q p j)
+    (hsmall : |v i| + |v j| ≤ 14) :
+    v i * failWitness v q p j - v j * failWitness v q p i = 0 := by
+  have hpair := seven_overlap_pair_constraint v q p i j hq hvi hvj hbadi hbadj
+  have hqZ : (0 : ℤ) < (q : ℤ) := by exact_mod_cast hq
+  by_contra hne
+  have hone : (1 : ℤ) ≤
+      |v i * failWitness v q p j - v j * failWitness v q p i| :=
+    Int.one_le_abs hne
+  nlinarith
+
 /-- **The cap through the dictionary** (definitional corollary): `CoverageCapped 6`
 holds iff no multiplier is simultaneously bad for seven runners — the killer-arc
 overlap statement in discrete clothes. -/
@@ -140,7 +210,10 @@ theorem coverageCapped_iff_no_seven (v : Fin 13 → ℤ) (q : ℕ) :
 
 /-! ## Axiom audit -/
 #print axioms bad_at_witness
+#print axioms not_inBand_one_of_fourteen_natAbs_lt
+#print axioms bandCount_one_eq_thirteen_of_fourteen_natAbs_lt
 #print axioms seven_overlap_pair_constraint
+#print axioms pair_witness_relation_eq_zero_of_abs_add_le_fourteen
 #print axioms coverageCapped_iff_no_seven
 
 end LRC14Concrete
