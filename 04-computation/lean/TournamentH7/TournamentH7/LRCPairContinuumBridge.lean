@@ -83,7 +83,7 @@ theorem pairGridErrorBudget_cleanModulus_534_le
   rw [← hmassCast]
   exact pair_error_arithmetic speedMass speedProduct hmass hproduct
 
-/-- The explicit clean-grid budget fits strictly inside THM-952's conservative
+/-- The explicit clean-grid budget fits strictly inside THM-954's conservative
 two-path margin. -/
 theorem cleanModulus_534_error_lt_path_margin
     (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) :

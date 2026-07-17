@@ -1,4 +1,4 @@
-# THM-952 — Weighted ratio layers bound the continuous LRC(14) pair debt
+# THM-954 — Weighted ratio layers bound the continuous LRC(14) pair debt
 
 **Status:** PROVED as an exact replayable finite certificate, with the final
 arithmetic kernel-checked in `TournamentH7/LRCPairRatioLayerArithmetic.lean`.
@@ -168,7 +168,7 @@ the 78 pairs gives the displayed bound.  At
 ```
 
 Once that estimate and the covariance identity are connected to the existing
-definitions, THM-952 gives the strict clean-ruler socket
+definitions, THM-954 gives the strict clean-ruler socket
 
 ```text
 normalizedMass2 v (cleanModulus v 534) > -13/30.
@@ -176,4 +176,3 @@ normalizedMass2 v (cleanModulus v 534) > -13/30.
 
 The higher-support signed budget remains separate; no LRC(14) closure is
 claimed here.
-

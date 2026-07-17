@@ -553,7 +553,7 @@ theorem pairGridErrorBudget_cast (v : Fin 13 → ℤ) (q : ℕ) :
   intro i _
   simp
 
-/-- THM-952's continuum floor and the raw complete-grid discrepancy imply the
+/-- THM-954's continuum floor and the raw complete-grid discrepancy imply the
 strict normalized pair socket at the explicit clean height `534`. -/
 theorem normalizedMass2_clean_534_gt_neg_target_of_continuum_floor
     (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)

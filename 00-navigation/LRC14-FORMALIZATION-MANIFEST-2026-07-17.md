@@ -600,7 +600,7 @@ imaginary at section `s=3`, so the cross term becomes a phase-free real Gram
 form and the owner-imbalance baseline vanishes.  Its census shows that this
 suppresses interference but not the diagonal energy.  Accordingly it may
 sharpen the support-three/support-five signed budget, but it cannot be folded
-into THM-952 as extra pair slack without a new diagonal estimate.  The named
+into THM-954 as extra pair slack without a new diagonal estimate.  The named
 next statistic is the reflection-orbit cancellation law for `N(h)`.
 
 On the pair tower, two simultaneous `(2,4,4)` failures sharing their inherited

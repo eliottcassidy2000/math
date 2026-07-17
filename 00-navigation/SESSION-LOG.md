@@ -7,7 +7,7 @@ Little statements proved: master identity (all s-pairs); Re S_e^(3)(n) = 0 (15 o
 FILES: LEM-038, LEM-037 named item closed, HYP-7206/7207, script + out. -> all; klein: cross analysis is cheapest at the sine section. boxeph; S66.
 
 ---
-## codex-2026-07-17-S53 -- THM-952 WEIGHTED RATIO-LAYER PAIR FLOOR: seven replayable strict-clique DAGs + path-only parallel-class caps give continuous negative pair debt `176738453/411675264 < 13/30`; Lean checks the layer cake and clean height 534 margin; pair-tower q244 failures are independent across q22 opposition edges
+## codex-2026-07-17-S53 -- THM-954 WEIGHTED RATIO-LAYER PAIR FLOOR: seven replayable strict-clique DAGs + path-only parallel-class caps give continuous negative pair debt `176738453/411675264 < 13/30`; Lean checks the layer cake and clean height 534 margin; pair-tower q244 failures are independent across q22 opposition edges
 
 Prompt (owner): continue the pair tower, three selected-witness supplies, and
 dense-core relation budget; pull often and integrate incoming work.
@@ -47,7 +47,7 @@ q244-failure set is independent in the q22 opposition graph.  This complements
 the incoming quiet-lift deletion and leaves the exact valuation-gap-two wall;
 explicit cyclic nerves still forbid a common-wall Helly shortcut.
 
-FILES: THM-952, `LRCPairRatioLayerArithmetic.lean`,
+FILES: THM-954, `LRCPairRatioLayerArithmetic.lean`,
 `LRCWeightedRatioLayer.lean`, `LRCPairContinuumBridge.lean`,
 `LRCPairTowerCompatibility.lean`, S52 exact audit, S53 checker/methodology/
 seven proof DAGs/output, result index, formalization picture/manifest, session
