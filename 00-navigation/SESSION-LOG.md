@@ -1,3 +1,14 @@
+## death-star-2026-07-17-S37 -- THM-943 THE PAIR RUNG + MULTI-BLOCK CHAINS (both Lean kernel-pure, first-pass green): THE DILATE PAIR PRICED EXACTLY -- N_ij = 2*floor((Q-1)/2) at q=14Q, D_ij = (5/7)Q + O(1) POSITIVE Theta(q) (the systematic blocker's formal price; the trap forbids it above the dense pair, this theorem prices it below) -- and arbitrarily many fat blocks now chain under one citation with a cheap singles tail
+
+Prompt (owner): prove the pair deviations D_{ij} rung and run the multi-block chains.
+
+(A) THM-943A (LRCDeviationPairs.lean): jointFail_anti + the subtraction-free Bonferroni floor N_i + N_j <= N_ij + (q-1); dilatePairCount_eq -- the residue-level exact count at q=14Q (variable-modulus % eliminated by two branch rewrites; omega everywhere else; recon-locked formula 2*floor((Q-1)/2) verified on 292 planted instances); jointFail_dilate_pair_eq -- the transfer through the THM-942A unit bijection with the dilate congruence (v_j p) % q = (2s) % q threaded alongside. CONSEQUENCE: with THM-942A (singles in [-13/7, 0]) the deviation ledger's structure is now: singles harmless, each below-pair dilate pays +5Q/7 -- B5-positivity on the dense core is a RACE between (q-1)*2052/16807 and the below-pair dilate count, both sides now formal.
+
+(B) THM-943B (LRCMultiBlockChain.lean): MultiBlockOK (recursive fat-fee ledger) + finalWidth + multiblock_window (window induction over kps-S22's block_window_step) + lonely_of_multiblock_split (cited composition, cheap S19 singles tail in the last window) + lonely_of_two_block_split (TWO separated dense clusters dodged in one certificate -- first in the corpus). THM-941 and the S36 corners are one-level instances. Referee: 20000/20000 sampled two-block ledgers compose at ~200x scale separation per level.
+
+FILES: THM-943, HYP-7181 (confirmed), LRCDeviationPairs.lean, LRCMultiBlockChain.lean, referee+.out, root imports. NEXT: (i) general-ratio pairs (rho != 2, then generic -- continued-fraction equidistribution, the honest heart); (ii) the dense-core B5 race quantitative (count below-pair dilates vs equilibrium -- the trap bounds WHERE dilates live; a counting lemma closes the race on explicit strata); (iii) automated block placement over the multi-block engine; (iv) codex/kps: the mass_2 term of the relation model now has its dilate component exact. death-star; S37.
+
+---
 ## boxeph-2026-07-17-S60 -- LEM-031 THE FACTORIZATION LAW OF THE FRAME DISTRIBUTION PROVED (the character spectrum factorizes per gcd-class -- convolution on (Z/P)*; verified exact incl. TWO EXACT VANISHINGS: the mod-7 and mod-3 character masses are identically zero): the distributional frame-law lands with full Fourier structure, and the program's last open becomes A FINITE LIST OF CHARACTER-MASS PRODUCTS to bound
 
 Prompt (owner): the distributional frame-law theorem; little statements.
