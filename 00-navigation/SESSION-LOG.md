@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S58 -- THE FULL-FRAME SIGN CENSUS CORRECTS MY OWN S53 LAW (fifteenth verdict, self-applied): cross <= 0 in only 59.8% of ALL 672 frames -- the battery was small-w-biased; the sign is a heavy-tailed distribution (mean -3.01, sd 56.6), not a thin-resonance dichotomy. SURVIVES SHARPER: the baseline identity; the closed-form frame-mean; and a UNIVERSAL candidate -- cross(w) < baseline = 210.6 on every frame (max 185.5), i.e. Q_s < sum D_e + (pi^2/3) sum sigma^2 for ALL w on this cluster
+
+Prompt (owner): the joint-equidistribution theorem; little statements.
+
+The theorem's provable-today face was the census + the mean: the folded weights have the exact closed form W(a) = (pi^2/P^2) csc^2(pi a/P) (the weights ARE the kernel -- verified), the frame-mean of the cross is THM-892-closed-form, and the complete 672-frame census replaced my S53 sign law with its honest distributional truth. The correction is the arc's method applied to the arc's own latest law -- sample bias caught by exhaustion, the dichotomy dissolved into a distribution, and a cleaner universal candidate (cross < baseline everywhere) surfaced in its place. The joint-equidistribution target is now correctly posed as the FRAME-LAW of the cross (its distribution under the unit-group action), with mean proved, spread measured, and the universal cap as the next battery check.
+
+FILES: HYP-7115, session log. -> all (the S53 refined law is corrected in place by this entry; the universal-cap candidate is one battery from a conjecture). boxeph; S58.
+
+---
 ## boxeph-2026-07-16-S57 -- FOUR ITEMS: the folded-weight lemma (F = sum W(a)X(aw), EXACT); the mean identities proved (X(0) = -sum sigma^2; mean = sigma^2/(P-1), verified); the FOURTEENTH verdict (global CS fails -- ||X|| is peak-dominated; off-resonant smallness = the ANTI-CORRELATION of the folded weights with the w-permuted spectrum: generation four of the signed structure); OEIS extended to n = 19 (1976; half-law 0.5098)
 
 Prompt (owner): the mean-zero CS theorem; 2-3 more tasks; multitudes.
