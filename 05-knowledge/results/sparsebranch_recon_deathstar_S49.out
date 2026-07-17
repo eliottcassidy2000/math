@@ -1,0 +1,11 @@
+sparse pairs: 29
+(a) partition k in {-1,0,1}: ok 174, bad 0 PASS
+(b) N0 = 2*floor((q-1)/(14M)): ok 174, bad 0 PASS
+(c) mirror N+1 = N-1: ok 174, bad 0 PASS
+(d/e) limit law on 29 pairs: worst |N/(q-1) - pred| = 0.00e+00 at (1, 13); all under 3/q: True
+    (1,13) reduced (1,13): N/(q-1) = 0.010989  pred = 0.010989
+    (2,13) reduced (2,13): N/(q-1) = 0.016484  pred = 0.016484
+    (3,11) reduced (3,11): N/(q-1) = 0.012987  pred = 0.012987
+    (3,13) reduced (3,13): N/(q-1) = 0.018315  pred = 0.018315
+    (1,13) reduced (1,13): N/(q-1) = 0.010989  pred = 0.010989
+(f) exact +1-branch floor formula N+ = floor((B q - 1)/D) - floor(A q / C): ok 232, bad 0 PASS

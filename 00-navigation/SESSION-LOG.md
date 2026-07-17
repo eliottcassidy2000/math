@@ -1,3 +1,18 @@
+## death-star-2026-07-17-S49 -- THM-964 THE SPARSE BEZOUT-BRANCH DECOMPOSITION (Lean kernel-pure x6): the 29 sparse pairs of {1..13} STRUCTURALLY CLOSED -- witness uniqueness => k in {-1,0,+1} partitions; k=0 = GCD narrow band (count 2*floor((q-1)/(14max)) for EVERY pair); k=1 = Bezout two-band on Z with NO q-multiple correction; mirror N+ = N- by bijection; exact floor formula N+ = floor((Bq-1)/D) - floor(Aq/C) verified 232/232 -- THE FULL 78-PAIR LEDGER OF THE CANONICAL FAMILY IS FORMULA-COMPLETE. Plus the honest B5 scope finding: the funnel needs dissociation.
+
+Prompt (owner): work the named next steps back and forth for a long session + the remaining 29 canonical pairs.
+
+(A) BACK-AND-FORTH STRUCTURE: recon A (branch decomposition, 29 pairs) -> Lean module A (5 theorems, GREEN FIRST PASS) -> recon B in parallel (B5 census) -> floor-formula recon (f) -> mirror lemma appended (6th theorem) -> close. Two pulls integrated mid-session (codex wrapped-overlap commits; no conflicts).
+
+(B) THM-964 (LRCSparseBranch.lean, standard trio x6): witness_unique (band width < q); branch_zero_iff/count (k=0 = narrow band UNCONDITIONALLY -- the i'+j' <= 13 hypothesis is only needed to EXCLUDE k != 0, not for the k=0 analysis); branch_one_iff (Bezout normal form: (wa, wb) = (X0 + i't, Y0 + j't), the branch = two bands on Z = gp - tq); branch_no_qmultiple (Z = mq in both bands forces j'X0 - i'Y0 = 0 != 1 -- clean, so the lattice count has NO boundary correction); branch_mirror_card (p -> q-p negates k via w -> gv' - w; card_bij).
+
+(C) THE COMPLETE PAIR LEDGER of {1..13} (recon-exact, 232/232): locked (49): N = 2*floor((q-1)/(14max)); sparse (29): N = 2*floor((q-1)/(14max)) + 2*(floor((Bq-1)/D) - floor(Aq/C)), A = 14X0-1, B = 14Y0+1, C = 14i', D = 14j'. Limit: 1/(7max) + 2(i'+j'-14)+/(14i'j') -- matches boxeph LEM-044 mu exactly ((8,9): 77/3528; (7,8) -> 1/49 = their 7|k law).
+
+(D) THE HONEST B5 SCOPE FINDING (recon B): assembled S2 limit on {1..13} = 462821/210210 ~ 2.2017 CONFIRMED against census (2.1971 at q=20011, converging) -- the pair ledger is RIGHT. But B5/(q-1) ~ -9.6 < 0 with live ~ 0 at generic prime q: the canonical family is maximally resonant; live points exist only at resonant moduli (q=14: p=1 live, the equality witness). THE FUNNEL'S LIVE FLOOR NEEDS A DISSOCIATION HYPOTHESIS -- compressed near-tight families belong to direct-witness/citation routes. This SCOPES the nucleus correctly: a-priori live floors are statements about dissociated strata (where deviations are small), and the S45-S49 machinery quantifies EXACTLY how resonance inflates the ledger.
+
+FILES: THM-964, HYP-7245 confirmed, LRCSparseBranch.lean, 2 recon .py + 3 .out, root import, session log. NEXT: (i) the Lean lattice-interval count (N+ floor form -- the last pair-layer Lean piece); (ii) the triple layer on dissociated strata (where it is SMALL -- the funnel's home); (iii) the dissociated live-floor threshold statement (the nucleus, now correctly scoped). death-star; S49.
+
+---
 ## death-star-2026-07-17-S48 -- THM-963 THE RATIONAL-RATIO LOCK (Lean kernel-pure x5): reduced ratio i'+j' <= 13 locks witnesses on the Bezout ray j'*w_a = i'*w_b; <= 3 branches through i'+j' <= 27 (ALL 78 pairs of {1..13}); witness-mod bridge; exact pair count 2*floor((q-1)/(14*max(i',j'))) -- 49/78 pairs of the canonical family CLOSED FORM; the discrete face of boxeph LEM-044's mu-law, both faces kernel-pure the same session (their LRCTreeHunter.lean landed mid-session)
 
 Prompt (owner): work the named next steps in tandem with other agents, pull often during computations/builds and sharpen targets.
