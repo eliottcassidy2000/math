@@ -206,3 +206,12 @@ The sharp honest residual after these pulls is therefore:
 
 `lrc14_from_finalResidues_and_relationBudget` machine-checks exactly this capstone.
 This is a sharpening of the interface, not a proof of LRC(14).
+
+The stronger theorem `lrc14_from_selectedWitnessSupplies_and_relationBudget`
+eliminates the phase-uniform formulation entirely.  For each surviving triple family,
+`TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply`, or
+`UniformThreeSelectedWitnessSupply` chooses one phase satisfying both
+`ThreeDetunedHarmonicGoodAt` and `HasThreeDetunedGoodBranch`; the generic theorem
+`lonely14_of_three_detuned_selectedWitness` consumes that single witness.  Thus the
+five precise remaining inputs are those three selection Props,
+`NonterminatingPairTowerSupply`, and `DenseCoreRelationBudgetSupply`.

@@ -127,3 +127,11 @@ witness can realize the obstruction with zero normalized sum frequency.  Thus, a
 two-adic pair tower, witness selection for `(2,2,q)`, `(2,4,4)`, and uniform q-three,
 and the trapped subset-deviation bound supplying relation-budget certificates; no
 sign, cast, finite subset-expansion, or endgame composition step is left informal.
+
+The sharper capstone `lrc14_from_selectedWitnessSupplies_and_relationBudget` removes
+the artificial phase-uniform clearing interface.  Its three triple suppliers select
+one phase that is simultaneously harmonic-good and branch-good, which
+`lonely14_of_three_detuned_selectedWitness` turns directly into an LRC witness.
+Together with `NonterminatingPairTowerSupply` and `DenseCoreRelationBudgetSupply`,
+the named Props `TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply`,
+and `UniformThreeSelectedWitnessSupply` are now the exact unchecked inputs.

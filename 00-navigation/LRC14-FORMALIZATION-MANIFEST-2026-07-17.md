@@ -261,6 +261,16 @@ phase-uniform detuned frontier as:
 4. primitive uniform q-three cyclic witness selection;
 5. `DenseCoreRelationBudgetSupply`.
 
+The stronger supplier-level theorem
+`lrc14_from_selectedWitnessSupplies_and_relationBudget` removes the artificial
+“all harmonic phases clear” interface.  `ThreeDetunedHarmonicGoodAt` and
+`lonely14_of_three_detuned_selectedWitness` show that it suffices to choose one
+phase which is simultaneously harmonic-good and has a common detuned branch.
+Accordingly items 2--4 above are now named Props
+`TwoTwoSelectedWitnessSupply`, `TwoFourFourSelectedWitnessSupply`, and
+`UniformThreeSelectedWitnessSupply`; item 1 is `NonterminatingPairTowerSupply`.
+These four Props plus the relation-budget supply are the exact checked inputs.
+
 The live THM-940 pull also closes the discrete half of item 5:
 `TournamentH7.LRCB5SubsetExpansion` proves `B5` equals its support-grouped
 joint-failure sum and exactly equals equilibrium `(q-1)·2052/16807` plus the

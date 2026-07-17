@@ -993,6 +993,114 @@ theorem lrc14_from_finalResidues_and_relationBudget
   lrc14_from_twoThree_detuned_and_relationBudget cite
     (deepExceptionalDetunedDispatchTwoThree_of_finalResidues cite hdeep) hsupply
 
+/-- The genuinely open nonterminating two-adic pair supplier. -/
+def NonterminatingPairTowerSupply : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → ∀ g : ℤ, 2 ≤ g →
+    nonMultCard v g = 2 → ¬ TwoAdicLiftTerminates v g →
+    ¬ genericCount v g → ∃ t : ℝ, Lonely 14 v t
+
+/-- Joint harmonic/detuned phase selection for the `(2,2,q)` residue. -/
+def TwoTwoSelectedWitnessSupply : Prop :=
+  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+    ∀ i₂a i₂b iₓ : Fin 13,
+    i₂a ≠ i₂b → i₂a ≠ iₓ → i₂b ≠ iₓ →
+    (∀ j, j ≠ i₂a → j ≠ i₂b → j ≠ iₓ → g ∣ v j) →
+    g / (Int.gcd (v i₂a) g : ℤ) = 2 →
+    g / (Int.gcd (v i₂b) g : ℤ) = 2 →
+    ∃ u : ℝ,
+      ThreeDetunedHarmonicGoodAt v g i₂a i₂b iₓ u ∧
+      HasThreeDetunedGoodBranch (v i₂a) (v i₂b) (v iₓ) g u
+
+/-- Joint harmonic/detuned phase selection for the extremal `(2,4,4)` residue. -/
+def TwoFourFourSelectedWitnessSupply : Prop :=
+  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+    ∀ i₂ i₄a i₄b : Fin 13,
+    i₂ ≠ i₄a → i₂ ≠ i₄b → i₄a ≠ i₄b →
+    (∀ j, j ≠ i₂ → j ≠ i₄a → j ≠ i₄b → g ∣ v j) →
+    g / (Int.gcd (v i₂) g : ℤ) = 2 →
+    g / (Int.gcd (v i₄a) g : ℤ) = 4 →
+    g / (Int.gcd (v i₄b) g : ℤ) = 4 →
+    ∃ u : ℝ,
+      ThreeDetunedHarmonicGoodAt v g i₂ i₄a i₄b u ∧
+      HasThreeDetunedGoodBranch (v i₂) (v i₄a) (v i₄b) g u
+
+/-- Joint harmonic/detuned phase selection for the uniform q-three residue. -/
+def UniformThreeSelectedWitnessSupply : Prop :=
+  ∀ (v : Fin 13 → ℤ) (g : ℤ), 2 ≤ g →
+    ∀ i₁ i₂ i₃ : Fin 13,
+    i₁ ≠ i₂ → i₁ ≠ i₃ → i₂ ≠ i₃ →
+    (∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j) →
+    g / (Int.gcd (v i₁) g : ℤ) = 3 →
+    g / (Int.gcd (v i₂) g : ℤ) = 3 →
+    g / (Int.gcd (v i₃) g : ℤ) = 3 →
+    ∃ u : ℝ,
+      ThreeDetunedHarmonicGoodAt v g i₁ i₂ i₃ u ∧
+      HasThreeDetunedGoodBranch (v i₁) (v i₂) (v i₃) g u
+
+/-- The four mathematically genuine endgame suppliers discharge the abstract
+final-residue dispatch.  The selected-witness consumer avoids any universal
+phase-clearing hypothesis. -/
+theorem deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+    (hpairs : NonterminatingPairTowerSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply) :
+    DeepExceptionalDetunedDispatchFinalResidues := by
+  intro v hv g hg hcase hnongeneric
+  rcases hcase with ⟨hcard, hnonterm⟩ | ⟨hcard, hpattern⟩
+  · exact hpairs v hv g hg hcard hnonterm hnongeneric
+  · rcases hpattern with h22pattern | h244pattern | hallThree
+    · obtain ⟨i₂a, i₂b, iₓ, h2ab, h2ax, h2bx, hδ2a, hδ2b, hδx,
+        hq2a, hq2b⟩ := h22pattern
+      have hdvd := dvd_of_nonMultCard_three_of_selected
+        v g hcard i₂a i₂b iₓ h2ab h2ax h2bx hδ2a hδ2b hδx
+      apply lonely14_of_three_detuned_selectedWitness v g hg i₂a i₂b iₓ hdvd
+      exact h22 v g hg i₂a i₂b iₓ h2ab h2ax h2bx hdvd hq2a hq2b
+    · obtain ⟨i₂, i₄a, i₄b, h24a, h24b, h4ab, hδ2, hδ4a, hδ4b,
+        hq2, hq4a, hq4b⟩ := h244pattern
+      have hdvd := dvd_of_nonMultCard_three_of_selected
+        v g hcard i₂ i₄a i₄b h24a h24b h4ab hδ2 hδ4a hδ4b
+      apply lonely14_of_three_detuned_selectedWitness v g hg i₂ i₄a i₄b hdvd
+      exact h244 v g hg i₂ i₄a i₄b h24a h24b h4ab hdvd hq2 hq4a hq4b
+    · have hcard' := hcard
+      rw [nonMultCard] at hcard'
+      obtain ⟨i₁, i₂, i₃, h12, h13, h23, hfilter⟩ :=
+        Finset.card_eq_three.mp hcard'
+      have hδ1 : ¬ g ∣ v i₁ := by
+        have : i₁ ∈ Finset.univ.filter (fun i => ¬ g ∣ v i) := by
+          rw [hfilter]
+          simp
+        simpa using this
+      have hδ2 : ¬ g ∣ v i₂ := by
+        have : i₂ ∈ Finset.univ.filter (fun i => ¬ g ∣ v i) := by
+          rw [hfilter]
+          simp
+        simpa using this
+      have hδ3 : ¬ g ∣ v i₃ := by
+        have : i₃ ∈ Finset.univ.filter (fun i => ¬ g ∣ v i) := by
+          rw [hfilter]
+          simp
+        simpa using this
+      have hdvd := dvd_of_nonMultCard_three_of_selected
+        v g hcard i₁ i₂ i₃ h12 h13 h23 hδ1 hδ2 hδ3
+      apply lonely14_of_three_detuned_selectedWitness v g hg i₁ i₂ i₃ hdvd
+      exact h333 v g hg i₁ i₂ i₃ h12 h13 h23 hdvd
+        (hallThree i₁ hδ1) (hallThree i₂ hδ2) (hallThree i₃ hδ3)
+
+/-- Sharp supplier-level capstone: after `LRCUpTo13`, only the pair tower,
+three selected-witness theorems, and the trapped B5 relation budget remain. -/
+theorem lrc14_from_selectedWitnessSupplies_and_relationBudget
+    (cite : LRCUpTo13)
+    (hpairs : NonterminatingPairTowerSupply)
+    (h22 : TwoTwoSelectedWitnessSupply)
+    (h244 : TwoFourFourSelectedWitnessSupply)
+    (h333 : UniformThreeSelectedWitnessSupply)
+    (hsupply : DenseCoreRelationBudgetSupply) :
+    LRC14.LRC14Statement :=
+  lrc14_from_finalResidues_and_relationBudget cite
+    (deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+      hpairs h22 h244 h333) hsupply
+
 /-! ## Axiom audit -/
 
 #print axioms detunedBadBranches_pair_modEq_of_q_eight_of_modEq_two
@@ -1010,6 +1118,8 @@ theorem lrc14_from_finalResidues_and_relationBudget
 #print axioms lonely14_of_three_detuned_two_companions_four_le_unless_four_four
 #print axioms deepExceptionalDetunedDispatchTwoThree_of_finalResidues
 #print axioms lrc14_from_finalResidues_and_relationBudget
+#print axioms deepExceptionalDetunedDispatchFinalResidues_of_selectedWitnessSupplies
+#print axioms lrc14_from_selectedWitnessSupplies_and_relationBudget
 
 end
 end LRC14Grand

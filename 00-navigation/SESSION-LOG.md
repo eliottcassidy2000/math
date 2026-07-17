@@ -30,6 +30,13 @@ exactly the nonterminating two-adic pair tower, witness selection for `(2,2,q)`,
 finite B5 subset/deviation identity; the quantitative trapped support-3/4/5 deviation
 bound remains.  This is the sharpest checked capstone, not a completed LRC(14) proof.
 
+The final S43 interface removes the stronger-than-needed universal-phase premise.
+`lonely14_of_three_detuned_selectedWitness` consumes one phase that is jointly
+harmonic-good and branch-good, and
+`lrc14_from_selectedWitnessSupplies_and_relationBudget` exposes the exact five open
+Props: the pair tower, the `(2,2,q)`, `(2,4,4)`, and uniform-q3 selected-witness
+suppliers, and the dense-core relation-budget supplier.
+
 FILES: `LRCDetunedOverlap.lean`, `LRCEndgameUniformThreePhase.lean`,
 `LRCEndgameTwoThreeSix.lean`, `LRCEndgameTwoEight.lean`, root imports, THM-933/935,
 HYP-7152/7161, formalization manifest, session log.  All targeted Lean audits report

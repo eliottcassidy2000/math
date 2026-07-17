@@ -43,6 +43,14 @@ def HasThreeDetunedGoodBranch (δ₁ δ₂ δ₃ g : ℤ) (u : ℝ) : Prop :=
     c ∉ detunedBadBranches δ₂ g u ∧
     c ∉ detunedBadBranches δ₃ g u
 
+/-- The selected phase already clears every harmonic quotient coordinate.
+Unlike the citation-driven instance interface, this predicate permits the
+phase to be chosen jointly with the detuned branch geometry. -/
+def ThreeDetunedHarmonicGoodAt
+    (v : Fin 13 → ℤ) (g : ℤ) (i₁ i₂ i₃ : Fin 13) (u : ℝ) : Prop :=
+  ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → ∀ n : ℤ,
+    (1 : ℝ) / 14 ≤ |((v j / g : ℤ) : ℝ) * u - n|
+
 theorem detunedBadBranches_subset_Ico (δ g : ℤ) (u : ℝ) :
     detunedBadBranches δ g u ⊆ Finset.Ico (0 : ℤ) g := by
   intro c hc
@@ -347,6 +355,7 @@ theorem HasThreeDetunedGoodBranch.clearances
     exact not_lt.mp fun hlt => hc1 (by
       rw [detunedBadBranches, Finset.mem_filter]
       exact ⟨hcIco, n, hlt⟩)
+
   · intro n
     exact not_lt.mp fun hlt => hc2 (by
       rw [detunedBadBranches, Finset.mem_filter]
@@ -355,6 +364,22 @@ theorem HasThreeDetunedGoodBranch.clearances
     exact not_lt.mp fun hlt => hc3 (by
       rw [detunedBadBranches, Finset.mem_filter]
       exact ⟨hcIco, n, hlt⟩)
+
+/-- Existential witness-selection consumer.  It is enough to choose one phase
+which is simultaneously harmonic-good and admits a common detuned branch; no
+phase-uniform clearing theorem and no arbitrary citation witness are required. -/
+theorem lonely14_of_three_detuned_selectedWitness
+    (v : Fin 13 → ℤ) (g : ℤ) (hg : 2 ≤ g)
+    (i₁ i₂ i₃ : Fin 13)
+    (hdvd : ∀ j, j ≠ i₁ → j ≠ i₂ → j ≠ i₃ → g ∣ v j)
+    (hselect : ∃ u : ℝ,
+      ThreeDetunedHarmonicGoodAt v g i₁ i₂ i₃ u ∧
+      HasThreeDetunedGoodBranch (v i₁) (v i₂) (v i₃) g u) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  obtain ⟨u, hharm, hgood⟩ := hselect
+  obtain ⟨c, hc1, hc2, hc3⟩ := hgood.clearances
+  exact DetunedD3.lonely14_of_three_detuned_good
+    v g (by omega) i₁ i₂ i₃ u c hdvd hharm hc1 hc2 hc3
 
 /-- Exact observed row density and overlap, verified phase by phase, supplies
 the tuple-specific clearing interface. -/
@@ -547,6 +572,7 @@ theorem uniformThreeBadPartition_of_noGoodBranch
 #print axioms hasThreeDetunedGoodBranch_of_overlapDebt
 #print axioms hasThreeDetunedGoodBranch_of_pairOverlap
 #print axioms HasThreeDetunedGoodBranch.clearances
+#print axioms lonely14_of_three_detuned_selectedWitness
 #print axioms threeDetunedInstanceClearing_of_exactOverlapDebt
 #print axioms lonely14_of_three_detuned_exactOverlapDebt
 #print axioms threeDetunedInstanceClearing_of_overlapDebt
