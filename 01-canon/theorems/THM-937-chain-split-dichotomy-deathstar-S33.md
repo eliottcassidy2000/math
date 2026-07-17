@@ -1,4 +1,4 @@
-# THM-934 — The chain-split dichotomy: wiring the S19 chain engine into the residual (death-star-2026-07-16-S33)
+# THM-937 — The chain-split dichotomy: wiring the S19 chain engine into the residual (death-star-2026-07-16-S33)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCChainDichotomy.lean`; axioms:
 propext, Classical.choice, Quot.sound; build verification recorded in the session log)

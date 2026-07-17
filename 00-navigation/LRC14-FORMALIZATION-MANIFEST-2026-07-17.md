@@ -95,7 +95,7 @@ the exact remaining mathematical surface: the nonterminating two-adic or small-r
 denominator detuned dispatch, and positive `B5` supply on the dissociated primitive
 residual, in addition to the sanctioned `LRCUpTo13` citation.
 
-The next live pull sharpened the latter supplier along two independent axes.  THM-934
+The next live pull sharpened the latter supplier along two independent axes.  THM-937 (chain-split dichotomy; renumbered from 934)
 machine-closes every citable ratio-`3` chain tail and names `ChainDenseCore`; THM-935
 proves the exact-support principle for `B5` and leaves only the universal
 support-`3,4,5` relation-lattice tails `T_s(H)` after the proved pair tail.  Boxeph S53

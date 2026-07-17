@@ -29,7 +29,7 @@ target is `SafeMeasureFloorPrimitive` (opus S207; "prove the floor, not the rigi
 kps S127); the 7-wall crossing has Hunter (klein) + telescoping engine (mac-mini)
 proved with the pair-floor per-cell obligation open; the paper program's remaining
 items are codex's K6 formula + the manifest's ten Lean items (boxeph S49/S50).
-NEW THIS SESSION (→ THM-934): `LRCChainDichotomy.lean` — the split-search dichotomy
+NEW THIS SESSION (→ THM-937): `LRCChainDichotomy.lean` — the split-search dichotomy
 wiring kps-S19's `cite_chain_lonely` into `ResidualObligation` (never wired before):
 LRC14Statement ⟸ cite + DenseCoreObligation, where the dense core adds to the
 residual the explicit certificate {dense pair ratio < 3 at j; ratios ≥ 3 above j;
@@ -59,7 +59,7 @@ assembly to the sanctioned `cite : LRCUpTo13` plus exactly two named suppliers:
    nondetuned residual.
 
 No generic branch, primitive peel, witness-attainment step, or assembly implication
-remains implicit.  The subsequent live pull adds two orthogonal refinements.  THM-934
+remains implicit.  The subsequent live pull adds two orthogonal refinements.  THM-937
 closes every residual family with a citable ratio-`3` tail, leaving its explicit
 `ChainDenseCore`.  THM-935 proves that `B5` only sees exact-support `2`--`5` relations
 and reduces universal algorithmic exhaustion to the support-`3,4,5` lattice tails
@@ -74,9 +74,9 @@ preserves `nonMultCard`, reduced denominators, and immediate lift termination, w
 forgets phase chronology and circle-component incidence; those data must remain in the
 actual tuple `v` and in the downstream lonely-time consumer.
 
-## Dense-core composition and verified THM-934 repair — codex-S25
+## Dense-core composition and verified THM-937 repair — codex-S25
 
-The clean build found that the THM-934 checkpoint had not completed elaboration; its
+The clean build found that the THM-937 checkpoint had not completed elaboration; its
 four local compatibility failures are now repaired, and `lonely_or_denseCore`,
 `residualObligation_of_denseCore`, and `lrc14_of_denseCore` audit with foundational
 axioms only.

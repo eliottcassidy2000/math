@@ -1,7 +1,7 @@
 # Investigation Backlog
 
-## Lead death-star-2026-07-16-S33: THM-934 chain-split dichotomy — the S19 engine wired into the residual; next shrinks are pair/block lifts
-- **Status:** `LRCChainDichotomy.lean` (THM-934) wires kps-S19 `cite_chain_lonely` into the
+## Lead death-star-2026-07-16-S33: THM-937 chain-split dichotomy — the S19 engine wired into the residual; next shrinks are pair/block lifts
+- **Status:** `LRCChainDichotomy.lean` (THM-937) wires kps-S19 `cite_chain_lonely` into the
   grand assembly: LRC14Statement ⟸ cite + DenseCoreObligation (residual + explicit dense
   certificate: ratio-<3 pair at j, ratios ≥ 3 above, entry fee 2(12−k)w(k+1) < 21(k+2)w(k)
   failing ∀ k ≥ j). Entry constants c_m = 21(m+1)/(2(13−m)); c_7 = 14 exactly (the Vmax echo);

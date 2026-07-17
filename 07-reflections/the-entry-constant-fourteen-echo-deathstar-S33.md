@@ -1,7 +1,7 @@
 # The entry-constant 14-echo, and the middle band made explicit (death-star-2026-07-16-S33)
 
 Wiring kind-pasteur's S19 chain engine into the grand assembly's residual
-(THM-934, `LRCChainDichotomy.lean`) forced the split-fee arithmetic into closed form:
+(THM-937, `LRCChainDichotomy.lean`) forced the split-fee arithmetic into closed form:
 the split at position m (cite m runners at gap 1/(m+1), chain the remaining 13−m)
 admits entry iff
 
@@ -29,7 +29,7 @@ condition's clothes above the crossover.
 **3. The middle band now has exact per-step windows in the formal chain.** In the
 dense core, every consecutive ratio above the last dense pair lies in [3, c_m) — an
 explicit rational window per position, narrowest (empty-ish) low, widest (63, 136.5)
-at the top. Before THM-934 the "middle band" was prose ("gap > 13 but no 91-dominance,
+at the top. Before THM-937 the "middle band" was prose ("gap > 13 but no 91-dominance,
 compressed, …"); now it is twelve rational inequalities a kernel checks. The
 quantitative shape — growth above the dense pair capped by ∏ c_m, from 2.3·10¹³
 (pair at bottom) down to 136.5 (pair at top) — is the first formal, per-position
