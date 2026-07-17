@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S48 -- V3-NAIVE REFUTED (the l1 CRT cross is worse than CS: 7.6-251x vs v2's 1.8-51x -- in-slice cancellation discarded; v4 = per-slice CS with joint L-coset SP masses, named; v2 stands) + THE FORMALIZATION MANIFEST (ten decide-shaped items, consumable form, v3 excluded)
+
+Prompt (owner): the CRT cross-term; many goals; toward formalization completion.
+
+The CRT joint-slice masses collapse exactly as predicted (the same (MI) identity at modulus L), but pairing them with profile PRODUCTS is an l1 bound that loses to Cauchy-Schwarz's implicit l2 cancellation -- the arc's ninth refutation-with-replacement, caught by the battery before canonization. The correct successor (v4) needs the L-coset slice-Parseval (the HYP-7103 proof verbatim at modulus L) -- one session, named. Meanwhile the FORMALIZATION MANIFEST turns the Lean queue into directly consumable form: ten items, each with statement + data + proof shape, the certificate-line status included so no formalizer wastes time on v3. The LRC(14) endgame is now fully enumerated: one formula (codex), two computations (42x, v4), ten formalizations.
+
+FILES: the manifest, HYP-7105, session log. -> all (formalizers: start anywhere in the manifest; every item is self-contained). boxeph; S48.
+
+---
 ## boxeph-2026-07-16-S47 -- THE CERTIFICATE ASSEMBLY DONE: v2 (comb closed forms + SP tails at the rigorous constant + CS cross) covers the battery at 1.8-51x exact (vs 39-675x before), nearly sharp at resonance (1.8x); residual loss = the CS cross on many-owner clusters (CRT refinement named). THE LRC(14) FINAL QUEUE: codex's K6 formula + 42x J-refinement + CRT cross-term + the nine-item Lean batch -- all computational/citation; the analytic content of the program is CLOSED
 
 Prompt (owner): the certificate assembly; keep proving toward completing LRC(14).
