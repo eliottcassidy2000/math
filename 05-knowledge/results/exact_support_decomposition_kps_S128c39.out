@@ -1,0 +1,25 @@
+  certified: level 2 done
+  certified: level 3 done
+  certified: level 4 done
+  certified: level 5 done
+  certified: EXACT IDENTITY HOLDS
+    M_2..M_5 = ['+0.000311', '+0.006682', '+0.023545', '+0.030061']
+    B5 = 0.082053 = B5eq 0.122092 + signed -0.040039 ; ABSOLUTE debt bound 0.040083 (slack factor 1.00)
+    top blocker subsets: [((307, 671, 2570), '+0.00219'), ((671, 2147, 3310), '+0.00197'), ((425, 671, 2147, 3310), '+0.00130'), ((800, 944, 3056), '+0.00123'), ((307, 1943, 2147), '+0.00117')]
+  opus30Z: level 2 done
+  opus30Z: level 3 done
+  opus30Z: level 4 done
+  opus30Z: level 5 done
+  opus30Z: EXACT IDENTITY HOLDS
+    M_2..M_5 = ['+0.000098', '+0.231821', '+0.365015', '+0.505866']
+    B5 = -0.601603 = B5eq 0.122092 + signed -0.723695 ; ABSOLUTE debt bound 0.723708 (slack factor 1.00)
+    top blocker subsets: [((420, 450, 870), '+0.01250'), ((450, 570, 690), '+0.00750'), ((450, 510, 570), '+0.00749'), ((420, 2370, 3210), '+0.00734'), ((570, 2370, 4170), '+0.00733')]
+  random: level 2 done
+  random: level 3 done
+  random: level 4 done
+  random: level 5 done
+  random: EXACT IDENTITY HOLDS
+    M_2..M_5 = ['-0.000060', '+0.002007', '+0.019141', '+0.027255']
+    B5 = 0.088381 = B5eq 0.122092 + signed -0.033711 ; ABSOLUTE debt bound 0.033711 (slack factor 1.00)
+    top blocker subsets: [((596, 1626, 2494), '+0.00219'), ((1797, 2494, 2966, 3663), '+0.00153'), ((497, 685, 2378, 2687), '+0.00100'), ((497, 596, 2378, 3663), '+0.00099'), ((1626, 1917, 2494, 2966), '+0.00098')]
+DONE
