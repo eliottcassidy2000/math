@@ -1,0 +1,17 @@
+(a) pair iff M<=13: 300000 checked, fails=0 PASS
+(a') chain iff (3 members): 150000 checked, fails=0 PASS
+(a'') iff at M=14: breaks found 3 [(1, 15, 1), (2, 15, 7)]
+(b) exact count 2*floor((q-1)/(14M)) at gcd=1: 2435 checked, fails=0 PASS
+(c) locked-pair deviation D(M) = 2*floor((q-1)/(14M)) - (q-1)/49 at q=9800:
+    M= 2: D =     498.0   (+)
+    M= 3: D =     266.0   (+)
+    M= 4: D =     148.0   (+)
+    M= 5: D =      78.0   (+)
+    M= 6: D =      32.0   (+)
+    M= 7: D =      -2.0   (-)
+    M= 8: D =     -26.0   (-)
+    M= 9: D =     -46.0   (-)
+    M=10: D =     -62.0   (-)
+    M=11: D =     -74.0   (-)
+    M=12: D =     -84.0   (-)
+    M=13: D =     -94.0   (-)
