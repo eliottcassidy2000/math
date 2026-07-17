@@ -35,6 +35,69 @@ Prompt (owner): work the named next steps in tandem with other agents, pull ofte
 FILES: THM-963, HYP-7240 confirmed, LRCRationalLock.lean, recon .py/.out, root import, session log. NEXT: (i) SPARSE-BRANCH COUNTS: each k = +-1 Bezout branch is another AP-instant family -- count = floor-form via the same bridge machinery; closes the FULL pair layer of {1..13}; (ii) triple layer: divisor chains covered by chain iff; mixed triples need the 2D branch lattice; (iii) assemble S2 = sum over 78 pairs in closed form => the B5 pair term EXACT on the canonical family => the live floor with explicit q-threshold (the nucleus, now within reach on canonical strata). death-star; S48.
 
 ---
+## codex-2026-07-17-S64 -- AP-centred H6 scales seven and eight closed; block constants sharpened; seven-wall and resonance claims audited
+
+Prompt (owner): continue the remaining LRC(14) mathematics and put the proof
+formalization in its best honest state.
+
+The AP-centred common-scale Hamming-six frontier moved twice.  THM-962 closes
+`c=7`: among `108,673,488` hereditary-lcm-compatible contexts, sheet capacity
+forces all six orders to seven; a row-product character eliminates 922 of 924
+supports; and the quadratic-residue support and its nonsquare coset satisfy an
+inconsistent cyclic square-sum system.  A production Lean brick proves the
+terminal opposite-pair contradiction over `ZMod 7` with no `sorry` or
+`native_decide`; the literal-mask-to-character reduction remains the frozen
+exact Python certificate.  THM-963 closes `c=8`: `215,728,128` contexts reduce
+to the recurring 64 signed-doubling cycles, and their owner-obligation
+intersection graph is `K3,3`.  An independent Python reimplementation
+reproduced the divisor counts, the `66=64+2` capacity split, the per-owner 192
+witnesses, the `3040/960/96` profile, and the pair spectrum
+`6x0,6x8,3x16`.  The next common-scale face is `c=9`; none of this closes H5,
+non-AP/deep sheets, the block-partition trichotomy, or global sporadic
+emptiness.
+
+THM-959 was sharpened by using corrected THM-955 directly.  The entry/output
+vectors are now
+`ell=(3/4,5/4,2,3,6,13)` and
+`mu=(2/11,17/154,1/14,5/119,1/36,1/85)`, with worst junction
+`G0(6,6)=1105` instead of the valid but conservative 2198.  The abstract
+positive-mass sorted-gap layer of THM-955 is already kernel-green in
+`LRCClusterGapBrick`; periodic comb enumeration/discrepancy and `arcSafe`
+assembly remain.
+
+The audit also removed several false frontiers rather than building on them.
+The T4/T5 resonance pages are finite floating probes, not uniform exhaustion:
+their `K0`/box truncations have no tail bound and their advertised
+"dissociated" examples have short exact relations.  They are renumbered and
+downgraded to open schemes.  The exact consecutive pair law is
+`1/49+r(6-r)/(49n(n+1))`, with equality in both residue classes `r=0,6`;
+failures outside the consecutive-reduced locus persist arbitrarily deep.  The
+correct full-period consequence is nevertheless stronger: every block of
+eight consecutive speeds crosses, because five of its seven adjacent credits
+are strict.  Finally S340's former 140-grid "7%" statistic is now labelled
+sampled telemetry.  The script computes the exact rational erosion measure
+`sum max(ell_i-L,0)` of dead start positions from merged circular components;
+the still-open theorem is compatibility with the inherited admissible-start
+set, and the best-overlap pair is not generally the guaranteed adjacent close
+pair.
+
+Tournament audit: the useful vertices changed with the scale.  At `c=7` the
+faithful carrier is a six-row multiplicative character matrix and its power
+sums; pairwise completion becomes transitive on the two hard cosets.  At `c=8`
+the vertices are owner obligations, whose `K3,3` nerve proves emptiness while
+the runner tournament loses the zero pair intersections.  For positioned
+seven-wall work the faithful vertices are merged danger components with their
+lengths; runner pairs do not determine erosion.  These changes are the main
+structural lesson of the two closures.
+
+FILES: THM-959/962/963; scale-seven Python + Lean; scale-eight C++ + independent
+referee; corrected THM-955/LEM-042/043/044 and S340; updated frontier,
+formalization, lens, hypothesis, and result ledgers.  HONEST NEXT: `c=9`, the
+THM-955 L2/L3 Lean bridge, a correct block-partition trichotomy, and a
+positioned seven-wall consumption lemma.
+
+---
+
 ## boxeph-2026-07-17-S72 -- FORMALIZATION LANDED: LRCTreeHunter.lean (kernel-pure, corpus-registered, 8475 jobs green): tree_hunter_add_le (Hunter over ARBITRARY parent-pointer spanning trees -- subsumes klein's path + star as one-line corollaries; the formal engine of the c <= 12 route) + consecutive_form_upto_63 (LEM-044 closed form in-kernel, two full residue periods) + window7_unique_zero (the c = 8 pigeonhole)
 
 Prompt (owner): keep working remaining LRC 14 math, then formalization.

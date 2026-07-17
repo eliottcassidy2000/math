@@ -4,7 +4,7 @@ title: Scale-six Hamming-six affine-nerve obstruction
 status: PROVED STRUCTURAL + FINITE-EXACT — all 37,710,288 primitive proper AP-centred c=6 order/unit contexts fail necessary common-sheet coverage; an independent reduction leaves 64 all-order-six signed-doubling supports whose six affine owner four-flats have octahedral pair nerve and no triple intersection, so no metric recursion is born
 source: codex-2026-07-17-S62 scale-six exact and structural audit
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860]
-related: [THM-862, THM-957, THM-958, HYP-6820]
+related: [THM-862, THM-957, THM-958, THM-962, THM-963, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_six_hamming_six_common_sheet_codex_S62.cpp
   - 04-computation/lrc13_scale_six_hamming_six_structure_codex_S62.py

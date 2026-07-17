@@ -17,9 +17,11 @@ large multiple-of-12 "killer".  So tight-instance rigidity is genuinely delicate
 and n-dependent; n=12 must be checked, not assumed.
 
 Four parts:
-  (A) The 13|q localization LEMMA (proved here + verified): at any tight point
-      t*=p/q (reduced), 13|q, and the residues a_i*p mod q lie in [q/13,12q/13];
-      at q=13 they are forced to be a COMPLETE nonzero residue system mod 13.
+  (A) The 13|q localization LEMMA (proved here + verified): at any rational
+      tight point t*=p/q (reduced), 13|q, and the residues a_i*p mod q lie in
+      [q/13,12q/13].  At q=13 they are all nonzero; completeness requires the
+      separate global tight-from-above residue-pinning theorem, not merely one
+      maximizing point.  The AP control below does have complete residues.
   (B) Exact census of primitive 12-subsets of {1..16}: unique tight = {1..12}.
   (C) The Goddyn-Wong MECHANISM fails at n=12: every structured large-killer
       candidate has M > 1/13 (closest {1..11,24} = 2/25 > 1/13).
@@ -83,7 +85,8 @@ for (p, q) in wit:
             print(f"    q=13, p={p}: residues mod 13 = {rr}  (complete nonzero system: {rr==list(range(1,13))})")
 print(f"  Lemma holds on all {len(wit)} tight points of {{1..12}}: {ok}")
 print("  [PROVED: ||a_j p/q||=s/q=1/13 => q=13s => 13|q; min dist = q/13 => residues in [q/13,12q/13].]")
-print("  [At q=13: 12 distinct residues in [1,12] (12 integers) => forced = {1,...,12}.]")
+print("  [At q=13: residues are nonzero; completeness is a separate global pinning theorem.]")
+print("  [The displayed AP control has the complete nonzero residue system.]")
 
 print()
 print("=" * 74)
@@ -125,7 +128,13 @@ for name, S in cands:
     if M == ONE13 and S != base:
         gw.append(S)
 print(f"  NON-base tight among GW-mechanism candidates: {len(gw)}")
-print("  => the n=13 sporadic mechanism produces NO tight set at n=12 (closest {1..11,24}=2/25).")
+prime_apex_gates = [(r, gcd(r, 13 - r)) for r in range(1, 13)]
+assert all(g == 1 for _, g in prime_apex_gates)
+print("  Published GW single-acceleration criterion, uniformly at n=12:")
+print("    its obstruction interval starts at 13-r, but gcd(r,13-r)=gcd(r,13)=1")
+print("    for every r=1,...,12; hence no nontrivial AP single acceleration is tight.")
+print("  => the sampled nearest row {1..11,24} has M=2/25; the whole published")
+print("     single-acceleration mechanism is empty here (arbitrary sporadics remain open).")
 
 print()
 print("=" * 74)
@@ -133,10 +142,10 @@ print("(D) VERDICT")
 print("=" * 74)
 print("  VERIFIED: {1..12} is the unique tight primitive 12-set in {1..16} (1/%d)" % checked)
 print("            and no GW-mechanism large-killer candidate is tight.")
-print("  PROVED lemma: tight => 13|q at every tight point + residue localization;")
-print("                at q=13, residues forced complete => {1..12} minimal rep.")
-print("  REDUCTION: full rigidity = [q=13 forced: rule out u>=2 tight points]")
-print("             + [minimal-representative at q=13] (finite given a ratio bound).")
-print("  HONEST: this is the LRC(13) tight-instance characterization; TRUE at n=12")
-print("          (verified), FALSE at n=13 (Goddyn-Wong). Not closure-critical:")
+print("  PROVED lemma: rational tight point => 13|q + residue localization.")
+print("  SEPARATE theorem: global tight-from-above + no 13-multiple => full residues.")
+print("  REDUCTION: full rigidity still needs lift/deep-sheet coherence after pinning.")
+print("  HONEST: n=12 tight-instance uniqueness is conjecturally true and verified")
+print("          only in the stated finite box/families; uniform emptiness is OPEN.")
+print("          The analogous n=13 rigidity is false (Goddyn-Wong). Not closure-critical:")
 print("          THM-758 gives M>=1/14 with tight families in the PROVED <=3-far half.")

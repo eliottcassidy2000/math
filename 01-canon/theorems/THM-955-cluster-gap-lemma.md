@@ -1,7 +1,7 @@
 ---
 id: THM-955
 title: THE CLUSTER GAP LEMMA — whenever its explicit numerator is positive, any k ≤ 6 speeds leave a safe subinterval of width ≥ [(1−k/7)L − k/(7m)]/(1 + k + L·Σx) (exact periodic discrepancy + internal-tooth pigeonhole); the a-priori width floor that feeds norm_glue's base certificates analytically and is the continuous face of the formalization picture's item 3 (a-priori liveCount floors)
-status: PROVED (proof repaired in-file: the original raw-tooth count did not prove the displayed constants, and unconditional existence on very short windows was false; exact period-one discrepancy and fully internal tooth counts prove the stated conditional bound) + verified on all 291 positive-bound rows in the original 400-row battery and 100 targeted positive c=6 rows (zero violations; cluster_gap_verify_opus_S336); Lean draft staged but not proved (periodic discrepancy + internal-tooth component count + assembly are the named chunks)
+status: PROVED (proof repaired in-file: the original raw-tooth count did not prove the displayed constants, and unconditional existence on very short windows was false; exact period-one discrepancy and fully internal tooth counts prove the stated conditional bound) + verified on all 291 positive-bound rows in the original 400-row battery and 100 targeted positive c=6 rows (zero violations; cluster_gap_verify_opus_S336); Lean L1 is production-green in LRCClusterGapBrick (kernel-pure sorted-gap pigeonhole with the necessary positivity hypothesis); L2 periodic-comb enumeration/discrepancy and L3 arcSafe assembly remain
 source: opus-2026-07-17-S338; proof correction codex-2026-07-17-S62
 depends_on: [THM-928/932 (the gluing consumers), LRCLacunaryNest.window_tail_glue (the formal consumer of the base certificate this lemma produces)]
 scripts: 04-computation/cluster_gap_verify_opus_S336.py -> 05-knowledge/results/cluster_gap_verify_opus_S336.out
@@ -78,12 +78,13 @@ same pigeonhole seen from the two sides of the discrete/continuous bridge.
 program's machinery is genuinely needed — the lemma marks the exact
 boundary where elementary methods end.
 
-**Lean route (staged, lean-drafts/LRCClusterGap.lean).** Three layers:
-(L1) `sorted_gap_pigeonhole` — abstract: [a,b] minus N open rational
-intervals of total clipped length ≤ B contains a closed subinterval of
-width ≥ (L − B)/(N + 1); proof plan: List.mergeSort the 2N endpoints,
-the 2N+1 consecutive segments partition [a,b], each is tooth-free or
-tooth-contained, sum + max. THE one real formalization chunk.
-(L2) teeth enumeration per comb (finite ℤ-range, as in fragmentation).
-(L3) assembly to `arcSafe` on the found subinterval (floor bookkeeping as
-in nested_gap_step). Consumer: window_tail_glue/norm_glue immediately.
+**Lean route.** Three layers.  (L1) is now production-green in
+`TournamentH7.LRCClusterGapBrick`: `sorted_gap_pigeonhole` proves that
+removing `N` open rational intervals of total clipped length at most `B` from
+`[a,b]`, under `0<b-a-B`, leaves a closed avoiding interval of width at least
+`(b-a-B)/(N+1)`.  The same module kernel-checks a counterexample to the
+hypothesis-free form.  The live pieces are (L2) finite tooth enumeration and
+the exact period-one discrepancy for each comb, and (L3) assembly into
+`arcSafe` with the internal-tooth component count.  The scope-corrected draft
+contains those two remaining `sorry`s.  Consumer:
+`window_tail_glue`/`norm_glue` immediately after L2--L3.

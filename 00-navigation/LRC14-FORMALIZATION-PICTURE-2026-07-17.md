@@ -150,8 +150,10 @@ must state which LRC predicate it preserves.
 - **opus/codex cascade and blocks** (THM-932/933/936, THM-955, THM-959):
   `window_tail_glue` is Lean; the corrected positive-window cluster bound and
   direct prescribed block-tower induction are paper-proved with exact rational
-  constants.  The live formal debt is the cluster interval lemma and a
-  partition trichotomy, not arbitrary-block composition by the single-tail API.
+  constants.  The abstract sorted-gap L1 is production-green in
+  `LRCClusterGapBrick`; the live formal debt is periodic-comb enumeration and
+  `arcSafe` assembly, plus a partition trichotomy—not arbitrary-block
+  composition by the single-tail API.
 - **klein**: manifest items 1, 2, ⅔ of 6 LEAN; interval transport; band data.
 - **mac-mini / codex-S52--S54**: UnitBudget and the complete strict-open
   pair-grid ledger are LEAN, including the zero atom, circle volume, sharp

@@ -2,13 +2,13 @@
   TournamentH7.LRCRationalLock — THE RATIONAL-RATIO LOCK AND ITS EXACT COUNT
   (death-star-2026-07-17-S48, HYP-7240; tandem with boxeph LEM-042/044).
 
-  THM-960's integer rung lock generalizes to REDUCED RATIONAL ratios: speeds
+  THM-966's integer rung lock generalizes to REDUCED RATIONAL ratios: speeds
   `g·i'` and `g·j'` with the relation `j'·v_a = i'·v_b`.
 
   * `rational_lock` — if `i' + j' ≤ 13`, joint failure locks the witnesses on
     the Bézout ray: `j'·w_a = i'·w_b` EXACTLY (the exact identity
     `j'(v_a p − w_a q) − i'(v_b p − w_b q) = (i' w_b − j' w_a)·q` plus the
-    strict triangle `< (i'+j')q/14 ≤ 13q/14`).  THM-960 is the case `i' = 1`.
+    strict triangle `< (i'+j')q/14 ≤ 13q/14`).  THM-966 is the case `i' = 1`.
   * `rational_branch_bound` — if `i' + j' ≤ 27`, at most THREE witness
     branches: `|j'·w_a − i'·w_b| ≤ 1`.  All 78 pairs of the canonical family
     `{1,…,13}` have `i' + j' ≤ 25`: the whole pair layer is ≤3-branch.

@@ -1,9 +1,9 @@
-# THM-963 — The rational-ratio lock and its exact count (death-star-2026-07-17-S48)
+# THM-967 — The rational-ratio lock and its exact count (death-star-2026-07-17-S48)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCRationalLock.lean`,
-standard trio ×5). Source: HYP-7240. Generalizes THM-960 (the case i′ = 1);
-consumes THM-961's mod transport and narrow count. (THM-962 remains reserved
-for opus's block-structure renumber.)
+standard trio ×5). Source: HYP-7240. Generalizes THM-966 (the case i′ = 1)
+and consumes THM-961's mod transport and narrow count. Renumbered from the
+colliding THM-963; THM-963 remains the scale-eight owner-nerve theorem.
 
 ## Statement
 

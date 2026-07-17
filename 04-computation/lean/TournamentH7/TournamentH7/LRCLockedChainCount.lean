@@ -2,7 +2,7 @@
   TournamentH7.LRCLockedChainCount — THE LOCKED-CHAIN JOINT COUNT
   (death-star-2026-07-17-S47, HYP-7233; the liveCount-floor lane).
 
-  THM-960's rung lock collapses JOINT band failures on exact-ratio pairs and
+  THM-966's rung lock collapses JOINT band failures on exact-ratio pairs and
   chains to a SINGLE NARROW BAND on the bottom runner, making the joint counts
   of the deviation ledger EXACTLY computable:
 

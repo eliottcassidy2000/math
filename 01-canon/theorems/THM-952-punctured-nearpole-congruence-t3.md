@@ -77,12 +77,13 @@ r(1) = 1 (a′ = 1, b′ = 89, c′ = 88) — the boundary case the averaging le
 Script: t3_audit_hardening_kps_S128c43.py.
 
 With this, the T₃ near-pole treatment stands at THM-946(I)'s rigor grade (numbered
-constants, adversarial checks); the T₄/T₅ trees (THM-953/959) await the same pass —
+constants, adversarial checks); the T₄/T₅ schemes (THM-965/968) await the same pass —
 the subcase template transfers verbatim (the averaging lemma is rank-free).
 
 ## Evidence log
 - [x] referee: 6 triples × H ∈ {5,20,80,320}, envelope bounded, C/H decay confirmed
 - [x] hardened case tree with explicit constants + averaging lemma (cont.43; adversarial referee)
-- [ ] T₄/T₅ same hardening pass (template transfers; averaging lemma is rank-free)
+- [ ] T₄/T₅ hardening pass (THM-965/968); the finite probes have capped boxes and
+      no tail estimates, so transfer of the template remains to be proved
 - [ ] Lean rendering of the congruence lemma (ZMod orbit + case bound; klein's Thm892
       toolbox fits)

@@ -2,6 +2,7 @@ n=12 sporadic exact-cap audit (bounded core box {1,...,13})
 nonextremal primitive 11-cores: 77
 core branches: wide=65 narrow=12
 THM-759-capped primitive completions: 790
+uniform top-speed caps on this same core bank: coarse w<12b gives 10813; pair-ruler quantization w<=floor(24b^2/(2b+13)) gives 6897
 candidate branches: wide=750 narrow=40
 narrow candidates with a THM-766 tooth label: 0/40
 tight completions M=1/13: 0

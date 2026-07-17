@@ -1,0 +1,47 @@
+scale-nine AP-centred Hamming-six frontier scout
+supports 924
+hereditary state words per support 521964
+hereditary labelled state contexts 482294736
+hereditary order contexts 437052
+scalar-capacity contexts 1186
+scalar-capacity supports 316
+owner-local contexts 76
+owner-local supports 76
+owner-local patterns
+  1^0 3^0 9^6: 64 contexts, 2985984 state words
+  1^0 3^2 9^4: 12 contexts, 62208 state words
+global state words tested after owner-local reduction 3048192
+global common-sheet survivors 0
+global surviving supports 0
+all-D9 structure 64 signed-doubling C6 supports
+all-D9 obligation profile 0:44100 1:2520 2:36
+all-D9 owner size 432; pair nerve 3K2 with antipodal intersection 12
+mixed structure orbit {D3:a,5a; D9:+-2a,+-3a}, size 12
+mixed obligation profile 0:2928 1:1776 2:336 3:144
+mixed owner sizes D3:1152 D9:144; D9 pair nerve 2K2
+mixed pair intersections D3-D3:192 D3-D9:{24:48,48:48} D9 antipodes:144
+tournament observable o/p in {+2,-2}; switch signed edge; absent pairs tied
+tournament tie path lexicographically first absence-graph Hamiltonian path
+all-D9 tournament joint fingerprints 5; scores 1,2,2,3,3,4; triangles 6; SCC 6
+all-D9 tournament flips {2:8,3:52,4:4}; Hamiltonian paths {29:32,31:20,37:12}
+mixed tournament joint fingerprints 6; triangle histogram {0:1,1:4,3:2,4:2,6:3}
+mixed tournament SCC {1+1+1+1+1+1:1,3+1+1+1:4,5+1:2,6:5}
+challenged vertices owner obligations preserve 3K2/2K2 nerves; completed tournaments destroy intersection data
+all-D9 owner-local minimum special-degree histogram
+  2: 64
+scalar pattern histogram
+  1^0 3^0 9^6: 82
+  1^0 3^2 9^4: 474
+  1^0 3^3 9^3: 132
+  1^0 3^4 9^2: 330
+  1^1 3^3 9^2: 168
+local mask table at owner one (state: ratios 1..12 in hex)
+  (1,0): 1ff 0 0 0 0 0 0 0 0 0 0 0
+  (3,1): 124 0 0 92 92 0 0 49 49 0 0 0
+  (3,2): 124 0 0 49 49 0 0 92 92 0 0 0
+  (9,1): 6 3 1 100 180 80 40 60 20 10 18 8
+  (9,2): 44 42 2 20 21 1 10 110 100 8 88 80
+  (9,4): 14 50 40 100 102 2 8 28 20 80 81 1
+  (9,5): 5 81 80 20 28 8 2 102 100 40 50 10
+  (9,7): 84 88 8 100 110 10 1 21 20 2 42 40
+  (9,8): c 18 10 20 60 40 80 180 100 1 3 2

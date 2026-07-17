@@ -878,9 +878,24 @@ four words, and no triple meets.  Hence 16 unit words satisfy zero owners and
 strengthened by three antipodal pair obstructions.  The completed tournament
 again sees the signed cycle but loses the decisive affine equations and nerve.
 
-Thus `c=3`, `c=4`, `c=5`, and `c=6` are closed.  This does not touch `c>=7`, the finite
-ramified H5 bank, or non-AP-centred/deep-sheet branches of the global `n=12`
-problem.
+THM-962 closes `c=7`.  Capacity forces all six effective orders to seven; a
+row-product character eliminates 922 of 924 supports, and a square-sum
+contradiction over `F_7` kills the quadratic-residue support and its nonsquare
+coset.  The terminal opposite-pair square obstruction is production-green in
+`LRCScaleSevenSquareSum.lean`; the literal-mask-to-character reduction is the
+separate frozen exact certificate.
+
+THM-963 closes `c=8`.  The hereditary-lcm bank has `215,728,128` contexts;
+capacity and owner-local feasibility reduce it to the recurring 64 signed
+cycles.  Their owner-obligation intersection graph is `K3,3`, so a
+distance-two incompatible pair occurs in every owner triple.  A separately
+implemented Python referee reproduces the divisor counts, the `66=64+2`
+capacity split, the `3040/960/96` unit profile, and the pair spectrum
+`6x0,6x8,3x16`.  This endpoint is exact native C++, not yet Lean.
+
+Thus the AP-centred common-scale H6 faces `c=3,...,8` are closed.  This does
+not touch `c>=9`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
+branches of the global `n=12` problem.
 
 The false `q<=25` proposal now has a much stronger exact guardrail.  The row
 
@@ -967,12 +982,15 @@ window with a `7/3`-nested tail.  THM-955 now proves the cluster-gap width under
 its necessary positive-numerator hypothesis; its original unconditional wording
 and raw-tooth constant derivation were false and have been corrected.  THM-959
 then proves a direct nested induction for every supplied partition into blocks
-of size at most six, with corrected uniform junction table
-`G0(1,1)=7,...,G0(6,6)=2198`.  The original `2030` value came from reversing
-the monotonicity in `M/m`, and the old claim that the complement is exactly one
+of size at most six.  Using THM-955 directly gives
+`ell=(3/4,5/4,2,3,6,13)`,
+`mu=(2/11,17/154,1/14,5/119,1/36,1/85)`, and worst junction
+`G0(6,6)=1105`.  The earlier `2198` was valid but needlessly weakened both
+THM-955 constants; the original `2030` was invalid because it reversed the
+monotonicity in `M/m`.  The old claim that the complement is exactly one
 seven-comparable block has been withdrawn.  What remains is the partition
-trichotomy for packets admitting no corrected block tower and the Lean proof of
-the positive-window cluster lemma—not the gluing operation.
+trichotomy and THM-955's L2 periodic-comb enumeration/discrepancy plus L3
+`arcSafe` assembly; L1 is production-green in `LRCClusterGapBrick`.
 
 LEM-034 and LEM-035 independently refine the boundary side of the same state.
 Endpoint classes adjacent to a section have forced signs, while class-zero

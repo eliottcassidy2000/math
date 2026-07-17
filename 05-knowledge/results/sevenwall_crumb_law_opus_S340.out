@@ -1,13 +1,25 @@
-THE 7-WALL CRUMB LAW (exact, fee-scale windows):
-  300 windows at L = 3/(2V): dead (fully covered) = 1, live = 299  (100% live)
-  rescuing-pair gcd distribution: {3: 17, 1: 174, 2: 43, '5+': 57, 4: 7}
-  rescuing-pair adjacency: {'non-adj': 188, 'adjacent': 110}
-  rescuing-pair ratio: median 1.56, p90 3.44
+THE 7-WALL CRUMB LAW (sampled window telemetry; exact arithmetic per sample):
+  sampled 300 windows at L = 3/(2V): dead (fully covered) = 1, live = 299  (100% live)
+  best positive-overlap pair observations = 298/299
+  best-pair gcd distribution: {3: 17, 1: 174, 2: 43, '5+': 57, 4: 7}
+  best-pair adjacency: {'non-adj': 188, 'adjacent': 110}
+  best-pair ratio: median 1.56, p90 3.44
+  best pair is nonadjacent in 188/298 positive-overlap samples;
+  it is not the guaranteed close adjacent pair.
 
-  scan: dead-window FRACTION per block (how much of the circle is dead
-  at fee scale -- the window-choice freedom upstream must beat this):
-  25 blocks x 140 positions: dead fraction median 0.01, max 0.07, min 0.00
+EXACT POSITIONAL EROSION ON THE SAME 25 SAMPLED BLOCKS:
+  for proper circular components of lengths ell_i,
+  dead-start measure = sum_i max(ell_i - L, 0);
+  the whole-circle danger union is handled separately with measure 1.
+  exact dead-start measures (sorted):
+  0,0,0,0,0,17593/894975235,6317/61846680,93379/197807176,48131351225/18044389360998,595729270/173228562073,126463466474284/32609398655298465,515516767/127149569820,5305327594471/989941791558720,408133925716408/74009842606882875,11621785509043/892730896579665,55491177151/3906995814540,334592063183/18864572095044,16024069740580915/843040353411451272,451975077461/20944641790800,11489150541509/336409600802814,532548190525/14628209764938,1116574012343/28684989736480,25776951553/650776785120,321376893277/5362599355974,113319908259119/1808221682135484
+  exact sampled-block summary: positive=20/25, median=5305327594471/989941791558720 (0.005359), max=113319908259119/1808221682135484 (0.062669), min=0 (0.000000)
+  sampled 140-start grid frequencies (not circle measures or bounds):
+  median=0.01, max=0.07, min=0.00
 
-  -> if max dead-fraction < 1: window choice ALWAYS exists at fee
-     scale; the 7-wall crumb is a POSITIONAL pigeonhole, not a
-     per-window analytic bound.
+  -> each of these 25 sampled blocks has exact dead-start measure < 1,
+     so each sampled block admits a fee-scale live start.
+  -> this is not a uniform 7% theorem and does not yet provide the
+     upstream window-choice freedom needed to close the seven-wall.
+  -> carrier audit: merged circular components preserve positional
+     erosion; a runner-pair tournament does not preserve their lengths.

@@ -38,6 +38,16 @@ def cap_for(core: tuple[int, ...], mu: F) -> int:
     return max(core) // (13 * mu - 1)
 
 
+def denominator_quantized_cap(b: int) -> int:
+    """Universal sporadic cap from THM-668 + THM-759.
+
+    If ``mu=m/q>1/12`` and the pair-sum ruler has ``q<=2b``, then
+    ``mu>=1/12+1/(24b)`` and hence
+    ``w<=floor(24b^2/(2b+13))``.
+    """
+    return (24 * b * b) // (2 * b + 13)
+
+
 def tooth_labels(m: int, b: int, w: int) -> tuple[int, ...]:
     return tuple(
         k
@@ -60,16 +70,26 @@ def main() -> None:
     narrow_label_hist = Counter()
     candidates = []
     max_cap_ratio = (F(0), None)
+    coarse_ratio_candidates = 0
+    denominator_cap_candidates = 0
 
     for core, mu in cores:
         m, b = min(core), max(core)
         cap = cap_for(core, mu)
+        denominator_cap = denominator_quantized_cap(b)
+        assert cap <= denominator_cap < 12 * b
         ratio = F(cap, b)
         if ratio > max_cap_ratio[0]:
             max_cap_ratio = (ratio, (core, mu, cap))
 
         branch = "wide" if b >= 12 * m else "narrow"
         branch_cores[branch] += 1
+        coarse_ratio_candidates += sum(
+            primitive(core + (w,)) for w in range(b + 1, 12 * b)
+        )
+        denominator_cap_candidates += sum(
+            primitive(core + (w,)) for w in range(b + 1, denominator_cap + 1)
+        )
         for w in range(b + 1, cap + 1):
             speeds = core + (w,)
             if not primitive(speeds):
@@ -86,6 +106,8 @@ def main() -> None:
 
     assert len(cores) == 77
     assert len(candidates) == 790
+    assert coarse_ratio_candidates == 10813
+    assert denominator_cap_candidates == 6897
     assert branch_cores == Counter({"wide": 65, "narrow": 12})
     assert branch_candidates == Counter({"wide": 750, "narrow": 40})
     assert narrow_label_hist == Counter({(): 40})
@@ -98,6 +120,12 @@ def main() -> None:
     print(f"nonextremal primitive 11-cores: {len(cores)}")
     print(f"core branches: wide={branch_cores['wide']} narrow={branch_cores['narrow']}")
     print(f"THM-759-capped primitive completions: {len(candidates)}")
+    print(
+        "uniform top-speed caps on this same core bank: "
+        f"coarse w<12b gives {coarse_ratio_candidates}; "
+        "pair-ruler quantization w<=floor(24b^2/(2b+13)) gives "
+        f"{denominator_cap_candidates}"
+    )
     print(
         "candidate branches: "
         f"wide={branch_candidates['wide']} narrow={branch_candidates['narrow']}"

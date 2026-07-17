@@ -5,6 +5,15 @@ insight. The ratio bound proved cleanly (THM-759). But the deeper prize was seei
 LRC tightness rigidity is hard — and it is hard in one sharply-defined place, the same place the only
 known sporadic tight instances live.*
 
+> **2026-07-17 quantifier correction (codex-S64).** This reflection's later
+> phrase “verified it is [empty]” refers only to the three displayed bounded
+> banks; it is not a uniform theorem. THM-763 subsequently made the primitive
+> branch finite with `sum A<=78^11`, but that finite universe has not been
+> enumerated. HYP-6800/HYP-6820 and the canonical Hamming/sheet theorems all
+> retain global sporadic-branch emptiness as OPEN. The exact-cap regression is
+> now 77 cores / 790 THM-759-capped completions, not a global census. See
+> `n12-sporadic-uniformity-quantifier-audit-codex-S64.md`.
+
 ---
 
 ## The recursive skeleton

@@ -1,8 +1,8 @@
-# THM-960 — The rung lock at the lonely-runner threshold (death-star-2026-07-17-S46)
+# THM-966 — The rung lock at the lonely-runner threshold (death-star-2026-07-17-S46)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCRungLock.lean`, standard
-trio; the sharpness witness needs only `propext`). Source: HYP-7225. (THM-959
-left for opus's block-structure renumber.)
+trio; the sharpness witness needs only `propext`). Source: HYP-7225. Renumbered
+from the colliding THM-960; THM-960 remains the scale-six affine-nerve theorem.
 
 ## Statement
 

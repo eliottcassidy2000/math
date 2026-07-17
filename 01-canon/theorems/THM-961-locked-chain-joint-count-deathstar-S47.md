@@ -1,9 +1,8 @@
 # THM-961 — The locked-chain joint count (death-star-2026-07-17-S47)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCLockedChainCount.lean`,
-standard trio ×5). Source: HYP-7233. Consumes THM-960's rung lock. (THM-959 =
-kind-pasteur's T5 plane pass; opus's block-structure reduction still needs its
-renumber — 962+ suggested.)
+standard trio ×5). Source: HYP-7233. Consumes THM-966's rung lock. THM-959 is
+the corrected block-tower reduction; the T5 plane scheme is THM-968.
 
 ## Statement
 
@@ -36,7 +35,7 @@ family), exact count 2435 coprime cases PASS.
 
 ## Consumes / feeds
 
-Consumes THM-960 (lock), THM-942A pattern (bijection). Feeds the liveCount
+Consumes THM-966 (lock), THM-942A pattern (bijection). Feeds the liveCount
 floor: on locked strata the B5 expansion's pair terms are now closed-form; the
 triple/quadruple/quintuple locked terms follow the same narrow-band collapse
 (chain iff) — the remaining ledger work is the NON-chain subsets (ratios > 13
