@@ -1,7 +1,7 @@
 /-
   TournamentH7.LRCLocalDensityBlockGluing
 
-  Algebraic formalization core of THM-933, the sharp local-density
+  Analytic and algebraic formalization core of THM-933, the sharp local-density
   block-gluing theorem (codex-2026-07-16-S21, HYP-7152).
 
   The geometric input to THM-933 says that every component J of an earlier
@@ -12,6 +12,12 @@
   inside the next certified block.  This file proves the reusable pieces
   around that input:
 
+  * the Lebesgue measure of a retained interval is exactly the increment of the
+    centered indicator primitive, for both `Ioc` and `Icc` conventions;
+  * the primitive and fixed-scale retained-window functions are continuous, so
+    the primitive discrepancy `q` and fixed-scale density `eta` are attained;
+  * for a one-periodic block of the advertised density, every fixed-scale
+    deficit is at most the attained primitive discrepancy;
   * a bounded centered primitive gives the one-interval discrepancy inequality,
     with equality when an interval joins an upper extremum to a lower extremum;
   * summing the local inequality over components pays exactly card * q, and a
@@ -25,7 +31,9 @@
   certificate from the THM-933 referee.  No native_decide and no sorry.
 -/
 
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Periodic
 import Mathlib.Tactic
+import Mathlib.Topology.Order.Compact
 import TournamentH7.LRCRegionDiff
 
 open scoped BigOperators
@@ -112,6 +120,511 @@ theorem fixedScale_extremizer_eq_discrepancy
     _ = upperValue - lowerValue := by linarith
 
 end PrimitiveBridge
+
+section ConcretePrimitiveBridge
+
+open MeasureTheory Set
+
+/-- The centered indicator primitive from THM-933:
+`H(u) = ∫₀ᵘ (1_S(t) - density) dt`. -/
+noncomputable def centeredPrimitive (S : Set ℝ) (density u : ℝ) : ℝ :=
+  ∫ t in (0 : ℝ)..u, S.indicator (fun _ => (1 : ℝ)) t - density
+
+/-- Retained Lebesgue measure in the oriented positive-length window
+`(startPoint, startPoint + ell]`. Endpoints are null, so this agrees with the
+closed-interval convention used in THM-933. -/
+noncomputable def retainedWindow (S : Set ℝ) (ell startPoint : ℝ) : ℝ :=
+  (volume (S ∩ Ioc startPoint (startPoint + ell))).toReal
+
+/-- Fixed-scale local density `eta(ell)`, defined as the infimum over one
+period. The infimum is attained for measurable `S` and `ell > 0`; see
+`fixedScaleEta_attained`. -/
+noncomputable def fixedScaleEta (S : Set ℝ) (ell : ℝ) : ℝ :=
+  sInf ((fun startPoint => retainedWindow S ell startPoint / ell) '' Icc (0 : ℝ) 1)
+
+/-- Primitive discrepancy `q = max H - min H`, expressed using `sSup` and
+`sInf` on one period. Both extrema are attained; see
+`primitiveDiscrepancy_attained`. -/
+noncomputable def primitiveDiscrepancy (S : Set ℝ) (density : ℝ) : ℝ :=
+  sSup (centeredPrimitive S density '' Icc (0 : ℝ) 1) -
+    sInf (centeredPrimitive S density '' Icc (0 : ℝ) 1)
+
+/-- Supremum over the fixed-scale deficit ledger on scales `0 < ell ≤ 1`.
+THM-933 identifies this with `primitiveDiscrepancy`; see
+`primitiveDiscrepancy_eq_fixedScaleDeficitSup`. -/
+noncomputable def fixedScaleDeficitSup (S : Set ℝ) (density : ℝ) : ℝ :=
+  sSup ((fun ell => ell * (density - fixedScaleEta S ell)) '' Ioc (0 : ℝ) 1)
+
+/-- A measurable indicator is integrable on every bounded real interval. -/
+lemma indicator_intervalIntegrable (S : Set ℝ) (hS : MeasurableSet S) (a b : ℝ) :
+    IntervalIntegrable (fun t => S.indicator (fun _ => (1 : ℝ)) t) volume a b := by
+  have hone : IntervalIntegrable (fun _ : ℝ => (1 : ℝ)) volume a b :=
+    intervalIntegrable_const
+  constructor
+  · exact hone.1.indicator hS
+  · exact hone.2.indicator hS
+
+/-- The centered indicator is integrable on every bounded real interval. -/
+lemma centered_intervalIntegrable (S : Set ℝ) (hS : MeasurableSet S)
+    (density a b : ℝ) :
+    IntervalIntegrable (fun t => S.indicator (fun _ => (1 : ℝ)) t - density)
+      volume a b :=
+  (indicator_intervalIntegrable S hS a b).sub intervalIntegrable_const
+
+/-- The interval integral of an indicator is the retained Lebesgue measure.
+This is the concrete measure-theoretic input behind the THM-933 primitive
+bridge. -/
+theorem intervalIndicatorIntegral_eq_measure
+    (S : Set ℝ) (hS : MeasurableSet S) {a b : ℝ} (hab : a ≤ b) :
+    (∫ t in a..b, S.indicator (fun _ => (1 : ℝ)) t) =
+      (volume (S ∩ Ioc a b)).toReal := by
+  rw [intervalIntegral.integral_of_le hab]
+  rw [← MeasureTheory.integral_indicator measurableSet_Ioc]
+  rw [Set.indicator_indicator, inter_comm]
+  exact MeasureTheory.integral_indicator_one (hS.inter measurableSet_Ioc)
+
+/-- Concrete THM-933 primitive identity with the half-open interval convention:
+`volume(S ∩ (a,b]) - density * (b-a) = H(b) - H(a)`. -/
+theorem centeredPrimitive_interval_identity
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) {a b : ℝ} (hab : a ≤ b) :
+    (volume (S ∩ Ioc a b)).toReal - density * (b - a) =
+      centeredPrimitive S density b - centeredPrimitive S density a := by
+  have hind := indicator_intervalIntegrable S hS a b
+  have hcenter0b := centered_intervalIntegrable S hS density 0 b
+  have hcenter0a := centered_intervalIntegrable S hS density 0 a
+  calc
+    (volume (S ∩ Ioc a b)).toReal - density * (b - a)
+        = (∫ t in a..b, S.indicator (fun _ => (1 : ℝ)) t) -
+            ∫ _t in a..b, density := by
+              rw [intervalIndicatorIntegral_eq_measure S hS hab,
+                intervalIntegral.integral_const, smul_eq_mul]
+              ring
+    _ = ∫ t in a..b, S.indicator (fun _ => (1 : ℝ)) t - density := by
+      rw [intervalIntegral.integral_sub hind intervalIntegrable_const]
+    _ = centeredPrimitive S density b - centeredPrimitive S density a := by
+      rw [centeredPrimitive]
+      exact (intervalIntegral.integral_interval_sub_left hcenter0b hcenter0a).symm
+
+/-- Closed-interval form of `centeredPrimitive_interval_identity`. Lebesgue
+measure ignores the left endpoint, so it is identical to the half-open form. -/
+theorem centeredPrimitive_Icc_identity
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) {a b : ℝ} (hab : a ≤ b) :
+    (volume (S ∩ Icc a b)).toReal - density * (b - a) =
+      centeredPrimitive S density b - centeredPrimitive S density a := by
+  have hnull : volume (S ∩ Ioc a b) = volume (S ∩ Icc a b) :=
+    measure_congr (ae_eq_set_inter (ae_eq_refl S) Ioc_ae_eq_Icc)
+  rw [← hnull]
+  exact centeredPrimitive_interval_identity S hS density hab
+
+/-- The centered primitive is continuous for every measurable block. -/
+theorem continuous_centeredPrimitive
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) :
+    Continuous (centeredPrimitive S density) := by
+  exact intervalIntegral.continuous_primitive
+    (fun a b => centered_intervalIntegrable S hS density a b) 0
+
+/-- If the indicator is one-periodic and `density` is its mass on one period,
+then the centered primitive is one-periodic as asserted in THM-933. -/
+theorem centeredPrimitive_periodic
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    Function.Periodic (centeredPrimitive S density) 1 := by
+  let centeredIntegrand := fun t => S.indicator (fun _ => (1 : ℝ)) t - density
+  have hperiodicIntegrand : Function.Periodic centeredIntegrand 1 := by
+    intro point
+    exact congrArg (fun value => value - density) (hindicator point)
+  have hmean : (∫ t in (0 : ℝ)..1, centeredIntegrand t) = 0 := by
+    have hidentity := centeredPrimitive_interval_identity S hS density
+      (show (0 : ℝ) ≤ 1 by norm_num)
+    simpa [centeredPrimitive, centeredIntegrand, hdensity] using hidentity.symm
+  intro point
+  change (∫ t in (0 : ℝ)..point + 1, centeredIntegrand t) =
+    ∫ t in (0 : ℝ)..point, centeredIntegrand t
+  calc
+    (∫ t in (0 : ℝ)..point + 1, centeredIntegrand t) =
+        (∫ t in (0 : ℝ)..point, centeredIntegrand t) +
+          ∫ t in (0 : ℝ)..0 + 1, centeredIntegrand t :=
+      hperiodicIntegrand.intervalIntegral_add_eq_add 0 point
+        (fun a b => centered_intervalIntegrable S hS density a b)
+    _ = ∫ t in (0 : ℝ)..point, centeredIntegrand t := by
+      rw [zero_add, hmean, add_zero]
+
+/-- A one-periodic block retains exactly its advertised one-period mass in
+every length-one window. -/
+theorem retainedWindow_one_eq_density
+    (S : Set ℝ) (hS : MeasurableSet S) (density startPoint : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    retainedWindow S 1 startPoint = density := by
+  rw [retainedWindow, ← intervalIndicatorIntegral_eq_measure S hS
+    (show startPoint ≤ startPoint + 1 by linarith)]
+  calc
+    (∫ t in startPoint..startPoint + 1,
+        S.indicator (fun _ => (1 : ℝ)) t) =
+        ∫ t in (0 : ℝ)..0 + 1, S.indicator (fun _ => (1 : ℝ)) t :=
+      hindicator.intervalIntegral_add_eq startPoint 0
+    _ = density := by
+      rw [zero_add, intervalIndicatorIntegral_eq_measure S hS (by norm_num), hdensity]
+
+/-- A retained window is a difference of the uncentered primitive. -/
+theorem retainedWindow_eq_primitive_sub
+    (S : Set ℝ) (hS : MeasurableSet S) {ell : ℝ} (hell : 0 ≤ ell)
+    (startPoint : ℝ) :
+    retainedWindow S ell startPoint =
+      centeredPrimitive S 0 (startPoint + ell) - centeredPrimitive S 0 startPoint := by
+  rw [retainedWindow]
+  have hidentity := centeredPrimitive_interval_identity S hS 0
+    (show startPoint ≤ startPoint + ell by linarith)
+  simpa using hidentity
+
+/-- Retained measure in a fixed-length sliding window is continuous in its
+starting point. This supplies the compactness premise for `eta`. -/
+theorem continuous_retainedWindow
+    (S : Set ℝ) (hS : MeasurableSet S) {ell : ℝ} (hell : 0 ≤ ell) :
+    Continuous (retainedWindow S ell) := by
+  have hprimitive := continuous_centeredPrimitive S hS 0
+  have heq : retainedWindow S ell = fun startPoint =>
+      centeredPrimitive S 0 (startPoint + ell) - centeredPrimitive S 0 startPoint := by
+    funext startPoint
+    exact retainedWindow_eq_primitive_sub S hS hell startPoint
+  rw [heq]
+  fun_prop
+
+/-- The fixed-scale density has a minimizing start point on one period. -/
+theorem exists_fixedScale_minimizer
+    (S : Set ℝ) (hS : MeasurableSet S) {ell : ℝ} (hell : 0 < ell) :
+    ∃ startPoint ∈ Icc (0 : ℝ) 1, ∀ point ∈ Icc (0 : ℝ) 1,
+      retainedWindow S ell startPoint / ell ≤ retainedWindow S ell point / ell := by
+  have hcontinuous : Continuous (fun point => retainedWindow S ell point / ell) :=
+    (continuous_retainedWindow S hS hell.le).div_const ell
+  obtain ⟨startPoint, hstartPoint, hmin⟩ :=
+    isCompact_Icc.exists_isMinOn (show (Icc (0 : ℝ) 1).Nonempty by norm_num)
+      hcontinuous.continuousOn
+  exact ⟨startPoint, hstartPoint, fun point hpoint => hmin hpoint⟩
+
+/-- `fixedScaleEta` is a genuine minimum, not merely an infimum. -/
+theorem fixedScaleEta_attained
+    (S : Set ℝ) (hS : MeasurableSet S) {ell : ℝ} (hell : 0 < ell) :
+    ∃ startPoint ∈ Icc (0 : ℝ) 1,
+      fixedScaleEta S ell = retainedWindow S ell startPoint / ell ∧
+      ∀ point ∈ Icc (0 : ℝ) 1,
+        fixedScaleEta S ell ≤ retainedWindow S ell point / ell := by
+  let densityAt := fun point => retainedWindow S ell point / ell
+  have hcontinuous : Continuous densityAt :=
+    (continuous_retainedWindow S hS hell.le).div_const ell
+  have hnonempty : (Icc (0 : ℝ) 1).Nonempty := by norm_num
+  obtain ⟨startPoint, hstartPoint, hmin⟩ :=
+    exists_fixedScale_minimizer S hS hell
+  have hbddBelow : BddBelow (densityAt '' Icc (0 : ℝ) 1) :=
+    isCompact_Icc.bddBelow_image hcontinuous.continuousOn
+  have himageNonempty : (densityAt '' Icc (0 : ℝ) 1).Nonempty :=
+    hnonempty.image densityAt
+  have heta : fixedScaleEta S ell = densityAt startPoint := by
+    unfold fixedScaleEta
+    apply le_antisymm
+    · exact csInf_le hbddBelow ⟨startPoint, hstartPoint, rfl⟩
+    · exact le_csInf himageNonempty (by
+        rintro value ⟨point, hpoint, rfl⟩
+        exact hmin point hpoint)
+  exact ⟨startPoint, hstartPoint, heta, fun point hpoint => heta.symm ▸ hmin point hpoint⟩
+
+/-- At scale one, the fixed-scale minimum is exactly the period density. -/
+theorem fixedScaleEta_one
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    fixedScaleEta S 1 = density := by
+  obtain ⟨startPoint, _hstartPoint, heta, _hminimum⟩ :=
+    fixedScaleEta_attained S hS (show (0 : ℝ) < 1 by norm_num)
+  calc
+    fixedScaleEta S 1 = retainedWindow S 1 startPoint / 1 := heta
+    _ = density := by rw [retainedWindow_one_eq_density S hS density startPoint
+      hindicator hdensity, div_one]
+
+/-- The centered primitive attains both its minimum and maximum on one period. -/
+theorem exists_centeredPrimitive_extrema
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) :
+    ∃ lowerPoint ∈ Icc (0 : ℝ) 1, ∃ upperPoint ∈ Icc (0 : ℝ) 1,
+      (∀ point ∈ Icc (0 : ℝ) 1,
+        centeredPrimitive S density lowerPoint ≤ centeredPrimitive S density point) ∧
+      (∀ point ∈ Icc (0 : ℝ) 1,
+        centeredPrimitive S density point ≤ centeredPrimitive S density upperPoint) := by
+  have hcontinuous : ContinuousOn (centeredPrimitive S density) (Icc (0 : ℝ) 1) :=
+    (continuous_centeredPrimitive S hS density).continuousOn
+  have hnonempty : (Icc (0 : ℝ) 1).Nonempty := by norm_num
+  obtain ⟨lowerPoint, hlowerPoint, hlower⟩ :=
+    isCompact_Icc.exists_isMinOn hnonempty hcontinuous
+  obtain ⟨upperPoint, hupperPoint, hupper⟩ :=
+    isCompact_Icc.exists_isMaxOn hnonempty hcontinuous
+  exact ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint,
+    fun point hpoint => hlower hpoint, fun point hpoint => hupper hpoint⟩
+
+/-- `primitiveDiscrepancy` is the difference of attained extrema. -/
+theorem primitiveDiscrepancy_attained
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) :
+    ∃ lowerPoint ∈ Icc (0 : ℝ) 1, ∃ upperPoint ∈ Icc (0 : ℝ) 1,
+      primitiveDiscrepancy S density =
+          centeredPrimitive S density upperPoint - centeredPrimitive S density lowerPoint ∧
+      (∀ point ∈ Icc (0 : ℝ) 1,
+        centeredPrimitive S density lowerPoint ≤ centeredPrimitive S density point) ∧
+      (∀ point ∈ Icc (0 : ℝ) 1,
+        centeredPrimitive S density point ≤ centeredPrimitive S density upperPoint) := by
+  let primitive := centeredPrimitive S density
+  have hcontinuous : ContinuousOn primitive (Icc (0 : ℝ) 1) :=
+    (continuous_centeredPrimitive S hS density).continuousOn
+  have hnonempty : (Icc (0 : ℝ) 1).Nonempty := by norm_num
+  obtain ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, hlower, hupper⟩ :=
+    exists_centeredPrimitive_extrema S hS density
+  have hbddBelow : BddBelow (primitive '' Icc (0 : ℝ) 1) :=
+    isCompact_Icc.bddBelow_image hcontinuous
+  have hbddAbove : BddAbove (primitive '' Icc (0 : ℝ) 1) :=
+    isCompact_Icc.bddAbove_image hcontinuous
+  have himageNonempty : (primitive '' Icc (0 : ℝ) 1).Nonempty :=
+    hnonempty.image primitive
+  have hinf : sInf (primitive '' Icc (0 : ℝ) 1) = primitive lowerPoint := by
+    apply le_antisymm
+    · exact csInf_le hbddBelow ⟨lowerPoint, hlowerPoint, rfl⟩
+    · exact le_csInf himageNonempty (by
+        rintro value ⟨point, hpoint, rfl⟩
+        exact hlower point hpoint)
+  have hsup : sSup (primitive '' Icc (0 : ℝ) 1) = primitive upperPoint := by
+    apply le_antisymm
+    · exact csSup_le himageNonempty (by
+        rintro value ⟨point, hpoint, rfl⟩
+        exact hupper point hpoint)
+    · exact le_csSup hbddAbove ⟨upperPoint, hupperPoint, rfl⟩
+  exact ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, by
+    simp only [primitiveDiscrepancy, primitive, hsup, hinf], hlower, hupper⟩
+
+/-- Primitive discrepancy is nonnegative. -/
+theorem primitiveDiscrepancy_nonneg
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) :
+    0 ≤ primitiveDiscrepancy S density := by
+  obtain ⟨lowerPoint, _hlowerPoint, upperPoint, hupperPoint, hq, hlower, _hupper⟩ :=
+    primitiveDiscrepancy_attained S hS density
+  rw [hq]
+  exact sub_nonneg.mpr (hlower upperPoint hupperPoint)
+
+/-- The attained primitive oscillation is nonnegative and bounds every
+oriented difference with endpoints in one period. -/
+theorem exists_attained_discrepancy
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ) :
+    ∃ lowerPoint ∈ Icc (0 : ℝ) 1, ∃ upperPoint ∈ Icc (0 : ℝ) 1,
+      0 ≤ centeredPrimitive S density upperPoint - centeredPrimitive S density lowerPoint ∧
+      ∀ startPoint ∈ Icc (0 : ℝ) 1, ∀ endPoint ∈ Icc (0 : ℝ) 1,
+        centeredPrimitive S density startPoint - centeredPrimitive S density endPoint ≤
+          centeredPrimitive S density upperPoint - centeredPrimitive S density lowerPoint := by
+  obtain ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, hlower, hupper⟩ :=
+    exists_centeredPrimitive_extrema S hS density
+  refine ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, ?_, ?_⟩
+  · exact sub_nonneg.mpr (hlower upperPoint hupperPoint)
+  · intro startPoint hstartPoint endPoint hendPoint
+    exact sub_le_sub (hupper startPoint hstartPoint) (hlower endPoint hendPoint)
+
+/-- Under one-periodicity, the extrema found on `[0,1]` bound the primitive on
+all of `ℝ`. -/
+theorem exists_global_centeredPrimitive_extrema
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    ∃ lowerPoint ∈ Icc (0 : ℝ) 1, ∃ upperPoint ∈ Icc (0 : ℝ) 1,
+      (∀ point, centeredPrimitive S density lowerPoint ≤ centeredPrimitive S density point) ∧
+      (∀ point, centeredPrimitive S density point ≤ centeredPrimitive S density upperPoint) := by
+  obtain ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, hlower, hupper⟩ :=
+    exists_centeredPrimitive_extrema S hS density
+  have hperiodic := centeredPrimitive_periodic S hS density hindicator hdensity
+  have hreduce : ∀ point : ℝ,
+      centeredPrimitive S density (Int.fract point) = centeredPrimitive S density point := by
+    intro point
+    simpa [Int.self_sub_floor] using
+      (hperiodic.sub_int_mul_eq (x := point) ⌊point⌋)
+  refine ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, ?_, ?_⟩
+  · intro point
+    rw [← hreduce point]
+    exact hlower (Int.fract point) ⟨Int.fract_nonneg point, (Int.fract_lt_one point).le⟩
+  · intro point
+    rw [← hreduce point]
+    exact hupper (Int.fract point) ⟨Int.fract_nonneg point, (Int.fract_lt_one point).le⟩
+
+/-- The rigorous upper half of THM-933's eta/q duality:
+`ell * (density - eta(ell)) ≤ q` for every positive scale. No component-count
+topology enters this statement or its proof. -/
+theorem fixedScaleEta_deficit_le_primitiveDiscrepancy
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density)
+    {ell : ℝ} (hell : 0 < ell) :
+    ell * (density - fixedScaleEta S ell) ≤ primitiveDiscrepancy S density := by
+  obtain ⟨startPoint, _hstartPoint, heta, _hminimum⟩ :=
+    fixedScaleEta_attained S hS hell
+  obtain ⟨lowerPoint, _hlowerPoint, upperPoint, _hupperPoint, hq, hlower, hupper⟩ :=
+    primitiveDiscrepancy_attained S hS density
+  have hperiodic := centeredPrimitive_periodic S hS density hindicator hdensity
+  have hreduce : ∀ point : ℝ,
+      centeredPrimitive S density (Int.fract point) = centeredPrimitive S density point := by
+    intro point
+    simpa [Int.self_sub_floor] using
+      (hperiodic.sub_int_mul_eq (x := point) ⌊point⌋)
+  have hlowerGlobal : ∀ point, centeredPrimitive S density lowerPoint ≤
+      centeredPrimitive S density point := by
+    intro point
+    rw [← hreduce point]
+    exact hlower (Int.fract point) ⟨Int.fract_nonneg point, (Int.fract_lt_one point).le⟩
+  have hupperGlobal : ∀ point, centeredPrimitive S density point ≤
+      centeredPrimitive S density upperPoint := by
+    intro point
+    rw [← hreduce point]
+    exact hupper (Int.fract point) ⟨Int.fract_nonneg point, (Int.fract_lt_one point).le⟩
+  have hretained : retainedWindow S ell startPoint = fixedScaleEta S ell * ell := by
+    rw [heta]
+    exact (div_mul_cancel₀ _ hell.ne').symm
+  have hidentity :
+      retainedWindow S ell startPoint - density * ell =
+        centeredPrimitive S density (startPoint + ell) -
+          centeredPrimitive S density startPoint := by
+    simpa [retainedWindow] using centeredPrimitive_interval_identity S hS density
+      (show startPoint ≤ startPoint + ell by linarith)
+  calc
+    ell * (density - fixedScaleEta S ell) =
+        density * ell - fixedScaleEta S ell * ell := by ring
+    _ = density * ell - retainedWindow S ell startPoint := by rw [hretained]
+    _ = centeredPrimitive S density startPoint -
+        centeredPrimitive S density (startPoint + ell) := by linarith
+    _ ≤ centeredPrimitive S density upperPoint -
+        centeredPrimitive S density lowerPoint :=
+      sub_le_sub (hupperGlobal startPoint) (hlowerGlobal (startPoint + ell))
+    _ = primitiveDiscrepancy S density := hq.symm
+
+/-- The reverse half of eta/q duality is attained: some scale
+`0 < ell ≤ 1` has deficit exactly equal to the primitive discrepancy. The
+positive-discrepancy case uses the oriented arc from a primitive maximum to a
+primitive minimum; the zero case uses the full period. -/
+theorem exists_fixedScaleEta_deficit_eq_primitiveDiscrepancy
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    ∃ ell ∈ Ioc (0 : ℝ) 1,
+      ell * (density - fixedScaleEta S ell) = primitiveDiscrepancy S density := by
+  by_cases hqzero : primitiveDiscrepancy S density = 0
+  · refine ⟨1, by norm_num, ?_⟩
+    rw [fixedScaleEta_one S hS density hindicator hdensity, hqzero]
+    ring
+  · have hqpos : 0 < primitiveDiscrepancy S density :=
+      lt_of_le_of_ne (primitiveDiscrepancy_nonneg S hS density) (Ne.symm hqzero)
+    obtain ⟨lowerPoint, hlowerPoint, upperPoint, hupperPoint, hq, _hlower, _hupper⟩ :=
+      primitiveDiscrepancy_attained S hS density
+    have hdiffpos : 0 < centeredPrimitive S density upperPoint -
+        centeredPrimitive S density lowerPoint := by
+      rw [← hq]
+      exact hqpos
+    have hpointsNe : upperPoint ≠ lowerPoint := by
+      intro hpoints
+      rw [hpoints, sub_self] at hdiffpos
+      exact lt_irrefl 0 hdiffpos
+    have hperiodic := centeredPrimitive_periodic S hS density hindicator hdensity
+    let ell := if upperPoint ≤ lowerPoint then
+      lowerPoint - upperPoint else lowerPoint + 1 - upperPoint
+    have hellpos : 0 < ell := by
+      by_cases horder : upperPoint ≤ lowerPoint
+      · simp only [ell, if_pos horder]
+        exact sub_pos.mpr (lt_of_le_of_ne horder hpointsNe)
+      · simp only [ell, if_neg horder]
+        by_contra hnonpositive
+        have hellnonpositive : lowerPoint + 1 - upperPoint ≤ 0 :=
+          le_of_not_gt hnonpositive
+        have hlowerZero : lowerPoint = 0 := by
+          linarith [hlowerPoint.1, hupperPoint.2]
+        have hupperOne : upperPoint = 1 := by
+          linarith [hlowerPoint.1, hupperPoint.2]
+        have hequalValues : centeredPrimitive S density upperPoint =
+            centeredPrimitive S density lowerPoint := by
+          rw [hlowerZero, hupperOne]
+          simpa using hperiodic 0
+        rw [hequalValues, sub_self] at hdiffpos
+        exact lt_irrefl 0 hdiffpos
+    have hellle : ell ≤ 1 := by
+      by_cases horder : upperPoint ≤ lowerPoint
+      · simp only [ell, if_pos horder]
+        linarith [hlowerPoint.2, hupperPoint.1]
+      · simp only [ell, if_neg horder]
+        have hlowerUpper : lowerPoint < upperPoint := lt_of_not_ge horder
+        linarith
+    have hend : centeredPrimitive S density (upperPoint + ell) =
+        centeredPrimitive S density lowerPoint := by
+      by_cases horder : upperPoint ≤ lowerPoint
+      · simp only [ell, if_pos horder]
+        congr 1
+        ring
+      · simp only [ell, if_neg horder]
+        have hadd : upperPoint + (lowerPoint + 1 - upperPoint) = lowerPoint + 1 := by ring
+        rw [hadd]
+        exact hperiodic lowerPoint
+    have hidentity : retainedWindow S ell upperPoint - density * ell =
+        centeredPrimitive S density (upperPoint + ell) -
+          centeredPrimitive S density upperPoint := by
+      simpa [retainedWindow] using centeredPrimitive_interval_identity S hS density
+        (show upperPoint ≤ upperPoint + ell by linarith)
+    have harcDeficit :
+        ell * (density - retainedWindow S ell upperPoint / ell) =
+          primitiveDiscrepancy S density := by
+      have hcancel : retainedWindow S ell upperPoint / ell * ell =
+          retainedWindow S ell upperPoint := div_mul_cancel₀ _ hellpos.ne'
+      calc
+        ell * (density - retainedWindow S ell upperPoint / ell) =
+            density * ell - (retainedWindow S ell upperPoint / ell) * ell := by ring
+        _ = density * ell - retainedWindow S ell upperPoint := by rw [hcancel]
+        _ = centeredPrimitive S density upperPoint -
+            centeredPrimitive S density (upperPoint + ell) := by linarith
+        _ = centeredPrimitive S density upperPoint -
+            centeredPrimitive S density lowerPoint := by rw [hend]
+        _ = primitiveDiscrepancy S density := hq.symm
+    obtain ⟨_minimumPoint, _hminimumPoint, _heta, hminimum⟩ :=
+      fixedScaleEta_attained S hS hellpos
+    have hreverse : primitiveDiscrepancy S density ≤
+        ell * (density - fixedScaleEta S ell) := by
+      rw [← harcDeficit]
+      exact mul_le_mul_of_nonneg_left
+        (sub_le_sub_left (hminimum upperPoint hupperPoint) density) hellpos.le
+    have hforward := fixedScaleEta_deficit_le_primitiveDiscrepancy
+      S hS density hindicator hdensity hellpos
+    exact ⟨ell, ⟨hellpos, hellle⟩, le_antisymm hforward hreverse⟩
+
+/-- Full attained eta/q duality from THM-933:
+`q = sup_{0 < ell ≤ 1} ell * (density - eta(ell))`. -/
+theorem primitiveDiscrepancy_eq_fixedScaleDeficitSup
+    (S : Set ℝ) (hS : MeasurableSet S) (density : ℝ)
+    (hindicator : Function.Periodic
+      (fun t => S.indicator (fun _ => (1 : ℝ)) t) 1)
+    (hdensity : (volume (S ∩ Ioc (0 : ℝ) 1)).toReal = density) :
+    primitiveDiscrepancy S density = fixedScaleDeficitSup S density := by
+  let deficit := fun ell => ell * (density - fixedScaleEta S ell)
+  have hnonempty : (deficit '' Ioc (0 : ℝ) 1).Nonempty :=
+    ⟨deficit 1, 1, by norm_num, rfl⟩
+  have hbddAbove : BddAbove (deficit '' Ioc (0 : ℝ) 1) := by
+    refine ⟨primitiveDiscrepancy S density, ?_⟩
+    rintro value ⟨ell, hell, rfl⟩
+    exact fixedScaleEta_deficit_le_primitiveDiscrepancy
+      S hS density hindicator hdensity hell.1
+  obtain ⟨ell, hell, heq⟩ :=
+    exists_fixedScaleEta_deficit_eq_primitiveDiscrepancy
+      S hS density hindicator hdensity
+  change primitiveDiscrepancy S density = sSup (deficit '' Ioc (0 : ℝ) 1)
+  apply le_antisymm
+  · rw [← heq]
+    exact le_csSup hbddAbove ⟨ell, hell, rfl⟩
+  · exact csSup_le hnonempty (by
+      rintro value ⟨scale, hscale, rfl⟩
+      exact fixedScaleEta_deficit_le_primitiveDiscrepancy
+        S hS density hindicator hdensity hscale.1)
+
+end ConcretePrimitiveBridge
 
 section ComponentSum
 
@@ -558,6 +1071,21 @@ end ExactArithmetic
 #print axioms primitive_interval_sharp
 #print axioms fixedScale_deficit_le_discrepancy
 #print axioms fixedScale_extremizer_eq_discrepancy
+#print axioms intervalIndicatorIntegral_eq_measure
+#print axioms centeredPrimitive_interval_identity
+#print axioms centeredPrimitive_Icc_identity
+#print axioms continuous_centeredPrimitive
+#print axioms centeredPrimitive_periodic
+#print axioms retainedWindow_one_eq_density
+#print axioms continuous_retainedWindow
+#print axioms fixedScaleEta_attained
+#print axioms fixedScaleEta_one
+#print axioms primitiveDiscrepancy_attained
+#print axioms primitiveDiscrepancy_nonneg
+#print axioms exists_global_centeredPrimitive_extrema
+#print axioms fixedScaleEta_deficit_le_primitiveDiscrepancy
+#print axioms exists_fixedScaleEta_deficit_eq_primitiveDiscrepancy
+#print axioms primitiveDiscrepancy_eq_fixedScaleDeficitSup
 #print axioms fixedScale_weaker_loss
 #print axioms mem_deleteAnchoredTooth
 #print axioms circularComponentCount_deleteAnchoredTooth_le_add_one
