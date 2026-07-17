@@ -1,9 +1,16 @@
-import TournamentH7.LRCRationalOpenComb
+import TournamentH7.RatIntervals
+
+/-!
+Exact rational overlap for two normalized circular intervals.  The proof
+handles all start-order and wrap/no-wrap cases and identifies the quadratic
+clip sum with the two-tile overlap tent.  Comb specialization and cyclic
+reindexing deliberately live in a downstream module.
+-/
 
 namespace LonelyRunner
 namespace LRCB5WrappedToothOverlap
 
-open RatIntervals LRCRationalOpenComb
+open RatIntervals
 
 set_option maxHeartbeats 300000
 
@@ -31,6 +38,20 @@ theorem pairOverlapQ_swap_pos
   unfold pairOverlapQ
   simp only [max_def, min_def]
   split_ifs <;> linarith
+
+theorem pairOverlapQ_swap_zero
+    (length₁ length₂ : ℚ)
+    (hlength₁0 : 0 ≤ length₁) (hlength₁1 : length₁ ≤ 1)
+    (hlength₂0 : 0 ≤ length₂) (hlength₂1 : length₂ ≤ 1) :
+    pairOverlapQ length₁ length₂ 0 =
+      pairOverlapQ length₂ length₁ 0 := by
+  unfold pairOverlapQ
+  simp only [sub_zero]
+  rw [max_eq_right (le_min hlength₁0 hlength₂0),
+    max_eq_left (by linarith [min_le_left length₁ (1 + length₂)]),
+    max_eq_right (le_min hlength₂0 hlength₁0),
+    max_eq_left (by linarith [min_le_left length₂ (1 + length₁)]),
+    min_comm]
 
 theorem fract_sub_eq_of_le
     {first second : ℚ}
@@ -100,8 +121,23 @@ theorem overlap_le_nowrap_wrap
         max 0 (min (start₁ + length₁) (start₂ + length₂ - 1) - max start₁ 0) =
       pairOverlapQ length₁ length₂ (start₁ - start₂) := by
   unfold pairOverlapQ
-  simp only [max_def, min_def]
-  split_ifs <;> linarith
+  have hsum₂ : 1 < start₂ + length₂ := lt_of_not_ge hwrap₂
+  have hoverflow₂le : start₂ + length₂ - 1 ≤ start₂ := by linarith
+  have hcrossZero :
+      min (start₁ + length₁) (start₂ + length₂ - 1) - start₁ ≤ 0 := by
+    linarith [min_le_right (start₁ + length₁) (start₂ + length₂ - 1)]
+  have hcover : length₁ ≤ length₂ - (start₁ - start₂) := by
+    linarith
+  have hsecondZero :
+      min length₁ (1 - (start₁ - start₂) + length₂) -
+          (1 - (start₁ - start₂)) ≤ 0 := by
+    linarith [min_le_left length₁ (1 - (start₁ - start₂) + length₂)]
+  rw [min_eq_left hwrap₁, max_eq_left horder,
+    show start₁ + length₁ - start₁ = length₁ by ring,
+    max_eq_right hlength₁0, max_eq_left hstart₁0,
+    max_eq_left hcrossZero, add_zero,
+    min_eq_left hcover, max_eq_right hlength₁0,
+    max_eq_left hsecondZero, add_zero]
 
 theorem overlap_le_wrap_wrap
     (start₁ start₂ length₁ length₂ : ℚ)
@@ -131,6 +167,8 @@ theorem overlap_le_wrap_wrap
   have hcrossZero : overflow₂ - start₁ ≤ 0 := by linarith
   have hminimumNonneg : 0 ≤ min overflow₁ overflow₂ :=
     le_min hoverflow₁0.le hoverflow₂0.le
+  have hfirstNonneg : 0 ≤ (1 - start₁) + min overflow₁ overflow₂ := by
+    linarith
   have hsecondLarge :
       length₁ ≤ 1 - (start₁ - start₂) + length₂ := by
     linarith
@@ -153,15 +191,19 @@ theorem overlap_le_wrap_wrap
       rw [min_eq_right hlength]
       dsimp [overflow₂]
       ring
-  rw [max_eq_right horder, min_self,
+  rw [min_self, max_eq_left horder,
     max_eq_right (by linarith : (0 : ℚ) ≤ 1 - start₁),
     min_eq_right hoverflow₂one,
-    max_eq_right hstart₁0,
+    max_eq_left hstart₁0,
     max_eq_left hcrossZero,
     min_eq_left hoverflow₁one,
     max_eq_right hstart₂0,
-    max_eq_right (sub_nonneg.mpr (le_min hoverflow₁0.le hoverflow₂0.le)),
-    max_self, min_eq_left hsecondLarge, hfirstMinimum]
+    max_self, sub_zero,
+    show min (start₁ + length₁ - 1) (start₂ + length₂ - 1) =
+        min overflow₁ overflow₂ by rfl,
+    max_eq_right hminimumNonneg,
+    min_eq_left hsecondLarge, hfirstMinimum,
+    max_eq_right hfirstNonneg]
   dsimp [overflow₁]
   ring
 
@@ -208,9 +250,23 @@ theorem overlap_lt_nowrap_wrap
     max 0 (min (start₁ + length₁) 1 - max start₁ start₂) +
         max 0 (min (start₁ + length₁) (start₂ + length₂ - 1) - max start₁ 0) =
       pairOverlapQ length₁ length₂ (start₁ - start₂ + 1) := by
-  unfold pairOverlapQ
-  simp only [max_def, min_def]
-  split_ifs <;> linarith
+  have hswapped := overlap_le_wrap_nowrap
+    start₂ start₁ length₂ length₁
+    hstart₂0 hstart₂1 hstart₁0 hstart₁1
+    hlength₂0 hlength₂1 hlength₁0 hlength₁1 horder.le
+    hwrap₂ hwrap₁
+  have hshift0 : 0 < start₁ - start₂ + 1 := by linarith
+  have hshift1 : start₁ - start₂ + 1 < 1 := by linarith
+  calc
+    max 0 (min (start₁ + length₁) 1 - max start₁ start₂) +
+        max 0 (min (start₁ + length₁) (start₂ + length₂ - 1) - max start₁ 0) =
+        pairOverlapQ length₂ length₁ (start₂ - start₁) := by
+      simpa [min_comm, max_comm, add_comm] using hswapped
+    _ = pairOverlapQ length₁ length₂ (start₁ - start₂ + 1) := by
+      rw [show start₂ - start₁ = 1 - (start₁ - start₂ + 1) by ring]
+      exact (pairOverlapQ_swap_pos length₁ length₂
+        (start₁ - start₂ + 1)
+        hlength₁0 hlength₁1 hlength₂0 hlength₂1 hshift0 hshift1).symm
 
 theorem overlap_lt_wrap_wrap
     (start₁ start₂ length₁ length₂ : ℚ)
@@ -226,9 +282,25 @@ theorem overlap_lt_wrap_wrap
         max 0 (min (start₁ + length₁ - 1) 1 - max 0 start₂) +
         max 0 (min (start₁ + length₁ - 1) (start₂ + length₂ - 1) - max 0 0) =
       pairOverlapQ length₁ length₂ (start₁ - start₂ + 1) := by
-  unfold pairOverlapQ
-  simp only [max_def, min_def]
-  split_ifs <;> linarith
+  have hswapped := overlap_le_wrap_wrap
+    start₂ start₁ length₂ length₁
+    hstart₂0 hstart₂1 hstart₁0 hstart₁1
+    hlength₂0 hlength₂1 hlength₁0 hlength₁1 horder.le
+    hwrap₂ hwrap₁
+  have hshift0 : 0 < start₁ - start₂ + 1 := by linarith
+  have hshift1 : start₁ - start₂ + 1 < 1 := by linarith
+  calc
+    max 0 (min 1 1 - max start₁ start₂) +
+        max 0 (min 1 (start₂ + length₂ - 1) - max start₁ 0) +
+        max 0 (min (start₁ + length₁ - 1) 1 - max 0 start₂) +
+        max 0 (min (start₁ + length₁ - 1) (start₂ + length₂ - 1) - max 0 0) =
+        pairOverlapQ length₂ length₁ (start₂ - start₁) := by
+      simpa [min_comm, max_comm, add_comm, add_left_comm, add_assoc] using hswapped
+    _ = pairOverlapQ length₁ length₂ (start₁ - start₂ + 1) := by
+      rw [show start₂ - start₁ = 1 - (start₁ - start₂ + 1) by ring]
+      exact (pairOverlapQ_swap_pos length₁ length₂
+        (start₁ - start₂ + 1)
+        hlength₁0 hlength₁1 hlength₂0 hlength₂1 hshift0 hshift1).symm
 
 /-- Exact clip-sum formula for two normalized circular intervals. -/
 theorem length_inter_circleInterval_eq_pairOverlapQ
@@ -297,206 +369,6 @@ theorem length_inter_circleInterval_eq_pairOverlapQ
             hstart₁0 hstart₁1 hstart₂0 hstart₂1
             hlength₁0 hlength₁1 hlength₂0 hlength₂1 horder'
             (by assumption) (by assumption)
-
-def rawToothStart (w k : ℕ) : ℚ :=
-  ((k : ℚ) - 1 / 14) / w
-
-def toothLengthQ (w : ℕ) : ℚ :=
-  1 / (7 * w)
-
-def circularTooth (w k : ℕ) : Region :=
-  circleInterval (Int.fract (rawToothStart w k)) (toothLengthQ w)
-
-def circularCombRegion (w : ℕ) : Region :=
-  (List.range w).flatMap (circularTooth w)
-
-theorem fract_rawToothStart_zero
-    (w : ℕ) (hw : 0 < w) :
-    Int.fract (rawToothStart w 0) = 1 - 1 / (14 * w : ℚ) := by
-  have hwQ : (0 : ℚ) < w := by exact_mod_cast hw
-  unfold rawToothStart Int.fract
-  have hfloor : ⌊(((0 : ℚ) - 1 / 14) / w)⌋ = -1 := by
-    rw [Int.floor_eq_iff]
-    push_cast
-    constructor
-    · rw [le_div_iff₀ hwQ]
-      linarith [show (0 : ℚ) < 1 / 14 by norm_num]
-    · positivity
-  rw [hfloor]
-  push_cast
-  field_simp
-  ring
-
-theorem fract_rawToothStart_internal
-    (w k : ℕ) (hw : 0 < w) (hk0 : 0 < k) (hkw : k < w) :
-    Int.fract (rawToothStart w k) = rawToothStart w k := by
-  apply Int.fract_eq_self.mpr
-  have hwQ : (0 : ℚ) < w := by exact_mod_cast hw
-  have hk0Q : (1 : ℚ) ≤ k := by exact_mod_cast hk0
-  have hkwQ : (k : ℚ) < w := by exact_mod_cast hkw
-  unfold rawToothStart
-  constructor
-  · exact div_nonneg (by linarith [show (0 : ℚ) < 1 / 14 by norm_num]) hwQ.le
-  · rw [div_lt_one hwQ]
-    linarith
-
-theorem circularTooth_zero_eq_boundary
-    (w : ℕ) (hw : 0 < w) :
-    circularTooth w 0 =
-      [ratOpenCombInterval w w, ratOpenCombInterval w 0] := by
-  have hwQ : (0 : ℚ) < w := by exact_mod_cast hw
-  rw [circularTooth, fract_rawToothStart_zero w hw]
-  unfold circleInterval toothLengthQ ratOpenCombInterval
-  have hsmall : (0 : ℚ) < 1 / (14 * w : ℚ) := by positivity
-  have hsmallOne : 1 / (14 * w : ℚ) < 1 := by
-    rw [div_lt_one (by positivity : (0 : ℚ) < 14 * w)]
-    have hwOne : (1 : ℚ) ≤ w := by exact_mod_cast hw
-    linarith
-  have hwrap : ¬1 - 1 / (14 * w : ℚ) + 1 / (7 * w : ℚ) ≤ 1 := by
-    field_simp
-    positivity
-  rw [if_neg hwrap]
-  congr 1
-  · apply Prod.ext <;> simp only [Prod.fst, Prod.snd]
-    · rw [max_eq_right]
-      · field_simp
-        ring
-      · rw [div_nonneg_iff]
-        exact Or.inl ⟨by norm_num, hwQ.le⟩
-    · rw [min_eq_left]
-      field_simp
-      linarith
-  · congr 1
-    apply Prod.ext <;> simp only [Prod.fst, Prod.snd]
-    · rw [max_eq_left]
-      · rfl
-      · positivity
-    · rw [min_eq_right]
-      · field_simp
-        ring
-      · exact hsmallOne.le
-
-theorem circularTooth_internal_eq_interval
-    (w k : ℕ) (hw : 0 < w) (hk0 : 0 < k) (hkw : k < w) :
-    circularTooth w k = [ratOpenCombInterval w k] := by
-  have hwQ : (0 : ℚ) < w := by exact_mod_cast hw
-  have hk0Q : (1 : ℚ) ≤ k := by exact_mod_cast hk0
-  have hkwQ : (k : ℚ) < w := by exact_mod_cast hkw
-  rw [circularTooth, fract_rawToothStart_internal w k hw hk0 hkw]
-  unfold circleInterval toothLengthQ rawToothStart ratOpenCombInterval
-  have hnowrap :
-      ((k : ℚ) - 1 / 14) / w + 1 / (7 * w : ℚ) ≤ 1 := by
-    rw [div_add_div_same, div_le_one hwQ]
-    linarith
-  rw [if_pos hnowrap]
-  congr 1
-  apply Prod.ext <;> simp only [Prod.fst, Prod.snd]
-  · rw [max_eq_right]
-    exact div_nonneg (by linarith) hwQ.le
-  · rw [min_eq_right]
-    · field_simp
-      ring
-    · rw [div_le_one hwQ]
-      linarith
-
-theorem ratOpenCombTail_succ_eq_append
-    (w start count : ℕ) :
-    ratOpenCombTail w start (count + 1) =
-      ratOpenCombTail w start count ++
-        [ratOpenCombInterval w (start + count)] := by
-  induction count generalizing start with
-  | zero => simp [ratOpenCombTail]
-  | succ count inductionHypothesis =>
-      simp only [Nat.succ_eq_add_one]
-      rw [show count + 1 + 1 = (count + 1) + 1 by rfl,
-        ratOpenCombTail, ratOpenCombTail,
-        inductionHypothesis (start + 1)]
-      simp only [List.cons_append, List.cons.injEq, true_and]
-      congr 2
-      omega
-
-theorem ratOpenCombRegion_eq_tail_append_boundary (w : ℕ) :
-    ratOpenCombRegion w =
-      ratOpenCombTail w 0 w ++ [ratOpenCombInterval w w] := by
-  unfold ratOpenCombRegion
-  simpa using ratOpenCombTail_succ_eq_append w 0 w
-
-theorem circularInternalFlatMap_eq_tail
-    (w start count : ℕ) (hw : 0 < w) (hstart : 0 < start)
-    (hbound : start + count ≤ w) :
-    (List.range' start count).flatMap (circularTooth w) =
-      ratOpenCombTail w start count := by
-  induction count generalizing start with
-  | zero => simp [ratOpenCombTail]
-  | succ count inductionHypothesis =>
-      rw [show count + 1 = count + 1 by rfl, List.range'_succ]
-      simp only [List.flatMap_cons]
-      rw [circularTooth_internal_eq_interval w start hw hstart (by omega),
-        ratOpenCombTail]
-      congr 1
-      exact inductionHypothesis (start + 1) (by omega) (by omega)
-
-theorem circularCombRegion_eq_boundary_cons_tail
-    (w : ℕ) (hw : 0 < w) :
-    circularCombRegion w =
-      ratOpenCombInterval w w :: ratOpenCombTail w 0 w := by
-  obtain ⟨count, rfl⟩ := Nat.exists_eq_succ_of_ne_zero hw.ne'
-  unfold circularCombRegion
-  rw [List.range_eq_range', List.range'_succ]
-  simp only [List.flatMap_cons]
-  rw [circularTooth_zero_eq_boundary (count + 1) (by omega),
-    circularInternalFlatMap_eq_tail (count + 1) 1 count
-      (by omega) (by omega) (by omega),
-    ratOpenCombTail]
-  rfl
-
-theorem circularCombRegion_perm_ratOpenCombRegion
-    (w : ℕ) (hw : 0 < w) :
-    (circularCombRegion w).Perm (ratOpenCombRegion w) := by
-  rw [circularCombRegion_eq_boundary_cons_tail w hw,
-    ratOpenCombRegion_eq_tail_append_boundary]
-  simpa using
-    (List.perm_append_comm (l₁ := [ratOpenCombInterval w w])
-      (l₂ := ratOpenCombTail w 0 w))
-
-theorem length_eq_of_perm {left right : Region} (hperm : left.Perm right) :
-    RatIntervals.length left = RatIntervals.length right := by
-  unfold RatIntervals.length
-  exact (hperm.map fun interval => max 0 (interval.2 - interval.1)).sum_eq
-
-theorem length_inter_eq_of_perm_left
-    {first first' second : Region} (hperm : first.Perm first') :
-    RatIntervals.length (inter first second) =
-      RatIntervals.length (inter first' second) := by
-  unfold inter
-  apply length_eq_of_perm
-  exact hperm.flatMap fun _ _ => List.Perm.refl _
-
-theorem length_inter_eq_of_perm_right
-    {first second second' : Region} (hperm : second.Perm second') :
-    RatIntervals.length (inter first second) =
-      RatIntervals.length (inter first second') := by
-  rw [RatIntervals.length_inter_comm first second,
-    RatIntervals.length_inter_comm first second']
-  exact length_inter_eq_of_perm_left hperm
-
-theorem length_inter_ratOpenCombRegion_eq_circularCombRegion
-    (first second : ℕ) (hfirst : 0 < first) (hsecond : 0 < second) :
-    RatIntervals.length
-        (inter (ratOpenCombRegion first) (ratOpenCombRegion second)) =
-      RatIntervals.length
-        (inter (circularCombRegion first) (circularCombRegion second)) := by
-  calc
-    RatIntervals.length
-        (inter (ratOpenCombRegion first) (ratOpenCombRegion second)) =
-        RatIntervals.length
-          (inter (circularCombRegion first) (ratOpenCombRegion second)) :=
-      length_inter_eq_of_perm_left
-        (circularCombRegion_perm_ratOpenCombRegion first hfirst).symm
-    _ = RatIntervals.length
-          (inter (circularCombRegion first) (circularCombRegion second)) :=
-      length_inter_eq_of_perm_right
-        (circularCombRegion_perm_ratOpenCombRegion second hsecond).symm
 
 #print axioms length_inter_circleInterval_eq_pairOverlapQ
 
