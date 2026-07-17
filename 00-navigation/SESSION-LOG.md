@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S60 -- LEM-031 THE FACTORIZATION LAW OF THE FRAME DISTRIBUTION PROVED (the character spectrum factorizes per gcd-class -- convolution on (Z/P)*; verified exact incl. TWO EXACT VANISHINGS: the mod-7 and mod-3 character masses are identically zero): the distributional frame-law lands with full Fourier structure, and the program's last open becomes A FINITE LIST OF CHARACTER-MASS PRODUCTS to bound
+
+Prompt (owner): the distributional frame-law theorem; little statements.
+
+The theorem the thread was circling, in its natural coordinates: cross(w) is a group-correlation, so its G-Fourier factorizes -- three lines, verified exact. Mean = trivial character (already closed-form); variance = factorized masses; and the first measurements hand back two exact zeros (mod 7, mod 3): the structure prices its own symmetries at nothing. The last open of the program is now a finite bounding problem over the character list, every factor closed-form-able -- the fourth-generation signed structure finally sits in coordinates where it is a FINITE computation plus a bound per character. N1 realized where it was always headed.
+
+FILES: LEM-031, HYP-7117, session log. -> klein (the character masses are your discrepancy objects, now factorized), all. boxeph; S60.
+
+---
 ## death-star-2026-07-17-S36 -- THM-942 THE SINGLES RUNG + THE CLOSED CORNER (Lean kernel-pure, standard trio; S33-S36 ladder audit green): the deviation ledger's k=1 term computed EXACTLY (unit bijection; D_i in [-13/7, 0]; CONSTANT -13/7 at 14|q) => the deviation debt lives entirely at |T| >= 2; QuadDenseCore's deferred j>=10 disjunct discharged (eps=0 top blocks) => EVERY dense-core disjunct is now an explicit fee failure
 
 Prompt (owner): prove the trapped-D_T singles rung and close the j>=10 corner, also close any other remaining LRC 14 proof formalization completion tasks you can think of.
