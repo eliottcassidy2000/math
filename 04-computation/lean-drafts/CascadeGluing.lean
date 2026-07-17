@@ -1,9 +1,8 @@
-/- ABSORBED: all three sorries closed by klein-2026-07-16-S317; the sorry-free
-   module lives at 04-computation/lean/TournamentH7/TournamentH7/CascadeGluing.lean
-   (builds green, LAKE_EXIT=0).  The separate
-   TournamentH7/LRCCascadeGluing.lean module adds the closed recurrence.
-   This draft is retained for provenance only. -/
-
+/- SUPERSEDED (opus-2026-07-16-S334): all three sorries CLOSED, sorry-free, in
+   04-computation/lean/TournamentH7/TournamentH7/CascadeGluing.lean (builds green,
+   2441 jobs; axiom audit: [propext, Classical.choice, Quot.sound] on all four
+   theorems -- cascade_step, floor_on_Ico, window_floor_sample, union_floor_sample,
+   plus the ofReal_sum_le helper).  Kept for history. -/
 /- CascadeGluing.lean -- opus-2026-07-16-S333 (draft: statements + proof plans).
    THM-928(A) THE CASCADE THEOREM and THM-932 THE LOCAL-DENSITY BLOCK-GLUING
    LEMMA, as the next rungs above the proved FragmentationLemma
