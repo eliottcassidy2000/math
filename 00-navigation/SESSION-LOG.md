@@ -1,3 +1,16 @@
+## death-star-2026-07-17-S43 -- THM-951 THE DECIDABLE CENSUS PIPELINE + THE COHESIVE PICTURE (integration session): CoverageCapped DECIDES; lonely_of_census composes THM-945/950 with the Mreach consumer -- cap + live > deep by decide => B5 > 0 => Lonely; census_demo (v_i = i+2, q = 31) is THE FIRST LONELINESS PROOF IN THE CORPUS PRODUCED BY THE B5 FUNNEL; and the whole formalization now has ONE MAP (LRC14-FORMALIZATION-PICTURE-2026-07-17.md)
+
+Prompt (owner): keep working a long session to complete the LRC proof formalization, pull often and integrate incoming work and extend it and make a whole cohesive picture.
+
+(A) THE PIPELINE (LRCDeepCertificate.lean): instDecidableCoverageCapped (finite range, computable counts); lonely_of_census -- CoverageCapped(6) + #{bandCount = 6} < liveCount => exists t, Lonely 14 v t (THM-945's B5 = live - deepSix + mreach_ge_of_B5_pos + lonely_of_Mreach_ge); lonely_of_census_capped5 (one live multiplier suffices at cap 5). census_demo: v_i = i+2 certified END-TO-END at q = 31, cap and census both by decide -- no witness search, no pack row, no analysis: the funnel produces loneliness proofs.
+
+(B) THE PICTURE (00-navigation/LRC14-FORMALIZATION-PICTURE-2026-07-17.md): the one-page cohesive map -- trunk (cite + ResidualObligation), the shrink table (THM-937 -> 942B + codex dissociated + opus lacunary + codex lacunary-wire), the B5 funnel column (940 subset expansion -> 942 singles -> 943 pairs -> 944 race -> 945 certificates/wall/identities -> 950 census criterion -> 951 pipeline), the killer/witness arc (883 -> 947 dictionary -> 949 rigidity -> 950 counting -> codex Plucker), the parallel arcs (kps exhaustion, opus cascade/glue, klein manifest, mac-mini pair-floor, boxeph L-frame), and THE HONEST OPEN LIST: (1) the wide-block gap-free compressed core (kps exhaustion's Lean rendering + a-priori live floors), (2) the 7-wall pair-floor, (3) a-priori liveCount floors beyond censused strata. Everything else: kernel-checked or a named finite task.
+
+(C) INTEGRATION NOTES: opus renumbered my S41 claim 7190->7195 (their first-push -- thanks, clean protocol); codex-S48's overlapDet/Plucker layer builds directly on my THM-947 witnesses (bad triples carry exact relations = THM-939's target shape) -- acknowledged and mapped; opus's lonely_of_pos_lacunary (ratio >= 7/3 UNIVERSAL) supersedes my dichotomy's k=0 branch and is recorded as the sharper bite in the picture.
+
+FILES: THM-951, HYP-7204 confirmed, LRCDeepCertificate.lean, the PICTURE doc, root import, session log. NEXT (from the picture's open list): (i) a-priori liveCount floors -- the discrete wall; kps's law made uniform is the named attack; (ii) kps exhaustion Lean rendering (their toolbox is ready); (iii) the resonant-q classification; (iv) opus's window_tail_glue lands -> the residual gains its lacunary conjunct formally. death-star; S43.
+
+---
 ## boxeph-2026-07-17-S65 -- LEM-036 (owner target: sporadic classification -- orbit reduction to (phi, o) in Z_7^6 x Z_7^6; FULL-COLUMN THEOREM: |S_r| = 6 iff shifted multiplication permutation, |S_r| = 7 impossible; 126 columns / 12 full / 15 sporadic decoded) + LEM-037 (self-directed: COMB ANTISYMMETRY -- N_c(s) = -N_{-c}(6-s); sigma_e(3) = 0 identically; Q_s = Q_{6-s} exact) + manifest item 13
 
 Prompt (owner): sporadic classification + self-directed tasks + formalization.
