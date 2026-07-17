@@ -39,7 +39,27 @@ def teeth(x, n):
     return [(a, b) for a, b in m]
 
 def subtract(W, T):
-    """W \ T for sorted disjoint interval lists."""
+    """W minus T for sorted disjoint interval lists (linear merge scan)."""
+    out = []
+    j, nT = 0, len(T)
+    for (a, b) in W:
+        cur = a
+        while j > 0 and T[j-1][1] > cur: j -= 1   # back up if overshoot
+        k = j
+        while k < nT and T[k][0] < b:
+            c, d = T[k]
+            if d > cur:
+                if c > cur: out.append((cur, c))
+                cur = max(cur, d)
+                if cur >= b: break
+            k += 1
+        j = max(k - 1, 0)
+        if cur < b: out.append((cur, b))
+    return out
+
+def mu(W): return sum(b - a for a, b in W)
+
+def _subtract_ref(W, T):
     out = []
     for (a, b) in W:
         cur = a
@@ -52,7 +72,15 @@ def subtract(W, T):
         if cur < b: out.append((cur, b))
     return out
 
-def mu(W): return sum(b - a for a, b in W)
+# self-test the linear subtract against the reference on random cases
+random.seed(7)
+for _ in range(300):
+    pw = sorted(random.sample(range(200), 2 * random.randint(1, 8)))
+    pt = sorted(random.sample(range(200), 2 * random.randint(1, 12)))
+    Wt = [(F(pw[2*i], 200), F(pw[2*i+1], 200)) for i in range(len(pw)//2)]
+    Tt = [(F(pt[2*i], 200), F(pt[2*i+1], 200)) for i in range(len(pt)//2)]
+    assert subtract(Wt, Tt) == _subtract_ref(Wt, Tt)
+print("subtract self-test: 300/300 exact match vs reference")
 
 def circ_kappa(W):
     if len(W) >= 2 and W[0][0] == 0 and W[-1][1] == 1: return len(W) - 1

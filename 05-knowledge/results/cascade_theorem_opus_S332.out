@@ -1,0 +1,41 @@
+subtract self-test: 300/300 exact match vs reference
+========================================================================
+(L1)+(L2) per-step lemma + component growth, exact, random configs:
+  60 random (W, x, n) configs: violations = 0
+
+(L3)+(L4) THE CASCADE at n = 14 (exact prefixes; R = 15, 20, 30):
+  (6/7)^13 = 0.134801
+  R= 15: 5-step exact mu = 0.483572 >= running bound 0.324190: True; kappa_k <= 2 x_k: True; 13-step THEOREM bound = +0.001467 (POSITIVE: LRC(14) holds for this lacunarity)
+  R= 20: 5-step exact mu = 0.465114 >= running bound 0.339531: True; kappa_k <= 2 x_k: True; 13-step THEOREM bound = +0.034801 (POSITIVE: LRC(14) holds for this lacunarity)
+  R= 30: 5-step exact mu = 0.471230 >= running bound 0.354872: True; kappa_k <= 2 x_k: True; 13-step THEOREM bound = +0.068134 (POSITIVE: LRC(14) holds for this lacunarity)
+
+  small-n FULL verification (all 13->n-1 speeds exact, R=15..20):
+   n=5 R=15: exact uncovered = 0.129600  theorem bound = -0.003733  holds: True  NONEMPTY
+   n=5 R=18: exact uncovered = 0.123868  theorem bound = +0.018489  holds: True  NONEMPTY
+   n=6 R=15: exact uncovered = 0.131687  theorem bound = -0.001646  holds: True  NONEMPTY
+   n=6 R=18: exact uncovered = 0.131687  theorem bound = +0.020576  holds: True  NONEMPTY
+   n=7 R=15: exact uncovered = 0.151488  theorem bound = -0.000523  holds: True  NONEMPTY
+   n=7 R=18: exact uncovered = 0.130458  theorem bound = +0.021699  holds: True  NONEMPTY
+
+(W) THE FIXED-POINT WITNESS for dilate families {c q^j}, n = 14:
+    t = a/(q^s - 1): the multiply-by-q orbit of a mod (q^s - 1) must
+    stay >= (q^s - 1)/14 from 0 mod (q^s - 1).
+   q= 2: witness t = 1/3 (s=2); all 13 dilate distances >= 1/14: True; min dist = 1/3
+   q= 3: witness t = 1/8 (s=2); all 13 dilate distances >= 1/14: True; min dist = 1/8
+   q= 4: witness t = 1/3 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/3
+   q= 5: witness t = 1/4 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/4
+   q= 6: witness t = 1/5 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/5
+   q= 7: witness t = 1/6 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/6
+   q= 8: witness t = 1/7 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/7
+   q= 9: witness t = 1/8 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/8
+   q=10: witness t = 1/9 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/9
+   q=11: witness t = 1/10 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/10
+   q=12: witness t = 1/11 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/11
+   q=13: witness t = 1/12 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/12
+   q=14: witness t = 1/13 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/13
+   q=15: witness t = 1/14 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/14
+   q=16: witness t = 2/15 (s=1); all 13 dilate distances >= 1/14: True; min dist = 2/15
+   q=17: witness t = 2/16 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/8
+   q=18: witness t = 2/17 (s=1); all 13 dilate distances >= 1/14: True; min dist = 2/17
+   q=19: witness t = 2/18 (s=1); all 13 dilate distances >= 1/14: True; min dist = 1/9
+   q=20: witness t = 2/19 (s=1); all 13 dilate distances >= 1/14: True; min dist = 2/19

@@ -21,9 +21,12 @@ x_{k+1}/x_k ≥ R for all k. With D_x = {t ∈ ℝ/ℤ : ‖xt‖ < 1/14},
 
 > μ( ℝ/ℤ ∖ ∪ₖ D_{x_k} ) ≥ (6/7)¹³ − 2/R.
 
-Since (6/7)¹³ = 13060694016/96889010407 ≈ 0.134847, **any R ≥ 15 gives
+Since (6/7)¹³ = 13060694016/96889010407 ≈ 0.134801, **any R ≥ 15 gives
 positive uncovered measure, hence LRC(14) holds for every 15-lacunary
-packet** — with ≥ 0.03 to spare at R ≥ 20.
+packet** — with ≥ 0.03 to spare at R ≥ 20. (Verified: per-step lemma and
+component growth exact on 60 random configs, zero violations; κ_k ≤ 2x_k
+along real cascades; theorem bound respected by 5-step exact prefixes at
+R = 15/20/30 and by FULL exact cascades at n = 5, 6, 7.)
 
 *Proof.* W₀ = ℝ/ℤ; W_k = W_{k−1} ∖ D_{x_k}; κ_k = #components(W_k);
 μ_k = μ(W_k).
