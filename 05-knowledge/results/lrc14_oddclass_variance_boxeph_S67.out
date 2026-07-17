@@ -1,0 +1,25 @@
+THE ODD CLASS LAW AND THE ASSEMBLED VARIANCE (boxeph S67)
+==============================================================================
+PART A -- the odd class law at s = 3; the cross-section law s/6-s
+  [balanced] odd class law + cross-section law: 9686 exact class checks; T_0 = T_D/2 = 0; N(D) even throughout
+  [two-owner] odd class law + cross-section law: 4475 exact class checks; T_0 = T_D/2 = 0; N(D) even throughout
+  [family70] odd class law + cross-section law: 9686 exact class checks; T_0 = T_D/2 = 0; N(D) even throughout
+  [near-AP] odd class law + cross-section law: 26516 exact class checks; T_0 = T_D/2 = 0; N(D) even throughout
+  [two-large] odd class law + cross-section law: 14744 exact class checks; T_0 = T_D/2 = 0; N(D) even throughout
+
+PART B -- sub-grid sine coherence
+  [balanced] D=7: S((P/D)nu) == 2i sum T_r sin: max err 1.1e-12
+  [balanced] D=14: S((P/D)nu) == 2i sum T_r sin: max err 6.0e-12
+  [balanced] D=20: S((P/D)nu) == 2i sum T_r sin: max err 7.7e-12
+  [balanced] D=84: S((P/D)nu) == 2i sum T_r sin: max err 6.7e-12
+  [balanced] D=140: S((P/D)nu) == 2i sum T_r sin: max err 8.2e-12
+
+PART C -- the assembled variance (pure closed form)
+  [family60] Var direct = 4060.3288; assembled from L-values x X-hat = 4060.3288 (rel err 5.7e-15)
+  [two-owner] Var direct = 3563.0703; assembled from L-values x X-hat = 3563.0703 (rel err 1.6e-13)
+
+PART D -- variance drop by conductor (balanced, s = 0 vs 3)
+  s=0: M=36 var=   3202.7; mass by conductor: 735: 27.9%, 245: 22.6%, 147: 11.0%, 980: 7.0%, 105: 5.4%, 49: 4.4%
+  s=3: M=20 var=   2520.4; mass by conductor: 245: 42.4%, 49: 9.1%, 35: 7.7%, 588: 6.5%, 2940: 6.2%, 196: 5.9%
+==============================================================================
+done

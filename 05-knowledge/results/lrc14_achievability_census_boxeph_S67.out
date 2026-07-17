@@ -1,0 +1,25 @@
+THE (phi, o) ACHIEVABILITY CENSUS -- LEM-040 referee (boxeph S67)
+==============================================================================
+  [P6 permutation] phi = (1, 2, 3, 4, 5, 6):
+      configs by |S|: 0: 100828, 1: 16044, 2: 756, 3: 14, 6: 7
+      distinct S by |S|: 0: 1, 1: 7, 2: 21, 3: 14, 6: 7
+      FULL-COLUMN THEOREM by exhaustion: the 7 configs with |S| = 6 are exactly o = t phi, t = 0..6
+
+  [C1 one-constant] phi = (1, 2, 3, 4, 5, 0):
+      configs by |S|: 0: 100982, 1: 15694, 2: 973
+      distinct S by |S|: 0: 1, 1: 7, 2: 21
+
+  [R1 repeat] phi = (1, 1, 2, 3, 4, 5):
+      configs by |S|: 0: 100849, 1: 15960, 2: 840
+      distinct S by |S|: 0: 1, 1: 7, 2: 21
+
+  [C2 two-constant] phi = (1, 2, 3, 4, 0, 0):
+      configs by |S|: 0: 101171, 1: 15582, 2: 630, 3: 266
+      distinct S by |S|: 0: 1, 1: 7, 2: 21, 3: 35
+
+  [C6 all-constant] phi = 0: S = Z_7 for the 2520 covering offsets, else empty -- the ONLY |S| = 7 route (LEM-036(B))
+
+  ACROSS MOVING STRATA: 71 distinct achievable S (70 nonempty); affine orbits: 5
+  (subset space: 128; nonempty achievable fraction 55% across these strata)
+==============================================================================
+done

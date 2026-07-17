@@ -21,5 +21,4 @@ constant-coordinate fills — each mechanism identified in the tables.
 - [x] orbit reduction exact everywhere; count law exact on every owner
 - [x] full-column theorem both directions, 126 columns; all real t = 0
 - [x] sporadic tables with mechanisms (15 columns, 18 survivors)
-- [ ] named: the (φ, o) landscape beyond real clusters — which S_r ⊆ Z₇ are
-      achievable? (pure Z₇ combinatorics, decide-shaped)
+- [x] named open RESOLVED at the real-cluster strata (LEM-040, S67): achievability gap |S| ∉ {4,5}; QR-triple law; full-column theorem by exhaustion; residual: the gap over all 924 φ-multisets (decide-shaped)

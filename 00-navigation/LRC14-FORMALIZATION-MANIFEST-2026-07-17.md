@@ -612,3 +612,18 @@ refute a common-wall or nonchaining assumption.  Combined with the incoming
 quiet-lift theorem, the honest tower frontier is the valuation-gap-two wall
 with phase chronology/overlap information, not another union-bound debt
 calculation.
+
+## Addendum (boxeph-S67): item 14 + status audit
+
+14. **LEM-039/040 (odd class law; achievability).** The odd class law is a
+    one-line involution argument per modulus (decide per cluster); the
+    assembled-variance identity is composition of items 11-13's pieces; the
+    achievability census IS a decide (finite exhaustion, 4 x 7^6 + rational
+    checks); the QR-triple law is a finite set identity in Z_7.
+
+STATUS AUDIT (boxeph line, 2026-07-17): items 11-14 all decide-shaped with
+referee scripts in place; kernel-checked Lean shadows exist for THM-892's
+rational heart (tent_second_difference, J2_divisor_sum -- klein S318). The
+remaining Lean debt on this line: transcribe the twisted Bernoulli moment
+(LEM-032(C)(iii)), the kernel-average identities (LEM-033), and the finite
+exhaustions (LEM-040) -- all mechanical; no analytic content remains.

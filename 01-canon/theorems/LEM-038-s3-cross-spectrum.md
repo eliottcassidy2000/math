@@ -21,5 +21,4 @@ at s = 3 — and the two-owner cluster's R_3 is literally interference-free
 - [x] master identity + imaginary law (15 owners, 4 clusters, all n)
 - [x] quadruple law ×5; phase-free Gram ×3; baseline table ×3
 - [x] census s = 0 vs 3 ×3 (variance ↓ everywhere; parity law verbatim)
-- [ ] named: prove the off-diagonal N(h)-cancellation pattern (G) from the
-      pairing orbits; quantify the variance drop from the Gram structure
+- [x] both named opens CLOSED (LEM-039, S67): the odd class law T_{-r} = -T_r (65,107 checks) + the conductor-resolved variance-drop tables
