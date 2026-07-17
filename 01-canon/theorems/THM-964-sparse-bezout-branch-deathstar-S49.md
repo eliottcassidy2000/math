@@ -8,7 +8,7 @@ layer of the 29 sparse pairs of {1,…,13}.
 
 1. `witness_unique`: a failing runner's band witness is unique — so the Bézout
    residue `k = j′w_a − i′w_b` is a well-defined function of the jointly-failing
-   multiplier, and the branches `k ∈ {−1,0,+1}` (THM-963) PARTITION the set.
+   multiplier, and the branches `k ∈ {−1,0,+1}` (THM-967) PARTITION the set.
 2. `branch_zero_iff` / `branch_zero_count`: the k = 0 branch is exactly the
    GCD-speed narrow band — for EVERY reduced pair, locked or sparse (no
    i′+j′ ≤ 13 needed once k = 0 is imposed): count `2⌊(q−1)/(14·max(i′,j′))⌋`.
@@ -22,7 +22,7 @@ layer of the 29 sparse pairs of {1,…,13}.
 ## The complete pair ledger of the canonical family (recon-exact)
 
 With A = 14X₀−1, B = 14Y₀+1, C = 14i′, D = 14j′:
-- **49 locked pairs** (i′+j′ ≤ 13): N = 2⌊(q−1)/(14·max)⌋ (THM-963, Lean).
+- **49 locked pairs** (i′+j′ ≤ 13): N = 2⌊(q−1)/(14·max)⌋ (THM-967, Lean).
 - **29 sparse pairs** (14 ≤ i′+j′ ≤ 25): N = 2⌊(q−1)/(14·max)⌋ + 2·N⁺ with
   **N⁺ = ⌊(Bq−1)/D⌋ − ⌊Aq/C⌋** — verified 232/232 across all 29 pairs
   (recon (f)); the Lean interval-count of this floor form is the named next

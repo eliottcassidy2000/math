@@ -9,7 +9,7 @@
   * `witness_unique` — a failing runner's witness is UNIQUE (two witnesses
     would sit `< q/7 < q` apart in `w·q`-space), so `k` is a well-defined
     function of the jointly-failing multiplier and the three branches
-    `k ∈ {−1, 0, +1}` (THM-963's branch bound) PARTITION the joint-fail set.
+    `k ∈ {−1, 0, +1}` (THM-967's branch bound) PARTITION the joint-fail set.
   * `branch_zero_iff` / `branch_zero_count` — the `k = 0` branch is EXACTLY
     the GCD-speed narrow band (the locked-ray analysis needs no `i'+j' ≤ 13`
     once `k = 0` is imposed): count `2·⌊(q−1)/(14·max(i',j'))⌋`.
