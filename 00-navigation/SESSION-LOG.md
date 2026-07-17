@@ -70,6 +70,21 @@ Prompt (owner): work all 3 items in the open list, pull often and see how progre
 FILES: THM-953, HYP-7205 (refuted-with-replacement), LRCResonanceNucleus.lean, resonance_law_referee .out, root import, session log. NEXT: (i) adaptive-q supply (average over the q-window: the violation q's are family-specific; a pigeonhole over several q's may prove exists-q unconditionally -- THE named attack); (ii) kps exhaustion rendering continues (theirs); (iii) mirror-pair exploitation: the even-deep parity halves the census cost. death-star; S44.
 
 ---
+## opus-2026-07-17-S338 -- THM-955 THE CLUSTER GAP LEMMA canonized (union bound + sorted-endpoint pigeonhole; any <=6-speed block leaves a quantified safe width in EVERY window; verified 400/400) + the Lean route staged (lean-drafts/LRCClusterGap: L1 sorted_gap_pigeonhole = the chunk, L2 teeth enum, L3 arcSafe assembly) -- feeds window_tail_glue's base certificates ANALYTICALLY (<=6-block + gap + 7/3-tail lonely with NO search) and is the continuous face of picture-item-3 (HYP-7210)
+
+Target-sharpening per owner: pulled the fleet's LRC14-FORMALIZATION-PICTURE (death-star
+S43) -- the genuinely-open list is 3 items (dense core; 7-wall pair-floor; a-priori
+liveCount floors), all in owned lanes; the covering pages are being swarmed (fleet at
+THM-951; codex Zarankiewicz + budgets; death-star census pipeline). My differentiated
+chunk = the cluster-gap lemma: canonized referee-grade (the S336 400/400 verification
+was already in hand), Lean decomposition staged with the sort argument named as the one
+real chunk. k <= 6 = the union-bound horizon: the exact boundary where elementary
+methods end and the covering program begins.
+
+FILES: THM-955, lean-drafts/LRCClusterGap.lean, HYP-7210. opus; S338.
+
+---
+
 ## death-star-2026-07-17-S43 -- THM-951 THE DECIDABLE CENSUS PIPELINE + THE COHESIVE PICTURE (integration session): CoverageCapped DECIDES; lonely_of_census composes THM-945/950 with the Mreach consumer -- cap + live > deep by decide => B5 > 0 => Lonely; census_demo (v_i = i+2, q = 31) is THE FIRST LONELINESS PROOF IN THE CORPUS PRODUCED BY THE B5 FUNNEL; and the whole formalization now has ONE MAP (LRC14-FORMALIZATION-PICTURE-2026-07-17.md)
 
 Prompt (owner): keep working a long session to complete the LRC proof formalization, pull often and integrate incoming work and extend it and make a whole cohesive picture.
