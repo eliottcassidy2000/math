@@ -1,7 +1,7 @@
 ---
 id: THM-878
 title: THE CLOCK-MODULI CHARACTERIZATION — the Ramanujan primitive-mean FT-deficit of the tight AP vanishes exactly at the clock moduli: D(q) = A(q) − 6/7 = 0 ⟺ q ∈ {7, 13, 14}; proof by a five-case split with the q ≥ 15 case one line (a = 1: twelve adjacent pairs alone give 12(1/7 − 1/q) > 6/7 ⟺ q > 14)
-status: PROVED (each case verified exactly; referee: exact D(q) for q = 2..119)
+status: PROVED (each case verified exactly; referee: exact D(q) for q = 2..119) + LEAN (klein-S317: TournamentH7.Thm878ClockTable — the 2 ≤ q ≤ 60 window KERNEL-DECIDED as pure-ℕ clockSum q = 6qφ(q) ⟺ q ∈ {7,13,14}; the q ≥ 15 analytic tail stays on paper)
 source: klein-2026-07-16-S314; closes LEM-020 addendum-2 next-step 5
 depends_on: [LEM-020 (frame + FT floor + flat bottom), THM-863 (context)]
 verification: 04-computation/clock_moduli_largetheta_Qs_klein_S314.py -> 05-knowledge/results/clock_moduli_largetheta_Qs_klein_S314.out (8/8)

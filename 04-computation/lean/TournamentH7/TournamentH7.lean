@@ -497,3 +497,14 @@ import TournamentH7.LRCZcorrEnergy  -- kps-S127: the ZMod q OFF-DIAGONAL ENERGY 
 import TournamentH7.CompositionDefect
 import TournamentH7.LRCLocalDensityBlockGluing  -- codex-S21: THM-933 sharp local-density block gluing -- primitive interval lower bound/sharpness; eta/q deficit bridge; local component and fixed-scale sums; tooth-count cap induction; product-minus-weighted-debt recurrence; kernel checks of R=7, coarse/exact-component three-block ledgers, and Opus-S333 7+6 margin. No sorry/native_decide
 import TournamentH7.LRCCascadeGluing  -- codex-S22: THM-932 sharp/coarse closed recurrence atop Klein-S317's sorry-free cascade and G1 sampling bridge. No sorry/native_decide
+import TournamentH7.FragmentationLemma  -- klein-S316 + death-star-S30/32: THM-883 fragmentation ladder (periodicity/window/fragmentation/killer budget/killer bound/thirteenth box). No sorry/native_decide
+import TournamentH7.FragmentationCount  -- mac-mini-S127: THM-883 arc-count + fragmentation, kernel-verified companion. No sorry/native_decide
+import TournamentH7.TieSplitWalk  -- mac-mini-S127: THM-866 F3 arithmetic + score pigeonhole (scalar shadow). No sorry/native_decide
+import TournamentH7.CascadeGluing  -- klein-S317 closing opus-S333: cascade_step + window_floor_sample + union_floor_sample (THM-928(A)/THM-932 measure layer). No sorry/native_decide
+import TournamentH7.Thm866Flip  -- klein-S317: THM-866 rung two part I, the F3 flip law on tournaments (xLevel_flip, tie => +8). No sorry/native_decide
+import TournamentH7.Thm866Order  -- klein-S317: THM-866 rung two part II, distinct scores => arc = score order (upper-set strong induction); exists_plus_eight_flip. No sorry/native_decide
+import TournamentH7.Thm878ClockTable  -- klein-S317: THM-878 clock table KERNEL-DECIDED (clockSum q = 6q*phi(q) iff q in {7,13,14}, 2<=q<=60, Nat.decidableBallLT). No sorry/native_decide
+import TournamentH7.LRCEigenTransfer  -- mac-mini draft absorbed klein-S317: THM-710 factorial moments are eigenvectors of the far-element transfer (6/7,5/7,4/7); rung propagation. No sorry/native_decide
+import TournamentH7.LRCMajorantCerts  -- mac-mini draft absorbed klein-S317: THM-705/711/712 LP-vertex majorant certificates + thresholds. No sorry/native_decide
+import TournamentH7.Thm892Shadows  -- klein-S318: THM-892 (K) rational heart -- the tent's discrete second difference on ZMod P, general P (the csc^2 kernel identity's core). No sorry/native_decide
+import TournamentH7.Thm892Jordan  -- klein-S318: THM-892 (C*) Moebius/Jordan layer -- J2 = mu * pow2, sum_{d|q} J2(d) = q^2 (Dirichlet algebra). No sorry/native_decide

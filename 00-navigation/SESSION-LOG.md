@@ -38,6 +38,22 @@ Pulled (no codex reply yet); the systematic functional hunt produced a theorem i
 FILES: convention page update, HYP-7108, session log. -> codex (the lemma is also a checksum for your frame: your D-segments must be doubly balanced off-diagonal), all. boxeph; S51.
 
 ---
+## klein-2026-07-16-S318 -- LRC(14) FORMALIZATION RUNGS: THM-892's (K)+(C*) hearts KERNEL-CHECKED (tent second-difference on ZMod P, GENERAL P, no decide; J2 = mu*pow2 with sum_{d|q} J2(d) = q^2 by Dirichlet algebra) + THE WHOLE FRAGMENTATION/EXCHANGE/CLOCK ARC ROOT-WIRED (11 modules into TournamentH7.lean so plain lake build regression-checks them) + manifest statuses (items 2 DONE, 6 two-thirds) + the endgame surface read honestly
+
+Prompt (owner): keep working the many next rungs; get the LRC 14 proof formalization to its best possible state.
+
+(1) TWO NEW GREEN MODULES (boxeph manifest item 6, two of three lemmas): Thm892Shadows.lean -- the (K)-heart: the tent K(j/P) = (j/P)(1-j/P) on Z_P has discrete second difference -2/P^2 off 0 and -2/P^2 + 2/P at 0, proved for EVERY P >= 2 (representative-level lemma with three wrap cases via Nat.add_mod_right, then the ZMod wrapper via val_add/val_one_eq_one_mod/val_neg_one; the csc^2 kernel identity k-hat_P(n) = -csc^2(pi n/P)/(2P^2) is the DFT diagonalization of exactly this). Thm892Jordan.lean -- the (C*)-heart: J2(q) = sum_{d|q} mu(q/d) d^2 satisfies sum_{d|q} J2(d) = q^2, by pure convolution algebra (J2 = mu * pow 2 pointwise via divisorsAntidiagonal reindex; then zeta*(mu*pow2) = (zeta*mu)*pow2 = pow2). Kernel-decide gotcha RECORDED: concrete moebius values resist decide (minFac's well-founded recursion does not kernel-reduce) -- state anchors mu-free.
+
+(2) ROOT WIRING: TournamentH7.lean now imports the full arc -- FragmentationLemma (+killer box), FragmentationCount, TieSplitWalk, CascadeGluing, Thm866Flip/Order, Thm878ClockTable, LRCEigenTransfer, LRCMajorantCerts, Thm892Shadows/Jordan -- 11 modules with convention annotations; default-target lake build now covers them (root rebuild in flight at close; letter carries the verdict).
+
+(3) THE ENDGAME SURFACE, read honestly for the fleet: LRC14Assembly.lean is the thin top (lrc14_endgame consumes hfloor: witnessMP <= witnessG2(shapeOf v) and hpartA: 0 < witnessG2 -> 1/14 <= Mreach; the Mreach_ge_of_witness bridge is already proved -- the fuel checker must produce exactly a rational witness time with minReach >= 1/14). These parameters are OPEN ANALYTIC mathematics (849-case empirical, no a-priori proof) -- no amount of Lean wiring closes them; the manifest's parallel item route is the correct best-state strategy, and it advanced two items this session.
+
+(4) n=10 wild hunt from S317 still RUNNING (canonicalization stretch; harvest protocol stands).
+
+FILES: 2 Lean modules; root TournamentH7.lean (+11 imports); manifest item statuses; THM-878/THM-892 canon Lean lines. No canon overridden.
+
+NEXT: (a) THM-892 (P) subgroup Parseval (needs AddChar/ZMod DFT layer -- the heaviest of the three); (b) manifest items 1/3/9 (THM-882 cells; exact discs; ledger arithmetic -- all pure-Q transcription); (c) harvest n=10; (d) the fuel-checker soundness instantiation remains the named glue for whoever takes module 6 -> skeleton.
+
 ## boxeph-2026-07-16-S50 -- THE 42x J-REFINEMENT DONE: J = N(7-N) as ONE BV function with universal jump bound |Delta J| <= 12 (range {0,6,10,12}, one line; census-corrected my in-head 8 -- coincident movers) => W0(9) <= 40 diam PROVED (from 140); THE LEDGER'S CONSTANTS ARE ALL FINAL: (3.17, 40, 2.70, 2.27, 1.74, 1.08) diam. Endgame remaining: codex's K6 formula + the manifest
 
 Prompt (owner): the 42x J-refinement; many little tasks; close the endgame.

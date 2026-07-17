@@ -8,6 +8,9 @@ kernel-pure candidates; the pipeline is warm (klein's sorry-free Kendall formula
    equality; decide.
 2. **THM-878 D(q) cases** — the q ∈ {7,13,14} flat classes + per-chamber minima; data:
    vgrid_clockD script. Shape: finite exact case list.
+   **STATUS: DONE (klein-S317)** — `TournamentH7.Thm878ClockTable`: clockSum q = 6·q·φ(q)
+   ⟺ q ∈ {7,13,14} on 2 ≤ q ≤ 60 KERNEL-DECIDED (Nat.decidableBallLT form; 76 s), plus
+   the deficit-nonneg floor. Root-wired.
 3. **THM-884 exact discs** — disc₁₃({1..12};1/14) = 104999803919/6363107150400 via
    autocorrelation; data: Part D. Shape: interval intersections in ℚ; decide.
 4. **THM-885 sweep leaves (j ≤ 5)** — the fragmentation box constraints + per-leaf
@@ -17,6 +20,12 @@ kernel-pure candidates; the pipeline is warm (klein's sorry-free Kendall formula
    3 lines) + the comb closed form; Shape: algebraic identity + finite check.
 6. **THM-892 (K)/(C\*)/(P)** — second-difference DFT; Möbius/Jordan; subgroup Parseval;
    Shape: three ≤ 5-line lemmas over ℚ[e(1/P)]-free formulations (all statable in sin²).
+   **STATUS: (K)+(C\*) DONE (klein-S318)** — `TournamentH7.Thm892Shadows`: the tent's
+   discrete second difference on ZMod P (−2/P² off 0, +2/P at 0), GENERAL P, no decide —
+   the csc² kernel identity's kernel-checkable core; `TournamentH7.Thm892Jordan`:
+   J₂ = μ*pow2 and Σ_{d∣q} J₂(d) = q² by Dirichlet algebra (ζ·μ = 1). Root-wired.
+   Remaining: (P) subgroup Parseval (needs the AddChar/DFT layer). Note: concrete μ-value
+   anchors resist kernel `decide` (minFac WF recursion) — state anchors μ-free.
 7. **THM-899 B₄ closed form** — the ∏sin expansion + Bernoulli Fourier; c_B = 11/7203
    instance as the decide anchor.
 8. **HYP-7103 slice-Parseval** — the coset collapse with 7|Δ; same shape as 6(P).
