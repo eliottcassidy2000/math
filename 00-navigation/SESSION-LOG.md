@@ -1,3 +1,16 @@
+## death-star-2026-07-17-S50 -- THM-971 BRANCH INTERVAL + GENERAL WITNESS CROSS BOUND (Lean kernel-pure x4, FIRST-PASS GREEN): free-thinking over THM-949's witness ladder yielded the UNIFICATION -- for ANY two positive speeds, 14|wa*vb - wb*va| < va + vb (exact identity, no hypotheses), sum <= 13 locks outright; plus the k=1 branch Z-interval in closed Icc form (Bezout-dominated non-binding constraints) and its card = the S49 floor formula in-kernel. THE PAIR LAYER OF {1..13} IS LEAN-CLOSED AT THE INTERVAL LEVEL.
+
+Prompt (owner): work the named next steps, mine past threads for connections, think freely.
+
+(A) THE MINE + FREE-THINK FIND: re-reading THM-949 (witness ladder n_j >= 3 n_i on ratio [3,13]) against the S46-S49 lock series exposed the COMMON ROOT: the exact identity vb*Xa - va*Xb = (va*wb - vb*wa)*q needs NO structure at all. witness_cross_bound: 14|cross| < va + vb for ARBITRARY pairs; cross_lock_of_sum_le13: unstructured lock. The ladder was the inequality shadow; the rung/rational locks are structured sharpenings; one identity under all of it.
+
+(B) NAMESPACE RECTIFICATION INTEGRATED: codex's scale-series pass renumbered my rung lock 960 -> 966 and rational lock 963 -> 967 (headers patched, refs fixed); my sparse-Bezout KEEPS 964 by first-push vs opus's Hunter-sawtooth (flagged; 970 suggested). OPUS'S RESULT IS THE FLEET HEADLINE: the 7-wall measure estimate CLOSED (Hunter feasible at exactly k=7, sawtooth floors, mu(U_7) >= 547/6006, Markov dead < 1) with the final window-choice wire running through MY BlockSplitLift/adaptive-q lane -- accepted as a named target.
+
+(C) THM-971 (LRCBranchInterval.lean, standard trio x4 FIRST PASS): witness_cross_bound; cross_lock_of_sum_le13; branch_Z_mem_Icc (both bands <=> Aq/C + 1 <= Z <= (Bq-1)/D -- the non-binding constraints dominated via Bezout ALONE: (14X0-+1)j' - (14Y0-+1)i' = 14 -+ (i'-j') >= 0 for i',j' <= 13); branch_interval_card (= ((Bq-1)/D - Aq/C).toNat). Referee: 8743 arbitrary-pair cross checks + 40853 Z-iff checks (negative Z included), zero failures.
+
+FILES: THM-971, HYP-7255 confirmed, LRCBranchInterval.lean, referee .out, root import, session log, renumber patches. NEXT: (i) the p<->Z gluing (mod-correspondence on width-<q intervals; with branch_no_qmultiple already proved, this makes N+ = interval card a p-space theorem) => S2 exact on {1..13} as ONE Lean statement; (ii) THE WINDOW-CHOICE WIRE for opus's THM-970 Hunter floor (adaptive-q/carrier-count picks the live window -- the 7-wall composition's last step); (iii) dissociated live-floor threshold (the nucleus, scoped by S49). death-star; S50.
+
+---
 ## codex-2026-07-17-S66 -- IN PROGRESS: aligned-stalk gluing, exact-depth reflection parity, sparse-pair lattice, and gap-two residual
 
 Prompt (owner): finish the remaining LRC(14) mathematics, pull often, and

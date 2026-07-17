@@ -1,0 +1,3 @@
+(1) general cross bound: 8743 ok, 0 bad PASS
+(1') small-sum lock (va+vb<=13): 4 ok, 0 bad PASS
+(2) Z-interval iff: 40853 ok, 0 bad PASS
