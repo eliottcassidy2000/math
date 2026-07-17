@@ -1,3 +1,18 @@
+## death-star-2026-07-17-S51 -- THM-972 THE RELATION LOCK BY COEFFICIENT WEIGHT (Lean kernel-pure x6): witnesses inherit EVERY vanishing integer relation of the speeds with sum|alpha| <= 14 -- the master principle under the whole S46-S50 lock series; sum-triples {a,b,a+b} lock ALWAYS (weight 3, even with sparse pairs); the pair boundary corrects to weight 14 ((1,13),(3,11),(5,9) have EMPTY branches); the mediant chain (g i', g j', g(i'+j')) collapses to the 14(i'+j') narrow band with count 2*floor((q-1)/(14(i'+j'))) -- THE TRIPLE LAYER'S FIRST EXACT RUNG
+
+Prompt (owner): work the next steps, think projective 6-cycle and triangular prisms.
+
+(A) THE HINT DECODED: sum-triples are PROJECTIVE LINES on the speeds (mediants in the Farey/Stern-Brocot geometry; on {1..7} six of the seven Fano lines are sum-lines and Levi-graph 6-cycles are line-triangles; prisms = matched line-triangle pairs). Working the algebra exposed the master principle: the RELATION LOCK -- for ANY vanishing combination sum alpha_i v_i = 0 with COEFFICIENT weight sum|alpha_i| <= 14, all-failing witnesses satisfy sum alpha_i w_i = 0 EXACTLY (identity + per-term integer gap 14|X_i| <= q-1; NO strictness gymnastics). Pair ratio locks (weight i'+j'), sum-triple locks (weight 3!), difference-quadruple locks (weight 4) are all instances.
+
+(B) THM-972 (LRCRelationLock.lean, standard trio x6): relation_lock (general Finset form); relation_lock3 (direct workhorse); sum_triple_lock (w_c = w_a + w_b ALWAYS -- including (5,6,11) whose pairs are weight-16/17 sparse!); rational_lock_weight14 (the S48 boundary corrected: lock <=> weight <= 14, true branching starts at 15); mediant_triple_fail_iff (pair-lock + sum-triple-lock + witness uniqueness pin all three witnesses to (i's, j's, (i'+j')s): all fail <=> gcd-speed narrow at i'+j'); mediant_triple_count (2*floor((q-1)/(14(i'+j'))) via the S47 transport + count machinery -- the triple ledger opens).
+
+(C) RECON (relationlock_recon_deathstar_S51.out): relation lock 4471/4471 (random 3-term relations, weight <= 14); weight-14 pairs branch-empty 3/3; sum-triple lock 4135/4135 over ALL 36 sum-triples of {1..13}; mediant counts exact 9/9 including gcd cases ((2,4,6) -> L=3, (4,6,10) -> L=5) and the sparse-pair triple (5,6,11) -> L=11.
+
+(D) LEAN CRAFT: abs_add does not exist in this Mathlib (abs_sub does) -- local helper habs_add via abs_sub x (-y) + sub_neg_eq_add + abs_neg; linear_combination (p)*hrel closes the 3-term exact identity in one line; the q=0 degenerate case: push_cast turns the band bound into 14|X| < 0, killed by abs_nonneg.
+
+FILES: THM-972, HYP-7260 confirmed, LRCRelationLock.lean, recon .py/.out, root import, session log. NEXT: (i) the RELATION LATTICE of {1..13}: which weight-<=14 relations exist per subset T (sum-triples, difference-quadruples a+d=b+c, ...) -- the projective incidence (6-cycles/prisms of shared pairs) organizes the independent counts; S3 assembly within reach; (ii) the p<->Z gluing (from S50, still open); (iii) window-choice wire for the 7-wall (opus THM-970 composition). death-star; S51.
+
+---
 ## death-star-2026-07-17-S50 -- THM-971 BRANCH INTERVAL + GENERAL WITNESS CROSS BOUND (Lean kernel-pure x4, FIRST-PASS GREEN): free-thinking over THM-949's witness ladder yielded the UNIFICATION -- for ANY two positive speeds, 14|wa*vb - wb*va| < va + vb (exact identity, no hypotheses), sum <= 13 locks outright; plus the k=1 branch Z-interval in closed Icc form (Bezout-dominated non-binding constraints) and its card = the S49 floor formula in-kernel. THE PAIR LAYER OF {1..13} IS LEAN-CLOSED AT THE INTERVAL LEVEL.
 
 Prompt (owner): work the named next steps, mine past threads for connections, think freely.

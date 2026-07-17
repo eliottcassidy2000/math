@@ -1,0 +1,15 @@
+(a) relation lock (weight<=14): 4471 ok, 0 bad PASS | weight-15 breaks seen: 0
+(b) pair (1,13) weight 14: nonzero-branch occurrences = 0 PASS(empty)
+(b) pair (3,11) weight 14: nonzero-branch occurrences = 0 PASS(empty)
+(b) pair (5,9) weight 14: nonzero-branch occurrences = 0 PASS(empty)
+(c) sum-triple lock over 36 triples: 4135 ok, 0 bad PASS
+(d) mediant triple counts (find L such that N = 2*floor((q-1)/(14*L))):
+    (1,2,3) g=1: L = c/g = 3: [(42, 42), (60, 60), (94, 94)] PASS
+    (2,3,5) g=1: L = c/g = 5: [(26, 26), (36, 36), (56, 56)] PASS
+    (3,4,7) g=1: L = c/g = 7: [(18, 18), (26, 26), (40, 40)] PASS
+    (2,4,6) g=2: L = c/g = 3: [(42, 42), (60, 60), (94, 94)] PASS
+    (4,6,10) g=2: L = c/g = 5: [(26, 26), (36, 36), (56, 56)] PASS
+    (5,6,11) g=1: L = c/g = 11: [(10, 10), (16, 16), (26, 26)] PASS
+    (3,6,9) g=3: L = c/g = 3: [(42, 42), (60, 60), (94, 94)] PASS
+    (2,5,7) g=1: L = c/g = 7: [(18, 18), (26, 26), (40, 40)] PASS
+    (6,7,13) g=1: L = c/g = 13: [(10, 10), (14, 14), (22, 22)] PASS
