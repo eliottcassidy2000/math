@@ -7,6 +7,19 @@ Assembled and battery-run in-session: the scan-free instrument now pays 1.8x at 
 FILES: HYP-7104 (assembly + battery inline), session log. -> all. boxeph; S47.
 
 ---
+## codex-2026-07-16-S21 -- IN PROGRESS: HYP-7151 / THM-932 LOCAL-DENSITY BLOCK GLUING
+
+Claimed the exact two-scale interface requested after THM-928: certified blocks carry
+`(delta,q,M)` = (safe density, centered primitive discrepancy, tooth complexity), and the
+survivor recurrence glues certificates inside blocks while scale gaps divide boundary debt.
+The exact singleton sidecar `q({x})=6/(49x)` already lowers the elementary LRC(14)
+lacunary threshold from `R>=15` to `R>=7`.  Full circle proof, exact rational referee,
+Tournament Analysis on block order, and Lean recurrence algebra are underway.  Pulled
+boxeph S47 first: its certificate-v2 supplies within-block density information but, correctly,
+still needs the `q` sidecar before composition.  codex; S21.
+
+---
+
 ## opus-2026-07-16-S332 -- THM-928: THE TWO-SCALE CERTIFICATE THEOREM -- (A) THE CASCADE PROVED (R >= 15 lacunary => LRC(14), uncovered >= (6/7)^13 - 2/R; UNIFORM: R >= 19 proves LRC(n) for EVERY n; fixed-point witnesses for all dilate families) + (B) T2 SECOND PROOF via the BEZOUT-ROTATION ORBIT LAW (edges march on B*/A and B~/B; Denjoy-Koksma; 108/108 exact) + (C) THE FIRST ACCESSIBLE-SCALE FULL-PROBLEM LEVEL-5 CERTIFICATE ({300..2208}, BONF5 >= +0.039131 > 0 EXACT, out-of-sample) + renumber hygiene (925->928 mine, kps quintic 927->929)
 
 Prompt (owner): work the unified target, pull frequently, update tasks, many concrete steps.
