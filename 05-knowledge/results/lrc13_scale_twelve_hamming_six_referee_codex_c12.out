@@ -1,0 +1,19 @@
+scale-twelve independent Python referee
+mask digest 7e7f2d1580427f7a7d9e5d84227deb95d3223542f3bb9fa0ca24f8b4ffe1a19e
+hereditary divisor-word digest 97bb938a42e9bda7805b3a9ab0852e782e16f0107bca61157ba2355b53f47d6a
+hereditary divisor words 26961; labelled order contexts 24911964
+hereditary state words 2611968; labelled contexts 2413458432
+scalar capacity 36830 contexts on 912 supports across 85 patterns
+scalar bank digest 2016e8f3643d56496ec8930b45b0854b53e0606e5de4ca9ade06871a1dbe54d7
+scalar pattern digest cfc0f0d35ecc7b4fc26b6fd1000bcc078fb0e93663e769434b332e8f85fc5fc1
+owner-local bank 64 all-D12 contexts on 64 sign transversals
+owner-local bank digest ca8fa1a2edb9438df5ec9fef0c70852db7658ccf5b56d7419ed7376867db7eba
+multiplication orbits 6; sizes 12,12,12,4,12,12
+literal unit words 262144; global common-sheet survivors 0
+uniform profile 0:3808 1:288; owner size 48; distinct pairs disjoint
+profile digest 9db194fb92c49c8d1a2435715704eba4217b628001972ef1c2bdea6e6a5f3ded
+pair observable owner-obligation intersection; multiplication gauge; sorted tie path
+completed tournaments transitive: scores 0,1,2,3,4,5; cycles 0; SCC 1^6; flips 0; paths 1
+faithful vertices are owner obligations (or dually unit words), not raw runners
+runners, residues, sheets, and cover arcs lose exact obligation disjointness
+tournament completion destroys obligation sizes and the fact that every pair was a tie

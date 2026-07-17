@@ -1,0 +1,24 @@
+scale-twelve AP-centred Hamming-six owner orthogonality
+divisor grammar 1,2,3,4,6,12; literal states 12
+states (D,e) (1,0) (2,1) (3,1) (3,2) (4,1) (4,3) (6,1) (6,5) (12,1) (12,5) (12,7) (12,11)
+supports 924
+hereditary order words 26961
+hereditary labelled order contexts 24911964
+hereditary state words per support 2611968
+hereditary labelled state contexts 2413458432
+scalar-capacity contexts 36830 across multiplicity patterns 85
+owner-local contexts 64; all D12 on the 64 projective sign transversals
+multiplication orbits 6 sizes 12,12,12,4,12,12 (telemetry; no quotient)
+replayed literal unit words 262144
+uniform profile 0:3808 1:288; each owner size 48; distinct pairs disjoint
+global common-sheet survivors 0
+tournament pair observable |O_i intersect O_j|; positive-intersection relation empty, all 15 pairs tied
+tournament projective sign gauge owner +/-r -> r; tie Hamiltonian path 1<2<3<4<5<6
+tournament fingerprints scores 0,1,2,3,4,5; directed triangles 0; SCCs 1,1,1,1,1,1; Hamiltonian paths 1
+tournament gauge edge-flip histogram 0:2 1:2 2:2 3:4 4:4 5:6 6:6 7:6 8:6 9:6 10:6 11:4 12:4 13:2 14:2 15:2
+challenged vertices owner obligations preserve common-sheet intersections; sign classes preserve the local-bank support classification but destroy unit-mask incidence; runner/provider vertices destroy the owner nerve
+local D12 mask table at owner one (units 1,5,7,11; ratios 1..12 in hex)
+  e=1: c00 600 300 180 c0 60 30 18 c 6 3 1
+  e=5: 840 42 102 108 408 420 21 81 84 204 210 10
+  e=7: 810 210 204 84 81 21 420 408 108 102 42 40
+  e=11: 801 3 6 c 18 30 60 c0 180 300 600 400

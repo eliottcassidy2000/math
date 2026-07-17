@@ -1,6 +1,7 @@
 # The current LRC14 object is a light-relation representation with an owner-obligation nerve
 
-*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974.
+*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974/976
+and the claimed scale-fourteen probe THM-977.
 This is a research map, not a new global theorem.*
 
 ## 1. Two exact objects have finally met
@@ -75,6 +76,9 @@ With that convention, the exact scale sequence is:
 | `9` | divisor-coloured owner obligations | intersection graph `3K2`, or mixed induced graph `2K2`; every cross-pair is a conflict |
 | `10` | projective owner classes `F_13^*/{+-1}` | conflict cycle `C6`; intersection graph `K6\C6`, the triangular prism |
 | `11` | owner obligations on 66 all-prime-order supports | 64 supports have empty intersection graph; the two quadratic cosets have intersection graph `3K2` |
+| `12` | owner obligations on 64 all-order-twelve sign transversals | complete owner orthogonality: the intersection graph is empty and every obligation has size 48 |
+| `13` | no primitive common-scale face | THM-860: every retained and replacement speed would be divisible by 13 |
+| `14` | fourteen local sheets at one owner | claimed THM-977: scalar capacity leaves 576 rows, but every owner-local union misses at least two sheets; no global nerve remains |
 
 The carrier changes because each quotient is legal only after checking which
 predicate it preserves.  At scale ten, projectivization is legal because the
@@ -107,6 +111,12 @@ sequence, SCC data, and Hamiltonian-path count.  The tournament is therefore
 provably nonfaithful even at the coarsest distinction between the two terminal
 species.  The missing data is not a more clever orientation: it is the edge
 meaning and the higher nerve.
+
+Scale fourteen sharpens this warning.  If THM-977's independent hardening
+confirms the exploratory census, the contradiction occurs before owner
+obligations exist as global sets: the faithful vertices are the fourteen
+sheets of one owner and the invariant is maximum union cardinality.  Any
+tournament on runners or owners literally quotients away the deficit.
 
 ## 4. A relation-rich / relation-poor dichotomy
 
@@ -167,13 +177,15 @@ claim that such an order has already been proved.
 
 ## 6. Immediate proof targets
 
-1. Formalize the mask-to-nerve bridges at scales eight through eleven.  The
-   terminal `c=8` and `c=9` nerve contradictions are already kernel-pure; the
-   large native reductions are now the honest remaining trust surface.
+1. Formalize the mask-to-nerve bridges at scales eight through twelve.  The
+   terminal `c=8` and `c=9` nerve contradictions are already kernel-pure;
+   scale-ten and scale-twelve modules are in progress, while the large native
+   reductions remain the honest trust surface.
 2. Extend THM-972 from sum triples to a circuit-indexed counting lemma for
    all primitive weight-at-most-fourteen relations.
-3. Compute `L_14(v)` and its circuit incidence before launching `c=12`; use
-   circuit rank to choose algebraic versus analytic dispatch.
+3. Compute `L_14(v)` and its circuit incidence on the surviving `c=14` scalar
+   bank and on the next legal scale; use circuit rank to choose algebraic
+   versus analytic dispatch before any metric recursion.
 4. Instrument the existing metric insertion trees with the proposed state and
    search for an actual decreasing transition statistic.
 5. Keep the global quantifier boundary explicit: closing common scales does
