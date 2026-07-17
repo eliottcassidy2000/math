@@ -1,0 +1,2 @@
+farey separation: PASS
+one DISTINCT-instant carrier per component (super-ladder, 2000 strata): PASS; non-reduced replicas (same instant, several q): 53055 -- the theorem's hne guard excludes these; the pigeonhole counts INSTANTS, not (q,p) pairs

@@ -10,6 +10,17 @@ FILES: LEM-039, LEM-040, named items closed in LEM-036/038, manifest item 14 + a
 Prompt (owner): work the T4 resonance strip and the T5 slab and work the covering programs pages and the cluster gap lemma, pull often and sharpen targets as necessary.
 
 FILES: THM-953, HYP-7210, t4_strip_referee script + .out, THM-952 renumber. -> all (codex: the strip is YOUR audit shape -- (II)-(III)'s case tree awaits your rigor; the slab plane-pass is the last analytic stone; whoever takes cite_cluster7_lonely: it is the covering pages' open leaf, 'frozen arcs cannot perfectly pack').
+## death-star-2026-07-17-S45 -- THM-956 THE ADAPTIVE-Q PIGEONHOLE (Lean kernel-pure): Farey separation forces ONE carrier per deep component on super-ladder strata; deep-free coprime q EXISTS whenever the window beats the component count -- open item 3 reduced to (K-refinement + the live floor); items 1/2 both moved fleet-side (kps renumbered 949->952 cleanly; codex LANDED THM-954 pair-floor work; opus THM-955 cluster gap)
+
+Prompt (owner): do a similar session working to finish up the remaining LRC 14 math.
+
+(A) RECON (honest first): 400 families -- 387 have window-total deep = 0; the raw worst (161 carrier q's) is a COMPOSITE-v_bot artifact (v_bot = 24: every even q resonates); restricted to ALL-COPRIME q the worst carrier count is ONE. The adaptive-q pigeonhole is therefore nearly-free in truth; the provable frame carries an honest parameter gap.
+
+(B) THM-956 (LRCAdaptiveQ.lean): farey_separation (1 <= w q1 q2 for distinct rationals in width w -- exact integers); carrier_unique_per_component (super-ladders D^2 < 7 v_top: each width-1/(7 v_top) component hosts <= 1 distinct-instant carrier; the referee's 53055 apparent violations were NON-REDUCED REPLICAS of the same instant -- caught, documented, and excluded by the hne guard: the pigeonhole counts instants, not (q,p) pairs); adaptive_q_pigeonhole (the skeleton: carriers inject into K components + #window > K => a deep-free q exists; census there needs only liveCount > 0). Honest parameters: provable K <= 64 v_bot (two-choice towers) vs true K <= 2 -- the refinement named; the live floor at the chosen q = the program's nucleus, unchanged.
+
+(C) FLEET (pull-integrated): kps renumbered 949->952 (clean); codex landed THM-954 weighted-ratio-layer PAIR-FLOOR work (ITEM 2 MOVING!) + the pair-grid discrepancy bridge; opus THM-955 cluster gap. All three open items advanced this cycle -- two by the fleet, one here.
+
+Referee (adaptiveq_referee_deathstar_S45.out): Farey PASS 50k; one-carrier PASS 2000 super-ladder strata. FILES: THM-956, HYP-7211 confirmed, LRCAdaptiveQ.lean, referee .out, root import, session log. NEXT: (i) K-refinement (64 v_bot -> ~2: the tower-existence over-determination -- one focused session on the two-choice consistency pruning); (ii) instantiate the pigeonhole's comp map concretely (component = the pinned n-window index -- mechanical given THM-949); (iii) the live floor (the nucleus -- kps exhaustion rendering is its other face). death-star; S45.
 
 ---
 ## boxeph-2026-07-17-S66 -- LEM-038: the s = 3 cross-spectrum (owner target): MASTER REFLECTION IDENTITY (S^(6-s) = -conj S^(s)) => the IMAGINARY LAW (s = 3 is a pure sine system), the QUADRUPLE LAW (M(3) == 0 mod 4), the PHASE-FREE CROSS (Gram form), the BASELINE COLLAPSE (means ~0, sigma^2-term = 0), and the VERDICT: s = 3 cross-variance strictly smaller everywhere (once exactly 0) -- interference suppressed, diagonal unchanged
