@@ -1,0 +1,24 @@
+(S) THE SAWTOOTH PAIR FLOOR rho(r) (exact; lam = 1/14):
+   sawtooth-sum formula vs direct intervals: 40/40 exact matches
+   ratio <= 1/1: min mu(pair) = 1/7 = 0.142857 at (a,b) = (2,2)
+   ratio <= 3/2: min mu(pair) = 3/154 = 0.019481 at (a,b) = (11,16)
+   ratio <= 2/1: min mu(pair) = 1/63 = 0.015873 at (a,b) = (5,9)
+   ratio <= 3/1: min mu(pair) = 1/63 = 0.015873 at (a,b) = (4,9)
+   ratio <= 5/1: min mu(pair) = 1/77 = 0.012987 at (a,b) = (3,11)
+   ratio <= 8/1: min mu(pair) = 1/77 = 0.012987 at (a,b) = (2,11)
+   ratio <= 13/1: min mu(pair) = 1/91 = 0.010989 at (a,b) = (2,26)
+
+(P) the 6-edge tree-sum minimization (prod r_i <= 13):
+   one 13, five 1: tree floor = 0.725275
+   two ~3.6 (use r<=5 floor), four 1: tree floor = 0.597403
+   three ~2.35 (use r<=3), three 1: tree floor = 0.476190
+   six 13^(1/6) (use r<=3/2): tree floor = 0.116883
+   HUNTER GLOBAL FLOOR mu(U_7) >= 0.116883 (worst allocation)
+
+(H)+(M) end-to-end: exact mu(U_7) vs Hunter floor + Markov dead bound:
+   30 random 7-blocks: Hunter floor violated: 0/30; exact mu(U_7) range [0.3152, 0.3747]
+   Markov: dead-window fraction <= 1 - mu(U_7)-floor <= 0.8831  (observed S340 max: 0.07)
+
+THE CHAIN: Hunter (k=7 tree-feasible) + sawtooth close-pair floors +
+Markov => explicit dead-position bound < 1: the 7-wall's measure
+estimate is CLOSED modulo window choice (BlockSplitLift machinery).
