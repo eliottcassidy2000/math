@@ -1,3 +1,15 @@
+## codex-2026-07-17-S66 -- IN PROGRESS: aligned-stalk gluing, exact-depth reflection parity, sparse-pair lattice, and gap-two residual
+
+Prompt (owner): finish the remaining LRC(14) mathematics, pull often, and
+adjust targets against the live shared frontier.
+
+Namespace reserved while the new Lean modules and their axiom audits build.
+Honest current target: sharpen the weighted dense-core, pair-tower, and
+selected-witness interfaces; do not claim LRC(14) without the remaining
+supplier theorems.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.44) -- THREE COMPLETE TASKS: T4 + T5 HARDENED (composed-atom structure) + THE AVERAGING LEMMA'S ARITHMETIC CORE IN LEAN (kernel-green). (1) T4 HARDENED (THM-953 addendum): THE COMPOSED-ATOM THEOREM -- BOTH levels of T4 are two-pole sums: the inner slice (Delta_in = |k|/(v1'v2')) AND the outer k-line itself (u,t linear in the line parameter, Delta_out = |k|/(v3''v4'')): T4 <= sum_k Atom_in x Atom_out with codex's THM-946(1) atom at both levels; REFEREED valid on 3 quadruples (H-free structural check; floors supply 1/H per cont.41's envelope); floor cases = THM-952 subcases on each level independently, the averaging lemma rank-free on both; remaining delta = transcribing 8 floor combinations, each a THM-952 copy. (2) T5 HARDENED (THM-959 addendum): THREE-LEVEL composition -- the plane's collars ARE two-pole atoms (along each vanishing line the two surviving forms are linear), bulk by the dyadic shell lemma; partition REFEREED EXACT: collars carry 70-75% of outer mass, bulk/L^2 bounded and decreasing. NO mechanism beyond atom + rank-free averaging appears at ANY level of the ladder -- the whole T_s tower is atoms + orbits + floors. (3) LEAN (LRCCongruenceAveraging.lean, 58 s, foundational axioms only, root-wired, manifest addendum): lavSum_mul_unit (ORBIT INVARIANCE -- unit rotation preserves the reciprocal least-abs sum; Units.mulLeft_bijective after Equiv.mulLeft0 failed on GroupWithZero), leastAbsVal_neg (the fold pairing), and lavSum_89 = 1 + 2*H_44 EXACTLY KERNEL-DECIDED at the adversarial modulus (the engineered triple's b' = 89) -- the exact harmonic form is STRONGER than the paper's logged bound at any instance. Named next: the general folded identity (odd n). j=4 at 714 unique/2002. Three checkpoints pushed mid-session through the racing origin.
 
 Prompt (owner): another similar session, longer, push/pull often, many complete tasks, adjust targets intelligently.
