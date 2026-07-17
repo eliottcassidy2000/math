@@ -377,4 +377,29 @@ theorem killer_bound (j : ℕ) (ws : Fin j → ℕ) (hws : ∀ i, 1 ≤ ws i)
       (le_div_iff₀ hWpos).mp hchain
     nlinarith [h3]
 
+/-- Rung three (death-star-S32): THE CONCRETE THM-883 BOX at the LRC(14) radius
+    λ = 1/13. For `j ≤ 6` arc-grid families with moduli all `≥ W` covering a component
+    of length `L > 0`: `W ≤ 2j / (L·(13−2j))` — the exact fragmentation-box constant
+    that makes the multi-killer configuration space finite (THM-883/THM-885 sweeps). -/
+theorem killer_box_thirteenth (j : ℕ) (hj6 : j ≤ 6) (ws : Fin j → ℕ)
+    (hws : ∀ i, 1 ≤ ws i) (L x : ℝ) (hL : 0 < L)
+    (W : ℕ) (hW1 : 1 ≤ W) (hWle : ∀ i, W ≤ ws i)
+    (hcover : Set.Icc x (x + L) ⊆ ⋃ i, badArcs (ws i) (1 / 13)) :
+    (W : ℝ) ≤ 2 * j / (L * (13 - 2 * j)) := by
+  have hj' : 2 * (j : ℝ) * (1 / 13) < 1 := by
+    have : (j : ℝ) ≤ 6 := by exact_mod_cast hj6
+    linarith
+  have h := killer_bound j ws hws (1 / 13) L x (by norm_num) hL hj' W hW1 hWle hcover
+  have hje : (0:ℝ) < 13 - 2 * (j : ℝ) := by
+    have : (j : ℝ) ≤ 6 := by exact_mod_cast hj6
+    linarith
+  have hrw : 2 * (1 / 13 : ℝ) * (j : ℝ) / (L * (1 - 2 * (j : ℝ) * (1 / 13)))
+      = 2 * (j : ℝ) / (L * (13 - 2 * (j : ℝ))) := by
+    rw [div_eq_div_iff]
+    · ring
+    · positivity
+    · positivity
+  rw [hrw] at h
+  exact h
+
 end LRC14
