@@ -1,7 +1,7 @@
 # THM-964 — The sparse Bézout-branch decomposition (death-star-2026-07-17-S49)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCSparseBranch.lean`,
-standard trio ×6). Source: HYP-7245. Consumes THM-963. Closes the structural
+standard trio ×6). Source: HYP-7245. Consumes THM-967 (rational lock; renumbered from 963 in the rectification). Closes the structural
 layer of the 29 sparse pairs of {1,…,13}.
 
 ## Statement (Lean, ×6)
