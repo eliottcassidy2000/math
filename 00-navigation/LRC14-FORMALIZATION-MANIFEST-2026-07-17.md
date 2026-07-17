@@ -376,3 +376,71 @@ through seven distinct absolute quotient frequencies, and failure of harmonic
 clearance forces at least eight. It does not by itself make the endpoint phase
 avoid a saturated detuned partition, so the selected-phase, many-wall pair-lift,
 and signed B5-tail suppliers remain.
+
+## Landed addendum — dynamic phase escape, coverage language, and audited tails (codex-S47--S48)
+
+The selected-witness obligations now have a quantitative wall-crossing socket.
+`LRCSelectedWitnessDynamicEscape` fattens the `LRCUpTo13` harmonic witness to a
+closed interval: for ten off-selected quotient speeds bounded by `B`, the exact
+radius is `3/(154 B)`.  If every failure of a q333 or q244 branch lies in one
+scalar danger wall of radius `3/14`, a nonzero normalized wall frequency of
+absolute value at least `11 B` crosses a whole chamber and selects an LRC(14)
+witness.  The remaining q333/q244 phase problem is therefore an explicit
+zero-or-small normalized support-three frequency, not arbitrary phase search.
+This still is not a closure: the small-frequency alternative requires arithmetic
+routing into the relation traps or a separate low-frequency selector.
+
+`LRCPairTowerReduction` has two additional unconditional exits.  Phase zero
+escapes both complete binary-prefix obstructions when the doubled harmonic core
+is empty, and `liftFailureCard = 11` forces exactly that situation.  For a core
+of cardinality `c`, the citation supplies the sharp interval radius
+
+```text
+(1/(c+1) - 1/14)/B.
+```
+
+A common affine obstruction wall is escapable whenever its frequency image spans
+one danger chamber.  Thus the genuine pair residue is no longer an unspecified
+infinite tower: it is a nonempty doubled core together with multiple obstruction
+walls that have not yet been reduced to one common affine wall.
+
+On the B5 side, the normalized pair floor has been translated exactly into
+coverage language.  At `cleanModulus(v,height)`, the pair input is
+
+```text
+443/1470 <= (liveCount + shiftedPairDepthMoment)/(q-1),
+```
+
+and the other input is the signed harmful-depth budget.  `CoverageCapped(6)`
+offers a second exact consumer through the live-versus-depth-six census.
+`LRCArcWire` identifies this cap with absence of seven simultaneous bad arcs;
+seven bad rows force all 21 pairwise integer near-proportionality constraints.
+The cap is not uniform in `q`: when `q > 14 max |v_i|`, the point `p=1` is the
+near-zero catastrophe and all runners can be bad.  The remaining supplier is
+therefore a modulus-window plus finite rigidity problem on the trapped dense
+core, not a global moment inequality.
+
+`LRCB5CertificateAudit` also proves that the older abstract
+`B5RelationBudgetCertificate` is semantically equivalent merely to `B5>0`: its
+unrealized mass fields can always be manufactured.  It remains only as a
+deprecated audit target.  The normalized and coverage-capped certificates do
+not have this defect because their fields are concrete statistics of `v` at the
+canonical clean modulus.
+
+Finally, THM-946 repairs the relation-lattice-tail record.  The former
+logarithm-free two-pole estimate is false already for poles `0` and `2^22`.
+The proved replacement is
+
+```text
+S <= 64(1+log(2+Delta))/(A B (1+Delta))
+     + 6/(1+A Delta) + 6/(1+B Delta).
+```
+
+The logarithm is necessary.  This leaves `T3` open at a punctured near-pole
+congruence sum and leaves `T4/T5` open at affine resonance strips and slabs.
+Even conditional tail estimates yield only `small support relation OR B5>0`;
+the structured relation branch is still a separate LRC obligation.  The natural
+quotient here has slice cosets and pole windows as vertices and retains affine
+offsets; a runner tournament destroys those offsets, so the honest higher object
+is an oriented-matroid resonance arrangement unless a preservation theorem for
+an elimination-order tournament is found.
