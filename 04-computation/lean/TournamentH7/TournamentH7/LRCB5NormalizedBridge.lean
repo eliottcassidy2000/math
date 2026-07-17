@@ -79,6 +79,10 @@ def normalizedHigherMobiusSigned (v : Fin 13 → ℤ) (q : ℕ) : ℚ :=
   (24 / 49) * normalizedMass3 v q +
     (2 / 7) * normalizedMass4 v q + normalizedMass5 v q
 
+/-- Normalized second factorial moment of the band-depth histogram. -/
+def normalizedPairDepthMoment (v : Fin 13 → ℤ) (q : ℕ) : ℚ :=
+  (LRC14Concrete.momentS v q 2 : ℚ) / ((q : ℚ) - 1)
+
 theorem aggregateDeviation_zero (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 ≤ q) :
     aggregateDeviation v q 0 = 0 := by
   simp [aggregateDeviation, LRC14Concrete.deviation_empty v q hq]
@@ -106,6 +110,27 @@ theorem aggregateDeviation_eq_moment_sub_equilibrium
     _ = (Nat.choose 13 k : ℚ) * (((q : ℚ) - 1) / 7 ^ k) := by
       rw [Finset.sum_const, Finset.card_powersetCard, nsmul_eq_mul]
       simp
+
+/-- Exact pair-mass reading in the depth histogram. -/
+theorem normalizedMass2_eq_pairDepthMoment
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q) :
+    normalizedMass2 v q = normalizedPairDepthMoment v q - 78 / 49 := by
+  rw [normalizedMass2, normalizedAggregateDeviation,
+    aggregateDeviation_eq_moment_sub_equilibrium]
+  have hden : ((q : ℚ) - 1) ≠ 0 := by
+    have : (1 : ℚ) < q := by exact_mod_cast hq
+    linarith
+  norm_num [normalizedPairDepthMoment, Nat.choose]
+  field_simp [hden]
+
+/-- The pair-tail target is exactly the normalized second factorial-moment
+floor `1703/1470`. -/
+theorem normalizedMass2_lower_iff_pairDepthMoment
+    (v : Fin 13 → ℤ) (q : ℕ) (hq : 1 < q) :
+    -(13 / 30 : ℚ) ≤ normalizedMass2 v q ↔
+      1703 / 1470 ≤ normalizedPairDepthMoment v q := by
+  rw [normalizedMass2_eq_pairDepthMoment v q hq]
+  constructor <;> intro h <;> linarith
 
 /-- The support-one aggregate is the sum of the singleton deviations. -/
 theorem aggregateDeviation_one_eq_sum_singletons
@@ -390,10 +415,29 @@ theorem B5_pos_at_cleanModulus_of_pair_and_depth_budget
   · exact hpair
   · exact hdepth
 
+/-- Histogram-only clean-modulus consumer.  Both remaining inputs are now
+moments of `bandCount`: the second factorial moment floor and the signed
+depth-seven tail polynomial. -/
+theorem B5_pos_at_cleanModulus_of_depthMoment_budgets
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (height : ℕ)
+    (hpair : 1703 / 1470 ≤
+      normalizedPairDepthMoment v (cleanModulus v height))
+    (hdepth :
+      harmfulDepthMoment v (cleanModulus v height) /
+          (((cleanModulus v height : ℕ) : ℚ) - 1) <
+        -(65218 / 84035)) :
+    0 < LRC14Concrete.B5 v (cleanModulus v height) := by
+  apply B5_pos_at_cleanModulus_of_pair_and_depth_budget v hv height
+  · exact (normalizedMass2_lower_iff_pairDepthMoment
+      v (cleanModulus v height)
+      (one_lt_cleanModulus v height hv)).2 hpair
+  · exact hdepth
+
 /-! ## Axiom audit -/
 
 #print axioms normalized_B5_eq_equilibrium_add_aggregates
 #print axioms aggregate_relationModel_identity
+#print axioms normalizedMass2_lower_iff_pairDepthMoment
 #print axioms relationModelQ_le_normalized_B5_of_singletons_nonpos
 #print axioms normalizedHigherMobiusSigned_expanded
 #print axioms harmfulDepthTerm_nonpos_of_le_six
@@ -404,6 +448,7 @@ theorem B5_pos_at_cleanModulus_of_pair_and_depth_budget
 #print axioms B5_pos_of_coprime_normalized_signed_budget
 #print axioms B5_pos_of_coprime_pair_and_depth_budget
 #print axioms B5_pos_at_cleanModulus_of_pair_and_depth_budget
+#print axioms B5_pos_at_cleanModulus_of_depthMoment_budgets
 
 end
 end LRCB5NormalizedBridge

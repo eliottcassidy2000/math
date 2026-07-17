@@ -55,11 +55,12 @@ theorem B5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
 
 /-- Concrete THM-940 certificate at the canonical clean modulus.  The modulus,
 coprimality, singleton sign, and finite-height modular-to-exact relation bridge
-are automatic; only the normalized pair and harmful depth budgets remain. -/
+are automatic; only the second factorial-moment floor and harmful depth budget
+remain. -/
 structure NormalizedB5RelationBudgetCertificate (v : Fin 13 → ℤ) where
   height : ℕ
-  pair_lower_bound : -(13 / 30 : ℚ) ≤
-    normalizedMass2 v (cleanModulus v height)
+  pair_depth_budget : 1703 / 1470 ≤
+    normalizedPairDepthMoment v (cleanModulus v height)
   harmful_depth_budget :
     harmfulDepthMoment v (cleanModulus v height) /
       ((cleanModulus v height : ℚ) - 1) < -(65218 / 84035)
@@ -70,8 +71,8 @@ theorem NormalizedB5RelationBudgetCertificate.b5_pos {v : Fin 13 → ℤ}
     (certificate : NormalizedB5RelationBudgetCertificate v)
     (hv : ∀ i, v i ≠ 0) :
     0 < LRC14Concrete.B5 v (cleanModulus v certificate.height) :=
-  B5_pos_at_cleanModulus_of_pair_and_depth_budget v hv certificate.height
-    certificate.pair_lower_bound certificate.harmful_depth_budget
+  B5_pos_at_cleanModulus_of_depthMoment_budgets v hv certificate.height
+    certificate.pair_depth_budget certificate.harmful_depth_budget
 
 /-- THM-935 certificate supply only on the primitive, dissociated,
 chain-dense core isolated by the current endgame. -/
@@ -157,7 +158,8 @@ theorem lrc14_from_twoThree_detuned_and_relationBudget
     (denseCoreDissociatedB5Supply_of_relationBudget hsupply)
 
 /-- Concrete normalized-THM-940 capstone.  The B5 side now exposes only the
-pair lower tail and signed higher-depth budget at a coprime modulus. -/
+second factorial-moment floor and signed higher-depth budget at a coprime
+modulus. -/
 theorem lrc14_from_twoThree_detuned_and_normalizedRelationBudget
     (cite : LRCUpTo13) (hdeep : DeepExceptionalDetunedDispatchTwoThree)
     (hsupply : DenseCoreNormalizedRelationBudgetSupply) :
