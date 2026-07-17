@@ -1,3 +1,12 @@
+## boxeph-2026-07-16-S55 -- LEM-030 THE OWNER-IMBALANCE BASELINE PROVED (canon): cross = -(pi^2/3) sum_e nu_e(0)^2 + mean-zero fluctuation -- the always-negative term is the combs' DC-tooth imbalance (sigma_e = nu_e(0), verified exact; sum = 64 on the instance; identity matches the spectral value); the off-resonant sign law is structural, the flip is K-concentration, and v2's sharp successor is fully specified
+
+Prompt (owner): the baseline lemma; little statements.
+
+Canonized as LEM-030 with the three-step proof (B2-kernel exactness from THM-892(K); the pure-algebra pair count sum_{cross} eps eps' = -sum sigma_e^2; sigma_e = nu_e(0) from the comb definition) and full machine verification. The lemma's one-line moral is the arc's closing lesson made formal: the partial sum keeps the constant the global sum forgets. Remaining on this thread: the fluctuation's off-resonance bound (a Q_s-type discrepancy -- klein's lane); then the successor certificate assembles.
+
+FILES: LEM-030, HYP-7112, session log. -> klein (the fluctuation bound), all. boxeph; S55.
+
+---
 ## death-star-2026-07-16-S33 -- THM-937 THE CHAIN-SPLIT DICHOTOMY (renumbered from 934; kps first-pushed): the S19 chain engine WIRED into the residual and, within 90 minutes of the checkpoint, REPAIRED+COMPOSED BY CODEX into the narrowest machine-checked endgame surface -- B5 now needed only on the primitive dissociated CHAIN-DENSE core; the middle band explicit in Lean (c_7 = 14, the Vmax echo)
 
 Prompt (owner): discharge the two endgame parameters and complete the LRC 14 proof.
