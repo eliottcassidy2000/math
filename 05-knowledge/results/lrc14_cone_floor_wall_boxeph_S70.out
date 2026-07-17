@@ -1,0 +1,30 @@
+THE CONE FLOOR AND THE c = 7 WALL DICHOTOMY (boxeph S70)
+==============================================================================
+PART A -- the defect bounds 1/49 -+ g/(7b)
+  bounds hold on 500 random pairs (exact); integer form == LEM-042 formula
+
+PART B -- the cone floors c0(7/3) and c0(13), exact
+  rho = 7/3: min over b' <= 700 is 1/63 at (4, 9) (= 0.015873); tail floor (b' > 700) = 0.020204 > min: True
+  rho = 13/1: min over b' <= 700 is 1/91 at (1, 13) (= 0.010989); tail floor (b' > 700) = 0.020204 > min: True
+  ==> c0(7/3) = 1/63 (exact, attained at (4, 9)); the cone floor is PROVED (finite check + tail bound)
+
+PART C -- the c = 7 wall dichotomy referee
+  block [50, 51, 52, 53, 54, 55, 56]: hunter branch: best credit 395/19292 >= c0 1/63: True; true good = 0.29890 >= credit: True
+  block [40, 44, 55, 60, 66, 70, 77]: hunter branch: best credit 1/35 >= c0 1/63: True; true good = 0.33264 >= credit: True
+  block [24, 30, 40, 45, 54, 60, 72]: hunter branch: best credit 1/28 >= c0 1/63: True; true good = 0.38360 >= credit: True
+  block [10, 24, 57, 133, 311, 726, 1694]: LACUNARY branch (all ratios >= 7/3) -- opus-S336 closes it
+  block [12, 20, 30, 44, 60, 84, 120]: hunter branch: best credit 1/21 >= c0 1/63: True; true good = 0.37625 >= credit: True
+
+PART D -- the c = 8 honest boundary
+  block [100, 101, 102, 103, 104, 105, 106, 107]: pair-credit sum = 0.14293 vs needed (c-7)/7 = 0.14286: sufficient: True; true good = 0.25020 (the truth is fine; the uniform pair route is not) -- c >= 8 NAMED
+
+PART E -- difference-comb law + beats + the clustered beat-miss
+  (a,b)=(50,53) d=3: subset law holds: True; beats {0: 0.00701, 1: 0.00671, 2: 0.00671} (total 0.02043)
+  (a,b)=(35,42) d=7: subset law holds: True; beats {0: 0.00340, 1: 0.00340, 2: 0.00340, 3: 0.00340, 4: 0.00340, 5: 0.00340, 6: 0.00340} (total 0.02381)
+  (a,b)=(50,51) d=1: subset law holds: True; beats {0: 0.02045} (total 0.02045)
+  clustered (2464,2465): off-beat window at 0.33 (width 2/a): mass = 0
+  clustered (2464,2465): off-beat window at 0.50 (width 2/a): mass = 0
+  clustered (2464,2465): off-beat window at 0.67 (width 2/a): mass = 0
+  => the d = 1 mass sits in ONE beat (near t = 0/1); off-beat sweep windows carry ZERO (3/3 zero): positioning is essential exactly in the clustered regime -- which cite_cluster7_lonely already covers by the C0-citation route
+==============================================================================
+done

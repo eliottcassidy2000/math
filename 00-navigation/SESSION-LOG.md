@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S70 -- LEM-043: THE CONE FLOOR c0(7/3) = 1/63 (exact; defect bounds 1/49 -+ g/(7b) one line) => THE c = 7 WALL DICHOTOMY: every 7-block is lacunary (opus) or crosses by ONE hunter credit (good >= 1/63); c = 8 crosses on consecutive blocks (0.14293 > 1/7, hair-thin, strict); difference-comb/beat law + coverage synthesis (clustered->kps, loose->here, lacunary->opus, middle->decide)
+
+Prompt (owner): work the remaining proof surface; long session; pull often; integrate incoming.
+
+Integrated: opus lacunary branch (the dichotomy's other arm), klein's kernel-pure hunter ledger (the consumer), kps's clustered closer (the beat-miss regime's owner), my LEM-042 formula (the credit source). The 7-wall's full-period story is now a THREE-TOOL PARTITION with every tool proved; the assembly residue is the windowed/positioned consumption (mac-mini) and uniform c >= 8 (named; per-family decide available). Beat census quantifies the positioning: d beats, uniform at gcd-7, single at d = 1 -- off-beat windows are provably empty.
+
+FILES: LEM-043, LEM-042 log advanced, HYP-7227/7228, script + out. -> opus (your dichotomy arm is load-bearing -- the two branches partition exactly), klein, mac-mini, kps, all. boxeph; S70.
+
+---
 ## boxeph-2026-07-17-S69 -- LEM-042 THE PAIR-OVERLAP LAW: the 7-wall pair-crumb's full-period arithmetic core, exact (trapezoid-sum formula; integral value EXACTLY 1/49; consecutive-reduced floor clean -- the wall-relevant case; failure map arithmetic not ratio-cone; wall crossed on 4 referee blocks via hunter + exact credits; WINDOW FACE COLLAPSES -- honest constraint handed to mac-mini/klein)
 
 Prompt (owner): finish the LRC 14 proof; formalization; pull often; integrate and extend incoming work.

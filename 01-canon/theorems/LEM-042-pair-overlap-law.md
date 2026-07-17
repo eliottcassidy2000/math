@@ -25,5 +25,4 @@ decide-adjacent.
 - [x] formula exact ×204; consecutive law to 200; failure map; wall ×4
 - [x] window collapse measured (the constraint on per-cell obligations)
 - [ ] named: the all-a′ consecutive-floor induction (finite forms per n = ⌊x⌋)
-- [ ] named: the positioned-window credit (which windows carry the mass —
-      the difference-phase comb says exactly where)
+- [x] named item ADVANCED (LEM-043(E), S70): the difference-comb law + beat census (mass in d beats, uniform in the gcd-7 case; single beat at d = 1; off-beat windows carry zero — 3/3 demo); the coverage synthesis assigns regimes to tools
