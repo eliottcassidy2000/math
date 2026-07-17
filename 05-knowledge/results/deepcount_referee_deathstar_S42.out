@@ -1,0 +1,2 @@
+window uniqueness (one bad p per witness, q <= 7v): PASS
+census floor B5 >= LM - 792*deep: PASS
