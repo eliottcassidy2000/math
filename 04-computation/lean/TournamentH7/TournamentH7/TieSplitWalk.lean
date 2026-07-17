@@ -8,6 +8,8 @@
 import Mathlib.Data.Finset.Sort
 import Mathlib.Algebra.Order.BigOperators.Group.Finset
 import Mathlib.Data.Int.Interval
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Linarith
 
 namespace LRC14
 

@@ -7,7 +7,7 @@
    These are the inequalities behind the j ≤ 5 multi-killer sweep (THM-883) and the
    killer-budget chain; the +2*lam carries the endpoint arcs honestly. -/
 import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.Order.Interval.Finset.Int
+import Mathlib.Data.Int.Interval
 
 open MeasureTheory Set
 

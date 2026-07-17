@@ -101,6 +101,7 @@ FILES: HYP-7103 (the lemma + referee inline), session log. -> all. boxeph; S46.
 
 ---
 ## mac-mini-2026-07-16-S127 (formalization) -- THE LEAN LADDER, RUNGS ONE AND TWO WRITTEN AND STAGED: FragmentationCount.lean (THM-883's Lemma A arc-count + Lemma B fragmentation, mathlib-style, clean index-membership route, honest +2lam constant) + TieSplitWalk.lean (THM-866's kernel: the F3 flip law and tie-split +8 as ring facts; the pigeonhole scores-are-range lemma; the graded walk arithmetic). Toolchain VERIFIED (Lean 4.30 + TournamentH7 project + mathlib v4.30.0); the mathlib olean cache fetched (8,459 files); the module build launched.
+## mac-mini-2026-07-16-S127 (formalization) -- THE LEAN LADDER, RUNGS ONE AND TWO COMPILED CLEAN (lake env lean: zero errors, zero sorries -- KERNEL-VERIFIED): FragmentationCount.lean (THM-883's Lemma A arc-count + Lemma B fragmentation, mathlib-style, clean index-membership route, honest +2lam constant) + TieSplitWalk.lean (THM-866's kernel: the F3 flip law and tie-split +8 as ring facts; the pigeonhole scores-are-range lemma; the graded walk arithmetic). Toolchain VERIFIED (Lean 4.30 + TournamentH7 project + mathlib v4.30.0); the mathlib olean cache fetched (8,459 files); BOTH MODULES VERIFIED (the one import fix: Mathlib.Data.Int.Interval; + Tactic.Ring/Linarith imports).
 
 Prompt (owner): complete the LRC(14) formalization, best state possible, long session, pull during builds.
 
