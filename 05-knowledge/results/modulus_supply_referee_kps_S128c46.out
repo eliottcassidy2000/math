@@ -1,0 +1,10 @@
+certified: continuous B5 = 0.082053 ; endpoint budget E = 38428
+   q=1009: B5_q = -0.658077  |err| = 7.40e-01  vs E/q = 3.81e+01  (rate OK: True)
+   q=4001: B5_q = -0.066983  |err| = 1.49e-01  vs E/q = 9.60e+00  (rate OK: True)
+   q=16001: B5_q = +0.070746  |err| = 1.13e-02  vs E/q = 2.40e+00  (rate OK: True)
+   q0 = E/B5 = 468332: B5_{q0+1} = +0.081861 > 0: True (THE MODULUS SUPPLY)
+small-13: continuous B5 = -0.503054 ; endpoint budget E = 3014
+   q=1009: B5_q = -0.669970  |err| = 1.67e-01  vs E/q = 2.99e+00  (rate OK: True)
+   q=4001: B5_q = -0.478880  |err| = 2.42e-02  vs E/q = 7.53e-01  (rate OK: True)
+   q=16001: B5_q = -0.497594  |err| = 5.46e-03  vs E/q = 1.88e-01  (rate OK: True)
+DONE
