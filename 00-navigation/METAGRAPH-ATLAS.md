@@ -87,5 +87,13 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
   two-eyed panel (+τ_out) has EXACTLY 4 = the double-blind four (H=23,29,31,43; all with sink AND
   source; τ_in = τ_out on them). Zero wild (non-cone) invisibles at n=8. Tower: invisible pairs at
   every n ≥ 8 (cone transform laws; sink = black hole crushes τ_in to det(L+I), source = mirror scales by n).
-- **Open:** n=9 completeness (first wild pair?); OEIS submission for 1,2,2,6,11,50; per-level
-  spectral-tie distribution vs the H-gradient.
+- **n=9 (THM-931, exhaustive, 191536 classes exact):** one-eyed panel 264 groups/277 pairs;
+  extended panel 35 pairs = 27 SUSPENSION-manufactured (cone/cocone commute: the two predicted
+  27-families coincide as suspension images) + **8 WILD pairs = CHIRALITY pairs (T, T^op)**:
+  non-SC, cpL self-dual, tau_in = tau_out, near-regular scores; cpA-deck and every
+  reversal-invariant invariant (c3, c4, c5, |Aut|) tie AUTOMATICALLY; the full-panel deck
+  (per-card tau) splits all 8. Blindness bifurcates: LAUNDERED (sink/source) + CHIRAL.
+- **Sequences:** distinct cpK 1,2,2,6,11,50 (n=3..8) — NOT in OEIS (checked 2026-07-16),
+  submission-ready. Wild-pair counts by n: 0 (n<=8), 8 (n=9).
+- **Open:** n=10 wild hunt (is every wild pair chiral? 98M extensions, overnight-feasible or
+  chirality-targeted); per-level spectral-tie distribution vs the H-gradient.

@@ -38,7 +38,7 @@
 - **Source:** klein-S315 cont.2 census + cont.3 coning laws; owner directive (coning x cocylinders).
 - **Status:** CLOSED klein-S316 (all three follow-ups done in one stroke).
 - **Resolution:** (1)+(3) THM-924 walk reciprocity: det(zI-A+J) = (-1)^n cpA(-1-z) => walk moments, d-moments, AND cpK are all cpA-determined (cpK(y) = 2^{n-1}[cpA((y-1)/2)+(-1)^n cpA((-y-1)/2)]); HYP-7096 subsumed-proved; THM-918 tower fully unconditional. (2) THM-925 exhaustive n=8 census (all 6880 classes, exact canonical forms): old panel exactly 27 invisible pairs = the manufactured cones; extended panel exactly 4 = the double-blind four; ZERO non-cone invisibles — the cone stratum is ALL of n=8 invisibility. New sequence: distinct cpK = 1,2,2,6,11,50 (n=3..8).
-- **Remaining shaped follow-up:** n=9 completeness (first wild invisible pair, if any); OEIS check for 1,2,2,6,11,50; fold lambda/cospectral/coning columns into METAGRAPH-ATLAS.
+- **Remaining shaped follow-up:** DONE klein-S317: THM-931 (n=9 census complete, 191536 exact; 27 suspension pairs + 8 WILD = CHIRALITY pairs (T,T^op) with cpL self-dual + balanced tau; deck structurally blind to chirality; OEIS: 1,2,2,6,11,50 NOT present — submission-ready). NEW LEAD: n=10 hunt (is every wild pair chiral?) — needs 191536 x 512 = 98M extensions; feasible overnight (~10h) with disk-backed buckets or a chirality-targeted sweep (enumerate only tau-balanced, L-self-dual classes); atlas updated.
 
 ## Lead death-star-2026-07-16-S27: THM-913 parallel-class book drawing + glue progress
 - **Status:** the Z_n book construction achieves Z(n) exactly (n = 5..13; contiguous

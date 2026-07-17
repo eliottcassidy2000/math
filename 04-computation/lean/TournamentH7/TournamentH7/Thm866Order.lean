@@ -100,7 +100,8 @@ theorem arc_iff_lt_of_injective (T : Tournament n)
       exact absurd (mem_upperSet.mp hx) (lt_irrefl _)
     have hslt : T.outDegree u < n := T.outDegree_lt_n u
     have htarget : ((Finset.univ.erase u) \ (T.upperSet u)).card = T.outDegree u := by
-      rw [Finset.card_sdiff hUsub, Finset.card_erase_of_mem (Finset.mem_univ u),
+      rw [Finset.card_sdiff, Finset.inter_eq_left.mpr hUsub,
+          Finset.card_erase_of_mem (Finset.mem_univ u),
           Finset.card_univ, Fintype.card_fin, card_upperSet T hinj u]
       omega
     have heq : Finset.univ.filter (fun j => T.arc u j = true)
@@ -168,7 +169,8 @@ theorem transitive_of_injective (T : Tournament n)
     rw [T.irrefl x] at hvx
     exact absurd hvx (by simp)
   have hxu : x ≠ u := by
-    rintro rfl
+    intro h
+    rw [h] at hvx
     exact T.asym u v ⟨huv, hvx⟩
   have h1 := (T.arc_iff_lt_of_injective hinj u v hvu).mp huv
   have h2 := (T.arc_iff_lt_of_injective hinj v x hxv).mp hvx

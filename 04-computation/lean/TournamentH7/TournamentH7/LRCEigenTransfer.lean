@@ -8,7 +8,6 @@
   degrees) by full expansion over the eight cells and `ring`.  The rung facts
   (THM-710's propagation): (6/7)·cap_{k+1} + 1/7 ≤ cap_{k+2}, exact rationals.
 -/
-import Mathlib
 import TournamentH7.LRCFourteenSkeleton
 
 namespace LonelyRunner
@@ -16,9 +15,9 @@ namespace LRC14
 namespace EigenTransfer
 
 /-- The occupancy distribution as an 8-vector (cells N = 0..7). -/
-def T (p : Fin 8 → ℝ) : Fin 8 → ℝ :=
+noncomputable def T (p : Fin 8 → ℝ) : Fin 8 → ℝ :=
   fun j => ((7 - (j : ℝ)) / 7) * p j +
-    (((j : ℝ) + 1) / 7) * (if h : (j : ℕ) + 1 < 8 then p ⟨(j : ℕ) + 1, h⟩ else 0)
+    (((j : ℝ) + 1) / 7) * (if j = 7 then 0 else p (j + 1))
 
 /-- First factorial moment. -/
 def m1 (p : Fin 8 → ℝ) : ℝ := ∑ j : Fin 8, (j : ℝ) * p j
@@ -30,20 +29,41 @@ def m3 (p : Fin 8 → ℝ) : ℝ :=
 
 /-- **THM-710, r = 1**: `m1` is an eigenvector of the transfer, eigenvalue `6/7`. -/
 theorem m1_eigen (p : Fin 8 → ℝ) : m1 (T p) = (6 / 7) * m1 p := by
-  simp only [m1, T, Fin.sum_univ_succ]
-  norm_num
+  have e0 : (0 : Fin 8) + 1 = 1 := rfl
+  have e1 : (1 : Fin 8) + 1 = 2 := rfl
+  have e2 : (2 : Fin 8) + 1 = 3 := rfl
+  have e3 : (3 : Fin 8) + 1 = 4 := rfl
+  have e4 : (4 : Fin 8) + 1 = 5 := rfl
+  have e5 : (5 : Fin 8) + 1 = 6 := rfl
+  have e6 : (6 : Fin 8) + 1 = 7 := rfl
+  simp only [m1, T, Fin.sum_univ_eight, e0, e1, e2, e3, e4, e5, e6]
+  norm_num [Fin.ext_iff]
   ring
 
 /-- **THM-710, r = 2**: eigenvalue `5/7`. -/
 theorem m2_eigen (p : Fin 8 → ℝ) : m2 (T p) = (5 / 7) * m2 p := by
-  simp only [m2, T, Fin.sum_univ_succ]
-  norm_num
+  have e0 : (0 : Fin 8) + 1 = 1 := rfl
+  have e1 : (1 : Fin 8) + 1 = 2 := rfl
+  have e2 : (2 : Fin 8) + 1 = 3 := rfl
+  have e3 : (3 : Fin 8) + 1 = 4 := rfl
+  have e4 : (4 : Fin 8) + 1 = 5 := rfl
+  have e5 : (5 : Fin 8) + 1 = 6 := rfl
+  have e6 : (6 : Fin 8) + 1 = 7 := rfl
+  simp only [m2, T, Fin.sum_univ_eight, e0, e1, e2, e3, e4, e5, e6]
+  norm_num [Fin.ext_iff]
   ring
 
 /-- **THM-710, r = 3**: eigenvalue `4/7`. -/
 theorem m3_eigen (p : Fin 8 → ℝ) : m3 (T p) = (4 / 7) * m3 p := by
-  simp only [m3, T, Fin.sum_univ_succ]
-  norm_num
+  have e0 : (0 : Fin 8) + 1 = 1 := rfl
+  have e1 : (1 : Fin 8) + 1 = 2 := rfl
+  have e2 : (2 : Fin 8) + 1 = 3 := rfl
+  have e3 : (3 : Fin 8) + 1 = 4 := rfl
+  have e4 : (4 : Fin 8) + 1 = 5 := rfl
+  have e5 : (5 : Fin 8) + 1 = 6 := rfl
+  have e6 : (6 : Fin 8) + 1 = 7 := rfl
+  simp only [m3, T, Fin.sum_univ_eight, e0, e1, e2, e3, e4, e5, e6]
+  norm_num [Fin.ext_iff]
   ring
 
 /-- **The majorant-value transfer**: V = 1 − m1/2 + m2/12 obeys

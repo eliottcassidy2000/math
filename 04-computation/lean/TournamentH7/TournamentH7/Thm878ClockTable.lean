@@ -18,6 +18,8 @@ import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 
 namespace LonelyRunner
 namespace LRC14
+set_option maxRecDepth 100000
+
 namespace ClockTable
 
 /-- `7q · S₂(a/q)` for the tight AP `{1..13}`, as a pure ℕ expression:
@@ -32,14 +34,15 @@ def clockSum (q : ℕ) : ℕ :=
 
 /-- **THM-878, the clock table (kernel-decided)**: on `2 ≤ q ≤ 60` the
     Ramanujan primitive-mean deficit vanishes exactly at the clock moduli
-    `q ∈ {7, 13, 14}`. -/
-theorem clock_table : ∀ q ∈ Finset.Icc 2 60,
+    `q ∈ {7, 13, 14}` (stated as `∀ q < 61, 2 ≤ q → ⋯` so the kernel decides it
+    through `Nat.decidableBallLT`'s structural recursion). -/
+theorem clock_table : ∀ q < 61, 2 ≤ q →
     (clockSum q = 6 * q * Nat.totient q ↔ q = 7 ∨ q = 13 ∨ q = 14) := by
   decide
 
 /-- **The FT-floor face of the table**: the deficit is nonnegative on the whole
     window (LEM-020's pointwise floor, averaged). -/
-theorem deficit_nonneg_table : ∀ q ∈ Finset.Icc 2 60,
+theorem deficit_nonneg_table : ∀ q < 61, 2 ≤ q →
     6 * q * Nat.totient q ≤ clockSum q := by
   decide
 

@@ -29,43 +29,63 @@ def flip (T : Tournament n) (w l : Fin n) (hne : w ≠ l) : Tournament n where
   arc i j := if flipCond w l i j then !(T.arc i j) else T.arc i j
   irrefl := by
     intro i
-    by_cases hc : flipCond w l i i
-    · rcases hc with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;>
-        exact absurd (h1.symm.trans h2) hne
-    · simp [hc, T.irrefl i]
+    have hc : ¬ flipCond w l i i := by
+      rintro (⟨h1, h2⟩ | ⟨h1, h2⟩)
+      · exact hne (h1.symm.trans h2)
+      · exact hne (h2.symm.trans h1)
+    show (if flipCond w l i i then !(T.arc i i) else T.arc i i) = false
+    rw [if_neg hc, T.irrefl i]
   total := by
     intro i j hij
+    show (if flipCond w l i j then !(T.arc i j) else T.arc i j) = true ∨
+         (if flipCond w l j i then !(T.arc j i) else T.arc j i) = true
     by_cases hc : flipCond w l i j
-    · have hc' : flipCond w l j i := flipCond_symm hc
-      simp only [hc, hc', if_pos]
-      cases h1 : T.arc i j with
-      | true => right;
-                have h2 : T.arc j i = false := by
-                  cases h2 : T.arc j i with
-                  | true => exact absurd ⟨h1, h2⟩ (T.asym i j)
-                  | false => rfl
-                simp [h2]
-      | false => left; simp [h1]
-    · have hc' : ¬ flipCond w l j i := fun h => hc (flipCond_symm h)
-      simp only [hc, hc', if_neg, not_false_iff]
+    · rw [if_pos hc, if_pos (flipCond_symm hc)]
+      rcases T.total i j hij with h | h
+      · right
+        have hf : T.arc j i = false := by
+          cases h2 : T.arc j i
+          · rfl
+          · exact absurd ⟨h, h2⟩ (T.asym i j)
+        rw [hf]
+        rfl
+      · left
+        have hf : T.arc i j = false := by
+          cases h2 : T.arc i j
+          · rfl
+          · exact absurd ⟨h2, h⟩ (T.asym i j)
+        rw [hf]
+        rfl
+    · rw [if_neg hc, if_neg (fun h => hc (flipCond_symm h))]
       exact T.total i j hij
   asym := by
     intro i j
+    show ¬ ((if flipCond w l i j then !(T.arc i j) else T.arc i j) = true ∧
+            (if flipCond w l j i then !(T.arc j i) else T.arc j i) = true)
     by_cases hc : flipCond w l i j
-    · have hc' : flipCond w l j i := flipCond_symm hc
-      simp only [hc, hc', if_pos]
+    · rw [if_pos hc, if_pos (flipCond_symm hc)]
       rintro ⟨h1, h2⟩
-      cases h3 : T.arc i j with
-      | true => rw [h3] at h1; simp at h1
-      | false =>
-          have h4 : T.arc j i = true := by
-            rcases T.total i j (by rintro rfl; rcases hc with ⟨a,b⟩|⟨a,b⟩ <;>
-              exact hne (a.symm.trans b)) with h | h
-            · rw [h3] at h; simp at h
-            · exact h
-          rw [h4] at h2; simp at h2
-    · have hc' : ¬ flipCond w l j i := fun h => hc (flipCond_symm h)
-      simp only [hc, hc', if_neg, not_false_iff]
+      have hij : i ≠ j := by
+        rintro rfl
+        rcases hc with ⟨a, b⟩ | ⟨a, b⟩
+        · exact hne (a.symm.trans b)
+        · exact hne (b.symm.trans a)
+      have ha : T.arc i j = false := by
+        cases h : T.arc i j
+        · rfl
+        · rw [h] at h1
+          simp at h1
+      have hb : T.arc j i = false := by
+        cases h : T.arc j i
+        · rfl
+        · rw [h] at h2
+          simp at h2
+      rcases T.total i j hij with h | h
+      · rw [ha] at h
+        simp at h
+      · rw [hb] at h
+        simp at h
+    · rw [if_neg hc, if_neg (fun h => hc (flipCond_symm h))]
       exact T.asym i j
 
 variable (T : Tournament n) {w l : Fin n}
@@ -84,7 +104,7 @@ theorem flip_arc_w (hne : w ≠ l) {j : Fin n} (hj : j ≠ l) :
   have hc : ¬ flipCond w l w j := by
     rintro (⟨_, h2⟩ | ⟨h1, _⟩)
     · exact hj h2
-    · exact hne h1.symm
+    · exact hne h1
   simp [flip, hc]
 
 theorem flip_arc_wl (hne : w ≠ l) : (T.flip w l hne).arc w l = !(T.arc w l) := by
