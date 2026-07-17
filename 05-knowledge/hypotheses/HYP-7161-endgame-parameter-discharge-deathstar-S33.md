@@ -101,3 +101,29 @@ The current narrowest checked theorem is
 THM-935 identifies the likely mathematical content of supplier 2—universal
 support-`3,4,5` relation-lattice tails after the proved support-2 tail—but that
 relation-mass theorem is not yet the Lean supplier.
+
+## Sub-four detuned discharge and relation-budget capstone — S27/S29
+
+`TournamentH7.LRCEndgameParameterDischargeFour` sharpens the exceptional triple
+alphabet by exact floor arithmetic.  For every reduced detuning denominator `q ≥ 4`,
+it proves `7 * badCount ≤ 2 * g`; consequently an exactly-three-detuned tuple with all
+three reduced denominators at least `4` is generic and therefore lonely.  It also proves
+that a nonmultiple's reduced denominator is at least `2`, so the complementary
+`HasSubFourDetuningDenominator` condition is exactly the existence of a `q=2` or `q=3`
+coordinate.  All statements audit with foundational axioms only.
+
+The strengthened theorem
+`lrc14_from_four_detuned_and_denseCore_dissociated_B5` composes this with the chain split.
+Besides `LRCUpTo13`, its exact two suppliers are now:
+
+1. a nonterminating two-adic pair tower or a non-generic triple containing reduced
+   denominator `2` or `3`;
+2. positive `B5` on the primitive dissociated `ChainDenseCore`.
+
+`TournamentH7.LRCB5RelationBudget` and `TournamentH7.LRCB5RelationEndgame` replace the
+second raw supplier by THM-935-shaped proof data.  The exact relation model equality,
+the proved support-two quarter budget at `H=30`, and a strict three-quarter bound on the
+support-`3,4,5` mass imply integer `B5 > 0`; the capstone
+`lrc14_from_four_detuned_and_relationBudget` then gives LRC(14).  The universal
+`T_s(H)` bounds and the analytic equality with concrete discrete `B5` remain genuine
+mathematics, not hidden axioms.

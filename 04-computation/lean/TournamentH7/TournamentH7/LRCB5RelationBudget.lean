@@ -18,6 +18,8 @@ remains a separate proof obligation.
 namespace LonelyRunner
 namespace LRCB5RelationBudget
 
+noncomputable section
+
 /-- The independent/equilibrium depth-five mass for thirteen runners. -/
 def equilibrium : ℝ := 2052 / 16807
 
@@ -55,7 +57,7 @@ theorem weights_nonnegative :
 theorem equilibrium_sub_debt_le_model (mass2 mass3 mass4 mass5 : ℝ) :
     equilibrium - relationDebt mass2 mass3 mass4 mass5 ≤
       relationModel mass2 mass3 mass4 mass5 := by
-  unfold equilibrium relationDebt relationModel pairWeight tripleWeight quadWeight
+  dsimp [equilibrium, relationDebt, relationModel, pairWeight, tripleWeight, quadWeight]
   nlinarith [neg_abs_le mass2, le_abs_self mass3, le_abs_self mass4,
     le_abs_self mass5]
 
@@ -78,7 +80,7 @@ theorem equilibrium_le_debt_of_model_nonpos (mass2 mass3 mass4 mass5 : ℝ)
 theorem relationDebt_eq_pair_add_higher (mass2 mass3 mass4 mass5 : ℝ) :
     relationDebt mass2 mass3 mass4 mass5 =
       pairWeight * |mass2| + higherRelationDebt mass3 mass4 mass5 := by
-  rfl
+  simp [relationDebt, higherRelationDebt, add_assoc]
 
 /-- THM-935's proved support-two tail at horizon `30` consumes strictly less
 than one quarter of the exact equilibrium budget. -/
@@ -106,5 +108,6 @@ theorem relationModel_pos_of_quarter_threeQuarter_split
 #print axioms pair_tail_horizon_thirty_lt_quarter
 #print axioms relationModel_pos_of_quarter_threeQuarter_split
 
+end
 end LRCB5RelationBudget
 end LonelyRunner

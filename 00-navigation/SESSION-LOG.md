@@ -20,6 +20,53 @@ Prompt (owner): take the two proof targets.
 Target (i): the pair-split first came out with the wrong sign -- and the mismatch was the discovery: THM-880's constant-mode cancellation ((sum eps)^2 = 0) fails for PARTIAL (cross-owner) sums, leaving the exact baseline -2pi^2/6 x (n_opp - n_same) = -(pi^2/3) sum_e sigma_e^2 <= 0, pure algebra; the remaining fluctuation is mean-zero under equidistribution (measured <K> within 0.01 of 1/6 in both sign classes off-resonance). The off-resonant law cross <= 0 is now [proved baseline] + [fluctuation bound = the standing Q_s-discrepancy machinery]. Target (ii): the flip is measured as K-concentration -- <K>_opp exceeds <K>_same exactly on the resonant rows of the battery and nowhere else. The refined diagonal-dominance law has its complete proof skeleton; v2's sharp successor ([diagonal + baseline] off-resonance | [comb] on) is fully specified for whoever assembles it.
 
 FILES: HYP-7111, session log. -> klein/kps (the fluctuation bound is your discrepancy lane; the baseline is one line of algebra away from canon), all. boxeph; S54.
+## codex-2026-07-16-S29 -- ZARANKIEWICZ GUARDRAIL + EXACT B5 BUDGET + SUB-FOUR CHAIN-DENSE CAPSTONE GREEN
+
+Pulled repeatedly from the live mainline and formalized the honest relation-content side
+of THM-935 without promoting crossing counts to a sign theorem.  New
+`LRCZarankiewiczGuardrail.lean` proves that total relation-support pair load is exactly
+the total owner multiplicity over the 78 unordered runner pairs.  Pair-unique
+support-`>=3/4/5` families have at most `26/13/7` members; more than 26 support-`>=3`
+relations yields an explicit shared owner pair.  It also proves the tiny-scale floor:
+13 injective positive speeds below 40 force two distinct two-index sets with equal speed
+sum, hence a support-3 or support-4 relation.  This exposed and corrected THM-935's
+former `[3,79]` typo to the sharp pair-sum range `[3,77]`.
+
+New `LRCB5RelationBudget.lean` checks the signed model
+`2052/16807 + (24/343)M2 - (24/49)M3 - (2/7)M4 - M5`, proves that absolute debt below
+the equilibrium forces positivity, and verifies that the proved `H=30` pair tail spends
+strictly less than one quarter of the budget.  `LRCB5RelationEndgame.lean` packages the
+missing analytic equality and the quarter/three-quarter split as a proof-producing
+certificate, converts its real positivity to concrete integer `B5>0`, and feeds the
+chain-dense endgame.
+
+In parallel, Curie's exact floor arithmetic proved `7*badCount<=2g` for every reduced
+detuning denominator `q>=4`.  `LRCEndgameParameterDischargeFour.lean` therefore reduces
+the exceptional triple alphabet exactly to `q in {2,3}`.  The combined foundational-
+only theorem is now
+`lrc14_from_four_detuned_and_relationBudget : LRCUpTo13 ->
+DeepExceptionalDetunedDispatchFour -> DenseCoreRelationBudgetSupply -> LRC14`.
+
+MATHEMATICAL RESIDUAL: (i) the nonterminating two-adic pair tower and non-generic
+three-detuned tuples containing `q=2` or `q=3`; (ii) on the primitive dissociated
+`ChainDenseCore`, formalize THM-935's equality with concrete discrete `B5` and prove the
+uniform support-3/4/5 lattice tails inside the remaining three-quarter budget.
+
+ASSUMPTION CHALLENGE / TOURNAMENT ANALYSIS: considered runners, gaps, exact-support
+relations, coefficient rays, residue sheets, parallel classes, and proof obligations as
+vertices.  The useful quotient vertices are relation supports and their unordered-pair
+owners: it preserves support size, collision incidence, and multiplicity load, but
+destroys coefficients, heights, Bernoulli signs, and phase chronology.  Therefore the
+pair observable cannot define the needed sign tournament.  The exact S20 owner-bank
+fingerprint already witnesses the obstruction: positive-risk and Zarankiewicz-risk
+orders have five edge flips despite both tournaments being transitive with singleton
+SCCs and one tie-completed Hamiltonian path.  Signed masses remain explicit in the B5
+budget rather than being inferred from crossings.
+
+FILES: `LRCZarankiewiczGuardrail.lean`, `LRCB5RelationBudget.lean`,
+`LRCB5RelationEndgame.lean`, `LRCEndgameParameterDischargeFour.lean`,
+`LRCDenseCoreEndgame.lean`, package root, THM-935, HYP-7161, formalization manifest,
+session log. codex/Curie; S26--S29.
 
 ---
 ## boxeph-2026-07-16-S53 -- THE REFINED DIAGONAL-DOMINANCE LAW: cross <= 0 in ALL 39/39 off-resonant instances, violated in EXACTLY the 6 resonant-w instances -- even the SIGN of the cross is frame-stratified (off-resonance: 100% cross-owner dipoles force destructive interference; on resonance: mode coherence flips it, already carried by v2's comb term). The twelfth frame-correction, and the sharpest: the correct law is Q_s <= sum D_e OFF the resonant classes + OEIS draft filed + Lean handoff state checked

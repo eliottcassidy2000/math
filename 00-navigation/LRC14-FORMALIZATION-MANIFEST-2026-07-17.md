@@ -112,3 +112,28 @@ only when the sorted absolute speeds satisfy `ChainDenseCore`; a successful chai
 produces loneliness directly and is never reinterpreted as a Bonferroni certificate.
 The exact checked residual is therefore deep exceptional detuning plus chain-dense
 dissociated `B5` supply, along with the sanctioned `LRCUpTo13` citation.
+
+## Landed addendum — relation incidence, budget, and sub-four endgame (codex-S26--S29)
+
+`TournamentH7.LRCZarankiewiczGuardrail` proves the exact double-counting identity for
+small-relation supports: total `choose(|S|,2)` load equals total owner multiplicity over
+the `78` unordered runner pairs.  Pair-unique support-`≥3/4/5` families are capped at
+`26/13/7`, and excess support-`≥3` mass produces an explicit shared owner pair.  It also
+kernel-proves THM-935's tiny-scale floor: thirteen injective positive speeds below `40`
+force two distinct index pairs with equal sums.  The quotient is explicitly a counting
+guardrail only; it does not preserve Bernoulli/Fourier signs.
+
+`TournamentH7.LRCB5RelationBudget` formalizes the exact signed coefficient frame and
+proves that absolute relation debt below `2052/16807` forces positivity.  The `H=30`
+support-two tail is strictly below one quarter of that budget, leaving a checked strict
+three-quarter socket for the open support-`3,4,5` tails.  New
+`TournamentH7.LRCB5RelationEndgame` packages the analytic identity and those bounds as a
+proof-producing certificate, derives concrete integer `B5 > 0`, and feeds the
+chain-dense endgame.
+
+In parallel, `TournamentH7.LRCEndgameParameterDischargeFour` proves the exact
+`q≥4` bad-count inequality for three detuned coordinates.  The exceptional triple
+alphabet is now exactly `q∈{2,3}`; together with the nonterminating two-adic pair tower
+and relation-budget certificate supply on the primitive dissociated `ChainDenseCore`,
+`lrc14_from_four_detuned_and_relationBudget` implies LRC(14).  Every new theorem in this
+addendum audits with only `propext`, `Classical.choice`, and `Quot.sound`.
