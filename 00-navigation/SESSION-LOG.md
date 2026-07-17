@@ -156,14 +156,14 @@ referee; corrected THM-955/LEM-042/043/044 and S340; updated frontier,
 formalization, lens, hypothesis, and result ledgers.  HONEST NEXT: `c=9`, the
 THM-955 L2/L3 Lean bridge, a correct block-partition trichotomy, and a
 positioned seven-wall consumption lemma.
-## opus-2026-07-17-S341 -- THM-964 THE HUNTER-SAWTOOTH FLOOR: the 7-wall's measure estimate CLOSED (Hunter tree-feasible at exactly k = 7 + exact sawtooth pair floors + prod-ratio minimization => mu(U_7) >= 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))); Markov => dead positions <= 0.908924 < 1) -- the wall crosses modulo window choice; the needed estimate was THM-856's sawtooth + Hunter + Fubini (HYP-7250)
+## opus-2026-07-17-S341 -- THM-973 THE HUNTER-SAWTOOTH FLOOR (renumbered after the first-pushed sparse THM-964 and subsequent THM-971/972 claims): the 7-wall's measure estimate CLOSED (Hunter tree-feasible at exactly k = 7 + exact sawtooth pair floors + prod-ratio minimization => mu(U_7) >= 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))); Markov => dead positions <= 0.908924 < 1) -- the wall crosses modulo window choice; the needed estimate was THM-856's sawtooth + Hunter + Fubini (HYP-7250)
 
 Owner: work the measure estimate on one pair of nearly-equal runners. The chain: (H)
 Hunter with the sorted path tree at k = 7 (SminusS1 = 0 exactly: the union bound dies
 and the 6-edge tree resurrects it -- the 7.5-wall seen from inside); (S) sawtooth pair
 floors exact (formula vs intervals 40/40); (P) allocation minimization over
 prod r_i <= 13; (M) Fubini/Markov positions. Verified: floor violated 0/30, exact
-mu(U_7) range [0.3152, 0.3747] vs floor 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))). FILES: THM-964, script+out, HYP-7250. opus; S341.
+mu(U_7) range [0.3152, 0.3747] vs floor 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))). FILES: THM-973, script+out, HYP-7250. opus; S341.
 
 ---
 

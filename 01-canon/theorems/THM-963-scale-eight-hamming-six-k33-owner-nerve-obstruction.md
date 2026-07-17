@@ -436,11 +436,11 @@ orders die owner-locally.
 
 This theorem closes only the primitive proper AP-centred common-scale-eight
 Hamming-six face under the `M(A)<=1/13` hypothesis that invokes THM-860's
-common-sheet and hereditary-lcm conclusions.  It does not close common scales
-`9<=c<=840`, arbitrary non-AP Hamming-six packets, the remaining ramified
+common-sheet and hereditary-lcm conclusions.  This theorem alone does not
+close common scales `9<=c<=840`, arbitrary non-AP Hamming-six packets, the remaining ramified
 Hamming-five metric bank, deep-sheet languages outside this chart, the
 seven-wall continuum-to-grid problem, or the block-partition trichotomy.
 
 In particular, THM-963 makes a real finite frontier advance but is not a proof
-of global LRC(14).  The next AP-centred common-scale Hamming-six frontier is
-`c=9`.  ∎
+of global LRC(14).  THM-969 and THM-970 subsequently close `c=9,10`; the next
+AP-centred common-scale Hamming-six frontier is `c=11`.  ∎

@@ -893,9 +893,40 @@ implemented Python referee reproduces the divisor counts, the `66=64+2`
 capacity split, the `3040/960/96` unit profile, and the pair spectrum
 `6x0,6x8,3x16`.  This endpoint is exact native C++, not yet Lean.
 
-Thus the AP-centred common-scale H6 faces `c=3,...,8` are closed.  This does
-not touch `c>=9`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
+THM-969 closes `c=9`.  The `482,294,736` literal contexts reduce to `1,186`
+scalar rows and then `76` owner-local contexts: 64 all-order-nine signed
+cycles and one 12-context mixed orbit.  Exact replay of `3,048,192` unit
+fibres has zero survivors.  The faithful owner-obligation nerves are `3K2`
+and, on the mixed orbit's order-nine owners, `2K2`.  Optimized, unoptimized,
+and sanitizer C++ runs agree with an independent Python reconstruction.
+
+THM-970 closes `c=10`.  The two-prime hereditary grammar has `3,002,076`
+divisor contexts and `821,620,800` literal contexts.  Scalar capacity leaves
+`1,200` rows; owner-local feasibility leaves exactly the 64 all-order-ten
+sign transversals of `F_13^*/{+-1}`; and the remaining `64*4^6=262,144`
+global unit words have no survivor.  On the six projective owner classes the
+zero pairs form a multiplication-by-two `C6`, so the nonempty-intersection
+nerve is `K6` minus `C6`, the triangular prism, with no triple faces.  Raw
+runners and completed tournaments lose the disjoint-obligation meaning of
+those cycle edges.
+
+Thus the AP-centred common-scale H6 faces `c=3,...,10` are closed.  This does
+not touch `c>=11`, the finite ramified H5 bank, or non-AP-centred/deep-sheet
 branches of the global `n=12` problem.
+
+`LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal
+arithmetic sharpening.  THM-668 ruler data `q<=2b`, strict `mu>1/n`, and the
+THM-759 completion inequality force
+
+```text
+mu >= 1/n + 1/(2nb),
+w <= 2nb^2/(2b+n+1),
+```
+
+hence `w<=24b^2/(2b+13)<12b` at `n=12`.  The module is sorry-free, uses no
+`native_decide`, and audits to the standard foundational trio.  It is
+deliberately conditional on the two cited bridges and is not a proof that the
+global sporadic branch is empty.
 
 The false `q<=25` proposal now has a much stronger exact guardrail.  The row
 

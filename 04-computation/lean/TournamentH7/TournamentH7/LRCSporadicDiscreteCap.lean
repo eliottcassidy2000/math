@@ -47,7 +47,8 @@ data and the completion inequality: the THM-668/759 bridges themselves are
 not formalized here, and this module does not assert the still-open global
 emptiness of the sporadic branch.
 
-The module is standalone and not added to the umbrella import.
+The module is registered in the umbrella import as a conditional arithmetic
+brick; that registration does not discharge either cited bridge.
 -/
 
 namespace LonelyRunner
@@ -128,7 +129,8 @@ theorem twelve_speed_sporadic_cap
   have h := completion_cap_of_ruler 12 b w m q (by norm_num) hb hq hqle hstrict
     (by norm_num at hcompletion ⊢; exact hcompletion)
   norm_num at h
-  convert h using 1 <;> ring
+  convert h using 1
+  all_goals ring
 
 #print axioms rational_gap_of_denominator_le_two_mul
 #print axioms completion_cap_of_gap

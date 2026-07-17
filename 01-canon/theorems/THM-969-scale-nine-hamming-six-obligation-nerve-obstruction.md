@@ -4,7 +4,7 @@ title: Scale-nine Hamming-six two-orbit obligation-nerve obstruction
 status: PROVED FINITE-EXACT — the complete 482,294,736-context primitive proper AP-centred common-scale-nine Hamming-six sheet bank is empty; exact reductions leave 64 all-order-nine signed cycles and one 12-context mixed orbit, and their owner-obligation nerves contain incompatible pairs
 source: codex-2026-07-17 scale-nine exact C++ certificate and independent Python referee
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860]
-related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, HYP-6820]
+related: [THM-862, THM-957, THM-958, THM-960, THM-962, THM-963, THM-970, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_nine_hamming_six_frontier_scout_codex_c9.cpp
   - 05-knowledge/results/lrc13_scale_nine_hamming_six_frontier_scout_codex_c9.out
@@ -327,7 +327,8 @@ c=5: every owner pair meets, but eight owner triples fail;
 c=6: K_6 minus the three antipodal edges;
 c=7: the signed cycles die earlier by the row-product character;
 c=8: K_3,3;
-c=9: 3K_2.                                                    (26)
+c=9: 3K_2;
+c=10: K_6 minus C_6 (the triangular prism).                    (26)
 ```
 
 Thus the sparse signed cycle is only the carrier.  The actual scale-dependent
@@ -378,9 +379,10 @@ each structural bank.
 
 This theorem closes only the primitive proper AP-centred common-scale-nine
 Hamming-six face under the `M(A)<=1/13` hypothesis that invokes THM-860's
-common-sheet and hereditary-lcm conclusions.  It does not close common scales
-`10<=c<=840`, arbitrary non-AP Hamming-six packets, the remaining ramified
+common-sheet and hereditary-lcm conclusions.  This theorem alone does not
+close common scales `10<=c<=840`, arbitrary non-AP Hamming-six packets, the remaining ramified
 Hamming-five bank, deep-sheet languages outside this chart, the seven-wall
 continuum-to-grid problem, the block-partition trichotomy, or global LRC(14).
 
-The next AP-centred common-scale Hamming-six frontier is `c=10`.  ∎
+THM-970 subsequently closes `c=10`.  The next AP-centred common-scale
+Hamming-six frontier is `c=11`.  ∎

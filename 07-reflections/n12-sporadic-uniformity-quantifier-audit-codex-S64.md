@@ -73,8 +73,8 @@ faces:
    theorems close AP-centred stars at stated radii/scales; they are not a
    completeness theorem saying that every sporadic packet is AP-centred.
 4. On the AP-centred proper Hamming-six common-sheet face, the exact recursions
-   and owner obstructions close scales `c=1,...,8` (THM-857/861/862,
-   THM-957/958/960/962/963).  This still leaves `c>=9`, the finite ramified H5
+   and owner obstructions close scales `c=1,...,10` (THM-857/861/862,
+   THM-957/958/960/962/963/969/970).  This still leaves `c>=11`, the finite ramified H5
    metric bank, radius-seven and higher correlated component languages,
    non-AP-centred/deep two-sheet packets, shell-five transport, dyadic/collar
    residuals, and higher sheets.
@@ -147,7 +147,8 @@ w <= 24b^2/(2b+13) < 12b.
 
 `LRCSporadicDiscreteCap.lean` formalizes the denominator-gap arithmetic, the
 abstract completion step, their natural-number ruler composition, and the
-`n=12` specialization without `sorry` or `native_decide`.  It deliberately
+`n=12` specialization without `sorry` or `native_decide`; the registered
+module audits to `propext`, `Classical.choice`, and `Quot.sound`.  It deliberately
 takes the THM-668 ruler data and THM-759 completion inequality as hypotheses;
 those semantic bridges remain outside the module.  In the 77-core regression
 bank, the coarse `w<12b` cap admits 10,813 primitive completions, while this
@@ -172,6 +173,7 @@ lossy pair shadows is the underlying object.
 | pair-sum rulers | candidate denominator and active-pair event | exact maximum evaluation when every labelled ruler and residue is retained | a tournament ranking of rulers forgets the maximizing numerator and all-runner band predicate |
 | safe components and danger combs | component--comb incidence / overlap debt | the exact completion predicate `G_P subset D_w` and labelled future action | pairwise incidence alone loses higher overlap and continuation state |
 | proof obligations / prime-power cuts | which relative-lcm cut is tighter | finite ramification and hereditary capacity failures | literal endpoint geometry and metric erosion |
+| projective residue classes | zero intersection of owner-obligation sets after a sign-section gauge | the scale-ten `C6` of incompatibilities and triangular-prism nerve | raw runner labels, literal witness identities, and higher intersection multiplicities |
 | boundary events / atomic cells | first wall crossed, owner, slack, and remaining rays | the full finite recursive predicate when all labels are retained | quotienting to an unlabelled tournament loses continuation equivalence |
 
 For any chosen pair gauge, deterministic tie-breaking supplies a Hamiltonian
@@ -184,7 +186,11 @@ recursion kills 63 and identifies the remaining cover as the ordinary AP.
 The most faithful current “tournament replacement” is therefore not a
 tournament: it is the labelled bipartite component--comb incidence
 hypergraph, decorated by rational endpoints, owner heights, sheet masks, and
-remaining legal operations.  Pair orientations are telemetry on this object.
+remaining legal operations.  At scale nine and ten a smaller faithful carrier
+emerges: the nerve of owner-obligation sets, sometimes after quotienting by
+sign to projective residue classes.  Pair orientations are telemetry on these
+objects; they become proofs only when the edge meaning—literal disjointness—is
+retained.
 
 ## 6. Next proof obligation
 
