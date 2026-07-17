@@ -1,0 +1,24 @@
+EXACT SUPPORT-TRIPLE SAWTOOTH LAW
+M({1,2,N}) = k[N mod 28] / (686*N), N > 2
+k[0..27] = (0, 25, 50, 61, 44, 55, 38, 49, 32, 43, 26, 37, 20, 24, 0, -24, -20, -37, -26, -43, -32, -49, -38, -55, -44, -61, -50, -25)
+positive residues: 1..13 mod 28
+zero residues:     0,14 mod 28
+negative residues: 15..27 mod 28
+
+COUNTEREXAMPLE FAMILY
+M({1,2,15+28m}) = -12 / (343*(15+28m)) for every m >= 0
+m=0: -4/1715
+m=1: -12/14749
+m=2: -12/24353
+
+INDEPENDENT EXACT REFEREE
+endpoint sweep == tooth formula for N=3..2000
+endpoint sweep == midpoint-cell count for every face, N=3..300
+N*M(N) == (N+28)*M(N+28) for N=3..2000
+
+TOURNAMENT / ALTERNATE-VERTEX AUDIT
+faithful quotient: signed support hypergraph + 28-residue tooth-boundary walk
+antipodal residue involution r -> 28-r negates the mass
+runner-pair observable is symmetric, so no canonical tournament exists
+score/cycle/SCC/flip/Hamiltonian fingerprints would be tie-break artifacts
+PASS
