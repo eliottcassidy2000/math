@@ -267,3 +267,5 @@ The sharpened next move is therefore narrow: build an exact triple/higher relati
 certificate for negative residue 6, then prove a uniform wall-cell remainder.  Do not
 reopen fixed pair moments, pointwise residue-one dominance, or miss-pattern reflection;
 all three shortcuts are refuted in `HYP-7024`.
+
+- **S61 lens (2026-07-17):** LEM-032 -- parity law (odd characters carry zero frame-mass; S60 mod-7 conjecture corrected), support law (cond | P/g), twisted Jordan lemma (W-hat_g(chi) = (2/g^2) L_{P/g}(2,chi): weight side = L-values at s=2, closed). Remaining factor: X-hat_g(chi) twisted coincidence sums; named open: 7-part concentration of co-resonant conductors.

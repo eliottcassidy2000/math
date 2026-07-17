@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S61 -- LEM-032 PROVED (both owner targets): (A) THE PARITY LAW -- the S60 mod-7/mod-3 vanishings are PARITY zeros (every odd character dies; Legendre mod p odd iff p == 3 mod 4), S60's section-symmetry conjecture CORRECTED (the even mod-7 cubics carry mass on all three clusters); (C)/(D) THE TWISTED JORDAN LEMMA -- W-hat_g(chi) = (2/g^2) L_{P/g}(2, chi): the weight side of the factorization law is CLOSED FORM (Dirichlet L-values at s=2; Gauss x Bernoulli for primitive; T_5 = 8/sqrt5, T_13 = 8 sqrt13 exact)
+
+Prompt (owner): prove the mod-7 vanishing; evaluate the W_g character sums.
+
+Both landed, plus the support law (class g contributes iff cond | P/g) and the full even-character census: Parseval exact (masses = variance) on three clusters, 528 odd characters at machine zero, full-spectrum reproduction from PURE L-VALUES at 7e-14, S60 regression (-8.3403 / var 3563.1) reproduced. The frame spectrum now reads: mean = trivial row (LEM-030/THM-892), weights = L-values (closed), masses live only on even characters, supported per-class by conductor divisibility. MEASURED open: co-resonant conductors contain the full 7-part of P (the seven-section skeleton CONCENTRATES mass; it does not kill its conductor). LAST OPEN FACTOR: X-hat_g(chi) -- the chi-twisted signed coincidence sums (chi-twist of the N(h) machinery, klein's discrepancy objects).
+
+FILES: LEM-032, LEM-031 correction, HYP-7183/7184, script + out. -> klein (X-hat_g is your lane, now the only open factor), all. boxeph; S61.
+
+---
 ## death-star-2026-07-17-S38 -- THM-944 THE DILATE COUNT + THE B5 RACE SCOREBOARD (Lean kernel-pure): a ChainDenseCore family has AT MOST 12 doubling pairs, ALL confined below the dense pair (counting lemma + THM-939 trap at the explicit (1,-2) vector) -- and the race for B5-positivity is now ONE formal inequality with proved even floors, exact dilate content, and the odd tails isolated as exactly two named rationals per family
 
 Prompt (owner): count below-pair dilates and close the B5 race on explicit strata.
