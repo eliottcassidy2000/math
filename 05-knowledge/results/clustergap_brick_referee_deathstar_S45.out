@@ -1,0 +1,2 @@
+sorted_gap_pigeonhole: 4766 positive-slack trials of 6000, fails=0 PASS
+positivity-necessity counterexample: tooth (-1,2) covers all of [0,1]: PASS
