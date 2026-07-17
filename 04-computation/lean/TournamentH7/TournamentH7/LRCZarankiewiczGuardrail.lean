@@ -201,11 +201,80 @@ theorem exists_small_support_relation_of_lt_40 (v : Fin 13 → ℕ)
       (Finset.mem_powersetCard.mp (show pair ∈ pairs from hpair)).2
     obtain ⟨first, second, hne, rfl⟩ := Finset.card_eq_two.mp hpairCard
     have hvaluesNe : v first ≠ v second := hinjective.ne hne
-    simp only [Finset.sum_insert, Finset.sum_singleton, Finset.mem_Icc]
+    have hpositiveFirst := hpositive first
+    have hpositiveSecond := hpositive second
+    have hsmallFirst := hsmall first
+    have hsmallSecond := hsmall second
+    change (∑ i ∈ {first, second}, v i) ∈ possibleSums
+    have hsum : (∑ i ∈ {first, second}, v i) = v first + v second := by
+      simp [hne]
+    rw [show possibleSums = Finset.Icc 2 77 by rfl, Finset.mem_Icc, hsum]
     constructor <;> omega
   obtain ⟨first, hfirst, second, hsecond, hne, heq⟩ :=
     Finset.exists_ne_map_eq_of_card_lt_of_maps_to hcard hmaps
-  exact ⟨first, hfirst, second, hsecond, hne, heq⟩
+  exact ⟨first, second, hfirst, hsecond, hne, heq⟩
+
+/-- The signed incidence difference of two unordered pairs. -/
+def pairDifference (first second : Finset (Fin 13)) (i : Fin 13) : ℤ :=
+  (if i ∈ first then 1 else 0) - (if i ∈ second then 1 else 0)
+
+theorem pairDifference_bounded (first second : Finset (Fin 13)) (i : Fin 13) :
+    -1 ≤ pairDifference first second i ∧ pairDifference first second i ≤ 1 := by
+  simp only [pairDifference]
+  split_ifs <;> norm_num
+
+theorem pairDifference_nonzero_of_ne {first second : Finset (Fin 13)}
+    (hne : first ≠ second) :
+    ∃ i, pairDifference first second i ≠ 0 := by
+  by_contra hzero
+  apply hne
+  ext i
+  have hi : pairDifference first second i = 0 :=
+    not_ne_iff.mp ((not_exists.mp hzero) i)
+  by_cases hfirst : i ∈ first <;> by_cases hsecond : i ∈ second <;>
+    simp [pairDifference, hfirst, hsecond] at hi ⊢
+
+theorem pairDifference_support_card_le_add (first second : Finset (Fin 13)) :
+    (Finset.univ.filter fun i => pairDifference first second i ≠ 0).card ≤
+      first.card + second.card := by
+  have hsubset : (Finset.univ.filter fun i => pairDifference first second i ≠ 0) ⊆
+      first ∪ second := by
+    intro i hi
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi
+    simp only [Finset.mem_union]
+    by_contra hnot
+    simp only [not_or] at hnot
+    exact hi (by simp [pairDifference, hnot.1, hnot.2])
+  exact le_trans (Finset.card_le_card hsubset) (Finset.card_union_le first second)
+
+theorem pairDifference_dot_eq_sub (v : Fin 13 → ℕ)
+    (first second : Finset (Fin 13)) :
+    ∑ i, pairDifference first second i * (v i : ℤ) =
+      (∑ i ∈ first, (v i : ℤ)) - ∑ i ∈ second, (v i : ℤ) := by
+  simp [pairDifference, sub_mul, Finset.sum_sub_distrib]
+
+/-- The tiny-scale pigeonhole collision yields the concrete THM-935 relation
+certificate: a nonzero integer relation with coefficients in `{-1, 0, 1}` and
+support at most four. -/
+theorem exists_bounded_four_relation_of_lt_40 (v : Fin 13 → ℕ)
+    (hpositive : ∀ i, 0 < v i) (hsmall : ∀ i, v i < 40)
+    (hinjective : Function.Injective v) :
+    ∃ coeff : Fin 13 → ℤ,
+      (∃ i, coeff i ≠ 0) ∧
+      (∀ i, -1 ≤ coeff i ∧ coeff i ≤ 1) ∧
+      (Finset.univ.filter fun i => coeff i ≠ 0).card ≤ 4 ∧
+      ∑ i, coeff i * (v i : ℤ) = 0 := by
+  obtain ⟨first, second, hfirst, hsecond, hne, heq⟩ :=
+    exists_small_support_relation_of_lt_40 v hpositive hsmall hinjective
+  refine ⟨pairDifference first second, pairDifference_nonzero_of_ne hne,
+    pairDifference_bounded first second, ?_, ?_⟩
+  · have hfirstCard : first.card = 2 := (Finset.mem_powersetCard.mp hfirst).2
+    have hsecondCard : second.card = 2 := (Finset.mem_powersetCard.mp hsecond).2
+    simpa [hfirstCard, hsecondCard] using pairDifference_support_card_le_add first second
+  · rw [pairDifference_dot_eq_sub]
+    have heqInt : (∑ i ∈ first, (v i : ℤ)) = ∑ i ∈ second, (v i : ℤ) := by
+      exact_mod_cast heq
+    omega
 
 /-! ## Axiom audit -/
 
@@ -218,6 +287,7 @@ theorem exists_small_support_relation_of_lt_40 (v : Fin 13 → ℕ)
 #print axioms not_pairUnique_of_26_lt_card
 #print axioms exists_shared_pair_of_26_lt_card
 #print axioms exists_small_support_relation_of_lt_40
+#print axioms exists_bounded_four_relation_of_lt_40
 
 end LRCZarankiewiczGuardrail
 end LonelyRunner
