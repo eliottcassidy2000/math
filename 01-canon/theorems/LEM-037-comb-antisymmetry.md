@@ -17,5 +17,4 @@ self-reflective).
 
 ## Evidence log
 - [x] (A)/(B) 1421 + 1421 exact; (C) 21 owners; (D) 1e-15 on four clusters
-- [ ] named: the s = 3 cross-spectrum — with σ ≡ 0, LEM-030's baseline is pure
-      (K−1/6)-torsion; measure whether s = 3 frames are systematically better
+- [x] named open RESOLVED (LEM-038, S66): pure sine section — imaginary law, Gram cross, quadruple law; cross-variance strictly smaller (once exactly 0), diagonal unchanged

@@ -1,0 +1,39 @@
+THE s = 3 CROSS-SPECTRUM -- LEM-038 referee (boxeph S66)
+==============================================================================
+PART A/B -- master reflection identity; the s = 3 imaginary law
+  [balanced] master identity (s=0,1,2 x owners x n): max err 2.5e-12; s=3 imaginary law: max |Re S_e(n)| = 1.6e-15 over 5 owners x 2940 freqs
+  [two-owner] master identity (s=0,1,2 x owners x n): max err 7.5e-13; s=3 imaginary law: max |Re S_e(n)| = 2.1e-15 over 1 owners x 1260 freqs
+  [family70] master identity (s=0,1,2 x owners x n): max err 5.5e-12; s=3 imaginary law: max |Re S_e(n)| = 9.0e-16 over 2 owners x 2940 freqs
+  [near-AP] master identity (s=0,1,2 x owners x n): max err 1.6e-11; s=3 imaginary law: max |Re S_e(n)| = 2.0e-15 over 7 owners x 17640 freqs
+
+PART C -- the quadruple law: M(3) == 0 (mod 4); pairing fixed-point-free
+  [balanced] M(3) = 20 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [two-owner] M(3) = 8 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [family70] M(3) = 4 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [near-AP] M(3) = 32 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [two-owner-dup] M(3) = 8 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [two-large] M(3) = 40 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+  [balanced-dup] M(3) = 20 == 0 mod 4: True; no endpoint at 0 or 1/2; pairing exact
+
+PART D/E -- phase-free cross; baseline collapse (means by s)
+  [balanced] s=3 phase-free (X = Gram of Im-parts; cross-terms real): max err 5.8e-15
+      baselines: s=0: mean=-3.01 (sigma^2-term=-210.55)  s=1: mean=-11.93 (sigma^2-term=-59.22)  s=2: mean=-2.38 (sigma^2-term=-32.90)  s=3: mean=-0.23 (sigma^2-term=-0.00)
+  [two-owner] s=3 phase-free (X = Gram of Im-parts; cross-terms real): max err 3.6e-15
+      baselines: s=0: mean=-5.60 (sigma^2-term=-98.70)  s=1: mean=+1.32 (sigma^2-term=-118.44)  s=2: mean=-2.67 (sigma^2-term=-13.16)  s=3: mean=+0.00 (sigma^2-term=-0.00)
+  [family70] s=3 phase-free (X = Gram of Im-parts; cross-terms real): max err 1.0e-15
+      baselines: s=0: mean=+1.46 (sigma^2-term=-177.65)  s=1: mean=-1.69 (sigma^2-term=-6.58)  s=2: mean=-0.02 (sigma^2-term=-6.58)  s=3: mean=-0.00 (sigma^2-term=-0.00)
+
+PART F -- the s=0 vs s=3 census: variance, masses, Q-frame stats
+  [balanced] s=0: M= 36 mean=   -3.01 var=   3202.7 <Q>/M=  2.83 Q/M in [0.03, 9.56]
+  [        ] s=3: M= 20 mean=   -0.23 var=   2520.4 <Q>/M=  3.13 Q/M in [0.04, 16.92]
+  [two-owner] s=0: M= 46 mean=   -5.60 var=   3563.1 <Q>/M=  3.00 Q/M in [0.04, 11.65]
+  [         ] s=3: M=  8 mean=   +0.00 var=      0.0 <Q>/M=  3.13 Q/M in [0.08, 8.20]
+  [family70] s=0: M= 42 mean=   +1.46 var=    940.1 <Q>/M=  1.95 Q/M in [0.11, 8.22]
+  [        ] s=3: M=  4 mean=   -0.00 var=     81.0 <Q>/M=  3.52 Q/M in [0.04, 9.64]
+
+PART G -- N(h) at s = 3 (signed coincidence spectrum; mod-4 scan)
+  [balanced] M=20; (h, N(P/h-classes)): (2,20), (3,20), (4,24), (5,20), (6,20), (7,20), (10,20), (12,24), (14,18), (15,20); all N == M mod 2: True; all N == 0 mod 4: False
+  [two-owner] M=8; (h, N(P/h-classes)): (2,8), (3,8), (4,8), (5,8), (6,6), (7,8), (9,4), (10,8), (12,6), (14,4); all N == M mod 2: True; all N == 0 mod 4: False
+  [family70] M=4; (h, N(P/h-classes)): (2,4), (3,4), (4,4), (5,4), (6,4), (7,2), (10,4), (12,4), (14,2), (15,4); all N == M mod 2: True; all N == 0 mod 4: False
+==============================================================================
+done

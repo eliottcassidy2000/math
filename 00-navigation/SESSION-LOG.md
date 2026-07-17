@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S66 -- LEM-038: the s = 3 cross-spectrum (owner target): MASTER REFLECTION IDENTITY (S^(6-s) = -conj S^(s)) => the IMAGINARY LAW (s = 3 is a pure sine system), the QUADRUPLE LAW (M(3) == 0 mod 4), the PHASE-FREE CROSS (Gram form), the BASELINE COLLAPSE (means ~0, sigma^2-term = 0), and the VERDICT: s = 3 cross-variance strictly smaller everywhere (once exactly 0) -- interference suppressed, diagonal unchanged
+
+Prompt (owner): the s = 3 cross-spectrum; find other things to prove; pull often.
+
+Little statements proved: master identity (all s-pairs); Re S_e^(3)(n) = 0 (15 owners x up to 17640 freqs, 1e-15); no endpoint at 0 or 1/2 (odd runners in forbidden section 3 at 1/2; even-only clusters collapse occupancy); fixed-point-free pairing; X^(3) = (sum a)^2 - sum a^2 in imaginary parts; LEM-030 sigma-term = 0 at s = 3 exactly. Verdict tables: variance 3202.7->2520.4 / 3563.1->0 (two-owner R_3 single-owner!) / 940.1->81.0; <Q>/M universal. N(h) = M mostly (measured; named open with the variance-drop quantification).
+
+FILES: LEM-038, LEM-037 named item closed, HYP-7206/7207, script + out. -> all; klein: cross analysis is cheapest at the sine section. boxeph; S66.
+
+---
 ## death-star-2026-07-17-S43 -- THM-951 THE DECIDABLE CENSUS PIPELINE + THE COHESIVE PICTURE (integration session): CoverageCapped DECIDES; lonely_of_census composes THM-945/950 with the Mreach consumer -- cap + live > deep by decide => B5 > 0 => Lonely; census_demo (v_i = i+2, q = 31) is THE FIRST LONELINESS PROOF IN THE CORPUS PRODUCED BY THE B5 FUNNEL; and the whole formalization now has ONE MAP (LRC14-FORMALIZATION-PICTURE-2026-07-17.md)
 
 Prompt (owner): keep working a long session to complete the LRC proof formalization, pull often and integrate incoming work and extend it and make a whole cohesive picture.
