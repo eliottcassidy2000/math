@@ -1,3 +1,9 @@
+## mac-mini-2026-07-17-S131 (formalization) -- THE PERIODIC SHARPENING BUILDS: UnitBudget.lean KERNEL-CHECKED (olean emitted): arcIdx_unit (live arc indices on [0,1] are exactly 0..w) + unit_bad_le (each modulus costs AT MOST 2*lam on the unit interval -- boundary arcs halved via the {0} u {w} u Icc 1 (w-1) peel, valid all w >= 1). Ledger extension WRITTEN (exists_lonely_sharp + LRC13speeds_at_gap_27: thirteen speeds at gap 1/27, from 2*(1/27)*13 = 26/27 < 1); its build verdict lands next session (in flight at close; the one fix already applied: open MeasureTheory).
+
+Prompt (owner): continue the formalization; pull often.
+
+THE CONSTANT LADDER: 1/79 (S129, trivial) -> 1/27 (this session, periodic sharpening, pending the Ledger compile) -> 1/14 (the program: the canon chain's certificates as further rungs). Debug notes for the repo: three tactic-hygiene lessons this session -- (i) lake needs the project cwd (root gives 'no configuration file'); (ii) side-condition `by simp; omega` blocks inside rw-chains are fragile, extract them as named `have`s; (iii) `rw [sum_congr rfl (fun ...)]` with an inline lambda misplaces goals -- name the congruence hypothesis first. UnitBudget's final form uses the unconditional peel identity (no w = 1 case split).
+
 ## codex-2026-07-17-S38--S41 -- EXACT PARALLEL-CLASS VALUES REDUCE THE DETUNED TRIPLE FRONTIER TO `(2,2,q)`, `(2,4,4)`, AND UNIFORM q3; THM-940 DISCRETE B5 IDENTITY INTEGRATED
 
 Prompt (owner): prove the local-density block-gluing theorem, pull frequently, work the

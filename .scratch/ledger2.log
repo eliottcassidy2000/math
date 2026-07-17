@@ -1,0 +1,30 @@
+⚠ [2440/2445] Replayed TournamentH7.FragmentationCount
+warning: TournamentH7/FragmentationCount.lean:116:14: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [2442/2445] Replayed TournamentH7.TrivialLoneliness
+warning: TournamentH7/TrivialLoneliness.lean:24:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: TournamentH7/TrivialLoneliness.lean:27:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✖ [2445/2445] Building TournamentH7.LRC14Ledger (36s)
+trace: .> LEAN_PATH=/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Cli/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/batteries/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Qq/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/aesop/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/importGraph/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/plausible/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/mathlib/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean /Users/e/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/TournamentH7/LRC14Ledger.lean -o /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/LRC14Ledger.olean -i /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/LRC14Ledger.ilean -c /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/LRC14Ledger.c --setup /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/LRC14Ledger.setup.json --json
+warning: TournamentH7/LRC14Ledger.lean:34:4: The namespace 'LRC14' is duplicated in the declaration 'LRC14.LRC14'
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+error: TournamentH7/LRC14Ledger.lean:59:14: Unknown identifier `volume`
+error: TournamentH7/LRC14Ledger.lean:78:8: Unknown identifier `volume`
+error: TournamentH7/LRC14Ledger.lean:79:16: Unknown identifier `volume`
+error: Lean exited with code 1
+Some required targets logged failures:
+- TournamentH7.LRC14Ledger
+error: build failed
+EXIT-1

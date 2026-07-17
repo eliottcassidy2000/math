@@ -1,0 +1,79 @@
+⚠ [2440/2443] Replayed TournamentH7.FragmentationCount
+warning: TournamentH7/FragmentationCount.lean:116:14: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [2442/2443] Replayed TournamentH7.TrivialLoneliness
+warning: TournamentH7/TrivialLoneliness.lean:24:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: TournamentH7/TrivialLoneliness.lean:27:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✖ [2443/2443] Building TournamentH7.UnitBudget (27s)
+trace: .> LEAN_PATH=/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Cli/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/batteries/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Qq/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/aesop/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/importGraph/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/plausible/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/mathlib/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean /Users/e/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/TournamentH7/UnitBudget.lean -o /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/UnitBudget.olean -i /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/UnitBudget.ilean -c /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/UnitBudget.c --setup /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/UnitBudget.setup.json --json
+error: TournamentH7/UnitBudget.lean:20:8: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.56` is a value of type
+  ?m.55
+error: TournamentH7/UnitBudget.lean:27:8: Function expected at
+  Int.floor_eq_iff
+but this term has type
+  ⌊?m.90⌋ = ?m.89 ↔ ↑?m.89 ≤ ?m.90 ∧ ?m.90 < ↑?m.89 + 1
+
+Note: Expected a function because this term is being applied to the argument
+  (by positivity)
+error: TournamentH7/UnitBudget.lean:20:8: Function expected at
+  Int.ceil_eq_iff
+but this term has type
+  ⌈?m.98⌉ = ?m.97 ↔ ↑?m.97 - 1 < ?m.98 ∧ ?m.98 ≤ ↑?m.97
+
+Note: Expected a function because this term is being applied to the argument
+  (by norm_num : (0 : ℤ) ≠ 0 ∨ True)
+error: TournamentH7/UnitBudget.lean:68:11: invalid 'calc' step, left-hand side is
+  volume (Ioo (0 / ↑w - c) (0 / ↑w + c) ∩ Icc 0 1) : ENNReal
+but is expected to be
+  volume (Ioo (↑0 / ↑w - c) (↑0 / ↑w + c) ∩ Icc 0 1) : ENNReal
+error: TournamentH7/UnitBudget.lean:71:6: unsolved goals
+case pos.calc.step
+w : ℕ
+hw : 0 < w
+lam : ℝ
+hlam : 0 < lam
+hlam1 : lam < 1
+hwR : 0 < ↑w
+c : ℝ := lam / ↑w
+hc : c = lam / ↑w
+hcpos : 0 < c
+hsub : badSet w lam ∩ Icc 0 1 ⊆ ⋃ a ∈ Finset.Icc 0 ↑w, Ioo (↑a / ↑w - c) (↑a / ↑w + c) ∩ Icc 0 1
+ha : ↑w ∈ Finset.Icc 0 ↑w
+h0 : ¬↑w = 0
+hdiv : ↑↑w / ↑w = 1
+this : Ioo (↑↑w / ↑w - c) (↑↑w / ↑w + c) ∩ Icc 0 1 ⊆ Ioc (1 - c) 1
+⊢ ENNReal.ofReal c ≤ ENNReal.ofReal (if ↑w = 0 ∨ True then c else 2 * c)
+error: TournamentH7/UnitBudget.lean:87:8: `simp` made no progress
+error: TournamentH7/UnitBudget.lean:103:13: Unknown constant `Nat.eq_or_gt_of_le`
+error: TournamentH7/UnitBudget.lean:103:40: Tactic `rcases` failed: `x✝ : ?m.764` is not an inductive datatype
+error: TournamentH7/UnitBudget.lean:143:45: No goals to be solved
+warning: TournamentH7/UnitBudget.lean:58:17: This simp argument is unused:
+  if_pos (Or.inl rfl)
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵i̵f̵_̵p̵o̵s̵ ̵(̵O̵r̵.̵i̵n̵l̵ ̵r̵f̵l̵)̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TournamentH7/UnitBudget.lean:72:19: This simp argument is unused:
+  if_pos (Or.inr rfl)
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵i̵f̵_̵p̵o̵s̵ ̵(̵O̵r̵.̵i̵n̵r̵ ̵r̵f̵l̵)̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- TournamentH7.UnitBudget
+error: build failed
+UB-BUILD-EXIT: 1

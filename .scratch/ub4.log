@@ -1,0 +1,20 @@
+⚠ [2440/2443] Replayed TournamentH7.FragmentationCount
+warning: TournamentH7/FragmentationCount.lean:116:14: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [2442/2443] Replayed TournamentH7.TrivialLoneliness
+warning: TournamentH7/TrivialLoneliness.lean:24:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: TournamentH7/TrivialLoneliness.lean:27:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2443/2443] Built TournamentH7.UnitBudget (35s)
+Build completed successfully (2443 jobs).
+EXIT-0

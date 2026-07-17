@@ -1,0 +1,46 @@
+⚠ [2440/2443] Replayed TournamentH7.FragmentationCount
+warning: TournamentH7/FragmentationCount.lean:116:14: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+⚠ [2442/2443] Replayed TournamentH7.TrivialLoneliness
+warning: TournamentH7/TrivialLoneliness.lean:24:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: TournamentH7/TrivialLoneliness.lean:27:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✖ [2443/2443] Building TournamentH7.UnitBudget (58s)
+trace: .> LEAN_PATH=/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Cli/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/batteries/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/Qq/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/aesop/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/importGraph/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/plausible/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/packages/mathlib/.lake/build/lib/lean:/Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean /Users/e/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/TournamentH7/UnitBudget.lean -o /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/UnitBudget.olean -i /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/lib/lean/TournamentH7/UnitBudget.ilean -c /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/UnitBudget.c --setup /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/.lake/build/ir/TournamentH7/UnitBudget.setup.json --json
+error: TournamentH7/UnitBudget.lean:102:12: No goals to be solved
+error: TournamentH7/UnitBudget.lean:103:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ _x ∈ ?m.939, ?b
+in the target expression
+  (∑ a ∈ Finset.Icc 1 (↑w - 1), if a = 0 ∨ a = ↑w then c else 2 * c) = (↑w - 1) * (2 * c)
+
+w : ℕ
+hw : 0 < w
+lam : ℝ
+hlam : 0 < lam
+hlam1 : lam < 1
+hwR : 0 < ↑w
+hw1 : 1 ≤ ↑w
+c : ℝ := lam / ↑w
+hc : c = lam / ↑w
+hcpos : 0 < c
+hsub : badSet w lam ∩ Icc 0 1 ⊆ ⋃ a ∈ Finset.Icc 0 ↑w, Ioo (↑a / ↑w - c) (↑a / ↑w + c) ∩ Icc 0 1
+hbound :
+  ∀ a ∈ Finset.Icc 0 ↑w,
+    volume (Ioo (↑a / ↑w - c) (↑a / ↑w + c) ∩ Icc 0 1) ≤ ENNReal.ofReal (if a = 0 ∨ a = ↑w then c else 2 * c)
+hpeel : Finset.Icc 0 ↑w = insert 0 (insert (↑w) (Finset.Icc 1 (↑w - 1)))
+⊢ (∑ a ∈ Finset.Icc 1 (↑w - 1), if a = 0 ∨ a = ↑w then c else 2 * c) = (↑w - 1) * (2 * c)
+error: Lean exited with code 1
+Some required targets logged failures:
+- TournamentH7.UnitBudget
+error: build failed
+EXIT-1

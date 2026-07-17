@@ -22,8 +22,9 @@ import TournamentH7.FragmentationCount
 import TournamentH7.KillerBudget
 import TournamentH7.TrivialLoneliness
 import TournamentH7.TieSplitWalk
+import TournamentH7.UnitBudget
 
-open Set
+open MeasureTheory Set
 
 namespace LRC14
 
@@ -42,6 +43,72 @@ theorem LRC13speeds_at_trivial_gap :
       ∃ t ∈ Icc (0 : ℝ) 1, ∀ w ∈ W, ∀ a : ℤ, (1 : ℝ)/79 ≤ |(w : ℝ) * t - a| := by
   intro W hW hcard
   refine trivial_LRC W hW (1/79) (by norm_num) (by norm_num) ?_
+  rw [hcard]
+  norm_num
+
+end LRC14
+
+namespace LRC14
+
+/-- **The sharpened existence theorem** (uses the periodic unit budget: each speed
+    costs exactly `2*lam` on `[0,1]`): total budget `2*lam*|W| < 1` suffices. -/
+theorem exists_lonely_sharp (W : Finset ℕ) (hW : ∀ w ∈ W, 0 < w) (lam : ℝ)
+    (hlam : 0 < lam) (hlam1 : lam < 1) (hsmall : 2 * lam * W.card < 1) :
+    ∃ t ∈ Icc (0 : ℝ) 1, ∀ w ∈ W, ∀ a : ℤ, lam ≤ |(w : ℝ) * t - a| := by
+  classical
+  have hbad : volume ((⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1)
+      ≤ ENNReal.ofReal (2 * lam * W.card) := by
+    have hdistrib : (⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1
+        = ⋃ w ∈ W, (badSet w lam ∩ Icc (0 : ℝ) 1) := by
+      ext t
+      simp only [Set.mem_inter_iff, Set.mem_iUnion, exists_prop]
+      tauto
+    rw [hdistrib]
+    calc volume (⋃ w ∈ W, (badSet w lam ∩ Icc (0 : ℝ) 1))
+        ≤ ∑ w ∈ W, volume (badSet w lam ∩ Icc (0 : ℝ) 1) :=
+          MeasureTheory.measure_biUnion_finset_le _ _
+      _ ≤ ∑ _w ∈ W, ENNReal.ofReal (2 * lam) :=
+          Finset.sum_le_sum fun w hw => unit_bad_le w (hW w hw) lam hlam hlam1
+      _ = ENNReal.ofReal (2 * lam * W.card) := by
+          rw [Finset.sum_const, nsmul_eq_mul, ← ENNReal.ofReal_natCast (W.card),
+              ← ENNReal.ofReal_mul (Nat.cast_nonneg W.card)]
+          congr 1
+          ring
+  have hgood : (0 : ENNReal)
+      < volume (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam) := by
+    have hvol : volume (Icc (0 : ℝ) 1) = ENNReal.ofReal 1 := by
+      rw [Real.volume_Icc]
+      norm_num
+    have hcover : Icc (0 : ℝ) 1
+        ⊆ (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam)
+          ∪ ((⋃ w ∈ W, badSet w lam) ∩ Icc (0 : ℝ) 1) := by
+      intro t ht
+      by_cases hb : t ∈ ⋃ w ∈ W, badSet w lam
+      · exact Or.inr ⟨hb, ht⟩
+      · exact Or.inl ⟨ht, hb⟩
+    have hsplit := le_trans (MeasureTheory.measure_mono hcover)
+      (MeasureTheory.measure_union_le _ _)
+    rw [hvol] at hsplit
+    have hlt : ENNReal.ofReal (2 * lam * W.card) < ENNReal.ofReal 1 :=
+      (ENNReal.ofReal_lt_ofReal_iff one_pos).mpr hsmall
+    by_contra hzero
+    push_neg at hzero
+    have h0 : volume (Icc (0 : ℝ) 1 \ ⋃ w ∈ W, badSet w lam) = 0 :=
+      le_antisymm hzero (zero_le _)
+    rw [h0, zero_add] at hsplit
+    exact absurd (le_trans hsplit hbad) (not_le.mpr hlt)
+  rcases MeasureTheory.nonempty_of_measure_ne_zero (ne_of_gt hgood) with ⟨t, htIcc, htBad⟩
+  refine ⟨t, htIcc, fun w hw a => ?_⟩
+  have hnot : t ∉ badSet w lam := fun hmem => htBad (Set.mem_biUnion hw hmem)
+  exact dist_int_ge w (hW w hw) lam hlam t hnot a
+
+/-- **Thirteen speeds at gap 1/27** — the ladder's sharpened unconditional instance
+    (2·(1/27)·13 = 26/27 < 1). The remaining program: 1/27 → 1/14 along the canon chain. -/
+theorem LRC13speeds_at_gap_27 :
+    ∀ W : Finset ℕ, (∀ w ∈ W, 0 < w) → W.card = 13 →
+      ∃ t ∈ Icc (0 : ℝ) 1, ∀ w ∈ W, ∀ a : ℤ, (1 : ℝ)/27 ≤ |(w : ℝ) * t - a| := by
+  intro W hW hcard
+  refine exists_lonely_sharp W hW (1/27) (by norm_num) (by norm_num) ?_
   rw [hcard]
   norm_num
 
