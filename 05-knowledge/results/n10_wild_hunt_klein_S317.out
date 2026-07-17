@@ -1,5 +1,21 @@
-[     9.6s] n=7 classes: 456
-[    16.0s] n=8 panels done
-[    23.2s] n=8 classes: 6880
-[     23.3s] building n=9 reps (panel buckets + canon)...
-[    108.4s] n=9 panel buckets: 191478
+[     6.2s] n=7 classes: 456
+[     9.8s] n=8 panels done
+[    14.0s] n=8 classes: 6880
+[     14.1s] building n=9 reps (panel buckets + canon)...
+[     62.5s] n=9 panel buckets: 191478
+[    208.3s] n=9 classes: 191536
+[    210.8s] chunk 1/1497
+[    270.3s] chunk 26/1497
+[    329.4s] chunk 51/1497
+[    387.5s] chunk 76/1497
+[    445.9s] chunk 101/1497
+[    503.3s] chunk 126/1497
+[    561.9s] chunk 151/1497
+[    619.5s] chunk 176/1497
+[    676.6s] chunk 201/1497
+[    733.1s] chunk 226/1497
+[    789.6s] chunk 251/1497
+[    846.1s] chunk 276/1497
+[    902.4s] chunk 301/1497
+[    958.8s] chunk 326/1497
+[   1015.3s] chunk 351/1497

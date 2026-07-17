@@ -6,6 +6,11 @@ kernel-pure candidates; the pipeline is warm (klein's sorry-free Kendall formula
 1. **THM-882 per-cell solves** — 12 rational linear systems (Farey-12 cells, i+j = 13);
    data: lrc14_flat_2x_law_boxeph_S23.py Part 2. Shape: Fraction arithmetic + interval
    equality; decide.
+   **STATUS: DONE (klein-S318)** — `TournamentH7.Thm882Cells`: all 12 cells as `cellOK`
+   certificates (adjacency gap, good-window endpoints/length 1/(14ij), flat length,
+   containment chain L ≤ flo ≤ gl ≤ gh ≤ fhi ≤ R) + the global masses
+   m(F) = 6617/97020 = 2·m(G). norm_num per cell (ℚ `decide` stalls — known Rat gotcha).
+   Root-wired.
 2. **THM-878 D(q) cases** — the q ∈ {7,13,14} flat classes + per-chamber minima; data:
    vgrid_clockD script. Shape: finite exact case list.
    **STATUS: DONE (klein-S317)** — `TournamentH7.Thm878ClockTable`: clockSum q = 6·q·φ(q)
