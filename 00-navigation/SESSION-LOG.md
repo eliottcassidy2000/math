@@ -621,6 +621,23 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S108 -- THE M-SPLIT + THE COMPLETE KERNEL-CHECKED REDUCTION OF LRC(14) TO A SINGLE INVERSE THEOREM
+
+Owner: formalize the M-split separating M>=1/14 from M<1/13. Done -- and it COMPLETES the assembly.
+LRCMSplit.lean, 4 theorems (namespace LonelyRunner), all [propext, Classical.choice, Quot.sound] --
+no sorry/axiom; built (8480 jobs), registered in root.
+KEY IDEA: M(V)<1/n <=> NOT exists t Lonely n V t, so M never needs to be a sup; the split is Classical
+by_cases on (exists t Lonely 14) + band-shrink (Lonely 13 => Lonely 14).
+- M_split: (not-exists-Lonely13 => exists-Lonely14) => exists-Lonely14 (4 lines).
+- crux_of_dominance: INV(M<1/13=>rho>=13) + ap_core_bridge => the crux.
+- LRC14_of_INV (CAPSTONE): forall v pos, (INV: not-exists-Lonely13 => rho>=13 dominance) => exists t
+  Lonely 14. LRC(14) <= LRC(<=13)[cited] + INV[open], KERNEL-CHECKED. Non-covering absorbed free.
+PROGRAM COMPLETE (S105-S108): LRC(14) reduces to ONE open theorem in the kernel -- ap_core_bridge (S105) +
+sieve_dispatch (S106) + density_far_extension (S107) + M_split (S108) => LRC14_of_INV. Only INV (=Tao n=12,
+open) remains. The elementary formalization of LRC(14) is ASSEMBLED END-TO-END; what LRC(14) rests on is
+now a single Lean theorem with one named open hypothesis. Crux still open.
+FILES: reflection the-M-split-and-the-complete-kernel-checked-reduction-of-lrc14-to-INV-boxeph-S108, LRCMSplit.lean, HYP-7615. boxeph; S108.
+
 ## boxeph-2026-07-18-S107 -- THE DENSITY-ROUTE DISCHARGE (separated far element) IS NOW KERNEL-PURE LEAN
 
 Owner: formalize the density-route discharge. Delivered LRCDensityDischarge.lean, 3 theorems
