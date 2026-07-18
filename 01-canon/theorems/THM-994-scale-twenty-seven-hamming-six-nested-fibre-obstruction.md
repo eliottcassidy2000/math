@@ -1,19 +1,20 @@
 ---
-id: THM-993
+id: THM-994
 title: Scale-twenty-seven Hamming-six nested-fibre obstruction
-status: CLAIMED + FROZEN PRIMARY — a complete deterministic primary checks all 351,592,862,544 labelled state contexts through exact weighted grammar, reduces to 450 scalar rows, and gives a terminal two-stage Z/3 then Z/9 fibre relaxation; normal/optimized Python is byte-stable, while independent replay remains pending
+status: PROVED STRUCTURAL + REFEREED FINITE-EXACT — a complete deterministic nested-fibre certificate checks all 351,592,862,544 labelled state contexts, and its independently developed exact DP agrees with THM-993's standard-library primary on every headline census
 source: codex-2026-07-17-S66 scale-twenty-seven continuation
-depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992]
+depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992, THM-993]
 related: [THM-963, THM-969, THM-981, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.py
   - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.out
 ---
 
-# THM-993 — scale twenty-seven has a terminal nested-fibre deficit
+# THM-994 — scale twenty-seven has a terminal nested-fibre deficit
 
-The primitive proper AP-centred common-scale-27 Hamming-six face is empty,
-subject to independent replay of the frozen primary.
+The primitive proper AP-centred common-scale-27 Hamming-six face is empty.
+This theorem gives the structural nested-fibre proof and independently replays
+THM-993's exact finite bank.
 
 For `c=27`, the effective orders are `1,3,9,27`, with literal unit counts
 `1,2,6,18`.  Hereditary leave-one-out lcm is equivalent to at least two
@@ -188,20 +189,27 @@ This nested `Z/27 -> Z/9 -> Z/3` carrier is the exact 3-adic
 toothpick/Kakeya self-similarity: order-three masks are nine-sheet fibres,
 order-nine masks are three-sheet fibres, and order-27 masks are point needles.
 
-## Frozen primary
+## Independent structural replay
 
-The primary reconstructs CRT bases algebraically and by literal search,
+The nested-fibre certificate reconstructs CRT bases algebraically and by literal search,
 checks mask periodicity and the closed scalar formulas, scans every labelled
 order context, evaluates every structural owner bound, and hashes every sorted
 reachable-mask bank.  Normal and `python -O` executions reproduce the frozen
 45-line output byte-for-byte.  Frozen SHA-256 values are
 
 ```text
-Python primary source  d6bc42ac3f2d9609e37df0e11bfbc1eba7ffd6eabf1dd931c801c1a94fd959e1
-Python primary output  0b1fc1b19dbbf8ea2e8295a1d3fb19f50144ee9cdf4b1fb6f980230bdfcfe294
+Python referee source  d6bc42ac3f2d9609e37df0e11bfbc1eba7ffd6eabf1dd931c801c1a94fd959e1
+Python referee output  0b1fc1b19dbbf8ea2e8295a1d3fb19f50144ee9cdf4b1fb6f980230bdfcfe294
 ```
 
-Independent reconstruction is still required before promotion from claimed
-to proved.  This theorem does not address H5 ramification, non-AP/deep sheets,
-or global sporadic emptiness.  The next legal untreated AP-centred common scale
-is `c=28`; scale 29 is already prime-excluded by THM-983.
+THM-993's independently developed standard-library implementation uses nested
+Python loops, a differently ordered literal-mask stream, and owner-summary
+checksums.  It produces the same scalar digest, all 450 rows, all multiplicity
+and owner-maximum histograms, all 51 bank-size bins, the same feasible-owner
+census, and the same 13,598,160 reachable-mask incidence total.  The two
+certificate streams therefore promote the finite result, while inequality
+(1) supplies a theorem-bearing explanation not present in the literal DP.
+
+This theorem does not address H5 ramification, non-AP/deep sheets, or global
+sporadic emptiness.  The next legal untreated AP-centred common scale is
+`c=28`; scale 29 is already prime-excluded by THM-983.

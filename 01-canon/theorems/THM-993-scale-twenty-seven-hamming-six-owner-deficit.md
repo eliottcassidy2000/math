@@ -1,13 +1,15 @@
 ---
 id: THM-993
 title: Scale-twenty-seven Hamming-six owner-feasibility deficit
-status: CLAIMED + FROZEN PRIMARY — all 450 scalar survivors have at most four owner-local feasible projections; an independently structured replay is still required
+status: PROVED FINITE-EXACT + INDEPENDENT STRUCTURAL REPLAY — all 450 scalar survivors have at most four owner-local feasible projections; a standard-library primary and an independently developed NumPy-batched nested-fibre certificate agree on the scalar bank and every exact headline census
 source: codex-2026-07-17-S66 scale-twenty-seven continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992]
-related: [THM-978, THM-980, THM-981, HYP-6820]
+related: [THM-978, THM-980, THM-981, THM-994, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_seven_hamming_six_owner_deficit_codex_c27.py
   - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_owner_deficit_codex_c27.out
+  - 04-computation/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.py
+  - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.out
 ---
 
 # THM-993 — scale twenty-seven has at least two impossible owners
@@ -95,12 +97,20 @@ owner summaries         6471aa37d9a0d6a630a830d36865d1449c7d7361d068041a60e74824
 mod-3/mod-9 signatures  e7e460b659cc589e88a47bf40149d3ffbe8e50cfdc004187ae5cc32e2fb63073
 ```
 
-The source is standard-library only.  It audits algebraic CRT representatives
+The primary source is standard-library only.  It audits algebraic CRT representatives
 against literal search, the prime-power hereditary grammar against all six
 leave-one-out lcms, mask sizes against an independent period count, and full
-coverage against maximum union.  Promotion requires an independently
-structured replay and, preferably, a conceptual classification of the 18
-four-feasible rows.
+coverage against maximum union.  THM-994 supplies the independently developed
+replay: it batches the scalar bank through NumPy rather than nested Python
+loops, hashes every sorted reachable mask rather than only owner summaries,
+and separately proves a sound nested-fibre upper relaxation.  The two programs
+agree on the exact scalar digest
+`141ec6d8c551c2e0ebac31dc102d3f38ad257be268dfe24403835afa7613dc05`,
+all seven multiplicity counts, all 450 labelled rows, the 2,700 owner maxima,
+the feasible-owner census `0:336,1:96,4:18`, all 51 bank-size bins, and the
+13,598,160 reachable-mask incidence total.  This promotes the finite-exact
+claim; a short conceptual classification of the 18 four-feasible rows remains
+desirable but is not needed for terminal emptiness.
 
 ## Tournament and alternate carriers
 
@@ -130,5 +140,4 @@ transitive owner tournament.
 
 This claim does not cover H5 ramification, non-AP-centred or deep-sheet
 packets, lift-dependent shell-five certificates, or global sporadic
-emptiness.  After independent promotion, the next numerically possible
-primitive common scale is 28.
+emptiness.  The next numerically possible primitive common scale is 28.

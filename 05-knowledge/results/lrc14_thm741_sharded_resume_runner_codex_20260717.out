@@ -1,0 +1,8 @@
+THM-741 SHARDED RESUME RUNNER SELF-TEST
+kernel_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+bodies=2002; deterministic lex-index partition; shard counts differ by at most one
+partition audit n=1..16: disjoint, exhaustive, balanced; worker picklable
+state audit: identical duplicate coalesced; conflict rejected; partial line rejected
+six-shard sizes=334,334,334,334,333,333
+source_sha256=afa80109bdb31e51ab22ded5d279e05a87768d022de43ee32ccd3b0d35cdcdfb
+ALL SHARD ORCHESTRATION CHECKS PASSED

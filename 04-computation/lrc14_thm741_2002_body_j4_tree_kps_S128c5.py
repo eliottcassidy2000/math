@@ -46,12 +46,6 @@ ONE = F(1)
 S2 = F(99, 70)                      # > sqrt2
 SCRATCH = r"C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-math\f631d0eb-9f23-494b-bb86-e0501bc456e9\scratchpad"
 STATE = os.path.join(SCRATCH, "thm741_results.jsonl")
-WORKER_ID = int(os.environ.get("THM741_WORKER", "-1"))
-NUM_WORKERS = int(os.environ.get("THM741_NWORKERS", "1"))
-if WORKER_ID >= 0:
-    STATE_OUT = os.path.join(SCRATCH, "thm741_results.shard%d.jsonl" % WORKER_ID)
-else:
-    STATE_OUT = STATE
 REPO = r"C:\Users\Eliott\Documents\GitHub\math"
 OUT = os.path.join(REPO, "05-knowledge", "results", "lrc14_thm741_2002_body_j4_tree_kps_S128c5.out")
 
@@ -299,17 +293,7 @@ def main():
                     done.add(tuple(json.loads(line)["E"]))
                 except Exception:
                     pass
-    import glob as _glob
-for _sh in _glob.glob(os.path.join(SCRATCH, "thm741_results.shard*.jsonl")):
-    try:
-        for _l in open(_sh):
-            if _l.strip():
-                try: done.add(tuple(json.loads(_l)["E"]))
-                except Exception: pass
-    except Exception: pass
-bodies = [E for E in combinations(range(1, 15), 9) if E not in done]
-if WORKER_ID >= 0:
-    bodies = [E for E in bodies if (hash(E) % NUM_WORKERS) == WORKER_ID]
+    bodies = [E for E in combinations(range(1, 15), 9) if E not in done]
     # LIGHT-FIRST (revised cont.8): the 21 flood bodies (Q empty) proved to be >8h EACH at j=4
     # (heavy-first starved the resume file across three run deaths). Non-flood bodies first
     # (V1 ascending) so completions accrue; floods last, over however many sessions they need.

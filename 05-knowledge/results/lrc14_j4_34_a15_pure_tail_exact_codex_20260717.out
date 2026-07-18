@@ -1,0 +1,22 @@
+THM-741 PURE (3,4) FLOOD TAIL: EXACT a=15 BRANCH CERTIFICATE
+============================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); fixed a=15; claim all integers 15<b<c<d
+root r=28 m=433607/2522520; after-a r=26 m=184909/1261260; common b cutoff V2=189
+b obligations=173; c nodes=11177; P2-preclosed c=2849; exact-m3=8328
+exact-m3 closed without d=7166; fallback=0; candidate c nodes/sweeps=1162/17198
+all terminal sweeps positive; minimum swept=32953849/624660036 at (3, 4, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 23)
+terminal-ledger SHA256=3594fb4a07d9ee79780f7c99cf4cf2427b0a921282f8c2c19249c46c339602b2
+certificate-ledger SHA256=2ce412ad92743b74400e3e4cba57dfb1c1c75a3dc4b919a998d762df050f180a
+independent full-union samples=177; sample-manifest SHA256=623f110f3f6a0f26b275cfe2097e80d01cb11705008228e70ec2734d9c02f4cc
+proof partition: b>=V2 by THM-735 J3; large c by monotone P2/fixed-E2; large d by exact fixed-E2 cap; every remaining d swept
+Tournament Analysis vertices=active b proof obligations; observable=(minimum swept clearance,-sweeps,-b); lex switch; no ties
+tournament vertices=61; score histogram 0..60:1; directed triangles=0; SCCs=61; Hamiltonian paths=1
+tournament path SHA256=ed5c0ab87fa176b82830ac3ed893c5c5529cbe35921b49f19ef078eb6597e621
+preserved carrier: b obligations plus nested survivor components, certificate type, rational caps, and exact terminal margins
+destroyed quotient: the tournament loses interval geometry; runners, isolated combs, residues, wall events, and Fano flags lose shared-survivor incidence
+Fano/chi7 audit: (3,4) is one edge address only; no nonidentity Fano transport is used
+Kakeya audit: D_w is a translated periodic one-dimensional needle comb; adaptive component incidence, not dimension, is the proof-bearing statistic
+VERDICT: E_(3,4) union {15,b,c,d} is lonely for every 15<b<c<d; the other a branches and global THM-741 remain open
+source_sha256=0d63edea45a523ddd71494e02d4500fe9725cf4e424d11a3a70d9dd6e2a9f0fc
+ALL EXACT BRANCH CHECKS PASSED

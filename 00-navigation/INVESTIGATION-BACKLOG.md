@@ -1175,9 +1175,14 @@ Also named: the slice-interior Parseval (THM-888(C)) and the CRT compound-hit re
   quotient.  The next direct completed-family vertices are the 18 pure
   two-small/root-edge tails.  For the recommended `(3,4)` body, the proved
   ancestor-carrier/P2 envelope lowers the root cutoff `308->291` and removes
-  99,957 of 244,652 bounded-window `c` nodes before constructing `G3`; extend
-  that exact screen into the remaining `c,d` recursion or continue the direct
-  body runner.
+  99,957 of 244,652 bounded-window `c` nodes before constructing `G3`.  The
+  complete first literal-carrier branch `a=15` is now exact: 17,198 terminal
+  sweeps are positive, with minimum swept clearance
+  `32953849/624660036`; after the root and exact-measure screens, `212`
+  literal-`G1` branches remain.  Continue branchwise with the same nested
+  component carrier or resume the repaired sharded body runner.  Fano/`chi_7`
+  remains an address atlas, while the proof-bearing Kakeya object is adaptive
+  comb/component incidence with phase and rational caps.
 - **Tournament mapping:** vertices are quotient carriers or signed endpoint events, not raw runners;
   phase orientation needs the exact `sigma_e sigma_f B2({v(x_f-x_e)})` sidecar.  See the S1 reflection
   and `lrc14_band_scale_quotient_codex_S1.py/.out`.

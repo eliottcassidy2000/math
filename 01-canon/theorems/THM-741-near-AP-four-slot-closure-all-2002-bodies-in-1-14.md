@@ -1,8 +1,8 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  Upgrades globally to PROVED only when all 2002 bodies close clean.
-source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branch `a=15` is now exact, leaving 212 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
   - THM-731 / THM-732 / THM-366
@@ -29,6 +29,10 @@ verification:
   - 04-computation/lrc14_j4_three_small_frontier_workload_codex_S16.py
   - 05-knowledge/results/lrc14_j4_three_small_frontier_workload_codex_S16.out
   - 05-knowledge/results/lrc14_j4_three_small_frontier_workload_codex_S16.jsonl
+  - 04-computation/lrc14_j4_34_a15_pure_tail_exact_codex_20260717.py
+  - 05-knowledge/results/lrc14_j4_34_a15_pure_tail_exact_codex_20260717.out
+  - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
+  - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
 
 # THM-741 — the near-AP four-slot closure (2002 bodies, overnight run)
@@ -565,3 +569,82 @@ then residual workload; the tournament is transitive with Hamiltonian path
 ancestor antichain is useful.  This bounded prepass proves only the screened
 subtrees.  It evaluates no final margins and does not close the whole `(3,4)`
 body or THM-741. ∎
+
+## Exact first branch of the pure `(3,4)` tail (codex-2026-07-17)
+
+The bounded prepass above did not evaluate any final margins.  The first
+literal-carrier branch is now complete.  Fix
+
+```text
+E={3,4,8,9,10,11,12,13,14},       a=15,
+```
+
+and let `15<b<c<d`.  Exact subtraction at `a=15` gives
+
+```text
+r_1=26,       m_1=184909/1261260,       V2=189.
+```
+
+Thus `b>=189` is closed by THM-735's three-needle common-threshold leg.  The
+remaining `173` values of `b` generate `11,177` `c` obligations.  The monotone
+P2/fixed-`E2` inequality closes `2,849` of them without an exact `m3`.  Of the
+other `8,328`, exact sparse `m3` closes `7,166` without constructing a `d`
+bank.  The final `1,162` `c` carriers generate exactly `17,198` integer `d`
+sweeps below their rational caps.  Every sweep is strictly positive, with
+minimum swept clearance
+
+```text
+32953849/624660036
+```
+
+at `(b,c,d)=(17,19,23)`.  Values of `d` above each cap are covered by the
+strict fixed-`E2` discrepancy inequality, including the correct integral-cap
+endpoint convention.  Hence
+
+> `E union {15,b,c,d}` is lonely for every `15<b<c<d`.
+
+The terminal and certificate ledgers have SHA-256 hashes
+
+```text
+3594fb4a07d9ee79780f7c99cf4cf2427b0a921282f8c2c19249c46c339602b2,
+2ce412ad92743b74400e3e4cba57dfb1c1c75a3dc4b919a998d762df050f180a.
+```
+
+For a second evaluation path, the first, middle, and last terminal of every
+active `b` bank were rebuilt as a full thirteen-comb union.  All `177` samples
+agree with nested sparse subtraction; their manifest is
+`623f110f3f6a0f26b275cfe2097e80d01cb11705008228e70ec2734d9c02f4cc`.
+Normal and `-O` runs are byte-identical.  Source/output hashes are
+`0d63edea45a523ddd71494e02d4500fe9725cf4e424d11a3a70d9dd6e2a9f0fc`
+and `d50adea8ccabae192c95f235067e240e0530d80e52164291b07f632326d948fc`.
+
+The proof-bearing vertices are `b`-indexed obligations with their nested
+survivor components, rational cap, certificate type, and exact terminal
+margins.  Their workload tournament is transitive on the `61` active banks,
+but discards interval geometry.  A Fano/`chi_7` flag identifies `(3,4)` only
+as one of the 21 edge addresses and supplies no metric transport.  In Kakeya
+language each `D_w` is a translated periodic one-dimensional needle comb;
+shared adaptive component incidence, not an isolated needle or a dimension
+estimate, is the faithful statistic.
+
+Combined with the earlier root/first-measure screen, the `(3,4)` body now has
+17 root-closed branches, 63 exact-measure-closed branches, this first complete
+literal-carrier branch, and `212` literal-`G1` branches still open.  This does
+not close a fourth whole flood body or global THM-741.
+
+## Sharded-runner integrity repair (codex-2026-07-17)
+
+The live-pull inline sharding patch in `a00592c74` accidentally de-indented the
+full-run block out of `main`; the module failed immediately with `NameError`
+and the nominal per-shard writer still targeted the shared state file.  The
+mathematical engine has therefore been restored byte-for-byte to its validated
+hash `5aa81d9d...dac96`, which also restores every historical companion's hash
+guard.  Sharding now lives in a separate orchestration wrapper.
+
+That wrapper uses lexicographic-index sharding rather than process hashes,
+writes one file per shard, rejects partial or malformed JSONL rows, coalesces
+only identical duplicates, and emits a canonical merge only after all `2002`
+bodies are present.  Its self-test proves the partitions for `1<=s<=16` are
+disjoint, exhaustive, and balanced; six shards have sizes
+`334,334,334,334,333,333`.  This repairs the computation path but does not
+promote the unharvested `290/2002` ledger or add any unrun body claim.

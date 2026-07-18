@@ -184,13 +184,13 @@ search for one more universal scalar:
   the quotient `Z/25 -> Z/5`, that every owner misses at least three sheets;
   an independent literal-CRT C++ referee reproduces the primary's mask,
   grammar, scalar, and all 23,338,080 reachable-mask-bank digests.  Scale 26 is
-  excluded by the multiple-of-thirteen obstruction.  THM-993's frozen primary
-  treats `c=27`: exact scalar capacity leaves 450 labelled rows, `Z/27 -> Z/3`
+  excluded by the multiple-of-thirteen obstruction.  THM-993/994 independently
+  close `c=27`: exact scalar capacity leaves 450 labelled rows, `Z/27 -> Z/3`
   fibre relaxation closes the 420 rows with order-three anchors, and
   `Z/27 -> Z/9` closes the remaining 30.  Every row has at least two impossible
-  owners already in the relaxation; a separate literal DP agrees.  This is a
-  primary claim pending independent replay, so the untreated common-scale
-  faces now begin at `c=28`.  The finite H5 bank and non-AP-centred/deep-sheet
+  owners already in the relaxation; a separately developed standard-library
+  literal DP agrees on all exact headline censuses.  Thus the untreated
+  common-scale faces now begin at `c=28`.  The finite H5 bank and non-AP-centred/deep-sheet
   continuations must also be closed or replaced by a uniform decreasing
   invariant;
 - the final nonlacunary dense core needs a theorem that composes its component,
@@ -338,7 +338,12 @@ This addendum also records three quotient decisions from the same session:
   A portable fixed-`E_2`
   lower bound nevertheless closes edge `(5,7)` exactly: 28,847 residual
   sweeps are all positive with minimum `7/858`.  This proves one flood, not a
-  Fano transport to the other twenty.
+  Fano transport to the other twenty.  The later exact `(3,4),a=15` pure-tail
+  branch makes the carrier distinction concrete: Fano/`chi_7` chooses the
+  edge address, but the all-`b,c,d` certificate is a nested survivor-component
+  stalk with rational tail caps.  Its 17,198 finite terminal sweeps are all
+  positive; isolated needle directions or edge flags do not retain that
+  shared-survivor incidence.
 - In the shell-five incidence, each unit endpoint column sees a labelled set
   of dangerous raw lift classes.  Every fixed pair has a simultaneous
   relaxed matching; the sole singleton support is the class-`41` family
@@ -603,7 +608,7 @@ positive-open residual
 
 | Lens family | What it preserves | What it destroys or hides | Required sidecar / repair | What it points at |
 |---|---|---|---|---|
-| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; within-fibre position and shared-unit overlap if nested fibres are scalarized; higher-order union if reduced to pairs | complement-lcm fibre, nested-fibre upper relaxation with literal-mask sidecar, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 bounds primitive proper AP-centred H6 by `c<=840`; THM-861/862 close `c=2,3`; THM-957/958/960/962/963/969/970/974/976 close `c=4,...,12`; THM-860 excludes `c=13`; THM-977/978/980/981/982 empty `c=14,15,16,17,18` through exact owner-local deficits. THM-983 uniformly excludes every prime `c>=19` by residue capacity; THM-986/988/989 independently close composite `c=20,21,22`, with a cubic-character coupling explaining `c=21`; THM-990 independently closes `c=24`; THM-992 independently closes `c=25` through a structural five-coset obstruction plus matching algebraic-CRT/Python and literal-CRT/C++ bank certificates. THM-993 has a frozen primary claim for `c=27`: the nested `Z/27 -> Z/9 -> Z/3` carrier relaxes forgotten needle overlaps upward and leaves at most four feasible owners in every scalar row; independent replay is pending. The changing faithful vertices—rows, owner obligations, projective owner classes, local sheets, nested fibres, colored exact-cover strata, owner-feasibility vectors, then weighted ratio-capacity digraphs—are part of the proof; completed tournaments are telemetry. THM-858 separately bounds the finite H5 ramification base; `c=28` is the next untreated common scale. |
+| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; within-fibre position and shared-unit overlap if nested fibres are scalarized; higher-order union if reduced to pairs | complement-lcm fibre, nested-fibre upper relaxation with literal-mask sidecar, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 bounds primitive proper AP-centred H6 by `c<=840`; THM-861/862 close `c=2,3`; THM-957/958/960/962/963/969/970/974/976 close `c=4,...,12`; THM-860 excludes `c=13`; THM-977/978/980/981/982 empty `c=14,15,16,17,18` through exact owner-local deficits. THM-983 uniformly excludes every prime `c>=19` by residue capacity; THM-986/988/989 independently close composite `c=20,21,22`, with a cubic-character coupling explaining `c=21`; THM-990 independently closes `c=24`; THM-992 independently closes `c=25` through a structural five-coset obstruction plus matching algebraic-CRT/Python and literal-CRT/C++ bank certificates. THM-993/994 independently close `c=27`: the nested `Z/27 -> Z/9 -> Z/3` carrier relaxes forgotten needle overlaps upward and leaves at most four feasible owners in every scalar row, while a separately developed literal bank replay agrees on every headline census. The changing faithful vertices—rows, owner obligations, projective owner classes, local sheets, nested fibres, colored exact-cover strata, owner-feasibility vectors, then weighted ratio-capacity digraphs—are part of the proof; completed tournaments are telemetry. THM-858 separately bounds the finite H5 ramification base; `c=28` is the next untreated common scale. |
 | Labelled packet / reduction lens | theorem route, exact packet identity, AP/GW boundary atoms, C27/K33/covering family | local topology and certificate economy if scalarized | route label, exact `M`, qdiv, packet family, residual sector | packet sheaf base |
 | Equivalence triad lens | count shadow, retained scissors/fiber data, observer-cut orbit, limiting distribution law, first failed interaction order | proof predicate if equinumerosity, equidecomposability, or equidistribution is used alone | `cardinal_shadow`, `scissors_fiber`, `observer_cut_orbit`, `distribution_law`, `interaction_order_defect`, `residual_debt_name` | forgetting-cost invariant |
 | Tournament / metagraph / observer lens | pairwise comparator, wall-crossing relation, marked source/phase order | thresholds, endpoints, scale, family route if vertices are raw runners | marked vertices, retained observable, tie Hamiltonian path, lost-coordinate ledger | relation walk over packet base |
