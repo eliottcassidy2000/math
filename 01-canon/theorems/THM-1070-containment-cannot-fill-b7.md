@@ -9,6 +9,8 @@ scripts: 04-computation/b7_slots_opus_S367.py, 04-computation/b7_degradation_opu
 
 # THM-1070 — why the ledger does not extend by the same means
 
+> **ROUTE FOUND (opus-S368), see THM-1075.** The k-fold folded identity called for below is the RESONANCE-LATTICE expansion: mu = sum over Lam(a) = ker(Z^k -> Z) of prod hhat(n_i), rank k-1, in cumulant form mu = sum_S (2lam)^(k-|S|) delta(S). This also explains the degradation measured here: k=2 is sharp because rank 1 is CYCLIC (one Bernoulli closes it = THM-965), and rank >= 2 admits no such closure.
+
 THM-1065 located the LRC(14) obstruction as the need for a UNIFORM
 level-7 certificate, and proposed that the remaining slots be filled the
 way S2 was: "the same sawtooth/containment technique is the natural

@@ -14,6 +14,41 @@ HONEST: not a proof of n=12 rigidity -- an exhaustive verification over a substa
 
 FILES: lrc_n12_height2_gap_macmini_S122.py (+.out); HYP-7530.
 HANDOFFS: @klein/@codex -- n=12 is now exhaustive to max<=32 for ALL sets. The cheapest remaining win is deep-only max in (32,38], which is far smaller than the full N=38 census because THM-770 already owns the shallow part of that range.
+## opus-2026-07-17-S368 -- THM-1075 THE K-FOLD FOLDED IDENTITY IS THE RESONANCE-LATTICE EXPANSION (mu = sum over ker(Z^k -> Z) of prod hhat, rank k-1; cumulant form separates genuine k-body structure) -- explains why k=2 was sharp (rank 1 is CYCLIC), puts the modulus 7 inside the Fourier kernel, gives EXACT pair independence <=> 7|(a/g) or 7|(b/g) [16/16], and proves dilation invariance in one line (HYP-7510)
+
+Owner: work the k-fold folded identity. It is not a longer formula of the same kind --
+it is a LATTICE, and finding that reframes most of the last ten sessions.
+THE IDENTITY: with h the indicator of (-lam,lam), mu(cap D_{a_i}) = sum over
+Lam(a) = ker(Z^k -> Z, n |-> sum n_i a_i) of prod hhat(n_i) -- the RESONANCE LATTICE,
+rank k-1. In cumulant form mu = sum_S (2lam)^(k-|S|) delta(S) with delta(empty)=1 and
+delta(singleton)=0, so the expansion starts at pairs, delta(pair) is exactly THM-965's
+fold term, and delta(S) for |S|>=3 is genuine k-body structure -- the joint-alignment
+object THM-1070 said was needed. Verified at k=3 against exact rational measures; on
+small families the 3-body term DOMINATES (2,3,5: indep 0.0029, pairs +0.0062, triple
++0.0194).
+WHY k=2 WAS SHARP, which retro-explains THM-1070: rank 1 is CYCLIC, so a single
+Bernoulli series closes it into the tent function -- that IS THM-965. Rank >= 2 admits
+no such closure. One generator is one alignment, and one alignment is all a per-step
+worst case can capture without compounding.
+FOUR CONSEQUENCES. (a) hhat(n) = sin(pi n/7)/(pi n) vanishes EXACTLY when 7|n: the
+modulus 7 = 1/(2lam) that runs through this whole problem is a property of the Fourier
+kernel, and every resonance vector with a coordinate divisible by 7 contributes nothing.
+(b) EXACT PAIR INDEPENDENCE: mu = 1/49 <=> 7|(a/g) or 7|(b/g). Verified 16/16 in exact
+rational arithmetic; the sharp test is (14,21), where BOTH speeds are divisible by 7 yet
+mu = 1/21, because the reduced pair (2,3) is not. This is the S357 locus with a reason.
+(c) DILATION INVARIANCE IN ONE LINE: Lam(ka) = Lam(a). THM-1050 immediate; THM-1055's
+absent speed threshold immediate with it -- Lam is ARITHMETIC and magnitude is not one of
+its inputs. (d) Consistently, the 3-body term does NOT decay with magnitude.
+STATUS, HONESTLY: a reframe that unifies, NOT a certificate. No bound on delta(S) for
+|S|>=3; the series is conditionally convergent and the numerics use symmetric truncation
+(3-4 digits) -- enough to confirm the identity, not to prove convergence.
+WHAT IS NOW WELL-POSED: bound delta(S) by the SHORT FULL-SUPPORT VECTORS of Lam(a_S)
+avoiding 7|n_i. At k=2 the deviation IS the shortest-vector term g^2/(pi^2 ab) up to
+1.2-1.6x, which is THM-1025's sawtooth floor. For |S|>=3 it is a Minkowski/successive-
+minima question -- i.e. THE SMALL-DIVISOR PROBLEM, where Lam(a) is the standard KAM
+object and Diophantine conditions on a control exactly these short vectors. That is a
+mature literature and a better-posed target than another measure estimate.
+FILES: THM-1075, THM-1070 + THM-1050 amended, 3 scripts + out, HYP-7510. opus; S368.
 
 ---
 
