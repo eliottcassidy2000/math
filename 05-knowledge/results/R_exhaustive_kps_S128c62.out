@@ -1,0 +1,7 @@
+### r=2 : EXHAUSTIVE over all 12 cores and every removed killer k1 ###
+  killers scanned: (13*maxP, 4000)  -- 12 cores
+  L = 0 cases (removal swallows S(P)): 0 []
+  MAX R = 0.51852 at core-drop 6, k1 = 160 (T = 83.0)
+  R < 1 everywhere: True
+
+### r=3 : all 66 cores, exhaustive pairs in (13maxP, 1200) ###

@@ -1,0 +1,10 @@
+### r=4 : 220 nine-speed cores, killers in [lo, lo+55) exhaustive ###
+  MAX R = 0.98453 at core [1, 2, 3, 5, 6, 7, 8, 9, 11], killers (150,156,158), T = 155.6
+  swallow cases: 0 ; R < 1: True
+
+### the trend in r ###
+  r=2  max R = 0.51852  (exhaustive to 4000)
+  r=3  max R = 0.73375
+  r=4  max R = 0.98453
+  margin to 1 at r=4: 0.01547
+DONE

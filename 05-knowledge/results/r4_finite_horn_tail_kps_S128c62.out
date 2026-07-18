@@ -1,0 +1,14 @@
+  ... core 0/60  tested=637057  bad=0
+  ... core 10/60  tested=5248183  bad=0
+  ... core 20/60  tested=9395356  bad=0
+  ... core 30/60  tested=15297192  bad=0
+  ... core 40/60  tested=19280735  bad=0
+  ... core 50/60  tested=22304740  bad=0
+
+### r=4 finite horn, KB = 400 ###
+  quadruples passing the necessary condition (sum frac >= 1): 23622765
+  of those, certified by the small-modulus criterion: 23622765
+  covering-and-distinct failures (genuine UNCERTIFIED): 0
+  non-covering / non-distinct among the coverers: 0
+  NOTE: quadruples failing sum frac >= 1 cannot cover, hence are certified automatically.
+DONE
