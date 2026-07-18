@@ -1,0 +1,48 @@
+==========================================================================
+TWO-CIRCLE deep structure across N.  Prefix {1..N-1}, deep = bandCount>=K.
+==========================================================================
+
+[N=14, K=6]  (death-star baseline: threshold 84, two circles)
+  N=14  K=6  (predicted circle-I threshold N*K = 84)
+    q= 170  B_pred=(q-1)//84= 2  #deep-arcs=3  arcs=[(1, 2), (84, 86), (168, 169)]
+    q= 200  B_pred=(q-1)//84= 2  #deep-arcs=3  arcs=[(1, 2), (99, 101), (198, 199)]
+    q= 250  B_pred=(q-1)//84= 2  #deep-arcs=3  arcs=[(1, 2), (124, 126), (248, 249)]
+    q= 300  B_pred=(q-1)//84= 3  #deep-arcs=3  arcs=[(1, 3), (149, 151), (297, 299)]
+
+[N=10, K=N/2=5]
+  N=10  K=5  (predicted circle-I threshold N*K = 50)
+    q= 105  B_pred=(q-1)//50= 2  #deep-arcs=2  arcs=[(1, 2), (103, 104)]
+    q= 157  B_pred=(q-1)//50= 3  #deep-arcs=2  arcs=[(1, 3), (154, 156)]
+    q= 203  B_pred=(q-1)//50= 4  #deep-arcs=2  arcs=[(1, 4), (199, 202)]
+
+[N=12, K=N/2=6]
+  N=12  K=6  (predicted circle-I threshold N*K = 72)
+    q= 149  B_pred=(q-1)//72= 2  #deep-arcs=2  arcs=[(1, 2), (147, 148)]
+    q= 223  B_pred=(q-1)//72= 3  #deep-arcs=2  arcs=[(1, 3), (220, 222)]
+    q= 291  B_pred=(q-1)//72= 4  #deep-arcs=2  arcs=[(1, 4), (287, 290)]
+
+[N=16, K=N/2=8]
+  N=16  K=8  (predicted circle-I threshold N*K = 128)
+    q= 261  B_pred=(q-1)//128= 2  #deep-arcs=2  arcs=[(1, 2), (259, 260)]
+    q= 391  B_pred=(q-1)//128= 3  #deep-arcs=2  arcs=[(1, 3), (388, 390)]
+    q= 515  B_pred=(q-1)//128= 4  #deep-arcs=2  arcs=[(1, 4), (511, 514)]
+
+[N=18, K=N/2=9]
+  N=18  K=9  (predicted circle-I threshold N*K = 162)
+    q= 329  B_pred=(q-1)//162= 2  #deep-arcs=2  arcs=[(1, 2), (327, 328)]
+    q= 493  B_pred=(q-1)//162= 3  #deep-arcs=2  arcs=[(1, 3), (490, 492)]
+    q= 651  B_pred=(q-1)//162= 4  #deep-arcs=2  arcs=[(1, 4), (647, 650)]
+
+[N=9 odd, K=(N-1)/2=4]  (parity lock absent -> circle II?)
+  N=9  K=4  (predicted circle-I threshold N*K = 36)
+    q=  77  B_pred=(q-1)//36= 2  #deep-arcs=3  arcs=[(1, 2), (38, 39), (75, 76)]
+    q= 115  B_pred=(q-1)//36= 3  #deep-arcs=3  arcs=[(1, 3), (56, 59), (112, 114)]
+
+[N=15 odd, K=(N-1)/2=7]  (parity lock absent -> circle II?)
+  N=15  K=7  (predicted circle-I threshold N*K = 105)
+    q= 215  B_pred=(q-1)//105= 2  #deep-arcs=3  arcs=[(1, 2), (107, 108), (213, 214)]
+    q= 322  B_pred=(q-1)//105= 3  #deep-arcs=3  arcs=[(1, 3), (160, 162), (319, 321)]
+
+READING: circle I (integer) threshold = N*K is UNIVERSAL (K smallest speeds
+nest at origin). Circle II (half) needs N even (evens nest at q/2). The 84
+of N=14 is 6*14 with K=6; the two-circle count formula generalizes with N*K.

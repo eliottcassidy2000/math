@@ -216,8 +216,46 @@ theorem c7_consecutive_good_pos (v : ℕ) (hv : 1 ≤ v) :
   exact good_pos_of_path_credits (volume.restrict (Ioo (-(1:ℝ)/2) (1/2)))
     A hAmeas 7 hle hcred
 
+/-! ## From positive measure to loneliness (boxeph-S80): the dichotomy cashed
+
+`μ₀ > 0 ⟺ M > 1/14` (the S79 converter one way; positive measure ⟹ nonempty
+the other).  The measure theorems become MARGIN theorems: every consecutive
+7- or 8-block admits an instant at which all its runners clear 1/14. -/
+
+theorem exists_margin_of_good_pos (N : ℕ) (w : ℕ → ℕ)
+    (h : 0 < (volume.restrict (Ioo (-(1:ℝ)/2) (1/2)))
+        ((⋃ i ∈ Finset.range N, dangerR (w i))ᶜ)) :
+    ∃ t : ℝ, ∀ i ∈ Finset.range N, ∀ m : ℤ, 1/14 ≤ |((w i : ℕ) : ℝ) * t - m| := by
+  have hmeas : MeasurableSet ((⋃ i ∈ Finset.range N, dangerR (w i))ᶜ) :=
+    (Finset.measurableSet_biUnion _ fun i _ =>
+      (dangerR_isOpen (w i)).measurableSet).compl
+  rw [Measure.restrict_apply hmeas] at h
+  obtain ⟨t, ht, -⟩ :=
+    MeasureTheory.nonempty_of_measure_ne_zero (ne_of_gt h)
+  refine ⟨t, fun i hi m => ?_⟩
+  rw [Set.mem_compl_iff, Set.mem_iUnion₂] at ht
+  push_neg at ht
+  have hnd := ht i hi
+  rw [dangerR, Set.mem_setOf_eq] at hnd
+  push_neg at hnd
+  exact hnd m
+
+/-- **Every consecutive 8-block has a 1/14-margin instant.** -/
+theorem c8_consecutive_margin (v : ℕ) (hv : 1 ≤ v) :
+    ∃ t : ℝ, ∀ i ∈ Finset.range 8, ∀ m : ℤ,
+      1/14 ≤ |((v + i : ℕ) : ℝ) * t - m| :=
+  exists_margin_of_good_pos 8 (fun i => v + i) (c8_consecutive_good_pos v hv)
+
+/-- **Every consecutive 7-block has a 1/14-margin instant.** -/
+theorem c7_consecutive_margin (v : ℕ) (hv : 1 ≤ v) :
+    ∃ t : ℝ, ∀ i ∈ Finset.range 7, ∀ m : ℤ,
+      1/14 ≤ |((v + i : ℕ) : ℝ) * t - m| :=
+  exists_margin_of_good_pos 7 (fun i => v + i) (c7_consecutive_good_pos v hv)
+
 #print axioms c8_consecutive_good_pos
 #print axioms c7_consecutive_good_pos
+#print axioms c8_consecutive_margin
+#print axioms c7_consecutive_margin
 
 end
 

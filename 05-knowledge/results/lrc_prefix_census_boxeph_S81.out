@@ -1,0 +1,87 @@
+==========================================================================
+(1) UNIFORM LIVE LAW  for V = {1,...,N-1}, threshold 1/N
+    claim: liveCount(q) = phi(N) if N|q else 0;  set = {o*(q/N): o unit mod N}
+==========================================================================
+  N= 3  phi(N)= 2  units=[1, 2]   OK 
+  N= 4  phi(N)= 2  units=[1, 3]   OK 
+  N= 5  phi(N)= 4  units=[1, 2, 3, 4]   OK 
+  N= 6  phi(N)= 2  units=[1, 5]   OK 
+  N= 7  phi(N)= 6  units=[1, 2, 3, 4, 5, 6]   OK 
+  N= 8  phi(N)= 4  units=[1, 3, 5, 7]   OK 
+  N= 9  phi(N)= 6  units=[1, 2, 4, 5, 7, 8]   OK 
+  N=10  phi(N)= 4  units=[1, 3, 7, 9]   OK 
+  N=11  phi(N)=10  units=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   OK 
+  N=12  phi(N)= 4  units=[1, 5, 7, 11]   OK 
+  N=13  phi(N)=12  units=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]   OK 
+  N=14  phi(N)= 6  units=[1, 3, 5, 9, 11, 13]   OK 
+  N=15  phi(N)= 8  units=[1, 2, 4, 7, 8, 11, 13, 14]   OK 
+  N=16  phi(N)= 8  units=[1, 3, 5, 7, 9, 11, 13, 15]   OK 
+  N=17  phi(N)=16  units=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]   OK 
+  N=18  phi(N)= 6  units=[1, 5, 7, 11, 13, 17]   OK 
+  N=19  phi(N)=18  units=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]   OK 
+  N=20  phi(N)= 8  units=[1, 3, 7, 9, 11, 13, 17, 19]   OK 
+  N=21  phi(N)=12  units=[1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20]   OK 
+  N=22  phi(N)=10  units=[1, 3, 5, 7, 9, 13, 15, 17, 19, 21]   OK 
+
+  LIVE LAW verdict: ALL N CONFIRMED
+
+==========================================================================
+(2) DEEP CENSUS at the base modulus q = N   (collisions with origin)
+    p is deep iff N | i*p for some i in 1..N-1  <=>  N/gcd(N,p) <= N-1
+    <=>  p is NOT a unit mod N and p != 0.  #deep(q=N) = N-1-phi(N).
+==========================================================================
+  N= 3  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N= 4  #deep= 1 = N-1-phi(N)= 1 [OK]  deep p = [2]
+  N= 5  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N= 6  #deep= 3 = N-1-phi(N)= 3 [OK]  deep p = [2, 3, 4]
+  N= 7  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N= 8  #deep= 3 = N-1-phi(N)= 3 [OK]  deep p = [2, 4, 6]
+  N= 9  #deep= 2 = N-1-phi(N)= 2 [OK]  deep p = [3, 6]
+  N=10  #deep= 5 = N-1-phi(N)= 5 [OK]  deep p = [2, 4, 5, 6, 8]
+  N=11  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N=12  #deep= 7 = N-1-phi(N)= 7 [OK]  deep p = [2, 3, 4, 6, 8, 9, 10]
+  N=13  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N=14  #deep= 7 = N-1-phi(N)= 7 [OK]  deep p = [2, 4, 6, 7, 8, 10, 12]
+  N=15  #deep= 6 = N-1-phi(N)= 6 [OK]  deep p = [3, 5, 6, 9, 10, 12]
+  N=16  #deep= 7 = N-1-phi(N)= 7 [OK]  deep p = [2, 4, 6, 8, 10, 12, 14]
+  N=17  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N=18  #deep=11 = N-1-phi(N)=11 [OK]  deep p = [2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 16]
+  N=19  #deep= 0 = N-1-phi(N)= 0 [OK]  deep p = []
+  N=20  #deep=11 = N-1-phi(N)=11 [OK]  deep p = [2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18]
+  N=21  #deep= 8 = N-1-phi(N)= 8 [OK]  deep p = [3, 6, 7, 9, 12, 14, 15, 18]
+  N=22  #deep=11 = N-1-phi(N)=11 [OK]  deep p = [2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20]
+
+==========================================================================
+(3) SCALED PREFIXES  {d,2d,...,(N-1)d}  (the general difference-closed set)
+    claim: live law is dilation-invariant -- same phi(N)*[N|q] pattern
+==========================================================================
+    N=3 d=3: live law weakened (extra factor resonance)
+    N=4 d=2: live law weakened (extra factor resonance)
+    N=4 d=4: live law weakened (extra factor resonance)
+    N=6 d=2: live law weakened (extra factor resonance)
+    N=6 d=3: live law weakened (extra factor resonance)
+    N=6 d=4: live law weakened (extra factor resonance)
+    N=8 d=2: live law weakened (extra factor resonance)
+    N=8 d=4: live law weakened (extra factor resonance)
+    N=9 d=3: live law weakened (extra factor resonance)
+    N=10 d=2: live law weakened (extra factor resonance)
+    N=10 d=4: live law weakened (extra factor resonance)
+    N=12 d=2: live law weakened (extra factor resonance)
+    N=12 d=3: live law weakened (extra factor resonance)
+    N=12 d=4: live law weakened (extra factor resonance)
+  scaled-prefix verdict: see above
+  (dilation adds resonances at gcd-divisors; the PRIMITIVE d=1 is the clean law)
+
+==========================================================================
+(4) NON-PREFIX families at threshold 1/14 (13 speeds): where does live-law break?
+==========================================================================
+  prefix {1..13}      : first live (q,count) = (14, 6);  live moduli<= 42: [14, 28, 42]
+  GW doubling {1..11,13,24}: first live (q,count) = (14, 6);  live moduli<= 42: [14, 28, 42]
+  sporadic {1..11,13,c=27} : first live (q,count) = (12, 4);  live moduli<= 42: [12, 14, 24, 28, 36, 41, 42]
+  deep well {1..12,182}    : first live (q,count) = (27, 2);  live moduli<= 42: [27, 28, 40, 41, 42]
+  missing-2 {1,3,4..14}    : first live (q,count) = (17, 2);  live moduli<= 42: [17, 19, 21, 23, 25, 27, 32, 34]
+
+  READING: prefix is live ONLY at q multiple of 14 (tight);
+  non-tight families become live at SMALLER, non-resonant moduli => easier.
+
+Done. Live-law uniform in N: True
