@@ -621,6 +621,23 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S107 -- THE DENSITY-ROUTE DISCHARGE (separated far element) IS NOW KERNEL-PURE LEAN
+
+Owner: formalize the density-route discharge. Delivered LRCDensityDischarge.lean, 3 theorems
+(namespace LonelyRunner), all [propext, Classical.choice, Quot.sound] -- no sorry/axiom; built
+(8477 jobs), registered in root TournamentH7.lean.
+- density_far_extension: frame 1/13-lonely at t0 + speeds<=V + far v_max>=91V => Lonely 14.
+  TWO-STEP density proof: (1) GOOD INTERVAL -- 1/14-lonely on [t0-d,t0+d], d=1/(182V), reverse triangle
+  (lose <=Vd=1/182, 1/13-1/182=1/14); (2) FAR COMPLETION -- 2d=1/(91V)>=1/v_max so a half-integer point
+  t=(k+1/2)/v_max lands in it, ||v_max t||=1/2>=1/14.
+- half_integer_far: 1/2<=|k+1/2-m|. density_far_bridge: LRC(<=13) supplies frame loneliness = complete rung.
+DISTINCT from descent's round+kick = the density route's Phi>0 (good-set-nonempty) mechanism, S96-S100;
+same separated-far regime (91V vs 13V). CORPUS NOW HOLDS all 3 elementary/geometric branches: non-covering
+=sieve (S106), compact=ap_core_bridge (S105), separated far=density_far_bridge (S107) -- all PROVED kernel-pure.
+Only INV (=crux=Tao n=12) + analytic M-split remain. Honest: geometric core, not the sharp analytic
+kappa'R_G/w Fourier bound. Gotchas: le_or_lt->le_or_gt, Int.ceil_lt_add_one, le_div_iff0. Crux still open.
+FILES: reflection the-density-route-discharge-is-now-kernel-pure-lean-boxeph-S107, LRCDensityDischarge.lean, HYP-7605. boxeph; S107.
+
 ## boxeph-2026-07-18-S106 -- THE NON-COVERING => SIEVE DISPATCH IS NOW KERNEL-PURE LEAN; LRC(14) reduces in the kernel to the covering case
 
 Owner: formalize the non-covering => sieve dispatch. Delivered LRCSieveDispatch.lean, 4 theorems
