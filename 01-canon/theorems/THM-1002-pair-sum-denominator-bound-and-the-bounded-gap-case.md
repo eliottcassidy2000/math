@@ -4,6 +4,7 @@ title: The pair-sum denominator bound (M(A)=val/q with q | v_i+v_j, hence q ≤ 
 status: PROVED (elementary; the bounded case max(A)≤18 only). The GENERAL stability bound "non-AP ⟹ M ≥ 2/25" is CRUX (C) and remains OPEN — this file proves a sub-case and pins the exact obstruction to extending it.
 source: klein-2026-07-17-S313
 depends_on:
+  - THM-999   # death-star-S56 Lemma A — PRIOR ART for §1 (tight case); §1 here is the general-M form
   - THM-666   # witnesses live on pair-sum rulers (the maximizer-location fact used here)
 related:
   - HYP-7310  # klein-S313 n=12 tight census (AP {1..12} unique; the Farey gap reproduced)
@@ -23,9 +24,18 @@ Throughout `A = {v_1<…<v_12}` is a set of 12 positive integers and `M(A) = max
 
 ## 1. The pair-sum denominator bound (the engine)
 
-**Lemma.** Write the maximizer as `t* = a/q` in lowest terms. Then `q | (v_i + v_j)` for some
-`i ≤ j`, and consequently **`q ≤ 2·max(A)`**. Moreover `M(A) = val/q` where `val = min_v |va|_q`
-(`|x|_q := min(x mod q, q − x mod q)`).
+> **PRIOR ART — attribution.** This lemma is **death-star's THM-999 Lemma A**
+> (`death-star-2026-07-17-S56`, pushed before this file), stated there for **tight** families
+> (`M = 1/n`): *every loneliness time has reduced denominator dividing `v₊+v₋ ≤ 2·Vmax`*, with the
+> same opposite-sides active-pair proof. Credit for the lemma is theirs. The only thing added here is
+> that **tightness is not needed**: death-star's step 1 invokes tightness to make maxima isolated, but
+> `f = min_v ‖vt‖` is a min of pieces of slope `±v ≠ 0`, hence *never locally constant*, so every
+> maximum is a breakpoint for any family at any value of `M`. That general-`M` form is what the gap
+> application below requires, since the gap concerns **non-tight** families with `M` just above `1/13`.
+
+**Lemma (general-`M` form of THM-999 Lemma A).** Write the maximizer as `t* = a/q` in lowest terms.
+Then `q | (v_i + v_j)` for some `i ≤ j`, and consequently **`q ≤ 2·max(A)`**. Moreover
+`M(A) = val/q` where `val = min_v |va|_q` (`|x|_q := min(x mod q, q − x mod q)`).
 
 *Proof.* `f(t) = min_v ‖vt‖` is piecewise linear; each `‖vt‖` rises with slope `v` until `vt ≡ 1/2`,
 then falls with slope `−v`. At a local maximum of the minimum, an active rising branch meets an
