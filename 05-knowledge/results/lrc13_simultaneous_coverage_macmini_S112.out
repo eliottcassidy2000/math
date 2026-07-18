@@ -1,0 +1,26 @@
+========================================================================
+(1) smallest strict gain: s=2, F={1,3} — capacity OK, primitivity OK, Cov EMPTY
+========================================================================
+  capacity_ok=True  prim_ok=True  cov_empty=True
+  closed form: (T_10 u T_30) = [0,2/13] u [24/39,28/39];
+               (T_11 u T_31) = [11/39,15/39] u [11/13,1)   -> intersection EMPTY
+
+========================================================================
+(2) THE STRICT GAIN over capacity+primitivity (THM-1006 sec.H's irreducible class)
+========================================================================
+  pass capacity AND primitivity: 2248
+  of those EXCLUDED by tooth positions (Cov empty): 1255 (55.8%)
+  by sheet number s: {2: 6, 3: 206, 4: 293, 6: 312, 8: 438}
+
+========================================================================
+(3) what survives: maxint(Cov) decays like 1/w  => surviving configs need LARGE
+    off-sheet speeds and a correspondingly tiny on-sheet safe interval
+========================================================================
+  s=2 F=[1, 7]: maxint(Cov)=0.03297
+  s=2 F=[1, 11]: maxint(Cov)=0.02797
+  s=2 F=[1, 19]: maxint(Cov)=0.01619
+  s=2 F=[1, 31]: maxint(Cov)=0.00993
+  s=2 F=[3, 5]: maxint(Cov)=0.01538
+
+VERDICT: metric kills SMALL off-sheet configs (55.8% of the counting-irreducible
+  class); LARGE off-sheet configs survive and need a height bound. Complementary.

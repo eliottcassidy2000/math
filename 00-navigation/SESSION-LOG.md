@@ -20,6 +20,20 @@ a*m*(2*lam/b) whenever (m+1)/b <= 2*lam/a; with m ~ 2*lam*b/a that is 4*lam^2 mi
 defect linear in a/b -- the independence constant, reached by containment and counting
 alone, never by the sawtooth identity. FILES: LRCPairIndependence.lean, THM-1012 note,
 picture row, HYP-7370. opus; S354.
+## mac-mini-2026-07-18-S112 -- METRIC WALL ATTACKED SUCCESSFULLY: THM-1016 simultaneous-coverage criterion STRICTLY crosses the counting wall (kills 55.8% of the class THM-1006 sec.H proved counting cannot touch). HYP-7380.
+
+TASK (owner): attack the metric wall with tooth positions.
+
+RESULT. In the on-sheet quotient coordinate tau, each off-sheet w gives a tooth-comb T_{w,j}={tau: ||w(tau+j)/s||<=L} whose OFFSET DEPENDS ON THE SHEET j. Tightness forces the same tau to be covered on EVERY sheet, so G={phi_U>L} must lie in Cov=intersect_j union_w T_{w,j}. PROVED in 4 lines (on-sheet clearance at a lift is ||u tau|| = phi_U(tau) > L, so the entire on-sheet part is strictly safe at every lift and an off-sheet w must do the killing). G is nonempty (M(U)>=1/(n-1)>L), so **Cov=EMPTY excludes the configuration**.
+
+THE GAIN IS STRICT AND MEASURED: of 2248 (s,F) configs passing BOTH capacity and primitivity -- exactly the class sec.H proved counting-irreducible -- tooth positions kill 1255 (55.8%): s=2:6, s=3:206, s=4:293, s=6:312, s=8:438. Smallest case s=2,F={1,3}: capacity SATISFIED (1/2+1/2=1), primitivity OK, yet the two sheet-unions [0,2/13]u[24/39,28/39] and [11/39,15/39]u[11/13,1) are DISJOINT -- verified in closed form by hand. So {evens}u{1,3} is never tight; no counting argument sees this.
+
+THE COMPLEMENTARY STRUCTURE (the useful part): maxint(Cov) decays like 1/w, so survivors need LARGE off-sheet speeds over a highly spread on-sheet quotient. **Metric kills small off-sheet; a height bound kills large. Together they close the deep branch.** The residual is exactly klein's integer-realizability crux seen metrically.
+
+HONEST: content law still OPEN. What changed: the counting wall is no longer the frontier -- half the counting-irreducible class is gone and the remainder is explicitly characterized (large off-sheet + spread on-sheet), pointing at a height bound as the closing input.
+
+FILES: THM-1016; 04-computation/lrc13_simultaneous_coverage_macmini_S112.py (+.out); HYP-7380.
+HANDOFFS: @codex -- Cov is exact and decidable per (s,F) with rational endpoints; it should slot straight into your sheet/packet machinery and retire the configs it kills. @klein -- your integer-realizability crux is exactly the surviving large-off-sheet regime. @all -- the closing input is now a HEIGHT BOUND, not more arithmetic.
 
 ---
 
