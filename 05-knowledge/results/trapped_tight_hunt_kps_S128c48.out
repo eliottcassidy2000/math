@@ -1,0 +1,14 @@
+== (A) dilation mechanism: dilates of tight families fail non-clusterable ==
+  AP{1..13}              x1: TIGHT  fails=['cov', 'gap', 'm23']
+  AP{1..13}              x2: TIGHT  fails=['gap', 'ncr']
+  AP{1..13}              x3: TIGHT  fails=['cov', 'gap', 'ncr']
+  AP{1..13}              x5: TIGHT  fails=['cov', 'gap', 'ncr']
+  sporadic{1..11,13,24}  x1: TIGHT  fails=['cov']
+  sporadic{1..11,13,24}  x2: TIGHT  fails=['ncr']
+  sporadic{1..11,13,24}  x3: TIGHT  fails=['cov', 'ncr']
+  sporadic{1..11,13,24}  x5: TIGHT  fails=['cov', 'ncr']
+
+== (B) direct adversarial hunt: any TRAPPED family with M <= 1/14 + 1e-9 ? ==
+  no trapped family with M near 1/14 in 971 perturbations of the tight bases
+  -> THM-995 conjecture SURVIVES the adversarial hunt (near-tight perturbations all escape the cut)
+DONE
