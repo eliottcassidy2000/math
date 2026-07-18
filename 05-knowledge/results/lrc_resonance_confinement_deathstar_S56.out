@@ -1,0 +1,23 @@
+=== Tight AP {1,...,n-1}, threshold 1/n:  liveCount(q) =? phi(n)*[n|q] ===
+n= 3 phi= 2 law holds<=q=19: True   live@q=n: [1, 2] == units [1, 2]? True
+n= 4 phi= 2 law holds<=q=25: True   live@q=n: [1, 3] == units [1, 3]? True
+n= 5 phi= 4 law holds<=q=31: True   live@q=n: [1, 2, 3, 4] == units [1, 2, 3, 4]? True
+n= 6 phi= 2 law holds<=q=37: True   live@q=n: [1, 5] == units [1, 5]? True
+n= 7 phi= 6 law holds<=q=43: True   live@q=n: [1, 2, 3, 4, 5, 6] == units [1, 2, 3, 4, 5, 6]? True
+n= 8 phi= 4 law holds<=q=49: True   live@q=n: [1, 3, 5, 7] == units [1, 3, 5, 7]? True
+n= 9 phi= 6 law holds<=q=55: True   live@q=n: [1, 2, 4, 5, 7, 8] == units [1, 2, 4, 5, 7, 8]? True
+n=10 phi= 4 law holds<=q=61: True   live@q=n: [1, 3, 7, 9] == units [1, 3, 7, 9]? True
+n=11 phi=10 law holds<=q=67: True   live@q=n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] == units [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]? True
+n=12 phi= 4 law holds<=q=73: True   live@q=n: [1, 5, 7, 11] == units [1, 5, 7, 11]? True
+n=13 phi=12 law holds<=q=79: True   live@q=n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] == units [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]? True
+n=14 phi= 6 law holds<=q=85: True   live@q=n: [1, 3, 5, 9, 11, 13] == units [1, 3, 5, 9, 11, 13]? True
+n=15 phi= 8 law holds<=q=91: True   live@q=n: [1, 2, 4, 7, 8, 11, 13, 14] == units [1, 2, 4, 7, 8, 11, 13, 14]? True
+n=16 phi= 8 law holds<=q=97: True   live@q=n: [1, 3, 5, 7, 9, 11, 13, 15] == units [1, 3, 5, 7, 9, 11, 13, 15]? True
+n=17 phi=16 law holds<=q=103: True   live@q=n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] == units [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]? True
+n=18 phi= 6 law holds<=q=109: True   live@q=n: [1, 5, 7, 11, 13, 17] == units [1, 5, 7, 11, 13, 17]? True
+n=19 phi=18 law holds<=q=115: True   live@q=n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] == units [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]? True
+n=20 phi= 8 law holds<=q=121: True   live@q=n: [1, 3, 7, 9, 11, 13, 17, 19] == units [1, 3, 7, 9, 11, 13, 17, 19]? True
+n=21 phi=12 law holds<=q=127: True   live@q=n: [1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20] == units [1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20]? True
+n=22 phi=10 law holds<=q=133: True   live@q=n: [1, 3, 5, 7, 9, 13, 15, 17, 19, 21] == units [1, 3, 5, 7, 9, 13, 15, 17, 19, 21]? True
+n=23 phi=22 law holds<=q=139: True   live@q=n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22] == units [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]? True
+n=24 phi= 8 law holds<=q=145: True   live@q=n: [1, 5, 7, 11, 13, 17, 19, 23] == units [1, 5, 7, 11, 13, 17, 19, 23]? True

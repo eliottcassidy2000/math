@@ -1,0 +1,11 @@
+AP M= (Fraction(1, 14), (1, 14))
+GW M= (Fraction(1, 14), (1, 14))
+Part I: nonresonant live for AP/GW to q=560: []
+Deep-well off-resonance live@183: 2
+q=14: liveAP=6 liveGW=6 hist_same=True
+q=28: liveAP=6 liveGW=6 hist_same=True
+q=42: liveAP=6 liveGW=6 hist_same=True
+q=70: liveAP=6 liveGW=6 hist_same=False
+q=98: liveAP=6 liveGW=6 hist_same=False
+q=112: liveAP=6 liveGW=6 hist_same=False
+q=196: liveAP=6 liveGW=6 hist_same=False
