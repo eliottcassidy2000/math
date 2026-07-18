@@ -1,0 +1,4 @@
+EXHAUSTIVE anchored enumeration (the method that actually has power).
+  CONTROL n=9 box=32: EXHAUSTIVE anchored, 1678981 compact covering sets ; below 1/8: 1
+       M=4/33     =0.121212  (1, 3, 4, 5, 7, 11, 18, 32)
+  TEST    n=10 box=24: EXHAUSTIVE anchored, 215249 compact covering sets ; below 1/9: 0

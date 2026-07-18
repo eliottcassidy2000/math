@@ -1,0 +1,7 @@
+ANCHORED TEST of the compact analog:  compact (rho<n-1) primitive covering => M >= 1/(n-1) ?
+anchors = maximal prime powers <= n (what covering forces)
+
+  n=10 (anchors [8, 9, 5, 7], box 56): compact covering sets tested 143268 ; below 1/9: 0  -> analog no counterexample
+  n=11 (anchors [8, 9, 5, 7, 11], box 56): compact covering sets tested 144560 ; below 1/10: 0  -> analog no counterexample
+  n=12 (anchors [8, 9, 5, 7, 11], box 56): compact covering sets tested 105874 ; below 1/11: 0  -> analog no counterexample
+  n=13 (anchors [8, 9, 5, 7, 11, 13], box 56): compact covering sets tested 106994 ; below 1/12: 0  -> analog no counterexample

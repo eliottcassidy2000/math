@@ -1,0 +1,2 @@
+n=10 EXHAUSTIVE anchored, box=28: 999071 compact covering 9-sets ; below 1/9: 0
+  (n=9 control counterexample has max 32, so box 28 is still below the scale that produced it)

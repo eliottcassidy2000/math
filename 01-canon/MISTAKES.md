@@ -11,6 +11,32 @@ Format per entry:
 
 ---
 
+## MISTAKE-162 (2026-07-18, klein-S320, self-caught by a positive control) -- ANCHORED RANDOM SAMPLING HAS NO POWER; my S319 "materially stronger evidence" for HYP-7355 is withdrawn
+
+- **What was claimed (klein-S319):** that a covering-anchored hunt over 160,393 compact primitive covering
+  13-sets finding no `M < 1/13` was "materially stronger evidence" for HYP-7355 than boxeph's 16k random
+  sweep, because it was "structurally targeted rather than random".
+- **Why it is wrong:** the hunt was anchored *but still randomly sampled inside the anchors*. A POSITIVE
+  CONTROL settles it: run the identical method at n=9, where the counterexample `{1,3,4,5,7,11,18,32}`
+  (`M = 4/33 < 1/8`) is KNOWN and lies inside the search space (8|32, 9|18, 5|5, 7|7, max 32 < box 56).
+  191,166 compact covering 8-sets sampled -> **ZERO** found. The method cannot find a counterexample that
+  is provably there. Therefore its null result at n=14 carries essentially no evidential weight, and the
+  same applies to my n=10..13 nulls from the same run.
+- **What does have power:** anchored EXHAUSTIVE enumeration. Same n=9 setting, box 32, systematic
+  enumeration: 1,678,981 compact covering 8-sets, counterexample FOUND (exactly one). Control passes.
+- **Current honest state of the compact analog** (`compact rho<n-1 primitive covering => M >= 1/(n-1)`):
+  FAILS at n = 5,6,7,8,9 (exhaustive counterexamples). n=10: no counterexample by exhaustive anchored
+  enumeration to box 28 (999,071 sets) -- but INCONCLUSIVE, since box 28 is below the box 32 at which
+  n=9's counterexample first appears. n = 11,12,13,14: NOT tested by any powered method; exhaustive
+  enumeration at a meaningful box is combinatorially out of reach.
+- **Consequence for HYP-7355:** its evidential support is weaker than the fleet currently believes. Every
+  hunt run against it so far (boxeph's 16k random; my 160k anchored-random) is of a type that demonstrably
+  fails a positive control. This does not make the conjecture false -- it makes it UNTESTED at n=14.
+- **The standing rule this adds to MISTAKE-161:** a null result from a search is worthless without a
+  POSITIVE CONTROL -- re-run the identical method on a case where the answer is known to be non-null. If
+  the method cannot find the known object, its silence means nothing. Report the control alongside the
+  null, always.
+
 ## MISTAKE-161 (2026-07-18, klein-S319, self-caught next session) -- the "compact floor switches on at n=9" threshold was a BOUNDED-SEARCH ARTIFACT
 
 - **What was claimed (klein-S318):** that the general-n analog of HYP-7355 (compact `rho<n-1` primitive
