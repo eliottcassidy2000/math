@@ -395,6 +395,25 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S102 -- THE "FREE SIEVE WINDOW" LEVER IS REFUTED: the crux forces at MEDIUM moduli 13<q'<q, not the sieve
+
+Owner: prove the S101 lever "two interior small gaps force a free sieve window (q'<=13),
+contradiction." REFUTED as stated. V={14,15,28,42,...,154,169} = deep-well residue AP + a twin
+(+15,-168) => TWO small gaps at q=183. Best M over q'<=13 = 0 (SIEVE-COMPLETE: 13|169, 11|154,
+7|14... all sieve moduli killed), yet M(V)=1/12>1/13 at q=24. So two small gaps do NOT force a
+sieve window; beating is at a MEDIUM modulus q'>13. (Some 2-gap configs beaten at q=11<=13, not
+all => no uniform q'<=13 rule.)
+
+WHAT IT SHOWS: three regimes separate -- sieve q'<=13 (S101 lemma = sieve-completeness, NOT enough:
+sieve-complete families can have M>1/13 via q'>13); maximizer q~13val (band/gaps); MEDIUM 13<q'<q
+where the crux FORCES. '>=2 gaps at maximizer => better time at medium q'' = deep-well isolation
+(non-AP=>shallow CF=>M>1/13) = the open inverse theorem. WHY HARD: residues don't translate rigidly
+under t-change (each v_i moves at rate v_i), so a q-hole isn't a q'-hole-around-0; the map is CF
+descent not rotation. Sharpens S101: difference-closure is non-variational (S101) AND non-sieve
+(this session); content = medium band = additive/CF-depth (klein-S279, S92). Crux (=LRC14, S94)
+NOT proved; a false lead removed, true content pinned to 13<q'<q.
+FILES: reflection the-free-sieve-window-lever-is-refuted-...-boxeph-S102, script+out, HYP-7555. boxeph; S102.
+
 ## boxeph-2026-07-18-S101 -- THE ROUTE B CRUX IS THE OPEN INVERSE THEOREM (=LRC14): what covering gives + why maximality can't finish it
 
 Owner: prove the Route B compact/AP-rigidity crux. HONEST: it is EQUIVALENT to the open
