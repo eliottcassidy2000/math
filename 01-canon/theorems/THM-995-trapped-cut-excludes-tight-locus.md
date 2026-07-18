@@ -1,7 +1,7 @@
 ---
 id: THM-995
 title: THE TRAPPED CUT EXCLUDES THE TIGHT LOCUS — the THM-984 residual is a STRICT-MARGIN question, never an M=1/14 equality. The reduction capstone (THM-984) leaves "μ₀ > 0 on trapped cores"; the FORMALIZATION-PICTURE sharpens this to "rigidity of the tight equality M=1/14 plus a strict margin on the non-tight residual". THIS FILE REMOVES THE EQUALITY HORN: every known tight family (M = 1/14 exactly) VIOLATES a trapped-core hypothesis, so the tight locus lies entirely OUTSIDE the trapped cut and the residual is purely the strict-margin case M > 1/14. (I) THE EXACT ESCAPE CENSUS (all M-values exact rationals on the Farey-refined critical grid, all 8 hypotheses exact integer predicates): AP {1..13} — M=1/14, FAILS gap + max≥23 (small/comparable, → window-census branch); AP {2,4,…,26} — M=1/14, FAILS gap + common-residue (→ common-residue branch); sporadic {1..11,13,24} — M=1/14 EXACTLY yet FAILS covering (→ sieve branch, t=1/q witness); deep-well {1..12,182} — M=14/183, FAILS compressed (182 is a dominant runner, 182 > 13·12; → 91/dominant-peel branch); perturbed {1..11,13,36} — M=3/41, FAILS covering; deep-well {1..12,84}, {1..12,98} — M=1/13, FAIL covering; (II) THE THREE-ROUTE STRUCTURE: every tight/near-tight family escapes by exactly one of three mechanisms, each matching an ALREADY-CLOSED assembly branch — SMALL/COMPARABLE (fail gap or max≥23 ⇒ window ≤22 or comparable branch), DOMINANT-RUNNER (fail compressed ⇒ the peel branch), SIEVE-COVERED (fail covering ⇒ t=1/q). The tight locus is arithmetically special (APs, dominant wells, sieve-nulls); the trapped cut is designed to be its complement; (III) THE STRICT-INTERIOR MARGIN: a 40-family sample of genuine trapped cores (distinct, gap, compressed, max≥23, non-clusterable, covering — a SUPERSET of true trapped cores, so the bound transfers) has min M = 0.1945, margin +0.1231 over 1/14, median 0.2448 — trapped cores are not merely non-tight, they sit DEEP in the loneliness interior (≥ 2.7× the threshold on the sample). The residual μ₀ > 0 is a large-margin statement everywhere the sample reaches; the analytic task is to certify NO trapped family approaches 1/14, and the census shows the near-1/14 configs are exactly the ones the cut excludes
-status: (I) EXACT escape census (7 families, exact M, exact predicates); (III) sampled (40 trapped, min M 0.19); (IV) DILATION ESCAPE LEMMA PROVED (non-primitive ⟹ fails common-residue); (V) adversarial hunt survived (~970 perturbations); (VII) LAYERED REDUCTION — Layer 1 (dilation, PROVED) + Layer 2 (sieve-tight ⟹ fails covering, PROVED definitional) reduce the equality horn to PRIMITIVE COVERING tight families; the residual (primitive covering tight ⟹ small/comparable) is the conjectural hard core; (VIII) MARGIN FLOOR empirical — two independent multi-start descents minimize trapped M to 1/7 and 41/253 (both ≥ 1/7 = 2× threshold), sample+hunt agree ⟹ observed δ ≥ 1/14, conjectured trapped ⟹ M ≥ 1/7. Rigorous: Layers 1+2, dilation, the exact census. Conjectural: the primitive-covering residual + the double-threshold floor (= the classical LRC(14) hard core). NOT claimed as a universal theorem
+status: (I) EXACT escape census (7 families, exact M, exact predicates); (III) sampled (40 trapped, min M 0.19); (IV) DILATION ESCAPE LEMMA PROVED (non-primitive ⟹ fails common-residue); (V) adversarial hunt survived (~970 perturbations); (VII) LAYERED REDUCTION — Layer 1 (dilation, PROVED) + Layer 2 (sieve-tight ⟹ fails covering, PROVED definitional) reduce the equality horn to PRIMITIVE COVERING tight families; the residual (primitive covering tight ⟹ small/comparable) is the conjectural hard core; (VIII) MARGIN FLOOR empirical — two independent multi-start descents minimize trapped M to 1/7 and 41/253 (both ≥ 1/7 = 2× threshold), sample+hunt agree ⟹ observed δ ≥ 1/14, conjectured trapped ⟹ M ≥ 1/7. (IX) THE SIEVE-MARGIN LEMMA PROVED (uncovered q≤13 ⟹ M ≥ 1/q > 1/14, explicit witness+margin) ⟹ tight locus pinned to the "covers 2..13, misses 14" stratum (both known tights confirmed); (X) covering-family floor empirical M ≥ 1/9 (3000 samples+descent, none tight). Rigorous: Layers 1+2, dilation, sieve-margin lemma (IX), the exact census. Conjectural (sharpened): "covers all 2..14 ⟹ M > 1/14" (the residual) + the covering floor. The 1/7 double-threshold is WITHDRAWN as universal (mod-7 resonance, family-specific). NOT claimed as a universal theorem
 source: kind-pasteur-2026-07-17-S128 (cont.48; owner: finish LRC(14), pull often, integrate incoming — codex took the live-floor Lean layer, this reroutes to the reduction's analytic residual)
 depends_on:
   - THM-984 (the reduction capstone this sharpens)
@@ -129,8 +129,41 @@ residual μ₀ > 0 an enormous quantitative margin and is a far stronger stateme
 bare positivity the reduction needs. The compressed-gap stratum where this must be proved
 is precisely the classical hard core of LRC(14).
 
+## (IX) THE SIEVE-MARGIN LEMMA (PROVED) — the residual sharpens to "covers all of 2..14"
+
+**Operational covering.** For q ≤ 14, the sieve witness t = 1/q gives min_i ‖vᵢ/q‖ ≥ 1/q
+UNLESS some vᵢ ≡ 0 (mod q). So a family is "covering" (no sieve witness) iff **every
+q ∈ {2,…,14} divides some speed**.
+
+**Lemma (rigorous, one line):** if some q ∈ {2,…,13} divides no speed, then
+M(V) ≥ 1/q > 1/14 — explicit witness t = 1/q, margin 1/q − 1/14 ≥ 1/182.
+*Proof:* no vᵢ ≡ 0 (mod q) ⟹ ‖vᵢ/q‖ ≥ 1/q for all i ⟹ min ≥ 1/q; and 1/q > 1/14 for
+q ≤ 13. ∎ (Verified exactly, 100 families.)
+
+**Consequence — the tight locus is pinned to ONE stratum.** A tight family (M = 1/14) must
+cover 2..13 (else the lemma forces M > 1/14 strictly). Both known tight families ({1..13},
+{1..11,13,24}) cover 2..13 and MISS exactly q = 14 — non-covering at 14, hence Layer-2
+handled (not trapped). The residual therefore reduces from "primitive covering tight" to
+the sharper, testable statement:
+
+> **Does any family covering ALL of 2..14 have M = 1/14?**
+
+## (X) THE COVERING-FAMILY FLOOR (empirical) — M ≥ 1/9
+
+Minimizing M over families that cover all of {2,…,14} (3000 samples + local descent):
+min M = **1/9 = 0.1111** (1.56× threshold, V = [3,4,11,12,13,15,18,20,24,42,55,64,67]),
+and NO covering family is tight. So "covering ⟹ M > 1/14" holds on the sample with a
+comfortable margin; with the sieve-margin lemma (IX) the equality horn closes conditionally
+on this one clean statement.
+
+**Erratum to (VIII):** the trapped-minimizer's 1/7 is a MOD-7 RESONANCE (witness
+t* = 178/525, denominator divisible by 7; speeds 150, 375 hit 1/7), hence family-specific —
+NOT a universal floor. The honest floors: non-covering at q ≤ 13 ⟹ margin ≥ 1/q − 1/14
+(RIGOROUS, IX); covering families ⟹ M ≥ 1/9 (empirical, X); the double-threshold 1/7 is
+withdrawn as a universal claim.
+
 ## Named next
-- The residual (VII) conjecture: primitive covering tight ⟹ small/comparable — closes the
-  equality horn universally (the two rigorous layers already handle non-primitive + sieve).
-- Prove the double-threshold margin floor M ≥ 1/7 on the trapped cut (or the weaker
-  M > 1/14 + δ for explicit δ) — the quantitative half, feeding THM-984 → THM-979 → census.
+- Prove "covers all of 2..14 ⟹ M > 1/14" (the sharpened residual, IX+X) — closes the
+  equality horn universally; the sieve-margin lemma already handles every q ≤ 13.
+- The quantitative covering-family floor M ≥ 1/9 (or explicit δ) — feeds THM-984 → THM-979
+  → the census.

@@ -1,0 +1,7 @@
+== covering-family M-minimum (3000 covering samples + descent) ==
+  min covering family V=[3, 4, 11, 12, 13, 15, 18, 20, 24, 42, 55, 64, 67]
+  EXACT M=1/9=0.111111 ; > 1/14? True ; margin=0.03968
+  any covering family TIGHT (M=1/14)? False
+  >>> covering => M > 1/14 SUPPORTED: min covering M = 0.11111 (1.56x threshold)
+  >>> the residual (primitive COVERING tight) is EMPTY on the sample -- equality horn closes conditionally.
+DONE

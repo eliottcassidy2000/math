@@ -1,0 +1,9 @@
+== (A) structure of the 1/7 minimizer ==
+  V=[42, 66, 96, 108, 150, 228, 229, 247, 375, 377, 396, 414, 552]
+  M=1/7=0.142857, witness t*=178/525
+  speeds achieving the min (||v t*||=1/7): [150, 375]
+  t* denominator: 525  (1/7-structure: 7 | denom? True)
+
+== (B) targeted residual hunt (compressed cluster + gap, tight?) ==
+  TIGHT {1..11,13,24}: sieve q=14
+  TIGHT {1..10,11,13,24}: sieve q=14
