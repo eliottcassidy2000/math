@@ -1,0 +1,6 @@
+K=[257, 258, 263]: M(P)=0.0909 bad-union frac=0.376, per-killer≈[0.143, 0.147, 0.139], sum-per=0.429
+   => union 0.376 vs sum 0.429: additive; good s exists: True
+K=[300, 301, 302]: M(P)=0.0909 bad-union frac=0.372, per-killer≈[0.122, 0.14, 0.218], sum-per=0.481
+   => union 0.372 vs sum 0.481: COLLAPSED (overlap); good s exists: True
+K=[200, 300, 450]: M(P)=0.0909 bad-union frac=0.287, per-killer≈[0.183, 0.122, 0.104], sum-per=0.409
+   => union 0.287 vs sum 0.409: COLLAPSED (overlap); good s exists: True
