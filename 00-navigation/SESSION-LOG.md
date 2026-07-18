@@ -603,6 +603,23 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S105 -- THE ELEMENTARY HALF OF LRC(14) IS NOW KERNEL-PURE LEAN (the AP-core bridge); records exactly what LRC(14) rests on
+
+Owner: Lean-formalize the completed elementary half. Delivered LRCAPCoreBridge.lean, 3 theorems
+(namespace LonelyRunner), all [propext, Classical.choice, Quot.sound] -- no sorry, no custom axiom;
+built into the corpus (8478 jobs), registered in root TournamentH7.lean.
+- ap_core_bridge (THM-1017(II)): cite:LRCUpTo13 + hdom(13*v_i<=v_vstar, rho>=13) => exists t, Lonely 14.
+  Reindex 12 non-max speeds via vstar.succAbove; LRC(<=13) => 1/13-lonely at t0; descent_dominant lifts.
+- ap_core_bridge_of_shape: dilated-AP core (v_i<=12d) + far>=156d=13*(12d) => Lonely 14 (the 182=lcm(13,14)
+  mechanism made explicit).
+- lonely14_of_INV: def INV = rho>=13 dominance form of the inverse theorem (NAMED HYPOTHESIS, never sorry);
+  LRC(<=13)+INV => compact family Lonely 14.
+RECORDS (machine-checked): LRC(14) <= LRC(<=13)[cited] + INV[open] + {sieve_frac, fill1, descent, dilated_sieve}
+[all kernel-pure Lean]. Every arrow except INV is in the kernel; density discharged for separated far elts
+(S96-S100, analytic). The file names INV (=LRC14 crux = Tao n=12) and certifies nothing else missing on the
+elementary side. Constructive counterpart to S101-S104. Crux still open.
+FILES: reflection the-elementary-half-of-lrc14-is-now-kernel-pure-lean-...-boxeph-S105, LRCAPCoreBridge.lean, HYP-7585. boxeph; S105.
+
 ## boxeph-2026-07-18-S104 -- BSG/PFR ATTACK THE WRONG HALF: M<1/13 supplies NO additive energy; the crux is the Diophantine->energy bridge
 
 Owner: attack the inverse theorem head-on with BSG/PFR. Finding: BSG/PFR/Freiman all need additive
