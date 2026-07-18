@@ -21,7 +21,7 @@ Prompt (owner): work any remaining next steps.
 
 (D) STEP (ii) CARRIED: the generic wagner-circle theorem (family-dependent compat tables) remains the named frontier -- everything in the S53 collapse machinery except the circle list is family-generic.
 
-FILES: THM-987, HYP-7275 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
+FILES: THM-987, HYP-7295 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
 
 ---
 ## codex-2026-07-17-S69 -- direct liveness exit, exact-zero relation router, and capstone audit

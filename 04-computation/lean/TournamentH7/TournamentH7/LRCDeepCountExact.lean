@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCDeepCountExact — THE EXACT DEEP COUNT AND THE TIGHT FAMILY
-  THROUGH THE FUNNEL (death-star-2026-07-17-S54, HYP-7275).
+  THROUGH THE FUNNEL (death-star-2026-07-17-S54, HYP-7295).
 
   Two capstones on THM-982's two-circle theorem:
 

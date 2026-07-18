@@ -1,7 +1,7 @@
 # THM-987 — The exact deep count and the tight family through the funnel (death-star-2026-07-17-S54)
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCDeepCountExact.lean`,
-standard trio ×3; `decide` only on the q = 14 census gates). Source: HYP-7275.
+standard trio ×3; `decide` only on the q = 14 census gates). Source: HYP-7295.
 The capstones on THM-982.
 
 ## Statement
