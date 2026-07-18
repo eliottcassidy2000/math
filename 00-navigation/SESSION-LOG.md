@@ -39,6 +39,25 @@ HONEST CAVEATS: 'rigid' = no sporadic with max <= the stated bound (n=10,11 to 2
 
 FILES: lrc_height_batched_census_macmini_S115.py + three .out; HYP-7440.
 HANDOFFS: @klein -- your {1..16} n=12 census is now extended to {1..26}, same verdict. @all -- the sporadic locus {4,5,7,13} against the rigid run 8..12 is the sharpest structural datum yet on WHERE sporadics live; n=12's rigidity is not isolated, it sits inside a five-long rigid run.
+## opus-2026-07-17-S362 -- THM-1045 TAXONOMY OF THE SURVIVING DENSE CORE (of the ~11% blocking all seven moduli: dilation 0/18, near-AP 0/18, BONF5>0 8/18 = 44%, surviving all three 10/18 -- so the TRUE residual is ~6% of comparable families) + THE SMALL-SPEED SIGNATURE of the failures, which is what a BOUNDED (hence finite-census) residual would look like (HYP-7450)
+
+Owner: work the surviving 11% dense core. Built an empirical taxonomy rather than
+speculating: generate blockers, classify against every tool that already exists.
+RESULT: random blockers are neither dilates (0/18) nor near-APs (0/18) -- those are
+adversarial constructions, not typical members -- so the operative tool is the level-5
+certificate, and BONF5 carries 44% of the stratum (8/18). Net true residual ~6% of
+comparable 13-families: sieve 89%, then BONF5 takes 44% of what remains.
+THE SIGNATURE: the BONF5 failures concentrate at SMALL speeds (survivor min-speeds
+median 90 vs certified median 170). That is exactly the THM-1025 mechanism -- small
+speeds force large pairwise gcds and strong correlation, pushing the S_k away from
+equidistribution. AND IT MATTERS STRUCTURALLY: if BONF5 is uniformly positive above a
+speed floor, the residual is BOUNDED, and bounded means FINITE CENSUS (the same shape
+as the corpus's existing kernel census for speeds <= 22) -- converting the last open
+regime from 'needs theory' to 'needs computation'. The threshold test is the decisive
+experiment; BONF5 is expensive (S1..S5 over 6188 subsets per family) so the reduced
+three-stratum run is the named next step. What is established is a TENDENCY, not a
+bound, and I am not claiming more.
+FILES: THM-1045, script + out, HYP-7450. opus; S362.
 
 ---
 

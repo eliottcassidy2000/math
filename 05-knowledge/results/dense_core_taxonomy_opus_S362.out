@@ -1,0 +1,35 @@
+TAXONOMY OF FAMILIES BLOCKING ALL SEVEN MODULI (the surviving ~11%)
+  collected 18 blockers; classifying each against existing tools
+
+    [157, 184, 208, 217...]  BONF5=+0.0100
+    [151, 164, 302, 312...]  BONF5=+0.0275
+    [32, 60, 95, 144...]  BONF5=-0.2738   <-- SURVIVES ALL
+    [145, 171, 182, 266...]  BONF5=-0.1301   <-- SURVIVES ALL
+    [89, 118, 219, 322...]  BONF5=-0.0234   <-- SURVIVES ALL
+    [171, 190, 207, 273...]  BONF5=-0.0287   <-- SURVIVES ALL
+    [190, 394, 583, 679...]  BONF5=+0.0287
+    [84, 91, 167, 200...]  BONF5=-0.0550   <-- SURVIVES ALL
+    [143, 144, 264, 269...]  BONF5=-0.0119   <-- SURVIVES ALL
+    [355, 386, 469, 560...]  BONF5=+0.0318
+    [129, 223, 252, 299...]  BONF5=-0.0304   <-- SURVIVES ALL
+    [49, 55, 59, 72...]  BONF5=-0.4194   <-- SURVIVES ALL
+    [234, 339, 340, 345...]  BONF5=+0.0183
+    [113, 329, 474, 502...]  BONF5=+0.0218
+    [324, 325, 474, 609...]  BONF5=+0.0387
+    [63, 88, 107, 186...]  BONF5=-0.1532   <-- SURVIVES ALL
+    [103, 130, 457, 542...]  BONF5=+0.0104
+    [71, 72, 136, 158...]  BONF5=-0.0567   <-- SURVIVES ALL
+
+  of 18 blockers:  dilate 0, near-AP 0, BONF5>0 8
+  SURVIVING ALL THREE TOOLS: 10/18
+
+  net: the sieve removes ~89%; of the ~11% remaining, BONF5 alone
+  certifies 44% -- the true residual is the rest.
+
+==================================================================
+THE THRESHOLD TEST: does BONF5 turn positive above a speed floor?
+  (survivors above clustered at SMALL speeds -- if there is a threshold
+   V0 with BONF5 > 0 for all blockers of min-speed >= V0, the TRUE
+   RESIDUAL IS BOUNDED, and a bounded residual is a finite census.)
+    min-speed in [  23,  60): 0/7 have BONF5>0 ; range [-0.2636, -0.0460]
+    min-speed in [  60, 120): 5/7 have BONF5>0 ; range [-0.0180, +0.0376]
