@@ -1,0 +1,10 @@
+  tail progress 10/70, n=175780, violations=0
+  tail progress 20/70, n=351560, violations=0
+  tail progress 30/70, n=527340, violations=0
+  tail progress 40/70, n=703120, violations=0
+  tail progress 50/70, n=878900, violations=0
+  tail progress 60/70, n=1054680, violations=0
+  tail progress 70/70, n=1230460, violations=0
+TAIL FINAL: triples 151-220 done (70), pairs=1,230,460, violations=0
+COMBINED with the first 150 triples (2,636,700 pairs, 0 violations):
+  => ALL 220 triples x all (w1<w2<=200): ZERO violations => radius-3 TWO-SMALL REGIME CLOSED => THM-1006 FULLY PROVED
