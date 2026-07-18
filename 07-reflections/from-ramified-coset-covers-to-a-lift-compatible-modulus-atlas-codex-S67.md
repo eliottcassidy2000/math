@@ -49,6 +49,18 @@ transverse flag closes every remaining owner obligation.  Neither quotient
 dominates the other.  This is the first complete example of the correct
 architecture: a nonnested atlas of predicate-preserving local views.
 
+THM-1096 adds the complementary power-of-two model.  At common scale `32`,
+heredity is simply “at least two top-order coordinates.”  A single honest map
+
+```text
+Z/32Z -> Z/8Z
+```
+
+retains every lower-order thick fibre and already forces at least four failed
+owners in every scalar row.  Here no transverse chart is needed.  The contrast
+with scale 30 is informative: the atlas should permit several incomparable
+charts, but it should not require them when one exact carrier is terminal.
+
 THM-1091 proves the dual statement.  Complete divisor fibres are equivalent
 to annihilator support in the finite Fourier transform.  The sheet-mask
 hypergraph and the weighted zero-sum frequency hypergraph are two exact
@@ -164,6 +176,17 @@ residue multiset, gaps, active pair, and strict local maximum at `8/105` of the
 death-star-S57 row.  Yet it changes Cover14 and creates the exact global
 maximum `3/20`.  One maximizer chart cannot see the global LRC predicate.
 
+The compatibility equivalence is now kernel-checked in
+`LRCRationalScaleGuardrails`:
+
+```text
+(exists k : Z, d | u+qk)  iff  (gcd(q,d) : Z) | u.
+```
+
+The reverse direction uses explicit Bézout coefficients, so the transition
+map is not merely an existential CRT citation.  This is the first formalized
+gluing law of the proposed atlas.
+
 ## Definition of the candidate carrier
 
 For each denominator `q`, let
@@ -223,6 +246,23 @@ not be runners, and a binary relation need not be the final quotient.  The LRC
 predicate is existential across addresses and conjunctive across thirteen
 speeds, so shared higher incidence is intrinsic.
 
+THM-1121 supplies a second exact warning about vertex choice.  THM-1111's
+pairwise maximum-spanning-tree correction is strong but leaves an adversarial
+margin.  Replacing runner or killer pairs by a **weighted bipartite incidence
+hypergraph** produces a separating functional: 35 rational-time obligations
+have total weight 505, every finite-branch killer has load at most 84, and
+
+```text
+6*84 < 505.
+```
+
+This closes the complete `92<=k_i<333` r=6 finite horn without enumerating
+sextuples or even conditioning on the seven-speed core.  Its killer-load
+tournament is transitive and adds no proof content.  The useful object is the
+fractional cover dual on obligations.  This is a concrete success of the
+alternate-vertex-set default: proof obligations, not runners, expose the
+missing one-unit inequality.
+
 ## Corrections to the current inverse-theorem narrative
 
 The exact logical chain is
@@ -248,12 +288,20 @@ twelve-term AP requires a sharp full-set stability and filling theorem.
 
 The incoming S57 continuation makes a compatible correction: exact
 “near-tight implies AP” is false (`{1,...,11,24}` is the first displayed
-near-tight non-AP row), and the far-element target is better phrased as
+near-tight non-AP core), and the far-element target is better phrased as
 cover-gap uniqueness.  Its soft-Weyl and component-width lenses leave a
 very-near-tight fragmented residual.  The broader assertions that every
 non-AP core has cover-gap exactly `1/2`, or that primitive equality implies
 the AP at all heights, remain verified/conjectural beyond the stated finite
 ranges; they should not be used as closed suppliers.
+
+THM-1115 subsequently gives the full thirteen-speed warning at equality:
+`{1,...,11,13,24}` is exactly tight, primitive, and not an AP.  THM-1120's
+essential-region criterion explains the local substitution `12 <-> 24`, but
+its assertion that only two tight families exist is a structured search
+result, not a classification theorem.  Any inverse theorem must therefore
+state its covering/centering hypotheses precisely; “tight implies AP” is not
+available globally.
 
 ## Concrete next theorems
 
@@ -312,19 +360,23 @@ cross-modulus resonance/owner certificate.
 This is the global analogue of THM-1091.  It avoids THM-1093's local triangle
 loss and THM-1100's fixed-atlas error.
 
-### 4. Structural compression at the r=6 frontier
+### 4. Uniform tail after the r=6 weighted finite atlas
 
-The latest `r=6` scan finds `R=1.858` and an estimated `3.64e12` sextuple
-finite horn, about 140 serial days.  This is a proof-architecture wall, not a
-license for a larger brute-force run.  The coherent-lift atlas should be tested
-as a compression: group sextuples by shared owner packets/lift words, preserve
-literal witness masks, and measure whether the quotient actually reduces the
-certificate bank before trusting it.
+THM-1121 eliminates the estimated `3.64e12` sextuple finite horn completely.
+The remaining issue is not computation below 333 but the logical scope of the
+measure half: THM-1102's `max T=308.4` came from a width-16 near-bottom scan.
+Interiority inside that window does not prove a uniform statement for widely
+spaced or scaled quintuples.  The next theorem must give a scale-separation or
+cluster normal form showing that every `k_6>=333` row lies in the measure horn,
+or else exhibit the missing tail branch.  The weighted finite atlas should not
+be used to conceal that analytic gap.
 
 ## Frontier statement
 
 Common-scale ramification is now understood as a nonnested exact quotient
-atlas through scale `31`; scale `32` is reserved and under independent audit.
+atlas through scale `32`; scale `33` is next.  The r=6 finite horn is closed by
+a universal weighted obligation atlas, while its unbounded measure tail is
+still open.
 Fixed global denominator atlases are impossible.  One Route-B residue chart is
 not lift-faithful, and the elementary single-modulus count must be gcd
 stratified.  The remaining global object is the signed shared-lift gluing

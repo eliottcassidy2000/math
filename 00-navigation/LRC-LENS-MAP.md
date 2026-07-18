@@ -194,8 +194,12 @@ search for one more universal scalar:
   gives the sharper uniform reason: lower orders fill whole three-point fibres
   modulo nine, order-27 masks are transversals, and every order-27 owner has
   saturated score below 27; heredity supplies two.  Three implementations
-  agree on all exact headline censuses.  Thus the untreated
-  common-scale faces now begin at `c=28`.  The finite H5 bank and non-AP-centred/deep-sheet
+  agree on all exact headline censuses.  THM-1072 then closes `c=28` by a
+  terminal `Z/4` thick-fibre relaxation; `c=29,31` are prime-excluded;
+  THM-1090 closes `c=30` by complementary `Z/6` and `Z/10` flags; and
+  THM-1096 closes `c=32` by a terminal `Z/8` thick-fibre relaxation independently
+  replayed against 403,733,376 exact reachable masks.  Thus the untreated
+  common-scale faces now begin at `c=33`.  The finite H5 bank and non-AP-centred/deep-sheet
   continuations must also be closed or replaced by a uniform decreasing
   invariant;
 - the final nonlacunary dense core needs a theorem that composes its component,

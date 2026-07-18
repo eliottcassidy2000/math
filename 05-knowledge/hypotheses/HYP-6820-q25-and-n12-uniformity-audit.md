@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified but not uniformly empty. Primitive proper AP-centred H6 common-scale faces are proved closed through c=31: multiples of thirteen are primitive-impossible, all primes at least 19 are excluded uniformly, and THM-990/992/993/994/1072/1090 supply independently replayed structural certificates at scales 24, 25, 27, 28, and 30. The next untreated common scale is c=32. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584. Global emptiness remains OPEN in the smooth-ramified H5 metric bank, primitive H6 composite scales from 32 through 840, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified but not uniformly empty. Primitive proper AP-centred H6 common-scale faces are proved closed through c=32: multiples of thirteen are primitive-impossible, all primes at least 19 are excluded uniformly, and THM-990/992/993/994/1072/1090/1096 supply independently replayed structural certificates at scales 24, 25, 27, 28, 30, and 32. The next untreated common scale is c=33. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584. Global emptiness remains OPEN in the smooth-ramified H5 metric bank, primitive H6 composite scales from 33 through 840, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
@@ -68,7 +68,13 @@ progress_note: >-
   An independently developed standard-library C++ literal-CRT referee agrees
   with the Python primary on the grammar, scalar bank, both quotient passes,
   and all 3,401,088 exact reachable-mask incidences.  Scale 31 is
-  prime-excluded, so the next untreated common scale is c=32.
+  prime-excluded.  THM-1096 closes c=32: its two-adic grammar has 12,281 words
+  and 11,347,644 labelled support/order contexts; scalar capacity leaves 3,450
+  rows on 284 supports.  Retaining every `D|8` mask as an exact thick-fibre
+  anchor gives live-owner histogram `0:2802,1:456,2:192`.  An independently
+  developed literal-CRT C++ referee agrees on every theorem-bearing count and
+  additionally constructs all 403,733,376 exact reachable masks.  The next
+  untreated common scale is c=33.
   THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
