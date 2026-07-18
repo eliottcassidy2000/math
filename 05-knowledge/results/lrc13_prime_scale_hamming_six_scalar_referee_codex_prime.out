@@ -1,0 +1,13 @@
+prime common-scale Hamming-six scalar referee
+order-p cardinality #{x:-p<x<=p, x=p*r mod13}; recurrence a_(p+13)=a_p+2
+residues s 1,2,3,4,5,6,7,8,9,10,11,12
+six-largest bonuses 1,3,5,6,6,6,7,9,11,12,12,12
+five-largest bonuses 1,3,5,5,5,5,6,8,10,10,10,10
+D1 exclusion max(B5-s)=2<3q; all-Dp exclusion max(B6-s)=2<q for q>=3
+small prime six-capacity margins p-top6 19:1 23:-1 29:0 31:1 37:1
+exceptional support scans p23 0/924; p29 0/924; p17 anchor QR,NQR
+primes 19..839 excluded 139; prime scales with scalar support 0
+ratio tournament p23=p29 scores 2,3,3,3,5,5,6,6,8,8,8,9; triangles 40; SCC 12; Hamiltonian paths 124961; ties 42; flips 12
+faithful carrier is the labelled induced ratio-capacity digraph with absolute owner sums; tournament orientation is lossy
+bonus-table SHA256 5fa2bb54d6ebdc665e62fdd88054ecc976ec5811bdbc8f366f87b7b41e93f6ae
+exceptional-support SHA256 1f089b4656bf5896974e11beeaa0cfa37ac0e321007f61947f63da1f49b87f47
