@@ -552,9 +552,63 @@ theorem danger_measure_le (v : ℕ) (hv : 1 ≤ v) :
       field_simp
     rw [ENNReal.ofReal_of_nonpos hB, mul_zero, add_zero, hA, hfin]
 
+/-! ## The Lipschitz margin converter (boxeph-S79): M-floors become μ₀-floors
+
+The missing link of the certificate chain: a margin-`M` instant spawns a good
+interval of radius `(M − 1/14)/vmax`, so ANY quantitative bound `M > 1/14`
+yields `μ₀ ≥ 2(M − 1/14)/vmax` — which the weight-1 sampling bridge
+(LRCGridSampling + THM-984) converts into a census certificate at an explicit
+modulus.  M-floor → μ₀-floor → liveCount floor → certificate, all mechanical. -/
+
+theorem good_interval_of_margin (n : ℕ) (v : Fin n → ℕ) (vmax : ℕ)
+    (hmax : ∀ i, v i ≤ vmax) (hvmax : 1 ≤ vmax) (t₀ M : ℝ)
+    (hM : ∀ (i : Fin n) (m : ℤ), M ≤ |(v i : ℝ) * t₀ - m|) (hM14 : 1/14 < M) :
+    Set.Ioo (t₀ - (M - 1/14) / vmax) (t₀ + (M - 1/14) / vmax)
+      ⊆ (⋃ i, dangerR (v i))ᶜ := by
+  have hvmaxR : (0 : ℝ) < (vmax : ℝ) := by exact_mod_cast hvmax
+  rintro t ⟨ht1, ht2⟩
+  simp only [Set.mem_compl_iff, Set.mem_iUnion, not_exists]
+  intro i hdanger
+  obtain ⟨m, hm⟩ := hdanger
+  have hviR : ((v i : ℕ) : ℝ) ≤ (vmax : ℝ) := by exact_mod_cast hmax i
+  have habs : |t - t₀| < (M - 1/14) / vmax := by
+    rw [abs_lt]
+    constructor <;> linarith
+  have hkey : |(v i : ℝ) * t₀ - m|
+      ≤ |(v i : ℝ) * t - m| + (v i : ℝ) * |t - t₀| := by
+    have hdec : (v i : ℝ) * t₀ - m
+        = ((v i : ℝ) * t - m) - (v i : ℝ) * (t - t₀) := by ring
+    calc |(v i : ℝ) * t₀ - m|
+        = |((v i : ℝ) * t - m) - (v i : ℝ) * (t - t₀)| := by rw [hdec]
+      _ ≤ |(v i : ℝ) * t - m| + |(v i : ℝ) * (t - t₀)| := abs_sub _ _
+      _ = |(v i : ℝ) * t - m| + (v i : ℝ) * |t - t₀| := by
+          rw [abs_mul, abs_of_nonneg (by positivity : (0:ℝ) ≤ ((v i : ℕ) : ℝ))]
+  have hsmall : (v i : ℝ) * |t - t₀| < M - 1/14 := by
+    calc (v i : ℝ) * |t - t₀| ≤ (vmax : ℝ) * |t - t₀| :=
+          mul_le_mul_of_nonneg_right hviR (abs_nonneg _)
+      _ < (vmax : ℝ) * ((M - 1/14) / vmax) :=
+          mul_lt_mul_of_pos_left habs hvmaxR
+      _ = M - 1/14 := by field_simp
+  have := hM i m
+  linarith
+
+/-- The measure corollary: `μ₀ ≥ 2(M − 1/14)/vmax`. -/
+theorem good_measure_of_margin (n : ℕ) (v : Fin n → ℕ) (vmax : ℕ)
+    (hmax : ∀ i, v i ≤ vmax) (hvmax : 1 ≤ vmax) (t₀ M : ℝ)
+    (hM : ∀ (i : Fin n) (m : ℤ), M ≤ |(v i : ℝ) * t₀ - m|) (hM14 : 1/14 < M) :
+    ENNReal.ofReal (2 * (M - 1/14) / vmax) ≤ volume ((⋃ i, dangerR (v i))ᶜ) := by
+  have hIoo : volume (Set.Ioo (t₀ - (M - 1/14) / vmax) (t₀ + (M - 1/14) / vmax))
+      = ENNReal.ofReal (2 * (M - 1/14) / vmax) := by
+    rw [Real.volume_Ioo]
+    congr 1
+    ring
+  rw [← hIoo]
+  exact measure_mono (good_interval_of_margin n v vmax hmax hvmax t₀ M hM hM14)
+
 #print axioms consecutive_overlap_credit
 #print axioms consecutive_credit_closed
 #print axioms danger_measure_le
+#print axioms good_measure_of_margin
 
 end
 

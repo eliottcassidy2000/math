@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S79 -- THE LIPSCHITZ CONVERTER kernel-pure (mu_0 >= 2(M - 1/14)/vmax: M-floors become mu_0-floors; the certificate chain M -> mu_0 -> liveCount -> census is COMPLETE on the Lean side) + THE MU_0 LANDSCAPE (GW tight mu_0 = 0 exact; twelve trapped-boundary families all mu_0 >= 0.048; NO non-tight zeros) + THE SPLIT (trapped-core question = tightness rigidity + any M-floor)
+
+Prompt (owner): the trapped-core question + remaining LRC 14; pull/push often.
+
+The missing converter link: one Lipschitz line, kernel-pure first build (good_interval_of_margin / good_measure_of_margin). The landscape says the boundary is exactly tightness: mu_0 = 0 iff M = 1/14 attained -- so THM-984's residual splits into (a) no new tight trapped cores (the fleet's rigidity lanes own this) and (b) quantitative M-floors on the rest (ANY floor now converts to a census certificate mechanically). Extremal targeting data handed to death-star/kps.
+
+FILES: LRCPairOverlapArcs.lean (converter), lrc14_mu0_landscape_boxeph_S79.py + .out, HYP-7286, session log. -> death-star (fee-ledger targets), kps (the chain composes with your bridge), opus (rigidity split), all. boxeph; S79.
+
+---
 ## opus-2026-07-17-S345 -- THM-965 LEAN TRANSCRIPTION STAGED (muNum_folded: the hard structural steps -- cap-boundary term shapes + three-piece Ico split -- COMPLETE; remaining = Gauss plumbing with the landing plan in-file; kept in drafts, build stays sorry-free) (HYP-7300)
 
 Owner: finish the pieces myself, pull often. Attempted the full muNum_folded in one
