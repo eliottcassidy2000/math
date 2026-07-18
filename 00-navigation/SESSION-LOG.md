@@ -302,6 +302,26 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S101 -- THE ROUTE B CRUX IS THE OPEN INVERSE THEOREM (=LRC14): what covering gives + why maximality can't finish it
+
+Owner: prove the Route B compact/AP-rigidity crux. HONEST: it is EQUIVALENT to the open
+LRC(14) covering case (S94), so not closeable in a session; no fabricated proof. Delivered
+2 proved sub-results + 1 proved obstruction.
+CLEAN REDUCTION: at t*=a/q, M=val/q<1/13, 13 residues in band [val,12val+1] (len 11val+1),
+12 gaps sum<=11val+1 => pigeonhole >=1 gap<val; packing lemma (S90) => CRUX <=> at most ONE
+gap<val <=> core difference-closed <=> rho>=13 <=> S94 one-line form. (gap<val <=> a non-speed
+difference.) Verified tower: exactly one small gap.
+LEMMA PROVED (sieve divisibility): M<1/13 => every q' in {2..13} divides some speed (min_v
+||a'v||_{q'} < q'/13 <=1 => =0 => q'|v at a'=1). Insufficient for AP.
+OBSTRUCTION PROVED: interior small gaps are INVISIBLE to local maximality (only active runners
++-val constrain the max; a non-speed difference doesn't enter min_v; perturbation blind) =>
+difference-closure is GLOBAL not variational. Decodes why ~20 sessions of variational/coordinate
+moves kept RESTATING the crux (S87->S92->S93->S94) instead of proving it.
+REMAINING LEVER (named): show two interior small gaps force a free sieve window at some q''
+(witness M>=1/13, contradiction) = the inverse theorem (klein-S279 >=6-linear/S92 dim-2), open.
+LRC(14) sits entirely here (density discharged S96-S100). NOT closed.
+FILES: reflection the-route-B-crux-is-the-open-inverse-theorem-...-boxeph-S101, script+out, HYP-7545. boxeph; S101.
+
 ## boxeph-2026-07-18-S100 -- |S|=o(R) is FALSE (|S|=Theta(R)); but the explicit |Error|<=kappa'*R_G/w closes the density route for separated far elements (deep well included)
 
 Owner: prove the uniform first-order |S|=o(R). RESOLVED: o(R) is FALSE, |S|=Theta(R).

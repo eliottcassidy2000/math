@@ -1,0 +1,14 @@
+deep well {1..12,182}:  M=14/183=0.07650 (<1/13=True)  q=183 val=14
+  (i)  every q'<=13 divides some speed: True
+  (ii) #gaps<val = 1  smallgaps=[1]   residues=[14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+
+dilate x2 {2..24,364}:  M=14/183=0.07650 (<1/13=True)  q=183 val=14
+  (i)  every q'<=13 divides some speed: True
+  (ii) #gaps<val = 1  smallgaps=[1]   residues=[14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+
+tower {1..12,364}:  M=28/365=0.07671 (<1/13=True)  q=365 val=28
+  (i)  every q'<=13 divides some speed: True
+  (ii) #gaps<val = 1  smallgaps=[1]   residues=[28, 56, 84, 112, 140, 168, 196, 224, 252, 280, 308, 336, 337]
+
+Confirms: exactly ONE small gap (core difference-closed) + full sieve divisibility.
+The crux <=> "no SECOND interior small gap" is the open inverse theorem (= LRC(14), S94).
