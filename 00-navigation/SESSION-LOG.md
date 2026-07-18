@@ -1,3 +1,20 @@
+## opus-2026-07-17-S347 -- THE TWO REMAINING THM-964 LEAN LINKS KERNEL-PURE: (P) LRCFloorTable (per-class floor 14*muNum>=4ab-49 from muNum_folded; mu >= 1/49 - 1/(4ab)) + (M) LRCWindowAverage (the FULL Fubini position step: window_start_measure inner integral = L, window_average Tonelli, live_window_exists) -- both promoted, standard axiom trio; every ingredient of the Hunter-sawtooth chain now individually kernel-checked (HYP-7300)
+
+Owner: finish the per-class minimization and the Fubini step. BOTH DONE, both fully
+kernel-pure (the Fubini landed complete, not the planned staged skeleton). (P) fell out
+of S346's muNum_folded in ~4 lemmas: fold(r) in [0,49] via (r-7)^2>=0, so 14*muNum >=
+4ab-49. (M) the Fubini step: the inner x-integral of the window indicator = L
+(window_start_measure), Tonelli over the indicator product swaps the integrals
+(window_average = ofReal L * volA), and the contradiction route gives a live window
+(live_window_exists) with NO measurability of the fibre map needed. Mathlib frictions
+logged: omega-through-set-defs, ENNReal.mul_pos (no PosMulStrictMono), indicator_of_notMem,
+the lintegral_lintegral_swap measurability via the measurable slab {x<=y<=x+L}. THM-964:
+every ingredient now kernel-checked; what remains is only the top-level assembly (wire
+boxeph's tree_hunter_add_le to these floors -- both sides already green). FILES:
+LRCFloorTable.lean, LRCWindowAverage.lean, THM-964 status, HYP-7300. opus; S347.
+
+---
+
 ## opus-2026-07-17-S346 -- muNum_folded PROVED KERNEL-PURE (THM-965 in Lean): TournamentH7.LRCFoldedIdentity builds green, standard axiom trio, promoted to the build tree + root import -- the two-variable folded identity 14*muNum a b = 4ab + fold((a+b)%14) - fold((b-a)%14) is now formal; the Hunter-sawtooth floor table (THM-964) is thereby analytic over a kernel-proved closed form (HYP-7290)
 
 Owner: finish the Gauss iterations myself, pull often. DONE -- muNum_folded lands green.
