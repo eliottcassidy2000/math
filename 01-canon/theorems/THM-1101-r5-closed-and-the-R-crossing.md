@@ -1,5 +1,5 @@
 ---
-id: THM-1093
+id: THM-1101
 title: THE r=5 CLUSTERED CASE CLOSED, AND THE R-CROSSING LOCATED BETWEEN r=4 AND r=5. (I) r=4's R IS SETTLED: over ALL triples with k₃ ≤ lo+100 across all 220 nine-speed cores, **max R = 0.98453 < 1** — the same worst case (core [1,2,3,5,6,7,8,9,11], killers 150/156/158, T = 155.6) that the narrow cont.62 window found, and the decay check confirms R falls away monotonically beyond it (0.985 → 0.541 → 0.389 → 0.307 → 0.233 → 0.205 as k₃ runs 158 → 9158). So the measure horn DOES suffice at r=4, by 1.5%, and THM-1081's finite horn was — like THM-1051's and THM-1061's — independent verification rather than a necessity. (II) r=5 IS WHERE IT BREAKS, exactly as the ladder predicted: **max R = 1.28495 > 1**, at core [1,2,4,5,7,9,11,12] with killers (158,160,162,164) and T = 210.7. The measure horn genuinely fails, and the finite horn becomes MANDATORY for the first time. (III) A BOUND CORRECTION I caught before claiming closure: my first r=5 run set the finite-horn bound at max k₄ + 20 = 198, but the fifth killer is certified by the measure horn only once it exceeds **T**, not k₄ — and max T over the failing region is 210.7 > 198, leaving a genuine gap at k₅ ∈ [198, 211]. Rerun at KB = max T + 25 = **235**. (IV) r=5 FINITE HORN COMPLETE: **263,708,305** quintuples passing the sound covering-necessary condition, **ZERO uncertified**, over all 495 eight-speed cores. (V) THE LADDER, complete: **0.51852 (r=2, exhaustive) → 0.73375 (r=3) → 0.98453 (r=4) → 1.28495 (r=5)** — the crossing sits between r=4 and r=5, so the measure horn is a finite-depth tool that survives exactly three removals
 status: (I) SETTLED over all triples in the bottom window (where the worst case provably sits for r=2,3,4) with a monotone-decay check beyond; the 1.5% margin is real but the window is now wide, not narrow. (II),(IV) PROVED — R > 1 is a construction, and the finite horn is an exhaustive finite verification in exact arithmetic with an explicit (q,a) witness per family, the covering-necessary pruning being sound. (III) is a self-caught error in my own first r=5 run, recorded rather than silently fixed. (V) measured
 source: kind-pasteur-2026-07-18-S128 (cont.63; owner: run the r=5 finite horn and settle r=4's R over all triples)
@@ -10,7 +10,7 @@ related:
 script: 04-computation/r4_R_alltriples_kps_S128c63.py, r5_R_crossing_kps_S128c63.py, r5_finite_horn_kps_S128c63.py, r5_finite_horn_fixed_kps_S128c63.py (+ .out)
 ---
 
-# THM-1093 — r=5 closed, and the R-crossing located
+# THM-1101 — r=5 closed, and the R-crossing located
 
 ## (I) r=4's R, settled
 
