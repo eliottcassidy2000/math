@@ -1,0 +1,19 @@
+kappa = (1/pi^2) sum_{l!=0} |sin(pi l/7)|/l^2 = 0.1881   (THM-727: |S|<=0.61 R)
+
+frame [1, 2, 3, 4, 5, 6]:  Error(w), |S|=w|Error|, and |S|/R
+     w      Error(w)  |S|=w|Err|    R    |S|/R   kappa*R
+     7      0.209524     1.46667   44   0.0333     8.278
+    13     -0.017792     0.23129   44   0.0053     8.278
+    20     -0.002041     0.04082   44   0.0009     8.278
+    50     -0.001088     0.05442   44   0.0012     8.278
+   100      0.001769     0.17687   44   0.0040     8.278
+   200     -0.002517     0.50340   44   0.0114     8.278
+   500     -0.000517     0.25850   44   0.0059     8.278
+  1000      0.000054     0.05442   44   0.0012     8.278
+  2000     -0.000088     0.17687   44   0.0040     8.278
+  5000      0.000035     0.17687   44   0.0040     8.278
+
+R (frame R_s endpoint count) = 44  (FIXED -- does not grow with w)
+A = lim Error(w) : the column Error(w) -> 0 as w->inf  ==>  A = 0  (proved: |Error|<=kappa*R/w).
+|S| stays BOUNDED (<= kappa*R): A=0 is the O(R) tail of THM-727. The SUFFICIENT uniform
+target is |S| = o(R) (1st-order Weyl cancellation over the R_s boundaries), NOT o(R^2).

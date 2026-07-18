@@ -1,0 +1,12 @@
+UNIFORM test: does |S|=w|Error| = o(R) as the frame GROWS (R -> inf)?
+|S|/R -> 0 would mean the 1st-order Weyl cancellation is uniform => density route closes.
+   frame     R  diam |   w=2diam   w=6diam  w=20diam   max|S|/R
+    1..6    44     6 |    0.0071    0.0074    0.0074     0.0074
+    1..8    56     8 |    0.0011    0.0055    0.0149     0.0149
+   1..10    56    10 |    0.0063    0.0100    0.0121     0.0121
+   1..12    48    12 |    0.0043    0.0045    0.0068     0.0068
+   1..14    48    14 |    0.0044    0.0035    0.0062     0.0062
+
+If |S|/R stays bounded/shrinks as R grows across frames, the 1st-order sum is O(R) or o(R)
+UNIFORMLY -> Error=|S|/w=O(R/w)=O(1/mult)->0 with scale separation. That is the sufficient
+target beyond A=0, and the data shows whether the uniform cancellation holds.

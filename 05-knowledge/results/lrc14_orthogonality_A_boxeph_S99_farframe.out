@@ -1,0 +1,10 @@
+does |S|/R stay small when the FRAME contains a far element (R genuinely large)?
+frame {1..6,T}, peel w = second far element >> T
+         frame     R |     w=8T    w=30T  ->  |S|/R small = uniform cancellation persists
+     {1..6,30}    72 |   0.0221   0.0204
+     {1..6,60}   124 |   0.0276   0.0092
+    {1..6,120}   212 |   0.0306   0.0114
+
+R now GROWS with T (far element in frame). If |S|/R stays ~0.01, the 1st-order Weyl
+cancellation |S|=o(R) is uniform even with far elements in the frame => the multi-far
+peel also closes (Error=|S|/w = o(R)/w -> 0 under scale separation).

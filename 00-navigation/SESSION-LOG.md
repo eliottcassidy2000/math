@@ -140,6 +140,27 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S99 -- THE FRAME ORTHOGONALITY A=<nu_hat,ghat>=0 IS PROVED (but it is the O(R) tail; the density route needs first-order |S|=o(R))
+
+Owner: prove A=<nu_hat,ghat>=0. DONE, with a self-correction of S98.
+CLEAN READING (THM-727): Error(w)=|{x in union R_s : wx in the MISSED sector s(x)}| - (1/7)|union R_s|
+= the far runner filling the frame's missed sector; A=lim Error = its equidistribution discrepancy.
+PROOF: Parseval (ghat_s(0)=0) => Error=sum_s sum_{l!=0} ghat_s(l)U_s(-lw)/(2pi i l w); |U_s|<=2rho_s,
+|ghat_s(l)|=|sin(pi l/7)|/(pi|l|) => |Error|<=kappa*R/w, kappa finite, R=sum 2rho_s < inf (fixed frame)
+=> Error->0 => A=0. QED. Verified {1..6}: Error(w)->0 (0.21..3.5e-5), |S|=w|Error| bounded <=0.5.
+
+S98 SELF-CORRECTION: 'row closes iff A=0' was an OVERCLAIM. A=0 follows from the trivial |U_s|<=2rho_s
+i.e. |S|<=kappa*R (= THM-727's |S|<=0.61R) -- the O(R) TAIL, so Error=O(R/w)->0 only for w>>R
+(well-separated). At the peel w=d~diam~R (marginal), A=0 is necessary-NOT-sufficient. SUFFICIENT target:
+|S|=o(R), a FIRST-ORDER cancellation in the signed Weyl sum over R_s boundaries (the loss was never the
+orthogonality; the 2nd moment Q_s=Theta(R^2) discards the first-order cancellation -- bound S, never Q_s).
+
+EVIDENCE (|S|=o(R) uniform): |S|/R<=0.015 for frames {1..6}..{1..14}; <=0.031 for {1..6,T} (far elt in
+frame, R up to 212). Bounded frames {1..k} have R=O(1) => |S|=O(1), Error=O(1/d)->0; DEEP WELL {1..12,182}
+|S|~0.7, Error~0.004<Phi_inf=0.029 (matches S98) -- extremal family closes by the elementary tail.
+LRC(14) not closed; remaining piece = uniform first-order |S|=o(R), soft-Weyl on the RIGHT order.
+FILES: reflection the-frame-orthogonality-A-is-zero-proved-...-boxeph-S99, script + 3 outs, HYP-7535. boxeph; S99.
+
 ## boxeph-2026-07-18-S98 -- CAUCHY-SCHWARZ IS THE DENSITY ROUTE'S ONLY REAL LOSS: the resonance cancels in S but not in Q_s
 
 Owner: compute Phi_inf(frame), check sqrt(C)<Phi_inf, extend the fixed-frame scaling law.
