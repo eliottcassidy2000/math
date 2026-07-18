@@ -1,3 +1,42 @@
+## opus-2026-07-17-S372 -- THM-1095 THE THM-965 TEMPLATE DOES NOT EXTEND TO k=3 (delta*m7 varies 150-195% and CHANGES SIGN within one residue class; k=2 control 0.8-8.6%) -- evaluation gives an ALGORITHM where the ledger needs a FORMULA, so after four consecutive consistent failures I recommend ABANDONING the uniform Bonferroni-ledger route (HYP-7550)
+
+Owner: work the higher-dimensional Dedekind sum evaluation. I tested whether it can
+deliver what the ledger actually needs, and it cannot.
+WHAT THE LEDGER NEEDS: a FORMULA, not an evaluation. THM-965 works because delta*ab is
+determined ENTIRELY by residues mod 14g -- that is what allowed a uniform bound over
+infinitely many families and gave the sawtooth floor. THM-1065 already established that
+per-family evaluation is CHEAP (8191 subset measures in seconds), so an evaluation
+algorithm -- which is what Dedekind reciprocity provides -- adds nothing at all.
+TWO CORRECTIONS TO MY OWN FIRST RUN, both recorded rather than quietly fixed. The k=2
+control was VACUOUS: every residue class it displayed had a = 0 mod 14, hence 7|a, hence
+delta = 0 by the S368 criterion, so it showed only trivial zeros. And the normalisation
+was wrong: I used delta*abc, but at k=2 the natural factor ab IS the multiplicative
+minimum m7, so the correct analogue is delta*m7 (THM-1080: delta ~ 1/(pi^k m7)).
+CORRECTED CONTROL (k=2, 7-free residues): relative spread within a residue class is
+8.62%, 3.71%, 2.62%, 0.80% -- small, and consistent with exact determination plus the
+N=300 truncation tail, exactly as the closed form predicts.
+THE k=3 RESULT: relative spread 192.7%, 153.7%, 177.2%, 193.7% -- and the quantity
+CHANGES SIGN within a single residue class (+0.029115 at (1,2,3) against -0.026993 at
+(1,2,17)), at small speeds where truncation error is smallest. A tail cutoff cannot flip
+a sign by an order of magnitude. So delta at k=3 is NOT a function of (residues mod 14,
+m7) and the THM-965 template does not extend.
+SCOPE, stated carefully: this refutes that SHAPE, not the existence of a closed form in
+richer invariants (GL-class of the lattice, continued-fraction data). Zagier's higher
+Dedekind sums do satisfy reciprocity -- but reciprocity is a DESCENT ALGORITHM, and
+algorithms do not touch the obstruction, which is uniformity over infinitely many
+families rather than per-family cost.
+RECOMMENDATION: ABANDON the uniform Bonferroni ledger. Four independent attempts now
+fail, and they fail consistently -- containment/fragmentation (THM-1070, looseness ~5x
+per level), absolute values (THM-1085, constant 2.4 -> 19 -> 51 with k), coset
+decomposition keeping signs (THM-1090, provably identical to the absolute bound), and
+closed-form evaluation (here). The ledger was a plan; it does not survive contact with
+k=3. WHAT SURVIVES AS TOOLS: the seven-moduli sieve (~89% kill), the exact mod-7
+independence criterion, the AP decoupling and its limiting profile, and the k=2 sawtooth
+floor itself.
+FILES: THM-1095, THM-1090 amended, 2 scripts + outs, HYP-7550. opus; S372.
+
+---
+
 ## opus-2026-07-17-S371 -- THM-1093 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
 
 Owner: work the bound that keeps the signs. I found where the signs live, and then

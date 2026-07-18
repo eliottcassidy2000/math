@@ -1,0 +1,31 @@
+(1) CONTROL: at k=2, is delta*ab determined by residues mod 14?  (g=1)
+    residues (0, 1)     n=3  delta*ab = ['0.000000', '0.000000', '0.000000']  spread 0.00e+00
+    residues (0, 3)     n=3  delta*ab = ['0.000000', '0.000000', '0.000000']  spread 0.00e+00
+    residues (0, 5)     n=3  delta*ab = ['0.000000', '0.000000', '0.000000']  spread 0.00e+00
+    residues (0, 9)     n=3  delta*ab = ['0.000000', '0.000000', '0.000000']  spread 0.00e+00
+
+(2) THE TEST: at k=3, is delta*abc determined by residues mod 14?  (pairwise coprime)
+    residues (1, 0, 1)    n=4
+        (1, 14, 15)    delta*abc =     2.746833
+        (1, 14, 29)    delta*abc =     3.426210
+        (1, 28, 29)    delta*abc =    10.226805
+        (15, 28, 29)   delta*abc =    83.865322
+        spread 81.1185   RELATIVE 96.7%
+    residues (1, 2, 1)    n=4
+        (1, 2, 15)     delta*abc =    -0.039592
+        (1, 2, 29)     delta*abc =     0.065202
+        (1, 16, 29)    delta*abc =     0.797114
+        (15, 16, 29)   delta*abc =    19.801629
+        spread 19.8412   RELATIVE 100.2%
+    residues (1, 2, 3)    n=4
+        (1, 2, 3)      delta*abc =     0.174269
+        (1, 2, 17)     delta*abc =    -0.108395
+        (1, 16, 17)    delta*abc =     3.926050
+        (15, 16, 17)   delta*abc =    31.111311
+        spread 31.2197   RELATIVE 100.3%
+    residues (1, 2, 5)    n=4
+        (1, 2, 5)      delta*abc =     0.159697
+        (1, 2, 19)     delta*abc =    -0.115891
+        (1, 16, 19)    delta*abc =     1.026187
+        (15, 16, 19)   delta*abc =    20.645897
+        spread 20.7618   RELATIVE 100.6%

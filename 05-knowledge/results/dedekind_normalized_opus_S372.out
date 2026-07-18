@@ -1,0 +1,31 @@
+(3) CONTROL, DONE PROPERLY: k=2, 7-free residues, is delta*ab fixed by (a,b) mod 14?
+    residues (1, 1)     ['0.11765', '0.11262', '0.10857', '0.10751']  RELATIVE spread 8.62%
+    residues (1, 2)     ['0.10203', '0.10273', '0.09960', '0.10344']  RELATIVE spread 3.71%
+    residues (1, 3)     ['0.08165', '0.08169', '0.08341', '0.08122']  RELATIVE spread 2.62%
+    residues (1, 4)     ['0.06124', '0.06131', '0.06090', '0.06139']  RELATIVE spread 0.80%
+    (near-zero spread here = delta*ab IS a function of residues, i.e. THM-965)
+
+(4) THE PROPERLY NORMALISED k=3 TEST: is delta*m7 fixed by (a,b,c) mod 14?
+    residues (1, 2, 3)   
+        (1, 2, 3)      delta=+0.029115  m7=   1   delta*m7 = +0.029115
+        (1, 2, 17)     delta=-0.003374  m7=   8   delta*m7 = -0.026993
+        (1, 16, 17)    delta=+0.014355  m7=   1   delta*m7 = +0.014355
+        (15, 16, 17)   delta=+0.007614  m7=   2   delta*m7 = +0.015228
+        RELATIVE spread 192.7%
+    residues (1, 2, 5)   
+        (1, 2, 5)      delta=+0.015989  m7=   2   delta*m7 = +0.031979
+        (1, 2, 19)     delta=-0.003239  m7=   9   delta*m7 = -0.029151
+        (1, 16, 19)    delta=+0.003372  m7=   3   delta*m7 = +0.010116
+        (15, 16, 19)   delta=+0.004523  m7=  12   delta*m7 = +0.054282
+        RELATIVE spread 153.7%
+    residues (1, 2, 9)   
+        (1, 2, 9)      delta=+0.007184  m7=   4   delta*m7 = +0.028734
+        (1, 2, 23)     delta=-0.003604  m7=  11   delta*m7 = -0.039644
+        (1, 16, 23)    delta=+0.003096  m7=  12   delta*m7 = +0.037154
+        (15, 16, 23)   delta=+0.004989  m7=   4   delta*m7 = +0.019956
+        RELATIVE spread 193.7%
+    residues (1, 2, 11)  
+        (1, 2, 11)     delta=+0.005265  m7=   5   delta*m7 = +0.026325
+        (1, 2, 25)     delta=-0.002840  m7=  12   delta*m7 = -0.034084
+        (1, 16, 25)    delta=+0.002541  m7=   9   delta*m7 = +0.022867
+        RELATIVE spread 177.2%

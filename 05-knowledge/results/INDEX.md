@@ -1460,3 +1460,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `sign_cancellation_opus_S371.out` | [STORED] | THM-1093: coset decomposition exact; COSET-ABS ~ FULL-ABS, so cancellation is ACROSS cosets. | (self) |
 | `character_sum_opus_S371.out` | [STORED] | THM-1093: character sum C(A) identically 0 for odd k (antipodal symmetry) -- not a discriminant. | (self) |
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly (Tbar=0); no gain, 12.4x spread. | (self) |
+| `dedekind_evaluation_opus_S372.out` | [STORED] | THM-1095: first (mis-normalised) run; k=2 control vacuous -- kept as the record of the correction. | (self) |
+| `dedekind_normalized_opus_S372.out` | [STORED] | THM-1095: corrected test -- delta*m7 varies 150-195% and CHANGES SIGN within a residue class at k=3. | (self) |
