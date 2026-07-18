@@ -1,0 +1,7 @@
+RIGOROUS moiré bound: meas(F) = fast-frame forbidden measure; good kick GUARANTEED if meas(F)<1
+  P{1..10}+[257,258,263]: t0=1/11 Δ=6  meas(F)=0.682=15/22  (bound 1/7+Δ(t0+smax)=0.700)  meas(F)<1: True  => M(S)>=1/14
+  P{1..10}+[300,301,302]: t0=1/11 Δ=2  meas(F)=0.578=89/154  (bound 1/7+Δ(t0+smax)=0.329)  meas(F)<1: True  => M(S)>=1/14
+  P{1..9}+[500,502,505,509]: t0=1/10 Δ=9  meas(F)=1.000=1  (bound 1/7+Δ(t0+smax)=1.071)  meas(F)<1: False  => M(S)>=1/14
+  P{1..11}+[257,258]: t0=1/12 Δ=1  meas(F)=0.381=8/21  (bound 1/7+Δ(t0+smax)=0.227)  meas(F)<1: True  => M(S)>=1/14
+  P{1..10}+[157,158,159]: t0=1/11 Δ=2  meas(F)=0.578=89/154  (bound 1/7+Δ(t0+smax)=0.329)  meas(F)<1: True  => M(S)>=1/14
+  P{1..8,11,12}+[257,258,263]: t0=1/9 Δ=6  meas(F)=0.722=13/18  (bound 1/7+Δ(t0+smax)=0.829)  meas(F)<1: True  => M(S)>=1/14

@@ -59,7 +59,7 @@ multiple of 14** ⟸ (THM-997 no-ghost residual). After S56 this splits into exa
 
 ## 4. Highest-leverage targets (ranked)
 
-**T1 — Close (R2) uniformly: the moiré bound on near-equal bad-kick-sets.** THM-1015 shows the kick
+**T1 — Close (R2) uniformly: the moiré bound. [DONE for narrow clusters — THM-1016.]** THM-1015 shows the kick
 *always* works empirically for near-equal fast killers because their bad-kick-sets overlap; a uniform
 theorem needs to bound `meas(⋃ B_k)` below the union bound using the correlation of the arithmetic
 progressions `{m/k_i}`. This would upgrade THM-1015 from per-family to a uniform closure of the entire
