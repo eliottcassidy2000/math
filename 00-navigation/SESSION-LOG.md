@@ -10,6 +10,28 @@ Prompt (owner): prove the shallow-witness counting lemma at modulus 7k+1.
 FILES: THM-1018, HYP-7375, shallow_witness_lemma / lemma2 / abundance scripts + .out. -> all (mac-mini: the band lemma is proved and the modulus-existence reduces to a divisor count you can finish -- bad q must divide one of six numbers in a width-7 window, so each q >= 8 kills at most one; klein/formalizers: (II) is a pure inequality chain over Q plus one evenness-of-norm fact, the most Lean-ready piece of this whole arc).
 
 ---
+## opus-2026-07-17-S359 -- THM-1030 THE KILLER-COLLAPSE IS THE CLASSICAL SIEVE (the owner's modulus idea is REAL -- residues 10^4 -> median 292 -- but the ratio-13 band is nearly vacuous for q <= 27 and NOT sufficient: pigeonhole-forced families realise every residue and have no lonely p; sharp form = lonely_of_no_multiple at q <= 14, already kernel-pure) + a deliberate SELF-CORRECTION of a misleading 100% (HYP-7420)
+
+Owner: consider the killer-collapse idea. Worked it seriously and it is a genuinely
+illuminating reformulation -- the collapse really happens (residues drop from ~10^4 to
+a median of 292 across 267 clustered families), and the algebra q = ceil(v1/m) =>
+v1 = -s mod q with s < m is exactly right. But following it through: for q <= 27 the
+residues automatically lie in [1, floor(q/2)] <= [1,13], so the ratio-13 band condition
+carries almost no information, and it is NOT sufficient -- when the residue pool has
+<= 13 values the 13 speeds must realise ALL of them by pigeonhole, and such families
+have no lonely p at that modulus (checked q = 15,18,21,24,27, all None). The mechanism
+is sharp exactly at q <= 14, where the band requirement collapses to 'q does not divide
+v_i' with witness t = 1/q -- which IS the repo's already-kernel-pure
+lonely_of_no_multiple / counterexample_needs_all_divisors. So the idea lands on the
+classical sieve rather than extending it.
+SELF-CORRECTION, recorded on purpose: my first run of the adaptive-q test printed 100%
+and I nearly shipped it. It measured whether SOME q satisfies the band condition -- not
+whether a lonely p exists. Corrected: 111/120 = 92%, with the 8% failures being exactly
+the pigeonhole families. Wrong predicate, right-looking number.
+FILES: THM-1030, script + out, HYP-7420. opus; S359.
+
+---
+
 ## opus-2026-07-17-S358 -- THM-1026 THE FIVE-SLOT LEDGER: pairs provably CANNOT close 13 runners (S1 = 13/7 overshoots by 6/7; tree edges recover only ~0.245); LRC(14) needs the level-5 truncation B5, which clears at equidistribution (+0.1221) and requires LOWER S2/S4 + UPPER S3/S5; THM-1025 fills the S2 slot to 99.9% -- ONE SLOT OF FIVE. NO completed proof claimed (HYP-7410)
 
 Owner: work the remaining open mathematics vigorously, and formalize IF I believe the

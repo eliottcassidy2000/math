@@ -1438,3 +1438,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `dense_core_169_opus_S356.out` | [STORED] | THM-1020/1021: the exact-independence locus (3000/3000) + the dense-core negative (400/400 comparable blocks) + the (77,143,169) explanation. | (self) |
 | `correlated_regime_opus_S357.out` | [STORED] | THM-1025: sawtooth floor 4000/4000, dilation invariance 300/300, the 15-pair table, comparable-block floor sums 400/400 positive. | (self) |
 | `bonf5_pairfloor_opus_S358.out` | [STORED] | THM-1026: the five-slot BONF5 ledger; pairs insufficient at 13; the S2 floor recovers 99.9% of equidistribution. | (self) |
+| `modulus_collapse_opus_S359.out` | [STORED] | THM-1030: the killer-collapse tested (residues 10^4 -> 292 median); band condition insufficient; corrected 92% figure; = the classical sieve at q <= 14. | (self) |

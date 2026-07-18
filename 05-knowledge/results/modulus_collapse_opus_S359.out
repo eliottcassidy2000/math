@@ -1,0 +1,39 @@
+(a)+(b) THE COLLAPSE AND THE BAND CONDITION, clustered 13-families:
+    267 clustered families: e_max <= 13*e_min holds in 15/267 (6%)
+    residue sizes e_max: median 292, max 736   (vs original speeds ~10^4) -- the collapse is real
+
+(c) DOES THE BAND CONDITION PREDICT A LONELY p?  (exact scan over p)
+    60 families: band condition matches lonely-p existence in 2/60
+      mismatch: cond=False p=77 e_max=431 e_min=1 q=901
+      mismatch: cond=False p=97 e_max=210 e_min=1 q=1339
+      mismatch: cond=False p=26 e_max=153 e_min=1 q=309
+
+(d) THE SUFFICIENCY DIRECTION (what the idea actually proves):
+    among families WITH e_max <= 13 e_min: lonely p exists in 15/15
+
+    => the band condition is SUFFICIENT (that is the theorem);
+       it is not necessary -- families failing it can still be lonely.
+
+(e) THE DECISIVE TEST, CORRECTED.  An earlier version of this script
+    measured only whether SOME q satisfies the band condition and reported
+    100%.  That is NOT the same as loneliness.  Corrected test: for each
+    family find q with the band condition, THEN verify a lonely p exists.
+    120 families had a band-condition q; of those, a lonely p
+    exists at that q in 111/120  (92%)
+
+(f) WHY THE BAND CONDITION IS NOT SUFFICIENT.  For q <= 27 the residues
+    lie in [1, floor(q/2)] <= 13, so e_max <= 13*e_min is nearly AUTOMATIC
+    -- it carries almost no information.  When the residue pool has <= 13
+    values, 13 speeds must realise ALL of them (pigeonhole), and a family
+    realising every residue has NO lonely p:
+      q=15: residues 1..7 (all present) -> lonely p: None
+      q=18: residues 1..9 (all present) -> lonely p: None
+      q=21: residues 1..10 (all present) -> lonely p: None
+      q=24: residues 1..12 (all present) -> lonely p: None
+      q=27: residues 1..13 (all present) -> lonely p: None
+
+    => the CLASSICAL SIEVE (q <= 14, witness t = 1/q) is the sharp form,
+       and the repo already has it kernel-pure as
+       LonelyRunner.lonely_of_no_multiple / counterexample_needs_all_divisors.
+       The collapse is a genuine and vivid reformulation of that sieve;
+       it does NOT extend the modulus range.
