@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified but not uniformly empty. Primitive proper AP-centred H6 common-scale faces are proved closed through c=25 (with c=13 primitive-impossible and all primes at least 19 excluded uniformly); THM-990 and THM-992 supply dual exact certificates at scales 24 and 25. THM-860 excludes primitive c=26, so the next numerically possible unclassified common scale is c=27. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584. Global emptiness remains OPEN in the smooth-ramified H5 metric bank, primitive H6 scales from 27 through 840, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified but not uniformly empty. Primitive proper AP-centred H6 common-scale faces are proved closed through c=27 (with multiples of thirteen primitive-impossible and all primes at least 19 excluded uniformly); THM-990/992/993/994 supply independently replayed structural certificates at scales 24, 25, and 27, while c=26 is forbidden. The next untreated common scale is c=28; c=29 is already prime-excluded. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584. Global emptiness remains OPEN in the smooth-ramified H5 metric bank, primitive H6 composite scales from 28 through 840, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
@@ -45,8 +45,15 @@ progress_note: >-
   verify all 216 owner rows have maximum union 21 or 22 and agree on both
   decisive digests and all counts. The owner-local normalization is essential: `Q_3` means
   the current owner's self coset, not a fixed global sheet residue. Since
-  THM-860 forbids `13|c` in a primitive packet, c=26 is impossible and the
-  next possible common-scale frontier is c=27.
+  THM-860 forbids `13|c` in a primitive packet, so c=26 is impossible.
+  THM-993/994 close c=27 in three independent implementations.  Scalar
+  capacity leaves 450 rows on 84 supports.  Exact owner DPs give feasible-
+  owner census `0:336,1:96,4:18`; a nested `Z/3,Z/9` relaxation already gives
+  two failed owners per row.  The sharper nine-fibre flag proof observes that
+  lower orders fill whole fibres of `Z/27 -> Z/9`, order-27 masks are
+  transversals, and every order-27 owner has saturated flag score below 27.
+  Hereditary lcm supplies at least two such owners.  The next untreated common
+  scale is c=28; c=29 is prime-excluded by THM-983.
   THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
@@ -122,6 +129,8 @@ depends_on:
   - THM-989
   - THM-990
   - THM-992
+  - THM-993
+  - THM-994
   - HYP-6750
   - HYP-6775
 related:

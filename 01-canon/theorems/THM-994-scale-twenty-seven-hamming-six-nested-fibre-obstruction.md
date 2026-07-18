@@ -1,13 +1,15 @@
 ---
 id: THM-994
 title: Scale-twenty-seven Hamming-six nested-fibre obstruction
-status: PROVED STRUCTURAL + REFEREED FINITE-EXACT — a complete deterministic nested-fibre certificate checks all 351,592,862,544 labelled state contexts, and its independently developed exact DP agrees with THM-993's standard-library primary on every headline census
+status: PROVED STRUCTURAL + DUAL INDEPENDENT REFEREE — nested `Z/3,Z/9` and saturated nine-fibre flag certificates both close all 351,592,862,544 labelled state contexts, while independent Python and C++ exact DPs agree with THM-993's standard-library primary on every decisive census
 source: codex-2026-07-17-S66 scale-twenty-seven continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992, THM-993]
 related: [THM-963, THM-969, THM-981, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.py
   - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.out
+  - 04-computation/lrc13_scale_twenty_seven_hamming_six_flag_referee_codex_c27.cpp
+  - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_flag_referee_codex_c27.out
 ---
 
 # THM-994 — scale twenty-seven has a terminal nested-fibre deficit
@@ -138,6 +140,63 @@ owners, so the common-scale-27 face is empty.  This is an exact finite
 structural certificate over all labelled scalar rows, not a sample and not an
 orbit-quotiented search.
 
+## Sharper nine-fibre flag obstruction
+
+The independent C++ referee finds a smaller uniform reason that every row has
+two failed owners.  Fix an owner and use the verified cyclic gauge to normalize
+it to label one.  Partition the sheets into the nine fibres
+
+```text
+F_j = {j, j+9, j+18},  j in Z/9.
+```
+
+Literal CRT reconstruction proves two exact incidence facts:
+
+1. every order `1`, `3`, or `9` mask is a union of complete `F_j` fibres;
+2. every order-27 mask meets each `F_j` in at most one point.
+
+For a choice of provider signatures, let `C` be the fibres completely covered
+by lower-order masks.  For `j` outside `C`, let
+
+```text
+h_j = min(3, number of chosen order-27 signatures meeting F_j).
+```
+
+Then every literal union has the safe upper bound
+
+```text
+Phi = 3*|C| + sum_(j notin C) h_j.                         (2)
+```
+
+The saturation at three forgets within-fibre offsets and collisions, so it can
+only enlarge the attainable cover.  Consequently an exact 27-sheet cover
+forces `Phi=27`.  This is the precise implication needed; the referee also
+checks, as a sidecar, that flag feasibility and exact feasibility agree on all
+2,700 scalar-survivor owner rows.
+
+There are only 225 owner-normalized scalar keys, 82 at an order-27 owner.  A
+finite flag-state DP proves the following sharp profile bounds, in coordinates
+`(#D1,#D3,#D9,#D27)`:
+
+```text
+(0,0,3,3) <= 26    (0,0,4,2) <= 22
+(0,2,1,3) <= 24    (0,2,2,2) <= 24
+(0,3,0,3) <= 24    (0,3,1,2) <= 22
+(0,4,0,2) <= 22.
+```
+
+Thus all 984 labelled order-27 owner projections are flag-infeasible.  The
+hereditary leave-one-out lcm condition is exactly the assertion that at least
+two coordinates have order 27.  The labels of those coordinates are therefore
+two impossible owners in every scalar row.  Scalar nonsurvivors already fail
+capacity, so this closes the complete face without classifying the 18 rows
+whose only feasible owners are the four order-three coordinates.
+
+This proof is a prime-power flag lemma in concrete form: whole-fibre anchors
+and bounded transversals reduce sheet coverage to a saturated capacitated
+hypergraph on nine vertices.  It is stronger and more uniform than a ranking
+of owner deficits, and it points directly toward a reusable `p^k` theorem.
+
 ## Literal sharpness sidecar
 
 The same primary separately performs immutable-set reachability at all 2,700
@@ -176,6 +235,13 @@ completed tournaments are transitive, with score multiset `{0,1,2,3,4,5}`,
 no directed cycle, six singleton SCCs, and one Hamiltonian path.  The
 tournament forgets the absolute threshold and cannot prove the theorem.
 
+The C++ referee completes a second tournament from
+`(feasible,flag score,capacity,flag-state count)`.  Relative to the exact
+gauge it flips zero edges in 336 rows, one edge in 96 rows, and two edges in
+18 rows; nevertheless all 450 flag tournaments are again transitive.  The
+stable score word is therefore a quotient artefact, while the sidecar fact
+`flag score < 27` is the obstruction.
+
 The `Z/3` quotient retains order-three thick fibres but forgets positions
 inside each fibre, pair overlaps among the relaxed order-nine/order-27 needles,
 and their shared unit constraints.  The `Z/9` quotient repairs the rows with no
@@ -184,6 +250,10 @@ loss is safe only because (1) is an upper relaxation.  The literal DP is the
 sidecar that measures the discarded overlap.  Owners with their absolute
 bounds are faithful; runners, isolated residues, raw sheets, Fano points,
 chi-seven colours, or completed tournament orientations are not.
+
+The saturated nine-fibre carrier forgets within-fibre offsets, exact maximum
+union, and unit multiplicity.  It retains full-fibre versus transversal colour
+and, on the complete survivor bank, exactly preserves owner-cover feasibility.
 
 This nested `Z/27 -> Z/9 -> Z/3` carrier is the exact 3-adic
 toothpick/Kakeya self-similarity: order-three masks are nine-sheet fibres,
@@ -209,6 +279,23 @@ and owner-maximum histograms, all 51 bank-size bins, the same feasible-owner
 census, and the same 13,598,160 reachable-mask incidence total.  The two
 certificate streams therefore promote the finite result, while inequality
 (1) supplies a theorem-bearing explanation not present in the literal DP.
+
+The independent C++ flag referee changes language, CRT construction, DP
+representation, and structural relaxation.  Clang `-O3/-O0`, GCC, the Clang
+static analyzer, and ASan/UBSan all pass, and every executable produces the
+stored output byte-for-byte.  It records 13,598,160 exact reachable-mask
+incidences, 2,700 flag-equivalence checks, and the same exact feasible-owner
+census `0:336,1:96,4:18`.  Frozen hashes are
+
+```text
+C++ flag referee source  cd14144a550bbfc5de71ae5705744d9ebbf95f1d0195f5aa68c6f5cd9db3632a
+C++ flag referee output  e69360101cf347fdd5ac3b4bd777446f6b51332c38b22ca25b93d516c74c3e64
+```
+
+The two structural referees are complementary.  Inequality (1) works with a
+chosen anchor order and independent needle maxima; the flag bound (2) exploits
+the entire `Z/27 -> Z/9` incidence system and kills every maximal-order owner
+uniformly.
 
 This theorem does not address H5 ramification, non-AP/deep sheets, or global
 sporadic emptiness.  The next legal untreated AP-centred common scale is

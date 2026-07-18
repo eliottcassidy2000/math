@@ -1,8 +1,8 @@
 # LRC(14): the proof object is a ramified coset-cover system
 
 **Date:** 2026-07-17  
-**Scope:** structural synthesis after the independently replayed common-scale
-H6 closure through scale 27.  This is a research map, not a claim
+**Scope:** structural synthesis after the independently replayed exact
+common-scale H6 closure through scale 27.  This is a research map, not a claim
 that LRC(14), the H5 bank, or the global `n=12` sporadic branch is closed.
 
 The long common-scale computation has stopped looking like a list of unrelated
@@ -100,8 +100,10 @@ Coverage is then a coloured capacitated hypergraph problem.
   fibres; order-nine anchors close the remaining 30 through three-sheet
   fibres, while order-27 masks are point needles.  A sound upper relaxation
   lets each nonanchor needle optimize independently, so the information loss
-  can only enlarge the union.  A separately developed literal-bank replay
-  agrees on every exact headline census.
+  can only enlarge the union.  Independently, the saturated `Z/27 -> Z/9`
+  flag treats orders 1, 3, and 9 as unions of whole three-point fibres and
+  order-27 masks as transversals; it makes every order-27 owner impossible.
+  Three literal-bank implementations agree on every exact headline census.
 
 Thus “character proof” and “nerve proof” are not competing methods.  They are
 the zero-slack and positive-slack faces of the same group-ring cover system.

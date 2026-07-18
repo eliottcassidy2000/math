@@ -1,7 +1,7 @@
 ---
 id: THM-993
 title: Scale-twenty-seven Hamming-six owner-feasibility deficit
-status: PROVED FINITE-EXACT + INDEPENDENT STRUCTURAL REPLAY — all 450 scalar survivors have at most four owner-local feasible projections; a standard-library primary and an independently developed NumPy-batched nested-fibre certificate agree on the scalar bank and every exact headline census
+status: PROVED STRUCTURAL + TRIPLE-CERTIFICATE FINITE-EXACT — all 450 scalar survivors have at most four owner-local feasible projections; a standard-library primary, a NumPy-batched nested-fibre replay, and a literal-CRT C++ nine-fibre flag referee agree on every decisive census, while both independent referees supply terminal 3-adic relaxations
 source: codex-2026-07-17-S66 scale-twenty-seven continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992]
 related: [THM-978, THM-980, THM-981, THM-994, HYP-6820]
@@ -10,6 +10,8 @@ verification:
   - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_owner_deficit_codex_c27.out
   - 04-computation/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.py
   - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_nested_fibre_obstruction_codex_c27.out
+  - 04-computation/lrc13_scale_twenty_seven_hamming_six_flag_referee_codex_c27.cpp
+  - 05-knowledge/results/lrc13_scale_twenty_seven_hamming_six_flag_referee_codex_c27.out
 ---
 
 # THM-993 — scale twenty-seven has at least two impossible owners
@@ -108,9 +110,28 @@ agree on the exact scalar digest
 `141ec6d8c551c2e0ebac31dc102d3f38ad257be268dfe24403835afa7613dc05`,
 all seven multiplicity counts, all 450 labelled rows, the 2,700 owner maxima,
 the feasible-owner census `0:336,1:96,4:18`, all 51 bank-size bins, and the
-13,598,160 reachable-mask incidence total.  This promotes the finite-exact
-claim; a short conceptual classification of the 18 four-feasible rows remains
-desirable but is not needed for terminal emptiness.
+13,598,160 reachable-mask incidence total.
+
+A third, standard-library C++ implementation reconstructs every CRT base by
+literal search, represents exact banks as sorted vectors, and independently
+finds the same 1,909 hereditary words, 450 scalar rows on 84 supports, seven
+multiplicity profiles, multiplication orbits, and exact owner census.  Its
+proof-facing carrier is the nine fibres of `Z/27 -> Z/9`, with lower-order
+masks as whole-fibre hyperedges and order-27 masks as transversals.  THM-994
+records the resulting theorem: every order-27 owner has flag score below 27,
+while heredity supplies at least two such owners.  The C++ referee passed
+Clang/GCC optimized and unoptimized builds, Clang static analysis, and
+ASan/UBSan with byte-identical output.  Frozen hashes are
+
+```text
+C++ flag referee source  cd14144a550bbfc5de71ae5705744d9ebbf95f1d0195f5aa68c6f5cd9db3632a
+C++ flag referee output  e69360101cf347fdd5ac3b4bd777446f6b51332c38b22ca25b93d516c74c3e64
+```
+
+The three implementations promote the finite-exact claim, and the two
+different nested-fibre relaxations explain terminal emptiness.  A complete
+orbit classification of the 18 four-feasible rows is now optional rather than
+the missing conceptual obstruction.
 
 ## Tournament and alternate carriers
 
@@ -126,6 +147,13 @@ triangles, six singleton SCCs, and one Hamiltonian path.  The tournament is a
 useful ranking of failed obligations, but it destroys the absolute
 27-sheet threshold, overlap multiplicity, and the colours of the ramified
 sheet classes.
+
+The C++ referee also compares this exact gauge with
+`(feasible, flag score, capacity, flag-state count)`.  The two tournament
+completions differ on zero edges in 336 rows, one edge in 96 rows, and two
+edges in 18 rows, yet both remain transitive throughout.  This is direct
+evidence that tournament order is only telemetry: the proof lies in the
+absolute flag bound, not in the relative owner ranking.
 
 The challenged vertex choice points to a more faithful object.  At scale 27,
 the natural small vertices are the residue classes of the 27 sheets modulo
