@@ -1,0 +1,37 @@
+(4) ITERATE: single substitutions from the NEW tight family {1..11,13,24}
+    substitutions keeping tightness: 13
+        2 ->   2:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        3 ->   3:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        4 ->   4:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        5 ->   5:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        6 ->   6:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        7 ->   7:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        8 ->   8:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+        9 ->   9:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+       10 ->  10:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+       11 ->  11:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+       13 ->  13:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+       24 ->  12:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]   [= {1..13} up to dilation]
+       24 ->  24:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24} (back)]
+
+(5) DOES THE OPERATION WORK ON DILATES?  2*{1..13}: replace 24 by 48?
+    2*{1..13} tight: True
+      tight single-multiplications: [(24, 48, 'NEW')]
+    3*{1..13} tight: True
+      tight single-multiplications: [(36, 72, 'NEW')]
+
+(6) BROAD HILL-CLIMB for tight families (minimise uncovered to exactly 0)
+    distinct tight families (up to dilation) found by hill-climb: 0
+(7) TWO-SPEED MULTIPLICATION on {1,...,13}:  i->i*m, j->j*m'
+    tight results: 0
+
+(8) ONE MULTIPLE + ONE FREE REPLACEMENT (r <= 30)
+    distinct tight canon classes: 2
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  [{1..13}]
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  [{1..11,13,24}]
+
+(9) SUMMARY: distinct tight families found across ALL S377 searches
+    total distinct (up to dilation): 2
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]   -- classical
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   -- S376
+    genuinely additional: 0  []

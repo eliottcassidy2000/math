@@ -1475,3 +1475,6 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `blocking_cost_opus_S375.out` | [STORED] | THM-1110: blocking cost ceil(phi/k_q) per modulus; counting theorem fires for s<=11 (misses LRC(14) by 2). | (self) |
 | `blocking_tradeoff_opus_S376.out` | [STORED] | THM-1115: uncovered measure independent of q0; lcm families BELOW typical -- trade-off refuted. | (self) |
 | `measure_gap_opus_S376.out` | [STORED] | THM-1115: no measure gap (continuous descent to 0) + second tight family {1..11,13,24}. | (self) |
+| `tight_families_opus_S377.out` | [STORED] | THM-1120: single-substitution sweep -- only 12->24 preserves tightness (r <= 120). | (self) |
+| `tight_chain_opus_S377.out` | [STORED] | THM-1120: the two tight families form a closed pair; two-speed and hill-climb searches find no third. | (self) |
+| `essential_region_opus_S377.out` | [STORED] | THM-1120: essential-region criterion E_i subset D_r predicts the swappable speed exactly ({12}). | (self) |

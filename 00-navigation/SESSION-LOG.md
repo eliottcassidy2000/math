@@ -3,6 +3,37 @@
 Prompt (owner): work the pairwise-overlap prune and the residue-vector dedupe
 
 FILES: THM-1111, HYP-7535, prune_dedupe / mst_adversarial / mst_across_r scripts + .out. -> all (mac-mini: r=6 should now be attempted WITH the MST prune -- the reduction is at least ~2000x on the tail and the surviving adversarial sextuples are characterisable, being the ones with large weakly-overlapping kill-sets, i.e. killers divisible by DIFFERENT small moduli. Do NOT spend effort on mask dedupe, it is exactly 1.000. klein/opus: the gap in (V) is the interesting object -- actual unions top out near 0.95n while the MST bound allows n+36, so the bound is loose by roughly that margin and a triple-overlap or fractional-relaxation correction is the natural next tightening.)
+## opus-2026-07-17-S377 -- THM-1120 THE TIGHT LOCUS IS EXTREMELY RIGID (exactly TWO families up to dilation, {1..13} and {1..11,13,24}, forming a CLOSED PAIR under 12 <-> 24) + THE MECHANISM: the essential-region criterion E_i subset D_r predicts the swappable speed to be exactly {12}, matching the search with no exceptions (HYP-7600)
+
+Owner: find more tight families. I found none beyond the two known, and -- more useful --
+found the exact criterion that explains why.
+THE SEARCHES: single substitution i->r for r <= 120 gives ONLY 12->24; single
+multiplication i->i*m for m <= 12 gives ONLY 12->24; two-speed multiplication with
+m,m' in {2,3,4,5} gives NONE; one multiple plus one free replacement (r <= 30) gives
+nothing new; 30 hill-climbs of 300 steps each targeting uncovered = 0 give NONE.
+So up to dilation there are exactly TWO: {1,...,13} and {1,...,11,13,24}. They form a
+CLOSED PAIR -- from the second family the only non-trivial tightness-preserving
+substitution is 24->12, straight back to the classical one. The operation is
+dilation-equivariant, so 2*{1..13} admits 24->48, which is just 2*{1..11,13,24}.
+THE MECHANISM, which is the part worth keeping: define the ESSENTIAL REGION of speed i,
+E_i = [0,1] minus the union of the other twelve danger sets -- the part of the circle
+that ONLY speed i covers. Then replacing i by r preserves tightness IFF E_i is contained
+in D_r. Computing E_i for {1,...,13} and testing containment in D_2i predicts the
+swappable speed to be exactly {12}, and the independent substitution search found exactly
+{12}. No exceptions either way.
+AND SIZE IS NOT THE CRITERION, which I did not expect: speed 6 has the SMALLEST essential
+region of all (|E_6| = 0.00816, below |E_12| = 0.01216) and is still not swappable. What
+matters is whether E_i lies INSIDE the finer comb D_2i -- doubling halves the arc width
+at the old centres j/i while adding arcs at the midpoints, so the swap survives only when
+the essential region happens to sit in the surviving half. A positional condition, not a
+measure one.
+STATUS, stated carefully: the criterion is exact and verified, but 'exactly two tight
+families' is a SEARCH result and NOT a theorem. Exhaustive search over 13-subsets is
+infeasible, and the hill-climb null result carries little weight -- the tight locus has
+measure zero in family space, so a descent method on uncovered measure should not be
+expected to land on it. What the searches do establish is that the locus is THIN and
+RIGID: structured neighbourhoods of the classical family contain exactly one other point.
+FILES: THM-1120, 3 scripts + outs, HYP-7600. opus; S377.
 
 ---
 

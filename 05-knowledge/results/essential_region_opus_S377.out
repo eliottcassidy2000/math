@@ -1,0 +1,40 @@
+(10) THE ESSENTIAL REGION E_i of each speed in {1,...,13}
+     i   |E_i|        #components   E_i inside D_2i ?
+      1  0.071429         2          no
+      2  0.030220         2          no
+      3  0.040293         4          no
+      4  0.024226         4          no
+      5  0.036014         8          no
+      6  0.008159         4          no
+      7  0.083897         6          no
+      8  0.045193         4          no
+      9  0.058388         6          no
+     10  0.024103         4          no
+     11  0.061918        10          no
+     12  0.012159         4          YES  <-- swap works
+     13  0.034101        12          no
+
+(11) CROSS-CHECK: the criterion should predict the swap results exactly
+     (S377 found i->2i tight ONLY for i=12)
+     criterion predicts i->2i works for: [12]
+     search found:                       [12]
+     MATCH: True
+
+(12) WHY 12 -- the essential regions ranked by size
+     i= 6: |E_i| = 0.008159  (4 components)
+     i=12: |E_i| = 0.012159  (4 components)   <-- the swappable one
+     i=10: |E_i| = 0.024103  (4 components)
+     i= 4: |E_i| = 0.024226  (4 components)
+     i= 2: |E_i| = 0.030220  (2 components)
+     i=13: |E_i| = 0.034101  (12 components)
+     i= 5: |E_i| = 0.036014  (8 components)
+     i= 3: |E_i| = 0.040293  (4 components)
+     i= 8: |E_i| = 0.045193  (4 components)
+     i= 9: |E_i| = 0.058388  (6 components)
+     i=11: |E_i| = 0.061918  (10 components)
+     i= 1: |E_i| = 0.071429  (2 components)
+     i= 7: |E_i| = 0.083897  (6 components)
+
+     A speed is swappable when its essential region is small enough AND
+     positioned inside the finer comb D_2i.  Both conditions are needed:
+     the ranking alone does not determine swappability.
