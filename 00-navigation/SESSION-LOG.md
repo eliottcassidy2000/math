@@ -5,6 +5,23 @@ Prompt (owner): prove covers all of 2..14 implies M > 1/14.
 FILES: THM-995 (XI)+(XII) + (IX) correction, MISTAKE-158, HYP-7300 update3, weak_target_open_strata script + .out. -> all (mac-mini: your THM-724/726 ARE the equality horn's closure -- and for the WEAK target M>1/14 your open strata are 1.91x loose empirically, so the union-tail should survive far past its sharp-target death point; the only delicate region left is THM-724's near-tight single-killer residual, with 7% more room at the weak target).
 
 ---
+## opus-2026-07-17-S349 -- THE EXISTENCE CAPSTONE KERNEL-PURE (positive uncovered => a LONELY POINT) + THE ONE-BRIDGE SIMPLIFICATION (CircleLineReconcile is OFF the critical path; the sum<=1 weakening means the last bridge needs only an UPPER single-comb bound + a pair-overlap LOWER bound, not the exact sawtooth) + MISTAKE-152 logged (my S340 '7%' was sampled telemetry, fleet-corrected) (HYP-7320)
+
+Owner: prove the OverlapMeasureBridge. Investigated it properly and found the target
+should MOVE. Two finds, both kernel-pure now: (1) LRC's conclusion needs a lonely TIME,
+not a positive-measure window -- positive uncovered measure gives an inhabited set and
+any point of it is lonely; the S347 Fubini/window machinery is needed only for NESTING.
+So the two bridges I named in S348 collapse to ONE. (2) The assembly's total-mass
+hypothesis weakens from = 1 to <= 1, so the surviving bridge needs only mu(badArcs) <=
+2*lam (the fragmentation UPPER direction, already in the corpus) plus a pair-overlap
+LOWER bound -- the exact sawtooth identity (THM-856) is NOT needed for existence, only
+for the SHARP floor that nesting wants. Also integrated the fleet's correction of my
+S340 script: the '7% dead fraction' was a 25x140 grid statistic, not a bound; the exact
+circular erosion formula (dead = sum max(ell_i - L, 0)) replaces it -> MISTAKE-152.
+FILES: LRCSevenWallExistence.lean, THM-964 note, MISTAKE-152, HYP-7320. opus; S349.
+
+---
+
 ## boxeph-2026-07-17-S82 -- THE FILL-1 PERTURBATION LEMMA: BASE CASE PROVED + FORMALIZED KERNEL-PURE (owner: prove the fill-1 perturbation lemma at a base case). The under-filled-circle clause of the resonance-fill crux (S81, HYP-7315) discharged in its base case, on paper AND in Lean. THM-1003 (renumbered from THM-1002 after klein-S313b first-pushed that ID): family V, threshold 1/N; if circle b (2<=b<N) has FILL ONE (unique v* with b|v*, every other body speed not divisible by b) and the body is DOMINATED (b*(v i + v*) <= N*v* for all body v, equiv. b*B <= (N-b)*v* with B=body max), THEN the minimal kick t = a/b + 1/(N v*) is 1/N-lonely. PROOF (elementary, one reverse-triangle inequality on R/Z): the kick lifts the stranded v* to exactly 1/N; each body runner stays >= 1/b - v/(N v*) >= 1/N. REACH (exact-verified): CLOSES the isolated-far-element regime -- single-killer {1..12,w} with 182|w at b=13 (cond 156<=w automatic), BOTH covering-min extremals (deep well {1..12,182} at b=13, residue {1..11,13,84} at b=12); TIGHT (w=143<156 fails at min 71/1001<1/14; w=156=b*B certifies with the body-max runner also landing exactly on 1/14). RESIDUAL matches the finish map exactly: bounded/compact core (v* too small, e.g. {1..12,14}) + multi-killer ({1..10,13,22,84}). LEAN: LonelyRunner.fill1_perturbation KERNEL-PURE (LRCFill1Perturbation.lean, axioms [propext, Classical.choice, Quot.sound], no sorry/native_decide; corpus-registered) -- a direct constructive companion to sieve_frac (the empty-circle f_b=0 witness already in-corpus). Cruder constant than klein-S288/kps disc_v far-element closure (v*>=83) but ELEMENTARY and in-kernel. Lean craft for the fleet: le_or_lt is renamed -> le_or_gt; div_le_div_iff unknown -> one_div_le_one_div_of_le; reverse triangle |x|-|y|<=|x-y| via abs_sub_abs_le_abs_sub P (-s') then rw [abs_neg, sub_neg_eq_add]; avoid Nat truncated subtraction by phrasing domination as b*(v i + v*) <= N*v*.
 
 Prompt (owner): prove the fill-1 perturbation lemma at a base case.
