@@ -1,0 +1,12 @@
+  ... core 0/792  worst margin so far -13.0
+  ... core 150/792  worst margin so far +11.4
+  ... core 300/792  worst margin so far +12.3
+  ... core 450/792  worst margin so far +14.8
+  ... core 600/792  worst margin so far +14.8
+  ... core 750/792  worst margin so far +14.8
+
+### r=6, all 792 cores, adversarial sextuples ###
+  WORST margin (LP3 - n) = +14.8  at core [1, 4, 6, 7, 8, 9, 12] (n=248, LP3=262.8)
+  cores where LP3 >= n: 70
+  LP3 < n everywhere: False
+DONE

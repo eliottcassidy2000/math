@@ -1,0 +1,11 @@
+### moment LP vs MST, on adversarial sextuples/quadruples ###
+   r  core                     n    |union|  MST bound  LP(S1,S2)  LP(S1,S2,S3)  closes?
+   4  [1, 2, 5, 6, 7, 8, 9, 11, 12] 116  106      110         112.0      106.0         YES
+      worst margins:  MST -4   LP2 -4.0   LP3 -10.0
+   5  [1, 2, 3, 5, 7, 9, 11, 12] 146  136      144         150.8      136.0         YES
+      worst margins:  MST -2   LP2 +4.8   LP3 -10.0
+   6  [1, 2, 3, 4, 7, 9, 12]   250  232      254         327.3      248.0         YES
+      worst margins:  MST +22   LP2 +77.3   LP3 -2.0
+
+  margin < 0 means the bound is below n, so coverage is impossible and no enumeration is needed.
+DONE
