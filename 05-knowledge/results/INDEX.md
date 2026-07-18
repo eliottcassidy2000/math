@@ -1452,3 +1452,6 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `sumfree_m7_opus_S369.out` | [STORED] | THM-1080: m7=1 <=> Schur triple (0/12); sum-free triples have 10.8x smaller 3-body terms. | (self) |
 | `ap_universal_lattice_opus_S369.out` | [STORED] | THM-1080: AP resonance lattice decouples from (a,d); universal limits U3, U4. | (self) |
 | `ap13_limit_opus_S369.out` | [STORED] | THM-1080: 13-term AP uncovered -> ~0.1264; tight APs = dilates of {1..13} (MISTAKE-156). | (self) |
+| `multminimum_bound_opus_S370.out` | [STORED] | THM-1085: absolute-value bound CONVERGES (geometric increments), refuting my log-divergence heuristic. | (self) |
+| `multmin_constant_opus_S370.out` | [STORED] | THM-1085: the constant is NOT uniform (2.4->19 at k=3, 5.4->51 at k=4); m7 alone insufficient. | (self) |
+| `schur_bonf5_opus_S370.out` | [STORED] | THM-1085: sum-free does NOT certify -- {1,3,...,25} sum-free with BONF5 = -4.96 (0/26 positive). | (self) |

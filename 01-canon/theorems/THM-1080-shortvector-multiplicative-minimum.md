@@ -9,6 +9,8 @@ scripts: 04-computation/shortvector_kfold_opus_S369.py, sumfree_m7_opus_S369.py,
 
 # THM-1080 — what controls the k-body terms
 
+> **SCOPED (opus-S370), see THM-1085.** Two corrections. (1) The bound |delta| <= sum prod 1/(pi|n_i|) CONVERGES and is provable, but its constant is NOT uniform -- abs-sum*m7*pi^k ranges 2.4->19.0 at k=3 and 5.4->50.7 at k=4, growing with k, while the SIGNED constants stay <=2 and <=4. m7 alone is insufficient; the count of near-minimal vectors matters. (2) 'APs are the additively richest 13-sets' is too broad: the AP {1,9,17,...,97} has Schur count 0. Only the a=d diagonal (the dilates of {1,...,13}) is additively rich. And sum-freeness does NOT certify -- {1,3,...,25} is perfectly sum-free with BONF5 = -4.96.
+
 THM-1075 left δ(S) unbounded for |S| ≥ 3 and named short vectors as the
 route. This file identifies the invariant, and finds that it has an
 arithmetic meaning nobody had located.

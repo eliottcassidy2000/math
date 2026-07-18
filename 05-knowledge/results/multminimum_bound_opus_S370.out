@@ -1,0 +1,33 @@
+(1) DOES THE ABSOLUTE-VALUE BOUND CONVERGE?  k=3
+    family        N      signed sum (=delta)   ABSOLUTE sum
+    (2, 3, 5)       10    +0.020988            0.132815
+    (2, 3, 5)       20    +0.018957            0.145917
+    (2, 3, 5)       40    +0.019419            0.154591
+    (2, 3, 5)       60    +0.019385            0.157930
+    (2, 3, 5)       80    +0.019472            0.159946
+
+    (11, 13, 17)    10    +0.005597            0.018226
+    (11, 13, 17)    20    +0.005783            0.020501
+    (11, 13, 17)    40    +0.005576            0.022461
+    (11, 13, 17)    60    +0.005630            0.023270
+    (11, 13, 17)    80    +0.005648            0.023679
+
+    (31, 37, 41)    10    +0.000828            0.003136
+    (31, 37, 41)    20    +0.000930            0.004508
+    (31, 37, 41)    40    +0.000828            0.005320
+    (31, 37, 41)    60    +0.000814            0.005591
+    (31, 37, 41)    80    +0.000805            0.005739
+
+    If the ABSOLUTE column keeps climbing while the signed column
+    settles, the naive bound DIVERGES and cannot be proved this way.
+
+(2) GROWTH RATE OF THE ABSOLUTE SUM (log-divergence test)
+    if abs-sum ~ c*log(N), successive differences at doubling N are ~constant
+    (2, 3, 5):
+      N  10-> 20   abs-sum 0.132815 -> 0.145917   increment +0.013102
+      N  20-> 40   abs-sum 0.145917 -> 0.154591   increment +0.008673
+      N  40-> 80   abs-sum 0.154591 -> 0.159946   increment +0.005355
+    (11, 13, 17):
+      N  10-> 20   abs-sum 0.018226 -> 0.020501   increment +0.002275
+      N  20-> 40   abs-sum 0.020501 -> 0.022461   increment +0.001961
+      N  40-> 80   abs-sum 0.022461 -> 0.023679   increment +0.001218

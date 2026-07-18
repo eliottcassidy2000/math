@@ -1,3 +1,42 @@
+## opus-2026-07-17-S370 -- THM-1085 THE MULTIPLICATIVE-MINIMUM BOUND IS PROVABLE BUT NOT UNIFORM (abs-sum converges, refuting my own divergence heuristic, but the constant grows 2.4->19 at k=3 and 5.4->51 at k=4 while signed constants stay <=2, <=4) + SUM-FREENESS DOES NOT CERTIFY, REFUTED by {1,3,...,25} sum-free with BONF5 = -4.96 (HYP-7530)
+
+Owner: work the multiplicative minimum bound and the Schur/sum-free direction. Both got
+clear answers; the second is a refutation.
+PART 1. I expected the absolute-value route to diverge logarithmically and checked before
+claiming anything. IT DOES NOT DIVERGE -- increments at doubling N fall geometrically
+(0.0131 -> 0.0087 -> 0.0054 for (2,3,5)). My heuristic was wrong: at height H a rank-(k-1)
+lattice has ~H^(k-2) vectors each contributing ~H^(-k), so sum_H H^(-2), convergent for
+every k. So |delta| <= sum prod 1/(pi|n_i|) IS a provable bound. The problem is the
+CONSTANT: abs-sum*m7*pi^k ranges 2.4->19.0 at k=3 and 5.4->50.7 at k=4, growing with k,
+while the SIGNED constants stay 0.27-1.94 and 0.42-3.83. The gap is worst where many
+near-minimal vectors exist -- (6,10,15) has m7=60 but absolute constant 19.0, its large
+pairwise gcds creating a thicket of comparable vectors. So m7 alone does NOT suffice: we
+need a second invariant counting near-minimal vectors, or the cancellation that absolute
+values throw away. This is the SAME failure mode as THM-1070 reached by a different
+route -- twice now, discarding sign has cost an order of magnitude per level.
+PART 2, REFUTED. The Schur count has the property min-speed lacked: it is DILATION-
+INVARIANT, so unlike the threshold of MISTAKE-154/THM-1055 it is an admissible predictor.
+It also identifies the extremal family sharply -- {1,...,13} has Schur count 36 against
+0-6 for everything else, and is the unique tight family. But it does NOT certify. Over 26
+random 13-families: Schur<=1 median BONF5 -0.753, Schur>=3 median -0.864 -- a weak trend
+in the predicted direction, and 0/26 positive. The decisive counterexample is explicit:
+{1,3,5,...,25} is PERFECTLY sum-free (a sum of two odds is even, so never in the set) and
+has BONF5 = -4.96, the worst value in the sample, while being genuinely lonely (uncovered
+0.1159). The reason is clean: sum-freeness controls delta(S) for |S|>=3, exactly as
+THM-1080 established, but BONF5 is dominated by S2 and S3, which sum-freeness does not
+touch. 'Sum-free => certifiable' is refuted; nobody should pursue it.
+ALSO SCOPED: AP-ness and sum-freeness are not opposites. The AP {1,9,17,...,97} has Schur
+count 0. Only the a=d diagonal -- the dilates of {1,...,13} -- is additively rich, so
+THM-1080's 'APs are the additively richest 13-sets' should be read as applying to that
+diagonal only.
+WHAT SURVIVES: THM-1080's structural claim is intact (additive richness drives the k-body
+terms; m7 is the leading invariant). What is removed is the hope that either yields a
+certificate alone. The route is unchanged and now doubly indicated -- a bound that KEEPS
+THE SIGNS.
+FILES: THM-1085, THM-1080 scoped, 3 scripts + outs, HYP-7530. opus; S370.
+
+---
+
 ## opus-2026-07-17-S369 -- THM-1080 THE SHORT-VECTOR BOUND IS A MULTIPLICATIVE MINIMUM m7 (recovers the k=2 sawtooth floor exactly; 0.45-1.93x at k=3) + m7 = 1 <=> SCHUR TRIPLE, so ADDITIVE STRUCTURE drives the k-body terms (sum-free triples 10.8x smaller) + exact mod-7 k-fold independence criterion + the AP lattice DECOUPLES, giving a universal limit and uncovered -> ~0.1264 + MISTAKE-156 (HYP-7520)
 
 Owner: work the short-vector bound for |S|>=3, plus my own directions. Four connected

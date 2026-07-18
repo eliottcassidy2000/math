@@ -1,0 +1,39 @@
+(5) SCHUR COUNT vs BONF5 -- is additive richness the real predictor?
+    (Schur count is DILATION-INVARIANT, so unlike min-speed it is admissible.)
+    schur  BONF5      uncovered   minspeed
+        0  -0.79861   0.12909       35
+        1  -1.07959   0.13656       20
+        1  -0.75347   0.12180        5
+        1  -0.74558   0.13008        6
+        2  -0.92567   0.11947       15
+        2  -0.85727   0.10477        4
+        2  -0.84733   0.13449        3
+        2  -0.74007   0.13018       37
+        3  -0.93188   0.14423       10
+        3  -0.86828   0.14247        3
+        3  -0.86374   0.15113       20
+        3  -0.83796   0.13371       28
+        3  -0.82264   0.12426        8
+        3  -0.77935   0.13354        8
+        3  -0.77565   0.13048        5
+        3  -0.74759   0.13612       14
+        3  -0.73871   0.13425       14
+        4  -1.18574   0.13059        6
+        4  -1.09664   0.12770        8
+        4  -0.97912   0.13105        9
+        5  -0.92807   0.13850        5
+        5  -0.91643   0.12202        5
+        5  -0.89306   0.13009       14
+        5  -0.75822   0.13498        4
+        6  -1.05913   0.12541       22
+        6  -0.81820   0.12248       17
+
+    schur<=1 (n= 4): median BONF5 = -0.75347
+    schur>=3 (n=18): median BONF5 = -0.86374
+    BONF5>0 rate: schur<=1 -> 0/4,  schur>=3 -> 0/18
+
+(6) THE KNOWN FAILURE FAMILIES -- are they additively rich?
+    THM-1055 primitive failure   schur=  2  BONF5=-0.36013  unc=0.13739
+    AP {1..13} (tight)           schur= 36  BONF5=-9.72391  unc=0.00000
+    AP d=8                       schur=  0  BONF5=-1.29630  unc=0.12729
+    odd sum-free-ish             schur=  0  BONF5=-4.96253  unc=0.11590
