@@ -56,16 +56,17 @@ theorem muNum_folded (a b : ℕ) (ha : 1 ≤ a) (hab : a ≤ b) :
     rw [if_neg (Nat.succ_ne_zero j), hmin]
     rcases lt_or_ge j Qm with hlt | hge
     · rw [if_pos hlt]
-      have h14 : 14 * (j + 1) ≤ D := le_trans (by omega) h14Qm
-      congr 1
-      omega
+      have h14 : 14 * (j + 1) ≤ D := by omega
+      have hge2a : 2 * a ≤ S - 14 * (j + 1) := by omega
+      rw [Nat.min_eq_right hge2a]
+      ring
     · rw [if_neg (not_lt.mpr hge)]
       have hDlt : D < 14 * (j + 1) := by
         have h1 : D / 14 < j + 1 := by omega
         have := (Nat.div_lt_iff_lt_mul (by norm_num : 0 < 14)).mp h1
         omega
-      congr 1
-      omega
+      have hle2a : S - 14 * (j + 1) ≤ 2 * a := by omega
+      rw [Nat.min_eq_left hle2a]
   have hj0 : min S (2 * min a b) = 2 * a := by
     rw [hmin]
     omega
@@ -74,8 +75,8 @@ theorem muNum_folded (a b : ℕ) (ha : 1 ≤ a) (hab : a ≤ b) :
       = 2 * a + 4 * a * Qm
         + ∑ j ∈ Finset.Ico Qm Qp, 2 * (S - 14 * (j + 1)) := by
     unfold muNum
-    rw [← hSdef, ← hQpdef, Finset.sum_range_succ', hj0,
-      Finset.sum_congr rfl hshape, Finset.range_eq_Ico,
+    rw [← hSdef, ← hQpdef, Finset.sum_range_succ',
+      Finset.sum_congr rfl hshape, if_pos rfl, hj0, Finset.range_eq_Ico,
       ← Finset.sum_Ico_consecutive _ (Nat.zero_le Qm) hQmp]
     have hplateau : ∀ j ∈ Finset.Ico 0 Qm,
         (if j < Qm then 4 * a else 2 * (S - 14 * (j + 1))) = 4 * a :=
@@ -87,14 +88,16 @@ theorem muNum_folded (a b : ℕ) (ha : 1 ≤ a) (hab : a ≤ b) :
     rw [Finset.sum_congr rfl hplateau, Finset.sum_congr rfl htail,
       Finset.sum_const, Nat.card_Ico, Nat.sub_zero, smul_eq_mul]
     ring
-  -- cast the tail sum to ℤ (terms genuinely nonnegative)
-  have hcastsum : ((∑ j ∈ Finset.Ico Qm Qp, 2 * (S - 14 * (j + 1)) : ℕ) : ℤ)
+  -- cast the tail sum to ℤ (in the push_cast-distributed shape)
+  have hcastsum : (∑ j ∈ Finset.Ico Qm Qp, 2 * ((S - 14 * (j + 1) : ℕ) : ℤ))
       = ∑ j ∈ Finset.Ico Qm Qp, (2 * (S : ℤ) - 28 * ((j : ℤ) + 1)) := by
-    push_cast
     refine Finset.sum_congr rfl fun j hj => ?_
     rw [Finset.mem_Ico] at hj
-    have h14 : 14 * (j + 1) ≤ S := le_trans (by omega) h14Qp
-    push_cast [h14]
+    have h14 : 14 * (j + 1) ≤ S := by omega
+    have hcast : ((S - 14 * (j + 1) : ℕ) : ℤ) = (S : ℤ) - 14 * ((j : ℤ) + 1) := by
+      push_cast [h14]
+      ring
+    rw [hcast]
     ring
   have hgoal_lhs : (14 * muNum a b : ℤ)
       = 14 * (2 * (a : ℤ) + 4 * a * Qm)
