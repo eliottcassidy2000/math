@@ -1,0 +1,52 @@
+========================================================================================
+BRANCH A: for which k does '13k in V' force M >= 1/13 ?  (169 = 13*13 boundary)
+========================================================================================
+  k= 1: 13k= 13  M=1/14     (0.07143)  <1/13:True  cover=False rho=1.1  maximizer a/q=1/14 val=1
+  k= 2: 13k= 26  M=2/27     (0.07407)  <1/13:True  cover=False rho=2.2  maximizer a/q=2/27 val=2
+  k= 3: 13k= 39  M=3/40     (0.07500)  <1/13:True  cover=False rho=3.2  maximizer a/q=3/40 val=3
+  k= 4: 13k= 52  M=4/53     (0.07547)  <1/13:True  cover=False rho=4.3  maximizer a/q=4/53 val=4
+  k= 5: 13k= 65  M=5/66     (0.07576)  <1/13:True  cover=False rho=5.4  maximizer a/q=5/66 val=5
+  k= 6: 13k= 78  M=6/79     (0.07595)  <1/13:True  cover=False rho=6.5  maximizer a/q=6/79 val=6
+  k= 7: 13k= 91  M=7/92     (0.07609)  <1/13:True  cover=False rho=7.6  maximizer a/q=7/92 val=7
+  k= 8: 13k=104  M=8/105    (0.07619)  <1/13:True  cover=False rho=8.7  maximizer a/q=8/105 val=8
+  k= 9: 13k=117  M=9/118    (0.07627)  <1/13:True  cover=False rho=9.8  maximizer a/q=9/118 val=9
+  k=10: 13k=130  M=10/131   (0.07634)  <1/13:True  cover=False rho=10.8  maximizer a/q=10/131 val=10
+  k=11: 13k=143  M=11/144   (0.07639)  <1/13:True  cover=False rho=11.9  maximizer a/q=11/144 val=11
+  k=12: 13k=156  M=12/157   (0.07643)  <1/13:True  cover=False rho=13.0  maximizer a/q=12/157 val=12
+  k=13: 13k=169  M=13/170   (0.07647)  <1/13:True  cover=False rho=14.1  maximizer a/q=13/170 val=13
+  k=14: 13k=182  M=14/183   (0.07650)  <1/13:True  cover=True rho=15.2  maximizer a/q=14/183 val=14
+  k=15: 13k=195  M=15/196   (0.07653)  <1/13:True  cover=False rho=16.2  maximizer a/q=15/196 val=15
+  k=16: 13k=208  M=16/209   (0.07656)  <1/13:True  cover=False rho=17.3  maximizer a/q=16/209 val=16
+  k=17: 13k=221  M=17/222   (0.07658)  <1/13:True  cover=False rho=18.4  maximizer a/q=17/222 val=17
+  k=18: 13k=234  M=18/235   (0.07660)  <1/13:True  cover=False rho=19.5  maximizer a/q=18/235 val=18
+  k=19: 13k=247  M=19/248   (0.07661)  <1/13:True  cover=False rho=20.6  maximizer a/q=19/248 val=19
+
+========================================================================================
+BRANCH B+E: hunt ALL M<1/13 families; record rho, killer, core, continued fraction
+========================================================================================
+found 8 M<1/13 families
+MIN rho among M<1/13 families: 15.166666666666666  (claim: all >= 13)
+  smallest-M families (M, rho, cont-frac(M), maximizer q):
+    M=14/183    rho=  15.2 cf=[0, 13, 14] q=183  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    M=14/183    rho=  15.2 cf=[0, 13, 14] q=183  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    M=28/365    rho=  30.3 cf=[0, 13, 28] q=365  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364]
+    M=28/365    rho=  30.3 cf=[0, 13, 28] q=365  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364]
+    M=42/547    rho=  45.5 cf=[0, 13, 42] q=547  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 546]
+    M=56/729    rho=  60.7 cf=[0, 13, 56] q=729  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 728]
+    M=70/911    rho=  75.8 cf=[0, 13, 70] q=911  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 910]
+    M=84/1093   rho=  91.0 cf=[0, 13, 84] q=1093  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1092]
+
+========================================================================================
+BRANCH C: continued fraction of M for M<1/13 families -- is a1>=13 always?
+========================================================================================
+  distinct a1 (first partial quotient of M) over M<1/13 families: [13]
+  all a1 >= 13 ? True
+
+========================================================================================
+BRANCH D: the WITNESS for '13k in V, k<=13 => M>=1/13' -- what t certifies?
+========================================================================================
+  {1..12,13}: M=1/14 witness t=1/14  (does dilated-sieve d exist?)
+  {1..12,26}: M=2/27 witness t=2/27  (does dilated-sieve d exist?)
+  {1..12,39}: M=3/40 witness t=3/40  (does dilated-sieve d exist?)
+  {1..12,91}: M=7/92 witness t=7/92  (does dilated-sieve d exist?)
+  {1..12,169}: M=13/170 witness t=13/170  (does dilated-sieve d exist?)
