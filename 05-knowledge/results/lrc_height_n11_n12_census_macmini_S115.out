@@ -1,0 +1,14 @@
+=== n=11: max element <= 25 (conjecture max <= 3n = 33) ===
+  covering+primitive candidates: 775,663
+  survived numeric prescreen: 1  (0.000%)
+  PRIMITIVE TIGHT (exact): 1
+     [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11)]  max=11  max/n=1.000
+  => n=11: MAX over primitive tight = 11 = 1.000*n ; <= 3n? True
+
+=== n=12: max element <= 26 (conjecture max <= 3n = 36) ===
+  covering+primitive candidates: 1,531,052
+  survived numeric prescreen: 1  (0.000%)
+  PRIMITIVE TIGHT (exact): 1
+     [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11), np.int64(12)]  max=12  max/n=1.000
+  => n=12: MAX over primitive tight = 12 = 1.000*n ; <= 3n? True
+

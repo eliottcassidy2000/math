@@ -1,3 +1,25 @@
+## mac-mini-2026-07-18-S115 -- n=9 PINNED (RIGID) + the unbroken RIGID RUN n=8..12 (n=12 verified to max<=26, extending klein's {1..16}) + self-correction sharpening the height conjecture to max <= 2n. HYP-7440.
+
+TASK (owner): pin n=9 with the batched prescreen.
+
+METHOD. (P1) covering lemma (THM-1031) as a bitmask prune; (P2) BATCHED numeric prescreen, SOUND because a grid maximum is always <= the true M -- so rejecting when gridmax > 1/(n+1)+tol can never discard a tight set; survivors confirmed in exact Q. It works: 6,572,733 candidates -> 1 survivor at n=9.
+
+RESULTS (primitive tight n-sets, exhaustive to the bound shown):
+  n=7 (<=28): THREE -- {1..7}, {1,2,3,4,5,7,12}, {1,4,5,6,7,11,13}; max 13 = 1.857n
+  n=8 (<=30): ONE -- {1..8}          n=9  (<=32): ONE -- {1..9}
+  n=10 (<=25): ONE -- {1..10}        n=11 (<=25): ONE -- {1..11}
+  n=12 (<=26): ONE -- {1..12}   (1,531,052 covering+primitive candidates -> exactly one)
+=> SPORADIC LOCUS in range is EXACTLY n in {4,5,7,13}; n=8..12 is an unbroken RIGID RUN. The n=12 run extends klein-S313's exhaustive {1..16} to {1..26}.
+
+SELF-CORRECTION (it propagated into HYP-7390): S113 recorded n=7 max/n = 2.57 from element 18. WRONG -- 18 belongs to {1,2,3,4,5,7,18}, the closest NON-TIGHT deep set (M=3/23); I mis-copied it out of the deep-branch margin table into the height table. True n=7 max over tight sets is 13. So the observed sup of max/n falls 2.57 -> 1.857, every data point obeys max <= 2n, and the conjecture SHARPENS from max<=3n to **max(A) <= 2n**.
+
+HONEST CAVEATS: 'rigid' = no sporadic with max <= the stated bound (n=10,11 to 25; n=12 to 26). Those cover max <= 2n (20,22,24) and all known sporadics sit at max/n <= 1.86, so the plausible range is covered -- but larger-max sporadics are not excluded by these runs. The height bound itself remains UNPROVED (only THM-1031(C)'s AP-core case).
+
+FILES: lrc_height_batched_census_macmini_S115.py + three .out; HYP-7440.
+HANDOFFS: @klein -- your {1..16} n=12 census is now extended to {1..26}, same verdict. @all -- the sporadic locus {4,5,7,13} against the rigid run 8..12 is the sharpest structural datum yet on WHERE sporadics live; n=12's rigidity is not isolated, it sits inside a five-long rigid run.
+
+---
+
 ## opus-2026-07-17-S361 -- THM-1040 THE MULTIPLICATIVE/ADDITIVE OVER-DETERMINATION DOES NOT EXIST (refuting my own S360 proposal: blockers and non-blockers have IDENTICAL median doubling 6.92; APs at minimal doubling 1.92 block all seven moduli 30.6% of the time, explicit witnesses) + MISTAKE-153 + the surviving positive: the seven-moduli sieve kills ~89% of comparable families (HYP-7440)
 
 Owner: work the multiplicative/additive over-determination tension. I tested the idea I
