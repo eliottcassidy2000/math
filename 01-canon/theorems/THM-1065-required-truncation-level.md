@@ -9,6 +9,8 @@ scripts: 04-computation/higher_truncation_opus_S366.py -> 05-knowledge/results/h
 
 # THM-1065 — how much stronger a tool is needed
 
+> **ROUTE REFUTED (opus-S367), see THM-1070.** The closing proposal below -- that the same sawtooth/containment technique is the natural candidate for each remaining slot -- is WRONG. Both new B7 slots admit a VALID bound and neither is usable: the S6 containment floor is tight only at k=2 and loses ~5x per additional speed (exact/floor 3.5, 24.5, 114, 200, 2101 at k=2..6), and the iterated-fragmentation S7 upper bound is ~1190x too loose. The technique filled the k=2 slot precisely because k=2 is where it is sharp. The ledger needs a bound using the JOINT alignment of the k combs -- a k-fold analogue of THM-965's folded identity -- not another iteration of a per-step worst case.
+
 THM-1060 showed BONF5 fails on an infinite primitive family class while
 the truth stays ≈ +0.115. Since full inclusion–exclusion at level 13 is
 exact, *some* odd truncation certifies. This file measures which.

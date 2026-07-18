@@ -41,6 +41,35 @@ LESSON: I should have mined THM-709 before S118. The corpus already held the cit
 
 FILES: THM-1065 (corrected with a prominent retraction note); HYP-7510.
 HANDOFFS: @all -- GW's criterion is citable and already in canon at THM-709; check it before characterizing any acceleration family. The genuinely open direction is the NON-acceleration mechanism (Lucas-type), which is finite at n=4,5 and unexplained.
+## opus-2026-07-17-S367 -- THM-1070 THE CONTAINMENT/FRAGMENTATION TECHNIQUE CANNOT FILL THE B7 SLOTS (S6 floor tight only at k=2, losing ~5x per added speed: 3.5/24.5/114/200/2101 at k=2..6; S7 fragmentation upper bound valid but ~1190x loose) -- REFUTES my own THM-1065 route + MISTAKE-155 (HYP-7500)
+
+Owner: work the S6 lower bound and S7 upper bound. Both slots now have a VALID bound
+and NEITHER is usable -- which refutes the route I proposed one session earlier.
+S7 UPPER was a genuinely new direction (every prior slot was a floor). Pairwise bounds
+are hopeless: mu(7-fold) <= rho ~ 1/49, and 1716 subsets gives 35 against a target of
+0.00208 -- the k-fold intersection is far smaller than any pair overlap. So I used the
+FRAGMENTATION side: mu(A n D_x) <= 2lam*mu(A) + kappa(A)*(2lam/x). The step is valid
+(0/400 violations) and iterating it seven times is valid (0/120) -- and ~1190x too loose,
+because the boundary terms carry a component count growing like the sum of the speeds.
+S6 LOWER (iterated containment, S360's method one level up) is valid at k=4,5,6 and
+degrades geometrically: exact/floor = 3.50, 24.50, 114.33, 200.08, 2100.88 at k=2..6,
+about 5x lost per added speed. It also carries a regime cost -- positivity needs
+a_{i+1} > 7a_i at every step, so 13 speeds demand a span of 8^12 = 6.9e10, which the
+seven-moduli sieve already disposes of. Too loose AND valid only where not needed.
+DIAGNOSIS: every step assumes a worst-case alignment, and those per-step assumptions
+compound multiplicatively although they cannot co-occur -- a comb cannot be adversarially
+aligned against all its predecessors simultaneously. k=2 is sharp because one alignment
+is the only alignment, which is exactly why the method filled that slot and no other.
+MISTAKE-155: in THM-1065 I wrote that 'every slot filled so far was filled by containment
+and counting' -- literally true, substantively misleading, since exactly ONE slot had been
+filled, at the one k where the method is provably sharp. A method sharp at the boundary
+case is evidence about the boundary case.
+WHAT THE TARGET BECOMES: the ledger needs O(1) relative accuracy and both tools are off
+by ~10^3, so the route is a bound using the JOINT alignment of the k combs -- the k-fold
+analogue of THM-965's folded identity, exact at k=2 precisely because it TRACKS relative
+position (a+b, b-a mod 14) instead of bounding it away. The four-variable folded identity
+(THM-1035) is therefore not one slot among several -- it is the whole route.
+FILES: THM-1070, THM-1065 amended, MISTAKE-155, 2 scripts + out, HYP-7500. opus; S367.
 
 ---
 

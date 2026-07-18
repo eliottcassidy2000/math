@@ -1446,3 +1446,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `threshold_artifact_opus_S364.out` | [STORED] | THM-1055: explicit dilate witness (BONF5 = -0.360134 at min speed 891) proving the apparent speed threshold is a sampling artifact. | (self) |
 | `primitive_finiteness_opus_S365.out` | [STORED] | THM-1060: infinitely many primitive BONF5 failures ({8L..14L}+coprime filler, five scales) yet all LONELY (uncovered ~0.115) -- certificate fails, conjecture holds. | (self) |
 | `higher_truncation_opus_S366.out` | [STORED] | THM-1065: first certifying Bonferroni level 11/9/9/7 by scale; full inclusion-exclusion profile at four scales. | (self) |
+| `b7_slots_opus_S367.out` | [STORED] | THM-1070: both B7 slots valid but unusable (containment 3.5->2101x by k=2..6; fragmentation 1190x). | (self) |

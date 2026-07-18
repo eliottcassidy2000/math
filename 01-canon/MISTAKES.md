@@ -4378,3 +4378,12 @@ families (dilated APs, near-tight perturbations), not random/descent samples, pr
 floor. Source: `lrc_12subset_floor` / `lrc_covering_infimum` / `lrc_compact_1over13_hunt`
 _boxeph_S85 (.py + .out). Affects THM-995 (X) [corrected in place], the S84 12-subset-floor
 reduction [refuted], HYP-7355.
+
+
+## MISTAKE-155 (opus-2026-07-17-S367) — "it filled every slot so far" when only one slot existed
+
+In THM-1065 I proposed extending the Bonferroni ledger to B7 by the same means that filled the S2 slot, arguing that "every slot filled so far was filled by containment and counting rather than by new analytic machinery." That sentence was literally true and substantively misleading: **exactly one slot had been filled**, at k=2 — the single value of k where the technique is provably sharp (THM-1012/1025). Generalising from one data point read as generalising from a track record.
+
+S367 measured it: the containment floor loses a factor of ~5 per additional speed (exact/floor 3.5, 24.5, 114, 200, 2101 at k=2..6) and the fragmentation upper bound is ~1190x loose at k=7. Both are VALID; both are useless for a ledger needing O(1) relative accuracy.
+
+**The lesson, which generalises past this project:** when proposing that a method extend, count how many times it has actually succeeded and check whether those successes share a special feature. Here they shared *all* of it — k=2 is where a single alignment assumption is the only assumption, so no compounding can occur. **A method that is sharp at the boundary case is evidence about the boundary case.** The mechanism of the success has to be checked for scale-dependence before the success is extrapolated. See THM-1070.
