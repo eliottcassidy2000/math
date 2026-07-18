@@ -261,6 +261,28 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S100 -- |S|=o(R) is FALSE (|S|=Theta(R)); but the explicit |Error|<=kappa'*R_G/w closes the density route for separated far elements (deep well included)
+
+Owner: prove the uniform first-order |S|=o(R). RESOLVED: o(R) is FALSE, |S|=Theta(R).
+WHY: S=sum_n c_n U_G(nw), c_n=O(1/n^2); the n=1 term c_1 U_G(w) is the far element's OWN
+self-resonance = Theta(R) (S97). DECISIVE: grow the frame at w=10T, |S|/R = 0.012..0.013
+as R:68->1088 -- does NOT decay. (Dichotomy: o(R) for w non-resonant with the frame grid,
+Theta(R) small-const when commensurate; the peel w=d is partially resonant.)
+
+THE RIGHT TARGET (proved): the route needs Error<Phi_inf, not o(R). Error=-sum ghat(-nw)Bhat(n),
+|U_G(m)|<=R_G => |Error(w)| <= kappa'*R_G/|w|, kappa'=(1/2pi^2)sum|sin(pi n/7)|/n^2=0.094,
+R_G=#good-set endpoints. O(R), immune to the self-resonance. CLOSURE THRESHOLD: Phi=Phi_inf-|Error|
+>0 <=> w > kappa'R_G/Phi_inf (explicit; {1..6}:6.2 .. {1..12}:83.7).
+
+DEEP WELL CLOSES RIGOROUSLY: frame {1..12} R_G=26, Phi_inf=0.0292; |Error(182)|<=0.094*26/182=0.0134
+< Phi_inf => Phi>=0.0158>0 => M>1/14 (input LRC(13) for {1..12} + elementary bound, no circularity).
+Covering forces 182|d => d>=182>83.7 => ALL covering {1..12,d} close (density-side confirm of THM-1017).
+
+NET: o(R) abandoned (false); PROVED |Error|<=kappa'R_G/w + threshold; density route CLOSES for every
+separated far element (deep well incl.). Threshold fails only in marginal d~diam = COMPACT = Route B.
+Density route effectively DISCHARGED; LRC(14) sits entirely on Route B (AP-rigidity, S87-S95). Not closed.
+FILES: reflection o-R-is-false-...-boxeph-S100, script+out lrc14_first_order_boxeph_S100.out, HYP-7540. boxeph; S100.
+
 ## boxeph-2026-07-18-S99 -- THE FRAME ORTHOGONALITY A=<nu_hat,ghat>=0 IS PROVED (but it is the O(R) tail; the density route needs first-order |S|=o(R))
 
 Owner: prove A=<nu_hat,ghat>=0. DONE, with a self-correction of S98.

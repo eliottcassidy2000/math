@@ -1,0 +1,40 @@
+rigorous constant kappa_prime = (1/pi^2) sum_{l>=1} |sin(pi l/7)|/l^2 = 0.09407
+=> |S| <= kappa_prime * R  (from |U_s(lw)|<=2rho_s). Test: is |S|=o(R) or Theta(R)?
+
+|S|/R over a RANGE of far elements w (fixed frame {1..8}); o(R) => all ->0, Theta(R) => bounded-below spikes
+  frame {1..8}, R=56:  |S|/R over w=120..399:  min=0.00003  median=0.00416  MAX=0.01980 at w=140
+  rigorous cap kappa_prime=0.0941;  #(w with |S|/R<0.005)=157/280
+
+U_G self-resonance: |S|/R at w that are MULTIPLES of frame lcm (max resonance) vs coprime w
+  w=  840 gcd(w,7lcm)= 840: |S|/R=0.02405
+  w= 1680 gcd(w,7lcm)= 840: |S|/R=0.01239
+  w= 2520 gcd(w,7lcm)= 840: |S|/R=0.01093
+  w=  841 gcd(w,7lcm)=   1: |S|/R=0.00602
+  w=  843 gcd(w,7lcm)=   3: |S|/R=0.00380
+  w= 1681 gcd(w,7lcm)=   1: |S|/R=0.00165
+DECISIVE o(R) test: GROW the frame (R -> inf) at fixed scale ratio w=10T; does |S|/R -> 0?
+       frame     R |S|/R (w=10T) |S|/R (w=40T)
+   {1..6,20}    68       0.01200       0.00520
+   {1..6,40}    92       0.00518       0.01035
+   {1..6,80}   168       0.00875       0.00381
+  {1..6,160}   304       0.01267       0.00179
+  {1..6,320}   560       0.01278       0.00435
+  {1..6,640}  1088       0.01302       0.00340
+
+If |S|/R stays roughly constant (or grows) as R->inf  ==>  |S| = Theta(R), o(R) is FALSE.
+If |S|/R -> 0  ==>  o(R) holds.
+
+closure threshold  d > 0.094 R / Phi_inf  (rigorous):
+  frame {1..6}: R=44, Phi_inf=5.3571, threshold d>1  (deep-well d=182 clears False)
+  frame {1..12}: R=48, Phi_inf=10.0574, threshold d>0  (deep-well d=182 clears True)
+good-set formulation:  |Error| <= kappa_prime * R_G / w,  kappa_prime=0.094
+    frame      Phi  Phi_inf   R_G  kp*R_G | closure needs d > kp*R_G/Phi_inf
+     1..6   0.4571   0.3918    26   2.446 | d >    6.2
+     1..8   0.2658   0.2278    42   3.951 | d >   17.3
+    1..10   0.1380   0.1183    42   3.951 | d >   33.4
+    1..12   0.0341   0.0292    26   2.446 | d >   83.7
+
+DEEP WELL {1..12,182}:  rigorous |Error(182)| <= kp*R_G/182 = 0.0134
+  Phi_inf = 0.0292 ;  Phi = Phi_inf - |Error| >= 0.0158
+  >0 ?  True   => M>1/14 RIGOROUSLY for the deep well (uses LRC(13) for {1..12}).
+  covering forces 182|d => d>=182 > threshold 83.7, so ALL covering {1..12,d} close.
