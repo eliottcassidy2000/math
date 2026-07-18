@@ -66,7 +66,7 @@ progressions `{m/k_i}`. This would upgrade THM-1015 from per-family to a uniform
 two-scale clustered stratum — directly finishing THM-1011's named-next. *Owner-natural: death-star ∥
 kind-pasteur.* Highest leverage among *reachable* targets.
 
-**T2 — The single-scale comparable core (R1) via two-scale renormalization made exact.** The one lens
+**T2 [SHARPENED S56 THM-1028: = boxeph THM-1017 inverse theorem, far-element route killed by stability+covering-core-gap; residual = fully-comparable rho<=10/3] — The single-scale comparable core (R1) via two-scale renormalization made exact.** The one lens
 that could reach the single-scale wall is the **difference-flow** (HYP-3901): a comparable family's
 loneliness governed by its difference set one scale down, the AP the fixed point. THM-1015's kick works
 *because* the killer block has a coarse/fine split; the single-scale core has no split, so the target
