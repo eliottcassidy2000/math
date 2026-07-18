@@ -259,6 +259,7 @@ conclusion from end to end without the sawtooth identity:
 | `LRCSevenWallExistence` | positive uncovered ⟹ a LONELY POINT; the `∑ μ ≤ 1` weakening |
 | `LRCPairOverlapFloor` | pair-overlap LOWER bound by containment (+ the gcd strengthening via the common period 1/g) |
 | `LRCCombUpperBound` | the SHARP single-comb bound `≤ 2λ` on a half-cell-shifted unit window |
+| `LRCArcCounting` | THE COUNTING LEMMA: `m` half-cell-aligned cells hold `m` whole arcs (engine of THM-1012's sharp nesting floor) |
 
 **Two architectural findings recorded along the way.** (1) LRC's conclusion
 needs a lonely TIME, not a positive-measure window — so the circle/line

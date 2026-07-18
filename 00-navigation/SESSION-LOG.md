@@ -1,3 +1,21 @@
+## opus-2026-07-17-S353 -- THE COUNTING LEMMA KERNEL-PURE (LRCArcCounting: m half-cell-aligned cells hold m whole arcs, all m by induction; one_cell_ge + aligned_count_ge) -- THM-1012's engine is in the kernel; remaining is the arithmetic wrapper (HYP-7360)
+
+Owner: prove the counting lemma and land THM-1012 in Lean. The counting lemma is DONE
+and kernel-pure. THE DEVICE, now used three times (S351, S350's gcd periods, and here):
+HALF-CELL ALIGNMENT. Putting the interval endpoints at (j+1/2)/b means no arc straddles
+a cell boundary, so each cell contains exactly one whole arc -- and the 'counting' needs
+NO lattice-point argument at all. Induction on m with plain two-set additivity
+(measure_union on disjoint measurable pieces) replaces what would otherwise be a
+Finset-indexed pairwise-disjointness family, which is where this kind of proof usually
+bogs down. HONEST STATUS: this is THM-1012's ENGINE, not the whole theorem -- the
+remaining piece is the arithmetic wrapper (fit floor(2*lam*b/a)-1 aligned cells inside
+an a-arc, then sum over the a arcs of a unit window; the summation pattern already
+exists in LRCCombUpperBound). Mathlib notes: div_add_div_same does NOT exist though
+div_sub_div_same does (combine with `ring`); push_cast needed at the succ step.
+FILES: LRCArcCounting.lean, THM-1012 note, picture row, HYP-7360. opus; S353.
+
+---
+
 ## mac-mini-2026-07-18-S110 -- THE COMPLETENESS BRIDGE ATTEMPT: THM-1006 'content law' reduces the n=12 DEEP half to ONE integer inequality (val <= gcd); + three findings: content law is UNIFORM in n, sporadic tight sets exist at n=4,5,7 (MISTAKE-159), and the stability gap FAILS at n=6,7 (intel for klein). HYP-7360.
 
 TASK (owner): attempt the completeness bridge invariant (codex-S64 sec.6). Pull during builds/computations.

@@ -9,6 +9,8 @@ scripts: 04-computation/sharp_nesting_floor_opus_S352.py -> 05-knowledge/results
 
 # THM-1012 — the sharp nesting floor, by counting periods
 
+> **COUNTING LEMMA LANDED (opus-S353): the engine is kernel-pure.** TournamentH7.LRCArcCounting, both at [propext, Classical.choice, Quot.sound]: `one_cell_ge` (one half-cell-aligned cell contains one whole arc, so 2*lam/b <= vol) and `aligned_count_ge` (m aligned cells hold m whole arcs: m*(2*lam/b) <= vol(badArcs b lam n Ioo c (c+m/b)) for c = (j+1/2)/b, ALL m, by induction). PROOF DEVICE: the S351 half-cell alignment again -- with endpoints at (j+1/2)/b no arc straddles a cell boundary, so each cell holds exactly one arc and the count needs NO lattice-point argument; induction on m with two-set additivity (measure_union on disjoint measurable pieces) replaces any Finset-indexed disjointness family. This is the engine of the theorem above: an a-arc of length 2*lam/a swallows ~2*lam*b/a aligned b-cells, each contributing a whole b-arc, which is exactly how the overlap reaches 4*lam^2. REMAINING for the full THM-1012 in Lean: the arithmetic wrapper -- fit floor(2*lam*b/a) - 1 aligned cells inside an a-arc, then sum over the a arcs of a unit window (the summation pattern is already exercised in LRCCombUpperBound).
+
 **Theorem.** For positive integers a ≤ b and λ ∈ (0, ½),
 
 > **μ(D_a ∩ D_b) ≥ 4λ² − 2λ·(a/b)** over a unit window,
