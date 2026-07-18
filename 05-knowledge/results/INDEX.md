@@ -1435,3 +1435,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `hunter_sawtooth_floor_opus_S341.out` | [STORED] | THM-973: sawtooth floors table + Hunter tree floor mu(U_7) >= 547/6006 = 0.091076 (sorted-ratio law: Sum_j rho(13^(1/j))) + Markov dead bound 0.908924. | (self) |
 | `folded_identity_general_opus_S343.out` | [STORED] | THM-965: two-variable folded identity 400/400 exact + analytic table re-derivation. | (self) |
 | `sharp_nesting_floor_opus_S352.out` | [STORED] | THM-1012: the sharp nesting floor verified exactly (0/4000 violations; separated regime min slack 0.000371). | (self) |
+| `dense_core_169_opus_S356.out` | [STORED] | THM-1020/1021: the exact-independence locus (3000/3000) + the dense-core negative (400/400 comparable blocks) + the (77,143,169) explanation. | (self) |

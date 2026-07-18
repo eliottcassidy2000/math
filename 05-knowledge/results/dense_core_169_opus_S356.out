@@ -1,0 +1,51 @@
+(A) DOES THM-1012 CLOSE THE DENSE CORE?  lam = 1/14
+    THM-1012 per-pair floor: 4*lam^2 - 2*lam*(a/b) = 1/49 - (1/7)(a/b)
+    S350 containment floor:  2*lam/b = 1/(7b)   (always > 0)
+
+    400 comparable 7-blocks:
+      THM-1012 floor sum <= 0 in 400/400 cases  <-- the defect swamps 4*lam^2
+      S350 floor sum > 0 in     400/400 cases <-- positivity always
+      (exact Hunter floor is positive; only the THM-1012 LOWER BOUND fails here)
+
+    => the wall bound + S350 CLOSES an isolated 7-comparable block (positivity
+       suffices).  It does NOT close the 13-speed DENSE CORE: nesting the other
+       6 runners needs a QUANTITATIVE window, i.e. the sharp floor, and THM-1012
+       is sharp only when b >> a.  The dense core is by definition unseparated.
+
+    THE STRUCTURAL STATEMENT: THM-1012's defect 2*lam*(a/b) -> 2*lam as a -> b,
+    and 2*lam = 1/7 swamps the leading 4*lam^2 = 1/49 by a factor of 7.
+    crossover: defect < leading iff a/b < 2*lam = 1/7, i.e. b > 7a.
+
+(B) THE 169 ARCHAEOLOGY: 4/169 = (2/13)^2 = the independence constant
+    (2/13)^2 = 4/169   <-> my 4*lam^2 at lam=1/14 = 1/49
+    (2/13)^3 = 8/2197   (the triple analogue; 2197 = 13^3)
+
+    saw(S) = sum_pairs [rho(a,b) - 4/169]  (S181's dilation-invariant scalar)
+    THM-1012 in the 13-convention gives saw(S) >= -2*lam*sum_pairs(a/b):
+      S=[1, 2, 3, 4]: saw = 97/507 = +0.191321   THM-1012 bound -0.461538   OK
+      S=[7, 11, 13]: saw = 4/13013 = +0.000307   THM-1012 bound -0.310920   OK
+      S=[77, 143, 169]: saw = 0 = +0.000000   THM-1012 bound -0.283113   OK
+      S=[3, 5, 7, 11]: saw = -446/195195 = -0.002285   THM-1012 bound -0.477922   OK
+
+    THE (77,143,169) COINCIDENCE: 77 = 7*11, 143 = 11*13, 169 = 13*13 --
+    all inside the 1001 = 7*11*13 system; the repo records this triple as the
+    EXACT-independence point (ratio 1.000, deviation +0.000000).
+      rho(77,143) = 4/169   4/169 = 4/169   dev = +0.00000000  gcd=11
+      rho(77,169) = 4/169   4/169 = 4/169   dev = +0.00000000  gcd=1
+      rho(143,169) = 4/169   4/169 = 4/169   dev = +0.00000000  gcd=13
+
+(C) THE EXACT-INDEPENDENCE LOCUS, explained by the folded identity.
+    THM-965: the deviation from independence is fold(S mod M) - fold(D mod M),
+    S = a+b, D = b-a, M = 13g (13-convention).  fold(r) = r(M-r) is SYMMETRIC
+    under r <-> M-r.  So the folds cancel exactly when S = +-D mod M, i.e.
+    when M | 2a  or  M | 2b.   PREDICTION: rho(a,b) = 4/169 exactly iff that holds.
+    3000 random pairs: characterization correct in 3000/3000
+
+    the (77,143,169) triple, checked against the law:
+      (77,143): g=11, M=13g=143;  2a mod M = 11, 2b mod M = 0  -> independence: True
+      (77,169): g=1, M=13g=13;  2a mod M = 11, 2b mod M = 0  -> independence: True
+      (143,169): g=13, M=13g=169;  2a mod M = 117, 2b mod M = 0  -> independence: True
+
+    => the repo's recorded 'Sidon-far exact hit at (77,143,169)' is NOT a
+       coincidence of that triple: it is the fold reflection r <-> M-r, and
+       (77,143,169) sits on the locus because 13g | 2b for every pair.

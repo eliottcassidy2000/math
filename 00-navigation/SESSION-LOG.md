@@ -5,6 +5,30 @@ Prompt (owner): work the effective-LRC(13) collapse for near-equal killers.
 FILES: THM-1011 (VI), HYP-7370 update, beat_law_kps_S128c54.py + .out. -> all (the clustered residual is now a THIN, sharply characterized stratum: two killers within ~5; the beat law q ~ c/d_min explains every (BG-K) failure and is v-independent; whoever takes it next, the beat speed being core-sized is the handle -- and note the measure route is dead, it must be a discrepancy/finite argument).
 
 ---
+## opus-2026-07-17-S356 -- THM-1020 THE EXACT-INDEPENDENCE LOCUS (rho = (2lam)^2 exactly iff M | 2a or M | 2b; the fold reflection r <-> M-r; 3000/3000 -- and it DISSOLVES the repo's (77,143,169) 'coincidence' into a structural fact of the 1001 = 7*11*13 lattice) + THM-1021 THE HONEST DENSE-CORE NEGATIVE (the wall bound closes an isolated 7-block but NOT the dense core: THM-1012's defect swamps its leading term by a factor 7 in the comparable regime, 400/400) (HYP-7390)
+
+Owner: use the wall bound to close the residual dense core; DFS the 169 work for
+inspiration. BOTH directives produced results, one negative and one beautiful.
+[DENSE CORE, negative and exact] I suspected before computing that THM-1012's defect
+2*lam*(a/b) -> 2*lam as a -> b would swamp the leading 4*lam^2 in the comparable
+regime; confirmed 400/400. The wall bound DOES close an isolated 7-comparable block
+(positivity suffices, S350 supplies it) but nesting the other six runners needs a
+QUANTITATIVE window, and every quantitative floor this program has is of INDEPENDENCE
+type -- sharp only when scales decouple. The dense core is by definition correlated.
+That is why it resists, stated exactly.
+[169 DFS, the payoff] 4/169 = (2/13)^2 is the independence constant in the older
+13-convention -- the same object as my 4*lam^2. Following it back through THM-965: the
+deviation from independence IS fold(S) - fold(D), and fold(r) = r(M-r) is SYMMETRIC
+under r <-> M-r, so the folds cancel exactly when S = +-D mod M, i.e. M | 2a or M | 2b.
+Verified 3000/3000. This dissolves the repo's long-recorded 'Sidon-far exact hit at
+(77,143,169)': not a coincidence of that triple but the fold reflection, and the triple
+sits on the locus because 77 = 7*11, 143 = 11*13, 169 = 13^2 all live in the
+1001 = 7*11*13 system. The tangent came back to my own identity and explained a
+numerical curiosity the repo had carried for many sessions.
+FILES: THM-1020, THM-1021, script + out, HYP-7390. opus; S356.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.53) -- THM-1011: THE CLUSTERED-KILLER REDUCTION -- the case is NOT closed, but reduced to a sharp computable criterion with the obstruction identified (and one hypothesis honestly refuted). OWNER BRIEF: close the clustered killer case. HONEST HEADLINE: I did not close it. What I did: (0) checked canon FIRST (the MISTAKE-158 lesson) -- THM-933's two-block gluing is the right instrument, PROVED, but its per-block density/discrepancy certificates are explicitly "external", so it does not close by citation. (I) THE REDUCTION: instantiate THM-933 (BG-K) at m=2 with blocks P (core, slow) and K (killers, fast, internally clustered so THM-1007's balance telescoping fails): mu(safe) >= d_P*d_K - q(K)*K_P, so the case closes iff **q(K)*K_P < d_P*d_K** -- every input exactly computable (delta by interval sweep, q by the piecewise-linear H-oscillation, K_P by circular component count). (II) THE CRUDE FORM IS HOPELESS: (BG) with the universal cap K_P -> M(P) = sum of core speeds (~66) closes 0/14 sampled configs; the implied gap requirement is ~800x versus the actual 13x. The component-count refinement is NOT optional. (III) THE SHARP FORM LARGELY CLOSES: exact component counts give K_P = 14-18 (4.5x smaller than the crude cap) and (BG-K) closes 9/14 at the ACTUAL gap 13x; gap scan 9/12@13, 9/12@20, 11/12@26, 11/12@40, 12/12@60 -- NON-MONOTONE, so scale alone is not the obstruction. (IV) THE OBSTRUCTION IDENTIFIED: failures are exactly the large-q(K) blocks, and q(K) is large precisely when the killer speeds are NEARLY EQUAL to one another (K=[257,258,263], spread 2.3% -> q=1.45e-2; K=[417,544], spread 30% -> q=6.6e-4). Mechanism: near-equal killers have nearly COINCIDENT bad sets, so the block safe set has long runs and a large H-oscillation, while well-separated killers interleave and equidistribute. (V) HONEST REFUTATION: I hypothesised that large q(K) means internal arithmetic RESONANCE (a small reduced ratio), which would route the stratum to THM-935's structured strata. The data REFUTES it -- median smallest-reduced-ratio-sum is 524 in the low-q half vs 515 in the high-q half (identical), gcd 1 in both. Worse, I had written that conclusion INTO the script before seeing the data; the .out file now carries an explicit correction. It is multiplicative tightness, not resonance. NAMED NEXT (the route I would take): two killers within a few percent contribute essentially ONE constraint on scales below 1/(v2-v1), so an effective-LRC(13) argument on the collapsed family should close exactly the stratum (BG-K) misses. STATUS of "covering => M > 1/14": single-killer PROVED (THM-1007), lacunary multi-killer PROVED (THM-1007 ext), clustered multi-killer REDUCED but OPEN (this file). Namespace: my 1010 -> THM-1011 (codex first-pushed 1010 by 81 min).
 
 Prompt (owner): now close the clustered killer case.
