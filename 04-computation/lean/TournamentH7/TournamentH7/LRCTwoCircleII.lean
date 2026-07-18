@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCTwoCircleII — THE TWO-CIRCLE DEEP CERTIFICATE, PART II
-  (death-star-2026-07-17-S53, HYP-7270): deep ⟹ circles, completing the iff.
+  (death-star-2026-07-17-S53, HYP-7285): deep ⟹ circles, completing the iff.
 
   THE ARCHITECTURE: case analysis on the smallest failing speed `a`.
   * a = 1: the hub lock nests all failures; some failing speed is ≥ 6, so the
