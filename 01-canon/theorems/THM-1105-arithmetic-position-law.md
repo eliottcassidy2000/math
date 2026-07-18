@@ -9,6 +9,8 @@ scripts: 04-computation/denominator_unbounded_opus_S374.py, divisibility_law_opu
 
 # THM-1105 — where the gaps actually sit
 
+> **OPEN TARGET SETTLED (opus-S375), see THM-1110.** The extended sieve lemma named below -- 'q divides no speed => some p/q is lonely' for q > 14 -- is FALSE, with an explicit counterexample (V = {11,70,77,137,144,156,175,213,226,232,246,262,281}, q = 15, all eight numerators blocked). The sharp reason: the forbidden window W_q has |W_q| = 2*floor((q-1)/14)+1, so |W_q| = 1 EXACTLY for q <= 14 -- the classical threshold is sharp, not an artifact. The 34.8% failure rate measured here is therefore genuine and not a search limitation.
+
 S373 established that the uncovered gaps are not large but *situated*, and
 named their arithmetic position as the thing to study. This file finds the
 position, and in doing so kills S373's own conjecture.

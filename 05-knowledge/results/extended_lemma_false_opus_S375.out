@@ -1,0 +1,48 @@
+(1) THE WINDOW |W_q| = 2*floor((q-1)/14)+1 -- why 14 is the boundary
+    q=  7: |W_q| =   1   W_q = [0]
+    q= 13: |W_q| =   1   W_q = [0]
+    q= 14: |W_q| =   1   W_q = [0]
+    q= 15: |W_q| =   3   W_q = [0, 1, 14]
+    q= 16: |W_q| =   3   W_q = [0, 1, 15]
+    q= 28: |W_q| =   3   W_q = [0, 1, 27]
+    q= 29: |W_q| =   5   W_q = [0, 1, 2, 27, 28]
+    q= 30: |W_q| =   5   W_q = [0, 1, 2, 28, 29]
+    q= 42: |W_q| =   5   W_q = [0, 1, 2, 40, 41]
+    q= 43: |W_q| =   7   W_q = [0, 1, 2, 3, 40, 41, 42]
+    |W_q| = 1 exactly for q <= 14  =>  classical hypothesis 'q divides no
+    speed' is EXACTLY 'no speed lands in W_q', and is sufficient only there.
+
+(2) EXPLICIT COUNTEREXAMPLE to the extended lemma (from the S374 run)
+    V = [11, 70, 77, 137, 144, 156, 175, 213, 226, 232, 246, 262, 281]
+    q = 15; does q divide any speed?  []  (empty => hypothesis HOLDS)
+    gcd(V) = 1 (primitive)
+    W_15 = [0, 1, 14]
+    p : residues v*p mod 15, and which speed lands in W_15
+      p= 1: blocked by v=226 (v*p = 1 mod 15)
+      p= 2: blocked by v=232 (v*p = 14 mod 15)
+      p= 4: blocked by v=11 (v*p = 14 mod 15)
+      p= 7: blocked by v=77 (v*p = 14 mod 15)
+      p= 8: blocked by v=77 (v*p = 1 mod 15)
+      p=11: blocked by v=11 (v*p = 1 mod 15)
+      p=13: blocked by v=232 (v*p = 1 mod 15)
+      p=14: blocked by v=226 (v*p = 14 mod 15)
+    => no p works at q=15, yet 15 divides no speed.  THE LEMMA IS FALSE.
+
+(3) WHY NO COUNTING PROOF CAN EXIST AT A SINGLE q
+    each speed v kills at most |W_q|-1 numerators (v*p = w has one
+    solution p per nonzero w), so  #bad p <= 13*(|W_q|-1) = 26*floor((q-1)/14).
+    q    phi(q)   13*(|W_q|-1)   does the bound fire?
+      15       8             26   no
+      16       8             26   no
+      20       8             26   no
+      23      22             26   no
+      25      20             26   no
+      29      28             52   no
+      31      30             52   no
+      37      36             52   no
+      41      40             52   no
+      43      42             78   no
+      53      52             78   no
+      71      70            130   no
+    26*floor((q-1)/14) ~ 1.857*q > q > phi(q), so the union bound NEVER
+    fires -- the same 13/7 > 1 obstruction as everywhere else in this program.

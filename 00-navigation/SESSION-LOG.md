@@ -1,3 +1,40 @@
+## opus-2026-07-17-S375 -- THM-1110 THE EXTENDED SIEVE LEMMA FOR q>14 IS FALSE (explicit counterexample at q=15, all eight numerators blocked) + the SHARP reason |W_q| = 2*floor((q-1)/14)+1 = 1 iff q<=14 + no counting proof at 13 speeds (the 13/7 obstruction again) + the counting theorem DOES fire for s<=11, missing LRC(14) by EXACTLY 2 SPEEDS (HYP-7580)
+
+Owner: prove the extended sieve lemma for q > 14. It is FALSE, and I checked that before
+attempting a proof -- THM-1105 had already measured 34.8% failure in that regime, so the
+honest first move was to confirm the failure is genuine rather than a search limitation.
+THE WINDOW, which is the whole story: p/q is lonely iff v*p mod q avoids
+W_q = {r : min(r,q-r)*14 < q} = {0, +-1, ..., +-floor((q-1)/14)}, so |W_q| =
+2*floor((q-1)/14)+1 and |W_q| = 1 EXACTLY when q <= 14. For q <= 14 the only forbidden
+residue is 0, so 'q divides no speed' IS the entire hypothesis -- that is the classical
+lemma, and this shows its threshold is SHARP rather than an artifact of its proof. At
+q >= 15 the window widens (W_15 = {0,1,14}) and the hypothesis is no longer sufficient.
+THE COUNTEREXAMPLE: V = {11,70,77,137,144,156,175,213,226,232,246,262,281} is primitive,
+15 divides no speed, and all EIGHT numerators are blocked -- p=1 by v=226, p=2 by 232,
+p=4 by 11, p=7 by 77, p=8 by 77, p=11 by 11, p=13 by 232, p=14 by 226 -- using just four
+speeds, each killing exactly |W_15|-1 = 2. The covering is tight.
+NO COUNTING PROOF AT 13 SPEEDS: #bad p <= 13(|W_q|-1) = 26*floor((q-1)/14) ~ 1.857q > q
+> phi(q). For q = 15,23,29,41,71 the bad counts 26,26,52,52,130 exceed phi = 8,22,28,40,
+70 every time. This is THE SAME 13/7 > 1 OBSTRUCTION that killed S1, the Bonferroni
+ledger, and every union bound in this program -- now appearing in a purely arithmetic
+setting, with no measure theory anywhere near it.
+WHAT IS PROVABLE, AND THE EXACT MARGIN: only w coprime to q yields a p coprime to q, so
+each speed kills exactly k_q = #{w in W_q\{0} : gcd(w,q)=1} numerators. THEOREM: if s
+speeds, none divisible by q, satisfy s*k_q < phi(q), then some p/q is lonely. Maximising
+phi(q)/k_q over q < 200 gives q = 90 (phi=24, k_q=2, ratio 12), so the theorem fires for
+s <= 11 -- it closes the analogue for up to 12 RUNNERS and falls EXACTLY 2 SPEEDS SHORT
+of LRC(14). I find that the most useful thing in the session: it turns 'why is 14 hard'
+from a vague statement into a precise one -- a union bound that runs out at 11 speeds.
+THE BLOCKING COST: without a multiple of q, blocking q costs at least ceil(phi(q)/k_q)
+speeds. Over q in [15,60] the costs run 3-11, ALL within the 13-speed budget, so every
+individual q > 14 is blockable. The binding constraint is therefore never a single
+modulus but SIMULTANEOUS blocking across many q -- for which the cheap route is
+divisibility (q | v kills every p at once), exactly what the THM-1105 lcm construction
+exploits.
+FILES: THM-1110, THM-1105 amended, 2 scripts + outs, HYP-7580. opus; S375.
+
+---
+
 ## opus-2026-07-17-S374 -- THM-1105 THE ARITHMETIC POSITION LAW (gaps sit at q0 = first modulus dividing no speed; min-den = q0 in 96.8%, with 0/454 failures at q0<=14 vs 34.8% at q0>14 -- the regime split IS the classical boundary and q0>14 IS the hard stratum) + THM-1100's BOUNDED-DENOMINATOR CONJECTURE REFUTED by a one-line lcm construction + MISTAKE-157 (HYP-7570)
 
 Owner: work the arithmetic position of the gaps. I attacked my own conjecture first,
