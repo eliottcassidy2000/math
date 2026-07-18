@@ -1,0 +1,15 @@
+TRAJECTORY DIAGNOSIS on the deep well, base = {1..7}, killers ascending:
+  base {1..7}: mu_0=0.334694  N_0=18   (true |G| of the base)
+
+   add w | decay term mu(1-2d) | boundary 2dN/w |   mu_new   |  N_new | EXACT |G| of base+killers
+      8 |      0.286880       |    0.321429    | -0.034548 |     26 | 0.265816
+      9 |      -0.029613       |    0.412698    | -0.442311 |     35 | 0.181066
+     10 |      -0.379124       |    0.500000    | -0.879124 |     45 | 0.137982
+     11 |      -0.753535       |    0.584416    | -1.337950 |     56 | 0.056334
+     12 |      -1.146815       |    0.666667    | -1.813481 |     68 | 0.034101
+    182 |      -1.554412       |    0.053375    | -1.607788 |    250 | 0.023897
+
+  DIAGNOSIS: the boundary term 2dN/w is the killer -- N grows by w each step, so once a large
+  killer enters, every subsequent step pays 2dN/w with N in the hundreds. Compare the EXACT
+  |G| column: the true measure stays healthy while the BOUND collapses. The loss is entirely
+  in the component accounting, not in the geometry.

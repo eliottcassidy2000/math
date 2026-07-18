@@ -1,0 +1,14 @@
+ADDITIVE MEASURE-RECURSION, corrected component bound  N' <= N + w
+  mu_{k+1} >= mu_k(1-2d) - 2 d N_k / w_k   [no r-cap]
+
+  family                  | best base/order | cert? |  mu_final  | true M
+  deep well {1..12,182}   |     7/asc     | False | -0.034548 | 0.07650
+  {1..11,13,84}           |     7/asc     | False | -0.034548 | 0.07865
+  GW {1..11,13,24}        |     10/desc   | False | -0.012682 | 0.07143
+  random covering #1      |     9/asc     | False | -0.022742 | 0.22821
+  random covering #2      |     9/asc     | False | -0.010358 | 0.28355
+  random covering #3      |     10/desc   | False | -0.009493 | 0.20102
+  random covering #4      |     6/desc    | False | -0.000832 | 0.21562
+  random covering #5      |     10/asc    | False | -0.019965 | 0.21804
+
+  certified 0/8
