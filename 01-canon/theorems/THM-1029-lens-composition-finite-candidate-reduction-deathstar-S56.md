@@ -80,4 +80,33 @@ these (as stability × covering here) until the intersection of the necessary co
 deep-well tower; this THM is the first composition that produces a *finite* candidate set, the
 prerequisite for any finite closure.
 
+
+
+## UPDATE (same session) — the clean uniform lemma is FALSE; the true reason is alignment
+
+I tried to close the compact case with a clean inequality: "valid non-AP core ⟹ `δ > max(W)/2366`"
+(which would make the candidate window empty, eliminating the core by *stability alone*). **It is
+false.** Near-AP valid cores violate it — `W = {1,…,11,24}` (covers 2..12, misses 13,14, non-AP) has
+`M(W) = 2/25`, `δ = 0.00308`, `max/2366 = 0.0101 > δ`, so its window `[182,600] ∩ 182ℤ = {182,364,546}`
+is *nonempty*.
+
+But the finite check still holds — and shows the real mechanism: **`M(V) = M(W) = 2/25 ≥ 1/13` for
+every candidate**, at the *same* witness `t = 2/25`. The mult-of-182 far element is **safe at `W`'s own
+maximizer** (`‖182k·2/25‖ = 11/25, … ≥ 1/13`), so it does not lower `M`. In good-set terms: `W`'s
+level-`1/13` good set sits at denominators tied to `W` (here 25), and the far element's arcs
+(denominator `182k`) do **not align** with it, so the far element cannot cover it — hence `M(V)=M(W)`.
+
+**This is the alignment wall again.** The AP `{1,…,12}` is the *unique* core whose good set (at
+denominator 13) aligns with `182 = 14·13` — that alignment is exactly the deep well, the *only* place
+the far element can cover and drop `M` below `1/13`. So "compact non-AP cores are eliminated" is **not**
+a separable inequality lemma; it is the statement that only the AP's good set is `182`-aligned — the
+inverse theorem itself, viewed from the good-set/alignment side. The finite check is verified on every
+core tried, but its *uniform* reason is the wall, not a gap.
+
+**Honest correction:** THM-1029's finite-candidate reduction stands (stability × covering ⟹ finitely
+many candidates), but the hoped-for uniform closure of the compact case does not reduce to `δ >
+max/2366` (false) — it reduces to the `182`-alignment rigidity, which is LRC(14). Scripts:
+`lrc_gap_lemma_deathstar_S56.py` (the refutation), `lrc_check24_deathstar_S56.py` (the `M(V)=M(W)`
+mechanism), `lrc_valid_core_deathstar_S56.py`.
+
 → THM-1028, THM-1017, THM-1002, THM-724/726, the Freiman-3k-4 / tournament-OCF reflections, HYP-3901.
