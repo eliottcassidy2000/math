@@ -1,0 +1,13 @@
+== WEAK-TARGET TEST in THM-726's open strata (|P|<=8, >=5 far outliers) ==
+  covering families sampled: 400
+  min M = 0.136200  (core size 8, far 5)
+  V_min = [2, 9, 10, 11, 12, 13, 14, 15, 445, 857, 1104, 1487, 2192]
+  thresholds: 1/14=0.071429 (WEAK) | 14/183=0.076503 (SHARP) | 1/13=0.076923 (THM-726)
+  families at or below WEAK 1/14 : 0
+  families at or below SHARP 14/183: 0
+  families at or below THM-726 1/13: 0
+  min margin over 1/14 = +0.064771  (1.91x threshold)
+
+  >>> WEAK TARGET COMFORTABLE: every open-stratum covering family has M > 1/14.
+  >>> (none below sharp either in this sample; the strata are loose at both targets)
+DONE

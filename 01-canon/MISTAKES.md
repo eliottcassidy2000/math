@@ -4270,3 +4270,26 @@ empty-branch counterexample (negative lam) was caught only because linarith refu
 prover balks at an "obvious" branch, check the statement before blaming the tactic.
 **Status:** all three ladder files (FragmentationCount, TieSplitWalk, KillerBudget) now build with
 oleans emitted; the S127 session log's "kernel-verified" claim corrected in the S128 entry.
+
+## MISTAKE-158 -- a canon lemma (THM-523's q-witness) was independently re-derived and presented as new
+
+**What was claimed:** kind-pasteur-S128 cont.50 presented a "sieve-margin lemma" as new
+rigorous content in THM-995(IX): *if some q in {2..13} divides no speed, then t = 1/q gives
+M >= 1/q > 1/14.*
+
+**Why it is wrong:** this is verbatim **THM-523's q-witness lemma** (mac-mini,
+2026-06-16), which states and proves exactly *if S contains no multiple of q in {2..14},
+then tau = 1/q is lonely and M(S) >= 1/q >= 1/14*, together with the covering-set
+necessary condition.  The re-derivation was correct mathematically but the novelty claim
+was false, and the file did not cite the prior result.
+
+**Correct framing:** THM-523 owns the lemma.  The only increment in THM-995(IX) is the
+**strictness split** (q <= 13 gives the STRICT inequality 1/q > 1/14 with margin >= 1/182,
+whereas q = 14 gives only M >= 1/14) and the consequent **pinning** of the tight locus to
+the "covers 2..13, misses exactly 14" stratum.  Corrected in-file at cont.51.
+
+**How to avoid:** before claiming a lemma as new, grep canon for its STATEMENT SHAPE, not
+just its name -- here `grep -l "1/q" 01-canon/theorems/` or a search for "q-witness" /
+"covering set" would have surfaced THM-523 immediately.  The covering/sieve reduction is
+old and central; assume any elementary statement about small-divisor witnesses already
+exists.

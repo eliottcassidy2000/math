@@ -135,10 +135,18 @@ is precisely the classical hard core of LRC(14).
 UNLESS some vᵢ ≡ 0 (mod q). So a family is "covering" (no sieve witness) iff **every
 q ∈ {2,…,14} divides some speed**.
 
-**Lemma (rigorous, one line):** if some q ∈ {2,…,13} divides no speed, then
-M(V) ≥ 1/q > 1/14 — explicit witness t = 1/q, margin 1/q − 1/14 ≥ 1/182.
+**ATTRIBUTION CORRECTION (cont.51).** This lemma is NOT new — it is **THM-523's q-witness
+lemma** (mac-mini, 2026-06-16), proved there verbatim: *if S contains no multiple of
+q ∈ {2,…,14}, then τ = 1/q is lonely and M(S) ≥ 1/q ≥ 1/14.* I re-derived it independently
+in cont.50 and wrongly presented it as new; credit belongs to THM-523. What this file adds
+is only the **strictness split and the pinning**: for q ≤ 13 the bound is STRICT
+(1/q > 1/14, margin ≥ 1/182), while q = 14 gives only M ≥ 1/14 — hence a tight family must
+cover 2..13 and can miss ONLY q = 14. (Verified exactly, 100 families.)
+
+**Lemma (THM-523, restated with the strictness split):** if some q ∈ {2,…,13} divides no
+speed, then M(V) ≥ 1/q > 1/14 — explicit witness t = 1/q, margin 1/q − 1/14 ≥ 1/182.
 *Proof:* no vᵢ ≡ 0 (mod q) ⟹ ‖vᵢ/q‖ ≥ 1/q for all i ⟹ min ≥ 1/q; and 1/q > 1/14 for
-q ≤ 13. ∎ (Verified exactly, 100 families.)
+q ≤ 13. ∎
 
 **Consequence — the tight locus is pinned to ONE stratum.** A tight family (M = 1/14) must
 cover 2..13 (else the lemma forces M > 1/14 strictly). Both known tight families ({1..13},
@@ -162,8 +170,42 @@ NOT a universal floor. The honest floors: non-covering at q ≤ 13 ⟹ margin �
 (RIGOROUS, IX); covering families ⟹ M ≥ 1/9 (empirical, X); the double-threshold 1/7 is
 withdrawn as a universal claim.
 
+## (XI) THE RESIDUAL *IS* THE COVERING-MIN PROBLEM — and it is largely already proved
+
+The sharpened residual "covers all of 2..14 ⟹ M > 1/14" is **not a new problem**: it is
+exactly THM-523's residual covering-set hard core (HYP-2566), and the project's
+covering-min rigidity already delivers a STRONGER bound:
+
+| stratum | canon result | bound | status |
+|---|---|---|---|
+| single-killer covering | **THM-724** | M ≥ 14/183 | PROVED (3/4 cases unconditional; near-tight non-dilated large-s residual empirically closed) |
+| multi-killer (≥2 far outliers) | **THM-726** | M ≥ 1/13 | certified shape-complete on \|P\| ∈ {10,11}; \|P\| = 9 legacy; \|P\| ≤ 8 open |
+
+Since 14/183 = 0.07650 > 1/14 = 0.07143 (margin 13/2562) and 1/13 > 14/183, **THM-724+726
+give "covering ⟹ M > 1/14" modulo their two named gaps** — the equality horn is closed to
+the same degree the covering-min is.
+
+## (XII) THE WEAK-TARGET RELAXATION (new) — where the difficulty actually lives
+
+The equality horn needs only the WEAK target M > 1/14, which sits 7% BELOW the sharp
+covering-min target 14/183. Measuring where the sharp program's gaps actually are:
+
+- **THM-726's "open" \|P\| ≤ 8 strata are NOT near-tight.** 400 sampled covering families
+  in exactly that stratum (core ≤ 8, ≥ 5 far outliers) give min M = **0.1362 = 1.91×** the
+  1/14 threshold — and ZERO fall below 1/14, below 14/183, or even below 1/13. Their
+  openness is an artifact of the certification method (the union-tail dying at j ≈ 6.5),
+  not genuine tightness. For the weak target these strata are loose by ~91%.
+- **The genuine difficulty is the near-tight SINGLE-killer neighbourhood** (the deep well
+  {1..12,182}, M = 14/183 = only 1.07× threshold) — which is precisely where THM-724's
+  UNCONDITIONAL cases (interval-core, dilated-core, killer-safe) already apply.
+
+> **Localization:** for the weak target M > 1/14, the entire remaining risk is THM-724's
+> near-tight non-dilated large-s residual — and there the weak target has 7% more room
+> than the sharp 14/183 bound it was proved against.
+
 ## Named next
-- Prove "covers all of 2..14 ⟹ M > 1/14" (the sharpened residual, IX+X) — closes the
-  equality horn universally; the sieve-margin lemma already handles every q ≤ 13.
-- The quantitative covering-family floor M ≥ 1/9 (or explicit δ) — feeds THM-984 → THM-979
-  → the census.
+- Re-run THM-724's near-tight large-s residual against the WEAK target M > 1/14 instead of
+  M ≥ 14/183: the extra 7% margin may convert its "empirically closed" status to
+  unconditional — this would close the equality horn outright.
+- Likewise re-run THM-726's \|P\| ≤ 8 union-tail at the weak target (empirically 1.91×
+  loose, so the method should survive well past its j ≈ 6.5 sharp-target death point).
