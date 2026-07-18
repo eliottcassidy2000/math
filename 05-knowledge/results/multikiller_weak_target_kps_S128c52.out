@@ -1,0 +1,16 @@
+== the iterated-balance bound (1/(14-j))*(13/14)^j vs 1/14 ==
+   j= 1 killers: bound=1/14                   = 0.071429  >=1/14:True (EQUALITY at j=1; strictness from s<v/13)
+   j= 2 killers: bound=169/2352               = 0.071854  >=1/14:True (STRICT)
+   j= 3 killers: bound=2197/30184             = 0.072787  >=1/14:True (STRICT)
+   j= 4 killers: bound=28561/384160           = 0.074347  >=1/14:True (STRICT)
+   j= 5 killers: bound=371293/4840416         = 0.076707  >=1/14:True (STRICT)
+   j= 6 killers: bound=4826809/60236288       = 0.080131  >=1/14:True (STRICT)
+   j= 7 killers: bound=62748517/737894528     = 0.085037  >=1/14:True (STRICT)
+   j= 8 killers: bound=815730721/8854734336   = 0.092124  >=1/14:True (STRICT)
+   j= 9 killers: bound=10604499373/103305233920 = 0.102652  >=1/14:True (STRICT)
+   j=10 killers: bound=137858491849/1157018619904 = 0.119150  >=1/14:True (STRICT)
+   j=11 killers: bound=1792160394037/12148695508992 = 0.147519  >=1/14:True (STRICT)
+   j=12 killers: bound=23298085122481/113387824750592 = 0.205473  >=1/14:True (STRICT)
+   all j pass: True
+
+== verify on generated LACUNARY-CHAIN families (each killer > 13x previous max) ==

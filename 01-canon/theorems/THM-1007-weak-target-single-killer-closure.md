@@ -47,9 +47,43 @@ Worst case μ = 1/13, s = max C = m, v_f = 13m+1: balance = (1/13)(13m+1)/(14m+1
 exactly **1/(182(14m+1))** — verified at m = 1, 5, 12, 25, 100. (And μ = 1/13 forces a
 dilated-AP core — THM-724 Case 1/2 — so the genuine residual margin is larger.)
 
+## EXTENSION — THE LACUNARY-CHAIN MULTI-KILLER CLOSURE (same session)
+
+The argument iterates. Call S a **lacunary killer chain** with j killers if, ordering
+S = P ∪ {v_1 < … < v_j} with core P (|P| = 13−j), each killer exceeds 13× the running
+maximum: v_1 > 13·max(P) and v_{k} > 13·v_{k−1}.
+
+**Theorem.** Every primitive lacunary killer chain satisfies M(S) > 1/14.
+
+*Proof.* μ₀ := M(P) ≥ 1/(14−j) by LRC(14−j) (settled, since 14−j ≤ 13). Adding killer v_k
+to the set built so far, Lemma 1 multiplies the bound by v_k/(v_k + s_{k−1}) where
+s_{k−1} ≤ (running max) = v_{k−1} < v_k/13, so each factor exceeds 13/14 (the killer-safe
+branch only does better). Hence
+
+> **M(S) > (1/(14−j))·(13/14)^j.**
+
+That this beats 1/14 for every j is exact arithmetic, VERIFIED for j = 1..12:
+
+| j | bound | value | vs 1/14 |
+|---|---|---|---|
+| 1 | 1/14 | 0.071429 | equality (strictness from s < v/13) |
+| 2 | 169/2352 | 0.071854 | strict (tightest) |
+| 3 | 2197/30184 | 0.072787 | strict |
+| 5 | 371293/4840416 | 0.076707 | strict |
+| 8 | 815730721/8854734336 | 0.092124 | strict |
+| 12 | 23298085122481/113387824750592 | 0.205473 | strict |
+
+The bound is *increasing* in j past the j = 2 minimum: more killers help, because the core
+shrinks and LRC(14−j) strengthens faster than the (13/14)^j cost. ∎
+
+**HONEST CAVEAT.** This covers the lacunary CHAIN, not all of THM-726's multi-killer class:
+if two killers are comparable to each other (v_2 ≈ v_1 ≫ core), the chain breaks — that
+step's factor degrades to ≈ 1/2 and the telescoping fails. Clustered-killer configurations
+therefore remain open at the weak target (though THM-995(XII) measured that stratum at
+1.91× the threshold empirically).
+
 ## Named next
-- **The multi-killer analogue:** run THM-726's \|P\| ≤ 8 open strata at the weak target by
-  iterating the balance lemma over ≥2 killers. THM-995(XII) measured those strata at 1.91×
-  the threshold empirically, so the analogous closure should be comfortable — that would
-  close "covering ⟹ M > 1/14" outright and with it the equality horn.
+- **Clustered killers:** treat a comparable killer block as a single unit (its own LRC
+  bound) rather than iterating one at a time — the natural route to the remaining
+  multi-killer stratum, which would close "covering ⟹ M > 1/14" outright.
 - Lean rendering: the chain is one inequality over ℚ given Lemma 1 as an interface.
