@@ -4,5 +4,5 @@ repl 5->24 (cover, non-AP)           cover= True AP-core=False M=     1/9=0.1111
 repl 7->14 (cover, non-AP)           cover= True AP-core=False M=    1/10=0.1000
 dbl+perturb {2..22,26}u780 (nonAP)   cover= True AP-core=False M=    1/12=0.0833
 
-covering non-AP floor = 1/12 (sharp); gap (1/13,1/12) empty of covering non-AP.
-gap thm => INV (stronger conclusion, same hyp) => >= open crux. Route corrected (S110->S111).
+five-row probe: displayed covering non-AP minimum = 1/12; no universal floor was enumerated.
+gap thm => INVcov on the fully covering stratum; therefore it is at least the open crux.

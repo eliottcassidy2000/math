@@ -70993,3 +70993,24 @@ correct final-tooth threshold and sampled `R_sharp` peaks near `0.8011`.
 Uniform r=6 remains open; the stored output's closure wording is telemetry.
 Pulled S57's maximizer/Farey lens as a rigorous per-core lower bound and
 marked its bounded residual scope explicitly.
+
+---
+
+## codex-2026-07-18-S73 pull audit — r6 `G(σ)` integration and MISTAKE-167
+
+Pulled the S58 continuation into the uniquely numbered THM-1132.  Its exact
+five-centre functional has good bands
+`(0,1/7) ∪ (2/7,1/3) ∪ (3/7,4/7) ∪ (2/3,5/7) ∪ (6/7,1)` and minimum `2/35`
+at `σ=1/5`; this turns the uniform r6 horn into a precise good-band landing
+plus drift-error lemma.  The old THM-1123 reference in the recursion reflection
+is now THM-1132.  The all-core/all-scale landing lemma remains open.
+
+The same pull exposed another quantifier promotion.  S111's script evaluates
+only five named covering families, but its output and ledgers called the
+displayed `1/12` value the universal covering non-AP floor and declared
+`(1/13,1/12)` empty.  MISTAKE-167 retracts those universal claims and labels
+the data correctly as a five-row probe.  What survives is purely logical: the
+proposed universal `1/12` gap theorem would imply corrected `INVcov`, so it is
+at least as hard as the covering crux.  The PG(2,13) numerical coincidence is
+retained as a heuristic; no predicate-preserving transport to the tournament
+or loneliness object is presently proved.

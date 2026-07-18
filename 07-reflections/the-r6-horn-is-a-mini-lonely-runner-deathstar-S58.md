@@ -1,6 +1,9 @@
 # The r=6 sharp horn is itself a mini Lonely Runner problem (death-star-S58)
 
-A self-similar observation from proving the r=6 uniform bound (THM-1123).
+A self-similar observation from work toward the r=6 uniform bound (THM-1132,
+renumbered after THM-1123 had already been claimed).  The sharp horn and the
+one-variable `G(σ)` bands are proved; the all-core, all-scale landing/drift
+lemma is still open.
 
 The r=6 covering-killer stratum, after the sharp measure horn, asks: within a core-safe arc,
 do 5 far killers `{b, b+2, …, b+8}` leave a gap wider than one killer's danger arc? Writing

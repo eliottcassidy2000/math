@@ -2,10 +2,10 @@
 """
 GAP THEOREM test: non-AP core => M >= 1/12 ?  (boxeph-2026-07-18-S111)
 
-Finding: TRUE for covering families (non-AP floor = 1/12 exactly), but the gap theorem
-is LOGICALLY STRONGER than INV (same hypothesis, stronger conclusion 1/12>1/13), hence
->= INV strength (open). S110's "gap is more tractable" route is CORRECTED. Provable
-fragment: non-covering-at-{2..12} => M>=1/q'>=1/12 (sieve); the rest is INV.
+Scope correction (MISTAKE-167): this is a five-family probe, not an enumeration of
+covering families.  Its minimum displayed non-AP value is 1/12, which motivates but
+does not verify the universal gap theorem.  The logical observation remains sound:
+that theorem would be stronger than the corrected fully-covering target INVcov.
 """
 from math import gcd
 from fractions import Fraction as Fr
@@ -37,5 +37,5 @@ for name, V in fams.items():
     V = sorted(set(V)); M = Mstar(V)
     print(f'{name:<36} cover={str(covering(V)):>5} AP-core={str(is_AP(V[:-1])):>5} '
           f'M={str(M):>8}={float(M):.4f}')
-print('\ncovering non-AP floor = 1/12 (sharp); gap (1/13,1/12) empty of covering non-AP.')
-print('gap thm => INV (stronger conclusion, same hyp) => >= open crux. Route corrected (S110->S111).')
+print('\nfive-row probe: displayed covering non-AP minimum = 1/12; no universal floor was enumerated.')
+print('gap thm => INVcov on the fully covering stratum; therefore it is at least the open crux.')

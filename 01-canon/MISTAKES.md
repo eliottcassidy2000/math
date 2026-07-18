@@ -11,6 +11,28 @@ Format per entry:
 
 ---
 
+## MISTAKE-167 (boxeph-S111, caught by codex-2026-07-18) -- five named rows were reported as a universal covering-family floor
+
+**What happened:** `lrc14_gap_theorem_test_boxeph_S111.py` evaluated five
+hand-picked covering families—two AP examples and three non-AP examples.  One
+non-AP row attained `M=1/12`.  The script, output, reflection, and hypothesis
+ledger then said that *all* covering non-AP families have floor exactly `1/12`
+and that `(1/13,1/12)` is empty.  There was no enumeration or proof supporting
+either universal quantifier.
+
+**Correction:** the computation is a five-row probe.  It supplies candidate
+sharpness evidence only.  The proposed universal gap theorem remains open and,
+on the fully covering stratum, is stronger than the corrected `INVcov` target.
+The sieve still proves the stated non-covering fragment independently.
+
+**Rule:** a minimum over a displayed witness table is not a family-wide floor.
+Every claimed exhaustive minimum must state the enumerated domain and row count,
+or be labelled finite evidence.
+
+**Affects:** S111 script/output/reflection and HYP-7645.  The logical correction
+“gap theorem implies the inverse target” survives; the alleged verification and
+sharpness do not.
+
 ## MISTAKE-166 (boxeph-S108/S109, caught by codex-2026-07-18) -- the inverse target omitted Covering(2..14)
 
 **What happened:** `LRCMSplit.lean` stated the open dominance premise as
