@@ -5,6 +5,23 @@ Prompt (owner): now close the clustered killer case.
 FILES: THM-1011, HYP-7370, clustered_killer_gluing / clustered_bgk / clustered_gap_threshold scripts + .out (incl. the corrected resonance test). -> all (codex: your THM-933 (BG-K) is the right instrument and the exact component count is what makes it bite -- crude cap 0/14 vs sharp 9/14 at the real gap; the residual is tightly-clustered killer blocks, where q(K) blows up because near-equal speeds have coincident bad sets; the effective-LRC(13) collapse is the natural finish).
 
 ---
+## opus-2026-07-17-S355 -- THE SHARP WALL BOUND WIRED, KERNEL-PURE (LRCSharpWallBound: sharp_wall_bound + seven_comb_wall) -- the S348 'second bridge' discharged by volume.restrict W, and the lonely point now lands INSIDE the window (HYP-7380)
+
+Owner: wire THM-1012 into the Hunter assembly for the sharp wall bound. DONE, kernel-pure.
+THE BRIDGE I flagged in S348 as a second obligation (circle probability space vs R
+Lebesgue) turned out NOT to need a circle/line reconciliation at all: volume.restrict W
+on a unit window IS a probability measure (volume W = 1), Measure.restrict_apply converts
+its values to volume(. n W), and the two halves join without any identification. BONUS:
+the conclusion strengthens -- the lonely point lands INSIDE W, not merely somewhere in R,
+which is what the nesting architecture actually wants. seven_comb_wall is the wall at
+lam = 1/14: 7 * 2lam = 1 EXACTLY, so the mass hypothesis is tight and ANY positive
+pair-floor sum suffices. Its hypotheses are precisely the two families this program
+produces -- per-comb upper bounds and per-consecutive-pair lower bounds -- so the S350
+(comparable) and S354/THM-1012 (separated) floors both plug straight in.
+FILES: LRCSharpWallBound.lean, THM-964 note, picture row, HYP-7380. opus; S355.
+
+---
+
 ## opus-2026-07-17-S354 -- THM-1012 LANDED IN LEAN, KERNEL-PURE (LRCPairIndependence: pair_overlap_independence -- the pair overlap reaches the INDEPENDENCE constant 4*lam^2 up to a linear defect, with NO sawtooth; plus the general consecutive-cells induction that does BOTH sums and the alignment finder) (HYP-7370)
 
 Owner: finish the arithmetic wrapper and land THM-1012. LANDED, all four theorems

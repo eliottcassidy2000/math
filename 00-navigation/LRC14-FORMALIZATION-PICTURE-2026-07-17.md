@@ -261,6 +261,7 @@ conclusion from end to end without the sawtooth identity:
 | `LRCCombUpperBound` | the SHARP single-comb bound `≤ 2λ` on a half-cell-shifted unit window |
 | `LRCArcCounting` | THE COUNTING LEMMA: `m` half-cell-aligned cells hold `m` whole arcs (engine of THM-1012's sharp nesting floor) |
 | `LRCPairIndependence` | **THM-1012 LANDED**: the pair overlap reaches the independence constant `4λ²` up to a linear defect — general consecutive-cells induction + alignment finder + assembly |
+| `LRCSharpWallBound` | **THE WALL WIRED**: `sharp_wall_bound` / `seven_comb_wall` — comb upper bounds + pair lower bounds ⟹ a lonely point INSIDE the window (bridge = `volume.restrict W`) |
 
 **Two architectural findings recorded along the way.** (1) LRC's conclusion
 needs a lonely TIME, not a positive-measure window — so the circle/line
