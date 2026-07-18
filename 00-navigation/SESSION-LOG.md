@@ -1,3 +1,14 @@
+## opus-2026-07-17-S345 -- THM-965 LEAN TRANSCRIPTION STAGED (muNum_folded: the hard structural steps -- cap-boundary term shapes + three-piece Ico split -- COMPLETE; remaining = Gauss plumbing with the landing plan in-file; kept in drafts, build stays sorry-free) (HYP-7290)
+
+Owner: finish the pieces myself, pull often. Attempted the full muNum_folded in one
+sitting; the structural lemmas landed but the Gauss-sum tail needs build iterations
+beyond this context window -- staged honestly in lean-drafts with the two-route
+landing plan (le_induction on Qp / boxeph's sum_shifted pattern) rather than leaving
+a broken build. The repo rule held: the build tree stays sorry-free. FILES: draft,
+HYP-7290. opus; S345.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.47) -- THM-984: THE LIVE-FLOOR BRIDGE + THE REDUCTION CAPSTONE (owner brief: finish the math, then all the formalization). (I) THE WEIGHT-1 SAMPLING BRIDGE (three lines): the good indicator has <= E(V) = 2 sum(v) breakpoints => liveCount(q) >= q(mu0 - E/q) => ANY positive-measure family fires the census live floor at the EXPLICIT modulus q0 = 2E/mu0. REFEREED where it matters most -- the two structured controls where the B5-route FAILS: geometric (B5 < 0, mu0 = 0.278): 163,790 live points at q0 = 589,934; deepwell (B5 < 0, mu0 = 0.024): 1,040 at 43,520; and the tight control (mu0 = 0): zero live at every q -- NO FALSE FLOOR. (II) THE CERTIFICATE PAIR COMPLETE: dissociated -> THM-979 B5-route (unconditional, q0 ~ 51,900 sum(v)); any mu0 > 0 -> the live-route (conditional only on a mu0-floor). Both feed lonely_of_census with every hypothesis computable from the speeds. (III) THE REDUCTION CAPSTONE -- the residual in FINAL FORM: **LRC(14) = mu0 > 0 on trapped cores** (covering + spread > 13 + compressed + distinct + max >= 23 + non-clusterable + chain-dense + NON-dissociated + not census-certified): the classical inf-L nucleus in its thinnest-ever cut, DECOUPLED from certificate mechanics, with the conversion guarantee (any mu0-floor from any route -- fee ledger, witnesses, covering rigidity -- becomes a kernel certificate through an explicit modulus). THE FORMALIZATION PHASE (owner's sequencing): the weight-1 sampling lemma is the next Lean piece (simpler than the B5 version: interval point-counting + norm_num arithmetic) -> wires to lonely_of_census; handed off with the shape noted. NAMESPACE SAGA: 980 -> 982 -> 984 (codex's scale-series minted 977-983 during my session; my ls-gate failed twice -- MISTAKE-note: `|| echo free` does NOT gate a following mv; a concurrent courtesy-renumber to 984 collided with my own (resolved, kept mine); the push-loop's grep gate false-fired on detached HEAD (fixed with a case-gate). j=4 continues.
 
 Prompt (owner): work to finish the LRC 14 math and once that is done, all the formalization.
