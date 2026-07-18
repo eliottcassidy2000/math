@@ -1,3 +1,22 @@
+## mac-mini-2026-07-18-S114 -- THM-1031: the FAREY SUP-COMPANION to kps THM-826 (delta = (1-lambda(k+1))/k at the Farey pair (0/1,1/k)) + the covering lemma + the AP-core height bound max<=2(n-1). General height bound NOT proved; n=9 NOT pinned (census still running). HYP-7430.
+
+TASK (owner): prove max(A)<=3n; pin the n=9 threshold; pull often during computations; extend other agents' ideas.
+
+PROVED:
+(A) COVERING LEMMA (3 lines): a tight n-set contains a multiple of EVERY q<=n. At t=a/q some v has |va|_q <= q/(n+1) < 1 (as q<=n), so q|v. = the corpus's covering condition, straight from tightness; it is the census prune.
+(B) THE FAREY SUP-COMPANION -- EXTENDS kps THM-826. Their profile theorem SUMS the Farey gap-remnants max(0,(1-lambda(i+j))/(ij)); this MAXIMIZES the same atoms: delta({1..k};lambda)=(1-lambda(k+1))/k, attained at the Farey pair (0/1,1/k). Proof: remnants decrease in ij and in i+j; adjacent Farey denominators have i+j>k, and (1,k) attains i+j=k+1 AND minimizes ij=k -- both arguments minimized at once. So THM-826 (L^1) and THM-1031 (L^infty) are a matched pair on one atom family. Verified exact n=4..14 (delta=1/((n-1)(n+1))).
+(C) AP-CORE HEIGHT BOUND: core = {1..n-1} => max(A) <= 2L/delta = 2(n-1); with the S108 finite check this pins that case to {1..n}. Sharp enough to be meaningful: the n=4 sporadic {1,3,4,7} has max=7>6, and its core {1,3,4} is correctly NOT the AP.
+(D) WHY NOT GENERAL: for a core containing 1 the near-origin remnant gives delta >= (1-L)/max(C) - L, positive ONLY for max(C)<n. Spread cores lose the origin gap to speed 1's own arc and delta moves to an INTERIOR Farey pair depending on C's denominators -- the residual for max<=3n (HYP-7390).
+
+NOT DONE (stated plainly): the general height bound; and **the n=9 threshold is NOT pinned** -- the n=8 (C(30,8)) and n=9 (C(28,9)) covering-pruned censuses were still running at close. They are left running; the bottleneck is exact-M on survivors and a batched numeric prescreen is the fix.
+
+NAMESPACE: first pushed as THM-1030 (10:32:10), 62s before opus's unrelated THM-1030 (10:33:12). I was first-pusher but CEDED -- theirs was already wired into HYP-7420 + session log, mine was newly created -- renumbered to THM-1031 with the precedence recorded. No dispute.
+
+FILES: THM-1031; the two census scripts; HYP-7430.
+HANDOFFS: @kind-pasteur -- THM-1031 is the L^infty companion to your THM-826; same Farey atoms, one summed and one maximized. The sup is what feeds height bounds via THM-1001, so the pair may be worth stating together. @all -- the general height bound now has a precise residual: lower-bound the INTERIOR Farey gap of a spread core.
+
+---
+
 ## opus-2026-07-17-S360 -- THM-1035 THE EXISTENCE STEP IN SEVEN MODULI (kernel-pure, first compile: the sieve's twelve conditions collapse to {8..14}, the UNIQUE minimum covering set; the six-number window {9..14} misses exactly q=8) + THE S4 QUADRUPLE FLOOR (iterated containment, 150/150 separated, degenerate comparable -- the pair story one level up) + the Freiman/function-field tangent (HYP-7430)
 
 Owner: do the S4 quadruple floor, prove the six-number window's divisor count and close
