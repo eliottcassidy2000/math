@@ -203,14 +203,15 @@ must state which LRC predicate it preserves.
   the sparse rational-pair branch interval now transports bijectively back to
   multiplier space, giving the complete finite-`q` three-branch count; the
   zero-width integral boundary requires `Int.toNat`, not a raw floor difference.
-- **death-star S52 two-circle probe, continued in S66**: for the canonical
-  family `{1,...,13}`, `LRCTwoCircle` proves that the integer and half-resonance
-  circles lie inside the depth-six set.  `LRCTwoCircleConverse` now proves the
-  converse branches with smallest failing speed `k₀=1` and `k₀=2`, and proves
-  that every deep phase has a failing speed at most eight, eliminating
-  `k₀>=9`.  Exact recon still predicts that the two circles exhaust the deep
-  set, but the branches `k₀=3,...,8` remain; there is no full converse and this
-  canonical classifier is not a uniform dense-core live floor.
+- **death-star S52/S53 two-circle theorem (THM-985)**: for the canonical family
+  `{1,...,13}`, `LRCTwoCircle` proves that the integer and half-resonance
+  circles lie inside the depth-six set, and `LRCTwoCircleII.deep_iff_circles`
+  proves the converse.  The smallest-failing-speed branches `k₀=1,2` are
+  explicit; `compat_card_le` collapses every middle case `k₀=3,...,8` to one
+  finite kernel decision, and `k₀>=9` is impossible by cardinality.  Thus the
+  canonical deep set is exactly the two circles in-kernel.  Its exact-cardinal
+  formula remains one circle-union card computation; neither the classifier
+  nor that corollary is the uniform weighted/trapped-core supplier.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
   zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd

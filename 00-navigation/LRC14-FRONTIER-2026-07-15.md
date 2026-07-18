@@ -202,11 +202,13 @@ whole-body count remains `3/21`.
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 **Canonical-depth precision (2026-07-17).**  For `{1,...,13}`,
-`LRCTwoCircle` proves both resonance circles are deep, while
-`LRCTwoCircleConverse` proves the converse only for smallest failing speed
-`k₀=1` and `k₀=2` and eliminates `k₀>=9`.  The cases `k₀=3,...,8` are still
-open.  This is a canonical classifier probe, not a uniform weighted/deep
-supplier and not a proof of LRC(14).
+THM-985 is now a full kernel theorem: `LRCTwoCircle` proves both resonance
+circles are deep, and `LRCTwoCircleII.deep_iff_circles` proves that every deep
+phase lies on one of them.  The middle branches `k₀=3,...,8` collapse through
+the finite `compat_card_le` table rather than surviving as cases.  The exact
+deep-count corollary remains one circle-union card computation.  This is an
+exact canonical classifier, not a uniform weighted/trapped-core supplier and
+not a proof of LRC(14).
 
 ## 2. The Lean ledger
 

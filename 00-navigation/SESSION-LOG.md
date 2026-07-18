@@ -20,7 +20,7 @@ product -- first geometry, last estimate. FILES: the reflection, HYP-7280. opus;
 
 ---
 
-## death-star-2026-07-17-S53 -- THM-982 THE TWO-CIRCLE THEOREM COMPLETE (Lean kernel-pure x13): deep <=> two resonance circles on the canonical family, BOTH DIRECTIONS in-kernel -- the six middle cases collapsed to ONE kernel decide (compat_card_le: every coprime witness residue admits <= 4 compatible partners), hub case nests via the lock, even case via parity locks + the 13-branch ray estimate, assembly through the index-speed bijection
+## death-star-2026-07-17-S53 -- THM-985 THE TWO-CIRCLE THEOREM COMPLETE (Lean kernel-pure x13): deep <=> two resonance circles on the canonical family, BOTH DIRECTIONS in-kernel -- the six middle cases collapsed to ONE kernel decide (compat_card_le: every coprime witness residue admits <= 4 compatible partners), hub case nests via the lock, even case via parity locks + the 13-branch ray estimate, assembly through the index-speed bijection
 
 Prompt (owner): work the 3 named next steps.
 
@@ -28,9 +28,9 @@ Prompt (owner): work the 3 named next steps.
 
 (B) LEAN CRAFT THIS SESSION: push_cast closes all-literal cast goals leaving trailing ring stranded (No goals) -- trim; cast-atom linarith failures fixed by push_cast at the hypothesis; the S47 binder-retype trap hit again in card_bij's lambda ((i : N) ascription retypes an unannotated binder -- annotate (i : Fin 13)); Fin.mk val projections need show-defeq before omega (memory-file pattern confirmed again).
 
-(C) STEPS (ii)/(iii) LIGHT (as planned): the generic wagner-circle shape (deep <=> union of m-circles over denominators with >= 6 near-multiples) is documented in THM-982's canon file -- the middle-case machinery is already family-generic (nothing used v = (1..13) except the specific circle list); window-choice wire standing with opus.
+(C) STEPS (ii)/(iii) LIGHT (as planned): the generic wagner-circle shape (deep <=> union of m-circles over denominators with >= 6 near-multiples) is documented in THM-985's canon file -- the middle-case machinery is already family-generic (nothing used v = (1..13) except the specific circle list); window-choice wire standing with opus.
 
-FILES: THM-982, HYP-7270 confirmed, LRCTwoCircleII.lean (13 theorems), root import, session log. NEXT: (i) THE EXACT DEEP COUNT COROLLARY: #deep = 2*floor((q-1)/84) + parityII(q) - overlap in-kernel (cards of the circle sets -- the counting machinery from THM-961/964 applies directly); (ii) THE GENERIC WAGNER-CIRCLE THEOREM: for any 13-speed family, deep <=> union of m-circles over m with >= 6 near-multiple speeds -- the compat/collapse machinery generalizes (the decide table becomes family-dependent); (iii) census race on (1..13) in closed form => the tight family's loneliness THROUGH THE FUNNEL at resonant q (q = 14: connect to the equality witness). death-star; S53.
+FILES: THM-985, HYP-7270 confirmed, LRCTwoCircleII.lean (13 theorems), root import, session log. NEXT: (i) THE EXACT DEEP COUNT COROLLARY: #deep = 2*floor((q-1)/84) + parityII(q) - overlap in-kernel (cards of the circle sets -- the counting machinery from THM-961/964 applies directly); (ii) THE GENERIC WAGNER-CIRCLE THEOREM: for any 13-speed family, deep <=> union of m-circles over m with >= 6 near-multiple speeds -- the compat/collapse machinery generalizes (the decide table becomes family-dependent); (iii) census race on (1..13) in closed form => the tight family's loneliness THROUGH THE FUNNEL at resonant q (q = 14: connect to the equality witness). death-star; S53.
 
 ---
 ## kind-pasteur-2026-07-17-S128 (cont.46) -- THM-979: THE MODULUS SUPPLY THEOREM (owner brief: finish remaining proof pieces). THE PIECE PICKED: codex's refreshed FORMALIZATION-PICTURE names the census pipeline's gap verbatim -- "neither identity supplies a modulus or a live-count floor". SUPPLIED: (I) THE SAMPLING INEQUALITY: B5 = integral of w(depth) with |w| <= 792 and the depth function has E(V) = 2 sum(v) breakpoints => |B5_q - B5| <= 792 E/q (proven, coarse; OBSERVED effective rate E/q since deep cells rarely meet grid-cut cells); (II) THE SUPPLY: continuous B5 > 0 => the explicit modulus q0 = ceil(1584 E/B5) fires the discrete census (B5_q >= B5/2 > 0) => lonely_of_census decides END TO END; (III) THE LADDER COMPOSITION: on the dissociated branch my T_s floor gives B5 > 2052/33614 at H0(Vmax) => q0(V) ~ 51,900 * sum(v) -- EVERY hypothesis of the census certificate is now a computable function of the speeds alone. REFEREED both directions: the certified packet fires already at the practical modulus E/B5 = 468,332 (B5_q = +0.0819 > 0; rate margins 5-200x); the negative control converges to its true negative value (the criterion cannot false-fire). The B5 funnel's caveat line is CLOSED. Housekeeping: fleet renumbered my transcription 973 -> THM-975 (absorbed); 977/978 codex scale-obstructions; mine landed at THM-979; push needed the 3-round loop. j=4 continues.
@@ -256,13 +256,17 @@ other twenty floods.  The proposed all-`n` black self-line law is also refuted
 at `n=8` (`404 != SC(8)=176`).
 
 (F) **LIVE CONTINUATION: TWO CIRCLES, EIGHT COMBS, AND THE SCALE FRONTIER.**
-`LRCTwoCircleConverse.lean` now closes exactly the canonical smallest-failing-
-speed cases `k₀=1` and `k₀=2`, and its counting endpoint eliminates
-`k₀>=9`; cases `k₀=3,...,8` remain, so the full two-circle converse is not
-proved.  `LRCC8Consecutive.lean` assembles the residue-sensitive seven-edge
-Hunter path uniformly and proves positive restricted Lebesgue measure for the
-common safe complement of every consecutive block `v,...,v+7`.  It does not
-add the other five combs and is not LRC(14).
+THM-985 / `LRCTwoCircleII.lean` now closes the full canonical classifier:
+depth at least six is equivalent to the integer or half-resonance circle.
+The explicit `k₀=1,2` branches give those circles, `compat_card_le` collapses
+all `k₀=3,...,8` cases to one finite kernel decision, and `k₀>=9` is
+cardinally impossible.  The exact deep-count corollary remains one
+circle-union card computation.  This exact canonical result is not the
+uniform weighted/trapped-core supplier.  `LRCC8Consecutive.lean` assembles the
+residue-sensitive seven-edge Hunter path uniformly and proves positive
+restricted Lebesgue measure for the common safe complement of every
+consecutive block `v,...,v+7`.  It does not add the other five combs and is not
+LRC(14).
 
 On the separate `n=12` sporadic ledger, THM-980 is a proved finite-exact
 closure of only the primitive proper AP-centred common-scale-sixteen H6 face:
@@ -291,7 +295,7 @@ non-AP/deep/higher-sheet branches also remain.
 
 FILES: `LRCAlignedStalkGluing.lean`, `LRCAlignedStalkAggregation.lean`,
 `LRCDeepReflectionParity.lean`, `LRCSparseBranchLattice.lean`,
-`LRCSelectedWitnessGapTwoResidual.lean`, `LRCTwoCircleConverse.lean`,
+`LRCSelectedWitnessGapTwoResidual.lean`, `LRCTwoCircleII.lean`,
 `LRCC8Consecutive.lean`, root imports, cohesive picture, manifest, and lens-map
 packet fields.  Every new theorem was built with no `sorry`/`native_decide`;
 axiom audits report only the standard foundational trio where applicable.

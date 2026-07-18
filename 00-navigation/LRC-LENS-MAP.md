@@ -149,10 +149,11 @@ search for one more universal scalar:
   THM-959 proves a direct prescribed block-tower induction with corrected
   junction constants.  The remaining scale task is a partition trichotomy for
   packets admitting no such tower, not another gluing operation;
-- the canonical two-circle lens is now exact for smallest failing speeds
-  `k₀=1,2` and excludes `k₀>=9`; the unresolved converse packets are precisely
-  `k₀=3,...,8`, and this lens does not transport a canonical classification to
-  the weighted dense-core supplier;
+- THM-985 makes the canonical two-circle lens exact: `LRCTwoCircleII` proves
+  deep iff integer-circle or half-circle, with `compat_card_le` collapsing all
+  `k₀=3,...,8` branches to one finite decision.  The exact deep-count corollary
+  remains one circle-union card computation, and this lens still does not
+  transport a canonical classification to the weighted/trapped-core supplier;
 - the restricted-measure Hunter path proves positive safe measure for the
   danger combs in every consecutive block `v,...,v+7` via
   `LRCC8Consecutive`; its vertices preserve the weighted union/intersection

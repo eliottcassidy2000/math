@@ -1200,17 +1200,26 @@ relation with total absolute coefficient weight at most fourteen transfers
 exactly to the selected integer witnesses.  It closes the real-error-to-exact-
 relation step, but it does not eliminate a nonzero small frequency by itself.
 
-## Landed addendum — exact scope of the canonical two-circle classifier
+## Landed addendum — THM-985, the canonical two-circle classifier
 
 `LRCTwoCircle` proves the forward inclusion of the integer and half-resonance
 circles in the canonical `{1,...,13}` depth-six set.  The kernel-pure
-`LRCTwoCircleConverse` now proves the converse when the smallest failing speed
-is `k₀=1` or `k₀=2`, and proves that every deep phase has a failing speed at
-most eight, so `k₀>=9` is impossible.  The cases `k₀=3,...,8` remain.  The
-bounded exact reconstruction is evidence for the full two-circle equality,
-not a theorem, and even that equality would classify only the canonical
-family rather than supply the uniform weighted/deep theorem required by
-LRC(14).
+`LRCTwoCircleII` now proves the full converse and exposes the exact statement
+
+```text
+bandCount canonical q p >= 6
+  iff (84p < q or 84(q-p) < q) or 84|2p-q| < q,
+```
+
+for `0<p<q`.  Its middle-case theorem `compat_card_le` checks in one finite
+kernel decision that every normalized coprime witness for `k₀=3,...,8` has at
+most four compatible later partners, so those cases have fewer than six
+failures; the `k₀=1,2` cases give the two circles and `k₀>=9` is cardinally
+impossible.  Exact reconstruction is now a referee rather than the logical
+basis.  The exact deep-count corollary—cardinality of the two circle sets,
+including half-circle parity and overlap—remains one card computation.  THM-985
+classifies only the canonical family; it is not the uniform weighted/deep or
+trapped-core supplier required by LRC(14).
 
 ## Addendum (boxeph-S69): item 15
 
