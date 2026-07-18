@@ -88,6 +88,23 @@ theorem not_sharedFullCover_of_owner_card_lt
   rw [hcover, Finset.card_univ] at hlt
   omega
 
+/-- The obstructing owner may depend on the proposed shared assignment.  This
+is the direct logical consumer for labelled finite certificates: each global
+row need only exhibit one owner-local strict deficit, and different rows may
+fail at different owners or under different quotient charts. -/
+theorem not_sharedFullCover_of_assignmentwise_owner_card_lt
+    (project : (owner : Owner) → Global → Local owner)
+    (covered : (owner : Owner) → Local owner → Finset Sheet)
+    (hdeficit : ∀ word, ∃ owner,
+      (covered owner (project owner word)).card < Fintype.card Sheet) :
+    ¬SharedFullCover project covered := by
+  rintro ⟨word, hword⟩
+  rcases hdeficit word with ⟨owner, hlt⟩
+  have hcover := hword owner
+  unfold FullCoverGood at hcover
+  rw [hcover, Finset.card_univ] at hlt
+  omega
+
 end OwnerProjection
 
 /-! ## Anchor union plus independent remainder caps -/
@@ -415,6 +432,7 @@ theorem not_fullCover_of_fibreFlagScore_lt
 #print axioms everyOwnerLocallyCoverable_of_sharedFullCover
 #print axioms not_sharedFullCover_of_empty_owner
 #print axioms not_sharedFullCover_of_owner_card_lt
+#print axioms not_sharedFullCover_of_assignmentwise_owner_card_lt
 #print axioms assignment_extendUnion_card_le
 #print axioms not_covers_of_base_add_caps_lt
 #print axioms completeFibreUnion_image_of_fibre_constant

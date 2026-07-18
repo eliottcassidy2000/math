@@ -1052,7 +1052,13 @@ feasible owners.  THM-1072 now independently closes `c=28`: the
 owners on each of the 3,170 scalar survivors, and a separately developed C++
 literal-CRT referee agrees with two Python implementations on the complete
 labelled bank and all 6,628,500 reachable-mask incidences.  Scale 29 is
-prime-excluded by THM-983, so the next untreated scale is `c=30`.
+prime-excluded by THM-983.  THM-1090 independently closes `c=30`: among
+171,118,332 labelled scalar contexts, 54,050 survive capacity; the `Z/6`
+anchor relaxation leaves 120 all-owner rows, and the complementary `Z/10`
+relaxation makes every one of their 720 owner bounds at most 28.  Its exact
+residual maxima are at most 27.  Algebraic-CRT Python and literal-CRT C++
+implementations agree on all decisive histograms and 3,401,088 reachable-mask
+incidences.  Scale 31 is prime-excluded, so the next untreated scale is `c=32`.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1066,11 +1072,15 @@ two-owner Boolean counterexample proves the converse false.
 
 `LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
 that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used
-at scales 27 and 28, and with a saturated prime-power fibre score for whole
+at scales 27, 28, and 30, and with a saturated prime-power fibre score for whole
 fibre anchors plus transversal pieces.  Its original two unfinished
 set-algebra obligations have been replaced by explicit kernel proofs; the
 public axiom audit is the standard foundational trio and contains no
-`sorryAx` or `native_decide`.  Concrete raw-bank completeness and the finite
+`sorryAx` or `native_decide`.  The API now also turns a strict local-cardinality
+deficit directly into global infeasibility, allows the failed owner to depend
+on the proposed global row, and proves both directions between fibre-constant
+membership and a complete-fibre-union presentation.  Concrete
+raw-bank completeness and the finite
 scale tables remain external certificates.
 
 The remaining composite scales beginning at 30, the finite ramified H5 bank, and non-AP,

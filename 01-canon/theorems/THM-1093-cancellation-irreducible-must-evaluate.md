@@ -1,18 +1,19 @@
 ---
 id: THM-1093
-title: THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS — NO TRIANGLE-INEQUALITY BOUND CAN CAPTURE IT, SO δ(S) MUST BE EVALUATED RATHER THAN ESTIMATED — since ĥ(n) = sin(πn/7)/(πn) and sin(πn/7) depends only on n mod 14, δ splits exactly as (1/π^k)Σ_r ∏c(rᵢ)·T(r) over the residue subgroup Λ mod 14 (rebuild verified to 6 digits); measuring the three granularities gives COSET-ABS ≈ FULL-ABS (1.64 vs 1.86, 12.83 vs 12.95, …), so keeping cancellation INSIDE cosets gains essentially nothing and all of it lives ACROSS cosets. Two further facts, both by the antipodal symmetry r ↔ −r: the character sum C(A) = Σ_r ∏c(rᵢ) is IDENTICALLY ZERO for odd k (hence no discriminant — my "leading coefficient" framing was wrong), and T̄ = 0 identically, so the variation bound Σ|∏c|·|T(r)−T̄| EQUALS the coset-absolute bound exactly and gains nothing. Conclusion: every bound that decomposes the sum and applies a triangle inequality at coset granularity is provably lossy by the same 12× spread; the sum must be evaluated in closed form, i.e. as a higher-dimensional Dedekind sum
-status: the coset decomposition verified exactly (rebuilt = signed to 6 digits, 6 families); the three-granularity comparison measured over 12 families at k=3; C ≡ 0 and T̄ = 0 are proved by antipodal symmetry, not merely observed; the closed-form identification for k≥3 is a NAMED TARGET, not a result
+title: THE RESIDUE-COSET SPLITTING IS EXACT, BUT ITS DIRECT TRIANGLE BOUND PRESERVES THE OBSERVED SPREAD — absolute convergence permits the exact mod-14 partition; for odd support the character sum and mean reciprocal coset sum both vanish by antipodal symmetry; on twelve k=3 families COSET-ABS is close to FULL-ABS and varies by 12.4x, so this specific refinement gains essentially nothing and points toward generalized Dedekind-sum evaluation
+status: the coset decomposition is rigorous by THM-1092 absolute convergence (and numerically rebuilds the signed sum to 6 digits on six families); C ≡ 0 and Tbar = 0 for odd support are proved by antipodal symmetry; the three-granularity comparison is measured over twelve k=3 families and does not rule out every possible signed estimate; a closed-form higher-dimensional evaluation is a named target, not a result
 source: opus-2026-07-17-S371 (owner: work the bound that keeps the signs)
-depends_on: [THM-1085 (the absolute bound whose non-uniformity prompted this), THM-1080 (m₇), THM-1075 (the resonance lattice), THM-1070 (the first instance of the same failure mode), THM-965 (the k=2 evaluation, which IS the Bernoulli/fold closed form)]
+depends_on: [THM-1092 (absolute convergence and legal regrouping), THM-1085 (the absolute bound whose variation prompted this), THM-1080 (m₇), THM-1075 (the resonance lattice), THM-1070 (the first instance of the same failure mode), THM-965 (the k=2 evaluation, which IS the Bernoulli/fold closed form)]
 scripts: 04-computation/sign_cancellation_opus_S371.py, character_sum_opus_S371.py, variation_bound_opus_S371.py -> 05-knowledge/results/
 ---
 
-# THM-1093 — why "keep the signs" cannot be done by bounding
+# THM-1093 — the direct residue-coset triangle bound does not sharpen the sample
 
-THM-1070 and THM-1085 both failed the same way: a valid bound whose
-looseness grows with k, in each case because signs were discarded. This
-file asks whether the signs can be kept by a finer decomposition. They
-cannot, and the reason is structural.
+THM-1070 and THM-1085 both lost substantial information when signs were
+discarded.  This file tests one precise repair: first retain cancellation
+inside each residue coset, then apply a triangle inequality across cosets.
+The exact symmetry simplifications are rigorous; the conclusion that the
+resulting bound is still loose is a twelve-family `k=3` measurement.
 
 ## The exact splitting
 
@@ -22,8 +23,10 @@ c(r) = sin(πr/7):
 > **δ(S) = (1/π^k) Σ_{r ∈ Λ mod 14} ∏ᵢ c(rᵢ) · T(r)**,
 > T(r) = Σ over {n ∈ Λ : n ≡ r mod 14} of 1/∏nᵢ
 
-The residues form a subgroup of (ℤ/14)^k. Rebuild verified against the
-direct sum to 6 digits on all families tested. All signs sit in two
+The residues form a subgroup of (ℤ/14)^k.  THM-1092 proves the full-support
+reciprocal lattice series converges absolutely, so this finite regrouping is
+legal and every `T(r)` converges absolutely.  The numerical rebuild agrees
+with the direct sum to 6 digits on all families tested. All signs sit in two
 places: the finite table ∏c(rᵢ), and 1/∏nᵢ inside each coset.
 
 ## Where the cancellation lives — measured
@@ -36,8 +39,8 @@ places: the finite table ∏c(rᵢ), and 1/∏nᵢ inside each coset.
 | (101,103,107) | 0.003873 | 0.004239 | 0.004283 |
 
 COSET-ABS (which keeps cancellation *inside* each coset) is within a few
-percent of FULL-ABS (which keeps none). **Essentially all cancellation is
-across cosets.**
+percent of FULL-ABS (which keeps none). **In these sampled families,
+essentially all observed cancellation is across cosets.**
 
 ## Two symmetry facts that close the route
 
@@ -59,16 +62,17 @@ Both follow from Λ being antipodally symmetric, with c odd and
 Spreads: VAR-BOUND 1.03–12.83 (12.4×), FULL-ABS 1.10–12.95 (11.8×). The
 refined bound is not better; it is the same bound.
 
-## What this rules out, and what remains
+## What this particular refinement rules out, and what remains
 
-Any bound obtained by decomposing δ into coset pieces and applying a
-triangle inequality is stuck at the same ~12× spread at k=3, because the
-cancellation it must capture is precisely the *between-piece* cancellation
-that the triangle inequality destroys. Finer decomposition does not help:
-cosets are already the finest granularity on which ∏c(rᵢ) is constant.
+For these twelve families, the direct coset-wise triangle bound is stuck at
+the measured ~12× spread because it discards the *between-coset*
+cancellation.  Refining a coset and then summing absolute values cannot
+improve its contribution: another triangle inequality can only increase it.
+This rules out that specific class of refinements as a sharp certificate on
+the sample.  It does **not** prove that every analytic signed estimate fails.
 
-**So δ(S) must be EVALUATED, not estimated.** This is exactly what
-happens at k=2, and it is worth seeing why that case closed:
+The evidence therefore points toward **evaluating δ(S), rather than applying
+this triangle bound**. This is exactly what happens at k=2:
 
 > δ(a,b) = (1/(π²a'b')) Σ_{s≠0} sin(πsa'/7)·sin(πsb'/7)/s²
 
@@ -77,13 +81,13 @@ to the tent function fold_M(r) = r(M−r) — i.e. THM-965. It was never
 bounded; it was summed.
 
 The k ≥ 3 analogue, Σ over a rank-(k−1) lattice of ∏sin(πnᵢ/7)/∏nᵢ, is a
-**higher-dimensional Dedekind sum** in Zagier's sense. Those carry
-reciprocity laws, which is the mechanism that makes such sums computable
-rather than merely bounded. That is the named target, and it is now the
-only route this program has not ruled out.
+natural **generalized higher-dimensional Dedekind-sum** target. Reciprocity
+laws are the mechanism that makes such sums computable rather than merely
+bounded. Establishing the exact match and extracting a usable formula remain
+open.
 
-**Three sessions, three approaches, one verdict.** Containment/
-fragmentation (THM-1070), absolute values (THM-1085), and coset
-decomposition (here) all lose the same way. The consistency of the
-failure is itself the finding: the quantity is not estimable at this
-granularity, and the remaining work is a closed-form evaluation.
+Containment/fragmentation (THM-1070), full absolute values (THM-1085), and
+this coset decomposition all lose information in the tested regime.  The
+consistent signal is useful but narrower than a no-go theorem: direct
+triangle inequalities at these granularities are poor, while closed-form
+evaluation and genuinely coupled signed estimates remain live.

@@ -360,8 +360,9 @@ non-tight residual; the Lipschitz converter itself is no longer debt.
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
 of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
-faces are certified through scale eighteen (scale thirteen is primitive-
-impossible).  THM-982's scale-eighteen owner deficit now has independent C++
+faces are now certified through scale thirty-one (scale thirteen and its
+multiples are primitive-impossible, and prime scales at least nineteen are
+uniformly excluded).  THM-982's scale-eighteen owner deficit has independent C++
 and Python exact replay, and THM-983 uniformly excludes every prime common
 scale `p>=19`.  THM-986's composite scale-twenty owner deficit now has
 independent C++ and Python exact replay.  THM-988 independently closes `c=21`;
@@ -379,8 +380,13 @@ in three implementations: nested `Z/3,Z/9` relaxations kill every row, and a
 separate nine-fibre flag proof makes every order-27 owner impossible; heredity
 supplies at least two.  THM-1072 closes `c=28` in three implementations: its
 sound `Z/4` upper relaxation leaves at most two feasible owners per scalar row,
-and the exact reachable-mask sidecars have zero threshold mismatch.  Since
-`c=29` is already prime-excluded, the next untreated common scale is `c=30`.
+and the exact reachable-mask sidecars have zero threshold mismatch.  Scale 29
+is prime-excluded.  THM-1090 closes `c=30` by complementary quotient flags:
+the `Z/6` anchor pass reduces 54,050 scalar rows to 120, and the transverse
+`Z/10` pass gives all 720 residual owner bounds in `23..28`.  Independent
+Python algebraic-CRT and C++ literal-CRT implementations agree on the complete
+171,118,332-context scalar census and all 3,401,088 exact residual masks.
+Scale 31 is prime-excluded, so the next untreated common scale is `c=32`.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these

@@ -85,6 +85,40 @@ floor itself.
 FILES: THM-1095, THM-1090 amended, 2 scripts + outs, HYP-7550. opus; S372.
 
 ---
+## codex-2026-07-18-S67 close-out — THM-1090 scale 30 independently closed; THM-1091 finite-sheet DFT bridge; THM-1092 raw resonance series absolutely convergent
+
+Scale thirty is now PROVED STRUCTURAL + INDEPENDENT FINITE-EXACT on the
+primitive proper AP-centred H6 common-scale face.  The Python primary and an
+independently developed standard-library C++ referee agree on the 185,193-word
+squarefree grammar, 171,118,332 labelled scalar contexts representing
+588,280,492,800 raw states, 54,050 scalar survivors, 120 all-owner rows after
+the `Z/6` relaxation, and terminal `Z/10` bounds `23..28` on all 720 residual
+owner obligations.  Exact maxima are `23..27` over 3,401,088 reachable masks.
+Both outputs replay byte-for-byte; the C++ O3/O0/sanitizer/hardening matrix is
+identical and static analysis is clean.  Since scale 31 is prime-excluded, the
+next untreated common-scale H6 face is 32.  This does not close global
+sporadic emptiness or LRC(14).
+
+The global bridge also sharpened.  THM-1091 proves the normalized finite-sheet
+DFT/ramification identity, exact supported-resonance count, zero-mode
+cancellation, and cover character-energy law.  THM-1092's product-Fejer proof
+was strengthened by a dyadic-shell majorant: every full-support reciprocal
+resonance series converges absolutely, uniformly in the nonzero coefficient
+vector for fixed support size.  The raw lattice identity is therefore
+order-independent, and THM-1093's finite residue-coset regrouping is rigorous.
+The latter's 12.4x spread remains a sample-specific failure of the direct
+coset triangle bound, not a no-go theorem for every signed estimate.
+
+Lean root-builds after strengthening `LRCRamifiedCosetCover` with the direct
+strict-owner-cardinality obstruction, its assignmentwise varying-owner form,
+and the equivalence between
+fibre-constant membership and complete-fibre-union presentations;
+`LRCScaleTenProjectivePrism` is root-wired.  The common-scale H6 line is now
+closed through 31, while H5, non-AP/deep sheets, and higher sheets remain.
+
+FILES: THM-1090/1091/1092/1093; c30 Python primary + C++ referee and frozen
+outputs; HYP-6820; formalization picture/manifest; results/hypothesis indexes;
+LRCRamifiedCosetCover; LRCScaleTenProjectivePrism root import. codex-S67.
 
 ## opus-2026-07-17-S371 -- THM-1093 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
 ## death-star-2026-07-18-S57 -- WITNESS V={1,2,3,5,7,8,9,10,11,12,17,19,104}, M=8/105, exposes the covering-2..13-vs-2..14 gap. cont22 "mults of 13" RETRACTED (MISTAKE-161). boxeph THM-1017 stands (covering=2..14).

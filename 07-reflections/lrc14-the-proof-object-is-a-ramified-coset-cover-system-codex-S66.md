@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-17  
 **Scope:** structural synthesis after the independently replayed exact
-common-scale H6 closure through scale 28.  This is a research map, not a claim
+common-scale H6 closure through scale 31.  This is a research map, not a claim
 that LRC(14), the H5 bank, or the global `n=12` sporadic branch is closed.
 
 The long common-scale computation has stopped looking like a list of unrelated
@@ -104,11 +104,54 @@ Coverage is then a coloured capacitated hypergraph problem.
   flag treats orders 1, 3, and 9 as unions of whole three-point fibres and
   order-27 masks as transversals; it makes every order-27 owner impossible.
   Three literal-bank implementations agree on every exact headline census.
+- At `c=30`, no single prime-power chain is the right carrier.  The first
+  flag retains orders dividing six and reduces 54,050 scalar rows to 120.
+  Every survivor has lost all of those anchors.  The proof must rotate to the
+  incomparable quotient retaining orders dividing ten; its 720 owner bounds
+  are all at most 28.  Thus the flag calculus is a **cover of divisor
+  directions**, not necessarily a nested chain.
 
 Thus “character proof” and “nerve proof” are not competing methods.  They are
 the zero-slack and positive-slack faces of the same group-ring cover system.
 
-## 3. How the carrier sharpened across the scale history
+## 3. The Fourier dual is the same ramification data
+
+THM-1091 makes the finite-sheet duality exact.  If a mask on `Z/cZ` is
+invariant under translation by `D`, then its Fourier transform is supported
+on the annihilator
+
+```text
+{r in Z/cZ : (c/D) divides r}.
+```
+
+Whole quotient fibres in the primal picture are sparse frequency support in
+the dual picture.  An exact-capacity cover is a partition, so every nonzero
+character sum cancels.  With slack, the cover error
+
+```text
+e(t) = sum_i 1_(M_i)(t) - 1 >= 0
+```
+
+has a Parseval energy equal to the total nonzero character energy.  The
+zero-mode capacity and the nonzero-mode cancellation are therefore not two
+different invariants; they are the two halves of one group-ring identity.
+
+This explains why the complementary flags at `c=30` work.  Period-six
+anchors live on modes divisible by five; period-ten anchors live on modes
+divisible by three.  The residual of the first carrier is not expected to be
+visible to a refinement of the same carrier: it has selected configurations
+whose surviving information lies in a transverse annihilator.  Switching
+from six to ten is a change of chart on the same ramified object.
+
+THM-1092 supplies the continuous analogue.  Character orthogonality selects
+the resonance lattice `sum_i a_i n_i=0`, and a dyadic-shell argument proves
+the full-support reciprocal series converges absolutely.  Thus the continuous
+danger-intersection moments and the finite-sheet cover identities share an
+honest resonance/annihilator language, not merely a numerical analogy.  What
+is still missing is quantitative cancellation: absolute convergence licenses
+regrouping, but does not make the higher-support moments small.
+
+## 4. How the carrier sharpened across the scale history
 
 The historical sequence is now structurally legible.
 
@@ -136,19 +179,22 @@ The historical sequence is now structurally legible.
   choose its best contribution independently, at most two of six owner
   obligations remain live.  The full `Z/4 x Z/7` flag does not improve the
   terminal threshold on any scalar survivor.
+- `c=30`: a nonnested two-chart atlas is necessary.  `Z/6` finds the thin
+  120-row residual and `Z/10` kills it uniformly; the exact DP shows the
+  relaxed terminal bounds lose at most two sheets and never cross threshold.
 
 The recursion is from large literal geometry to a smaller carrier which still
 preserves the current predicate.  No single carrier is universally faithful.
 Changing carrier when the current obstruction becomes blind is part of the
 proof, not a failure of uniformity.
 
-## 4. What the tournament program actually taught us
+## 5. What the tournament program actually taught us
 
 Tournament analysis was useful because it repeatedly forced the question
 “what are the vertices, what is the switch, and what survives the quotient?”
 Its strongest conclusion here is negative but precise.
 
-The completed owner tournaments at scales 15, 20, 21, 22, 24, 25, and 27 are
+The completed owner tournaments at scales 15, 20, 21, 22, 24, 25, 27, and 30 are
 overwhelmingly or universally transitive under natural lexicographic gauges.
 That stability does **not** mean the proof object is ordered.  It means that
 ranking owners by `(feasible, maximum union, capacity, bank size)` erases the
@@ -186,12 +232,18 @@ data kept beside them:
    signed character contribution or one-sided overlap debt, but retain the
    magnitude and zero/tie label.  The binary orientation alone is not enough.
 
+At scale 30 the quotient flags `{6,10,15}` themselves form a useful diagnostic
+tournament, but all 720 completions are transitive.  The proof is the absolute
+fact `U_10<30`, not the edge `10 -> 6` or the score word.  This is the cleanest
+case yet where tournament vertices can be proof methods while the actual
+carrier remains owner-coloured fibres with numerical capacities.
+
 These challenge the old assumption that vertices must be runners or arcs.
 Gaps, sheet fibres, residues, wall crossings, Fourier modes, and proof
 obligations are all legitimate vertices when they preserve the predicate being
 tested.
 
-## 5. The missing general theorem
+## 6. The missing general theorem
 
 The scale-by-scale closures have exposed the shape of a uniform statement but
 have not proved it.  The desired theorem should be recursive in the
@@ -200,8 +252,10 @@ prime-power flag of `c`.
 1. Factor `c` and enumerate only hereditary valuation-colour words.
 2. Apply the exact ratio-cardinality table to eliminate scalar-impossible
    supports.
-3. Choose the smallest quotient flag on which low-order masks are unions of
-   fibres and maximal-order masks have bounded transversal multiplicity.
+3. Choose a small **atlas of quotient flags** on which selected low-order
+   masks are unions of fibres and the remaining masks have bounded transversal
+   multiplicity.  The flags need not form a chain; switch charts when one
+   relaxation selects an anchor-free residual, as at scale 30.
 4. If total capacity is tight, pass to character identities in the integer
    group ring.
 5. If there is slack, saturate fibre capacities and prove an overlap-debt
@@ -210,15 +264,22 @@ prime-power flag of `c`.
    unit obligations.
 7. Invoke literal metric components only after all smaller carriers fail.
 
-Four formal lemmas would turn this from a pattern into infrastructure:
+Part of this infrastructure now exists.  `LRCPreNerveProjection` formalizes
+the one-way global-to-owner implication; `LRCRamifiedCosetCover` formalizes
+anchor/nonanchor upper bounds, saturated fibre flags, strict-cardinality
+deficits, and complete-fibre presentations; THM-1091 supplies the mathematical
+finite-character identity.  The remaining formal suppliers are sharper:
 
 - an owner-covariance lemma which explicitly transports sheet classes and
   prevents the scale-25 “global self coset” mistake;
-- a character obstruction lemma for tight Boolean covers;
-- a prime-power flag lemma saying when saturated fibre counts preserve full
-  coverage;
-- a generic pre-nerve/global-section bridge, composed with the existing
-  `LRCPreNerveProjection` abstraction.
+- a kernel-checked character obstruction/energy lemma for tight Boolean
+  covers;
+- a multi-flag atlas theorem which permits nonnested residual switching and
+  composes its local deficits;
+- certificate-import interfaces connecting complete raw-bank enumeration to
+  the generic Lean consumers without hiding it behind `native_decide`; and
+- a quantitative chart-selection theorem, ideally dual in fibre capacity and
+  annihilator support, that closes many valuation grammars uniformly.
 
 The common-scale H6 bank is only one face of LRC(14), but it has now supplied a
 candidate underlying language.  The next real gain is proving enough of this

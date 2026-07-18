@@ -1,0 +1,80 @@
+scale-thirty AP-centred Hamming-six two-flag primary
+scope primitive proper common-scale H6 owner-local gate only
+divisor grammar 1,2,3,5,6,10,15,30 ; unit counts 1,1,2,4,2,4,8,8
+supports 924; hereditary order words 185193 ; labelled order contexts 171118332
+squarefree weighted factors (57, 716, 15600)
+state words/support 636667200 ; raw labelled states 588280492800
+numpy exact-batching version 2.2.6
+scalar feasible-owner histogram 0:1401966 1:36143640 2:66874158 3:49478260 4:15326622 5:1839636 6:54050
+scalar contexts 54050 on 772 supports; multiplicity profiles 244 ; capacity vectors 28965
+scalar support survivor histogram 0:152 2:112 4:24 8:24 12:120 14:6 17:96 22:96 30:24 54:96 68:24 122:24 137:24 208:24 253:24 294:12 296:12 545:24 549:6
+literal scalar-survivor unit words 64678912
+U6 saturated owner-bound histogram 16:144 17:144 18:384 19:840 20:7632 21:9264 22:26496 23:60972 24:104388 25:31368 26:42480 27:22464 28:6600 29:300 30:10824
+U6 anchor-bank histogram 1:114588 2:123024 3:42996 4:35760 5:5244 7:2688
+U6 live owners/context 0:45110 1:7536 2:1284 6:120
+U6 residual contexts 120 ; literal unit words 3145728
+U6 residual multiplicities (0, 0, 0, 0, 0, 2, 3, 1):24 (0, 0, 0, 0, 0, 4, 0, 2):48 (0, 0, 0, 1, 0, 3, 0, 2):48
+U10 residual owner-bound histogram 23:48 24:120 25:192 26:240 27:72 28:48
+U10 anchor-bank histogram 10:144 34:48 52:96 70:96 86:48 94:288
+U10 live owners/context 0:120
+U15 competing owner-bound histogram 27:48 28:144 29:144 30:384
+U15 anchor-bank histogram 1:336 4:240 132:24 172:48 204:48 260:24
+U15 live owners/context 0:24 2:48 6:48
+U10 strictly beats U15 False:48 True:672
+profile-wise U10 histograms
+  (0, 0, 0, 0, 0, 2, 3, 1) 24:24 26:48 27:24 28:48 maximum 28
+  (0, 0, 0, 0, 0, 4, 0, 2) 23:48 24:48 25:48 26:144 maximum 26
+  (0, 0, 0, 1, 0, 3, 0, 2) 24:48 25:144 26:48 27:48 maximum 27
+exact residual maximum histogram 23:72 24:144 25:192 26:264 27:48
+exact residual live owners/context 0:120
+exact residual bank histogram 1608:48 2234:48 2528:48 3680:48 3772:96 3820:96 3856:96 4264:96 7116:24 8572:48 10784:48 12936:24
+exact residual reachable masks 3401088 ; largest bank 12936
+U10 minus exact maximum 0:576 1:48 2:96
+joint U6,U10,U15,exact contingency
+  (30, 23, 30, 23) 48
+  (30, 24, 28, 23) 24
+  (30, 24, 29, 24) 48
+  (30, 24, 30, 24) 48
+  (30, 25, 28, 25) 48
+  (30, 25, 29, 25) 96
+  (30, 25, 30, 25) 48
+  (30, 26, 27, 24) 48
+  (30, 26, 30, 26) 192
+  (30, 27, 28, 26) 24
+  (30, 27, 30, 27) 48
+  (30, 28, 28, 26) 48
+scalar context orbit histogram 4:2 6:9 12:4499 (telemetry; no quotient)
+scalar support orbit histogram 4:1 6:2 12:63 (telemetry; no quotient)
+residual context orbit histogram 12:10 ; owner-normalized keys 60
+residual orbit representatives
+  1:5 2:10 4:10 5:30 9:30 11:10 orbit 12
+  1:5 2:10 4:10 8:30 9:30 11:10 orbit 12
+  1:5 2:10 4:30 5:30 9:10 11:10 orbit 12
+  1:5 2:10 4:30 8:30 9:10 11:10 orbit 12
+  1:10 2:10 4:10 5:30 9:30 11:10 orbit 12
+  1:10 2:10 4:10 8:30 9:30 11:10 orbit 12
+  1:10 2:10 4:30 5:30 9:10 11:10 orbit 12
+  1:10 2:10 4:30 8:30 9:10 11:10 orbit 12
+  1:10 2:15 4:30 6:15 7:15 12:10 orbit 12
+  1:10 2:15 6:15 7:15 9:30 12:10 orbit 12
+owner-obligation tournament observable (U10-live,U10,exact,capacity,U15,bank); harder wins; support-coordinate tie Hamiltonian path
+owner tournament all 120 transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1
+owner tournament tie histogram 1:96 2:24
+owner tournament edge-flip histogram 1:1 2:5 3:6 4:11 5:17 6:18 7:9 8:15 9:20 10:6 11:6 12:5 13:1
+flag tournament vertices 6,10,15; smaller bound wins; flag-order tie Hamiltonian path
+flag tournament scores (0, 1, 2):720 ; cycles 0; tie histogram 0:288 1:432 ; edge-flip histogram 1:384 2:336
+Cayley high-cardinality relation D 2 arcs,edges,reciprocal,triangles,SCCs (24, 24, 0, 0, (12,))
+Cayley high-cardinality relation D 3 arcs,edges,reciprocal,triangles,SCCs (48, 36, 12, 16, (12,))
+Cayley high-cardinality relation D 10 arcs,edges,reciprocal,triangles,SCCs (72, 48, 24, 64, (12,))
+Cayley high-cardinality relation D 30 arcs,edges,reciprocal,triangles,SCCs (72, 48, 24, 64, (12,))
+internal SHA256 grammar d5ec0f6ac4c8f74ed399fbce0e8b50f232789f82619f556f7606b2e41fb6d55f
+internal SHA256 CRT bases c94c62de38c0238f686e34cfc77293359e8638418485e59e49bed509f992dc3e
+internal SHA256 literal masks dcff92077f5e320927a98c7f5a86df40e9c6baed2075e7cad46542d40d3e8da9
+internal SHA256 scalar bank 6be8cfd5291e955df7cffd5112471bc0d2e232e816cc68d25de3031034e4dd93
+internal SHA256 U6 rows bf5be40ba8f998c194319593abbddfbe277a15df3805c2ebff0f24d3b81e3342
+internal SHA256 residual rows e8c698b8d62f804c67925977c4dbc397b26af00a5908b553fb5fb4f0eb10d59d
+internal SHA256 U10/U15 flags c1607cc6959e5bd1aea3bbcf63353dbee6eadce5b30709ee98864c108ca3ea32
+internal SHA256 exact residual banks 955669e80f11fc3239ea076416966fc4f27ad6fb5e9dc9453f1e692979c959d8
+carrier loss U6/U10 retain full masks for D|q; nonanchors choose independent best units outside the anchor union, forgetting their shared units and pair overlaps; this only enlarges coverage
+challenged vertices owner obligations and q-fibres preserve the absolute terminal bound; runners/providers lose fibre overlap; the completed tournaments lose the threshold and are telemetry
+primary verdict scale 30 structurally empty conditional on independent replay; theorem status remains CLAIMED + FROZEN PRIMARY

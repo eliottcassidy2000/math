@@ -4,7 +4,7 @@ title: Deep-sheet resonance-ramification identity
 status: PROVED — exact normalized finite-cyclic Fourier identity, THM-769 containment corollary, and finite-cover character-energy law; no nonzero-mode cancellation bound or deep-branch emptiness is claimed
 source: codex-2026-07-18-S67 global-bridge audit and proof
 depends_on: [THM-769, THM-1006]
-related: [THM-761, THM-774, THM-994, THM-1072, THM-1075, THM-1092, HYP-6820]
+related: [THM-761, THM-774, THM-994, THM-1072, THM-1090, THM-1075, THM-1092, HYP-6820]
 ---
 
 # THM-1091 — Deep-sheet resonance-ramification identity
@@ -430,16 +430,16 @@ g Z/cZ,                                                        (28)
 the annihilator of the kernel of that quotient.  Conversely, inversion shows
 that support in (28) implies `D`-periodicity.
 
-This is the harmonic form of the prime-power fibre flags used in THM-994 and
-THM-1072.  Retaining an order-`D` pullback mask means retaining coefficients
+This is the harmonic form of the quotient-fibre flags used in THM-994,
+THM-1072, and THM-1090.  Retaining an order-`D` pullback mask means retaining coefficients
 on the corresponding annihilator subgroup; discarding transverse fibre
 position discards the remaining supported phases.  Equation (28) explains
 why gcd/prime-power ramification and Fourier sparsity are the same finite
 object.
 
 Equation (5) is also the exact finite-cyclic counterpart of THM-1075's lattice,
-whose continuum identity is now rigorous under the Fejer normalization of
-THM-1092.  Circle integration there imposes an integer equality
+whose continuum identity is now an absolutely convergent raw series, as well
+as a Fejer limit, by THM-1092.  Circle integration there imposes an integer equality
 `sum_i n_i a_i=0`; averaging over `G_s` here imposes a congruence
 `sum_i r_i=0 (mod s)`.  The finite identity has no convergence issue and does
 not by itself bound either its own nonzero resonance sum or the continuum

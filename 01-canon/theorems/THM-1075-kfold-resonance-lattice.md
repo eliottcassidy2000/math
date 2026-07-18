@@ -1,7 +1,7 @@
 ---
 id: THM-1075
 title: THE K-FOLD FOLDED IDENTITY IS THE RESONANCE-LATTICE EXPANSION — mu(∩ D_{a_i}) = Σ over Λ(a) = ker(Z^k → Z, n ↦ Σ n_i a_i) of ∏ ĥ(n_i), a lattice of rank k−1; in cumulant form mu = Σ_S (2λ)^{k−|S|} δ(S) with δ(∅)=1 and δ(singleton)=0, so pairs are exactly THM-965 and |S|≥3 is genuinely new joint structure. Four consequences fall out: k=2 is sharp because rank 1 is CYCLIC (one Bernoulli closes it — this explains THM-1070's degradation); ĥ(n)=0 exactly when 7|n, so the modulus 7=1/(2λ) is built into the transform; a pair is EXACTLY independent iff 7|(a/g) or 7|(b/g), verified 16/16; and dilation invariance is one line, Λ(ka)=Λ(a), making THM-1050 and THM-1055's no-speed-threshold immediate
-status: resonance-lattice structure and exact-independence criterion established here; THM-1092 now proves the k-fold identity rigorously as a product-Fejer/L1 limit and gives every support term an intrinsic centered-moment definition. No useful bound on δ(S) for |S|≥3 is established.
+status: resonance-lattice structure and exact-independence criterion established here; THM-1092 now proves absolute convergence of the raw k-fold lattice series, identifies it with the product-Fejer/L1 limit, and gives every support term an intrinsic centered-moment definition. No useful coefficient-sensitive bound on δ(S) for |S|≥3 is established.
 source: opus-2026-07-17-S368 (owner: work the k-fold folded identity)
 depends_on: [THM-1070 (which identified this as the whole route), THM-965 (the k=2 folded identity, recovered as the rank-1 case), THM-1050/1055 (dilation invariance and the absent threshold, both now immediate), THM-1035 (the S4 slot)]
 scripts: 04-computation/kfold_folded_opus_S368.py, kfold_shortvector_opus_S368.py, kfold_independence_opus_S368.py -> 05-knowledge/results/kfold_folded_opus_S368.out
@@ -84,10 +84,11 @@ per-step worst case can capture without compounding.
 This is a **reframe that unifies**, not yet a certificate. What is
 established here: the lattice, its support form, the k=2 explanation, the
 7-vanishing, the independence criterion (exactly), and dilation.  THM-1092
-now supplies the missing rigorous analytic meaning: product-Fejer finite sums
-converge in `L1`, and each support term converges to its centered joint moment.
-What is still **not** established is any useful bound on `delta(S)` for
-`|S| >= 3`.
+now supplies the missing rigorous analytic theorem: a dyadic-shell majorant
+proves the raw support sums converge absolutely; product-Fejer finite sums
+converge to them in `L1`; and each support term is its centered joint moment.
+What is still **not** established is any useful coefficient-sensitive bound
+on `delta(S)` for `|S| >= 3`.
 
 **The remaining work is now well-posed**, which it was not before:
 bound δ(S) by the SHORT FULL-SUPPORT VECTORS of Λ(a_S) that avoid
