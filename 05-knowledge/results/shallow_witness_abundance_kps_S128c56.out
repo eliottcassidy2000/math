@@ -1,0 +1,10 @@
+count of VALID moduli q in [24,100] per family (need >= 1; abundance supports existence)
+  families: 200
+  valid-q count: min 2, 5th pct 5, median 11, max 52
+  families with ZERO valid q: 0
+
+existence-proof inputs (data): bad q must have some v_i = 0,+-1 mod q, i.e. q divides
+one of the 6 numbers v1-1,v1,v1+1,v2-1,v2,v2+1; since those lie in a window of width
+<= d+2 <= 7, ANY q >= 8 divides AT MOST ONE of them.
+  #bad q in [24,100] (v_i = 0,+-1 mod q): min 0, median 8, max 17  (of 77 available)
+DONE

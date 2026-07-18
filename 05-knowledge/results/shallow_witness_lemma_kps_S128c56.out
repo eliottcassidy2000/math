@@ -1,0 +1,16 @@
+=== the 8 critical covering d_min<=5 families ===
+  killers     q     a     e1       e2       min||v t||    >=1/14   
+  168,169     NO WITNESS FOUND
+  195,196     NO WITNESS FOUND
+  208,210     NO WITNESS FOUND
+  221,224     111   8     1        2        8/111         True     
+  234,238     59    3     2        2        6/59          True     
+  247,252     124   9     1        4        9/124         True     
+  294,299     74    3     2        3        3/37          True     
+  308,312     62    3     2        2        3/31          True     
+  all 8 witnessed at level 1/14: False
+
+=== wider sweep: P = 11-subsets of {1..12}, v1 in [156,900], d in 1..5 ===
+  witnessed 331 / 400
+  failures (69), first 5: [((1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12), 168, 172, 'no-q'), ((1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 540, 545, 'no-q'), ((1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12), 372, 373, 'no-q'), ((1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12), 253, 258, 'no-q'), ((1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12), 346, 350, 'no-q')]
+DONE

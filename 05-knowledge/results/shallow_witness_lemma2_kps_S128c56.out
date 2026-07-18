@@ -1,0 +1,16 @@
+=== the 8 critical families, WIDE q-scan ===
+  killers     q     a     e1   e2   emin   min||v t||   >=1/14
+  168,169     20    1     8    9    2      1/10         True  
+  195,196     20    1     5    4    2      1/10         True  
+  208,210     20    1     8    10   2      1/10         True  
+  221,224     21    1     10   7    2      2/21         True  
+  234,238     20    1     6    2    2      1/10         True  
+  247,252     20    1     7    8    2      1/10         True  
+  294,299     22    1     8    9    2      1/11         True  
+  308,312     20    1     8    8    2      1/10         True  
+  all 8 witnessed: True
+
+=== wide sweep: P = 11-subsets of {1..12}, v1 in [157,900], d in 1..5 ===
+  witnessed 300 / 300
+  q used: min 20, median 26, max 40  (v1 range 157..900)
+DONE
