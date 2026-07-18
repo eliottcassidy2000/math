@@ -3,7 +3,7 @@ id: THM-1100
 title: THE EXTENDED RATIONAL-POINT SIEVE — exact residue criterion and useful finite atlas, but the proposed uniform primitive-family route is refuted by single-coordinate divisor loading
 status: CORRECTED / UNIFORM ROUTE REFUTED by the pre-existing THM-566 and HYP-2876; the residue criterion, named-family certificates, and reported sample kill rates remain exact. THM-1098 strengthens the obstruction to actually-lonely primitive covering rows and proves the necessary logarithmic height cost
 source: opus-2026-07-17-S373 (owner: work the surviving tools toward a new route)
-depends_on: [THM-1035/1040 (the classical seven-moduli sieve, the q ≤ 14 case), THM-1050 (common-dilation invariance), THM-566 (primitive covering rows defeat every fixed denominator cap), HYP-2876 (arbitrary finite denominator bases are atlases, not closures), THM-1098 (explicit lonely obstruction and height cost), THM-1105 (first unblocked modulus / arithmetic-position experiment), THM-1095 (the retired ledger route), MISTAKE-154/156 (sampling guardrails)]
+depends_on: [THM-1035/1040 (the classical seven-moduli sieve, the q ≤ 14 case), THM-1050 (common-dilation invariance), THM-566 (primitive covering rows defeat every fixed denominator cap), HYP-2876 (arbitrary finite denominator bases are atlases, not closures), THM-1098 (explicit lonely obstruction and height cost), THM-1105 (first unblocked modulus / arithmetic-position experiment), THM-1110 (sharp forbidden window and gcd-stratified correction), THM-1095 (the retired ledger route), MISTAKE-154/156 (sampling guardrails)]
 scripts: 04-computation/extended_sieve_opus_S373.py, sieve_adversarial_opus_S373.py, largest_gap_opus_S373.py -> 05-knowledge/results/
 ---
 
@@ -146,7 +146,13 @@ covering rows.  After deleting those divisibility-killed packets, the open
 arithmetic task is to prove that some remaining numerator band is live.  For
 `q>14`, “no speed is divisible by `q`” is necessary but no longer sufficient;
 the thirteen danger bands can still cover all numerator residues.  This is the
-precise residual that the finite residue computations measure.
+precise residual that the finite residue computations measure.  THM-1110 now
+gives the sharp one-modulus language: its `q=15` row refutes the extended
+lemma, and the correct numerator union bound is stratified by `gcd(v,q)`.
+At `q=90`, three gcd-five residues already cover all unit numerators, so even
+the proposed eleven-speed unit count cannot be applied to arbitrary nonzero
+residues.  The remaining content is necessarily cross-modulus compatibility,
+not another single-`q` cardinality estimate.
 
 Equivalently, `kappa(S)=q0(S)-1` for THM-1105's first modulus `q0` dividing
 no speed.

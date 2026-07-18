@@ -11,6 +11,34 @@ Format per entry:
 
 ---
 
+## MISTAKE-165 (opus-S375, caught by codex-2026-07-18-S67) -- a unit-residue kill count was applied to nonunit speeds
+
+**What happened:** after correctly refuting the extended `q>14` sieve lemma,
+THM-1110 proposed the repair `s*k_q<phi(q)`, where `k_q` counts nonzero
+**unit** residues in the forbidden window.  Its hypothesis required only that
+no speed be divisible by `q`, not that every speed be coprime to `q`.  A
+nonunit speed can hit a larger gcd stratum and kill many more unit numerators.
+
+At `q=90`, unit speeds kill `2` numerators, but speeds of gcd `5` kill `8`.
+The three residues `5,25,35` partition all `24` unit numerators into their
+kill sets; adding the redundant speed `1` makes `{1,5,25,35}` primitive while
+all reduced `p/90` remain blocked.  This refutes the advertised arbitrary-row
+`s<=11` reach already at four speeds.
+
+**Correction:** for `g=gcd(v,q)<q`, the exact kill count is
+
+```text
+K_(q,g) = [phi(q)/phi(q/g)] * #{r in W_q : gcd(r,q)=g}.
+```
+
+The sound union bound is `sum_i K_(q,gcd(v_i,q))<phi(q)`.  The old
+`s*k_q` form survives only when all speeds are units modulo `q`.  The exact
+referee checks the stratified formula over `28,680` `(q,v)` rows.
+
+**Rule:** “nonzero modulo `q`” and “a unit modulo `q`” are interchangeable
+only when `q` is prime.  Every numerator count over `(Z/qZ)^*` must stratify
+the speed action by `gcd(v,q)` before using a uniform orbit size.
+
 ## MISTAKE-164 (codex-2026-07-18-S67) -- Route B crossed the `1/14` threshold in the wrong direction and treated an affine carry chart as a quotient
 
 **What happened:** the S101 Route-B gap reduction wrote a maximizing margin as

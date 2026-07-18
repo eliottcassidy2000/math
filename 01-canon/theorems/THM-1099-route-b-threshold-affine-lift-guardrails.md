@@ -14,7 +14,7 @@ depends_on:
 related:
   - THM-1002
   - THM-1105
-  - MISTAKE-161
+  - MISTAKE-164
 results:
   - 05-knowledge/results/lrc14_routeb_affine_lift_guardrails_codex_S67.out
 source_sha256: f1c5b1722cf1f837b2ecb65dcf654bdc0739371407f130d699442084e63858b5
@@ -131,7 +131,8 @@ twelve s-separated residues  --->  exactly s*{1,...,12}   (6)
 ```
 
 needs an extra no-carry hypothesis.  More generally, when `q=13s+e`, the
-total excess available to twelve separated points is `e`, not `1`.
+total excess budget for twelve separated points is **at most** `e`, with
+equality only when the packet saturates both endpoints.
 
 There are two further logically separate steps after (6): the exceptional
 residue must be shown to belong to `v_max`, and a modular arithmetic
@@ -262,9 +263,10 @@ is unchanged.  The active pair `1,104` is unchanged as well:
 8*1 = 8,       8*104 = 97 = -8 (mod 105).
 ```
 
-All other residues have clearance at least `9/105`, so the same opposite-
-slope active pair makes `t_*` a strict local maximum of height `8/105` for
-both rows.  Thus the local maximum, its active pair, its offset word, and all
+All other residues have clearance at least `9/105`; the active distance
+branches have slopes `+1` and `-104`.  Thus the same opposite-slope active
+pair makes `t_*` a strict local maximum of height `8/105` for both rows.
+The local maximum, its active pair, its offset word, and all
 of its gap data survive the lift.
 
 Globally the rows are completely different.  The lift `112` is divisible by
@@ -352,9 +354,9 @@ and the value of `M`; the pair `V_0,V_1` proves that loss concretely.
 For methodology, the deterministic audit also forms the owner-cost
 tournament: orient `d -> e` when the least available lift carrying `d` is
 smaller than the least available lift carrying `e`, breaking equal costs by
-the modulus label.  Its Hamiltonian path is the sorted owner-cost list; in the
-example it is transitive (zero directed cycles, singleton SCCs, one
-Hamiltonian path).  This fingerprint is useful telemetry but deliberately
+the modulus label.  Its Hamiltonian path is the sorted owner-cost list; by
+construction this tournament is always transitive (zero directed cycles,
+singleton SCCs, one Hamiltonian path).  This fingerprint is useful telemetry but deliberately
 not proof-bearing: pairwise cost order forgets whether several owners use the
 same lift.  The owner--carrier hypergraph, or the pre-nerve shared-assignment
 model, is the faithful quotient.
@@ -382,6 +384,6 @@ above have the displayed elementary proofs.
 Frozen artifact hashes:
 
 ```text
-source  f1c5b1722cf1f837b2ecb65dcf654bdc0739371407f130d699442084e63858b5
+source  41cf86eb9baeabe78a8cd77e72fab01bc608f004b3d15693a417f7ad3df8bcce
 output  aec003e07edeb898e3d1d41b65257301b222e13118aefa92ece8c28a63728408
 ```

@@ -1,7 +1,7 @@
 ---
 id: THM-1105
-title: THE ARITHMETIC POSITION LAW — the uncovered gaps sit at q₀(V), the FIRST modulus dividing no speed: min-denominator = q₀ in 96.8% of primitive families, and the regime split is exactly the classical boundary — 0 failures in 454 families with q₀ ≤ 14 (the classical sieve lemma, confirmed), against 34.8% failures in the 46 with q₀ > 14, which is precisely the hard stratum. This also REFUTES THM-1100's bounded-denominator conjecture by an explicit one-line construction: a single speed divisible by lcm(1..Q) blocks every q ≤ Q at once (that runner sits at the origin for every p), so V = {lcm(1..Q)} ∪ {12 coprime speeds} is primitive with no lonely rational of denominator ≤ Q, and Q is arbitrary. The excess min-den − q₀ is likewise unbounded by my searches (5 random → 19 adversarial)
-status: the refutation is EXPLICIT and exact (verified: for Q=30 no modulus ≤ 30 fails to divide lcm(1..30); min-denominator 32). The position law is measured over 500 primitive families; the q₀ ≤ 14 regime showing 0/454 failures is the classical lemma and is PROVED elsewhere. The excess bound is NOT established — searches gave 5 then 19, the same escalating signature as before
+title: THE ARITHMETIC POSITION EXPERIMENT — the first modulus q₀ dividing no speed equals the least witness denominator in 96.8% of a 500-family primitive sample; q₀≤14 is the proved classical regime and q₀>14 is the hard sampled regime. The bounded-denominator conjecture is exactly refuted by lcm divisor loading, but q₀ is an address heuristic rather than a law.
+status: the unbounded-denominator refutation is EXPLICIT and exact. The q₀ agreement is measured over 500 primitive families; only its q₀≤14 part is a theorem. The excess bound is NOT established, and THM-1098's exact lcm-prefix row raises the record from the sampled 19 to 28. THM-1110 refutes the proposed q>14 extended lemma.
 source: opus-2026-07-17-S374 (owner: work the arithmetic position of the gaps)
 depends_on: [THM-1100 (whose central conjecture this refutes), THM-1035/1040 (the classical sieve lemma, which is the q₀ ≤ 14 half of the law), THM-1050 (dilation), MISTAKE-154/156 (the escalating-search lesson, applied again)]
 scripts: 04-computation/denominator_unbounded_opus_S374.py, divisibility_law_opus_S374.py -> 05-knowledge/results/
@@ -63,12 +63,17 @@ The two independent characterisations of "hard" coincide.
 
 ## What is NOT established
 
-The salvageable conjecture is that the *excess* E(V) = min-den − q₀ is
-bounded. It is not established: random families gave max 5, adversarial
-hill-climbing gave **19** (q₀ = 15, min-den = 34, V = {29, 146, 179, 182,
+The possible conjecture that the *excess* E(V) = min-den − q₀ is bounded is
+not established.  Random families gave max 5 and the original adversarial
+hill-climb gave **19** (q₀ = 15, min-den = 34, V = {29, 146, 179, 182,
 191, 209, 216, 264, 299, 307, 361, 391, 400}). That is the same escalating
 signature that has now misled me three times, so I record it as open and
 lean against it.
+
+THM-1098 supplies a deterministic larger value: for
+`{1,...,11,13,lcm(1,...,23)}`, exact enumeration gives `q₀=25` and
+`q_min=53`, hence excess **28**.  This does not prove unbounded excess, but it
+shows that the sampled value 19 had no frontier status.
 
 Curiously the lcm construction has excess **0** for Q = 20, 30, 40 — the
 law is exact on the families that refute the absolute bound. The
@@ -80,9 +85,10 @@ adversarial families for the excess are a different population: small q₀
 LRC(14) localises cleanly:
 
 1. **q₀ ≤ 14** (≈91% of families): closed by the classical sieve lemma.
-2. **q₀ > 14** (≈9%, the hard stratum): needs the extended statement "q
-   divides no speed ⟹ some p/q is lonely" for q > 14. True in ~65% of
-   these; when false the excess is small but not provably bounded.
+2. **q₀ > 14** (≈9%, the sampled hard stratum): the extended statement "q
+   divides no speed ⟹ some p/q is lonely" is false by THM-1110.  One must
+   compare several moduli with their gcd-stratified danger masks and a shared
+   integer lift word; no single-`q₀` lemma closes this branch.
 
 That is a sharper localisation than anything the measure-theoretic route
 produced in ten sessions, and it is stated in purely arithmetic terms —

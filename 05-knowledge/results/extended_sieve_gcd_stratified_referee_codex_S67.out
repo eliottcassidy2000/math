@@ -1,0 +1,12 @@
+THM-1110 GCD-STRATIFIED NUMERATOR-COUNT REFEREE
+gcd-stratified fibre formula: PASS (28680 exact (q,v) rows)
+q=90: phi=24, forbidden=(0, 1, 2, 3, 4, 5, 6, 84, 85, 86, 87, 88, 89)
+proper gcd-stratum kill counts: ((1, 2), (2, 4), (3, 6), (5, 8), (6, 6), (9, 0), (10, 0), (15, 0), (18, 0), (30, 0), (45, 0))
+speed= 1 gcd= 1 kills=(1, 89)
+speed= 5 gcd= 5 kills=(1, 17, 19, 37, 53, 71, 73, 89)
+speed=25 gcd= 5 kills=(7, 11, 29, 43, 47, 61, 79, 83)
+speed=35 gcd= 5 kills=(13, 23, 31, 41, 49, 59, 67, 77)
+primitive counterexample: {1,5,25,35} blocks every unit numerator mod 90
+all-unit specialization at q=90: 11*2=22<24 (valid)
+arbitrary nonzero residues at q=90: 3*8=24 (sharp; no strict slack)
+ALL EXACT CHECKS PASS

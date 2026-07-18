@@ -1473,7 +1473,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `lrc14_routeb_affine_lift_guardrails_codex_S67.out` | [STORED; EXACT DETERMINISTIC AUDIT] | THM-1099: threshold/defect/carry/CRT guardrails and the exact `7 -> 112` lift; identical local data at `8/105` coexist with global values `8/105` and `3/20`. | codex-S67 |
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly for odd support (Tbar=0); the measured twelve-family spread is 12.4x, not a no-go theorem for every signed estimate. | (self) |
 | `denominator_unbounded_opus_S374.out` | [STORED] | THM-1105: lcm(1..Q) construction REFUTES the bounded-denominator conjecture. | (self) |
-| `divisibility_law_opus_S374.out` | [STORED] | THM-1105: min-den = q0 in 96.8%; 0/454 failures at q0<=14 vs 34.8% at q0>14; excess hunt to 19. | (self) |
+| `divisibility_law_opus_S374.out` | [STORED; SAMPLE ONLY] | THM-1105: min-den = q0 in 96.8%; 0/454 failures at q0<=14 vs 34.8% at q0>14; sampled excess 19 is superseded by THM-1098's exact excess 28 row. | (self) |
 | `extended_lemma_false_opus_S375.out` | [STORED] | THM-1110: explicit counterexample to the extended sieve lemma at q=15; |W_q|=1 iff q<=14. | (self) |
 | `blocking_cost_opus_S375.out` | [STORED] | THM-1110: blocking cost ceil(phi/k_q) per modulus; counting theorem fires for s<=11 (misses LRC(14) by 2). | (self) |
 | `blocking_tradeoff_opus_S376.out` | [STORED] | THM-1115: uncovered measure independent of q0; lcm families BELOW typical -- trade-off refuted. | (self) |
@@ -1481,3 +1481,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `tight_families_opus_S377.out` | [STORED] | THM-1120: single-substitution sweep -- only 12->24 preserves tightness (r <= 120). | (self) |
 | `tight_chain_opus_S377.out` | [STORED] | THM-1120: the two tight families form a closed pair; two-speed and hill-climb searches find no third. | (self) |
 | `essential_region_opus_S377.out` | [STORED] | THM-1120: essential-region criterion E_i subset D_r predicts the swappable speed exactly ({12}). | (self) |
+| `blocking_cost_opus_S375.out` | [STORED; UNIT-ONLY COUNT] | THM-1110 discovery run: `phi/k_q` applies when every speed is a unit modulo q; its arbitrary-nonzero-residue interpretation is refuted by the gcd-stratified referee. | (self) |
+| `extended_sieve_gcd_stratified_referee_codex_S67.out` | [STORED; EXACT REFEREE] | THM-1110 correction: verifies the exact gcd-stratum kill formula over 28,680 `(q,v)` rows and proves the primitive `{1,5,25,35}` row blocks every unit numerator mod 90. | codex-S67 |

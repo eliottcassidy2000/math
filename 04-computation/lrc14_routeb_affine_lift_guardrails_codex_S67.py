@@ -60,7 +60,7 @@ def internal_gaps(residues: tuple[int, ...]) -> tuple[int, ...]:
 
 
 def least_lift(base: int, q: int, d: int) -> int:
-    """Least positive base+kq divisible by d, or fail if none exists."""
+    """Least positive base+kq divisible by d for the positive bases used here."""
     period = d // gcd(q, d)
     candidates = [base + k * q for k in range(period) if (base + k * q) % d == 0]
     if not candidates:
