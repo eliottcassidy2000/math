@@ -1,0 +1,15 @@
+REFUTATION CHECK: is THM-731+THM-755 a PROVED certificate that never locates a witness?
+  THM-731 (RIGOROUS): L = (6/7)|G_P| - eps_v  and  |eps_v|^2 <= (6/49) disc_v
+    => L > 0  iff  disc_v < 6|G_P|^2.   Pure MEASURE statement; no point is exhibited.
+  THM-755 (PROVED):  disc_v <= 4 r_P |G_P|/(pi v) + 2|G_P|^2  <  6|G_P|^2  iff  v > v* = r_P/(pi|G_P|)
+  => for v > v*, L > 0 is PROVED by accounting alone. THE HYPOTHESIS IS REFUTED.
+
+  Now the REPLACEMENT: does the accounting certificate ALSO fail exactly in the open wedge?
+
+  family                | peel v |  |G_P|  |  r_P |   v*    | v > v*? | regime
+  deep well {1..12,182} |    182 | 0.03410 |   12 |   112.0 | True    | separated (rho>=13)
+  {1..12,364}           |    364 | 0.03410 |   12 |   112.0 | True    | separated (rho>=13)
+  {1..11,13,84} WEDGE   |     84 | 0.01216 |    4 |   104.7 | False   | INTERMEDIATE WEDGE
+  2*{1..12}u{13}        |     24 | 0.03224 |   16 |   158.0 | False   | coherent (sigma<=13)
+
+  => the accounting certificate fires exactly on the scale-SEPARATED families and fails on the wedge -- same boundary as the witness methods
