@@ -1,0 +1,38 @@
+### klein-S321 sub-threshold covering sets vs THM-1032 hypotheses ###
+
+n=9  klein control  S=[1, 3, 4, 5, 7, 11, 18, 32]
+   max=32, max-of-rest=18, 13*max-of-rest=234
+   GapFamily(some ratio>13): True    compressed: True    -> trapped-core shape: True
+   THM-1032 killer condition (max > 13*max-of-rest): False
+   >>> INSIDE THM-1032 stratum: NO (safe: no dominant killer)
+
+n=10 klein NEW  S=[1, 2, 3, 5, 6, 7, 8, 9, 30]
+   max=30, max-of-rest=9, 13*max-of-rest=117
+   GapFamily(some ratio>13): True    compressed: True    -> trapped-core shape: True
+   THM-1032 killer condition (max > 13*max-of-rest): False
+   >>> INSIDE THM-1032 stratum: NO (safe: no dominant killer)
+
+n=11 klein NEW  S=[2, 6, 8, 9, 10, 11, 13, 14, 17, 19]
+   max=19, max-of-rest=17, 13*max-of-rest=221
+   GapFamily(some ratio>13): False   compressed: True    -> trapped-core shape: False
+   THM-1032 killer condition (max > 13*max-of-rest): False
+   >>> INSIDE THM-1032 stratum: NO (safe: no dominant killer)
+
+### verdict ###
+  any klein counterexample inside THM-1032's stratum: False
+  => THM-1032 UNAFFECTED (its stratum and klein's danger zone are DISJOINT)
+
+### where does the danger actually live?  gap-ratio profile ###
+  set                              maxratio  dominant-killer?  M          1/(n-1)
+  [1, 3, 4, 5, 7, 11, 18, 32]      32        False             4/33       1/8   (M<1/(n-1): True)
+  [1, 2, 3, 5, 6, 7, 8, 9, 30]     30        False             4/37       1/9   (M<1/(n-1): True)
+
+--- RUN NOTE (kind-pasteur, honest) ---
+The final M_of() row (n=11 set) was CUT by the 560s timeout: M_of scans all a/q with
+q <= 4000, which is ~8M rational reductions per set and the n=11 set has 10 speeds.
+The VERDICT section above completed and is unaffected -- it uses only the ratio tests,
+which are exact integer comparisons.  The two M values that did print (4/33 < 1/8 and
+4/37 < 1/9) independently reproduce klein-S321's reported values.
+The n=11 set [2,6,8,9,10,11,13,14,17,19] has max ratio 19/2 = 9.5 < 13, so it is not
+even GapFamily -- it is a purely compressed object and lies outside the trapped core
+as well as outside THM-1032's stratum.
