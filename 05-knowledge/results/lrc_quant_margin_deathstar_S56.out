@@ -1,0 +1,7 @@
+AP {1..13}: M(V)=1/14=0.0714  bound w*M(V')/(w+v2)=0.0400 [OK:True]  1/13-form w/(13(w+v2))=0.0400  (M(V')=0.0769)
+GW: M(V)=1/14=0.0714  bound w*M(V')/(w+v2)=0.0541 [OK:True]  1/13-form w/(13(w+v2))=0.0499  (M(V')=0.0833)
+deep well {1..12,182}: M(V)=14/183=0.0765  bound w*M(V')/(w+v2)=0.0722 [OK:True]  1/13-form w/(13(w+v2))=0.0722  (M(V')=0.0769)
+far element {1..12,500}: M(V)=1/13=0.0769  bound w*M(V')/(w+v2)=0.0751 [OK:True]  1/13-form w/(13(w+v2))=0.0751  (M(V')=0.0769)
+covering min [2,5,6,8,11,13,14,16,19,20,24,25,27]: M(V)=1/11=0.0909  bound w*M(V')/(w+v2)=0.0577 [OK:True]  1/13-form w/(13(w+v2))=0.0399  (M(V')=0.1111)
+2*AP: M(V)=1/14=0.0714  bound w*M(V')/(w+v2)=0.0400 [OK:True]  1/13-form w/(13(w+v2))=0.0400  (M(V')=0.0769)
+comparable random: M(V)=1/6=0.1667  bound w*M(V')/(w+v2)=0.0907 [OK:True]  1/13-form w/(13(w+v2))=0.0419  (M(V')=0.1667)
