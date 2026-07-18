@@ -16,7 +16,7 @@
 #include <vector>
 
 // Independent standard-library referee for the primitive proper AP-centred
-// common-scale-28 Hamming-six face (THM-995).
+// common-scale-28 Hamming-six face (THM-1072).
 //
 // This implementation starts from bounded CRT search and the leave-one-out
 // lcm predicate.  Its theorem-bearing carrier is the four thick sheet fibres

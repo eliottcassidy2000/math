@@ -1,5 +1,5 @@
 ---
-id: THM-995
+id: THM-1072
 title: Scale-twenty-eight Hamming-six two-adic fibre obstruction
 status: CLAIMED + FROZEN PRIMARY pending independent replay — a deterministic all-labelled structural primary gives a terminal Z/4-fibre deficit, with a full immutable-union DP sidecar and byte-identical normal/-O output; do not promote to PROVED before an independently developed implementation agrees
 source: codex-2026-07-17-S66 scale-twenty-eight continuation
@@ -10,7 +10,7 @@ verification:
   - 05-knowledge/results/lrc13_scale_twenty_eight_hamming_six_two_adic_fibre_obstruction_codex_c28.out
 ---
 
-# THM-995 — scale twenty-eight has a terminal two-adic fibre deficit
+# THM-1072 — scale twenty-eight has a terminal two-adic fibre deficit
 
 The claimed candidate theorem is:
 
