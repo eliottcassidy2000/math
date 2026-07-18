@@ -2,7 +2,7 @@
 
 **Status:** PROVED IN FULL (Lean, kernel-pure — `TournamentH7/LRCTwoCircleII.lean`,
 standard trio ×13; `decide` only on the finite congruence table). Source:
-HYP-7270, completing HYP-7265/THM-979. The iff, both directions, in-kernel.
+HYP-7285, completing HYP-7265/THM-979. The iff, both directions, in-kernel.
 
 ## The theorem
 
