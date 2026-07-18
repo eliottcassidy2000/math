@@ -1,0 +1,11 @@
+CF-descent of the deep-well tower maximizer:
+  d=1: M=14/183=0.07650  t*=14/183=CF[0, 13, 14]  convergents=[(1, 13), (14, 183)]
+  d=2: M=14/183=0.07650  t*=7/183=CF[0, 26, 7]  convergents=[(1, 26), (7, 183)]
+  d=3: M=14/183=0.07650  t*=14/549=CF[0, 39, 4, 1, 2]  convergents=[(1, 39), (4, 157), (5, 196), (14, 549)]
+
+Primitive deep well {1..12,182}: t*=14/183=[0;13,14]. The two best rationals flanking t*:
+  t=1/13: min_v||v t|| = 0/13, killed by v=182 (13|182=True)   [CF convergent 1/13 (needs 13|v)]
+  t=1/14: min_v||v t|| = 0/14, killed by v=182 (14|182=True)   [mediant 1/14 (needs 14|v)]
+
+=> far element = lcm(13,14) = 182 blocks BOTH. CF descent EXPLAINS 182, but delivers
+   only far-element divisibility -- the AP core {1..12} is the open inverse theorem.

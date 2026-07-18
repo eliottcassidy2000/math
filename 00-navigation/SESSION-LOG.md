@@ -403,6 +403,25 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S103 -- CF DESCENT EXPLAINS THE FAR ELEMENT lcm(13,14)=182 AND STOPS; three elementary tools converge, the AP core is the open inverse theorem
+
+Owner: prove the medium-modulus inverse theorem via continued-fraction descent.
+CF RESULT (clean, verified): primitive deep well {1..12,182}, t*=14/183=[0;13,14]. The two best
+rationals flanking t*: CF convergent 1/13 => 13|some speed (killed by 182); adjacent mediant 1/14
+=> (for M<1/14) 14|some speed (killed by 182). So the far element = lcm(13,14)=182 EXACTLY because
+it must block BOTH. Cleanest explanation of 182. (Dilations messier: t*(3V)=14/549=[0;39,4,1,2].)
+WHERE IT STOPS: convergents of [0;13,14] are only 1/13,14/183 => one exact cond (13|v_max) + weak
+mediant near-divisibility (min_v||jv||_{13j+1}<=j), none constraining the 12 core speeds. S102
+medium witnesses (q=24) are NON-convergent => CF descent doesn't see them. So CF descent reaches
+only far-element divisibility, NOT the AP core.
+SYNTHESIS S101-S103: three elementary tools converge on the SAME layer (far element 13/14-divisibility)
+and provably STOP -- maximality (S101), sieve-completeness (S102), CF/Farey descent (S103). The AP core
+is IRREDUCIBLY ADDITIVE = the inverse theorem (Tao n=12, klein-S279 >=6-linear, S92 dim-2), OPEN.
+FRONTIER: everything elementary done/discharged; ONE thing remains = the open inverse theorem, provably
+beyond maximality/sieve/CF-descent; a research-level additive breakthrough, not a further reduction.
+Crux NOT proved, no fabrication.
+FILES: reflection cf-descent-explains-the-far-element-lcm-13-14-...-boxeph-S103, script+out, HYP-7565. boxeph; S103.
+
 ## boxeph-2026-07-18-S102 -- THE "FREE SIEVE WINDOW" LEVER IS REFUTED: the crux forces at MEDIUM moduli 13<q'<q, not the sieve
 
 Owner: prove the S101 lever "two interior small gaps force a free sieve window (q'<=13),
