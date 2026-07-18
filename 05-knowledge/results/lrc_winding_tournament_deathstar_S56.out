@@ -1,0 +1,15 @@
+AP {1..13}: M=0.0714=1/14 @t=1/14  n=14
+   scores(sorted)=[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+   c3(3-cycles)=154  (regular C(n,3)*.. ) near-regular=True  score-range=0
+GW: M=0.0714=1/14 @t=1/14  n=14
+   scores(sorted)=[5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]
+   c3(3-cycles)=158  (regular C(n,3)*.. ) near-regular=False  score-range=2
+deep well {1..12,182}: M=0.0765=14/183 @t=14/183  n=14
+   scores(sorted)=[6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7]
+   c3(3-cycles)=112  (regular C(n,3)*.. ) near-regular=True  score-range=1
+covering min: M=0.0909=1/11 @t=1/22  n=14
+   scores(sorted)=[4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 8, 8]
+   c3(3-cycles)=156  (regular C(n,3)*.. ) near-regular=False  score-range=4
+covering {2..14}: M=0.1250=1/8 @t=1/16  n=14
+   scores(sorted)=[5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7]
+   c3(3-cycles)=143  (regular C(n,3)*.. ) near-regular=False  score-range=2

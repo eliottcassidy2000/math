@@ -92,5 +92,27 @@ measure; the tournament lens says it is a Dedekind-sum/cusp-form (`disc_v`, THM-
 the same object — the margin as a discrepancy that vanishes *iff* the AP-lattice alignment holds — is
 the concrete next synthesis, and it is where the density face and the tournament face meet.
 
+**Empirical test of D5 (this session) — the naive form breaks on GW.** Computing the winding
+tournament `T(t*)` (14 vertices incl. the observer; `i→j` iff `frac((s_i−s_j)t*) ∈ (0,½)`) at each
+family's optimal time:
+
+| family | `M` | score sequence | balanced? |
+|---|---|---|---|
+| **AP** | `1/14` | all `6` (7 antipodal pairs tied) | **yes — perfectly regular** |
+| GW | `1/14` | `5,5,6…6,7` | no (range 2) |
+| deep well | `14/183` | `6…6,7…7` | near (range 1) |
+| covering-min | `1/11` | `4…8` | no (range 4) |
+| `{2..14}` | `1/8` | `5…7` | no (range 2) |
+
+The AP is the **unique** family whose optimal-time tournament is perfectly balanced — the regular
+"heptagon" tournament with the `n/2 = 7` antipodal (distance-`7`) pairs tied (the `z⁷=−1` structure at
+`t=1/14`). But **GW is tight yet irregular**, and the deep well is near-regular yet *not* tight: so
+"regular ⟺ tight/marginless" is **false**. The correct refinement: tournament-regularity singles out
+the **AP specifically** (the difference-closed tight family), not the tight locus. This matches THM-996
+§III (the census is flat across `{AP,GW}` at the threshold) from the tournament side — the balanced
+tournament is another threshold-level invariant blind to the AP↔GW distinction. So the D5 margin bound,
+if it exists, must key on a *sub-threshold* tournament statistic (the `disc_v` Dedekind sum, not the
+score balance), consistent with the whole session's finding that rigidity lives below the threshold.
+
 → THM-1002, THM-1000, THM-999, THM-997, THM-995 (IX/X), THM-729/732, HYP-7305; boundary reflection
 `bounded-spread-classification-is-the-apex-7-wall`.
