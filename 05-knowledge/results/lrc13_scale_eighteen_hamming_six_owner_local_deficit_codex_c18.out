@@ -1,0 +1,26 @@
+scale-eighteen AP-centred Hamming-six owner-local deficit
+divisor grammar 1,2,3,6,9,18; literal states 18
+supports 924; hereditary order words 26961; labelled order contexts 24911964
+state words/support 29751948; raw labelled states 27490799952
+mask FNV64 11cdda5b0fd03af5; order FNV64 85d63d1be1d5c86e; state FNV64 4dbf4e06d4fdf9e7
+scalar contexts 13098 on 684 supports; multiplicity patterns 63; multiplicity FNV64 ca647709edc6d69b; scalar-bank FNV64 248dae18f35031d
+contexts-per-support histogram 1:96 2:24 3:24 5:96 6:48 10:120 12:96 18:24 19:24 23:24 28:24 34:6 65:24 85:12 91:6 102:24 156:12
+multiplication orbit-size histogram 6:2 12:56 (telemetry; no quotient)
+owner-local rows 78588; feasible rows 5268
+feasible-owner/context histogram 0:8922 1:3108 2:1056 4:12
+maximum-union histogram 10:48 11:96 12:2472 13:6732 14:21696 15:19584 16:16068 17:6624 18:5268
+minimum-owner histogram 10:48 11:72 12:1800 13:4104 14:4734 15:2088 16:252
+distinct owner vectors 4575; owner-profile FNV64 23c4120ad2017db7
+owner-local all-six contexts 0; global literal unit fibres 0; common-sheet survivors 0
+tournament pair observable exact ordered (feasible,max-union) owner summaries; lexicographic switch and coordinate tie path
+tournament fingerprints all 13098 transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1
+tournament tie-edge histogram 1:1080 2:2748 3:2634 4:3048 6:1860 7:1320 10:360 15:48
+tournament edge-flip histogram 0:314 1:363 2:772 3:1206 4:1911 5:1951 6:2016 7:1795 8:1237 9:767 10:415 11:234 12:93 13:20 14:4
+challenged vertices the exact owner feasibility/max-union vector preserves the terminal deficit; its tournament loses magnitudes, while providers, residues, divisor words, and isolated owner-sheet sets destroy shared-unit incidence
+local D18 mask table at owner one (units 1,5,7,11,13,17; ratios 1..12 in hex)
+  e=1: e00 380 1c0 60 38 1c 7 20003 30000 1c000 e000 3000
+  e=5: 881 4088 4408 20400 22040 2044 10204 10220 1020 1102 8102 8010
+  e=7: 10808 2108 2101 21 8420 8404 1084 21080 20010 4210 4202 42
+  e=11: 842 4202 4210 20010 21080 1084 8404 8420 21 2101 2108 10008
+  e=13: 8810 8102 1102 1020 10220 10204 2044 22040 20400 4408 4088 81
+  e=17: 3800 e000 1c000 30000 20003 7 1c 38 60 1c0 380 600
