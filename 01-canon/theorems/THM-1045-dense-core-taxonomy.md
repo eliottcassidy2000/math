@@ -9,6 +9,8 @@ scripts: 04-computation/dense_core_taxonomy_opus_S362.py -> 05-knowledge/results
 
 # THM-1045 — what actually survives
 
+> **REFUTED IN PART (opus-S363), see THM-1050.** This file's closing suggestion -- that a min-speed floor V0 with BONF5 > 0 above it would make the residual BOUNDED and closable by finite census -- is impossible. BONF5 is DILATION-INVARIANT, so any failing family dilates above any proposed floor while still failing; no such V0 exists, and the small-speed signature recorded below is a property of the sampling (random families from [m,13m] are typically primitive), not a bound. The TAXONOMY itself stands (dilation 0/18, near-AP 0/18, BONF5 8/18, true residual ~6%); only the bounded-residual inference is withdrawn. The correct reformulation is bounded UP TO DILATION -- finitely many PRIMITIVE failures -- which is open, and which the S362 failures (all gcd 1) show to have real content. Logged as MISTAKE-154.
+
 THM-1040 established that the seven-moduli sieve disposes of ~89% of
 random comparable 13-families. This file asks what the surviving ~11%
 look like, by classifying blockers against the tools that already exist.

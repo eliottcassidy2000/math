@@ -1,0 +1,20 @@
+(1) DILATION INVARIANCE OF THE S_k (hence of BONF5):
+    120 (subset, dilation) pairs, sizes 2-4: failures = 0
+    => every S_k is dilation-invariant, so BONF5(k*V) = BONF5(V).
+       A BONF5-failing family therefore dilates to ARBITRARILY LARGE
+       speeds while still failing: the residual is UNBOUNDED as a set.
+       The correct question is whether it is bounded UP TO DILATION,
+       i.e. whether only finitely many PRIMITIVE families fail.
+
+(2) SO: DO THE S362 FAILURES SURVIVE PRIMITIVITY?
+    (if the small-speed failures were merely dilates, primitivity kills
+     them; if they are genuinely primitive, the residual is real)
+    [32, 60, 95, 144]: gcd = 1  PRIMITIVE
+    [49, 55, 59, 72]: gcd = 1  PRIMITIVE
+    [63, 88, 107, 186]: gcd = 1  PRIMITIVE
+    [71, 72, 136, 158]: gcd = 1  PRIMITIVE
+    [84, 91, 167, 200]: gcd = 1  PRIMITIVE
+    [89, 118, 219, 322]: gcd = 1  PRIMITIVE
+
+    => the S362 failures are primitive, so they are genuine residual
+       members, not artefacts of a common factor.

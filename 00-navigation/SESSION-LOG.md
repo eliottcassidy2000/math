@@ -1,3 +1,28 @@
+## opus-2026-07-17-S363 -- THM-1050 NO SPEED THRESHOLD EXISTS (BONF5 is DILATION-INVARIANT, 0/120, so any failing family dilates above any proposed floor while still failing) -- REFUTING my own S362 bounded-residual hypothesis; the surviving question is boundedness UP TO DILATION, and the S362 failures are all primitive so it has real content (HYP-7460, MISTAKE-154)
+
+Owner: work the last open regime. The decisive step turned out to be settling the FORM
+of the question rather than running the expensive threshold scan. Every S_k is
+dilation-invariant -- mu(cap D_{k v_i}) = mu(cap D_{v_i}), since the dilated
+intersection is the k-fold compressed-and-repeated copy with the same measure over a
+unit window (verified 0/120). Hence BONF5(kV) = BONF5(V), and a failing family with min
+speed m dilates to min speed km while STILL failing. So for ANY candidate floor V0 there
+are failures above it: no min-speed threshold exists, and my S362 suggestion that a
+threshold would make the residual bounded (hence a finite census) is refuted. The
+small-speed signature I recorded was a fact about my sampling -- random families drawn
+from [m,13m] are typically primitive -- not about the residual.
+WHAT SURVIVES, and it is not vacuous: the residual is closed under dilation, so the
+honest question is boundedness UP TO DILATION, i.e. finitely many PRIMITIVE failures --
+exactly the shape THM-1025 already exploits (reduce to primitive, finish with a
+15-element table). The S362 failures are ALL verified primitive (gcd 1), so they are
+genuine residual members and the reformulated question has content. OPEN.
+METHOD NOTE (MISTAKE-154): the very invariance that makes THM-1025 work is the one that
+forbids a bound stated in absolute speed. I had proved it and used it constructively one
+session earlier and still proposed the threshold. Check your own invariants before
+phrasing a bound in a non-invariant coordinate.
+FILES: THM-1050, MISTAKE-154, THM-1045 amended, script + out, HYP-7460. opus; S363.
+
+---
+
 ## boxeph-2026-07-18-S93 -- THE opus-S187 o death-star-S56 COMPOSITE, ATTEMPTED: corrects my S92 over-claim, reduces INV to a 1-D OFFSET-AP rigidity, but the composite does NOT assemble (owner: attempt the composite route). HONEST OUTCOME: a self-correction + a cleaner reduction + a negative. (1) CORRECTION: my S92 'opus-S187 == death-star-S56 (same object)' is TOO LOOSE -- opus-S187 is 7-element majority-parity classes (descent burden), death-star-S56 is the 13-element residue set. Different objects; attempting the composite exposed it. (2) USEFUL REFRAMING (verified): decompose each maximizer residue r in [val,q-val] as r=val*c+j (c=floor(r/val), j=r mod val). RIGOROUS (band+pigeonhole, q=13val+1): c in {1..12}; 13 residues over 12 c-values => some c is SHARED (=the aligned pair) => THE AP LIVES IN THE c-COORDINATE (deep well c={1..12} c=12 doubled; compact 2*{1..12}u{13} c={1..12} c=6 doubled -- same across the whole tight/near-tight locus). REDUCTION: core = dilated AP <=> the OFFSET sequence j_c is arithmetic (j_c=c*j_1 mod val); deep well j_1=0 => 12 core offsets 0, far element offset 1 (r=val*12+1=169=13^2). So INV <=> the offset sequence (j_1..j_12) is a dilated AP -- a 1-DIMENSIONAL rigidity, c-coordinate stripped. (3) HONEST NEGATIVE (why the composite fails): the offset space [0,val-1] with val=14m is UNBOUNDED => opus's FINITE classification (25 shapes for 7-sets) does NOT transfer -- there is no finite shape list for death-star's object, and 169=13^2 is a CONSEQUENCE of the trivial-AP offsets, not an independent pruning lever. So 'opus classification o death-star pinning' cannot be assembled. NET: corrected S92; INV reduced to 1-D offset-AP rigidity over the unbounded modulus val (smallest the crux has been); the finite-check route is RULED OUT for this object; the offset-forcing is irreducibly additive (the sharp inverse theorem, now on a 1-D offset sequence). LRC(14) NOT closed.
 
 Prompt (owner): attempt the opus-S187 o death-star-S56 composite route.

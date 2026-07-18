@@ -1442,3 +1442,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `s4_quadruple_floor_opus_S360.out` | [STORED] | THM-1035: S4 iterated-containment floor (150/150 separated, degenerate comparable) + comparable mu_4 ~1.43x independence. | (self) |
 | `mult_add_tension_opus_S361.out` | [STORED] | THM-1040: the mult/add tension REFUTED (identical doubling medians; APs block all seven) + the 89% sieve kill rate. | (self) |
 | `dense_core_taxonomy_opus_S362.out` | [STORED] | THM-1045: taxonomy of the 11% (BONF5 certifies 44%; 0 dilates, 0 near-APs) + the small-speed signature of the failures. | (self) |
+| `residual_bounded_opus_S363.out` | [STORED] | THM-1050: BONF5 dilation-invariance (0/120) => no speed threshold; S362 failures verified primitive. | (self) |
