@@ -1,0 +1,7 @@
+near-tight non-AP cores (max<=24): 19   RESIDUAL (both lenses fail): 2
+W                                  M       C       mu    delta   cGap182 minGapWin    maxlen   D
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 24] 2/23    6  0.01049  0.01003    0.5000    0.5000   0.00321  23
+[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19] 2/25    2  0.00113  0.00308    0.3529    0.3529   0.00057  25
+
+MIN coverGap over window across all residual cores: 0.35294 (1/13=0.07692)
+=> if all >=1/13 with margin, residual is tractable; 1/2 means far element too fine to cover.
