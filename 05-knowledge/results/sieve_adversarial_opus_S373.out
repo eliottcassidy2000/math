@@ -1,0 +1,44 @@
+(4) CONFIRM THE DILATION OBSTRUCTION (why we must restrict to primitive)
+    1*{1..13}  gcd=  1   min denominator = 14
+    2*{1..13}  gcd=  2   min denominator = 28
+    3*{1..13}  gcd=  3   min denominator = 14
+    5*{1..13}  gcd=  5   min denominator = 14
+    7*{1..13}  gcd=  7   min denominator = 98
+
+(5) ADVERSARIAL HUNT: maximise the minimal denominator over PRIMITIVE families
+    worst primitive family found: min denominator = 32
+      V = [93, 147, 200, 212, 215, 216, 243, 247, 253, 267, 280, 286, 289]
+
+(6) DISTRIBUTION OF THE MINIMAL DENOMINATOR (primitive, 600 families)
+      q =   4:   12
+      q =   5:   35
+      q =   6:   33
+      q =   7:   65
+      q =   8:   72
+      q =   9:   78
+      q =  10:   60
+      q =  11:   74
+      q =  12:   43
+      q =  13:   48
+      q =  14:   21
+      q =  15:    6
+      q =  16:    9
+      q =  17:   16
+      q =  18:    4
+      q =  19:    7
+      q =  20:    3
+      q =  21:    9
+      q =  22:    2
+      q =  23:    1
+      q =  24:    1
+      q =  25:    1
+    MAXIMUM over the sample: 25
+(7) HARDER ADVERSARIAL HUNT -- is 32 a ceiling or just where I stopped?
+    best over 45 hill-climbs: min denominator = 39
+      V = [31, 32, 36, 74, 145, 210, 231, 260, 304, 459, 500, 552, 616]
+    distribution of hill-climb optima: [31, 32, 32, 32, 32, 32, 33, 33, 33, 33, 34, 34, 34, 34, 34, 34, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 36, 36, 36, 37, 37, 37, 37, 37, 37, 37, 38, 38, 38, 38, 38, 39, 39]
+
+(8) SANITY: verify the witness family really has no small lonely rational
+    checking all q <= 39 exhaustively for V ...
+    denominators admitting a lonely point below the reported minimum: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39]
+    gcd(V) = 1   (must be 1 for primitivity)

@@ -1,0 +1,26 @@
+(1) KILL RATE vs Q  (random comparable 13-families)
+    Q <=   14:   346/400 =  86.5%
+    Q <=   20:   398/400 =  99.5%
+    Q <=   30:   400/400 = 100.0%
+    Q <=   50:   400/400 = 100.0%
+    Q <=   80:   400/400 = 100.0%
+    Q <=  120:   400/400 = 100.0%
+    Q <=  200:   400/400 = 100.0%
+
+(2) THE HARD STRATUM -- families that BLOCK all seven classical moduli
+    54 of 400 block all seven (the classical ~11% residue)
+      Q <=   14:    0/54 =   0.0%
+      Q <=   20:   52/54 =  96.3%
+      Q <=   30:   54/54 = 100.0%
+      Q <=   50:   54/54 = 100.0%
+      Q <=   80:   54/54 = 100.0%
+      Q <=  120:   54/54 = 100.0%
+      Q <=  200:   54/54 = 100.0%
+
+(3) THE NAMED ADVERSARIAL FAMILIES
+    THM-1055 primitive failure     -> lonely at p/q = 7/15
+    {1,...,13} (tight)             -> lonely at p/q = 1/14
+    2*{1,...,13} (dilate)          -> lonely at p/q = 1/28
+    AP d=8                         -> lonely at p/q = 1/2
+    odd {1,3,...,25}               -> lonely at p/q = 1/2
+    THM-1060 L=31 family           -> lonely at p/q = 3/23

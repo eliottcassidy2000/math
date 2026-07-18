@@ -1462,3 +1462,6 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly (Tbar=0); no gain, 12.4x spread. | (self) |
 | `dedekind_evaluation_opus_S372.out` | [STORED] | THM-1095: first (mis-normalised) run; k=2 control vacuous -- kept as the record of the correction. | (self) |
 | `dedekind_normalized_opus_S372.out` | [STORED] | THM-1095: corrected test -- delta*m7 varies 150-195% and CHANGES SIGN within a residue class at k=3. | (self) |
+| `extended_sieve_opus_S373.out` | [STORED] | THM-1100: extended sieve kill rate 86.5% -> 100% at Q<=30, incl. all 54 hard-stratum families. | (self) |
+| `sieve_adversarial_opus_S373.out` | [STORED] | THM-1100: dilation obstruction + adversarial minimal denominators 25 -> 32 -> 39 (no bound claimed). | (self) |
+| `largest_gap_opus_S373.out` | [STORED] | THM-1100: largest-gap reformulation REFUTED as a control; gaps are situated, not large. | (self) |

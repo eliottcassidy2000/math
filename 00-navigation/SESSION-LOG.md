@@ -1,3 +1,44 @@
+## opus-2026-07-17-S373 -- THM-1100 THE EXTENDED RATIONAL-POINT SIEVE, a NEW ROUTE from the surviving tools (loneliness at p/q depends only on speeds mod q, so bounded-denominator loneliness is FINITE and arithmetic; Q<=30 kills 100% incl. all 54 hard-stratum families vs 86.5% classical) -- with the dilation obstruction stated, no bound claimed (25->32->39 under increasing search), and the largest-gap reformulation RETRACTED (HYP-7560)
+
+Owner: work the surviving tools toward a new route. Built one around the tool with the
+best kill rate, and it is a different KIND of object from what just failed.
+THE OBSERVATION: t = p/q is lonely iff min(vp mod q, q - vp mod q)*14 >= q for every
+speed v -- which depends ONLY on v mod q. So 'is there a lonely rational of denominator
+<= Q' is a FINITE ARITHMETIC condition on the speeds mod lcm(1..Q), not an analytic one.
+That matters because the ledger died of analytic uniformity (THM-1095); this is a
+combinatorial question instead. The classical seven-moduli sieve is exactly the q <= 14
+case, where the band degenerates to 'q divides no speed'.
+KILL RATE: q<=14 gives 86.5% and 0/54 on the hard stratum; q<=20 gives 99.5% and 52/54;
+q<=30 gives 100% and 54/54. The entire classical residue falls. Named adversaries fall
+cheaply -- THM-1055 primitive failure at 7/15, THM-1060 L=31 at 3/23, AP d=8 at 1/2,
+sum-free {1,3,...,25} at 1/2, and {1,...,13} at 1/14 with EQUALITY, correct for the
+extremal family.
+THE DILATION OBSTRUCTION, correctly stated: k*{1..13} needs denominator 14, 28, 14, 14,
+98 for k = 1,2,3,5,7 -- inflation happens ONLY along the 2,7-part of k, so dilating by
+anything coprime to 14 leaves it at 14. But 2^m*{1..13} needs 14*2^m, unbounded, so NO
+uniform Q exists over all families and the route must run on PRIMITIVE families, with
+THM-1050 reducing the rest.
+WHAT I AM NOT CLAIMING: the minimal denominator over primitive families came out 25
+(600 random), 32 (light adversarial), 39 (harder hill-climb). Each increase in search
+effort raised the maximum, which is exactly the signature of a supremum the search is
+not reaching. After MISTAKE-154, THM-1055 and MISTAKE-156 I will not read a sampled
+maximum as a bound. The optima do cluster tightly at 31-39, which is mildly reassuring
+and is not a proof. The q=39 witness was verified exhaustively.
+A REFORMULATION I TRIED AND RETRACT: 'the largest uncovered gap is bounded below by L0'
+looked like the natural control, since an interval of length L contains a rational of
+denominator ~1/L. REFUTED -- measured gaps are ~0.001, predicting denominators ~1000,
+while the actual minima are ~39: a factor of 25 too pessimistic. THE GAPS ARE NOT LARGE,
+THEY ARE SITUATED. They cluster at low-denominator rationals because that is where the
+combs align, so the right object is the ARITHMETIC POSITION of the gaps rather than
+their size -- and that is what a proof of this route has to exploit.
+THE ROUTE: there is an absolute Q0 such that every primitive 13-family admits a lonely
+p/q with q <= Q0. If true with explicit Q0, LRC(14) reduces to a FINITE check on residue
+classes mod lcm(1..Q0) -- infinitely many families collapsing to finitely many classes,
+which is exactly the uniformity every previous route failed to supply.
+FILES: THM-1100, 3 scripts + outs, HYP-7560. opus; S373.
+
+---
+
 ## opus-2026-07-17-S372 -- THM-1095 THE THM-965 TEMPLATE DOES NOT EXTEND TO k=3 (delta*m7 varies 150-195% and CHANGES SIGN within one residue class; k=2 control 0.8-8.6%) -- evaluation gives an ALGORITHM where the ledger needs a FORMULA, so after four consecutive consistent failures I recommend ABANDONING the uniform Bonferroni-ledger route (HYP-7550)
 
 Owner: work the higher-dimensional Dedekind sum evaluation. I tested whether it can

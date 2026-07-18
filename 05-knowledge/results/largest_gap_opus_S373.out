@@ -1,0 +1,16 @@
+(9) LARGEST UNCOVERED GAP on the adversarial witnesses and named families
+    S373 hunt witness (min-den 39)   largest gap = 0.001018   total uncovered = 0.133715   1/L = 982.7
+    S373 witness (min-den 32)        largest gap = 0.002445   total uncovered = 0.129548   1/L = 409.0
+    THM-1055 primitive failure       largest gap = 0.002094   total uncovered = 0.137388   1/L = 477.6
+    {1,...,13} (tight)               largest gap = 0.000000   total uncovered = 0.000000   1/L = inf
+    AP d=8                           largest gap = 0.008837   total uncovered = 0.127294   1/L = 113.2
+    odd {1,3,...,25}                 largest gap = 0.034286   total uncovered = 0.115901   1/L = 29.2
+    THM-1060 L=31                    largest gap = 0.002411   total uncovered = 0.124956   1/L = 414.7
+
+(10) DISTRIBUTION OF THE LARGEST GAP over primitive families
+    n=150  min 0.000912   median 0.001296   max 0.001873
+    smallest largest-gap found: 0.000912  =>  needs denominator ~1096
+
+  THE QUESTION THE ROUTE REDUCES TO: is the largest uncovered gap bounded
+  below by an absolute L0 > 0 over PRIMITIVE 13-families?  If yes with an
+  explicit L0, LRC(14) becomes a FINITE check on residues mod lcm(1..ceil(1/L0)).
