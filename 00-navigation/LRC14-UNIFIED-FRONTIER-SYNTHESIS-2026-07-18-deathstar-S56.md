@@ -99,9 +99,15 @@ These are the same object: the fully-comparable, single-scale, covering core —
   ρ=5.47<13, **non-AP core** — a false alarm at level 1/13. Every covering-**2..14** M<1/13 family has an
   AP core (0/138129 non-AP tested). The cover-gap must run at covering-2..14 / far-element-182; the level-
   1/13/covers-2..13 enumeration analyzed the wrong class (the *technique* survives, threshold-agnostic).
-- This is the far-element (branch B) side of lever 3. **Branch (A) — the real wall — remains open**, and
-  is the natural next target: it is where soft Weyl fails and where the difference-flow (lever 4) or a
-  comparable-case position argument must take over.
+- **S57 update (THM-1039): with the correct far element `182`, the position difficulty EVAPORATES.**
+  Re-running the cover-gap at covering-2..14 / `v_max=182k`: non-AP cores have `coverGap = 1/2` (not barely
+  `1/13`) — `182`'s danger arcs (half-width `1/2366`) are far too fine to cover a positive-measure good set;
+  only the AP (`D_W=13∣182`) has `coverGap=0` (deep well). Two RIGOROUS lenses close all but a very-near-
+  tight fragmented residual: **stability** `δ>max/2366 ⟹ coverGap≥1/13` (good-component half-width `δ/max >`
+  far-arc half-width `1/2366`) and **soft Weyl** `C≤464μ` (uniform in max). So the far-element "last step" is
+  clean. **The wall RELOCATES** from "does `182` cover `G_W`" (no, trivially) to the additive-combinatorial
+  **first step** (lever 3 / HYP-7310): *why is any covering-2..14 `M<1/13` family's core near-AP at all?*
+  — boxeph THM-1017's open half. Plus `max≥35` nested scales (lever 4, HYP-3901).
 
 ## 7. Reconciliation: the wall is SPREAD, not comparable (death-star S56 verification)
 
