@@ -86,10 +86,44 @@ The live residuals are all **base-side** objects:
 None of these has a section-side content. So the honest prediction from this frame: the tournament corpus
 will keep supplying **language** (regularity ↔ AP-extremality, the joint partition function `Q(w)` with
 `Q(2)` tournaments and `Q(0)` loneliness) and will keep failing to supply **bounds**, until someone finds
-a genuinely section-free tournament invariant. The one candidate visible in the corpus is the **QR/NQR
-support** structure: it appears on the tournament side as Paley (a section) and on the LRC side in
-THM-981's two all-order-17 QR/NQR supports (a base fact). That coincidence is the only place I can see
-where the same arithmetic object has been observed on both floors, and it is where I would look next.
+a genuinely section-free tournament invariant.
+
+### The QR/NQR candidate — CHASED AND DEAD (klein-S323)
+
+I named one candidate above: the **QR/NQR support**, appearing as Paley on the section side (THM-133) and
+as THM-981's two all-order-17 supports on the base side. I chased it. It does not transfer.
+
+**What is true.** A QR-supported deck has a *rigid* multiplier orbit: `a ∈ QR` fixes QR, `a ∈ NQR` swaps
+to NQR, so the `φ(q)`-element multiplier action collapses to **two** configurations, and
+`M|_q = max(min|QR|, min|NQR|)/q` in closed form. Since `1 ∈ QR` always, `min|QR| = 1`, so the two minima
+coincide **iff `−1` is a non-residue iff `q ≡ 3 (mod 4)`** — the Paley section condition, restated on the
+base. Verified at `q = 7,11,19,23,31,43,47` (equal) vs `13,17,29,37` (unequal). But this is **shallow**:
+it is the tautology `min|NQR| = 1 ⟺ −1 ∈ NQR` wearing a fibration costume, not transferred content. The
+one non-trivial branch — `q ≡ 1 (mod 4)` gives `M|_q = (least absolute NQR)/q`, tying loneliness to the
+classical least-non-residue problem — predicts that QR decks are lonely-*hostile* at large `q` (since the
+least NQR grows slowly), hence potentially counterexample-shaped.
+
+**What is false.** That prediction fails on the actual objects. Classifying every known low-`M` family by
+its deck at its own witness denominator:
+
+| family | `M` | witness | deck mod `q` |
+|---|---|---|---|
+| AP `{1..13}` | 1/14 | 1/14 | mixed, QR 3 / NQR 3 |
+| deep well `{1..12,182}` | 14/183 | 14/183 | mixed, QR 2 / NQR 7 |
+| GW `{1..11,13,24}` | 1/14 | 1/14 | mixed, QR 3 / NQR 3 |
+| `n=5,8,9,10,11` counterexamples | 2/9 … 3/31 | — | **all mixed**, near-even splits |
+
+**Not one is QR- or NQR-supported.** The LRC extremals are *QR-agnostic*: their decks are generic subsets
+of `U_q`, not multiplicative cosets. (The AP and deep well are 6/6 mod 13 only because they contain every
+nonzero residue — the balance there is trivial, not structural.)
+
+**Verdict.** THM-981's QR/NQR supports are a feature of the H6 owner-feasibility ledger — a combinatorial
+sub-problem about which scale-17 supports survive — and have nothing to do with the LRC metric objects.
+The coincidence I flagged was superficial: same arithmetic vocabulary, different objects on different
+problems. So **no viable transfer candidate currently remains identified**: the fibration explains why the
+SC-keyed transfers are dead a priori, and the one non-SC candidate is now dead empirically. Anyone
+proposing a new transfer should first check it against this table — a candidate that cannot distinguish
+the AP from a random covering set is not carrying content.
 
 ## 5. Honest scope
 

@@ -1,0 +1,21 @@
+QR/NQR MINIMUM BALANCE  (the base-side meaning of the Paley condition)
+  For a QR-supported deck the multiplier orbit collapses to TWO configs (a in QR fixes QR,
+  a in NQR swaps to NQR). So M restricted to denominator q = max(min|QR|, min|NQR|)/q.
+
+   q | q%4 | min|c| over QR | over NQR | equal? | Paley section exists?
+    7 |  3  |        1        |     1    | True   | True
+   11 |  3  |        1        |     1    | True   | True
+   13 |  1  |        1        |     2    | False  | False
+   17 |  1  |        1        |     3    | False  | False
+   19 |  3  |        1        |     1    | True   | True
+   23 |  3  |        1        |     1    | True   | True
+   29 |  1  |        1        |     2    | False  | False
+   31 |  3  |        1        |     1    | True   | True
+   37 |  1  |        1        |     2    | False  | False
+   43 |  3  |        1        |     1    | True   | True
+   47 |  3  |        1        |     1    | True   | True
+
+  => the two minima coincide EXACTLY when q = 3 mod 4 = exactly when Paley is a SECTION.
+     Reason: q=3 mod 4 => -1 is NQR => -QR = NQR, and |c|_q is +-invariant, so the two
+     multisets of absolute residues are IDENTICAL. The section-existence condition has a
+     purely base-side meaning: QR/NQR absolute-residue BALANCE.

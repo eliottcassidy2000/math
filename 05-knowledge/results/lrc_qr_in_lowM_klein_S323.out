@@ -1,0 +1,17 @@
+DOES THE QR STRUCTURE ACTUALLY APPEAR IN THE LOW-M OBJECTS?
+  (witness denominator q from the exact pair-sum maximizer; deck classified mod q)
+
+  family                 |  M        | witness a/q | deck structure mod q
+  AP {1..13}             | 1/14      |  1/14      | mixed  QR=3 NQR=3 (of 6 units)
+  deep well {1..12,182}  | 14/183    | 14/183     | mixed  QR=2 NQR=7 (of 9 units)
+  GW {1..11,13,24}       | 1/14      |  1/14      | mixed  QR=3 NQR=3 (of 6 units)
+  n=5  cx {1,3,4,5}      | 2/9       |  4/9       | mixed  QR=2 NQR=1 (of 3 units)
+  n=8  cx                | 2/15      |  7/15      | mixed  QR=2 NQR=2 (of 4 units)
+  n=9  cx                | 4/33      |  4/33      | mixed  QR=2 NQR=3 (of 5 units)
+  n=10 cx                | 4/37      | 10/37      | mixed  QR=5 NQR=4 (of 9 units)
+  n=11 cx (tight band)   | 3/31      |  2/31      | mixed  QR=6 NQR=4 (of 10 units)
+
+  Also checking the SPEEDS-mod-13 view (the LRC(14) critical modulus, 13 = 1 mod 4):
+    AP {1..13}             mod 13: mixed  QR=6 NQR=6 (of 12 units)
+    deep well {1..12,182}  mod 13: mixed  QR=6 NQR=6 (of 12 units)
+    GW {1..11,13,24}       mod 13: mixed  QR=5 NQR=7 (of 12 units)

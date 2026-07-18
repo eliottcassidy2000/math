@@ -38,3 +38,23 @@ if __name__ == "__main__":
     print("(3) |U_q| = phi(q)/2 :", all(len(units(q))//2 == phi(q)//2 for q in range(3,200)))
     print("    q<=59 where 13 speeds could fill the base (phi(q)<=26):",
           [q for q in range(15,60) if phi(q) <= 26])
+
+# --- klein-S323 addendum: the QR/NQR transfer chase (DEAD END) ------------------
+# TRUE:  a QR-supported deck collapses the multiplier orbit to two configs, giving
+#        M|_q = max(min|QR|, min|NQR|)/q.  Since 1 in QR always, min|QR| = 1, so the
+#        two minima coincide iff -1 is a non-residue iff q = 3 mod 4 = the Paley
+#        section condition, restated on the base.  But that is the tautology
+#        "min|NQR| = 1 <=> -1 in NQR" in a fibration costume, not transferred content.
+#        The one non-trivial branch: q = 1 mod 4 gives M|_q = (least absolute NQR)/q,
+#        tying loneliness to the classical least-non-residue problem, and predicting
+#        QR decks are lonely-HOSTILE at large q (least NQR grows slowly).
+# FALSE: that prediction fails on the real objects.  Classifying every known low-M
+#        family at its own witness denominator, NOT ONE is QR- or NQR-supported:
+#          AP {1..13}            M=1/14    witness 1/14    mixed QR3/NQR3
+#          deep well {1..12,182} M=14/183  witness 14/183  mixed QR2/NQR7
+#          GW {1..11,13,24}      M=1/14    witness 1/14    mixed QR3/NQR3
+#          n=5,8,9,10,11 cx      2/9..3/31                 all mixed, near-even
+#        The LRC extremals are QR-AGNOSTIC: generic subsets of U_q, not cosets.
+# VERDICT: THM-981's QR/NQR supports belong to the H6 owner-feasibility ledger, not to
+#        the LRC metric objects.  Same vocabulary, different problems.  No viable
+#        transfer candidate currently remains identified.
