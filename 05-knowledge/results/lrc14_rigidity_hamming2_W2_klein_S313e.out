@@ -1,0 +1,7 @@
+MIXED regime, widened: W2 = max over (j,k, w1 in [13,68]) of 4/(21 L(B u {w1}))
+   W2 = 11400/217 = 52.53   (worst (4, 6, 38)) ; degenerate L=0 cases: 0
+
+   W_joint = 8000/119 = 67.23
+   finite check: both w in [13,68], 101,640 families, 0 violations
+
+   => *** HAMMING-2 RIGIDITY PROVED *** : both-small (finite), both-large (w>67.3 joint tail), mixed (w2>52.5 tail) — all covered by w<=68.

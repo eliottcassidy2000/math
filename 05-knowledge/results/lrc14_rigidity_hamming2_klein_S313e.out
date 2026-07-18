@@ -1,0 +1,14 @@
+HAMMING-2 rigidity: remove 2 from AP, add 2 new (13<=w<=52). Does M >= 2/25 persist?
+  tested 51480 Hamming-2 families
+  lowest M:
+    M=2/25    =0.080000  removed (4, 6)  added (17, 19)   =2/25
+    M=3/37    =0.081081  removed (10, 12)  added (20, 36)   
+    M=1/12    =0.083333  removed (2, 12)  added (15, 21)   
+    M=1/12    =0.083333  removed (4, 12)  added (17, 19)   
+    M=1/12    =0.083333  removed (4, 12)  added (30, 42)   
+    M=1/12    =0.083333  removed (10, 12)  added (13, 20)   
+    M=1/12    =0.083333  removed (10, 12)  added (13, 30)   
+    M=1/12    =0.083333  removed (10, 12)  added (20, 23)   
+
+  min over Hamming-2 = 2/25 = 0.080000   (1/13=0.076923, 2/25=0.080000)
+  => Hamming-2 rigidity HOLDS empirically: every 2-perturbation has M >= 2/25

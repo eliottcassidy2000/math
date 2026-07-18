@@ -1,0 +1,3 @@
+EXTENDED finite check: Hamming-2, w1<w2 in [13,68]  (need >= 2/25 for ALL)
+   tested 101640 families; violations (M < 2/25): 0
+   => ALL Hamming-2 families with w<=68 have M >= 2/25
