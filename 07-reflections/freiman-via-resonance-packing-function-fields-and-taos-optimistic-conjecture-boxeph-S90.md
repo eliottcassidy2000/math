@@ -1,5 +1,9 @@
 # Freiman via resonance packing; function fields; and Tao's optimistic conjecture
 
+**⚠ CORRECTION (boxeph-S91):** section 2's function-field shortcut is REFUTED. The packing does become unconditional/exact over 𝔽_p[t], but it does NOT force the AP core — covering + level-2-loneliness allow non-AP cores (verified over 𝔽_5). The discreteness that makes the packing exact ERASES the tightness gradient the inverse theorem needs. See [[the-function-field-route-tested-packing-is-unconditional-but-does-not-force-INV-boxeph-S91]].
+
+
+
 *boxeph-2026-07-18-S90. Working the LRC(14) crux (INV: `M<1/13` covering ⟹ the 12-core is a dilated
 AP) along the three lines the owner named. Outcome: **the resonance replaces Freiman's theorem with an
 explicit packing that forces equal spacing**, reducing INV to two razor-thin arithmetic facts; the
