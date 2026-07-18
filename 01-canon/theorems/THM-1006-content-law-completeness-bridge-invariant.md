@@ -143,6 +143,49 @@ or lift heights.
      the deep half is the one that might generalize; the shallow half (THM-770,
      THM-1001) is the one that must be `n=12`-specific.
 
+## (F) Small-`n` evidence, and a correction to the corpus (S110)
+
+Exhaustive enumeration of tight `n`-sets in `{1,…,3n+2}` for `n = 3,…,7`
+(+ the `n=12,13` knowns) gives two things.
+
+**(F1) The content law survives every test.** Across every tight set found at
+`n = 3..8, 12, 13` — primitive and imprimitive — `val = gcd` held with **zero
+violations**. Combined with the GW control (which satisfies it), the content law is
+contradicted at no known `n`. This is the evidence for attacking the deep half
+**uniformly in `n`** rather than sheet-by-sheet at `n=12`.
+
+**(F2) CORRECTION — sporadic tight instances are NOT first seen at `n=13`.**
+Verified primitive tight sets that are **not** the initial segment:
+
+| `n` | sporadic primitive tight set | `M` | `val` | `gcd` |
+|---|---|---|---|---|
+| 4 | `{1,3,4,7}` | `1/5` | 1 | 1 |
+| 5 | `{1,3,4,5,9}` | `1/6` | 1 | 1 |
+| 7 | `{1,2,3,4,5,7,12}` | `1/8` | 1 | 1 |
+| 7 | `{1,4,5,6,7,11,13}` | `1/8` | 1 | 1 |
+
+So the reflection `the-sporadic-branch-where-goddyn-wong-lives-macmini-S108`
+overstated when it called GW "the first sporadic tight instance": **shallow/segment
+rigidity already fails at `n = 4, 5, 7`.** (Corrected there.) The `n=12` claim is
+therefore *not* "sporadics start at 13" — sporadics are common; `n=12` is claimed to
+be one of the rigid values, alongside `n = 3, 6`. That makes the `n=12` conjecture
+more delicate than the corpus framing suggested, and it is why it is Tao's
+*optimistic* conjecture.
+
+**A nuance worth keeping straight.** The full-residue characterization of `val = 1`
+(THM-769 §2) is a **prime-`13`** phenomenon. At `n=12`, `n+1 = 13` is prime and the
+characterization applies; at `n=5,7` (`n+1 = 6, 8` composite) it does not, and
+indeed `{1,3,4,5,9}` and the two `n=7` sets have **repeated** residues mod `n+1`.
+At `n=4` (`n+1 = 5` prime) `{1,3,4,7}` *does* carry a complete nonzero residue
+system mod 5 — it is a genuine single-coordinate *wind* of `{1,2,3,4}` (`2 ↦ 2+5`).
+
+**(F3) THM-1001's bound tracks the truth.** Testing single-coordinate winding
+`{1..n}\{j} ∪ {j+(n+1)}` at every `n = 3..13`: it is tight at **`n = 4` only**. The
+THM-1001 bound `w ≤ 2/((n+1)·δ(C))` gives `8.0` at `n=4`, which **admits** the true
+`w = 7`, and excludes the wind at every other `n`. So the safe-interval bound is not
+merely valid — it is sharp enough to permit exactly the one real winding tight
+instance and reject all the rest.
+
 *Artifacts:* `04-computation/lrc13_content_law_bridge_macmini_S110.py` (+out).
 Credits: klein THM-1002 (the ruler engine and the gap arithmetic), codex THM-769
 (the sheet split now identified with `val`) and codex-S64 §6 (the bridge target),

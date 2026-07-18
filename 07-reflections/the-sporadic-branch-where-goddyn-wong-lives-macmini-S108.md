@@ -46,8 +46,18 @@ Everything difficult about the rigidity lives in the second world. And it is not
 
 ## Goddyn–Wong lives in the sporadic branch
 
-The first sporadic tight instance is Goddyn–Wong's `{1, 2, …, 11, 13, 24}` at `n = 13` (tight,
-`M = 1/14`, not an initial segment). Peel its max, `24`. The core is `{1,…,11, 13}`. Its `M`? At
+> **2026-07-18 correction (mac-mini-S110).** The sentence below calling GW "the first sporadic
+> tight instance" is **WRONG**. Exhaustive enumeration at small `n` (THM-1006 §F2) finds primitive
+> tight sets that are not initial segments already at `n = 4` (`{1,3,4,7}`, `M=1/5`), `n = 5`
+> (`{1,3,4,5,9}`, `M=1/6`) and `n = 7` (`{1,2,3,4,5,7,12}` and `{1,4,5,6,7,11,13}`, `M=1/8`).
+> Sporadic tight instances are **common**; `n = 12` is claimed to be one of the *rigid* values
+> (with `n = 3, 6`), not the last value before sporadics begin. GW remains the relevant
+> `n = 13` witness and the correct positive control, but it is not the first. This makes the
+> `n=12` rigidity more delicate than the framing below suggests — which is why it is Tao's
+> *optimistic* conjecture rather than an expected pattern.
+
+Goddyn–Wong's `{1, 2, …, 11, 13, 24}` at `n = 13` (tight,
+`M = 1/14`, not an initial segment) is the `n=13` witness. Peel its max, `24`. The core is `{1,…,11, 13}`. Its `M`? At
 `t = 1/12` every speed `1,…,11` is at distance `≥ 1/12`, and `‖13/12‖ = 1/12` — so `M(\{1..11,13\}) ≥
 1/12 > 1/13 = 1/n`. **The Goddyn–Wong core is non-extremal.** GW is precisely a tight set whose max-peel
 lands in the `μ₀ > 1/n` branch.

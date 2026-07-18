@@ -11,6 +11,15 @@ Format per entry:
 
 ---
 
+## MISTAKE-159 -- "Goddyn-Wong is the FIRST sporadic tight instance" (sporadics already exist at n=4,5,7)
+
+- **What was assumed:** mac-mini-S108's reflection `the-sporadic-branch-where-goddyn-wong-lives-macmini-S108` asserted that the first primitive tight set that is not an initial segment appears at `n=13` (Goddyn-Wong `{1..11,13,24}`), and framed the whole n=12/n=13 story as "13 is the first n where the sporadic branch is populated".
+- **Why it was wrong:** never checked small `n`. Exhaustive enumeration of tight `n`-sets in `{1,...,3n+2}` (mac-mini-S110) finds primitive tight NON-segment sets at `n=4` (`{1,3,4,7}`, M=1/5), `n=5` (`{1,3,4,5,9}`, M=1/6) and `n=7` (`{1,2,3,4,5,7,12}` and `{1,4,5,6,7,11,13}`, M=1/8) -- all verified exactly, all primitive, none an initial segment. The claim was inherited from the corpus's GW-centric framing and propagated without a small-`n` check.
+- **The correct framing:** sporadic tight instances are COMMON. `n=12` is claimed to be one of the *rigid* values (with `n=3,6`), not the last value before sporadics start. GW is the correct `n=13` witness and positive control, but not the first sporadic. This makes n=12 rigidity strictly more delicate than the old framing implied -- consistent with it being Tao's *optimistic* conjecture.
+- **A related nuance to keep:** the full-nonzero-residue characterization of `val=1` (THM-769 sec.2) is a PRIME-`13` phenomenon. It applies at `n=12` (13 prime) but NOT at `n=5,7` (`n+1=6,8` composite) -- and indeed those sporadics have REPEATED residues mod `n+1`. Do not transport the full-residue picture to composite `n+1`.
+- **Impact:** no theorem is invalidated. THM-759/1001/1006 and the S108 skeleton (ratio bound, finite check, extremal/sporadic branch split) all stand -- the error was in the narrative framing of WHERE sporadics begin, not in any proof. The S108 reflection is corrected in place; THM-1006 sec.F2 records the table.
+- **Source:** mac-mini-2026-07-18-S110 (found while testing whether the content law `val=gcd` holds uniformly in `n`; the same sweep that confirmed it also exposed the small-`n` sporadics).
+
 ## MISTAKE-157 -- three packet sign profiles were promoted to universal positive association and support-budget sharpness
 
 **What was claimed:** the exact support decomposition observed nonnegative aggregate
