@@ -1,0 +1,16 @@
+Finite check: for each violating non-AP core W={1..11,X}, check ALL candidate v_max families:
+  W={1..11,16}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+  W={1..11,17}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+  W={1..11,18}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+  W={1..11,19}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+  W={1..11,20}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+  W={1..11,22}: M(W)=0.0833 delta=0.00641  candidate v_max=[182]
+      V=W+{182}: M(V)=1/12=0.0833  M<1/13? False
+
+=> all violating cores eliminated by finite check (every candidate gives M>=1/13)? True
+   Mechanism: stability(v_max<=max/(13d)) + covering(182|v_max) => FINITE candidates per core, all fail.
