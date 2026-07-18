@@ -1,0 +1,30 @@
+kernel check: {||v1 t||<1/14 and ||v2 t||<1/14} subset {||d t||<2/14}
+   d=  1: containment holds on grid: True
+   d=  3: containment holds on grid: True
+   d=  7: containment holds on grid: True
+   d= 15: containment holds on grid: True
+   d= 40: containment holds on grid: True
+
+q(K) for pairs K={v, v+d}, v=200 (data only):
+  d     q(K)         q*d        q*v        delta(K)
+  1     1.5967e-02   0.0160     3.1934     0.7347  
+  2     8.4636e-03   0.0169     1.6927     0.7347  
+  3     5.9594e-03   0.0179     1.1919     0.7347  
+  5     3.9560e-03   0.0198     0.7912     0.7348  
+  8     2.7934e-03   0.0223     0.5587     0.7349  
+  13    2.1268e-03   0.0276     0.4254     0.7347  
+  21    1.6190e-03   0.0340     0.3238     0.7347  
+  34    1.4037e-03   0.0477     0.2807     0.7347  
+  55    1.2176e-03   0.0670     0.2435     0.7347  
+  89    1.3992e-03   0.1245     0.2798     0.7347  
+  144   9.9117e-04   0.1427     0.1982     0.7346  
+
+same sweep at v=400 (does q track d or v?):
+  d     q(K)         q*d        q*v       
+  1     1.5480e-02   0.0155     6.1919    
+  3     5.4839e-03   0.0165     2.1935    
+  8     2.3497e-03   0.0188     0.9399    
+  21    1.2625e-03   0.0265     0.5050    
+  55    7.5826e-04   0.0417     0.3033    
+  144   5.8837e-04   0.0847     0.2353    
+DONE

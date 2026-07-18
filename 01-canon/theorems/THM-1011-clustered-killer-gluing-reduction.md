@@ -46,8 +46,50 @@ reduced ratio) — hence routing to THM-935's structured strata — is FALSE: me
 smallest-ratio-sum 524 (low-q) vs 515 (high-q), gcd 1 in both. Multiplicative tightness,
 not resonance.
 
+
+## (VI) THE BEAT LAW — and the REFUTATION of the effective-LRC(13) collapse (cont.54)
+
+THM-1011's named-next proposed that near-equal killers "contribute essentially ONE
+constraint", suggesting an effective-LRC(13) collapse. **The data refutes that as a MEASURE
+statement, and replaces it with a sharper discrepancy law.**
+
+**Kernel fact (trivial, verified).** If ‖v₁t‖ < λ and ‖v₂t‖ < λ then ‖dt‖ ≤ ‖v₁t‖+‖v₂t‖ < 2λ,
+d = v₂−v₁ — two near-equal killers can fail together only when the BEAT dt is near an
+integer. (Containment checked exactly on grids for d = 1,3,7,15,40.)
+
+**(a) NO measure collapse — the effective-LRC(13) route is FALSE.** For K = {v, v+d} the
+safe measure is δ(K) = 0.7347 for EVERY d tested (1…144) — exactly 5/7 + 1/49. The pair
+always costs 2λ·2 − 1/49 of measure no matter how close the killers are; the overlap is the
+generic 4λ² = 1/49 and does not grow as d → 1. A near-equal pair does NOT become one
+constraint in measure, so no LRC(13) collapse is available.
+
+**(b) THE BEAT LAW — the collapse is a DISCREPANCY phenomenon.** What d controls is q(K):
+
+| d | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 55 | 144 |
+|---|---|---|---|---|---|---|---|---|---|
+| q(K), v=200 | 1.60e-2 | 8.46e-3 | 5.96e-3 | 3.96e-3 | 2.79e-3 | 2.13e-3 | 1.62e-3 | 1.22e-3 | 9.9e-4 |
+
+and q is essentially INDEPENDENT of v: at d = 1, q = 1.597e-2 (v = 200) vs 1.548e-2
+(v = 400) while q·v changes by 2×. Empirically **q(K) ≈ c/d_min with c ≈ 0.016**, d_min the
+smallest internal difference. The beat, not the speed scale, sets the block's discrepancy.
+
+**(c) THE SHARPENED CRITERION AND A THIN RESIDUAL.** Substituting into (I):
+
+> (BG-K) closes as soon as **d_min > c·K_P/(d_P·d_K)**, which for the observed
+> K_P ≈ 15, d_P·d_K ≈ 0.05, c ≈ 0.016 gives **d_min ≳ 5**.
+
+This matches the battery: the (BG-K) failures all have inferred d_min ≈ 2–5, the successes
+d_min ≈ 6–12. So the clustered residual is not "clustered killers" broadly — it is exactly
+**killer blocks containing two speeds within about 5 of each other**, a very thin stratum
+(and there the beat speed d ≤ 5 is itself core-sized, which is the structure a finite/
+covering argument should exploit).
+
+**Status change:** the named-next "effective-LRC(13) collapse" is WITHDRAWN (refuted in (a)).
+The replacement route is the d_min ≲ 5 stratum with its core-sized beat speed.
+
 ## Named next
-- **The near-equal route:** two killers within a few percent contribute essentially ONE
-  constraint on scales below 1/(v₂−v₁); an effective-LRC(13) argument on the collapsed
-  family is the natural way to close exactly the stratum (BG-K) misses.
+- ~~The near-equal/effective-LRC(13) route~~ — REFUTED in (VI)(a): no measure collapse.
+- **The d_min ≲ 5 stratum:** two killers within ~5 of each other, where the beat speed d is
+  itself core-sized — a bounded-d finite analysis or a covering/counting exclusion is the
+  live route to closing exactly what (BG-K) misses.
 - Sharper q(K) bounds for tight blocks, or a better core component bound K_P.
