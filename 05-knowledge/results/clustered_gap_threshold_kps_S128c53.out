@@ -1,0 +1,10 @@
+== gap-threshold scan: (BG-K) closure rate vs gap multiplier G (min K > G * max P) ==
+   G=13 : (BG-K) closes  9/12   worst margin -0.04280
+   G=20 : (BG-K) closes  9/12   worst margin -0.15530
+   G=26 : (BG-K) closes 11/12   worst margin -0.00598
+   G=40 : (BG-K) closes 11/12   worst margin -0.01521
+   G=60 : (BG-K) closes 12/12   worst margin +0.02883
+
+>>> the clustered case closes by (BG-K) once the block gap is large enough;
+>>> the sliver 13 <= G < threshold is what remains.
+DONE

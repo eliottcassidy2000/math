@@ -1,0 +1,21 @@
+== THM-933 two-block gluing on CLUSTERED-killer families ==
+   condition for positivity: d_P*d_K > q(K)*M(P)   (M(P)=sum core speeds)
+   j=2 coreMax=11 minK=  182: d_P=0.0563 d_K=0.7346 q(K)=1.35e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.0890  negative
+   j=2 coreMax=11 minK=  186: d_P=0.0563 d_K=0.7347 q(K)=2.50e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.1647  negative
+   j=2 coreMax=11 minK=  175: d_P=0.0563 d_K=0.7347 q(K)=1.50e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.0989  negative
+   j=3 coreMax=11 minK=  192: d_P=0.1040 d_K=0.6309 q(K)=7.88e-03 M(P)= 63 | d_P d_K=0.0656  q M(P)=0.4962  negative
+   j=2 coreMax=11 minK=  204: d_P=0.0563 d_K=0.7347 q(K)=8.45e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.5577  negative
+   j=2 coreMax=11 minK=  200: d_P=0.0563 d_K=0.7347 q(K)=4.70e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.3102  negative
+   j=2 coreMax=11 minK=  204: d_P=0.0563 d_K=0.7347 q(K)=1.61e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.1061  negative
+   j=2 coreMax=11 minK=  168: d_P=0.0563 d_K=0.7347 q(K)=3.03e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.2001  negative
+   j=3 coreMax=11 minK=  204: d_P=0.1278 d_K=0.6297 q(K)=5.69e-03 M(P)= 65 | d_P d_K=0.0805  q M(P)=0.3701  negative
+   j=2 coreMax=11 minK=  180: d_P=0.0563 d_K=0.7347 q(K)=1.32e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.0874  negative
+   j=3 coreMax=11 minK=  149: d_P=0.1083 d_K=0.6298 q(K)=2.93e-03 M(P)= 61 | d_P d_K=0.0682  q M(P)=0.1785  negative
+   j=2 coreMax=11 minK=  253: d_P=0.0563 d_K=0.7347 q(K)=2.03e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.1338  negative
+   j=3 coreMax=11 minK=  168: d_P=0.1040 d_K=0.6297 q(K)=4.94e-03 M(P)= 63 | d_P d_K=0.0655  q M(P)=0.3115  negative
+   j=2 coreMax=11 minK=  201: d_P=0.0563 d_K=0.7347 q(K)=2.16e-03 M(P)= 66 | d_P d_K=0.0414  q M(P)=0.1424  negative
+
+   0/14 clustered configs close by (BG) at the actual gap (minK > 13 maxP)
+   worst margin: -0.5163 (j=2, core max 11, minK 204)
+   implied gap requirement min(K) > c*M(P)/(d_P d_K): median 799.3 x (vs actual min K)
+DONE

@@ -1,0 +1,20 @@
+== (BG-K): mu >= d_P*d_K - q(K)*K_P  with EXACT core component count K_P ==
+   j=2 minK=  182: d_P=0.0563 d_K=0.7346 q(K)=1.35e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0189  CLOSES
+   j=2 minK=  186: d_P=0.0563 d_K=0.7347 q(K)=2.50e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0349  CLOSES
+   j=2 minK=  175: d_P=0.0563 d_K=0.7347 q(K)=1.50e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0210  CLOSES
+   j=3 minK=  192: d_P=0.1040 d_K=0.6309 q(K)=7.88e-03 | K_P=16 (vs M(P)= 63) | d_P d_K=0.0656  q*K_P=0.1260  negative
+   j=2 minK=  204: d_P=0.0563 d_K=0.7347 q(K)=8.45e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.1183  negative
+   j=2 minK=  200: d_P=0.0563 d_K=0.7347 q(K)=4.70e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0658  negative
+   j=2 minK=  204: d_P=0.0563 d_K=0.7347 q(K)=1.61e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0225  CLOSES
+   j=2 minK=  168: d_P=0.0563 d_K=0.7347 q(K)=3.03e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0424  negative
+   j=3 minK=  204: d_P=0.1278 d_K=0.6297 q(K)=5.69e-03 | K_P=14 (vs M(P)= 65) | d_P d_K=0.0805  q*K_P=0.0797  CLOSES
+   j=2 minK=  180: d_P=0.0563 d_K=0.7347 q(K)=1.32e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0185  CLOSES
+   j=3 minK=  149: d_P=0.1083 d_K=0.6298 q(K)=2.93e-03 | K_P=18 (vs M(P)= 61) | d_P d_K=0.0682  q*K_P=0.0527  CLOSES
+   j=2 minK=  253: d_P=0.0563 d_K=0.7347 q(K)=2.03e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0284  CLOSES
+   j=3 minK=  168: d_P=0.1040 d_K=0.6297 q(K)=4.94e-03 | K_P=16 (vs M(P)= 63) | d_P d_K=0.0655  q*K_P=0.0791  negative
+   j=2 minK=  201: d_P=0.0563 d_K=0.7347 q(K)=2.16e-03 | K_P=14 (vs M(P)= 66) | d_P d_K=0.0414  q*K_P=0.0302  CLOSES
+
+   (BG-K) closes 9/14 clustered configs at the ACTUAL gap (minK > 13 maxP)
+   component count K_P is 4.5x smaller than the crude cap M(P) on average
+   best margin 0.0229 | worst -0.0769
+DONE
