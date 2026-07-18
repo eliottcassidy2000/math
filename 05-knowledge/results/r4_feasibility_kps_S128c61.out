@@ -1,0 +1,20 @@
+### frac distribution and the size of the sum>=1 tail ###
+  core                         |bits| #killers  mean frac  #heavy(>=.25)  est. quads passing
+  [1, 3, 4, 5, 6, 9, 10, 11, 12] 168    243       0.1293     23             7.866e+05
+  [1, 3, 4, 5, 6, 7, 8, 10, 12] 162    243       0.1173     17             2.338e+05
+  [1, 3, 6, 7, 8, 9, 10, 11, 12] 126    243       0.1273     18             4.393e+05
+  [1, 2, 3, 6, 8, 9, 10, 11, 12] 150    243       0.1267     27             8.220e+05
+  [1, 3, 4, 5, 7, 8, 9, 11, 12] 98     243       0.1155     27             1.091e+06
+  [1, 2, 4, 5, 6, 8, 10, 11, 12] 182    243       0.1276     20             3.685e+05
+  [1, 4, 5, 6, 7, 9, 10, 11, 12] 136    243       0.1273     30             6.661e+05
+  [1, 3, 4, 6, 8, 9, 10, 11, 12] 154    243       0.1284     23             8.149e+05
+  [2, 4, 5, 6, 7, 8, 10, 11, 12] 168    243       0.1291     23             3.330e+05
+  [1, 2, 3, 5, 6, 7, 8, 9, 11] 96     256       0.1077     31             1.197e+06
+
+  extrapolated over all 220 cores: ~1.49e+08 quadruples pass the necessary condition
+  (each needs a 4-way bitmask OR + covering test)
+
+### verdict on feasibility ###
+  passing quadruples ~ 1.49e+08 ; at ~3e5 tests/sec in Python that is ~0.1 hours
+  brute force (no pruning) would be ~2e9 per the raw count, so the prune helps by ~13x
+DONE

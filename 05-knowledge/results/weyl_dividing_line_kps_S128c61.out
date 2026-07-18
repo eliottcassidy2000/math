@@ -1,0 +1,41 @@
+### (1) the one-speed soft Weyl bound  |int_G e(kt)| <= C/(pi k)  ###
+  core           C    mu        k       |int| exact    C/(pi k)     ratio
+  drop1         12   0.10553   157     0.00487628    0.02432942   0.2004
+  drop1         12   0.10553   500     0.00029234    0.00763944   0.0383
+  drop1         12   0.10553   2000    0.00041078    0.00190986   0.2151
+  drop1         12   0.10553   20000   0.00001542    0.00019099   0.0807
+  drop6         14   0.05142   157     0.00957302    0.02838432   0.3373
+  drop6         14   0.05142   500     0.00065509    0.00891268   0.0735
+  drop6         14   0.05142   2000    0.00041160    0.00222817   0.1847
+  drop6         14   0.05142   20000   0.00000353    0.00022282   0.0158
+  drop12        14   0.05633   157     0.01011455    0.02838432   0.3563
+  drop12        14   0.05633   500     0.00170665    0.00891268   0.1915
+  drop12        14   0.05633   2000    0.00028685    0.00222817   0.1287
+  drop12        14   0.05633   20000   0.00006113    0.00022282   0.2744
+
+### (2) that bound IS my measure horn's boundary term ###
+  geometric:  bad(k) within G  <=  mu/7 + 2C/(7k)
+  Fourier  :  |1_G hat(k)|     <=  C/(pi k)      -- same C/k shape, same origin (endpoints)
+  klein    :  loss             <=  2 d mu + 2 d N / w,  d = 1/14   -- same again
+  core           C    mu        k       true bad     mu/7+2C/(7k)   slack
+  drop1         12   0.10553   157     0.01325881   0.03691372     2.7841
+  drop1         12   0.10553   900     0.01490620   0.01888521     1.2669
+  drop1         12   0.10553   20000   0.01507143   0.01524711     1.0117
+  drop12        14   0.05633   157     0.00452359   0.03352538     7.4112
+  drop12        14   0.05633   900     0.00802309   0.01249212     1.5570
+  drop12        14   0.05633   20000   0.00805714   0.00824768     1.0236
+
+### (3) the dividing line: one factor converges, the 13-fold product does not ###
+  one speed  : error term 2C/(7k) -> 0 as k grows.  C is fixed by the core.
+     k=157        error 2C/(7k) = 2.184e-02
+     k=1000       error 2C/(7k) = 3.429e-03
+     k=10000      error 2C/(7k) = 3.429e-04
+     k=100000     error 2C/(7k) = 3.429e-05
+     k=1000000    error 2C/(7k) = 3.429e-06
+  product    : relation-support ladder terms (THM-1061 V) GROW:
+     w2=+1.12  w3=-5.23  w4=+12.06   (tight family; partial sums 2.12, -3.11, +8.95 vs true 0)
+
+  => soft Weyl is a ONE-FREQUENCY tool.  It proves death-star's position lemma, closes
+     boxeph's density off-resonance, and underwrites my measure horn and klein's
+     recursion -- all single-speed statements.  It does NOT bound the 13-fold product.
+DONE
