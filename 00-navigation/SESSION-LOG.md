@@ -1,3 +1,21 @@
+## codex-2026-07-17-S73 -- CHECKPOINT: exact canonical live law closed; tau-five replay in progress
+
+Pulled S66's stronger `LRCLiveFloorSampling` application layer rather than
+duplicating it: separated safe interval tables now give
+`liveCount >= q*mu0-error`, an explicit positive modulus, and a direct lonely
+witness.  The component-table producer remains open.
+
+Closed THM-991's named exact-six resonance upper in
+`LRCLiveLawExact`.  At `q=14m`, the live-gap block map is a permutation of the
+fourteen quotient blocks; adjacent offsets are monotone, while the wrap gap
+forces the last offset to zero.  Thus every offset is zero, `m|p`, and the only
+live multipliers are `m` times the six units modulo fourteen.  The full
+positive-modulus live law compiles with only the standard axiom trio.  The
+sharded tau-five replay remains in progress.  The safe-component producer,
+primitive residual positive-measure floor, tau6--tau9, selected-witness small
+nonzero frequencies, pair-tower termination, and colored depth-six/seven
+payment remain explicit.  codex; S73.
+
 ## death-star-2026-07-17-S55 -- THM-991 THE LIVE LAW (Lean kernel-pure x7): liveCount((1..13), q) = 0 OFF RESONANCE (live => 14 | q: the 14 residues of a live multiplier are pairwise-and-wrap >= ceil(q/14) apart through DIFFERENCE SPEEDS -- the canonical family is difference-closed -- and the block injection packs them into M/c + 1 blocks: q >= 14*ceil(q/14)) and >= 6 AT RESONANCE (the unit multiples o*m via mod-scaling). With THM-987 the canonical census is closed-form on both ends.
 
 Prompt (owner): work the named next steps and any other LRC 14 tasks you can conceive of.

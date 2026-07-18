@@ -214,7 +214,10 @@ must state which LRC predicate it preserves.
   canonical deep set is exactly the two circles in-kernel.  THM-987 now counts
   their disjoint union for every `q>=2`, including the half-circle parity term,
   and proves the canonical tight family lonely through the `q=14` census
-  (`deep=1`, `live=6`).  `LRCTwoCircleCount` exposes the same structure as
+  (`deep=1`, `live=6`).  THM-991 is now exact in `LRCLiveLawExact`: for every
+  positive `q`, the canonical live count is six when `14|q` and zero otherwise;
+  on `q=14m` the live set consists exactly of `m` times the six units modulo
+  fourteen.  `LRCTwoCircleCount` exposes the same structure as
   literal low/high/half Finsets and proves their disjointness, parity and
   compact card formulas, and `canonicalDeepMultipliers 14 = {7}`.  These are canonical-family closures, not the uniform
   weighted/trapped-core supplier.

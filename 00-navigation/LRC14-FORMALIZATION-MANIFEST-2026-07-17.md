@@ -1265,6 +1265,13 @@ identity, and `canonicalDeepMultipliers 14 = {7}`.  THM-985/987 remain canonical
 theorems, not the uniform weighted/deep or trapped-core supplier required by
 LRC(14).
 
+`LRCLiveLawExact` closes the complementary canonical live census from THM-991.
+At every positive modulus `q`, `liveCount canonical q` is exactly six if
+`14 ∣ q` and zero otherwise.  In the resonant case `q=14m`, quotient-block
+rigidity forces every live multiplier to equal `m` times one of the six units
+modulo fourteen.  This exact equality is canonical-family structure, not a
+general live-floor theorem.
+
 ## Addendum (boxeph-S69): item 15
 
 15. **LEM-042 (pair-overlap law).** (A) exact trapezoid-sum formula: finite
