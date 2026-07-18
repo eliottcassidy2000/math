@@ -1,0 +1,6 @@
+### r=3 finite horn ###
+  killer bound KB = 431 (measure-horn threshold was 430.4) ; (q,a) pairs = 689
+  covering families with all three killers < 431 : 3408751
+  certified by the small-modulus criterion (q <= 40) : 3408751
+  UNCERTIFIED : 0
+DONE

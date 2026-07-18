@@ -1,0 +1,21 @@
+### r=2 : remove ONE killer k1, ratio R = (1/(3L)) / k1 ###
+  scale        samples   max R     (R < 1 => threshold below k1 < k2, horns overlap)
+  [157    ,900    ] 140       0.3889    OK
+  [900    ,3000   ] 140       0.3889    OK
+  [3000   ,10000  ] 140       0.3889    OK
+  [10000  ,60000  ] 140       0.3889    OK
+  [60000  ,400000 ] 140       0.3889    OK
+
+### r=3 : remove TWO killers k1<k2, ratio R = (1/(3L)) / k2 ###
+  scale        samples   max R
+  [131    ,900    ] 120       0.4341    OK   worst=
+  [900    ,3000   ] 120       0.4244    OK   worst=
+  [3000   ,10000  ] 120       0.3889    OK   worst=
+  [10000  ,60000  ] 120       0.4243    OK   worst=
+  [60000  ,400000 ] 120       0.3889    OK   worst=
+
+### adversarial: k1,k2 sharing structure (k2 = 2k1, k2 = k1+1, both highly composite) ###
+  k2=2k1     max R = 0.4242    OK
+  k2=k1+1    max R = 0.4244    OK
+  k2=k1+2    max R = 0.4249    OK
+DONE

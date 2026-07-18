@@ -1,0 +1,27 @@
+### (1) the sign law ###
+  c_m sign = -1 for m mod 14 in {1..6}, +1 for {8..13}, 0 for 7|m, checked m<60: True
+  => a relation with all |m_j| <= 6 contributes with sign (-1)^support
+
+### (2) the support ladder:  mu/main = 1 + w2 + w3 + w4 + ...  (signed) ###
+  family                          mu/main    1+w2      +w3       +w4       low-supp captures
+  tight {1..13}                   0.00000    2.12041   -3.10705  8.94877   -794.9%
+  {1..12} u {169}                 0.17773    2.12041   -2.22877  6.75287   -699.6%
+  {2..12} u {169,182}             0.55353    1.93764   -1.19692  4.63674   -814.5%
+  {2..12} u {1000,2000}           0.61602    2.01719   -1.11737  4.69179   -961.5%
+  {1..11} u {312,364}             0.31503    1.89149   -1.60741  4.85793   -563.2%
+
+### (3) the individual ladder terms (signs should alternate: w2>0, w3<0, w4>0) ###
+  family                          w2         w3         w4
+  tight {1..13}                   1.12041    -5.22746   12.05583  
+  {1..12} u {169}                 1.12041    -4.34918   8.98163   
+  {2..12} u {169,182}             0.93764    -3.13456   5.83366   
+  {2..12} u {1000,2000}           1.01719    -3.13456   5.80916   
+  {1..11} u {312,364}             0.89149    -3.49890   6.46533   
+
+### (4) does the alternating truncation BOUND mu?  (1+w2+w3 <= mu/main <= 1+w2 ?) ###
+  tight {1..13}                   lower -3.10705   mu/main 0.00000    upper 2.12041     brackets: True
+  {1..12} u {169}                 lower -2.22877   mu/main 0.17773    upper 2.12041     brackets: True
+  {2..12} u {169,182}             lower -1.19692   mu/main 0.55353    upper 1.93764     brackets: True
+  {2..12} u {1000,2000}           lower -1.11737   mu/main 0.61602    upper 2.01719     brackets: True
+  {1..11} u {312,364}             lower -1.60741   mu/main 0.31503    upper 1.89149     brackets: True
+DONE
