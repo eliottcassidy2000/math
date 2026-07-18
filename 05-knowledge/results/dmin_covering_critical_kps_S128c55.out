@@ -1,0 +1,28 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\dmin_covering_critical_kps_S128c55.py:54: SyntaxWarning: invalid escape sequence '\{'
+  "%d,%d"%(k1,k2),d,drop,"{1..12}\{%d}"%drop,Mx,float(Mx),float(Mx)*14))
+near-equal killer pairs (13a,14b) with gap <= 5 and > 156:
+   (168, 169) (d=1)
+   (195, 196) (d=1)
+   (208, 210) (d=2)
+   (221, 224) (d=3)
+   (234, 238) (d=4)
+   (247, 252) (d=5)
+   (294, 299) (d=5)
+   (308, 312) (d=4)
+
+COVERING families = core (11 of {1..12}) + such a pair; exact M:
+  killers      d   core (11 of 1..12)                         M exact     M float  M*14  
+  168,169      1   drop 1  {1..12}\{1}                       8/57        0.140351 1.965 
+  195,196      1   drop 1  {1..12}\{1}                       14/99       0.141414 1.980 
+  208,210      2   drop 1  {1..12}\{1}                       15/106      0.141509 1.981 
+  221,224      3   drop 1  {1..12}\{1}                       16/113      0.141593 1.982 
+  234,238      4   drop 1  {1..12}\{1}                       17/120      0.141667 1.983 
+  247,252      5   drop 1  {1..12}\{1}                       18/127      0.141732 1.984 
+  294,299      5   drop 1  {1..12}\{1}                       21/148      0.141892 1.986 
+  308,312      4   drop 1  {1..12}\{1}                       22/155      0.141935 1.987 
+
+  covering d_min<=5 families found: 8
+  MIN M = 8/57 = 0.140351  (1.9649 x threshold 1/14)
+  MAX M = 22/155 = 0.141935  (1.9871 x)
+  any at or below 1/14: 0
+DONE

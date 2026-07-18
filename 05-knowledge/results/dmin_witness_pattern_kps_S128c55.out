@@ -1,0 +1,20 @@
+killers      M          k (M=k/(7k+1)) witness t*     t* denom  
+168,169      8/57       8              4/57           57        
+195,196      14/99      14             7/99           99        
+208,210      15/106     15             15/212         212       
+221,224      16/113     16             8/113          113       
+234,238      17/120     17             17/240         240       
+247,252      18/127     18             118/127        127       
+294,299      21/148     21             275/296        296       
+308,312      22/155     22             11/155         155       
+
+check: is t* = 1/(7k+1) or a/(7k+1)?  and does 7k+1 relate to the killers?
+  killers 168,169 : 7k+1 = 57 ; t* = 4/57 ; k1 mod den = 54 ; k2 mod den = 55
+  killers 195,196 : 7k+1 = 99 ; t* = 7/99 ; k1 mod den = 96 ; k2 mod den = 97
+  killers 208,210 : 7k+1 = 106 ; t* = 15/212 ; k1 mod den = 102 ; k2 mod den = 104
+  killers 221,224 : 7k+1 = 113 ; t* = 8/113 ; k1 mod den = 108 ; k2 mod den = 111
+  killers 234,238 : 7k+1 = 120 ; t* = 17/240 ; k1 mod den = 114 ; k2 mod den = 118
+  killers 247,252 : 7k+1 = 127 ; t* = 118/127 ; k1 mod den = 120 ; k2 mod den = 125
+  killers 294,299 : 7k+1 = 148 ; t* = 275/296 ; k1 mod den = 146 ; k2 mod den = 3
+  killers 308,312 : 7k+1 = 155 ; t* = 11/155 ; k1 mod den = 153 ; k2 mod den = 2
+DONE

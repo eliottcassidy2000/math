@@ -87,9 +87,51 @@ covering argument should exploit).
 **Status change:** the named-next "effective-LRC(13) collapse" is WITHDRAWN (refuted in (a)).
 The replacement route is the d_min ≲ 5 stratum with its core-sized beat speed.
 
+
+## (VII) THE d_min ≤ 5 STRATUM MEASURED AND WITNESSED (cont.55) — the residual is safe and constructive
+
+The (VI) criterion left exactly one stratum: killer blocks with two speeds within ~5. Here it is,
+measured and given an explicit witness.
+
+**(a) COVERING FORCES THE SHAPE.** Covering needs 13 | some speed and 14 | some speed; with a
+core ⊆ {1..12} both must be killers, so a near-equal covering killer pair is essentially
+**(13a, 14b) with |14b − 13a| ≤ 5**. (Random sampling of the stratum produced ZERO covering
+members — the covering ones must be constructed, not sampled.)
+
+**(b) THE STRATUM IS SAFE, WITH AN EXACT LAW.** Constructing all such pairs above 156 with core
+{2,…,12} gives 8 genuine covering, primitive, compressed (each killer is within 13× of the
+OTHER killer) — i.e. genuinely trapped — families, with EXACT M:
+
+| killers | 168,169 | 195,196 | 208,210 | 221,224 | 234,238 | 247,252 | 294,299 | 308,312 |
+|---|---|---|---|---|---|---|---|---|
+| d | 1 | 1 | 2 | 3 | 4 | 5 | 5 | 4 |
+| M | 8/57 | 14/99 | 15/106 | 16/113 | 17/120 | 18/127 | 21/148 | 22/155 |
+
+Every value is **M = k/(7k+1)** (k = 8, 14, 15, 16, 17, 18, 21, 22 — denominators exactly 7k+1),
+so M → 1/7 and M ≥ 8/57 = **1.965× the 1/14 threshold** throughout. None is anywhere near tight.
+
+**(c) THE WITNESS IS A GENERALIZED q-WITNESS.** The optimum sits at t* with denominator exactly
+7k+1 (or 2(7k+1)): 4/57, 7/99, 15/212, 8/113, 17/240, 118/127, 275/296, 11/155. At that modulus
+the killers are ≡ −c with c small (den−3, den−3, den−4, den−5, den−6, den−7, den−2, den−2), and
+the core speeds land in the middle band [k, 6k+1]. So the certificate is THM-523's t = 1/q
+witness ONE LEVEL UP: a residue a mod (7k+1) putting every speed at distance ≥ k/(7k+1).
+
+> **The residual is therefore no longer an unstructured stratum: it is a family with an
+> explicit modulus (7k+1) and an explicit target (M = k/(7k+1) ≈ 2× threshold).** Closing it
+> rigorously needs only "a good residue a mod 7k+1 exists" — a counting argument of exactly the
+> THM-724 Lemma 2 (shallow-witness) type, where the killers spoil at most O(c) residues out of
+> ~(5/7)(7k+1) available.
+
+## Status of "covering ⟹ M > 1/14" after this file
+- single-killer: **PROVED** (THM-1007)
+- lacunary multi-killer chains: **PROVED** (THM-1007 extension)
+- clustered, d_min ≳ 5: **certified** by (BG-K) with exact component counts (III)
+- clustered, d_min ≤ 5: **measured safe at ≈ 2× threshold with an explicit 7k+1 witness** (VII);
+  the one remaining step is the shallow-witness counting lemma at that modulus.
+
 ## Named next
 - ~~The near-equal/effective-LRC(13) route~~ — REFUTED in (VI)(a): no measure collapse.
-- **The d_min ≲ 5 stratum:** two killers within ~5 of each other, where the beat speed d is
-  itself core-sized — a bounded-d finite analysis or a covering/counting exclusion is the
-  live route to closing exactly what (BG-K) misses.
+- **THE LAST STEP:** the shallow-witness counting lemma at modulus 7k+1 for the d_min ≤ 5
+  covering stratum — show a residue a exists putting all 13 speeds at distance ≥ k/(7k+1)
+  (the killers spoil only O(c) of ~(5/7)(7k+1) candidates). THM-724 Lemma 2 is the template.
 - Sharper q(K) bounds for tight blocks, or a better core component bound K_P.
