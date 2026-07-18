@@ -1,0 +1,18 @@
+AP {1..13} (tight): Vmax=w=13, v2=12
+  #good-components of V\{w} = 12; Lmax=1/168=0.005952
+  covering bound 2/(n w)=1/91=0.010989; all comps <= it? True
+  provable lower 2/(n(n-1)v2)=0.000916 <= Lmax? True
+  => BOUND  Vmax <= (n-1)*v2 = 156:  13 <= 156  OK
+
+GW {1..11,13,24} (tight): Vmax=w=24, v2=13
+  #good-components of V\{w} = 4; Lmax=1/245=0.004082
+  covering bound 2/(n w)=1/168=0.005952; all comps <= it? True
+  provable lower 2/(n(n-1)v2)=0.000845 <= Lmax? True
+  => BOUND  Vmax <= (n-1)*v2 = 169:  24 <= 169  OK
+
+deep well {1..12,182} (NON-tight, M=14/183): Vmax=w=182, v2=12
+  #good-components of V\{w} = 12; Lmax=1/168=0.005952
+  covering bound 2/(n w)=1/1274=0.000785; all comps <= it? False
+  provable lower 2/(n(n-1)v2)=0.000916 <= Lmax? True
+  => BOUND  Vmax <= (n-1)*v2 = 156:  182 <= 156  VIOLATED(=>not tight)
+
