@@ -7,3 +7,8 @@
 == (B) targeted residual hunt (compressed cluster + gap, tight?) ==
   TIGHT {1..11,13,24}: sieve q=14
   TIGHT {1..10,11,13,24}: sieve q=14
+
+  tested 29177 structured families; tight found: 2
+  >>> NO primitive covering-gap tight family in the structured search: every tight one is sieve-covered or no-gap.
+  >>> THM-995(VII) residual conjecture SUPPORTED on the compressed-cluster+gap shapes.
+DONE
