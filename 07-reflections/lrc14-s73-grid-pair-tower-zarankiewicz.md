@@ -147,7 +147,7 @@ fingerprints are trivial and it forgets the allowed-ratio predicate.
 
 No item above proves LRC(14).  The shortest current list is:
 
-1. finish tau5 and the tau6--tau9 finite pair-floor replays;
+1. finish the tau6--tau9 finite pair-floor replays (tau5 is now kernel-checked);
 2. prove a residual partition trichotomy or another universal dense-core exit;
 3. close the nonterminating pair tower and genuine small-frequency selected
    phases;

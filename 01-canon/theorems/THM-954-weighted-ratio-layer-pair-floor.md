@@ -2,11 +2,11 @@
 
 **Status:** PROVED as an exact replayable finite certificate.  Lean now checks
 the layer arithmetic, Turan consumer, the top `24/12` path caps, the concrete
-anchored ratio quotient, and the complete strict-open clean-grid discrepancy
-bridge.  The covariance identity is reduced to one finite wrapped-tooth clip
-reindexing, and the seven middle certificate DAGs still require direct Lean
-replay.  Until those two finite tasks land, this theorem does **not** by itself
-prove the discrete `normalizedMass2 >= -13/30` socket.
+anchored ratio quotient, the complete strict-open clean-grid discrepancy
+bridge, and the exact wrapped-tooth covariance reindexing.  The tau3, tau4,
+and tau5 middle certificates are kernel-replayed; tau6--tau9 remain.  Until
+those four finite replays land, this theorem does **not** by itself prove the
+discrete `normalizedMass2 >= -13/30` socket.
 
 ## Statement
 
@@ -104,6 +104,15 @@ For `w > tau_{k+1}`, the speed graph has clique number at most `k`, for
 `k=2,...,8`.  The checker reconstructs every rational graph, greedy coloring,
 branch state, and reachable proof node; it trusts no optimizer verdict.
 
+The first three thresholds now have direct kernel replays.  Tau3 is edgeless;
+tau4 maps to the triangle-free Wagner circle.  At tau5 the exact 272-ratio
+cover is checked in 17 shards, and every edge of its stored supergraph has an
+independent common neighborhood.  Therefore the quotient graph is `K4`-free,
+and the anchored transfer gives the required `K5` exclusion on runners.  The
+ordinary rational-order tournament is transitive and is only scheduler
+telemetry; the faithful carrier is the allowed-ratio graph together with its
+local-neighborhood table.
+
 ### 3. The two highest colors are path forests
 
 Above `4/539`, only primitive ratio colors `12` and `13` remain.  Edges of one
@@ -173,12 +182,11 @@ most
 
 Consequently
 `normalizedMass2_clean_534_gt_neg_target_of_continuum_floor'` has no geometric
-premise: it needs only the continuous pair floor.  That floor is now reduced by
-`LRCPairCovarianceReindexer.PairOverlapReindexing` to one explicit equality
-between the quadratic tooth-clip sum and the gcd-scaled cyclic overlap ledger.
-The gcd-fiber multiplicity and Bernoulli/Raabe evaluation are already proved;
-only the local wrapped-tooth identity remains.  Together with the seven ratio
-DAG replays, it will give the strict clean-ruler socket
+premise: it needs only the continuous pair floor.  The theorem
+`LRCPairCovarianceReindexer.PairOverlapReindexing` now proves the required
+quadratic tooth-clip/gcd-scaled cyclic-ledger identity unconditionally.  Thus
+the only remaining inputs to the strict clean-ruler socket are the tau6--tau9
+ratio replays:
 
 ```text
 normalizedMass2 v (cleanModulus v 534) > -13/30.

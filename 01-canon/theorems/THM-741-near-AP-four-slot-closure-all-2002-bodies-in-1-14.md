@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branches `a=15,16` are now exact, leaving 211 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branches `a=15,16,17,18` are now exact, leaving 209 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -33,6 +33,10 @@ verification:
   - 05-knowledge/results/lrc14_j4_34_a15_pure_tail_exact_codex_20260717.out
   - 04-computation/lrc14_j4_34_a16_pure_tail_exact_codex_20260717.py
   - 05-knowledge/results/lrc14_j4_34_a16_pure_tail_exact_codex_20260717.out
+  - 04-computation/lrc14_j4_34_a17_pure_tail_exact_codex_20260717.py
+  - 05-knowledge/results/lrc14_j4_34_a17_pure_tail_exact_codex_20260717.out
+  - 04-computation/lrc14_j4_34_a18_pure_tail_exact_codex_20260717.py
+  - 05-knowledge/results/lrc14_j4_34_a18_pure_tail_exact_codex_20260717.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -696,6 +700,134 @@ transitive telemetry and loses that geometry.
 
 After the root and exact-measure screens, two literal-carrier branches are now
 complete and `211` remain.  No fourth whole flood body and no global THM-741
+claim follows.
+
+## Exact third branch and the nonmonotone workload (codex-2026-07-17)
+
+The same schema closes `a=17`, again from a freshly constructed carrier.  Exact
+first subtraction gives
+
+```text
+r_1=26,       m_1=758281/6126120,       V2=223.
+```
+
+An independent bidirectional comparison with `a=16` gives
+
+```text
+|G16 intersect G17| =   992991/9529520,
+|G16 minus G17|     = 1090283/28588560,
+|G17 minus G16|     =     25831/1319472.
+```
+
+Both directional differences are positive.  Thus the proof schema transports,
+but neither the carrier nor an assumed monotone horizon does: `G17`, every P2
+cutoff, and every fixed-`E2` cap were recomputed literally.
+
+The `205` values `18<=b<223` generate `15,795` `c` obligations.  Linear audits
+show each P2 truth set is a terminal interval and close `4,001` nodes.  Of the
+remaining `11,794` exact sparse-`m3` nodes, `10,065` close before constructing
+a `d` bank.  The final `1,729` carriers generate exactly `30,507` finite
+terminal sweeps.  There are again no fallback nodes and no integral cap
+endpoints.  Every sweep is positive; the minimum is
+
+```text
+2503360059/62849566780
+```
+
+at `(b,c,d)=(23,31,37)`.  Therefore
+
+> `E union {17,b,c,d}` is lonely for every `17<b<c<d`.
+
+The terminal and certificate ledgers have SHA-256 hashes
+
+```text
+54fd735e7e441d50b3595fa69332a4b752902511a0077e61eac205b065101e7f,
+fb8edfdddc36a69969b6799b116a8eeffbcdfde2960aabbb7163791bb4bbae39.
+```
+
+First/middle/last terminals from every active `b` bank give `209` independently
+rebuilt full-union crosschecks; their manifest is
+`b58c644435d860c1fa9a0911524d00b3cb0c031a4f5b99f32628dfebefee42a2`.
+Normal and `-O` runs are byte-identical.  Source/output hashes are
+`120074e9617d50f353427d94f3babfb42a77cebff8dab3af74d1c445522fbc53`
+and `1bc560811bf531f41ac3f0f4e0763d9a98ffa5f5dc605903c6e68130c8ce2f79`.
+
+The tournament on the `70` active `b` obligations orients by minimum swept
+clearance, then workload and label.  It is transitive, with one Hamiltonian
+path, and is scheduler telemetry rather than a symmetry quotient.  The exact
+carrier retains the nested component stalk, phase, certificate type, caps, and
+margins; runner labels, residues, isolated Kakeya needles, wall events, and
+Fano flags do not preserve it.  In particular `D_17` changes the stalk in both
+directions relative to `D_16`, while `chi_7` supplies only their common root-edge
+address `(3,4)`.
+
+The workload has increased sharply from `a=16` despite the adjacent first
+speed, so no monotone-workload inference is available.  Three literal-carrier
+branches are now complete and `210` remain.  This is still one pure tail: it
+does not close a fourth whole flood body or global THM-741.
+
+## Exact fourth branch and adjacent-branch oscillation (codex-2026-07-17)
+
+The next branch also closes from fresh exact data.  For `a=18`, first
+subtraction gives
+
+```text
+r_1=26,       m_1=17747/120120,       V2=187.
+```
+
+The carrier again fails to nest with its predecessor:
+
+```text
+|G17 intersect G18| = 1564249/14294280,
+|G17 minus G18|     =     30761/2144142,
+|G18 minus G17|     =      45637/1191190.
+```
+
+Both directional differences are positive.  Every `G18` interval, P2 cutoff,
+and fixed-`E2` cap was therefore recomputed; no `a=17` result row was reused.
+
+The `168` values `19<=b<187` generate `10,762` `c` obligations.  Linear P2
+audits close `2,750`, leaving `8,012` exact sparse-`m3` nodes.  Of these,
+`6,987` close before a `d` bank.  The final `1,025` carriers generate `14,399`
+finite sweeps, with no fallback node and no integral cap endpoint.  All are
+strictly positive.  The minimum is
+
+```text
+518788/9144135
+```
+
+at `(b,c,d)=(21,29,32)`.  Hence
+
+> `E union {18,b,c,d}` is lonely for every `18<b<c<d`.
+
+The terminal and certificate ledger hashes are
+
+```text
+44bd2e2dea062e5090243177f9c8871b0ce820767f972df7278cb5e56d670b08,
+f25008da5e5009ae1d3ee15063c90086b599af689ba842e4119e9e03ef594f06.
+```
+
+There are `165` independently rebuilt first/middle/last full-union samples,
+with manifest
+`86046df7baa90ce91798f30df2a0bd8c6babac70d6e830651c65a97703a895a3`.
+Normal and `-O` runs are byte-identical.  Source/output hashes are
+`e9c0f84f6eb0d0ac81fb4f5241db9163843c3345228ad518cc1702ada460dc5b`
+and `827e17e0fa3a3828dbe45de01931fe9285a4a0ce13a29562fd6099d8661b07c1`.
+
+The scheduler tournament on the `56` active `b` obligations is transitive
+under minimum clearance, workload, and label, with one Hamiltonian path.  It
+retains proof-job telemetry but not the component geometry.  The actual
+predicate-bearing object remains the nested component stalk with phase,
+certificate type, caps, and margins.  Isolated Kakeya needles, runner labels,
+residues, wall events, and Fano flags destroy that object; `chi_7` again gives
+only the common root-edge address `(3,4)`.
+
+The sequence itself is structural evidence: from `a=16` through `a=18`, the
+fresh cutoffs are `194,223,187` and terminal workloads are
+`18,182,30,507,14,399`.  Both rise and then fall while consecutive carriers
+remain incomparable.  Thus neither a monotone horizon nor monotone workload
+can substitute for exact branch geometry.  Four literal-carrier branches are
+now complete and `209` remain.  No fourth whole flood body or global THM-741
 claim follows.
 
 ## Sharded-runner integrity repair (codex-2026-07-17)

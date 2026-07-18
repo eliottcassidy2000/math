@@ -201,7 +201,7 @@ must state which LRC predicate it preserves.
   pair-grid ledger are LEAN, including the zero atom, circle volume, sharp
   component budget, and clean-534 discrepancy.  The top `24/12` path caps and
   anchored ratio quotient are LEAN.  Exact comb reindexing closes the covariance
-  producer, and tau3/tau4 ratio replays are LEAN; tau5--tau9 remain.  Separately,
+  producer, and tau3--tau5 ratio replays are LEAN; tau6--tau9 remain.  Separately,
   the sparse rational-pair branch interval now transports bijectively back to
   multiplier space, giving the complete finite-`q` three-branch count; the
   zero-width integral boundary requires `Int.toNat`, not a raw floor difference.
@@ -250,7 +250,7 @@ must state which LRC predicate it preserves.
    kps exhaustion (paper, Lean pending), and the census funnel.
 2. **The pair-floor finite replays** — the pair continuum producer, component
    budget, Turan arithmetic, top path caps, and clean-534 transfer are closed.
-   Tau3 and tau4 compile; the exact remaining tasks are tau5--tau9.
+   Tau3 through tau5 compile; the exact remaining tasks are tau6--tau9.
 3. **A-priori liveCount floors** (the discrete side of the same wall): the
    winData rows give them on censused strata; beyond, it is kps's law made
    uniform. SHARPENED (S44): the naive coprime law is REFUTED (Dirichlet-rate

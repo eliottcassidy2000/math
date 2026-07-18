@@ -769,8 +769,10 @@ closed in `LRCB5CombReindexing` and `LRCPairCovarianceReindexer`: circular teeth
 permute the strict rational comb, tooth pairs reindex through the cyclic
 difference hom with uniform gcd fibers, and every nonzero speed pair has the
 exact `pairKernel` covariance.  The component/endpoint side is also closed.
-The stored finite replays are now Lean through tau3 and tau4; five threshold
-replays (tau5--tau9) remain.  No higher-support estimate is claimed by this
+The stored finite replays are now Lean through tau5; four threshold replays
+(tau6--tau9) remain.  The tau5 replay uses an exact 272-ratio cover and proves
+that every table edge has an independent common neighborhood, hence excludes
+the required quotient `K4` and runner `K5`.  No higher-support estimate is claimed by this
 pair theorem.
 
 The incoming LEM-038 central-section cross-spectrum is the relevant signal for
@@ -1207,7 +1209,7 @@ replays.  Tau3 is closed by its edgeless quotient.  Tau4 is closed by an exact
 60-ratio replay whose active component maps to the eight-class Wagner circle;
 the graph contains 18 four-cycles, so a raw `K_{2,2}` Zarankiewicz cap is false
 and Wagner triangle-freeness is the faithful certificate.  The exact remaining
-THM-954 producer socket is the five finite replays tau5--tau9.
+THM-954 producer socket is the four finite replays tau6--tau9.
 
 This completion is deliberately local.  The `(4,4,8,8)` valuation-gap-two wall
 now has an unconditional phase-independent producer and a large-frequency
