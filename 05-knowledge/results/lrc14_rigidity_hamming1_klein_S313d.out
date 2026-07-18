@@ -1,0 +1,17 @@
+M(AP)= 1/13   [tight => witness denominator is exactly 13]
+
+HAMMING-1 RIGIDITY: replace one element of AP by w; how close to 1/13 can M get?
+  lowest M over ALL Hamming-1 perturbations (w<=399):
+     M=2/25   =0.080000  (removed 12, added  24)  pairs-hit=True  
+     M=3/37   =0.081081  (removed 12, added  36)  pairs-hit=True  
+     M=4/49   =0.081633  (removed 12, added  48)  pairs-hit=True  
+     M=5/61   =0.081967  (removed 12, added  60)  pairs-hit=True  
+     M=6/73   =0.082192  (removed 12, added  72)  pairs-hit=True  
+     M=7/85   =0.082353  (removed 12, added  84)  pairs-hit=True  
+     M=8/97   =0.082474  (removed 12, added  96)  pairs-hit=True  
+     M=9/109  =0.082569  (removed 12, added 108)  pairs-hit=True  
+
+  min over Hamming-1 = 2/25 = 0.080000 ; 1/13=0.076923 ; 2/25=0.080000
+  => Hamming-1 RIGIDITY: every Hamming-1 perturbation has M >= 2/25 >= 2/25  [AP is locally isolated]
+
+  perturbations FAILING the +-pair condition: 360/4644 ; their min M = 13/157

@@ -1,0 +1,18 @@
+Exact largest good-interval L_j of B_j = AP\{j} at delta=2/25, and tail threshold w > 4/(21 L_j):
+  j= 1 : #intervals= 2  L=11/300      =0.036667   w > 400/77 = 5.2
+  j= 2 : #intervals= 2  L=1/55        =0.018182   w > 220/21 = 10.5
+  j= 3 : #intervals= 4  L=3/250       =0.012000   w > 1000/63 = 15.9
+  j= 4 : #intervals= 4  L=2/225       =0.008889   w > 150/7 = 21.4
+  j= 5 : #intervals= 8  L=7/1000      =0.007000   w > 4000/147 = 27.2
+  j= 6 : #intervals= 4  L=1/175       =0.005714   w > 100/3 = 33.3
+  j= 7 : #intervals= 6  L=11/600      =0.018333   w > 800/77 = 10.4
+  j= 8 : #intervals= 4  L=18/1375     =0.013091   w > 2750/189 = 14.6
+  j= 9 : #intervals= 6  L=7/500       =0.014000   w > 2000/147 = 13.6
+  j=10 : #intervals= 4  L=1/105       =0.009524   w > 20 = 20.0
+  j=11 : #intervals=10  L=1/150       =0.006667   w > 200/7 = 28.6
+  j=12 : #intervals= 4  L=1/275       =0.003636   w > 1100/21 = 52.4
+
+  W0 = max_j 4/(21 L_j) = 1100/21 = 52.38
+  => for every w > 52, M(AP\{j} + {w}) >= 2/25 automatically (interval-survival tail argument).
+  Finite check already run for w <= 399 (min = 2/25 at {1..11,24}).
+  THEOREM PROVED: W0 < 399, so finite check + tail covers ALL w.
