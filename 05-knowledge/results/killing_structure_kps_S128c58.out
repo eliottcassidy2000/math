@@ -1,0 +1,58 @@
+### do killing pairs require a killer residue near 0? ###
+  drop  q   |Kill|  need-a-zero  need-la<=1  need-la<=2  max min-la over killing pairs
+  1     26  28      26            28          28          1
+  1     27  31      27            31          31          1
+  1     28  28      28            28          28          0
+  1     39  47      39            43          43          13
+  1     41  49      41            45          45          13
+  1     42  42      42            42          42          0
+  2     26  51      26            28          30          13
+  2     27  31      27            27          31          2
+  2     28  30      28            28          28          13
+  2     39  114     39            43          47          13
+  2     41  124     41            45          49          14
+  2     42  42      42            42          42          0
+  6     26  51      26            28          30          13
+  6     27  78      27            31          35          13
+  6     28  30      28            28          28          13
+  6     39  114     39            43          47          13
+  6     41  124     41            45          49          14
+  6     42  50      42            42          42          14
+  12    26  51      26            28          30          13
+  12    27  78      27            31          35          13
+  12    28  30      28            28          28          13
+  12    39  114     39            43          47          13
+  12    41  49      41            41          41          13
+  12    42  50      42            42          42          14
+
+### the killing pairs with LARGEST min-residue (the ones a divisor count cannot catch) ###
+  drop=1 q=26 |SafeA|=14 : [(1, 13, 'minla=1'), (13, 25, 'minla=1'), (0, 0, 'minla=0'), (0, 1, 'minla=0'), (0, 2, 'minla=0'), (0, 3, 'minla=0'), (0, 4, 'minla=0'), (0, 5, 'minla=0')]
+  drop=1 q=28 |SafeA|=10 : [(0, 0, 'minla=0'), (0, 1, 'minla=0'), (0, 2, 'minla=0'), (0, 3, 'minla=0'), (0, 4, 'minla=0'), (0, 5, 'minla=0'), (0, 6, 'minla=0'), (0, 7, 'minla=0')]
+  drop=12 q=26 |SafeA|=12 : [(13, 13, 'minla=13'), (12, 13, 'minla=12'), (13, 14, 'minla=12'), (11, 13, 'minla=11'), (13, 15, 'minla=11'), (10, 13, 'minla=10'), (13, 16, 'minla=10'), (9, 13, 'minla=9')]
+  drop=12 q=28 |SafeA|=8 : [(13, 14, 'minla=13'), (14, 15, 'minla=13'), (0, 0, 'minla=0'), (0, 1, 'minla=0'), (0, 2, 'minla=0'), (0, 3, 'minla=0'), (0, 4, 'minla=0'), (0, 5, 'minla=0')]
+
+### CRUCIAL: can a killing pair have BOTH residues far from 0 at MANY moduli at once? ###
+  scan actual killer pairs (13a,14b) and count at how many q in [15,60] they are killing
+  distribution of '#moduli in [15,60] at which the family is killing':
+     killing at  2 of ~22 moduli : 3 families
+     killing at  3 of ~22 moduli : 57 families
+     killing at  4 of ~22 moduli : 218 families
+     killing at  5 of ~22 moduli : 460 families
+     killing at  6 of ~22 moduli : 551 families
+     killing at  7 of ~22 moduli : 490 families
+     killing at  8 of ~22 moduli : 404 families
+     killing at  9 of ~22 moduli : 421 families
+     killing at 10 of ~22 moduli : 435 families
+     killing at 11 of ~22 moduli : 463 families
+     killing at 12 of ~22 moduli : 344 families
+     killing at 13 of ~22 moduli : 250 families
+     killing at 14 of ~22 moduli : 176 families
+     killing at 15 of ~22 moduli : 90 families
+     killing at 16 of ~22 moduli : 63 families
+     killing at 17 of ~22 moduli : 48 families
+     killing at 18 of ~22 moduli : 18 families
+     killing at 19 of ~22 moduli : 8 families
+     killing at 20 of ~22 moduli : 2 families
+     killing at 21 of ~22 moduli : 3 families
+  families killing at nearly ALL moduli: NONE
+DONE

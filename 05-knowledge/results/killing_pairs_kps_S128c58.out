@@ -1,0 +1,34 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\killing_pairs_kps_S128c58.py:42: SyntaxWarning: invalid escape sequence '\{'
+  print("  %-5d %-4d %-8d %-10d  *** EMPTY -- core {1..12}\{%d} fully certified by q=%d alone"%(
+### per (core, q): |SafeA| and |Killing pairs| ; q with EMPTY killing set proves that core ###
+  drop  q    |SafeA|  |Killing|   <- 0 killing = q alone certifies the whole core
+  1      no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=10', '|Kill|=28'), (27, '|SafeA|=4', '|Kill|=31')]
+  2      no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (27, '|SafeA|=4', '|Kill|=31'), (15, '|SafeA|=2', '|Kill|=42')]
+  3      no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=10', '|Kill|=28'), (16, '|SafeA|=2', '|Kill|=45')]
+  4      no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (27, '|SafeA|=4', '|Kill|=31'), (42, '|SafeA|=12', '|Kill|=42')]
+  5      no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=10', '|Kill|=28'), (27, '|SafeA|=4', '|Kill|=31')]
+  6      no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (42, '|SafeA|=8', '|Kill|=50'), (26, '|SafeA|=12', '|Kill|=51')]
+  7      no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=14', '|Kill|=30'), (27, '|SafeA|=4', '|Kill|=31')]
+  8      no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (16, '|SafeA|=4', '|Kill|=31'), (27, '|SafeA|=4', '|Kill|=31')]
+  9      no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=10', '|Kill|=28'), (27, '|SafeA|=8', '|Kill|=31')]
+  10     no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (27, '|SafeA|=4', '|Kill|=31'), (20, '|SafeA|=4', '|Kill|=39')]
+  11     no q<=60 with empty killing set; best 3: [(26, '|SafeA|=14', '|Kill|=28'), (28, '|SafeA|=10', '|Kill|=28'), (27, '|SafeA|=4', '|Kill|=31')]
+  12     no q<=60 with empty killing set; best 3: [(28, '|SafeA|=8', '|Kill|=30'), (24, '|SafeA|=4', '|Kill|=47'), (41, '|SafeA|=6', '|Kill|=49')]
+
+### cores fully certified by ONE modulus: 0 of 12 ###
+    {}
+
+### for the remaining cores: do TWO moduli suffice? (killing sets must not co-occur) ###
+  drop=1   smallest killing sets: [(26, 28), (28, 28), (27, 31), (15, 42)]
+  drop=2   smallest killing sets: [(28, 30), (27, 31), (15, 42), (42, 42)]
+  drop=3   smallest killing sets: [(26, 28), (28, 28), (16, 45), (17, 48)]
+  drop=4   smallest killing sets: [(28, 30), (27, 31), (42, 42), (17, 48)]
+  drop=5   smallest killing sets: [(26, 28), (28, 28), (27, 31), (42, 46)]
+  drop=6   smallest killing sets: [(28, 30), (42, 50), (26, 51), (19, 54)]
+  drop=7   smallest killing sets: [(26, 28), (28, 30), (27, 31), (39, 43)]
+  drop=8   smallest killing sets: [(28, 30), (16, 31), (27, 31), (42, 42)]
+  drop=9   smallest killing sets: [(26, 28), (28, 28), (27, 31), (18, 35)]
+  drop=10  smallest killing sets: [(28, 30), (27, 31), (20, 39), (39, 47)]
+  drop=11  smallest killing sets: [(26, 28), (28, 28), (27, 31), (42, 42)]
+  drop=12  smallest killing sets: [(28, 30), (24, 47), (41, 49), (42, 50)]
+DONE

@@ -1,0 +1,18 @@
+### (A) structural claim: killing => a killer residue in {la<=2} u {q/2} ###
+  drop  q    |Kill|  violations of the claim
+  TOTAL violations across all 12 cores x q in [15,60]: 35508
+
+### (B) families killing at EVERY modulus in [15,60]? ###
+  drop=1   usable moduli=46  families=3302    max #killing-moduli=25  at (832, 840)  killing-at-ALL: 0
+  drop=2   usable moduli=36  families=3302    max #killing-moduli=23  at (572, 784)  killing-at-ALL: 0
+  drop=3   usable moduli=39  families=3302    max #killing-moduli=21  at (572, 896)  killing-at-ALL: 0
+  drop=4   usable moduli=29  families=3302    max #killing-moduli=18  at (234, 840)  killing-at-ALL: 0
+  drop=5   usable moduli=33  families=3302    max #killing-moduli=17  at (702, 672)  killing-at-ALL: 0
+  drop=6   usable moduli=24  families=3302    max #killing-moduli=17  at (728, 742)  killing-at-ALL: 0
+  drop=7   usable moduli=41  families=3302    max #killing-moduli=19  at (702, 420)  killing-at-ALL: 0
+  drop=8   usable moduli=37  families=3302    max #killing-moduli=21  at (429, 840)  killing-at-ALL: 0
+  drop=9   usable moduli=36  families=3302    max #killing-moduli=16  at (208, 756)  killing-at-ALL: 0
+  drop=10  usable moduli=27  families=3302    max #killing-moduli=16  at (312, 840)  killing-at-ALL: 0
+  drop=11  usable moduli=31  families=3302    max #killing-moduli=15  at (572, 840)  killing-at-ALL: 0
+  drop=12  usable moduli=22  families=3302    max #killing-moduli=17  at (689, 588)  killing-at-ALL: 0
+DONE

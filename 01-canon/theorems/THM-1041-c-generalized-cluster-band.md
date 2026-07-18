@@ -129,6 +129,45 @@ problem needs. Recording this rather than presenting the census as a proof.
 What *is* proved outright is (I)–(IV): the explicit construction, now reaching D ≤ 2M and
 sharp there.
 
+## (VII) The divisor-count closure route for the middle band is REFUTED
+
+The natural way to prove (VI)'s existence half would be structural: if every *killing*
+residue pair — a pair (k₁ mod q, k₂ mod q) defeating every core-safe multiplier a — required
+a killer residue in the degenerate set {la ≤ 2} ∪ {q/2}, then "killing at q" would force q
+to divide one of ten fixed integers (k±2, k±1, k, 2k for each killer), and since an integer
+has few divisors in [15,60] most moduli would be non-killing. That is exactly the
+divisor-count shape that closed THM-1018(III).
+
+**It is false.** Over all 12 cores × q ∈ [15,60] there are **35,508 killing pairs with both
+residues outside the degenerate set**. The impression that killing needs a zero came from a
+small sample (q = 26, 28, 42 are unusually clean — at drop=1, q=28 and q=42 every killing
+pair does contain a zero); the general modulus is not clean. Recording the refutation so
+this route is not re-attempted.
+
+## (VIII) What the census does show: the killing sets never cover
+
+The criterion is nevertheless robust, and the right measurement is how many moduli a family
+can simultaneously defeat. Over 12 cores × 3302 covering killer pairs each (≈ 39,600
+families), scanning all usable moduli in [15,60]:
+
+| core drop | usable moduli | max # killing moduli | attained at |
+|---|---|---|---|
+| 1 | 46 | 25 | (832, 840) |
+| 2 | 36 | 23 | (572, 784) |
+| 3 | 39 | 21 | (572, 896) |
+| 8 | 37 | 21 | (429, 840) |
+| 12 | 22 | 17 | (689, 588) |
+
+**Zero families are killing at every modulus** — the worst case leaves 21 of 46 usable
+moduli, i.e. a family never defeats more than ~54% of them. So (VI) does not fail narrowly;
+it holds with roughly half the modulus range to spare.
+
+The extremal families are informative: the maximisers have **highly composite killers**
+(840 = 2³·3·5·7, 832 = 2⁶·13, 756 = 2²·3³·7). That is the adversarial direction, and it is
+exactly the direction covering pushes — covering forces 12, 13, 14 divisibility onto the
+killers, which is what makes them composite. The hardest instances for this criterion are
+therefore the ones the hypothesis itself manufactures, and even those leave ample room.
+
 ## The gap map for the clustered regime
 
 | spread D | tool | status |
@@ -142,10 +181,11 @@ The middle band is the whole of the remaining wide-cluster problem, and it is no
 delimited on both sides.
 
 ## Named next
-- Close the middle band. The union bound cannot do it (13/7); what might: the killers
-  contribute only 2 of the 13 residues and the core is a *fixed* subset of {1,…,12}, so the
-  criterion depends on the family only through (core, two killer residues) — a finite
-  pattern space per modulus. A covering-system argument over a coprime modulus set
-  (15,16,17,19,23,…) is the shape to try, since CRT makes the bad conditions independent.
+- Close the middle band. Two routes are now closed off: the union bound cannot do it
+  (13/7 > 1), and the divisor-count/degenerate-residue route is refuted in (VII). What
+  survives as the shape to try: (VIII) says a family never defeats more than ~54% of the
+  usable moduli, so the target statement is a **non-covering lemma** — the killing sets of
+  distinct moduli cannot union to everything. The composite-killer extremals of (VIII) are
+  where such a lemma would be tight, so they are the right test bed.
 - Lean: (I) and (II) are short additions to `LRCClusterBand` — the residue law is a
   two-case `Nat` argument and the midpoint choice c = ⌈D/2⌉ discharges by `omega`.
