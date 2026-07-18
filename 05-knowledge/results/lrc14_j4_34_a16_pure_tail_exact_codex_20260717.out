@@ -1,0 +1,22 @@
+THM-741 PURE (3,4) FLOOD TAIL: EXACT a=16 BRANCH CERTIFICATE
+============================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); fixed a=16; claim all integers 16<b<c<d
+root r=28 m=433607/2522520; after-a r=26 m=29921/210210; common b cutoff V2=194
+a=15 comparison r15=26 m15=184909/1261260; common=105857/840840; only15=4019/194040; only16=419/25480; neither carrier contains the other
+b obligations=177; c nodes=11786; P2-preclosed c=2986; exact-m3=8800
+exact-m3 closed without d=7579; fallback=0; integral caps=0; candidate c nodes/sweeps=1221/18182
+all terminal sweeps positive; minimum swept=6999703/133617120 at (3, 4, 8, 9, 10, 11, 12, 13, 14, 16, 19, 23, 32)
+terminal-ledger SHA256=20daaa1ec85df38843115c5577f4eb2a48080f51e60dcdeec13cb272e8f3b1b4
+certificate-ledger SHA256=001c43a3d7e830473451c2eee33732484e3b00dfd6b97933f7715869bcf9996a
+independent full-union samples=187; sample-manifest SHA256=1652d5afe562c4222bec2e500c15d838de1c2f8102deaae8d409a5f84c5b4ab3
+proof partition: b>=V2 by THM-735 J3; every P2 truth set linearly audited as a terminal c interval; large d by exact fixed-E2 cap; every remaining d swept
+transport audit: the a=15 proof schema survives, but component carriers and workload do not transport monotonically (a=16 has more b,c,terminal obligations)
+Tournament Analysis vertices=active b obligations; observable=(minimum swept clearance,-sweeps,-b); lex switch
+tournament vertices=63; score histogram 0..62:1; directed triangles=0; SCCs=63; Hamiltonian paths=1
+tournament path SHA256=a856f62aa8d73652ac05b1744ac6af826c6b5c5770dee6641cd5bf7481afccba
+carrier audit: nested survivor components, certificate type, phase, and rational caps preserve the predicate; runners, isolated needles, residues, wall events, and Fano flags do not
+Kakeya/Fano audit: D_16 is a new periodic comb, not a monotone translate of D_15; chi7 still names only the root edge (3,4)
+VERDICT: E_(3,4) union {16,b,c,d} is lonely for every 16<b<c<d; the other first-speed branches and global THM-741 remain open
+source_sha256=0445c144120bec1d48ea16c7001ff723ebc6bbd6431ad13b6f057b7c49e44020
+ALL EXACT a=16 BRANCH CHECKS PASSED
