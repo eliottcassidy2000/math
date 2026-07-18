@@ -575,6 +575,15 @@ uniform weighted/trapped-core supplier.  `LRCC8Consecutive.lean` assembles the
 residue-sensitive seven-edge Hunter path uniformly and proves positive
 restricted Lebesgue measure for the common safe complement of every
 consecutive block `v,...,v+7`.  It does not add the other five combs and is not
+`LRCTwoCircleConverse.lean` now closes exactly the canonical smallest-failing-
+speed cases `k₀=1` and `k₀=2`, and its counting endpoint eliminates
+`k₀>=9`; cases `k₀=3,...,8` remain, so the full two-circle converse is not
+proved.  `LRCEightDangerHunter.lean` assembles the seven consecutive overlap
+credits into the weighted path `1--2--...--8` and proves positive restricted
+Lebesgue measure for the common safe complement of danger combs with speeds
+`1,...,8`; that module's statement is exactly first-eight.  The independently
+landed `LRCC8Consecutive.lean` upgrades the residue-sensitive path proof to
+every block `v,...,v+7`.  It still does not add the other five combs and is not
 LRC(14).
 
 On the separate `n=12` sporadic ledger, THM-980 is a proved finite-exact
@@ -588,6 +597,7 @@ THM-982 is provisional at scale eighteen: its `27,490,799,952`-context scratch
 bank reduces to 13,098 scalar rows on 684 supports, with at most four feasible
 owners per row.  The frozen primary C++ certificate has landed; independent
 and cross-build replays are still pending.
+owners per row, but frozen independent certificates are still in progress.
 
 **HONEST FRONTIER.**  For the weighted route, still supply a selected-root and
 sharp-window coverage theorem, control the summed gcd budgets, turn colored
@@ -608,6 +618,11 @@ FILES: `LRCAlignedStalkGluing.lean`, `LRCAlignedStalkAggregation.lean`,
 `LRCC8Consecutive.lean`, root imports, cohesive picture, manifest, and lens-map
 packet fields.  Every new theorem was built with no `sorry`/`native_decide`;
 axiom audits report only the standard foundational trio where applicable.
+`LRCSelectedWitnessGapTwoResidual.lean`, `LRCTwoCircleConverse.lean`,
+`LRCEightDangerHunter.lean`, `LRCC8Consecutive.lean`, root imports, cohesive
+picture, manifest, and lens-map packet fields.  Every new theorem was built with no
+`sorry`/`native_decide`; axiom audits report only the standard foundational
+trio where applicable.
 
 ---
 

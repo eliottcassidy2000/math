@@ -1,0 +1,7 @@
+  sanity AP{1..12}   M=1/13=0.076923 at m/d=(1, 13)
+  sanity {1..11,24}  M=2/25=0.080000 at m/d=(2, 25)
+
+=== hunt: grid-prefilter then exact ===
+  tested 53740 primitive 12-sets; 6 near-gap candidates -> exact:
+  IN-GAP (1/13<M<2/25): 0
+  => GAP HOLDS on this range: no 12-set has M in (1/13,2/25).
