@@ -3,6 +3,25 @@
 Prompt (owner): work the non-covering lemma on the composite-killer extremals
 
 FILES: THM-1051, HYP-7495, noncover_adversarial / scale_dichotomy / perturbation_closure / mixed_killer_gap / full_safe_set scripts + .out. -> all (mac-mini: the r=3 finite horn is the clean next computation -- same bitmask method as (IV), threshold 1638 from the measure side. opus: (0) refutes my own THM-1041 named-next, so the 13/7 overshoot is not the only wall -- the arithmetic route cannot be repaired by ANY modulus range, and the escape is analytic, not combinatorial. klein: your internal-gap regime is still the untouched one; everything here needs a dominant killer.)
+## mac-mini-2026-07-18-S119 -- THM-1065 CONVERSE PROVED. The doubling characterization G(n) tight <=> 6|(n-1) is now COMPLETE, UNCONDITIONAL and ELEMENTARY. The 6=2*3 arises TWICE, from opposite directions. HYP-7500.
+
+TASK (owner): prove the converse -- rule out denominators beyond 2n, 2n+1, n+1.
+
+DONE, and not by enumerating denominators: a Farey RING argument makes the other denominators irrelevant.
+(1) REDUCTION. The AP {1..n} covers ELEMENTARILY (adjacent denominators in F_N have i+j>N, so every gap remnant (1-L(i+j))/(ij) <= 0 at L=1/(n+1)). So G(n) can fail ONLY where n-1 alone covers: t=a/(n-1)+eps, (n-1)|eps| <= L. Non-primitive centres reduce to m' <= (n-1)/2 <= n-2, a speed of G(n) with LARGER radius L/m', which swallows the arc -- only primitive centres matter.
+(2) The doubled speed covers the inside: ||2(n-1)t|| = 2(n-1)|eps| <= L iff (n-1)|eps| <= L/2. DANGEROUS RING: L/(2(n-1)) < |eps| <= L/(n-1).
+(3) RING CRITERION. A Farey neighbour p/i of a/(n-1) in F_n is at distance 1/(i(n-1)) with radius L/i; it reaches the ring iff 1/(i(n-1)) - L/i <= L/(2(n-1)). Using 1-L(n-1)=2L this collapses to 2L <= iL/2, i.e. i >= 4. (Other 2n-2 centres are at distance >= 1/(2(n-1)) and reach only (1-L)/(2(n-1)) > L/(n-1) -- they never enter the ring.)
+(4) THE SMALL DENOMINATORS ARE EXACTLY 2 AND 3. Denominator 1 never neighbours a/(n-1); denominator 2 needs |2a-(n-1)|=1 so n-1 ODD; denominator 3 needs |3a-(n-1)|=1 or |3a-2(n-1)|=1, impossible iff 3|(n-1). Both excluded iff 6|(n-1). QED.
+
+THE STRIKING PART -- 2*3 TWICE, FROM OPPOSITE DIRECTIONS:
+   forward : 2 from gcd(n-1,2n)=gcd(n-1,2);  3 from gcd(n-1,2n+1)=gcd(n-1,3)   [neighbouring DENOMINATORS]
+   converse: 2 from the Farey neighbour 1/2;  3 from the Farey neighbours 1/3,2/3 [smallest FAREY denoms]
+Same 6, two independent mechanisms.
+
+The proof is UNCONDITIONAL -- it uses only classical Farey adjacency, never LRC. Verified: neighbour criterion matches 6|(n-1) exactly n=5..49; three-case M formula exact n=5..60.
+
+FILES: THM-1065 (now PROVED both directions); HYP-7500.
+HANDOFFS: @all -- the only known infinite sporadic family is now fully characterized by an elementary unconditional theorem, and it is an AP mod 6 that skips n=12. The n=4,5 sporadics are NOT in it, so a second mechanism exists and is now the natural next target.
 
 ---
 

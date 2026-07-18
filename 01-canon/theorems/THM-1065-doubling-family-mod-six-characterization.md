@@ -1,7 +1,7 @@
 ---
 id: THM-1065
 title: The doubling family is tight EXACTLY when n ≡ 1 (mod 6) — for G(n) = {1,…,n−2, n, 2(n−1)} (remove n−1, add its double), M(G(n)) = 1/n if n is even, 2/(2n+1) if n ≡ 3,5 (mod 6), and 1/(n+1) — TIGHT — iff n ≡ 1 (mod 6). The mechanism is exact: G(n) misses precisely the residue class ±(n−1) modulo BOTH 2n and 2n+1, so a clearance-2 witness exists at q iff (n−1) is invertible mod q; and gcd(n−1,2n) = gcd(n−1,2) while gcd(n−1,2n+1) = gcd(n−1,3). Both witnesses die exactly when 2 | (n−1) AND 3 | (n−1), i.e. 6 | (n−1). THE "6" IS 2·3 FROM THE TWO NEIGHBOURING DENOMINATORS. This yields an infinite family of sporadic tight instances (n = 7,13,19,25,31,…), contains Goddyn–Wong (n=13) as its second member, and PROVABLY MISSES n=12.
-status: The forward direction (6 ∤ (n−1) ⟹ NOT tight) is PROVED — explicit witnesses, structurally verified n=5..39. The converse (6 | (n−1) ⟹ tight) is VERIFIED-EXACT for n ≤ 60 (the full M formula matched with ZERO mismatches) but NOT proved in general: it needs "no witness other than q ∈ {2n, 2n+1, n+1} beats 1/(n+1)".
+status: **PROVED, both directions, unconditionally and elementarily** (S119 supplies the converse). Forward: explicit escape witnesses at q = 2n, 2n+1. Converse: a Farey ring argument using only the classical adjacency fact (adjacent denominators in F_N sum to > N) — no appeal to LRC. Verified: the three-case M formula exact for n = 5..60; the converse's neighbour criterion matches 6 | (n−1) exactly for n = 5..49.
 source: mac-mini-2026-07-18-S118 (owner: characterize n where remove n−1, add 2(n−1) is tight)
 depends_on:
   - THM-1031  # the covering lemma and the Farey sup-companion
@@ -63,13 +63,65 @@ Hence: the `q = 2n` witness exists **iff `n` is even**, giving `M ≥ 2/(2n) = 1
 `2n+1`.* Structural claims (missing class, gcd rule, realized witness with clearance ≥ 2)
 verified exactly for `n = 5..39`.
 
-## Converse (verified, not proved)
+## Converse (PROVED — the Farey ring argument)
 
-For `6 | (n−1)` the two escapes above are gone and the maximizer returns to `q = n+1` with
-clearance 1, i.e. `M = 1/(n+1)`. Verified exactly for every `n ≤ 60` — the three-case `M`
-formula matched with **zero** mismatches, and the observed maximizer denominator was `2n`,
-`2n+1`, `n+1` in exactly the predicted cases. What is missing for a proof is the statement
-that no *other* denominator beats `1/(n+1)` once these two are dead.
+We must show: `6 | (n−1) ⟹` the danger sets of `G(n)` at level `L = 1/(n+1)` cover the circle.
+
+**Step 1 (reduction to a ring).** The AP `\{1,…,n\}` already covers, *elementarily*: by the
+classical Farey fact that adjacent denominators in `F_N` satisfy `i+j > N`, every gap remnant
+`(1 − L(i+j))/(ij)` is `≤ 0` at `L = 1/(n+1)`. So for any `t` some `v ∈ \{1,…,n\}` has
+`‖vt‖ ≤ L`; if `v ≠ n−1` then `v ∈ G(n)` and we are done. Hence `G(n)` can only fail at times
+covered **solely** by `n−1`. Such `t` lie in an arc of `n−1`: write `t = a/(n−1) + ε` with
+`(n−1)|ε| ≤ L`. (If `a/(n−1)` is *not* primitive, its reduced denominator `m' ≤ (n−1)/2 ≤ n−2`
+is itself a speed of `G(n)` with the larger radius `L/m'`, which swallows the whole arc — so
+only **primitive** `a/(n−1)` matter.)
+
+**Step 2 (the doubled speed covers the inside).** `‖(2n−2)t‖ = ‖2(n−1)t‖ = 2(n−1)|ε|`, which is
+`≤ L` exactly when `(n−1)|ε| ≤ L/2`. So `2n−2` covers the inner half, leaving the
+
+> **dangerous ring** `L/(2(n−1)) < |ε| ≤ L/(n−1)`.
+
+**Step 3 (when a Farey neighbour covers the ring).** Let `p/i` be a Farey neighbour of
+`a/(n−1)` in `F_n`; by unimodularity it sits at distance `1/(i(n−1))`, and its arc has radius
+`L/i` (legitimate: `i ≤ n−2` or `i = n`, both speeds of `G(n)`). Its arc reaches the ring iff
+
+```
+1/(i(n−1)) − L/i  ≤  L/(2(n−1)).
+```
+
+Multiplying by `i(n−1)` and using `1 − L(n−1) = 1 − (n−1)/(n+1) = 2/(n+1) = 2L`, this becomes
+`2L ≤ iL/2`, i.e. **`i ≥ 4`**. (The `2n−2`-centres other than `a/(n−1)` itself sit at distance
+`≥ 1/(2(n−1))` with radius `L/(2(n−1))`, hence reach only to `(1−L)/(2(n−1)) > L/(n−1)` — they
+never enter the ring, so they cannot help.)
+
+**Step 4 (small denominators are exactly 2 and 3).** So `G(n)` is tight iff every primitive
+`a/(n−1)` has **both** `F_n`-neighbours of denominator `≥ 4`. Now:
+
+- **denominator 1** — the neighbours of `0/1, 1/1` in `F_n` are `1/n, (n−1)/n`, never `a/(n−1)`;
+- **denominator 2** — adjacency to `1/2` forces `|2a − (n−1)| = 1`, hence `n−1` **odd**;
+- **denominator 3** — adjacency to `1/3` or `2/3` forces `|3a − (n−1)| = 1` or
+  `|3a − 2(n−1)| = 1`, each impossible when **`3 | (n−1)`**.
+
+(Both are genuine adjacencies when the congruence permits, since `2 + (n−1) > n` and
+`3 + (n−1) > n`.) Therefore both small-denominator neighbours are excluded **iff** `2 | (n−1)`
+and `3 | (n−1)`, i.e. **`6 | (n−1)`**, and then the ring is covered and `G(n)` is tight. ∎
+
+Verified: the neighbour criterion matches `6 | (n−1)` exactly for `n = 5..49`, and the killing
+neighbour is precisely denominator `3` when `2|(n−1)` only, denominator `2` when `3|(n−1)` only,
+and both when neither divides.
+
+## The 2·3 appears twice, from opposite directions
+
+This is the striking part. The same factorisation `6 = 2·3` controls both halves, by
+different mechanisms:
+
+| | source of the 2 | source of the 3 |
+|---|---|---|
+| **forward** (escape exists) | `gcd(n−1, 2n) = gcd(n−1,2)` | `gcd(n−1, 2n+1) = gcd(n−1,3)` |
+| **converse** (ring uncovered) | Farey neighbour `1/2` | Farey neighbour `1/3, 2/3` |
+
+The forward direction reads `6` off the two **neighbouring denominators** `2n, 2n+1`; the
+converse reads the same `6` off the two smallest **Farey denominators** `2, 3`. 
 
 ## Consequences
 
