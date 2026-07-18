@@ -95,7 +95,15 @@ theorem extendUnion_eq_remainders
       base ∪ providers.biUnion (fun i ↦ piece i \ base) := by
   ext sheet
   simp only [extendUnion, mem_union, mem_biUnion, mem_sdiff]
-  aesop
+  constructor
+  · rintro (hsheet | ⟨i, hi, hpiece⟩)
+    · exact Or.inl hsheet
+    · by_cases hbase : sheet ∈ base
+      · exact Or.inl hbase
+      · exact Or.inr ⟨i, hi, hpiece, hbase⟩
+  · rintro (hsheet | ⟨i, hi, hpiece, _hbase⟩)
+    · exact Or.inl hsheet
+    · exact Or.inr ⟨i, hi, hpiece⟩
 
 /-- Sound nested-fibre relaxation: each nonanchor provider may independently
 use its best certified contribution outside the fixed anchor union. -/
@@ -211,7 +219,7 @@ theorem card_biUnion_le_nonempty_count
     _ ≤ ∑ _i ∈ providers.filter (fun i ↦ (piece i).Nonempty), 1 := by
       apply Finset.sum_le_sum
       intro i hi
-      exact hone i (Finset.mem_of_mem_filter hi)
+      exact hone i (Finset.mem_of_mem_filter i hi)
     _ = (providers.filter fun i ↦ (piece i).Nonempty).card := by simp
 
 theorem fibreSlice_extendUnion_of_incomplete

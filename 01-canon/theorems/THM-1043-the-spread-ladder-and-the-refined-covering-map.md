@@ -71,8 +71,9 @@ W(V) = ⌈log₁₃ σ⌉      (the number of 13-fold octaves spanned)
 ```
 
 `W = 1` is precisely the ladder's reach. The residual is `W ≥ 2`, and the binding family
-`{1,…,11,13,84}` has `W = 2`. This says the open problem is *single-wrap*, not multi-scale: the first
-octave beyond the witness window is the whole difficulty.
+`{1,…,11,13,84}` has `W = 2`. Thus `W=2` is the **first open octave** and already contains the
+currently binding example.  This does not bound the whole residual to one octave: the compressed
+condition controls `v_max/v_second`, not `v_max/v_min`, so internal ratio chains can have `W>2`.
 
 ## 5. Honest scope
 
@@ -83,7 +84,8 @@ extremal, relocates the covering-minimum into proved territory, and identifies t
 
 Paired with THM-1042 (what does not work: no additive certificate absorbs a consecutive speed), the map
 now reads: **what works is explicit-witness arguments whose reach is a spread/scale condition; what fails
-is every accounting-based certificate.** The residual is one octave wide.
+is every accounting-based certificate.** The first untreated octave is already nontrivial; higher-octave
+compressed families are not excluded by this theorem.
 
 *Files: `04-computation/lrc_spread_ladder_klein_S329.py` (+ `_octave_coordinate`, `_handler_map`,
 `_spread_ladder` .out).*

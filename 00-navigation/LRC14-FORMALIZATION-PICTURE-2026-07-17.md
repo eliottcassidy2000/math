@@ -377,8 +377,10 @@ every owner miss at least three sheets; a primary and two independent referees
 agree.  Scale 26 is multiple-of-thirteen excluded.  THM-993/994 close `c=27`
 in three implementations: nested `Z/3,Z/9` relaxations kill every row, and a
 separate nine-fibre flag proof makes every order-27 owner impossible; heredity
-supplies at least two.  The next untreated common scale is `c=28`; `c=29` is
-already prime-excluded.
+supplies at least two.  THM-1072 closes `c=28` in three implementations: its
+sound `Z/4` upper relaxation leaves at most two feasible owners per scalar row,
+and the exact reachable-mask sidecars have zero threshold mismatch.  Since
+`c=29` is already prime-excluded, the next untreated common scale is `c=30`.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these

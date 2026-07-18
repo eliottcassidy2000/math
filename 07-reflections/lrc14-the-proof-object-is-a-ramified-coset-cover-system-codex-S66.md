@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-17  
 **Scope:** structural synthesis after the independently replayed exact
-common-scale H6 closure through scale 27.  This is a research map, not a claim
+common-scale H6 closure through scale 28.  This is a research map, not a claim
 that LRC(14), the H5 bank, or the global `n=12` sporadic branch is closed.
 
 The long common-scale computation has stopped looking like a list of unrelated
@@ -131,6 +131,11 @@ The historical sequence is now structurally legible.
   replaced sheet enumeration at the scalar layer.
 - `c=21,24,25,27`: ramification made the missing structure explicit—gcd
   strata, multiplicative character classes, and quotient flags on sheets.
+- `c=28`: the four thick fibres of `Z/28 -> Z/4` dominate the transverse
+  seven-adic geometry.  Even after every nonanchor toothpick is allowed to
+  choose its best contribution independently, at most two of six owner
+  obligations remain live.  The full `Z/4 x Z/7` flag does not improve the
+  terminal threshold on any scalar survivor.
 
 The recursion is from large literal geometry to a smaller carrier which still
 preserves the current predicate.  No single carrier is universally faithful.
@@ -216,7 +221,7 @@ Four formal lemmas would turn this from a pattern into infrastructure:
   `LRCPreNerveProjection` abstraction.
 
 The common-scale H6 bank is only one face of LRC(14), but it has now supplied a
-candidate underlying language.  The next real gain is not merely closing
-scale 28.  It is proving enough of this ramified coset-cover calculus that many
+candidate underlying language.  The next real gain is proving enough of this
+ramified coset-cover calculus that many
 scales close from their valuation grammar at once, then transporting the same
 language to the smooth H5 and non-AP/deep-sheet residuals.

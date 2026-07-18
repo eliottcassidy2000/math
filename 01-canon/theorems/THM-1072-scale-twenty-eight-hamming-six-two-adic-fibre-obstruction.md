@@ -1,18 +1,22 @@
 ---
 id: THM-1072
 title: Scale-twenty-eight Hamming-six two-adic fibre obstruction
-status: CLAIMED + FROZEN PRIMARY pending independent replay — a deterministic all-labelled structural primary gives a terminal Z/4-fibre deficit, with a full immutable-union DP sidecar and byte-identical normal/-O output; do not promote to PROVED before an independently developed implementation agrees
+status: PROVED STRUCTURAL + INDEPENDENT FINITE-EXACT — a deterministic Python primary and an independently developed standard-library C++ referee agree on the complete labelled grammar, scalar bank, terminal Z/4-fibre relaxation, and exact reachable-union sidecar; a second literal-CRT Python flag audit independently confirms threshold exactness
 source: codex-2026-07-17-S66 scale-twenty-eight continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992, THM-994]
 related: [THM-963, THM-969, THM-981, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_eight_hamming_six_two_adic_fibre_obstruction_codex_c28.py
   - 05-knowledge/results/lrc13_scale_twenty_eight_hamming_six_two_adic_fibre_obstruction_codex_c28.out
+  - 04-computation/lrc13_scale_twenty_eight_hamming_six_mod_four_flag_codex_c28.py
+  - 05-knowledge/results/lrc13_scale_twenty_eight_hamming_six_mod_four_flag_codex_c28.out
+  - 04-computation/lrc13_scale_twenty_eight_hamming_six_two_adic_fibre_referee_codex_c28.cpp
+  - 05-knowledge/results/lrc13_scale_twenty_eight_hamming_six_two_adic_fibre_referee_codex_c28.out
 ---
 
 # THM-1072 — scale twenty-eight has a terminal two-adic fibre deficit
 
-The claimed candidate theorem is:
+The theorem is:
 
 > **The primitive proper AP-centred common-scale-28 Hamming-six face is
 > empty.**
@@ -23,10 +27,11 @@ fibres of `Z/28 -> Z/4`.  It is already terminal.  The competing
 `4 x 7` CRT grid does not improve a single terminal bound on the scalar
 survivor bank.  Thus this face does **not** need a finer residual carrier.
 
-This file records one frozen primary.  The implementation checks every
-labelled scalar row; multiplicative orbits are telemetry only.  The result is
-kept at `CLAIMED + FROZEN PRIMARY`, rather than `PROVED`, until an
-independently developed replay agrees.
+The Python primary checks every labelled scalar row; multiplicative orbits are
+telemetry only.  An independently developed standard-library C++ referee now
+reconstructs the literal CRT masks in a different order, repeats the complete
+scalar and owner audit, and agrees on every theorem-bearing count.  A separate
+literal-CRT Python flag audit also agrees on the terminal threshold predicate.
 
 ## 1. Hereditary divisor grammar
 
@@ -203,8 +208,9 @@ There is no row with three, four, five, or six surviving owner projections.
 A global unit word would have to cover all `28` sheets at every one of its six
 owners.  By (8), every scalar row instead has at least four owner projections
 that are impossible for **all** unit choices.  Combined with the scalar
-elimination preceding (7), this proves the claimed emptiness statement,
-conditional only on independent replay of the frozen primary.
+elimination preceding (7), this proves the emptiness statement.  The
+independent referee described in Section 9 checks every implication in this
+finite bank.
 
 No orbit quotient enters this implication.  Multiplication by `F_13^*` splits
 the `3170` labelled contexts into orbit-size histogram
@@ -346,7 +352,7 @@ Fano/chi-seven colours and completed tournaments discard the `28`-cell
 threshold.  This is why (20) is the honest tournament carrier, and also why
 the tournament remains a sidecar rather than the proof object.
 
-## 9. Reproducibility and independent-replay boundary
+## 9. Reproducibility and independent replay
 
 The deterministic primary:
 
@@ -359,12 +365,17 @@ The deterministic primary:
 7. records orbit, Cayley, tournament, carrier-loss, and alternate-vertex
    telemetry without quotienting the proof scan.
 
-Normal and `python -O` runs reproduce the frozen output byte-for-byte.  Frozen
-SHA-256 values are
+Normal and `python -O` runs reproduce the primary output byte-for-byte.  The
+independent C++ referee compiles cleanly under Apple clang 17 in optimized,
+unoptimized, ASan/UBSan, and libc++ debug-hardening modes; all four executable
+outputs are byte-identical, and the clang static analyzer reports no
+diagnostic.  Frozen SHA-256 values are
 
 ```text
 Python primary source  0f200ee79d569d611b299e95397ebdd75e348ff2883327c108cdef7c4a412961
 primary output         960ed394fdad4b69d17fd23a9d5617d9bd2de48588c5dc131c67045fcb634010
+C++ referee source     d0bec69db7571781704e0dc906c258816e129a8563e66c1406ef894a7a6973b8
+C++ referee output     ad00571d662430ac14906673b743fd0327d7e379ad0ab3bb48289bb3aa9eb7f1
 ```
 
 Internal stream digests are
@@ -378,11 +389,21 @@ fibre rows    d4d9362a069e5fe445a00d221907d7e170906e1b7ebf34528590c03711fc2819
 exact banks   5561960152be08a1b7d61cb8b23e40e6ea51fa25c18086c117823bd9db06d000
 ```
 
-The frozen primary and its exact-DP sidecar share mask construction and are
-therefore not independent implementations.  Promotion from `CLAIMED` to
-`PROVED` requires a second implementation developed from this theorem text
-(preferably standard-library or another language), with independently ordered
-mask generation and row summaries.
+The C++ reconstruction agrees with the primary on all `24911964` scalar
+contexts, all `3170` survivors, all `19020` labelled owner implications, both
+owner-bound histograms, all `6628500` reachable-mask incidences, and the zero
+threshold-mismatch verdict.  The separate Python flag audit gives contingency
+
+```text
+(exact false, flag false): 17628,
+(exact true,  flag true):   1392,
+```
+
+with no off-diagonal entry.  These implementations do not share source code.
+The two tournament serializations are deliberately only sidecars: the primary
+ends its key with `U_7`, whereas the C++ referee ends its key with exact-bank
+size.  Both are transitive on every row, but agreement of those nonidentical
+keys is neither assumed nor used by the proof.
 
 This theorem concerns only the AP-centred Hamming-six common-scale-28 face.  It
 does not address Hamming five, non-AP/deep sheets, the global sporadic branch,

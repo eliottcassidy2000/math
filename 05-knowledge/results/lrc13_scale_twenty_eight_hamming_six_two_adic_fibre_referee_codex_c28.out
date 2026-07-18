@@ -1,0 +1,37 @@
+scale=28 p=13 hamming=6 referee=literal-crt-mod4-upper-relaxation
+orders=(1,2,4,7,14,28) unit-counts=(1,1,2,6,6,12)
+hereditary-grammar=at-least-two-orders-divisible-by-4-and-at-least-two-orders-divisible-by-7
+hereditary-words=26961 weighted-states/support=429048576 labelled-support-order-contexts=24911964 raw-labelled-states=396440884224
+inclusion-exclusion-unweighted bad4=16384 bad7=5103 both=1792
+inclusion-exclusion-weighted bad4=52706752 bad7=151552 both=16576
+D1 ratio-cardinalities=(28,0,0,0,0,0,0,0,0,0,0,0)
+D2 ratio-cardinalities=(14,0,0,0,0,14,14,0,0,0,0,0)
+D4 ratio-cardinalities=(7,0,7,7,0,7,7,0,7,7,0,0)
+D7 ratio-cardinalities=(8,4,4,4,4,4,4,4,4,4,4,4)
+D14 ratio-cardinalities=(6,4,4,4,4,4,4,4,4,4,4,4)
+D28 ratio-cardinalities=(5,4,4,4,4,5,5,4,4,4,4,4)
+scalar-feasible-owners-per-context=0:120024 1:5260824 2:10675332 3:6969052 4:1724910 5:158652 6:3170
+scalar-supports-by-survivor-count=0:718 5:96 9:24 10:24 18:24 33:12 42:24 199:2
+scalar-survivors=3170 supports=206 literal-unit-words=9275904 capacity-vectors=1480
+scalar-multiplicities=(0,0,3,0,3,0):16 (0,0,3,1,2,0):48 (0,0,3,2,1,0):48 (0,0,3,3,0,0):16 (0,0,4,0,0,2):30 (0,0,4,0,1,1):60 (0,0,4,0,2,0):30 (0,0,4,1,0,1):60 (0,0,4,1,1,0):60 (0,0,4,2,0,0):30 (0,1,3,0,0,2):96 (0,1,3,0,1,1):192 (0,1,3,0,2,0):96 (0,1,3,1,0,1):192 (0,1,3,1,1,0):192 (0,1,3,2,0,0):96 (0,2,0,0,0,4):36 (0,2,0,0,1,3):144 (0,2,0,0,2,2):216 (0,2,0,1,0,3):144 (0,2,0,1,1,2):432 (0,2,0,2,0,2):216 (0,3,1,0,0,2):144 (0,3,1,0,1,1):288 (0,3,1,1,0,1):288
+normalized-owner-keys=1585 labelled-owner-implication-checks=19020
+mod4-anchor-bank-size=1:12888 2:936 3:5196
+mod4-relaxed-bound=18:912 19:900 20:1032 22:2064 23:8328 24:4392 28:1392
+mod4-live-owners-per-context=0:2018 1:912 2:240
+exact-maximum-union=18:912 19:900 20:1056 22:2088 23:8280 24:4392 28:1392
+exact-feasible-owners-per-context=0:2018 1:912 2:240
+mod4-minus-exact=0:18948 1:48 2:24 threshold-mismatches=0
+exact-bank-size=1:960 21:3312 36:768 42:456 43:432 54:384 56:96 63:744 72:576 78:168 93:1032 101:48 123:96 126:96 135:24 150:96 165:1128 168:48 177:252 180:384 267:48 287:96 293:192 297:48 324:48 377:816 378:240 381:240 410:48 461:384 581:24 599:1152 612:960 624:960 630:384 660:240 849:96 1043:96 1073:696 1148:192 1434:192 1503:96 1521:24 1636:384 1782:48 2210:96 2308:96 2438:24
+exact-reachable-total=6628500 largest-bank=2438
+literal-cover-implies-relaxed-flag-cover=checked-on-all-19020-labelled-owner-obligations; all-six-relaxed-row=0
+owner-tournament observable=(relaxed-status,U4,exact-max,scalar-capacity,bank-size); switch=harder-key-wins; tie-path=coordinate-order
+owner-tournament fingerprints=all 3170 transitive scores=(0,1,2,3,4,5) triangles=0 SCCs=(1,1,1,1,1,1) Hamiltonian-paths=1
+owner-tournament ties=0:768 1:1152 2:636 3:384 4:144 6:56 7:30 natural-order-flips=0:34 1:47 2:119 3:194 4:303 5:375 6:391 7:431 8:414 9:329 10:232 11:159 12:91 13:39 14:12
+D2-Cayley arcs=24 edges=24 reciprocal=0 triangles=0 SCCs=(12)
+D4-Cayley arcs=72 edges=48 reciprocal=24 triangles=64 SCCs=(12)
+proof-carrier=four mod4 sheet fibres: D2/D4 masks are whole-fibre anchors; D7/D14/D28 masks are relaxed transverse toothpicks
+carrier-preserves=absolute owner upper bound and literal-cover implication; destroys=mod7 positions, nonanchor overlaps, shared-unit compatibility, exact maxima
+alternate-carrier-audit=providers,runners,gaps,sections,wall-events,residues,cover-arcs,Fourier-modes,matroid-circuits,Fano-points,chi7-colours,and completed tournaments all lose either the absolute threshold or thick-fibre incidence
+challenged-assumption=tournament vertices need not be runners; owner obligations are telemetry while the faithful proof vertices are four thick fibres plus transverse deviations
+FNV64 crt-bases=c5cca8d6b780861a literal-masks=e44fa1dcf26eacad mod4-flags=b37aa45462f5f6f1
+FNV64 grammar=7411cdd8a5c56c78 scalar=2a62f132917a37e9 owner-audit=14b80412c531283d

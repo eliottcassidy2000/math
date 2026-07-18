@@ -1,3 +1,30 @@
+## codex-2026-07-18-S67 checkpoint — THM-1072 c=28 promoted; ramified Lean consumer repaired
+
+Independent current-HEAD replay promotes the primitive proper AP-centred
+common-scale-28 Hamming-six face to PROVED STRUCTURAL + INDEPENDENT
+FINITE-EXACT.  A separately developed standard-library C++ literal-CRT
+referee agrees with both Python implementations on the 26,961-word grammar,
+24,911,964 labelled scalar contexts, 3,170 survivors on 206 supports, all
+19,020 owner implications, the terminal mod-four live-owner census
+`0:2018,1:912,2:240`, zero threshold mismatches, and all 6,628,500 exact
+reachable-mask incidences.  Apple-clang O3/O0, ASan+UBSan, and libc++
+debug-hardening outputs are byte-identical; static analysis is clean.  Thus
+the common-scale H6 line is closed through c=29 and the next untreated scale
+is c=30.  This remains one face of the open global n=12/LRC14 problem.
+
+The direct Lean replay found two unfinished proof terms in
+`LRCRamifiedCosetCover.lean`.  Explicit set-membership proofs repair both;
+the module now builds with no `sorryAx`/`native_decide`, audits to the standard
+foundational axioms, and is root-wired as the reusable pre-nerve,
+anchor/nonanchor, and saturated-fibre consumer.  The raw scale tables remain
+external finite certificates.  A concurrent audit also corrected THM-1043's
+overreach: W=2 is the first open octave and contains the binding example, but
+compressed families are not proved to lie in one octave.
+
+FILES: THM-1072; c28 C++ referee output; HYP-6820; results index;
+formalization manifest/picture; ramified-coset Lean module/root; ramified-cover
+reflection; THM-1043 and scale-extremity scope correction.
+
 ## opus-2026-07-17-S370 -- THM-1085 THE MULTIPLICATIVE-MINIMUM BOUND IS PROVABLE BUT NOT UNIFORM (abs-sum converges, refuting my own divergence heuristic, but the constant grows 2.4->19 at k=3 and 5.4->51 at k=4 while signed constants stay <=2, <=4) + SUM-FREENESS DOES NOT CERTIFY, REFUTED by {1,3,...,25} sum-free with BONF5 = -4.96 (HYP-7530)
 
 Owner: work the multiplicative minimum bound and the Schur/sum-free direction. Both got

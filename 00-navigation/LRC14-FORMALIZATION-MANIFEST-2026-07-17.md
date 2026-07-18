@@ -1045,7 +1045,12 @@ independently close `c=27`: a standard-library literal bank and a separately
 developed NumPy-batched certificate agree on all 450 scalar rows and
 13,598,160 reachable-mask incidences, while the latter's sound nested
 `Z/27 -> Z/3` then `Z/27 -> Z/9` relaxation already leaves at most four
-feasible owners.  The next untreated scale is `c=28`.
+feasible owners.  THM-1072 now independently closes `c=28`: the
+`Z/28 -> Z/4` anchor/nonanchor upper relaxation leaves at most two feasible
+owners on each of the 3,170 scalar survivors, and a separately developed C++
+literal-CRT referee agrees with two Python implementations on the complete
+labelled bank and all 6,628,500 reachable-mask incidences.  Scale 29 is
+prime-excluded by THM-983, so the next untreated scale is `c=30`.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1057,7 +1062,16 @@ formalizes the logic shared by the later deficits: a global word projects to
 a local witness at every owner, so one empty projection is terminal; a
 two-owner Boolean counterexample proves the converse false.
 
-The remaining composite scales beginning at 28, the finite ramified H5 bank, and non-AP,
+`LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
+that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used
+at scales 27 and 28, and with a saturated prime-power fibre score for whole
+fibre anchors plus transversal pieces.  Its original two unfinished
+set-algebra obligations have been replaced by explicit kernel proofs; the
+public axiom audit is the standard foundational trio and contains no
+`sorryAx` or `native_decide`.  Concrete raw-bank completeness and the finite
+scale tables remain external certificates.
+
+The remaining composite scales beginning at 30, the finite ramified H5 bank, and non-AP,
 deep, and higher-sheet branches remain parts of the global `n=12` problem.
 None of these facewise results proves uniform sporadic emptiness.
 

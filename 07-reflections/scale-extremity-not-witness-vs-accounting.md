@@ -44,7 +44,8 @@ Three findings in that table:
 
 > **LRC(14) certificates — witness-locating and measure-accounting alike — succeed exactly in the
 > scale-extreme regimes (all speeds within one 13-fold window, or one speed separated by more than 13×
-> from the rest). The open residual is exactly the intermediate regime, and it is one octave wide
+> from the rest). The current binding example lies in the first open octave of the intermediate regime;
+> the proved reductions do not bound the entire residual to one octave
 > (`W = ⌈log₁₃ σ⌉ = 2`).**
 
 This is falsifiable in the same way the last one was: exhibit a proved certificate that fires strictly
