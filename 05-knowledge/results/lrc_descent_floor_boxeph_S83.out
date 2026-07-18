@@ -1,0 +1,37 @@
+================================================================================================
+THE LRC(13)-DESCENT FLOOR:  M(V) >= v_max/(13(v_max+v_2nd)) = rho/(13(rho+1))
+================================================================================================
+
+--- named crux families ---
+  deep well {1..12,182}      rho=15.17 M=14/183    floor=7/97      M>=floor:True  M>=1/14:True  descent(rho>=13):True  fill1(1003):True
+  residue {1..11,13,84}      rho= 6.46 M=7/89      floor=84/1261   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  GW {1..11,13,24}           rho= 1.85 M=1/14      floor=24/481    M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  prefix/AP {1..13}          rho= 1.08 M=1/14      floor=1/25      M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  {2..14} full-cover         rho= 1.08 M=1/8       floor=14/351    M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  kps floor min V            rho= 1.05 M=1/9       floor=67/1703   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  {1..10,13,22,84} multi     rho= 3.82 M=2/23      floor=42/689    M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+
+--- random 13-families (floor must hold for ALL) ---
+  rand#0                     rho= 1.04 M=1/5       floor=57/1456   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#1                     rho= 1.16 M=4/23      floor=59/1430   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#2                     rho= 1.10 M=15/89     floor=57/1417   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  rand#3                     rho= 1.16 M=13/83     floor=57/1378   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#4                     rho= 1.04 M=10/61     floor=59/1508   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#5                     rho= 1.02 M=1/5       floor=57/1469   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#6                     rho= 1.09 M=17/75     floor=59/1469   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  rand#7                     rho= 1.11 M=3/17      floor=59/1456   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+  rand#8                     rho= 1.06 M=5/29      floor=50/1261   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  rand#9                     rho= 1.04 M=9/40      floor=55/1404   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  rand#10                    rho= 1.04 M=5/24      floor=59/1508   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):True
+  rand#11                    rho= 1.16 M=3/19      floor=59/1430   M>=floor:True  M>=1/14:True  descent(rho>=13):False  fill1(1003):False
+
+--- dominant far-element (rho>=13 -> M>=1/14) ---
+  {1..12,169}                rho=14.08 M=13/170    floor=13/181    M>=floor:True  M>=1/14:True  descent(rho>=13):True  fill1(1003):True
+  {1..12,161}                rho=13.42 M=1/13      floor=161/2249  M>=floor:True  M>=1/14:True  descent(rho>=13):True  fill1(1003):False
+  {1..12,200}                rho=16.67 M=1/13      floor=50/689    M>=floor:True  M>=1/14:True  descent(rho>=13):True  fill1(1003):False
+  {1..12,500}                rho=41.67 M=1/13      floor=125/1664  M>=floor:True  M>=1/14:True  descent(rho>=13):True  fill1(1003):False
+
+================================================================================================
+FLOOR HOLDS on all named: True   on all random: True   on all dominant: True
+Compact-core residual = families with 1 <= rho < 13 (floor < 1/14).
+Descent (rho>=13) and THM-1003 (fill-1) are COMPLEMENTARY far-element tools.
