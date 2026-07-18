@@ -1,0 +1,14 @@
+### STEP 1: the region where R >= 1 (measure horn fails) ###
+  quadruples with R >= 1: 1011 ; largest k4 among them: 178
+  => finite horn bound KB = 198 (largest R>=1 killer + 20 margin)
+
+### STEP 2: the r=5 finite horn below KB ###
+  ... core 0/495 tested=52233 bad=0
+  ... core 100/495 tested=4699657 bad=0
+  ... core 200/495 tested=7292134 bad=0
+  ... core 300/495 tested=9660874 bad=0
+  ... core 400/495 tested=11192118 bad=0
+
+  quintuples passing the necessary condition: 11702422
+  certified: 11702422 ; UNCERTIFIED: 0
+DONE

@@ -1,0 +1,23 @@
+### r=5 : 495 eight-speed cores ; S(P) profile ###
+  measure: min 0.16392  max 0.36310 ; components: 14..26
+
+### max R at the bottom window (all quadruples with k4 <= lo+W) ###
+  MAX R = 1.28495 at core [1, 2, 4, 5, 7, 9, 11, 12], killers (158,160,162,164), T = 210.7
+  R < 1 at the bottom: False
+
+### where does R cross below 1?  (worst core, killers scaled up together) ###
+  scale s   killers (a+s,b+s,c+s,d+s)     T          R
+  0         (158, 160, 162, 164)           210.7      1.28495
+  10        (168, 170, 172, 174)           118.1      0.67895
+  25        (183, 185, 187, 189)           109.2      0.57795
+  50        (208, 210, 212, 214)           168.9      0.78916
+  100       (258, 260, 262, 264)           176.0      0.66667
+  200       (358, 360, 362, 364)           190.2      0.52241
+  400       (558, 560, 562, 564)           293.1      0.51976
+  800       (958, 960, 962, 964)           504.1      0.52288
+  1600      (1758, 1760, 1762, 1764)       916.1      0.51931
+  3200      (3358, 3360, 3362, 3364)       1745.0     0.51872
+
+  first scanned scale with R < 1: k4 = 174
+  => the r=5 finite horn must cover killers below roughly that point
+DONE

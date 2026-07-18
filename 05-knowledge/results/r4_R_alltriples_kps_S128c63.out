@@ -1,0 +1,20 @@
+### r=4 : ALL triples with k3 <= lo+100, over all 220 cores ###
+  ... core 0/220  triples=161700  maxR=0.79396
+  ... core 50/220  triples=8246700  maxR=0.96377
+  ... core 100/220  triples=16331700  maxR=0.98453
+  ... core 150/220  triples=24416700  maxR=0.98453
+  ... core 200/220  triples=32501700  maxR=0.98453
+
+  triples tested: 35574000 ; swallow cases: 0
+  MAX R = 0.98453 at core [1, 2, 3, 5, 6, 7, 8, 9, 11], killers (150,156,158), T = 155.6
+  R < 1: True   margin 0.01547
+
+### decay check: R as k3 grows with k1,k2 pinned at the worst pair ###
+  k3=158      T=155.6      R=0.98453
+  k3=208      T=112.5      R=0.54096
+  k3=308      T=119.8      R=0.38889
+  k3=558      T=217.0      R=0.38889
+  k3=1158     T=355.9      R=0.30736
+  k3=3158     T=734.3      R=0.23252
+  k3=9158     T=1873.1     R=0.20453
+DONE

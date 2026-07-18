@@ -1,0 +1,17 @@
+### STEP 1: the region where R >= 1 (measure horn fails) ###
+  quadruples with R >= 1: 1011 ; largest k4 among them: 178
+  CORRECTION: the bound must exceed max T over those quadruples, not max k4 --
+  the fifth killer is certified by the measure horn only once it exceeds T.
+  max T over the R>=1 region: 210.7
+  => finite horn bound KB = 235 (max T + 25 margin)
+
+### STEP 2: the r=5 finite horn below KB ###
+  ... core 0/495 tested=849332 bad=0
+  ... core 100/495 tested=82677197 bad=0
+  ... core 200/495 tested=143674878 bad=0
+  ... core 300/495 tested=196308417 bad=0
+  ... core 400/495 tested=240220088 bad=0
+
+  quintuples passing the necessary condition: 263708305
+  certified: 263708305 ; UNCERTIFIED: 0
+DONE
