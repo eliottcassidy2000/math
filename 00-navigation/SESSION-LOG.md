@@ -621,6 +621,21 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S109 -- THE OFFICIAL FINSET TARGET OF LRC(14) NOW REDUCES TO INV IN THE KERNEL
+
+Owner: connect LRC14_of_INV's Lonely-form to the ledger's Finset target. Done, kernel-pure, built.
+LRCFinsetBridge.lean, 2 theorems (namespace LonelyRunner), both [propext, Classical.choice, Quot.sound]
+-- no sorry/axiom; built (8488 jobs, first try), registered in root.
+- lonely_fract: Lonely n v t => Lonely n v (Int.fract t) (integer-shift invariance).
+- LRC14_finset_of_INV: LRC(<=13)[cited] + INV[open] => LRC14.LRC14 (the ledger's Finset N, t in [0,1]
+  target). Enumerate W via equivFinOfCardEq as v:Fin 13->Z; apply LRC14_of_INV; reduce t to [0,1) via
+  Int.fract; discharge forall w in W pointwise.
+MILESTONE: the OFFICIAL LRC(14) target Prop is now a KERNEL-CHECKED corollary of LRC(<=13)+INV -- no
+shape-mismatch caveat between working form and target. FORMALIZATION PROGRAM S105-S109 COMPLETE:
+ap_core_bridge+sieve_dispatch+density_far_extension+M_split/LRC14_of_INV+LRC14_finset_of_INV, all
+kernel-pure, reduce LRC14.LRC14 to the single open INV (=Tao n=12). Crux still open.
+FILES: reflection the-official-finset-target-of-lrc14-now-reduces-to-INV-in-the-kernel-boxeph-S109, LRCFinsetBridge.lean, HYP-7625. boxeph; S109.
+
 ## boxeph-2026-07-18-S108 -- THE M-SPLIT + THE COMPLETE KERNEL-CHECKED REDUCTION OF LRC(14) TO A SINGLE INVERSE THEOREM
 
 Owner: formalize the M-split separating M>=1/14 from M<1/13. Done -- and it COMPLETES the assembly.
