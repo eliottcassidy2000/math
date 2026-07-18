@@ -1457,6 +1457,6 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `multminimum_bound_opus_S370.out` | [STORED] | THM-1085: absolute-value bound CONVERGES (geometric increments), refuting my log-divergence heuristic. | (self) |
 | `multmin_constant_opus_S370.out` | [STORED] | THM-1085: the constant is NOT uniform (2.4->19 at k=3, 5.4->51 at k=4); m7 alone insufficient. | (self) |
 | `schur_bonf5_opus_S370.out` | [STORED] | THM-1085: sum-free does NOT certify -- {1,3,...,25} sum-free with BONF5 = -4.96 (0/26 positive). | (self) |
-| `sign_cancellation_opus_S371.out` | [STORED] | THM-1090: coset decomposition exact; COSET-ABS ~ FULL-ABS, so cancellation is ACROSS cosets. | (self) |
-| `character_sum_opus_S371.out` | [STORED] | THM-1090: character sum C(A) identically 0 for odd k (antipodal symmetry) -- not a discriminant. | (self) |
-| `variation_bound_opus_S371.out` | [STORED] | THM-1090: variation bound = coset-absolute bound exactly (Tbar=0); no gain, 12.4x spread. | (self) |
+| `sign_cancellation_opus_S371.out` | [STORED] | THM-1093: coset decomposition exact; COSET-ABS ~ FULL-ABS, so cancellation is ACROSS cosets. | (self) |
+| `character_sum_opus_S371.out` | [STORED] | THM-1093: character sum C(A) identically 0 for odd k (antipodal symmetry) -- not a discriminant. | (self) |
+| `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly (Tbar=0); no gain, 12.4x spread. | (self) |

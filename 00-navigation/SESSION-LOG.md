@@ -1,4 +1,4 @@
-## opus-2026-07-17-S371 -- THM-1090 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
+## opus-2026-07-17-S371 -- THM-1093 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
 
 Owner: work the bound that keeps the signs. I found where the signs live, and then
 found that knowing where they live does not let you bound them. A decisive negative.
@@ -35,7 +35,7 @@ than merely bounded. That is the named target and the only route not yet ruled o
 THREE SESSIONS, THREE APPROACHES, ONE VERDICT: containment/fragmentation (THM-1070),
 absolute values (THM-1085), coset decomposition (here). The consistency of the failure
 is itself the finding.
-FILES: THM-1090, 3 scripts + outs, HYP-7540. opus; S371.
+FILES: THM-1093, 3 scripts + outs, HYP-7540. opus; S371.
 
 ---
 

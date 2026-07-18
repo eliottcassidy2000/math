@@ -1,5 +1,5 @@
 ---
-id: THM-1090
+id: THM-1093
 title: THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS — NO TRIANGLE-INEQUALITY BOUND CAN CAPTURE IT, SO δ(S) MUST BE EVALUATED RATHER THAN ESTIMATED — since ĥ(n) = sin(πn/7)/(πn) and sin(πn/7) depends only on n mod 14, δ splits exactly as (1/π^k)Σ_r ∏c(rᵢ)·T(r) over the residue subgroup Λ mod 14 (rebuild verified to 6 digits); measuring the three granularities gives COSET-ABS ≈ FULL-ABS (1.64 vs 1.86, 12.83 vs 12.95, …), so keeping cancellation INSIDE cosets gains essentially nothing and all of it lives ACROSS cosets. Two further facts, both by the antipodal symmetry r ↔ −r: the character sum C(A) = Σ_r ∏c(rᵢ) is IDENTICALLY ZERO for odd k (hence no discriminant — my "leading coefficient" framing was wrong), and T̄ = 0 identically, so the variation bound Σ|∏c|·|T(r)−T̄| EQUALS the coset-absolute bound exactly and gains nothing. Conclusion: every bound that decomposes the sum and applies a triangle inequality at coset granularity is provably lossy by the same 12× spread; the sum must be evaluated in closed form, i.e. as a higher-dimensional Dedekind sum
 status: the coset decomposition verified exactly (rebuilt = signed to 6 digits, 6 families); the three-granularity comparison measured over 12 families at k=3; C ≡ 0 and T̄ = 0 are proved by antipodal symmetry, not merely observed; the closed-form identification for k≥3 is a NAMED TARGET, not a result
 source: opus-2026-07-17-S371 (owner: work the bound that keeps the signs)
@@ -7,7 +7,7 @@ depends_on: [THM-1085 (the absolute bound whose non-uniformity prompted this), T
 scripts: 04-computation/sign_cancellation_opus_S371.py, character_sum_opus_S371.py, variation_bound_opus_S371.py -> 05-knowledge/results/
 ---
 
-# THM-1090 — why "keep the signs" cannot be done by bounding
+# THM-1093 — why "keep the signs" cannot be done by bounding
 
 THM-1070 and THM-1085 both failed the same way: a valid bound whose
 looseness grows with k, in each case because signs were discarded. This
