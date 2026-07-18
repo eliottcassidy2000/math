@@ -1,3 +1,27 @@
+## boxeph-2026-07-18-S96 -- THE SOFT WEYL BOUND CLOSES THE DENSITY ROUTE OFF-RESONANCE, BUT ITS NATURAL PEEL IS A LONELY RUNNER ONE LEVEL UP (density bottoms on the SAME resonance as covering)
+
+Owner: aim the soft Weyl bound at the density route (Route A). Did exactly that, and the
+answer is a clean split. The density row's remaining piece is Q_s = o(r^2) (any power-saving,
+THM-729). My own THM-886(II) run-geometric profile |S(m)| <= C_f + R/sin(pi||m/t||) IS the
+soft Weyl bound in this setting: OFF the mode lattice tZ it gives |S| = O(R) = O(r), hence
+Q_s = O(r) and Error -> 0. So off resonance the density route closes -- the soft Weyl bound
+does its job (the concrete sense in which density is the "softer" side).
+
+THE OBSTRUCTION: the density route's natural peel is the far element w = d, and d IS the
+mode-lattice generator (l*d in dZ for every l), so the peel is MAXIMALLY resonant. THM-886(V):
+sup_w Q_s ~ r^2 SHARP (HYP-6994 refuted, confirmed klein-S314); THM-886(I): at the resonant
+modes the teeth are full-strength (Sigma|N_c| ~ r, no a-decay, no cancellation). So Q_s = o(r^2)
+is FALSE uniformly and fails precisely at the density peel. The classifier is DIOPHANTINE
+(THM-886(V)): w resonant <=> a small multiple lw lands near tZ -- w plays a LONELY RUNNER
+against the mode lattice, self-similar one level up. So the density-route core = the resonant
+far peel = the SAME resonance the covering route bottoms on (klein-S279), now confirmed FROM
+THE DENSITY SIDE. Correction: the finish-map's "any power-saving suffices / Q_s = O(diam)
+verified" is the pre-refutation (07-13) view; the refutation (klein-S314 + boxeph-S25) postdates it.
+
+LRC(14) not closed. The soft Weyl bound is placed where it belongs and works (off-resonance);
+the irreducible core is the resonant peel, unified with the covering crux, self-similar.
+FILES: reflection soft-weyl-closes-density-...-boxeph-S96, HYP-7505. boxeph; S96.
+
 ## opus-2026-07-17-S366 -- THM-1065 THE REQUIRED TRUNCATION LEVEL, MEASURED (first certifying odd level 11, 9, 9, 7 at min speeds 56, 248, 808, 2648 -- deeper truncation for more correlated families; level 5 provably never suffices; level 13 exact) + the obstruction LOCATED: per-family cost is seconds, so what is missing is a UNIFORM level-7/11 argument, extending THM-1026's ledger from five slots to seven (HYP-7490)
 
 Owner: work the stronger tool, higher level truncation. Measured it rather than guessed.
