@@ -144,7 +144,80 @@ theorem c8_consecutive_good_pos (v : ℕ) (hv : 1 ≤ v) :
   exact good_pos_of_path_credits (volume.restrict (Ioo (-(1:ℝ)/2) (1/2)))
     A hAmeas 8 hle hcred
 
+/-- **The c = 7 wall theorem, consecutive case** (boxeph-S78): at seven runners the
+union budget is exactly 1, and a SINGLE pair credit crosses — every consecutive
+7-block leaves a positive-measure good set. -/
+theorem c7_consecutive_good_pos (v : ℕ) (hv : 1 ≤ v) :
+    0 < (volume.restrict (Ioo (-(1:ℝ)/2) (1/2)))
+        ((⋃ i ∈ Finset.range 7, dangerR (v + i))ᶜ) := by
+  haveI hprob : IsProbabilityMeasure (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) := by
+    constructor
+    rw [Measure.restrict_apply_univ, Real.volume_Ioo]
+    norm_num
+  have h149 : ENNReal.ofReal (1/49 : ℝ) ≠ 0 := by
+    rw [ENNReal.ofReal_ne_zero_iff]
+    norm_num
+  set A : ℕ → Set ℝ := fun i => dangerR (v + i) with hA_def
+  have hAmeas : ∀ i, MeasurableSet (A i) := fun i =>
+    (dangerR_isOpen (v + i)).measurableSet
+  have h17 : ENNReal.ofReal (1/7 : ℝ) = 1/7 := by
+    rw [ENNReal.ofReal_div_of_pos (by norm_num), ENNReal.ofReal_one,
+      ENNReal.ofReal_ofNat]
+  have hle : ∀ i ∈ Finset.range 7,
+      (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A i) ≤ 1/7 := by
+    intro i _
+    rw [Measure.restrict_apply (hAmeas i)]
+    calc volume (A i ∩ Ioo (-(1:ℝ)/2) (1/2))
+        ≤ ENNReal.ofReal (1/7) := danger_measure_le (v + i) (by omega)
+      _ = 1/7 := h17
+  -- one pair credit: the i = 1 pair carries ≥ 1/49
+  have hone : ENNReal.ofReal (1/49)
+      ≤ (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A 1 ∩ A 0) := by
+    rw [Measure.restrict_apply ((hAmeas 1).inter (hAmeas 0))]
+    have e1 : A 0 = dangerR v := by
+      simp only [hA_def, Nat.add_zero]
+    have e2 : A 1 = dangerR (v + 1) := by simp only [hA_def]
+    rw [e1, e2, Set.inter_comm (dangerR (v + 1)) (dangerR v)]
+    calc ENNReal.ofReal (1/49)
+        ≤ ENNReal.ofReal (1/49 + ((v % 7 : ℕ) : ℝ) * (6 - ((v % 7 : ℕ) : ℝ))
+            / (49 * (v : ℝ) * ((v : ℝ) + 1))) := by
+          apply ENNReal.ofReal_le_ofReal
+          have hr6 : ((v % 7 : ℕ) : ℝ) ≤ 6 := by exact_mod_cast (by omega : v % 7 ≤ 6)
+          have hvR : (0:ℝ) < (v : ℝ) := by exact_mod_cast hv
+          have : 0 ≤ ((v % 7 : ℕ) : ℝ) * (6 - ((v % 7 : ℕ) : ℝ))
+              / (49 * (v : ℝ) * ((v : ℝ) + 1)) := by
+            apply div_nonneg
+            · exact mul_nonneg (Nat.cast_nonneg _) (by linarith)
+            · positivity
+          linarith
+      _ ≤ volume (dangerR v ∩ dangerR (v + 1) ∩ Ioo (-(1:ℝ)/2) (1/2)) :=
+          consecutive_credit_closed v hv
+  have hsum_pos : (0 : ENNReal)
+      < ∑ i ∈ Finset.Ico 1 7,
+          (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A i ∩ A (i - 1)) := by
+    have hmem : (1 : ℕ) ∈ Finset.Ico 1 7 := by decide
+    calc (0 : ENNReal) < ENNReal.ofReal (1/49) := by
+          rw [pos_iff_ne_zero]
+          exact h149
+      _ ≤ (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A 1 ∩ A (1 - 1)) := hone
+      _ ≤ ∑ i ∈ Finset.Ico 1 7,
+            (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A i ∩ A (i - 1)) :=
+          Finset.single_le_sum
+            (f := fun i => (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A i ∩ A (i - 1)))
+            (fun i _ => zero_le') hmem
+  have hcred : ((7 : ℕ) : ENNReal) / 7
+      < 1 + ∑ i ∈ Finset.Ico 1 7,
+          (volume.restrict (Ioo (-(1:ℝ)/2) (1/2))) (A i ∩ A (i - 1)) := by
+    have h71 : ((7 : ℕ) : ENNReal) / 7 = 1 := by
+      rw [show ((7 : ℕ) : ENNReal) = 7 by norm_num]
+      exact ENNReal.div_self (by norm_num) (by norm_num)
+    rw [h71]
+    exact ENNReal.lt_add_right ENNReal.one_ne_top (pos_iff_ne_zero.mp hsum_pos)
+  exact good_pos_of_path_credits (volume.restrict (Ioo (-(1:ℝ)/2) (1/2)))
+    A hAmeas 7 hle hcred
+
 #print axioms c8_consecutive_good_pos
+#print axioms c7_consecutive_good_pos
 
 end
 
