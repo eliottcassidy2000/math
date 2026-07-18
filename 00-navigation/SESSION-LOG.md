@@ -24,6 +24,25 @@ Prompt (owner): work any remaining next steps.
 FILES: THM-987, HYP-7295 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
 
 ---
+## codex-2026-07-17-S71 -- audit and integrate the abstract grid sampler
+
+Pulled boxeph-S78's two kernel-pure bricks.  `c7_consecutive_good_pos` closes
+the consecutive seven-comb wall: the union budget is exactly one and a single
+`1/49` pair credit forces positive safe measure.  `LRCGridSampling` proves the
+abstract floor/ceiling grid count for one open interval and a separated finite
+family.
+
+Updated THM-984 and the live ledger to distinguish the landed engine from the
+remaining LRC application.  Still needed: decompose the strict safe interior,
+identify its total length, bound its component count by `2*sum|v_i|`, choose
+the exact ceiling modulus, and prove the sampled predicate is `liveCount`.
+Removed two concurrently reintroduced duplicate HYP-7275 entries and retained
+the audited correction: measure zero does not imply every rational grid is
+empty.  Once `liveCount>0` is established, S69's direct adapter finishes
+without census premises.
+
+---
+
 ## codex-2026-07-17-S70 -- integrate THM-987 exact canonical deep count
 
 Pulled THM-987 after S69 published.  `LRCDeepCountExact.deep_count_exact` now

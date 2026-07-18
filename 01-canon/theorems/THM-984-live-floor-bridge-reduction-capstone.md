@@ -1,10 +1,11 @@
 ---
 id: THM-984
 title: Live-floor sampling bridge and trapped-core reduction target
-status: PAPER CLAIM / COMPUTATIONAL REFEREE. The direct `liveCount > 0` consumer is now Lean; the general endpoint-counting inequality, exact modulus arithmetic, T_s composition, and exhaustive trapped-core reduction are not yet formalized.
+status: PARTIAL LEAN BRIDGE / PAPER REDUCTION. The abstract separated-interval grid count and direct `liveCount > 0` consumer are Lean; the actual safe-set decomposition, component/measure bounds, exact modulus wire, T_s composition, and exhaustive trapped-core reduction are not yet formalized.
 source: kind-pasteur-2026-07-17-S128 (cont.47; owner: finish the math, then all the formalization)
 depends_on:
   - THM-979 (the proposed B₅-route modulus)
+  - LRCGridSampling (abstract separated-interval grid count)
   - LRCQ25Obstruction and LRCLiveCountLonely (the exact live-count consumer)
   - THM-928/932/933 (cascade/gluing), the assembly branches (LRC14GrandAssembly)
 related:
@@ -23,15 +24,20 @@ For a signed integer family use
 E(V) = 2 * sum_i |v_i|.
 ```
 
-If the good set in one period is represented by finitely many interval
-components with at most `E(V)` boundary points, the intended discrepancy bound
-is
+`LRCGridSampling.card_grid_Ioo` and `card_grid_family` now prove in Lean that a
+separated finite family of open intervals receives at least its total
+`q`-scaled length minus one point per component.  If the strict good interior
+in one period is represented by such components with at most `E(V)` members,
+the intended LRC consequence is
 
 ```text
 liveCount(v,q) >= q * μ₀(v) - E(V).
 ```
 
-Consequently, when `μ₀(v)>0`, the exact integer choice
+The remaining application layer must construct that decomposition, identify
+its total length with the relevant safe measure, prove the `E(V)` component
+bound, and identify the filtered grid with `liveCount`.  Consequently, when
+`μ₀(v)>0`, the exact integer choice
 `q₀=ceil(2E(V)/μ₀(v))` would give `liveCount(v,q₀)>0`.  The repository's
 referee checks two positive-measure examples, but computes `q₀` through a
 floating-point conversion; it is evidence, not the general proof or exact
@@ -72,8 +78,8 @@ formal partition.  Nor does it prove the required positive measure.
 
 ## Named next
 
-- Formalize the finite-component endpoint discrepancy with `2*sum|v_i|` and
-  exact ceiling arithmetic.
+- Wire `LRCGridSampling` to the strict LRC safe interior, with the
+  `2*sum|v_i|` component bound and exact ceiling arithmetic.
 - Formalize the T_s/B5 sampling route rather than treating its referee as a
   kernel theorem.
 - Prove the exhaustive trapped-core partition and the positive-measure floor.

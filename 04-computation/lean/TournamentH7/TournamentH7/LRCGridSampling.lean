@@ -3,14 +3,14 @@
   the general form of kind-pasteur THM-984(I)'s hand-off).
 
   A modulus-q grid meets an interval (a, b) ⊆ [0, 1] in more than q(b−a) − 1
-  points, and a SEPARATED family of n such intervals in more than
-  q·(total length) − n points.  This is the endpoint-counting engine of the
-  live-floor bridge: a good set of measure μ₀ with ≤ E(V) breakpoints fires
-  `liveCount(q) ≥ qμ₀ − E` — any positive-measure family becomes a census
-  certificate at the explicit modulus q₀ = ⌈2E/μ₀⌉.  The wiring to
-  `liveCount`/`lonely_of_census` (the per-packet band equivalence) is the
-  consumer's step; this file is deliberately interface-free (imports Mathlib
-  only).
+  points, and a SEPARATED family of n such intervals in at least
+  q·(total length) − n points.  This is the abstract endpoint-counting engine
+  of the live-floor bridge.  Applying it to LRC still requires a finite
+  separated-interval decomposition of the strict safe interior, its component
+  and length bounds, exact ceiling arithmetic, and the identification of its
+  sampled grid points with `liveCount`.  Once that last positivity is known,
+  `LRCLiveCountLonely` is the direct consumer; this file is deliberately
+  interface-free (imports Mathlib only).
 
   Kernel-pure: no `native_decide`, no `sorry`.
 -/

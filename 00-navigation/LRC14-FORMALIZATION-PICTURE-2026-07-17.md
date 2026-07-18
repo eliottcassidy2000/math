@@ -224,7 +224,9 @@ must state which LRC predicate it preserves.
   both factors, the per-runner danger measure `<=1/7`, and the seven
   consecutive overlap credits are kernel-pure.  `LRCC8Consecutive` assembles
   them along the path on every block `v,...,v+7` and proves positive restricted
-  Lebesgue measure for the block's common safe complement.
+  Lebesgue measure for the block's common safe complement.  The same module
+  now proves the `c=7` wall theorem: at exactly unit union budget, one positive
+  adjacent-pair credit already forces a positive safe complement.
   `LRCC8ConsecutiveWitness` extracts a concrete point and packages a literal
   `Lonely 14` witness for that `Fin 8` family without duplicating the measure
   proof.  This is the live generic shifted `c=8` theorem; it does not add the
@@ -291,16 +293,18 @@ relevant events, bound the summed gcd budgets, pay the colored `462/210`
 transport factors, handle depths six and seven, and supply the adaptive-modulus
 live floor.
 
-**S67--S69 modulus-window and live-floor audit.**  Connected all-bad zero-color seven-stalks
+**S67--S71 modulus-window and live-floor audit.**  Connected all-bad zero-color seven-stalks
 are forced into exact reduced-modulus resonance for every `q <= 98`; the
 published `q=99,d=98` example makes this cardinality cutoff sharp.  THM-979 and
 THM-984 propose large explicit sampling moduli from continuous `B5` or safe-set
 floors, respectively.  These advances are complementary, not composable by
 size alone: for thirteen distinct positive magnitudes `E=2*sum|v_i|>=182`, so
 THM-984's `ceil(2E/mu0)` is at least `364`, already outside the stalk window.
-The general endpoint-counting inequality, exact ceiling/sign normalization,
-T_s assembly, and exhaustive trapped-core reduction are not yet in Lean.
-Large-q small-reduced-speed stalks and colored `462/210` payment remain honest
+`LRCGridSampling` now proves the abstract separated-interval grid count in
+Lean.  The actual strict-safe-set decomposition, `E` component/measure bound,
+grid-to-`liveCount` identification, exact ceiling/sign normalization, T_s
+assembly, and exhaustive trapped-core reduction remain.  Large-q
+small-reduced-speed stalks and colored `462/210` payment are still honest
 sockets.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false

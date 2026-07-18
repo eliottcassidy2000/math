@@ -1275,6 +1275,12 @@ the numeric credits and Hamiltonian charging order.  This closes one concrete
 block exit but does not pay the general depth-six/seven or `462/210` census
 debts.
 
+The same module now contains `c7_consecutive_good_pos`.  For seven combs the
+union budget is exactly one, so any single adjacent overlap credit crosses the
+wall; `consecutive_credit_closed` supplies at least `1/49`.  This closes the
+consecutive c7 measure theorem but, like c8, does not add the remaining runners
+of a thirteen-speed family.
+
 THM-979's explicit sampling modulus is a distinct next bridge.  It can turn a
 continuous positive `B5` floor into a finite grid, but its proposed modulus is
 far larger than the sharp `q<=98` zero-stalk resonance range.  The two routes
@@ -1302,8 +1308,10 @@ q4488 residue packet has one genuinely nonzero small frequency.  Thus exact
 zero is routed, but small nonzero frequency and signed B5 payment remain.
 
 THM-984 was audited at this integration point.  Its intended endpoint bound
-must use `E=2*sum|v_i|`; its exact ceiling and general component discrepancy
-are not yet Lean.  The original statement that the measure-zero family
+must use `E=2*sum|v_i|`.  `LRCGridSampling` now proves the abstract interval
+and separated-family grid counts in Lean; the strict-safe-set decomposition,
+component/measure bounds, `liveCount` identification, and exact ceiling wire
+remain.  The original statement that the measure-zero family
 `(1,...,13)` has zero live points at every modulus is false—its q14 histogram
 has six live multipliers and `B5=5`.  The two positive-measure computations
 remain useful evidence, not a formal trapped-core closure.  Moreover thirteen
