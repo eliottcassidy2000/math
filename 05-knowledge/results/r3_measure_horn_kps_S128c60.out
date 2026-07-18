@@ -1,0 +1,7 @@
+### S(P) for 10-speed cores (r=3 setting): 66 cores ###
+  largest-component: min 0.008929  median 0.021104  max 0.053571
+  total measure:     min 0.083885  max 0.206746
+  worst core (smallest largest-component): [1, 2, 3, 4, 7, 8, 9, 10, 11, 12]  L=0.008929 -> 1/(3L)=37.3
+
+### worst L after removing TWO small killers exactly ###
+  scanning k1<k2 in (13*maxP, KB); reporting the worst over cores
