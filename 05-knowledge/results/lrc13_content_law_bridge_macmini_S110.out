@@ -1,0 +1,41 @@
+==========================================================================
+(A) DILATION LAW and val >= gcd (free direction)
+==========================================================================
+  base max=13 c=1: M=1/12     val=  1(=c*1) q=  12(=c*12)  law: True
+  base max=13 c=2: M=1/12     val=  2(=c*1) q=  24(=c*12)  law: True
+  base max=13 c=3: M=1/12     val=  3(=c*1) q=  36(=c*12)  law: True
+  base max=12 c=1: M=1/13     val=  1(=c*1) q=  13(=c*13)  law: True
+  base max=12 c=2: M=1/13     val=  2(=c*1) q=  26(=c*13)  law: True
+  base max=12 c=3: M=1/13     val=  3(=c*1) q=  39(=c*13)  law: True
+  => val(A) = gcd(A)*val(A/gcd) hence val >= gcd for every set.
+
+==========================================================================
+(B)+(C) tight <=> q=13val ; val = sheet number ; dilates realize every val
+==========================================================================
+  c=1: A=c*{1..12}  M=1/13 val= 1 q= 13 debt=0 gcd= 1 val==gcd:True tight:True max>=13val/2:True
+  c=2: A=c*{1..12}  M=1/13 val= 2 q= 26 debt=0 gcd= 2 val==gcd:True tight:True max>=13val/2:True
+  c=3: A=c*{1..12}  M=1/13 val= 3 q= 39 debt=0 gcd= 3 val==gcd:True tight:True max>=13val/2:True
+  c=4: A=c*{1..12}  M=1/13 val= 4 q= 52 debt=0 gcd= 4 val==gcd:True tight:True max>=13val/2:True
+  c=5: A=c*{1..12}  M=1/13 val= 5 q= 65 debt=0 gcd= 5 val==gcd:True tight:True max>=13val/2:True
+  c=6: A=c*{1..12}  M=1/13 val= 6 q= 78 debt=0 gcd= 6 val==gcd:True tight:True max>=13val/2:True
+  c=7: A=c*{1..12}  M=1/13 val= 7 q= 91 debt=0 gcd= 7 val==gcd:True tight:True max>=13val/2:True
+
+==========================================================================
+(D) NEW BOUND  val <= 4/(169*delta(A\max))  [THM-1001 + q<=2max]
+==========================================================================
+  c=1: val=1 delta=1/143 bound=3.38 holds:True slack factor=3.38
+  c=2: val=2 delta=1/286 bound=6.77 holds:True slack factor=3.38
+  c=3: val=3 delta=1/429 bound=10.15 holds:True slack factor=3.38
+
+==========================================================================
+(E) CONTENT LAW — the bridge (equivalent restatement, NOT proved)
+==========================================================================
+  tight => val = gcd(A)  <=>  A = gcd(A)*{1..12}
+  val >= gcd is FREE (A); so the entire content is  val <= gcd  on the tight locus,
+  i.e. the primitive quotient has val=1 = the deep branch is empty for primitive sets.
+  sporadic emptiness <=> [content law] + [shallow rigidity].
+
+  POSITIVE CONTROL (must fail at n=13): Goddyn-Wong {1..11,13,24}
+    GW: M=1/14 val=1 q=14 gcd=1 val==gcd:True tight(1/14):True
+    -> GW satisfies val=gcd yet is NOT {1..13}: at n=13 it is the SHALLOW RIGIDITY half
+       that fails, not val<=gcd. Any proof of (E) must be n=12-specific.
