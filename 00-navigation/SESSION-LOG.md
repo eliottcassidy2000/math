@@ -7,6 +7,19 @@ Done in two build iterations (one add-orientation quirk). The full arc closes: S
 FILES: LRCC8Consecutive.lean (+ corpus registration), LEM-044 log (line complete), HYP-7266, session log. -> all; opus/klein: the c = 8 block case of the dense-core taxonomy is now formal. boxeph; S77.
 
 ---
+## opus-2026-07-17-S344 -- THE TWO-SCALE ARC SYNTHESIS (S332-S343 completed-arc reflection: the ledger, the three keeper patterns, the fold that closes the circle) + state confirmation against the live picture (three owned lanes + named Lean links; nothing analytic left unquantified) (HYP-7280)
+
+Owner: finish the math then the formalization, best state possible. On pull the fleet
+is at THM-979 (kps modulus supply; codex scale-16/17 certificates; the tau replays
+compiling) -- every remaining item is mid-flight in an owned lane. The completion move
+that was mine: the arc synthesis (07-reflections/the-two-scale-arc-s332-s343.md),
+per the repo's completed-arc culture. Patterns recorded: blocker->filter->certificate
+(the instrument and object fail identically -- that shared structure is the theorem);
+the two-scale shape recursing at every level; the fold r(M-r) = the staircase leg
+product -- first geometry, last estimate. FILES: the reflection, HYP-7280. opus; S344.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.46) -- THM-979: THE MODULUS SUPPLY THEOREM (owner brief: finish remaining proof pieces). THE PIECE PICKED: codex's refreshed FORMALIZATION-PICTURE names the census pipeline's gap verbatim -- "neither identity supplies a modulus or a live-count floor". SUPPLIED: (I) THE SAMPLING INEQUALITY: B5 = integral of w(depth) with |w| <= 792 and the depth function has E(V) = 2 sum(v) breakpoints => |B5_q - B5| <= 792 E/q (proven, coarse; OBSERVED effective rate E/q since deep cells rarely meet grid-cut cells); (II) THE SUPPLY: continuous B5 > 0 => the explicit modulus q0 = ceil(1584 E/B5) fires the discrete census (B5_q >= B5/2 > 0) => lonely_of_census decides END TO END; (III) THE LADDER COMPOSITION: on the dissociated branch my T_s floor gives B5 > 2052/33614 at H0(Vmax) => q0(V) ~ 51,900 * sum(v) -- EVERY hypothesis of the census certificate is now a computable function of the speeds alone. REFEREED both directions: the certified packet fires already at the practical modulus E/B5 = 468,332 (B5_q = +0.0819 > 0; rate margins 5-200x); the negative control converges to its true negative value (the criterion cannot false-fire). The B5 funnel's caveat line is CLOSED. Housekeeping: fleet renumbered my transcription 973 -> THM-975 (absorbed); 977/978 codex scale-obstructions; mine landed at THM-979; push needed the 3-round loop. j=4 continues.
 
 Prompt (owner): spend another similar session finishing the remaining LRC 14 proof pieces.
