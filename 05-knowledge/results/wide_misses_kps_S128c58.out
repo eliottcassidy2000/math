@@ -1,0 +1,37 @@
+### (A) reproduce the cont.57 wide-cluster misses ###
+  misses found: 2
+   r=3 band=c core=[1, 2, 3, 5, 6, 7, 9, 10, 11, 12] (mu=1 M=12)  K=[2016, 2194, 2457]  spread=441
+     core contains 1: True ; 13|any: True ; 14|any: True
+     best witness with q<=2000: min||vt||=2/17 at (17, 4)  (>=1/14: True)
+   r=4 band=b core=[1, 2, 5, 6, 8, 9, 10, 11, 12] (mu=1 M=12)  K=[3065, 3088, 3094, 3102]  spread=37
+     core contains 1: True ; 13|any: True ; 14|any: True
+     best witness with q<=2000: min||vt||=2/19 at (19, 5)  (>=1/14: True)
+
+### (B) COVERING wide clusters: core in {1..12}, killers carry 13| and 14| ###
+  core-drop  mu M  killers        spread  D>M-mu  #band-q  first(q,a)   min||vt||
+  drop1     2  12 [169, 182]     13      True    83       (15, 1)      2/15
+  drop1     2  12 [169, 196]     27      True    62       (16, 1)      1/8
+  drop1     2  12 [169, 210]     41      True    43       (16, 1)      1/8
+  drop1     2  12 [169, 224]     55      True    40       (18, 1)      1/9
+  drop1     2  12 [169, 238]     69      True    48       (15, 1)      2/15
+  drop1     2  12 [169, 252]     83      True    47       (15, 1)      2/15
+  drop1     2  12 [169, 266]     97      True    44       (15, 1)      2/15
+  drop1     2  12 [169, 280]     111     True    45       (15, 1)      2/15
+  drop1     2  12 [169, 294]     125     True    59       (15, 1)      2/15
+  drop1     2  12 [169, 308]     139     True    63       (15, 1)      2/15
+  drop1     2  12 [169, 322]     153     True    59       (15, 1)      2/15
+  drop1     2  12 [169, 336]     167     True    66       (15, 1)      2/15
+  drop1     2  12 [169, 350]     181     True    66       (15, 1)      2/15
+  drop1     2  12 [169, 364]     195     True    70       (15, 1)      2/15
+  ...
+  TOTAL covering wide clusters: 8595 ; band-certified: 8574 ; NOT: 21
+  uncertified examples (first 8):
+    core=[1, 12] K=[308, 338] spread=30  best q<=2000: 2/15 at (15, 7) (>=1/14: True)
+    core=[1, 12] K=[294, 351] spread=57  best q<=2000: 2/15 at (15, 7) (>=1/14: True)
+    core=[1, 12] K=[351, 378] spread=27  best q<=2000: 2/15 at (15, 7) (>=1/14: True)
+    core=[1, 12] K=[308, 338] spread=30  best q<=2000: 1/8 at (16, 5) (>=1/14: True)
+    core=[1, 12] K=[294, 351] spread=57  best q<=2000: 1/8 at (16, 5) (>=1/14: True)
+    core=[1, 12] K=[351, 378] spread=27  best q<=2000: 1/8 at (16, 5) (>=1/14: True)
+    core=[1, 12] K=[308, 338] spread=30  best q<=2000: 2/17 at (17, 4) (>=1/14: True)
+    core=[1, 12] K=[294, 351] spread=57  best q<=2000: 2/17 at (17, 4) (>=1/14: True)
+DONE

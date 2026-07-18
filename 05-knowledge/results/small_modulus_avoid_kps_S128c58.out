@@ -1,0 +1,29 @@
+### criterion check on ALL covering wide clusters (core in {1..12}, killers 13a & 14b) ###
+  covering wide clusters: 8595 ; small-modulus-avoidance certified: 8589 ; failures: 6
+  first successful modulus distribution: {15: 871, 16: 1170, 17: 877, 18: 1078, 19: 913, 20: 1114, 21: 189, 22: 912, 23: 507, 24: 664, 25: 222, 26: 3, 27: 66, 28: 3}
+  failures (first 6):
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[312, 364]
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[312, 392]
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[168, 338]
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[252, 338]
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[338, 420]
+    drop=12 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] K=[338, 504]
+
+### the 21 former band-failures, under the new criterion ###
+  drop=2  K=[308, 338]   -> q=15  a=7   t=7/15    min||vt||=2/15    >=1/14: True  (#valid (q,a): 10)
+  drop=2  K=[294, 351]   -> q=15  a=7   t=7/15    min||vt||=2/15    >=1/14: True  (#valid (q,a): 10)
+  drop=2  K=[351, 378]   -> q=15  a=7   t=7/15    min||vt||=2/15    >=1/14: True  (#valid (q,a): 8)
+  drop=3  K=[308, 338]   -> q=16  a=5   t=5/16    min||vt||=1/8     >=1/14: True  (#valid (q,a): 12)
+  drop=3  K=[294, 351]   -> q=16  a=5   t=5/16    min||vt||=1/8     >=1/14: True  (#valid (q,a): 18)
+  drop=3  K=[351, 378]   -> q=16  a=5   t=5/16    min||vt||=1/8     >=1/14: True  (#valid (q,a): 16)
+  drop=4  K=[308, 338]   -> q=17  a=4   t=4/17    min||vt||=2/17    >=1/14: True  (#valid (q,a): 10)
+  drop=4  K=[294, 351]   -> q=17  a=4   t=4/17    min||vt||=2/17    >=1/14: True  (#valid (q,a): 8)
+  drop=4  K=[351, 378]   -> q=19  a=5   t=5/19    min||vt||=2/19    >=1/14: True  (#valid (q,a): 6)
+  drop=5  K=[308, 338]   -> q=18  a=7   t=7/18    min||vt||=1/9     >=1/14: True  (#valid (q,a): 12)
+  drop=5  K=[294, 351]   -> q=18  a=7   t=7/18    min||vt||=1/9     >=1/14: True  (#valid (q,a): 12)
+  drop=5  K=[351, 378]   -> q=19  a=4   t=4/19    min||vt||=2/19    >=1/14: True  (#valid (q,a): 12)
+
+### how much slack?  number of valid (q,a) pairs across the census ###
+  families: 3364 ; valid (q,a) pairs: min=0  p10=6  median=12  max=30
+  families with ZERO valid pairs: 4
+DONE

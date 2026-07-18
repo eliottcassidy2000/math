@@ -1,0 +1,56 @@
+### covering WIDE clusters, band-certified split by mu = min(core) ###
+  mu   tested   band-certified   rate
+  1    7880     7859             0.9973
+  2    715      715              1.0000
+
+### the uncertified ones, in full ###
+  #uncertified: 21
+  drop=2   core=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[308, 338] spread=30 ; 13|338 ; 14|308 ; first true witness: (15, 7, Fraction(2, 15))
+      at that q: residues=[1, 3, 4, 5, 6, 7]  emin=1 emax=7  ratio=7.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [15/14, 195/98] = [1.071, 1.990] ; a used = 7 ; a in band: False
+  drop=2   core=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[294, 351] spread=57 ; 13|351 ; 14|294 ; first true witness: (15, 7, Fraction(2, 15))
+      at that q: residues=[1, 3, 4, 5, 6, 7]  emin=1 emax=7  ratio=7.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [15/14, 195/98] = [1.071, 1.990] ; a used = 7 ; a in band: False
+  drop=2   core=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[351, 378] spread=27 ; 13|351 ; 14|378 ; first true witness: (15, 7, Fraction(2, 15))
+      at that q: residues=[1, 3, 4, 5, 6, 7]  emin=1 emax=7  ratio=7.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [15/14, 195/98] = [1.071, 1.990] ; a used = 7 ; a in band: False
+  drop=3   core=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[308, 338] spread=30 ; 13|338 ; 14|308 ; first true witness: (16, 5, Fraction(1, 8))
+      at that q: residues=[1, 2, 4, 5, 6, 7, 8]  emin=1 emax=8  ratio=8.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [8/7, 13/7] = [1.143, 1.857] ; a used = 5 ; a in band: False
+  drop=3   core=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[294, 351] spread=57 ; 13|351 ; 14|294 ; first true witness: (16, 5, Fraction(1, 8))
+      at that q: residues=[1, 2, 4, 5, 6, 7, 8]  emin=1 emax=8  ratio=8.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [8/7, 13/7] = [1.143, 1.857] ; a used = 5 ; a in band: False
+  drop=3   core=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[351, 378] spread=27 ; 13|351 ; 14|378 ; first true witness: (16, 5, Fraction(1, 8))
+      at that q: residues=[1, 2, 4, 5, 6, 7, 8]  emin=1 emax=8  ratio=8.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [8/7, 13/7] = [1.143, 1.857] ; a used = 5 ; a in band: False
+  drop=4   core=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[308, 338] spread=30 ; 13|338 ; 14|308 ; first true witness: (17, 4, Fraction(2, 17))
+      at that q: residues=[1, 2, 3, 5, 6, 7, 8]  emin=1 emax=8  ratio=8.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [17/14, 221/112] = [1.214, 1.973] ; a used = 4 ; a in band: False
+  drop=4   core=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[294, 351] spread=57 ; 13|351 ; 14|294 ; first true witness: (17, 4, Fraction(2, 17))
+      at that q: residues=[1, 2, 3, 5, 6, 7, 8]  emin=1 emax=8  ratio=8.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [17/14, 221/112] = [1.214, 1.973] ; a used = 4 ; a in band: False
+  drop=4   core=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
+      K=[351, 378] spread=27 ; 13|351 ; 14|378 ; first true witness: (19, 5, Fraction(2, 19))
+      at that q: residues=[1, 2, 3, 5, 6, 7, 8, 9]  emin=1 emax=9  ratio=9.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [19/14, 247/126] = [1.357, 1.960] ; a used = 5 ; a in band: False
+  drop=5   core=[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+      K=[308, 338] spread=30 ; 13|338 ; 14|308 ; first true witness: (18, 7, Fraction(1, 9))
+      at that q: residues=[1, 2, 3, 4, 6, 7, 8, 9]  emin=1 emax=9  ratio=9.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [9/7, 13/7] = [1.286, 1.857] ; a used = 7 ; a in band: False
+  drop=5   core=[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+      K=[294, 351] spread=57 ; 13|351 ; 14|294 ; first true witness: (18, 7, Fraction(1, 9))
+      at that q: residues=[1, 2, 3, 4, 6, 7, 8, 9]  emin=1 emax=9  ratio=9.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [9/7, 13/7] = [1.286, 1.857] ; a used = 7 ; a in band: False
+  drop=5   core=[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12]
+      K=[351, 378] spread=27 ; 13|351 ; 14|378 ; first true witness: (19, 4, Fraction(2, 19))
+      at that q: residues=[1, 2, 3, 4, 6, 7, 8, 9]  emin=1 emax=9  ratio=9.00  (band needs emax<=13*emin AND an integer in [q/14emin,13q/14emax])
+      band interval at that q = [19/14, 247/126] = [1.357, 1.960] ; a used = 4 ; a in band: False
+DONE

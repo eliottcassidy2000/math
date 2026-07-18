@@ -1,0 +1,14 @@
+### the 6 misses: core {1..11} ###
+  K=[312, 364]   covering(2..14):True   best t=3/37       min||vt||=3/37      (0.08108)  >=1/14: True
+  K=[312, 392]   covering(2..14):True   best t=3/37       min||vt||=3/37      (0.08108)  >=1/14: True
+  K=[168, 338]   covering(2..14):True   best t=3/37       min||vt||=3/37      (0.08108)  >=1/14: True
+  K=[252, 338]   covering(2..14):True   best t=3/37       min||vt||=3/37      (0.08108)  >=1/14: True
+  K=[338, 420]   covering(2..14):True   best t=3/38       min||vt||=3/38      (0.07895)  >=1/14: True
+  K=[338, 504]   covering(2..14):True   best t=3/37       min||vt||=3/37      (0.08108)  >=1/14: True
+
+### full sweep of the drop=12 stratum: core {1..11}, killers > 143 ###
+  enumerate killer pairs supplying 12|,13|,14| ; report any with NO witness q<=3000
+  covering families with core {1..11}: 943
+  with NO small-modulus (q<=40) certificate AND no witness q<=1200 at level 1/14: 0
+  smallest best-witness value seen among q<=40-uncertified: 1 at None
+DONE
