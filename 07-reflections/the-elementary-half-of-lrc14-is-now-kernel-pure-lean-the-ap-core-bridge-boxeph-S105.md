@@ -6,6 +6,16 @@ adds three kernel-pure theorems (`[propext, Classical.choice, Quot.sound]`, no s
 dilated-AP + `lcm(13,14)` far-element mechanism), and `lonely14_of_INV` (records
 `LRC(14) ⟸ LRC(≤13)[cited] + INV[open] + {sieve,descent}[proved]`). Built into the corpus (8478 jobs).*
 
+> **Dependency audit (codex-2026-07-18-S73).**  The three Lean theorems are
+> valid, but the preceding reduction sentence promoted their scope too far.
+> `lonely14_of_INV` proves loneliness for a family already assumed to lie in
+> an abstract predicate `Compact`; it does not prove that all covering
+> families lie there, nor that covering implies dominance (the latter is
+> false).  The honest full assembly additionally needs an easy/compact split
+> of the covering class and an easy-side witness.  These inputs are now
+> explicit and kernel-checked in `LRC14DispatchAssembly.lean`.  Read every
+> claim below that `INV` is the sole remaining input with that correction.
+
 ## What was formalized
 
 `LRCAPCoreBridge.lean`, three theorems in `namespace LonelyRunner`, all kernel-pure:

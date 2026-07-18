@@ -1,6 +1,8 @@
 /-
   TournamentH7.LRCNestedFibreRelaxation -- the generic finite relaxation
-  behind THM-994's scale-twenty-seven nested-fibre obstruction.
+  behind THM-994's scale-twenty-seven, THM-1072's scale-twenty-eight,
+  THM-1090's complementary scale-thirty, and THM-1096's scale-thirty-two
+  fibre obstructions.
 
   Fix an anchor union `Q`.  Every nonanchor mask contributes only its part
   outside `Q`; overlaps among those deviations can only reduce the literal
@@ -11,7 +13,9 @@
   Replacing each chosen deviation by its maximum over an independent finite
   choice space is therefore a sound upper relaxation.  No periodicity premise
   is needed for this finite-set inequality; in THM-994 periodicity is what
-  makes the anchor bank small enough to enumerate.
+  makes the anchor bank small enough to enumerate.  The concrete finite
+  banks remain external certificates; this file kernel-checks the generic
+  relaxation they consume.
 
   Kernel-pure: no `sorry`, no `native_decide`, and no new axioms.
 -/
@@ -121,7 +125,7 @@ def deviationMax (Q : Finset point) (options : provider → Finset choice)
     (mask : provider → choice → Finset point) (i : provider) : ℕ :=
   (options i).sup fun e => (mask i e \ Q).card
 
-/-- **THM-994's pointwise-maximum relaxation.**  Each nonanchor provider may
+/-- **The THM-994/1072/1090/1096 pointwise-maximum relaxation.**  Each nonanchor provider may
 independently take its best option.  This forgets compatibility and overlap,
 so it is a sound upper bound on every literal simultaneous choice. -/
 theorem card_providerUnion_le_anchor_add_pointwiseMax

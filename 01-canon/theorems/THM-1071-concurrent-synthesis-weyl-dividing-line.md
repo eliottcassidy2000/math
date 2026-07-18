@@ -1,7 +1,7 @@
 ---
 id: THM-1071
-title: THE SOFT-WEYL DIVIDING LINE (unifying four agents' concurrent results) + EXACT CROSS-VALIDATION WITH klein THM-1042 + the counting lemma REFUTED + r=4 partial. (I) CROSS-VALIDATION: my S(P) computation and klein-S327's L_max table agree on ALL NINE rows to five decimals — μ({1..k}) and 1/L_max for k = 3..11, independently coded, e.g. {1..11} gives μ = 0.05633 and 1/L_max = 77.0 in both. (II) THRESHOLD COMPLEMENTARITY: klein's (μ,N) accounting gives a threshold N/(6μ) and mine gives 1/(3L); neither dominates — klein's nearly HALVES mine at r=2 (187.9 vs 339.5, and 214.6 vs 339.5) but degrades as removal fragments the set, where mine wins (r=3: 430.4 vs 434.3; r=4: ~355 vs ~535). The right threshold is **min(N/(6μ), 1/(3L))**, which cuts THM-1051's split point from 874 to ~188. (III) THE COUNTING LEMMA IS REFUTED: a family is uncertified iff the killers' kill-sets COVER the core's safe (q,a) set, so Σ|kill| < |bits| would certify by counting; but the worst kill-fraction is **0.75**, not the ~1/7 an independence model predicts, giving r·frac = 1.50 (r=2), 1.91 (r=3), 2.38 (r=4) — all above 1. Conditioning on the core being safe makes killers MORE likely to be unsafe: positive correlation, not independence. (IV) THE DIVIDING LINE, the main content: soft Weyl is a **ONE-FREQUENCY** tool. For G a union of C intervals, integration by parts gives |∫_G e(kt)dt| ≤ C/(π|k|) — verified, and the geometric form μ/7 + 2C/(7k) is asymptotically SHARP (slack 2.78 → 1.27 → 1.01 as k runs 157 → 900 → 20000). That single estimate underwrites death-star's THM-1037 position lemma, boxeph's off-resonance density (HYP-7505), klein's measure recursion, and my own measure horn — four agents, one estimate. It does NOT bound the 13-fold product: the relation-support ladder of THM-1061(V) diverges. The error 2C/(7k) → 0 like 1/k for one speed; the product's ladder terms GROW. This reconciles boxeph-S95's "Weyl is the wrong tool" with death-star's "soft Weyl proves it" — both are right, about different objects. (V) r=4: measure horn samples give threshold ~355; the finite horn at KB = 400 ran **160 of 220 cores, 119,489,369 quadruples, ZERO uncertified**, before being cut — PARTIAL, not complete
-status: (I) VERIFIED exactly (9/9 rows, two independent implementations). (II) MEASURED. (III) REFUTED — the counting route is dead, measured not conjectured. (IV) the one-frequency bound is PROVED (elementary integration by parts) and its sharpness measured; the unification claim is an identification of four existing results, checked numerically here. (V) r=4 is **PARTIAL — 160/220 cores, zero failures; the remaining 60 cores are a rerun, not a new idea**
+title: THE SOFT-WEYL DIVIDING LINE + EXACT CROSS-VALIDATION + the counting lemma refuted + r=4 finite horn complete; THM-1097 now supplies the separate all-scale r=4 bridge
+status: (I) VERIFIED exactly. (II) MEASURED. (III) REFUTED. (IV) the one-frequency bound is PROVED. (V) PROVED FINITE-EXACT at KB=400 on all 220 cores with an independent tail referee. The later THM-1097 independently proves uniform r=4 by a sharp periodic-discrepancy component theorem, not by the bounded scans recorded here
 source: kind-pasteur-2026-07-18-S128 (cont.61; owner: run the r=4 finite horn, but also pull and investigate angles other agents are working concurrently)
 depends_on:
   - THM-1051, THM-1061   # my r=2 / r=3 closures and the horn-scaling law
@@ -107,7 +107,7 @@ at all.
 > and fails whenever the 13-fold product is expanded.** That is the whole dividing line, and
 > it predicts which future attempts will work.
 
-## (V) r=4 — partial, honestly
+## (V) r=4 finite horn — complete; all-scale bridge later supplied by THM-1097
 
 Measure-horn samples put the r=4 threshold near 355. The finite horn at KB = 400 was made
 feasible by a **sound** pruning: a quadruple can only be uncertified if its kill-sets cover
@@ -116,13 +116,26 @@ bits(P), which requires Σ frac ≥ 1, so quadruples failing that are certified 
 
 > **160 of 220 cores, 119,489,369 quadruples tested, ZERO uncertified**
 
-before being cut. **This is partial and I am not claiming r=4 closed.** The remaining 60
-cores are a rerun of existing code, not a new idea, and the worst-case measure threshold
-still needs a full scan rather than samples.
+at its core-160 progress line, but the frozen process continued.  Its terminal
+summary is
+
+> **220 of 220 cores, 142,475,077 necessary-condition quadruples, ZERO uncertified.**
+
+A separately structured standard-library C++ referee treats each tail core as
+an exact hypergraph set-cover instance and proves the stronger statement that
+no cover of size at most four exists for cores 160–219.  Optimized,
+unoptimized, and sanitizer builds are byte-identical.  The later
+`143,112,134` headline double-counted core 160; see THM-1081 for the accounting
+repair.
+
+This completes the finite horn below `KB=400`.  By itself it does **not**
+close r=4 globally.  THM-1097 now supplies the formerly missing analytic
+three-comb tail plus exact guarded complement, so the stratum is uniform for
+a separate rigorous reason.
 
 ## Named next
-- Finish r=4: rerun the 60 remaining cores, and do a proper worst-case scan for the measure
-  threshold (samples gave 354–359; KB = 400 has margin but is not certified).
+- Use THM-1097's sharp three-comb theorem as the all-scale r=4 bridge; do not
+  extrapolate the historical threshold samples.
 - Apply min(N/(6μ), 1/(3L)) retroactively to THM-1051 and THM-1061 to shrink both finite
   horns — at r=2 the split point falls from 874 to ~188.
 - The positive correlation in (III) is the real object: it is why every independence-based

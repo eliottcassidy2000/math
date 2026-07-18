@@ -11,15 +11,12 @@
   1/13-lonely at some `t₀`; `descent_dominant` (THM-1008) lifts that to a 1/14-lonely
   time for the whole family.
 
-  This is exactly what the inverse theorem `INV` (the ONE remaining OPEN piece,
-  ≡ LRC(14) covering crux ≡ Tao n=12, boxeph-S94/S104) delivers for the compact
-  covering case:  M<1/13 covering  ⟹  the core is a dilated AP  ⟹  (lcm(13,14)=182
-  forces the far element)  ρ ≥ 15 ≥ 13.  So the whole reduction reads
-
-      LRC(14)  ⟸  LRC(≤13) [cited]  +  INV [open]  +  {sieve, descent} [proved].
-
-  `lonely14_of_INV` records that composition: given `INV` (dominance form) and the
-  LRC(≤13) citation, every family it applies to is 1/14-lonely.
+  The open inverse theorem is intended to deliver this dominance on a compact
+  small-margin class.  `lonely14_of_INV` records exactly that scoped
+  composition: given `INV Compact` and the LRC(≤13) citation, every family in
+  `Compact` is 1/14-lonely.  It does not prove that every covering family is in
+  `Compact`; the easy/compact split and its easy-side witness are explicit in
+  `LRC14DispatchAssembly`.
 -/
 import Mathlib
 import TournamentH7.LonelyRunner
@@ -69,10 +66,12 @@ theorem ap_core_bridge_of_shape (cite : LRCUpTo13) (v : Fin 13 → ℤ)
   linarith [h1, h2, hfar]
 
 /-- **The inverse theorem `INV` (OPEN, dominance form).**  Stated as the conclusion
-that the compact covering case needs: every 13-family in the covering / `M<1/13`
-class (encoded here by the abstract predicate `Compact`) has its non-max speeds
-dominated 13-fold by `v_max`.  This is the ρ ≥ 13 form of the crux
-(≡ core is a dilated AP ≡ Tao n=12).  It enters as a hypothesis, never a `sorry`. -/
+that a compact small-margin class needs: every 13-family in the class encoded
+by the abstract predicate `Compact` has its non-max speeds
+dominated 13-fold by `v_max`.  This is the intended rho-at-least-13 form of
+the compact inverse theorem.  It enters as a hypothesis, never a `sorry`;
+this definition itself makes no
+claim that `Compact` is the whole covering class. -/
 def INV (Compact : (Fin 13 → ℤ) → Prop) : Prop :=
   ∀ (v : Fin 13 → ℤ), (∀ i, 0 < v i) → Compact v →
     ∃ vstar : Fin 13, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar

@@ -1,17 +1,26 @@
 ---
 id: THM-1061
-title: THE r=3 CLUSTERED CASE CLOSED, THE HORN-SCALING LAW R = 7/18 (which also completes THM-1051), AND THE SOFT-WEYL LADDER REFUTED. (I) r=3 MEASURE HORN: removing the two smaller killers from S(P) exactly, the worst surviving component over all 66 ten-speed cores and all killer pairs below 900 is L = 0.00077446 (core [1,2,4,5,6,7,8,9,10,11], killers 864/897), giving a third-killer threshold 1/(3L) = 430.4. (II) r=3 FINITE HORN: every covering family with all three killers below 431 — **3,408,751** of them — is certified by the small-modulus criterion at q ≤ 40; **zero uncertified**. 430.4 < 431, so the horns overlap and the r=3 clustered case is CLOSED. (III) THE HORN-SCALING LAW, which repairs a gap I had left implicit in THM-1051: both measure horns were scanned with the REMOVED killers bounded, and beyond that bound L shrinks like 1/k so the threshold grows — but the next killer grows too. The governing ratio R = (1/(3L))/k_max-removed is **bounded by 7/18 = 0.3889 generically and by 0.4341 in the worst sample**, constant across FIVE orders of magnitude (157 → 400,000) and under adversarial structure (k₂ = 2k₁, k₁+1, k₁+2). The constant is exact: the generic gap left by a killer is 6/(7k), so 1/(3L) = 7k/18. Since R < 1 the threshold always sits strictly below the killer already removed, hence below the next one — **the horns overlap at every scale, not merely inside the scanned window**. (IV) SOFT WEYL, two structural facts: at λ = 1/14 the safe-indicator has Fourier coefficients c_m = −sin(πm/7)/(πm), which **vanish exactly on multiples of 7**, and whose sign is −1 for m mod 14 ∈ {1,…,6} and +1 for {8,…,13} — so a relation all of whose coefficients satisfy |m_j| ≤ 6 contributes with sign (−1)^support, making the Fourier expansion an alternating ladder in RELATION SUPPORT, the same alternation as the Bonferroni ladder of THM-930/935 but indexed by relations rather than events. (V) BUT THE LADDER DIVERGES — REFUTED: the terms GROW (w₂ = 1.12, w₃ = −5.23, w₄ = +12.06 on the tight family), so truncation gives nothing; the absolute relation-weight sum at support ≤ 3 is 4.07–6.35, dominated by DOUBLING relations 2v_i − v_j = 0 at weight 0.04678 each. The soft-Weyl route fails for the same reason the union bound fails — combinatorial growth of relations beats coefficient decay
-status: (I),(II) PROVED for r = 3 — (I) is an exact-rational interval computation, (II) an exhaustive finite verification with an explicit (q,a) witness per family. (III) VERIFIED across five scale decades and three adversarial structures, with the generic constant 7/18 derived exactly; it is the ingredient that makes (I)+(II) and THM-1051 complete rather than window-bounded, and it is stated here as measured, not proved in closed form. (IV) PROVED (elementary trigonometry, sign law checked for all m < 60). (V) REFUTED — the divergence is measured, and the apparent "bracketing" of μ/main by consecutive truncations is VACUOUS (the bounds are −3.1 and +2.1 around a quantity that is trivially in [0,1])
+title: THE r=3 CLUSTERED CASE IS UNIFORMLY CLOSED BY THE EXACT TWO-COMB COMPONENT THEOREM; THE ORIGINAL SAMPLED SCALING ARGUMENT REMAINS WITHDRAWN, AND THE SOFT-WEYL LADDER IS REFUTED
+status: PROVED uniformly for r=3 by THM-1094. Its exact 9,246,070-pair bank plus analytic tail proves the strong component theorem L>1/(3k2); independently, its sharp periodic-discrepancy corollary proves the weaker sufficient L>1/(7k2) from only the 66-core atlas and elementary inequalities, so uniform r=3 closure does not depend on the large bank. The older bounded interval computation and 3,408,751-row finite horn remain exact independent checks. MISTAKE-163 remains in force against the original sampled all-scale inference; THM-1094 supplies a new proof rather than rehabilitating that inference. The Fourier coefficient formula and elementary sign law are exact; the relation-support truncation is computationally refuted
 source: kind-pasteur-2026-07-18-S128 (cont.60; owner: run the r=3 finite horn, work the remaining LRC(14) mathematical pieces, think soft Weyl bounds)
 depends_on:
   - THM-1051         # the r=2 dichotomy this extends, and whose scan-window gap (III) repairs
+  - THM-1094         # exact two-comb component theorem; the uniform all-scale bridge
 related:
   - THM-930, THM-935 # the Bonferroni / relation-mass ladders that (IV) explains Fourier-side
   - THM-1026         # opus: the 13/7 overshoot; (V) is the same failure in Fourier clothing
-script: 04-computation/r3_measure_horn_kps_S128c60.py, r3_pair_removal_kps_S128c60.py, r3_finite_horn_kps_S128c60.py, horn_scaling_check_kps_S128c60.py, soft_weyl_kps_S128c60.py, weyl_support_ladder_kps_S128c60.py (+ .out)
+  - MISTAKE-163      # the old sampled proof was invalid; the new proof does not erase that audit
+script: 04-computation/r3_measure_horn_kps_S128c60.py, r3_pair_removal_kps_S128c60.py, r3_finite_horn_kps_S128c60.py, horn_scaling_check_kps_S128c60.py, soft_weyl_kps_S128c60.py, weyl_support_ladder_kps_S128c60.py, lrc14_r3_two_comb_component_exact_codex_S73.cpp, lrc14_r3_two_comb_extremal_replay_codex_S73.py (+ .out)
 ---
 
-# THM-1061 — r=3 closed, the scaling law, and the soft-Weyl negative
+# THM-1061 — r=3 uniformly closed, and the soft-Weyl negative
+
+> **Audit correction and repair (codex-S73; MISTAKE-163; THM-1094).**  The
+> finite horn and bounded exact interval scan below were valid.  The former
+> all-scale inference from sampled ratios was not and remains withdrawn.
+> THM-1094 now closes the gap by a different proof: an exact 9,246,070-pair
+> endpoint bank plus an elementary mass/component tail covering every omitted
+> scale.
 
 ## (I)–(II) The r=3 clustered case
 
@@ -33,35 +42,65 @@ Exhaustive check by bitmask intersection against the small-modulus criterion at 
 
 > **3,408,751 covering families with all three killers < 431 — 3,408,751 certified, 0 uncertified.**
 
-430.4 < 431, so the horns overlap and **r = 3 is closed**.
+430.4 < 431, so these two original horns overlap throughout the exact interval
+scan's `k2<900` window.  They are now retained as independent bounded checks;
+uniform closure comes from THM-1094.
 
-## (III) The horn-scaling law — and a gap in THM-1051 that it repairs
+## (III) The exact all-scale bridge — THM-1094
 
-Both measure horns above (and in THM-1051) were computed with the *removed* killers bounded
-— 874 for r=2, 900 for r=3. That is not by itself a complete argument: beyond the bound,
-L shrinks like 1/k and the threshold 1/(3L) grows without limit. What saves it is that the
-*next* killer grows too. The right quantity is
+For every ten-speed core `P subset {1,...,12}` and every
+`13 max(P)<k1<k2`, THM-1094 proves
 
-> **R = (1/(3L)) / k_max-removed**, and the horns overlap at all scales iff R < 1.
+```text
+L(P;k1,k2)>1/(3k2),
+```
 
-Measured across five decades and three adversarial structures:
+where `L` is the longest component after removing both danger combs from the
+core-safe set.  Its proof has two exhaustive pieces in the logical, not
+heuristic, sense:
 
-| removed-killer scale | 157–900 | 900–3k | 3k–10k | 10k–60k | 60k–400k |
-|---|---|---|---|---|---|
-| max R, r=2 (remove 1) | 0.3889 | 0.3889 | 0.3889 | 0.3889 | 0.3889 |
-| max R, r=3 (remove 2) | 0.4341 | 0.4244 | 0.3889 | 0.4243 | 0.3889 |
+1. Every core has a component of length `ell>=1/112`.  Tooth incidence and
+   occupied-length bounds prove the desired inequality whenever
 
-| adversarial | k₂ = 2k₁ | k₂ = k₁+1 | k₂ = k₁+2 |
-|---|---|---|---|
-| max R | 0.4242 | 0.4244 | 0.4249 |
+   ```text
+   56ell k2-49ell k1-24(k2/k1)-185>0.
+   ```
 
-The generic value is **exactly 7/18**: a single killer leaves gaps of length 6/(7k), so
-1/(3L) = 7k/18 and R = 7/18 = 0.3889. Worst observed anywhere is 0.4341.
+   This includes every `ell k1>=209/7`, hence every `k1>=3344`, and gives an
+   explicit `k2` tail below that height.
+2. The exact rational endpoint referee exhausts the finite complement:
+   66 cores, 9,246,070 guarded pairs, zero failures.  Its hardest finite-bank
+   row has `3k2L=158/119` at core
+   `{1,2,3,5,6,7,8,9,10,11}` and `(k1,k2)=(153,159)`.
 
-Since R < 1 always, the measure-horn threshold sits strictly below the killer already
-removed, hence strictly below the next killer. **The bounded scans therefore extend to all
-scales**, and this is what makes both the r=3 result here and THM-1051 complete rather than
-window-bounded. Recording it as the missing ingredient of my own prior theorem.
+The strong theorem is more than closure needs.  THM-1094 also proves directly,
+using the sharp periodic bound
+
+```text
+|I intersect D_k| <= |I|/7+6/(49k),
+```
+
+that `L(P;k1,k2)>1/(7k2)`.  For 65 cores this follows from the exact atlas
+inequality `ell(P)(13max(P)+1)>=1727/1008>5/3`.  On the unique smaller core,
+the same inequality handles `k1>=187`; the residual
+`157<=k1<k2<=187` has at most five components and closes by the elementary
+positive polynomial
+
+```text
+5k1k2-96k2-656k1 >= 5870.
+```
+
+For a third killer `k3>k2`, the sharp periodic bound is then strictly less
+than `L`.  This proves the uniform three-killer clustered case from the
+66-core atlas alone, without a finite/measure split or covering hypothesis.
+The 9,246,070-row bank remains the proof of the stronger `1/(3k2)` structural
+statement and an independent stress test of the endpoint carrier.
+
+The historical scaling samples remain useful diagnostics, but not proof.
+In particular, the exact hardest finite-bank ratio is `R=119/158=0.753...`,
+well above the old sampled `0.4341`; this quantitatively confirms why
+MISTAKE-163 had to be recorded.  THM-1051 remains uniform by its own
+finite/mixed/explicit-large split.
 
 ## (IV) Soft Weyl: two structural facts
 
@@ -115,11 +154,10 @@ opus's 13/7 overshoot (THM-1026) in Fourier clothing — the same wall, reached 
 road. Soft Weyl does not open it.
 
 ## Named next
-- r = 4: the scheme applies unchanged (threshold still 1/(3L), independent of r) and (III)
-  says the scaling is safe; the finite horn is the cost, and it grew 42k → 3.4M from r=2 to
-  r=3, so r=4 wants a smarter enumeration than brute triples — the covering constraint
-  (multiples of 13 and 14 forced among the killers) is the lever.
-- Prove (III) in closed form. The generic 7/18 is exact; what is needed is a worst-case
-  bound over the interaction of two removals, which the data pins at ≤ 0.4341.
+- THM-1097 has now completed the analogous three-removal all-scale bridge for
+  `r=4`, using THM-1094's sharp periodic estimate
+  `|I intersect D_k|<=|I|/7+6/(49k)` and the target
+  `L>1/(7k_max-removed)`.  The next clustered problem is the four-removal
+  `r=5` bridge, where the coarse mass/component slope crosses the wrong way.
 - The doubling relations of (V) are the concrete obstruction; a bound that exploits their
   *sign coherence* rather than their absolute size is the only Fourier route left open.

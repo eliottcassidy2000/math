@@ -14,9 +14,10 @@
   `lonely14_dispatch`(PROVED): the full dichotomy — LRC(14) for `v` follows from the
   COVERING case alone; the non-covering case is discharged here by the sieve.
 
-  With `LRCAPCoreBridge` (S105) the covering case reduces (via `INV` + LRC(≤13)) to
-  `ap_core_bridge`, so:
-      LRC(14)  ⟸  LRC(≤13) [cited]  +  INV [open]  +  {sieve dispatch, descent} [Lean].
+  `LRCAPCoreBridge` separately closes any compact class on which an `INV`
+  dominance theorem holds.  Connecting the two modules additionally requires
+  an easy/compact split of the covering class and a witness on the easy side;
+  `LRC14DispatchAssembly` records exactly those hypotheses.
 -/
 import Mathlib
 import TournamentH7.LonelyRunner
@@ -70,8 +71,9 @@ def CoveringCase : Prop :=
 /-- **LRC(14) reduces to the covering case (PROVED).**  Given the covering crux, every
 13-family of positive speeds is `1/14`-lonely: the covering families by the crux, the
 non-covering families by `sieve_dispatch`.  This records
-`LRC(14) ⟸ CoveringCase + {sieve dispatch} [Lean]`, and (with S105)
-`CoveringCase ⟸ LRC(≤13) + INV + descent`. -/
+`LRC(14) ⟸ CoveringCase + {sieve dispatch} [Lean]`.  The separate assembly
+with S105 requires an explicit easy/compact covering split; `INV` alone does
+not imply `CoveringCase`. -/
 theorem lrc14_of_covering (hcov : CoveringCase)
     (v : Fin 13 → ℤ) (hpos : ∀ i, 0 < v i) : ∃ t : ℝ, Lonely 14 v t :=
   lonely14_dispatch v (hcov v hpos)

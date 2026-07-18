@@ -1,7 +1,7 @@
 ---
 id: THM-1072
 title: Scale-twenty-eight Hamming-six two-adic fibre obstruction
-status: PROVED STRUCTURAL + INDEPENDENT FINITE-EXACT — a deterministic Python primary and an independently developed standard-library C++ referee agree on the complete labelled grammar, scalar bank, terminal Z/4-fibre relaxation, and exact reachable-union sidecar; a second literal-CRT Python flag audit independently confirms threshold exactness
+status: PROVED STRUCTURAL + DUAL INDEPENDENT FINITE-EXACT — the terminal Z/4-fibre deficit is reproduced by the frozen NumPy primary, a separately structured literal-CRT Python flag certificate, and an independent standard-library C++ referee; all agree on the 3,170 scalar survivors, 19,020 owner obligations, threshold census, and 6,628,500 exact reachable-mask incidences
 source: codex-2026-07-17-S66 scale-twenty-eight continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990, THM-992, THM-994]
 related: [THM-963, THM-969, THM-981, HYP-6820]
@@ -27,11 +27,10 @@ fibres of `Z/28 -> Z/4`.  It is already terminal.  The competing
 `4 x 7` CRT grid does not improve a single terminal bound on the scalar
 survivor bank.  Thus this face does **not** need a finer residual carrier.
 
-The Python primary checks every labelled scalar row; multiplicative orbits are
-telemetry only.  An independently developed standard-library C++ referee now
-reconstructs the literal CRT masks in a different order, repeats the complete
-scalar and owner audit, and agrees on every theorem-bearing count.  A separate
-literal-CRT Python flag audit also agrees on the terminal threshold predicate.
+The original frozen primary checks every labelled scalar row; multiplicative
+orbits are telemetry only.  Two independently structured replays now agree
+with it, so the theorem is promoted to `PROVED STRUCTURAL + DUAL INDEPENDENT
+FINITE-EXACT`.
 
 ## 1. Hereditary divisor grammar
 
@@ -208,9 +207,8 @@ There is no row with three, four, five, or six surviving owner projections.
 A global unit word would have to cover all `28` sheets at every one of its six
 owners.  By (8), every scalar row instead has at least four owner projections
 that are impossible for **all** unit choices.  Combined with the scalar
-elimination preceding (7), this proves the emptiness statement.  The
-independent referee described in Section 9 checks every implication in this
-finite bank.
+elimination preceding (7), this proves the emptiness statement.  Section 9
+records two independent replays of the implication.
 
 No orbit quotient enters this implication.  Multiplication by `F_13^*` splits
 the `3170` labelled contexts into orbit-size histogram
@@ -352,7 +350,7 @@ Fano/chi-seven colours and completed tournaments discard the `28`-cell
 threshold.  This is why (20) is the honest tournament carrier, and also why
 the tournament remains a sidecar rather than the proof object.
 
-## 9. Reproducibility and independent replay
+## 9. Reproducibility and independent replays
 
 The deterministic primary:
 
@@ -389,21 +387,45 @@ fibre rows    d4d9362a069e5fe445a00d221907d7e170906e1b7ebf34528590c03711fc2819
 exact banks   5561960152be08a1b7d61cb8b23e40e6ea51fa25c18086c117823bd9db06d000
 ```
 
-The C++ reconstruction agrees with the primary on all `24911964` scalar
-contexts, all `3170` survivors, all `19020` labelled owner implications, both
-owner-bound histograms, all `6628500` reachable-mask incidences, and the zero
-threshold-mismatch verdict.  The separate Python flag audit gives contingency
+The frozen primary and its exact-DP sidecar share mask construction and are
+therefore not independent of each other.  The promotion instead rests on two
+separately structured referees.
+
+The first referee is a literal-CRT Python flag certificate.  It normalizes the
+3,170 rows to 1,585 owner keys, stores saturated capacities of the four
+mod-four fibres, and separately reconstructs all exact banks.  It agrees on
+the scalar histogram, exact feasible-owner census `0:2018,1:912,2:240`, exact
+maximum histogram, all 6,628,500 reachable-mask incidences, and zero threshold
+mismatches.  Its mod-seven flag has 6,072 owner false positives, confirming
+that the successful quotient is genuinely the two-adic one.  Normal and `-O`
+runs are byte-identical.
+
+The second referee is standard-library C++.  It changes language, hash
+scheme, mask ordering, row representation, and exact-DP traversal.  It checks
+the literal-cover-implies-relaxed-cover implication on all 19,020 labelled
+owner obligations and independently reproduces every decisive census.  Clang
+optimized/unoptimized and ASan/UBSan builds produce the frozen output
+byte-for-byte.  Referee hashes are
+
+```text
+Python flag source/output  3482a5a103891342f25448c0cc9ca0613494b04b1a05d57221f97a089f38d1f1
+                           d815c9197ec3e6b71436485713e763f80621c9cc7a47c064cc728a485313ffa5
+C++ referee source/output  d0bec69db7571781704e0dc906c258816e129a8563e66c1406ef894a7a6973b8
+                           ad00571d662430ac14906673b743fd0327d7e379ad0ab3bb48289bb3aa9eb7f1
+```
+
+The exact-versus-flag contingency is
 
 ```text
 (exact false, flag false): 17628,
 (exact true,  flag true):   1392,
 ```
 
-with no off-diagonal entry.  These implementations do not share source code.
-The two tournament serializations are deliberately only sidecars: the primary
-ends its key with `U_7`, whereas the C++ referee ends its key with exact-bank
-size.  Both are transitive on every row, but agreement of those nonidentical
-keys is neither assumed nor used by the proof.
+with no off-diagonal entry.  The two tournament serializations are
+deliberately only sidecars: the primary ends its key with `U_7`, whereas the
+C++ referee ends its key with exact-bank size.  Both are transitive on every
+row, but agreement of those nonidentical keys is neither assumed nor used by
+the proof.
 
 This theorem concerns only the AP-centred Hamming-six common-scale-28 face.  It
 does not address Hamming five, non-AP/deep sheets, the global sporadic branch,

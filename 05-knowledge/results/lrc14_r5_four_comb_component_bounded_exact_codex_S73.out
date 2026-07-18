@@ -1,0 +1,24 @@
+THM-1123 bounded exact sharp four-comb certificate
+arithmetic=integer-rational; decisions=__int128 cross-products
+scope=all 495 eight-speed cores; first 40 legal speeds per core
+window=[13*max(P)+1,13*max(P)+40]
+target=7*k4*L>1
+cores=495
+rows_per_core=91390
+rows_total=45238050
+failures_total=0
+min_core_ell=1/70
+min_ell_core=[1,2,6,7,8,9,10,11]
+hardest_core=[1,2,4,5,7,9,11,12]
+hardest_quadruple=(158,160,162,164)
+hardest_longest_component=41/25920
+min_7k4L=11767/6480
+max_sharp_R=6480/11767
+hardest_longest_interval=[673/2240,685/2268]
+hardest_longest_interval=[1583/2268,1567/2240]
+tournament_vertices=exact surviving endpoints
+pairwise_observable=exact rational order; tournament=transitive
+order_only_destroyed=metric lengths|endpoint owners|removal stages
+challenged_vertices=runners|combs|core components|teeth|endpoints|residues|proof obligations
+scope_warning=bounded bank only; uniform r=5 remains open
+certificate=PASS

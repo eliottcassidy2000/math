@@ -1,7 +1,7 @@
 ---
 id: THM-1051
 title: THE MEASURE/FINITE DICHOTOMY — the two-killer clustered case of "covering ⟹ M > 1/14" is CLOSED, and the non-covering lemma it replaces is REFUTED. (0) REFUTATION of my own THM-1041 named-next: no fixed modulus range can work, because k₁ = lcm(15,…,Q) with k₂ = 2k₁ is a LEGAL trapped-core-shape family (covering, compressed, gap family, verified legal for Q ≥ 30) every one of whose moduli in [15,Q] is killing — a killer divisible by q is unsafe at q for every multiplier. So "the killing sets never cover" is FALSE. (I) But defeating every modulus forces the killers to EXPLODE — the minimum max(k₁,k₂) defeating all of [15,Q] runs 271 (Q=18) → 1274 (Q=20) → >4000 (Q=24) — and huge killers are exactly what a MEASURE argument wants. (II) THE CORE-SAFE SET: S(P) = {t : ‖pt‖ ≥ 1/14 ∀p ∈ P} is an exact finite union of rational intervals; for the twelve cores P ⊆ {1,…,12} with |P| = 11 it has 12–20 components, total measure 0.051–0.127, largest component 0.0077–0.042. (III) THE MEASURE HORN: inside an interval of length L on which core and k₁ are safe, k₂'s unsafe set has measure ≤ L/7 + 2/(7k₂), so a good t survives whenever **k₂ > 1/(3L)**. Removing any single killer k₁ < 874 from S(P) exactly, the worst surviving component over ALL twelve cores and ALL k₁ is L = 0.00098184 (attained at k₁ = 873, uniformly across cores), giving a threshold of **339.5**. (IV) THE FINITE HORN: all covering families with BOTH killers < 874 — there are 41,986 — are certified by the small-modulus criterion at q ≤ 40, **41,986 / 41,986, zero uncertified**. (V) THE HORNS OVERLAP: 339.5 < 874, so every two-killer clustered covering family is certified by one horn or the other, with no gap and a factor-2.6 margin. The adversarial lcm-killers of (0), which defeat every modulus, are certified by the measure horn at the explicit t = 556667/7280000
-status: PROVED for two killers and any core P ⊆ {1,…,12} with |P| = 11 — (III) is an elementary measure count over an exactly-computed rational interval set, (IV) is an exhaustive finite verification in exact arithmetic with an explicit (q,a) witness per family, and (V) is the arithmetic 339.5 < 874. (0) is a construction, hence a refutation. The r ≥ 3 killer case follows the same scheme with threshold k_min > 2r/(L(7−r)), which is finite for r ≤ 6 but whose finite horn has NOT been run — see Named next
+status: PROVED FINITE-EXACT for two killers and any core P ⊆ {1,…,12} with |P| = 11. The uniform split has three cases: both killers below 874 use the 41,986-family exact finite horn; one below and one at least 874 uses the exact all-core/small-killer component scan, whose minimum is L=2/2037; both at least 874 use the explicit core-safe interval of length 1/1092 and an elementary two-comb measure bound. This proof does not use THM-1061's sampled scaling claim. The finite banks have one implementation and are not kernel-internalized
 source: kind-pasteur-2026-07-18-S128 (cont.59; owner: work the non-covering lemma on the composite-killer extremals)
 depends_on:
   - THM-1041         # the criterion, and the named-next this refutes and replaces
@@ -85,13 +85,22 @@ with the small-modulus criterion at q ≤ 40, via bitmask intersection:
 
 ## (V) The horns overlap — no gap
 
-339.5 < 874. So for any two-killer clustered covering family with core P ⊆ {1,…,12}:
+Write the ordered killers as `k₁<k₂`.  The uniform proof has three cases:
 
-- if both killers are < 874, the finite horn certifies it (IV);
-- otherwise the larger killer exceeds 874 > 339.5, and the measure horn certifies it (III).
+- if `k₂<874`, the finite horn certifies it (IV);
+- if `k₁<874≤k₂`, the exact removal scan gives a surviving component of
+  length at least `L=2/2037`, and `k₂≥874>1/(3L)=679/2`, so (III)
+  certifies it;
+- if `874≤k₁<k₂`, use the explicit core-safe interval `I` of length
+  `ell=1/1092`.  Each killer removes at most `ell/7+2/(7kᵢ)`, hence together
+  they remove at most
 
-There is no third case, and the overlap is a factor of 2.6. Direct spot-checks confirm
-both horns: 220/220 random families with both killers ≥ 874, and 294/294 *constructed*
+  `2ell/7 + 4/(7*874) < ell`.
+
+  A point of `I` survives both combs.
+
+These cases are exhaustive.  Direct spot-checks additionally confirm the
+two measure regimes: 220/220 random families with both killers ≥ 874, and 294/294 *constructed*
 covering mixed families (small k₁, large k₂ up to 5·10⁵). The adversarial lcm-killers of
 (0) — the families designed to defeat every modulus — are certified by the measure horn at
 the explicit witness **t = 556667/7280000**.
@@ -109,16 +118,12 @@ Also worth recording: M({2,…,12}) = **1/7** exactly, at t = 1/14 (the binding 
 giving 2/14). And M({2,…,12} ∪ {V, 2V}) = 1/7 for every V from 157 to 1600 — the
 scale-separated families sit at exactly **twice** the 1/14 threshold, not near it.
 
-## Completeness at all scales (added by THM-1061 III)
+## Why no scaling conjecture is needed
 
-The measure horn above was computed with the REMOVED killer bounded by 874. That is not by
-itself complete: beyond the bound L shrinks like 1/k and the threshold 1/(3L) grows. What
-saves it is that the next killer grows too. The governing ratio R = (1/(3L))/k_removed is
-**7/18 = 0.3889 generically** (a killer leaves gaps of length 6/(7k), so 1/(3L) = 7k/18) and
-at most 0.4341 in any sample, measured across five scale decades (157 to 400,000) and under
-adversarial structure. Since R < 1 the threshold always sits strictly below the killer
-already removed, hence below the next one, so the bounded scan extends to every scale.
-See THM-1061 (III).
+The mixed case uses the exact bounded removal scan only when `k₁<874`.
+When `k₁≥874`, the proof changes to the simultaneous two-comb union bound on
+the fixed interval `I`; it never extrapolates a sampled component ratio.
+Thus THM-1061(III), withdrawn by MISTAKE-163, is not an input to this theorem.
 
 ## Named next
 - **Run the finite horn for r = 3,…,6 killers.** The measure horn already generalises:

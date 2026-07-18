@@ -1,7 +1,7 @@
 ---
 id: THM-1090
 title: Scale-thirty Hamming-six two-flag obstruction
-status: PROVED STRUCTURAL + INDEPENDENT FINITE-EXACT — a deterministic all-labelled algebraic-CRT Python primary and an independently developed literal-CRT standard-library C++ referee agree on the 185,193-word hereditary grammar, all 171,118,332 labelled scalar contexts representing 588,280,492,800 raw states, the 54,050-row scalar bank, the 120-row Z/6 residual, all 720 terminal Z/10 owner deficits, and every exact-DP maximum/bank count. Both frozen outputs replay byte-for-byte; the C++ O3/O0/ASan+UBSan/libc++-hardening matrix is identical and static analysis is clean.
+status: PROVED STRUCTURAL + MULTIPLY INDEPENDENT FINITE-EXACT — two separately developed Python primaries and two standard-library C++ referees agree on the 185,193-word hereditary grammar, all 171,118,332 labelled scalar contexts representing 588,280,492,800 raw states, the 54,050-row scalar bank, the 120-row Z/6 residual, and all 720 terminal Z/10 owner deficits. The referees additionally certify exact reachable masks or all 18,874,368 literal residual owner/unit words; all frozen outputs replay byte-for-byte across their recorded build matrices.
 source: codex-2026-07-18-S67 scale-thirty continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-994, THM-1072]
 related: [THM-983, HYP-6820]
@@ -10,6 +10,10 @@ verification:
   - 05-knowledge/results/lrc13_scale_thirty_hamming_six_two_flag_obstruction_codex_c30.out
   - 04-computation/lrc13_scale_thirty_hamming_six_two_flag_referee_codex_c30.cpp
   - 05-knowledge/results/lrc13_scale_thirty_hamming_six_two_flag_referee_codex_c30.out
+  - 04-computation/lrc13_scale_thirty_hamming_six_complementary_fibre_obstruction_codex_c30.py
+  - 05-knowledge/results/lrc13_scale_thirty_hamming_six_complementary_fibre_obstruction_codex_c30.out
+  - 04-computation/lrc13_scale_thirty_complementary_fibre_referee_codex_c30.cpp
+  - 05-knowledge/results/lrc13_scale_thirty_complementary_fibre_referee_codex_c30.out
 ---
 
 # THM-1090 — scale thirty has a terminal complementary-fibre deficit
@@ -488,7 +492,37 @@ clang++ -std=c++20 -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror \
 Both Python modes and the independently compiled referee have been replayed
 against their stored outputs byte-for-byte.
 
+## 10. A second independent certificate pair
+
+A separately written NumPy/literal-CRT primary and standard-library C++
+referee independently reconstruct the same grammar, scalar census, `U6`
+live-owner histogram
+
+```text
+0:45110, 1:7536, 2:1284, 6:120,
+```
+
+and terminal `U10` histogram
+
+```text
+23:48, 24:120, 25:192, 26:240, 27:72, 28:48.
+```
+
+That referee goes beyond the relaxed bank: it checks all `18,874,368`
+literal residual unit words on the 720 owner obligations pointwise, finds
+zero covers, and obtains exact literal maxima
+`23:72,24:144,25:192,26:264,27:48`.  Its optimized, unoptimized, and
+ASan+UBSan outputs are byte-identical.  Frozen hashes are
+
+```text
+second Python source  42acbec7a6d5131d4ad34f7d51e4fc1b41d6f87c6c33f6ae4ccf569ff31ad253
+second Python output  942ae6038530378a32d43ff2fa3bd91bb73bf4720a2a32e4175aa81fd064fc6d
+second C++ source     16d272548d305ba376f7ef8780f0056e1058753b3651aa0023c8b2aed7e5c83e
+second C++ output     83b49a729b595652fba0edb98adba20f176f9a439a36903eeefeeb31caa7a33b
+```
+
 This theorem concerns only the AP-centred Hamming-six common-scale-30 face.  It
 does not close Hamming five, non-AP/deep sheets, the global sporadic branch, or
 the full LRC(14) theorem.  Scale 31 is already prime-excluded by THM-983, so
-the next untreated composite on this particular common-scale H6 line is 32.
+THM-1096 now closes scale 32 separately; the next untreated composite on this
+particular common-scale H6 line is 33.

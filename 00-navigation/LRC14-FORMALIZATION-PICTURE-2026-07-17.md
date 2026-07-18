@@ -378,15 +378,32 @@ every owner miss at least three sheets; a primary and two independent referees
 agree.  Scale 26 is multiple-of-thirteen excluded.  THM-993/994 close `c=27`
 in three implementations: nested `Z/3,Z/9` relaxations kill every row, and a
 separate nine-fibre flag proof makes every order-27 owner impossible; heredity
-supplies at least two.  THM-1072 closes `c=28` in three implementations: its
-sound `Z/4` upper relaxation leaves at most two feasible owners per scalar row,
-and the exact reachable-mask sidecars have zero threshold mismatch.  Scale 29
-is prime-excluded.  THM-1090 closes `c=30` by complementary quotient flags:
-the `Z/6` anchor pass reduces 54,050 scalar rows to 120, and the transverse
-`Z/10` pass gives all 720 residual owner bounds in `23..28`.  Independent
-Python algebraic-CRT and C++ literal-CRT implementations agree on the complete
-171,118,332-context scalar census and all 3,401,088 exact residual masks.
-Scale 31 is prime-excluded, so the next untreated common scale is `c=32`.
+supplies at least two.  THM-1072 independently closes `c=28`: a
+`Z/28 -> Z/4` fibre-capacity relaxation makes every one of 3,170 scalar
+survivors impossible at at least four of its six owners, and three
+implementations agree on all 6,628,500 exact reachable-mask incidences.
+`LRCNestedFibreRelaxation.lean` kernel-checks the generic anchor/deviation
+upper relaxation used here and at `c=27`; the large concrete banks remain
+external.  Scale `c=29` is prime-excluded.  THM-1090 then closes `c=30` with
+complementary mod-six and mod-ten thick-fibre relaxations: the common
+live-owner histogram is `0:45998,1:6852,2:1200`, so no row reaches all six
+owners.  An independent C++ referee reproduces the complete scalar bank and
+  checks 18,874,368 literal residual words against both bounds.  Scale `c=31`
+is prime-excluded.  THM-1096 closes `c=32` by a `Z/8` thick-fibre
+relaxation: independent Python and C++ certificates agree on the 3,450 scalar
+survivors and live-owner histogram `0:2802,1:456,2:192`.  The next untreated
+composite common scale is `c=33`.
+The clustered large-speed branch has also sharpened independently of this
+ramified-scale ledger.  THM-1094 proves the uniform two-comb component theorem
+and THM-1097 proves the uniform three-comb theorem, so clustered `r=3,4` are
+closed at all scales.  `LRCSharpCombArithmetic.lean` kernel-checks their ratio
+tails, final-killer inequality, exceptional rectangle, and the toothpick phase
+transition without `sorry` or `native_decide`; the interval discrepancy,
+66/220-core atlases, and large exact banks are still external certificate
+producers.  The phase quotient fails at four removals, and THM-1101 now has an
+exact covering tuple above 235 missed by both sides of its former split.
+Thus uniform clustered `r=5` remains open and specifically asks for metric
+overlap or endpoint-owner self-similarity.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these

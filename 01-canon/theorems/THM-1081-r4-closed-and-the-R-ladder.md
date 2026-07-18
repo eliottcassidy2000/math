@@ -1,29 +1,45 @@
 ---
 id: THM-1081
-title: THE r=4 CLUSTERED CASE CLOSED, AND THE R-LADDER — why the finite horn stops being redundant exactly at r=4. (I) r=4 FINITE HORN COMPLETE: all 220 nine-speed cores, **143,112,134** quadruples passing the sound covering-necessary condition, **ZERO uncertified** (160 cores / 119,489,369 in cont.61 plus 60 cores / 23,622,765 here). (II) THE THRESHOLD SCANNED PROPERLY, and it corrects my own method: the right quantity is not the absolute threshold T but the ratio **R = T / k_max-removed**, since the un-removed killer always exceeds the removed ones — R < 1 means the measure horn certifies with no finite horn at all. Exhaustive for r=2 over all 12 cores and every k₁ ∈ (13·max P, 4000): **max R = 0.51852**, zero swallow cases. (III) METHOD CORRECTION: the worst case sits at **SMALL** killers — r=2 at k₁ = 160, r=3 at (150,156), r=4 at (150,156,158), all just above 13·max P — whereas my cont.60/61 scans sampled the TOP of the range and therefore looked in the wrong place and reported ratios (0.389–0.434) that were too optimistic. (IV) THE R-LADDER: max R = **0.51852** (r=2, exhaustive), **0.73375** (r=3), **0.98453** (r=4) — rising steeply, with only a **1.5% margin** left at r=4 and extrapolating above 1 at r=5. (V) CONSEQUENCE, which inverts the status of my own earlier work: the finite horns of THM-1051 and THM-1061 were **REDUNDANT** — the measure horn alone closes r=2 and r=3 — but at r=4 the measure horn is marginal on a narrow scanned window, so the finite horn of (I) is the **load-bearing** result there, not a redundancy check; and at r=5 the measure horn is expected to fail outright, making the finite horn mandatory
-status: (I) PROVED — exhaustive finite verification, exact arithmetic, explicit (q,a) witness per family, the covering-necessary pruning being sound (a quadruple failing Σ frac ≥ 1 cannot cover, hence certifies automatically). (II) r=2 EXHAUSTIVE to 4000. (III),(IV) measured; r=3 and r=4 R-values come from exhaustive scans of the SMALL end (where the worst case provably sits for r=2) plus coarse tails, NOT from a full scan — so **r=4's R < 1 is verified on a window, with a 1.5% margin, and I do not claim it in general**. (V) follows from (I)–(IV); the r=5 prediction is extrapolation, explicitly not a result
+title: THE r=4 CLUSTERED STRATUM IS NOW UNIFORMLY CLOSED BY THM-1097; its earlier finite horn is independently complete, with the canonical all-220 total corrected to 142,475,077 and a DPLL tail referee
+status: PROVED uniformly for r=4 by THM-1097's sharp periodic discrepancy, analytic guard surfaces, and 39,778,595-triple exact endpoint bank. Independently, the below-400 finite horn is PROVED FINITE-EXACT on all 220 cores and its 60-core tail has a separate hypergraph-DPLL referee. The old 0.98453 R value remains bounded-window telemetry, not the uniform proof
 source: kind-pasteur-2026-07-18-S128 (cont.62; owner: finish the remaining 60 cores and scan the r=4 threshold properly)
 depends_on:
   - THM-1071    # the r=4 partial run this completes, and the pruning it introduced
   - THM-1051, THM-1061   # the r=2 / r=3 closures whose finite horns (V) shows were redundant
+  - THM-1097    # later sharp three-comb theorem supplying the genuine all-scale bridge
 related:
   - THM-1042    # klein: the component-length obstruction; R < 1 is its quantitative converse
-script: 04-computation/r4_finite_horn_tail_kps_S128c62.py, R_exhaustive_kps_S128c62.py, R_scan_r3r4_kps_S128c62.py, R_scan_r4_kps_S128c62.py (+ .out)
+script: 04-computation/r4_finite_horn_v2_kps_S128c61.py, r4_finite_horn_tail_kps_S128c62.py, r4_finite_horn_tail_referee_codex_S66.cpp, R_exhaustive_kps_S128c62.py, R_scan_r3r4_kps_S128c62.py, R_scan_r4_kps_S128c62.py (+ .out)
 ---
 
-# THM-1081 — r=4 closed, and the R-ladder
+# THM-1081 — r=4 uniformly closed; finite horn independently complete
+
+> **Uniform supersession (codex-S73; THM-1097).**  The finite-horn accounting
+> below remains exact.  Its former all-scale gap is now closed by a different
+> proof: the sharp discrepancy `|J∩D_k|<=|J|/7+6/(49k)`, an analytic
+> three-comb tail, and a guarded endpoint bank covering every omitted triple.
+> No bounded `R` scan is used for the uniform conclusion.
 
 ## (I) The r=4 finite horn is complete
 
-| run | cores | quadruples tested | uncertified |
+| run | scope | exact work | failures |
 |---|---|---|---|
-| cont.61 | 160 | 119,489,369 | 0 |
-| cont.62 (here) | 60 | 23,622,765 | 0 |
-| **total** | **220 / 220** | **143,112,134** | **0** |
+| cont.61 canonical full output | all 220 cores | 142,475,077 necessary-condition quadruples | 0 |
+| cont.62 tail replay | cores 160–219 | 23,622,765 quadruples | 0 |
+| independent C++ DPLL | cores 160–219 | 39,592 memo states; no cover of size at most four | 0 |
 
 The pruning is sound: a quadruple can only be uncertified if its four kill-sets *cover* the
 core's safe (q,a) set, which requires Σ frac ≥ 1; quadruples failing that certify
 automatically. So the check is exhaustive despite testing only the tail.
+
+The old total `143,112,134=119,489,369+23,622,765` is not a valid work
+total: the progress line at core 160 was printed after processing core 160,
+while the tail replay starts at core 160, so that core's 637,057 quadruples
+were counted twice.  The canonical full output already continued through all
+220 cores and gives the correct total `142,475,077`.  The conclusion is
+unchanged.  The independent referee changes the problem to exact hypergraph
+set cover and proves the stronger no-cover-of-size-at-most-four predicate on
+all sixty tail cores.
 
 ## (II) Scanning the threshold properly — the right quantity is R
 
@@ -44,7 +60,7 @@ k₁ ∈ (13·max P, 4000):
 | r | worst-case killers | 13·max P | max R |
 |---|---|---|---|
 | 2 | 160 | 156 | 0.51852 |
-| 3 | (150, 156) | 143 | 0.73375 |
+| 3 | (153, 159) | 143 | **119/158 = 0.75316** |
 | 4 | (150, 156, 158) | 143 | 0.98453 |
 
 Every worst case sits **just above 13·max P**, i.e. at the smallest admissible killers,
@@ -56,35 +72,38 @@ it is simply not the maximum.
 
 ## (IV) The R-ladder
 
-> **0.51852 (r=2) → 0.73375 (r=3) → 0.98453 (r=4)**
+> **0.51852 (r=2 scan) → 119/158 = 0.75316 (r=3 theorem) → 0.98453 (r=4 window)**
 
 Rising steeply, with **1.5% of margin left at r=4** and a straightforward extrapolation
 above 1 at r=5.
 
 ## (V) What this does to the earlier theorems
 
-- **THM-1051 (r=2) and THM-1061 (r=3): their finite horns were REDUNDANT.** R = 0.519 and
-  0.734 mean the measure horn alone certifies every family, with no split point and no
-  enumeration. The 41,986 and 3,408,751 family checks stand as independent verification, and
-  I am glad to have them, but they were not needed for the proof.
-- **r=4 is different.** R = 0.98453 is a 1.5% margin, established on a narrow scanned window
-  (killers in [lo, lo+55) exhaustively, plus a coarse tail). I do **not** claim R < 1 at r=4
-  in general. So the finite horn of (I) — 143 million quadruples, zero failures — is the
-  **load-bearing** result at r=4, not a redundancy check.
-- **r=5 is expected to break the measure horn outright.** If the ladder continues, R > 1 and
-  the finite horn becomes mandatory rather than optional. That is the honest prediction, and
-  it is extrapolation, not a result.
+- **THM-1051 (r=2)** remains uniform by its explicit three-way split: exact
+  both-small horn, exact mixed scan, and a simultaneous two-comb bound on a
+  fixed core-safe interval.  The bounded R scan is not a replacement proof.
+- **THM-1061 (r=3)** is now uniform for a different rigorous reason:
+  THM-1094 proves the exact two-comb component inequality at all scales.  Its
+  finite horn is therefore redundant, but the earlier sampled R argument was
+  not a proof (MISTAKE-163).
+- **r=4 is now uniform.**  The old `R=0.98453` remains a bounded-window
+  measurement and is not promoted.  THM-1097 proves the sharper component
+  target `L>1/(7k3)` at every scale; a fourth killer cannot cover it.  The
+  below-400 horn is therefore an independent verification.
+- **r=5 does break the older `1/(3L)` measure target on exact rows,** but
+  MISTAKE-164 shows that the below-235 finite horn does not cover its
+  all-scale complement.  Uniform `r=5` therefore remains open; a bounded
+  ladder value is telemetry, not a reduction theorem.
 
-The structural reading: each removed killer fragments the safe set further, so the surviving
-component shrinks faster than the killers grow. The measure horn is a *finite-depth* tool —
-it survives three removals and expires around the fourth.
+The structural reading is now precise: finite scans do not determine an
+all-scale rate, but the sharp periodic discrepancy does.  THM-1094 closes two
+removals and THM-1097 closes three.  Its asymptotic toothpick quotient has a
+real method wall at four removals, so uniform `r=5` needs additional overlap
+or endpoint self-similarity rather than another sampled ray.
 
 ## Named next
-- Settle r=4's R properly: the window here is [lo, lo+55) exhaustive plus a coarse tail. A
-  full scan over all triples would either confirm R < 1 or find the crossing, and given the
-  1.5% margin this is worth doing before anyone leans on the measure horn at r=4.
-- r=5: expect to need the finite horn. The covering-necessary pruning (Σ frac ≥ 1) is what
-  makes these runs feasible and it generalises unchanged; the cost is that quintuples are
-  another factor ~250 more numerous.
+- r=5: prove a four-comb endpoint/self-similarity tail.  THM-1101's below-235
+  horn is bounded evidence only after MISTAKE-164 withdraws its sampled
+  all-scale inference.
 - Retire the split points from THM-1051 and THM-1061 in favour of "R < 1, measure horn
   alone" — it is a strictly simpler statement of both theorems.

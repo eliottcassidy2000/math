@@ -1,0 +1,54 @@
+scale-thirty AP-centred Hamming-six complementary-fibre certificate
+scope primitive proper common-scale H6 owner-local gate only
+artifact FROZEN-PRIMARY THM-1090 theorem-status-in-canonical-page
+orders (1, 2, 3, 5, 6, 10, 15, 30) unit counts (1, 1, 2, 4, 2, 4, 8, 8)
+numpy exact-batching version 2.2.6
+hereditary grammar at least two providers for each prime flag 2,3,5
+hereditary words 185193 state words/support 636667200 labelled support/order contexts 171118332 raw labelled states 588280492800
+prime-count triples (2, 2, 2):3375 (2, 2, 3):4500 (2, 2, 4):3375 (2, 2, 5):1350 (2, 2, 6):225 (2, 3, 2):4500 (2, 3, 3):6000 (2, 3, 4):4500 (2, 3, 5):1800 (2, 3, 6):300 (2, 4, 2):3375 (2, 4, 3):4500 (2, 4, 4):3375 (2, 4, 5):1350 (2, 4, 6):225 (2, 5, 2):1350 (2, 5, 3):1800 (2, 5, 4):1350 (2, 5, 5):540 (2, 5, 6):90 (2, 6, 2):225 (2, 6, 3):300 (2, 6, 4):225 (2, 6, 5):90 (2, 6, 6):15 (3, 2, 2):4500 (3, 2, 3):6000 (3, 2, 4):4500 (3, 2, 5):1800 (3, 2, 6):300 (3, 3, 2):6000 (3, 3, 3):8000 (3, 3, 4):6000 (3, 3, 5):2400 (3, 3, 6):400 (3, 4, 2):4500 (3, 4, 3):6000 (3, 4, 4):4500 (3, 4, 5):1800 (3, 4, 6):300 (3, 5, 2):1800 (3, 5, 3):2400 (3, 5, 4):1800 (3, 5, 5):720 (3, 5, 6):120 (3, 6, 2):300 (3, 6, 3):400 (3, 6, 4):300 (3, 6, 5):120 (3, 6, 6):20 (4, 2, 2):3375 (4, 2, 3):4500 (4, 2, 4):3375 (4, 2, 5):1350 (4, 2, 6):225 (4, 3, 2):4500 (4, 3, 3):6000 (4, 3, 4):4500 (4, 3, 5):1800 (4, 3, 6):300 (4, 4, 2):3375 (4, 4, 3):4500 (4, 4, 4):3375 (4, 4, 5):1350 (4, 4, 6):225 (4, 5, 2):1350 (4, 5, 3):1800 (4, 5, 4):1350 (4, 5, 5):540 (4, 5, 6):90 (4, 6, 2):225 (4, 6, 3):300 (4, 6, 4):225 (4, 6, 5):90 (4, 6, 6):15 (5, 2, 2):1350 (5, 2, 3):1800 (5, 2, 4):1350 (5, 2, 5):540 (5, 2, 6):90 (5, 3, 2):1800 (5, 3, 3):2400 (5, 3, 4):1800 (5, 3, 5):720 (5, 3, 6):120 (5, 4, 2):1350 (5, 4, 3):1800 (5, 4, 4):1350 (5, 4, 5):540 (5, 4, 6):90 (5, 5, 2):540 (5, 5, 3):720 (5, 5, 4):540 (5, 5, 5):216 (5, 5, 6):36 (5, 6, 2):90 (5, 6, 3):120 (5, 6, 4):90 (5, 6, 5):36 (5, 6, 6):6 (6, 2, 2):225 (6, 2, 3):300 (6, 2, 4):225 (6, 2, 5):90 (6, 2, 6):15 (6, 3, 2):300 (6, 3, 3):400 (6, 3, 4):300 (6, 3, 5):120 (6, 3, 6):20 (6, 4, 2):225 (6, 4, 3):300 (6, 4, 4):225 (6, 4, 5):90 (6, 4, 6):15 (6, 5, 2):90 (6, 5, 3):120 (6, 5, 4):90 (6, 5, 5):36 (6, 5, 6):6 (6, 6, 2):15 (6, 6, 3):20 (6, 6, 4):15 (6, 6, 5):6 (6, 6, 6):1
+D1 ratio-cardinalities (30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+D2 ratio-cardinalities (15, 0, 0, 0, 0, 15, 15, 0, 0, 0, 0, 0)
+D3 ratio-cardinalities (10, 0, 0, 10, 10, 0, 0, 10, 10, 0, 0, 0)
+D5 ratio-cardinalities (6, 6, 6, 0, 6, 6, 6, 6, 0, 6, 6, 0)
+D6 ratio-cardinalities (5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0)
+D10 ratio-cardinalities (6, 6, 6, 3, 3, 6, 6, 3, 3, 6, 6, 3)
+D15 ratio-cardinalities (6, 4, 4, 4, 4, 6, 6, 4, 4, 4, 4, 4)
+D30 ratio-cardinalities (5, 4, 5, 5, 4, 5, 5, 4, 5, 5, 4, 4)
+scalar feasible-owner histogram 0:1401966 1:36143640 2:66874158 3:49478260 4:15326622 5:1839636 6:54050
+scalar supports-by-survivor-count 0:152 2:112 4:24 8:24 12:120 14:6 17:96 22:96 30:24 54:96 68:24 122:24 137:24 208:24 253:24 294:12 296:12 545:24 549:6
+scalar survivors 54050 supports 772 literal unit words 64678912 multiplicity profiles 244 capacity vectors 28965
+scalar minimum-slack histogram 0:39152 1:9672 2:4248 3:744 4:198 5:36
+scalar maximum-slack histogram 0:128 1:240 2:624 3:924 4:1368 5:6216 6:5928 7:4812 8:3804 9:6552 10:8520 11:3552 12:3582 13:1608 14:1788 15:3204 16:144 17:396 18:48 19:96 20:204 21:144 22:72 23:36 26:36 28:24
+scalar tight-owner histogram 0:14898 1:14376 2:14604 3:7368 4:2592 5:84 6:128
+normalized owner keys 27025 uniform labelled multiplicity 12
+mod6 anchor orders (1, 2, 3, 6) fibres 6x5
+mod10 anchor orders (1, 2, 5, 10) fibres 10x3
+mod6 anchor-bank histogram 1:114588 2:123024 3:42996 4:35760 5:5244 7:2688
+mod10 anchor-bank histogram 1:81792 4:142704 10:42660 14:2856 16:25752 28:6072 32:384 34:4848 38:1680 40:2064 50:4320 52:2988 58:2880 66:144 70:528 75:108 86:984 94:1224 98:240 100:72
+mod6 owner-bound histogram 16:144 17:144 18:384 19:840 20:7632 21:9264 22:26496 23:60972 24:104388 25:31368 26:42480 27:22464 28:6600 29:300 30:10608 31:72 32:96 34:48
+mod10 owner-bound histogram 18:288 19:1656 20:6720 21:6888 22:17976 23:29664 24:67800 25:39408 26:70092 27:20400 28:21324 29:6636 30:17328 31:3756 32:3204 33:3720 34:4344 35:1812 36:624 37:168 38:336 39:36 42:48 43:72
+common min-bound histogram 16:144 17:144 18:384 19:1944 20:8928 21:10584 22:28680 23:64668 24:104052 25:30000 26:38640 27:21768 28:5112 30:9252
+mod6 live-owner/context histogram 0:45110 1:7536 2:1284 6:120
+mod10 live-owner/context histogram 0:33944 1:10344 2:6288 3:2232 4:744 5:132 6:366
+common live-owner/context histogram 0:45998 1:6852 2:1200
+mod6 all-six residual rows 120 support/order multiplication orbits 12:10
+mod6 residual order profiles (0, 0, 0, 0, 0, 2, 3, 1):24 (0, 0, 0, 0, 0, 4, 0, 2):48 (0, 0, 0, 1, 0, 3, 0, 2):48
+mod6 residual mod10-score histogram 23:48 24:120 25:192 26:240 27:72 28:48
+all scalar context multiplication orbits 4:2 6:9 12:4499
+proof implication literal-cover => U6>=30 and U10>=30; at most two owners satisfy both in every labelled scalar row
+tournament vertices owner obligations; pair observable lex(common-status,min(U6,U10),U6,U10,scalar-capacity); harder key wins; coordinate-order tie Hamiltonian path
+tournament fingerprints all 54050 transitive: scores 0,1,2,3,4,5; cycles 0; singleton SCCs; Hamiltonian paths 1
+tournament tie-edge histogram 0:17184 1:23232 2:8088 3:2886 4:1608 6:660 7:264 15:128
+tournament flip-edge histogram 0:283 1:425 2:1102 3:2349 4:4208 5:6369 6:8357 7:9039 8:8270 9:6114 10:3827 11:2149 12:997 13:430 14:120 15:11
+Kakeya/toothpick carrier mod6 has six thick five-point fibres and mod10 has ten thick three-point fibres; nonanchors are independently relaxed transverse needles
+carrier preserves absolute owner cover implication and the terminal threshold; destroys within-fibre positions, transverse overlaps, shared exact units, and literal witnesses, all in the upper-bound direction
+paired-quotient insight mod6 forgets the 5-coordinate and mod10 forgets the 3-coordinate; their viability predicates, not a completed tournament, separate the scalar survivors
+alternate-carrier audit providers/runners, gaps, fixed sections/boundaries, wall events, isolated residues, cover arcs, Fourier modes, matroid circuits, Fano points, chi7 colours, and completed tournaments each lose the absolute threshold or paired thick-fibre incidence
+SHA256 CRT-bases c94c62de38c0238f686e34cfc77293359e8638418485e59e49bed509f992dc3e
+SHA256 literal-masks dcff92077f5e320927a98c7f5a86df40e9c6baed2075e7cad46542d40d3e8da9
+SHA256 grammar d5ec0f6ac4c8f74ed399fbce0e8b50f232789f82619f556f7606b2e41fb6d55f
+SHA256 scalar 46ac0f0015d7a1731470cf1444e91f4c41df4a4ba9eac4ce62555aaaadfbe73d
+SHA256 complementary-relaxation 22ec2ba4da34d3e669bb7564975b640f3cb4263fa0e75e55aa6353737e98da75
+SHA256 mod6-residual 6adaeac9e329b35d1d5328c3490ca1c567d9e629ce2f574a2c91784e1cefda12
+frontier verdict scalar-empty no; mod6-alone empty no; mod10-alone empty no; complementary mod6+mod10 all-six empty yes
+scope caveat closes only c=30 primitive proper AP-centred common-sheet H6; finite H5, non-AP/deep sheets, uniform n=12 sporadic emptiness, and LRC14 remain open

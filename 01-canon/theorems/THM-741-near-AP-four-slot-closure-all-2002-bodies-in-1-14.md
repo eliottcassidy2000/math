@@ -1,8 +1,8 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branches `a=15,16,17,18` are now exact, leaving 209 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
-source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branches `a=15,16,17,18,19` are now exact, leaving 208 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
   - THM-731 / THM-732 / THM-366
@@ -37,6 +37,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_34_a17_pure_tail_exact_codex_20260717.out
   - 04-computation/lrc14_j4_34_a18_pure_tail_exact_codex_20260717.py
   - 05-knowledge/results/lrc14_j4_34_a18_pure_tail_exact_codex_20260717.out
+  - 04-computation/lrc14_j4_34_a19_pure_tail_exact_codex_20260718.py
+  - 05-knowledge/results/lrc14_j4_34_a19_pure_tail_exact_codex_20260718.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -829,6 +831,75 @@ remain incomparable.  Thus neither a monotone horizon nor monotone workload
 can substitute for exact branch geometry.  Four literal-carrier branches are
 now complete and `209` remain.  No fourth whole flood body or global THM-741
 claim follows.
+
+## Exact fifth branch and cutoff-level nonmonotonicity (codex-2026-07-18)
+
+The next fresh carrier tree closes `a=19`.  Exact first subtraction gives
+
+```text
+r_1=26,       m_1=6388289/47927880,       V2=207.
+```
+
+It cannot be obtained by nesting the `a=18` carrier.  The literal interval-set
+comparison is
+
+```text
+|G18 intersect G19| = 5691269/47927880,
+|G18 minus G19|     =       15793/544635,
+|G19 minus G18|     =       11617/798798.
+```
+
+Both directional differences are positive.  More strongly, both adjacent
+second-level horizons were rebuilt on all `167` common `b` labels.  Relative
+to `a=18`, the fresh `V3` horizon moves down/equal/up on `25/3/139` labels and
+the P2 cutoff moves down/equal/up on `23/6/138`.  The full paired-bank digest is
+
+```text
+d7bc67012c8d5e161dfcefff0840ecef186e4341b86b295653fb6544921addae.
+```
+
+Thus even cutoff direction is nonmonotone; no adjacent cutoff or result row is
+transported.
+
+The `187` values `20<=b<207` generate `13,332` `c` obligations.  Linear P2
+audits close `3,361`, leaving `9,971` exact sparse-`m3` nodes.  Of those,
+`8,597` close before a `d` bank.  The final `1,374` carriers generate exactly
+`21,302` finite terminal sweeps, with no fallback and no integral cap endpoint.
+Every sweep is positive.  The minimum is
+
+```text
+368611/8351070
+```
+
+at `(b,c,d)=(23,32,52)`.  Consequently
+
+> `E union {19,b,c,d}` is lonely for every `19<b<c<d`.
+
+The terminal and certificate ledgers have hashes
+
+```text
+91a878c51d96cebeaa015598b4c78f14c8a6b0fa181dc87827108a22c7e7aaeb,
+86533640f52a442c138fcea45068fe06fd91fb9e8de353ee187cfcca6166a567.
+```
+
+First/middle/last terminals from every active `b` bank give `187` independently
+rebuilt full-union crosschecks, all exact, with manifest
+`1c9d0dec8d4f6a8065021930182cce6763506885d09465bbd57252c5fd3dedd3`.
+Normal and `-O` runs are byte-identical.  Source/output hashes are
+`a63afe6693107e1fc4fdc10c84f7ecdb62673c226bc5817e1ec9e804c5b0b416`
+and `9b841ab368e676278450b69581c699f4487e62cc57f0c7af82195b63f0523e7d`.
+
+Tournament Analysis uses the `63` active `b` obligations, with observable
+`(minimum swept clearance,-sweeps,-b)`.  Its lexicographic switch gives a
+transitive tournament, one Hamiltonian path, and path digest
+`fe91efac9d31909e0b3317cadb8ef41130ae40d17ff8c8ebb09c44235ddc9e52`.
+This is scheduling telemetry only.  The proof carrier is the nested component
+stalk with phase, certificate type, cap, and exact margin.  Runners, residues,
+isolated Kakeya needles, wall events, and Fano flags erase necessary data;
+`chi_7` supplies only the common root-edge address `(3,4)`.
+
+Five literal-carrier branches are now complete and `208` remain.  This does not
+close a fourth whole flood body or global THM-741.
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 

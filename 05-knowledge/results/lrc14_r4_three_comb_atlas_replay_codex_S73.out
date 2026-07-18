@@ -1,0 +1,26 @@
+THM-1097 independent Fraction atlas/cardinality replay
+cores=220
+finite_triples_from_guards=39778595
+max_guarded_k1=642
+max_guarded_k2=642
+max_guarded_k3=642
+max_counted_k1=639
+max_counted_k2=640
+max_counted_k3=641
+k1_guard_boundaries=23589
+k2_guard_boundaries=1238741
+min_first_omitted_k1_margin=17/1008
+min_first_omitted_k2_margin=31/252
+min_first_omitted_k3_margin=28429/182160
+min_core_ell=11/1008
+min_ell_core=[1, 2, 3, 7, 8, 9, 10, 11, 12]
+min_core_longest_interval=[29/126,27/112]
+min_core_longest_interval=[85/112,97/126]
+finite_bank_extremal_core=[1, 2, 3, 6, 7, 8, 10, 11, 12]
+finite_bank_extremal_triple=(162,168,174)
+finite_bank_extremal_longest_component=1/522
+finite_bank_extremal_7k3L=7/3
+finite_bank_extremal_R=3/7
+finite_bank_extremal_interval=[53/252,517/2436]
+finite_bank_extremal_interval=[1919/2436,199/252]
+replay=PASS

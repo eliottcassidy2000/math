@@ -1,0 +1,44 @@
+r=5 all-high proof-split gap: exact Fraction referee
+arithmetic=fractions.Fraction; decimal fields are display-only
+core=[1, 2, 4, 5, 7, 9, 11, 12]
+removed_four=(294, 298, 299, 303)
+fifth=320
+finite_horn_bound=235 (script scope: every killer < bound)
+finite_horn_in_scope=False
+components_N=198
+measure_mu=14258767904/152794649007 decimal=0.0933198118956820360687515
+longest_L=431/415716 decimal=0.00103676548412858778589229
+Tmass=N/(6mu)=5042223417231/14258767904 decimal=353.622658786423570640652
+Tcomp=1/(3L)=138572/431 decimal=321.512761020881670533643
+T=min(Tmass,Tcomp)=138572/431 decimal=321.512761020881670533643
+R=T/k4=1372/1293 decimal=1.06109822119102861562258
+measure_horn_condition_k5_gt_T=False
+exact_gap_inequality=k5=320 <= T=138572/431
+longest_interval_1=[1625/4242,527/1372] owners=(D_303:tooth_116:right,D_294:tooth_113:left)
+longest_interval_2=[845/1372,2617/4242] owners=(D_294:tooth_181:right,D_303:tooth_187:left)
+covering_q2_through_q14=True
+covering_owner_q_to_speed=2:2,3:9,4:4,5:5,6:12,7:7,8:320,9:9,10:320,11:11,12:12,13:299,14:294
+explicit_safe_witness=(q,a)=(22,7) time=7/22
+witness_required_least_residue=2
+witness_least_residues=(7, 8, 6, 9, 5, 3, 11, 4, 10, 4, 3, 9, 4)
+witness_min_clearance=3
+witness_component_after_fifth=[1331/4186,1427/4480]
+classification=proof-gap, not an LRC counterexample
+reason=finite horn is out of scope and its stated measure sufficient condition fails, while the explicit q=22 witness proves safety
+tournament_analysis:
+  alternate_vertices=runners|danger_combs|core_components|wall_crossing_endpoints|residues|proof_obligations
+  chosen_vertices=surviving exact endpoints
+  pairwise_observable=exact rational left/right comparison
+  switch_gauge=orient x->y iff coordinate(x)<coordinate(y)
+  tie_hamiltonian_path=coalesce exact equalities, then use the sorted endpoint word
+  endpoint_vertices=396
+  score_histogram={0..395: multiplicity 1}
+  directed_cycles=0
+  strongly_connected_components=396 singleton
+  hamiltonian_path_count=1
+  edge_flip_locus=exact endpoint coincidence
+  endpoint_owner_speed_histogram={'D_11': 6, 'D_12': 2, 'D_2': 2, 'D_294': 94, 'D_298': 94, 'D_299': 98, 'D_303': 94, 'D_4': 2, 'D_9': 4}
+  preserved_by_full_carrier=component count, mass, longest length, removal owner, witness membership
+  destroyed_by_order_only=metric lengths, endpoint owners, removal stage, residue-witness clearance
+  challenged_assumption=tournament vertices need not be runners; endpoint order is faithful only with coordinate and owner sidecars
+certificate=PASS

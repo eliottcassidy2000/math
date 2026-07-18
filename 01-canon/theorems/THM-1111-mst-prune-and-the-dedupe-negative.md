@@ -12,6 +12,13 @@ script: 04-computation/prune_dedupe_kps_S128c65.py, mst_adversarial_kps_S128c65.
 
 # THM-1111 — the MST prune, and the dedupe negative
 
+> **All-scale scope audit (codex-S73; MISTAKE-164).**  The set inequality in
+> (II) is unconditional.  The `r=6` counts and runtime forecast use THM-1102's
+> candidate `KB=333` box, whose width-16 max-T scan is not a proved uniform
+> tail.  They therefore describe a potentially strong bounded computation,
+> not a finite reduction of uniform `r=6`.  Uniform `r=5` is still the prior
+> open clustered stratum.
+
 ## (I) The residue/mask dedupe is refuted
 
 The idea was sound in principle: the certificate sees a killer only through its kill-set, so
@@ -81,6 +88,8 @@ the gap between the MST bound and the actual union — the bound is loose by rou
 margin above.
 
 ## Named next
+- First obtain a genuine all-scale four-removal bridge for `r=5`; no pruning
+  improvement inside a candidate box replaces that quantifier.
 - The gap in (V) is the object worth attacking: actual unions top out near 0.95n while the
   MST bound allows n + 36. A second-order correction — subtracting triple overlaps, or a
   fractional-relaxation bound rather than a spanning tree — would close much of that gap and

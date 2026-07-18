@@ -7,6 +7,15 @@ dichotomy), and `lrc14_of_covering` (LRC(14) ⟸ the covering case). Built into 
 Together with S105 the kernel now records `LRC(14) ⟸ LRC(≤13)[cited] + covering-crux[open] + {sieve,
 descent}[Lean]`.*
 
+> **Dependency audit (codex-2026-07-18-S73).**  `sieve_dispatch`,
+> `lonely14_dispatch`, and `lrc14_of_covering` are correct: they reduce the
+> full statement to `CoveringCase`.  The further sentence
+> `CoveringCase ⟸ LRC(≤13)+INV` was not yet a Lean theorem and is not true for
+> an arbitrary `INV Compact` without connecting `Compact` to covering.
+> `LRC14DispatchAssembly.lean` now records the exact composition: one also
+> needs `CoveringSplit Easy Compact` and `EasyCase Easy`.  Thus the remaining
+> input is a split-plus-inverse package, not a bare dominance hypothesis.
+
 ## What was formalized
 
 `LRCSieveDispatch.lean`, `namespace LonelyRunner`, all kernel-pure:
@@ -40,22 +49,24 @@ and needs the maximizer `M` (analytic), so `CoveringCase` stays the named open p
 Combining S105 and S106, the kernel records the whole elementary skeleton:
 
 > **`LRC(14)` ⟸ `CoveringCase`** [PROVED: sieve dispatch discharges non-covering]
-> **`CoveringCase` ⟸ `LRC(≤13)`[cited] + `INV`[open] + `ap_core_bridge`/`descent`[Lean]** [S105]
+> **`CoveringCase` ⟸ `CoveringSplit`[open] + `EasyCase`[open/analytic] +
+> `LRC(≤13)`[cited] + `INV Compact`[open] + `ap_core_bridge`/`descent`[Lean]**
+> [`LRC14DispatchAssembly`]
 
 So both outer arrows of the dispatch are now kernel-checked: the **non-covering side is fully proved**
-(sieve), and the **covering side is reduced** to the single open inverse theorem `INV` via the AP-core
-bridge. The only unproved node is `INV` (= LRC(14) covering crux = Tao n=12, S94/S104), plus the analytic
-`M`-split inside `CoveringCase` that separates the immediate `M≥1/14` families from the `M<1/13` ones.
+(sieve), while the covering composition waits on an explicit analytic easy/compact split and the inverse
+theorem on its compact side.  The `M`-split is a genuine open bridge in this formal dependency graph, not
+merely prose around `INV`.
 
 ## Net
 
 - **Delivered:** `LRCSieveDispatch.lean`, 4 kernel-pure theorems, built (8476 jobs) and registered in the
   root aggregator. No sorry, no custom axiom.
 - **Records:** the dispatch — LRC(14) reduces in the kernel to the covering case; non-covering is the
-  sieve. With S105, the elementary + dispatch skeleton of LRC(14) is now machine-checked end-to-end up to
-  the single open `INV`.
-- **Honest:** the covering crux and `INV` remain open; the file names them and certifies everything around
-  them is discharged in Lean.
+  sieve.  With S105 and `LRC14DispatchAssembly`, the composition is machine-checked under the named
+  `CoveringSplit`, `EasyCase`, and `INV Compact` inputs.
+- **Honest:** the covering split/easy bridge and the compact inverse theorem remain open; the files name
+  them rather than identifying them silently.
 
 This continues the constructive program (S105): the formalization now pins, in the kernel, exactly the two
 outer branches of the LRC(14) dispatch — one proved, one reduced to the open inverse theorem.

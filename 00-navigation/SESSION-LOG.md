@@ -78,6 +78,15 @@ PROGRESSIONS as exactly the dilates k*{1,...,13} -- V is not an AP. It corrects 
 natural over-reading of that result: tight families in general are not just the dilates,
 and I have amended THM-1105 to say so.
 FILES: THM-1115, THM-1105 scoped, 2 scripts + outs, HYP-7590. opus; S376.
+## codex-2026-07-18-S73 — uniform r=3/r=4 clustered closure, exact r=5 split refutation, c=32 and a=19 progress
+
+Pulled and audited the live LRC14 frontier continuously.  The main positive result is now all-scale rather than sampled: THM-1094 proves the exact two-comb component theorem on all 66 ten-speed cores (9,246,070 guarded pairs, zero failures), and THM-1097 proves the sharp three-comb theorem on all 220 nine-speed cores (39,778,595 guarded triples, zero failures).  Independent breakpoint/Fraction replays verify both atlases and guard complements; the THM-1097 C++ O0/O2/ASan+UBSan matrix is byte-identical.  Consequently clustered `r=3` and `r=4` are uniformly closed.  The proof-bearing Kakeya/toothpick carrier is `(mass, tooth incidence, exact endpoint coordinate, owner)`; its endpoint tournament is transitive and loses every metric quantity.  `LRCSharpCombArithmetic.lean` kernel-checks both ratio tails, the exceptional rectangle, final-comb inequality, and the exact phase transition `m<7/2`, with no `sorry` or `native_decide`.
+
+The same audit withdrew a false next step.  THM-1101's fixed bottom windows and one translated ray do not imply a uniform `r=5` tail.  An exact covering row `P=(1,2,4,5,7,9,11,12)`, removed `(294,298,299,303)`, final `320`, has `N=198`, `mu=14258767904/152794649007`, `L=431/415716`, and `T=138572/431>320`; every killer is above 235, so neither former branch applies, although `(q,a)=(22,7)` is an explicit lonely witness.  MISTAKE-164 records this proof-gap/not-counterexample distinction and downgrades THM-1102's width-16 `r=6` maximum and `KB=333` to bounded telemetry.  Near-equal four-comb toothpicks recur, and the coarse guard tends the wrong way; uniform `r=5` now specifically asks for overlap or endpoint-owner self-similarity.
+
+Independent remaining pieces also moved: THM-1096 closes AP-centred H6 common scale `c=32` by a `Z/8` thick-fibre deficit in independent Python/C++ certificates (`3,450` survivors, live-owner histogram `0:2802,1:456,2:192`), so `c=33` is next; a second independent certificate pair strengthens THM-1090 at `c=30`; and THM-741's pure `(3,4)` branch at fixed `a=19` is closed by 21,302 positive exact terminal sweeps, minimum `368611/8351070` at `(23,32,52)`, leaving 208 literal-G1 branches.  The full n=12 sporadic branch and global LRC(14) remain open.  Incoming work sharpens that global remainder further: the far-element route reduces to cover-gap uniqueness with a very-near-tight fragmented residual, while individual extended moduli are blockable and simultaneous cross-modulus structure is the real arithmetic obstruction.  These observations agree with the r=5 lesson: order, one ray, one modulus, or one quotient is too lossy; the missing invariant must couple labels and overlaps across scales.
+
+A final pull reinforced that diagnosis.  THM-1111 proves the pairwise maximum-spanning-tree overlap prune and shows it is strong on random bounded tails, but adversarial margins remain positive; exact kill-mask deduplication gives factor `1.000`, so residues do not collapse the bank.  Its `r=6` runtime forecast remains conditional on THM-1102's unproved candidate cutoff.  THM-1115 then refutes any simple simultaneous-blocking/measure tradeoff and finds the exact second tight family `{1,...,11,13,24}`.  THM-1120's exact essential-region criterion `E_i subset D_r` explains the unique local swap `12<->24`; “only two tight families” remains explicitly a structured-search observation, not a theorem.  The essential region is a useful new carrier: unlike its measure, its position inside the replacement comb preserves the rigidity predicate.  This is the same label-sensitive phenomenon seen in the four-comb endpoint word.
 
 ---
 
@@ -70847,3 +70856,31 @@ candidate instances: 70 cores have a sampled candidate with LP3 >= n, while 722 
 among the 18 tested. THM-1121 independently closes the finite horn exactly; no exact closure
 is lost by this correction. HYP-7601 records this audit because HYP-7540 was already multiply
 occupied before the THM-1122 entry landed.
+
+---
+
+## codex-2026-07-18-S73 — THM-1127 fixed-ray four-comb self-similarity
+
+For the legal clustered ray with core `P={1,2,4,5,7,9,11,12}` and four
+killers `(K,K+4,K+5,K+9)`, replaced four moving combs by the exact fixed torus
+polygon `H_t={x: ||x+a t||>=1/14, a in {0,4,5,9}}` sampled along
+`x=Kt mod 1`.  Its 53 raw walls, 91 core-refined walls, and 28 live cells give
+`mu_inf=59151097/627525360`, `N/K->15163/24255`, `KL->79/126`, and
+`R->42/79`.  The count has exact affine phase law
+`N(K+194040)=N(K)+121304`.
+
+The dominant strip yields the proved period-126 formula
+`L=(14 floor((97K-107)/126)-2K+47)/(14(K+4)(K+5))` for every `K>=771`;
+the containment margin is `-1` at `K=770` and nonnegative thereafter by a
+13-step recurrence.  Exact endpoint subtraction on the legal finite bank
+`157<=K<=770` (legal because `13 max(P)=156`) plus this tail proves the sharp
+final-comb target `7(K+9)L(K)>1` for every `K>=157`, with finite-bank minimum
+`695/346` at `K=173`.  It also locates the last coarser `R>=1` row exactly:
+`R(363)=242/237`, while `R(K)<1` for every `K>=364`.
+
+This is a complete theorem for one offset shape, not uniform `r=5`.  The
+faithful Kakeya-like carrier is a slope line through a labelled rational
+polygon.  The 91-wall order tournament is transitive and loses slopes,
+owners, strip adjacency, metric lengths, and the core mask.  The exact
+referee and frozen output replay byte-identically in ordinary and optimized
+Python; hashes are `d4024238...173b9e` and `5f19804c...4b168d`.

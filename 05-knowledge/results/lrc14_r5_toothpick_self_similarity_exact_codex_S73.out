@@ -1,0 +1,66 @@
+THM-1127 fixed-ray toothpick self-similarity: exact Fraction referee
+scope=fixed core P=[1,2,4,5,7,9,11,12] and offsets [0,4,5,9] only
+uniform_r5_claim=False
+core_components=20
+core_measure=549/2695
+torus_raw_walls=53
+torus_core_cells=28
+torus_period_Q=194040
+limit_mu=59151097/627525360
+limit_N_over_K=15163/24255
+exact_N_increment_over_Q=121304
+limit_KL=79/126
+limit_KL_maximizers=t=29/126,97/126
+next_vertical_gap_outside_dominant_cells=67/154
+limit_Tmass_over_K=65382856/59151097
+limit_Tcomp_over_K=42/79
+limit_R=42/79
+longest_formula_for_all_K_ge_771=m=floor((97K-107)/126); L=(14m-2K+47)/(14(K+4)(K+5))
+containment_margin_K770=-1
+containment_margin_base_K771_to_783=(12, 25, 38, 51, 8, 21, 34, 47, 4, 17, 30, 43, 0)
+containment_recurrence=B(K+13)-B(K) in {1,57}
+scan_range=150..1500
+scan_rows=1351
+clustered_range=K>=157 because 13*max(P)=156
+exact_finite_bank=K=157..770
+proved_formula_tail=all K>=771
+sharp_target_min_157_to_770=7*(K+9)*L=695/346 at K=173
+sharp_target_all_legal_K=7*(K+9)*L(K)>1 for every K>=157
+scan_formula_last_mismatch=770
+scan_R_ge_1_count=31
+scan_clustered_R_ge_1_count=27
+scan_R_ge_1_last_K=363
+scan_R_max=7/6 at K=155
+scan_clustered_K_ge_157_R_max=2422/2085 at K=173
+scan_mass_branch_K=[207]
+K363_R=242/237
+K364_R=633696/759055
+combined_exact_conclusion=R(K)<1 for every K>=364 on this fixed ray
+K770_actual_L=17/21672
+K770_formula_candidate=6781/8397900
+K771_L=6793/8419600
+N_recurrence_spot_K=150:N(K)=104:N(K+Q)=121408:difference=121304
+N_recurrence_spot_K=200:N(K)=130:N(K+Q)=121434:difference=121304
+N_recurrence_spot_K=771:N(K)=496:N(K+Q)=121800:difference=121304
+N_recurrence_spot_K=1500:N(K)=948:N(K+Q)=122252:difference=121304
+functional_form:
+  N(K+194040)=N(K)+121304 (affine quasipolynomial)
+  mu(K)=period-194040 quasirational; on each phase it is a rational sum of affine-wall intersection terms
+  L(K)=period-126 rational formula above for K>=771
+  Tmass and R are quasirational; R tends to 42/79<1
+tournament_analysis:
+  alternate_vertices=runners|combs|core_sections|section_boundaries|wall_crossings|residues|cover_arcs|Fourier_modes|proof_obligations
+  chosen_vertices=labelled_rational_polygon_walls
+  pairwise_observable=exact rational wall-coordinate order
+  switch_gauge=orient u->v iff t(u)<t(v)
+  tie_hamiltonian_path=coalesce equal walls, then sorted wall word
+  wall_vertices=91
+  score_histogram={0..90: multiplicity 1}
+  directed_cycles=0
+  strongly_connected_components=91 singleton
+  hamiltonian_path_count=1
+  edge_flip_locus=exact wall coincidence
+  preserved_by_labelled_polygon=exact remainder, components, mass, longest gap, owners, slope recurrence
+  destroyed_by_order_only=wall slopes, affine owners, strip adjacency, metric lengths, core mask
+  challenged_assumption=tournament vertices need not be runners; the faithful object is a Kakeya-like slope line through a fixed labelled torus polygon
+certificate=PASS

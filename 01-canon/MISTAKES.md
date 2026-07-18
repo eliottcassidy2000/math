@@ -70,6 +70,82 @@ only when the subgroup/fibre map actually exists; and never infer integer
 structure from one residue chart without controlling the shared lift word.
 THM-1099 gives the exact guardrails and a `7 -> 112` lift with identical local
 data but a different global maximum.
+## MISTAKE-164 (2026-07-18, codex-S73 pull audit) -- bottom-window R scans were again promoted to uniform r=4/r=5 tails
+
+- **What was claimed:** THM-1101 said that exhaustive `R` scans in fixed
+  bottom windows, followed by a decay check along one translated worst-case
+  ray, settled the all-scale `r=4` tail and bounded the complete `r=5`
+  measure-failure region by threshold `T<211`.  Its finite horn below 235 was
+  then used to claim uniform `r=5` closure.
+- **Why it is wrong:** both source files explicitly say `PRINT DATA ONLY`.
+  The `r=4` scan restricts `k3<13 max(P)+101`; the `r=5` scan restricts all
+  four removed killers to a 22-point window.  The later decay table varies
+  only one fixed core and one fixed offset pattern.  No lemma reduces an
+  arbitrary larger tuple to those windows or proves that `R` is monotone
+  under independent changes of its killers.  Consequently the reported
+  maximum `T=210.7` is a maximum of the scanned bank, not of the infinite
+  failure region.  This is the same missing universal quantifier isolated in
+  MISTAKE-163.
+- **Exact witness to the proof gap:** for
+  `P=(1,2,4,5,7,9,11,12)`, removed killers
+  `(294,298,299,303)`, and final killer `320`, exact endpoint subtraction
+  gives `L=431/415716` and
+  `T=min(N/(6mu),1/(3L))=138572/431>320`.  Every killer is above 235, so
+  the finite horn does not apply, while the measure condition `k5>T` also
+  fails.  All `q=2,...,14` are covered, yet `(q,a)=(22,7)` is a lonely
+  witness: this refutes the proposed proof split, not LRC.  The template
+  `(K,K+4,K+5,K+9)` produces many further `R>=1` rows through at least
+  `K=363`, so the issue is a recurrent toothpick phase, not one outlier.
+- **What remains exact:** the displayed `r=5` row is a genuine obstruction to
+  the older `1/(3L)` measure target, and the bottom-window censuses remain
+  useful data.  The 263,708,305-row finite horn has scope only below its
+  declared bound `KB=235`; even if independently replayed, it cannot bridge
+  omitted all-scale tuples by itself.
+- **Repair and impact:** THM-1097 now proves `r=4` uniformly by a different
+  theorem: the sharp periodic discrepancy, an analytic three-comb tail, and
+  an exact guarded endpoint bank covering the full complement.  THM-1101 does
+  not supply the analogous four-comb tail, so its `r=5 CLOSED` promotion is
+  withdrawn and uniform `r=5` remains open.  Any repair must prove an
+  all-scale reduction (likely retaining the endpoint/owner word and the
+  near-equal toothpick recurrence), not sample additional translated rays.
+  THM-1102 inherits the same issue: its width-16 `r=6` maximum and `KB=333`
+  are bounded telemetry, even though its candidate-box infeasibility estimate
+  remains informative.
+
+## MISTAKE-163 (2026-07-18, codex-S73 audit) -- a sampled horn-scaling ratio was used as an all-scale theorem
+
+- **What was claimed:** THM-1061 promoted the observation
+  `R=(1/(3L))/k_max_removed < 1` on several finite scale bins to a uniform
+  horn-scaling law.  Combined with an exact finite horn below 431, this was
+  said to close every three-killer clustered family and to complete THM-1051.
+- **Why it is wrong:** `horn_scaling_check_kps_S128c60.py` declares
+  `PRINT DATA ONLY` and samples finitely many pairs in each bin.  The exact
+  value `7/18` describes an isolated generic tooth gap; it is not a lower
+  bound for the largest component after *two interacting comb removals*.
+  Endpoint interleaving can shorten every surviving component.  Nothing in
+  the script reduces arbitrary pairs to its samples, so the universal
+  quantifier was never proved.
+- **What remains exact:** the `q<=40` finite horn certifies all 3,408,751
+  covering triples with all killers below 431, and the rational interval scan
+  certifies the measure horn for every two-removal pair in its stated window
+  below 900.  Together these close the `k2<900` window, not all scales.
+  THM-1051's two-killer theorem is not invalidated: its own explicit
+  both-large interval, finite both-small census, and exact mixed scan supply
+  its uniform split without this sampled law.
+- **Repair (THM-1094):** the required successor theorem is now proved.  For
+  every ten-speed core `P subset {1,...,12}` and ordered killers
+  `13 max(P)<k1<k2`, an exact 9,246,070-pair endpoint bank plus a uniform
+  mass/component tail proves that
+  `S(P) \ (D(k1) union D(k2))` has a component longer than `1/(3k2)`.
+  The faithful carrier is the ordered component/owner word with rational
+  endpoint coordinates; a runner tournament forgets the metric lengths and
+  higher intersection data.
+- **Impact after repair:** THM-1061 is uniformly proved again, but by
+  THM-1094's new finite+analytic argument, not by the sampled scaling law
+  rejected here.  This mistake entry therefore remains active as an audit of
+  the old proof method.  THM-1081's completed `r=4` finite horn is useful but
+  did not itself supply an all-scale bridge; THM-1097 now supplies that bridge
+  independently by sharp discrepancy and a full guarded complement.
 
 ## MISTAKE-162 (2026-07-18, klein-S320, self-caught by a positive control) -- ANCHORED RANDOM SAMPLING HAS NO POWER; my S319 "materially stronger evidence" for HYP-7355 is withdrawn
 

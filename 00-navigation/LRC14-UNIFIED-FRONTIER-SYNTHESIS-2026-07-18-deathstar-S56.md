@@ -7,6 +7,38 @@ hard core, reached from four sides that are provably the same wall.
 
 ---
 
+## 0. codex-S73 all-scale audit update
+
+The clustered-comb subprogram has moved, but it has not closed the global
+inverse theorem.  THM-1094 proves the uniform two-removal component theorem
+(`r=3`) and THM-1097 proves the uniform three-removal theorem (`r=4`) from the
+sharp one-comb discrepancy, exact guard surfaces, and complete rational core
+atlases.  The endpoint-order tournament is transitive and unfaithful by
+itself; the proof-bearing object is the metric endpoint/owner word together
+with occupied mass and tooth incidence.
+
+The next iteration does not follow formally.  Its asymptotic toothpick ratio
+crosses at four removals, and an exact covering row
+`(294,298,299,303;320)` lies above the `235` finite horn while also failing
+the claimed measure condition.  MISTAKE-164 therefore withdraws the former
+uniform `r=5` promotion and downgrades THM-1102's width-16 `r=6` maximum to
+bounded telemetry.  This reinforces the global synthesis: the missing object
+is not a larger cutoff, but an inverse/overlap law retaining simultaneous
+cross-modulus or endpoint-owner structure.
+
+The next pull tests two natural versions of that coupling.  THM-1111's
+maximum-spanning-tree overlap inequality is universally valid and a powerful
+bounded prune, but adversarial rows survive; literal kill-mask deduplication
+has factor exactly `1.000`.  THM-1115 independently shows there is no simple
+tradeoff between simultaneous modulus blocking and uncovered measure.  On the
+rigidity side, the exact essential-region containment criterion in THM-1120
+explains the local tight swap `12<->24`: position inside the new comb, not
+essential-region mass, is decisive.  Thus the most plausible common object is
+a higher-order labelled incidence/containment carrier, not a scalar energy,
+pairwise tree, residue mask, or measure gap.
+
+---
+
 ## 1. The reduction chain (LRC(14) ⟹ one inverse theorem)
 
 - **Lean trunk** (THM-671 `lrc14_grand_assembly`): kernel-discharges non-covering, bounded ≤22,
@@ -35,7 +67,7 @@ cancellation, constant = component count `C`.
 | agent | theorem | the estimate | status |
 |---|---|---|---|
 | death-star | THM-1037 | `\|ĉ_N\| ≤ C/(πN)` ⟹ `avg_{G_W}‖182k·t‖ ≥ 1/4 − 2.104C/(π³·182kμ) ≥ 1/13` ⟺ **`C ≤ 464μ`** | PROVED 99.5% |
-| kind-pasteur | THM-1051/1071 | measure horn `≤ L/7 + 2/(7k₂)`; survives iff `k₂ > 1/(3L)` | closes r=2,3; r=4 partial |
+| kind-pasteur/codex | THM-1051/1094/1097 | sharp comb discrepancy `≤ L/7+6/(49k)` plus exact metric endpoint guards | closes r=2,3,4 uniformly; r=5 open (MISTAKE-164) |
 | klein | THM-1042 | `2dN/w` per-speed loss; `1/L_max({1..k})` table | cross-validates kind-pasteur 9/9 |
 | boxeph | HYP-7505/7525 | THM-886(II) `\|S(m)\| ≤ C_f + R/sin(π‖m/t‖)`; off-lattice ⟹ `Q_s=O(r)` ⟹ `Error→0` | off-resonance |
 

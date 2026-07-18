@@ -1,0 +1,86 @@
+THM-1094 exact two-comb component certificate
+arithmetic=integer-rational (__int128 cross-products)
+tail_mass_lower=5*ell/7-8/(49*k1)-8/(49*k2)
+tail_component_upper=ell*(k1+k2)+23/7
+tail_condition=56*ell*k2-49*ell*k1-24*(k2/k1)-185>0
+finite_x_guard=floor(209/(7*ell))+1
+finite_y_guard=floor(k1*(49*ell*k1+185)/(56*ell*k1-24))+1
+cores=66
+core=[1,2,3,4,5,6,7,8,9,10] ell=3/140 finite_pairs=105799 failures=0 hardest_pair=(133,138) min_3k2L=414/245
+core=[1,2,3,4,5,6,7,8,9,11] ell=2/147 finite_pairs=281080 failures=0 hardest_pair=(156,161) min_3k2L=79/56
+core=[1,2,3,4,5,6,7,8,10,11] ell=1/56 finite_pairs=155165 failures=0 hardest_pair=(150,156) min_3k2L=561/350
+core=[1,2,3,4,5,6,7,9,10,11] ell=6/385 finite_pairs=209226 failures=0 hardest_pair=(160,180) min_3k2L=159/112
+core=[1,2,3,4,5,6,8,9,10,11] ell=1/45 finite_pairs=95269 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,4,5,7,8,9,10,11] ell=12/539 finite_pairs=94874 failures=0 hardest_pair=(152,173) min_3k2L=123/77
+core=[1,2,3,4,6,7,8,9,10,11] ell=1/77 finite_pairs=310805 failures=0 hardest_pair=(147,192) min_3k2L=1047/686
+core=[1,2,3,5,6,7,8,9,10,11] ell=1/77 finite_pairs=310805 failures=0 hardest_pair=(153,159) min_3k2L=158/119
+core=[1,2,4,5,6,7,8,9,10,11] ell=1/70 finite_pairs=252868 failures=0 hardest_pair=(152,173) min_3k2L=45/28
+core=[1,3,4,5,6,7,8,9,10,11] ell=13/616 finite_pairs=107010 failures=0 hardest_pair=(144,162) min_3k2L=159/112
+core=[2,3,4,5,6,7,8,9,10,11] ell=15/308 finite_pairs=14500 failures=0 hardest_pair=(144,152) min_3k2L=131/84
+core=[1,2,3,4,5,6,7,8,9,12] ell=1/72 finite_pairs=264713 failures=0 hardest_pair=(162,180) min_3k2L=79/42
+core=[1,2,3,4,5,6,7,8,10,12] ell=5/196 finite_pairs=67742 failures=0 hardest_pair=(159,171) min_3k2L=15/8
+core=[1,2,3,4,5,6,7,9,10,12] ell=1/35 finite_pairs=51954 failures=0 hardest_pair=(159,171) min_3k2L=684/371
+core=[1,2,3,4,5,6,8,9,10,12] ell=1/40 finite_pairs=70995 failures=0 hardest_pair=(166,171) min_3k2L=4995/2324
+core=[1,2,3,4,5,7,8,9,10,12] ell=11/840 finite_pairs=300855 failures=0 hardest_pair=(160,181) min_3k2L=879/448
+core=[1,2,3,4,6,7,8,9,10,12] ell=1/70 finite_pairs=248920 failures=0 hardest_pair=(162,169) min_3k2L=1489/756
+core=[1,2,3,5,6,7,8,9,10,12] ell=13/784 finite_pairs=179418 failures=0 hardest_pair=(165,175) min_3k2L=134/77
+core=[1,2,4,5,6,7,8,9,10,12] ell=1/48 finite_pairs=107729 failures=0 hardest_pair=(158,159) min_3k2L=12/7
+core=[1,3,4,5,6,7,8,9,10,12] ell=5/168 finite_pairs=47160 failures=0 hardest_pair=(158,159) min_3k2L=12/7
+core=[2,3,4,5,6,7,8,9,10,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(165,175) min_3k2L=134/77
+core=[1,2,3,4,5,6,7,8,11,12] ell=23/1232 finite_pairs=137858 failures=0 hardest_pair=(160,175) min_3k2L=765/448
+core=[1,2,3,4,5,6,7,9,11,12] ell=6/385 finite_pairs=205705 failures=0 hardest_pair=(160,188) min_3k2L=873/560
+core=[1,2,3,4,5,6,8,9,11,12] ell=1/33 finite_pairs=45181 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,4,5,7,8,9,11,12] ell=2/147 finite_pairs=276867 failures=0 hardest_pair=(160,165) min_3k2L=4257/3136
+core=[1,2,3,4,6,7,8,9,11,12] ell=3/112 finite_pairs=60467 failures=0 hardest_pair=(160,161) min_3k2L=891/448
+core=[1,2,3,5,6,7,8,9,11,12] ell=2/147 finite_pairs=276867 failures=0 hardest_pair=(160,162) min_3k2L=45/32
+core=[1,2,4,5,6,7,8,9,11,12] ell=5/196 finite_pairs=67742 failures=0 hardest_pair=(160,181) min_3k2L=3681/2240
+core=[1,3,4,5,6,7,8,9,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(161,179) min_3k2L=1632/1127
+core=[2,3,4,5,6,7,8,9,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(172,180) min_3k2L=477/301
+core=[1,2,3,4,5,6,7,10,11,12] ell=5/196 finite_pairs=67742 failures=0 hardest_pair=(163,175) min_3k2L=1971/1141
+core=[1,2,3,4,5,6,8,10,11,12] ell=47/1848 finite_pairs=68221 failures=0 hardest_pair=(167,170) min_3k2L=5037/2338
+core=[1,2,3,4,5,7,8,10,11,12] ell=1/56 finite_pairs=152214 failures=0 hardest_pair=(159,162) min_3k2L=45/28
+core=[1,2,3,4,6,7,8,10,11,12] ell=1/40 finite_pairs=70995 failures=0 hardest_pair=(176,188) min_3k2L=153/88
+core=[1,2,3,5,6,7,8,10,11,12] ell=3/112 finite_pairs=60467 failures=0 hardest_pair=(178,184) min_3k2L=2019/1246
+core=[1,2,4,5,6,7,8,10,11,12] ell=1/56 finite_pairs=152214 failures=0 hardest_pair=(160,184) min_3k2L=501/280
+core=[1,3,4,5,6,7,8,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(159,162) min_3k2L=45/28
+core=[2,3,4,5,6,7,8,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(171,177) min_3k2L=243/133
+core=[1,2,3,4,5,6,9,10,11,12] ell=1/28 finite_pairs=30331 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,4,5,7,9,10,11,12] ell=6/385 finite_pairs=205705 failures=0 hardest_pair=(160,164) min_3k2L=5289/3920
+core=[1,2,3,4,6,7,9,10,11,12] ell=1/44 finite_pairs=88387 failures=0 hardest_pair=(162,166) min_3k2L=3/2
+core=[1,2,3,5,6,7,9,10,11,12] ell=6/385 finite_pairs=205705 failures=0 hardest_pair=(186,222) min_3k2L=381/217
+core=[1,2,4,5,6,7,9,10,11,12] ell=6/385 finite_pairs=205705 failures=0 hardest_pair=(160,164) min_3k2L=1017/560
+core=[1,3,4,5,6,7,9,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(159,179) min_3k2L=601/371
+core=[2,3,4,5,6,7,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(180,186) min_3k2L=261/140
+core=[1,2,3,4,5,8,9,10,11,12] ell=3/112 finite_pairs=60467 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,4,6,8,9,10,11,12] ell=1/48 finite_pairs=107729 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,5,6,8,9,10,11,12] ell=1/48 finite_pairs=107729 failures=0 hardest_pair=(173,178) min_3k2L=5205/2422
+core=[1,2,4,5,6,8,9,10,11,12] ell=1/48 finite_pairs=107729 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,3,4,5,6,8,9,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(173,178) min_3k2L=5205/2422
+core=[2,3,4,5,6,8,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(158,162) min_3k2L=1188/553
+core=[1,2,3,4,7,8,9,10,11,12] ell=1/112 finite_pairs=685004 failures=0 hardest_pair=(162,166) min_3k2L=3/2
+core=[1,2,3,5,7,8,9,10,11,12] ell=11/1008 finite_pairs=445999 failures=0 hardest_pair=(158,160) min_3k2L=3/2
+core=[1,2,4,5,7,8,9,10,11,12] ell=23/1260 finite_pairs=144949 failures=0 hardest_pair=(159,160) min_3k2L=1221/742
+core=[1,3,4,5,7,8,9,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(161,164) min_3k2L=3099/2254
+core=[2,3,4,5,7,8,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(179,188) min_3k2L=3813/2506
+core=[1,2,3,6,7,8,9,10,11,12] ell=11/1008 finite_pairs=445999 failures=0 hardest_pair=(194,200) min_3k2L=2181/1358
+core=[1,2,4,6,7,8,9,10,11,12] ell=1/70 finite_pairs=248920 failures=0 hardest_pair=(162,189) min_3k2L=13/8
+core=[1,3,4,6,7,8,9,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(161,162) min_3k2L=3189/2254
+core=[2,3,4,6,7,8,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(157,166) min_3k2L=3567/2198
+core=[1,2,5,6,7,8,9,10,11,12] ell=1/70 finite_pairs=248920 failures=0 hardest_pair=(190,214) min_3k2L=1104/665
+core=[1,3,5,6,7,8,9,10,11,12] ell=25/924 finite_pairs=59054 failures=0 hardest_pair=(157,160) min_3k2L=3711/2198
+core=[2,3,5,6,7,8,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(166,176) min_3k2L=2007/1162
+core=[1,4,5,6,7,8,9,10,11,12] ell=13/616 finite_pairs=104627 failures=0 hardest_pair=(160,161) min_3k2L=3657/2240
+core=[2,4,5,6,7,8,9,10,11,12] ell=1/24 finite_pairs=20596 failures=0 hardest_pair=(171,176) min_3k2L=519/266
+core=[3,4,5,6,7,8,9,10,11,12] ell=3/56 finite_pairs=10558 failures=0 hardest_pair=(176,186) min_3k2L=2313/1232
+finite_pairs_total=9246070
+failures_total=0
+min_core_ell=1/112
+min_ell_core=[1,2,3,4,7,8,9,10,11,12]
+finite_bank_hardest_core=[1,2,3,5,6,7,8,9,10,11]
+finite_bank_hardest_pair=(153,159)
+finite_bank_longest_component=158/56763
+finite_bank_min_3k2L=158/119
+finite_bank_max_R=119/158
+finite_bank_longest_interval=[505/2142,177/742]
+finite_bank_longest_interval=[565/742,1637/2142]
+certificate=PASS

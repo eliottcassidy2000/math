@@ -1,0 +1,24 @@
+THM-741 PURE (3,4) FLOOD TAIL: EXACT a=19 BRANCH CERTIFICATE
+============================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); fixed a=19; claim all integers 19<b<c<d
+root r=28 m=433607/2522520; after-a r=26 m=6388289/47927880; common b cutoff V2=207
+a=18 comparison r18=26 m18=17747/120120; common=5691269/47927880; only18=15793/544635; only19=11617/798798; neither carrier contains the other
+b obligations=187; c nodes=13332; P2-preclosed c=3361; exact-m3=9971
+exact-m3 closed without d=8597; fallback=0; integral caps=0; candidate c nodes/sweeps=1374/21302
+all terminal sweeps positive; minimum swept=368611/8351070 at (3, 4, 8, 9, 10, 11, 12, 13, 14, 19, 23, 32, 52)
+terminal-ledger SHA256=91a878c51d96cebeaa015598b4c78f14c8a6b0fa181dc87827108a22c7e7aaeb
+certificate-ledger SHA256=86533640f52a442c138fcea45068fe06fd91fb9e8de353ee187cfcca6166a567
+independent full-union samples=187; sample-manifest SHA256=1c9d0dec8d4f6a8065021930182cce6763506885d09465bbd57252c5fd3dedd3
+adjacent cutoff audit common-b=167; V3 down/equal/up=25/3/139; P2 cutoff down/equal/up=23/6/138
+adjacent-bank SHA256=d7bc67012c8d5e161dfcefff0840ecef186e4341b86b295653fb6544921addae
+proof partition: b>=V2 by fresh THM-735 J3; every P2 truth set linearly audited; large d by fresh fixed-E2 cap; every remaining d swept
+transport audit: G18 and G19 are incomparable, and V3/P2 cutoffs move in both directions; only the proof schema transports
+Tournament Analysis vertices=active b obligations; observable=(minimum swept clearance,-sweeps,-b); lex switch
+tournament vertices=63; score histogram 0..62:1; directed triangles=0; SCCs=63; Hamiltonian paths=1
+tournament path SHA256=fe91efac9d31909e0b3317cadb8ef41130ae40d17ff8c8ebb09c44235ddc9e52
+carrier audit: nested components, phase, certificate type, caps, and margins are retained; runners, isolated Kakeya needles, residues, wall events, and Fano flags are not
+Kakeya/Fano audit: D_19 changes the component stalk in both directions; chi7 still supplies only the common root-edge address (3,4)
+VERDICT: E_(3,4) union {19,b,c,d} is lonely for every 19<b<c<d; 208 literal-G1 branches and global THM-741 remain open
+source_sha256=a63afe6693107e1fc4fdc10c84f7ecdb62673c226bc5817e1ec9e804c5b0b416
+ALL EXACT a=19 BRANCH CHECKS PASSED

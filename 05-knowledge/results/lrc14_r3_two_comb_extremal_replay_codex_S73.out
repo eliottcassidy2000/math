@@ -1,0 +1,16 @@
+THM-1094 independent Fraction replay
+cores=66
+finite_pairs_from_cutoff=9246070
+min_core_ell=1/112
+min_ell_core=[1, 2, 3, 4, 7, 8, 9, 10, 11, 12]
+min_scaled_non_p0=1727/1008
+min_scaled_non_p0_core=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12]
+min_scaled_non_p0_core=[1, 2, 3, 6, 7, 8, 9, 10, 11, 12]
+finite_bank_extremal_core=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+finite_bank_extremal_pair=(153,159)
+finite_bank_extremal_longest_component=158/56763
+finite_bank_extremal_3k2L=158/119
+finite_bank_extremal_R=119/158
+finite_bank_extremal_interval=[505/2142,177/742]
+finite_bank_extremal_interval=[565/742,1637/2142]
+replay=PASS

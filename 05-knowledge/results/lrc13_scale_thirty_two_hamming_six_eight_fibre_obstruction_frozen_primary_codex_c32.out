@@ -1,0 +1,48 @@
+scale-thirty-two AP-centred Hamming-six Z/8 frozen-primary certificate
+scope primitive proper common-scale H6 owner-local gate only
+status FROZEN-PRIMARY THM-1096 independent-referee-pending
+orders (1, 2, 4, 8, 16, 32) unit counts (1, 1, 2, 4, 8, 16)
+numpy exact-batching version 2.2.6
+hereditary grammar at least two order-32 providers
+hereditary words 12281 state words/support 956301312 labelled support/order contexts 11347644 raw labelled states 883622412288
+order32-count grammar histogram 2:9375 3:2500 4:375 5:30 6:1
+D1 ratio-cardinalities (32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+D2 ratio-cardinalities (16, 0, 0, 0, 0, 16, 16, 0, 0, 0, 0, 0)
+D4 ratio-cardinalities (8, 0, 8, 8, 0, 8, 8, 0, 8, 8, 0, 0)
+D8 ratio-cardinalities (8, 4, 4, 8, 4, 4, 4, 4, 8, 4, 4, 4)
+D16 ratio-cardinalities (6, 4, 4, 6, 6, 4, 4, 6, 6, 4, 4, 4)
+D32 ratio-cardinalities (5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4)
+labelled literal masks audited 4608
+scalar feasible-owner histogram 0:76548 1:2800212 2:4692582 3:2946408 4:743040 5:85404 6:3450
+scalar supports-by-survivor-count 0:640 1:96 2:48 3:30 17:24 22:24 33:12 34:24 38:24 54:2
+scalar survivors 3450 supports 284 literal unit words 621084672 multiplicity profiles 23 capacity vectors 1649
+scalar multiplicity histogram (0, 0, 1, 0, 0, 5):72 (0, 0, 1, 0, 1, 4):168 (0, 0, 1, 0, 2, 3):48 (0, 0, 1, 0, 3, 2):384 (0, 0, 1, 1, 0, 4):48 (0, 0, 1, 1, 1, 3):48 (0, 0, 1, 1, 2, 2):672 (0, 0, 1, 2, 1, 2):312 (0, 0, 1, 3, 0, 2):12 (0, 0, 2, 1, 1, 2):72 (0, 0, 2, 2, 0, 2):36 (0, 0, 3, 0, 1, 2):12 (0, 0, 3, 1, 0, 2):12 (0, 0, 4, 0, 0, 2):30 (0, 1, 3, 0, 0, 2):96 (0, 2, 0, 0, 0, 4):36 (0, 2, 0, 0, 1, 3):144 (0, 2, 0, 0, 2, 2):216 (0, 2, 0, 1, 0, 3):144 (0, 2, 0, 1, 1, 2):432 (0, 2, 0, 2, 0, 2):216 (0, 2, 1, 0, 1, 2):96 (0, 3, 1, 0, 0, 2):144
+scalar minimum-slack histogram 0:1932 1:384 2:954 3:180
+scalar maximum-slack histogram 1:144 2:504 3:576 4:348 5:504 6:480 7:528 9:150 10:216
+scalar tight-owner histogram 0:1518 1:24 2:960 3:756 4:192
+normalized owner keys 1725 uniform labelled multiplicity 12
+mod8 anchor orders (1, 2, 4, 8) fibres 8x4
+mod8 anchor-bank histogram 1:8064 2:4008 3:636 4:3576 6:2088 7:240 8:192 9:36 10:684 12:984 14:168 26:24
+mod8 owner-bound histogram 20:24 21:396 22:420 23:564 24:1416 25:2352 26:3252 27:3780 28:3708 29:2208 30:1260 31:480 32:624 33:192 34:24
+mod8 live-owner/context histogram 0:2802 1:456 2:192
+dead-owner deficit histogram 1:480 2:1260 3:2208 4:3708 5:3780 6:3252 7:2352 8:1416 9:564 10:420 11:396 12:24
+scalar-minus-relaxation histogram 2:1104 3:480 4:1560 5:2400 6:3504 7:2400 8:2976 9:960 10:2448 11:336 12:1548 13:216 14:360 15:288 16:108 20:12
+anchor unions audited 5832
+transverse option inequalities audited 258736
+proof implication literal-cover => U8>=32; every scalar row has at least four owners with U8<32
+live-class multiplication orbits {0: Counter({12: 232, 6: 3}), 1: Counter({12: 38}), 2: Counter({12: 16})}
+tournament vertices owner obligations; pair observable lex(live,U8,scalar-capacity,anchor-bank-size); harder key wins; coordinate-order tie Hamiltonian path
+tournament fingerprints all 3450 transitive: scores 0,1,2,3,4,5; cycles 0; singleton SCCs; Hamiltonian paths 1
+tournament tie-edge histogram 0:1536 1:888 2:732 3:204 4:48 7:42
+tournament flip-edge histogram 0:11 1:18 2:53 3:117 4:253 5:372 6:582 7:651 8:562 9:396 10:220 11:127 12:59 13:19 14:8 15:2
+Kakeya/toothpick carrier has eight thick four-point Z/8 fibres; order-16/32 providers are independently relaxed transverse needles
+carrier preserves the absolute owner-cover implication and threshold; destroys within-fibre positions, transverse overlaps, shared exact units, and literal witnesses only in the upper-bound direction
+alternate-carrier audit runners/providers, gaps, fixed sections/boundaries, wall crossings, isolated residues, cover arcs, Fourier modes, matroid circuits, Fano points, chi7 colours, and completed tournaments all lose the absolute threshold or higher mask overlap
+SHA256 CRT-bases 68b88f331468047800d59975eaabd0bdf02af4567bc70ffe8a4afb0984a12b74
+SHA256 literal-masks f715f217aae1be03edc31d51a4eb4380024e815c67cc73983bd321beff8c5b81
+SHA256 grammar ea035511ad805d5211005c01f3c230882cf5a5349a5a0a11830221bc7538740f
+SHA256 scalar aba8c8c9d589103d83c135f512bec5375ded7997adc166c77b9051cc2b2c106a
+SHA256 normalized-relaxation c8f577c67d078c3c0fc70f642ecf63a5ba7ab89e93056997002387bd53fda079
+SHA256 labelled-context-bounds f08d8ddfeeba5d1d532e3e08a112f23210b0709a1dacf3575deef369a5ea4e43
+frontier verdict scalar-empty no; Z/8-relaxation all-six empty yes
+scope caveat closes only c=32 primitive proper AP-centred common-sheet H6; finite H5, non-AP/deep sheets, uniform n=12 sporadic emptiness, and LRC14 remain open

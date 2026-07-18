@@ -1,0 +1,83 @@
+### r=4 finite-horn tail independent hypergraph referee ###
+scope: lexicographic core indices [160,220), KB=400, q=15..40
+scope_note: old prefix and published tail overlap at core 160
+claim tested: no <=4 killer unsafe-edges cover the core-safe residue states
+search: uncovered-state-first exact DPLL + memo + cardinality upper bound
+tournament: D(i,j)=|K_i|-|K_j|; ties use increasing speed
+
+core=160 P=[1,4,5,6,7,9,10,11,12] safe=136 killers=243 digest=24f3c1097d660f15 nodes=[1,17,322,682,0] memo=993 hits=29 bound=949 tournament_flips=13525 cover=NO
+core=161 P=[1,4,5,6,8,9,10,11,12] safe=158 killers=243 digest=d8858284ff487830 nodes=[1,17,295,0,0] memo=305 hits=8 bound=288 tournament_flips=13983 cover=NO
+core=162 P=[1,4,5,7,8,9,10,11,12] safe=124 killers=243 digest=00010b7a87d04d40 nodes=[1,17,322,75,0] memo=404 hits=11 bound=383 tournament_flips=13093 cover=NO
+core=163 P=[1,4,6,7,8,9,10,11,12] safe=126 killers=243 digest=25bc1c2f5eb27823 nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=13368 cover=NO
+core=164 P=[1,5,6,7,8,9,10,11,12] safe=130 killers=243 digest=c845d5d255496395 nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=13367 cover=NO
+core=165 P=[2,3,4,5,6,7,8,9,10] safe=154 killers=269 digest=1b84e571ef4f70cb nodes=[1,19,386,353,0] memo=739 hits=20 bound=704 tournament_flips=16210 cover=NO
+core=166 P=[2,3,4,5,6,7,8,9,11] safe=126 killers=256 digest=330ac714f200253e nodes=[1,18,348,2293,0] memo=2501 hits=159 bound=2379 tournament_flips=14594 cover=NO
+core=167 P=[2,3,4,5,6,7,8,9,12] safe=164 killers=243 digest=dc998b47299b889e nodes=[1,17,314,88,0] memo=416 hits=4 bound=394 tournament_flips=13542 cover=NO
+core=168 P=[2,3,4,5,6,7,8,10,11] safe=148 killers=256 digest=a2253de80b21f6cc nodes=[1,18,348,3653,0] memo=3939 hits=81 bound=3761 tournament_flips=14741 cover=NO
+core=169 P=[2,3,4,5,6,7,8,10,12] safe=188 killers=243 digest=ae791b28e63178be nodes=[1,17,314,191,0] memo=521 hits=2 bound=495 tournament_flips=13557 cover=NO
+core=170 P=[2,3,4,5,6,7,8,11,12] safe=164 killers=243 digest=c790c2d42502f509 nodes=[1,17,318,1320,0] memo=1637 hits=19 bound=1568 tournament_flips=13542 cover=NO
+core=171 P=[2,3,4,5,6,7,9,10,11] safe=142 killers=256 digest=a7e1220d78690e3b nodes=[1,18,348,1737,0] memo=2066 hits=38 bound=1969 tournament_flips=15010 cover=NO
+core=172 P=[2,3,4,5,6,7,9,10,12] safe=180 killers=243 digest=cd1928eed790a76c nodes=[1,17,314,44,0] memo=373 hits=3 bound=353 tournament_flips=13782 cover=NO
+core=173 P=[2,3,4,5,6,7,9,11,12] safe=152 killers=243 digest=cbea475c3e6b6cc9 nodes=[1,17,318,1641,0] memo=1952 hits=25 bound=1866 tournament_flips=13589 cover=NO
+core=174 P=[2,3,4,5,6,7,10,11,12] safe=178 killers=243 digest=a5a673b73909e58f nodes=[1,17,322,345,0] memo=673 hits=12 bound=642 tournament_flips=13709 cover=NO
+core=175 P=[2,3,4,5,6,8,9,10,11] safe=170 killers=256 digest=952d73b69fd613b0 nodes=[1,18,348,0,0] memo=361 hits=6 bound=342 tournament_flips=15329 cover=NO
+core=176 P=[2,3,4,5,6,8,9,10,12] safe=202 killers=243 digest=061217a86ad31667 nodes=[1,17,314,0,0] memo=330 hits=2 bound=312 tournament_flips=13992 cover=NO
+core=177 P=[2,3,4,5,6,8,9,11,12] safe=178 killers=243 digest=165cc59c4803b72c nodes=[1,17,318,48,0] memo=378 hits=6 bound=358 tournament_flips=14014 cover=NO
+core=178 P=[2,3,4,5,6,8,10,11,12] safe=200 killers=243 digest=d46b795ff33c7ca2 nodes=[1,17,322,27,0] memo=357 hits=10 bound=338 tournament_flips=14063 cover=NO
+core=179 P=[2,3,4,5,6,9,10,11,12] safe=194 killers=243 digest=c3ca3e14b3826e35 nodes=[1,17,322,55,0] memo=385 hits=10 bound=365 tournament_flips=14070 cover=NO
+core=180 P=[2,3,4,5,7,8,9,10,11] safe=130 killers=256 digest=31fdb3f63dd20af8 nodes=[1,18,348,638,0] memo=963 hits=42 bound=915 tournament_flips=14924 cover=NO
+core=181 P=[2,3,4,5,7,8,9,10,12] safe=150 killers=243 digest=c8e0f9521fef4856 nodes=[1,17,314,286,0] memo=602 hits=16 bound=571 tournament_flips=13420 cover=NO
+core=182 P=[2,3,4,5,7,8,9,11,12] safe=124 killers=243 digest=4dae7f9f4276e9a5 nodes=[1,17,318,432,0] memo=757 hits=11 bound=721 tournament_flips=13290 cover=NO
+core=183 P=[2,3,4,5,7,8,10,11,12] safe=146 killers=243 digest=c8fdd8f6308cc0eb nodes=[1,17,322,1068,0] memo=1388 hits=20 bound=1330 tournament_flips=13409 cover=NO
+core=184 P=[2,3,4,5,7,9,10,11,12] safe=140 killers=243 digest=00f095e5c2038bab nodes=[1,17,322,266,0] memo=592 hits=14 bound=564 tournament_flips=13513 cover=NO
+core=185 P=[2,3,4,5,8,9,10,11,12] safe=162 killers=243 digest=a24b8adf311d0b09 nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=13994 cover=NO
+core=186 P=[2,3,4,6,7,8,9,10,11] safe=138 killers=256 digest=58154b7f6d0f9d14 nodes=[1,18,348,0,0] memo=357 hits=10 bound=338 tournament_flips=14853 cover=NO
+core=187 P=[2,3,4,6,7,8,9,10,12] safe=168 killers=243 digest=6b5ad70b26c7a4ff nodes=[1,17,314,88,0] memo=415 hits=5 bound=393 tournament_flips=13435 cover=NO
+core=188 P=[2,3,4,6,7,8,9,11,12] safe=184 killers=243 digest=3515c34a9b556054 nodes=[1,17,318,3264,0] memo=3578 hits=22 bound=3424 tournament_flips=13848 cover=NO
+core=189 P=[2,3,4,6,7,8,10,11,12] safe=164 killers=243 digest=08f8814727c40d57 nodes=[1,17,322,459,0] memo=784 hits=15 bound=749 tournament_flips=13504 cover=NO
+core=190 P=[2,3,4,6,7,9,10,11,12] safe=158 killers=243 digest=9c595b7489fc82c9 nodes=[1,17,322,25,0] memo=352 hits=13 bound=333 tournament_flips=13684 cover=NO
+core=191 P=[2,3,4,6,8,9,10,11,12] safe=180 killers=243 digest=e6bc8f8a4682b5aa nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=14016 cover=NO
+core=192 P=[2,3,4,7,8,9,10,11,12] safe=130 killers=243 digest=8958aa210b6b321a nodes=[1,17,270,0,0] memo=286 hits=2 bound=270 tournament_flips=13361 cover=NO
+core=193 P=[2,3,5,6,7,8,9,10,11] safe=124 killers=256 digest=027d79aa49ffab5d nodes=[1,18,348,44,0] memo=402 hits=9 bound=381 tournament_flips=14384 cover=NO
+core=194 P=[2,3,5,6,7,8,9,10,12] safe=160 killers=243 digest=b988bcab85f03d7a nodes=[1,17,314,44,0] memo=373 hits=3 bound=353 tournament_flips=13559 cover=NO
+core=195 P=[2,3,5,6,7,8,9,11,12] safe=134 killers=243 digest=6e918349ae011c5c nodes=[1,17,318,240,0] memo=562 hits=14 bound=534 tournament_flips=13265 cover=NO
+core=196 P=[2,3,5,6,7,8,10,11,12] safe=156 killers=243 digest=e88bdac14ac17898 nodes=[1,17,322,432,0] memo=759 hits=13 bound=725 tournament_flips=13430 cover=NO
+core=197 P=[2,3,5,6,7,9,10,11,12] safe=162 killers=243 digest=81d9d9d40bc230db nodes=[1,17,322,0,0] memo=329 hits=11 bound=311 tournament_flips=13458 cover=NO
+core=198 P=[2,3,5,6,8,9,10,11,12] safe=172 killers=243 digest=38716373cba07063 nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=13999 cover=NO
+core=199 P=[2,3,5,7,8,9,10,11,12] safe=122 killers=243 digest=97a2ec388befd882 nodes=[1,17,322,83,0] memo=409 hits=14 bound=388 tournament_flips=13122 cover=NO
+core=200 P=[2,3,6,7,8,9,10,11,12] safe=140 killers=243 digest=27685fb051304c92 nodes=[1,17,297,0,0] memo=312 hits=3 bound=295 tournament_flips=13281 cover=NO
+core=201 P=[2,4,5,6,7,8,9,10,11] safe=136 killers=256 digest=d05e46bb3825c5c0 nodes=[1,18,348,22,0] memo=380 hits=9 bound=360 tournament_flips=14756 cover=NO
+core=202 P=[2,4,5,6,7,8,9,10,12] safe=168 killers=243 digest=6024741faff4d4b7 nodes=[1,17,314,0,0] memo=330 hits=2 bound=312 tournament_flips=13424 cover=NO
+core=203 P=[2,4,5,6,7,8,9,11,12] safe=146 killers=243 digest=5916e73bccb660ac nodes=[1,17,318,120,0] memo=450 hits=6 bound=427 tournament_flips=13333 cover=NO
+core=204 P=[2,4,5,6,7,8,10,11,12] safe=168 killers=243 digest=c7143b99377acd55 nodes=[1,17,322,54,0] memo=384 hits=10 bound=364 tournament_flips=13323 cover=NO
+core=205 P=[2,4,5,6,7,9,10,11,12] safe=162 killers=243 digest=b5f9beb6a7a4da54 nodes=[1,17,322,52,0] memo=382 hits=10 bound=362 tournament_flips=13577 cover=NO
+core=206 P=[2,4,5,6,8,9,10,11,12] safe=184 killers=243 digest=869a0c0fad94e7cc nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=13912 cover=NO
+core=207 P=[2,4,5,7,8,9,10,11,12] safe=150 killers=243 digest=7cf2f6a24406e71d nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=12979 cover=NO
+core=208 P=[2,4,6,7,8,9,10,11,12] safe=152 killers=243 digest=5486455f9ec8ed0a nodes=[1,17,297,0,0] memo=313 hits=2 bound=296 tournament_flips=13392 cover=NO
+core=209 P=[2,5,6,7,8,9,10,11,12] safe=144 killers=243 digest=2ea49af80dcdbc90 nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=13288 cover=NO
+core=210 P=[3,4,5,6,7,8,9,10,11] safe=152 killers=256 digest=e286b773f917d0af nodes=[1,18,326,66,0] memo=406 hits=5 bound=385 tournament_flips=14696 cover=NO
+core=211 P=[3,4,5,6,7,8,9,10,12] safe=184 killers=243 digest=65cffb9f3e1359bc nodes=[1,17,314,0,0] memo=330 hits=2 bound=312 tournament_flips=13553 cover=NO
+core=212 P=[3,4,5,6,7,8,9,11,12] safe=162 killers=243 digest=820acbb92dbe2f34 nodes=[1,17,318,72,0] memo=401 hits=7 bound=380 tournament_flips=13406 cover=NO
+core=213 P=[3,4,5,6,7,8,10,11,12] safe=184 killers=243 digest=8659a47d87af1f91 nodes=[1,17,322,0,0] memo=330 hits=10 bound=312 tournament_flips=13446 cover=NO
+core=214 P=[3,4,5,6,7,9,10,11,12] safe=178 killers=243 digest=389969e2276cf63b nodes=[1,17,322,27,0] memo=357 hits=10 bound=338 tournament_flips=13697 cover=NO
+core=215 P=[3,4,5,6,8,9,10,11,12] safe=200 killers=243 digest=29db16d3c36e832c nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=14152 cover=NO
+core=216 P=[3,4,5,7,8,9,10,11,12] safe=150 killers=243 digest=46f1e80078d2c69e nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=13292 cover=NO
+core=217 P=[3,4,6,7,8,9,10,11,12] safe=168 killers=243 digest=8fb1cdefb765f766 nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=13478 cover=NO
+core=218 P=[3,5,6,7,8,9,10,11,12] safe=172 killers=243 digest=8cd854aad74d90dc nodes=[1,17,270,0,0] memo=288 hits=0 bound=272 tournament_flips=13499 cover=NO
+core=219 P=[4,5,6,7,8,9,10,11,12] safe=172 killers=243 digest=0e3338bb47d6d661 nodes=[1,17,297,0,0] memo=313 hits=2 bound=296 tournament_flips=13373 cover=NO
+
+### aggregate ###
+cores_checked: 60
+covers_by_at_most_four_killers: 0
+safe_states: total=9490 min=122 max=202
+incidence_digest_fnv1a64: 6f02f8fbc0d2a8f0
+dpll_nodes_remaining_[4,3,2,1,0]: [60,1031,18974,20334,0]
+memo_states: 39592
+memo_hits: 807
+cardinality_bound_prunes: 37669
+tournament_edge_flips_vs_increasing_speed: 827405
+tournament_fingerprint_each_core: transitive; cycles=0; SCCs=singletons; Hamiltonian_paths=1
+carrier_verdict: pairwise tournament loses overlap; exact hypergraph preserves four-cover predicate
+small_modulus_filter: moot here, since even unrestricted killers have no four-cover
+RESULT: ALL 60 TAIL CORES CERTIFIED (NO FOUR-COVER)
+DONE

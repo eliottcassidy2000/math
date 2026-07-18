@@ -1,0 +1,26 @@
+THM-1097 independent guard/endpoint replay
+method=combined breakpoint arrangement plus exact midpoint classification
+primary_output_sha256=c030f563abf659f66acf44f4ce6cae84e493e0dcf4f40aed67f02a10a6591c09
+cores=220
+min_core_ell=11/1008
+min_ell_core=[1, 2, 3, 7, 8, 9, 10, 11, 12]
+finite_triples_from_guards=39778595
+maximum_formal_cutoffs=(642, 642, 642)
+maximum_counted_indices=(639, 640, 641)
+first_omitted_checks=(k1:220,k2:23589,k3:1238741)
+minimum_b_denominator=1295/72
+minimum_c_denominator=91073/595344
+minimum_first_omitted_k3_F=28429/182160
+replayed_nonempty_core_hardest_rows=200
+analytic_only_core_rows=20
+finite_bank_extremal_core=[1, 2, 3, 6, 7, 8, 10, 11, 12]
+finite_bank_extremal_triple=(162, 168, 174)
+finite_bank_extremal_longest_component=1/522
+finite_bank_extremal_7k3L=7/3
+finite_bank_extremal_R=3/7
+finite_bank_extremal_interval=[53/252,517/2436]
+finite_bank_extremal_interval=[1919/2436,199/252]
+tournament_carrier=endpoint order with exact coordinate/owner sidecars
+tournament_fingerprint=transitive; no cycles; singleton SCCs; one sorted Hamiltonian path
+challenged_assumption=runners alone are not faithful vertices for component length
+certificate=PASS

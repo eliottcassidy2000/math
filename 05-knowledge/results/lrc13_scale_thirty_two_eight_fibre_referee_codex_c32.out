@@ -1,0 +1,27 @@
+### scale-32 Z/8 independent compressed-fibre referee ###
+implementation: standard-library C++; reversed grammar, packed scalar lanes, compressed 8-bit anchors
+proof implication: literal cover => U8>=32
+labelled_CRT_masks_audited: 4608
+hereditary_words: 12281
+literal_unit_words_per_support: 956301312
+labelled_support_order_contexts: 11347644
+raw_labelled_unit_states: 883622412288
+scalar_feasible_owner_hist: 0:76548 1:2800212 2:4692582 3:2946408 4:743040 5:85404 6:3450
+scalar_survivors: 3450 supports=284 literal_unit_words=621084672
+scalar_minimum_slack_hist: 0:1932 1:384 2:954 3:180
+normalized_owner_keys: 1725 uniform_multiplicity=12
+anchor_unions_audited: 5832
+transverse_option_inequalities_audited: 258736
+mod8_anchor_bank_hist: 1:8064 2:4008 3:636 4:3576 6:2088 7:240 8:192 9:36 10:684 12:984 14:168 26:24
+mod8_owner_bound_hist: 20:24 21:396 22:420 23:564 24:1416 25:2352 26:3252 27:3780 28:3708 29:2208 30:1260 31:480 32:624 33:192 34:24
+mod8_live_owner_context_hist: 0:2802 1:456 2:192
+tournament_tie_edge_hist: 0:1536 1:888 2:732 3:204 4:48 7:42
+tournament_flip_edge_hist: 0:11 1:18 2:53 3:117 4:253 5:372 6:582 7:651 8:562 9:396 10:220 11:127 12:59 13:19 14:8 15:2
+tournament_fingerprint: transitive; scores=0,1,2,3,4,5; cycles=0; SCCs=singletons; Hamiltonian_paths=1
+carrier_verdict: owner-fibre hypergraph preserves cover threshold; pairwise tournament loses higher overlaps
+FNV1a64 labelled_CRT_masks: 644c1a722c80a0af
+FNV1a64 hereditary_grammar: 39cb7299ac50dfbf
+FNV1a64 scalar_survivors: 081a8f01e1487fab
+FNV1a64 labelled_owner_bounds: 946661f6862d5a97
+RESULT: ALL 3450 SCALAR ROWS HAVE AT MOST TWO LIVE OWNERS
+DONE

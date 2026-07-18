@@ -1047,18 +1047,23 @@ independently close `c=27`: a standard-library literal bank and a separately
 developed NumPy-batched certificate agree on all 450 scalar rows and
 13,598,160 reachable-mask incidences, while the latter's sound nested
 `Z/27 -> Z/3` then `Z/27 -> Z/9` relaxation already leaves at most four
-feasible owners.  THM-1072 now independently closes `c=28`: the
-`Z/28 -> Z/4` anchor/nonanchor upper relaxation leaves at most two feasible
-owners on each of the 3,170 scalar survivors, and a separately developed C++
-literal-CRT referee agrees with two Python implementations on the complete
-labelled bank and all 6,628,500 reachable-mask incidences.  Scale 29 is
-prime-excluded by THM-983.  THM-1090 independently closes `c=30`: among
-171,118,332 labelled scalar contexts, 54,050 survive capacity; the `Z/6`
-anchor relaxation leaves 120 all-owner rows, and the complementary `Z/10`
-relaxation makes every one of their 720 owner bounds at most 28.  Its exact
-residual maxima are at most 27.  Algebraic-CRT Python and literal-CRT C++
-implementations agree on all decisive histograms and 3,401,088 reachable-mask
-incidences.  Scale 31 is prime-excluded, so the next untreated scale is `c=32`.
+feasible owners.  THM-1072 now independently closes `c=28`: its two-adic
+`Z/28 -> Z/4` fibre relaxation leaves each of the 3,170 scalar survivors
+feasible at at most two owners.  A NumPy primary, a separately structured
+literal-CRT Python flag certificate, and a standard-library C++ referee agree
+on all 19,020 owner obligations and 6,628,500 exact reachable-mask
+incidences.  Scale 29 is prime-excluded by THM-983, so the next untreated
+composite scale was `c=30`.  THM-1090 now closes it by complementary
+`Z/30 -> Z/6` and `Z/30 -> Z/10` upper relaxations.  The first leaves 120
+all-owner rows from 54,050 scalar survivors; the second is at most 28 on
+every one of their 720 owner obligations.  An independently structured C++
+referee reproduces the complete 171,118,332-context scalar census and checks
+all 18,874,368 literal residual owner/unit words pointwise.  Scale 31 is
+prime-excluded.  THM-1096 independently closes `c=32` with a `Z/8`
+thick-fibre relaxation.  Its Python primary and separately structured C++
+referee agree on all 11,347,644 scalar contexts, 3,450 survivors, 1,725
+normalized owner keys, and the terminal live-owner histogram
+`0:2802,1:456,2:192`.  The next untreated composite scale is `c=33`.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1069,6 +1074,23 @@ pairwise intersections.  The generic `LRCPreNerveProjection` module
 formalizes the logic shared by the later deficits: a global word projects to
 a local witness at every owner, so one empty projection is terminal; a
 two-owner Boolean counterexample proves the converse false.
+`LRCNestedFibreRelaxation.lean` kernel-checks the anchor/remainder
+decomposition and the sound pointwise-maximum relaxation used by THM-994 and
+THM-1072/1090/1096.  It deliberately does not internalize the large finite banks.
+
+`LRCSharpCombArithmetic.lean` now isolates the arithmetic skeleton of the
+clustered-stratum breakthroughs THM-1094 and THM-1097.  It kernel-checks the
+two-comb ratio tail, the three-comb ratio tail, the exceptional two-comb
+rectangle, the sharp final-comb inequality, and the exact toothpick phase
+transition `1<(7-m)/m iff m<7/2`.  The module is root-wired and contains no
+`sorry`, `native_decide`, or new axioms.  Its deliberate boundary is equally
+important: the sharp periodic interval-discrepancy lemma, the exact 66/220-core
+rational atlases, and the 9,246,070-pair / 39,778,595-triple banks remain
+external finite-exact inputs.  Formalizing those producers is the next
+kernel-facing task; the uniform mathematical consequences already close the
+`r=3` and `r=4` clustered strata, not global LRC(14).  An exact all-high row in
+THM-1101 shows that `r=5` needs a new overlap/endpoint-owner theorem rather
+than another instantiation of the same arithmetic tail.
 
 `LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
 that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used
@@ -1083,7 +1105,7 @@ membership and a complete-fibre-union presentation.  Concrete
 raw-bank completeness and the finite
 scale tables remain external certificates.
 
-The remaining composite scales beginning at 30, the finite ramified H5 bank, and non-AP,
+The remaining composite scales beginning at 33, the finite ramified H5 bank, and non-AP,
 deep, and higher-sheet branches remain parts of the global `n=12` problem.
 None of these facewise results proves uniform sporadic emptiness.
 

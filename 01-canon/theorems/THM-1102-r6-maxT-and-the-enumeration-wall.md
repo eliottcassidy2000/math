@@ -1,15 +1,23 @@
 ---
 id: THM-1102
-title: r=6 — MAX T COMPUTED FIRST, AND THE ENUMERATION WALL LOCATED. (I) Following the rule I got wrong at r=5, max T was computed BEFORE any finite-horn run: over all 792 seven-speed cores, scanning every quintuple of removed killers in a width-16 window, **max R = 1.85794** at core [1,2,4,7,9,11,12] with killers (158,160,162,164,166), and **max T = 308.4**, giving KB = 333. The worst case sits at offset 9 inside a window of width 16, so the window is wide enough for the answer to be trustworthy — a check I now run explicitly. (II) THE R-LADDER, extended: **0.51852 (r=2) → 0.73375 (r=3) → 0.98453 (r=4) → 1.28495 (r=5) → 1.85794 (r=6)**. (III) THE r=6 FINITE HORN IS INFEASIBLE, and this is the session's real finding: at KB = 333 roughly **3.64 × 10¹²** sextuples pass the covering-necessary condition — about 140 days of compute, and **13,783×** the r=5 count. The prune that made r=4 and r=5 possible has stopped working, for a structural reason: with six killers the condition Σ frac ≥ 1 is easy to satisfy (mean kill-fraction ≈ 0.13, so 6 × 0.13 ≈ 0.78 with a 6–9% tail), so it discards only ~92% of sextuples while the raw count exploded. (IV) A CORRECTION to my own earlier statements: I had said the method "dies at r ≥ 7 because the union bound needs 7 − r > 0". That describes the SUPERSEDED crude formulation of THM-1051. The current horn removes r−1 killers *exactly* and bounds only the last, so **no r appears anywhere** and there is no structural r-cap — only R < 1 matters. The wall at r=6 is therefore **computational, not mathematical**. (V) STATUS: r = 2,3,4,5 closed; **r = 6 open**, with the obstruction located precisely and quantified
-status: (I) COMPUTED and window-checked — max T = 308.4 over all 792 cores, in two chunks (0–300 and 300–792), each run to a printed summary rather than read off a progress line. (II) measured. (III) MEASURED, not merely predicted: the 3.64 × 10¹² figure is an extrapolation from exact per-core counts on an 8-core sample, so it is order-of-magnitude, and the conclusion (infeasible by this method) is robust to a factor of 10. (IV) is a correction to my own prior claims in THM-1051/1093. (V) honest — **r=6 is NOT closed and I make no claim that it is**
+title: r=6 bounded-window R telemetry and the candidate-box enumeration wall; no uniform max-T or r=6 finite reduction is proved
+status: PARTIAL / DOWNSTREAM AUDIT OF MISTAKE-164 — the width-16 census over all 792 cores and the candidate-box feasibility estimate are retained, but interiority inside a fixed window does not make its max T uniform. KB=333 is conditional telemetry, not a proved all-scale split. Uniform r=5 and r=6 both remain open; only r<=4 is uniformly closed in this clustered hierarchy
 source: kind-pasteur-2026-07-18-S128 (cont.64; owner: run the r=6 finite horn, computing max T first)
 depends_on:
-  - THM-1093    # the r=5 closure and the max-T rule this follows
+  - THM-1101    # bounded r=5 telemetry; its former uniform closure is withdrawn
   - THM-1081    # the R-ladder this extends
+related: [THM-1097, MISTAKE-164]
 script: 04-computation/r6_maxT_kps_S128c64.py, r6_maxT_chunk_kps_S128c64.py, r6_feasibility_kps_S128c64.py (+ .out)
 ---
 
 # THM-1102 — r=6: max T first, and where the enumeration wall is
+
+> **Audit correction (codex-S73; MISTAKE-164).**  Every quintuple below was
+> restricted to a width-16 bottom window.  Having the maximizer at offset 9
+> rules out truncation by *that particular window edge*; it does not reduce
+> arbitrary larger or independently shifted killers to the window.  Thus
+> `308.4` is the scanned maximum and `KB=333` is a candidate cutoff only.
+> The exact all-high r=5 gap in THM-1101 shows why this distinction is real.
 
 ## (I) Max T, computed first and window-checked
 
@@ -20,11 +28,12 @@ So this time T came first.
 Over all **792 seven-speed cores**, every quintuple of removed killers in a width-16 window:
 
 > **max R = 1.85794**, at core [1,2,4,7,9,11,12], killers (158,160,162,164,166), T = 308.4
-> **max T = 308.4** over the R ≥ 1 region ⟹ **KB = 333**
+> **scanned max T = 308.4** over the scanned R ≥ 1 region ⟹ **candidate KB = 333**
 
 24,598 + 16,298 quintuples have R ≥ 1, and the largest killer among them is 172. The worst
-case sits at **offset 9 inside a window of width 16** — comfortably interior, so the window
-is not truncating the answer. I now run that check explicitly rather than assuming it.
+case sits at **offset 9 inside a window of width 16**.  This verifies that the
+reported bank maximum is not an edge artifact inside that bank.  It does not
+prove that the infinite failure region is contained in the bank.
 
 Both chunks (cores 0–300 and 300–792) were run to a printed summary. The first attempt at a
 single 792-core run was killed mid-way at core 300 with max T still *rising* (129 → 225 →
@@ -34,7 +43,7 @@ single 792-core run was killed mid-way at core 300 with max T still *rising* (12
 
 > **0.51852 (r=2) → 0.73375 (r=3) → 0.98453 (r=4) → 1.28495 (r=5) → 1.85794 (r=6)**
 
-## (III) The enumeration wall
+## (III) The candidate-box enumeration wall
 
 Last session I predicted r=6 was "where the enumeration finally becomes the binding
 constraint rather than the mathematics". It is, and now it is measured:
@@ -45,7 +54,7 @@ constraint rather than the mathematics". It is, and now it is measured:
 | 5 | 235 | 2.64 × 10⁸ | ~9 min |
 | **6** | **333** | **≈ 3.64 × 10¹²** | **≈ 140 days** |
 
-**13,783× the r=5 count.** The prune has stopped working, and the reason is structural
+**13,783× the r=5 count.** Within this candidate box the prune has stopped working, and the reason is structural
 rather than incidental: a sextuple can only be uncertified if its six kill-sets cover the
 core's safe (q,a) set, requiring Σ frac ≥ 1 — but with *six* killers and a mean kill-fraction
 of ≈ 0.13, the sum sits at ≈ 0.78 with a 6–9% tail, so the condition discards only ~92% of
@@ -63,19 +72,25 @@ and bounds only the last, so **r appears nowhere in the estimate** — the thres
 1/(3L) regardless of r, exactly as noted in THM-1061 and then forgotten by me two sessions
 later. There is no structural r-cap. The wall at r=6 is **computational**.
 
-## (V) Status
+## (V) Status after the all-scale audit
 
-- r = 2, 3, 4, 5: **closed**.
-- r = 6: **open**. max T and KB are known, the measure horn's failure region is mapped
-  (max R = 1.858), and the finite horn is infeasible by this enumeration.
+- r = 2, 3, 4: **uniformly closed**.
+- r = 5: **open**.  The below-235 horn is finite-exact, but THM-1101 has an
+  exact covering row above 235 missed by both sides of its former split.
+- r = 6: **open**.  The width-16 failure region is mapped (`max R=1.858`
+  inside that bank), and direct enumeration of the conditional `KB=333` box
+  is infeasible by this implementation.  Neither number is a uniform tail.
 
 ## Named next
+- First close the four-removal `r=5` all-scale bridge; the same endpoint-owner
+  overlap/self-similarity information is prerequisite for any honest `r=6`
+  finite reduction.
 - r=6 needs a better certificate than enumeration. Three candidates, in order of promise:
   (a) **strengthen the prune** — Σ frac ≥ 1 is weak because it ignores overlap; a bound
   using pairwise |kill(kᵢ) ∩ kill(kⱼ)| would cut the tail far harder, and the positive
   correlation measured in THM-1071(III) says those overlaps are large;
   (b) **shrink KB** by improving the measure horn on the failing region — max T = 308.4 is
-  driven by a handful of near-consecutive killer quintuples, and a special argument for
+  driven within the scanned bank by a handful of near-consecutive killer quintuples, and a special argument for
   clustered killers would collapse it;
   (c) **quotient by symmetry** — killers enter only through their residues mod q ≤ 40, so
   many sextuples are certificate-identical; deduplicating on the residue vector could cut
