@@ -4,7 +4,7 @@ title: Scale-twenty-two Hamming-six owner-feasibility deficit
 status: PROVED STRUCTURAL + REFEREED FINITE-EXACT — all 984 scalar survivors have at most one owner-local feasible projection; independent algebraic-CRT/Python-set and literal-CRT/C++ sorted-vector implementations agree, with optimized, unoptimized, and sanitized referee builds byte-identical
 source: codex-2026-07-17-S66 scale-twenty-two continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988]
-related: [THM-978, THM-980, THM-981, HYP-6820]
+related: [THM-978, THM-980, THM-981, THM-990, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_two_hamming_six_frontier_scout_codex_c22.py
   - 05-knowledge/results/lrc13_scale_twenty_two_hamming_six_frontier_scout_codex_c22.out
@@ -14,8 +14,8 @@ verification:
 
 # THM-989 — scale twenty-two has at least five impossible owners
 
-This namespace and the companion computation filename are reserved for the
-next exact primitive proper AP-centred common-scale Hamming-six face.
+This theorem closes the next exact primitive proper AP-centred common-scale
+Hamming-six face after scales twenty and twenty-one.
 
 For `c=22`, the effective orders are `1,2,11,22`, with twenty-two literal
 `(D,e)` states.  Hereditary leave-one-out lcm enumeration gives 3,249 divisor
@@ -50,8 +50,8 @@ The standard-library Python primary solves CRT representatives algebraically,
 cross-checks every representative by literal search, and checks every mask
 cardinality against an independent one-period formula.  It traverses all
 3,002,076 support/order rows without quotienting, hashes every scalar survivor
-and every sorted owner-local reachable-mask bank, and reproduces the following
-stronger telemetry:
+and every sorted owner-local reachable-mask bank, and recomputes each bank in
+the reverse provider order.  It reproduces the following stronger telemetry:
 
 ```text
 scalar support orbits under multiplication: 15, all of size 12;
@@ -71,13 +71,12 @@ primary source  94818bd64b0492156d7bf66b4fc96a679c8bbb112664ed1311cde7cd227b5914
 primary output  27b640da323604976b9172a6ffd9fc32e4c8b18c9f89227a420c0af566e40be4
 ```
 
-The independent C++ referee does not translate that implementation.  It finds
-every CRT representative by literal search, derives hereditary admissibility
-from the two prime-power coverage conditions and separately audits all six
-leave-one-out lcms, and realizes each owner-local reachable bank as a sorted
-vector of integer masks.  Its optimized, unoptimized, and ASan+UBSan builds
-produce byte-identical output.  The hardened proof-bearing serializations all
-agree with the primary exactly:
+The independently structured C++ referee constructs the reduced-unit alphabet
+and hereditary grammar from the two prime-power coverage conditions, audits
+all six leave-one-out lcms, finds every CRT representative by literal bounded
+search rather than algebraic CRT, and stores each reachable bank as a sorted
+integer-mask vector rather than a Python set.  Its hardened canonical
+serializations agree with the primary exactly:
 
 ```text
 CRT-base bank          fe217f797c08702c8f607d3a936321fb7ffb6c6e73770a0097cf71c597297793
@@ -90,27 +89,32 @@ owner-reachable bank   b881af1af73fe6dde434d92ca0598bac79828881ad32feff87d711fa4
 forward/reverse layers b08be64149acffb006205465bbcb5825b06d4e2ffb1ece561506f0e1746b8baa
 ```
 
-The multiplicity ledger and 411 tournament score vectors also cross-match at
-`5e1220b6...a80d` and `fdf170ef...aa0b`.  The referee independently checks
-that reversing all six provider insertions leaves every final reachable bank
-unchanged and hashes both intermediate layer sequences.
-
-The frozen referee artifact hashes are
+The multiplicity ledger and all 411 tournament score vectors cross-match at
+`5e1220b6...a80d` and `fdf170ef...aa0b`.  The referee independently reverses
+the provider traversal and checks every final bank and intermediate layer
+ledger.  Clang C++20 builds at `-O3`, `-O0`, and with ASan/UBSan produce
+byte-identical outputs; the sanitizer run is clean.  Referee artifact SHA-256
+values are
 
 ```text
 referee source  fc50462397411f76ee03bfd707c8ee9986dbce1c69257fbfa62c7d77b50bb40d
 referee output  f93a14158283fd0bbf91d62d7cd9d8b7eb89653e8ac517fcb0f16db6f59aec13
 ```
 
-Owner obligations are the terminal-faithful vertices: their exact summary is
-`(feasible,max-union,capacity,reachable-count,maximum-mask-count)`.
-Lexicographic comparison with coordinate tie breaks gives a transitive
-tournament in all 984 rows (score set `0,...,5`, zero directed triangles, six
-SCCs, one Hamiltonian path).  That tournament is telemetry only; it forgets
-the absolute 22-sheet threshold and the number of empty owners.  Provider,
-divisor, residue, isolated-sheet, and wall-event vertices lose shared-unit
-incidence earlier still.
+Owner obligations are the terminal-faithful vertices.  The telemetry
+tournament compares the ordered summaries
+`(feasible,max-union,capacity,reachable-count,maximum-mask-count)` and breaks
+ties by coordinate.  It is transitive in all 984 rows (score word `0,...,5`,
+zero directed triangles, six singleton SCCs, one Hamiltonian path).  That
+tournament forgets exact masks, sheet identities, the absolute threshold, and
+unit-witness incidence.  Providers, gaps, fixed sections and boundaries,
+wall events, residues, cover arcs, Fourier modes, and matroid circuits also
+lose the labelled owner-local predicate without an incidence sidecar.
 
-The independent replay closes this exact scale-twenty-two face.  The theorem
-does not cover scale 24 or higher (scale 23 is prime and already excluded by
-THM-983), H5 ramification, non-AP/deep sheets, or global sporadic emptiness.
+The two implementations reproduce the same tournament bank.  That agreement
+is a useful quotient audit, not the proof: exact owner-local reachability is
+the terminal obstruction.
+
+The theorem does not cover scale 24 or higher (scale 23 is prime and already
+excluded by THM-983), H5 ramification, non-AP/deep sheets, or global sporadic
+emptiness.

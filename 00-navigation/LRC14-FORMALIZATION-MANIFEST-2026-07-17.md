@@ -1024,12 +1024,13 @@ literal-search C++ and algebraic-CRT Python certificates traverse the exact
 owners.  THM-983 uniformly excludes every prime common scale `p>=19` by an
 exact residue-capacity recurrence plus structural arguments at the only
 threshold exceptions `p=23,29`.  THM-986 closes composite `c=20`, and THM-988
-closes `c=21`; the latter's two all-order rows are scalar-tight at all six
-owners while every local mask union has size only twenty, a pure
-overlap/projection obstruction.  THM-989 currently claims `c=22` from a scratch
-reconstruction, but its frozen primary and independent replay remain in
-progress.  Since `c=23` is prime, the next unclassified composite face after
-that claim is `c=24`.
+closes `c=21`; on its two all-order rows a cubic character on the induced
+`F_7^*` marks proves symbolically that the scalar-tight masks cannot partition
+the twenty-one sheets.  THM-989 now closes `c=22`: independent algebraic-CRT
+Python and literal-search C++ certificates agree on the exact owner-local
+deficit and, under common serialization, every reachable-mask bank.  Since
+`c=23` is prime, THM-990's frozen-primary claim at `c=24` is the next live
+composite face; an independent replay is still required there.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,

@@ -319,10 +319,10 @@ and Python exact replay, and THM-983 uniformly excludes every prime common
 scale `p>=19`.  THM-986's composite scale-twenty owner deficit now has
 independent C++ and Python exact replay.  THM-988 independently closes `c=21`;
 its two all-order rows are scalar-tight at every owner but have exact local
-maximum union `20/21`, exposing pure projection debt.  THM-989 claims `c=22`
-pending frozen dual replay; `c=23` is prime, so the next unclassified composite
-after that claim is `c=24`.  Ramified H5, non-AP/deep, and higher-sheet branches
-remain.  Neither the
+maximum union `20/21`; a new cubic-character argument explains that projection
+debt symbolically.  THM-989 now independently closes `c=22`; `c=23` is prime,
+and THM-990 claims the `c=24` owner deficit pending frozen dual replay.
+Ramified H5, non-AP/deep, and higher-sheet branches remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
