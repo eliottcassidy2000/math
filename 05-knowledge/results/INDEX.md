@@ -1439,3 +1439,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `correlated_regime_opus_S357.out` | [STORED] | THM-1025: sawtooth floor 4000/4000, dilation invariance 300/300, the 15-pair table, comparable-block floor sums 400/400 positive. | (self) |
 | `bonf5_pairfloor_opus_S358.out` | [STORED] | THM-1026: the five-slot BONF5 ledger; pairs insufficient at 13; the S2 floor recovers 99.9% of equidistribution. | (self) |
 | `modulus_collapse_opus_S359.out` | [STORED] | THM-1030: the killer-collapse tested (residues 10^4 -> 292 median); band condition insufficient; corrected 92% figure; = the classical sieve at q <= 14. | (self) |
+| `s4_quadruple_floor_opus_S360.out` | [STORED] | THM-1035: S4 iterated-containment floor (150/150 separated, degenerate comparable) + comparable mu_4 ~1.43x independence. | (self) |

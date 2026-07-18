@@ -1,3 +1,25 @@
+## opus-2026-07-17-S360 -- THM-1035 THE EXISTENCE STEP IN SEVEN MODULI (kernel-pure, first compile: the sieve's twelve conditions collapse to {8..14}, the UNIQUE minimum covering set; the six-number window {9..14} misses exactly q=8) + THE S4 QUADRUPLE FLOOR (iterated containment, 150/150 separated, degenerate comparable -- the pair story one level up) + the Freiman/function-field tangent (HYP-7430)
+
+Owner: do the S4 quadruple floor, prove the six-number window's divisor count and close
+the existence step, consider arXiv:2408.00183.
+[EXISTENCE STEP] Closed and kernel-pure. The sieve's twelve conditions q = 2..14 reduce
+to SEVEN. Worth stating precisely because the conjecture put to me was six: exhaustive
+search over all subsets of {2..14} gives minimum size SEVEN, uniquely {8..14}. The
+six-number window {9..14} covers every modulus EXCEPT q = 8 -- no multiple of 8 lies in
+9..14, and eight is the sole obstruction. Four theorems, first compile, standard trio.
+[S4] The iterated-containment floor mu_4 >= (2lam)^4 prod(1 - a_i/(2 lam a_{i+1})) holds
+150/150 on separated quadruples and degenerates to 0 on comparable ones -- exactly the
+pair story one level up, indicating the same remedy (a 4-variable folded identity).
+Encouraging: comparable mu_4 runs ~1.43x independence, the direction B5 needs.
+[PAPER] Couvreur-Zemor, Freiman 3k-4 for function fields -- no sieve or LRC content.
+The transferable pattern is abstract, and it suggests where the real lever is: the
+sieve constraint is MULTIPLICATIVE (multiples of 8..14 forced) while Freiman structure
+is ADDITIVE, and the dense core must satisfy both simultaneously. That
+over-determination, not either constraint alone, is what looks exploitable.
+FILES: THM-1035, LRCSevenModuli.lean, script + out, HYP-7430. opus; S360.
+
+---
+
 ## boxeph-2026-07-18-S90 -- FREIMAN VIA RESONANCE PACKING + FUNCTION FIELDS + TAO'S OPTIMISTIC CONJECTURE (owner: prove Freiman 3k-4 with the resonance hypothesis; think function fields; think Tao's optimistic conjecture re AP and GW). Worked the crux INV along all three; reflection freiman-via-resonance-packing... NOT a proof of LRC(14), but a rigorous packing argument + two transfer directions. (1) THE PACKING LEMMA (rigorous, NO Freiman theorem needed): at the minimal denominator q=13val+1 the 13 residues live in [val,12val+1] of length 11val+1; 12 pairwise->=val residues have 11 gaps summing to <=11val+1, so TOTAL EXCESS over equal spacing is <=1 => (sub-case A) residues = val*{1..12} => c_k*a=k*val=k*(v_+ a) => q|(c_k - k v_+) => c_k=k*v_+ => core = v_+*{1..12} DILATED AP. The razor-thin band IS the sharp Freiman 3k-4, made explicit. Verified: every M<1/13 family has q=13val+1, core residues=val*{1..12}, gaps all=val, v_+=1, M(core)=1/13 (tight-12). Reduces INV to (0) q=13val+1 [discrete spectrum], (A) no gap-bump [sub-case B excluded], (A') anomaly=v_max. (2) FUNCTION FIELDS: (0)/(A)/max-denom ambiguity are ARCHIMEDEAN CARRYING artifacts; over F_p[t] the ultrametric makes best-approximation EXACT (gaps exact powers of p, no rounding), excess=0, sub-case B impossible => packing lemma UNCONDITIONAL => FUNCTION-FIELD INV PROVABLE. Direction: prove FF INV first, then lift the single unit of carrying to Z. (3) TAO'S OPTIMISTIC CONJECTURE: the core is TIGHT-12 (M=1/13); Tao n=12 = 'M=1/13 12-families are dilated APs' => INV = [M<1/13 covering => core tight-12] o [Tao n=12 uniqueness]; the packing lemma PROVES Tao's n=12 uniqueness ON the resonance locus q=13val+1 (self-contained). AP {1..13} and GW {1..11,13,24} are the two M=1/14 tight 13-families, BOTH NON-COVERING (miss 14) => outside INV; INV is the covering M<1/13 layer (deep well, core=tight-12 AP). Classification: {AP,GW}@1/14 noncovering; deep-well ladder [0;13,14m] covering above. HONEST: LRC(14) NOT closed; a rigorous packing kernel + the FF transfer route + the Tao identification.
 
 Prompt (owner): prove Freiman 3k-4 with the resonance hypothesis; think function fields; think Tao's optimistic conjecture re AP and GW.

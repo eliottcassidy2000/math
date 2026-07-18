@@ -1,0 +1,15 @@
+(A) THE S4 QUADRUPLE FLOOR.  independence value (2*lam)^4 = 1/2401 = 0.00041649312786339027
+    THM-1012 generalises by ITERATED counting: inside each a-arc count
+    b-cells, inside each b-arc count c-cells, etc.  Each level loses at
+    most one cell, so the natural floor is
+      mu_4 >= (2lam)^4 * prod_i (1 - a_i/(2*lam*a_{i+1}))   [separated]
+    separated quadruples: 150 tested, floor violated 0/150; floor positive in 150
+
+    COMPARABLE quadruples (the dense-core regime): does the floor survive?
+    60 comparable quadruples: violations 0, floor positive in 0
+    => as with pairs, the INDEPENDENCE-type floor is positive only when
+       separated; comparable quadruples need the sawtooth analogue.
+
+    exact S4 behaviour on comparable quadruples (what a floor must beat):
+      exact mu_4 range [0.000274, 0.001460], median 0.000595
+      independence (2lam)^4 = 0.000416
