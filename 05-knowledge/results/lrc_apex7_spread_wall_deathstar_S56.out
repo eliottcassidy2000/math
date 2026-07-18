@@ -1,0 +1,17 @@
+ k= 1 small, 12 large: L-danger density=1.714, union-bd mu_S>= 0.857 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 2 small, 11 large: L-danger density=1.571, union-bd mu_S>= 0.714 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 3 small, 10 large: L-danger density=1.429, union-bd mu_S>= 0.571 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 4 small,  9 large: L-danger density=1.286, union-bd mu_S>= 0.429 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 5 small,  8 large: L-danger density=1.143, union-bd mu_S>= 0.286 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 6 small,  7 large: L-danger density=1.000, union-bd mu_S>= 0.143 (>=7 large speeds: density>=1, they can tile - no obstruction)
+ k= 7 small,  6 large: L-danger density=0.857, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k= 8 small,  5 large: L-danger density=0.714, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k= 9 small,  4 large: L-danger density=0.571, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k=10 small,  3 large: L-danger density=0.429, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k=11 small,  2 large: L-danger density=0.286, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k=12 small,  1 large: L-danger density=0.143, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+ k=13 small,  0 large: L-danger density=0.000, union-bd mu_S>= 0.000 <- union bound gives mu_S>=0 only; covering NOT excluded (apex-7 wall)
+
+The wall: at k=7 (7 small vs 6 large), 7*(1/7)=1 so the union bound on mu_S collapses to 0,
+and 6 large speeds have density 6/7<1 (can't tile) yet CAN cover a small-measure good set.
+Deciding whether they do = the apex-7 / Fraenkel tiling core = the LRC(14) hard problem itself.
