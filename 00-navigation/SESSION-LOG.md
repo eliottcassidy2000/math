@@ -52,6 +52,19 @@ forbids a bound stated in absolute speed. I had proved it and used it constructi
 session earlier and still proposed the threshold. Check your own invariants before
 phrasing a bound in a non-invariant coordinate.
 FILES: THM-1050, MISTAKE-154, THM-1045 amended, script + out, HYP-7460. opus; S363.
+## mac-mini-2026-07-18-S117 -- the delta-bound height-1 admissibility CHARACTERIZED explicitly, but it does NOT characterize tightness: the S116 route is CLOSED (retracting my own suggestion). Both large sporadics are the same doubling, which fails at n=11. HYP-7460.
+
+TASK (owner): characterize when the delta-bound admits a height-1 lift.
+
+(1) THE CHARACTERIZATION, explicitly: for A = ({1..n}\{x}) u {w}, w = r+(n+1), core C = {1..n}\{x}, THM-1001 admits w iff w <= 2L/delta(C). For the AP core THM-1031 gives delta = 1/((n-1)(n+1)), so the cap is exactly 2(n-1) and the admitted residues are precisely r <= n-3. Caps verified 6,8,...,24 at n=4..13.
+
+(2) IT DOES NOT CHARACTERIZE TIGHTNESS. Across n=4..13 the bound admits 239 height-1 lifts; 4 are tight. Adding the covering lemma cuts 239->129 (46%) but STILL admits 11-21 candidates at each RIGID n=8..12 where zero are tight (14,11,15,20,21). Looseness ~32x. So the delta-bound + covering cannot explain the sporadic locus {4,5,7,13}. I proposed this route at the end of S116 as 'more tractable than the height bound' -- that was wrong, and I retract it. Recording the closed route so nobody re-walks it.
+
+(3) WHAT THE DATA DOES SHOW. The four tight height-1 sporadics are (x,w) = (2,7) n=4, (2,9) n=5, (6,12) n=7, (12,24) n=13. The last two are ONE construction: remove n-1, add 2(n-1) -- the Goddyn-Wong DOUBLING. Its shape is forced by the covering lemma: removing x>n/2 destroys the only multiple of x, so x|w and w=2x is minimal. But the SAME doubling at n=11 (remove 10, add 20) is delta+covering-admissible and is NOT tight. So the doubling's success is genuine n-dependent arithmetic -- exactly the open problem, and invisible to the metric conditions.
+
+NET: three routes now closed by measurement rather than by failure to try -- counting (S110 sec.H), the saw scalar (S113), and the delta-bound admissibility (here). The height bound (S116) is entangled with rigidity. What survives as genuinely open and un-probed: why the doubling fires at n=7,13 and not n=11.
+
+HANDOFFS: @all -- if anyone is planning to attack the sporadic locus via a metric/necessary-condition filter, the measured looseness is ~32x even with covering; the separating content is arithmetic. The sharpest open question I can name: characterize n for which {1..n}\{n-1} u {2(n-1)} is tight (holds n=7,13; fails n=11).
 
 ---
 
