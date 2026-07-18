@@ -1,0 +1,30 @@
+==========================================================================================
+M<1/13 covering families collected: 8
+==========================================================================================
+
+(F) FREIMAN: |core-core| for M<1/13 families (AP minimum for 12 elts = 23):
+   distinct |core-core| values over M<1/13 families: [23]
+   (AP {1..12} has |A-A| = 23)
+   cores that are NOT dilated APs: 0
+
+(S) THE M-SPECTRUM in (1/14, 1/13):  distinct M values (sorted):
+   M=14/183    =0.076503  num=14 den=183  is 14m/(182m+1)-form (den=13num+1): True
+   M=28/365    =0.076712  num=28 den=365  is 14m/(182m+1)-form (den=13num+1): True
+   M=42/547    =0.076782  num=42 den=547  is 14m/(182m+1)-form (den=13num+1): True
+   M=56/729    =0.076818  num=56 den=729  is 14m/(182m+1)-form (den=13num+1): True
+   M=70/911    =0.076839  num=70 den=911  is 14m/(182m+1)-form (den=13num+1): True
+   M=84/1093   =0.076853  num=84 den=1093  is 14m/(182m+1)-form (den=13num+1): True
+   M=98/1275   =0.076863  num=98 den=1275  is 14m/(182m+1)-form (den=13num+1): True
+   M=112/1457  =0.076870  num=112 den=1457  is 14m/(182m+1)-form (den=13num+1): True
+   total distinct M<1/13 covering values: 8
+   ALL of the form m/(13m+1) [i.e. den=13*num+1]? True  (=> discrete spectrum, CF [0;13,num])
+
+(E) ADDITIVE ENERGY: M<1/13 core energy vs a generic 12-set:
+   AP {1..12} additive energy = 1156
+   generic 12-set energies (5 samples): [460, 492, 448, 472, 444]
+   M<1/13 core energies (distinct): [1156]  (AP is the MAX for 12 elts)
+
+READING: if every M<1/13 core is a dilated AP with |core-core|=23 (minimal) and
+the M<1/13 spectrum is exactly the discrete {14m/(182m+1)}, INV is 'M<1/13 => core
+has minimal difference set' = Freiman 3k-4 with the SHARP constant. The remaining
+content: M<1/13 (a Diophantine/resonance condition) => minimal |core-core| (additive).
