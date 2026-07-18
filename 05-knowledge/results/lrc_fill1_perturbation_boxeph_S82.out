@@ -1,0 +1,44 @@
+============================================================================
+FILL-1 PERTURBATION LEMMA (base case)   threshold 1/14
+witness t = a/b + 1/(N v*);  certifies iff  b*B <= (N-b)*v*   (B = body max)
+============================================================================
+
+[1] Single-killer covering families {1..12, w}, 182|w  (use circle b=13):
+   w=  182: covering=True cond(13*12<=1*182)=156<=182:True  witness t=197/2548  min_gap=1/14 (>=1/14: True)
+   w=  364: covering=True cond(13*12<=1*364)=156<=364:True  witness t=393/5096  min_gap=1/14 (>=1/14: True)
+   w=  546: covering=True cond(13*12<=1*546)=156<=546:True  witness t=589/7644  min_gap=1/14 (>=1/14: True)
+   w=  728: covering=True cond(13*12<=1*728)=156<=728:True  witness t=785/10192  min_gap=1/14 (>=1/14: True)
+   w= 1820: covering=True cond(13*12<=1*1820)=156<=1820:True  witness t=1961/25480  min_gap=1/14 (>=1/14: True)
+
+[2] Body {1..12}: at circle b, minimal killer v* with b*12<=(14-b)v*:
+   b= 2: (14-b)=12  min killer >= ceil(2*12/12)=2  -> smallest valid multiple-of-b v*=2
+   b= 3: (14-b)=11  min killer >= ceil(3*12/11)=4  -> smallest valid multiple-of-b v*=6
+   b= 4: (14-b)=10  min killer >= ceil(4*12/10)=5  -> smallest valid multiple-of-b v*=8
+   b= 5: (14-b)= 9  min killer >= ceil(5*12/9)=7  -> smallest valid multiple-of-b v*=10
+   b= 6: (14-b)= 8  min killer >= ceil(6*12/8)=9  -> smallest valid multiple-of-b v*=12
+   b= 7: (14-b)= 7  min killer >= ceil(7*12/7)=12  -> smallest valid multiple-of-b v*=14
+   b= 8: (14-b)= 6  min killer >= ceil(8*12/6)=16  -> smallest valid multiple-of-b v*=16
+   b= 9: (14-b)= 5  min killer >= ceil(9*12/5)=22  -> smallest valid multiple-of-b v*=27
+   b=10: (14-b)= 4  min killer >= ceil(10*12/4)=30  -> smallest valid multiple-of-b v*=30
+   b=11: (14-b)= 3  min killer >= ceil(11*12/3)=44  -> smallest valid multiple-of-b v*=44
+   b=12: (14-b)= 2  min killer >= ceil(12*12/2)=72  -> smallest valid multiple-of-b v*=72
+   b=13: (14-b)= 1  min killer >= ceil(13*12/1)=156  -> smallest valid multiple-of-b v*=156
+
+[3] Tightness check at circle b=13, body {1..12} (need v* >= 156):
+   w=143: cond=False  min_gap(naive t)=71/1001  -> naive-fail   (w>=156: False)
+   w=156: cond=True  min_gap(naive t)=1/14  -> CERT   (w>=156: True)
+   w=169: cond=True  min_gap(naive t)=1/14  -> CERT   (w>=156: True)
+   w=182: cond=True  min_gap(naive t)=1/14  -> CERT   (w>=156: True)
+
+[4] Assorted covering families -- which have a fill-1 circle the lemma dodges:
+   deep well {1..12,182}    covering=True: DODGED at b=13 (t=197/2548, min=1/14)
+   residue {1..11,13,84}    covering=True: DODGED at b=12 (t=33/392, min=1/14)
+   {1..10,13,22,84} (k=10)  covering=True: NO fill-1 dodge -> residual (bounded/compact core or multi-killer)
+   missing-2 {1,3..14}      covering=True: NO fill-1 dodge -> residual (bounded/compact core or multi-killer)
+   {1..12,14} bounded core  covering=False: NO fill-1 dodge -> residual (bounded/compact core or multi-killer)
+
+============================================================================
+READING: the lemma CLOSES the isolated-far-element regime (single killer
+v* >= b*B/(N-b), incl. the deep-well and residue extremals) by an ELEMENTARY
+direct witness. Residual = bounded core (v* too small, e.g. {1..12,14}) and
+multi-killer (no single fill-1 circle with a dominant stranded runner).
