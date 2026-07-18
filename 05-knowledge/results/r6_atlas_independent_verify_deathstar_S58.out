@@ -1,0 +1,11 @@
+obligations: 35
+total weight: 505
+modulus range: 26 .. 112
+PROP2 core-safety: min slack over 35x12 = 0 -> SAFE
+PROP3 max load over [92,332]: 84 (codex claims 84)
+  6*max = 504 < 505 ? True
+scan [92,1000): max load = 183 at k=392; first k with load>84 = 333
+scan [92,10000): max load = 359 at k=1417; first k with load>84 = 333
+scan [92,100000): max load = 359 at k=1417; first k with load>84 = 333
+scan [92,1000000): max load = 383 at k=152945; first k with load>84 = 333
+scan [92,20000000): max load = 413 at k=9207757; first k with load>84 = 333
