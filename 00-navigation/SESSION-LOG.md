@@ -1,3 +1,30 @@
+## mac-mini-2026-07-18-S121 -- THE LUCAS MECHANISM IS FINITE. Complete exhaustive classification of the HEIGHT-<=1 universe n=4..13: sporadics ONLY at n=4,5,7,13; n=8..12 EMPTY (596,542 candidates at n=12). HYP-7520.
+
+TASK (owner): work the Lucas mechanism.
+
+(1) LUCAS SEGMENTS REFUTED AS A FAMILY. {1,3,4,7} = L_1..L_4, but {1,3,4,7,11}, {1,3,4,7,11,18}, {1,3,4,7,11,18,29} all have M = 1/5 (frozen), never 1/(n+1). Only n=4 works -- the name is a coincidence of the first four terms, not a construction.
+
+(2) THE RIGHT UNIVERSE. Every known sporadic is HEIGHT-<=1: each element is a base speed or a lift (n+1)+r. GW's are too (n=7: 12 = 8+4; n=13: 24 = 14+10). So A subset of {1..n} u {(n+1)+r}, |A|=n contains BOTH mechanisms -- and it is small enough to classify exhaustively. Did so for n=4..13 with the covering-lemma prune + the sound batched prescreen (grid max <= true M, so rejection is never a false negative) + exact Q confirmation.
+
+COMPLETE RESULT:
+   n=4 : {1,3,4,7}          remove {2},    add 5+2                 [Lucas]
+   n=5 : {1,3,4,5,9}        remove {2},    add 6+3                 [Lucas]
+   n=6 : none
+   n=7 : {1,2,3,4,5,7,12}   remove {6},    add 8+4                 [GW, 6|6]
+   n=7 : {1,4,5,6,7,11,13}  remove {2,3},  add 8+3, 8+5            [Lucas]
+   n=8..12 : NONE
+   n=13: {1..11,13,24}      remove {12},   add 14+10               [GW, 6|12]
+candidates: 49, 102, 481, 1358, 4481, 12350, 58168, 135916, 596542 (n=12), 1567853 (n=13).
+
+(3) CONCLUSIONS. The LUCAS MECHANISM IS FINITE -- exactly three configurations (n=4,5,7), no parameter, no family. Removed sets are {2},{2},{2,3}; the added elements always top out at 2n-1 (7,9,13), matching S116's sporadic-max = 2n-1. n=7 is the UNIQUE n where both mechanisms fire. And the height-<=1 universe is EMPTY of sporadics at n=8..12, exhaustively: 596,542 covering+primitive candidates at n=12 collapse to {1..12} alone. That is materially stronger n=12 evidence than the earlier censuses, because it is exhaustive in exactly the universe where every known sporadic lives.
+
+HONEST CAVEAT: height <=1 only. Lifts of height >=2 are outside this run (THM-770 covers heights<=12 at n=12; S109/THM-1001 covers single-coordinate at ALL heights -- together these overlap well but do not tile the whole space).
+
+FILES: lrc_height1_universe_classification_macmini_S121.py (+.out); HYP-7520.
+HANDOFFS: @all -- the sporadic landscape in the height-<=1 universe is now COMPLETE and small: one infinite GW family (6|(n-1)) plus exactly three finite Lucas-type exceptions at n=4,5,7. Nothing else exists there through n=13. @klein/@codex -- for n=12 this is 596k exhaustive candidates with a single survivor.
+
+---
+
 ## mac-mini-2026-07-18-S120 -- RETRACTION: THM-1065 is the r=n-1,m=2 slice of the PUBLISHED Goddyn-Wong criterion, not new. The coincidence dissolves into ONE condition seen three ways. The second (Lucas) family is FINITE and outside GW entirely. Height-bound context mined. HYP-7510.
 
 TASK (owner): investigate the coincidence deeply, mine past work thoroughly, work the natural next target.

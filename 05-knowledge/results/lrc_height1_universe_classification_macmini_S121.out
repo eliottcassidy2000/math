@@ -1,0 +1,15 @@
+n= 4: covering+primitive candidates       49 | prescreen    2 | TIGHT 2 | sporadic 1
+        [np.int64(1), np.int64(3), np.int64(4), np.int64(7)]   removed [2]  added [np.int64(7)] = (n+1)+[np.int64(2)]
+n= 5: covering+primitive candidates      102 | prescreen    2 | TIGHT 2 | sporadic 1
+        [np.int64(1), np.int64(3), np.int64(4), np.int64(5), np.int64(9)]   removed [2]  added [np.int64(9)] = (n+1)+[np.int64(3)]
+n= 6: covering+primitive candidates      481 | prescreen    1 | TIGHT 1 | sporadic 0
+n= 7: covering+primitive candidates     1358 | prescreen    3 | TIGHT 3 | sporadic 2
+        [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(7), np.int64(12)]   removed [6]  added [np.int64(12)] = (n+1)+[np.int64(4)]
+        [np.int64(1), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(11), np.int64(13)]   removed [2, 3]  added [np.int64(11), np.int64(13)] = (n+1)+[np.int64(3), np.int64(5)]
+n= 8: covering+primitive candidates     4481 | prescreen    1 | TIGHT 1 | sporadic 0
+n= 9: covering+primitive candidates    12350 | prescreen    1 | TIGHT 1 | sporadic 0
+n=10: covering+primitive candidates    58168 | prescreen    1 | TIGHT 1 | sporadic 0
+n=11: covering+primitive candidates   135916 | prescreen    1 | TIGHT 1 | sporadic 0
+n=12: covering+primitive candidates   596542 | prescreen    1 | TIGHT 1 | sporadic 0
+n=13: covering+primitive candidates  1567853 | prescreen    2 | TIGHT 2 | sporadic 1
+        [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11), np.int64(13), np.int64(24)]   removed [12]  added [np.int64(24)] = (n+1)+[np.int64(10)]
