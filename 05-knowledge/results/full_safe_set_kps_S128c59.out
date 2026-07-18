@@ -1,0 +1,40 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\full_safe_set_kps_S128c59.py:101: SyntaxWarning: invalid escape sequence '\B'
+  print("  constructed covering mixed families: %d ; certified by a t in S(P)\Bad_k1: %d"%(tested,ok))
+### the full core-safe set S(P) ###
+  drop  #intervals  total measure   largest interval   1/(3L)
+  1     12          0.1055298       0.0416667          8.0
+  2     12          0.0698155       0.0211039          15.8
+  3     14          0.0817203       0.0142857          23.3
+  4     14          0.0665687       0.0109127          30.5
+  5     18          0.0789064       0.0089286          37.3
+  6     14          0.0514172       0.0076531          43.6
+  7     16          0.1274170       0.0208333          16.0
+  8     14          0.0889095       0.0155844          21.4
+  9     16          0.1022573       0.0178571          18.7
+  10    14          0.0680942       0.0136054          24.5
+  11    20          0.1060091       0.0119048          28.0
+  12    14          0.0563337       0.0129870          25.7
+
+### after removing ONE small killer k1: worst-case largest surviving interval ###
+  drop   worst k1   largest surviving L    implied k2 threshold 1/(3L)
+  1      873        0.00098184             339.5
+  2      873        0.00098184             339.5
+  3      873        0.00098184             339.5
+  4      873        0.00098184             339.5
+  5      873        0.00098184             339.5
+  6      873        0.00098184             339.5
+  7      873        0.00098184             339.5
+  8      873        0.00098184             339.5
+  9      873        0.00098184             339.5
+  10     873        0.00098184             339.5
+  11     873        0.00098184             339.5
+  12     873        0.00098184             339.5
+
+  worst k2 threshold over all cores and all small k1: 339.5 at (1, 873)
+  finite check already covers both killers < 874
+  => gap remains iff  threshold > 874  for some (core, k1)
+
+### direct verification on CONSTRUCTED covering mixed families ###
+  (k1 small, k2 large, built so 13| and 14| are supplied)
+  constructed covering mixed families: 294 ; certified by a t in S(P)\Bad_k1: 294
+DONE

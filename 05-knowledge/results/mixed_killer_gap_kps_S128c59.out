@@ -1,0 +1,26 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\mixed_killer_gap_kps_S128c59.py:5: SyntaxWarning: invalid escape sequence '\ '
+  relative to |I| = 1/1092.  FIX: do not bound k1 -- REMOVE its bad set exactly.  I \ Bad_k1
+### largest bad-free subinterval of I after removing ONE small killer ###
+  |I| = ell = 1/1092 = 0.00091575
+   k1     #free pieces  largest piece      k2 threshold 1/(3*ell1)
+  144    1             0.00049603         672.0
+  157    1             0.00049287         676.3
+  169    2             0.00003522         9464.0
+  182    2             0.00006541         5096.0
+  200    1             0.00091575         364.0
+  250    1             0.00091575         364.0
+  300    1             0.00047619         700.0
+  400    1             0.00085623         389.3
+  437    1             0.00091575         364.0
+  500    1             0.00091575         364.0
+  700    2             0.00057561         579.1
+  873    2             0.00055228         603.6
+  smallest largest-piece over the scanned k1: 0.00003522 at k1=169
+
+### exhaustive over ALL small k1: is the largest free piece always positive? ###
+  k1 values whose bad set swallows ALL of I: 1 [156]
+  minimum largest-free-piece over k1 in [144,874): 0.00003522 at k1=169  -> k2 threshold 9464.0
+
+### direct check: mixed families, k1 small and k2 large, find t in I ###
+  covering mixed families tested: 4 ; certified by a t in I: 4
+DONE
