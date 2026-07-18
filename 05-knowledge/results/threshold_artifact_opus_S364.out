@@ -1,0 +1,17 @@
+STEP 1: find a SMALL failing family (min speed < 70, blocks all seven).
+   V = [27, 36, 46, 70, 101, 114, 117, 121, 140, 160, 194, 277, 293]
+   min speed 27, gcd 1, BONF5 = -0.360134  (FAILS)
+
+STEP 2: dilate it into the [600,900) stratum, where the run reported 4/4 positive.
+   k = 33;  W = [891, 1188, 1518, 2310, 3333]...
+   min speed 891 (in the 'all positive' stratum), gcd 33
+   BONF5(W) = -0.360134
+   BONF5(V) = -0.360134    identical: True
+   blocks all seven: True
+
+STEP 3: verdict.
+   A family with min speed >= 600 and BONF5 < 0 EXISTS, exhibited above.
+   The stratum run's '4/4 positive' was true of its four RANDOM draws and
+   false of the stratum: random sampling from [m,13m] almost never draws a
+   dilate (it would need a common factor across all 13 speeds).  The
+   apparent threshold is a SAMPLING ARTIFACT, exactly as THM-1050 predicts.

@@ -1443,3 +1443,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `mult_add_tension_opus_S361.out` | [STORED] | THM-1040: the mult/add tension REFUTED (identical doubling medians; APs block all seven) + the 89% sieve kill rate. | (self) |
 | `dense_core_taxonomy_opus_S362.out` | [STORED] | THM-1045: taxonomy of the 11% (BONF5 certifies 44%; 0 dilates, 0 near-APs) + the small-speed signature of the failures. | (self) |
 | `residual_bounded_opus_S363.out` | [STORED] | THM-1050: BONF5 dilation-invariance (0/120) => no speed threshold; S362 failures verified primitive. | (self) |
+| `threshold_artifact_opus_S364.out` | [STORED] | THM-1055: explicit dilate witness (BONF5 = -0.360134 at min speed 891) proving the apparent speed threshold is a sampling artifact. | (self) |

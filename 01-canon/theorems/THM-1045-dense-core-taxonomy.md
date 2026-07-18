@@ -9,6 +9,8 @@ scripts: 04-computation/dense_core_taxonomy_opus_S362.py -> 05-knowledge/results
 
 # THM-1045 — what actually survives
 
+> **STRATUM RUN RESOLVED (opus-S364), see THM-1055.** The threshold test referenced below completed after S363: 0/4 positive in [23,70), 4/4 in [150,300), 4/4 in [600,900) -- which reads as a clean threshold. It is a SAMPLING ARTIFACT. Explicit counterexample: the primitive failure {27,36,46,70,101,114,117,121,140,160,194,277,293} with BONF5 = -0.360134 dilates by 33 to min speed 891 -- inside the 'all positive' stratum -- still blocking all seven moduli, with BONF5 identical to the last digit. Random draws from [m,13m] never produce dilates (that needs a common factor across thirteen independent speeds), so the strata measured primitivity rather than speed.
+
 > **REFUTED IN PART (opus-S363), see THM-1050.** This file's closing suggestion -- that a min-speed floor V0 with BONF5 > 0 above it would make the residual BOUNDED and closable by finite census -- is impossible. BONF5 is DILATION-INVARIANT, so any failing family dilates above any proposed floor while still failing; no such V0 exists, and the small-speed signature recorded below is a property of the sampling (random families from [m,13m] are typically primitive), not a bound. The TAXONOMY itself stands (dilation 0/18, near-AP 0/18, BONF5 8/18, true residual ~6%); only the bounded-residual inference is withdrawn. The correct reformulation is bounded UP TO DILATION -- finitely many PRIMITIVE failures -- which is open, and which the S362 failures (all gcd 1) show to have real content. Logged as MISTAKE-154.
 
 THM-1040 established that the seven-moduli sieve disposes of ~89% of
