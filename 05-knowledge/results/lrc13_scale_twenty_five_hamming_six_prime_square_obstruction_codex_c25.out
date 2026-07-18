@@ -1,0 +1,38 @@
+scale-twenty-five AP-centred Hamming-six prime-square obstruction certificate
+orders (1, 5, 25) unit counts (1, 4, 20)
+generator powers (1, 2, 4, 8, 3, 6, 12, 11, 9, 5, 10, 7)
+order-five forbidden provider/owner ratios (4, 9, 12)
+inverse forbidden owner multipliers (3, 10, 12)
+forbidden Cayley audit directed-arcs 36 symmetric-edges 30 reciprocal-pairs 6 component-sizes (6, 6) graph K6+K6
+hereditary words 473 state words/support 243750000 raw labelled states 225225000000
+grammar SHA256 7ae50439ddbd7e09d37516d067fe20f35d1f36b7830c25dc7156c900c6fde62f
+mask SHA256 741748b977fd90f0b506a15780e33d87bb04fdd60ae4f844ea1e40349ff8c47d
+scalar feasible-owner histogram 0:1156 1:149868 2:171636 3:90884 4:21864 5:1608 6:36
+scalar supports-by-survivor-count 0:888 1:36
+scalar survivors 36 multiplicities (0, 2, 4):36
+literal unit words across scalar survivors 92160000
+scalar SHA256 ad266f55f820615eb2f7b4e323b6599024842c56352ff65c1b6dcdd117c250f9
+multiplication orbit-size histogram 12:3
+orbit representative ratio invariants 2:1 5:1 6:1
+orbit representative B5 (1, 2) support (1, 2, 4, 5, 8, 9) C25 (4, 5, 8, 9)
+orbit representative B5 (1, 5) support (1, 4, 5, 6, 7, 9) C25 (4, 6, 7, 9)
+orbit representative B5 (1, 6) support (1, 2, 4, 6, 9, 11) C25 (2, 4, 9, 11)
+proof bounds every order-five owner union <=22; every order-twenty-five owner union <=21
+Kakeya/toothpick quotient pi: Z/25 -> Z/5 turns D5 masks into full parallel fibres and D25 masks into rigid three/four-point needles; every survivor pays four forced needle/fibre incidences
+owner-local feasible-context histogram 0:36
+owner maximum-union histogram 21:144 22:72
+owner reachable-bank-size histogram 45200:24 48380:24 48540:24 133390:48 140330:48 141430:48
+owner maximizing-mask-count histogram 80:24 90:144 100:24 140:24
+owner maximum-vector/context histogram (21, 21, 21, 21, 22, 22):1 (21, 21, 21, 22, 21, 22):2 (21, 21, 21, 22, 22, 21):3 (21, 21, 22, 21, 21, 22):2 (21, 21, 22, 22, 21, 21):8 (21, 22, 21, 21, 21, 22):2 (21, 22, 21, 21, 22, 21):6 (21, 22, 22, 21, 21, 21):3 (22, 21, 21, 21, 21, 22):2 (22, 21, 21, 21, 22, 21):2 (22, 21, 21, 22, 21, 21):2 (22, 21, 22, 21, 21, 21):2 (22, 22, 21, 21, 21, 21):1
+owner rows 216 total reachable masks 23338080 maximum bank 141430
+distinct layer-size profiles 108
+distinct maximum missing masks 3813
+total maximizing masks 20640 largest missing-mask multiplicity 14
+owner SHA256 a9064e057fcd7169395a28a3c411476f7b8178ec6137fbf74235aaee6db1f85c
+tournament observable (feasible,max-union,capacity), lex switch, coordinate ties
+tournament all transitive: score histogram 0,1,2,3,4,5; cycles 0; singleton SCCs; Hamiltonian paths 1
+tournament tie-edge histogram 7:36
+tournament flip-edge histogram 0:1 1:2 2:5 3:2 4:16 5:2 6:5 7:2 8:1
+alternate carrier audit quadratic classes and the two D5 obligations preserve the scalar K6+K6 obstruction; quotient fibres preserve the four-incidence overlap tax; owner obligations with literal masks preserve terminal feasibility
+lost-coordinate ledger a completed tournament loses the absolute threshold; providers alone, isolated sheets, gaps, wall events, unlabelled residues, Fano points, and chi7 colours destroy shared-unit, owner, or fibre incidence
+frontier verdict scale 25 structurally empty; next legal untreated common scale 27 because THM-860 excludes multiples of 13

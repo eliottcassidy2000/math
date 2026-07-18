@@ -1,10 +1,13 @@
 ---
 id: THM-992
 title: Scale-twenty-five Hamming-six prime-square obstruction
-status: CLAIMED STRUCTURAL FROM A COMPLETE SCRATCH RECONSTRUCTION — exactly 36 scalar rows survive, in three multiplication orbits, and a five-coset overlap argument proves every owner misses at least three sheets; a frozen primary and independent replay are in progress
+status: CLAIMED + FROZEN PRIMARY — exactly 36 scalar rows survive in three multiplication orbits; a five-coset overlap proof makes every owner miss at least three sheets, and a deterministic standard-library primary with a separate literal union-DP layer is byte-stable under normal/optimized Python; independent replay is pending
 source: codex-2026-07-17-S66 scale-twenty-five continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990]
 related: [THM-978, THM-980, THM-981, HYP-6820]
+verification:
+  - 04-computation/lrc13_scale_twenty_five_hamming_six_prime_square_obstruction_codex_c25.py
+  - 05-knowledge/results/lrc13_scale_twenty_five_hamming_six_prime_square_obstruction_codex_c25.out
 ---
 
 # THM-992 — the scale-twenty-five prime-square face is empty
@@ -34,7 +37,9 @@ where `z_y` counts order-five provider/owner ratios in `{4,9,12}`, and
 `delta_y` records an antipodal order-25 provider.  Requiring capacity at all
 six owners gives `z_y=0` and `c25 in {2,3,4,5}`.  Applying the same forbidden
 ratio condition in both orientations puts at most one order-five provider in
-each quadratic class, eliminating `c25=2,3`.  If `c25=5`, the simultaneous
+each quadratic class: the symmetric closure of the forbidden-ratio Cayley
+relation is exactly `K6 disjoint-union K6` on the quadratic and nonquadratic
+classes.  This eliminates `c25=2,3`.  If `c25=5`, the simultaneous
 conditions `z_y=delta_y=0` demand an antipodal-free support even though the
 single order-five provider forbids `{-b,±3b}`, removing a whole other
 antipodal class.  Hence `c25=4`.
@@ -52,8 +57,8 @@ B={1,6}, support={1,2,4,6,9,11}.
 
 ## Five-coset owner obstruction
 
-Partition the 25 sheets into their five residue classes `Q_0,...,Q_4`
-modulo five.  An order-five mask is one complete five-sheet `Q_j`.  At self
+Partition the 25 sheets through the quotient `pi: Z/25 -> Z/5`, with fibres
+`Q_0,...,Q_4`.  An order-five mask is one complete five-sheet `Q_j`.  At self
 ratio it is `Q_3`; at any other allowed ratio its four unit choices occupy
 `Q_0,Q_1,Q_2,Q_4`.  An order-25 mask has the following invariant signature:
 
@@ -73,9 +78,62 @@ so the total is at most `10+(15-4)=21`; if the cosets coincide, the stronger
 bound is twenty.  Thus every owner misses at least three of the 25 sheets.
 No global unit word exists.
 
-The complete literal DP independently sharpens the maxima to 72 order-five
-owner rows of size 22 and 144 order-25 owner rows of size 21; all 36 contexts
-have zero feasible owners.  The structural coset proof, not that DP, is the
-logical obstruction.  Promotion requires a frozen self-auditing primary and
-an independently structured replay.  This theorem does not cover `c>=26`,
-H5 ramification, non-AP/deep sheets, or global sporadic emptiness.
+This is a finite Kakeya/toothpick incidence proof: order-five masks are thick
+parallel fibres, order-25 masks are rigid three/four-point needles, and every
+surviving packet pays a four-incidence overlap tax.  The quotient discards
+exact needle positions but preserves precisely the intersection lower bound
+needed for the theorem.
+
+The primary's separate complete literal DP sharpens the maxima to 72
+order-five owner rows of size 22 and 144 order-25 owner rows of size 21; all
+36 contexts have zero feasible owners.  The structural coset proof, not that
+DP, is the logical obstruction.
+
+## Frozen primary and carrier audit
+
+The standard-library primary reconstructs every CRT base both algebraically
+and by literal search, proves the closed cardinality formulas, checks all 729
+order words against the prime-square grammar, and compares the structural
+scalar predicate against all `924*473=437,052` labelled order contexts.  Its
+exact scalar feasible-owner histogram is
+
+```text
+0:1156, 1:149868, 2:171636, 3:90884, 4:21864, 5:1608, 6:36.
+```
+
+The 36 survivors represent 92,160,000 literal unit words.  The 216 full union
+banks contain 23,338,080 reachable masks and have size histogram
+
+```text
+45200:24, 48380:24, 48540:24,
+133390:48, 140330:48, 141430:48.
+```
+
+Normal and `python -O` runs reproduce the frozen 38-line output byte-for-byte.
+Frozen SHA-256 values are
+
+```text
+Python primary source  2b40edafa026dbc94f75a21ae2fbc764588d64e923779996760e746006b57870
+Python primary output  f0c3cb63459c6cfccd024f05cc76d8d7819ed53217d469aaaf9682cd91e2ccdb
+```
+
+The proof-facing pair relation is the directed forbidden-ratio Cayley graph:
+36 arcs, 6 reciprocal antipodal pairs, and symmetric closure
+`K6 disjoint-union K6`.  It is not a tournament, and its independent-set
+bound is the scalar obstruction.  For owner telemetry, compare
+`(locally feasible, maximum union, scalar capacity)` lexicographically and
+break ties in coordinate order.  Every one of the 36 completions is
+transitive, with score multiset `{0,1,2,3,4,5}`, seven tie edges, no directed
+triangle, six singleton SCCs, and one Hamiltonian path.  This completion
+forgets the absolute threshold and therefore cannot prove the theorem.
+
+Quadratic classes plus the two order-five obligations are faithful at the
+scalar layer; quotient fibres plus owner labels are faithful for the overlap
+tax.  Providers alone, isolated sheets, gaps, wall events, unlabelled residues,
+Fano points, or chi-seven colours destroy shared-unit, owner, or fibre
+incidence.  An independently structured replay is still required before
+promotion from claimed to proved.
+
+This theorem does not cover H5 ramification, non-AP/deep sheets, or global
+sporadic emptiness.  Since THM-860 excludes every multiple of thirteen, scale
+26 is primitive-impossible; the next legal untreated common scale is `c=27`.
