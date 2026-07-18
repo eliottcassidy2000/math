@@ -1,0 +1,18 @@
+family V = [25, 71, 76, 84, 103, 136, 174, 230, 234, 297, 306, 314, 343]  (gcd=1, primitive=yes)
+  gcd(V) = 1 (primitive)
+
+[1] THM-995 strict margin:
+    M(v) = 38/195 = 0.194872  ;  margin over 1/14 = 337/2730 = 0.123443  (t* = 98/195)
+
+[2] converter -> good-set measure:
+    good set G = 350 disjoint intervals, mu0 = 2141684355939509/17191937778619450 = 0.124575 > 0
+
+[3] THM-979/984 explicit modulus:
+    endpoint budget E = 2*sum|vi| = 4786 ; q0 = ceil((E+1)/mu0) = 38427
+
+[4] census fires:
+    liveCount(q=38427) = 4784  > 0  ==> t=p/q is a loneliness witness ==> LRC(14) holds for V
+
+>>> END-TO-END: trapped family V is LONELY via the full reduction chain, every link exact/explicit.
+    THM-995 (margin) -> converter (mu0>0) -> THM-979/984 (modulus q0) -> census (liveCount>0).
+DONE

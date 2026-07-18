@@ -79,6 +79,18 @@ in ~970 near-tight perturbations: every perturbation that stays near-tight also 
 outside the cut. The conjecture survives its own counterexample search
 (trapped_tight_hunt_kps_S128c48.py).
 
+## (VI) END-TO-END CHAIN VALIDATION (concrete)
+
+The primitive trapped family V = [25, 71, 76, 84, 103, 136, 174, 230, 234, 297, 306, 314,
+343] run through the full reduction, every link exact/explicit:
+- THM-995 strict margin: M(V) = 38/195 = 0.19487, margin 337/2730 over 1/14 (t* = 98/195);
+- converter → good-set measure: G = 350 disjoint safe intervals, μ₀ = 0.12457 > 0;
+- THM-979/984 modulus: E = 2·Σ|vᵢ| = 4786, q₀ = ⌈(E+1)/μ₀⌉ = 38427;
+- census: liveCount(38427) = 4784 > 0 (≈ q₀·μ₀, the sampling bridge exact) ⟹ t = p/q₀ is a
+  loneliness witness ⟹ LRC(14) holds for V.
+The chain THM-995 → converter → THM-979/984 → census composes end to end on a concrete
+trapped core (reduction_chain_e2e_kps_S128c48.py).
+
 ## Named next
 - The primitive-tight exhaustiveness: prove every PRIMITIVE M = 1/14 family is
   small/comparable, dominant, or sieve-covered (the dilation lemma already handles the
