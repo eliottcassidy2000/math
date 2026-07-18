@@ -1,0 +1,12 @@
+geometric(B5<0,mu0>0): mu0 = 0.277693, E = 81910
+   q=2003: live = 550  >=  q(mu0-E/q) = -81353.8 : True
+   q=8009: live = 2226  >=  q(mu0-E/q) = -79686.0 : True
+   q0 = 2E/mu0 = 589934: live = 163790 > 0: True (THE LIVE FLOOR FIRES)
+deepwell(B5<0,mu0>0): mu0 = 0.023897, E = 520
+   q=2003: live = 40  >=  q(mu0-E/q) = -472.1 : True
+   q=8009: live = 194  >=  q(mu0-E/q) = -328.6 : True
+   q0 = 2E/mu0 = 43520: live = 1040 > 0: True (THE LIVE FLOOR FIRES)
+tight(mu0=0): mu0 = 0.000000, E = 182
+   q=2003: live = 0  >=  q(mu0-E/q) = -182.0 : True
+   q=8009: live = 0  >=  q(mu0-E/q) = -182.0 : True
+DONE
