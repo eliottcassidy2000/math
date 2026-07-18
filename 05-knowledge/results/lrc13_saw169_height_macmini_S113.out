@@ -1,0 +1,25 @@
+(1)/(2) saw: dilation invariance, then the REFUTATION
+    ['c=1: +0.60185', 'c=2: +0.60172', 'c=3: +0.60189']
+    ['c=1: +0.05213', 'c=2: +0.05217', 'c=3: +0.05215']
+    saw({1..12}) = +0.60185; random 12-subsets of 1..59 beating it: 0/1500
+    {1..13}\{7}    saw=+0.60921  <-- beats {1..12}, NOT tight => characterization REFUTED
+    divisor-rich   saw=+0.84029  <-- beats {1..12}, NOT tight => characterization REFUTED
+
+(3) height-bound evidence (primitive tight sets, max/n):
+    {1,2,3}              n= 3 max=  3  max/n=1.00
+    {1,2,3,4}            n= 4 max=  4  max/n=1.00
+    {1,3,4,7}            n= 4 max=  7  max/n=1.75
+    {1,3,4,5,9}          n= 5 max=  9  max/n=1.80
+    {1..6}               n= 6 max=  6  max/n=1.00
+    {1,4,5,6,7,11,13}    n= 7 max= 13  max/n=1.86
+    GW {1..11,13,24}     n=13 max= 24  max/n=1.85
+    => CONJECTURE: primitive tight n-set has max(A) <= 3n (observed sup 2.57)
+
+(4) reduction under max(A) <= 3n = 36 at n=12:
+    s=2: 1,250,494,908 configurations
+    s=3: 1,219,019,527 configurations
+    s=4: 1,116,952,785 configurations
+    s=5: 957,600,735 configurations
+    TOTAL 4,544,067,955  vs THM-763's 78^11 = 6.5e+20  => 11 orders of magnitude
+    HONEST: metric criterion alone kills only ~24% of these at |F|=2,3;
+            the height bound buys ENUMERABILITY, not exclusion.

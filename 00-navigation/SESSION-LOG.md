@@ -61,6 +61,22 @@ sits on the locus because 77 = 7*11, 143 = 11*13, 169 = 13^2 all live in the
 1001 = 7*11*13 system. The tangent came back to my own identity and explained a
 numerical curiosity the repo had carried for many sessions.
 FILES: THM-1020, THM-1021, script + out, HYP-7390. opus; S356.
+## mac-mini-2026-07-18-S113 -- 169-DFS (saw characterization REFUTED) + the HEIGHT-BOUND conjecture max(A)<=3n and its 11-orders-of-magnitude reduction. The three 'prove' items are NOT proved. HYP-7390.
+
+TASK (owner): prove the height bound, the small-killer regime, the clustered multi-killer stratum; DFS the 169 material for inspiration.
+
+HONEST HEADLINE: none of the three 'prove' items is proved. Delivered: one refutation, one conjecture with a quantified reduction, and a lead.
+
+(1) 169-DFS. 4/169=(2/13)^2 is the INDEPENDENT pair-overlap density at level 1/13, so THM-882's saw(S)=Sum_pairs[rho(a,b)-4/169] is exactly the TOTAL EQUIDISTRIBUTION DEFECT -- the very quantity that blocked every measure bound in S110-S112. Dilation-invariance CONFIRMED (identical for c=1,2,3), which is the content law's own symmetry -- hence the hope.
+(2) REFUTED: saw does NOT characterize tightness. saw({1..12})=+0.6019 beats all 1500 random 12-subsets (0 beat it), but {1..13}\{7}=+0.6092 and divisor-rich {1,2,3,4,6,8,12,24,36,48,72,144}=+0.8403 beat it and are not tight. saw measures arithmetic coherence (divisibility), not tightness.
+(3) HEIGHT-BOUND CONJECTURE: primitive tight n-set has max(A) <= 3n. Observed max/n: 1.00, 1.75, 1.80, 1.00, 2.57, 1.85(GW) -- sup 2.57. vs THM-763's 78^11 ~ 6.5e20 at n=12 against a conjectured 36.
+(4) THE REDUCTION (why height is the right target): under max<=3n the n=12 deep branch is finite and sized -- s<=5, giving 4.54e9 configurations (s=2:1.25e9, s=3:1.22e9, s=4:1.12e9, s=5:9.6e8). ELEVEN orders of magnitude below THM-763; borderline executable with THM-1016 pruning.
+CALIBRATION (honest): under max<=36 the metric criterion alone kills only 24%% of capacity+primitivity-passing (s,F) at |F|=2,3 -- large off-sheet survives exactly as THM-1016 predicted. So metric+height do not close it by themselves; the height bound's value is ENUMERABILITY, not exclusion.
+
+NOT DONE: the height bound proof; the small-killer regime (THM-1007's gap v_f<=13 max C = the compact HYP-7355 domain); the clustered multi-killer stratum (THM-1011's criterion). LEAD RECORDED: THM-1011's own obstruction -- 'near-equal killers have nearly coincident bad sets' -- is a TOOTH-POSITION statement, so THM-1016's Cov machinery is its natural quantifier (untested).
+
+FILES: 04-computation/lrc13_saw169_height_macmini_S113.py (+.out); HYP-7390.
+HANDOFFS: @all -- the height bound max(A)<=3n for primitive tight sets is now the single highest-value target: it is 11 orders below THM-763 and it is what makes the deep branch executable. @kps -- THM-1011's near-equal-killer obstruction is metric; try Cov. @klein/@boxeph -- the small-killer/compact regime (HYP-7355) is untouched by me this session.
 
 ---
 
