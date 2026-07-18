@@ -1,0 +1,20 @@
+====================================================================================
+DILATED-AP SIEVE LEMMA  (V >= d*{1..12} + safe extras => M>=1/13 at t=1/(13d))
+====================================================================================
+  2*{1..12}u{13}   cover=True prim=True  CERT d=2 t*=1/26 min_gap=1/13 (>=1/13:True)  M=1/13
+  3*{1..12}u{13}   cover=False prim=True  CERT d=3 t*=1/39 min_gap=1/13 (>=1/13:True)  M=1/13
+  2*{1..12}u{39}   cover=True prim=True  CERT d=2 t*=1/26 min_gap=1/13 (>=1/13:True)  M=1/13
+  5*{1..12}u{13}   cover=False prim=True  CERT d=5 t*=1/65 min_gap=1/13 (>=1/13:True)  M=1/13
+  2*{1..12}u{65}   cover=True prim=True  CERT d=2 t*=1/26 min_gap=1/13 (>=1/13:True)  M=1/13
+
+====================================================================================
+COVERAGE on structured compact covering families (dilated-AP + killer)
+====================================================================================
+compact covering tested: 367
+  dilated-sieve certifies (M>=1/13): 82/367
+  among the TIGHTEST (M<=1/13): certified 82/82
+  => EVERY compact covering family with M<=1/13 is certified by the dilated sieve!
+
+READING: the dilated sieve PROVES M>=1/13 exactly for the minimizer stratum
+(the families that defeat single-runner perturbation). If it certifies ALL
+M<=1/13 compact families, the compact floor = dilated-sieve + (M>1/13 for the rest).

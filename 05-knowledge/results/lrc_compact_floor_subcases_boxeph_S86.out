@@ -1,0 +1,35 @@
+pool: 8020 primitive covering families
+
+families with M<1/13: 7
+  (M, rho, smallest-multiple-of-13):
+    M=14/183  (0.07650) rho= 15.17 min13mult=182  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    M=28/365  (0.07671) rho= 30.33 min13mult=364  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364]
+    M=42/547  (0.07678) rho= 45.50 min13mult=546  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 546]
+    M=56/729  (0.07682) rho= 60.67 min13mult=728  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 728]
+    M=70/911  (0.07684) rho= 75.83 min13mult=910  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 910]
+    M=84/1093 (0.07685) rho= 91.00 min13mult=1092  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1092]
+    M=98/1275 (0.07686) rho=106.17 min13mult=1274  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1274]
+
+  H3: ALL M<1/13 families have rho>=13 ?  True
+  small-13-mult: do all M<1/13 families cover 13 via a mult >= 169 (=13*13)? True
+
+  H1: covering + (13 in V) => M>=1/13 ?  True
+
+  H2: does 'smallest mult of 13 is SMALL' force M>=1/13?
+     K= 1 (min13mult<=169*K/13= 13): M<1/13 families with min13mult<=13K: 0
+     K= 2 (min13mult<=169*K/13= 26): M<1/13 families with min13mult<=13K: 0
+     K= 3 (min13mult<=169*K/13= 39): M<1/13 families with min13mult<=13K: 0
+     K= 4 (min13mult<=169*K/13= 52): M<1/13 families with min13mult<=13K: 0
+     K= 6 (min13mult<=169*K/13= 78): M<1/13 families with min13mult<=13K: 0
+     K= 9 (min13mult<=169*K/13=117): M<1/13 families with min13mult<=13K: 0
+     K=12 (min13mult<=169*K/13=156): M<1/13 families with min13mult<=13K: 0
+     K=13 (min13mult<=169*K/13=169): M<1/13 families with min13mult<=13K: 0
+     K=14 (min13mult<=169*K/13=182): M<1/13 families with min13mult<=13K: 1  e.g. 182 in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+
+  H4: covering + v_max <= B => M >= 1/13 ?  (B = provable finite-check bound)
+     B= 26: M<1/13 families with v_max<=B: 0
+     B= 40: M<1/13 families with v_max<=B: 0
+     B= 60: M<1/13 families with v_max<=B: 0
+     B= 80: M<1/13 families with v_max<=B: 0
+     B=120: M<1/13 families with v_max<=B: 0
+     B=168: M<1/13 families with v_max<=B: 0
