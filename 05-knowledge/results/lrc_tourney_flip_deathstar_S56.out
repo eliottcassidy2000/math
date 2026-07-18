@@ -1,0 +1,13 @@
+M<1/13 residue tournament: edge-flip distance from the REGULAR tournament R_13:
+  deep well: scores=[5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]  flip-defect from R_13 = 1  (defect-vertices [-1, 1])  a=val:True
+  ladder m=2: scores=[5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]  flip-defect from R_13 = 1  (defect-vertices [-1, 1])  a=val:True
+  ladder m=5: scores=[5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]  flip-defect from R_13 = 1  (defect-vertices [-1, 1])  a=val:True
+  dilate 3*: scores=[5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]  flip-defect from R_13 = 1  (defect-vertices [-1, 1])  a=val:False
+
+=> every M<1/13 family: residue tournament = R_13 (regular) with flip-defect 1 (the far element).
+   So: M<1/13 <=> tournament is regular-except-one-flip <=> residues equally spaced + 1 perturbation
+   <=> 2 cosets mod val <=> AP core + far element. The far element = the single broken edge.
+
+Contrast M>1/13:
+  {1..11,13,84}: M=0.0787 scores=[5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7] flip-defect=2
+  random cov: M=0.2000 scores=[3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 7, 7, 7] flip-defect=10
