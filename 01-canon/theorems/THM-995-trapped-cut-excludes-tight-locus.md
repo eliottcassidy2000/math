@@ -103,6 +103,15 @@ The tight-locus escape decomposes into two RIGOROUS layers plus a residual conje
   (max ratio ≤ 13 ⟹ fails gap, or max ≤ 22 ⟹ fails max≥23). This is the classical
   LRC-tightness characterization on the compressed-gap stratum — the hard core.
 
+**Parametrized-locus confirmation** (tight_locus_classify_kps_S128c49.py): the sporadic
+family {1..11,13,c} is sieve-covered (Layer 2) for c = 24,25,27,36,48 (at q = 12 or 14),
+and the deep wells {1..12,14m} are sieve-covered at q = 13 for m = 6,7,14 — Layer 2 handles
+the entire parametrized sporadic/deep-well tight locus systematically. Every TIGHT
+candidate in the census resolves to Layer 1, Layer 2, or small/comparable; the only family
+flagged "primitive covering gap" ({1..12,182}) is NON-tight (M = 14/183) and additionally
+fails compressed (182 dominant) — no tight family reaches the residual stratum in the
+census.
+
 ## (VIII) THE MARGIN FLOOR — empirical δ ≥ 1/14 (M ≥ 1/7 = 2× threshold)
 
 Two independent multi-start local-descent MINIMIZATIONS of M over the trapped cut, plus

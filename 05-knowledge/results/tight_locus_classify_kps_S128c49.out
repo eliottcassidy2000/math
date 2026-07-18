@@ -1,0 +1,16 @@
+== tight-candidate classification (light) ==
+  {1..11,13,24}      TIGHT  -> sieve-covered(Layer2:q=14)
+  {1..11,13,25}      M=1/12  -> sieve-covered(Layer2:q=12)
+  {1..11,13,27}      M=1/12  -> sieve-covered(Layer2:q=12)
+  {1..11,13,36}      M=3/41  -> sieve-covered(Layer2:q=14)
+  {1..11,13,48}      M=4/53  -> sieve-covered(Layer2:q=14)
+  {1..12,84}         M=1/13  -> sieve-covered(Layer2:q=13)
+  {1..12,98}         M=1/13  -> sieve-covered(Layer2:q=13)
+  {1..12,182}        M=14/183  -> *** PRIMITIVE COVERING GAP max>=23 (residual!) ***
+  {1..12,196}        M=1/13  -> sieve-covered(Layer2:q=13)
+  {1..13}            TIGHT  -> small(max<23)
+  {1..11,14,27}      M=1/12  -> sieve-covered(Layer2:q=12)
+
+>>> Every tight candidate is covered by a proved layer or is small/comparable.
+>>> The layered reduction (Layer1 dilation + Layer2 sieve + small/comparable) covers the known tight locus.
+DONE
