@@ -1,0 +1,5 @@
+worst core [1,2,4,7,9,11,12], consecutive step-2 killers, b in [157,4000]:
+  max R_sharp = 0.801133 at b=171 ; ALL < 1: True
+  step=1: max R_sharp=0.38164 at b=158 (<1: True)
+  step=3: max R_sharp=0.20385 at b=159 (<1: True)
+  step=4: max R_sharp=0.40580 at b=164 (<1: True)

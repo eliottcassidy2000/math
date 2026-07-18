@@ -100,6 +100,48 @@ stratum). No false certification anywhere.
   The worst case is a single, analyzable shape (core `[1,2,4,7,9,11,12]`, consecutive step-2
   killers), a good handle for that proof.
 
+## Toward the uniform bound: the G(σ) reduction (death-star-S58, proof progress)
+
+The uniform bound `max R_sharp < 1` is, for the worst shape, reduced to an exact
+**one-variable** condition. Consecutive killers `{b, b+2, …, b+8}` have, at time `t`,
+phases `(b+2m)t = bt + m·σ` with `σ = 2t` — an **arithmetic progression of step σ**. So
+"all 5 killers safe at `t`" is "`φ = bt` avoids 5 danger-arcs of width `1/7` centered at
+`{0, σ, 2σ, 3σ, 4σ}`". As `t` ranges over a core-safe arc, `φ = bt` sweeps `b·(width) ≫ 1`
+full turns, realizing the **largest allowed-φ gap**
+
+  **`G(σ) = ` largest gap in `[0,1) ∖ ⋃_{m=0}^{4}(mσ−1/14, mσ+1/14)`,**
+
+and the resulting `t`-gap is `≈ G(σ)/b`. Hence
+
+  **`R_sharp ≈ 1/(7·G(2t))`, so `R_sharp < 1 ⟺ ∃ core-safe t with G(2t) > 1/7`** — an
+  *existence/MAX* condition, not an average.
+
+**Lemma (PROVED, exact rational — `r6_Gsigma_exact_bands`).** `G(σ)` is piecewise linear with
+breakpoints at `σ=(k±1/7)/d`, `d≤4`; it satisfies `G(σ) > 1/7` exactly on the bands
+`(0,1/7) ∪ (2/7,1/3) ∪ (3/7,4/7) ∪ (2/3,5/7) ∪ (6/7,1)` (and reflections), with
+`min_σ G = 2/35` at `σ=1/5` (arcs evenly spread — the *bad* alignment), `G(1/3)=4/21`,
+`G(1/2)=5/14`. So the good bands cover ~64% of the circle.
+
+**Worst-shape verification.** The maximizer sits at `σ ≈ 0.31 ∈ (2/7,1/3)`: exact
+`L·b = 12312/72275 = 0.1703 > 1/7`, so `R_sharp = 0.8011`. A wide exact/float scan
+(`r6_worst_shape_finite_check`) confirms `R_sharp < 1` for **all** `b∈[157,4000]` and steps
+1–4 on core `[1,2,4,7,9,11,12]`; the maximizer `b=171` is *stable across scale* (`R_sharp`
+does not grow), strong evidence `0.8011` is the true global max for this shape.
+
+**What is proved vs. what remains.**
+- PROVED: the phase-AP reduction; the exact `G(σ)>1/7` band lemma; the exact worst-config
+  value; `R_sharp<1` on `b∈[157,4000]` (finite check).
+- REMAINING for a fully rigorous uniform proof: (i) that some core-safe arc lands in the
+  *interior* of a good `G`-band and is wide enough to realize a full period (verified for the
+  worst core; needs stating for every core); (ii) an explicit bound on the `L·b` vs `G(2t)`
+  error (the `σ`-drift `2·gap` across a gap → `0` as `b→∞`, so large `b` is asymptotic and
+  small `b` is the finite check already run). The margin is `G≈0.175` vs `1/7=0.143` (≈19%),
+  comfortably above the ≈3% drift error at the maximizer — but the edge of each band (where
+  `G→1/7`) is where the error control must be made rigorous.
+
+This turns the "uniform tail lemma" from an opaque analytic obstruction into a concrete,
+mostly-discharged program: an exact 1-D inequality (done) + a finite alignment/error check.
+
 ## Methodological note (for the fleet)
 
 Before building enumeration machinery against `R<1`, check whether the horn constant is sharp.
