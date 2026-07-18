@@ -1,0 +1,8 @@
+L_min over (triple, w1<=200) for B u {w1}  [10 speeds]:
+   L_min = 0.004000  (worst ((4, 10, 12), 30))
+   => W1 = 8/(17 L_min) = 117.6   [one-small regime threshold]
+   => w2-box = 2/L_min   = 500.0   [beyond this, the two-small regime is AUTOMATIC]
+
+   thresholds: W_joint=103.85, W1=117.6, w2-box=500.0  -> box needed = 500.0
+   bitmask check verified w <= 200 (zero failures).
+   => box must grow to 500

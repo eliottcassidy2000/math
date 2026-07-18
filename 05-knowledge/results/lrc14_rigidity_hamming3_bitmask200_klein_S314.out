@@ -1,0 +1,2 @@
+radius-3 bitmask check, w in [13,200]: (w1,w2,w3) with NO q<=60 witness = 0
+  => ALL radius-3 families with w<=200 have an explicit rational witness => M>=2/25

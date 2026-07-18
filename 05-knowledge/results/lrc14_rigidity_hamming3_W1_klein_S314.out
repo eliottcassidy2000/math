@@ -1,0 +1,3 @@
+MIXED regime C1 (one small w1<=104, two large): need both > 8/(17 L(B u {w1}))
+   W1 = 117.65  (worst ((4, 10, 12), 30))
+   EXCEEDS 104 -> box must grow

@@ -1,0 +1,4 @@
+RADIUS 3 thresholds (delta=2/25, r=3: need sum 1/w_i < 13 L/4)
+  R1 all-large  : W_joint = 1350/13 = 103.85  (worst (4, 5, 6) ; L=0 cases 0)
+  => finite box must reach ~104
+  finite check size: 220 triples x C(92,3) = 27,627,600 families

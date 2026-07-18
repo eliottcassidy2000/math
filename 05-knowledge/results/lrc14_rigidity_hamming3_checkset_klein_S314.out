@@ -1,0 +1,12 @@
+L distribution over 220 triples (smallest L = worst threshold):
+   (4, 5, 6) L=2/225       thr=12/(13L)=103.8
+   (4, 5, 12) L=8/875       thr=12/(13L)=101.0
+   (4, 6, 10) L=1/105       thr=12/(13L)=96.9
+   (4, 10, 12) L=1/105       thr=12/(13L)=96.9
+   (3, 4, 5) L=3/250       thr=12/(13L)=76.9
+   ...  median L=1/40 (thr 36.9) ; largest L=47/825 (thr 16.2)
+
+TRUE check-set size using the actual condition sum 1/w_i >= 13L/4:
+   total families needing an explicit check: 171,196,892
+   worst triples: [((4, 6, 10), '5,506,516'), ((4, 10, 12), '5,506,516'), ((4, 5, 6), '4,927,656')]
+   (vs naive box 220 x C(92,3) = 27,627,600)

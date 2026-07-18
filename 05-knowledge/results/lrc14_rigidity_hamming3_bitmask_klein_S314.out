@@ -1,0 +1,5 @@
+candidate rationals (q<=60): 551
+
+triples processed: 220/220
+(w1,w2,w3) with NO small-denominator witness (need explicit check): 0
+   => ALL radius-3 families with w<=104 have a q<=60 rational witness => M>=2/25
