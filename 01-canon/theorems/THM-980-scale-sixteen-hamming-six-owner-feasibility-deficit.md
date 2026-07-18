@@ -104,5 +104,5 @@ six-owner projection data.
 
 This theorem concerns only the primitive proper AP-centred common-scale-sixteen
 Hamming-six face under THM-860.  It does not close `c>=17`, the H5 bank,
-non-AP-centred/deep-sheet continuations, or global sporadic emptiness.  The
-scale-seventeen continuation is recorded separately in THM-981.  ∎
+non-AP-centred/deep-sheet continuations, or global sporadic emptiness.  Scale
+seventeen is subsequently closed by THM-981.  ∎

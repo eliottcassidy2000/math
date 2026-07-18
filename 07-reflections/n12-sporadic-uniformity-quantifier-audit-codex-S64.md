@@ -73,12 +73,13 @@ faces:
    theorems close AP-centred stars at stated radii/scales; they are not a
    completeness theorem saying that every sporadic packet is AP-centred.
 4. On the AP-centred proper Hamming-six common-sheet face, the exact recursions
-   and owner obstructions close scales `c=1,...,12,14,15,16`
-   (THM-857/861/862, THM-957/958/960/962/963/969/970/974/976/977/978/980),
+   and owner obstructions close scales `c=1,...,12,14,15,16,17`
+   (THM-857/861/862, THM-957/958/960/962/963/969/970/974/976/977/978/980/981),
    while THM-860 excludes `c=13` by primitivity.  Scale twelve dies by complete
    owner orthogonality; scale fourteen dies at every owner-local gate; and
    scale fifteen has at most four feasible owners in any scalar row, and scale
-   sixteen has at most two.  This still leaves `c>=17`, the finite ramified H5
+   sixteen has at most two; scale seventeen has no locally feasible owner in
+   either surviving quadratic row.  This still leaves `c>=18`, the finite ramified H5
    metric bank, radius-seven and higher correlated component languages,
    non-AP-centred/deep two-sheet packets, shell-five transport, dyadic/collar
    residuals, and higher sheets.

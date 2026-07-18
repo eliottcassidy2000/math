@@ -1007,8 +1007,10 @@ terminal datum is the labelled feasibility subset and maximum-union vector;
 the induced owner tournament is always transitive and loses the absolute
 coverage threshold.  THM-980 closes `c=16` at the same pre-nerve layer: its
 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owner
-projections are empty.  This still does not prove uniform sporadic emptiness.
-Scale seventeen and higher, the finite ramified H5 bank, and non-AP, deep, and
+projections are empty.  THM-981 closes `c=17`: scalar capacity leaves only the
+QR/NQR all-order-seventeen rows, and all twelve owner-local maxima are exactly
+sixteen of seventeen sheets.  This still does not prove uniform sporadic
+emptiness.  Scale eighteen and higher, the finite ramified H5 bank, and non-AP, deep, and
 higher-sheet branches remain parts of the global `n=12` problem.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal

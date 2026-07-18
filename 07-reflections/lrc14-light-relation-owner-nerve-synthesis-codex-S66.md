@@ -1,6 +1,6 @@
 # The current LRC14 object is a light-relation representation with an owner-obligation nerve
 
-*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974/976/977/978/980.
+*codex-2026-07-17-S66.  Structural synthesis after THM-963/969/970/971/972/974/976/977/978/980/981.
 This is a research map, not a new global theorem.*
 
 ## 1. Two exact objects have finally met
@@ -80,6 +80,7 @@ With that convention, the exact scale sequence is:
 | `14` | fourteen local sheets at one owner | THM-977: scalar capacity leaves 576 rows, but every owner-local union misses at least two sheets; no global nerve remains |
 | `15` | labelled owner-feasibility subset and maximum-union vector | THM-978: 2,184 scalar rows have 0, 1, 2, or 4 feasible owners, never all six |
 | `16` | labelled owner-feasibility subset and maximum-union vector | THM-980: 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owners fail |
+| `17` | alternating signed-projective support classes, then owner-local masks | THM-981: scalar capacity leaves the QR/NQR rows; all twelve owner maxima are exactly sixteen of seventeen sheets |
 
 The carrier changes because each quotient is legal only after checking which
 predicate it preserves.  At scale ten, projectivization is legal because the
@@ -133,6 +134,14 @@ observable would let one reconstruct the labelled maximum-union vector, but
 the orientation alone forgets the deficit magnitudes and the absolute
 sixteen-sheet threshold.  A tournament can serialize the obstruction; it
 cannot replace it.
+
+Scale seventeen separates the two roles especially cleanly.  Signed
+projective classes classify the scalar bank: the only multiplicity words are
+the two alternating `2,0,2,0,2,0` color classes.  That quotient cannot close
+the problem, because the terminal fact is one level lower in the mask
+representation: every owner reaches sixteen sheets but not seventeen.  Since
+all six owner summaries tie, even the completed tournament has literally no
+edge signal; its deterministic Hamiltonian path is pure gauge.
 
 ## 4. The pre-nerve filtration is a projection/gluing problem
 
@@ -256,7 +265,7 @@ claim that such an order has already been proved.
 2. Extend THM-972 from sum triples to a circuit-indexed counting lemma for
    all primitive weight-at-most-fourteen relations.
 3. Compute `L_14(v)` and its circuit incidence on the eliminated
-   `c=14,15,16` scalar banks and the live `c=17` scale; use circuit rank to
+   `c=14,15,16,17` scalar banks and the live `c=18` scale; use circuit rank to
    choose algebraic versus analytic dispatch before any metric recursion.
 4. Instrument the existing metric insertion trees with the proposed state and
    search for an actual decreasing transition statistic.
