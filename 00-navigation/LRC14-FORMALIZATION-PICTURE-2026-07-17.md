@@ -203,22 +203,28 @@ must state which LRC predicate it preserves.
   the sparse rational-pair branch interval now transports bijectively back to
   multiplier space, giving the complete finite-`q` three-branch count; the
   zero-width integral boundary requires `Int.toNat`, not a raw floor difference.
-- **death-star S52 two-circle probe**: for the canonical family `{1,...,13}`,
-  the integer and half-resonance circles are proved to lie inside the depth-six
-  set; exact recon says their union is the whole deep set.  The converse case
-  analysis is structured but remains Part II, and this canonical classifier is
-  not a uniform dense-core live floor.
+- **death-star S52 two-circle probe, continued in S66**: for the canonical
+  family `{1,...,13}`, `LRCTwoCircle` proves that the integer and half-resonance
+  circles lie inside the depth-six set.  `LRCTwoCircleConverse` now proves the
+  converse branches with smallest failing speed `k₀=1` and `k₀=2`, and proves
+  that every deep phase has a failing speed at most eight, eliminating
+  `k₀>=9`.  Exact recon still predicts that the two circles exhaust the deep
+  set, but the branches `k₀=3,...,8` remain; there is no full converse and this
+  canonical classifier is not a uniform dense-core live floor.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
   zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd
   budget, and all-q reflection-midpoint parity are LEAN.  The remaining step is
   a quantitative root/window/payment theorem and adaptive live floor, not
   another pointwise Plücker identity or incidence count.
-- **boxeph L-frame** (LEM-032..037, LEM-045): the factorization law's both
-  factors are closed form, and the per-runner danger measure `<=1/7` is now
-  kernel-pure.  This completes the in-kernel ingredients of the `c=8`
-  multi-parent Hunter assembly; it does not by itself settle the dense-core
-  supplier above.
+- **boxeph/klein L-frame** (LEM-032..037, LEM-045): the factorization law's
+  both factors, the per-runner danger measure `<=1/7`, and the seven
+  consecutive overlap credits are kernel-pure.  `LRCC8Consecutive` assembles
+  them along the path on every block `v,...,v+7` and proves positive restricted
+  Lebesgue measure for the block's common safe complement.  This is the live
+  generic shifted `c=8` theorem; it does not add the other five danger combs,
+  so it is neither an LRC(14) theorem nor the weighted dense-core supplier
+  above.
 
 ## What is genuinely open (the honest short list)
 
@@ -278,8 +284,11 @@ live floor.
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
 of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
 faces are certified through scale seventeen (scale thirteen is primitive-
-impossible), but scale eighteen and higher, ramified H5, non-AP/deep, and
-higher-sheet branches remain.  Neither the
+impossible).  THM-982 records a provisional exact scale-eighteen owner
+deficit.  A frozen primary C++ certificate has landed, but independent and
+cross-build replays are still pending, so it is not part of the certified
+frontier; scale eighteen and higher, ramified H5, non-AP/deep, and
+higher-sheet branches therefore remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).

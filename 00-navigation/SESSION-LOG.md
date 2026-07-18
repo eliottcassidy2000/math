@@ -255,6 +255,27 @@ profile beyond `(H,K)`; the j=4 portable bound closes only edge `(5,7)`, not the
 other twenty floods.  The proposed all-`n` black self-line law is also refuted
 at `n=8` (`404 != SC(8)=176`).
 
+(F) **LIVE CONTINUATION: TWO CIRCLES, EIGHT COMBS, AND THE SCALE FRONTIER.**
+`LRCTwoCircleConverse.lean` now closes exactly the canonical smallest-failing-
+speed cases `k₀=1` and `k₀=2`, and its counting endpoint eliminates
+`k₀>=9`; cases `k₀=3,...,8` remain, so the full two-circle converse is not
+proved.  `LRCC8Consecutive.lean` assembles the residue-sensitive seven-edge
+Hunter path uniformly and proves positive restricted Lebesgue measure for the
+common safe complement of every consecutive block `v,...,v+7`.  It does not
+add the other five combs and is not LRC(14).
+
+On the separate `n=12` sporadic ledger, THM-980 is a proved finite-exact
+closure of only the primitive proper AP-centred common-scale-sixteen H6 face:
+`13,806,600,192` raw contexts reduce to 2,540 scalar rows, each with at most
+two feasible owners.  THM-981 is now proved finite-exact at scale seventeen:
+`22,303,024,128` contexts leave the two all-order-seventeen quadratic-
+residue/nonresidue supports, and all twelve owner rows have exact maximum
+union `16/17`; frozen independent C++ and Python reconstructions agree.
+THM-982 is provisional at scale eighteen: its `27,490,799,952`-context scratch
+bank reduces to 13,098 scalar rows on 684 supports, with at most four feasible
+owners per row.  The frozen primary C++ certificate has landed; independent
+and cross-build replays are still pending.
+
 **HONEST FRONTIER.**  For the weighted route, still supply a selected-root and
 sharp-window coverage theorem, control the summed gcd budgets, turn colored
 spoke mass plus the exact `462/210` reuse into payment, pay depths six/seven,
@@ -263,15 +284,17 @@ opposition, q244/q333 zero-small relations, and the q4488 close pencil.  Pair
 finite replays tau5--tau9 and the block partition trichotomy remain.  The
 universal `q<=25` proposal is false (THM-566/762/764).  Uniform emptiness of the
 `n=12` sporadic branch is still open even though proper AP-centred H6 faces are
-now closed through scale fourteen (scale thirteen primitive-impossible): scale
-fifteen+, ramified H5, and non-AP/deep/higher-sheet branches remain.
+now certified through scale seventeen (scale thirteen primitive-impossible).
+Scale eighteen remains open in the proved ledger despite THM-982's
+provisional deficit; scales nineteen+, ramified H5, and
+non-AP/deep/higher-sheet branches also remain.
 
 FILES: `LRCAlignedStalkGluing.lean`, `LRCAlignedStalkAggregation.lean`,
 `LRCDeepReflectionParity.lean`, `LRCSparseBranchLattice.lean`,
-`LRCSelectedWitnessGapTwoResidual.lean`, root imports, cohesive picture,
-manifest, and lens-map packet fields.  Every new theorem was built with no
-`sorry`/`native_decide`; axiom audits report only the standard foundational
-trio where applicable.
+`LRCSelectedWitnessGapTwoResidual.lean`, `LRCTwoCircleConverse.lean`,
+`LRCC8Consecutive.lean`, root imports, cohesive picture, manifest, and lens-map
+packet fields.  Every new theorem was built with no `sorry`/`native_decide`;
+axiom audits report only the standard foundational trio where applicable.
 
 ---
 

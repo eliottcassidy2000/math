@@ -1007,11 +1007,18 @@ terminal datum is the labelled feasibility subset and maximum-union vector;
 the induced owner tournament is always transitive and loses the absolute
 coverage threshold.  THM-980 closes `c=16` at the same pre-nerve layer: its
 2,540 scalar rows have 0, 1, or 2 feasible owners, so at least four owner
-projections are empty.  THM-981 closes `c=17`: scalar capacity leaves only the
-QR/NQR all-order-seventeen rows, and all twelve owner-local maxima are exactly
-sixteen of seventeen sheets.  This still does not prove uniform sporadic
-emptiness.  Scale eighteen and higher, the finite ramified H5 bank, and non-AP, deep, and
-higher-sheet branches remain parts of the global `n=12` problem.
+projections are empty.  THM-981 closes `c=17`: its complete
+`22,303,024,128`-context bank reduces to the two all-order-seventeen
+quadratic-residue/nonresidue rows, and every one of their twelve owner fibres
+has exact maximum union `16/17`.  Independent frozen C++ and Python
+reconstructions agree.  THM-982 is only provisional at `c=18`: its scratch
+reconstruction traverses `27,490,799,952` contexts, reduces to 13,098 scalar
+rows on 684 supports, and leaves no row feasible at more than four owners.
+Its frozen primary C++ certificate has landed, but independent and cross-build
+replays remain pending.  Thus scale eighteen remains open in the proved
+ledger; scales nineteen and higher, the finite ramified H5 bank, and non-AP,
+deep, and higher-sheet branches also remain parts of the global `n=12`
+problem.  None of these facewise results proves uniform sporadic emptiness.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal
 arithmetic sharpening.  THM-668 ruler data `q<=2b`, strict `mu>1/n`, and the
@@ -1193,13 +1200,29 @@ relation with total absolute coefficient weight at most fourteen transfers
 exactly to the selected integer witnesses.  It closes the real-error-to-exact-
 relation step, but it does not eliminate a nonzero small frequency by itself.
 
+## Landed addendum — exact scope of the canonical two-circle classifier
+
+`LRCTwoCircle` proves the forward inclusion of the integer and half-resonance
+circles in the canonical `{1,...,13}` depth-six set.  The kernel-pure
+`LRCTwoCircleConverse` now proves the converse when the smallest failing speed
+is `k₀=1` or `k₀=2`, and proves that every deep phase has a failing speed at
+most eight, so `k₀>=9` is impossible.  The cases `k₀=3,...,8` remain.  The
+bounded exact reconstruction is evidence for the full two-circle equality,
+not a theorem, and even that equality would classify only the canonical
+family rather than supply the uniform weighted/deep theorem required by
+LRC(14).
+
 ## Addendum (boxeph-S69): item 15
 
 15. **LEM-042 (pair-overlap law).** (A) exact trapezoid-sum formula: finite
     rational arithmetic per pair (decide); (B) the 1/49 integral identity:
     one ring computation; (C) consecutive-floor: finite-form induction on
-    n = floor((2a'+1)/14) (decide-adjacent); feeds klein's
-    path_hunter_add_le ledger (already kernel-pure) with exact credits.
+    n = floor((2a'+1)/14) (decide-adjacent).  `LRCPairOverlapArcs` turns these
+    into restricted-volume credits.  `LRCC8Consecutive` uses the residue-
+    `3 mod 7` strict edge in every seven-edge Hunter path to prove positive
+    safe measure for every consecutive block `v,...,v+7`.  This is the live
+    generic shifted eight-comb theorem.  It does not add the remaining five
+    combs, handle the inherited admissible-window problem, or prove LRC(14).
 
 ## Landed addendum — congruence-averaging core (kind-pasteur-S128c44)
 
