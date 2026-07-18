@@ -1,0 +1,17 @@
+THE SPREAD LADDER:  sigma = vmax/vmin <= n-1  =>  M >= 1/n
+  proof: t = 1/(n vmin) gives vt in [1/n, sigma/n] subset [1/n,(n-1)/n], so ||vt||>=1/n. One line.
+
+  VERIFICATION -- does any family with sigma<=n-1 violate M>=1/n?  and is the rung TIGHT?
+   n  | families tested | min M found | 1/n      | violation? | tight?
+   10 |        900      | 1/10        | 1/10     | NONE       | YES
+   11 |        900      | 1/11        | 1/11     | NONE       | YES
+   12 |        900      | 2/23        | 1/12     | NONE       | not hit in sample
+   13 |        900      | 4/41        | 1/13     | NONE       | not hit in sample
+   14 |        900      | 1/14        | 1/14     | NONE       | YES
+   15 |        900      | 1/14        | 1/15     | NONE       | not hit in sample
+
+  THE n=13 RUNG PROVES HYP-7355 ON ITS OWN STATED EXTREMAL:
+    2*{1..12} u {13}: sigma = 24/2 = 12 <= 12, so t = 1/26 gives M >= 1/13; exact M = 1/13 (TIGHT)
+
+  THE WEDGE BINDING CASE IS BEYOND EVERY RUNG:
+    {1..11,13,84}: sigma = 84, no rung applies; M = 7/89 = 0.078652, only 2.25% above 1/13

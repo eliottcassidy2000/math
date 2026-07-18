@@ -1,0 +1,15 @@
+NEW COORDINATE: W = ceil(log_13(sigma)) = number of 13-fold OCTAVES the family spans.
+  W=1 (sigma<=13) is exactly THM-405 (t=1/(14 vmin), no speed wraps past the first window).
+  Challenge to the standing frame: rho and sigma are ratios; WRAPPING is what breaks the argument.
+
+  W | min M over sampled covering 13-sets | witness
+   1 | 2/21       = 0.09524            | [2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 16, 19, 
+   2 | 2/21       = 0.09524            | [1, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 17, 1
+   3 | 26/145     = 0.17931            | [1, 52, 55, 57, 72, 73, 102, 127, 140, 154, 
+
+  known objects:
+    AP {1..13}             sigma=   13.0  W=1   M=1/14
+    deep well {1..12,182}  sigma=  182.0  W=3   M=14/183
+    GW {1..11,13,24}       sigma=   24.0  W=2   M=1/14
+    {1..11,13,84}          sigma=   84.0  W=2   M=7/89
+    2*{1..12}u{13}         sigma=   12.0  W=1   M=1/13
