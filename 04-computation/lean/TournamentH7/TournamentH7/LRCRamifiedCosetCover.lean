@@ -73,6 +73,21 @@ theorem not_sharedFullCover_of_empty_owner
   LRCPreNerveProjection.not_globallyFeasible_of_empty_owner
     project (FullCoverGood covered) owner hempty
 
+/-- A uniform strict cardinality deficit at one owner is enough to obstruct
+every shared assignment.  This is the direct consumer of the exact maximum-
+union and sound upper-relaxation tables used by the common-scale certificates. -/
+theorem not_sharedFullCover_of_owner_card_lt
+    (project : (owner : Owner) → Global → Local owner)
+    (covered : (owner : Owner) → Local owner → Finset Sheet)
+    (owner : Owner)
+    (hdeficit : ∀ word, (covered owner word).card < Fintype.card Sheet) :
+    ¬SharedFullCover project covered := by
+  apply not_sharedFullCover_of_empty_owner project covered owner
+  intro word hcover
+  have hlt := hdeficit word
+  rw [hcover, Finset.card_univ] at hlt
+  omega
+
 end OwnerProjection
 
 /-! ## Anchor union plus independent remainder caps -/
@@ -171,6 +186,38 @@ which fibres occur. -/
 def IsCompleteFibreUnion (fibre : Sheet → Fibre)
     (complete : Finset Fibre) (base : Finset Sheet) : Prop :=
   ∀ sheet, sheet ∈ base ↔ fibre sheet ∈ complete
+
+/-- Fibre-constant membership is exactly what is needed to turn a periodic
+mask into a union of complete quotient fibres. -/
+theorem completeFibreUnion_image_of_fibre_constant
+    (fibre : Sheet → Fibre) (base : Finset Sheet)
+    (hconstant : ∀ s t, fibre s = fibre t → (s ∈ base ↔ t ∈ base)) :
+    IsCompleteFibreUnion fibre (base.image fibre) base := by
+  intro sheet
+  constructor
+  · intro hsheet
+    exact Finset.mem_image.mpr ⟨sheet, hsheet, rfl⟩
+  · intro himage
+    rcases Finset.mem_image.mp himage with ⟨source, hsource, heq⟩
+    exact (hconstant source sheet heq).mp hsource
+
+/-- Conversely, a recorded complete-fibre presentation makes membership
+constant on every fibre. -/
+theorem fibre_constant_of_completeFibreUnion
+    (fibre : Sheet → Fibre) (complete : Finset Fibre)
+    (base : Finset Sheet)
+    (hbase : IsCompleteFibreUnion fibre complete base)
+    {s t : Sheet} (hst : fibre s = fibre t) :
+    s ∈ base ↔ t ∈ base := by
+  constructor
+  · intro hs
+    apply (hbase t).mpr
+    rw [← hst]
+    exact (hbase s).mp hs
+  · intro ht
+    apply (hbase s).mpr
+    rw [hst]
+    exact (hbase t).mp ht
 
 /-- Number of selected transversal pieces which actually meet a fibre. -/
 def fibreHitCount (fibre : Sheet → Fibre) (j : Fibre)
@@ -367,8 +414,11 @@ theorem not_fullCover_of_fibreFlagScore_lt
 
 #print axioms everyOwnerLocallyCoverable_of_sharedFullCover
 #print axioms not_sharedFullCover_of_empty_owner
+#print axioms not_sharedFullCover_of_owner_card_lt
 #print axioms assignment_extendUnion_card_le
 #print axioms not_covers_of_base_add_caps_lt
+#print axioms completeFibreUnion_image_of_fibre_constant
+#print axioms fibre_constant_of_completeFibreUnion
 #print axioms extendUnion_card_le_fibreFlagScore
 #print axioms fibreFlagScore_eq_card_of_fullCover
 #print axioms not_fullCover_of_fibreFlagScore_lt

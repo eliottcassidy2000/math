@@ -992,12 +992,14 @@ nerve is `K6` minus `C6`, the triangular prism, with no triple faces.  Raw
 runners and completed tournaments lose the disjoint-obligation meaning of
 those cycle edges.
 
-`LRCScaleTenProjectivePrism.lean` is the in-progress kernel transcription of
-this terminal quotient.  It encodes the exact order-ten mask table, proves
-that full capacity forces a partition, and reduces the projective classes to
-the multiplication-by-two cycle.  The native `821,620,800 -> 64` reduction
-remains external; this module is not counted green here until its
-resource-guarded direct check finishes.
+`LRCScaleTenProjectivePrism.lean` now direct-builds and is root-wired.  It
+encodes the exact order-ten mask table, proves that full capacity forces a
+partition, reduces the projective classes to the multiplication-by-two cycle,
+normalizes all sign blocks by vertex switching, and kernel-checks the terminal
+adjacent-owner disjointness certificate.  Its public theorems audit to the
+standard foundational trio, with no `sorry` or `native_decide`.  The native
+`821,620,800 -> 64` reduction remains an external finite certificate and is
+not silently absorbed into this quotient theorem.
 
 THM-974 closes `c=11`.  The prime-order hereditary grammar has 57 divisor
 words and `1,636,866,000` labelled literal contexts.  Scalar capacity and
