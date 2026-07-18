@@ -1,0 +1,39 @@
+scale-twenty-one independent algebraic-CRT Python referee
+divisor grammar 1,3,7,21; literal states 21; supports 924
+hereditary order words 3249; state words/support 84210192; raw 77810217408
+literal-fibre-size histogram 144:225 288:300 576:225 864:300 1152:90 1728:400 2304:15 3456:300 5184:225 6912:120 10368:300 13824:20 20736:225 31104:90 41472:90 62208:120 82944:15 124416:90 186624:15 248832:36 373248:20 497664:6 746496:15 1492992:6 2985984:1
+mask-table SHA256 6677373c8360f1d89c751e9fe1a22ed4a7fe062c883efcadd2e782297902520e
+order-grammar SHA256 f7c0254d8ac9108d318f4a9a21d0d2e5b244be91087b22c162bb563956e9b474
+literal-fibre-descriptor SHA256 be9236c7a255afeaf7ec6fe0c6716603d1be59818a8b4f2e71d2b030a6fb12b0
+primary-compatible FNV64 mask 88bd211e0c707e3d order ae4e6cdbc98c0522
+scalar contexts 350 on 80 supports; multiplicity patterns 9
+scalar multiplicities (0, 0, 0, 6):2 (0, 2, 4, 0):180 (0, 3, 0, 3):12 (0, 3, 1, 2):36 (0, 3, 2, 1):36 (0, 3, 3, 0):12 (0, 4, 0, 2):18 (0, 4, 1, 1):36 (0, 4, 2, 0):18
+scalar-multiplicity SHA256 1416f868fd8b1e43ccff24303670993610479194a29ddd360c7d853b767b32f1
+all-support contexts histogram 0:844 1:14 2:48 8:12 24:6
+multiplication orbit-size histogram 2:1 6:1 12:6
+multiplication orbit (size,contexts/support) histogram (2, 1):1 (6, 24):1 (12, 1):1 (12, 2):4 (12, 8):1
+scalar-bank SHA256 6af0546c482c0d7a0981b5450c4fef51f3f2293566cc6d1df69abc9dfd86d2b5
+capacity-row SHA256 6598c794af639163d894100f2da7e3b7388429529746b831cc7ff8c0e30ecf3d
+capacity vectors 131; capacity-vector SHA256 933431170549185541b83f15f5ccab42bd0fe545a52b26c21e8b4bf4c2cfe3a2
+minimum scalar-slack histogram 0:56 1:180 2:114
+maximum scalar-slack histogram 0:2 5:180 6:72 9:96
+tight-owner/context histogram 0:294 1:36 2:18 6:2
+owner rows 2100; feasible 384
+feasible-owner/context histogram 0:182 1:96 4:72
+maximum-union histogram 17:1056 18:648 20:12 21:384
+minimum-of-owner-maxima histogram 17:348 20:2
+distinct owner maximum vectors 34; owner-reachable-bank SHA256 c3e7ce9c46dffd5846bb663f9f490ac9bf3fae76885a7085d5c3172a2907a8aa
+reachable masks total 1393896; count-histogram SHA256 e3f4d0c8ad9de804b14173da3e8ba81687820c3f844ec14e9b58dbc9daef4dc0; maximum-mask-count-histogram SHA256 bd0a1ee3a6265722536ff61691840f01729d4586876373fe815485ed800e6858
+all-order scalar rows 2; each has capacities 21,21,21,21,21,21 and owner maxima 20,20,20,20,20,20
+exact reachable masks are hashed in sorted order for every owner row; owner-local all-six contexts 0; hence global literal unit fibres 0
+tournament vertices owner obligations; pair observable exact (feasible,maximum,capacity) summaries; lexicographic switch, coordinate tie Hamiltonian path
+tournament tie-edge histogram 2:72 4:24 6:36 7:216 15:2
+tournament edge-flip histogram 0:19 1:20 2:27 3:29 4:69 5:56 6:47 7:45 8:30 9:8
+tournament aggregate score histogram 0:350 1:350 2:350 3:350 4:350 5:350
+tournament score vectors 79; score-vector SHA256 a294eded1ff8ae2cdf009b283757a7253b58b4969db7f64e94e2f487bdeae7e9
+tournament directed-cycle histogram 0:350
+tournament SCC-size histogram (1, 1, 1, 1, 1, 1):350
+tournament Hamiltonian-path histogram 1:350
+preserved audit: labelled owner-local mask banks preserve the FULL-mask predicate, sheet identities, maxima, and every owner deficit
+lost audit: the tournament keeps only pairwise ordering of three-number summaries; it discards thresholds, masks, unit witnesses, and simultaneous cross-owner compatibility, so it cannot itself prove emptiness
+challenged vertex assumption: owner proof obligations are faithful after the scalar gate; runners/providers, gaps, fixed sections and boundaries, wall events, residues, cover arcs, Fourier modes, and matroid circuits all lose labelled shared-unit incidence
