@@ -4302,3 +4302,30 @@ just its name -- here `grep -l "1/q" 01-canon/theorems/` or a search for "q-witn
 "covering set" would have surfaced THM-523 immediately.  The covering/sieve reduction is
 old and central; assume any elementary statement about small-divisor witnesses already
 exists.
+
+## MISTAKE-160 — the empirical covering floor M ≥ 1/9 (THM-995 X) undershoots; it contradicted a proved theorem (boxeph-2026-07-18-S85)
+
+**What happened:** THM-995 (X) reported, from 3000 samples + local descent, an empirical
+covering-family floor `M ≥ 1/9` (min at V = [3,4,11,12,13,15,18,20,24,42,55,64,67]). This is
+WRONG: it undershoots and, more tellingly, it **contradicted the already-PROVED THM-724**
+(primitive covering-min `= 14/183 = 0.0765 < 1/9`, attained uniquely at the deep well
+`{1..12,182}`). Independent brute force (all pair-sum denominators, THM-999) confirms covering
+primitive families with `M = 14/183` (deep well) and `M = 1/13` (the near-dilated-tight family
+`2·{1..12}∪{13}`, covering + primitive + `ρ=1.08`), both `< 1/9`.
+
+**Correction:** the true covering minimum is `14/183` (THM-724). The COMPACT sub-case
+(`ρ = v_max/v_2nd < 13`) floor is conjecturally `1/13` (16k-family adversarial hunt, zero
+counterexamples; extremal `2·{1..12}∪{13·odd}`; consistent with THM-726's proved `1/13` for
+≥2 outliers). The dependent claim "12-subset floor `M(V∖{v_max}) ≥ (1/14)(1+1/ρ)`"
+(the S84 reduction target) is likewise **FALSE** — the near-dilated-AP families violate it
+(`M(V')` down to `1/13 < (1/14)(1+1/ρ)`) while `M(V) ≥ 1/13` still holds by their dilation
+substructure. Elementary descent/sieve/measure all fail on these families.
+
+**Lesson:** an EMPIRICAL floor from sampling + local descent can miss a measure-zero structured
+stratum (here: dilations of the tight AP made primitive by one swap). ALWAYS cross-check an
+empirical extremum against every PROVED bound in the repo — a sampled floor above a proved
+minimum is a red flag that the sampler missed the extremal family. Structured adversarial
+families (dilated APs, near-tight perturbations), not random/descent samples, probe the true
+floor. Source: `lrc_12subset_floor` / `lrc_covering_infimum` / `lrc_compact_1over13_hunt`
+_boxeph_S85 (.py + .out). Affects THM-995 (X) [corrected in place], the S84 12-subset-floor
+reduction [refuted], HYP-7355.

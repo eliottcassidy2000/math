@@ -170,6 +170,16 @@ NOT a universal floor. The honest floors: non-covering at q ≤ 13 ⟹ margin �
 (RIGOROUS, IX); covering families ⟹ M ≥ 1/9 (empirical, X); the double-threshold 1/7 is
 withdrawn as a universal claim.
 
+**⚠ CORRECTION to (X) (boxeph-2026-07-18-S85; see MISTAKE-160, HYP-7355).** The empirical
+floor `M ≥ 1/9` **UNDERSHOOTS** — the 3000-sample descent missed the structured stratum. It
+already contradicted the PROVED THM-724 (covering-min `= 14/183 < 1/9`, deep well). The true
+covering minimum is `14/183` (THM-724, unique at the far-element deep well). For the COMPACT
+sub-case (`ρ = v_max/v_2nd < 13`, no far element) the floor is conjecturally `1/13`, attained
+by the near-dilated-tight family `2·{1..12}∪{13}` (and `d·{1..12}∪{killer}`), verified by a
+16k-family hunt with zero counterexamples and matching THM-726's proved `1/13` for ≥2 outliers.
+So the sharp residual is `M ≥ 1/13` (compact) / `M ≥ 14/183` (global), NOT `M ≥ 1/9`; the
+qualitative "covering ⟹ M > 1/14" is unaffected.
+
 ## (XI) THE RESIDUAL *IS* THE COVERING-MIN PROBLEM — and it is largely already proved
 
 The sharpened residual "covers all of 2..14 ⟹ M > 1/14" is **not a new problem**: it is

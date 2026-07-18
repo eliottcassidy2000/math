@@ -1,0 +1,35 @@
+====================================================================================================
+IS THE 12-SUBSET FLOOR TRUE?  primitive covering, rho<13.  (D)=v_max floor
+====================================================================================================
+
+sampled 67 primitive covering rho<13 families;  LRC(14) holds on all: True
+  (D) v_max 12-subset floor holds:        44/67
+  (S) sieve-on-V' closes (missed small q): 5/67
+  (R) best-removal recursion reaches 1/14: 49/67
+  (G) mu0(V') > 1/7 (measure closes):      12/67
+
+--- families where the v_max floor (D) FAILS (23): are they near-dilated-AP? ---
+  rand      rho=1.06 M(V')=8/59(0.1356) need=0.1387 M(V)=8/59  [S=False R=True G=False mu0(V')=0.094]  V=[1, 4, 5, 11, 14, 20, 24, 25, 28, 35, 45, 49, 52]
+  AP2+13    rho=1.09 M(V')=1/12(0.0833) need=0.1369 M(V)=1/13  [S=False R=False G=False mu0(V')=0.032]  V=[2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24]
+  AP3+182   rho=5.06 M(V')=1/13(0.0769) need=0.0856 M(V)=1/13  [S=False R=False G=False mu0(V')=0.034]  V=[3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 182]
+  AP4+13    rho=1.09 M(V')=1/12(0.0833) need=0.1369 M(V)=1/13  [S=False R=False G=False mu0(V')=0.044]  V=[4, 8, 12, 13, 16, 20, 24, 28, 32, 36, 40, 44, 48]
+  AP5+182   rho=3.03 M(V')=1/13(0.0769) need=0.0950 M(V)=1/13  [S=False R=False G=False mu0(V')=0.034]  V=[5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 182]
+  nAP2      rho=1.08 M(V')=2/15(0.1333) need=0.1374 M(V)=2/17  [S=False R=False G=False mu0(V')=0.064]  V=[1, 2, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/8(0.1250) need=0.1374 M(V)=2/17  [S=False R=False G=False mu0(V')=0.076]  V=[1, 2, 4, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=2/17(0.1176) need=0.1374 M(V)=2/19  [S=False R=False G=False mu0(V')=0.061]  V=[1, 2, 4, 6, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/9(0.1111) need=0.1374 M(V)=2/19  [S=False R=True G=False mu0(V')=0.073]  V=[1, 2, 4, 6, 8, 12, 14, 16, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=2/19(0.1053) need=0.1374 M(V)=2/23  [S=False R=True G=False mu0(V')=0.045]  V=[1, 2, 4, 6, 8, 10, 14, 16, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/8(0.1250) need=0.1374 M(V)=1/8  [S=False R=False G=False mu0(V')=0.069]  V=[1, 2, 4, 6, 8, 10, 12, 14, 18, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/9(0.1111) need=0.1374 M(V)=1/9  [S=False R=False G=False mu0(V')=0.066]  V=[2, 4, 6, 8, 9, 10, 12, 14, 16, 20, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/10(0.1000) need=0.1374 M(V)=1/10  [S=False R=False G=False mu0(V')=0.056]  V=[1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 22, 24, 26]
+  nAP2      rho=1.08 M(V')=1/11(0.0909) need=0.1374 M(V)=1/11  [S=False R=False G=False mu0(V')=0.067]  V=[2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20, 24, 26]
+  nAP2      rho=1.18 M(V')=1/12(0.0833) need=0.1319 M(V)=1/12  [S=False R=False G=False mu0(V')=0.043]  V=[1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26]
+  nAP3      rho=1.08 M(V')=2/15(0.1333) need=0.1374 M(V)=2/17  [S=False R=False G=False mu0(V')=0.065]  V=[3, 9, 12, 14, 15, 18, 21, 24, 27, 30, 33, 36, 39]
+  nAP3      rho=1.08 M(V')=1/8(0.1250) need=0.1374 M(V)=2/17  [S=False R=False G=False mu0(V')=0.069]  V=[3, 6, 12, 14, 15, 18, 21, 24, 27, 30, 33, 36, 39]
+  nAP3      rho=1.08 M(V')=2/17(0.1176) need=0.1374 M(V)=2/19  [S=False R=False G=False mu0(V')=0.061]  V=[3, 6, 9, 14, 15, 18, 21, 24, 27, 30, 33, 36, 39]
+  nAP3      rho=1.08 M(V')=1/9(0.1111) need=0.1374 M(V)=2/19  [S=False R=True G=False mu0(V')=0.069]  V=[3, 6, 9, 12, 14, 18, 21, 24, 27, 30, 33, 36, 39]
+  nAP3      rho=1.08 M(V')=2/19(0.1053) need=0.1374 M(V)=2/23  [S=False R=True G=False mu0(V')=0.044]  V=[3, 6, 9, 12, 14, 15, 21, 24, 27, 30, 33, 36, 39]
+
+READING: if (D) fails only on near-dilated-AP (M(V')~1/13) AND (S or R or G) still
+closes them, the compact residual = {descent OR sieve OR measure}, with the
+dilated-AP stratum handled by rigidity. If some family fails ALL of D,S,R,G -> genuine crux.

@@ -1,0 +1,9 @@
+==========================================================================================
+HUNT: compact (rho<13) primitive covering families with M < 1/13
+==========================================================================================
+tested 15982 compact primitive covering families
+MINIMUM M found: 1/13 = 0.076923
+  1/14=0.071429  1/13=0.076923  14/183=0.076503
+families with M < 1/13: 0
+  NONE. => CONJECTURE 'compact covering => M >= 1/13' SURVIVES the hunt.
+  The minimizer sits at M=1/13, V=[2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24]
