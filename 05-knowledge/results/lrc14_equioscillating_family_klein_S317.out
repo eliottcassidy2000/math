@@ -1,0 +1,31 @@
+THE EQUIOSCILLATING FAMILY  V_m = {1..12} u {13m}   (killer == -1 mod q, q = 13m+1)
+predicted M = m/(13m+1); covering iff 14 | 13m iff 14 | m  =>  killer = 182 m'
+
+   m | killer | predicted | exact M   | match | primitive | covering | note
+    1 |     13 | 1/14      | 1/14      | True  | True      | False    | 
+    2 |     26 | 2/27      | 2/27      | True  | True      | False    | 
+    3 |     39 | 3/40      | 3/40      | True  | True      | False    | 
+    4 |     52 | 4/53      | 4/53      | True  | True      | False    | 
+    5 |     65 | 5/66      | 5/66      | True  | True      | False    | 
+    6 |     78 | 6/79      | 6/79      | True  | True      | False    | 
+    7 |     91 | 7/92      | 7/92      | True  | True      | False    | 
+    8 |    104 | 8/105     | 8/105     | True  | True      | False    | 
+    9 |    117 | 9/118     | 9/118     | True  | True      | False    | 
+   10 |    130 | 10/131    | 10/131    | True  | True      | False    | 
+   11 |    143 | 11/144    | 11/144    | True  | True      | False    | 
+   12 |    156 | 12/157    | 12/157    | True  | True      | False    | 
+   13 |    169 | 13/170    | 13/170    | True  | True      | False    | <-- 169 = 13^2
+   14 |    182 | 14/183    | 14/183    | True  | True      | True     | <-- THE DEEP WELL (covering-min, THM-724)
+   15 |    195 | 15/196    | 15/196    | True  | True      | False    | 
+   16 |    208 | 16/209    | 16/209    | True  | True      | False    | 
+   28 |    364 | 28/365    | 28/365    | True  | True      | True     | <-- deep-well tower m'=2
+   42 |    546 | 42/547    | 42/547    | True  | True      | True     | 
+
+  M = m/(13m+1) is INCREASING in m, -> 1/13 from below. So the SMALLEST M in the family is at small m,
+  but covering forces 14|m, i.e. m>=14 -> the covering-minimum of the family is m=14: M = 14/183.
+  m=13 (killer 169) gives M = 13/170 = 0.076471 < 14/183 = 0.076503 -- LOWER than the covering-min,
+  but it is NON-COVERING (169 = 13^2 has no factor 14), so LRC(<=13) dispatches it. That is exactly
+  why the covering-min sits at 182 and not lower: 14|m is what lifts m past 13.
+
+  CONFIRMS THM-1014 from the other side: the deep-well tower {1..12,182m'} = the covering members
+  of this family, and its non-compactness (rho = 13m/12 >= 182/12) is forced by 14|m.
