@@ -1,0 +1,20 @@
+=== the 8 critical covering families (core {2..12}) ===
+  168,169   q=166   a=6    min||v t||=6/83     >=1/14: True
+  195,196   q=193   a=7    min||v t||=14/193   >=1/14: True
+  208,210   q=206   a=8    min||v t||=8/103    >=1/14: True
+  221,224   q=219   a=8    min||v t||=16/219   >=1/14: True
+  234,238   q=232   a=9    min||v t||=9/116    >=1/14: True
+  247,252   q=245   a=9    min||v t||=18/245   >=1/14: True
+  294,299   q=292   a=11   min||v t||=11/146   >=1/14: True
+  308,312   q=306   a=11   min||v t||=11/153   >=1/14: True
+  all 8: True
+
+=== wide sweep: 11-subsets of {1..12}, v1 in (13M, 3000], d in 1..5 ===
+  certified 600 / 600 ; failure modes: none
+
+=== the exceptional set: which (mu,M) and v1 fail (SIZE)? ===
+  (SIZE): q = v1-mu >= 14*M*mu/(13mu-M)
+  P min 2  max 12 : need q >= 24       i.e. v1 >= 26       ; smallest allowed v1 = 157 -> OK
+  P min 1  max 11 : need q >= 77       i.e. v1 >= 78       ; smallest allowed v1 = 144 -> OK
+  P min 1  max 12 : need q >= 168      i.e. v1 >= 169      ; smallest allowed v1 = 157 -> EXCEPTIONAL for v1 in [157, 169]
+DONE

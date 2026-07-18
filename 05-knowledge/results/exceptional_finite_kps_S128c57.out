@@ -1,0 +1,4 @@
+EXCEPTIONAL SET (1 and 12 in core, v1 in [157,168]):
+  families: 600 ; certified by an alternative modulus: 600 ; uncertified: 0
+  >>> EVERY exceptional family is certified by an alternative band modulus.
+DONE
