@@ -1,0 +1,4 @@
+valid non-AP cores tested: 2866
+  ALIGNED (13|D_W): empty window(stability kills)=96, nonempty window=0
+  NON-ALIGNED: M(V)=M(W) for all candidates (misalignment kills)=16, far COVERED (M(V)<M(W))=0
+  cores where a candidate actually lowered M below M(W): 0
