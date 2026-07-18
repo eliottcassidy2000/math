@@ -1,0 +1,5 @@
+=== primitive 12-sets in {1..K} with EXACT M = 1/13 (tight instances) ===
+ K=13: 1 primitive tight; [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+ K=14: 1 primitive tight; [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+ K=15: 1 primitive tight; [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+ K=16: 1 primitive tight; [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]

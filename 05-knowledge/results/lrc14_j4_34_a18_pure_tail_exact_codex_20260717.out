@@ -1,0 +1,22 @@
+THM-741 PURE (3,4) FLOOD TAIL: EXACT a=18 BRANCH CERTIFICATE
+============================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); fixed a=18; claim all integers 18<b<c<d
+root r=28 m=433607/2522520; after-a r=26 m=17747/120120; common b cutoff V2=187
+a=17 comparison r17=26 m17=758281/6126120; common=1564249/14294280; only17=30761/2144142; only18=45637/1191190; neither carrier contains the other
+b obligations=168; c nodes=10762; P2-preclosed c=2750; exact-m3=8012
+exact-m3 closed without d=6987; fallback=0; integral caps=0; candidate c nodes/sweeps=1025/14399
+all terminal sweeps positive; minimum swept=518788/9144135 at (3, 4, 8, 9, 10, 11, 12, 13, 14, 18, 21, 29, 32)
+terminal-ledger SHA256=44bd2e2dea062e5090243177f9c8871b0ce820767f972df7278cb5e56d670b08
+certificate-ledger SHA256=f25008da5e5009ae1d3ee15063c90086b599af689ba842e4119e9e03ef594f06
+independent full-union samples=165; sample-manifest SHA256=86046df7baa90ce91798f30df2a0bd8c6babac70d6e830651c65a97703a895a3
+proof partition: b>=V2 by fresh THM-735 J3; every P2 truth set linearly audited; large d by fresh fixed-E2 cap; every remaining d swept
+transport audit: G17 and G18 are incomparable while V2 and terminal work fall sharply; adjacent-branch horizons and workloads oscillate, so only the proof schema transports
+Tournament Analysis vertices=active b obligations; observable=(minimum swept clearance,-sweeps,-b); lex switch
+tournament vertices=56; score histogram 0..55:1; directed triangles=0; SCCs=56; Hamiltonian paths=1
+tournament path SHA256=2193dc2debc85b984e008f653e9e8cf802662534469724b95da8041177f48b67
+carrier audit: nested components, phase, certificate type, caps, and margins are retained; runners, isolated Kakeya needles, residues, wall events, and Fano flags are not
+Kakeya/Fano audit: D_18 changes the component stalk in both directions; chi7 still supplies only the common root-edge address (3,4)
+VERDICT: E_(3,4) union {18,b,c,d} is lonely for every 18<b<c<d; the other first-speed branches and global THM-741 remain open
+source_sha256=e9c0f84f6eb0d0ac81fb4f5241db9163843c3345228ad518cc1702ada460dc5b
+ALL EXACT a=18 BRANCH CHECKS PASSED

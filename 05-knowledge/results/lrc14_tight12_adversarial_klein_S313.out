@@ -1,0 +1,4 @@
+adversarial search for PRIMITIVE tight (M=1/13) 12-sets != {1..12}, tested ~256359:
+  found 0 non-AP primitive tight 12-sets
+
+  => AP {1..12} appears UNIQUE among primitive tight 12-sets (strong evidence for n=12 sporadic emptiness)
