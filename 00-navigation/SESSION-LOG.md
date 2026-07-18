@@ -86,6 +86,32 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S98 -- CAUCHY-SCHWARZ IS THE DENSITY ROUTE'S ONLY REAL LOSS: the resonance cancels in S but not in Q_s
+
+Owner: compute Phi_inf(frame), check sqrt(C)<Phi_inf, extend the fixed-frame scaling law.
+Phi_inf EXACT: Phi(E)=|good set at 1/14| (exact rational), far element equidistributes =>
+Phi_inf=(6/7)Phi(frame). Phi({1..6})=16/35, Phi_inf=96/245=0.392.
+
+THE CHECK: sqrt(C)<Phi_inf TRUE for {1..6} (0.370<0.392) but FALSE for the REAL {1..12}
+frame -- Phi_inf collapses with frame size (0.392,0.228,0.118,0.029 for k=6,8,10,12) while
+sqrt(C) barely moves (0.370,0.194,0.183,0.145): sqrt(C)=0.145 >> Phi_inf=0.029 at k=12. The
+CS proxy CANNOT close the real row.
+
+BUT THE TRUE ERROR VANISHES: Error(d)=Phi(E'u{d})-Phi_inf from exact good-set measures -> 0
+for far d ({1..12}: Error(420)=Error(840)=1.1e-4, ratio 0.004; tight ONLY at d=13 completing
+AP {1..13}, not a far element). Since |Error|=|S|/w (THM-727), Error->0 => |S|=o(w) while
+sqrt(Q_s)=Theta(w). So the CS step |S|<=sqrt(Q_s) is ASYMPTOTICALLY INFINITELY LOSSY: the
+resonance is phase-ALIGNED in Q_s (Theta(d^2)) but phase-CANCELLING in S. Squaring too early
+discards the cancellation.
+
+ORTHOGONALITY: leading S=w*A, A=sum_s sum_l (-1/2pi i l)nu_hat_s(l)ghat_s(l); Error->0 forces
+A=0 = fixed-frame comb nu_hat ORTHOGONAL to good-set weights ghat -- a fixed frame-local
+identity, replacing the false Q_s=o(r^2). REDIRECT: stop bounding Q_s (Theta(d^2), sqrt>Phi_inf,
+cannot close); bound S directly; row closes iff <nu_hat,ghat>=0. This RETIRES the S96/S97
+"resonance wall" as a Cauchy-Schwarz ARTIFACT. TASK2: Q_s=C_k*d^2 universal (C_6..12=0.137,
+0.038,0.033,0.021), C_k a bounded-frame invariant; deep well {1..12,182} obeys it. LRC(14) not closed.
+FILES: reflection cauchy-schwarz-is-the-density-routes-only-real-loss-...-boxeph-S98, script+2 outs, HYP-7525. boxeph; S98.
+
 ## boxeph-2026-07-18-S97 -- THE SELF-SIMILAR RESONANCE IS A SCALING LAW TO A FIXED FRAME BASE, NOT A GENUINE RECURSION (Q_s(d)=C*d^2, C frame-fixed)
 
 Owner: test whether the S96 self-similarity ("w plays a Lonely Runner against the mode

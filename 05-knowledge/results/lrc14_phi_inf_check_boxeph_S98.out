@@ -1,0 +1,34 @@
+==========================================================================
+TASK 1 -- Phi_inf(frame {1..6}) and the true two-scale Error
+==========================================================================
+theta = 1/14 ;  Phi(frame {1..6}) = 16/35 = 0.45714
+Phi_inf = (6/7)*Phi_frame = 96/245 = 0.39184
+
+scanned d = 7..420 :  min_d Phi(d) = 0.33469 at d=7  (still > 0 => good set never empty)
+max_d |Error(d)| = 0.05714 at d=7
+
+  d=   7         generic:  Phi(d)=0.33469  Error=-0.05714  |Error|/Phi_inf=0.146
+  d=  42      res(gcd>1):  Phi(d)=0.39592  Error=+0.00408  |Error|/Phi_inf=0.010
+  d=  60  RESONANT(60|d):  Phi(d)=0.39048  Error=-0.00136  |Error|/Phi_inf=0.003
+  d= 120  RESONANT(60|d):  Phi(d)=0.39048  Error=-0.00136  |Error|/Phi_inf=0.003
+  d= 180  RESONANT(60|d):  Phi(d)=0.39365  Error=+0.00181  |Error|/Phi_inf=0.005
+  d= 210      res(gcd>1):  Phi(d)=0.39252  Error=+0.00068  |Error|/Phi_inf=0.002
+  d= 420  RESONANT(60|d):  Phi(d)=0.39184  Error=+0.00000  |Error|/Phi_inf=0.000
+
+THE CHECK the owner asked:  sqrt(C) (CS proxy, S97) = 0.3694   vs   Phi_inf = 0.3918
+  sqrt(C) < Phi_inf ?  True   (proxy verdict) ;  BUT sqrt(C) omits 1/2pi and the g-hat weights -->
+  honest CS bound ~ (1/2pi)*sqrt(C)*||ghat|| = 0.0588*||ghat|| ; and the TRUE max|Error| above is the ground truth.
+  TRUE max|Error| = 0.05714  <  Phi_inf = 0.39184 ?  True
+
+==========================================================================
+TASK 2 -- fixed-frame scaling law on the deep-well frame {1..12}, far elt d
+==========================================================================
+frame {1..12}:  Q_s(d)/d^2 -> C12 (fixed) ?   [note: the deep-well far elt is 182]
+     d   Qs(d)/d^2
+   182     0.02170  <- deep-well far element
+   300     0.02152
+   500     0.02048
+   800     0.02045
+  1400     0.02105
+If C12 stabilises, the deep-well resonance obeys the SAME fixed-frame scaling
+law -- Q_s = C12*d^2 with C12 an invariant of the {1..12} frame's section comb.

@@ -1,0 +1,16 @@
+=== the REAL frames: Phi_inf, sqrt(C), and the deep well ===
+    frame Phi(frame)   Phi_inf      C_k  sqrt(C) sqrt(C)<Phi_inf
+     1..6    0.45714   0.39184  0.13675   0.3698           True
+     1..8    0.26582   0.22784  0.03755   0.1938           True
+    1..10    0.13798   0.11827  0.03333   0.1826          False
+    1..12    0.03410   0.02923  0.02110   0.1453          False
+
+deep well {1..12,182}: Phi at 1/14 = 0.023897  (M=14/183=0.07650>1/14, so >0)
+  Phi_inf({1..12}) = 0.029230 ;  Error(182) = -0.005332
+
+true two-scale error, frame {1..12}, sample d (expect ->0 for large d):
+  d=  13: Error=-0.029230  |Error|/Phi_inf=1.0000
+  d=  60: Error=+0.003681  |Error|/Phi_inf=0.1259
+  d= 182: Error=-0.005332  |Error|/Phi_inf=0.1824
+  d= 420: Error=+0.000110  |Error|/Phi_inf=0.0038
+  d= 840: Error=+0.000110  |Error|/Phi_inf=0.0038
