@@ -1,0 +1,38 @@
+scale-twenty-four AP-centred Hamming-six owner-deficit certificate
+divisor grammar 1,2,3,4,6,8,12,24; literal states 24
+supports 924; hereditary order words 108813; labelled order contexts 100543212
+state words/support 167165952; raw labelled states 154461339648
+numpy exact-batching version 2.2.6
+mask SHA256 490f80bf0f0b982e6451e01d04a229210af90c7572eae318c7bdf41a842b4e6f; order SHA256 3fced9d39f778694e85547f7660b3b99c0ee5e67b81c5da9957a30fc128fef24
+scalar contexts 66984 on 854 supports; multiplicity patterns 202; scalar-bank SHA256 5bf236e92aedb4f226f75cdc2b5218cf5acdd780c6c1fca34d770d513033993f
+scalar capacity feasible-owner histogram 0:544572 1:18881520 2:40784532 3:29283168 4:9613632 5:1368804 6:66984
+scalar-empty supports 70
+contexts-per-support histogram 12:24 14:24 22:24 26:24 31:96 32:30 46:96 52:96 53:24 54:96 55:24 63:96 74:24 102:12 132:24 142:24 152:12 173:24 185:6 224:24 226:24 374:24 801:2
+multiplication orbit-size histogram 2:1 6:2 12:70 (telemetry; no quotient)
+capacity vectors 18432
+minimum scalar-slack histogram 0:56286 1:7884 2:2682 3:132
+maximum scalar-slack histogram 0:24 1:4372 2:5872 3:14622 4:10266 5:12922 6:8694 7:5808 8:2436 9:816 10:480 11:540 12:60 16:72
+tight-owner/context histogram 0:10698 1:12504 2:20862 3:12036 4:6252 5:4608 6:24
+owner-local rows 401904; feasible rows 2304
+feasible-owner/context histogram 0:64962 1:1800 2:192 4:30
+maximum reachable sheet-union histogram 12:72 14:2136 15:1644 16:15876 17:24420 18:76296 19:94872 20:104592 21:53040 22:24948 23:1704 24:2304
+minimum owner maximum/context histogram 12:72 14:2016 15:1050 16:10668 17:13716 18:23932 19:12540 20:2906 21:84
+distinct owner max-union vectors 20302
+reachable banks 401904; total masks 101961528; distinct bank-size bins 674; maximum bank 7728
+owner-summary SHA256 4ee53bdb8f3967a45b1fef546135454a5e85419f0ab6382ad22ae91d674618c8
+owner-local all-six contexts 0
+tournament pair observable exact ordered (feasible,max-union,capacity) owner summaries; lexicographic switch and coordinate tie Hamiltonian path
+tournament fingerprints all 66984 transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1
+tournament tie-edge histogram 0:14112 1:28488 2:14496 3:5700 4:3408 6:504 7:276
+tournament edge-flip histogram 0:323 1:753 2:1857 3:3485 4:5881 5:8067 6:9954 7:10563 8:9264 9:7075 10:4776 11:2898 12:1390 13:543 14:139 15:16
+challenged vertices owner obligations preserve the terminal deficit through their feasibility/max-union vector and the scalar gate through capacities; the tournament loses thresholds and magnitudes, while provider, divisor, residue, isolated sheet, and wall-event vertices lose shared-unit incidence
+frontier verdict scalar-empty no; owner-local all-six empty yes; next legal common scale 25
+local D24 mask table at owner one (units 1,5,7,11,13,17,19,23; ratios 1..12 in hex)
+  e=1: f00 3c0 f0 3c f 800003 e00000 780000 1e0000 78000 1e000 7000
+  e=5: 100842 108402 8421 84021 84210 800210 842000 42108 420108 421080 201084 210004
+  e=7: 204810 204081 20481 120408 102048 802040 810200 90204 81024 409020 408102 40102
+  e=11: 2805 a014 28050 a0140 280500 a00400 801002 500a 14028 500a0 140280 500200
+  e=13: 500a00 140280 500a0 14028 500a 801002 a00400 280500 a0140 28050 a014 2005
+  e=17: 40902 408102 409020 81024 90204 810200 802040 102048 120408 20481 204081 204010
+  e=19: 210804 201084 421080 420108 42108 842000 800210 84210 84021 8421 108402 100042
+  e=23: 7800 1e000 78000 1e0000 780000 e00000 800003 f 3c f0 3c0 700
