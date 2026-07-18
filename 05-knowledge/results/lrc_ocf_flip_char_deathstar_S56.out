@@ -1,0 +1,15 @@
+Robust pinning: H for more M<1/13 families (expect 3551083):
+  ladder m=7: M=0.0769 H=3551083  ==PIN: True
+  ladder m=14: M=0.0769 H=3551083  ==PIN: True
+  dilate 11*: M=0.0765 H=3551083  ==PIN: True
+  dilate 7* m=2: M=0.0767 H=3551083  ==PIN: True
+
+Which single flips (i,0) of R_13 give H=PIN? (by chord distance d=(0-i)%13):
+  chord distance 1: H=3577045  (=PIN: False)
+  chord distance 2: H=3563239  (=PIN: False)
+  chord distance 3: H=3553327  (=PIN: False)
+  chord distance 4: H=3550831  (=PIN: False)
+  chord distance 5: H=3552463  (=PIN: False)
+  chord distance 6: H=3551083  (=PIN: True)
+
+=> M<1/13 tournament = R_13 with ONE flip of a distance-6 chord (the antipodal edge), H=3551083 PINNED.

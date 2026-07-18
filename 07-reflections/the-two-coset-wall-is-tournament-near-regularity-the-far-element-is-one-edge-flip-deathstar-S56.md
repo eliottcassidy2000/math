@@ -84,5 +84,40 @@ the wall: `M<1/13 ⟹ flip-defect ≤ 1` is LRC(14) in tournament clothing.
 open content is the balanced→equally-spaced rigidity — best attacked with the OCF/Rédei tools this
 project was built on, not with more covering geometry or raw-doubling Freiman.
 
+
+
+## 5. UPDATE — the OCF invariant IS pinned (conjecture CONFIRMED)
+
+Tested §4's conjecture directly: computed the OCF invariant `H` = Hamiltonian-path count (Rédei-odd)
+of the residue tournament via bitmask DP. **Result: `H = 3551083`, pinned EXACTLY across every M<1/13
+family** — deep well, ladders `m = 1,2,3,7,14`, and dilates `3·,5·,7·,11·` — all give the same
+`H = 3551083`, `c₃ = 90`.
+
+And it is **uniquely** `R₁₃`-plus-one-**antipodal** flip. Sweeping the single flips of the regular
+tournament by chord distance `d`:
+
+| `d` | 1 | 2 | 3 | 4 | 5 | **6** |
+|---|---|---|---|---|---|---|
+| `H(R₁₃+flip_d)` | 3577045 | 3563239 | 3553327 | 3550831 | 3552463 | **3551083** |
+
+Only the distance-6 (antipodal) chord flip matches the pinned value; every other distance gives a
+*distinct* `H`. So the OCF pins the residue tournament to a single isomorphism type:
+
+> **`M(V) < 1/13`  ⟹  residue tournament `T ≅ R₁₃` with one antipodal edge reversed, `H = 3551083`.**
+
+This is the sharp upgrade of §2: the *score sequence* `[5,6×11,7]` is shared by many tournaments (only
+"near-regular"), but the *OCF* `H` singles out the exact type — confirming that the **OCF/Rédei
+invariant, not the score sequence, is the rigidity that matches the additive structure**. The far
+element = the one antipodal flip = the second coset = the second Freiman dimension: four descriptions,
+one object.
+
+**Honest status (unchanged):** this is a pinned *necessary* invariant (verified), and it is a
+*consequence* of the AP+far structure — so it confirms and sharpens the reformulation but does not by
+itself prove the wall (`M<1/13 ⟹ H = 3551083` is still the inverse theorem, now stated as an
+OCF-value identity). The proof route it opens: the LRC↔OCF bridge (`H` = the danger-count partition
+function `Q(2)`, loneliness = `Q(0)`) — if `H` can be computed from the LRC data and forced to
+`3551083` by `M<1/13`, the wall closes on the OCF side. That is the concrete next OCF experiment.
+Script: `04-computation/lrc_ocf_pinning_deathstar_S56.py`, `lrc_ocf_flip_char_deathstar_S56.py`.
+
 → THM-1017, THM-1028, the Freiman-3k-4 reflection, THM-381 (lonely⟺source), the regular-tournament /
 OCF canon; owner cue: tournaments as non-independent binary dimensions forcing a ranking.
