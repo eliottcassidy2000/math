@@ -399,6 +399,26 @@ theorem anchoredZeroColorRootedFaceActivity_le_gcdBudget
       root root (ne_of_gt hvroot) (Finset.mem_insert_self root face)
       hvroot (hwindow face hface)
 
+/-- The faithful combined rooted-face budget.  Aligned activity is paid by
+the exact gcd ledger, while every colored face contributes at least one unit
+to the actual root-spoke mass.  This deliberately stops before the stronger
+`462/210` reuse payment, which still needs an owner-preserving colored charge
+map. -/
+theorem rootedFaceActivity_le_gcdBudget_add_activeSpokeMass
+    (v : Fin 13 → ℤ) (q : ℕ) (root : Fin 13)
+    (hq : 0 < q) (hvroot : 0 < v root)
+    (hwindow : ∀ face ∈ rootedSixFaces root,
+      (insert root face).gcd v * (q : ℤ) ≤ 14 * v root) :
+    rootedFaceActivity v q root ≤
+      (∑ face ∈ rootedSixFaces root,
+        (Nat.gcd ((insert root face).gcd v).natAbs q - 1)) +
+        activeRootedFaceSpokeMass v q root := by
+  rw [rootedFaceActivity_eq_anchored_add_colored]
+  exact Nat.add_le_add
+    (anchoredZeroColorRootedFaceActivity_le_gcdBudget
+      v q root hq hvroot hwindow)
+    (coloredRootSpokeFaceActivity_le_activeSpokeMass v q root)
+
 /-! ## Axiom audit -/
 
 #print axioms zeroColorRootedFaceActivity_eq_sum_stalkFibers
@@ -407,6 +427,7 @@ theorem anchoredZeroColorRootedFaceActivity_le_gcdBudget
 #print axioms anchoredZeroColorRootedFaceActivity_eq_zeroColor
 #print axioms zeroColorRootedFaceActivity_le_gcdBudget
 #print axioms anchoredZeroColorRootedFaceActivity_le_gcdBudget
+#print axioms rootedFaceActivity_le_gcdBudget_add_activeSpokeMass
 
 end LRCAlignedStalkAggregation
 end LonelyRunner
