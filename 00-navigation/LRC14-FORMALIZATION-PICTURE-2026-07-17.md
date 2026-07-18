@@ -243,14 +243,20 @@ must state which LRC predicate it preserves.
    uniform. SHARPENED (S44): the naive coprime law is REFUTED (Dirichlet-rate
    mirror-paired exceptions); the question is now adaptive-q — for each family,
    SOME q in the window with live > 792·deep (deep sets provably mirror-symmetric,
-   even at odd q — THM-953).
+   even at odd q — THM-953).  `LRCLiveCountLonely` now records the simpler
+   terminal fact explicitly: once `liveCount(v,q)>0` is known, no cap or census
+   premise remains—one live multiplier is already an inclusive rational
+   `Lonely 14` witness.  Producing that positivity is still the crux.
 4. **Selected-witness relation residues** — q22 remains an opposition-avoidance
-   selector; q244 and q333 remain explicit zero/small support-three frequencies.
-   The q4488 common-sign and matching-wall producers are closed, and its large
-   branch escapes.  The two q4-derived frequencies satisfy the exact affine law
-   `4(F_a-F_b)=a4b-a4a`; a q4 gap at least `60B` therefore closes.  The honest
-   q4488 residue is the close nonzero q4 pencil (equivalently the joint
-   zero/small two-frequency branch), not missing phase matching.
+   selector.  `LRCSelectedWitnessRelationRouter` now closes the exact-zero
+   q333, q244, and q4488 alternatives: each becomes a signed unit support-three
+   relation on the original speeds, and a factor-three dense ladder forces its
+   top position to `lastDensePair+1` or lower.  The q4488 common-sign and
+   matching-wall producers are closed, and its large branch escapes.  The two
+   q4-derived frequencies satisfy `4(F_a-F_b)=a4b-a4a`; a q4 gap at least `60B`
+   closes.  The honest residue is genuine small nonzero frequency plus the
+   missing common-phase/payment input—shifted wall phases cannot be silently
+   fed to the real relation lock.
 
 **S45 update — all three items moved this cycle:**
 
@@ -283,15 +289,17 @@ relevant events, bound the summed gcd budgets, pay the colored `462/210`
 transport factors, handle depths six and seven, and supply the adaptive-modulus
 live floor.
 
-**S67/S68 modulus-window audit.**  Connected all-bad zero-color seven-stalks
+**S67--S69 modulus-window and live-floor audit.**  Connected all-bad zero-color seven-stalks
 are forced into exact reduced-modulus resonance for every `q <= 98`; the
-published `q=99,d=98` example makes this cardinality cutoff sharp.  THM-979's
-new sampling proposal instead supplies a very large explicit grid once a
-continuous positive `B5` floor is known.  These advances are complementary,
-not composable by size alone: the supplied modulus is far outside the finite
-stalk cutoff, and the sampling inequality/T_s continuous floor still await a
-Lean bridge.  Large-q small-reduced-speed stalks and colored `462/210` payment
-therefore remain honest sockets.
+published `q=99,d=98` example makes this cardinality cutoff sharp.  THM-979 and
+THM-984 propose large explicit sampling moduli from continuous `B5` or safe-set
+floors, respectively.  These advances are complementary, not composable by
+size alone: for thirteen distinct positive magnitudes `E=2*sum|v_i|>=182`, so
+THM-984's `ceil(2E/mu0)` is at least `364`, already outside the stalk window.
+The general endpoint-counting inequality, exact ceiling/sign normalization,
+T_s assembly, and exhaustive trapped-core reduction are not yet in Lean.
+Large-q small-reduced-speed stalks and colored `462/210` payment remain honest
+sockets.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness

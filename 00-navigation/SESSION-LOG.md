@@ -24,6 +24,33 @@ Prompt (owner): work any remaining next steps.
 FILES: THM-987, HYP-7275 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
 
 ---
+## codex-2026-07-17-S69 -- direct liveness exit, exact-zero relation router, and capstone audit
+
+Pulled the full canonical two-circle classifier, the corrected q14 histogram,
+and THM-984 while the tau5 finite replay was being memory-sharded.  Added
+`LRCLiveCountLonely`: positive `liveCount` already contains a rational safe
+multiplier, so it now yields a literal `Lonely 14` time with foundational
+axioms and no coverage-cap/deep-race premise.
+
+Added `LRCSelectedWitnessRelationRouter`: the exact-zero q333, q244, and q4488
+branches become signed unit support-three relations on original speeds.  On a
+sorted factor-three ladder their top support is at most one step beyond the
+last dense pair.  Common-phase locking is kept explicit, and a q4488 example
+proves that genuine small nonzero frequency cannot be rounded to zero.  The
+parallel-class `K_{2,2}` records rectangle incidence but supplies neither this
+vanishing nor the missing B5 relation-mass budget.
+
+Audited THM-984 rather than treating its referee as closure.  Corrected the
+signed endpoint count to `E=2*sum|v_i|`, the direct consumer from
+`lonely_of_census` to `LRCLiveCountLonely`, and the false claim that the
+measure-zero canonical family has no live grid at any q: it has six at q14.
+The general sampling inequality, exact ceiling, T_s composition, exhaustive
+trapped-core partition, and positive measure on that core remain unformalized.
+Its modulus is at least 364 on thirteen distinct positive magnitudes, so it
+does not activate the sharp q98 seven-stalk fork.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.47) -- THM-984: THE LIVE-FLOOR BRIDGE + THE REDUCTION CAPSTONE (owner brief: finish the math, then all the formalization). (I) THE WEIGHT-1 SAMPLING BRIDGE (three lines): the good indicator has <= E(V) = 2 sum(v) breakpoints => liveCount(q) >= q(mu0 - E/q) => ANY positive-measure family fires the census live floor at the EXPLICIT modulus q0 = 2E/mu0. REFEREED where it matters most -- the two structured controls where the B5-route FAILS: geometric (B5 < 0, mu0 = 0.278): 163,790 live points at q0 = 589,934; deepwell (B5 < 0, mu0 = 0.024): 1,040 at 43,520; and the tight control (mu0 = 0): zero live at every q -- NO FALSE FLOOR. (II) THE CERTIFICATE PAIR COMPLETE: dissociated -> THM-979 B5-route (unconditional, q0 ~ 51,900 sum(v)); any mu0 > 0 -> the live-route (conditional only on a mu0-floor). Both feed lonely_of_census with every hypothesis computable from the speeds. (III) THE REDUCTION CAPSTONE -- the residual in FINAL FORM: **LRC(14) = mu0 > 0 on trapped cores** (covering + spread > 13 + compressed + distinct + max >= 23 + non-clusterable + chain-dense + NON-dissociated + not census-certified): the classical inf-L nucleus in its thinnest-ever cut, DECOUPLED from certificate mechanics, with the conversion guarantee (any mu0-floor from any route -- fee ledger, witnesses, covering rigidity -- becomes a kernel certificate through an explicit modulus). THE FORMALIZATION PHASE (owner's sequencing): the weight-1 sampling lemma is the next Lean piece (simpler than the B5 version: interval point-counting + norm_num arithmetic) -> wires to lonely_of_census; handed off with the shape noted. NAMESPACE SAGA: 980 -> 982 -> 984 (codex's scale-series minted 977-983 during my session; my ls-gate failed twice -- MISTAKE-note: `|| echo free` does NOT gate a following mv; a concurrent courtesy-renumber to 984 collided with my own (resolved, kept mine); the push-loop's grep gate false-fired on detached HEAD (fixed with a case-gate). j=4 continues.
 
 Prompt (owner): work to finish the LRC 14 math and once that is done, all the formalization.

@@ -1277,3 +1277,32 @@ continuous positive `B5` floor into a finite grid, but its proposed modulus is
 far larger than the sharp `q<=98` zero-stalk resonance range.  The two routes
 must be joined through large-modulus payment or a formal sampling/T_s theorem,
 not by silently applying the finite-window fork.
+
+## Landed addendum — live-count exit and exact-zero relation routing (codex-S69)
+
+`LRCLiveCountLonely` removes a needless consumer-side hypothesis stack.  By
+definition, `liveCount(v,q)>0` supplies `0<p<q` with every residue in the
+inclusive safe band.  The module derives `q>0` and nonzero speeds from that
+same witness, feeds `mreach_ge_of_pairsum_band`, and obtains
+`∃ t, Lonely 14 v t`.  No `CoverageCapped` or depth-six comparison is required
+after liveness is known.  The unresolved theorem is therefore the live floor,
+not its conversion to a witness.
+
+`LRCSelectedWitnessRelationRouter` closes the exact-zero residues of all three
+selected support-three circles.  The q333, q244, and either q4 side of q4488
+yield signed unit relations on the original selected speeds.  After sorting
+absolute speeds, a factor-three dense ladder forces the top relation position
+to at most `lastDensePair+1`, strengthening the generic relation localization.
+The module also records two guardrails: real witness locking requires a single
+common phase, while the matching-wall phases are shifted; and an explicit
+q4488 residue packet has one genuinely nonzero small frequency.  Thus exact
+zero is routed, but small nonzero frequency and signed B5 payment remain.
+
+THM-984 was audited at this integration point.  Its intended endpoint bound
+must use `E=2*sum|v_i|`; its exact ceiling and general component discrepancy
+are not yet Lean.  The original statement that the measure-zero family
+`(1,...,13)` has zero live points at every modulus is false—its q14 histogram
+has six live multipliers and `B5=5`.  The two positive-measure computations
+remain useful evidence, not a formal trapped-core closure.  Moreover thirteen
+distinct positive magnitudes force `E>=182`, so `ceil(2E/mu0)>=364`; this route
+cannot be inserted into the sharp `q<=98` stalk fork by modulus size alone.
