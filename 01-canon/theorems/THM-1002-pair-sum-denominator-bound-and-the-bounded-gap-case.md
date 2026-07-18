@@ -74,6 +74,45 @@ condition is satisfiable at every in-gap denominator and rules out none of them.
 **Therefore the obstruction to the general bound is integer realizability, not residue arithmetic** — which
 is precisely the hard LRC content of CRUX (C).
 
+## 4b. The gap parametrization, and why no finite check can settle CRUX (C) (klein-S313c)
+
+Write `q = 13·val − s`. Then
+
+```text
+M = val/(13val − s) ≥ 2/25  ⟺  25val ≥ 26val − 2s  ⟺  s ≥ val/2,
+```
+
+so **the gap is exactly `{ val/(13·val − s) : 1 ≤ s < val/2 }`** — the `s = 1,2,…` families
+`(3,38),(4,51),(5,64) | (5,63),(6,76) | …`, matching the enumeration in §2.
+
+Consequence: for `s` fixed and `val → ∞`, `M = val/(13val−s) → 1/13⁺`, so **the gap contains admissible
+`(val,q)` with `val` arbitrarily large**. Since `q = 13val − s ≤ 2·max(A)` bounds `val ≤ (2·max(A)+1)/13`,
+the in-gap denominator list is finite **iff `max(A)` is bounded**. So CRUX (C) is *not* reducible to a
+finite denominator check in general — only the bounded-diameter case is finitely decidable.
+
+## 4c. Ruling out `(3,38)`: THREE routes tried, ALL FAILED (documented dead ends)
+
+Owner directive: *rule out `(3,38)` by integer realizability*. **Not achieved.** Recording exactly how
+each route dies, so no one repeats them:
+
+1. **Residue covering — rules out nothing.** `M ≤ val/q` forces `B_c = {k : |ck|_q ≤ val}` to cover
+   `Z/q` with `≤12` sets. Greedy covers of size **7–10 ≤ 12** exist at *every* admissible `(val,q)`
+   with `q ≤ 149`. The condition is satisfiable throughout. (§4)
+2. **Monotonicity from `Allowed(a)` — wrong direction.** With `Allowed(a) = {v ≤ B : |va|_q ≥ val}`,
+   any candidate satisfies `A ⊆ Allowed(a)`, and `A ⊆ S ⟹ M(A) ≥ M(S)`. Computed
+   `M(Allowed(a)) = 3/38` *exactly* (e.g. `a=9, B=25`, 22 elements). That yields `M(A) ≥ 3/38` — a
+   **lower** bound, while detecting a gap violation needs an **upper** bound `M < 2/25`. Useless here.
+3. **Targeted search — no violation, but no proof.** Random 12-subsets of `Allowed(a)` and, better,
+   **greedy descent** (start at `Allowed(a)`, which sits at `3/38`, remove the element keeping `M`
+   minimal until 12 remain) both bottom out at `min M = 1/11 = 0.0909`, far above `2/25 = 0.08`.
+   Removing 10 of 22 elements forces `M` from `3/38` clean past `2/25` every time.
+
+**Reading.** The jump `3/38 → ≥1/11` on descending to 12 elements says a gap value would need an
+*extremely* rigid, AP-like configuration. That points at the correct route: an **inverse/rigidity
+theorem** (`M` near `1/13` ⟹ `A` near the AP), *not* denominator-by-denominator elimination — which
+§4b shows cannot terminate anyway. This is the same rigidity core as HYP-6820 / Tao's optimistic
+conjecture.
+
 ## 5. Erratum (recorded because it was caught by testing)
 
 An earlier attempt claimed the crossing forces speeds `≡ ±1 (mod q)`, which would have given

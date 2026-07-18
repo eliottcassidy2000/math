@@ -1,0 +1,10 @@
+RULING OUT in-gap denominators by INTEGER REALIZABILITY (monotonicity argument).
+If M(A)=val/q then witness t=a/q (gcd(a,q)=1) with min_v|va|_q=val, so A subset Allowed(a).
+Since A subset S => M(A) >= M(S): if M(Allowed(a)) >= 2/25 then EVERY 12-subset is >= 2/25.
+
+B=25  admissible (val,q): [(3, 38)]                     ->  4 (val,q,a) need deeper check; e.g. [(3, 38, 9, 22, '3/38'), (3, 38, 11, 22, '3/38')]
+B=30  admissible (val,q): [(3, 38), (4, 51)]            ->  14 (val,q,a) need deeper check; e.g. [(3, 38, 9, 27, '3/38'), (3, 38, 11, 27, '3/38')]
+B=35  admissible (val,q): [(3, 38), (4, 51), (5, 63),   ->  34 (val,q,a) need deeper check; e.g. [(3, 38, 1, 33, '3/38'), (3, 38, 5, 31, '3/38')]
+B=40  admissible (val,q): [(3, 38), (4, 51), (5, 63),   ->  62 (val,q,a) need deeper check; e.g. [(3, 38, 1, 33, '3/38'), (3, 38, 3, 35, '3/38')]
+B=45  admissible (val,q): [(3, 38), (4, 51), (5, 63),   ->  102 (val,q,a) need deeper check; e.g. [(3, 38, 1, 38, '3/38'), (3, 38, 3, 40, '3/38')]
+B=50  admissible (val,q): [(3, 38), (4, 51), (5, 63),   ->  154 (val,q,a) need deeper check; e.g. [(3, 38, 1, 43, '3/38'), (3, 38, 3, 44, '3/38')]
