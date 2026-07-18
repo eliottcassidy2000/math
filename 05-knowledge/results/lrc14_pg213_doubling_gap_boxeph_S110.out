@@ -1,0 +1,15 @@
+PG(2,13): points = 183 = 183 = deep-well modulus; line size = 14 = 14 = LRC(14)
+=> LRC(14) deep well and the Singer (183,14,1) difference set share parameters (183,14).
+
+the additive spectrum at (183,14): |C-C|, energy, and M for cores AP -> Sidon (+ far element):
+core                    |C-C|   E(C)              M  M<1/13?
+AP {1..12}                 23   1156     14/183=0.0765     True
+near-AP {1..11,13}         25   1116       1/12=0.0833    False
+geometric-ish             113    316       5/29=0.1724    False
+Sidon-like                127    288       7/33=0.2121    False
+powers 2^k                133    276        1/3=0.3333    False
+
+The AP is the STRICT, ISOLATED minimizer: M(AP)=14/183=0.0765 (< 1/13=0.0769),
+every non-AP jumps to >= ~1/12=0.0833. The gap [14/183, 1/12) contains 1/13 strictly.
+=> INV = 'non-AP core => M >= 1/12' = the deep-well isolation by an additive-doubling gap
+   = the tournament metagraph's transitive-class isolation, transported to the M-metric.

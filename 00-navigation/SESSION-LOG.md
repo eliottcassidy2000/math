@@ -630,6 +630,21 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S110 -- LRC(14) LIVES AT PG(2,13) PARAMETERS; INV IS A DOUBLING-GAP = the metagraph transitive-class isolation
+
+Owner: work creatively on INV, think tournaments/metagraph. Creative connection + new route (INV not proved).
+PG(2,13) COINCIDENCE: deep-well modulus 183 = 13^2+13+1 = |PG(2,13)|, 14 = q+1 = line size = Phi_6(14).
+LRC(14) crux sits at projective-plane-order-13 / Singer (183,14,1)-difference-set parameters.
+TWO ADDITIVE EXTREMES at (183,14): AP 14*{1..12} (deep well, |C-C|=23, max energy, M=14/183<1/13 TIGHT) vs
+Singer difference set (each-diff-once, min energy, M large LOOSE) = the metagraph TRANSITIVE pole (AP =
+monotone seq = transitive tournament, H small) and DOUBLY-REGULAR pole. M is the order parameter; the AP is
+the STRICT ISOLATED minimizer (14/183; 100/100 random don't beat it). SPECTRAL GAP [14/183, 1/12) with 1/13
+strictly inside => M<1/13 <=> AP is an ISOLATION (gap) = deep-well isolation via additive doubling. This is
+the S104 missing bridge: M reads additive structure through GLOBAL maximality, as a gap at the AP end.
+NEW ROUTE: INV = doubling-gap / STABILITY of THM-724 ('non-AP => M>=1/12>1/13'); extremum KNOWN, stability
+perturbs around the optimum => more tractable, = transitive-class isolation transported to the M-metric. Crux open.
+FILES: reflection lrc14-lives-at-PG-2-13-...-boxeph-S110, script+out lrc14_pg213_doubling_gap_boxeph_S110, HYP-7635. boxeph; S110.
+
 ## boxeph-2026-07-18-S109 -- THE OFFICIAL FINSET TARGET OF LRC(14) NOW REDUCES TO INV IN THE KERNEL
 
 Owner: connect LRC14_of_INV's Lonely-form to the ledger's Finset target. Done, kernel-pure, built.
