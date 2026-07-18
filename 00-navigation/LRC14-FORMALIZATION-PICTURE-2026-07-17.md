@@ -391,23 +391,41 @@ owners.  An independent C++ referee reproduces the complete scalar bank and
   checks 18,874,368 literal residual words against both bounds.  Scale `c=31`
 is prime-excluded.  THM-1096 closes `c=32` by a `Z/8` thick-fibre
 relaxation: independent Python and C++ certificates agree on the 3,450 scalar
-survivors and live-owner histogram `0:2802,1:456,2:192`.  The next untreated
-composite common scale is `c=33`.
+survivors and live-owner histogram `0:2802,1:456,2:192`.  THM-1124 closes
+`c=33` by a `Z/3` anchor relaxation over the complete squarefree grammar, with
+independent Python and C++ agreement.  The next untreated composite common
+scale is `c=34` (THM-1125 is a reservation, not a closure).
 The clustered large-speed branch has also sharpened independently of this
 ramified-scale ledger.  THM-1094 proves the uniform two-comb component theorem
 and THM-1097 proves the uniform three-comb theorem, so clustered `r=3,4` are
 closed at all scales.  `LRCSharpCombArithmetic.lean` kernel-checks their ratio
-tails, final-killer inequality, exceptional rectangle, and the toothpick phase
-transition without `sorry` or `native_decide`; the interval discrepancy,
+tails, final-killer inequality, exceptional rectangle, toothpick phase
+transition, THM-1126 gap-energy arithmetic, and THM-1128's thirteen-grid scale
+inequalities without `sorry` or `native_decide`; the interval discrepancy,
 66/220-core atlases, and large exact banks are still external certificate
 producers.  The phase quotient fails at four removals, and THM-1101 now has an
 exact covering tuple above 235 missed by both sides of its former split.
-Thus uniform clustered `r=5` remains open and specifically asks for metric
-overlap or endpoint-owner self-similarity.
+THM-1123 nevertheless proves the sharp component target on a complete
+45,238,050-row bounded bank.  THM-1126 replaces scalar mass by the truncated
+autocovariogram/gap energy; THM-1127 proves the `(0,4,5,9)` fixed ray at every
+scale; and THM-1128 proves every offset shape in the uniform Kakeya cone
+`k1>=max(1272,26(k4-k1+1))`.  Thus uniform clustered `r=5` remains open only after
+these bounded, fixed-ray, and near-diagonal pieces, and specifically asks for
+the intermediate-ratio endpoint-owner geometry.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
+
+The shortest formal capstone is now exact about its hypothesis:
+`LRCMSplit.lean` and `LRCFinsetBridge.lean` reduce the official target to
+LRC(<=13) plus `INVcov`, where `INVcov` includes `Covering(2..14)` as well as
+no `Lonely13`.  The no-`Lonely14` branch supplies that covering premise by the
+divisor sieve.  The earlier covering-free S108/S109 inverse statement is false
+on MISTAKE-161's exact covers-`2..13`/misses-14 row; kernel-valid implication
+from that overstrong premise was therefore not a faithful statement of the
+mathematical frontier.  `LRC14DispatchAssembly.lean` gives the complementary
+generic easy/compact split with every producer hypothesis named.
 
 No theorem in this picture proves LRC(14) without the named suppliers above.

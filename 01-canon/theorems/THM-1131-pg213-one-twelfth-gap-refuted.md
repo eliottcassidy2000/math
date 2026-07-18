@@ -84,11 +84,11 @@ families.  It also did not construct a map preserving `Lonely 13`, dominance,
 or the `Covering` predicate between runner families, projective-plane objects,
 Singer difference sets, and tournament classes.
 
-The kernel capstone asks only for
+The corrected kernel capstone asks only for
 
 ```text
-not exists t, Lonely 13 v t
-  => some speed is at least 13 times every other speed.       (INV)
+Covering(2..14) v and not exists t, Lonely 13 v t
+  => some speed is at least 13 times every other speed.       (INVcov)
 ```
 
 That statement is not equivalent to the false stronger target
@@ -103,11 +103,12 @@ Ordering the deep well, the compressed near-dilate, and `W` by their exact
 `0,1,2`, no directed cycle, singleton SCCs, and one Hamiltonian path.  This
 preserves only scalar `M` order.  It destroys divisor carriers, exact residues,
 maximizer times, and the dominance conclusion, so it cannot transport
-transitive-class isolation to INV.  Divisor obligations or exact maximizer
+transitive-class isolation to `INVcov`.  Divisor obligations or exact maximizer
 cells are more faithful candidate vertices than runners or analogy classes.
 
-The correction does not refute INV or LRC(14).  It removes one false proposed
-strengthening and leaves the genuine `M<1/13` dominance problem open.
+The correction does not refute `INVcov` or LRC(14).  It removes one false
+proposed strengthening and leaves the genuine covering-`M<1/13` dominance
+problem open.  The covering qualifier is essential (MISTAKE-166).
 
 The dependency-free referee uses exact `Fraction` arithmetic and explicit
 optimization-stable checks.  Normal and `python -O` runs match the frozen

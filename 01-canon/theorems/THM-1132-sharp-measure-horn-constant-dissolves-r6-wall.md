@@ -1,5 +1,5 @@
 ---
-id: THM-1123
+id: THM-1132
 title: The r=6 "enumeration wall" is an artifact of a conservative horn constant — the SHARP component threshold 1/(7L) gives R_sharp ≈ 0.80 < 1, so the plain measure horn certifies the r=6 covering-killer stratum with no enumeration, no moment LP, and no weighted atlas
 status: VERIFIED-on-broad-adversarial-search (max R_sharp = 0.8011, 792 cores × consecutive/large-scale/clustered/spread configs). The SHARP threshold 1/(7L) is PROVED sharp and sound (exhibits a real witness). The UNIFORM bound "max R_sharp < 1 over ALL configs" is OPEN — the same uniformity gap codex flagged for THM-1121, but now with a +25% margin (0.80 vs 1.0) instead of the conservative bound's −86% deficit (1.86 vs 1.0).
 source: death-star-2026-07-18-S58
@@ -15,7 +15,7 @@ script: 04-computation/r6_sharp_horn_search_deathstar_S58.py
 output: 05-knowledge/results/r6_sharp_horn_search_deathstar_S58.out
 ---
 
-# THM-1123 — the sharp measure-horn constant 1/(7L) dissolves the r=6 wall
+# THM-1132 — the sharp measure-horn constant 1/(7L) dissolves the r=6 wall
 
 ## Setup (kind-pasteur's covering-killer stratum)
 

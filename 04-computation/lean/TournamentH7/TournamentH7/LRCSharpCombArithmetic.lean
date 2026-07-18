@@ -9,8 +9,10 @@
   a component-count bound, and the external finite core atlas into the
   two-comb and three-comb tails.  It also checks the arithmetic core of
   THM-1126's half-coverage/overlap reduction for the open four-comb case.  It
+  checks the exact scale inequalities in THM-1128's thirteen-grid Kakeya
+  rectangle gate as well.  It
   deliberately does not internalize the 66/220/495-core rational atlases or
-  the interval-measure and component-topology lemmas.
+  the interval-measure, torus-rectangle, and component-topology lemmas.
 
   Kernel-pure: no `sorry`, no `native_decide`, and no new axioms.
 -/
@@ -145,6 +147,40 @@ theorem gapSquareEnergy_forces_long {ι : Type*} [Fintype ι]
   rw [← Finset.mul_sum] at hsum
   exact (not_lt_of_ge hsum) henergy
 
+/-- Discrete heart of THM-1128.  Four cyclic gaps on the thirteen-grid,
+including zero gaps from repeated residues, cannot all have size at most
+three. -/
+theorem fourGridGaps_thirteen {g₀ g₁ g₂ g₃ : ℕ}
+    (hsum : g₀ + g₁ + g₂ + g₃ = 13) :
+    4 ≤ g₀ ∨ 4 ≤ g₁ ∨ 4 ≤ g₂ ∨ 4 ≤ g₃ := by
+  omega
+
+/-- Arithmetic closure for THM-1128's optimized thirteen-grid Kakeya
+rectangle.  `M ≥ 24` protects the universal core window, `B ≥ 53M` pays one
+full winding period, and `B ≤ k4` makes the resulting interval strictly
+longer than the finest killer tooth. -/
+theorem thirteenGrid_kakeya_scale {B k4 M : ℝ}
+    (hB : 0 < B) (hBk : B ≤ k4) (hM24 : 24 ≤ M)
+    (hscale : 53 * M ≤ B) :
+    12 * (53 / (4914 * M)) ≤ (1 : ℝ) / 182 ∧
+      (2809 : ℝ) / 2457 ≤ 53 * B / (2457 * M) ∧
+      1 / (7 * k4) < 352 / (2457 * B) := by
+  have hM : 0 < M := lt_of_lt_of_le (by norm_num) hM24
+  have hk4 : 0 < k4 := lt_of_lt_of_le hB hBk
+  constructor
+  · calc
+      12 * (53 / (4914 * M)) = (636 : ℝ) / (4914 * M) := by ring
+      _ ≤ 1 / 182 := by
+        apply (div_le_div_iff₀ (mul_pos (by norm_num) hM) (by norm_num)).2
+        nlinarith
+  constructor
+  · apply (div_le_div_iff₀ (by norm_num : (0 : ℝ) < 2457)
+      (mul_pos (by norm_num) hM)).2
+    nlinarith
+  · apply (div_lt_div_iff₀ (mul_pos (by norm_num) hk4)
+      (mul_pos (by norm_num) hB)).2
+    nlinarith
+
 #print axioms twoComb_ratio_tail
 #print axioms threeComb_ratio_tail
 #print axioms twoComb_exceptional_rectangle
@@ -154,6 +190,8 @@ theorem gapSquareEnergy_forces_long {ι : Type*} [Fintype ι]
 #print axioms halfCoverage_of_short_components_multi
 #print axioms overlapTree_forces_below_half
 #print axioms gapSquareEnergy_forces_long
+#print axioms fourGridGaps_thirteen
+#print axioms thirteenGrid_kakeya_scale
 
 end SharpCombArithmetic
 end LonelyRunner

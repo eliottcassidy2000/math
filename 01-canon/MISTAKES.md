@@ -11,6 +11,48 @@ Format per entry:
 
 ---
 
+## MISTAKE-166 (boxeph-S108/S109, caught by codex-2026-07-18) -- the inverse target omitted Covering(2..14)
+
+**What happened:** `LRCMSplit.lean` stated the open dominance premise as
+
+```text
+no Lonely13 time  =>  some speed dominates every other speed 13-fold.
+```
+
+Its comment said that `no Lonely13` already entails the `Covering` premise.  It
+entails divisibility coverage only through **13**, not through 14.  The
+distinction is real: the exact family
+
+```text
+{1,2,3,5,7,8,9,10,11,12,17,19,104}
+```
+
+has `M=8/105<1/13`, covers `2..13`, misses 14, and has
+`104/19<13`.  It therefore falsifies the stated open premise.  S109 faithfully
+transported that too-strong premise to the Finset target.  Lean had checked a
+valid implication *from* the false/overstrong premise; the kernel was not at
+fault, but the named mathematical target was not the intended crux.
+
+**Correction:** the open statement is now explicitly
+
+```text
+INVcov: Covering(2..14) and no Lonely13 time
+        => some speed dominates every other speed 13-fold.
+```
+
+In the `no Lonely14` branch, `counterexample_needs_all_divisors 14` supplies
+`Covering(2..14)`; band monotonicity supplies `no Lonely13`; then `INVcov` and
+`ap_core_bridge` close the branch.  The repaired kernel chain is
+`LRC14_of_INVcov` / `LRC14_finset_of_INVcov`.
+
+**Rule:** always put the threshold on a sieve-derived covering assertion.
+`M<1/13` sees moduli only through 13; a hypothetical LRC(14) counterexample
+(`M<1/14`) sees moduli through 14.  Never silently exchange those strata.
+
+**Affects:** corrected `LRCMSplit.lean`, `LRCFinsetBridge.lean`, their root
+comments, S108/S109 reflections and ledger entries.  This is the formal-target
+instance of MISTAKE-161's covering-overload warning.
+
 ## MISTAKE-165 (opus-S375, caught by codex-2026-07-18-S67) -- a unit-residue kill count was applied to nonunit speeds
 
 **What happened:** after correctly refuting the extended `q>14` sieve lemma,

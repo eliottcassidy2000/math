@@ -1,0 +1,58 @@
+THM-1129 bounded-offset polygon floor exact referee
+arithmetic=fractions.Fraction only
+cores=495
+offset_cap=30
+offset_shapes=4060
+core_shape_pairs=2009700
+eligible_order_cells=107434406
+vertical_floor=2/5
+floor_attainment_count=32
+floor_shape_histogram=[((0, 1, 8, 10), 1), ((0, 2, 3, 7), 15), ((0, 2, 9, 10), 1), ((0, 4, 5, 7), 15)]
+floor_row P=(1, 5, 7, 8, 9, 10, 11, 12) A=(0, 1, 8, 10) M=2/5
+floor_row P=(1, 2, 3, 5, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 2, 4, 5, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 2, 5, 6, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 2, 5, 7, 8, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 2, 5, 7, 9, 10, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 3, 4, 5, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 3, 5, 6, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 3, 5, 7, 8, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 3, 5, 7, 9, 10, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 4, 5, 6, 7, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 4, 5, 7, 8, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 4, 5, 7, 9, 10, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 5, 6, 7, 8, 9, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 5, 6, 7, 9, 10, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 5, 7, 8, 9, 10, 11, 12) A=(0, 2, 3, 7) M=2/5
+floor_row P=(1, 5, 7, 8, 9, 10, 11, 12) A=(0, 2, 9, 10) M=2/5
+floor_row P=(1, 2, 3, 5, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 2, 4, 5, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 2, 5, 6, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 2, 5, 7, 8, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 2, 5, 7, 9, 10, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 3, 4, 5, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 3, 5, 6, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 3, 5, 7, 8, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 3, 5, 7, 9, 10, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 4, 5, 6, 7, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 4, 5, 7, 8, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 4, 5, 7, 9, 10, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 5, 6, 7, 8, 9, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 5, 6, 7, 9, 10, 11, 12) A=(0, 4, 5, 7) M=2/5
+floor_row P=(1, 5, 7, 8, 9, 10, 11, 12) A=(0, 4, 5, 7) M=2/5
+fixed_vertical_arc=1/5
+uniform_rectangle_time=1/728
+rectangle_worst_count=73
+canonical_rectangle_witness=((1, 3, 4, 5, 8, 9, 11, 12), (0, 3, 8, 13), (Fraction(3, 13), Fraction(13, 56), 'right', Fraction(3, 13), Fraction(50, 91), Fraction(1, 728)))
+uniform_tail_K=832
+pairs_tail_closed_at_legal_start=1802872
+per_pair_raw_finite_rows=6040056
+rows_already_in_THM1123_bottom_bank=2500120
+remaining_bounded_offset_finite_rows=3539936
+candidate_lemma=core endpoints plus center collisions; convex endpoint maximum
+tournament_vertices=labelled candidate boundaries
+tournament_fingerprint=transitive; directed_cycles=0; SCCs=singletons; sorted_HP=1
+destroyed_by_order_only=gaps|owners|slopes|safe_side|rectangle_width
+challenged_vertices=runners|combs|core_cells|boundaries|wall_events|residues|proof_obligations
+scope_warning=offset span <=30 only; arbitrary-shape cone is THM-1128
+certificate=PASS

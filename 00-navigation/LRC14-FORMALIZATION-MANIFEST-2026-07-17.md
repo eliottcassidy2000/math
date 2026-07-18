@@ -1063,7 +1063,11 @@ prime-excluded.  THM-1096 independently closes `c=32` with a `Z/8`
 thick-fibre relaxation.  Its Python primary and separately structured C++
 referee agree on all 11,347,644 scalar contexts, 3,450 survivors, 1,725
 normalized owner keys, and the terminal live-owner histogram
-`0:2802,1:456,2:192`.  The next untreated composite scale is `c=33`.
+`0:2802,1:456,2:192`.  THM-1124 now closes `c=33`: the complete squarefree
+grammar has 3,249 words, and a sound `Z/3` anchor relaxation makes every
+remaining owner obstruction terminal; independent Python and literal-CRT C++
+certificates agree.  The next untreated composite scale is `c=34`, reserved by
+THM-1125 but not closed.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1082,7 +1086,9 @@ THM-1072/1090/1096.  It deliberately does not internalize the large finite banks
 clustered-stratum breakthroughs THM-1094 and THM-1097.  It kernel-checks the
 two-comb ratio tail, the three-comb ratio tail, the exceptional two-comb
 rectangle, the sharp final-comb inequality, and the exact toothpick phase
-transition `1<(7-m)/m iff m<7/2`.  The module is root-wired and contains no
+transition `1<(7-m)/m iff m<7/2`, THM-1126's
+half-coverage/overlap/gap-energy arithmetic, and THM-1128's thirteen-grid
+Kakeya scale inequalities.  The module is root-wired and contains no
 `sorry`, `native_decide`, or new axioms.  Its deliberate boundary is equally
 important: the sharp periodic interval-discrepancy lemma, the exact 66/220-core
 rational atlases, and the 9,246,070-pair / 39,778,595-triple banks remain
@@ -1090,7 +1096,32 @@ external finite-exact inputs.  Formalizing those producers is the next
 kernel-facing task; the uniform mathematical consequences already close the
 `r=3` and `r=4` clustered strata, not global LRC(14).  An exact all-high row in
 THM-1101 shows that `r=5` needs a new overlap/endpoint-owner theorem rather
-than another instantiation of the same arithmetic tail.
+than another instantiation of the same arithmetic tail.  THM-1123 verifies the
+sharp target on all 45,238,050 rows of the first-forty bounded bank, THM-1126
+isolates truncated autocovariogram/gap energy as a faithful dispersion
+observable, THM-1127 proves one fixed-offset ray at all scales, and THM-1128
+proves the first arbitrary-offset cone: centering the winding slope at the
+integer midpoint gives the exact gate `B>=53 max(A,24)`, and in particular
+`k1>=max(1272,26(Delta+1))` suffices.  A universal rectangle above `t=1/13`
+then contains an interval longer than `1/(7k4)`.  The intermediate-ratio
+four-comb region remains open.
+
+`LRCMSplit.lean` and `LRCFinsetBridge.lean` now state the direct kernel
+reduction with its essential divisor hypothesis exposed.  The genuine open
+supplier is
+
+```text
+INVcov: Covering(2..14) and no Lonely13 imply 13-fold dominance.
+```
+
+In the no-`Lonely14` branch, the sieve derives `Covering(2..14)` and band
+monotonicity derives no `Lonely13`; `ap_core_bridge` then consumes `INVcov`.
+The earlier S108/S109 formulation omitted `Covering(2..14)` and was false as a
+standalone inverse statement: MISTAKE-161's exact row covers only `2..13`, has
+no `Lonely13`, and has ratio below 13.  `LRC14DispatchAssembly.lean` remains a
+valid generic easy/compact composition, while the corrected M-split is the
+short canonical direct reduction.  All three modules are conditional
+assemblies; none proves `INVcov`.
 
 `LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
 that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used
@@ -1105,7 +1136,7 @@ membership and a complete-fibre-union presentation.  Concrete
 raw-bank completeness and the finite
 scale tables remain external certificates.
 
-The remaining composite scales beginning at 33, the finite ramified H5 bank, and non-AP,
+The remaining composite scales beginning at 34, the finite ramified H5 bank, and non-AP,
 deep, and higher-sheet branches remain parts of the global `n=12` problem.
 None of these facewise results proves uniform sporadic emptiness.
 

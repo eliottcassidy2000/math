@@ -1,15 +1,17 @@
 /-
-  TournamentH7.LRCFinsetBridge — connect `LRC14_of_INV`'s Lonely-form to the
+  TournamentH7.LRCFinsetBridge — connect `LRC14_of_INVcov`'s Lonely-form to the
   `Finset ℕ` / `t ∈ [0,1]` target `LRC14.LRC14` of `LRC14Ledger`.
-  boxeph-2026-07-18-S109.
+  boxeph-2026-07-18-S109; corrected codex-2026-07-18.
 
-  `LRC14_of_INV` (S108) concludes `∀ v : Fin 13 → ℤ, (0<v) → ∃ t, Lonely 14 v t`.
+  `LRC14_of_INVcov` (corrected S108) concludes
+  `∀ v : Fin 13 → ℤ, (0<v) → ∃ t, Lonely 14 v t`.
   The ledger target quantifies over a `Finset ℕ` of card 13, asks the lonely time in
   `[0,1]`, and uses `∀ w ∈ W`.  Two elementary transfers:
     · enumerate `W` as `v : Fin 13 → ℤ` via `W.equivFinOfCardEq`;
     · loneliness is shift-invariant, so replace `t` by `Int.fract t ∈ [0,1)`.
 
-  `LRC14_finset_of_INV` (PROVED, kernel-pure): `LRC(≤13) + INV ⟹ LRC14.LRC14`.
+  `LRC14_finset_of_INVcov` (PROVED, kernel-pure):
+  `LRC(≤13) + INVcov ⟹ LRC14.LRC14`.
 -/
 import Mathlib
 import TournamentH7.LonelyRunner
@@ -31,12 +33,11 @@ theorem lonely_fract {ι : Type*} {n : ℕ} (v : ι → ℤ) (t : ℝ)
     rw [Int.fract]; push_cast; ring
   rw [hrw]; exact h i (m + v i * ⌊t⌋)
 
-/-- **The Finset target from INV (PROVED).**  `LRC14_of_INV`'s `Fin 13 → ℤ` conclusion
+/-- **The Finset target from `INVcov` (PROVED).**  `LRC14_of_INVcov`'s
+`Fin 13 → ℤ` conclusion
 transfers to the `Finset ℕ`, `t ∈ [0,1]` statement `LRC14.LRC14`: enumerate `W`, apply
-`LRC14_of_INV`, and reduce the lonely time to `[0,1)` by `lonely_fract`. -/
-theorem LRC14_finset_of_INV (cite : LRCUpTo13)
-    (INV : ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → (¬ ∃ t, Lonely 13 v t) →
-      ∃ vstar : Fin 13, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar) :
+`LRC14_of_INVcov`, and reduce the lonely time to `[0,1)` by `lonely_fract`. -/
+theorem LRC14_finset_of_INVcov (cite : LRCUpTo13) (inv : INVcov) :
     LRC14.LRC14 := by
   intro W hWpos hWcard
   -- enumerate `W` as `v : Fin 13 → ℤ`
@@ -47,7 +48,7 @@ theorem LRC14_finset_of_INV (cite : LRCUpTo13)
     have hpos := hWpos (e i) (e i).2
     simp only [hv]; exact_mod_cast hpos
   -- LRC(14) in the Lonely form
-  obtain ⟨t, ht⟩ := LRC14_of_INV cite INV v hvpos
+  obtain ⟨t, ht⟩ := LRC14_of_INVcov cite inv v hvpos
   -- reduce the lonely time to [0,1)
   refine ⟨Int.fract t, mem_Icc.mpr ⟨Int.fract_nonneg t, le_of_lt (Int.fract_lt_one t)⟩, ?_⟩
   intro w hw a
@@ -61,4 +62,4 @@ theorem LRC14_finset_of_INV (cite : LRCUpTo13)
 end LonelyRunner
 
 #print axioms LonelyRunner.lonely_fract
-#print axioms LonelyRunner.LRC14_finset_of_INV
+#print axioms LonelyRunner.LRC14_finset_of_INVcov

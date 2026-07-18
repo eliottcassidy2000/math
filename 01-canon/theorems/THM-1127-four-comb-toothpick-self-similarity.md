@@ -372,10 +372,10 @@ period-126 tail guard, and four direct high-slope checks of (6).  Ordinary and
 
 ```text
 04-computation/lrc14_r5_toothpick_self_similarity_exact_codex_S73.py
-SHA-256 d4024238821019506fd3b77a70efb244ebbb8e0de85f6c3cbe820614b7173b9e
+SHA-256 6c6dbb058374c13ca8f16ba723e520fb08af88267e27f2a2b0291f7432affe8a
 
 05-knowledge/results/lrc14_r5_toothpick_self_similarity_exact_codex_S73.out
-SHA-256 5f19804c0b821e668b6708f1adba422707f170d2c79ff0a835733ce0224b168d
+SHA-256 160c886d485c2bfae58a7618385b23b975e03280817afc95be11629db69e3405
 ```
 
 ## Kakeya/tournament reading

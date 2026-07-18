@@ -9,6 +9,11 @@
   not imply dominance.  This module records the genuinely needed easy/hard
   split as an explicit hypothesis and checks the resulting composition.
 
+  The corrected direct M-split in `LRCMSplit` is the shorter canonical route
+  when the compact predicate is exactly `Covering v ∧ ¬∃ t, Lonely 13 v t`:
+  its no-`Lonely14` branch derives `Covering v` by the divisor sieve.  This
+  generic module remains useful for other easy/compact decompositions.
+
   Kernel-pure: no `sorry`, no `native_decide`, and no custom axioms.
 -/
 import TournamentH7.LRCAPCoreBridge

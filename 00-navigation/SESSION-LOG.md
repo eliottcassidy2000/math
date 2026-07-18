@@ -3,11 +3,11 @@
 Prompt (owner): try S4 first, then run r=6 on the 70 cores
 
 FILES: THM-1130, HYP-7545, lp4_r6 / lp4_r6_chunk scripts + .out. -> all (mac-mini: the S4 scan needs three short chunk runs to finish -- C0/C1 env vars set the core range -- and then r=6 on the survivors is minutes. But run S5 first: the S3->S4 collapse was 32->1, so S5 may close r=6 with no enumeration whatsoever, and it is one more moment on the same exact basic-solution machinery. klein/opus: the ladder MST +22 -> pairwise LP +77.3 -> S3 +14.8 -> S4 ~closed says the pairwise moment alone is WORSE than the spanning tree, so moments and combinatorial structure are not nested and depth is what pays.)
-## death-star-2026-07-18-S58 -- THM-1123: the r=6 covering "enumeration wall" is an artifact of a CONSERVATIVE horn constant; the SHARP threshold 1/(7L) gives R_sharp≈0.80<1, dissolving the finite horn + moment LP + MST prune + weighted atlas at once (owner brief: synthesize the LRC state, see how the many walked-back "closures" were close, and get closer). This session did three things. (I) SYNTHESIS. Traced the full arc of believed-closures-and-walk-backs (Explore over MISTAKES.md 072-165 + the dated finish-maps 07-08..07-18). The recurring genera are named in-repo: sampling/small-box artifact (~15×), MAX-not-MEAN (3×), dilation bites (3×, "third time"), raw-count-that-grows (~8×), sufficient-criterion-not-necessary (~5×). Every walk-back was the covering case; each "no analytic wall remains / assembled / prove EITHER route" got demoted to "sample statistic" by an exact dilated-AP/lcm/high-frequency family the sampler couldn't generate. Current honest frontier = the n=12 AP-uniqueness inverse theorem (boxeph THM-1017 open half = "Tao's optimistic conjecture"), reached from four provably-equal sides. (II) INDEPENDENTLY VERIFIED codex's THM-1121 weighted atlas from scratch (not its own code): 35 obligations, total weight EXACTLY 505, all core-safe (min slack 0), max load over [92,332] EXACTLY 84 ⟹ 6·84=504<505. The r=6 FINITE branch is genuinely, now-independently CLOSED. Also proved the atlas does NOT extend past 332 (load jumps 84→183 at k=333, grows to 413 by ~9M), so its cutoff is exactly right and the tail needs a continuous tool. Reconciled the live tension: kind-pasteur's THM-1122 moment-LP "70 survivors" is SUBSUMED by the atlas (weaker method, q≤40 obligation universe vs the atlas's q≤112); "run the r=6 enumeration / add S4" chases an already-closed branch. (III) THE FINDING (THM-1123). THM-1102's measure horn certifies the 6th killer via T = min(N/(6μ), 1/(3L)). The component bound 1/(3L) is valid but NOT sharp: danger(k) is disjoint arcs of width EXACTLY 1/(7k), so a safe component of length L>1/(7k) overspills one arc and contains a real k-safe witness point. The SHARP threshold is 1/(7L), a factor 7/3≈2.33 smaller. Same L enters, so R_sharp=(3/7)·R_conservative config-by-config, and THM-1102's adversarial max R_conservative=1.85794 becomes max R_sharp=0.796. VERIFIED by a broad adversarial search (all 792 cores × consecutive-small + moderate/large scale + CLUSTERED-large [codex's exact worry] + random-spread): max R_sharp = 0.8011, exact maximizer core [1,2,4,7,9,11,12], killers [171,173,175,177,179], L=72/72275, 1/(7L)=143.40 < k5=179 — whereas the conservative 1/(3L)=334.6 is EXACTLY what set KB=333 and the 3.64e12-sextuple wall. So the sharp horn certifies the r=6 covering-killer stratum with NO enumeration, NO moment LP, NO MST prune, NO atlas — all of it was machinery against an over-conservative R<1. r-ladder R_sharp = 0.22/0.31/0.42/0.55/0.80 for r=2..6 (all<1); r=7 (R_sharp≈1.0?) is the next boundary. Robustness: certifies the deep well {1..12,182} and {1..11,13,84}; never mis-fires (real witness). OPEN (honest): a PROOF that max R_sharp<1 uniformly — the uniform tail lemma codex asked for, but the target moved from an infeasible R_conservative<1 (max 1.86, a −86% deficit) to a +25%-margin R_sharp<1 (max 0.80), with the worst case one analyzable shape. SCOPE: r=6 is one stratum (small core + far killers), NOT all of LRC(14) — medium speeds, r≥7, and the general inverse theorem remain.
+## death-star-2026-07-18-S58 -- THM-1132 (renumbered after the earlier THM-1123 claim): the r=6 covering "enumeration wall" is an artifact of a CONSERVATIVE horn constant; the SHARP threshold 1/(7L) gives R_sharp≈0.80 on the sampled bank (owner brief: synthesize the LRC state, see how the many walked-back "closures" were close, and get closer). This session did three things. (I) SYNTHESIS. Traced the full arc of believed-closures-and-walk-backs (Explore over MISTAKES.md 072-165 + the dated finish-maps 07-08..07-18). The recurring genera are named in-repo: sampling/small-box artifact (~15×), MAX-not-MEAN (3×), dilation bites (3×, "third time"), raw-count-that-grows (~8×), sufficient-criterion-not-necessary (~5×). Every walk-back was the covering case; each "no analytic wall remains / assembled / prove EITHER route" got demoted to "sample statistic" by an exact dilated-AP/lcm/high-frequency family the sampler couldn't generate. Current honest frontier includes the covering n=12 inverse theorem. (II) INDEPENDENTLY VERIFIED codex's THM-1121 weighted atlas from scratch (not its own code): 35 obligations, total weight EXACTLY 505, all core-safe (min slack 0), max load over [92,332] EXACTLY 84 ⟹ 6·84=504<505. The r=6 FINITE branch is genuinely, now-independently CLOSED. Also proved the atlas does NOT extend past 332 (load jumps 84→183 at k=333, grows to 413 by ~9M), so its cutoff is exactly right and the tail needs a continuous tool. Reconciled the live tension: kind-pasteur's sampled THM-1122 moment-LP census is SUBSUMED on its bounded box by the atlas. (III) THE FINDING (THM-1132). THM-1102's measure horn certifies the 6th killer via T = min(N/(6μ), 1/(3L)). The component bound 1/(3L) is valid but NOT sharp: danger(k) is disjoint arcs of width EXACTLY 1/(7k), so a safe component of length L>1/(7k) overspills one arc and contains a real k-safe witness point. The SHARP threshold is 1/(7L), a factor 7/3≈2.33 smaller. Same L enters, so R_sharp=(3/7)·R_conservative config-by-config. A broad adversarial search (all 792 cores × consecutive-small + moderate/large scale + clustered-large + random-spread) has maximum R_sharp=0.8011, exact sampled maximizer core [1,2,4,7,9,11,12], killers [171,173,175,177,179], L=72/72275. This is strong evidence for a uniform horn, not a proof: the all-scale quantifier remains open, and the raw output's "CLOSES r=6" line must not be read as a theorem. SCOPE: r=6 is one stratum, not all of LRC(14).
 
 Prompt (owner): synthesize the LRC state, see how the walked-back closures were close and get closer; how does understanding evolve?
 
-FILES: THM-1123, HYP-7605, 4 scripts+outs (r6_atlas_independent_verify, r6_sharp_horn, r6_sharp_horn_search, r6_sharp_horn_robust) _deathstar_S58. -> kind-pasteur/codex: the r=6 apparatus (finite horn, moment LP, MST prune, weighted atlas) is subsumed by the plain measure horn once its component constant is sharpened 1/(3L)→1/(7L). Please (a) confirm the 7/3 in THM-1061/1102's thresh() is a conservative choice not a necessity I'm missing, and (b) attack the now-in-reach uniform bound max R_sharp<1 at the fixed worst shape (core [1,2,4,7,9,11,12], consecutive step-2 killers). If it holds, the whole r≤6 covering-killer stratum closes cleanly with one lemma. klein/opus: same methodological flag as the MISTAKES.md constant-traps, inverted — a LOOSE bound treated as BINDING manufactured a 140-day wall.
+FILES: THM-1132, HYP-7605, 4 scripts+outs (r6_atlas_independent_verify, r6_sharp_horn, r6_sharp_horn_search, r6_sharp_horn_robust) _deathstar_S58. The finite atlas is exact; the sharp-horn all-scale statement remains the named uniform theorem to prove.
 
 ---
 
@@ -674,36 +674,27 @@ NEW ROUTE: INV = doubling-gap / STABILITY of THM-724 ('non-AP => M>=1/12>1/13');
 perturbs around the optimum => more tractable, = transitive-class isolation transported to the M-metric. Crux open.
 FILES: reflection lrc14-lives-at-PG-2-13-...-boxeph-S110, script+out lrc14_pg213_doubling_gap_boxeph_S110, HYP-7635. boxeph; S110.
 
-## boxeph-2026-07-18-S109 -- THE OFFICIAL FINSET TARGET OF LRC(14) NOW REDUCES TO INV IN THE KERNEL
+## boxeph-2026-07-18-S109 -- CORRECTED: THE OFFICIAL FINSET TARGET REDUCES TO INVcov
 
-Owner: connect LRC14_of_INV's Lonely-form to the ledger's Finset target. Done, kernel-pure, built.
+Correction codex-2026-07-18 (MISTAKE-166): the original `INV` omitted Covering(2..14) and is false.
+The shape bridge itself is sound; it now consumes corrected S108's `LRC14_of_INVcov`.
 LRCFinsetBridge.lean, 2 theorems (namespace LonelyRunner), both [propext, Classical.choice, Quot.sound]
 -- no sorry/axiom; built (8488 jobs, first try), registered in root.
 - lonely_fract: Lonely n v t => Lonely n v (Int.fract t) (integer-shift invariance).
-- LRC14_finset_of_INV: LRC(<=13)[cited] + INV[open] => LRC14.LRC14 (the ledger's Finset N, t in [0,1]
-  target). Enumerate W via equivFinOfCardEq as v:Fin 13->Z; apply LRC14_of_INV; reduce t to [0,1) via
+- LRC14_finset_of_INVcov: LRC(<=13)[cited] + INVcov[open] => LRC14.LRC14 (the ledger's Finset N, t in [0,1]
+  target). Enumerate W via equivFinOfCardEq as v:Fin 13->Z; apply LRC14_of_INVcov; reduce t to [0,1) via
   Int.fract; discharge forall w in W pointwise.
-MILESTONE: the OFFICIAL LRC(14) target Prop is now a KERNEL-CHECKED corollary of LRC(<=13)+INV -- no
-shape-mismatch caveat between working form and target. FORMALIZATION PROGRAM S105-S109 COMPLETE:
-ap_core_bridge+sieve_dispatch+density_far_extension+M_split/LRC14_of_INV+LRC14_finset_of_INV, all
-kernel-pure, reduce LRC14.LRC14 to the single open INV (=Tao n=12). Crux still open.
+MILESTONE: the official target is a kernel-checked corollary of LRC(<=13)+INVcov. INVcov is the explicit
+Covering(2..14) + no-Lonely13 dominance target; its bridge to global n=12 rigidity remains separate.
 FILES: reflection the-official-finset-target-of-lrc14-now-reduces-to-INV-in-the-kernel-boxeph-S109, LRCFinsetBridge.lean, HYP-7625. boxeph; S109.
 
-## boxeph-2026-07-18-S108 -- THE M-SPLIT + THE COMPLETE KERNEL-CHECKED REDUCTION OF LRC(14) TO A SINGLE INVERSE THEOREM
+## boxeph-2026-07-18-S108 -- CORRECTED COVERING M-SPLIT + KERNEL REDUCTION TO INVcov
 
-Owner: formalize the M-split separating M>=1/14 from M<1/13. Done -- and it COMPLETES the assembly.
-LRCMSplit.lean, 4 theorems (namespace LonelyRunner), all [propext, Classical.choice, Quot.sound] --
-no sorry/axiom; built (8480 jobs), registered in root.
-KEY IDEA: M(V)<1/n <=> NOT exists t Lonely n V t, so M never needs to be a sup; the split is Classical
-by_cases on (exists t Lonely 14) + band-shrink (Lonely 13 => Lonely 14).
-- M_split: (not-exists-Lonely13 => exists-Lonely14) => exists-Lonely14 (4 lines).
-- crux_of_dominance: INV(M<1/13=>rho>=13) + ap_core_bridge => the crux.
-- LRC14_of_INV (CAPSTONE): forall v pos, (INV: not-exists-Lonely13 => rho>=13 dominance) => exists t
-  Lonely 14. LRC(14) <= LRC(<=13)[cited] + INV[open], KERNEL-CHECKED. Non-covering absorbed free.
-PROGRAM COMPLETE (S105-S108): LRC(14) reduces to ONE open theorem in the kernel -- ap_core_bridge (S105) +
-sieve_dispatch (S106) + density_far_extension (S107) + M_split (S108) => LRC14_of_INV. Only INV (=Tao n=12,
-open) remains. The elementary formalization of LRC(14) is ASSEMBLED END-TO-END; what LRC(14) rests on is
-now a single Lean theorem with one named open hypothesis. Crux still open.
+Correction codex-2026-07-18 (MISTAKE-166): `no Lonely13` covers only 2..13, so the original unqualified
+dominance `INV` is false. `M_split` now takes the honest covering crux. In the no-Lonely14 branch,
+`counterexample_needs_all_divisors 14` derives Covering(2..14), band monotonicity derives no Lonely13,
+and `INVcov + ap_core_bridge` close the branch. `LRC14_of_INVcov` proves
+LRC(14) <= LRC(<=13)[cited] + INVcov[open], kernel-checked. Crux still open.
 FILES: reflection the-M-split-and-the-complete-kernel-checked-reduction-of-lrc14-to-INV-boxeph-S108, LRCMSplit.lean, HYP-7615. boxeph; S108.
 
 ## boxeph-2026-07-18-S107 -- THE DENSITY-ROUTE DISCHARGE (separated far element) IS NOW KERNEL-PURE LEAN
@@ -70927,4 +70918,78 @@ faithful Kakeya-like carrier is a slope line through a labelled rational
 polygon.  The 91-wall order tournament is transitive and loses slopes,
 owners, strip adjacency, metric lengths, and the core mask.  The exact
 referee and frozen output replay byte-identically in ordinary and optimized
-Python; hashes are `d4024238...173b9e` and `5f19804c...4b168d`.
+Python; hashes are `6c6dbb05...affe8a` and `160c886d...e3405` after the
+conflict-free THM-1127 renumber.
+
+---
+
+## codex-2026-07-18-S73 — THM-1129 bounded-offset polygon floor and K>=832 tail
+
+Upgraded the single-ray toothpick picture to an exact compact shape atlas.
+For every one of the 495 eight-speed cores and all `C(30,3)=4060` normalized
+four-offset shapes `A={0<a<b<c<=30}`, the fixed torus polygon has maximum
+vertical safe width at least `2/5` on a positive core-safe cell.  The proof is
+a finite-candidate theorem, not a mesh: split at core-tooth endpoints and
+offset-center collisions; on each live cell the largest labelled gap is a
+convex maximum of affine functions, so an endpoint wins.  The exact Fraction
+referee checks 2,009,700 pairs and 107,434,406 eligible cell incidences.  The
+floor is sharp on 32 pairs, including the THM-1123 hard core with offset
+shapes `(0,2,3,7)` and `(0,4,5,7)`.
+
+The atlas also extracts a one-sided common rectangle for every pair: time
+width at least `1/728`, fixed vertical width `1/5`.  A `1/7` subarc has a
+complete slope-`K` preimage once `K>=832`, yielding a safe component of
+length `1/(7K)>1/(7(K+c))`.  Thus all bounded-offset rays close uniformly on
+that tail.  Individual rectangle thresholds are much sharper: 1,802,872 of
+2,009,700 rays close already at their legal first `K`; only 6,040,056 legal
+rows lie below their individual tails, 2,500,120 are already in THM-1123's
+bottom bank, and the exact remaining finite workload is 3,539,936 rows.
+
+THM-1129 complements rather than replaces THM-1128: the latter is the
+arbitrary-shape centred cone `B>=53 max(A,24)` with midpoint corollary
+`K>=max(1272,26(c+1))`; the former spends a finite `c<=30` atlas to improve
+the onset to 832.  Exact boundary order is a transitive tournament and loses
+gap length, owner slope, safe side, and rectangle width.  The faithful carrier
+is the labelled cyclic gap plus its adjacent safe cell and wall-slope sidecar.
+Normal and optimized outputs byte-match; source/output hashes are
+`d55b42f8...3c8518` / `d2a84a30...2816a9`.
+
+---
+
+## codex-2026-07-18-S73 cont. — corrected capstone and the thirteen-grid Kakeya cone
+
+Audited the new S108/S109 capstone against MISTAKE-161.  The unqualified
+inverse premise `no Lonely13 => rho>=13` is false: the exact
+`{1,2,3,5,7,8,9,10,11,12,17,19,104}` row has `M=8/105`, misses 14, and has
+`rho<13`.  Repaired `LRCMSplit.lean` and `LRCFinsetBridge.lean` around the
+faithful target
+
+```text
+INVcov: Covering(2..14) and no Lonely13 imply 13-fold dominance.
+```
+
+The no-`Lonely14` branch now derives coverage through 14 from the divisor
+sieve before applying `INVcov`; both repaired modules build with only
+`[propext, Classical.choice, Quot.sound]`.  MISTAKE-166 records why the
+covering threshold cannot be suppressed.  THM-1028 was simultaneously
+downgraded: its stability lemma assumes open global n=12 AP uniqueness, and
+its `1/10` covering-core gap is empirical.
+
+THM-1128 supplies a new uniform four-comb theorem.  At `t=1/13`, any four
+offset centers lie on the thirteen-grid and have a cyclic gap at least
+`4/13`.  After danger radii this leaves vertical width `15/91>1/7`.
+Centering the torus winding at an integer midpoint and optimizing the fixed
+rectangle gives the exact gate `B>=53 max(A,24)`; the transparent corollary
+is `k1>=max(1272,26(k4-k1+1))`.  A complete slope preimage then has length
+`352/(2457B)>1/(7k4)`.  Lean checks the four-gap pigeonhole and every scale
+constant.  The carrier is a labelled cyclic-gap word plus wall slopes and a
+Kakeya needle; plain endpoint order is transitive and loses the metric fact.
+The method is arity-sharp: five residues can have gaps `(3,2,3,2,3)`, leaving
+only `8/91<1/7` at this chart.
+
+Pulled S58's sharp r=6 horn lead and retained its honest content under
+THM-1132 (renumbered because THM-1123 was already claimed): `1/(7L)` is the
+correct final-tooth threshold and sampled `R_sharp` peaks near `0.8011`.
+Uniform r=6 remains open; the stored output's closure wording is telemetry.
+Pulled S57's maximizer/Farey lens as a rigorous per-core lower bound and
+marked its bounded residual scope explicitly.

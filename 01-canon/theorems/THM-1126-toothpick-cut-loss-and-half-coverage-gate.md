@@ -4,7 +4,7 @@ title: Toothpick cut-loss duality and the half-coverage gate for the sharp four-
 status: PROVED — elementary one-dimensional topology; reduces failure of a component longer than one finest tooth to at least half-coverage, and gives an explicit spanning-tree overlap criterion
 source: codex-2026-07-18-S73 r5 continuation
 depends_on: [THM-1097, THM-1111]
-related: [THM-1094, THM-1101, MISTAKE-164]
+related: [THM-1094, THM-1101, THM-1123, THM-1127, MISTAKE-164]
 ---
 
 # THM-1126 — toothpick cut-loss duality and the half-coverage gate
@@ -154,31 +154,22 @@ and three labelled pair-overlap edges are enough to pay that deficit.
 
 ### Exact negative audit of the sufficient gates
 
-THM-1123 subsequently evaluated all `495*binom(16,4)=900900` tuples formed
-from the first sixteen legal killer speeds above each eight-core.  The sharp
-component target itself has zero failures, but the sufficient gates here do
-not explain it:
+THM-1123 subsequently evaluated the sharp target on all
+`495*binom(40,4)=45238050` rows in its bounded bank, with zero failures.  Its
+independent Fraction replay gives exact counterrows to every scalar gate here:
 
 ```text
-largest-J half-coverage failures     441576 / 900900,
-largest-J MST-criterion failures     823588 / 900900,
-whole-core half-coverage failures    671455 / 900900.
-```
-
-Exact counterrows include
-
-```text
-half gate worst:
-  P={1,2,3,4,5,8,9,10}, k=(131,132,140,141),
-  gate slack=-539071/106195936,       7k4L=438/131;
+local half gate:
+  P={2,3,4,5,6,7,8,9}, k=(128,131,134,137),
+  gate slack=-104610971/19393097472,  7k4L=1107/256;
 
 MST gate worst:
   P={2,3,4,5,6,7,8,9}, k=(121,124,127,130),
-  gate slack=-466976387/54621386820,  7k4L=813/242;
+  gate slack=-466976387/54621386820,  7k4L=93/22;
 
-whole-core gate worst:
-  P={1,2,3,4,6,10,11,12}, k=(158,161,162,164),
-  gate slack=-29245585/929275578,     7k4L=55/18.
+whole-core half gate:
+  P={1,2,3,6,7,9,10,11}, k=(153,156,159,162),
+  gate slack=-4926398/150405255,      7k4L=7/2.
 ```
 
 Thus THM-1126 is a genuine reduction and diagnostic, not a hidden uniform

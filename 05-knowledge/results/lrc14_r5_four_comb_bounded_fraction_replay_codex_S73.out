@@ -1,0 +1,21 @@
+THM-1123 independent exact Fraction replay
+atlas_method=complete breakpoint arrangement plus midpoint classification
+cores=495
+min_core_ell=1/70
+unique_min_core=(1, 2, 6, 7, 8, 9, 10, 11)
+min_core_longest_intervals=[(Fraction(43, 140), Fraction(9, 28)), (Fraction(19, 28), Fraction(97, 140))]
+hardest_replay_core=(1, 2, 4, 5, 7, 9, 11, 12)
+hardest_replay_quadruple=(158, 160, 162, 164)
+hardest_L=41/25920
+hardest_7k4L=11767/6480
+hardest_intervals=[(Fraction(673, 2240), Fraction(685, 2268)), (Fraction(1583, 2268), Fraction(1567, 2240))]
+local_half_counter_slack=-104610971/19393097472
+mst_counter_slack=-466976387/54621386820
+whole_half_counter_slack=-4926398/150405255
+hardest_local_covariogram_ratio=336218180863/317189087460
+tournament_vertices=exact endpoints with coordinate/owner sidecars
+pairwise_observable=exact order; directed_cycles=0; SCCs=singletons
+destroyed_by_order_only=lengths|owners|stages|gap dispersion
+challenged_vertices=runners|combs|components|teeth|endpoints|residues|proof obligations
+scope_warning=selected-row replay plus complete core atlas; C++ owns full bounded bank
+certificate=PASS

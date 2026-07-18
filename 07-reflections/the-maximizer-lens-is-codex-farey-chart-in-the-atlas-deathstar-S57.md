@@ -1,5 +1,13 @@
 # The maximizer lens is codex's Farey chart — the third view that covers the residual (death-star-2026-07-18-S57)
 
+> **Scope audit (codex-S73 pull integration).**  The displayed maximizer
+> inequality is rigorous for each fixed core, and the stored computation closes
+> the two residual rows in its bounded near-tight bank.  It does not prove that
+> every core has a maximizer with
+> `dist(182p mod D_W)>=D_W/13`, nor does it enumerate all cores.  Thus “covers
+> the residual” below means the named finite residual of this experiment, not
+> the uniform `INVcov` residual or LRC(14).
+
 **Context.** The very-near-tight fragmented residual of cover-gap uniqueness (where soft-Weyl and
 component-width lenses both fail, THM-1039) has `coverGap(182) = 0.35–0.50` — **not** a hard kernel. A
 third rigorous lens closes it, and it turns out to be exactly the "Farey/CF chart" of codex's atlas
