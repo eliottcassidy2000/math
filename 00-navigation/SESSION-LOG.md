@@ -1,3 +1,40 @@
+## opus-2026-07-17-S374 -- THM-1105 THE ARITHMETIC POSITION LAW (gaps sit at q0 = first modulus dividing no speed; min-den = q0 in 96.8%, with 0/454 failures at q0<=14 vs 34.8% at q0>14 -- the regime split IS the classical boundary and q0>14 IS the hard stratum) + THM-1100's BOUNDED-DENOMINATOR CONJECTURE REFUTED by a one-line lcm construction + MISTAKE-157 (HYP-7570)
+
+Owner: work the arithmetic position of the gaps. I attacked my own conjecture first,
+and it fell to a construction I should have tried before proposing it.
+THE REFUTATION: blocking a modulus q needs only ONE speed with q | v -- that runner then
+sits exactly at the origin, ||v p/q|| = 0 < 1/14, for EVERY p. So a single speed
+divisible by lcm(1..Q) blocks every q <= Q simultaneously, and V = {lcm(1..Q)} u {12
+coprime speeds} is primitive, has 13 speeds, and admits no lonely rational of
+denominator <= Q. Q is arbitrary. THM-1100's bounded-denominator conjecture is FALSE,
+and this is precisely why the S373 searches climbed 25 -> 32 -> 39: the supremum is
+infinite and the hill-climbs were crawling toward it. Logged as MISTAKE-157 -- I audited
+my SAMPLING carefully (having been burned three times by dilation) but never audited the
+CLAIM, and read escalating search maxima as 'my search is weak' rather than 'the
+conjecture may be false'.
+THE LAW THAT SURVIVES, and it is sharp: let q0(V) be the smallest modulus dividing no
+speed. Over 500 primitive families, min-denominator - q0 is 0 in 484 (96.8%), 1 in 8,
+and 2-5 in 8. THE GAPS SIT AT q0. Better, the failures split EXACTLY along the classical
+boundary: q0 <= 14 gives 454 families with ZERO failures, which is the classical sieve
+lemma (it needs q <= 14 because ||v/q|| >= 1/q must beat 1/14) confirmed without
+exception; q0 > 14 gives 46 families with 16 failures (34.8%). And q0 > 14 means every
+q <= 14 divides some speed -- i.e. it IS the ~11% hard stratum. The two independent
+characterisations of 'hard' coincide, which I take as a sign the law is the right frame.
+NOT ESTABLISHED: the excess E = min-den - q0 is not shown bounded. Random families gave
+max 5, adversarial hill-climbing gave 19 (q0=15, min-den=34). Same escalating signature,
+so I lean against boundedness rather than proposing it. Curiously the lcm construction
+has excess 0 at Q=20,30,40 -- the law is EXACT on the very families refuting the
+absolute bound; the excess-adversarial families are a different population, small q0
+with large minimal denominator.
+WHERE THIS LEAVES LRC(14): a clean localisation. q0 <= 14 (~91%) is closed by the
+classical lemma. q0 > 14 (~9%) needs the extended statement 'q divides no speed => some
+p/q is lonely' for q > 14, which holds in ~65% of those. That is sharper than anything
+the measure-theoretic route produced in ten sessions, and it is stated purely in terms
+of DIVISIBILITY of the speed set, with no analytic content at all.
+FILES: THM-1105, THM-1100 amended, MISTAKE-157, 2 scripts + outs, HYP-7570. opus; S374.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.63) -- THM-1093: r=5 CLOSED, r=4's R settled, and the R-crossing located between r=4 and r=5 (owner brief: run the r=5 finite horn and settle r=4's R over all triples). Both asks done, and one of them turned up an error in my own first r=5 run that I caught before claiming closure. (I) r=4's R IS SETTLED. cont.62 had scanned only killers in [lo, lo+55). Widening to ALL triples with k3 <= lo+100 across all 220 nine-speed cores returns the same answer: max R = 0.98453, at core [1,2,3,5,6,7,8,9,11] with killers (150,156,158) and T = 155.6. The decay check beyond the window, with k1 and k2 pinned at the worst pair, shows R falling monotonically -- 0.98453, 0.54096, 0.38889, 0.38889, 0.30736, 0.23252, 0.20453 as k3 runs 158, 208, 308, 558, 1158, 3158, 9158 -- through the 7/18 = 0.38889 asymptotic plateau and below. So the worst case really is at the bottom, and the measure horn DOES suffice at r=4, by 1.5%. Which means all three of THM-1051, THM-1061 and THM-1081 had finite horns that were, strictly, independent VERIFICATION rather than necessity. I am glad to have run them, but the honest statement of r <= 4 is 'R < 1, measure horn alone'. (II) r=5 IS WHERE IT BREAKS, exactly as the ladder predicted: max R = 1.28495, at core [1,2,4,5,7,9,11,12] with killers (158,160,162,164) and T = 210.7. The measure horn genuinely fails and the finite horn becomes MANDATORY for the first time in this arc. The failure is confined: only 1011 quadruples have R >= 1, the largest killer among them is 178, and scaling the worst quadruple upward puts R back below 1 immediately (0.679 at +10, 0.578 at +25, settling near 0.519). (III) A BOUND CORRECTION I caught before claiming closure. My FIRST r=5 run set the finite-horn bound at max k4 + 20 = 198. That is wrong: the fifth killer is certified by the measure horn only once it exceeds T, NOT once it exceeds the largest removed killer -- and max T over the failing region is 210.7, so KB = 198 left a genuine gap at k5 in [198, 211]. The run that reported 11,702,422 quintuples with zero failures did NOT actually close r=5. I reran at KB = max T + 25 = 235. I am recording the error rather than quietly replacing the number, because the first run looked exactly as convincing as the second, and that is the whole danger. (IV) THE r=5 FINITE HORN: 263,708,305 quintuples passing the sound covering-necessary condition, over all 495 eight-speed cores, ZERO uncertified. With max T = 210.7 < 235 the split is airtight: below KB the finite horn certifies, above it k5 > T and the measure horn certifies. r=5 is CLOSED. (V) THE LADDER, COMPLETE: 0.51852 (r=2, exhaustive) -> 0.73375 (r=3) -> 0.98453 (r=4) -> 1.28495 (r=5). The crossing sits between r=4 and r=5. Each removed killer fragments the safe set further, so the surviving component shrinks faster than the killers grow, and the measure horn is a FINITE-DEPTH TOOL: it survives exactly three removals, clears the fourth by 1.5%, and fails the fifth. INFRASTRUCTURE NOTE: git rebase failed repeatedly with 'could not detach HEAD' on a clean tree -- a background python process still held the .out file open under Windows locking. Killing the process fixed it; the working tree being clean is not sufficient evidence that git can move.
 
 Prompt (owner): run the r=5 finite horn and settle r=4's R over all triples

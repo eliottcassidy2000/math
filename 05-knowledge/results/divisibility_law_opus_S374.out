@@ -1,0 +1,35 @@
+(4) THE LAW: is min-denominator = q0 (the first modulus dividing no speed)?
+    500 primitive families
+      min-den - q0 =   0:   484  ( 96.8%)
+      min-den - q0 =   1:     8  (  1.6%)
+      min-den - q0 =   2:     2  (  0.4%)
+      min-den - q0 =   3:     3  (  0.6%)
+      min-den - q0 =   4:     2  (  0.4%)
+      min-den - q0 =   5:     1  (  0.2%)
+    EXACT (min-den = q0): 96.8%
+
+(5) WHEN THE LAW FAILS -- is it always q0 > 14?
+    (the classical sieve lemma proves q divides no speed => 1/q lonely
+     ONLY for q <= 14, since ||v/q|| >= 1/q needs 1/q >= 1/14)
+    q0 <= 14:  454 families, law fails   0 (0.0%)
+    q0 >  14:   46 families, law fails  16 (34.8%)
+
+    => if the law NEVER fails for q0 <= 14, that is the classical lemma
+       confirmed; the open content is exactly the q0 > 14 regime.
+
+(6) EXAMPLES WHERE IT FAILS
+      q0 =  15, min-den =  17   V = [11, 70, 77, 137, 144, 156, 175, 213, 226, 232, 246, 262, 281]
+      q0 =  15, min-den =  19   V = [9, 12, 92, 119, 126, 128, 143, 160, 214, 233, 268, 279, 288]
+      q0 =  16, min-den =  19   V = [4, 20, 24, 60, 107, 121, 130, 147, 216, 255, 268, 294, 296]
+      q0 =  15, min-den =  16   V = [70, 124, 147, 157, 163, 164, 168, 172, 185, 223, 260, 274, 297]
+      q0 =  16, min-den =  19   V = [40, 73, 84, 85, 97, 130, 135, 136, 148, 189, 198, 203, 284]
+(7) ADVERSARIAL HUNT ON THE EXCESS  E(V) = min-den - q0
+    max excess found: 19
+      V = [29, 146, 179, 182, 191, 209, 216, 264, 299, 307, 361, 391, 400]
+      q0 = 15, min-den = 34
+
+(8) THE lcm CONSTRUCTION'S EXCESS (my S374 refutation family)
+    Q= 10: q0=  16  min-den=25  excess=9
+    Q= 20: q0=  25  min-den=25  excess=0
+    Q= 30: q0=  32  min-den=32  excess=0
+    Q= 40: q0=  47  min-den=47  excess=0

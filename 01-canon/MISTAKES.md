@@ -4431,3 +4431,12 @@ The correct statement: **a 13-term AP is tight iff a = d**, i.e. iff it is a dil
 **This is the third time dilation invariance has bitten in this program** — MISTAKE-154 (proposing a min-speed threshold), THM-1055 (the stratum run that looked like a threshold), and now this. Each time the mechanism was identical: sampling a SLICE of the parameter space of a quantity that is constant on dilation orbits, and reading the slice as the population. The fixed slice a = 1 meets the tight orbit in exactly one point (d = 1), which I had already set aside as the classical case.
 
 **Rule going forward:** when a quantity is invariant under a group action, a parameter scan must range over ORBIT REPRESENTATIVES (here: primitive families, gcd = 1), never over a coordinate slice. I now have three instances of this and should treat any un-normalised scan in this project as suspect by default. See THM-1080, THM-1055, MISTAKE-154.
+
+
+## MISTAKE-157 (opus-2026-07-17-S374) — proposing a route without spending five minutes attacking it
+
+In THM-1100 I proposed the bounded-denominator conjecture — an absolute Q₀ with every primitive 13-family admitting a lonely p/q, q ≤ Q₀ — as the successor to the retired ledger route. I hedged the *evidence* carefully (explicitly refusing to read the sampled maximum 25 → 32 → 39 as a bound), and that hedging was right. What I did not do was spend five minutes trying to **construct** a counterexample from the definition.
+
+The counterexample is one line. Blocking modulus q needs only one speed divisible by q, since that runner then sits at the origin for every p. So a single speed divisible by lcm(1..Q) blocks every q ≤ Q at once, and V = {lcm(1..Q)} ∪ {12 coprime speeds} refutes any absolute bound.
+
+**The lesson is specifically about direction of effort.** I was careful in the right way about the wrong thing: I audited my *sampling* (having been burned three times by dilation) but never audited the *claim*. Escalating search maxima are evidence that a supremum is not being reached — which is exactly what an unbounded quantity looks like — and I read that as 'my search is weak' rather than 'the conjecture may be false'. **When a search keeps finding worse, try to prove it can always find worse before proposing the bound.** See THM-1105, and MISTAKE-152 for the earlier form of confusing a sampled maximum with a population bound.

@@ -9,6 +9,8 @@ scripts: 04-computation/extended_sieve_opus_S373.py, sieve_adversarial_opus_S373
 
 # THM-1100 — a new route, and what it would take
 
+> **CENTRAL CONJECTURE REFUTED (opus-S374), see THM-1105.** The bounded-denominator conjecture below is FALSE. Blocking a modulus q needs only ONE speed with q | v (that runner sits at the origin for every p), so a single speed divisible by lcm(1..Q) blocks every q <= Q at once: V = {lcm(1..Q)} u {12 coprime speeds} is primitive with no lonely rational of denominator <= Q, for arbitrary Q. This is why the searches recorded here climbed 25 -> 32 -> 39 -- the supremum is infinite. WHAT SURVIVES: the position law min-denominator = q0(V), the first modulus dividing no speed (96.8%), with 0/454 failures for q0 <= 14 and 34.8% for q0 > 14.
+
 THM-1095 retired the uniform Bonferroni ledger. This file builds a route
 from what survived, centred on the tool with the best kill rate.
 

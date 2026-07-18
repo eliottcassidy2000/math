@@ -1469,3 +1469,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `sieve_adversarial_opus_S373.out` | [STORED] | THM-1100: dilation obstruction + adversarial minimal denominators 25 -> 32 -> 39 (no bound claimed). | (self) |
 | `largest_gap_opus_S373.out` | [STORED] | THM-1100: largest-gap reformulation REFUTED as a control; gaps are situated, not large. | (self) |
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly for odd support (Tbar=0); the measured twelve-family spread is 12.4x, not a no-go theorem for every signed estimate. | (self) |
+| `denominator_unbounded_opus_S374.out` | [STORED] | THM-1105: lcm(1..Q) construction REFUTES the bounded-denominator conjecture. | (self) |
+| `divisibility_law_opus_S374.out` | [STORED] | THM-1105: min-den = q0 in 96.8%; 0/454 failures at q0<=14 vs 34.8% at q0>14; excess hunt to 19. | (self) |
