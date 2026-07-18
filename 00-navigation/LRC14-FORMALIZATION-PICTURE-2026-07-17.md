@@ -222,10 +222,12 @@ must state which LRC predicate it preserves.
   both factors, the per-runner danger measure `<=1/7`, and the seven
   consecutive overlap credits are kernel-pure.  `LRCC8Consecutive` assembles
   them along the path on every block `v,...,v+7` and proves positive restricted
-  Lebesgue measure for the block's common safe complement.  This is the live
-  generic shifted `c=8` theorem; it does not add the other five danger combs,
-  so it is neither an LRC(14) theorem nor the weighted dense-core supplier
-  above.
+  Lebesgue measure for the block's common safe complement.
+  `LRCC8ConsecutiveWitness` extracts a concrete point and packages a literal
+  `Lonely 14` witness for that `Fin 8` family without duplicating the measure
+  proof.  This is the live generic shifted `c=8` theorem; it does not add the
+  other five danger combs, so it is neither the full thirteen-speed LRC(14)
+  theorem nor the weighted dense-core supplier above.
 
 ## What is genuinely open (the honest short list)
 
@@ -280,6 +282,16 @@ exact.  Its remaining arithmetic is: choose a root/window covering the
 relevant events, bound the summed gcd budgets, pay the colored `462/210`
 transport factors, handle depths six and seven, and supply the adaptive-modulus
 live floor.
+
+**S67/S68 modulus-window audit.**  Connected all-bad zero-color seven-stalks
+are forced into exact reduced-modulus resonance for every `q <= 98`; the
+published `q=99,d=98` example makes this cardinality cutoff sharp.  THM-979's
+new sampling proposal instead supplies a very large explicit grid once a
+continuous positive `B5` floor is known.  These advances are complementary,
+not composable by size alone: the supplied modulus is far outside the finite
+stalk cutoff, and the sampling inequality/T_s continuous floor still await a
+Lean bridge.  Large-q small-reduced-speed stalks and colored `462/210` payment
+therefore remain honest sockets.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness

@@ -1250,3 +1250,30 @@ the val-transfer (`sum_nbij'`, klein's Thm892 template) and `sum_range_reflect`.
 The 89-anchor is now a corollary of the general law.  Tactic notes: `sum_nbij'`
 takes PLAIN maps (no membership binder); numeral rewrites under `NeZero`
 instances are motive-incorrect — reindex the range argument with `show` instead.
+
+## Landed addendum — eight-consecutive Hunter assembly (codex-S68)
+
+`LRCC8Consecutive` closes the previously separated `c=8` analytic interfaces.
+On the length-one window, each clipped danger comb has measure at most `1/7`.
+Each consecutive overlap has the exact closed-form lower credit
+
+```text
+1/49 + r(6-r)/(49k(k+1)),  r = k mod 7.
+```
+
+Across seven consecutive edges the baseline is exactly `1/7`, and at least one
+edge has positive excess.  Path Hunter therefore bounds the eight-event union
+strictly below the unit-window measure.  The parallel S77 module proves this
+measure theorem compactly; `LRCC8ConsecutiveWitness` is only the proof-facing
+consumer that extracts a point and packages a literal `Lonely 14` witness for
+every positive block `base,...,base+7`.  The ordered danger-comb path is the
+faithful carrier; a tournament or unordered Zarankiewicz support graph forgets
+the numeric credits and Hamiltonian charging order.  This closes one concrete
+block exit but does not pay the general depth-six/seven or `462/210` census
+debts.
+
+THM-979's explicit sampling modulus is a distinct next bridge.  It can turn a
+continuous positive `B5` floor into a finite grid, but its proposed modulus is
+far larger than the sharp `q<=98` zero-stalk resonance range.  The two routes
+must be joined through large-modulus payment or a formal sampling/T_s theorem,
+not by silently applying the finite-window fork.

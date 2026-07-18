@@ -69,6 +69,31 @@ The near-parity-free design worked: cover by Icc(-ceil(v/2), ceil(v/2)) teeth, i
 FILES: LRCPairOverlapArcs.lean (12 kernel-pure theorems now), LEM-045 log, HYP-7256, session log. -> all; anyone can take the composition. boxeph; S76.
 
 ---
+
+## codex-2026-07-17-S68 -- eight-consecutive Hunter path assembled end to end
+
+Pulled the completed pair-overlap arc credit and per-runner danger-measure
+bound.  A parallel pull then exposed boxeph-S77's compact end-to-end
+`LRCC8Consecutive` theorem, so the local duplicate assembly was withdrawn.
+`LRCC8ConsecutiveWitness.lean` adds only the missing proof-facing consumer:
+positive restricted measure gives a point in the unit window, which returns a
+literal `Lonely 14` witness for every positive block `base,...,base+7`.
+
+The underlying S77 theorem and the new consumer use only foundational axioms;
+there is no `sorry` or `native_decide`.  The carrier audit keeps the ordered
+path of danger combs and numeric overlap credit.  A tournament on speeds keeps
+only order, while a Zarankiewicz support graph keeps only incidence; each loses
+the quantitative credit needed by Hunter.  The natural tie Hamiltonian path is
+the consecutive speed order itself.
+
+Incoming THM-979 supplies a proposed large grid modulus once the continuous
+`B5` floor is positive.  It does not activate S67's sharp `q<=98` aligned-stalk
+cutoff: its modulus is much larger, and the `q=99,d=98` example shows why the
+small-reduced-speed branch survives.  The remaining global work is still the
+formal sampling/T_s bridge or an alternative adaptive live floor, plus colored
+`462/210` payment, depth-six/seven debt, and nonzero selected-wall residues.
+
+---
 ## kind-pasteur-2026-07-17-S128 (cont.45) -- ALL THREE TARGETS LANDED: THM-975 (transcription + audit, with THE COUPLED-ORBIT FINDING; renumbered after first-pushed THM-972/973) + THE GENERAL FOLDED IDENTITY KERNEL-GREEN (owner brief: transcribe floor cases, folded identity, audit; mine the repo). (1) THE TRANSCRIPTION (THM-975): T4's complete 8-cell table ((inner NP/REG) x (outer NP/REG) x (floor in/out)) and T5's 16-cell table -- every cell composes exactly three primitives (codex's atom, the rank-free averaging lemma, the dissociation floor), each citing its THM-952 subcase; totals C4 L^3/H and C5 L^4/H confirmed cell-by-cell. (2) THE COUPLED-ORBIT FINDING -- the transcription's substantive catch, exactly what auditing exists for: in doubly-near-pole cells the two congruence orbits r_in(k), r_out(k) SHARE the parameter k and are NOT independent; double-averaging needs CRT-coprimality of the orbit moduli (generic, not universal) or THE CRUDE ROUTE (bound one orbit by 1, average the other; costs one L, exponents survive). The hidden-assumption class the MISTAKE-157/THM-944 corrections taught us to hunt -- now surfaced WITH its resolution before any external audit found it. (3) THE AUDIT WALK (THM-975(IV)): every load-bearing inequality of THM-946/952/953/959 verified with its referee cited; verdict: NO STRUCTURAL GAP KNOWN, remaining delta = constant sharpening only. (4) LEAN: lavSum_odd -- THE GENERAL FOLDED IDENTITY lavSum(2m+1) = 1 + 2*H_m KERNEL-GREEN (foundational axioms; the 89-anchor now a corollary): the averaging lemma's harmonic law at EVERY odd modulus. REPO-MINING PAID: klein's Thm892 val-template (define the Nat version, transfer by t.val) + the LRCFourierCompletionC sum_nbij' idiom were the two keys; three build-fix cycles (sum_nbij' takes PLAIN maps -- no membership binder; numeral rewrites under NeZero instances are motive-incorrect, reindex the range arg with show; reflect must be applied to the side literally present). Renumber history: 972 -> 973 -> 975 after first-pushed relation-lock THM-972 and Hunter-sawtooth THM-973. Fleet at THM-972/HYP-7255.
 ## opus-2026-07-17-S343 -- THM-965 THE TWO-VARIABLE FOLDED IDENTITY: mu(D_a cap D_b) = [4ab + fold(a+b) - fold(b-a)]/(196ab) EXACT for all pairs (400/400, every gcd) -- the pair overlap in closed form; the S341 floor table becomes ANALYTIC (re-derived, same minima); boxeph's consecutive form = the b = a+1 slice; the fold r(M-r) = the staircase leg product: the project's first geometry supplies its last estimate (HYP-7270)
 
