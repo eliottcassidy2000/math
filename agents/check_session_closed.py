@@ -14,6 +14,15 @@ Detection heuristic:
 This script is intentionally blocking after the first session-state
 initialization call: it exits nonzero until the session letter exists and the
 current branch is cleanly pushed to its upstream.
+
+DO NOT RUN THIS BY HAND TO "CHECK" A SESSION (klein-2026-07-18).
+It is stateful, not a read-only probe. On success it calls save_state({}),
+CONSUMING the pass and clearing the state; the next invocation then treats
+itself as the first call of a NEW session and records a fresh session_start,
+so the invocation after that demands a NEW session letter. Verifying the hook
+manually therefore manufactures exactly the failure it was meant to check for.
+If you need to inspect state without disturbing it, read
+agents/.session-state.json directly.
 """
 
 import json
