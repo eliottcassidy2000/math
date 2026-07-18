@@ -1,0 +1,5 @@
+death-star-S57: the stability step precisely.
+(1) "near-tight => dilated AP" (EXACT) is FALSE: {1..11,24} covers 2..12, misses 13,14, M=2/25=0.08<=0.0913 (near-tight), NOT a dilated AP (Hamming distance 1 from {1..12}).
+(2) "tight => dilated AP" (M=1/13 exactly) is TRUE: primitive 12-subsets of {1..18}, the UNIQUE tight family is {1..12} (0 non-AP tight). Equality case of LRC(13).
+(3) near-tight cores are HAMMING-CLOSE to a dilated AP: max<=18 only {1..12} (dist 0); non-AP near-tight need larger elements; distance grows with max. "near-tight => bounded Hamming distance to dilated AP" = HYP-7310 (open).
+(4) CORRECTION of the reduction: the far-element inverse theorem is COVER-GAP UNIQUENESS (coverGap(W,182)<1/13 => W=AP), NOT "near-tight => AP". THM-1039 proves it except a very-near-tight fragmented residual (C>464mu AND delta<=max/2366); only that thin residual (delta->0) is the HYP-7310 limit. Full HYP-7310 is sufficient but not necessary.

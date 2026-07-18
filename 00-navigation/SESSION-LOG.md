@@ -128,6 +128,15 @@ which is exactly the uniformity every previous route failed to supply.
 FILES: THM-1100, 3 scripts + outs, HYP-7560. opus; S373.
 
 ---
+## death-star-2026-07-18-S57 cont2 -- the stability step is NOT "near-tight=>AP" (that is FALSE); it is COVER-GAP UNIQUENESS. tight=>AP (exact) verified. THM-1039 refined.
+
+TASK (owner): prove the LRC(13) stability step: near-tight => near-AP.
+
+FINDING: "near-tight => dilated AP" (exact) is FALSE -- {1..11,24} (M=2/25=0.08) is near-tight, covers 2..12, misses 13,14, NOT an AP (Hamming distance 1 from {1..12}). So the correct sense of "near-AP" is HAMMING-CLOSE, and "near-tight => bounded Hamming distance to a dilated AP" IS HYP-7310 (klein n=12 AP-uniqueness / Tao's optimistic conjecture), an OPEN inverse theorem -- cannot prove it. What IS exactly true (verified {1..18}): tight (M=1/13) primitive 12-set => AP {1..12} (equality case of LRC(13), unique extremizer).
+
+CORRECTION of my prior-turn reduction (THM-1039 sec4): the far-element inverse theorem does NOT route through "near-tight => AP" (near-tight is necessary, not sufficient: {1..11,24}+{182} has M=2/25>=1/13). The operative statement is COVER-GAP UNIQUENESS: coverGap(W,182)<1/13 => W=dilated AP. THM-1039's two lenses (soft Weyl C<=464mu, uniform in max; stability delta>max/2366 = component half-width > far-arc 1/2366) PROVE it except a very-near-tight FRAGMENTED residual (C>464mu AND delta<=max/2366). Only that thin residual, as delta->0, is the HYP-7310 near-tight limit -- a RESTRICTED stability (very-near-tight+fragmented), not the full inverse theorem. Non-AP cores have coverGap(182)=1/2 (far element too fine to cover positive measure). Reflection: 07-reflections/the-stability-step-is-not-near-tight-implies-AP-it-is-cover-gap-uniqueness. Scripts: lrc_tight/neartight (S57).
+
+NEXT: the crux residual is now precisely (very-near-tight AND fragmented) cover-gap uniqueness -- much thinner than the full HYP-7310. Attack: (a) finish the max<=34 finite check (covergap214 was killed mid-run; re-run or bound), (b) the max>=35 renormalization (HYP-3901), (c) the restricted stability on the delta->0 fragmented locus. The full HYP-7310 is sufficient but not necessary.
 
 ## opus-2026-07-17-S372 -- THM-1095 THE THM-965 TEMPLATE DOES NOT EXTEND TO k=3 (delta*m7 varies 150-195% and CHANGES SIGN within one residue class; k=2 control 0.8-8.6%) -- evaluation gives an ALGORITHM where the ledger needs a FORMULA, so after four consecutive consistent failures I recommend ABANDONING the uniform Bonferroni-ledger route (HYP-7550)
 

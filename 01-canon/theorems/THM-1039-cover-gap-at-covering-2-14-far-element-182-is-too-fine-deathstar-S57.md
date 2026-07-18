@@ -64,10 +64,21 @@ count (THM-1038) holds at `v_max=182`.
 - **Uniform (all max):** soft Weyl `C≤464μ` ∪ stability `δ>max/2366` cover all but the very-near-tight
   fragmented boundary; the latter closes for `max≤34` by the finite check, and is the renormalization
   stratum (HYP-3901) for `max≥35`.
-- **The genuine crux remains:** (i) the Freiman "first step" — that any covering-2..14 `M<1/13` family HAS
-  the AP-core-adjacent structure (`W` covers 2..12, misses 13,14, near-AP), boxeph THM-1017's open half
-  (HYP-7310); (ii) `max≥35` nested scales (HYP-3901). The cover-gap here is the "last step" (near-AP core
-  ⟹ AP or `M≥1/13`), now clean.
+- **A clean reduction of the compact first step to LRC(13) stability.** The stability lens (§3) runs
+  backwards: `M(V) < 1/13 ⟹ coverGap < 1/13 ⟹ δ ≤ max(W)/2366`, i.e.
+  > **`M(V) < 1/13` (covering 2..14) ⟹ `M(W) ≤ 1/13 + max(W)/2366`** — the core is near-tight (for
+  > `max ≤ 34`, `M(W) ≤ 0.0913`).
+
+  **REFINED (S57, see reflection `the-stability-step-is-not-near-tight-implies-AP...`):** this is NOT quite
+  right — "near-tight ⟹ AP" is FALSE as an exact implication (`{1..11,24}`, M=2/25, is near-tight, non-AP).
+  The operative statement is **cover-gap uniqueness** `coverGap(W,182)<1/13 ⟹ W=dilated AP` (near-tight is
+  necessary, not sufficient). THM-1039's two lenses prove it except a **very-near-tight fragmented** residual
+  (`C>464μ` AND `δ≤max/2366`); only that thin residual (`δ→0`) is the HYP-7310 near-tight limit — a
+  *restricted* stability, not the full inverse theorem. What IS exactly true: `M(W)=1/13` primitive ⟹ `W`
+  is the AP `{1..12}` (equality case, verified). Empirically the only covering-2..14 `M<1/13` families are
+  the deep wells `{1..12,182m}` (core = tight AP).
+- **The genuine crux remains:** (i) LRC(13) stability HYP-7310 (near-tight ⟹ AP); (ii) `max≥35` nested
+  scales (HYP-3901). The cover-gap here is the "last step" (near-AP core ⟹ AP or `M≥1/13`), now clean.
 
 **Net:** with the correct far element `182`, the far-element/position difficulty largely evaporates
 (`coverGap = 1/2` for non-AP); the residual is the additive-combinatorial first step, not the analytic
