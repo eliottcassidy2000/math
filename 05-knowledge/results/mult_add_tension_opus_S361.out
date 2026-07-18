@@ -1,0 +1,22 @@
+(1) DO COMPARABLE FAMILIES BLOCK ALL SEVEN MODULI?
+    4000 random comparable 13-families: block all seven in 433 (10.8%)
+    => the sieve already kills ~89% of comparable families outright.
+
+(2) DO ARITHMETIC PROGRESSIONS BLOCK ALL SEVEN?  (small doubling ~2)
+    2000 random APs: block all seven in 611 (30.6%)
+    an AP has doubling 1.92 (minimal)
+
+(3) THE DECISIVE TEST: among families that BLOCK all seven, is the
+    doubling forced UP?  (tension would mean blockers cannot be additively structured)
+    blockers    : n=732, median doubling 6.92
+    non-blockers: n=5268, median doubling 6.92
+
+(4) CAN A FAMILY HAVE BOTH minimal doubling AND block all seven?
+    YES -- explicit APs (doubling 2.00, the additive minimum) blocking all seven:
+      a=665, d=53: [665, 718, 771, 824]...  doubling 1.92
+      a=1927, d=137: [1927, 2064, 2201, 2338]...  doubling 1.92
+      a=259, d=49: [259, 308, 357, 406]...  doubling 1.92
+
+    => NO TENSION.  The multiplicative sieve constraint and minimal
+       additive doubling are SIMULTANEOUSLY satisfiable, by explicit
+       arithmetic progressions.  The over-determination hope FAILS.

@@ -1,3 +1,26 @@
+## opus-2026-07-17-S361 -- THM-1040 THE MULTIPLICATIVE/ADDITIVE OVER-DETERMINATION DOES NOT EXIST (refuting my own S360 proposal: blockers and non-blockers have IDENTICAL median doubling 6.92; APs at minimal doubling 1.92 block all seven moduli 30.6% of the time, explicit witnesses) + MISTAKE-153 + the surviving positive: the seven-moduli sieve kills ~89% of comparable families (HYP-7440)
+
+Owner: work the multiplicative/additive over-determination tension. I tested the idea I
+proposed last session and it is WRONG. The two constraints are statistically
+independent -- median doubling 6.92 among families blocking all seven moduli and 6.92
+among those that do not, over 6000 comparable families; blocking exerts no pressure on
+doubling at all. Worse for the idea, they are simultaneously satisfiable at the additive
+EXTREME: arithmetic progressions, doubling 1.92, block all seven 30.6% of the time, with
+explicit witnesses (665,53), (1927,137), (259,49). The structural reason is clean: for
+an AP with gcd(d,q)=1 the residues a+kd run over all of Z/q as k covers 13 consecutive
+values whenever q <= 13, so every such modulus is hit automatically.
+WHY I WAS WRONG (MISTAKE-153): I treated multiplicative and additive as competing
+demands on a scarce resource. An AP is a translate of a DILATE, and dilation is exactly
+the operation that spreads multiples of every small modulus through a family -- so
+additive structure HELPS satisfy the divisibility constraint rather than fighting it.
+One line of computation on APs would have refuted this before I put it in a letter.
+WHAT SURVIVES: the sieve is stronger than I credited. Only 10.8% of 4000 random
+comparable 13-families block all seven moduli, so THM-1035 disposes of ~89% of the
+comparable regime outright, before any measure-theoretic machinery.
+FILES: THM-1040, MISTAKE-153, script + out, HYP-7440. opus; S361.
+
+---
+
 ## mac-mini-2026-07-18-S114 -- THM-1031: the FAREY SUP-COMPANION to kps THM-826 (delta = (1-lambda(k+1))/k at the Farey pair (0/1,1/k)) + the covering lemma + the AP-core height bound max<=2(n-1). General height bound NOT proved; n=9 NOT pinned (census still running). HYP-7430.
 
 TASK (owner): prove max(A)<=3n; pin the n=9 threshold; pull often during computations; extend other agents' ideas.
