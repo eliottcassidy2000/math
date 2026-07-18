@@ -1,3 +1,20 @@
+## opus-2026-07-17-S350 -- THE PAIR-OVERLAP FLOOR BY CONTAINMENT, KERNEL-PURE (LRCPairOverlapFloor: the faster comb's 0-arc lies in both combs => 2*lam/b windowed floor; plus THE GCD STRENGTHENING -- 1/g is a common period so the argument runs around every j/g, a factor-g gain) -- the surviving half of OverlapMeasureBridge, obtained with NO sawtooth (HYP-7330)
+
+Owner: prove the pair-overlap lower bound by containment, be creative. Done, four
+theorems kernel-pure. The base containment is almost embarrassingly simple once seen:
+for a <= b the 0-arc of the FASTER comb has the smaller radius lam/b, and a <= b makes
+it fit inside the slower comb's arc as well -- so it lies in the intersection outright.
+THE CREATIVE PIECE: g = gcd(a,b) divides both, so 1/g is a COMMON PERIOD of the two
+combs and the same 0-arc argument runs around every point j/g, not just 0 -- giving
+badArcs g (lam*g/b) subset D_a cap D_b, a factor-g improvement (index the arcs by
+(a/g)*j and (b/g)*j, both integers, whose scaled centers are exactly j/g).
+CARE TAKEN: the volume bound is stated WINDOWED (cap Ioo(-1/2,1/2)) on purpose -- the
+periodic intersection has infinite measure on R, so an unwindowed 'lower bound' would
+be vacuously true and worthless. FILES: LRCPairOverlapFloor.lean, THM-964 note,
+HYP-7330. opus; S350.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.51) -- "covers all 2..14 => M > 1/14": IT IS THE COVERING-MIN PROBLEM (already largely proved) + THE WEAK-TARGET LOCALIZATION + MISTAKE-158 (owner brief: prove covers all 2..14 implies M > 1/14). THE HONEST ANSWER: I did not prove it from scratch, because it is NOT a new problem -- it is THM-523's residual covering-set hard core (HYP-2566), and the project's covering-min rigidity already delivers a STRONGER bound: THM-724 (single-killer covering => M >= 14/183; PROVED, 3 of 4 cases unconditional, near-tight non-dilated large-s residual empirically closed) + THM-726 (multi-killer >=2 far outliers => M >= 1/13; certified shape-complete |P| in {10,11}, |P|=9 legacy, |P|<=8 open). Since 14/183 = 0.07650 > 1/14 = 0.07143 (margin 13/2562), THM-724+726 give "covering => M > 1/14" modulo their two named gaps -- the equality horn closes exactly to the degree the covering-min does. (XII) MY NEW CONTRIBUTION -- THE WEAK-TARGET RELAXATION: the horn needs only M > 1/14, which sits 7% BELOW the sharp target 14/183 those theorems were proved against, so I MEASURED where the sharp program's gaps actually are. RESULT: THM-726's "open" |P| <= 8 strata are NOT near-tight -- 400 sampled covering families in exactly that stratum (core <= 8, >= 5 far outliers) give min M = 0.1362 = 1.91x the 1/14 threshold, with ZERO below 1/14, 14/183, or even 1/13; their openness is an artifact of the certification method (union-tail dying at j ~ 6.5), not genuine tightness. The genuine difficulty is concentrated in the near-tight SINGLE-killer neighbourhood (the deep well {1..12,182} at M = 14/183 = only 1.07x threshold) -- exactly where THM-724's UNCONDITIONAL cases (interval-core, dilated-core, killer-safe) already apply. LOCALIZATION: for the weak target, the entire remaining risk is THM-724's near-tight non-dilated large-s residual, and there the weak target has 7% more room than the bound it was proved against. NAMED NEXT: re-run that residual (and THM-726's |P|<=8 union-tail) against M > 1/14 instead of M >= 14/183 -- the extra margin may convert "empirically closed" to unconditional and close the equality horn outright. MISTAKE-158 LOGGED + THM-995(IX) CORRECTED: I had re-derived THM-523's q-witness lemma in cont.50 and presented it as new; credit is THM-523's (mac-mini, 2026-06-16), and my only increment is the strictness split (q<=13 STRICT, margin >= 1/182; q=14 non-strict) and the consequent pinning of the tight locus to "covers 2..13, misses exactly 14".
 
 Prompt (owner): prove covers all of 2..14 implies M > 1/14.
