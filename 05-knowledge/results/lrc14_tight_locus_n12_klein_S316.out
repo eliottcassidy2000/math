@@ -1,0 +1,16 @@
+TIGHT LOCUS AT n=12: hunting PRIMITIVE 12-sets with M = 1/13 (other than the AP).
+Necessary (THM-1002): M=1/13 in lowest terms => (val,q)=(1,13), so no v=0 mod 13 and {v mod 13} hits all six +- pairs.
+
+  AP {1..12}                       gcd= 1  pairs_hit=True   M=1/13     *** TIGHT ***
+  2*{1..11} u {13}                 gcd= 1  pairs_hit=False  M=1/12     
+  2*{1..12} minus max, u{13}       gcd= 1  pairs_hit=False  M=1/12     
+  3*{1..11} u {13}                 gcd= 1  pairs_hit=False  M=1/12     
+  {1..11,13}                       gcd= 1  pairs_hit=False  M=1/12     
+  {1..11,14}                       gcd= 1  pairs_hit=True   M=1/12     
+  {1..11,25}                       gcd= 1  pairs_hit=True   M=1/12     
+  {2,4,...,24} (=2*AP, non-primitive) gcd= 2  pairs_hit=True   M=1/13     *** TIGHT ***
+
+  filtered candidates tested: 11231 ; PRIMITIVE TIGHT sets found: 1
+     d=1,k=12 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+  => AP appears UNIQUE among primitive tight 12-sets in this range (supports HYP-7310)

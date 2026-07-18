@@ -1,0 +1,15 @@
+CLAIM: V = d*{1..12} u {k}, primitive and covering  =>  M(V) = 1/13 (boxeph HYP-7355 extremal family).
+Mechanism: good set of d*{1..12} at 1/13 is exactly t=b/(13d), 13 nmid b; need (k b mod 13d) in [d,12d].
+
+  primitive+covering members of the family tested: 240
+  predicate agrees with exact M==1/13 on: 240/240
+  members with M < 1/13 (would REFUTE HYP-7355): 2
+    [(1, 182, '14/183'), (1, 364, '28/365')]
+
+  => COUNTEREXAMPLE FOUND
+
+  failure mode analysis: M<1/13 requires the predicate to fail for ALL b, i.e. gcd(k,13d) = 13d, i.e. 13d | k.
+    d=1, k=13d= 13 : V=d*{1..13}, gcd=1 (primitive), covering=False  => excluded by NON-covering
+    d=2, k=13d= 26 : V=d*{1..13}, gcd=2 (NOT primitive), covering=True  => excluded by primitivity
+    d=3, k=13d= 39 : V=d*{1..13}, gcd=3 (NOT primitive), covering=False  => excluded by primitivity
+    d=5, k=13d= 65 : V=d*{1..13}, gcd=5 (NOT primitive), covering=False  => excluded by primitivity

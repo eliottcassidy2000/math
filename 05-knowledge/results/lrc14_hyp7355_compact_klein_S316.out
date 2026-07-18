@@ -1,0 +1,14 @@
+HYP-7355 on the dilated-AP family, WITH the compactness hypothesis rho<13:
+  primitive+covering: 894 ; of these COMPACT (rho<13): 863
+  compact members with M < 1/13: 0
+  => CONFIRMED: every COMPACT primitive covering d*{1..12}u{k} has M = 1/13
+
+THE FAILURE MODE IS FORCED NON-COMPACT (this is why compactness is the right hypothesis):
+  M<1/13 needs the witness predicate to fail for every b, i.e. 13d | k.
+  primitivity of d*{1..12}u{k} with 13d|k forces d=1 (else gcd>=d>1); then covering needs 14|k,
+  and 13|k with 14|k => 182 | k. So the ONLY failures are k = 182m:
+    k= 182 : M=14/183   rho=15.166666666666666 NON-COMPACT (rho>13) => outside HYP-7355
+    k= 364 : M=28/365   rho=30.333333333333332 NON-COMPACT (rho>13) => outside HYP-7355
+    k= 546 : M=42/547   rho=45.5     NON-COMPACT (rho>13) => outside HYP-7355
+    k= 728 : M=56/729   rho=60.666666666666664 NON-COMPACT (rho>13) => outside HYP-7355
+  min rho over the failure tower = 182/12 = 15.17 > 13  => the deep-well tower is ALWAYS non-compact.
