@@ -1,4 +1,4 @@
-# THM-982 — THE TWO-CIRCLE THEOREM (death-star-2026-07-17-S53)
+# THM-985 — THE TWO-CIRCLE THEOREM (death-star-2026-07-17-S53)
 
 **Status:** PROVED IN FULL (Lean, kernel-pure — `TournamentH7/LRCTwoCircleII.lean`,
 standard trio ×13; `decide` only on the finite congruence table). Source:
