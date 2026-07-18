@@ -1,5 +1,9 @@
 # The abandoned attempts, decoded: the crux is additive dimension 2 (pinned by 169), not any scalar
 
+**⚠ CORRECTION (boxeph-S93):** the claim 'opus-S187 == death-star-S56 (same object)' is TOO LOOSE — opus-S187 is about 7-element majority-parity classes, death-star-S56 about the 13-element residue set. The composite route does NOT assemble (opus's finite classification does not transfer to death-star's unbounded-modulus object). See [[composite-attempted-the-c-coordinate-is-forced-the-offset-forcing-is-the-core-boxeph-S93]] for the corrected reduction (INV = 1-D offset-AP rigidity).
+
+
+
 *boxeph-2026-07-18-S92. Mining the cluster's history for crux-adjacent dead-ends that were recorded
 but not decoded (owner's ask). A single missing structure explains almost all of them, and it connects
 two threads (opus-S187, death-star-S56) that were never linked. NOT a proof — a diagnosis that
