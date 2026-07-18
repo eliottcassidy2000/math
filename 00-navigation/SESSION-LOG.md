@@ -52,6 +52,28 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S97 -- THE SELF-SIMILAR RESONANCE IS A SCALING LAW TO A FIXED FRAME BASE, NOT A GENUINE RECURSION (Q_s(d)=C*d^2, C frame-fixed)
+
+Owner: test whether the S96 self-similarity ("w plays a Lonely Runner against the mode
+lattice, one level up") is a GENUINE RECURSION (inductable, LRC(14)-resonance -> lower-count
+LRC) or a wall. ANSWER: NOT a genuine recursion, three verified counts (E_t={1..6,t}):
+(A) SCALING LAW not tower: |S(ta)|/t -> |nu_hat(a)| FIXED 7-vector (0.164,0.235,0.316 matched
+t=240..1920); S(ta)=t*nu_hat(a)+o(t) reproduces the SAME comb at every scale -- one step.
+(C) SINGLE scaling generator = DIRICHLET: comb lives on tZ+7*{-k..k} (far lattice t decorated
+by the FIXED modulus 7); at t=241 (coprime 60 & 7) teeth STILL at 0,+-7,+-14 mod t, n mod 60
+patternless -- frame {1..6} adds NO independent generator. "w vs mode lattice" = 1-runner
+Diophantine, not a >=2-runner LRC; nothing to induct on. (B) BASE fixed+settled: nu_hat=DFT(nu),
+nu = frame section measure (nu_hat(0)=0 conservation), an LRC(<=6) object; one level to the
+bounded frame, does NOT iterate.
+
+EXACT (verified 2 ways): Q_s(t)=C*t^2, C=2*sum|nu_hat(ell)|^2/ell^2 fixed frame constant
+(direct 0.1365, reconstruction 0.1364); Error=sqrt(C)~0.369 FIXED. So Q_s=o(r^2) is FALSE at
+the peel WITH THE EXACT CONSTANT. REFRAME: route needs Error<Phi_inf(frame), both fixed
+<=6-frame constants => density row at resonant peel closes <=> sqrt(C)<Phi_inf(frame), a fixed
+DECIDABLE frame-local inequality (boundary = tightness M=1/14). Not an open recursion. Next:
+compute Phi_inf in klein's normalization + check. LRC(14) not closed.
+FILES: reflection the-self-similar-resonance-is-a-scaling-law-...-boxeph-S97, script+out, HYP-7515. boxeph; S97.
+
 ## boxeph-2026-07-18-S96 -- THE SOFT WEYL BOUND CLOSES THE DENSITY ROUTE OFF-RESONANCE, BUT ITS NATURAL PEEL IS A LONELY RUNNER ONE LEVEL UP (density bottoms on the SAME resonance as covering)
 
 Owner: aim the soft Weyl bound at the density route (Route A). Did exactly that, and the

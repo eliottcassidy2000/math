@@ -1,0 +1,42 @@
+==============================================================================
+TEST A + B -- scaling law vs tower; is the base a FIXED 7-comb?
+family E_t = {1..6, t};  Error(t) = |S(t)|/t  at the forced resonant peel
+==============================================================================
+     t  s*      M |  |S(t)|/t  |S(2t)|/t  |S(3t)|/t | nu_hat(1) nu_hat(2) nu_hat(3)
+     6   6     14 |    0.1200     0.2382     0.3407 |    0.1446    0.2606    0.3250
+    12   0     20 |    0.3551     0.2161     0.1348 |    0.0371    0.1502    0.1039
+    24   6     24 |    0.1262     0.2687     0.3833 |    0.0905    0.1764    0.2057
+    60   0     42 |    0.1519     0.3081     0.3065 |    0.1100    0.2489    0.2366
+   120   6     68 |    0.1641     0.1985     0.3580 |    0.1537    0.1957    0.3034
+   240   6    130 |    0.1601     0.2324     0.3204 |    0.1636    0.2262    0.3025
+   480   0    258 |    0.1627     0.2442     0.3137 |    0.1580    0.2367    0.3058
+   960   6    500 |    0.1647     0.2305     0.3210 |    0.1635    0.2302    0.3142
+  1920   0    994 |    0.1642     0.2348     0.3163 |    0.1647    0.2341    0.3140
+
+Interpretation: if |S(at)|/t and |nu_hat(a)| CONVERGE to fixed constants
+(t-independent), the self-similarity is a SCALING LAW terminating at the
+fixed 7-comb nu_hat -- ONE step, NOT a tower.  Error -> c* = |nu_hat(1)| fixed.
+A genuine recursion would instead give a SHRINKING sequence with no fixed base.
+
+==============================================================================
+TEST B' -- the fixed base nu: empty-section (LRC(6) gap) structure
+==============================================================================
+t=1920, worst s*=0:  signed section counts N_c = [-283, 327, -8, 32, -36, -5, -27]
+  nu_c = N_c/t = [-0.1474, 0.1703, -0.0042, 0.0167, -0.0187, -0.0026, -0.0141]
+  section s*=0 count = -283  (the LRC(6)-frame gap the far element sits in)
+
+==============================================================================
+TEST C -- generator count of the mode comb: single lattice tZ (Dirichlet)
+          or multi-generator (genuine LRC of rank = #generators)?
+==============================================================================
+t=  24 P=   840 M=   24 peak|S|=3.0 thr=1.1 | comb size= 741  on tZ=  34  off tZ= 707  gcd(comb)=1
+        off-lattice residues mod t (first 12): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]...  (count 23)
+t=  60 P=   420 M=   42 peak|S|=9.1 thr=3.2 | comb size= 259  on tZ=   6  off tZ= 253  gcd(comb)=1
+        off-lattice residues mod t (first 12): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]...  (count 59)
+t= 120 P=   840 M=   68 peak|S|=19.7 thr=6.9 | comb size= 261  on tZ=   6  off tZ= 255  gcd(comb)=1
+        off-lattice residues mod t (first 12): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]...  (count 109)
+
+If off-tZ teeth are absent or a FIXED small residue set mod t (e.g. multiples
+of t/7), the comb = single lattice tZ modulated by the fixed 7 -> 1 nontrivial
+generator -> DIRICHLET, not a multi-runner LRC.  Rank >= 2 with growing/coprime
+generators would be needed for a genuine LRC recursion.
