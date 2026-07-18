@@ -1,0 +1,23 @@
+### (A) cross-validation vs klein-S327 THM-1042 (independent computation) ###
+  B          my mu        klein mu    my L_max      my 1/L_max   klein 1/L_max
+  {1..3 }    0.69048      0.69048     5/21          4.2          4.2          MATCH
+  {1..4 }    0.61905      0.61905     9/56          6.2          6.2          MATCH
+  {1..5 }    0.50476      0.50476     4/35          8.8          8.8          MATCH
+  {1..6 }    0.45714      0.45714     1/12          12.0         12.0         MATCH
+  {1..7 }    0.33469      0.33469     3/49          16.3         16.3         MATCH
+  {1..8 }    0.26582      0.26582     5/112         22.4         22.4         MATCH
+  {1..9 }    0.18107      0.18107     2/63          31.5         31.5         MATCH
+  {1..10}    0.13798      0.13798     3/140         46.7         46.7         MATCH
+  {1..11}    0.05633      0.05633     1/77          77.0         77.0         MATCH
+  all rows agree with klein: True
+
+### (B) klein's (mu,N) threshold  N/(6 mu)  vs mine  1/(3L) ###
+  setting            after removing        mu'        N     N/(6mu')   1/(3L)    winner
+  r=2 worst (THM-1051) [873]                 0.0904750  102   187.9      339.5     klein
+  r=2 drop12          [873]                 0.0481518  62    214.6      339.5     klein
+  r=3 worst (THM-1061) [864, 897]            0.0744570  194   434.3      430.4     mine
+  r=3 alt             [890, 896]            0.1276730  312   407.3      380.6     mine
+  r=4 sample          [860, 880, 897]       0.1082809  346   532.6      354.1     mine
+  r=4 sample2         [870, 885, 899]       0.1082690  356   548.0      359.1     mine
+
+### (C) so what is the r=4 split point under the better bound? ###

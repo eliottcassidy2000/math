@@ -1,0 +1,29 @@
+### worst kill-fraction over killers, by core size ###
+  |P|  #cores  min|bits|  worst kill-frac   worst killer   r_max = floor(1/frac)
+  11   12      48         0.75000            728            1
+  10   66      70         0.63636            728            1
+  9    220     94         0.59574            650            1
+
+### which killers have the biggest kill-fraction?  (divisibility is the driver) ###
+  core {2..12}, |bits| = 88
+  frac     killer  divisors in [15,40]
+  0.50000  494     [19, 26, 38]
+  0.50000  351     [27, 39]
+  0.47727  702     [18, 26, 27, 39]
+  0.47727  559     []
+  0.47727  481     [37]
+  0.45455  780     [15, 20, 26, 30, 39]
+  0.45455  728     [26, 28]
+  0.45455  364     [26, 28]
+  0.43182  884     [17, 26, 34]
+  0.43182  741     [19, 39]
+  ...
+  0.00000  236     []
+  0.00000  212     []
+  0.00000  178     []
+
+### the counting lemma verdict ###
+  r=2 killers, core size 11: worst frac 0.75000 ; r*frac = 1.5000  -> counting insufficient
+  r=3 killers, core size 10: worst frac 0.63636 ; r*frac = 1.9091  -> counting insufficient
+  r=4 killers, core size 9: worst frac 0.59574 ; r*frac = 2.3830  -> counting insufficient
+DONE

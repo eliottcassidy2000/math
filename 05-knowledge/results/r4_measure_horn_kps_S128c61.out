@@ -1,0 +1,5 @@
+### r=4 : 220 nine-speed cores ###
+  S(P) largest component: min 0.010913  median 0.027056  max 0.060606
+  S(P) total measure:     min 0.117878  max 0.288095
+
+### worst L after removing THREE killers exactly ###
