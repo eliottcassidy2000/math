@@ -62,19 +62,23 @@ being sufficient.
 All eight numerators blocked, by just four speeds each killing exactly
 |W₁₅|−1 = 2. The covering is tight.
 
-## Why the coarsest union bound has no room at basic moduli
+## Why the coarsest all-unit union bound has no room at basic moduli
 
 A speed v coprime to q kills the numerators p = v⁻¹w for w ∈ W_q\{0}, so
 
-> #bad p ≤ 13·(|W_q| − 1) = 26⌊(q−1)/14⌋ ≈ 1.857 q > q > φ(q)
+> #bad p ≤ 13·(|W_q| − 1) = 26⌊(q−1)/14⌋.
 
-and this coarse union bound does not fire — for q = 15, 23, 29, 41, 71 the bad
-count (26, 26, 52, 52, 130) exceeds φ(q) (8, 22, 28, 40, 70) every time.
+For `q>=29` the displayed bound is larger than `q`, hence larger than
+`phi(q)`.  For `15<=q<=28`, it is at least `26`, while the largest totient in
+that range is `phi(23)=22`.  Thus this coarse all-unit bound does not fire at
+any `q>=15`.  In particular, for q = 15, 23, 29, 41, 71 the bad count
+(26, 26, 52, 52, 130) exceeds φ(q) (8, 22, 28, 40, 70) every time.
 This is the **same 13/7 > 1 obstruction** that killed S₁, the Bonferroni
 ledger, and every union bound in this program, now appearing in the
 purely arithmetic setting.
 
-This rules out only the displayed sum of per-speed worst-case cardinalities.
+This rules out only the displayed sum of per-speed worst-case cardinalities
+in the all-unit specialization.  Nonunit speeds require the gcd strata below.
 It does not rule out overlap-sensitive, character-sum, or cross-modulus
 counting arguments.
 
@@ -123,7 +127,15 @@ ceil(phi(q) / max_(proper g|q) K_(q,g)).
 
 At `q=90` this lower bound is `3` and is attained by `{5,25,35}`.  The
 incoming unit-only blocking costs remain correct for unit speeds, but are not
-lower bounds for arbitrary nonzero residues.  The genuinely global problem is
+lower bounds for arbitrary nonzero residues.  The **primitive** reduced-
+numerator blocking cost at `q=90` is exactly `4`: any three-speed cover must
+attain `24=3*8`, and the unique proper stratum of size eight is `g=5`, forcing
+all three speeds to be divisible by five.  The primitive set
+`{1,5,25,35}` attains four.  This covers only the 24 unit numerators; 47
+nonunit numerators remain lonely for that set, so it is not a counterexample
+to an unrestricted-numerator statement at `q=90`.
+
+The genuinely global problem is
 simultaneous blocking across many moduli, where the same integer lift must
 serve all owner obligations; this is the shared-lift atlas of THM-1099.
 
@@ -133,3 +145,5 @@ The exact referee
 counterexample.  Source/output SHA-256 values are
 `3386325bfcea3fbc18d390d9b8a7b69c58ac40e2e097afa7a3f19ef8cb95bcbd` and
 `b49c5237b61db4a1faf8facaebbae388bad62567f859b035a00096729c1318c8`.
+An independently structured direct enumeration checked all `16,110` pairs
+with `2<=q<=180`, including the exact primitive-cost argument above.

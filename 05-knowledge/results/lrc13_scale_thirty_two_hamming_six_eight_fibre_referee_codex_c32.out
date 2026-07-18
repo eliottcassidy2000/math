@@ -1,0 +1,37 @@
+scale=32 p=13 hamming=6 referee=literal-crt-Z8-upper-relaxation
+orders=(1,2,4,8,16,32) unit-counts=(1,1,2,4,8,16)
+hereditary-grammar=at-least-two-coordinates-have-order-32
+hereditary-words=12281 weighted-states/support=956301312 labelled-support-order-contexts=11347644 raw-labelled-states=883622412288
+grammar-complement-unweighted no-D32=15625 exactly-one-D32=18750
+grammar-complement-weighted no-D32=16777216 exactly-one-D32=100663296
+D1 ratio-cardinalities=(32,0,0,0,0,0,0,0,0,0,0,0)
+D2 ratio-cardinalities=(16,0,0,0,0,16,16,0,0,0,0,0)
+D4 ratio-cardinalities=(8,0,8,8,0,8,8,0,8,8,0,0)
+D8 ratio-cardinalities=(8,4,4,8,4,4,4,4,8,4,4,4)
+D16 ratio-cardinalities=(6,4,4,6,6,4,4,6,6,4,4,4)
+D32 ratio-cardinalities=(5,5,5,5,5,5,5,5,5,5,5,4)
+scalar-feasible-owners-per-context=0:76548 1:2800212 2:4692582 3:2946408 4:743040 5:85404 6:3450
+scalar-supports-by-survivor-count=0:640 1:96 2:48 3:30 17:24 22:24 33:12 34:24 38:24 54:2
+scalar-survivors=3450 supports=284 literal-unit-words=621084672 capacity-vectors=1649 order-one-survivors=0
+scalar-multiplicities=(0,0,1,0,0,5):72 (0,0,1,0,1,4):168 (0,0,1,0,2,3):48 (0,0,1,0,3,2):384 (0,0,1,1,0,4):48 (0,0,1,1,1,3):48 (0,0,1,1,2,2):672 (0,0,1,2,1,2):312 (0,0,1,3,0,2):12 (0,0,2,1,1,2):72 (0,0,2,2,0,2):36 (0,0,3,0,1,2):12 (0,0,3,1,0,2):12 (0,0,4,0,0,2):30 (0,1,3,0,0,2):96 (0,2,0,0,0,4):36 (0,2,0,0,1,3):144 (0,2,0,0,2,2):216 (0,2,0,1,0,3):144 (0,2,0,1,1,2):432 (0,2,0,2,0,2):216 (0,2,1,0,1,2):96 (0,3,1,0,0,2):144
+normalized-owner-keys=1725 labelled-owner-implication-checks=20700
+Z8-anchor-bank-size=1:8064 2:4008 3:636 4:3576 6:2088 7:240 8:192 9:36 10:684 12:984 14:168 26:24
+Z8-upper-bound=20:24 21:396 22:420 23:564 24:1416 25:2352 26:3252 27:3780 28:3708 29:2208 30:1260 31:480 32:624 33:192 34:24
+Z8-live-owners-per-context=0:2802 1:456 2:192
+exact-maximum-union=20:24 21:396 22:432 23:612 24:1524 25:3312 26:3852 27:4596 28:3660 29:1680 30:276 31:96 32:240
+exact-feasible-owners-per-context=0:3258 1:144 2:48
+Z8-minus-exact=0:13272 1:4056 2:2412 3:816 4:120 5:24 threshold-mismatches=600
+exact-bank-size=1:192 10:192 36:624 48:96 52:96 56:96 64:288 68:192 70:96 72:72 82:144 100:48 102:48 112:384 120:192 132:24 134:96 136:168 160:192 168:288 174:96 176:192 180:96 186:48 190:48 192:96 193:48 204:48 216:384 226:96 236:48 244:96 252:96 258:48 268:96 270:48 298:48 300:72 308:132 326:192 400:96 424:192 428:24 432:192 484:24 510:96 516:24 518:24 532:48 540:24 552:96 556:24 570:24 604:36 646:96 684:96 704:12 708:96 754:48 828:12 846:48 854:48 944:96 964:72 976:96 1052:96 1076:12 1082:24 1084:24 1126:12 1148:96 1152:24 1180:48 1196:12 1354:12 1360:96 1416:24 1442:24 1456:12 1538:48 1840:48 1976:24 1984:96 2000:192 2036:48 2048:24 2056:48 2104:48 2144:96 2268:24 2308:24 2476:96 2624:24 2670:24 2684:48 2786:24 2800:48 2996:24 3064:24 3262:24 3336:96 3356:48 3420:192 3536:24 3560:48 3692:192 3832:48 3968:48 4052:48 4248:192 4800:96 4840:48 4848:96 5008:96 5064:48 5368:48 5524:96 5688:96 5822:24 6064:96 6224:48 6242:48 6468:24 6596:48 6846:192 7036:96 7064:48 7108:192 7344:192 7372:24 7404:24 7700:24 7736:24 7846:192 8140:288 8142:48 8188:48 8240:96 8584:96 8808:192 9140:24 9356:96 9656:96 9766:96 9896:24 10284:96 10290:48 10464:48 10528:24 10600:48 10646:96 10760:192 10924:192 11460:24 11566:48 11984:48 12076:48 12296:48 12336:96 12592:48 13636:192 13876:96 13942:48 14000:192 14256:96 14750:96 15188:96 15340:48 15526:96 15756:192 15884:192 16376:96 16668:480 20094:96 20940:192 21076:192 21104:96 21436:96 22392:48 22480:96 22800:96 23508:24 23780:96 23972:96 24084:96 24136:96 24388:96 24424:192 24800:192 24896:96 24928:48 27184:24 31604:96 32596:96 33168:48 33480:192 35148:192 36484:96 43740:48 45416:96 47464:48 52824:48 54772:96 56144:48 60360:48 62284:48 63716:48 74288:48 74300:96 75276:96 76376:96 88428:24 93292:96 95076:48 95532:48 104900:48 105004:24 111748:24 113392:96 116676:48 116812:48 119968:48 135088:96 148464:96 156108:96 156732:96 173544:24 186560:48 188136:48 193288:24 195648:24 202536:48 204480:48 212944:48 214336:24 214872:24 219952:48 227272:48
+exact-reachable-total=403733376 largest-bank=227272
+literal-cover-implies-Z8-cover=checked-on-all-20700-labelled-owner-obligations; all-six-Z8-live-row=0
+owner-tournament vertices=owner-proof-obligations; observable=lexicographic-sign(K_i-K_j); K8=(U8>=32,U8,scalar-capacity,anchor-bank-size); Kexact=(cover,exact-max,scalar-capacity,exact-bank-size)
+owner-tournament switch=K8-to-Kexact; tie-Hamiltonian-path=increasing-owner-label-coordinate
+owner-tournament fingerprints=both gauges all 3450 transitive scores=(0,1,2,3,4,5) triangles=0 SCCs=(1,1,1,1,1,1) Hamiltonian-paths=1
+owner-tournament K8-ties=0:1536 1:888 2:732 3:204 4:48 7:42 Kexact-ties=0:1728 1:1008 2:588 3:114 7:12
+owner-tournament K8-natural-flips=0:11 1:18 2:53 3:117 4:253 5:372 6:582 7:651 8:562 9:396 10:220 11:127 12:59 13:19 14:8 15:2 Kexact-natural-flips=0:7 1:19 2:55 3:117 4:240 5:369 6:559 7:615 8:527 9:419 10:272 11:146 12:65 13:28 14:11 15:1
+owner-tournament gauge-edge-flips=0:1716 1:768 2:348 3:294 4:306 5:18
+proof-carrier=eight Z8 sheet fibres; D|8 masks are exact whole-fibre anchors and D16/D32 masks are independently maximized nonanchor toothpicks
+carrier-preserves=absolute owner upper bound and literal-cover implication; destroys=within-fibre offsets, nonanchor overlaps, and shared-unit compatibility
+assumption-challenge=runner tournaments, gaps, fixed sections, boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, and bare proof rankings all lose the absolute threshold or anchor incidence; owner obligations are the least honest tournament sidecar, not the proof carrier
+FNV64 crt-bases=91ac481d65589da3 literal-masks=591a8c62027244b9 Z8-anchors=b4ea8d7d206633e2
+FNV64 grammar=9da5e66e93599d17 scalar=f9db3e0f3f3ab871 owner-audit=35212d3cc39515a1

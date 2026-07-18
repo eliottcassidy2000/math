@@ -1,4 +1,5 @@
-(4) BLOCKING COST ceil(phi(q)/k_q) -- speeds needed to block q by RESIDUES
+CORRECTION: this is the UNIT-SPEED cost only; see THM-1110 for gcd strata.
+(4) UNIT-SPEED COST ceil(phi(q)/k_q)
     q   phi(q)  |W_q|  k_q   cost   affordable with 13 speeds?
      15      8      3    2      4   yes
      16      8      3    2      4   yes
@@ -47,33 +48,14 @@
      59     58      9    8      8   yes
      60     16      9    2      8   yes
 
-(5) THE EXPENSIVE MODULI -- these force the adversary to spend a multiple
+(5) UNIT-SPEED TABLE ONLY -- no conclusion for arbitrary nonunit speeds
     moduli in [15,60] with blocking cost > 13 (or infinite): []
     count: 0 of 46
 
-    Any family blocking ALL of these must contain, for each such q,
-    a speed divisible by q.  With only 13 speeds that is a strong
-    simultaneous-divisibility constraint -- and it is exactly the
-    structure the THM-1105 lcm construction exploits.
+    These rows do not force divisibility: a proper nonunit gcd stratum
+    may be cheaper than the displayed unit-speed cost.
 
-(6) SANITY: does the cost prediction match the S375 counterexample?
-    q=15: predicted cost ceil(phi/k) = 4 speeds
+(6) HISTORICAL q=15 DIAGNOSTIC (not a unit-speed lower-bound test)
+    q=15: unit-speed cost ceil(phi/k) = 4 speeds
     speeds actually doing the blocking: [11, 77, 137, 226, 232, 262]
-    number of distinct blockers: 7  (prediction was a LOWER bound)
-(7) THE COUNTING THEOREM DOES FIRE -- just not at 13 speeds.
-    THEOREM: if s speeds, none divisible by q, and s*k_q < phi(q),
-    then some p/q is lonely (bad numerators < phi(q), so one survives).
-    best modulus = the one maximising phi(q)/k_q:
-      q=  90  phi=  24  k_q=  2  phi/k =  12.00  -> fires for s <= 11
-      q=  23  phi=  22  k_q=  2  phi/k =  11.00  -> fires for s <= 10
-      q= 150  phi=  40  k_q=  4  phi/k =  10.00  -> fires for s <= 9
-      q=  66  phi=  20  k_q=  2  phi/k =  10.00  -> fires for s <= 9
-      q=  41  phi=  40  k_q=  4  phi/k =  10.00  -> fires for s <= 9
-      q=  25  phi=  20  k_q=  2  phi/k =  10.00  -> fires for s <= 9
-      q= 126  phi=  36  k_q=  4  phi/k =   9.00  -> fires for s <= 8
-      q=  54  phi=  18  k_q=  2  phi/k =   9.00  -> fires for s <= 8
-
-    MAXIMUM s for which the counting proof works: s = 11  (at q = 90)
-    LRC(14) needs s = 13.  The proof covers s <= 11, missing by 2.
-    i.e. this argument closes the analogue for up to 12 runners and
-    falls exactly 2 speeds short of the open case.
+    number of distinct blockers: 7

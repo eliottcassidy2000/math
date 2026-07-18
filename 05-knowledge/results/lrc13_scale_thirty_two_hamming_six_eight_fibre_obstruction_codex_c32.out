@@ -1,0 +1,50 @@
+### c=32 AP-centred H6 exact eight-fibre primary ###
+scope: primitive proper common-scale H6 owner-local gate only
+orders: (1, 2, 4, 8, 16, 32)
+unit counts: (1, 1, 2, 4, 8, 16)
+grammar equivalence: leave-one-out lcm=32 iff at least two D=32
+hereditary order words: 12281
+literal state words/support: 956301312
+raw labelled state words: 883622412288
+grammar digest: ea035511ad805d5211005c01f3c230882cf5a5349a5a0a11830221bc7538740f
+CRT-base digest: 68b88f331468047800d59975eaabd0bdf02af4567bc70ffe8a4afb0984a12b74
+literal-mask digest: f715f217aae1be03edc31d51a4eb4380024e815c67cc73983bd321beff8c5b81
+cardinality vectors by ratio r=1..12; columns D=1,2,4,8,16,32:
+  r= 1: (32, 16, 8, 8, 6, 5)
+  r= 2: (0, 0, 0, 4, 4, 5)
+  r= 3: (0, 0, 8, 4, 4, 5)
+  r= 4: (0, 0, 8, 8, 6, 5)
+  r= 5: (0, 0, 0, 4, 6, 5)
+  r= 6: (0, 16, 8, 4, 4, 5)
+  r= 7: (0, 16, 8, 4, 4, 5)
+  r= 8: (0, 0, 0, 4, 6, 5)
+  r= 9: (0, 0, 8, 8, 6, 5)
+  r=10: (0, 0, 8, 4, 4, 5)
+  r=11: (0, 0, 0, 4, 4, 5)
+  r=12: (0, 0, 0, 4, 4, 4)
+scalar feasible-owner histogram: 0:76548 1:2800212 2:4692582 3:2946408 4:743040 5:85404 6:3450
+scalar support survivor histogram: 0:640 1:96 2:48 3:30 17:24 22:24 33:12 34:24 38:24 54:2
+scalar survivors: 3450
+scalar survivor supports: 284
+scalar multiplicity profiles: 23
+scalar capacity vectors: 1649
+literal scalar-survivor state words: 621084672
+scalar digest: aba8c8c9d589103d83c135f512bec5375ded7997adc166c77b9051cc2b2c106a
+Z/8 anchor orders: (1, 2, 4, 8)
+anchor-bank size histogram: 1:8064 2:4008 3:636 4:3576 6:2088 7:240 8:192 9:36 10:684 12:984 14:168 26:24
+relaxed owner-bound histogram: 20:24 21:396 22:420 23:564 24:1416 25:2352 26:3252 27:3780 28:3708 29:2208 30:1260 31:480 32:624 33:192 34:24
+live owners/context: 0:2802 1:456 2:192
+flag digest: d6c6f54aa1efbfc0968a1bc11583bab9de59ef589fc509164d3940ae67c145e1
+context multiplication orbit sizes: 6:3 12:286
+support multiplication orbit sizes: 2:1 6:1 12:23
+tournament vertices: six owner obligations (not runners or sheets)
+tournament observable: (relaxed bound, scalar capacity)
+tournament switch/tie path: harder key wins; coordinate order breaks ties
+tournament fingerprint classes: 71
+tournament tie/flip histogram: (0, 0):2 (0, 1):8 (0, 2):14 (0, 3):38 (0, 4):75 (0, 5):122 (0, 6):202 (0, 7):259 (0, 8):259 (0, 9):202 (0, 10):122 (0, 11):75 (0, 12):38 (0, 13):14 (0, 14):8 (0, 15):2 (1, 1):2 (1, 2):11 (1, 3):28 (1, 4):54 (1, 5):102 (1, 6):169 (1, 7):204 (1, 8):169 (1, 9):102 (1, 10):54 (1, 11):28 (1, 12):11 (1, 13):2 (2, 0):2 (2, 1):2 (2, 2):14 (2, 3):31 (2, 4):75 (2, 5):94 (2, 6):130 (2, 7):130 (2, 8):94 (2, 9):75 (2, 10):31 (2, 11):14 (2, 12):2 (2, 13):2 (3, 0):5 (3, 1):5 (3, 2):9 (3, 3):19 (3, 4):24 (3, 5):36 (3, 6):56 (3, 7):36 (3, 8):24 (3, 9):19 (3, 10):9 (3, 11):5 (3, 12):5 (4, 2):1 (4, 3):4 (4, 4):15 (4, 5):22 (4, 6):22 (4, 7):15 (4, 8):4 (4, 9):1 (7, 0):3 (7, 2):5 (7, 3):4 (7, 4):18 (7, 5):4 (7, 6):5 (7, 8):3
+tournament scores: always (0,1,2,3,4,5); triangles=0; SCCs=1^6
+challenged assumption: proof-obligation vertices replace runner vertices
+preserved: owner-local impossibility under a sound upper relaxation
+destroyed: shared unit word and all nonanchor overlaps (telemetry only)
+THEOREM: every scalar row has at least four owners with U_8<32
+VERDICT: primitive proper AP-centred common-scale-32 H6 face EMPTY

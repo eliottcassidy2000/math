@@ -1,0 +1,122 @@
+### universal weighted r=6 finite-horn atlas ###
+atlas obligations: 35
+modulus range: 26..112
+total integer weight: 505
+minimum all-core safety slack: 0
+candidate killers checked exactly: 92..332 (241)
+maximum killed weight: 84
+maximizing killers: 93 96 106 120 121 122 123 125 133 138 140 146 147 149 151 153 181 182 185 192 196 198 202 208 221 224 233 234 236 249 260 262 263 268 273 286 293 294 299 305 311 312 314 320 323
+six-killer capacity: 6*84 = 504 < 505
+CONCLUSION: every six candidate killers leave an atlas obligation safe
+
+### frozen obligation table (q a weight core_slack) ###
+ 26   2  81   0
+ 27   2   7   0
+ 28   2   3   0
+ 28  13   7   0
+ 40   3  10   0
+ 41   3   3   0
+ 41  19   5   0
+ 42  13   1   0
+ 53   4  16   0
+ 55   4   2   0
+ 56  13  21   0
+ 68   5   3   0
+ 68  21  21   0
+ 69   5   1   0
+ 69  16  12   0
+ 70  27  20   0
+ 79   6   3   0
+ 81  25   5   0
+ 82  19   6   0
+ 83   6   1   0
+ 83  32   5   0
+ 84  13   8   0
+ 93   7   9   0
+ 94   7  13   0
+ 97   7   1   0
+ 97  30   2   0
+ 98  15   6   0
+105   8   4   0
+106  49  46   0
+107  33  10   0
+109  42  49   0
+110  17  25   0
+111   8   1   0
+111  17  64   0
+112  43  34   0
+
+### killer-load histogram (load: count) ###
+  0:   4
+  1:   1
+  2:   2
+  3:   4
+  4:   2
+  5:   1
+  6:   3
+  7:   2
+  8:   2
+ 13:   2
+ 16:   1
+ 17:   1
+ 19:   1
+ 23:   1
+ 25:   2
+ 26:   1
+ 27:   1
+ 28:   2
+ 29:   2
+ 30:   2
+ 32:   3
+ 33:   2
+ 35:   2
+ 37:   2
+ 38:   4
+ 42:   1
+ 43:   2
+ 44:   1
+ 46:   1
+ 47:   1
+ 49:   1
+ 51:   3
+ 52:   3
+ 53:   2
+ 54:   5
+ 55:   1
+ 56:   4
+ 57:   1
+ 60:   2
+ 61:   1
+ 62:   7
+ 63:   4
+ 64:   1
+ 65:   7
+ 66:   4
+ 67:   1
+ 68:   2
+ 69:   2
+ 70:   2
+ 71:   8
+ 72:   5
+ 73:   5
+ 74:   9
+ 75:   6
+ 76:   5
+ 77:   4
+ 78:   7
+ 79:   6
+ 80:   5
+ 81:  16
+ 82:   5
+ 83:   6
+ 84:  45
+
+### Tournament Analysis (lossy diagnostic) ###
+vertices: the 241 candidate killers
+observable: load(k)-load(l); tie gauge: increasing integer k
+tournament: transitive; directed 3-cycles: 0; SCCs: 241
+score histogram after tie gauge: every score 0..240 occurs once
+Hamiltonian paths: 1
+edges changed by reversing only the tie gauge: 1414
+proof-facing object: weighted obligation--killer incidence hypergraph
+destroyed by tournament quotient: obligation owners and higher overlaps

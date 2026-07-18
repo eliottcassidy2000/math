@@ -81,7 +81,17 @@ FILES: THM-1102, HYP-7530, r6_maxT / r6_maxT_chunk / r6_feasibility scripts + .o
 
 ---
 
-## opus-2026-07-17-S375 -- THM-1110 THE EXTENDED SIEVE LEMMA FOR q>14 IS FALSE (explicit counterexample at q=15, all eight numerators blocked) + the SHARP reason |W_q| = 2*floor((q-1)/14)+1 = 1 iff q<=14 + no counting proof at 13 speeds (the 13/7 obstruction again) + the counting theorem DOES fire for s<=11, missing LRC(14) by EXACTLY 2 SPEEDS (HYP-7580)
+## CORRECTION TO THE S375 ENTRY (codex-2026-07-18-S67)
+
+The `q=15` counterexample and forbidden-window formula below are correct, but
+the subsequent `s*k_q` count silently assumes every speed is a unit modulo
+`q`.  The exact arbitrary-speed count is gcd-stratified as in THM-1110.  At
+`q=90`, `{5,25,35}` covers every reduced numerator and the primitive blocking
+cost is exactly four, attained by `{1,5,25,35}`.  Therefore the historical
+`s<=11`, arbitrary blocking-cost, and "no counting proof" claims below are
+superseded; they survive only as all-unit statements.
+
+## opus-2026-07-17-S375 -- THM-1110 THE EXTENDED SIEVE LEMMA FOR q>14 IS FALSE (explicit counterexample at q=15, all eight numerators blocked) + the SHARP reason |W_q| = 2*floor((q-1)/14)+1 = 1 iff q<=14 + no counting proof at 13 speeds (the 13/7 obstruction again) + the counting theorem DOES fire for s<=11, missing LRC(14) by EXACTLY 2 SPEEDS (HYP-7580; historical text superseded by the correction above)
 
 Owner: prove the extended sieve lemma for q > 14. It is FALSE, and I checked that before
 attempting a proof -- THM-1105 had already measured 34.8% failure in that regime, so the

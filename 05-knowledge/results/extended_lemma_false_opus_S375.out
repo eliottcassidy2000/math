@@ -28,9 +28,9 @@
       p=14: blocked by v=226 (v*p = 14 mod 15)
     => no p works at q=15, yet 15 divides no speed.  THE LEMMA IS FALSE.
 
-(3) WHY NO COUNTING PROOF CAN EXIST AT A SINGLE q
-    each speed v kills at most |W_q|-1 numerators (v*p = w has one
-    solution p per nonzero w), so  #bad p <= 13*(|W_q|-1) = 26*floor((q-1)/14).
+(3) WHY THE COARSE ALL-UNIT COUNT DOES NOT FIRE
+    each UNIT speed v kills at most |W_q|-1 reduced numerators, so
+    #bad p <= 13*(|W_q|-1) = 26*floor((q-1)/14).
     q    phi(q)   13*(|W_q|-1)   does the bound fire?
       15       8             26   no
       16       8             26   no
@@ -44,5 +44,5 @@
       43      42             78   no
       53      52             78   no
       71      70            130   no
-    26*floor((q-1)/14) ~ 1.857*q > q > phi(q), so the union bound NEVER
-    fires -- the same 13/7 > 1 obstruction as everywhere else in this program.
+    For q>=29 the bound exceeds q; direct checking covers 15<=q<=28.
+    This is only the all-unit bound. Nonunit gcd strata can be larger.

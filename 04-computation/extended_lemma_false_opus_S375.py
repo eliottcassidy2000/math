@@ -3,7 +3,9 @@
 # TARGET AS POSED: "q divides no speed => some p/q is lonely", for q > 14.
 # My own S374 data already says this fails 34.8% of the time when q0 > 14, so
 # before attempting a proof I verify the failure explicitly and extract the
-# structural reason.
+# structural reason.  CORRECTION (codex-S67): Section (3)'s per-speed count is
+# an all-unit bound only.  Nonunit speeds must be stratified by gcd(v,q); see
+# THM-1110 and extended_sieve_gcd_stratified_referee_codex_S67.py.
 #
 # THE FORBIDDEN WINDOW.  p/q is lonely iff for every speed v,
 #     v*p mod q  NOT IN  W_q := { r : min(r, q-r)*14 < q }.
@@ -44,13 +46,13 @@ for p in range(1,15):
 print(f"    => no p works at q=15, yet 15 divides no speed.  THE LEMMA IS FALSE.")
 
 print()
-print("(3) WHY NO COUNTING PROOF CAN EXIST AT A SINGLE q")
-print("    each speed v kills at most |W_q|-1 numerators (v*p = w has one")
-print("    solution p per nonzero w), so  #bad p <= 13*(|W_q|-1) = 26*floor((q-1)/14).")
+print("(3) WHY THE COARSE ALL-UNIT COUNT DOES NOT FIRE")
+print("    each UNIT speed v kills at most |W_q|-1 reduced numerators, so")
+print("    #bad p <= 13*(|W_q|-1) = 26*floor((q-1)/14).")
 print("    q    phi(q)   13*(|W_q|-1)   does the bound fire?")
 def phi(n): return sum(1 for k in range(1,n+1) if gcd(k,n)==1)
 for q in [15,16,20,23,25,29,31,37,41,43,53,71]:
     bad=13*(len(W(q))-1)
     print(f"    {q:4d}  {phi(q):6d}   {bad:12d}   {'YES' if phi(q)>bad else 'no'}")
-print("    26*floor((q-1)/14) ~ 1.857*q > q > phi(q), so the union bound NEVER")
-print("    fires -- the same 13/7 > 1 obstruction as everywhere else in this program.")
+print("    For q>=29 the bound exceeds q; direct checking covers 15<=q<=28.")
+print("    This is only the all-unit bound. Nonunit gcd strata can be larger.")
