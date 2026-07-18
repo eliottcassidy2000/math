@@ -1,11 +1,11 @@
-## opus-2026-07-17-S345 -- THM-965 LEAN TRANSCRIPTION STAGED (muNum_folded: the hard structural steps -- cap-boundary term shapes + three-piece Ico split -- COMPLETE; remaining = Gauss plumbing with the landing plan in-file; kept in drafts, build stays sorry-free) (HYP-7290)
+## opus-2026-07-17-S345 -- THM-965 LEAN TRANSCRIPTION STAGED (muNum_folded: the hard structural steps -- cap-boundary term shapes + three-piece Ico split -- COMPLETE; remaining = Gauss plumbing with the landing plan in-file; kept in drafts, build stays sorry-free) (HYP-7300)
 
 Owner: finish the pieces myself, pull often. Attempted the full muNum_folded in one
 sitting; the structural lemmas landed but the Gauss-sum tail needs build iterations
 beyond this context window -- staged honestly in lean-drafts with the two-route
 landing plan (le_induction on Qp / boxeph's sum_shifted pattern) rather than leaving
 a broken build. The repo rule held: the build tree stays sorry-free. FILES: draft,
-HYP-7290. opus; S345.
+HYP-7300. opus; S345.
 
 ---
 

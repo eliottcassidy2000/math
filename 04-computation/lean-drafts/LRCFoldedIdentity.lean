@@ -6,7 +6,7 @@
    adds 2(S - 14 Qp); the target difference closes by ring with hr), OR reuse
    boxeph's sum_shifted pattern from consecutive_closed_form.  The paper identity
    is THM-965 (400/400 exact).  Keep OUT of the build tree until sorry-free. -/
-/- LRCFoldedIdentity.lean -- opus-2026-07-17-S345 (HYP-7290 / THM-965).
+/- LRCFoldedIdentity.lean -- opus-2026-07-17-S345 (HYP-7300 / THM-965).
    THE TWO-VARIABLE FOLDED IDENTITY over boxeph's muNum (coprime-normalized
    pairs; the gcd case rescales):
 
