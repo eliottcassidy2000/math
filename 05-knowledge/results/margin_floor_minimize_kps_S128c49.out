@@ -1,0 +1,13 @@
+  start  0: new min M ~ 0.18062  V=[52, 59, 85, 212, 272, 280, 396, 473, 482, 492, 517, 630, 678]
+  start  5: new min M ~ 0.16200  V=[21, 38, 78, 116, 133, 140, 144, 187, 201, 206, 216, 225, 277]
+  start 28: new min M ~ 0.15800  V=[21, 35, 66, 72, 91, 93, 95, 141, 187, 210, 219, 230, 291]
+  start 47: new min M ~ 0.14175  V=[42, 66, 96, 108, 150, 228, 229, 247, 375, 377, 396, 414, 552]
+
+MINIMIZED trapped family: V = [42, 66, 96, 108, 150, 228, 229, 247, 375, 377, 396, 414, 552]
+  float M ~ 0.141750 ; EXACT M = 1/7 = 0.142857
+  margin over 1/14 = 1/14 = 0.071429
+  trapped verified: True  primitive: True
+
+>>> Even minimized, the trapped family has M = 0.14286 > 1/14 (margin 0.0714).
+>>> Empirical margin floor delta >~ 0.0714 on the trapped cut (multi-start descent, 60 starts).
+DONE

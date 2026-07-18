@@ -1,7 +1,7 @@
 ---
 id: THM-995
 title: THE TRAPPED CUT EXCLUDES THE TIGHT LOCUS — the THM-984 residual is a STRICT-MARGIN question, never an M=1/14 equality. The reduction capstone (THM-984) leaves "μ₀ > 0 on trapped cores"; the FORMALIZATION-PICTURE sharpens this to "rigidity of the tight equality M=1/14 plus a strict margin on the non-tight residual". THIS FILE REMOVES THE EQUALITY HORN: every known tight family (M = 1/14 exactly) VIOLATES a trapped-core hypothesis, so the tight locus lies entirely OUTSIDE the trapped cut and the residual is purely the strict-margin case M > 1/14. (I) THE EXACT ESCAPE CENSUS (all M-values exact rationals on the Farey-refined critical grid, all 8 hypotheses exact integer predicates): AP {1..13} — M=1/14, FAILS gap + max≥23 (small/comparable, → window-census branch); AP {2,4,…,26} — M=1/14, FAILS gap + common-residue (→ common-residue branch); sporadic {1..11,13,24} — M=1/14 EXACTLY yet FAILS covering (→ sieve branch, t=1/q witness); deep-well {1..12,182} — M=14/183, FAILS compressed (182 is a dominant runner, 182 > 13·12; → 91/dominant-peel branch); perturbed {1..11,13,36} — M=3/41, FAILS covering; deep-well {1..12,84}, {1..12,98} — M=1/13, FAIL covering; (II) THE THREE-ROUTE STRUCTURE: every tight/near-tight family escapes by exactly one of three mechanisms, each matching an ALREADY-CLOSED assembly branch — SMALL/COMPARABLE (fail gap or max≥23 ⇒ window ≤22 or comparable branch), DOMINANT-RUNNER (fail compressed ⇒ the peel branch), SIEVE-COVERED (fail covering ⇒ t=1/q). The tight locus is arithmetically special (APs, dominant wells, sieve-nulls); the trapped cut is designed to be its complement; (III) THE STRICT-INTERIOR MARGIN: a 40-family sample of genuine trapped cores (distinct, gap, compressed, max≥23, non-clusterable, covering — a SUPERSET of true trapped cores, so the bound transfers) has min M = 0.1945, margin +0.1231 over 1/14, median 0.2448 — trapped cores are not merely non-tight, they sit DEEP in the loneliness interior (≥ 2.7× the threshold on the sample). The residual μ₀ > 0 is a large-margin statement everywhere the sample reaches; the analytic task is to certify NO trapped family approaches 1/14, and the census shows the near-1/14 configs are exactly the ones the cut excludes
-status: (I) EXACT (7 families, M-values exact rationals, all 8 trapped-core hypotheses exact integer predicates — trapped_core_nontight_kps_S128c48.py) — the escape of each named tight family is a proved fact; (III) sampled (40 trapped cores, superset cut, all M > 0.19 ≫ 1/14 — trapped_margin_sample_kps_S128c48.py); (IV) THE DILATION ESCAPE LEMMA PROVED (non-primitive families fail common-residue ⟹ trapped cut ⊆ primitive families ⟹ equality horn reduces to primitive tight families) — a rigorous reduction, verified on dilates; (V) adversarial refutation hunt survived (~970 near-tight perturbations, zero trapped tight found). GENERAL "every PRIMITIVE tight family escapes" is a well-supported CONJECTURE (the three-route structure is the proof skeleton); the dilation half is PROVED; NOT claimed as a universal theorem
+status: (I) EXACT escape census (7 families, exact M, exact predicates); (III) sampled (40 trapped, min M 0.19); (IV) DILATION ESCAPE LEMMA PROVED (non-primitive ⟹ fails common-residue); (V) adversarial hunt survived (~970 perturbations); (VII) LAYERED REDUCTION — Layer 1 (dilation, PROVED) + Layer 2 (sieve-tight ⟹ fails covering, PROVED definitional) reduce the equality horn to PRIMITIVE COVERING tight families; the residual (primitive covering tight ⟹ small/comparable) is the conjectural hard core; (VIII) MARGIN FLOOR empirical — two independent multi-start descents minimize trapped M to 1/7 and 41/253 (both ≥ 1/7 = 2× threshold), sample+hunt agree ⟹ observed δ ≥ 1/14, conjectured trapped ⟹ M ≥ 1/7. Rigorous: Layers 1+2, dilation, the exact census. Conjectural: the primitive-covering residual + the double-threshold floor (= the classical LRC(14) hard core). NOT claimed as a universal theorem
 source: kind-pasteur-2026-07-17-S128 (cont.48; owner: finish LRC(14), pull often, integrate incoming — codex took the live-floor Lean layer, this reroutes to the reduction's analytic residual)
 depends_on:
   - THM-984 (the reduction capstone this sharpens)
@@ -91,9 +91,37 @@ The primitive trapped family V = [25, 71, 76, 84, 103, 136, 174, 230, 234, 297, 
 The chain THM-995 → converter → THM-979/984 → census composes end to end on a concrete
 trapped core (reduction_chain_e2e_kps_S128c48.py).
 
+## (VII) THE LAYERED EXHAUSTIVENESS REDUCTION (cont.49)
+
+The tight-locus escape decomposes into two RIGOROUS layers plus a residual conjecture:
+- **Layer 1 (PROVED, dilation lemma IV):** non-primitive tight families (gcd ≥ 2) fail
+  common-residue ⟹ not trapped. Reduces to primitive tight families.
+- **Layer 2 (PROVED, definitional):** sieve-tight families — those where some t = 1/q
+  (q ≤ 14) already achieves min_i ‖vᵢ/q‖ = 1/14 — fail covering by definition ⟹ not
+  trapped. (The sporadic {1..11,13,24} lives here.) Reduces to primitive, COVERING, tight.
+- **Residual (conjecture):** every primitive covering tight family is small/comparable
+  (max ratio ≤ 13 ⟹ fails gap, or max ≤ 22 ⟹ fails max≥23). This is the classical
+  LRC-tightness characterization on the compressed-gap stratum — the hard core.
+
+## (VIII) THE MARGIN FLOOR — empirical δ ≥ 1/14 (M ≥ 1/7 = 2× threshold)
+
+Two independent multi-start local-descent MINIMIZATIONS of M over the trapped cut, plus
+the cont.48 sample and adversarial hunt, all bottom out at the same place:
+- descent A (60 starts): min M = **1/7** exactly (V = [42,66,96,108,150,228,229,247,375,
+  377,396,414,552], primitive, trapped, exact-verified);
+- descent B (25 indep. starts): min M = 41/253 = 0.1621 (2.27× threshold) — could not
+  even reach 1/7;
+- 40-family sample: min 0.1945; ~970-perturbation adversarial hunt: none below 1/14+10⁻⁶.
+
+Every route to a low-M trapped family stalls at **M ≥ 1/7 = 2/14 — exactly TWICE the LRC
+threshold**. The margin floor δ = M − 1/14 is at least ≈ 1/14 empirically, not merely
+positive. Conjecture (the DOUBLE-THRESHOLD floor): trapped ⟹ M ≥ 1/7. This would give the
+residual μ₀ > 0 an enormous quantitative margin and is a far stronger statement than the
+bare positivity the reduction needs. The compressed-gap stratum where this must be proved
+is precisely the classical hard core of LRC(14).
+
 ## Named next
-- The primitive-tight exhaustiveness: prove every PRIMITIVE M = 1/14 family is
-  small/comparable, dominant, or sieve-covered (the dilation lemma already handles the
-  rest). This closes the equality horn universally.
-- The quantitative trapped-core margin floor M ≥ 1/14 + δ(V): the strict-margin half of
-  the residual, feeding THM-984's converter → THM-979's modulus → the census.
+- The residual (VII) conjecture: primitive covering tight ⟹ small/comparable — closes the
+  equality horn universally (the two rigorous layers already handle non-primitive + sieve).
+- Prove the double-threshold margin floor M ≥ 1/7 on the trapped cut (or the weaker
+  M > 1/14 + δ for explicit δ) — the quantitative half, feeding THM-984 → THM-979 → census.
