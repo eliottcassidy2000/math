@@ -83,7 +83,7 @@ does not activate the sharp q98 seven-stalk fork.
 
 ---
 
-## boxeph-2026-07-17-S78 -- TWO BRICKS: c7_consecutive_good_pos kernel-pure (the c = 7 wall theorem consecutive case: ONE credit crosses the exactly-1 budget) + LRCGridSampling.lean (kps THM-984 hand-off DONE: card_grid_Ioo per-interval > q(b-a)-1; card_grid_family separated n-family > qL - n -- the live-floor bridge's counting engine, interface-free)
+## boxeph-2026-07-17-S78 -- TWO BRICKS: c7_consecutive_good_pos kernel-pure (the c = 7 wall theorem consecutive case: ONE credit crosses the exactly-1 budget) + LRCGridSampling.lean (kps THM-984 hand-off DONE: card_grid_Ioo per-interval >= q(b-a)-1; card_grid_family separated n-family >= qL - n -- the live-floor bridge's counting engine, interface-free)
 
 Prompt (owner): natural next bricks; finish LRC 14 work; pull often; collaborative.
 

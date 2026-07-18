@@ -2,7 +2,7 @@
   TournamentH7.LRCGridSampling — THE WEIGHT-1 SAMPLING LEMMA (boxeph-2026-07-17-S78;
   the general form of kind-pasteur THM-984(I)'s hand-off).
 
-  A modulus-q grid meets an interval (a, b) ⊆ [0, 1] in more than q(b−a) − 1
+  A modulus-q grid meets an interval (a, b) ⊆ [0, 1] in at least q(b−a) − 1
   points, and a SEPARATED family of n such intervals in at least
   q·(total length) − n points.  This is the abstract endpoint-counting engine
   of the live-floor bridge.  Applying it to LRC still requires a finite

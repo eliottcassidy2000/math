@@ -10,6 +10,7 @@ verification:
   - 05-knowledge/results/lrc13_scale_twelve_hamming_six_owner_orthogonality_codex_c12.out
   - 04-computation/lrc13_scale_twelve_hamming_six_referee_codex_c12.py
   - 05-knowledge/results/lrc13_scale_twelve_hamming_six_referee_codex_c12.out
+  - 04-computation/lean/TournamentH7/TournamentH7/LRCScaleTwelveOwnerOrthogonality.lean
 ---
 
 # THM-976 — scale twelve is killed by complete owner orthogonality
@@ -42,6 +43,25 @@ all higher counts             :     0,
 
 Thus the owner-obligation intersection graph is empty: scale twelve exhibits
 complete owner orthogonality.
+
+## Kernel-checked terminal quotient
+
+`LRCScaleTwelveOwnerOrthogonality.lean` now formalizes the decisive last
+implication after the exact bank reduction.  It represents a survivor as a
+six-bit section of `F_13^*/{+-1}` and a global unit word in `{1,5,7,11}^6`,
+uses the literal twelve-sheet mask table, and proves every realized provider
+mask has cardinality two.  Consequently full owner coverage forces the six
+provider masks to form a partition.  A sign-negation reduction and eight
+ordinary-`decide` blocks, each only `4*4^2=64` rows, prove that owner
+obligations 0 and 4 are disjoint for all 64 supports.  Hence no global unit
+word satisfies every owner.  The source SHA-256 is
+`cc837a69391b7b7de8db10aedf8170a2ee9f134ea341260ec79563e87c81a79a`;
+direct Lean checking is green, with no `sorry` or `native_decide`.
+
+The module deliberately does not kernel-replay the 2,413,458,432-to-64 native
+reduction, the exact owner size 48, or all fifteen pairwise-disjoint owner
+pairs.  It checks one sufficient disjoint pair and the full-capacity argument,
+which is the proof-bearing terminal quotient.
 
 ## Completeness and independent replay
 

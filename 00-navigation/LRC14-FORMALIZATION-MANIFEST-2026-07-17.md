@@ -988,6 +988,13 @@ nerve is `K6` minus `C6`, the triangular prism, with no triple faces.  Raw
 runners and completed tournaments lose the disjoint-obligation meaning of
 those cycle edges.
 
+`LRCScaleTenProjectivePrism.lean` is the in-progress kernel transcription of
+this terminal quotient.  It encodes the exact order-ten mask table, proves
+that full capacity forces a partition, and reduces the projective classes to
+the multiplication-by-two cycle.  The native `821,620,800 -> 64` reduction
+remains external; this module is not counted green here until its
+resource-guarded direct check finishes.
+
 THM-974 closes `c=11`.  The prime-order hereditary grammar has 57 divisor
 words and `1,636,866,000` labelled literal contexts.  Scalar capacity and
 owner-local feasibility leave 66 all-order-eleven supports.  Literal replay
@@ -1011,14 +1018,32 @@ projections are empty.  THM-981 closes `c=17`: its complete
 `22,303,024,128`-context bank reduces to the two all-order-seventeen
 quadratic-residue/nonresidue rows, and every one of their twelve owner fibres
 has exact maximum union `16/17`.  Independent frozen C++ and Python
-reconstructions agree.  THM-982 is only provisional at `c=18`: its scratch
-reconstruction traverses `27,490,799,952` contexts, reduces to 13,098 scalar
-rows on 684 supports, and leaves no row feasible at more than four owners.
-Its frozen primary C++ certificate has landed, but independent and cross-build
-replays remain pending.  Thus scale eighteen remains open in the proved
-ledger; scales nineteen and higher, the finite ramified H5 bank, and non-AP,
-deep, and higher-sheet branches also remain parts of the global `n=12`
-problem.  None of these facewise results proves uniform sporadic emptiness.
+reconstructions agree.  THM-982 now fully closes `c=18`: independent
+literal-search C++ and algebraic-CRT Python certificates traverse the exact
+`27,490,799,952`-context bank and leave no row feasible at more than four
+owners.  THM-983 uniformly excludes every prime common scale `p>=19` by an
+exact residue-capacity recurrence plus structural arguments at the only
+threshold exceptions `p=23,29`.  THM-986 closes composite `c=20`, and THM-988
+closes `c=21`; the latter's two all-order rows are scalar-tight at all six
+owners while every local mask union has size only twenty, a pure
+overlap/projection obstruction.  THM-989 currently claims `c=22` from a scratch
+reconstruction, but its frozen primary and independent replay remain in
+progress.  Since `c=23` is prime, the next unclassified composite face after
+that claim is `c=24`.
+
+`LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
+quotient: every realized mask has size two, full coverage forces a partition,
+and one exact two-provider core proves owner obligations zero and four
+disjoint for every sign transversal.  It does not replay the native
+`2,413,458,432 -> 64` reduction, the exact owner size 48, or all fifteen
+pairwise intersections.  The generic `LRCPreNerveProjection` module
+formalizes the logic shared by the later deficits: a global word projects to
+a local witness at every owner, so one empty projection is terminal; a
+two-owner Boolean counterexample proves the converse false.
+
+The remaining composite scales, the finite ramified H5 bank, and non-AP,
+deep, and higher-sheet branches remain parts of the global `n=12` problem.
+None of these facewise results proves uniform sporadic emptiness.
 
 `LRCSporadicDiscreteCap.lean` separately kernel-checks a conditional terminal
 arithmetic sharpening.  THM-668 ruler data `q<=2b`, strict `mu>1/n`, and the
@@ -1216,13 +1241,18 @@ kernel decision that every normalized coprime witness for `k₀=3,...,8` has at
 most four compatible later partners, so those cases have fewer than six
 failures; the `k₀=1,2` cases give the two circles and `k₀>=9` is cardinally
 impossible.  Exact reconstruction is now a referee rather than the logical
-basis.  THM-987 closes the formerly remaining card computation in
-`LRCDeepCountExact`: for `B=(q-1)/84`, the deep count is
-`2B + (B+1-(q+B)%2)` for every `q>=2`; the integer and half circles are proved
-disjoint.  Its q14 corollary has one deep and six live multipliers and proves
-the canonical tight family lonely through the census funnel.  THM-985/987
-remain canonical-family theorems, not the uniform weighted/deep or trapped-core
-supplier required by LRC(14).
+basis.  THM-987 closes the remaining card computation in Lean for every
+`q>=2`:
+
+```text
+#deep(q) = 2B + (B + 1 - (q+B) % 2),    B = (q-1)/84.
+```
+
+The integer and half circles are proved disjoint.  Its `q=14` corollary has
+one deep and six live multipliers and kernel-checks loneliness of the tight
+family through the exact census.  THM-985/987 remain canonical-family
+theorems, not the uniform weighted/deep or trapped-core supplier required by
+LRC(14).
 
 ## Addendum (boxeph-S69): item 15
 

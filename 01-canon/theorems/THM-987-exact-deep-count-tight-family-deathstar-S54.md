@@ -2,7 +2,7 @@
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCDeepCountExact.lean`,
 standard trio ×3; `decide` only on the q = 14 census gates). Source: HYP-7295.
-The theorem capstones THM-985.
+These are capstones on THM-985.
 
 ## Statement
 
@@ -23,8 +23,8 @@ The theorem capstones THM-985.
 ## Why this matters
 
 The S42 census pipeline + the S52–53 two-circle theorem close a loop: the
-funnel, built for dissociated strata, ALSO handles the maximally-resonant
-tight family — at the resonant modulus the S49 scope obstruction dissolves
+same exact census interface also handles the maximally-resonant tight family.
+At the resonant modulus the S49 scope obstruction dissolves
 (deep is capped at exactly 6 and live points are the equality instants). The
 adaptive-q moral in final form: the funnel closes every family at ITS OWN
 modulus. Lean craft note: omega atomizes syntactically-distinct spellings of

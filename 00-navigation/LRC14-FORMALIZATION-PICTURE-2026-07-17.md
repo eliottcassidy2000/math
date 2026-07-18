@@ -211,7 +211,7 @@ must state which LRC predicate it preserves.
   finite kernel decision, and `k₀>=9` is impossible by cardinality.  Thus the
   canonical deep set is exactly the two circles in-kernel.  THM-987 now counts
   their disjoint union for every `q>=2`, including the half-circle parity term,
-  and proves the canonical tight family lonely through the q14 census
+  and proves the canonical tight family lonely through the `q=14` census
   (`deep=1`, `live=6`).  These are canonical-family closures, not the uniform
   weighted/trapped-core supplier.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
@@ -300,9 +300,10 @@ THM-984 propose large explicit sampling moduli from continuous `B5` or safe-set
 floors, respectively.  These advances are complementary, not composable by
 size alone: for thirteen distinct positive magnitudes `E=2*sum|v_i|>=182`, so
 THM-984's `ceil(2E/mu0)` is at least `364`, already outside the stalk window.
-`LRCGridSampling` now proves the abstract separated-interval grid count in
-Lean.  The actual strict-safe-set decomposition, `E` component/measure bound,
-grid-to-`liveCount` identification, exact ceiling/sign normalization, T_s
+`LRCGridSampling` now proves the abstract separated-interval lower bound
+`card >= qL-n`, while `LRCLiveCountLonely` proves the terminal consumer.  The
+actual strict-safe-set decomposition, component/measure budget,
+grid-to-`liveCount` identification, exact ceiling/sign normalization, `T_s`
 assembly, and exhaustive trapped-core reduction remain.  Large-q
 small-reduced-speed stalks and colored `462/210` payment are still honest
 sockets.
@@ -314,8 +315,11 @@ faces are certified through scale eighteen (scale thirteen is primitive-
 impossible).  THM-982's scale-eighteen owner deficit now has independent C++
 and Python exact replay, and THM-983 uniformly excludes every prime common
 scale `p>=19`.  THM-986's composite scale-twenty owner deficit now has
-independent C++ and Python exact replay; the remaining composite scales from
-`c=21`, ramified H5, non-AP/deep, and higher-sheet branches therefore
+independent C++ and Python exact replay.  THM-988 independently closes `c=21`;
+its two all-order rows are scalar-tight at every owner but have exact local
+maximum union `20/21`, exposing pure projection debt.  THM-989 claims `c=22`
+pending frozen dual replay; `c=23` is prime, so the next unclassified composite
+after that claim is `c=24`.  Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line

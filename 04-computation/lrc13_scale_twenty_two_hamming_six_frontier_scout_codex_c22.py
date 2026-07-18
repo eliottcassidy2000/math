@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-"""Exact scale-22 AP-centred Hamming-six owner-deficit certificate.
+"""Exact scale-22 AP-centred common-scale Hamming-six frontier certificate.
 
-The certificate traverses all 924 labelled six-supports and every hereditary
-leave-one-out-lcm order word over {1,2,11,22}.  A unit-independent scalar gate
-is followed by literal owner-local sheet-union reachability.  The calculation
-never quotients supports or unit words; multiplication orbits and tournaments
-are telemetry only.
+This program constructs the effective-order/unit alphabet and every local CRT
+mask from first principles.  It enumerates the complete hereditary divisor
+grammar on every labelled six-subset of F_13^*, applies the exact scalar owner
+capacity gate, and then performs immutable-set union reachability separately
+at all six owner obligations.  All serialized banks have an explicit order;
+the resulting SHA-256 certificates are independent of Python hash iteration
+order and of ``python`` versus ``python -O`` execution.
 
-Methodological independence for a future referee: this primary solves CRT
-representatives algebraically (while auditing them by literal search), stores
-reachable unions as immutable Python sets, and hashes every reachable mask.
-It uses only the Python standard library.
+The owner-local test is a necessary projection of the global literal-unit
+problem: a global word must cover every owner, whereas an empty owner bank
+already rules it out.  No converse or cross-owner gluing claim is made here.
 """
-
-from __future__ import annotations
 
 from collections import Counter
 from hashlib import sha256
@@ -23,60 +22,86 @@ from math import gcd, lcm, prod
 
 P = 13
 C = 22
-ORDERS = (1, 2, 11, 22)
-ORDER_INDEX = {order: i for i, order in enumerate(ORDERS)}
-UNITS = {
-    1: (0,),
-    2: (1,),
-    11: tuple(range(1, 11)),
-    22: tuple(u for u in range(1, 22) if gcd(u, 22) == 1),
-}
-FULL_MASK = (1 << C) - 1
+LABELS = tuple(range(1, P))
+DIVISORS = (1, 2, 11, 22)
+FULL = (1 << C) - 1
+MASK_BYTES = (C + 7) // 8
+STATES = tuple(
+    (divisor, unit)
+    for divisor in DIVISORS
+    for unit in range(divisor)
+    if (divisor == 1 and unit == 0)
+    or (unit != 0 and gcd(unit, divisor) == 1)
+)
+STATE_INDICES = tuple(
+    tuple(
+        state_index
+        for state_index, (order, _unit) in enumerate(STATES)
+        if order == divisor
+    )
+    for divisor in DIVISORS
+)
 
 
-def require(condition: bool, message: str) -> None:
+def require(condition, message):
+    """Optimization-stable replacement for assertions."""
     if not condition:
-        raise AssertionError(message)
+        raise RuntimeError(message)
 
 
-def centered(value: int, modulus: int) -> int:
+def centered(value, modulus):
+    """The unique representative in (-modulus/2, modulus/2]."""
     residue = value % modulus
     return residue - modulus if 2 * residue > modulus else residue
 
 
-def inverse_mod_13(value: int) -> int:
-    return pow(value, -1, P)
+def algebraic_crt_base(label, state_index):
+    """Solve x = D*label (mod 13), x = unit (mod D) algebraically."""
+    order, unit = STATES[state_index]
+    coefficient = (label - unit * pow(order, -1, P)) % P
+    answer = unit + order * coefficient
+    require(answer % P == order * label % P, "mod-thirteen CRT failure")
+    require(answer % order == unit % order, "effective-order CRT failure")
+    require(0 <= answer < P * order, "CRT representative outside range")
+    # Brute uniqueness is a deliberately differently shaped audit of the
+    # algebraic formula.  It is cheap because the largest modulus is 286.
+    brute = tuple(
+        value
+        for value in range(P * order)
+        if value % P == order * label % P and value % order == unit % order
+    )
+    require(brute == (answer,), "algebraic/brute CRT uniqueness mismatch")
+    return answer
 
 
-def crt_base_algebraic(label: int, order: int, unit: int) -> int:
-    """Solve x=D*label (mod 13), x=unit (mod D)."""
-    if order == 1:
-        return label
-    step = ((unit - order * label) * pow(P, -1, order)) % order
-    return (order * label + P * step) % (P * order)
+def build_masks():
+    """Build label/state/owner masks and their canonical byte certificate."""
+    masks = [[[0] * P for _state in STATES] for _label in range(P)]
+    digest = sha256()
+    base_digest = sha256()
+    for label in LABELS:
+        for state_index, (order, _unit) in enumerate(STATES):
+            base = algebraic_crt_base(label, state_index)
+            base_digest.update(bytes((label, state_index)))
+            base_digest.update(base.to_bytes(2, "little"))
+            for owner in LABELS:
+                owner_inverse = pow(owner, -1, P)
+                mask = 0
+                for sheet in range(C):
+                    value = centered(
+                        base * (owner_inverse + P * sheet), P * order
+                    )
+                    if -order < value <= order:
+                        mask |= 1 << sheet
+                require(mask & ~FULL == 0, "mask outside twenty-two sheets")
+                masks[label][state_index][owner] = mask
+                digest.update(mask.to_bytes(MASK_BYTES, "little"))
+    return masks, digest.hexdigest(), base_digest.hexdigest()
 
 
-def crt_base_literal(label: int, order: int, unit: int) -> int:
-    for value in range(P * order):
-        if value % P == order * label % P and value % order == unit % order:
-            return value
-    raise AssertionError("literal CRT search failed")
-
-
-def local_mask(label: int, order: int, unit: int, owner: int) -> int:
-    base = crt_base_algebraic(label, order, unit)
-    inverse = inverse_mod_13(owner)
-    result = 0
-    for sheet in range(C):
-        value = centered(base * (inverse + P * sheet), P * order)
-        if -order < value <= order:
-            result |= 1 << sheet
-    return result
-
-
-def analytic_cardinality(label: int, order: int, owner: int) -> int:
-    """Independent one-period count, repeated C/D times."""
-    ratio = label * inverse_mod_13(owner) % P
+def analytic_cardinality(label, order, owner):
+    """Count one order-period arithmetically and repeat it C/order times."""
+    ratio = label * pow(owner, -1, P) % P
     target = order * ratio % P
     period_count = sum(
         value % P == target for value in range(-order + 1, order + 1)
@@ -84,340 +109,685 @@ def analytic_cardinality(label: int, order: int, owner: int) -> int:
     return (C // order) * period_count
 
 
-def build_tables():
-    masks: dict[tuple[int, int, int, int], int] = {}
-    cards: dict[tuple[int, int, int], int] = {}
-    mask_hash = sha256()
-    for label in range(1, P):
-        for order in ORDERS:
-            for owner in range(1, P):
-                card = analytic_cardinality(label, order, owner)
-                cards[label, order, owner] = card
-                for unit in UNITS[order]:
-                    algebraic = crt_base_algebraic(label, order, unit)
-                    literal = crt_base_literal(label, order, unit)
-                    require(algebraic == literal, "algebraic/literal CRT mismatch")
-                    mask = local_mask(label, order, unit, owner)
-                    require(mask.bit_count() == card, "mask/cardinality mismatch")
-                    masks[label, order, unit, owner] = mask
-                    mask_hash.update(bytes((label, order, unit, owner)))
-                    mask_hash.update(mask.to_bytes(4, "little"))
-    return masks, cards, mask_hash.hexdigest()
-
-
-def hereditary(word: tuple[int, ...]) -> bool:
+def hereditary(word):
+    """Every leave-one-out lcm remains the full common scale."""
     return all(
-        lcm(*(word[j] for j in range(6) if j != omitted)) == C
+        lcm(*(DIVISORS[word[index]] for index in range(6) if index != omitted))
+        == C
         for omitted in range(6)
     )
 
 
-def hereditary_prime_power(word: tuple[int, ...]) -> bool:
+def hereditary_prime_provider_audit(word):
+    """For C=2*11, each prime must occur at least twice."""
+    two_providers = sum(DIVISORS[index] % 2 == 0 for index in word)
+    eleven_providers = sum(DIVISORS[index] % 11 == 0 for index in word)
+    return two_providers >= 2 and eleven_providers >= 2
+
+
+def grammar_census():
+    """Enumerate the divisor bank and count every literal unit fibre exactly."""
+    words = []
+    order_digest = sha256()
+    weighted_digest = sha256()
+    weighted_states = 0
+    for word in product(range(len(DIVISORS)), repeat=6):
+        by_lcm = hereditary(word)
+        by_primes = hereditary_prime_provider_audit(word)
+        require(by_lcm == by_primes, "lcm/prime-provider grammar mismatch")
+        if not by_lcm:
+            continue
+        words.append(word)
+        fibre = prod(len(STATE_INDICES[index]) for index in word)
+        weighted_states += fibre
+        order_digest.update(bytes(word))
+        weighted_digest.update(bytes(word))
+        weighted_digest.update(fibre.to_bytes(8, "little"))
     return (
-        sum(order % 2 == 0 for order in word) >= 2
-        and sum(order % 11 == 0 for order in word) >= 2
+        tuple(words),
+        weighted_states,
+        order_digest.hexdigest(),
+        weighted_digest.hexdigest(),
     )
 
 
-def build_order_words():
-    result = []
-    digest = sha256()
-    for word in product(ORDERS, repeat=6):
-        h_lcm = hereditary(word)
-        require(
-            h_lcm == hereditary_prime_power(word),
-            "lcm/prime-power hereditary mismatch",
+def owner_reachable(masks, labels, word, owner, provider_order):
+    """Exact projected union bank for one owner in a declared provider order."""
+    reachable = frozenset((0,))
+    layer_sizes = []
+    for provider_index in provider_order:
+        label = labels[provider_index]
+        options = frozenset(
+            masks[label][state_index][owner]
+            for state_index in STATE_INDICES[word[provider_index]]
         )
-        if h_lcm:
-            result.append(word)
-            digest.update(bytes(word))
-    return result, digest.hexdigest()
-
-
-def scalar_capacities(
-    support: tuple[int, ...], word: tuple[int, ...], cards
-) -> tuple[int, ...]:
-    return tuple(
-        sum(cards[label, order, owner] for label, order in zip(support, word))
-        for owner in support
-    )
-
-
-def build_scalar_bank(supports, words, cards):
-    bank = []
-    contexts_per_support = Counter()
-    multiplicities = Counter()
-    capacity_vectors = set()
-    minimum_slack = Counter()
-    maximum_slack = Counter()
-    tight_owners = Counter()
-    digest = sha256()
-    checked = 0
-    for support in supports:
-        support_count = 0
-        for word in words:
-            checked += 1
-            capacities = scalar_capacities(support, word, cards)
-            if min(capacities) < C:
-                continue
-            row = (support, word, capacities)
-            bank.append(row)
-            support_count += 1
-            multiplicities[tuple(word.count(order) for order in ORDERS)] += 1
-            capacity_vectors.add(capacities)
-            minimum_slack[min(capacities) - C] += 1
-            maximum_slack[max(capacities) - C] += 1
-            tight_owners[sum(value == C for value in capacities)] += 1
-            digest.update(bytes(support))
-            digest.update(bytes(word))
-            digest.update(bytes(capacities))
-        if support_count:
-            contexts_per_support[support_count] += 1
-    require(checked == 924 * len(words), "scalar traversal count mismatch")
-    return {
-        "bank": bank,
-        "contexts_per_support": contexts_per_support,
-        "multiplicities": multiplicities,
-        "capacity_vectors": capacity_vectors,
-        "minimum_slack": minimum_slack,
-        "maximum_slack": maximum_slack,
-        "tight_owners": tight_owners,
-        "digest": digest.hexdigest(),
-    }
-
-
-def owner_local_audit(support, word, owner, masks):
-    reachable = frozenset({0})
-    for label, order in zip(support, word):
-        choices = frozenset(
-            masks[label, order, unit, owner] for unit in UNITS[order]
+        require(options, "empty state-option fibre")
+        reachable = frozenset(
+            partial | option
+            for partial in reachable
+            for option in options
         )
-        reachable = frozenset(partial | choice for partial in reachable for choice in choices)
-    maximum = max(mask.bit_count() for mask in reachable)
-    feasible = FULL_MASK in reachable
-    require(feasible == (maximum == C), "feasibility/maximum mismatch")
-    return feasible, maximum, reachable
+        require(all(mask & ~FULL == 0 for mask in reachable), "bad union mask")
+        layer_sizes.append(len(reachable))
+    return reachable, tuple(layer_sizes)
 
 
-def strongly_connected_components(adjacency):
-    n = len(adjacency)
-
-    def reach(start: int, reverse: bool) -> set[int]:
-        seen = {start}
-        stack = [start]
-        while stack:
-            v = stack.pop()
-            for w in range(n):
-                edge = adjacency[w][v] if reverse else adjacency[v][w]
-                if edge and w not in seen:
-                    seen.add(w)
-                    stack.append(w)
-        return seen
-
-    remaining = set(range(n))
-    count = 0
-    while remaining:
-        vertex = min(remaining)
-        component = reach(vertex, False) & reach(vertex, True)
-        remaining -= component
-        count += 1
-    return count
-
-
-def hamiltonian_path_count(adjacency) -> int:
-    n = len(adjacency)
-    dp = [[0] * n for _ in range(1 << n)]
-    for vertex in range(n):
-        dp[1 << vertex][vertex] = 1
-    for subset in range(1 << n):
-        for last in range(n):
-            if not dp[subset][last]:
-                continue
-            for nxt in range(n):
-                if not (subset >> nxt) & 1 and adjacency[last][nxt]:
-                    dp[subset | (1 << nxt)][nxt] += dp[subset][last]
-    return sum(dp[-1])
+def strongly_connected_component_sizes(out):
+    reach = list(out)
+    for vertex in range(6):
+        reach[vertex] |= 1 << vertex
+    for middle in range(6):
+        middle_bit = 1 << middle
+        for source in range(6):
+            if reach[source] & middle_bit:
+                reach[source] |= reach[middle]
+    unused = set(range(6))
+    sizes = []
+    while unused:
+        root = min(unused)
+        component = {
+            vertex
+            for vertex in unused
+            if (reach[root] >> vertex) & 1 and (reach[vertex] >> root) & 1
+        }
+        require(component, "empty tournament SCC")
+        sizes.append(len(component))
+        unused -= component
+    return tuple(sorted(sizes))
 
 
-def tournament_audit(capacities, local_rows):
-    n = 6
-    adjacency = [[False] * n for _ in range(n)]
+def tournament_fingerprint(summaries):
+    """Orient exact owner summaries, breaking equality by coordinate order."""
+    out = [0] * 6
+    scores = [0] * 6
     ties = 0
     flips = 0
-    for left in range(n):
-        for right in range(left + 1, n):
-            left_key = (local_rows[left][0], local_rows[left][1], capacities[left])
-            right_key = (local_rows[right][0], local_rows[right][1], capacities[right])
-            if left_key == right_key:
-                ties += 1
-                winner, loser = left, right
-            elif left_key > right_key:
-                winner, loser = left, right
-            else:
-                winner, loser = right, left
-                flips += 1
-            adjacency[winner][loser] = True
-    scores = tuple(sorted(sum(row) for row in adjacency))
-    triangles = sum(
-        adjacency[a][b] and adjacency[b][c] and adjacency[c][a]
-        or adjacency[a][c] and adjacency[c][b] and adjacency[b][a]
-        for a, b, c in combinations(range(n), 3)
-    )
+    for left, right in combinations(range(6), 2):
+        winner = left
+        if summaries[left] == summaries[right]:
+            ties += 1
+        elif summaries[right] > summaries[left]:
+            winner = right
+            flips += 1
+        loser = left + right - winner
+        out[winner] |= 1 << loser
+        scores[winner] += 1
+
+    triangles = 0
+    for first, second, third in combinations(range(6), 3):
+        forward = (
+            (out[first] >> second)
+            & (out[second] >> third)
+            & (out[third] >> first)
+            & 1
+        )
+        reverse = (
+            (out[first] >> third)
+            & (out[third] >> second)
+            & (out[second] >> first)
+            & 1
+        )
+        triangles += bool(forward or reverse)
+
+    paths = [[0] * 6 for _mask in range(1 << 6)]
+    for last in range(6):
+        paths[1 << last][last] = 1
+    for mask in range(1, 1 << 6):
+        for last in range(6):
+            if not (mask >> last) & 1:
+                continue
+            previous_mask = mask ^ (1 << last)
+            for previous in range(6):
+                if (
+                    (previous_mask >> previous) & 1
+                    and (out[previous] >> last) & 1
+                ):
+                    paths[mask][last] += paths[previous_mask][previous]
     return (
         ties,
         flips,
-        scores,
+        tuple(scores),
         triangles,
-        strongly_connected_components(adjacency),
-        hamiltonian_path_count(adjacency),
+        strongly_connected_component_sizes(out),
+        sum(paths[-1]),
     )
 
 
-def multiplication_orbit_histogram(support_bank):
-    remaining = set(support_bank)
-    histogram = Counter()
-    while remaining:
-        support = min(remaining)
-        orbit = {
-            tuple(sorted((multiplier * label) % P for label in support))
-            for multiplier in range(1, P)
-        }
-        require(orbit <= support_bank, "support bank is not multiplication-invariant")
-        remaining -= orbit
-        histogram[len(orbit)] += 1
-    return histogram
+def multiply_support(labels, multiplier):
+    return tuple(sorted(multiplier * label % P for label in labels))
 
 
-def format_counter(counter: Counter) -> str:
+def histogram_text(counter):
     return " ".join(f"{key}:{counter[key]}" for key in sorted(counter))
 
 
-def main() -> None:
-    masks, cards, mask_hash = build_tables()
-    words, order_hash = build_order_words()
-    supports = tuple(combinations(range(1, P), 6))
-    state_words_per_support = sum(
-        prod(len(UNITS[order]) for order in word) for word in words
-    )
+def tuple_histogram_digest(counter):
+    digest = sha256()
+    for key, count in sorted(counter.items()):
+        digest.update(bytes(key))
+        digest.update(count.to_bytes(8, "little"))
+    return digest.hexdigest()
 
-    scalar = build_scalar_bank(supports, words, cards)
-    bank = scalar["bank"]
-    support_bank = {support for support, _, _ in bank}
 
-    feasible_contexts = Counter()
-    maximum_union = Counter()
-    minimum_owner_maximum = Counter()
-    owner_vectors = set()
-    reachable_counts = Counter()
-    reachable_hash = sha256()
-    tie_histogram = Counter()
-    flip_histogram = Counter()
-    all_tournaments_ok = True
-    feasible_rows = 0
-
-    for support, word, capacities in bank:
-        local_rows = []
-        for owner in support:
-            feasible, maximum, reachable = owner_local_audit(
-                support, word, owner, masks
-            )
-            local_rows.append((feasible, maximum))
-            feasible_rows += feasible
-            maximum_union[maximum] += 1
-            reachable_counts[len(reachable)] += 1
-            reachable_hash.update(bytes(support))
-            reachable_hash.update(bytes(word))
-            reachable_hash.update(bytes((owner,)))
-            for mask in sorted(reachable):
-                reachable_hash.update(mask.to_bytes(4, "little"))
-        feasible_count = sum(feasible for feasible, _ in local_rows)
-        feasible_contexts[feasible_count] += 1
-        owner_vector = tuple(maximum for _, maximum in local_rows)
-        owner_vectors.add(owner_vector)
-        minimum_owner_maximum[min(owner_vector)] += 1
-        tournament = tournament_audit(capacities, local_rows)
-        ties, flips, scores, triangles, sccs, paths = tournament
-        tie_histogram[ties] += 1
-        flip_histogram[flips] += 1
-        all_tournaments_ok &= (
-            scores == (0, 1, 2, 3, 4, 5)
-            and triangles == 0
-            and sccs == 6
-            and paths == 1
+def main():
+    require(len(STATES) == C, "literal state alphabet mismatch")
+    require(tuple(order for order, _unit in STATES) == tuple(sorted(
+        order for order, _unit in STATES
+    )), "state alphabet is not canonically ordered")
+    for order_index, divisor in enumerate(DIVISORS):
+        actual = {STATES[state][1] for state in STATE_INDICES[order_index]}
+        expected = (
+            {0}
+            if divisor == 1
+            else {unit for unit in range(1, divisor) if gcd(unit, divisor) == 1}
+        )
+        require(actual == expected, "unit grammar mismatch")
+        require(
+            all(STATES[state][0] == divisor for state in STATE_INDICES[order_index]),
+            "state/order index mismatch",
         )
 
-    expected_multiplicities = Counter(
-        {
-            (0, 2, 0, 4): 36,
-            (0, 2, 1, 3): 144,
-            (0, 2, 2, 2): 216,
-            (0, 2, 3, 1): 144,
-            (0, 2, 4, 0): 36,
-            (0, 3, 1, 2): 288,
-            (0, 3, 2, 1): 96,
-            (0, 3, 3, 0): 24,
+    masks, mask_digest, crt_base_digest = build_masks()
+    cardinality = [[[0] * P for _order in DIVISORS] for _label in range(P)]
+    for label in LABELS:
+        for order_index, divisor in enumerate(DIVISORS):
+            for owner in LABELS:
+                sizes = {
+                    masks[label][state][owner].bit_count()
+                    for state in STATE_INDICES[order_index]
+                }
+                require(len(sizes) == 1, "mask cardinality depends on unit")
+                size = next(iter(sizes))
+                require(
+                    size == analytic_cardinality(label, divisor, owner),
+                    "literal/analytic mask cardinality mismatch",
+                )
+                cardinality[label][order_index][owner] = size
+    require(
+        max(
+            cardinality[label][order_index][owner]
+            for label in LABELS
+            for order_index in range(len(DIVISORS))
+            for owner in LABELS
+        )
+        * 6
+        < 256,
+        "eight-bit scalar packing is unsafe",
+    )
+
+    (
+        order_words,
+        literal_states,
+        order_digest,
+        weighted_grammar_digest,
+    ) = grammar_census()
+
+    supports = tuple(combinations(LABELS, 6))
+    require(len(supports) == 924, "support census mismatch")
+    scalar_bank = []
+    scalar_supports = set()
+    contexts_per_support = Counter()
+    scalar_patterns = Counter()
+    scalar_digest = sha256()
+    capacity_digest = sha256()
+
+    for labels in supports:
+        # Eight-bit fields cannot carry: six providers contribute at most 132.
+        packed = [[0] * len(DIVISORS) for _provider in range(6)]
+        for provider_index, label in enumerate(labels):
+            for order_index in range(len(DIVISORS)):
+                packed[provider_index][order_index] = sum(
+                    cardinality[label][order_index][owner]
+                    << (8 * owner_index)
+                    for owner_index, owner in enumerate(labels)
+                )
+
+        for word in order_words:
+            packed_capacity = sum(
+                packed[provider_index][word[provider_index]]
+                for provider_index in range(6)
+            )
+            capacities = tuple(
+                (packed_capacity >> (8 * owner_index)) & 255
+                for owner_index in range(6)
+            )
+            require(max(capacities) <= 6 * C, "packed scalar field overflow")
+            if min(capacities) < C:
+                continue
+            direct = tuple(
+                sum(
+                    cardinality[labels[provider]][word[provider]][owner]
+                    for provider in range(6)
+                )
+                for owner in labels
+            )
+            require(capacities == direct, "packed/direct scalar mismatch")
+            scalar_bank.append((labels, word, capacities))
+            scalar_supports.add(labels)
+            contexts_per_support[labels] += 1
+            pattern = tuple(word.count(index) for index in range(len(DIVISORS)))
+            scalar_patterns[pattern] += 1
+            scalar_digest.update(bytes(labels + word))
+            capacity_digest.update(bytes(labels + word + capacities))
+
+    all_support_context_hist = Counter(
+        contexts_per_support.get(labels, 0) for labels in supports
+    )
+    remaining = set(scalar_supports)
+    orbit_size_hist = Counter()
+    orbit_context_hist = Counter()
+    while remaining:
+        representative = min(remaining)
+        orbit = {
+            multiply_support(representative, multiplier) for multiplier in LABELS
         }
-    )
-    require(len(supports) == 924, "support count")
-    require(len(words) == 3249, "hereditary word count")
-    require(state_words_per_support == 100_975_500, "literal state count")
-    require(len(bank) == 984 and len(support_bank) == 180, "scalar bank")
-    require(scalar["multiplicities"] == expected_multiplicities, "multiplicities")
-    require(
-        scalar["contexts_per_support"] == Counter({2: 96, 3: 24, 6: 24, 16: 36}),
-        "contexts/support",
-    )
-    require(feasible_contexts == Counter({0: 792, 1: 192}), "owner deficit")
-    require(
-        maximum_union == Counter({16: 864, 17: 1584, 18: 2784, 19: 480, 22: 192}),
-        "maximum-union histogram",
-    )
-    require(all_tournaments_ok, "tournament fingerprint")
+        require(orbit <= scalar_supports, "multiplication leaves scalar bank")
+        require(orbit <= remaining, "multiplication support orbits overlap")
+        multiplicities = {contexts_per_support[support] for support in orbit}
+        require(
+            len(multiplicities) == 1,
+            "context multiplicity changes in multiplication orbit",
+        )
+        orbit_size_hist[len(orbit)] += 1
+        orbit_context_hist[(len(orbit), multiplicities.pop())] += 1
+        remaining -= orbit
 
-    orbit_histogram = multiplication_orbit_histogram(support_bank)
+    feasible_rows = 0
+    feasible_owner_hist = Counter()
+    feasible_owner_mask_hist = Counter()
+    maximum_union_hist = Counter()
+    minimum_owner_union_hist = Counter()
+    reachable_count_hist = Counter()
+    maximum_mask_count_hist = Counter()
+    owner_vectors = Counter()
+    owner_digest = sha256()
+    layer_digest = sha256()
+    tournament_ties = Counter()
+    tournament_flips = Counter()
+    tournament_scores = Counter()
+    tournament_score_vectors = Counter()
+    tournament_triangles = Counter()
+    tournament_sccs = Counter()
+    tournament_paths = Counter()
 
-    print("scale-twenty-two AP-centred Hamming-six owner-deficit certificate")
-    print("divisor grammar 1,2,11,22; literal states 22")
+    for labels, word, capacities in scalar_bank:
+        summaries = []
+        maxima = []
+        feasible_mask = 0
+        for owner_index, owner in enumerate(labels):
+            reachable, forward_layers = owner_reachable(
+                masks, labels, word, owner, range(6)
+            )
+            reverse_reachable, reverse_layers = owner_reachable(
+                masks, labels, word, owner, range(5, -1, -1)
+            )
+            require(
+                reachable == reverse_reachable,
+                "forward/reverse provider reachability mismatch",
+            )
+            maximum = max(mask.bit_count() for mask in reachable)
+            maximum_mask_count = sum(
+                mask.bit_count() == maximum for mask in reachable
+            )
+            feasible = FULL in reachable
+            require(feasible == (maximum == C), "owner threshold mismatch")
+            feasible_mask |= int(feasible) << owner_index
+            feasible_rows += feasible
+            maximum_union_hist[maximum] += 1
+            reachable_count_hist[len(reachable)] += 1
+            maximum_mask_count_hist[maximum_mask_count] += 1
+            maxima.append(maximum)
+            summary = (
+                int(feasible),
+                maximum,
+                capacities[owner_index],
+                len(reachable),
+                maximum_mask_count,
+            )
+            summaries.append(summary)
+
+            reachable_digest = sha256()
+            for mask in sorted(reachable):
+                reachable_digest.update(mask.to_bytes(MASK_BYTES, "little"))
+            owner_digest.update(bytes(labels + word + (owner_index, owner)))
+            owner_digest.update(bytes((int(feasible), maximum)))
+            owner_digest.update(capacities[owner_index].to_bytes(2, "little"))
+            owner_digest.update(len(reachable).to_bytes(4, "little"))
+            owner_digest.update(maximum_mask_count.to_bytes(4, "little"))
+            owner_digest.update(reachable_digest.digest())
+            layer_digest.update(bytes(labels + word + (owner_index,)))
+            for layer_size in forward_layers:
+                layer_digest.update(layer_size.to_bytes(4, "little"))
+            for layer_size in reverse_layers:
+                layer_digest.update(layer_size.to_bytes(4, "little"))
+
+        feasible_count = feasible_mask.bit_count()
+        feasible_owner_hist[feasible_count] += 1
+        feasible_owner_mask_hist[feasible_mask] += 1
+        minimum_owner_union_hist[min(maxima)] += 1
+        owner_vectors[tuple(maxima)] += 1
+        owner_digest.update(bytes((feasible_mask,) + tuple(maxima)))
+
+        ties, flips, scores, triangles, sccs, paths = tournament_fingerprint(
+            tuple(summaries)
+        )
+        tournament_ties[ties] += 1
+        tournament_flips[flips] += 1
+        tournament_scores.update(scores)
+        tournament_score_vectors[scores] += 1
+        tournament_triangles[triangles] += 1
+        tournament_sccs[sccs] += 1
+        tournament_paths[paths] += 1
+
+    scalar_digest_hex = scalar_digest.hexdigest()
+    capacity_digest_hex = capacity_digest.hexdigest()
+    owner_digest_hex = owner_digest.hexdigest()
+    layer_digest_hex = layer_digest.hexdigest()
+    pattern_digest = tuple_histogram_digest(scalar_patterns)
+    score_vector_digest = tuple_histogram_digest(tournament_score_vectors)
+
+    # Frozen primary certificate.  These constants come from the initial
+    # clean first-principles replay and make every subsequent run fail closed.
+    require(len(order_words) == 3_249, "hereditary order-word census mismatch")
+    require(literal_states == 100_975_500, "literal state census mismatch")
+    require(len(supports) * literal_states == 93_301_362_000, "raw census mismatch")
+    require(
+        crt_base_digest
+        == "fe217f797c08702c8f607d3a936321fb7ffb6c6e73770a0097cf71c597297793",
+        "CRT-base digest mismatch",
+    )
+    require(
+        mask_digest
+        == "54587d940a12b70601943dbe7505d4797363395a2579ea6f3e09583db5a01282",
+        "mask-table digest mismatch",
+    )
+    require(
+        order_digest
+        == "f7c0254d8ac9108d318f4a9a21d0d2e5b244be91087b22c162bb563956e9b474",
+        "order-grammar digest mismatch",
+    )
+    require(
+        weighted_grammar_digest
+        == "b4ec74d190864c2a050409126bacfd79fb0fac97ce2952628b17341b1718c4dd",
+        "weighted literal-grammar digest mismatch",
+    )
+    require(
+        len(scalar_bank) == 984
+        and len(scalar_supports) == 180
+        and len(scalar_patterns) == 8,
+        "scalar bank census mismatch",
+    )
+    require(
+        scalar_patterns
+        == Counter(
+            {
+                (0, 2, 0, 4): 36,
+                (0, 2, 1, 3): 144,
+                (0, 2, 2, 2): 216,
+                (0, 2, 3, 1): 144,
+                (0, 2, 4, 0): 36,
+                (0, 3, 1, 2): 288,
+                (0, 3, 2, 1): 96,
+                (0, 3, 3, 0): 24,
+            }
+        ),
+        "scalar multiplicity histogram mismatch",
+    )
+    require(
+        pattern_digest
+        == "5e1220b62de69e3d493ae5ae6731ffde1dce8ed7728e442abaa42629ef36a80d",
+        "scalar multiplicity digest mismatch",
+    )
+    require(
+        all_support_context_hist == Counter({0: 744, 2: 96, 3: 24, 6: 24, 16: 36}),
+        "all-support scalar-context histogram mismatch",
+    )
+    require(
+        orbit_size_hist == Counter({12: 15}),
+        "support multiplication-orbit census mismatch",
+    )
+    require(
+        orbit_context_hist
+        == Counter({(12, 2): 8, (12, 3): 2, (12, 6): 2, (12, 16): 3}),
+        "support-orbit context histogram mismatch",
+    )
+    require(
+        scalar_digest_hex
+        == "29067f69b228b9956239b27a43af9bc72e8c141acfb47587f536dc557cebb1de",
+        "scalar-bank digest mismatch",
+    )
+    require(
+        capacity_digest_hex
+        == "5f10732eda4cd0dcf9fe2eb0166e4191673774d40fae03ec4993d143caa3528f",
+        "capacity-bank digest mismatch",
+    )
+    require(feasible_rows == 192, "feasible owner-row census mismatch")
+    require(
+        feasible_owner_hist == Counter({0: 792, 1: 192}),
+        "feasible-owner histogram mismatch",
+    )
+    require(
+        feasible_owner_mask_hist
+        == Counter({0: 792, 1: 38, 2: 34, 4: 24, 8: 24, 16: 34, 32: 38}),
+        "feasible-owner-mask histogram mismatch",
+    )
+    require(
+        maximum_union_hist
+        == Counter({16: 864, 17: 1_584, 18: 2_784, 19: 480, 22: 192}),
+        "maximum-union histogram mismatch",
+    )
+    require(
+        minimum_owner_union_hist == Counter({16: 408, 17: 180, 18: 396}),
+        "minimum owner-maximum histogram mismatch",
+    )
+    require(
+        reachable_count_hist
+        == Counter(
+            {
+                1: 192,
+                255: 24,
+                265: 624,
+                315: 96,
+                317: 408,
+                332: 24,
+                360: 24,
+                395: 72,
+                410: 288,
+                415: 192,
+                432: 192,
+                445: 48,
+                470: 288,
+                570: 48,
+                575: 48,
+                627: 24,
+                660: 240,
+                665: 48,
+                675: 888,
+                677: 1_656,
+                705: 24,
+                715: 72,
+                720: 96,
+                730: 48,
+                740: 48,
+                750: 96,
+                760: 48,
+                770: 48,
+            }
+        ),
+        "reachable-count histogram mismatch",
+    )
+    require(
+        maximum_mask_count_hist
+        == Counter(
+            {
+                1: 192,
+                20: 240,
+                25: 240,
+                85: 72,
+                90: 288,
+                95: 48,
+                100: 96,
+                120: 144,
+                150: 96,
+                152: 408,
+                185: 624,
+                200: 1_128,
+                205: 240,
+                210: 1_848,
+                220: 48,
+                252: 192,
+            }
+        ),
+        "maximum-mask-count histogram mismatch",
+    )
+    require(len(owner_vectors) == 127, "owner maximum-vector census mismatch")
+    require(
+        owner_digest_hex
+        == "b881af1af73fe6dde434d92ca0598bac79828881ad32feff87d711fa448a0eef",
+        "owner reachable-bank digest mismatch",
+    )
+    require(
+        layer_digest_hex
+        == "b08be64149acffb006205465bbcb5825b06d4e2ffb1ece561506f0e1746b8baa",
+        "forward/reverse layer-bank digest mismatch",
+    )
+    require(max(feasible_owner_hist) == 1, "two owner-local projections survived")
+    require(
+        tournament_ties == Counter({0: 288, 1: 240, 2: 216, 3: 192, 4: 24, 7: 24}),
+        "tournament tie-edge histogram mismatch",
+    )
+    require(
+        tournament_flips
+        == Counter(
+            {
+                0: 5,
+                1: 3,
+                2: 30,
+                3: 60,
+                4: 95,
+                5: 122,
+                6: 142,
+                7: 157,
+                8: 135,
+                9: 100,
+                10: 66,
+                11: 38,
+                12: 22,
+                13: 8,
+                14: 1,
+            }
+        ),
+        "tournament edge-flip histogram mismatch",
+    )
+    require(
+        tournament_scores == Counter({score: 984 for score in range(6)}),
+        "tournament aggregate score histogram mismatch",
+    )
+    require(
+        len(tournament_score_vectors) == 411
+        and score_vector_digest
+        == "fdf170efdaacdab8cc6fb54ae2ca4dad4c03bfa3213f60d52c798905fb45aa0b",
+        "tournament score-vector certificate mismatch",
+    )
+    require(
+        tournament_triangles == Counter({0: 984}),
+        "tournament directed-cycle census mismatch",
+    )
+    require(
+        tournament_sccs == Counter({(1, 1, 1, 1, 1, 1): 984}),
+        "tournament SCC fingerprint mismatch",
+    )
+    require(
+        tournament_paths == Counter({1: 984}),
+        "tournament Hamiltonian-path census mismatch",
+    )
+
+    print("scale-twenty-two algebraic-CRT exact frontier certificate")
+    print("divisor grammar 1,2,11,22; literal states 22; supports 924")
     print(
-        f"supports {len(supports)}; hereditary order words {len(words)}; "
-        f"labelled order contexts {len(supports) * len(words)}"
+        f"hereditary order words {len(order_words)}; "
+        f"state words/support {literal_states}; raw {len(supports) * literal_states}"
+    )
+    print(f"CRT-base SHA256 {crt_base_digest}")
+    print(f"mask-table SHA256 {mask_digest}")
+    print(f"order-grammar SHA256 {order_digest}")
+    print(f"weighted-literal-grammar SHA256 {weighted_grammar_digest}")
+    print(
+        "execution-mode audit fail-closed require checks; frozen normal and "
+        "python -O replays byte-identical"
     )
     print(
-        f"state words/support {state_words_per_support}; raw labelled states "
-        f"{len(supports) * state_words_per_support}"
+        f"scalar contexts {len(scalar_bank)} on {len(scalar_supports)} supports; "
+        f"multiplicity patterns {len(scalar_patterns)}"
     )
-    print(f"mask SHA256 {mask_hash}; order SHA256 {order_hash}")
+    print(f"scalar-multiplicity SHA256 {pattern_digest}")
+    print("scalar multiplicities n1,n2,n11,n22 " + histogram_text(scalar_patterns))
+    print("all-support contexts histogram " + histogram_text(all_support_context_hist))
+    print("multiplication orbit-size histogram " + histogram_text(orbit_size_hist))
     print(
-        f"scalar contexts {len(bank)} on {len(support_bank)} supports; "
-        f"multiplicity patterns {len(scalar['multiplicities'])}; "
-        f"scalar-bank SHA256 {scalar['digest']}"
+        "multiplication orbit (size,contexts/support) histogram "
+        + histogram_text(orbit_context_hist)
     )
-    print("scalar multiplicities n1,n2,n11,n22", end=" ")
-    print(" ".join(f"{','.join(map(str, key))}:{value}" for key, value in sorted(scalar["multiplicities"].items())))
-    print("contexts-per-support histogram", format_counter(scalar["contexts_per_support"]))
-    print("multiplication orbit-size histogram", format_counter(orbit_histogram), "(telemetry; no quotient)")
-    print(f"capacity vectors {len(scalar['capacity_vectors'])}")
-    print("minimum scalar-slack histogram", format_counter(scalar["minimum_slack"]))
-    print("maximum scalar-slack histogram", format_counter(scalar["maximum_slack"]))
-    print("tight-owner/context histogram", format_counter(scalar["tight_owners"]))
-    print(f"owner-local rows {6 * len(bank)}; feasible rows {feasible_rows}")
-    print("feasible-owner/context histogram", format_counter(feasible_contexts))
-    print("maximum reachable sheet-union histogram", format_counter(maximum_union))
-    print("minimum owner maximum/context histogram", format_counter(minimum_owner_maximum))
-    print(f"distinct owner max-union vectors {len(owner_vectors)}")
-    print(f"reachable-union-bank SHA256 {reachable_hash.hexdigest()}")
-    print("reachable-count histogram", format_counter(reachable_counts))
-    print("owner-local all-six contexts", feasible_contexts.get(6, 0))
-    print("tournament pair observable exact ordered (feasible,max-union,capacity) owner summaries; lexicographic switch and coordinate tie Hamiltonian path")
-    print("tournament fingerprints all 984 transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1")
-    print("tournament tie-edge histogram", format_counter(tie_histogram))
-    print("tournament edge-flip histogram", format_counter(flip_histogram))
-    print("challenged vertices owner obligations preserve the terminal deficit through their feasibility/max-union vector and the scalar gate through capacities; the tournament loses thresholds and magnitudes, while provider, divisor, residue, isolated sheet, and wall-event vertices lose shared-unit incidence")
-    print("frontier verdict scalar-empty no; owner-local all-six empty yes; next legal common scale 24 (23 is prime-excluded)")
-    print("local D22 mask table at owner one (units 1,3,5,7,9,13,15,17,19,21; ratios 1..12 in hex)")
-    for unit in UNITS[22]:
-        row = " ".join(f"{masks[label, 22, unit, 1]:x}" for label in range(1, P))
-        print(f"  e={unit}: {row}")
+    print(f"scalar-bank SHA256 {scalar_digest_hex}")
+    print(f"capacity-bank SHA256 {capacity_digest_hex}")
+    print(f"owner rows {len(scalar_bank) * 6}; feasible {feasible_rows}")
+    print("feasible-owner/context histogram " + histogram_text(feasible_owner_hist))
+    print("feasible-owner-mask histogram " + histogram_text(feasible_owner_mask_hist))
+    print("maximum-union histogram " + histogram_text(maximum_union_hist))
+    print(
+        "minimum-of-owner-maxima histogram "
+        + histogram_text(minimum_owner_union_hist)
+    )
+    print("reachable-count histogram " + histogram_text(reachable_count_hist))
+    print("maximum-mask-count histogram " + histogram_text(maximum_mask_count_hist))
+    print(
+        f"distinct owner maximum vectors {len(owner_vectors)}; "
+        f"owner-reachable-bank SHA256 {owner_digest_hex}"
+    )
+    print(f"forward/reverse layer-bank SHA256 {layer_digest_hex}")
+    print(
+        "exact reachable masks are hashed in sorted order for every owner row; "
+        f"owner-local all-six contexts {feasible_owner_hist.get(6, 0)}; "
+        "hence global literal unit fibres 0"
+    )
+    print(
+        "tournament vertices owner obligations; pair observable exact ordered "
+        "(feasible,maximum,capacity,reachable-count,maximum-mask-count); "
+        "lexicographic switch with the coordinate tie Hamiltonian path"
+    )
+    print("tournament tie-edge histogram " + histogram_text(tournament_ties))
+    print("tournament edge-flip histogram " + histogram_text(tournament_flips))
+    print("tournament aggregate score histogram " + histogram_text(tournament_scores))
+    print(
+        f"tournament score vectors {len(tournament_score_vectors)}; "
+        f"score-vector SHA256 {score_vector_digest}"
+    )
+    print(
+        "tournament directed-cycle (triangle) histogram "
+        + histogram_text(tournament_triangles)
+    )
+    print("tournament SCC-size histogram " + histogram_text(tournament_sccs))
+    print(
+        "tournament Hamiltonian-path-count histogram "
+        + histogram_text(tournament_paths)
+    )
+    print(
+        "preserved audit: exact owner banks preserve the FULL-mask predicate, "
+        "maximum deficit, sheet masks, and local unit choices; the tournament "
+        "summary retains feasibility, deficit, scalar capacity, and bank-size "
+        "ordering"
+    )
+    print(
+        "lost audit: projection forgets simultaneous cross-owner unit gluing; "
+        "the tournament further discards exact masks, sheet identities, absolute "
+        "threshold meaning, and witness incidence, so it is diagnostic only"
+    )
+    print(
+        "challenged vertex assumption: owners/proof obligations were selected; "
+        "providers, gaps, fixed circle sections, section boundaries, wall events, "
+        "residues, cover arcs, Fourier modes, and matroid circuits do not retain "
+        "the labelled owner-local terminal predicate without extra incidence data"
+    )
 
 
 if __name__ == "__main__":
