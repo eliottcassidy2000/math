@@ -5,6 +5,27 @@ Prompt (owner): attack the one-line form directly with an extremal Weyl bound.
 FILES: HYP-7402, reflection weyl-is-the-wrong-tool-the-one-line-form-is-concentration-not-equidistribution. -> all (the one-line form is a CONCENTRATION statement min_L|T(L)|~val (residues maximally on val*Z), so a Weyl UPPER bound gives an UPPER bound on N_0 -- the wrong direction; extremality reaches only the active pair (2/13), the 11-core concentration is the global crux; @klein Weyl belongs to the DENSITY route (soft, any power-saving) NOT the rigidity (sharp, needs PFR/inverse) -- the wrong-marriage diagnosis).
 
 ---
+## mac-mini-2026-07-18-S118 -- THM-1065: the doubling family is tight EXACTLY when n = 1 mod 6. Forward direction PROVED; the '6' explained as 2*3, one prime from each neighbouring denominator. An INFINITE sporadic family that PROVABLY MISSES n=12. HYP-7490.
+
+TASK (owner): characterize n where 'remove n-1, add 2(n-1)' is tight.
+
+ANSWER: G(n) = {1..n-2, n, 2(n-1)} has
+    M(G(n)) = 1/n            (n even)          -- witness at q = 2n
+            = 2/(2n+1)       (n = 3,5 mod 6)   -- witness at q = 2n+1
+            = 1/(n+1) TIGHT  (n = 1 mod 6)
+Three-case formula verified with ZERO mismatches over n=5..60. Tight at n = 7,13,19,25,31,37,43,49,55,...
+
+THE MECHANISM (forward direction PROVED). In signed residues G(n) = {1..n-2} u {n} u {-2} mod 2n, and {1..n-2} u {n} u {-3} mod 2n+1 -- so +-G(n) misses EXACTLY the class +-(n-1) modulo BOTH neighbouring denominators. A clearance-2 witness at q needs u = m^{-1} = +-(n-1), i.e. needs (n-1) INVERTIBLE mod q. And gcd(n-1,2n) = gcd(n-1,2), gcd(n-1,2n+1) = gcd(n-1,3). So the q=2n escape exists iff n is EVEN, the q=2n+1 escape iff 3 does not divide n-1; both give M > 1/(n+1). Both die iff 2|(n-1) and 3|(n-1), i.e. 6|(n-1). **The 6 is 2*3 -- one prime from each of the two neighbouring denominators.** Structural claims verified exactly n=5..39.
+
+CONSEQUENCES: (1) an INFINITE family of sporadic tight instances, Goddyn-Wong (n=13) being its SECOND member and n=7 the first; (2) it PROVABLY MISSES n=12 (6 does not divide 11) -- the most dangerous known sporadic family cannot populate the n=12 branch; (3) it explains 7,13 in the locus {4,5,7,13}, while n=4,5 are NOT in this family -- so at least TWO distinct sporadic mechanisms exist.
+
+HONEST: the converse (6|(n-1) => tight) is verified n<=60, NOT proved -- it needs 'no denominator beyond 2n, 2n+1, n+1 beats 1/(n+1)'. One family characterized, not tight instances in general; the n=12 branch is NOT closed by this.
+
+FILES: THM-1065; HYP-7490.
+HANDOFFS: @all -- the n=12 rigidity now has a concrete structural argument in its favour: the only known infinite sporadic family is an arithmetic progression mod 6 that skips 12. @klein/@codex -- the converse is a bounded statement (rule out denominators other than 2n, 2n+1, n+1) and looks provable with the Farey/pair-sum machinery.
+
+---
+
 ## boxeph-2026-07-18-S94 -- THE CRUX REDUCED TO BEDROCK: j_1=0 PROVED, and the homogeneous offset-vanishing IS LRC(14) (equivalence proved) -- the reduction chain has bottomed out (owner: prove the 1-D offset-AP rigidity j_c=c*j_1 mod val). Attempting it gave ONE new theorem + a meta-result, and the honest verdict that the target is equivalent to the full conjecture. (1) LEMMA j_1=0 (PROVED, new): the active runner v_+ has v_+*a = val mod q, so its residue is EXACTLY val = val*1+0 => c=1, j_1=0 (the maximizer's left active runner). Verified on the deep-well tower (v_+*a=val, exactly ONE nonzero-offset residue). This COLLAPSES the offset-AP rigidity j_c=c*j_1 mod val to the HOMOGENEOUS form j_c=0 for the whole core => 'at most one of the 13 maximizer residues is NOT a multiple of val' (the 12 core residues = val*{1..12}, the far element = the lone exception val*12+1 = 169 = 13^2). This is the smallest, cleanest form the crux has taken. (2) EQUIVALENCE (PROVED both directions): '12 core residues == 0 mod val' <=> 'core is a dilated AP' = INV. (=>) twelve distinct multiples of val in [val,12val+1] (which holds exactly twelve) = ALL of val*{1..12} => core = b*{1..12} (band forbids wrap) => actual AP. (<=) core=b*{1..12} => residues val*{1..12}. So the ENTIRE reformulation chain (INV -> additive dim<=2 -> 12+1 coset split -> offset-AP rigidity -> homogeneous offset-vanishing) is LOGICALLY EQUIVALENT to LRC(14)'s covering crux; j_1=0 is the only genuinely new theorem, everything else is a change of coordinates. THE CRUX IS IRREDUCIBLE. META-RESULT (the honest payoff for the fleet): STOP seeking a cleverer reduction -- six sessions of reformulation are all PROVEN EQUIVALENT here; attack the one-line additive statement directly: 'M<1/13 => 12 of the 13 residues v_i*a mod(13*val+1) are multiples of val'. WHY IT RESISTS every coordinate change: it is an EXTREMALITY statement (a/q is the MAXIMIZER), and extremality is exactly what forces the twelve residues onto the lattice val*Z -- no reformulation removes the need to use 'this is the max', where the sharp additive / exponential-sum content lives. HONEST: LRC(14) NOT closed; this session PROVED the crux cannot be reduced further and named its irreducible one-line form.
 
 Prompt (owner): prove the 1-D offset-AP rigidity j_c = c*j_1 mod val.
