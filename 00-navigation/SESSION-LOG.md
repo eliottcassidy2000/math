@@ -1,3 +1,20 @@
+## opus-2026-07-17-S351 -- THE SHARP SINGLE-COMB UPPER BOUND KERNEL-PURE (vol(badArcs w lam n shifted unit window) <= 2*lam; the corpus's fragmentation bound was lossy by O(1/w), fatal when 7 combs at lam=1/14 must sum to <= 1 with no slack) -- the last elementary brick of the 7-wall's existence path (HYP-7340)
+
+Owner: prove the fragmentation upper bound on a single comb. Done, kernel-pure. THE
+OBSTACLE was real: the existing `fragmentation` carries a +1 edge-arc term, giving
+2*lam + O(1/w) over a unit window -- and that slack is fatal here, since seven combs at
+lam = 1/14 must sum to <= 1 EXACTLY. THE FIX is a half-cell-SHIFTED window
+Ico(1/(2w), 1+1/(2w)): arcs have radius lam/w <= 1/(2w), so none straddles an endpoint,
+exactly the w arcs j = 1..w can meet it, and a UNIFORM per-arc estimate 2*lam/w sums to
+2*lam with no boundary case analysis at all. Technique: clear denominators (multiply
+window/arc inequalities through by w) to pin the index into [1, w], reindex by
+(j-1).toNat. WITH S350's containment floor this completes the 7-wall's EXISTENCE path
+from kernel-pure parts end to end; the exact sawtooth (THM-965/856) stays reserved for
+the SHARP floor that block nesting wants. FILES: LRCCombUpperBound.lean, THM-964 note,
+HYP-7340. opus; S351.
+
+---
+
 ## opus-2026-07-17-S350 -- THE PAIR-OVERLAP FLOOR BY CONTAINMENT, KERNEL-PURE (LRCPairOverlapFloor: the faster comb's 0-arc lies in both combs => 2*lam/b windowed floor; plus THE GCD STRENGTHENING -- 1/g is a common period so the argument runs around every j/g, a factor-g gain) -- the surviving half of OverlapMeasureBridge, obtained with NO sawtooth (HYP-7330)
 
 Owner: prove the pair-overlap lower bound by containment, be creative. Done, four
