@@ -1,0 +1,14 @@
+DANGER-COUNT VARIANCE  Var(X),  X(t)=#{v: ||vt||<1/14}   [tournament analog: score variance]
+  mean is 13/7=1.8571 for EVERY 13-set, so all content is in the variance.
+  independent-events reference: Var_indep = 78/49 = 1.5918
+
+  family                  |  mean   |  Var(X)  | Var/Var_indep | L=P(X=0)
+  AP {1..13}              | 1.8572 |  2.8116  |    1.766     | 0.00000
+  deep well {1..12,182}   | 1.8572 |  2.8342  |    1.780     | 0.02390
+  GW {1..11,13,24}        | 1.8572 |  2.5977  |    1.632     | 0.00000
+  {1..11,13,84}           | 1.8572 |  2.5248  |    1.586     | 0.00536
+  2*{1..12} u {13}        | 1.8572 |  2.8328  |    1.780     | 0.01705
+
+  RANDOM primitive covering 13-sets (n=120): Var(X) min=1.5498  mean=1.6589  max=1.9155
+  AP Var(X) = 2.8116
+  => AP is ABOVE the random cloud (100.0% of random sets have SMALLER Var)

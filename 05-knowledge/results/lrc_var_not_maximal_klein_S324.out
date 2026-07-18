@@ -1,0 +1,16 @@
+Does the AP MAXIMIZE Var(X)?  AP Var = 2.8116
+  single-replacement families with Var(X) > AP: 585
+    Var=3.0576  (drop 11, add  15)  covering=False  M=0.09091
+    Var=3.0513  (drop 11, add  18)  covering=False  M=0.09091
+    Var=3.0401  (drop 13, add  15)  covering=False  M=0.07692
+    Var=3.0321  (drop 13, add  18)  covering=False  M=0.07692
+    Var=3.0274  (drop 11, add  16)  covering=False  M=0.09091
+    Var=3.0199  (drop 11, add  20)  covering=False  M=0.09091
+    Var=3.0165  (drop 11, add  24)  covering=False  M=0.09091
+    Var=3.0087  (drop 13, add  16)  covering=False  M=0.07692
+
+  => the AP does NOT maximize Var(X): it is distinguished from RANDOM but not
+     characterized variationally. Note what beats it and by what mechanism:
+     added speeds among the top-20: [14, 15, 16, 18, 20, 24, 30, 36]
+     (multiples of 14 sit exactly on the 1/14 grid, so they raise coherence
+      without being lonely-hostile -- a resonance artefact, not tightness)

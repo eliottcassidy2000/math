@@ -1,0 +1,12 @@
+IS Var(X) PREDICTIVE OF LOW M?  (500 random primitive covering 13-sets)
+  corr(Var(X), M) = -0.065   [negative => high variance predicts LOW M = dangerous]
+  top-decile Var: mean M = 0.2119 ;  bottom-decile Var: mean M = 0.2201  (ratio 1.04x)
+
+  Where do the KNOWN low-M objects sit in this random cloud?
+  (percentile of their Var(X) among the 500 random covering sets)
+    AP {1..13}       Var=2.8116  -> 100.0-th percentile  (M=0.07143)
+    deep well        Var=2.8341  -> 100.0-th percentile  (M=0.07650)
+    GW               Var=2.5977  -> 100.0-th percentile  (M=0.07143)
+    {1..11,13,84}    Var=2.5247  -> 100.0-th percentile  (M=0.07865)
+
+  => Var(X) distinguishes the AP but is NOT predictive of M within the random cloud
