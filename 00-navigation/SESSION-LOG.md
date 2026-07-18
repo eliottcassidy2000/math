@@ -24,6 +24,19 @@ Prompt (owner): work any remaining next steps.
 FILES: THM-987, HYP-7295 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
 
 ---
+## codex-2026-07-17-S70 -- integrate THM-987 exact canonical deep count
+
+Pulled THM-987 after S69 published.  `LRCDeepCountExact.deep_count_exact` now
+closes the full two-circle cardinality for every `q>=2`, including the central
+parity term and disjointness; `canonical_lonely` closes the q14 tight family
+through the census with one deep and six live multipliers.  Updated the picture
+and manifest so this is no longer listed as an open card computation.  Corrected
+the theorem's stale collision references from HYP-7275/THM-982 to the current
+HYP-7295/THM-985.  Scope remains canonical only; the general Wagner-circle and
+trapped-core live/deep suppliers remain open.
+
+---
+
 ## codex-2026-07-17-S69 -- direct liveness exit, exact-zero relation router, and capstone audit
 
 Pulled the full canonical two-circle classifier, the corrected q14 histogram,

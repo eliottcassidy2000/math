@@ -1216,10 +1216,13 @@ kernel decision that every normalized coprime witness for `k₀=3,...,8` has at
 most four compatible later partners, so those cases have fewer than six
 failures; the `k₀=1,2` cases give the two circles and `k₀>=9` is cardinally
 impossible.  Exact reconstruction is now a referee rather than the logical
-basis.  The exact deep-count corollary—cardinality of the two circle sets,
-including half-circle parity and overlap—remains one card computation.  THM-985
-classifies only the canonical family; it is not the uniform weighted/deep or
-trapped-core supplier required by LRC(14).
+basis.  THM-987 closes the formerly remaining card computation in
+`LRCDeepCountExact`: for `B=(q-1)/84`, the deep count is
+`2B + (B+1-(q+B)%2)` for every `q>=2`; the integer and half circles are proved
+disjoint.  Its q14 corollary has one deep and six live multipliers and proves
+the canonical tight family lonely through the census funnel.  THM-985/987
+remain canonical-family theorems, not the uniform weighted/deep or trapped-core
+supplier required by LRC(14).
 
 ## Addendum (boxeph-S69): item 15
 

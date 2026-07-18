@@ -209,9 +209,11 @@ must state which LRC predicate it preserves.
   proves the converse.  The smallest-failing-speed branches `k₀=1,2` are
   explicit; `compat_card_le` collapses every middle case `k₀=3,...,8` to one
   finite kernel decision, and `k₀>=9` is impossible by cardinality.  Thus the
-  canonical deep set is exactly the two circles in-kernel.  Its exact-cardinal
-  formula remains one circle-union card computation; neither the classifier
-  nor that corollary is the uniform weighted/trapped-core supplier.
+  canonical deep set is exactly the two circles in-kernel.  THM-987 now counts
+  their disjoint union for every `q>=2`, including the half-circle parity term,
+  and proves the canonical tight family lonely through the q14 census
+  (`deep=1`, `live=6`).  These are canonical-family closures, not the uniform
+  weighted/trapped-core supplier.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
   zero-color primitive gluing, fixed-root incidence Fubini, summed aligned gcd

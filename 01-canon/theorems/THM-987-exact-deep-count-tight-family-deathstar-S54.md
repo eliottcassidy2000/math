@@ -2,7 +2,7 @@
 
 **Status:** PROVED (Lean, kernel-pure — `TournamentH7/LRCDeepCountExact.lean`,
 standard trio ×3; `decide` only on the q = 14 census gates). Source: HYP-7295.
-The capstones on THM-982.
+The theorem capstones THM-985.
 
 ## Statement
 

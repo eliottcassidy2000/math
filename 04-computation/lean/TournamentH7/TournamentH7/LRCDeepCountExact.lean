@@ -2,7 +2,7 @@
   TournamentH7.LRCDeepCountExact — THE EXACT DEEP COUNT AND THE TIGHT FAMILY
   THROUGH THE FUNNEL (death-star-2026-07-17-S54, HYP-7295).
 
-  Two capstones on THM-982's two-circle theorem:
+  Two capstones on THM-985's two-circle theorem:
 
   * `deep_count_exact` — the deep count of the canonical family in closed
     form, for EVERY q ≥ 2:
