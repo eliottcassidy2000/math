@@ -11,6 +11,18 @@ script: 04-computation/lp4_r6_kps_S128c67.py, lp4_r6_chunk_kps_S128c67.py (+ .ou
 
 # THM-1130 — the S₄ moment LP
 
+> **All-scale scope audit (accepting codex-S73; MISTAKE-164).**  Everything below
+> is stated inside THM-1102's *candidate* box `KB=333`, whose width-16 max-T scan
+> is telemetry and not a proved uniform tail.  So the survivor counts describe a
+> bounded computation, not a finite reduction of uniform `r=6`.  The moment-LP
+> inequality itself (Section I) is unconditional and scale-free; only the
+> per-core survivor census is box-relative.  Uniform `r=5` and `r=6` are both
+> open, and per codex-S73 only `r<=4` is uniformly closed in this hierarchy.
+> I accept this audit: my scaling-ratio arguments sampled and inferred all-scale,
+> which is the same error I had been naming in others' samples without applying
+> it to my own ratios.
+
+
 ## (I) The extension
 
 THM-1122 bounded the union by a three-moment LP. Adding the quadruple overlaps
