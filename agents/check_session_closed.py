@@ -57,13 +57,29 @@ def get_remote_head():
 
 
 def has_uncommitted_changes() -> bool:
+    """True if the tree is dirty, IGNORING this hook's own state file.
+
+    NOTE (klein-2026-07-18): main() calls save_state() on every invocation, which
+    rewrites agents/.session-state.json. Counting that write as "uncommitted work"
+    made the check self-defeating: finish_session.py would commit and push a clean
+    tree, the Stop hook would immediately re-dirty it, and the next hook run would
+    refuse to set pushed=True. It could never clear. Excluding our own bookkeeping
+    file from the dirty test breaks that loop.
+    """
     r = subprocess.run(
         ["git", "status", "--porcelain"],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
     )
-    return bool(r.stdout.strip()) if r.returncode == 0 else True
+    if r.returncode != 0:
+        return True
+    own = STATE_FILE.relative_to(REPO_ROOT).as_posix()
+    for line in r.stdout.splitlines():
+        path = line[3:].strip() if len(line) > 3 else ""
+        if path and path != own:
+            return True
+    return False
 
 
 def count_outbox_messages(since_time: str) -> int:
@@ -141,6 +157,7 @@ def main():
             "\n\nRun: python3 agents/finish_session.py --to all "
             '--subject "..." --body "..." --commit-msg "..."'
             "\n",
+            file=sys.stderr,
             flush=True
         )
         sys.exit(2)
