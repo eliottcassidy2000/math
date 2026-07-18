@@ -1,0 +1,10 @@
+THM-1131 exact PG(2,13)-gap referee
+parameter identity: 183=13^2+13+1; 14=13+1
+deep_well: M=14/183 maximizer_times=14/183,169/183 pair_sum_denominators=36
+compressed_near_dilate: M=1/13 maximizer_times=1/26,3/26,5/26,7/26,9/26,11/26,15/26,17/26,19/26,21/26,23/26,25/26 pair_sum_denominators=35
+divisor_complete_3_over_37: M=3/37 maximizer_times=2/37,35/37 pair_sum_denominators=37
+ordered M gauge: deep_well < compressed_near_dilate < divisor_complete_3_over_37
+tournament fingerprint: transitive; scores=0,1,2; cycles=0; SCCs=1,1,1; HP=1
+preserved: scalar M order; destroyed: covering carriers, residues, maximizer geometry
+challenged vertices: proof obligations and divisor carriers are more faithful than runners
+VERDICT: the proposed [14/183,1/12) empty gap and non-AP=>M>=1/12 target are FALSE
