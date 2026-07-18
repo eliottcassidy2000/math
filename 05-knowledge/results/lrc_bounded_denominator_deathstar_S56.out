@@ -1,0 +1,13 @@
+AP {1..13}: Vmax=13, 2*Vmax=26
+   all loneliness times (denom<=120): distinct denominators = [14]
+   max denom = 14  <=  2*Vmax = 26 ?  True
+   any denom > n=14 ?  False   => R holds: True
+   active runners at t=1/14: [1, 13], sum=14 (=denom 14)
+
+GW {1..11,13,24}: Vmax=24, 2*Vmax=48
+   all loneliness times (denom<=120): distinct denominators = [14]
+   max denom = 14  <=  2*Vmax = 48 ?  True
+   any denom > n=14 ?  False   => R holds: True
+   active runners at t=1/14: [1, 13], sum=14 (=denom 14)
+
+R is a FINITE check: denom<=2Vmax and denom divisible by 14 => AP: none in (14,26]; GW: only {28,42}, both absent.
