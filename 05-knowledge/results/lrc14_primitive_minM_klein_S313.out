@@ -1,0 +1,4 @@
+primitivized dilated-AP adversaries: n=1290 primitive covering >=4-far
+MIN Mgrid=0.07690 (1/14=0.07143, 1/13=0.07692) at [26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 339]
+low-M(<0.08): 8  e.g. [(np.float64(0.0769), 13, -1, [13, 26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156, 168]), (np.float64(0.0769), 26, 1, [26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 339]), (np.float64(0.0769), 26, -1, [26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 337])]
+VERDICT: nearest primitive >=4-far to tight has M=0.0769 = 1.08x of 1/14 => Claim B holds for PRIMITIVE (dilated tight AP escapes only by being NON-primitive).
