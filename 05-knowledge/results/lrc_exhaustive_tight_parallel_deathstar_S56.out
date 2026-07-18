@@ -1,1 +1,6 @@
   20/93 tasks, tight so far=0, 28s
+  40/93 tasks, tight so far=0, 252s
+  60/93 tasks, tight so far=0, 546s
+  80/93 tasks, tight so far=0, 1011s
+DONE Vmax in [25,30] in 3358s. New tight families: []
+Combined with the Vmax<=24 result {AP,GW}: classification holds up to Vmax=30
