@@ -5,7 +5,7 @@ No floating point is used in a proof-bearing assertion.  The script checks:
   * the strict 17/41 margin of the fixed 12-speed core;
   * arbitrary finite-atlas killing by one divisor-loaded coordinate;
   * the explicit odd-half witness near 17/41;
-  * prefix blindness and exact q_min values on representative lcm rows;
+  * prefix blindness, q0, and exact q_min values on representative lcm rows;
   * fixed q=41 address with component-width bound tending to zero.
 """
 
@@ -54,6 +54,14 @@ def is_covering(speeds: tuple[int, ...]) -> bool:
     return all(any(v % q == 0 for v in speeds) for q in range(2, 15))
 
 
+def first_unblocked_modulus(speeds: tuple[int, ...], cap: int) -> int:
+    """Least q for which no speed is divisible by q."""
+    for q in range(2, cap + 1):
+        if all(v % q != 0 for v in speeds):
+            return q
+    raise RuntimeError("first unblocked modulus exceeds cap")
+
+
 print("THM-1098 EXACT DETERMINISTIC AUDIT")
 print()
 
@@ -94,8 +102,8 @@ print(f"    explicit lonely point = {a}/{den}; reduced denominator = {red_den}")
 print()
 
 print("[3] prefix rows S_B={1,...,11,13,lcm(1,...,B)}")
-print("    B   digits(M)   exact q_min (within B+250)   explicit-denominator<=2M")
-for B in (14, 25, 30, 39, 41, 50, 60, 80, 100, 150, 200):
+print("    B   digits(M)   q0   exact q_min   excess   explicit-denominator<=2M")
+for B in (14, 23, 25, 30, 39, 41, 50, 60, 80, 100, 150, 200):
     M = reduce(lcm, range(1, B + 1), 1)
     speeds = CORE + (M,)
     assert M >= 3731 and M % 84 == 0
@@ -111,8 +119,13 @@ for B in (14, 25, 30, 39, 41, 50, 60, 80, 100, 150, 200):
     assert B < red_den <= 2 * M
     exact = least_denominator(speeds, B + 250)
     assert exact is not None and exact[0] > B
-    print(f"    {B:3d} {len(str(M)):11d}   {exact[0]:3d} at {exact[1]}/{exact[0]:<3d}"
-          f"                yes ({red_den} <= 2M)")
+    q0 = first_unblocked_modulus(speeds, B + 250)
+    assert B < q0 <= exact[0]
+    if B == 23:
+        assert (q0, exact) == (25, (53, 22))
+    print(f"    {B:3d} {len(str(M)):11d}  {q0:3d}   "
+          f"{exact[0]:3d} at {exact[1]}/{exact[0]:<3d}  {exact[0] - q0:6d}   "
+          f"yes ({red_den} <= 2M)")
 print()
 
 print("[4] fixed rational address, vanishing geometric thickness")

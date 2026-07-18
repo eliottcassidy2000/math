@@ -151,6 +151,13 @@ rows must exceed `B` at height `L_B`.  In particular it cannot be
 logarithms are used.  This does not supply an upper bound of that order: it is
 the sharp necessary growth forced by divisor loading.
 
+The same exact audit separates this obstruction from THM-1105's sampled `q0`
+position law.  At `B=23`, the prefix row has first unblocked modulus `q0=25`,
+but its least lonely denominator is `53` (witness `22/53`).  Thus the exact
+excess `q_min-q0` is `28`, already larger than the incoming adversarial-search
+record `19`.  This is not an unboundedness theorem for the excess; it is a
+guardrail that `q0` remains a useful first address rather than a closure law.
+
 ## Corollary C: rational address and component thickness are independent
 
 If a family contains speed `M`, every connected component of its lonely set
@@ -251,6 +258,6 @@ and the fixed-address thin-component family using integer arithmetic only.
 Frozen SHA-256 values:
 
 ```text
-script  fca97b9536090142f1b167c9cc3282273557c9a2b586ab08762989e4c75518f8
-output  db803fa43d865b9e7cf429850735e1fbaf8a5b20cdd92d6c6cfaec543cbea01d
+script  3ec85395d0b146b860f06c9347eedf0551a14d4b4b0d793d37e1a961d641060b
+output  01a1449248749097a25499b627ad471e8ec6544c3d31829b1a382410fa7f5882
 ```

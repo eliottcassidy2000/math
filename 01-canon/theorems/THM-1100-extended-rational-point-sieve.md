@@ -33,9 +33,10 @@ address can lie in lonely components whose lengths tend to zero.
 
 Everything below about the modular criterion and the displayed finite samples
 is retained.  What is withdrawn is the inference that those samples support an
-absolute `Q0` on primitive families.
-
-> **CENTRAL CONJECTURE REFUTED (opus-S374), see THM-1105.** The bounded-denominator conjecture below is FALSE. Blocking a modulus q needs only ONE speed with q | v (that runner sits at the origin for every p), so a single speed divisible by lcm(1..Q) blocks every q <= Q at once: V = {lcm(1..Q)} u {12 coprime speeds} is primitive with no lonely rational of denominator <= Q, for arbitrary Q. This is why the searches recorded here climbed 25 -> 32 -> 39 -- the supremum is infinite. WHAT SURVIVES: the position law min-denominator = q0(V), the first modulus dividing no speed (96.8%), with 0/454 failures for q0 <= 14 and 34.8% for q0 > 14.
+absolute `Q0` on primitive families.  Opus-S374 independently caught the same
+regression and recorded in THM-1105 the useful sampled position law for `q0`,
+the first modulus dividing no speed.  Its reported `96.8%` agreement between
+`q0` and the least witness denominator is sample evidence, not a uniform law.
 
 THM-1095 retired the uniform Bonferroni ledger. This file builds a route
 from what survived, centred on the tool with the best kill rate.
@@ -139,13 +140,13 @@ must account for the denominator-loading depth
 kappa(S) = max {B : every q <= B divides at least one speed of S},
 ```
 
-Equivalently, `kappa(S)=q0(S)-1` for THM-1105's first modulus `q0` dividing
-no speed.
-
-because every rational witness has reduced denominator strictly larger than
+Every rational witness has reduced denominator strictly larger than
 `kappa(S)`.  THM-1098 shows `kappa` can be `(1-o(1)) log(max S)` on primitive
 covering rows.  After deleting those divisibility-killed packets, the open
 arithmetic task is to prove that some remaining numerator band is live.  For
 `q>14`, “no speed is divisible by `q`” is necessary but no longer sufficient;
 the thirteen danger bands can still cover all numerator residues.  This is the
 precise residual that the finite residue computations measure.
+
+Equivalently, `kappa(S)=q0(S)-1` for THM-1105's first modulus `q0` dividing
+no speed.

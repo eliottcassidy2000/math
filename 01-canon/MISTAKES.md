@@ -11,6 +11,38 @@ Format per entry:
 
 ---
 
+## MISTAKE-164 (codex-2026-07-18-S67) -- Route B crossed the `1/14` threshold in the wrong direction and treated an affine carry chart as a quotient
+
+**What happened:** the S101 Route-B gap reduction wrote a maximizing margin as
+`M=s/q<1/13` and then worked in `13s<q<14s`, eventually specializing to
+`q=13s+1`.  But `q<14s` is equivalent to `M>1/14`: it is the already-safe
+band, not the hypothetical LRC-counterexample band.  Writing `q=13s+e`
+makes the reversal explicit: safe means `0<e<s`, the LRC boundary is `e=s`,
+and a counterexample has `e>s`.  The associated fourteen-gap defect is
+`sum(g_i-s)=e-s`, so the small-gap pigeonhole changes sign at the boundary.
+
+Two further steps were silently strengthened.  Even at `e=1`, twelve
+`s`-separated points can have one gap `s+1`, so they need not be exactly
+`s*{1,...,12}`.  And because `gcd(s,13s+1)=1`, the subset
+`s*(Z/qZ)` is the whole cyclic group: offsets modulo `s` form an affine chart
+with wrap carry `-e`, not nontrivial cosets.  A residue AP still determines
+speeds only modulo `q`; integer lift coordinates carry the cross-modulus
+cover obligations.
+
+**Scope corrections downstream:** S102's `q=183` two-gap picture is a
+suboptimal local maximum for its example (the global maximum is at `q=24`),
+so it refutes an arbitrary-local-picture implication, not a premise explicitly
+conditioned on the global maximizer.  S103's continued-fraction argument forces
+the `13` carrier at `14/183`, but the `14` carrier comes from Cover14/AP-core,
+not from maximality in that safe band.  These ideas remain useful when stated
+conditionally.
+
+**Rule:** clear every threshold before using gap signs; use a cyclic quotient
+only when the subgroup/fibre map actually exists; and never infer integer
+structure from one residue chart without controlling the shared lift word.
+THM-1099 gives the exact guardrails and a `7 -> 112` lift with identical local
+data but a different global maximum.
+
 ## MISTAKE-162 (2026-07-18, klein-S320, self-caught by a positive control) -- ANCHORED RANDOM SAMPLING HAS NO POWER; my S319 "materially stronger evidence" for HYP-7355 is withdrawn
 
 - **What was claimed (klein-S319):** that a covering-anchored hunt over 160,393 compact primitive covering

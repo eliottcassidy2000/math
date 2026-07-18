@@ -1464,10 +1464,13 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `character_sum_opus_S371.out` | [STORED] | THM-1093: character sum C(A) identically 0 for odd k (antipodal symmetry) -- not a discriminant. | (self) |
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly (Tbar=0); no gain, 12.4x spread. | (self) |
 | `dedekind_evaluation_opus_S372.out` | [STORED] | THM-1095: first (mis-normalised) run; k=2 control vacuous -- kept as the record of the correction. | (self) |
-| `dedekind_normalized_opus_S372.out` | [STORED] | THM-1095: corrected test -- delta*m7 varies 150-195% and CHANGES SIGN within a residue class at k=3. | (self) |
-| `extended_sieve_opus_S373.out` | [STORED] | THM-1100: extended sieve kill rate 86.5% -> 100% at Q<=30, incl. all 54 hard-stratum families. | (self) |
-| `sieve_adversarial_opus_S373.out` | [STORED] | THM-1100: dilation obstruction + adversarial minimal denominators 25 -> 32 -> 39 (no bound claimed). | (self) |
-| `largest_gap_opus_S373.out` | [STORED] | THM-1100: largest-gap reformulation REFUTED as a control; gaps are situated, not large. | (self) |
+| `dedekind_normalized_opus_S372.out` | [STORED; TRUNCATED DISCOVERY RUN] | THM-1095: suggested a within-residue sign reversal at k=3; its decimals and apparent k=2 spread are cutoff artifacts, superseded by the exact referee below. | (self) |
+| `kfold_resonance_exact_referee_codex_S67.out` | [STORED; EXACT RATIONAL REFEREE] | THM-1095: two independent exact intersection engines plus product-ordered `m7` enumeration prove four same-residue sign reversals; `(1,2,3)` and `(1,16,17)` also have the same residues and `m7=1` but different centered moments. | codex-S67 |
+| `extended_sieve_opus_S373.out` | [STORED; SAMPLE ONLY] | THM-1100: exact sample kill rate 86.5% -> 100% at Q<=30, including all 54 sampled hard-stratum rows; THM-566/1098 refute every global bounded-denominator inference. | (self) |
+| `sieve_adversarial_opus_S373.out` | [STORED; SAMPLE ONLY / ROUTE REFUTED] | THM-1100: sampled least denominators 25 -> 32 -> 39; the omitted deterministic lcm family makes the supremum infinite even on primitive covering rows. | (self) |
+| `largest_gap_opus_S373.out` | [STORED; SAMPLE ONLY] | THM-1100: discovery evidence that gaps are situated, not large; THM-1098 now proves the separation by a fixed `17/41` address in components of width tending to zero. | (self) |
+| `lrc14_primitive_finite_atlas_obstruction_codex_s67.out` | [STORED; EXACT DETERMINISTIC AUDIT] | THM-1098: primitive covering lonely rows kill arbitrary finite rational atlases, force `B<q_min<=2 lcm(1..B)`, and separate address from component width. Exact `B=23` row has `q0=25`, `q_min=53`, excess 28. | codex-S67 |
+| `lrc14_routeb_affine_lift_guardrails_codex_S67.out` | [STORED; EXACT DETERMINISTIC AUDIT] | THM-1099: threshold/defect/carry/CRT guardrails and the exact `7 -> 112` lift; identical local data at `8/105` coexist with global values `8/105` and `3/20`. | codex-S67 |
 | `variation_bound_opus_S371.out` | [STORED] | THM-1093: variation bound = coset-absolute bound exactly for odd support (Tbar=0); the measured twelve-family spread is 12.4x, not a no-go theorem for every signed estimate. | (self) |
 | `denominator_unbounded_opus_S374.out` | [STORED] | THM-1105: lcm(1..Q) construction REFUTES the bounded-denominator conjecture. | (self) |
 | `divisibility_law_opus_S374.out` | [STORED] | THM-1105: min-den = q0 in 96.8%; 0/454 failures at q0<=14 vs 34.8% at q0>14; excess hunt to 19. | (self) |

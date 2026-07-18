@@ -1,0 +1,23 @@
+THM-1099 exact Route-B affine/lift guardrail audit
+threshold trichotomy: PASS (6480 exact (s,e) rows)
+fourteen-gap signed defect: PASS (435 exact packets)
+one-carry packing counterfamily: PASS (79 exact scales)
+coprime multiple range = whole cyclic group: PASS (39 scales)
+affine carry law: PASS (13100340 exact additions)
+V0 exact M: 8/105, maximizer a/q/val=(8, 105, 8)
+V0 cover through 13 / 14: True / False
+V1 exact M: 3/20, maximizer a/q/val=(3, 20, 3)
+V1 cover through 14: True
+shared residues at 8/105: (8, 16, 24, 31, 40, 47, 56, 64, 72, 80, 88, 96, 97)
+shared internal gaps: (8, 8, 7, 9, 7, 9, 8, 8, 8, 8, 8, 1)
+active-pair slack after 7->112: active=8, next=9 (numerators over 105)
+3/20 witness distance numerators: (3, 6, 9, 5, 4, 7, 10, 7, 4, 9, 3, 8, 4)
+CRT owner lift: gcd(105,14)=7 and least 14-carrier in 7+105Z is 112
+modular-lift guardrail: speeds 2 and 185 have the same residue 28 at 14/183
+owner lift costs: ((2, 2), (3, 3), (4, 8), (5, 5), (6, 12), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 104), (14, 112))
+owner-cost tournament path: (2, 3, 5, 7, 4, 8, 9, 10, 11, 6, 12, 13, 14)
+owner-cost score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+owner-cost directed 3-cycles / SCCs / Hamiltonian paths: 0 / 13 / 1
+V1 owner->least-carrier incidence: ((2, 2), (3, 3), (4, 8), (5, 5), (6, 12), (7, 112), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 104), (14, 112))
+owner pairs sharing their least carrier: 3
+ALL EXACT CHECKS PASS
