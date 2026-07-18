@@ -1,0 +1,4 @@
+HYP-7355 DIRECT TEST at n=14: compact primitive covering 13-set with M < 1/13 ?
+Targeting the TIGHT-BAND shape (the n=11 counterexample had rho=1.12, all speeds in a narrow band).
+  compact covering 13-sets scanned in tight bands: 2383905 ; elapsed 270s
+  no counterexample in the tight-band shape scanned (time-capped, NOT exhaustive)
