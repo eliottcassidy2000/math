@@ -341,10 +341,15 @@ debt symbolically.  THM-989 independently
 closes `c=22`: literal-CRT/C++ and algebraic-CRT/Python agree on ten hardened
 certificate banks, and every row has at least five empty owners.  `c=23` is
 prime.  THM-990 independently closes `c=24` (66,984 scalar rows, at least two
-empty owners) and hashes all 101,961,528 reachable masks.  THM-992's frozen primary and structural
-`Z/25 -> Z/5` fibre proof reduce `c=25` to 36 rows and make every owner miss
-at least three sheets; independent replay is pending.  Scale 26 is
-multiple-of-thirteen excluded, so the next untreated common scale is `c=27`.
+empty owners) and hashes all 101,961,528 reachable masks.  THM-992's structural
+`Z/25 -> Z/5` fibre proof reduces `c=25` to 36 rows and makes every owner miss
+at least three sheets; an independent literal-CRT C++ referee agrees with the
+Python primary on all 23,338,080 reachable masks.  Scale 26 is
+multiple-of-thirteen excluded.  THM-993/994 independently close `c=27`:
+the standard-library and NumPy-batched implementations agree on all 450
+scalar rows, all 51 bank-size bins, and the 13,598,160-mask total; the nested
+`Z/3`/`Z/9` upper relaxation gives the structural reason.  The next untreated
+common scale is `c=28`.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these

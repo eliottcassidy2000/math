@@ -58,14 +58,13 @@ theorem sum_eq_zero_of_opposite_pair_equations
   have hS : S = z 0 + z 1 + z 2 + z 3 + z 4 + z 5 := by
     simp [S, Fin.sum_univ_succ]
     ring
-  have hsix : 6 * S = S := by
-    calc
-      6 * S = 2 * S + 2 * S + 2 * S := by ring
-      _ = (z 0 + z 3) + (z 1 + z 4) + (z 2 + z 5) := by rw [h0, h1, h2]
-      _ = S := by rw [hS]; ring
   have hfive : (5 : ZMod 7) * S = 0 := by
-    linear_combination hsix
-  exact (mul_eq_zero.mp hfive).resolve_left (by norm_num)
+    linear_combination h0 + h1 + h2 - hS
+  have hunit : (3 : ZMod 7) * 5 = 1 := by decide
+  calc
+    S = ((3 : ZMod 7) * 5) * S := by rw [hunit]; ring
+    _ = 3 * (5 * S) := by ring
+    _ = 0 := by rw [hfive]; ring
 
 /-- There is no six-tuple of nonzero squares in `ZMod 7` satisfying all six
 opposite-pair equations `2 S = zᵢ + zᵢ₊₃`. -/
@@ -82,7 +81,7 @@ theorem no_nonzero_square_solution
   rw [hS] at h03
   norm_num at h03
   exact nonzero_squares_do_not_sum_to_zero (z 0) (z 3)
-    (hnz 0) (hsq 0) (hnz 3) (hsq 3) h03
+    (hnz 0) (hsq 0) (hnz 3) (hsq 3) h03.symm
 
 end ScaleSevenSquareSum
 end LonelyRunner
