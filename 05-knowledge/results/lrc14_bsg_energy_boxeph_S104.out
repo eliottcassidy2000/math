@@ -1,0 +1,15 @@
+additive energy / doubling DISCRIMINATES AP from non-AP cores (n=12, n^3=1728):
+  deep-well core {1..12} (AP) : |C-C|= 23  E= 1156  E/n^3=0.669
+  non-AP divisor-rich         : |C-C|=103  E=  364  E/n^3=0.211
+  near-AP {1..11,13}          : |C-C|= 25  E= 1116  E/n^3=0.646
+  squares {1,4,...,144}       : |C-C|=111  E=  320  E/n^3=0.185
+
+full deep-well residue set R: |R-R|=47 > 3k-4=35  => DIMENSION 2 (Freiman fails on R)
+
+band-avoiding 12-sets inside [14,169] (LOCAL content of M<1/13) -- energy is NOT forced:
+  AP 14*{1..12}  in[14,169]=True  |C-C|= 23  E= 1156  E/n^3=0.669
+  Sidon-like     in[14,169]=True  |C-C|=117  E=  316  E/n^3=0.183
+  irregular      in[14,169]=True  |C-C|=121  E=  300  E/n^3=0.174
+
+=> band-avoidance compatible with Sidon-like LOW energy => M<1/13 gives BSG/PFR no input.
+   The crux is Half 1 (M<1/13 => high energy), a Diophantine->additive bridge, OPEN (Tao n=12).

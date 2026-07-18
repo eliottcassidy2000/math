@@ -474,6 +474,25 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S104 -- BSG/PFR ATTACK THE WRONG HALF: M<1/13 supplies NO additive energy; the crux is the Diophantine->energy bridge
+
+Owner: attack the inverse theorem head-on with BSG/PFR. Finding: BSG/PFR/Freiman all need additive
+energy / small doubling as INPUT; M<1/13 supplies none.
+FACTORIZATION: INV (M<1/13 => 12-core dilated AP) = Half 1 (M<1/13 => E(C)>=|C|^3/K, DIOPHANTINE
+->additive) o Half 2 (small doubling => AP, Freiman/BSG/PFR + band). BSG/PFR are HALF 2 tools; Half 1
+(produce energy) is not what they do.
+HALF 1 NOT SUPPLIED (verified): band-avoidance is weak (avoid 2/13 of circle). 12-sets in band [14,169]:
+AP E=1156/|C-C|=23, Sidon-like E=316/117, irregular E=300/121 -- band-avoiding compatible with LOW energy
+=> no BSG input. Full residue set R: |R-R|=47>35 = DIM 2 (Freiman fails on R). Small doubling appears only
+on the core once (near-)AP = the conclusion.
+ENERGY MUST COME FROM global maximality (medium moduli, S102) = open crux; the 'globally optimal => core
+energy' map is Diophantine->additive, not additive-comb, not sieve, not maximality/CF. Needs a
+concentration/transference lemma (E=sum|Shat|^4 large) but Weyl can't force concentration (S95).
+CORRECTION: project's 'BSG->Freiman/PFR is the tool' (S89/S92) is only Half 2; open content is Half 1.
+SYNTHESIS S101-S104: elementary toolkit never reaches the additive core; additive toolkit presupposes it --
+both on the wrong side of one Diophantine->energy implication = Tao n=12, OPEN. Crux NOT proved.
+FILES: reflection bsg-pfr-attack-the-wrong-half-...-boxeph-S104, script+out lrc14_bsg_energy_boxeph_S104, HYP-7575. boxeph; S104.
+
 ## boxeph-2026-07-18-S103 -- CF DESCENT EXPLAINS THE FAR ELEMENT lcm(13,14)=182 AND STOPS; three elementary tools converge, the AP core is the open inverse theorem
 
 Owner: prove the medium-modulus inverse theorem via continued-fraction descent.
