@@ -1,0 +1,11 @@
+=== TWO-coordinate shallow winding: 66 pairs, heights 1..20 (screened+exact) ===
+  checked 26400; near-floor screened 0; EXACT tight (M=1/13): 0
+
+=== RANDOM multi-coordinate (3..6 wound) high-height sample ===
+  checked 199999; near-floor screened 0; EXACT tight: 0
+
+VERDICT
+  two-coordinate winding (heights 1..20): 0 tight found
+  random multi-coordinate (heights 1..25):  0 tight found
+  => no sporadic shallow tight set in this residual slice (empirical, not exhaustive;
+     the >=2-high-coordinate shallow residual remains open beyond the screened range).
