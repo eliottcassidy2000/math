@@ -1,0 +1,2 @@
+### max over sextuples of (sum|A_i| - MST) vs n = |bits(P)| ###
+  core                        n     best score found   union of best   margin  covers?

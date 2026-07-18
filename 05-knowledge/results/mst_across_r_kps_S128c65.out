@@ -1,0 +1,10 @@
+### max( sum|A_i| - MST ) vs n, across r ###
+   r  cores  KB    worst margin (score-n)   max union / n      any cover?
+   4  40     400   2                        90/94 = 0.957      False
+   5  40     235   -2                       136/146 = 0.932    False
+   6  40     333   36                       204/210 = 0.971    False
+
+  interpretation: score - n < 0 everywhere means sum|A_i| - MST never reaches n,
+  so the kill-sets provably cannot cover bits(P) -- coverage impossible, no enumeration needed.
+  max union / n shows how far the BEST sextuple actually gets toward covering.
+DONE
