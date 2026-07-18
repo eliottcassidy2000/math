@@ -8,6 +8,28 @@ honest list of what no lens currently covers. It UPDATES but does not replace kl
 
 ---
 
+## 2026-07-17 addendum — the frontier after the certificate/measure split
+
+The live program has sharpened since this dated assessment.  THM-984 now
+separates certificate mechanics from the mathematical nucleus: once a trapped
+core has any positive good measure `mu0`, the explicit live-floor modulus
+converts it to a census certificate.  Thus the remaining global LRC(14) core is
+the positivity statement `mu0>0` on the precisely trapped, non-dissociated
+family; this is not yet proved.  The q≤25 shortcut remains false, and uniform
+`n=12` sporadic emptiness remains open.
+
+On the finite AP-centred Hamming-six side, THM-982 independently closes common
+scale eighteen, and THM-983 uniformly removes every prime common scale at
+least nineteen.  A frozen primary THM-986 certificate also closes scale twenty
+at the owner-local gate, pending an independent referee.  Across scales
+fourteen through twenty, the stable object is not a runner tournament or even
+scalar support scarcity: it is the labelled vector of owner-projection debts.
+Prime scales instead die one layer earlier on a weighted ratio-capacity
+digraph.  These closures narrow one finite branch; they do not establish the
+missing completeness map from arbitrary trapped cores into that branch.
+
+---
+
 ## 1. The 72-hour delta (what changed since the finish map)
 
 The finish map's one-line status was: *LRC(14) = proved skeleton + ONE equidistribution
