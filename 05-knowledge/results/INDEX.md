@@ -1437,3 +1437,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `sharp_nesting_floor_opus_S352.out` | [STORED] | THM-1012: the sharp nesting floor verified exactly (0/4000 violations; separated regime min slack 0.000371). | (self) |
 | `dense_core_169_opus_S356.out` | [STORED] | THM-1020/1021: the exact-independence locus (3000/3000) + the dense-core negative (400/400 comparable blocks) + the (77,143,169) explanation. | (self) |
 | `correlated_regime_opus_S357.out` | [STORED] | THM-1025: sawtooth floor 4000/4000, dilation invariance 300/300, the 15-pair table, comparable-block floor sums 400/400 positive. | (self) |
+| `bonf5_pairfloor_opus_S358.out` | [STORED] | THM-1026: the five-slot BONF5 ledger; pairs insufficient at 13; the S2 floor recovers 99.9% of equidistribution. | (self) |

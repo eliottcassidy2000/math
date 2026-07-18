@@ -1,3 +1,22 @@
+## opus-2026-07-17-S358 -- THM-1026 THE FIVE-SLOT LEDGER: pairs provably CANNOT close 13 runners (S1 = 13/7 overshoots by 6/7; tree edges recover only ~0.245); LRC(14) needs the level-5 truncation B5, which clears at equidistribution (+0.1221) and requires LOWER S2/S4 + UPPER S3/S5; THM-1025 fills the S2 slot to 99.9% -- ONE SLOT OF FIVE. NO completed proof claimed (HYP-7410)
+
+Owner: work the remaining open mathematics vigorously, and formalize IF I believe the
+proof is complete. I did the decisive arithmetic before anything else, because the
+honest answer to the conditional matters more than the work: PAIRS CANNOT CLOSE 13
+RUNNERS. At lam = 1/14 each comb has measure 1/7, so S1 = 13/7 = 1.857 and the union
+bound overshoots by 6/7 = 0.857; Hunter's 12 spanning-tree edges at the independence
+value 1/49 recover ~0.245. The 7-wall closed because 7*(1/7) = 1 EXACTLY -- a
+coincidence with no analogue at 13. So LRC(14) needs the level-5 truncation, and
+because its signs alternate it needs LOWER bounds on S2 and S4 and UPPER bounds on S3
+and S5. My THM-1025 floor is exactly the S2 lower bound and it is very good -- 99.9% of
+the equidistributed value across 60 comparable 13-packets, every floor verified below
+the exact value. But that is ONE SLOT OF FIVE, and three remain without bounds.
+I did not formalize a completed proof because there is not one. The ledger is now
+explicit so the fleet can see precisely which slot each result fills.
+FILES: THM-1026, script + out, HYP-7410. opus; S358.
+
+---
+
 ## boxeph-2026-07-18-S88 -- THE AP-CORE BRIDGE: elementary half PROVED, LRC(14) reduced to ONE inverse theorem (owner: prove the difference-closure rigidity bridge to AP core). The bridge splits into (I) Freiman [OPEN] + (II) elementary [PROVED]. THM-1017: (II) THE AP-CORE => FAR-ELEMENT theorem -- if V is primitive covering with M<1/13 AND V minus v_max is difference-closed, then rho>=15 (>13), hence M>=1/14. PROOF: (1) V minus v_max = 12-element difference-closed set = dilated prefix d*{1..12} (boxeph-S81 classification). (2) d=1: if d>=2 the dilated sieve (THM-1013) gives M>=1/13 (AP speeds d*i are d-safe; the extra speed safe too -- verified PART1: zero d>=2 primitive-covering members have M<1/13; the d-unsafe subcase collapses to non-primitivity for 13-not-dividing-d, d<=13) -- contradiction. So d=1, V minus v_max = {1..12}. (3) THE LCM FORCING (fully elementary, exact-verified NO exceptions): {1..12}u{v_max} covering => 13|v_max (nothing in 1..12 is a mult of 13) AND 14|v_max => lcm(13,14)=182 | v_max => v_max>=182, v_2nd=12, rho=v_max/12>=15.17. THE MECHANISM: in a tight AP core the only multiple of BOTH 13 and 14 is a multiple of 182, so covering those two residues drags the coverer to the far scale -- WHY the deep-well killer is exactly 182=13*14. THE REMAINING HALF (I, OPEN): M<1/13 covering => V minus v_max is difference-closed (a dilated AP). Verified 8/8. = the Freiman-type INVERSE theorem: the difference-closure lemma (S87) gives ONE aligned non-speed difference (deep well 182-12=170, |170*14|_183=1); this asks that ALL non-closure concentrate on v_max, i.e. the other 12 speeds are an exact dilated AP. = klein's n=12 Hamming-radius/AP-uniqueness (HYP-7310, Tao's optimistic conjecture). NET: LRC(14) <=> 'every covering 13-family with M<1/13 has its 12 non-maximal speeds forming a dilated AP' -- a SINGLE inverse-additive statement, all surrounding machinery proved. HONEST: LRC(14) NOT closed; the elementary half is genuinely proved and the crux is now ONE precisely-stated inverse theorem. No new Lean (a reduction, not a witness).
 
 Prompt (owner): prove the difference-closure rigidity bridge to AP core.

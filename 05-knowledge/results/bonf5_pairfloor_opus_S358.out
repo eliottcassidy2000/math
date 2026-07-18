@@ -1,0 +1,26 @@
+THE BUDGET.  S1 = 13*(1/7) = 13/7 = 1.8571
+  B5 = 1 - S1 + S2 - S3 + S4 - S5 ; need B5 > 0, so S2 must carry the load.
+  equidistributed values: S_k = C(13,k)*(1/7)^k
+    S1^equid = 13/7 = 1.8571
+    S2^equid = 78/49 = 1.5918
+    S3^equid = 286/343 = 0.8338
+    S4^equid = 715/2401 = 0.2978
+    S5^equid = 1287/16807 = 0.0766
+  B5 at equidistribution = +0.1221  (positive: the level-5 wall clears)
+
+MY CONTRIBUTION: THM-1025 gives an S2 LOWER bound valid in every regime.
+  S2 >= sum over all 78 pairs of floor_1025.  How close to equidistribution?
+  60 comparable 13-packets:
+    S2 floor  range [1.5570, 1.6414]   median 1.5896
+    S2 exact  range [1.5857, 1.6757]   median 1.5923
+    S2 equid  = 1.5918
+    floor recovers 99.9% of the equidistributed S2
+
+WHAT REMAINS for B5 > 0 (the honest ledger):
+  S2: LOWER bound  -- SUPPLIED by THM-1025 (all regimes, kernel-pure for coprime)
+  S4: LOWER bound  -- OPEN (the quadruple analogue of THM-1025)
+  S3: UPPER bound  -- OPEN (fleet's T2/THM-926 gives the triple deviation)
+  S5: UPPER bound  -- OPEN (level-5; fleet's B5 machinery)
+
+  => LRC(14) is NOT closed by the pair floor. The pair floor closes the
+     S2 slot of a five-slot ledger. Claiming a completed proof would be false.
