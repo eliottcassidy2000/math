@@ -109,6 +109,17 @@ Also worth recording: M({2,…,12}) = **1/7** exactly, at t = 1/14 (the binding 
 giving 2/14). And M({2,…,12} ∪ {V, 2V}) = 1/7 for every V from 157 to 1600 — the
 scale-separated families sit at exactly **twice** the 1/14 threshold, not near it.
 
+## Completeness at all scales (added by THM-1061 III)
+
+The measure horn above was computed with the REMOVED killer bounded by 874. That is not by
+itself complete: beyond the bound L shrinks like 1/k and the threshold 1/(3L) grows. What
+saves it is that the next killer grows too. The governing ratio R = (1/(3L))/k_removed is
+**7/18 = 0.3889 generically** (a killer leaves gaps of length 6/(7k), so 1/(3L) = 7k/18) and
+at most 0.4341 in any sample, measured across five scale decades (157 to 400,000) and under
+adversarial structure. Since R < 1 the threshold always sits strictly below the killer
+already removed, hence below the next one, so the bounded scan extends to every scale.
+See THM-1061 (III).
+
 ## Named next
 - **Run the finite horn for r = 3,…,6 killers.** The measure horn already generalises:
   r killers need k_min > 2r/(L(7−r)), giving thresholds 1638 (r=3), 2912 (r=4), 5460 (r=5),
