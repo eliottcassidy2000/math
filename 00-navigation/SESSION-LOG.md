@@ -621,6 +621,23 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S106 -- THE NON-COVERING => SIEVE DISPATCH IS NOW KERNEL-PURE LEAN; LRC(14) reduces in the kernel to the covering case
+
+Owner: formalize the non-covering => sieve dispatch. Delivered LRCSieveDispatch.lean, 4 theorems
+(namespace LonelyRunner), all [propext, Classical.choice, Quot.sound] -- no sorry/axiom; built
+(8476 jobs), registered in root TournamentH7.lean.
+- Covering v := forall n, 2<=n -> n<=14 -> exists i, (n:Z)|v i (every modulus 2..14 divides a speed).
+- sieve_dispatch: not Covering v => Lonely 14 (some n<=14 divides no speed => t=1/n n-lonely via
+  lonely_of_no_multiple => 1/14-lonely via lonely14_of_lonely_le band-shrink).
+- lonely14_dispatch: (Covering v -> Lonely 14) -> Lonely 14 (dichotomy).
+- lrc14_of_covering: CoveringCase (honest covering crux, NAMED HYP -- NOT 'covering=>rho>=13' which is
+  false for {2..14}) => LRC(14) all 13-families.
+RECORDS: LRC(14) <= CoveringCase[non-covering=sieve PROVED]; CoveringCase <= LRC(<=13)+INV[open]+
+ap_core_bridge/descent[Lean, S105]. Both dispatch branches kernel-checked: non-covering FULLY PROVED,
+covering REDUCED to INV. Only INV (=crux=Tao n=12) + analytic M-split remain. Fix: div_le_div_iff renamed
+-> one_div_le_one_div_of_le. Crux still open.
+FILES: reflection the-non-covering-sieve-dispatch-is-now-kernel-pure-lean-boxeph-S106, LRCSieveDispatch.lean, HYP-7595. boxeph; S106.
+
 ## boxeph-2026-07-18-S105 -- THE ELEMENTARY HALF OF LRC(14) IS NOW KERNEL-PURE LEAN (the AP-core bridge); records exactly what LRC(14) rests on
 
 Owner: Lean-formalize the completed elementary half. Delivered LRCAPCoreBridge.lean, 3 theorems
