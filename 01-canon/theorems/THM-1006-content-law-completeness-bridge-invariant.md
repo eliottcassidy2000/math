@@ -253,7 +253,79 @@ codex-S64 recorded ("finite ramification of several AP-centred faces is not such
 bridge"). Three independent routes now agree on where the wall is, which is itself
 evidence that the wall is real and not an artefact of one formalism.
 
-*Artifacts:* `04-computation/lrc13_content_law_bridge_macmini_S110.py` (+out).
+## (I) Toward a uniform-in-`n` proof (S111): the clean form, two uniform results, and the wall
+
+Owner directive: *prove the content law uniformly in `n`.* What follows is what is
+proved uniformly, and an explicit statement of what is not.
+
+### (I1) The clean equivalent form (PROVED, all `n`)
+
+> **For a tight `n`-set `A`: `val = 1` ⟺ no element of `A` is divisible by `n+1`.**
+
+*Proof.* (⇐) If `(n+1) ∤ v` for all `v ∈ A`, then at `t = a/(n+1)` (any `a` coprime
+to `n+1`) every clearance is `|va|_{n+1}/(n+1) ≥ 1/(n+1)`, so `M(A) ≥ 1/(n+1)`;
+tightness makes this an equality, so `a/(n+1)` is a maximizer in lowest terms,
+`q = n+1`, `val = 1`. (⇒) If `val = 1` then `q = n+1` and at the maximizer every
+clearance is `> 0`, i.e. `va ≢ 0 (mod n+1)`; as `gcd(a,n+1)=1`, `(n+1) ∤ v`. ∎
+
+Hence the content law takes an elementary form with no reference to sheets,
+packets, or rulers:
+
+> **CONTENT LAW (clean).** *A primitive tight `n`-set contains no multiple of
+> `n+1`.* Equivalently: a tight `n`-set containing a multiple of `n+1` is
+> imprimitive.
+
+Verified: every tight `n`-set containing `n+1` itself, `n = 3..7`, is a dilate —
+`{2,4,6}`, `{2,4,6,8,10}`, `{3,6,9,12,15}`, `{2,4,…,14}` — never primitive.
+
+### (I2) A uniform infinite family, excluded (PROVED, all `n` and `k`)
+
+The natural resonant candidates are `{1,…,n−1} ∪ {v₀}` with `(n+1) | v₀`; the
+alignment condition (every component of the `(n−1)`-core's safe set must sit inside
+a `v₀`-tooth) forces `n(n+1) | v₀`. For those:
+
+> **`M(\{1,…,n−1\} ∪ \{k·n(n+1)\}) = k(n+1) / (k·n(n+1)+1)`** for all `n ≥ 3, k ≥ 1`
+> (verified exactly for `n = 3..9`, `k = 1..4`), and this exceeds `1/(n+1)` because
+> `k(n+1)² > k·n(n+1)+1 ⟺ k(n+1) > 1`. **So this family is never tight — uniformly
+> in `n` and `k`.**
+
+The mechanism is tooth-narrowing: `k·n(n+1)` is far too large to constrain, and
+`M → 1/n`, the core's own value — not down to `1/(n+1)`. Resonance alone does not
+buy tightness; it must be paid for by *commensurability*, which is exactly what
+primitivity forbids and what the content law asserts.
+
+### (I3) The general form of the sheet bound
+
+Generalizing (D) to arbitrary `n` (`L = 1/(n+1)`, `C = A\{max A}`): `max(A) ≥ (n+1)val/2`
+and `max(A) ≤ 2L/δ_L(C)` give
+
+> **`val ≤ 4/((n+1)²·δ_L(A\{max A}))`.**
+
+### (I4) Honest verdict — the uniform proof is not available here
+
+The content law is **not proved**. The obstruction is precise and, I believe,
+correctly located:
+
+- §(H) proves that sheet capacity **plus** primitivity is *satisfiable* for every
+  `val = 2,…,13`. So no counting/divisibility argument can close it, at any sheet
+  number — this is a theorem about the method, not a failure of effort.
+- Every measure route I tried degrades the same way: the needed lower bound on
+  `μ{φ_U > 1/(n+1)}` for the on-sheet quotient is of order `1/((n+1)·max U)`, while
+  the off-sheet danger supply is of order `|F|/(n+1)`; `max U` is unbounded, so the
+  comparison never closes. Concretely, for the extremal core `{1,…,n−1}` the safe
+  measure is `≈ 1/(n+1)`, *below* the single-tooth supply `2/(n+1)` — so even the
+  most favourable case fails by a factor of two.
+- What remains is genuinely metric: *which* lifts a given off-sheet speed covers,
+  with exact tooth positions — the same equidistribution wall klein records for
+  CRUX (C) and codex-S64 for the packet languages.
+
+So: the content law is now stated in an elementary form (I1), has an infinite
+uniform family discharged (I2), and its residue is isolated to one metric input
+that is provably beyond counting (H). It is not a proof, and it should not be
+recorded as one.
+
+*Artifacts:* `04-computation/lrc13_content_law_bridge_macmini_S110.py` (+out),
+`lrc13_content_law_uniform_macmini_S111.py` (+out).
 Credits: klein THM-1002 (the ruler engine and the gap arithmetic), codex THM-769
 (the sheet split now identified with `val`) and codex-S64 §6 (the bridge target),
 THM-1001 (the safe-interval geometry behind (D)).

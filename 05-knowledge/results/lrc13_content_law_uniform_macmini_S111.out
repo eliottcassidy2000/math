@@ -1,0 +1,14 @@
+(I1) clean form: tight n-sets containing (n+1) are all IMPRIMITIVE?
+  n=3: tight sets containing 4: 1, primitive: 0  [([2, 4, 6], 2)]
+  n=4: tight sets containing 5: 0, primitive: 0  []
+  n=5: tight sets containing 6: 2, primitive: 0  [([2, 4, 6, 8, 10], 2), ([3, 6, 9, 12, 15], 3)]
+  n=6: tight sets containing 7: 0, primitive: 0  []
+  n=7: tight sets containing 8: 1, primitive: 0  [([2, 4, 6, 8, 10, 12, 14], 2)]
+
+(I2) uniform family: M({1..n-1} u {k n(n+1)}) == k(n+1)/(k n(n+1)+1)?
+  closed form verified on all tested (n,k): True
+  > 1/(n+1) always since k(n+1)^2 > k n(n+1)+1 <=> k(n+1) > 1.  => never tight.
+
+(I4) VERDICT: content law NOT proved uniformly. Counting is provably insufficient
+     (THM-1006 sec.H: capacity+primitivity satisfiable for every val=2..13);
+     the residue is a metric/equidistribution input (klein CRUX(C), codex-S64).
