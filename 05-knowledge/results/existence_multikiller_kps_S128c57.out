@@ -1,0 +1,26 @@
+### r killers, spread D <= M-mu : predicted ALWAYS certified ###
+  r  spread-cap  tested  certified  min-margin(min||vt||)
+  2  <=M-mu          1500    1500      1/14
+  2  =M-mu+1(over)   1500       0      None
+  2  =M-mu+3(over)   1500    1252      1/14
+  3  <=M-mu          1500    1500      1/14
+  3  =M-mu+1(over)   1500       0      None
+  3  =M-mu+3(over)   1500    1071      1/14
+  4  <=M-mu          1500    1500      1/14
+  4  =M-mu+1(over)   1500       0      None
+  4  =M-mu+3(over)   1500     868      1/14
+  5  <=M-mu          1500    1500      1/14
+  5  =M-mu+1(over)   1500       0      None
+  5  =M-mu+3(over)   1500     717      1/14
+
+### the d<=5 two-killer stratum is a SUBSET: exhaustive re-check with spread up to 11 ###
+  spread d = 1..M-mu (not just 1..5): certified 103870 / 103870
+
+### sharpness: what happens exactly at spread = M-mu+1 ? ###
+  spread  9 (M-mu=10): min||vt||=2/25 ok=True
+  spread 10 (M-mu=10): min||vt||=2/25 ok=True
+  spread 11 (M-mu=10): min||vt||=1/25 ok=False
+  spread 12 (M-mu=10): zero-residue
+  spread 13 (M-mu=10): min||vt||=1/25 ok=False
+  spread 14 (M-mu=10): min||vt||=2/25 ok=True
+DONE

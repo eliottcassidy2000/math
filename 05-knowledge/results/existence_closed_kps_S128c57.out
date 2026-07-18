@@ -1,0 +1,43 @@
+### 1. THE IDENTITY: e1 = M, e2 = M-d, E in [mu,M] ###
+  4000 random families: identity+containment failures = 0
+
+### 2. THE 8 CRITICAL COVERING FAMILIES (THM-1011 VII) ###
+  168,169   q=180   a=7   t=7/180     e=(12,11) min||vt||=7/90     >=1/14:True
+  195,196   q=207   a=8   t=8/207     e=(12,11) min||vt||=16/207   >=1/14:True
+  208,210   q=220   a=8   t=2/55      e=(12,10) min||vt||=4/55     >=1/14:True
+  221,224   q=233   a=9   t=9/233     e=(12,9) min||vt||=18/233   >=1/14:True
+  234,238   q=246   a=9   t=3/82      e=(12,8) min||vt||=3/41     >=1/14:True
+  247,252   q=259   a=10  t=10/259    e=(12,7) min||vt||=20/259   >=1/14:True
+  294,299   q=306   a=11  t=11/306    e=(12,7) min||vt||=11/153   >=1/14:True
+  308,312   q=320   a=12  t=3/80      e=(12,8) min||vt||=3/40     >=1/14:True
+  all 8: True
+
+### 3. THE FORMER EXCEPTIONAL SET (1,12 in core, v1 in [157,168]) ###
+  600/600 certified by q = v1+M  (previously ALL exceptional)
+  tightest: min||vt||=13/180 at core-drop core min1 max12, v=(168,169), q=180 a=13
+
+### 4. EXHAUSTIVE over the whole stratum shape, v1 in (13M, 13M+4000] ###
+  certified 240000 / 240000 ; failures: 0
+
+### 5. GENERAL CORES (not inside {1..12}): criterion M <= 12*mu ###
+  ratio   n_tested  certified   (predicted: OK iff M <= 12 mu)
+  20/2 =10.000   400       400        predicted ALL OK
+  24/2 =12.000   400       400        predicted ALL OK
+  25/2 =12.500   400       393        predicted FAIL (ratio>12)
+  36/3 =12.000   400       400        predicted ALL OK
+  38/3 =12.667   400       369        predicted FAIL (ratio>12)
+  60/5 =12.000   400       400        predicted ALL OK
+  63/5 =12.600   400       369        predicted FAIL (ratio>12)
+  12/1 =12.000   400       400        predicted ALL OK
+  49/4 =12.250   400       397        predicted FAIL (ratio>12)
+
+### 6. THE GENERAL-N LAW: criterion M <= (N-2) mu ###
+   N   (N-2)   old-construction bound (N-2+sqrt(N^2-4N))/2   new is better
+   6     4             3.7321                        True
+   8     6             5.8284                        True
+  10     8             7.8730                        True
+  12    10             9.8990                        True
+  14    12            11.9161                        True
+  16    14            13.9282                        True
+  20    18            17.9443                        True
+DONE
