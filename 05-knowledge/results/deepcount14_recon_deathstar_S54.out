@@ -1,0 +1,4 @@
+(a) exact deep-count formula over q in [2,2000): mismatches = [] PASS
+(b) q=14: bandCounts = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0, 6: 1, 7: 6, 8: 1, 9: 0, 10: 1, 11: 0, 12: 1, 13: 0}
+    deep(=6) = [7], deep(>6) = [], live = [1, 3, 5, 9, 11, 13]
+    CoverageCapped(6): True;  race deepSix < live: 1 < 6: True
