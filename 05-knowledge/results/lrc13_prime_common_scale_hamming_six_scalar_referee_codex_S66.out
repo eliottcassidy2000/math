@@ -1,0 +1,38 @@
+THM-983 independent prime common-scale H6 scalar referee
+scope: primitive proper AP-centred common-scale Hamming-six scalar gate only
+formula: a_p(r)=2q+floor((s-a)/13)-floor((-s-a)/13), a=sr mod 13
+direct formula checks through c=840: 9312
+literal exceptional CRT-mask checks: 7488
+B6: 1 3 5 6 6 6 7 9 11 12 12 12
+B5: 1 3 5 5 5 5 6 8 10 10 10 10
+mixed minimum deficit p-(10q+B5): 1
+all-order prime ceiling exceptions p>=19: (23, 29)
+support orbits: 2:1 4:1 6:3 12:75
+bonus digest: 29d7c3e25680d8ce151001190aa59ba65e7f23faf38d8b2b115fcc362ee67dec
+p=23 low exponents in Z/12: (2, 3, 6, 8, 9)
+p=23 symmetrized low-kernel spectrum: (5, -1, -2, -1, 2, -1, 1, -1, 2, -1, -2, -1)
+p=23 spectral six-set floor: 9
+p=23 exact low-edge histogram: 10:30 12:208 13:288 14:216 16:96 17:48 18:38
+p=23 high ratios: (1, 2, 3, 6, 7, 10, 11)
+p=23 feasible-owner histogram: 0:204 1:528 2:138 3:48 4:6
+p=23 minimum-capacity histogram: 19:6 20:204 21:650 22:64
+p=23 maximum feasible owners: 4/6
+p=23 support ledger digest: 70b8beb8154a021f9c91fd10690b6d41447b98d09a7ce087ac16159662fe5382
+p=23 failure-witness digest: a49dd90d0a50d5815586ff42f3cb62f5a4eb302366692fe7b31bcc9c42a6cd25
+p=23 Cayley carrier: high_ratios=(1, 2, 3, 6, 7, 10, 11) outdegree_histogram=((6, 12),) indegree_histogram=((6, 12),) directed_triangles=64 scc_sizes=(12,)
+p=23 lossy tournament: score_histogram=((2, 1), (3, 3), (5, 2), (6, 2), (8, 3), (9, 1)) directed_triangles=40 scc_sizes=(12,) tie_edges=42 flips_from_natural_order=12 redei_path=(12, 4, 9, 3, 10, 1, 11, 8, 6, 7, 2, 5) hamiltonian_path_count=124961
+p=29 high ratios: (1, 4, 5, 8, 9)
+p=29 feasible-owner histogram: 0:846 1:72 2:6
+p=29 minimum-capacity histogram: 25:156 26:660 27:108
+p=29 maximum feasible owners: 2/6
+p=29 support ledger digest: 3090ed7e26e420c90813aeaacb87acadf582212350d33cdf1778f62c7f042374
+p=29 failure-witness digest: 03b35f0e6f7d9d3b706cd6f48b491a76637e7e3127383af841e47ded22c3f29f
+p=29 Cayley carrier: high_ratios=(1, 4, 5, 8, 9) outdegree_histogram=((4, 12),) indegree_histogram=((4, 12),) directed_triangles=16 scc_sizes=(12,)
+p=29 lossy tournament: score_histogram=((2, 1), (3, 3), (5, 2), (6, 2), (8, 3), (9, 1)) directed_triangles=40 scc_sizes=(12,) tie_edges=42 flips_from_natural_order=12 redei_path=(12, 10, 4, 9, 1, 11, 6, 7, 5, 8, 2, 3) hamiltonian_path_count=124961
+p=23 structural certificate: low-edge Rayleigh floor 9 > 6
+p=29 closure certificate: <high ratios> = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+carrier audit: ratio Cayley digraph + embedded six-support is faithful;
+  tournament completion forgets absolute capacities and symmetric ties;
+  unlabelled sheets, units, gaps, and divisor vertices destroy owner incidence.
+PASS: p=23 and p=29 exceptional 924-support banks are empty
+HONEST LIMIT: composite scales, H5, non-AP/deep sheets, and global n=12 remain open
