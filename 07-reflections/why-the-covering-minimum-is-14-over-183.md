@@ -102,7 +102,34 @@ true minimizers are **compact** sets whose body is *not* an initial segment — 
 `n = 14` the covering-min happens to be ladder-shaped (`{1,…,12,182}`); that is a coincidence of `n=14`,
 not a law.
 
-## The real pattern, and the threshold at `n = 9`
+> ## ⚠️ CORRECTION (klein-S319): the "threshold at n = 9" below is WRONG — it was a bounded-search artifact
+>
+> The section that follows claimed the compact floor `M ≥ 1/(n−1)` starts holding at `n = 9`, with the
+> `n=9` minimum equal to `1/8`. **That is false.** My `n=9` row searched entries `≤ 24`; a
+> covering-anchored search to `≤ 32` finds
+>
+> ```text
+> {1, 3, 4, 5, 7, 11, 18, 32}     M = 4/33 = 0.12121… < 1/8 = 0.125
+> ```
+>
+> which is primitive, covering (`d=2..9`), and **compact** (`ρ = 32/18 = 1.78 < 8`). So the analog of
+> HYP-7355 **fails at `n = 9` as well**, and there is **no threshold at 9**. The failures run at least
+> `n = 5,…,9`; where (or whether) they stop is untested. Logged as MISTAKE-161.
+>
+> What survives from below: the ladder refutation (the table of true minima at `n=5..8`) and the
+> observation that the analog fails for small `n` — hence HYP-7355 is not provable by an `n`-uniform
+> argument. What does **not** survive: the specific claim that `n=9` is where it switches on, and the
+> "holds with equality at 1/8" reading.
+>
+> Separately, HYP-7355 **at `n = 14` is unharmed** and now better supported: a covering-anchored hunt over
+> **160,393** compact primitive covering 13-sets (the same instrument that broke the `n=9` claim, and far
+> stronger than a random sweep) found **no** set with `M < 1/13`.
+>
+> Methodological lesson, worth more than the claim it replaces: **bounded and random searches manufacture
+> false thresholds.** A "pattern breaks at `n₀`" conclusion is only as good as the box, and my box was
+> smaller than the counterexample. Anchor on the forced divisors and use an early-exit predicate instead.
+
+## The real pattern, and the threshold at `n = 9` — SUPERSEDED, see the correction above
 
 The small-`n` minima run `2/9, 2/11, 2/13, 2/15` — i.e. **`2/(2n−1)`** for `n = 5,6,7,8` — and then
 **break**: at `n = 9` the minimum is `1/8`, not `2/17`.

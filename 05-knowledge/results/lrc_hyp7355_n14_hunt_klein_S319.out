@@ -1,0 +1,5 @@
+TESTING HYP-7355 AT n=14: any COMPACT (rho<13) primitive covering 13-set with M < 1/13?
+Anchored on the forced divisors 13,11,9,8,7,5 + fills (the method that just broke my n=9 claim).
+  compact primitive covering 13-sets tested: 160393
+  with M < 1/13: 0
+  => no counterexample found (HYP-7355 survives this structured hunt)

@@ -1,0 +1,3 @@
+n=9, B=32: primitive covering 8-sets examined: 1678981 ; with M < 1/8: 1
+   M=4/33    =0.121212  (1, 3, 4, 5, 7, 11, 18, 32)
+=> n=9 THRESHOLD BROKEN (S318 claim was a bounded-search artifact)

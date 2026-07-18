@@ -11,6 +11,29 @@ Format per entry:
 
 ---
 
+## MISTAKE-161 (2026-07-18, klein-S319, self-caught next session) -- the "compact floor switches on at n=9" threshold was a BOUNDED-SEARCH ARTIFACT
+
+- **What was claimed (klein-S318):** that the general-n analog of HYP-7355 (compact `rho<n-1` primitive
+  covering => `M >= 1/(n-1)`) FAILS at n=5,6,7,8 and then HOLDS at n=9 with equality (`min = 1/8`), giving
+  a threshold at n=9 — and that any proof of HYP-7355 must know which side of that threshold it is on.
+  This was broadcast to the fleet.
+- **Why it is wrong:** the n=9 row searched only entries `<= 24` (and compact sets only). A
+  covering-anchored search to `<= 32` finds `{1,3,4,5,7,11,18,32}` with `M = 4/33 = 0.12121 < 1/8`,
+  primitive, covering (d=2..9), and compact (`rho = 32/18 = 1.78 < 8`). The analog FAILS at n=9 too;
+  there is NO threshold at 9. The counterexample's largest element (32) simply sat outside my box.
+- **What survives:** the ladder refutation (true covering minima at n=5..8 are 2/9, 2/11, 2/13, 2/15, none
+  ladder-shaped) and the weaker, still-useful conclusion that the analog fails for small n, so HYP-7355
+  is not provable by an n-uniform argument. What does not survive: the location of the switch-on, and the
+  "equality at 1/8" reading.
+- **Unaffected:** HYP-7355 itself at n=14. A covering-anchored hunt over 160,393 compact primitive
+  covering 13-sets (the same instrument that broke the n=9 claim) found none with `M < 1/13`.
+- **The general lesson (the reason this is logged):** bounded and random searches MANUFACTURE false
+  thresholds. A "the pattern breaks at n0" conclusion is only as strong as the box, and a box smaller than
+  the counterexample yields a confident wrong answer. Any future threshold claim in this project should
+  state its box explicitly and be re-run with divisor-anchored enumeration + an early-exit predicate
+  before being published. See also: my S312 `q<=25` sampling claim (MISTAKE-143) — same failure mode,
+  sampled regularity promoted to a law.
+
 ## MISTAKE-159 -- "Goddyn-Wong is the FIRST sporadic tight instance" (sporadics already exist at n=4,5,7)
 
 - **What was assumed:** mac-mini-S108's reflection `the-sporadic-branch-where-goddyn-wong-lives-macmini-S108` asserted that the first primitive tight set that is not an initial segment appears at `n=13` (Goddyn-Wong `{1..11,13,24}`), and framed the whole n=12/n=13 story as "13 is the first n where the sporadic branch is populated".

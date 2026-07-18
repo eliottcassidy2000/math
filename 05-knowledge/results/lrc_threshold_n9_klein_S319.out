@@ -1,0 +1,12 @@
+  sanity n=5 [1, 3, 4, 5] -> M=2/9 (target 2/9)
+  sanity n=8 [1, 3, 4, 5, 7, 11, 24] -> M=2/15 (target 2/15)
+
+  n | q  | target | realizable by a covering (n-1)-set?  [pool per witness a, corrected]
+   5 |  9 | 2/9    | YES a=4 [1, 4, 5, 6]
+   6 | 11 | 2/11   | none found
+   7 | 13 | 2/13   | none found
+   8 | 15 | 2/15   | none found
+   9 | 17 | 2/17   | none found
+  10 | 19 | 2/19   | none found
+  11 | 21 | 2/21   | none found
+  12 | 23 | 2/23   | none found
