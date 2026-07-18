@@ -1,0 +1,7 @@
+TEST: mu(D_a n D_b) >= 4*lam^2 - 2*lam*(a/b) ?   [lam=1/14: 1/49 - (1/7)(a/b)]
+  4000 random pairs (ratio up to 40): violations = 0
+
+  SEPARATED regime b >= 7a (where the bound is positive):
+  3000 pairs with b >= 7a: violations = 0; min slack = 0.000371 at a=2 b=110
+
+  sanity: 4*lam^2 = 1/49 = 1/49; bound positive iff a/b < 2*lam = 1/7

@@ -242,6 +242,33 @@ must state which LRC predicate it preserves.
   other five danger combs, so it is neither the full thirteen-speed LRC(14)
   theorem nor the weighted dense-core supplier above.
 
+
+## THE 7-WALL EXISTENCE CHAIN (opus S346–S351) — all LEAN, kernel-pure
+
+Seven modules, every one at `[propext, Classical.choice, Quot.sound]`, no
+`sorry`, no `native_decide`. Together they take the 7-wall's EXISTENCE
+conclusion from end to end without the sawtooth identity:
+
+| module | content |
+|---|---|
+| `LRCFoldedIdentity` | THM-965 `muNum_folded`: `14·muNum a b = 4ab + fold((a+b)%14) − fold((b−a)%14)` |
+| `LRCFloorTable` | per-class floor `14·muNum ≥ 4ab − 49` (fold ∈ [0,49] via (r−7)²≥0); `overlap_floor_rat` |
+| `LRCFloorAllocation` | the allocation law `r_j^(j+1) ≤ ∏ r ≤ C` for antitone ratios |
+| `LRCWindowAverage` | the Fubini position step: inner integral = L, Tonelli window-average, `live_window_exists` |
+| `LRCHunterAssembly` | uncovered ≥ Σ consecutive path-tree overlaps (tree-Hunter + `measure_compl`); n=7 capstone |
+| `LRCSevenWallExistence` | positive uncovered ⟹ a LONELY POINT; the `∑ μ ≤ 1` weakening |
+| `LRCPairOverlapFloor` | pair-overlap LOWER bound by containment (+ the gcd strengthening via the common period 1/g) |
+| `LRCCombUpperBound` | the SHARP single-comb bound `≤ 2λ` on a half-cell-shifted unit window |
+
+**Two architectural findings recorded along the way.** (1) LRC's conclusion
+needs a lonely TIME, not a positive-measure window — so the circle/line
+reconciliation is OFF the existence critical path (window machinery is for
+NESTING only). (2) The assembly's `∑ μ(A i) = 1` weakens to `≤ 1`, so only an
+UPPER single-comb bound is needed. Together these removed the exact sawtooth
+identity (THM-965/856) from the existence path entirely; it is now reserved
+for the SHARP nesting floor (THM-1012, paper-proved by period counting —
+also without the sawtooth).
+
 ## What is genuinely open (the honest short list)
 
 1. **The residual's dense core** past all shrinks: packets admitting no corrected

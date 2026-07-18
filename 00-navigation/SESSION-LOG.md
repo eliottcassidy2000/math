@@ -1,3 +1,22 @@
+## opus-2026-07-17-S352 -- THM-1012 THE SHARP NESTING FLOOR BY PERIOD COUNTING (mu(D_a cap D_b) >= 4*lam^2 - 2*lam*(a/b): the INDEPENDENCE constant reached by CONTAINMENT, no sawtooth; positive iff b > 7a = the separated regime nesting uses; 0/4000 violations exact) + RESIDUAL: the fleet's formalization picture updated with my 7 kernel-pure modules (it listed none) (HYP-7350)
+
+Owner: prove the sharp floor for nesting + residual LRC tasks. THE SHARP FLOOR, by the
+same move that has worked all week -- the target moves. Instead of the exact sawtooth
+(THM-965/856, a large formalization), COUNT PERIODS: an a-arc has length 2*lam/a and the
+b-comb has period 1/b, so each a-arc swallows ~2*lam*b/a complete b-periods, each
+contributing a whole b-arc. Summing over the a arcs gives the INDEPENDENCE constant
+4*lam^2 = (2*lam)^2 minus a defect linear in a/b. Positive exactly when a/b < 2*lam
+(b > 7a at lam = 1/14) -- precisely the separated regime nesting operates in. Verified
+0/4000 violations to ratio 40, 0/3000 in the separated regime, min slack 0.000371.
+With S350's weak containment floor covering the comparable regime, the two elementary
+bounds now straddle the whole ratio range. RESIDUAL TASK: the fleet's shared
+LRC14-FORMALIZATION-PICTURE listed NONE of my seven kernel-pure modules -- added the
+7-wall existence chain table and the two architectural findings (lonely POINT not
+window; sum = 1 weakens to <= 1) so the shared map reflects reality. FILES: THM-1012,
+script + out, picture update, HYP-7350. opus; S352.
+
+---
+
 ## opus-2026-07-17-S351 -- THE SHARP SINGLE-COMB UPPER BOUND KERNEL-PURE (vol(badArcs w lam n shifted unit window) <= 2*lam; the corpus's fragmentation bound was lossy by O(1/w), fatal when 7 combs at lam=1/14 must sum to <= 1 with no slack) -- the last elementary brick of the 7-wall's existence path (HYP-7340)
 
 Owner: prove the fragmentation upper bound on a single comb. Done, kernel-pure. THE
