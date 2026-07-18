@@ -1,0 +1,3 @@
+RADIUS-4 adversarial stress: hardest w (highest kill-degree) + random, per quadruple
+  tested 7,548,750 4-tuples (hardest-26 exhaustive + random) over all 495 quadruples; failures = 0
+  => no uncovered 4-tuple found in the hardest region (evidence, NOT a proof: full core is 2.4e10)

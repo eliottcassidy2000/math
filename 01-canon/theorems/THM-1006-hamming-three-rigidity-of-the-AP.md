@@ -1,7 +1,7 @@
 ---
 id: THM-1006
 title: Hamming-3 rigidity of the AP — replacing ANY THREE elements of {1,…,12} by any three new speeds still forces M ≥ 2/25. Radius ≤ 3 of the inverse/rigidity theorem for CRUX (C).
-status: PROVED except one exhaustive scan still running. Finite core EXHAUSTIVE (all w ≤ 200, 220 triples, explicit rational witnesses, zero failures); all-large regime closed (W_joint = 1350/13 = 103.85); one-small regime closed (W₁ = 117.6, computed over all 220 triples × w₁ ≤ 200); two-small regime verified on the worst triples (min L'' = 0.00239 vs threshold 0.000952, a 2.5× margin) with the exhaustive 3.9M-pair scan IN PROGRESS.
+status: THREE OF FOUR REGIMES PROVED; the two-small regime is NOT yet closed exhaustively — do not cite this as a complete radius-3 theorem yet. Finite core EXHAUSTIVE (all w ≤ 200, 220 triples, explicit rational witnesses, zero failures); all-large closed (W_joint = 1350/13 = 103.85); one-small closed (W₁ = 117.6 over all 220 triples × w₁ ≤ 200). TWO-SMALL: verified on the six worst triples (min L'' = 0.00239 vs threshold 0.000952) and on 19/220 triples of the exhaustive scan (min L'' = 0.0030, zero violations) before that scan was killed; the full 3.9M-pair scan is being re-run with an early-exit predicate. A crude worst-case bound shows L'' could in principle dip to ≈0.0004 for w₂ ≈ 40–50 (which would push the required w₃ box to ≈476), so the exhaustive scan — not the crude bound — is what must settle it.
 source: klein-2026-07-17-S314
 depends_on:
   - THM-1004  # Hamming-1 rigidity + the interval-survival tail lemma

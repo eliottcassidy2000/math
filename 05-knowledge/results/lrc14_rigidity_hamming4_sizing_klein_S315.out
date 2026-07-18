@@ -1,0 +1,13 @@
+
+RADIUS 4 sizing (r=4: sum 1/w_i < 9L/4 ; all-large needs w1 > 16/(9 L_B))
+  C(12,4)=495 quadruples; L_B: min=0.01200 median=0.03533 max=0.06533
+  W_joint = 16/(9 L_min) = 148.1  (worst (3, 4, 5, 12))
+
+  tail ceiling: r < 1/(2 delta) = 6.25  => radius <= 6 reachable, radius 7 IMPOSSIBLE by this method
+     r=1 : 1-2r*delta = +0.840 OK
+     r=2 : 1-2r*delta = +0.680 OK
+     r=3 : 1-2r*delta = +0.520 OK
+     r=4 : 1-2r*delta = +0.360 OK
+     r=5 : 1-2r*delta = +0.200 OK
+     r=6 : 1-2r*delta = +0.040 OK
+     r=7 : 1-2r*delta = -0.120 DEAD
