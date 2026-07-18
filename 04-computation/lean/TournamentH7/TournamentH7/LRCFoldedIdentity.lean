@@ -123,7 +123,7 @@ theorem muNum_folded (a b : ℕ) (ha : 1 ≤ a) (hab : a ≤ b) :
     omega
   have h4ab : 4 * (a : ℤ) * b = (S : ℤ) ^ 2 - (D : ℤ) ^ 2 := by
     have hS' : (S : ℤ) = (a : ℤ) + b := by rw [hSdef]; push_cast; ring
-    have hD' : (D : ℤ) = (b : ℤ) - a := by rw [hDdef]; push_cast; omega
+    have hD' : (D : ℤ) = (b : ℤ) - a := by rw [hDdef]; omega
     rw [hS', hD']
     ring
   have hSb : (((a + b) % 14 : ℕ) : ℤ) = ((S % 14 : ℕ) : ℤ) := by rw [hSdef]
