@@ -1,0 +1,10 @@
+Is there a COVERING 13-set with M < 14/183 = 0.076503 ?  (2/(2n-1) at n=14 would be 2/27 = 0.074074)
+M=2/27 needs a witness a/27 with all (v a mod 27) in [2,25], i.e. v != 0,+-1 mod 27.
+
+  allowed residues mod 27: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] (24 of 27)
+  candidate speeds <=399 in those classes: 356
+  covering primitive 13-sets sampled from the 2/27-compatible pool: 23591
+  min M found = 74/455 = 0.162637   (deep well 14/183 = 0.076503)
+  sets with M < 14/183: 0
+
+  => NO set below the deep well found in this pool: the 2/(2n-1) pattern DOES break before n=14

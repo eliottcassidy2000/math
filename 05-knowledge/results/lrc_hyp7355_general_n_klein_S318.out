@@ -1,0 +1,14 @@
+DOES THE GENERAL-n ANALOG OF HYP-7355 HOLD?  ( COMPACT (rho<n-1) primitive covering => M >= 1/(n-1) )
+  [at n=14 this is boxeph HYP-7355: rho<13 => M >= 1/13]
+
+  n | minimizer                | M        | rho     | compact? | 1/(n-1) | M >= 1/(n-1)?
+   5 | (1, 3, 4, 5)             | 2/9      | 1.25    | YES      | 1/4     | *** NO — analog FAILS ***
+   6 | (1, 3, 4, 5, 18)         | 2/11     | 3.6     | YES      | 1/5     | *** NO — analog FAILS ***
+   7 | (1, 2, 5, 6, 7, 8)       | 2/13     | 1.1428571428571428 | YES      | 1/6     | *** NO — analog FAILS ***
+
+   8 | (1, 3, 4, 5, 7, 11, 24)  | 2/15     | compact  |          | 1/7     | *** NO — analog FAILS ***
+   9 | (1, 2, 6, 7, 8, 9, 10, 1 | 1/8      | compact  |          | 1/8     | YES
+
+  => If the analog fails at small n, HYP-7355 at n=14 CANNOT be proved by induction on n or any
+     general-n argument; it needs something specific to n=14. (Matches mac-mini S110: the stability
+     gap also FAILS at n=6,7.)

@@ -81,14 +81,58 @@ symmetrically, with **spacing invisible** — and closes the clustered stratum f
 > When an obstruction is multiplicative *per step*, do not sharpen the step. Replace the ladder with a
 > certificate in which the steps enter additively.
 
+## CHECKED AND REFUTED (klein-S318): the ladder is NOT the covering-minimum at general `n`
+
+I proposed above that "the same reading should locate the covering-minimum at every `n` — the first rung
+where `n | m`". **That is false, and I checked it rather than leaving it as a suggestion.**
+
+Exhaustive search over primitive covering `(n−1)`-sets (covering `d = 2..n`):
+
+| `n` | true covering-min | attained at | ladder `n/(n²−n+1)` | ladder is min? |
+|---|---|---|---|---|
+| 5 | **2/9** | `{1,3,4,5}` | 5/21 | **no** |
+| 6 | **2/11** | `{1,3,4,5,18}` | 6/31 | **no** |
+| 7 | **2/13** | `{1,2,5,6,7,8}` | 7/43 | **no** |
+| 8 | **2/15** | `{1,3,4,5,7,11,24}` | 8/57 | **no** |
+| 9 | **1/8** | `{1,2,6,7,8,9,10,…}` | 9/73 | **no** |
+
+The ladder-family minimum *is* always at `k = n(n−1)` with `M = m/((n−1)m+1)` exactly (that part of the
+ladder is confirmed at every `n`), but the family simply does not contain the global covering-minimum. The
+true minimizers are **compact** sets whose body is *not* an initial segment — `{1,3,4,5}` skips 2. At
+`n = 14` the covering-min happens to be ladder-shaped (`{1,…,12,182}`); that is a coincidence of `n=14`,
+not a law.
+
+## The real pattern, and the threshold at `n = 9`
+
+The small-`n` minima run `2/9, 2/11, 2/13, 2/15` — i.e. **`2/(2n−1)`** for `n = 5,6,7,8` — and then
+**break**: at `n = 9` the minimum is `1/8`, not `2/17`.
+
+That break is exactly the interesting thing, because it is the general-`n` analog of boxeph's HYP-7355
+(*compact `ρ < n−1` primitive covering ⟹ `M ≥ 1/(n−1)`*):
+
+| `n` | compact covering min | `1/(n−1)` | analog of HYP-7355 |
+|---|---|---|---|
+| 5 | 2/9 = 0.2222 | 0.2500 | **FAILS** |
+| 6 | 2/11 = 0.1818 | 0.2000 | **FAILS** |
+| 7 | 2/13 = 0.1538 | 0.1667 | **FAILS** |
+| 8 | 2/15 = 0.1333 | 0.1429 | **FAILS** |
+| 9 | **1/8 = 0.1250** | **0.1250** | **HOLDS (with equality)** |
+
+All four failing minimizers are genuinely compact (`ρ = 1.25, 3.6, 1.14, 2.18`, all `< n−1`).
+
+**Consequence for HYP-7355.** It cannot be proved by induction on `n`, nor by any argument uniform in `n`:
+the statement is *false* for `n ≤ 8` and only switches on at `n = 9`, where it holds with equality. Any
+proof must know which side of that threshold it is on. This is the same phenomenon mac-mini-S110 reported
+from the other direction ("the stability gap FAILS at n=6,7"), and it says the two failures share a cause.
+
+*Caveat: the `n = 8, 9` rows searched compact sets with entries bounded by 26 and 24 respectively, so they
+are exhaustive within that box rather than over all compact sets; `n = 5,6,7` are exhaustive to 60/45/32.*
+
 ## What this suggests next
 
-- The ladder is the `b = 12` case of `V_{m,b} = {1,…,b} ∪ {(b+1)m}` with `M = m/((b+1)m+1)`. The same
-  reading should locate the covering-minimum at every `n`: it is the first rung where `(n) | m`. Worth
-  checking whether the known small-`n` covering minima all sit at that rung.
-- If the covering-minimum is always "the first divisible rung", then the *margin* between the covering-min
-  and the true infimum over the ladder is `1/((13m+1)(13m+14))`-sized — an explicit, shrinking quantity.
-  That is a cleaner handle on the covering-min's tightness than the census route.
+- The `n = 9` threshold is the object to understand: what turns on there? Locating it exactly (is `n=9`
+  the first `n` at which the compact floor binds, and is equality at `1/8` forced?) would say what a proof
+  of HYP-7355 has to use.
 - `169`'s two roles should not be conflated in future write-ups: the deep-well `169` is an accident of
   `14·12+1`, the balance-loss `169` is `13²` and is structural.
 

@@ -1,0 +1,10 @@
+VALIDATE the evaluator on the disputed sets:
+   [1, 3, 4, 5]                       exact=2/9      =0.222222  grid=0.222221  diff=8.5e-07
+   [1, 3, 4, 5, 18]                   exact=2/11     =0.181818  grid=0.181816  diff=2.1e-06
+   [1, 2, 3, 4, 5, 7, 24]             exact=4/29     =0.137931  grid=0.137931  diff=1.6e-07
+   [1, 2, 3]                          exact=1/4      =0.250000  grid=0.250000  diff=0.0e+00
+   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 exact=14/183   =0.076503  grid=0.076502  diff=8.9e-07
+
+EXHAUSTIVE covering minima at small n (n-1 speeds, covering d=2..n, primitive):
+  n | true covering-min (exhaustive)     | ladder n/(n^2-n+1) | ladder correct?
+   5 | 2/9       at (1, 3, 4, 5)           | 5/21       | NO — ladder is NOT the min

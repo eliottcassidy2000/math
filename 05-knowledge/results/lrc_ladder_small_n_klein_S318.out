@@ -1,0 +1,11 @@
+LADDER PREDICTION at level n:  body {1..n-2}, killer n(n-1), M = n/(n^2-n+1)
+(covering at level n = some speed divisible by each d=2..n; n-1 speeds)
+
+  n | pred killer | predicted M | ladder-family min (all k) | BROAD search min | match?
+   5 |          20 | 5/21        | 5/21      (k=20  )   | 2/9       (1, 3, 4, 5)           | NO
+   6 |          30 | 6/31        | 6/31      (k=30  )   | 2/11      (1, 3, 4, 5, 18)       | NO
+   7 |          42 | 7/43        | 7/43      (k=42  )   | 2/11      (1, 3, 4, 5, 6, 7)     | YES
+   8 |          56 | 8/57        | 8/57      (k=56  )   | 4/29      (1, 2, 3, 4, 5, 7, 24) | NO
+   9 |          72 | 9/73        | 9/73      (k=72  )   | 3/23      (1, 2, 3, 4, 5, 7, 8,  | YES
+  10 |          90 | 10/91       | 10/91     (k=90  )   | 4/37      (1, 2, 3, 5, 6, 7, 8,  | NO
+  11 |         110 | 11/111      | 11/111    (k=110 )   | 11/101    (1, 2, 3, 4, 5, 6, 7,  | YES

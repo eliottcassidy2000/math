@@ -1,0 +1,4 @@
+n=6 (B=45, 370985 primitive covering sets): true min = 2/11      at (1, 3, 4, 5, 18)     ; ladder = 6/31      at [1, 2, 3, 4, 30] ; ladder-is-min? False
+    ladder set in range? True
+n=7 (B=32, 196425 primitive covering sets): true min = 2/13      at (1, 2, 5, 6, 7, 8)   ; ladder = 7/43      at [1, 2, 3, 4, 5, 42] ; ladder-is-min? False
+    ladder set in range? False
