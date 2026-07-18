@@ -1,0 +1,38 @@
+==============================================================================
+FAREY RESONANCE PROFILE of LRC(14) crux families
+==============================================================================
+
+tight prefix {1..13}     
+   covering=False   M=1/14 (=0.07143)   first-live (q,p,t)=(14, 1, Fraction(1, 14))
+   empty small circles b in 2..14: [14]
+   circle fill (b:count divisible), b=1..14: 1:13 2:6 3:4 4:3 5:2 6:2 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:0
+
+GW doubling {1..11,13,24}
+   covering=False   M=1/14 (=0.07143)   first-live (q,p,t)=(14, 1, Fraction(1, 14))
+   empty small circles b in 2..14: [14]
+   circle fill (b:count divisible), b=1..14: 1:13 2:6 3:4 4:3 5:2 6:2 7:1 8:2 9:1 10:1 11:1 12:1 13:1 14:0
+
+deep well {1..12,182}    
+   covering=True   M=14/183 (=0.07650)   first-live (q,p,t)=(27, 2, Fraction(2, 27))
+   empty small circles b in 2..14: NONE (covering)
+   circle fill (b:count divisible), b=1..14: 1:13 2:7 3:4 4:3 5:2 6:2 7:2 8:1 9:1 10:1 11:1 12:1 13:1 14:1
+
+residue {1..11,13,84}    
+   covering=True   M=7/89 (=0.07865)   first-live (q,p,t)=(41, 17, Fraction(17, 41))
+   empty small circles b in 2..14: NONE (covering)
+   circle fill (b:count divisible), b=1..14: 1:13 2:6 3:4 4:3 5:2 6:2 7:2 8:1 9:1 10:1 11:1 12:1 13:1 14:1
+
+sporadic {1..11,13,24}   
+   covering=False   M=1/14 (=0.07143)   first-live (q,p,t)=(14, 1, Fraction(1, 14))
+   empty small circles b in 2..14: [14]
+   circle fill (b:count divisible), b=1..14: 1:13 2:6 3:4 4:3 5:2 6:2 7:1 8:2 9:1 10:1 11:1 12:1 13:1 14:0
+
+missing-2 {1,3,4,..,14}  
+   covering=True   M=2/17 (=0.11765)   first-live (q,p,t)=(17, 8, Fraction(8, 17))
+   empty small circles b in 2..14: NONE (covering)
+   circle fill (b:count divisible), b=1..14: 1:13 2:6 3:4 4:3 5:2 6:2 7:2 8:1 9:1 10:1 11:1 12:1 13:1 14:1
+
+READING TO WATCH FOR:
+ - non-covering families have an empty small circle b0; first-live t = 1/b0.
+ - covering families: no empty small circle; first-live sits at a modulus
+   tied to the LEAST-FILLED circle (the census's natural target).
