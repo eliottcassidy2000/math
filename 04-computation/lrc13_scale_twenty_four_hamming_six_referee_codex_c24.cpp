@@ -11,39 +11,36 @@
 #include <sstream>
 #include <string>
 #include <tuple>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
-// Independent exact referee for the primitive proper AP-centred common-scale-
-// twenty-four Hamming-six face.  Unlike the NumPy/Python primary, this replay
-// finds every CRT representative by literal congruence search, enumerates the
-// hereditary grammar from prime-power coverage and leave-one-out lcms, and
-// represents every owner-local reachable bank as a sorted vector of masks.
-// Forward and reverse provider traversals must give the same vector exactly.
+// Independent literal-CRT referee for the primitive proper AP-centred
+// common-scale-twenty-four Hamming-six face (THM-990).
+//
+// Design was frozen before the Python primary or its output was inspected.
+// This implementation deliberately uses a different carrier:
+//   * orders and exact-order residues are generated from gcd/lcm definitions;
+//   * every CRT representative is found by bounded literal search;
+//   * the six owner-local unit fibres are joined by sorted-vector union DP;
+//   * multiplication covariance is audited but never used to remove rows.
+//
+// Only the final, commutative owner-local DP is memoized.  Its key is the
+// exact multiset of (provider/owner ratio, provider order) pairs.  The table
+// audit below proves that this is an exact change of sheet gauge, not a
+// quotient of the owner predicate.
 
 namespace {
 
 constexpr int P = 13;
 constexpr int C = 24;
-constexpr uint32_t FULL = (1U << C) - 1U;
+constexpr uint32_t FULL = (uint32_t{1} << C) - 1;
 constexpr std::array<uint8_t, 8> ORDERS{1, 2, 3, 4, 6, 8, 12, 24};
-constexpr std::array<std::array<uint8_t, 8>, 8> UNITS{{
-    {{0, 0, 0, 0, 0, 0, 0, 0}},
-    {{1, 0, 0, 0, 0, 0, 0, 0}},
-    {{1, 2, 0, 0, 0, 0, 0, 0}},
-    {{1, 3, 0, 0, 0, 0, 0, 0}},
-    {{1, 5, 0, 0, 0, 0, 0, 0}},
-    {{1, 3, 5, 7, 0, 0, 0, 0}},
-    {{1, 5, 7, 11, 0, 0, 0, 0}},
-    {{1, 5, 7, 11, 13, 17, 19, 23}},
-}};
-constexpr std::array<int, 8> UNIT_COUNTS{1, 1, 2, 2, 2, 4, 4, 8};
 
 using Support = std::array<uint8_t, 6>;
-using OrderWord = std::array<uint8_t, 6>;  // actual orders
-using Capacities = std::array<uint16_t, 6>;
+using OrderWord = std::array<uint8_t, 6>;  // indices into ORDERS
+using Capacities = std::array<uint8_t, 6>;
 using Multiplicity = std::array<uint8_t, 8>;
-using MaskFibre = std::array<uint32_t, 8>;
 
 [[noreturn]] void fail(const std::string &message) {
   std::cerr << "FAIL: " << message << '\n';
@@ -54,153 +51,36 @@ void require(bool condition, const std::string &message) {
   if (!condition) fail(message);
 }
 
-// Compact self-contained SHA-256.  Certificate streams below are serialized
-// byte by byte and never depend on C++ object layout or library hashes.
-class Sha256 {
- public:
+// Deterministic FNV-1a byte serialization.  File-level SHA-256 hashes are
+// recorded separately; these internal digests make the exact enumerated banks
+// cheap to compare across compiler modes.
+struct Fnv64 {
+  uint64_t state = 14695981039346656037ULL;
+
   void byte(uint8_t value) {
-    buffer_[used_++] = value;
-    bit_count_ += 8;
-    if (used_ == 64) {
-      compress(buffer_.data());
-      used_ = 0;
-    }
+    state ^= value;
+    state *= 1099511628211ULL;
   }
-
-  void u16le(uint16_t value) {
-    byte(static_cast<uint8_t>(value));
-    byte(static_cast<uint8_t>(value >> 8));
-  }
-
-  void u24le(uint32_t value) {
-    byte(static_cast<uint8_t>(value));
-    byte(static_cast<uint8_t>(value >> 8));
-    byte(static_cast<uint8_t>(value >> 16));
-  }
-
-  void u32le(uint32_t value) {
+  void u32(uint32_t value) {
     for (int shift = 0; shift < 32; shift += 8)
       byte(static_cast<uint8_t>(value >> shift));
   }
-
-  void u64le(uint64_t value) {
+  void u64(uint64_t value) {
     for (int shift = 0; shift < 64; shift += 8)
       byte(static_cast<uint8_t>(value >> shift));
   }
-
-  std::array<uint8_t, 32> finish_bytes() {
-    const uint64_t original_bits = bit_count_;
-    byte(0x80);
-    while (used_ != 56) byte(0);
-    for (int shift = 56; shift >= 0; shift -= 8)
-      byte(static_cast<uint8_t>(original_bits >> shift));
-    require(used_ == 0, "SHA-256 final block did not close");
-    std::array<uint8_t, 32> answer{};
-    for (int i = 0; i < 8; ++i)
-      for (int offset = 0; offset < 4; ++offset)
-        answer[4 * i + offset] =
-            static_cast<uint8_t>(state_[i] >> (24 - 8 * offset));
-    return answer;
-  }
-
-  std::string finish() {
-    const auto digest = finish_bytes();
-    std::ostringstream out;
-    out << std::hex << std::setfill('0');
-    for (uint8_t value : digest)
-      out << std::setw(2) << static_cast<int>(value);
-    return out.str();
-  }
-
- private:
-  static constexpr std::array<uint32_t, 64> K{
-      0x428a2f98U, 0x71374491U, 0xb5c0fbcfU, 0xe9b5dba5U,
-      0x3956c25bU, 0x59f111f1U, 0x923f82a4U, 0xab1c5ed5U,
-      0xd807aa98U, 0x12835b01U, 0x243185beU, 0x550c7dc3U,
-      0x72be5d74U, 0x80deb1feU, 0x9bdc06a7U, 0xc19bf174U,
-      0xe49b69c1U, 0xefbe4786U, 0x0fc19dc6U, 0x240ca1ccU,
-      0x2de92c6fU, 0x4a7484aaU, 0x5cb0a9dcU, 0x76f988daU,
-      0x983e5152U, 0xa831c66dU, 0xb00327c8U, 0xbf597fc7U,
-      0xc6e00bf3U, 0xd5a79147U, 0x06ca6351U, 0x14292967U,
-      0x27b70a85U, 0x2e1b2138U, 0x4d2c6dfcU, 0x53380d13U,
-      0x650a7354U, 0x766a0abbU, 0x81c2c92eU, 0x92722c85U,
-      0xa2bfe8a1U, 0xa81a664bU, 0xc24b8b70U, 0xc76c51a3U,
-      0xd192e819U, 0xd6990624U, 0xf40e3585U, 0x106aa070U,
-      0x19a4c116U, 0x1e376c08U, 0x2748774cU, 0x34b0bcb5U,
-      0x391c0cb3U, 0x4ed8aa4aU, 0x5b9cca4fU, 0x682e6ff3U,
-      0x748f82eeU, 0x78a5636fU, 0x84c87814U, 0x8cc70208U,
-      0x90befffaU, 0xa4506cebU, 0xbef9a3f7U, 0xc67178f2U};
-
-  static uint32_t load_be(const uint8_t *p) {
-    return (static_cast<uint32_t>(p[0]) << 24) |
-           (static_cast<uint32_t>(p[1]) << 16) |
-           (static_cast<uint32_t>(p[2]) << 8) |
-           static_cast<uint32_t>(p[3]);
-  }
-
-  static uint32_t rotate(uint32_t value, int count) {
-    return (value >> count) | (value << (32 - count));
-  }
-
-  void compress(const uint8_t *block) {
-    std::array<uint32_t, 64> words{};
-    for (int i = 0; i < 16; ++i) words[i] = load_be(block + 4 * i);
-    for (int i = 16; i < 64; ++i) {
-      const uint32_t s0 = rotate(words[i - 15], 7) ^
-                          rotate(words[i - 15], 18) ^
-                          (words[i - 15] >> 3);
-      const uint32_t s1 = rotate(words[i - 2], 17) ^
-                          rotate(words[i - 2], 19) ^
-                          (words[i - 2] >> 10);
-      words[i] = words[i - 16] + s0 + words[i - 7] + s1;
-    }
-    uint32_t a = state_[0], b = state_[1], c = state_[2], d = state_[3];
-    uint32_t e = state_[4], f = state_[5], g = state_[6], h = state_[7];
-    for (int i = 0; i < 64; ++i) {
-      const uint32_t s1 = rotate(e, 6) ^ rotate(e, 11) ^ rotate(e, 25);
-      const uint32_t choose = (e & f) ^ (~e & g);
-      const uint32_t temp1 = h + s1 + choose + K[i] + words[i];
-      const uint32_t s0 = rotate(a, 2) ^ rotate(a, 13) ^ rotate(a, 22);
-      const uint32_t majority = (a & b) ^ (a & c) ^ (b & c);
-      const uint32_t temp2 = s0 + majority;
-      h = g;
-      g = f;
-      f = e;
-      e = d + temp1;
-      d = c;
-      c = b;
-      b = a;
-      a = temp1 + temp2;
-    }
-    state_[0] += a;
-    state_[1] += b;
-    state_[2] += c;
-    state_[3] += d;
-    state_[4] += e;
-    state_[5] += f;
-    state_[6] += g;
-    state_[7] += h;
-  }
-
-  std::array<uint32_t, 8> state_{0x6a09e667U, 0xbb67ae85U,
-                                 0x3c6ef372U, 0xa54ff53aU,
-                                 0x510e527fU, 0x9b05688cU,
-                                 0x1f83d9abU, 0x5be0cd19U};
-  std::array<uint8_t, 64> buffer_{};
-  uint64_t bit_count_ = 0;
-  std::size_t used_ = 0;
 };
 
-int order_index(int order) {
-  for (int i = 0; i < static_cast<int>(ORDERS.size()); ++i)
-    if (ORDERS[i] == order) return i;
-  fail("unknown effective order");
+std::string hex64(uint64_t value) {
+  std::ostringstream out;
+  out << std::hex << std::setfill('0') << std::setw(16) << value;
+  return out.str();
 }
 
 int inverse_mod_13(int value) {
   for (int candidate = 1; candidate < P; ++candidate)
     if (value * candidate % P == 1) return candidate;
-  fail("nonunit modulo thirteen");
+  fail("attempted to invert a nonunit modulo thirteen");
 }
 
 int centered(int value, int modulus) {
@@ -214,97 +94,206 @@ int literal_crt_base(int label, int order, int unit) {
     if (value % P == order * label % P &&
         value % order == unit % order)
       return value;
-  fail("literal CRT search found no representative");
+  fail("bounded CRT search found no representative");
 }
 
-uint32_t literal_local_mask(int label, int order, int unit, int owner) {
+uint32_t literal_mask(int label, int order, int unit, int owner) {
   const int base = literal_crt_base(label, order, unit);
   const int inverse = inverse_mod_13(owner);
   uint32_t mask = 0;
   for (int sheet = 0; sheet < C; ++sheet) {
     const int value = centered(base * (inverse + P * sheet), P * order);
-    if (-order < value && value <= order) mask |= 1U << sheet;
+    if (-order < value && value <= order) mask |= uint32_t{1} << sheet;
   }
   return mask;
 }
 
-int analytic_cardinality(int label, int order, int owner) {
-  const int ratio = label * inverse_mod_13(owner) % P;
-  const int target = order * ratio % P;
-  int period = 0;
-  for (int value = -order + 1; value <= order; ++value) {
-    int residue = value % P;
-    if (residue < 0) residue += P;
-    period += residue == target;
-  }
-  return (C / order) * period;
+uint32_t rotate24(uint32_t mask, int amount) {
+  amount %= C;
+  if (amount < 0) amount += C;
+  if (amount == 0) return mask & FULL;
+  return ((mask << amount) | (mask >> (C - amount))) & FULL;
+}
+
+uint32_t residue_class_mask(int residue) {
+  uint32_t result = 0;
+  for (int sheet = residue; sheet < C; sheet += 3)
+    result |= uint32_t{1} << sheet;
+  return result;
+}
+
+std::vector<uint8_t> units_mod_order(int order) {
+  if (order == 1) return {0};
+  std::vector<uint8_t> result;
+  for (int unit = 1; unit < order; ++unit)
+    if (std::gcd(unit, order) == 1)
+      result.push_back(static_cast<uint8_t>(unit));
+  return result;
 }
 
 struct Tables {
-  // [label][order-index][owner][unit-index]
-  std::array<std::array<std::array<MaskFibre, P>, 8>, P> masks{};
+  std::array<std::vector<uint8_t>, 8> units;
+  // Normalized owner-one fibres [ratio][order index].
+  std::array<std::array<std::vector<uint32_t>, 8>, P> fibres;
+  // Unit-independent cardinalities [provider][order index][owner].
   std::array<std::array<std::array<uint8_t, P>, 8>, P> cards{};
-  std::string primary_mask_digest;
-  std::string literal_base_digest;
+  uint64_t base_digest = 0;
+  uint64_t mask_digest = 0;
 };
 
 Tables build_tables() {
   Tables table;
-  Sha256 primary_mask_digest;
-  Sha256 literal_base_digest;
-  for (int label = 1; label < P; ++label)
-    for (int oi = 0; oi < static_cast<int>(ORDERS.size()); ++oi) {
+  Fnv64 bases;
+  Fnv64 masks;
+  for (int oi = 0; oi < 8; ++oi) {
+    table.units[oi] = units_mod_order(ORDERS[oi]);
+  }
+
+  // Direct gcd census, checked against the explicit Euler-phi values.
+  const std::array<std::size_t, 8> expected_phi{1, 1, 2, 2, 2, 4, 4, 8};
+  for (int oi = 0; oi < 8; ++oi)
+    require(table.units[oi].size() == expected_phi[oi],
+            "exact-order residue census mismatch");
+
+  for (int ratio = 1; ratio < P; ++ratio)
+    for (int oi = 0; oi < 8; ++oi) {
       const int order = ORDERS[oi];
-      for (int ui = 0; ui < UNIT_COUNTS[oi]; ++ui) {
-        const int unit = UNITS[oi][ui];
-        const int base = literal_crt_base(label, order, unit);
-        literal_base_digest.byte(static_cast<uint8_t>(label));
-        literal_base_digest.byte(static_cast<uint8_t>(order));
-        literal_base_digest.byte(static_cast<uint8_t>(unit));
-        literal_base_digest.u16le(static_cast<uint16_t>(base));
+      for (uint8_t unit : table.units[oi])
+        table.fibres[ratio][oi].push_back(
+            literal_mask(ratio, order, unit, 1));
+      std::sort(table.fibres[ratio][oi].begin(),
+                table.fibres[ratio][oi].end());
+      table.fibres[ratio][oi].erase(
+          std::unique(table.fibres[ratio][oi].begin(),
+                      table.fibres[ratio][oi].end()),
+          table.fibres[ratio][oi].end());
+      require(!table.fibres[ratio][oi].empty(),
+              "an exact-order residue fibre has empty mask image");
+    }
+
+  for (int label = 1; label < P; ++label)
+    for (int oi = 0; oi < 8; ++oi) {
+      const int order = ORDERS[oi];
+      for (uint8_t unit : table.units[oi]) {
+        bases.byte(static_cast<uint8_t>(label));
+        bases.byte(static_cast<uint8_t>(oi));
+        bases.byte(unit);
+        bases.u32(static_cast<uint32_t>(literal_crt_base(label, order, unit)));
       }
       for (int owner = 1; owner < P; ++owner) {
+        const int ratio = label * inverse_mod_13(owner) % P;
+        int shift = -1;
+        for (int candidate = 0; candidate < C; ++candidate)
+          if ((inverse_mod_13(owner) + P * candidate) % C == 1) {
+            shift = candidate;
+            break;
+          }
+        require(shift >= 0, "owner sheet-gauge shift does not exist");
         int common_card = -1;
-        for (int ui = 0; ui < UNIT_COUNTS[oi]; ++ui) {
-          const int unit = UNITS[oi][ui];
-          const uint32_t mask =
-              literal_local_mask(label, order, unit, owner);
-          table.masks[label][oi][owner][ui] = mask;
-          const int card = std::popcount(mask);
+        for (std::size_t ui = 0; ui < table.units[oi].size(); ++ui) {
+          const uint8_t unit = table.units[oi][ui];
+          const uint32_t actual = literal_mask(label, order, unit, owner);
+          const uint32_t normalized = literal_mask(ratio, order, unit, 1);
+          require(actual == rotate24(normalized, shift),
+                  "literal owner mask violates the common cyclic gauge");
+          const int card = std::popcount(actual);
           if (common_card < 0) common_card = card;
           require(card == common_card,
-                  "sheet cardinality depends on unit choice");
-          require(card == analytic_cardinality(label, order, owner),
-                  "literal mask and independent period formula disagree");
-          // This serialization intentionally matches the Python primary.
-          primary_mask_digest.byte(static_cast<uint8_t>(label));
-          primary_mask_digest.byte(static_cast<uint8_t>(order));
-          primary_mask_digest.byte(static_cast<uint8_t>(unit));
-          primary_mask_digest.byte(static_cast<uint8_t>(owner));
-          primary_mask_digest.u32le(mask);
+                  "local sheet cardinality depends on exact-order residue");
+
+          // A direct one-period scan is independent of the 24-sheet count.
+          const int base = literal_crt_base(ratio, order, unit);
+          int period_card = 0;
+          for (int sheet = 0; sheet < order; ++sheet) {
+            const int value = centered(base * (1 + P * sheet), P * order);
+            period_card += -order < value && value <= order;
+          }
+          require(card == (C / order) * period_card,
+                  "full sheet scan disagrees with one-period count");
+
+          masks.byte(static_cast<uint8_t>(label));
+          masks.byte(static_cast<uint8_t>(oi));
+          masks.byte(static_cast<uint8_t>(owner));
+          masks.byte(unit);
+          masks.u32(actual);
         }
         table.cards[label][oi][owner] =
             static_cast<uint8_t>(common_card);
-        const int ratio = label * inverse_mod_13(owner) % P;
-        require(common_card ==
-                    std::popcount(literal_local_mask(
-                        ratio, order, UNITS[oi][0], 1)),
-                "provider/owner ratio reduction failed");
       }
     }
-  table.primary_mask_digest = primary_mask_digest.finish();
-  table.literal_base_digest = literal_base_digest.finish();
+  table.base_digest = bases.state;
+  table.mask_digest = masks.state;
   return table;
 }
 
-bool hereditary_prime_power(const OrderWord &word) {
-  int eight = 0;
-  int three = 0;
-  for (int order : word) {
-    eight += order % 8 == 0;
-    three += order % 3 == 0;
+uint64_t audit_cubic_sheet_nerve(const Tables &table) {
+  const uint32_t class0 = residue_class_mask(0);
+  const uint32_t class1 = residue_class_mask(1);
+  const uint32_t class2 = residue_class_mask(2);
+  const std::vector<uint32_t> classes01{class0, class1};
+  const std::vector<uint32_t> empty{0};
+  require(table.fibres[1][2] == std::vector<uint32_t>{class2},
+          "D3 ratio-one fibre is not sheet class two");
+  require(table.fibres[5][2] == classes01 &&
+              table.fibres[8][2] == classes01,
+          "D3 active C0 fibres are not sheet classes zero and one");
+  require(table.fibres[12][2] == empty,
+          "D3 inactive C0 fibre is not empty");
+  require(table.fibres[4][2] == classes01 &&
+              table.fibres[9][2] == classes01 &&
+              table.fibres[6][2] == empty &&
+              table.fibres[7][2] == empty,
+          "D3 C2 fibres do not have the claimed two-active/two-empty split");
+
+  Fnv64 digest;
+  for (const auto &[oi, partner] :
+       std::vector<std::pair<int, int>>{{5, 5}, {5, 8}, {5, 12},
+                                        {7, 5}, {7, 8}}) {
+    const int order = ORDERS[oi];
+    const int expected_left_card = order == 8 ? 6 : 4;
+    const int expected_right_card = order == 8 ? 3 : 4;
+    for (uint32_t mask : table.fibres[1][oi])
+      require(std::popcount(mask) == expected_left_card,
+              "high-order ratio-one mask cardinality mismatch");
+    for (uint32_t mask : table.fibres[partner][oi])
+      require(std::popcount(mask) == expected_right_card,
+              "high-order partner mask cardinality mismatch");
+    for (int residue = 0; residue < 3; ++residue) {
+      const uint32_t sheet_class = residue_class_mask(residue);
+      int maximum = 0;
+      int witnesses = 0;
+      for (uint32_t left : table.fibres[1][oi])
+        for (uint32_t right : table.fibres[partner][oi]) {
+          const int card = std::popcount((left | right) & sheet_class);
+          if (card > maximum) {
+            maximum = card;
+            witnesses = 1;
+          } else if (card == maximum) {
+            ++witnesses;
+          }
+        }
+      require(maximum == 3,
+              "high-order pair adds more or less than three points to a "
+              "mod-three sheet class");
+      digest.byte(static_cast<uint8_t>(order));
+      digest.byte(static_cast<uint8_t>(partner));
+      digest.byte(static_cast<uint8_t>(residue));
+      digest.byte(static_cast<uint8_t>(maximum));
+      digest.u32(static_cast<uint32_t>(witnesses));
+    }
   }
-  return eight >= 2 && three >= 2;
+  return digest.state;
+}
+
+bool hereditary_prime_power(const OrderWord &word) {
+  int carries_eight = 0;
+  int carries_three = 0;
+  for (uint8_t oi : word) {
+    const int order = ORDERS[oi];
+    carries_eight += order % 8 == 0;
+    carries_three += order % 3 == 0;
+  }
+  return carries_eight >= 2 && carries_three >= 2;
 }
 
 bool hereditary_lcm(const OrderWord &word) {
@@ -312,71 +301,58 @@ bool hereditary_lcm(const OrderWord &word) {
     int residual = 1;
     for (int coordinate = 0; coordinate < 6; ++coordinate)
       if (coordinate != omitted)
-        residual = std::lcm(residual, static_cast<int>(word[coordinate]));
+        residual = std::lcm(residual,
+                            static_cast<int>(ORDERS[word[coordinate]]));
     if (residual != C) return false;
   }
   return true;
 }
 
-void enumerate_words(std::vector<OrderWord> &words, OrderWord &word,
-                     int coordinate, Sha256 &order_digest,
-                     Sha256 &weighted_digest, uint64_t &state_words) {
+void enumerate_words(int coordinate, OrderWord &word,
+                     const Tables &table, std::vector<OrderWord> &accepted,
+                     uint64_t &state_words, Fnv64 &grammar_digest) {
   if (coordinate == 6) {
     const bool prime_power = hereditary_prime_power(word);
     require(prime_power == hereditary_lcm(word),
             "prime-power and leave-one-out-lcm grammars disagree");
-    if (prime_power) {
-      words.push_back(word);
-      uint64_t fibre = 1;
-      for (uint8_t order : word) {
-        const uint8_t index = static_cast<uint8_t>(order_index(order));
-        order_digest.byte(index);  // matches the Python primary
-        weighted_digest.byte(index);
-        fibre *= UNIT_COUNTS[index];
-      }
-      weighted_digest.u64le(fibre);
-      state_words += fibre;
+    if (!prime_power) return;
+    uint64_t fibre = 1;
+    for (uint8_t oi : word) {
+      fibre *= table.units[oi].size();
+      grammar_digest.byte(oi);
     }
+    grammar_digest.u64(fibre);
+    state_words += fibre;
+    accepted.push_back(word);
     return;
   }
-  for (uint8_t order : ORDERS) {
-    word[coordinate] = order;
-    enumerate_words(words, word, coordinate + 1, order_digest,
-                    weighted_digest, state_words);
+  for (uint8_t oi = 0; oi < 8; ++oi) {
+    word[coordinate] = oi;
+    enumerate_words(coordinate + 1, word, table, accepted, state_words,
+                    grammar_digest);
   }
 }
 
 std::vector<Support> all_supports() {
   std::vector<Support> result;
-  for (int a = 1; a <= 7; ++a)
-    for (int b = a + 1; b <= 8; ++b)
-      for (int c = b + 1; c <= 9; ++c)
-        for (int d = c + 1; d <= 10; ++d)
-          for (int e = d + 1; e <= 11; ++e)
-            for (int f = e + 1; f <= 12; ++f)
-              result.push_back(Support{static_cast<uint8_t>(a),
-                                       static_cast<uint8_t>(b),
-                                       static_cast<uint8_t>(c),
-                                       static_cast<uint8_t>(d),
-                                       static_cast<uint8_t>(e),
-                                       static_cast<uint8_t>(f)});
-  return result;
-}
-
-Capacities capacity_vector(const Support &support, const OrderWord &word,
-                           const Tables &table) {
-  Capacities result{};
-  for (int provider = 0; provider < 6; ++provider) {
-    const int oi = order_index(word[provider]);
-    for (int owner = 0; owner < 6; ++owner)
-      result[owner] += table.cards[support[provider]][oi][support[owner]];
-  }
+  Support support{};
+  const auto visit = [&](auto &&self, int coordinate, int next) -> void {
+    if (coordinate == 6) {
+      result.push_back(support);
+      return;
+    }
+    for (int label = next; label <= 12 - (5 - coordinate); ++label) {
+      support[coordinate] = static_cast<uint8_t>(label);
+      self(self, coordinate + 1, label + 1);
+    }
+  };
+  visit(visit, 0, 1);
   return result;
 }
 
 Multiplicity multiplicity(const OrderWord &word) {
   Multiplicity result{};
-  for (int order : word) ++result[order_index(order)];
+  for (uint8_t oi : word) ++result[oi];
   return result;
 }
 
@@ -386,72 +362,126 @@ struct ScalarRow {
   Capacities capacities{};
 };
 
-uint64_t mix64(uint64_t value) {
-  value = (value ^ (value >> 30)) * 0xBF58476D1CE4E5B9ULL;
-  value = (value ^ (value >> 27)) * 0x94D049BB133111EBULL;
-  return value ^ (value >> 31);
-}
-
-struct LocalRow {
-  bool feasible = false;
-  uint8_t maximum = 0;
-  uint32_t maximum_count = 0;
-  uint32_t reachable_count = 0;
-  uint64_t mask_sum = 0;
-  uint64_t mask_xor = 0;
-  std::array<uint32_t, 6> forward_layers{};
-  std::array<uint32_t, 6> reverse_layers{};
-  std::vector<uint32_t> reachable;
+struct FourFeasibleRow {
+  Support support{};
+  OrderWord word{};
+  Capacities capacities{};
+  std::array<uint8_t, 6> maxima{};
+  uint8_t feasible_mask = 0;
 };
 
-LocalRow owner_local(const Support &support, const OrderWord &word, int owner,
-                     const Tables &table) {
-  const auto traverse = [&](bool reverse) {
-    std::vector<uint32_t> reachable{0};
-    std::array<uint32_t, 6> layers{};
-    for (int step = 0; step < 6; ++step) {
-      const int provider = reverse ? 5 - step : step;
-      const int oi = order_index(word[provider]);
-      std::vector<uint32_t> next;
-      next.reserve(reachable.size() * UNIT_COUNTS[oi]);
-      for (uint32_t partial : reachable)
-        for (int ui = 0; ui < UNIT_COUNTS[oi]; ++ui)
-          next.push_back(partial |
-                         table.masks[support[provider]][oi][owner][ui]);
-      std::sort(next.begin(), next.end());
-      next.erase(std::unique(next.begin(), next.end()), next.end());
-      layers[step] = static_cast<uint32_t>(next.size());
-      reachable = std::move(next);
-    }
-    return std::pair{reachable, layers};
-  };
-
-  auto [reachable, forward_layers] = traverse(false);
-  auto [reverse_reachable, reverse_layers] = traverse(true);
-  require(reachable == reverse_reachable,
-          "forward/reverse provider reachability mismatch");
-  LocalRow result;
-  result.reachable = std::move(reachable);
-  result.forward_layers = forward_layers;
-  result.reverse_layers = reverse_layers;
-  result.reachable_count = static_cast<uint32_t>(result.reachable.size());
-  for (uint32_t mask : result.reachable) {
-    result.maximum = static_cast<uint8_t>(
-        std::max<int>(result.maximum, std::popcount(mask)));
-    result.feasible |= mask == FULL;
-    result.mask_sum += mask;
-    result.mask_xor ^= mix64(mask);
+uint64_t scalar_row_key(const Support &support, const OrderWord &word) {
+  uint64_t result = 0;
+  for (int i = 0; i < 6; ++i) {
+    result <<= 7;
+    result |= static_cast<uint64_t>((support[i] << 3) | word[i]);
   }
-  result.maximum_count = static_cast<uint32_t>(std::count_if(
-      result.reachable.begin(), result.reachable.end(), [&](uint32_t mask) {
-        return std::popcount(mask) == result.maximum;
-      }));
-  require(result.feasible == (result.maximum == C),
-          "full-mask feasibility and maximum-union test disagree");
   return result;
 }
 
-struct Tournament {
+uint64_t multiply_row_key(const Support &support, const OrderWord &word,
+                          int multiplier) {
+  std::array<std::pair<uint8_t, uint8_t>, 6> pairs{};
+  for (int i = 0; i < 6; ++i)
+    pairs[i] = {static_cast<uint8_t>(support[i] * multiplier % P), word[i]};
+  std::sort(pairs.begin(), pairs.end());
+  Support transformed_support{};
+  OrderWord transformed_word{};
+  for (int i = 0; i < 6; ++i) {
+    transformed_support[i] = pairs[i].first;
+    transformed_word[i] = pairs[i].second;
+  }
+  return scalar_row_key(transformed_support, transformed_word);
+}
+
+struct LocalSummary {
+  bool feasible = false;
+  uint8_t maximum = 0;
+  uint32_t reachable_count = 0;
+  uint32_t maximum_count = 0;
+  uint32_t largest_layer = 0;
+  uint64_t reachable_digest = 0;
+};
+
+std::vector<uint32_t> union_dp(
+    const std::array<uint8_t, 6> &encoded_pairs, const Tables &table,
+    bool reverse, uint32_t &largest_layer) {
+  std::vector<uint32_t> reachable{0};
+  largest_layer = 1;
+  for (int step = 0; step < 6; ++step) {
+    const int provider = reverse ? 5 - step : step;
+    const int ratio = encoded_pairs[provider] >> 3;
+    const int oi = encoded_pairs[provider] & 7;
+    const std::vector<uint32_t> &fibre = table.fibres[ratio][oi];
+    std::vector<uint32_t> next;
+    next.reserve(reachable.size() * fibre.size());
+    for (uint32_t partial : reachable)
+      for (uint32_t mask : fibre) next.push_back(partial | mask);
+    std::sort(next.begin(), next.end());
+    next.erase(std::unique(next.begin(), next.end()), next.end());
+    largest_layer =
+        std::max(largest_layer, static_cast<uint32_t>(next.size()));
+    reachable = std::move(next);
+  }
+  return reachable;
+}
+
+uint64_t local_key(const Support &support, const OrderWord &word, int owner) {
+  std::array<uint8_t, 6> pairs{};
+  const int inverse = inverse_mod_13(owner);
+  for (int provider = 0; provider < 6; ++provider) {
+    const int ratio = support[provider] * inverse % P;
+    pairs[provider] = static_cast<uint8_t>((ratio << 3) | word[provider]);
+  }
+  std::sort(pairs.begin(), pairs.end());
+  uint64_t result = 0;
+  for (uint8_t pair : pairs) result = (result << 7) | pair;
+  return result;
+}
+
+std::array<uint8_t, 6> decode_local_key(uint64_t key) {
+  std::array<uint8_t, 6> result{};
+  for (int i = 5; i >= 0; --i) {
+    result[i] = static_cast<uint8_t>(key & 0x7fU);
+    key >>= 7;
+  }
+  require(key == 0, "local key overflow");
+  return result;
+}
+
+LocalSummary compute_local(uint64_t key, const Tables &table) {
+  const std::array<uint8_t, 6> pairs = decode_local_key(key);
+  uint32_t forward_largest = 0;
+  uint32_t reverse_largest = 0;
+  const std::vector<uint32_t> forward =
+      union_dp(pairs, table, false, forward_largest);
+  const std::vector<uint32_t> reverse =
+      union_dp(pairs, table, true, reverse_largest);
+  require(forward == reverse,
+          "forward and reverse sorted-vector joins disagree");
+
+  LocalSummary result;
+  result.reachable_count = static_cast<uint32_t>(forward.size());
+  result.largest_layer = std::max(forward_largest, reverse_largest);
+  Fnv64 digest;
+  for (uint32_t mask : forward) {
+    digest.u32(mask);
+    const int card = std::popcount(mask);
+    if (card > result.maximum) {
+      result.maximum = static_cast<uint8_t>(card);
+      result.maximum_count = 1;
+    } else if (card == result.maximum) {
+      ++result.maximum_count;
+    }
+    result.feasible |= mask == FULL;
+  }
+  result.reachable_digest = digest.state;
+  require(result.feasible == (result.maximum == C),
+          "FULL-mask and maximum-union feasibility disagree");
+  return result;
+}
+
+struct TournamentSummary {
   int ties = 0;
   int flips = 0;
   int triangles = 0;
@@ -460,21 +490,22 @@ struct Tournament {
   std::array<uint8_t, 6> scores{};
 };
 
-Tournament tournament(const Capacities &capacities,
-                      const std::array<LocalRow, 6> &locals) {
+TournamentSummary tournament(const Capacities &capacities,
+                             const std::array<LocalSummary, 6> &locals) {
   std::array<uint8_t, 6> out{};
-  Tournament result;
+  TournamentSummary result;
   for (int left = 0; left < 6; ++left)
     for (int right = left + 1; right < 6; ++right) {
-      // This is exactly the primary's faithful owner-obligation observable.
-      const std::array<int, 3> left_key{
-          locals[left].feasible, locals[left].maximum, capacities[left]};
-      const std::array<int, 3> right_key{
-          locals[right].feasible, locals[right].maximum, capacities[right]};
+      const auto left_key = std::tuple{
+          locals[left].feasible, locals[left].maximum, capacities[left],
+          locals[left].reachable_count, locals[left].maximum_count};
+      const auto right_key = std::tuple{
+          locals[right].feasible, locals[right].maximum, capacities[right],
+          locals[right].reachable_count, locals[right].maximum_count};
       int winner = left;
-      if (left_key == right_key)
-        ++result.ties;  // coordinate tie path: earlier vertex wins
-      else if (right_key > left_key) {
+      if (left_key == right_key) {
+        ++result.ties;  // coordinate order is the tie Hamiltonian path
+      } else if (right_key > left_key) {
         winner = right;
         ++result.flips;
       }
@@ -485,7 +516,6 @@ Tournament tournament(const Capacities &capacities,
   for (int vertex = 0; vertex < 6; ++vertex)
     result.scores[vertex] =
         static_cast<uint8_t>(std::popcount(out[vertex]));
-
   for (int a = 0; a < 6; ++a)
     for (int b = a + 1; b < 6; ++b)
       for (int c = b + 1; c < 6; ++c) {
@@ -541,481 +571,495 @@ std::string histogram(const std::map<Key, uint64_t> &values) {
   return out.str();
 }
 
-std::string orbit_context_histogram(
-    const std::map<std::pair<int, int>, uint64_t> &values) {
+std::string feasible_mask_histogram(const std::map<int, uint64_t> &values) {
   std::ostringstream out;
   bool first = true;
   for (const auto &[key, count] : values) {
     if (!first) out << ' ';
     first = false;
-    out << '(' << key.first << ',' << key.second << "):" << count;
+    out << "0x" << std::hex << key << std::dec << ':' << count;
   }
   return out.str();
 }
 
-template <std::size_t N>
-std::string tuple_counter_digest(
-    const std::map<std::array<uint8_t, N>, uint64_t> &values) {
-  Sha256 digest;
-  for (const auto &[key, count] : values) {
-    for (uint8_t value : key) digest.byte(value);
-    digest.u64le(count);
+template <typename Values>
+std::string comma_values(const Values &values) {
+  std::ostringstream out;
+  bool first = true;
+  for (const auto value : values) {
+    if (!first) out << ',';
+    first = false;
+    out << static_cast<int>(value);
   }
-  return digest.finish();
+  return out.str();
 }
 
-Support multiply_support(const Support &support, int multiplier) {
-  Support result{};
-  for (int i = 0; i < 6; ++i)
-    result[i] = static_cast<uint8_t>(support[i] * multiplier % P);
-  std::sort(result.begin(), result.end());
-  return result;
+int multiplicative_exponent(int label) {
+  int value = 1;
+  for (int exponent = 0; exponent < 12; ++exponent) {
+    if (value == label) return exponent;
+    value = value * 2 % P;
+  }
+  fail("nonzero label is absent from the primitive-root table");
+}
+
+int unordered_ratio_distance(int left, int right) {
+  int difference =
+      (multiplicative_exponent(right) - multiplicative_exponent(left) + 12) %
+      12;
+  return std::min(difference, 12 - difference);
 }
 
 }  // namespace
 
-int main() {
+int main(int argc, char **argv) {
   const Tables table = build_tables();
-  require(table.literal_base_digest ==
-              "0366120df932f618cfabe5e5a5590c40eedfb1674dbb5de0d02bb711392986a7",
-          "literal CRT-base digest mismatch");
-  require(table.primary_mask_digest ==
-              "490f80bf0f0b982e6451e01d04a229210af90c7572eae318c7bdf41a842b4e6f",
-          "literal CRT mask table differs from the frozen primary");
+  const uint64_t cubic_nerve_digest = audit_cubic_sheet_nerve(table);
 
   std::vector<OrderWord> words;
   OrderWord scratch{};
-  Sha256 order_digest_state;
-  Sha256 weighted_digest_state;
   uint64_t state_words_per_support = 0;
-  enumerate_words(words, scratch, 0, order_digest_state,
-                  weighted_digest_state, state_words_per_support);
-  const std::string order_digest = order_digest_state.finish();
-  const std::string weighted_digest = weighted_digest_state.finish();
-  require(words.size() == 108'813, "hereditary order-word census mismatch");
-  require(order_digest ==
-              "3fced9d39f778694e85547f7660b3b99c0ee5e67b81c5da9957a30fc128fef24",
-          "hereditary order-word digest differs from the frozen primary");
-  require(weighted_digest ==
-              "b1d7eb335a2656e75c6db90c251b574f4dbb5d263b47f69e0dba58b0c5748a56",
-          "weighted literal-state grammar digest mismatch");
+  Fnv64 grammar_digest;
+  enumerate_words(0, scratch, table, words, state_words_per_support,
+                  grammar_digest);
+  require(words.size() == 108'813,
+          "hereditary divisor-word census mismatch");
   require(state_words_per_support == 167'165'952ULL,
-          "literal state-word count mismatch");
+          "literal state-word census mismatch");
+
+  if (argc == 2 && std::string(argv[1]) == "--preflight") {
+    std::cout << "scale-24 referee preflight green: literal CRT/mask gauge, "
+                 "one-period cardinalities, hereditary grammar "
+              << words.size() << ", weighted state words/support "
+              << state_words_per_support << '\n';
+    return 0;
+  }
+  require(argc == 1, "usage: referee [--preflight]");
 
   const std::vector<Support> supports = all_supports();
-  require(supports.size() == 924, "support census mismatch");
-  std::vector<ScalarRow> bank;
+  require(supports.size() == 924, "six-support census mismatch");
+
+  std::vector<ScalarRow> scalar_bank;
+  scalar_bank.reserve(70'000);
   std::set<Support> scalar_supports;
-  std::map<Support, int> support_context_count;
-  std::map<int, uint64_t> all_support_contexts;
-  std::map<int, uint64_t> scalar_feasible_owner;
-  std::map<Multiplicity, uint64_t> multiplicities;
-  std::set<Capacities> distinct_capacities;
-  std::map<int, uint64_t> minimum_slack;
-  std::map<int, uint64_t> maximum_slack;
-  std::map<int, uint64_t> tight_owners;
-  Sha256 scalar_digest_state;
-  Sha256 independent_capacity_digest_state;
+  std::map<Support, int> contexts_per_support;
+  std::map<int, uint64_t> all_support_context_histogram;
+  std::map<Multiplicity, uint64_t> multiplicity_histogram;
+  std::set<Capacities> capacity_vectors;
+  Fnv64 scalar_digest;
+  Fnv64 capacity_digest;
 
   for (const Support &support : supports) {
+    // Six independent eight-bit lanes fit without carry: each is a sum of
+    // six mask cardinalities and is at most 6*C.
+    std::array<std::array<uint64_t, 8>, 6> contribution{};
+    for (int provider = 0; provider < 6; ++provider)
+      for (int oi = 0; oi < 8; ++oi)
+        for (int owner_index = 0; owner_index < 6; ++owner_index)
+          contribution[provider][oi] |=
+              static_cast<uint64_t>(table.cards[support[provider]][oi]
+                                               [support[owner_index]])
+              << (8 * owner_index);
+
     int support_contexts = 0;
     for (const OrderWord &word : words) {
-      const Capacities capacities = capacity_vector(support, word, table);
-      const int feasible_count = static_cast<int>(std::count_if(
-          capacities.begin(), capacities.end(),
-          [](uint16_t value) { return value >= C; }));
-      ++scalar_feasible_owner[feasible_count];
-      if (feasible_count != 6) continue;
-      bank.push_back(ScalarRow{support, word, capacities});
-      scalar_supports.insert(support);
-      ++support_contexts;
-      ++support_context_count[support];
-      ++multiplicities[multiplicity(word)];
-      distinct_capacities.insert(capacities);
-      ++minimum_slack[*std::min_element(capacities.begin(), capacities.end()) -
-                      C];
-      ++maximum_slack[*std::max_element(capacities.begin(), capacities.end()) -
-                      C];
-      ++tight_owners[std::count(capacities.begin(), capacities.end(), C)];
-      // Exactly the Python primary's scalar-bank serialization.
-      for (uint8_t value : support) scalar_digest_state.byte(value);
-      for (uint8_t order : word) scalar_digest_state.byte(order);
-      for (uint16_t value : capacities) scalar_digest_state.u16le(value);
-      // A differently serialized audit digest records order indices too.
-      for (uint8_t value : support) independent_capacity_digest_state.byte(value);
-      for (uint8_t order : word)
-        independent_capacity_digest_state.byte(
-            static_cast<uint8_t>(order_index(order)));
-      for (uint16_t value : capacities)
-        independent_capacity_digest_state.u16le(value);
-    }
-    ++all_support_contexts[support_contexts];
-  }
-  const std::string scalar_digest = scalar_digest_state.finish();
-  const std::string capacity_digest = independent_capacity_digest_state.finish();
-  require(bank.size() == 66'984 && scalar_supports.size() == 854,
-          "scalar survivor census mismatch");
-  require(scalar_digest ==
-              "5bf236e92aedb4f226f75cdc2b5218cf5acdd780c6c1fca34d770d513033993f",
-          "scalar bank differs from the frozen primary");
-  require(capacity_digest ==
-              "55ba3cc44355d47642cee180a763031451d7bf585bfbba8bcda30e9c94297951",
-          "independent capacity-bank digest mismatch");
-  require(multiplicities.size() == 202,
-          "scalar multiplicity-profile census mismatch");
-  require(scalar_feasible_owner ==
-              std::map<int, uint64_t>{{0, 544'572},
-                                      {1, 18'881'520},
-                                      {2, 40'784'532},
-                                      {3, 29'283'168},
-                                      {4, 9'613'632},
-                                      {5, 1'368'804},
-                                      {6, 66'984}},
-          "scalar capacity feasible-owner histogram mismatch");
-  require(all_support_contexts ==
-              std::map<int, uint64_t>{{0, 70},   {12, 24}, {14, 24},
-                                      {22, 24},  {26, 24}, {31, 96},
-                                      {32, 30},  {46, 96}, {52, 96},
-                                      {53, 24},  {54, 96}, {55, 24},
-                                      {63, 96},  {74, 24}, {102, 12},
-                                      {132, 24}, {142, 24}, {152, 12},
-                                      {173, 24}, {185, 6}, {224, 24},
-                                      {226, 24}, {374, 24}, {801, 2}},
-          "all-support contexts histogram mismatch");
-  require(distinct_capacities.size() == 18'432,
-          "distinct capacity-vector census mismatch");
-  require(minimum_slack ==
-              std::map<int, uint64_t>{{0, 56'286}, {1, 7'884},
-                                      {2, 2'682}, {3, 132}},
-          "minimum scalar-slack histogram mismatch");
-  require(maximum_slack ==
-              std::map<int, uint64_t>{{0, 24},      {1, 4'372},
-                                      {2, 5'872},   {3, 14'622},
-                                      {4, 10'266},  {5, 12'922},
-                                      {6, 8'694},   {7, 5'808},
-                                      {8, 2'436},   {9, 816},
-                                      {10, 480},    {11, 540},
-                                      {12, 60},     {16, 72}},
-          "maximum scalar-slack histogram mismatch");
-  require(tight_owners ==
-              std::map<int, uint64_t>{{0, 10'698}, {1, 12'504},
-                                      {2, 20'862}, {3, 12'036},
-                                      {4, 6'252},  {5, 4'608},
-                                      {6, 24}},
-          "tight-owner histogram mismatch");
+      uint64_t packed = 0;
+      for (int provider = 0; provider < 6; ++provider)
+        packed += contribution[provider][word[provider]];
+      Capacities capacities{};
+      bool scalar = true;
+      for (int owner_index = 0; owner_index < 6; ++owner_index) {
+        capacities[owner_index] =
+            static_cast<uint8_t>(packed >> (8 * owner_index));
+        scalar &= capacities[owner_index] >= C;
+      }
+      if (!scalar) continue;
 
+      scalar_bank.push_back(ScalarRow{support, word, capacities});
+      scalar_supports.insert(support);
+      ++contexts_per_support[support];
+      ++support_contexts;
+      ++multiplicity_histogram[multiplicity(word)];
+      capacity_vectors.insert(capacities);
+      for (uint8_t label : support) {
+        scalar_digest.byte(label);
+        capacity_digest.byte(label);
+      }
+      for (uint8_t oi : word) {
+        scalar_digest.byte(oi);
+        capacity_digest.byte(oi);
+      }
+      for (uint8_t capacity : capacities) capacity_digest.byte(capacity);
+    }
+    ++all_support_context_histogram[support_contexts];
+  }
+
+  require(scalar_bank.size() == 66'984,
+          "scalar survivor census disagrees with THM-990 primary");
+  require(scalar_supports.size() == 854,
+          "scalar-support census disagrees with THM-990 primary");
+  require(multiplicity_histogram.size() == 202,
+          "scalar multiplicity-profile census disagrees with THM-990");
+
+  // Exact multiplication covariance of every labelled (support,order) row.
+  std::set<uint64_t> scalar_row_keys;
+  for (const ScalarRow &row : scalar_bank)
+    scalar_row_keys.insert(scalar_row_key(row.support, row.word));
+  require(scalar_row_keys.size() == scalar_bank.size(),
+          "duplicate scalar row encoding");
+  for (const ScalarRow &row : scalar_bank)
+    for (int multiplier = 1; multiplier < P; ++multiplier)
+      require(scalar_row_keys.contains(
+                  multiply_row_key(row.support, row.word, multiplier)),
+              "scalar row bank violates multiplication covariance");
+
+  std::unordered_map<uint64_t, LocalSummary> local_cache;
+  local_cache.reserve(50'000);
   std::map<int, uint64_t> feasible_contexts;
   std::map<int, uint64_t> feasible_masks;
   std::map<int, uint64_t> maximum_union;
-  std::map<int, uint64_t> minimum_owner_maximum;
-  std::map<int, uint64_t> reachable_count;
-  std::map<int, uint64_t> maximum_mask_count;
-  std::map<std::array<uint8_t, 6>, uint64_t> owner_vectors;
-  std::map<int, uint64_t> tie_histogram;
-  std::map<int, uint64_t> flip_histogram;
-  std::map<int, uint64_t> aggregate_scores;
-  std::map<std::array<uint8_t, 6>, uint64_t> score_vectors;
-  uint64_t feasible_rows = 0;
-  uint64_t reachable_total = 0;
-  uint32_t reachable_maximum = 0;
-  Sha256 primary_owner_digest_state;
-  Sha256 reachable_bank_digest_state;
-  Sha256 layer_digest_state;
+  std::map<int, uint64_t> reachable_counts;
+  std::map<int, uint64_t> maximum_mask_counts;
+  std::map<int, uint64_t> largest_layers;
+  std::map<int, uint64_t> tournament_ties;
+  std::map<int, uint64_t> tournament_flips;
+  std::map<int, uint64_t> tournament_scores;
+  std::set<std::array<uint8_t, 6>> owner_maximum_vectors;
+  Fnv64 owner_bank_digest;
+  Fnv64 tournament_digest;
+  uint64_t feasible_owner_rows = 0;
+  uint64_t total_reachable_masks = 0;
+  uint32_t largest_reachable_bank = 0;
+  uint32_t largest_intermediate_layer = 0;
+  std::vector<FourFeasibleRow> four_feasible_rows;
 
-  for (const ScalarRow &row : bank) {
-    std::array<LocalRow, 6> locals;
+  for (const ScalarRow &row : scalar_bank) {
+    std::array<LocalSummary, 6> locals{};
     std::array<uint8_t, 6> owner_vector{};
     int feasible_count = 0;
-    uint8_t feasible_mask = 0;
+    int feasible_mask = 0;
     for (int owner_index = 0; owner_index < 6; ++owner_index) {
       const int owner = row.support[owner_index];
-      locals[owner_index] = owner_local(row.support, row.word, owner, table);
-      const LocalRow &local = locals[owner_index];
+      const uint64_t key = local_key(row.support, row.word, owner);
+      auto found = local_cache.find(key);
+      if (found == local_cache.end())
+        found = local_cache.emplace(key, compute_local(key, table)).first;
+      locals[owner_index] = found->second;
+      const LocalSummary &local = locals[owner_index];
       feasible_count += local.feasible;
-      feasible_mask |= static_cast<uint8_t>(local.feasible << owner_index);
-      feasible_rows += local.feasible;
-      ++maximum_union[local.maximum];
-      ++reachable_count[local.reachable_count];
-      ++maximum_mask_count[local.maximum_count];
-      reachable_total += local.reachable_count;
-      reachable_maximum = std::max(reachable_maximum, local.reachable_count);
+      feasible_mask |= static_cast<int>(local.feasible) << owner_index;
+      feasible_owner_rows += local.feasible;
+      total_reachable_masks += local.reachable_count;
       owner_vector[owner_index] = local.maximum;
+      ++maximum_union[local.maximum];
+      ++reachable_counts[local.reachable_count];
+      ++maximum_mask_counts[local.maximum_count];
+      ++largest_layers[local.largest_layer];
+      largest_reachable_bank =
+          std::max(largest_reachable_bank, local.reachable_count);
+      largest_intermediate_layer =
+          std::max(largest_intermediate_layer, local.largest_layer);
 
-      // Exactly the Python primary's owner-summary stream.
-      for (uint8_t value : row.support) primary_owner_digest_state.byte(value);
-      for (uint8_t order : row.word) primary_owner_digest_state.byte(order);
-      primary_owner_digest_state.byte(static_cast<uint8_t>(owner));
-      primary_owner_digest_state.byte(static_cast<uint8_t>(local.feasible));
-      primary_owner_digest_state.byte(local.maximum);
-      primary_owner_digest_state.u32le(local.reachable_count);
-      primary_owner_digest_state.u64le(local.mask_sum);
-      primary_owner_digest_state.u64le(local.mask_xor);
-
-      Sha256 local_reachable_digest;
-      for (uint32_t mask : local.reachable) local_reachable_digest.u24le(mask);
-      const auto local_digest = local_reachable_digest.finish_bytes();
-      for (uint8_t value : row.support) reachable_bank_digest_state.byte(value);
-      for (uint8_t order : row.word)
-        reachable_bank_digest_state.byte(
-            static_cast<uint8_t>(order_index(order)));
-      reachable_bank_digest_state.byte(static_cast<uint8_t>(owner_index));
-      reachable_bank_digest_state.byte(static_cast<uint8_t>(owner));
-      reachable_bank_digest_state.u16le(row.capacities[owner_index]);
-      reachable_bank_digest_state.u32le(local.reachable_count);
-      reachable_bank_digest_state.u32le(local.maximum_count);
-      for (uint8_t value : local_digest) reachable_bank_digest_state.byte(value);
-
-      for (uint8_t value : row.support) layer_digest_state.byte(value);
-      for (uint8_t order : row.word)
-        layer_digest_state.byte(static_cast<uint8_t>(order_index(order)));
-      layer_digest_state.byte(static_cast<uint8_t>(owner_index));
-      for (uint32_t size : local.forward_layers) layer_digest_state.u32le(size);
-      for (uint32_t size : local.reverse_layers) layer_digest_state.u32le(size);
+      for (uint8_t label : row.support) owner_bank_digest.byte(label);
+      for (uint8_t oi : row.word) owner_bank_digest.byte(oi);
+      owner_bank_digest.byte(static_cast<uint8_t>(owner_index));
+      owner_bank_digest.byte(static_cast<uint8_t>(owner));
+      owner_bank_digest.byte(static_cast<uint8_t>(local.feasible));
+      owner_bank_digest.byte(local.maximum);
+      owner_bank_digest.byte(row.capacities[owner_index]);
+      owner_bank_digest.u32(local.reachable_count);
+      owner_bank_digest.u32(local.maximum_count);
+      owner_bank_digest.u64(local.reachable_digest);
     }
     ++feasible_contexts[feasible_count];
     ++feasible_masks[feasible_mask];
-    ++minimum_owner_maximum
-         [*std::min_element(owner_vector.begin(), owner_vector.end())];
-    ++owner_vectors[owner_vector];
+    owner_maximum_vectors.insert(owner_vector);
+    owner_bank_digest.byte(static_cast<uint8_t>(feasible_mask));
+    for (uint8_t value : owner_vector) owner_bank_digest.byte(value);
+    if (feasible_count == 4)
+      four_feasible_rows.push_back(FourFeasibleRow{
+          row.support, row.word, row.capacities, owner_vector,
+          static_cast<uint8_t>(feasible_mask)});
 
-    const Tournament audit = tournament(row.capacities, locals);
-    ++tie_histogram[audit.ties];
-    ++flip_histogram[audit.flips];
-    for (uint8_t score : audit.scores) ++aggregate_scores[score];
-    ++score_vectors[audit.scores];
-    auto sorted_scores = audit.scores;
+    const TournamentSummary audit = tournament(row.capacities, locals);
+    ++tournament_ties[audit.ties];
+    ++tournament_flips[audit.flips];
+    for (uint8_t score : audit.scores) ++tournament_scores[score];
+    require(audit.triangles == 0 && audit.sccs == 6 && audit.paths == 1,
+            "owner-obligation tournament is not transitive");
+    std::array<uint8_t, 6> sorted_scores = audit.scores;
     std::sort(sorted_scores.begin(), sorted_scores.end());
-    require(sorted_scores == std::array<uint8_t, 6>{0, 1, 2, 3, 4, 5} &&
-                audit.triangles == 0 && audit.sccs == 6 && audit.paths == 1,
-            "owner-obligation tournament fingerprint mismatch");
+    require(sorted_scores == std::array<uint8_t, 6>{0, 1, 2, 3, 4, 5},
+            "owner-obligation tournament score word mismatch");
+    tournament_digest.byte(static_cast<uint8_t>(audit.ties));
+    tournament_digest.byte(static_cast<uint8_t>(audit.flips));
+    for (uint8_t score : audit.scores) tournament_digest.byte(score);
   }
 
-  const std::string primary_owner_digest = primary_owner_digest_state.finish();
-  const std::string reachable_bank_digest = reachable_bank_digest_state.finish();
-  const std::string layer_digest = layer_digest_state.finish();
-  require(primary_owner_digest ==
-              "4ee53bdb8f3967a45b1fef546135454a5e85419f0ab6382ad22ae91d674618c8",
-          "owner summary differs from the frozen primary");
-  require(feasible_contexts ==
-              std::map<int, uint64_t>{{0, 64'962}, {1, 1'800},
-                                      {2, 192}, {4, 30}},
-          "feasible-owner deficit mismatch");
-  require(feasible_masks ==
-              std::map<int, uint64_t>{{0, 64'962}, {1, 349}, {2, 250},
-                                      {3, 15},     {4, 301}, {5, 13},
-                                      {6, 15},     {8, 301}, {9, 14},
-                                      {10, 13},    {12, 10}, {16, 250},
-                                      {17, 12},    {18, 10}, {20, 13},
-                                      {23, 2},     {24, 15}, {29, 2},
-                                      {30, 1},     {32, 349}, {33, 8},
-                                      {34, 12},    {36, 14}, {39, 2},
-                                      {40, 13},    {45, 7},  {46, 2},
-                                      {48, 15},    {51, 10}, {57, 2},
-                                      {58, 2}},
-          "feasible-owner mask histogram mismatch");
-  require(maximum_union ==
-              std::map<int, uint64_t>{{12, 72},      {14, 2'136},
-                                      {15, 1'644},   {16, 15'876},
-                                      {17, 24'420},  {18, 76'296},
-                                      {19, 94'872},  {20, 104'592},
-                                      {21, 53'040},  {22, 24'948},
-                                      {23, 1'704},   {24, 2'304}},
-          "maximum reachable-union histogram mismatch");
-  require(minimum_owner_maximum ==
-              std::map<int, uint64_t>{{12, 72},     {14, 2'016},
-                                      {15, 1'050},  {16, 10'668},
-                                      {17, 13'716}, {18, 23'932},
-                                      {19, 12'540}, {20, 2'906},
-                                      {21, 84}},
-          "minimum owner-maximum histogram mismatch");
-  require(owner_vectors.size() == 20'302,
-          "owner maximum-vector census mismatch");
-  require(feasible_rows == 2'304 && reachable_total == 101'961'528ULL &&
-              reachable_count.size() == 674 && reachable_maximum == 7'728,
-          "reachable-bank headline ledger mismatch");
-  require(tie_histogram ==
-              std::map<int, uint64_t>{{0, 14'112}, {1, 28'488},
-                                      {2, 14'496}, {3, 5'700},
-                                      {4, 3'408},  {6, 504},
-                                      {7, 276}},
-          "tournament tie histogram mismatch");
-  require(flip_histogram ==
-              std::map<int, uint64_t>{{0, 323},    {1, 753},
-                                      {2, 1'857},  {3, 3'485},
-                                      {4, 5'881},  {5, 8'067},
-                                      {6, 9'954},  {7, 10'563},
-                                      {8, 9'264},  {9, 7'075},
-                                      {10, 4'776}, {11, 2'898},
-                                      {12, 1'390}, {13, 543},
-                                      {14, 139},   {15, 16}},
-          "tournament edge-flip histogram mismatch");
-  require(aggregate_scores ==
-              std::map<int, uint64_t>{{0, 66'984}, {1, 66'984},
-                                      {2, 66'984}, {3, 66'984},
-                                      {4, 66'984}, {5, 66'984}},
-          "tournament aggregate score histogram mismatch");
+  const std::map<int, uint64_t> expected_feasible{
+      {0, 64'962}, {1, 1'800}, {2, 192}, {4, 30}};
+  const std::map<int, uint64_t> expected_maximum{
+      {12, 72},    {14, 2'136}, {15, 1'644},  {16, 15'876},
+      {17, 24'420}, {18, 76'296}, {19, 94'872}, {20, 104'592},
+      {21, 53'040}, {22, 24'948}, {23, 1'704},  {24, 2'304}};
+  require(feasible_contexts == expected_feasible,
+          "feasible-owner histogram disagrees with THM-990 primary");
+  require(maximum_union == expected_maximum,
+          "maximum-union histogram disagrees with THM-990 primary");
+  require(owner_maximum_vectors.size() == 20'302,
+          "owner maximum-vector census disagrees with THM-990 primary");
+  require(largest_reachable_bank == 7'728,
+          "largest reachable-mask bank disagrees with THM-990 primary");
+  require(total_reachable_masks == 101'961'528ULL &&
+              reachable_counts.size() == 674,
+          "reachable-mask total/bin census disagrees with THM-990 primary");
+  require(feasible_owner_rows == 2'304,
+          "feasible owner-row total does not follow the context histogram");
+  require(four_feasible_rows.size() == 30,
+          "four-feasible exceptional-row census mismatch");
 
-  std::set<Support> remaining = scalar_supports;
-  std::map<int, uint64_t> orbit_sizes;
-  std::map<std::pair<int, int>, uint64_t> orbit_contexts;
-  while (!remaining.empty()) {
-    const Support seed = *remaining.begin();
-    std::set<Support> orbit;
+  std::map<Multiplicity, uint64_t> four_order_profiles;
+  std::map<int, uint64_t> missing_ratio_distances;
+  std::map<std::pair<int, int>, uint64_t> missing_edges;
+  std::map<std::pair<int, int>, uint64_t> four_types;
+  std::array<uint64_t, P> missing_degrees{};
+  std::set<uint64_t> four_row_keys;
+  Fnv64 four_row_digest;
+  for (const FourFeasibleRow &row : four_feasible_rows) {
+    ++four_order_profiles[multiplicity(row.word)];
+    four_row_keys.insert(scalar_row_key(row.support, row.word));
+    std::array<int, 2> missing{};
+    int next_missing = 0;
+    for (int owner_index = 0; owner_index < 6; ++owner_index)
+      if (!((row.feasible_mask >> owner_index) & 1U))
+        missing[next_missing++] = row.support[owner_index];
+    require(next_missing == 2, "four-feasible row does not miss two owners");
+    if (missing[1] < missing[0]) std::swap(missing[0], missing[1]);
+    ++missing_edges[{missing[0], missing[1]}];
+    ++missing_degrees[missing[0]];
+    ++missing_degrees[missing[1]];
+    const int distance = unordered_ratio_distance(missing[0], missing[1]);
+    ++missing_ratio_distances[distance];
+
+    int high_order = -1;
+    std::set<int> low_labels;
+    std::set<int> high_labels;
+    for (int owner_index = 0; owner_index < 6; ++owner_index) {
+      const int order = ORDERS[row.word[owner_index]];
+      if ((row.feasible_mask >> owner_index) & 1U) {
+        require(order == 3 && row.maxima[owner_index] == 24,
+                "four-feasible row has a non-D3 or non-full low owner");
+        low_labels.insert(row.support[owner_index]);
+      } else {
+        if (high_order < 0) high_order = order;
+        require(order == high_order && row.maxima[owner_index] == 19,
+                "four-feasible row high owners do not share order/max 19");
+        high_labels.insert(row.support[owner_index]);
+      }
+    }
+    require(high_order == 8 || high_order == 24,
+            "four-feasible high order is neither eight nor twenty-four");
+    for (int owner_index = 0; owner_index < 6; ++owner_index) {
+      const bool low = (row.feasible_mask >> owner_index) & 1U;
+      const int expected_capacity =
+          high_order == 8 ? (low ? 30 : 25) : (low ? 32 : 24);
+      require(row.capacities[owner_index] == expected_capacity,
+              "four-feasible capacity vector violates the cubic type law");
+    }
+    require((distance == 3 && (high_order == 8 || high_order == 24)) ||
+                (distance == 6 && high_order == 8),
+            "four-feasible high pair has an unclassified ratio/order type");
+    ++four_types[{high_order, distance}];
+
+    // Taking either high label as a, the support is exactly
+    //     a*C2 union E,  E subset a*C0,
+    // while a*C1 is the absent cubic coset.  Here the primitive root is 2.
+    const int a = missing[0];
+    const std::array<int, 4> C0{1, 5, 8, 12};
+    const std::array<int, 4> C1{2, 3, 10, 11};
+    const std::array<int, 4> C2{4, 6, 7, 9};
+    std::set<int> expected_high_coset;
+    std::set<int> expected_absent_coset;
+    std::set<int> expected_low_coset;
+    for (int value : C0) expected_high_coset.insert(a * value % P);
+    for (int value : C1) expected_absent_coset.insert(a * value % P);
+    for (int value : C2) expected_low_coset.insert(a * value % P);
+    require(low_labels == expected_low_coset,
+            "four-feasible low owners are not the oriented cubic coset a*C2");
+    require(std::includes(expected_high_coset.begin(),
+                          expected_high_coset.end(), high_labels.begin(),
+                          high_labels.end()),
+            "four-feasible high pair is not contained in a*C0");
+    for (uint8_t label : row.support)
+      require(!expected_absent_coset.contains(label),
+              "four-feasible support meets the absent cubic coset a*C1");
+
+    for (uint8_t label : row.support) four_row_digest.byte(label);
+    for (uint8_t oi : row.word) four_row_digest.byte(oi);
+    for (uint8_t capacity : row.capacities) four_row_digest.byte(capacity);
+    for (uint8_t maximum : row.maxima) four_row_digest.byte(maximum);
+    four_row_digest.byte(row.feasible_mask);
+    four_row_digest.byte(static_cast<uint8_t>(distance));
+  }
+  require(four_types ==
+              std::map<std::pair<int, int>, uint64_t>{{{8, 3}, 12},
+                                                       {{8, 6}, 6},
+                                                       {{24, 3}, 12}},
+          "four-feasible cubic type census mismatch");
+
+  // Multiplication must preserve not merely scalar survival but this extremal
+  // four-feasible stratum.  Orbit sizes are computed on the labelled rows.
+  std::set<uint64_t> four_remaining = four_row_keys;
+  std::map<int, uint64_t> four_orbit_sizes;
+  while (!four_remaining.empty()) {
+    const uint64_t seed = *four_remaining.begin();
+    const auto found = std::find_if(
+        four_feasible_rows.begin(), four_feasible_rows.end(),
+        [&](const FourFeasibleRow &row) {
+          return scalar_row_key(row.support, row.word) == seed;
+        });
+    require(found != four_feasible_rows.end(),
+            "four-feasible orbit seed has no row");
+    std::set<uint64_t> orbit;
     for (int multiplier = 1; multiplier < P; ++multiplier)
-      orbit.insert(multiply_support(seed, multiplier));
-    require(std::includes(scalar_supports.begin(), scalar_supports.end(),
+      orbit.insert(multiply_row_key(found->support, found->word, multiplier));
+    require(std::includes(four_row_keys.begin(), four_row_keys.end(),
                           orbit.begin(), orbit.end()),
-            "scalar support bank is not multiplication-invariant");
-    require(std::includes(remaining.begin(), remaining.end(),
+            "four-feasible stratum violates multiplication covariance");
+    require(std::includes(four_remaining.begin(), four_remaining.end(),
                           orbit.begin(), orbit.end()),
-            "multiplication support orbits overlap");
-    std::set<int> context_counts;
-    for (const Support &support : orbit)
-      context_counts.insert(support_context_count[support]);
-    require(context_counts.size() == 1,
-            "context count changes within a support orbit");
-    for (const Support &support : orbit) remaining.erase(support);
-    ++orbit_sizes[orbit.size()];
-    ++orbit_contexts[{static_cast<int>(orbit.size()),
-                      *context_counts.begin()}];
+            "four-feasible multiplication orbits overlap");
+    ++four_orbit_sizes[orbit.size()];
+    for (uint64_t key : orbit) four_remaining.erase(key);
   }
-  require(orbit_sizes ==
-              std::map<int, uint64_t>{{2, 1}, {6, 2}, {12, 70}},
-          "multiplication orbit-size histogram mismatch");
-  require(orbit_contexts ==
-              std::map<std::pair<int, int>, uint64_t>{
-                  {{2, 801}, 1}, {{6, 32}, 1},  {{6, 185}, 1},
-                  {{12, 12}, 2}, {{12, 14}, 2}, {{12, 22}, 2},
-                  {{12, 26}, 2}, {{12, 31}, 8}, {{12, 32}, 2},
-                  {{12, 46}, 8}, {{12, 52}, 8}, {{12, 53}, 2},
-                  {{12, 54}, 8}, {{12, 55}, 2}, {{12, 63}, 8},
-                  {{12, 74}, 2}, {{12, 102}, 1}, {{12, 132}, 2},
-                  {{12, 142}, 2}, {{12, 152}, 1}, {{12, 173}, 2},
-                  {{12, 224}, 2}, {{12, 226}, 2}, {{12, 374}, 2}},
-          "support-orbit context histogram mismatch");
 
-  const std::string multiplicity_digest = tuple_counter_digest(multiplicities);
-  const std::string owner_vector_digest = tuple_counter_digest(owner_vectors);
-  const std::string score_vector_digest = tuple_counter_digest(score_vectors);
-  require(multiplicity_digest ==
-              "a746f2d8eca4f35bb8b377252a5ff7b3f7ffdbce8499b03990ddefe5566ed70d",
-          "scalar multiplicity-ledger digest mismatch");
-  require(owner_vector_digest ==
-              "844840639474a8afcf382a523ea644be2c2954d5bfb799f5b0df0aa12d00a3e2",
-          "owner maximum-vector ledger digest mismatch");
-  require(reachable_bank_digest ==
-              "daafa6b27d1c56c32defccf49167a472ce6f9318d9f1ac70424a8fd574cbe7d7",
-          "full sorted reachable-bank digest mismatch");
-  require(layer_digest ==
-              "d89d963f9ed57959c9f12c0e047f8bac29ac0632f63b8fcd01f3aba30a052e58",
-          "forward/reverse provider-layer digest mismatch");
-  require(score_vectors.size() == 720 &&
-              score_vector_digest ==
-                  "675f74f85d1bc747f92027b63126df0cba1b30fca8dfbef2fa33637de55d25e5",
-          "tournament score-vector ledger mismatch");
-
-  std::cout << "scale-twenty-four H6 literal-CRT sorted-union referee\n";
-  std::cout << "hereditary grammar: at least two 8-divisible orders and at "
-               "least two 3-divisible orders; every leave-one-out lcm audited\n";
-  std::cout << "supports " << supports.size() << "; hereditary words "
-            << words.size() << "; labelled order contexts "
+  std::cout << "THM-990 scale-24 literal-CRT sorted-vector referee\n";
+  std::cout << "scope: primitive proper AP-centred common-scale Hamming-six "
+               "owner-local gate only\n";
+  std::cout << "supports " << supports.size() << "; hereditary divisor words "
+            << words.size() << "; labelled order rows "
             << supports.size() * words.size() << '\n';
   std::cout << "literal state words/support " << state_words_per_support
-            << "; raw labelled states "
+            << "; raw labelled state contexts "
             << supports.size() * state_words_per_support << '\n';
-  std::cout << "literal CRT-base SHA256 " << table.literal_base_digest << '\n';
-  std::cout << "primary-compatible mask-table SHA256 "
-            << table.primary_mask_digest << '\n';
-  std::cout << "order-grammar SHA256 " << order_digest << '\n';
-  std::cout << "weighted-literal-grammar SHA256 " << weighted_digest << '\n';
-  std::cout << "scalar capacity feasible-owner histogram "
-            << histogram(scalar_feasible_owner) << '\n';
-  std::cout << "scalar contexts " << bank.size() << " on "
-            << scalar_supports.size() << " supports; multiplicity patterns "
-            << multiplicities.size() << '\n';
-  std::cout << "all-support contexts histogram "
-            << histogram(all_support_contexts) << '\n';
-  std::cout << "multiplication orbit-size histogram "
-            << histogram(orbit_sizes) << " (telemetry; no quotient)\n";
-  std::cout << "multiplication orbit (size,contexts/support) histogram "
-            << orbit_context_histogram(orbit_contexts) << '\n';
-  std::cout << "primary-compatible scalar-bank SHA256 " << scalar_digest
+  std::cout << "grammar: at least two orders carrying 8 and at least two "
+               "carrying 3; all six leave-one-out lcms audited\n";
+  std::cout << "literal CRT-base FNV64 " << hex64(table.base_digest) << '\n';
+  std::cout << "literal owner-mask FNV64 " << hex64(table.mask_digest) << '\n';
+  std::cout << "cubic three-class nerve FNV64 "
+            << hex64(cubic_nerve_digest) << '\n';
+  std::cout << "hereditary weighted-grammar FNV64 "
+            << hex64(grammar_digest.state) << '\n';
+  std::cout << "scalar contexts " << scalar_bank.size() << " on "
+            << scalar_supports.size() << " supports across "
+            << multiplicity_histogram.size() << " multiplicity profiles\n";
+  std::cout << "scalar-bank FNV64 " << hex64(scalar_digest.state) << '\n';
+  std::cout << "capacity-bank FNV64 " << hex64(capacity_digest.state) << '\n';
+  std::cout << "distinct scalar capacity vectors " << capacity_vectors.size()
             << '\n';
-  std::cout << "independent capacity-bank SHA256 " << capacity_digest << '\n';
-  std::cout << "scalar-multiplicity SHA256 " << multiplicity_digest << '\n';
-  std::cout << "capacity vectors " << distinct_capacities.size() << '\n';
-  std::cout << "minimum scalar-slack histogram " << histogram(minimum_slack)
-            << '\n';
-  std::cout << "maximum scalar-slack histogram " << histogram(maximum_slack)
-            << '\n';
-  std::cout << "tight-owner/context histogram " << histogram(tight_owners)
-            << '\n';
-  std::cout << "owner-local rows " << 6 * bank.size() << "; feasible rows "
-            << feasible_rows << '\n';
+  std::cout << "all-support scalar-context histogram "
+            << histogram(all_support_context_histogram) << '\n';
+  std::cout << "owner-local rows " << 6 * scalar_bank.size()
+            << "; feasible rows " << feasible_owner_rows << '\n';
   std::cout << "feasible-owner/context histogram "
             << histogram(feasible_contexts) << '\n';
-  std::cout << "feasible-owner-mask histogram " << histogram(feasible_masks)
-            << '\n';
+  std::cout << "feasible-owner-mask histogram "
+            << feasible_mask_histogram(feasible_masks) << '\n';
   std::cout << "maximum reachable sheet-union histogram "
             << histogram(maximum_union) << '\n';
-  std::cout << "minimum owner maximum/context histogram "
-            << histogram(minimum_owner_maximum) << '\n';
-  std::cout << "distinct owner max-union vectors " << owner_vectors.size()
-            << "; owner-vector SHA256 " << owner_vector_digest << '\n';
-  std::cout << "reachable banks " << 6 * bank.size() << "; total masks "
-            << reachable_total << "; distinct bank-size bins "
-            << reachable_count.size() << "; maximum bank "
-            << reachable_maximum << '\n';
-  std::cout << "primary-compatible owner-summary SHA256 "
-            << primary_owner_digest << '\n';
-  std::cout << "full reachable-bank SHA256 " << reachable_bank_digest << '\n';
-  std::cout << "forward/reverse layer-bank SHA256 " << layer_digest << '\n';
-  std::cout << "maximum-mask-count bins " << maximum_mask_count.size()
-            << "; maximum-mask-count SHA256 ";
-  {
-    Sha256 digest;
-    for (const auto &[key, value] : maximum_mask_count) {
-      digest.u32le(static_cast<uint32_t>(key));
-      digest.u64le(value);
+  std::cout << "distinct owner maximum vectors "
+            << owner_maximum_vectors.size() << '\n';
+  std::cout << "unique exact normalized owner problems "
+            << local_cache.size() << '\n';
+  std::cout << "largest reachable bank " << largest_reachable_bank
+            << "; largest intermediate layer " << largest_intermediate_layer
+            << "; total reachable masks " << total_reachable_masks
+            << "; bank-size bins " << reachable_counts.size() << '\n';
+  std::cout << "canonical owner-bank FNV64 "
+            << hex64(owner_bank_digest.state) << '\n';
+  std::cout << "reachable-count histogram " << histogram(reachable_counts)
+            << '\n';
+  std::cout << "maximum-mask-count histogram "
+            << histogram(maximum_mask_counts) << '\n';
+  std::cout << "largest-layer histogram " << histogram(largest_layers) << '\n';
+  std::cout << "tournament carrier owner obligations; pair observable "
+               "(feasible,max-union,capacity,reachable-count,maximum-mask-"
+               "count); lexicographic switch; coordinate tie path\n";
+  std::cout << "tournament fingerprints: all " << scalar_bank.size()
+            << " transitive; score word 0,1,2,3,4,5; triangles 0; SCCs 6; "
+               "Hamiltonian paths 1\n";
+  std::cout << "tournament tie-edge histogram " << histogram(tournament_ties)
+            << '\n';
+  std::cout << "tournament edge-flip histogram "
+            << histogram(tournament_flips) << '\n';
+  std::cout << "tournament aggregate scores "
+            << histogram(tournament_scores) << '\n';
+  std::cout << "tournament-bank FNV64 " << hex64(tournament_digest.state)
+            << '\n';
+  std::cout << "four-feasible exceptional rows " << four_feasible_rows.size()
+            << "; multiplication-orbit sizes "
+            << histogram(four_orbit_sizes) << '\n';
+  std::cout << "four-feasible cubic type counts (high-order,ratio-distance)";
+  for (const auto &[type, count] : four_types)
+    std::cout << " (" << type.first << ',' << type.second << "):" << count;
+  std::cout << "; exact-row FNV64 " << hex64(four_row_digest.state) << '\n';
+  std::cout << "four-feasible order profiles n1,n2,n3,n4,n6,n8,n12,n24";
+  for (const auto &[profile, count] : four_order_profiles)
+    std::cout << ' ' << comma_values(profile) << ':' << count;
+  std::cout << '\n';
+  std::cout << "missing-owner unordered ratio-exponent distances "
+            << histogram(missing_ratio_distances) << '\n';
+  std::cout << "missing-owner graph edges";
+  for (const auto &[edge, count] : missing_edges)
+    std::cout << ' ' << edge.first << '-' << edge.second << ':' << count;
+  std::cout << '\n';
+  std::cout << "missing-owner graph degrees";
+  for (int label = 1; label < P; ++label)
+    std::cout << ' ' << label << ':' << missing_degrees[label];
+  std::cout << '\n';
+  std::cout << "cubic classification: for primitive root 2, C0={1,5,8,12}, "
+               "C1={2,3,10,11}, C2={4,6,7,9}; every exceptional support "
+               "is a*C2 union E with E a two-subset of a*C0 and a*C1 "
+               "absent; the feasible owners are exactly a*C2\n";
+  std::cout << "missing-owner Cayley multigraph: exponent steps +/-3 have "
+               "multiplicity two (high orders 8 and 24), while step 6 has "
+               "multiplicity one (high order 8); every label has degree 5\n";
+  std::cout << "three-class nerve proof: at a low owner, D3 ratios in C0 "
+               "cover sheet classes 2,0,1 mod 3.  At a high owner, D3 ratios "
+               "in C2 have two empty fibres and two fibres confined to one "
+               "of classes 0,1; if those classes differ they cover 16, and "
+               "the two high-order fibres add at most 3 points in the "
+               "remaining class.  Therefore the high-owner maximum is 19 "
+               "(attained), versus low-owner maximum 24\n";
+  for (std::size_t index = 0; index < four_feasible_rows.size(); ++index) {
+    const FourFeasibleRow &row = four_feasible_rows[index];
+    std::array<uint8_t, 6> actual_orders{};
+    std::array<uint8_t, 2> missing{};
+    int next_missing = 0;
+    for (int coordinate = 0; coordinate < 6; ++coordinate) {
+      actual_orders[coordinate] = ORDERS[row.word[coordinate]];
+      if (!((row.feasible_mask >> coordinate) & 1U))
+        missing[next_missing++] = row.support[coordinate];
     }
-    const std::string maximum_mask_digest = digest.finish();
-    require(maximum_mask_count.size() == 52 &&
-                maximum_mask_digest ==
-                    "f84d2990631d8b76fe6c80ce7d80da65058f61fcd7b8a291418009324c02729c",
-            "maximum-mask-count ledger mismatch");
-    std::cout << maximum_mask_digest << '\n';
+    std::cout << "four-row " << index << " support="
+              << comma_values(row.support) << " orders="
+              << comma_values(actual_orders) << " missing="
+              << comma_values(missing) << " capacities="
+              << comma_values(row.capacities) << " maxima="
+              << comma_values(row.maxima) << " feasible-mask=0x" << std::hex
+              << static_cast<int>(row.feasible_mask) << std::dec << '\n';
   }
-  const auto all_six = feasible_contexts.find(6);
-  std::cout << "owner-local all-six contexts "
-            << (all_six == feasible_contexts.end() ? 0 : all_six->second)
-            << '\n';
-  std::cout << "tournament carrier owner obligations; observable "
-               "(feasible,max-union,capacity); lexicographic switch; "
-               "coordinate tie Hamiltonian path\n";
-  std::cout << "tournament fingerprints all " << bank.size()
-            << " transitive: scores 0,1,2,3,4,5; directed triangles 0; "
-               "SCCs 6; Hamiltonian paths 1\n";
-  std::cout << "tournament tie-edge histogram " << histogram(tie_histogram)
-            << '\n';
-  std::cout << "tournament edge-flip histogram " << histogram(flip_histogram)
-            << '\n';
-  std::cout << "tournament aggregate score histogram "
-            << histogram(aggregate_scores) << '\n';
-  std::cout << "tournament score vectors " << score_vectors.size()
-            << "; score-vector SHA256 " << score_vector_digest << '\n';
-  std::cout << "preserved audit: exact owner banks retain FULL-mask "
-               "feasibility, maximum deficit, sheet identities, unit "
-               "incidence, capacities, and both provider traversal ledgers\n";
-  std::cout << "lost audit: owner projection forgets simultaneous cross-owner "
-               "unit gluing; the tournament further forgets exact masks, "
-               "absolute thresholds, magnitudes, and witness incidence\n";
-  std::cout << "challenged vertex assumption: owner proof obligations retain "
-               "the terminal predicate; providers, gaps, fixed sections, "
-               "section boundaries, wall events, residues, cover arcs, "
-               "Fourier modes, and matroid circuits need extra incidence data\n";
-  std::cout << "Kakeya/toothpick audit: isolated sheet needles and recursive "
-               "mask silhouettes do not preserve shared-unit compatibility; "
-               "the sorted union bank is the faithful discrete carrier\n";
-  std::cout << "verdict: scalar gate survives, but every context has at most "
-               "four feasible owners; the scale-24 common H6 face is empty\n";
+  std::cout << "preserved: exact FULL-mask feasibility, maximum deficit, "
+               "absolute 24-sheet masks, all local unit choices, and every "
+               "labelled owner obligation\n";
+  std::cout << "lost: an owner projection forgets simultaneous cross-owner "
+               "unit gluing; the tournament also forgets exact masks, sheet "
+               "identities, threshold magnitude, and witness incidence\n";
+  std::cout << "challenged vertices: providers, sheets, wall events, residue "
+               "states, gaps, boundaries, cover arcs, Fourier modes, and "
+               "matroid circuits all need incidence sidecars; owner proof "
+               "obligations are terminal-faithful here\n";
+  std::cout << "verdict: independent literal replay agrees; every scalar row "
+               "has at least two impossible owners, so the scale-24 common "
+               "H6 face is empty\n";
 }

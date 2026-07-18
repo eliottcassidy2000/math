@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, now even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified. The full AP-centred Hamming-one through Hamming-four stars, proper scale-one Hamming-five chart, and every effective-order-at-most-21 common-sheet H5 language are closed. The unramified Hamming-six chart and common dilations leave only the doubled-AP equalities; the first ramified face c=2 leaves only the ordinary AP; every primitive proper AP-centred c=3 through c=6 Hamming-six context is now closed with no equality exception. THM-862's c=3 recursion visits 950,540,566 candidate edges over 1,504 contexts, THM-957's c=4 recursion visits 166,976,181 candidate edges over 256 contexts, THM-958 eliminates all 14,414,400 c=5 order/unit contexts, and THM-960 eliminates all 37,710,288 c=6 contexts before metric recursion. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584; THM-860 makes primitive proper AP-centred H6 finite-decidable for 2<=c<=840. Global emptiness remains OPEN at c>=7, in the smooth-ramified H5 metric bank, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED, even by an infinite zero-free saturated-deck family with bounded diameter and asymptotically half-circle clearance. The n=12 branch is uniformly finite and sheet-stratified but not uniformly empty. Primitive proper AP-centred H6 common-scale faces are proved closed through c=25 (with c=13 primitive-impossible and all primes at least 19 excluded uniformly); THM-990 and THM-992 supply dual exact certificates at scales 24 and 25. THM-860 excludes primitive c=26, so the next numerically possible unclassified common scale is c=27. The remaining common-sheet H5 bank is finite, {2,3,7}-smooth, and bounded by 10,584. Global emptiness remains OPEN in the smooth-ramified H5 metric bank, primitive H6 scales from 27 through 840, radius-seven endpoint/third-moment and correlated AP-window residuals, non-AP-centred/deep two-sheet packets, lift-dependent shell-five certificates, dyadic/collar residuals, and higher sheets.
 source: codex-2026-07-14-S3
 progress_note: >-
   THM-857 closes all 924 proper scale-one H6 deletion roots by a
@@ -36,8 +36,17 @@ progress_note: >-
   no common-sheet survivor. Its independent quotient leaves the same 64 signed
   cycles, but the six owner obligations are affine four-flats with octahedral
   pair nerve: 16 unit words satisfy zero owners and 48 satisfy exactly two.
-  Thus c=6 is empty before metric recursion; the next unevaluated common-scale
-  face is c=7.
+  Thus c=6 is empty before metric recursion. Subsequent exact structural and
+  finite certificates THM-962/963/969/970/974/976/977/978/980/981/982/983/
+  986/988/989 close every possible primitive common-scale face through 23.
+  THM-990's independent C++ referee promotes the scale-24 deficit. THM-992
+  reduces scale 25 to 36 scalar rows and gives an owner-normalized five-coset
+  obstruction; independently written primary and literal-CRT referee programs
+  verify all 216 owner rows have maximum union 21 or 22 and agree on both
+  decisive digests and all counts. The owner-local normalization is essential: `Q_3` means
+  the current owner's self coset, not a fixed global sheet residue. Since
+  THM-860 forbids `13|c` in a primitive packet, c=26 is impossible and the
+  next possible common-scale frontier is c=27.
   THM-836 §§6B--6C also rule out
   a U-independent single-numerator endpoint-grid proof and every fixed pair of
   unit endpoint columns in the relaxed shell-admissible model, without closing
@@ -96,6 +105,23 @@ depends_on:
   - THM-957
   - THM-958
   - THM-960
+  - THM-962
+  - THM-963
+  - THM-969
+  - THM-970
+  - THM-974
+  - THM-976
+  - THM-977
+  - THM-978
+  - THM-980
+  - THM-981
+  - THM-982
+  - THM-983
+  - THM-986
+  - THM-988
+  - THM-989
+  - THM-990
+  - THM-992
   - HYP-6750
   - HYP-6775
 related:

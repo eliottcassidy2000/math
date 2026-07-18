@@ -1,0 +1,25 @@
+scale=25 p=13 hamming=6 structural-referee=standard-library-literal-crt
+orders=(1, 5, 25) unit-counts=(1, 4, 20)
+grammar words=473 weighted-states/support=243750000 unquotiented=225225000000
+ratio-cardinality D1=(25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+ratio-cardinality D5=(5, 5, 5, 0, 5, 5, 5, 5, 0, 5, 5, 0)
+ratio-cardinality D25=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3)
+scalar formula-checks=316008 d1-witness-max=23 survivors=36 multiplicities=(0, 2, 4):36
+scalar owner-capacities=25:144 26:72
+multiplication-orbits=12:3
+orbit-representative B=(1, 2) support=(1, 2, 4, 5, 8, 9)
+orbit-representative B=(1, 5) support=(1, 4, 5, 6, 7, 9)
+orbit-representative B=(1, 6) support=(1, 2, 4, 6, 9, 11)
+raw-self-cosets-by-owner=(3, 1, 2, 0, 4, 3, 1, 0, 4, 2, 3, 1)
+owner-normalized-signatures=2880 Q3=name-of-self-coset-not-a-global-sheet-residue
+exact maximum-union=21:144 22:72
+exact maximum-by-owner-order=(5, 22):72 (25, 21):144
+reachable-counts=45200:24 48380:24 48540:24 133390:48 140330:48 141430:48
+reachable-total=23338080 owner-profile-count=13 feasible-owner-rows=0
+completed-owner-tournament ties=2:24 7:12 flips=1:1 2:1 3:2 4:10 5:2 6:7 7:7 8:1 9:4 10:1 scores=(0,1,2,3,4,5) triangles=0 scc=(1,1,1,1,1,1) hamiltonian-paths=1
+mask-bank-sha256=9354f59a41d53d90108c9138fbf817089c1f39fc3e5d0ca7c55c5970cefaa5f4
+grammar-sha256=7ae50439ddbd7e09d37516d067fe20f35d1f36b7830c25dc7156c900c6fde62f
+scalar-bank-sha256=ad266f55f820615eb2f7b4e323b6599024842c56352ff65c1b6dcdd117c250f9
+five-coset-signature-sha256=38687f84922739109a3f2affa9a0721a4460639c51bc138010d7135635bd9923
+owner-bank-sha256=dc5fa9f0693da8064d54a9c6ac8d2a0071840388d374d865734662b9c0a772f8
+RESULT scale-25 scalar bank has 36 rows and every owner misses >=3 sheets
