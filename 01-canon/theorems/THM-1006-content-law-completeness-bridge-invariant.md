@@ -186,6 +186,44 @@ THM-1001 bound `w ≤ 2/((n+1)·δ(C))` gives `8.0` at `n=4`, which **admits** t
 merely valid — it is sharp enough to permit exactly the one real winding tight
 instance and reject all the rest.
 
+## (G) The stability gap is NOT a general-`n` phenomenon (intel for klein's CRUX (C))
+
+klein THM-1002 conjectures (CRUX (C)) that no 12-set has `M ∈ (1/13, 2/25)`. The
+natural general-`n` form is: *no `n`-set has `M ∈ (1/(n+1), 2/(2n+1))`.* Exhaustive
+search over primitive `n`-sets in `{1,…,3n+2}` settles it at small `n`:
+
+| `n` | min `M` over primitive non-tight | `2/(2n+1)` | gap empty? |
+|---|---|---|---|
+| 3 | `2/7`, at `{1,2,6}` | `2/7` | **yes** |
+| 4 | `2/9`, at `{1,2,3,8}` | `2/9` | **yes** |
+| 5 | `2/11`, at `{1,2,3,4,10}` | `2/11` | **yes** |
+| 6 | `5/33`, at `{1,5,6,11,16,17}` | `2/13` | **NO** |
+| 7 | `3/23`, at `{1,2,3,4,5,7,18}` | `2/15` | **NO** |
+
+At `n = 3,4,5` the minimum is attained exactly by `{1,…,n−1} ∪ {2n}` (the general
+form of klein's `{1..11,24}`, whose `M = 2/(2n+1)` is the gap's upper endpoint). At
+`n = 6,7` there are **primitive sets strictly inside the gap** (exact, and confirmed
+by an independent 2·10⁵-grid numeric evaluation to five decimals).
+
+Two consequences for CRUX (C):
+
+1. **It cannot be proved by a general-`n` argument** — the general statement is
+   false at `n = 6, 7`. Like shallow rigidity, CRUX (C) at `n=12` needs
+   `n=12`-specific arithmetic. (klein's own route already is: their `val ≥ 3 ⟹
+   q ≥ 38 > 2·18` step uses the number 13 twice.)
+2. **The small-`n` violators are concrete instances of exactly the configuration
+   klein cannot currently exclude.** klein proves a violation must have `val ≥ 3`;
+   the `n=6` violator has `val = 5, q = 33` and the `n=7` violators `val = 3, q = 23`
+   — the predicted shape, realized. Since klein identified the obstruction as
+   *integer realizability* rather than residue arithmetic, these are the smallest
+   available examples of a realizable in-gap packet, and are the natural laboratory
+   for asking what makes such a packet realizable at `6,7` and (conjecturally) not
+   at `12`.
+
+*(This neither refutes nor weakens CRUX (C) at `n=12`; it delimits the proof
+strategies that can reach it, and supplies worked counterexamples one dimension
+down.)*
+
 *Artifacts:* `04-computation/lrc13_content_law_bridge_macmini_S110.py` (+out).
 Credits: klein THM-1002 (the ruler engine and the gap arithmetic), codex THM-769
 (the sheet split now identified with `val`) and codex-S64 §6 (the bridge target),
