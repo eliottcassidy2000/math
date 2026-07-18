@@ -1,0 +1,29 @@
+THE SHARP THRESHOLD.  The additive step needs components LONGER than the incoming arc period 1/w,
+otherwise a single period spans a whole component and there is no proportional-loss regime.
+So the base B admits speed w only if  w > 1/L_max(B).
+
+  base B    | mu      | L_max   | needs w >  | smallest usable w
+  {1..3 }   | 0.69048 | 5/21    |      4.2   |   w >= 5
+  {1..4 }   | 0.61905 | 9/56    |      6.2   |   w >= 7
+  {1..5 }   | 0.50476 | 4/35    |      8.8   |   w >= 9
+  {1..6 }   | 0.45714 | 1/12    |     12.0   |   w >= 13
+  {1..7 }   | 0.33469 | 3/49    |     16.3   |   w >= 17
+  {1..8 }   | 0.26582 | 5/112   |     22.4   |   w >= 23
+  {1..9 }   | 0.18107 | 2/63    |     31.5   |   w >= 32
+  {1..10}   | 0.13798 | 3/140   |     46.7   |   w >= 47
+  {1..11}   | 0.05633 | 1/77    |     77.0   |   w >= 78
+
+  THE BIND, on the deep well {1..12,182}: base {1..7} needs w >= 17, but the speeds still to add
+  are 8,9,10,11,12,182 -- FIVE of the six are below 17. That is exactly why it died at w=8.
+
+  Can ANY split work for a 13-set? A base of size b has L_max shrinking in b, while the
+  remaining speeds are the ones NOT in the base. Test all initial-segment bases:
+   base {1..3 }: L_max=5/21     needs w>   4.2 ; killers [4, 5, 6, 7, 8, 9, 10, 11, 12, 182] ; BLOCKED by [4]
+   base {1..4 }: L_max=9/56     needs w>   6.2 ; killers [5, 6, 7, 8, 9, 10, 11, 12, 182] ; BLOCKED by [5, 6]
+   base {1..5 }: L_max=4/35     needs w>   8.8 ; killers [6, 7, 8, 9, 10, 11, 12, 182] ; BLOCKED by [6, 7, 8]
+   base {1..6 }: L_max=1/12     needs w>  12.0 ; killers [7, 8, 9, 10, 11, 12, 182] ; BLOCKED by [7, 8, 9, 10, 11, 12]
+   base {1..7 }: L_max=3/49     needs w>  16.3 ; killers [8, 9, 10, 11, 12, 182] ; BLOCKED by [8, 9, 10, 11, 12]
+   base {1..8 }: L_max=5/112    needs w>  22.4 ; killers [9, 10, 11, 12, 182] ; BLOCKED by [9, 10, 11, 12]
+   base {1..9 }: L_max=2/63     needs w>  31.5 ; killers [10, 11, 12, 182] ; BLOCKED by [10, 11, 12]
+   base {1..10}: L_max=3/140    needs w>  46.7 ; killers [11, 12, 182] ; BLOCKED by [11, 12]
+   base {1..11}: L_max=1/77     needs w>  77.0 ; killers [12, 182] ; BLOCKED by [12]
