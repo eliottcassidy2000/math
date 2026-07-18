@@ -1,0 +1,16 @@
+CLUSTERED MULTI-KILLER via the interval-survival tail (delta=1/14).
+Tail: r killers absorbed once sum 1/k_i < L_P*(1-2r*delta)/(2*delta) = L_P*(7-r).  Needs r<7.
+KEY: the tail depends ONLY on killer SIZE, never on spacing -- so CLUSTERING is irrelevant to it,
+     which is exactly why it reaches where the telescoping balance (13/14)^j loss cannot.
+
+  r | core size | min L_P over cores | killer threshold r/(L_P(7-r))
+  2 |     11     |     0.00609        |   k_i > 65.7
+  3 |     10     |     0.00829        |   k_i > 90.5
+  4 |      9     |     0.01065        |   k_i > 125.2
+  5 |      8     |     0.01099        |   k_i > 227.5
+  6 |      7     |     0.01727        |   k_i > 347.5
+
+CENSUS: clustered killers (all comparable, >> core) -- does M > 1/14 hold?
+  clustered primitive covering families tested: 349 ; min M = 2/21 = 0.09524 (1/14=0.07143)
+  with M <= 1/14: 0
+  => CLUSTERED STRATUM: no violation; min M is 1.33x the threshold
