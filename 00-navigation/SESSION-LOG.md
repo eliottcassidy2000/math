@@ -1,3 +1,20 @@
+## opus-2026-07-17-S346 -- muNum_folded PROVED KERNEL-PURE (THM-965 in Lean): TournamentH7.LRCFoldedIdentity builds green, standard axiom trio, promoted to the build tree + root import -- the two-variable folded identity 14*muNum a b = 4ab + fold((a+b)%14) - fold((b-a)%14) is now formal; the Hunter-sawtooth floor table (THM-964) is thereby analytic over a kernel-proved closed form (HYP-7290)
+
+Owner: finish the Gauss iterations myself, pull often. DONE -- muNum_folded lands green.
+3 compile iterations: (1) missing dep olean (built LRCTreeHunter first); (2) two real
+errors -- omega-through-min in hshape (fixed: Nat.min_eq_right/left + explicit bounds)
+and sum_range_succ'/sum_congr/hj0 order (fixed: sum_congr before the j=0 peel);
+(3) hcastsum shape mismatch (push_cast distributes the cast into the sum -> state
+hcastsum distributed) -> EXIT 0. The final linear_combination's coefficients I
+sympy-verified (residual 0) BEFORE trusting Lean. Axioms [propext, Classical.choice,
+Quot.sound]. Promoted, root-imported, full build 8476 jobs green, draft removed.
+REMAINING THM-964 Lean links: per-class floor-table minimization (now over a kernel
+closed form -- decide/norm_num-shaped), the Fubini position step, window-choice wiring.
+FILES: TournamentH7/LRCFoldedIdentity.lean (new), root import, THM-965 status,
+HYP-7290. opus; S346.
+
+---
+
 ## kind-pasteur-2026-07-17-S128 (cont.48) -- THM-995: THE TRAPPED CUT EXCLUDES THE TIGHT LOCUS (owner brief: finish LRC(14), pull often, integrate incoming; model switched to Opus 4.8 mid-session). REROUTE: codex-S66 integrated my LRCGridCount.lean core and built the live-floor Lean layer on top (LRCLiveFloorSampling + LRCTwoCircleCount, both kernel-pure) -- the fleet consuming my work exactly as intended; I deferred my local grid-count edit to codex's version and rerouted to the reduction's ANALYTIC residual. THE PIECE: the FORMALIZATION-PICTURE sharpens my THM-984 capstone to "rigidity of the tight equality M=1/14 plus a strict margin on the non-tight residual". THM-995 REMOVES THE EQUALITY HORN. (I) EXACT ESCAPE CENSUS: every known tight family (M=1/14) fails a trapped-core hypothesis -- AP{1..13} fails gap+max>=23; AP{2..26} fails gap+common-residue; sporadic {1..11,13,24} M=1/14 EXACTLY yet fails COVERING (sieve t=1/q); deep-well{1..12,182} M=14/183 fails COMPRESSED (182 dominant). All M exact on Farey grid, all 8 hypotheses exact predicates. (II) THREE ESCAPE ROUTES = three closed assembly branches (small/comparable, dominant-runner, sieve-covered). (III) STRICT INTERIOR: 40 trapped samples (superset cut) min M=0.1945 (margin +0.1231), median 0.2448 -- trapped cores sit >=2.7x above threshold. (IV) THE DILATION ESCAPE LEMMA PROVED: non-primitive V=cW (c>=2) has all vi=0 mod c => fails common-residue => trapped cut SUBSET primitive families => the equality horn REDUCES to primitive tight families (rigorous one-line reduction). (V) ADVERSARIAL HUNT SURVIVED: ~970 near-tight perturbations, ZERO trapped tight found. (VI) END-TO-END CHAIN VALIDATION: primitive trapped V=[25,71,...,343] run through the full pipeline -- M=38/195 (margin 337/2730) -> good-set mu0=0.1246 (350 intervals) -> E=4786, q0=38427 -> liveCount(38427)=4784>0 => LONELY. THM-995 -> converter -> THM-979/984 -> census composes end to end, every link exact. General "every primitive tight family escapes" = CONJECTURE (three-route skeleton); the dilation half is PROVED. j=4: clean worker relaunched (my earlier 6-shard patch had a _glob bug + thrashed; the file rebased back to clean; the engine's internal 10-worker pool resumes 747/2002).
 
 Prompt (owner): continue, extend new tasks, pull and reroute as needed, finish up LRC 14.
