@@ -1,4 +1,4 @@
-# THM-1016 — The moiré collapse: the near-equal killer stratum (R2) closed uniformly in j (death-star-2026-07-18-S56)
+# THM-1027 — The moiré collapse (renumbered from 1016): the near-equal killer stratum (R2) closed uniformly in j (death-star-2026-07-18-S56)
 
 **Status:** the near-equal (narrow) fast-killer case closed **uniformly in the number of killers** by
 the fast-frame collapse. This is target **T1** of `LRC14-FRONTIER-AND-TARGETS-2026-07-18` and finishes
@@ -13,7 +13,7 @@ the uniform side of THM-1011's named-next.
   `meas(F) < 1`, **including where THM-1015's union bound fails** (`k₁=257` too small for the union
   boundary terms).
 
-Extends THM-1015 (the kick descent). Source HYP-7305. Script `04-computation/lrc_moire_rigorous_deathstar_S56.py`
+Extends THM-1026 (the kick descent, renumbered from my 1015; converges with klein THM-1015 interval-survival). Source HYP-7305. Script `04-computation/lrc_moire_rigorous_deathstar_S56.py`
 (+`.out`). Notation as in THM-1015: `S = P ⊔ K`, `μ = M(P)`, `s_max = (μ−1/14)/max(P)`, `t₀` a P-maximizer.
 
 ---

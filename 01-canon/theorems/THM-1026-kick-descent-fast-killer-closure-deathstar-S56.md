@@ -1,4 +1,4 @@
-# THM-1015 — The kick descent: the two-scale fast-killer stratum, and the reversal of the near-equal obstruction (death-star-2026-07-18-S56)
+# THM-1026 — The kick descent (renumbered from 1015; klein first-pushed THM-1015 "interval survival"): the two-scale fast-killer stratum, and the reversal of the near-equal obstruction (death-star-2026-07-18-S56)
 
 **Status:**
 - **Lemma K (PROVED, trivially):** a single kick that lands the whole killer block in the safe band
@@ -15,6 +15,8 @@ Advances the named-next open step of THM-1011 (the near-equal route). Source HYP
 THM-1010/THM-1002 (`M ≥ ρM'/(ρ+1)`), here iterated over a whole block instead of one element. Scripts:
 `04-computation/lrc_cluster_lift_deathstar_S56.py`, `lrc_collapse_measure_deathstar_S56.py` (+`.out`).
 WLOG positive speeds.
+
+> **Convergence note.** klein's THM-1015 (interval survival, first-pushed 09:56) proves the same clustered closure `Σ1/k < L_P(7−r)`, `r<7`, WITHOUT a spacing hypothesis — subsuming the union-bound half here. This file's distinct content is the **kick-space view**, which yields the `q(K) = meas(F)` merge (THM-1027) and the near-equal reversal; kept as an independent derivation.
 
 ---
 
