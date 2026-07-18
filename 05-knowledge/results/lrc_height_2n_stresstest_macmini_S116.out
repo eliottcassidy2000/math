@@ -1,0 +1,19 @@
+=== n=4, N=44 (2n=8): covering+primitive candidates 68,399
+    prescreen survivors 2; PRIMITIVE TIGHT 2
+      [np.int64(1), np.int64(2), np.int64(3), np.int64(4)] max=4 max/n=1.000
+      [np.int64(1), np.int64(3), np.int64(4), np.int64(7)] max=7 max/n=1.750
+    => max=7=1.750*n ; <= 2n? True
+
+=== n=5, N=50 (2n=10): covering+primitive candidates 914,862
+    prescreen survivors 2; PRIMITIVE TIGHT 2
+      [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)] max=5 max/n=1.000
+      [np.int64(1), np.int64(3), np.int64(4), np.int64(5), np.int64(9)] max=9 max/n=1.800
+    => max=9=1.800*n ; <= 2n? True
+
+=== n=7, N=40 (2n=14): covering+primitive candidates 5,899,893
+    prescreen survivors 3; PRIMITIVE TIGHT 3
+      [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7)] max=7 max/n=1.000
+      [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(7), np.int64(12)] max=12 max/n=1.714
+      [np.int64(1), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(11), np.int64(13)] max=13 max/n=1.857
+    => max=13=1.857*n ; <= 2n? True
+
