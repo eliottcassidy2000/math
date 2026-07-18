@@ -1,0 +1,13 @@
+### STEP 1: does S4 close the remaining r=6 cores? ###
+  ... core 0/792  surv(LP3)=1 surv(LP4)=0
+  ... core 100/792  surv(LP3)=14 surv(LP4)=0
+  ... core 200/792  surv(LP3)=23 surv(LP4)=1
+
+  LP3: worst margin +14.8 ; cores surviving: 32
+  LP4: worst margin +1.1 ; cores surviving: 1
+  S4 removed 31 of the 32 LP3-survivors
+  LP4 closes r=6 outright: False
+  survivor list written to 05-knowledge/results/r6_survivors_%d_%d_kps_S128c67.json'%(A,B)+'
+  first survivors: [[1, 4, 5, 6, 7, 9, 11]]
+  do they share structure?  contain 1: 1/1 ; max=12: 0/1
+DONE

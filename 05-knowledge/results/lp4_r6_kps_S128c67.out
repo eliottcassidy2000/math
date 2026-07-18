@@ -1,0 +1,3 @@
+### STEP 1: does S4 close the remaining r=6 cores? ###
+  ... core 0/792  surv(LP3)=0 surv(LP4)=0
+  ... core 200/792  surv(LP3)=26 surv(LP4)=3
