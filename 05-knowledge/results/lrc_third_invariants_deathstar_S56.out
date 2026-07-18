@@ -1,0 +1,13 @@
+core                                             M    delta    smax   C  coverGap  covers?  (smallest vmax)
+AP {1..12} (deep well)                     0.07692  0.00000  0.0000   0    0.0000 YES(well)  (vmax=13,L=13)
+2*AP {2..24} (dilated, deep well)          0.07692  0.00000  0.0000   0    0.0000 YES(well)  (vmax=26,L=13)
+{1..10,22,24}                              0.08696  0.01003  0.0251   6    0.3636       no  (vmax=26,L=13)
+{1..10,24,33}                              0.08824  0.01131  0.0379  10    0.5000       no  (vmax=39,L=13)
+{1,2,3,5,7..12,17,19}                      0.08000  0.00308  0.0093   2    0.2500       no  (vmax=26,L=13)
+{2..12,15}                                 0.11765  0.04072  0.0269   4    0.5000       no  (vmax=26,L=13)
+{1..11,24}                                 0.08000  0.00308  0.0016   2    0.0833       no  (vmax=26,L=13)
+3*{1..11}+{34}                             0.08333  0.00641  0.0363  10    0.4286       no  (vmax=39,L=13)
+
+READING: coverGap = max over good set G_W of ||vmax*t||.  coverGap>=1/13=0.0769 => a point of G_W escapes the
+far element's danger => M(V)>=1/13 (far element CANNOT cover). Only the AP-type (smax=0) has coverGap<1/13:
+its good set sits ON the 1/13-lattice where the far element vanishes (the deep well). Non-AP => smax>0 => coverGap>=1/13.
