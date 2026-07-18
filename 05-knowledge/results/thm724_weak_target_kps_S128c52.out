@@ -1,0 +1,24 @@
+== (a) the algebraic chain on single-killer configs ==
+   need: mu>=1/13, maxC < v_f/13, balance_bound = mu*v_f/(v_f+maxC) > 1/14, M(S) >= balance
+   120 single-killer configs: mu>=1/13 OK, maxC<v_f/13 OK, balance>1/14 OK; violations=0
+   tightest balance margin over 1/14: 1643/49518 = 3.318e-02  (C max=23, v_f=370, mu=1/9)
+
+== (b) actual M(S) vs the bound, incl. the deep well and covering configs ==
+   deep well {1..12,182}  maxC= 12 v_f=  182 mu=1/13    bound=0.072165  M(S)=14/183    0.076503  M>1/14:True cov:True
+   random SK              maxC= 25 v_f=  536 mu=8/43    bound=0.177756  M(S)=8/43      0.186047  M>1/14:True cov:False
+   random SK              maxC= 25 v_f=  536 mu=3/19    bound=0.150858  M(S)=3/19      0.157895  M>1/14:True cov:False
+   random SK              maxC= 24 v_f=  452 mu=2/13    bound=0.146089  M(S)=2/13      0.153846  M>1/14:True cov:False
+   random SK              maxC= 25 v_f=  454 mu=1/7     bound=0.135401  M(S)=1/7       0.142857  M>1/14:True cov:False
+   random SK              maxC= 23 v_f=  553 mu=5/33    bound=0.145465  M(S)=85/563    0.150977  M>1/14:True cov:False
+   random SK              maxC= 18 v_f=  292 mu=1/7     bound=0.134562  M(S)=1/7       0.142857  M>1/14:True cov:False
+
+== (c) worst-case margin formula: mu=1/13, s=maxC=m, v_f=13m+1 ==
+   m=  1: balance=14/195, margin over 1/14 = 1/2730 = 3.663e-04  (formula 1/(182(14m+1)) = 3.663e-04)
+   m=  5: balance=66/923, margin over 1/14 = 1/12922 = 7.739e-05  (formula 1/(182(14m+1)) = 7.739e-05)
+   m= 12: balance=157/2197, margin over 1/14 = 1/30758 = 3.251e-05  (formula 1/(182(14m+1)) = 3.251e-05)
+   m= 25: balance=326/4563, margin over 1/14 = 1/63882 = 1.565e-05  (formula 1/(182(14m+1)) = 1.565e-05)
+   m=100: balance=1301/18213, margin over 1/14 = 1/254982 = 3.922e-06  (formula 1/(182(14m+1)) = 3.922e-06)
+
+>>> THE BALANCE LEMMA ALONE reaches the WEAK target: THM-724's near-tight residual
+>>> is EMPTY at M > 1/14 -- no shallow witness, no census needed.
+DONE
