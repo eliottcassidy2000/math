@@ -1,0 +1,62 @@
+### c=33 AP-centred H6 exact three-fibre primary ###
+orders: (1, 3, 11, 33)
+unit counts: (1, 2, 10, 20)
+grammar: at least two 3-carriers and at least two 11-carriers
+hereditary words: 3249
+labelled support/order contexts: 3002076
+literal state words/support: 1268394000
+raw labelled state words: 1171996056000
+grammar digest: 2900299ec2c09d25e41e3281575ca5de5fa5077388a34b8694bc0eda40d067c3
+CRT-base digest: dc9e41ee276778a8b43d911c2e823109050c771285998307131d8fd39c148859
+literal-mask digest: bc85dd8ecfc3d5a178b7da29be292b203472d2a5d1dfbf1b3cbefda8f42e0554
+cardinality vectors by ratio; columns D=1,3,11,33:
+  r= 1: (33, 11, 6, 6)
+  r= 2: (0, 0, 6, 5)
+  r= 3: (0, 0, 6, 5)
+  r= 4: (0, 11, 6, 5)
+  r= 5: (0, 11, 6, 5)
+  r= 6: (0, 0, 3, 5)
+  r= 7: (0, 0, 3, 5)
+  r= 8: (0, 11, 6, 5)
+  r= 9: (0, 11, 6, 5)
+  r=10: (0, 0, 6, 5)
+  r=11: (0, 0, 6, 5)
+  r=12: (0, 0, 3, 5)
+scalar feasible-owner histogram: 0:16086 1:446568 2:1446252 3:891684 4:171594 5:28548 6:1344
+scalar support-survivor histogram: 0:774 2:48 3:24 4:24 9:24 18:12 36:18
+scalar survivors: 1344
+scalar survivor supports: 150
+scalar multiplicity profiles: (0, 2, 2, 2):204 (0, 2, 3, 1):24 (0, 2, 4, 0):6 (0, 3, 0, 3):12 (0, 3, 1, 2):36 (0, 3, 2, 1):36 (0, 3, 3, 0):12 (0, 4, 0, 2):18 (0, 4, 1, 1):576 (0, 4, 2, 0):252 (1, 3, 1, 1):168
+scalar capacity vectors: 600
+literal scalar-survivor state words: 40022400
+scalar digest: a1d26583a73929cd8f3bd66563741e09b550100dfe414d8334d71989cef280a4
+Z3 bank sizes: 1:444 2:3336 3:4284
+Z3 bounds: 25:996 26:4248 27:384 28:288 29:228 30:96 33:1824
+Z3 live owners/context: 0:306 1:360 2:624 4:54
+Z3 digest: af6ad015c829d6b8dd6ffad44752297f51ac6f2535548f1b3dea3b7b3b900564
+Z11 bank sizes: 1:348 10:4512 55:720 80:1176 90:432 100:624 175:72 265:24 315:48 345:24 355:48 385:12 675:12 715:12
+Z11 bounds: 26:984 27:144 28:564 29:2484 30:768 31:156 32:48 33:768 34:156 35:348 36:60 37:24 38:1296 39:144 43:108 48:12
+Z11 live owners/context: 0:30 1:192 2:912 3:72 4:72 6:66
+Z11 digest: eb3204cee4eaec9f13eaf9f7e44d625423a50b1c066b2af05ff424fd8bd7da5f
+mixed bank sizes: 1:168 2:24 3:156 20:1800 21:1116 30:1596 55:72 90:96 100:48 110:240 111:36 160:432 161:312 165:372 180:336 200:480 201:96 240:432 345:24 355:24 525:72 631:12 710:24 715:12 795:24 945:36 1155:12 2025:12
+mixed bounds: 25:1188 26:4152 27:288 28:288 29:228 30:96 33:1824
+mixed live owners/context: 0:306 1:360 2:624 4:54
+mixed digest: 6ec6a536a05eee349c05e0a0cb351a36754397ec352cf309d5e9e6c3a0162725
+best-of-flags live owners/context: 0:306 1:360 2:624 4:54
+Z3 owner-order/bound: (1, 33):168 (3, 25):216 (3, 26):2376 (3, 27):12 (3, 28):192 (3, 29):96 (3, 30):96 (3, 33):1656 (11, 25):624 (11, 26):912 (11, 27):228 (11, 28):48 (11, 29):84 (33, 25):156 (33, 26):960 (33, 27):144 (33, 28):48 (33, 29):48
+Z3 profile/live: ((0, 2, 2, 2), 0):204 ((0, 2, 3, 1), 0):24 ((0, 2, 4, 0), 0):6 ((0, 3, 0, 3), 1):12 ((0, 3, 1, 2), 1):36 ((0, 3, 2, 1), 1):36 ((0, 3, 3, 0), 1):12 ((0, 4, 0, 2), 4):18 ((0, 4, 1, 1), 0):48 ((0, 4, 1, 1), 1):192 ((0, 4, 1, 1), 2):312 ((0, 4, 1, 1), 4):24 ((0, 4, 2, 0), 0):24 ((0, 4, 2, 0), 1):72 ((0, 4, 2, 0), 2):144 ((0, 4, 2, 0), 4):12 ((1, 3, 1, 1), 2):168
+all-owner residual: 0
+residual multiplicities: 
+context multiplication orbit sizes: 6:4 12:110
+support multiplication orbit sizes: 6:1 12:12
+owner tournament (Z3 ties,Z11 ties,gauge flips): (1, 1, 0):24 (1, 1, 2):168 (1, 1, 5):48 (1, 1, 9):48 (1, 3, 0):36 (1, 3, 1):90 (1, 3, 2):72 (1, 3, 3):18 (2, 2, 0):36 (2, 2, 2):108 (2, 2, 4):48 (2, 4, 0):15 (2, 4, 1):30 (2, 4, 2):15 (2, 4, 4):4 (2, 4, 5):4 (2, 4, 6):4 (3, 2, 6):6 (3, 2, 7):18 (3, 2, 8):18 (3, 2, 9):6 (3, 3, 0):66 (3, 3, 4):120 (3, 4, 4):24 (3, 4, 5):24 (3, 4, 8):24 (3, 4, 9):24 (3, 6, 0):10 (3, 6, 1):14 (3, 6, 2):14 (3, 6, 3):10 (3, 6, 5):10 (3, 6, 6):14 (3, 6, 7):14 (3, 6, 8):10 (4, 4, 6):24 (6, 6, 0):24 (6, 6, 9):48 (7, 7, 0):30 (7, 7, 8):24
+owner tournaments: score (0,1,2,3,4,5), triangles 0, SCCs 1^6, HP 1
+flag strength rankings: ('Z3', 'Z11', 'mixed'):1644 ('Z3', 'mixed', 'Z11'):6228 ('mixed', 'Z3', 'Z11'):192
+flag pair wins: ('Z11', 'mixed'):1644 ('Z3', 'Z11'):8064 ('Z3', 'mixed'):7872 ('mixed', 'Z11'):6420 ('mixed', 'Z3'):192
+flag tournaments: score (0,1,2), triangles 0, SCCs 1^3, HP 1
+tournament vertices: owner obligations; alternate vertices: quotient flags
+observable/switch: proof cost in Z3 versus Z11 gauge; coordinate tie path
+preserved: owner-local absolute upper bound; destroyed: shared units/needle overlaps
+11-carrier owner Z3 ceiling: 29 < 33
+THEOREM: hereditary grammar supplies at least two terminal 11-carrier owners
+VERDICT: primitive proper AP-centred common-scale-33 H6 face EMPTY

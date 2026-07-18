@@ -1,0 +1,14 @@
+scale=33 p=13 hamming=6 referee=literal-crt-Z3-upper-relaxation
+orders=(1,3,11,33) unit-counts=(1,2,10,20)
+hereditary-grammar=at-least-two-3-carriers-and-two-11-carriers
+hereditary-words=3249 weighted-states/support=1268394000 labelled-support-order-contexts=3002076 raw-labelled-states=1171996056000
+scalar-feasible-owners-per-context=0:16086 1:446568 2:1446252 3:891684 4:171594 5:28548 6:1344
+scalar-supports-by-survivor-count=0:774 2:48 3:24 4:24 9:24 18:12 36:18
+scalar-survivors=1344 supports=150 literal-unit-words=40022400
+Z3-anchor-bank-size=1:444 2:3336 3:4284
+Z3-upper-bound=25:996 26:4248 27:384 28:288 29:228 30:96 33:1824
+Z3-live-owners-per-context=0:306 1:360 2:624 4:54
+11-carrier-owner-Z3-ceiling=29<33
+literal-cover-implies-Z3-cover=checked-on-all-8064-owner-obligations; hereditary-supplies-at-least-two-terminal-11-carrier-owners
+proof-carrier=owner-coloured-Z3-thick-fibre-incidence; destroyed=shared-units-and-nonanchor-overlaps
+VERDICT=primitive-proper-AP-centred-common-scale-33-H6-face-EMPTY

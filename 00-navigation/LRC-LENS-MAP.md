@@ -198,8 +198,14 @@ search for one more universal scalar:
   terminal `Z/4` thick-fibre relaxation; `c=29,31` are prime-excluded;
   THM-1090 closes `c=30` by complementary `Z/6` and `Z/10` flags; and
   THM-1096 closes `c=32` by a terminal `Z/8` thick-fibre relaxation independently
-  replayed against 403,733,376 exact reachable masks.  Thus the untreated
-  common-scale faces now begin at `c=33`.  The finite H5 bank and non-AP-centred/deep-sheet
+  replayed against 403,733,376 exact reachable masks.  THM-1124 closes `c=33`
+  in independent Python/C++ exact implementations: after scalar capacity
+  leaves 1,344 rows, the `Z/3` anchor quotient has bound
+  at most 29 at every own-order eleven-carrier, and heredity supplies two.
+  This quotient preserves owner-local upper bounds while destroying shared
+  units and mutual needle overlaps; the loss is sound only because the bound
+  is an upper relaxation.  Thus the untreated common-scale faces now begin at
+  `c=34`.  The finite H5 bank and non-AP-centred/deep-sheet
   continuations must also be closed or replaced by a uniform decreasing
   invariant;
 - the final nonlacunary dense core needs a theorem that composes its component,
