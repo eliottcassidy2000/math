@@ -1,0 +1,54 @@
+13-TERM APs {a, a+d, ..., a+12d}: exact uncovered measure vs d
+    a    d    max speed   uncovered (exact)     float
+      1    1         13   0                    0.00000000
+      1    2         25   186134/1605975       0.11590093
+      1    3         37   114837/955451        0.12019141
+      1    5         61   3698480171/29899995216 0.12369501
+      1    8         97   251308706854/1974239979075 0.12729390
+      1   13        157   221171958269/1701722218140 0.12996948
+      1   21        253   2051680266764186731/15961888357823087680 0.12853619
+      1   34        409   14343450906141577222/113337140545497994125 0.12655561
+      1   55        661   21579410473790584805543/169687547658835604234928 0.12717144
+      1   89       1069   11392988187942209536579/90136835962878944519280 0.12639658
+      2    3         38   18993397/161562016   0.11756103
+      3    5         63   17362066999/139435090704 0.12451720
+      5    8        101   3174275540673526/25265855805785595 0.12563499
+      2   21        254   18509924079641087229/146135431373212530340 0.12666281
+      3   34        411   20294443938200186181584/160429145171626035179475 0.12650098
+      7   55        667   136254645203493342328639/1078484166966061729829592 0.12633903
+
+If these converge to a common positive value as d grows, every
+sufficiently-spread AP is lonely, and the extremal corner closes.
+IS TIGHTNESS SPECIAL TO {1,...,13}?  d=1 APs with varying start a:
+    {1..13}   uncovered = 0.00000000  <-- TIGHT (uncovered = 0)
+    {2..14}   uncovered = 0.06122449
+    {3..15}   uncovered = 0.09761905
+    {4..16}   uncovered = 0.12431973
+    {5..17}   uncovered = 0.13231793
+    {6..18}   uncovered = 0.13771842
+    {7..19}   uncovered = 0.13794421
+    {8..20}   uncovered = 0.13098617
+    {9..21}   uncovered = 0.13394094
+
+MINIMUM OVER 13-TERM APs WITH d >= 2 (scan a,d):
+    min uncovered = 0.00000000  at a=2, d=2
+    (exact: 0)
+
+  => every 13-term AP with d>=2 stays uniformly away from 0.
+CORRECTED CLAIM: a 13-term AP is TIGHT iff a = d (i.e. it is a dilate
+of {1,...,13}).  Dilation invariance (THM-1075) forces this.
+    a=d cases:
+      a=d=1: [1, 2, 3]...  uncovered = 0.00000000   (= 1*{1..13})
+      a=d=2: [2, 4, 6]...  uncovered = 0.00000000   (= 2*{1..13})
+      a=d=3: [3, 6, 9]...  uncovered = 0.00000000   (= 3*{1..13})
+      a=d=4: [4, 8, 12]...  uncovered = 0.00000000   (= 4*{1..13})
+      a=d=5: [5, 10, 15]...  uncovered = 0.00000000   (= 5*{1..13})
+      a=d=6: [6, 12, 18]...  uncovered = 0.00000000   (= 6*{1..13})
+
+    MINIMUM OVER PRIMITIVE (gcd=1) 13-TERM APs, scanning a,d <= 16:
+      min = 0.00000000 at a=1, d=1
+      primitive tight APs found: [(1, 1)]
+
+  => among PRIMITIVE APs the only tight one is a=d=1, i.e. {1,...,13};
+     every other primitive AP has a strictly positive margin, and the
+     non-primitive tight cases are exactly its dilates k*{1,...,13}.

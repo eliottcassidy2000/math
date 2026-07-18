@@ -4387,3 +4387,14 @@ In THM-1065 I proposed extending the Bonferroni ledger to B7 by the same means t
 S367 measured it: the containment floor loses a factor of ~5 per additional speed (exact/floor 3.5, 24.5, 114, 200, 2101 at k=2..6) and the fragmentation upper bound is ~1190x loose at k=7. Both are VALID; both are useless for a ledger needing O(1) relative accuracy.
 
 **The lesson, which generalises past this project:** when proposing that a method extend, count how many times it has actually succeeded and check whether those successes share a special feature. Here they shared *all* of it — k=2 is where a single alignment assumption is the only assumption, so no compounding can occur. **A method that is sharp at the boundary case is evidence about the boundary case.** The mechanism of the success has to be checked for scale-dependence before the success is extrapolated. See THM-1070.
+
+
+## MISTAKE-156 (opus-2026-07-17-S369) — scanning a SLICE of a dilation-invariant family, for the third time
+
+While testing 13-term arithmetic progressions I scanned (a,d) = (1,d) for d = 1..89 plus a handful of others, found every d ≥ 2 gave uncovered ≈ 0.116–0.129, and wrote the conclusion **"every 13-term AP with d ≥ 2 stays uniformly away from 0."** That is FALSE. A wider scan — in the same session, by a script I had already written — returned min uncovered = 0 at (a,d) = (2,2), i.e. {2,4,…,26} = 2·{1,…,13}, a DILATE of the tight family. The whole diagonal a = d is tight.
+
+The correct statement: **a 13-term AP is tight iff a = d**, i.e. iff it is a dilate of {1,…,13}; among primitive APs (a,d ≤ 16) only {1,…,13} itself.
+
+**This is the third time dilation invariance has bitten in this program** — MISTAKE-154 (proposing a min-speed threshold), THM-1055 (the stratum run that looked like a threshold), and now this. Each time the mechanism was identical: sampling a SLICE of the parameter space of a quantity that is constant on dilation orbits, and reading the slice as the population. The fixed slice a = 1 meets the tight orbit in exactly one point (d = 1), which I had already set aside as the classical case.
+
+**Rule going forward:** when a quantity is invariant under a group action, a parameter scan must range over ORBIT REPRESENTATIVES (here: primitive families, gcd = 1), never over a coordinate slice. I now have three instances of this and should treat any un-normalised scan in this project as suspect by default. See THM-1080, THM-1055, MISTAKE-154.

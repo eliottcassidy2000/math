@@ -1448,3 +1448,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `higher_truncation_opus_S366.out` | [STORED] | THM-1065: first certifying Bonferroni level 11/9/9/7 by scale; full inclusion-exclusion profile at four scales. | (self) |
 | `b7_slots_opus_S367.out` | [STORED] | THM-1070: both B7 slots valid but unusable (containment 3.5->2101x by k=2..6; fragmentation 1190x). | (self) |
 | `kfold_folded_opus_S368.out` | [STORED] | THM-1075: resonance-lattice identity at k=2,3; 7-vanishing; exact-independence criterion 16/16; dilation. | (self) |
+| `shortvector_kfold_opus_S369.out` | [STORED] | THM-1080: m7 multiplicative minimum controls delta at k=3; exact mod-7 independence criterion. | (self) |
+| `sumfree_m7_opus_S369.out` | [STORED] | THM-1080: m7=1 <=> Schur triple (0/12); sum-free triples have 10.8x smaller 3-body terms. | (self) |
+| `ap_universal_lattice_opus_S369.out` | [STORED] | THM-1080: AP resonance lattice decouples from (a,d); universal limits U3, U4. | (self) |
+| `ap13_limit_opus_S369.out` | [STORED] | THM-1080: 13-term AP uncovered -> ~0.1264; tight APs = dilates of {1..13} (MISTAKE-156). | (self) |

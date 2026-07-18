@@ -1,0 +1,25 @@
+(1) DOES m7 CONTROL delta AT k=3?   predicted |delta| ~ 1/(pi^3 m7)
+    family            |delta|      m7   witness            1/(pi^3 m7)   ratio
+    (2, 3, 5)        0.019419       1   (-1, -1, 1)      0.032252      0.60
+    (3, 4, 5)        0.021200       2   (-1, 2, -1)      0.016126      1.31
+    (2, 5, 7)        0.016350       1   (-1, -1, 1)      0.032252      0.51
+    (3, 5, 8)        0.014484       1   (-1, -1, 1)      0.032252      0.45
+    (11, 13, 17)     0.005576       6   (-2, 3, -1)      0.005375      1.04
+    (31, 37, 41)     0.000828      30   (-2, 5, -3)      0.001075      0.77
+    (101, 103, 107)  0.003872       6   (-2, 3, -1)      0.005375      0.72
+    (5, 7, 11)       0.010393       6   (-3, -1, 2)      0.005375      1.93
+
+(2) MY DIRECTION A -- THE EXACT k-FOLD INDEPENDENCE CRITERION
+    hhat kills any vector with a coordinate divisible by 7, so
+        delta(S) = 0 EXACTLY  <=>  every n in Lam(a_S) has some 7 | n_i.
+    That is a condition on Lam mod 7 -- a finite check.  At k=2 it
+    reduces to 7|(a/g) or 7|(b/g), the S368 criterion.  Test at k=3:
+    family            predict delta=0    |delta| measured
+    (1, 7, 14)       True               0.00000000
+    (7, 14, 21)      False              0.02970251
+    (2, 3, 5)        False              0.01946605
+    (7, 7, 7)        False              0.08347213
+    (1, 2, 7)        False              0.00999811
+    (7, 1, 2)        False              0.00999811
+    (14, 21, 35)     False              0.01946605
+    (3, 5, 7)        False              0.01640424

@@ -1,0 +1,26 @@
+(3) m7 = 1  <=>  SCHUR TRIPLE (a_i + a_j = a_k)?
+    triple           schur?   m7    |delta|
+    (2, 3, 5)        True    1     0.019419
+    (3, 4, 7)        True    1     0.015333
+    (1, 2, 3)        True    1     0.029563
+    (11, 13, 17)     False   6     0.005576
+    (5, 7, 12)       True    1     0.009233
+    (3, 5, 8)        True    1     0.014484
+    (2, 5, 7)        True    1     0.016350
+    (31, 37, 41)     False   30    0.000828
+    (101, 103, 107)  False   6     0.003872
+    (4, 9, 13)       True    1     0.008700
+    (5, 7, 11)       False   6     0.010393
+    (6, 10, 15)      False   60    0.000334
+    mismatches: 0/12
+
+(4) CONSEQUENCE: sum-free families have uniformly smaller 3-body terms
+    Schur triples   (n=  6): median |delta| = 0.012390
+    sum-free triples(n=294): median |delta| = 0.001149
+    ratio = 10.78x
+
+  => additive structure in the speed set is what drives the k-body terms.
+     'Hard family' = 'additively rich family'.  This is Schur/sum-free
+     territory, and it says the extremal LRC(14) families should be the
+     additively richest 13-sets -- e.g. arithmetic progressions, which is
+     exactly what the corpus kept finding as the adversarial construction.

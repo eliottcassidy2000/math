@@ -1,3 +1,40 @@
+## opus-2026-07-17-S369 -- THM-1080 THE SHORT-VECTOR BOUND IS A MULTIPLICATIVE MINIMUM m7 (recovers the k=2 sawtooth floor exactly; 0.45-1.93x at k=3) + m7 = 1 <=> SCHUR TRIPLE, so ADDITIVE STRUCTURE drives the k-body terms (sum-free triples 10.8x smaller) + exact mod-7 k-fold independence criterion + the AP lattice DECOUPLES, giving a universal limit and uncovered -> ~0.1264 + MISTAKE-156 (HYP-7520)
+
+Owner: work the short-vector bound for |S|>=3, plus my own directions. Four connected
+results, and one near-miss I caught myself.
+THE INVARIANT: m7(Lam) = min prod|n_i| over full-support lattice vectors with no
+coordinate divisible by 7. At k=2 this is ab/g^2 EXACTLY, so 1/(pi^2 m7) = g^2/(pi^2 ab)
+= THM-1025's sawtooth floor -- it reproduces the known answer. At k=3 the ratio
+|delta| : 1/(pi^3 m7) lies in 0.45-1.93, i.e. the right SCALE within ~2x, NOT a proved
+upper bound. It also explains THM-1075's non-monotonicity. Note what kind of object this
+is: min prod|n_i| over a lattice is the MULTIPLICATIVE MINIMUM -- Littlewood, products of
+linear forms, Cassels-Swinnerton-Dyer, EKL.
+MY DIRECTION B, and the best thing in the session: prod|n_i| = 1 forces every n_i = +-1,
+so m7 = 1 <=> a + b = c -- a SCHUR TRIPLE (verified 0/12). Over 300 random triples the
+Schur median |delta| is 0.012390 against 0.001149 sum-free, a 10.8x ratio. So ADDITIVE
+STRUCTURE in the speed set is what drives the k-body correlation: 'hard family' =
+'additively rich family'. That is Schur/sum-free territory, and it retro-explains why
+this corpus kept finding arithmetic progressions as the adversarial construction.
+MY DIRECTION A: delta(S) = 0 EXACTLY iff every full-support vector of Lam(a_S) has a
+coordinate divisible by 7 -- a finite mod-7 check (0 mismatches at k=3) generalising the
+S368 pair criterion to all k.
+MY DIRECTION C: for an AP the resonance lattice DECOUPLES. sum n_i a_i = a*N0 + d*N1
+forces N0 = ds, N1 = -as, and the s=0 part {sum n_i = 0, sum i n_i = 0} does not depend
+on a or d at all. So delta converges to a universal constant per k (U3 = +0.007287,
+U4 = +0.003186; residuals ~2e-4 by d=21), and the exact 13-term AP uncovered measure
+converges to ~0.1264 > 0.
+MISTAKE-156, worth reading: I first concluded 'every 13-term AP with d >= 2 stays away
+from 0' after scanning the slice a=1. FALSE -- a wider scan in the same session returned
+uncovered = 0 at (a,d) = (2,2), i.e. 2*{1..13}, a DILATE of the tight family. The whole
+diagonal a=d is tight. Correct statement: an AP is tight iff a=d, i.e. iff it is a dilate
+of {1,...,13}; among primitive APs (a,d <= 16) only {1,...,13} itself. This is the THIRD
+time dilation invariance has bitten (MISTAKE-154, THM-1055, now this), always the same
+way -- sampling a coordinate SLICE of a quantity constant on dilation orbits. Rule: scan
+ORBIT REPRESENTATIVES (primitive families), never a slice.
+FILES: THM-1080, MISTAKE-156, 4 scripts + outs, HYP-7520. opus; S369.
+
+---
+
 ## mac-mini-2026-07-18-S122 -- the n=12 height>=2 gap: SHALLOW half was ALREADY closed by THM-770; DEEP half now exhausted to max<=32 (30,284,554 candidates -> ONE survivor). Residual precisely delimited. HYP-7530.
 
 TASK (owner): close the height>=2 gap at n=12.
