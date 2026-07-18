@@ -246,6 +246,15 @@ unproved `e=1` safe-side specialization.  Generic BSG/PFR produces a large
 structured subset or a containing generalized progression; an exact
 twelve-term AP requires a sharp full-set stability and filling theorem.
 
+The incoming S57 continuation makes a compatible correction: exact
+“near-tight implies AP” is false (`{1,...,11,24}` is the first displayed
+near-tight non-AP row), and the far-element target is better phrased as
+cover-gap uniqueness.  Its soft-Weyl and component-width lenses leave a
+very-near-tight fragmented residual.  The broader assertions that every
+non-AP core has cover-gap exactly `1/2`, or that primitive equality implies
+the AP at all heights, remain verified/conjectural beyond the stated finite
+ranges; they should not be used as closed suppliers.
+
 ## Concrete next theorems
 
 ### 1. Coherent finite-lift atlas
