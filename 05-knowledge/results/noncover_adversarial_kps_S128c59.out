@@ -1,0 +1,27 @@
+### the adversarial construction: k1 = lcm(15..Q), k2 = 2*k1 ###
+  Q=20   lcm(15..Q) has 6 digits ; legal: False (not covering)
+        killing at 6 of 6 moduli in [15,20]  -> criterion has a witness: False
+  Q=25   lcm(15..Q) has 10 digits ; legal: False (not covering)
+        killing at 11 of 11 moduli in [15,25]  -> criterion has a witness: False
+  Q=30   lcm(15..Q) has 13 digits ; legal: True  (legal trapped-core shape)
+        killing at 16 of 16 moduli in [15,30]  -> criterion has a witness: False
+  Q=40   lcm(15..Q) has 16 digits ; legal: True  (legal trapped-core shape)
+        killing at 26 of 26 moduli in [15,40]  -> criterion has a witness: False
+  Q=60   lcm(15..Q) has 25 digits ; legal: True  (legal trapped-core shape)
+        killing at 46 of 46 moduli in [15,60]  -> criterion has a witness: False
+
+### is the criterion's FAILURE fatal?  scale separation of these families ###
+  Q=20  killers L, 2L with L ~ 10^5 ; core max = 12
+        killer/core scale ratio = L/12 ~ 10^4 ; killer-killer ratio = 2 (comparable)
+  Q=30  killers L, 2L with L ~ 10^12 ; core max = 12
+        killer/core scale ratio = L/12 ~ 10^11 ; killer-killer ratio = 2 (comparable)
+
+### how SMALL can a killer pair be and still kill every modulus in [15,Q]? ###
+  Q    min max(k1,k2) killing all of [15,Q]      example
+  18   271                                    (182,271)
+  20   1274                                   (161,1274)
+  22   1274                                   (881,1274)
+  24   > 4000 (none found)                    -
+  26   > 4000 (none found)                    -
+  28   > 4000 (none found)                    -
+DONE
