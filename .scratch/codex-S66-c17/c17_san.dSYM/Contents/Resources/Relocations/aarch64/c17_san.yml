@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '.scratch/codex-S66-c17/c17_san'
+relocations:     []
+...

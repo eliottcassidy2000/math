@@ -1,0 +1,35 @@
+scale-sixteen AP-centred Hamming-six frontier scout
+divisor grammar 1,2,4,8,16; literal states 16
+supports 924
+hereditary order words 5385
+hereditary labelled order contexts 4975740
+hereditary state words per support 14942208
+literal state-grammar FNV64 a25ff24dc14911c5
+hereditary labelled state contexts 13806600192
+scalar contexts 2540 on 404 supports; patterns 20
+scalar multiplicities n1,n2,n4,n8,n16 0,0,0,3,3:28 0,0,0,4,2:54 0,0,1,0,5:48 0,0,1,1,4:216 0,0,1,2,3:360 0,0,1,3,2:444 0,0,2,2,2:132 0,0,3,0,3:16 0,0,3,1,2:192 0,0,4,0,2:30 0,1,1,2,2:48 0,1,2,0,3:120 0,1,2,1,2:120 0,1,3,0,2:96 0,2,0,0,4:36 0,2,0,1,3:144 0,2,0,2,2:216 0,2,1,0,3:48 0,2,1,1,2:48 0,3,1,0,2:144
+contexts-per-support histogram 1:102 2:96 3:24 4:24 7:24 8:24 11:36 13:24 16:24 17:24 109:2
+scalar multiplication orbit-size histogram 2:1 6:1 12:33 (telemetry; no quotient)
+owner-local rows 15240; feasible rows 636
+feasible-owner/context histogram 0:2006 1:432 2:102
+maximum reachable sheet-union histogram 9:144 10:468 11:876 12:2316 13:4068 14:4740 15:1992 16:636
+minimum owner maximum/context histogram 9:120 10:462 11:336 12:720 13:886 14:16
+distinct owner max-union vectors 1210; vector FNV64 1be49d1ad3c21515
+owner-local contexts 0 on 0 supports; patterns 0
+owner-local multiplicities none
+owner-local literal unit words 0
+global replay complete 0; common-sheet survivors 0; survivor FNV64 cbf29ce484222325
+tournament pair observable exact ordered owner summaries ((feasible,max_i),(feasible,max_j)); all pair data reconstruct the terminal-faithful vector; switch is lexicographic sign with fixed support-coordinate tie path
+tournament fingerprints all 2540 transitive: score histogram 0,1,2,3,4,5; directed triangles 0; SCCs 6; Hamiltonian paths 1
+tournament tie-edge histogram 1:120 2:648 3:390 4:744 6:344 7:270 10:24
+tournament edge-flip histogram against tie path 0:47 1:43 2:115 3:209 4:387 5:384 6:510 7:360 8:256 9:151 10:48 11:25 12:4 14:1
+challenged vertices owner obligations preserve the terminal obstruction; sheet positions are faithful only inside one owner DP, while providers, residues, and divisor words destroy shared-unit incidence; the oriented tournament alone also loses deficit magnitudes
+local D16 mask table at owner one (units 1,3,5,7,9,11,13,15; ratios 1..12 in hex)
+  e=1: e00 300 180 e0 70 18 c 7 8003 c000 6000 3000
+  e=3: 821 420 8400 8210 4210 4008 108 2104 2084 1080 1002 42
+  e=5: 4802 12 90 2480 2401 9 48 1240 9200 8004 24 120
+  e=7: 2810 2040 8040 8102 502 408 1008 5020 40a0 81 201 204
+  e=9: a04 201 81 40a0 5020 1008 408 502 8102 8040 2040 2010
+  e=11: 920 24 8004 9200 1240 48 9 2401 2480 90 12 4002
+  e=13: 842 1002 1080 2084 2104 108 4008 4210 8210 8400 420 21
+  e=15: 3800 6000 c000 8003 7 c 18 70 e0 180 300 600

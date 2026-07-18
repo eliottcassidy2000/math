@@ -1,0 +1,34 @@
+scale-twenty AP-centred Hamming-six scalar frontier scout
+divisor grammar 1,2,4,5,10,20; literal states 20
+supports 924; hereditary order words 26961; labelled order contexts 24911964
+state words/support 56908800; raw labelled states 52583731200
+mask FNV64 2f21825c4e17e321; order FNV64 d945578b6015e84; state FNV64 853c1ff8f3d58fa5
+scalar contexts 12584 on 830 supports; multiplicity patterns 65; multiplicity FNV64 b60273a4a59e5d86; scalar-bank FNV64 6141390944657ae9
+scalar multiplicities n1,n2,n4,n5,n10,n20 0,0,0,0,4,2:78 0,0,0,1,1,4:24 0,0,0,1,3,2:168 0,0,0,2,0,4:36 0,0,1,0,0,5:72 0,0,1,0,1,4:240 0,0,1,0,2,3:240 0,0,1,0,3,2:360 0,0,1,0,4,1:480 0,0,1,1,0,4:24 0,0,1,1,1,3:96 0,0,1,1,2,2:96 0,0,1,1,3,1:624 0,0,1,2,2,1:432 0,0,1,3,1,1:336 0,0,1,4,0,1:180 0,0,2,0,2,2:72 0,0,2,0,3,1:120 0,0,2,0,4,0:18 0,0,2,1,2,1:96 0,0,2,2,1,1:432 0,0,2,2,2,0:120 0,0,2,3,0,1:288 0,0,2,3,1,0:72 0,0,2,4,0,0:18 0,0,3,0,0,3:16 0,0,3,0,1,2:204 0,0,3,0,3,0:148 0,0,3,1,0,2:480 0,0,3,1,1,1:144 0,0,3,1,2,0:216 0,0,3,2,0,1:96 0,0,3,2,1,0:96 0,0,4,0,0,2:30 0,0,4,0,1,1:60 0,0,4,0,2,0:24 0,1,1,1,2,1:48 0,1,1,2,1,1:192 0,1,1,3,0,1:48 0,1,2,0,1,2:48 0,1,2,0,3,0:48 0,1,2,1,0,2:504 0,1,2,1,1,1:96 0,1,2,1,2,0:288 0,1,2,2,0,1:96 0,1,2,2,1,0:96 0,1,3,0,0,2:96 0,1,3,0,1,1:192 0,2,0,0,0,4:36 0,2,0,0,1,3:144 0,2,0,0,2,2:216 0,2,0,1,0,3:144 0,2,0,1,1,2:96 0,2,0,2,0,2:96 0,2,1,0,1,2:144 0,2,1,0,2,1:48 0,2,1,1,0,2:240 0,2,1,1,1,1:192 0,2,1,2,0,1:48 0,3,0,0,1,2:324 0,3,0,1,0,2:1092 0,3,1,0,0,2:144 0,3,1,0,1,1:288 1,2,0,0,1,2:504 1,2,0,1,0,2:840
+contexts-per-support histogram 1:12 2:96 3:24 4:96 6:48 7:96 13:216 15:6 17:24 18:24 19:24 25:24 29:24 30:6 38:48 44:24 61:24 65:12 85:2
+multiplication orbit-size histogram 2:1 6:2 12:68 (telemetry; no quotient)
+capacity vectors 3941; ordered-vector FNV64 deeb0167bf8b89e7; row-capacity FNV64 990a5b2b2ba5c94d
+minimum scalar-slack histogram 0:11276 1:1152 2:156
+maximum scalar-slack histogram 0:96 1:1266 2:2358 3:1330 4:1336 5:1692 6:1968 7:474 8:336 9:24 10:1464 11:72 16:108 18:60
+tight-owner/context histogram 0:1308 1:1560 2:3384 3:4052 4:1860 5:324 6:96
+owner-local rows 75504; feasible rows 3720
+feasible-owner/context histogram 0:9632 1:2184 2:768
+maximum reachable sheet-union histogram 12:1320 13:2904 14:9720 15:15924 16:22800 17:12876 18:5700 19:540 20:3720
+minimum owner maximum/context histogram 12:1194 13:1422 14:4282 15:3748 16:1668 17:222 18:48
+distinct owner max-union vectors 4061; owner-profile FNV64 db14aac97cf1f251
+owner-local all-six contexts 0
+tournament pair observable exact ordered (feasible,max-union,capacity) owner summaries; lexicographic switch and coordinate tie Hamiltonian path
+tournament fingerprints all 12584 transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1
+tournament tie-edge histogram 0:1248 1:4272 2:3936 3:1602 4:1044 6:212 7:198 10:72
+tournament edge-flip histogram 0:72 1:170 2:357 3:655 4:1208 5:1689 6:2124 7:2025 8:1712 9:1234 10:719 11:413 12:143 13:50 14:13
+challenged vertices owner obligations preserve the terminal deficit through their feasibility/max-union vector and the scalar gate through capacities; the tournament loses thresholds and magnitudes, while provider, divisor, residue, isolated sheet, and wall-event vertices lose shared-unit incidence
+frontier verdict scalar-empty no; owner-local all-six empty yes; next exact obstruction none inside the common-scale Hamming-six face
+local D20 mask table at owner one (units 1,3,7,9,11,13,17,19; ratios 1..12 in hex)
+  e=1: f 80003 e0000 70000 1c000 e000 3800 1c00 700 380 e0 70
+  e=3: 1020c 8204 8102 4102 4081 2081 82040 81040 41020 40820 20810 20410
+  e=7: 24009 24800 920 124 90004 92000 2480 490 40012 48002 9200 1240
+  e=9: 14028 100a0 40280 40201 805 2804 a010 8050 20140 a0100 80402 1402
+  e=11: 140a 80402 a0100 20140 8050 a010 2804 805 40201 40280 100a0 14020
+  e=13: 1248 9200 48002 40012 490 2480 92000 90004 124 920 24800 24001
+  e=17: 20418 20810 40820 41020 81040 82040 2081 4081 4102 8102 8204 10204
+  e=19: 78 e0 380 700 1c00 3800 e000 1c000 70000 e0000 80003 7

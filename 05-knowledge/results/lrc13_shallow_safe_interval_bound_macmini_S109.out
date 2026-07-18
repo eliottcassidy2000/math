@@ -1,0 +1,42 @@
+========================================================================
+(1) CONSISTENCY: {1..12} tight => every w <= 2/(13 delta(A\w))
+========================================================================
+  w= 1: delta(A\w)=1/26    bound=2/(13d)=4    w<=bound: True
+  w= 2: delta(A\w)=1/52    bound=2/(13d)=8    w<=bound: True
+  w= 3: delta(A\w)=1/78    bound=2/(13d)=12   w<=bound: True
+  w= 4: delta(A\w)=1/104   bound=2/(13d)=16   w<=bound: True
+  w= 5: delta(A\w)=1/130   bound=2/(13d)=20   w<=bound: True
+  w= 6: delta(A\w)=1/156   bound=2/(13d)=24   w<=bound: True
+  w= 7: delta(A\w)=1/52    bound=2/(13d)=8    w<=bound: True
+  w= 8: delta(A\w)=2/143   bound=2/(13d)=11   w<=bound: True
+  w= 9: delta(A\w)=1/65    bound=2/(13d)=10   w<=bound: True
+  w=10: delta(A\w)=1/91    bound=2/(13d)=14   w<=bound: True
+  w=11: delta(A\w)=1/117   bound=2/(13d)=18   w<=bound: True
+  w=12: delta(A\w)=1/143   bound=2/(13d)=22   w<=bound: True
+  {1..12} consistent with the lemma: True
+
+========================================================================
+(3) UNIFORM single-coordinate winding exclusion (all k>=1)
+========================================================================
+  j= 1: delta_j=1/26    w-bound=4    -> excluded all k>=1 via delta-bound alone
+  j= 2: delta_j=1/52    w-bound=8    -> excluded all k>=1 via delta-bound alone
+  j= 3: delta_j=1/78    w-bound=12   -> excluded all k>=1 via delta-bound alone
+  j= 4: delta_j=1/104   w-bound=16   -> excluded all k>=1 via delta-bound alone
+  j= 5: delta_j=1/130   w-bound=20   -> excluded all k>=1 via delta-bound + exact k in [1] (all M>1/13: True)
+  j= 6: delta_j=1/156   w-bound=24   -> excluded all k>=1 via delta-bound + exact k in [1] (all M>1/13: True)
+  j= 7: delta_j=1/52    w-bound=8    -> excluded all k>=1 via delta-bound alone
+  j= 8: delta_j=2/143   w-bound=11   -> excluded all k>=1 via delta-bound alone
+  j= 9: delta_j=1/65    w-bound=10   -> excluded all k>=1 via delta-bound alone
+  j=10: delta_j=1/91    w-bound=14   -> excluded all k>=1 via delta-bound alone
+  j=11: delta_j=1/117   w-bound=18   -> excluded all k>=1 via delta-bound alone
+  j=12: delta_j=1/143   w-bound=22   -> excluded all k>=1 via delta-bound alone
+  => single-coordinate winding of {1..12} is UNIFORMLY excluded (all k): True
+
+========================================================================
+VERDICT
+========================================================================
+  LEMMA (A) PROVED (elementary tooth-covering); consistent with {1..12}.
+  Refines THM-759: delta(C)>=1/(78 max C) recovers a_12<=12 a_11; exact delta sharper.
+  Single-coordinate shallow winding EXCLUDED for ALL heights k>=1 (uniform),
+  extending THM-770's height-12 finite classification on this slice.
+  Residual: shallow tight beyond THM-770 needs >=2 coordinates wound high.

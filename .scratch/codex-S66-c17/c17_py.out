@@ -1,0 +1,18 @@
+scale-seventeen independent algebraic-CRT Python referee
+divisor grammar 1,17; literal states 17
+supports 924; hereditary order words 57; labelled order contexts 52668
+state words/support 24137472; raw labelled states 22303024128
+mask-table SHA256 469e954c1cffe3827414701864f3fb0c944883c085883c27fa0488737ee809dd
+order-grammar SHA256 c78fafe41717a9194f5f329036eee7689a3913d98d78b010df57cfc3af3e3144
+literal-state-grammar SHA256 9c0a8805ccee6f09b21e4979d176f89ee9100c337053b95b4522b52e70057dd4
+scalar contexts 2; all-D17; supports QR (1, 3, 4, 9, 10, 12) and NQR (2, 5, 6, 7, 8, 11)
+projective multiplicities 2,0,2,0,2,0 and 0,2,0,2,0,2; one multiplication orbit of size 2
+scalar-bank SHA256 74410e072b3341df3545ec0f023d3098fd822b40b52eb7fb65bb20c4bf352826
+owner-local rows 12; feasible 0; maximum-union histogram 16:12
+reachable-mask count histogram 38540:12
+maximum-mask count histogram 16:12
+missing-sheet counts among maximum masks 0:12 1:11 2:11 3:11 4:12 5:11 6:11 7:11 8:12 9:11 10:11 11:11 12:12 13:11 14:11 15:11 16:12
+owner-reachable-bank SHA256 7dc7010e6e75741a54b3e3722901d60fa6a3bc526bc4c81c55fe5d48c53f6040
+global literal unit fibres 0; common-sheet survivors 0
+tournament pair observable exact owner summaries; all fifteen pairs tie; coordinate Hamiltonian path gives two transitive completions with scores 0,1,2,3,4,5, cycles 0, SCCs 6, paths 1
+challenged vertices: signed projective classes classify scalar support; labelled owner maxima prove the terminal deficit; the oriented tournament and provider/residue/sheet quotients lose the absolute threshold

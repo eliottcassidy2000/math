@@ -1,0 +1,18 @@
+uniform prime-scale AP-centred Hamming-six scalar obstruction
+literal cardinality a_p(r)=#{-p<x<=p:x congruent p*r mod13}
+recurrence a_(p+13)(r)=a_p(r)+2: two added length-thirteen residue blocks; literal audit p=1..839, r=1..12
+B6 1,3,5,6,6,6,7,9,11,12,12,12
+B5 1,3,5,5,5,5,6,8,10,10,10,10
+B6 maximizer counts 462,84,7,6,56,252,462,84,7,6,56,252
+B5 maximizer counts 330,36,1,21,126,462,330,36,1,21,126,462
+base cardinality/bound FNV64 8a078ddec8902cc1
+D1 exclusion 10q+B5(s)<13q+s for q>=1; all-Dp obstruction 12q+B6(s)<13q+s for q>=3
+p17 anchor QR [1,3,4,9,10,12] NQR [2,5,6,7,8,11]; one multiplication orbit of size 2
+exceptional exact scans p23 924 supports empty; p29 924 supports empty
+THM860 audit primes 19..839 count 139; routes q>=3:134 low-bound:3 exceptional-scan:2
+full all-Dp scans primes19..839 plus p17 supports 129360; survivors beyond p17 0
+prime-list FNV64 1e008620107180af; support-scan FNV64 339ca4032c7ab2dd
+ratio tournament pair observable exact (a_s(r),a_s(u)); orient larger, ties along 1->2->...->12
+ratio tournament ties by s 55,39,31,31,39,55,55,39,31,31,39,55; flips by s 0,8,12,12,8,0,0,8,12,12,8,0
+ratio tournament fingerprints all twelve transitive: scores 0..11, cycles 0, SCCs 12, Hamiltonian paths 1; FNV64 9191074f3eae0065
+challenged vertices ratio weights preserve the uniform capacity bounds, support/owner incidence is restored for exceptional scans, and the oriented tournament alone loses weight magnitudes and the mandatory ratio-one constraint; sheet vertices arise only after scalar survival

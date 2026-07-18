@@ -1,0 +1,34 @@
+scale-seventeen AP-centred Hamming-six local deficit
+divisor grammar 1,17; literal states 17
+supports 924; hereditary order words 57; labelled order contexts 52668
+state words/support 24137472; raw labelled states 22303024128
+arithmetic audit earlier value 22304224128 is false: not divisible by 924; exact product is 22303024128
+mask-table FNV64 d7751aac7824587d; order-grammar FNV64 e5de68761e24680e; literal-state-grammar FNV64 a30487f2a4edede5
+scalar contexts 2; all-D17; supports QR [1,3,4,9,10,12] and NQR [2,5,6,7,8,11]
+scalar-bank FNV64 f70fa5a77389e62b; multiplication orbit size 2 (telemetry; no quotient)
+owner-local rows 12; feasible 0; maximum-union histogram 16:12
+reachable-mask count histogram 38540:12
+maximum-mask count histogram 16:12
+missing-sheet counts among maximum masks 0:12 1:11 2:11 3:11 4:12 5:11 6:11 7:11 8:12 9:11 10:11 11:11 12:12 13:11 14:11 15:11 16:12
+owner-reachable-bank FNV64 20e891b7358b525
+global literal unit fibres 0; common-sheet survivors 0
+tournament pair observable exact owner (feasible,max-union) summaries; all ties use coordinate path 0->1->2->3->4->5
+tournament fingerprints two transitive: scores 0,1,2,3,4,5; cycles 0; SCCs 6; Hamiltonian paths 1; ties 15:2; flips 0:2
+challenged vertices owner obligations with absolute maxima preserve the deficit; the oriented tournament forgets it, while providers, residues, divisor words, and isolated sheets destroy shared-unit incidence
+local D17 mask table at owner one (units 1..16; ratios 1..12 in hex)
+  e=1: 3800 c00 700 380 c0 70 38 c 7 10003 18000 c000
+  e=2: 3010 1008 80c c04 402 203 301 10100 18080 80c0 4040 4020
+  e=3: 2082 1002 1041 841 820 10420 10410 8010 8208 4208 4100 104
+  e=4: 2011 110 11100 11008 88 8880 8804 44 4440 4402 22 220
+  e=5: 12040 10200 1204 1024 8020 8102 902 810 4090 4081 401 408
+  e=6: 2480 90 8012 9002 1200 248 49 4001 4900 920 24 10004
+  e=7: 2108 8008 8420 421 1001 1084 4084 4200 10210 10810 840 42
+  e=8: a001 5 54 150 500 5400 15000 10002 2a a8 280 a00
+  e=9: 2a00 280 a8 2a 10002 15000 5400 500 150 54 5 8001
+  e=10: 2042 840 10810 10210 4200 4084 1084 1001 421 8420 8008 108
+  e=11: 12004 24 920 4900 4001 49 248 1200 9002 8012 90 480
+  e=12: 2408 401 4081 4090 810 902 8102 8020 1024 1204 10200 10040
+  e=13: 2220 22 4402 4440 44 8804 8880 88 11008 11100 110 11
+  e=14: 2104 4100 4208 8208 8010 10410 10420 820 841 1041 1002 82
+  e=15: 6020 4040 80c0 18080 10100 301 203 402 c04 80c 1008 1010
+  e=16: e000 18000 10003 7 c 38 70 c0 380 700 c00 1800

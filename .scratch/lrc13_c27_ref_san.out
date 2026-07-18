@@ -1,0 +1,27 @@
+scale=27 p=13 hamming=6 referee=literal-crt-plus-mod9-flag
+orders=(1,3,9,27) unit-counts=(1,2,6,18)
+hereditary-words=1909 weighted-states/support=380511756 labelled-support-order-contexts=1763916 unquotiented-exact-order-contexts=351592862544
+D1 ratio-cardinalities=(27,0,0,0,0,0,0,0,0,0,0,0) mod9-signature-counts=(1,1,1,1,1,1,1,1,1,1,1,1)
+D3 ratio-cardinalities=(9,0,0,9,9,0,0,9,9,0,0,0) mod9-signature-counts=(1,1,1,2,2,1,1,2,2,1,1,1)
+D9 ratio-cardinalities=(6,6,3,3,6,3,3,6,3,3,6,3) mod9-signature-counts=(6,6,6,2,6,6,6,6,2,6,6,6)
+D27 ratio-cardinalities=(5,4,4,4,4,4,4,4,4,4,4,4) mod9-signature-counts=(6,3,6,6,6,6,6,6,6,6,3,6)
+scalar-survivors=450 supports=84 multiplicities=(0,0,3,3):12 (0,0,4,2):18 (0,2,1,3):60 (0,2,2,2):294 (0,3,0,3):12 (0,3,1,2):36 (0,4,0,2):18
+scalar-owner-capacities=27:744 28:180 29:708 30:84 31:36 32:60 33:84 34:36 35:660 36:60 38:12 39:12 41:24
+multiplication-orbits=6:3 12:36
+normalized-owner-keys=225 D3:77 D9:66 D27:82
+exact-feasible-owners-per-row=0:336 1:96 4:18
+profile-feasible-owners=(0,0,3,3)={0:12} (0,0,4,2)={0:18} (0,2,1,3)={0:12 1:48} (0,2,2,2)={0:294} (0,3,0,3)={1:12} (0,3,1,2)={1:36} (0,4,0,2)={4:18}
+exact-maximum-by-owner-order=D3/20:24 D3/21:12 D3/23:24 D3/24:96 D3/25:24 D3/26:576 D3/27:168 D9/22:48 D9/23:24 D9/24:312 D9/25:396 D9/26:12 D27/20:96 D27/21:324 D27/22:144 D27/23:288 D27/24:120 D27/25:12
+flag-maximum-by-owner-order=D3/20:24 D3/21:12 D3/23:24 D3/24:96 D3/25:24 D3/26:576 D3/27:168 D9/22:48 D9/23:24 D9/24:288 D9/25:408 D9/26:24 D27/20:96 D27/21:276 D27/22:192 D27/23:288 D27/24:120 D27/26:12
+D27-profile-flag-bounds=(0,0,3,3)<=26 (0,0,4,2)<=22 (0,2,1,3)<=24 (0,2,2,2)<=24 (0,3,0,3)<=24 (0,3,1,2)<=22 (0,4,0,2)<=22
+D27-owner-obstruction=984/984 flag-infeasible; every-row-has-at-least-two-D27-owners; all-six-owner-row=0
+exact-reachable-mask-incidences=13598160 flag-equivalence-checks=2700
+owner-tournament exact-observable=(feasible,max-union,scalar-capacity,bank-size) flag-observable=(feasible,flag-score,scalar-capacity,state-count)
+owner-tournament tie-switch=coordinate-order scores=(0,1,2,3,4,5) triangles=0 SCCs=(1,1,1,1,1,1) Hamiltonian-paths=1 rows=450
+owner-tournament exact-ties=0:96 1:168 2:48 3:114 7:24 flag-ties=0:192 1:72 2:48 3:108 7:30 gauge-edge-flips=0:336 1:96 2:18
+owner-tournament natural-order-flips exact=0:10 1:9 2:21 3:34 4:40 5:46 6:79 7:47 8:30 9:48 10:34 11:16 12:20 13:11 14:4 15:1 flag=0:7 1:8 2:20 3:33 4:47 5:44 6:74 7:48 8:34 9:45 10:34 11:23 12:17 13:10 14:5 15:1
+alternate-carrier=9 mod9 sheet-fibres; lower-order masks are full-fibre hyperedges and D27 masks are transversal point-hyperedges; not naturally a tournament
+flag-preserves=owner-cover-feasibility-on-all-2700-survivor-owner-rows; destroys=within-fibre-offsets,unit-multiplicity,exact-maximum-union
+challenged-assumption=tournament vertices need not be runners or owners; the proof carrier is a colored 3-by-9 flag incidence system
+FNV64 crt-bases=e0d4632d539b417c literal-masks=eab742670675aca9 flag-signatures=790c83a0ae601182
+FNV64 grammar=336b580ae34a7de8 scalar=68af6c7e9dbabbf7 exact-owner-banks=d34e7104e056f5b4 flag-state-banks=feebaeb336f4171d

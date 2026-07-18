@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '.scratch/lrc13_c21_san'
+relocations:     []
+...
