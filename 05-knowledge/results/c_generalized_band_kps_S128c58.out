@@ -1,0 +1,32 @@
+### reach test: r=2 killers, core = 11-subset of {1..12}, spread D swept ###
+  mu M   D-range        tested  THM-1032(c=M)  c-general(U=M)  c-general(U=22)
+  2  12  [  1,  10]       260      260            260             260
+  2  12  [ 11,  24]       260        0            260             260
+  2  12  [ 25,  36]       260        0              0             260
+  2  12  [ 37,  72]       260        0              0              57
+  1  12  [  1,  11]       260      260            260             260
+  1  12  [ 12,  24]       260        0            260             260
+  1  12  [ 25,  36]       260        0              0               0
+  1  12  [ 37,  72]       260        0              0               0
+  1  11  [  1,  10]       260      260            260             260
+  1  11  [ 11,  22]       260        0            260             260
+  1  11  [ 23,  33]       260        0              0              61
+  1  11  [ 34,  66]       260        0              0               0
+
+### exhaustive: does c-general cover ALL D <= 2M ? (core-drop x D x v1) ###
+  tested 16874 ; c-general certified 16874 ; failures 0
+
+### sharpness: first D where c-general (U=M) fails, per core ###
+  drop=1   mu=2  M=12  2M=24   first failing D = 25
+  drop=2   mu=1  M=12  2M=24   first failing D = 25
+  drop=3   mu=1  M=12  2M=24   first failing D = 25
+  drop=4   mu=1  M=12  2M=24   first failing D = 25
+  drop=5   mu=1  M=12  2M=24   first failing D = 25
+  drop=6   mu=1  M=12  2M=24   first failing D = 25
+  drop=7   mu=1  M=12  2M=24   first failing D = 25
+  drop=8   mu=1  M=12  2M=24   first failing D = 25
+  drop=9   mu=1  M=12  2M=24   first failing D = 25
+  drop=10  mu=1  M=12  2M=24   first failing D = 25
+  drop=11  mu=1  M=12  2M=24   first failing D = 25
+  drop=12  mu=1  M=11  2M=22   first failing D = 23
+DONE
