@@ -1,0 +1,8 @@
+== TRAPPED-FAMILY MARGIN SAMPLE (40 trapped families found in 4073 tries) ==
+  min M over sample  = 0.19452 (margin over 1/14 = +0.12310)
+  worst family       = [25, 71, 76, 84, 103, 136, 174, 230, 234, 297, 306, 314, 343]
+  median M           = 0.24475
+  max M              = 0.30786
+  families within 1e-4 of 1/14: 0
+  ALL trapped samples have M > 1/14: True
+DONE

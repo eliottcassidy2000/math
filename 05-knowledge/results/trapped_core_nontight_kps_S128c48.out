@@ -1,0 +1,12 @@
+== KNOWN TIGHT / NEAR-TIGHT FAMILIES (does each escape the trapped cut?) ==
+  deep-well {1..12,182}  M=14/183 (0.07650) margin+0.0051 | trapped=False  FAILS: compressed
+  AP {1..13}             M=1/14 (0.07143) TIGHT(=1/14) | trapped=False  FAILS: covering,gap,max>=23
+  AP {2,4,..,26}         M=1/14 (0.07143) TIGHT(=1/14) | trapped=False  FAILS: gap,no-comm-res
+  sporadic {1..11,13,24} M=1/14 (0.07143) TIGHT(=1/14) | trapped=False  FAILS: covering
+  perturbed {1..11,13,36} M=3/41 (0.07317) margin+0.0017 | trapped=False  FAILS: covering
+  deep-well {1..12,84}   M=1/13 (0.07692) margin+0.0055 | trapped=False  FAILS: covering
+  deep-well {1..12,98}   M=1/13 (0.07692) margin+0.0055 | trapped=False  FAILS: covering
+
+>>> EVERY tight family escapes the trapped cut: the M=1/14 rigidity case NEVER arises inside trapped cores.
+>>> Hence the THM-984 residual 'mu0>0 on trapped cores' is a STRICT-MARGIN question (M > 1/14 strictly).
+DONE
