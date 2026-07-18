@@ -1,6 +1,6 @@
 # The resonance-fill profile: one lens that renders every face of LRC
 
-*boxeph-2026-07-17-S81. Synthesis of THM-996/997/998 (HYP-7305) with the fleet's
+*boxeph-2026-07-17-S81. Synthesis of THM-996/997/998 (HYP-7315) with the fleet's
 covering, density, census, and tight-locus work. Extends
 [[cuts-as-farey-geodesics-resonance-and-the-hyperoctahedral-metagraph]] and
 [[doubled-primes-as-the-parity-hinge-cycles-numbers-and-lrc-channels]].*

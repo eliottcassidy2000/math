@@ -118,3 +118,28 @@ the discrete shadow of boxeph's Lipschitz converter `μ₀ ≥ 2(M − 1/14)/v_m
 witness-side route to the double-threshold margin floor `trapped ⟹ M ≥ 1/7`.
 
 → THM-991, THM-987, THM-995 (VII/VIII), LEM-020, HYP-7245, HYP-7300, HYP-7305, MISTAKE-100.
+
+---
+
+## Addendum (boxeph-2026-07-17-S81, HYP-7315): independent-convergence proof + honest hypothesis
+
+boxeph-S81 reached Part II independently (verified n=3..22). Two contributions folded in here:
+
+**(a) A circle-packing proof of Part II, uniform in `n`** (an alternative to the block-injection
+of THM-991, arguably a cleaner parametric-`n` Lean target). Write `c := ⌈q/n⌉`, `r_i := (ip mod q)`,
+`r_0 := 0`. If `p` is live then for `0 ≤ j < i ≤ n-1`, `i-j ∈ {1,…,n-1}`, so
+`r_i − r_j ≡ r_{i-j} (mod q)` with `r_{i-j} ∈ [c, q-c]`; hence the `n` points `{r_0,…,r_{n-1}}` are
+pairwise circular-distance `≥ c`. The `n` cyclic gaps each `≥ c` sum to `q`, so `q ≥ n⌈q/n⌉ ≥ q`.
+Equality forces `n ∣ q`, equal spacing `= q/n`, and (via `r_0 = 0`) the subgroup `⟨q/n⟩` with unit
+generator `o = p/(q/n)`. ∎ The single inequality `q ≥ n⌈q/n⌉` + its equality case is the whole proof.
+
+**(b) The honest hypothesis is PRIMITIVE prefix, not "difference-closed".** Finite sets closed under
+nonzero differences are **exactly** the scaled prefixes `{d,2d,…,(n-1)d}` (min = gcd). Dilation by
+`d>1` FOLDS extra resonances — `2·{1,2,3}` at `1/4` goes live at `q=8,16,…` (not `q=4`) and the count
+doubles — so the clean law `liveCount = φ(n)·[n∣q]` needs `gcd(V)=1`. Part I's confinement (live ⟹
+`n∣q`) is dilation-robust; the *exact count* and *witness set* need primitivity.
+
+**Companions (boxeph-S81):** [[THM-997-resonant-dichotomy]] (the `q=n` slice as a units/zero-divisors
+partition) and [[THM-998-farey-circle-deep-law]] (the deep side: the `K`-deep set is a Farey/major-arc
+dissection, `b ≤ (n-1)/K`, which explains death-star's own two-circle theorem THM-985 as the `b∈{1,2}`
+slice). Reflection: `the-resonance-fill-profile-one-lens-for-every-lrc-face-boxeph-S81`.

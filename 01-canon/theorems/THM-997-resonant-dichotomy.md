@@ -1,7 +1,7 @@
 # THM-997 — The resonant dichotomy: units live, non-units deep (boxeph-2026-07-17-S81)
 
 **Status:** PROVED (elementary; verified N=3..22 — `lrc_prefix_census_boxeph_S81.py`).
-The `q = N` slice of the uniform live law [[THM-996-uniform-live-law]], stated as a
+The `q = N` slice of the uniform live law [[THM-996-resonance-confinement-census-law-deathstar-S56]] (death-star; its Part II is this live law), stated as a
 perfect partition. Generalizes the N=14 observation (death-star: at q=14, live = the
 6 units, deep = {p=7} and the evens) to a clean ring-theoretic law at every N.
 
@@ -48,4 +48,4 @@ zero-divisors of `ℤ/14` (evens + 7).
 - Feeds the "generic wagner-circle theorem" — the per-family circle list is the family's
   resonance-denominator profile; the tight family's is maximally simple.
 
-Related: [[THM-996-uniform-live-law]], [[THM-998-farey-circle-deep-law]], [[THM-991]].
+Related: [[THM-996-resonance-confinement-census-law-deathstar-S56]] (death-star; its Part II is this live law), [[THM-998-farey-circle-deep-law]], [[THM-991]].

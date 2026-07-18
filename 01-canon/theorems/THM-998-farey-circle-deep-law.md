@@ -51,8 +51,8 @@ of width `B := ⌊(q-1)/(NK)⌋` → `2B`. For each `b ≥ 2`: `φ(b)` central a
     non-empty → no empty center among small `b` → the deep-free set retreats to genuine
     minor arcs → genuine harmonic analysis. This is the LRC(14) crux, located.
 - **Live witnesses = centers of empty resonance circles.** The tight family's only empty
-  small circles are at denominator exactly `N` (units) — [[THM-996-uniform-live-law]],
+  small circles are at denominator exactly `N` (units) — [[THM-996-resonance-confinement-census-law-deathstar-S56]] (death-star; its Part II is this live law),
   [[THM-997-resonant-dichotomy]] — which is why it is the hardest (tightest) equality case.
 
-Related: [[THM-985]], [[THM-987]] (N=14 two-circle, death-star), [[THM-996-uniform-live-law]],
-[[THM-997-resonant-dichotomy]], HYP-7305.
+Related: [[THM-985]], [[THM-987]] (N=14 two-circle, death-star), [[THM-996-resonance-confinement-census-law-deathstar-S56]] (death-star; its Part II is this live law),
+[[THM-997-resonant-dichotomy]], HYP-7315.
