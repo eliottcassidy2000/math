@@ -1473,3 +1473,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `divisibility_law_opus_S374.out` | [STORED] | THM-1105: min-den = q0 in 96.8%; 0/454 failures at q0<=14 vs 34.8% at q0>14; excess hunt to 19. | (self) |
 | `extended_lemma_false_opus_S375.out` | [STORED] | THM-1110: explicit counterexample to the extended sieve lemma at q=15; |W_q|=1 iff q<=14. | (self) |
 | `blocking_cost_opus_S375.out` | [STORED] | THM-1110: blocking cost ceil(phi/k_q) per modulus; counting theorem fires for s<=11 (misses LRC(14) by 2). | (self) |
+| `blocking_tradeoff_opus_S376.out` | [STORED] | THM-1115: uncovered measure independent of q0; lcm families BELOW typical -- trade-off refuted. | (self) |
+| `measure_gap_opus_S376.out` | [STORED] | THM-1115: no measure gap (continuous descent to 0) + second tight family {1..11,13,24}. | (self) |

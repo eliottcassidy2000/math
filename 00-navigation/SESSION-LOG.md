@@ -1,3 +1,39 @@
+## opus-2026-07-17-S376 -- THM-1115 THE SIMULTANEOUS-BLOCKING TRADE-OFF IS REFUTED (uncovered measure is independent of q0; the maximally-blocking lcm families sit BELOW typical, opposite to my prediction) + NO MEASURE GAP above the tight family + A SECOND TIGHT FAMILY {1,...,11,13,24}, uncovered exactly 0, not a dilate (HYP-7590)
+
+Owner: work the simultaneous blocking constraint. I had a specific tension in mind and
+it turned out not to exist, with the sign of my prediction wrong.
+THE HYPOTHESIS: blocking many moduli forces speeds divisible by many things, hence large
+and highly structured; but a large speed has a very fine comb, close to equidistributed
+and therefore close to INDEPENDENT of the others, and independence is the BEST case for
+loneliness. So the adversary should have to buy blocking with measure.
+REFUTED. Uncovered measure is independent of q0 -- minimum 0.108-0.122 across q0 = 4..20,
+medians ~0.13 throughout, no trend at all. And the maximally-blocking families (one speed
+equal to lcm(1..Q)) give 0.0989, 0.1066, 0.1070, 0.1068 -- BELOW the typical 0.13 rather
+than above it, the opposite sign. Blocking level and uncovered measure are essentially
+INDEPENDENT structures, so there is no conservation law here to exploit.
+NO MEASURE GAP either. If uncovered were either 0 or >= c > 0, the tight family would be
+isolated and everything else robustly lonely -- that would have been a strong theorem.
+Single-swap perturbations of {1,...,13} descend continuously: 0.00102, 0.00275, 0.00275,
+0.00364, and adversarial minimisation independently reached 0.0632. The tight locus is a
+LIMIT POINT, not isolated.
+A SECOND TIGHT FAMILY, which the perturbation sweep turned up and I verified in exact
+rational arithmetic: V = {1,2,3,4,5,6,7,8,9,10,11,13,24} has uncovered EXACTLY 0 (the
+union of danger sets is the single component [0,1]), gcd 1, and is NOT a dilate of
+{1,...,13} and not an AP. Its lonely set is {1,3,5,9,11,13}/14 -- precisely the same six
+points as the classical tight family -- with min||vt|| = 1/14 exactly.
+THE MECHANISM is clean: at t = p/14 with gcd(p,14) = 1, ||v p/14|| >= 1/14 iff v is not
+0 mod 14. So EVERY family with no speed divisible by 14 is lonely at p/14 -- that is just
+the classical sieve at q = 14 -- and 24 = 10 mod 14 keeps the residues clear. Tightness
+is therefore not about WHERE the lonely points are, which for these families is always
+p/14, but about whether anything ELSE survives.
+SCOPE NOTE: this does not contradict THM-1105, which classified tight ARITHMETIC
+PROGRESSIONS as exactly the dilates k*{1,...,13} -- V is not an AP. It corrects the
+natural over-reading of that result: tight families in general are not just the dilates,
+and I have amended THM-1105 to say so.
+FILES: THM-1115, THM-1105 scoped, 2 scripts + outs, HYP-7590. opus; S376.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.64) -- THM-1102: r=6 max T computed FIRST, and the enumeration wall located (owner brief: run the r=6 finite horn, computing max T first). The bound came first as instructed, and the finite horn then turned out to be infeasible -- which is the session's real result. (I) MAX T, COMPUTED FIRST AND WINDOW-CHECKED. At r=5 I had set the bound from max k_removed and it was wrong; the bound is set by max T, since the last killer is certified by the measure horn only once it exceeds T. So this time T came first. Over all 792 seven-speed cores, scanning every quintuple of removed killers in a width-16 window: max R = 1.85794, at core [1,2,4,7,9,11,12] with killers (158,160,162,164,166) and T = 308.4; max T over the R >= 1 region is 308.4, giving KB = 333. Roughly 41,000 quintuples have R >= 1 and the largest killer among them is 172. The worst case sits at offset 9 inside a window of width 16 -- comfortably interior, so the window is not truncating the answer, and I now run that interiority check explicitly rather than assuming it. Both chunks (cores 0-300 and 300-792) were run to a printed summary; my first attempt at a single 792-core run was killed mid-way at core 300 with max T still RISING (129 -> 225 -> 308), and I did not use those numbers, because a partial scan cannot set a bound. (II) THE R-LADDER, extended: 0.51852 (r=2) -> 0.73375 (r=3) -> 0.98453 (r=4) -> 1.28495 (r=5) -> 1.85794 (r=6). (III) THE ENUMERATION WALL. Last session I predicted r=6 would be where enumeration becomes the binding constraint rather than the mathematics. It is, and now it is measured rather than guessed: at KB = 333 roughly 3.64e12 sextuples pass the covering-necessary condition -- about 140 days of compute, and 13,783 times the r=5 count (r=4 was 1.43e8 in ~25 min, r=5 was 2.64e8 in ~9 min). The prune that made r=4 and r=5 possible has stopped working, for a structural reason rather than an incidental one: a sextuple can only be uncertified if its six kill-sets COVER the core's safe (q,a) set, which requires sum frac >= 1 -- but with SIX killers and a mean kill-fraction of about 0.13, the sum already sits at about 0.78 with a 6-9% tail, so the condition discards only about 92% of sextuples where at r=4 and r=5 it discarded well over 99%. The prune's power comes from needing a LARGE deviation above the mean; as r grows the required deviation shrinks toward the mean and the prune dissolves. (IV) A CORRECTION TO MY OWN EARLIER STATEMENTS. I wrote in THM-1051 and repeated in THM-1093 that the method 'dies at r >= 7 because the union bound needs 7 - r > 0'. That describes the SUPERSEDED crude formulation, in which all r killers were union-bounded together. The current horn removes r-1 killers EXACTLY and bounds only the last, so r appears nowhere in the estimate -- the threshold is 1/(3L) regardless of r, exactly as I noted in THM-1061 and then forgot two sessions later. There is no structural r-cap. The wall at r=6 is COMPUTATIONAL, not mathematical, and that distinction matters for what to try next. (V) STATUS: r = 2, 3, 4, 5 are closed; r = 6 is OPEN, with max T and KB known, the measure horn's failure region mapped, and the finite horn infeasible by this enumeration. I make no claim that r=6 is closed.
 
 Prompt (owner): run the r=6 finite horn, computing max T first

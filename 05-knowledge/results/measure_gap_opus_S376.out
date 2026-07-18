@@ -1,0 +1,30 @@
+(4) PERTURBING THE TIGHT FAMILY {1,...,13}
+    family                                    uncovered
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] 0.00000000   <- TIGHT
+    swap 13->14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14] 0.02389713
+    swap 13->15: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15] 0.02933931
+    swap 13->16: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16] 0.03112503
+    swap 13->20: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20] 0.03308081
+    swap 13->26: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26] 0.00549451
+    swap 12->14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] 0.01215927
+    swap  1->14: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] 0.06122449
+    swap  1->15: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15] 0.05238095
+    swap  7->14: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14] 0.02267217
+
+(5) SCALED PERTURBATIONS -- k*{1..13} with one speed nudged
+    2*{1..13} itself: 0.00000000
+      last speed 26->27: uncovered = 0.02777091
+      last speed 26->25: uncovered = 0.03052979
+      last speed 26->28: uncovered = 0.02389713
+    3*{1..13} itself: 0.00000000
+      last speed 39->40: uncovered = 0.02886690
+      last speed 39->38: uncovered = 0.02962574
+      last speed 39->41: uncovered = 0.02750388
+
+(6) VERDICT ON THE GAP
+    smallest uncovered among single-swap perturbations: 0.00000000
+      (swap 12 -> 24)
+    next few: ['0.001020', '0.002747', '0.002747', '0.003643']
+
+    if these descend continuously toward 0, there is NO gap and the
+    tight family is a limit point, not an isolated one.

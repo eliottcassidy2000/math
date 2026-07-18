@@ -1,0 +1,31 @@
+(1) UNCOVERED MEASURE vs q0 -- does blocking more moduli cost measure?
+    q0   n    min uncovered   median   max
+      4   12   0.121650      0.132136  0.142756
+      5   23   0.118849      0.131386  0.148421
+      6   24   0.116234      0.130309  0.144301
+      7   43   0.111126      0.134816  0.153833
+      8   51   0.108245      0.133288  0.152846
+      9   42   0.115897      0.134780  0.151097
+     10   44   0.108995      0.132796  0.155380
+     11   45   0.114114      0.130531  0.147638
+     12   29   0.116747      0.128862  0.142980
+     13   29   0.119089      0.132153  0.156351
+     14   11   0.115038      0.136108  0.152551
+     15   15   0.119981      0.126607  0.142706
+     16   15   0.111269      0.129369  0.139956
+     17    6   0.119360      0.131819  0.133468
+     18    3   0.120952      0.121142  0.124024
+     19    5   0.117935      0.133728  0.150084
+     20    3   0.114851      0.117121  0.123339
+
+(2) THE lcm FAMILIES -- maximal blocking, what does it cost them?
+    Q=  6  lcm=     60  q0=   7  uncovered = 0.098852
+    Q=  8  lcm=    840  q0=   9  uncovered = 0.106613
+    Q= 10  lcm=   2520  q0=  16  uncovered = 0.107036
+    Q= 12  lcm=  27720  q0=  16  uncovered = 0.106756
+
+(3) ADVERSARIAL MINIMISATION of uncovered measure over PRIMITIVE families
+    (the tight family {1..13} gives 0; is it isolated?)
+    minimum uncovered found: 0.06316930
+      V = [2, 6, 7, 16, 20, 22, 46, 52, 54, 62, 84, 106, 109]
+      q0 = 15

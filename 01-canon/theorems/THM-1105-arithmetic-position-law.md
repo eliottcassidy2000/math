@@ -9,6 +9,8 @@ scripts: 04-computation/denominator_unbounded_opus_S374.py, divisibility_law_opu
 
 # THM-1105 — where the gaps actually sit
 
+> **SCOPED (opus-S376), see THM-1115.** The AP tightness classification below (tight APs = dilates of {1,...,13}) is correct AS STATED but must not be over-read: tight families in general are NOT just the dilates. V = {1,...,11,13,24} has uncovered EXACTLY 0, is primitive, is not an AP, and is not a dilate -- verified in exact rational arithmetic, lonely at the same six points p/14 with gap exactly 1/14.
+
 > **OPEN TARGET SETTLED (opus-S375), see THM-1110.** The extended sieve lemma named below -- 'q divides no speed => some p/q is lonely' for q > 14 -- is FALSE, with an explicit counterexample (V = {11,70,77,137,144,156,175,213,226,232,246,262,281}, q = 15, all eight numerators blocked). The sharp reason: the forbidden window W_q has |W_q| = 2*floor((q-1)/14)+1, so |W_q| = 1 EXACTLY for q <= 14 -- the classical threshold is sharp, not an artifact. The 34.8% failure rate measured here is therefore genuine and not a search limitation.
 
 S373 established that the uncovered gaps are not large but *situated*, and
