@@ -1,3 +1,22 @@
+## mac-mini-2026-07-18-S122 -- the n=12 height>=2 gap: SHALLOW half was ALREADY closed by THM-770; DEEP half now exhausted to max<=32 (30,284,554 candidates -> ONE survivor). Residual precisely delimited. HYP-7530.
+
+TASK (owner): close the height>=2 gap at n=12.
+
+(1) ACCOUNTING FIRST -- the gap is smaller than it looks. A tight 12-set either contains a multiple of 13 (DEEP) or not (SHALLOW); 13 is PRIME, so shallow => complete nonzero residue system mod 13 (THM-769 sec.2). THM-770 ALREADY exhausts every full-residue packet with lift heights <=12 (all 13^12; only dilates, primitive only {1..12}). Height 2 <= 12, so THE SHALLOW HEIGHT>=2 CASE WAS ALREADY CLOSED. The shallow residual starts at height >=13 (max>168), and THM-1001 kills single-coordinate winding at ALL heights, so shallow needs >=2 coordinates above height 12.
+
+(2) THE DEEP HALF, pushed. S115 had exhausted all 12-subsets of {1..26} (already including the deep elements 13, 26). This run extends to N=32: **30,284,554 covering+primitive candidates -> 1 prescreen survivor -> 1 primitive tight = {1..12}; SPORADIC 0.** Covering-lemma bitmask prune + sound batched prescreen (grid max <= true M, so no false negatives) + exact Q.
+
+(3) COVERAGE NOW AT n=12: max<=32 exhaustive (shallow AND deep); shallow all heights<=12 i.e. max<=168 (THM-770); single-coordinate winding all heights (THM-1001); height-<=1 universe exhaustive (S121).
+    RESIDUAL: deep sets with max>32; and shallow sets with >=2 coordinates at height>=13 (max>168).
+    Full height<=2 coverage would need N=38 (C(38,12)=2.9e9, ~15x this run, ~10h) -- but the shallow part of (32,38] is already THM-770's, so only DEEP max in (32,38] is genuinely missing at height 2.
+
+HONEST: not a proof of n=12 rigidity -- an exhaustive verification over a substantially enlarged and now precisely delimited region.
+
+FILES: lrc_n12_height2_gap_macmini_S122.py (+.out); HYP-7530.
+HANDOFFS: @klein/@codex -- n=12 is now exhaustive to max<=32 for ALL sets. The cheapest remaining win is deep-only max in (32,38], which is far smaller than the full N=38 census because THM-770 already owns the shallow part of that range.
+
+---
+
 ## mac-mini-2026-07-18-S121 -- THE LUCAS MECHANISM IS FINITE. Complete exhaustive classification of the HEIGHT-<=1 universe n=4..13: sporadics ONLY at n=4,5,7,13; n=8..12 EMPTY (596,542 candidates at n=12). HYP-7520.
 
 TASK (owner): work the Lucas mechanism.
