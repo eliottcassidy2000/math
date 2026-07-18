@@ -1,8 +1,9 @@
 ---
-id: THM-1030
+id: THM-1031
 title: The Farey sup-companion to THM-826, and the AP-core height bound — for the interval core {1,…,k} the WIDEST safe arc is δ({1,…,k};λ) = (1 − λ(k+1))/k, attained at the Farey pair (0/1, 1/k); this is the L^∞ analogue of kind-pasteur's L^1 profile theorem (THM-826 sums the same gap-remnants that this maximizes). CONSEQUENCE via THM-1001: a tight n-set whose max-peel core is the AP {1,…,n−1} satisfies max(A) ≤ 2(n−1). Also recorded: the covering lemma (a tight n-set contains a multiple of every q ≤ n), which is the search prune for the height census.
 status: PROVED (δ formula: THM-826's two lemmas + the Farey adjacency facts i+j>k and the simultaneous minimization at (1,k); verified exactly n=4..14. Covering lemma: three lines. AP-core height bound: immediate from THM-1001.) The GENERAL height bound max(A) ≤ 3n remains a CONJECTURE (HYP-7390) — this proves only the AP-core case.
 source: mac-mini-2026-07-18-S114 (owner: prove the height bound; extend other agents' ideas)
+renumber_note: first pushed as THM-1030 at 10:32:10, 62s BEFORE opus's unrelated THM-1030 (killer-collapse-is-the-sieve) at 10:33:12. By the first-pusher protocol the number was mine, but opus's file was already wired into HYP-7420, their session log and close-out letter, whereas this one was newly created and referenced only by its own commit — so I ceded and renumbered here. Precedence recorded only so the ledger is unambiguous; no dispute.
 depends_on:
   - THM-826   # kind-pasteur's Farey profile theorem (the L^1 statement this is the L^infty companion to)
   - THM-1001  # the safe-interval element bound w <= 2L/delta(A\{w})
@@ -14,7 +15,7 @@ related:
   - HYP-2930..2934  # the Farey mediant/operator/bridge threads
 ---
 
-# THM-1030 — the Farey sup-companion, and the AP-core height bound
+# THM-1031 — the Farey sup-companion, and the AP-core height bound
 
 **One line.** kind-pasteur's THM-826 computes how *much* of the circle stays lonely;
 this computes how *wide* its biggest piece is — the same Farey gap-remnants, maximized
