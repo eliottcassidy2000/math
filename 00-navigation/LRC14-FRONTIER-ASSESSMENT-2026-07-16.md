@@ -20,8 +20,8 @@ family; this is not yet proved.  The q≤25 shortcut remains false, and uniform
 
 On the finite AP-centred Hamming-six side, THM-982 independently closes common
 scale eighteen, and THM-983 uniformly removes every prime common scale at
-least nineteen.  A frozen primary THM-986 certificate also closes scale twenty
-at the owner-local gate, pending an independent referee.  Across scales
+least nineteen.  THM-986 independently closes scale twenty at the owner-local
+gate.  Across scales
 fourteen through twenty, the stable object is not a runner tournament or even
 scalar support scarcity: it is the labelled vector of owner-projection debts.
 Prime scales instead die one layer earlier on a weighted ratio-capacity

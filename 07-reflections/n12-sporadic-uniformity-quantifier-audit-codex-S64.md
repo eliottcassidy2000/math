@@ -80,9 +80,9 @@ faces:
    scale fifteen has at most four feasible owners in any scalar row, and scale
    sixteen has at most two; scale seventeen has no locally feasible owner in
    either surviving quadratic row; and scale eighteen has at most four.
-   THM-983 separately excludes every prime scale `p>=19`, while THM-986 has a
-   primary (not yet independently replayed) at-most-two-owner certificate for
-   `c=20`.  This still leaves the other composite scales, the finite ramified H5
+   THM-983 separately excludes every prime scale `p>=19`, while THM-986 gives an
+   independently replayed at-most-two-owner certificate for `c=20`.  This still
+   leaves the other composite scales beginning at `c=21`, the finite ramified H5
    metric bank, radius-seven and higher correlated component languages,
    non-AP-centred/deep two-sheet packets, shell-five transport, dyadic/collar
    residuals, and higher sheets.
@@ -182,7 +182,7 @@ lossy pair shadows is the underlying object.
 | safe components and danger combs | component--comb incidence / overlap debt | the exact completion predicate `G_P subset D_w` and labelled future action | pairwise incidence alone loses higher overlap and continuation state |
 | proof obligations / prime-power cuts | which relative-lcm cut is tighter | finite ramification and hereditary capacity failures | literal endpoint geometry and metric erosion |
 | projective residue classes | zero intersection of owner-obligation sets after a sign-section gauge | the scale-ten `C6` of incompatibilities and triangular-prism nerve | raw runner labels, literal witness identities, and higher intersection multiplicities |
-| owner-feasibility subsets / maximum-union vectors | rank owners by local feasibility and sheet-union size; tie path by owner label | the pre-nerve scale-fourteen through eighteen obstruction (and provisional scale twenty), including absolute missing-sheet debt | the resulting transitive tournament forgets the coverage threshold and how many owners are impossible |
+| owner-feasibility subsets / maximum-union vectors | rank owners by local feasibility and sheet-union size; tie path by owner label | the pre-nerve scale-fourteen through eighteen and scale-twenty obstructions, including absolute missing-sheet debt | the resulting transitive tournament forgets the coverage threshold and how many owners are impossible |
 | boundary events / atomic cells | first wall crossed, owner, slack, and remaining rays | the full finite recursive predicate when all labels are retained | quotienting to an unlabelled tournament loses continuation equivalence |
 
 For any chosen pair gauge, deterministic tie-breaking supplies a Hamiltonian

@@ -1,0 +1,29 @@
+scale-twenty independent algebraic-CRT Python referee
+divisor grammar 1,2,4,5,10,20; literal states 20; supports 924
+hereditary order words 26961; state words/support 56908800; raw 52583731200
+mask-table SHA256 db45c23efceded1efcfe72556ab64337ecc96c016ad5427caf3a28cad02b7892
+order-grammar SHA256 788eab466cbe0b5f2b0baee84bcb259357341af8c280426bce39b45b7679620e
+literal-state-grammar SHA256 e5fcb44c7c1a0100505ce672ff590fe671774850ab666573b46cb090c149f6f8
+scalar contexts 12584 on 830 supports; multiplicity patterns 65
+scalar-multiplicity SHA256 362f3f85efa803f064dba65056f81b39ac50e94de39ceeac352b8afd77b1d6e6
+all-support contexts histogram 0:94 1:12 2:96 3:24 4:96 6:48 7:96 13:216 15:6 17:24 18:24 19:24 25:24 29:24 30:6 38:48 44:24 61:24 65:12 85:2
+multiplication orbit-size histogram 2:1 6:2 12:68
+multiplication orbit (size,contexts/support) histogram (2, 85):1 (6, 15):1 (6, 30):1 (12, 1):1 (12, 2):8 (12, 3):2 (12, 4):8 (12, 6):4 (12, 7):8 (12, 13):18 (12, 17):2 (12, 18):2 (12, 19):2 (12, 25):2 (12, 29):2 (12, 38):4 (12, 44):2 (12, 61):2 (12, 65):1
+scalar-bank SHA256 68aab474423d01352a20bf5a1c769634e9bbfd9bb030845d0c04972f31648167
+owner rows 75504; feasible 3720
+feasible-owner/context histogram 0:9632 1:2184 2:768
+maximum-union histogram 12:1320 13:2904 14:9720 15:15924 16:22800 17:12876 18:5700 19:540 20:3720
+minimum-of-owner-maxima histogram 12:1194 13:1422 14:4282 15:3748 16:1668 17:222 18:48
+distinct owner maximum vectors 4061; owner-reachable-bank SHA256 16af5ce1ce6743d7ca5dcd5cdd349776df3cfe3b00a23b36370e394952888dc4
+exact reachable masks are hashed in sorted order for every owner row; owner-local all-six contexts 0; hence global literal unit fibres 0
+tournament vertices owner obligations; pair observable exact (feasible,maximum,reachable-count,maximum-mask-count) summaries; lexicographic switch, coordinate tie Hamiltonian path
+tournament tie-edge histogram 0:2112 1:7272 2:2796 3:300 4:24 6:32 7:48
+tournament edge-flip histogram 0:34 1:91 2:237 3:472 4:955 5:1430 6:2151 7:2294 8:1899 9:1418 10:805 11:461 12:217 13:88 14:32
+tournament aggregate score histogram 0:12584 1:12584 2:12584 3:12584 4:12584 5:12584
+tournament score vectors 710; score-vector SHA256 73eaa91302f457d399b83966da894a03c1457fd406bc3a4d5207eb0bf50eb6f3
+tournament directed-cycle (triangle) histogram 0:12584
+tournament SCC-size histogram (1, 1, 1, 1, 1, 1):12584
+tournament Hamiltonian-path-count histogram 1:12584
+preserved audit: the immutable owner banks preserve each FULL-mask predicate and maximum deficit; retained summaries preserve their feasibility, maximum, and reachability-count ordering
+lost audit: the oriented tournament discards absolute values, exact masks, sheet identities, unit witnesses, and simultaneous witness compatibility, so it cannot prove the all-owner LRC predicate
+challenged vertex assumption: owners/proof obligations were selected; providers, gaps, fixed sections and boundaries, wall events, residues, cover arcs, Fourier modes, and matroid circuits lose the labelled owner-local terminal predicate

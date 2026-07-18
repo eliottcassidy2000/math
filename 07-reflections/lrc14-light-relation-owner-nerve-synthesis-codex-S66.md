@@ -83,7 +83,7 @@ With that convention, the exact scale sequence is:
 | `17` | alternating signed-projective support classes, then owner-local masks | THM-981: scalar capacity leaves the QR/NQR rows; all twelve owner maxima are exactly sixteen of seventeen sheets |
 | `18` | labelled owner-feasibility subset and maximum-union vector | THM-982: 13,098 scalar rows have 0, 1, 2, or 4 feasible owners, so at least two owners fail |
 | prime `p>=19` | weighted ratio-capacity digraph before any sheet nerve | THM-983: residue-block recurrence plus two exceptional support scans kills scalar capacity uniformly |
-| `20` | labelled capacity and owner-feasibility/max-union vectors | THM-986 claim: 12,584 scalar rows have 0, 1, or 2 feasible owners; independent replay is pending |
+| `20` | labelled capacity and owner-feasibility/max-union vectors | THM-986: 12,584 scalar rows have 0, 1, or 2 feasible owners, so at least four owners fail |
 
 The carrier changes because each quotient is legal only after checking which
 predicate it preserves.  At scale ten, projectivization is legal because the
@@ -152,8 +152,8 @@ and 13,098 scalar rows survive, yet no row has more than four nonempty owner
 projections.  Scale twenty's primary census strengthens the same phenomenon
 to at most two owners despite 830 of 924 supports surviving the scalar gate.
 This is evidence that the robust quantity is **projection debt**, not scarcity
-of scalar supports.  The scale-twenty statement remains a claim until its
-independent referee lands.
+of scalar supports.  The independent c=20 referee strengthens the audit by
+hashing every sorted reachable-mask bank rather than only its maximum.
 
 Prime scales expose a different earliest carrier.  THM-983 never needs sheet
 incidence: `a_(p+13)(r)=a_p(r)+2` turns the problem into weighted ratio
@@ -183,7 +183,7 @@ is necessary but not sufficient for one global unit word: it tests the six
 owner projections separately and deliberately forgets covariance between
 them.  If some owner is absent from `F(sigma)`, however, the global fibre is
 immediately empty.  This is exactly what closes scales fourteen through
-eighteen, and is the claimed scale-twenty obstruction.
+eighteen and twenty.
 
 Only after all projections are nonempty should one form the global product
 `U_sigma` of covariant unit words and the inverse-image obligations
@@ -288,7 +288,7 @@ claim that such an order has already been proved.
 2. Extend THM-972 from sum triples to a circuit-indexed counting lemma for
    all primitive weight-at-most-fourteen relations.
 3. Compute `L_14(v)` and its circuit incidence on the eliminated
-   `c=14,15,16,17,18` scalar banks and the provisional `c=20` bank; use circuit rank to
+   `c=14,15,16,17,18,20` scalar banks; use circuit rank to
    choose algebraic versus analytic dispatch before any metric recursion.
 4. Instrument the existing metric insertion trees with the proposed state and
    search for an actual decreasing transition statistic.

@@ -299,9 +299,9 @@ of the `n=12` sporadic tight branch also remains open: proper AP-centred H6
 faces are certified through scale eighteen (scale thirteen is primitive-
 impossible).  THM-982's scale-eighteen owner deficit now has independent C++
 and Python exact replay, and THM-983 uniformly excludes every prime common
-scale `p>=19`.  THM-986's composite scale-twenty owner deficit has a frozen
-primary certificate but still awaits its independent referee; the remaining
-composite scales, ramified H5, non-AP/deep, and higher-sheet branches therefore
+scale `p>=19`.  THM-986's composite scale-twenty owner deficit now has
+independent C++ and Python exact replay; the remaining composite scales from
+`c=21`, ramified H5, non-AP/deep, and higher-sheet branches therefore
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
