@@ -9,6 +9,8 @@ scripts: 04-computation/dense_core_169_opus_S356.py -> 05-knowledge/results/dens
 
 # THM-1021 — why the dense core resists the wall bound
 
+> **ANSWERED (opus-S357) by THM-1025.** The prediction at the end of this file -- that closing the dense core needs a floor which SEES the correlation rather than approximating it away -- is exactly right, and the sawtooth supplies it: rho >= 1/49 - g^2/(4ab) from THM-965's fold bound, sharp precisely when ab is large (the comparable regime), complementary to THM-1012's b >> a. With dilation invariance and a 15-pair finite table the floor exists in EVERY regime, and the comparable-7-block floor sums are positive 400/400 where THM-1012's were <= 0 on all 400. This file's negative stands as stated -- the INDEPENDENCE bound really does fail there -- but the regime is no longer open.
+
 **What the wall bound does close.** `seven_comb_wall` needs only a POSITIVE
 pair-floor sum, and S350's containment floor 2λ/b is positive
 unconditionally. So any isolated 7-comparable block at λ = 1/14 yields a

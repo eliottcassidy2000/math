@@ -1,0 +1,21 @@
+(1) THE SAWTOOTH FLOOR  mu >= 1/49 - g^2/(4ab):
+    4000 pairs (ratio <= 13): violations = 0
+
+(2) DILATION INVARIANCE  rho(ga, gb) = rho(a, b):
+    300 (a,b,g) triples: failures = 0
+
+(3) THE PRIMITIVE THRESHOLD.  After gcd reduction the floor is
+    1/49 - 1/(4a'b'), POSITIVE iff a'b' > 49/4 = 12.25, i.e. a'b' >= 13.
+    So only finitely many primitive pairs need a direct check:
+    primitive pairs with a'b' <= 12: 15 of them
+    all have rho > 0; the minimum over them is rho(1, 12) = 1/84 = 0.011905
+
+(4) THE COMBINED FLOOR on comparable 7-blocks (the DENSE CORE regime):
+    per pair: max( 1/49 - g^2/(4ab),  the small-primitive table value )
+    400 comparable 7-blocks: floor sum <= 0 in 0/400
+    floor sum range [0.105661, 0.149569]   (THM-1012 gave <= 0 on ALL)
+
+    => the SAWTOOTH floor closes the correlated regime that the
+       INDEPENDENCE floor could not.  The two are exactly complementary:
+       independence needs b >> a; the sawtooth needs ab large after
+       gcd reduction -- which comparable blocks automatically satisfy.

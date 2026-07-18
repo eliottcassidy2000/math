@@ -1,3 +1,24 @@
+## opus-2026-07-17-S357 -- THM-1025 THE CORRELATED REGIME CLOSED BY THE SAWTOOTH (rho >= 1/49 - g^2/(4ab) from THM-965's fold bound: sharp when ab is LARGE, exactly complementary to THM-1012's b >> a; + dilation invariance + a 15-pair finite table => the pair floor exists in EVERY regime; comparable-7-block floor sums positive 400/400 where THM-1012 gave <= 0 on all 400) (HYP-7400)
+
+Owner: attack the correlated regime with the sawtooth or beat structure. The sawtooth
+was the right tool and it INVERTS the problem. THM-965 says the deviation from
+independence IS fold(S) - fold(D); bounding fold in [0, M^2/4] gives
+rho >= 1/49 - g^2/(4ab) -- whose error term SHRINKS as ab grows, i.e. it is sharp
+precisely in the comparable regime where THM-1012's independence bound collapsed.
+The two floors are exact complements. Dilation invariance reduces every pair to
+primitive; the floor is positive there iff a'b' >= 13; exactly 15 primitive pairs fall
+below and all have rho > 0 (min 1/84). So the pair floor now exists in EVERY regime,
+and the comparable-7-block floor sums come out positive 400/400 (0.106-0.150), each
+below the exact Hunter floor. THM-1021's obstruction is answered, and its predicted
+mechanism -- 'a floor that SEES the correlation rather than approximating it away' --
+was exactly right. NOTE AGAINST MYSELF: the coprime case was ALREADY kernel-pure --
+LRCFloorTable.overlap_floor_rat (S347) literally states 1/49 - 1/(4ab) <= muNum/(14ab).
+I proved the key correlated-regime tool three sessions ago while filing it as a
+separated-regime table entry, and did not recognise what it was for.
+FILES: THM-1025, THM-1021 answered-note, script + out, HYP-7400. opus; S357.
+
+---
+
 ## boxeph-2026-07-18-S87 -- DFS AROUND 169=13^2 ON THE LRC(14) CRUX: structure found, crux NOT closed (owner: prove M<1/13 => rho>=13 closing LRC(14); DFS around 169 for inspiration). HONEST: did NOT close LRC(14) -- M<1/13=>rho>=13 is the genuine open additive-rigidity crux. The DFS produced real structure (reflection the-169-structure-and-the-difference-closure-rigidity...). PROVED PIECES: (1) {1..12}u{w} covering <=> 182|w (lcm(13,14)); so the {1..12}-core covering family is FORCED to killer>=182 => rho>=15 => M>=1/14 (THM-1008) -- the deep well is the only one, narrow but rigorous, and shows the mechanism: covering 14 forces the 13-coverer to the lcm scale (far). (2) M<1/13 <=> 13*val<q<14*val (THM-999 maximizer); 169=13^2 is intrinsic to the deep well (182*14=169 mod 183, dist 14=val); extremal = continued fraction [0;13,14], q=183=Phi_6(14). (3) THE DIFFERENCE-CLOSURE RIGIDITY LEMMA (proved, the mechanism): M<1/13 => the 13 residues v_i*a mod q sit in a band of width <12val, so min gap <val, forcing a pair (v_i,v_j) with |(v_i-v_j)a|_q<val and |v_i-v_j| NOT a speed -- V is not difference-closed, the missing difference resonance-aligned. The AP {1..13} is the exact boundary (q=14val, min gap=val, closest diff=1 IS a speed, difference-closed, M=1/14); every M<1/13 family breaks difference-closure (deep well: diff 170 not a speed, |170*14|_183=1). THIS IS WHY 1/14 is the difference-closed floor. THE BRIDGE THAT STALLS: 'one aligned non-speed difference' -> 'AP core + far element' = the n=12 additive/Freiman rigidity (klein HYP-7310) -- pigeonhole gives one gap, not the global AP structure. VERDICT: the LRC(14) crux is ADDITIVE RIGIDITY, not a missing witness -- the elementary sieve/witness family is COMPLETE (empty-circle + fill-1 + descent + dilated-AP, THM-1013); what remains needs a STRUCTURE theorem, squarely klein's n=12 domain. No new Lean (a rigidity exploration + one paper lemma).
 
 Prompt (owner): prove M<1/13 => rho>=13, closing LRC(14); DFS around 169.
