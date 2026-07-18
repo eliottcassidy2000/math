@@ -1,3 +1,16 @@
+## death-star-2026-07-17-S55 -- THM-991 THE LIVE LAW (Lean kernel-pure x7): liveCount((1..13), q) = 0 OFF RESONANCE (live => 14 | q: the 14 residues of a live multiplier are pairwise-and-wrap >= ceil(q/14) apart through DIFFERENCE SPEEDS -- the canonical family is difference-closed -- and the block injection packs them into M/c + 1 blocks: q >= 14*ceil(q/14)) and >= 6 AT RESONANCE (the unit multiples o*m via mod-scaling). With THM-987 the canonical census is closed-form on both ends.
+
+Prompt (owner): work the named next steps and any other LRC 14 tasks you can conceive of.
+
+(A) THE CONCEIVED TASK: the LIVE side of the census. Recon: liveCount = 6*[14|q] with the exact set {o*m : o a unit mod 14}, verified every q in [2,3000). The rigidity is the discrete Steinhaus shadow: live => the 14 residues {k*p mod q} pairwise >= c := ceil(q/14) apart AND co-apart (live_gap: BOTH band edges through the difference speed l-k -- difference-closure is THE property); block injection (x -> x/c, injective since same-quotient => distance < c) gives spread >= 13c; the wrap gap adds c; q >= 14c forces 14 | q. NO SORTING -- the block map replaces the sorted-gap telescope.
+
+(B) LEAN CRAFT: omega does NOT handle Nat.max/min (de-max the statement into directed NL-sub pairs); set-abstractions are OPAQUE atoms to omega (add rfl bridges f k = (k*p)%q); filter_eq_empty_iff produces STRICT-IMPLICIT binders (apply the membership, not the element); same-quotient div-cancellation keeps variable-c blocks linear (f k + f l % c = f l + f k % c via linarith on the common c*(f/c) atom); N-only congruence via the split (l-k)*p + k*p = l*p beats ZMOD plumbing.
+
+(C) SCOPE (honest): the exact-6 upper at resonance (m-net delta-chain extraction) is named-next; the shipped directions (0 off-resonance, >= 6 on-resonance) are the census-critical ones -- races need live lower bounds and deep-free needs live-empty understanding.
+
+FILES: THM-991, HYP-7280 updated, LRCLiveLaw.lean (7 theorems), recon .out, root import, session log. NEXT: (i) the m-net extraction (=6 exact; the delta-chain over the block bijection); (ii) THE DIFFERENCE-CLOSED GENERALIZATION: the rigidity used ONLY difference-closure of (1..13) -- any difference-closed prefix family {1..n} has liveCount = 0 off n+1-resonance: the tight-family story at every n (LRC(n+1) equality cases) -- ONE theorem for all of them; (iii) generic wagner-circle + window-choice (standing). death-star; S55.
+
+---
 ## boxeph-2026-07-17-S79 -- THE LIPSCHITZ CONVERTER kernel-pure (mu_0 >= 2(M - 1/14)/vmax: M-floors become mu_0-floors; the certificate chain M -> mu_0 -> liveCount -> census is COMPLETE on the Lean side) + THE MU_0 LANDSCAPE (GW tight mu_0 = 0 exact; twelve trapped-boundary families all mu_0 >= 0.048; NO non-tight zeros) + THE SPLIT (trapped-core question = tightness rigidity + any M-floor)
 
 Prompt (owner): the trapped-core question + remaining LRC 14; pull/push often.
