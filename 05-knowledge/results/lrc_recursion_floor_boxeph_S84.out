@@ -1,0 +1,54 @@
+====================================================================================================
+SHARP DESCENT RECURSION  M(V) >= rho * M(V\{r})/(rho_r+1)  — best removal r
+====================================================================================================
+
+kps floor-min M=1/9
+  cover=True rho=1.05  M=1/9 (0.1111)
+  base floor (1008)=67/1703 (0.0393)   RECURSION floor=1206/12707 (0.0949)
+     best removal r=67 (M(kept)=18/97=0.1856, rho_r=1.05)
+  beats 1/26-scale base: True   REACHES 1/14: True
+
+{2..14}
+  cover=True rho=1.08  M=1/8 (0.1250)
+  base floor (1008)=14/351 (0.0399)   RECURSION floor=28/405 (0.0691)
+     best removal r=14 (M(kept)=2/15=0.1333, rho_r=1.08)
+  beats 1/26-scale base: True   REACHES 1/14: False
+
+{1,3,4..14}
+  cover=True rho=1.08  M=2/17 (0.1176)
+  base floor (1008)=14/351 (0.0399)   RECURSION floor=26/405 (0.0642)
+     best removal r=13 (M(kept)=2/15=0.1333, rho_r=0.93)
+  beats 1/26-scale base: True   REACHES 1/14: False
+
+{1,2,4,5..14}
+  cover=True rho=1.08  M=2/19 (0.1053)
+  base floor (1008)=14/351 (0.0399)   RECURSION floor=28/459 (0.0610)
+     best removal r=14 (M(kept)=2/17=0.1176, rho_r=1.08)
+  beats 1/26-scale base: True   REACHES 1/14: False
+
+2*{1..13} dilated tight
+  cover=True rho=1.08  M=1/14 (0.0714)
+  base floor (1008)=1/25 (0.0400)   RECURSION floor=1/20 (0.0500)
+     best removal r=14 (M(kept)=1/7=0.1429, rho_r=0.54)
+  beats 1/26-scale base: True   REACHES 1/14: False
+
+{1..10,13,22,84} multi
+  cover=True rho=3.82  M=2/23 (0.0870)
+  base floor (1008)=42/689 (0.0610)   RECURSION floor=84/1219 (0.0689)
+     best removal r=84 (M(kept)=2/23=0.0870, rho_r=3.82)
+  beats 1/26-scale base: True   REACHES 1/14: False
+
+residue {1..11,13,84}
+  cover=True rho=6.46  M=7/89 (0.0787)
+  base floor (1008)=84/1261 (0.0666)   RECURSION floor=7/97 (0.0722)
+     best removal r=84 (M(kept)=1/12=0.0833, rho_r=6.46)
+  beats 1/26-scale base: True   REACHES 1/14: True
+
+====================================================================================================
+RANDOM COMPACT COVERING families (rho<13): does best-removal recursion reach 1/14?
+====================================================================================================
+compact covering sampled: 20; recursion reached 1/14: 20/20
+
+READING: if recursion reaches 1/14 on all compact covering families, the
+sub-factor-2 floor = the recursion + a floor on M(V\{r}); equality only at
+dilated tight APs (M(kept)=1/13), which are non-primitive/dilation-reducible.
