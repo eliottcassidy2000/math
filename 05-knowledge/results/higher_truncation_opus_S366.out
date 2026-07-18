@@ -1,0 +1,40 @@
+L=7: min speed 56, gcd 1, truth (uncovered) = +0.120685   [8191 subset nodes visited]
+    BONF 1 = -0.857143
+    BONF 3 = -0.565974
+    BONF 5 = -1.141142
+    BONF 7 = -1.055292
+    BONF 9 = -0.202538
+    BONF11 = +0.103161   <-- FIRST POSITIVE
+    BONF13 = +0.120685
+    => the certificate turns positive at level 11 (BONF13 = exact = +0.120685)
+
+L=31: min speed 248, gcd 1, truth (uncovered) = +0.120387   [8191 subset nodes visited]
+    BONF 1 = -0.857143
+    BONF 3 = -0.439276
+    BONF 5 = -0.407352
+    BONF 7 = -0.183880
+    BONF 9 = +0.046785   <-- FIRST POSITIVE
+    BONF11 = +0.116431
+    BONF13 = +0.120387
+    => the certificate turns positive at level 9 (BONF13 = exact = +0.120387)
+
+L=101: min speed 808, gcd 1, truth (uncovered) = +0.114236   [8191 subset nodes visited]
+    BONF 1 = -0.857143
+    BONF 3 = -0.432662
+    BONF 5 = -0.236808
+    BONF 7 = -0.002978
+    BONF 9 = +0.090755   <-- FIRST POSITIVE
+    BONF11 = +0.113016
+    BONF13 = +0.114236
+    => the certificate turns positive at level 9 (BONF13 = exact = +0.114236)
+
+L=331: min speed 2648, gcd 1, truth (uncovered) = +0.113998   [8191 subset nodes visited]
+    BONF 1 = -0.857143
+    BONF 3 = -0.423197
+    BONF 5 = -0.197477
+    BONF 7 = +0.044379   <-- FIRST POSITIVE
+    BONF 9 = +0.105432
+    BONF11 = +0.113620
+    BONF13 = +0.113998
+    => the certificate turns positive at level 7 (BONF13 = exact = +0.113998)
+
