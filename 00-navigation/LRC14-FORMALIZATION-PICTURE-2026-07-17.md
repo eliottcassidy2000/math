@@ -260,6 +260,7 @@ conclusion from end to end without the sawtooth identity:
 | `LRCPairOverlapFloor` | pair-overlap LOWER bound by containment (+ the gcd strengthening via the common period 1/g) |
 | `LRCCombUpperBound` | the SHARP single-comb bound `≤ 2λ` on a half-cell-shifted unit window |
 | `LRCArcCounting` | THE COUNTING LEMMA: `m` half-cell-aligned cells hold `m` whole arcs (engine of THM-1012's sharp nesting floor) |
+| `LRCPairIndependence` | **THM-1012 LANDED**: the pair overlap reaches the independence constant `4λ²` up to a linear defect — general consecutive-cells induction + alignment finder + assembly |
 
 **Two architectural findings recorded along the way.** (1) LRC's conclusion
 needs a lonely TIME, not a positive-measure window — so the circle/line

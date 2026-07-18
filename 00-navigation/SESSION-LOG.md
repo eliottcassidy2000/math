@@ -1,3 +1,21 @@
+## opus-2026-07-17-S354 -- THM-1012 LANDED IN LEAN, KERNEL-PURE (LRCPairIndependence: pair_overlap_independence -- the pair overlap reaches the INDEPENDENCE constant 4*lam^2 up to a linear defect, with NO sawtooth; plus the general consecutive-cells induction that does BOTH sums and the alignment finder) (HYP-7370)
+
+Owner: finish the arithmetic wrapper and land THM-1012. LANDED, all four theorems
+kernel-pure, and the wrapper turned out smaller than feared because of one abstraction:
+generalizing S353's induction from 'badArcs cells' to an ARBITRARY set S with an
+arbitrary cell width h (consecutive_cells_ge) made it serve BOTH sums -- the inner sum
+over b-cells inside an a-arc AND the outer sum over a-arcs in a unit window. One lemma,
+two applications, and no Finset-indexed pairwise-disjointness family anywhere (which is
+where this species of proof usually dies in Mathlib). The alignment finder is three
+lines: j = ceil(p*b - 1/2), then Int.le_ceil and Int.ceil_lt_add_one give the two
+endpoints. Both compiled first try. THE RESULT: vol(D_a n D_b n unit window) >=
+a*m*(2*lam/b) whenever (m+1)/b <= 2*lam/a; with m ~ 2*lam*b/a that is 4*lam^2 minus a
+defect linear in a/b -- the independence constant, reached by containment and counting
+alone, never by the sawtooth identity. FILES: LRCPairIndependence.lean, THM-1012 note,
+picture row, HYP-7370. opus; S354.
+
+---
+
 ## boxeph-2026-07-18-S85 -- THE 12-SUBSET FLOOR IS FALSE; THE COMPACT COVERING FLOOR IS 1/13, NOT 1/9 (owner: prove the 12-subset floor for primitive covering families). Could NOT prove it -- because it is FALSE. Skeptical verification (independent brute force over pair-sum denominators, THM-999) delivered a rigorous REFRAMING instead: (1) THE 12-SUBSET FLOOR M(V\{v_max})>=(1/14)(1+1/rho) IS FALSE -- near-dilated-AP families 2*{1..12}u{13}, 3*{1..12}u{182}, {2,4..24,39} are covering+PRIMITIVE with M=1/13 but M(V\{v_max}) in {1/13,1/12} < required; ALL elementary tools (descent-from-v_max, best-removal recursion, sieve-on-V', measure mu0(V')>1/7) FAIL on them (verified 23/67 D-failures, many failing all four), yet M(V)>=1/13 holds. (2) THM-995(X)'s EMPIRICAL COVERING FLOOR M>=1/9 IS WRONG -- it undershoots and already contradicted the PROVED THM-724 (covering-min=14/183<1/9, deep well); primitive covering reaches M=14/183 and M=1/13 (both <1/9). => MISTAKE-160 + THM-995(X) corrected in place. (3) THE SHARP RESIDUAL (strong conjecture, HYP-7355): COMPACT (rho<13) primitive covering => M >= 1/13, verified by a 16k-family adversarial hunt (ZERO counterexamples), extremal 2*{1..12}u{13} and the infinite family d*{1..12}u{killer}. This EXTENDS THM-726's proved 1/13 (>=2 outliers) to the 0-outlier case and sharpens the residual from 'M>1/14' to the clean floor 'M>=1/13'. WHY ELEMENTARY METHODS STALL (the real lesson): the binding families have a DILATION SUBSTRUCTURE d*{1..12} whose embedded dilated-AP gives M=1/13 at t=1/(13d) -- invisible to single-runner perturbation (the recursion is pessimistic when the odd killer has rho_r<1), to the sieve (V fully covers 2..14, no missed q), and to simple measure (mu0(V') tiny). So the compact residual is a DILATION/near-tight RIGIDITY statement, NOT a floor reachable by any perturbation argument -- which is exactly why the whole elementary descent program (S82-S84: fill-1, far-element, sharp recursion) cannot close it. The honest crux: prove 'compact covering => M>=1/13' = a 12-set rigidity theorem (klein's n=12 domain, HYP-7310), OR the harmonic/measure route. NO Lean this session (a refutation + conjecture, not a theorem).
 
 Prompt (owner): prove the 12-subset floor for primitive covering families.
