@@ -57,16 +57,18 @@ stronger telemetry:
 scalar support orbits under multiplication: 15, all of size 12;
 distinct capacity vectors: 484;
 distinct owner max-union vectors: 127;
-reachable-union-bank SHA-256:
-baf8aa9ee67d7686b25e8665bec8f94514d7abb6e7be780bebc2f98039675f1b.
+owner-reachable-bank SHA-256:
+b881af1af73fe6dde434d92ca0598bac79828881ad32feff87d711fa448a0eef;
+forward/reverse layer-bank SHA-256:
+b08be64149acffb006205465bbcb5825b06d4e2ffb1ece561506f0e1746b8baa.
 ```
 
 Normal and `python -O` runs reproduce the frozen output byte-for-byte.  Frozen
 artifact SHA-256 values are
 
 ```text
-primary source  bd521cea444a19cae759e8ac2b4251bc400f481cbf957877b53e2a622444b592
-primary output  40cda9290d98fcbb819cec3e63d7cfe16014c266397bb38b8f851fd4caa81a50
+primary source  94818bd64b0492156d7bf66b4fc96a679c8bbb112664ed1311cde7cd227b5914
+primary output  27b640da323604976b9172a6ffd9fc32e4c8b18c9f89227a420c0af566e40be4
 ```
 
 The independent C++ referee does not translate that implementation.  It finds
@@ -74,30 +76,40 @@ every CRT representative by literal search, derives hereditary admissibility
 from the two prime-power coverage conditions and separately audits all six
 leave-one-out lcms, and realizes each owner-local reachable bank as a sorted
 vector of integer masks.  Its optimized, unoptimized, and ASan+UBSan builds
-produce byte-identical output.  The four proof-bearing serializations agree
-with the primary exactly:
+produce byte-identical output.  The hardened proof-bearing serializations all
+agree with the primary exactly:
 
 ```text
-mask table             a77964e49c10fc3731f7948059b315dc9f5d94b98ba611ebf6f1c1f9fa5fb26b
-hereditary order bank  9c9ea6b5101659f4a3e958bb81bd859b73b05b9f1f04cfbfb65b358352a31f11
-scalar survivor bank   fb618d8e443ddfa5f118dbcff16c5e196d8693240ede4844e8266aa6b16980a1
-reachable-union bank   baf8aa9ee67d7686b25e8665bec8f94514d7abb6e7be780bebc2f98039675f1b
+CRT-base bank          fe217f797c08702c8f607d3a936321fb7ffb6c6e73770a0097cf71c597297793
+mask table             54587d940a12b70601943dbe7505d4797363395a2579ea6f3e09583db5a01282
+hereditary order bank  f7c0254d8ac9108d318f4a9a21d0d2e5b244be91087b22c162bb563956e9b474
+weighted grammar bank  b4ec74d190864c2a050409126bacfd79fb0fac97ce2952628b17341b1718c4dd
+scalar survivor bank   29067f69b228b9956239b27a43af9bc72e8c141acfb47587f536dc557cebb1de
+capacity bank          5f10732eda4cd0dcf9fe2eb0166e4191673774d40fae03ec4993d143caa3528f
+owner-reachable bank   b881af1af73fe6dde434d92ca0598bac79828881ad32feff87d711fa448a0eef
+forward/reverse layers b08be64149acffb006205465bbcb5825b06d4e2ffb1ece561506f0e1746b8baa
 ```
+
+The multiplicity ledger and 411 tournament score vectors also cross-match at
+`5e1220b6...a80d` and `fdf170ef...aa0b`.  The referee independently checks
+that reversing all six provider insertions leaves every final reachable bank
+unchanged and hashes both intermediate layer sequences.
 
 The frozen referee artifact hashes are
 
 ```text
-referee source  cc39bf980cb7f36d39eb63ed987dd92ec25d6925bf93f09df7e81ea5e4b51a56
-referee output  607f20ae7673f8598ed91b5d46cf968ebd377b66775975f3cc81f3cc4c0b26c0
+referee source  fc50462397411f76ee03bfd707c8ee9986dbce1c69257fbfa62c7d77b50bb40d
+referee output  f93a14158283fd0bbf91d62d7cd9d8b7eb89653e8ac517fcb0f16db6f59aec13
 ```
 
 Owner obligations are the terminal-faithful vertices: their exact summary is
-`(feasible,max-union,capacity)`.  Lexicographic comparison with coordinate tie
-breaks gives a transitive tournament in all 984 rows (score word `0,...,5`,
-zero directed triangles, six SCCs, one Hamiltonian path).  That tournament is
-telemetry only; it forgets the absolute 22-sheet threshold and the number of
-empty owners.  Provider, divisor, residue, isolated-sheet, and wall-event
-vertices lose shared-unit incidence earlier still.
+`(feasible,max-union,capacity,reachable-count,maximum-mask-count)`.
+Lexicographic comparison with coordinate tie breaks gives a transitive
+tournament in all 984 rows (score set `0,...,5`, zero directed triangles, six
+SCCs, one Hamiltonian path).  That tournament is telemetry only; it forgets
+the absolute 22-sheet threshold and the number of empty owners.  Provider,
+divisor, residue, isolated-sheet, and wall-event vertices lose shared-unit
+incidence earlier still.
 
 The independent replay closes this exact scale-twenty-two face.  The theorem
 does not cover scale 24 or higher (scale 23 is prime and already excluded by
