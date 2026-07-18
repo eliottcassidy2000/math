@@ -224,6 +224,35 @@ Two consequences for CRUX (C):
 strategies that can reach it, and supplies worked counterexamples one dimension
 down.)*
 
+## (H) Counting cannot close the content law (a negative result, PROVED)
+
+Rewriting THM-769's sheet capacity in content-law variables: for an off-sheet
+`w ∈ F` put `g_w = gcd(w, val)` and `D_w = val/g_w ≥ 2`. The capacity inequality
+`Σ_{w∈F} (⌊2D_w/13⌋+1)/D_w ≥ 1` becomes
+
+> **`Σ_{w∈F} g_w·(⌊2D_w/13⌋ + 1) ≥ val`**   (and `Σ g_w ≥ val` whenever all `D_w ≤ 6`).
+
+Primitivity contributes exactly one extra condition: `gcd_{w∈F}(g_w) = 1` (a common
+factor of all `g_w` would divide every element of `F`, and `val` divides every
+element of `E`, hence would divide `gcd(A) = 1`).
+
+> **Observation (PROVED by exhibition).** This system — capacity **plus**
+> primitivity, with `|F| ≤ 10` — is **satisfiable for every `val = 2,…,13`**.
+> Explicit witnesses: `val=2: g=(1,1)`; `3: (1,1,1)`; `4: (1,1,2)`; `6: (1,2,3)`;
+> `8: (1,1,4)`; `10: (1,5,5)`; `12: (1,4,6)`; …
+
+Hence **the content law cannot be proved from sheet capacity and primitivity
+alone**, at any sheet number. Every counting/divisibility refinement of the
+capacity argument will hit the same wall; what is missing is genuinely *metric*
+information (which lifts a given off-sheet speed actually covers, with its exact
+danger-tooth positions), not more arithmetic bookkeeping.
+
+This is the same verdict klein reached from the other side for CRUX (C) — "the
+obstruction is integer realizability, not residue arithmetic" — and the same one
+codex-S64 recorded ("finite ramification of several AP-centred faces is not such a
+bridge"). Three independent routes now agree on where the wall is, which is itself
+evidence that the wall is real and not an artefact of one formalism.
+
 *Artifacts:* `04-computation/lrc13_content_law_bridge_macmini_S110.py` (+out).
 Credits: klein THM-1002 (the ruler engine and the gap arithmetic), codex THM-769
 (the sheet split now identified with `val`) and codex-S64 §6 (the bridge target),

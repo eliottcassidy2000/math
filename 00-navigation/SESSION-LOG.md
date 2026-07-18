@@ -1,3 +1,24 @@
+## mac-mini-2026-07-18-S110 -- THE COMPLETENESS BRIDGE ATTEMPT: THM-1006 'content law' reduces the n=12 DEEP half to ONE integer inequality (val <= gcd); + three findings: content law is UNIFORM in n, sporadic tight sets exist at n=4,5,7 (MISTAKE-159), and the stability gap FAILS at n=6,7 (intel for klein). HYP-7360.
+
+TASK (owner): attempt the completeness bridge invariant (codex-S64 sec.6). Pull during builds/computations.
+
+THE BRIDGE (THM-1006). Engine = klein THM-1002 (M=val/q on the pair-sum ruler, q | v_i+v_j so q<=2max A).
+(A) DILATION LAW (PROVED): M(cA)=M(A), q(cA)=c q(A), val(cA)=c val(A) => val(A)=gcd(A)*val(A/gcd) => **val >= gcd ALWAYS, free**. (B) tight <=> q=13 val (debt d:=13val-q=0); with q<=2max: tight => max(A)>=13val/2. Renders klein's gap cleanly: M in (1/13,2/25) <=> d>=1 and val>2d. (C) **val IS THM-769's sheet number s** (Q=13s=q=13val): val=1 <=> shallow, val>=2 <=> deep; dilates c*{1..12} realize every val=c. (D) NEW BOUND (PROVED): tight => val <= 4/(169*delta(A\max)) via THM-1001 -- sharp to the UNIFORM factor 572/169~3.38 on the dilates. (E) THE BRIDGE: since val>=gcd is free, the ENTIRE deep half is **val <= gcd on the tight locus** -- codex's whole two-sheet/higher-sheet programme collapses to one inequality between two integers, no packets/sheets/lift-heights. sporadic emptiness <=> [content law] + [shallow rigidity]. HONEST: (E) is a restatement, not a discharge.
+
+THREE FINDINGS FROM THE SMALL-n SWEEP (exhaustive, n=3..7 in {1..3n+2}):
+(F1) content law holds at EVERY tested n (3..8,12,13), zero violations, INCLUDING GW => candidate UNIFORM-in-n theorem. Combined with the GW control (GW satisfies val=gcd yet isn't {1..13}) this LOCALIZES the n=12/n=13 asymmetry ENTIRELY in the SHALLOW half -- inverting expectation: the DEEP half may generalize; the SHALLOW half (THM-770, THM-1001) must be n=12-specific (13 prime => full-residue).
+(F2) **MISTAKE-159**: primitive tight NON-segment sets exist at n=4 ({1,3,4,7}), n=5 ({1,3,4,5,9}), n=7 ({1,2,3,4,5,7,12}, {1,4,5,6,7,11,13}) -- so my S108 claim 'GW is the FIRST sporadic' was WRONG. Sporadics are COMMON; n=12 is claimed to be a RIGID value (with 3,6). Corrected in place.
+(F3) THM-1001's bound TRACKS the truth: single-coordinate winding is tight at n=4 ONLY, and the bound gives 8.0 there (admits the true w=7) while excluding every other n.
+(G) **STABILITY GAP IS NOT GENERAL-n** (intel sent to klein): min M over primitive non-tight n-sets = 2/(2n+1) at {1..n-1}u{2n} for n=3,4,5 (gap EMPTY), but n=6 has {1,5,6,11,16,17} M=5/33 IN (1/7,2/13) and n=7 has {1,2,3,4,5,7,18} M=3/23 IN (1/8,2/15). Exact + numeric-cross-checked. So klein's CRUX (C) at n=12 cannot come from a uniform argument; AND these violators have val=5,3 -- exactly the val>=3 shape klein proved a violation must have => smallest realizable in-gap packets = the laboratory for their crux.
+(H) **COUNTING CANNOT CLOSE IT** (proved by exhibition): capacity in content-law variables is Sum_w gcd(w,val)*(floor(2D_w/13)+1) >= val with primitivity forcing gcd_w(gcd(w,val))=1; this system is SATISFIABLE for EVERY val=2..13 (explicit g_w witnesses). So no counting/divisibility refinement of capacity can close the deep branch -- a metric/realizability input is required. Same verdict klein reached for CRUX(C) and codex-S64 for the packet languages: three independent routes agree on the wall.
+
+HONEST: the bridge is REFORMULATED and sharply localized, NOT discharged. sporadic emptiness stays OPEN.
+
+FILES: THM-1006 (sec.A-H); 04-computation/lrc13_content_law_bridge_macmini_S110.py (+.out); HYP-7360; MISTAKE-159; S108 reflection corrected; letter to klein.
+HANDOFFS: @klein -- (G) is yours, with worked n=6,7 in-gap counterexamples. @codex -- (E) restates your deep programme as val<=gcd, and (H) says capacity/counting will not get you there; (F1) says try it uniformly in n. @all -- shallow half is the n=12-specific one; deep half may be uniform.
+
+---
+
 ## opus-2026-07-17-S352 -- THM-1012 THE SHARP NESTING FLOOR BY PERIOD COUNTING (mu(D_a cap D_b) >= 4*lam^2 - 2*lam*(a/b): the INDEPENDENCE constant reached by CONTAINMENT, no sawtooth; positive iff b > 7a = the separated regime nesting uses; 0/4000 violations exact) + RESIDUAL: the fleet's formalization picture updated with my 7 kernel-pure modules (it listed none) (HYP-7350)
 
 Owner: prove the sharp floor for nesting + residual LRC tasks. THE SHARP FLOOR, by the
