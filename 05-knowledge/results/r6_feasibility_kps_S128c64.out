@@ -1,0 +1,20 @@
+### r=6 finite horn sizing at KB = 333 ###
+  core                        |bits| #killers  mean frac  P(sum6>=1)  est sextuples passing
+  [2, 3, 4, 5, 8, 9, 10]      260    202       0.1302     0.0840      7.358e+09
+  [1, 2, 4, 5, 6, 7, 9]       212    215       0.1199     0.0576      7.365e+09
+  [2, 5, 6, 7, 8, 9, 11]      182    189       0.1281     0.0759      4.432e+09
+  [2, 4, 6, 7, 8, 10, 12]     256    176       0.1284     0.0629      2.382e+09
+  [1, 4, 6, 7, 8, 9, 10]      202    202       0.1259     0.0626      5.485e+09
+  [2, 3, 5, 6, 9, 10, 12]     290    176       0.1324     0.0925      3.505e+09
+  [3, 4, 5, 8, 9, 10, 12]     268    176       0.1321     0.0839      3.179e+09
+  [1, 2, 3, 4, 5, 9, 12]      250    176       0.1264     0.0805      3.049e+09
+
+  extrapolated over all 792 cores: ~3.639e+12 sextuples pass the necessary condition
+  at ~3e5 tests/sec that is ~3369.2 hours
+
+### comparison across r ###
+  r=4: KB=400, 1.43e8 passing, ran in ~25 min
+  r=5: KB=235, 2.64e8 passing, ran in ~9 min
+  r=6: KB=333, 3.639e+12 passing
+  ratio r=6 / r=5: 13783.2x
+DONE

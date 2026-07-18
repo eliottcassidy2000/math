@@ -1,0 +1,20 @@
+### r=6 : 492 seven-speed cores ; window [lo, lo+16) ###
+  S(P) measure (sample): min 0.23993 max 0.38582
+
+  ... core 0/492 tested=4368 maxR=1.1436 maxT=177.6
+  ... core 60/492 tested=266448 maxR=1.4359 maxT=227.6
+  ... core 120/492 tested=528528 maxR=1.4359 maxT=227.6
+  ... core 180/492 tested=790608 maxR=1.4359 maxT=227.6
+  ... core 240/492 tested=1052688 maxR=1.4359 maxT=227.6
+  ... core 300/492 tested=1314768 maxR=1.4359 maxT=227.6
+  ... core 360/492 tested=1576848 maxR=1.4359 maxT=227.6
+  ... core 420/492 tested=1838928 maxR=1.4359 maxT=227.6
+  ... core 480/492 tested=2101008 maxR=1.4359 maxT=227.6
+
+  quintuples tested: 2149056
+  MAX R = 1.43590 at core [1, 3, 6, 7, 8, 10, 11], killers (144,147,150,153,156), T = 224.0
+  quintuples with R >= 1: 16298 ; largest killer among them: 172 ; MAX T = 227.6
+  worst case at offset 12 within window of width 16 -- INSIDE (trustworthy)
+
+  => r=6 finite-horn bound KB = max T + 25 = 252
+DONE
