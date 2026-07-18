@@ -1,0 +1,26 @@
+VALIDATION: full inclusion-exclusion  sum_k (-1)^k S_k  must EQUAL the true uncovered measure.
+  AP {1..13}   full I-E = +0.000000   true uncovered = 0.000000   diff = 0.00e+00
+  deep well    full I-E = +0.023897   true uncovered = 0.023897   diff = 0.00e+00
+  random cov   full I-E = +0.122421   true uncovered = 0.122421   diff = 0.00e+00
+
+  => S_k are correct. So the truncation behaviour below is real, not a computation artefact.
+
+ODD TRUNCATIONS B_m (lower bounds on uncovered) for the AP -- does ANY level clear?
+    B_1  =        -0.8572
+    B_3  =        -3.2331
+    B_5  =        -9.7238
+    B_7  =        -9.1968
+    B_9  =        -2.4801
+    B_11 =        -0.1328
+    B_13 =        +0.0000
+    true uncovered = 0.000000
+
+  and for a RANDOM covering set (where it should be easiest):
+    B_1  =        -0.8572
+    B_3  =        -1.0895
+    B_5  =        -2.7799
+    B_7  =        -2.3742
+    B_9  =        -0.5191
+    B_11 =        +0.0890
+    B_13 =        +0.1224
+    true uncovered = 0.122421
