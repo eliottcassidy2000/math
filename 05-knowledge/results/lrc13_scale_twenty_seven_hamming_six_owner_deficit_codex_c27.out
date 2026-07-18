@@ -1,0 +1,36 @@
+scale-twenty-seven AP-centred Hamming-six owner-deficit certificate
+standard-library exact arithmetic; no support, order word, unit mask, or owner quotient
+divisor grammar 1,3,9,27; hereditary iff at least two order-27 providers
+supports 924; hereditary order words 1909; labelled order contexts 1763916
+state words/support 380511756; raw labelled states 351592862544
+mask SHA256 1f6007a1f21d0d3f0c4382634ad27c005139e175e67afbb7f7cafe130533c249; order SHA256 0eec286f7d0032bcbbed2b4ece0b62638562301484a907940fab374109c46df4
+residue-signature SHA256 e7e460b659cc589e88a47bf40149d3ffbe8e50cfdc004187ae5cc32e2fb63073
+distinct-mask choice histogram (order,cardinality,choices) (1, 0, 1):132 (1, 27, 1):12 (3, 0, 1):84 (3, 9, 1):12 (3, 9, 2):48 (9, 3, 2):24 (9, 3, 6):60 (9, 6, 6):60 (27, 4, 18):132 (27, 5, 18):12
+residue-signature types 96
+scalar contexts 450 on 84 supports; capacity vectors 191
+scalar-bank SHA256 141ec6d8c551c2e0ebac31dc102d3f38ad257be268dfe24403835afa7613dc05
+scalar feasible-owner histogram 0:11452 1:391056 2:849558 3:418988 4:83472 5:8940 6:450
+contexts-per-support histogram 0:840 3:6 4:24 5:24 6:24 12:6
+order multiplicity profiles (0, 0, 3, 3):12 (0, 0, 4, 2):18 (0, 2, 1, 3):60 (0, 2, 2, 2):294 (0, 3, 0, 3):12 (0, 3, 1, 2):36 (0, 4, 0, 2):18
+owner capacity histogram 27:744 28:180 29:708 30:84 31:36 32:60 33:84 34:36 35:660 36:60 38:12 39:12 41:24
+minimum scalar-slack histogram 0:396 2:30 3:24
+scalar-row multiplication orbits 6:3 12:36
+support multiplication orbits 6:2 12:6
+owner-local rows 2700
+feasible-owner/context histogram 0:336 1:96 4:18
+maximum reachable sheet-union histogram 20:120 21:336 22:192 23:336 24:528 25:432 26:588 27:168
+minimum owner maximum/context histogram 20:108 21:246 22:48 24:48
+distinct owner maximum vectors 319
+reachable banks 2700; total masks 13598160; bank-size bins 51; maximum bank 128880
+owner-summary SHA256 6471aa37d9a0d6a630a830d36865d1449c7d7361d068041a60e7482425bed085
+distinct feasible-owner label sets 16
+owner-local all-six contexts 0
+tournament pair observable (feasible,max-union,capacity,bank-size); coordinate tie path
+tournament score-sequence histogram (0, 1, 2, 3, 4, 5):450
+tournament directed-triangle histogram 0:450
+tournament SCC-size histogram (1, 1, 1, 1, 1, 1):450
+tournament Hamiltonian-path-count histogram 1:450
+tournament tie-edge histogram 0:96 1:168 2:48 3:114 7:24
+tournament edge-flip histogram 0:10 1:9 2:21 3:34 4:40 5:46 6:79 7:47 8:30 9:48 10:34 11:16 12:20 13:11 14:4 15:1
+challenged vertices: mod-3 and mod-9 sheet classes preserve the ramified incidence signatures; owner tournaments preserve the terminal deficit vector but destroy sheet colours, mask intersections, and the absolute 27-sheet threshold
+frontier verdict scalar-empty no; owner-local all-six empty yes; scale 27 common-sheet H6 face closed
