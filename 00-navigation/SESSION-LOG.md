@@ -5,6 +5,32 @@ Prompt (owner): prove the 1-D offset-AP rigidity j_c = c*j_1 mod val.
 FILES: HYP-7401, reflection the-crux-reduced-to-bedrock-j1-is-zero-and-the-offset-vanishing-IS-LRC14. -> all (the offset rigidity is EQUIVALENT to LRC(14), not weaker -- PROVED; the only new theorem is j_1=0, collapsing it to the homogeneous one-line form '<=1 of the 13 residues escapes val*Z at q=13val+1'; @klein the reduction chain is bedrock -- attack the extremality/additive statement directly, the sharp inverse theorem / PFR on the one-line form, since no coordinate change removes the max-condition).
 
 ---
+## opus-2026-07-17-S365 -- THM-1060 PRIMITIVE BONF5 FAILURES ARE INFINITE (construction: {8L..14L} + six coprime fillers -- primitive, blocks all seven, scale-free correlation; BONF5 -1.202/-0.346/-0.242/-0.178/-0.168 at min speeds 56..8072, flattening to ~-0.16) -- THE FINITE-CENSUS ROUTE IS DEAD; but every such family is LONELY (uncovered ~0.115), so the failure is the CERTIFICATE's, not the conjecture's (HYP-7480)
+
+Owner: work the primitive finiteness question. ANSWERED, negatively, with a
+construction. The key realisation: a family can carry HUGE pairwise gcds while being
+globally primitive. Take {8L,...,14L} -- pairwise gcds >= L, and by dilation invariance
+their internal overlaps are exactly those of {8,...,14}, hence SCALE-FREE -- then adjoin
+six speeds coprime to L to force overall gcd 1. Primitive, blocks all seven sieve
+moduli, comparable.
+MEASURED at five scales (min speeds 56 to 8072): BONF5 = -1.202, -0.346, -0.242, -0.178,
+-0.168, with deltas +0.856, +0.105, +0.063, +0.010 -- flattening to a clearly negative
+limit near -0.16. So primitive failures exist at EVERY scale: infinitely many. Together
+with THM-1050 (no speed threshold) and THM-1055 (the apparent one was a sampling
+artifact), the entire 'bound it and enumerate' strategy for the last regime is now
+closed off.
+BUT -- and this is the part that matters -- these families are LONELY. Exact uncovered
+measure ~0.115 at every scale checked. LRC(14) is comfortably true precisely where the
+level-5 certificate returns -0.17; the estimate is off by ~0.28. What is insufficient is
+BONF5, not the conjecture. The dense core needs a STRONGER TOOL -- a level-7+ truncation
+or a non-Bonferroni certificate -- not a bigger computation.
+METHOD NOTE worth keeping: the construction manufactures arbitrarily large primitive
+families carrying the correlation structure of ANY chosen small set. Any argument that
+assumes 'large speeds implies generic behaviour' has to contend with it.
+FILES: THM-1060, script + out, HYP-7480. opus; S365.
+
+---
+
 ## opus-2026-07-17-S364 -- THM-1055 THE APPARENT BONF5 SPEED THRESHOLD IS A SAMPLING ARTIFACT (explicit witness: the primitive failure with BONF5 = -0.360134 dilates by 33 to min speed 891, inside the '4/4 positive' stratum, BONF5 identical to the last digit) -- the S362 stratum run resolved; the data looked like a theorem and THM-1050 was right (HYP-7470)
 
 The S362 stratum run finished after S363 had closed, and reported 0/4 BONF5-positive in

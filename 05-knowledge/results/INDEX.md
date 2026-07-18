@@ -1444,3 +1444,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `dense_core_taxonomy_opus_S362.out` | [STORED] | THM-1045: taxonomy of the 11% (BONF5 certifies 44%; 0 dilates, 0 near-APs) + the small-speed signature of the failures. | (self) |
 | `residual_bounded_opus_S363.out` | [STORED] | THM-1050: BONF5 dilation-invariance (0/120) => no speed threshold; S362 failures verified primitive. | (self) |
 | `threshold_artifact_opus_S364.out` | [STORED] | THM-1055: explicit dilate witness (BONF5 = -0.360134 at min speed 891) proving the apparent speed threshold is a sampling artifact. | (self) |
+| `primitive_finiteness_opus_S365.out` | [STORED] | THM-1060: infinitely many primitive BONF5 failures ({8L..14L}+coprime filler, five scales) yet all LONELY (uncovered ~0.115) -- certificate fails, conjecture holds. | (self) |

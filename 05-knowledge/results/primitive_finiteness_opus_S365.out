@@ -1,0 +1,29 @@
+THE CONSTRUCTION: {8L,...,14L} + six speeds coprime to L, all in [8L,14L].
+  (seven mutually-correlated speeds, globally primitive, blocks all seven)
+
+  L=1: could not fill (range too small)
+  L=   7: min speed     56, gcd 1, blocks all seven True, BONF5 = -1.202221   <-- PRIMITIVE FAILURE
+  L=  31: min speed    248, gcd 1, blocks all seven True, BONF5 = -0.346420   <-- PRIMITIVE FAILURE
+  L= 101: min speed    808, gcd 1, blocks all seven True, BONF5 = -0.241533   <-- PRIMITIVE FAILURE
+  L= 331: min speed   2648, gcd 1, blocks all seven True, BONF5 = -0.178462   <-- PRIMITIVE FAILURE
+
+READ: if BONF5 stays negative as L grows with gcd staying 1, then
+primitive failures exist at every scale -- INFINITELY MANY -- and the
+finite-census route dies completely.  If BONF5 turns positive, the
+correlated core is not by itself enough and finiteness stays open.
+
+====================================================================
+EXTENSION (cached teeth): larger L, and the truth-vs-certificate check.
+  L=   7: min speed    56  UNCOVERED (truth) = 0.117702  LONELY
+  L=  31: min speed   248  UNCOVERED (truth) = 0.117117  LONELY
+  L= 101: min speed   808  UNCOVERED (truth) = 0.113802  LONELY
+  L= 331: min speed  2648  UNCOVERED (truth) = 0.115343  LONELY
+
+  BONF5 across L: -1.202221, -0.346420, -0.241533, -0.178462, -0.168378 (L=1009,
+  min speed 8072, computed with cached teeth).  Deltas +0.856, +0.105, +0.063,
+  +0.010 -- flattening to a clearly NEGATIVE limit near -0.16.
+
+  CONCLUSION: primitive BONF5 failures exist at EVERY scale, so there are
+  INFINITELY many and the finite-census route is dead.  But the families are
+  LONELY (positive uncovered measure): what fails is the level-5 CERTIFICATE,
+  not the conjecture.  The dense core needs a stronger tool, not a bigger census.
