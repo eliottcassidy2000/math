@@ -1,13 +1,39 @@
 ---
 id: THM-1100
-title: THE EXTENDED RATIONAL-POINT SIEVE — a new route built from the surviving tools: "t = p/q is lonely" is the band condition min(vp mod q, q − vp mod q)·14 ≥ q, which depends ONLY on the speeds mod q, so bounded-denominator loneliness is a FINITE arithmetic condition rather than an analytic one; extending the classical seven moduli from q ≤ 14 to q ≤ 30 raises the kill rate from 86.5% to 100% on 400 random families, INCLUDING all 54 that block every classical modulus. Dilation obstructs (2^m·{1,…,13} needs denominator 14·2^m) so the route runs on PRIMITIVE families, where the minimal denominator was 25 under random sampling, 32 under light adversarial search and 39 under harder search — an increasing sequence that forbids claiming a bound. The natural "largest gap" reformulation is REFUTED as a control: gaps are ~0.001 (predicting denominator ~1000) while actual minima are ~39, so the gaps are not large, they are SITUATED at low-denominator rationals
-status: kill rates measured on 400 random families and the 54-family hard stratum; the dilation obstruction verified exactly; the adversarial witness at q = 39 verified exhaustively (no lonely rational with q < 39, gcd = 1). The bounded-denominator statement is a CONJECTURE — three rounds of search gave 25 → 32 → 39, which is the signature of a supremum the search is not reaching
+title: THE EXTENDED RATIONAL-POINT SIEVE — exact residue criterion and useful finite atlas, but the proposed uniform primitive-family route is refuted by single-coordinate divisor loading
+status: CORRECTED / UNIFORM ROUTE REFUTED by the pre-existing THM-566 and HYP-2876; the residue criterion, named-family certificates, and reported sample kill rates remain exact. THM-1098 strengthens the obstruction to actually-lonely primitive covering rows and proves the necessary logarithmic height cost
 source: opus-2026-07-17-S373 (owner: work the surviving tools toward a new route)
-depends_on: [THM-1035/1040 (the classical seven-moduli sieve, the q ≤ 14 case), THM-1050 (dilation invariance, which forces the primitive restriction), THM-1095 (which retired the ledger route this replaces), MISTAKE-154/156 (the sampling lesson applied here)]
+depends_on: [THM-1035/1040 (the classical seven-moduli sieve, the q ≤ 14 case), THM-1050 (common-dilation invariance), THM-566 (primitive covering rows defeat every fixed denominator cap), HYP-2876 (arbitrary finite denominator bases are atlases, not closures), THM-1098 (explicit lonely obstruction and height cost), THM-1105 (first unblocked modulus / arithmetic-position experiment), THM-1095 (the retired ledger route), MISTAKE-154/156 (sampling guardrails)]
 scripts: 04-computation/extended_sieve_opus_S373.py, sieve_adversarial_opus_S373.py, largest_gap_opus_S373.py -> 05-knowledge/results/
 ---
 
-# THM-1100 — a new route, and what it would take
+# THM-1100 — an exact finite atlas, not a uniform route
+
+## Correction after the canon audit
+
+The proposed final statement in the original version of this note was already
+refuted by THM-566, proved on 2026-06-22.  For every `B`, that theorem constructs
+the primitive covering row
+
+```text
+{1,2,...,11,13,84*lcm(1,...,B)}
+```
+
+whose last runner is at the observer at every rational point of reduced
+denominator at most `B`.  HYP-2876 gives the same obstruction for an arbitrary
+fixed finite list of denominators.  Thus common-gcd normalization does **not**
+rescue a uniform cap: it removes common dilation, but it does not remove the
+divisibility loaded into one coordinate.
+
+THM-1098 sharpens the correction.  The obstructing rows can be chosen primitive,
+covering, and provably lonely, with an explicit later rational witness.  At
+height `H=lcm(1,...,B)` they force `q_min>B`, hence an unavoidable
+`(1-o(1)) log H` lower cost.  It also proves rigorously that a fixed rational
+address can lie in lonely components whose lengths tend to zero.
+
+Everything below about the modular criterion and the displayed finite samples
+is retained.  What is withdrawn is the inference that those samples support an
+absolute `Q0` on primitive families.
 
 > **CENTRAL CONJECTURE REFUTED (opus-S374), see THM-1105.** The bounded-denominator conjecture below is FALSE. Blocking a modulus q needs only ONE speed with q | v (that runner sits at the origin for every p), so a single speed divisible by lcm(1..Q) blocks every q <= Q at once: V = {lcm(1..Q)} u {12 coprime speeds} is primitive with no lonely rational of denominator <= Q, for arbitrary Q. This is why the searches recorded here climbed 25 -> 32 -> 39 -- the supremum is infinite. WHAT SURVIVES: the position law min-denominator = q0(V), the first modulus dividing no speed (96.8%), with 0/454 failures for q0 <= 14 and 34.8% for q0 > 14.
 
@@ -44,16 +70,21 @@ failure at 7/15, the THM-1060 L=31 family at 3/23, the AP d=8 at 1/2, the
 sum-free {1,3,…,25} at 1/2, and {1,…,13} at 1/14 — the last with equality,
 which is exactly right for the extremal family.
 
-## The dilation obstruction, stated correctly
+## Common dilation is only the first obstruction
 
-k·{1,…,13} needs denominator 14, 28, 14, 14, 98 for k = 1,2,3,5,7. So
-dilation inflates the denominator **only along the 2,7-part of k** —
-dilating by any k coprime to 14 leaves it at 14. But 2^m·{1,…,13} needs
-14·2^m, which is unbounded, so **no uniform Q exists over all families**
-and the route must run on PRIMITIVE families, with THM-1050 reducing the
-rest.
+`k·{1,…,13}` needs denominator `14, 28, 14, 14, 98` for
+`k = 1,2,3,5,7`.  Thus common dilation inflates this example only along the
+`2,7`-part of `k`, and THM-1050 correctly reduces common dilation to primitive
+representatives.
 
-## What is NOT established, and why I will not claim it
+The original inference that the route should therefore work on primitive
+families was false.  THM-566's fixed core contains `1`, so it is primitive for
+every `B`, while one far runner is divisible by every denominator through `B`.
+Primitivity controls `gcd(S)`; bounded-denominator loneliness is controlled by
+the much richer collection of divisor packets carried by the individual
+coordinates.
+
+## What the sampled search established
 
 The minimal denominator over primitive families measured:
 
@@ -63,38 +94,58 @@ The minimal denominator over primitive families measured:
 | light adversarial hill-climb | 32 |
 | harder hill-climb (45 restarts, 700 steps) | **39** |
 
-Each increase in search effort raised the maximum. That is precisely the
-signature of a supremum the search is not reaching, and after MISTAKE-154,
-THM-1055 and MISTAKE-156 I will not read a sampled maximum as a bound. The
-hill-climb optima do cluster tightly (31–39), which is mildly reassuring,
-but clustering is not a proof. The q = 39 witness
+Each increase in search effort raised the sampled maximum.  The exact data are
+useful as a description of that bank, but the deterministic lcm family from
+THM-566 was outside the sampling distribution and has arbitrarily large least
+denominator.  In particular, “nothing sampled exceeds `39`” has no global
+content.  The `q = 39` row
 
 > V = {31, 32, 36, 74, 145, 210, 231, 260, 304, 459, 500, 552, 616}
 
-was verified exhaustively: no lonely rational with q < 39, gcd(V) = 1.
+was verified exhaustively: no lonely rational with `q < 39`, and `gcd(V)=1`.
+That per-row certificate remains valid.
 
-## A reformulation I tried and must retract
+## The largest-gap reformulation, now rigorously separated
 
-The natural control is "the largest uncovered gap is bounded below by
-L₀ > 0", since an interval of length L contains a rational of denominator
-~1/L. **This is refuted as a control.** Measured largest gaps are ~0.001
-(the q=39 witness: 0.001018, predicting denominator ~983) while the actual
-minimal denominator is 39 — a factor of 25 too pessimistic. Over 150
-primitive families the smallest largest-gap was 0.000912, predicting ~1096
-against observed minima under 40.
+The natural control is “the largest uncovered gap is bounded below by
+`L0>0`”, since an interval of controlled length meets a bounded rational grid.
+The S373 measurements already warned against it: largest gaps were around
+`0.001` while actual least denominators were around `39`.
 
-**The gaps are not large — they are SITUATED.** Uncovered gaps cluster at
-low-denominator rationals, because that is where the combs align. So the
-right object is the *arithmetic position* of the gaps, not their size, and
-that is what a proof of the route must exploit.
+THM-1098 makes the separation exact.  A runner of speed `M` cuts every lonely
+component down to length at most `6/(7M)`.  Nevertheless the primitive covering
+families
 
-## The route, stated
+```text
+{1,...,11,13,84(41k+1)}
+```
 
-> **Bounded-denominator conjecture.** There is an absolute Q₀ such that
-> every primitive 13-speed family admits a lonely rational p/q with q ≤ Q₀.
+all have the same lonely point `17/41`, while their largest component lengths
+tend to zero.  **The gaps are situated, not large:** arithmetic address and
+geometric thickness are independent coordinates.  The old sample is retained
+as discovery evidence, but no longer bears the proof claim.
 
-If true with explicit Q₀, LRC(14) for primitive families reduces to a
-finite check on residue classes mod lcm(1..Q₀) — infinitely many families
-collapsing to finitely many classes, which is exactly the uniformity that
-every previous route failed to supply. Evidence: Q₀ ≥ 39; nothing tested
-exceeds it; the classical sieve is the Q₀ = 14 fragment covering 86.5%.
+## Correct surviving route
+
+The absolute-`Q0` conjecture is **refuted**, even for primitive covering rows
+that are independently known to be lonely.  For a *fixed* `Q`, the residue
+test modulo `lcm(1,...,Q)` remains exact and useful; it is an atlas, not a
+closure.
+
+A correct sieve theorem must be adaptive or height-dependent.  At minimum it
+must account for the denominator-loading depth
+
+```text
+kappa(S) = max {B : every q <= B divides at least one speed of S},
+```
+
+Equivalently, `kappa(S)=q0(S)-1` for THM-1105's first modulus `q0` dividing
+no speed.
+
+because every rational witness has reduced denominator strictly larger than
+`kappa(S)`.  THM-1098 shows `kappa` can be `(1-o(1)) log(max S)` on primitive
+covering rows.  After deleting those divisibility-killed packets, the open
+arithmetic task is to prove that some remaining numerator band is live.  For
+`q>14`, “no speed is divisible by `q`” is necessary but no longer sufficient;
+the thirteen danger bands can still cover all numerator residues.  This is the
+precise residual that the finite residue computations measure.
