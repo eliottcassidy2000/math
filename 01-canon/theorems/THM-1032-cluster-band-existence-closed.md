@@ -139,9 +139,37 @@ right home for the paper's actual content, and this note defers to it.
 
 The last line is the honest remaining gap, and it is now the *only* one on this branch.
 
+## Sizing the wide-cluster residual (spread > M − μ)
+
+The cap D ≤ M − μ is structural for *this modulus family* — q = v₁ + c needs c ∈ [μ+D, M].
+But the **band lemma itself still reaches the wide clusters**; only the explicit formula
+stops. Scanning q ∈ [15,400] on wide clusters:
+
+| r | spread range | tested | band-certified | median # valid q | median first q |
+|---|---|---|---|---|---|
+| 2 | (M−μ, 3(M−μ)] | 500 | 500 | 12 | 26 |
+| 2 | (3(M−μ), 10(M−μ)] | 500 | 500 | 8 | 26 |
+| 2 | (10×, 60×] | 500 | 500 | 11 | 26 |
+| 3 | (M−μ, 3(M−μ)] | 481 | 481 | 11 | 22 |
+| 3 | (10×, 60×] | 498 | 497 | 6 | 22 |
+| 4 | (M−μ, 3(M−μ)] | 454 | 454 | 14 | 20 |
+| 4 | (10×, 60×] | 494 | 494 | 5 | 18 |
+
+**4396 of 4399** wide-cluster families are band-certified — but *not* 4399, and the three
+misses are recorded rather than rounded away. So the honest split is:
+
+- spread ≤ M − μ: **proved, explicit modulus, no search** (this theorem);
+- spread > M − μ: band lemma applies, modulus **found by search 99.93% of the time** —
+  this is exactly where a divisor/counting existence argument is still wanted, with a
+  comfortable margin to work in (5–14 valid moduli typically, first hit near q ≈ 20–26).
+
 ## Named next
-- Push the modulus family past spread M − μ: q = v₁ + c needs c ∈ [μ+D, M], so the cap is
-  structural for this family. A second modulus (or a two-modulus alternation) is wanted for
-  the wide-cluster case.
+- The divisor count is still the right tool — for the **wide-cluster** case only. The
+  six-number window becomes a (2r)-number window of width D+2, so "each q ≥ D+3 divides at
+  most one" replaces "each q ≥ 8 divides at most one"; the measured slack (median 5–14
+  valid q in [15,400]) says the count should close comfortably.
+- Characterize the three wide-cluster misses — they are the first concrete evidence that
+  the band certificate is not universal, and their shape should say what the second
+  modulus family must be.
 - Lean: (a)–(c) is a short rational inequality chain on top of THM-1018(II) — the residue
   identities e_i = M − δ_i are `Nat.sub` facts, and the integrality is one `Nat.ceil` bound.

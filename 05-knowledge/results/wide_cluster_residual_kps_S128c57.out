@@ -1,0 +1,15 @@
+### wide clusters (spread D > M-mu): does the BAND still find a modulus? ###
+  r  D-range        tested  band-certified  median#valid-q  first-q median
+  2  (M-mu, 3(M-mu)]      500     500           12            26
+  2  (3(M-mu),10(M-mu)]   500     500           8             26
+  2  (10x,60x]            500     500           11            26
+  3  (M-mu, 3(M-mu)]      481     481           11            22
+  3  (3(M-mu),10(M-mu)]   492     492           5             22
+  3  (10x,60x]            498     497           6             22
+  4  (M-mu, 3(M-mu)]      454     454           14            20
+  4  (3(M-mu),10(M-mu)]   480     479           5             20
+  4  (10x,60x]            494     494           5             18
+
+### control: spread <= M-mu (THM-1032 territory), same scan ###
+  band-certified 500 / 500  (THM-1032 also gives these an EXPLICIT q with no scan)
+DONE
