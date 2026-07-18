@@ -643,6 +643,22 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S111 -- THE GAP THEOREM 'non-AP => M>=1/12' IS STRONGER THAN INV, NOT EASIER (S110 route corrected)
+
+Owner: prove the gap theorem non-AP core => M>=1/12. HONEST self-correction of S110. Could not prove
+(it entails LRC(14)); the crux is untouched.
+VERIFIED TRUE (covering): covering non-AP families all have M>=1/12 (floor EXACTLY 1/12, {2,4..22,26}u780);
+AP/dilated-AP cores dip below 1/13 (14/183, 7/92). Window (1/13,1/12) EMPTY of covering non-AP = real
+isolation gap (sharper than S89).
+THE CORRECTION: INV(contra)=non-AP=>M>=1/13; gap thm=non-AP=>M>=1/12. Same hyp, 1/12>1/13 => gap thm
+conclusion STRICTLY STRONGER => gap thm => INV. So >= open crux, NOT more tractable. SHARP at 1/12 (tightest
+covering non-AP = exactly 1/12) => no slack. The 'room' = the gap (1/13,1/12) whose emptiness IS the
+isolation = INV (circular). S110's 'stability-slack easier' hope RETRACTED.
+PROVABLE FRAGMENT: non-covering-at-{2..12} => M>=1/q'>=1/12 (sieve, S106); remainder = INV.
+NET: target reverts to INV (M>=1/13, open). PG(2,13)/metagraph STRUCTURAL link (S110) stands; the PROOF
+route collapses onto INV. Every content-carrying reformulation = INV (S94). Crux open.
+FILES: reflection the-gap-theorem-is-stronger-than-INV-not-easier-s110-route-corrected-boxeph-S111, script+out lrc14_gap_theorem_test_boxeph_S111, HYP-7645. boxeph; S111.
+
 ## boxeph-2026-07-18-S110 -- LRC(14) LIVES AT PG(2,13) PARAMETERS; INV IS A DOUBLING-GAP = the metagraph transitive-class isolation
 
 Owner: work creatively on INV, think tournaments/metagraph. Creative connection + new route (INV not proved).

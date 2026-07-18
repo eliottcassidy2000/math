@@ -1,0 +1,8 @@
+deep well {1..12}u182 (AP)           cover= True AP-core= True M=  14/183=0.0765
+dilated {2..24}u182 (AP)             cover= True AP-core= True M=    7/92=0.0761
+repl 5->24 (cover, non-AP)           cover= True AP-core=False M=     1/9=0.1111
+repl 7->14 (cover, non-AP)           cover= True AP-core=False M=    1/10=0.1000
+dbl+perturb {2..22,26}u780 (nonAP)   cover= True AP-core=False M=    1/12=0.0833
+
+covering non-AP floor = 1/12 (sharp); gap (1/13,1/12) empty of covering non-AP.
+gap thm => INV (stronger conclusion, same hyp) => >= open crux. Route corrected (S110->S111).

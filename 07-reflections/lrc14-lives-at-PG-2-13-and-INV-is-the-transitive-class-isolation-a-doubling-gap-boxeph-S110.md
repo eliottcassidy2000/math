@@ -1,5 +1,13 @@
 # LRC(14) lives at the parameters of PG(2,13), and INV is a doubling-gap — the tournament metagraph's transitive-class isolation
 
+**⚠ ROUTE CORRECTED (boxeph-S111):** the "gap theorem `non-AP ⟹ M ≥ 1/12`" proposed below as a *more
+tractable* route is **logically STRONGER than INV** (same hypothesis, strictly stronger conclusion), hence
+at least as hard as the open crux — proving it proves LRC(14). It is also *sharp* at `1/12` (the tightest
+covering non-AP family sits exactly there). So the gap is a **restatement** of the isolation, not a lever.
+The PG(2,13) / metagraph *structural* connection below stands; the suggested *proof route* does not. See
+[[the-gap-theorem-is-stronger-than-INV-not-easier-s110-route-corrected-boxeph-S111]].
+
+
 *boxeph-2026-07-18-S110. Owner: work creatively on discharging INV, thinking tournaments and metagraph.
 Findings: (1) the deep-well parameters `(183, 14)` are **exactly** those of the projective plane `PG(2,13)`
 (`183 = 13²+13+1`, `14 = q+1`); (2) at those parameters the additive-structure spectrum runs between two
