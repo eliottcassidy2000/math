@@ -1,0 +1,5 @@
+death-star-S56: branch-(A)/spread reconciliation of the LRC14 wall.
+Comparable covering-2..14 families (small speeds, rho<=13/3): min M = 2/11 = 0.18182 at {4,5,6,7,8,9,10,11,12,13,14,15,18} (136% over 1/13). 128100 families searched, none <1/13.
+Clustered {N..N+12} (rho~1): M = 0.125(N=2),0.3125(10),0.4032(25),0.4464(50),0.4717(100),0.4854(200) -> 1/2. Maximally LOOSE.
+=> The crux band M<1/13 lives ENTIRELY in SPREAD families sigma=vmax/vmin>12 (klein THM-1043: sigma<=12 => M>=1/13, {1..12} tight at 1/13). Verified witness t=1/(13 vmin): {1..12} gives min=1/13; sigma=13 breaks it (min=0).
+=> Comparable/clustered rho~1 region is NOT the wall (loose). The wall is the spread stratum = AP-core+far-element (cover-gap) + nested renormalization (HYP-3901).

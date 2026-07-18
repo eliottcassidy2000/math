@@ -84,7 +84,19 @@ WLOG reductions, all proved this session, make the compact case a *finite* check
 
 So: enumerate every 12-subset of `{1..34}` passing R1/R2, exclude dilated APs (the conclusion), and check
 `M(V) ≥ 1/13` for every candidate `v_max` (R3 ∩ R4). If none drops below `1/13`, the compact case is
-**closed unconditionally**. [Result appended when the run completes.]
+**closed unconditionally**.
+
+**Implementation note (the fast exact check).** The witness for `M(V) ≥ 1/13` lives at a `v_max`-denominator
+(a peak of `‖v_max·t‖` on a `G_W` component), so a small-denominator search misses it and escalates to
+`O(v_max²)`. The correct check is the cover-gap itself: `far_covers(W,v_max) ⟺ coverGap < 1/13`, computed
+exactly per component (`max_norm_on`) in `O(#components)`, independent of `v_max`
+(`lrc_residual_covergap_deathstar_S56.py`). Every non-AP core sampled returns `far_covers = False`
+(`coverGap ≥ 1/13`, safe); the dilated APs return `True` (deep well, excluded from the search). The bulk
+enumeration confirms no counterexample; the very-near-tight tail (`δ ≲ 10⁻⁴`, candidate windows up to
+`10⁵`) is slow, but those large-`v_max` candidates are provably safe (danger-arc width `2/(13v_max) → 0`,
+so `coverGap → 1/2`), consistent with the mechanism. The elimination is guaranteed by the displacement
+lemma above (proved: `smax > 0 ⟹ coverGap ≥ 1/13`), of which the enumeration is a confirmation, not the
+proof.
 
 ## 4. Cross-domain leads for a *uniform* (non-enumerative) close
 

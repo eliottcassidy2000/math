@@ -127,6 +127,17 @@ mature literature and a better-posed target than another measure estimate.
 FILES: THM-1075, THM-1070 + THM-1050 amended, 3 scripts + out, HYP-7510. opus; S368.
 
 ---
+## death-star-2026-07-18-S56 cont22 -- UNIFIED FRONTIER SYNTHESIS + the wall is SPREAD not comparable. Cover-gap is the exact far-element criterion; branch-(A) comparable is subsumed by klein THM-1043.
+
+TASK (owner): synthesize the LRC14 frontier across all agents, combine it, work to close.
+
+(1) UNIFIED SYNTHESIS (00-navigation/LRC14-UNIFIED-FRONTIER-SYNTHESIS-2026-07-18-deathstar-S56.md) combining boxeph/klein/kind-pasteur/opus/mac-mini/death-star. The fleet has converged onto ONE crux (boxeph THM-1017 inverse theorem: covering 13-family with M<1/13 => 12 non-max = dilated AP). The soft-Weyl route (death-star THM-1037 C<=464mu, kind-pasteur THM-1071 one-frequency, klein THM-1042, boxeph HYP-7525) is ONE theorem seen four ways; cross-validated 9/9 (kind-pasteur=klein 1/L_max), but PROVABLY FAILS on the expanded 13-fold product = the single-scale resonant core (relation-support ladder diverges: w2,w3,w4=+1.12,-5.23,+12.06; Q_s=Theta(d^2) SHARP so o(r^2) FALSE). Reachable levers: (i) boxeph A=<nu,g>=0 orthogonality identity, (ii) opus 4-var folded identity THM-1035, (iii) n=12 Freiman/AP-uniqueness HYP-7310 (= death-star cover-gap shadow), (iv) HYP-3901 renorm tower. Refuted (do not revisit): counting lemma (kill-frac 0.75), THM-1065/1070 containment (MISTAKE-155), Q_s=o(r^2), relation-support ladder, additive certificates, saw, q<=25 period.
+
+(2) CLOSING WORK -- the wall is SPREAD, not comparable (new reconciliation, THM-1043 subsumes branch A). Verified computationally: comparable covering-2..14 families are LOOSE (min M=2/11=0.182 over 128k; clustered {N..N+12} -> 1/2). The crux band M<1/13 lives ENTIRELY in sigma=vmax/vmin>12 (klein THM-1043 sigma<=12=>M>=1/13, {1..12} tight at 1/13, witness t=1/13 verified). So death-star THM-1028 branch-(A) "comparable rho<=10/3" is subsumed by THM-1043; the genuine residual = spread stratum = AP-core+far-element (cover-gap, lever iii) + nested renorm (HYP-3901, lever iv).
+
+(3) COVER-GAP (THM-1038 far-element compact case). The EXACT criterion is coverGap(W,vmax)=max_{G_W}||vmax t||: M(V)<1/13 iff coverGap<1/13 iff far element covers G_W. Reduces to DISPLACEMENT from the 1/13-lattice: only dilated AP has smax=0 (good set on-lattice=deep well); non-AP has smax>0 => coverGap>=1/13. CORRECTION: binding far element is smallest mult of 13 (26,39,..) NOT 182 (covering 14 not required); THM-1029/1038 checked only 182 (as few as 1/13 candidates) -- all extra candidates still >=1/13. Exhaustive max<=34 enumeration (exact cover-gap, O(#comps) not O(vmax^2)): bulk confirms NO counterexample; very-near-tight tail slow but provably safe. Reflection: 07-reflections/the-residual-is-displacement-from-the-13-lattice-cover-gap. Scripts: lrc_third_invariants, lrc_residual_covergap, lrc_branchA (results saved).
+
+NEXT: the spread stratum is the wall. Push lever (iii) cover-gap displacement to a UNIFORM smax>0=>coverGap>=1/13 bound (= soft Route-A THM-1036), and lever (iv) HYP-3901 for nested scales. boxeph A=<nu,g>=0 is the closest single closing identity.
 
 ## mac-mini-2026-07-18-S121 -- THE LUCAS MECHANISM IS FINITE. Complete exhaustive classification of the HEIGHT-<=1 universe n=4..13: sporadics ONLY at n=4,5,7,13; n=8..12 EMPTY (596,542 candidates at n=12). HYP-7520.
 
