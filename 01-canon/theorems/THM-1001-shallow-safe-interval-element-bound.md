@@ -40,11 +40,16 @@ global maximizer. (We use THM-769's global characterization — completeness is
 **not** inferred from a single maximizing point; cf. the S107 correction in
 HYP-6820.)
 
-## (A) The safe-interval element bound (PROVED)
+## (A) The safe-interval element bound (PROVED — general, any tight 12-set)
 
-> **Lemma.** Let `A` be a shallow tight 12-set and `w ∈ A`, `C = A\{w}`. Since
-> `|C| = 11`, `M(C) ≥ 1/12 > 1/13` (LRC(12)), so `δ(C) > 0`. Then
-> **`w ≤ 2/(13·δ(C))`.**
+> **Lemma.** Let `A` be **any** tight 12-set (`M(A)=1/13`) and `w ∈ A`,
+> `C = A\{w}`. Since `|C| = 11`, `M(C) ≥ 1/12 > 1/13` (LRC(12)), so `δ(C) > 0`.
+> Then **`w ≤ 2/(13·δ(C))`.**
+
+*(The proof below uses only tightness and `|C|=11`; it does **not** assume `A`
+shallow. So (A) holds on the whole sporadic branch, shallow and deep alike. The
+shallow hypothesis enters only in the single-coordinate corollary (B), which is
+about full-residue winding.)*
 
 *Proof.* Suppose `w > 2/(13 δ(C))`, i.e. `δ(C) > 2/(13w)`. Let `J` be a largest
 arc of `{φ_C > 1/13}`, `|J| = δ(C)`. The `1/13`-danger set of `w`,
@@ -83,6 +88,16 @@ classification (which certifies lift heights `≤ 12`): the single-coordinate sl
 is closed for **every** height, including the `> 12` heights outside THM-770's box
 and unreduced by its gcd-descent (descent lands on the primitive quotient, not a
 lower height).
+
+**The mechanism (why (B) is true), via tooth-narrowing.** As `k → ∞` the wound
+speed `j+13k` recedes and `M(A) ↑ M(C)` from below, `C = \{1,…,12\}\setminus\{j\}`
+(verified: e.g. `j=1`: `M = 1/13, 1/8, 4/29, 1/7, 1/7, …` up to `M(C)=1/7`; the
+plateau is exactly `M(C)`). THM-751's tooth-narrowing gives the matching lower
+bound `M(A) ≥ M(C)·(j+13k)/((j+13k)+\max C) ≥ 1/13` for `k ≥ 1` — but only
+**non-strictly** (equality at the first aligned value). The safe-interval bound (A)
+is precisely what upgrades that `≥ 1/13` to a **strict** `> 1/13`, which is what
+"not tight" requires. So (A) is the strictness certificate for the winding
+exclusion; THM-751 supplies the monotone envelope.
 
 ## (C) Reduction of the shallow residual
 
