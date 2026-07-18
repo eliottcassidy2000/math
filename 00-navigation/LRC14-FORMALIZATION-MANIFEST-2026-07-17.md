@@ -1308,8 +1308,9 @@ debts.
 The same module now contains `c7_consecutive_good_pos`.  For seven combs the
 union budget is exactly one, so any single adjacent overlap credit crosses the
 wall; `consecutive_credit_closed` supplies at least `1/49`.  This closes the
-consecutive c7 measure theorem but, like c8, does not add the remaining runners
-of a thirteen-speed family.
+consecutive c7 measure theorem, and `LRCC8ConsecutiveWitness` now extracts its
+literal `Fin 7` witness alongside the existing `Fin 8` theorem.  Neither adds
+the remaining runners of a thirteen-speed family.
 
 THM-979's explicit sampling modulus is a distinct next bridge.  It can turn a
 continuous positive `B5` floor into a finite grid, but its proposed modulus is

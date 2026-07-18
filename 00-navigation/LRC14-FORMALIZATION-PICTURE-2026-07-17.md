@@ -227,6 +227,8 @@ must state which LRC predicate it preserves.
   Lebesgue measure for the block's common safe complement.  The same module
   now proves the `c=7` wall theorem: at exactly unit union budget, one positive
   adjacent-pair credit already forces a positive safe complement.
+  `LRCC8ConsecutiveWitness` extracts literal `Fin 7` and `Fin 8` `Lonely 14`
+  witnesses from the two positive-measure statements.
   `LRCC8ConsecutiveWitness` extracts a concrete point and packages a literal
   `Lonely 14` witness for that `Fin 8` family without duplicating the measure
   proof.  This is the live generic shifted `c=8` theorem; it does not add the

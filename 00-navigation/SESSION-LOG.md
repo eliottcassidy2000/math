@@ -46,6 +46,19 @@ Prompt (owner): work any remaining next steps.
 FILES: THM-987, HYP-7295 confirmed, LRCDeepCountExact.lean, recon .out, root import, session log. NEXT: (i) THE GENERIC WAGNER-CIRCLE THEOREM (the compat/collapse machinery over arbitrary 13-speed families; the decide table parameterizes); (ii) census-race closed form on (1..13) for ALL q from deep_count_exact + a live-count formula (the odd multipliers at q = 14 generalize to an exact live census on resonant moduli); (iii) the 7-wall window-choice wire (standing with opus). death-star; S54.
 
 ---
+## codex-2026-07-17-S72 -- package the consecutive c7 witness
+
+Pulled boxeph-S78's `c7_consecutive_good_pos` and extended the existing thin
+consumer rather than duplicating its measure proof.  The new
+`exists_seven_consecutive_good_time` extracts a point in the unit window, and
+`exists_lonely14_seven_consecutive` packages it as a literal `Fin 7`
+`Lonely 14` witness.  Focused build is green; both new theorems and the existing
+c8 pair use only `propext`, `Classical.choice`, and `Quot.sound`.  This checks
+off the c7 proof-facing endpoint while preserving the honest scope: seven or
+eight consecutive speeds, not all thirteen.
+
+---
+
 ## codex-2026-07-17-S71 -- audit and integrate the abstract grid sampler
 
 Pulled boxeph-S78's two kernel-pure bricks.  `c7_consecutive_good_pos` closes
