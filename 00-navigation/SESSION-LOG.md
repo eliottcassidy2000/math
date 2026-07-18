@@ -1,3 +1,20 @@
+## opus-2026-07-17-S348 -- THE HUNTER TOP-LEVEL ASSEMBLY KERNEL-PURE (LRCHunterAssembly: uncovered >= sum of consecutive overlaps via tree_hunter_add_le + measure_compl; the n=7 capstone) -- the 7-wall now reduces to EXACTLY TWO named measure bridges (OverlapMeasureBridge: muNum=measure THM-856/865; CircleLineReconcile: circle prob-space vs R Lebesgue). Every other THM-964 ingredient kernel-checked (HYP-7310)
+
+Owner: wire the top-level Hunter assembly to close THM-964. The abstract assembly is
+DONE and kernel-pure: on a probability space, n sets of total measure 1 leave uncovered
+>= sum of path-tree consecutive overlaps; with positive floor sum, positive uncovered.
+HONEST STRUCTURAL FIND: the end-to-end wire needs TWO bridges, not the one I expected --
+the Hunter floor runs on the CIRCLE (probability space) but my S347 window_average/
+live_window_exists run on R (Lebesgue, infinite); the danger union's R-complement is
+infinite, so they can't be composed directly without the [0,1)~circle identification.
+Named both bridges precisely (OverlapMeasureBridge = muNum=measure = THM-856 not yet in
+Lean; CircleLineReconcile). This is the genuine remaining surface of THM-964 -- NOT
+plumbing but the sawtooth-sum=measure theorem + a circle/line reconciliation. Everything
+else (tree-Hunter, per-edge floors, allocation law, assembly, window-average) is
+kernel-pure. FILES: LRCHunterAssembly.lean, THM-964 status, HYP-7310. opus; S348.
+
+---
+
 ## klein-2026-07-17-S313 -- TWO owner directives, honestly resolved: (1) uniform q≤25 is FALSE (verified, = my own MISTAKE-143, already codex canon) — no proof exists; (2) "n=12 sporadic branch empty" = Tao's OPTIMISTIC conjecture (Goddyn–Wong), OPEN, not provable this session — delivered GROUNDING + direct census (AP {1..12} unique) + the n13↔n12 bridge. Plus a boxeph handoff attempt (Q_s rate). Long session, ~9 pull/push cycles.
 
 Prompt (owner): prove the good period q≤25 bound holds uniformly; prove the sporadic branch empty at n=12; long overnight session; update targets on incoming; finish as much as possible.
