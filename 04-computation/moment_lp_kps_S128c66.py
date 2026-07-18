@@ -10,7 +10,9 @@ So an UPPER bound on the union is the LP
 Coverage requires that optimum >= n.  With 3 equality constraints the optimum sits at a
 basic solution with <= 3 nonzero n_d, so it can be solved EXACTLY by enumerating triples of
 d-values -- no LP solver needed.
-Compare against the MST bound on the SAME adversarial sextuples.  PRINT DATA ONLY."""
+Compare against the MST bound on the same heuristic candidate families.  The cores and
+sextuples/quadruples below are seeded samples, so a negative displayed margin is a certificate
+only for that displayed candidate, not a uniform r-branch theorem.  PRINT DATA ONLY."""
 import sys, itertools, random
 from fractions import Fraction as F
 sys.stdout.reconfigure(line_buffering=True)
@@ -76,8 +78,8 @@ def lp_bound(S1,S2,S3,r,use3=True):
         if best is None or tot>best: best=tot
     return best
 random.seed(66)
-print("### moment LP vs MST, on adversarial sextuples/quadruples ###")
-print("   r  core                     n    |union|  MST bound  LP(S1,S2)  LP(S1,S2,S3)  closes?")
+print("### moment LP vs MST, on sampled sextuple/quadruple candidates ###")
+print("   r  core                     n    |union|  MST bound  LP(S1,S2)  LP(S1,S2,S3)  rejects candidate?")
 for r,size,KB in [(4,9,400),(5,8,235),(6,7,333)]:
     CS=[sorted(c) for c in itertools.combinations(range(1,13),size)]
     CS=random.sample(CS,14)
@@ -120,5 +122,6 @@ for r,size,KB in [(4,9,400),(5,8,235),(6,7,333)]:
         r,str(list(P)),n,uc,mst,lp2,lp3,"YES" if lp3<n else "no"))
     print("      worst margins:  MST %+d   LP2 %+.1f   LP3 %+.1f"%(worstMST[0],lp2-n,lp3-n))
 print()
-print("  margin < 0 means the bound is below n, so coverage is impossible and no enumeration is needed.")
+print("  margin < 0 certifies noncoverage for that sampled candidate only.")
+print("  NOTE: the candidate generator is heuristic; this output proves no uniform r-branch closure.")
 print("DONE")

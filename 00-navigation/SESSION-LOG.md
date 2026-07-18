@@ -70787,3 +70787,14 @@ retain the reduced-ratio color on each edge; bare signs destroy the telescoping
 ratio constraint.
 
 ---
+## codex-S67 correction — THM-1122 sampled-family quantifier
+
+THM-1122's moment identities and exact LP computation are valid for each fixed kill-set
+family. Its `lp3_r6_allcores` driver, however, tests only 18 heuristic sextuple candidates
+per core (one top-cardinality, three greedy, fourteen seeded-random). Therefore the original
+claims that 722/792 cores were certified, that only 70 cores required enumeration, and that
+the residual search was about 10^8 are retracted. The honest output is 14,256 sampled
+candidate instances: 70 cores have a sampled candidate with LP3 >= n, while 722 have none
+among the 18 tested. THM-1121 independently closes the finite horn exactly; no exact closure
+is lost by this correction. HYP-7601 records this audit because HYP-7540 was already multiply
+occupied before the THM-1122 entry landed.

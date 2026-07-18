@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """lp3_r6_allcores_kps_S128c66.py -- kind-pasteur S128 cont.66 (background).
-Does the triple-moment LP close r=6 on EVERY core?  For each of the 792 seven-speed cores,
-adversarially search sextuples maximising the LP3 bound and check LP3 < n.
+Heuristic triple-moment audit on every r=6 core.  For each of the 792 seven-speed cores,
+test one top-cardinality, three greedy, and fourteen seeded-random sextuple candidates.
 LP3 = max sum n_d s.t. sum n_d d = S1, sum n_d C(d,2) = S2, sum n_d C(d,3) = S3, n_d >= 0.
-If LP3 < n for every core and every sextuple, coverage is impossible and r=6 closes with NO
-enumeration.  PRINT DATA ONLY."""
+LP3 < n certifies the particular sextuple tested, but the candidate generator is not exhaustive:
+this script does not close a core or the r=6 branch.  PRINT DATA ONLY."""
 import sys, itertools, random
 from fractions import Fraction as F
 sys.stdout.reconfigure(line_buffering=True)
@@ -49,7 +49,7 @@ def mom(ms):
     return S1,S2,S3
 random.seed(661)
 C7=[sorted(c) for c in itertools.combinations(range(1,13),7)]
-worst=None; fails=0
+worst=None; sampled_nonclosing_cores=0; sampled_candidates=0
 for ci,P in enumerate(C7):
     M=max(P); lo=13*M+1
     bits=[i for i,(q,a) in enumerate(QS) if all(la(p*a,q)>=-(-q//14) for p in P)]
@@ -73,22 +73,22 @@ for ci,P in enumerate(C7):
     for _ in range(14): cands.append(random.sample(ks[:60],R))
     bestb=None
     for S in cands:
+        sampled_candidates+=1
         ms=[masks[k] for k in S]
         b=lp3(*mom(ms))
         if b is None: continue
         if bestb is None or b>bestb: bestb=b
     if bestb is None: continue
     marg=float(bestb)-n
-    if marg>=0: fails+=1
+    if marg>=0: sampled_nonclosing_cores+=1
     if worst is None or marg>worst[0]: worst=(marg,tuple(P),n,float(bestb))
     if ci%150==0: print("  ... core %d/792  worst margin so far %+.1f"%(ci,worst[0]))
 m,P,n,b=worst
 print()
-print("### r=6, all 792 cores, adversarial sextuples ###")
-print("  WORST margin (LP3 - n) = %+.1f  at core %s (n=%d, LP3=%.1f)"%(m,list(P),n,b))
-print("  cores where LP3 >= n: %d"%fails)
-print("  LP3 < n everywhere: %s"%(fails==0))
-if fails==0:
-    print("  => coverage is impossible at r=6: NO sextuple's kill-sets can cover bits(P),")
-    print("     so no r=6 family is uncertified and the 3.6e12 enumeration is unnecessary.")
+print("### r=6, all 792 cores, sampled sextuple candidates ###")
+print("  sampled candidate instances: %d"%sampled_candidates)
+print("  WORST sampled margin (LP3 - n) = %+.1f  at core %s (n=%d, LP3=%.1f)"%(m,list(P),n,b))
+print("  cores with a sampled candidate having LP3 >= n: %d"%sampled_nonclosing_cores)
+print("  cores with LP3 < n on every sampled candidate: %d"%(792-sampled_nonclosing_cores))
+print("  NOTE: candidates are heuristic, not all sextuples; these counts do not close any core.")
 print("DONE")
