@@ -153,13 +153,18 @@ search for one more universal scalar:
   deep iff integer-circle or half-circle, with `compat_card_le` collapsing all
   `k₀=3,...,8` branches to one finite decision.  THM-987 now kernel-proves the
   exact all-modulus deep-count formula and the resonant `q=14` census witness.
-  This lens still does not
+  `LRCTwoCircleCount` adds the reusable Finset atlas: literal low, high, and
+  half intervals, their pairwise disjointness, both parity/cardinality forms,
+  and the set identity `canonicalDeepMultipliers 14 = {7}`.  This lens still does not
   transport a canonical classification to the weighted/trapped-core supplier;
 - the restricted-measure Hunter path proves positive safe measure for the
-  danger combs in every consecutive block `v,...,v+7` via
+  danger combs in every consecutive block of seven or eight runners via
   `LRCC8Consecutive`; its vertices preserve the weighted union/intersection
   data, but adding five more combs needs new tree credit and the quotient
-  deliberately forgets tooth witnesses and residue labels;
+  deliberately forgets tooth witnesses and residue labels.  The new
+  `good_interval_of_margin` / `good_measure_of_margin` converter shows that
+  any strict margin `M>1/14` produces a quantitative safe interval and
+  measure floor; it does not prove that strict margin on the trapped core;
 - the primitive `n=12` sporadic problem is finite and ramification-stratified;
   its AP-centred common-scale H6 faces are closed through scale eighteen
   (with scale thirteen primitive-impossible).  THM-982 proves the exact
@@ -168,11 +173,18 @@ search for one more universal scalar:
   `p>=19` uniformly by a residue-block capacity recurrence, including all 139
   primes in THM-860's finite range.  THM-986 and THM-988 independently close
   composite `c=20,21` with exact owner-projection deficits; at `c=21` the two
-  all-order rows are scalar-tight at every owner but miss one sheet locally;
-  its cubic-character refinement proves the missing-sheet obstruction without
-  enumerating unit tuples.  THM-989 independently closes `c=22`, while THM-990
-  claims `c=24` pending its referee.  The remaining composite faces beginning
-  at `c=24`, the finite H5 bank, and
+  all-order rows are scalar-tight at every owner but miss one sheet locally,
+  and its cubic-character refinement proves the missing-sheet obstruction
+  without enumerating unit tuples.  THM-989 independently closes
+  `c=22`, with ten proof-bearing banks shared by algebraic-CRT/Python and
+  literal-CRT/C++.  THM-990 independently closes `c=24`; every one of its
+  66,984 scalar rows has at least two empty owners, and its referee hashes all
+  101,961,528 reachable masks.  THM-992's prime-square analysis
+  collapses `c=25` to 36 rows in three orbits and proves structurally, through
+  the quotient `Z/25 -> Z/5`, that every owner misses at least three sheets;
+  its frozen primary awaits an independent replay.  Scale 26 is excluded by
+  the multiple-of-thirteen obstruction, so the remaining faces begin at
+  `c=27`, together with the finite H5 bank and
   non-AP-centred/deep-sheet continuations must be closed or replaced by a
   uniform decreasing invariant;
 - the final nonlacunary dense core needs a theorem that composes its component,
@@ -585,7 +597,7 @@ positive-open residual
 
 | Lens family | What it preserves | What it destroys or hides | Required sidecar / repair | What it points at |
 |---|---|---|---|---|
-| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 bounds primitive proper AP-centred H6 by `c<=840`; THM-861/862 close `c=2,3`; THM-957/958/960/962/963/969/970/974/976 close `c=4,...,12`; THM-860 excludes `c=13`; THM-977/978/980/981/982 empty `c=14,15,16,17,18` through exact owner-local deficits. THM-983 uniformly excludes every prime `c>=19` by residue capacity, while THM-986/988/989 independently close composite `c=20,21,22`; at `c=21` a cubic-character coupling of gcd strata explains the one-sheet projection debt. THM-990 claims `c=24` pending independent replay. The changing faithful vertices—rows, owner obligations, projective owner classes, local sheets, colored exact-cover strata, owner-feasibility vectors, then weighted ratio-capacity digraphs—are part of the proof; completed tournaments are telemetry. THM-858 separately bounds the finite H5 ramification base. |
+| Ramified component-cover/action lens | prime-power upper sets, literal strict-safe components, labelled future comb progressions, last-speed order, common-sheet fibre, exact shortcut witness | deletion/scale/descent semantics if the legal operation is omitted; common large-prime factors if range zero is misread as prime absence; higher-order union if reduced to pairs | complement-lcm fibre, fibre-Hunter/Kruskal cut, operation category, continuation-congruence proof, endpoint ancestry, `Z/DZ` phase action, cover nerve/Farkas dual | THM-857 solves the scale-one H6 fibre; THM-859 proves exact common-dilation conjugacy and identifies `D` as the failed-congruence ramification degree; THM-860 bounds primitive proper AP-centred H6 by `c<=840`; THM-861/862 close `c=2,3`; THM-957/958/960/962/963/969/970/974/976 close `c=4,...,12`; THM-860 excludes `c=13`; THM-977/978/980/981/982 empty `c=14,15,16,17,18` through exact owner-local deficits. THM-983 uniformly excludes every prime `c>=19` by residue capacity; THM-986/988/989 independently close composite `c=20,21,22`, with a cubic-character coupling explaining `c=21`; THM-990 independently closes `c=24`; THM-992 has a structural five-coset obstruction and frozen primary for `c=25` pending replay. The changing faithful vertices—rows, owner obligations, projective owner classes, local sheets, colored exact-cover strata, owner-feasibility vectors, then weighted ratio-capacity digraphs—are part of the proof; completed tournaments are telemetry. THM-858 separately bounds the finite H5 ramification base; `c=26` is multiple-of-thirteen excluded and `c=27` is the next untreated common scale. |
 | Labelled packet / reduction lens | theorem route, exact packet identity, AP/GW boundary atoms, C27/K33/covering family | local topology and certificate economy if scalarized | route label, exact `M`, qdiv, packet family, residual sector | packet sheaf base |
 | Equivalence triad lens | count shadow, retained scissors/fiber data, observer-cut orbit, limiting distribution law, first failed interaction order | proof predicate if equinumerosity, equidecomposability, or equidistribution is used alone | `cardinal_shadow`, `scissors_fiber`, `observer_cut_orbit`, `distribution_law`, `interaction_order_defect`, `residual_debt_name` | forgetting-cost invariant |
 | Tournament / metagraph / observer lens | pairwise comparator, wall-crossing relation, marked source/phase order | thresholds, endpoints, scale, family route if vertices are raw runners | marked vertices, retained observable, tie Hamiltonian path, lost-coordinate ledger | relation walk over packet base |

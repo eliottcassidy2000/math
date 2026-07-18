@@ -23,18 +23,16 @@ theorem mem_Ioo_strict (x y : ℚ) (p : ℤ) (hp : p ∈ Finset.Ioo ⌊x⌋ ⌈y
   constructor
   · calc x < (⌊x⌋ : ℚ) + 1 := Int.lt_floor_add_one x
       _ ≤ (p : ℚ) := by exact_mod_cast Int.add_one_le_iff.mpr h1
-  · calc (p : ℚ) ≤ (⌈y⌉ : ℚ) - 1 := by
-        have := Int.le_sub_one_iff.mpr h2
-        exact_mod_cast this
-      _ < y := by
-        have := Int.ceil_lt_add_one y
-        linarith
+  · have hpInt : p ≤ (⌈y⌉ : ℤ) - 1 := by omega
+    have hpRat : (p : ℚ) ≤ (⌈y⌉ : ℚ) - 1 := by exact_mod_cast hpInt
+    have hceil : (⌈y⌉ : ℚ) < y + 1 := Int.ceil_lt_add_one y
+    linarith
 
 /-- **The strict-count floor**: integers strictly between `x` and `y` number
     at least `y − x − 1`. -/
 theorem card_Ioo_floor_ceil (x y : ℚ) :
     y - x - 1 ≤ ((Finset.Ioo ⌊x⌋ ⌈y⌉).card : ℚ) := by
-  rcases le_or_lt (⌈y⌉ : ℤ) ⌊x⌋ with h | h
+  by_cases h : (⌈y⌉ : ℤ) ≤ ⌊x⌋
   · have hcard : (Finset.Ioo ⌊x⌋ ⌈y⌉).card = 0 := by
       rw [Finset.card_eq_zero]
       exact Finset.Ioo_eq_empty (not_lt.mpr h)
@@ -44,7 +42,8 @@ theorem card_Ioo_floor_ceil (x y : ℚ) :
     have h2 : (⌊x⌋ : ℚ) ≤ x := Int.floor_le x
     push_cast
     linarith
-  · have hcard : ((Finset.Ioo ⌊x⌋ ⌈y⌉).card : ℤ) = ⌈y⌉ - ⌊x⌋ - 1 := by
+  · have hlt : (⌊x⌋ : ℤ) < ⌈y⌉ := by omega
+    have hcard : ((Finset.Ioo ⌊x⌋ ⌈y⌉).card : ℤ) = ⌈y⌉ - ⌊x⌋ - 1 := by
       rw [Int.card_Ioo]
       exact Int.toNat_of_nonneg (by omega)
     have hq : ((Finset.Ioo ⌊x⌋ ⌈y⌉).card : ℚ) = (⌈y⌉ : ℚ) - (⌊x⌋ : ℚ) - 1 := by

@@ -564,7 +564,9 @@ zeroColorRootedFaceActivity
 under the per-face window.  The exact remaining supplier sockets are a
 selected-root/top-window coverage lemma, a usable bound for this summed gcd
 budget, a colored payment inequality against the reuse factors, the depth-
-six/seven payment, and the adaptive live floor.
+six/seven payment, and a positive safe-period interval-table supplier at the
+adaptive modulus.  The interval-table-to-liveCount and explicit-modulus
+composition itself is now closed in `LRCLiveFloorSampling`.
 
 `LRCZeroColorStalkFork` now removes the sharp-window socket completely on the
 first finite modulus range.  Applying the primitive-parameter fork at every
@@ -1029,8 +1031,13 @@ closes `c=21`; on its two all-order rows a cubic character on the induced
 the twenty-one sheets.  THM-989 now closes `c=22`: independent algebraic-CRT
 Python and literal-search C++ certificates agree on the exact owner-local
 deficit and, under common serialization, every reachable-mask bank.  Since
-`c=23` is prime, THM-990's frozen-primary claim at `c=24` is the next live
-composite face; an independent replay is still required there.
+`c=23` is prime, THM-990 independently closes `c=24`: its two implementations
+reduce 154,461,339,648 state contexts to 66,984 scalar rows, make every row
+miss at least two owners, and hash all 101,961,528 reachable masks.  THM-992's
+structural prime-square argument reduces `c=25` to 36
+rows and proves, via `Z/25 -> Z/5` fibre incidences, that every owner misses at
+least three sheets.  Its frozen primary awaits an independent replay.  Scale
+26 is multiple-of-thirteen excluded; the next untreated scale is `c=27`.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1251,7 +1258,10 @@ basis.  THM-987 closes the remaining card computation in Lean for every
 
 The integer and half circles are proved disjoint.  Its `q=14` corollary has
 one deep and six live multipliers and kernel-checks loneliness of the tight
-family through the exact census.  THM-985/987 remain canonical-family
+family through the exact census.  `LRCTwoCircleCount` now packages the same
+geometry as reusable low/high/half Finsets, with membership equivalences,
+all pairwise disjointness, parity and compact card formulas, the full set
+identity, and `canonicalDeepMultipliers 14 = {7}`.  THM-985/987 remain canonical-family
 theorems, not the uniform weighted/deep or trapped-core supplier required by
 LRC(14).
 
@@ -1341,11 +1351,24 @@ zero is routed, but small nonzero frequency and signed B5 payment remain.
 
 THM-984 was audited at this integration point.  Its intended endpoint bound
 must use `E=2*sum|v_i|`.  `LRCGridSampling` now proves the abstract interval
-and separated-family grid counts in Lean; the strict-safe-set decomposition,
-component/measure bounds, `liveCount` identification, and exact ceiling wire
-remain.  The original statement that the measure-zero family
+and separated-family grid counts in Lean.  `LRCLiveFloorSampling` now proves
+the missing application/consumer wire from any separated safe-period interval
+table to `liveCount >= q*mu0-error`, defines the strict explicit
+`q0=ceil((error+1)/mu0)`, and composes positivity with both direct loneliness
+and the capped-five census.  `LRCGridCount` supplies an independent rational
+one-interval kernel.  The remaining producer is exactly the finite separated
+interval-table decomposition of `safePeriod`, with its total-length and
+component-count bounds.  The original statement that the measure-zero family
 `(1,...,13)` has zero live points at every modulus is false—its q14 histogram
 has six live multipliers and `B5=5`.  The two positive-measure computations
 remain useful evidence, not a formal trapped-core closure.  Moreover thirteen
 distinct positive magnitudes force `E>=182`, so `ceil(2E/mu0)>=364`; this route
 cannot be inserted into the sharp `q<=98` stalk fork by modulus size alone.
+
+`LRCPairOverlapArcs.good_interval_of_margin` and `good_measure_of_margin`
+also close the Lipschitz conversion in-kernel: a phase with strict margin
+`M>1/14` contains an explicit safe interval and supplies a quantitative
+positive measure floor.  Consequently the hard trapped-core supplier is now
+the equality/rigidity split—classify every residual with `M=1/14` and prove a
+uniform or packet-wise strict margin on the rest—not another measure-to-grid
+adapter.

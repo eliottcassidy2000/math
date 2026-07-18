@@ -152,7 +152,9 @@ zeroColorRootedFaceActivity
 under the per-face top window.  This is the first honest aligned aggregation
 theorem, but not a global supplier: a selected-root/top-window coverage lemma,
 a bound for the summed gcd budgets, the colored payment inequality, the
-depth-six/seven payment, and an adaptive live floor are still missing.
+depth-six/seven payment, and a positive safe-period interval-table supplier at
+the adaptive modulus are still missing.  The table-to-liveCount composition is
+now kernel-checked in `LRCLiveFloorSampling`.
 
 ## Tournament/carrier audit
 
@@ -212,7 +214,9 @@ must state which LRC predicate it preserves.
   canonical deep set is exactly the two circles in-kernel.  THM-987 now counts
   their disjoint union for every `q>=2`, including the half-circle parity term,
   and proves the canonical tight family lonely through the `q=14` census
-  (`deep=1`, `live=6`).  These are canonical-family closures, not the uniform
+  (`deep=1`, `live=6`).  `LRCTwoCircleCount` exposes the same structure as
+  literal low/high/half Finsets and proves their disjointness, parity and
+  compact card formulas, and `canonicalDeepMultipliers 14 = {7}`.  These are canonical-family closures, not the uniform
   weighted/trapped-core supplier.
 - **codex-S57/S66 weighted/colored census**: the exact depth ledger,
   rooted-seven comparison, fixed-color gcd fibers, exact `462/210` reuse count,
@@ -302,13 +306,23 @@ THM-984 propose large explicit sampling moduli from continuous `B5` or safe-set
 floors, respectively.  These advances are complementary, not composable by
 size alone: for thirteen distinct positive magnitudes `E=2*sum|v_i|>=182`, so
 THM-984's `ceil(2E/mu0)` is at least `364`, already outside the stalk window.
-`LRCGridSampling` now proves the abstract separated-interval lower bound
-`card >= qL-n`, while `LRCLiveCountLonely` proves the terminal consumer.  The
-actual strict-safe-set decomposition, component/measure budget,
-grid-to-`liveCount` identification, exact ceiling/sign normalization, `T_s`
-assembly, and exhaustive trapped-core reduction remain.  Large-q
+`LRCGridSampling` proves the abstract separated-interval lower bound
+`card >= qL-n`, and `LRCLiveFloorSampling` now supplies the LRC application
+layer: safe interval-table samples inject into `liveCount`, yielding
+`liveCount >= q*mu0-error`, the strict explicit
+`q0=ceil((error+1)/mu0)`, and direct/capped-five loneliness consumers.
+`LRCGridCount` independently supplies the rational one-interval kernel.  The
+actual strict-safe-set interval-table producer, its component/measure budget,
+`T_s` assembly, and exhaustive trapped-core reduction remain.  Large-q
 small-reduced-speed stalks and colored `462/210` payment are still honest
 sockets.
+
+The complementary margin route is also exact on the consumer side:
+`LRCPairOverlapArcs.good_interval_of_margin` and `good_measure_of_margin`
+turn an instant with `M>1/14` into an explicit safe interval and positive
+measure floor.  The trapped-core analytic question is therefore the rigidity
+of the tight equality case `M=1/14` plus a quantitative strict margin on every
+non-tight residual; the Lipschitz converter itself is no longer debt.
 
 **Guardrails.**  The once-requested universal `q≤25` period bound is false
 (THM-566/762/764; explicit blockers survive every `q≤25`).  Uniform emptiness
@@ -320,9 +334,16 @@ scale `p>=19`.  THM-986's composite scale-twenty owner deficit now has
 independent C++ and Python exact replay.  THM-988 independently closes `c=21`;
 its two all-order rows are scalar-tight at every owner but have exact local
 maximum union `20/21`; a new cubic-character argument explains that projection
-debt symbolically.  THM-989 now independently closes `c=22`; `c=23` is prime,
-and THM-990 claims the `c=24` owner deficit pending frozen dual replay.
-Ramified H5, non-AP/deep, and higher-sheet branches remain.  Neither the
+debt symbolically.  THM-989 independently
+closes `c=22`: literal-CRT/C++ and algebraic-CRT/Python agree on ten hardened
+certificate banks, and every row has at least five empty owners.  `c=23` is
+prime.  THM-990 independently closes `c=24` (66,984 scalar rows, at least two
+empty owners) and hashes all 101,961,528 reachable masks.  THM-992's frozen primary and structural
+`Z/25 -> Z/5` fibre proof reduce `c=25` to 36 rows and make every owner miss
+at least three sheets; independent replay is pending.  Scale 26 is
+multiple-of-thirteen excluded, so the next untreated common scale is `c=27`.
+Ramified H5, non-AP/deep, and higher-sheet branches
+remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
