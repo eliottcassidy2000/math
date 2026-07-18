@@ -1,0 +1,21 @@
+### (1) the core-safe interval claim ###
+  I = [1/13 - 1/2184, 1/13 + 1/2184] , length ell = 1/1092
+  min over 12 cores and over the endpoints/centre of min_p ||p t|| = 1/14 (0.071429)
+  threshold 1/14 = 0.071429  -> interval valid: True
+  (attained at core-drop 1, t = 13/168)
+
+### (2) large-killer horn: does a good t in I really exist for k >= 874? ###
+  random pairs with both killers >= 874 : 220 tested, 220 certified by a t inside I
+
+  adversarial: the lcm-built killers that defeat EVERY modulus
+   drop=1  K=(lcm(15..30), 2*lcm)  ~10^12 : t in I found: YES
+        t=556667/7280000  min||vt||=149999/1820000
+   drop=6  K=(lcm(15..30), 2*lcm)  ~10^12 : t in I found: YES
+        t=556667/7280000  min||vt||=556667/7280000
+
+### (3) small-killer horn: EXHAUSTIVE finite check, killers in (13M, 874) ###
+  (q,a) pairs in play: 689
+  covering families with both killers < 874 : 41986
+  certified by the small-modulus criterion (q<=40) : 41986
+  UNCERTIFIED : 0
+DONE

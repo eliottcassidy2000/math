@@ -1,0 +1,18 @@
+### the two block measures the dichotomy predicts ###
+  M(core {2..12})            = 1/7        (0.14286)  at t=1/14
+  max_u min(||u||,||2u||)    = 1/3        (0.33333)  at u=1/3
+  PREDICTED limit min(.,.)   = 1/7        (0.14286)   vs threshold 1/14 = 0.07143
+
+### convergence: M({2..12} u {V,2V}) as V grows ###
+   V      M exact          value     vs 1/14   vs predicted limit
+  157    1/7              0.14286   OK       = limit
+  200    1/7              0.14286   OK       = limit
+  260    1/7              0.14286   OK       = limit
+  400    1/7              0.14286   OK       = limit
+  650    1/7              0.14286   OK       = limit
+  1000   1/7              0.14286   OK       = limit
+  1600   1/7              0.14286   OK       = limit
+
+### the adversarial families themselves: are they scale-separated enough? ###
+  the criterion-defeating pairs found at Q=18,20,22 were (182,271),(161,1274),(881,1274)
+  K=(182 ,271 ) ratio=1.49  M=13/92        (0.14130)  >=1/14: True
