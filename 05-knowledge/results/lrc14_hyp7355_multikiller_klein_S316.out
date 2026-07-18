@@ -1,0 +1,11 @@
+EXTENDING THM-1014: V = d*P u K, P subset {1..12}, |K|=r killers, delta=1/13 (tail needs r<13/2=6.5)
+  L_P = largest good interval of P at 1/13 (LRC(12) => M(P)>=1/12>1/13 for |P|<=11, so L_P>0):
+    r=2 (|P|=11): L_P min=0.00641  median=0.01282
+    r=3 (|P|=10): L_P min=0.00769  median=0.01923
+    r=4 (|P|= 9): L_P min=0.00962  median=0.02564
+
+CENSUS: compact primitive covering V = d*P u K -- any with M < 1/13?
+  compact primitive covering multi-killer dilated families tested: 19317
+  with M < 1/13: 0
+
+  => HYP-7355 extends to the multi-killer dilated region (no counterexample)

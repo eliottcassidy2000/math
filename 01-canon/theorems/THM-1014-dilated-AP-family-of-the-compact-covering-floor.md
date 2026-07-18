@@ -79,6 +79,31 @@ multiple of 14, covering forces `14 | k`; with `gcd(13,14) = 1` this gives **`18
 - Verified computationally: over `d ≤ 29`, `k ≤ 800`, **894** primitive covering members, of which **863**
   compact — **zero** with `M < 1/13`.
 
+## The multi-killer dilated region (mechanism + census, not yet a theorem)
+
+The single-killer proof above uses that `d·{1,…,12}`'s good set at `1/13` is a **finite** point set. One
+step out — `V = d·P ∪ K` with `P ⊊ {1,…,12}`, `|K| = r ≥ 2` killers — the situation improves: `|P| ≤ 11`
+gives `M(P) ≥ 1/12 > 1/13` by LRC(12), so the good set of `d·P` has genuine **intervals**, of length
+`L_P/d`. The THM-1004 interval-survival lemma then absorbs the killers once
+
+```text
+Σ_i (1/k_i)  <  (L_P/d)·(13 − 2r)/2         (δ = 1/13; needs r < 13/2 = 6.5)
+```
+
+Exact minima of `L_P` over all `P` of the given size:
+
+| `r` | `|P|` | `min L_P` | `median L_P` |
+|---|---|---|---|
+| 2 | 11 | 0.00641 | 0.01282 |
+| 3 | 10 | 0.00769 | 0.01923 |
+| 4 | 9  | 0.00962 | 0.02564 |
+
+**Census: 19,317 compact primitive covering families `d·P ∪ K` (r = 2,3,4; d ≤ 13; killers ≤ 420) — ZERO
+with `M < 1/13`.** So HYP-7355 extends across the multi-killer dilated region empirically, with the tail
+lemma supplying the mechanism for large killers. It is **not** a theorem yet: the tail only absorbs
+*large* killers, and small killers (which sit inside the body rather than above it) need the same
+regime analysis used for the Hamming-radius results.
+
 ## Scope
 
 Only the dilated-AP family `d·{1,…,12} ∪ {k}` (one killer over a full dilated AP). The general compact
