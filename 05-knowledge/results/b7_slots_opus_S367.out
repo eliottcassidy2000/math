@@ -1,0 +1,36 @@
+opus-2026-07-17-S367 -- THE TWO NEW B7 LEDGER SLOTS (S6 lower, S7 upper)
+
+(A) THE FRAGMENTATION STEP (the S7 upper-bound engine):
+    claim: mu(A n D_x) <= 2*lam*mu(A) + kappa(A)*(2*lam/x)
+    400 (A, x) pairs: violations = 0          <- VALID LEMMA
+
+(B) THE ITERATED S7 UPPER BOUND (apply the step 7 times):
+    120 random 7-tuples: bound violated 0/120  <- VALID
+    bound/exact ratio: median 1190.1, min 432.7  (1.0 would be tight)
+    equidistribution (2lam)^7 = 1.214e-06
+    => VALID BUT ~1190x TOO LOOSE.  Target S7 ~ 0.00208; this bound gives ~2.5.
+
+(C) THE S6 CONTAINMENT FLOOR, separated regime (ratios >= 8), k = 4, 5, 6:
+    k=4: 12 tuples, violations 0, floor positive 12, exact/floor median 57.17
+    k=5: 12 tuples, violations 0, floor positive 12, exact/floor median 300.12
+    k=6: 12 tuples, violations 0, floor positive 12, exact/floor median 933.72
+    REGIME COST: ratio>7 for all 12 consecutive pairs => span >= 8^12 = 6.87e10,
+    which the seven-moduli sieve already disposes of.
+
+(D) DEGRADATION OF THE CONTAINMENT FLOOR WITH k (independent seed):
+      k :  exact/floor  (1.0 = tight)
+      2 :      3.50
+      3 :     24.50   x7.0 vs previous
+      4 :    114.33   x4.7 vs previous
+      5 :    200.08   x1.8 vs previous
+      6 :   2100.88   x10.5 vs previous
+    => TIGHT ONLY AT k=2 (where THM-1012/1025 proved it sharp); loses a factor
+       of ~5 per additional speed.  Three orders of magnitude by k=6.
+
+CONCLUSION: both B7 slots admit a VALID bound and NEITHER is usable.  The
+ledger needs slots accurate to O(1) relative error; containment is off by ~10^3
+at k=6 and fragmentation by ~10^3 at k=7.  This REFUTES the THM-1065 proposal
+that the same containment/counting technique is the natural candidate for each
+remaining slot -- it filled the k=2 slot precisely because k=2 is where it is
+sharp.  Diagnosis: each step assumes a worst-case alignment, and independent
+per-step worst cases compound multiplicatively although they cannot co-occur.
