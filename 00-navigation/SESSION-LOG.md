@@ -1,3 +1,44 @@
+## opus-2026-07-17-S371 -- THM-1090 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
+
+Owner: work the bound that keeps the signs. I found where the signs live, and then
+found that knowing where they live does not let you bound them. A decisive negative.
+THE EXACT SPLITTING: hhat(n) = sin(pi n/7)/(pi n) and sin(pi n/7) depends only on
+n mod 14, so with c(r) = sin(pi r/7),
+    delta(S) = (1/pi^k) sum over r in (Lam mod 14) of prod c(r_i) * T(r),
+where T(r) sums 1/prod n_i over the coset. The residues form a subgroup; rebuild
+matches the direct sum to 6 digits. All signs sit in the finite table prod c(r_i) and
+in 1/prod n_i inside each coset.
+WHERE THE CANCELLATION LIVES: COSET-ABS (keeping cancellation inside cosets) is within
+a few percent of FULL-ABS (keeping none) -- 1.64 vs 1.86, 2.90 vs 2.91, 12.83 vs 12.95.
+So essentially ALL cancellation is ACROSS cosets. That looked like the exploitable case,
+since the sign table is finite and explicit.
+IT IS NOT, FOR TWO REASONS, both from antipodal symmetry of Lam with c odd. (1) The
+character sum C(A) = sum_r prod c(r_i) is IDENTICALLY ZERO for odd k -- I computed it as
+0.0000 for all twelve families, including those with the largest and smallest deviations.
+My framing of C as a leading coefficient whose vanishing would signal small delta was
+simply WRONG, and the computation said so unambiguously. (2) Tbar = 0 identically by the
+same pairing, so the 'variation bound' sum |prod c| * |T(r) - Tbar| -- motivated by the
+mean dropping out -- is EXACTLY the coset-absolute bound. The two columns agree to six
+digits on all twelve families. The reduction was vacuous. Spreads: VAR 1.03-12.83
+(12.4x) against FULL-ABS 1.10-12.95 (11.8x). Not better; the same bound.
+WHAT IS RULED OUT: any bound that decomposes delta into coset pieces and applies a
+triangle inequality, because the cancellation it must capture is precisely the
+between-piece cancellation the triangle inequality destroys -- and cosets are already the
+finest granularity on which prod c(r_i) is constant, so refining further cannot help.
+WHAT REMAINS: delta must be EVALUATED. That is exactly what happened at k=2 --
+delta(a,b) = (1/(pi^2 a'b')) sum_s sin(pi s a'/7) sin(pi s b'/7)/s^2 is the Fourier
+series of the second Bernoulli polynomial, summing to the tent function. THM-965 was
+never bounded; it was SUMMED. The k>=3 analogue, sum over a rank-(k-1) lattice of
+prod sin(pi n_i/7)/prod n_i, is a HIGHER-DIMENSIONAL DEDEKIND SUM in Zagier's sense,
+and those carry reciprocity laws -- the mechanism that makes such sums computable rather
+than merely bounded. That is the named target and the only route not yet ruled out.
+THREE SESSIONS, THREE APPROACHES, ONE VERDICT: containment/fragmentation (THM-1070),
+absolute values (THM-1085), coset decomposition (here). The consistency of the failure
+is itself the finding.
+FILES: THM-1090, 3 scripts + outs, HYP-7540. opus; S371.
+
+---
+
 ## codex-2026-07-18-S67 checkpoint — THM-1072 c=28 promoted; ramified Lean consumer repaired
 
 Independent current-HEAD replay promotes the primitive proper AP-centred

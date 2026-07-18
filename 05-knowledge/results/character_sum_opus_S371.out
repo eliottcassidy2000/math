@@ -1,0 +1,21 @@
+(2) THE CHARACTER SUM C(A) AS LEADING COEFFICIENT  (k=3)
+    C(A) = sum over full-support 7-free r in (Lam mod 14) of prod sin(pi r_i/7)
+    family           C(A)      #cosets   |delta|     m7    |delta|*m7
+    (2, 3, 5)          -0.0000    120    0.019419     1   0.019419
+    (11, 13, 17)       -0.0000     98    0.005576     6   0.033455
+    (31, 37, 41)       +0.0000     46    0.000828    30   0.024850
+    (6, 10, 15)        +0.0000    120    0.000334    60   0.020018
+    (5, 7, 11)         -0.0000    144    0.010393     6   0.062358
+    (101, 103, 107)    +0.0000     12    0.003872     6   0.023230
+    (1, 2, 3)          -0.0000    120    0.029563     1   0.029563
+    (3, 4, 5)          -0.0000    120    0.021200     2   0.042401
+    (13, 17, 23)       +0.0000     94    0.003397    12   0.040760
+    (9, 16, 25)        +0.0000     40    0.012544     1   0.012544
+    (7, 11, 19)        -0.0000    118    0.004687     6   0.028120
+    (4, 9, 13)         +0.0000     70    0.008700     1   0.008700
+
+(3) DOES C(A) VANISH WHERE THE DEVIATION IS ANOMALOUSLY SMALL?
+    (6,10,15) had |delta| = 0.0004 with m7 = 60 -- the strongest
+    cancellation in the S370 table (ratio 11.2).  Check its C:
+      (6, 10, 15)  C = +0.000000  over 120 full-support cosets
+      (2, 3, 5)    C = -0.000000  over 120 full-support cosets

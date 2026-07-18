@@ -1,0 +1,15 @@
+(1) THE COSET DECOMPOSITION, AND WHERE CANCELLATION LIVES  (k=3)
+    family          signed    rebuilt    COSET-ABS   FULL-ABS   full/signed  coset/signed
+    (2, 3, 5)        +0.019442 +0.019442   0.031896   0.036463       1.88       1.64
+    (11, 13, 17)     +0.005617 +0.005617   0.007704   0.008122       1.45       1.37
+    (31, 37, 41)     +0.000831 +0.000831   0.002405   0.002420       2.91       2.89
+    (6, 10, 15)      +0.000397 +0.000397   0.004389   0.004462      11.24      11.06
+    (5, 7, 11)       +0.010387 +0.010387   0.016834   0.018006       1.73       1.62
+    (101, 103, 107)  +0.003873 +0.003873   0.004240   0.004287       1.11       1.09
+
+    'rebuilt' must equal 'signed' -- that validates the decomposition.
+    If COSET-ABS is close to FULL-ABS, the cancellation is ACROSS cosets
+    (in the finite sign table prod c(r_i)) -- which is the exploitable case,
+    because that table is FINITE and explicit.
+    If COSET-ABS is close to SIGNED, the cancellation is INSIDE cosets
+    (in 1/prod n_i), which needs analytic, not combinatorial, control.
