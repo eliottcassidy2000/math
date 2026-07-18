@@ -1,0 +1,22 @@
+scale-twenty-five independent literal-CRT C++ referee
+method literal CRT; leave-one-out lcm grammar; discovered scalar rows; sorted-vector union DP; forward/reverse equality
+orders 1,5,25 unit-counts 1,4,20
+hereditary words 473 state words/support 243750000 raw labelled states 225225000000
+literal CRT-base SHA256 ee827cf758ee50dc9ce0ab1215d52c6ca80a361f5422237af92a6df819249e64
+primary mask SHA256 741748b977fd90f0b506a15780e33d87bb04fdd60ae4f844ea1e40349ff8c47d
+primary grammar SHA256 7ae50439ddbd7e09d37516d067fe20f35d1f36b7830c25dc7156c900c6fde62f
+scalar feasible-owner histogram 0:1156 1:149868 2:171636 3:90884 4:21864 5:1608 6:36
+scalar support histogram 0:888 1:36
+scalar survivors 36
+primary scalar SHA256 ad266f55f820615eb2f7b4e323b6599024842c56352ff65c1b6dcdd117c250f9
+structural scalar audit forbidden Cayley relation 36 arcs; 30 edges; 6 reciprocal pairs; K6+K6 on QR/NQR
+structural owner audit distinct D5 fibres force four needle incidences; coincident D5 fibres have total union at most 20
+owner feasible-context histogram 0:36
+owner maximum-union histogram 21:144 22:72
+owner reachable-bank-size histogram 45200:24 48380:24 48540:24 133390:48 140330:48 141430:48
+owner maximizing-mask histogram 80:24 90:144 100:24 140:24
+owner rows 216 total reachable masks 23338080 maximum bank 141430
+primary owner SHA256 a9064e057fcd7169395a28a3c411476f7b8178ec6137fbf74235aaee6db1f85c
+tournament observable (feasible,max-union,capacity), coordinate tie switch
+tournament all transitive; scores 0,1,2,3,4,5; cycles 0; Hamiltonian paths 1; tie histogram 7:36 flip histogram 0:1 1:2 2:5 3:2 4:16 5:2 6:5 7:2 8:1
+verdict every one of the 36 scalar contexts has zero feasible owners; scale 25 empty

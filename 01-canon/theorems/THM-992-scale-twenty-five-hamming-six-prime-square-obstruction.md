@@ -1,13 +1,15 @@
 ---
 id: THM-992
 title: Scale-twenty-five Hamming-six prime-square obstruction
-status: CLAIMED + FROZEN PRIMARY — exactly 36 scalar rows survive in three multiplication orbits; a five-coset overlap proof makes every owner miss at least three sheets, and a deterministic standard-library primary with a separate literal union-DP layer is byte-stable under normal/optimized Python; independent replay is pending
+status: PROVED STRUCTURAL + REFEREED FINITE-EXACT — exactly 36 scalar rows survive in three multiplication orbits; a five-coset overlap proof makes every owner miss at least three sheets, and independent Python-set and literal-CRT C++ sorted-vector implementations agree on every proof-bearing digest
 source: codex-2026-07-17-S66 scale-twenty-five continuation
 depends_on: [THM-765, THM-810, THM-823, THM-859, THM-860, THM-983, THM-986, THM-988, THM-989, THM-990]
 related: [THM-978, THM-980, THM-981, HYP-6820]
 verification:
   - 04-computation/lrc13_scale_twenty_five_hamming_six_prime_square_obstruction_codex_c25.py
   - 05-knowledge/results/lrc13_scale_twenty_five_hamming_six_prime_square_obstruction_codex_c25.out
+  - 04-computation/lrc13_scale_twenty_five_hamming_six_referee_codex_c25.cpp
+  - 05-knowledge/results/lrc13_scale_twenty_five_hamming_six_referee_codex_c25.out
 ---
 
 # THM-992 — the scale-twenty-five prime-square face is empty
@@ -74,15 +76,18 @@ sheets, and the union has size at most `10+(16-4)=22`.
 
 At an order-25 owner, the order-25 ratios include `1,12` and two nonresidues.
 If the two order-five cosets differ, all four order-25 masks meet their union,
-so the total is at most `10+(15-4)=21`; if the cosets coincide, the stronger
-bound is twenty.  Thus every owner misses at least three of the 25 sheets.
+so the total is at most `10+(15-4)=21`.  If the cosets coincide, the thick
+part has size only five, so even the overlap-free relaxation gives the
+stronger bound `5+15=20`.  Thus every owner misses at least three of the 25
+sheets.
 No global unit word exists.
 
 This is a finite Kakeya/toothpick incidence proof: order-five masks are thick
-parallel fibres, order-25 masks are rigid three/four-point needles, and every
-surviving packet pays a four-incidence overlap tax.  The quotient discards
-exact needle positions but preserves precisely the intersection lower bound
-needed for the theorem.
+parallel fibres and order-25 masks are rigid three/four-point needles.  Every
+surviving owner either pays a four-incidence overlap tax against two distinct
+fibres or collapses the thick starting mass from ten to five when those fibres
+coincide.  The quotient discards exact needle positions but preserves exactly
+this disjunction.
 
 The primary's separate complete literal DP sharpens the maxima to 72
 order-five owner rows of size 22 and 144 order-25 owner rows of size 21; all
@@ -110,11 +115,19 @@ banks contain 23,338,080 reachable masks and have size histogram
 ```
 
 Normal and `python -O` runs reproduce the frozen 38-line output byte-for-byte.
-Frozen SHA-256 values are
+The independent C++ referee reconstructs every CRT base by literal congruence
+search, discovers the scalar rows from cardinalities rather than calling the
+structural predicate, and constructs each reachable bank as a sorted vector.
+Forward and reverse provider traversals agree exactly in all 216 owner rows.
+It derives the forbidden Cayley graph and audits the distinct/coincident fibre
+case split directly from literal masks.  `-O2`, `-O0`, and ASan+UBSan
+(`detect_leaks=0`) outputs are byte-identical.  Frozen SHA-256 values are
 
 ```text
 Python primary source  2b40edafa026dbc94f75a21ae2fbc764588d64e923779996760e746006b57870
 Python primary output  f0c3cb63459c6cfccd024f05cc76d8d7819ed53217d469aaaf9682cd91e2ccdb
+C++ referee source     a133eb9624d6c8c1b1118b89c220a52397e0203bc9685ffaca7c178a8530cc85
+C++ referee output     b927a01c6439ea0db9b1e4d8a366b8c9ebdd141abc4fd6a5ab51a7b0bafbaaec
 ```
 
 The proof-facing pair relation is the directed forbidden-ratio Cayley graph:
@@ -131,8 +144,7 @@ Quadratic classes plus the two order-five obligations are faithful at the
 scalar layer; quotient fibres plus owner labels are faithful for the overlap
 tax.  Providers alone, isolated sheets, gaps, wall events, unlabelled residues,
 Fano points, or chi-seven colours destroy shared-unit, owner, or fibre
-incidence.  An independently structured replay is still required before
-promotion from claimed to proved.
+incidence.
 
 This theorem does not cover H5 ramification, non-AP/deep sheets, or global
 sporadic emptiness.  Since THM-860 excludes every multiple of thirteen, scale
