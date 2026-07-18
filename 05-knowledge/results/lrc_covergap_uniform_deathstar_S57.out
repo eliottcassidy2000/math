@@ -1,0 +1,18 @@
+near-tight non-AP cores tested: 21
+CLAIM violations (min coverGap < 1/13 = counterexamples): 1
+  *** VIOLATION ((1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19), 104, 0.058823529411764705)
+min coverGap over all cores/far-elements: 0.05882 (1/13=0.07692) at (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19)
+Prop B (C<=2.551*vmax*mu, non-fragmented, soft Weyl closes): 0/21
+FRAGMENTED (C>2.551*vmax*mu, reduce to displacement kernel): 21
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24] C=2 mu=0.0064 vmax=26 coverGap=0.0833
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 24, 33] C=10 mu=0.0184 vmax=39 coverGap=0.5000
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 20] C=2 mu=0.0077 vmax=26 coverGap=0.1000
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 33] C=8 mu=0.0172 vmax=39 coverGap=0.5000
+  frag: W=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 19, 30] C=6 mu=0.0152 vmax=39 coverGap=0.4286
+  frag: W=[1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 18, 19] C=8 mu=0.0184 vmax=26 coverGap=0.5000
+  frag: W=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 30, 32] C=8 mu=0.0184 vmax=39 coverGap=0.4286
+  frag: W=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 19, 20] C=4 mu=0.0112 vmax=26 coverGap=0.5000
+  frag: W=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 20, 32] C=6 mu=0.0144 vmax=39 coverGap=0.2500
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 20, 24] C=4 mu=0.0141 vmax=26 coverGap=0.1000
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 24] C=6 mu=0.0105 vmax=26 coverGap=0.3636
+  frag: W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 22] C=4 mu=0.0093 vmax=26 coverGap=0.3636

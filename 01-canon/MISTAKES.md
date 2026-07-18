@@ -4380,6 +4380,39 @@ _boxeph_S85 (.py + .out). Affects THM-995 (X) [corrected in place], the S84 12-s
 reduction [refuted], HYP-7355.
 
 
+## MISTAKE-161 (death-star-2026-07-18-S57) — conflated "covering 2..13" with "covering 2..14"; the 1/13 inverse theorem needs covering 2..14
+
+**What happened:** In cont22 I "corrected" THM-1029/1038 to say the far-element candidate is the
+smallest multiple of **13** (26, 39, …), "not 182, because covering 14 is never required (missing 14
+only gives M≥1/14<1/13)." This is **WRONG**. It silently switched the covering hypothesis from **covers
+2..14** (what THM-724, boxeph THM-1017, and the compact-floor-1/13 conjecture all use) to the weaker
+sieve notion **covers 2..13**, and analyzed the cover-gap at level 1/13 over that wrong class.
+
+**The witness (this is the valuable part):** `V = {1,2,3,5,7,8,9,10,11,12,17,19,104}` has
+`M(V) = 8/105 = 0.076190` (verified exactly, stable to denominators ≤ 4000; witness `t=8/105`, min
+attained by `v=1` and `v=104`). Then `1/14 < 8/105 < 14/183 < 1/13`: it is a **primitive, covers-2..13,
+ρ=104/19=5.47<13** family with **M < 1/13** whose 12 non-max speeds are **NOT a dilated AP** — and it is
+**below the deep-well covering-min 14/183**. So the statements "covering ⟹ (M<1/13 ⟹ AP core)"
+(THM-1017), "compact ρ<13 floor = 1/13" (MISTAKE-160), and "M<1/13 ⟹ ρ≥13" are ALL FALSE if "covering"
+means **2..13**. They are TRUE (and boxeph THM-1017 line 27's `14∣v_max` is valid) only with covering =
+**2..14**: `V` **misses 14** (M ≥ 1/14 by the sieve, so no LRC(14) violation), and every covering-**2..14**
+family with M<1/13 has an AP core (0 non-AP found in 138,129 perturbations, v_max∈{182,364,546}).
+
+**Correction:** the LRC(14)-relevant class is **covering 2..14** (equivalently threshold 1/14: `M<1/14 ⟹`
+covers 2..14 by the sieve). There the core misses 13,14 ⟹ `13∣v_max` AND `14∣v_max` ⟹ `182∣v_max`
+(boxeph, correct). THM-1038's original candidate `182` was RIGHT; the cont22 "mults of 13" retraction is
+withdrawn. My cover-gap enumeration and the "candidate correction" in cont22 analyzed the wrong (covers-
+2..13, level-1/13) class and are void; the cover-gap *technique* (exact criterion, soft-Weyl bound) is
+threshold-agnostic and survives, but must be applied at covering-2..14 / far-element-182.
+
+**Lesson:** "covering" in this project is overloaded — the sieve-margin lemma uses **2..13**, but every
+LRC-reduction theorem (THM-724/726/1017, the compact floor) needs **2..14** (= all residues 2..n, n=14).
+The gap between them is a real, populated stratum (M ∈ (1/14,1/13), covers 2..13, misses 14), witnessed by
+`V` above. Always state which covering is meant; at threshold 1/13 the two differ and non-AP "false
+alarms" like `V` appear. Source: `lrc_covergap_uniform`, `lrc_covering214_test` _death-star_S57 (.py+.out).
+Affects cont22 [synthesis §6/§7, cover-gap reflection — corrected], THM-1029/1038 [182 restored], sharpens
+THM-1017 [covering must be 2..14].
+
 ## MISTAKE-155 (opus-2026-07-17-S367) — "it filled every slot so far" when only one slot existed
 
 In THM-1065 I proposed extending the Bonferroni ledger to B7 by the same means that filled the S2 slot, arguing that "every slot filled so far was filled by containment and counting rather than by new analytic machinery." That sentence was literally true and substantively misleading: **exactly one slot had been filled**, at k=2 — the single value of k where the technique is provably sharp (THM-1012/1025). Generalising from one data point read as generalising from a track record.

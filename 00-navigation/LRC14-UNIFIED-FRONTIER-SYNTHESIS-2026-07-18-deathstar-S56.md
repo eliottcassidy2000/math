@@ -88,12 +88,17 @@ These are the same object: the fully-comparable, single-scale, covering core —
 
 ## 6. death-star's contribution to the map (this session, S56)
 
-- **Compact stratum (`max≤34`) of the inverse theorem**: soft Weyl (`C≤464μ`) ∪ stability (`δ>max/2366`)
-  cover 99.84% (THM-1038); the **cover-gap** `coverGap(W,v_max)=max_{G_W}‖v_max·t‖` is the exact criterion
-  (`≥1/13 ⟺ M(V)≥1/13`), reducing to **displacement from the `1/13`-lattice**: only a dilated AP has
-  `smax=0` (good set on-lattice = deep well); every non-AP has `smax>0`, `coverGap≥1/13`. **Correction:
-  the binding far element is the smallest multiple of `13` (26,39,…), not `182`** (covering 14 is not
-  required). Exhaustive `max≤34` enumeration in progress (cover-gap criterion, all near-tight cores).
+- **Compact stratum of the inverse theorem**: soft Weyl (`C≤464μ`) ∪ stability (`δ>max/2366`) cover 99.84%
+  (THM-1038); the **cover-gap** `coverGap(W,v_max)=max_{G_W}‖v_max·t‖` is the exact criterion, a
+  **displacement from the lattice**: only a dilated AP has `smax=0` (good set on-lattice = deep well).
+- **RETRACTION (S57, MISTAKE-161):** cont22's "binding far element is the smallest multiple of `13`
+  (26,39,…), not `182`" is **WRONG** — it dropped the covering-14 requirement. The LRC-relevant class is
+  **covering 2..14** (threshold 1/14, not 1/13): the core misses 13,14 ⟹ `182∣v_max` (boxeph THM-1017,
+  correct; THM-1038's `182` restored). Witness the distinction is essential:
+  `V={1,2,3,5,7,8,9,10,11,12,17,19,104}`, `M=8/105∈(1/14,1/13)`, primitive, **covers 2..13 but misses 14**,
+  ρ=5.47<13, **non-AP core** — a false alarm at level 1/13. Every covering-**2..14** M<1/13 family has an
+  AP core (0/138129 non-AP tested). The cover-gap must run at covering-2..14 / far-element-182; the level-
+  1/13/covers-2..13 enumeration analyzed the wrong class (the *technique* survives, threshold-agnostic).
 - This is the far-element (branch B) side of lever 3. **Branch (A) — the real wall — remains open**, and
   is the natural next target: it is where soft Weyl fails and where the difference-flow (lever 4) or a
   comparable-case position argument must take over.

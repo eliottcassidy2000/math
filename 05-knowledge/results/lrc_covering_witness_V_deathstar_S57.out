@@ -1,0 +1,8 @@
+death-star-S57: the covering-2..13-vs-2..14 witness.
+V = {1,2,3,5,7,8,9,10,11,12,17,19,104}
+M(V) = 8/105 = 0.076190 (exact, stable to denominators <=4000; witness t=8/105, min attained by v=1 and v=104).
+1/14=0.071429 < 8/105=0.076190 < 14/183=0.076503 (deep-well covering-min) < 1/13=0.076923.
+Properties: primitive (has 1); covers 2..13; MISSES 14; rho=vmax/v2=104/19=5.47<13 (compact); 12 non-max = {1,2,3,5,7,8,9,10,11,12,17,19} NOT a dilated AP.
+Implication: refutes "covering(2..13) & M<1/13 => AP core" and "compact rho<13 => M>=1/13" (MISTAKE-160) and "M<1/13 => rho>=13" -- but ONLY under covering=2..13. Under covering=2..14 all hold (V misses 14, so excluded; M(V)>=1/14 so no LRC(14) violation).
+Confirmation: 138129 covering-2..14 perturbations of the deep well (v_max in {182,364,546}) => 0 non-AP cores with M<1/13. boxeph THM-1017 (covering=2..14) stands.
+Correction: cont22 "candidate = mults of 13" (MISTAKE-161) retracted; far element is 182|v_max. THM-1038's 182 was right.

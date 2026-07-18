@@ -38,6 +38,19 @@ FILES: THM-1095, THM-1090 amended, 2 scripts + outs, HYP-7550. opus; S372.
 ---
 
 ## opus-2026-07-17-S371 -- THM-1093 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
+## death-star-2026-07-18-S57 -- WITNESS V={1,2,3,5,7,8,9,10,11,12,17,19,104}, M=8/105, exposes the covering-2..13-vs-2..14 gap. cont22 "mults of 13" RETRACTED (MISTAKE-161). boxeph THM-1017 stands (covering=2..14).
+
+TASK (owner): prove the uniform smax>0 => coverGap>=1/13 bound.
+
+FINDING: the bound as I stated it (level 1/13, covering 2..13) is FALSE. Testing it produced V={1,2,3,5,7,8,9,10,11,12,17,19,104} with M(V)=8/105=0.076190 (exact, stable to denom<=4000; witness t=8/105). Since 1/14<8/105<14/183<1/13: V is a primitive, covers-2..13, rho=104/19=5.47<13 family with M<1/13 whose 12 non-max speeds are NOT a dilated AP -- and BELOW the deep-well covering-min 14/183. But V MISSES 14 (so M>=1/14, no LRC(14) violation).
+
+RESOLUTION: the LRC-relevant class is COVERING 2..14 (=threshold 1/14), not covering 2..13. boxeph THM-1017 line 27 uses 14|v_max, i.e. covering=2..14 -- so it is CORRECT, and every covering-2..14 M<1/13 family has an AP core (0 non-AP in 138129 perturbations). MY cont22 "candidate = smallest mult of 13 (26,39..), not 182, covering 14 not required" was the ERROR (MISTAKE-161): it dropped covering-14, analyzing the wrong (covers-2..13, level-1/13) class. The far element IS 182|v_max; THM-1038's 182 restored. The cover-gap TECHNIQUE (exact criterion, soft-Weyl) is threshold-agnostic and survives at covering-2..14.
+
+VALUE: V is the explicit witness that "covering" in the LRC reductions must mean 2..14 (all residues 2..n), not the sieve's 2..13 -- the gap is a real populated stratum M in (1/14,1/13). Corrected: MISTAKE-161, synthesis doc, cover-gap reflection [retraction], THM-1029/1038 [182 restored].
+
+NEXT: the uniform bound, correctly stated (covering 2..14, far element 182|v_max, level tied to deep well 14/183), IS boxeph THM-1017's open inverse theorem. Prove it via soft-Weyl (non-fragmented) + the displacement kernel; the answer to "prove smax>0=>coverGap>=1/13" is: at the CORRECT threshold it is the open crux, not yet proved. Scripts: lrc_covergap_uniform, lrc_covering214_test, lrc_covering_witness_V (S57).
+
+## opus-2026-07-17-S371 -- THM-1090 THE CANCELLATION IS IRREDUCIBLY ACROSS COSETS (COSET-ABS ~ FULL-ABS), the character sum is IDENTICALLY ZERO for odd k and the variation bound EQUALS the absolute bound -- so no triangle-inequality bound can work and delta(S) must be EVALUATED as a higher-dimensional Dedekind sum, not estimated (HYP-7540)
 
 Owner: work the bound that keeps the signs. I found where the signs live, and then
 found that knowing where they live does not let you bound them. A decisive negative.

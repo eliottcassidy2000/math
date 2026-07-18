@@ -55,7 +55,19 @@ its good components sitting on the `1/13`-lattice"** (`smax = 0`); every other c
 displacement is exactly what the `13j`-comb far element measures. This is the alignment rigidity made into
 a single geometric scalar.
 
-## 2. Correction: the binding far element is a multiple of **13**, not 182
+## 2. ~~Correction: the binding far element is a multiple of 13, not 182~~ — **RETRACTED (S57, MISTAKE-161)**
+
+> **This section is WRONG.** It dropped the covering-14 requirement. The LRC-relevant class is
+> **covering 2..14** (threshold 1/14): the core misses 13,14 ⟹ `13∣v_max` AND `14∣v_max` ⟹ `182∣v_max`
+> (boxeph THM-1017, correct). The witness that covering-14 is essential:
+> `V={1,2,3,5,7,8,9,10,11,12,17,19,104}`, `M=8/105∈(1/14,1/13)`, primitive, covers 2..13 but **misses 14**,
+> ρ=5.47<13, **non-AP core** — a false alarm at level 1/13, not an LRC(14) issue (M≥1/14). Every
+> covering-**2..14** M<1/13 family has an AP core (0/138129 non-AP). So the far element is `182∣v_max`
+> after all, and the whole level-1/13/covers-2..13 framing below is the wrong class. The cover-gap
+> *technique* (§1 exact criterion, soft-Weyl) is threshold-agnostic and survives at covering-2..14. The
+> struck text is preserved below only as the record of the error.
+
+### ~~(original, retracted)~~ the binding far element is a multiple of **13**, not 182
 
 Prior finite checks (THM-1029, THM-1038) took the candidate far element to be a multiple of
 `182 = lcm(13,14)` (boxeph THM-1017). **That over-restricts the counterexample search.** For `M(V) < 1/13`,
