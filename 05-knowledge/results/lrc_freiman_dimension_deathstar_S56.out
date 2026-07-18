@@ -1,0 +1,11 @@
+Freiman signature of M<1/13: residues in 2 classes mod val, core = val*{1..12} (AP)
+family                         M  val #R-classes #D-classes core=val*{1..12}?
+deep well                 0.0765   14          2          2             True
+ladder m=2                0.0767   28          2          2             True
+ladder m=3                0.0768   42          2          2             True
+ladder m=7                0.0769   98          2          2             True
+5*core+killer             0.0765   14          2          2             True
+
+=> M<1/13 ALWAYS: #R-classes=2 (dim-2 coset structure), #D-classes=3 (0,+-1), core=val*{1..12}.
+   This is the Freiman-3k-4 / coset-progression signature: A in 2 cosets of the subgroup val*Z.
+   RIGOROUS reduction: 12 residues =0 mod val AND in band [val,q-val] with q<14val => = val*{1..12}.

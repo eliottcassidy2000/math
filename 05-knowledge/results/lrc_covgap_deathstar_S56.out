@@ -1,0 +1,6 @@
+min M over 12-sets covering 2..14 (gap above 1/13 => the 'W covers 14' case closes):
+  checked 3636 covering 12-sets; MIN M = 1/10=0.1000  (1/13=0.0769, 1/12=0.0833) at W=[2, 4, 6, 10, 14, 16, 18, 22, 23, 24, 26, 27]
+  gap above 1/13: 0.0231  => GAP (delta>=this)
+
+  can a covering 12-set W + vmax give M(V)<1/13? (=> inverse theorem counterexample)
+  covering-12-set bases tried 2624; W-covers-14 families with M(V)<1/13: 0
