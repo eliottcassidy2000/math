@@ -1,3 +1,24 @@
+## mac-mini-2026-07-18-S111 -- CONTENT LAW UNIFORM ATTEMPT: clean elementary form PROVED equivalent (primitive tight n-set has NO multiple of n+1) + an infinite uniform family excluded in closed form; full uniform law NOT proved -- and sec.H proves counting CANNOT prove it. THM-1006 sec.I.
+
+TASK (owner): prove the content law uniformly in n.
+
+PROVED UNIFORMLY:
+(I1) CLEAN FORM (equivalence, all n): for a TIGHT n-set, val=1 <=> no element divisible by (n+1). [<=: if no element is divisible by n+1 then t=a/(n+1) has every clearance >=1/(n+1), so tightness makes it a maximizer, q=n+1. =>: at a q=n+1 maximizer every clearance >0 so va !=0 mod n+1, and gcd(a,n+1)=1.] Hence CONTENT LAW = **a primitive tight n-set contains no multiple of n+1** -- elementary, no sheets/packets/rulers. Verified: every tight n-set containing (n+1) itself (n=3..7) is a DILATE ({2,4,6}; {2,4,6,8,10}; {3,6,9,12,15}; {2,...,14}) -- never primitive.
+(I2) UNIFORM FAMILY EXCLUDED (all n>=3, all k>=1): the resonant candidates {1..n-1} u {v0}, (n+1)|v0, have their alignment condition force n(n+1)|v0; and M({1..n-1} u {k n(n+1)}) = k(n+1)/(k n(n+1)+1) EXACTLY (verified n=3..9, k=1..4), which exceeds 1/(n+1) since k(n+1)^2 > k n(n+1)+1 <=> k(n+1)>1. So this infinite family is NEVER tight. Mechanism = tooth-narrowing: k n(n+1) is far too large to constrain and M -> 1/n, the core's own value. RESONANCE ALONE DOES NOT BUY TIGHTNESS; it must be paid for by COMMENSURABILITY -- exactly what primitivity forbids and what the content law asserts.
+(I3) general sheet bound: val <= 4/((n+1)^2 * delta_L(A\max)).
+
+NOT PROVED -- and the obstruction is characterized, not merely encountered:
+- sec.H (yesterday) PROVES sheet capacity + primitivity is SATISFIABLE for every val=2..13, so NO counting/divisibility argument can close it at any sheet number. That is a theorem about the METHOD.
+- every measure route degrades identically: the needed lower bound on mu{phi_U > 1/(n+1)} is ~1/((n+1) max U) while the off-sheet danger supply is ~|F|/(n+1); max U unbounded => never closes. Concretely for the BEST case (extremal core {1..n-1}) the safe measure is ~1/(n+1), BELOW the single-tooth supply 2/(n+1) -- fails by a factor 2 even at the most favourable configuration.
+- residue = which lifts an off-sheet speed actually covers, with exact tooth positions = the metric/equidistribution wall (klein CRUX(C), codex-S64 packet languages).
+
+HONEST: content law remains OPEN. What changed: it now has an elementary statement, an infinite discharged family, and a proof that the counting method class cannot reach it.
+
+FILES: THM-1006 sec.I; 04-computation/lrc13_content_law_uniform_macmini_S111.py (+.out).
+HANDOFFS: @codex -- 'primitive tight => no multiple of n+1' is your deep programme in one elementary sentence; sec.H says stop refining capacity. @klein -- same wall as your CRUX(C) integer-realizability. @all -- the next real move is metric (tooth positions), not arithmetic.
+
+---
+
 ## opus-2026-07-17-S353 -- THE COUNTING LEMMA KERNEL-PURE (LRCArcCounting: m half-cell-aligned cells hold m whole arcs, all m by induction; one_cell_ge + aligned_count_ge) -- THM-1012's engine is in the kernel; remaining is the arithmetic wrapper (HYP-7360)
 
 Owner: prove the counting lemma and land THM-1012 in Lean. The counting lemma is DONE
