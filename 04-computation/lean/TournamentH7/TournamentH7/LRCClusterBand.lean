@@ -104,6 +104,43 @@ theorem killer_res (v₁ M δ : ℕ) (hδ : δ ≤ M) :
 
 end Construction
 
+section CGeneralized
+
+/-! ### THM-1041: letting the offset `c` float
+
+`THM-1032` used `q = v₁ + M`.  For a general `q = v₁ + c` the killer residues are
+`|δᵢ − c|`: below `c` the killer sits under `q` and `q − vᵢ = c − δᵢ`, above `c` it sits
+over `q` and `vᵢ − q = δᵢ − c`.  Both shapes are recorded here, and then the midpoint
+choice `c = ⌈D/2⌉` is shown to land every offset of a two-killer cluster inside `[μ, M]`
+exactly when `2μ ≤ D ≤ 2M` — which is what extends the explicit reach to `D ≤ 2M`. -/
+
+/-- Killer below the offset: `v₁ + δ = 1·(v₁ + c) − (c − δ)` for `δ ≤ c`. -/
+theorem killer_res_below (v₁ c δ : ℕ) (hδ : δ ≤ c) :
+    ((v₁ + δ : ℕ) : ℤ) = 1 * ((v₁ + c : ℕ) : ℤ) - ((c - δ : ℕ) : ℤ) := by
+  have h : (((c - δ : ℕ)) : ℤ) = (c : ℤ) - (δ : ℤ) := by exact_mod_cast Int.ofNat_sub hδ
+  push_cast [h]; ring
+
+/-- Killer above the offset: `v₁ + δ = 1·(v₁ + c) + (δ − c)` for `c ≤ δ`. -/
+theorem killer_res_above (v₁ c δ : ℕ) (hδ : c ≤ δ) :
+    ((v₁ + δ : ℕ) : ℤ) = 1 * ((v₁ + c : ℕ) : ℤ) + ((δ - c : ℕ) : ℤ) := by
+  have h : (((δ - c : ℕ)) : ℤ) = (δ : ℤ) - (c : ℤ) := by exact_mod_cast Int.ofNat_sub hδ
+  push_cast [h]; ring
+
+/-- **THE MIDPOINT CHOICE (THM-1041 II).**  For a two-killer cluster of spread `D` with
+`2μ ≤ D ≤ 2M`, the offset `c = ⌈D/2⌉ = (D+1)/2` puts BOTH killer residues — `c` itself and
+`D − c` — inside the core window `[μ, M]`.  This is what makes the reach `D ≤ 2M`. -/
+theorem midpoint_in_window (μ M D : ℕ) (hlo : 2 * μ ≤ D) (hhi : D ≤ 2 * M) :
+    μ ≤ (D + 1) / 2 ∧ (D + 1) / 2 ≤ M ∧ μ ≤ D - (D + 1) / 2 ∧ D - (D + 1) / 2 ≤ M := by
+  omega
+
+/-- **Sharpness (THM-1041 III).**  At `D = 2M + 1` no offset works: any `c ≤ M` leaves the
+far killer at distance `D − c ≥ M + 1`, outside the window. -/
+theorem no_offset_at_two_M_succ (μ M c : ℕ) (hμ : 1 ≤ μ) (hc : μ ≤ c) (hcM : c ≤ M) :
+    M + 1 ≤ (2 * M + 1) - c := by
+  omega
+
+end CGeneralized
+
 section Demo
 
 /-- A worked instance of THM-1032 on a critical covering family of THM-1011(VII):
@@ -128,3 +165,7 @@ end LonelyRunner
 #print axioms LonelyRunner.lonely_of_band
 #print axioms LonelyRunner.killer_res
 #print axioms LonelyRunner.res_self
+#print axioms LonelyRunner.killer_res_below
+#print axioms LonelyRunner.killer_res_above
+#print axioms LonelyRunner.midpoint_in_window
+#print axioms LonelyRunner.no_offset_at_two_M_succ

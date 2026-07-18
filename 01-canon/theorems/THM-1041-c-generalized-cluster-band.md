@@ -10,6 +10,7 @@ related:
   - THM-523          # t = 1/q; the q ≤ 14, threshold-1 case of (VI)
   - THM-1007         # single-killer + lacunary chains
   - THM-1026         # opus: the 13·(2λ) = 13/7 union-bound overshoot named in (VI)
+hyp: HYP-7461
 script: 04-computation/c_generalized_band_kps_S128c58.py, small_modulus_avoid_kps_S128c58.py, wide_mu_split_kps_S128c58.py, initial_segment_core_kps_S128c58.py, wide_misses_kps_S128c58.py (+ .out)
 ---
 
