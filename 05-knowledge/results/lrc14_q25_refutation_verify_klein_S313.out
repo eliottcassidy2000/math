@@ -1,0 +1,5 @@
+V26  cov=True  far=13  diam=313  least_q=27 (a=2)  M~=1/13=0.0769 at 14/169
+S*   cov=True  far=13  diam=267  least_q=26 (a=3)  M~=101/470=0.2149 at 167/470
+S0   cov=True  far=13  diam=113  least_q=27 (a=2)  M~=43/199=0.2161 at 1/199
+
+=> q<=25 FAILS: S* needs q=26, V26 needs q=27. My S312 q<=25 (MISTAKE-143) was a SAMPLING artifact.
