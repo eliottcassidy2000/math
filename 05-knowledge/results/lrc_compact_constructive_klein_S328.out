@@ -1,0 +1,3 @@
+CONSTRUCTIVE (witness-first, exhaustive-in-pool) hunt in the OPEN COMPACT REGION.
+  target: primitive covering 13-set, rho<13, sigma>13, with M < 1/13.
+  pool = speeds safe at t=a/q, so every candidate has M >= val/q by construction.
