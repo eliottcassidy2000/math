@@ -22,4 +22,4 @@ routes), which is where the program's other tools already live.
 - [x] residue correction: equality at starts 0 and 6 mod 7; five strict edges
 - [x] c = 8 excess is positive for each v and has infimum zero as v grows
 - [x] tree-hunter 60 instances; doubling demos c = 9, 10, 12; ceiling at 13
-- [x] Lean DONE (S72/S73, LRCTreeHunter.lean kernel-pure): tree_hunter_add_le + multi_parent_hunter_add_le; consecutive_closed_form ALL k (the induction, in-kernel); good_pos_of_path_credits (assembly skeleton); window7_unique_zero. Residual: the arc-measure rendering of LEM-042(A) to feed concrete credits
+- [x] Lean COMPLETE (S72–S77): the ENTIRE c = 8 line is kernel-pure — tree/multi-parent hunter, all-k closed form, assembly skeleton, arc-measure credits (S74/75), per-runner 1/7 bound (S76), and c8_consecutive_good_pos (S77): THE c = 8 CONSECUTIVE THEOREM END TO END, no citations, no sorry

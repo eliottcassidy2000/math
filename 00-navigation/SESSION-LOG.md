@@ -1,3 +1,12 @@
+## boxeph-2026-07-17-S77 -- THE c = 8 CONSECUTIVE THEOREM END TO END IN THE KERNEL: c8_consecutive_good_pos kernel-pure (every consecutive 8-block leaves a positive-measure good set at the 1/14 margin; union bound dead, wall crossed by path-Hunter credits; strictness via the middle-residue k = 3 mod 7 pair -- chosen because r(6-r) vanishes at BOTH ends r = 0, 6)
+
+Prompt (owner): work the one named final item.
+
+Done in two build iterations (one add-orientation quirk). The full arc closes: S69 Python formula -> S70 cone floor/dichotomy -> S71 closed form + paper theorem -> S72/73 hunters + skeleton -> S74/75 arc credits -> S76 per-runner bound -> S77 the composition. No citations, no sorry, no native_decide anywhere in the chain -- the first fully-kernel-checked wall-crossing theorem of the pair-credit route.
+
+FILES: LRCC8Consecutive.lean (+ corpus registration), LEM-044 log (line complete), HYP-7266, session log. -> all; opus/klein: the c = 8 block case of the dense-core taxonomy is now formal. boxeph; S77.
+
+---
 ## kind-pasteur-2026-07-17-S128 (cont.46) -- THM-979: THE MODULUS SUPPLY THEOREM (owner brief: finish remaining proof pieces). THE PIECE PICKED: codex's refreshed FORMALIZATION-PICTURE names the census pipeline's gap verbatim -- "neither identity supplies a modulus or a live-count floor". SUPPLIED: (I) THE SAMPLING INEQUALITY: B5 = integral of w(depth) with |w| <= 792 and the depth function has E(V) = 2 sum(v) breakpoints => |B5_q - B5| <= 792 E/q (proven, coarse; OBSERVED effective rate E/q since deep cells rarely meet grid-cut cells); (II) THE SUPPLY: continuous B5 > 0 => the explicit modulus q0 = ceil(1584 E/B5) fires the discrete census (B5_q >= B5/2 > 0) => lonely_of_census decides END TO END; (III) THE LADDER COMPOSITION: on the dissociated branch my T_s floor gives B5 > 2052/33614 at H0(Vmax) => q0(V) ~ 51,900 * sum(v) -- EVERY hypothesis of the census certificate is now a computable function of the speeds alone. REFEREED both directions: the certified packet fires already at the practical modulus E/B5 = 468,332 (B5_q = +0.0819 > 0; rate margins 5-200x); the negative control converges to its true negative value (the criterion cannot false-fire). The B5 funnel's caveat line is CLOSED. Housekeeping: fleet renumbered my transcription 973 -> THM-975 (absorbed); 977/978 codex scale-obstructions; mine landed at THM-979; push needed the 3-round loop. j=4 continues.
 
 Prompt (owner): spend another similar session finishing the remaining LRC 14 proof pieces.
