@@ -3,6 +3,39 @@
 Prompt (owner): work a new creative angle on the LRC(14) open math
 
 FILES: reflection the-covering-rigidity-margin-and-the-determinant-decomposition-of-uniqueness-boxeph-S122; scripts+out lrc14_covering_rigidity_margin_boxeph_S122 (+ lrc14_covering_uniqueness_n20_boxeph_S122); HYP-7772. -> all (restricted the loneliness spectrum to COVERING 12-sets -- the only tight candidates by the S121 cascade -- and read it through your determinant D. {1..12} is the UNIQUE covering set at 1/13 (1 of 17469 over {1..20}); the tightest covering competitor is 2/23 = {1..13}\{6}, so the covering-rigidity gap is 3/299, cleaner than the raw 1/156. {1..12} is the UNIQUE covering 12-set with D=1; every competitor has D>=2. Tightness M=1/13 <=> the maximizing pair has s=13D, so uniqueness decomposes by determinant: D=1,s=13 forces the pair (1,12) and gives {1..12}; the residual is 'no covering set realizes a D>=2 maximizer at s=13D'. This is your THM-1210 D-split carried from LRC(14) existence to the 12-core uniqueness.)
+## opus-2026-07-19-S392 -- THM-1215 THE EXTREMALS LIVE ENTIRELY IN THE D=1 SIEVE BRANCH (every near-extremal is D=1 with gap exactly 1/q0: 1/14, 1/13, 1/12 at pairs (1,13),(1,12),(1,11)) -- and the D>=2 branch is NOT tight: adversarial minimisation over the hard stratum bottoms at 2/19, a 1.474x margin, with the rescue explicit (HYP-7780)
+
+Owner: work the D >= 2 branch. It corrected my expectation about which branch is
+dangerous.
+THE NEAR-EXTREMAL LADDER IS ENTIRELY D = 1. Reading the small-gap families in THM-1205's
+(D,s) coordinates: {1,...,13} and {1,...,11,13,24} give g = 1/14 at D=1, s=14, pair
+(1,13); {1,...,12,14} and {1,...,12,15} give 1/13 at D=1, s=13, pair (1,12);
+{1,...,11,13,25} gives 1/12 at D=1, s=12, pair (1,11). Every extremal and near-extremal
+is D = 1 with gap exactly 1/q0 -- the classical sieve. So the ladder toward tightness is
+RAISING q0 TOWARD 14 INSIDE THE SIEVE BRANCH, and it stops at 14 precisely because
+q0 = 15 would give 1/15 < 1/14 and the sieve would no longer suffice.
+THAT CORRECTS WHAT I EXPECTED GOING IN. I assumed D >= 2 -- the hard stratum -- was the
+dangerous branch, since that is where the sieve fails. It is the opposite: D >= 2 is
+where the RESCUE happens.
+THE MARGIN: adversarially minimising g restricted to q0 > 14 (no small-modulus sieve
+available) bottoms at g = 2/19 = 0.10526, a factor 1.474x above 1/14, at
+V = {2,8,9,10,11,12,14,18,21,32,44,66,78} with q0 = 15, active pair (8,11), D = 2,
+s = 19, ratio s/D = 9.5 <= 14. The rescue is visible in the numbers: the sieve at q0 = 15
+would deliver only 1/15 = 0.0667, below threshold, and the D = 2 pair supplies 2/19
+instead. That is THM-1210's two-mechanism picture caught in the act.
+WHAT LRC(14) NOW REDUCES TO: (1) q0 <= 14 -- the sieve gives g = 1/q0 >= 1/14. CLOSED,
+and it contains every extremal family, at q0 = 14 exactly. (2) q0 > 14 -- the sieve is
+too weak and a D >= 2 pair must supply >= 1/14; measured margin 1.474x at the adversarial
+minimum. So the whole conjecture rests on branch 2, with the sharp target: show that when
+q0 > 14, some pair achieves D/(v_i+v_j) >= 1/14. The difficulty is no longer at the
+extremal families -- those are now fully accounted for by branch 1 -- which is a
+materially better position than the knife-edge the programme has been fighting.
+STATUS, guarded: the structural claims are exact, but the 1.474x margin comes from
+hill-climbing over 30 restricted starts, and that method has misled me four times
+(MISTAKE-152/154/156/157). It is evidence that branch 2 is not tight, not proof that it
+cannot be. The hard-stratum constructor also forces 8..14 among the speeds, which is one
+family shape rather than the whole stratum.
+FILES: THM-1215, 2 scripts + outs, HYP-7780. opus; S392.
 
 ---
 

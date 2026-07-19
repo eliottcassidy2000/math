@@ -1,0 +1,34 @@
+opus-2026-07-19-S392 -- THE D>=2 BRANCH
+    LRC(14) threshold 1/14 = 0.07142857
+
+(1) ADVERSARIAL MINIMISATION of g over PRIMITIVE 13-families
+    minimum gap found: 1/10 = 0.10000000   (above 1/14)
+      V = [1, 3, 4, 5, 7, 9, 12, 15, 19, 24, 28, 37, 39]
+      t*=1/10  D=1  s=10  pair=(1, 9)  ratio s/D = 10
+
+(2) THE KNOWN EXTREMALS in (D,s) coordinates, and near-misses
+    {1,...,13}       g=1/14      (0.071429)  D=1  s=14  pair=(1, 13)  s/D=14   <== EXTREMAL
+    {1..11,13,24}    g=1/14      (0.071429)  D=1  s=14  pair=(1, 13)  s/D=14   <== EXTREMAL
+    {1..12,14}       g=1/13      (0.076923)  D=1  s=13  pair=(1, 12)  s/D=13
+    {1..12,15}       g=1/13      (0.076923)  D=1  s=13  pair=(1, 12)  s/D=13
+    {2,...,14}       g=1/8       (0.125000)  D=2  s=16  pair=(2, 14)  s/D=8
+    {1..11,13,25}    g=1/12      (0.083333)  D=1  s=12  pair=(1, 11)  s/D=12
+
+(3) WHAT THE MINIMISERS LOOK LIKE
+    longest consecutive run in the minimiser: 3
+    (the tight families have runs 13 and 11)
+
+(4) ADVERSARIAL MINIMISATION RESTRICTED TO THE HARD STRATUM (q0 > 14)
+    -- the branch where the sieve is too weak and a D>=2 pair must rescue
+    30 hard-stratum starts
+    minimum gap over the hard stratum: 2/19 = 0.10526316
+      vs 1/14 = 0.07142857  -> margin factor 1.474x
+      V = [2, 8, 9, 10, 11, 12, 14, 18, 21, 32, 44, 66, 78]
+      q0=15  D=2  s=19  pair=(8, 11)  s/D=19/2  (need s<=14D)
+
+    => the sieve at q0 would give only 1/q0 = 0.066667 < 1/14;
+       the D>=2 pair delivers 0.105263 instead.
+
+NOTE: this file records the verbatim run outputs; a later regeneration attempt
+was killed by a 10-minute cap (the adversarial searches are slow), so the
+scripts are stored alongside for reproduction.
