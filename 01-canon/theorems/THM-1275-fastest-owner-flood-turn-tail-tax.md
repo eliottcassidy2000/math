@@ -8,9 +8,9 @@ related: [THM-1199, THM-1256, THM-1267]
 script: 04-computation/lrc14_fastest_owner_flood_turn_tail_tax_thm1275.py
 output: 05-knowledge/results/lrc14_fastest_owner_flood_turn_tail_tax_thm1275.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCFastestFloodTurnTailTax.lean
-script_sha256: HASH_PENDING
-output_sha256: HASH_PENDING
-formalization_sha256: HASH_PENDING
+script_sha256: 97a711b05bff44cd382243f0a0d866dfcb74b1d054353039dced2b3ef34b051c
+output_sha256: 10c67c429f4a95544ccab5b956b9404d7336fcbf2904abbb7a4d1f89eec0d362
+formalization_sha256: 56d4fc5aedb1f25605e2ea53d4acece53a85200909b32535c7ceffc9cec31eb0
 ---
 
 # THM-1275 -- fastest-owner flood/turn tail tax
@@ -399,9 +399,9 @@ remain explicit paper providers.
 Frozen hashes are
 
 ```text
-source         HASH_PENDING
-output         HASH_PENDING
-formalization  HASH_PENDING
+source         97a711b05bff44cd382243f0a0d866dfcb74b1d054353039dced2b3ef34b051c
+output         10c67c429f4a95544ccab5b956b9404d7336fcbf2904abbb7a4d1f89eec0d362
+formalization  56d4fc5aedb1f25605e2ea53d4acece53a85200909b32535c7ceffc9cec31eb0
 ```
 
 THM-1275 closes the local-to-global logical gap in the sharp five-rung star:
