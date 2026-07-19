@@ -1,0 +1,49 @@
+== HYP-7890: the N=31 band-law test (death-star-S59b) ==
+
+== P1: canonical family F(31) = {1..29, 31, 90} ==
+   M(F(31)) = 1/32 at q=32, a=1   [PASS (replicates mac-mini-S29 degrade)]
+
+== P2: single-far classification, N = 14..31 (per-instance floors) ==
+   N=14: done (0s), members this N: 0
+   N=15: done (0s), members this N: 0
+   N=16: done (0s), members this N: 0
+   N=17: done (0s), members this N: 0
+   N=18: done (1s), members this N: 0
+   N=19 i=18 x=54: MEMBER M=3/59 (q=59, a=23) [X0=87]
+   N=19: done (1s), members this N: 1
+   N=20: done (1s), members this N: 0
+   N=21: done (1s), members this N: 0
+   N=22: done (1s), members this N: 0
+   N=23: done (2s), members this N: 0
+   N=24: done (2s), members this N: 0
+   N=25 i=24 x=72: MEMBER M=3/77 (q=77, a=16) [X0=127]
+   N=25: done (2s), members this N: 1
+   N=26: done (3s), members this N: 0
+   N=27: done (3s), members this N: 0
+   N=28: done (3s), members this N: 0
+   N=29: done (4s), members this N: 0
+   N=30: done (5s), members this N: 0
+   N=31 i=30 x=120: MEMBER M=4/127 (q=127, a=55) [X0=215]
+   N=31: done (5s), members this N: 1
+
+   P2 complete-member list N=14..31: [(19, 18, 54, '3/59'), (25, 24, 72, '3/77'), (31, 30, 120, '4/127')]
+   base-floor alarms: none
+   GATES: 3/59 at (19,18,54): True; 3/77 at (25,24,72): True
+   N=31 single-far members: [(31, 30, 120, Fraction(4, 127), 127)]
+   members outside N=19/25: [(31, 30, 120, Fraction(4, 127), 127)]
+
+== P3: species census at N=31, window (1/32, 2/63), width 1/2016 ==
+   species B: 452905 families tested (0 members so far)
+   species C: 342432 families tested (0 members so far)
+   species T: 10440 families tested (0 members so far)
+   species D: 0 families tested (0 members so far)
+   species E: 1704 families tested (0 members so far)
+   P3 verdict: EMPTY (species+budget)
+
+== VERDICT SUMMARY ==
+  P1 canonical degrade M(F(31))=1/32: PASS
+  P2 gates (3/59, 3/77 rediscovered): PASS
+  P2 N=31 single-far stratum: [(31, 30, 120, Fraction(4, 127), 127)]
+  P2 unexpected members at other N: [(31, 30, 120, Fraction(4, 127), 127)]
+  P3 N=31 census: EMPTY {'B': 452905, 'C': 342432, 'T': 10440, 'D': 0, 'E': 1704}
+  BAND LAW at N=31: CHECK DETAILS ABOVE

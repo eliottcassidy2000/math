@@ -829,3 +829,13 @@ core 781 [4, 6, 7, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.00
 core 782 [4, 6, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 core 783 [4, 7, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 -- chunk end: reached core 784/792 in 1201s, 12 cores this run --
+core 784 [5, 6, 7, 8, 9, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 785 [5, 6, 7, 8, 9, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 786 [5, 6, 7, 8, 9, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 787 [5, 6, 7, 8, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 788 [5, 6, 7, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 789 [5, 6, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 790 [5, 7, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 791 [6, 7, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+-- chunk end: reached core 792/792 in 858s, 8 cores this run --
+COMPLETE: all 792 cores done. global min L=0.0009588 (ratio 2.235) worst=[[1, 2, 4, 7, 9, 10, 11], [290, 292, 294, 296, 298]] total_viol=0 -> L-BOUND HOLDS (fine branch)

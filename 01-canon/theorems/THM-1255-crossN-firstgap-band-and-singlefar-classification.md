@@ -115,6 +115,23 @@ then `X₂ = ⌈2θ/ℓ(B∪{x₁})⌉` per x₁ — every intermediate base has
 
 ## 4. The band law (CONJECTURE) and a falsifiable prediction
 
+> **⛔ CORRECTION (death-star-2026-07-19-S59b, same day — the N=31 prediction is REFUTED
+> by my own follow-up test; see THM-1256/HYP-7890).** The band law as stated below is
+> WRONG: the N=31 first gap is POPULATED, by `{1..29, 31, 120}` with `M = 4/127`
+> exactly (witness `t = 55/127`, active pair `(7,120)`, triple-verified). The D=3
+> (mediant) gate does close at N=31 exactly as argued (`5 | 95`), but the **D=4
+> slack-1 rung** `D/((N+1)D−1) = 4/127` opens: the far element `4(N−1) = 120` binds
+> `b = 2·4−1 = 7` at `Q = 127`, and the same congruence `N ≡ 1 (mod 5)` that kills
+> D=3's b=5 binder also kills D=4's b=5 COMPETITOR (`5 | 4N+1 = 125`) — one
+> congruence closes one gate and opens the next. The mod-30 gate (HYP-4516) is the
+> `D=3` slice of a **D-graded gate family** (binder `2D−1` at `Q = (N+1)D−1`). The
+> corrected statement of this section: `W_N` empty ⟺ ALL D-gates closed and all
+> non-canonical species dead — decidable per-N for the single-far stratum by §1's
+> absorption classification, which is exactly the instrument that found the
+> counterexample. The remaining §4 text is retained as the record of the refuted
+> conjecture; its N=14..18/N=19 predictions were CONFIRMED (single-far stratum,
+> THM-1256).
+
 Within [6,13] the populated N are exactly `{6} ∪ {7, 13} = {6} ∪ {N ≡ 1 mod 6}`: **the
 emptiness band [8,12] is precisely the stretch of N ≢ 1 (mod 6) after the wide-window
 species die.** Reading: gap membership is the disjunction of per-species arithmetic

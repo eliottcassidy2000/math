@@ -1,3 +1,29 @@
+## death-star-2026-07-19-S59b — THM-1256: the N=31 test REFUTES my own band law, and the refutation is a discovery — {1..29,31,120} = 4/127 populates W_31 (the D=4 slack-1 rung); single-far classified N=14..31; the mod-30 gate is the D=3 slice of a D-graded gate family
+
+Owner: test the N=31 prediction. Done, same day as the conjecture — and it FELL, to its own instrument.
+(P1) M(F(31)) = 1/32 replicated (mac-mini-S29's degrade). (P2) The absorption classification extended to
+N=14..31 via PER-INSTANCE base-floor certificates (exact M(B) > 2/(2N+1), all 18·N bases, zero alarms —
+incidentally no LRC(N+1) near-violation among them); validation gates = the predicted members at N=19
+(3/59 at (18,54)) and N=25 (3/77 at (24,72)) — BOTH found organically. THE FINDING: N=31, i=30, x=120:
+M({1..29,31,120}) = 4/127 EXACTLY (witness 55/127, active pair (7,120); triple-verified incl. full q<=260
+scan). 127 = 32·4−1: the D=4 SLACK-1 RUNG. The canonical-D family F_D(N) = {1..N}\{N−1} ∪ {D(N−1)} binds
+b = 2D−1 at Q = (N+1)D−1; HYP-4516's mod-30 mediant gate is the D=3 slice. ARITHMETIC SEE-SAW: N ≡ 1 mod 5
+closes the D=3 gate (5|3N+2) AND kills the D=4 gate's b=5 competitor (5|4N+1) — one congruence, two doors.
+Necessary-not-sufficient: N=16 ≡ 1 mod 15 has NO member, so the full D=4 gate awaits extraction from the
+P2 data (follow-up: predict/test N=61). Complete single-far member list N=14..31: EXACTLY 3/59, 3/77,
+4/127 — all slack-1 rungs. (P3) No additional N=31 member: 452,905 bordered + 342,432 two-defect + 10,440
+targeted + 1,704 repair all empty; species D yielded 0 = NO EVIDENCE from that instrument (typed per
+boxeph-S130's rule). THM-1255 §4 now carries the correction banner. FEEDS opus THM-1240/HYP-7840: D=4
+rungs ARE realized in nature, so (1/14,3/41) emptiness must be N=13-specific (F_4(13)'s b=5 competitor at
+Q'=53 is ALIVE since 13 ≡ 3 mod 5 — and the S59 atlas already closed the single-far stratum there); the
+open danger is non-single-far D=4 realizers = boxeph's CRT-stack target. HYGIENE: renumbered my S58i
+HYP-7750 → HYP-7895 (first-push rule; opus-S389 keeps 7750; boxeph-S130's flag actioned).
+
+Prompt (owner): test the N=31 prediction
+
+FILES: THM-1256, THM-1255 correction banner, HYP-7890 (full), HYP-7750→7895 renumber, backlog update,
+script + out, results INDEX. -> all
+
 ## death-star-2026-07-19-S59 — THM-1255: the cross-N first-gap BAND — single-far stratum classified N=6..13 (exactly 2 members); N=8..11 gaps EMPTY (the July-6 unverified middle, finally run); populated N = {6} ∪ {N≡1 mod 6}; N=12 is a band case, not a miracle
 
 Owner: see the LRC(14) history, work the critical math creatively, explore sparks between past threads.
