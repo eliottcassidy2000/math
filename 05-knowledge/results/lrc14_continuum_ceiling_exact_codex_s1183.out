@@ -1,22 +1,48 @@
 THM-1183 exact six-order / three-path reduction
 I=[1/7,2/7], proposed full ceiling=2/21
-
-[named exact rows: bad ; half-bad chamber tuple ; path majorant]
-(1,2,3)  2/21 ; (1/21,0,0)       ; 1/21
-(2,4,6)  2/21 ; (1/21,0,0)       ; 1/21
-(1,2,4)  0    ; (0,0,0)          ; 1/21
-(1,3,6)  4/105; (0,2/105,0)      ; 2/105
-(1,9,10) 4/105; (1/70,0,1/210)   ; 2/105
-(1,2,7)  6/245; (3/245,0,0)      ; 13/490
-
-[complete Fraction sweep]
-1<=a<b<c<=40: 9880 rows
-actual over 2/21: 0
-path majorant over 1/21: 0
-actual equality: (m,2m,3m), 1<=m<=13, and no other row
-largest nonproportional actual value: 4/105
-
-[status]
-The six-order identity, three-path domination, and proportional equality are
-proved.  The all-integer path-majorant inequality is exact through this finite
-box but remains analytic, not proved.
+[exact named rows]
+  (1, 2, 3) bad=2/21 (0.095238095238) half=1/21 path-majorant=1/21
+    chamber measures=(Fraction(1, 21), Fraction(0, 1), Fraction(0, 1))
+    path measures   =(Fraction(1, 21), Fraction(0, 1), Fraction(0, 1))
+  (2, 4, 6) bad=2/21 (0.095238095238) half=1/21 path-majorant=1/21
+    chamber measures=(Fraction(1, 21), Fraction(0, 1), Fraction(0, 1))
+    path measures   =(Fraction(1, 21), Fraction(0, 1), Fraction(0, 1))
+  (1, 2, 4) bad=0 (0.000000000000) half=0 path-majorant=1/21
+    chamber measures=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+    path measures   =(Fraction(0, 1), Fraction(1, 21), Fraction(0, 1))
+  (1, 3, 6) bad=4/105 (0.038095238095) half=2/105 path-majorant=2/105
+    chamber measures=(Fraction(0, 1), Fraction(2, 105), Fraction(0, 1))
+    path measures   =(Fraction(0, 1), Fraction(2, 105), Fraction(0, 1))
+  (1, 9, 10) bad=4/105 (0.038095238095) half=2/105 path-majorant=2/105
+    chamber measures=(Fraction(1, 70), Fraction(0, 1), Fraction(1, 210))
+    path measures   =(Fraction(1, 70), Fraction(0, 1), Fraction(1, 210))
+  (1, 2, 7) bad=6/245 (0.024489795918) half=3/245 path-majorant=13/490
+    chamber measures=(Fraction(3, 245), Fraction(0, 1), Fraction(0, 1))
+    path measures   =(Fraction(3, 245), Fraction(1, 70), Fraction(0, 1))
+[complete exact finite sweep]
+  1<=a<b<c<=40: rows=9880
+  actual over 2/21=0; path majorant over 1/21=0
+  actual equality rows=[(1, 2, 3), (2, 4, 6), (3, 6, 9), (4, 8, 12), (5, 10, 15), (6, 12, 18), (7, 14, 21), (8, 16, 24), (9, 18, 27), (10, 20, 30), (11, 22, 33), (12, 24, 36), (13, 26, 39)]
+  largest nonproportional actual=(Fraction(4, 105), (1, 3, 6))
+  top path-majorant rows:
+    (13, 26, 39): 1/21 (0.047619047619)
+    (12, 24, 36): 1/21 (0.047619047619)
+    (11, 22, 33): 1/21 (0.047619047619)
+    (10, 20, 40): 1/21 (0.047619047619)
+    (10, 20, 30): 1/21 (0.047619047619)
+    (9, 18, 36): 1/21 (0.047619047619)
+    (9, 18, 27): 1/21 (0.047619047619)
+    (8, 16, 32): 1/21 (0.047619047619)
+[carrier audit]
+  torus: rational geodesic u -> (a*u,b*u,c*u) meets six 1/7 Kuhn tetrahedra
+  faithful binary relation: i->j iff frac((v_j-v_i)u) is in [1/7,2/7]
+  bad fingerprint: directed C4; scores=(1,1,1,1), triangles=0, SCC=(4), HP=4
+  u->1-u reverses every edge; inside each bad component edge flips=0
+  deleting one cycle edge gives the three path obligations used above
+DONE -- the all-integer path-majorant inequality remains analytic, not proved here
+[scope and replay]
+  arithmetic: fractions.Fraction only
+  finite scope: every 1<=a<b<c<=40 (9880 rows)
+  theorem scope: exact reduction for arbitrary positive distinct integer a<b<c
+  unproved scope: PATH(a,b,c)<=1/21 for arbitrary integers
+  source_sha256: SHA2-256(04-computation/lrc14_continuum_ceiling_exact_codex_s1183.py)= de035dcacbe3d0aa77e6dc0ed08f46b8d472882cc4f8c4391a0e001cc33e9f34

@@ -4,7 +4,8 @@ title: The general-d continuum ceiling is exactly a six-order torus X-ray; three
 status: PROVED REDUCTION, OPEN FINAL INEQUALITY — the functional identity, universal mirror symmetry, six-order decomposition, three-path domination, proportional equality, and an exact d<=40 sweep are proved.  The displayed all-integer three-path inequality is not yet proved, so THM-1174's uniform ceiling remains open.
 source: codex-2026-07-18 (exact analytic audit of THM-1172/1173/1174)
 depends_on: [THM-1172, THM-1173, THM-1174]
-script: /tmp/lrc14_continuum_ceiling_exact_codex_s1183.py (draft; repo intentionally untouched)
+script: 04-computation/lrc14_continuum_ceiling_exact_codex_s1183.py
+output: 05-knowledge/results/lrc14_continuum_ceiling_exact_codex_s1183.out
 ---
 
 # THM-1183 — exact carrier and the remaining three-path inequality
@@ -177,6 +178,17 @@ actual mu(B)>2/21:                    0
 three-path majorant >1/21:            0
 actual equality rows:                 exactly (m,2m,3m), 1<=m<=13
 largest nonproportional actual value: 4/105
+```
+
+Repo-path replay completed with Python's `fractions.Fraction` only.  Frozen
+scope and hashes:
+
+```text
+finite sweep: every 1 <= a < b < c <= 40 (9880 triples)
+analytic identities (1)--(13),(15),(16): arbitrary positive integer a<b<c
+unproved scope: PATH(a,b,c) in (14) for arbitrary integers
+source sha256: de035dcacbe3d0aa77e6dc0ed08f46b8d472882cc4f8c4391a0e001cc33e9f34
+output sha256: 61e2d373450a869ef038c0dc216417e10f5ac20d9d5777798cc66e97b2d2ddd8
 ```
 
 This corrects two points in THM-1174 without proving its final ceiling:
