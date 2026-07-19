@@ -5,6 +5,24 @@
 **Status:** research map and sharply stated next lemma; not a proof of LRC(14),
 Cover14 crown collapse, or uniform emptiness of the `n=12` sporadic branch.
 
+**Same-session landing addendum.**  Two pieces described below as targets are
+now theorems.  THM-1248 proves the `1,174`-symbol relative blocker word,
+contracting affine transport, and a phase-located gcd-quantized wall seam.
+THM-1250 proves that all six private needles force a five-edge tree of actual
+interior lcm-quantized handoffs, strengthens it to the multiplicity debt
+
+```text
+H_fast>=1/c+(7/36)sum_(u<v)m_uv/lcm(u,v),
+```
+
+and extracts a literal private interval stalk for every owner.  The phrase
+“two-seam target” below should therefore be read as historical motivation:
+the live target is now the cover-preserving oriented-germ lift across the
+affine shift from `d_i` to `c+d_i`, or a proof that its first failure creates
+a new disjoint handoff counted by the multiplicity debt.  The exact mixed
+identity and a sign-reversal guardrail are recorded in THM-1250 and the
+companion owner-reuse memo.
+
 ## 1. What the newest theorems changed
 
 The S82 crossing and THM-1243/1244/1246/1247 do more than add several

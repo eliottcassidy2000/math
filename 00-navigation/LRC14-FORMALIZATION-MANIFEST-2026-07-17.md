@@ -2172,7 +2172,69 @@ E_i=2cP_i-(2k+1)Q_i in [-c,c]
 
 must either feed that oriented owner/cycle transport or descend to an
 alternate carrier cell.  THM-1243/1246 close the known resonant rays, not this
-arbitrary tail transport.  Reserved THM-1250 would strengthen the paper object
-to a fully located tree containing a prescribed cycle seam, but no current
-Lean module or referee consumes that unproved reservation or asserts global
-LRC(14).
+arbitrary tail transport.  THM-1250 now supplies the fully located tree and
+owner-reuse debt described below.  No current module proves the remaining
+cover-preserving oriented germ lift or asserts global LRC(14).
+
+## 2026-07-19 addendum -- fully located owner-reuse tree (THM-1250 proved)
+
+THM-1250 proves that every hypothetical strict six-comb cover of a complete
+`c`-safe gap has a chronological spanning tree of five actual interior tooth
+handoffs.  Its label-aware quantum is
+
+```text
+omega_uv>=gcd(u,v)/(14uv)=1/[14 lcm(u,v)],
+H_fast>=1/c+(7/12)sum_(uv in T)1/lcm(u,v).
+```
+
+Private mass forces at least `ceil(d_i/(7c))` tooth occurrences of each
+owner.  Repeated handoffs of a fixed unordered pair are disjoint, and Cayley
+averaging gives the stronger fixed-tree consumer
+
+```text
+H_fast>=1/c+(7/36)sum_(u<v)m_uv/lcm(u,v).
+```
+
+The compact ratio bound also extracts a literal per-owner private interval
+stalk of length at least `1/(990908184c)`.  A fully interior stalk either
+exports a rooted two-seam V or forces the same-owner toothpick branch `u>6b`.
+
+`TournamentH7/LRCSixPrivateLocatedTree.lean` is root-imported.  It checks the
+positive numerator and gcd/lcm consumers, fully located and
+multiplicity-averaged Hunter debts, scale-covariant form, low-slack clock
+bound, tooth/private-stalk constants, owner recurrence, same-owner toothpick
+branch, drift/overlap conservation, and the exact mixed-circuit interface
+
+```text
+R=Nn_r Delta+(s_0/n_0)(Pn_0-Nn_r),
+R=K-(P-N)c.
+```
+
+It also kernel-checks the sign/invoice dichotomy and the exact sign-reversal
+row `K=39>0`, `R=-1`.  The irredundant strict-open interval-chain extraction,
+disjointness of repeated handoff intervals, Cayley averaging interpretation,
+and cover-preserving germ continuation remain paper providers.  The exact
+referee and output are
+`04-computation/lrc14_six_private_needles_fully_located_tree_thm1250.py` and
+`05-knowledge/results/lrc14_six_private_needles_fully_located_tree_thm1250.out`.
+
+The remaining formalization target is no longer a pair-positioning bound.  It
+is the operation-level statement that an oriented private germ either lifts
+through THM-1248's finite shifted-clock word or its first failure creates a
+new disjoint handoff occurrence charged by the THM-1250 multiplicity ledger.
+
+## 2026-07-19 addendum -- scale-35 shallow sporadic face (THM-1249 proved)
+
+THM-1249 closes the primitive proper AP-centred common-scale-35 Hamming-six
+face by an exact `3,002,076`-context certificate.  The sound `Z/5` thick-fibre
+relaxation has union ceiling at most `31<35` on every one of the `1,296`
+scalar-surviving owner obligations.
+
+`TournamentH7/LRCScaleThirtyFiveFibre.lean` is root-imported and proves the
+generic terminal implication that a certified relaxation cardinality at most
+31 cannot cover `Finset.univ : Finset (Fin 35)`.  The large exact row bank is
+an external certificate in
+`04-computation/lrc13_scale_thirty_five_hamming_six_five_fibre_obstruction_codex_c35.py`
+with stored output under `05-knowledge/results/`.  The AP-centred H6 frontier
+advances to `c=36`; arbitrary-height shallow regeneration, the deep reverse
+content law, and uniform n=12 sporadic emptiness remain open.

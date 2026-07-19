@@ -358,10 +358,14 @@ cycle seam from Section 6 need not lie in the particular slowest component
 `K`.  Equation (39) is therefore a genuine sampled-orbit-to-positioned-debt
 bridge, but not yet the missing transport along the tail.
 
-The reserved fully located-tree theorem THM-1250 would sharpen (39): once
-proved, the connected overlap graph on all six private-provider labels lets
-any prescribed cycle wall edge extend to a five-edge located spanning tree.
-THM-1248 does not use that reserved statement.
+THM-1250 now sharpens (39).  Its connected chronological overlap graph on all
+six private-provider labels, together with the prescribed wall edge (38),
+contains a five-edge spanning tree including that edge.  Every edge is an
+actual interior tooth overlap with quantum `1/[14 lcm(u,v)]`, and repeated
+handoffs are charged by its multiplicity-averaged Hunter debt.  THM-1248 was
+proved independently of that later statement, but their composition is now
+available.  What remains is not tree extraction: it is oriented transport
+from this prescribed seam through the affine clocks `d_i -> c+d_i`.
 
 ## 8. What address data remains
 

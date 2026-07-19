@@ -1,5 +1,80 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-19 S78 FULLY LOCATED OWNER REUSE AND THE AFFINE HOLONOMY FRONTIER
+>
+> THM-1250 upgrades the local seam picture from two selected credits to a
+> full, coverage-forced clock tree.  THM-1198 gives every fast label private
+> mass on the complete slow gap.  Hence an irredundant strict-tooth cover
+> visits all six labels, and its chronological transition graph contains a
+> five-edge spanning tree of *raw interior tooth overlaps*.  Every edge has
+>
+> ```text
+> omega_uv>=gcd(u,v)/(14uv)=1/[14 lcm(u,v)].
+> ```
+>
+> Forest Hunter therefore has no pair-positioning error on this tree:
+>
+> ```text
+> H_fast>=1/c+(7/12)sum_(uv in T)1/lcm(u,v).
+> ```
+>
+> More strongly, private mass forces at least `ceil(d_i/(7c))` teeth of
+> owner `d_i`.  Repeated handoffs of one unordered pair are disjoint.  Cayley
+> averaging over the `6^4=1296` trees of `K6` turns the whole owner word into
+> one legal fixed-tree certificate:
+>
+> ```text
+> H_fast>=1/c+(7/36)sum_(u<v)m_uv/lcm(u,v).
+> ```
+>
+> Reuse is therefore paid for quantitatively; a high-degree external blocker
+> cannot erase continuous obligations for free.  THM-1233 also bounds each
+> label to at most `2011` teeth on the gap, so every label owns a literal
+> private interval stalk of length at least `1/(990908184c)`.  An interior
+> stalk has an exact dichotomy: distinct endpoint owners produce a rooted
+> rank-two seam V and an lcm-quantized intervening cell, while the same owner
+> on both sides forces the complete-toothpick branch `u>6b`.
+>
+> THM-1248 supplies the complementary shifted-clock data: a `1,174`-symbol
+> relative blocker word, exact determinant/gcd sheet, uniform affine
+> contraction, and a phase-located fourth-support wall seam.  The two
+> theorems meet at one explicit obstruction.  Chronological seams live on
+> `d_i`; centered holonomy lives on `Q_i=c+d_i`.  For a chronological path
+> closed by one centered blocker edge,
+>
+> ```text
+> R=Ps_0-Ns_r
+>  =Nn_r Delta+(s_0/n_0)(Pn_0-Nn_r),
+> Delta=s_0/n_0-s_r/n_r>0,
+> K=P(c+s_0)-N(c+s_r)=R+(P-N)c>0.
+> ```
+>
+> Thus either `Pn_0<Nn_r` (address-product descent) or
+> `R>=Nn_r Delta` (the residual pays the entire chronological drift).  The
+> exact row `(c,s_r,s_0,P,N)=(5,82,9,9,1)` has `K=39` but `R=-1`, proving
+> that shifted positive holonomy cannot simply be copied to the fast clocks.
+>
+> The highest-leverage remaining lemma is now falsifiable: **lift an oriented
+> private germ around the finite blocker word, or prove that its first failed
+> continuation creates a new disjoint handoff occurrence and hence increases
+> the THM-1250 lcm debt**.  A closed lift makes the intermediate address
+> factors telescope and yields a well-founded product descent; a failed lift
+> must retain the exact kernel sheet and current/adjacent gap address.  Raw
+> Fano incidence, blocker degree, low-height sampling, one selected gap, and
+> another global mass margin have all been exhausted as closing invariants.
+
+> ### 2026-07-19 S78 n=12 STATUS — ONE MORE EXACT FACE, NOT UNIFORM CLOSURE
+>
+> THM-1249 closes the primitive proper AP-centred Hamming-six common-scale-35
+> face.  Its exact `3,002,076`-context bank leaves `216` scalar rows, and the
+> sound `Z/5` thick-fibre relaxation is at most `31<35` on all `1,296`
+> surviving owner obligations.  The next untreated scale on that finite line
+> is `c=36`.  Uniform n=12 sporadic emptiness remains open: the shallow
+> residual is arbitrary-height `A12` word regeneration / the remaining smooth
+> H5 and H6 banks, while the deep residual is the metric reverse-content law,
+> first in the persistent two-sheet opposite-colour component cover.  This
+> inverse branch must not be counted as closed by the direct LRC(14) progress.
+
 > ## 2026-07-19 S82 STRICT-SPECTRUM CROSSING AND THE POSITIONED FRONTIER
 >
 > THM-1221 raises the universal seven-speed maximum-spanning-tree and Hunter
@@ -257,9 +332,10 @@
 > alternate-gap descent, or a transverse corridor theorem beyond the
 > THM-1243/1246 resonant banks.  Producing that transport is the live
 > mathematics; bounding absolute tooth addresses or using the transitive
-> determinant-sign tournament is no longer the target.  Reserved THM-1250
-> would further allow a prescribed cycle seam in a fully located five-edge
-> tree, but this proof-map step does not consume it before it is proved.
+> determinant-sign tournament is no longer the target.  THM-1250 now supplies
+> the fully located five-edge tree and multiplicity debt; the remaining
+> composition is the oriented germ lift/first-new-handoff alternative stated
+> at the top of this map.
 
 > ## 2026-07-19 S82 SIX-COMB CURVATURE SPECTRUM AND ACTIVE-PAIR PATH
 >

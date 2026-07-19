@@ -10,6 +10,8 @@ tree/active-set Hunter checks = 82944
 surjective chronological owner words checked = 112320
 multiplicity-weighted maximum-tree checks = 112320
 private-owner tooth-recurrence rows = 196950
+mixed chronological/centered circuit identities = 72900
+affine sign-reversal guardrail = shifted 39, fast residual -1
 located debt = cH-1 >= (7c/12) sum_(uv in T) 1/lcm(u,v)
 averaged debt = H >= 1/c + (7/36) sum_(u<v) m_uv/lcm(u,v)
 RESULT: PASS

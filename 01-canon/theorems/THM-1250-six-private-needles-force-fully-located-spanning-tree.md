@@ -1,16 +1,16 @@
 ---
 id: THM-1250
 title: SIX PRIVATE NEEDLES FORCE A FULLY LOCATED SPANNING TREE — every Hunter edge is paid by an actual tooth handoff inside the slow gap
-status: PROVED (six-label essentiality; irredundant chronological chain; five gcd/lcm-quantized interior handoffs; multiplicity-averaged scale-covariant Hunter debt; uniform per-owner private interval stalk and oriented-germ dichotomy; dependency-free exact referee; sorry-free Lean arithmetic core)
+status: PROVED (six-label essentiality; irredundant chronological chain; five gcd/lcm-quantized interior handoffs; multiplicity-averaged scale-covariant Hunter debt; uniform per-owner private interval stalk and oriented-germ dichotomy; exact mixed chronological/centered affine interface and sign guardrail; dependency-free exact referee; sorry-free Lean arithmetic core)
 source: codex-2026-07-19-S78 continuation with owner-reuse and located-tree audits
-depends_on: [THM-1166, THM-1178, THM-1198, THM-1233]
-related: [THM-1237, THM-1240, THM-1244, THM-1248, HYP-7870]
+depends_on: [THM-1166, THM-1178, THM-1198, THM-1233, THM-1248]
+related: [THM-1237, THM-1240, THM-1244, HYP-7870]
 script: 04-computation/lrc14_six_private_needles_fully_located_tree_thm1250.py
 output: 05-knowledge/results/lrc14_six_private_needles_fully_located_tree_thm1250.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCSixPrivateLocatedTree.lean
-script_sha256: 1973d9af1b28b053e6cd0e7b21fb059763983693da8bbe23bc40b66c380ec552
-output_sha256: 454e04bfb558bad9cc935875daca9c7535d7c212cef013905faec487eaaf2a9f
-formalization_sha256: e3c6de04437c51e74d5737e066828cc194f8af6515286f826eb826c3812d5181
+script_sha256: 5ada424f5ef838b0792dff20986ee33a73fa2df0e974065cb8bc6ac812b91879
+output_sha256: 599205e786548ff75ca50fb1eea8b612b599b04a8c25ca58b1ed73ed29f6b2ec
+formalization_sha256: 0640b415de8f35e042ead6fb1195bdba4e0f3303726d3dfc9ed530a1497a3c00
 ---
 
 # THM-1250 — six private needles force a fully located tree
@@ -309,6 +309,56 @@ coupling obstruction.  The tree is acyclic and cannot manufacture holonomy
 by itself; it must be glued to the centered directed cycle through the
 oriented wall germs in (20).
 
+The algebra of that gluing is nevertheless exact.  Along a chronological
+tooth path `(s_i,n_i)`, put
+
+```text
+h_i=n_(i+1)s_i-n_i s_(i+1)>0,
+omega_i=[s_i+s_(i+1)-14h_i]/[14s_i s_(i+1)],
+Delta=sum_i h_i/[n_i n_(i+1)]
+     =s_0/n_0-s_r/n_r.                                (22a)
+```
+
+Thus every handoff satisfies the conservation law
+
+```text
+14h_i+14s_i s_(i+1)omega_i=s_i+s_(i+1).              (22b)
+```
+
+Close the path by a centered blocker edge from `s_r` to `s_0`.  Write its
+spoke numerator as `P`, its `s_0` tooth address as `N`, and put
+
+```text
+K=P(c+s_0)-N(c+s_r)>0,
+R=Ps_0-Ns_r=K-(P-N)c.                                (22c)
+```
+
+Direct expansion gives the mixed-circuit identity
+
+```text
+R=Nn_r Delta+(s_0/n_0)(Pn_0-Nn_r).                  (22d)
+```
+
+Since the canonical tooth addresses are positive, (22d) forces
+
+```text
+Pn_0<Nn_r,
+or
+R>=Nn_r Delta>0.                                     (22e)
+```
+
+This is the precise descent-or-invoice alternative: either the addressed
+product decreases, or the unshifted residual pays the whole reciprocal
+centre drift.  One cannot infer the sign of `R` from `K`.  The exact row
+
+```text
+(c,s_r,s_0,P,N)=(5,82,9,9,1)
+```
+
+has `K=39>0` but `R=-1`.  The affine shift is therefore genuine proof data,
+not a removable error term.  The Lean core checks (22b)--(22e), the carrier
+shift identity, and this sign-reversal guardrail.
+
 ## 7. Verification and scope
 
 The dependency-free exact referee checks `987,496` positive tooth-to-tooth
@@ -316,23 +366,26 @@ handoff numerators, all `1,296` labelled six-vertex trees against all `64`
 active sets (`82,944` Hunter checks), and `112,320` surjective chronological
 owner words with repeats.  It verifies the `432/1296` Cayley incidence,
 all `112,320` multiplicity-weighted maximum-tree inequalities, `196,950`
-private-owner recurrence rows, the tooth ceilings, and every scalar constant.
+private-owner recurrence rows, `72,900` mixed chronological/centered circuit
+identities, the affine sign reversal, the tooth ceilings, and every scalar constant.
 Normal and optimized outputs are byte-identical.
 
 The Lean module kernel-checks the positive-divisor quantum, natural-number
 gcd/lcm identity, fully located Hunter and multiplicity-averaged lcm debts,
 scale-covariant form, low-slack clock consumer, tooth-address ceiling, both
 private pigeonholes, owner recurrence, the same-label toothpick branch, and
-common-dilate invariance.  Compact irredundant subcover extraction and
+common-dilate invariance.  It also checks the drift/overlap conservation,
+mixed chronological/centered identity, affine carrier shift, sign/invoice
+dichotomy, and the explicit sign reversal.  Compact irredundant subcover extraction and
 the interval chronology remain explicit paper topology providers; there are
 no proof placeholders or `native_decide` calls.
 
 Frozen hashes are
 
 ```text
-source         1973d9af1b28b053e6cd0e7b21fb059763983693da8bbe23bc40b66c380ec552
-output         454e04bfb558bad9cc935875daca9c7535d7c212cef013905faec487eaaf2a9f
-formalization  e3c6de04437c51e74d5737e066828cc194f8af6515286f826eb826c3812d5181
+source         5ada424f5ef838b0792dff20986ee33a73fa2df0e974065cb8bc6ac812b91879
+output         599205e786548ff75ca50fb1eea8b612b599b04a8c25ca58b1ed73ed29f6b2ec
+formalization  0640b415de8f35e042ead6fb1195bdba4e0f3303726d3dfc9ed530a1497a3c00
 ```
 
 THM-1250 does not exclude six-comb covers or prove LRC(14).  It replaces the

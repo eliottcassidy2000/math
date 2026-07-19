@@ -131,6 +131,59 @@ theorem same_label_private_stalk_forces_toothpick
     (show (0 : ℝ) < 7 * b by positivity)).mp hcontain
   nlinarith
 
+/-- A chronological tooth handoff splits its pair-sum exactly into reciprocal
+address drift and actual overlap. -/
+theorem handoff_drift_overlap_conservation
+    {u v drift overlap : ℝ}
+    (hoverlap : 14 * u * v * overlap = u + v - 14 * drift) :
+    14 * drift + 14 * u * v * overlap = u + v := by
+  linarith
+
+/-- Exact mixed-circuit interface between a chronological path on the fast
+speed clocks and one centered blocker edge. -/
+theorem mixed_chronological_centered_identity
+    {P N s₀ sᵣ n₀ nᵣ delta residual : ℝ}
+    (hn₀ : n₀ ≠ 0) (hnᵣ : nᵣ ≠ 0)
+    (hdelta : delta = s₀ / n₀ - sᵣ / nᵣ)
+    (hresidual : residual = P * s₀ - N * sᵣ) :
+    residual = N * nᵣ * delta + (s₀ / n₀) * (P * n₀ - N * nᵣ) := by
+  rw [hdelta, hresidual]
+  field_simp
+  ring
+
+/-- Shifting from fast clocks `s` to centered clocks `c+s` adds the exact
+affine carrier drift `(P-N)c`; its sign cannot be discarded. -/
+theorem affine_carrier_shift_identity
+    {P N c s₀ sᵣ shifted residual : ℝ}
+    (hshifted : shifted = P * (c + s₀) - N * (c + sᵣ))
+    (hresidual : residual = P * s₀ - N * sᵣ) :
+    residual = shifted - (P - N) * c := by
+  rw [hshifted, hresidual]
+  ring
+
+/-- The mixed identity gives an exact sign/invoice dichotomy: either the
+address product descends, or the fast residual pays the whole path drift. -/
+theorem mixed_sign_or_drift_invoice
+    {residual N nᵣ delta ratio addressGap : ℝ}
+    (hidentity : residual = N * nᵣ * delta + ratio * addressGap)
+    (hN : 0 ≤ N) (hnᵣ : 0 ≤ nᵣ) (hdelta : 0 ≤ delta)
+    (hratio : 0 ≤ ratio) :
+    addressGap < 0 ∨ N * nᵣ * delta ≤ residual := by
+  by_cases hgap : addressGap < 0
+  · exact Or.inl hgap
+  · right
+    have hgap0 : 0 ≤ addressGap := le_of_not_gt hgap
+    have hprod : 0 ≤ ratio * addressGap := mul_nonneg hratio hgap0
+    rw [hidentity]
+    exact le_add_of_nonneg_right hprod
+
+/-- Concrete guardrail: centered shifted holonomy can be positive while its
+unshifted fast-speed residual is negative. -/
+theorem affine_sign_reversal_guardrail :
+    (9 : ℤ) * (5 + 9) - 1 * (5 + 82) = 39 ∧
+      (9 : ℤ) * 9 - 1 * 82 = -1 := by
+  norm_num
+
 /-- Common-dilate packets do not make the new debt disappear: simultaneous
 scaling cancels between the carrier and the lcm clock. -/
 theorem common_dilate_invariance
@@ -151,6 +204,11 @@ theorem common_dilate_invariance
 #print axioms private_interval_stalk_floor
 #print axioms private_owner_recurrence
 #print axioms same_label_private_stalk_forces_toothpick
+#print axioms handoff_drift_overlap_conservation
+#print axioms mixed_chronological_centered_identity
+#print axioms affine_carrier_shift_identity
+#print axioms mixed_sign_or_drift_invoice
+#print axioms affine_sign_reversal_guardrail
 #print axioms common_dilate_invariance
 
 end SixPrivateLocatedTree

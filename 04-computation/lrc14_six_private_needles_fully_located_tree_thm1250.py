@@ -59,6 +59,9 @@ for u in range(2, 181):
                 require(overlap >= F(g, 14 * u * v),
                         "gcd overlap quantum")
                 require(F(g, u * v) == F(1, lcm), "gcd/lcm identity")
+                drift = m * u - n * v
+                require(14 * drift + 14 * u * v * overlap == u + v,
+                        "handoff drift/overlap conservation")
                 overlap_rows += 1
 
 
@@ -191,6 +194,38 @@ for c in range(1, 101):
         owner_recurrence_rows += 1
 
 
+# Exact interface between an unshifted chronological path and a centered
+# blocker edge on Q=c+s.  This is algebra, not a bounded search assumption.
+mixed_circuit_rows = 0
+for P in range(1, 7):
+    for N in range(1, 7):
+        for s0 in range(2, 11):
+            for sr in range(2, 11):
+                for n0 in range(1, 6):
+                    for nr in range(1, 6):
+                        delta = F(s0, n0) - F(sr, nr)
+                        residual = P * s0 - N * sr
+                        rhs = N * nr * delta + F(s0, n0) * (
+                            P * n0 - N * nr
+                        )
+                        require(residual == rhs,
+                                "mixed chronological/centered identity")
+                        c = 1 + (P + N + n0 + nr) % 5
+                        shifted = P * (c + s0) - N * (c + sr)
+                        require(residual == shifted - (P - N) * c,
+                                "affine carrier-shift identity")
+                        mixed_circuit_rows += 1
+
+# The affine shift can genuinely reverse sign.
+c, sr, s0, P, N, blocker_error = 5, 82, 9, 9, 1, -6
+shifted_holonomy = P * (c + s0) - N * (c + sr)
+fast_residual = P * s0 - N * sr
+require(P * s0 - N * (c + sr) == blocker_error,
+        "sign-reversal blocker error")
+require(shifted_holonomy == 39 > 0 and fast_residual == -1 < 0,
+        "affine sign reversal")
+
+
 # Exact Hunter coefficient and scale-covariant lcm form.
 require(F(49, 6) * F(1, 14) == F(7, 12),
         "located seam coefficient")
@@ -218,6 +253,8 @@ print(f"tree/active-set Hunter checks = {active_checks}")
 print(f"surjective chronological owner words checked = {owner_words}")
 print(f"multiplicity-weighted maximum-tree checks = {weighted_owner_words}")
 print(f"private-owner tooth-recurrence rows = {owner_recurrence_rows}")
+print(f"mixed chronological/centered circuit identities = {mixed_circuit_rows}")
+print("affine sign-reversal guardrail = shifted 39, fast residual -1")
 print("located debt = cH-1 >= (7c/12) sum_(uv in T) 1/lcm(u,v)")
 print("averaged debt = H >= 1/c + (7/36) sum_(u<v) m_uv/lcm(u,v)")
 print("RESULT: PASS")

@@ -1,7 +1,7 @@
 ---
 id: HYP-7870
-title: The seven-wall crossing has a finite relative blocker word and an anchored positioned wall seam; tail-to-cycle/private-owner transport remains
-status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch and composes the remainder to a scale/gcd dichotomy; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240 forces a phase-bearing blocker cycle, THM-1248 compresses its relative addresses, exports a phase-located first-boundary wall event, and anchors the slowest first-edge seam in THM-1244's rank-two positioned debt. THM-1244 also forces a private owner stalk. THM-1243/1246 close the principal resonant rays and harmonic banks. The live theorem is to transport that anchored determinant/gcd seam along the finite blocker tail to the positive-holonomy cycle/private owner or descend on an alternate gap. No LRC(14) closure is claimed.
+title: The seven-wall crossing now has a finite blocker word, an anchored wall seam, and a fully located owner-reuse tree; oriented germ transport across the affine clock shift remains
+status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch and composes the remainder to a scale/gcd dichotomy; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240 forces a phase-bearing blocker cycle, while THM-1248 compresses its relative addresses, exports a phase-located first-boundary wall event, and anchors the slowest first-edge seam in THM-1244's rank-two positioned debt. THM-1250 uses all six THM-1198 private needles to force a five-edge tree of actual lcm-quantized overlaps and charges every repeated owner handoff by a Cayley-averaged Hunter debt. The live theorem is to lift an oriented private germ through the finite blocker word, or prove that its first failure creates a new disjoint handoff / well-founded alternate-gap descent. The exact affine shift from d_i to c+d_i is retained. No LRC(14) closure is claimed.
 source: codex-2026-07-19-S82
 depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1248, HYP-7678]
 ---
@@ -271,6 +271,45 @@ anchored first-edge seam along the finite blocker tail to the eventual
 positive-holonomy cycle or into the private-owner region without losing the
 common master residue.
 
+THM-1250 removes the remaining anonymous-tree debt on the complete slow gap.
+All six labels have private mass by THM-1198, so an irredundant strict-tooth
+chain visits all six labels and yields a five-edge spanning tree of raw
+interior handoffs.  Each selected edge has the actual clock quantum
+
+```text
+omega_uv>=1/[14 lcm(u,v)],
+H_fast>=1/c+(7/12)sum_(uv in T)1/lcm(u,v).           (13)
+```
+
+If `m_uv` is the number of chronological handoffs of the unordered pair,
+those intervals are disjoint.  Cayley averaging produces one fixed legal tree
+and the stronger owner-reuse consumer
+
+```text
+H_fast>=1/c+(7/36)sum_(u<v)m_uv/lcm(u,v).            (14)
+```
+
+Thus a failed continuation can no longer be dismissed as another incidence:
+if it creates a new disjoint handoff, it increases (14).  The compact ratio
+box also gives a literal private interval stalk for every label.  A fully
+interior stalk either has two different endpoint owners, producing a rooted
+two-seam V, or the same endpoint owner, forcing the exact toothpick branch
+`u>6b`.
+
+The clock mismatch is now explicit.  A chronological path on speeds `s_i`
+closed by one centered blocker edge obeys
+
+```text
+R=Ps_0-Ns_r
+ =Nn_r Delta+(s_0/n_0)(Pn_0-Nn_r),
+Delta=s_0/n_0-s_r/n_r>0,                             (15)
+K=P(c+s_0)-N(c+s_r)=R+(P-N)c>0.                      (16)
+```
+
+Hence either `Pn_0<Nn_r`, giving addressed product descent, or
+`R>=Nn_r Delta`, paying the chronological drift.  The affine shift is
+load-bearing: `(c,s_r,s_0,P,N)=(5,82,9,9,1)` has `K=39` but `R=-1`.
+
 The resonant alternatives are now narrower as well.  THM-1243 gives a global
 transverse witness for both exact toothpick rays from THM-1239, and THM-1246
 gives a positive corridor through every harmonic bank
@@ -280,15 +319,19 @@ whole nontrivial quotient clock.
 
 The sharpened remaining theorem is now:
 
-> **Anchored-tail / cycle-owner transport.**  In the compact five-cut kernel,
-> combine the finite relative word (9), determinant sheet (8), the prescribed
-> positioned wall credit, and THM-1244's private-owner stalk.  Transport the
-> anchor along the at-most-six-edge blocker tail to its eventual cycle/owner
-> germ, obtain a new independent gcd-credited seam, or move to a strictly
-> smaller gap/modulus cell.  Any iteration must terminate at a positioned safe
-> phase or an already-closed bounded packet.
+> **Oriented-germ lift or new-seam descent.**  In the compact five-cut kernel,
+> combine the finite relative word (9), determinant sheet (8), prescribed
+> THM-1248 wall credit, THM-1244 private-owner stalk, and THM-1250 multiplicity
+> ledger.  Attempt to lift one oriented private germ along the at-most-six-edge
+> blocker tail and around its positive-holonomy cycle.  A closed lift must make
+> the intermediate address factors telescope and invoke the first branch of
+> (15); the first failed lift must produce a genuinely new disjoint handoff
+> counted by (14), or move to a strictly smaller gap/modulus cell.  Any
+> iteration must terminate at a positioned safe phase or an already-closed
+> bounded packet.
 
 This formulation retains exactly the coordinates destroyed by every refuted
-shortcut.  Relative address compression and a positioned slowest first-edge
-wall credit are now available; tail-to-cycle/private-owner transport is not,
-so no LRC(14) closure follows yet.
+shortcut.  Relative address compression, an anchored wall seam, a fully
+located rank-five tree, repeated-owner charges, and literal private germs are
+now available.  The cover-preserving orientation lift across the affine clock
+shift is not, so no LRC(14) closure follows yet.
