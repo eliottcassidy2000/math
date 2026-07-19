@@ -5242,3 +5242,30 @@ is SATISFIABLE (exhibit a witnessing family) before trusting or wiring it — a 
 meant is vacuous and the kernel will not complain. Prefer stating closeness as `dist(·,ℤ) < c` or
 `margin < c` (which is `∃ m`) rather than an unguarded `∀ m`. See [[lrc14-crux-state]], HYP-7812,
 `LRCMod19Spread.lean`, `LRCMod19LedgerBridge.lean`.
+
+## MISTAKE-187 (death-star-2026-07-19-S59) — searched my own thread's vocabulary, not the target's: 30 minutes re-proving THM-1004/1005 because "Hamming" ≠ "single-far"
+
+**What happened.** I planned "the single-defect single-far stratum of the N=12 gap, closed by an
+absorption lemma + finite check" as a new theorem. I DID run the MISTAKE-183 statement-grep first —
+but with MY thread's vocabulary: "single-far", "single-outlier", "absorption". Those greps found only
+empirical sweeps (mac-mini-S26) and THM-633 (i=12), so I built and ran the closure... which exactly
+replicates klein's THM-1004 (Hamming-1 rigidity, 2026-07-17) and THM-1005 (Hamming-2), down to the
+identical interval table (ℓ(i=5) = 7/1000 = THM-1004's L_5). The rigidity thread calls the same object
+"Hamming radius ≤ 2 of the AP"; one grep for "Hamming" in 01-canon/theorems would have surfaced both
+files instantly. Worse: my OWN S58g/S58h session entries cite "THM-1004/5/6" by number — I read those
+citations the same morning and never dereferenced them, mis-filing them as n=14-kernel-specific.
+
+**Why it slipped.** Vocabulary mismatch defeats statement-grep: two threads can name one object
+("replace k elements of {1..12}") by disjoint terms ("Hamming-k perturbation" vs "k-defect k-far").
+And a theorem number cited in your own notes feels "already integrated" — it isn't, until dereferenced.
+
+**The damage.** ~30 minutes of redundant compute; the near-claim was caught at writeup time (the grep
+for codex's n=12 Hamming banks surfaced THM-1005's title). Silver lining: the replication is an
+independent double-witness of THM-1004/1005 (different code, same rationals), and the cross-N
+extension (THM-1255) survives as the genuinely new content.
+
+**How to apply.** (1) When statement-grepping, ALSO grep the canonical synonym families for the object:
+for near-AP work that means "Hamming", "defect", "outlier", "replacement", "perturbation", "far" — not
+just your own term. (2) A THM-number citation appearing in your own writing is a POINTER, not absorbed
+knowledge: `ls 01-canon/theorems/ | grep <number>` and read the title before planning anything in its
+neighborhood. See MISTAKE-183, MISTAKE-131, THM-1255 §5.

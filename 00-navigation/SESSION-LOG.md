@@ -1,3 +1,41 @@
+## death-star-2026-07-19-S59 — THM-1255: the cross-N first-gap BAND — single-far stratum classified N=6..13 (exactly 2 members); N=8..11 gaps EMPTY (the July-6 unverified middle, finally run); populated N = {6} ∪ {N≡1 mod 6}; N=12 is a band case, not a miracle
+
+Owner: see the LRC(14) history, work the critical math creatively, explore sparks between past threads.
+HISTORY REVIEW surfaced the dormant mediant/spectrum thread (opus-S113..S119, mac-mini-S25..S29, Jul 6):
+its named-never-run item = the first-gap census at N=8..11 (mac-mini-S25: "depth 2->1->0, n=9..12
+UNVERIFIED"). Executed it with the fleet's newer discipline. (1) ABSORPTION LEMMA (6 lines, elementary):
+x >= 2θ/ℓ(B,θ) ⟹ M(B∪{x}) >= θ (a period-1/x comb can't swallow an interval longer than one arc);
+with θ = window-top and settled LRC(≤13) base floors, X0(N,i) = ⌈2θ/ℓ⌉ finite (all ≤ 66) ⟹ the
+single-far stratum {1..N}\{i}∪{x} is decided by FINITE CHECK. (2) COMPLETE CLASSIFICATION N=6..13, all
+i, ALL x: members are EXACTLY {1..5,7,18} (N=7, 3/23) and {1..11,13,36} (N=13, 3/41) — the two
+HYP-4516 mod-30 gate solutions, now proved UNIQUE in-stratum; strata at N=6,8,9,10,11,12 EMPTY.
+General-defect N=12 dip atlas: ladder x=i·m, binder b=13−i (defect's complement), M=m/(im+13−i);
+in-window m(25−2i)<2(13−i) has NO m≥2 solution for ANY i — every ladder skips; unique edge contact
+(12,2)=2/25=THM-633's rung. (3) CENSUS (validated: evaluator reproduces 10 knowns; generators
+REDISCOVER 5/33+3/23+3/41 from inside range — HYP-7870 detection-floor discipline): N=8/9/10/11 first
+gaps EMPTY over 0.6M–1.7M bordered/two-defect/needle-repair families per N. (4) COROLLARY for
+THM-1240/HYP-7840: at N=13 NO single-replacement family of {1..13} enters (1/14, 3/41) — the stratum's
+only first-gap member IS 3/41; opus's bounded {1..11,13,x}/{1..12,x} scans upgraded to a closed
+stratum, all 13 defects, uniform in x. (5) BAND LAW (conj): N≥8 gap nonempty ⟺ N≡1 mod 6 AND
+5∤(3N+2); predicts N=14..18 empty, N=19 = {1..17,19,54}=3/59, N=31 EMPTY (first 5|3N+2 case). The
+emptiness band [8,12] is exactly the non-1-mod-6 stretch: (C)'s first-gap side should be proved as a
+BAND phenomenon (all gates closed), not 12-specifically. (6) HONEST + MISTAKE-187: my N=12 single-far
+and two-far runs REPLICATE klein's THM-1004/1005 (identical interval table, ℓ(i=5)=7/1000=L_5) —
+found post-hoc because I grepped my thread's vocabulary ("single-far") not the rigidity thread's
+("Hamming"), and read "THM-1004/5/6" in my own S58 notes without dereferencing. Priority klein's;
+value = double-witness + the nested two-far packaging (609 checks for radius 2) + the cross-N
+extension, which is the new content. Census emptiness is species+budget evidence, not proof (species
+D underpowered; load carried by A/B/C/E).
+
+Prompt (owner): see the history of the repo's work on the 14 runner lonely runner conjecture, then spend a long session working the critical math creatively. explore past threads on other concepts and ideas that got sparked between them
+
+FILES: THM-1255, HYP-7885, MISTAKE-187, reflection the-first-gap-across-N-is-a-band-of-closed-gates,
+backlog lead (N=31 test / N=14..19 extension / width-death half / gate-unification with THM-996-998),
+3 scripts + 4 outs, results INDEX. NOTE for next death-star session: the r6_finebranch_enum background
+job sits at 760/792 cores (0 viol) — resume it. NOTE numbering: TWO files claim THM-1245 (kind-pasteur's
+D≥3P/witness-law vs opus-S398's bounding-D-is-bounding-speeds) — owners should renumber one
+(THM-666 precedent). -> all
+
 ## boxeph-2026-07-19-S130 -- OWNER-DIRECTED HISTORY REVIEW: the near-completion chronicle + the certificate-rung ladder ("think 2/19"); HYP-7880 mod-23 near-bijection pin
 
 - **OWNER BRIEF:** review the LRC(14) history -- where agents thought the proof was complete, the similar mistakes and repeated work -- extract the insight/clarification; think 2/19. Builds on death-star-S58's owner-commissioned synthesis (the five genera); adds the mechanism UNDERNEATH the genera + forward levers. Method: 3 very-thorough Explore sweeps (72,690-line session log; ~100 LRC-era MISTAKES; all finish-maps/frontier docs + PROOF-MAP + court) + one exact computation.
