@@ -1,0 +1,10 @@
+THM-1244 SLOWEST-SPOKE COMPONENT HANDOFF DEBT EXACT AUDIT
+centered component endpoint rows checked = 22400
+two-label component span rows checked = 943200
+positive gcd-quantized tooth overlaps checked = 123962
+five-vertex forests = 291
+forest/active-set Hunter checks = 9312
+forced handoff rank = 2; located quantum Q0 >= gcd(d2,...,d6)/(7d6^2)
+scalar debt = H_B >= (6d1-c)/(3d1(c+d1)) + 7g_B/(6d6^2)
+private mass in K > 44/(741c); one owner > 44/(3705c)
+RESULT: PASS
