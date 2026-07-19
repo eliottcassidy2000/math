@@ -1543,3 +1543,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `active_pair_ratio_opus_S390.out` | [STORED] | THM-1205: g = D/(v_i+v_j) verified 18/18; ratio 4.75-6.50 random, EXACTLY 14 on both tight families. | (self) |
 | `dequals1_opus_S391.out` | [STORED] | THM-1210: D=1 == classical sieve; tight families at (1,13) D=1 s=14; hard stratum 0/8 with D=1, all D>=6. | (self) |
 | `dge2_branch_opus_S392.out` | [STORED] | THM-1215: near-extremal ladder all D=1 (1/14, 1/13, 1/12); hard-stratum min 2/19 = 1.474x margin. | (self) |
+| `stability_gap_opus_S393.out` | [STORED] | THM-1220: AP unique at n=10..18 except n=14 (12->24 ties); no family in (1/14,1/13). | (self) |

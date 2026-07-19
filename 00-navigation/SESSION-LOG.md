@@ -18,6 +18,40 @@ HONEST STATUS: the slack identity, |B| = 1/343, and the simplex geometry are PRO
 Prompt (owner): build on death-star's six-ray sojourn-max, think kakeya needles
 
 FILES: THM-1154, THM-1211, MISTAKE-176, HYP-7621, six_ray_kakeya + simplex_slack_kakeya scripts + outs. -> all (death-star: your six-ray sojourn-max is confirmed, and I can now say what the six rays ARE and why one of them wins -- the six permutations of (1,2,3), one per piece of B, each threading its own piece lengthwise, all tying at exactly 2/21 and all hitting their own centre at the SAME parameter u = 3/4; (1,2,3) is simply the unique INCREASING permutation, and k2<k3<k4 forces increasing, so the symmetry is broken by the ordering convention and not by arithmetic. More usefully: your four constraints have slacks summing IDENTICALLY to 1/7, which makes each piece of B a 3-SIMPLEX whose incentre has all four slacks 1/28 -- that is where your 1/28 comes from -- and gives |B| = (1/7)^3 = 1/343 exactly. The same identity yields L <= (1/7)/d_exit for EVERY run, not just at a centre hit, and combined with your mirror symmetry it gives L <= (1/7)/max(d_exit(r), d_exit(r*)). Summing, sojourn <= (1/7)*W'' with W'' = sum 1/rho, so your ceiling follows from the single inequality W'' <= 2/3 -- no mirror-pair case split, so your >=2-pair residue closes at the same time. Verified in [1,24]^3, tight at (1,2,3), and rho >= 3P would prove it; rho >= 3 is your c >= 3 but off the centre hit, where your integer-partition argument is unavailable. That is the one piece left. codex: the sojourn is literally an X-ray transform, and your four-residue multiplier Kakeya cone is the same lens.)
+## opus-2026-07-19-S393 -- THM-1220 n = 14 IS THE UNIQUE NON-RIGID CASE (AP uniqueness holds at n = 10,11,12,13,15,16,17,18 and FAILS ONLY at 14, where 12->24 ties the floor) -- so klein's n=13 rigidity route CANNOT transfer, its hypothesis being false at 14; plus branch-2 sharpened (no family in (1/14,1/13)) (HYP-7790)
+
+Owner: branch-2 sharper search, n=12 AP uniqueness, and mine the 3/4/(1/12) threads.
+The archaeology reframed all three, so I did it first.
+PRIOR ART MINED: klein-S313 built the n=13 picture, which is the exact analogue of what
+this programme has been doing at n=14. THM-1002 is the pair-sum denominator bound
+(M = val/q with q | v_i+v_j -- the same territory as boxeph-S120's located maximiser and
+my THM-1205). THM-1004 is HAMMING-1 RIGIDITY: replacing any single element of {1,...,12}
+forces M >= 2/25, with equality EXACTLY at {1,...,11,24}. THM-1005 extends it to radius 2;
+radius >= 3 is open. So n=13 has a genuine STABILITY GAP -- M = 1/13 or M >= 2/25, nothing
+between -- and the AP is the unique extremal.
+THE PARALLEL BREAKS, and that is the finding. The substitution 12 -> 24 shows up at both
+n, but with different status: at n=13 it gives M = 2/25 > 1/13, MISSING the floor (it is
+klein's stability minimiser), while at n=14 it gives M = 1/14 EXACTLY, TYING the AP (my
+THM-1120 second tight family). Same substitution, opposite roles.
+THE UNIQUENESS SWEEP over single substitutions of {1,...,n-1} with r <= 3n: ties = 0 at
+n = 10, 11, 12, 13, 15, 16, 17, 18, and exactly 1 at n = 14 (12 -> 24). Swappable speeds
+are NONE everywhere except {12} at n = 14. So n = 14 is the only non-rigid case in the
+range, and it is NOT a parity effect -- 10, 12, 16 and 18 are even and rigid.
+WHY THIS MATTERS: the rigidity/stability-gap route is exactly how n=13 was handled --
+prove the AP is the unique extremal, then prove a definite gap above it. That route
+CANNOT TRANSFER to n=14, because the hypothesis it rests on is false there:
+{1,...,11,13,24} sits on the floor alongside the AP, so there is no gap above a unique
+extremal to establish. That is a concrete structural explanation for why 14 is the open
+case rather than merely a harder one -- the standard argument has its hypothesis fail at
+exactly this n.
+BRANCH 2, SHARPENED: adversarial search minimising distance into the open interval
+(1/14, 1/13) found 0 families inside across 26 runs, smallest M observed 6/61 = 0.0984.
+So the near-floor ladder is 1/14 (twice), then 1/13, with nothing between -- consistent
+with an n=14 stability gap of klein's type but ABOVE THE TWO-ELEMENT EXTREMAL SET rather
+than above a single point. Evidence, not proof.
+SCOPE: uniqueness here is at Hamming radius 1 (single substitutions, r <= 3n). klein
+proved radius 2 at n=13; multi-element perturbations at other n are untested by me.
+FILES: THM-1220, script + out, HYP-7790. opus; S393.
 
 ---
 

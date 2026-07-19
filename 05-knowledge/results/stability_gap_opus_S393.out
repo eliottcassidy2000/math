@@ -1,0 +1,36 @@
+opus-2026-07-19-S393 -- THE n=14 STABILITY GAP AND AP UNIQUENESS
+    LO = 1/14 = 0.07142857   HI = 1/13 = 0.07692308
+
+(1) DOES ANY FAMILY LAND STRICTLY INSIDE (1/14, 1/13)?
+    26 adversarial runs
+    families found with M strictly in (1/14, 1/13): 0
+    smallest M seen overall: 6/61 = 0.09836066  (>= 1/14, no counterexample)
+
+(3) THE 12->24 PARALLEL across n
+      {1,...,12}       M = 1/13     = 0.07692308   floor 1/13 -> AT FLOOR
+      {1,...,11,24}    M = 2/25     = 0.08000000   floor 1/13 -> above
+      {1,...,13}       M = 1/14     = 0.07142857   floor 1/14 -> AT FLOOR
+      {1..11,13,24}    M = 1/14     = 0.07142857   floor 1/14 -> AT FLOOR
+
+(4) AP UNIQUENESS ACROSS n: is {1,...,n-1} the ONLY set with M = 1/n?
+     n  speeds  floor   AP M     other families at the floor
+     10     9   1/10    1/10     0 tie(s) even  []
+     11    10   1/11    1/11     0 tie(s) odd   []
+     12    11   1/12    1/12     0 tie(s) even  []
+     13    12   1/13    1/13     0 tie(s) odd   []
+     14    13   1/14    1/14     1 tie(s) even  [(12, 24)]
+     15    14   1/15    1/15     0 tie(s) odd   []
+
+(5) THE TIES IN FULL
+    n= 14: 12 -> 24   V = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+
+(6) EXTENDED RANGE (r <= 3n)
+     16   0 []
+     17   0 []
+     18   0 []
+
+(7) SWAPPABLE SPEEDS BY n (essential-region criterion, THM-1125)
+    n= 12: NONE (AP unique)
+    n= 13: NONE (AP unique)
+    n= 14: [12]
+    n= 15: NONE (AP unique)
