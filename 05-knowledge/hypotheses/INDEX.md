@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **THM-1258 update to HYP-6820 / codex-2026-07-19-S78 (scale 36 closed by complementary four/nine fibres):** PROVED STRUCTURAL + FINITE-EXACT.  The hereditary grammar has `223,729` order words and `206,725,596` labelled support/order contexts.  Scalar capacity leaves `82,332`; sound independent-choice upper relaxations retaining the `D|4` and `D|9` masks exactly leave `7,824` and `12,222` all-owner-live rows separately, but no row is live at all six owners in both gauges.  Thus the primitive proper AP-centred H6 common-scale-36 face is empty.  Scale 37 is prime-excluded; scale 38 is next.  This is not uniform n=12 sporadic emptiness. -> THM-1258, HYP-6820, exact replay + Lean consumer; codex-S78.
+
 > **Namespace correction (2026-07-19):** the index-only kind-pasteur S128c84
 > entry immediately below arrived labelled `HYP-7870`, colliding with the
 > first-pushed positioned-transfer file.  Read the S128c84/THM-1245 entry as

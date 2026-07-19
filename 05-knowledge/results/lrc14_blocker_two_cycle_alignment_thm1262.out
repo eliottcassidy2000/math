@@ -1,0 +1,21 @@
+THM-1262 BLOCKER TWO-CYCLE ALIGNMENT EXACT AUDIT
+reverse binary-gate speed triples = 344520
+logical truth-table rows = 128
+admissible protected binary rows = 1
+minimal interval chains = 3542
+nonconsecutive marked corridors = 21582
+positive first-corridor handoffs = 21582
+ordered-word marked placements = 440
+intermediate-neighbor checks = 440
+six-label third-owner choices = 26400
+reflection orientation rows = 4
+reflection-aligned rows = 2
+gcd/lcm seam pairs = 9900
+positive compatible seam numerators = 49500
+speed tournament on {low,high}: transitive, score word (0,1)
+blocker relation on {low,high}: directed 2-cycle, not a tournament
+faithful carrier: high target -> protected third-owner handoff -> low target
+reflection: reverses phase and tooth orders, preserves alignment
+destroyed by runner projection: low-safe containment and wall placement
+CONCLUSION: mismatch impossible; aligned corridor exports a third-owner lcm seam
+RESULT: PASS

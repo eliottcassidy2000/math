@@ -1,8 +1,8 @@
 # THE LRC(14) FORMALIZATION MANIFEST — boxeph-S48 (the Lean batch, consumable form)
 
-## Landed addendum — coherent full-word package and carriers 41--42 (codex-S78)
+## Landed addendum — coherent full-word package, carriers 41--44, and scale 36 (codex-S78)
 
-The slow-gap formal surface now has six new sorry-free arithmetic modules.
+The current addendum now has eleven new sorry-free arithmetic modules.
 
 - `LRCMinimalBlockerTwoWallFork` checks the all-edge carrier-margin estimate,
   two wall quanta, exact detuned toothpick return, `r<=335`, binary reflection
@@ -17,6 +17,18 @@ The slow-gap formal surface now has six new sorry-free arithmetic modules.
 - `LRCCarrier41BVNeedle` and `LRCCarrier42BVNeedle` check the exact rational
   cap margins, phase reflection, and six-load contradiction for their external
   complete density certificates (THM-1255/1257).
+- `LRCCarrier43BVNeedle` and `LRCCarrier44BVNeedle` extend the same exact
+  reflection/cap/six-load consumer through carrier 44 (THM-1259/1261).
+- `LRCScaleThirtySixComplementaryFibre` checks the generic anchor/deviation
+  upper-relaxation implication and the complementary failed-owner consumer
+  behind the empty joint `Z/4`--`Z/9` cell (THM-1258).
+- `LRCPlacedForkChi7Surjectivity` checks the sharp-rung detuning and wall
+  identities, all four reduced mod-seven colour pairs, binary half-gap split,
+  continued blocker clock, and compact terminal margin (THM-1260).
+- `LRCBlockerTwoCycleAlignment` checks ascent-safe disjointness,
+  nonconsecutivity, the binary mismatch-to-alignment implication, existence of
+  a toward corridor neighbour, third-owner exclusion, reflection covariance,
+  and the protected gcd/lcm seam quantum (THM-1262).
 - `LRCBinaryPhaseWordLanding` checks the endpoint-address interpretation,
   phase/order mismatch seam, adjacent-swap matching obstruction, detuned
   backtrack, ABAB contradiction, and half-density turn floor (THM-1256).

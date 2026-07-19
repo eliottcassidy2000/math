@@ -167,6 +167,14 @@ vertex of (1).  The still-open Fano/`chi_7` probe should therefore be read as
 a possible organizer of several already placed forks, not a source of
 placement.
 
+THM-1260 now makes that warning exact.  Even after placing both walls of one
+sharp fork, its binary phase side, and the next marked blocker, every one of
+the `2^7` speed-colour words survives at every rung `1..335`.  The positive
+seam digit satisfies a shifted congruence with no quadratic-character
+content.  The first Fano-shaped object not refuted by this local surjectivity
+is a triangle of *handoff occurrences* with their seam digits and separated
+owner-reuse locations; runner point colours alone are exhausted.
+
 ### The `j=4` flood tail
 
 The closed continuum four-comb tail supplies the positive global reservoir,
@@ -215,18 +223,32 @@ The main guardrail is equally clear: `R>=n_0n_r Delta` simplifies to
 `P>=n_r`.  It cannot be counted again as an independent Hunter credit.  Any
 closing argument must use where the address lands, not just its sign.
 
+THM-1262 now settles the first recursive base of that operation.  In a
+blocker two-cycle the ascent target is protected from the reverse owner's
+danger tooth.  The two marks are nonconsecutive, so the binary descent cannot
+be a one-step inversion; it is aligned and its actual phase corridor exports
+a protected third-owner seam.  The shortest cycle therefore does not form a
+closed two-label stalk.  What remains is to iterate this forced third-owner
+bridge with a well-founded address potential, or close several such bridges
+into THM-1260's still-unresolved seam-digit incidence circuit.
+
 ## 5. Finite terminal bases and the separate `n=12` branch
 
 The bounded-variation density method now gives exact terminal noncoverage
-through carrier `42` (THM-1255 and THM-1257).  The carrier-41 densities do not transport
-unchanged to carrier 42; the self-similar operation is density *selection* on
-the changing cyclic phase orbit, not reuse of a fixed stalk or finite atlas.
+through carrier `44` (THM-1255, THM-1257, THM-1259, and THM-1261).  The
+carrier-41 densities do not transport unchanged to carrier 42, and carrier
+44 first needs cutoff depths 60 and 76.  The self-similar operation is density
+*selection* with controlled variation on the changing cyclic phase orbit,
+not reuse of a fixed stalk or finite atlas.
 These computations are useful terminal bases for an eventual alternate-gap
 descent, not substitutes for it.
 
-The `n=12` sporadic branch remains separate.  THM-1249 closes the
-AP-centred common-scale-35 Hamming-six face; common scale `36`, the remaining
-smooth H5/H6 banks, and the deep reverse-content component cover remain.  No
+The `n=12` sporadic branch remains separate.  THM-1249 and THM-1258 close the
+AP-centred common-scale-35 and common-scale-36 Hamming-six faces; scale 37 is
+prime-excluded and scale 38 is next.  The independent single-far absorption
+atlas also proves the whole `N=12` first-gap single-far stratum empty.  The
+remaining smooth H5/H6 banks, multi-defect/Freiman packets, and deep
+reverse-content component cover remain.  No
 coherent-word theorem above supplies AP extraction or arbitrary-height
 ballot rigidity, so uniform sporadic emptiness must not be claimed here.
 

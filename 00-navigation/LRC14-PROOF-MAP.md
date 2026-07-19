@@ -1,5 +1,45 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
+>
+> THM-1258 closes the primitive proper AP-centred Hamming-six face at common
+> scale `36`.  Scalar capacity leaves `82,332` of `206,725,596` labelled
+> support/order contexts.  A sound `Z/4` upper relaxation leaves `7,824`
+> all-owner-live rows and a sound `Z/9` relaxation leaves `12,222`, but their
+> joint `(6,6)` cell is empty.  Neither quotient alone proves the result;
+> the paired owner-obligation carrier is terminal.  Scale `37` is already
+> prime-excluded, so `38` is the next untreated common scale.  Independently,
+> the newly landed single-far absorption atlas proves that the entire `N=12`
+> first-gap single-far stratum is empty with cutoff at most `44`.  Uniform
+> sporadic emptiness still requires the multi-defect/Freiman branch.
+>
+> THM-1259 and THM-1261 extend the exact slow-gap BV terminal base through
+> carrier `44`.  Carrier `44` is the first warning rung: phases `k=6,7` need
+> cutoff multipliers `76,60`, although neither controls the load margin.  The
+> extra depth buys variation control, not protection from a remote speed.
+> Consequently the useful uniform target is a phase-orbit density-selection
+> lemma with controlled variation, not indefinite multiplier-bank growth.
+>
+> THM-1260 settles the still-open *local* Fano/`chi_7` question negatively.
+> For every toothpick rung `1<=r<=335`, both binary phase sides, and every one
+> of the `2^7` speed-colour words, there is a literal sharp placed
+> `h->j->h` fork and next marked blocker in the compact ratio box.  Positive
+> seam digits are colour-surjective; the zero-seam flip law does not extend
+> to one placed fork.  A viable Fano consumer must therefore see incidence
+> among several located handoff occurrences, retaining seam digits and owner
+> reuse.  The concrete next object is a seam-digit triangle, not a Fano line
+> on runner colours.
+>
+> THM-1262 removes the shortest inverted-cell survivor from the coherent word.
+> If `l<h` form a blocker two-cycle, the `h`-tooth at `t_l` lies wholly in
+> the `l`-safe component and is disjoint from the reverse marked `l`-tooth.
+> They cannot be consecutive; THM-1256's binary mismatch branch would make
+> them consecutive, so their tooth and centered-phase orders must align.
+> The corridor has an intermediate tooth and leaves the ascent target through
+> a protected seam owned by a third label.  A two-cycle therefore cannot close
+> as a two-label adjacent germ; the remaining aligned branch is already a
+> placed three-owner transport problem.
+
 > ## 2026-07-19 S78 — ONE COHERENT TOOTH WORD REMOVES THE TREE, SECOND-WALL, AND AFFINE-SIGN LOSSES
 >
 > THM-1252--1256 identify the smallest common carrier yet found for the hard
@@ -45,10 +85,10 @@
 > `max(4,floor((sum_i ceil(d_i/(7c))-2)/2))`
 > nonbacktracking turns.
 >
-> THM-1255 and THM-1257 independently extend the exact bounded-variation
+> THM-1255, THM-1257, THM-1259, and THM-1261 independently extend the exact bounded-variation
 > terminal base: no six faster combs cover any complete slow gap for carriers
-> `c<=42`.  The carrier-41 densities fail literal transport to most
-> carrier-42 phases; the uniform object must be phase-orbit density selection,
+> `c<=44`.  The carrier-41 densities fail literal transport to most
+> carrier-42 phases, and carrier 44 first needs cutoff depth 76; the uniform object must be phase-orbit density selection,
 > not a fixed finite template atlas.
 >
 > The live implication is now narrower and honest: consume one typed cell

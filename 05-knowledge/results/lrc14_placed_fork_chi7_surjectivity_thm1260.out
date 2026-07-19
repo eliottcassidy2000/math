@@ -1,0 +1,13 @@
+THM-1260 PLACED-FORK / chi7 SURJECTIVITY EXACT AUDIT
+optimization-sensitive assert nodes = 0
+sharp target/provider colour pairs = 4/4
+compact toothpick rungs = 335/335
+binary phase digits = 2/2
+seven-label chi7 words per (rung,digit) = 128/128
+exact placed-fork rows = 85760
+two-edge marked blocker continuations = 85760
+minimum compact-box margin = 69518
+witness-bank sha256 = 589c12fa6550f1e974d7bb30296663c1b0b6c0b513ad86269b0d7aefa91301dd
+runner tournament scores = (0, 1, 2, 3, 4, 5)
+runner directed triangles / Hamiltonian paths = 0 / 1
+RESULT: PASS -- one placed sharp fork carries no speed-chi7/Fano line law
