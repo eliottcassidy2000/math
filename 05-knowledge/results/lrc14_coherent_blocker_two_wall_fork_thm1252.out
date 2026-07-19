@@ -1,0 +1,15 @@
+THM-1252 COHERENT BLOCKER TWO-WALL FORK EXACT AUDIT
+loopless blocker maps = 15625
+distinct directed cycles checked = 409
+all-edge centered target-tooth margin rows = 695520
+two-wall same-label address rows = 36872
+single-tooth spanning rows excluded by irredundancy = 11648
+proper detuned address-return rows = 25224
+compact gcd-compatible rung rows = 1205660
+two-quantum disjoint-packing rows = 216000
+binary-digit-compatible sharp rungs = 335
+finite rung alphabet = 1 <= r <= 335
+sharp local row = (c,k,i,j,h,r,E)=(5,2,7,8,49,1,1)
+sharp wall seams = 1/5488 + 1/5488 = 1/2744
+full-word debt = H >= 1/c + (7/12) sum_a 1/lcm(s_a,s_(a+1))
+RESULT: PASS

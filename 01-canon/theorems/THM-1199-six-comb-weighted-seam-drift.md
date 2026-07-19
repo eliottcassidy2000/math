@@ -142,6 +142,20 @@ cover theorem involving `gcd(d_i,d_j)` would require an additional argument
 that forbids boundary-owned handoffs; (14) shows it cannot come from endpoint
 arithmetic alone.
 
+**Later chronological upgrade.**  THM-1253 supplies exactly that additional
+argument for one deletion-minimal cover by *individual* teeth.  Its raw
+consecutive handoffs have fast-owned endpoints and are all pairwise disjoint,
+so the weighted coverage excess charges the entire owner word:
+
+```text
+sum_i Pbar(6d_i/(7c))-1
+ >=(c/16)sum_(a=1)^(N-1)1/lcm(s_a,s_(a+1)).          (14a)
+```
+
+Thus (12) remains the phase-free arbitrary-nerve theorem, while (14a) is the
+stronger phase-located full-word consumer now available on the canonical
+chronological carrier.
+
 ## 3. The phase-free functional H-drift
 
 Combining (8) and (12) gives the phase-free envelope

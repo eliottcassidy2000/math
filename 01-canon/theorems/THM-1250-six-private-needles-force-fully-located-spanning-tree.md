@@ -218,6 +218,20 @@ Unlike a sampled blocker outdegree, (17c) becomes stronger when an external
 label repeatedly interrupts the owner word.  Reuse is a charge, not a way to
 erase obligations for free.
 
+**Later full-word upgrade.**  THM-1253 observes that deletion minimality
+actually forces `beta_a<=alpha_(a+2)`.  Hence *all* raw chronological
+handoff intervals, not only repetitions of one pair, are spatially disjoint.
+Direct integration of the coverage multiplicity therefore supersedes the
+Cayley-averaged coefficient in (17c) by
+
+```text
+H >=1/c+(7/12)sum_(a=1)^(N-1)1/lcm(s_a,s_(a+1)),    (17f)
+```
+
+and supplies the parallel twelve-piece functional debt
+`F_6>=(c/16)sum_a1/lcm`.  The located spanning tree proved here remains the
+rank-five structural skeleton; THM-1253 is the sharper scalar consumer.
+
 ## 5. A literal private interval stalk for every owner
 
 THM-1233 gives `d_i/c<2345`.  A tooth of speed `d_i` meeting `G` has its

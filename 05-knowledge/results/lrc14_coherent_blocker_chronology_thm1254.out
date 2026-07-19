@@ -1,0 +1,15 @@
+THM-1254 COHERENT BLOCKER / CHRONOLOGICAL DESCENT EXACT AUDIT
+cyclic marked-position words (length 2..6) = 872
+minimum cyclic ascents = 1
+minimum cyclic descents = 1
+paired speed/position order words (length 2..6) = 533416
+binary speed-descent original-invoice rows = 533416
+binary speed-descent reflected-invoice rows = 533416
+unconditional same-edge binary invoice = YES
+reflected address/digit rows = 2825804
+mixed product-gap / drift identities = 106808
+two-sided relative-digit pairs = 1378276
+pairs admitting failure of both invoices = 343396
+sharp bounded-branch row = (delta_down,delta_up,k,c-k)=(-586, 587, 585, 586)
+secondary general-digit carrier bound when both invoices fail = 1171
+RESULT: PASS

@@ -1,0 +1,13 @@
+THM-1253 FULL CHRONOLOGICAL SEAM INVOICE EXACT AUDIT
+three-interval redundancy rows = 1716
+minimal endpoint chains checked = 3997
+disjoint handoff pairs checked = 15341
+positive gcd/lcm handoff rows = 460607
+surjective six-label owner words = 112320
+sharp nonbacktracking turn floor = 4
+private owner occurrence rows = 110160
+scalar debt rows = 357201
+full occurrence debt = H >= 1/c + (7/12) sum_a 1/lcm(s_a,s_(a+1))
+functional debt = sum_i Pbar(6d_i/(7c))-1 >= (c/16) sum_a 1/lcm
+coarse debt = H >= 1/c + 7*g0*(N-1)/(12*d6^2)
+RESULT: PASS

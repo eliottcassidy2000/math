@@ -1,5 +1,32 @@
 # THE LRC(14) FORMALIZATION MANIFEST — boxeph-S48 (the Lean batch, consumable form)
 
+## Landed addendum — coherent full-word package and carriers 41--42 (codex-S78)
+
+The slow-gap formal surface now has six new sorry-free arithmetic modules.
+
+- `LRCMinimalBlockerTwoWallFork` checks the all-edge carrier-margin estimate,
+  two wall quanta, exact detuned toothpick return, `r<=335`, binary reflection
+  signs, and the positioned three-quantum consumer (THM-1252).
+- `LRCFullChronologicalSeamInvoice` checks the three-interval redundancy and
+  handoff-separation laws, the full coverage-excess and twelve-piece weighted
+  coefficients, factor-three improvement, and scalar occurrence consumer
+  (THM-1253).
+- `LRCCoherentBlockerChronology` checks the common-word product collapse,
+  reflection, and the unconditional same-edge original/reflected invoice on
+  a binary speed descent (THM-1254).
+- `LRCCarrier41BVNeedle` and `LRCCarrier42BVNeedle` check the exact rational
+  cap margins, phase reflection, and six-load contradiction for their external
+  complete density certificates (THM-1255/1257).
+- `LRCBinaryPhaseWordLanding` checks the endpoint-address interpretation,
+  phase/order mismatch seam, adjacent-swap matching obstruction, detuned
+  backtrack, ABAB contradiction, and half-density turn floor (THM-1256).
+
+The paper providers remain named rather than hidden: compact irredundant
+subcover extraction, strict wall continuation, iteration of aligned interval
+pairs to a full chronological subword, exact certificate integration, and the
+analytic BV tail estimate.  Targeted modules are kernel-clean; the aggregate
+root remains subject to its previously recorded unrelated build obstruction.
+
 Ten decide-shaped items, each with statement, data location, and proof shape. All
 kernel-pure candidates; the pipeline is warm (klein's sorry-free Kendall formula).
 

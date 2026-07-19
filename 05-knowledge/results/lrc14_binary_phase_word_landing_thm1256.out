@@ -1,0 +1,15 @@
+THM-1256 BINARY PHASE / TOOTH-WORD LANDING EXACT AUDIT
+endpoint residual/address rows = 979836
+binary centered-phase rows = 14550
+minimal interval chains = 3542
+marked interval pairs = 20834
+explicit phase/order mismatch witnesses = 27637
+marked phase words / adjacent-swap matching checks = 61336
+exact same-provider backtrack teeth = 340
+ABAB-free owner words = 63276
+maximum unordered-edge run = 2
+minimum turn-floor slack = 0
+compact-box backtrack-DAG height ceiling = 4
+invoice interpretation: R-endpoint = s0*(P-nr) = s0*(k+delta)
+word law: backtracks + nonbacktracking turns = N-2
+RESULT: PASS

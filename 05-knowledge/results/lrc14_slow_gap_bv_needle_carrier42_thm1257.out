@@ -1,0 +1,18 @@
+THM-1257 CARRIER-42 BV NEEDLE CERTIFICATE
+optimization_safe_require_probe=PASS
+VERIFIED_EXACT rows=21 carrier=42 phase_representatives=0..20 multipliers=12:7,16:1,20:1,28:9,44:3
+max_low=28499599523095/170999999979651 gap_to_1/6=800947027/341999999959302 at_k=18 M=28
+max_tail=65421208326679/392583333284653 gap_to_1/6=56083324579/2355499999707918 at_k=16 M=16
+reflection=t->1-t sends G_k(42) to G_(41-k)(42)
+phase_orbits=21 two-element pairs; no fixed phase
+finite_layer=exact loads for every 43<=d<=M(k)*42
+tail_layer=BV bound for every d>M(k)*42
+conclusion=no six strict danger combs cover any complete 42-gap
+TOURNAMENT_LOSS_AUDIT
+vertices=phase-obligation stalks k=0..20
+observable=max(finite_load,tail_load); gauge=k
+score_histogram=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+directed_3_cycles=0 scc_sizes=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+hamiltonian_path_count=1
+tie_hamiltonian_path=2,0,20,12,19,14,13,6,15,4,10,11,5,9,17,7,8,3,1,16,18
+faithful_vertices=density-bin stalks; tournament forgets weights

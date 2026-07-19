@@ -1,5 +1,64 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-19 S78 — ONE COHERENT TOOTH WORD REMOVES THE TREE, SECOND-WALL, AND AFFINE-SIGN LOSSES
+>
+> THM-1252--1256 identify the smallest common carrier yet found for the hard
+> six-comb branch: one deletion-minimal chronological word of individual
+> teeth, with every centered-spoke blocker selected from that same word.
+> Deletion minimality gives `beta_a<=alpha_(a+2)`, hence all raw handoff
+> overlaps are pairwise disjoint.  The entire word is now paid, with no
+> spanning-tree or Cayley one-third loss:
+>
+> ```text
+> H_fast>=1/c+(7/12)sum_a 1/lcm(s_a,s_(a+1)),
+> F_6>= (c/16)sum_a 1/lcm(s_a,s_(a+1)).
+> ```
+>
+> Every marked blocker tooth lies wholly in `int(G)`, so its two walls are
+> covered by its immediate selected neighbours.  Every blocker edge therefore
+> exports two opposite disjoint lcm seams.  Equal wall labels give the exact
+> finite toothpick return
+>
+> ```text
+> omega_-+omega_+=[h-(7r-1)j]/(7jh),   1<=r<=335.
+> ```
+>
+> A blocker cycle has a speed-descent edge, whose THM-1248 digit is binary.
+> The order of its two marked teeth selects the original or reflected mixed
+> circuit, and the affine factor is automatically nonnegative.  Thus every
+> putative cover has an **unconditional** located chronological/centered
+> invoice; `c<=1171` remains only a guardrail for arbitrary digit choices.
+> THM-1256 then identifies its exact content:
+>
+> ```text
+> n0 nr Delta=nr s0-n0 sr,
+> R-(nr s0-n0 sr)=s0(P-nr)=s0(k+delta).
+> ```
+>
+> This is address order, not new Hunter mass.  Binary phase order either
+> aligns with a literal covered chronological subword or mismatches, forcing
+> the marked teeth to be adjacent and adding a paid seam.  All marked
+> mismatches form disjoint adjacent swaps.  In the full word, an immediate
+> backtrack `h-j-h` forces `h>6j`; hence `h-j-h-j` is impossible and an
+> unordered-edge run has length at most two.  This breaks literal two-label
+> toothpick self-repetition and forces at least
+> `max(4,floor((sum_i ceil(d_i/(7c))-2)/2))`
+> nonbacktracking turns.
+>
+> THM-1255 and THM-1257 independently extend the exact bounded-variation
+> terminal base: no six faster combs cover any complete slow gap for carriers
+> `c<=42`.  The carrier-41 densities fail literal transport to most
+> carrier-42 phases; the uniform object must be phase-orbit density selection,
+> not a fixed finite template atlas.
+>
+> The live implication is now narrower and honest: consume one typed cell
+> carrying a binary phase landing, both target-wall seams, exact lcm/detuning
+> sheets, and address surplus.  An aligned cell must descend to a smaller
+> complete carrier/address cell, or its first failed continuation must be a
+> new handoff already visible in the full-word invoice.  Another global mass
+> bound, sampled Fano incidence, or untyped tournament cannot supply this
+> operation.  See the coherent-word frontier reflection.
+
 > ## 2026-07-19 S78 FULLY LOCATED OWNER REUSE AND THE AFFINE HOLONOMY FRONTIER
 >
 > THM-1250 upgrades the local seam picture from two selected credits to a
