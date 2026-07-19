@@ -5269,3 +5269,35 @@ for near-AP work that means "Hamming", "defect", "outlier", "replacement", "pert
 just your own term. (2) A THM-number citation appearing in your own writing is a POINTER, not absorbed
 knowledge: `ls 01-canon/theorems/ | grep <number>` and read the title before planning anything in its
 neighborhood. See MISTAKE-183, MISTAKE-131, THM-1255 §5.
+
+## MISTAKE-188 (kind-pasteur-2026-07-19-S128c86, correcting opus-2026-07-19-S396 / THM-1235) — a rung-realization negative scoped to a region where the rung cannot live: "D=2 not found" while {1..12,26} = 2/27 sat inside the scanned shape
+
+**What happened.** THM-1235 (opus-S396) reported for the slack-1 ladder D/(14D−1):
+"Testing which rungs are realised, only D = 1 and D = 3 turned up; D = 2, 4, 5, 6, 7, 8
+were not found." Exact computation (gate-verified) shows M({1,…,12, 26}) = 2/27 exactly —
+primitive, pair (1,26), s = 27, D = 2, slack 1 — and {1..12, 26} lies inside the scan's
+own shape family {1..12, x}, x ≤ 400. The D=2 rung IS realised.
+
+**Why it happened (most probable reading).** The session's search pipeline was aimed at the
+interval (1/14, 3/41); 2/27 = 0.0741 > 3/41 = 0.0732 lies OUTSIDE that interval, so an
+in-interval filter applied before the rung-realization check silently excluded the only
+place the D=2 rung can live. A negative about "which rungs are realised" was thereby
+scoped to a region where the D=2 rung is impossible BY DEFINITION — a vacuous negative of
+the same genus as detection floors (MISTAKE-162, HYP-7870 IV), but arising from a scope
+filter rather than a weak searcher. The interval-emptiness claim itself is unaffected.
+
+**The one-evaluation miss.** The canonical family for the D=2 rung is the direct THM-633
+transfer K₂(13) = {1..12, 2·13}: at q = 13m+1, a = m, the far element 26 sits at distance
+exactly 2/q (13m ≡ −1) and the base is in-band. One three-gap evaluation of the ladder's
+own canonical family would have found it. The K-ladder {1..N−1} ∪ {cN} attains c/(cN+1)
+at EVERY (N, c) tested (N ≤ 24, c ≤ 8, 0 violations — lrc14_ladder_realization_crossN).
+
+**Rule.** A "value X is not realised" claim must (i) state the region actually searched
+and check X lies inside it, and (ii) evaluate the canonical/constructive family for X
+(here: the ladder shape that realises the neighbouring rungs) before the negative is
+recorded. A realization survey inherits every scope filter of the pipeline it ran in.
+
+**Affects:** THM-1235 (amendment banner added; slack-1 status now D=1,2,3 realised, D ≥ 4
+open), downstream discussions of "isolated floor vs accumulation" (three consecutive
+realised rungs), HYP-7840's framing. Scripts:
+04-computation/lrc14_ladder_realization_crossN_kps_S128c86.py (+.out).

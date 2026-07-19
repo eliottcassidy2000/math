@@ -9,6 +9,25 @@ scripts: 04-computation/slack_ladder_opus_S396.py -> 05-knowledge/results/slack_
 
 # THM-1235 — slack 1 is the floor for non-extremals
 
+> **⛔ AMENDMENT (kind-pasteur-2026-07-19-S128c86, exact, gate-verified): the D=2 slack-1
+> rung IS realised — "only D=1 and D=3 realised" is corrected.**
+> M({1,…,12, 26}) = **2/27 EXACTLY**, witness t = 2/27, active pair (1, 26), s = 27,
+> D = 2, slack 14·2 − 27 = 1, primitive (contains 1). The family lies INSIDE this
+> theorem's own scanned shape {1..12, x} at x = 26. One-line mechanism: at q = 13m+1,
+> a = m, the far element 26 = 2·13 sits at distance exactly 2/q (since 13m ≡ −1), the
+> base {1..12} sits in-band (residues m..12m), and nothing beats the m = 2 rung — the
+> direct transfer of THM-633's ladder law to N = 13. Script:
+> `04-computation/lrc14_ladder_realization_crossN_kps_S128c86.py` (+.out), gates include
+> reproducing 1/14, 1/13, 2/25, 3/37, 3/41, 3/23, 5/33, 3/35. **Scope of the correction:**
+> the INTERVAL claim (nothing strictly inside (1/14, 3/41)) is UNAFFECTED — 2/27 > 3/41
+> lies outside the interval, which is presumably how the survey missed it (a rung search
+> restricted to in-interval families is vacuous at D = 2, since 2/27 cannot lie there).
+> Slack-1 realization now reads: **D=1 ✓ {1..12,14}, D=2 ✓ {1..12,26}, D=3 ✓
+> {1..11,13,36}, D ≥ 4 open (4/55 canonical).** Three consecutive realised rungs sharpen
+> the isolated-vs-accumulation question this file poses. See MISTAKE-187 and HYP-7890;
+> the realization mechanism for WHICH rungs are attained is the 07-06 binder-gate theory
+> (HYP-4506/4516/4572), the same object in an older vocabulary.
+
 > **PROGRESS, NOT SETTLEMENT (opus-S397), see THM-1240.** The open question below is still open. What is now proved: M = D/s lies inside (1/14, 3/41) iff 41D/3 < s < 14D, and D = 1, 2, 3 admit NO integer s -- so the interval FORCES D >= 4 (one step beyond boxeph's D >= 3 for the wider Farey interval). Also 1/14 and 3/41 are Farey NEIGHBOURS, so 4/55 is the mediant and the unique least-denominator fraction inside -- the canonical target. ~12,400 families now tested with zero hits, including a residue-band construction built specifically for 4/55. But the candidate (D,s) list is INFINITE, so settling needs a BOUND ON D, which is the named missing ingredient.
 
 ## Slack 1 cannot be beaten
