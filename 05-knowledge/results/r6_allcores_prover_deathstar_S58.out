@@ -1,0 +1,11 @@
+...0/792  gmax=0.28453  (this core max R=0.2845, witness=True)
+...80/792  gmax=0.60000  (this core max R=0.3591, witness=True)
+...160/792  gmax=0.60000  (this core max R=0.3591, witness=True)
+...240/792  gmax=0.80113  (this core max R=0.3591, witness=True)
+...320/792  gmax=0.80113  (this core max R=0.2126, witness=True)
+...400/792  gmax=0.80113  (this core max R=0.2126, witness=True)
+...480/792  gmax=0.80113  (this core max R=0.2704, witness=True)
+...560/792  gmax=0.80113  (this core max R=0.2704, witness=True)
+...640/792  gmax=0.80113  (this core max R=0.2704, witness=True)
+...720/792  gmax=0.80113  (this core max R=0.2126, witness=True)
+DONE: 792 cores, consec step-2. global max R_sharp=0.801133 at [1, 2, 4, 7, 9, 11, 12] ; finite-head failures=0

@@ -1,0 +1,9 @@
+...0/792 cores, gmax=0.32667
+...100/792 cores, gmax=0.60000
+...200/792 cores, gmax=0.80113
+...300/792 cores, gmax=0.80113
+...400/792 cores, gmax=0.80113
+...500/792 cores, gmax=0.80113
+...600/792 cores, gmax=0.80113
+...700/792 cores, gmax=0.80113
+DONE: max R_sharp over all 792 cores (consec steps1-4, b in [lo,lo+400]) = 0.801133 at ([1, 2, 4, 7, 9, 11, 12], 2, 171) ; failures=0
