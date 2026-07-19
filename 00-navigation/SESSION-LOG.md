@@ -1,3 +1,36 @@
+## opus-2026-07-17-S388 -- THM-1195 THE TENT-INTEGRAL CRITERION (int g >= 1/28 => LRC(14); fires 9/12, fails on the tight families by necessity) -- and WHY LRC(n) IS TIGHT AT lambda = 1/n: the tent threshold lambda*(1/2) and the independence expectation (1/2)/(n+1) coincide EXACTLY at lambda = 1/(n+1) = 1/14 (HYP-7740)
+
+Owner: work a new creative angle. Following THM-1185's triage rule -- measure-based
+methods are blind to the extremal families, only pointwise ones survive -- I tried a
+HYBRID: a criterion that is pointwise in origin but computable as a single integral.
+THE CRITERION: g(t) = min_v ||v t|| vanishes at every k/v and rises to a local maximum in
+each gap between consecutive zeros. On a cell of length L the graph lies under the tent of
+height max, so its area is at most max*L/2. So if EVERY local max were below 1/14 we would
+have int g < (1/14)*(1/2) = 1/28. Contrapositive: int_0^1 min_v||v t|| dt >= 1/28 implies
+some local max >= 1/14, i.e. LRC(14) for that family. One integral, computed exactly in
+rational arithmetic over the arrangement of zeros, peaks and pairwise crossings.
+WHAT IT DELIVERS: fires on 9 of 12 random families (ratio to 1/28: min 0.921, median
+1.012, max 1.102) and fails on the tight families (0.854, 0.853). The failure is
+NECESSARY, not a defect -- their maxima equal 1/14 exactly, saturating the tent bound. So
+it is a sufficient condition only and cannot prove LRC(14).
+THE REAL CONTENT, which I did not expect: the tent threshold is lambda*(1/2), while the
+independence heuristic -- treat the n values ||v t|| as independent uniforms on [0,1/2] --
+gives E[min] = (1/2)/(n+1). These two coincide EXACTLY when lambda = 1/(n+1), which at
+n = 13 speeds is lambda = 1/14, the conjectured gap. So the knife-edge I measured (median
+ratio 1.012, essentially 1) is not numerical accident: it is LRC(n)'s own tightness at
+lambda = 1/n showing up in two computations that know nothing about each other, one
+deterministic-geometric and one probabilistic.
+THAT NAMES SOMETHING THE PROGRAMME KEPT HITTING. LRC(14) sits at a threshold rather than
+having slack BECAUSE the conjectured lambda is exactly where the geometric and
+probabilistic estimates cross. Any method whose accuracy is of the order of the gap
+between those two estimates will land on the boundary -- which is precisely what
+S1 = 13/7 > 1 does, what the k=7 arity ceiling of THM-1155 does, and what this criterion
+does. The recurring 7 and the recurring knife-edge are the same phenomenon seen from
+different sides.
+FILES: THM-1195, script + out, HYP-7740. opus; S388.
+
+---
+
 ## opus-2026-07-17-S387 -- THM-1190 THE NATURAL COUNTERCONSTRUCTION AGAINST THE BEAT CERTIFICATE IS SELF-DEFEATING (killing differences is free; killing sums too forces gcd(V) > 1, which dilation reduces away -- verified gcd = 210/105/120/60/60/30) + the conservative count distinct <= |{+-v mod q}| verified 0/150, and my own EQUALITY claim corrected (HYP-7730)
 
 Owner: work whether the beat constraint breaks the blocking construction. Second pass --

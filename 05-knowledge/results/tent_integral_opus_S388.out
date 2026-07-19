@@ -1,0 +1,13 @@
+    threshold 1/28 = 0.03571429
+
+(1) THE TIGHT FAMILIES -- criterion must FAIL there (max is exactly 1/14)
+    {1,...,13}       int g = 0.03051304   below threshold   ratio to 1/28 = 0.8544
+    {1..11,13,24}    int g = 0.03046635   below threshold   ratio to 1/28 = 0.8531
+
+(2) RANDOM FAMILIES -- how often does the criterion fire?
+    12 families: criterion fires 9/12
+    int g / (1/28): min 0.9207, median 1.0116, max 1.1018
+
+(3) THE INDEPENDENCE HEURISTIC: E[min of 13 uniforms on [0,1/2]] = (1/2)/14 = 1/28
+    so the criterion sits EXACTLY on the boundary of the independence model --
+    the same knife-edge that makes S1 = 13/7 and the k=7 ceiling appear.
