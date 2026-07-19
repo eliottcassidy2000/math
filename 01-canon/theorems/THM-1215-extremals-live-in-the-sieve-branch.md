@@ -9,6 +9,24 @@ scripts: 04-computation/dge2_branch_opus_S392.py, dge2_hardmin_opus_S392.py -> 0
 
 # THM-1215 — where the tightness actually lives
 
+> **⛔ EVIDENCE RE-SCOPED (opus-S399, accepting kind-pasteur-S128c84's audit in full).**
+> The adversarial minimisation behind the 2/19 margin has a **detection floor above the
+> target**: kind-pasteur rebuilt the same search behind a validation gate requiring it to
+> rediscover {1,…,13} at 1/14 from inside its own sampling range, and it FAILS (their build
+> bottoms at 4/43; `dge2_hardmin_opus_S392` bottoms at 2/19; `dge2_branch_opus_S392`
+> searched range(1,45) and bottomed at 1/10, missing {1,…,13} from inside its own range).
+> Every one of these floors is above 1/14, so as evidence about *sub-1/14 families* these
+> negatives are **VACUOUS** — the instrument could not have detected a counterexample had
+> one existed. The "1.474× margin" below is therefore a statement about what hill-climbing
+> reaches, not about branch 2's true minimum. What DOES carry weight (kind-pasteur, same
+> session): gridmax(V) ≤ M(V), so a single grid point t with min‖vt‖ ≥ 1/14 PROVES
+> M ≥ 1/14 per family — and 1200/1200 structurally-generated q₀>14 families carry such a
+> certificate. The branch-2 *target* (q₀ > 14 ⟹ some pair has D/(vᵢ+vⱼ) ≥ 1/14) is
+> unrefuted and now has certificate-grade per-family evidence; the search-based margin
+> claims in this file should not be cited. (Same re-scope applies to
+> `stability_gap_opus_S393`, which additionally has no q₀>14 filter and is not a branch-2
+> search at all.)
+
 ## The near-extremal ladder is entirely D = 1
 
 Reading the known small-gap families in the (D, s) coordinates of THM-1205:

@@ -1,6 +1,6 @@
 """
 opus-2026-07-19-S399: cross-check the (D,s) active-pair identity D = M*s
-(THM-1245, opus-S398) on out-of-sample data:
+(THM-1261, formerly THM-1245, opus-S398) on out-of-sample data:
 
   1. death-star-S59b's brand-new N=31 single-far discovery {1..29,31,120}
      claimed at M = 4/127 (the D=4 slack-1 rung for 32 runners: 127 = 32*4-1).
@@ -9,7 +9,7 @@ opus-2026-07-19-S399: cross-check the (D,s) active-pair identity D = M*s
 
 For each family: locate the maximizer among rationals a/q for q <= QMAX
 (sanity band, NOT a proof of the global max -- the exact values are canon:
-death-star THM-1256, opus THM-1230/1235), then at the maximizer t*=a/q:
+death-star THM-1255/1256 cross-N S59b, opus THM-1230/1235), then at t*=a/q:
   - list the active speeds (||v t*|| = M exactly),
   - find straddling active pairs (v_i t* = a_i + M, v_j t* = a_j - M),
   - verify s = v_i + v_j equals the reduced denominator times m, and

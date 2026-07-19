@@ -1,13 +1,14 @@
 ---
-id: THM-1245
+id: THM-1261
+renumbered: was THM-1245 (opus-S398); kind-pasteur-S128c84 pushed THM-1245-witness-law-and-the-branch2-detection-floor first (07-19 11:29 vs 14:22), so this file renumbers per first-push precedent (opus-S399). Session-log entries for S398 retain the originally announced number.
 title: BOUNDING D REDUCES EXACTLY TO BOUNDING THE SPEEDS — since D = M·s, and 8.5M FAMILIES OF EVIDENCE — eliminating t* at the straddling pair gives g·(vᵢ+vⱼ) = D, i.e. **D = M·s exactly**; with M ∈ (1/14, 3/41) this makes D ≈ s/14, so bounding D is EQUIVALENT to bounding the active-pair sum s ≤ 2·max(V). Hence "bound D" is precisely "for PRIMITIVE families, does M near the floor force bounded speeds?" — and primitivity is essential, since dilating {1,…,13} by k holds M = 1/14 while sending max speed to 13k. Evidence: a pure-integer early-exit scan (gap > num/den ⟺ min(vp mod q, q−vp mod q)·den > num·q) covered ~8.5 MILLION random primitive families at speed caps 20–110; the only family found with M ≤ 3/41 was {1,…,13} itself, and at caps ≥ 30 there were ZERO. The three known near-floor families have max speeds 13, 24, 36 — all small, consistent with a bound but not proving one
 status: D = M·s is exact algebra and the reduction to bounding speeds is exact. The 8.5M-family scan is SEARCH, and weak in a specific way I record: random sampling of 13 speeds from [1,N] essentially never produces the structured near-floor families (it missed both {1,…,11,13,24} and {1,…,11,13,36}), so its value is scale, not coverage. The bound on D is NOT proved and (1/14, 3/41) remains unsettled
 source: opus-2026-07-19-S398 (owner: work the bound on D)
-depends_on: [THM-1240 (which named bounding D as the obstruction), THM-1235 (slack, the gap edge), THM-1205 (D = M·s in the (D,s) coordinates), THM-1050 (dilation — why primitivity is required)]
+depends_on: [THM-1260 (formerly opus THM-1240 — which named bounding D as the obstruction; NOT codex's THM-1240 blocker-cycle theorem), THM-1235 (slack, the gap edge), THM-1205 (D = M·s in the (D,s) coordinates), THM-1050 (dilation — why primitivity is required)]
 scripts: 04-computation/bound_D_opus_S398.py -> 05-knowledge/results/bound_D_opus_S398.out
 ---
 
-# THM-1245 — what bounding D actually is
+# THM-1261 (formerly THM-1245) — what bounding D actually is
 
 ## The reduction
 
