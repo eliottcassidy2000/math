@@ -1,0 +1,37 @@
+### (1) verify the endpoint law on the worst case ###
+  component = [1373/5278, 1385/5306]
+     left endpoint = RIGHT edge of tooth j=98 of comb 377
+     right endpoint = LEFT  edge of tooth j=99 of comb 379
+  predicted raw gap (j=98, a=377, b=379): (a - j(b-a))/(ab) = 181/142883
+  minus radii 1/(14*377)+1/(14*379) -> 127/142883 ; actual L = 127/142883
+
+### (2) the linear-in-j law: gap(a,b,j) = (a - j*d)/(ab) - radii ###
+  a=371 b=379 (d=8):  j     raw gap        usable      usable*b
+                       0     0.00263852     0.00225753  0.8556
+                       5     0.00235405     0.00197305  0.7478
+                       10    0.00206957     0.00168857  0.6400
+                       20    0.00150062     0.00111962  0.4243
+                       40    0.00036271     -0.00001829 -0.0069
+                       46    0.00002134     -0.00035966 -0.1363
+  a=371 b=372 (d=1):  j     raw gap        usable      usable*b
+                       0     0.00268817     0.00230363  0.8570
+                       50    0.00232588     0.00194134  0.7222
+                       150   0.00160131     0.00121677  0.4526
+                       300   0.00051445     0.00012991  0.0483
+                       370   0.00000725     -0.00037730 -0.1404
+
+### (3) so where do real surviving components sit?  small j = big gap ###
+  measure j* = index of the tooth bounding the longest component, vs a/d
+  worst 6 by L*k4:   L*k4    j*     k4    d_min   j*d/k4
+                     0.4208   20     282   1       0.0709
+                     0.4286   59     833   1       0.0708
+                     0.4405   132    318   1       0.4151
+                     0.4428   98     340   1       0.2882
+                     0.4522   239    586   1       0.4078
+                     0.4610   146    523   3       0.8375
+  best 3 by L*k4:
+                     0.7430   277    708   5       1.9562
+                     0.7523   80     166   2       0.9639
+                     0.7610   18     756   1       0.0238
+  correlation check: median j*d/k4 among worst half = 0.3448 ; best half = 0.7583
+DONE
