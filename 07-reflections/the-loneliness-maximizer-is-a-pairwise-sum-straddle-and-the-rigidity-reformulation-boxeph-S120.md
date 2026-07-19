@@ -7,6 +7,13 @@ loneliness minimizer (Tao's n=12 conjecture / INVcov) into a statement about **p
 is the unique 12-set whose best pairwise-sum straddle value equals `1/13`. This generalizes the S118
 centering witness and pins the difficulty to a finite, structured per-set search. Verified S120.*
 
+> **PRIOR-ART CREDIT (added S121).** The located-maximizer theorem below is a **rederivation of the
+> established Pinch Lemma HYP-2059** (opus-2026-06-02-S557) and **THM-401** (the `C=2n-1` modulus identity),
+> as flagged by opus's THM-1200. It is not new; credited here. My "reduction ≠ representation" catch (the
+> non-coprime `t=4/52=1/13`) is the independently-established **MISTAKE-173**. What may remain as fresh
+> *framing*, resting entirely on the known pinch lemma, is the **rigidity reformulation** (pairwise-sum
+> straddle at exactly `1/13`) and the mod-13 corollary (`M=1/13 ⟹ 13 ∣ (v_i+v_j)` at the maximizing pair).
+
 ## The located-maximizer theorem (proved, variational)
 
 > **Theorem.** For distinct positive speeds `V`, let `t*` maximize `g(t) = min_k ‖v_k t‖`, `M = g(t*) > 0`.
