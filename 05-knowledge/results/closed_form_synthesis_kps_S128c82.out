@@ -1,0 +1,24 @@
+### the located pair on my clustered families: (v_min, active killer) ###
+  family                     M          active     v_min+k   M*(v_min+k)  a_k
+  {2..12}u{169,182}          8/57       [2, 169]   171       24           12
+  {2..12}u{169,196}          8/57       [2, 169]   171       24           12
+  {2..12}u{169,210}          8/57       [2, 169]   171       24           12
+  {2..12}u{182,196}          13/92      [2, 182]   184       26           13
+  {1..11}u{312,364}          26/313     [1, 312]   313       26           26
+  {1..11}u{168,338}          28/339     [1, 338]   339       28           28
+
+### does the 7k'+1 law equal (v_min + killer)/3 ? ###
+  family                     M          denom(M)   v_min+k   (v_min+k)/3   7k'+1 with k'=num
+  {2..12}u{169,182}          8/57       57         171       57            7*8+1 = 57
+  {2..12}u{169,196}          8/57       57         171       57            7*8+1 = 57
+  {2..12}u{169,210}          8/57       57         171       57            7*8+1 = 57
+  {2..12}u{182,196}          13/92      92         184       184/3         7*13+1 = 92
+  {1..11}u{312,364}          26/313     313        313       313/3         7*26+1 = 183
+  {1..11}u{168,338}          28/339     339        339       113           7*28+1 = 197
+
+### the general closed form this yields ###
+  For a clustered covering family with core min v_min and active killer k:
+      M = a_k * v_min / (v_min + k)   for the integer a_k nearest (v_min+k)/(2 v_min) ...
+  check: predicted vs actual
+  {2..12}u{169,182}          M = 8/57      = 12*2/171   a_k = 12
+  {2..12}u{169,196}          M = 8/57      = 12*2/171   a_k = 12

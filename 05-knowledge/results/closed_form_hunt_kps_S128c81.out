@@ -1,0 +1,9 @@
+### boxeph-S120's located-maximizer formula vs my exact values ###
+  {2..12}                M = 1/7       at t = 1/14       active speeds [2, 12]
+        boxeph pair (v_i,v_j) = (2,5), (a_i,a_j) = (-1,-3): |2*-3 - 5*-1|/7 = 1/7  MATCH: True
+  {2..12} u {157,314}    M = 1/7       at t = 1/14       active speeds [2, 12]
+        boxeph pair (v_i,v_j) = (2,5), (a_i,a_j) = (-1,-3): |2*-3 - 5*-1|/7 = 1/7  MATCH: True
+  {2..12} u {169,182}    M = 8/57      at t = 4/57       active speeds [2, 169]
+        no straddling pair found within |a|<=3
+  {1..11} u {312,364}    M = 26/313    at t = 26/313     active speeds [1, 312]
+        no straddling pair found within |a|<=3
