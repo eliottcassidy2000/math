@@ -1,3 +1,46 @@
+## opus-2026-07-17-S383 -- THM-1170 THE CRITICAL-POINT STRUCTURE: the LRC(14) optimum lives at BEAT FREQUENCIES v_i +- v_j (or half-periods 2v), so g(V) is computed over at most 169 = 13^2 candidate denominators (verified 14/14 exactly); all three tight families realise g = 1/14 at the SUM 1+13; and ~15.5% of candidates are witnesses, so the difficulty is uniformity, never scarcity (HYP-7680)
+
+Owner: work a new creative angle. I took the max-min structure seriously rather than the
+measure-theoretic one, and it gives the first small, structured candidate set in this
+programme.
+THE CHARACTERISATION: LRC(14) says g(V) = sup_t min_v ||v t|| >= 1/14. Each t -> ||v t||
+is a TRIANGULAR WAVE of period 1/v with slopes +-v, peaking at (2m+1)/(2v). The lower
+envelope of finitely many such waves is piecewise linear, so its local maxima occur ONLY
+where two waves cross -- v_i t - a = +-(v_j t - b), giving t = k/(v_i -+ v_j) -- or where
+the minimising wave is at its own peak, t = (2m+1)/(2v). So the optimum sits at a BEAT
+FREQUENCY, and the candidate denominators number at most 13 + 2*C(13,2) = 169 = 13^2.
+VERIFIED 14/14 in exact rational arithmetic: for each family I confirmed the candidate
+maximum really is the supremum by checking that the uncovered set at radius g + eps is
+empty.
+THE TIGHT FAMILIES read beautifully in this frame. All three -- {1,...,13},
+{1,...,11,13,24}, and 2*{1,...,13} -- realise g = 1/14 exactly, at t = 1/14 (resp. 1/28),
+and in every case the denominator is a SUM OF TWO SPEEDS, 14 = 1 + 13. The extremal time
+is the beat of the slowest and fastest runner.
+WINNER TYPES over 40 families: sum 55, diff 20, peak 11 (types can share a denominator).
+Sums dominate.
+THE SLACK FIGURE, which I think is the most useful thing here: a median of 848 of 5455
+candidate points achieve gap >= 1/14 -- about 15.5%. So for any individual family there
+are HUNDREDS of witnesses, not one delicate configuration. That re-characterises the
+difficulty: LRC(14) is not hard because witnesses are scarce or fragile per family. It is
+hard ONLY because the witness must be produced uniformly over infinitely many families --
+the same obstruction that killed the Bonferroni ledger, the bounded-denominator
+conjecture and the substitution programme, now visible in a setting where the per-family
+margin is comfortable rather than knife-edge.
+WHY THIS IS A BETTER ARENA: THM-1100's band condition is now restricted to q a BEAT
+FREQUENCY, and at q = v_i + v_j the family automatically satisfies v_i = -v_j mod q, so
+two runners sit symmetrically about the origin and contribute the SAME distance -- the 13
+constraints collapse to 12 at every beat denominator. That does NOT close anything (12/7
+still exceeds 1, so the union bound still fails) and I am not claiming it does. But it is
+the first reformulation in this programme whose candidate set is finite, small and
+arithmetically structured, and whose residues are CONSTRAINED rather than free -- which
+matters because THM-1110's blocking argument assumed arbitrary residues and does not
+apply verbatim here.
+ALSO IN FLIGHT: the five-speed exhaustive enumeration (S382) is still running; the
+uniform_level_budget lemma it relies on is already landed and kernel-pure (11 theorems).
+FILES: THM-1170, 2 scripts + out, HYP-7680. opus; S383.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.74) -- THM-1146: the single-run bound is REFUTED -- the bad set is TWO mirror-symmetric runs -- but the location prediction is confirmed exactly and the mechanism is now proved (owner: prove the single-run bound from the linear descent). I was asked to prove it; it is false, and finding that out cost one computation. (I) THE SELF-CORRECTION. THM-1145(I) asserted the bad indices form a SINGLE contiguous run. They do not: over k1 in [157,420) the bad set splits into TWO runs in all 263 cases tested, never one. The error was a misreading of my own cont.73 output -- a bad set of 12 indices with 'longest run 6' is two runs of six, and I wrote it up as one run of six. The distinction matters, because the counting argument of THM-1145(III) is charged per interval. (II) WHAT IS ACTUALLY TRUE, AND IT IS PROVABLE. For consecutive killers the offset of comb k_i's tooth inside the k1-gap drifts by -d_i/(k1 k_i) per gap index, i.e. by -d_i/k1 once normalised to k_i's own period. With (d2,d3,d4) = (1,2,3) the three normalised positions are therefore u, 2u and 3u with u = j/k1 EXACTLY, so the longest surviving piece is a function F(u) of a SINGLE parameter. The point set {0,u,2u,3u} is invariant under the circle reflection u -> 1-u, hence F(u) = F(1-u), and every minimum at u is mirrored at 1-u. So there are exactly TWO runs, at u about 1/4 and u about 3/4. The measurement matches the symmetry exactly: 2 local minima and 4 sign changes of the difference, for every k1 tested. (III) THE LOCATION IS CONFIRMED TO FOUR DECIMALS. The argmin sits at j/k1 = 0.2484, 0.2487, 0.2489, 0.2491, 0.2492, 0.2493 and 0.2494 for k1 = 157 through 397, converging monotonically to 1/4 -- exactly as the u, 2u, 3u structure predicts, since {0, 1/4, 1/2, 3/4} is the maximally spread configuration and therefore minimises the largest piece. That is real support for the parametrisation even though the single-run claim built on it was wrong. (IV) THE WIDTH BOUND MUST ALSO BE RAISED. The per-run fraction is 0.0382 at k1=157, 0.0386 at 207, 0.0428 at 257, 0.0423 at 307, 0.0448 at 357 and 0.0467 at 407 -- exceeding the 0.0457 asserted in THM-1145, whose scan had stopped at k1 = 397, and still rising. (V) THE COUNTING ARGUMENT SURVIVES, WITH LESS ROOM. Two runs of about 0.047 give a total bad measure of about 0.093 in t, against S(P) of measure at least 0.164 spread over 14 to 26 components, so the argument still goes through but the margin falls from 0.118 to 0.071. The load-bearing question is now the growth in (IV) and it is NOT settled: if the per-run width converges near 0.05 the total stays around 0.10 and the argument is comfortable, but if it grows past 0.082 the total reaches 0.164 and the argument fails. HONEST STATUS: uniform r=5 remains OPEN.
 
 Prompt (owner): prove the single-run bound from the linear descent

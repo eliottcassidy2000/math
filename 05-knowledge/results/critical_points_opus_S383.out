@@ -1,0 +1,21 @@
+(1) IS THE OPTIMUM ALWAYS AT A CRITICAL POINT?  (candidates: 2v and v_i +- v_j)
+    A candidate value g is the true sup iff uncovered(V, lam) is EMPTY for
+    every lam > g.  Test at lam = g + tiny.
+    V[:4]=[7, 10, 15, 20]...  g=15/71 (0.211268)  at t=26/71   uncovered(g+eps)=0  OK
+    V[:4]=[1, 6, 8, 13]...  g=2/13 (0.153846)  at t=5/26   uncovered(g+eps)=0  OK
+    V[:4]=[1, 6, 19, 22]...  g=15/77 (0.194805)  at t=30/77   uncovered(g+eps)=0  OK
+    V[:4]=[4, 12, 13, 14]...  g=6/43 (0.139535)  at t=19/43   uncovered(g+eps)=0  OK
+    V[:4]=[3, 8, 11, 12]...  g=7/43 (0.162791)  at t=41/86   uncovered(g+eps)=0  OK
+    V[:4]=[2, 4, 12, 15]...  g=6/25 (0.240000)  at t=9/25   uncovered(g+eps)=0  OK
+    V[:4]=[5, 6, 7, 14]...  g=4/21 (0.190476)  at t=1/21   uncovered(g+eps)=0  OK
+    V[:4]=[1, 4, 8, 23]...  g=10/71 (0.140845)  at t=24/71   uncovered(g+eps)=0  OK
+    V[:4]=[4, 9, 10, 12]...  g=5/38 (0.131579)  at t=3/76   uncovered(g+eps)=0  OK
+    V[:4]=[5, 7, 8, 15]...  g=2/11 (0.181818)  at t=5/11   uncovered(g+eps)=0  OK
+    V[:4]=[2, 6, 10, 17]...  g=4/25 (0.160000)  at t=2/25   uncovered(g+eps)=0  OK
+    V[:4]=[8, 11, 13, 16]...  g=7/32 (0.218750)  at t=1/32   uncovered(g+eps)=0  OK
+    V[:4]=[1, 6, 9, 10]...  g=1/5 (0.200000)  at t=17/65   uncovered(g+eps)=0  OK
+    V[:4]=[3, 6, 19, 23]...  g=17/82 (0.207317)  at t=19/82   uncovered(g+eps)=0  OK
+    families where a critical point achieved the sup: 14/14
+
+(2) CANDIDATE-SET SIZE: at most 13 + 2*C(13,2) = 169 = 13^2 denominators
+    example family [1, 3, 5, 6, 15]...: 84 distinct candidate denominators

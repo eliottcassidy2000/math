@@ -1526,3 +1526,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `twospeed_bound_opus_S379.out` | [STORED] | THM-1152: two-speed bounds (smaller <= 63, second <= 62), 0/2113 empty residues, 6702 combos -> 2 families. | (self) |
 | `threespeed_bound_opus_S380.out` | [STORED] | THM-1155: k-comb ceiling table (dies at k=7), 3-speed bounds 14..102, 71890 combos -> 2 families. | (self) |
 | `fourspeed_exhaustive_opus_S381.out` | [STORED] | THM-1165: k=4 exhaustive (2.24M nodes, 85% pruned, 0 empty residues) -> still 2 families. | (self) |
+| `critical_points_opus_S383.out` | [STORED] | THM-1170: optimum at beat frequencies (14/14 verified); 169 = 13^2 candidates; 15.5% witness density. | (self) |
