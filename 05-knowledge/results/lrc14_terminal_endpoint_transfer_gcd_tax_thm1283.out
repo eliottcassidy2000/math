@@ -1,4 +1,4 @@
-THM-1277 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT
+THM-1283 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT
 Python assert nodes = 0
 strict endpoint incidences = 17168
 left/right incidences = 8584/8584
@@ -28,4 +28,4 @@ tournament_scores=(0,1); cycles=0; SCCs=2; Hamilton_paths=1
 preserves=side,address,residue,proper-crossing,and-survivor-subtraction
 destroys=next mixed-owner safe-component cover
 STATUS=PASS
-source_sha256=7fc914f413e718a0f9d36519b71d4da65d1e09d411f6081f3605b1b34304a62d
+source_sha256=357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61

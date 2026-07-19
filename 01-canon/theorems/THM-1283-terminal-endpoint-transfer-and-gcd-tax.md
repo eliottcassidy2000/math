@@ -1,19 +1,19 @@
 ---
-id: THM-1277
+id: THM-1283
 title: A PROTRUDING CENTERED SURVIVOR EXPORTS A PROPER CARRIER-ENDPOINT-OWNER SEAM AND A STRICT RESIDUE/GCD TAIL TAX
 status: PROVED (every protruding endpoint has a non-slowest fast owner; exact signed endpoint residual and outward tooth length; mirrored proper carrier-owner crossing; exterior seam disjoint from the full internal chronological invoice; survivor subtraction gives ell-eta>11/270; exact centered-error/residue and gcd integer cuts; center-to-endpoint winding congruence; terminal-word return-or-unique-owner corollary; the THM-1266 sharp five-rung local row is globally excluded; optimization-safe exact referee; sorry-free Lean arithmetic core). This strengthens the centered protrusion constraint and consumes THM-1274's endpoint branch, but does not prove six-comb noncoverage or LRC(14)
 source: codex-2026-07-19-S82 terminal-endpoint continuation
 depends_on: [THM-1198, THM-1237, THM-1250, THM-1253, THM-1264, THM-1267, THM-1274]
 related: [THM-1199, THM-1252, THM-1266]
-script: 04-computation/lrc14_terminal_endpoint_transfer_gcd_tax_thm1277.py
-output: 05-knowledge/results/lrc14_terminal_endpoint_transfer_gcd_tax_thm1277.out
+script: 04-computation/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.py
+output: 05-knowledge/results/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCTerminalEndpointTransferGcdTax.lean
-script_sha256: 7fc914f413e718a0f9d36519b71d4da65d1e09d411f6081f3605b1b34304a62d
-output_sha256: 78ecb9f44a67fb9cedf1cdef5072e99819dd38ffe7c6a0fdf5c4ec42ed682a79
-formalization_sha256: 384f8c21be4c1dfab988ca9c1017a02cedcf3528c30b519ed14e615096614e3b
+script_sha256: 357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61
+output_sha256: bfbc2c02aabefca2103acec72ea7bf134f26df63f1112249686c04c56fdeee57
+formalization_sha256: 97adf0b28be6ef6abce4066ee47c7f048db851ce4ae93885e58e39b1b880de43
 ---
 
-# THM-1277 — terminal endpoint transfer and gcd tax
+# THM-1283 — terminal endpoint transfer and gcd tax
 
 ## 1. The protruding endpoint has a fast owner
 
@@ -502,12 +502,12 @@ calls.
 Frozen artifact hashes are
 
 ```text
-source         7fc914f413e718a0f9d36519b71d4da65d1e09d411f6081f3605b1b34304a62d
-output         78ecb9f44a67fb9cedf1cdef5072e99819dd38ffe7c6a0fdf5c4ec42ed682a79
-formalization  384f8c21be4c1dfab988ca9c1017a02cedcf3528c30b519ed14e615096614e3b
+source         357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61
+output         bfbc2c02aabefca2103acec72ea7bf134f26df63f1112249686c04c56fdeee57
+formalization  97adf0b28be6ef6abce4066ee47c7f048db851ce4ae93885e58e39b1b880de43
 ```
 
-THM-1277 supplies the phase-located endpoint tax and the first literal
+THM-1283 supplies the phase-located endpoint tax and the first literal
 neighboring-carrier seam requested after THM-1274.  It does not yet prove
 that this child seam returns to a lower-rank centered spoke, nor does it add
 the survivor mass and seam length as two copies of coverage excess.  The next

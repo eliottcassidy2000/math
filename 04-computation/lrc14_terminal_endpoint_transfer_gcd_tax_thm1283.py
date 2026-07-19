@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-1277's terminal endpoint transfer and gcd tax.
+"""Exact referee for THM-1283's terminal endpoint transfer and gcd tax.
 
 The continuum inputs (selection of an endpoint owner, the THM-1267 survivor
 mass, and extraction of THM-1274's terminal tooth) remain paper topology
@@ -428,7 +428,7 @@ def main() -> None:
     mirror_rows, mirror_seam, mirror_ell, mirror_eta = mirrored_guardrail_audit()
     phase_rows, phase_pass, phase_excluded, sharp_phase = centered_phase_clock_audit()
 
-    print("THM-1277 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT")
+    print("THM-1283 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT")
     print(f"Python assert nodes = {no_asserts}")
     print(f"strict endpoint incidences = {incidence[0]}")
     print(f"left/right incidences = {incidence[1]}/{incidence[2]}")

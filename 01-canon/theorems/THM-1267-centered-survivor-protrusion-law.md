@@ -4,7 +4,7 @@ title: Centered-spoke survivor protrusion law
 status: PROVED.  In every hypothetical six-comb cover of a complete c-safe gap, the full five-comb survivor on the slowest fast speed's centered safe component is forced into one endpoint tail.  Exact six-bin endpoint density and the THM-1241-separated one-comb envelope give d1/c<563/270, hence 270d1<=563c-1.  Paper topology, optimization-safe exact referee, and sorry-free Lean arithmetic consumer are supplied
 source: codex-2026-07-19 H-drift / centered-component synthesis
 depends_on: [THM-1198, THM-1240, THM-1241]
-related: [THM-1199, THM-1236, THM-1244, THM-1252, THM-1274, THM-1277]
+related: [THM-1199, THM-1236, THM-1244, THM-1252, THM-1274, THM-1283]
 script: 04-computation/lrc14_centered_survivor_protrusion_thm1267_referee.py
 output: 05-knowledge/results/lrc14_centered_survivor_protrusion_thm1267_referee.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCCenteredSurvivorProtrusion.lean
@@ -479,7 +479,7 @@ labels.  It therefore yields a closest return with factor greater than `3/2`
 or reaches the carrier-gap endpoint within five tooth occurrences.  The
 exterior survivor itself remains outside the local six-cover word; converting
 that terminal landing into a neighboring-carrier descent or endpoint tax is
-performed in THM-1277.  The terminal endpoint owner crosses the adjacent
+performed in THM-1283.  The terminal endpoint owner crosses the adjacent
 carrier tooth in a proper exterior seam, and subtracting that tooth segment
 from the compulsory survivor tail gives the strict residue/gcd refinement
 `270d_1x+45d_1Q<=563cx-1`.  Following the resulting mixed-owner child remains

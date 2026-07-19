@@ -4,7 +4,7 @@ title: CLOSEST RETURNS HAVE A 6/5 LEAF RANK, AND A CONSECUTIVE TOOTHPICK STAR HA
 status: PROVED (closest-return distinct-internal leaf; exact 6/5 metric ascent; height-five fixed-owner and height-42 compact transported ranks; recursive disjoint-packet packing; additive return stalk; exact repeated-low endpoint separation; sharp five-rung consecutive-address star bound; primitive c=140 centered-blocker/two-cycle realization; exact four-fastest-safe-gap tail audit; optimization-safe referee; sorry-free Lean arithmetic consumer). This terminates the local r=1 star and localizes its tail; it does not prove six-comb noncoverage or LRC(14)
 source: codex-2026-07-19 return-recursion audit
 depends_on: [THM-1252, THM-1253, THM-1256, THM-1262, THM-1264]
-related: [THM-841, THM-1196, THM-1199, THM-1233, THM-1254, THM-1274, THM-1277]
+related: [THM-841, THM-1196, THM-1199, THM-1233, THM-1254, THM-1274, THM-1283]
 script: 04-computation/lrc14_closest_return_leaf_paid_star_thm1266.py
 output: 05-knowledge/results/lrc14_closest_return_leaf_paid_star_thm1266.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCClosestReturnLeafPaidStar.lean

@@ -6,7 +6,7 @@ Authors: Codex (LRC multi-agent project, 2026-07-19)
 import TournamentH7.LRCCenteredSurvivorProtrusion
 
 /-!
-# Terminal endpoint transfer and gcd tax (THM-1277)
+# Terminal endpoint transfer and gcd tax (THM-1283)
 
 This module checks the arithmetic consumer behind the paper endpoint topology:
 the signed endpoint residual, the outward-width bound, the endpoint-suffix

@@ -301,7 +301,7 @@ the former target of finding a “first nonaligned marked tooth” is obsolete.
 THM-1274 performs the next legal operation on the protrusion-facing wall.  It
 follows a literal five-owner subword to either a closest distinct-occurrence
 return, with factor greater than `3/2`, or the carrier endpoint within five
-teeth.  THM-1277 then shows that the endpoint is not a stop: its unique
+teeth.  THM-1283 then shows that the endpoint is not a stop: its unique
 terminal owner crosses the adjacent carrier tooth in a proper exterior seam
 of length
 

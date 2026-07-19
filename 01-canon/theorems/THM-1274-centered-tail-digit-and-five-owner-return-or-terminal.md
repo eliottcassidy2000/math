@@ -4,7 +4,7 @@ title: CENTERED PROTRUSION ORIENTS THE SLOWEST TWO-CYCLE AND FORCES A FIVE-OWNER
 status: PROVED (the THM-1267 protrusion sign fixes the binary descent digit; the protrusion-facing blocker wall continues through only five owner labels; distinct tooth-instance reuse gives a literal closest return of at most five edges and strict factor greater than 3/2; otherwise the word reaches the carrier endpoint within five tooth occurrences; the exceptional six-owner path either has a closest 6/5 return or is the whole six-tooth word, forcing d6<=7c; exact mirrored guardrails; optimization-safe exact referee; sorry-free Lean arithmetic/combinatorial core). This is a return-or-endpoint landing theorem, not an endpoint tax, six-comb noncoverage, or LRC(14)
 source: codex-2026-07-19-S82 protrusion/return composition
 depends_on: [THM-1248, THM-1252, THM-1253, THM-1256, THM-1262, THM-1264, THM-1266, THM-1267]
-related: [THM-1244, THM-1277, HYP-7870]
+related: [THM-1244, THM-1283, HYP-7870]
 script: 04-computation/lrc14_centered_tail_return_or_terminal_thm1274.py
 output: 05-knowledge/results/lrc14_centered_tail_return_or_terminal_thm1274.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCCenteredTailReturnOrTerminal.lean
@@ -171,7 +171,7 @@ protrusion-facing continuation
 The second branch is not discharged inside this theorem.  It is a sharply
 localized endpoint obligation carrying `(sigma,epsilon_a,ell)`, the last
 selected tooth, and the positive five-comb survivor outside `G` supplied by
-THM-1267.  THM-1277 subsequently consumes this payload: the terminal tooth
+THM-1267.  THM-1283 subsequently consumes this payload: the terminal tooth
 crosses the adjacent carrier tooth in a new exterior gcd seam, and removing
 that tooth segment from the survivor tail yields a strict residue-dependent
 protrusion tax.
@@ -327,7 +327,7 @@ formalization  16597fe2a2611d65edfedf729b74eb8bda9232f70b20e49b8f1460e9ce895bcb
 ```
 
 THM-1274 itself does not prove that the terminal branch pays new mass.
-THM-1277 now supplies that downstream endpoint consumer: it exports a proper
+THM-1283 now supplies that downstream endpoint consumer: it exports a proper
 `c`--terminal-owner crossing and strengthens the protrusion cut by its exact
 endpoint residual.  The remaining operation after the pair is narrower: make
 a return rank feed its next blocker, or follow the terminal owner's safe side
