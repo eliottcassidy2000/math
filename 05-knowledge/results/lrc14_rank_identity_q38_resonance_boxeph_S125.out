@@ -1,0 +1,44 @@
+==========================================================================
+(A) rank identity at lam=3/38: cover-debt = sum mu(D_v) - 1 (when covered)
+==========================================================================
+       {1..12}: sum mu(D_v)=1.8947 (=36/19=1.8947)  mu(union)=1.0000  uncovered=0.0000  int r=0.8947  (17/19=0.8947)
+   band-filled: sum mu(D_v)=1.8947 (=36/19=1.8947)  mu(union)=0.9453  uncovered=0.0547  int r=0.9495  (17/19=0.8947)
+
+==========================================================================
+(B) apex-19: the 3/38-comb spectrum ghat(k)=sin(3*pi*k/19)/(pi*k) vanishes at k==0 mod 19
+==========================================================================
+    ghat( 1) = +0.151499   
+    ghat( 2) = +0.133239   
+    ghat( 6) = +0.008732   
+    ghat(12) = -0.008613   
+    ghat(18) = +0.008417   
+    ghat(19) = +0.000000   <-- ZERO (k==0 mod 19)
+    ghat(20) = -0.007575   
+    ghat(38) = -0.000000   <-- ZERO (k==0 mod 19)
+    ghat(38) = -0.000000   <-- ZERO (k==0 mod 19)
+
+==========================================================================
+(C) cover-debt localization: |S(t)| at resonances t=p/q (small q) -- where the debt lives
+==========================================================================
+    (a high |S| at t=p/q means many combs coincide there = a resonance carrying overlap)
+       {1..12}: top overlap resonances (|S|, q, p): [(6, 2, 1), (4, 3, 2), (4, 3, 1), (3, 39, 38), (3, 39, 29), (3, 39, 20), (3, 39, 19), (3, 39, 10)]
+                max overlap |S|=6 at q=2
+   band-filled: top overlap resonances (|S|, q, p): [(5, 3, 2), (5, 3, 1), (4, 13, 8), (4, 13, 5), (4, 5, 4), (4, 5, 3), (4, 5, 2), (4, 5, 1)]
+                max overlap |S|=5 at q=3
+
+==========================================================================
+(D) resonance-debt ratio |DEBT|/CREDIT (opus-S531) at radius lam, Fourier truncation
+==========================================================================
+       {1..12} at lam= 1/13: credit=0.13471 pairwise-debt=+0.11395 |debt|/credit=0.8459
+       {1..12} at lam= 3/38: credit=0.12717 pairwise-debt=+0.10781 |debt|/credit=0.8477
+       {1..12} at lam= 2/25: credit=0.12341 pairwise-debt=+0.10488 |debt|/credit=0.8498
+
+   band-filled at lam= 1/13: credit=0.13471 pairwise-debt=+0.04514 |debt|/credit=0.3351
+   band-filled at lam= 3/38: credit=0.12717 pairwise-debt=+0.04170 |debt|/credit=0.3279
+   band-filled at lam= 2/25: credit=0.12341 pairwise-debt=+0.03997 |debt|/credit=0.3239
+
+    {1..11,24} at lam= 1/13: credit=0.13471 pairwise-debt=+0.09282 |debt|/credit=0.6890
+    {1..11,24} at lam= 3/38: credit=0.12717 pairwise-debt=+0.08761 |debt|/credit=0.6889
+    {1..11,24} at lam= 2/25: credit=0.12341 pairwise-debt=+0.08521 |debt|/credit=0.6905
+
+DONE.
