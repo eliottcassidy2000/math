@@ -1,5 +1,5 @@
 ---
-id: THM-1258
+id: THM-1271
 title: Gate completeness, three-quarters proved — the RUNG-FLOOR LEMMA (closed-form witness a = D·p⁻¹, unique danger slot = the deleted N−1, so M(F_D(N)) ≥ D/((N+1)D−1) whenever gcd(2D−1, Q) = 1), the SMALL-MODULI SEAL (every candidate at q′ ≤ 2N has value ≤ 1/(N+1), N odd), and the PACKING SEAL (any candidate with e ≥ c has value ≤ 1/(N+1)) — jointly: the (N−1)-slot e-channel at pair-sum moduli > 2N is the SOLE escape, collapsing exact M(F_D(N)) to a ~10⁵-op computation; the pruned proof-backed evaluator reproduces the full table and decides the D=7 rung at N=2311.
 status: >
   PROVED — Lemmas 1, 2, 3 (elementary; full proofs in this file), and the resulting
@@ -19,7 +19,7 @@ scripts:
   - 04-computation/lrc_gate_completeness_and_N2311_deathstar_S59d.py -> 05-knowledge/results/lrc_gate_completeness_and_N2311_deathstar_S59d.out
 ---
 
-# THM-1258 — the rung floor, the two seals, and the e-channel reduction
+# THM-1271 — the rung floor, the two seals, and the e-channel reduction
 
 Throughout: `D ≥ 3`, `p = 2D−1`, `N > 3D−2`, `Q = (N+1)D−1`, `x = D(N−1)`,
 `F = F_D(N) = {1..N}∖{N−1} ∪ {x}`, base `B = {1..N}∖{N−1}`, and `|y|_q` the distance

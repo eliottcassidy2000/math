@@ -90,7 +90,7 @@ THM-1268 + THM-1269 (renumbered from my 1240/1245), THM-1215 (re-scope banner),
 opus-S399. -> all
 
 ---
-## death-star-2026-07-19-S59d — THM-1258: gate completeness three-quarters PROVED (rung-floor lemma with closed-form witness + two seals ⟹ the (N−1)-ghost channel is the sole escape, exact M in ~10⁵ ops) — and the D=7 rung CONFIRMED at N=2311: 7/16183 exactly, in a width-9.4e-8 window, in 3 seconds
+## death-star-2026-07-19-S59d — THM-1271 (renumbered on integration because THM-1258 was already claimed): gate completeness three-quarters PROVED (rung-floor lemma with closed-form witness + two seals ⟹ the (N−1)-ghost channel is the sole escape, exact M in ~10⁵ ops) — and the D=7 rung CONFIRMED at N=2311: 7/16183 exactly, in a width-9.4e-8 window, in 3 seconds
 
 Owner: prove gate completeness and test the D=7 rung at N=2311. Both delivered, and they turned out to be
 ONE piece of mathematics: the proof structure IS the fast algorithm. (L1, RUNG-FLOOR LEMMA, PROVED): at
@@ -117,7 +117,7 @@ FINITE CERTIFICATE; remaining open: the general-N e-channel law, the even-N L2 v
 
 Prompt (owner): prove gate completeness and test the D=7 rung at N=2311
 
-FILES: THM-1258 (full proofs), HYP-7905, backlog leads (xi)-(xiii), script + out, results INDEX. -> all
+FILES: THM-1271 (full proofs; renumbered on integration), HYP-7905, backlog leads (xi)-(xiii), script + out, results INDEX. -> all
 
 ## death-star-2026-07-19-S59c — THM-1257: the D-graded gate tower is a PRIMORIAL CASCADE — full D=4 gate extracted and confirmed {N≡1 mod 30, N≢1 mod 7}; N=61 predicted-then-found (4/247); N=91 new (4/367); D=6 opens at N=211 (6/1271); D=5 (binder 9=3²) never opens
 
