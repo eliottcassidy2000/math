@@ -1,0 +1,25 @@
+(1) THE SWAP BOUND  r <= 2*lam / ell_max(E_i)   [2*lam = 1/7]
+     i   ell_max(E_i)      bound on r    admissible r (exhaustive to bound)
+      1   0.03571429    r <=    4.000   [1]
+      2   0.01510989    r <=    9.455   [2]
+      3   0.01190476    r <=   12.000   [3]
+      4   0.00730519    r <=   19.556   [4]
+      5   0.00714286    r <=   20.000   [5]
+      6   0.00270563    r <=   52.800   [6]
+      7   0.01442308    r <=    9.905   [7]
+      8   0.01360544    r <=   10.500   [8]
+      9   0.01098901    r <=   13.000   [9]
+     10   0.00627943    r <=   22.750   [10]
+     11   0.00892857    r <=   16.000   [11]
+     12   0.00408163    r <=   35.000   [12, 24]
+     13   0.00595238    r <=   24.000   [13]
+
+(2) THE BOUND IS A PROOF, NOT A SEARCH
+     largest bound over all i: r <= 52
+     S377 searched r <= 120, which EXCEEDS every bound -- so that search was
+     exhaustive, and 'only 12 -> 24' is now a THEOREM for single substitutions.
+     non-trivial admissible swaps: [(12, 24)]
+
+(3) CROSS-CHECK each admissible swap really is tight
+     i=12 -> r=24:  uncovered = 0  TIGHT
+     (identities omitted unless non-tight; none were)

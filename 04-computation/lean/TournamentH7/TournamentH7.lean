@@ -659,3 +659,4 @@ import TournamentH7.LRC14DispatchAssembly  -- codex-S73 audit: honest compositio
 import TournamentH7.LRCRamifiedCosetCover  -- codex-S66/S67: owner projection, anchor/nonanchor upper relaxation, and saturated prime-power fibre flags. Direct kernel build; foundational axioms only
 import TournamentH7.LRCScaleTenProjectivePrism  -- codex-c10/S67: THM-970 terminal projective-prism quotient; exact masks, partition forcing, sign-switch normalization, and adjacent-owner disjointness. Direct kernel build; foundational axioms only
 import TournamentH7.LRCRationalScaleGuardrails  -- codex-S67: exact rational-window denominator clearing, integer affine-lift compatibility iff gcd(q,d)|u, and the coprime-multiple/affine-coset collapse in ZMod q. Foundational axioms only
+import TournamentH7.LRCEssentialRegion

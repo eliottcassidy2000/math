@@ -24,6 +24,45 @@ FILES: THM-1132, HYP-7605, 4 scripts+outs (r6_atlas_independent_verify, r6_sharp
 Prompt (owner): work the triple-overlap correction and close the gap
 
 FILES: THM-1122, HYP-7540, moment_lp / lp3_r6_allcores scripts + .out. -> all (mac-mini: r=6 is now a short job -- 70 cores instead of 792, with the MST prune on top, projected well under an hour; the LP3 core filter is in lp3_r6_allcores. Try S4 FIRST though, it is one extra moment and could remove the run entirely. klein/opus: the surprise worth chewing on is that the PAIRWISE-only moment LP is WORSE than the spanning tree -- moments alone discard combinatorial structure, and the two bounds are not nested, so the right object may be a hybrid rather than either.)
+## opus-2026-07-17-S378 -- THM-1125 THE ESSENTIAL-REGION CRITERION PROVED AND FORMALISED (8 theorems, kernel-pure, 0 sorries) + THE SWAP BOUND r <= 2lam/ell_max(E_i), bounds 4..52 over {1,...,13}, which makes the S377 search EXHAUSTIVE and upgrades '12->24 is the only single substitution' from a search result to a THEOREM (HYP-7610)
+
+Owner: prove the essential-region criterion, then extend. Both done.
+THE STATEMENT: with E_i = I minus the union of the OTHER speeds' danger sets (the
+essential region of speed i), replacing i by r leaves uncovered EXACTLY E_i \ D_r.
+So the swapped family covers I iff E_i is contained in D_r, and is tight iff
+mu(E_i \ D_r) = 0.
+THE PROOF is the set identity I \ (A u B) = (I \ A) \ B -- Set.diff_diff, one rewrite.
+The criterion is DE MORGAN and I want to be plain that there is no depth in it. Its
+value is REUSE -- E_i is computed once per speed then tested against every candidate r,
+which is what made the S377 sweep cheap -- and that it is an IFF AT THE LEVEL OF SETS,
+with both directions formalised, so a failed containment PROVES non-tightness rather
+than being inconclusive.
+THE EXTENSION, which is the more valuable half: the separation lemma has a quantitative
+consequence I had not used. Consecutive arcs of one modulus are strictly apart with gap
+EXACTLY (1-2*lam)/w, so a closed interval contained in badArcs r must lie inside a
+SINGLE arc and therefore has length at most 2*lam/r. Applied to the longest component of
+E_i that gives THE SWAP BOUND  r <= 2*lam / ell_max(E_i)  -- an explicit finite bound on
+admissible replacements, computable once per speed.
+Over {1,...,13} the bounds are 4, 9, 12, 19, 20, 52, 9, 10, 13, 22, 16, 35, 24 -- the
+largest is 52. S377 searched r <= 120, which EXCEEDS every bound. So that search was
+EXHAUSTIVE, and '12 -> 24 is the only non-trivial single substitution preserving
+tightness on {1,...,13}' stops being a search result and becomes a theorem.
+SCOPE, stated carefully: this upgrades the SINGLE-substitution claim only. THM-1120's
+two-speed and hill-climb searches remain searches, so 'exactly two tight families
+overall' is still unproved and I am not claiming it.
+LEAN: LRCEssentialRegion.lean, promoted into the build tree with a root import.
+uncovered_swap_eq, tight_swap_iff, swap_covers_of_subset, subset_of_swap_covers,
+badArcs_consecutive_separated, badArcs_gap_length, endpoint_not_mem_badArcs, and
+Icc_length_le_of_subset_badArcs (the swap bound). Eight theorems, zero sorries, all
+depending only on [propext, Classical.choice, Quot.sound]. Build verified genuinely by
+building the FragmentationLemma dependency FIRST -- the S346 lesson that a bare 'exit 0'
+can be a missing-olean failure. Two Mathlib frictions worth passing on: `le_or_lt` is
+gone (use by_cases plus omega), and linarith cannot relate `2*lam/r` to `lam/r` as atoms
+until you rewrite one into the other.
+CROSS-CHECK: criterion vs direct computation of uncovered measure over all 623 swaps
+gives 0 mismatches.
+FILES: THM-1125, THM-1120 amended, Lean module + root import, 2 scripts + outs,
+HYP-7610. opus; S378.
 
 ---
 
