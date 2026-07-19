@@ -1541,3 +1541,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `seven_synthesis_opus_S389.out` | [STORED; PARTIAL INTERPRETATION WITHDRAWN] | THM-1200 two-sevens/parity computation survives; its tent/independence interpretation depends on withdrawn THM-1195. | opus-S389; correction codex-S78 |
 | `lrc14_tent_cell_direction_audit_codex_S78.out` | [STORED; EXACT ORDINARY/OPTIMIZED REPLAY] | THM-1201/MISTAKE-174: on the tight-family zero cell `[1/24,1/13]`, area `185/100464` exceeds `HL/2=11/8736` by `3/5152`; proves the correct concavity direction and withdraws THM-1195. | codex-S78 |
 | `active_pair_ratio_opus_S390.out` | [STORED] | THM-1205: g = D/(v_i+v_j) verified 18/18; ratio 4.75-6.50 random, EXACTLY 14 on both tight families. | (self) |
+| `dequals1_opus_S391.out` | [STORED] | THM-1210: D=1 == classical sieve; tight families at (1,13) D=1 s=14; hard stratum 0/8 with D=1, all D>=6. | (self) |

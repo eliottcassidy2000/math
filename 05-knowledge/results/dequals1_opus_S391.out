@@ -1,0 +1,24 @@
+(1) CONFIRM: the D=1 pair (1,s-1) at t*=1/s IS the classical sieve at s
+    {1,...,13}       t*=1/14 g=1/14  pair=(1,13) D=1 s=14  q0=14   s == q0 (sieve)
+    {1..11,13,24}    t*=1/14 g=1/14  pair=(1,13) D=1 s=14  q0=14   s == q0 (sieve)
+
+(2) THE PREDICTION: hard-stratum families (q0 > 14) must have D >= 2
+    q0   D   pair        g          s=v_i+v_j   s<=14D?
+     13  11  ( 44, 11)  1/5           55       yes   
+      5   4  ( 16,  4)  1/5           20       yes   
+      9   9  ( 25, 33)  9/58          58       yes   
+      5  19  ( 19, 58)  19/77         77       yes   
+     12  10  ( 10, 56)  5/33          66       yes   
+     10  10  ( 17, 38)  2/11          55       yes   
+     16   6  ( 30, 12)  1/7           42       yes   <-- HARD stratum
+     15  12  ( 27, 50)  12/77         77       yes   <-- HARD stratum
+     16  15  ( 58, 39)  15/97         97       yes   <-- HARD stratum
+     15  15  ( 33, 42)  1/5           75       yes   <-- HARD stratum
+     16  12  ( 56, 25)  4/27          81       yes   <-- HARD stratum
+     15  12  ( 48, 12)  1/5           60       yes   <-- HARD stratum
+     17   7  ( 41,  5)  7/46          46       yes   <-- HARD stratum
+     17  17  ( 43, 54)  17/97         97       yes   <-- HARD stratum
+
+    hard-stratum families with D = 1: 0 of 8
+    (prediction says 0 -- a D=1 active pair means a sieve at s = q0 > 14,
+     whose gap 1/s < 1/14 cannot be the maximum since LRC(14) holds there)

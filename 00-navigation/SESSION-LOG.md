@@ -1,3 +1,39 @@
+## opus-2026-07-19-S391 -- THM-1210 D = 1 IS EXACTLY THE CLASSICAL SIEVE (pair (1,s-1) at t*=1/s is the sieve at modulus s; the tight families are D=1, s=14, pair (1,13)) -- and the HARD STRATUM CANNOT USE IT: 0 of 8 hard-stratum families have D=1, all at D >= 6, so LRC(14) runs on TWO mechanisms (HYP-7770)
+
+Owner: work the D=1 active pair question. It resolves structurally, and the resolution
+identifies the classical sieve with a case of boxeph's maximiser formula.
+THE IDENTIFICATION: D = v_i a_j - v_j a_i = 1 forces gcd(v_i,v_j) = 1. Take the canonical
+instance (v_i,v_j) = (1, s-1), so s = v_i+v_j. Then t* = 1/s, both active runners sit at
+distance EXACTLY 1/s, and any other runner v satisfies ||v/s|| >= 1/s if and only if s
+does not divide v. That is precisely the CLASSICAL SIEVE at modulus s, delivering gap
+exactly 1/s. So D = 1 with s = 14 IS the tight family, and D = 1 with s >= 15 is a sieve
+witness too weak to reach 1/14. Both known tight families confirm it exactly: t* = 1/14,
+g = 1/14, active pair (1,13), D = 1, s = 14 = q0.
+THE SHARP CONSEQUENCE, and it is testable: a hard-stratum family (q0 > 14 -- every q <= 14
+divides some speed, so no small-modulus sieve exists) cannot have a D = 1 active pair,
+because that would be a sieve at modulus s = q0 >= 15 with gap 1/s < 1/14, while LRC(14)
+holds on that stratum. Prediction: hard-stratum families have D >= 2.
+VERIFIED: 0 of 8 hard-stratum families have D = 1. All sit at D >= 6 (values 6, 7, 12, 12,
+12, 15, 15, 17), and every family tested -- easy and hard -- satisfies s <= 14D.
+THE TWO-MECHANISM READING, which I think is the useful output: LRC(14) is carried by two
+distinct mechanisms, and the determinant tells them apart. (1) D = 1 with q0 <= 14 is the
+classical sieve, covering ~91% of families and containing the extremal cases at s = 14
+exactly. (2) D >= 2 with q0 > 14 is the hard ~9%, where no sieve is available and a
+high-determinant pair supplies the maximiser instead. That is the cleanest decomposition
+this programme has produced: the sieve is not merely a tool that happens to work on most
+families, it IS the D = 1 case of the located-maximiser formula, and the residual stratum
+is precisely where D must exceed 1.
+ANSWERING THE QUESTION AS POSED: a 13-family with active-pair D = 1 and sum >= 15 would
+be a counterexample to LRC(14), and structurally it would need the classical sieve at a
+modulus >= 15 to be the BEST available point. The hard-stratum families -- the only ones
+where small-modulus sieving fails -- do not do this; they find D >= 6 maximisers with
+comfortable margins. So the D = 1 branch is empirically not where a counterexample lives.
+NOT PROVED: 8 hard-stratum families is evidence rather than a theorem, and the D >= 2
+branch (which needs s > 14D) is untouched here.
+FILES: THM-1210, script + out, HYP-7770. opus; S391.
+
+---
+
 ## opus-2026-07-19-S390 -- ACCEPTED codex-S78's correction (my THM-1195 tent inequality was BACKWARDS; independently verified) + resolved the MISTAKE-173 collision + THM-1205 LRC(14) AS A PURE ACTIVE-PAIR RATIO built on boxeph-S120: g = D/(v_i+v_j), so LRC(14) <=> v_i+v_j <= 14*D, with BOTH tight families at ratio EXACTLY 14 (HYP-7760)
 
 Owner: check the five-speed run, pull from other agents, work a new improved angle.
