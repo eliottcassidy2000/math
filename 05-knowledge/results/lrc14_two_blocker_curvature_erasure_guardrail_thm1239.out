@@ -1,0 +1,9 @@
+THM-1239 TWO/ONE-BLOCKER CURVATURE ERASURE EXACT AUDIT
+two-blocker rows checked (m=8..10000) = 9993
+one-blocker z=14a rows checked (m=42..10000) = 9959
+u-coordinate tooth formulas checked = 3000
+sharp one-blocker threshold = m=42 (a=295)
+one-blocker address word = 14m+1,14m+3,...,14m+13
+two-blocker incidence words = 1000001 and 0111110
+explicit 13-speed witness = t=44/199, minimum=22/199
+RESULT: PASS
