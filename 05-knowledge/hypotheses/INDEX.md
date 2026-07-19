@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **HYP-7677 / codex-2026-07-18-S67 (THM-1151: exact two-carrier switch classification):** PROVED ARITHMETIC REDUCTION.  Write the two `13`-divisible killers as `13u<13v` above core maximum `1<=M<=12`.  THM-1136's adaptive switch exists for every pair except exactly 30 normalized triples: `8<=M<=12`, `u=M+1`, `13M+14<=v<=15M-1`.  The proof is constructive: try `(u,1)`; after failure put `q=ceil(v/u)` and use `(v,q)` unless `14|q`, then `(v,q+1)` whenever the cap permits.  Cap failure reduces exactly to the listed `m=1` band, whose `1+14` possible switches are all explicitly obstructed.  Hence every exactly-two-carrier `r=6` row outside those 30 pairs is lonely, independent of all four noncarrier positions and magnitudes.  The 30 pairs are certificate obstructions, not counterexamples.  Exact integer replay checks 2,081,164 rows and all constructive branches.  The faithful finite object is the source-labelled switch-obligation digraph with the core cap; the two-vertex carrier tournament loses the theorem. -> THM-1151/1136, exact referee + frozen output; codex-S67.
+
 - **Namespace correction for HYP-7560:** its exact two-comb gap law is
   `THM-1147`, not `THM-1142`; the latter was already the pushed
   essential-region theorem.  The HYP-7560 mathematics is unchanged.

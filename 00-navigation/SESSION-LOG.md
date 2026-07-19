@@ -71352,3 +71352,31 @@ tournament transport fails even at its vertex sizes: Singer size 14 is not a
 skew tournament half-set size 91, and a regular tournament on 14 vertices is
 impossible.
 ## codex-2026-07-18-S67 continuation -- THM-1137 closes two genuine multiplicatively spread r=6 cones and corrects the incoming gap recursion.  The fresh S128c68 scout asserted that every interval of length `1/k` contains a full `6/(7k)` safe gap, hence proposed adjacent ratio `7/6`.  The exact endpoint counterexample `[1/2,3/2]` splits the unit safe arc into two `3/7` pieces; its own measured `7k4L=4.949<6` was already a warning.  The full repair is the exact normalized transfer `Phi(x)=min(6/7,(x-1/7)/2)` for `x>=1`.  Starting from the universal all-core interval `[1/14,13/168]`, its coarse specialization closes `k1>=168` with first-five adjacent ratios at least `7/3`.  Retaining the full normalized width gives the exact ledger `6/7,26/35,111/175,1859/3500,212247/490000` and closes the much larger `k1>=312`, ratio-at-least-`19/10` cone.  No Covering assumption or computation is used.  Hence the unbounded residual now has a concrete clustered-edge/bottom-strip normal form, transverse to THM-1136's first-13-carrier dispatch and THM-1135's harmonic box.  The faithful vertices are interval proof states with metric edge labels; the runner tournament loses the proof inequalities.  Files: THM-1137, HYP-7607, MISTAKE-169.
+
+---
+
+## codex-2026-07-18-S67 continuation — exactly two thirteen-carriers leave thirty switches
+
+THM-1136's formerly open multiple-carrier condition is now completely
+classified when there are exactly two carriers.  Writing them `13u<13v`
+above core maximum `M`, the source/switch certificate exists except for
+
+```text
+8<=M<=12, u=M+1, 13M+14<=v<=15M-1.
+```
+
+There are exactly thirty such triples.  The proof tries the least carrier at
+switch one; if its ratio lies in a bad `14m` band, changing source and using
+`ceil(v/u)` or `ceil(v/u)+1` works until the core cap forces precisely the
+displayed `m=1` band.  In that band the small source has only switch one and
+the large source only switches one through fourteen; all fifteen obligations
+are explicitly obstructed.  A dependency-free integer referee checks the
+classification and constructive certificate on 2,081,164 rows, with
+byte-identical normal/optimized output.
+
+The faithful object is not the trivial two-carrier tournament.  It is the
+source-labelled switch-obstruction incidence graph together with the
+source-dependent core cap.  The four noncarriers disappear entirely because
+each forbids at most two of twelve observer multipliers.  The thirty pairs are
+finite failures of this chart, not LRC counterexamples, and are the next
+target for a second observer or exact component bank.

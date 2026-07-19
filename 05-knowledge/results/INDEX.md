@@ -1,5 +1,7 @@
 # Script Results Index
 
+- `lrc14_r6_two_carrier_switch_referee_codex_S67.py` -> matching `.out` [STORED; THM-1151 EXACT ARITHMETIC CLASSIFICATION].  For normalized carriers `M<u<v`, integer-remainder search and the independent constructive branch certificate agree on 2,081,164 rows: THM-1136's carrier-safe switch fails exactly on 30 triples `8<=M<=12`, `u=M+1`, `13M+14<=v<=15M-1`.  Ordinary/optimized outputs byte-match.  Source/output SHA-256 are `367e2540...cbf6a9` / `b1feaa6a...ac6d3`.  The faithful carrier is a source-labelled switch-obstruction digraph with its cap, not the information-free two-vertex order tournament. codex-S67.
+
 Maps every script in `04-computation/` to its stored output.
 Results are stored in `05-knowledge/results/` with matching filenames (`.out` extension).
 

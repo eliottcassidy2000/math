@@ -1,0 +1,27 @@
+THM-1151 exact two-carrier switch classification
+exhaustive replay box: 1<=M<=12, M<u<=200, u<v<=1000
+rows checked: 2081164
+constructive branch histogram:
+  large carrier, ceil(v/u): 40303
+  large carrier, ceil(v/u)+1: 47266
+  least carrier, c=1: 1993565
+switch failures: 30
+failure formula: 8<=M<=12, u=M+1, 13M+14<=v<=15M-1
+  M=8: u=9, v=118..119 (2 rows)
+  M=9: u=10, v=131..134 (4 rows)
+  M=10: u=11, v=144..149 (6 rows)
+  M=11: u=12, v=157..164 (8 rows)
+  M=12: u=13, v=170..179 (10 rows)
+symbolic branch ledger:
+  c=1 failure => v/u in (14m-1,14m+1), m>=1
+  ceil(v/u) not 0 mod 14 => use source v and c=ceil(v/u)
+  ceil(v/u)=0 mod 14 and cap allows => use c=ceil(v/u)+1
+  cap can fail only at m=1, M>=8, u=M+1, v<15M
+  on that band: source-u cap=1; source-v cap=14; every switch is obstructed
+Tournament Analysis:
+  order tournament on two carrier vertices: scores=(0,1)
+  directed cycles=0; SCC sizes=(1,1); Hamiltonian paths=1
+  challenged vertices: runners, carriers, ratios, switches, proof obligations
+  faithful object: source-labelled switch-obstruction digraph with the core cap
+  naked two-vertex tournament destroys all band and cap information
+VERDICT: exact replay and constructive certificate agree; precisely 30 pairs remain
