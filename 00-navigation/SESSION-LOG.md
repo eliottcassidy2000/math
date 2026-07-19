@@ -90,6 +90,35 @@ THM-1268 + THM-1269 (renumbered from my 1240/1245), THM-1215 (re-scope banner),
 opus-S399. -> all
 
 ---
+## death-star-2026-07-19-S59d — THM-1258: gate completeness three-quarters PROVED (rung-floor lemma with closed-form witness + two seals ⟹ the (N−1)-ghost channel is the sole escape, exact M in ~10⁵ ops) — and the D=7 rung CONFIRMED at N=2311: 7/16183 exactly, in a width-9.4e-8 window, in 3 seconds
+
+Owner: prove gate completeness and test the D=7 rung at N=2311. Both delivered, and they turned out to be
+ONE piece of mathematics: the proof structure IS the fast algorithm. (L1, RUNG-FLOOR LEMMA, PROVED): at
+a ≡ D·(2D−1)^{-1} mod Q, every element of F_D(N) has distance ≥ D — since (N+1)D ≡ 1 mod Q, D^{-1} ≡ N+1
+and p(N+1) ≡ 1−N, so any distance-<D element satisfies v ≡ −r(N−1), whose only in-range representative is
+v = N−1 (r = −1) — THE DELETED ELEMENT. M(F_D(N)) ≥ D/Q whenever gcd(2D−1, Q)=1: the canonical defect
+position is arithmetically forced, and the floor exists at EVERY such N (e.g. M({1..11,13,48}) ≥ 4/55 at
+N=13). Verified 361 (D,N) pairs, 0 failures — the closed form reproduces every table witness (a=55, 70-
+mirror, 53-class, 115...). (L2, SMALL-MODULI SEAL, PROVED, N odd): every candidate at q' ≤ 2N has value
+≤ 1/(N+1) (Dirichlet convergent ≤ ⌈q'/2⌉ ≤ N; the N−1 sub-cases die via x ≡ 0 mod N−1, the reflected
+element q'−(N−1) ∈ base, and parity — the q'=2N corner is even-only, which is exactly WHY even N fails
+the gate). Exhaustive check at N=31/61/91: 0 violations. (L3, PACKING SEAL, PROVED): e := |(N−1)a| ≥ c ⟹
+the N+1 points {ua} are pairwise ≥ c (every index difference ≤ N is in base or = N−1) ⟹ (N+1)c ≤ q' ⟹
+value ≤ 1/(N+1). REDUCTION: every window-reaching candidate travels the (N−1)-GHOST CHANNEL — e < c,
+e ≤ q'/N, pair-sum moduli only (2x sealed outright: gcd(N−1,2x) = N−1 > S/N; the rung reappears as the
+e=1 solution at S=Q) ⟹ exact M(F_D(N)) = max(D/Q, finite e-channel max) in ~10⁵ ops instead of ~10¹⁰.
+GATE: the pruned proof-backed evaluator reproduces the FULL evaluator on all 142 odd-N table rows
+(D=3..6, members AND non-members): 0 mismatches; the four known members re-derived proof-backed in 0.0s.
+THE TEST: F_7(2311) = {1..2309, 2311, 16170}: M = 7/16183 EXACTLY at the L1 witness a = 12449 — rung
+ATTAINED, IN-WINDOW (width 9.36e-8), 3 seconds. THIRD consecutive out-of-sample tower confirmation;
+confirmed rungs now ride primorials 6, 30, 210, 2310 (D = 3, 4, 6, 7). Per-N gate completeness is now a
+FINITE CERTIFICATE; remaining open: the general-N e-channel law, the even-N L2 variant, D=9 at N=30031
+(machinery scales linearly), and Lean-formalizing L1-L3 (elementary, kernel-friendly).
+
+Prompt (owner): prove gate completeness and test the D=7 rung at N=2311
+
+FILES: THM-1258 (full proofs), HYP-7905, backlog leads (xi)-(xiii), script + out, results INDEX. -> all
+
 ## death-star-2026-07-19-S59c — THM-1257: the D-graded gate tower is a PRIMORIAL CASCADE — full D=4 gate extracted and confirmed {N≡1 mod 30, N≢1 mod 7}; N=61 predicted-then-found (4/247); N=91 new (4/367); D=6 opens at N=211 (6/1271); D=5 (binder 9=3²) never opens
 
 Owner: extract the full D=4 gate and test N=61. BOTH DONE, with two out-of-sample confirmations and a new law.

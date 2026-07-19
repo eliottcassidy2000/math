@@ -1,0 +1,25 @@
+== HYP-7905: gate-completeness lemmas + N=2311 (death-star-S59d) ==
+
+L1 closed-form witness a = D*p^{-1} mod Q (want min distance exactly D):
+   L1 verified on 361 (D,N) pairs, failures: 0
+
+L2 exhaustive (every q'<=2N, every a: some element at distance <=1):
+   N=31 D=4: violations = 0 (want 0)
+   N=61 D=4: violations = 0 (want 0)
+   N=91 D=4: violations = 0 (want 0)
+
+GATE: M_pruned must reproduce the full evaluator on the S59c rows:
+   gate: 142 rows compared, mismatches: 0 (14s)
+
+Per-member exact values via the pruned (proof-backed) evaluator:
+   OK F_4(31): M = 4/127 (q=127) [0.0s] (want 4/127)
+   OK F_4(61): M = 4/247 (q=247) [0.0s] (want 4/247)
+   OK F_4(91): M = 4/367 (q=367) [0.0s] (want 4/367)
+   OK F_6(211): M = 6/1271 (q=1271) [0.0s] (want 6/1271)
+
+== D=7 rung at N=2311: F_7(2311) = {1..2309, 2311, 16170} ==
+   p=13, Q=16183 (gcd(13,Q)=1: True); window (1/2312, 2/4623), width 9.36e-08
+   L1 witness: a = 12449, min distance = 7 (want 7) -> M >= 7/16183
+   EXACT (pruned, proof-backed): M(F_7(2311)) = 7/16183 at q=16183, a=12449 [3s]
+   rung 7/16183: ATTAINED; in-window: True
+   VERDICT: the D=7 gate at N=2311 is OPEN -- third out-of-sample tower confirmation
