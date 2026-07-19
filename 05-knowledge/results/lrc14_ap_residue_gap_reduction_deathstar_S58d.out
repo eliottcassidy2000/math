@@ -1,0 +1,16 @@
+=== residue near-AP reduction (deep wells) ===
+deepwell m=1 V_max=182: M=14/183(=0.07650<1/13?True) val=14 q=183 a=14 | #gaps<val=1 | span=155=11val+1? g0=q-13val=1
+   sorted gaps: [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 1]
+deepwell m=2 V_max=364: M=28/365(=0.07671<1/13?True) val=28 q=365 a=28 | #gaps<val=1 | span=309=11val+1? g0=q-13val=1
+   sorted gaps: [28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 1]
+deepwell m=3 V_max=546: M=42/547(=0.07678<1/13?True) val=42 q=547 a=42 | #gaps<val=1 | span=463=11val+1? g0=q-13val=1
+   sorted gaps: [42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 1]
+=== val=1 fold-back obstruction + val>=2 hunt ===
+{1..11,13,24}                  M=1/14(0.07143) val=1 q=14 a=1 cover14?False
+   residues: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+   gaps: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 2]  #gaps<val= 1
+deepwell {1..12,182}           M=14/183(0.07650) val=14 q=183 a=14 cover14?True
+   residues: [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+   gaps: [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 1]  #gaps<val= 1
+--- hunt val>=2 non-cover14 non-AP-core M<1/13 (small) ---
+  none found (val>=2, non-cover14, one-hole core, w<120)

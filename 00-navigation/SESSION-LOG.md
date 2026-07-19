@@ -62,6 +62,20 @@ proved radius 2 at n=13; multi-element perturbations at other n are untested by 
 FILES: THM-1220, script + out, HYP-7790. opus; S393.
 
 ---
+## death-star-2026-07-19-S58d — AP-extraction crux reduced to a local residue-gap kernel (3/4/1/12 braid)
+
+Worked the n=12 AP-uniqueness (THM-1017 open supplier / HYP-7310) via the owner's 3/4/1/12 pointer.
+Result: a rigorous SHARPENING of boxeph-S87's difference-closure. In residue coordinates the crux
+reduces (elementary gap-excess pinning, PROVED) to the single LOCAL kernel "the 12 core residues
+have all 11 internal gaps >= val" (no second aligned non-speed difference); difference-closure already
+supplies the one guaranteed small gap (the far element). Clarifying witness {1..11,13,24}: M=1/14<1/13
+with NON-AP core, but NOT Cover14 and degenerate val=1 (far element folds back) -- proving M<1/13 alone
+does NOT force an AP core, and LOCATING covering as the hypothesis that forces val>=2 off the fold-back
+sheet. Braid pinned: 3=E3/Schur order (THM-730), 4=Freiman 3k-4 carry, 1/12=LRC(12) floor (inverse side)
+vs Bernoulli disc_v (forward side). Also this session (S58c): Kakeya box-exit proves the maximiser
+single-run bound run<=1/(7D); total<=2/21 reduced to #runs<=2D/3 (verified d<=30). HYP-7740, HYP-7737;
+reflection + 4 scripts. Next: prove the kernel (forbid a second interior aligned gap via covering).
+Handoff -> boxeph, kind-pasteur.
 
 ## boxeph-2026-07-19-S122 -- THE COVERING-RESTRICTED RIGIDITY MARGIN + the determinant decomposition of n=12 uniqueness (owner: work a new creative angle on the LRC(14) open math). Complements opus THM-1210: opus applied the determinant D to LRC(14) EXISTENCE (13 speeds); I apply it to the 12-core UNIQUENESS (Tao n=12). S121's cascade shows tight => covering, so the sharp probe is the COVERING-restricted spectrum. Enumerated primitive covering 12-subsets (contain a multiple of each q=2..12) of {1..18} (3024) via the Pinch maximizer, recording s=v_i+v_j and D=|v_i a_j - v_j a_i|=M*s. FINDINGS: (1) {1..12} is the UNIQUE covering set at 1/13 (pair (1,12), s=13, D=1) -- and over {1..20}, exactly 1 of 17469 primitive covering sets hits 1/13, namely {1..12}. (2) tightest covering COMPETITOR = 2/23 = {1..13}\{6} (pair (10,13), s=23, D=2), so the COVERING-RIGIDITY GAP = 2/23 - 1/13 = 3/299 ~ 0.0100 -- larger and cleaner than the raw spectrum gap 1/156 (whose runner-up {1..11,13} is NOT covering). (3) {1..12} is the UNIQUE covering 12-set with D=1; every covering competitor has D>=2. DETERMINANT DECOMPOSITION (from opus's M=D/s): M(C)=1/13 <=> the maximizing pair has s=13D. D=1 branch: s=13, the two active runners are ==+-1 mod 13 and sum to 13, forcing the pair to (1,12); {1..12} is the minimal-representative solution and empirically the only covering set here. D>=2 branches: s=13D>=26, and NONE occurs in range (every D>=2 covering set has s<13D => M=D/s>1/13). So the uniqueness residual is exactly 'no covering 12-set realizes a D>=2 maximizer at s=13D'. MECHANISM (residue-lift family {1..12} with residues lifted r->r+13, staying complete mod 13): lifting either BREAKS covering (lift 12 => M=1/12, drops to the {1..11} sieve) or OPENS a D>=2 witness at a larger pair-sum (lift 6 => 2/23 at s=23 D=2; lift 1 => 1/8 at s=16 D=2; lift {1,2,3} => 1/5 at s=20 D=4). Small elements are the low blockers and hurt most; minimality is forced from both sides (keep covering AND keep every pair-sum witness <=1/13). HONEST: M=D/s and the D-decomposition are opus THM-1210 (credited); the Pinch maximizer is HYP-2059/THM-401 (credited). The NEW content is the covering-restricted margin 3/299, {1..12} = unique D=1 covering set, the s=13D reformulation of tightness, and the uniqueness residual as 'no D>=2 at s=13D'. Global uniqueness NOT proved (enumeration to {1..20}; D>=2 branch ruled out empirically in range).
 
