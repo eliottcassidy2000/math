@@ -97,8 +97,58 @@ theorem antipodal_spread {ι : Type*} (c : ι → ℤ)
   -- but then the single-runner witness contradicts closeness at m = 0
   exact absurd (sieve19_single (c i) b h2 h17 0) (not_le.mpr (hi 0))
 
+/-- **The antipodal-covering corollary (in `ZMod 19`).**  Under the hypotheses of `antipodal_spread`,
+the residues cover EVERY antipodal unit-pair of `ℤ/19`: for every nonzero `u : ZMod 19`, some runner
+satisfies `c_i ≡ u` or `c_i ≡ -u (mod 19)`.  This is the `b ↦ b⁻¹` packaging of the per-scale
+`±1`-hit — take `b = u⁻¹` and read the `±1` residue back as `±u`. -/
+theorem antipodal_cover {ι : Type*} (c : ι → ℤ)
+    (hunit : ∀ i, ¬ ((19 : ℤ) ∣ c i))
+    (hclose : ∀ b : ℤ, ∃ i, ∀ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19)
+    (u : ZMod 19) (hu : u ≠ 0) :
+    ∃ i, (c i : ZMod 19) = u ∨ (c i : ZMod 19) = -u := by
+  haveI : Fact (Nat.Prime 19) := ⟨by norm_num⟩
+  -- lift `u⁻¹` to an integer scale `bz`
+  set bz : ℤ := ((u⁻¹).val : ℤ) with hbz
+  have hvpos : 0 < (u⁻¹).val := ZMod.val_pos.mpr (inv_ne_zero hu)
+  have hvlt : (u⁻¹).val < 19 := ZMod.val_lt _
+  have hbne : ¬ ((19 : ℤ) ∣ bz) := by
+    intro hdvd
+    have hpos : (0 : ℤ) < bz := by rw [hbz]; exact_mod_cast hvpos
+    have hle := Int.le_of_dvd hpos hdvd
+    have hlt : bz < 19 := by rw [hbz]; exact_mod_cast hvlt
+    omega
+  have hbcast : (bz : ZMod 19) = u⁻¹ := by
+    rw [hbz]; push_cast; exact ZMod.natCast_rightInverse u⁻¹
+  obtain ⟨i, hi⟩ := antipodal_spread c hunit hclose bz hbne
+  refine ⟨i, ?_⟩
+  have hinv : u⁻¹ * u = 1 := inv_mul_cancel₀ hu
+  rcases hi with h | h
+  · left
+    have hmod : (c i * bz) ≡ 1 [ZMOD (19 : ℤ)] := by
+      show (c i * bz) % 19 = (1 : ℤ) % 19; omega
+    have hz : ((c i * bz : ℤ) : ZMod 19) = ((1 : ℤ) : ZMod 19) :=
+      (ZMod.intCast_eq_intCast_iff _ _ _).mpr hmod
+    push_cast at hz
+    rw [hbcast] at hz
+    calc (c i : ZMod 19) = (c i : ZMod 19) * (u⁻¹ * u) := by rw [hinv, mul_one]
+      _ = ((c i : ZMod 19) * u⁻¹) * u := by ring
+      _ = 1 * u := by rw [hz]
+      _ = u := one_mul u
+  · right
+    have hmod : (c i * bz) ≡ (-1) [ZMOD (19 : ℤ)] := by
+      show (c i * bz) % 19 = (-1 : ℤ) % 19; omega
+    have hz : ((c i * bz : ℤ) : ZMod 19) = ((-1 : ℤ) : ZMod 19) :=
+      (ZMod.intCast_eq_intCast_iff _ _ _).mpr hmod
+    push_cast at hz
+    rw [hbcast] at hz
+    calc (c i : ZMod 19) = (c i : ZMod 19) * (u⁻¹ * u) := by rw [hinv, mul_one]
+      _ = ((c i : ZMod 19) * u⁻¹) * u := by ring
+      _ = (-1) * u := by rw [hz]
+      _ = -u := by ring
+
 end LonelyRunner
 
+#print axioms LonelyRunner.antipodal_cover
 #print axioms LonelyRunner.mod19_middle_far
 #print axioms LonelyRunner.sieve19_single
 #print axioms LonelyRunner.sieve19_middle_witness

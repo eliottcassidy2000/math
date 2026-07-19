@@ -43,6 +43,11 @@ analogue of `LRCMod13Blocking`, all `[propext, (Classical.choice,) Quot.sound]`,
 - `antipodal_spread` — the lemma: `¬(19∣c_i)` for all `i`, plus a `<2/19`-close runner at every scale `b`
   (which holds when `M<2/19`), forces, at every `b` with `19∤b`, some runner with residue `±1` mod 19 —
   the per-scale form of the antipodal covering (via `b ↦ b⁻¹` on the units).
+- `antipodal_cover` (added S128) — **the covering-all-pairs corollary in `ZMod 19`**: under the same
+  hypotheses, `∀ u : ZMod 19, u ≠ 0 → ∃ i, (c_i : ZMod 19) = u ∨ (c_i : ZMod 19) = -u`. The `b ↦ b⁻¹`
+  packaging made explicit: take `b = u⁻¹` (`Fact (Nat.Prime 19)` ⟹ `ZMod 19` a field), read the `±1`
+  residue from `antipodal_spread` back as `±u` via `ZMod.intCast_eq_intCast_iff` + `inv_mul_cancel₀`. The
+  residues literally cover every antipodal unit-pair of `ℤ/19`.
 
 ## The kernel — "forbid a second interior aligned gap" — is cross-modulus, not intra-q=38
 
