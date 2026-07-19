@@ -1,0 +1,32 @@
+core 0 [1, 2, 3, 4, 5, 6, 7]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 1 [1, 2, 3, 4, 5, 6, 8]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 2 [1, 2, 3, 4, 5, 6, 9]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 3 [1, 2, 3, 4, 5, 6, 10]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 4 [1, 2, 3, 4, 5, 6, 11]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 5 [1, 2, 3, 4, 5, 6, 12]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 6 [1, 2, 3, 4, 5, 7, 8]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 7 [1, 2, 3, 4, 5, 7, 9]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 8 [1, 2, 3, 4, 5, 7, 10]  min_widest_pass_L=1.0000000  running_min=1.0000000 (ratio 2331.000)  viol=0
+core 9 [1, 2, 3, 4, 5, 7, 11]  min_widest_pass_L=0.0013116  running_min=0.0013116 (ratio 3.057)  viol=0
+core 10 [1, 2, 3, 4, 5, 7, 12]  min_widest_pass_L=0.0016840  running_min=0.0013116 (ratio 3.057)  viol=0
+core 11 [1, 2, 3, 4, 5, 8, 9]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 12 [1, 2, 3, 4, 5, 8, 10]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 13 [1, 2, 3, 4, 5, 8, 11]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 14 [1, 2, 3, 4, 5, 8, 12]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 15 [1, 2, 3, 4, 5, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+-- chunk end: reached core 16/792 in 1288s, 16 cores this run --
+core 16 [1, 2, 3, 4, 5, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 17 [1, 2, 3, 4, 5, 9, 12]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 18 [1, 2, 3, 4, 5, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 19 [1, 2, 3, 4, 5, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 20 [1, 2, 3, 4, 5, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0013116 (ratio 3.057)  viol=0
+core 21 [1, 2, 3, 4, 6, 7, 8]  min_widest_pass_L=0.0016976  running_min=0.0013116 (ratio 3.057)  viol=0
+core 22 [1, 2, 3, 4, 6, 7, 9]  min_widest_pass_L=0.0012473  running_min=0.0012473 (ratio 2.908)  viol=0
+core 23 [1, 2, 3, 4, 6, 7, 10]  min_widest_pass_L=0.0012473  running_min=0.0012473 (ratio 2.908)  viol=0
+core 24 [1, 2, 3, 4, 6, 7, 11]  min_widest_pass_L=0.0012466  running_min=0.0012466 (ratio 2.906)  viol=0
+core 25 [1, 2, 3, 4, 6, 7, 12]  min_widest_pass_L=0.0012473  running_min=0.0012466 (ratio 2.906)  viol=0
+core 26 [1, 2, 3, 4, 6, 8, 9]  min_widest_pass_L=1.0000000  running_min=0.0012466 (ratio 2.906)  viol=0
+core 27 [1, 2, 3, 4, 6, 8, 10]  min_widest_pass_L=1.0000000  running_min=0.0012466 (ratio 2.906)  viol=0
+core 28 [1, 2, 3, 4, 6, 8, 11]  min_widest_pass_L=1.0000000  running_min=0.0012466 (ratio 2.906)  viol=0
+core 29 [1, 2, 3, 4, 6, 8, 12]  min_widest_pass_L=0.0016976  running_min=0.0012466 (ratio 2.906)  viol=0
+-- chunk end: reached core 30/792 in 1218s, 14 cores this run --
