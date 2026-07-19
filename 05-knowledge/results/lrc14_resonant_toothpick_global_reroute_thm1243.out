@@ -1,10 +1,13 @@
 THM-1243 RESONANT TOOTHPICK GLOBAL REROUTE EXACT AUDIT
+finite two-blocker head certificates checked (m=8..26) = 19
 all-parity certificate rows checked (m=27..100000) = 99974
+combined one/two-blocker 14-speed rows (m=27..100000) = 99974
 THM-1239 one-blocker ray rows included (m=42..100000) = 99959
 phase = p/q, q=14m+9, p=3m+4+(m mod 2)
 exact depth = floor((3m+5)/2)/(14m+9) > 3/28
 depth excess 28s-3q = 29 (m even), 43 (m odd)
 minimum owners = a+3,a+4 (plus boundary ties only at m=27)
+two-blocker multiplier = -41s mod q and never changes the minimum
 reroute separation = selected gap < 1/6 < 1/5 < witness
 tournament fingerprint = scores (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), triangles 0, Hamiltonian paths 1
 RESULT: PASS

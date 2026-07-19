@@ -33,15 +33,24 @@ theorem terminal_blocker_modEq
   have h14 := Int.ModEq.mul_left 14 h
   simpa [mul_assoc] using h14
 
+/-- The second THM-1239 blocker `7a+4` is the terminal multiplier `-41s`. -/
+theorem second_blocker_modEq
+    (a q p s : ℤ) (hq : q = 2 * a + 7) (hp : p = 2 * s) :
+    (7 * a + 4) * p ≡ -41 * s [ZMOD q] := by
+  rw [Int.modEq_iff_dvd]
+  refine ⟨-7 * s, ?_⟩
+  omega
+
 /-- Every distinct least-residue numerator in the even branch is at least
 the central value `s=3h+2`. -/
 theorem even_ledger_lower
     {h x : ℤ} (hh : 14 ≤ h)
     (hx : x = 6 * h + 4 ∨ x = 12 * h + 8 ∨ x = 10 * h - 3 ∨
       x = 4 * h - 7 ∨ x = 7 * h - 5 ∨ x = 13 * h - 1 ∨
-      x = 9 * h + 6 ∨ x = 3 * h + 2 ∨ x = 14 * h - 97) :
+      x = 9 * h + 6 ∨ x = 3 * h + 2 ∨ x = 14 * h - 97 ∨
+      x = 11 * h + 46) :
     3 * h + 2 ≤ x := by
-  rcases hx with h₁ | h₂ | h₃ | h₄ | h₅ | h₆ | h₇ | h₈ | h₉
+  rcases hx with h₁ | h₂ | h₃ | h₄ | h₅ | h₆ | h₇ | h₈ | h₉ | h₁₀
   all_goals subst x <;> omega
 
 /-- Every distinct least-residue numerator in the odd branch is at least
@@ -50,9 +59,10 @@ theorem odd_ledger_lower
     {h x : ℤ} (hh : 13 ≤ h)
     (hx : x = 6 * h + 8 ∨ x = 12 * h + 16 ∨ x = 10 * h - 1 ∨
       x = 4 * h - 9 ∨ x = 7 * h - 5 ∨ x = 13 * h + 3 ∨
-      x = 9 * h + 12 ∨ x = 3 * h + 4 ∨ x = 14 * h - 139) :
+      x = 9 * h + 12 ∨ x = 3 * h + 4 ∨ x = 14 * h - 139 ∨
+      x = 11 * h + 72 ∨ x = 17 * h - 49) :
     3 * h + 4 ≤ x := by
-  rcases hx with h₁ | h₂ | h₃ | h₄ | h₅ | h₆ | h₇ | h₈ | h₉
+  rcases hx with h₁ | h₂ | h₃ | h₄ | h₅ | h₆ | h₇ | h₈ | h₉ | h₁₀ | h₁₁
   all_goals subst x <;> omega
 
 /-- Even rows have exact numerator excess `29` above depth `3/28`. -/
@@ -93,6 +103,7 @@ theorem selected_gap_left_of_one_sixth {m : ℤ} (hm : 5 ≤ m) :
 
 #print axioms consecutive_packet_modEq
 #print axioms terminal_blocker_modEq
+#print axioms second_blocker_modEq
 #print axioms even_ledger_lower
 #print axioms odd_ledger_lower
 #print axioms even_depth_excess
@@ -104,4 +115,3 @@ theorem selected_gap_left_of_one_sixth {m : ℤ} (hm : 5 ≤ m) :
 
 end ResonantToothpickGlobalReroute
 end LRC14
-

@@ -1,16 +1,16 @@
 ---
 id: THM-1243
-title: THE RESONANT TOOTHPICK RAY HAS A UNIFORM GLOBAL REROUTE — the local seven-crack blocker star is punctured by an explicit parity phase of depth greater than 3/28
-status: PROVED (all m>=27 explicit thirteen-speed certificate; exact parity residue ledgers and 3/28 depth; alternate-cell separation; dependency-free exact referee; sorry-free Lean arithmetic core)
+title: THE RESONANT TOOTHPICK RAYS HAVE A UNIFORM GLOBAL REROUTE — both local blocker mechanisms are punctured by an explicit parity phase of depth greater than 3/28
+status: PROVED (combined fourteen-speed certificate for all m>=27; finite exact head closes the two-blocker ray from m=8; exact parity residue ledgers and 3/28 depth; alternate-cell separation; dependency-free exact referee; sorry-free Lean arithmetic core)
 source: codex-2026-07-19-S78 continuation
 depends_on: [THM-1239]
 related: [THM-1236, THM-1240, THM-1242, MISTAKE-185]
 script: 04-computation/lrc14_resonant_toothpick_global_reroute_thm1243.py
 output: 05-knowledge/results/lrc14_resonant_toothpick_global_reroute_thm1243.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCResonantToothpickGlobalReroute.lean
-script_sha256: d513823df4322095815f7bec360900785a9a24e3f757fc12fabc4d48b14242ba
-output_sha256: 4c371aed42014f5331c197dfb2b05619ba0570fb1a5cbc2b40e32d474e9d39e8
-formalization_sha256: dad6863f46cdaccac90303bf4591f5ad3dccc25bfe8aa421e5462631c5937521
+script_sha256: 91c29ef8ed2f1314d00f666c872d5c83e8e29c6a410efe88284158831377756b
+output_sha256: 6601c3fb68b241542f4ec604fc56b866e4c47588b3737768aa51fc9c9afd4913
+formalization_sha256: ae86f9732f1a44905389cc174db410e4a12b1d2e4a9e9bbe63d46d169ebc141d
 ---
 
 # THM-1243 — resonant toothpick ray global reroute
@@ -21,10 +21,11 @@ For `m>=27`, put
 
 ```text
 a=7m+1,
-V_m={1,2,3,4} union {a,a+1,...,a+7} union {14a}.       (1)
+B_m={1,2,3,4} union {a,a+1,...,a+7},
+V_m=B_m union {14a,7a+4}.                              (1)
 ```
 
-This is a set of thirteen distinct positive speeds.  Define
+This is a set of fourteen distinct positive speeds.  Define
 
 ```text
 q=14m+9=2a+7,
@@ -39,11 +40,12 @@ Then the exact lonely depth is
 min_(v in V_m) ||vt||=s/q>3/28>1/14.                  (3)
 ```
 
-Thus every packet in (1) satisfies LRC(14) with a uniform margin greater
-than `1/28` above the target.  In particular this dispatches the complete
-infinite `m>=42` ray used in THM-1239: although the resonant speed `14a`
-strictly covers all seven curvature cracks in one selected `a`-gap, the
-whole packet has the explicit global witness (2).
+Thus even the combined fourteen-speed packet in (1) has a uniform margin
+greater than `1/28` above the LRC(14) target.  Each thirteen-speed deletion
+does too.  In particular this dispatches both mechanisms in THM-1239: the
+`m>=42` one-blocker ray with speed `14a`, and the two-blocker ray with speeds
+`a+7,7a+4`.  Their local teeth erase all seven curvature cracks in one
+selected `a`-gap, but the whole packet has the explicit global witness (2).
 
 ## 2. The master-clock word
 
@@ -63,10 +65,10 @@ word
 -7s,-5s,-3s,-s,s,3s,5s,7s.                            (5)
 ```
 
-The four small speeds give `2s,4s,6s,8s`, while the resonant blocker gives
+The four small speeds give `2s,4s,6s,8s`, while the resonant blockers give
 
 ```text
-14ap== -98s                         (mod q).             (6)
+14ap== -98s,          (7a+4)p== -41s        (mod q).    (6)
 ```
 
 Equations (4)--(6) retain the exact kernel and its master period.  They do
@@ -123,7 +125,22 @@ Here
 
 Every entry in (11) is at least `3h+4`.  At the boundary `m=27`, the small
 speed `4` and blocker `14a` also tie; afterward only `a+3,a+4` minimize.
-This proves the exact equality in (3).
+
+The second blocker never lowers this minimum.  In the even branch its least
+residue numerator is
+
+```text
+41s-4q=11h+46.                                         (12a)
+```
+
+In the odd branch it is
+
+```text
+min(41s-4q,5q-41s)=min(11h+72,17h-49).                (12b)
+```
+
+Every expression in (12a)--(12b) is at least `s` in the stated ranges.  This
+proves the exact equality in (3) for the combined fourteen-speed packet.
 
 The depth estimate is not asymptotic.  Its cleared numerator has the fixed
 parity values
@@ -135,7 +152,31 @@ parity values
 
 Hence `s/q>3/28`, proving all of (3).
 
-## 4. The reroute really changes address cells
+## 4. Finite head of the two-blocker ray
+
+THM-1239's two-blocker construction begins at `m=8`, before the uniform
+ledger above.  The following direct certificates close exactly those
+nineteen head rows for the thirteen-speed packet `B_m union {7a+4}`:
+
+```text
+m     t           min_v ||vt||       m     t           min_v ||vt||
+8     7/65        7/65                18    1/9         1/9
+9     1/9         1/9                 19    12/55       6/55
+10    32/149      16/149              20    64/289      32/289
+11    36/163      18/163              21    17/156      17/156
+12    10/93       10/93               22    18/163      18/163
+13    11/100      11/100              23    37/331      36/331
+14    23/205      22/205              24    76/345      38/345
+15    16/73       8/73                25    5/46        5/46
+16    13/121      13/121              26    21/191      21/191
+17    7/64        7/64
+```
+
+Every displayed depth is strictly greater than `3/28`; the smallest cleared
+excess is already positive by one.  Together with (2)--(13), the full
+two-blocker ray is therefore globally dispatched for every `m>=8`.
+
+## 5. The reroute really changes address cells
 
 THM-1239's erased carrier gap is
 
@@ -156,7 +197,7 @@ locally erased crack complex.  It moves by a macroscopic amount to another
 carrier address cell.  This is the precise global reroute demanded by the
 guardrail in THM-1239.
 
-## 5. Structural, Kakeya, and tournament audit
+## 6. Structural, Kakeya, and tournament audit
 
 The toothpick self-similarity has two different clocks.  On the selected
 Kakeya needle, multiplication by `14a` reproduces the seven shrinking cracks
@@ -188,35 +229,37 @@ gaps, address cells, wall events, residues, multiplier modes, blocker stars,
 and proof obligations as vertices.  The faithful carrier is
 
 ```text
-(q,s; 2s,4s,6s,8s; +/-s,+/-3s,+/-5s,+/-7s; -98s),    (16)
+(q,s; 2s,4s,6s,8s; +/-s,+/-3s,+/-5s,+/-7s;
+ -98s,-41s),                                           (16)
 ```
 
 together with parity and the selected-gap address.  It preserves the global
 lonely predicate and records exactly what the local crack incidence erased.
 
-## 6. Verification and scope
+## 7. Verification and scope
 
-The dependency-free exact referee checks every `m=27,...,100000`: `99,974`
-thirteen-speed residue ledgers, including all `99,959` rows of THM-1239's
-one-blocker range.  It checks (3), (8), (11), (13), and the alternate-cell
+The dependency-free exact referee checks the nineteen finite two-blocker
+head certificates and every `m=27,...,100000`: `99,974` combined
+fourteen-speed residue ledgers, including all `99,959` rows of THM-1239's
+one-blocker range.  It checks (3), (8), (11)--(13), and the alternate-cell
 separation.  Normal and optimized outputs are byte-identical.
 
-The Lean module kernel-checks the master-clock congruence (4), terminal
-congruence (6), every unique entry of both parity ledgers, the exact depth
-excesses, and the two address-separation inequalities.  Identifying those
-positive representatives with the circle norms is the explicit paper layer;
-there are no proof placeholders or `native_decide` calls.
+The Lean module kernel-checks the master-clock congruence (4), both terminal
+congruences (6), every unique entry of both parity ledgers including the
+second-blocker alternatives, the exact depth excesses, and the two
+address-separation inequalities.  Identifying those positive representatives
+with the circle norms and replaying the nineteen finite rows are the explicit
+paper layers; there are no proof placeholders or `native_decide` calls.
 
 Frozen hashes are
 
 ```text
-source         d513823df4322095815f7bec360900785a9a24e3f757fc12fabc4d48b14242ba
-output         4c371aed42014f5331c197dfb2b05619ba0570fb1a5cbc2b40e32d474e9d39e8
-formalization  dad6863f46cdaccac90303bf4591f5ad3dccc25bfe8aa421e5462631c5937521
+source         91c29ef8ed2f1314d00f666c872d5c83e8e29c6a410efe88284158831377756b
+output         6601c3fb68b241542f4ec604fc56b866e4c47588b3737768aa51fc9c9afd4913
+formalization  ae86f9732f1a44905389cc174db410e4a12b1d2e4a9e9bbe63d46d169ebc141d
 ```
 
-THM-1243 closes one exact resonant address ray, not arbitrary blocker words,
+THM-1243 closes both exact resonant address rays, not arbitrary blocker words,
 six-comb slow-gap coverage, or LRC(14).  The next global target is to prove
 that every high-degree blocker address word admits a comparable transverse
 clock, or else force incompatible clocks around THM-1240's blocker cycle.
-
