@@ -1,5 +1,6 @@
 ---
-id: THM-1255
+id: THM-1284
+renumbered: was THM-1255; moved to THM-1284 during the 2026-07-19 collision repair because the first-pushed carrier-41 theorem retains THM-1255
 title: The cross-N first-gap band — the single-far stratum of the first gap (1/(N+1), 2/(2N+1)) is COMPLETELY CLASSIFIED for N = 6..13 (exactly two members, the canonical mediant attainers at N = 7 and N = 13), the N = 8..11 first gaps are EMPTY across a validated multi-species census (the July-6 O-depth-monotone middle, finally executed), and the populated N in [6,13] are exactly {6} ∪ {N ≡ 1 mod 6}. Corollary at N=13 — no single-replacement family enters opus's interval (1/14, 3/41).
 status: >
   PROVED — the single-far classification at N ∈ {6,...,13} (absorption lemma + exact finite
@@ -20,14 +21,14 @@ related:
   - HYP-4516  # opus-S119 mod-30 binder gate (canonical family) — its solutions proved UNIQUE in-stratum here
   - HYP-4542  # mac-mini-S25 depth 2->1->0 (the conjecture this theorem's data refines)
   - HYP-7840  # opus-S398 bound-D = bound-speeds (the N=13 corollary feeds this)
-  - THM-1240  # opus (1/14,3/41) not settled — single-far stratum now closed
+  - THM-1268  # opus (1/14,3/41) not settled — single-far stratum now closed
 scripts:
   - 04-computation/lrc_firstgap_crossN_census_deathstar_S59.py -> 05-knowledge/results/lrc_firstgap_crossN_census_deathstar_S59.out
   - 04-computation/lrc_singlefar_absorption_atlas_deathstar_S59.py -> 05-knowledge/results/lrc_singlefar_absorption_atlas_deathstar_S59.out (+ lrc_singlefar_dip_atlas_N12_deathstar_S59.out)
   - 04-computation/lrc_twofar_nested_absorption_N12_deathstar_S59.py -> 05-knowledge/results/lrc_twofar_nested_absorption_N12_deathstar_S59.out
 ---
 
-# THM-1255 — the cross-N first-gap band
+# THM-1284 — the cross-N first-gap band
 
 Setting: N distinct positive integer speeds; `M(A) = max_t min_{v∈A} ‖vt‖`; the **first
 gap** at N speeds is the open window `W_N = (1/(N+1), 2/(2N+1))` between the conjectured
@@ -116,7 +117,7 @@ then `X₂ = ⌈2θ/ℓ(B∪{x₁})⌉` per x₁ — every intermediate base has
 ## 4. The band law (CONJECTURE) and a falsifiable prediction
 
 > **⛔ CORRECTION (death-star-2026-07-19-S59b, same day — the N=31 prediction is REFUTED
-> by my own follow-up test; see THM-1256/HYP-7890).** The band law as stated below is
+> by my own follow-up test; see THM-1285/HYP-7890).** The band law as stated below is
 > WRONG: the N=31 first gap is POPULATED, by `{1..29, 31, 120}` with `M = 4/127`
 > exactly (witness `t = 55/127`, active pair `(7,120)`, triple-verified). The D=3
 > (mediant) gate does close at N=31 exactly as argued (`5 | 95`), but the **D=4
@@ -130,7 +131,7 @@ then `X₂ = ⌈2θ/ℓ(B∪{x₁})⌉` per x₁ — every intermediate base has
 > absorption classification, which is exactly the instrument that found the
 > counterexample. The remaining §4 text is retained as the record of the refuted
 > conjecture; its N=14..18/N=19 predictions were CONFIRMED (single-far stratum,
-> THM-1256).
+> THM-1285).
 
 Within [6,13] the populated N are exactly `{6} ∪ {7, 13} = {6} ∪ {N ≡ 1 mod 6}`: **the
 emptiness band [8,12] is precisely the stretch of N ≢ 1 (mod 6) after the wide-window
@@ -157,7 +158,7 @@ band's mechanism (gates + width-death) would subsume the (C)-side first-gap empt
   radius 2). Caught by the STATEMENT-grep protocol only at writeup time because I
   searched my own thread's vocabulary ("single-far/outlier") and not the rigidity
   thread's ("Hamming") — see MISTAKE-187.
-- **Corollary (N=13, for THM-1240/HYP-7840).** The single-replacement stratum of
+- **Corollary (N=13, for THM-1268/HYP-7840).** The single-replacement stratum of
   `{1,…,13}` contains NO family with `M ∈ (1/14, 3/41)`: its only first-gap member IS
   `3/41 = M({1..11,13,36})`. opus's bounded scans of the shapes `{1..11,13,x}`,
   `{1..12,x}` are hereby upgraded to a closed stratum, uniformly in x, for all 13

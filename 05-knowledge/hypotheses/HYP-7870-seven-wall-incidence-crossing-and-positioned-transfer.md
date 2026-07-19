@@ -1,9 +1,9 @@
 ---
 id: HYP-7870
 title: The seven-wall crossing now lives on one coherent marked tooth word; the affine sign and first failed phase landing are resolved, while well-founded alternate-gap descent remains
-status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240/1248 force and finitely decorate a blocker cycle. THM-1248 further compresses its whole slowest-rooted lasso, reconstructs every sampled owner germ, proves every blocker tooth has two located gcd seams, sharpens the binary target phase distance to `>5/14`, and reduces the no-incidence/no-reuse lasso to a slowest two-cycle. THM-1252--1256 choose that cycle on one deletion-minimal tooth word: every handoff is disjoint and fully paid; every actual blocker edge is automatically phase/word aligned; the cycle minimum has a target-free five-comb corridor and canonical rank-two window; and the exceptional two-cycle has a forced double-star-plus-bridge located tree, protected rank-three forest, and quotient-plus-word tariff. Structurally binary six-cycles have at least two digits of each kind. Immediate toothpick backtracks cannot repeat (ABAB is impossible). The endpoint invoice is address order, not independent Hunter mass. The live theorem is a well-founded complete-gap/address descent for this aligned typed cell, or metric conversion beyond the already-counted handoffs. No LRC(14) closure is claimed.
+status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240/1248 force and finitely decorate a blocker cycle. THM-1252--1256 choose it on one deletion-minimal tooth word: every handoff is disjoint and paid, every actual blocker edge is phase/word aligned, and the exceptional slowest two-cycle carries a located double-star-plus-bridge tree and protected rank-three tariff. THM-1264/1266 rank literal returns. THM-1267/1274 orient the centered protrusion and force a five-owner return or terminal tooth. THM-1277 consumes that terminal: a proper exterior carrier-owner seam of exact residual `Q`, followed by compulsory survivor mass, gives `270d1*x+45d1*Q<=563c*x-1`. The live theorem is now mixed-owner continuation beyond this wall, composition of a closest-return rank with its next blocker, or a strict same-tooth torsion/turn consumer. No LRC(14) closure is claimed.
 source: codex-2026-07-19-S82
-depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1247, THM-1248, THM-1250, THM-1252, THM-1253, THM-1254, THM-1256, HYP-7678]
+depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1247, THM-1248, THM-1250, THM-1252, THM-1253, THM-1254, THM-1256, THM-1264, THM-1266, THM-1267, THM-1274, THM-1277, HYP-7678]
 ---
 
 # HYP-7870 -- from global incidence to a positioned witness
@@ -329,19 +329,34 @@ leaves a sharper trichotomy: lasso-owner incidence, repeated outside-owner
 displacement, or a slowest two-cycle with a forced located double-star and
 protected bridge.
 
+THM-1274--1276 perform the first complete boundary operation.  On the
+protrusion-facing side of the slowest two-cycle, the five-owner word either
+closes a distinct-occurrence return or reaches its unique endpoint tooth.
+At that endpoint the old carrier changes safe-to-danger before the terminal
+owner changes danger-to-safe.  The intervening proper seam is exterior to all
+internal word handoffs, and the compulsory five-comb survivor lies beyond it.
+Writing `Q` for the exact endpoint numerator gives
+
+```text
+0<Q<2c,   gcd(c,x)|Q,   Q == c+x (mod 14),
+270d1*x+45d1*Q <= 563c*x-1.
+```
+
 The sharpened remaining theorem is now:
 
-> **Aligned typed-cell descent.**  In the compact five-cut kernel, combine
-> the finite relative word (9), determinant sheet (8), exact owner germs, the
-> coherent minimal word, and its target-free cycle-minimum corridor.  Convert
-> lasso incidence to torsion/descent, repeated outside ownership to strict
-> tooth-displacement descent, or the residual two-cycle's protected
-> rank-three/nested-carrier tariff to metric excess.  Every branch must reach
-> a smaller complete gap/address cell or an already-closed bounded packet.
+> **Endpoint-child / return-rank descent.**  In the compact five-cut kernel,
+> retain the finite relative word, determinant sheet, exact owner germs,
+> coherent minimal word, and the endpoint event word
+> `carrier wall -> terminal-owner wall -> survivor`.  Either attach a closest
+> return's minimizing owner to its next blocker, follow the terminal owner's
+> safe side through the mixed above/below owner set while preserving `Q`, or
+> turn same-tooth double incidence into strict torsion.  Every branch must
+> reach a smaller well-founded address/rank cell or an already-closed packet.
 
 This formulation retains exactly the coordinates destroyed by every refuted
 shortcut.  Relative address compression, all sampled owner germs, a bounded
 cover-preserving component lift, an anchored wall seam, a fully located
 rank-five tree, repeated-owner charges, and literal private stalks are now
-available.  A well-founded consumer for the aligned typed-cell trichotomy is
+available.  The endpoint is now taxed and typed, but a well-founded consumer
+for its mixed-owner child (and for the return/same-instance alternatives) is
 not, so no LRC(14) closure follows yet.

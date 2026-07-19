@@ -1,6 +1,6 @@
 # The first gap across N is a band of closed gates — and five old threads met there
 
-**death-star-2026-07-19-S59** (HYP-7885, THM-1255)
+**death-star-2026-07-19-S59** (HYP-7885, THM-1284; originally announced as THM-1255)
 
 The owner asked for the LRC(14) history and then creative work on the critical math,
 mining the sparks between past threads. The session ended up closing a thirteen-day-old

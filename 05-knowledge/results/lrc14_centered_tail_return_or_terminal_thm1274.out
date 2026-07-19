@@ -1,0 +1,27 @@
+THM-1274 CENTERED-TAIL RETURN-OR-TERMINAL EXACT AUDIT
+Python assert nodes = 0
+five-owner chronological words = 27305
+five-owner words with a closest return = 26980
+five-owner no-return terminal words = 325
+maximum five-owner closest-return edges = 5
+maximum no-return tail occurrences = 5
+exact return-factor rows = 400
+weakest five-owner return factor = 3/2
+six-owner Hamiltonian terminal paths = 720
+one-extra-occurrence return paths = 21600
+terminal private-count vectors = 1
+maximum six-owner closest-return edges = 6
+private-count speed-cap rows = 50500
+exact mirrored tail-digit guardrails = 2
+left/right protrusion descent digits = (0, 1)
+return law: distinct owner occurrences give literal address holonomy
+terminal law: no repeat reaches the protruding endpoint within five teeth
+six-path law: extra tooth gives a return; no extra tooth forces d6<=7c
+challenged_assumption=owner-label reuse must be split by tooth-instance equality
+vertices=protrusion-facing tooth occurrences; switch=chronological order
+tie_Hamiltonian_path=the five-owner tail word
+tournament_scores=(0,1,2,3,4); cycles=0; SCCs=5; Hamilton_paths=1
+preserves=tail orientation, owner occurrence, return address, and endpoint obligation
+destroys=absolute lift outside the selected carrier gap
+STATUS=PASS
+source_sha256=22b4a8d460fe76fd26ce040f3713cda2dcf228b4fe86d1d888d2f20733ab8566

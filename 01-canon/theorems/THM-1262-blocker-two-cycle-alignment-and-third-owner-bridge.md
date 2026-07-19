@@ -1,10 +1,10 @@
 ---
 id: THM-1262
-title: A COHERENT BLOCKER TWO-CYCLE CANNOT BE A MARKED INVERSION — ascent protection forces an aligned corridor through a third owner
-status: PROVED (two-cycle speed orientation; protected ascent tooth disjoint from the reverse target tooth; nonconsecutivity; binary mismatch-to-adjacency contradiction; aligned phase corridor; forced third-owner protected handoff). This eliminates the inverted two-cycle cell but does not exclude aligned two-cycles, six-comb coverage, or LRC(14)
+title: ASCENT PROTECTION MAKES A COHERENT BLOCKER TWO-CYCLE NONCONSECUTIVE AND FORCES ITS ALIGNED CORRIDOR THROUGH A THIRD OWNER
+status: PROVED (two-cycle speed orientation; protected ascent tooth disjoint from the reverse target tooth; nonconsecutivity; THM-1256 general coherent-edge alignment with sharp 5/14 phase separation; forced third-owner protected handoff). The alignment is now a corollary of the general edge law; this theorem's irreducible content is the protected direction and third-owner bridge. It does not exclude aligned two-cycles, six-comb coverage, or LRC(14)
 source: codex-2026-07-19-S78 coherent-word continuation
 depends_on: [THM-1240, THM-1248, THM-1252, THM-1253, THM-1256]
-related: [THM-1156, THM-1238, THM-1254, THM-1260, HYP-7870]
+related: [THM-1156, THM-1238, THM-1254, THM-1260, THM-1274, HYP-7870]
 script: 04-computation/lrc14_blocker_two_cycle_alignment_thm1262.py
 output: 05-knowledge/results/lrc14_blocker_two_cycle_alignment_thm1262.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCBlockerTwoCycleAlignment.lean
@@ -81,7 +81,7 @@ This is the point that is unavailable for a general cycle edge: the reverse
 edge in a two-cycle identifies the other marked tooth with a tooth of the
 very source comb that (4) keeps safe.
 
-## 3. The binary descent cannot be inverted
+## 3. General coherent-edge alignment lands the protected two-cycle
 
 For the descent `h->l`, the target satisfies
 
@@ -89,30 +89,28 @@ For the descent `h->l`, the target satisfies
 d_l<d_h<c+d_h,
 ```
 
-so THM-1248 gives a binary relative digit.  THM-1256 then gives the exact
-landing dichotomy for the pair `(L,H)`:
-
-1. their tooth order agrees with the order of the centered phases
-   `(t_h,t_l)`; or
-2. the orders disagree, in which case `L` and `H` are consecutive selected
-   teeth and overlap in a directly charged seam.
-
-The second alternative contradicts (5)--(6).  Hence only the first is
-possible:
+so THM-1248 gives a binary relative digit.  The sharpened THM-1256 now proves
+more than the earlier landing dichotomy: the target's own safe centered phase
+lies outside the tooth which blocked the source, on the digit-selected side,
+and both endpoint sequences of the minimal word increase.  Therefore **every
+coherent blocker edge is automatically phase/word aligned**, for arbitrary
+integer digit.  Applied to `(L,H)`, this gives directly
 
 ```text
 sign(A_L-A_H)=sign(t_h-t_l).                           (7)
 ```
 
-The phase separation is quantitative:
+The actual-blocker phase separation is quantitatively sharp:
 
 ```text
-5/[28(c+d_l)]<|t_h-t_l|<23/[28(c+d_l)].               (8)
+5/[14(c+d_l)]<|t_h-t_l|<23/[28(c+d_l)].               (8)
 ```
 
-Thus a coherent blocker two-cycle can never occupy THM-1256's marked
-adjacent-inversion branch.  Reflection reverses both orders and preserves
-(7), so this is not a choice of lower-gap gauge.
+Equations (5)--(6) add information not supplied by general alignment: the
+two marked target teeth are disjoint and nonconsecutive.  Arbitrary marked
+pairs may still differ by adjacent swaps, but no actual coherent lasso edge
+does.  Reflection reverses both orders and preserves (7), so this is not a
+choice of lower-gap gauge.
 
 ## 4. Alignment forces a third-owner bridge
 
@@ -180,11 +178,12 @@ open into a third-owner corridor.
 The dependency-free referee checks the finite order logic, reflection
 covariance, every two-label speed/phase/order orientation, and the
 nonconsecutive-to-intermediate-word implication.  The Lean module checks the
-abstract disjointness/nonconsecutivity and binary mismatch contradiction,
-the alignment sign law, and the third-owner exclusion from the protected
-overlap.  Irredundant-cover extraction, strict danger/safe disjointness, and
-the geometric identification of the corridor-facing wall remain the named
-paper topology providers.
+abstract disjointness/nonconsecutivity, the earlier binary mismatch
+contradiction as an independent guardrail, the alignment sign law, and the
+third-owner exclusion from the protected overlap.  THM-1256 supplies the
+stronger general alignment and doubled phase separation.  Irredundant-cover
+extraction, strict danger/safe disjointness, and the geometric identification
+of the corridor-facing wall remain the named paper topology providers.
 
 Frozen artifact hashes are
 
@@ -194,8 +193,11 @@ output         6729240fdb64cc5e09a7dfc2e7dcaac82a3633fd1b8559d08f75317d64b9dae5
 formalization  af0ede0412ac7dbe7cf18c2edcbde4d6cb5e0a5fe21288e638da50536ba19daa
 ```
 
-THM-1262 does not rule out an aligned two-cycle.  It removes one complete
-local branch and sharpens its survivor to a placed three-owner transport
-problem.  Together with THM-1260's single-fork `chi_7` universality no-go, it
-also shows what a useful Fano consumer would have to see: incidence among
-several such exported bridges, not the sign of one isolated fork.  ∎
+THM-1262 does not rule out an aligned two-cycle.  After THM-1256's upgrade,
+its indispensable contribution is no longer inversion elimination but the
+canonical protected third-owner direction.  THM-1274 follows the opposite,
+protrusion-facing wall and turns this local bridge into a five-owner return-
+or-endpoint operation.  Together with THM-1260's single-fork `chi_7`
+universality no-go, it also shows what a useful Fano consumer would have to
+see: incidence among several exported occurrences, not the sign of one
+isolated fork.  ∎

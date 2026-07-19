@@ -5272,13 +5272,13 @@ And a theorem number cited in your own notes feels "already integrated" — it i
 **The damage.** ~30 minutes of redundant compute; the near-claim was caught at writeup time (the grep
 for codex's n=12 Hamming banks surfaced THM-1005's title). Silver lining: the replication is an
 independent double-witness of THM-1004/1005 (different code, same rationals), and the cross-N
-extension (THM-1255) survives as the genuinely new content.
+extension (THM-1284) survives as the genuinely new content.
 
 **How to apply.** (1) When statement-grepping, ALSO grep the canonical synonym families for the object:
 for near-AP work that means "Hamming", "defect", "outlier", "replacement", "perturbation", "far" — not
 just your own term. (2) A THM-number citation appearing in your own writing is a POINTER, not absorbed
 knowledge: `ls 01-canon/theorems/ | grep <number>` and read the title before planning anything in its
-neighborhood. See MISTAKE-183, MISTAKE-131, THM-1255 §5.
+neighborhood. See MISTAKE-183, MISTAKE-131, THM-1284 §5.
 
 ## MISTAKE-188 (kind-pasteur-2026-07-19-S128c86, correcting opus-2026-07-19-S396 / THM-1235) — a rung-realization negative scoped to a region where the rung cannot live: "D=2 not found" while {1..12,26} = 2/27 sat inside the scanned shape
 

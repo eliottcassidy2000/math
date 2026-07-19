@@ -4,7 +4,7 @@ title: CHRONOLOGICAL RETURN POLYGONS PAY EXACT ADDRESS DRIFT -- a literal owner 
 status: PROVED (all-length consecutive return-subword overlap identity; address-drift ratio sum; minimum-owner ascent; simple-return indexing and depth; six-fast factor-6/5 and triangle factor-3 compact heights; seam-digit triangle interpretation; optimization-safe exact interval census; sorry-free Lean arithmetic core). The theorem requires one literal consecutive return subword with shared intermediate tooth occurrences, not merely support edges appearing elsewhere
 source: codex-2026-07-19 placed-Fano continuation
 depends_on: [THM-1253, THM-1256, THM-1260, THM-1262]
-related: [THM-841, THM-1156, THM-1252, THM-1254, THM-1266]
+related: [THM-841, THM-1156, THM-1252, THM-1254, THM-1266, THM-1274]
 script: 04-computation/lrc14_chronological_return_polygon_thm1264.py
 output: 05-knowledge/results/lrc14_chronological_return_polygon_thm1264.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCChronologicalReturnPolygon.lean
@@ -268,6 +268,16 @@ branch.  It does not manufacture the return from three abstract support
 edges and does not prove that consecutive closest-return ranks compose.
 THM-1266 records the exact five-ray obstruction to that composition.  No
 remaining six-comb cover is closed here.
+
+There is a second occurrence-level caution.  A repeated wall-owner **label**
+does not automatically supply (1)--(5): both wall incidences may be carried
+by the same selected tooth.  THM-1264 applies only after two distinct tooth
+instances are located.  THM-1274 supplies exactly this split on the
+protrusion-facing continuation of a slowest two-cycle.  Distinct instances
+give a closest return with at most five edges and factor greater than `3/2`;
+without a repeat the continuation reaches the carrier endpoint within five
+tooth occurrences.  The latter endpoint obligation, and same-instance
+multi-incidence, remain open consumers.
 
 This also reroutes the Fano probe.  The right vertices are not seven runner
 points but handoff occurrences with shared tooth addresses.  A useful line

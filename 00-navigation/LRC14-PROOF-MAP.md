@@ -80,9 +80,19 @@
 > `ell=max(0,1/2+7rho/6-d1/(2c))`.  Spending only THM-1241's separated fastest
 > load improves the five-load cap to `349/360`, so `ell>11/270` and
 > `270d1<=563c-1`.  This is not new seam mass: it converts a frequency-side
-> functional defect into literal endpoint displacement.  The highest-leverage
-> live target is to couple this forced protrusion to the sharp star's required
-> tail completion, or to prove a phase-located non-star turn tax.
+> functional defect into literal endpoint displacement.
+>
+> THM-1274 makes the first operation-level coupling.  In a slowest-rooted
+> two-cycle, left/right protrusion forces descent digit zero/one.  The blocker
+> wall facing that endpoint continues through only the other five owners:
+> either a distinct tooth instance repeats, giving a closest return of at
+> most five edges and factor greater than `3/2`, or the word reaches the
+> carrier-gap endpoint within five tooth occurrences.  In the exceptional
+> six-owner residual, any extra tooth gives a closest `6/5` return; without
+> one, the whole word has exactly six teeth and `d_6<=7c`.  The live target is
+> now the terminal endpoint tax/neighboring-carrier descent, genuine
+> composition of a return rank with its next blocker, or a strict consumer
+> for same-tooth multi-incidence.
 
 > ## 2026-07-19 S78 — ONE COHERENT TOOTH WORD REMOVES THE TREE, SECOND-WALL, AND AFFINE-SIGN LOSSES
 >
@@ -163,15 +173,17 @@
 > first needs cutoff depth 108; the uniform object must be phase-orbit density selection,
 > not a fixed finite template atlas.
 >
-> The live implication is now narrower and honest: consume one typed cell
-> carrying an aligned phase landing, both target-wall seams, exact
-> lcm/detuning sheets, address surplus, and the protected bridge.  The typed
-> lasso trichotomy leaves incidence torsion, reuse displacement, or the
-> explicit tariffed two-cycle.  An aligned cell must descend to a smaller
-> complete carrier/address cell, or its first failed continuation must be a
-> new handoff already visible in the full-word invoice.  Another global mass
-> bound, sampled Fano incidence, or untyped tournament cannot supply this
-> operation.  See the coherent-word frontier reflection.
+> The live implication is now narrower and honest.  Owner reuse must first be
+> split by **tooth instance**: distinct occurrences give THM-1264's literal
+> return holonomy, while one tooth supplying two incidences remains a placed
+> turn/fork.  THM-1274 canonically follows the protrusion-facing wall and
+> proves return-or-endpoint termination over five owners.  What remains is to
+> tie a return's minimizing-owner ascent to the next blocker, convert the
+> terminal carrier endpoint to a smaller complete carrier/address cell or new
+> phase-located tax, or force strict torsion descent from same-instance
+> incidence.  Another global mass bound, sampled Fano incidence, or untyped
+> tournament cannot supply this operation.  See the coherent-word frontier
+> reflection.
 
 > ## 2026-07-19 S82 — FINITE LASSO/OWNER QUOTIENT SHARPENS THE COHERENT WORD
 >
@@ -226,8 +238,11 @@
 > that choice: selecting every blocker from one deletion-minimal chronological
 > word makes all raw handoffs disjoint.  The target's own safe centered spoke
 > then forces every blocker edge to be phase/word aligned; arbitrary marked
-> mismatch is irrelevant to the blocker cycle.  The remaining theorem is the aligned typed-cell
-> descent/first-failed-continuation implication stated above.
+> mismatch is irrelevant to the blocker cycle.  THM-1264/1266 rank literal
+> distinct-occurrence returns, THM-1267 orients the slowest endpoint
+> protrusion, and THM-1274 lands its canonical continuation on a return or the
+> carrier endpoint.  The remaining theorem is the terminal endpoint/child-
+> transport implication stated above.
 >
 > The combined THM-1244/1250 scalar tariff is also exact.  With
 > `B(x)=(9x+2)/(3x(1+x))` and `w_uv=c/lcm(u,v)`, every cover obeys
@@ -295,14 +310,15 @@
 > exact row `(c,s_r,s_0,P,N)=(5,82,9,9,1)` has `K=39` but `R=-1`, proving
 > that shifted positive holonomy cannot simply be copied to the fast clocks.
 >
-> The highest-leverage remaining lemma is now falsifiable: **lift an oriented
-> private germ around the finite blocker word, or prove that its first failed
-> continuation creates a new disjoint handoff occurrence and hence increases
-> the THM-1250 lcm debt**.  A closed lift makes the intermediate address
-> factors telescope and yields a well-founded product descent; a failed lift
-> must retain the exact kernel sheet and current/adjacent gap address.  Raw
-> Fano incidence, blocker degree, low-height sampling, one selected gap, and
-> another global mass margin have all been exhausted as closing invariants.
+> THM-1274 now supplies the first such lift on the protrusion-facing side of a
+> slowest two-cycle: it reaches a literal return or the carrier endpoint in at
+> most five owner occurrences.  The remaining lift theorem is correspondingly
+> sharper: **make the return rank feed its next blocker, or turn the terminal
+> endpoint/exterior survivor into a neighboring carrier-address descent or a
+> new disjoint tax**.  A same-tooth repeated incidence must retain both germs
+> rather than being mislabeled a return.  Raw Fano incidence, blocker degree,
+> low-height sampling, one selected gap, and another global mass margin have
+> all been exhausted as closing invariants.
 
 > ### 2026-07-19 S78 n=12 STATUS — ONE MORE EXACT FACE, NOT UNIFORM CLOSURE
 >

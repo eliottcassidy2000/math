@@ -1,0 +1,31 @@
+THM-1277 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT
+Python assert nodes = 0
+strict endpoint incidences = 17168
+left/right incidences = 8584/8584
+gcd-sharp endpoint rows = 1152
+strict residue improvements over gcd = 16016
+normalized tax identity rows = 93114
+endpoint inverse quantile = 11/270
+endpoint-sixth quantile slack = 17/135
+positive/rejected integer gcd cuts = 198339/155081
+private-count rows = 95950
+single-occurrence compact rows = 30300
+protected-needle containment rows = 95950
+smallest protected-margin/seam-supremum ratio = 707/200
+mirrored gcd-sharp guardrails = 2
+guardrail seam/ell/eta = 1/392/1/12/1/84
+center/endpoint clock rows = 119940
+exact-e passing/excluded rows = 92148/27792
+sharp-row exact lhs/rhs/coarse-rhs = (19522440, 19048959, 20177919)
+exact_tax=ell-eta>11/270
+integer_cut=270*a*x+45*a*Q<=563*c*x-1
+gcd_cut=270*a*x+45*a*gcd(c,x)<=563*c*x-1
+phase_cut=270*a*x+45*a*Q<=(248*c+315*e)*x-1
+protected_tree=internal_six_owner_tree+exterior_carrier_edge
+vertices=carrier-wall,event-owner-wall,outer-survivor-obligation
+switch=circle-reflection; tie_Hamiltonian_path=outward-event-order
+tournament_scores=(0,1); cycles=0; SCCs=2; Hamilton_paths=1
+preserves=side,address,residue,proper-crossing,and-survivor-subtraction
+destroys=next mixed-owner safe-component cover
+STATUS=PASS
+source_sha256=7fc914f413e718a0f9d36519b71d4da65d1e09d411f6081f3605b1b34304a62d

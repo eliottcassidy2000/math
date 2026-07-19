@@ -108,12 +108,8 @@ theorem nonbad_quartet_margin (m a : ℚ)
     (ha : a = 7 * m + 1) (ha0 : a ≠ 0) :
     1 - 3 * ((14 * m + 13) / (14 * a)) - 2 / 7 =
       (28 * m - 29) / (14 * a) := by
-  subst a
-  have ha0' : 1 + m * 7 ≠ 0 := by
-    intro h
-    apply ha0
-    nlinarith
-  field_simp [ha0']
+  field_simp [ha0]
+  rw [ha]
   ring
 
 /-- Exact residues of the explicit thirteen-speed global witness. -/

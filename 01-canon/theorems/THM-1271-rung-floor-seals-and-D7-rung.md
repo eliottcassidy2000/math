@@ -13,8 +13,8 @@ status: >
 source: death-star-2026-07-19-S59d (HYP-7905; owner: prove gate completeness and test the D=7 rung at N=2311)
 depends_on:
   - THM-1002  # maximizer at pair-sum moduli (the candidate-completeness input)
-  - THM-1257  # the gate law being completed; the tower context
-related: [THM-1256, HYP-7900, HYP-4516, THM-996]
+  - THM-1286  # the gate law being completed; the tower context
+related: [THM-1285, HYP-7900, HYP-4516, THM-996]
 scripts:
   - 04-computation/lrc_gate_completeness_and_N2311_deathstar_S59d.py -> 05-knowledge/results/lrc_gate_completeness_and_N2311_deathstar_S59d.out
 ---
@@ -108,7 +108,7 @@ witness), a consistency check the code confirms.
   values, upgrading `4/127, 4/247, 4/367, 6/1271` from evaluator-exact to
   lemma-plus-finite-certificate exact.
 - Remaining OPEN for the general-`N` gate law: a uniform description of the
-  e-channel maxima (the branch analyses of THM-1257 §3, now localized to the ghost
+  e-channel maxima (the branch analyses of THM-1286 §3, now localized to the ghost
   channel). Even-`N` needs a variant of Lemma 2 (the `q′ = 2N` corner genuinely
   hosts the `b=2`-type loose configuration — that is WHY even `N` fails the gate,
   so the odd-`N` restriction is not a loss for members).

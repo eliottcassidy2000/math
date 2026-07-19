@@ -295,18 +295,43 @@ ballot rigidity, so uniform sporadic emptiness must not be claimed here.
 
 The next proof attempt should not ask for another global mass inequality,
 another sampled blocker, a stronger Fano count, or a literal repetition of a
-carrier-41 density.  It should take the cell (10), the sharp five-rung
-positive control, and the positioned survivor tail as inputs and implement
-the next legal operation.  The most falsifiable version is:
+carrier-41 density.  THM-1256 has made every actual blocker edge aligned, so
+the former target of finding a “first nonaligned marked tooth” is obsolete.
 
-> An aligned binary phase segment with both target-wall seams either reaches
-> a strictly smaller covered carrier/address cell, or contains a first
-> nonaligned marked tooth whose raw overlap is a new occurrence in the full
-> chronological invoice.
+THM-1274 performs the next legal operation on the protrusion-facing wall.  It
+follows a literal five-owner subword to either a closest distinct-occurrence
+return, with factor greater than `3/2`, or the carrier endpoint within five
+teeth.  THM-1277 then shows that the endpoint is not a stop: its unique
+terminal owner crosses the adjacent carrier tooth in a proper exterior seam
+of length
 
-THM-1256 proves this statement for the first interval-order comparison, while
-THM-1266 proves that a consecutive-address continuation cannot pass five
-rungs.  The remaining work is to show that tail completion either preserves
-a smaller complete slow gap or pays a genuinely new positioned turn, and to
-couple that operation to THM-1267's forced endpoint protrusion.  That is now
-the narrowest known mathematical frontier of the six-comb route to LRC(14).
+```text
+Q/(14cx) >= 1/(14 lcm(c,x)).
+```
+
+Because the five-comb survivor must lie beyond that terminal wall, the seam
+can be subtracted before taking the endpoint quantile.  The old scalar cut
+therefore refines to the phase-located integer law
+
+```text
+270 d1 x + 45 d1 Q <= 563 c x - 1,
+Q == c+x (mod 14),       gcd(c,x) | Q,       0<Q<2c.
+```
+
+This reveals the underlying object more sharply as the ordered event word
+
+```text
+carrier wall -> terminal-owner wall -> compulsory survivor,
+```
+
+attached to the internal tooth word.  On an ambient protected needle with a
+one-period margin, one of the two endpoint seams also completes the internal
+six-owner chronological tree to a located seven-owner tree.  Its bare scalar
+lcm tariff can be redundant, so the position and residual must not be erased.
+
+The remaining falsifiable operation is now: follow the `x`-safe side of the
+terminal wall through the mixed above/below owner set while retaining
+`(side,Q)` and the disjoint internal invoice, or make the closest-return rank
+feed its next blocker.  Same-tooth multi-incidence still needs a strict
+torsion/turn consumer.  This is the narrowest known six-comb frontier to
+LRC(14).

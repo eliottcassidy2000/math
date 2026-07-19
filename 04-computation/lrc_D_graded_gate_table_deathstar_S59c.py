@@ -10,7 +10,7 @@ in the first-gap window (1/(N+1), 2/(2N+1)).
 
 Purposes:
   (1) FIT the full D=4 gate G4 = {N : F_4(N) attains the rung in-window}.
-      Conjecture (THM-1256 see-saw): G4 = {N == 1 mod 30, N != 1 mod 7}
+      Conjecture (THM-1285 see-saw): G4 = {N == 1 mod 30, N != 1 mod 7}
       -> predicted G4 cap [8,100] = {31, 61, 91}.  N=61 already CONFIRMED
       inline (M = 4/247).
   (2) Extend the D=3 gate verification (HYP-4516, verified N<=37) to N=100.

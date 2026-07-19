@@ -9,7 +9,7 @@ opus-2026-07-19-S399: cross-check the (D,s) active-pair identity D = M*s
 
 For each family: locate the maximizer among rationals a/q for q <= QMAX
 (sanity band, NOT a proof of the global max -- the exact values are canon:
-death-star THM-1255/1256 cross-N S59b, opus THM-1230/1235), then at t*=a/q:
+death-star THM-1284/1272 cross-N S59b, opus THM-1230/1235), then at t*=a/q:
   - list the active speeds (||v t*|| = M exactly),
   - find straddling active pairs (v_i t* = a_i + M, v_j t* = a_j - M),
   - verify s = v_i + v_j equals the reduced denominator times m, and
@@ -83,7 +83,7 @@ def analyze(name, V, n_runners, qmax=300):
 if __name__ == "__main__":
     print("(D,s) identity cross-check -- opus-S399")
     print("NOTE: scan bound is a sanity band; exact M values are canon "
-          "(THM-1256, THM-1230/1235). This verifies the IDENTITY at the "
+          "(THM-1285, THM-1230/1235). This verifies the IDENTITY at the "
           "maximizer, not the global max itself.")
 
     # death-star-S59b N=31 discovery: 31 speeds, 32 runners

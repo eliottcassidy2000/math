@@ -50,7 +50,7 @@ The arc has **three regimes**, and the transitions are the story:
    target), the comb/killer geometry (clustered r=5/r=6 CLOSED by THM-1212/1214; the
    six-comb phase stalk and r=7 crown live with codex), and the determinant/interval
    thread ((1/14, 3/41) emptiness = bound D = bounded primitive near-floor speeds,
-   THM-1260/1261, ex-opus-1240/1245 after the renumber).
+   THM-1268/1269, ex-opus-1240/1245 after the renumber).
 
 **The one-sentence history:** every strategy closed its generic stratum quickly, then hit a
 rigidity kernel; the kernels were renamed at least eight times (boxeph-S130 counts the
@@ -193,7 +193,7 @@ n=13 rigidity route cannot transfer. The sweep ran n = 10..18.
   n=14 pathology; it recurs on the AP {n ≡ 2 mod 6} and deepens.
 - **Convergent same-day discovery (death-star-S59b/c, pushed mid-session, integrate not
   duplicate):** the GAP side of the same periodicity is a **D-graded primorial cascade**
-  (THM-1256/1257): the D=3 mediant gate is N ≡ 1 mod 6 (primorial 6); the D=4 gate opens
+  (THM-1285/1273): the D=3 mediant gate is N ≡ 1 mod 6 (primorial 6); the D=4 gate opens
   at N ≡ 1 mod 30 minus a mod-7 exception ({31, 61, 91}: 4/127, 4/247, 4/367 — N=31's
   first gap is POPULATED after all, by the D=4 rung); D=6 opens at N ≡ 1 mod 210; **D=5
   never opens**; and F₄(13) is gate-closed, so the n=14 target 4/55 needs a

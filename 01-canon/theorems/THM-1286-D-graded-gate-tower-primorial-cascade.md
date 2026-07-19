@@ -1,5 +1,6 @@
 ---
-id: THM-1257
+id: THM-1286
+renumbered: was THM-1257; moved to THM-1286 during the 2026-07-19 collision repair because the first-pushed carrier-42 theorem retains THM-1257
 title: The D-GRADED GATE TOWER is a PRIMORIAL CASCADE — F_D(N) = {1..N}\{N−1} ∪ {D(N−1)} attains the slack-1 rung D/((N+1)D−1) iff N ≡ 1 (mod L_D) and N ≢ 1 (mod 2D−1), where L_D = 2·3·5···(largest prime < 2D−1) and 2D−1 must be PRIME; verified exactly for D=3 (N ≤ 100, extending HYP-4516's ≤ 37), D=4 (members exactly {31, 61, 91} in [8,100] — including the out-of-sample confirmations 4/247 at N=61 and the new 4/367 at N=91), D=5 (binder 9 = 3² composite: NEVER attains; F_5(211) degrades to the floor 1/212), and D=6 (opens at N=211: 6/1271, in a window of width 10⁻⁵). Each level's rung-killer (N ≡ 1 mod 2D−1) is the next level's enabler: L_{D'} = L_D·(2D−1). The N=61 single-far stratum is COMPLETELY classified (unique member 4/247).
 status: >
   VERIFIED-EXACT (the gate law): exact M with witnesses for all 4 × 93 canonical
@@ -15,20 +16,20 @@ status: >
   certificates): unique member (i=60, x=240), M = 4/247.
 source: death-star-2026-07-19-S59c (HYP-7900; owner: extract the full D=4 gate and test N=61)
 depends_on:
-  - THM-1256  # the N=31 discovery + the see-saw (this file is its promised extraction)
-  - THM-1255  # absorption machinery (the N=61 classification leg)
+  - THM-1285  # the N=31 discovery + the see-saw (this file is its promised extraction)
+  - THM-1284  # absorption machinery (the N=61 classification leg)
   - THM-1002  # exactness of the evaluator
 related:
   - HYP-4516  # the mod-30 gate = the D=3 level, herewith verified to N=100
   - HYP-7890, HYP-7900
-  - THM-1240/HYP-7840  # the N=13 wall: 4/55 is the D=4 rung one gate down (closed at 13 since 13 ≢ 1 mod 5)
+  - THM-1268/HYP-7840  # the N=13 wall: 4/55 is the D=4 rung one gate down (closed at 13 since 13 ≢ 1 mod 5)
 scripts:
   - 04-computation/lrc_D_graded_gate_table_deathstar_S59c.py -> 05-knowledge/results/lrc_D_graded_gate_table_deathstar_S59c.out
   - 04-computation/lrc_N61_singlefar_classification_deathstar_S59c.py -> 05-knowledge/results/lrc_N61_singlefar_classification_deathstar_S59c.out
   - (probe) 05-knowledge/results/lrc_N211_D56_probe_deathstar_S59c.out
 ---
 
-# THM-1257 — the gate tower
+# THM-1286 — the gate tower
 
 ## 1. The law
 
@@ -48,7 +49,7 @@ its rung. Verified exactly, all `(D, N) ∈ {3,4,5,6} × [8,100]` plus `N = 211`
 D=3 (p=5):  members in [8,100] = {13,19,25,37,43,49,55,67,73,79,85,97}
             = the HYP-4516 gate exactly (previously verified ≤ 37; now ≤ 100).
 D=4 (p=7):  members in [8,100] = {31, 61, 91}  = {N≡1 mod 30} ∖ {N≡1 mod 7}:
-            4/127 (N=31, THM-1256), 4/247 (N=61, predicted then found, t=70/247),
+            4/127 (N=31, THM-1285), 4/247 (N=61, predicted then found, t=70/247),
             4/367 (N=91, NEW, t=53/367) — all with active pair (7, 4(N−1)).
 D=5 (9=3²): NO members anywhere tested; F_5(211) DEGRADES TO THE FLOOR (M = 1/212,
             a second tight family at N=211 — the F(31)-degrade phenomenon recurs).
@@ -95,7 +96,7 @@ makes the family loose. Exhibited-multiplier analysis:
 - **b=4** (`Q = 4N`, `a ≡ ±1 mod N`): the `u ≡ 3 (mod 4)` ladder's near-zero slot
   is deleted only when `N ≡ 0 (mod 4)`; members need N odd anyway.
 - **b=5** (`Q = 4N+1`): `5a ≡ ±4` unsolvable ⟺ `5 | 4N+1` ⟺ **N ≡ 1 (mod 5)** —
-  the THM-1256 see-saw (same congruence closes D=3's rung).
+  the THM-1285 see-saw (same congruence closes D=3's rung).
 - **b=6** (`Q = 2(2N+1)`, value exactly the window top): `6a ≡ ±4` unsolvable ⟺
   `3 | 2N+1` ⟺ **N ≡ 1 (mod 3)** — the mod-3 condition does DOUBLE DUTY.
 - **b=7 = rung**: alive ⟺ `7 ∤ 4N+3` ⟺ **N ≢ 1 (mod 7)**.

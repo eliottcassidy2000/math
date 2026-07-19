@@ -54,9 +54,9 @@ proof status.
 - `15/154` — seven-speed Hunter/safe-set floor (THM-1221, codex-S82; crosses 2/21 by 1/462).
 - `1/(2ρ)` — clustered floor M ≥ 1/(2ρ), ρ = v_max/v_min (death-star-S58h; M < 1/13 forces ρ > 6.5).
 - `1/(49c)` — five-comb survivor floor in every c-slow gap (THM-1198, codex-S76).
-- `4/55` — the canonical D=4 slack-1 target; unique least-denominator fraction in (1/14, 3/41) (THM-1260, ex-opus-1240). OPEN; F₄(13) is binder-gate-closed so any realizer is non-single-far (death-star-S59b, backlog vii).
+- `4/55` — the canonical D=4 slack-1 target; unique least-denominator fraction in (1/14, 3/41) (THM-1268, formerly opus THM-1240). OPEN; F₄(13) is binder-gate-closed so any realizer is non-single-far (death-star-S59b, backlog vii).
 - `D = M·s` — the determinant identity at the active pair (THM-1261, ex-opus-1245); LRC(14) ⟺ s ≤ 14D (THM-1205).
-- `4/127`, `4/247`, `4/367` — D=4 slack-1 rungs ATTAINED at N = 31, 61, 91 ({1..29,31,120} etc.; binder 7); the D-graded primorial cascade: D=3 gate mod 6, D=4 gate mod 30 (minus mod-7 exception), D=6 opens at N ≡ 1 mod 210 (6/1271 at N=211), D=5 NEVER (death-star THM-1256/1257, HYP-7900).
+- `4/127`, `4/247`, `4/367` — D=4 slack-1 rungs ATTAINED at N = 31, 61, 91 ({1..29,31,120} etc.; binder 7); the D-graded primorial cascade: D=3 gate mod 6, D=4 gate mod 30 (minus mod-7 exception), D=6 opens at N ≡ 1 mod 210 (6/1271 at N=211), D=5 NEVER (death-star THM-1285/1273, HYP-7900).
 
 ## Finite-check route (Rosenfeld/S–T architecture)
 

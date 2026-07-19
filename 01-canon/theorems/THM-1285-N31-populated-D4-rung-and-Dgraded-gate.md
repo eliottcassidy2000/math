@@ -1,6 +1,7 @@
 ---
-id: THM-1256
-title: The N=31 first gap is POPULATED — {1..29, 31, 120} attains the D=4 slack-1 rung 4/127 (refuting THM-1255 §4's band-law prediction), the single-far strata are completely classified for N = 14..31 (members exactly 3/59, 3/77, 4/127 at N = 19, 25, 31), and the mod-30 mediant gate is the D=3 slice of a D-GRADED gate family (binder 2D−1 at Q = (N+1)D−1) with an arithmetic see-saw — N ≡ 1 (mod 5) closes the D=3 gate and opens the D=4 gate at once.
+id: THM-1285
+renumbered: was THM-1256; moved to THM-1285 during the 2026-07-19 collision repair because the first-pushed coherent-word theorem retains THM-1256
+title: The N=31 first gap is POPULATED — {1..29, 31, 120} attains the D=4 slack-1 rung 4/127 (refuting THM-1284 §4's band-law prediction), the single-far strata are completely classified for N = 14..31 (members exactly 3/59, 3/77, 4/127 at N = 19, 25, 31), and the mod-30 mediant gate is the D=3 slice of a D-GRADED gate family (binder 2D−1 at Q = (N+1)D−1) with an arithmetic see-saw — N ≡ 1 (mod 5) closes the D=3 gate and opens the D=4 gate at once.
 status: >
   PROVED — M({1..29,31,120}) = 4/127 exactly (three independent methods: pair-sum
   evaluator, witness residue check at t = 55/127, full scan over all q ≤ 260 ⊇ all
@@ -11,20 +12,20 @@ status: >
   member across bordered (452,905), two-defect (342,432), targeted-multiple (10,440)
   and needle-repair species; species D (band descent) yielded 0 within budget — typed
   honestly as NO EVIDENCE from that instrument, not a negative.
-source: death-star-2026-07-19-S59b (HYP-7890; the owner-directed test of THM-1255 §4's N=31 prediction)
+source: death-star-2026-07-19-S59b (HYP-7890; the owner-directed test of THM-1284 §4's N=31 prediction)
 depends_on:
-  - THM-1255  # the absorption lemma + classification machinery (its §4 conjecture is corrected by this file)
+  - THM-1284  # the absorption lemma + classification machinery (its §4 conjecture is corrected by this file)
   - THM-1002  # pair-sum denominator lemma (exactness of the evaluator)
 related:
   - HYP-4516  # the mod-30 binder gate = the D=3 slice of the D-graded gate
   - HYP-7890  # this test
-  - HYP-7840 / THM-1240  # opus bound-D at N=13: the D=4 rung 4/55 is the same object one gate down
+  - HYP-7840 / THM-1268  # opus bound-D at N=13: the D=4 rung 4/55 is the same object one gate down
   - mac-mini-S29  # M(F(31)) = 1/32 degrade (replicated here, P1)
 scripts:
   - 04-computation/lrc_N31_bandlaw_test_deathstar_S59b.py -> 05-knowledge/results/lrc_N31_bandlaw_test_deathstar_S59b.out
 ---
 
-# THM-1256 — N=31 is populated: the D=4 rung opens where the mediant dies
+# THM-1285 — N=31 is populated: the D=4 rung opens where the mediant dies
 
 ## 1. The discovery
 
@@ -39,9 +40,9 @@ a brute maximum over ALL `q ≤ 260 ⊇ {2·max = 240}`, which by THM-1002 §1 i
 of every candidate denominator. `127 = 32·4 − 1`: the family sits exactly on the
 **slack-1 rung** `D/((N+1)D − 1)` at `D = 4`, order `k = q − N·D = 3`.
 
-This **refutes** THM-1255 §4's band-law prediction (N=31 empty), which I posed
+This **refutes** THM-1284 §4's band-law prediction (N=31 empty), which I posed
 yesterday-equivalent and tested today at the owner's direction. The instrument that
-refuted it is THM-1255's own absorption classification — the conjecture and its
+refuted it is THM-1284's own absorption classification — the conjecture and its
 counterexample came out of the same machinery, in the right order.
 
 ## 2. The complete single-far classification, N = 14..31 (PROVED)
@@ -50,7 +51,7 @@ For every `N ∈ [14,31]` and every defect `i`, the base `B = {1..N}∖{i}` has 
 12 speeds, so the settled-LRC floor is unavailable; instead each base carries a
 **per-instance certificate**: `M(B)` computed exactly and checked `> θ = 2/(2N+1)`
 (zero failures across all 18·N bases — incidentally, no LRC(N+1) near-violation among
-them). Then THM-1255's absorption lemma gives finite `X₀` and the finite check decides
+them). Then THM-1284's absorption lemma gives finite `X₀` and the finite check decides
 the stratum. Complete member list over all `N ∈ [14,31]`, all `i`, ALL `x` unbounded:
 
 ```text
@@ -85,7 +86,7 @@ at once.) The see-saw is necessary-not-sufficient: N = 16 ≡ 1 (mod 15) has NO 
 form from the P2 data, and testing its predicted next opening (N = 61?), are the named
 follow-ups.
 
-> **UPDATE (S59c, same day): both follow-ups DONE — see THM-1257.** The full gate is
+> **UPDATE (S59c, same day): both follow-ups DONE — see THM-1286.** The full gate is
 > `{N ≡ 1 (mod 30), N ≢ 1 (mod 7)}`; members in [8,100] exactly {31, 61, 91}; N=61
 > predicted-then-confirmed (4/247, t = 70/247), N=91 new (4/367). One correction to
 > the parenthetical above: the b=2 kill is NOT free parity of Q′ (clearance 4 is
@@ -97,7 +98,7 @@ follow-ups.
 
 ## 4. What this feeds
 
-- **opus THM-1240/HYP-7840 (the N=13 wall):** the D=4 slack-1 rung IS `4/55` at N=13 —
+- **opus THM-1268/HYP-7840 (the N=13 wall):** the D=4 slack-1 rung IS `4/55` at N=13 —
   the mediant of `(1/14, 3/41)`. This theorem shows D=4 rungs are REALIZED in nature
   when the gate arithmetic conspires, so `(1/14, 3/41)` emptiness cannot lean on any
   "D ≥ 4 is never attained" heuristic — it must be N=13-specific. Concretely:

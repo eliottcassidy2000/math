@@ -2,7 +2,7 @@
 """
 death-star-2026-07-19-S59b -- HYP-7890: the N=31 BAND-LAW TEST.
 
-THM-1255 band law: for N >= 8, first gap W_N = (1/(N+1), 2/(2N+1)) nonempty
+THM-1284 band law: for N >= 8, first gap W_N = (1/(N+1), 2/(2N+1)) nonempty
 <=> N == 1 (mod 6) AND 5 nmid (3N+2).  N=31 is the FIRST N==1 mod 6 with
 5 | 3N+2 = 95: the b=5 binder congruence dies, mac-mini-S29 pinned the
 canonical family F(31) = {1..29,31,90} at M = 1/32 (degrade to the floor).
@@ -19,7 +19,7 @@ settled-LRC floor is unavailable; we use PER-INSTANCE certificates: exact
 M(B) > theta computed directly (expected: M(B) >= 1/N > theta, i.e. no
 LRC(N+1) near-violation among these bases -- itself a checkable side fact).
 Then l(B,theta) > 0, X0 = ceil(2 theta / l), and the finite check decides the
-stratum completely (THM-1255's absorption lemma, unchanged).
+stratum completely (THM-1284's absorption lemma, unchanged).
 """
 from fractions import Fraction as F
 from math import gcd, ceil
