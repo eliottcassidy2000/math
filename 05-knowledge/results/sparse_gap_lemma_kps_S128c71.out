@@ -1,0 +1,21 @@
+### the sparse-gap lemma: does some k1-gap hold <= 2 foreign teeth? ###
+  regime            trials  min-over-trials of (min teeth per k1-gap)   #trials with no 2-sparse gap
+  consecutive       160     3                                           160
+  step<=3           160     3                                           160
+  step<=8           160     3                                           160
+  step<=30          160     3                                           160
+  spread x1.3       160     4                                           160
+
+### does (*) actually hold numerically?  6/k1 - 2/k2 > 3/k4 ###
+  killers                     6/k1-2/k2      3/k4        (*) holds
+  (157, 158, 159, 160)        0.02555833     0.01875000  True
+  (371, 374, 377, 379)        0.01082491     0.00791557  True
+  (550, 553, 554, 558)        0.00729245     0.00537634  True
+  (157, 200, 300, 600)        0.02821656     0.00500000  True
+  (157, 314, 628, 1256)       0.03184713     0.00238854  True
+
+### the resulting bound vs the truth, on the standing worst case ###
+  I = [71/154, 41/84], k1-gaps inside: 10 ; teeth per gap: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  sparsest gap m = 3 -> bound L >= 1131/3885112 = 0.00029111
+  needed 1/(7k4) = 0.00037693 ; 7*k4*bound = 0.7723
+DONE
