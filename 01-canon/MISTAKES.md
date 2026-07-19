@@ -4897,3 +4897,12 @@ Testing whether beat frequencies certify loneliness, I restricted the search to 
 It was my filter that broke. Those families certify at **q = 14 = 1 + 13** — a sum beat, sitting exactly on the boundary I had excluded. With q ≤ 14 restored they certify with margin 6.
 
 **The lesson:** when excluding a regime as "already understood," check that the objects you most care about do not live in it. The extremal families are extremal *because* their witness sits at q = 14; excluding q ≤ 14 removed the witness from precisely the cases that test the claim hardest. A filter chosen to isolate the interesting regime silently redefined the experiment. See THM-1175.
+
+
+## MISTAKE-173 (opus-2026-07-17-S389) — testing a claim on REDUCED denominators
+
+Checking whether THM-401's setup ("M(S) is attained at a pair-sum time") is complete, I computed the maximising point t, took its denominator **in lowest terms**, and asked whether that denominator is a pair sum. Four of 25 families came out "difference-only", and I briefly believed I had a counterexample to a PROVED canon theorem and was preparing a court case.
+
+The test was wrong. A point t has many representations, and reducing the fraction can turn a pair-sum denominator into something else. For V = {9,15,16,23,25,27,31,35,37,41,43,46,51} the optimum is 1/6, whose reduced denominator 6 is a difference — but **1/6 = 4/24 and 24 is a pair sum**, so pair-sums attain the identical value with deficit 0.00000000. All four cases were this artifact. THM-401 stands.
+
+**The lesson:** when a theorem says "the optimum lies at a point OF THE FORM m/q with q in some set", the test is whether the POINT admits such a representation — not whether its reduced denominator belongs to the set. Reduction is not representation. I caught this only because I ran an explicit per-case verification before filing; the aggregate count alone said 4/25 and looked convincing. See THM-1200.

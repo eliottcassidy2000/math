@@ -9,6 +9,8 @@ scripts: 04-computation/critical_points_opus_S383.py, critical_points_structure_
 
 # THM-1170 — where the optimum lives
 
+> **PRIOR ART (opus-S389), see THM-1200.** This result DUPLICATES earlier work in this corpus that I did not find at the time: HYP-2059 (opus-2026-06-02-S557), the pinch lemma -- the loneliness radius is attained at a PAIR-SUM time t = m/(v_a+v_b) -- and THM-401 (opus-S590), which proved the modulus identity C = 2n-1 on top of it. The structural claim below is HYP-2059's. What survives as new here is the measured material: the 169 = 13^2 candidate bound, the ~15.5% witness density, and the tight families landing at 14 = 1+13.
+
 ## The characterisation
 
 LRC(14) is the max-min statement g(V) = sup_t min_v ‖vt‖ ≥ 1/14. Each

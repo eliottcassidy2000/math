@@ -1,0 +1,44 @@
+(1) DOES THM-1170 ADD ANYTHING TO HYP-2059?  Is the winner ALWAYS a pair SUM?
+    (HYP-2059/S557: optimum attained at t = m/(v_a+v_b).  My S383 reported
+     sum 55 / diff 20 / peak 11 -- but types can share a denominator.)
+    25 families: winner is a pair SUM in 21; difference-only 4; peak-only 0
+    => if difference/peak-only is 0, HYP-2059 already covers it and my
+       'sum 55 / diff 20 / peak 11' was counting CO-OCCURRENCES, not winners.
+
+(2) THE PARITY EXTENSION: the LRC seven is n/2, an INTEGER only for even n
+    hhat(m) = sin(2*pi*m/n)/(pi*m) vanishes iff n | 2m, i.e. m = 0 mod n/gcd(2,n)
+      n even -> zeros every n/2 steps (DENSE)
+      n odd  -> zeros every n steps   (half as dense)
+    n= 12: hhat zeros every   6 steps;  n/2 = 6 (INTEGER)   arity ceiling k < n/2 is exact
+    n= 13: hhat zeros every  13 steps;  n/2 = 6.5 (not an integer)   arity ceiling k < n/2 never degenerates exactly
+    n= 14: hhat zeros every   7 steps;  n/2 = 7 (INTEGER)   arity ceiling k < n/2 is exact
+    n= 15: hhat zeros every  15 steps;  n/2 = 7.5 (not an integer)   arity ceiling k < n/2 never degenerates exactly
+    n= 16: hhat zeros every   8 steps;  n/2 = 8 (INTEGER)   arity ceiling k < n/2 is exact
+    n= 17: hhat zeros every  17 steps;  n/2 = 8.5 (not an integer)   arity ceiling k < n/2 never degenerates exactly
+
+(3) THE TENT/INDEPENDENCE COINCIDENCE ACROSS n  (THM-1195 was n=14)
+    tent threshold = lam/2 = 1/(2n); independence E[min] = (1/2)/(n_speeds+1)
+    with n_speeds = n-1 these agree iff 1/(2n) = 1/(2n) -- ALWAYS.
+    n= 10: tent 1/20  independence 1/20   EQUAL
+    n= 12: tent 1/24  independence 1/24   EQUAL
+    n= 13: tent 1/26  independence 1/26   EQUAL
+    n= 14: tent 1/28  independence 1/28   EQUAL
+    n= 20: tent 1/40  independence 1/40   EQUAL
+    => the coincidence THM-1195 found at n=14 is NOT special to 14: it holds
+       for every n, and is the statement that LRC's floor sits exactly where
+       the geometric and probabilistic estimates cross.
+difference-only optima found: 4
+
+  V = [9, 15, 16, 23, 25, 27, 31, 35, 37, 41, 43, 46, 51]
+  optimum at t = 1/6, gap = 1/6 = 0.16666667
+  q=6 is a difference: True; a half-period 2v: False; a pair SUM: False
+  best achievable over PAIR-SUM denominators only: 1/6 = 0.16666667 (at q=24)
+  => pair-sums alone attain it  (deficit 0.00000000)
+  which pairs give the difference q=6: [(9, 15), (25, 31), (31, 37)]
+
+  V = [1, 2, 6, 12, 17, 23, 37, 38, 43, 48, 49, 52, 54]
+  optimum at t = 1/5, gap = 1/5 = 0.20000000
+  q=5 is a difference: True; a half-period 2v: False; a pair SUM: False
+  best achievable over PAIR-SUM denominators only: 1/5 = 0.20000000 (at q=25)
+  => pair-sums alone attain it  (deficit 0.00000000)
+  which pairs give the difference q=5: [(1, 6), (12, 17), (38, 43)]

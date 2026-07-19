@@ -1,3 +1,46 @@
+## opus-2026-07-17-S389 -- THM-1200 THE TWO SEVENS (tournament Paley/QR_7/H7 vs LRC n/2 = 7 -- numerically equal, structurally unrelated) + THE PARITY EXTENSION (hhat zeros every n/2 for EVEN n vs every n for odd; arity ceiling exact only for even n -- so LRC(14)'s sevens are exact because 14 is even) + PRIOR-ART CREDIT: my THM-1170 duplicated HYP-2059/THM-401 + MISTAKE-173 (HYP-7750)
+
+Owner: see how past work has treated 7 and extend. The archaeology turned up more than
+expected, including a duplication of my own earlier work and a near-miss court case.
+THE TWO SEVENS: this corpus contains two sevens that have nothing to do with each other.
+The TOURNAMENT seven -- Paley on 7 vertices, QR_7, H7, the heptagon, 620+ Paley mentions
+-- where 7 is a prime congruent to 3 mod 4. And the LRC seven -- 2*lam = 1/7, S1 = 13/7,
+hhat zeros at 7|n, the k=7 arity ceiling -- where 7 is n/2 = 14/2. They coincide
+numerically and not structurally: nothing in the LRC seven requires primality, nothing in
+the Paley seven requires evenness. Worth stating because the corpus's heaviest 7-thread
+is the tournament one, and it is easy to assume the LRC sevens are the same object.
+PRIOR ART I DUPLICATED: HYP-2059 (opus-2026-06-02-S557) is the PINCH LEMMA -- the
+loneliness radius is attained at a PAIR-SUM time t = m/(v_a+v_b) -- and THM-401
+(opus-S590) proved the modulus identity C = 2n-1 on top of it via Farey neighbours. My
+THM-1170 (S383) rederived that critical-point structure 800 sessions later without
+finding the earlier work. I have amended THM-1170 to credit it. What survives as new
+there is only the measured material: the 169 = 13^2 candidate bound, the ~15.5% witness
+density, and the tight families landing at 14 = 1+13.
+A NEAR-MISS WORTH READING: I briefly thought I had a counterexample to THM-401 -- 4 of 25
+families whose optimum sat at a difference-only denominator -- and was preparing a court
+case against a proved canon theorem. It is a DENOMINATOR-REDUCTION artifact. For
+V = {9,15,16,...,51} the optimum is 1/6, whose reduced denominator 6 is a difference, but
+1/6 = 4/24 and 24 IS a pair sum, so pair-sums attain the identical value with deficit
+0.00000000. All four cases were this. THM-401 stands. MISTAKE-173: when a theorem says
+the optimum lies at a point OF THE FORM m/q with q in some set, the test is whether the
+POINT admits such a representation, not whether its REDUCED denominator is in the set.
+Reduction is not representation. I caught it only by running a per-case verification
+before filing; the aggregate 4/25 looked convincing on its own.
+THE EXTENSION: the LRC seven is a PARITY effect. hhat(m) = sin(2 pi m/n)/(pi m) vanishes
+iff n | 2m, so the zeros recur every n/2 steps when n is EVEN and every n steps when n is
+odd -- twice as dense for even n -- and the density coefficient 1 - 2k*lam vanishes at
+k = n/2, an integer ONLY for even n. Verified at n = 12..17: zeros every 6, 13, 7, 15, 8,
+17, with the arity ceiling exact only at n = 12, 14, 16. So LRC(14)'s sevens are exact
+BECAUSE 14 IS EVEN, and I would predict the THM-1155/1165/1180 machinery transfers to
+even n and weakens at odd n.
+ALSO, generalising THM-1195: the tent threshold lam/2 = 1/(2n) and the independence
+expectation (1/2)/((n-1)+1) = 1/(2n) are EQUAL FOR EVERY n -- verified as exact rationals
+at n = 10, 12, 13, 14, 20. So that coincidence explains LRC(n)'s tightness in general,
+not 14's in particular.
+FILES: THM-1200, THM-1170 amended, MISTAKE-173, script + out, HYP-7750. opus; S389.
+
+---
+
 ## opus-2026-07-17-S388 -- THM-1195 THE TENT-INTEGRAL CRITERION (int g >= 1/28 => LRC(14); fires 9/12, fails on the tight families by necessity) -- and WHY LRC(n) IS TIGHT AT lambda = 1/n: the tent threshold lambda*(1/2) and the independence expectation (1/2)/(n+1) coincide EXACTLY at lambda = 1/(n+1) = 1/14 (HYP-7740)
 
 Owner: work a new creative angle. Following THM-1185's triage rule -- measure-based

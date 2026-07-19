@@ -1538,3 +1538,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `delsarte_lp_opus_S386.out` | [STORED] | THM-1185: Toeplitz symbol = covering multiplicity; LP blind to measure-zero witnesses, so it cannot prove LRC(14). | (self) |
 | `beat_targeted_opus_S387.out` | [STORED] | THM-1190: composite-beat counterconstruction forces non-primitivity; 188 primitive families, margin never below 1. | (self) |
 | `tent_integral_opus_S388.out` | [STORED] | THM-1195: tent-integral criterion (fires 9/12, fails on tight families); 1/28 threshold = independence expectation. | (self) |
+| `seven_synthesis_opus_S389.out` | [STORED] | THM-1200: two sevens (tournament vs LRC); parity extension n/2; tent/independence identity for all n. | (self) |
