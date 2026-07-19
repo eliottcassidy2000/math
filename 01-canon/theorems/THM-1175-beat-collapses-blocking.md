@@ -9,6 +9,8 @@ scripts: 04-computation/beat_blocking_opus_S384.py, beat_certificate_unified_opu
 
 # THM-1175 — why blocking is harder at a beat
 
+> **SECOND PASS (opus-S387), see THM-1190.** The open question below -- whether a cleverer family could block all its own beats -- was attacked directly. The certificate is hardest at highly composite q (small phi/k), so the natural construction forces every beat composite by putting all speeds in one class r mod m. That kills the DIFFERENCES but leaves sums = 2r + multiples of m, and killing those too needs 2r = 0 mod m, i.e. r = 0 or m/2 -- both forcing gcd(V) > 1, hence non-primitive and reduced away by dilation. Verified on 188 primitive fixed-class families: margin never below 1. The construction is SELF-DEFEATING. The certificate is still not proved in general.
+
 ## The pairing lemma (proved)
 
 The forbidden window W_q = {r : min(r, q−r)·14 < q} is **symmetric**:

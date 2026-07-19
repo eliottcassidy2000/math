@@ -1,3 +1,37 @@
+## opus-2026-07-17-S387 -- THM-1190 THE NATURAL COUNTERCONSTRUCTION AGAINST THE BEAT CERTIFICATE IS SELF-DEFEATING (killing differences is free; killing sums too forces gcd(V) > 1, which dilation reduces away -- verified gcd = 210/105/120/60/60/30) + the conservative count distinct <= |{+-v mod q}| verified 0/150, and my own EQUALITY claim corrected (HYP-7730)
+
+Owner: work whether the beat constraint breaks the blocking construction. Second pass --
+S384 proved the pairing lemma but left the certificate on blind hill-climbing, which is
+weak evidence given my record. This time I attacked it in a targeted way.
+THE CONSERVATIVE COUNT: W_q is symmetric, so +-v = +-v' (mod q) implies identical
+kill-sets, hence #distinct blockers <= |{+-v mod q}|. Verified 0 violations in 150 trials,
+with STRICTLY fewer in 53 -- non-coprime speeds collapse further still. So the +- class
+count is a SAFE, conservative proxy and the true blocking capacity is often lower, which
+only helps the certificate.
+A CORRECTION I OWE: earlier in this session I claimed those two counts were EQUAL. They
+are not -- 53/120 mismatches -- and the verification I ran before using the claim caught
+it. Only the => direction holds, which is fortunately the direction the argument needs.
+THE TARGETED ATTACK: the certificate fires when (blockers)*k_q < phi(q), so it is hardest
+where phi(q)/k_q is small -- that is, for HIGHLY COMPOSITE q. So the natural way to
+defeat it is to force every beat composite: put all speeds in one class r mod m, which
+makes all DIFFERENCES multiples of m. That part works. But then the SUMS are
+2r + multiples of m, and making those composite too requires 2r = 0 mod m, i.e. r = 0 or
+r = m/2 -- and both force a common factor. Verified: gcd(V) = 210, 105, 120, 60, 60, 30
+in the six cases. Every one is NON-PRIMITIVE, so dilation invariance (THM-1050) reduces
+it to a smaller family. Killing the differences is free; killing the sums as well costs
+primitivity. The construction cannot be completed.
+A targeted sweep of 188 PRIMITIVE fixed-class families confirmed it: the certificate
+never failed, lowest margin 1, falling back to q = 2 (all-odd, classical sieve).
+ANSWER TO THE QUESTION AS ASKED: yes, the beat constraint does break the blocking
+construction -- precisely because THM-1110's blocking assumed FREE residues, which the
+pairing lemma forbids at a family's own beats, and because the natural repair is
+self-defeating. STILL OPEN: the certificate in general. This rules out one natural
+construction class, not all counterexamples, and the certificate remains strictly
+stronger than LRC(14), so it could fail somewhere LRC(14) holds. I am not claiming it.
+FILES: THM-1190, THM-1175 amended, 2 scripts + outs, HYP-7730. opus; S387.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.77) -- THM-1149: why d proportional to (1,2,3) is the maximiser; a proof sketch whose every step is exact, plus absorbing codex-S74's MISTAKE-171 (owner: prove d proportional to (1,2,3) is the maximiser). FIRST, THE AUDIT. codex-S74 filed MISTAKE-171 against my THM-1141 replacement target 'max gap >= (4/3) * mean', which is FALSE: their exact row P = {1,...,8}, J = [1/14, 13/112], killers (108,109,110,111) gives L/mu_actual = 638/573 < 4/3. My error was that the measured ratio 3.34 was taken against the UNIFORM-INTERLEAVING BENCHMARK m0 = 3/(7 sum k), not against the ACTUAL component mean -- two different denominators, which I conflated. Their D*B decomposition, with D = L_max/mu_actual and B = mu_actual/m0, keeps the two effects apart, and their row succeeds through baseline gain B despite having D < 4/3. Nothing in this session depends on the retracted target, since this is the continuum-measure line rather than the ratio line, but I have recorded the correction at the head of THM-1149. THE PROOF ITSELF, in four steps, each verified exactly. (I) BAD FORCES BALANCE. The three teeth have total width 1/2, so the four surviving pieces of [0,1] total 1/2, and requiring all four to be at most 1/6 forces them close to 1/8 each -- a bad configuration cannot be lopsided. (II) EXACT BALANCE SITS AT RATIO 1:2:3. Laying out 1/8, tooth, 1/8, tooth, 1/8, tooth, 1/8 puts the tooth RIGHT EDGES at h = (7/24, 7/12, 7/8); I verified that this gives four pieces each exactly 1/8, summing to 1/2, with longest 1/8 which is at most 1/6, so the configuration is bad -- and those three edges are in exact ratio 1 : 2 : 3. (III) THE RATIO TRANSFERS TO d. Since h_i = (7/6) frac(-d_i u), balance requires frac(-d_i u) in ratio 1:2:3. On any interval of u with no wrapping, frac(-d_i u) = c_i - d_i u is affine, so h3/h2 = (c3 - d3 u)/(c2 - d2 u) is a non-constant Moebius function of u UNLESS c3/c2 = d3/d2. Holding the ratio fixed across an interval -- which positive bad measure requires -- therefore forces d3/d2 = 2 and d4/d2 = 3, i.e. d proportional to (1,2,3). (IV) VERIFIED DECISIVELY. The fraction of u on a 2520-grid whose tooth-edge ratio lies within 1% of (1,2,3) is 0.3329 for (1,2,3) and 0.3325 for (2,4,6), and EXACTLY ZERO for (1,2,4), (1,3,5), (2,3,4), (1,2,5) and (3,5,7): positive measure for the proportional family and measure zero otherwise, which is precisely what (III) predicts. Evaluating at u = 3/4 makes it concrete: (1,2,3) gives edge ratio (1,2,3) with F = 1/8 and is bad; (3,6,9) gives the reversed (1, 2/3, 1/3) with F = 1/8 and is bad; every non-proportional triple gives F = 5/12 and is not. (V) AND ON THAT FAMILY THE VALUE IS EXACTLY 2/21. For d = (m, 2m, 3m) the run predicted by THM-1147 at [5/(21m), 2/(7m)] has F equal to EXACTLY 1/6 at BOTH endpoints and 5/36 inside, confirmed for m = 1, 2 and 3, giving 2m runs of width 1/(21m) and a total of 2/21 invariant in m. That is THM-1148's measured ceiling, now explained by a mechanism rather than counted. HONEST STATUS: this is a PROOF SKETCH and not a written proof. The wrapping case-analysis in (III) is not carried out, and (IV) is grid-verified rather than derived from (III). Uniform r=5 remains OPEN. What has changed is that the ceiling has an argument identifying (1,2,3) as the UNIQUE maximiser for a structural reason -- it is the only frequency vector able to hold the balanced configuration on a set of positive measure.
 
 Prompt (owner): prove d proportional to (1,2,3) is the maximiser

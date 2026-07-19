@@ -1536,3 +1536,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `sharper_level_bound_opus_S385.out` | [STORED] | THM-1180: locality + j=1 rounding test, both 0/360 exact; 360x leaf speedup. | (self) |
 | `witness_branch_opus_S385.out` | [STORED] | THM-1180: witness-point branching validated on k=3,4 (10x fewer nodes, same 2 families); k=5 in flight. | (self) |
 | `delsarte_lp_opus_S386.out` | [STORED] | THM-1185: Toeplitz symbol = covering multiplicity; LP blind to measure-zero witnesses, so it cannot prove LRC(14). | (self) |
+| `beat_targeted_opus_S387.out` | [STORED] | THM-1190: composite-beat counterconstruction forces non-primitivity; 188 primitive families, margin never below 1. | (self) |

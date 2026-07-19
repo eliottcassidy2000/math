@@ -1,0 +1,38 @@
+(1) VERIFY: #distinct kill-sets == |{+-v mod q}| ?
+    120 (V,q) pairs; mismatches = 53
+    (0 => blocking capacity is exactly the number of +- classes mod q)
+
+(2) THE RATIO LANDSCAPE phi(q)/k_q -- which q can certify at all?
+    certificate at q needs |{+-v}| < phi(q)/k_q, and |{+-v}| >= 1
+    best q: [(90, '12.0'), (23, '11.0'), (150, '10.0'), (66, '10.0'), (41, '10.0'), (25, '10.0')]
+    worst q: [(30, '4.0'), (24, '4.0'), (20, '4.0'), (16, '4.0'), (15, '4.0'), (18, '3.0')]
+    q with ratio <= 4 (hard to certify): 6 of 185
+
+(3) TARGETED ATTACK: build families whose beats are all LOW-ratio q
+    (highly composite beats => small phi => small phi/k => no certificate)
+    lowest certificate margin from composite-beat construction: 1000000000
+      V = None
+      best beat = None
+(1c) CORRECTED: is distinct kill-sets <= |{+-v mod q}| (the safe direction)?
+    150 pairs: violations of distinct <= pmclasses = 0; strictly fewer = 53
+    => the pairing lemma direction holds; the converse fails, so pmclasses is a
+       CONSERVATIVE proxy (real blocking capacity is often lower still).
+
+(3c) TARGETED ATTACK, corrected: speeds in a fixed class r mod m
+     (differences become multiples of m -- highly composite, low phi/k)
+     188 primitive fixed-class families tested
+     lowest certificate margin: 1
+       V = [1, 211, 421, 631, 841, 1051]... (first 6)
+       best beat = (2, 'sieve', 1)
+
+(4c) WHY THIS CONSTRUCTION CANNOT BE PUSHED FURTHER
+     To make DIFFERENCES highly composite, put all speeds in one class mod m.
+     Then sums are 2r + multiples of m.  To make SUMS composite too you need
+     2r = 0 mod m, i.e. r = 0 or m/2 -- and both force gcd(V) > 1, i.e. a
+     NON-PRIMITIVE family, which dilation invariance (THM-1050) reduces away.
+       m= 210 r=   0: gcd(V) =  210  non-primitive -> dilation reduces it
+       m= 210 r= 105: gcd(V) =  105  non-primitive -> dilation reduces it
+       m= 120 r=   0: gcd(V) =  120  non-primitive -> dilation reduces it
+       m= 120 r=  60: gcd(V) =   60  non-primitive -> dilation reduces it
+       m=  60 r=   0: gcd(V) =   60  non-primitive -> dilation reduces it
+       m=  60 r=  30: gcd(V) =   30  non-primitive -> dilation reduces it
