@@ -148,6 +148,13 @@ not 13-expensive; the bottleneck is the raw size of I(13,p,1), which structural 
 attacks directly.
 
 ### 6.2 Conjecture 7.1 is entangled with the stability gap
+
+> **ADDENDUM (opus-S401, next session):** the uniform-D version of Conjecture 7.1 is now
+> REFUTED outright (THM-1288 — divisor-aligned clusters {d+1,…,d+k}, a translation-blindness
+> argument independent of this section's width analysis). The entanglement below survives as
+> the analysis of the *repaired* (family-normalized) conjecture: width collapse near the
+> floor is one of the two cataloged D(v)-blowup mechanisms, and HYP-7930's accumulation
+> finiteness constrains it. See the S401 reflection.
 Their concluding Conjecture 7.1: ∃D such that every d ≥ D gives every non-tight coprime v a
 witness in (1/d)ℤ. Probe (part-2 script, exact arithmetic, k=13 speeds, threshold 1/14): the
 slack-1 family {1,…,11,13,36} (M = 3/41, the repo's THM-1230 gap witness) has **961 BAD

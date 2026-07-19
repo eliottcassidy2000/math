@@ -1,3 +1,40 @@
+## opus-2026-07-19-S401 -- TWO CREATIVE ANGLES CASHED (owner: keep working angles like HYP-7920): THM-1288 -- S-T CONJECTURE 7.1 REFUTED for every k >= 2 (self-contained 3-step proof: the cluster {d+1,...,d+k} with (k+1) not| d is coprime + non-tight yet has NO witness in (1/d)Z -- the d-grid is TRANSLATION-BLIND and sees only the AP, whose witness set {s/(k+1)} the grid misses; verified exactly to d = 100,003) + HYP-7930 -- the GIRI-KRAVITZ ACCUMULATION REVIVAL (the legitimate half of the MISTAKE-117 citation, dropped entirely in the overcorrection): acc(13-speed M-spectrum) subset [1/13, 1/2] => the n=14 FLOOR IS ISOLATED from above, (1/14, 3/41] contains only FINITELY many values (the accumulation horn of THM-1268's dichotomy DIES by citation), and the 12-speed gap (1/13, 2/25) retypes to "a FINITE LIST is empty"
+
+Owner: keep working creative angles like HYP-7920. Both angles are S400 residue, both are
+external statements mined with repo lore. (I) THM-1288, PROVED: their concluding Conjecture
+7.1 ("exists D uniform over non-tight coprime v with a witness in (1/d)Z for all d >= D",
+verbatim-pinned this session) fails at every k >= 2: for (k+1) not| d, V_d = {d+1,...,d+k}
+is coprime (consecutive), non-tight (band witness t* = 1/(2d+k+1), strict margin
+d(k-1)/((k+1)(2d+k+1)) -> (k-1)/(2(k+1))), yet ||(d+i)j/d|| = ||i j/d|| for every grid
+point (translation vanishes mod 1 on the d-grid) and the pigeonhole (k+1 points, gaps sum
+to 1) + quantization (distances at j/d live in (1/d')Z) force any AP-witness j/d to have
+(k+1) | d. Exact verification k = 12, 13 at d in {25, 100, 997, 10007, 100003} + controls
+((k+1) | d correctly HAS witnesses). Mechanism = the repo's translation-blindness lore
+(S399 triage axis 1), FIFTH appearance, first strike outside the repo. The S400
+"entanglement" framing is refined (addendum added): uniform-D dies cheaply; the repaired
+family-normalized version is where the gap program engages, with the two D(v)-blowup
+mechanisms cataloged. (II) HYP-7930, DERIVED (citation-pending): G-K arXiv:2304.01462
+(Thm 1.4 chain, v4) says acc(S(n)) subset S*(n-1) in the D = 1/2 - M variable; translating
+(exact: nondegenerate 1-dim subtori <-> primitive all-nonzero directions; star at worst
+allows zero coords => M >= 1/13 at 12 speeds by settled LRC(<=13)): every accumulation
+point of the 13-speed spectrum is >= 1/13. Corollaries once pinned: floor isolated
+((1/14, 1/14+delta) empty); (1/14, 3/41] FINITE (Bolzano-Weierstrass on [1/14, 1/13-eps],
+3/41 = 1/13 - 2/533); slack-1 ladder finitely realized (retro-explains the empty scans +
+death-star's sparse gate tower); 12-speed gap = finite list (HYP-7310 shadow retyped). THE
+SANDWICH (new named target): HYP-7920's cage is EFFECTIVE but bounded-height; G-K is
+all-heights but INEFFECTIVE; effectivizing the bottom of their degeneration argument
+bounds the finite list's heights and composes with cage + enumeration. MISTAKE-117's
+lesson applied correctly: the sup-use was invalid, the acc-use is the paper's actual
+content -- fix is precise citation (one PDF-pinning session, backlogged), not no citation.
+
+Prompt (owner): keep working creative angles like hyp-7920
+
+FILES: THM-1288, HYP-7930, reflection
+c71-refuted-by-translation-and-the-gk-accumulation-revival-opus-S401, S400-reflection
+addendum, script + frozen out (lrc_c71_refutation_divisor_alignment), backlog lead
+opus-S401 (pinning session + effectivization target + owner note-to-authors option). -> all
+
+---
 ## death-star-2026-07-19-S59g (FINAL) — THM-1287: the tower reaches primorial 9699690 — M(F_12(9699691)) = 12/116396303 EXACT (femto-window 5.3e-15, 482 s at ten million speeds) — the EIGHTH consecutive out-of-sample confirmation; the D=9 necessity sweep passed (1399 families, zero off-progression hits): the gate law now supported in BOTH directions
 
 Continuation of the S59g interim close: the ghost scan landed. M(F_12(9699691)) = 12/116396303 EXACTLY at
