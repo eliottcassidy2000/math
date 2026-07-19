@@ -1,0 +1,60 @@
+====================================================================================================
+MOD-23 CRT FEASIBILITY COUNT -- 3/38 (n=12) and 4/55 (n=13)   [boxeph-S131, HYP-7895]
+====================================================================================================
+
+A straddle pairs (v,38-v), v odd unit <19:  [3, 5, 7, 9, 11, 13, 15, 17]  (8)
+B straddle pairs (v,55-v), v unit <27.5:    [4, 6, 7, 8, 9, 12, 13, 14, 16, 17, 18, 19, 21, 23, 24, 26, 27]  (17)
+
+--- structural asserts + MC cross-checks of the exact machinery ---
+A-block MC: exact=0.000257  mc=0.000250  dev=0.3 sigma  OK
+B-block MC: exact=0.001155  mc=0.001120  dev=0.6 sigma  OK
+
+--- direct stack check on reference families ---
+  BF38 (S125 band family)  band-m:[1, 37]    duties(7..12):111111  spreads:{13: 'blk', 17: 'sprd', 19: 'FAIL', 23: 'FAIL', 25: 'FAIL'}
+  AP12 {1..12}             band-m:NONE       duties(7..12):111111  spreads:{13: 'sprd', 17: 'sprd', 19: 'sprd', 23: 'sprd', 25: 'sprd'}
+
+--- PART 1, TARGET A = 3/38 ---
+A general: block=11961927617822872978743208418340238765959126450176  blockdens=6.7461e-03  outerdens=1.0482e-01  TOTAL=7.0716e-04  FEASIBLE=True
+  certificate ledger (12 slots): band=1.840e-01 sp13=0.785 sp17=0.562 sp23=0.4139 sp25=0.3881
+  P(all 11 pairs mod23 | no 23-mult, 12 slots) = 0.00084 (1 in 1191)
+  P(all 10 pairs mod25 | no 25-mult, 12 slots) = 0.00134 (1 in 747)
+  k=1 refinement (straddlers exactly v, 38-v):
+    v= 3: block=5.653e-03  outer=8.476e-02  TOTAL=4.792e-04  N23dens=0.3594  strad5mult=Y
+    v= 5: block=5.653e-03  outer=1.084e-01  TOTAL=6.129e-04  N23dens=0.3594  strad5mult=Y
+    v= 7: block=5.659e-03  outer=8.476e-02  TOTAL=4.796e-04  N23dens=0.3594  strad5mult=n
+    v= 9: block=7.570e-03  outer=6.662e-02  TOTAL=5.043e-04  N23dens=0.3594  strad5mult=n
+    v=11: block=7.570e-03  outer=1.084e-01  TOTAL=8.207e-04  N23dens=0.3594  strad5mult=n
+    v=13: block=1.386e-02  outer=8.826e-02  TOTAL=1.223e-03  N23dens=0.3594  strad5mult=Y
+    v=15: block=5.653e-03  outer=1.853e-01  TOTAL=1.048e-03  N23dens=1.0000  strad5mult=Y
+    v=17: block=5.659e-03  outer=1.667e-01  TOTAL=9.434e-04  N23dens=0.3594  strad5mult=n
+
+--- PART 1, TARGET B = 4/55 ---
+B general: block=473234766159572198365070266131792979056479639040000  blockdens=1.9914e-02  outerdens=7.9548e-02  TOTAL=1.5841e-03  FEASIBLE=True
+  P(all 11 pairs mod23 | no 23-mult, 13 slots) = 0.00281 (1 in 356)
+  v-collapse: same mod-23 pair at v=[16]; same mod-19 pair at v=[18]
+  k=1 refinement (straddlers exactly v, 55-v):
+    v= 4: block=4.152e-01  outer=8.882e-02  TOTAL=3.688e-02  serves89=-
+    v= 6: block=4.152e-01  outer=6.109e-02  TOTAL=2.537e-02  serves89=-
+    v= 7: block=7.223e-01  outer=6.109e-02  TOTAL=4.412e-02  serves89=[8, 12]
+    v= 8: block=4.876e-01  outer=4.988e-02  TOTAL=2.432e-02  serves89=[8]
+    v= 9: block=5.380e-01  outer=1.284e-01  TOTAL=6.905e-02  serves89=[9]
+    v=12: block=5.687e-01  outer=4.988e-02  TOTAL=2.837e-02  serves89=[12]
+    v=13: block=4.152e-01  outer=1.043e-01  TOTAL=4.333e-02  serves89=-
+    v=14: block=4.152e-01  outer=6.109e-02  TOTAL=2.537e-02  serves89=-
+    v=16: block=4.876e-01  outer=8.491e-02  TOTAL=4.140e-02  serves89=[8]
+    v=17: block=4.152e-01  outer=1.857e-01  TOTAL=7.713e-02  serves89=-
+    v=18: block=5.380e-01  outer=4.841e-02  TOTAL=2.604e-02  serves89=[9]
+    v=19: block=7.830e-01  outer=9.930e-02  TOTAL=7.775e-02  serves89=[9, 12]
+    v=21: block=4.152e-01  outer=1.088e-01  TOTAL=4.517e-02  serves89=-
+    v=23: block=4.876e-01  outer=1.284e-01  TOTAL=6.259e-02  serves89=[8]
+    v=24: block=7.223e-01  outer=4.988e-02  TOTAL=3.603e-02  serves89=[8, 12]
+    v=26: block=4.152e-01  outer=8.520e-02  TOTAL=3.538e-02  serves89=-
+    v=27: block=5.380e-01  outer=6.109e-02  TOTAL=3.286e-02  serves89=[9]
+
+--- PART 2a: TARGET A sweeps (exact M per candidate) ---
+A cap 26 (kps-S12 cross-check): leaves=41034 crtpass=6658 beatscanned=6658 survivors=0 complete=True == kps-S12 (gap empty in [1,26]) OK
+A cap 34: leaves=1170850 crtpass=125640 survivors=0 complete=True 
+
+--- PART 2b: TARGET B sweeps (exact M per candidate) ---
+B cap 30: leaves=61466 crtpass=41262 survivors=0 complete=True 
+B cap 32: leaves=382108 crtpass=134810 survivors=0 complete=True 
