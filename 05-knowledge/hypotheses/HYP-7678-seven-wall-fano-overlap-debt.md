@@ -1,9 +1,9 @@
 ---
 id: HYP-7678
-title: The seventh-deletion Kakeya needle reduces to a positioned blocker-address cycle
-status: OPEN only on the connected strict-high positioned branch. THM-1221/1234 provide two global crossings; THM-1226 closes the disconnected branch and the shallow slow-speed branch; THM-1237 proves the exact positioned max-forest transfer; THM-1233/1241/1236 compactify the six-comb ratios; and THM-1238/1240 force phase-bearing blockers and a directed blocker cycle. THM-1239/1242 show why one local gap or bare quotient periods cannot finish. The live theorem is bounded primitive address compression or alternate-gap descent around that cycle. Global LRC(14) is not closed
+title: The seventh-deletion Kakeya needle has a finite relative blocker word and an anchored positioned wall seam; tail-to-cycle/private-owner transport remains
+status: OPEN only on the connected strict-high positioned branch. THM-1221/1234 provide two global crossings; THM-1226 closes the disconnected and shallow branches; THM-1237 proves the exact positioned max-forest transfer; THM-1233/1241/1236 compactify the six-comb ratios; THM-1238/1240 force phase-bearing blockers and a directed cycle; and THM-1248 compresses its relative address word, exports a fourth-support wall event, and anchors the slowest first-edge seam in THM-1244's positioned rank-two debt. THM-1244 also forces a private owner stalk, while THM-1243/1246 close the principal resonant rays and harmonic needle banks. The live theorem is to transport the anchored seam along the finite blocker tail to the positive-holonomy cycle/private owner or descend on an alternate gap. Global LRC(14) is not closed
 source: codex-2026-07-18-S75
-depends_on: [THM-605, THM-1153, THM-1025, THM-1149, THM-1156, THM-1166, THM-1176, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242]
+depends_on: [THM-605, THM-1153, THM-1025, THM-1149, THM-1156, THM-1166, THM-1176, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1248]
 related: [HYP-7870]
 ---
 
@@ -247,17 +247,81 @@ strict, gauge-fixed product holonomy
 prod_i P_i > prod_i N_i.                              (PH7)
 ```
 
-This is the first forced nontransitive arithmetic object on the remaining
-branch.  It is also only qualitative: `(PH7)` supplies no uniform bound on
-the reduced address heights, and arbitrary integer translation does not
-preserve the product comparison.  THM-1239 shows that one resonant blocker can erase
-an entire chosen seven-crack gap, while THM-1242's exact `q=15` sunflower shows
-that nontrivial quotient periods alone need not leave a master-clock residue.
+THM-1248 removes the apparent absolute-address obstruction by using the
+carrier address as a gauge.  Put
 
-This is the toothpick self-similarity that the density ledger erased.  It
-localizes the unresolved Fano/chi7 work to the harmonic-crowded, mixed-phase
-clock region of `(SG7)`; the Fano lines should be placed over slow-gap endpoint
-events, not over a fixed runner tournament.
+```text
+M_i=k+N_i,
+ell_i=P_i Q_(b(i))-M_i Q_i,
+delta_i=P_(b(i))-M_i.                                (RA7)
+```
+
+The centered carrier and strict blocker bands give the sharp determinant
+remainder sheet
+
+```text
+5Q_i/28<ell_i<23Q_i/28,
+P_iQ_(b(i))-P_(b(i))Q_i=ell_i-delta_iQ_i,
+gcd(Q_i,Q_(b(i))) divides ell_i.                     (DR7)
+```
+
+Thus `ell_i` is the least positive determinant residue modulo `Q_i`, with
+its exact common-clock divisor retained.  The relative address alphabet is
+uniformly finite:
+
+```text
+-586<=delta_i<=587,
+delta_i in {0,1} whenever Q_(b(i))<=Q_i.             (RW7)
+```
+
+If `epsilon_i=P_i-Q_it_0` is the centered rounding error and
+`beta_i=d_(b(i))t_i-N_i`, the cycle transport is the exact affine law
+
+```text
+epsilon_(b(i))
+ = [d_(b(i))/Q_i]epsilon_i+delta_i-1/2-beta_i.       (AH7)
+```
+
+Its multiplier around a cycle is
+
+```text
+A=prod_i d_i/(c+d_i),
+1-A>4691/5503716.                                    (AC7)
+```
+
+So the cycle is a uniformly contracting finite relative-address local
+system, even though absolute primitive beat numerators can remain unbounded.
+The remaining arithmetic is the common centered residue orbit and its full
+determinant/gcd sheet, not an unbounded independent tooth alphabet.
+
+THM-1248 also exports the sampled cycle to continuous geometry.  Every cycle
+has a speed-ascent edge.  At the first target-tooth boundary between its
+dangerous source phase and safe target spoke, the carrier, source, and target
+are all safe; the source retains depth greater than `3/28`.  Six-cover
+therefore forces a third fast label distinct from source and target at that
+first-boundary wall event, hence a fourth support when the carrier is counted.
+This is the phase-bearing seam that `(PH7)` alone lacked.
+
+THM-1244 independently constructs the complementary off-sample object on the
+slowest-spoke component: an irredundant tooth chain with at least three
+blocker labels, a rank-two forest `F0` of located handoffs, two exact
+gcd-quantized overlap credits, and a macroscopic private-owner stalk.
+THM-1248 further shows that the slowest outgoing blocker edge is an ascent
+and its wall seam can be prescribed as one edge of `F0`.  What is not yet
+proved is transport of that anchored first-edge seam along the finite blocker
+tail to the eventual positive-holonomy cycle or into the private-owner germ.
+
+The resonant guardrails have also narrowed.  THM-1243 globally reroutes both
+exact toothpick rays from THM-1239, and THM-1246 leaves an explicit transverse
+corridor through every harmonic bank `14a,...,14Ha` with `H<=12`.  These
+results close those address rays, not arbitrary finite relative words.
+THM-1242's exact `q=15` sunflower still shows that nontrivial quotient periods
+alone need not leave a master-clock residue.
+
+This is the toothpick self-similarity that the density ledger erased.  It now
+localizes the unresolved Fano/chi7 work to aligning a sampled determinant
+seam with continuous handoff rank and positioned mass, rather than bounding
+raw addresses or placing Fano lines over a fixed runner tournament.
 
 The older sufficient target remains an arithmetic overlap-discrepancy theorem
 on this specific needle:
@@ -311,13 +375,18 @@ destroys exactly the Fano incidence the target needs.
 No claim is made that `(F7)` is true with arbitrary `eta,C` as stated.  The
 smallest exact open target is now:
 
-> From `(DG7)`, the macroscopic cut, and a blocker cycle satisfying `(BH7)`,
-> force either a bounded primitive detuning/address on a positioned edge, or
-> transport to another carrier gap with a strictly decreasing positive
-> integer potential.  The quotient must retain the full gcd sheet, cyclic
-> tooth word, endpoint openness, and blocker ownership.
+> From `(DG7)`, THM-1244's rank-two located handoff forest, and the finite
+> relative cycle `(RA7)`--`(AC7)`, transport THM-1248's already positioned
+> slowest first-edge seam along the blocker tail to its eventual cycle/private
+> owner.  Either it supplies a new independent seam with usable gcd credit or
+> moves to another carrier gap with a strictly decreasing positive
+> modulus/address potential.  The quotient must retain the exact
+> determinant/gcd sheet, cyclic relative word, endpoint openness, and blocker
+> ownership.
 
 Addresses, wall events, or proof obligations—not runners—are the promising
-tournament vertices.  The forced blocker cycle and its positive holonomy are
-the structural datum to consume; another phase-blind pair average cannot see
-the remaining obstruction.
+tournament vertices.  The finite cycle word and positioned first-edge seam
+are now proved structural data; transporting the anchor to the eventual
+cycle/private-owner germ is the unresolved consumer.  Another phase-blind
+pair average cannot see the remaining obstruction, and no LRC(14) closure is
+claimed.

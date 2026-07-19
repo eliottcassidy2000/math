@@ -179,6 +179,88 @@
 > debt into a global witness while retaining the exact gcd sheet and cyclic
 > residue word.
 
+> ### 2026-07-19 PULL INTEGRATION — GLOBAL REROUTES, HANDOFF DEBT, AND FINITE RELATIVE ADDRESSES
+>
+> THM-1243 and THM-1246 remove the two known resonant-address escape rays from
+> the hard branch.  THM-1243 gives an explicit parity phase of depth greater
+> than `3/28` for both THM-1239 toothpick mechanisms, including their finite
+> head.  THM-1246 replaces a single witness by a sharp positive corridor for
+> every bank
+>
+> ```text
+> 14a,28a,...,14Ha,                 1<=H<=12,
+> ```
+>
+> together with every additional speed in its exact projective band.  Local
+> tooth replication therefore does not produce global trapping on either the
+> isolated rays or their first harmonic closure.
+>
+> THM-1244 supplies the complementary continuous debt on the slowest centered
+> spoke.  Its protected component `K` has
+>
+> ```text
+> |K| >=(6d1-c)/[7d1(c+d1)]>5/(14d1),
+> ```
+>
+> cannot be covered by only two blocker labels, and consequently carries two
+> located gcd-quantized handoffs plus a private-owner stalk of mass greater
+> than `44/(3705c)`.  Thus the phase-bearing target is no longer an arbitrary
+> blocker cycle: it is a sampled cycle beside a canonical rank-two handoff
+> forest and a macroscopic owner region.
+>
+> THM-1248 now proves the exact relative-address and wall-seam package.  On
+> an edge `i->j`, with
+>
+> ```text
+> Q_i=c+d_i,  X_i=cP_i-kQ_i,  M_i=k+N_i,
+> ell_i=P_iQ_j-M_iQ_i,        delta_i=P_j-M_i,
+> ```
+>
+> centered depth and strict blocking give
+>
+> ```text
+> 5Q_i/28<ell_i<23Q_i/28,
+> -586<=delta_i<=587.
+> ```
+>
+> Here `ell_i` is the least positive residue of the phase determinant
+> `P_iQ_j-P_jQ_i` modulo `Q_i`; it is divisible by `gcd(Q_i,Q_j)`.  The
+> absolute tooth address has therefore collapsed to one global gap gauge plus
+> a finite relative digit.  The digit is binary on every descending-clock
+> edge, the affine rounding-error return has multiplier
+>
+> ```text
+> A=prod_i d_i/(c+d_i),       1-A>4691/5503716,
+> ```
+>
+> and every blocker cycle exports a phase-located first-boundary wall seam
+> where the carrier, source, and target are safe, forcing a fourth support
+> under an actual cover.
+> `LRCCenteredBlockerAddressCompression.lean` checks the arithmetic core, and
+> `lrc14_centered_blocker_address_compression_thm1248.py` with its stored
+> exact output replays the constants, finite digit words, contraction, and
+> globally-lonely counterguards.
+>
+> The slowest sampled edge is automatically an ascent, and THM-1248 proves
+> that its wall seam can be prescribed as one of THM-1244's two independent
+> positioned handoffs.  The remaining gap is the sharper
+> **orbit-to-owner/cycle** statement: transport that anchored first-edge seam
+> along the at-most-six-edge blocker tail to the eventual positive-holonomy
+> cycle, or correlate a cycle wall seam with the macroscopic private owner.
+> Equivalently, the shared centered residue orbit
+>
+> ```text
+> E_i=2cP_i-(2k+1)Q_i in [-c,c]
+> ```
+>
+> still needs either oriented owner-germ transport, a well-founded
+> alternate-gap descent, or a transverse corridor theorem beyond the
+> THM-1243/1246 resonant banks.  Producing that transport is the live
+> mathematics; bounding absolute tooth addresses or using the transitive
+> determinant-sign tournament is no longer the target.  Reserved THM-1250
+> would further allow a prescribed cycle seam in a fully located five-edge
+> tree, but this proof-map step does not consume it before it is proved.
+
 > ## 2026-07-19 S82 SIX-COMB CURVATURE SPECTRUM AND ACTIVE-PAIR PATH
 >
 > THM-1219 identifies the exact obstruction left after the five-comb theorem.

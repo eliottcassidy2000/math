@@ -2042,3 +2042,137 @@ interval-set geometry, and the canonical address-gauge provider remain
 explicit.  THM-598/602 and THM-864 are not formalization providers: their
 withdrawn dynamic inferences are recorded in MISTAKE-185/184.  The module has
 no `sorry` or `native_decide` and is not a formal proof of global LRC(14).
+
+## 2026-07-19 addendum -- resonant blocker rays and their transverse reroute
+
+THM-1243 proves that both exact THM-1239 blocker mechanisms leave the selected
+carrier cell globally.  Its parity clock `q=2a+7` turns the consecutive block
+into the odd-multiplier word `+-s,+-3s,+-5s,+-7s`; the two terminal blockers
+become `-98s` and `-41s`.  The resulting witness has exact depth greater than
+`3/28` for every `m>=27`, while nineteen explicit certificates close the
+two-blocker head `8<=m<=26`.
+
+`LRCResonantToothpickGlobalReroute.lean` is root-imported.  It kernel-checks
+the master-clock congruences, both terminal multipliers, the two parity residue
+ledgers, their minimum and strict depth excess, and the alternate-cell
+inequalities.  Identification of the positive representatives with circle
+norms and the finite-head replay remain the explicit paper/computational
+layers.  The dependency-free referee and stored output are
+`04-computation/lrc14_resonant_toothpick_global_reroute_thm1243.py` and
+`05-knowledge/results/lrc14_resonant_toothpick_global_reroute_thm1243.out`.
+
+## 2026-07-19 addendum -- slowest-spoke component and located handoff debt
+
+THM-1244 upgrades THM-1240's sampled spoke to a continuous protected
+component.  It proves
+
+```text
+|K| >=(6d1-c)/[7d1(c+d1)]>5/(14d1),
+```
+
+excludes every two-label cover of `K`, extracts a rank-two irredundant
+handoff forest with two exact gcd quanta, and forces a private-owner region of
+mass greater than `44/(3705c)`.  These are located phase credits, not global
+pair averages.
+
+`LRCSlowestSpokeHandoffDebt.lean` is root-imported.  It checks the centered
+component radius and constants, both two-label span branches, the
+positive-divisor overlap quantum, the max-extension/scalar/spanning-tree
+Hunter rearrangements, and the private-mass ledger.  Compact irredundant
+subcover extraction, chronological handoff selection, and the interpretation
+of those intervals as strict comb components remain the topological paper
+provider.  The dependency-free referee and stored output are
+`04-computation/lrc14_slowest_spoke_component_handoff_debt_thm1244.py` and
+`05-knowledge/results/lrc14_slowest_spoke_component_handoff_debt_thm1244.out`.
+
+## 2026-07-19 addendum -- resonant harmonic needle-bank corridor
+
+THM-1246 proves the sharp transverse corridor for every harmonic bank
+`14a,...,14Ha`, `1<=H<=12`, together with every extra real speed in its exact
+projective band.  Its width is
+
+```text
+(13-H)/(196Ha),
+```
+
+and the endpoint decrement is `13/[196H(H-1)]`.  Thus the known high-degree
+resonant rays have a positive global interval, not merely an isolated beat.
+
+`LRCResonantNeedleBankCorridor.lean` is root-imported.  It checks the corridor
+width and positivity, both sharp boundary owners, every harmonic offset, the
+projective-band consumer, the integer-family condition, the reciprocal
+endpoint ladder, and the balanced `H=6` width.  Converting the fractional
+bands into circle-norm safety is the explicit paper layer.  The exact referee
+and output are
+`04-computation/lrc14_resonant_needle_bank_corridor_thm1246.py` and
+`05-knowledge/results/lrc14_resonant_needle_bank_corridor_thm1246.out`.
+
+## 2026-07-19 addendum -- finite centered-blocker address quotient (THM-1248 proved)
+
+THM-1248 is `PROVED`, but it is not an LRC(14) closing theorem.  Its audited
+arithmetic replaces an absolute blocker tooth address by a finite relative
+digit.  For an edge `i->j`, put
+
+```text
+Q_i=c+d_i,       X_i=cP_i-kQ_i,
+M_i=k+N_i,       ell_i=P_iQ_j-M_iQ_i,
+delta_i=P_j-M_i.
+```
+
+Then the exact target is
+
+```text
+5Q_i/28<ell_i<23Q_i/28,
+-586<=delta_i<=587,
+ell_i=(P_iQ_j-P_jQ_i) mod Q_i,
+gcd(Q_i,Q_j) | ell_i.
+```
+
+The digit is in `{0,1}` whenever `d_j<=c+d_i`.  Around a cycle the rounding
+errors form an affine local system with multiplier
+
+```text
+A=prod_i d_i/(c+d_i),       1-A>4691/5503716.
+```
+
+Every genuine blocker cycle also has a speed-ascent edge whose first target
+tooth boundary keeps the source above `3/28`; an actual cover must place a
+third fast label there, hence a fourth support when the carrier is counted.
+
+The new standalone module
+`TournamentH7/LRCCenteredBlockerAddressCompression.lean` checks the gap-gauged
+cocycle and translation invariance, determinant and common-clock divisibility,
+the recentered blocker identity, central remainder band, global and binary
+digit bounds, binary phase separation, triangle affine transport, the exact
+contraction constant, positive triangle holonomy, and wall-event margin.  The
+centered-spoke/set interpretation, general-cycle telescoping, existence of the
+first strict-to-safe tooth boundary, and conversion of coverage there into a
+fourth-support incidence remain explicit paper providers.
+
+The dependency-free exact referee
+`04-computation/lrc14_centered_blocker_address_compression_thm1248.py` and its
+stored output
+`05-knowledge/results/lrc14_centered_blocker_address_compression_thm1248.out`
+replay the constants, affine and additive cycle ledgers, the unbounded
+absolute-address family, and the large digit `-390` guardrail.  Both
+guardrails are explicitly globally lonely and are not six-comb covers.
+
+The paper theorem additionally proves that the wall seam on the slowest
+outgoing edge can be prescribed as one of THM-1244's two positioned Hunter
+credits.  That interval/handoff reselection is intentionally outside the Lean
+arithmetic module.  The exact remaining formalization surface is the sharper
+**orbit-to-owner/cycle bridge**: neither the finite `delta` word nor contraction
+currently transports the anchored first-edge seam along the blocker tail to
+the eventual positive-holonomy cycle or into the private-owner stalk.  The
+common centered orbit
+
+```text
+E_i=2cP_i-(2k+1)Q_i in [-c,c]
+```
+
+must either feed that oriented owner/cycle transport or descend to an
+alternate carrier cell.  THM-1243/1246 close the known resonant rays, not this
+arbitrary tail transport.  Reserved THM-1250 would strengthen the paper object
+to a fully located tree containing a prescribed cycle seam, but no current
+Lean module or referee consumes that unproved reservation or asserts global
+LRC(14).

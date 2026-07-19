@@ -1,0 +1,43 @@
+THM-1248 CENTERED BLOCKER ADDRESS COMPRESSION EXACT REFEREE
+method=integer/Fraction only; always-on checks; no dependencies
+
+FINITE RELATIVE-ADDRESS AND WALL-EVENT CONSTANTS
+global_delta_min=-586
+global_delta_max=587
+contraction_gap=4691/5503716
+wall_event_source_margin=3/28
+central_remainder_band=(5/28,23/28)
+relative_delta_word=[-586,587]; every edge with d_j<=c+d_i has digit 0 or 1
+every genuine blocker cycle exports a 3-safe/fourth-support wall event
+
+UNBOUNDED ABSOLUTE-ADDRESS GUARDRAIL
+c=27 max_tooth_address=80 cycle_delta_word=(0, 1) witness=133/135 depth=1/5
+c=101 max_tooth_address=302 cycle_delta_word=(0, 1) witness=503/505 depth=1/5
+c=1001 max_tooth_address=3002 cycle_delta_word=(0, 1) witness=5003/5005 depth=1/5
+c=10001 max_tooth_address=30002 cycle_delta_word=(0, 1) witness=50003/50005 depth=1/5
+sampled obligations and primitive compact ratios do not bound absolute addresses
+these packets are globally lonely, not six-cover counterexamples
+
+LARGE RELATIVE-DIGIT GUARDRAIL
+packet=(1, 2, 16, 17, 34, 35, 2343)
+critical_edge=(2, 2343)
+critical_delta=-390
+critical_ell=2
+cycle_delta_words=((-390, 1), (1, 0), (1, 0))
+witness=1/6
+witness_depth=1/6
+the {-586,...,587} alphabet cannot be replaced by {0,1} on speed-ascent edges
+
+TOURNAMENT / ALTERNATE-VERTEX AUDIT
+observable=D_ij=P_i*Q_j-P_j*Q_i
+switch=i->j iff (t_i,i) is lexicographically below (t_j,j); index breaks D_ij=0 ties
+tie_Hamiltonian_path=vertices sorted by (t_i,i)
+phase-determinant sign gauge is transitive and loses the central remainder
+proof-bearing edge=(Qi,Qj,least-positive ell,relative delta,gcd sheet)
+cycle quotient=finite delta word + contracting affine errors + wall-event hyperedge
+challenged_assumption=runner vertices are insufficient; use residues, wall counts, and boundary obligations
+preserves=blocker danger, determinant gcd, and phase chronology
+destroys=absolute tooth lift and off-sample cover ownership
+runner scores=(0,1,2,3,4,5); cycles=0; SCCs=6; Hamilton_paths=1
+STATUS=PASS
+source_sha256=d236f1ec6b48a95e7dfc3a7f3beb5a68061aa41a61a2eb01e3b1ba38827af704

@@ -1,9 +1,9 @@
 ---
 id: HYP-7870
-title: The seven-wall crossing now forces a positioned forest and a positive-holonomy blocker cycle; address compression and alternate-gap descent remain
-status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch and composes the remaining branch to a scale/gcd dichotomy. THM-1233/1241/1236 compactify the six-comb ratios. THM-1238/1240 force phase-bearing beat blockers and a directed blocker cycle, while THM-1239/1242 prove the sharp local-gap and mixed-clock guardrails. The live theorem is address compression/alternate-gap transport for the centered cycle, not another global margin or bare low-height inverse.
+title: The seven-wall crossing has a finite relative blocker word and an anchored positioned wall seam; tail-to-cycle/private-owner transport remains
+status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch and composes the remainder to a scale/gcd dichotomy; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240 forces a phase-bearing blocker cycle, THM-1248 compresses its relative addresses, exports a phase-located first-boundary wall event, and anchors the slowest first-edge seam in THM-1244's rank-two positioned debt. THM-1244 also forces a private owner stalk. THM-1243/1246 close the principal resonant rays and harmonic banks. The live theorem is to transport that anchored determinant/gcd seam along the finite blocker tail to the positive-holonomy cycle/private owner or descend on an alternate gap. No LRC(14) closure is claimed.
 source: codex-2026-07-19-S82
-depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, HYP-7678]
+depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1248, HYP-7678]
 ---
 
 # HYP-7870 -- from global incidence to a positioned witness
@@ -58,11 +58,15 @@ suppliers, with every error term explicit.
 THM-1237 now proves the exact max-forest transfer underlying target 1 and gives
 explicit versions of target 2 after subtracting a periodic BAD event.  It does
 not prove the required sub-margin loss; what remains is to make one of those
-lower bounds positive on every hard packet.  THM-1240
-proves the blocker-cycle existence needed for target 3, while THM-1239 shows
-that target 3 is false if it insists on survival in an arbitrary preselected
-gap.  The supplier problem has therefore become a global address-transport
-problem, not an unnamed local inequality.
+lower bounds positive on every hard packet.  THM-1240 proves the blocker-cycle
+existence needed for target 3, THM-1248 exports phase-located first-boundary
+wall seams from that sampled cycle, and THM-1244 supplies the continuous
+rank-two handoff debt on the slowest-spoke component.  THM-1248 also anchors
+the slowest first-edge seam in that debt.  THM-1239 shows that target 3 is
+false if it insists on survival in an arbitrary preselected gap.  The supplier
+problem has therefore become transport from the anchored first edge to the
+eventual cycle/private-owner germ, not an unnamed local inequality or a
+request for another scalar bound.
 
 ## The gcd-period route is now sharply split
 
@@ -176,7 +180,7 @@ zero overlap there because the high exact relation `(75,-64)` has common
 period `1/K`.  The local carrier must retain the full exact kernel/gcd sheet,
 its saturation/torsion data, and primitive low-height detuning separately.
 
-## The proved blocker cycle has positive multiplicative holonomy
+## The blocker cycle now has a finite relative word and a wall-event seam
 
 THM-1238 proves that a macroscopic cut emits a positive pair beat or an exact
 singleton lock.  THM-1240 removes that lock on the six carrier spokes and
@@ -196,24 +200,95 @@ every selected blocker cycle, the gauge-fixed inequality
 prod P_i > prod N_i.                                  (6)
 ```
 
-This is the first exact arithmetic law joining the nontransitive blocker
-tournament to the slow-gap metric.  It excludes balanced holonomy in the
-canonical lift, but the present argument gives no uniform bound on the
-reduced address heights.  Arbitrary integer translation changes the product
-comparison, so the lift is part of the carrier.  THM-1239 shows why a local
-crack-survival contradiction is false: a single `14a` blocker may erase all
-seven cracks while another gap contains the global witness.  THM-1242 shows
-why quotient-period nontriviality is also insufficient: the mixed `q=15`
-sunflower fills its whole clock.
+THM-1248 identifies the translation-invariant quotient hidden behind (6).
+For `j=b(i)` define
+
+```text
+M_i=k+N_i,
+ell_i=P_iQ_j-M_iQ_i,
+delta_i=P_j-M_i.                                      (7)
+```
+
+Then the exact central determinant/gcd sheet is
+
+```text
+5Q_i/28<ell_i<23Q_i/28,
+P_iQ_j-P_jQ_i=ell_i-delta_iQ_i,
+gcd(Q_i,Q_j) divides ell_i.                           (8)
+```
+
+Thus `ell_i` is the least positive phase-determinant residue modulo `Q_i`;
+the gcd/torsion information lost by a truncated relation lattice is still
+present.  The absolute teeth may be large, but their relative word is finite:
+
+```text
+-586<=delta_i<=587,
+delta_i in {0,1} on every edge with Q_j<=Q_i.         (9)
+```
+
+Writing `epsilon_i=P_i-Q_it_0` and
+`beta_i=d_jt_i-N_i`, the cycle is the affine local system
+
+```text
+epsilon_j=(d_j/Q_i)epsilon_i+delta_i-1/2-beta_i.      (10)
+```
+
+Its multiplier and uniform contraction gap are
+
+```text
+A=prod_cycle d_i/(c+d_i),
+1-A>4691/5503716.                                    (11)
+```
+
+Equations (7)--(11) replace the false goal of bounding independent absolute
+addresses.  The remaining unbounded datum is the shared centered residue
+orbit, together with its exact determinant/gcd sheet and cyclic mask
+placement.
+
+THM-1248 also turns the sampled tournament cycle into a continuous seam.
+Every directed cycle has a speed-ascent edge.  Move from its dangerous source
+spoke toward the target's safe spoke and stop at the first target-tooth
+boundary.  The carrier and target are safe there, and the source retains
+depth greater than
+
+```text
+1/4-d_i/(7d_j)>3/28>1/14.                            (12)
+```
+
+An actual six-cover therefore forces a third fast label distinct from source
+and target at this first-boundary wall event, hence a fourth support when the
+carrier is counted.  The cycle is no longer merely sampled incidence: it
+exports a phase-bearing handoff seam.
+
+THM-1244 supplies the object that seam must meet.  On the protected
+slowest-spoke component, five blockers force an irredundant labelled tooth
+chain, at least three blocker labels, a rank-two forest `F0` of two located
+handoffs with exact gcd-quantized overlap, and a macroscopic private-owner
+stalk.  Its max-extension inequality is a genuine positioned debt.  THM-1248
+shows that the slowest outgoing blocker edge is an ascent and its wall seam can
+be prescribed as one edge of `F0`.  What is not known is how to transport this
+anchored first-edge seam along the finite blocker tail to the eventual
+positive-holonomy cycle or into the private-owner region without losing the
+common master residue.
+
+The resonant alternatives are now narrower as well.  THM-1243 gives a global
+transverse witness for both exact toothpick rays from THM-1239, and THM-1246
+gives a positive corridor through every harmonic bank
+`14a,...,14Ha`, `H<=12`.  They close those rays, not arbitrary finite words.
+THM-1242 remains the sharp warning that the mixed `q=15` sunflower can fill a
+whole nontrivial quotient clock.
 
 The sharpened remaining theorem is now:
 
-> **Address-compression / alternate-gap descent.**  In the compact five-cut
-> kernel, combine the positive holonomy (6), THM-1240's separated spoke-clock
-> doublet, and THM-1237's positioned debt to obtain either a bounded primitive
-> address word, a common-clock escape outside the `q=15` sunflower, or a
-> strictly better gap/address cell.  Iteration must terminate at a positioned
-> safe phase or an already-closed bounded packet.
+> **Anchored-tail / cycle-owner transport.**  In the compact five-cut kernel,
+> combine the finite relative word (9), determinant sheet (8), the prescribed
+> positioned wall credit, and THM-1244's private-owner stalk.  Transport the
+> anchor along the at-most-six-edge blocker tail to its eventual cycle/owner
+> germ, obtain a new independent gcd-credited seam, or move to a strictly
+> smaller gap/modulus cell.  Any iteration must terminate at a positioned safe
+> phase or an already-closed bounded packet.
 
 This formulation retains exactly the coordinates destroyed by every refuted
-shortcut and gives the tournament cycle a numerical consumer.
+shortcut.  Relative address compression and a positioned slowest first-edge
+wall credit are now available; tail-to-cycle/private-owner transport is not,
+so no LRC(14) closure follows yet.
