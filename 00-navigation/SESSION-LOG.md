@@ -876,6 +876,20 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S117 -- a=d RIGIDITY: consecutive case PROVED + closed form M({a..a+n-1})=a/(2a+n-1); spread case open
+
+Owner: prove the full a=d rigidity for tight APs (M(C)=1/13 => C=c*{1..12}). Genuine sub-case proof + a
+clean formula; general not closed.
+PROVED necessary conditions (primitive tight AP {a+dk}): (i) a==d mod13 [S116]; (ii) no prime p<=12 | d
+[t=1/p]; (iii) 13 not|d => d coprime 2..13 => d=1 or d>=17; (iv) d>=2 => ||a/d||<=1/13 [t=1/d].
+CONSECUTIVE d=1 PROVED FULLY: {a,..,a+11} tight => a=1 => {1..12}. Witness t=1/(2a+11): speeds fill
+[a/q,(a+11)/q] symmetric about 1/2, min dist=a/(2a+11)>1/13 iff a>1.
+CLOSED FORM (witness=maximizer, verified a=1..8, all n): M({a,a+1,..,a+n-1})=a/(2a+n-1); a=1 => 1/(n+1).
+=> {1..n} is the UNIQUE tightest consecutive block. Clean new formula.
+SPREAD d>=17 OPEN: (i)-(iv) not sufficient (a=2,d=41 satisfies all, M=222/455 loose, maximizer q=455).
+NET: a=d proved for consecutive APs + necessary conditions; spread case open. Crux still open.
+FILES: reflection the-a-equals-d-rigidity-consecutive-case-proved-...-boxeph-S117, script+out lrc14_consecutive_loneliness_boxeph_S117, HYP-7705. boxeph; S117.
+
 ## boxeph-2026-07-18-S116 -- mod-13 pair-blocking FORMALIZED (kernel-pure); exact n=12 tight locus is the HOMOGENEOUS AP c*{1..12} (a=d)
 
 Owner: Lean-formalize the mod-13 blocking lemma; work on open math. Two deliverables.
