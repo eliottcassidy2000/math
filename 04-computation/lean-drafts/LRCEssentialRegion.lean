@@ -251,4 +251,33 @@ theorem multi_speed_density_bound (S : Finset ℕ) (hS : ∀ w ∈ S, 1 ≤ w)
   rw [hexp] at hstep
   nlinarith [hstep]
 
+/-- **The uniform per-level budget** — the exact form the substitution
+    enumeration relies on.  If every speed placed is at least `r`, then
+    `Σ 1/wᵢ ≤ j/r`, so the density bound collapses to a single inequality in
+    `j` and `r`.  At `lam = 1/14` this reads `L ≤ j / (r*(7-j))`, which is the
+    budget used at every level of the k = 1…4 searches (THM-1125/1135/1155/1165).
+
+    Note the companion TOTAL-MEASURE bound is *not* independent of this one: if
+    every component already satisfies `ℓᵢ ≤ B`, then `μ(E) = Σ ℓᵢ ≤ c·B`
+    automatically, so a measure test against `c·B` can never fire. -/
+theorem uniform_level_budget (S : Finset ℕ) (r : ℕ) (hr : 1 ≤ r)
+    (hS : ∀ w ∈ S, r ≤ w) (lam L x : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L)
+    (h : Set.Icc x (x + L) ⊆ ⋃ w ∈ S, badArcs w lam) :
+    L * (1 - 2 * (S.card : ℝ) * lam) ≤ 2 * lam * ((S.card : ℝ) / (r : ℝ)) := by
+  have hr0 : (0 : ℝ) < (r : ℝ) := by
+    exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hr
+  have hS1 : ∀ w ∈ S, 1 ≤ w := fun w hw => le_trans hr (hS w hw)
+  have hmain := multi_speed_density_bound S hS1 lam L x hlam hL h
+  have hsum : ∑ w ∈ S, (1 / (w : ℝ)) ≤ (S.card : ℝ) / (r : ℝ) := by
+    calc ∑ w ∈ S, (1 / (w : ℝ)) ≤ ∑ w ∈ S, (1 / (r : ℝ)) := by
+          refine Finset.sum_le_sum (fun w hw => ?_)
+          have hrw : (r : ℝ) ≤ (w : ℝ) := by exact_mod_cast hS w hw
+          exact one_div_le_one_div_of_le hr0 hrw
+      _ = (S.card : ℝ) / (r : ℝ) := by
+          rw [Finset.sum_const, nsmul_eq_mul]; ring
+  have hscale : 2 * lam * (∑ w ∈ S, (1 / (w : ℝ)))
+      ≤ 2 * lam * ((S.card : ℝ) / (r : ℝ)) :=
+    mul_le_mul_of_nonneg_left hsum (by linarith)
+  linarith [hmain, hscale]
+
 end LRC14
