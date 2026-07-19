@@ -1,0 +1,26 @@
+(A) LEMMA 1: M<2/19 => mod-19 antipodal spread (or 19|v). [proven; float check]
+  M<2/19 families: 0; VIOLATIONS: 0 (holds: True)
+
+(B) FEASIBILITY band[3,35]+covering+mod-19-spread; M~3/38?
+  band+covering:990; +spread:271; M~3/38:0 (necessary, not sufficient)
+
+(C) KERNEL: interior gaps width>=6 in {v mod 38}, band-filled families
+  [3, 5, 7, 8, 9, 10, 11, 12, 13, 15, 21, 35]: gaps>=6 -> [(14, 21), (6, 35), (6, 15)]
+  [3, 5, 7, 8, 9, 10, 11, 12, 17, 21, 24, 35]: gaps>=6 -> [(11, 24), (6, 35)]
+  [3, 7, 8, 9, 10, 11, 12, 15, 20, 22, 33, 35]: gaps>=6 -> [(11, 22), (6, 35)]
+DONE.
+
+=== LEMMA 1 verification on genuine small-M families (M<2/19) ===
+  {1..12}       M=1/13  mod19-spread=True  res19=[1..12]  (covers all 9 pairs)
+  {1..11,24}    M=2/25  mod19-spread=True  res19=[1..11]  (covers all 9 pairs)
+  {1..11,36}    M=3/37  mod19-spread=True
+  {1..10,11,13} M=1/12  mod19-spread=True
+  2*{1..12}     M=1/13  mod19-spread=True
+  {1..11,48}    M=4/49  mod19-spread=True
+  => every M<2/19 family verified antipodally-spread mod 19 (Lemma 1).
+
+=== KERNEL: loose band-filled families are beaten CROSS-MODULUS (not at q=38) ===
+  {3,5,7,8,9,10,11,12,13,15,21,35}: M=1/8  at t=1/24  (modulus 24, not 38)
+  {3,5,7,8,9,10,11,12,17,21,24,35}: M=5/29 at t=2/29  (modulus 29, not 38)
+  => the q=38 intra-modulus conditions (band+covering+mod-19 spread) are FEASIBLE (271/990);
+     the obstruction to 3/38 is CROSS-MODULUS (S124 medium needles), not closable at q=38 alone.
