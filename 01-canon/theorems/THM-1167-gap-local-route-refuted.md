@@ -1,5 +1,5 @@
 ---
-id: THM-1144
+id: THM-1167
 title: THE GAP-LOCAL ROUTE TO THE FOUR-COMB THEOREM IS REFUTED — the minimising configuration is (k, k+1, k+2, k+3) at gap index ≈ k/4, and there the longest surviving piece falls BELOW the threshold. (I) THE CONSERVATIVE REDUCTION, precisely stated: define W(k₁,k₂,k₃,k₄) = min over ALL k₁-gaps in [0,1] of the longest piece surviving the k₂,k₃,k₄ teeth. If 7·k₄·W > 1 then the four-comb theorem follows for that quadruple *regardless of which gap the core leaves available*, since the 495-core atlas gives component length ≥ 1/70 and every legal k₁ exceeds 13·max(P) ≥ 104, so a full k₁-gap always fits. This would have decoupled the core entirely. (II) IT FAILS. Exhaustive over consecutive-type quadruples with k₁ ∈ [157,340]: **7·k₄·W = 0.76980** at (317,318,319,320), and the value is monotonically DECREASING in k₁ — 0.79013 (157), 0.78193 (197), 0.77651 (237), 0.77267 (277), 0.76980 (317). Individual rows: (300,301,302,303) gives 0.77679, (157,158,159,160) gives 0.79013, (371,374,377,379) gives 0.99015. So the answer to "does the minimising configuration exceed 1.295?" is **NO — it does not even exceed 1**. (III) THE MECHANISM, via THM-1142's law: the worst gap sits at index j ≈ k₁/4 (measured 39 for k₁=157, 49 for 200, 75 for 300), where the raw gap (a − j·d)/(a·b) with d = k₄ − k₁ = 3 evaluates to ≈ 1/(4k₄); subtracting the three tooth widths leaves ≈ 0.77/(7k₄). The linear descent of THM-1142 is exactly what drives it below threshold. (IV) THE CONSEQUENCE, which is the point: **the four-comb theorem cannot be proved gap-locally.** Some k₁-gaps genuinely fail, so any proof must use WHICH gaps the core-safe component makes available. The core cannot be decoupled, and a four-comb bank must track component location rather than quantifying over all gaps
 status: (I) PROVED as a valid sufficient condition. (II) REFUTED by exhaustive exact-rational computation over the stated family — the failing configurations are witnessed, so the gap-local route is definitively closed, not merely unverified. (III) explains (II) via THM-1142. (IV) follows. **Uniform r=5 remains OPEN**, and this session narrows how it can be attacked rather than advancing it
 source: kind-pasteur-2026-07-18-S128 (cont.72; owner: find the minimising configuration and confirm it exceeds 1.295)
@@ -10,7 +10,7 @@ related: [THM-1137, THM-1097, MISTAKE-169]
 script: 04-computation/min_config_kps_S128c72.py (+ .out)
 ---
 
-# THM-1144 — the gap-local route is refuted
+# THM-1167 — the gap-local route is refuted
 
 THM-1143 reduced the four-comb theorem to a three-tooth spacing statement inside one
 k₁-gap, with a measured margin of 3.05 against a required 1.295. The obvious next step was
