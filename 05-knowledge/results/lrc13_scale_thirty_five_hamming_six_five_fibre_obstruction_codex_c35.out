@@ -1,0 +1,51 @@
+### c=35 AP-centred H6 exact five-fibre primary ###
+orders: (1, 5, 7, 35)
+unit counts: (1, 4, 6, 24)
+grammar: at least two 5-carriers and at least two 7-carriers
+hereditary words: 3249
+labelled support/order contexts: 3002076
+literal state words/support: 1834747200
+raw labelled state words: 1695306412800
+grammar digest: c2ab055e4dceeafbb7b15aedd1429cde3dc44c6de41ec64ecc8011d2dbb9cce9
+CRT-base digest: d397fc4e12b528261da7f6f5bccdc80ce1cb7bc720a467229153f27ab4d981f8
+literal-mask digest: 9d2c2d2e7ac16f8bbb45dfa36dda1df82a428cffd6913532a0eefb171ebd2f15
+cardinality vectors by ratio; columns D=1,5,7,35:
+  r= 1: (35, 7, 10, 6)
+  r= 2: (0, 7, 5, 6)
+  r= 3: (0, 7, 5, 5)
+  r= 4: (0, 0, 5, 5)
+  r= 5: (0, 7, 5, 6)
+  r= 6: (0, 7, 5, 5)
+  r= 7: (0, 7, 5, 5)
+  r= 8: (0, 7, 5, 6)
+  r= 9: (0, 0, 5, 5)
+  r=10: (0, 7, 5, 5)
+  r=11: (0, 7, 5, 6)
+  r=12: (0, 0, 5, 5)
+scalar feasible-owner histogram: 0:8522 1:1135668 2:1246950 3:485440 4:114720 5:10560 6:216
+scalar support-survivor histogram: 0:900 9:24
+scalar survivors: 216
+scalar survivor supports: 24
+scalar multiplicity profiles: (0, 2, 0, 4):24 (0, 2, 1, 3):96 (0, 2, 2, 2):96
+scalar capacity vectors: 130
+literal scalar-survivor state words: 286654464
+scalar digest: db8aa0ce7e195ba1ae4024747073022ef5b4d51eb149cf54071a8293f3c9e467
+Z5 bank sizes: 4:432 10:864
+Z5 bounds: 27:576 28:336 29:240 30:96 31:48
+Z5 live owners/context: 0:216
+Z5 digest: 25bc8abff0f769dd80d5c4e8302507586109c4da28e8c1d84c875637ef46235c
+Z7 bank sizes: 1:144 6:576 21:576
+Z7 bounds: 29:192 30:192 31:192 33:288 34:192 35:144 36:48 37:48
+Z7 live owners/context: 0:144 2:48 6:24
+Z7 digest: 7acb48a927c55952e604b40fc0ff96ffecf7e686066dd169db7584b49baf0347
+mixed bank sizes: 4:48 10:96 24:192 60:384 84:192 210:384
+mixed bounds: 27:576 28:336 29:240 30:96 31:48
+mixed live owners/context: 0:216
+mixed digest: 314d0ae90377f40af17ca87594633052db47a7d0dca8576202d5609867d3cdb6
+Z5 owner-order/bound: (5, 27):288 (5, 28):144 (7, 29):144 (7, 30):96 (7, 31):48 (35, 27):288 (35, 28):192 (35, 29):96
+owner tournament (Z5 ties,Z7 ties,gauge flips): (1, 1, 0):96 (1, 3, 0):12 (1, 3, 1):24 (1, 3, 2):12 (1, 4, 3):8 (1, 4, 4):16 (1, 4, 5):16 (1, 4, 6):8 (3, 3, 0):24
+owner tournaments: scores (0,1,2,3,4,5), triangles 0, SCCs 1^6, HP 1
+tournament vertices: owner obligations; gauge: Z5 versus Z7 proof cost
+preserved: owner-local absolute upper bound; destroyed: shared units/needle overlaps
+Z5 ceiling: 31 < 35 on every scalar-surviving owner obligation
+VERDICT: primitive proper AP-centred common-scale-35 H6 face EMPTY
