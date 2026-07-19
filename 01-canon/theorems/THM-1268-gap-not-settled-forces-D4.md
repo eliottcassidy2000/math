@@ -1,6 +1,6 @@
 ---
-id: THM-1260
-renumbered: was THM-1240 (opus-S397); codex-S78 pushed THM-1240-centered-carrier-spoke-blocker-cycle first (07-19 11:22 vs 13:40), so this file renumbers per first-push precedent (opus-S399). Session-log entries for S397/S398 retain the originally announced number.
+id: THM-1268
+renumbered: was THM-1240 (opus-S397); codex-S78 pushed THM-1240-centered-carrier-spoke-blocker-cycle first (07-19 11:22 vs 13:40), and THM-1260 was already occupied by codex's placed-fork chi7 guardrail, so this file uses the next free ID (codex-S78 integration correction). Session-log entries for S397/S398 retain the originally announced number.
 title: (1/14, 3/41) NOT SETTLED — BUT THE INTERVAL FORCES D ≥ 4, 4/55 IS THE CANONICAL TARGET, AND THE OBSTRUCTION TO SETTLING IS NAMED — M = D/s lies strictly inside iff 41D/3 < s < 14D, and for D = 1, 2, 3 that range contains NO INTEGER (13.67<s<14, 27.33<s<28, 41<s<42), so the interval **forces D ≥ 4** by exact arithmetic — one full step beyond boxeph-S123's D ≥ 3, which was for the wider Farey interval. Moreover |1·41 − 3·14| = 1, so 1/14 and 3/41 are FAREY NEIGHBOURS and 4/55 = (1+3)/(14+41) is the mediant: the unique fraction of least denominator inside, hence the canonical first target. ~12,400 families found nothing inside — including a residue-band construction at s = 55 built specifically to realise 4/55. But the candidate (D,s) list is INFINITE (every D ≥ 4 admits an s), so no finite check can settle emptiness: a proof requires a BOUND ON D for a realising family, which I do not have
 status: the D ≥ 4 forcing and the Farey/mediant structure are exact arithmetic. The emptiness evidence is ~12,400 families over two structurally-motivated constructions — SEARCH, not proof. The question posed ("settle whether (1/14,3/41) is empty") is NOT settled, and this file says so and names precisely what a settlement needs
 source: opus-2026-07-19-S397 (owner: settle whether (1/14, 3/41) is empty)
@@ -8,9 +8,9 @@ depends_on: [THM-1235 (which posed the question and corrected the gap edge to 3/
 scripts: 04-computation/settle_gap_opus_S397.py -> 05-knowledge/results/settle_gap_opus_S397.out
 ---
 
-# THM-1260 (formerly THM-1240) — what the interval forces, and why it is not yet settled
+# THM-1268 (formerly THM-1240) — what the interval forces, and why it is not yet settled
 
-> **OBSTRUCTION REDUCED (opus-S398), see THM-1261 (formerly THM-1245).** 'Bound D' is now known to be exactly 'bound the speeds': D = M*s exactly, so with M ~ 1/14 we get D ~ s/14 and s = v_i+v_j <= 2*max(V). Hence the missing ingredient is precisely: for PRIMITIVE families, does M near the floor force bounded speeds? (Primitivity is essential -- dilating {1,...,13} by k keeps M = 1/14 while max(V) -> 13k.) An 8.5M-family integer scan at caps 20-110 found only {1,...,13} with M <= 3/41, and nothing at caps >= 30 -- but random sampling misses the structured near-floor families, so that is scale rather than coverage.
+> **OBSTRUCTION REDUCED (opus-S398), see THM-1269 (formerly THM-1245).** 'Bound D' is now known to be exactly 'bound the speeds': D = M*s exactly, so with M ~ 1/14 we get D ~ s/14 and s = v_i+v_j <= 2*max(V). Hence the missing ingredient is precisely: for PRIMITIVE families, does M near the floor force bounded speeds? (Primitivity is essential -- dilating {1,...,13} by k keeps M = 1/14 while max(V) -> 13k.) An 8.5M-family integer scan at caps 20-110 found only {1,...,13} with M <= 3/41, and nothing at caps >= 30 -- but random sampling misses the structured near-floor families, so that is scale rather than coverage.
 
 ## The interval forces D ≥ 4
 

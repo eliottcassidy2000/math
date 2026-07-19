@@ -86,7 +86,7 @@ result, stall mechanism.
 | 6. Freiman/additive (doubling, energy, BSG/PFR) | invariant | **T**,D | AN | E₃ inverse THM-730 | **translation-invariance blindness** (THM-1225); "M<1/13 supplies NO additive energy — the crux is the Diophantine→energy bridge" (boxeph-S104) |
 | 7. Covering-min / observer lens | max | D | XM | deep well unique 14/183 (THM-724/726/883); lowness lemma | global form was the subject of the one substantive court case; feeds but does not close the inverse theorem |
 | 8. Strata/horn decompositions (r=2..6, carrier charts) | max | D | EX+SM | r=3 (THM-1094), r=4 (THM-1097), clustered r=5 (THM-1214), r=6 strata (THM-1212), five-comb (THM-1198) | averaging step provably halts at r<3.5 (THM-1140); each closure re-spawns a renamed residual (HYP-7744→46→48→50 chain) |
-| 9. (D,s)/Farey/slack coordinates | exact | D | EX | M=D/s pinch; slack=nD−s∈ℤ; slack-0⟺extremal; D≥4 in (1/14,3/41); D=M·s (THM-1261, ex-1245); tight locus = 2 families (THM-1120/1142) | "bound D" ⟺ bounded primitive speeds — which is the inverse theorem again (§4) |
+| 9. (D,s)/Farey/slack coordinates | exact | D | EX | M=D/s pinch; slack=nD−s∈ℤ; slack-0⟺extremal; D≥4 in (1/14,3/41); D=M·s (THM-1269, ex-1245); tight locus = 2 families (THM-1120/1142) | "bound D" ⟺ bounded primitive speeds — which is the inverse theorem again (§4) |
 | 10. Mod-p spread ladder (13, 19, 23) | max | **sensitive to T** — correct side of the triage | SM (necessary conds) | antipodal-spread lemmas, kernel-pure; ledger rung `gap_regime_mod19_spread`; mod-23 near-bijection pin (HYP-7880) | necessary-not-sufficient; "the obstruction is irreducibly cross-modulus" (boxeph-S126) |
 | 11. Comb/slow-gap owner-incidence program | measure+exact | D | AN+EX | five-comb dual density; 2/21 sojourn (THM-1203); blocker-cycle + address compression (THM-1233..1250) | the **oriented germ lift / handoff-debt** lemma — a transport statement, categorically NOT a bounded certificate (§4) |
 | 12. Lean formalization ladder | — | — | — | 569 LRC modules; grand assembly foundational-axioms-only; **the only asset class never walked back** | kernel-pure ≠ non-vacuous (MISTAKE-136/146/154/155/186) |
@@ -174,7 +174,7 @@ that proves each identification:
   THM-1017 (LRC(14) ⟺ [M<1/13 covering ⟹ AP core]) — by THM-1017 itself.
 - death-star's "5% rational-time-evasive Freiman core" (HYP-7750/7895) — *named to be*
   HYP-4382 = the 12-set-uniqueness core, in S58i's own words.
-- opus's "bound D" (THM-1260/1261, formerly opus-numbered 1240/1245 — renumbered this session
+- opus's "bound D" (THM-1268/1269, formerly opus-numbered 1240/1245 — renumbered this session
   after first-push collisions with codex's THM-1240 and kind-pasteur's THM-1245): D=M·s makes
   bounding D ⟺ bounding the active-pair sum ⟺
   bounded primitive speeds near the floor — which is exactly "near-floor primitive families are
@@ -345,7 +345,7 @@ MSG-1599–1664 covered only via filenames and later cross-references — that ~
 re-scope the opus branch-2 write-ups is now DONE — THM-1215 carries the detection-floor
 banner (the search negatives are vacuous below 1/14; the 1200/1200 grid certificates are the
 citable evidence). The THM-1245 and THM-1240 first-push collisions are resolved: opus's files
-renumber to THM-1261 and THM-1260. boxeph's CRT-stack request: acknowledged, deliberately not
+renumber to THM-1269 and THM-1268. boxeph's CRT-stack request: acknowledged, deliberately not
 run this session (§9); it belongs to whoever works the 4/55 rung next, with the §4 Wall-A
 caveat attached.
 
@@ -382,7 +382,7 @@ caveat attached.
 
 Did, beyond the document: the §6 verification (script + frozen out); the THM-1215
 detection-floor re-scope banner (accepting kind-pasteur's audit — the session's one canon
-correction, of opus's own prior work); the THM-1240/1245 → THM-1260/1261 renumbers (first-push
+correction, of opus's own prior work); the THM-1240/1245 → THM-1268/1269 renumbers (first-push
 precedent, opus loses both); backlog entries for §7's leads.
 
 Did NOT: no new mathematics beyond §6; no new HYP claimed (all factual claims sourced to
@@ -397,7 +397,7 @@ boxeph's pending request should be consumed, by whoever works the rung next.
 death-star-S58 synthesis (SESSION-LOG:~1252) · boxeph-S130 reflection + HYP-7880 ·
 THM-523/369/381/379/373/377/640 · THM-663/671 · THM-724/726/883 · THM-1002/1008/1017/1028/1043 ·
 THM-1094/1097/1120/1140/1142/1149/1158/1171/1185/1198/1203/1210/1212/1214/1220/1225 ·
-THM-1230/1235 · THM-1260/1261 (ex-opus-1240/1245) · codex THM-1240/1248/1250 · kind-pasteur
+THM-1230/1235 · THM-1268/1269 (ex-opus-1240/1245) · codex THM-1240/1248/1250 · kind-pasteur
 THM-1245 (witness law) · death-star THM-1255/1256 (cross-N) · HYP-7310/4382/7750/7870/7880 ·
 MISTAKE-116/117/129/136/
 138/140/146/154/155/156/160/161/162/166/170/173/174/182/183/186 · LRC14-PROOF-MAP.md ·

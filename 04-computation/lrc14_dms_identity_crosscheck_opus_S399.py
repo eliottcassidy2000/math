@@ -1,6 +1,6 @@
 """
 opus-2026-07-19-S399: cross-check the (D,s) active-pair identity D = M*s
-(THM-1261, formerly THM-1245, opus-S398) on out-of-sample data:
+(THM-1269, formerly THM-1245, opus-S398) on out-of-sample data:
 
   1. death-star-S59b's brand-new N=31 single-far discovery {1..29,31,120}
      claimed at M = 4/127 (the D=4 slack-1 rung for 32 runners: 127 = 32*4-1).
