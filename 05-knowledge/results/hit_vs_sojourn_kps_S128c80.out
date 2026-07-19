@@ -1,0 +1,30 @@
+### (1) does (1,2,7) really hit the centre? exact check at u = 3/4 ###
+   frac(-1 * 3/4) = 1/4
+   frac(-2 * 3/4) = 1/2
+   frac(-7 * 3/4) = 3/4
+   target c = (1/4, 1/2, 3/4)  -> HIT: True
+
+### (2) hitting does NOT give 28x -- sojourn vs d_max among CENTRE-HITTING directions ###
+  direction     hits c   d_max   sojourn     x|B|      sojourn*d_max
+  (1, 2, 3)     YES      3       0.095230    28.28     0.2857
+  (2, 4, 6)     YES      6       0.095240    28.29     0.5714
+  (3, 6, 9)     YES      9       0.095230    28.28     0.8571
+  (1, 2, 7)     YES      7       0.024490    7.27      0.1714
+  (1, 6, 7)     YES      7       0.034010    10.10     0.2381
+  (1, 2, 11)    YES      11      0.014430    4.29      0.1587
+  (1, 6, 11)    YES      11      0.020780    6.17      0.2286
+  (1, 10, 15)   YES      15      0.012700    3.77      0.1905
+  (2, 4, 14)    YES      14      0.024500    7.28      0.3430
+
+### (3) the product sojourn * d_max is the invariant ###
+  for the proportional family (m,2m,3m) it should be constant:
+    m=1   d_max=3    sojourn=0.095230   sojourn*d_max = 0.2857
+    m=2   d_max=6    sojourn=0.095240   sojourn*d_max = 0.5714
+    m=3   d_max=9    sojourn=0.095230   sojourn*d_max = 0.8571
+    m=5   d_max=15   sojourn=0.095250   sojourn*d_max = 1.4287
+    m=10  d_max=30   sojourn=0.095300   sojourn*d_max = 2.8590
+
+  CONCLUSION: 4|e predicts HITTING, not maximal sojourn.  Sojourn ~ hits * 2rho/d_max,
+  so among hitting directions the slowest wins; (1,2,3) is the minimal increasing
+  triple that hits, and (m,2m,3m) ties it because m hits compensate d_max = 3m exactly.
+DONE
