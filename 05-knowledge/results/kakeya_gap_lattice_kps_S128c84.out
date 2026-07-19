@@ -1,0 +1,52 @@
+==============================================================================
+(L1)(L2) GAP-WINDOW + NO-CROSSING/NO-WRAP, checked at every run midpoint
+==============================================================================
+  runs sampled                        : 6264
+  samples outside the three windows   : 0  -> L1 HOLDS
+  runs where the ordering changed     : 0  -> L2 HOLDS
+
+==============================================================================
+(L3) RATES DISTINCT  =>  D >= 3   (the P = 1 case, PROVED)
+==============================================================================
+  primitive directions with a repeated rate that still have a run : 0
+  -> equal rates give g_i = g_j, a zero gap, impossible in B.  D >= 3 PROVED.
+
+==============================================================================
+(L4) #RUNS EVEN  (no self-mirror run)  =>  '#runs <= 2D/3' IS 'D >= 3P'
+==============================================================================
+  directions with an ODD number of runs : 0
+  self-mirror runs                      : 0
+  -> u=0 gives g=(0,0,0) and u=1/2 gives g_i in {0,1/2}: both have a zero gap,
+     so neither fixed point of u->1-u lies in B.  #runs = 2P PROVED.
+
+==============================================================================
+(L5) run <= 1/(7D) and the equality characterisation
+==============================================================================
+  runs violating run <= 1/(7D)          : 0  -> HOLDS
+  runs attaining equality               : 900  (directions: [(1, 2, 3), (1, 2, 10), (1, 2, 17), (1, 2, 24), (1, 3, 2), (1, 9, 10), (1, 9, 17), (1, 9, 24)])
+  all equality directions are (1,2,3)-orbit : False
+  every equality run enters at the corner (2/7,4/7,6/7) : False
+
+==============================================================================
+(L6) LATTICE-TUBE IDENTITY:  runs <-> distinct (ordering, lattice point)
+==============================================================================
+  runs indexed                                   : 6264
+  (ordering, lattice point) collisions           : 0  -> injective YES
+  -> #runs = #{(sigma,m) : (B_sigma + m) meets the segment [0,-d]}.
+     B_sigma convex => one interval each.  A LATTICE COUNT IN A THIN TUBE.
+
+==============================================================================
+(E) D >= 3P :  exhaustive proof at P<=1, and measurement above
+==============================================================================
+  ALL primitive triples with distinct rates <= 5 : max P = 1 at (1, 2, 3)
+  (repeated rates give no runs at all, L3)  ->  D <= 5 => P <= 1  PROVED,
+     i.e. the P = 2 case of D >= 3P (which needs D >= 6) is PROVED.
+  primitive d in [1,30]^3 : violations of D >= 3P : 0  -> HOLDS
+  max P/D = 1/3 = 0.33333 at (1, 2, 3)   (threshold 1/3 = 0.33333)
+  minimal D achieving each P (the witness family):
+     P=1    minimal D=3    at (1, 2, 3)        3P=3     slack 0
+     P=2    minimal D=7    at (1, 6, 7)        3P=6     slack 1
+     P=3    minimal D=14   at (1, 13, 14)      3P=9     slack 5
+     P=4    minimal D=17   at (1, 16, 17)      3P=12    slack 5
+     P=5    minimal D=21   at (1, 20, 21)      3P=15    slack 6
+     P=6    minimal D=28   at (1, 27, 28)      3P=18    slack 10

@@ -1,0 +1,46 @@
+==============================================================================
+1. THE WITNESS FAMILY  d = (1, D-1, D),  D = 3 .. 400
+==============================================================================
+  D values tested            : 396
+  violations of D >= 3P      : 0  -> HOLDS on the family
+  max P/D on the family      : 1/3 = 0.333333 at D = 3  (threshold 1/3)
+  top 12 by P/D:
+     D=3     P=1    P/D = 1/3        = 0.333333   3P=3     slack 0
+     D=7     P=2    P/D = 2/7        = 0.285714   3P=6     slack 1
+     D=21    P=5    P/D = 5/21       = 0.238095   3P=15    slack 6
+     D=17    P=4    P/D = 4/17       = 0.235294   3P=12    slack 5
+     D=35    P=8    P/D = 8/35       = 0.228571   3P=24    slack 11
+     D=31    P=7    P/D = 7/31       = 0.225806   3P=21    slack 10
+     D=49    P=11   P/D = 11/49      = 0.224490   3P=33    slack 16
+     D=45    P=10   P/D = 2/9        = 0.222222   3P=30    slack 15
+     D=63    P=14   P/D = 2/9        = 0.222222   3P=42    slack 21
+     D=77    P=17   P/D = 17/77      = 0.220779   3P=51    slack 26
+     D=59    P=13   P/D = 13/59      = 0.220339   3P=39    slack 20
+     D=91    P=20   P/D = 20/91      = 0.219780   3P=60    slack 31
+
+==============================================================================
+2. THE GENERAL ADDITIVE FAMILY  d = (a, b, a+b)  (relation (1,1,-1))
+==============================================================================
+  additive triples tested    : 3658
+  violations of D >= 3P      : 0  -> HOLDS on additive family
+  max P/D                    : 1/3 = 0.333333 at (1, 2, 3)
+
+==============================================================================
+3. NON-ADDITIVE STRESS FAMILIES (is additivity really the extremal shape?)
+==============================================================================
+  (1, 2, D)       max P/D = 1/7       = 0.142857 at (1, 2, 7)       violations 0
+  (1, D-2, D)     max P/D = 0         = 0.000000 at None            violations 0
+  (2, D-1, D)     max P/D = 0         = 0.000000 at None            violations 0
+  (1, D//2, D)    max P/D = 1/6       = 0.166667 at (1, 3, 6)       violations 0
+  (3, D-2, D)     max P/D = 1/8       = 0.125000 at (3, 6, 8)       violations 0
+
+==============================================================================
+4. CORRECTION TO MY OWN L5:  run = (1/7)/r_max  <=>  corner entry ?
+==============================================================================
+  runs with run = (1/7)/r_max            : 240
+  ... of which NOT entering at the corner: 0  -> corner claim HOLDS
+  runs with run = 1/(7D)                 : 528
+  ... non-(1,2,3) directions attaining it: 258  e.g. [(1, 2, 10), (1, 2, 17), (1, 2, 24), (1, 9, 10), (1, 9, 17), (1, 9, 24)]
+  -> MY L5 OVERCLAIM CORRECTED: run = 1/(7D) does NOT force (1,2,3).
+     The true chain is  run <= 1/(7D) <= 1/21, and it is the SECOND
+     inequality (D >= 3, from distinct rates) that is tight only at (1,2,3).

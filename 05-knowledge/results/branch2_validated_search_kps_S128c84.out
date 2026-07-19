@@ -1,0 +1,45 @@
+==============================================================================
+VALIDATION GATE  (the previous searcher would have failed step 2)
+==============================================================================
+  M({1..13}     ) = 1/14      expected 1/14     OK
+  M({1..12}     ) = 1/13      expected 1/13     OK
+  M({1..11}     ) = 1/12      expected 1/12     OK
+  M({1..11,24}  ) = 2/25      expected 2/25     OK
+  random-restart climb in range(1,45), 60 starts: best M = 4/43 = 0.093023
+     at V = [1, 3, 4, 13, 15, 16, 17, 18, 19, 20, 28, 36, 42]
+  reaches the known optimum 1/14 = 0.071429 : FAILED -- searcher is too weak to trust
+
+  GATE: FAILED
+
+==============================================================================
+BRANCH-2 SEARCH:  q0 > 14  and  M < 1/14 ?   (target: s > 14 D)
+==============================================================================
+  hard-stratum families generated (q0 > 14)          : 1200
+  CERTIFIED M >= 1/14 by the sound grid witness      : 1200  (100.0%)
+  survived the prune and needed an exact search      : 0
+  COUNTEREXAMPLES (q0>14 and M < 1/14)               : 0
+
+  NOTE ON STRENGTH: the certified count is a RIGOROUS per-family statement,
+  not a search result -- gridmax(V) <= M(V) always, so exhibiting a grid
+  point t with min_v ||v t|| >= 1/14 PROVES M(V) >= 1/14 for that family.
+  That is a stronger form of evidence than hill-climbing, and it is what
+  the existing branch-2 runs should have reported.
+
+  no family survived the prune: EVERY generated hard-stratum family
+  carries an explicit grid certificate M >= 1/14.  The branch-2 target
+  holds on all 1200 of them, by certificate rather than by search.
+
+==============================================================================
+DETECTION FLOOR -- how strong is a negative result here, quantitatively?
+==============================================================================
+  smallest M this searcher reached, UNRESTRICTED : 4/43 = 0.093023
+  smallest M this searcher reached, BRANCH 2     : none survived the prune
+  the counterexample target                      : M < 1/14 = 0.071429
+
+  VERDICT: the searcher's detection floor (0.093023) lies ABOVE the target
+  (0.071429).  It fails to find {1,...,13} at 1/14 even when that family is
+  inside its own sampling range.  Therefore '0 counterexamples found'
+  is VACUOUS: this instrument could not have detected one.  The same
+  applies to dge2_hardmin_opus_S392 (floor 2/19) and to
+  stability_gap_opus_S393 (floor 6/61), whose floors are also above
+  their targets.  Branch-2 emptiness is NOT supported by random search.
