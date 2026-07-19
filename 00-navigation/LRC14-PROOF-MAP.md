@@ -62,6 +62,27 @@
 > forces factor three.  This bounds return depth, but not breadth or the
 > missing bridge-to-child operation: separated support edges do not share
 > addresses, and exact star cells realize many parallel returns.
+>
+> THM-1266 now closes the primitive consecutive-address breadth question.
+> Closest returns can be packed vertex-disjointly with `N<=13P+6`, and one
+> repeated low owner in a high-owner `r=1` star must be at least six slots
+> away.  Five non-high owners therefore permit at most five consecutive
+> rungs, sharply.  The exact primitive cell `(c,k)=(140,80)` realizes all five
+> rungs, two aligned blocker cycles, and every current local fork/return law.
+> Sweeping all six combs leaves exactly four complete `1805`-safe gaps, two
+> on each side.  This is the decisive guardrail: no further purely local
+> return lemma can close the branch; the missing theorem must charge or force
+> a turn while completing one of those global tails.
+>
+> THM-1267 supplies a complementary positioned `H`-drift constraint.  On the
+> slowest fast speed's centered complete safe component, the other five combs'
+> survivor is forced into one endpoint tail.  Its exact normalized length is
+> `ell=max(0,1/2+7rho/6-d1/(2c))`.  Spending only THM-1241's separated fastest
+> load improves the five-load cap to `349/360`, so `ell>11/270` and
+> `270d1<=563c-1`.  This is not new seam mass: it converts a frequency-side
+> functional defect into literal endpoint displacement.  The highest-leverage
+> live target is to couple this forced protrusion to the sharp star's required
+> tail completion, or to prove a phase-located non-star turn tax.
 
 > ## 2026-07-19 S78 — ONE COHERENT TOOTH WORD REMOVES THE TREE, SECOND-WALL, AND AFFINE-SIGN LOSSES
 >

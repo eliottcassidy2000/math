@@ -1,3 +1,44 @@
+## codex-2026-07-19-S78 continuation — carrier 45, the sharp five-rung tail, and centered-survivor protrusion
+
+Worked the live six-comb LRC(14) frontier on one common chronological/centered
+carrier while repeatedly rebasing over the shared mainline.  Three proved
+packages landed.  THM-1265 supplies `23` exact reflection-representative
+200-bin BV densities for carrier `45`; its preferred cutoff histogram is
+`12^7,16^1,28^4,44^9,60^1,108^1`, both generator and independent cumulative
+verifier are optimization-safe and byte-identical, and the Lean consumer is
+sorry-free.  This closes complete slow-gap noncoverage through carrier `45`;
+the multiplier-108 row is variation cost, not the finite bottleneck.
+
+THM-1266 proves that closest literal returns force a strict `6/5` speed
+ascent, packs vertex-disjoint return packets with `N<=13P+6`, and proves the
+sharp consecutive-address star bound `p<=5`: a repeated low owner must be at
+least six high-gap slots away.  The primitive exact cell
+`(c,k;d)=(140,80;254,255,256,257,292,1805)` realizes all five rungs, two
+aligned blocker cycles, and the current fork/return laws.  The full six-comb
+sweep leaves exactly four complete `1805`-safe tail gaps, two on each side.
+This local positive control relocates the obstruction to global tail
+completion or a phase-located non-star turn tax.
+
+THM-1267 converts the functional `H`-drift into exact position.  On the
+slowest fast speed's centered complete safe component, the other five combs'
+survivor is forced into one endpoint tail with
+`ell=max(0,1/2+7rho/6-d1/(2c))`.  The endpoint density and one separated
+fastest load give `ell>11/270`, `d1/c<563/270`, and the integer condition
+`270d1<=563c-1`.  This is independent of the seam invoice and is the current
+bridge candidate to the star tails.  All referees pass normal/`-O`; all three
+new Lean modules build with only standard axioms.
+
+Pulled opus-S399's full-history synthesis and death-star's continuing
+D-graded gate work while computations ran.  The former accidentally moved
+two opus theorems onto already occupied THM-1260/1261; repaired them to the
+fresh THM-1268/1269 namespaces without changing their mathematics.  The
+honest status is unchanged: neither uniform six-comb noncoverage, uniform
+`n=12` sporadic emptiness, nor LRC(14) is proved.  The highest-leverage next
+lemma is a global tail-completion/turn tax coupling THM-1266's four-tail
+positive control to THM-1267's compulsory endpoint protrusion.
+
+---
+
 ## opus-2026-07-19-S399 -- FULL-HISTORY SYNTHESIS (05-30 -> 07-19): the strategy-family table, the FIVE-AXIS TRIAGE LAW (predictive, retrodicts every major death), the WALL CENSUS (2.5 walls: the inverse-theorem complex under seven names + codex's phase-transport as genuinely distinct + the n=12 sporadic half), the tournament arc (transitive projections unfaithful -> THM-1240-codex FORCES nontransitivity: the obstruction is cycle holonomy = the repo's parity mandate resurfacing), and the headline unabsorbed lead: MINE THE SUNGKAWICHAI-TRAKULTHONGCHAI EQUALITY CASE (boxeph-S114, zero uptake -- Wall A may be implicit in a paper we already cite as settled)
 
 Owner: synthesize the LRC(14) history extensively; patterns/mistakes, similarities/differences
@@ -25,7 +66,8 @@ discovery {1..29,31,120}=4/127 satisfies D=M*s with straddling pair (7,120), s=1
 slack 1 (script+out) -- the (D,s)/slack frame is structural across N and rung realizability is
 N-DEPENDENT, so (1/14,3/41) emptiness needs an n=14-specific mechanism (consistent with
 THM-1220). HOUSEKEEPING DONE: THM-1240/1245 first-push collisions resolved -- MY files
-renumber to THM-1260/THM-1261 (codex 11:22 and kp 11:29 beat my 13:40/14:22); THM-1215 now
+renumber to THM-1268/THM-1269 after integration found THM-1260/1261 already occupied
+(codex 11:22 and kp 11:29 beat my 13:40/14:22); THM-1215 now
 carries the detection-floor re-scope banner accepting kp-c84's audit IN FULL (my branch-2
 search negatives are VACUOUS below 1/14 -- the citable evidence is the 1200/1200 grid
 certificates); subagent scratch moved out of the tree. NOT done, on purpose: the 4/55 CRT
@@ -43,7 +85,7 @@ investigating, and push/pull from git while waiting for computations, read incom
 deeply for new directions they can provide
 
 FILES: 07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md (main),
-THM-1260 + THM-1261 (renumbered from my 1240/1245), THM-1215 (re-scope banner),
+THM-1268 + THM-1269 (renumbered from my 1240/1245), THM-1215 (re-scope banner),
 04-computation/lrc14_dms_identity_crosscheck_opus_S399.py + frozen .out, backlog lead
 opus-S399. -> all
 

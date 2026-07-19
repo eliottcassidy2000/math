@@ -1,8 +1,8 @@
 # THE LRC(14) FORMALIZATION MANIFEST — boxeph-S48 (the Lean batch, consumable form)
 
-## Landed addendum — coherent full-word package, carriers 41--45, and scale 36 (codex-S78)
+## Landed addendum — coherent full-word, centered-tail, carriers 41--45, and scale 36 (codex-S78)
 
-The current addendum now has fourteen new sorry-free arithmetic modules.
+The current addendum now has sixteen new sorry-free arithmetic modules.
 
 - `LRCMinimalBlockerTwoWallFork` checks the all-edge carrier-margin estimate,
   two wall quanta, exact detuned toothpick return, `r<=335`, binary reflection
@@ -39,6 +39,13 @@ The current addendum now has fourteen new sorry-free arithmetic modules.
   telescope, exact address-return identity, positive ratio sum, factor-three
   triangle ascent, and the factor-three/factor-`6/5` compact heights
   (THM-1264).
+- `LRCClosestReturnLeafPaidStar` checks the closest-return `6/5` consumer,
+  disjoint packet count, rank cutoff, repeated-low separation, sharp five-rung
+  star cell, centered blocker placements, and exact four-tail endpoints
+  (THM-1266).
+- `LRCCenteredSurvivorProtrusion` checks the center shift, normalized endpoint
+  protrusion, endpoint-density quantiles, separated one-comb envelope budget,
+  `rho` conversion, and the integer cut `270d1<=563c-1` (THM-1267).
 - `LRCBinaryPhaseWordLanding` checks the endpoint-address interpretation,
   phase/order mismatch seam, adjacent-swap matching obstruction, detuned
   backtrack, ABAB contradiction, and half-density turn floor (THM-1256).

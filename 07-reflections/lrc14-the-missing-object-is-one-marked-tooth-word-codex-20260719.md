@@ -242,6 +242,30 @@ the full seam invoice.  The missing operation is consequently not “find an
 ascent,” but “make the exported bridge land on a child return stalk, or pay
 the nonreturning endpoint extension.”
 
+THM-1266 makes that breadth obstruction exact.  A consecutive-address
+high-owner star has at most five rungs, and this is sharp.  Its primitive
+`c=140,k=80` positive control realizes all five returns, both aligned
+blocker-cycle bridges, and every present local metric law.  The full comb
+union fails only on four complete fastest-safe gaps, two on either side of
+the star.  Thus “one more local return” is no longer the right target: a
+hypothetical cover must complete a tail by a non-star tooth or turn, and that
+global extension is the first unpaid operation.
+
+THM-1267 locates an independent compulsory tail.  On the centered complete
+safe component of `d1`, the five-comb survivor lies in one endpoint
+protrusion with
+
+```text
+ell=max(0,1/2+7rho/6-d1/(2c)).
+```
+
+The exact six-bin endpoint density and THM-1241's separated `d6` load give
+`ell>11/270` and the new necessary condition `270d1<=563c-1`.  This is the
+functional `H`-drift expressed as position rather than as another overlap
+invoice.  The most concrete synthesis target is now to prove that the
+star-completion tail and centered-survivor protrusion cannot be routed by the
+same remaining teeth without paying a new phase-located turn.
+
 ## 5. Finite terminal bases and the separate `n=12` branch
 
 The bounded-variation density method now gives exact terminal noncoverage
@@ -271,15 +295,18 @@ ballot rigidity, so uniform sporadic emptiness must not be claimed here.
 
 The next proof attempt should not ask for another global mass inequality,
 another sampled blocker, a stronger Fano count, or a literal repetition of a
-carrier-41 density.  It should take the cell (10) as input and implement the
-next legal operation on it.  The most falsifiable version is:
+carrier-41 density.  It should take the cell (10), the sharp five-rung
+positive control, and the positioned survivor tail as inputs and implement
+the next legal operation.  The most falsifiable version is:
 
 > An aligned binary phase segment with both target-wall seams either reaches
 > a strictly smaller covered carrier/address cell, or contains a first
 > nonaligned marked tooth whose raw overlap is a new occurrence in the full
 > chronological invoice.
 
-THM-1256 proves this statement for the first interval-order comparison.  The
-remaining work is to make the iteration preserve a complete slow gap and a
-well-founded potential.  That is now the narrowest known mathematical
-frontier of the six-comb route to LRC(14).
+THM-1256 proves this statement for the first interval-order comparison, while
+THM-1266 proves that a consecutive-address continuation cannot pass five
+rungs.  The remaining work is to show that tail completion either preserves
+a smaller complete slow gap or pays a genuinely new positioned turn, and to
+couple that operation to THM-1267's forced endpoint protrusion.  That is now
+the narrowest known mathematical frontier of the six-comb route to LRC(14).
