@@ -1,0 +1,25 @@
+THM-1275 FASTEST-OWNER FLOOD/TURN TAIL TAX EXACT REFEREE
+optimization_safe_assert_count=0
+regular_exception_rows=185136 sharp_parameter_rows=96
+exception_ceiling=X+T>=E>=ceil(K/(e+1))-1
+eligible_colour_rows=21036 maximum_regular_runs=(0, 1, 2, 3, 4, 5)
+skipped_tooth_rows=15680 turn_corridor_disjoint_rows=4480
+layered_multiplicity_truth_rows=4 rule=skip+seam<=C-1
+literal_turn=H26,J5,J12,H26 omega=41/5460 reciprocal_excess=41/780
+constant_rows=95950 dominated_rows=13135589
+weighted_invoice=F6>=c*X/(8h)+c/16*sum_all_seams(1/lcm)
+unweighted_invoice=H-1/c>=7X/(6h)+7/12*sum_all_seams(1/lcm)
+packet_form=F6>=c/8*(X/h+sum_packets(sum_internal(1/j)-(7R-1)/h))
+dominated_corollary=h>=7*d5/2 => F6>=c/(8h)*(ceil(K/(e+1))-1)
+private_count=K>=ceil(h/(7c)); functional refinement K>=ceil(36h*eta_h/(7c))
+c140_spoke_protrusions=d254:raw=33/280:ell=33/280,d255:raw=-89/336:ell=0,d256:raw=-9/140:ell=0,d257:raw=-163/1680:ell=0,d292:raw=-8/105:ell=0,d1805:raw=-617/112:ell=0
+c140_scope=local centered-spoke/blocker-cycle row, not a six-cover
+TOURNAMENT_LOSS_AUDIT
+vertices=successive fastest-owner obligations, not runners
+observable=transition is regular versus flood/turn; gauge=fastest-address order
+tie_hamiltonian_path=chronological fastest-tooth subsequence
+preserves=address jump, internal-low count, and disjoint physical invoice
+destroys=low-owner phases inside a turn packet and exact seam clocks
+challenged_assumption=fastest teeth are not all consecutive-address star rungs
+SCOPE=global necessary tail invoice; scale-small and not LRC(14) closure
+RESULT=PASS
