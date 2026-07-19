@@ -131,13 +131,14 @@ does not grow), strong evidence `0.8011` is the true global max for this shape.
 **What is proved vs. what remains.**
 - PROVED: the phase-AP reduction; the exact `G(σ)>1/7` band lemma; the exact worst-config
   value; `R_sharp<1` on `b∈[157,4000]` (finite check).
-- REMAINING for a fully rigorous uniform proof: (i) that some core-safe arc lands in the
-  *interior* of a good `G`-band and is wide enough to realize a full period (verified for the
-  worst core; needs stating for every core); (ii) an explicit bound on the `L·b` vs `G(2t)`
-  error (the `σ`-drift `2·gap` across a gap → `0` as `b→∞`, so large `b` is asymptotic and
-  small `b` is the finite check already run). The margin is `G≈0.175` vs `1/7=0.143` (≈19%),
-  comfortably above the ≈3% drift error at the maximizer — but the edge of each band (where
-  `G→1/7`) is where the error control must be made rigorous.
+- **UPDATE (THM-1132): the two gaps below are now CLOSED for the worst core + consecutive
+  shape** by a complete search-free proof (exact finite head `157≤b≤399` + explicit rational
+  witness `t*∈A*=(71/154,13/28)` for `b≥400`). The tail did NOT need the `G`-drift error bound
+  after all — an exact witness with margin `9/(77b)` sidesteps it. What still remains is the
+  *other* 791 cores / non-consecutive shapes, via the same two-part template.
+- (Original remaining items, now discharged for the worst core:) (i) a core-safe arc whose
+  double lies in the interior of a good `G`-band — here `A*`, with `2A*⊂(6/7,1)` where `G→4/7`;
+  (ii) error control — replaced by the exact witness.
 
 This turns the "uniform tail lemma" from an opaque analytic obstruction into a concrete,
 mostly-discharged program: an exact 1-D inequality (done) + a finite alignment/error check.

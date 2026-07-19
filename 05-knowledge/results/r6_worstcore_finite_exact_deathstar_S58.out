@@ -1,0 +1,2 @@
+EXACT (arc-restricted) finite check b in [157,399]:
+  ALL R_sharp<1: True ; max R_sharp=0.801133 = 10325/12888 at b=171
