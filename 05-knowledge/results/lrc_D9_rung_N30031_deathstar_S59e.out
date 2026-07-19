@@ -1,0 +1,22 @@
+== HYP-7910: the D=9 rung at N=30031 (death-star-S59e) ==
+
+G1: ghost evaluator vs FULL evaluator, all odd-N table rows:
+   142 rows, 0 mismatches (14s)
+G2: ghost evaluator at the two big members:
+   OK F_6(211): M = 6/1271 [0.0s] (want 6/1271)
+   OK F_7(2311): M = 7/16183 [0.1s] (want 7/16183)
+
+Tower closures at N=30031 (all lower rungs dead -- two-line lemma):
+   D=3 (binder 5, prime): gcd(p, Q_D) = 5 -> rung pair p*a==+-D unsolvable, DEAD
+   D=4 (binder 7, prime): gcd(p, Q_D) = 7 -> rung pair p*a==+-D unsolvable, DEAD
+   D=5 (binder 9, composite): gcd(p, Q_D) = 3 -> rung pair p*a==+-D unsolvable, DEAD
+   D=6 (binder 11, prime): gcd(p, Q_D) = 11 -> rung pair p*a==+-D unsolvable, DEAD
+   D=7 (binder 13, prime): gcd(p, Q_D) = 13 -> rung pair p*a==+-D unsolvable, DEAD
+   D=8 (binder 15, composite): gcd(p, Q_D) = 15 -> rung pair p*a==+-D unsolvable, DEAD
+
+== D=9 at N=30031: F_9 = {1..30029, 30031, 270270} ==
+   p=17, Q=270287, gcd(17,Q)=1; window (1/30032, 2/60063), width 5.544e-10
+   L1 witness a = 31799: min distance over all 30031 speeds = 9 (want 9) -> M >= 9/270287
+   EXACT (ghost, proof-backed): M(F_9(30031)) = 9/270287 at q=270287 [1s]
+   rung 9/270287: ATTAINED; in-window: True
+   VERDICT: D=9 gate OPEN at N=30031 -- FOURTH out-of-sample tower confirmation, primorial 30030

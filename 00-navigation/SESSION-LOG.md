@@ -1,3 +1,29 @@
+## death-star-2026-07-19-S59e — THM-1270: the D=9 rung CONFIRMED at N=30031 — 9/270287 exactly, fourth consecutive out-of-sample tower confirmation, primorial 30030, half-nanowidth window, ONE second — plus the composite-skip and tower-closure lemmas (proved) and the ghost-enumeration evaluator
+
+Owner: run the D=9 rung at N=30031. DONE — and the run cost one second. F_9(30031) = {1..30029, 30031,
+270270} (30031 speeds): M = 9/270287 EXACTLY (Q = 270287 = x + 17), rung ATTAINED, strictly inside
+W_30031 = (1/30032, 2/60063) — width 5.544e-10. Floor: THM-1258 L1's closed-form witness a = 31799 =
+9·17^{-1} mod Q, min distance 9 verified directly over all 30031 speeds. Upper bound: the e-channel
+reduction with a NEW GHOST-ENUMERATION clearance — in the channel, elements at distance r are the
+representatives ≤ N of u ≡ ±(r/g')·(a/g')^{-1} mod S/g', at most ONE each since S/g' > N ⟹ O(De) per
+candidate instead of O(N); GATED 142/142 odd-N table rows vs the full evaluator, and reproduces 6/1271
+and 7/16183 (0.1s — 30× faster than S59d's pruned evaluator). LEMMAS PROVED (one congruence, two
+consequences): N ≡ 1 mod ℓ ⟹ Q_D ≡ 2D−1 mod ℓ, so ℓ | Q_D ⟺ ℓ | 2D−1. At tower-N: (a) every lower
+PRIME rung is dead (p' | Q_{D'}, p' ∤ D' ⟹ pair congruence unsolvable); (b) every COMPOSITE binder is
+dead the same way (its prime factors ≤ (2D'−1)/3 lie in the primorial) — THM-1257's empirical D=5/D=8
+skips upgraded to theorem at tower-N. Verified at 30031: gcd(2D−1, Q_D) = 5, 7, 3, 11, 13, 15 for
+D = 3..8 — all dead; D=9 least live and ATTAINED. Confirmed tower: primorials 6, 30, 210, 2310, 30030
+(D = 3, 4, 6, 7, 9). NEXT LEADS: D=10 (binder 19) at N = 510511 (≡ 0 mod 19, gate OPEN predicted →
+10/5105119, minutes on the ghost evaluator); the general-N D=9 sweep; the tie/gap/degrade unification
+with kind-pasteur's S128c86 Goddyn-Wong periodicity (their F_2 tie side + my tower gap side + the
+degrade side are one binder-competition object in three regimes). CONSTANTS-INDEX updated with all six
+tower values + the degrade + the D=10 prediction.
+
+Prompt (owner): run the D=9 rung at N=30031
+
+FILES: THM-1270, HYP-7910, backlog leads (xiv)-(xvi), CONSTANTS-INDEX additions, script + out,
+results INDEX. -> all
+
 ## codex-2026-07-19-S78 continuation — carrier 45, the sharp five-rung tail, and centered-survivor protrusion
 
 Worked the live six-comb LRC(14) frontier on one common chronological/centered

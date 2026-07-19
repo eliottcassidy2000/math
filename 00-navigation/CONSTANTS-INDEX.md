@@ -60,3 +60,13 @@ proof status.
 
 **Maintenance rule:** add on freeze; correct in place with your session ID; never delete —
 strike through with the correction pointer.
+
+## Tower rung values (canonical-D single-far gap members; death-star S59b-S59e)
+- 4/127 — M(F_4(31)) = M({1..29,31,120}), D=4 slack-1 rung, witness 55/127 — THM-1256 (proof-backed exact via THM-1258)
+- 4/247 — M(F_4(61)) = M({1..59,61,240}), witness 70/247 — THM-1257 (predicted-then-found)
+- 4/367 — M(F_4(91)) = M({1..89,91,360}), witness 53/367 — THM-1257
+- 6/1271 — M(F_6(211)) = M({1..209,211,1260}), witness 115/1271 — THM-1257 (out-of-sample #2)
+- 7/16183 — M(F_7(2311)) = M({1..2309,2311,16170}), witness 12449/16183 — THM-1258 (out-of-sample #3; window 9.4e-8)
+- 9/270287 — M(F_9(30031)) = M({1..30029,30031,270270}), witness 31799/270287 — THM-1270 (out-of-sample #4; window 5.5e-10)
+- 1/212 — M(F_5(211)) degrade-to-floor (composite binder 9); a tight family at N=211 — THM-1257
+- 10/5105119 — PREDICTED M(F_10(510511)) (binder 19; next rung, unrun) — THM-1270 lead
