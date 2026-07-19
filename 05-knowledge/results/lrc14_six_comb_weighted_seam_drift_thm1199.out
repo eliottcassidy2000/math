@@ -1,0 +1,25 @@
+THM-1199 exact arithmetic referee
+===================================
+six-bin density
+  integral=1 min=3/4 max=7/6
+weighted endpoint scaling
+  (7c/6)*(3/4)*gcd(u,v)/(14uv) = c*gcd(u,v)/(16uv)
+endpoint-component bank
+  rows=44655 positive_components=29750
+  minimum length/[1/(14*d_i*d_j)]=1 at (c,d_i,d_j,k)=(2, 7, 8, 0)
+pair-gcd guardrail
+  (c,d_i,d_j,k)=(7,10,34,2) has one overlap component
+  length=1/3332 owner_quantum=1/3332 owners=(7,34)
+  naive gcd(d_i,d_j) quantum=1/2380 (strictly too large)
+five-prefix survivor
+  dual_mass=1/36 normalized_length>=1/42 physical_length>=1/(49c)
+unconditional last-tooth descent
+  (d_6+d_5)/c < 49*C <= 49*C_bar
+  refined: (d_6+d_5)/c < 49*C/[36*eta],
+           eta=1-sum_{i<=5} Pbar(6d_i/(7c)) >= 1/36
+component-count bank
+  rows=29400 max_bound_slack=1
+tournament loss audit
+  speed order: transitive; score histogram 0,1,2,3,4,5;
+  directed cycles=0; SCCs=6 singletons; Hamiltonian paths=1
+VERIFIED_EXACT

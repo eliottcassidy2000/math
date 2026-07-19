@@ -1,0 +1,29 @@
+LOCAL-RULER DELETION-SURROGATE EXACT REFEREE
+W=(14, 28, 29, 56, 70, 84, 98, 112, 126, 153, 154, 168)
+V=(14, 28, 29, 56, 70, 84, 98, 112, 126, 153, 154, 168, 182)
+primitive=True distinct=True
+Cover14 carriers=((2, 14), (3, 84), (4, 28), (5, 70), (6, 84), (7, 14), (8, 56), (9, 126), (10, 70), (11, 154), (12, 84), (13, 182), (14, 14))
+compact top ratio=13/12 < 13
+W is non-AP: sorted gaps are not constant
+shallow rows (j, +1 owner, -1 owner, common sum):
+  (1, 14, 168, 182)
+  (2, 98, 84, 182)
+  (3, 126, 56, 182)
+  (4, 153, 29, 182)
+  (5, 112, 70, 182)
+  (6, 154, 28, 182)
+  (7, 28, 154, 182)
+  (8, 70, 112, 182)
+  (9, 29, 153, 182)
+  (10, 56, 126, 182)
+  (11, 84, 98, 182)
+  (12, 168, 14, 182)
+at every j/13: M_local(W)=1/13, owners cross on ruler 182,
+and the deleted 182-runner has phase zero
+exact M(W)=2/13; argmax_count=18; candidates=8980
+exact M(V)=2/17; argmax_count=16; candidates=10422
+explicit global escape t=3/119 has margin 2/17
+CONCLUSION: the shallow local-ruler/deleted-runner data are not an
+AP-extraction or crown-collapse certificate; global safe-set confinement
+and the full edge/curtain atlas remain necessary.
+ALL EXACT CHECKS PASS

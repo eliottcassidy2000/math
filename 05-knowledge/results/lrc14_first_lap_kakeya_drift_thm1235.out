@@ -1,0 +1,17 @@
+THM-1235 FIRST-LAP KAKEYA DRIFT EXACT AUDIT
+one_comb_arrangement_checks=10320
+Q(L)=(floor(L)/7+min(frac(L),1/7))/L
+L6<=1 => each load <1/6 => no six-cover
+whole_arc_threshold=3/7 > 1/14
+proper_open_arc_invoice: 1 < 6/7+2E => E>1/14
+all_pivots: dh>=7c/6 => sum_i|di-dh|>dh/14
+speed_invoice=sum_i(d6-di)>d6/14
+diameter=d6-d1>d6/70; ratio d6/d1>70/69
+weighted_path=sum_j j(d[j+1]-d[j])>d6/14
+macroscopic_edge=some d[j+1]/d[j]>211/210
+pivot_count_cuts: r=1=>gap>c/180 r=2=>gap>c/132 r>=3=>gap>c/108
+limit_cuts: x6-x1>=1/60; some adjacent gap>=1/180
+scalar_diagonal_alias_windows=[1,1],[6/5,2],[12/5,3],[18/5,4],[24/5,5],[6,6]
+first_lap_arc_vertices=static_phase,radius_1/14,relative_drift
+speed_tournament=transitive scores 0,1,2,3,4,5; SCCs 1^6; HP unique
+result=PASS

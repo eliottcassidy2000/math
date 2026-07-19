@@ -1,0 +1,67 @@
+THM-1196 PREFIX-SURVIVOR FAREY BEAT-MESH DESCENT
+optimization_safe_require_probe=PASS
+sum_difference_beat_identity_checks=172120
+analytic_lemma=prefix survivor avoids every last-prefix sum/difference beat
+component_bound=C<=1+sum ceil((6*d_i+c)/(7*c))
+phase_free_mesh_bound=M_k<=1/(d_last+d_penultimate)
+tail_bound=(d_last+d_penultimate)/c<49*Cbar/[6*((8-r)-H_prefix)]
+
+GCD_TOOTHPICK_COVARIANCE
+base_mesh=1/42
+sixfold_dilated_mesh=1/252
+pressure_tooth_counts_components_invariant=true
+
+FINITE_EXACT_TELEMETRY_NOT_PROOF
+component_and_survivor_bound_replay_rows=4273
+r=4 rows=11354 beat_witness_rows=11354 open_cover_rows=0 subcritical_prefix_rows=11354
+r=4 coarse_tail_refutations=0 phase_local_mesh_refutations=0 strict_mesh_improvements=10901 minimum_M_times_qmax=5/13
+r=5 rows=20268 beat_witness_rows=20268 open_cover_rows=0 subcritical_prefix_rows=20268
+r=5 coarse_tail_refutations=0 phase_local_mesh_refutations=0 strict_mesh_improvements=20096 minimum_M_times_qmax=9/28
+r=6 rows=27730 beat_witness_rows=27730 open_cover_rows=0 subcritical_prefix_rows=14
+r=6 coarse_tail_refutations=0 phase_local_mesh_refutations=0 strict_mesh_improvements=27678 minimum_M_times_qmax=31/116
+
+TOURNAMENT_LOSS_AUDIT
+observable=(last+d_i)-(last+d_j)=d_i-d_j
+score_histogram=0,1,2,3,4
+directed_3_cycles=0
+scc_sizes=1,1,1,1,1
+hamiltonian_path_count=1
+tie_hamiltonian_path=7,8,11,13,14
+faithful_vertices=phase-local_Farey_mesh_cells
+
+FIVE_COMB_DUAL_COMPOSITION
+dual_survivor_f_mass>1/36 and max_f=7/6 for faster slopes
+normalized_Lebesgue_survivor>1/42
+carrier_scaled_survivor>1/(49*c)
+one_last_tooth_per_E5_component=true
+unconditional_tail=d6/c<7*C5
+uniform_last_ratio=d6/d5<77
+ceiling_monotonicity_checks=95950
+
+J4_SAFE_BEAT_FLOOD_TAIL
+four_prefix_dual_f_mass>2/9
+normalized_Lebesgue_survivor>4/21
+carrier_scaled_survivor>8/49/c
+two_tooth_union_component_span<3/(7*d5)
+unconditional_component_tail=d5/c<(21/8)*C4
+uniform_penultimate_ratio=d5/d4<189/8
+component_span_inequality_checks=40097
+dangerous_run_R<=ceil((d5+d6)/(7*d5))
+safe_beat_mesh<8/(7*d5)
+safe_beat_scalar_tail=d5/c<7*C4 (weaker but phase-aware)
+reduced_rotation_run_checks=38057
+sharp_run_rows=37417
+
+J3_THREE_TOOTH_COMPONENT_TAIL
+three_prefix_dual_f_mass>5/12
+normalized_Lebesgue_survivor>5/14
+carrier_scaled_survivor>15/49/c
+two_tooth_span=w5+2*w6<3*w4<gap4
+three_tooth_span=w4+2*(w5+2*w6)<7*w4=1/d4
+unconditional_component_tail=d4/c<(49/15)*C3
+uniform_third_tail_ratio=d4/d3<343/15
+recursive_component_span_checks=15147
+
+PROOF_TELEMETRY_SEPARATION
+PROVED=beat descent; tail ratios <77, <189/8, <343/15
+TELEMETRY=all finite-bank row counts and zero survivors

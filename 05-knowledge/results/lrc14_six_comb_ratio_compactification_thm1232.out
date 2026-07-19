@@ -1,0 +1,20 @@
+THM-1232 SIX-COMB RATIO-CONE COMPACTIFICATION
+functional_baseline=121/126
+functional_deficit=5/126
+third_ratio_boundary=84/5
+boundary_identity=121/126+2/(3*(84/5))=1
+
+THREE_REMAINING_COMB_SPAN
+span_coefficients=w4+2*w5+4*w6<7*w4=1/d4
+three_prefix_physical_survivor=15/(49*c)
+d4/c<(49/15)*C3
+
+EXACT_CEILING_PROPAGATION
+level3_argument=509/35 ceil<=15 C3<=46 d4/c<2254/15
+level4_argument=4513/35 ceil<=129 C4<=517 d5/c<10857/8
+level5_argument=32575/28 ceil<=1164 C5<=5821 d6/c<40747
+
+TOURNAMENT_LOSS_AUDIT
+runner_order_scores=0,1,2,3,4,5 cycles=0 SCCs=1,1,1,1,1,1 Hamiltonian_paths=1
+faithful_carrier=load_chambers_plus_prefix-depth_component-obligations
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,16 @@
+THM-1231 exact referee: compatibility-sensitive five-comb floor
+pair_formula_geometry_checks=780
+heavy_ratio_bank: cutoff=127 count=61 actual_max_denominator=97 sha256=b18b3cac5db13715b062292e288e9d061c21e805f348eacb2d9e6e04c549b151
+disconnected_partition_rows=[((4, 1), 4, Fraction(13, 81), Fraction(0, 1)), ((3, 2), 6, Fraction(1655, 9828), Fraction(233, 29484)), ((3, 1, 1), 7, Fraction(229, 1296), Fraction(7, 432)), ((2, 2, 1), 8, Fraction(2599, 14742), Fraction(233, 14742)), ((2, 1, 1, 1), 9, Fraction(2419, 13104), Fraction(2843, 117936)), ((1, 1, 1, 1, 1), 10, Fraction(125, 648), Fraction(7, 216))]
+telemetry_witness=(1,12,13,27,156) R=44/273 gap=5/7371
+six_speed_consequences: R6>=13/54 mean=13/63 gcd_RHS=28/9-(72/13)delta union<=881/1134 G0/a<881/972
+tournament: scores=(3,2,2,1,2) cycles=4 SCC=(5,) hamiltonian_paths=13 flips=4 ties=0 tie_path=(0,1,3,2,4)
+heavy_threshold=71/63504 denominator_cutoff=127 types=61
+level=2 states=61 attempts=122 pruned=0
+level=3 states=7179 attempts=14762 pruned=148
+level=4 states=720678 attempts=2598670 pruned=909524
+five_extensions=347319154 certified=347319154 failures=0
+minimum_fixed_lower_numerator=161172154 / 1000000000 witness=1,12,13,27,156
+witness_pair_word=2*(1/63+17/819+1/84+1/91+23/1092) exact_R=44/273 target_gap=5/7371
+fixed_grid_target_margin_numerator=54944474 / 81000000000
+PASS: universal R5>=13/81 and the compatibility-sensitive R6 route

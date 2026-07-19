@@ -1,0 +1,24 @@
+THM-1234 exact referee: sharp compatibility-sensitive five-comb floor
+pair_formula_geometry_checks=6857
+heavy_ratio_bank: cutoff=150 count=72 actual_max_denominator=125 sha256=785e3b41577df477c6c04a284efaeb99a319382cea130ae128dc4d6ce87520c3
+uint64_pair_denominator_ceiling=11682510375976562500 < 18446744073709551616
+disconnected_partition_rows=[((4, 1), 4, Fraction(44, 273), Fraction(0, 1)), ((3, 2), 6, Fraction(185, 1092), Fraction(3, 364)), ((3, 1, 1), 7, Fraction(37, 208), Fraction(73, 4368)), ((2, 2, 1), 8, Fraction(97, 546), Fraction(3, 182)), ((2, 1, 1, 1), 9, Fraction(271, 1456), Fraction(109, 4368)), ((1, 1, 1, 1, 1), 10, Fraction(425, 2184), Fraction(73, 2184))]
+sharp_witness=(1,12,13,27,156) R=44/273 gap_over_13/81=5/7371
+connected_heavy_exact_fallback_rows=((1, 12, 13, 27, 156), (1, 12, 13, 156, 351), (4, 9, 108, 117, 1404), (9, 52, 108, 117, 1404))
+six_speed_consequences: R6>=22/91 mean=132/637 gcd_RHS=528/169-(72/13)delta union<=212/273 G0/a<106/117
+seven_speed_consequences: R7>=22/65 uncovered>=44/455 common_G/m<=411/65 fano_sum_m/G>=512/3185 some_fano_line_G/m<=22295/512
+tournament: scores=(3,2,2,1,2) cycles=4 SCC=(5,) hamiltonian_paths=13 flips=4 ties=0 tie_path=(0,1,3,2,4)
+heavy_threshold=29/30576 denominator_cutoff=150 types=72
+level=2 states=72 attempts=144 pruned=0
+level=3 states=10048 attempts=20592 pruned=180
+level=4 states=1189651 attempts=4300386 pruned=1524044
+five_extensions=678030510 fixed_certified=678030462 exact_fallback_occurrences=48
+minimum_fixed_lower_numerator=161172154 / 1000000000 witness=1,12,13,27,156
+exact_fallback_unique=4
+fallback_row=1,12,13,27,156 exact_R=44/273
+fallback_row=1,12,13,156,351 exact_R=44/273
+fallback_row=4,9,108,117,1404 exact_R=44/273
+fallback_row=9,52,108,117,1404 exact_R=44/273
+fallback_pair_word=2*(1/63+17/819+1/84+1/91+23/1092)=44/273
+fallback_grid_deficit_numerator=1958 / 273000000000
+PASS: sharp R5>=44/273 and sharpened R6/R7/Fano consequences
