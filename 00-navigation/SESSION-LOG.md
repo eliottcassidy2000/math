@@ -863,6 +863,20 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S116 -- mod-13 pair-blocking FORMALIZED (kernel-pure); exact n=12 tight locus is the HOMOGENEOUS AP c*{1..12} (a=d)
+
+Owner: Lean-formalize the mod-13 blocking lemma; work on open math. Two deliverables.
+LEAN: LRCMod13Blocking.lean, 3 theorems (namespace LonelyRunner), all [propext, Classical.choice,
+Quot.sound] no sorry, built + registered. mod13_middle_far (r in [2,11] => |13k+r|>=2, omega);
+sieve13_middle_witness (all (c_i*b)%13 in [2,11] => t=b/13 gives all runners >=2/13 from Z => M>=2/13>1/13);
+no_middle_band_witness_of_tight (contrapositive). = the PROVED mod-13 pair-blocking (S115) machine-checked.
+OPEN MATH: exact n=12 tight locus = M(C)=1/13 among APs holds ONLY for a=d (homogeneous c*{1..12}, ratios
+1:2:..:12); shifted APs a!=d all LOOSE ({2..13}=2/15, odds=1/2). Confirms+sharpens HYP-4382. PROVED partial
+rigidity via the new lemma: AP + M(C)=1/13 => a==d (mod 13) (blocking => residues miss 0 => a==d mod13).
+Full a=d = the offset-vanishing residual. NET: mod-13 lemma Lean-checked, yields a proved a==d mod13 slice;
+exact tight locus pinned to homogeneous c*{1..12}.
+FILES: reflection mod13-blocking-formalized-...-boxeph-S116, LRCMod13Blocking.lean, script+out lrc14_n12_tight_locus_boxeph_S116, HYP-7695. boxeph; S116.
+
 ## boxeph-2026-07-18-S115 -- SHARPENING HYP-4382: mod-13 pair-blocking is PROVED but NECESSARY-not-SUFFICIENT
 
 Owner: sharpen HYP-4382 (|C|=12 M(C)=1/13 <=> dilated {1..12}) toward the LRC(13) equality proof.

@@ -1,0 +1,14 @@
+which APs {a,a+d,...,a+11d} are tight (M=1/13)?  ONLY a=d (homogeneous c*{1..12}):
+  a=1,d=1: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
+  a=2,d=2: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
+  a=3,d=3: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
+  a=5,d=5: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
+  a=2,d=1: M=   2/15 loose  a==d(mod13)=False  
+  a=3,d=1: M=   3/17 loose  a==d(mod13)=False  
+  a=1,d=2: M=    1/2 loose  a==d(mod13)=False  
+  a=1,d=3: M=  12/35 loose  a==d(mod13)=False  
+  a=2,d=3: M=  13/37 loose  a==d(mod13)=False  
+  a=7,d=1: M=   7/25 loose  a==d(mod13)=False  
+  a=1,d=7: M=  34/79 loose  a==d(mod13)=False  
+
+=> exact tight locus = {c*{1..12} : c>=1}; PROVED (mod-13 blocking): tight AP => a==d (mod 13).
