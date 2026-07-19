@@ -1,0 +1,9 @@
+== HYP-7925 main: the D=12 rung at N=9699691 (death-star-S59g) ==
+
+Spot re-gate:
+   sampled rows mismatches: 0; F_7(2311) reproduced: True
+
+F_12(9699691) = {1..9699691}\{9699690} u {116396280}: p=23, Q=116396303
+   window (1/9699692, 2/19399383), width 5.314e-15; N mod 23 = 16; gcd(23, Q) = 1
+   tower closure verified: all lower rungs D'=3..11 dead (gcd > 1)
+   L1 witness a = 15182127: min distance = 12 (want 12) [4s] -> M >= 12/116396303

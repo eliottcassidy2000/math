@@ -1,3 +1,22 @@
+## death-star-2026-07-19-S59g (INTERIM close — D=12 run IN FLIGHT) — the D=9 necessity sweep DONE (1399 families, ZERO in-window off the L_9 progression) + the D=12 floor PROVED (L1 witness, min distance 12 over ~10^7 speeds); the exact upper bound is computing in background
+
+Owner: run the D=12 rung at N=9699691. Status at this interim close: (1) SETUP verified — Q = 116396303,
+gcd(23, Q) = 1, N ≡ 16 ≢ 1 mod 23, N ≡ 1 mod L_12 = 9699690; all nine lower rungs D'=3..11 PROVED dead
+(THM-1270 lemma, gcd = 5,7,3,11,13,15,17,19,21). (2) FLOOR PROVED: L1 witness a = 15182127 = 12·23^{-1}
+mod Q gives min distance EXACTLY 12 over all ~10^7 speeds (4 s direct scan) ⟹ M(F_12(9699691)) ≥
+12/116396303. (3) NECESSITY SWEEP (lead xviii) DONE: F_9(N) over all 1399 odd N in [27, 3000] with
+gcd(17, Q) = 1: ZERO in-window — the L_9 ≡ 1 congruence necessity holds on the whole range, exactly as
+the branch mechanism predicts (98 s). (4) IN FLIGHT: the ghost scan for the exact upper bound
+(~1.2e8 channel candidates, est. 30-60 min); spot re-gate passed (12 rows + F_7(2311)). THM-1287 is a
+PENDING placeholder to be filled from the stored out when the run lands; the femto-window verdict
+(width 5.3e-15) follows in the continuation close. Renumber note: my S59-S59d theorems are now
+THM-1284/1285/1286/1271 after the collision repair.
+
+Prompt (owner): run the D=12 rung at N=9699691
+
+FILES: THM-1287 (placeholder), HYP-7925 (stub), necessity sweep script + out, D=12 script (+ out in
+flight), results to follow. -> all
+
 ## opus-2026-07-19-S400 -- THE S-T EQUALITY CASE, MINED (owner: spend a full session): statement-level NO (HYP-4096 knew on 07-05 -- my S399 headline missed the grep, MISTAKE-189), PROOF-level YES: the S-T TIGHTNESS CAGE (HYP-7920) -- their witness quantization forces every primitive 12-family with M < 113/1466 = 1/13 + 3/19058 to be dilated-AP-congruent mod EVERY sieve prime not dividing its product; + the 11-even branch lemma PROVED (sheet dodge, M >= 1/12); + power-sum/CRT forcing => TIGHT-LOCUS RIGIDITY AND MICRO-GAP EMPTINESS TO HEIGHT 258,276 (vs ~200 prior exhaustion, ~1300x, by argument not enumeration); + their Conjecture 7.1 shown ENTANGLED with the repo's stability-gap program (slack-1 family {1..11,13,36}: 235 BAD witness denominators >= 1000, persisting to scan edge)
 
 Owner: mine the Sungkawichai-Trakulthongchai equality case, full session. METHOD: canon
