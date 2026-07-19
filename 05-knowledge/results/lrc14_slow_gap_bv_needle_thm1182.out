@@ -1,0 +1,14 @@
+THM-1182 bounded-variation slow-gap needle certificate
+schema=lrc14-slow-gap-bv-needle-thm1182-v1
+max_a=30
+phase_rows=240
+bins_per_row=200
+analytic_tail_constant=3/49
+strict_load_threshold=1/6
+generator_exact_replay=VERIFIED rows=240 max_a=30
+independent_cumulative_integral_replay=VERIFIED_EXACT rows=240 max_a=30 constant=3/49 threshold=1/6
+generator_sha256=fc954b992f561783bd2601382afa35c220740bd4c402e559dbe3ab4c1730564b
+verifier_sha256=fac941a6bb011fbb6c65cfdbaeeee5a62df61f6aafc946530b83ba6bf7d85233
+certificate_sha256=840bb70a2cf7611eec0670a76be7ae8a8b9c506b035ed4253d602df28d226457
+certificate_bytes=581289
+ALL EXACT CHECKS PASSED

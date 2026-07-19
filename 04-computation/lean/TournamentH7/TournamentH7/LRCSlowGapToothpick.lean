@@ -278,6 +278,41 @@ theorem harmonic_drift_cleared (a b R tail q : ℝ) (hb : 0 < b)
   have hscaled := mul_lt_mul_of_pos_left hdeficit hb
   exact hscaled.trans_le horder
 
+/-! ## Rational seam-surplus consumers -/
+
+/-- Denominator-cleared arithmetic core of THM-1178.  Here `qsum` is the
+spanning-tree sum `Σ 1/(d_i d_j)` and `handoff` is the sum of the associated
+overlap masses.  The two explicit inputs are respectively the rational seam
+quantum `qsum ≤ 14 handoff` and the multiplicity-debt upper bound
+`49 c handoff ≤ 6 delta`.  Their composition is exactly
+`delta ≥ (7c/12) qsum`. -/
+theorem rational_seam_surplus_cleared
+    (c qsum handoff delta : ℝ) (hc : 0 ≤ c)
+    (hquantum : qsum ≤ 14 * handoff)
+    (hdebt : 49 * c * handoff ≤ 6 * delta) :
+    7 * c * qsum ≤ 12 * delta := by
+  calc
+    7 * c * qsum = (7 * c) * qsum := by ring
+    _ ≤ (7 * c) * (14 * handoff) :=
+      mul_le_mul_of_nonneg_left hquantum (mul_nonneg (by norm_num) hc)
+    _ = 2 * (49 * c * handoff) := by ring
+    _ ≤ 2 * (6 * delta) := mul_le_mul_of_nonneg_left hdebt (by norm_num)
+    _ = 12 * delta := by ring
+
+/-- Cleared ordered-tree corollary.  If the tree sum pays at least
+`prefixSum / dmax`, the seam surplus pays `7c*prefixSum ≤ 12*dmax*delta`. -/
+theorem ordered_seam_surplus_cleared
+    (c dmax prefixSum qsum delta : ℝ) (hc : 0 ≤ c) (hdmax : 0 ≤ dmax)
+    (hprefix : prefixSum ≤ dmax * qsum)
+    (hsurplus : 7 * c * qsum ≤ 12 * delta) :
+    7 * c * prefixSum ≤ 12 * dmax * delta := by
+  calc
+    7 * c * prefixSum ≤ (7 * c) * (dmax * qsum) :=
+      mul_le_mul_of_nonneg_left hprefix (mul_nonneg (by norm_num) hc)
+    _ = dmax * (7 * c * qsum) := by ring
+    _ ≤ dmax * (12 * delta) := mul_le_mul_of_nonneg_left hsurplus hdmax
+    _ = 12 * dmax * delta := by ring
+
 /-! ## Axiom audit -/
 
 #print axioms endpoint_pressure_from_cover
@@ -291,6 +326,8 @@ theorem harmonic_drift_cleared (a b R tail q : ℝ) (hb : 0 < b)
 #print axioms four_speed_cutoff_iff
 #print axioms toothpick_ladder_of_nested_four_speed_cutoff
 #print axioms harmonic_drift_cleared
+#print axioms rational_seam_surplus_cleared
+#print axioms ordered_seam_surplus_cleared
 
 end SlowGapToothpick
 end LRC14

@@ -1,0 +1,22 @@
+THM-1183 exact six-order / three-path reduction
+I=[1/7,2/7], proposed full ceiling=2/21
+
+[named exact rows: bad ; half-bad chamber tuple ; path majorant]
+(1,2,3)  2/21 ; (1/21,0,0)       ; 1/21
+(2,4,6)  2/21 ; (1/21,0,0)       ; 1/21
+(1,2,4)  0    ; (0,0,0)          ; 1/21
+(1,3,6)  4/105; (0,2/105,0)      ; 2/105
+(1,9,10) 4/105; (1/70,0,1/210)   ; 2/105
+(1,2,7)  6/245; (3/245,0,0)      ; 13/490
+
+[complete Fraction sweep]
+1<=a<b<c<=40: 9880 rows
+actual over 2/21: 0
+path majorant over 1/21: 0
+actual equality: (m,2m,3m), 1<=m<=13, and no other row
+largest nonproportional actual value: 4/105
+
+[status]
+The six-order identity, three-path domination, and proportional equality are
+proved.  The all-integer path-majorant inequality is exact through this finite
+box but remains analytic, not proved.

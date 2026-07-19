@@ -1,0 +1,11 @@
+THM-1178 exact replay: rational slow-gap seam surplus
+pair banks checked=13035
+nonempty intersection components=7185
+minimum component/quantum ratio=1
+labelled tree counts={2: 1, 3: 3, 4: 16, 5: 125, 6: 1296}
+tree/mask pointwise checks=85787
+ordered-tree envelope checked for every labelled tree at r=2..6
+seam coefficient=7c/12
+six-comb H-drift: H6-1 >= (7/(12c))*x6*sum(x1..x5)
+bounded cone d6<=Kc: delta>=35/(12*K^2*c)
+ALL EXACT CHECKS PASSED

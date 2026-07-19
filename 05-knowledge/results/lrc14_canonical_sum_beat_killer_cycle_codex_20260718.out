@@ -1,0 +1,12 @@
+THM-1193 exact replay: canonical sum-beat killer cycle
+canonical interior-beat checks=104005
+minimum observed margin above 1/4=1/236
+guardrail a=3 k=1 bs=4,5,6,7,9,11
+canonical (p,q)=((4, 7), (4, 8), (5, 9), (5, 10), (6, 12), (7, 14))
+killer rows=((3,), (0, 2), (4,), (0, 2), (0, 2), (0, 2)); least-map cycle=0->3->0
+closed-tooth survivor=879/10780
+tournament observable=kappa_ij-kappa_ji; zero gauge=increasing label
+score multiset=1,2,2,2,3,5; directed triangles=4; SCC sizes=5,1
+Hamiltonian paths=15; tie Hamiltonian path=1,0,3,2,4,5
+observable ties=8
+ALL EXACT CHECKS PASSED

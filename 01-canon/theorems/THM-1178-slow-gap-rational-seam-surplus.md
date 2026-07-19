@@ -214,3 +214,14 @@ gcd or beat constraint that prevents every spanning-tree quantum from
 shrinking simultaneously.  THM-1175's defining beat pair redundancy and
 THM-1166's Fano line periods are natural suppliers; a bare speed-order
 tournament is not.
+
+The dependency-free exact replay checks 13,035 phase-labelled pair banks,
+7,185 nonempty intersection components (the minimum component/quantum ratio
+is exactly one), all 1,441 labelled trees through six vertices, and 85,787
+tree/activity masks.  Normal and optimized runs are byte-identical to the
+stored output.  Frozen SHA-256 hashes are
+
+```text
+source  fd0997cfa4c9ee90b1fe4c1496a276bb64d9a850803ec64fba61aabdfbcf750a
+output  8ca6026ec0b1a1ba7d348400c24eb7fc590774deda8ca2cdd0313593c24fb6e5
+```
