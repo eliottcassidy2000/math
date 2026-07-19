@@ -1,0 +1,20 @@
+(D,s) identity cross-check -- opus-S399
+NOTE: scan bound is a sanity band; exact M values are canon (THM-1256, THM-1230/1235). This verifies the IDENTITY at the maximizer, not the global max itself.
+
+=== death-star-S59b {1..29,31,120}  (|V|=31, n=32 runners, threshold 1/32) ===
+  scan (q<=200): M = 4/127 = 0.031496 at t* = 55/127
+  threshold 1/32 = 0.031250; M - 1/n = 1/4064
+  active speeds: above-integer [7], below-integer [120]
+  straddling pair (7,120): s = 127, D = M*s = 4  [integer OK], slack n*D - s = 1
+
+=== opus-S395 {1..11,13,36}  (|V|=13, n=14 runners, threshold 1/14) ===
+  scan (q<=200): M = 3/41 = 0.073171 at t* = 17/41
+  threshold 1/14 = 0.071429; M - 1/n = 1/574
+  active speeds: above-integer [5], below-integer [36]
+  straddling pair (5,36): s = 41, D = M*s = 3  [integer OK], slack n*D - s = 1
+
+=== GW second extremal {1..11,13,24}  (|V|=13, n=14 runners, threshold 1/14) ===
+  scan (q<=200): M = 1/14 = 0.071429 at t* = 1/14
+  threshold 1/14 = 0.071429; M - 1/n = 0
+  active speeds: above-integer [1], below-integer [13]
+  straddling pair (1,13): s = 14, D = M*s = 1  [integer OK], slack n*D - s = 0
