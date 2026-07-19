@@ -1,0 +1,7 @@
+THM-1240 CENTERED CARRIER-SPOKE BLOCKER CYCLE EXACT AUDIT
+centered spoke rows checked = 553945
+all rows: depth > 1/4 and slack >= 6d-c > 0
+loopless blocker maps checked = 15625
+minimum-cycle histogram = len2:8265, len3:4360, len4:2160, len5:720, len6:120
+adjacent spoke-clock cut checks = 138606
+RESULT: PASS
