@@ -92,7 +92,7 @@ def merge_closed_teeth(
     return teeth, survivor
 
 
-def check_mass_bridge() -> None:
+def check_mass_bridge() -> tuple[F, F, F]:
     one_load = F(7, 36)
     four_load_cap = 4 * one_load
     four_survivor = 1 - four_load_cap
@@ -109,6 +109,12 @@ def check_mass_bridge() -> None:
     require(inside_floor > 0, "interior obligation is nonempty")
     require(five_survivor == F(11, 360), "five-prefix survivor mass")
     require(F(11, 270) < tail_threshold, "THM-1267 lower tail fits small branch")
+    inside_length = inside_floor / F(7, 6)
+    outside_length = five_survivor / F(3, 4)
+    needle_separation = inside_length + outside_length
+    require(inside_length == F(1, 12), "inside obligation Lebesgue length")
+    require(outside_length == F(11, 270), "outside obligation Lebesgue length")
+    require(needle_separation == F(67, 540), "oriented needle separation")
 
     # Symbolic rational rows: if v > 2/9 and the whole tail has mass < 1/8,
     # then the part of V inside K is > 7/72.  Strictness is tested on a grid
@@ -121,6 +127,28 @@ def check_mass_bridge() -> None:
         require(inside_mass > F(7, 72), "strict interior mass implication")
         rows += 1
     require(rows == 198, "mass implication census size")
+    return inside_length, outside_length, needle_separation
+
+
+def wall_count_invoice_census() -> int:
+    rows = 0
+    # If an oriented interval of normalized length >67/540 contains W walls,
+    # its W+1 wall-free cells each have length at most d/h.  Thus
+    # 67h < 540(W+1)d and W >= floor(67h/(540d)).  Check the exact integer
+    # rounding, including ratios which land on an integer boundary.
+    for d in range(1, 121):
+        for h in range(d + 1, 101 * d + 1, max(1, d // 7)):
+            numerator = 67 * h
+            denominator = 540 * d
+            minimum_walls = numerator // denominator
+            require(numerator < denominator * (minimum_walls + 1),
+                    "wall-count invoice at floor")
+            if minimum_walls > 0:
+                require(not numerator < denominator * minimum_walls,
+                        "one fewer wall cannot satisfy invoice")
+            rows += 1
+    require(rows > 10000, "wall-count census size")
+    return rows
 
 
 def endpoint_quantum_census() -> tuple[int, F, tuple[int, int, int, int, str]]:
@@ -250,6 +278,7 @@ def sharp_star_control() -> dict[str, object]:
         "seam_lengths": tuple(seam_lengths),
         "four_components": len(four_survivor),
         "five_components": len(five_survivor),
+        "normalized_separation": (y - x) / (safe_component[1] - safe_component[0]),
     }
 
 
@@ -269,7 +298,8 @@ def tournament_audit(control: dict[str, object]) -> None:
 
 def main() -> None:
     assert_nodes = optimization_safety_probe()
-    check_mass_bridge()
+    inside_length, outside_length, needle_separation = check_mass_bridge()
+    wall_count_rows = wall_count_invoice_census()
     endpoint_rows, minimum_ratio, minimum_row = endpoint_quantum_census()
     control = sharp_star_control()
 
@@ -277,15 +307,18 @@ def main() -> None:
     print(f"optimization_sensitive_assert_nodes={assert_nodes}")
     print("small_tail_budget=four_prefix_mass_gt_2/9; tail_mass_lt_1/8; inside_mass_gt_7/72")
     print("outside_obligation=five_prefix_mass_gt_11/360 contained_in_protrusion")
+    print(f"needle_lengths=inside_gt_{inside_length};outside_gt_{outside_length};separation_gt_{needle_separation}")
+    print(f"wall_count_invoice_rows={wall_count_rows} law=67h<540(W+1)d1")
     print("wall_dichotomy=bare_j4_wall OR lower-crossed_fastest_wall")
     print(f"endpoint_quantum_rows={endpoint_rows} minimum_quantum_ratio={minimum_ratio} row={minimum_row}")
     print(f"sharp_c140_ell={control['ell']} x={control['x']} y={control['y']}")
+    print(f"sharp_normalized_xy_separation={control['normalized_separation']}")
     print(f"sharp_four_prefix_components={control['four_components']} five_prefix_components={control['five_components']}")
     print("sharp_fastest_walls=" + ",".join(map(str, control["walls"])))
     print("sharp_wall_crossers=" + ",".join(str(row) for row in control["crossing_sets"]))
     print("sharp_crossed_wall_seams=" + ",".join(map(str, control["seam_lengths"])))
     tournament_audit(control)
-    print("NO_DOUBLE_COUNT=the crossed seam may already occur in THM-1253/1270; the bare wall has zero mass")
+    print("NO_DOUBLE_COUNT=the crossed seam may already occur in THM-1253/1275; the bare wall has zero mass")
     print("SCOPE=paper topology plus exact arithmetic consumer; no selected-fastest-tooth claim; no LRC14 closure")
     print("RESULT=PASS")
 

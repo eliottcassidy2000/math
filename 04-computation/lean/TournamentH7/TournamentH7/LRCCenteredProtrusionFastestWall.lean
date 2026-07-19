@@ -71,6 +71,64 @@ theorem five_prefix_survivor_positive
   dsimp [fivePrefixFloor]
   linarith
 
+/-- The density maximum converts the inside mass obligation to normalized
+Lebesgue length greater than `1/12`. -/
+theorem inside_obligation_length
+    (mass length : ℚ) (hmass : insideFloor < mass)
+    (hdensity : mass ≤ (7 / 6) * length) :
+    1 / 12 < length := by
+  dsimp [insideFloor] at hmass
+  linarith
+
+/-- On the endpoint sixth the density is exactly `3/4`, so the outside
+five-prefix survivor has normalized length greater than `11/270`. -/
+theorem outside_obligation_length
+    (mass length : ℚ) (hmass : fivePrefixFloor < mass)
+    (hdensity : mass = (3 / 4) * length) :
+    11 / 270 < length := by
+  dsimp [fivePrefixFloor] at hmass
+  rw [hdensity] at hmass
+  linarith
+
+theorem needle_separation_constant :
+    (1 : ℚ) / 12 + 11 / 270 = 67 / 540 := by
+  norm_num
+
+/-- Choosing one obligation deeper than its measure from each side of the
+interface yields the exact `67/540` oriented needle separation. -/
+theorem obligation_points_separated
+    (insideDistance outsideDistance : ℚ)
+    (hinside : 1 / 12 < insideDistance)
+    (houtside : 11 / 270 < outsideDistance) :
+    67 / 540 < insideDistance + outsideDistance := by
+  linarith
+
+/-- If `W` fastest walls split the oriented needle into `W+1` wall-free
+cells, each of normalized length at most `d1/h`, the `67/540` separation
+forces the displayed exact integer wall-count invoice. -/
+theorem wall_count_invoice
+    (W : ℕ) (d₁ h needleLength : ℚ)
+    (hh : 0 < h)
+    (hlength : 67 / 540 < needleLength)
+    (hcells : needleLength ≤ ((W : ℚ) + 1) * d₁ / h) :
+    67 * h < 540 * ((W : ℚ) + 1) * d₁ := by
+  have hmul : needleLength * h ≤ ((W : ℚ) + 1) * d₁ :=
+    (le_div_iff₀ hh).mp hcells
+  nlinarith
+
+/-- At ratio `h/d1 >= 1080/67`, the needle cannot contain only one fastest
+wall; this is the first useful multi-event threshold. -/
+theorem two_walls_at_large_fastest_ratio
+    (W : ℕ) (d₁ h : ℚ)
+    (hd₁ : 0 < d₁)
+    (hinvoice : 67 * h < 540 * ((W : ℚ) + 1) * d₁)
+    (hratio : 1080 * d₁ ≤ 67 * h) :
+    2 ≤ W := by
+  by_contra hnot
+  have hW : W ≤ 1 := by omega
+  have hcast : (W : ℚ) ≤ 1 := by exact_mod_cast hW
+  nlinarith
+
 /-- At a fastest wall the slowest component owner and the fastest owner are
 both strict-safe.  If no one of the four lower owners crosses the wall, the
 cover predicate excludes the wall from `K`; along the oriented bridge it must
@@ -169,6 +227,12 @@ theorem sharp_control_seam_quanta :
 #print axioms small_endpoint_tail_mass
 #print axioms four_prefix_inside_K
 #print axioms five_prefix_survivor_positive
+#print axioms inside_obligation_length
+#print axioms outside_obligation_length
+#print axioms needle_separation_constant
+#print axioms obligation_points_separated
+#print axioms wall_count_invoice
+#print axioms two_walls_at_large_fastest_ratio
 #print axioms bare_wall_or_low_crosser
 #print axioms crossed_wall_pays_lcm_quantum
 #print axioms sharp_control_tail

@@ -2,9 +2,12 @@ THM-1273 CENTERED-PROTRUSION / FASTEST-WALL EXACT REFEREE
 optimization_sensitive_assert_nodes=0
 small_tail_budget=four_prefix_mass_gt_2/9; tail_mass_lt_1/8; inside_mass_gt_7/72
 outside_obligation=five_prefix_mass_gt_11/360 contained_in_protrusion
+needle_lengths=inside_gt_1/12;outside_gt_11/270;separation_gt_67/540
+wall_count_invoice_rows=89035 law=67h<540(W+1)d1
 wall_dichotomy=bare_j4_wall OR lower-crossed_fastest_wall
 endpoint_quantum_rows=40504 minimum_quantum_ratio=1 row=(8, 7, -17, -15, 'left')
 sharp_c140_ell=33/280 x=7476011/12938240 y=7425603/12837160
+sharp_normalized_xy_separation=1023787/5544960
 sharp_four_prefix_components=5 five_prefix_components=3
 sharp_fastest_walls=14603/25270,2923/5054,14617/25270
 sharp_wall_crossers=(256,),(256,),()
@@ -19,6 +22,6 @@ faithful_carrier=oriented four-prefix survivor components + fastest-wall events 
 preserves=inside-fastest-active to outside-fastest-safe transport and exact wall label
 destroys_if_runner_only=phase,wall_position,bare-vs-crossed status,seam numerator
 challenged_vertices=runners,teeth,gaps,boundaries,wall_events,residues,Fano_lines,proof_obligations
-NO_DOUBLE_COUNT=the crossed seam may already occur in THM-1253/1270; the bare wall has zero mass
+NO_DOUBLE_COUNT=the crossed seam may already occur in THM-1253/1275; the bare wall has zero mass
 SCOPE=paper topology plus exact arithmetic consumer; no selected-fastest-tooth claim; no LRC14 closure
 RESULT=PASS

@@ -8,9 +8,9 @@ related: [THM-1196, THM-1253, THM-1266, THM-1272, THM-1275]
 script: 04-computation/lrc14_centered_protrusion_fastest_wall_thm1273.py
 output: 05-knowledge/results/lrc14_centered_protrusion_fastest_wall_thm1273.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCCenteredProtrusionFastestWall.lean
-script_sha256: fa3618a4b06cbfe673d4461a738094b1442d7d8674be755702f34ce2f9efb50e
-output_sha256: 926f86e969f2826c3e4d857b4efa4d52cb422c4cb67798ff9739bd2fa604af3f
-formalization_sha256: 8d9718fa443f187596c43e610c8f499937ca74f5995ccf11b3925f6cb11c3380
+script_sha256: ce136bdaee964e5f7afcc10590e807a6cf28f03d2defe9a6d5dfbf2606f09f17
+output_sha256: 090763ad8b74e5d2c5b07385d4805ab7af17b8ea6106d51d0a7cb04ede5abcb6
+formalization_sha256: 9231825454f82d73c1700ded99e82ebcd8bb52bf9d0159ad59f8dbad6460c7d2
 ---
 
 # THM-1273 -- centered-protrusion fastest-wall dichotomy
@@ -71,6 +71,24 @@ and `E` last.  Then one of the following holds.
      omega_z >=gcd(h,j)/(14hj)=1/[14 lcm(h,j)].       (7)
      ```
 
+   Identifying `S` with `[0,1]`, the points in (6) can be chosen with
+   normalized separation
+
+   ```text
+   y-x>67/540.                                        (7a)
+   ```
+
+   If `W` is the number of fastest walls strictly between them, then
+
+   ```text
+   67h<540(W+1)d1,
+   W>=max(1,floor(67h/(540d1))).                      (7b)
+   ```
+
+   In particular `h/d1>=1080/67` forces at least two positioned wall
+   events.  Every one of the `W` walls has the same bare/crossed dichotomy;
+   no disjoint seam sum is asserted.
+
 At a bare wall, `d1` is safe because `z in S`, the four lower owners are
 safe by definition, and `h` is exactly at distance `1/14`.  Thus all six
 fast combs are non-dangerous there.  It is a literal terminal `j=4` flood
@@ -114,6 +132,32 @@ integral_U f>11/360,                  U subset E.     (11)
 Choose `y` from `U` away from the same finite boundary set.  It is strictly
 safe for all five owners `d2,...,d6`, proving the second half of (6).
 
+There is a quantitative Kakeya gain hidden in the two mass statements.  The
+density satisfies `f<=7/6`, so (10) gives
+
+```text
+|V intersect K|>1/12.                                (11a)
+```
+
+On `E` one has `f=3/4`, so (11) gives
+
+```text
+|U|>11/270.                                          (11b)
+```
+
+Let `b` be the normalized `K/E` interface, so `K subset [0,b]` and
+`E subset [b,1]` in the chosen orientation.  If every regular point of
+`V intersect K` satisfied `b-x<=1/12`, then that set would lie in an interval
+of length `1/12`, contradicting (11a).  Thus choose regular `x` with
+`b-x>1/12`.  The identical endpoint argument applied to (11b) chooses regular
+`y` with `y-b>11/270`.  This proves
+
+```text
+y-x>1/12+11/270=67/540                               (11c)
+```
+
+in normalized coordinates.
+
 This is the key change of carrier.  THM-1267 supplied one endpoint interval;
 (10)--(11) put two oppositely typed proof obligations on that oriented
 needle: a fastest-active four-prefix survivor on the `K` side and a
@@ -139,11 +183,38 @@ case, clearing `14hj` gives a positive integer numerator divisible by
 `gcd(h,j)`; in the former case its length is `1/(7h)`, which is larger still.
 This proves (7).
 
+More generally, let `W` count every `h` wall between the separated choices
+of `x,y`.  In the normalized `S` coordinate, consecutive wall-free cells of
+the `h` comb have alternating lengths
+
+```text
+d1/(6h),                   d1/h.                     (12a)
+```
+
+Boundary fragments are no longer.  The `W` walls therefore split `[x,y]`
+into `W+1` pieces of length at most `d1/h`.  Equation (11c) gives
+
+```text
+67/540 < (W+1)d1/h,                                  (12b)
+67h < 540(W+1)d1.                                    (12c)
+```
+
+Integral rounding proves (7b).  Independently, the active/safe endpoint
+types force `W>=1`.  At `h/d1>=1080/67`, the assumption `W<=1` contradicts
+(12c), giving the first forced multi-wall regime.  This count is a bank of
+positioned events, not a bank of disjoint overlaps: one lower tooth can cross
+both walls of one fastest tooth.
+
 Suppose instead no lower owner is dangerous at `z`.  If `z` belonged to
 `K`, then `z in G`, while `d1`, all four lower owners, and `h` would all be
 non-dangerous.  This contradicts the strict cover of `G`.  Therefore
 `z notin K`.  Since the complete segment from `x` to `y` lies in `S` and
 `S=K union E`, one has `z in E`.  This proves the bare branch.
+
+The same pointwise argument applies to **every** `h` wall between `x` and
+`y`, not only the first.  At any such wall, a dangerous lower owner crosses
+one adjacent active `h` tooth and pays (7); if no lower owner is dangerous,
+the strict cover excludes the wall from `K`, so it is a bare wall in `E`.
 
 Closed combs in (5) are used only for the mass survivor.  The regular points
 `x,y` are selected off their finitely many boundaries.  At `z` the cover
@@ -170,6 +241,12 @@ one of the following.
 * transport a bare wall to a complementary-coverer/Fano obligation while
   retaining its phase and wall address; or
 * select several such centered needles with disjoint wall-side intervals.
+
+The new count (7b) makes the first option quantitative.  Large `h/d1`
+produces many typed wall events on one `67/540` needle, but THM-1266's sharp
+row already warns that the same low tooth can cross two consecutive walls.
+The next selection lemma must quotient those paired crossings before feeding
+the remainder to THM-1275.
 
 This precise no-double-count boundary is why another unlocated pair sum or
 runner-colour Fano count does not yet close the branch.
@@ -222,6 +299,16 @@ needle: two crossed walls followed by a bare terminal wall.  It remains a
 positive control, not a six-cover.  In particular the bridge does not falsely
 reject the row merely because its local five-rung ladder is sharp.
 
+For this choice of `x,y`, the normalized separation is
+
+```text
+1023787/5544960 >67/540.                              (17a)
+```
+
+The universal floor in (7b) only gives one event at `h/d1=1805/254`; the
+actual three-wall path records useful phase information beyond the scalar
+ratio count.
+
 ## 6. Kakeya, `j=4`, Fano, and tournament carriers
 
 The normalized component `S` is the Kakeya needle.  The correct vertices for
@@ -268,7 +355,8 @@ events, not one runner-colour fork, is the missing hypergraphic state.
 ## 7. Verification and scope
 
 The dependency-free exact referee has zero Python `assert` nodes.  It checks
-the full rational mass ledger, `198` strict boundary-approach rows, and
+the full rational mass/needle ledger, `198` strict boundary-approach rows,
+`89,035` exact wall-count rounding rows, and
 `40,504` signed-address lower-crossed wall configurations.  Every cleared
 overlap numerator is integral and gcd-divisible, every seam pays (7), and the
 minimum quantum ratio is exactly one.  It independently reconstructs the
@@ -277,8 +365,10 @@ active-low subsets, bare wall, and two seam lengths in (13)--(19).  Normal and
 optimized Python outputs are byte-identical.
 
 The sorry-free Lean module checks the mass constants and strict implications,
-the bare-versus-crosser propositional cover logic, the inherited natural
-gcd/lcm quantum, and every displayed rational comparison in the sharp row.
+both mass-to-length conversions, the `67/540` separation and wall-count
+invoice (including the two-wall threshold), the bare-versus-crosser
+propositional cover logic, the natural gcd/lcm quantum, and every displayed
+rational comparison in the sharp row.
 The analytic load bounds, positive-measure point selection, interval
 orientation, continuity/first-wall selection, and endpoint ownership are the
 explicit paper providers.  No theorem-specific axiom or `native_decide` is
@@ -292,7 +382,7 @@ noncoverage, the empty sporadic branch, or LRC(14).  ∎
 Frozen artifact hashes are
 
 ```text
-source         fa3618a4b06cbfe673d4461a738094b1442d7d8674be755702f34ce2f9efb50e
-output         926f86e969f2826c3e4d857b4efa4d52cb422c4cb67798ff9739bd2fa604af3f
-formalization  8d9718fa443f187596c43e610c8f499937ca74f5995ccf11b3925f6cb11c3380
+source         ce136bdaee964e5f7afcc10590e807a6cf28f03d2defe9a6d5dfbf2606f09f17
+output         090763ad8b74e5d2c5b07385d4805ab7af17b8ea6106d51d0a7cb04ede5abcb6
+formalization  9231825454f82d73c1700ded99e82ebcd8bb52bf9d0159ad59f8dbad6460c7d2
 ```
