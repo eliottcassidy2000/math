@@ -1,0 +1,7 @@
+min-L config core=[1, 2, 5, 8, 9, 11, 12] K=[316, 322, 326, 328, 330]
+L=0.0008860 = 2.0466/(7k5)  (k5=330) ; core arc width W=0.01091
+k5-safe gaps in core arc: N5 = W*k5 ~ 3.6  (equidistribution in the 4-torus of the other killers needs N5 >> ??)
+full k5-safe gap = 6/(7k5) = 0.002597 ; observed L = 0.000886 = 0.34 of a full gap
+crude mean bound (2/7)/Sigma_k = 0.0001761 ; truth L=0.0008860 (truth/crude=5.0 x -- the gap three-gap must recover)
+target 1/2331=0.0004290 ; 1/(7k5)=0.0004329
+core-safe arcs across all 792 cores: 15836 ; with <4 finest-killer gaps (W*332<4): 7784 (49%)
