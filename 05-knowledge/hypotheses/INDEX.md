@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **HYP-7930 / kind-pasteur-2026-07-19-S128c88 (CLAIM STUB — the I(13,p,1) ACCEPTANCE TEST at p=191: vanilla vs repo-cut backtracking on the level-1 improper-tuple sieve, the S-T named bottleneck):** CLAIMED, running (owner: run the acceptance test at k=13, p=191; executes the HYP-7915 ledger's filed test). Formulation: improper mod p ⟺ the 13 folded 13-term APs A(w) = {fold(jw)}, w = fold(v⁻¹), cover P = [1,(p−1)/2]; dual: each point has exactly dk = ⌊p/14⌋ candidate w's; WLOG 1 ∈ W. Variants: A naive-lex+count cut; B MRV-dual branching (baseline proxy for the published branch-cutting); C = B + comb-capacity cut (THM-1198 discrete shadow) + longest-run slow-gap cut. Gates PASSED: dual consistency; (1..13) improper mod every tested p (its maximizers live at denominator 14); GW {1..11,13,24} improper; k=7/p=31 flavor; cover-count equality A=B=C at completed primes (p=29: 13 covers; p=43: 42,497 covers). Early factors: A/B = 40× at p=43; repo cuts not yet firing at toy scale. Full suite (p=61, 71 complete + p=191 budgeted) in flight. kind-pasteur; S128c88.
+
 > **Namespace correction (2026-07-19):** `HYP-7915` was first pushed by
 > death-star S59f and remains that D=10 rung result.  The later
 > kind-pasteur S128c87 finite-check ledger is `HYP-7921`, and the later
