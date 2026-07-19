@@ -1,0 +1,19 @@
+=== k = 12 (threshold 1/13) ===
+  d = 25: gcd = 1; band margin over 1/13 = 275/819 (> 0: True); cluster==AP at d-grid: True; witness j/25 found: None  (None = BAD d, as claimed)
+  d = 100: gcd = 1; band margin over 1/13 = 1100/2769 (> 0: True); cluster==AP at d-grid: True; witness j/100 found: None  (None = BAD d, as claimed)
+  d = 997: gcd = 1; band margin over 1/13 = 10967/26091 (> 0: True); cluster==AP at d-grid: True; witness j/997 found: None  (None = BAD d, as claimed)
+  d = 10007: gcd = 1; band margin over 1/13 = 110077/260351 (> 0: True); cluster==AP at d-grid: True; witness j/10007 found: None  (None = BAD d, as claimed)
+  d = 100003: gcd = 1; band margin over 1/13 = 1100033/2600247 (> 0: True); cluster==AP at d-grid: True; witness j/100003 found: None  (None = BAD d, as claimed)
+  control d = 1300 = (k+1)*100: witness found at j = 100 (expected j with j/1300 = s/13)
+=== k = 13 (threshold 1/14) ===
+  d = 25: gcd = 1; band margin over 1/14 = 75/224 (> 0: True); cluster==AP at d-grid: True; witness j/25 found: None  (None = BAD d, as claimed)
+  d = 100: gcd = 1; band margin over 1/14 = 300/749 (> 0: True); cluster==AP at d-grid: True; witness j/100 found: None  (None = BAD d, as claimed)
+  d = 997: gcd = 1; band margin over 1/14 = 2991/7028 (> 0: True); cluster==AP at d-grid: True; witness j/997 found: None  (None = BAD d, as claimed)
+  d = 10007: gcd = 1; band margin over 1/14 = 10007/23366 (> 0: True); cluster==AP at d-grid: True; witness j/10007 found: None  (None = BAD d, as claimed)
+  d = 100003: gcd = 1; band margin over 1/14 = 300009/700070 (> 0: True); cluster==AP at d-grid: True; witness j/100003 found: None  (None = BAD d, as claimed)
+  control d = 1400 = (k+1)*100: witness found at j = 100 (expected j with j/1400 = s/14)
+
+CONCLUSION: for every D pick any d >= D with (k+1) not| d;
+V_d = {d+1,...,d+k} is coprime, non-tight (strict band witness),
+and has NO witness in (1/d)Z.  Conjecture 7.1 (uniform D over v)
+is FALSE for every k >= 2.
