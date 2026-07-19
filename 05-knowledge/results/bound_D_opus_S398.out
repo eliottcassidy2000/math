@@ -1,0 +1,15 @@
+FAST INTEGER SCAN: primitive families with M <= 3/41
+  (known: two extremals at 1/14, and {1..11,13,36} at 3/41)
+
+    sanity {1..13}          beats 3/41? False   (first three should be False)
+    sanity {1..11,13,24}    beats 3/41? False   (first three should be False)
+    sanity {1..11,13,36}    beats 3/41? False   (first three should be False)
+    sanity {1..12,14}       beats 3/41? True   (first three should be False)
+
+  cap N= 20: 1638819 primitive families, 13 with M <= 3/41  [60s]
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  cap N= 30: 1761651 primitive families, 0 with M <= 3/41  [60s]
+  cap N= 45: 1762855 primitive families, 0 with M <= 3/41  [60s]
+  cap N= 70: 1703842 primitive families, 0 with M <= 3/41  [60s]
+  cap N=110: 1640235 primitive families, 0 with M <= 3/41  [60s]

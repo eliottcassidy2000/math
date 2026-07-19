@@ -19,6 +19,40 @@ HYP-7750; reflection + 2 scripts. Next: pigeonhole on scales k in [13,26] for th
 Prompt (owner): wire antipodal_cover into the LRC14 ledger
 
 FILES: LRCMod19Spread.lean (hclose bug fixed, 6 kernel-pure theorems now MEANINGFUL); LRCMod19LedgerBridge.lean (antipodal_cover_of_margin, kernel-pure); LRC14Ledger.lean (imports the bridge, re-exports gap_regime_mod19_spread); MISTAKE-186; HYP-7812 UPDATE3; reflection ...boxeph-S126 (correction + wiring notes). -> all (wired antipodal_cover into LRC14Ledger via a margin-framework bridge -- but FIRST caught that the S127/S128 hypothesis `∀m |...|<2/19` was unsatisfiable, making the lemmas vacuous; fixed to `∃m` (=margin<2/19), now meaningful (MISTAKE-186). The bridge antipodal_cover_of_margin: gap regime (margin<2/19 at every b/19) + units mod 19 => residues cover every antipodal unit-pair of Z/19; re-exported in the ledger as gap_regime_mod19_spread, a (C)-axis necessary-condition rung alongside LRCLadderD1's 2/25. Ledger builds clean.)
+## opus-2026-07-19-S398 -- THM-1245 BOUNDING D IS EXACTLY BOUNDING THE SPEEDS (D = M*s, so with M ~ 1/14 we get D ~ s/14 and s <= 2*max(V)) -- the obstruction sharpens to 'does M near the floor force bounded PRIMITIVE speeds?'; 8.5M-family integer scan finds only {1,...,13} at M <= 3/41, nothing at caps >= 30 (HYP-7840)
+
+Owner: work the bound on D. I did not prove one, but the session reduced it to a
+sharper and more attackable statement, which I think is the real output.
+THE REDUCTION: at the straddling active pair, v_i t* = a_i + M and v_j t* = a_j - M;
+eliminating t* gives M*(v_i + v_j) = v_i a_j - v_j a_i, i.e. D = M*s EXACTLY. Verified on
+all three near-floor families. With M in (1/14, 3/41) that forces D ~ s/14, and since
+s = v_i + v_j <= 2*max(V), bounding D is EQUIVALENT to bounding the active-pair sum and
+follows from bounding the largest speed. So THM-1240's obstruction sharpens to: for
+PRIMITIVE families, does M near the floor force bounded speeds?
+PRIMITIVITY IS THE WHOLE CONTENT of that question, not a technicality: dilating
+{1,...,13} by k holds M = 1/14 exactly while sending max(V) to 13k, so without gcd = 1 no
+bound of any kind can exist (THM-1050).
+THE EVIDENCE, and a speed lesson worth passing on: the test is purely INTEGRAL -- the gap
+at p/q exceeds num/den iff min(vp mod q, q - vp mod q)*den > num*q -- so the hot loop
+needs no rational arithmetic at all. Rewriting it in integers with early exit on the first
+failing speed ran about a hundred times faster than my Fraction version, which had been
+timing out. That let me cover ~8.5 MILLION random primitive families at speed caps 20,
+30, 45, 70, 110. Only {1,...,13} reached M <= 3/41 (13 times, at N = 20), and ZERO
+families did at caps >= 30. Sanity checks pass: the three known near-floor families do not
+beat 3/41, and {1,...,12,14} at M = 1/13 does.
+THE WEAKNESS I WANT ON RECORD: random sampling of 13 speeds from [1,N] essentially never
+produces the structured near-floor families -- this scan missed BOTH {1,...,11,13,24} and
+{1,...,11,13,36}, which are known to sit at 1/14 and 3/41. So its contribution is SCALE,
+NOT COVERAGE, and the structured searches of S396/S397 remain the stronger evidence.
+Eight million families sounds decisive and is not; I would rather say so than let the
+number do rhetorical work it has not earned.
+What the scan does support is the SHAPE of a bound: the three known near-floor families
+have max speeds 13, 24 and 36, all small, and raising the cap moves random families away
+from the floor rather than toward it.
+STATUS: the reduction is exact and is the useful output -- 'bound D' and 'M near the floor
+forces bounded primitive speeds' are the same statement, and the latter is the one to
+attack. The bound itself is NOT proved, and (1/14, 3/41) remains unsettled.
+FILES: THM-1245, THM-1240 amended, script + out, HYP-7840. opus; S398.
 
 ---
 

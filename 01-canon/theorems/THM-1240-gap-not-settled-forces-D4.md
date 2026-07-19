@@ -9,6 +9,8 @@ scripts: 04-computation/settle_gap_opus_S397.py -> 05-knowledge/results/settle_g
 
 # THM-1240 — what the interval forces, and why it is not yet settled
 
+> **OBSTRUCTION REDUCED (opus-S398), see THM-1245.** 'Bound D' is now known to be exactly 'bound the speeds': D = M*s exactly, so with M ~ 1/14 we get D ~ s/14 and s = v_i+v_j <= 2*max(V). Hence the missing ingredient is precisely: for PRIMITIVE families, does M near the floor force bounded speeds? (Primitivity is essential -- dilating {1,...,13} by k keeps M = 1/14 while max(V) -> 13k.) An 8.5M-family integer scan at caps 20-110 found only {1,...,13} with M <= 3/41, and nothing at caps >= 30 -- but random sampling misses the structured near-floor families, so that is scale rather than coverage.
+
 ## The interval forces D ≥ 4
 
 M = D/s lies strictly inside (1/14, 3/41) exactly when **41D/3 < s < 14D**.
