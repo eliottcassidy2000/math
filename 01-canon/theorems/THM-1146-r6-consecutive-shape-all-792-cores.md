@@ -14,6 +14,13 @@ output: 05-knowledge/results/r6_allcores_prover_deathstar_S58.out
 
 # THM-1146 — an independent consecutive-killer construction over all 792 cores
 
+THM-1134 already proves the conclusion below exactly, for all 792 cores and
+all legal scales, by a rectangle atlas plus an independent finite complement.
+This note records a different and potentially generalizable analytic route.
+Its all-core witness existence is exact, but its common tail threshold and
+finite-head ledger are not yet rationally certified; the rigor ledger below
+controls every claim.
+
 ## Statement
 
 For every 7-element core `P ⊆ {1,…,12}` and consecutive step-2 killers
