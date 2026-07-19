@@ -10,7 +10,8 @@
   two-comb and three-comb tails.  It also checks the arithmetic core of
   THM-1126's half-coverage/overlap reduction for the open four-comb case.  It
   checks the exact scale inequalities in THM-1128's thirteen-grid Kakeya
-  rectangle gate as well.  It
+  rectangle gate, THM-1129's rectangle-to-needle tail arithmetic, and the
+  three-range dispatch used by THM-1133.  It
   deliberately does not internalize the 66/220/495-core rational atlases or
   the interval-measure, torus-rectangle, and component-topology lemmas.
 
@@ -181,6 +182,98 @@ theorem thirteenGrid_kakeya_scale {B k4 M : ℝ}
       (mul_pos (by norm_num) hB)).2
     nlinarith
 
+/-- Arithmetic part of THM-1129's rectangle-to-needle tail.  A time interval
+of length at least one winding step plus one `1/7`-arc preimage can contain a
+complete needle segment; positive offset span then makes that segment
+strictly longer than the last killer's tooth.  The geometric containment is
+the external input, while both scale comparisons are checked here. -/
+theorem boundedOffset_needle_tail {d K c : ℝ}
+    (hK : 0 < K) (hc : 0 < c) (hfit : 8 / (7 * K) ≤ d) :
+    1 / K + 1 / (7 * K) ≤ d ∧
+      1 / (7 * (K + c)) < 1 / (7 * K) := by
+  constructor
+  · calc
+      1 / K + 1 / (7 * K) = 8 / (7 * K) := by field_simp; ring
+      _ ≤ d := hfit
+  · have hKc : 0 < K + c := by linarith
+    exact one_div_lt_one_div_of_lt
+      (mul_pos (by norm_num) hK)
+      (by nlinarith : 7 * K < 7 * (K + c))
+
+/-- Logical assembly used by THM-1133.  Once external certificates own the
+bottom, exact middle, and tail ranges, there is no untracked integer row.
+Keeping this tiny dispatch in the kernel prevents endpoint-language drift
+between the finite ledgers and the all-scale theorem statement. -/
+theorem threeRange_dispatch {Good : ℕ → Prop} {lo cut tail : ℕ}
+    (hbottom : ∀ K, lo ≤ K → K < cut → Good K)
+    (hmiddle : ∀ K, lo ≤ K → cut ≤ K → K < tail → Good K)
+    (htail : ∀ K, lo ≤ K → tail ≤ K → Good K) :
+    ∀ K, lo ≤ K → Good K := by
+  intro K hlegal
+  by_cases hcut : K < cut
+  · exact hbottom K hlegal hcut
+  by_cases htailK : K < tail
+  · exact hmiddle K hlegal (Nat.le_of_not_gt hcut) htailK
+  · exact htail K hlegal (Nat.le_of_not_gt htailK)
+
+/-- Arithmetic closure for THM-1134's five-residue multiplier cone.  The
+external ten-orbit lemma supplies a six-unit grid gap; these inequalities
+check core stability, one complete needle winding, and the strict final-tooth
+margin under `M≥80` and `B≥17M`. -/
+theorem fiveGrid_kakeya_scale {B k5 M : ℝ}
+    (hB : 0 < B) (hBk : B ≤ k5) (hM80 : 80 ≤ M)
+    (hscale : 17 * M ≤ B) :
+    12 * (10 / (273 * M)) ≤ (1 : ℝ) / 182 ∧
+      1 + (67 : ℝ) / 273 ≤ B * (20 / (273 * M)) ∧
+      1 / (7 * k5) < 67 / (273 * B) := by
+  have hM : 0 < M := lt_of_lt_of_le (by norm_num) hM80
+  have hk5 : 0 < k5 := lt_of_lt_of_le hB hBk
+  constructor
+  · calc
+      12 * (10 / (273 * M)) = (120 : ℝ) / (273 * M) := by ring
+      _ ≤ 1 / 182 := by
+        apply (div_le_div_iff₀ (mul_pos (by norm_num) hM) (by norm_num)).2
+        nlinarith
+  constructor
+  · calc
+      1 + (67 : ℝ) / 273 = (340 : ℝ) / 273 := by norm_num
+      _ ≤ (20 * B) / (273 * M) := by
+        apply (div_le_div_iff₀ (by norm_num : (0 : ℝ) < 273)
+          (mul_pos (by norm_num) hM)).2
+        nlinarith
+      _ = B * (20 / (273 * M)) := by ring
+  · apply (div_lt_div_iff₀ (mul_pos (by norm_num) hk5)
+      (mul_pos (by norm_num) hB)).2
+    nlinarith
+
+/-- Exact scale arithmetic for THM-1134's former worst step-two ray. -/
+theorem r6_stepTwo_ray_scale {b : ℝ} (hb : 148 ≤ b) :
+    1 + (8 : ℝ) / 49 ≤ (b + 4) * (3 / 392) ∧
+      1 / (7 * (b + 8)) < 8 / (49 * (b + 4)) := by
+  have hb4 : 0 < b + 4 := by linarith
+  have hb8 : 0 < b + 8 := by linarith
+  constructor
+  · nlinarith
+  · apply (div_lt_div_iff₀ (mul_pos (by norm_num) hb8)
+      (mul_pos (by norm_num) hb4)).2
+    nlinarith
+
+/-- Arithmetic heart of THM-1134's separated-ratio `Q5` gate.  External
+interval geometry supplies the mass lower bound and component upper bound;
+strict positivity of `Q5` makes seven finest-tooth lengths times the survivor
+mass exceed the component count. -/
+theorem fiveComb_Q5_mass_components
+    {ell K sumK reciprocal survivorMass components : ℝ}
+    (hK : 0 < K)
+    (hmass : 2 * ell / 7 - 6 * reciprocal / 49 ≤ survivorMass)
+    (hcomponents : components ≤ ell * sumK + 47 / 7)
+    (hQ5 : 0 < ell * (14 * K - 7 * sumK) -
+      6 * K * reciprocal - 47) :
+    components < 7 * K * survivorMass := by
+  have hscaled := mul_le_mul_of_nonneg_left hmass
+    (mul_nonneg (by norm_num : (0 : ℝ) ≤ 7) hK.le)
+  nlinarith
+
 #print axioms twoComb_ratio_tail
 #print axioms threeComb_ratio_tail
 #print axioms twoComb_exceptional_rectangle
@@ -192,6 +285,11 @@ theorem thirteenGrid_kakeya_scale {B k4 M : ℝ}
 #print axioms gapSquareEnergy_forces_long
 #print axioms fourGridGaps_thirteen
 #print axioms thirteenGrid_kakeya_scale
+#print axioms boundedOffset_needle_tail
+#print axioms threeRange_dispatch
+#print axioms fiveGrid_kakeya_scale
+#print axioms r6_stepTwo_ray_scale
+#print axioms fiveComb_Q5_mass_components
 
 end SharpCombArithmetic
 end LonelyRunner

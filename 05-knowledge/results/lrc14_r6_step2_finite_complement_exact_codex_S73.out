@@ -1,0 +1,32 @@
+r=6 step-two five-comb exact finite complement
+arithmetic=integer-rational; decisions=__int128 cross-products
+scope=all 792 seven-speed cores; every legal b<=164
+family=(b,b+2,b+4,b+6,b+8)
+target=7*(b+8)*L>1
+cores=792
+cores_with_finite_rows=792
+finite_rows=12771
+rows_with_core_max=7:73
+rows_with_core_max=8:420
+rows_with_core_max=9:1316
+rows_with_core_max=10:2856
+rows_with_core_max=11:4410
+rows_with_core_max=12:3696
+failures=0
+minimum_core_component=3/140
+minimum_core_count=1
+minimum_core=[1,2,6,7,8,9,10]
+hardest_core=[1,2,4,7,9,11,12]
+hardest_base=158
+hardest_killers=(158,160,162,164,166)
+hardest_longest_component=67/61992
+minimum_7k5L=5561/4428
+maximum_sharp_R=4428/5561
+hardest_longest_interval=[365/2296,121/756]
+hardest_longest_interval=[635/756,1931/2296]
+tournament_vertices=coalesced exact surviving endpoints
+tournament_fingerprint=transitive; directed_cycles=0; SCCs=singletons; sorted_HP=1
+proof_carrier=ordered rational endpoints|speed owners|metric lengths
+destroyed_by_order_only=metric gap length|endpoint owners|removal stages
+challenged_vertices=runners|combs|core components|teeth|endpoints|wall events|residues|proof obligations
+certificate=PASS

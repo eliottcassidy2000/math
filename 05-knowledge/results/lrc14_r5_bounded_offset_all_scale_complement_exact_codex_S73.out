@@ -1,0 +1,29 @@
+THM-1133 bounded-offset all-scale finite complement
+arithmetic=integer-rational; decisions=__int128 cross-products
+cores=495
+offset_shapes=4060
+core_shape_pairs=2009700
+maximum_individual_tail_K=832
+pairs_tail_closed_at_legal_start=1802872
+per_pair_raw_finite_rows=6040056
+rows_already_in_THM1123_bottom_bank=2500120
+residual_rows_expected=3539936
+residual_rows_tested=3539936
+failures_total=0
+row_digest_fnv64=15941569285517864349
+THM1123_shared_row_L=41/25920
+THM1123_shared_row_7k4L=11767/6480
+hardest_core=[1,2,4,5,7,8,9,11]
+hardest_offsets=(0,4,6,8)
+hardest_K=186
+hardest_killers=(186,190,192,194)
+hardest_longest_component=86/61845
+min_7k4L=16684/8835
+hardest_longest_interval=[267/2660,265/2604]
+hardest_longest_interval=[2339/2604,2393/2660]
+tournament_vertices=labelled candidate boundaries and surviving endpoints
+pairwise_observable=exact rational order; tournament=transitive
+order_only_destroyed=metric gaps|owners|wall slopes|safe side|stage
+challenged_vertices=runners|combs|core cells|boundaries|wall events|residues|proof obligations
+scope=all legal K on every normalized offset shape of span <=30
+certificate=PASS

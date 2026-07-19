@@ -401,7 +401,10 @@ and THM-1097 proves the uniform three-comb theorem, so clustered `r=3,4` are
 closed at all scales.  `LRCSharpCombArithmetic.lean` kernel-checks their ratio
 tails, final-killer inequality, exceptional rectangle, toothpick phase
 transition, THM-1126 gap-energy arithmetic, and THM-1128's thirteen-grid scale
-inequalities without `sorry` or `native_decide`; the interval discrepancy,
+inequalities without `sorry` or `native_decide`.  It now also checks
+THM-1129's needle-tail arithmetic, THM-1133's three-range dispatch, and
+THM-1134's five-grid cone, step-two, and separated-ratio scale inequalities;
+the interval discrepancy,
 66/220-core atlases, and large exact banks are still external certificate
 producers.  The phase quotient fails at four removals, and THM-1101 now has an
 exact covering tuple above 235 missed by both sides of its former split.
@@ -409,9 +412,19 @@ THM-1123 nevertheless proves the sharp component target on a complete
 45,238,050-row bounded bank.  THM-1126 replaces scalar mass by the truncated
 autocovariogram/gap energy; THM-1127 proves the `(0,4,5,9)` fixed ray at every
 scale; and THM-1128 proves every offset shape in the uniform Kakeya cone
-`k1>=max(1272,26(k4-k1+1))`.  Thus uniform clustered `r=5` remains open only after
-these bounded, fixed-ray, and near-diagonal pieces, and specifically asks for
-the intermediate-ratio endpoint-owner geometry.
+`k1>=max(1272,26(k4-k1+1))`.  THM-1133 now closes every offset shape of span
+at most 30 for every legal scale: THM-1123 bottom, a 3,539,936-row exact
+middle, and THM-1129 individual tails meet without gaps.  Thus uniform
+clustered `r=5` is reduced to spans above 30 outside the centred cone and the
+other analytic gates.
+
+At `r=6`, THM-1134 removes the apparent five-centre obstruction by choosing
+the thirteenth-grid multiplier: ten affine orbits prove every five-residue
+pattern has some chart with gap at least `6/13`.  This yields the cone
+`B>=17 max(A,80)` and closes the entire step-two family by a 792-core rectangle
+atlas plus 12,771-row finite complement.  Its complementary exact `Q5` gate
+handles sufficiently separated ratios.  Uniform r6 outside those pieces
+remains open.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these

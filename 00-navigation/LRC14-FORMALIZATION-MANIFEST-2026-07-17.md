@@ -1088,7 +1088,10 @@ two-comb ratio tail, the three-comb ratio tail, the exceptional two-comb
 rectangle, the sharp final-comb inequality, and the exact toothpick phase
 transition `1<(7-m)/m iff m<7/2`, THM-1126's
 half-coverage/overlap/gap-energy arithmetic, and THM-1128's thirteen-grid
-Kakeya scale inequalities.  The module is root-wired and contains no
+Kakeya scale inequalities.  It now also kernel-checks THM-1129's
+rectangle-to-needle comparison, THM-1133's three-range dispatch, and
+THM-1134's five-grid cone, step-two ray, and separated-ratio `Q5` arithmetic.
+The module is root-wired and contains no
 `sorry`, `native_decide`, or new axioms.  Its deliberate boundary is equally
 important: the sharp periodic interval-discrepancy lemma, the exact 66/220-core
 rational atlases, and the 9,246,070-pair / 39,778,595-triple banks remain
@@ -1104,7 +1107,17 @@ proves the first arbitrary-offset cone: centering the winding slope at the
 integer midpoint gives the exact gate `B>=53 max(A,24)`, and in particular
 `k1>=max(1272,26(Delta+1))` suffices.  A universal rectangle above `t=1/13`
 then contains an interval longer than `1/(7k4)`.  The intermediate-ratio
-four-comb region remains open.
+four-comb region now begins only at offset span above 30: THM-1133 combines
+THM-1123, an exact 3,539,936-row complement, and THM-1129 to close every
+bounded-offset ray `0<a<b<c<=30` at every legal scale.
+
+For five removals, THM-1134 proves that varying the chart through
+`t=u/13`, rather than freezing `u=1`, forces a six-unit cyclic gap for every
+five-residue pattern.  Its exact ten-affine-orbit certificate yields the
+arbitrary-shape cone `B>=17 max(A,80)`.  A separate 792-core rectangle atlas
+and 12,771-row endpoint complement close the full step-two family at all
+legal scales, while the exact `Q5` mass/component inequality supplies a
+separated-ratio gate.  These are genuine r6 pieces, not a uniform r6 closure.
 
 `LRCMSplit.lean` and `LRCFinsetBridge.lean` now state the direct kernel
 reduction with its essential divisor hypothesis exposed.  The genuine open

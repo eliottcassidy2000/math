@@ -97,8 +97,10 @@ stratum). No false certification anywhere.
   lower bound `L > 1/(7k_5)` over all 792 cores and all 5-killer configs. This is exactly the
   uniformity codex asked for ("prove a uniform measure-tail lemma"), but the target moved from
   an infeasible `R_conservative < 1` (max 1.86) to a `+25%`-margin `R_sharp < 1` (max 0.80).
-  The worst case is a single, analyzable shape (core `[1,2,4,7,9,11,12]`, consecutive step-2
-  killers), a good handle for that proof.
+  The sampled worst case was the consecutive step-two shape.  THM-1134 now
+  closes that entire shape over all 792 cores and every legal scale; the
+  uniform residual consists of the other five-killer shapes outside its new
+  multiplier cone and separated-ratio gate.
 
 ## Toward the uniform bound: the G(σ) reduction (death-star-S58, proof progress)
 
@@ -120,7 +122,8 @@ and the resulting `t`-gap is `≈ G(σ)/b`. Hence
 breakpoints at `σ=(k±1/7)/d`, `d≤4`; it satisfies `G(σ) > 1/7` exactly on the bands
 `(0,1/7) ∪ (2/7,1/3) ∪ (3/7,4/7) ∪ (2/3,5/7) ∪ (6/7,1)` (and reflections), with
 `min_σ G = 2/35` at `σ=1/5` (arcs evenly spread — the *bad* alignment), `G(1/3)=4/21`,
-`G(1/2)=5/14`. So the good bands cover ~64% of the circle.
+`G(1/2)=5/14`.  Their exact total measure is `11/21` (the earlier `~64%`
+mental sum was incorrect).
 
 **Worst-shape verification.** The maximizer sits at `σ ≈ 0.31 ∈ (2/7,1/3)`: exact
 `L·b = 12312/72275 = 0.1703 > 1/7`, so `R_sharp = 0.8011`. A wide exact/float scan
@@ -131,17 +134,23 @@ does not grow), strong evidence `0.8011` is the true global max for this shape.
 **What is proved vs. what remains.**
 - PROVED: the phase-AP reduction; the exact `G(σ)>1/7` band lemma; the exact worst-config
   value; `R_sharp<1` on `b∈[157,4000]` (finite check).
-- **UPDATE (THM-1132): the two gaps below are now CLOSED for the worst core + consecutive
-  shape** by a complete search-free proof (exact finite head `157≤b≤399` + explicit rational
-  witness `t*∈A*=(71/154,13/28)` for `b≥400`). The tail did NOT need the `G`-drift error bound
-  after all — an exact witness with margin `9/(77b)` sidesteps it. What still remains is the
-  *other* 791 cores / non-consecutive shapes, via the same two-part template.
-- (Original remaining items, now discharged for the worst core:) (i) a core-safe arc whose
-  double lies in the interior of a good `G`-band — here `A*`, with `2A*⊂(6/7,1)` where `G→4/7`;
-  (ii) error control — replaced by the exact witness.
+- **Independent worst-core proof (death-star-S58).**  For the consecutive
+  step-two shape on core `{1,2,4,7,9,11,12}`, the two former gaps are closed
+  search-free: an exact finite head handles `157≤b≤399`, while the rational
+  witness `t*∈A*=(71/154,13/28)` handles `b≥400` with margin `9/(77b)`.
+  Here `2A*⊂(6/7,1)`, so the witness replaces the anticipated `G`-drift
+  error estimate.
+- **All-core strengthening (THM-1134).**  An exact 792-core rectangle atlas
+  closes `b≥164`, and an independent 12,771-row endpoint bank closes every
+  legal `b≤164`.  Thus no asymptotic `G`-drift estimate remains anywhere in
+  the step-two family, not merely on the old worst core.
+- **Remaining for uniform r6.**  Other five-killer shapes outside THM-1134's
+  cone `B≥17 max(A,80)` and outside its exact separated-ratio `Q5` gate.
 
-This turns the "uniform tail lemma" from an opaque analytic obstruction into a concrete,
-mostly-discharged program: an exact 1-D inequality (done) + a finite alignment/error check.
+Historically, `G(σ)` exposed the right one-variable geometry.  THM-1134's
+fixed rectangles are the exact, drift-free realization of it on the
+step-two family; the multiplier chart is the more flexible object for general
+shapes.
 
 ## Methodological note (for the fleet)
 

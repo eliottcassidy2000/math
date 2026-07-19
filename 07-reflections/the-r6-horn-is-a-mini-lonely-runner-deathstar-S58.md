@@ -3,7 +3,9 @@
 A self-similar observation from work toward the r=6 uniform bound (THM-1132,
 renumbered after THM-1123 had already been claimed).  The sharp horn and the
 one-variable `G(σ)` bands are proved; the all-core, all-scale landing/drift
-lemma is still open.
+lemma is still open for arbitrary five-killer shapes.  THM-1134 has since
+closed the entire step-two family over all cores and scales, and supplies a
+general multiplier-chart cone plus a separated-ratio gate.
 
 The r=6 covering-killer stratum, after the sharp measure horn, asks: within a core-safe arc,
 do 5 far killers `{b, b+2, …, b+8}` leave a gap wider than one killer's danger arc? Writing
@@ -38,3 +40,15 @@ The recursion — a runner problem inside the runner problem, with the same extr
 the same `2·7` arithmetic — is the kind of self-reference this project keeps surfacing. Whether
 the descent continues (does the 5-runner window-problem reduce to a 3-runner one?) is a natural
 question the sharp-horn frame now makes askable.
+
+## Multiplier charts resolve the fixed-chart arity mirage
+
+The mini-runner recursion sharpened after allowing all core-safe charts
+`t=u/13`, not only `u=1`.  Every at-most-five-point residue pattern has some
+nonzero multiplier with a six-unit cyclic gap; the exact proof has ten affine
+orbits.  This produces a fixed Kakeya rectangle and the cone
+`B>=17 max(A,80)`.  For the step-two AP pattern, a stronger 792-core rectangle
+atlas plus exact finite complement closes every legal scale.  The lesson is
+that the faithful vertex is not a killer at one frozen time, but an affine
+residue orbit together with the selectable chart.  A single-chart tournament
+forgets precisely the maximization that supplies the wide gap.

@@ -1,0 +1,22 @@
+THM-1133 independent Fraction extremal/accounting replay
+method=complete simultaneous breakpoint arrangement
+hardest_core=(1, 2, 4, 5, 7, 8, 9, 11)
+hardest_offsets=(0, 4, 6, 8)
+hardest_K=186
+hardest_L=86/61845
+hardest_7k4L=16684/8835
+hardest_intervals=[(Fraction(267, 2660), Fraction(265, 2604)), (Fraction(2339, 2604), Fraction(2393, 2660))]
+hardest_pair_rectangle_time=1/308
+hardest_pair_tail_start=352
+hardest_pair_rectangle_witness=(Fraction(71, 154), Fraction(13, 28), 'right', Fraction(71, 154), Fraction(6, 11), Fraction(1, 308))
+hardest_pair_legal_start=144
+hardest_pair_first_residual_K=176
+THM1123_shared_L=41/25920
+THM1123_shared_7k4L=11767/6480
+accounting_pairs=2009700
+accounting_raw=6040056
+accounting_bottom=2500120
+accounting_residual=3539936
+full_quantifier_owner=C++ referee; this replay guards extremal/accounting
+tournament=endpoint order transitive; metric/owner sidecars retained
+certificate=PASS

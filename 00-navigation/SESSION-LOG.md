@@ -71102,3 +71102,102 @@ proposed universal `1/12` gap theorem would imply corrected `INVcov`, so it is
 at least as hard as the covering crux.  The PG(2,13) numerical coincidence is
 retained as a heuristic; no predicate-preserving transport to the tournament
 or loneliness object is presently proved.
+
+---
+
+## codex-2026-07-18-S73 — THM-1133 closes every four-comb offset ray of span at most 30
+
+Completed the exact finite complement isolated by THM-1129.  For each of the
+`495*C(30,3)=2,009,700` eight-core/normalized-offset rays, the new C++ referee
+independently reconstructs the one-sided `1/7` rectangle tail.  It reproduces
+the ledger exactly: 1,802,872 rays close at their legal start; 6,040,056 rows
+lie below individual tails; 2,500,120 are in THM-1123's first-forty bottom
+bank; exactly 3,539,936 rows remain.  Exact endpoint subtraction checks every
+one of those rows and finds zero failures of `7(K+c)L>1`.
+
+Together, THM-1123 bottom + the 3,539,936-row complement + THM-1129 tail prove
+the sharp four-comb target for every legal `K` and every offset shape
+`0<a<b<c<=30`.  The residual-bank extremal is
+
+```text
+P={1,2,4,5,7,8,9,11}, A=(0,4,6,8), K=186,
+killers=(186,190,192,194), L=86/61845,
+7k4L=16684/8835,
+```
+
+with reflected longest intervals `[267/2660,265/2604]` and
+`[2339/2604,2393/2660]`.  Its direct rectangle tail begins at `K=352`, so it
+is genuinely in the finite middle.  The all-scale analytic margin still tends
+to one from above; the displayed metric is a finite-complement extremal, not a
+uniform positive gap.
+
+The primary uses integer-rational endpoints and signed `__int128` decisions;
+O0/O2/ASan+UBSan outputs byte-match, row digest `15941569285517864349`.  A structurally
+different Fraction replay builds the simultaneous breakpoint arrangement and
+recovers the extremal, both intervals, its pair-specific tail, THM-1123's
+shared hardest row, and the exact accounting identity.  Normal/optimized
+Python outputs byte-match.  Source/output hashes are
+`bc4b3d62...e83af6`/`ed264708...afb8a4` and
+`1d207325...9e25e`/`889d1bdd...7e233`.
+
+The remaining uniform `r=5` region now has `c>30` and lies outside THM-1128's
+centred cone and other analytic gates.  The faithful carrier remains a
+labelled endpoint word with metric, owner, stage, safe-side, and wall-slope
+sidecars; its naked endpoint-order tournament is transitive and loses the
+sharp component predicate.
+
+---
+
+## codex-2026-07-18-S73 — THM-1134 multiplier charts and an all-scale r6 step-two family
+
+The fixed `t=1/13` five-centre obstruction in THM-1128 was a chart artifact.
+Over all 1,287 five-subsets of `Z/13`, an exact affine-orbit certificate has
+ten orbits and proves that some nonzero multiplier gives a cyclic gap of at
+least six grid units.  The floor is sharp on 312 labelled subsets.  Extending
+smaller residue sets to five handles collisions as well.
+
+At the selected chart `t0=u/13`, the six-unit centre gap has safe width
+`29/91`.  With centred base `B`, offset radius `A`, `M=max(A,80)`, and
+`epsilon=10/(273M)`, the core stays safe, centre clusters cannot cross, and a
+fixed vertical strip has width `67/273`.  The exact winding fit gives the new
+five-comb cone
+
+```text
+B>=17M,
+k1>=max(1360,8(k5-k1+1)) as a midpoint corollary.
+```
+
+The constants 17 and 80 are optimal inside this fixed-chart/no-crossing
+scheme: writing `y=2M epsilon`, order requires `y<1/13`, while a ratio-16
+crossing would require `y>=120/(91*17)>1/13`; at ratio 17 the least
+`y=20/273` forces `M>=80` from core safety.
+
+The formerly sampled worst step-two shape is now a theorem over every core.
+An exact 792-core labelled-gap rectangle atlas closes `B=b+4>=168`; its unique
+worst certificate is core `{1,2,3,4,7,9,11}`, `I=[13/168,13/154]`, and
+`|X|=2/11`.  A completely separate endpoint-subtraction referee checks all
+12,771 legal rows `b<=164` with zero failures.  Its extremal is core
+`{1,2,4,7,9,11,12}`, `b=158`, `L=67/61992`, and
+`7(b+8)L=5561/4428`.  O0/O3/sanitized C++ and normal/optimized Fraction
+outputs agree with the frozen ledgers.
+
+A complementary exact gate now describes the separated side.  On a
+core-safe interval of length `ell`, five killers `k1<...<k5=K` force a long
+component whenever
+
+```text
+ell(14K-7 sum ki)-6K sum(1/ki)-47>0.
+```
+
+It follows directly from the sharp one-comb mass bound and the exact
+five-comb tooth-incidence component ceiling `ell sum ki+47/7`.  Thus the
+honest uniform-r6 residual is the intermediate-ratio region outside both the
+multiplier cone and this `Q5` gate, not the step-two drift ray.
+
+`LRCSharpCombArithmetic.lean` now kernel-checks the THM-1129 needle fit,
+THM-1133 three-range dispatch, THM-1134 cone/step-two constants, and the `Q5`
+mass-versus-component inequality with the standard foundational axiom trio
+only.  Tournament audit: the affine residue orbit preserves the
+maximum-over-charts predicate; a frozen-chart or naked endpoint-order
+tournament is transitive but destroys metric width, owners, slopes, and the
+chart choice.

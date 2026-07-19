@@ -1,0 +1,21 @@
+r=6 step-two five-comb exact rectangle atlas
+arithmetic=fractions.Fraction only
+cores=792
+offsets=(-4, -2, 0, 2, 4)
+candidate_boundaries=165
+eligible_core_order_cells=36464
+labelled_core_gap_side_candidates=66456
+uniform_tail_B=168
+uniform_tail_b=164
+worst_core_count=1
+worst_core=(1, 2, 3, 4, 7, 9, 11)
+worst_certificate=Certificate(required_B=Fraction(168, 1), left=Fraction(13, 168), right=Fraction(13, 154), side='left', lower_owner=-4, upper_owner=4, endpoint_width=Fraction(2, 11), retreat=0, time_width=Fraction(13, 1848), fixed_width=Fraction(2, 11), fixed_lower=Fraction(9, 22), fixed_upper=Fraction(13, 22))
+worst_crossing_identity=B*|I| at B=168 is 13/11; 1+|X| is 13/11
+tail_component=|X|/B >= 1/(7B) > 1/(7(B+4))
+candidate_lemma=core endpoints plus center collisions; exact affine wall retreat
+tournament_vertices=coalesced candidate boundaries
+tournament_fingerprint=transitive; directed_cycles=0; SCCs=singletons; sorted_HP=1
+proof_carrier=labelled cyclic gap|core-safe side|owner slopes|metric rectangle
+destroyed_by_order_only=gap length|owners|safe side|slopes|rectangle width
+challenged_vertices=runners|combs|core cells|boundaries|wall events|residues|proof obligations
+certificate=PASS
