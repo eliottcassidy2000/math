@@ -10,7 +10,7 @@ output: 05-knowledge/results/lrc14_centered_protrusion_fastest_wall_thm1273.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCCenteredProtrusionFastestWall.lean
 script_sha256: ce136bdaee964e5f7afcc10590e807a6cf28f03d2defe9a6d5dfbf2606f09f17
 output_sha256: 090763ad8b74e5d2c5b07385d4805ab7af17b8ea6106d51d0a7cb04ede5abcb6
-formalization_sha256: 9231825454f82d73c1700ded99e82ebcd8bb52bf9d0159ad59f8dbad6460c7d2
+formalization_sha256: 0c416224a80f1d4ec68c87cd3fd1e758f896cd92220ce37c04b54b2b1d9695a1
 ---
 
 # THM-1273 -- centered-protrusion fastest-wall dichotomy
@@ -384,5 +384,5 @@ Frozen artifact hashes are
 ```text
 source         ce136bdaee964e5f7afcc10590e807a6cf28f03d2defe9a6d5dfbf2606f09f17
 output         090763ad8b74e5d2c5b07385d4805ab7af17b8ea6106d51d0a7cb04ede5abcb6
-formalization  9231825454f82d73c1700ded99e82ebcd8bb52bf9d0159ad59f8dbad6460c7d2
+formalization  0c416224a80f1d4ec68c87cd3fd1e758f896cd92220ce37c04b54b2b1d9695a1
 ```

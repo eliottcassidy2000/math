@@ -141,7 +141,26 @@ theorem bare_wall_or_low_crosser
     (hd₁safe : ¬d₁Danger) (hwallSafe : ¬hDanger) :
     (inTail ∧ ¬d₂Danger ∧ ¬d₃Danger ∧ ¬d₄Danger ∧ ¬d₅Danger) ∨
       d₂Danger ∨ d₃Danger ∨ d₄Danger ∨ d₅Danger := by
-  aesop
+  by_cases hd₂ : d₂Danger
+  · exact Or.inr (Or.inl hd₂)
+  by_cases hd₃ : d₃Danger
+  · exact Or.inr (Or.inr (Or.inl hd₃))
+  by_cases hd₄ : d₄Danger
+  · exact Or.inr (Or.inr (Or.inr (Or.inl hd₄)))
+  by_cases hd₅ : d₅Danger
+  · exact Or.inr (Or.inr (Or.inr (Or.inr hd₅)))
+  left
+  refine ⟨?_, hd₂, hd₃, hd₄, hd₅⟩
+  rcases hlocation with hinK | hinTail
+  · exfalso
+    rcases hcover hinK with hd₁ | hd₂' | hd₃' | hd₄' | hd₅' | hh
+    · exact hd₁safe hd₁
+    · exact hd₂ hd₂'
+    · exact hd₃ hd₃'
+    · exact hd₄ hd₄'
+    · exact hd₅ hd₅'
+    · exact hwallSafe hh
+  · exact hinTail
 
 /-- Re-export the exact endpoint arithmetic consumer: a positive compatible
 overlap numerator divisible by the owner gcd pays `1/(14*lcm)`. -/
@@ -166,31 +185,31 @@ theorem crossed_wall_pays_lcm_quantum
 
 theorem sharp_control_tail :
     (33 : ℚ) / 280 < 1 / 6 ∧
-      11 / 270 < 33 / 280 := by
+      (11 : ℚ) / 270 < 33 / 280 := by
   norm_num
 
 theorem sharp_control_oriented_points :
     (2045 : ℚ) / 3556 < 7476011 / 12938240 ∧
-      7476011 / 12938240 < 1133 / 1960 ∧
-      1133 / 1960 < 7425603 / 12837160 ∧
-      7425603 / 12837160 < 2057 / 3556 := by
+      (7476011 : ℚ) / 12938240 < 1133 / 1960 ∧
+      (1133 : ℚ) / 1960 < 7425603 / 12837160 ∧
+      (7425603 : ℚ) / 12837160 < 2057 / 3556 := by
   norm_num
 
 theorem sharp_control_wall_order :
     (7476011 : ℚ) / 12938240 < 14603 / 25270 ∧
-      14603 / 25270 < 2923 / 5054 ∧
-      2923 / 5054 < 14617 / 25270 ∧
-      14617 / 25270 < 7425603 / 12837160 := by
+      (14603 : ℚ) / 25270 < 2923 / 5054 ∧
+      (2923 : ℚ) / 5054 < 14617 / 25270 ∧
+      (14617 : ℚ) / 25270 < 7425603 / 12837160 := by
   norm_num
 
 /-- The first two fastest walls in the sharp row lie strictly inside the
 `256@148` tooth; the last wall lies after that tooth. -/
 theorem sharp_control_low_wall_incidence :
     (2071 : ℚ) / 3584 < 14603 / 25270 ∧
-      14603 / 25270 < 2073 / 3584 ∧
-      2071 / 3584 < 2923 / 5054 ∧
-      2923 / 5054 < 2073 / 3584 ∧
-      2073 / 3584 < 14617 / 25270 := by
+      (14603 : ℚ) / 25270 < 2073 / 3584 ∧
+      (2071 : ℚ) / 3584 < 2923 / 5054 ∧
+      (2923 : ℚ) / 5054 < 2073 / 3584 ∧
+      (2073 : ℚ) / 3584 < 14617 / 25270 := by
   norm_num
 
 /-- At the last sharp-row wall, `h=1805` is exactly safe and `d1,d2,...,d5`
@@ -211,7 +230,7 @@ theorem sharp_control_bare_wall_depths :
 
 theorem sharp_control_bare_wall_in_tail :
     (1133 : ℚ) / 1960 < 14617 / 25270 ∧
-      14617 / 25270 < 2057 / 3556 := by
+      (14617 : ℚ) / 25270 < 2057 / 3556 := by
   norm_num
 
 /-- The two crossed walls in the sharp row pay respectively 213 and 325
