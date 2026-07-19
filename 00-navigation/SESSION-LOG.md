@@ -1,3 +1,33 @@
+## opus-2026-07-17-S381 -- THM-1165 THE FOUR-SPEED CASE IS EXHAUSTIVE (2242028 nodes, 85% pruned by a uniform per-level budget, 0 empty residues, still only TWO tight families) -- AND THE SUBSTITUTION METHOD CAN NEVER SETTLE THE GLOBAL QUESTION, since 1 - 2k*lam dies at k = 7 (HYP-7660)
+
+Owner: prove the four-speed case exhaustive. Done -- and the more important output is a
+scope correction on what this whole line of work can ever deliver.
+THE PRUNE: at a node with residue E, j combs still to place and all remaining speeds
+>= r, the density bound with every speed equal to r gives the most generous possible
+budget, ell <= j/(r*(7-j)) at lam = 1/14 -- sharpened to 2*lam/r at j=1 by the THM-1125
+single-arc bound. The budgets are 1/(7r), 2/(5r), 3/(4r), 4/(3r) for j = 1,2,3,4. It is
+sound because no admissible assignment could do better than all-speeds-equal-to-r.
+Applying it at EVERY level rather than only at the root is what made k=4 tractable: it
+killed 1914812 of 2242028 nodes, 85%.
+THE RESULT: 414499 leaf checks, 0 empty residues (any one would have contradicted
+LRC(11), LRC(12) or LRC(13)), and again exactly TWO tight families, {1,...,13} and
+{1,...,11,13,24}. Nothing new at distance four.
+THE HORIZON, and this is what I want on record: the density coefficient 1 - 2*k*lam is
+positive only for k < 1/(2*lam) = 7. So the entire substitution programme -- S378 through
+S381 -- reaches AT MOST SIX simultaneous substitutions. Families differing from
+{1,...,13} in seven or more speeds are outside its reach entirely, and no amount of
+compute changes that, because the bound that makes each level finite simply stops
+existing at seven. That re-scopes THM-1120's open question: 'exactly two tight families
+overall' is not merely unproved by this route, it is UNREACHABLE by it. Settling it needs
+an argument that does not proceed by bounded substitution from the classical family.
+PRACTICAL NOTE for whoever continues: node counts grow about 25x per level (87863 at
+k=3, 2242028 at k=4), projecting ~56M nodes at k=5 -- slow but feasible -- and ~1.4B at
+k=6, which this implementation will not manage. So k=5 is the last level worth attempting
+as written, and even completing k=6 would not close the question.
+FILES: THM-1165, THM-1120 amended, script + out, HYP-7660. opus; S381.
+
+---
+
 ## kind-pasteur-2026-07-18-S128 (cont.71) -- THM-1143: the sparse-gap reduction is REFUTED, and the four-comb target collapses from six linear functions over a component to a THREE-TOOTH spacing statement inside one gap (owner: prove the six-linear-functions statement for the four-comb tail). (I) THE REDUCTION IS SOUND. Inside a core-safe component the smallest killer k1 cuts gaps of length EXACTLY 6/(7k1). If one such gap contains at most m teeth of k2, k3, k4 -- each of width at most 1/(7k2) -- then it splits into at most m+1 pieces of total length at least 6/(7k1) - m/(7k2), so L >= (6/(7k1) - m/(7k2))/(m+1). At m = 2 the four-comb requirement L > 1/(7k4) becomes 6/k1 - 2/k2 > 3/k4, which for clustered killers reads 4/k > 3/k -- true with 33% room, and verified on every test row (157/158/159/160; 371/374/377/379; 550/553/554/558; 157/314/628/1256). So a 2-SPARSE GAP WOULD PROVE THE FOUR-COMB THEOREM outright. (II) BUT NO 2-SPARSE GAP EXISTS. Across 800 trials in five regimes -- consecutive, step at most 3, at most 8, at most 30, and spread by 1.3 -- the minimum foreign-tooth count over all k1-gaps is ALWAYS EXACTLY 3, never 2: 160 out of 160 failures in every single regime. My counting heuristic was that each k1-period holds one tooth of each foreign comb, of which about 1/7 land inside the k1-TOOTH and are harmless, giving an average of 18/7 which is under 3, and hence a 2-sparse gap by pigeonhole. That reasoning is WRONG, and the error is instructive: a tooth STRADDLING the k1-tooth boundary still CUTS the gap, so it is not harmless at all. All three foreign teeth per period count, uniformly, and the pigeonhole has nothing to bite on. (III) AT m = 3 THE CRUDE BOUND FALLS SHORT BY EXACTLY 23%. On the standing worst case -- core [1,3,5,6,7,8,11,12], killers 371/374/377/379 -- the component is [71/154, 41/84], it contains ten k1-gaps, and every one of them holds exactly three foreign teeth. The equal-split bound is (6/(7*371) - 3/(7*374))/4 = 1131/3885112 = 0.00029111, giving 7*k4*L >= 0.7723, short of 1 by 23%. (IV) SO THE ENTIRE REMAINING GAP IS THE POSITIONS OF THE THREE TEETH INSIDE THE k1-GAP. The true longest piece is 0.0008888, which is 3.05 times the equal-split bound. The crude bound assumes three teeth split the gap into four EQUAL pieces; they never do, and THM-1142's exact law says precisely why, since the gap from tooth j of a to tooth j+1 of b is (a - j*d)/(a*b) minus radii and is linear in j, so consecutive spacings differ systematically. The four-comb theorem therefore reduces to a statement about THREE NUMBERS IN ONE INTERVAL: three foreign teeth in a k1-gap cannot split it into four pieces all shorter than 1.295 times the equal-split value. The measured ratio is 3.05, leaving a factor of 2.35 of room. That is a far smaller and more concrete object than the 'six linear functions over a whole component' I set out to prove at the start of this session, and the reduction to a SINGLE GAP is the session's actual gain. HONEST STATUS: the sparse-gap lemma I proposed is dead, the four-comb theorem is not proved, and uniform r=5 remains OPEN.
 
 Prompt (owner): prove the six-linear-functions statement for the four-comb tail
