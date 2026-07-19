@@ -1,0 +1,37 @@
+M = D/s lies in (1/14, 3/41)  <=>  41D/3 < s < 14D
+
+  D    integer range for s        admissible s -> M
+   1   (  13.67,  14)   NONE
+   2   (  27.33,  28)   NONE
+   3   (  41.00,  42)   NONE
+   4   (  54.67,  56)   55 -> 4/55
+   5   (  68.33,  70)   69 -> 5/69
+   6   (  82.00,  84)   83 -> 6/83
+   7   (  95.67,  98)   96 -> 7/96, 97 -> 7/97
+   8   ( 109.33, 112)   110 -> 4/55, 111 -> 8/111
+   9   ( 123.00, 126)   124 -> 9/124, 125 -> 9/125
+  10   ( 136.67, 140)   137 -> 10/137, 138 -> 5/69, 139 -> 10/139
+  11   ( 150.33, 154)   151 -> 11/151, 152 -> 11/152, 153 -> 11/153
+  12   ( 164.00, 168)   165 -> 4/55, 166 -> 6/83, 167 -> 12/167
+  13   ( 177.67, 182)   178 -> 13/178, 179 -> 13/179, 180 -> 13/180, 181 -> 13/181
+  14   ( 191.33, 196)   192 -> 7/96, 193 -> 14/193, 194 -> 7/97, 195 -> 14/195
+  15   ( 205.00, 210)   206 -> 15/206, 207 -> 5/69, 208 -> 15/208, 209 -> 15/209
+
+  D = 1,2,3 give NO integer s  =>  the interval FORCES D >= 4.
+  (boxeph-S123's stratification gave D >= 3 for the wider Farey interval;
+   the attained interval (1/14,3/41) pushes it one step further.)
+
+  total candidate (D,s) pairs with D <= 15: 30
+  first few: [(4, 55), (5, 69), (6, 83), (7, 96), (7, 97), (8, 110), (8, 111), (9, 124)]
+
+  Note the list is INFINITE (D unbounded), since s ~ 14D always admits
+  an integer once D >= 4.  So emptiness cannot be settled by finite check
+  alone -- it needs an argument that bounds D for a realising family.
+
+HUNTING the mediant 4/55 and anything else inside (1/14, 3/41)
+  Farey: |1*41 - 3*14| = 1, so 1/14 and 3/41 are NEIGHBOURS and
+  4/55 = (1+3)/(14+41) is the unique least-denominator fraction inside.
+
+  10895 families tested (residue-band at s=55, plus {1..11,x,y} shapes)
+  families with M strictly inside (1/14, 3/41): 0
+  NONE -- including no realisation of the mediant 4/55

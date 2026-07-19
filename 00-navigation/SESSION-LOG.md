@@ -21,6 +21,40 @@ already PROVEN M>=2/25>1/13 by Hamming rigidity THM-1004/5/6 -- the competitor c
 tightest. Open residual = far-from-AP near-tight fragmented cores (THM-1028), where deficit is large
 but the witness-table method doesn't reach. HYP-7746; reflection + script. Next: crude deficit->margin
 bound for far cores, or via function fields (boxeph-S90). -> boxeph, kind-pasteur.
+## opus-2026-07-19-S397 -- THM-1240 (1/14, 3/41) IS NOT SETTLED -- but the interval FORCES D >= 4 by exact arithmetic (D=1,2,3 admit no integer s), 1/14 and 3/41 are FAREY NEIGHBOURS so 4/55 is the mediant and canonical target, ~12,400 families give zero hits, and the obstruction to settling is NAMED: bound D (HYP-7830)
+
+Owner: settle whether (1/14, 3/41) is empty. I did not settle it, and I want to lead with
+that rather than dress up the partial result.
+WHAT IS PROVED: M = D/s lies strictly inside (1/14, 3/41) iff 41D/3 < s < 14D. For
+D = 1, 2, 3 that range contains NO INTEGER -- (13.67,14), (27.33,28), (41,42) -- so the
+interval FORCES D >= 4 by arithmetic alone. That is one full step beyond boxeph-S123's
+D >= 3, which applied to the wider Farey interval (1/14, 2/27); narrowing to the ATTAINED
+edge sharpens the determinant floor.
+THE FAREY STRUCTURE: |1*41 - 3*14| = |41 - 42| = 1, so 1/14 and 3/41 are NEIGHBOURS.
+Hence every fraction strictly inside has denominator >= 14 + 41 = 55, and the unique one
+achieving 55 is the mediant 4/55. So 4/55 is not merely the first candidate by size -- it
+is the unique least-denominator fraction in the interval, and the canonical place to
+look.
+THE EVIDENCE: nothing found inside, over two structurally-motivated constructions. First,
+a RESIDUE-BAND construction at s = 55: pick t* = p/55 and force all thirteen speeds into
+the band [4,51] mod 55, so that M >= 4/55 holds at that point BY DESIGN, then test
+whether any other point beats it. Second, the {1,...,11,x,y} two-free-slot shapes, which
+is where the near-extremal families live. With THM-1235's 1552-family scan that is about
+12,400 families tested, ZERO hits inside, including zero realisations of the mediant.
+WHY THAT IS NOT A SETTLEMENT: the candidate (D,s) list is INFINITE -- every D >= 4 admits
+an integer s near 14D -- so no finite enumeration decides the question. And in the band
+construction the residues are never the obstruction: at D = 4, s = 55 the band holds 48
+of 55 residues, 87% of them. What defeats every attempt is that some OTHER point beats
+the intended maximiser, which is a global condition on the family.
+WHAT SETTLING REQUIRES, named precisely: a BOUND ON D for a family whose maximiser lies
+in the interval. With such a bound the candidate list becomes finite and each (D,s) is a
+finite residue problem; without it, emptiness cannot be decided by search at all. I am
+recording that as the obstruction rather than accumulating more evidence -- the honest
+state is that the interval is very likely empty and not proved so, and the missing
+ingredient now has a name.
+FILES: THM-1240, THM-1235 amended, script + out, HYP-7830. opus; S397.
+
+---
 
 ## boxeph-2026-07-19-S127 -- LEAN-FORMALIZED the mod-19 antipodal-spread lemma (kernel-pure) (owner: Lean-formalize the mod-19 antipodal-spread lemma). Wrote LRCMod19Spread.lean (namespace LonelyRunner), the direct mod-19 analogue of the proven LRCMod13Blocking.lean; built clean, sorry-free, all theorems kernel-pure ([propext,(Classical.choice,)Quot.sound]): (1) mod19_middle_far -- integer core: r in [2,17] => 2 <= |19k+r| (two-case omega); (2) sieve19_single -- (v*b)%19 in [2,17] => at t=b/19, ||v*(b/19)|| >= 2/19 (the value = (v*b-19m)/19, numerator >= 2 by mod19_middle_far, lifted by abs_div/gcongr); sieve19_middle_witness -- the family form (=> M(C) >= 2/19); (3) no_middle_band_of_close -- contrapositive: a runner strictly within 2/19 of Z at scale b empties the middle band; (4) antipodal_spread -- THE LEMMA: hunit (no speed divisible by 19) + hclose (at every scale b some runner is <2/19-close, which holds when M(C)<2/19) forces, for every b with 19 not| b, some runner with residue +-1 mod 19 -- the per-scale form of 'the residues cover every antipodal unit-pair of Z/19' (equivalent via the units bijection b -> b^{-1}). The proof: the close runner's residue is not in [2,17] (else sieve19_single contradicts closeness) and not 0 (19 prime + 19 not| c_i, 19 not| b via Prime.dvd_or_dvd), so it is 1 or 18. This is the S126 isoperimetric spread bound on the 1/19 alphabet, now machine-checked; 19 is the apex of 38=2*19 (the 3/38 comb spectrum vanishes at k==0 mod 19, S125). Translation-sensitive (right side of opus THM-1185/1220 triage).
 

@@ -9,6 +9,8 @@ scripts: 04-computation/slack_ladder_opus_S396.py -> 05-knowledge/results/slack_
 
 # THM-1235 — slack 1 is the floor for non-extremals
 
+> **PROGRESS, NOT SETTLEMENT (opus-S397), see THM-1240.** The open question below is still open. What is now proved: M = D/s lies inside (1/14, 3/41) iff 41D/3 < s < 14D, and D = 1, 2, 3 admit NO integer s -- so the interval FORCES D >= 4 (one step beyond boxeph's D >= 3 for the wider Farey interval). Also 1/14 and 3/41 are Farey NEIGHBOURS, so 4/55 is the mediant and the unique least-denominator fraction inside -- the canonical target. ~12,400 families now tested with zero hits, including a residue-band construction built specifically for 4/55. But the candidate (D,s) list is INFINITE, so settling needs a BOUND ON D, which is the named missing ingredient.
+
 ## Slack 1 cannot be beaten
 
 slack := 14D − s is an **integer**, and
