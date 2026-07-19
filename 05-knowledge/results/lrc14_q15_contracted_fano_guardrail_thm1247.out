@@ -1,0 +1,11 @@
+THM-1247 q=15 CONTRACTED FANO / BLOCKER-COMPLETE GUARDRAIL EXACT AUDIT
+sign-address points = 7; mask classes = 6; contraction = P3~P6
+labelled Fano planes = 30; multiplication-by-two invariant = 2
+common contracted negative line = C-E-C
+independent speed-chi7 colour words realized = 128
+guardrail packet = {1,2,7,8,18,19,20}
+q15 beat blockers = 12/12; carrier-spoke blockers = 6/6
+positive fast-fast sum-beat blockers = 15/15
+explicit lonely witness = t=1/12, depth=1/12
+cross-clearance tournament = scores (1, 1, 2, 3, 3, 5), triangles 3, SCC (5, 1), Hamiltonian paths 9
+RESULT: PASS
