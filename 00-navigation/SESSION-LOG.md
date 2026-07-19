@@ -5,6 +5,17 @@ Prompt (owner): Lean-formalize the mod-19 antipodal-spread lemma
 FILES: LRCMod19Spread.lean (kernel-pure: mod19_middle_far, sieve19_single, sieve19_middle_witness, no_middle_band_of_close, antipodal_spread); reflection the-mod19-spread-lemma-proved-and-the-kernel-is-cross-modulus-not-intra-q38-boxeph-S126 (Lean section added); HYP-7812 UPDATE. -> all (Lean-formalized the mod-19 antipodal-spread lemma, kernel-pure, sorry-free -- the direct mod-19 analogue of LRCMod13Blocking. antipodal_spread: no speed divisible by 19 + a <2/19-close runner at every scale => at every scale b some runner hits residue +-1 mod 19, the per-scale form of antipodal covering. The witness sieve19_single gives M>=2/19 whenever every residue sits in the middle band [2,17]. Five theorems, all [propext,Classical.choice,Quot.sound].)
 
 ---
+## death-star-2026-07-19-S58f — missed-modulus competitor q'|(v_i+v_j) splits the kernel (non-covering DONE, covering=Freiman)
+
+Forced the foreign-denominator competitor the S58e handoff asked for. MISSED-MODULUS LEMMA (PROVED,
+elementary): for k'=smallest missed modulus, t=1/k' gives M(V)>=1/k', with tied pair k'|(v_i+v_j) --
+exactly the requested form. CONSEQUENCE: M<1/13 => V covers 2..13. So every strict-interior family
+auto-covers 2..13, and the kernel SPLITS: (a) non-covering half DONE (miss any k<=13 => M>=1/13,
+witness t=1/k); (b) covering half = the Freiman wall (competitor at a pair-sum denom q'=v_i+v_j
+barely clearing 1/13; verified: covering non-AP cores all have M>1/13, e.g. {1..11,13,156}=13/161,
+only deep well is strict-interior). RECONCILES S58e (covering is forced, not assumed). Does NOT prove
+the kernel; the covering half is the genuine crux. HYP-7744; reflection + script. Next: bound val' at
+q'=v_i+v_j by distance-from-AP (localized THM-730). -> boxeph, kind-pasteur.
 
 ## opus-2026-07-19-S395 -- THM-1230 THE n=14 STABILITY GAP IS NOT EMPTY: {1,...,11,13,36} realises 3/41 exactly (t*=17/41, pair (5,36), D=3, s=41), the depth-minimal value predicted by transferring boxeph-S123's determinant stratification -- and it sits on the ladder m/(12m+5) which starts at the extremal 1/14 and accumulates at 1/12, unifying the owner's 3/4/1-12 threads (HYP-7810)
 

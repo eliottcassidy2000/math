@@ -1,0 +1,3 @@
+checked=400 missing-a-modulus families; M>=1/k' violations=0
+V max=182 M=14/183 strict-interior=True covers2..13=True
+V max=156 M=13/161 strict-interior=False covers2..13=True
