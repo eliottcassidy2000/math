@@ -1,0 +1,59 @@
+THM-1221 sharpened seven-wall strict-spectrum Hunter-floor referee
+folded-vs-tent pair checks: 7140
+analytic low-channel tail: ab>=56 implies rho>1/63
+strict-low reduced channels (7): (1,10):1/70, (1,11):1/77, (1,12):1/84, (1,13):1/91, (2,11):1/77, (3,10):1/70, (3,11):1/77
+low-or-equal reduced channels: 12 (five equality channels)
+sharp triple provider: 124*184-124=22692 exact configurations
+sharp three-speed sum: 51/1183, unique ratio triple (1,13,169)
+rho<=1/63 graph: clique number 3; reciprocal-dual triangles (1,12,27), (4,9,108); no K4
+first pair mass above 1/63: 5/308, unique reduced ratio (4,11)
+first connected-high ledger: 5/308+5/63=265/2772
+strict-low graph: triangle-free
+distinct-center common-low-neighbor histogram: 1:14, 2:72, 4:6; maximum 4
+every four-neighbor row has exactly its original two centers
+therefore a disconnected high graph on seven vertices has only a 1+6 cut
+singleton crossing capacities: 1/70:4, 1/77:6, 1/84:2, 1/91:2
+non-A mutual-edge credit: u=51/1183-2/77=223/13013 >1/63
+singleton aligned cut m=0: tree>=1284/13013; margin over 265/2772=1439/468468
+singleton aligned cut m=1: tree>=115601/1171170; margin over 265/2772=7277/2342340
+singleton aligned cut m=2: tree>=16303/167310; margin over 265/2772=1439/780780
+singleton aligned cut m=3: tree>=37547/390390; margin over 265/2772=1357/2342340
+singleton cut m=4: four 1/70 ratios force internal rho>=32/1575
+singleton aligned cut m=4: tree>=103/1050; margin over 265/2772=173/69300
+singleton strong cut m=0: tree>=1284/13013; margin over 15/154=3/2366
+singleton strong cut m=1: tree>=115601/1171170; margin over 15/154=109/83655
+singleton strong cut m=2: tree>=28411/278850; margin over 15/154=4376/975975
+singleton strong cut m=3: tree>=615257/5855850; margin over 15/154=22441/2927925
+singleton strong cut m=4: tree>=633883/5855850; margin over 15/154=31754/2927925
+all C(14,6) singleton ratio packets: 3003; ledger violations: 0
+diagnostic exact disconnected MST minimum: 18497/156156 at (Fraction(1, 13), Fraction(1, 12), Fraction(2, 11), Fraction(11, 2), Fraction(12, 1), Fraction(13, 1))
+strict-high component count <=3; both three-component shapes have at most 2+2+2 vertices
+strict-high two-component analytic cut proof:
+  1+6: strict edge floor inside closed-Q bank=1/56; tree>=5/56+1/63=53/504
+  2+5: five common neighbors force center ratio in {1/3,1/2,2,3}
+       center edge>=1/21; tree>=1/21+4*(5/308)+1/63=89/693
+  3+4: connected normalized center triples have at most three common closed-Q neighbors
+strict-high two-component global cut census:
+  1+6 valid normalized packets=131593; MST min=2228/18711
+  2+5 valid normalized packets=12; MST min=15473/103950
+  3+4 valid normalized packets=0
+connected strict-high graph: six edges >=5/308, hence tree>=15/154
+all other threshold-component branches have larger exact minima
+universal maximum-spanning-tree / Hunter safe floor: 15/154
+margin over 60/637: 45/14014
+margin over 110/1183: 115/26026
+common-dilate covered-period bound: g|I|<=139/154
+protected-needle consequence: g/max(core)<=139/22
+THM-1203 incidence budgets:
+  aligned floor minus arbitrary BAD quartet: 265/2772-2/21=1/2772
+  aligned floor minus non-AP BAD quartet: 265/2772-60/637=355/252252
+  strong floor minus arbitrary BAD quartet: 15/154-2/21=1/462
+  strong floor minus non-AP BAD quartet: 15/154-60/637=45/14014
+tournament audit (vertices=runners; low edge reversed from speed order)
+sample integer packet: (1716, 132, 143, 312, 9438, 20592, 22308)
+score histogram: (1, 2, 3, 3, 3, 4, 5); directed triangles: 9
+SCC sizes: (7,); strict-low edge flips: 6
+tie Hamiltonian path: (4, 5, 6, 0, 1, 2, 3); Hamiltonian-path count: 51
+preserved: strict-spectrum cut, high connectivity, and global Hunter credit
+destroyed: interval phase, gcd positioning error, tooth ownership, and BAD quartet mass
+source_sha256=71b3389f46fc0844c0048f116428469f269b027d2dafaece3b3e2266b669cfa1
