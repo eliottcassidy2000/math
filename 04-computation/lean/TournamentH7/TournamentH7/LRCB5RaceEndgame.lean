@@ -74,8 +74,8 @@ def DenseCoreB5RaceTailSupply : Prop :=
       (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12) →
     (∀ g : ℤ, 2 ≤ g →
       nonMultCard v g ≠ 2 ∧ nonMultCard v g ≠ 3) →
-    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i ⇒ |v (σ i)|) ∧
-      ChainDenseCore (fun i ⇒ |v (σ i)|)) →
+    (∃ σ : Equiv.Perm (Fin 13), Monotone (fun i ↦ |v (σ i)|) ∧
+      ChainDenseCore (fun i ↦ |v (σ i)|)) →
     Nonempty (B5RaceTailCertificate v)
 
 /-- The explicit race-tail supplier discharges the bare positive-B5 supplier
