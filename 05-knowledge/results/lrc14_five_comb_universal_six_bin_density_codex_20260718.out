@@ -1,0 +1,72 @@
+THM-1198 universal five-comb six-bin dual density
+density heights: 3/4 13/12 7/6 7/6 13/12 3/4
+density mass: 1
+interior TV: 5/6
+zero-extension TV: 7/3
+centered primitive sup: 3/49
+tail coefficient ||H||inf*TV: 1/7
+
+compact model: 6/7 <= L <= 3, y=1/L, z=phi/L, 0<=z<=y
+relevant tooth centers: (0, 1, 2, 3, 4)
+arrangement lines: 74
+raw line pairs: 2701
+feasible distinct vertices: 101
+independent direct/layer evaluations matched at every vertex: YES
+compact exact maximum: 7/36
+maximizing vertices (y,z): (7/6,7/12) (7/6,3/4)
+equality boundary: L=6/7 and phi in [1/2,9/14]
+largest nonmaximal arrangement-vertex value: 55/288
+top distinct compact vertex loads:
+  7/36
+  55/288
+  3/16
+  13/72
+  5/28
+  8/45
+  11/63
+  1/6
+  35/216
+  23/144
+
+exact phase-free compact envelope P(L)=a/L+b:
+  L_left L_right a b
+  6/7 68/63 1/6 0
+  68/63 8/7 -9/14 3/4
+  8/7 6/5 3/14 0
+  6/5 48/35 -5/42 5/18
+  48/35 3/2 11/42 0
+  3/2 12/7 -1/14 2/9
+  12/7 2 13/42 0
+  2 244/119 19/84 1/24
+  244/119 15/7 -103/84 3/4
+  15/7 12/5 8/21 0
+  12/5 18/7 -2/7 5/18
+  18/7 3 3/7 0
+envelope affine phase segments: 175
+envelope pieces: 12
+
+analytic tail: A(L,phi) <= 1/7 + 1/(7L)
+tail at L=3: 4/21
+global exact supremum: 7/36
+one-comb margin below 1/5: 1/180
+five-comb total upper bound: 35/36
+five-comb uncovered dual mass: 1/36
+five-comb normalized Lebesgue survivor: 1/42
+five-comb physical c-gap survivor factor: 1/49 / c
+
+six-comb corollary: a covered c-slow gap forces d1 < 13c/6
+six-comb private region floor: 1/49 / c each
+six-comb total private length floor: 6/49 / c
+six-comb weighted overlap-surplus ceiling: 1/6
+six-comb normalized multiply-covered length ceiling: 2/9
+six-comb normalized unique-provider length floor: 7/9
+six-comb physical unique-provider length factor: 2/3 / c
+six-comb functional drift: sum_i Pbar(6d_i/(7c)) >= 1
+  Pbar=P on [6/7,3], Pbar(L)=1/7+1/(7L) for L>3
+Tournament Analysis: not applicable to the proof inequality.
+  pairwise observable: none (one-comb operator norm)
+  faithful vertices: endpoint/bin crossing events
+  challenged assumption: runner vertices erase phase and overlap length
+  derived carrier: six private needles, ordered by dual mass then chronology
+  fingerprint: transitive scores 0..5, no cycles, singleton SCCs, one path
+ALL EXACT CHECKS PASSED
