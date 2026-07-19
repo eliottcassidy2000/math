@@ -1,0 +1,26 @@
+THM-1267 CENTERED-SURVIVOR PROTRUSION EXACT REFEREE
+optimization_safe_require_probe=PASS
+geometry_census_rows=371752 protruding_rows=118542 largest_ell=145/252
+geometry_identity=center_shift=epsilon/d; tail=max(0,(rho+3/7)/d-3/(7c))
+normalized_tail=ell=max(0,1/2+7rho/6-d/(2c))
+geometry_positive_control=(c,d,k,p)=(1,2,0,1_or_2) ell=1/12 mirror_tails=PASS
+six_bin_heights=3/4,13/12,7/6,7/6,13/12,3/4 integral=1
+endpoint_quantiles=mass_1/36:length_1/27;mass_11/360:length_11/270
+envelope_piece_maxima=7/36,3/16,3/16,55/288,55/288,13/72,13/72,13/84,8/45,8/45,1/6,1/6
+restricted_threshold=140/161=20/23 separated_supremum=161/840=23/120 open_not_attained
+open_supremum_approach_gaps=529/242760,529/2402760,529/24002760
+bv_tail_maximum=4/21 separated_cap_gap=1/840
+five_load_cap=349/360 survivor_mass_gt=11/360 endpoint_tail_gt=11/270
+basic_chain=ell>1/27 rho>(27d/c-25)/63 d/c<113/54
+strong_chain=ell>11/270 rho>(135d/c-124)/315 d/c<563/270
+integer_consequence=270d1<=563c-1
+TOURNAMENT_LOSS_AUDIT
+vertices=five noncarrier load obligations d2,d3,d4,d5,d6
+observable=normalized-slope comparison; gauge=increasing speed
+score_histogram=0,1,2,3,4 directed_3_cycles=0 scc_sizes=1,1,1,1,1
+hamiltonian_path_count=1 tie_hamiltonian_path=d2,d3,d4,d5,d6
+preserves=rank and the unique top load receiving THM-1241 separation
+destroys=phase, endpoint orientation, survivor position, and load size
+proof_carrier=one endpoint tail plus five weighted-load obligations
+SCOPE=exact referee for providers and arithmetic; not a finite six-cover reduction
+RESULT=PASS
