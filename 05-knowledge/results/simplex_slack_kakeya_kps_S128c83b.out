@@ -1,0 +1,85 @@
+==============================================================================
+(A) SLACK IDENTITY  f1+f2+f3+f4 = 1/7
+==============================================================================
+  violations on the ordered 12^3 lattice : 0   -> identity HOLDS
+
+==============================================================================
+(B) B IS SIX SIMPLICES ;  |B| = (1/7)^3 = 1/343
+==============================================================================
+  vertex g = (1/7, 3/7, 5/7)   ordered=True  f4 consistent=True
+  vertex g = (2/7, 3/7, 5/7)   ordered=True  f4 consistent=True
+  vertex g = (2/7, 4/7, 5/7)   ordered=True  f4 consistent=True
+  vertex g = (2/7, 4/7, 6/7)   ordered=True  f4 consistent=True
+  all four vertices inside their ordering region : True
+|B| = (1/7)^3 = 1/343, exactly.  Gap coordinates turn each piece into a cube corner.
+
+In the ordering region g_{s0}<=g_{s1}<=g_{s2} put the GAP coordinates
+    x = g_{s0},   y = g_{s1}-g_{s0},   z = g_{s2}-g_{s1} .
+This map is unimodular (triangular, unit diagonal), so it preserves volume.
+The four constraints read
+    x <= 2/7,  y <= 2/7,  z <= 2/7,  x+y+z >= 5/7,     x,y,z >= 0.
+Now set u = 2/7-x, v = 2/7-y, w = 2/7-z >= 0.  Then
+    x+y+z >= 5/7  <=>  6/7 - (u+v+w) >= 5/7  <=>  u+v+w <= 1/7,
+and u,v,w <= 2/7 is then automatic since 1/7 < 2/7.  So each piece is the
+SIMPLEX {u,v,w >= 0, u+v+w <= 1/7}, of volume (1/7)^3/6.
+
+Two boundary checks, both strict, so there is no clipping or wraparound:
+    x = 2/7 - u >= 2/7 - 1/7 = 1/7 > 0,
+    g_{s2} = x+y+z <= 6/7 < 1.
+Six ordering regions => |B| = 6 * (1/7)^3/6 = (1/7)^3 = 1/343.
+
+  => each piece = 3-simplex of volume (1/7)^3/6 = 1/2058
+  => |B| = 6 * that = 1/343 = 0.0029155
+     Kronecker   200000 pts : 0.0029250   (exact 0.0029155, rel err +0.33%)
+     Kronecker  1000000 pts : 0.0029170   (exact 0.0029155, rel err +0.05%)
+     Kronecker  4000000 pts : 0.0029135   (exact 0.0029155, rel err -0.07%)
+  incentre: all four slacks equal 1/28 at g = (1/4,1/2,3/4): [Fraction(1, 28), Fraction(1, 28), Fraction(1, 28), Fraction(1, 28)]
+
+==============================================================================
+(C)+(D) run <= (1/7)/d_top  ;  and  W(d) = SUM_i N_i/d_i  <=  2/3 ?
+==============================================================================
+  primitive directions tested (1..24)^3 : 11557
+  (C) cell-runs violating run <= (1/7)/d_top : 0  -> BOUND HOLDS
+  (D) MAX W(d) = 1003/420 = 2.388095 at (1, 20, 21)   (2/3 = 0.666667)  -> W<=2/3 BROKEN
+      directions attaining max W : 6 ; all (1,2,3)-orbit : False
+      non-orbit maximisers (first 10): [(1, 20, 21), (1, 21, 20), (20, 1, 21), (20, 21, 1), (21, 1, 20), (21, 20, 1)]
+  MAX sojourn = 2/21 = 0.0952381 at (1, 2, 3)  (2/21 = 0.0952381)
+    1-pair (<=2 runs)      max sojourn 2/21 = 0.095238 at (1, 2, 3) ; W = 4/3 = 1.3333 ; (1/7)W = 0.190476
+    >=2-pairs (>=4 runs)   max sojourn 4/105 = 0.038095 at (1, 9, 10) ; W = 59/45 = 1.3111 ; (1/7)W = 0.187302
+
+==============================================================================
+(E) THE FIX: charge each MERGED run to the top rate of its LAST cell
+==============================================================================
+  merged runs violating run <= (1/7)/d_exit : 0  -> HOLDS
+  directions violating sojourn <= (1/7)*W'  : 0  -> HOLDS
+  MAX W'(d) = 1003/420 = 2.388095 at (1, 20, 21)   (2/3 = 0.666667)  -> W'<=2/3 BROKEN
+      attaining : 6 ; all (1,2,3)-orbit : False
+      non-orbit maximisers (first 10): [(1, 20, 21), (1, 21, 20), (20, 1, 21), (20, 21, 1), (21, 1, 20), (21, 20, 1)]
+  MAX W' over >=2-mirror-pair directions = 1003/420 = 2.388095 at (1, 20, 21)
+
+==============================================================================
+(F) MIRROR-CHARGED:  run <= (1/7)/max(d_exit(r), d_exit(r*))
+==============================================================================
+  merged runs whose mirror is not itself a merged run : 0  -> mirror symmetry OK
+  runs violating run <= (1/7)/max(d_exit,d_exit*) : 0  -> HOLDS
+  directions violating sojourn <= (1/7)*W''       : 0  -> HOLDS
+  MAX W''(d) = 2/3 = 0.666667 at (1, 2, 3)   (2/3 = 0.666667)  -> W''<=2/3 HOLDS
+      attaining : 72 ; all (1,2,3)-orbit : False
+      non-orbit maximisers (first 10): [(1, 3, 6), (1, 3, 10), (1, 3, 13), (1, 3, 14), (1, 3, 17), (1, 3, 18), (1, 3, 20), (1, 3, 21), (1, 3, 22), (1, 3, 23)]
+  MAX W'' over >=2-mirror-pair directions = 4/7 = 0.571429 at (1, 6, 7)
+
+==============================================================================
+(G) WHY W'' <= 2/3 ?  test  rho >= 3P  (P = # mirror pairs)
+==============================================================================
+  P  |  min rho observed  |  witness           |  3P  |  rho>=3P
+  1  |  3                |  (1, 2, 3)         |  3   |  yes
+  2  |  6                |  (5, 6, 23)        |  6   |  yes
+  3  |  14               |  (1, 13, 14)       |  9   |  yes
+  4  |  17               |  (1, 16, 17)       |  12  |  yes
+  5  |  21               |  (1, 20, 21)       |  15  |  yes
+  directions violating rho >= 3P : 0 
+  NOTE rho >= 3P  =>  sum over pairs of 1/rho <= P/(3P) = 1/3  =>  W'' <= 2/3.
+
+  IMPLICATION: sojourn <= (1/7)*W'' always (C+F).  If W'' <= 2/3 is a theorem,
+  then sojourn <= 2/21 for EVERY direction -- no split on mirror pairs, so
+  death-star's >=2-pair residue closes too.

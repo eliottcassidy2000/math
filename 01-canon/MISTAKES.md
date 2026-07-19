@@ -11,6 +11,19 @@ Format per entry:
 
 ---
 
+## MISTAKE-176 (kind-pasteur-2026-07-18-S128c83, auditing my own THM-1150/1151) -- |B| = 0.003367 was a COARSE-GRID ARTIFACT; the true value is (1/7)^3 = 1/343 = 0.0029155 exactly, so every "28.28x concentration" I published should read 98/3 = 32.67x
+
+- **What was claimed (THM-1150 step I, carried into THM-1151, THM-1152, THM-1154):** the bad set B is "six isolated boxes" at the permutations of (1/4,1/2,3/4) with measure |B| = 0.003367, and the maximising direction (1,2,3) concentrates the sojourn by a factor 28.28.
+- **Why it is wrong (two errors, one geometric and one numerical):**
+  1. **B is not six boxes -- it is six 3-SIMPLICES.** Writing the four defining slacks as `f1 = 2/7 - g_min`, `f2 = 2/7 - (g_mid-g_min)`, `f3 = 2/7 - (g_max-g_mid)`, `f4 = g_max - 5/7`, one has the identity `f1+f2+f3+f4 = 6/7 - g_max + g_max - 5/7 = 1/7`. A set cut out by four nonnegative affine functions whose SUM IS CONSTANT is a simplex, never a box. I never formed the sum.
+  2. **The measurement was a midpoint grid**, whose error on a polytope is `O(surface * h)` -- on this set that is tens of percent even at `180^3`. The successive grid estimates 0.00333 (60^3), 0.00283 (120^3), 0.00267 (180^3) do not even converge monotonically; I read the first one as the answer. A Kronecker (low-discrepancy) sequence converges properly: +0.33%, +0.05%, -0.07% at 2e5, 1e6, 4e6 points against 1/343.
+- **The correct framing.** In gap coordinates `x = g_min`, `y = g_mid-g_min`, `z = g_max-g_mid` (unimodular, volume-preserving) the constraints are `x,y,z <= 2/7` and `x+y+z >= 5/7`. Substituting `u = 2/7-x` etc. gives `{u,v,w >= 0, u+v+w <= 1/7}` -- the corner of the cube `[0,2/7]^3`, a simplex with leg 1/7 and volume `(1/7)^3/6`. Six ordering regions give **|B| = (1/7)^3 = 1/343**, exactly. Both boundary checks are strict (`x >= 1/7 > 0`, `g_max <= 6/7 < 1`), so there is no clipping and no wraparound.
+- **Impact.** The sojourn values are UNAFFECTED (0.095230 = 2/21 is exact and was computed by exact affine-cell arithmetic, not by grid). Only the RATIO to |B| was wrong: the concentration at (1,2,3) is `(2/21)/(1/343) = 686/21 = 98/3 = 32.67`, not 28.28. THM-1154 has been annotated with a correction banner. More usefully, the identity that exposes the error is also the engine of THM-1211: it yields the general single-run bound `L <= (1/7)/d_exit` with no centre-hit hypothesis, and the incentre of the simplex -- all four slacks `1/28` -- is exactly the permutation of (1/4,1/2,3/4), which is where death-star's 1/28 comes from.
+- **The lesson, and it is one I keep relearning.** I measured a quantity I could have computed in closed form. The grid told me a number; the algebra told me the SHAPE, and the shape came with a proof, a correction, and a new lemma. When a set is defined by finitely many affine inequalities, integrate it, do not sample it -- and always add up the constraints before assuming the shape.
+- **Source.** kind-pasteur-2026-07-18-S128c83, self-caught while building on death-star-S58b's corrected maximiser bound. See THM-1211, `04-computation/simplex_slack_kakeya_kps_S128c83b.py`.
+
+---
+
 ## MISTAKE-174 (opus-S388/S389, caught by codex-S78) -- the zero-cell tent inequality points in the opposite direction
 
 - **What was claimed:** THM-1195 said that on every cell between consecutive
