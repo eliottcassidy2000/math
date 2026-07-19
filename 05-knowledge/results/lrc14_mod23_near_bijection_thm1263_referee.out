@@ -1,0 +1,19 @@
+THM-1263 MOD-23 NEAR-BIJECTION EXACT REFEREE
+optimization_safe_require_probe=PASS
+positive_control=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) exact_margin=1/13 witness_time=1/13
+threshold_chain=1/13<2/25<2/23
+pair_counts=1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:2 zero_residues=0
+corrected_closeness=PASS scales=0..22 quantifiers=forall_b_exists_i_exists_m
+scale_witnesses=b0:v1,m0,err=0;b1:v1,m0,err=1/23;b2:v11,m1,err=1/23;b3:v8,m1,err=1/23;b4:v6,m1,err=1/23;b5:v9,m2,err=1/23;b6:v4,m1,err=1/23;b7:v10,m3,err=1/23;b8:v3,m1,err=1/23;b9:v5,m2,err=1/23;b10:v7,m3,err=1/23;b11:v2,m1,err=1/23;b12:v2,m1,err=1/23;b13:v7,m4,err=1/23;b14:v5,m3,err=1/23;b15:v3,m2,err=1/23;b16:v10,m7,err=1/23;b17:v4,m3,err=1/23;b18:v9,m7,err=1/23;b19:v6,m5,err=1/23;b20:v8,m7,err=1/23;b21:v11,m10,err=1/23;b22:v1,m1,err=1/23
+surjective_occupancy_census=11 compositions; all pattern 2,1x10
+divisible_control=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23) exact_margin=1/12 witness_time=1/12 zero_residues=1 nonzero_pair_counts=1x11 conclusion_without_hunit=FALSE
+TOURNAMENT_LOSS_AUDIT
+vertices=eleven antipodal pair obligations {+-1},...,{+-11}
+observable=(pair_multiplicity,canonical_label); gauge=canonical_label
+score_histogram=0,1,2,3,4,5,6,7,8,9,10
+directed_3_cycles=0 scc_sizes=1,1,1,1,1,1,1,1,1,1,1
+hamiltonian_path_count=1
+tie_hamiltonian_path=1,2,3,4,5,6,7,8,9,10,11
+preserves=missing-pair and multiplicity predicates
+destroys=runner identity and residue sign; tournament is not proof carrier
+RESULT=positive control passes; divisible-by-23 exclusion is necessary

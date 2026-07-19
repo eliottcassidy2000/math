@@ -246,7 +246,11 @@ descent, not substitutes for it.
 The `n=12` sporadic branch remains separate.  THM-1249 and THM-1258 close the
 AP-centred common-scale-35 and common-scale-36 Hamming-six faces; scale 37 is
 prime-excluded and scale 38 is next.  The independent single-far absorption
-atlas also proves the whole `N=12` first-gap single-far stratum empty.  The
+atlas also proves the whole `N=12` first-gap single-far stratum empty.
+THM-1263 proves that any survivor below `2/23` either contains a speed
+divisible by 23 or has a near-bijection on the eleven nonzero antipodal
+residue pairs, with one and only one doubled pair.  The divisible branch is
+real, so the gain is a sharp cross-modulus fork rather than its elimination.  The
 remaining smooth H5/H6 banks, multi-defect/Freiman packets, and deep
 reverse-content component cover remain.  No
 coherent-word theorem above supplies AP extraction or arbitrary-height

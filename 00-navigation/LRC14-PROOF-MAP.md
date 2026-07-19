@@ -12,6 +12,12 @@
 > the newly landed single-far absorption atlas proves that the entire `N=12`
 > first-gap single-far stratum is empty with cutoff at most `44`.  Uniform
 > sporadic emptiness still requires the multi-defect/Freiman branch.
+> THM-1263 adds a sharp residue fork: below `2/23`, twelve speeds avoiding
+> zero modulo 23 hit all eleven nonzero antipodal pairs, with exactly one
+> doubled pair.  If a speed is divisible by 23 the conclusion is genuinely
+> false, as the exact `{1,...,11,23}` control shows.  The next finite target
+> is cross-modulus compatibility conditional on this honest fork, not an
+> unconditional mod-23 near-bijection.
 >
 > THM-1259 and THM-1261 extend the exact slow-gap BV terminal base through
 > carrier `44`.  Carrier `44` is the first warning rung: phases `k=6,7` need
