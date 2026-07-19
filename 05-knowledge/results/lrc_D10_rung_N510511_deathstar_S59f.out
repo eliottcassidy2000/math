@@ -1,0 +1,36 @@
+== HYP-7915: D=10 at N=510511 + D=9 at N=60061/90091 (death-star-S59f) ==
+
+GATE re-validation:
+   142 table rows: 0 mismatches; big members reproduced: True (14s)
+
+-- F_9(60061) = {1..60061}\{60060} u {540540}: p=17, Q=540557 --
+   window (1/60062, 2/120123), width 1.386e-10; N mod p = 0; gcd(p,Q) = 1
+   tower closure verified: every lower rung D'=3..8 has gcd(2D'-1, Q_D') > 1 (dead)
+   L1 witness a = 31798: min distance = 9 (want 9) [0s] -> M >= 9/540557
+   EXACT (ghost, proof-backed): M = 9/540557 at q=540557 [2s]
+   rung 9/540557: ATTAINED; in-window: True
+   => PREDICTION CONFIRMED
+
+-- F_9(90091) = {1..90091}\{90090} u {810810}: p=17, Q=810827 --
+   window (1/90092, 2/180183), width 6.160e-11; N mod p = 8; gcd(p,Q) = 1
+   tower closure verified: every lower rung D'=3..8 has gcd(2D'-1, Q_D') > 1 (dead)
+   L1 witness a = 572349: min distance = 9 (want 9) [0s] -> M >= 9/810827
+   EXACT (ghost, proof-backed): M = 9/810827 at q=810827 [3s]
+   rung 9/810827: ATTAINED; in-window: True
+   => PREDICTION CONFIRMED
+
+-- F_10(510511) = {1..510511}\{510510} u {5105100}: p=19, Q=5105119 --
+   window (1/510512, 2/1021023), width 1.918e-12; N mod p = 0; gcd(p,Q) = 1
+   tower closure verified: every lower rung D'=3..9 has gcd(2D'-1, Q_D') > 1 (dead)
+   L1 witness a = 268691: min distance = 10 (want 10) [0s] -> M >= 10/5105119
+   EXACT (ghost, proof-backed): M = 10/5105119 at q=5105119 [19s]
+   rung 10/5105119: ATTAINED; in-window: True
+   => PREDICTION CONFIRMED
+
+== SUMMARY ==
+   F_9(60061): M = 9/540557 -- CONFIRMED
+   F_9(90091): M = 9/810827 -- CONFIRMED
+   F_10(510511): M = 10/5105119 -- CONFIRMED
+   All three predictions CONFIRMED -- out-of-sample hits #5, #6, #7;
+   the D=9 gate is confirmed OFF the primorial diagonal (60061, 90091),
+   and the tower reaches primorial 510510 in a pico-width window.

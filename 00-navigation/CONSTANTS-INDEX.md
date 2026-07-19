@@ -70,3 +70,7 @@ strike through with the correction pointer.
 - 9/270287 — M(F_9(30031)) = M({1..30029,30031,270270}), witness 31799/270287 — THM-1270 (out-of-sample #4; window 5.5e-10)
 - 1/212 — M(F_5(211)) degrade-to-floor (composite binder 9); a tight family at N=211 — THM-1257
 - 10/5105119 — PREDICTED M(F_10(510511)) (binder 19; next rung, unrun) — THM-1270 lead
+- 9/540557 — M(F_9(60061)), D=9 second opening (off-diagonal), witness 31798/540557 — THM-1276
+- 9/810827 — M(F_9(90091)), D=9 third opening, witness 572349/810827 — THM-1276
+- 10/5105119 — M(F_10(510511)) = M({1..510509,510511,5105100}), witness 268691/5105119, pico-window — THM-1276 (out-of-sample #7)
+- 12/116396303 — PREDICTED M(F_12(9699691)) (binder 23; next rung, unrun, hour-scale) — THM-1276 lead

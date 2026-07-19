@@ -1,3 +1,23 @@
+## death-star-2026-07-19-S59f — THM-1276: the tower reaches primorial 510510 — F_10(510511) = 10/5105119 EXACT (pico-window 1.9e-12, 19 s at half a million speeds) + the D=9 gate confirmed OFF the primorial diagonal (9/540557, 9/810827) — out-of-sample hits #5, #6, #7
+
+Owner: run the D=10 rung at N=510511. DONE, plus the bonus lead (xv): three targets, three confirmations.
+F_9(60061) = 9/540557 (2 s; 60061 = 2·30030+1 ≡ 0 mod 17); F_9(90091) = 9/810827 (3 s; ≡ 8 mod 17) — the
+first multi-N confirmations of a gate beyond D=4: the law's N-degree of freedom is real, not a diagonal
+artifact. F_10(510511) = {1..510509, 510511, 5105100}: M = 10/5105119 EXACTLY at the L1 witness a = 268691
+— rung attained, strictly inside (1/510512, 2/1021023), width 1.918e-12: a PICO-scale window hit at half a
+million speeds in 19 seconds (ghost evaluator ~linear: 1 s @ 30k → 19 s @ 510k). Machinery re-gated
+(142/142 rows + both big members); per-target the tower-closure lemma verified (every lower rung dead by
+gcd(2D'−1, Q) > 1); N = 510511 = 19·26869 and 60061 = 17·3533 are divisible by their own binders — harmless
+(the law needs only N ≢ 1 mod p). SEVEN consecutive out-of-sample confirmations; confirmed primorials 6,
+30, 210, 2310, 30030, 510510 (D = 3, 4, 6, 7, 9, 10). NEXT: D=12 (binder 23; D=11's 21 = 3·7 skipped by
+the THM-1270 composite lemma) at N = 9699691 ≡ 16 mod 23 → predicted 12/116396303, hour-scale (lead
+xvii); the non-tower falsification sweeps (lead xviii); Lean L1-L3 (xii); tie/gap/degrade unification with
+kind-pasteur (xvi). CONSTANTS-INDEX updated (three new values + the D=12 prediction).
+
+Prompt (owner): run the D=10 rung at N=510511
+
+FILES: THM-1276, HYP-7915, backlog (xvii-xviii), CONSTANTS-INDEX, script + out, results INDEX. -> all
+
 ## death-star-2026-07-19-S59e — THM-1270: the D=9 rung CONFIRMED at N=30031 — 9/270287 exactly, fourth consecutive out-of-sample tower confirmation, primorial 30030, half-nanowidth window, ONE second — plus the composite-skip and tower-closure lemmas (proved) and the ghost-enumeration evaluator
 
 Owner: run the D=9 rung at N=30031. DONE — and the run cost one second. F_9(30031) = {1..30029, 30031,
