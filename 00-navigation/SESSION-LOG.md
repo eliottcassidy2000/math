@@ -1,3 +1,35 @@
+## death-star-2026-07-19-S59c — THM-1257: the D-graded gate tower is a PRIMORIAL CASCADE — full D=4 gate extracted and confirmed {N≡1 mod 30, N≢1 mod 7}; N=61 predicted-then-found (4/247); N=91 new (4/367); D=6 opens at N=211 (6/1271); D=5 (binder 9=3²) never opens
+
+Owner: extract the full D=4 gate and test N=61. BOTH DONE, with two out-of-sample confirmations and a new law.
+INSTANT HEADLINE: F_4(61) = {1..59,61,240}: M = 4/247 EXACTLY (t=70/247, pair (7,240)) — the stub's
+prediction confirmed within minutes of claiming. THE GATE TABLE (exact, D=3..6 × N=8..100 + N=211 probes;
+member witnesses independently residue-checked): F_D(N) = {1..N}\{N−1} ∪ {D(N−1)} attains the slack-1
+rung D/((N+1)D−1) ⟺ N ≡ 1 mod L_D AND N ≢ 1 mod (2D−1), with 2D−1 PRIME and L_D = 2·∏{odd primes <
+2D−1}: L_3 = 6 (= HYP-4516's mod-30 gate at D=3, verification extended 37 → 100, exact match), L_4 = 30
+(members exactly {31, 61, 91}: 4/127, 4/247, 4/367 — N=91 NEW), L_6 = 210 (opens at N=211: M(F_6(211)) =
+6/1271 exactly, t=115/1271, pair (11,1260) — an in-window hit in a width-1.1e-5 window, the SECOND
+out-of-sample confirmation). D=5 (binder 9 = 3² COMPOSITE): never attains; F_5(211) DEGRADES TO THE FLOOR
+1/212 — the F(31) degrade phenomenon recurs, incidentally exhibiting a new tight family at N=211.
+CASCADE IDENTITY: the level-D rung-killer N ≡ 1 mod (2D−1) is the next level's enabler factor — L_next =
+L_D·(2D−1) — so populated first gaps ride the PRIMORIAL progressions, and attained order k = D−1 is
+UNBOUNDED cross-N (k=5 at N=211): no uniform cross-N order bound exists; O-korder is intrinsically
+N-specific. BRANCH MECHANISM at D=4 (derived, sealed by the sweep): b=2 dies ⟺ N ODD (deleted-slot
+absorption — the dist-1 slot lands on u=N at odd N and on the DELETED u=N−1 at even N; explains N=16 and
+corrects THM-1256's "parity kills b=2 for free"); b=3 AND b=6 both die ⟺ N ≡ 1 mod 3 (3|4N−1, 3|2N+1 —
+double duty); b=5 dies ⟺ N ≡ 1 mod 5 (the see-saw); rung b=7 alive ⟺ 7∤4N+3. Intersection = the gate.
+N=61 SINGLE-FAR STRATUM COMPLETELY CLASSIFIED (absorption + sweep-first per-instance certificates, all 61
+bases, no open-LRC citation): UNIQUE member (i=60, x=240) = 4/247; tightest base = the canonical defect
+(ℓ(B_60) = 0.000066, X0 = 495, range covered x=240 with margin). Census at N=61 (non-A species) budgeted.
+TYPED SCOPE: gate law VERIFIED-EXACT on its range + mechanism-derived, NOT proof-complete (branch lemmas
++ all-other-moduli seal = the Lean target, lead filed); D=7 rung at N=2311 (predicted 7/16183) needs a
+pruned evaluator (lead filed). For the live walls: at N=13 the D=4 gate is CLOSED (13 ≢ 1 mod 5 keeps the
+b=5 competitor alive at Q'=53), so opus's 4/55 needs a non-canonical realizer or none — unchanged.
+
+Prompt (owner): extract the full D=4 gate and test N=61
+
+FILES: THM-1257, THM-1256 update banner, HYP-7900 (full), backlog (leads viii/ix/x), 2 scripts + 3 outs,
+results INDEX. -> all
+
 ## death-star-2026-07-19-S59b — THM-1256: the N=31 test REFUTES my own band law, and the refutation is a discovery — {1..29,31,120} = 4/127 populates W_31 (the D=4 slack-1 rung); single-far classified N=14..31; the mod-30 gate is the D=3 slice of a D-graded gate family
 
 Owner: test the N=31 prediction. Done, same day as the conjecture — and it FELL, to its own instrument.

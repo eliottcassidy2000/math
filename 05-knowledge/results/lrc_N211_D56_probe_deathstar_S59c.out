@@ -1,0 +1,4 @@
+== N=211 deep probe: D=6 (binder 11) predicted OPEN; D=5 (binder 9=3^2) predicted CLOSED ==
+window (1/212, 2/423) width 1.12e-05
+D=6: F_6(211) = {1..209,211,1260}: M = 6/1271 (q=1271, a=115) [4s]  rung 6/1271: ATTAINED; in-window: True  [predicted OPEN -> 6/1271]
+D=5: F_5(211) = {1..209,211,1050}: M = 1/212 (q=212, a=1) [4s]  rung 5/1059: no; in-window: False  [predicted CLOSED (composite binder)]

@@ -85,6 +85,16 @@ at once.) The see-saw is necessary-not-sufficient: N = 16 ≡ 1 (mod 15) has NO 
 form from the P2 data, and testing its predicted next opening (N = 61?), are the named
 follow-ups.
 
+> **UPDATE (S59c, same day): both follow-ups DONE — see THM-1257.** The full gate is
+> `{N ≡ 1 (mod 30), N ≢ 1 (mod 7)}`; members in [8,100] exactly {31, 61, 91}; N=61
+> predicted-then-confirmed (4/247, t = 70/247), N=91 new (4/367). One correction to
+> the parenthetical above: the b=2 kill is NOT free parity of Q′ (clearance 4 is
+> even, so the congruence is solvable) — it is the deleted-slot mechanism, which
+> kills b=2 exactly when N is ODD (at even N the vacated u = N−1 revives the branch;
+> that is what admits N=16's looseness). The tower is a primorial cascade
+> (`L_next = L_D·(2D−1)`): D=6 opens at N=211 (6/1271, in a width-10⁻⁵ window) and
+> D=5 (composite binder 9) never opens — F_5(211) degrades to the floor 1/212.
+
 ## 4. What this feeds
 
 - **opus THM-1240/HYP-7840 (the N=13 wall):** the D=4 slack-1 rung IS `4/55` at N=13 —
