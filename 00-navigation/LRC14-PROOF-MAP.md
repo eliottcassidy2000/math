@@ -1,18 +1,128 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-18 S80 `q=14` BEAT-PUNCTURE STALK
+>
+> THM-1215 closes an all-scale mixed-gcd subcone of the six-on-one-slow-gap
+> branch.  If `q=b6-b5=14d`, `q>=7a`, and all five earlier fast speeds have
+> gcd `d` with `q`, then all six fast danger masks are the same singleton
+> `{0}` on the reduced fourteen-clock.  Every slow-gap beat block contains
+> six consecutive numerators, so one is outside that mask and gives a literal
+> lonely point.  The independent THM-1192 count form is the impossible law
+> `N<=5ceil(N/14)` for `N>=6`.  The useful carrier is the reduced residue clock
+> plus the consecutive-block phase; the transitive speed tournament erases
+> both.  This is a genuine uniform stalk closure, not the general slow-gap
+> theorem or global LRC(14).
+
+> ## 2026-07-18 S77 CONTINUUM FOUR-COMB CEILING
+>
+> THM-1210 proves the sharp uniform continuum bound
+> `mu{u:maxgap({0,d2u,d3u,d4u})<=2/7}<=2/21`.  BAD forces every
+> pair difference into the symmetric three-band set
+> `[1/7,2/7] union [3/7,4/7] union [5/7,6/7]`.  Delete the four integer
+> frequencies to a non-arithmetic triple with gaps `p!=q`; its three edge
+> obligations are the additive circuit `(p,q,p+q)`.  The corresponding
+> two-torus region is six right triangles of total area `3/49`.  After the
+> shear `z=x+y`, its sections are empty off the three bands and have at most
+> two components, so shifted-grid discrepancy closes every reduced
+> `p+q>=26`.  Two exact evaluators close the remaining 99 coprime pairs,
+> with unique reduced maximum `J(1,2)=2/21`; the four deletion obligations
+> then classify equality exactly as a four-term arithmetic progression.
+>
+> This replaces the invalid exact-balance and centre-standoff maximizer
+> sketches.  In particular `(1,6,7)` hits the balanced centre at `u=3/4`
+> and has positive BAD measure `5/147`, despite being nonproportional.  The
+> theorem is computer-assisted only in its small finite core; a Lean
+> certificate isolates that boundary.  It closes the continuum inequality,
+> not the finite-to-continuum/eroded-start passage.  Clustered `r=5` is
+> already closed independently by THM-1214.  It also discharges the ceiling
+> target left open by THM-1174/1183, although THM-1183's stronger three-path
+> majorant inequality is not needed and remains a separate statement.
+
+> ## 2026-07-18 S79 FOUR-TORSION CORRECTION
+>
+> THM-1211 refutes the superseded six-box claim that a three-frequency torus
+> geodesic hits a balanced centre only on the proportional `(1,2,3)` ray.
+> For primitive direction `e` and a permutation `r` of `(1,2,3)`, the exact
+> criterion is `e=+/-r (mod 4)`.  In particular every `(1,2,4m+3)` passes
+> through `(1/4,1/2,3/4)` at `u=3/4`, so the proposed positive standoff for
+> nonproportional directions is impossible.  The six-box visualization may
+> remain useful, but incidence must be replaced by contact order or sojourn
+> length.  This correction does not reopen clustered `r=5`, which THM-1214
+> closes independently.  THM-1210 subsequently proves the all-offset `2/21`
+> continuum bad-measure ceiling by a different additive-triangle quotient.
+
+> ## 2026-07-18 S78 UNIFORM CLUSTERED `r=5` CLOSURE
+>
+> THM-1214 closes the entire eight-core/five-killer clustered stratum.  For
+> `P={p1<...<p8} subset {1,...,12}` and five killers above `13p8`, split by
+> the number `rho` of killers divisible by `13`.  A carrier-safe boundary
+> feeds twelve translated multiplier charts.  The eight core speeds forbid
+> exactly `d` distinct owner charts and the noncarriers forbid at most
+> `2(5-rho)`, so the exact five-killer budget is `d<2rho+2`.
+>
+> The cardinality dispatch is complete.  `rho=0` uses `t=1/13`; `rho=1`
+> uses the least-carrier boundary.  At `rho=2`, truncating the first-safe
+> window at `p3` leaves three core owners and a one-tooth endpoint
+> contradiction.  At `rho=3`, truncating at `p1` leaves one owner; density
+> reduces the metric question to 478 first-comb rows and only three bounded
+> two-comb candidates.  Two independent exact open-cover tests find no
+> point-only residual and no cover.  `rho=4` closes directly by density, and
+> `rho=5` by one nested prefix window.  There is no killer-height bound and no
+> Covering hypothesis.
+>
+> This supersedes the earlier description of proportional four-comb shapes
+> above height 64 as an open `r=5` proof-map branch.  THM-1148/1168/1213
+> remain valid structural metric theorems, but the owner-hypergraph quotient
+> closes their whole ambient clustered stratum.  Together with THM-1212,
+> clustered `r=5` and `r=6` are now both removed.  Global LRC(14), the exact
+> residual outside these clustered coordinates, Cover14 crown/inverse supply,
+> and general non-AP twelve-speed equality rigidity remain open.
+
+> ## 2026-07-18 S76 COMPONENT-AWARE PROPORTIONAL-ATLAS UPDATE
+>
+> THM-1168 closes every primitive proportional THM-1148 four-comb residual
+> shape `(a,b,c,d)` with `d<=64`: exactly 95,336 infinite rays.  Eroding the
+> closed primitive-shape safe complex by `delta=1/(7d)` gives a cyclic start
+> radius `H_A=G_A+delta`.  THM-1148's exact core floor and legality give the
+> phase floor
+> `C_a=min_M 72(floor(13M/a)+1)/[35(13M+1)]`; `H_A<C_a` closes 95,335 rays.
+> The unique failed radius comparison is `(49,50,51,56)`, short by `1/1960`.
+> It is still closed component-aware: only `m=3` is exceptional, legality
+> forces one of 165 cores in `[11]`, and an exact core-start/threefold-shape
+> incidence bank has 8,456 closed intersections and zero failures.  Scales
+> `m>=4` return to the universal radius cone.
+>
+> This does not contradict THM-1167's refutation of the minimum-over-every-
+> `k1`-gap route.  THM-1168 uses the full weighted cyclic start complex and an
+> actual core-component phase needle; at the sole short-needle row it retains
+> the component address explicitly.  The 40,336 new rows at heights 57..64
+> all satisfy the universal radius criterion; their tightest row is
+> `(53,59,60,62)`, with margin `2279/303800`.  Uniform `r=5` for primitive
+> shapes with `d>64` remains open.
+
 > ## 2026-07-18 S75 OWNER/EROSION/PRIMITIVE UPDATE
 >
-> Global LRC(14), uniform `r=5`, the remaining `r=6` carrier strata, Cover14
-> crown collapse, and n=12 equality rigidity remain open.  Three former
-> frontier statements are now sharper.
+> Global LRC(14), uniform `r=5`, Cover14 crown collapse, and n=12 equality
+> rigidity remain open.  The full `r=6` clustered stratum is now closed, and
+> four former frontier statements are sharper.
 >
-> **Exactly two 13-carriers (`r=6`) are closed.**  THM-1151's thirty
-> uniform-cap obstructions are all dispatched by THM-1154's chart
+> **All zero through six 13-carrier strata (`r=6`) are closed.**  THM-1151's thirty
+> two-carrier uniform-cap obstructions are all dispatched by THM-1154's chart
 > `t=a/13+15/(182v)`: exactly one multiplier is lost to the core and at most
 > eight to four noncarriers.  More generally, with `rho` carriers a compatible
 > broad-cap chart loses `d=#{p:cp>s}` core owners and at most `2(6-rho)` other
-> charts, so `d<2rho` suffices.  For `rho>=4` the owner budget is automatic
-> once carrier compatibility is found; `rho=3` needs `d<=5`.
+> charts, so `d<2rho` suffices.  THM-1169 obtains that compatibility uniformly
+> for `rho=4` from THM-1155's density bound on the least carrier's first safe
+> interval.  For `rho=3`, truncating at `1/(14p2)` enforces `d<=5`; density
+> leaves a finite two-comb residual, and an endpoint-exact rational audit
+> checks all 473 bounded candidates with zero covers and zero point-only
+> cases.  THM-1212 finishes the complementary close-first-pair regions with
+> labelled nested prefix windows.  Five carriers close after protecting the
+> first pair.  Six carriers force the exact ratio ladder
+> `o2/o1<35/12`, `o3/o1<1960/363<27/5`, `o4/o1<567/76`, and
+> `o5/o1<15876/2105<11`; the final protected closed window is then longer
+> than one open tooth of `o6`.  Together with THM-1136 this dispatches every
+> carrier cardinality and removes uniform `r=6` from the frontier.
 >
 > **The first infinite four-comb residual is closed.**  THM-1159 computes the
 > exact eroded safe-shape atlas of `(3,4,5,6)`.  Its start-set covering radius

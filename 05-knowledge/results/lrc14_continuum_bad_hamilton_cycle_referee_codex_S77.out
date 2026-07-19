@@ -1,0 +1,25 @@
+THM-1210 continuum bad-set / additive-triangle ceiling exact referee
+arithmetic=fractions.Fraction; chamber endpoints have measure zero
+identity: F_inf=(7/6)*max_j(Delta_j-1/7)_+
+BAD iff maxgap({0,d2*u,d3*u,d4*u})<=2/7
+correlation: mu(BAD)=2*sum over 3 undirected K4 Hamilton cycles
+direct continuum identity chamber rows=454
+triangle quotient: A=[1/7,2/7]U[3/7,4/7]U[5/7,6/7]; BAD forces every pair difference into A
+R={(x,y):x,y,x+y in A}: six exact right triangles; model rows=784; area=3/49; horizontal components<=2
+shear z=x+y: model rows=784; x-sections empty off A, six explicit interval branches and at most two components on A
+tail: J(p,q)<=3/49+6/[7(p+q)]<2/21 for coprime p<q and p+q>=26; cutoff value=60/637
+finite triangle core: pairs=99; distinct=87; maximum=2/21; unique reduced maximizer=((1, 2),); runner-up=13/147
+independent carry formula rows=99; J=2/[7(p+q)]*sum_k c_k*L_k
+equality obligation lemma audit: rows=27000; survivors=30 (exactly a=b=c)
+height-30 triples=4060; cycle correlations=12180; triangle implications=4060 (138 reduced types); distinct measures=518; zero=2010
+maximum=2/21; maximizers=((1, 2, 3), (2, 4, 6), (3, 6, 9), (4, 8, 12), (5, 10, 15), (6, 12, 18), (7, 14, 21), (8, 16, 24), (9, 18, 27), (10, 20, 30))
+second=4/105; count=19
+non-AP (1,6,7) exact bad measure=5/147
+Tournament Analysis:
+  vertices=four phase points; alternate vertices=pair-difference obligations
+  switch=cyclic order; reversal u->-u pairs the two orientations; factor=2
+  order tournament=transitive; score histogram=(0,1,2,3); SCCs=4; cycles=0; H=1
+  proof quotient=non-AP additive triangle with edge labels p,q,p+q
+  faithful data=three-band edge predicate|additive circuit|Haar mass
+  destroyed by runner tournament=cyclic gaps|edge increments|correlation mass
+VERDICT: sharp continuum BAD theorem proved (analytic p+q>=26 + 99 exact cases); equality iff four frequencies form an AP

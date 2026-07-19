@@ -1,0 +1,18 @@
+THM-1213 exact fractional-discrepancy / 25/4 cone independent referee
+arithmetic=integers and fractions.Fraction
+epsilon(theta)=min(theta,1/7)-theta/7; theta_q={6q/(7a)}
+nu_a(q)=floor(6q/(7a)+8/7)
+gate: 24d/(7a)-7d*sum_q epsilon(theta_q)/q > 1+sum_q nu_a(q)
+local epsilon/incidence rows=406350
+height-64 residual/exact telemetry=95336/4028; old_Q=484; clean_25/4=920; tightest=(Fraction(1, 1120), (11, 32, 35, 39))
+champion rational-lattice rows (denominator<=120)=1104200
+piecewise sufficient margins (left,right)=(('[25/4,41/6]', Fraction(0, 1), Fraction(7, 3)), ('[41/6,7]', Fraction(1, 1), Fraction(70, 41)), ('[7,246/35]', Fraction(70, 41), Fraction(58, 35)), ('[246/35,43/6]', Fraction(58, 35), Fraction(0, 1)), ('[43/6,8]', Fraction(0, 1), Fraction(145, 43)), ('[8,49/6]', Fraction(2, 1), Fraction(65, 24)))
+exhaustive cone rows through d<=400=1158880
+adversarial rational-boundary rows through a<=4096=9634045
+sharp family (4n,24n,24n+1,25n[-1]) rows=9998; n=3 margins threshold/below=25/292/-109/438
+Tournament Analysis:
+  vertices=phase obligations z; labels=(nu_a(z),epsilon_a(z)); gauge=r=d/a
+  observable=kappa_r(z); switch=cost equality; tie path=sorted rational breakpoints
+  champion path=6 -> 41/6 -> moving endpoint r -> 43/6 -> 8
+  naked numerical-order tournament is transitive and destroys both metric labels
+VERDICT: exact gate is valid; every Q4-residual shape with 4d>=25a closes

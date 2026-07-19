@@ -1,0 +1,9 @@
+THM-1211 four-torsion centre-hit congruence referee
+complete sorted triples 1<=d1<d2<d3<=64, labelled centres: 249984
+exact centre hits: 9362
+hits outside the literal proportional (1,2,3) ray: 9320
+criterion mismatches: 0
+explicit refutation: d=(1,2,7), r=(1,2,3), u=3/4
+gamma_d(u)=(1/4,1/2,3/4) exactly
+infinite family prefix checked: (1,2,4m+3), 1<=m<=64
+tournament analysis: inapplicable; the common Z/4 gauge is ternary/global

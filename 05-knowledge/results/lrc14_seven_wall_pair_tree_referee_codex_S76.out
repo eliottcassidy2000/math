@@ -1,0 +1,50 @@
+THM-1166 exact seven-wall pair/tree and Fano/gcd referee
+folded-vs-tent exact pair checks: 7140
+global pair floor: rho >= 1/91; unique reduced minimizer (1,13)
+pair-floor tail starts at ab=27; finite cells ab<=26: PASS
+strict-low channels rho<1/63 (complete):
+  (1,10):1/70, (1,11):1/77, (1,12):1/84, (1,13):1/91, (2,11):1/77, (3,10):1/70, (3,11):1/77
+oriented low-channel product/quotient checks: 49; violations: 0
+therefore every speed triple has an edge rho>=1/63
+triple constant sharp at (1,12,27): 1/84, 1/63, 1/63
+three-speed pair-sum finite-exact certificate:
+  counterexample channel cut: rho < 43/2184
+  analytic tail starts at ab=348; complete reduced channels: 106
+  quotient-compatible triples: 173
+  candidate minimum: 11/252=1/24+1/504
+therefore every speed triple has total pair mass >=1/24 (intermediate)
+sharp three-speed pair-sum certificate:
+  counterexample forces two smallest reduced products <=41 and <=57
+  oriented ratio banks: 124 and 184; configurations: 22692
+  exact minimum: 51/1183, uniquely at the ratio triple (1,13,169)
+high-component tree tradeoff:
+  min_m [5*max(1/63,51/1183-2m)+m] = 110/1183
+  connected-high branch gives 6/63=2/21 >110/1183
+seven-packet exact box C(18,7): 31824; violations: 0
+universal spanning-tree floor: 110/1183
+box minimum MST: 5433559/42882840 at (7, 10, 11, 13, 16, 17, 18)
+Fano total-pair floor: 7*(51/1183)=51/169
+box minimum total pair mass: 290425/714714 at (1, 7, 10, 11, 12, 13, 17)
+quadratic Q(C)=C(8-C)/7 and all 128 Fano decompositions: PASS
+periodic interval discrepancy exact samples: 1740; violations: 0
+sample worst error/[rho(1-rho)/gcd]: 46480/48919
+positioned-tree lower bound (every interval):
+  max_T sum_T mu(I cap D_i cap D_j) >= (102/1183)|I|-(2/7)E
+  E=sum_(i<j)rho_ij(1-rho_ij)/gcd(s_i,s_j)
+covered-interval necessary inequality:
+  (51/169)|I| <= (1/2)sum_i(1/s_i) + E
+raw gcd-error common-dilate consequence: g|I| <= 61009/4760
+global Hunter safe-set floor: 110/1183
+periodic common-dilate consequence: g|I| <= 1073/1183
+protected-needle consequence: g/max(core) <= 1073/169
+localization obstruction: for every N,
+  mu([1/7,6/7] cap D_N cap D_(N+1)) = 0, interval length 5/7
+  the six-edge order path on {N,...,N+6} therefore has local weight 0
+  hence no positive per-edge local floor with O(1/N) endpoint error
+tournament audit (vertices=speeds; high edge forward, strict-low backward)
+sample packet: (1, 2, 3, 4, 5, 6, 10)
+score histogram: (1, 2, 2, 3, 3, 5, 5); directed triangles: 7
+tie Hamiltonian path: (6, 0, 1, 2, 3, 4, 5); Hamiltonian-path count: 39
+preserved: global low/high channel, Fano line debt, MST floor
+destroyed: interval phase, tooth address, owner chronology, gcd cell position
+source_sha256=960df28c1c0be54bfd9f25856a9691cf02b5ab6299f16ec95dbc85c09b2f9b71

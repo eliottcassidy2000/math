@@ -1,0 +1,27 @@
+THM-1156 exact tooth-seam / chi7 referee
+speed audit: 1 <= a < b <= 196
+tooth convention: open ((14m-1)/(14a),(14m+1)/(14a))
+exact algebra: R_a(m)=L_b(n) iff 14*(a*n-b*m)=a+b
+projective criterion: a seam exists iff 14 divides a/g+b/g
+seam pairs: 796
+seam phase events: 1868
+distinct reduced direction pairs: 490
+phase formula: t=(A^(-1) mod 14 + 14j)/(14g), 0<=j<g
+layer law: nu_2(a)=nu_2(b), nu_7(a)=nu_7(b)
+quadratic switch: chi7(a/7^nu7(a))=-chi7(b/7^nu7(b))
+occupied (nu2,nu7) layers: 7
+seam-graph degree histogram: ((0, 17), (1, 14), (2, 18), (3, 12), (4, 9), (7, 42), (14, 84))
+seam triangles: 0; maximum edges on any triple: 2
+Fano consequence: each of seven 3-point lines contains a nonseam pair
+Tournament Analysis (lossy tie completion on speeds 1..14):
+  observable: exact seam; switch: chi7 +/-; nonseams tie-broken by speed
+  score sequence: (0, 1, 2, 4, 4, 6, 6, 7, 8, 8, 10, 10, 12, 13)
+  directed 3-cycles: 10
+  SCC sizes: (9, 1, 1, 1, 1, 1)
+  Hamiltonian-path count: 345
+  edge flips from numerical order: 2
+faithful vertices: tooth-boundary seam events, not runners alone
+faithful data: (nu2,nu7)-layer + chi7 side + rational phase + tooth addresses
+destroyed by tournament: nonedge gap/overlap sign, metric size, repeated chronology, coverage
+VERDICT: exact seams form a layered bipartite graph; no odd seam cycle exists
+SCOPE: structural zero-overlap obstruction only; no localized eta>0 is claimed

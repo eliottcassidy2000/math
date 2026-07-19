@@ -1,0 +1,25 @@
+THM-1169 three/four-carrier owner-window closure
+arithmetic=fractions.Fraction and integers only
+seven_core_count=792
+second_speed_histogram={2: 252, 3: 252, 4: 168, 5: 84, 6: 30, 7: 6}
+rho4=uniform: 6/(7x) > 3/(4(x+1)); three later combs cannot cover
+rho3_owner_window=[1/(14x), min(13/(14x),1/(14p2))]
+rho3_first_density_good={2: 13, 3: 19, 4: 26, 5: 33, 6: 39, 7: 46}
+rho3_residual_x_max={2: 12, 3: 18, 4: 25, 5: 32, 6: 38, 7: 45}
+rho3_finite_y_rows={2: 17, 3: 80, 4: 192, 5: 355, 6: 576, 7: 854}
+rho3_exact_pair_candidates={2: 0, 3: 0, 4: 3, 5: 34, 6: 115, 7: 321}; total=473
+rho3_point_only_rows=0
+rho3_empty_after_first_comb_rows=0
+rho3_exact_two_comb_covers=0
+boundary_readout=u=c/(14s), cM<13s; u<=1/(14p2) gives d<=5
+rho5_density_residual=second carrier y < 14x/9
+rho6_density_residual=second carrier y < 35x/12
+Tournament Analysis:
+  vertices=p2 residual strata 2..7; scores=(0, 1, 2, 3, 4, 5)
+  directed_cycles=0; SCCs=(1,1,1,1,1,1); HP=1; tie_gauge_flips=1
+  pairwise_observable=larger exact finite residual candidate count
+  switch/gauge=reverse the p2 tie order; directed HP=7>6>5>4>3>2
+  faithful_object=labelled rational wall cells plus two comb obligations
+  destroyed_by_tournament=endpoint openness|owner time|comb incidence|metric length
+  challenged_vertices=runners|carriers|ratios|walls|cells|owner obligations|cover obligations
+VERDICT: rho=3,4 close uniformly; rho=5,6 remain only in the recorded close-pair cones

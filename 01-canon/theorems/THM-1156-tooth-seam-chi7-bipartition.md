@@ -2,11 +2,13 @@
 id: THM-1156
 title: THE TOOTH-SEAM / chi7 BIPARTITION -- exact radius-1/14 abutments are projectively complementary mod 14 and flip a canonical quadratic sign
 status: PROVED exact seam identity, abutment criterion, chi7 bipartition, Fano pair obstruction, and directed strict-seam quantum. The open-cover consequence is qualitative: a zero-overlap two-tooth seam needs third support. No uniform F7 overlap constant or LRC14 closure is claimed
-source: codex-2026-07-18-S75
+source: codex-2026-07-18-S75/S76
 depends_on: [THM-770, THM-965]
-related: [THM-856, THM-863, THM-1153, THM-1155, THM-1165, HYP-7678]
+related: [THM-856, THM-863, THM-1153, THM-1155, THM-1165, THM-1166, HYP-7678]
 script: 04-computation/lrc14_tooth_seam_chi7_bipartition_codex_20260718.py
 output: 05-knowledge/results/lrc14_tooth_seam_chi7_bipartition_codex_20260718.out
+independent_referee: 04-computation/lrc14_tooth_seam_chi7_referee_codex_S76.py
+independent_output: 05-knowledge/results/lrc14_tooth_seam_chi7_referee_codex_S76.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCToothSeamChi7.lean
 ---
 

@@ -1,0 +1,13 @@
+THM-1213 sharp-family first-gap address repair referee
+arithmetic=fractions.Fraction; optimized_mode_guard=require() only
+family=(4n,24n,24n+1,25n-1), n>=3; b=6a
+b-scaled complete a-gap=[3/7,39/7] modulo integer translation
+b-danger occupancy=5/7; discrepancy relative to density=-1/49
+incidence costs=(6,6,6); components<=19
+repaired margin=(15n+1)(40n-31)/(24n(24n+1))>0
+exact family rows n=3..10000=9998; n=3 margin=2047/2628
+Tournament Analysis:
+  vertices=complete first-gap addresses; observable=b-phase tooth occupancy
+  gauge=b/a=6; all addresses tie by integer translation
+  runner-order tournament destroys the address/phase compatibility
+VERDICT: the phase-blind sharp family closes uniformly after retaining address

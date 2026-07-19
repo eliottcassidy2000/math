@@ -4961,3 +4961,75 @@ Checking whether THM-401's setup ("M(S) is attained at a pair-sum time") is comp
 The test was wrong. A point t has many representations, and reducing the fraction can turn a pair-sum denominator into something else. For V = {9,15,16,23,25,27,31,35,37,41,43,46,51} the optimum is 1/6, whose reduced denominator 6 is a difference — but **1/6 = 4/24 and 24 is a pair sum**, so pair-sums attain the identical value with deficit 0.00000000. All four cases were this artifact. THM-401 stands.
 
 **The lesson:** when a theorem says "the optimum lies at a point OF THE FORM m/q with q in some set", the test is whether the POINT admits such a representation — not whether its reduced denominator belongs to the set. Reduction is not representation. I caught this only because I ran an explicit per-case verification before filing; the aggregate count alone said 4/25 and looked convincing. See THM-1200.
+## MISTAKE-180 (codex-2026-07-18-S79) — discarding the integer branches in a torus congruence
+
+The superseded six-box draft claimed that the closed geodesic
+`u -> ({-d1 u},{-d2 u},{-d3 u})` hits the centre
+`(1/4,1/2,3/4)` only when `d` is proportional to `(1,2,3)`.  In solving
+`d_i u = n_i-r_i/4`, it effectively compared the three rational ratios after
+discarding the independent integers `n_i`.  Those wrap integers are the
+problem, not a removable nuisance.
+
+The exact counterexample is
+
+```text
+d=(1,2,7),    u=3/4,
+({-d_i u})=(1/4,1/2,3/4).
+```
+
+THM-1211 proves the complete replacement.  If `g=gcd(d)` and `e=d/g`, the
+geodesic hits a labelled centre `r/4`, with `r` a permutation of `(1,2,3)`,
+iff `e=+r` or `e=-r (mod 4)`.  Thus `(1,2,4m+3)` supplies infinitely many
+nonproportional exact hits.  In particular its proposed uniform
+positive standoff for nonproportional directions is false.
+
+This correction does not refute the conjectured `2/21` *measure* ceiling:
+incidence at one phase is not positive sojourn.  The missing coordinate is
+contact order/sojourn length, which a centre-only classifier destroys.
+
+**Rule:** never cancel or suppress the lift integers in a torus congruence.
+First primitive-normalize, then solve in the torsion quotient; here the whole
+criterion lives in `(Z/4Z)^3/{+/-1}`.
+
+**Affects:** the superseded six-box draft, HYP-7600, and THM-1181.  See THM-1211.
+
+## MISTAKE-181 (kind-pasteur-S128c77, corrected codex-S77) — BAD does not force exact balance
+
+**What happened:** the superseded maximiser proof sketch observed the
+balanced four-gap point and then treated membership in the full BAD region as
+if it forced that equality point.  From there it argued that positive BAD
+measure requires a persistent `1:2:3` edge ratio and concluded that every
+nonproportional direction has zero BAD measure.
+
+The implication is false.  In max-gap coordinates the exact condition is
+
+```text
+Delta_1+Delta_2+Delta_3+Delta_4=1,
+1/7 <= Delta_i <= 2/7.
+```
+
+This is a three-dimensional inequality region, not the single balanced point
+`Delta_i=1/4` (nor `1/8`, which refers to survivor lengths in a different
+coordinate).  The explicit nonproportional direction
+
+```text
+d=(1,6,7)
+```
+
+has exact BAD measure `5/147>0`; at `u=3/4` it even hits the labelled balanced
+centre `(1/4,1/2,3/4)`.  Thus both the zero-measure conclusion and the
+proportionality premise used to reach it are refuted.
+
+**Correction:** THM-1210 keeps the whole inequality region.  BAD forces every
+pair difference into three bands, then deletes to one non-arithmetic additive
+triangle `(p,q,p+q)`.  Six exact torus triangles, a sheared shifted-grid tail,
+and a 99-pair exact core prove the desired uniform ceiling
+`mu(BAD)<=2/21`.  The four triangle-deletion obligations subsequently force
+all three adjacent gaps equal and classify the equality locus.
+
+**Rule:** an extremal equality configuration does not parametrize its entire
+sublevel set.  Before transporting an equality ratio along a flow, write the
+full defining inequalities and test a non-equality interior point.
+
+**Affects:** the superseded maximiser proof sketch, HYP-7595, and
+the centre/standoff continuation.  See THM-1210 and MISTAKE-180.

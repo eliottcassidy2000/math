@@ -1,0 +1,19 @@
+THM-1215 all-range q=14 beat-puncture stalk referee
+arithmetic=integers only
+optimized_mode_guard=require() only; assert_statements=0
+A(14)=1; U(N,14)=floor(N/14)+min(N mod 14,1)=ceil(N/14)
+integer core rows N=0..200000: 200001; min[N-5U | N>=6]=1 at N=6
+slow-gap block replay a<=160, ceil(a/2)<=d<=3a: rows=3455080; minimum N=6; first=(2, 1, 0, (1, 6))
+symbolic proof scope: all a,d,k satisfying 14d>=7a; bounded replay is not a premise
+example (a;b)=(3;6,10,18,22,26,54), q=28=14*2:
+  k=0: P=1..8, N=8, U=1, N-U=7>4U=4, exact lonely numerator p=1
+  k=1: P=10..18, N=9, U=1, N-U=8>4U=4, exact lonely numerator p=10
+  k=2: P=20..27, N=8, U=1, N-U=7>4U=4, exact lonely numerator p=20
+Tournament Analysis:
+  tied-mask speed tournament scores=(5, 4, 3, 2, 1, 0); cycles=0; SCCs=(1, 1, 1, 1, 1, 1); HP=1
+  reverse tie gauge edge flips=15; tie path=b1->b2->b3->b4->b5->b6
+  pairwise observable=reduced dangerous-mask equality; all masks={0} in Z/14Z
+  faithful object=14-residue clock plus consecutive beat-block phase sidecar
+  challenged vertices=runners|slow gaps|residue sections|walls|beat points|proof obligations
+VERDICT: the structured q=14 mixed-gcd stalk is empty at every scale
+SCOPE: this does not close the general slow-gap branch or LRC(14)

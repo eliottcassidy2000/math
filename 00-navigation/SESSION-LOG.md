@@ -558,6 +558,11 @@ FILES: THM-1146, HYP-7580, single_run_proof script + out. -> all (codex: the sin
 Prompt (owner): work the component-aware conditioning at j ~ k1/4
 
 FILES: THM-1162, HYP-7698, bad_zone_width / whole_safe_set scripts + out. -> all (codex: the conditioning works once posed correctly. Single-component fails -- the bad run is 0.0457*k1 against an atlas component of only 1/70 = 0.0143, so a minimal component fits inside it. But the theorem needs a good gap ANYWHERE in S(P), the bad zone is ONE contiguous interval of length ~0.046 always at t ~ 0.24, and S(P) has measure 0.164-0.363 over 14-26 components. Exhaustive over ALL 495 cores for six quadruples plus a strided sweep: min 7*k4*best = 1.97771, worst sweep value 1.74074, both well clear of 1. Two things left to prove and both look tractable: that the bad set is a single run of bounded width -- which should follow from THM-1142's linear descent by monotonicity, with width from the slope d/(k1*k4) -- and then a two-line counting argument that one interval of length 0.046 cannot meet every adequate component of a spread set of measure 0.164. That is component-aware as THM-1167 demanded and does not need a full endpoint bank over quadruples.)
+## kind-pasteur-2026-07-18-S128 (cont.73) -- THM-1172: the component-aware conditioning WORKS, but on the WHOLE SAFE SET rather than one component (owner: work the component-aware conditioning at j ~ k1/4). (I) THE BAD ZONE IS NARROW, CONTIGUOUS, AND ALWAYS IN THE SAME PLACE. Measuring the full bad set for consecutive-type quadruples, the indices j with 7*k4*L(j) <= 1 form a SINGLE CONTIGUOUS RUN of width at most 0.0457*k1, and it is always centred at j/k1 between 0.238 and 0.242: six indices at (157,158,159,160) starting at j/k1 = 0.242; nine at (197,198,199,200) giving the worst fraction 0.0457; fourteen at (317,318,319,320); eighteen at (394,395,396,397) starting at j = 94, j/k1 = 0.2386. Some quadruples have NO bad gaps at all -- (211,212,214,215) and (163,167,173,179) both give zero. In t-coordinates the bad zone is one interval of length about 0.046 sitting near t = 0.24. (II) SINGLE-COMPONENT CONDITIONING FAILS, which is the direct answer to the question as posed. The atlas guarantees only a component of length at least 1/70 = 0.0143, which is THREE TIMES NARROWER than the 0.0457 bad run, so a minimal component can sit entirely inside the bad zone. Asking whether a core-safe component must contain a good gap gets the answer no. (III) BUT THE THEOREM DOES NOT NEED ONE COMPONENT. It needs a good k1-gap ANYWHERE in S(P). The bad zone is a SINGLE interval of length about 0.046, while S(P) has total measure 0.164 to 0.363 spread over 14 to 26 components across [0,1]. One narrow interval cannot swallow a spread set of that measure. (IV) VERIFIED EXHAUSTIVELY OVER ALL 495 EIGHT-SPEED CORES, with no sampling. Taking the maximum over k1-gaps lying inside S(P), the minimum of 7*k4*best over all 495 cores is 1.97771, at killers (157,158,159,160) with core [1,2,6,7,8,9,11,12]; the other tested quadruples give 4.50000, 4.45500, 4.47161, 4.45051 and 2.23010; and a strided sweep over consecutive quadruples with k1 in [157,420] gives a minimum of 1.74074 at (191,192,193,194). Every value clears the required 1 with at least 74% of margin. HONEST STATUS: (IV) is exhaustive over CORES -- all 495, no sampling, which is a stronger quantifier than most of this thread has achieved -- but it is still only six quadruples plus a strided sweep, so it is NOT a proof for all (k1,k2,k3,k4), and uniform r=5 remains OPEN. What has been established is the correct SHAPE of the argument together with the two atlas-computable ingredients an exact bank would need: first, that the bad set is a single contiguous run of width at most 0.046*k1 at j/k1 about 0.24; and second, that S(P) has measure at least 0.164 spread over at least 14 components. Since the first is an interval and the second is spread, a counting argument closes the gap, and both ingredients are computable from the atlas rather than requiring a new bank over quadruples.
+
+Prompt (owner): work the component-aware conditioning at j ~ k1/4
+
+FILES: THM-1172, HYP-7575, bad_zone_width / whole_safe_set scripts + out. -> all (codex: the conditioning works once posed correctly. Single-component fails -- the bad run is 0.0457*k1 against an atlas component of only 1/70 = 0.0143, so a minimal component fits inside it. But the theorem needs a good gap ANYWHERE in S(P), the bad zone is ONE contiguous interval of length ~0.046 always at t ~ 0.24, and S(P) has measure 0.164-0.363 over 14-26 components. Exhaustive over ALL 495 cores for six quadruples plus a strided sweep: min 7*k4*best = 1.97771, worst sweep value 1.74074, both well clear of 1. Two things left to prove and both look tractable: that the bad set is a single run of bounded width -- which should follow from THM-1142's linear descent by monotonicity, with width from the slope d/(k1*k4) -- and then a two-line counting argument that one interval of length 0.046 cannot meet every adequate component of a spread set of measure 0.164. That is component-aware as THM-1167 demanded and does not need a full endpoint bank over quadruples.)
 
 ---
 
@@ -72081,3 +72086,103 @@ source-dependent core cap.  The four noncarriers disappear entirely because
 each forbids at most two of twelve observer multipliers.  The thirty pairs are
 finite failures of this chart, not LRC counterexamples, and are the next
 target for a second observer or exact component bank.
+
+---
+
+## codex-2026-07-18-S78 -- THM-1214 closes the complete clustered r=5 stratum
+
+Resumed from the r6 owner-window and proportional-shape frontier, fetched the
+live mainline repeatedly, and challenged the assumption that four-comb metric
+components were still the smallest faithful object.  With five killers the
+translated mod-13 owner ledger has two more multiplier slots than its r6
+counterpart:
+
+```text
+d+2(5-rho)<12  iff  d<2rho+2.
+```
+
+That capacity change closes every number of 13-carriers.  Zero carriers use
+`t=1/13`; one uses the least-carrier boundary.  For two carriers, truncating
+the first-safe interval at the third core speed leaves `d<=5`; a hypothetical
+covering tooth would force `14n(x-p)<x+p`, contradicting `x-p>=6` in the only
+short-window regime.  For three carriers, truncation at the least core speed
+leaves `d<=7`.  Density reduces all magnitudes to 478 first-comb rows; exact
+positive-cell erosion leaves only three bounded pairs, and two independent
+open-cover algorithms find zero point-only rows and zero covers.  Four
+carriers close by the three-comb density inequality, and five by one nested
+prefix window.
+
+The normal and optimized exact-Fraction referees are byte-identical; hashes
+are `cd6f615d...c8490` and `94447a6d...13cf`.  An independent agent replayed
+the arity transport, owner budget, endpoint signs, residual counts, and both
+cover algorithms.  The proof-map correction is structural: THM-1148/1168 and
+the new peel-first THM-1213 remain valid metric theorems, but their ambient
+clustered r5 branch is now closed by the decorated owner hypergraph/wall-cell
+object.  This is not global LRC(14); inverse/covering and nonclustered residual
+obligations remain.
+
+---
+
+## codex-2026-07-18-S79 -- exact centre-hit congruence corrects the new six-box branch
+
+While integrating the S78 owner closure against the newer mainline, audited
+THM-1150's proposed Diophantine standoff.  Its centre-hit algebra had dropped
+the independent wrap integers.  The one-line counterexample is
+
+```text
+d=(1,2,7),  u=3/4  =>  ({-d_i u})=(1/4,1/2,3/4).
+```
+
+THM-1211 proves the complete criterion: after primitive normalization, a
+direction hits a labelled permutation `r/4` of the balanced centre iff its
+residue vector is `+r` or `-r modulo 4`.  Bezout reduces every possible hit to
+one common odd gauge in `Z/4`; the two units provide explicit witnesses.
+Hence `(1,2,4m+3)` is an infinite nonproportional exact-hit family and the
+proposed uniform standoff is false.  An exact replay checks 249,984 labelled
+rows through height 64, including 9,320 nonproportional hits, with normal and
+optimized output identical.
+
+The correction isolates the conceptual loss: centre incidence is torsion
+data, whereas a measure maximizer must remember contact order or sojourn
+length.  A runner/slot tournament destroys the common three-coordinate gauge;
+the faithful quotient is `(Z/4Z)^3/{+/-1}`.  This is orthogonal to THM-1214,
+which already closes the clustered five-killer branch through owner windows.
+Files: THM-1211, MISTAKE-180, HYP-7740, exact script and frozen output.
+
+---
+
+## codex-2026-07-18-S80 -- sharp additive-triangle ceiling and a fourteen-clock beat stalk
+
+Continued the LRC(14) frontier audit while repeatedly observing the shared
+mainline.  THM-1210 now proves the full continuum four-comb ceiling by a
+quotient that was absent from the earlier runner/order pictures.  BAD forces
+all six pair differences into the three-band set
+`A=[1/7,2/7] union [3/7,4/7] union [5/7,6/7]`; deleting to a non-AP triangle
+leaves the additive circuit `(p,q,p+q)`.  Its torus carrier consists of six
+right triangles of total area `3/49`.  After shearing by `z=x+y`, every
+section is empty off `A` and has at most two components, yielding the strict
+tail `J(p,q)<2/21` for `p+q>=26`.  Only 99 reduced pairs remain, and two exact
+rational evaluators give unique equality `(1,2)`.  Applying that equality
+condition to all four three-point deletions forces all adjacent gaps equal,
+so the continuum equality directions are exactly four-term APs.  The Lean
+kernel checks the 99-pair core, rational wrappers, and equality-obligation
+rigidity; Haar/alcove geometry remains explicit prose.
+
+THM-1215 composes the newer all-pairs beat-puncture law with a common-gcd
+fourteen-clock.  If `q=b6-b5=14d`, `q>=7a`, and every earlier fast speed has
+gcd `d` with `q`, then all six strict-danger masks are the singleton `{0}`
+modulo 14.  Every slow-gap beat block contains six consecutive numerators,
+so one supplies an explicit lonely point.  Independently, THM-1192 would
+force `N<=5ceil(N/14)`, impossible for `N>=6`.  Exact normal/optimized
+replays and a Lean integer core are frozen.
+
+The assumption challenge was decisive in both results.  For THM-1210 the
+proof vertices are pair-difference obligations and their additive circuit;
+for THM-1215 they are residue sections with a consecutive-block sidecar.
+Runner-order tournaments are transitive telemetry in both settings and lose
+the metric predicate.  Incoming THM-1183 is now superseded as a ceiling
+target (its stronger three-path majorant remains separate), while the new
+pairwise-sum maximizer work agrees with prior THM-401 only as an existence of
+a sum representation; reduced difference denominators can still represent
+the same maximizing time.  Global LRC(14), the finite phase/address glue,
+and the non-AP twelve-speed equality branch remain open.

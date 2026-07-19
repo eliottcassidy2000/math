@@ -1,0 +1,19 @@
+THM-1212 five/six-carrier nested-window referee
+arithmetic=integers and fractions.Fraction; danger teeth are open
+optimized_mode_guard=require() only; assert_statements=0
+rho5_integer_first-pair_rows=1110544
+rho5_residual=y/x<14/9; nested L=(13x-y)/(14xy)
+rho5_contradiction=4L>3/y, while three later combs covering forces 4L<3/y
+rho6_integer_first-pair_rows=1380451
+rho6_ratio_ladder=y<35/12, z<1960/363<27/5, w<567/76, v<15876/2105<11
+rho6_final=|J(x,v)|>1/(7v)>1/(7r), so one open r-tooth cannot cover
+endpoint_exact_geometry_rows=rho5:2715,rho6:4200
+Tournament Analysis:
+  vertices=(J2,J3,J4,J5); scores=(3, 2, 1, 0); cycles=0; SCCs=(1,1,1,1)
+  Hamiltonian_paths=1; reverse-gauge edge_flips=6
+  pairwise_observable=prefix containment; switch=edge points to larger protected prefix
+  tie Hamiltonian path=J2->J3->J4->J5 (no metric ties)
+  faithful object=nested closed window + remaining-comb count + reciprocal budget
+  destroyed by tournament=window length|endpoint owner|strict cover|density slack
+  challenged vertices=runners|carriers|ratios|teeth|walls|windows|cover obligations
+VERDICT: rho=5 and rho=6 close; with THM-1136/1154/1169 the full r=6 stratum is empty

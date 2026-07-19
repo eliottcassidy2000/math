@@ -1,0 +1,20 @@
+THM-1214 five-killer carrier-owner-window referee
+arithmetic=integers and fractions.Fraction; danger teeth=open
+eight-core p1 histogram={1: 330, 2: 120, 3: 36, 4: 8, 5: 1}
+eight-core p3 histogram={3: 126, 4: 168, 5: 126, 6: 60, 7: 15}
+owner budgets (rho,owner_cap,guaranteed_survivors)=((1, 3, 1), (2, 5, 1), (3, 7, 1), (4, 8, 2), (5, 8, 4))
+rho2 analytic residual px=20; bounded y rows=117; covers=0
+rho3 density residual px=45
+rho3 y rows by p1=(0, 6, 51, 141, 280); total=478
+rho3 bounded pairs by p1=(0, 0, 0, 0, 3); total=3
+rho3 exact candidates=((5, 13, 14, 15, Fraction(4, 455)), (5, 13, 14, 16, Fraction(4, 455)), (5, 13, 15, 16, Fraction(4, 455))); point-only=0; covers=0
+rho4 dimensionless cover margin=3/7
+rho5 first ratio=14/9; nested positivity valid below=5/2
+Tournament Analysis:
+  stratum scores=(5, 4, 3, 2, 1, 0); cycles=0; SCCs=(1,1,1,1,1,1); HP=1
+  reversal gauge flips=15
+  observable=proof-obligation size; switch=carrier-cardinality dispatch; tie path=rho0->...->rho5
+  faithful object=12 multiplier charts + owner hyperedges + labelled carrier wall cells
+  destroyed by tournament=endpoint openness|metric window length|boundary owner|hyperedge union
+  challenged vertices=runners|carriers|gaps|walls|residues|charts|cover obligations
+VERDICT: every rho=0,...,5 row closes; clustered r=5 is uniformly lonely

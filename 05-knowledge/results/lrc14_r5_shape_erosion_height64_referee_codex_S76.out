@@ -1,0 +1,44 @@
+THM-1168 exact proportional four-comb shape-erosion referee
+safe convention: ||k*x|| >= 1/14 is closed; danger teeth are open
+residual predicate: primitive and outside THM-1148 strict multiplier/Q4/Phi gates
+height cap d <= 64
+residual milestones: {40: 13548, 45: 22259, 50: 34386, 55: 51233, 56: 55000, 64: 95336}
+primitive residual shapes: 95336
+universal radius successes: 95335
+universal radius failures: 1
+leading residual rays (shape; delta; G; H=G+delta; phase margin; components/starts):
+  (3, 4, 5, 6): delta=1/42, G=23/168, H=9/56, margin=21/40, components/starts=12/8
+  (3, 5, 6, 7): delta=1/49, G=5/49, H=6/49, margin=138/245, components/starts=16/8
+  (4, 5, 6, 7): delta=1/49, G=9/49, H=10/49, margin=76/245, components/starts=18/8
+  (3, 6, 7, 8): delta=1/56, G=9/56, H=5/28, margin=71/140, components/starts=16/8
+  (4, 5, 7, 8): delta=1/56, G=71/784, H=85/784, margin=1591/3920, components/starts=16/10
+  (4, 6, 7, 8): delta=1/56, G=4/49, H=39/392, margin=813/1960, components/starts=16/12
+  (5, 6, 7, 8): delta=1/56, G=13/112, H=15/112, margin=111/400, components/starts=20/10
+tightest positive universal row:
+  shape=(45, 46, 47, 52), margin=97/238420, H=17/364, phase_floor=216/4585, worst_M=10, least_m=3
+height-57..64 extension:
+  residual shapes=40336; universal successes=40336; address exceptions=0
+  tightest shape=(53, 59, 60, 62), margin=2279/303800, H=55/1736, phase_floor=48/1225, worst_M=8, least_m=2
+unique universal-radius obstruction:
+  shape=(49, 50, 51, 56), delta=1/392, G=2/49, H=17/392, phase_floor=3/70, deficit=1/1960
+  walls raw/distinct/tied/isolated=(412, 412, 0, 0); components/starts=124/76; max-gap multiplicity=2
+component-address repair at m=3:
+  legal cores C([11],8)=165; failures=0; closed intersections=8456; hits/core=36..82
+  minimum best overlap=47/39984 at core=(1, 3, 4, 5, 6, 7, 8, 11), interval=(Fraction(1639, 2352), Fraction(13955, 19992)), shape-start/lift=7/2
+  minimum positive intersection=1/119952; used shape starts=76/76; used lifts=216/228
+exception scale split:
+  m<=2 illegal; m=3 iff M<=11 and is closed by the address bank
+  m>=4 universal: 4*72/[35*(13*12+1)]=288/5495 > H by 2783/307720
+endpoint audit:
+  safe components and eroded start intervals are closed, including singleton starts
+  isolated safe walls are retained in telemetry but cannot carry a positive delta interval
+  a closed interval of length 1/(7*k4) cannot lie in a fifth open danger tooth
+Tournament Analysis:
+  runner-order tournament for every shape: scores=(0,1,2,3), cycles=0, SCCs=4
+  wall chronology: tie-resolved by (position,speed,side), hence transitive
+  exceptional wall path: 412 no-tie vertices, scores=(0,...,411), one Hamiltonian path
+  proof-bearing object: weighted cyclic eroded-start complex plus core-start/lift incidence
+  naked runner/wall tournaments lose interval lengths, cyclic gaps, and component address
+HONEST FRONTIER: every primitive proportional THM-1148 residual with d<=64 is closed
+HONEST FRONTIER: uniform r=5 for primitive shapes with d>64 remains OPEN
+DONE

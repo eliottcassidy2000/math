@@ -1,0 +1,21 @@
+THM-1171 exact twelve-speed AP homogeneity referee
+audit box: 1<=a,d<=300; rows=90000
+spread reduced-difference rows D>=2: 88233
+reduced-consecutive rows D=1: 1767
+homogeneous rows a=d: 300
+spread witness: choose u with A*u=floor(D/2) mod D, t=u/d
+all twelve phases: floor(D/2)/D
+sharp audited spread clearance floor: 1/3
+consecutive witness: t=1/[g(2A+11)]
+consecutive clearance: A/(2A+11)
+least strict consecutive margin over 1/13: 11/195
+exact dispatch: D>=2 is >1/13; D=1 is >1/13 iff A>1
+Tournament Analysis:
+  runner-order tournament: scores=(0,...,11), cycles=0, SCCs=12, paths=1
+  residue-fibre observable: phase equality at t=u/d
+  switch/gauge: multiplication by A^(-1) modulo D
+  tie Hamiltonian path: runner indices 0->...->11 in the single fibre
+  faithful carrier: common residue fibre plus metric phase floor(D/2)/D
+  lost by runner tournament: gcd reduction, unit action, common phase distance
+VERDICT: M(C)=1/13 can hold for a twelve-term AP only when a=d
+SCOPE: the general non-AP n=12 equality/sporadic branch remains open

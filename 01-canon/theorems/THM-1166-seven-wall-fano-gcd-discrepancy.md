@@ -2,7 +2,7 @@
 id: THM-1166
 title: Seven-wall quadratic/Fano gcd discrepancy at the actual one-fourteenth radius
 status: PROVED analytic cover implications and FINITE-EXACT three-speed overlap floor.  Every seven-comb packet has global uncovered mass at least 1/12; a covered lower-LRC needle forces common dilation G/m<=77/12, every labelled Fano plane obeys sum m/G_line>=32/231, and every forest obeys an exact adaptive edge-gcd budget.  This does not prove a uniform local overlap constant, crown collapse, or LRC(14)
-source: codex-2026-07-18-S75
+source: codex-2026-07-18-S75/S76
 depends_on: [LEM-042, LEM-043, THM-1153]
 related: [THM-856, THM-1156, HYP-7678]
 script: 04-computation/lrc14_seven_wall_fano_gcd_codex_20260718.py
@@ -11,6 +11,9 @@ lean: 04-computation/lean/TournamentH7/TournamentH7/LRCSevenWallFanoGCD.lean
 referee:
   - 04-computation/lrc14_fano_gcd_discrepancy_referee_codex_20260718.py
   - 05-knowledge/results/lrc14_fano_gcd_discrepancy_referee_codex_20260718.out
+pair_tree_referee:
+  - 04-computation/lrc14_seven_wall_pair_tree_referee_codex_S76.py
+  - 05-knowledge/results/lrc14_seven_wall_pair_tree_referee_codex_S76.out
 ---
 
 # THM-1166 -- seven-wall Fano/gcd discrepancy
@@ -372,3 +375,493 @@ What has closed is the common-dilate seventh crown and a mixed-period Fano/gcd
 necessary law.  What remains open is a uniform way to turn (24) or (29) into a
 contradiction for arbitrary seven deleted speeds, together with the broader
 `r=5`, `r=6`, crown-collapse, n=12 equality, and LRC(14) obligations.
+
+## S76 independent pair-tree and periodic-discrepancy strengthening
+
+Put
+
+```text
+D_s={t in R/Z : ||st||<1/14}
+rho(a,b)=measure(D_a intersect D_b).
+```
+
+Open or closed danger arcs give the same measures below.  The point of this
+theorem is to separate three statements that the seventh-deletion discussion
+had blurred:
+
+1. a strong second-order credit exists on the **whole circle**;
+2. a covered interval still obeys a useful credit after an explicit gcd
+   positioning error is charged;
+3. a chosen global edge or tree need not carry any of its mass on an
+   arbitrary child interval.
+
+The third fact is a theorem-level obstruction, not a caveat added after the
+calculation.
+
+## 1. Exact pair floor, sharp triple bar, and triple pair sum
+
+THM-965 gives, after reducing `(a,b)` to a coprime pair with `a<b`,
+
+```text
+rho(a,b)
+ =1/49+[fold_14(a+b)-fold_14(b-a)]/(196ab),
+fold_14(r)=(r mod 14)(14-(r mod 14)).                    (1)
+```
+
+In particular
+
+```text
+rho(a,b)>=1/49-1/(4ab).                                  (2)
+```
+
+> **Theorem A (pair and triple floors).**
+>
+> 1. For every two distinct positive integer speeds,
+>
+>    ```text
+>    rho(a,b)>=1/91,                                      (3)
+>    ```
+>
+>    with equality exactly when the reduced pair is `(1,13)`.
+> 2. Among every three distinct speeds, some pair satisfies
+>
+>    ```text
+>    rho(a,b)>=1/63.                                      (4)
+>    ```
+>
+>    The constant is sharp: the triple `(1,12,27)` has pair masses
+>    `1/84,1/63,1/63`.
+> 3. Every three distinct speeds satisfy the aggregate inequality
+>
+>    ```text
+>    rho(a,b)+rho(a,c)+rho(b,c)>=51/1183.                 (4a)
+>    ```
+>
+>    This is sharp, with equality exactly for a scaled and permuted copy of
+>    `(1,13,169)`.
+
+**Proof.**  For (3), the right side of (2) is strictly greater than `1/91`
+once `ab>=27`.  Exact evaluation of the coprime cells `ab<=26` has unique
+minimum `1/91` at `(1,13)`.
+
+For (4), (2) is strictly greater than `1/63` once `ab>=56`.  The complete
+strict-low list in the remaining coprime cells is
+
+```text
+(1,10):1/70, (1,11):1/77, (1,12):1/84, (1,13):1/91,
+(2,11):1/77, (3,10):1/70, (3,11):1/77.                  (5)
+```
+
+If `x<y<z` had all three edges strict-low, the reduced ratios `y/x` and
+`z/y` would occur in (5), and their product `z/x` would also have to occur
+there.  The exact `7*7=49` product table has no such product.  Hence the
+strict-low graph is triangle-free.  Direct substitution proves sharpness at
+`(1,12,27)`.
+
+We first record the compact intermediate certificate behind (4a).  If the
+sum were below `1/24`, then by (3) each individual edge would be strictly
+below
+
+```text
+1/24-2/91=43/2184.                                      (5a)
+```
+
+The tail (2) is strictly above `43/2184` once `ab>=348`.  Exact evaluation
+of every coprime cell `ab<=347` leaves precisely `106` reduced channels
+below (5a).  Sort the speeds as `x<y<z`; if `r=y/x` and `u=z/y`, then the
+three reduced ratios are `r,u,ru`.  Among the `106^2` ordered channel pairs,
+exactly `173` have `ru` in the same list.  Their minimum total pair mass is
+
+```text
+11/252=1/24+1/504,                                      (5b)
+```
+
+attained within this candidate table at consecutive ratios `(12,9/4)` and
+`(9/4,12)`.  This proves the intermediate sum floor `1/24`.
+
+The sharp upgrade has a different finite reduction.  For an edge `e`, let
+`p_e` be the product of the numerator and denominator of its reduced speed
+ratio, and order these products as `p_1<=p_2<=p_3`.  Suppose the triple sum
+is at most `S=51/1183`.  Summing (2) gives
+
+```text
+S >= 3/49-3/(4p_1),
+```
+
+so
+
+```text
+p_1 <= 3/[4(3/49-S)]=8281/200<42.                       (5c)
+```
+
+The smallest-product edge also has mass at least `1/91`, while each of the
+other two edges has product at least `p_2`.  Hence
+
+```text
+S >= 1/91+2/49-1/(2p_2),
+p_2 <= 1/[2(1/91+2/49-S)]=8281/144<58.                  (5d)
+```
+
+Thus `p_1<=41` and `p_2<=57`.  The two corresponding edges share a vertex.
+There are `124` oriented nonunit reduced ratios of product at most `41` and
+`184` of product at most `57`.  Normalize their common speed to one.  Exact
+evaluation of the `124*184-124=22,692` distinct configurations `(1,r,u)`
+has minimum
+
+```text
+51/1183,                                                 (5e)
+```
+
+and its only oriented minimizers are `(r,u)=(1/13,13)` and the reversal.
+They are precisely the triple `(1,13,169)` after rescaling.  This proves
+(4a), its sharpness, and its equality statement.  All finite evaluations
+use integers and rational arithmetic; the companion referee replays them
+independently from both the folded and tent formulas. ∎
+
+The intermediate table is complete because (2) proves its tail.  The sharp
+table is complete because (5c)--(5d) force two incident edge products into
+the displayed finite banks.  Neither is a bounded search standing in for an
+unproved asymptotic claim.
+
+## 2. Seven speeds: a global tree and seven Fano obligations
+
+> **Theorem B (global tree floor).**  Every seven distinct positive integer
+> speeds admit a spanning tree `T` such that
+>
+> ```text
+> sum_({i,j} in T) rho(s_i,s_j)
+>   >=110/1183.                                           (6)
+> ```
+
+**Proof.**  Call an edge high when `rho>=1/63`.  Theorem A says the low graph
+is triangle-free.  If the high graph is connected, a high spanning tree has
+weight at least `6/63=2/21>110/1183`.  Otherwise the low graph contains every
+edge between distinct high components.  Three high components would give a
+low triangle, so there are exactly two.
+
+Let `m<1/63` be the largest crossing weight and take high spanning trees
+inside the two components, five internal edges in total.  For any internal
+tree edge of weight `w`, adjoining any vertex of the other component and
+using (4a) gives
+
+```text
+w+2m>=51/1183.
+```
+
+Thus every internal tree edge weighs at least
+`max(1/63,51/1183-2m)`, and adding a crossing edge of weight `m` gives
+
+```text
+5 max(1/63,51/1183-2m)+m >=110/1183.                     (6a)
+```
+
+Indeed the two affine branches meet at
+`m=(51/1183-1/63)/2=145/10647`, where their common value is
+`110/1183`; each branch increases away from that point. ∎
+
+Now label the seven speeds by the points of any Fano plane.  Each of its
+seven lines is a triple and every pair belongs to exactly one line.
+
+> **Corollary B1 (Fano line debt).**  Every Fano line has pair-mass sum at
+> least
+>
+> ```text
+> 51/1183,                                                (7)
+> ```
+>
+> and consequently
+>
+> ```text
+> sum_(i<j) rho(s_i,s_j)>=51/169.                         (8)
+> ```
+
+Indeed every line is a three-speed packet, so (7) is Theorem A(3).  This
+strictly improves the coarser consequence `1/63+2/91=31/819` obtained from
+Theorem A(1)--(2) alone.  One may also select a distinct high edge from every
+Fano line, giving seven selected edges of total weight at least `1/9`;
+connectivity of those seven selected edges is not asserted.  The
+spanning-tree conclusion is (6), proved by the component argument rather
+than by silently identifying a Fano transversal with a tree.
+
+> **Corollary B2 (global safe-set floor).**  The complement of seven danger
+> combs has measure at least
+>
+> ```text
+> 110/1183.                                               (8a)
+> ```
+
+For any spanning tree `T` and any nonempty active vertex set `A`, the forest
+induced by `A` has at most `|A|-1` edges.  Hence, pointwise,
+
+```text
+1_(union_i D_i)
+ <=sum_i 1_(D_i)-sum_({i,j} in T)1_(D_i intersect D_j).
+```
+
+Integrate this Hunter inequality for the tree from Theorem B.  Since each
+danger comb has measure `1/7`, the sum of the seven single masses is one;
+the uncovered mass is therefore at least the tree weight `110/1183`.
+
+## 3. The quadratic wall and the positioned gcd error
+
+Let seven combs and a real interval `I` of length `L` be given.  Set
+
+```text
+C(t)=#{i:t in D_(s_i)},
+H=sum_i 1/s_i,
+P=sum_(i<j) measure(I intersect D_(s_i) intersect D_(s_j)).
+```
+
+The critical quadratic is
+
+```text
+Q(C)=C-(2/7)binom(C,2)=C(8-C)/7.                         (9)
+```
+
+For integer `1<=C<=7`, `Q(C)>=1`.  If `c_l` is the active count on Fano
+line `l`, then the exact pointwise decomposition is
+
+```text
+21Q(C)=sum_(Fano lines l) [7c_l-6 binom(c_l,2)].          (10)
+```
+
+The line summands at `c_l=0,1,2,3` are `0,7,8,3`.  Thus the Fano plane is
+not decorative: it partitions the complete pair ledger into seven triple
+obligations while counting each vertex three times and each pair once.
+
+The needed positioning statement is elementary and sharp at the level of
+arbitrary periodic indicators.
+
+> **Lemma C (density-weighted one-interval periodic discrepancy).**  If a
+> measurable set `B` is periodic with period `1/g` and has Haar density
+> `rho=measure(B)`, then every interval `I` satisfies
+>
+> ```text
+> |measure(I intersect B)-L rho|<=rho(1-rho)/g.           (11)
+> ```
+
+**Proof.**  Put `f=1_B-rho`.  Over one period of length `1/g`, the positive
+variation of its primitive is
+
+```text
+(1-rho) measure(B intersect one period)=rho(1-rho)/g,
+```
+
+and the negative variation has the same magnitude.  Remove all complete
+periods from `I`.  The remaining integral of `f`, even if it wraps across a
+period boundary, lies between minus the total negative variation and the
+total positive variation.  This is (11).  A single interval of density
+`rho` in each period shows the constant is sharp for arbitrary periodic
+indicators. ∎
+
+For `B=D_a intersect D_b`, one may take `g=gcd(a,b)`.  This improves the
+generic two-boundary estimate when the carrier is one interval.
+
+> **Theorem C (positioned tree and covered-interval Fano/gcd inequality).**
+> Put
+>
+> ```text
+> g_ij=gcd(s_i,s_j),
+> rho_ij=rho(s_i,s_j),
+> e_ij=rho_ij(1-rho_ij)/g_ij,
+> E=sum_(i<j) e_ij.
+> ```
+>
+> For every `I`, some spanning tree `T` on the seven combs satisfies
+>
+> ```text
+> sum_({i,j} in T) measure(I intersect D_(s_i) intersect D_(s_j))
+>   >=(102/1183)L-(2/7)E.                                (12)
+> ```
+>
+> If the seven danger combs cover `I`, then
+>
+> ```text
+> (51/169)L <= H/2+E.                                    (13)
+> ```
+>
+> Moreover, for every Fano labeling there is a Fano line `l` such that
+>
+> ```text
+> (51/1183)L <= H/14+sum_({i,j} subset l) e_ij.           (14)
+> ```
+
+**Proof.**  Lemma C gives, edge by edge,
+
+```text
+measure(I intersect D_(s_i) intersect D_(s_j))
+  >=L rho_ij-e_ij.
+```
+
+Summing and using (8) gives
+
+```text
+P>=(51/169)L-E.                                          (15)
+```
+
+A uniformly random labelled spanning tree of `K_7` contains each edge with
+probability `2/7`.  Its expected restricted weight is therefore `(2/7)P`,
+so the maximum tree has at least that weight.  Combining this with (15)
+proves (12).
+
+Now assume coverage.  Fragmentation for one comb gives
+
+```text
+measure(I intersect D_(s_i))<=L/7+1/(7s_i).
+```
+
+Integrating `Q(C)>=1` over the covered interval gives
+
+```text
+L<=sum_i measure(I intersect D_(s_i))-(2/7)P,
+```
+
+and hence
+
+```text
+P<=H/2.                                                   (16)
+```
+
+Combining (15) and (16) proves (13).  The seven Fano line overlap sums add
+to `P`, so some line contributes at most `P/7<=H/14`.  That line's global
+projective mass is at least `51/1183` by (7); applying Lemma C to its three
+edges proves (14). ∎
+
+This is a genuine positive second-order statement at the zero-coefficient
+wall.  In the notation of HYP-7678 it proves the requested positioned-tree
+shape with explicit coefficient `eta=102/1183`, but with error `(2/7)E`
+instead of `C H`.  Consequently HYP-7678 holds on every branch where
+`E<=kappa H`, with `C=2kappa/7`.  The general limitation is equally exact:
+for pairwise-coprime high speeds `E` remains order one while `H` tends to zero,
+so no absolute `kappa` follows and (12) does not close the wall.
+
+> **Corollary C1 (common-dilate scale bound).**  If `s_i=g a_i`, where the
+> seven `a_i` are distinct positive integers, then every covered interval
+> obeys
+>
+> ```text
+> gL<=1073/1183=0.9070160... .                            (17)
+> ```
+
+Indeed the union of the danger combs and its safe complement are periodic
+with period `1/g`.  By Corollary B2 the safe set has global measure at least
+`110/1183`, hence safe mass at least `110/(1183g)` in every fundamental period.
+A connected covered interval lies in one component of that period's danger
+union, whose length is at most its total mass `1073/(1183g)`.  This proves
+(17).
+
+For comparison, the density-weighted error itself gives a weaker but direct
+check: since `rho_ij<=1/7`, one has `e_ij<=6/(49g)`, so
+`E<=18/(7g)`; also
+`H<=(1/g)sum_(i=1)^7 1/i=363/(140g)`.  Substitution in (13) yields
+`gL<=61009/4760`.  Periodicity plus the global tree is what sharpens this to
+(17).
+
+If this is THM-1153's protected needle for a six-speed core of maximum `m`,
+so `L>=1/(7m)`, then
+
+```text
+g/m<=1073/169=6.3491124... .                             (18)
+```
+
+This bounds the common scale relative to the core maximum, not the smallest
+deleted speed.  It sharply removes large-common-factor protected needles but
+does not touch the pairwise-coprime high-speed branch.
+
+## 4. Why the global tree cannot simply be restricted
+
+For every `N>=1`, triangle inequality on the circle gives
+
+```text
+D_N intersect D_(N+1) subset {t:||t||<1/7}.              (19)
+```
+
+Therefore
+
+```text
+measure([1/7,6/7] intersect D_N intersect D_(N+1))=0      (20)
+```
+
+on an interval of length `5/7`, while the global pair mass is positive and
+`1/N+1/(N+1)` tends to zero.  Consequently no constants `eta>0,C<infinity`
+can make the per-edge statement
+
+```text
+measure(I intersect D_a intersect D_b)
+  >=eta|I|-C(1/a+1/b)                                    (21)
+```
+
+hold for all pairs and intervals.
+
+There is also a tree-level version of the warning.  On
+`{N,N+1,...,N+6}`, the six-edge order path consists entirely of consecutive
+pairs, so its restricted weight on `[1/7,6/7]` is zero.  Thus a tree chosen
+from global projective weights cannot be frozen and inherited by an arbitrary
+child interval.
+
+This does **not** refute HYP-7678.  That target may choose its tree after
+seeing the interval, and its interval is covered by all seven combs inside a
+specific core-safe carrier.  What (20) refutes is the tempting proof that
+localizes each edge of (6) independently.  Coverage, adaptive ownership, and
+where the locally best tree changes are indispensable hypotheses.
+
+## 5. Tournament and carrier audit
+
+The theorem supplies a natural switch on the seven speed vertices:
+
+```text
+pair observable: rho(s_i,s_j),
+switch: high iff rho>=1/63,
+gauge: orient high edges up speed order and strict-low edges down it.
+```
+
+The strict-low undirected graph is triangle-free.  The switched tournament
+need not be transitive: on `(1,2,3,4,5,6,10)` its score histogram is
+`(1,2,2,3,3,5,5)`, it has seven directed triangles, and its tie Hamiltonian
+path is `(10,1,2,3,4,5,6)` in speed labels (39 Hamiltonian paths total).
+
+This tournament preserves the global low/high channel, the Fano line debt,
+and the component proof of the MST floor.  It destroys exactly the data that
+(20) shows the interval problem consumes: tooth phase, endpoint address,
+owner chronology, and the position of the interval inside the gcd-period
+cell.  Two better vertex sets are now explicit:
+
+- the seven Fano lines as triple proof obligations, carrying (14); and
+- wall-crossing/owner chambers on `I`, carrying the locally optimal graphic
+  basis and its gcd-period address.
+
+The challenged assumption is therefore resolved in a precise direction:
+runner vertices suffice for the global theorem, while the remaining
+localized theorem must use obligation or chamber vertices.
+
+## 6. Verification and honest frontier
+
+The dependency-free Fraction referee checks:
+
+- `7,140` folded-versus-tent pair evaluations;
+- the complete `ab<=26` pair-floor and `ab<=55` strict-low cells;
+- all `49` oriented low-ratio products;
+- the complete `ab<=347` intermediate channel bank (`106` channels and
+  `173` compatible quotient triples);
+- all `22,692` configurations in the sharp product-`41`/product-`57`
+  two-edge reduction;
+- all `31,824` seven-subsets of `{1,...,18}` against (6)--(8);
+- all `128` active-set instances of the Fano decomposition (10);
+- `1,740` exact interval-discrepancy samples; and
+- the consecutive-path localization obstruction through scale `1000`.
+
+Normal and optimized Python runs are byte-identical.  Frozen hashes are
+stable because every certificate check uses an explicit `require` that raises
+`RuntimeError`; the referee contains no optimization-sensitive `assert`.
+
+```text
+source  960df28c1c0be54bfd9f25856a9691cf02b5ab6299f16ec95dbc85c09b2f9b71
+output  632c31bd652d62042d6b8984f2c3600f14deecc07c2ced7918a576922eef3307
+```
+
+What is closed is the global projective/Fano second order and the exact
+gcd-positioned necessary inequality for a covered needle.  What remains open
+is an error controlled by harmonic endpoint mass rather than the
+density-weighted gcd debt `E`, or an owner-incidence argument that uses
+coverage to defeat the localization counterexample.  HYP-7678, the seventh
+ratio jump, and LRC(14) remain open.

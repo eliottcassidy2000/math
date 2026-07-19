@@ -1769,3 +1769,92 @@ The module is kernel-pure with the standard axiom trio and no proof
 placeholders.  This does **not** prove that an arbitrary tight twelve-set is
 an AP, nor does it extract a tight deletion from an all-loose Cover14 crown;
 those remain separate external producers.
+
+## 2026-07-18 S76 addendum -- component-aware shape erosion through height 64
+
+THM-1168 extends that external exact method to all 95,336 primitive
+THM-1148 residual shapes `(a,b,c,d)` with `d<=64`.  The parameterized
+invariant is the largest cyclic gap `G_A` of the closed `1/(7d)`-eroded shape
+start set, with threshold `H_A=G_A+1/(7d)`.  The exact legal core phase floor
+beats `H_A` on 95,335 shapes.  The unique failed scalar comparison,
+`(49,50,51,56)`, is closed at its only exceptional scale by retaining the
+actual component address: all 165 legal cores have an exact intersection
+with a threefold lift of the shape-start set (8,456 intersections, zero
+failures).  This explicitly avoids THM-1167's refuted quantification over
+every individual first-comb gap.  All 40,336 additional residual shapes at
+heights 57..64 satisfy the universal radius criterion; the tightest is
+`(53,59,60,62)` with margin `2279/303800`.  Primitive shapes with `d>64` and
+uniform `r=5` remain open.  None of the finite orbit/core/ray banks or either
+erosion atlas has been promoted to kernel code.
+
+## 2026-07-18 S78 addendum -- the five-killer owner ledger closes `r=5`
+
+THM-1214 supersedes the last sentence above at the proof-map level.  With an
+eight-speed core and five killers, the transported residue-owner ledger has
+capacity
+
+```text
+d+2(5-rho)<12,
+```
+
+not THM-1154's six-killer inequality `d+2(6-rho)<12`.  This two-slot gain
+closes every carrier cardinality.  The exact new producers are a rho-two
+integer endpoint contradiction and a rho-three finite wall-cell lemma with
+478 first-comb rows, three bounded pair candidates, zero point-only rows, and
+zero covers.  The rho-four and rho-five arithmetic reuses THM-1155 and the
+first nested window of `LRCNestedCarrierWindow`.
+
+The formalization boundary is deliberately typed.  The theorem document
+restates the P-size-eight/five-killer owner lemma rather than applying
+THM-1154 at the wrong arity.  `LRCFiveKillerCarrierWindow.lean` now
+kernel-checks the capacity, rational endpoint/density consumers, and uniform
+terminal safe band.  The finite reduction to three pair rows and the
+topological extraction of a least carrier-safe boundary remain external
+interfaces.  The older shape atlases remain correct but are no longer an
+open branch.  Global LRC(14) is not claimed.
+
+## 2026-07-18 S77/S79 addendum -- continuum triangle core and exact corrections
+
+THM-1210 proves the uniform continuum four-comb ceiling `mu(BAD)<=2/21`.
+`LRCContinuumTriangleCeiling.lean` formalizes the non-AP deletion, the exact
+carry numerator, the 99-pair `p+q<=25` cutoff, the unique equality pair
+`(1,2)`, the four-deletion equality rigidity, and the rational ceiling/equality
+wrappers using kernel `decide`.  The comb/max-gap identity, Haar/alcove
+calculation, sheared shifted-grid tail, and identification of the carry
+rational with Haar measure remain explicit analytic bridges;
+finite-comb/eroded-start transfer is a separate open interface.
+
+THM-1213's `LRCPeelThreeCombHybrid.lean` checks the saturated peel,
+scale-free exact-score gate, five-piece sawtooth champion assembly, all six
+margin pieces, and the sharp-family address numerator.  Fractional-period
+decomposition and interval/component assembly remain external.  THM-1212's
+`LRCNestedCarrierWindow.lean` instantiates all actual rho-five/rho-six density
+covers and final open-tooth topology; only restricted-cover and owner-chart
+composition remain.  THM-1211's `LRCFourTorsionCenter.lean` checks the mod-four
+common-gauge criterion, and `LRCAPHomogeneity.lean` supplies an independent
+formal terminal proof for THM-1171's AP branch.  All five modules are
+root-imported; none claims the non-AP twelve-speed rigidity supplier or global
+LRC(14).
+
+## 2026-07-18 S80 addendum -- the common-gcd fourteen-clock stalk
+
+THM-1215 adds a second exact consumer of THM-1192.  Under
+`q=b6-b5=14d`, `q>=7a`, and `gcd(b_i,q)=d` for the five earlier fast
+speeds, all six fast strict-danger masks reduce to `{0}` in `Z/14Z`.
+Every slow-gap beat block has at least six consecutive numerators, so it
+contains an explicit numerator outside the common mask.  The paper proof
+therefore gives a literal lonely point in every slow gap.  The weaker
+phase-free route specializes THM-1192 to
+
+```text
+U(N,14)=ceil(N/14),
+N-U(N,14)<=4U(N,14),
+```
+
+which is impossible for `N>=6`.
+
+`LRCBeatPunctureQ14.lean` kernel-checks the period-cap identity, the strict
+five-cap inequality, the negated phase-free law, and a typed bridge consumer.
+The real-gap-to-block supplier and the speed-gcd reduction remain explicit
+analytic hypotheses.  The module is root-imported and makes no claim about
+the general mixed-gcd slow-gap branch or global LRC(14).

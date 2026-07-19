@@ -1,0 +1,21 @@
+THM-1213 peel-first sharp-three-comb hybrid referee
+arithmetic=integers and fractions.Fraction
+optimized_mode_guard=require() only; assert_statements=0
+first-transfer normalized floor=72/35; slack above 13/7=1/5
+Q_hyb=6(3d-b-c)/a-6d/b-6d/c-37
+dispersion identity=6d/a-49+6(b-a)(d-b)/(ab)+6(c-a)(d-c)/(ac)
+one-peel-Q optimality=Q_a>Q_b,Q_c; Q_d<18-37<0
+identity audit rows through d<=120: 8214570
+height-64 THM-1148 residual census=95336
+hybrid successes=484; clean 6d>=49a=351; exact-only=133
+deeper recursive gates on THM-1148 residual: two-peel/two-comb=0; three-peel/one-comb=0
+tightest hybrid=(Fraction(51, 559), (6, 39, 43, 44)); largest=(Fraction(55147, 651), (3, 62, 63, 64))
+near-top rays first closed (a,d,Q)=((3, 22, Fraction(4, 35)), (4, 31, Fraction(201, 145)), (5, 39, Fraction(3226, 3515)), (6, 47, Fraction(208, 345)), (7, 55, Fraction(1258, 3339)), (8, 63, Fraction(781, 3782)), (9, 71, Fraction(178, 2415)), (10, 80, Fraction(2928, 5135)), (11, 88, Fraction(5869, 13717)), (12, 96, Fraction(2761, 8930)))
+Tournament Analysis:
+  runner/shape order scores=(3, 2, 1, 0); cycles=0; SCCs=(1,1,1,1); HP=1
+  reverse-order gauge flips=6
+  pairwise observable=numerical shape order; switch=reverse order; tie path=a->b->c->d
+  faithful object=first-gap proof state plus two weighted interiority energies
+  destroyed by tournament=metric gap|Q margin|endpoint dispersion|core entry width
+  challenged vertices=runners|shape coordinates|gaps|walls|interval states|proof obligations
+VERDICT: Q_hyb>0 closes; in particular 6d>=49a closes uniformly at every legal scale
