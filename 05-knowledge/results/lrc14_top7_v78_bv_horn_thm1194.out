@@ -1,0 +1,58 @@
+THM-1194 FIRST TOP-SEVEN BV HORN -- EXACT REPLAY
+
+theorem:
+  no ordered thirteen-speed LRC(14) counterexample has
+  v7=78 and v7>=13*v6
+
+core rigidity:
+  v6=6
+  lower core=1,2,3,4,5,6
+  core interval=11/84,13/84
+  core minima=11/84,11/42,11/28,8/21,19/84,1/14
+
+embedded slow gap:
+  a=78
+  k=11
+  G=155/1092,167/1092
+  G subset [11/84,13/84]=true
+  left inclusion margin=1/91
+  right inclusion margin=1/546
+
+BV certificate:
+  schema=lrc1194-top7-m6-bv-v1
+  rows=1
+  bins=200
+  cutoff multiplier=140
+  cutoff B=10920
+  low speeds checked=10842
+
+max exact low load:
+  speed=324
+  load=13498696201763/80999999992386
+  1/6-load=651898484/40499999996193 > 0
+
+exact variation:
+  V=2121404250001400/499999999953
+
+exact tail at b=10921:
+  tail=2123224416495771/12741166665468997
+  1/6-tail=1820166494371/76446999992813982 > 0
+
+closed-tooth conclusion:
+  every faster closed danger comb has BV mass <1/6
+  six faster combs, even with repetitions, cannot cover G
+
+independent replay:
+  command=python3 -O 04-computation/lrc14_top7_v78_bv_horn_thm1194_verify.py 05-knowledge/results/lrc14_top7_v78_bv_horn_thm1194_certificate.json
+  result=VERIFIED_EXACT THM-1194 rows=1 a=78 k=11 multiplier=140 bins=200
+  wall_seconds=45.75 (concurrent machine load)
+
+sha256:
+  verifier=5620bf69af5b332ca12eae2e145085b793ce4b072f3fff934c0d416297a1efe5
+  certificate=7fc237ebcacdd567d98bcaf871ebac3a84a06ffd767fa7cc34e874613c62ab56
+certificate_bytes=2470
+
+frontier telemetry:
+  the continuation discovery at a=79,k=11 did not produce a passing row
+  this is not an infeasibility certificate and not a cover witness
+  v7=79 and every larger top-seven carrier remain open
