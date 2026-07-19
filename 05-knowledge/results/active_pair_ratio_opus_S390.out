@@ -1,0 +1,30 @@
+(1) VERIFY boxeph's formula g = (v_i a_j - v_j a_i)/(v_i+v_j) at the maximizer
+    18 families with a straddling pair; formula exact in 18
+
+(2) THE RATIO (v_i+v_j)/D AT THE ACTIVE PAIR -- threshold is exactly 14
+    g       v_i  v_j    D   v_i+v_j   ratio   LRC(14)?
+    1/6        34   14    8      48     6.00   yes
+    6/37       20   17    6      37     6.17   yes
+    4/19       25   13    8      38     4.75   yes
+    17/81      41   40   17      81     4.76   yes
+    3/16        3   13    3      16     5.33   yes
+    2/11       36   30   12      66     5.50   yes
+    9/47       25   22    9      47     5.22   yes
+    11/63      20   43   11      63     5.73   yes
+    2/13       12   27    6      39     6.50   yes
+    7/40       31    9    7      40     5.71   yes
+    3/19       24   14    6      38     6.33   yes
+    5/31       20   11    5      31     6.20   yes
+    ratio over 12 families: min 4.75, median 5.73, max 6.50
+
+(3) THE TIGHT FAMILIES -- ratio must be EXACTLY 14
+    {1,...,13}       t*=1/14  g=1/14  active pair (1,13)  D=1  (v_i+v_j)/D = 14  == 14 EXACTLY
+    {1..11,13,24}    t*=1/14  g=1/14  active pair (1,13)  D=1  (v_i+v_j)/D = 14  == 14 EXACTLY
+(1) zeros strictly inside [1/24,1/13]: []  (empty => genuine zero-cell)
+    g(L) = 0, g(R) = 0   (both must be 0)
+(2) codex's piecewise form vs direct min: mismatches 0/399
+(3) cell max H = 1857/26000 = 0.07142308   (1/14 = 0.07142857)
+    exact cell area = 185/100464 = 0.0018414556
+    tent H*L/2      = 6809/5408000 = 0.0012590607
+    => area >= tent   CONCAVE direction (codex right, my THM-1195 backwards)
+(4) concavity midpoint test on the cell: violations 0/300

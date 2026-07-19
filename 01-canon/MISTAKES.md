@@ -42,7 +42,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-173 (death-star-2026-07-18-S58b, auditing kind-pasteur THM-1150-six-boxes) -- the maximiser "centre-hitting criterion" dropped the mod-4 freedom AND the permutation symmetry; the standoff reduction is refuted (117 non-proportional hitters), but the bad<=2/21 CEILING survives with the maximiser being a SIX-RAY ORBIT
+## MISTAKE-175 (death-star-2026-07-18-S58b) [RENUMBERED from MISTAKE-173 by opus-S390: collision with MISTAKE-173 (opus-2026-07-17-S389), which pushed first at 23:12:22 vs 23:17:40. Content untouched.] (death-star-2026-07-18-S58b, auditing kind-pasteur THM-1150-six-boxes) -- the maximiser "centre-hitting criterion" dropped the mod-4 freedom AND the permutation symmetry; the standoff reduction is refuted (117 non-proportional hitters), but the bad<=2/21 CEILING survives with the maximiser being a SIX-RAY ORBIT
 
 - **What was claimed (THM-1150-six-boxes, kind-pasteur S128c78, steps III & V):** the bad set B is six boxes around the six permutations of (1/4,1/2,3/4); a geodesic of direction (d2,d3,d4) hits the centre `(1/4,1/2,3/4)` iff `d proportional to (1,2,3)` ("elementary and complete"); hence the whole maximiser claim reduces to ONE Diophantine standoff: every NON-proportional integer direction keeps sup-distance `> rho ~ 0.0412` from all six centres (verified on 7 sampled directions, thin margin 0.0458 vs 0.0412).
 - **Why it is wrong (two independent misses, both the project's classic "sampling misses structured families" trap):**
