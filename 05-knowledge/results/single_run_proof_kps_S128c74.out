@@ -1,0 +1,26 @@
+### (1) is F unimodal in j, with minimum at j ~ k1/4 ? ###
+  k1     argmin j   argmin/k1   #local minima   #sign changes of the difference
+  157    39         0.2484      2               4
+  197    49         0.2487      2               4
+  237    59         0.2489      2               4
+  277    69         0.2491      2               4
+  317    79         0.2492      2               4
+  357    89         0.2493      2               4
+  397    99         0.2494      2               4
+
+### (2) the bad set: is it ONE run, and how wide? ###
+  k1     #bad   #runs   longest run   run/k1     run centre/k1   threshold-normalised
+  157    12     2       6             0.038217   0.2580          ok
+  207    16     2       8             0.038647   0.2585          ok
+  257    22     2       11            0.042802   0.2607          ok
+  307    26     2       13            0.042345   0.2606          ok
+  357    32     2       16            0.044818   0.2591          ok
+  407    38     2       19            0.046683   0.2604          ok
+
+  WORST: bad fraction 0.046683 at k1=407 (2 runs, longest 19)
+  THM-1145 asserted a single run of width <= 0.0457*k1 : VIOLATED
+
+### (3) multi-run check: does the bad set EVER split? ###
+  k1 values in [157,420) whose bad set is NOT a single run: 263
+    [(157, 2, 12), (158, 2, 12), (159, 2, 14), (160, 2, 12), (161, 2, 12), (162, 2, 14), (163, 2, 14), (164, 2, 14), (165, 2, 12), (166, 2, 14)]
+DONE
