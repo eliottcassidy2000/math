@@ -9,7 +9,7 @@ Targets (all gate-predicted OPEN by THM-1257's law {N == 1 mod L_D, N != 1 mod 2
   F_10(510511) = {1..510509, 510511, 5105100}  -> predicted 10/5105119
                   (window (1/510512, 2/1021023), width ~1.9e-12)
 
-Machinery: THM-1258's e-channel reduction + THM-1270's ghost enumeration,
+Machinery: THM-1271's e-channel reduction + THM-1270's ghost enumeration,
 re-gated here (142/142 vs the full evaluator + the two big members).
 The tower-closure/composite-skip lemma is verified at each target N
 (gcd(2D'-1, Q_{D'}) > 1 for every lower rung D').

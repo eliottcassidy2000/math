@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 death-star-2026-07-19-S59e -- HYP-7910: the D=9 rung at N=30031, via the
-GHOST-ENUMERATION evaluator (THM-1258's e-channel reduction with an O(De)
+GHOST-ENUMERATION evaluator (THM-1271's e-channel reduction with an O(De)
 clearance computation), plus the COMPOSITE-SKIP LEMMA verification.
 
 TARGET: F_9(30031) = {1..30029, 30031} u {270270}; p = 17, Q = 270287;
@@ -39,7 +39,7 @@ sys.path.insert(0, '04-computation')
 log = lambda s="": print(s, flush=True)
 
 def M_ghost(N, D):
-    """exact M(F_D(N)) via THM-1258 reduction + ghost enumeration.
+    """exact M(F_D(N)) via THM-1271 reduction + ghost enumeration.
     Requires N odd, gcd(2D-1, Q)=1, N > 3D-2."""
     p = 2*D - 1
     Q = (N+1)*D - 1

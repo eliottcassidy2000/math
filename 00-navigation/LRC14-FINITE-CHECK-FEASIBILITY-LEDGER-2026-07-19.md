@@ -1,6 +1,6 @@
 # LRC(14) finite-check feasibility ledger — the Rosenfeld/S–T route priced for n=14
 
-**kind-pasteur-2026-07-19-S128c87** (HYP-7915; executes the S128c86 backlog lead (i)).
+**kind-pasteur-2026-07-19-S128c87** (HYP-7921; executes the S128c86 backlog lead (i)).
 Primary sources fetched and extracted this session: Rosenfeld arXiv:2509.14111 (n=8);
 Sungkawichai–Trakulthongchai arXiv:2604.23906 (n=11,12,13); MSS bound as used by both.
 Script + frozen output: `04-computation/lrc14_finite_check_ledger_kps_S128c87.py`,
@@ -135,7 +135,7 @@ program.
 
 ## 6. Cross-links
 
-HYP-7915 (this session) · HYP-7890 §4 (the reframing that filed this lead) ·
+HYP-7921 (this session) · HYP-7890 §4 (the reframing that filed this lead) ·
 HYP-4055 (q* ≤ 13 ln M, the repo's own 2026-07-03 finite-check reduction — compatible:
 its q* ≈ 450 scale matches the prime budget's 191..859 range) · HYP-6100 (klein's
 literature assessment: Tao Thm22 v_max ≤ 15; Pandey ≤ 23; MSS Thm21) · THM-574/576

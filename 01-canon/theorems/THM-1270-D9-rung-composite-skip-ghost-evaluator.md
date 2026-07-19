@@ -3,14 +3,14 @@ id: THM-1270
 title: The D=9 rung CONFIRMED at N=30031 — M(F_9(30031)) = 9/270287 exactly (fourth consecutive out-of-sample tower confirmation, primorial 30030, window width 5.5·10⁻¹⁰, computed in ONE second) — with the COMPOSITE-SKIP LEMMA (two lines: at tower-N every composite binder's rung is dead because a prime factor of 2D−1 lies in the primorial and divides Q_D) and the TOWER-CLOSURE LEMMA (all lower prime rungs dead: N ≡ 1 mod p ⟹ p | Q_D), plus the GHOST-ENUMERATION evaluator (O(De) clearance per candidate; 142/142 validation rows exact).
 status: >
   PROVED — the composite-skip and tower-closure lemmas (both from one congruence:
-  Q_D ≡ 2D−1 mod ℓ when N ≡ 1 mod ℓ); the L1 floor M ≥ 9/270287 (THM-1258 Lemma 1,
+  Q_D ≡ 2D−1 mod ℓ when N ≡ 1 mod ℓ); the L1 floor M ≥ 9/270287 (THM-1271 Lemma 1,
   witness a = 31799, direct residue check over all 30031 speeds). PROOF-BACKED EXACT —
-  M(F_9(30031)) = 9/270287 via THM-1258's e-channel reduction with the ghost-enumeration
+  M(F_9(30031)) = 9/270287 via THM-1271's e-channel reduction with the ghost-enumeration
   clearance (gated: 142/142 odd-N table rows vs the full evaluator, 0 mismatches;
   reproduces 6/1271 and 7/16183).
 source: death-star-2026-07-19-S59e (HYP-7910; owner: run the D=9 rung at N=30031)
 depends_on:
-  - THM-1258  # Lemmas 1-3 + the e-channel reduction (the machinery)
+  - THM-1271  # Lemmas 1-3 + the e-channel reduction (the machinery)
   - THM-1257  # the tower being extended
 related: [THM-1256, HYP-7905, kind-pasteur S128c86 (the tie side: F_2 Goddyn-Wong periodicity)]
 scripts:
@@ -25,7 +25,7 @@ scripts:
 F_9(30031) = {1, …, 30029, 30031} ∪ {270270}        (30031 speeds; x = 9·30030)
 M(F_9(30031)) = 9/270287  EXACTLY                    (Q = 30032·9 − 1 = x + 17)
 rung ATTAINED, strictly inside W_30031 = (1/30032, 2/60063), width 5.544·10⁻¹⁰.
-Witness: a = 31799 = 9·17⁻¹ mod Q (THM-1258 L1's closed form; min distance 9
+Witness: a = 31799 = 9·17⁻¹ mod Q (THM-1271 L1's closed form; min distance 9
 over all 30031 speeds, checked directly).  Exact upper bound: the ghost
 evaluator, 1 second.
 ```
@@ -57,7 +57,7 @@ computation shows it is not merely live but attained.
 
 ## 3. The ghost-enumeration evaluator
 
-THM-1258 reduced exact `M(F_D(N))` to the e-channel; the remaining cost was the
+THM-1271 reduced exact `M(F_D(N))` to the e-channel; the remaining cost was the
 O(N) clearance sweep per candidate. The ghost enumeration replaces it: in the
 channel at modulus S with `gcd(a, S) = g′`, the elements at distance r are the
 representatives ≤ N of `u ≡ ±(r/g′)·(a/g′)⁻¹ (mod S/g′)` (empty unless

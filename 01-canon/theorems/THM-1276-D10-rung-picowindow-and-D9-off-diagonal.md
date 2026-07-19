@@ -2,13 +2,13 @@
 id: THM-1276
 title: The tower reaches primorial 510510 — M(F_10(510511)) = 10/5105119 exactly (D=10, binder 19, a PICO-width window 1.9·10⁻¹², 19 seconds at half a million speeds), and the D=9 gate is confirmed OFF the primorial diagonal (F_9(60061) = 9/540557, F_9(90091) = 9/810827) — out-of-sample confirmations #5, #6, #7 of the D-graded gate law.
 status: >
-  PROOF-BACKED EXACT (THM-1258 Lemmas 1-3 + THM-1002 + the THM-1270 ghost evaluator,
+  PROOF-BACKED EXACT (THM-1271 Lemmas 1-3 + THM-1002 + the THM-1270 ghost evaluator,
   re-gated this run: 142/142 table rows + both big members): all three values. PROVED
   per-target: the L1 floors (closed-form witnesses, direct residue checks) and the
   tower closures (every lower rung dead via gcd(2D'−1, Q_{D'}) > 1, the THM-1270
   lemma). The gate law itself remains verified-at-7-hits + mechanism-derived.
 source: death-star-2026-07-19-S59f (HYP-7915; owner: run the D=10 rung at N=510511)
-depends_on: [THM-1270, THM-1258, THM-1257, THM-1002]
+depends_on: [THM-1270, THM-1271, THM-1257, THM-1002]
 scripts:
   - 04-computation/lrc_D10_rung_N510511_deathstar_S59f.py -> 05-knowledge/results/lrc_D10_rung_N510511_deathstar_S59f.out
 ---
@@ -46,4 +46,4 @@ future run, not a casual one.
 Scope: these are gap-membership results for the canonical species at enormous N —
 structurally decisive for the cross-N law, untouched by and not touching the
 N=12/13 walls except through the ghost-channel lens already handed to those
-threads (THM-1258 §4, boxeph/opus handoffs).
+threads (THM-1271 §4, boxeph/opus handoffs).

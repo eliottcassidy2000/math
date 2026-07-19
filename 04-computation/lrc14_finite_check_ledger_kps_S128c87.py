@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-kind-pasteur-2026-07-19-S128c87 -- HYP-7915: the FINITE-CHECK FEASIBILITY LEDGER
+kind-pasteur-2026-07-19-S128c87 -- HYP-7921: the FINITE-CHECK FEASIBILITY LEDGER
 for LRC(14) via the Rosenfeld / Sungkawichai-Trakulthongchai architecture.
 
 Method (from the primary sources, fetched this session):
