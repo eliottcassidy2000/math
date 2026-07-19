@@ -1,0 +1,24 @@
+THM-1273 CENTERED-PROTRUSION / FASTEST-WALL EXACT REFEREE
+optimization_sensitive_assert_nodes=0
+small_tail_budget=four_prefix_mass_gt_2/9; tail_mass_lt_1/8; inside_mass_gt_7/72
+outside_obligation=five_prefix_mass_gt_11/360 contained_in_protrusion
+wall_dichotomy=bare_j4_wall OR lower-crossed_fastest_wall
+endpoint_quantum_rows=40504 minimum_quantum_ratio=1 row=(8, 7, -17, -15, 'left')
+sharp_c140_ell=33/280 x=7476011/12938240 y=7425603/12837160
+sharp_four_prefix_components=5 five_prefix_components=3
+sharp_fastest_walls=14603/25270,2923/5054,14617/25270
+sharp_wall_crossers=(256,),(256,),()
+sharp_crossed_wall_seams=213/6469120,65/1293824
+TOURNAMENT_AND_CARRIER_AUDIT
+runner_vertices=d2,d3,d4,d5,h; observable=speed_order; gauge=increasing
+runner_score_histogram=0,1,2,3,4 cycles=0 scc_sizes=1,1,1,1,1 hamiltonian_paths=1
+wall_vertices=z1,z2,z3; observable=chronological_order; gauge=oriented_x_to_y
+wall_score_histogram=0,1,2 cycles=0 scc_sizes=1,1,1 hamiltonian_paths=1
+sharp_wall_incidence=(256),(256),()
+faithful_carrier=oriented four-prefix survivor components + fastest-wall events + active-low subsets
+preserves=inside-fastest-active to outside-fastest-safe transport and exact wall label
+destroys_if_runner_only=phase,wall_position,bare-vs-crossed status,seam numerator
+challenged_vertices=runners,teeth,gaps,boundaries,wall_events,residues,Fano_lines,proof_obligations
+NO_DOUBLE_COUNT=the crossed seam may already occur in THM-1253/1270; the bare wall has zero mass
+SCOPE=paper topology plus exact arithmetic consumer; no selected-fastest-tooth claim; no LRC14 closure
+RESULT=PASS
