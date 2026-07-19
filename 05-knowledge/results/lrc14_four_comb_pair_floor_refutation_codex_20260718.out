@@ -1,0 +1,36 @@
+THM-1191 exact referee: four-comb pair-floor refutation
+============================================================================
+pair-overlap formula crosscheck
+folded formula == capped trapezoid: 4064 pairs
+
+thirteen-adic self-similar ladder
+rho(1,13^d)=1/49*(1-6/13^d), d odd
+rho(1,13^d)=1/49*(1+6/13^d), d even
+common-scale checks: u=1,2,7,31,169
+pair rows: (1,13):1/91, (1,169):25/1183, (1,2197):313/15379, (13,169):1/91, (13,2197):25/1183, (169,2197):1/91
+R4=210/2197 < 13/135 by 211/296595
+
+finite integer-ratio telemetry (not a universal proof)
+q=2..200 consecutive geometric chains: unique old-floor refuter q=13
+scope: telemetry only; no corrected universal R4 floor is claimed
+
+six-wall four-subset averaging guardrail
+sum_[|A|=4] R4(A)=6 R6; number of four-subsets=15
+any uniform four-floor L gives R6 >= (5/2)L
+counterexample forces L<=210/2197, so black-box route <= 525/2197
+13/54 exceeds that route ceiling by 211/118638
+post-chi local constant: route <= 450/2197 < target 13/63
+post-chi gcd RHS constant: route <= 88200/28561 < target 28/9
+the drift coefficient 72/13 is unchanged; only the constant term drops
+
+tournament and alternate-carrier audit
+vertices challenged: 13-adic exponent levels, not runners or arcs
+observable: signed correction rho(13^i,13^j)-1/49
+gauge: low correction points up the exponent line; high reverses
+tie path: natural exponent order (unused here: there are no ties)
+fingerprint: scores 1,1,2,2; cycles 2; SCC sizes [4]; paths 5; flips 2
+preserved: parity sign pattern; destroyed: 13^-gap magnitude and exact R4
+faithful carrier: ordered exponent stalk + parity colour + gap weight
+challenged carriers: runners, gaps, residues, valuation levels, obligations
+============================================================================
+done

@@ -1,0 +1,39 @@
+THM-1192 EXACT BEAT-PUNCTURE AUDIT
+Reproduction is split into two invocations so the exhaustive and seeded
+audits remain independently restartable.
+
+$ python3 -u 04-computation/beat_puncture_mixed_gcd_codex_20260718.py --random 0
+THM-1192 EXACT BEAT-PUNCTURE AUDIT
+A(Q)=2*ceil(Q/14)-1 brute check, Q=1..500: PASS
+carrier-only sum-beat audit (a<=7, b6<=3a):
+  harmonic mixed-gcd packets: 4165
+  some gap passes phase-free count cap: 4165
+  some gap passes exact sum count: 320
+  some gap passes exact carrier-beat union: 107
+carrier-only survivor refuted by a fast-fast beat:
+  (a,b,k)=(5, (6, 7, 9, 11, 12, 15), 2); witness (u,v,kind,q,p)=(6, 7, 'sum', 13, 6); t=6/13
+all-pairs exhaustive audit (a<=10, b6<=3a):
+  a=2: packets=0, survivors=0
+  a=3: packets=1, survivors=0
+  a=4: packets=28, survivors=0
+  a=5: packets=210, survivors=0
+  a=6: packets=923, survivors=0
+  a=7: packets=3003, survivors=0
+  a=8: packets=7980, survivors=0
+  a=9: packets=18563, survivors=0
+  a=10: packets=38550, survivors=0
+  TOTAL packets=69258, survivors=0
+tournament audit: pair observable is symmetric; no canonical orientation
+faithful object: pair -> safe beat point -> complementary-comb incidence
+PROVED content: all-range inclusion and A(Q) count only
+TELEMETRY content: every finite/random elimination count above
+
+$ python3 -u 04-computation/beat_puncture_mixed_gcd_codex_20260718.py --skip-carrier --skip-exhaustive --random 50000
+THM-1192 EXACT BEAT-PUNCTURE AUDIT
+A(Q)=2*ceil(Q/14)-1 brute check, Q=1..500: PASS
+seeded all-pairs audit (a<=60, b6<=6a-3, seed=1192):
+  accepted crowded mixed-gcd draws=50000, attempts=50197, survivors=0
+tournament audit: pair observable is symmetric; no canonical orientation
+faithful object: pair -> safe beat point -> complementary-comb incidence
+PROVED content: all-range inclusion and A(Q) count only
+TELEMETRY content: every finite/random elimination count above

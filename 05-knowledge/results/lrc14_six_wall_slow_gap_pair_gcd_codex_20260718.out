@@ -1,0 +1,18 @@
+THM-1179 exact replay: six-wall slow-gap pair/gcd obstruction
+quadratic Q6 values: 0, 1, 5/3, 2, 2, 5/3, 1
+graph densities: K6=3, path=1, chi rows=[(0, 6, 15, Fraction(3, 1)), (1, 5, 10, Fraction(5, 2)), (2, 4, 7, Fraction(2, 1)), (3, 3, 6, Fraction(3, 2))]
+six-pair floor R6=5/24; union ceiling=397/504; period ratio=397/432
+mixed branch: a*sum(1/gij) >= (35-72*delta)/13
+same-chi7 reduced bank: 58 rows through b'=19
+same-chi7 floor=1/77 at reduced ratios 1:11 and 2:11
+tail b'>=20 starts at 13/980 > 1/77
+nonseam cross-chi7 floor=1/84 at reduced ratio 1:12; 33-row bank, tail 10/833
+chi7 branch: a*sum_same(1/gij) >= 24E/143-(12q/13)*delta
+periodic discrepancy checks: 4004 envelopes, 3612 single intervals, 378 pair means, 48762 pair intervals
+Fano incidence masks: 64 through/off lines=3/4
+Fano line errors: triple=6695/84672, pair=550/8281, same-chi pair=8/121
+all-line period ratio: 1844255/650988 = 2.8330092106152494
+chi-matched period ratio: 222893927/78769548 = 2.8296966614560235
+zero-pair guardrail: a=14, k=2, b=18..23, G=[29/196,41/196], single mass=850237/16959096, local pair mass=0
+runner tournament: score histogram=0,1,2,3,4,5; cycles=0; SCCs=1^6; Hamilton paths=1; ties=0; endpoint-hypergraph verdict lost
+ALL EXACT CHECKS PASSED

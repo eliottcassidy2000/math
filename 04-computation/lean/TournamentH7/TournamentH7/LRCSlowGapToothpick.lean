@@ -38,7 +38,7 @@ theorem slow_gap_pressure_from_cleared_cover (c L S r : ℝ) (hc : 0 ≤ c)
   have hgap : 7 * (7 - r) * L ≤ 6 * S := by
     nlinarith [hcover]
   have hscaled := mul_le_mul_of_nonneg_left hgap hc
-  have hlength_scaled := congrArg (fun x : ℝ ⇒ (7 - r) * x) hlength
+  have hlength_scaled := congrArg (fun x : ℝ ↦ (7 - r) * x) hlength
   nlinarith [hscaled, hlength_scaled]
 
 /-! ## Equality parity obstruction -/
@@ -64,7 +64,7 @@ theorem cleared_equality_parity_impossible (r A P : ℕ) (hr : r ≤ 7)
   have hsides : r % 2 = (7 - r) % 2 := by
     calc
       r % 2 = (3 * A) % 2 := hleft.symm
-      _ = ((7 - r) * P) % 2 := congrArg (fun x : ℕ ⇒ x % 2) heq
+      _ = ((7 - r) * P) % 2 := congrArg (fun x : ℕ ↦ x % 2) heq
       _ = (7 - r) % 2 := hright
   exact seven_complement_parity_mismatch r hr hsides
 
@@ -121,14 +121,21 @@ theorem six_consecutive_envelope_lt_one (a : ℚ) (ha : 1 ≤ a) :
   have hp1 : 0 < 6 * a + 1 := by linarith
   have hp2 : 0 < 6 * a + 2 := by linarith
   have hp3 : 0 < 6 * a + 3 := by linarith
+  have hm2_normal : -2 + a * 6 ≠ 0 := by linarith
+  have hm1_normal : -1 + a * 6 ≠ 0 := by linarith
+  have hpair_pos : 0 < (6 * a - 2) * (6 * a - 1) := mul_pos hm2 hm1
+  have hpair_normal : 2 - a * 18 + a ^ 2 * 36 ≠ 0 := by
+    nlinarith [hpair_pos]
   have hidentity :
       1 - sixEnvelope a =
         sixEnvelopeNumerator (6 * a) /
           (6 * (6 * a - 2) * (6 * a - 1) * (6 * a + 1) *
             (6 * a + 2) * (6 * a + 3)) := by
-    field_simp [sixEnvelope, sixEnvelopeNumerator, ne_of_gt hm2, ne_of_gt hm1,
-      ne_of_gt h0, ne_of_gt hp1, ne_of_gt hp2, ne_of_gt hp3]
-    <;> ring
+    unfold sixEnvelope sixEnvelopeNumerator
+    field_simp [ne_of_gt hm2, ne_of_gt hm1, ne_of_gt h0, ne_of_gt hp1,
+      ne_of_gt hp2, ne_of_gt hp3, hm2_normal, hm1_normal, hpair_normal]
+    field_simp [hm2_normal, hm1_normal, hpair_normal]
+    ring
   have hy : 0 ≤ 6 * a - 6 := by linarith
   have hnum : 0 < sixEnvelopeNumerator (6 * a) := by
     unfold sixEnvelopeNumerator
@@ -145,7 +152,7 @@ theorem six_consecutive_envelope_lt_one (a : ℚ) (ha : 1 ≤ a) :
 /-- If six distinct increasing integer speeds carry normalized reciprocal
 pressure above one, their first speed is at most `6a-3`. -/
 theorem first_speed_le_six_a_sub_three
-    (a b0 b1 b2 b3 b4 b5 : ℕ) (ha : 1 ≤ a) (hab : a < b0)
+    (a b0 b1 b2 b3 b4 b5 : ℕ) (ha : 1 ≤ a)
     (h01 : b0 < b1) (h12 : b1 < b2) (h23 : b2 < b3)
     (h34 : b3 < b4) (h45 : b4 < b5)
     (hpressure :
@@ -160,7 +167,9 @@ theorem first_speed_le_six_a_sub_three
   have hn4 : 6 * a + 2 ≤ b4 := by omega
   have hn5 : 6 * a + 3 ≤ b5 := by omega
   let A : ℚ := a
-  have hA1 : 1 ≤ A := by exact_mod_cast ha
+  have hA1 : 1 ≤ A := by
+    dsimp [A]
+    exact_mod_cast ha
   have hA0 : 0 ≤ A := le_trans (by norm_num) hA1
   have hb0 : 6 * A - 2 ≤ (b0 : ℚ) := by
     have : (6 : ℚ) * a ≤ b0 + 2 := by exact_mod_cast hn0
@@ -170,10 +179,18 @@ theorem first_speed_le_six_a_sub_three
     have : (6 : ℚ) * a ≤ b1 + 1 := by exact_mod_cast hn1
     dsimp [A]
     linarith
-  have hb2 : 6 * A ≤ (b2 : ℚ) := by exact_mod_cast hn2
-  have hb3 : 6 * A + 1 ≤ (b3 : ℚ) := by exact_mod_cast hn3
-  have hb4 : 6 * A + 2 ≤ (b4 : ℚ) := by exact_mod_cast hn4
-  have hb5 : 6 * A + 3 ≤ (b5 : ℚ) := by exact_mod_cast hn5
+  have hb2 : 6 * A ≤ (b2 : ℚ) := by
+    dsimp [A]
+    exact_mod_cast hn2
+  have hb3 : 6 * A + 1 ≤ (b3 : ℚ) := by
+    dsimp [A]
+    exact_mod_cast hn3
+  have hb4 : 6 * A + 2 ≤ (b4 : ℚ) := by
+    dsimp [A]
+    exact_mod_cast hn4
+  have hb5 : 6 * A + 3 ≤ (b5 : ℚ) := by
+    dsimp [A]
+    exact_mod_cast hn5
   have ht0 : A / (b0 : ℚ) ≤ A / (6 * A - 2) :=
     div_le_div_of_nonneg_left hA0 (by linarith) hb0
   have ht1 : A / (b1 : ℚ) ≤ A / (6 * A - 1) :=
@@ -199,12 +216,12 @@ theorem first_speed_le_six_a_sub_three
 /-! ## Exact recursive cutoffs and the toothpick ladder -/
 
 /-- Denominator-cleared form of the five-speed integer cutoff. -/
-theorem five_speed_cutoff_iff (c d : ℕ) (hc : 1 ≤ c) :
+theorem five_speed_cutoff_iff (c d : ℕ) :
     d ≤ (5 * c - 4) / 2 ↔ 2 * d ≤ 5 * c - 4 := by
   omega
 
 /-- Denominator-cleared form of the four-speed integer cutoff. -/
-theorem four_speed_cutoff_iff (c d : ℕ) (hc : 2 ≤ c) :
+theorem four_speed_cutoff_iff (c d : ℕ) :
     d ≤ (8 * c - 9) / 6 ↔ 6 * d ≤ 8 * c - 9 := by
   omega
 
@@ -214,24 +231,27 @@ theorem five_speed_cutoff_ratio (c d : ℕ) (hc : 1 ≤ c)
     (d : ℚ) / c < 5 / 2 := by
   have hcQ : (0 : ℚ) < c := by exact_mod_cast (lt_of_lt_of_le Nat.zero_lt_one hc)
   rw [div_lt_iff₀ hcQ]
-  have hcutQ : (2 : ℚ) * d ≤ 5 * c - 4 := by exact_mod_cast hcut
-  linarith
+  have hraw : 2 * d + 4 ≤ 5 * c := by omega
+  have hrawQ : (2 : ℚ) * d + 4 ≤ 5 * c := by exact_mod_cast hraw
+  linarith [hrawQ]
 
 /-- The four-speed cutoff implies the sharper strict ratio `d/c < 4/3`. -/
 theorem four_speed_cutoff_ratio (c d : ℕ) (hc : 2 ≤ c)
     (hcut : 6 * d ≤ 8 * c - 9) :
     (d : ℚ) / c < 4 / 3 := by
   have hcQ : (0 : ℚ) < c := by
-    exact_mod_cast (lt_of_lt_of_le Nat.zero_lt_one (le_trans Nat.one_le_two hc))
+    have : 0 < c := by omega
+    exact_mod_cast this
   rw [div_lt_iff₀ hcQ]
-  have hcutQ : (6 : ℚ) * d ≤ 8 * c - 9 := by exact_mod_cast hcut
-  linarith
+  have hraw : 6 * d + 9 ≤ 8 * c := by omega
+  have hrawQ : (6 : ℚ) * d + 9 ≤ 8 * c := by exact_mod_cast hraw
+  linarith [hrawQ]
 
 /-- Cleared three-rung ladder.  The geometric nesting and four-speed cutoff
 are explicit in `hnested`; the conclusion is the ratio alternative
 `b1/a < 13/6` or `b2/b1 < 13/6` or `b3/b2 < 4/3`. -/
 theorem toothpick_ladder_of_nested_four_speed_cutoff
-    (a b1 b2 b3 : ℕ)
+    (a b1 b2 b3 : ℕ) (hb2pos : 0 < b2)
     (hnested : 13 * a ≤ 6 * b1 → 13 * b1 ≤ 6 * b2 →
       6 * b3 ≤ 8 * b2 - 9) :
     6 * b1 < 13 * a ∨ 6 * b2 < 13 * b1 ∨ 3 * b3 < 4 * b2 := by
