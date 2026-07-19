@@ -373,8 +373,8 @@ def main() -> None:
     print(f"source_sha256={source_digest}")
     print("domain=all shallow full-residue packets; unique-owner equivalence assumes original packet accepted")
     print("signs=D_w closed, E_r open; common generic chamber refinement is endpoint-complete")
-    print("shift_law=a=floor(wu)-floor((w-13)u)=m+1_{frac(wu)<frac(13u)}")
-    print("local_rule=a=0:any; a=1:leading endpoint only; a=12:trailing endpoint only; otherwise no unique owner")
+    print("shift_law=raw_a=floor(wu)-floor((w-13)u)=m+1_{frac(wu)<frac(13u)}; bar_a=raw_a mod 13")
+    print("local_rule=bar_a=0:any (raw_a=0 or 13); bar_a=1:leading endpoint only; bar_a=12:trailing endpoint only; otherwise no unique owner")
     print("central_rule=2/13<u<11/13 implies old/lowered edges disjoint, so a lowerable accepted colour has zero unique ownership")
 
     print("\nACCEPTED DILATION SINK AUDIT")
@@ -420,7 +420,7 @@ def main() -> None:
 
     print("\nKAKEYA / TOURNAMENT CARRIER AUDIT")
     print("needles=the twelve labelled two-sheet edges moving on the 13-cut cylinder; unique trace is the essential stalk")
-    print("pair_observable=which colour privately owns a cut in a chamber; switch=lowering translation a*r^-1; tie path=chronological walls")
+    print("pair_observable=which colour privately owns a cut in a chamber; switch=lowering translation bar_a*r^-1; tie path=chronological walls")
     print("preserves=exact E_r containment for accepted packets, including endpoint orientation")
     print("destroys=degree-only state loses owner label; central-owner count loses fringe side; runner tournament loses chamber chronology")
 

@@ -99,41 +99,44 @@ w_r u=k+alpha,     0<alpha<1.
 >
 > ```text
 > a(u)=k-floor((w_r-13)u),
+> bar_a(u)=a(u) mod 13,
 > ```
 >
 > one has
 >
 > ```text
 > a(u)=m+1_(alpha<theta),                                (6)
-> Q_r^-(u)=Q_r(u)+a(u)r^(-1).                            (7)
+> Q_r^-(u)=Q_r(u)+bar_a(u)r^(-1).                        (7)
 > ```
 
 **Proof.**  Since `(w_r-13)u=k+alpha-m-theta`, its floor is
 `k-m-1_(alpha<theta)`, which proves (6).  Substitution in the two endpoints
 of (3) proves (7).  ∎
 
-Order the old edge as `(A,B)=(-kr^(-1),-(k+1)r^(-1))`.  A two-point needle
+The raw drift can equal `13` on the final fringe; in `F_13` that is shift
+zero. Order the old edge as `(A,B)=(-kr^(-1),-(k+1)r^(-1))`. A two-point needle
 on the 13-cycle intersects its translate in the following exact way:
 
 ```text
-a=0:   {A,B},
-a=1:   {A},
-a=12:  {B},
-else:  empty.                                             (8)
+bar_a=0:   {A,B},
+bar_a=1:   {A},
+bar_a=12:  {B},
+else:      empty.                                         (8)
 ```
 
 Combining Theorems A and B gives a chamberwise decision rule:
 
 ```text
-a=0    permits any U_r subset {A,B};
-a=1    permits only U_r subset {A};
-a=12   permits only U_r subset {B};
-else   requires U_r=empty.                                (9)
+bar_a=0    permits any U_r subset {A,B};
+bar_a=1    permits only U_r subset {A};
+bar_a=12   permits only U_r subset {B};
+else       requires U_r=empty.                            (9)
 ```
 
 This is the exact functional form of the `H`-drift.  Its state is not a
 scalar height: it retains the strip index, a strict comparison bit
-`alpha<theta`, and the oriented private endpoint.
+`alpha<theta`, the reduction `a mod 13`, and the oriented private endpoint.
+Equivalently in raw values, both `a=0` and `a=13` are free cases.
 
 ## 3. Central-cylinder obstruction
 
@@ -148,7 +151,7 @@ scalar height: it retains the strip index, a strict comparison bit
 > cylinder.
 
 **Proof.**  In (10), `m` is one of `2,...,10`, so (6) gives
-`a in {2,...,11}`.  The final case of (8) applies.  ∎
+`a in {2,...,11}`, so `bar_a=a`. The final case of (8) applies. ∎
 
 The remaining lowering obligations live on the four fringe strips.  There
 the `a=1` and `a=12` cases preserve an oriented leading/trailing endpoint;
@@ -264,16 +267,16 @@ Both scripts replay byte-identically with normal Python and `python3 -O`.
 Frozen hashes are
 
 ```text
-h3 source     630312d2107a04674f369014c02c693418641baac5f095d6f5c7420f7c6afbaf
-h3 output     04a1bf2a6b8661cc037d87cd0af6c0235317f533947da0d09a4ed41a376de5f2
-stalk source  1e1f99b181170f220b5628a41282440a75e9fb7666257967001f3c7a25f57b6d
-stalk output  6e808e91ecdf1f200f67b9ec2d68a610e99bf0eb97b2860810f6321fcd32f2d6
+h3 source     0074a5e5c92283f8150f7ff024f8f4f597ecf70d71ddecfe0c94bdd09e86ede1
+h3 output     b115d7c54089e8783606959d1a3de9234753a8a76281fd465d773b2046634e21
+stalk source  9cd28fb756a27f86e3bbbe5af89f446ffca18c22d472facf66e00ca03cc908c2
+stalk output  daf2269a29f3e159a08a3ab3ef2f68f95df34753df6a252ca45511637bb8c697
 ```
 
 Tournament Analysis challenges runners as the vertex set.  The useful
 vertices are labelled moving two-sheet needles or private cut obligations;
 the pair observable is private ownership in a chamber, lowering translation
-`a r^(-1)` is the switch, and chronological grouped walls give the tie
+`bar_a r^(-1)` is the switch, and chronological grouped walls give the tie
 Hamiltonian path.  The carrier
 
 ```text

@@ -1,5 +1,5 @@
 A12 H3 / ESSENTIAL-HEIGHT REGENERATION BRIDGE AUDIT
-source_sha256=630312d2107a04674f369014c02c693418641baac5f095d6f5c7420f7c6afbaf
+source_sha256=0074a5e5c92283f8150f7ff024f8f4f597ecf70d71ddecfe0c94bdd09e86ede1
 closed_danger=D_w={t: ||wt|| <= 1/13}; essential_region E_r is open
 exact_lowerability=E_r(W) subset D_(w_r-13); no a.e./endpoint relaxation
 scope=shallow full-residue only; deep s>=2 and compact LRC14 residual are not proved
@@ -55,7 +55,7 @@ negative=first-tear time and THM-1010 max-speed descent are not valid potentials
 BRIDGE TO UNIFORM n=12 / COMPACT LRC14
 positive=PEHD13 would close arbitrary winding in THM-769's shallow full-residue branch.
 missing_after_PEHD13=THM-769 deep binding scales s>=2 (at least two off-sheet runners) remain separate.
-compact=boxeph-S113 shows rho<13 covering is the full sharp LRC14 residual; PEHD13 feeds it only when a shallow 12-core is first forced.
+compact=rho<13 plus the auxiliary 1/13 cover is a stronger sufficient compact target, not the full sharp LRC14 residual; PEHD13 feeds it only when a shallow 12-core is first forced.
 therefore=no valid direct inference from the h<=3 certificate to sporadic emptiness or INVcov.
 
 CARRIER / TOURNAMENT AUDIT

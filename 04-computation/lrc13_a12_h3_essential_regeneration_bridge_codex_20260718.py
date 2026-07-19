@@ -518,7 +518,7 @@ def main() -> None:
     print("\nBRIDGE TO UNIFORM n=12 / COMPACT LRC14")
     print("positive=PEHD13 would close arbitrary winding in THM-769's shallow full-residue branch.")
     print("missing_after_PEHD13=THM-769 deep binding scales s>=2 (at least two off-sheet runners) remain separate.")
-    print("compact=boxeph-S113 shows rho<13 covering is the full sharp LRC14 residual; PEHD13 feeds it only when a shallow 12-core is first forced.")
+    print("compact=rho<13 plus the auxiliary 1/13 cover is a stronger sufficient compact target, not the full sharp LRC14 residual; PEHD13 feeds it only when a shallow 12-core is first forced.")
     print("therefore=no valid direct inference from the h<=3 certificate to sporadic emptiness or INVcov.")
 
     print("\nCARRIER / TOURNAMENT AUDIT")

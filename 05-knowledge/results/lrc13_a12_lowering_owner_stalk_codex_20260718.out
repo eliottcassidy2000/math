@@ -1,9 +1,9 @@
 A12 LOWERING OWNER-STALK / CENTRAL-CYLINDER LEMMA
-source_sha256=1e1f99b181170f220b5628a41282440a75e9fb7666257967001f3c7a25f57b6d
+source_sha256=9cd28fb756a27f86e3bbbe5af89f446ffca18c22d472facf66e00ca03cc908c2
 domain=all shallow full-residue packets; unique-owner equivalence assumes original packet accepted
 signs=D_w closed, E_r open; common generic chamber refinement is endpoint-complete
-shift_law=a=floor(wu)-floor((w-13)u)=m+1_{frac(wu)<frac(13u)}
-local_rule=a=0:any; a=1:leading endpoint only; a=12:trailing endpoint only; otherwise no unique owner
+shift_law=raw_a=floor(wu)-floor((w-13)u)=m+1_{frac(wu)<frac(13u)}; bar_a=raw_a mod 13
+local_rule=bar_a=0:any (raw_a=0 or 13); bar_a=1:leading endpoint only; bar_a=12:trailing endpoint only; otherwise no unique owner
 central_rule=2/13<u<11/13 implies old/lowered edges disjoint, so a lowerable accepted colour has zero unique ownership
 
 ACCEPTED DILATION SINK AUDIT
@@ -34,6 +34,6 @@ scope=would close only shallow winding with THM-770/795; THM-769 deep sheets and
 
 KAKEYA / TOURNAMENT CARRIER AUDIT
 needles=the twelve labelled two-sheet edges moving on the 13-cut cylinder; unique trace is the essential stalk
-pair_observable=which colour privately owns a cut in a chamber; switch=lowering translation a*r^-1; tie path=chronological walls
+pair_observable=which colour privately owns a cut in a chamber; switch=lowering translation bar_a*r^-1; tie path=chronological walls
 preserves=exact E_r containment for accepted packets, including endpoint orientation
 destroys=degree-only state loses owner label; central-owner count loses fringe side; runner tournament loses chamber chronology
