@@ -711,6 +711,23 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S114 -- THE NON-DILATED-CORE RIGIDITY RESIDUAL IS TAO n=12 (the definitive frontier; not provable in a session)
+
+Owner: prove the non-dilated-core rigidity residual. HONEST definitive outcome: it IS the open crux =
+Tao n=12 optimistic conjecture = LRC(14) covering case (S94), HEIGHT-UNBOUNDED (tight cores d*{1..12} for
+every d, NOT a finite check), SHARP (M=1/13 attained). No fabrication.
+SYSTEMATIC EXHAUSTION S101-S113: maximality (S101 blind to interior gaps), sieve (S102 beaten at q'>13),
+CF-descent (S103 only lcm(13,14)|v_max), BSG/PFR (S104 need energy M<1/13 doesn't supply), 1/12 gap thm
+(S111 stronger not easier), descent (S113 factor-2 loss at rho~1). Diagnosis: residual = DIOPHANTINE->
+additive-energy bridge; missing implication = CONCENTRATION, which Weyl can't force (S95).
+SURROUNDINGS DONE: non-covering=sieve (Lean S106), >=2 outliers=THM-726, single-killer M>1/14 unconditional
+(THM-1007 S112), dilated-AP compact=THM-1013, full reduction LRC(14)<=LRC(<=13)+INVcov kernel-checked to the
+ledger target (S105-S109). Concrete form = mod-25 pair-blocking rigidity (HYP-4622).
+WHAT A PROOF NEEDS: a new Diophantine->additive mechanism -- most plausibly the EQUALITY case of settled
+LRC(13) (=> HYP-4382 => residual collapses); or L4/Fourier concentration; or transference. Research-level, open.
+Did NOT prove; it IS the open conjecture. Productive next: sharpen HYP-4382 toward LRC(13)-equality, or pivot.
+FILES: reflection the-non-dilated-core-rigidity-residual-is-tao-n12-the-definitive-frontier-boxeph-S114, HYP-7675. boxeph; S114.
+
 ## boxeph-2026-07-18-S113 -- THE COMPACT CASE rho<13 => M>=1/13 IS EQUIVALENT TO LRC(14); DESCENT IS THE WRONG TOOL
 
 Owner: prove compact rho<13 covering => M>=1/13. Confirms compact=crux; new negative on descent; not proved.
