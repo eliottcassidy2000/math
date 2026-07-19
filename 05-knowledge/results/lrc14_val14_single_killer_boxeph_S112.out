@@ -1,0 +1,11 @@
+val=14 (M=14/183) families are SINGLE-KILLER (v_f > 13*max(core)):
+  deep well {1..12,182}: M=14/183=0.0765 core-AP=True v_f=182>13*max(core)=156 => SK=True
+  dilate x2 {2..24,364}: M=14/183=0.0765 core-AP=True v_f=364>13*max(core)=312 => SK=True
+
+HYP-4382 (M(C)=1/13 <=> C dilated {1..12}) -- non-AP cores are NOT tight:
+  C=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: M(C)=1/12=0.0833 (=1/13? False, AP? False)
+  C=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 24]: M(C)=1/7=0.1429 (=1/13? False, AP? False)
+
+=> INV val=14 = THM-724 deep-well uniqueness: interval-core (Case1) + dilated (Case2, M>=1/13)
+   + tight-non-dilated EMPTY (Case3, HYP-4382), residual empirical but M>1/14 unconditional (THM-1007).
+   The OPEN part of INV is the COMPACT (rho<13) case, which is NOT val=14.

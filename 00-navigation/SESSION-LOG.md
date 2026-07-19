@@ -643,6 +643,19 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S112 -- INV val=14 IS THE SINGLE-KILLER CASE, essentially DONE (THM-724+HYP-4382+THM-1007), NOT the open compact crux
+
+Owner: prove INV directly for primitive val=14. Synthesis + clarification (residual not closed).
+KEY: val=14 <=> M=14/183 (covering-min) <=> SINGLE-KILLER (deep well v_f=182>156, {2..24,364} 364>312).
+So val=14 is the RESOLVED single-killer side of INV, NOT the open COMPACT (rho<13) crux (compact != single-killer
+=> not val=14). INV val=14 = THM-724 deep-well uniqueness: Case1 interval {1..12} PROVED; Case2 dilated c>=2
+M>=1/13 PROVED; Case3 tight non-dilated EMPTY via HYP-4382 (prime-13 tightness verified; non-AP cores have
+M(C)!=1/13); residual near-tight large-s single-killer non-dilated = EMPIRICAL (5570 configs) at sharp 14/183.
+THM-1007: residual is UNCONDITIONALLY M>1/14 (balance lemma 3 lines) => LRC(14) at val=14 CLOSED, no census;
+only exact-14/183 uniqueness keeps the residual. DID NOT close the sharp 14/183 residual (fleet's S68-S69 hard bit).
+NET: INV val=14 essentially done; the OPEN INV content is the COMPACT rho<13 regime (val!=14). Crux open.
+FILES: reflection INV-val14-is-the-single-killer-case-...-boxeph-S112, script+out lrc14_val14_single_killer_boxeph_S112, HYP-7655. boxeph; S112.
+
 ## boxeph-2026-07-18-S111 -- THE GAP THEOREM 'non-AP => M>=1/12' IS STRONGER THAN INV, NOT EASIER (S110 route corrected)
 
 Owner: prove the gap theorem non-AP core => M>=1/12. HONEST self-correction of S110. Could not prove
