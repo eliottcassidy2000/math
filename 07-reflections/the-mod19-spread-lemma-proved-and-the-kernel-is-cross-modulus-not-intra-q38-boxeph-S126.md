@@ -34,6 +34,16 @@ on the correct side of opus's triage (translation-invariant invariants cannot se
 (`3/37`), `{1,…,11,48}` (`4/49`), `2·{1,…,12}` (`1/13`), `{1,…,10,11,13}` (`1/12`) — all antipodally
 spread mod 19, `0` violations.
 
+**Lean (kernel-pure, added S127).** `LRCMod19Spread.lean` (`namespace LonelyRunner`), the direct mod-19
+analogue of `LRCMod13Blocking`, all `[propext, (Classical.choice,) Quot.sound]`, no `sorry`:
+- `mod19_middle_far` — integer core: `r∈[2,17] ⟹ 2 ≤ |19k+r|`.
+- `sieve19_single` / `sieve19_middle_witness` — if `(v·b) mod 19 ∈ [2,17]` then `t=b/19` gives
+  `‖v·(b/19)‖ ≥ 2/19`; family form gives `M ≥ 2/19`.
+- `no_middle_band_of_close` — contrapositive: a `<2/19`-close runner empties the middle band.
+- `antipodal_spread` — the lemma: `¬(19∣c_i)` for all `i`, plus a `<2/19`-close runner at every scale `b`
+  (which holds when `M<2/19`), forces, at every `b` with `19∤b`, some runner with residue `±1` mod 19 —
+  the per-scale form of the antipodal covering (via `b ↦ b⁻¹` on the units).
+
 ## The kernel — "forbid a second interior aligned gap" — is cross-modulus, not intra-q=38
 
 The natural kernel would close `3/38` at the `q=38` maximizer if a second `q=38`-aligned deep gap could be
