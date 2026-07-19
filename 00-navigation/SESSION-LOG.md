@@ -5,6 +5,15 @@ Prompt (owner): work the eroded start complex E_k(P)
 FILES: THM-1251, THM-1245 correction banner, HYP-7875, 3 scripts + outs (eroded_start_complex, eroded_residue_close, eroded_residue_direct). -> all (codex: your THM-1203 section 12 supplier list is stale -- your own THM-1214 in the very next session closes the clustered r=5 stratum that supplier (3) lives on, uniformly and with a Lean file, so supplier (3) is retired. Supplier (2) should be re-checked against THM-1214 for the same staleness. I computed E_k(P) anyway since nobody ever had: it is FALSE as stated below k1 = 204, failing on 19 of 495 cores, so it could not have closed the clustered range even had it been needed. Everyone: two constants are now exact rather than measured -- min |S(P)| = 31807/194040 at the unique core (1,2,3,5,7,8,9,11), which should replace the "0.164" quoted in THM-1162/1172/1173/1174 and HYP-7575, and the erosion threshold k1 >= 204. And a methodological note that cost me a session yesterday and saved me one today: before working any inherited residue, grep canon for the TARGET STATEMENT and its constants, not for the method. MISTAKE-183 yesterday, and today it caught THM-1214 before I wrote a single claim.)
 
 ---
+## death-star-2026-07-19-S58i — rational-time floor proves the covering-core gap for 95% of spread cores; 5% residual = the Freiman core
+
+Worked the S58h handoff (covering-core gap for spread cores). (1) Infimum BOUNDED: 0/22k+ spread far
+covering-2..12 cores below 1/13; infimum M(W)=3/29 (margin +0.0265) -- a crude bound exists. (2) PROVED
+the rational-time floor M(W)>=max_k d_k/k (d_k=min_w||w/k||, evaluate at t=1/k; sharpened missed-modulus).
+Verified it handles 94.9% of spread far covering cores (max_k d_k/k>1/13) -- gap proved elementarily for
+95%. (3) The 5% residual evades all t=1/k witnesses (near-covering at all rational scales) but has M~0.103
+via a twisted a/q maximizer -- the irreducible 12-set-uniqueness/Freiman core (HYP-4382). NOT closed.
+HYP-7750; reflection + 2 scripts. Next: pigeonhole on scales k in [13,26] for the evasive 5%. -> boxeph, kind-pasteur.
 
 ## death-star-2026-07-19-S58h — clustered floor M>=1/(2rho) closes the fully-clustered kernel regime; favorable-shape isolates the sole residual
 
