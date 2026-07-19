@@ -17,6 +17,41 @@ bank is telemetry and its measured `4.949<6` already contradicts the old predict
 THM-1140, its script/output, and THM-1141 are corrected accordingly. The cont.68
 hypothesis is HYP-7620 (HYP-7550 belongs to opus-S372), and the cont.69 hypothesis is
 now HYP-7676 (HYP-7555 belongs to boxeph-S102). Uniform `r=5` remains open.
+## opus-2026-07-17-S379 -- THM-1135 THE TWO-SPEED SUBSTITUTION CASE IS EXHAUSTIVE (density bound caps the smaller speed at 63, LRC(13) makes the recursion terminate with 0/2113 empty residues, the swap bound caps the second at 62; 6702 combinations -> 90 tight substitutions but only TWO distinct families) + two_speed_density_bound in Lean, 9 theorems kernel-pure (HYP-7630)
+
+Owner: prove the two-speed case exhaustive too. Done, and it needed a genuinely
+different argument from the single-speed one.
+WHY IT IS HARDER: a component of the joint essential region E_ij = I minus the union of
+the OTHER eleven danger sets may be covered by arcs of BOTH new speeds, so the
+'fits inside a single arc' argument that closed the single-speed case fails outright.
+STEP 1, THE DENSITY BOUND: the fragmentation window lemma gives mu(D_w n I) <= 2*lam|I|
++ 2*lam/w, so covering a component of length ell by two combs forces
+ell*(1 - 4*lam) <= 2*lam*(1/r + 1/s) -- at lam = 1/14, ell <= (1/5)(1/r + 1/s). With
+r <= s that gives r <= 2/(5*ell_max(E_ij)), bounding the SMALLER speed. Over the 78 pairs
+of {1,...,13} the bounds run 8..63, worst at (6,10). Note it bounds only the smaller one,
+which is correct: a very fine comb has density 2*lam and cannot help cover a specific
+interval, so large s is no help to the adversary.
+STEP 2, WHY THE RECURSION TERMINATES: after fixing r the residue E' = E_ij \ D_r must
+satisfy E' subset D_s, and E' is NEVER empty. If it were, the twelve speeds
+{1,...,13} minus {i,j}, together with r, would cover [0,1] entirely at radius 1/14 --
+impossible, since LRC(13) guarantees twelve speeds always leave a point of gap
+>= 1/13 > 1/14. Verified computationally: 0 empty residues in 2113 (pair, r) cases,
+exactly as the citation predicts.
+STEP 3: E' nonempty means the THM-1125 swap bound applies, s <= 2*lam/ell_max(E') <= 62.
+Both speeds bounded, so the search is finite.
+THE RESULT: 6702 (i,j,r,s) combinations enumerated exhaustively; 90 tight double
+substitutions; only TWO distinct families, {1,...,13} and {1,...,11,13,24}. The count
+decomposes exactly as 90 = 78 identity pairs + 12 pairs routing through 12 -> 24, which
+is a useful independent check on the enumeration.
+LEAN: two_speed_density_bound added to LRCEssentialRegion.lean -- from Icc x (x+L) inside
+badArcs r u badArcs s it derives L*(1 - 4*lam) <= 2*lam*(1/r + 1/s), by measure
+subadditivity and two applications of `fragmentation`. The module now carries NINE
+theorems, zero sorries, all depending only on [propext, Classical.choice, Quot.sound].
+STATUS, carefully: PROVED for one- and two-speed substitutions on {1,...,13}, which
+upgrades that half of THM-1120 from a search result to a theorem. NOT proved for three
+or more substitutions, nor for families far from {1,...,13}, so 'exactly two tight
+families overall' remains open and I am not claiming it.
+FILES: THM-1135, THM-1120 amended, Lean, script + out, HYP-7630. opus; S379.
 
 ---
 

@@ -1,0 +1,18 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\twospeed_bound_opus_S379.py:97: SyntaxWarning: invalid escape sequence '\ '
+  print("(2) STEP 2 -- verify E' = E_ij \ D_r is NEVER empty (LRC(13) predicts this)")
+(1) STEP 1 -- bound on the SMALLER new speed:  r <= 2/(5*ell_max(E_ij))
+    over all 78 pairs (i,j) of {1,...,13}
+    ell_max ranges 0.006279 .. 0.047619
+    bound on smaller speed ranges 8 .. 63   (MAX = 63)
+    worst pair: (i,j)=(6,10)  ell_max=0.006279  r <= 63
+
+(2) STEP 2 -- verify E' = E_ij \ D_r is NEVER empty (LRC(13) predicts this)
+    checked 2113 (pair, r) combinations; empty residues: 0
+    (0 empties confirms the LRC(13) argument and the recursion terminates)
+(3) STEP 3 -- bound the SECOND speed, then run the EXHAUSTIVE check
+    max bound on second speed: 62
+    total (i,j,r,s) combinations enumerated: 6702
+    TIGHT double substitutions found: 90
+      (1,2) -> (1,2):  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]   uncovered=0  [= {1..13}]
+      (1,12) -> (1,24):  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   uncovered=0  [= {1..11,13,24}]
+    distinct tight families: 2

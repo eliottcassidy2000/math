@@ -136,4 +136,59 @@ theorem Icc_length_le_of_subset_badArcs (r : ℕ) (hr : 0 < r) (lam : ℝ)
   have hpy : ((a : ℤ) : ℝ) / (r : ℝ) + lam / (r : ℝ) ≤ y := by linarith
   exact endpoint_not_mem_badArcs r hr lam h2 a (h ⟨hpx, hpy⟩)
 
+/-! ### The two-speed density bound
+
+    For DOUBLE substitutions the single-arc argument fails: a component of the
+    joint essential region may be covered by arcs of BOTH new speeds.  What
+    survives is a density bound.  Each comb meets an interval of length `L` in
+    measure at most `2*lam*L + 2*lam/w` (the fragmentation window lemma), so
+    covering the interval by two combs forces
+
+        L * (1 - 4*lam)  ≤  2*lam*(1/r + 1/s).
+
+    At `lam = 1/14` this reads `L ≤ (1/5)*(1/r + 1/s)`, which bounds the SMALLER
+    of the two speeds — and then the single-speed swap bound above bounds the
+    other, making the two-speed search finite. -/
+theorem two_speed_density_bound (r s : ℕ) (hr : 1 ≤ r) (hs : 1 ≤ s)
+    (lam L x : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L)
+    (h : Set.Icc x (x + L) ⊆ badArcs r lam ∪ badArcs s lam) :
+    L * (1 - 4 * lam) ≤ 2 * lam * (1 / (r : ℝ) + 1 / (s : ℝ)) := by
+  have hr0 : (0 : ℝ) < r := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hr
+  have hs0 : (0 : ℝ) < s := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hs
+  -- the interval is its own intersection with the covering union
+  have hself : Set.Icc x (x + L)
+      = (badArcs r lam ∩ Set.Icc x (x + L)) ∪ (badArcs s lam ∩ Set.Icc x (x + L)) := by
+    ext t
+    simp only [Set.mem_union, Set.mem_inter_iff]
+    constructor
+    · intro ht
+      rcases h ht with hb | hb
+      · exact Or.inl ⟨hb, ht⟩
+      · exact Or.inr ⟨hb, ht⟩
+    · rintro (⟨_, ht⟩ | ⟨_, ht⟩) <;> exact ht
+  have hvol : volume (Set.Icc x (x + L)) = ENNReal.ofReal L := by
+    rw [Real.volume_Icc]; congr 1; ring
+  -- subadditivity plus the window lemma on each comb
+  have hle : ENNReal.ofReal L
+      ≤ ENNReal.ofReal ((L * r + 1) * (2 * lam / r))
+        + ENNReal.ofReal ((L * s + 1) * (2 * lam / s)) := by
+    calc ENNReal.ofReal L = volume (Set.Icc x (x + L)) := hvol.symm
+      _ ≤ volume (badArcs r lam ∩ Set.Icc x (x + L))
+            + volume (badArcs s lam ∩ Set.Icc x (x + L)) := by
+          conv_lhs => rw [hself]
+          exact measure_union_le (μ := volume)
+            (badArcs r lam ∩ Set.Icc x (x + L)) (badArcs s lam ∩ Set.Icc x (x + L))
+      _ ≤ _ := add_le_add (fragmentation r hr lam L x hlam hL)
+                          (fragmentation s hs lam L x hlam hL)
+  -- descend to ℝ and rearrange
+  have hA : (0 : ℝ) ≤ (L * r + 1) * (2 * lam / r) := by positivity
+  have hB : (0 : ℝ) ≤ (L * s + 1) * (2 * lam / s) := by positivity
+  rw [← ENNReal.ofReal_add hA hB, ENNReal.ofReal_le_ofReal_iff (by linarith)] at hle
+  have hexp : (L * r + 1) * (2 * lam / r) + (L * s + 1) * (2 * lam / s)
+      = 4 * lam * L + 2 * lam * (1 / (r : ℝ) + 1 / (s : ℝ)) := by
+    field_simp
+    ring
+  rw [hexp] at hle
+  nlinarith [hle]
+
 end LRC14

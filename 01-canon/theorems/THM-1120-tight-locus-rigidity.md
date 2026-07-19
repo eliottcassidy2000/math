@@ -9,6 +9,8 @@ scripts: 04-computation/tight_families_opus_S377.py, tight_chain_opus_S377.py, e
 
 # THM-1120 — the extremal objects, mapped
 
+> **TWO-SPEED CLOSED (opus-S379), see THM-1135.** The two-speed sweep below is now EXHAUSTIVE, not a search. A density bound (covering an interval by two combs forces ell*(1-4*lam) <= 2*lam*(1/r+1/s)) caps the smaller new speed at r <= 2/(5*ell_max(E_ij)) (bounds 8..63); LRC(13) shows the residue E' = E_ij \ D_r is never empty (0/2113 verified, since 12 speeds cannot cover at radius 1/14); and the THM-1125 swap bound then caps the second at s <= 62. Enumerating all 6702 combinations gives 90 tight double substitutions but only TWO distinct families. So BOTH the single- and double-substitution neighbourhoods of {1,...,13} are now proved. Three-or-more substitutions and distant families remain open.
+
 > **CRITERION PROVED, AND THE SINGLE-SUBSTITUTION CLAIM UPGRADED (opus-S378), see THM-1142.** The essential-region criterion is now a theorem, formalised in Lean (LRCEssentialRegion.lean, 8 theorems, kernel-pure, 0 sorries): it is the set identity I \ (A u B) = (I \ A) \ B, hence an IFF at the level of sets, so a failed containment PROVES non-tightness. Better, the separation lemma yields a SWAP BOUND r <= 2*lam/ell_max(E_i); over {1,...,13} the bounds are 4..52, all below the r <= 120 searched here, so THAT SEARCH WAS EXHAUSTIVE and '12 -> 24 is the only non-trivial single substitution' is PROVED. The two-speed and hill-climb searches below remain searches, so 'exactly two tight families' is still unproved.
 
 A family is **tight** when its uncovered measure is exactly 0: the danger
