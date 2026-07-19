@@ -1,0 +1,9 @@
+THM-1238 MACROSCOPIC-CUT PAIR-SUM BEAT DICHOTOMY EXACT AUDIT
+two-speed rows checked = 1070405
+rows in a sufficient safe-beat branch = 1069850
+negative singleton rows = 5
+positive safe-beat occurrences = 7179634
+zero-curvature safe-beat occurrences = 10856
+parity-family fast-fast pairs checked = 15000
+parity family range = m=1..1000
+RESULT: PASS
