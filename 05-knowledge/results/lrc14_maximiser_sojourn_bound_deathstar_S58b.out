@@ -1,0 +1,4 @@
+primitive directions with components 1..16:
+  MAX sojourn  = 2/21 = 0.0952381 at (1, 2, 3)  (2/21=0.0952381) -> ceiling HOLDS
+  MAX #runs    = 6 ; directions with >2 runs = 168
+  MAX one run  = 1/21 = 0.0476190 at (1, 2, 3)  (1/21=0.0476190) -> run<=1/21 HOLDS
