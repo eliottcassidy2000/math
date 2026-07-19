@@ -1,0 +1,24 @@
+THM-1266 CLOSEST-RETURN LEAF / PAID-STAR EXACT AUDIT
+optimization-sensitive assert nodes = 0
+proper six-owner words = 585936
+words with a closest return = 583980
+closest-return edge histogram = ((2, 422100), (3, 120120), (4, 32400), (5, 7920), (6, 1440))
+exact ratio rows / positive rows = 86856 / 13814
+near-sharp outer/min ratio = 1200003/1000000
+packet-packing words / packets = 118096 / 235356
+maximum packets / minimum 13P+6 slack = 3 / 2
+forbidden repeated-low separation rows = 75750
+minimum forbidden separation slack = 607/700
+sharp star teeth / seam occurrences = 11 / 10
+sharp star seam mass = 138130160177/393047548696320
+sharp star minimum nonconsecutive separation = 11/1050616
+sharp star B/T ledger = 5 / 4
+sharp harmonic margin above 1/140 = 981965948779/78609509739264
+centered blocker map = ((254, 1805), (255, 254), (256, 257), (257, 256), (292, 256), (1805, 254))
+aligned two-cycle phase differences = (Fraction(-1023, 766330), Fraction(-19, 13101))
+full-comb teeth meeting G / uncovered components = 20 / 4
+uncovered fastest-safe tail mass = 24/12635
+runner tournament fingerprint = transitive scores (0,1,2,3,4,5); cycles 0; SCCs 6; Hamiltonian paths 1
+return witness fingerprint = five-arrow in-star; directed cycles 0; depth 1
+chronological switch word = B,T,B,T,B,T,B,T,B
+RESULT: PASS -- local r=1 star terminates sharply at five; four fastest-safe tails remain
