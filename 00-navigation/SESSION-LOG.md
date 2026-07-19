@@ -407,6 +407,84 @@ points with signed slack and third-runner blockers, not a runner tournament.
 The next structural target is to prove that every positive active edge cannot
 be blocked simultaneously.
 
+The continuation of S82 crossed a different seventh-wall threshold.  THM-1221
+resolves the exact strict/weak pair spectrum around `1/63` and proves that
+every seven-speed packet has a spanning tree, and therefore a global safe set,
+of mass at least `15/154`.  Both reciprocal-dual closed-low triangles were
+needed in the audit.  Small exact projective channel banks give analytic
+floors for every component branch; the much larger cut censuses are retained
+only as independent replays.  This produces the first uniform positive
+incidence margins over the sharp four-comb obstruction:
+
+```text
+15/154-2/21=1/462,
+15/154-60/637=45/14014       (non-AP).
+```
+
+THM-1226 then tests the obvious localization route rather than assuming the
+global crossing transports.  The THM-1166 gcd-period error factors through
+the reduced projective height `ab/(a+b)`.  On an explicit pairwise-coprime
+translated-LCM family the strict-high graph is complete and every tree
+clears `15/154`, but error divided by harmonic mass diverges linearly.  An
+exact protected-needle embedding has all seven deleted combs simultaneously
+active, proving that the failure is loss of wall address in the independent
+period bound, not failure of local overlap.  Conversely, the finite channel
+banks prove HYP-7678's positioned tree with `eta=15/154` and
+`C=448916/194775` on every disconnected strict-high branch.  The exact live
+frontier is now the connected strict-high graph with tooth/wall phase retained
+(HYP-7870).
+
+Two audit compositions sharpen this conclusion.  THM-1166's forest-Hunter
+cover cap is `6H/49`, not merely `H/7`, so the disconnected branch has
+`H/|I|>=59625/1485836`, `mH>=59625/10400852`, and
+`min(S)/m<72805964/59625`.  On its separated slow-gap subbranch, THM-1233
+then gives `max(S)/m<34145997116/11925` and THM-1241/1236 force one of five
+macroscopic cut indices together with the continuous-pivot invoice.  Separately, the AP-free offsets
+`{1,2,3,5,11,13,17}` produce a complete strict-high translated-LCM packet
+with no THM-1218-heavy quartet.  Thus connectivity cannot force the deletion
+circuit; their correlation is genuinely phase/incidence data.
+
+THM-1234 provides a second global crossing through a different carrier:
+`mu(Safe_7)>=44/455`, with margins `2/1365` against arbitrary BAD and
+`8/3185` off AP, plus the Fano budget `sum m/G_ell>=512/3185`.  THM-1221 is
+larger by `1/1430`, but THM-1234 retains line-period debt.  The sharpened
+synthesis target is to place one of those Fano lines, a THM-1221 heavy tree,
+and the protected endpoint chronology in the same phase cell.
+
+The next pulls compactified the parallel six-comb frontier in exactly the
+coordinate that THM-1226 says must be retained.  THM-1233 bounds every
+normalized speed in a putative slow-gap cover by `d_i/c<2345` and supplies all
+five adjacent-ratio bounds.  THM-1241/1236 rule out full tangent coalescence by
+forcing a macroscopic cut, in particular an adjacent ratio `>211/210`.  Thus
+ratio escape and a single six-fold tangent stalk are both gone: the residual
+is one of five cut-index branches with arithmetic offset/phase stalks inside
+at-most-five-speed subclusters.  The carrier and its wall clock remain
+unbounded, so this is compactification rather than a finite proof.
+
+The two routes actually compose before any further hypothesis.  On the
+canonical needle `|I|=1/(7m)`, `a=min(S)<13m` implies
+`H>7|I|/13`, so F7 with `eta=15/154` is automatic for
+`C>=195/1078`.  Every nontrivial connected-strict-high row therefore has
+`a>=13m`; the needle contains a complete `a`-gap covered by the other six
+combs, and THM-1233/1241/1236 apply.  The remaining connected branch is exactly a
+compact six-ratio packet, one of five cuts (with difference `>d6/210`), and
+an unbounded cyclic phase/offset stalk—not an arbitrary seven-speed packet.
+
+Repeated pulls also changed the inverse-route assessment.  THM-1220 exhibits
+the second n=14 tight family, and THM-1230 goes further: the gap above `1/14`
+is populated at `3/41` by `{1,...,11,13,36}`, on the verified ladder
+`m/(12m+5)`.  THM-1225 explains why translation-invariant Freiman/doubling
+data cannot distinguish the floor; the successful strict pair spectrum is
+translation-sensitive.  On the n=12 side, S123--S126 and S58e exclude reduced
+determinant numerators one and two in the stability gap and isolate `3/38` as
+the unique depth-minimal candidate.  The new maximizer lemma pins both band
+edges, `v*+w*=q`, and `span=11 val+g0`, while the mod-19 antipodal-spread lemma
+is now proved.  But the proposed residue-gap kernel is global, not local, and
+the `q=38` conditions are jointly feasible: every known defeat occurs at a
+different modulus.  The remaining statement is therefore an adaptive
+cross-modulus/foreign-denominator theorem over the unbounded escape tail.
+No uniform n=12 sporadic-emptiness claim is made.
+
 The same pull exposed first-pushed THM-1210 and THM-1215 on shared main.
 Accordingly this session's earlier local continuum ceiling and q=14 beat
 stalk were canonically renumbered THM-1203 and THM-1204 before publication;
@@ -415,9 +493,44 @@ replayed under the live IDs.  A subsequent pull first-pushed the unrelated
 slack-simplex theorem as THM-1211, so the local four-torsion correction moved
 to the free THM-1206 slot and was likewise replayed and rehashed.
 
-FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219; HYP-7850/7845/7855/7860/7865;
-five exact referees and stored outputs; five root-imported Lean modules; proof
-map, formalization manifest, results index, and namespace corrections.
+The final S82 continuation replaced the phrase “phase-aware transport” by an
+exact three-ledger object.  For every primitive `(p,q)`, the transverse Haar
+fibre is the periodization of one explicit trapezoid; its minimum is zero
+exactly for the nine channels `p+q<=7`.  A unimodular coordinate change gives
+`h=qa-pb`, `k=ub-va` and preserves the full common-divisor/gcd sheet.  Direct
+evaluation sharpens the height-seven rooted charge from the coarse `39/98` to
+the exact `41/294`, attained at `(1,6)`.
+
+Two tempting dynamic bridges were withdrawn rather than inherited.  The
+radius-`1/13` row `(3744,3745)` refutes THM-864's presentation-dependent
+`1/y` localization (MISTAKE-184).  The pair `(64K,75K)` has an explicit empty
+overlap interval even though every height-at-most-seven phase drifts by more
+than one; the omitted exact relation `(75,-64)` supplies period `1/K`,
+refuting THM-598/602's resolved branch (MISTAKE-185).  Static THM-605 remains
+valid.  Thus the carrier must retain both primitive low detuning and the full
+exact torsion sheet.
+
+The pulled THM-1237 positioned debt composes to the exact alternative
+`min(S)<616m/5` or a six-edge floor-tree gcd `<286m/5`.  THM-1233/1241/1236
+then leave a compact five-cut packet.  The general relation-cycle identity
+turns THM-1240's forced blocker cycle into the gauge-fixed sign law
+`prod P_i>prod N_i` after choosing the canonical carrier-gap lift
+`0<=k<c`.  THM-1239 and THM-1242 show respectively that one chosen gap may be
+completely erased and that mixed nontrivial quotient periods can form the
+full `q=15` sunflower.  The exact remaining theorem is therefore address
+compression or a terminating alternate-gap descent coupling this cyclic word
+to THM-1237's positioned debt—not another scalar pair average.  The Lean
+module now checks the channel arithmetic, common-divisor and gcd invariance,
+debt constants, blocker lift, and holonomy sign consumer; analytic Haar and
+canonical-gauge providers remain explicit.
+
+Namespace audit preserved the first-pushed positioned-transfer `HYP-7870` and
+records the later index-only kind-pasteur/THM-1245 collision as `HYP-7871`.
+
+FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219/1221/1226;
+HYP-7850/7845/7855/7860/7865/7870; seven exact referees and stored outputs;
+seven root-imported Lean modules; proof map, formalization manifest, results
+index, and namespace corrections.
 Global LRC(14), an all-packet active-edge blocking theorem, the finite
 continuum/eroded-gap transfer, Cover14 crown supply, and non-AP n=12 rigidity
 remain open.

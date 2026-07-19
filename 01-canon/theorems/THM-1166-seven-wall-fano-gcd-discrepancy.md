@@ -1,10 +1,10 @@
 ---
 id: THM-1166
 title: Seven-wall quadratic/Fano gcd discrepancy -- sharp global pair/tree credits, common-dilate closure, and exact covered-needle gcd-error laws
-status: PROVED complementary S75/S76 packages.  At radius 1/14 every pair has overlap at least 1/91, every triple has pair sum at least 51/1183 and an edge at least 1/63, every seven-packet has a 110/1183 global tree, and every seven-comb packet has global uncovered mass at least 1/12.  A covered lower-LRC needle forces common dilation G/m<=77/12 and exact Fano, forest, and density-weighted gcd-error necessities.  These global credits do not yet give a uniform edgewise localized overlap constant, crown collapse, or LRC(14)
+status: PROVED complementary S75/S76 packages.  At radius 1/14 every pair has overlap at least 1/91, every triple has pair sum at least 51/1183 and an edge at least 1/63, and the original argument gives every seven-packet a 110/1183 global tree and every seven-comb packet global uncovered mass at least 1/12.  THM-1221 strictly supersedes those two global constants by the strict-spectrum values 15/154.  The Fano, forest, and density-weighted gcd-error necessities here remain live; neither theorem alone supplies uniform localization, crown collapse, or LRC(14)
 source: codex-2026-07-18-S75/S76
 depends_on: [LEM-042, LEM-043, THM-965, THM-1153, THM-1155]
-related: [THM-856, THM-1025, THM-1156, HYP-7678]
+related: [THM-856, THM-1025, THM-1156, THM-1221, THM-1226, THM-1234, HYP-7678, HYP-7870]
 script:
   - 04-computation/lrc14_seven_wall_fano_gcd_codex_20260718.py
   - 04-computation/lrc14_seven_wall_pair_tree_referee_codex_S76.py
@@ -291,6 +291,12 @@ sum_({i,j} in F)
 This is an adaptive exact edge-gcd certificate.  Negative edge lower bounds
 may be omitted; a proof search should maximize the positive forest weight,
 not preselect a speed-order path.
+
+THM-1226 later combines (29) with its disconnected-strict-spectrum projective
+charge bound.  The resulting exact crown is
+`H/L>=59625/1485836`; this is sharper than using the elementary `H/7` tree
+cap and closes the gcd-period localization estimate on every disconnected
+`G_gt={rho>1/63}` branch.
 
 ## 6. Why global pair credits still do not localize for free
 
@@ -603,6 +609,19 @@ Integrate this Hunter inequality for the tree from Theorem B.  Since each
 danger comb has measure `1/7`, the sum of the seven single masses is one;
 the uncovered mass is therefore at least the tree weight `110/1183`.
 
+**Later sharpening.**  THM-1221 resolves the strict/equality spectrum at the
+`1/63` wall.  Its first strict rung `5/308` and complete closed-channel
+component analysis improve both (6) and (8a) to `15/154`.  The present
+`110/1183` proof is retained because its triple-sum/component interpolation is
+independent and because the positioned gcd-error inequalities below remain
+the relevant localization interface.
+
+THM-1234 supplies a complementary complete-pair sharpening
+`R_7>=22/65`.  Feeding that value through this theorem's quadratic and Fano
+consumers gives global safe mass `44/455` and, for every Fano labeling,
+`sum_ell m/G_ell>=512/3185`.  This scalar floor is weaker than THM-1221 by
+`1/1430`, but the retained line-period ledger is stronger structural data.
+
 ## 3. The quadratic wall and the positioned gcd error
 
 Let seven combs and a real interval `I` of length `L` be given.  Set
@@ -768,6 +787,13 @@ g/m<=1073/169=6.3491124... .                             (18)
 This bounds the common scale relative to the core maximum, not the smallest
 deleted speed.  It sharply removes large-common-factor protected needles but
 does not touch the pairwise-coprime high-speed branch.
+
+THM-1221 later replaces the global safe mass `110/1183` used here by
+`15/154`, sharpening (17)--(18) to `gL<=139/154` and `g/m<=139/22`.
+THM-1226 further identifies the exact projective-height charge hidden in
+`E`; in particular it proves that the pairwise-coprime limitation is an
+unbounded obstruction for the gcd-period estimate, even though the underlying
+localized overlap can be maximal.
 
 ## 4. Why the global tree cannot simply be restricted
 

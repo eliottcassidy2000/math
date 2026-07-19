@@ -121,7 +121,7 @@ cp/q=c'r in Z,                                         (14)
 contradicting the `>1/4` distance in (4).  Each carrier spoke therefore
 supplies a nonzero master-clock obligation without any primitive-relation or
 equidistribution assumption.  In particular it is unaffected by the
-nonprimitive beat-localization failure recorded in MISTAKE-182.
+nonprimitive beat-localization failure recorded in MISTAKE-184.
 
 ## 4. Six-cover implies a blocker cycle
 

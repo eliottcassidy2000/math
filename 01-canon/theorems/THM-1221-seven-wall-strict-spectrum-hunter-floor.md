@@ -4,7 +4,7 @@ title: THE SEVEN-WALL STRICT-SPECTRUM HUNTER FLOOR — every seven-speed packet 
 status: PROVED (THM-1166 pair formula and analytic tails; globally complete finite ratio-channel/cut referee; Lean arithmetic and provider-boundary consumer; no bounded speed-box assumption)
 source: codex-2026-07-19-S82
 depends_on: [LEM-042, THM-965, THM-1166]
-related: [THM-1203, THM-1218, THM-1219, HYP-7678]
+related: [THM-1203, THM-1218, THM-1219, THM-1226, THM-1234, HYP-7678, HYP-7870]
 script: 04-computation/lrc14_seven_wall_strict_spectrum_hunter_floor_referee_codex_S82.py
 output: 05-knowledge/results/lrc14_seven_wall_strict_spectrum_hunter_floor_referee_codex_S82.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCSevenWallStrictSpectrum.lean

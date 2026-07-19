@@ -1990,3 +1990,55 @@ five-comb-scale floor.  The unique-tooth intersection, chronological finite
 union, and complement-measure geometry remain explicit paper providers.  The
 module has no `sorry` or `native_decide` and proves a method obstruction, not
 global six-comb noncoverage.
+
+## 2026-07-19 S82 addendum -- strict-spectrum seven-wall Hunter floor
+
+THM-1221 proves that every seven-speed packet has a spanning tree of global
+pair-overlap weight at least `15/154`, hence a global safe set of the same
+measure.  The analytic tail reduces `rho<=1/63` to twelve projective channels;
+their strict/weak component analysis uses both reciprocal-dual triangles,
+the first strict rung `5/308`, and small exact common-neighbor banks.  Larger
+projective censuses independently replay every branch.  The theorem leaves
+the exact incidence budgets `1/462` against arbitrary THM-1203 BAD and
+`45/14014` in THM-1218's non-AP branch.
+
+`LRCSevenWallStrictSpectrum.lean` is root-imported.  It checks the strict and
+aligned ledgers, all four surviving analytic branch floors, the five strong
+singleton rows and their `3/2366` minimum margin, the abstract spectrum-provider
+consumer, Hunter and common-dilate arithmetic, and both erosion budgets.  The
+folded pair formula, analytic product tails, exact finite ratio-bank
+classification, and Haar/set identification remain explicit providers.  The
+module contains no `sorry` or `native_decide`.
+
+## 2026-07-19 S82 addendum -- projective gcd charge and positioned split
+
+THM-1226 factors each THM-1166 periodic error through the reduced projective
+height `ab/(a+b)`.  Its explicit translated-LCM family has complete
+strict-high graph and tree mass above `15/154`, but unbounded error divided by
+harmonic mass.  A protected core-safe interval on which all seven deleted
+combs overlap proves that this is a loss in the gcd-period estimate rather
+than a counterexample to phase-aware localization.  Conversely the finite
+projective branches of THM-1221 give the positioned F7 constant
+`448916/194775` whenever the strict-high graph is disconnected.  Composing
+with THM-1166's forest cover cap gives the sharper exact crown
+`H/L>=59625/1485836`.  A second AP-free translated-LCM packet proves that a
+complete strict-high graph need not contain any THM-1218-heavy quartet.
+
+`LRCGCDPeriodProjectiveCharge.lean` checks the exact symmetric and rooted
+charge factorizations, counterfamily divergence inequalities, protected-
+needle threshold arithmetic, the three finite projective charge constants,
+the conditional F7 consumer, the forest-crown composition, and the separated
+packet arithmetic cap.  It also kernel-checks the `C>=195/1078` shallow-F7
+vacuity which sends every nontrivial connected branch into the complete-gap
+compactification; the nine height-seven channels and their sharp oriented
+charge maximum `41/294`; the unimodular coordinate equations, full common-
+divisor sheet, and gcd invariance; THM-1237's `616m/5`--`286m/5` positioned
+debt composition; the triangle relation-cycle identity and sign consumers;
+and the centered blocker-relation lift.  `CombPatterns.lean` supplies the
+already-formalized static avoidance/interior arithmetic behind THM-605.
+Coprimality and AP-freeness of the concrete families, the pair-overlap/Haar
+interpretation, the periodized trapezoid, finite branch identification,
+interval-set geometry, and the canonical address-gauge provider remain
+explicit.  THM-598/602 and THM-864 are not formalization providers: their
+withdrawn dynamic inferences are recorded in MISTAKE-185/184.  The module has
+no `sorry` or `native_decide` and is not a formal proof of global LRC(14).

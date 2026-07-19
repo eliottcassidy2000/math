@@ -1,5 +1,184 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-19 S82 STRICT-SPECTRUM CROSSING AND THE POSITIONED FRONTIER
+>
+> THM-1221 raises the universal seven-speed maximum-spanning-tree and Hunter
+> safe-set floor from `110/1183` to
+>
+> ```text
+> 15/154.
+> ```
+>
+> The proof resolves the exact spectrum around `1/63`.  The first strict rung
+> is `5/308`; the closed-low graph has two reciprocal-dual triangles
+> `(1,12,27)` and `(4,9,108)` but no `K4`; and small complete ratio-channel
+> banks settle every strict/weak threshold-component cut.  The large
+> `3,003` and `131,593/12/0` packet censuses independently replay the analytic
+> branch proof rather than replacing an unproved tail.
+>
+> This crosses the sharp THM-1203 four-comb obstruction uniformly:
+>
+> ```text
+> 15/154-2/21   =1/462,
+> 15/154-60/637=45/14014             (non-AP quartet).
+> ```
+>
+> Hence the global continuum incidence is no longer a zero-margin problem.
+> It does not yet place the phase inside the protected slow gap or make the two
+> complementary killers coherent.
+>
+> THM-1234 now supplies an independent crossing through the complete-pair/Fano
+> carrier:
+>
+> ```text
+> mu(Safe_7)>=44/455,
+> 44/455-2/21=2/1365,
+> 44/455-60/637=8/3185       (non-AP),
+> sum_Fano-lines m/G_line>=512/3185.
+> ```
+>
+> It is weaker than the tree floor by `1/1430`, but retains line-period debt.
+> The exact synthesis target is to correlate one such Fano line with the
+> THM-1221 heavy tree and the endpoint-owner chronology.
+>
+> THM-1226 identifies exactly why THM-1166's old period-remainder localization
+> does not automatically transport the new margin.  For a reduced edge
+> `s_i=ga,s_j=gb`, its error is
+>
+> ```text
+> rho(1-rho)/g
+>   =[rho(1-rho)ab/(a+b)](1/s_i+1/s_j).
+> ```
+>
+> The bracketed projective-height charge is unbounded on an explicit
+> pairwise-coprime translated-LCM family with complete strict-high graph;
+> every tree clears `15/154`, while error divided by harmonic mass tends
+> linearly to infinity.  The same packet embeds in a protected core-safe
+> interval on which all seven combs overlap, proving that gcd-period vertices
+> have discarded the decisive wall address.  Conversely the complete finite
+> channel banks give `(F7)` with `eta=15/154` and
+> `C=448916/194775` on every disconnected strict-high branch.  The exact live
+> seventh wall is therefore the **connected** `G_gt={rho>1/63}` branch with
+> phase retained.  Its faithful carrier is a weighted threshold graph plus
+> wall/tooth address and deletion-circuit incidence, not a bare runner
+> tournament or gcd-period graph.  See HYP-7870.
+>
+> Combining this transfer with THM-1166's sharper forest cover cap `6H/49`
+> gives the proved disconnected-branch crown
+>
+> ```text
+> H/|I|>=59625/1485836.
+> ```
+>
+> A second translated-LCM packet, with offsets
+> `{1,2,3,5,11,13,17}`, has `G_gt=K7` but no four-term AP.  Hence every
+> quartet lies below THM-1218's heavy threshold.  Complete strict-high
+> connectivity therefore does not force the required deletion circuit;
+> that correlation is genuinely phase/incidence data.
+
+> ### 2026-07-19 PULL INTEGRATION — THE SAME PHASE STALK ON THE SIX-COMB ROUTE
+>
+> THM-1233 independently removes projective escape from the complementary
+> slow-gap route: every putative six-comb cover satisfies
+>
+> ```text
+> 1<d_i/c<2345
+> ```
+>
+> together with explicit bounds on all five adjacent ratios.  THM-1241 and
+> THM-1236 then rule out a single coalescing tangent packet, force a
+> macroscopic cut (including some adjacent ratio `>211/210`), and identify the
+> exact continuous-pivot median invoice.  Hence any limiting obstruction
+> has one of five cut indices and at most five-speed tangent subclusters.
+>
+> These results and THM-1226 meet at the same missing coordinate.  Ratio
+> escape is now compactified, full coalescence is excluded, and an unsigned
+> gcd-period error is proved inadequate.  What remains is the arithmetic
+> offset/phase stalk inside a compact separated ratio packet: wall addresses,
+> endpoint-owner words, and deletion/blocking circuits.  This is a smaller
+> object than either an arbitrary mixed-period tree or an arbitrary real
+> six-cover, but the carrier `c` and its phase clock are still unbounded.
+>
+> The bridge is rigorous.  On the canonical needle `|I|=1/(7m)`, if the
+> least deleted speed `a<13m`, then `H>7|I|/13`, so `(F7)` with
+> `eta=15/154` is automatic for every `C>=195/1078`.  Hence every nontrivial
+> connected-`G_gt` row has `a>=13m`; the needle contains a complete `a`-gap,
+> and the other six combs cover it.  THM-1233/1241/1236 then apply with no extra
+> projective assumption.  The open branch is exactly five cut indices plus
+> a compact six-ratio/cyclic-phase kernel.
+
+> ### 2026-07-19 PULL INTEGRATION — POSITIONED DEBT AND A FORCED BLOCKER CYCLE
+>
+> THM-1237 proves the exact max-forest interval transfer, rather than leaving
+> it as HYP-7870's target.  On a covered protected needle its THM-1221 floor
+> tree obeys
+>
+> ```text
+> 24mH+13m sum_T 1/g_ij >=30/11.
+> ```
+>
+> Composing this with `H<7/min(S)` gives the new dichotomy
+>
+> ```text
+> min(S)<616m/5
+> or some floor-tree edge has gcd<=286m/5.
+> ```
+>
+> THM-1238 converts the Kakeya cut into a positive pair-beat/third-blocker or
+> an exact singleton phase lock.  THM-1240 bypasses that lock: every one of
+> the six carrier--fast spokes has a deep positive nonzero beat, and every
+> six-cover therefore induces a loopless blocker functional graph with a
+> directed cycle of length `2..6`.  This is the first genuinely nontransitive
+> tournament forced by the hard slow-gap geometry.
+>
+> Two proved guardrails prevent a premature closure.  THM-1239 constructs a
+> single resonant blocker which erases all seven cracks of an arbitrary
+> selected near-tiling gap, even outside one BAD quartet; the proof must be
+> allowed to move to another gap.  THM-1242 proves common-clock escape but
+> exhibits the sharp mixed `q=15` sunflower filling the entire clock.  Thus
+> “there is a blocker cycle” and “every quotient period is nontrivial” are not
+> contradictions by themselves.
+
+> ### 2026-07-19 S82 EXACT PHASE FIBER, CORRECTIONS, AND HOLONOMY
+>
+> THM-605 already proves the static inverse: a primitive phased pair can have
+> zero overlap exactly on the nine channels `p+q<=7`.  THM-1226 now supplies
+> the exact periodized trapezoid density and the unimodular dynamic normal
+> form
+>
+> ```text
+> h=qa-pb,  k=ub-va,  (a,b)=(pk+uh,qk+vh),
+> gcd(k,h)=gcd(a,b).
+> ```
+>
+> This audit also removes two false bridges.  THM-864's claimed `1/y` decay
+> changes when a relation is multiplied; the exact row
+> `(A,B,p,q,y)=(3744,3745,12,12,12)` violates it.  THM-598/602's low-height
+> “resolved” branch is also false: `(64K,75K)` is resolved at every
+> height-at-most-seven channel on an explicit interval, yet the local pair
+> overlap is empty because the high exact relation `(75,-64)` has period
+> `1/K`.  See MISTAKE-184/185.  Static fiber positivity is not finite-orbit
+> sampling.
+>
+> The correct circuit quotient now has an exact algebraic consumer.  For an
+> oriented relation cycle `q_i s_(i+1)-p_i s_i=h_i`,
+>
+> ```text
+> (prod q_i-prod p_i)s_1
+>  =sum_i h_i(prod_(j<i)q_j)(prod_(j>i)p_j).
+> ```
+>
+> Off product-one holonomy this gives `s_1<=r Delta Q^(r-1)`; balanced nonzero
+> holonomy must be sign-mixed.  Applying the same identity to THM-1240's
+> natural beat-numerator/tooth-address equations, after fixing the canonical
+> circle lift `0<=k<c`, shows every centered blocker cycle has **strictly
+> positive product holonomy in that gauge**.  Arbitrary integer translations
+> do not preserve the product comparison.  The remaining theorem is
+> therefore an address-compression/alternate-gap descent: turn that positive
+> holonomy, the separated cut-clock doublet, and THM-1237's positioned mass
+> debt into a global witness while retaining the exact gcd sheet and cyclic
+> residue word.
+
 > ## 2026-07-19 S82 SIX-COMB CURVATURE SPECTRUM AND ACTIVE-PAIR PATH
 >
 > THM-1219 identifies the exact obstruction left after the five-comb theorem.

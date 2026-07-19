@@ -2,7 +2,7 @@ THM-1226 GCD-PERIOD PROJECTIVE-CHARGE EXACT REFEREE
 method=integer/Fraction only; always-on checks; no dependencies
 exact edge-charge identities=2691
 
-TRANSLATED FACTORIAL STRICT-HIGH COUNTERFAMILY
+TRANSLATED LCM STRICT-HIGH COUNTERFAMILY
 offsets=(1, 2, 3, 5, 7, 11, 13); sum=42; base_step=27720
 N=1 A=27720 min_rho=36608881/1793835197 max_rho=54895501/2689879521 H<1/3960
   every_tree_error>4545/47432 E/H>204525/539
@@ -15,6 +15,49 @@ N=100 A=2772000 min_rho=365905848001/17929386552077 max_rho=548856990001/2689399
 fold_corrections=(20, 16, 8, 0, -16, -24, 32, 16, 0, -32, -20, 24, 0, -48, -16, 0, -24, -8, 0, 0, 16)
 all pair gcds=1; G_gt=K7; every spanning tree mass>15/154
 E_T/H grows as (288/16807)A+O(1); no absolute C exists
+
+STRICT-HIGH / HEAVY-CIRCUIT SEPARATION
+N=1 A=55440 min_rho=146398561/7173529517 analytic_floor=12295039639/602456944712
+N=2 A=110880 min_rho=585520321/28690495757 analytic_floor=49178828119/2409762580232
+N=10 A=554400 min_rho=14636529601/717189950477 analytic_floor=1229444092759/60242760547592
+offsets=(1, 2, 3, 5, 11, 13, 17); differences=(1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 14, 15, 16)
+four_term_APs=(); all pair gcds=1; G_gt=K7; THM-1218 heavy quartets=0
+
+FAREY-HEIGHT SEVEN PHASE FIBER
+THM-605 primitive_phase_channels=((1, 1), (1, 2), (1, 3), (1, 4), (2, 3), (1, 5), (1, 6), (2, 5), (3, 4))
+major_nondiagonal_channels=((1, 2), (1, 3), (1, 4), (2, 3), (1, 5), (1, 6), (2, 5), (3, 4))
+exact_fiber_pairs_checked=278
+THM-605 exact_minima_replayed={(1, 7): Fraction(1, 49), (2, 7): Fraction(1, 49), (1, 14): Fraction(1, 49), (3, 5): Fraction(1, 105), (4, 5): Fraction(1, 70), (1, 15): Fraction(2, 105), (1, 17): Fraction(2, 119), (1, 19): Fraction(2, 133)}
+unimodular_relation_coordinate_rows=4725
+N=14 pair=(15,29) relation=2a-b=1 rho=3/145
+N=28 pair=(29,57) relation=2a-b=1 rho=79/3857
+N=140 pair=(141,281) relation=2a-b=1 rho=1887/92449
+N=1400 pair=(1401,2801) relation=2a-b=1 rho=186867/9156469
+D_a intersection D_b is empty on [3/14,11/14] for the relation family
+fiber minimum is zero iff p+q<=7; positive lower bound otherwise
+height-seven oriented_charges={(1, 1): Fraction(6, 49), (1, 2): Fraction(13, 98), (1, 3): Fraction(20, 147), (1, 4): Fraction(27, 196), (2, 3): Fraction(20, 147), (1, 5): Fraction(34, 245), (1, 6): Fraction(41, 294), (2, 5): Fraction(34, 245), (3, 4): Fraction(27, 196)}
+exact_relation_C=41/294; six-edge relation-tree product bound=46656
+
+PRIMITIVE-RELATION MULTIPLICITY GUARDRAIL
+A=3744
+B=3745
+scaled_relation=(12, 12, 12)
+primitive_relation=(1, 1, 1)
+rho13=4/169
+restricted_error=2/507
+claimed_clean_rhs=13129/3359265
+violation=531/14556815
+THM-864 clean bound is refuted; scaled relations cannot buy y-decay
+
+HIGH-RELATION FINITE-INTERVAL GUARDRAIL
+base_pair=(64, 75)
+largest_empty_gap=(Fraction(407, 896), Fraction(489, 896), Fraction(41, 448))
+scaled_interval_length=449/4928
+height_le_seven_minimum=11
+minimum_phase_drift=449/448
+omitted_exact_relation=(75, -64)
+omitted_relation_height=139
+THM-598/602 low-height resolved branch is refuted; retain the full exact kernel
 
 COVERED PROTECTED-NEEDLE EMBEDDING
 q=27721
@@ -41,15 +84,43 @@ two_five_packets=12
 two_five_kappa=43774/276507
 two_five_C=87548/92169
 C_disc=448916/194775
-crown_ratio=417375/10488302
+hunter_crown_ratio=417375/10488302
+forest_crown_ratio=59625/1485836
+protected_mH=59625/10400852
+protected_min_ratio=72805964/59625
+separated_max_ratio=34145997116/11925
 if G_gt is disconnected: E_T<=C_disc*H for a THM-1221 floor tree
 localized tree mass >=(15/154)L-(448916/194775)H
+covered forest cap=6H/49; hence H/L>=59625/1485836
+if min(S)>=13m and six faster combs cover its gap: max(S)/m<34145997116/11925
+canonical needle + min(S)<13m: F7 is automatic for C>=195/1078
+therefore every nontrivial connected-G_gt row has a complete min(S)-gap
+
+THM-1237 POSITIONED-DEBT COMPOSITION
+min_speed_threshold=616/5
+harmonic_threshold=5/88
+tree_gcd_reciprocal_threshold=15/143
+one_edge_reciprocal_threshold=5/286
+one_edge_gcd_threshold=286/5
+covered needle: min(S)<616m/5 or a floor-tree edge has gcd<=286m/5
+
+PRIMITIVE RELATION-CYCLE HOLONOMY
+cycle_rows=2406
+nontrivial_holonomy_rows=2400
+balanced_holonomy_rows=6
+balanced_nonzero_sign_mixed_rows=6
+height6_seven_cycle_crown=326592
+height13_seven_cycle_crown=33787663
+nontrivial product holonomy gives a crown; balanced nonzero holonomy is sign-mixed
 
 TOURNAMENT / ALTERNATE-VERTEX AUDIT
-factorial switch=all 21 edges strict-high; speed-order gauge is transitive
+LCM-packet switch=all 21 edges strict-high; speed-order gauge is transitive
 scores=(0,1,2,3,4,5,6); cycles=0; SCCs=7; Hamilton_paths=1; low_flips=0
 runner threshold graph preserves global rho floor but destroys projective height kappa
 gcd-period vertices collapse all counterfamily edges to period 1 and destroy wall alignment
-faithful local vertices=wall events / tooth addresses with signed endpoint cocycles
+relation-channel switch=(7-p-q)_+ then Farey-height/lex gauge
+relation-channel tie_path=((1, 1), (1, 2), (1, 3), (1, 4), (2, 3), (1, 5), (1, 6), (2, 5), (3, 4))
+relation-channel scores=(0,1,2,3,4,5,6,7,8); cycles=0; SCCs=9; Hamilton_paths=1
+faithful local vertices=wall events / blocker obligations; edge sidecar=(p,q,k,h,tooth,cocycle)
 STATUS=PASS
-source_sha256=c61bc3536c4360737b7d796baa7e7f5c3695ee8cd80eb64a6461c09ca2501b46
+source_sha256=9ae71334d58a3d5613cb4197724e4af5d29c95f2e0d87e5a8ce6f9b0341f55a7
