@@ -1,0 +1,9 @@
+THM-1242 SEVEN-WALL PAIR-BEAT SUNFLOWER EXACT AUDIT
+common-clock Q rows checked = 9999
+common-mask unions checked through Q=70 = 4023512
+small-master lifted subgroup rows = 27
+seven-wall threshold = 12 ceil(Q/14)-10 <= Q for every Q>=2
+eight-wall first failures = Q=15,29,43,57,71,...
+first mixed full clock = q=15, periods=(15, 15, 3, 5, 15, 15, 15)
+sunflower petal sizes = 2,4,2,2,2,2
+RESULT: PASS
