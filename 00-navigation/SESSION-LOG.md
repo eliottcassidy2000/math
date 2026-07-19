@@ -3,6 +3,42 @@
 Prompt (owner): check the general-d slope
 
 FILES: THM-1148, HYP-7590, general_d_slope / general_d_sweep_fast scripts + out. -> all (codex: good news, and it removes the branch I warned you about last session. The slope formula is confirmed -- F(u) = 1 - (7/6) d_max u with entry at u = 5/(7 d_max) giving exactly 1/6 -- but my predicted growth 2 d_max/21 is WRONG. Total bad does not grow with d_max; it is CAPPED at about 2/21 over all 560 triples with d <= 16, and ZERO exceed the 0.164 safe measure. The maximum sits exactly on d proportional to (1,2,3), where the period-1/m structure gives 2m runs of width 1/(21m) and the product 2/21 is invariant. So the argument does NOT split into small-d and large-d regimes, and the whole analytic tail is uniform in d with margin 0.0688. What remains to prove is the ceiling itself -- that d proportional to (1,2,3) is the maximiser -- which is a statement about when three points driven at rates (d2,d3,d4) can be equally spread. After that, bad <= 2/21 < 0.164 <= |S(P)| is a complete analytic tail and only the endpoint bank is left.)
+## opus-2026-07-17-S385 -- THM-1180 THE SHARPER PER-LEVEL BOUND + WITNESS-POINT BRANCHING (locality, the j=1 rounding test at 360x, and branching on a witness point at 1/7 density) -- VALIDATED against the known k=3 and k=4 answers with a 10x node reduction and the same two families; k=5 running at close-out, NOT claimed (HYP-7710)
+
+Owner: stop the five-speed run and work the sharper per-level bound. Run stopped; bound
+found and validated.
+THE DIAGNOSIS FIRST: my S381 projection ('~56M nodes at k=5, slow but feasible') was
+wrong because the cost is BACK-LOADED. Lexicographic quintuples begin by dropping
+{1,2,...}, which removes the COARSE combs and leaves large essential regions -- small
+speed bounds, small subtrees. The final quintuples drop {9,...,13} and KEEP 1,2,3, so
+residues are small, ell_max is tiny, the bound j/(r(7-j))/ell_max blows up and subtrees
+explode. The projection assumed uniform per-quintuple cost. Second-order version of an
+estimation error I had already made once this session.
+THREE EXACT SHARPENINGS. (1) LOCALITY: only arcs MEETING the residue matter -- for a
+component [a,b] the relevant indices are ceil(wa-lam)..floor(wb+lam), so the work is
+O(w*mu(E)+c) instead of O(w). Verified 0/360 mismatches. (2) THE j=1 ROUNDING TEST: at
+the last level E must lie inside D_w, and by the separation lemma each component must sit
+in a SINGLE arc, so containment is exactly ceil(wb-lam) <= floor(wa+lam) per component --
+an O(1) test with NO subtraction. Verified 0/360; measured 360x faster at leaves.
+(3) WITNESS-POINT BRANCHING, which is the one that actually mattered: every cover must
+cover every point, so fixing a witness x (midpoint of the longest component, the most
+constrained) forces some placed comb to satisfy ||w x|| < lam -- a condition of DENSITY
+2*lam = 1/7. Branching on 'which comb covers x' explores a seventh of the speeds per
+level. It drops sorted-order symmetry breaking, so families are found up to j! times and
+deduped; net 7^j/j!, about 140x at j=5.
+VALIDATION BEFORE TRUST, which is the part I want on record: k=3 gives 8156 nodes (was
+87863) and k=4 gives 217178 (was 2242028) -- a 10x reduction -- and BOTH return exactly
+the two known families, matching THM-1155 and THM-1165. A faster search that changed an
+answer would be worthless, and validating on levels whose truth is already established is
+the only way to earn confidence in the level whose truth is not.
+NOT CLAIMED: k=5. That enumeration was still running at close-out and its verdict is not
+in. Nothing in THM-1180 depends on it.
+CONCEPTUAL NOTE: my earlier attempts to rescue k=5 were about implementation. What moved
+it was a mathematical observation -- the 1/7 density of point-covering -- and that is the
+SAME constant 2*lam = 1/7 that obstructs every union bound in this programme (S1 = 13/7 >
+1, the |W_q| window in THM-1110, the k=7 arity ceiling in THM-1155). This is the first
+time it has worked FOR us rather than against us.
+FILES: THM-1180, 2 scripts + outs, HYP-7710. opus; S385.
 
 ---
 

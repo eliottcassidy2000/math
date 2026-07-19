@@ -1,0 +1,12 @@
+(4) VALIDATE the witness-branching rule against the KNOWN k=4 answer
+    (S381: 2242028 nodes, 414499 leaf checks, exactly 2 families)
+    k=4: nodes=217178 leaf=434952 pruned=0 elapsed=74.4s  families=2
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  [{1..13}]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  [{1..11,13,24}]
+
+(5) k=3 cross-check (S380 found exactly 2 families)
+    k=3: nodes=8156 leaf=16275 pruned=0 elapsed=2.2s  families=2
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  [{1..13}]
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  [{1..11,13,24}]
+
+(6) k=5 -- the level that stalled under the old search

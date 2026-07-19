@@ -1528,3 +1528,5 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `fourspeed_exhaustive_opus_S381.out` | [STORED] | THM-1165: k=4 exhaustive (2.24M nodes, 85% pruned, 0 empty residues) -> still 2 families. | (self) |
 | `critical_points_opus_S383.out` | [STORED] | THM-1170: optimum at beat frequencies (14/14 verified); 169 = 13^2 candidates; 15.5% witness density. | (self) |
 | `beat_blocking_opus_S384.out` | [STORED] | THM-1175: pairing lemma 0/200 + 0/174; blocker collapse 13 -> 4-8; certificate fires 30/30. | (self) |
+| `sharper_level_bound_opus_S385.out` | [STORED] | THM-1180: locality + j=1 rounding test, both 0/360 exact; 360x leaf speedup. | (self) |
+| `witness_branch_opus_S385.out` | [STORED] | THM-1180: witness-point branching validated on k=3,4 (10x fewer nodes, same 2 families); k=5 in flight. | (self) |
