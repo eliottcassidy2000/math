@@ -433,15 +433,16 @@ Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
 missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
 
-The shortest formal capstone is now exact about its hypothesis:
-`LRCMSplit.lean` and `LRCFinsetBridge.lean` reduce the official target to
-LRC(<=13) plus `INVcov`, where `INVcov` includes `Covering(2..14)` as well as
-no `Lonely13`.  The no-`Lonely14` branch supplies that covering premise by the
-divisor sieve.  The earlier covering-free S108/S109 inverse statement is false
-on MISTAKE-161's exact covers-`2..13`/misses-14 row; kernel-valid implication
-from that overstrong premise was therefore not a faithful statement of the
-mathematical frontier.  `LRC14DispatchAssembly.lean` gives the complementary
-generic easy/compact split with every producer hypothesis named.
+The former short capstone through `INVcov` is kernel-valid only as a
+conditional implication.  THM-1153 refutes its literal premise even after
+`Covering(2..14)` was added: the doubled AP `2*{1,...,13}` is Covering, has no
+`Lonely13` time, and has no 13-dominant speed.  `LRCMSplit.lean` now labels
+that interface historical and root-imports a formal counterexample.  The
+sound exact capstone is `ResidualINV`, with
+`residualINV_iff_LRC14`; this is an equivalence/restatement under the AP
+bridge, not progress on the remaining mathematics.  A live noncircular route
+must normalize gcd, rederive Covering after reduction, or use the explicit
+Easy/Compact producers in `LRC14DispatchAssembly.lean`.
 
 No theorem in this picture proves LRC(14) without the named suppliers above.
 

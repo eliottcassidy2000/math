@@ -12,8 +12,9 @@
     · enumerate `W` as `v : Fin 13 → ℤ` via `W.equivFinOfCardEq`;
     · use shift invariance to replace `t` by `Int.fract t ∈ [0,1)`.
 
-  `LRC14_finset_of_INVcov` records the useful sufficient reduction
-  `LRC(≤13) + INVcov ⟹ LRC14.LRC14`.  The exact residual version is also exported:
+  `LRC14_finset_of_INVcov` records a historical conditional implication
+  `LRC(≤13) + INVcov ⟹ LRC14.LRC14`; THM-1153 refutes its `INVcov` premise with
+  the doubled AP.  The exact residual version is also exported:
   `LRC14_finset_of_residual_INV`.  The latter closes the representation gap, but
   because `ResidualINV` is equivalent to working LRC(14) under the cited bridge, it
   is not advertised as a noncircular mathematical reduction.
@@ -62,9 +63,9 @@ theorem LRC14_finset_of_residual_INV (cite : LRCUpTo13) (inv : ResidualINV) :
   have hl := lonely_fract v t ht i a
   rwa [hvi] at hl
 
-/-- **The official Finset target from `INVcov` (PROVED).**  The stronger covering
-inverse target supplies `ResidualINV`, after which the representation bridge above
-lands on `LRC14.LRC14`. -/
+/-- **The official Finset target conditionally from the refuted `INVcov` premise
+(PROVED implication).**  `INVcov` supplies `ResidualINV`, after which the
+representation bridge above lands on `LRC14.LRC14`.  THM-1153 proves `¬INVcov`. -/
 theorem LRC14_finset_of_INVcov (cite : LRCUpTo13) (inv : INVcov) :
     LRC14.LRC14 :=
   LRC14_finset_of_residual_INV cite (residualINV_of_INVcov inv)

@@ -1121,22 +1121,21 @@ and 12,771-row endpoint complement close the full step-two family at all
 legal scales, while the exact `Q5` mass/component inequality supplies a
 separated-ratio gate.  These are genuine r6 pieces, not a uniform r6 closure.
 
-`LRCMSplit.lean` and `LRCFinsetBridge.lean` now state the direct kernel
-reduction with its essential divisor hypothesis exposed.  The genuine open
-supplier is
+`LRCMSplit.lean` and `LRCFinsetBridge.lean` state the conditional implication
+from
 
 ```text
 INVcov: Covering(2..14) and no Lonely13 imply 13-fold dominance.
 ```
 
-In the no-`Lonely14` branch, the sieve derives `Covering(2..14)` and band
-monotonicity derives no `Lonely13`; `ap_core_bridge` then consumes `INVcov`.
-The earlier S108/S109 formulation omitted `Covering(2..14)` and was false as a
-standalone inverse statement: MISTAKE-161's exact row covers only `2..13`, has
-no `Lonely13`, and has ratio below 13.  `LRC14DispatchAssembly.lean` remains a
-valid generic easy/compact composition, while the corrected M-split is the
-short canonical direct reduction.  All three modules are conditional
-assemblies; none proves `INVcov`.
+The implication is kernel-valid, but THM-1153 now proves this exact `INVcov`
+premise false: `2*{1,...,13}` is Covering through 14, has no `Lonely13` time,
+and has no 13-dominant speed.  The earlier repair exposed the missing divisor
+hypothesis but did not audit common dilation.  `ResidualINV` remains the exact
+counterexample interface and `residualINV_iff_LRC14` remains valid; it is
+equivalent to the working target under the AP bridge, not a noncircular
+reduction.  `LRC14DispatchAssembly.lean` remains a valid generic easy/compact
+composition with every producer hypothesis explicit.
 
 `LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
 that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used

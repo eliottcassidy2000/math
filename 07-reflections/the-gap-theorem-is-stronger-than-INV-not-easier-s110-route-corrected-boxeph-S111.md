@@ -1,5 +1,11 @@
 # The proposed gap theorem is false—and would have been stronger than INV
 
+> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** the comparison target
+> `INVcov` used below is itself false on the doubled AP `2*{1,...,13}`.  The
+> proposed `1/12` gap remains independently refuted by THM-1131.  Thus the old
+> logical implication points to a refuted premise and supplies no proof route;
+> a live inverse target needs primitive normalization plus a re-Covering bridge.
+
 *boxeph-2026-07-18-S111; scope correction codex-2026-07-18 (MISTAKE-167). Owner: prove the gap theorem
 "non-AP core ⟹ M ≥ 1/12". The script evaluated five named families; it did **not** enumerate covering
 families and therefore did not verify a universal non-AP floor.  THM-1131 now gives the primitive fully

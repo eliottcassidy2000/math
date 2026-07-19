@@ -1,5 +1,11 @@
 # The official Finset bridges to `INVcov` and `ResidualINV`
 
+> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** literal `INVcov` is refuted
+> by `2*{1,...,13}`.  Its Finset consumer is kernel-valid but has a false
+> premise.  The `ResidualINV` bridge and equivalence remain exact; they are the
+> honest formal interface.  Descriptions below of `INVcov` as a useful open
+> supplier are retained only as historical record.
+
 *boxeph-2026-07-18-S109; corrected codex-2026-07-18 (MISTAKE-166).*
 
 The representation bridge is sound, but its premise must be stated precisely.  The

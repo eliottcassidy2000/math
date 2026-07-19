@@ -11,13 +11,15 @@
   `1/14`-lonely time covers every modulus `2..14` by the divisor sieve and has no
   `1/13`-lonely time by band monotonicity.
 
-  `INVcov` is the useful noncircular sufficient target:
+  `INVcov` is a historical sufficient premise, now REFUTED by the doubled AP
+  `v_i=2(i+1)` (THM-1153):
 
       positive + Covering(2..14) + no Lonely13  ⟹  13-fold dominance.
 
-  Together with the cited LRC(≤13) bridge it implies LRC(14).  It is stronger than
-  the exact counterexample target below, and is not identified with the Tao `n=12`
-  inverse theorem without a separate structural theorem.
+  Together with the cited LRC(≤13) bridge it conditionally implies LRC(14), but the
+  premise is false: the doubled AP is Covering, has no Lonely13 time, and has no
+  13-dominant speed.  The consumer theorems are retained as kernel-valid historical
+  implications, not as a live reduction.
 
   `ResidualINV` is the exact counterexample-structural target:
 
@@ -52,10 +54,11 @@ theorem M_split (v : Fin 13 → ℤ)
     rintro ⟨t, hlt⟩
     exact h ⟨t, lonely14_of_lonely_le (by norm_num) (by norm_num) hlt⟩
 
-/-- **The covering inverse theorem (OPEN, dominance form).**  Every positive covering
-13-family with no `1/13`-lonely time has a speed dominating every other speed
-13-fold.  Coverage means every modulus `2..14` divides some speed; it cannot be
-dropped from this statement. -/
+/-- **The historical covering inverse premise (REFUTED, dominance form).**
+Every positive covering 13-family with no `1/13`-lonely time was conjectured to
+have a speed dominating every other speed 13-fold.  THM-1153 refutes this exact
+Prop with `2*{1,...,13}`.  It remains named only so the already proved conditional
+implications have a stable interface. -/
 def INVcov : Prop :=
   ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → Covering v → (¬ ∃ t, Lonely 13 v t) →
     ∃ vstar : Fin 13, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar
@@ -71,7 +74,7 @@ theorem crux_of_dominance (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hpos : ∀ i,
   obtain ⟨vstar, hdom⟩ := inv_dom hcover hnl
   exact ap_core_bridge cite v hpos vstar hdom
 
-/-- **The complete sufficient reduction through `INVcov` (PROVED).**  In the
+/-- **Conditional implication from the refuted `INVcov` premise (PROVED).**  In the
 no-`Lonely14` branch the divisor sieve supplies `Covering(2..14)` and band
 monotonicity supplies `M < 1/13`; `ap_core_bridge` then closes the branch. -/
 theorem lonely14_of_dominance (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hpos : ∀ i, 0 < v i)
@@ -80,7 +83,7 @@ theorem lonely14_of_dominance (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hpos : �
     ∃ t, Lonely 14 v t :=
   M_split v (fun hcover => crux_of_dominance cite v hpos hcover inv_dom)
 
-/-- **LRC(14), reduced to LRC(≤13) + `INVcov` (PROVED, universally quantified).** -/
+/-- **Historical conditional capstone (PROVED, but `INVcov` is refuted).** -/
 theorem LRC14_of_INVcov (cite : LRCUpTo13) (inv : INVcov) :
     ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → ∃ t, Lonely 14 v t :=
   fun v hpos => lonely14_of_dominance cite v hpos (inv v hpos)
@@ -94,7 +97,8 @@ def ResidualINV : Prop :=
     (¬ ∃ t, Lonely 14 v t) →
     ∃ vstar : Fin 13, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar
 
-/-- The stronger noncircular target `INVcov` supplies the exact residual target. -/
+/-- The refuted but formally stronger premise `INVcov` supplies the exact residual
+target.  This implication remains logically valid and is not a live proof route. -/
 theorem residualINV_of_INVcov (inv : INVcov) : ResidualINV := by
   intro v hpos hcover h14
   have h13 : ¬ ∃ t, Lonely 13 v t := by

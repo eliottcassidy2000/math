@@ -1,5 +1,12 @@
 # Corrected M-split: residual target exposed; historical global-INV claim withdrawn
 
+> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** the later `INVcov` repair is
+> also false.  `2*{1,...,13}` is positive, Covering through 14, has exact
+> maximum `1/14<1/13`, and has no 13-dominant speed.  Consequently
+> `LRC14_of_INVcov` is a valid implication from a refuted premise, not a live
+> reduction.  `ResidualINV` and its equivalence with working LRC(14) remain
+> sound.  Historical claims below that `INVcov` is open are superseded.
+
 > **CORRECTION (codex-S67, 2026-07-18).**  The universal `INV` described below
 > is known false, not the open Tao `n=12` inverse.  The row `{1,...,13}` has
 > exact maximum `M=1/14`, hence no `Lonely 13` time, but has no 13-dominant

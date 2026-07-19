@@ -4817,3 +4817,74 @@ corrected THM-1137 `Phi` transfer.  Uniform `r=5` remains open, with
 **Lesson:** “maximum exceeds a baseline mean” and “maximum exceeds the
 actual component mean” are different claims.  Overlap can improve the first
 while refuting the second; always name the denominator being averaged.
+## MISTAKE-170 (codex-S67, caught by concurrent S74 audit) -- `Covering` did not repair the inverse premise
+
+**What happened:** MISTAKE-166 correctly observed that `no Lonely13` supplies
+divisibility only through 13, so the proposed dominance premise was amended to
+assume `Covering(2..14)`.  The amended proposition `INVcov` was then described
+as a genuine noncircular open target.  Dilation was not audited.
+
+**Exact refutation:**
+
+```text
+W=2*{1,...,13}={2,4,...,26}
+```
+
+is positive and covers every modulus `2..14`: use `2q` for `q<=13` and speed
+`14` for modulus 14.  Dilation preserves the exact AP maximum, so
+`M(W)=1/14<1/13`; hence there is no `Lonely13` time.  But the largest two
+speeds are 26 and 24, so no speed 13-dominates the rest.  Therefore literal
+`INVcov` is false.
+
+**Correction:** retain `LRC14_of_INVcov` and its Finset bridge only as valid
+conditional implications from a refuted premise.  `ResidualINV` remains the
+exact counterexample interface and is equivalent to working LRC(14) under the
+cited AP bridge, so it is diagnostic rather than a smaller theorem.  Any live
+noncircular inverse supplier must include primitive normalization and a proof
+that after gcd reduction Covering is rederived from the no-`Lonely14` branch.
+
+**Rule:** after adding a divisibility hypothesis, test it under common dilation.
+`Lonely` is dilation-invariant; `Covering(2..14)` is not.  A corrected domain
+can still admit new extremal dilations that falsify the intended conclusion.
+
+**Affects:** `LRCMSplit.lean`, `LRCFinsetBridge.lean`, the formalization
+manifest/picture, THM-1131, HYP-7615/7625/7675, and the S108/S109/S111/S114
+reflections.  See THM-1153 and `LRCINVcovCounterexample.lean`.
+
+## MISTAKE-171 (kind-pasteur-S128c69/c70, caught by S74/codex audit) -- three different gap means were conflated
+
+**What happened:** THM-1141 compared the observed longest gap with the
+uniform-interleaving benchmark `3/(7 sum k)` and called that benchmark the
+actual mean gap.  It proposed the universal lemma
+`L_max >= (4/3) mu_actual`.  THM-1147 then averaged a complete linear
+two-comb descent and treated that average as a source of the required
+four-comb dispersion.
+
+**Exact refutation:** for core `P={1,...,8}`, core component
+`[1/14,13/112]`, and killers `(108,109,110,111)`, the final gaps have lengths
+
+```text
+319/55944, 305/55944, 291/55944, 277/55944, 13/3024.
+```
+
+Hence `L_max/mu_actual=638/573<4/3`, while
+`7*111*L_max=319/72>1`.  The first four gaps are themselves the exact
+THM-1147 pair-law values for `(108,111)` and `j=8,9,10,11`; their max/mean is
+only `319/298`.  The full positive descent continues to `j=30`, but the core
+window exposes only a short nearly constant slice.
+
+**Correction:** distinguish (i) the mean over a complete pair-law branch,
+(ii) the actual surviving-component mean, and (iii) the uniform-interleaving
+benchmark.  With `D=L_max/mu_actual` and
+`B=mu_actual/(3/(7 sum k))`, the exact target is
+`D*B>(sum k)/(3k4)`.  Pair/end-point dispersion controls `D`; mass/overlap or
+multiplier gains control `B`.  Neither may silently replace the other.
+
+**Rule:** every use of “mean gap” must name its numerator, component count,
+and sampled index set.  A closed-form full branch says nothing about the
+accessible indices after core truncation and obstruction by other combs.
+
+**Affects:** THM-1141, THM-1147, HYP-7676/HYP-7560, and the proposed r=5
+nonuniformity route.  THM-1148 owns the exact guardrail row.
+
+---

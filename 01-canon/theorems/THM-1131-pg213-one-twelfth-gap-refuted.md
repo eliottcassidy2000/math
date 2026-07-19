@@ -123,28 +123,29 @@ or the `Covering` predicate between runner families, projective-plane objects,
 Singer difference sets, and tournament classes.
 
 The surviving research target in this branch must be stated after its actual
-domain is fixed—for example primitive `Covering` rows in the strict
-`M<1/13` structural branch.  The former formal capstone omitted that domain
-and asked universally for no-`Lonely 13` to imply dominance.  That unqualified
-premise is false, witnessed by `{1,...,13}`.  The corrected useful sufficient
-target is instead
+domain is fixed—for example primitive rows in the strict `M<1/13` structural
+branch with Covering rederived after gcd reduction.  The first formal capstone
+asked universally for no-`Lonely 13` to imply dominance and was refuted by
+`{1,...,13}`.  Adding Covering produced the historical premise
 
 ```text
 Covering(2..14) v and not exists t, Lonely 13 v t
   => some speed is at least 13 times every other speed.       (INVcov)
 ```
 
-over positive rows.  The Covering premise is essential: `{1,...,13}` does not
-cover modulus 14 and therefore does not refute `INVcov`.  The corrected Lean
-surface also exposes the exact outer no-`Lonely 14` residual explicitly:
+over positive rows.  Although `{1,...,13}` misses modulus 14, THM-1153 shows
+that its dilation `2*{1,...,13}` covers every modulus through 14 and still has
+maximum `1/14` and no dominant speed.  Thus `INVcov` itself is refuted.  The
+Lean surface also exposes the exact outer no-`Lonely 14` residual explicitly:
 
 ```text
 Covering(2..14) v and not exists t, Lonely 14 v t
   => some speed is at least 13 times every other speed.       (ResidualINV)
 ```
 
-`INVcov` is a noncircular sufficient open target.  With the AP bridge already
-assumed by the formal route, `ResidualINV` is logically equivalent to the
+The conditional implication from `INVcov` remains valid but has a false
+premise.  With the AP bridge already assumed by the formal route,
+`ResidualINV` is logically equivalent to the
 LRC(14) target, rather than a reduction to the known twelve-runner theorem.
 Neither formal target is equivalent to the false stronger assertion
 `non-AP => M>=1/12`.  A viable stability reformulation must respect the `1/13`
@@ -169,11 +170,10 @@ vertices is impossible.  The stationary-augmented deep-well residue set
 has `|D-D|=183` and energy 378.  These are contrasting additive objects, not
 the two poles of one proved LRC-preserving tournament map.
 
-The correction does not refute the genuinely scoped inverse problem or
-LRC(14).  It removes one false proposed strengthening and leaves the genuine
-covering-`M<1/13` dominance problem open.  Covering is essential for `INVcov`;
-the no-`Lonely 14` qualifier types the exact `ResidualINV` target
-(MISTAKE-166).
+The correction does not refute a genuinely primitive inverse problem or
+LRC(14).  It refutes the literal covering-`M<1/13` dominance proposition and
+shows that gcd/divisor fibres are part of the object.  The no-`Lonely 14`
+qualifier types the exact `ResidualINV` target (MISTAKE-170).
 
 The dependency-free referee uses exact `Fraction` arithmetic and explicit
 optimization-stable checks.  Normal and `python -O` runs match the frozen

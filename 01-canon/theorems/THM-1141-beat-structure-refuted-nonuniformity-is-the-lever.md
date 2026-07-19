@@ -77,6 +77,25 @@ THM-1148 replaces (1) by three sound tools:
 - the exact mass/component gate `Q4>0`;
 - the corrected THM-1137 `Phi` transfer, with a `9/5` ratio corollary.
 
+The old sample ratio `3.34` was measured against the uniform-interleaving
+benchmark `m0=3/(7 sum k)`, not against the actual component mean.  To keep
+the two effects separate, set
+
+```text
+D=L_max/mu_actual,
+B=mu_actual/m0.
+```
+
+Then the sharp target is
+
+```text
+7 k4 L_max>1  iff  D B > (sum k)/(3 k4).               (3)
+```
+
+Endpoint dispersion controls `D`; tooth overlap, component mass, and
+multiplier charts control `B`.  The exact row (2) succeeds through baseline
+gain despite having `D<4/3`.
+
 Their first infinite proof-method residual is `m(3,4,5,6)`, not the whole
 clustered majority.  Uniform `r=5` remains open.
 
