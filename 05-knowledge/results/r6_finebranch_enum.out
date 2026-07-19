@@ -747,3 +747,31 @@ core 705 [3, 4, 5, 8, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.00
 core 706 [3, 4, 5, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 core 707 [3, 4, 6, 7, 8, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 -- chunk end: reached core 708/792 in 1204s, 13 cores this run --
+core 708 [3, 4, 6, 7, 8, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 709 [3, 4, 6, 7, 8, 9, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 710 [3, 4, 6, 7, 8, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 711 [3, 4, 6, 7, 8, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 712 [3, 4, 6, 7, 8, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 713 [3, 4, 6, 7, 9, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 714 [3, 4, 6, 7, 9, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 715 [3, 4, 6, 7, 9, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 716 [3, 4, 6, 7, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 717 [3, 4, 6, 8, 9, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 718 [3, 4, 6, 8, 9, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 719 [3, 4, 6, 8, 9, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 720 [3, 4, 6, 8, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+-- chunk end: reached core 721/792 in 1221s, 13 cores this run --
+core 721 [3, 4, 6, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 722 [3, 4, 7, 8, 9, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 723 [3, 4, 7, 8, 9, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 724 [3, 4, 7, 8, 9, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 725 [3, 4, 7, 8, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 726 [3, 4, 7, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 727 [3, 4, 8, 9, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 728 [3, 5, 6, 7, 8, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 729 [3, 5, 6, 7, 8, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 730 [3, 5, 6, 7, 8, 9, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 731 [3, 5, 6, 7, 8, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 732 [3, 5, 6, 7, 8, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 733 [3, 5, 6, 7, 8, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+-- chunk end: reached core 734/792 in 1240s, 13 cores this run --

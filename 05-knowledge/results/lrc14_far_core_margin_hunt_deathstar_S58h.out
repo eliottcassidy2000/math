@@ -1,0 +1,2 @@
+tested=1127 covering families; small-margin(<0.01) FAR(H>6) cores found=0
+min margin among FAR cores: margin=0.03671 at [3, 4, 5, 7, 13, 17, 18, 20, 24, 27, 31, 33, 110]

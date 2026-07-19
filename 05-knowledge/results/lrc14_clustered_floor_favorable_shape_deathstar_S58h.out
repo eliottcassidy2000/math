@@ -1,0 +1,2 @@
+M>=1/(2rho) verified on 3326 families: violations=0; tightest M*2rho=1.036 at [27, 28, 29]
+consequence: M<1/13 => rho>6.5 (fully-clustered families are not strict interior)
