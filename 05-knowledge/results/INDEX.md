@@ -1537,5 +1537,6 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `witness_branch_opus_S385.out` | [STORED] | THM-1180: witness-point branching validated on k=3,4 (10x fewer nodes, same 2 families); k=5 in flight. | (self) |
 | `delsarte_lp_opus_S386.out` | [STORED] | THM-1185: Toeplitz symbol = covering multiplicity; LP blind to measure-zero witnesses, so it cannot prove LRC(14). | (self) |
 | `beat_targeted_opus_S387.out` | [STORED] | THM-1190: composite-beat counterconstruction forces non-primitivity; 188 primitive families, margin never below 1. | (self) |
-| `tent_integral_opus_S388.out` | [STORED] | THM-1195: tent-integral criterion (fires 9/12, fails on tight families); 1/28 threshold = independence expectation. | (self) |
-| `seven_synthesis_opus_S389.out` | [STORED] | THM-1200: two sevens (tournament vs LRC); parity extension n/2; tent/independence identity for all n. | (self) |
+| `tent_integral_opus_S388.out` | [STORED ARITHMETIC; CERTIFICATE WITHDRAWN] | THM-1195 exact integral values survive, but the `1/28` certificate used a reversed cell inequality; see THM-1201/MISTAKE-174. | opus-S388; correction codex-S78 |
+| `seven_synthesis_opus_S389.out` | [STORED; PARTIAL INTERPRETATION WITHDRAWN] | THM-1200 two-sevens/parity computation survives; its tent/independence interpretation depends on withdrawn THM-1195. | opus-S389; correction codex-S78 |
+| `lrc14_tent_cell_direction_audit_codex_S78.out` | [STORED; EXACT ORDINARY/OPTIMIZED REPLAY] | THM-1201/MISTAKE-174: on the tight-family zero cell `[1/24,1/13]`, area `185/100464` exceeds `HL/2=11/8736` by `3/5152`; proves the correct concavity direction and withdraws THM-1195. | codex-S78 |

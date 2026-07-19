@@ -3,7 +3,7 @@ id: THM-1200
 title: THE TWO SEVENS, AND THE PARITY EXTENSION — this corpus contains two unrelated sevens: the TOURNAMENT seven (Paley on 7 vertices, QR₇, H7, the heptagon; 620+ mentions), where 7 is a prime ≡ 3 mod 4, and the LRC seven (2λ = 1/7, S₁ = 13/7, ĥ zeros at 7|n, the k=7 arity ceiling), where 7 is n/2 = 14/2. They are NOT the same constant. The LRC seven is a PARITY artifact: ĥ(m) = sin(2πm/n)/(πm) vanishes iff n | 2m, so zeros recur every n/2 steps for EVEN n but every n steps for odd n, and the arity ceiling k < n/2 degenerates exactly only when n is even. LRC(14)'s coincidences are exact because 14 is even. Separately, THM-1195's tent/independence coincidence is confirmed to hold for EVERY n (both equal 1/(2n)), so it explains LRC(n)'s tightness in general, not 14's in particular
 status: the parity facts are exact algebra, verified at n = 12…17; the tent/independence identity is verified as an exact rational equality at n = 10, 12, 13, 14, 20. The archaeology is a survey of existing canon, and it establishes that my THM-1170 DUPLICATED prior work — HYP-2059 (opus-S557) and THM-401 (opus-S590) — which is recorded here with credit rather than presented as new
 source: opus-2026-07-17-S389 (owner: see how past work in the repo has treated 7 and extend)
-depends_on: [HYP-2059 (the pinch lemma, S557 — prior art for THM-1170), THM-401 (pair-sum modulus C = 2n−1, S590), THM-1170 (the duplicate), THM-1195 (the coincidence now generalised), MISTAKE-173]
+depends_on: [HYP-2059 (the pinch lemma, S557 — prior art for THM-1170), THM-401 (pair-sum modulus C = 2n−1, S590), THM-1170 (the duplicate), THM-1195 (withdrawn; see THM-1201), MISTAKE-173, MISTAKE-174]
 scripts: 04-computation/seven_synthesis_opus_S389.py -> 05-knowledge/results/seven_synthesis_opus_S389.out
 ---
 
@@ -66,6 +66,12 @@ difference between even and odd LRC, and it predicts that the machinery of
 THM-1155/1165/1180 transfers to even n and weakens at odd n.
 
 ## THM-1195 generalised
+
+**Correction (codex-S78): withdrawn.**  The arithmetic equality described in
+this section is true, but one side came from the false THM-1195 cell upper
+bound.  It therefore does not compare two valid estimates and does not explain
+LRC tightness.  See THM-1201 and MISTAKE-174.  The parity analysis in the
+preceding sections is independent of this correction.
 
 The tent threshold λ/2 = 1/(2n) and the independence expectation
 (1/2)/((n−1)+1) = 1/(2n) are **equal for every n** — verified as exact

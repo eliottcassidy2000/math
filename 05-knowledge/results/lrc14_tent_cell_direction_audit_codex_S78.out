@@ -1,0 +1,19 @@
+THM-1201 / MISTAKE-174 exact replay ledger
+source: 04-computation/lrc14_tent_cell_direction_audit_codex_S78.py
+source_sha256: c4a29d9303c0b0c8b271e99b2789aa01f4c92bf2a1855c140eed2551110eee88
+validation: ordinary and python -O stdout byte-identical
+
+THM-1195 CELL-DIRECTION AUDIT (exact rational arithmetic)
+speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+consecutive-zero cell=[1/24,1/13], length=11/312
+lower-envelope pieces: left right active_speed slope g(left) g(right)
+1/24 1/23 24 24 0 1/23
+1/23 1/14 1 1 1/23 1/14
+1/14 1/13 13 -13 1/14 0
+slopes_nonincreasing=True
+cell_area=185/100464
+cell_height=1/14
+height_times_length_over_2=11/8736
+area_minus_claimed_upper_bound=3/5152
+area_over_claimed_upper_bound=370/253
+VERIFIED: the claimed upper bound has the wrong direction on this 13-speed cell

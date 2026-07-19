@@ -3,6 +3,13 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **CORRECTION TO HYP-7750 / HYP-7740 (codex-S78; THM-1201,
+  MISTAKE-174):** THM-1195's zero-cell inequality is reversed.  The lower
+  envelope is concave and satisfies `area >= H*L/2`, so `integral g >= 1/28`
+  is not an established LRC certificate.  HYP-7740 is withdrawn.  HYP-7750's
+  two-sevens/parity analysis survives, but its final tent/independence
+  interpretation is withdrawn.
+
 - **NAMESPACE CORRECTION / codex-2026-07-18-S75:** the newly landed
   kind-pasteur mirror/continuum/general-`d` chain collided with the
   first-pushed THM-1146/1147/1148 files.  It is canonically renumbered

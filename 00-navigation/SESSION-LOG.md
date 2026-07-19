@@ -1,3 +1,24 @@
+## codex-2026-07-18-S78 -- THM-1201 / MISTAKE-174: THM-1195's tent-integral certificate is withdrawn; the exact zero-cell law is concavity with the reverse inequality
+
+Auditing the newest claimed LRC(14) certificate before building on it exposed
+an elementary but consequential direction error.  Between consecutive points
+of the combined runner-zero arrangement, every wave `||vt||` is a concave
+triangular arch, and their pointwise minimum is concave.  Therefore the two
+chords through a cell maximum lie below the lower envelope and
+`integral_C g >= H_C |C|/2`, not `<=`.  The error occurs directly in the
+13-speed tight family `{1,...,11,13,24}`: on `[1/24,1/13]` the active carrier
+path is `24 -> 1 -> 13`, its slope word is `(24,1,-13)`, its exact area is
+`185/100464`, and the former claimed upper bound is `11/8736`; their ratio is
+`370/253`.  Ordinary and optimized exact replays agree.  THM-1195 is now
+withdrawn as a certificate (its integral arithmetic survives), and THM-1200's
+independent parity theorem survives while its tent/independence interpretation
+does not.  The faithful carrier is the metric zero cell plus its active-switch
+path; a runner tournament retains the order but erases the lengths and area.
+
+FILES: THM-1201, THM-1195/1200 corrected, MISTAKE-174, exact script + frozen
+output.  LRC(14) remains open; no negative implication about the conjecture is
+being claimed.
+
 ## opus-2026-07-17-S389 -- THM-1200 THE TWO SEVENS (tournament Paley/QR_7/H7 vs LRC n/2 = 7 -- numerically equal, structurally unrelated) + THE PARITY EXTENSION (hhat zeros every n/2 for EVEN n vs every n for odd; arity ceiling exact only for even n -- so LRC(14)'s sevens are exact because 14 is even) + PRIOR-ART CREDIT: my THM-1170 duplicated HYP-2059/THM-401 + MISTAKE-173 (HYP-7750)
 
 Owner: see how past work has treated 7 and extend. The archaeology turned up more than

@@ -11,6 +11,37 @@ Format per entry:
 
 ---
 
+## MISTAKE-174 (opus-S388/S389, caught by codex-S78) -- the zero-cell tent inequality points in the opposite direction
+
+- **What was claimed:** THM-1195 said that on every cell between consecutive
+  zeros of `g(t)=min_v ||vt||`, the graph lies *under* the triangle through a
+  cell maximum.  It inferred `cell area <= H*L/2`, summed this over the zero
+  partition, and advertised `integral g >= 1/28` as an LRC(14) certificate.
+  THM-1200 then compared that proposed threshold with an independence
+  heuristic and interpreted their algebraic equality as an explanation of
+  LRC tightness.
+- **Why it is wrong:** every individual triangular wave is concave on a cell
+  containing no one of its zeros.  The pointwise minimum is also concave
+  (intersect the hypographs).  A concave function lies **above** the chords
+  joining its endpoints to a maximum, so the universal inequality is
+  `cell area >= H*L/2`.  The old proof reversed the geometry.
+- **Exact in-scope counterexample:** for the actual 13-speed tight family
+  `{1,...,11,13,24}`, the consecutive-zero cell `[1/24,1/13]` has active
+  affine pieces `24t-1`, `t`, and `1-13t`, with slopes `24,1,-13`.  Its area
+  is `185/100464`, whereas `H*L/2=11/8736`; the excess is `3/5152` and the
+  ratio is `370/253>1`.
+- **Correction and impact:** THM-1195 is withdrawn as a certificate; its
+  arrangement routine still computes exact integrals, but the labels
+  “CERTIFIES” do not follow.  THM-1200's parity result is independent and
+  survives, while its tent/independence interpretation is withdrawn.  The
+  correct summed law is the lower bound
+  `integral g >= (1/2) sum_C |C| H_C`; it supplies no `1/14` pointwise
+  witness without additional control of cell shapes or height distribution.
+  See THM-1201 and the exact ordinary/`-O` replay
+  `lrc14_tent_cell_direction_audit_codex_S78.py`.
+
+---
+
 ## MISTAKE-173 (death-star-2026-07-18-S58b, auditing kind-pasteur THM-1150-six-boxes) -- the maximiser "centre-hitting criterion" dropped the mod-4 freedom AND the permutation symmetry; the standoff reduction is refuted (117 non-proportional hitters), but the bad<=2/21 CEILING survives with the maximiser being a SIX-RAY ORBIT
 
 - **What was claimed (THM-1150-six-boxes, kind-pasteur S128c78, steps III & V):** the bad set B is six boxes around the six permutations of (1/4,1/2,3/4); a geodesic of direction (d2,d3,d4) hits the centre `(1/4,1/2,3/4)` iff `d proportional to (1,2,3)` ("elementary and complete"); hence the whole maximiser claim reduces to ONE Diophantine standoff: every NON-proportional integer direction keeps sup-distance `> rho ~ 0.0412` from all six centres (verified on 7 sampled directions, thin margin 0.0458 vs 0.0412).
