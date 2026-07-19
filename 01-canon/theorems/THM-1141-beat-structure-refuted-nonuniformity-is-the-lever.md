@@ -5,7 +5,7 @@ status: (I) REFUTED — my THM-1140 named-next, killed by the sweep measurement 
 source: kind-pasteur-2026-07-18-S128 (cont.69; owner: work the beat structure for the clustered majority)
 depends_on:
   - THM-1140    # whose named-next this refutes and replaces
-related: [THM-1097, THM-1094, MISTAKE-163, MISTAKE-164]
+related: [THM-1097, THM-1094, THM-1137, MISTAKE-163, MISTAKE-164, MISTAKE-169]
 script: 04-computation/beat_structure_kps_S128c69.py (+ .out)
 ---
 
@@ -27,9 +27,12 @@ inside a core component the phases should align and leave a long gap.
 | [1,3,5,6,7,8,11,12] | 0.02706 | 400,405,410,415 | 0.135 | 0.406 | **FROZEN** |
 | [2,3,4,5,6,7,8,9] | 0.06746 | 400,440,480,520 | 2.698 | 8.095 | SWEEPS |
 
-Sweeping only begins once the killers are *spread* — which is the regime THM-1140's gap
-recursion already covers. In the clustered regime the configuration is **frozen**, and
-alignment is never forced. The route is dead as proposed.
+Sweeping only begins once the killers are *spread*.  THM-1140 originally claimed that its
+gap recursion already covered every adjacent ratio at least `7/6`; that claim is false.
+THM-1137 gives the exact transfer and owns only stronger spread cones (coarsely `7/3`, or
+`19/10` with a larger initial-width gate).  This correction does not rescue the beat route:
+in the sampled clustered regime the configuration is **frozen**, and alignment is never
+forced. The route is dead as proposed.
 
 ## (II) But spread phases turn out not to be fatal
 

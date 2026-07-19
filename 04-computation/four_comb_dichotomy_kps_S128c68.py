@@ -9,14 +9,13 @@ longest surviving component obeys
 and asking L > 1/(7 k_max) needs (7-r) > r, i.e. r < 3.5.  So three combs work and four
 do not -- exactly where THM-1097 stops.
 
-THE PROPOSED REPLACEMENT: a GAP RECURSION with a spread/clustered dichotomy.
-Inside a component of length lam, removing D_k leaves a full gap of length 6/(7k) whenever
-lam >= 1/k (the component contains a whole period).  Iterating,
-    L_j >= 6/(7 k_j)   provided   L_{j-1} >= 1/k_j ,  i.e.  k_j >= (7/6) k_{j-1}.
-So if every step is SPREAD (ratio >= 7/6) the four-comb bound holds with a factor 6 to
-spare.  The residual is the CLUSTERED case, where some k_j < (7/6)k_{j-1} -- and there the
-two combs nearly coincide, so their union should cost far less than two independent combs.
-Measure both halves.  PRINT DATA ONLY."""
+CORRECTION (THM-1137 / MISTAKE-169): an arbitrary one-period window need not contain the
+full safe arc.  The exact normalized transfer is
+    Phi(x) = min(6/7, (x-1/7)/2),  x >= 1,
+so the sharp one-period guarantee is 3/(7k), attained by [1/2,3/2].  The sound coarse
+recursion therefore needs k_j >= (7/3) k_{j-1}, not 7/6.  The historical 7/6 bank below
+is retained as reconnaissance only; it is not covered by the corrected recursion.
+PRINT DATA ONLY."""
 import sys, itertools, random
 from fractions import Fraction as F
 sys.stdout.reconfigure(line_buffering=True)
@@ -61,7 +60,12 @@ print("  min ell = %s = %.6f at core %s ; max ell = %.6f"%(
     ells[0][0],float(ells[0][0]),list(ells[0][1]),float(ells[-1][0])))
 print("  min ell * (13*maxP+1) over cores: %.4f"%min(float(e)*(13*max(p)+1) for e,p in ells))
 print()
-print("### (1) SPREAD half: every step ratio >= 7/6 ==> L >= 6/(7 k4)? ###")
+print("### CORRECTION: exact arbitrary-window transfer (THM-1137) ###")
+print("  Phi(x) = min(6/7,(x-1/7)/2); Phi(1)=3/7")
+print("  sharp window [1/2,3/2] has two maximal safe pieces of length 3/7")
+print("  sound coarse recursion threshold: adjacent ratio >= 7/3 (not 7/6)")
+print()
+print("### (1) LEGACY 7/6 sample: telemetry only, no recursion theorem ###")
 random.seed(68)
 ok=0; tot=0; worst=None
 for _ in range(300):
@@ -75,14 +79,14 @@ for _ in range(300):
     if not iv: continue
     tot+=1
     L=max(b-a for a,b in iv)
-    r=L*7*ks[-1]      # want > 1 for the theorem, >= 6 for the recursion claim
+    r=L*7*ks[-1]      # want > 1 for the theorem; the old >=6 claim is false
     if L>F(1,7*ks[-1]): ok+=1
     if worst is None or r<worst[0]: worst=(r,tuple(P),tuple(ks))
 print("  spread quadruples: %d ; satisfying L > 1/(7k4): %d"%(tot,ok))
-print("  worst 7*k4*L = %.4f (theorem needs > 1; recursion predicts >= 6) at core %s ks=%s"%(
+print("  worst 7*k4*L = %.4f (theorem needs > 1; old false prediction was >= 6) at core %s ks=%s"%(
     float(worst[0]),list(worst[1]),worst[2]))
 print()
-print("### (2) CLUSTERED half: some ratio < 7/6 -- is the comb union cheap? ###")
+print("### (2) BELOW-7/6 sample coordinate -- is the comb union cheap? ###")
 print("  measure |D_a cup D_b| within a unit window vs 2/7 (independent) for close a,b")
 for a in [157,300,701]:
     for rat in ['1.00(a,a+1)','1.02','1.05','1.10','1.16(=7/6)','1.50','3.00']:
@@ -97,7 +101,7 @@ for a in [157,300,701]:
         print("  a=%-5d b=%-6d  |D_a|=%.5f  |D_a u D_b|=%.5f  vs 2/7=%.5f  ratio=%.3f"%(
             a,b,float(cost1),float(cost2),2/7,float(cost2)/(2/7)))
     print()
-print("### (3) how often is a real quadruple clustered at some step? ###")
+print("### (3) how often does a sampled quadruple have a ratio below 7/6? ###")
 cl=0; tot2=0
 for P in C8[:60]:
     M=max(P); lo=13*M+1

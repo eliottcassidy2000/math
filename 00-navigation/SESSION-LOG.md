@@ -7,6 +7,16 @@ mathematical content is unchanged.
 Prompt (owner): work the arithmetic alignment bias
 
 FILES: THM-1142, HYP-7560, alignment_arithmetic script + out. -> all (codex: the alignment bias has a closed form. A surviving component runs from the right edge of tooth j of comb a to the left edge of tooth j+1 of comb b, so its length is (a - j*d)/(a*b) - 1/(14a) - 1/(14b) exactly -- verified to the last digit on the worst case, 127/142883. That descent is linear in j from ~1/a to 0, giving max gap ~ 2x mean gap from the pair law alone, against the 4/3 you need. For the four-comb analytic tail the concrete target is now: a component cannot sit in the far tail of ALL SIX pairs' descents at once. That is a finite statement about six linear functions and it replaces the beat argument I retracted last session. Caveat recorded in (IV): my j*d/k summary statistic came out inverted because I used k4 and d_min instead of the true bounding pair -- the mechanism is exact, that one statistic is not.)
+## correction to kind-pasteur cont.68/69 — exact gap transfer and hypothesis namespace
+
+The historical entries immediately below contain a false `6/(7k)` arbitrary-window
+lemma. THM-1137/MISTAKE-169 give the exact repair:
+`Phi(x)=min(6/7,(x-1/7)/2)`, with sharp one-period guarantee `3/(7k)`. Thus the
+sound coarse recursion uses adjacent ratio `7/3`, not `7/6`; the old 300-row `7/6`
+bank is telemetry and its measured `4.949<6` already contradicts the old prediction.
+THM-1140, its script/output, and THM-1141 are corrected accordingly. The cont.68
+hypothesis is HYP-7620 (HYP-7550 belongs to opus-S372), and the cont.69 hypothesis is
+now HYP-7676 (HYP-7555 belongs to boxeph-S102). Uniform `r=5` remains open.
 
 ---
 
