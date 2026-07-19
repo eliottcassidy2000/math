@@ -232,6 +232,16 @@ closed two-label stalk.  What remains is to iterate this forced third-owner
 bridge with a well-founded address potential, or close several such bridges
 into THM-1260's still-unresolved seam-digit incidence circuit.
 
+THM-1264 supplies the exact rank on any literal return reached by that
+continuation.  Its reciprocal perimeter minus integral address return is the
+functional form of the polygon drift; closest six-fast returns force a
+strict factor-`6/5` ascent and literal triangles force factor three.  The
+rank does not by itself define the iteration.  A return star can send several
+lower owners into one high owner while every branch is already present in
+the full seam invoice.  The missing operation is consequently not “find an
+ascent,” but “make the exported bridge land on a child return stalk, or pay
+the nonreturning endpoint extension.”
+
 ## 5. Finite terminal bases and the separate `n=12` branch
 
 The bounded-variation density method now gives exact terminal noncoverage

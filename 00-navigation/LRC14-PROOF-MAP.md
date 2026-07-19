@@ -45,6 +45,15 @@
 > a protected seam owned by a third label.  A two-cycle therefore cannot close
 > as a two-label adjacent germ; the remaining aligned branch is already a
 > placed three-owner transport problem.
+>
+> THM-1264 gives the exact metric consumer when such a literal continuation
+> returns to an earlier owner.  For a consecutive return with outer speed
+> `a`, address jump `R`, and internal speeds `s_q`, the already-paid seams
+> telescope to `(1/7)sum 1/s_q-R/a`.  A closest return in the six-fast word
+> has at most six edges and forces `a>(6/5)min(s_q)`; a literal triangle
+> forces factor three.  This bounds return depth, but not breadth or the
+> missing bridge-to-child operation: separated support edges do not share
+> addresses, and exact star cells realize many parallel returns.
 
 > ## 2026-07-19 S78 — ONE COHERENT TOOTH WORD REMOVES THE TREE, SECOND-WALL, AND AFFINE-SIGN LOSSES
 >

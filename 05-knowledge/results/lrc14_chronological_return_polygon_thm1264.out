@@ -1,0 +1,14 @@
+THM-1264 CHRONOLOGICAL RETURN-POLYGON EXACT AUDIT
+optimization-sensitive assert nodes = 0
+exact tooth bank = 335
+literal return polygons by edge count = ((2, 42), (3, 8), (4, 1310), (5, 8601))
+raw seam-digit occurrences = 48353
+literal owner triangles = 8
+largest bank address return = 4
+simple-return edge ceilings (seven/six-fast) = 7 / 6
+seven-owner weakest ascent = strict factor one (no scale-only height)
+six-fast weakest multiplicative ascent = 6/5
+six-fast factor-6/5 compact-box height = 42
+fixed-owner strict-ascent depths (seven/six-fast) = 6 / 5
+strict factor-three compact-box height = 7
+RESULT: PASS -- literal return polygons pay exact address drift

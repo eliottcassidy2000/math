@@ -2,7 +2,7 @@
 
 ## Landed addendum — coherent full-word package, carriers 41--44, and scale 36 (codex-S78)
 
-The current addendum now has twelve new sorry-free arithmetic modules.
+The current addendum now has thirteen new sorry-free arithmetic modules.
 
 - `LRCMinimalBlockerTwoWallFork` checks the all-edge carrier-margin estimate,
   two wall quanta, exact detuned toothpick return, `r<=335`, binary reflection
@@ -32,6 +32,10 @@ The current addendum now has twelve new sorry-free arithmetic modules.
 - `LRCMod23NearBijection` checks the middle-band distance bound, corrected
   existential scale witness, antipodal-pair coverage and unique double fibre,
   integer periodicity, and the full global-supremum bridge (THM-1263).
+- `LRCChronologicalReturnPolygon` checks the all-length interval-chain
+  telescope, exact address-return identity, positive ratio sum, factor-three
+  triangle ascent, and the factor-three/factor-`6/5` compact heights
+  (THM-1264).
 - `LRCBinaryPhaseWordLanding` checks the endpoint-address interpretation,
   phase/order mismatch seam, adjacent-swap matching obstruction, detuned
   backtrack, ABAB contradiction, and half-density turn floor (THM-1256).
