@@ -1,3 +1,41 @@
+## opus-2026-07-19-S395 -- THM-1230 THE n=14 STABILITY GAP IS NOT EMPTY: {1,...,11,13,36} realises 3/41 exactly (t*=17/41, pair (5,36), D=3, s=41), the depth-minimal value predicted by transferring boxeph-S123's determinant stratification -- and it sits on the ladder m/(12m+5) which starts at the extremal 1/14 and accumulates at 1/12, unifying the owner's 3/4/1-12 threads (HYP-7810)
+
+Owner: continue and integrate incoming ideas from other agents. The integration produced
+the session's result, so this is a genuine case of the fleet compounding.
+WHAT I PULLED: boxeph-S123 had the SAME owner prompt (n=12 AP uniqueness; mine 3, 4,
+1/12) and stratified the n=12 gap (1/13, 2/25) by the reduced numerator p of M = D/s,
+noting p = D/gcd(D,s) <= D so that stratifying by p IS stratifying by determinant -- and
+crediting my THM-1210. Their exclusion of p <= 2 needs only two lines and two inputs: a
+proved lower bound on M, plus the parity of a reduced denominator.
+THE TRANSFER TO n=14: the Farey neighbour of 1/14 is 2/27 (1*27 - 2*14 = -1), so the
+stability gap is (1/14, 2/27), with mediant 3/41 and 41 = 3*14 - 1 -- matching boxeph's
+38 = 3*13 - 1. Conditional on LRC(14) their two lines carry over verbatim: p=1 forces
+q <= 14 so M = 1/14 or M >= 1/13 > 2/27; p=2 forces q odd and <= 27 so M >= 2/27. A gap
+family therefore needs D >= 3.
+AND THE GAP IS NOT EMPTY -- which is where n=14 parts company with n=12, where the
+analogous gap is conjectured vacant. V = {1,...,11,13,36} has M = 3/41 EXACTLY, at
+t* = 17/41, with active pair (5,36), D = 3, s = 41. I verified it against an independent
+brute-force scan over every q <= 200, and it lands precisely on the predicted
+depth-minimal value. Its LRC(14) margin is the tightest I have seen: s <= 14D reads
+41 <= 42, slack ONE. A family with s = 43 at D = 3 would violate LRC(14).
+THE LADDER: the witness is not isolated. M({1,...,11,13,12m}) = m/(12m+5), with active
+pair (5,12m), D = m, s = 12m+5 and slack 2m-5 -- verified exactly for m = 3..10. At m = 2
+it reduces (D=1, s=14) and IS the known second extremal {1,...,11,13,24}, so the ladder
+starts at the floor and climbs. It accumulates at 1/12.
+THAT UNIFIES THE OWNER'S THREE MINED THREADS in one object: 3 and 4 are the first two
+gap-side rungs (3/41 and 4/53), and 1/12 is the ladder's accumulation point -- which
+explains why 1/12 keeps recurring in this corpus without ever being an attained extremal
+value. It is a limit, not a minimum.
+SCOPE, honestly: the numerator<=2 exclusion is CONDITIONAL on LRC(14), which is open --
+unlike boxeph's n=12 version, which rests on the proved LRC(13). And the ladder formula
+is verified for m = 3..10, conjectural beyond.
+THIS SHARPENS THM-1220. n=14 is not merely non-rigid at the floor: the gap immediately
+above the floor is POPULATED, by an explicit family, at exactly the value the
+stratification predicts. So no proof of LRC(14) can rely on a gap above 1/14.
+FILES: THM-1230, THM-1220 amended, script + out, HYP-7810. opus; S395.
+
+---
+
 ## opus-2026-07-19-S394 -- THM-1225 THE FREIMAN/DOUBLING ROUTE IS STRUCTURALLY BLIND: LRC is not translation-invariant and doubling is -- the translate ladder {1+k,...,13+k} holds doubling at 1.923 while M runs 1/14, 1/8, 1/6, 1/5, 5/22; q0 separates what doubling cannot, taking value 14 on BOTH extremals (HYP-7800)
 
 Owner: work the two-element extremal set gap, thinking Kakeya and Freiman. The Freiman

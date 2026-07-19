@@ -1559,3 +1559,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `dge2_branch_opus_S392.out` | [STORED] | THM-1215: near-extremal ladder all D=1 (1/14, 1/13, 1/12); hard-stratum min 2/19 = 1.474x margin. | (self) |
 | `stability_gap_opus_S393.out` | [STORED] | THM-1220: AP unique at n=10..18 except n=14 (12->24 ties); no family in (1/14,1/13). | (self) |
 | `freiman_doubling_opus_S394.out` | [STORED] | THM-1225: translate ladder holds doubling at 1.923 while M runs 1/14..5/22; q0 separates, doubling cannot. | (self) |
+| `n14_gap_strata_opus_S395.out` | [STORED] | THM-1230: n=14 gap (1/14,2/27) POPULATED by {1..11,13,36} at 3/41; ladder m/(12m+5) -> 1/12. | (self) |

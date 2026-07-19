@@ -1,0 +1,55 @@
+(1) THE n=14 STABILITY GAP: (1/14, 2/27) = (0.071429, 0.074074)
+    Farey neighbours?  1*27 - 2*14 = -1   (|.|=1 confirms adjacency)
+    mediant = (1+2)/(14+27) = 3/41 = 0.073171   and 41 = 3*14 - 1 = 41
+
+(2) THE NUMERATOR <= 2 EXCLUSION, transferred (conditional on LRC(14))
+    p = 1: M = 1/q >= 1/14 forces q <= 14, so M = 1/14 (boundary) or M >= 1/13.
+           is 1/13 above the gap?  1/13 = 0.076923 > 2/27 = 0.074074 -> YES
+    p = 2: M = 2/q reduced makes q ODD; 2/q >= 1/14 gives q <= 28, q odd so q <= 27,
+           hence M >= 2/27 = the upper edge -> never strictly inside.
+    => conditional on LRC(14), a family in the open gap needs determinant D >= 3.
+
+(3) THE p >= 3 LADDER inside the gap  (p/q with 27p/2 < q < 14p)
+    p=1: EXCLUDED (proved above)   []
+    p=2: EXCLUDED (proved above)   []
+    p=3: 1 value(s)   ['3/41']
+    p=4: 1 value(s)   ['4/55']
+    p=5: 2 value(s)   ['5/68', '5/69']
+    p=6: 1 value(s)   ['6/83']
+    p=7: 3 value(s)   ['7/95', '7/96', '7/97']
+
+(4) IS ANYTHING IN THE GAP AT ALL?  random + targeted search over 13-families
+    1282 families tested (random + all single perturbations of both extremals)
+    families with M strictly inside the gap: 2
+      M=3/41 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+      M=3/41 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+
+    (empty => the gap looks genuinely vacant at n=14, matching the n=12 picture)
+V = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]   distinct: True
+M = 3/41 = 0.07317073   at t* = 17/41
+  1/14 = 0.07142857   2/27 = 0.07407407
+  strictly inside the gap: True
+  straddling: up=[(5, 2)]  down=[(36, 15)]
+  active pair (5,36)  D=3  s=41  D/s = 3/41   matches M: True
+  s <= 14D ?  41 <= 42  -> True  (LRC(14) holds here)
+
+  independent check: scan ALL p/q with q <= 200
+    best over q<=200: 3/41 at 17/41   agrees with pinch-set answer: True
+
+  relation to the second extremal {1..11,13,24}:
+    same shape {1,...,11,13,x}: x=24 -> M=1/14 (extremal); x=36 -> M=3/41 (in gap)
+    36 = 3*12, 24 = 2*12; denominators 41 = 3*14-1, 14 = 1*14
+THE LADDER  {1,...,11,13,12m}
+   m    x=12m   M          D    s    14D   slack=14D-s   in gap (1/14,2/27)?
+    2      24   1/14      1    14   14    0            
+    3      36   3/41      3    41   42    1            YES
+    4      48   4/53      4    53   56    3            
+    5      60   1/13      5    65   70    5            
+    6      72   6/77      6    77   84    7            
+    7      84   7/89      7    89   98    9            
+    8      96   8/101     8    101  112   11           
+    9     108   9/113     9    113  126   13           
+   10     120   2/25      10   125  140   15           
+
+  (M = 1/14 is the extremal; anything strictly between 1/14 and 2/27 populates
+   the stability gap, and slack = 14D - s is the distance from violating LRC(14))
