@@ -58,11 +58,11 @@ theorem sieve19_middle_witness {ι : Type*} (c : ι → ℤ) (b : ℤ)
 /-- **Contrapositive — the middle band is emptied by a close runner.**  If at scale `b` some runner
 is strictly within `2/19` of the integers, then not every residue can lie in the middle band. -/
 theorem no_middle_band_of_close {ι : Type*} (c : ι → ℤ) (b : ℤ)
-    (hclose : ∃ i, ∀ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19) :
+    (hclose : ∃ i, ∃ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19) :
     ¬ (∀ i, 2 ≤ (c i * b) % 19 ∧ (c i * b) % 19 ≤ 17) := by
   intro hmid
-  obtain ⟨i, hi⟩ := hclose
-  exact absurd (sieve19_middle_witness c b hmid i 0) (not_le.mpr (hi 0))
+  obtain ⟨i, m, hi⟩ := hclose
+  exact absurd (sieve19_middle_witness c b hmid i m) (not_le.mpr hi)
 
 /-- **The mod-19 antipodal-spread lemma (per-scale form, PROVED).**  Suppose no speed is divisible
 by 19, and at every scale `b` some runner is strictly within `2/19` of the integers (which holds
@@ -73,10 +73,10 @@ Via the bijection `b ↦ b⁻¹` on the units of `ℤ/19`, this says the residue
 every antipodal unit-pair `{±u}` — the antipodal spread. -/
 theorem antipodal_spread {ι : Type*} (c : ι → ℤ)
     (hunit : ∀ i, ¬ ((19 : ℤ) ∣ c i))
-    (hclose : ∀ b : ℤ, ∃ i, ∀ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19)
+    (hclose : ∀ b : ℤ, ∃ i, ∃ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19)
     (b : ℤ) (hb : ¬ ((19 : ℤ) ∣ b)) :
     ∃ i, (c i * b) % 19 = 1 ∨ (c i * b) % 19 = 18 := by
-  obtain ⟨i, hi⟩ := hclose b
+  obtain ⟨i, mc, hi⟩ := hclose b
   refine ⟨i, ?_⟩
   by_contra hcon
   simp only [not_or] at hcon
@@ -94,8 +94,8 @@ theorem antipodal_spread {ι : Type*} (c : ι → ℤ)
   have hlt19 : (c i * b) % 19 < 19 := Int.emod_lt_of_pos _ (by norm_num)
   have h2 : 2 ≤ (c i * b) % 19 := by omega
   have h17 : (c i * b) % 19 ≤ 17 := by omega
-  -- but then the single-runner witness contradicts closeness at m = 0
-  exact absurd (sieve19_single (c i) b h2 h17 0) (not_le.mpr (hi 0))
+  -- but then the single-runner witness contradicts closeness at the witnessed integer `mc`
+  exact absurd (sieve19_single (c i) b h2 h17 mc) (not_le.mpr hi)
 
 /-- **The antipodal-covering corollary (in `ZMod 19`).**  Under the hypotheses of `antipodal_spread`,
 the residues cover EVERY antipodal unit-pair of `ℤ/19`: for every nonzero `u : ZMod 19`, some runner
@@ -103,7 +103,7 @@ satisfies `c_i ≡ u` or `c_i ≡ -u (mod 19)`.  This is the `b ↦ b⁻¹` pack
 `±1`-hit — take `b = u⁻¹` and read the `±1` residue back as `±u`. -/
 theorem antipodal_cover {ι : Type*} (c : ι → ℤ)
     (hunit : ∀ i, ¬ ((19 : ℤ) ∣ c i))
-    (hclose : ∀ b : ℤ, ∃ i, ∀ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19)
+    (hclose : ∀ b : ℤ, ∃ i, ∃ m : ℤ, |(c i : ℝ) * ((b : ℝ) / 19) - m| < 2 / 19)
     (u : ZMod 19) (hu : u ≠ 0) :
     ∃ i, (c i : ZMod 19) = u ∨ (c i : ZMod 19) = -u := by
   haveI : Fact (Nat.Prime 19) := ⟨by norm_num⟩

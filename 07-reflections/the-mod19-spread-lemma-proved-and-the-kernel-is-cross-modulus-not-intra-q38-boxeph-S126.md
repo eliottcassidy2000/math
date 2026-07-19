@@ -49,6 +49,20 @@ analogue of `LRCMod13Blocking`, all `[propext, (Classical.choice,) Quot.sound]`,
   residue from `antipodal_spread` back as `±u` via `ZMod.intCast_eq_intCast_iff` + `inv_mul_cancel₀`. The
   residues literally cover every antipodal unit-pair of `ℤ/19`.
 
+**Correction (S129, MISTAKE-186).** The S127/S128 `hclose` hypothesis was stated with `∀ m`
+(`|c_i·(b/19) − m| < 2/19` for *all* `m`), which is **unsatisfiable** — so the lemmas were *vacuously*
+true (kernel-pure, but empty). Fixed to `∃ m` (a runner within `2/19` of *some* integer = `margin < 2/19`);
+now satisfiable (`{1,…,12}`, `M = 1/13 < 2/19`) and meaningful. Lesson: kernel-pure + sorry-free does not
+imply non-vacuous.
+
+**Wired into the LRC(14) ledger (S129).** `LRCMod19LedgerBridge.antipodal_cover_of_margin` (kernel-pure)
+connects `antipodal_cover` to the ledger's loneliness-margin framework (`TournamentH7.LRCWitness.margin`,
+the `min_i dist(v_i t, ℤ)` used by the uniqueness rung `LRCLadderD1`): `margin v (b/19) < 2/19` at every
+`b` (the gap regime, implied by `M(C) < 2/19`) + no speed divisible by 19 ⟹ residues cover every antipodal
+unit-pair of `ℤ/19`. `LRC14Ledger.lean` imports the bridge and re-exports it as `gap_regime_mod19_spread`
+— a proved necessary-condition rung on the (C)/n=12-uniqueness axis (same axis as `LRCLadderD1`'s `2/25`
+reach bound; `2/19` spans the whole gap, `2/19 > 2/25 > 3/38 > 1/13`).
+
 ## The kernel — "forbid a second interior aligned gap" — is cross-modulus, not intra-q=38
 
 The natural kernel would close `3/38` at the `q=38` maximizer if a second `q=38`-aligned deep gap could be

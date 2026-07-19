@@ -23,10 +23,24 @@ import TournamentH7.KillerBudget
 import TournamentH7.TrivialLoneliness
 import TournamentH7.TieSplitWalk
 import TournamentH7.UnitBudgetEndpoint
+import TournamentH7.LRCMod19LedgerBridge
 
 open MeasureTheory Set
 
 namespace LRC14
+
+/-- **Uniqueness-axis rung (n=12 gap, problem (C)).**  Re-export of the mod-19 antipodal-spread
+    constraint wired into this ledger via `LRCMod19LedgerBridge`: any family in the mod-19 gap
+    regime (margin `< 2/19` at every rational time `b/19`, implied by `M(C) < 2/19`) with no speed
+    divisible by 19 has residues covering every antipodal unit-pair of `ℤ/19`.  A proved necessary
+    condition on any family populating the uniqueness gap, on the same (C)-axis as `LRCLadderD1`'s
+    `2/25` reach bound (see `antipodal_cover_of_margin`). -/
+theorem gap_regime_mod19_spread {k : ℕ} [Nonempty (Fin k)] (v : Fin k → ℤ)
+    (hunit : ∀ i, ¬ ((19 : ℤ) ∣ v i))
+    (hgap : ∀ b : ℤ, TournamentH7.LRCWitness.margin v ((b : ℝ) / 19) < 2 / 19)
+    (u : ZMod 19) (hu : u ≠ 0) :
+    ∃ i, (v i : ZMod 19) = u ∨ (v i : ZMod 19) = -u :=
+  antipodal_cover_of_margin v hunit hgap u hu
 
 /-- **The LRC(14) target statement.** Thirteen distinct positive integer speeds
     admit a time `t` with `‖w·t‖ ≥ 1/14` for every speed — stated via integer

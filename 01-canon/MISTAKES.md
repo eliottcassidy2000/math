@@ -5216,3 +5216,29 @@ target interval to the common orbit period.
 **Affects:** THM-598 Parts B--D, THM-602's fully-resolved branch and claimed
 HNF renormalization, and THM-605(iii)'s assembly restatement.  THM-599's
 global `c`-averaged torus-band identities are unaffected.
+
+## MISTAKE-186 (boxeph-2026-07-19-S129) — a `∀ m` loneliness hypothesis made the mod-19 spread lemmas VACUOUS (caught before wiring)
+
+**What happened.** In S127/S128 I formalized the mod-19 antipodal-spread lemmas (`LRCMod19Spread.lean`)
+with the closeness hypothesis stated as `∀ b, ∃ i, ∀ m : ℤ, |c_i·(b/19) − m| < 2/19`. The inner `∀ m`
+is WRONG: for a fixed real `x = c_i·(b/19)`, `∀ m, |x − m| < 2/19` is UNSATISFIABLE (`|x| < 2/19` and
+`|x−1| < 2/19` give `1 < 4/19`, false). So the hypothesis can never hold and `antipodal_spread` /
+`antipodal_cover` were VACUOUSLY TRUE — they built kernel-pure and sorry-free, but said nothing.
+
+**Why it slipped.** I copied the shape from `LRCMod13Blocking.no_middle_band_witness_of_tight`, which has
+the same `∀ m` (there it is a one-off contrapositive helper used only at `m = 0`, so its vacuity is
+harmless; as a MAIN hypothesis it is fatal). "Kernel-pure, sorry-free, builds" does NOT imply "non-vacuous"
+— a false/unsatisfiable hypothesis passes the kernel silently.
+
+**The fix.** The intended condition is "some runner is within `2/19` of SOME integer", i.e. `∃ m` (equal to
+`dist(c_i·(b/19), ℤ) < 2/19`, i.e. `margin < 2/19`), not `∀ m`. Changed `∀ m → ∃ m` in `hclose` (and in
+`no_middle_band_of_close`), using the witnessed `m` in the `sieve19_single` contradiction. The hypothesis is
+now SATISFIABLE (e.g. `{1,…,12}`, `M = 1/13 < 2/19`) and the lemmas are meaningful. Verified by wiring
+`hclose` to the ledger's `margin` framework (`LRCMod19LedgerBridge.antipodal_cover_of_margin`): `margin
+v (b/19) < 2/19 ⟹ hclose` via `le_margin_iff`, which only type-checks because the `∃ m` form matches.
+
+**How to apply.** When a Lean lemma's hypothesis is a loneliness/closeness condition, sanity-check that it
+is SATISFIABLE (exhibit a witnessing family) before trusting or wiring it — a `∀ m` where an `∃ m` was
+meant is vacuous and the kernel will not complain. Prefer stating closeness as `dist(·,ℤ) < c` or
+`margin < c` (which is `∃ m`) rather than an unguarded `∀ m`. See [[lrc14-crux-state]], HYP-7812,
+`LRCMod19Spread.lean`, `LRCMod19LedgerBridge.lean`.
