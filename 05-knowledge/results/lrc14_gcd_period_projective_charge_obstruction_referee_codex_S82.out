@@ -1,0 +1,55 @@
+THM-1226 GCD-PERIOD PROJECTIVE-CHARGE EXACT REFEREE
+method=integer/Fraction only; always-on checks; no dependencies
+exact edge-charge identities=2691
+
+TRANSLATED FACTORIAL STRICT-HIGH COUNTERFAMILY
+offsets=(1, 2, 3, 5, 7, 11, 13); sum=42; base_step=27720
+N=1 A=27720 min_rho=36608881/1793835197 max_rho=54895501/2689879521 H<1/3960
+  every_tree_error>4545/47432 E/H>204525/539
+N=2 A=55440 min_rho=146398561/7173529517 max_rho=219562201/10758547821 H<1/7920
+  every_tree_error>4545/47432 E/H>409050/539
+N=10 A=277200 min_rho=3659224801/179302015277 max_rho=784094143/38420613003 H<1/39600
+  every_tree_error>4545/47432 E/H>2045250/539
+N=100 A=2772000 min_rho=365905848001/17929386552077 max_rho=548856990001/26893992510021 H<1/396000
+  every_tree_error>4545/47432 E/H>20452500/539
+fold_corrections=(20, 16, 8, 0, -16, -24, 32, 16, 0, -32, -20, 24, 0, -48, -16, 0, -24, -8, 0, 0, 16)
+all pair gcds=1; G_gt=K7; every spanning tree mass>15/154
+E_T/H grows as (288/16807)A+O(1); no absolute C exists
+
+COVERED PROTECTED-NEEDLE EMBEDDING
+q=27721
+deleted=(27721, 27722, 27723, 27725, 27727, 27731, 27733)
+core=(41582, 41583, 41584, 41585, 41586, 41587)
+m=41587
+center=1/27721
+radius=1/582218
+length=1/291109
+core_margin=69264/194047
+danger_margin=188530059/8069832589
+local_pair_mass=1/291109
+local_tree_mass=6/291109
+all seven deleted combs are active throughout I; this is not an F7 counterexample
+
+CONDITIONAL DISCONNECTED-G_gt TRANSFER
+strict_vertices=15
+strict_kappa=85975/342804
+strict_C=85975/57134
+closed_vertices=25
+closed_kappa=224458/584325
+closed_C=448916/194775
+two_five_packets=12
+two_five_kappa=43774/276507
+two_five_C=87548/92169
+C_disc=448916/194775
+crown_ratio=417375/10488302
+if G_gt is disconnected: E_T<=C_disc*H for a THM-1221 floor tree
+localized tree mass >=(15/154)L-(448916/194775)H
+
+TOURNAMENT / ALTERNATE-VERTEX AUDIT
+factorial switch=all 21 edges strict-high; speed-order gauge is transitive
+scores=(0,1,2,3,4,5,6); cycles=0; SCCs=7; Hamilton_paths=1; low_flips=0
+runner threshold graph preserves global rho floor but destroys projective height kappa
+gcd-period vertices collapse all counterfamily edges to period 1 and destroy wall alignment
+faithful local vertices=wall events / tooth addresses with signed endpoint cocycles
+STATUS=PASS
+source_sha256=c61bc3536c4360737b7d796baa7e7f5c3695ee8cd80eb64a6461c09ca2501b46
