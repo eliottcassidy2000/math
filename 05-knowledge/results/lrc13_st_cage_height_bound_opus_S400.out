@@ -1,0 +1,33 @@
+=== certificate rungs ceil(lp/13)/(lp) over the k=12 pipeline ===
+  l=1 p=167: rung 13/167 = 1/13 + 2/2171
+  l=1 p=733: rung 57/733 = 1/13 + 8/9529
+  l=2 p=167: rung 13/167 = 1/13 + 2/2171
+  l=2 p=733: rung 113/1466 = 1/13 + 3/19058
+  l=4 p=167: rung 13/167 = 1/13 + 2/2171
+  l=4 p=733: rung 113/1466 = 1/13 + 3/19058
+  l=8 p=167: rung 103/1336 = 1/13 + 3/17368
+  l=8 p=733: rung 113/1466 = 1/13 + 3/19058
+  WEAKEST RUNG (cage threshold): 113/1466 = 1/13 + 3/19058
+
+=== height bound ===
+  H0 = 258276  (largest H with |R_m| < prod(caging) guaranteed, all m=1..12)
+  at H0: loss <= 24 primes, ln(caging product) >= 388.7
+  binding m and sizes at H0:
+    m=1: ln|R_m|_max = 34.6
+    m=6: ln|R_m|_max = 194.7
+    m=12: ln|R_m|_max = 388.7
+
+=== Newton-step sanity ===
+  AP {1..12}: all R_m = 0? True
+  3*AP:        all R_m = 0? True
+  random non-dilates with all R_m = 0: 0/2000 (expect 0)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: all R_m = 0? False
+  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24]: all R_m = 0? True
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11]: all R_m = 0? True
+
+CONCLUSION (conditional on F1-F3): every primitive 12-family W with
+M(W) < 452/5864 = 1/13 + 3/19058, max(W) <= 258276, and not 11-of-12
+even speeds, satisfies W = {1,...,12}.  In particular the micro-gap
+(1/13, 452/5864) contains no such family, and tight-locus rigidity
+holds to height 258276 on this branch -- vs height ~200 by prior
+exhaustion (kps-S1).

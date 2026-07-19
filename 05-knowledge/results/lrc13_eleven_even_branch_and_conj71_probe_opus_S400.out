@@ -1,0 +1,24 @@
+=== (A) 11-even branch: exact sheet-dodge verification ===
+  300 random 11-even families: sheet-dodge >= 1/12 in all cases: True
+
+=== (B) S-T Conjecture 7.1 probe at k=13 (threshold 1/14) ===
+  ladder m=3 {1..11,13,36} M=3/41:
+    #BAD d in [20,1500] = 961; largest BAD = 1499; #BAD >= 1000: 235
+  ladder m=4 {1..11,13,48} M=4/53:
+    #BAD d in [20,1500] = 464; largest BAD = 1079; #BAD >= 1000: 5
+  ladder m=5 {1..11,13,60} M=5/65:
+    #BAD d in [20,1500] = 318; largest BAD = 729; #BAD >= 1000: 0
+  ladder m=6 {1..11,13,72} M=6/77:
+    #BAD d in [20,1500] = 260; largest BAD = 688; #BAD >= 1000: 0
+  ladder m=7 {1..11,13,84} M=7/89:
+    #BAD d in [20,1500] = 239; largest BAD = 618; #BAD >= 1000: 0
+  ladder m=8 {1..11,13,96} M=8/101:
+    #BAD d in [20,1500] = 210; largest BAD = 478; #BAD >= 1000: 0
+  control {1..12,15} (loose):
+    #BAD d in [20,1500] = 61; largest BAD = 155; #BAD >= 1000: 0
+  tight AP {1..13} (M=1/14, tight -- witnesses only at s/14):
+    #BAD d in [20,1500] = 1375; largest BAD = 1500; #BAD >= 1000: 465
+
+  Reading: if non-tight families keep BAD d's arbitrarily high, a
+  uniform D in Conjecture 7.1 must exceed them; a persistent-arithmetic
+  BAD pattern (e.g. all d in a residue class BAD) would refute it.
