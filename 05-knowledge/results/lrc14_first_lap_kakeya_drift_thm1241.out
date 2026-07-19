@@ -1,4 +1,4 @@
-THM-1235 FIRST-LAP KAKEYA DRIFT EXACT AUDIT
+THM-1241 FIRST-LAP KAKEYA DRIFT EXACT AUDIT
 one_comb_arrangement_checks=10320
 Q(L)=(floor(L)/7+min(frac(L),1/7))/L
 L6<=1 => each load <1/6 => no six-cover

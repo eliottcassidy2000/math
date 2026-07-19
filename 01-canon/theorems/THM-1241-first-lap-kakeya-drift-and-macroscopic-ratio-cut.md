@@ -1,16 +1,17 @@
 ---
-id: THM-1235
+id: THM-1241
 title: First-lap Kakeya drift forces a macroscopic cut in every six-comb cover
 status: PROVED analytic theorem / COMPUTER-EXACT constant and one-comb-envelope audit.  Every pivot d_h>=7c/6 in a six-comb cover pays sum_i|d_i-d_h|>d_h/14.  In particular d_6/c>7/6 and sum_i(d_6-d_i)>d_6/14, hence d_6/d_1>70/69 and some adjacent ratio d_(j+1)/d_j>211/210.  A full six-speed tangent stalk with coalescing normalized ratios cannot occur
 source: codex-2026-07-19 tangent-stalk session
 depends_on: []
 related: [THM-1176, THM-1198, THM-1199, THM-1232, THM-1233]
-script: 04-computation/lrc14_first_lap_kakeya_drift_thm1235.py
-output: 05-knowledge/results/lrc14_first_lap_kakeya_drift_thm1235.out
+script: 04-computation/lrc14_first_lap_kakeya_drift_thm1241.py
+output: 05-knowledge/results/lrc14_first_lap_kakeya_drift_thm1241.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCFirstLapKakeyaDrift.lean
+formalization_sha256: 2213a9430262b1820bf40c21f9b8cf31171ecfba2fc62dd47e385ec9f06f997a
 ---
 
-# THM-1235 -- the six-comb ratio packet cannot coalesce
+# THM-1241 -- the six-comb ratio packet cannot coalesce
 
 Let
 
@@ -327,11 +328,11 @@ lemma as the explicit paper input.  The targeted Lean build is green with no
 proof placeholders.  Frozen SHA-256 hashes are
 
 ```text
-source  0c33a522063e4735f4edf6fa9e370bc40226c8c34581b064df95320a16d32d92
-output  bcb2c84b8827b4ff8b07ab53ed8cf4637e5e49415552382d8d385298be02d94f
+source  795fd008f4c146746171b768ac5b9eae887e69e8a66bf7042e1d23e939064338
+output  e983ba1e187f3bb437f5a8f04cdaf635872247fceb8923343c0a16984098dcf4
 ```
 
-THM-1235 excludes all full-cluster coalescing limits and creates a finite
+THM-1241 excludes all full-cluster coalescing limits and creates a finite
 five-way macroscopic-cut stratification.  It does not exclude separated
 ratio packets, classify the phase stalks inside the resulting subclusters,
 extend the finite-carrier BV bank past its current frontier, prove universal

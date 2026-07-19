@@ -3,7 +3,7 @@ id: THM-1238
 title: THE MACROSCOPIC-CUT PAIR-SUM BEAT DICHOTOMY — a Kakeya path edge emits a nonzero mixed-clock blocker unless it is locked in one negative-curvature beat cell
 status: RESERVED/PROOF IN PROGRESS. The pair-sum beat-block lemma and exact finite audit are being checked; the Kakeya cut composition and singleton residual are not yet promoted to proved status.
 source: codex-2026-07-19-S78 continuation with tangent-stalk agent
-depends_on: [THM-1156, THM-1217, THM-1219, THM-1235, THM-1236]
+depends_on: [THM-1156, THM-1217, THM-1219, THM-1241, THM-1236]
 related: [HYP-7870]
 ---
 

@@ -6,10 +6,10 @@ Authors: Codex (LRC multi-agent project, 2026-07-19)
 import Mathlib.Tactic
 
 /-!
-# Arithmetic consumers for THM-1235 first-lap Kakeya drift
+# Arithmetic consumers for THM-1241 first-lap Kakeya drift
 
 This module kernel-checks the exact constant arithmetic, the fastest-pivot
-diameter consequence, and the weighted Hamiltonian-path cut in THM-1235.
+diameter consequence, and the weighted Hamiltonian-path cut in THM-1241.
 The geometric input -- freezing six moving open circle arcs on one complete
 pivot lap -- remains an explicit inequality hypothesis.
 -/

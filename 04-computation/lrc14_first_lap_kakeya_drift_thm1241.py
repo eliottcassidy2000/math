@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact arithmetic audit for THM-1235's first-lap Kakeya drift."""
+"""Exact arithmetic audit for THM-1241's first-lap Kakeya drift."""
 
 from fractions import Fraction as F
 from hashlib import sha256
@@ -133,7 +133,7 @@ def main() -> None:
     windows = diagonal_alias_windows()
     audit_constants()
 
-    print("THM-1235 FIRST-LAP KAKEYA DRIFT EXACT AUDIT")
+    print("THM-1241 FIRST-LAP KAKEYA DRIFT EXACT AUDIT")
     print(f"one_comb_arrangement_checks={checks}")
     print("Q(L)=(floor(L)/7+min(frac(L),1/7))/L")
     print("L6<=1 => each load <1/6 => no six-cover")

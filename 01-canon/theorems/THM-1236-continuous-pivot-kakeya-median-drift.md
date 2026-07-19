@@ -3,7 +3,7 @@ id: THM-1236
 title: THE CONTINUOUS-PIVOT KAKEYA MEDIAN LAW — every auxiliary full-lap scale pays drift, with the fourth speed as the exact constrained optimizer
 status: PROVED (all-real auxiliary-pivot moving-arc theorem; exact constrained tilted-L1 optimization; dependency-free Fraction referee; sorry-free Lean arithmetic core)
 source: codex-2026-07-19-S78 continuation
-depends_on: [THM-1235]
+depends_on: [THM-1241]
 related: [THM-1198, THM-1219, THM-1232, THM-1233, THM-1238]
 script: 04-computation/lrc14_continuous_pivot_kakeya_median_thm1236.py
 output: 05-knowledge/results/lrc14_continuous_pivot_kakeya_median_thm1236.out
@@ -37,7 +37,7 @@ the drift invoice
 sum_(i=1)^6 |di-y| > y/14              for every real y>=7c/6.       (1)
 ```
 
-This genuinely strengthens THM-1235's runner-pivot statement: `y` need not be
+This genuinely strengthens THM-1241's runner-pivot statement: `y` need not be
 one of the six speeds.  Define the tilted drift functional
 
 ```text
@@ -61,7 +61,7 @@ d4<7c/6  =>
 sum_i |di-7c/6| > c/12.                                 (5)
 ```
 
-Together with THM-1235's `d6>7c/6`, (3) recovers the suffix-count edge ledger
+Together with THM-1241's `d6>7c/6`, (3) recovers the suffix-count edge ledger
 
 ```text
 r=#{i:di>=7c/6},       M=max_j(d_(j+1)-d_j),
