@@ -1,0 +1,5 @@
+primitive d, components 1..30:
+  runs violating run<=1/(7D): 0  (should be 0 -> the Kakeya box-exit bound is exact)
+  MAX ratio #runs/D = 2/3 at (1, 2, 3) (#runs=2, D=3)
+  needed inequality 3*#runs <= 2D:  HOLDS everywhere
+  overall max sojourn = 2/21 = 0.095238 (2/21=0.095238)

@@ -567,3 +567,19 @@ core 536 [2, 3, 5, 6, 7, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0009
 core 537 [2, 3, 5, 6, 7, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 core 538 [2, 3, 5, 6, 7, 9, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
 -- chunk end: reached core 539/792 in 1236s, 15 cores this run --
+core 539 [2, 3, 5, 6, 7, 10, 11]  min_widest_pass_L=0.0016840  running_min=0.0009588 (ratio 2.235)  viol=0
+core 540 [2, 3, 5, 6, 7, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 541 [2, 3, 5, 6, 7, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 542 [2, 3, 5, 6, 8, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 543 [2, 3, 5, 6, 8, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 544 [2, 3, 5, 6, 8, 9, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 545 [2, 3, 5, 6, 8, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 546 [2, 3, 5, 6, 8, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 547 [2, 3, 5, 6, 8, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 548 [2, 3, 5, 6, 9, 10, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 549 [2, 3, 5, 6, 9, 10, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 550 [2, 3, 5, 6, 9, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 551 [2, 3, 5, 6, 10, 11, 12]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 552 [2, 3, 5, 7, 8, 9, 10]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+core 553 [2, 3, 5, 7, 8, 9, 11]  min_widest_pass_L=1.0000000  running_min=0.0009588 (ratio 2.235)  viol=0
+-- chunk end: reached core 554/792 in 1206s, 15 cores this run --
