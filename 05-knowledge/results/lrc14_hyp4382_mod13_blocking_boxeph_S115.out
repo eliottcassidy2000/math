@@ -1,0 +1,9 @@
+PROVED necessary condition + necessary-not-sufficient demonstration:
+  AP {1..12}                               complete13= True AP= True M=   1/13 (=1/13? True)
+  dilated 5*{1..12}                        complete13= True AP= True M=   1/13 (=1/13? True)
+  non-AP {1..11,25} (complete mod13)       complete13= True AP=False M=   1/12 (=1/13? False)
+  non-AP {2..12,14} (complete mod13)       complete13= True AP=False M=    1/8 (=1/13? False)
+  AP-diff-13 {1,14,..144} (NOT blocker)    complete13=False AP= True M= 67/145 (=1/13? False)
+
+Only the (dilated) AP is tight; complete-mod-13 non-APs give 1/12 (beaten at another q).
+=> mod-13 blocking PROVED but necessary-not-sufficient; AP rigidity = offset-vanishing = the crux.

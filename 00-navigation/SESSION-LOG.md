@@ -788,6 +788,19 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S115 -- SHARPENING HYP-4382: mod-13 pair-blocking is PROVED but NECESSARY-not-SUFFICIENT
+
+Owner: sharpen HYP-4382 (|C|=12 M(C)=1/13 <=> dilated {1..12}) toward the LRC(13) equality proof.
+PROVED LEMMA: M(C)=1/13, 13 not| c_i => {+-c_i mod 13}={1..12} (mod-13 pair-blocking). 1-line sieve proof
+(t=b/13 => min_i|c_i b mod13|<=1 => c_i==+-b^{-1}). UPGRADES verified HYP-4622 (mod 25) to PROVED at mod 13;
+generalizes to every prime p. NECESSARY NOT SUFFICIENT: non-AP complete-mod-13 families ({1..11,25} M=1/12,
+{2..12,14} M=1/8) beaten at other moduli => mod-13 alone can't force AP. WHY: CRT splits residues at q=13val
+into (mod 13, mod val); the AP = offset-vanishing (mod-val coord), ORTHOGONAL to mod-13 blocking (mod-13 coord).
+Tightness FACTORS: mod-13 blocking [PROVED] x offset-vanishing [open]. NET: proved a clean necessary slice of
+the equality-rigidity obligation (HYP-4382); the offset-vanishing rigidity is open. NB codex MISTAKE-170:
+HYP-4382 is ONE typed input not equivalent to LRC(14); my 'the crux' phrasing overreached.
+FILES: reflection sharpening-hyp4382-...-boxeph-S115, script+out lrc14_hyp4382_mod13_blocking_boxeph_S115, HYP-7685. boxeph; S115.
+
 ## boxeph-2026-07-18-S114 -- THE NON-DILATED-CORE RIGIDITY RESIDUAL IS TAO n=12 (the definitive frontier; not provable in a session)
 
 Owner: prove the non-dilated-core rigidity residual. HONEST definitive outcome: it IS the open crux =
