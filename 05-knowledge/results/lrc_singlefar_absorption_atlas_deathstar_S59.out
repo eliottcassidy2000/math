@@ -1,0 +1,118 @@
+== HYP-7885 part 2: single-far absorption atlas (death-star-S59) ==
+Lemma check + per-(N,i) X0 + complete finite classification.
+
+  sanity: N=12 i=5 base safe-set: 8 intervals, l = 7/1000 = 0.00700, X0 = 23
+  lemma spot-check above X0 (40 x's): violations = 0 (want 0)
+
+-- N = 6: window (1/7, 2/13) --
+   i= 1: l=0.06410 X0=   5 checked x<= 97  members: 0
+   i= 2: l=0.03077 X0=  10 checked x<= 97  members: 0
+   i= 3: l=0.01923 X0=  16 checked x<= 97  members: 0
+   i= 4: l=0.05128 X0=   6 checked x<= 97  members: 0
+   i= 5: l=0.03846 X0=   8 checked x<= 97  members: 0
+   i= 6: l=0.01538 X0=  20 checked x<= 97  members: 0
+   => N=6 single-far stratum members (complete): EMPTY
+
+-- N = 7: window (1/8, 2/15) --
+   i= 1: l=0.05714 X0=   5 checked x<= 109  members: 0
+   i= 2: l=0.01905 X0=  14 checked x<= 109  members: 0
+   i= 3: l=0.01778 X0=  15 checked x<= 109  members: 0
+   i= 4: l=0.04000 X0=   7 checked x<= 109  members: 0
+   i= 5: l=0.03175 X0=   9 checked x<= 109  members: 0
+   i= 6: x=  18  M=3/23 (q=23, a=4)
+   i= 6: l=0.01143 X0=  24 checked x<= 109  members: 1
+   i= 7: l=0.01111 X0=  24 checked x<= 109  members: 0
+   => N=7 single-far stratum members (complete): [(6, 18, '3/23')]
+
+-- N = 8: window (1/9, 2/17) --
+   i= 1: l=0.05147 X0=   5 checked x<= 121  members: 0
+   i= 2: l=0.02521 X0=  10 checked x<= 121  members: 0
+   i= 3: l=0.01120 X0=  21 checked x<= 121  members: 0
+   i= 4: l=0.01176 X0=  20 checked x<= 121  members: 0
+   i= 5: l=0.03431 X0=   7 checked x<= 121  members: 0
+   i= 6: l=0.01681 X0=  14 checked x<= 121  members: 0
+   i= 7: l=0.01765 X0=  14 checked x<= 121  members: 0
+   i= 8: l=0.00840 X0=  28 checked x<= 121  members: 0
+   => N=8 single-far stratum members (complete): EMPTY
+
+-- N = 9: window (1/10, 2/19) --
+   i= 1: l=0.04678 X0=   5 checked x<= 133  members: 0
+   i= 2: l=0.01754 X0=  12 checked x<= 133  members: 0
+   i= 3: l=0.01504 X0=  14 checked x<= 133  members: 0
+   i= 4: l=0.00752 X0=  28 checked x<= 133  members: 0
+   i= 5: l=0.02632 X0=   8 checked x<= 133  members: 0
+   i= 6: l=0.02105 X0=  10 checked x<= 133  members: 0
+   i= 7: l=0.02193 X0=  10 checked x<= 133  members: 0
+   i= 8: l=0.01053 X0=  20 checked x<= 133  members: 0
+   i= 9: l=0.00658 X0=  32 checked x<= 133  members: 0
+   => N=9 single-far stratum members (complete): EMPTY
+
+-- N = 10: window (1/11, 2/21) --
+   i= 1: l=0.04286 X0=   5 checked x<= 145  members: 0
+   i= 2: l=0.02116 X0=   9 checked x<= 145  members: 0
+   i= 3: l=0.01389 X0=  14 checked x<= 145  members: 0
+   i= 4: l=0.01020 X0=  19 checked x<= 145  members: 0
+   i= 5: l=0.00794 X0=  24 checked x<= 145  members: 0
+   i= 6: l=0.02449 X0=   8 checked x<= 145  members: 0
+   i= 7: l=0.01667 X0=  12 checked x<= 145  members: 0
+   i= 8: l=0.01587 X0=  12 checked x<= 145  members: 0
+   i= 9: l=0.01020 X0=  19 checked x<= 145  members: 0
+   i=10: l=0.00529 X0=  36 checked x<= 145  members: 0
+   => N=10 single-far stratum members (complete): EMPTY
+
+-- N = 11: window (1/12, 2/23) --
+   i= 1: l=0.03953 X0=   5 checked x<= 157  members: 0
+   i= 2: l=0.01581 X0=  11 checked x<= 157  members: 0
+   i= 3: l=0.01014 X0=  18 checked x<= 157  members: 0
+   i= 4: l=0.00725 X0=  24 checked x<= 157  members: 0
+   i= 5: l=0.00745 X0=  24 checked x<= 157  members: 0
+   i= 6: l=0.01863 X0=  10 checked x<= 157  members: 0
+   i= 7: l=0.01739 X0=  10 checked x<= 157  members: 0
+   i= 8: l=0.01107 X0=  16 checked x<= 157  members: 0
+   i= 9: l=0.01087 X0=  16 checked x<= 157  members: 0
+   i=10: l=0.00621 X0=  28 checked x<= 157  members: 0
+   i=11: l=0.00435 X0=  40 checked x<= 157  members: 0
+   => N=11 single-far stratum members (complete): EMPTY
+
+-- N = 12: window (1/13, 2/25) --
+   i= 1: l=0.03667 X0=   5 checked x<= 169  members: 0
+   i= 2: l=0.01818 X0=   9 checked x<= 169  members: 0
+   i= 3: l=0.01200 X0=  14 checked x<= 169  members: 0
+   i= 4: l=0.00889 X0=  18 checked x<= 169  members: 0
+   i= 5: l=0.00700 X0=  23 checked x<= 169  members: 0
+   i= 6: l=0.00571 X0=  28 checked x<= 169  members: 0
+   i= 7: l=0.01833 X0=   9 checked x<= 169  members: 0
+   i= 8: l=0.01309 X0=  13 checked x<= 169  members: 0
+   i= 9: l=0.01400 X0=  12 checked x<= 169  members: 0
+   i=10: l=0.00952 X0=  17 checked x<= 169  members: 0
+   i=11: l=0.00667 X0=  24 checked x<= 169  members: 0
+   i=12: l=0.00364 X0=  44 checked x<= 169  members: 0
+   => N=12 single-far stratum members (complete): EMPTY
+
+-- N = 13: window (1/14, 2/27) --
+   i= 1: l=0.03419 X0=   5 checked x<= 181  members: 0
+   i= 2: l=0.01425 X0=  11 checked x<= 181  members: 0
+   i= 3: l=0.01122 X0=  14 checked x<= 181  members: 0
+   i= 4: l=0.00673 X0=  22 checked x<= 181  members: 0
+   i= 5: l=0.00658 X0=  23 checked x<= 181  members: 0
+   i= 6: l=0.00224 X0=  66 checked x<= 181  members: 0
+   i= 7: l=0.01389 X0=  11 checked x<= 181  members: 0
+   i= 8: l=0.01293 X0=  12 checked x<= 181  members: 0
+   i= 9: l=0.01026 X0=  15 checked x<= 181  members: 0
+   i=10: l=0.00570 X0=  26 checked x<= 181  members: 0
+   i=11: l=0.00772 X0=  20 checked x<= 181  members: 0
+   i=12: x=  36  M=3/41 (q=41, a=17)
+   i=12: l=0.00317 X0=  47 checked x<= 181  members: 1
+   i=13: l=0.00309 X0=  48 checked x<= 181  members: 0
+   N=13 members inside (1/14, 3/41): NONE
+   => N=13 single-far stratum members (complete): [(12, 36, '3/41')]
+
+== SUMMARY: complete single-far classification, N = 6..13 ==
+  N= 6: EMPTY
+  N= 7: (i=6,x=18,M=3/23)
+  N= 8: EMPTY
+  N= 9: EMPTY
+  N=10: EMPTY
+  N=11: EMPTY
+  N=12: EMPTY
+  N=13: (i=12,x=36,M=3/41)
