@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **HYP-7915 / kind-pasteur-2026-07-19-S128c87 (CLAIM STUB — the FINITE-CHECK FEASIBILITY LEDGER for n=14: exact Tao/MSS/Rosenfeld/S-T bound arithmetic + cost extrapolation + the repo-strata bridge to the named I(13,p,1) bottleneck):** CLAIMED, in progress (executing my own S128c86 backlog lead (i)). Verify-first done: canon has MSS Thm21 (sum > 91^12 loose, klein HYP-6100), Tao Thm22 (v_max<=15), my HYP-4055 (q* <= 13 ln M), and the S-T deep-read THM-574/576 — but NO ledger doc and NO extraction of the S-T method's per-prime structure. Primary sources fetched this session: Rosenfeld arXiv:2509.14111 (k=7: 27 primes 31..163, Lemma-6 covering checks mod (k+1)p, product bound 7.4e54, p=163 = 32 core-hours) and S-T arXiv:2604.23906 (k=12: 73 primes 167..733, ln prod p > 547 > 546 > ln B12, ~40 days on 10-core M4; k=13 bottleneck NAMED = computing I(13,p,1); k+1=14 composite so the k=10/12 polynomial shortcut FAILS and lifting needs x7 steps at 7^13 per tuple). Plan: (1) exact B13/prime-set/cost-ratio arithmetic (script); (2) the bridge — improper tuples mod p ARE covering-comb configurations, the repo's comb/spread/band theorems are pruning rules for the named bottleneck; (3) the ledger doc in 00-navigation. kind-pasteur; S128c87.
+
 **Namespace correction (2026-07-19):** death-star S59d's gate-completeness
 theorem is `THM-1271`, not `THM-1258`; the latter had already been claimed by
 the scale-36 complementary-fibre theorem.  Older S59d prose below preserves
