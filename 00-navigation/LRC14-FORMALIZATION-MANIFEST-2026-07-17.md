@@ -1121,6 +1121,14 @@ and 12,771-row endpoint complement close the full step-two family at all
 legal scales, while the exact `Q5` mass/component inequality supplies a
 separated-ratio gate.  These are genuine r6 pieces, not a uniform r6 closure.
 
+THM-1154 now closes the complete exactly-two-`13`-carrier `r=6` stratum.
+Its owner-sensitive chart broadens the core cap from `cM<=s` to `cM<=13s`:
+if `rho` carrier phases are compatible, the core costs exactly
+`d=#{p:cp>s}` multiplier charts and the noncarriers cost at most
+`2(6-rho)`, so `d<2rho` suffices.  All thirty THM-1151 cap obstructions close
+with `c=15,d=1`.  Carrier compatibility for the remaining `rho>=3` strata is
+still open; for `rho>=4` only compatibility, not multiplier capacity, remains.
+
 `LRCMSplit.lean` and `LRCFinsetBridge.lean` state the conditional implication
 from
 
@@ -1136,6 +1144,14 @@ counterexample interface and `residualINV_iff_LRC14` remains valid; it is
 equivalent to the working target under the AP bridge, not a noncircular
 reduction.  `LRC14DispatchAssembly.lean` remains a valid generic easy/compact
 composition with every producer hypothesis explicit.
+
+`LRCPrimitiveCarrierINV.lean` supplies the corrected normalized interface.
+Under no `Lonely13`, `Covering(2..14)` is equivalent to the single q=14
+carrier bit, because q=2,...,13 are forced by the divisor sieve.  The module
+proves equivalence of the primitive Covering supplier, the carrier supplier,
+and the trichotomy `Lonely13 OR no q14-carrier OR 13-dominance`; with the cited
+LRC through 13 it proves both working and signed LRC(14) consumers after gcd
+normalization.  The structural primitive carrier supplier remains open.
 
 `LRCRamifiedCosetCover.lean` is now direct-built and root-wired.  It composes
 that one-way pre-nerve bridge with the anchor/nonanchor upper relaxation used
@@ -1692,6 +1708,9 @@ that hypothesis.
 On the four-comb side, THM-1148 proves three external analytic consumers: the
 four-residue multiplier cone, `Q4>0`, and the corrected THM-1137 exact-`Phi`
 transfer with adjacent-ratio corollary `9/5`.  The false historical `7/6`
-recursion is not used.  The first infinite method residual is
-`m(3,4,5,6)`, `m>=53`; uniform `r=5` remains open.  None of THM-1148's finite
-orbit/core/ray banks has been promoted to kernel code.
+recursion is not used.  THM-1159 removes the first infinite method residual
+`m(3,4,5,6)`, including the `m>=53` tail, by an exact erosion certificate:
+the primitive shape has start-set covering radius `9/56`, while legality and
+THM-1148's core floor force a longer phase needle at every scale.  Uniform
+`r=5` away from this ray remains open.  None of the finite orbit/core/ray
+banks or the erosion atlas has been promoted to kernel code.

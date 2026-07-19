@@ -426,7 +426,10 @@ pattern has some chart with gap at least `6/13`.  This yields the cone
 `B>=17 max(A,80)` and closes the entire step-two family by a 792-core rectangle
 atlas plus 12,771-row finite complement.  Its complementary exact `Q5` gate
 handles sufficiently separated ratios.  Uniform r6 outside those pieces
-remains open.
+remains open.  THM-1154 additionally closes every exactly-two-`13`-carrier
+row and proves the general owner budget `d<2rho`; the remaining multi-carrier
+problem is compatibility of the broadened charts, not chart capacity once
+`rho>=4`.
 Ramified H5, non-AP/deep, and higher-sheet branches
 remain.  Neither the
 Fano/`χ₇` address atlas nor the historical self-line analogy supplies these
@@ -443,6 +446,10 @@ sound exact capstone is `ResidualINV`, with
 bridge, not progress on the remaining mathematics.  A live noncircular route
 must normalize gcd, rederive Covering after reduction, or use the explicit
 Easy/Compact producers in `LRC14DispatchAssembly.lean`.
+`LRCPrimitiveCarrierINV.lean` implements that normalization: under no
+`Lonely13`, only the q=14 carrier bit is not automatic, and the primitive
+three-exit trichotomy implies both positive and signed LRC(14).  Its structural
+carrier supplier is an explicit open hypothesis, not a claimed proof.
 
 No theorem in this picture proves LRC(14) without the named suppliers above.
 
@@ -571,7 +578,8 @@ FOUR-COMB r=5
   OR Q4>0 [THM-1148]
   OR exact Phi transfer (9/5 corollary) [THM-1148]
        |
-       +-- residual begins with m(3,4,5,6) [OPEN method gap]
+       +-- m(3,4,5,6) closed at every legal scale [THM-1159]
+       +-- remaining primitive shapes [OPEN]
 
 TWELVE-SPEED SHALLOW
   full residues

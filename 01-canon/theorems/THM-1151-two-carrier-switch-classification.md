@@ -1,15 +1,22 @@
 ---
 id: THM-1151
-title: Exactly two thirteen-carriers reduce to thirty normalized switch obstructions
-status: PROVED — elementary integer/rational classification.  For two normalized carriers u<v above a core maximum 1<=M<=12, the translated thirteen-grid switch of THM-1136 exists except for exactly 30 pairs: 8<=M<=12, u=M+1, and 13M+14<=v<=15M-1.  Thus every r=6 row with exactly two 13-divisible killers is lonely outside this explicit list.  A dependency-free exact referee replays the constructive certificate and brute classification on 2,081,164 integer rows
+title: Exactly two thirteen-carriers reduce to thirty normalized switch obstructions, all subsequently closed by THM-1154
+status: PROVED classification.  For two normalized carriers u<v above a core maximum 1<=M<=12, the translated thirteen-grid switch of THM-1136 exists except for exactly 30 pairs: 8<=M<=12, u=M+1, and 13M+14<=v<=15M-1.  THM-1154 supplies a second owner-sensitive chart on every one of those pairs, so the complete exactly-two-carrier r=6 branch is now closed.  A dependency-free exact referee replays this theorem's constructive certificate and brute classification on 2,081,164 integer rows
 source: codex-2026-07-18-S67 continuation
 depends_on: [THM-1136]
-related: [THM-1135, THM-1137, THM-1145]
+related: [THM-1135, THM-1137, THM-1145, THM-1154]
 script: 04-computation/lrc14_r6_two_carrier_switch_referee_codex_S67.py
 output: 05-knowledge/results/lrc14_r6_two_carrier_switch_referee_codex_S67.out
 ---
 
 # THM-1151 — the exact two-carrier switch classification
+
+> **Closed residual (THM-1154).**  The thirty triples classified here are
+> obstructions only to the uniform-cap switch.  The chart
+> `t=a/13+15/(182v)` loses exactly one multiplier to the core and at most
+> eight to the four noncarriers, leaving at least three witnesses.  Hence
+> every exactly-two-carrier row is lonely; the classification below remains
+> the exact first-chart theorem and the input to that closure.
 
 Let `P` be a nonempty subset of `{1,...,12}` and put `M=max(P)`.  Suppose an
 `r=6` clustered row has exactly two killers divisible by `13`.  Write them
@@ -139,8 +146,8 @@ two-carrier band-and-cap interaction above.
 
 The theorem does **not** assert that the thirty carrier pairs are LRC
 counterexamples.  It says precisely that this particular translated-grid
-certificate is impossible there.  Those thirty pairs are now the finite
-target for a second chart or a component argument.
+certificate is impossible there.  THM-1154 provides the required second
+chart and proves this finite residual empty.
 
 ## Structural viewpoint and Tournament Analysis
 

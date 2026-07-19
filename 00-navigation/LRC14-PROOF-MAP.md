@@ -1,5 +1,39 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-18 S75 OWNER/EROSION/PRIMITIVE UPDATE
+>
+> Global LRC(14), uniform `r=5`, the remaining `r=6` carrier strata, Cover14
+> crown collapse, and n=12 equality rigidity remain open.  Three former
+> frontier statements are now sharper.
+>
+> **Exactly two 13-carriers (`r=6`) are closed.**  THM-1151's thirty
+> uniform-cap obstructions are all dispatched by THM-1154's chart
+> `t=a/13+15/(182v)`: exactly one multiplier is lost to the core and at most
+> eight to four noncarriers.  More generally, with `rho` carriers a compatible
+> broad-cap chart loses `d=#{p:cp>s}` core owners and at most `2(6-rho)` other
+> charts, so `d<2rho` suffices.  For `rho>=4` the owner budget is automatic
+> once carrier compatibility is found; `rho=3` needs `d<=5`.
+>
+> **The first infinite four-comb residual is closed.**  THM-1159 computes the
+> exact eroded safe-shape atlas of `(3,4,5,6)`.  Its start-set covering radius
+> is `9/56`; THM-1148's core floor and legality imply `m ell(P)>9/56` at every
+> legal scale.  Thus `m(3,4,5,6)` leaves a closed interval of length
+> `1/(42m)=1/(7k4)`, which no fifth open danger tooth can cover.  Uniform
+> `r=5` away from this ray remains open.
+>
+> **The inverse interface is now normalized.**  THM-1158 formally refutes
+> literal `INVcov`.  THM-1157 proves that under no `Lonely13`, full Covering is
+> equivalent to the single q=14-carrier bit, and that the primitive trichotomy
+> `Lonely13 OR no q14-carrier OR 13-dominance` implies both working and signed
+> LRC(14) after gcd normalization.  The structural primitive carrier supplier
+> remains open and is exactly an all-loose Cover14 crown obstruction.
+>
+> THM-1153's harmonic deletion crown independently compresses the top seven
+> speeds through six deletions and identifies `r=7` as the exact zero-density
+> wall.  The faithful objects are multiplier-owner hypergraphs, weighted
+> eroded cyclic interval complexes, q=14 carrier masks, and triple-incidence
+> crown chambers—not transitive runner tournaments.
+
 > ## 2026-07-18 S74 CURRENT FRONTIER (supersedes equivalence claims below)
 >
 > Global LRC(14), uniform `r=5`, uniform `r=6`, n=12 equality rigidity, and

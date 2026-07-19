@@ -1,0 +1,50 @@
+THM-1159 exact (3,4,5,6) shape-erosion referee
+primitive shape: (3, 4, 5, 6)
+safe convention: ||k*x|| >= 1/14 (closed); danger teeth are open
+wall events on (0,1): 36 distinct; wall ties: 0
+positive safe components: 12
+  S01: [1/42,13/84] length=11/84 owners=(3,)->(6,)
+  S02: [5/28,13/70] length=1/140 owners=(6,)->(5,)
+  S03: [3/14,13/56] length=1/56 owners=(5,)->(4,)
+  S04: [15/56,13/42] length=1/24 owners=(4,)->(3,)
+  S05: [5/14,27/70] length=1/35 owners=(3,)->(5,)
+  S06: [29/70,27/56] length=19/280 owners=(5,)->(4,)
+  S07: [29/56,41/70] length=19/280 owners=(4,)->(5,)
+  S08: [43/70,9/14] length=1/35 owners=(5,)->(3,)
+  S09: [29/42,41/56] length=1/24 owners=(3,)->(4,)
+  S10: [43/56,11/14] length=1/56 owners=(4,)->(5,)
+  S11: [57/70,23/28] length=1/140 owners=(5,)->(6,)
+  S12: [71/84,41/42] length=11/84 owners=(6,)->(3,)
+target phase length delta: 1/42
+delta-admissible start components: 8
+  T1: [1/42,11/84]
+  T2: [15/56,2/7]
+  T3: [5/14,38/105]
+  T4: [29/70,11/24]
+  T5: [29/56,59/105]
+  T6: [43/70,13/21]
+  T7: [29/42,17/24]
+  T8: [71/84,20/21]
+cyclic complementary gap word: (23/168, 1/14, 11/210, 5/84, 11/210, 1/14, 23/168, 1/14)
+largest cyclic gap: 23/168
+universal phase-interval threshold max_gap+delta: 9/56
+core-atlas/legality rows (least legal scale is the worst scale):
+  M=8: m_min=35, ell_floor=24/1225, m*ell_floor=24/35, margin_over_9/56=21/40
+  M=9: m_min=40, ell_floor=36/2065, m*ell_floor=288/413, margin_over_9/56=1773/3304
+  M=10: m_min=44, ell_floor=72/4585, m*ell_floor=3168/4585, margin_over_9/56=19449/36680
+  M=11: m_min=48, ell_floor=1/70, m*ell_floor=24/35, margin_over_9/56=21/40
+  M=12: m_min=53, ell_floor=72/5495, m*ell_floor=3816/5495, margin_over_9/56=23463/43960
+cleared uniform comparison:
+  m>13M/3>5(13M+1)/64, since 637M-15>0
+pullback identity: delta/m=1/(42m)=1/(7*(6m))
+fifth-comb endpoint audit:
+  a closed interval of length 1/(7k4) cannot lie in one open tooth
+  and for k5>k4 each k5-tooth is strictly shorter
+Tournament Analysis:
+  runner-order tournament: n=4, scores=(0,1,2,3), cycles=0
+  wall-order tournament: n=36, scores=(0,...,35), cycles=0
+  wall SCCs are 36 singletons; no-tie Hamiltonian paths=1
+  safe-component order tournament: n=12, scores=(0,...,11), cycles=0
+  faithful object: cyclic weighted start-set/gap word + wall owners + phase needle
+  naked tournaments lose lengths, erosion eligibility, cyclic gap, and pullback scale
+VERDICT: every legal m(3,4,5,6) four-comb prefix clears the sharp target

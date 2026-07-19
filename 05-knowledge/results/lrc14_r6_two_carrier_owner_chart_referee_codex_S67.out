@@ -1,0 +1,31 @@
+THM-1154 exact two-carrier residue-owner closure
+exceptional triples checked: 30
+seven-core/exception rows checked: 6930
+carrier chart checks: 360
+carrier orientation: 1 < 15u/v < 2; h is safe at equality 1/14
+core orientation: only aM = -1 (mod 13) is bad; exactly 1 of 12 charts
+general owner chart:
+  broad-cap rows=14993, seven-core rows=1586779, phase checks=1649232
+  maximum distinct core owners realized=7
+  carrier sets=9647, candidate charts=1087262, safe-by-rho=(1273, 11137, 45842, 116258, 202095, 253725)
+  rho=2: noncarriers=4, assignments=1749060, max-unions-by-d=(8, 9, 10, 11, 12, 12, 12, 12)
+  rho=3: noncarriers=3, assignments=85320, max-unions-by-d=(6, 7, 8, 9, 10, 11, 12, 12)
+  rho=4: noncarriers=2, assignments=3160, max-unions-by-d=(4, 5, 6, 7, 8, 9, 10, 11)
+  rho=5: noncarriers=1, assignments=79, max-unions-by-d=(2, 3, 4, 5, 6, 7, 8, 9)
+  rho=6: noncarriers=0, assignments=1, max-unions-by-d=(0, 1, 2, 3, 4, 5, 6, 7)
+  exact survival criterion: d + 2(6-rho) < 12 iff d < 2rho
+translated-grid cells: breakpoints=24, probes=48, masks=24
+universal noncarrier capacity: at most 2 of 12 charts
+finite noncarrier lift replay: rows=134640, max_load=2, masks=79
+abstract four-edge assignments: 1749060; max with core owner=9
+survival lower bound: 12 - 1 - 4*2 = 3
+displayed witness: t=955/6188, survivors=(2, 5, 7, 8, 9, 10, 11), equality_owners=(2210,)
+Tournament Analysis:
+  two-carrier order tournament: scores=(0,1), cycles=0, SCCs=(1,1), HP=1
+  displayed chart obstruction loads=(1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1)
+  load tournament is transitive: scores=0..11, cycles=0, singleton SCCs, HP=1
+  reversing chart-label tie gauge flips 31 edges
+  challenged vertices: runners, carriers, ratios, arcs, owners, charts, obligations
+  faithful object: 12 chart vertices plus one core singleton and four <=2 hyperedges
+  pair orientation destroys hyperedge union capacity; killer order is unnecessary
+VERDICT: all 30 switch obstructions close; the exactly-two-carrier branch is empty
