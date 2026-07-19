@@ -1,0 +1,60 @@
+A12 SHALLOW CHIP-WALK / DESCENT AUDIT
+source_sha256=bfeb76ddf879b18125b4ed219cf7811391f4766ac579311161331d0959893919
+domain=all positive residue-labelled w_r == r mod 13
+scope=shallow full-residue chi_13=0 only; not deep and not INVcov
+certificate_claim=exhaustive direct search only for h_r in {0,1,2}; arbitrary winding rigidity remains open
+finite_state=11-chip simplex size C(23,11)=1352078
+exact_equivalence=chi_13(W)=0 iff 11*delta_0+C(prefix)>=0 for every grouped prefix
+events_at_equal_fractions=grouped before testing; closed event points are covered by adjacent-edge union
+
+CONTROL CROSS-CHECK: ROOT WALK VS ORIGINAL t-CIRCLE
+AP: W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) accepted=True first_tear=survive deficient=() root_witness=None direct_witness=None
+2AP: W=(14, 2, 16, 4, 18, 6, 20, 8, 22, 10, 24, 12) accepted=True first_tear=survive deficient=() root_witness=None direct_witness=None
+3AP: W=(27, 15, 3, 30, 18, 6, 33, 21, 9, 36, 24, 12) accepted=True first_tear=survive deficient=() root_witness=None direct_witness=None
+single_lift_r1: W=(14, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) accepted=False first_tear=1/7 deficient=(12,) root_witness=(12, Fraction(1021, 1092)) direct_witness=19/364
+all_plus_13: W=(14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25) accepted=False first_tear=1/14 deficient=(0,) root_witness=(0, Fraction(53, 9100)) direct_witness=193/9100
+mixed_tail: W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 24, 25) accepted=False first_tear=1/12 deficient=(7,) root_witness=(7, Fraction(851, 1560)) direct_witness=93/1040
+
+DILATION / FAREY-COMB TOOTHPICK SELF-SIMILARITY
+identity: E_ca((m+v)/c)=phi_(c,m)(E_a(v)), phi(x)=c^-1(x-m) mod 13
+carry_ray: for c=13q+s and pi_s(r)=<s^-1 r>_13, h_r=q*pi_s(r)+floor(s*pi_s(r)/13)
+gcd_reduction: divide W by gcd(W), re-label residues; circle covering is unchanged by the surjective time map
+base_word=46 Farey-12 chambers: 24 trees + 22 (two-component, one-cycle) chambers
+c=1: chambers=46 profile={(1, 0): 24, (2, 1): 22} star_chambers=2
+c=2: chambers=92 profile={(1, 0): 48, (2, 1): 44} star_chambers=4
+c=3: chambers=138 profile={(1, 0): 72, (2, 1): 66} star_chambers=6
+c=5: chambers=230 profile={(1, 0): 120, (2, 1): 110} star_chambers=10
+c=14: chambers=644 profile={(1, 0): 336, (2, 1): 308} star_chambers=28
+
+EXHAUSTIVE DIRECT-MASK BOX h_r IN {0,1,2}
+global_chambers=426 bits=5538
+packets=531441 accepted=3 decision_sha256=31880bc101e49a1682af8de9583ca68aeb428a91a854f6bd2bfc6fa98198d018
+accepted_h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) dilation_scale=1
+accepted_h=(1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0) W=(14, 2, 16, 4, 18, 6, 20, 8, 22, 10, 24, 12) dilation_scale=2
+accepted_h=(2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0) W=(27, 15, 3, 30, 18, 6, 33, 21, 9, 36, 24, 12) dilation_scale=3
+descent_status=all accepted nodes are dilation sinks; non-dilation descent implication is vacuous in this box
+
+COUNTEREXAMPLES TO WEAKER DESCENT SUMMARIES
+endpoint_current_only: all 4096 packets with h_r in {1,2} have the universal correct endpoint but none passes the full word
+h_r in {0,1}: accepted=2; loose packets for which every legal lowering makes first-tear time strictly earlier=2
+regression W=(1, 2, 3, 4, 18, 6, 20, 21, 22, 10, 24, 12) h=(0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0) tear=1/6 lowerings=[(5, '1/11'), (7, '3/22'), (8, '1/10'), (9, '1/12'), (11, '2/21')]
+regression W=(14, 2, 16, 4, 18, 6, 7, 8, 22, 10, 11, 12) h=(1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0) tear=2/7 lowerings=[(1, '1/6'), (3, '1/7'), (5, '1/11'), (9, '1/8')]
+conclusion=first-tear time, endpoint current, and scalar demand are not descent energies
+
+ADVERSARIAL TESTS (EVIDENCE ONLY)
+dilation_scales=(1, 2, 3, 4, 5, 7, 12, 14, 17, 25, 27, 97): accepted_all=True; one-coordinate +13 failures=144; legal one-coordinate -13 failures=115
+deterministic_random heights 0..80: seed=20260718 packets=1000 accepted=0 first_tear_denominator_top=[('523', 14), ('1025', 11), ('515', 9), ('1051', 9), ('505', 9), ('1045', 9), ('1035', 8), ('1019', 8), ('492', 8), ('993', 8), ('983', 8), ('1037', 8)]
+
+PROOF-READY OPEN TARGET
+A12 ballot rigidity: every arithmetic-realizable accepted root word is c*[12].
+primitive form: gcd(W)=1 and accepted implies W=[12].
+regeneration form: every accepted primitive mechanical word is the single Farey-12 comb.
+sink form: every accepted coordinate-lowering sink is a dilation ray.
+warning=the tested first-tear descent potential is false; a proof must retain the full prefix-minimum stalk/event word
+
+TOURNAMENT / ASSUMPTION CHALLENGE
+cut_vertices=13 sheets; observable=lexicographic current deficit; switch=root negation plus time reversal
+tie_hamiltonian_path=0>1>...>12; fingerprint=transitive scores 0..12, zero cycles, 13 singleton SCCs
+event_vertices=labelled crossings (r,k), pair observable=order of k/w_r, simultaneous ties contracted
+preserves=mechanical chronology and root ballot predicate when root labels are retained
+destroys=cut tournament loses chronology; unlabelled roots lose runner identity; arbitrary root words lose arithmetic realizability
