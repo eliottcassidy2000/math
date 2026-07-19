@@ -1,0 +1,9 @@
+THM-1236 CONTINUOUS-PIVOT KAKEYA MEDIAN EXACT AUDIT
+ordered six-packets checked = 8008
+carrier thresholds checked = 19448
+tilted-L1 breakpoint/midpoint comparisons = 290796
+constrained optimizer = max(7c/6,d4)
+r=1, r=2, r>=3 path-weight sums = 15, 11, 9
+carrier edge floors = c/180, c/132, c/108
+branch histogram = r=1:1, r=2:1, r=3:1, r=4:1, r=5:211, r=6:19239
+RESULT: PASS
