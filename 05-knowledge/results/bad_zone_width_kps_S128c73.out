@@ -1,0 +1,27 @@
+### bad-j statistics ; sufficient condition: max-run/k1 < 1/70 = 0.014286 ###
+  killers                   #bad   longest run   run/k1     run start   j/k1
+  (157, 158, 159, 160)      12     6             0.038217   38          0.242
+  (197, 198, 199, 200)      18     9             0.045685   47          0.239
+  (237, 238, 239, 240)      20     10            0.042194   57          0.241
+  (277, 278, 279, 280)      24     12            0.043321   66          0.238
+  (317, 318, 319, 320)      28     14            0.044164   76          0.240
+  (300, 301, 302, 303)      26     13            0.043333   72          0.240
+  (371, 374, 377, 379)      2      1             0.002695   34          0.092
+  (157, 163, 169, 175)      2      1             0.006369   19          0.121
+  (211, 212, 214, 215)      0      0             0.000000   None        -
+  (163, 167, 173, 179)      0      0             0.000000   None        -
+
+  worst bad-fraction among these: 0.045685 at (197, 198, 199, 200) (run 9 starting j=47)
+  sufficient condition needs < 0.014286 -> FAILS
+
+### systematic: consecutive quadruples, k1 in [157,400] ###
+  ... k1=181  running worst bad-fraction 0.042945 at (163, 164, 165, 166)
+  ... k1=241  running worst bad-fraction 0.044248 at (226, 227, 228, 229)
+  ... k1=301  running worst bad-fraction 0.044983 at (289, 290, 291, 292)
+  ... k1=361  running worst bad-fraction 0.045455 at (352, 353, 354, 355)
+
+  WORST bad-fraction over the scan: 0.045685
+    at (394, 395, 396, 397) : 36 bad indices, longest run 18 starting at j=94 (j/k1 = 0.2386)
+  atlas gives ell >= 1/70 = 0.014286
+  VERDICT: bad run fits inside a component -> conditioning FAILS
+DONE
