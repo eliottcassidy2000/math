@@ -1,0 +1,28 @@
+(1) THE CEILING: 1 - 2*k*lam at lam = 1/14
+    k=1: 1 - 2k*lam = 6/7  USABLE
+    k=2: 1 - 2k*lam = 5/7  USABLE
+    k=3: 1 - 2k*lam = 4/7  USABLE
+    k=4: 1 - 2k*lam = 3/7  USABLE
+    k=5: 1 - 2k*lam = 2/7  USABLE
+    k=6: 1 - 2k*lam = 1/7  USABLE
+    k=7: 1 - 2k*lam = 0  <-- DEGENERATE (method stops)
+    k=8: 1 - 2k*lam = -1/7  <-- DEGENERATE (method stops)
+    => the density method reaches k <= 6 and dies exactly at k = 7 = 1/(2*lam).
+
+(2) STEP 1 -- bound on the SMALLEST new speed over all 286 triples
+    r <= 3/(4*ell_max(E_ijk))
+    ell_max ranges 0.007305 .. 0.053571
+    bound on smallest speed: 14 .. 102   (MAX = 102)
+    worst triple: (4,5,6)  ell_max=0.007305  r <= 102
+
+    crude enumeration estimate: sum of r-bounds over triples = 10320
+    (each then spawns a two-speed subproblem -- feasibility checked next)
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\threespeed_exhaustive_opus_S380.py:39: SyntaxWarning: invalid escape sequence '\ '
+  """E \ D, both sorted disjoint interval lists -- LINEAR merge scan."""
+branches explored: 87863   (triple,r) pruned by the 2/(5r) test: 3496
+empty E'  (would contradict LRC(12)): 0
+empty E'' (would contradict LRC(13)): 0
+(i,j,k,r,s,t) combinations fully checked: 71890
+DISTINCT TIGHT FAMILIES FOUND: 2
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]   [= {1..13}]
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]   [= {1..11,13,24}]

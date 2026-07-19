@@ -191,4 +191,64 @@ theorem two_speed_density_bound (r s : ℕ) (hr : 1 ≤ r) (hs : 1 ≤ s)
   rw [hexp] at hle
   nlinarith [hle]
 
+/-! ### The general k-comb density bound, and the method's ceiling
+
+    The two-speed bound is the `k = 2` case of a uniform statement: covering an
+    interval of length `L` by `k` combs forces
+
+        L * (1 - 2*k*lam)  ≤  2*lam * Σ (1/wᵢ).
+
+    This is informative only while `1 - 2*k*lam > 0`, i.e. `k < 1/(2*lam)`.  At
+    `lam = 1/14` that is `k < 7`: the method reaches SIX simultaneous
+    substitutions and degenerates exactly at seven — the same `7 = 1/(2*lam)`
+    that governs the whole problem. -/
+theorem multi_speed_density_bound (S : Finset ℕ) (hS : ∀ w ∈ S, 1 ≤ w)
+    (lam L x : ℝ) (hlam : 0 < lam) (hL : 0 ≤ L)
+    (h : Set.Icc x (x + L) ⊆ ⋃ w ∈ S, badArcs w lam) :
+    L * (1 - 2 * (S.card : ℝ) * lam) ≤ 2 * lam * ∑ w ∈ S, (1 / (w : ℝ)) := by
+  have hvol : volume (Set.Icc x (x + L)) = ENNReal.ofReal L := by
+    rw [Real.volume_Icc]; congr 1; ring
+  -- the interval equals the union of its pieces
+  have hself : Set.Icc x (x + L) = ⋃ w ∈ S, (badArcs w lam ∩ Set.Icc x (x + L)) := by
+    ext t
+    simp only [Set.mem_iUnion, Set.mem_inter_iff, exists_prop]
+    constructor
+    · intro ht
+      have := h ht
+      simp only [Set.mem_iUnion, exists_prop] at this
+      obtain ⟨w, hwS, hw⟩ := this
+      exact ⟨w, hwS, hw, ht⟩
+    · rintro ⟨w, -, -, ht⟩; exact ht
+  -- subadditivity over the finset, then the window lemma on each comb
+  have hstep : ENNReal.ofReal L
+      ≤ ∑ w ∈ S, ENNReal.ofReal ((L * w + 1) * (2 * lam / w)) := by
+    calc ENNReal.ofReal L = volume (Set.Icc x (x + L)) := hvol.symm
+      _ ≤ ∑ w ∈ S, volume (badArcs w lam ∩ Set.Icc x (x + L)) := by
+          conv_lhs => rw [hself]
+          exact measure_biUnion_finset_le S _
+      _ ≤ _ := Finset.sum_le_sum (fun w hw =>
+          fragmentation w (hS w hw) lam L x hlam hL)
+  -- descend to ℝ
+  have hnn : ∀ w ∈ S, (0 : ℝ) ≤ (L * w + 1) * (2 * lam / w) := by
+    intro w hw
+    have : (0 : ℝ) ≤ (w : ℝ) := Nat.cast_nonneg w
+    positivity
+  rw [← ENNReal.ofReal_sum_of_nonneg hnn,
+      ENNReal.ofReal_le_ofReal_iff (Finset.sum_nonneg hnn)] at hstep
+  -- expand each summand as 2*lam*L + 2*lam/w
+  have hterm : ∀ w ∈ S, (L * w + 1) * (2 * lam / w)
+      = 2 * lam * L + 2 * lam * (1 / (w : ℝ)) := by
+    intro w hw
+    have hw1 := hS w hw
+    have hw0 : (0 : ℝ) < (w : ℝ) := by
+      exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hw1
+    field_simp
+    try ring
+  have hexp : ∑ w ∈ S, (L * w + 1) * (2 * lam / w)
+      = (S.card : ℝ) * (2 * lam * L) + 2 * lam * ∑ w ∈ S, (1 / (w : ℝ)) := by
+    rw [Finset.sum_congr rfl hterm, Finset.sum_add_distrib, Finset.sum_const,
+        nsmul_eq_mul, ← Finset.mul_sum]
+  rw [hexp] at hstep
+  nlinarith [hstep]
+
 end LRC14

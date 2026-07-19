@@ -3,6 +3,43 @@
 Prompt (owner): prove the six-linear-functions statement for the four-comb tail
 
 FILES: THM-1143, HYP-7565, sparse_gap_lemma script + out. -> all (codex: the six-linear-functions framing collapses. Inside a core-safe component, k1 cuts gaps of length exactly 6/(7k1) and EVERY gap holds exactly three foreign teeth -- never two, across 800 trials in five regimes, so the 2-sparse route that would have proved the theorem outright is dead. At m=3 the equal-split bound gives 7*k4*L >= 0.7723, short by 23%, and the truth is 3.05x that bound. So the whole four-comb theorem now rests on a three-point spacing statement inside ONE interval of known length 6/(7k1): three teeth cannot split it into four pieces all below 1.295x the equal split. Positions come from frac(k_i*g) at the gap start, THM-1142 gives the exact law, and the margin is 2.35x. That is finite and low-dimensional, and it is a much better target than what I was handed.)
+## opus-2026-07-17-S380 -- THM-1155 THE THREE-SPEED CASE IS EXHAUSTIVE (71890 combinations, 0 empty residues, still only TWO tight families) + THE METHOD'S CEILING IS EXACTLY k = 7 = 1/(2*lam): the general k-comb density bound is formalised and degenerates precisely at seven simultaneous substitutions (HYP-7640)
+
+Owner: prove the three-speed case exhaustive. Done, and generalising the bound first
+turned up the more interesting fact.
+THE GENERAL BOUND AND ITS CEILING: covering an interval of length L by k combs forces
+L*(1 - 2*k*lam) <= 2*lam*sum_i(1/w_i), which says something only while 1 - 2*k*lam > 0,
+i.e. k < 1/(2*lam). At lam = 1/14 the coefficients are 6/7, 5/7, 4/7, 3/7, 2/7, 1/7 for
+k = 1..6 and exactly ZERO at k = 7. So the density method reaches SIX simultaneous
+substitutions and dies EXACTLY at seven. That is the same 7 that produces S1 = 13/7, the
+forbidden window |W_q| = 1 <=> q <= 14 from THM-1110, and every union bound this program
+has broken itself on -- now showing up as the ARITY LIMIT of a covering argument. I did
+not go looking for it; it fell out of writing the bound for general k.
+THE k=3 CHAIN: density gives ell <= (1/4)(1/r + 1/s + 1/t), hence r <= 3/(4*ell_max) for
+the smallest speed -- bounds 14..102 over the 286 triples, worst at (4,5,6). Then
+E' = E_ijk \ D_r must be covered by TWO combs, so the S379 bound caps s; then
+E'' = E' \ D_s by ONE, so the S378 swap bound caps t. Termination is LRC(12) and LRC(13)
+-- eleven and twelve speeds cannot cover at radius 1/14, leaving gaps >= 1/12 and >= 1/13.
+A hard prune made it feasible: with r <= s <= t the best two-comb budget for E' is at
+s = t = r, giving ell <= 2/(5r), so ell_max(E') > 2/(5r) kills the branch outright. It
+removed 3496 (triple, r) pairs.
+THE RESULT: 87863 branches explored, 71890 (i,j,k,r,s,t) combinations fully checked,
+0 empty E' and 0 empty E'' -- which is a LIVE check on the citation argument rather than
+decoration, since a single empty residue would have falsified the LRC(<=13) reasoning
+that makes the recursion terminate -- and only TWO distinct tight families, {1,...,13}
+and {1,...,11,13,24}. No third.
+LEAN: multi_speed_density_bound, stated over an arbitrary Finset of speeds and proved by
+measure subadditivity over the finset plus a per-comb application of `fragmentation`.
+The module now carries TEN theorems, zero sorries, all depending only on [propext,
+Classical.choice, Quot.sound]. Two frictions for the fleet: field_simp already closed a
+goal where I had followed it with `ring` ('No goals to be solved'), so I guarded it as
+`try ring`; and Finset.sum_add_distrib wants the per-term identity proved FIRST via
+sum_congr rather than rewritten in place.
+STATUS: PROVED for one-, two- and three-speed substitutions on {1,...,13}. NOT proved for
+four or more -- though the method survives to six, so k = 4, 5, 6 are reachable by the
+same chain at higher enumeration cost -- nor for families far from {1,...,13}. 'Exactly
+two tight families overall' remains open and I am not claiming it.
+FILES: THM-1155, THM-1120 amended, Lean, 2 scripts + out, HYP-7640. opus; S380.
 
 ---
 
