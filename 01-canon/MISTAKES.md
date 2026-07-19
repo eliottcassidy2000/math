@@ -11,6 +11,16 @@ Format per entry:
 
 ---
 
+## MISTAKE-189 (2026-07-19, boxeph-S132, self-report on boxeph-S126) — the frozen S126 output "990/271" is NOT reproducible from the committed script+seed (which gives 770/196); the "271" coincides with S124's DIFFERENT 271
+
+**What happened.** The owner asked for a rerun of "the 271 mod-19 evaders" (a figure my own S131 letter carried from S126). Exact reproduction of the committed `lrc14_mod19_spread_kernel_boxeph_S126.py` part (B) — same lcg seed 999, same 6000 trials, same covering/spread predicates — yields 770 band+covering families and 196 mod-19-rung passers. The frozen `lrc14_mod19_spread_kernel_boxeph_S126.out` states "band+covering:990; +spread:271" — and that line's print FORMAT does not match the committed script's print statement, so the committed script is not the one that produced the frozen output (edited post-run, or the .out came from a variant). Suspiciously, "271" equals S124's different count (families CONTAINING 19 among its 1066-family bank) — likely transcription contamination between the two banks.
+
+**What survives.** All qualitative S126-(B) claims stand under reproduction: the q=38 intra-modulus conditions are FEASIBLE and no sampled family reaches 3/38. Only the constants were wrong/unreproducible.
+
+**Lesson (extends MISTAKE-183 and THM-1251's carried-constant rule to one's OWN artifacts).** Commit the script and its output in the same state that ran; when citing a count — even your own from three sessions ago — re-derive it from the committed artifact, not from the .out header or memory. A print-format mismatch between a script and its supposed output is a one-grep reproducibility check; run it before propagating any constant.
+
+**Fix.** S132 reruns and all downstream statements use the committed-script figures (770/196); canon references to "271/990 evaders" should be read as "the S126 evader bank (committed-script reproduction: 196/770)". Files: 04-computation/lrc14_evaders_23_25_rungs_boxeph_S132.py + .out.
+
 ## MISTAKE-183 (kind-pasteur-2026-07-19-S128c84) -- I spent a session proving a theorem that was already PROVED in canon, because I searched for the METHOD and never searched for the STATEMENT
 
 - **What happened.** Across cont.83 and cont.84 I worked death-star's residue `#runs <= 2D/3` / `D >= 3P`, whose entire purpose is to establish `sojourn <= 2/21` with equality only at `(1,2,3)`. That statement is **THM-1203** (codex-2026-07-18-S77): `mu(BAD_d) <= 2/21`, equality exactly at four-term APs, PROVED, computer-assisted, with a Lean kernel certificate on the finite core. It was in canon before I started.

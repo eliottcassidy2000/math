@@ -1,0 +1,47 @@
+========================================================================================
+EXHAUSTIVE IN-BAND RUNG CENSUS: {3,35} <= C <= [3,35], covering, all 5 rungs
+========================================================================================
+duty-complete leaves inside rung-consistent branches: 736075
+(NB: NOT the full covering count -- the rung prune runs first. True covering total
+ ~= 12.8%% of C(31,10)=44,352,165 ~= 5.7M by sampling; survivor share ~= 0.45%% of covering.)
+FULL-STACK SURVIVORS (COMPLETE list -- prune is monotone-sound): 25855
+
+blocker census:
+  (17, 19, 23, 25)        : 7422
+  (19, 23, 25)            : 6459
+  (13, 19, 23, 25)        : 4438
+  (13, 17, 19, 23, 25)    : 2268
+  (17, 23, 25)            : 2250
+  (13, 17, 23, 25)        : 1504
+  (17, 19, 25)            : 431
+  (23, 25)                : 310
+  (19, 25)                : 185
+  (13, 17, 19, 23)        : 99
+  (13, 23, 25)            : 76
+  (13, 17, 19, 25)        : 67
+  (17, 25)                : 66
+  (17, 19, 23)            : 60
+  (19, 23)                : 54
+  (13, 19, 23)            : 51
+  (13, 19, 25)            : 48
+  (13, 17, 23)            : 30
+  (17, 23)                : 26
+  (13, 17, 25)            : 7
+  (23,)                   : 4
+
+cheapest-needle spectrum (q: count): {14: 7821, 15: 5904, 16: 4555, 18: 27, 20: 3034, 21: 3490, 22: 411, 24: 73, 26: 34, 27: 133, 28: 143, 29: 63, 30: 56, 31: 83, 32: 12, 33: 12, 34: 3, 37: 1}
+
+MIN M over all survivors: 3/29 = 0.1034  (vs 3/38 = 0.0789; ratio 1.31x)
+5 lowest-M survivors:
+  M=3/29=0.1034  maximizer q=29  cheapest needle q=21  C=(3, 4, 5, 11, 15, 19, 20, 23, 24, 25, 27, 35)
+  M=3/29=0.1034  maximizer q=29  cheapest needle q=21  C=(3, 4, 5, 15, 19, 20, 22, 23, 24, 25, 27, 35)
+  M=3/29=0.1034  maximizer q=29  cheapest needle q=29  C=(3, 8, 9, 11, 15, 17, 20, 23, 24, 25, 26, 35)
+  M=3/29=0.1034  maximizer q=29  cheapest needle q=29  C=(3, 8, 9, 15, 20, 21, 22, 23, 24, 25, 26, 35)
+  M=5/48=0.1042  maximizer q=48  cheapest needle q=21  C=(3, 8, 9, 10, 11, 13, 19, 23, 24, 29, 32, 35)
+
+THEOREM (finite check, this run): every 12-set C with {3,35} in C subset [3,35],
+covering{2..12}, passing all five bounded spread rungs, has M(C) >= 3/29.
+The q=38 in-band certificate residual is NONEMPTY but UNIFORMLY LOOSE:
+the blocking budget forces every survivor far above the 3/38 target.
+
+DONE.

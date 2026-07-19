@@ -1,0 +1,55 @@
+========================================================================================
+S126 BANK REPRODUCTION (seed 999, 6000 trials) + 23/25 RUNGS   [boxeph-S132]
+========================================================================================
+S126 bank: band+covering families: 770; pass mod-19 rung (evaders): 196
+  evaders at p=13: blocked=  69  spread=  80  KILLED=  47  (kill 24.0%)
+  evaders at p=17: blocked=  87  spread=  26  KILLED=  83  (kill 42.3%)
+  evaders at p=23: blocked=  39  spread=   0  KILLED= 157  (kill 80.1%)
+  evaders at p=25: blocked=  45  spread=   2  KILLED= 149  (kill 76.0%)
+  evaders KILLED by 23-or-25 rung: 189/196 (96.4%)
+  evaders killed by ANY of 13/17/23/25: 195/196 (99.5%)
+  FULL-STACK SURVIVORS (pass all five rungs): 1/770 of bank (0.13%)
+  P(23-spread | no 23-mult, band+covering) = 0/583 = 0.0000  [uniform-slot: 1/1191 = 0.00084]
+
+--- survivor census (S126 bank): blockers carried + exact M + cheapest needle ---
+  blockers (19, 23, 25)        : 1
+  cheapest-needle spectrum (q: count): {14: 1}
+  lowest-M survivors (closest to 3/38=0.0789):
+    M=5/27=0.1852  maximizer q=27  cheapest needle q=14  C=(3, 4, 10, 11, 12, 18, 19, 23, 24, 25, 31, 35)
+
+========================================================================================
+FRESH SAMPLE (seed 424242, 60000 trials) -- statistics at scale
+========================================================================================
+fresh bank: band+covering families: 7713; pass mod-19 rung (evaders): 1938
+  evaders at p=13: blocked= 729  spread= 749  KILLED= 460  (kill 23.7%)
+  evaders at p=17: blocked= 840  spread= 280  KILLED= 818  (kill 42.2%)
+  evaders at p=23: blocked= 433  spread=   6  KILLED=1499  (kill 77.3%)
+  evaders at p=25: blocked= 373  spread=   4  KILLED=1561  (kill 80.5%)
+  evaders KILLED by 23-or-25 rung: 1856/1938 (95.8%)
+  evaders killed by ANY of 13/17/23/25: 1900/1938 (98.0%)
+  FULL-STACK SURVIVORS (pass all five rungs): 38/7713 of bank (0.49%)
+  P(23-spread | no 23-mult, band+covering) = 13/5884 = 0.0022  [uniform-slot: 1/1191 = 0.00084]
+  fresh-bank survivor blocker census (top 6):
+    blockers (17, 19, 23, 25)    : 13
+    blockers (19, 23, 25)        : 12
+    blockers (17, 23, 25)        : 4
+    blockers (13, 19, 23, 25)    : 3
+    blockers (13, 17, 19, 23, 25): 3
+    blockers (17, 19, 25)        : 1
+
+========================================================================================
+STRUCTURAL: the bounded-rung stack CANNOT close the band (explicit family)
+========================================================================================
+X = [3, 9, 10, 11, 13, 17, 19, 23, 24, 25, 33, 35]
+  band[3,35] + straddle: True ; covering{2..12}: True
+  rung p=13: blk
+  rung p=17: blk
+  rung p=19: blk
+  rung p=23: blk
+  rung p=25: blk
+  exact M(X) = 5/29 = 0.1724  (maximizer q=29; cheapest needle q=15)
+  => X passes band + covering + ALL five spread rungs, yet M(X) != 3/38:
+     killed only CROSS-MODULUS. The in-band certificate residual is NONEMPTY;
+     medium-needle arguments remain NECESSARY after the full bounded-rung stack.
+
+DONE.

@@ -714,3 +714,4 @@ import TournamentH7.LRCCarrier45BVNeedle  -- codex / THM-1265: exact 23-row BV d
 import TournamentH7.LRCClosestReturnLeafPaidStar  -- codex / THM-1266: closest returns give a 6/5 leaf rank and disjoint packet packing; repeated low owners are six slots apart, so consecutive-address stars have at most five sharp rungs. Exact c=140 tail cell included. No sorry/native_decide
 import TournamentH7.LRCCenteredSurvivorProtrusion  -- codex / THM-1267: the slowest centered safe-component survivor lies in one endpoint tail; exact six-bin and separated-load arithmetic forces 270*d1 <= 563*c-1. No sorry/native_decide
 import TournamentH7.LRCAPCentering  -- boxeph-S118 / THM-1171 companion: kernel-pure centered-band arithmetic for the twelve-term AP witness. Together with the elementary modular inverse/common-phase proof, closes AP-internal tight rigidity; AP extraction from an arbitrary tight twelve-set remains open. Standard axiom trio
+import TournamentH7.LRCMod23Spread
