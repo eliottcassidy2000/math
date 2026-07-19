@@ -1,0 +1,24 @@
+THM-1272 FASTEST-FLOOD PREFIX-CHAMBER CLOSURE EXACT REFEREE
+optimization_safe_assert_count=0
+pbar_count_chamber_rows=231 counts=2..232
+prefix_state_counts=(1, 8, 84, 872, 9040)
+named_prefix_maximum_checks=10
+e0_bound=h/c<563/45 chain=45*h<=270*d1<=563*c-1<563*c
+basic_branch=e1 closes_at_x>42 B=3 Q=7/36 cross_margin=1/24 word=(2,)
+basic_branch=e2 closes_at_x>=1407/20 B=3 Q=7/18 cross_margin=0 word=(2, 2)
+basic_branch=e3 closes_at_x>=1078/5 B=7 Q=61/108 cross_margin=29/216 word=(2, 4, 5)
+basic_branch=e4 closes_at_x>=1323/2 B=18 Q=112571/158004 cross_margin=11503/5016 word=(2, 4, 5, 31)
+basic_branch=e5 closes_at_x>=959 B=22 Q=9882995/11534292 cross_margin=1185455/411939 word=(2, 4, 5, 31, 95)
+functional_e5=x>=798 closes; first_chamber_sum=114 Q=2847097/3276540 B=89 cross_margin=1921973/1310616 word=(2, 4, 4, 25, 79)
+functional_e5_chambers=221 range_s=114..334
+high_ratio_consequence=h>=7*d5/2 implies h/c<798
+TOURNAMENT_LOSS_AUDIT
+vertices=prefix tooth-count chambers, not runners or individual arcs
+observable=q(m_i)-q(m_j); gauge=count order then chronological speed order
+score_histogram=transitive after tie gauge; directed_cycles=0; SCCs=singletons
+hamiltonian_path_count=1 after tie gauge
+preserves=prefix component feasibility, one-body load budget, and count jumps
+destroys=phases, tooth addresses, flood/turn locations, and seam geometry
+challenged_assumption=the faithful vertices are obligations, not runners
+SCOPE=closes a top-dominated projective tail, not all six-comb covers or LRC(14)
+RESULT=PASS
