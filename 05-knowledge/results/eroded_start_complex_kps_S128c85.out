@@ -1,0 +1,69 @@
+==============================================================================
+(a) THE CORE ATLAS: S(P) for all 495 eight-speed cores P in {1,...,12}
+==============================================================================
+  min |S(P)| over all cores : 31807/194040 = 0.163920   at P = (1, 2, 3, 5, 7, 8, 9, 11)
+     (the constant quoted in THM-1162 as '0.164 <= |S(P)|')
+  max |S(P)|                : 61/168 = 0.363095
+  component count N(P)      : min 14 (at (1, 2, 3, 4, 5, 6, 11, 12)), max 26 (at (2, 3, 4, 6, 8, 9, 10, 12))
+  LONGEST component         : min over cores 1/70 = 0.014286 at (1, 2, 6, 7, 8, 9, 10, 11)
+                              max over cores 29/420 = 0.069048
+  -> if the longest component is <= w, E_w(P) is EMPTY: hard obstruction at
+     w >= 1/70, i.e. k1 <= 6/(7w) = 60.00
+
+==============================================================================
+(c)(d) CRITICAL WIDTH  w*(P) = largest w with |E_w(P)| > 2/21, and K* = 6/(7w*)
+==============================================================================
+  BOTTLENECK core P* = (1, 2, 3, 5, 7, 8, 9, 11)
+     |S(P*)|            = 31807/194040 = 0.163920
+     N(P*)              = 18 components
+     w*(P*)             = 89/21168 = 0.00420446
+     K* = 6/(7 w*)      = 203.865
+
+  the five tightest cores:
+     P = (1, 2, 3, 5, 7, 8, 9, 11)        w* = 89/21168       K* =   203.87  N = 18  |S| = 0.16392
+     P = (1, 2, 7, 8, 9, 10, 11, 12)      w* = 3023/698544    K* =   198.07  N = 24  |S| = 0.19218
+     P = (1, 3, 7, 8, 9, 10, 11, 12)      w* = 6763/1552320   K* =   196.74  N = 22  |S| = 0.18226
+     P = (1, 2, 5, 6, 7, 8, 9, 11)        w* = 1039/232848    K* =   192.09  N = 20  |S| = 0.17041
+     P = (1, 2, 6, 7, 8, 9, 10, 11)       w* = 14387/3104640  K* =   184.97  N = 22  |S| = 0.18837
+
+  the five loosest cores:
+     P = (2, 3, 4, 5, 6, 10, 11, 12)      w* = 31/1386        K* =    38.32  N = 16  |S| = 0.33485
+     P = (1, 2, 3, 4, 5, 6, 10, 12)       w* = 1/42           K* =    36.00  N = 18  |S| = 0.35952
+     P = (1, 2, 3, 4, 6, 7, 11, 12)       w* = 233/9702       K* =    35.69  N = 16  |S| = 0.30690
+     P = (3, 4, 5, 6, 7, 8, 10, 12)       w* = 29/1176        K* =    34.76  N = 22  |S| = 0.31378
+     P = (3, 4, 5, 6, 7, 8, 9, 10)        w* = 43/1680        K* =    33.49  N = 20  |S| = 0.26893
+
+==============================================================================
+(e) HOW MUCH OF THE RANGE DOES THIS CLOSE?
+==============================================================================
+  UNIFORM MEASURE BOUND: for k1 > K* = 203.865, every core P has
+     |E_w(P)| > 2/21, so a complete k1-gap survives inside S(P) outside the
+     bad set -- supplier (3) holds, uniformly over all 495 cores.
+
+  clustered-regime floor  : k1 > 13*max(P) >= 13*12 = 156
+  so the FINITE RESIDUE is : 156 < k1 <= 203   (47 values of k1)
+  per-core residue is smaller: the floor is 13*max(P), so a core with
+  max(P) = 12 needs k1 > 156, but a core with smaller max needs less.
+
+==============================================================================
+(f) HOW MUCH DOES THE EXACT EROSION GAIN OVER THE CRUDE |S| - N*w BOUND?
+==============================================================================
+  at the bottleneck core P* = (1, 2, 3, 5, 7, 8, 9, 11):
+     crude  w = (|S| - 2/21)/N = 13327/3492720 = 0.00381565  -> K_crude = 224.64
+     exact  w*                = 89/21168 = 0.00420446  -> K*      = 203.87
+     exact/crude width ratio  = 1.1019  (K* is 0.91x SMALLER than crude)
+
+  component-length profile of the bottleneck core (top 12, exact):
+     12/539           = 0.02226345
+     12/539           = 0.02226345
+     2/147            = 0.01360544
+     2/147            = 0.01360544
+     1/77             = 0.01298701
+     1/77             = 0.01298701
+     11/1008          = 0.01091270
+     11/1008          = 0.01091270
+     9/1232           = 0.00730519
+     9/1232           = 0.00730519
+     4/693            = 0.00577201
+     4/693            = 0.00577201
+     ... 18 components total; 6 of them shorter than w*

@@ -1,0 +1,25 @@
+==============================================================================
+DIRECT DECISION OF THE UNDECIDED RESIDUE PAIRS
+  criterion: is  S(P) minus the four killer combs  non-empty?
+  killer triples (k2,k3,k4) enumerated in (k1, 235]
+==============================================================================
+  P=(1, 2, 3, 7, 8, 10, 11, 12)    k1=160   triples tested 16882    EMPTY-safe-set triples: 0
+  P=(1, 2, 3, 5, 7, 8, 9, 11)      k1=153   triples tested 17712    EMPTY-safe-set triples: 0
+  P=(1, 2, 3, 5, 7, 8, 9, 11)      k1=144   triples tested 17355    EMPTY-safe-set triples: 0
+  P=(1, 2, 3, 5, 7, 8, 9, 11)      k1=160   triples tested 16882    EMPTY-safe-set triples: 0
+  P=(1, 2, 3, 5, 7, 8, 9, 11)      k1=175   triples tested 17110    EMPTY-safe-set triples: 0
+  P=(1, 2, 7, 8, 9, 10, 11, 12)    k1=157   triples tested 19019    EMPTY-safe-set triples: 0
+  P=(1, 3, 7, 8, 9, 10, 11, 12)    k1=157   triples tested 19019    EMPTY-safe-set triples: 0
+  P=(1, 2, 5, 6, 7, 8, 9, 11)      k1=144   triples tested 17355    EMPTY-safe-set triples: 0
+  P=(1, 2, 6, 7, 8, 9, 10, 11)     k1=144   triples tested 17355    EMPTY-safe-set triples: 0
+
+==============================================================================
+VERDICT
+==============================================================================
+  Every undecided residue pair tested keeps a NON-EMPTY safe set for every
+  killer triple in range.  So the residue pairs are NOT obstructions: the
+  COUNTING ARGUMENT was too lossy, not the geometry.  Supplier (3) is fine
+  on the residue; what fails there is only the measure proof of it.
+
+  That relocates the remaining work: a sharper argument on 456 pairs, not
+  a search for a counterexample.

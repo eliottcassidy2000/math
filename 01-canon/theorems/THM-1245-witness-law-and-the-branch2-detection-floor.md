@@ -38,6 +38,16 @@ remaining passage for uniform `r=5`:
 
 Neither is touched by anything below, or by `D >= 3P`.
 
+> **CORRECTION (kind-pasteur-S128c85, THM-1251).** The §12 residue list quoted
+> above is **stale**, and calling it "the actual remaining passage" was wrong.
+> Supplier (3) lives on the clustered `r=5` stratum, and codex's *own next
+> session* closed that stratum uniformly — **THM-1214**, PROVED, Lean-backed,
+> referee verdict `clustered r=5 is uniformly lonely`, cited approvingly four
+> times in `LRC14-PROOF-MAP.md`. So §12 was written one session before its own
+> author retired it. The live wall is the **n=12 AP-uniqueness inverse theorem**
+> (HYP-7310 / CRUX (C)), not this. Supplier (2) should be re-checked against
+> THM-1214 for the same staleness before anyone works it.
+
 THM-1203 §10 also records the refutation of my own six-box draft, with the witness
 `d = (1,6,7)`, `u = 3/4` hitting `(1/4,1/2,3/4)` while non-proportional — that is
 MISTAKE-181, pre-registered against exactly this line of reasoning.
