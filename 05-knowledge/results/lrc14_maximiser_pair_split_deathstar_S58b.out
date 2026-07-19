@@ -1,0 +1,4 @@
+components 1..20, primitive:
+  1-mirror-pair (<=2 runs): MAX sojourn = 2/21=0.095238 at (1, 2, 3)  (=2/21 & equality is 123-orbit: True)
+  >=2-mirror-pairs (>=4 runs): MAX sojourn = 4/105=0.038095 at (1, 9, 10)   (< 2/21: True, gap 0.0571)
+  directions with a 1/21-length run: 6 ; ALL are (1,2,3)-orbit: True
