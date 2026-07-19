@@ -1,6 +1,9 @@
-boundary compact family [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24]:
-  covering=True  rho=12/11=1.09
-  M(core)=1/12  M(V)=1/13  (=1/13 EXACTLY => the bound is SHARP)
-
-descent LB = rho*M(core)/(rho+1) ~ M(core)/2 at rho~1 << actual M ~ M(core) => descent too weak.
-compact rho<13 => M>=1/13 is equivalent to LRC(14) (open); dilated-AP-core sub-case = THM-1013.
+CORRECTED S113 SINGLE-ROW AUDIT
+V=(2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24)
+primitive=True Cover14=True rho=12/11
+M(V)=1/13
+delete maximum 24: M=1/12, descent bound=1/23<1/13
+delete 13: core=2*[12], M=1/13
+scope=one exact boundary row; no 100-row/5-of-15 bank is stored
+logic=compact 1/13 floor is sufficient for LRC14, not proved equivalent
+remaining=tight-deletion extraction (crown collapse) + n=12 equality rigidity

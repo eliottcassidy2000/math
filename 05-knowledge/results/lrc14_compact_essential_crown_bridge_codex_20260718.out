@@ -1,0 +1,54 @@
+COMPACT STRICT-COVER / ESSENTIAL-CROWN EXACT AUDIT
+V0 (the exact all-loose crown):
+  values=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19, 104)
+  primitive=True compact_rho=104/19 cover13=True cover14=False
+  M=8/105 owner=(8, 105, 8); threshold=1/13
+  deleted_cores=13 tight_deleted_cores=0 positive_private_owners=13
+  minimum_deleted_core_M=2/25
+  private_mass=316140497/756575820
+  weighted_triple_excess=316140497/756575820
+  sum_Lipschitz_component_floors=352684666109/30512702820600
+  private_mass_over_floor_sum=36.151121580289
+  multiplicity_histogram=((1, Fraction(316140497, 756575820)), (2, Fraction(845789, 2401828)), (3, Fraction(31341028, 189143955)), (4, Fraction(223, 5460)), (5, Fraction(1, 364)), (6, Fraction(1, 468)), (7, Fraction(97, 30420)), (8, Fraction(1, 715)), (9, Fraction(1, 858)), (10, Fraction(5, 1326)), (11, Fraction(4, 4199)), (12, Fraction(85, 12844)), (13, Fraction(1, 676)))
+  owner rows: v, M(V\v), owner(a,q,val), Lipschitz floor, longest private chamber, tooth width
+    (1, Fraction(1, 7), (1, 14, 2), Fraction(3, 2366), Fraction(11, 1352), Fraction(2, 13))
+    (2, Fraction(1, 7), (27, 56, 8), Fraction(3, 2366), Fraction(11, 1352), Fraction(1, 13))
+    (3, Fraction(3, 28), (9, 28, 3), Fraction(11, 18928), Fraction(11, 2223), Fraction(2, 39))
+    (5, Fraction(1, 9), (7, 18, 2), Fraction(1, 1521), Fraction(47, 6760), Fraction(2, 65))
+    (7, Fraction(3, 20), (3, 20, 3), Fraction(19, 13520), Fraction(11, 1352), Fraction(2, 91))
+    (8, Fraction(13, 109), (41, 109, 13), Fraction(15, 18421), Fraction(11, 1352), Fraction(1, 52))
+    (9, Fraction(3, 22), (5, 22, 3), Fraction(17, 14872), Fraction(11, 1352), Fraction(2, 117))
+    (10, Fraction(1, 10), (1, 10, 1), Fraction(3, 6760), Fraction(11, 1352), Fraction(1, 65))
+    (11, Fraction(4, 37), (10, 37, 4), Fraction(15, 25012), Fraction(95, 12168), Fraction(2, 143))
+    (12, Fraction(1, 6), (1, 6, 1), Fraction(7, 4056), Fraction(89, 11492), Fraction(1, 78))
+    (17, Fraction(2, 17), (4, 17, 2), Fraction(9, 11492), Fraction(11, 1352), Fraction(2, 221))
+    (19, Fraction(2, 19), (3, 19, 2), Fraction(7, 12844), Fraction(23, 4056), Fraction(2, 247))
+    (104, Fraction(2, 25), (6, 25, 2), Fraction(2, 6175), Fraction(1, 1768), Fraction(1, 676))
+V0 -> V1 cross-modulus lift:
+  replace 7 by 112=7+105; residues_at_8/105_equal=True
+  V1 primitive=True compact_rho=14/13 cover14=True
+  V1 M=3/20 owner=(3, 20, 3); the strict 1/13 crown disappears
+  all compact 14-carrier lifts 112+210k, k=0..5: ((112, Fraction(14, 13), Fraction(3, 20), (3, 20, 3)), (322, Fraction(161, 52), Fraction(3, 20), (3, 20, 3)), (532, Fraction(133, 26), Fraction(3, 20), (3, 20, 3)), (742, Fraction(371, 52), Fraction(3, 20), (3, 20, 3)), (952, Fraction(119, 13), Fraction(3, 20), (3, 20, 3)), (1162, Fraction(581, 52), Fraction(3, 20), (3, 20, 3)))
+Farey-toothpick AP-core blocker:
+  brute_force_nonzero_residue_rows=6015 scales=1..30
+  symbolic count: Q>=2 has b(Q)=1+2*floor((Q-1)/13) < 12Q/13
+  conclusion: M(d*[12] union {v})<1/13 implies 13d divides v
+  primitive + Cover14 then d=1 and 182 divides v; rho>=182/12>13
+Sharp-boundary single-substitution hard test:
+  legal primitive Cover14 compact rows (added<=500)=2748
+  rows with no q<=200 witness above 1/13=11
+  exact survivors=((13, 39, Fraction(1, 13), (1, 26, 2)), (13, 65, Fraction(1, 13), (1, 26, 2)), (13, 91, Fraction(1, 13), (1, 26, 2)), (13, 117, Fraction(1, 13), (1, 26, 2)), (13, 143, Fraction(1, 13), (1, 26, 2)), (13, 169, Fraction(1, 13), (1, 26, 2)), (13, 195, Fraction(1, 13), (1, 26, 2)), (13, 221, Fraction(1, 13), (1, 26, 2)), (13, 247, Fraction(1, 13), (1, 26, 2)), (13, 273, Fraction(1, 13), (1, 26, 2)), (13, 299, Fraction(1, 13), (1, 26, 2)))
+  every survivor is equality with the same regenerated core 2*[12]; below-threshold rows=0
+Lower-n counterexamples to a purely topological tight-deletion lemma:
+  n=3 V=(1, 3, 4) M=2/7 owner=(3, 7, 2) min_deleted_M=2/5 cover_2_to_4=True compact=True
+  n=4 V=(1, 3, 4, 5) M=2/9 owner=(4, 9, 2) min_deleted_M=2/7 cover_2_to_5=True compact=True
+  n=5 V=(1, 4, 5, 6, 7) M=2/11 owner=(4, 11, 2) min_deleted_M=2/9 cover_2_to_6=True compact=True
+  n=6 V=(1, 2, 5, 6, 7, 8) M=2/13 owner=(3, 13, 2) min_deleted_M=1/5 cover_2_to_7=True compact=True
+  n=7 V=(1, 4, 5, 6, 7, 11, 16) M=2/15 owner=(7, 15, 2) min_deleted_M=2/13 cover_2_to_8=True compact=True
+Alternate carrier / tournament audit:
+  vertices=private_stalks count=94
+  observable=cyclic midpoint order after cut at 0; tie path=(midpoint,owner)
+  tournament=transitive score_histogram_size=94 directed_3_cycles=0 SCCs=94 Hamiltonian_paths=1
+  destroys=tooth labels, simultaneous >=3 overlap, Cover14 lift compatibility
+  faithful carrier=sheet/event word + private-stalk/triple-overlap chamber complex + owner-lift sidecar
+ALL EXACT CHECKS PASS

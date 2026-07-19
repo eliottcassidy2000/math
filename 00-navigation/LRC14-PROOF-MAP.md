@@ -1,5 +1,44 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-18 S74 CURRENT FRONTIER (supersedes equivalence claims below)
+>
+> Global LRC(14), uniform `r=5`, uniform `r=6`, n=12 equality rigidity, and
+> crown collapse remain open.  The compact `1/13` floor is a stronger
+> sufficient target than LRC(14)'s `1/14` conclusion; it is not known
+> equivalent.  The n=12 equality probe classifies a deletion only after a
+> separate tight-deletion extraction.  See THM-1099, THM-1149, and
+> MISTAKE-170.
+>
+> **Four-comb `r=5`:** THM-1133 closes offset span at most 30.  THM-1148 adds
+> the sharp four-residue multiplier cone, exact `Q4>0` separated-ratio gate,
+> and corrected THM-1137 `Phi` transfer with adjacent ratio `9/5`.  The old
+> `7/6` recursion and `4/3` actual-mean lemma are false.  The first infinite
+> method residual is `m(3,4,5,6)`, `m>=53`.
+>
+> **Twelve-speed equality:** THM-1143 identifies the all-height shallow
+> object as a labelled mechanical `A_12` ballot word.  THM-1150 proves its
+> exact local lowering drift and central owner-stalk obstruction and checks
+> all `4^12` height-three rows.  PEHD13 remains open and would close only
+> shallow winding; deep `s>=2` remains separate.
+>
+> **Compact strict `1/13` route:** THM-1149 proves
+>
+> ```text
+> strict row => tight deletion OR all-loose essential crown.
+> ```
+>
+> A classified tight deletion `d[12]` is then impossible under primitivity,
+> a 14-carrier, and `rho<13`: Farey regeneration forces `13d|v`, and the
+> final divisibility/ratio contradiction is kernel-checked in
+> `LRCCompactEssentialCrown.lean`.  The remaining suppliers are (i) Cover14
+> crown collapse and (ii) the shallow/deep n=12 equality classification.
+>
+> **Faithful objects:** residue-gap words with metric slopes for four combs;
+> moving two-sheet needles plus oriented private stalks for shallow descent;
+> private/`>=3` overlap chambers plus shared integer-lift congruences for
+> compact crowns.  Runner-order tournaments are transitive telemetry and
+> lose the target predicates.
+
 > ## 2026-07-16 RESONANT-PEEL CHECKPOINT (codex-S17)
 >
 > `THM-891` proves the exact fixed owner-resonant limit and closes five of six residue

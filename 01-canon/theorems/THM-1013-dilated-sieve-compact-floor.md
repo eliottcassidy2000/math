@@ -1,65 +1,77 @@
-# THM-1013 — The dilated-AP sieve: the missing witness for the compact minimizers, and the LRC(14) reduction map (boxeph-2026-07-18-S86)
+---
+id: THM-1013
+title: Dilated empty-circle sieve
+status: PROVED and kernel-formalized under its explicit distance-from-ndZ hypothesis; historical claims that it covers every dilated-AP-core compact family are CORRECTED
+source: boxeph-2026-07-18-S86, scope corrected by codex-2026-07-18-S74
+related: [THM-1099, THM-1149, MISTAKE-170]
+lean: 04-computation/lean/TournamentH7/TournamentH7/LRCDilatedSieve.lean
+---
 
-**Status:** the **dilated-AP sieve is PROVED and FORMALIZED kernel-pure**
-(`TournamentH7/LRCDilatedSieve.lean`, `LonelyRunner.dilated_sieve` + `dilated_sieve_lonely14`,
-axioms `[propext, Classical.choice, Quot.sound]`, no `sorry`; corpus-registered). It discharges
-the **compact minimizer stratum** of the LRC(14) covering case (all 82/82 compact covering
-families at the floor `M=1/13` — the ones that defeated every S82–S85 perturbation tool). The
-**full compact floor** `compact ⟹ M ≥ 1/13` remains the conjecture ([[HYP-7355]]); this closes
-its binding/equality case. Verified `lrc_dilated_sieve_boxeph_S86.py`.
+# THM-1013 -- the dilated empty-circle sieve
 
-## The dilated-AP sieve (PROVED)
+> **Theorem.**  Fix positive integers `n,d`.  If every speed `v_i` satisfies
+>
+> ```text
+> |v_i-ndm|>=d for every integer m,                       (1)
+> ```
+>
+> then `t=1/(nd)` is `1/n`-lonely.
 
-> **Theorem.** Fix `n, d ≥ 1`. If every speed lies at distance `≥ d` from the lattice `n·d·ℤ`
-> (`|v_i − n·d·m| ≥ d` for all `i` and all integers `m`), then `t = 1/(n·d)` is `1/n`-lonely.
+**Proof.**  For each speed, choose the nearest integer `m` to `v_i/(nd)`.
+Then
 
-**Proof.** `‖v_i · t‖ = |v_i/(n·d) − m| = |v_i − n·d·m|/(n·d) ≥ d/(n·d) = 1/n`. ∎ (One division
-inequality — the dilated generalization of the empty-circle sieve `sieve_frac`, whose `d=1`,
-`Q=n` special case it recovers.)
+```text
+||v_i/(nd)||=|v_i-ndm|/(nd)>=d/(nd)=1/n.                (2)
+```
 
-**Corollary (n=13).** If every speed is `≥ d` from `13d·ℤ`, then `M(V) ≥ 1/13 > 1/14`.
+∎
 
-## Why this is the witness the minimizers were missing
+The theorem is formalized by `LonelyRunner.dilated_sieve` and
+`dilated_sieve_lonely14` in `LRCDilatedSieve.lean`; the public axiom footprint
+is `[propext, Classical.choice, Quot.sound]`, with no `sorry`.
 
-The conjectured compact minimizers are `d·{1,…,12} ∪ {killer}` (extremal `2·{1..12}∪{13}`,
-`M=1/13`). At their dilation `d`, the AP part `d·i` lands on `i/13` (distance `d·min(i,13−i) ≥ d`
-from `13d·ℤ`) and the killer sits in the safe band — so the band condition holds and `t=1/(13d)`
-certifies `M ≥ 1/13`. These are **exactly** the families that defeat fill-1 ([[THM-1003-fill1-perturbation-base-case]]),
-far-element descent + sharp recursion ([[THM-1008-lrc13-descent-floor]], [[THM-1010-sharp-descent-recursion]]),
-best-removal, the ordinary sieve, and the measure bound (S85, MISTAKE-160): their loneliness lives
-in a *dilated-AP substructure*, invisible to single-runner perturbation but caught in one line by
-the dilated sieve. **Coverage (exact):** every compact covering family with `M ≤ 1/13` (the whole
-binding stratum) is certified.
+For `n=13`, (1) says every speed lies at distance at least `d` from
+`13d Z`, and (2) gives `M>=1/13`.
 
-## The complete LRC(14) reduction map (this session's synthesis)
+## Correct scope for an AP deletion core
 
-LRC(14) ⟺ every 13 distinct positive-integer speeds have `M ≥ 1/14`. Reduction:
+Every member of the core
 
-1. **Non-covering** (misses some `q ≤ 14`) ⟹ `M ≥ 1/q ≥ 1/14` — **PROVED** (sieve-margin, kps IX =
-   the empty-circle case; `sieve_frac` in Lean). Sharper: `M < 1/13 ⟹ covers all of {2,…,13}`.
-2. **Covering** (covers 2..14) ⟹ split by outlier count:
-   - **≥2 far outliers** ⟹ `M ≥ 1/13` — **PROVED** ([[THM-726]]).
-   - **exactly 1 killer** ⟹ `M ≥ 14/183` (deep well, unique global covering-min) — **PROVED**
-     ([[THM-724]]).
-   - **0 far outliers = compact** (`ρ = v_max/v_2nd < 13`) ⟹ `M ≥ 1/13` — **the sole residual**
-     ([[HYP-7355]], 16k-family hunt, min `1/13` at `2·{1..12}∪{13}`).
+```text
+d{1,...,12}
+```
 
-So **LRC(14) reduces to the single statement `compact covering ⟹ M ≥ 1/13`**, and its binding
-stratum (the `M=1/13` minimizers) is now PROVED by the dilated sieve. What remains is the strict
-part: **a compact covering family with no dilated-AP substructure has `M > 1/13`** — i.e. the
-n=12/13 near-tightness rigidity (klein's Hamming-radius theorems, HYP-7310). Equivalently:
-`M < 1/13 ⟹ ρ ≥ 13` — every family below `1/13` covers `13` via a *far* multiple (`≥ 169 = 13²`,
-verified), which is exactly the deep-well/single-killer regime already closed by THM-724.
+satisfies (1), but an additional speed need not.  Therefore the implication
 
-## Significance
+```text
+“contains a dilated twelve-term AP deletion”
+  => “THM-1013 supplies a 1/13 witness”
+```
 
-- Supplies the **one witness** the compact minimizers were missing, closing the equality case of
-  the last LRC(14) residual by an elementary, kernel-pure sieve.
-- Corrects and sharpens the floor picture (see MISTAKE-160): covering-min `= 14/183` (global),
-  `1/13` (compact, binding case proved), NOT `1/9`.
-- Completes the **sieve/witness family** for LRC(14): empty-circle (`sieve_frac`), fill-1
-  (`fill1_perturbation`), far-element descent (`descent_general`), and now dilated-AP
-  (`dilated_sieve`) — every elementary route is one explicit rational time.
+is false without a separate condition on the extra speed.  The elementary
+example `[12] union {13}` already shows the issue: the extra speed lies on
+`13Z`, and the full set has value `1/14`, not `1/13`.
 
-Related: [[THM-724]], [[THM-726]], [[HYP-7355]], [[THM-1010-sharp-descent-recursion]],
-[[THM-995-trapped-cut-excludes-tight-locus]], MISTAKE-160, HYP-7358.
+The historical S86/S113 prose promoted the conditional sieve to a statement
+about all dilated-AP-core compact rows and then used that promotion in an
+alleged LRC14 equivalence.  Those claims are withdrawn; the kernel theorem
+itself is unchanged.
+
+THM-1149 supplies the correct strict-cover statement:
+
+```text
+M(d[12] union {v})<1/13  =>  13d divides v.              (3)
+```
+
+Thus, after a tight AP deletion has been extracted, primitivity, one
+14-carrier, and `rho<13` give a contradiction.  THM-1013 remains the direct
+witness whenever the explicit distance hypothesis (1) holds; THM-1149
+handles the complementary regeneration logic.  Neither theorem extracts a
+tight deletion, proves the twelve-speed equality classification, or proves
+LRC(14).
+
+## Methodological lesson
+
+The correct carrier is the distance of **every** speed from the lattice
+`ndZ`.  Knowing only that a subset has a dilated-AP form forgets the extra
+runner, precisely the coordinate on which the witness can fail.

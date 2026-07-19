@@ -1,33 +1,75 @@
 #!/usr/bin/env python3
-"""
-The compact case rho<13 => M>=1/13: descent is too weak  (boxeph-2026-07-18-S113)
+"""Corrected exact audit of the one S113 compact boundary row.
 
-Finding: compact rho<13 covering => M>=1/13 is the SOLE RESIDUAL = LRC(14) (S86), SHARP
-(boundary {2*{1..12},13} at M=1/13). Descent (THM-1010, M>=rho*M(core)/(rho+1)) loses a
-factor ~2 at rho~1 (compact) -- proves only 5/15. Descent belongs to single-killer (large rho).
-Provable sub-case: dilated-AP-core compact => M>=1/13 (THM-1013 dilated sieve).
+The original version checked only moduli 2..13, used QMAX=250, removed the
+maximum rather than the speed exposing the dilated AP, and printed an
+unsupported equivalence claim.  This version uses the complete pair-sum
+ruler from THM-668/THM-1002 and states only what the displayed row proves.
 """
-from math import gcd
-from fractions import Fraction as Fr
-import random
 
-def Mstar(V, QMAX=250):
-    best = Fr(0)
-    for q in range(2, QMAX+1):
-        for a in range(1, q):
-            if gcd(a, q) != 1: continue
-            m = min(min((a*v) % q, q - ((a*v) % q)) for v in V)
-            if Fr(m, q) > best: best = Fr(m, q)
+from fractions import Fraction as F
+from math import gcd, isqrt
+
+
+def divisors(number: int) -> set[int]:
+    result: set[int] = set()
+    for candidate in range(1, isqrt(number) + 1):
+        if number % candidate == 0:
+            result.add(candidate)
+            result.add(number // candidate)
+    return result
+
+
+def exact_M(values: tuple[int, ...]) -> F:
+    rulers: set[int] = set()
+    for index, left in enumerate(values):
+        for right in values[index:]:
+            rulers.update(divisors(left + right))
+
+    best = F(0)
+    for denominator in rulers:
+        if denominator < 2:
+            continue
+        for numerator in range(1, denominator):
+            if gcd(numerator, denominator) != 1:
+                continue
+            clearance = min(
+                min((numerator * speed) % denominator,
+                    denominator - (numerator * speed) % denominator)
+                for speed in values
+            )
+            best = max(best, F(clearance, denominator))
     return best
 
-def covering(V): return all(any(v % q == 0 for v in V) for q in range(2, 14))
 
-# the SHARP boundary compact family: M=1/13 exactly
-V = [2,4,6,8,10,12,13,14,16,18,20,22,24]
-core = V[:-1]
-print(f'boundary compact family {V}:')
-print(f'  covering={covering(V)}  rho={Fr(V[-1],core[-1])}={float(Fr(V[-1],core[-1])):.2f}')
-print(f'  M(core)={Mstar(core)}  M(V)={Mstar(V)}  (=1/13 EXACTLY => the bound is SHARP)')
-print()
-print('descent LB = rho*M(core)/(rho+1) ~ M(core)/2 at rho~1 << actual M ~ M(core) => descent too weak.')
-print('compact rho<13 => M>=1/13 is equivalent to LRC(14) (open); dilated-AP-core sub-case = THM-1013.')
+def covers(values: tuple[int, ...], upper: int) -> bool:
+    return all(
+        any(speed % modulus == 0 for speed in values)
+        for modulus in range(2, upper + 1)
+    )
+
+
+V = (2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24)
+maximum_deletion = V[:-1]
+ap_deletion = tuple(speed for speed in V if speed != 13)
+rho = F(V[-1], V[-2])
+M_V = exact_M(V)
+M_max_deletion = exact_M(maximum_deletion)
+M_ap_deletion = exact_M(ap_deletion)
+descent_bound = rho * M_max_deletion / (rho + 1)
+
+assert covers(V, 14)
+assert ap_deletion == tuple(2 * value for value in range(1, 13))
+assert M_V == M_ap_deletion == F(1, 13)
+assert M_max_deletion == F(1, 12)
+assert descent_bound == F(1, 23) < F(1, 13)
+
+print("CORRECTED S113 SINGLE-ROW AUDIT")
+print(f"V={V}")
+print(f"primitive={gcd(*V) == 1} Cover14={covers(V, 14)} rho={rho}")
+print(f"M(V)={M_V}")
+print(f"delete maximum 24: M={M_max_deletion}, descent bound={descent_bound}<1/13")
+print(f"delete 13: core=2*[12], M={M_ap_deletion}")
+print("scope=one exact boundary row; no 100-row/5-of-15 bank is stored")
+print("logic=compact 1/13 floor is sufficient for LRC14, not proved equivalent")
+print("remaining=tight-deletion extraction (crown collapse) + n=12 equality rigidity")

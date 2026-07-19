@@ -558,3 +558,62 @@ The root-imported modules use no proof-hole `sorry` and no `native_decide`.
 The genuine mathematical gap is a predicate-preserving residual
 classification—not a representation bridge and not the refuted universal
 no-Lonely13 dominance statement.
+
+## 2026-07-18 S74 frontier picture -- three residual objects, not one equivalence
+
+The compact, twelve-speed, and four-comb lines now meet as follows:
+
+```text
+FOUR-COMB r=5
+  span<=30 [THM-1133]
+  OR four-residue cone [THM-1148]
+  OR Q4>0 [THM-1148]
+  OR exact Phi transfer (9/5 corollary) [THM-1148]
+       |
+       +-- residual begins with m(3,4,5,6) [OPEN method gap]
+
+TWELVE-SPEED SHALLOW
+  full residues
+       |
+  A12 mechanical word [THM-1143; arithmetic LEAN]
+       |
+  owner-stalk lowering law [THM-1150]
+       |
+  PEHD13 = central colour elimination + oriented fringe [OPEN]
+       |
+  height<=12 + no final AP lift [THM-770/795]
+
+TWELVE-SPEED DEEP s>=2 -------------------------------- [OPEN]
+
+COMPACT M<1/13
+       |
+  tight deletion OR all-loose essential crown [THM-1149]
+       |                              |
+       |                              +-- Cover14 crown collapse [OPEN]
+       v
+  n=12 equality classification [HYP-4382, OPEN]
+       |
+  regenerated d[12] core
+       |
+  13d|v [THM-1149]
+       |
+  primitive + 14-carrier + rho<13 contradiction [LEAN]
+```
+
+This corrects the S113/S114 identification.  The compact `1/13` floor is a
+stronger sufficient route than the LRC(14) `1/14` target.  The n=12 equality
+probe classifies a tight deletion but does not extract one.  Crown collapse
+and shallow/deep equality rigidity are separately typed suppliers.
+
+The new root-imported `LRCCompactEssentialCrown` module checks the finite
+private-mass algebra and the post-regeneration divisibility/ratio
+contradiction.  Analytic crown extraction, Farey regeneration, PEHD13, and
+the deep branch are not formalized as proved theorems.  The A12 owner-stalk
+functional law is exact in the research artifact but remains outside Lean.
+
+Carrier choice is now explicit.  Four-comb proofs need labelled cyclic gaps,
+cluster count, endpoint owners, and metric interval widths.  Shallow descent
+needs moving two-sheet needles, private stalks, strip index, and an oriented
+fringe bit.  Compact crown collapse needs the private/`>=3` overlap chamber
+complex plus shared Cover14 lift congruences.  The corresponding naked
+tournaments are transitive shadows and do not preserve the target predicate.

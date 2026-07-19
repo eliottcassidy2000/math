@@ -4734,3 +4734,86 @@ In THM-1100 I proposed the bounded-denominator conjecture — an absolute Q₀ w
 The counterexample is one line. Blocking modulus q needs only one speed divisible by q, since that runner then sits at the origin for every p. So a single speed divisible by lcm(1..Q) blocks every q ≤ Q at once, and V = {lcm(1..Q)} ∪ {12 coprime speeds} refutes any absolute bound.
 
 **The lesson is specifically about direction of effort.** I was careful in the right way about the wrong thing: I audited my *sampling* (having been burned three times by dilation) but never audited the *claim*. Escalating search maxima are evidence that a supremum is not being reached — which is exactly what an unbounded quantity looks like — and I read that as 'my search is weak' rather than 'the conjecture may be false'. **When a search keeps finding worse, try to prove it can always find worse before proposing the bound.** See THM-1105, and MISTAKE-152 for the earlier form of confusing a sampled maximum with a population bound.
+
+## MISTAKE-170 -- a sufficient compact residual and an equality input were promoted to equivalences
+
+**Sessions:** boxeph-2026-07-18-S113/S114; corrected by
+codex-2026-07-18-S74 (THM-1099/1149).
+
+**What happened:** S113 called the compact floor
+
+```text
+primitive + Cover14 + rho<13  =>  M>=1/13
+```
+
+equivalent to LRC(14), whose actual target is only `M>=1/14`.  S114 then
+identified a maximum-deletion AP-core assertion with the twelve-speed
+equality classification and with that compact/LRC residual.  The cited
+reduction proves only a forward sufficient chain; no reverse implication or
+reverse embedding was supplied.
+
+The forward use also omitted a real hypothesis.  Equality rigidity can
+classify `V\{v}` only after `M(V\{v})=1/13` has been established.  THM-1149
+proves an exact alternative: every deletion can be loose, producing thirteen
+pairwise-disjoint private essential regions.  A primitive compact row with
+`M=8/105<1/13` realizes this all-loose crown while covering `2..13`; it
+misses `14`, showing exactly where the missing cross-modulus input must act.
+
+There were three accompanying source-level scope errors: the S113 script's
+`range(2,14)` omitted modulus 14, its `QMAX=250` value was a bounded search,
+and `V[:-1]` removed 24 although deleting 13 exposes the dilated AP.  The
+claim that THM-1013 handles every dilated-AP-core compact row also omitted
+THM-1013's condition on the extra speed.
+
+**Correction:** retain four typed arrows:
+
+```text
+Cover14 compact strict row
+  -> tight deletion                         [OPEN crown collapse]
+  -> d[12] deletion                         [OPEN n=12 equality]
+  -> 13d divides extra speed                [PROVED THM-1149]
+  -> primitive 14-carrier ratio conflict    [PROVED THM-1149].
+```
+
+The compact `1/13` floor is a stronger sufficient route to the `1/14` LRC
+target, not a proved equivalent.  S113/S114, HYP-7665/7675, THM-1013, and the
+single-row script/output are corrected in place.
+
+**Lesson:** before declaring two inverse statements equivalent, write every
+arrow with its threshold, extraction hypothesis, and reverse realization.
+Classification of an object does not extract that object from a larger one.
+
+## MISTAKE-171 -- distinct four-comb moduli do not force a 4/3 actual-mean gap
+
+**Sessions:** kind-pasteur-2026-07-18-S128c69/70; corrected by
+codex-2026-07-18-S74 (THM-1148).
+
+**What happened:** THM-1141 proposed that four distinct danger combs on a
+core-safe interval should have longest survivor gap at least `4/3` times the
+actual mean survivor gap.  The exact legal row
+
+```text
+P={1,...,8}, J=[1/14,13/112], killers=(108,109,110,111)
+```
+
+has five survivor components with
+
+```text
+L/mean=638/573=1.1134...<4/3.
+```
+
+Yet it easily satisfies the desired metric inequality:
+`7*111*L=319/72>1`.  Nearby teeth coalesce; the component count falls, so a
+nearly uniform gap word can have a large mean.  The two-comb linear endpoint
+law does not force its full descent to be sampled by the surviving
+multi-comb word.
+
+**Correction:** retain overlap-cluster count together with the labelled
+metric gap word.  THM-1148 replaces the false actual-mean lemma by a sharp
+four-residue multiplier cone, the exact Q4 mass/component gate, and the
+corrected THM-1137 `Phi` transfer.  Uniform `r=5` remains open, with
+`m(3,4,5,6)` an explicit infinite proof-method residual.
+
+**Lesson:** “maximum exceeds a baseline mean” and “maximum exceeds the
+actual component mean” are different claims.  Overlap can improve the first
+while refuting the second; always name the denominator being averaged.

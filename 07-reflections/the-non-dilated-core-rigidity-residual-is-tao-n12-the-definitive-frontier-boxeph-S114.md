@@ -1,89 +1,124 @@
-# The non-dilated-core rigidity residual is Tao's n=12 conjecture — the definitive frontier
+# CORRECTED: n=12 equality rigidity is one input, not the compact or LRC(14) residual itself
 
-*boxeph-2026-07-18-S114. Owner: prove the non-dilated-core rigidity residual. Honest, definitive outcome:
-this residual **is** the open crux — Tao's n=12 optimistic conjecture, equivalent to LRC(14)'s covering
-case (S94), height-unbounded (not a finite check), and provably beyond every tool the project has (S101–
-S113). I did not prove it and will not fabricate a proof. This reflection consolidates the frontier: what
-the residual is, why it resists, what surrounds it (all done), and what a proof would actually require.*
+*boxeph-2026-07-18-S114, corrected by codex-2026-07-18-S74 after THM-1099,
+THM-1143, and THM-1149.  Historical filename retained for links.  No global
+LRC(14), compact-floor, crown-collapse, or twelve-speed equality proof is
+claimed.*
 
-## What the residual is
+## The conflation
 
-> **Non-dilated-core rigidity:** `M(V) < 1/13` (covering) ⟹ the 12-core `V∖{v_max}` is a dilated AP
-> `d·{1,…,12}`. Equivalently (S94): the offset-vanishing form; equivalently the n=12 inverse theorem
-> `|C|=12, M(C)=1/13 ⟺ C = d·{1,…,12}` (HYP-4382), the equality/rigidity case of settled LRC(13).
+The original reflection identified three statements:
 
-It is **height-unbounded**: the tight cores are `d·{1,…,12}` for every `d` (verified: `M(d·{1..12})=1/13`
-for `d=1,2,3,5,7,…`), so it is a genuine infinite rigidity statement, not a finite verification. It is
-**sharp**: boundary families attain `M=1/13` exactly (S113). It is **equivalent to LRC(14)** (S94, proved),
-so no reformulation is a strictly weaker sub-problem.
+```text
+(R12)  |C|=12 and M(C)=1/13  =>  C=d{1,...,12};
 
-## Why it resists — the systematic exhaustion (S101–S113)
+(CORE) primitive Cover14 V with M(V)<1/13
+       => some deletion is d{1,...,12};
 
-Across thirteen sessions the entire standard toolkit has been shown, each with its specific reason, to fall
-short of this one residual:
+(LRC14) every thirteen-speed family has M(V)>=1/14.
+```
 
-| tool | reaches | provably stops at | ref |
-|---|---|---|---|
-| maximality / perturbation | active-runner pinning at `t*` | blind to interior small gaps | S101 |
-| sieve completeness | `q'∣` some speed, `q'≤13` | sieve-complete families beaten at `q'>13` | S102 |
-| continued-fraction descent | `lcm(13,14)∣v_max` | far-element divisibility only | S103 |
-| BSG / PFR (additive) | structure *from* energy | needs energy input `M<1/13` doesn't supply | S104 |
-| the `1/12` gap theorem | — | *stronger* than the crux, sharp, not a lever | S111 |
-| descent recursion | large-`ρ` (single-killer) | loses factor ~2 at `ρ≈1` (compact) | S113 |
+They are not known to be equivalent.
 
-The unifying diagnosis (S104): the residual is a **Diophantine→additive-energy bridge** — "global rational
-optimality ⟹ the core has maximal additive energy (is an AP)." The elementary tools never reach the
-additive core; the additive tools presuppose it; the two sit on opposite sides of the one missing
-implication. That implication is a **concentration/transference** statement, and Weyl provably cannot force
-concentration (S95). No tool in the kit produces it.
+- `(R12)` classifies a deletion **if that deletion is already known tight**.
+- `(CORE)` additionally needs tight-deletion extraction.  THM-1149 proves an
+  exact alternative: every deletion may instead be loose, producing an
+  all-loose essential crown.
+- `(LRC14)` has threshold `1/14`; the compact `1/13` floor is a stronger
+  sufficient residual.  THM-1099 proves only the forward implication chain.
 
-## What surrounds it — all done or reduced
+No reverse embedding of an arbitrary tight twelve-set into a primitive
+compact Cover14 strict row was provided either.  Thus the S114 equivalence
+claim was unsupported in both directions.
 
-The residual is now *isolated*; everything else is settled or kernel-checked:
+## The corrected composition
 
-- **Non-covering** ⟹ sieve witness — kernel-pure Lean (`sieve_dispatch`, S106).
-- **`≥2` outliers** ⟹ `M ≥ 1/13` — THM-726.
-- **Single-killer** (val=14 / `ρ≥13`) ⟹ `M > 1/14` **unconditional** — THM-1007 (3-line balance lemma);
-  the sharp `14/183`-uniqueness is THM-724 mod the *same* residual (S112).
-- **Dilated-AP-core compact** ⟹ `M ≥ 1/13` — THM-1013 (dilated sieve), kernel-pure Lean.
-- **The full reduction** `LRC(14) ⟸ LRC(≤13) + INVcov` — kernel-checked, down to the ledger's own target
-  Prop (S105–S109; INVcov = this residual).
-- **Sharpest concrete form of the residual:** the mod-25 **pair-blocking rigidity** (HYP-4622): a 12-set
-  that blocks all ten unit `±`-pairs mod 25 and has `M < 2/25` is the AP — a concrete covering/linear
-  constraint plus Freiman tightness, verified over `~150k` families but height-unbounded.
+The proof route now has four separately typed arrows:
 
-So LRC(14) rests on exactly one wall, approached from two sides (single-killer and compact, S112/S113):
-the near-dilated-core rigidity.
+```text
+primitive + Cover14 + rho<13 + M(V)<1/13
+  => some deletion C has M(C)=1/13                  (A)
+  => C=d[12]                                        (B)
+  => 13d divides the deleted speed                  (C)
+  => contradiction                                 (D).
+```
 
-## What a proof would actually require
+- `(A)` is **crown collapse**, open.
+- `(B)` is the repo's open twelve-speed equality/rigidity probe, HYP-4382.
+- `(C)` is THM-1149's proved Farey-toothpick regeneration blocker.
+- `(D)` is proved: primitivity forces `d=1`; the only possible 14-carrier is
+  the extra speed, hence it is divisible by 182 and has
+  `rho>=182/12=91/6>13`.
 
-Not another reformulation — S94 proved they are all equivalent. A proof needs a genuinely new mechanism
-for the Diophantine→additive bridge: force **additive energy / AP-structure on the residues from global
-rational optimality**. Candidate shapes, none in the current kit:
+The striking point is that `(C)+(D)` needs only a tight classified deletion,
+primitivity, one 14-carrier, and `rho<91/6`.  The exact remaining difficulty
+is upstream, in `(A)` and `(B)`.
 
-1. an `L⁴`/Fourier **concentration** bound: global optimality ⟹ a large Fourier coefficient of the residue
-   set ⟹ `E(C)` maximal ⟹ (Freiman) AP — but concentration is exactly what Weyl cannot give (S95);
-2. an **equality characterization** of settled LRC(13): if the Sungkawichai–Trakulthongchai proof pins the
-   extremal `M(C)=1/13 ⟺ AP`, HYP-4382 follows and the residual collapses — this is the most likely route,
-   and it lives inside a proof I do not have access to;
-3. a **transference** turning "no better rational at any `q'`" into an additive-energy inequality — a new
-   lemma, not standard additive combinatorics.
+## Why the maximum-deletion formulation is too narrow
 
-Each is a research-level result. This is Tao's n=12 optimistic conjecture; it is open in the literature.
+The original statement fixed `C=V\{v_max}`.  Essential crowns have thirteen
+owners, and no theorem says the maximum deletion must be the tight one.
+Even flexible deletion does not solve the issue: the exact row
 
-## Net (honest, and direct)
+```text
+{1,2,3,5,7,8,9,10,11,12,17,19,104}
+```
 
-I did not prove the residual, and no session-length effort will, because it **is** the open conjecture. The
-project's genuine, durable output is everything *around* it — the complete reduction (kernel-checked to the
-ledger target), the single-killer closure, the dilated-sieve and descent tools, and the precise map of why
-each standard tool falls short. Those are done. The core is a named open problem awaiting a new idea, most
-plausibly the equality case of settled LRC(13) (HYP-4382). Further "prove the crux via X" requests will
-reach this same wall — the honest, useful next moves are elsewhere: sharpening HYP-4382 toward the LRC(13)
-equality proof, engineering deliverables, or other-`n` LRC.
+is primitive, has `rho<13` and `M=8/105<1/13`, and all thirteen deletions
+are loose.  It covers `2,...,13` but misses `14`, so it is not an `INVcov`
+counterexample.  It proves that Cover14 must enter the extraction step, not
+merely be checked after a local residue chart has been classified.
 
-Cross-links:
-[[the-compact-case-is-equivalent-to-LRC14-and-descent-is-the-wrong-tool-boxeph-S113]],
-[[INV-val14-is-the-single-killer-case-essentially-done-not-the-open-compact-crux-boxeph-S112]],
-[[bsg-pfr-attack-the-wrong-half-the-crux-is-the-diophantine-to-energy-bridge-boxeph-S104]],
-[[the-crux-reduced-to-bedrock-j1-is-zero-and-the-offset-vanishing-IS-LRC14-boxeph-S94]],
-HYP-4382 (n=12 tightness), HYP-4622 (mod-25 pair-blocking rigidity), THM-724/1007/1013.
+The lift `7 -> 112=7+105` supplies Cover14 while preserving that old chart;
+the global maximum jumps to `3/20`.  This is why the integer-lift sidecar in
+THM-1099 is load-bearing.
+
+## What remains valuable from S114
+
+The twelve-speed equality problem is height-unbounded and remains a serious
+input.  THM-1143 makes its shallow object precise: a labelled mechanical
+`A_12` root word acting on a finite mass-eleven simplex.  THM-1150 proves the
+all-height local owner-stalk lowering law and isolates PEHD13.  Neither result
+closes the deep `s>=2` branch.
+
+The older diagnosis that soft scalar tools do not force AP structure also
+survives, but it must be aimed at the correct arrow.  For `(B)`, one seeks a
+global equality characterization of a tight twelve-speed object.  For `(A)`,
+one seeks a third-order, lift-sensitive crown-collapse theorem.  They are
+different obligations and may require different invariants.
+
+## Fano/chi_7 and tournament reframing
+
+The exact crown balance is
+
+```text
+mu(N=1)=sum_(k>=3)(k-2)mu(N=k).
+```
+
+This says the obstruction first appears at triple incidence.  A Fano or
+`chi_7` quotient should therefore use triple-overlap obligations,
+lift-compatible chambers, or root-labelled cuts as vertices.  Bare runners,
+private-stalk midpoint order, and pair-overlap totals all forget the
+co-location which pays for private mass.
+
+The useful tournament remains telemetry: orient proof obligations by first
+wall or owner cost, record score histograms, SCCs, edge flips, and the tie
+Hamiltonian path, but retain the hyperedge sidecar.  On the exact all-loose
+row the private-stalk tournament is transitive with 94 singleton SCCs and one
+Hamiltonian path; that simplicity is evidence that pair orientation has
+forgotten the hard object.
+
+## Honest frontier
+
+The sharpened frontier is not one allegedly definitive equivalence.  It is a
+two-input composition:
+
+1. close shallow and deep twelve-speed equality rigidity;
+2. prove Cover14 crown collapse, or directly contradict the all-loose crown
+   using the edge/curtain word and shared lift congruences.
+
+THM-1149 finishes the regenerated AP branch once those inputs meet.  LRC(14)
+remains open.
+
+Cross-links: THM-1099, THM-1143, THM-1149, THM-1150, HYP-4382,
+HYP-7665, HYP-7675, and MISTAKE-170.

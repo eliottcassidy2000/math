@@ -1,0 +1,74 @@
+FOUR-COMB NONUNIFORMITY AUDIT (exact rational arithmetic)
+
+[1] Exact counterexample on a maximal core-safe component
+  core P             = (1, 2, 3, 4, 5, 6, 7, 8)
+  maximal component  = [1/14, 13/112]
+  distinct killers   = (108, 109, 110, 111) (legal base: 108 > 13*8)
+  survivor lengths   = 319/55944 305/55944 97/18648 277/55944 13/3024
+  survivor mass      = 955/37296
+  component count    = 5
+  actual mean gap    = 191/37296
+  longest gap        = 319/55944
+  longest / mean     = 638/573 = 1.113438045375 < 4/3
+  sharp metric       = 7*111*L = 319/72 = 4.430555555556 > 1
+
+[2] Four-residue multiplier lemma on Z/13
+  representative  orbit  witness  witness gap word  best largest gap
+  0123              78        1  1 1 1 10         10
+  0124             156        1  1 1 2 9          9
+  0125             156        1  1 1 3 8          8
+  0126             156        2  2 2 8 1          8
+  0134              78        1  1 2 1 9          9
+  0139              52        2  2 3 1 7          7
+  013b              39        1  1 2 8 2          8
+  minima for cardinalities 1..4 = [13, 12, 9, 7]
+  labelled sharp four-sets       = 52
+
+[3] Exact constants for the replacement multiplier cone
+  epsilon at M=84             = 1/2190
+  core floor                  = 339/4745 > 1/14
+  two-wall drift y            = 28/365 < 1/13
+  seven-grid-gap safe width   = 36/91
+  common width after drift    = 10592/33215 > 11/73
+  B|I| at B/M=15             = 84/73 = 1 + 11/73
+  needle component length     = 11/73/B > 1/(7*k4) when B<=k4
+  midpoint corollary          = k1 >= max(1260, 7*(Delta+1))
+
+[4] Exact four-comb separated-ratio gate Q4
+  survivor mass lower bound A0 = 3*ell/7 - (6/49)*sum_i(1/k_i)
+  component upper bound     C0 = ell*sum_i(k_i) + 39/7
+  Q4 = ell*(21*K-7*sum_i(k_i)) - 6*K*sum_i(1/k_i) - 39
+     = ell*(14*K-7*(k1+k2+k3))
+       - 6*K*(1/k1+1/k2+1/k3) - 45
+  identity: 7*K*A0-C0 = Q4/7; hence Q4>0 gives L>1/(7*K)
+  exact best cone chart by Delta=k4-k1:
+    Delta<=84:       (B,M)=(k4,84), gate k4>=1260
+    85<=Delta<=168:  (B,M)=(k1+84,84), gate k1>=1176
+    Delta>=169:      B=k1+ceil(Delta/2), M=ceil(Delta/2)
+                     gate k1>=14*ceil(Delta/2)
+
+[5] Gate-union test and exact residual
+  core-atlas minimum ell*(13*max(P)+1) = 72/35 > 13/7
+  attained by P=(1,2,6,7,8,9,10,11), ell=1/70
+  corrected exact transfer Phi(x)=min(6/7,(x-1/7)/2)
+  saturated start c1=6/7; adjacent ratio 9/5 gives
+    inputs 54/35, 63/50, 3519/3500
+    outputs 7/10, 391/700, 3019/7000 > 1/7
+  optimal common-ratio threshold solves 6r^3-r^2-2r-28=0
+  (r=1.797111878...; 9/5 is a transparent rational corollary)
+  primitive rays with 1<=a1<...<a4<=100: 3646069
+    strict multiplier-cone rays = 4668
+    strict Q4-tail rays          = 3049744
+    exact-transfer rays          = 612986
+    union                        = 3054412
+    residual                     = 591657 (0.162273)
+    cone equality rays           = 196
+    Q4-slope equality rays       = 21863
+    first residual ray           = (3, 4, 5, 6)
+  infinite exact survivor       = m*(3,4,5,6), every m>=53
+    span=3m>30; cone fails; Q4=-366/5 (zero slope)
+    transfer: c1=6/7 -> c2=1/2, then (5/4)c2=5/8<1
+  asymptotic residual ratios (x,y,z)=(k1,k2,k3)/k4 satisfy
+    x<=7/8, x+y+z>=2, and the three-step exact Phi path fails
+
+DONE

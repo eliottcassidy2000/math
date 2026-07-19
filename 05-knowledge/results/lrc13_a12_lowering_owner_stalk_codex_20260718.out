@@ -1,0 +1,39 @@
+A12 LOWERING OWNER-STALK / CENTRAL-CYLINDER LEMMA
+source_sha256=1e1f99b181170f220b5628a41282440a75e9fb7666257967001f3c7a25f57b6d
+domain=all shallow full-residue packets; unique-owner equivalence assumes original packet accepted
+signs=D_w closed, E_r open; common generic chamber refinement is endpoint-complete
+shift_law=a=floor(wu)-floor((w-13)u)=m+1_{frac(wu)<frac(13u)}
+local_rule=a=0:any; a=1:leading endpoint only; a=12:trailing endpoint only; otherwise no unique owner
+central_rule=2/13<u<11/13 implies old/lowered edges disjoint, so a lowerable accepted colour has zero unique ownership
+
+ACCEPTED DILATION SINK AUDIT
+scales=(2, 3, 4, 14, 17, 97) legal_lowerings=59 lowerable=0 central_unique_obstructions=59 digest=eda2ee57ef8a472f70c29caba4be90dc2712131331db3954d442b16c0163066e
+c=2 r=1 w=14: first owner failure u=19/180 strip=1 shift=1 unique=(12, 11) lowered_edge=(0, 12)
+c=3 r=1 w=27: first owner failure u=7/110 strip=0 shift=1 unique=(12, 11) lowered_edge=(0, 12)
+c=4 r=1 w=40: first owner failure u=43/616 strip=0 shift=1 unique=(10,) lowered_edge=(12, 11)
+c=14 r=1 w=14: first owner failure u=25/336 strip=0 shift=1 unique=(11,) lowered_edge=(0, 12)
+c=17 r=1 w=170: first owner failure u=947/18683 strip=0 shift=1 unique=(4,) lowered_edge=(6, 5)
+c=97 r=1 w=1067: first owner failure u=2121/204476 strip=0 shift=1 unique=(1,) lowered_edge=(3, 2)
+verdict=unqualified height descent is false at arbitrarily high accepted rays; primitive/dilation split is necessary
+
+STRICT HYPOTHESIS CONTROLS
+positive one-lift W=(14, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12): original_accepted=False lowering_accepted=True unique_proxy=True
+loose proxy W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 23, 11, 25), lower r=12: original_accepted=False lowering_accepted=False unique_proxy=True
+proxy failure u=45/506 core_uncovered=(9,) unique=() lowered_edge=(1, 2)
+verdict=without acceptedness, unique-owned sheets omit pre-existing holes and do not represent E_r
+
+FORMULA REPLAY
+deterministic random packet-coordinate audits=200 seed=20260718; shift, transport, intersection, central-disjointness assertions all exact
+
+SHARPENED OPEN BRIDGE
+PEHD13-owner form: accepted primitive max(h)>=13 => a high colour satisfying the local owner rule in every chamber.
+central sublemma: such a packet has a high colour with no unique ownership on 2/13<u<11/13.
+fringe sublemma: one central-inessential high colour obeys the leading/trailing endpoint rules on the four fringe strips.
+warning=central sublemma alone is necessary, not sufficient; oriented fringe bits cannot be averaged away.
+scope=would close only shallow winding with THM-770/795; THM-769 deep sheets and compact LRC14 remain open.
+
+KAKEYA / TOURNAMENT CARRIER AUDIT
+needles=the twelve labelled two-sheet edges moving on the 13-cut cylinder; unique trace is the essential stalk
+pair_observable=which colour privately owns a cut in a chamber; switch=lowering translation a*r^-1; tie path=chronological walls
+preserves=exact E_r containment for accepted packets, including endpoint orientation
+destroys=degree-only state loses owner label; central-owner count loses fringe side; runner tournament loses chamber chronology

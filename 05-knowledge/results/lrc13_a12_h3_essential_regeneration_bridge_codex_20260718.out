@@ -1,0 +1,66 @@
+A12 H3 / ESSENTIAL-HEIGHT REGENERATION BRIDGE AUDIT
+source_sha256=630312d2107a04674f369014c02c693418641baac5f095d6f5c7420f7c6afbaf
+closed_danger=D_w={t: ||wt|| <= 1/13}; essential_region E_r is open
+exact_lowerability=E_r(W) subset D_(w_r-13); no a.e./endpoint relaxation
+scope=shallow full-residue only; deep s>=2 and compact LRC14 residual are not proved
+finite_claims=the explicit boxes below; PEHD13 remains an open all-height lemma
+
+EXHAUSTIVE HEIGHT-THREE BOX
+height_box_0_3: rows=16777216 chambers=758 bits=9854 accepted=4 digest=83c336bcda06319f13bb871537fa7966d4470988c2851a450cd80b9fedcbb322
+  W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) gcd=1 dilation=1
+  W=(14, 2, 16, 4, 18, 6, 20, 8, 22, 10, 24, 12) h=(1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0) gcd=2 dilation=2
+  W=(27, 15, 3, 30, 18, 6, 33, 21, 9, 36, 24, 12) h=(2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0) gcd=3 dilation=3
+  W=(40, 28, 16, 4, 44, 32, 20, 8, 48, 36, 24, 12) h=(3, 2, 1, 0, 3, 2, 1, 0, 3, 2, 1, 0) gcd=4 dilation=4
+status=only four dilation rays; accepted non-dilation antecedent count is zero, so PEHD13 is vacuous here
+
+EXACT SPARSE HIGH SHELLS
+sparse_heights_0_13: rows=4096 chambers=2060 bits=26780 accepted=1 digest=24e85c00d20b1f6606fe74058b64bfbf8ebeba33c7bf1ad394c71513b015e650
+  W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) gcd=1 dilation=1
+sparse_heights_0_25: rows=4096 chambers=3936 bits=51168 accepted=1 digest=38b74a341f8133e90c89060563b0d92a3df97544994f891ee2b557c7ca6d739f
+  W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) gcd=1 dilation=1
+sparse_heights_0_50: rows=4096 chambers=7840 bits=101920 accepted=1 digest=a6782414a051ff1fd5dc6f64ec4aed1776c19ffb24e239d97f56369a8cdf3483
+  W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) gcd=1 dilation=1
+sparse_heights_0_100: rows=4096 chambers=15636 bits=203268 accepted=1 digest=0c1645c1a4b79d083ff2a69788f00eed58fa5b82da602b30e95195d4f0e9a686
+  W=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) h=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) gcd=1 dilation=1
+status=no primitive or nonprimitive high-shell survivor beyond the AP centre in these four slices
+
+EXACT TERNARY +/-13 CUBES AROUND HIGH DILATIONS
+ray_cube_pm13_c14: rows=531441 chambers=2714 bits=35282 accepted=1 digest=26cd04f674ccb45df2b9e4b849f985452d1d1229f8757542e8b090de3e43b5bc
+  W=(14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168) h=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) gcd=14 dilation=14
+ray_cube_pm13_c17: rows=531441 chambers=3240 bits=42120 accepted=1 digest=ed7fc17ec262cbcdd68d3a6c9cab8338059aff244d4413adadb309b0daac6dfc
+  W=(170, 119, 68, 17, 187, 136, 85, 34, 204, 153, 102, 51) h=(13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3) gcd=17 dilation=17
+ray_cube_pm13_c97: rows=531441 chambers=19366 bits=251758 accepted=1 digest=db6862298afbb10b3bd339ae55f549b79f6788fd1bd91d2a94855699147e5cce
+  W=(1067, 873, 679, 485, 291, 97, 1164, 970, 776, 582, 388, 194) h=(82, 67, 52, 37, 22, 7, 89, 74, 59, 44, 29, 14) gcd=97 dilation=97
+status=the full 3^12 coordinate cube has no accepted neighbour at any tested scale
+
+ESSENTIAL-REGION COUNTERWITNESSES TO UNQUALIFIED DESCENT
+accepted_high_rays=(14, 17, 97) legal_lowerings=36 lowerable=0 witness_sha256=f4b468fc1362ab07eb84d5652b01fac8e7611896250d1362b7bebf245b265336
+c=14 representative r=1: 14->1, tear_chamber_u=(1/14,13/168), sheet=11, strict_t=3721/4368 in E_1\D_lower
+c=17 representative r=1: 170->157, tear_chamber_u=(6/119,8/157), sheet=4, strict_t=75679/242879 in E_1\D_lower
+c=97 representative r=1: 1067->1054, tear_chamber_u=(1/97,11/1054), sheet=1, strict_t=206597/2658188 in E_1\D_lower
+conclusion=primitive-or-dilation alternative is mandatory; accepted dilation rays are high sinks
+
+NONACCEPTED DESCENT-POTENTIAL COUNTEREXAMPLES
+height_box_0_1 accepted=2; loose rows whose every legal lowering tears strictly earlier=2
+  W=(1, 2, 3, 4, 18, 6, 20, 21, 22, 10, 24, 12) tear=1/6 lowerings=[(5, '1/11'), (7, '3/22'), (8, '1/10'), (9, '1/12'), (11, '2/21')]
+  W=(14, 2, 16, 4, 18, 6, 7, 8, 22, 10, 11, 12) tear=2/7 lowerings=[(1, '1/6'), (3, '1/7'), (5, '1/11'), (9, '1/8')]
+proxy_verdict=first-tear time cannot orient an essential-height descent, even in the smallest box
+
+SMALLEST EXACT SHALLOW PROOF OBLIGATION
+PEHD13: accepted + primitive + full residues + max(h)>=13 => a coordinate r with h_r>=13 and E_r subset D_(w_r-13).
+iteration: PEHD13 -> height<=12 -> THM-770 dilation; THM-795 forbids a nonempty reverse lift chain.
+equivalent regeneration target: an accepted primitive mechanical geodesic has only the single 46-chamber Farey-12 comb.
+negative=first-tear time and THM-1010 max-speed descent are not valid potentials; containment must retain the whole essential stalk.
+
+BRIDGE TO UNIFORM n=12 / COMPACT LRC14
+positive=PEHD13 would close arbitrary winding in THM-769's shallow full-residue branch.
+missing_after_PEHD13=THM-769 deep binding scales s>=2 (at least two off-sheet runners) remain separate.
+compact=boxeph-S113 shows rho<13 covering is the full sharp LRC14 residual; PEHD13 feeds it only when a shallow 12-core is first forced.
+therefore=no valid direct inference from the h<=3 certificate to sporadic emptiness or INVcov.
+
+CARRIER / TOURNAMENT AUDIT
+predicate_vertices=13 sheet cuts; state=11-chip excess plus grouped labelled A12 root word
+pair_observable=wall-crossing order k/w_r; gauge=time reversal/root negation; ties=contracted before testing
+tie_hamiltonian_path=chronological event order, then sheet labels 0..12
+preserves=closed danger coverage and strict essential witnesses
+destroys=cut-deficit tournament loses chronology; unlabelled current loses runner identity; scalar descent loses E_r position

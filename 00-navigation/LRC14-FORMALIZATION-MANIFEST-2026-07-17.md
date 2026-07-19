@@ -1628,3 +1628,71 @@ These root-imported files contain no proof-hole `sorry` and no `native_decide`.
 The mathematical boundary is now visible without a false quantifier: either
 supply a genuine Easy/Compact covering split, or prove the exact residual
 structure requested by `ResidualINV`.
+
+## 2026-07-18 S74 addendum -- A12 lowering, essential crowns, and corrected compact scope
+
+`TournamentH7.LRCA12Chipwalk` remains the kernel arithmetic for THM-1143: an
+edge slide is an `A_12` root, tied slides commute after grouping, total root
+mass is zero, and every prefix state stays on the affine mass-eleven
+hyperplane.  The analytic floor-to-sheet-edge equivalence and the finite
+classification are deliberately external.
+
+THM-1150 now identifies the next external all-height producer exactly.  For
+an accepted full-residue packet, lowering `w_r` to `w_r-13` is equivalent to
+covering the unique-owner stalk in every generic chamber.  Its drift is
+
+```text
+a=floor(w_ru)-floor((w_r-13)u)
+ =floor(13u)+1_{frac(w_ru)<frac(13u)}.
+```
+
+On `2/13<u<11/13` the old and lowered two-sheet needles are disjoint, so a
+lowerable colour has no private central trace.  This local theorem and its
+endpoint-completeness proof are currently mathematical/Python artifacts, not
+Lean declarations.  The finite exact banks classify all `4^12` height-three
+packets and named high slices; they do not prove PEHD13.  PEHD13 would close
+only the shallow winding branch after THM-770/795; deep `s>=2` remains.
+
+`TournamentH7.LRCCompactEssentialCrown` is now root-imported.  It
+kernel-checks:
+
+- the finite algebraic private-mass identity
+  `mu_1=sum_(k>=3)(k-2)mu_k` from total mass one and first moment two;
+- `13d|v` plus `gcd(d,v)=1` implies `d=1`;
+- `13|v` and `14|v` imply `182|v`; and
+- the resulting contradiction with cleared compactness
+  `v<13*(12d)`.
+
+The mass theorem prints `[propext, Classical.choice, Quot.sound]`; the final
+arithmetic consumer prints `[propext, Quot.sound]`.  The module contains no
+`sorry`, `admit`, or `native_decide`.
+
+The following producers remain external and open where marked:
+
+```text
+strict M<1/13 row
+  => tight deletion OR all-loose essential crown        [THM-1149, proved]
+
+tight deletion => d[12]                                 [HYP-4382, OPEN]
+all-loose crown => tight deletion under Cover14/rho      [crown collapse, OPEN]
+
+d[12] strict extension => 13d|v                         [THM-1149, proved]
+13d|v + primitive + 14-carrier + compactness => False   [LEAN]
+```
+
+The first and fourth arrows have elementary paper proofs plus an exact
+complete-pair-sum referee; only the last arithmetic consumer is presently in
+Lean.  No module claims crown extraction, Farey regeneration, HYP-4382,
+INVcov, or LRC(14).
+
+THM-1013's root comment and canon entry are corrected: `LRCDilatedSieve`
+requires **every** speed, including the extra runner, to lie at distance at
+least `d` from `13d Z`.  Merely containing a `d[12]` deletion does not supply
+that hypothesis.
+
+On the four-comb side, THM-1148 proves three external analytic consumers: the
+four-residue multiplier cone, `Q4>0`, and the corrected THM-1137 exact-`Phi`
+transfer with adjacent-ratio corollary `9/5`.  The false historical `7/6`
+recursion is not used.  The first infinite method residual is
+`m(3,4,5,6)`, `m>=53`; uniform `r=5` remains open.  None of THM-1148's finite
+orbit/core/ray banks has been promoted to kernel code.

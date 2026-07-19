@@ -1,67 +1,118 @@
-# The compact case is equivalent to LRC(14), and descent is the wrong tool for it
+# CORRECTED: the compact 1/13 floor is a sufficient residual, and descent is weak there
 
-*boxeph-2026-07-18-S113. Owner: prove the compact case `ρ<13 covering ⟹ M ≥ 1/13`. Honest outcome: this
-is the **sole residual** of LRC(14) (S86) — equivalent to the full conjecture — and it is **sharp**
-(boundary families at `M=1/13` exactly), so no crude bound reaches it. The natural route (the descent
-recursion THM-1010) is **provably too weak** for compact families (loses a factor ~2 at `ρ≈1`). The
-dilated-AP-core compact families are handled by THM-1013; the rest is the crux. Not proved. Verified S113
-computation.*
+*boxeph-2026-07-18-S113, corrected by codex-2026-07-18-S74 after THM-1099
+and THM-1149.  Historical filename retained for links.  LRC(14), compact
+`INVcov`, crown collapse, and the twelve-speed equality classification remain
+open.*
 
-## The compact case is the whole conjecture
+## Scope correction
 
-The LRC(14) reduction map (S86): non-covering (sieve) + `≥2` outliers (THM-726) + single-killer
-(THM-724/THM-1007) + **compact (`ρ = v_max/v_2nd < 13`) ⟹ `M ≥ 1/13`**, the *sole residual*. So
+The original reflection called
 
-> **`ρ<13 covering ⟹ M ≥ 1/13`  is equivalent to LRC(14).** Proving it proves the conjecture.
+```text
+primitive + Cover14 + rho<13  =>  M>=1/13                (INVcov)
+```
 
-Empirically robust: over ~100+ compact covering families (range `[1,26]`), `min M = 3/31 ≈ 0.097 > 1/13`,
-all with `q* ≤ 47` (shallow binding), **zero** with `M<1/13` — exactly the definitions' "compact ⟹
-shallow, `M~0.10–0.14`".
+equivalent to LRC(14).  That is not established.  The LRC-level compact
+residual asks only for `M>=1/14`.  `INVcov` is a stronger sufficient target:
 
-## It is sharp — no slack for a crude bound
+```text
+compact 1/13 floor  =>  compact 1/14 floor  =>  LRC(14)
+```
 
-The bound is *attained*: `{2·\{1,…,12\}, 13\} = \{2,4,…,24,13\}` is compact (`ρ=24/22≈1.09`), covering,
-with **`M = 1/13` exactly** (`M(core) = 1/12` drops to `1/13` when the resonant `v_max=24` is added). So
-`ρ<13 ⟹ M≥1/13` is tight — any proof must be sharp at these boundary families, ruling out an
-approximate/gap argument (unlike, one might hope, the `1/12`-gap of S110–S111, itself already refuted).
+after the other proved branches are composed.  THM-1099 section 6 records
+this one-way chain and explicitly states that no converse has been proved.
+The original `100+`-row and `5/15` prose is also not supported by the S113
+script: that script evaluates one displayed boundary row with a bounded
+denominator search.
 
-## Descent is the wrong tool (the concrete negative)
+THM-1149 gives the corrected structural statement.  A hypothetical strict
+compact row `M<1/13` has either
 
-The natural attack is the descent recursion **THM-1010**: `M(V) ≥ ρ·M(core)/(ρ+1)`. For **compact**
-families `ρ ≈ 1` (`v_max ≈ v_2nd`), so `ρ/(ρ+1) ≈ 1/2` and the bound is only `≈ M(core)/2`. But the
-*actual* `M(V) ≈ M(core)` (removing `v_max ≈ v_2nd` barely changes `M`). So descent **loses a factor ~2**
-exactly where compactness lives. Verified: descent proves `M≥1/13` for only **5 of 15** compact families;
-the failures have `M(core)` up to `0.148` yet descent LB only `0.075 < 1/13`, while the true `M ≈ 0.14`.
-Descent is sharp for large `ρ` (single-killer, where it gave THM-1008's `ρ≥13 ⟹ M≥1/14`) and useless for
-small `ρ`. The compact case needs a different mechanism.
+1. a tight twelve-speed deletion, or
+2. thirteen positive-width, pairwise-disjoint private essential regions: an
+   all-loose essential crown.
 
-## What is provable (the dilated-AP sub-case)
+Even a complete classification of tight twelve-speed sets only addresses the
+first branch.  The additional open input is **crown collapse**: Cover14 and
+compactness must force at least one tight deletion.
 
-The boundary and near-boundary compact families with a **dilated-AP core** are handled by **THM-1013**
-(dilated sieve, kernel-pure Lean): if the speeds are `\{d,2d,…,12d\}` (plus a killer), they avoid `13d·ℤ`
-by `≥ d`, so `t = 1/(13d)` is `1/13`-lonely — `M ≥ 1/13`. So:
+## What remains valid about descent
 
-> **dilated-AP-core compact ⟹ M ≥ 1/13** (PROVED, THM-1013).
+The sharp descent recursion
 
-The residual is the **non-(dilated-AP)-core compact** families — which is the crux, and (like THM-724's
-single-killer residual, S112) bottoms on the near-dilated-core rigidity: a non-AP compact core near the
-tight locus would need a resonant `v_max`, and controlling that is the inverse theorem.
+```text
+M(V)>=rho M(C)/(rho+1)
+```
 
-## Net (honest)
+loses roughly a factor two when `rho` is near one.  The displayed boundary
+row illustrates that weakness, so the qualitative conclusion survives:
+single-runner descent is naturally adapted to a far killer, not to a compact
+cluster.  The old quantitative `5/15` summary is withdrawn because its bank
+is absent from the stored script/output.
 
-- **Confirmed:** the compact case `ρ<13 ⟹ M≥1/13` **is** LRC(14) (the sole residual, S86), sharp at
-  boundary families (`M=1/13` attained), hence not reachable by any crude/gap bound.
-- **New negative:** the descent recursion (THM-1010) is provably too weak for compact families — it loses
-  a factor ~2 at `ρ≈1` (5/15 proven), so it is the wrong tool. Descent belongs to the single-killer
-  (large-`ρ`) regime.
-- **Provable fragment:** dilated-AP-core compact ⟹ `M≥1/13` (THM-1013). The rest is the crux.
-- **Not proved:** the compact case entails the full conjecture; I did not close it.
+The exact boundary family is
 
-So both cases that could carry INV — single-killer (S112) and compact (S113) — bottom on the same
-near-dilated-core rigidity: single-killer via THM-724's residual, compact via the non-AP-core residual.
-That is one wall, the inverse theorem, seen from two sides. LRC(14) rests there.
+```text
+V={2,4,6,8,10,12,13,14,16,18,20,22,24},
+M(V)=1/13,       rho=12/11.
+```
 
-Cross-links:
-[[INV-val14-is-the-single-killer-case-essentially-done-not-the-open-compact-crux-boxeph-S112]],
-THM-1010/1008 (descent), THM-1013 (dilated sieve), THM-724 (single-killer),
-[[the-route-B-crux-is-the-open-inverse-theorem-what-covering-gives-and-why-maximality-cannot-finish-boxeph-S101]].
+Deleting `13`, not deleting the maximum `24`, exposes the tight core
+`2{1,...,12}`.  The original script set `core=V[:-1]`; that is a different
+twelve-set and cannot be used as evidence for a hidden dilated-AP deletion.
+
+## Correct scope of the dilated sieve
+
+THM-1013 proves the following implication:
+
+```text
+every speed lies at distance at least d from 13d Z
+  => t=1/(13d) is 1/13-lonely.
+```
+
+The extra speed in `d[12] union {v}` need not satisfy that distance
+hypothesis.  Thus “every dilated-AP-core compact family is handled by
+THM-1013” was too broad.
+
+The correct strict-cover result is THM-1149's Farey blocker:
+
+```text
+M(d[12] union {v})<1/13  =>  13d divides v.
+```
+
+If the family is primitive, has a 14-carrier, and has `rho<13`, this is
+impossible: primitivity forces `d=1`, the extra speed is divisible by 182,
+and `rho>=182/12>13`.  This discharges a regenerated AP deletion **once a
+tight deletion has been extracted**; it does not extract one.
+
+## Script audit
+
+The stored S113 computation has three scope defects:
+
+- `range(2,14)` checks moduli `2,...,13`, not Cover14;
+- `Mstar(...,QMAX=250)` is a bounded search, not the complete pair-sum ruler;
+- `V[:-1]` removes `24`, whereas the dilated AP is obtained by removing
+  `13`.
+
+THM-1149's exact referee repairs all three issues, uses the complete
+pair-sum candidate theorem, and supplies a literal compact all-loose crown
+which misses only Cover14.  It also shows that essential-region mass and
+compactness alone retain a factor `36.15` of slack.
+
+## Honest frontier
+
+The durable S113 insight is that scalar descent is poorly conditioned in the
+compact regime.  The corrected proof target is not “non-AP maximum-deletion
+core rigidity.”  It is the lift-sensitive composition
+
+```text
+Cover14 + compact strict cover
+  => tight deletion                              [OPEN crown collapse]
+  => classified d[12] deletion                   [OPEN n=12 equality]
+  => 13d divides the extra speed                  [THM-1149]
+  => primitive 14-carrier ratio contradiction    [THM-1149].
+```
+
+Cross-links: THM-1099, THM-1149, THM-1143, THM-1013, HYP-7665,
+HYP-7675, and MISTAKE-170.
