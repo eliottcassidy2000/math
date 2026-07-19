@@ -1,0 +1,37 @@
+### (1) the exactly-balanced configuration ###
+  tooth right edges h = ['7/24', '7/12', '7/8']
+  ratios h1:h2:h3 = 1 : 2 : 3
+  resulting pieces = ['1/8', '1/8', '1/8', '1/8'] ; all equal 1/8: True ; sum = 1/2
+  longest piece 1/8 <= threshold 1/6 : True  (so this configuration is BAD)
+
+### (2) does d ~ (1,2,3) realise it exactly, and others not? ###
+  d-triple      u realising h ratio 1:2:3        F(u)      bad?
+  (1, 2, 3)     h=['7/24', '7/12', '7/8']      ratio [1.0, 2.0, 3.0]    F=1/8       True
+  (2, 4, 6)     h=['7/12', '0', '7/12']        ratio [1.0, 0.0, 1.0]    F=5/12      False
+  (3, 6, 9)     h=['7/8', '7/12', '7/24']      ratio [1.0, 0.667, 0.333] F=1/8       True
+  (1, 2, 4)     h=['7/24', '7/12', '0']        ratio [1.0, 2.0, 0.0]    F=5/12      False
+  (1, 3, 5)     h=['7/24', '7/8', '7/24']      ratio [1.0, 3.0, 1.0]    F=5/12      False
+  (2, 3, 4)     h=['7/12', '7/8', '0']         ratio [1.0, 1.5, 0.0]    F=5/12      False
+  (1, 2, 5)     h=['7/24', '7/12', '7/24']     ratio [1.0, 2.0, 1.0]    F=5/12      False
+
+### (3) the bad set of the balanced family, exactly ###
+  m=1 : predicted first run [5/21, 2/7], width 1/21
+        F at the two ends: 1/6 and 1/6 (threshold 1/6)
+        F just inside: 5/36
+  m=2 : predicted first run [5/42, 1/7], width 1/42
+        F at the two ends: 1/6 and 1/6 (threshold 1/6)
+        F just inside: 5/36
+  m=3 : predicted first run [5/63, 2/21], width 1/63
+        F at the two ends: 1/6 and 1/6 (threshold 1/6)
+        F just inside: 5/36
+
+### (4) for non-proportional d, can the 1:2:3 ratio persist on an interval? ###
+  d-triple      #u in a 2520-grid with h-ratio within 1%% of (1,2,3)
+  (1, 2, 3)     839 / 2520 = 0.3329
+  (2, 4, 6)     838 / 2520 = 0.3325
+  (1, 2, 4)     0 / 2520 = 0.0000
+  (1, 3, 5)     0 / 2520 = 0.0000
+  (2, 3, 4)     0 / 2520 = 0.0000
+  (1, 2, 5)     0 / 2520 = 0.0000
+  (3, 5, 7)     0 / 2520 = 0.0000
+DONE
