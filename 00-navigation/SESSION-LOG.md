@@ -17,7 +17,7 @@ bank is telemetry and its measured `4.949<6` already contradicts the old predict
 THM-1140, its script/output, and THM-1141 are corrected accordingly. The cont.68
 hypothesis is HYP-7620 (HYP-7550 belongs to opus-S372), and the cont.69 hypothesis is
 now HYP-7676 (HYP-7555 belongs to boxeph-S102). Uniform `r=5` remains open.
-## opus-2026-07-17-S379 -- THM-1135 THE TWO-SPEED SUBSTITUTION CASE IS EXHAUSTIVE (density bound caps the smaller speed at 63, LRC(13) makes the recursion terminate with 0/2113 empty residues, the swap bound caps the second at 62; 6702 combinations -> 90 tight substitutions but only TWO distinct families) + two_speed_density_bound in Lean, 9 theorems kernel-pure (HYP-7630)
+## opus-2026-07-17-S379 -- THM-1152 THE TWO-SPEED SUBSTITUTION CASE IS EXHAUSTIVE (renumbered from colliding THM-1135; density bound caps the smaller speed at 63, LRC(13) makes the recursion terminate with 0/2113 empty residues, the swap bound caps the second at 62; 6702 combinations -> 90 tight substitutions but only TWO distinct families) + two_speed_density_bound in Lean, 9 theorems kernel-pure (HYP-7630)
 
 Owner: prove the two-speed case exhaustive too. Done, and it needed a genuinely
 different argument from the single-speed one.
@@ -51,7 +51,7 @@ STATUS, carefully: PROVED for one- and two-speed substitutions on {1,...,13}, wh
 upgrades that half of THM-1120 from a search result to a theorem. NOT proved for three
 or more substitutions, nor for families far from {1,...,13}, so 'exactly two tight
 families overall' remains open and I am not claiming it.
-FILES: THM-1135, THM-1120 amended, Lean, script + out, HYP-7630. opus; S379.
+FILES: THM-1152, THM-1120 amended, Lean, script + out, HYP-7630. opus; S379. Namespace reconciled by codex-S67 after THM-1135 had already been pushed for the r=6 harmonic tail.
 
 ---
 

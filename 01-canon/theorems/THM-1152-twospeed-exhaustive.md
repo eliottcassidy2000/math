@@ -1,5 +1,5 @@
 ---
-id: THM-1135
+id: THM-1152
 title: THE TWO-SPEED SUBSTITUTION CASE IS EXHAUSTIVE — a density bound plus LRC(13) makes the double-substitution search FINITE, and it confirms no third tight family. Covering an interval of length ℓ by two combs forces ℓ(1−4λ) ≤ 2λ(1/r + 1/s), so the SMALLER new speed obeys r ≤ 2/(5·ℓ_max(E_{i,j})) — bounds 8…63 over the 78 pairs of {1,…,13}. The residue E′ = E_{i,j} \ D_r is never empty (0/2113 verified), because an empty residue would mean twelve speeds cover everything at radius 1/14, contradicting LRC(13); so the single-speed swap bound then caps the second speed at s ≤ 2λ/ℓ_max(E′) ≤ 62. Exhaustive enumeration of the resulting 6702 combinations yields 90 tight double substitutions but only TWO distinct families — {1,…,13} and {1,…,11,13,24} — with 90 = 78 identities + 12 routings through 12→24
 status: PROVED for one- and two-speed substitutions on {1,…,13}. The density bound is formalised (`two_speed_density_bound`, kernel-pure); the enumeration is exhaustive because both speed bounds are proved, and the non-emptiness of E′ rests on LRC(13), a citation hypothesis for this project. NOT proved: three-or-more substitutions, or families far from {1,…,13} — so "exactly two tight families overall" remains open
 source: opus-2026-07-17-S379 (owner: prove the two-speed case exhaustive too)
@@ -8,7 +8,7 @@ lean: 04-computation/lean/TournamentH7/TournamentH7/LRCEssentialRegion.lean
 scripts: 04-computation/twospeed_bound_opus_S379.py -> 05-knowledge/results/twospeed_bound_opus_S379.out
 ---
 
-# THM-1135 — closing the double-substitution neighbourhood
+# THM-1152 — closing the double-substitution neighbourhood
 
 THM-1125 made SINGLE substitutions exhaustive. Two-speed is genuinely
 harder: a component of the joint essential region
