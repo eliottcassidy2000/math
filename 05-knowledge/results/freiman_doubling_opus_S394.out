@@ -1,0 +1,48 @@
+(1) DOUBLING OF THE EXTREMALS AND NEAR-EXTREMALS
+    minimum possible for a 13-set: |V+V| = 2*13-1 = 25, ratio 25/13 = 1.923
+    family                 |V+V|  ratio    M          at floor?
+    {1,...,13}              25  1.923   1/14       YES
+    {1..11,13,24}           36  2.769   1/14       YES
+    {1,...,12,14}           26  2.000   1/13       
+    {1..11,13,25}           36  2.769   1/12       
+    {2,...,14}              25  1.923   1/8        
+    AP d=3                  25  1.923   13/38      
+    odd {1,3,..,25}         25  1.923   1/2        
+
+(2) DOES LARGE DOUBLING FORCE M AWAY FROM THE FLOOR?
+    binned over random primitive 13-families
+    doubling  n    min M      median M    all >= 1/13?
+        4.0    4  0.148148   0.200000    yes
+        4.5   14  0.129032   0.200000    yes
+        5.0   62  0.135135   0.180328    yes
+        5.5   10  0.150943   0.176471    yes
+
+(3) THE SHARP TEST: is there a doubling threshold K with
+    doubling(V) > K  =>  M(V) >= 1/13 (i.e. off the floor and past the gap)?
+    families with M < 1/13: 0 of 60
+      none -- every sampled family already clears 1/13
+
+    extremal doublings for comparison: 1.923 (AP), 2.769 (second tight)
+(4) THE MECHANISM: translation preserves doubling but destroys the floor
+    family        doubling   M         q0   (q0 is NOT translation-invariant)
+    {1,...,13}   1.923     1/14       14
+    {2,...,14}   1.923     1/8        15
+    {3,...,15}   1.923     1/6        16
+    {4,...,16}   1.923     1/5        17
+    {5,...,17}   1.923     5/22       18
+
+    => all translates share doubling 1.923 (minimal), but M and q0 vary wildly.
+       Any TRANSLATION-INVARIANT invariant is therefore blind to the floor,
+       and doubling -- the Freiman invariant -- is translation-invariant.
+
+(5) SAME POINT UNDER DILATION (which LRC DOES respect, THM-1050)
+    1*{1..13}: doubling 1.923  M = 1/14  q0 = 14
+    2*{1..13}: doubling 1.923  M = 1/14  q0 = 15
+    3*{1..13}: doubling 1.923  M = 1/14  q0 = 14
+    => dilation preserves BOTH doubling and M, consistent with THM-1050.
+
+(6) THE DIVISIBILITY INVARIANT SEPARATES WHAT DOUBLING CANNOT
+    {1,...,13}       doubling 1.923  q0 =  14  M = 1/14
+    {2,...,14}       doubling 1.923  q0 =  15  M = 1/8
+    {1..11,13,24}    doubling 2.769  q0 =  14  M = 1/14
+    AP d=3           doubling 1.923  q0 =   3  M = 13/38

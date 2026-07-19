@@ -1,3 +1,40 @@
+## opus-2026-07-19-S394 -- THM-1225 THE FREIMAN/DOUBLING ROUTE IS STRUCTURALLY BLIND: LRC is not translation-invariant and doubling is -- the translate ladder {1+k,...,13+k} holds doubling at 1.923 while M runs 1/14, 1/8, 1/6, 1/5, 5/22; q0 separates what doubling cannot, taking value 14 on BOTH extremals (HYP-7800)
+
+Owner: work the two-element extremal set gap, thinking Kakeya and Freiman. The Freiman
+angle is the right instinct and it fails for a sharp reason worth recording.
+THE INVITING ANALOGY: klein's THM-1004/1005 are literally titled 'the INVERSE/rigidity
+theorem', the extremals are APs, and APs have minimal doubling -- so perhaps large
+doubling forces M away from the floor, which would replace Hamming radius by an ADDITIVE
+hypothesis and cover all perturbations at once instead of bounded-radius ones.
+IT FAILS, AND STRUCTURALLY. Doubling is TRANSLATION-INVARIANT; the LRC floor is not. The
+translate ladder {1+k,...,13+k} for k = 0..4 holds doubling fixed at exactly 1.923 -- the
+minimum 25/13 -- while M runs 1/14, 1/8, 1/6, 1/5, 5/22, a factor of three, and q0 runs
+14, 15, 16, 17, 18. So ANY translation-invariant invariant is blind to the floor, and
+doubling is one.
+THE IMPLICATION FAILS IN BOTH DIRECTIONS. Small doubling does not give near-floor: the AP
+with d=3 and the odd set {1,3,...,25} both have minimal doubling 1.923 with M = 13/38 and
+M = 1/2, five to seven times the floor. And near-floor does not give small doubling: the
+second extremal {1,...,11,13,24} sits exactly on the floor with doubling 2.769.
+WHAT DOES SEPARATE THEM is divisibility. q0 -- the least modulus dividing no speed --
+takes the value 14 on BOTH extremal families and a different value on every non-extremal
+tested. That is exactly THM-1210's picture (extremality is D = 1 at s = q0 = 14, the
+classical sieve at modulus 14), and q0 is NOT translation-invariant, which is precisely
+why it can see what doubling cannot. Dilation preserves both doubling and M, consistent
+with THM-1050 -- a useful check that the invariants agree where they should.
+THE TRIAGE RULE, parallel to THM-1185's measure-versus-pointwise split and sharpening it:
+A TRANSLATION-INVARIANT INVARIANT CANNOT CHARACTERISE THE LRC EXTREMAL SET. That rules
+out doubling, additive energy and sumset/Freiman dimension -- and by the same objection,
+though I have not tested it and flag it as an extension, the direction-set invariants of
+KAKEYA type, which are invariant under the affine maps that move the floor. The
+invariants that have actually worked in this programme are all arithmetic and
+translation-sensitive: q0 (THM-1105/1210), the mod-7 residues of the Fourier kernel
+(THM-1075), and the active-pair determinant D (THM-1205).
+This does not close the two-element gap. It removes a family of approaches and says why,
+which is the same service THM-1185 performed for measure-based methods.
+FILES: THM-1225, script + out, HYP-7800. opus; S394.
+
+---
+
 ## boxeph-2026-07-19-S124 -- THE KAKEYA-NEEDLE OBSTRUCTION to M=3/38 (owner: work the 3/38 residue system for achievability; think Kakeya needles; mine freely). Pointed the Kakeya lens at the q=38 maximizer (a bridge the repo survey confirmed was UNBUILT -- the graphic-rank Kakeya threads codex-S14/S16 only ever touched the 1/13 tight-side combs, never the D=3 s=38 maximizer). A M=3/38 family must be covering, have a det-3 pair at s=38, and place all 12 residues mod 38 in [3,35] with 3/38 the global deepest hole. Kakeya framing: each modulus q is a NEEDLE direction (witness t=p/q probes the deepest hole there); M=3/38 needs every needle blocked to <=3/38 with q=38 the deepest. FINDINGS: (A) band-filled-mod-38 covering families are LOOSE -- the q=38 hole (3/38) is real but NEVER the deepest; a deeper hole always sits at a MEDIUM modulus q' in (13,38) (constructions land at 1/8@q24, 5/29@q29, 4/23@q23, 5/21@q21), so M>=2/25. Forcing M=3/38 requires closing every medium hole too, which collapses to the AP {1..12} (1/13); 3/38 is squeezed between loose (>=2/25) and the AP. (B) mod-19 parity split (38=2*19): at t=m/38, even speed 2u has ||2u m/38||=||u m/19|| (a multiple of 1/19=2/38), so the band (>=3/38) forces even speeds to >=2/19=4/38 -- the 3/38 hole is carried ONLY by ODD speeds (the pair (3,35) is odd, sum 38); the mod-19 needle must then be blocked to <=1/19 (else a 2/19 hole beats 3/38), forcing speed residues mod 19 to cover all +-unit classes (or contain a multiple of 19), even speeds barred from +-1 (macmini-S27's mod-19 system, now with parity+determinant structure). (C) NEEDLE-COVERING (adaptive, not universal): no single medium needle is universal -- a family can BLOCK the mod-19 needle by containing 19 (w19=0), but is then caught by a DIFFERENT medium needle. Over 1066 band-filled covering families: 772 beaten by mod-19 alone, 271 contain 19 (evade mod-19) yet ALL are caught elsewhere; the UNION of medium needles q' in [14,37] beats the q=38 hole for ALL 1066/1066 => every band-filled covering family has M>3/38. This is codex-S16's 'adaptive graphic rank' signature -- the beating direction varies with the family; blocking one merely shifts the deepest hole to another. The needles are forced by covering+tightness at MEDIUM moduli (boxeph-S102). HONEST: NOT a proof. 3/38 is verified unachievable for all bases in [1,26] (kps-S12); the unbounded-modulus escape tail (macmini-S36/HYP-4667, {i+L k_i}, L=lcm) uses LARGE elements and is untouched -- those approach 2/25+ from ABOVE, never entering the gap. The obstruction is MAPPED, not closed; and the reason 3/38 resists a finite proof IS the needle-adaptivity + unbounded modulus.
 
 Prompt (owner): work the 3/38 residue system for achievability, think concepts related to kakeya needles, mine previous threads in the repo freely for inspiration
