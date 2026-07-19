@@ -1,0 +1,40 @@
+THM-1153 exact multi-deletion harmonic crown
+general coefficient: r(N-2r)/(N(N-r)m)
+all-N algebra replay: N=3..100, every 1<=r<N: PASS
+
+LRC14 actual-threshold table
+r=1: c_r=6/91; scalar min(S)/m <= 91/6
+r=2: c_r=5/42; scalar min(S)/m < 84/5
+r=3: c_r=12/77; scalar min(S)/m < 77/4
+r=4: c_r=6/35; scalar min(S)/m < 70/3
+r=5: c_r=10/63; scalar min(S)/m < 63/2
+r=6: c_r=3/28; scalar min(S)/m < 56
+r=7: c_r=0; scalar min(S)/m < wall
+r=7 coefficient: EXACTLY ZERO
+r=8 coefficient: NEGATIVE
+
+compact harmonic top-chain (x_i=v13/v_i, x12<13, x13=1)
+r=2: c_r=5/42; x_11<588/5; T_(r+1)/T_r=47/5
+r=3: c_r=12/77; x_10<25333/30; T_(r+1)/T_r=89/12
+r=4: c_r=6/35; x_9<204967/36; T_(r+1)/T_r=41/6
+r=5: c_r=10/63; x_8<8403647/200; T_(r+1)/T_r=73/10
+r=6: c_r=3/28; x_7<613466231/1350; T_(r+1)/T_r=31/3
+top-seven ceiling: v13/v7 < 613466231/1350
+top-seven decimal: 454419.430370370392
+
+product of scalar 1/14 bounds: 173044872
+harmonic improvement factor: 380.804297604443
+improvement over auxiliary 1/13 product: 6409.572885240967
+
+without compact dominance, r=1 crown gives: v13/v7 <= 8500889201/16200
+
+tournament/deletion-obligation audit
+vertices: [1, 2, 3, 4, 5, 6, 7]
+score histogram: [0, 1, 2, 3, 4, 5, 6]
+directed cycles: 0; SCCs: 7 singletons; Hamiltonian paths: 1
+challenged assumption: vertices are deletion cuts, not runners
+preserved: dependency rank and wall location
+destroyed: tooth phases, pair/triple overlaps, boundary excess
+faithful carrier: weighted nested-deletion hypergraph + endpoint sidecar
+
+source_sha256=00c5f5e3082f064d57641e25499644110598339e311c83f6f0084c6bb1e67eeb

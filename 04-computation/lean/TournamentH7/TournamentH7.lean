@@ -662,3 +662,4 @@ import TournamentH7.LRCRationalScaleGuardrails  -- codex-S67: exact rational-win
 import TournamentH7.LRCEssentialRegion
 import TournamentH7.LRCA12Chipwalk  -- codex-S74 / THM-1143: grouped A_12 root transport, tie-order commutation, and the invariant eleven-chip affine hyperplane. The floor/danger carrier equivalence and finite bank remain external. Standard axioms only
 import TournamentH7.LRCCompactEssentialCrown  -- codex / THM-1149 arithmetic kernel: finite private-mass balance and the exact post-extraction 13d|v + primitive + Cover14 contradiction to rho<13. Crown extraction/Farey regeneration remain explicit inputs. Foundational axioms only
+import TournamentH7.LRCMultiDeletionCrown  -- codex-S75 / THM-1153: actual-radius 1/14 harmonic needle budget through six deletions and exact compact top-seven ceiling 1350*x7<613466231. Lower-LRC fattening producer remains explicit. Standard axiom trio

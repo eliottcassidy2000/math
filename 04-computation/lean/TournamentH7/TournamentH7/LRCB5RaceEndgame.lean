@@ -86,7 +86,9 @@ theorem denseCoreDissociatedB5Supply_of_B5RaceTail
   intro v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
   obtain ⟨certificate⟩ :=
     hsupply v hv hgcd hcov hgap hcomp hdist hlarge hdiv hcoarse hdissoc hcore
-  exact ⟨certificate.q, by omega, certificate.b5_pos⟩
+  have hq : 0 < certificate.q :=
+    lt_of_lt_of_le (by norm_num : 0 < 14) certificate.fourteen_le_q
+  exact ⟨certificate.q, hq, certificate.b5_pos⟩
 
 /-- Residual-selected capstone with the B5 race socket.  The selected-phase
 and pair-tower hypotheses are already confined to their nongeneric residue;
