@@ -81,3 +81,5 @@ strike through with the correction pointer.
 - 9/810827 — M(F_9(90091)), D=9 third opening, witness 572349/810827 — THM-1276
 - 10/5105119 — M(F_10(510511)) = M({1..510509,510511,5105100}), witness 268691/5105119, pico-window — THM-1276 (out-of-sample #7)
 - 12/116396303 — PREDICTED M(F_12(9699691)) (binder 23; next rung, unrun, hour-scale) — THM-1276 lead
+- 12/116396303 — M(F_12(9699691)) = M({1..9699689, 9699691, 116396280}), witness 15182127/116396303, femto-window — THM-1287 (out-of-sample #8)
+- 12/116396303 window: (1/9699692, 2/19399383), width 5.314e-15 — THM-1287

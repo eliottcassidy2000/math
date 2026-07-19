@@ -1,3 +1,22 @@
+## death-star-2026-07-19-S59g (FINAL) — THM-1287: the tower reaches primorial 9699690 — M(F_12(9699691)) = 12/116396303 EXACT (femto-window 5.3e-15, 482 s at ten million speeds) — the EIGHTH consecutive out-of-sample confirmation; the D=9 necessity sweep passed (1399 families, zero off-progression hits): the gate law now supported in BOTH directions
+
+Continuation of the S59g interim close: the ghost scan landed. M(F_12(9699691)) = 12/116396303 EXACTLY at
+q = Q — rung ATTAINED, strictly inside (1/9699692, 2/19399383), width 5.314e-15, in 482 seconds over
+~1.2e8 channel candidates (spot re-gate clean: 12 rows + F_7(2311)). With the interim close's proved
+pieces (L1 floor via a = 15182127, min distance 12 over all speeds; nine lower rungs dead incl. the
+composite 21 via 3 | Q_11) the value is proof-backed exact. THE TOWER: confirmed primorials 6, 30, 210,
+2310, 30030, 510510, 9699690 (D = 3, 4, 6, 7, 9, 10, 12) — eight consecutive out-of-sample hits spanning
+six orders of magnitude in N, windows narrowing 10⁻² → 10⁻¹⁵ — plus the necessity direction now
+systematically tested (S59g interim: 1399 off-progression families, zero in-window). The D-graded gate
+law {N ≡ 1 mod L_D, N ≢ 1 mod 2D−1} stands: mechanism-derived, per-instance proof-backed, bidirectionally
+tested. NEXT: Lean L1-L3 is the highest-value step (leads xii/xx); D=15 at N = 223092871 filed
+deliberate-no-urgency (xix). CONSTANTS-INDEX carries the new value.
+
+Prompt (owner): run the D=12 rung at N=9699691 (continuation close)
+
+FILES: THM-1287 (filled from placeholder), HYP-7925 (full), CONSTANTS-INDEX, backlog (xix, xx),
+results INDEX, session log. -> all
+
 ## death-star-2026-07-19-S59g (INTERIM close — D=12 run IN FLIGHT) — the D=9 necessity sweep DONE (1399 families, ZERO in-window off the L_9 progression) + the D=12 floor PROVED (L1 witness, min distance 12 over ~10^7 speeds); the exact upper bound is computing in background
 
 Owner: run the D=12 rung at N=9699691. Status at this interim close: (1) SETUP verified — Q = 116396303,
