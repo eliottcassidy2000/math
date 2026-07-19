@@ -1,0 +1,11 @@
+THM-1246 RESONANT NEEDLE-BANK CORRIDOR EXACT AUDIT
+harmonic bank endpoint rows checked = 78
+thirteen-speed integer rows checked (H=1..12,a=2..10000) = 119988
+corridor = [15/196,(14H+13)/(196H)] / a
+width = (13-H)/(196Ha), positive exactly through H=12
+projective cap = 182H/(14H+13), with cap*upper=13/14
+a=1 admissible exactly for H=4,...,12; a>=2 works uniformly
+reciprocal step U_(H-1)-U_H = 13/(196H(H-1))
+H=6 family width = 1/(168a)
+tournament fingerprint = scores (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), triangles 0, Hamiltonian paths 1
+RESULT: PASS
