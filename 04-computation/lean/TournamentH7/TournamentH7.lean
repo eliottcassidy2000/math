@@ -660,3 +660,4 @@ import TournamentH7.LRCRamifiedCosetCover  -- codex-S66/S67: owner projection, a
 import TournamentH7.LRCScaleTenProjectivePrism  -- codex-c10/S67: THM-970 terminal projective-prism quotient; exact masks, partition forcing, sign-switch normalization, and adjacent-owner disjointness. Direct kernel build; foundational axioms only
 import TournamentH7.LRCRationalScaleGuardrails  -- codex-S67: exact rational-window denominator clearing, integer affine-lift compatibility iff gcd(q,d)|u, and the coprime-multiple/affine-coset collapse in ZMod q. Foundational axioms only
 import TournamentH7.LRCEssentialRegion
+import TournamentH7.LRCA12Chipwalk  -- codex-S74 / THM-1143: grouped A_12 root transport, tie-order commutation, and the invariant eleven-chip affine hyperplane. The floor/danger carrier equivalence and finite bank remain external. Standard axioms only

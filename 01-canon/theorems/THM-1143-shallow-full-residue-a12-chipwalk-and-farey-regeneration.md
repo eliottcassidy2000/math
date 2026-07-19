@@ -13,6 +13,7 @@ related:
   - HYP-6820 # open n=12 sporadic branch
 script: 04-computation/lrc13_shallow_a12_chipwalk_descent_audit_codex_20260718.py
 output: 05-knowledge/results/lrc13_shallow_a12_chipwalk_descent_audit_codex_20260718.out
+lean: 04-computation/lean/TournamentH7/TournamentH7/LRCA12Chipwalk.lean
 ---
 
 # THM-1143 -- the shallow object is a mechanical root ballot walk
@@ -121,6 +122,14 @@ the terminal vector is `11 delta_(-1)`.  This proves (4) and (5).
 The proof uses the original continuous circle only to derive the edge
 language.  Thereafter the full predicate is the nonnegative-prefix language
 of a labelled mechanical `A_12` root word.
+
+`LRCA12Chipwalk.lean` kernel-checks the finite-state arithmetic used here:
+edge-slide cancellation, zero root mass, commuting tied transports, grouped
+mass preservation, and the affine mass-eleven prefix invariant.  It contains
+no `sorry` or `native_decide` and builds from the project root.  The analytic
+floor/danger-edge equivalence in this section and the finite classification
+remain external; the module does not pretend to formalize the open ballot
+rigidity statement.
 
 ## 3. AP dilates are a self-similar Farey comb
 
