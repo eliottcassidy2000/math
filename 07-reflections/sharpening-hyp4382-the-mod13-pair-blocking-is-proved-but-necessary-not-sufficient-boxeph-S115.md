@@ -24,7 +24,8 @@ general AP `{1,14,…,144}` (all `≡1 mod 13`) fail it and have `M = 67/145 ≠
 
 ## But it is necessary, not sufficient
 
-The decisive test: does a **non-AP** family that is **complete mod 13** reach `M=1/13`? No.
+The displayed test asks whether some **non-AP** families that are complete mod 13
+already exceed `1/13`.  They do.
 
 | `C` (complete mod 13, non-AP) | `M(C)` |
 |---|---|
@@ -32,9 +33,10 @@ The decisive test: does a **non-AP** family that is **complete mod 13** reach `M
 | `{1,…,11, 38}` (`38≡12`) | `1/12` |
 | `{2,…,12, 14}` (`14≡1`) | `1/8` |
 
-Every non-AP complete-mod-13 family has `M > 1/13` — it is **beaten at another modulus** (`q=12, 8, …`).
-So mod-13 blocking alone cannot force the AP. HYP-4382 is confirmed (only the dilated AP is tight), but the
-rigidity does **not** reduce to a single prime.
+These examples are **beaten at another modulus** (`q=12, 8, ...`).  They prove that
+mod-13 blocking is not sufficient for tightness.  They do not classify every
+complete-mod-13 family and do not prove HYP-4382.  The rigidity therefore does
+**not** reduce to this single-prime condition.
 
 ## Why mod-13 is orthogonal to the AP structure
 

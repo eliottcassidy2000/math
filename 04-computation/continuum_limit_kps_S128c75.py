@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """continuum_limit_kps_S128c75.py -- kind-pasteur S128 cont.75.
-THE CONTINUUM LIMIT F_inf(u), settling the width growth of THM-1146(IV)/(V).
+THE CONTINUUM LIMIT F_inf(u), settling the width growth of THM-1172(IV)/(V).
 
 DERIVATION.  The k1-gap at index j is [j/k1 + 1/(14k1), (j+1)/k1 - 1/(14k1)], of length
 G = 6/(7k1).  Normalise it to [0,1] by dividing by G.  For k_i = k1 + d_i:
@@ -54,7 +54,7 @@ print("  runs: %d ; run widths (as fractions of the period): %s"%(
 print("  run centres: %s"%[round((r[0]+r[-1])/2/N,5) for r in runs])
 print()
 print("### convergence check: finite k1 per-run fraction vs the limit ###")
-print("  the finite values from THM-1146(IV) were:")
+print("  the finite values from THM-1172(IV) were:")
 print("    k1 = 157  0.0382 | 207  0.0386 | 257  0.0428 | 307  0.0423 | 357  0.0448 | 407  0.0467")
 if runs:
     per=max(len(r)/N for r in runs)

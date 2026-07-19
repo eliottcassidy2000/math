@@ -1,0 +1,38 @@
+THM-1156 exact tooth-seam / chi7 replay
+box: 1 <= a,b <= 84; tooth indices |m|,|n| <= 9
+endpoint identities checked: 2547216
+gcd congruences checked: 2547216
+positive compatible seam quanta checked: 51232
+arbitrary-pair directed r_plus checks: 49392
+crossing-regime identities checked: 20256
+containment-regime identities checked: 14584
+ordered compatible pairs: 288
+ordered primitive compatible pairs: 184
+criterion: exists exact seam iff 14*gcd(a,b) divides a+b [constructive Bezout replay PASS]
+r_plus law: least strict penetration is attained and minimal for every pair [PASS]
+caveat: penetration equals intersection only in crossing; containment plateau checked separately [PASS]
+v7 law: compatible pairs have equal v7 and opposite chi7 after stripping [PASS]
+open seam law: both owner combs attain distance exactly 1/14, so neither covers the point [PASS]
+bounded third-support count histogram (diagnostic only): [(6, 192), (9, 50), (10, 36), (11, 6), (12, 2), (13, 2)]
+
+Exact seam graph / arbitrary-label Fano audit
+finite speed-bank seam edges: 144; chi7-crossing edges: 144
+finite speed-bank seam triangles: 0
+all 128 Fano colourings same-colour-pair histogram: [(9, 70), (11, 42), (15, 14), (21, 2)]
+all 128 Fano colourings blocked-line histogram: [(7, 128)]
+proof role: arbitrary-label pigeonhole audit; independent of the Paley tournament quotient
+
+Tournament/Fano audit
+role: quotient perspective only; not the proof of the arbitrary-label Fano count
+vertices: seven section residues F_7 (challenged alternatives: runners, teeth, seam events)
+pair observable: chi7(y-x); switch: x -> y iff chi7(y-x)=+1
+tie Hamiltonian path: (0, 1, 2, 3, 4, 5, 6) (no ties occur)
+score histogram: [(3, 7)]
+directed 3-cycles: 14; Fano-line cycles: 7/7
+SCCs: [(0, 1, 2, 3, 4, 5, 6)]
+Hamiltonian-path count: 189
+edge flips under seam involution x -> -x: 21/21
+nonzero seam pairs mod 7: [(1, 6), (2, 5), (3, 4)]
+preserves: quadratic seam sign and Fano difference incidence
+destroys: gcd quantum, tooth indices, cyclic adjacency, containment, and third support
+scope: local arithmetic/owner law only; no seven-comb overlap constant and no LRC(14) closure

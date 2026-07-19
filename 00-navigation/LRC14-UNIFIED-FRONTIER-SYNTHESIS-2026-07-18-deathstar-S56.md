@@ -7,6 +7,68 @@ hard core, reached from four sides that are provably the same wall.
 
 ---
 
+## 0. S75 live supersession -- the exact deletion crown and the honest inverse map
+
+The older inverse-theorem arrows below are research history, not the current
+logical map.  Four corrections now control how this synthesis is to be read.
+
+1. A strict `1/13` row yields **tight deletion or an all-loose essential
+   crown** (THM-1149).  The twelve-speed equality classification applies only
+   after tight-deletion extraction.  Crown collapse, n=12 equality rigidity,
+   and AP-core extraction are distinct open suppliers.  THM-1149 proves the
+   post-extraction Farey blocker; it does not extract the AP core.
+   Inside the AP locus, however, THM-1171 and boxeph-S118 now prove the full
+   rigidity `M({a,a+d,...,a+11d})=1/13 iff a=d`, with a kernel-pure centered
+   witness.  The honest remaining n=12 supplier is therefore AP extraction
+   from an arbitrary tight set, not spread control within an AP.
+2. The literal formal premise `INVcov` is false (THM-1158): the doubled AP
+   `2*{1,...,13}` covers moduli through 14, has maximum `1/14<1/13`, and has no
+   13-dominant speed.  `ResidualINV` is still an exact counterexample
+   interface/equivalent restatement under the AP bridge, but it is not a
+   noncircular reduction.  A primitive repair must normalize gcd **and
+   rederive Covering**, since Covering changes under dilation.
+3. THM-1153 supplies a new independent all-N constraint.  With `r` deleted
+   speeds and the cited lower LRC input,
+
+   ```text
+   max(V\S) sum_(s in S)1/s >= r(N-2r)/(N(N-r)).
+   ```
+
+   For N=14 this recursively compresses the top seven through `r=6`, giving
+   `v13/v7<613466231/1350` in the compact branch.  Its coefficient vanishes
+   exactly at `r=7`.  THM-1155 reaches the identical ceiling from the general
+   multi-comb density bound.  Consequently the seventh rung needs overlap,
+   ownership, phase, or higher incidence; sharpening first-order union-bound
+   constants cannot cross it.
+4. THM-1147's exact pair-edge determinant is local telemetry.  Accessible
+   index truncation refutes its former max/mean inference, and THM-1148 gives
+   a legal row with actual ratio `638/573<4/3`.  Uniform `r=5`, uniform `r=6`,
+   the seven-wall overlap debt, crown collapse, n=12 equality, and LRC(14)
+   remain open.
+5. The seventh rung now has real arithmetic structure.  THM-1156 proves the
+   `chi_7` tooth-seam bipartition and the zero-seam private-or-triple
+   alternative.  THM-1166 proves every seven-packet has total pair mass
+   `R>=7/24` and global uncovered mass at least `1/12`.  On a lower-LRC
+   protected needle it closes the common-dilate branch by `G/m<=77/12`; for
+   every labelled Fano plane it forces `sum m/G_line>=32/231`, and it supplies
+   an exact adaptive forest/gcd budget.  What remains is the arbitrary
+   mixed-period aggregation, not the former featureless zero coefficient.
+   THM-1176 attacks the same wall from its slowest comb: every counterexample
+   split has `a<13m` or strict harmonic pressure `a sum_i1/b_i>1`, with
+   `b_1<=6a-3`.  Its all-cardinality parity law makes coverage by at most three
+   faster combs impossible, while recursive slow-gap nesting forces
+   `b_1/a<13/6 OR b_2/b_1<13/6 OR b_3/b_2<4/3`.  The remaining packet is thus
+   simultaneously harmonic-crowded, ratio-compressed, and mixed-period.
+6. The proposed local three-tooth spacing bonus in the sparse-gap THM-1160 is
+   false.  THM-1161 gives an exact legal infinite family whose longest-piece
+   factor tends to one.  This removes another plausible shortcut without
+   refuting the global four-comb theorem.
+
+The faithful common carrier is therefore not a runner-order tournament.  It
+is a weighted deletion/comb incidence hypergraph together with protected
+needles, endpoint owners, integer-lift/gcd data, and triple chambers.  Naked
+order tournaments are transitive and erase each of the predicates above.
+
 ## 0. codex-S73 all-scale audit update
 
 The clustered-comb subprogram has moved, but it has not closed the global

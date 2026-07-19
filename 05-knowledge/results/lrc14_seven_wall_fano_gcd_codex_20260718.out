@@ -1,0 +1,44 @@
+THM-1166 seven-wall Fano/gcd exact referee
+========================================================================
+pair-overlap law and universal floor
+folded formula == trapezoid formula: 6360 pairs
+rho(a,b) >= 1/91; unique reduced equality pair: (1,13)
+tail lower bound at ab=27: 59/5292 > 1/91
+
+three-speed finite-exact floor
+strict-low reduced ratios: 106 (larger reduced coordinate b' <=198)
+compatible quotient triples: 173
+minimum candidate pair sum: 11/252 = 1/24 + 1/504
+therefore every three-speed pair sum is >=1/24
+
+quadratic chamber certificate
+Q(C), C=0..7: 0, 1, 12/7, 15/7, 16/7, 15/7, 12/7, 1
+tight on covered chambers C=1,7; unique peak C=4
+R=sum pair overlaps >= 7/24
+global uncovered mass >= 1/12
+common-dilate protected-needle bound G/m <= 77/12
+
+Fano incidence and mixed triple-gcd constants
+labelled Fano planes: 30
+line values f(c), c=0..3: 0, 1/3, 8/21, 1/7
+line mean ceiling mu<= 11/84; discrepancy e<= 11/128
+every plane: sum_line m/G_line >= 32/231
+hence some line has G_line/m <= 1617/32
+
+adaptive forest and localization guardrail
+single endpoint debt: 6/(49s)
+pair endpoint debt: rho(1-rho)/gcd(si,sj)
+forest observable: L*rho - rho(1-rho)/gcd(si,sj)
+odd-core needle empty-star inequalities: 6/6 exact checks
+scope: refutes cover-free fixed-tree localization; no cover is asserted
+
+tournament/carrier audit
+pairwise observable: compare exact line periods G_line (tie by line word)
+switch/gauge: relabel the chosen Fano plane, then sort (G_line,line)
+tie Hamiltonian path: lexicographic order of equal-period lines
+fingerprint: transitive; scores 0..6; cycles 0; SCCs 7; paths 1
+destroyed by tournament: which K7 edges share a Fano line, R_line, endpoint debt
+faithful carrier: labelled Fano incidence + (R_line,G_line) + protected needle
+challenged vertices: runners, pairs, lines, slow gaps, wall events, obligations
+========================================================================
+done

@@ -4,10 +4,11 @@
   The dilated generalization of the empty-circle sieve (`sieve_frac`).  If every speed
   lies at distance `≥ d` from the lattice `n·d·ℤ`, then `t = 1/(n·d)` is `1/n`-lonely:
       ‖v·t‖ = dist(v, n·d·ℤ)/(n·d) ≥ d/(n·d) = 1/n.
-  For `n = 13` this is the WITNESS the compact LRC(14) minimizers were missing: the
-  families `d·{1..12} ∪ {killer}` (which defeat fill-1, far-element descent, the sharp
-  recursion, the ordinary sieve, and the measure bound) all satisfy the band condition
-  at their dilation `d`, so `M ≥ 1/13 > 1/14` by this one explicit rational witness.
+  For `n = 13` this gives `M ≥ 1/13 > 1/14` whenever every speed satisfies the band
+  condition at the chosen dilation `d`.  Containing `d·{1..12}` does not by itself make
+  an extra killer satisfy that condition; the former all-killer reading is withdrawn in
+  the corrected THM-1013.  THM-1149 handles the complementary post-extraction
+  regeneration argument.
 
   Elementary: one division inequality on ℝ/ℤ.  Companion to `sieve_frac`,
   `fill1_perturbation`, `descent_general`.

@@ -1,85 +1,74 @@
 ---
 id: THM-1167
-title: THE GAP-LOCAL ROUTE TO THE FOUR-COMB THEOREM IS REFUTED — the minimising configuration is (k, k+1, k+2, k+3) at gap index ≈ k/4, and there the longest surviving piece falls BELOW the threshold. (I) THE CONSERVATIVE REDUCTION, precisely stated: define W(k₁,k₂,k₃,k₄) = min over ALL k₁-gaps in [0,1] of the longest piece surviving the k₂,k₃,k₄ teeth. If 7·k₄·W > 1 then the four-comb theorem follows for that quadruple *regardless of which gap the core leaves available*, since the 495-core atlas gives component length ≥ 1/70 and every legal k₁ exceeds 13·max(P) ≥ 104, so a full k₁-gap always fits. This would have decoupled the core entirely. (II) IT FAILS. Exhaustive over consecutive-type quadruples with k₁ ∈ [157,340]: **7·k₄·W = 0.76980** at (317,318,319,320), and the value is monotonically DECREASING in k₁ — 0.79013 (157), 0.78193 (197), 0.77651 (237), 0.77267 (277), 0.76980 (317). Individual rows: (300,301,302,303) gives 0.77679, (157,158,159,160) gives 0.79013, (371,374,377,379) gives 0.99015. So the answer to "does the minimising configuration exceed 1.295?" is **NO — it does not even exceed 1**. (III) THE MECHANISM, via THM-1142's law: the worst gap sits at index j ≈ k₁/4 (measured 39 for k₁=157, 49 for 200, 75 for 300), where the raw gap (a − j·d)/(a·b) with d = k₄ − k₁ = 3 evaluates to ≈ 1/(4k₄); subtracting the three tooth widths leaves ≈ 0.77/(7k₄). The linear descent of THM-1142 is exactly what drives it below threshold. (IV) THE CONSEQUENCE, which is the point: **the four-comb theorem cannot be proved gap-locally.** Some k₁-gaps genuinely fail, so any proof must use WHICH gaps the core-safe component makes available. The core cannot be decoupled, and a four-comb bank must track component location rather than quantifying over all gaps
-status: (I) PROVED as a valid sufficient condition. (II) REFUTED by exhaustive exact-rational computation over the stated family — the failing configurations are witnessed, so the gap-local route is definitively closed, not merely unverified. (III) explains (II) via THM-1142. (IV) follows. **Uniform r=5 remains OPEN**, and this session narrows how it can be attacked rather than advancing it
-source: kind-pasteur-2026-07-18-S128 (cont.72; owner: find the minimising configuration and confirm it exceeds 1.295)
+title: Exact finite witnesses refute the uniform minimum-over-all-gaps four-comb certificate
+status: The displayed sufficient condition is valid and its universal premise is REFUTED by exact-rational witnesses in the stated finite family. THM-1161 strengthens the negative to an exact infinite legal family and sharp factor one. Uniform r=5 remains OPEN
+source: kind-pasteur-2026-07-18-S128 (cont.72; corrected codex-S75)
 depends_on:
-  - THM-1143    # the three-tooth target this tests
-  - THM-1142    # the exact gap law that explains the failure
-related: [THM-1137, THM-1097, MISTAKE-169]
+  - THM-1160
+  - THM-1142
+related: [THM-1137, THM-1097, THM-1161, THM-1162, MISTAKE-169]
 script: 04-computation/min_config_kps_S128c72.py (+ .out)
 ---
 
-# THM-1167 — the gap-local route is refuted
+# THM-1167 — the uniform all-gap certificate is refuted
 
-THM-1143 reduced the four-comb theorem to a three-tooth spacing statement inside one
-k₁-gap, with a measured margin of 3.05 against a required 1.295. The obvious next step was
-to find the minimising configuration and confirm the margin survives it. It does not.
+THM-1160 proposed a three-tooth spacing statement inside one `k1`-gap,
+with a measured margin of `3.05` against a required `1.295`.  The obvious
+next step was to minimize that margin.  It does not survive.
 
-## (I) The reduction that would have sufficed
+## 1. The sufficient condition that was tested
 
-> **W(k₁,k₂,k₃,k₄) := min over all k₁-gaps in [0,1] of the longest piece surviving the
-> k₂,k₃,k₄ teeth.**
+Define
 
-If 7·k₄·W > 1, the four-comb theorem holds for that quadruple **whatever gap the core
-leaves**, because the 495-core atlas gives a component of length ≥ 1/70 and every legal
-k₁ > 13·max(P) ≥ 104, so at least one full k₁-gap fits inside. That would have removed the
-core from the problem entirely — which is why it was worth testing first.
+```text
+W(k1,k2,k3,k4)
+  = min over all k1-gaps in [0,1]
+      (longest piece surviving the k2,k3,k4 teeth).
+```
 
-## (II) It fails, and not narrowly
+If `7*k4*W>1`, the four-comb theorem holds for that quadruple regardless of
+which full `k1`-gap the core leaves available.  The 495-core atlas supplies a
+component of length at least `1/70`, and every legal `k1>13*max(P)>=104`, so
+such a component contains a full `k1`-gap.  This is a valid sufficient
+condition; it would have removed core position from the problem.
 
-Exhaustive in exact rationals over consecutive-type quadruples, k₁ ∈ [157,340]:
+## 2. Exact finite witnesses show that it fails
 
-| k₁ | minimising quadruple | 7·k₄·W |
-|---|---|---|
-| 157 | (157,158,159,160) | 0.79013 |
-| 197 | (197,198,199,200) | 0.78193 |
-| 237 | (237,238,239,240) | 0.77651 |
-| 277 | (277,278,279,280) | 0.77267 |
-| **317** | **(317,318,319,320)** | **0.76980** |
+The exact-rational search over the stated consecutive-type family gives:
 
-Monotonically decreasing in k₁. Individual rows confirm the picture: (300,301,302,303)
-gives 0.77679 and (157,158,159,160) gives 0.79013, while looser quadruples such as
-(157,170,183,196) reach 1.26677 and (157,158,159,161) reach 1.37107.
+| `k1` | minimizing quadruple | `7*k4*W` |
+|---:|---|---:|
+| 157 | `(157,158,159,160)` | 0.79013 |
+| 197 | `(197,198,199,200)` | 0.78193 |
+| 237 | `(237,238,239,240)` | 0.77651 |
+| 277 | `(277,278,279,280)` | 0.77267 |
+| 317 | `(317,318,319,320)` | 0.76980 |
 
-So the answer to the question asked is **no**: the minimising configuration does not exceed
-1.295, and it does not even exceed 1.
+Thus the proposed universal certificate does not exceed `1.295`; it does
+not even reach `1` on these witnessed rows.
 
-## (III) Why — THM-1142's law drives it under
+## 3. Mechanism
 
-The worst gap sits at index **j ≈ k₁/4** (measured: 39 for k₁ = 157, 49 for 200, 75 for
-300). By THM-1142 the raw gap from tooth j of a to tooth j+1 of b is (a − j·d)/(a·b); with
-consecutive killers d = k₄ − k₁ = 3 and j = k₁/4 this is
+The worst gap sits near `j=k1/4`.  THM-1142 gives the raw adjacent-tooth gap
 
-> (k₁ − 3k₁/4)/(k₁k₄) = 1/(4k₄),
+```text
+(a-jd)/(ab).
+```
 
-and subtracting the three tooth widths (≈ 3/(7k₄)) leaves ≈ 0.77/(7k₄). The linear descent
-that THM-1142 identified as the *source* of the useful nonuniformity is also what pushes
-the worst gap below threshold. Both facts come from the same law.
+For consecutive killers, `d=k4-k1=3`, and at `j=k1/4` this is about
+`1/(4k4)`.  Subtracting the three tooth widths leaves about
+`0.77/(7k4)`.  The same linear descent that creates useful nonuniformity
+also pushes the worst gap below threshold.
 
-## (IV) What this means
+## 4. Correct scope
 
-**The four-comb theorem cannot be proved gap-locally.** Some k₁-gaps genuinely fail — a
-proof cannot quantify over all of them and must use *which* gaps the core-safe component
-actually makes available. The core does not decouple.
+The **uniform minimum-over-all-gaps certificate** cannot prove the four-comb
+theorem.  This does not exclude every argument one might call gap-local.
+A successful proof must use which gaps the whole core-safe set actually
+makes available.  THM-1161 strengthens this bounded negative to an exact
+infinite legal family and proves sharp local factor one.  THM-1162 records
+positive whole-safe-set telemetry, but only on finite killer banks.
 
-This closes a route rather than opening one, but it closes it definitively: the failing
-configurations are exhibited in exact arithmetic, not inferred from samples. Given how much
-of this thread has been sampled claims overturned later, a witnessed negative is worth more
-than another positive census.
-
-## Honest status
-
-**Uniform r=5 remains open.** This session narrows how it can be attacked: any four-comb
-bank must be component-aware. The three-tooth statement of THM-1143 is still the right local
-object, but it must be conditioned on the gap's position within the component, not proved
-uniformly over gaps.
-
-## Named next
-- Re-pose the three-tooth statement *conditionally*: for gaps that a core-safe component can
-  actually contain, is the bound restored? The failing indices cluster at j ≈ k₁/4, so the
-  question is whether a component of length ≥ 1/70 must contain a gap away from that index.
-- That is a statement about where core-safe components sit relative to killer teeth — which
-  is exactly the coupling THM-1094 and THM-1097 handle with their exact endpoint banks. The
-  four-comb version likely needs the same machinery rather than an elementary shortcut.
-- Do not retry any gap-uniform formulation; (II) rules out the whole family.
+Uniform `r=5` therefore remains open.  Do not retry a universal all-gap
+spacing bonus; the live object is global selection and phase coupling among
+wall-event stalks.

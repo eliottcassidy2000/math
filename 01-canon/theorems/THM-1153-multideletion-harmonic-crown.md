@@ -11,7 +11,9 @@ depends_on:
 related: [THM-1149, THM-1152, THM-1025, HYP-7678]
 script: 04-computation/lrc14_multideletion_harmonic_crown_codex_20260718.py
 output: 05-knowledge/results/lrc14_multideletion_harmonic_crown_codex_20260718.out
-lean: 04-computation/lean/TournamentH7/TournamentH7/FragmentationLemma.lean (`killer_budget` supplies the analytic fragmentation inequality)
+lean:
+  - 04-computation/lean/TournamentH7/TournamentH7/FragmentationLemma.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/LRCMultiDeletionCrown.lean
 ---
 
 # THM-1153 -- the multi-deletion harmonic crown
@@ -29,7 +31,7 @@ simultaneous reciprocal obligation carried by every deletion cut.
 ## 1. All-N harmonic-crown theorem
 
 > **Theorem A (multi-deletion harmonic crown).** Let `M(V)<1/N`. Choose
-> `S subset V` with `|S|=r<N/2`, put `W=V\S`, and let `m=max W`. Then
+> `S subset V` with `1<=|S|=r<N/2`, put `W=V\S`, and let `m=max W`. Then
 >
 > ```text
 > sum_(s in S) 1/s >= (N-2r)(M(W)-1/N)/m.            (1)
@@ -83,8 +85,16 @@ which proves (2). This is exactly the measure-theoretic content of the
 kernel-checked `FragmentationLemma.killer_budget`; the new step is feeding it
 the cardinality-sensitive lower-LRC fattening. ∎
 
-The same non-strict conclusion holds under `M(V)<=1/N`: apply the strict
-argument at radius `1/N+epsilon` and let `epsilon` decrease to zero.
+The same non-strict conclusion holds under `M(V)<=1/N`. If `M(W)<=1/N`, it
+is trivial. Otherwise choose
+`alpha=1/N+epsilon<min(M(W),1/(2r))`, apply fragmentation at radius `alpha`,
+and obtain
+
+```text
+sum_(s in S)1/s >= (M(W)-alpha)(1-2r alpha)/(alpha m).
+```
+
+Letting `epsilon` decrease to zero gives (1).
 
 If `s0=min S`, then `sum 1/s<=r/s0`. Consequently (2) gives
 
@@ -119,10 +129,14 @@ m sum_(s in S) 1/s >= c_r.                            (5)
 | 6 | `3/28` | `<56` |
 | 7 | `0` | no information |
 
-The vanishing at seven is exact, not numerical looseness. Seven danger combs
+The theorem's informative range is `r<7`. At `r=7`, the same budget has the
+zero boundary continuation displayed in the table; for `r=8` its algebraic
+coefficient is negative and the continuation is trivial. The vanishing at
+seven is exact, not numerical looseness. Seven danger combs
 each have bulk duty `1/7`, so first-order density can tile the protected
-needle with no deficit. For `r=8` the coefficient is negative and (5) is
-trivial. This derives the apex-7 wall directly from lower-case fattening.
+needle with no deficit. This derives the apex-7 wall for the
+bulk-plus-endpoint fragmentation/union-bound scheme directly from lower-case
+fattening.
 
 ## 3. Retaining harmonic mass sharply compresses the top seven
 
@@ -153,8 +167,14 @@ v13/v7 < 613466231/1350 = 454419.430370... .          (7)
 
 Multiplying only the five scalar bounds after the compact seed gives
 `173044872`; retaining harmonic mass improves this by a factor
-`380.804297...`. The earlier auxiliary `1/13` product was
-`20388441216/7`; (7) is better by a factor `6409.572885...`.
+`380.804297...`. The cruder auxiliary-`1/13` product calculation gives
+`20388441216/7`; explicitly it is
+
+```text
+13 product_(r=2)^6 [13r(14-r)/((r-1)(13-2r))].
+```
+
+Thus (7) is better by a factor `6409.572885...`.
 
 Without THM-1008's compact seed, the `r=1` crown gives `x12<=91/6`, and the
 same recursion still gives
@@ -198,8 +218,9 @@ citation hypotheses; this theorem does not independently prove those cases.
 ## 6. Kakeya needle, Fano/chi7, and tournament audit
 
 The protected interval `I` is the correct Kakeya needle: a one-dimensional
-carrier that every deleted comb must hit, with endpoint leakage charged by
-`1/s`. For `r<=6`, bulk duty leaves positive length and harmonic endpoint
+carrier that the **union** of the deleted combs must cover, with endpoint
+leakage charged by `1/s`. An individual deleted speed may be redundant on
+this chosen needle. For `r<=6`, bulk duty leaves positive length and harmonic endpoint
 debt controls scale. At `r=7`, only overlap, ownership, and boundary incidence
 can distinguish a cover from a partition.
 
@@ -223,17 +244,20 @@ That is a precise next target, not a claimed closure.
 
 ## 7. Verification and honest frontier
 
-The companion exact script checks the all-`N` algebra for every `3<=N<=100`,
+The new Lean module formalizes the actual-radius needle-budget consumer and
+the exact triangular ceiling; production of the lower-core interval remains
+an explicit analytic input. The companion exact script checks the all-`N` algebra for every `3<=N<=100`,
 all legal `r`, every displayed fraction, both recurrence seeds, the scalar
 comparison factors, and the deletion-obligation tournament fingerprint.
 Normal and optimized runs are byte-identical. Frozen hashes are
 
 ```text
-source  00c5f5e3082f064d57641e25499644110598339e311c83f6f0084c6bb1e67eeb
-output  88fe9ad634547deb1f732e5350a9437ee2d3f87574abe72baf634ccbbd1a4ec8
+source  a902bbcca9bd82b049c59359e185ba2206e7adf5e18984ec700225bc6d2de252
+output  957c9b47cf23b0749b010d9385d41cf5a83b0e9ba540a391810dae03211b0de5
 ```
 
 What is proved is a universal recursive compression through the sixth
-deletion and an exact explanation of where first-order density stops. What
-remains open is precisely the seventh-comb overlap/Fano debt, crown collapse,
-the twelve-speed equality classification, and LRC(14).
+deletion and an exact explanation of where first-order density stops. The
+remaining frontier includes the seventh-comb overlap/Fano debt, crown
+collapse, the uniform `r=5`/`r=6` tails, the twelve-speed equality
+classification, and LRC(14).

@@ -1,0 +1,48 @@
+ALGEBRA
+normalized_gap_length=6/7
+six_bulk_contribution=36/49
+endpoint_contribution_at_a_sum_1_over_b=1=6/49
+total_at_equality=6/7
+survivor_lower_bound=(6/49)*(1/a-sum_i(1/b_i))
+component_span_without_a_full_slow_gap<13/(7a)
+all_cardinalities: r combs covering a c-slow gap force c*sum(1/d_i)>7-r
+r<=3_cover_impossible=true
+distinctness_sharpening=b_1<=6a-3
+nested_cutoffs: r5 d1<=floor((5c-4)/2); r4 d1<=floor((8c-9)/6)
+toothpick_ladder: b1/a<13/6 or b2/b1<13/6 or b3/b2<4/3
+
+EQUALITY_RIGIDITY
+length_saturation: 6*b_i=a*(7*h_i+1)
+phase_saturation: 12 divides (h_i+1)*(2*k+1)
+therefore_h_i_mod_4=3 and (7*h_i+1)/2 is odd
+six_term_parity_contradiction: even=odd
+modular_equivalence_checks=7056
+endpoint_aligned_residue_rows=980
+length_saturation_checks=17850
+length_saturated_rows=196
+odd_six_tuple_parity_checks=3
+
+REPRESENTATIVE_ALGEBRA
+a=10_bs=61,62,63,64,65,66
+a_sum_1_over_b=515477887/545152608
+certified_survivor_lower_bound=29674721/44520796320
+phase_example_a=12_period=6
+
+TOURNAMENT_QUOTIENT_AUDIT
+observable=sign(a/b_i-a/b_j); tie_gauge=increasing_speed_label
+score_histogram=0,1,2,3,4,5
+directed_3_cycles=0
+scc_sizes=1,1,1,1,1,1
+hamiltonian_path_count=1
+tie_hamiltonian_path=14,16,20,22,26,32
+
+DETERMINISTIC_CLOSED_TOOTH_TELEMETRY_NOT_PROOF
+packets=4166
+slow_gaps=27730
+closed_cover_candidates=0
+minimum_survivor=10553/737352
+minimizer=a:7 bs:9,10,11,12,19,21 k:1
+representative_a=14 period=14 tested_clocks=14 min_survivor=17719/1627920
+representative_a=100 period=100 tested_clocks=5 min_survivor=7179609/5632704350
+representative_a=700 period=700 tested_clocks=4 min_survivor=47253328954603/2474923449874075200
+representative_a=12 period=1 tested_clocks=12 min_survivor=41/1470

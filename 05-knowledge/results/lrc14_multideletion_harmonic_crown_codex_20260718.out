@@ -9,7 +9,7 @@ r=3: c_r=12/77; scalar min(S)/m < 77/4
 r=4: c_r=6/35; scalar min(S)/m < 70/3
 r=5: c_r=10/63; scalar min(S)/m < 63/2
 r=6: c_r=3/28; scalar min(S)/m < 56
-r=7: c_r=0; scalar min(S)/m < wall
+r=7: c_r=0; scalar consequence: no information
 r=7 coefficient: EXACTLY ZERO
 r=8 coefficient: NEGATIVE
 
@@ -37,4 +37,4 @@ preserved: dependency rank and wall location
 destroyed: tooth phases, pair/triple overlaps, boundary excess
 faithful carrier: weighted nested-deletion hypergraph + endpoint sidecar
 
-source_sha256=00c5f5e3082f064d57641e25499644110598339e311c83f6f0084c6bb1e67eeb
+source_sha256=a902bbcca9bd82b049c59359e185ba2206e7adf5e18984ec700225bc6d2de252

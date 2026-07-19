@@ -6,7 +6,7 @@ In the continuum model the teeth sit at centres (7/6)*frac(-d_i u) - 1/12, width
 For small u, frac(-d_i u) = 1 - d_i u, so tooth i has LEFT EDGE 1 - (7/6) d_i u, and the
 tooth with the LARGEST d_i enters first.  So the linear branch is
         F(u) = 1 - (7/6) d_max u ,      entry at   u = 5/(7 d_max) .
-At d_max = 3 that is slope 7/2 and entry 5/21 -- matching THM-1147 exactly.
+At d_max = 3 that is slope 7/2 and entry 5/21 -- matching THM-1173 exactly.
 PREDICTION TO TEST: per-run width 1/(7 d_max), and total bad growing with d_max until it
 exceeds the safe measure 0.164.  Compute the exact total bad measure for many (d2,d3,d4).
 PRINT DATA ONLY."""

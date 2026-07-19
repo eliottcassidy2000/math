@@ -1,0 +1,35 @@
+THM-1166 seven-wall Fano/gcd discrepancy referee
+period-cell envelope checks: 208334
+sharp discrepancy: |mu(I cap pullback(A))-rho*|I|| <= rho(1-rho)/g
+single-comb endpoint constant: 6/49
+distinct-pair endpoint constant: 13/196
+
+primitive pair scan: 76115 pairs with b<=500
+pair-density range: [1/91, 1/14]
+lower equality: [(1, 13)]; upper equality: [(1, 2)]
+all-range tails: AB>=27 closes the lower bound; AB>=5 closes the upper bound
+
+Fano activation masks checked: 128
+point degrees: [(0, 3), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3)]
+pair degrees: all 21 edges occur once
+Q(C), C=0..7: [Fraction(0, 1), Fraction(1, 1), Fraction(12, 7), Fraction(15, 7), Fraction(16, 7), Fraction(15, 7), Fraction(12, 7), Fraction(1, 1)]
+optimal quadratic coefficient: 2/7 (forced by C=7)
+
+necessary selected-line inequality:
+  H_line + (13/28) sum_pairs(1/gcd) >= (3/13)|I|
+with |I|>=1/(7m):
+  m[H_line + (13/28) sum_pairs(1/gcd)] >= 3/91
+common-dilate line cap: 271/84/G
+common-dilate consequence: G/m <= 3523/36 = 97.861111111111
+
+Tournament/carrier audit
+vertices: seven Fano-line proof obligations (not runners)
+pair observable: scalar debt comparison; switch: larger debt first; ties: displayed line order
+tie Hamiltonian path: (0, 1, 2, 3, 4, 5, 6)
+score histogram: [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1)]
+directed cycles: 0; SCCs: 7 singletons; Hamiltonian paths: 1
+preserves: priority only
+destroys: point-line incidence, three gcd labels, and interval position
+faithful carrier: weighted Fano hypergraph + protected-interval endpoint sidecar
+
+source_sha256=51516e7156ada06424af7cf4b594d70a73fb3e13d87db5db1f8170063615a340

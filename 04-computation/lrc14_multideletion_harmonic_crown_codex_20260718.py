@@ -74,9 +74,12 @@ def main() -> None:
     print("LRC14 actual-threshold table")
     for r in range(1, 8):
         c = crown_coefficient(14, r)
-        scalar = fmt(scalar_ratio(14, r)) if 2 * r < 14 else "wall"
-        relation = "<" if r >= 2 else "<="
-        print(f"r={r}: c_r={fmt(c)}; scalar min(S)/m {relation} {scalar}")
+        if 2 * r < 14:
+            scalar = fmt(scalar_ratio(14, r))
+            relation = "<" if r >= 2 else "<="
+            print(f"r={r}: c_r={fmt(c)}; scalar min(S)/m {relation} {scalar}")
+        else:
+            print(f"r={r}: c_r={fmt(c)}; scalar consequence: no information")
     assert crown_coefficient(14, 7) == 0
     assert crown_coefficient(14, 8) < 0
     print("r=7 coefficient: EXACTLY ZERO")
@@ -157,10 +160,26 @@ def main() -> None:
                     and (c, a) in edges
                 )
     assert directed_triangles == 0
+    strongly_connected_components = sum(
+        all(not ((a, b) in edges and (b, a) in edges) for b in vertices if b != a)
+        for a in vertices
+    )
+    assert strongly_connected_components == 7
+    from itertools import permutations
+
+    hamiltonian_paths = sum(
+        all((path[i], path[i + 1]) in edges for i in range(len(path) - 1))
+        for path in permutations(vertices)
+    )
+    assert hamiltonian_paths == 1
     print("tournament/deletion-obligation audit")
     print(f"vertices: {vertices}")
     print(f"score histogram: {sorted(scores)}")
-    print("directed cycles: 0; SCCs: 7 singletons; Hamiltonian paths: 1")
+    print(
+        "directed cycles: 0; "
+        f"SCCs: {strongly_connected_components} singletons; "
+        f"Hamiltonian paths: {hamiltonian_paths}"
+    )
     print("challenged assumption: vertices are deletion cuts, not runners")
     print("preserved: dependency rank and wall location")
     print("destroyed: tooth phases, pair/triple overlaps, boundary excess")

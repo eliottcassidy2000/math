@@ -4,7 +4,7 @@
   run centres: [0.2619, 0.7381]
 
 ### convergence check: finite k1 per-run fraction vs the limit ###
-  the finite values from THM-1146(IV) were:
+  the finite values from THM-1172(IV) were:
     k1 = 157  0.0382 | 207  0.0386 | 257  0.0428 | 307  0.0423 | 357  0.0448 | 407  0.0467
   CONTINUUM per-run width  = 0.047669
   CONTINUUM total bad      = 0.095337

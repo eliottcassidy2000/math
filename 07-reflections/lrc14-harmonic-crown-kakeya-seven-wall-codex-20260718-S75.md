@@ -3,8 +3,8 @@
 The long LRC14 program has repeatedly found the same obstruction in different
 coordinates.  The useful advance of THM-1153 is not just another numerical
 bound.  It identifies which earlier views were shadows of one object and
-shows, by an all-`N` calculation, why every first-order density proof stops at
-seven.
+shows, by an all-`N` calculation, why the bulk-plus-endpoint
+fragmentation/union-bound scheme stops at seven.
 
 ## What the accumulated viewpoints actually retain
 
@@ -51,7 +51,8 @@ of length
 L >= 2(1/(N-r)-1/N)/m = 2r/(N(N-r)m).
 ```
 
-The deleted danger combs must cover this interval.  Fragmentation therefore
+The union of the deleted danger combs must cover this interval; an individual
+deleted comb may be redundant there. Fragmentation therefore
 forces
 
 ```text
@@ -60,7 +61,7 @@ sum_(s in S)1/s >= r(N-2r)/(N(N-r)m).
 
 This is the multi-deletion harmonic crown.  It is simultaneously:
 
-- a Kakeya-needle statement (every deleted comb must hit one protected
+- a Kakeya-needle statement (the deleted combs jointly cover one protected
   interval);
 - a weighted Boolean-lattice statement (every deletion cut has reciprocal
   capacity);
@@ -103,7 +104,8 @@ can pay for any first-order discrepancy.  The missing currency is overlap:
 if arithmetic forces pair or triple overlap inside the needle, an exact cover
 must compensate it with endpoint excess, which again constrains scale.
 
-This is where the still-open Fano/`chi_7` probe belongs.  Seven is not merely
+When endpoint excess is small this forces a near-partition; without that
+qualification it does not. This is where the still-open Fano/`chi_7` probe belongs. Seven is not merely
 the number of runner vertices.  It is the number of comb families in a
 bulk-duty-one cover.  A Fano-shaped triple-incidence carrier can record
 whether pair overlaps coincide in the same chambers; a tournament cannot.
@@ -114,10 +116,10 @@ The `j=4` flood tail and the uniform `r=5` component problem are a different
 slice of this same geometry.  Their four inserted combs lie below the global
 seven-density wall, so total mass is not the obstruction; endpoint deletion
 and coalescence are.  THM-1148's exact cones and `Q4` gate solve large regions
-of that slice but leave the ray `m(3,4,5,6)`.  The harmonic crown does not
-close that ray.  It says how such local four-comb packets must sit inside any
-global top-seven counterexample and supplies a finite projective ceiling for
-the surrounding scales.
+of that slice but leave, among other residuals, the ray `m(3,4,5,6)`.  The
+harmonic crown does not close that ray.  It says how such local four-comb
+packets must sit inside any global top-seven counterexample and supplies a
+finite projective ceiling for the surrounding scales.
 
 ## What remains genuinely separate
 

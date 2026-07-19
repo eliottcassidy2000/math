@@ -1,22 +1,26 @@
-# THM-1029 — Lens composition: stability × covering bounds each non-AP core to finitely many candidate families (death-star-2026-07-18-S56)
+# THM-1029 — Conditional finite-candidate lens after a loose core is fixed (death-star-S56; scope corrected codex-S74)
 
-**Status:** a **method**, not a closure. Composing two proved lenses — the stability bound (THM-1028)
-and the covering/lcm bound (boxeph THM-1017) — reduces boxeph's inverse theorem for each non-AP core to
-a **finite** check over candidate far-elements. Verified to eliminate the near-AP core family
+**Status:** a **conditional method**, not a closure. After fixing a deletion core with
+`delta=M(W)-1/13>0` that misses 13 and 14, composing the stability and covering/lcm bounds leaves
+a **finite** check over candidate far elements. Verified to eliminate the near-AP core family
 `{1..11,X}`. Does **not** close LRC(14) (infinitely many cores; the check is per-core), but it is the
 concrete "bound the crux gradually with relations between lenses" mechanism, and it works on every core
-tested. Source HYP-7305/7362. Scripts: `04-computation/lrc_lens_close_deathstar_S56.py`,
+tested. The compact `1/13` inverse target is stronger than LRC(14), not equivalent to it. Source
+HYP-7305/7362. Scripts: `04-computation/lrc_lens_close_deathstar_S56.py`,
 `lrc_finite_candidate_deathstar_S56.py`.
 
-Setting: `V = W ∪ {v_max}` primitive covering, `M(V) < 1/13`, `W = V∖{v_max}` (`|W|=12`), `W` **not** a
-dilated AP. Goal (the inverse theorem): show no such `V` exists.
+Setting: `V = W ∪ {v_max}` primitive Cover14, `M(V)<1/13`, `W=V∖{v_max}` (`|W|=12`),
+`delta=M(W)-1/13>0`, and `W` misses 13 and 14. Goal in this chart: show no such `V` exists.
+The hypothesis `delta>0` is explicit because excluding a non-AP equality core is itself the open
+n=12 equality problem.
 
 ---
 
 ## The two lenses and their composition
 
-**Lens 1 — stability (THM-1028, PROVED).** `M(V)<1/13`, `W` non-AP ⟹ `v_max ≤ max(W)/(13δ)`,
-`δ = M(W) − 1/13 > 0` (the level-`1/13` good component of the non-tight core fits in one `v_max`-arc).
+**Lens 1 — stability (THM-1028, PROVED under `delta>0`).** `M(V)<1/13` implies
+`v_max<=max(W)/(13delta)` (the level-`1/13` good component of the loose core fits in one
+`v_max` arc).
 
 **Lens 2 — covering/lcm (boxeph THM-1017, PROVED).** If `W` misses 13 and 14 (the AP-core case), then
 `13 ∣ v_max` and `14 ∣ v_max`, so `182 = lcm(13,14) ∣ v_max`, hence `v_max ∈ 182·ℤ`, `v_max ≥ 182`.
@@ -45,14 +49,15 @@ one point that fails.
 
 ## What this is, and is not
 
-**Is:** a reduction of the inverse theorem to, per non-AP core, a finite candidate check — driven by
+**Is:** a reduction of this fixed loose-core chart to a finite candidate check — driven by
 *relations between lenses* (stability caps from above, covering pins to `182·ℤ` from below). It is the
 first argument that turns "the far element could be anything" into "the far element is one of `≈
 max(W)/2366δ` explicit values," and it eliminates every core tested.
 
 **Is not:** a closure. The number of non-AP cores is infinite. Two gaps remain:
-1. **Compact cores (`max(W) < 182`):** finitely many candidate far-elements *per* core, but infinitely
-   many cores (`C(181,12)` scale). Closing needs a *uniform* reason every candidate fails — the tested
+1. **Compact cores (`max(W) < 182`):** finitely many candidate far-elements *per* core and an enormous
+   but finite core bank (on the order of `C(181,12)`). Closing without that full enumeration needs a
+   *uniform* reason every candidate fails — the tested
    cores all satisfy `M(V) = M(sub-AP)` (a `{1..k}` prefix dominates and the far element can't drag `M`
    below `1/(k+1) > 1/13`); promoting this to all compact non-AP cores is the residual finite/structural
    lemma.
@@ -96,16 +101,16 @@ maximizer** (`‖182k·2/25‖ = 11/25, … ≥ 1/13`), so it does not lower `M`
 level-`1/13` good set sits at denominators tied to `W` (here 25), and the far element's arcs
 (denominator `182k`) do **not align** with it, so the far element cannot cover it — hence `M(V)=M(W)`.
 
-**This is the alignment wall again.** The AP `{1,…,12}` is the *unique* core whose good set (at
-denominator 13) aligns with `182 = 14·13` — that alignment is exactly the deep well, the *only* place
-the far element can cover and drop `M` below `1/13`. So "compact non-AP cores are eliminated" is **not**
-a separable inequality lemma; it is the statement that only the AP's good set is `182`-aligned — the
-inverse theorem itself, viewed from the good-set/alignment side. The finite check is verified on every
+**This is the alignment wall again.** The AP `{1,…,12}` is the known core whose good set (at
+denominator 13) aligns with `182 = 14·13`; proving it is the *unique* such core is precisely the
+stronger alignment-rigidity supplier. So "compact non-AP cores are eliminated" is **not**
+a separable inequality lemma; it is the stronger `182`-alignment rigidity target, viewed from the
+good-set/alignment side. The finite check is verified on every
 core tried, but its *uniform* reason is the wall, not a gap.
 
 **Honest correction:** THM-1029's finite-candidate reduction stands (stability × covering ⟹ finitely
 many candidates), but the hoped-for uniform closure of the compact case does not reduce to `δ >
-max/2366` (false) — it reduces to the `182`-alignment rigidity, which is LRC(14). Scripts:
+max/2366` (false) — it reduces to the stronger `182`-alignment rigidity supplier. Scripts:
 `lrc_gap_lemma_deathstar_S56.py` (the refutation), `lrc_check24_deathstar_S56.py` (the `M(V)=M(W)`
 mechanism), `lrc_valid_core_deathstar_S56.py`.
 

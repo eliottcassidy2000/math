@@ -626,3 +626,44 @@ needs moving two-sheet needles, private stalks, strip index, and an oriented
 fringe bit.  Compact crown collapse needs the private/`>=3` overlap chamber
 complex plus shared Cover14 lift congruences.  The corresponding naked
 tournaments are transitive shadows and do not preserve the target predicate.
+
+## 2026-07-18 S75 seventh-rung picture -- Fano periods become quantitative
+
+THM-1153 and THM-1155 independently show that bulk-plus-endpoint density has
+exact coefficient zero at seven deleted combs.  THM-1156 retains the local
+tooth-seam data: exact abutments flip the 7-primitive quadratic colour, so a
+zero seam inside a closed covered needle needs third support.
+
+THM-1166 supplies the first quantitative arithmetic beyond that wall.  Its
+exact three-speed bank gives total seven-packet pair mass `R>=7/24`; the
+optimal chamber polynomial
+
+```text
+Q(C)=C-(2/7)choose(C,2)=C(8-C)/7
+```
+
+then gives global uncovered mass at least `1/12`.  On the actual protected
+needle this closes the common-dilate branch by `G/m<=77/12`.  For every one
+of the 30 labelled Fano planes it gives
+
+```text
+sum_line m/gcd(line)>=32/231,
+```
+
+and every adaptive forest satisfies an exact period-corrected Hunter budget.
+The remaining supplier is a mixed-period aggregation that turns one of those
+necessary inequalities into a contradiction.  A static runner tournament
+does not preserve the required line incidence, periods, and endpoint debt.
+
+THM-1176 supplies a complementary gap-based consumer.  If the slowest of the
+seven combs is `a` and the retained maximum is `m`, then a counterexample
+forces `a<13m` or `a sum_i1/b_i>1`.  Equality is excluded by an exact
+phase-parity argument.  More generally, `r` faster combs covering a complete
+slow gap force `c sum_i1/d_i>7-r`; recursive nesting stops after two steps and
+forces an adjacent ratio below `13/6,13/6,4/3` on the first three rungs.  The
+analytic producer is the sharp one-comb interval discrepancy; the arithmetic
+pressure, parity, and integer-cutoff consumers are the appropriate Lean
+boundary.
+
+No theorem in this picture yet proves LRC(14) without the named open
+suppliers.

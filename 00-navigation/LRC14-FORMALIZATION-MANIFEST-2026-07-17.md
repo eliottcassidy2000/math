@@ -1714,3 +1714,58 @@ the primitive shape has start-set covering radius `9/56`, while legality and
 THM-1148's core floor force a longer phase needle at every scale.  Uniform
 `r=5` away from this ray remains open.  None of the finite orbit/core/ray
 banks or the erosion atlas has been promoted to kernel code.
+
+`TournamentH7.LRCMultiDeletionCrown` is root-imported for THM-1153.  It
+kernel-checks two proof consumers:
+
+- `harmonic_budget_fourteenth` turns a protected needle, seven-radius
+  fragmentation bounds, collective coverage, and `r<=6` into the exact
+  reciprocal budget `ell0*(7-r)<=sum 1/w`; and
+- `compact_top_seven_ceiling` clears the five triangular harmonic rungs from
+  `x13=1`, `x12<13` to the exact integer inequality
+  `1350*x7<613466231`.
+
+The module contains no `sorry`, `admit`, or `native_decide`; its printed axiom
+set is the standard `[propext, Classical.choice, Quot.sound]`.  Constructing
+the protected needle with the lower-LRC length is still the external analytic
+producer.  The coefficient is positive only through six deletions.  The
+independent `LRCEssentialRegion.multi_speed_density_bound` of THM-1155 has the
+same zero at seven, so neither formal module claims a seventh-rung overlap
+inequality or LRC(14).
+
+`TournamentH7.LRCToothSeamChi7` and
+`TournamentH7.LRCSevenWallFanoGCD` are root-imported for THM-1156 and
+THM-1166.  The former kernel-checks the exact seam numerator, abutment
+divisibility, the directed seam quantum, and the finite `chi_7` colour/Fano
+arithmetic.  The latter kernel-checks:
+
+- the complete quadratic depth table `Q(C)=C(8-C)/7`, its occupied floor,
+  and the unique `C=4` peak;
+- the cleared `35`-triple implication `R>=7/24` and the uncovered-mass
+  consumer `U>=1/12`;
+- the common-dilate consumer `12G<=77m`;
+- the exact line constants `11/84`, `11/128`, `32/231`, and `1617/32`;
+- the cleared metric-Fano budget; and
+- the explicit seven-line averaging step.
+
+The Fano module's targeted build is clean, its printed axiom set is the
+standard `[propext, Classical.choice, Quot.sound]`, and it contains no
+`sorry`, `admit`, or `native_decide`.  Its analytic producers remain explicit:
+the exact pair-overlap identity, the finite-exact three-speed floor, and the
+periodic remainder inequality are proved in THM-1166 and its independent
+Python referees, not reconstructed in Lean.  Neither module claims the open
+mixed-period aggregation or LRC(14).
+
+`TournamentH7.LRCAPCentering` is root-imported as the kernel companion to
+THM-1171 and boxeph-S118.  It proves the centered-band integer inequality and
+its real common-witness lift.  Together with the elementary even-step and
+modular-inverse arguments, this closes the AP-internal statement
+
+```text
+M({a,a+d,...,a+11d})=1/13  iff  a=d.
+```
+
+The module is kernel-pure with the standard axiom trio and no proof
+placeholders.  This does **not** prove that an arbitrary tight twelve-set is
+an AP, nor does it extract a tight deletion from an all-loose Cover14 crown;
+those remain separate external producers.

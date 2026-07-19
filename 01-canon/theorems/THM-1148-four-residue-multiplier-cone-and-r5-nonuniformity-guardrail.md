@@ -89,7 +89,7 @@ four-comb theorem.
 
 ## 2. Sharp four-residue multiplier lemma
 
-> **Lemma A.**  For every subset `A` of `Z/13Z` with at most four elements,
+> **Lemma A.**  For every nonempty subset `A` of `Z/13Z` with at most four elements,
 > some nonzero multiplier `u` makes the largest cyclic gap of `uA` at least
 > seven grid units.  Seven is sharp.
 
@@ -126,7 +126,7 @@ A=max_i |ai|,
 M=max(A,84).
 ```
 
-> **Theorem B.**  If
+> **Theorem B.**  If `B` is an integer and
 >
 > ```text
 > B>=15M,                                                (4)
@@ -137,6 +137,7 @@ M=max(A,84).
 >
 > ```text
 > 11/(73B)>1/(7k4).                                     (5)
+> ```
 
 **Proof.**  Apply Lemma A to `{ai mod 13}` and choose `t0=u/13` carrying a
 seven-unit cyclic centre gap.  Put
@@ -213,29 +214,31 @@ Q4=ell(21K-7sum_i ki)-6Ksum_i(1/ki)-39.                 (13)
 > **Theorem C.**  If `Q4>0`, the four-comb complement in `J` has a component
 > longer than `1/(7K)`.
 
-**Proof.**  THM-1097's sharp one-comb discrepancy and a union bound give
-survivor mass
+**Proof.**  Write `A` for the actual survivor mass and `C` for the actual
+number of survivor components.  THM-1097's sharp one-comb discrepancy and a
+union bound give the lower estimate
 
 ```text
-A0>=3ell/7-(6/49)sum_i(1/ki).                           (14)
+A>=A0:=3ell/7-(6/49)sum_i(1/ki).                        (14)
 ```
 
 A tooth of `D_ki` meeting `J` has its centre in a scaled interval of length
 `ki ell+1/7`, so at most `ki ell+8/7` such teeth meet `J`.  Four combs and
-the two ends of the connected window therefore give at most
+the two ends of the connected window therefore give the real upper bound
 
 ```text
-C0<=ell sum_i ki+39/7                                   (15)
+C<=C0:=ell sum_i ki+39/7.                               (15)
 ```
 
-survivor components.  Direct expansion yields
+Direct expansion yields
 
 ```text
 7K A0-C0=Q4/7.                                          (16)
 ```
 
-When `Q4>0`, total survivor mass is more than `C0/(7K)`, so one of at most
-`C0` components is longer than `1/(7K)`.  ∎
+When `Q4>0`, `7KA>=7KA0>C0>=C`.  In particular `A>0`, so `C>=1`.
+Hence the mean length of the `C` actual components is greater than
+`1/(7K)`, so one component is longer than that. ∎
 
 Removing the `K` self-terms gives the useful equivalent form
 
@@ -352,7 +355,7 @@ equality and a failed owner-bearing transfer.
 Normal and optimized runs are byte-identical.  Frozen SHA-256 values are
 
 ```text
-artifact e0b38501c479240f0355da1b4da8dd2df038b9fd788119648ea5917baa788b16
+artifact 771407d6c072a4438626183ea6c87eaacebba0d21bf1e1267777ec35ad81aaa9
 script   cc375186ed1959b7c9f5a1cc5232edd80c6d47cc46d17cee31cc3789846ab17f
 output   5759498be1ea709b41959c70cf85cb77832a3a9b150fff65d9bcaea255422181
 ```

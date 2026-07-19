@@ -18,7 +18,7 @@
   407    38     2       19            0.046683   0.2604          ok
 
   WORST: bad fraction 0.046683 at k1=407 (2 runs, longest 19)
-  THM-1145 asserted a single run of width <= 0.0457*k1 : VIOLATED
+  THM-1162 asserted a single run of width <= 0.0457*k1 : VIOLATED
 
 ### (3) multi-run check: does the bad set EVER split? ###
   k1 values in [157,420) whose bad set is NOT a single run: 263

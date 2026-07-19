@@ -1,8 +1,7 @@
 # Four-comb nonuniformity is false; the four-residue chart gives a stronger cone
 
-This note attacks the replacement proposed in THM-1141 and records a corrected
-analytic advance.  It is deliberately an unnumbered research artifact so that
-the shared mainline owner can assign the next theorem namespace after rebasing.
+This note attacks the replacement proposed in THM-1141 and records the
+research ledger promoted to THM-1148.
 
 ## 1. Exact refutation of the `4/3` actual-mean lemma
 
@@ -226,8 +225,10 @@ This strictly strengthens THM-1128's
 `k4/k1>8/7`, rather than merely `k4/k1>27/26`.  It therefore removes most of
 the clustered region for which THM-1141 sought a global nonuniformity law.
 
-The constants `15` and `84` are jointly optimal within this universal chart
-with no grid-cluster crossing.  Any safe needle longer than `1/(7k4)` needs a
+The constants `15` and `84` are Pareto-minimal for this fixed phase-blind
+scalar ledger: a universal chart, complete-preimage winding, and no
+grid-cluster crossing.  This is not a global optimality statement about other
+Kakeya constructions.  Any safe needle longer than `1/(7k4)` needs a
 vertical arc longer than `1/7`, so a complete preimage costs more than `8/7`
 windings.  Suppose first that `B<=14M`.  When `M=A`, order preservation gives
 
@@ -242,8 +243,9 @@ When the floor is active with `M<=84`, core safety gives
 B|I|<=14M/1092<=14/13<8/7.
 ```
 
-Thus ratio `14` cannot work with any floor at most `84`.  At ratio `15`,
-crossing needs `15(2M epsilon)>8/7`, or `2M epsilon>8/105`.  Core safety
+Thus ratio `14` cannot work with any floor at most `84` in this ledger.  At
+ratio `15`, the complete-preimage winding budget requires
+`15(2M epsilon)>8/7`, or `2M epsilon>8/105`.  Core safety
 requires `epsilon<=1/2184`, hence
 
 ```text
@@ -373,7 +375,8 @@ The optimal common-ratio threshold within (22) is the positive root
 `9/5` is a transparent rational version.  This strengthens THM-1140's
 corrected coarse `7/3` cone and replaces the false historical `7/6` claim.
 
-These four gates do **not** close all shapes.  The first primitive survivor is
+These four gates do **not** close all shapes.  The first primitive
+proof-method residual in the bounded ray census is
 
 ```text
 (k1,k2,k3,k4)=m(3,4,5,6),             m>=53.          (25)
@@ -393,8 +396,8 @@ x2=(4/3)(6/7)=8/7,       c2=1/2,
 x3=(5/4)(1/2)=5/8<1,                                  (27)
 ```
 
-so (22) cannot continue.  Thus (25) is an infinite proof-method residual, not
-a finite-bank omission.
+so (22) cannot continue.  Thus the whole ray (25) is an infinite proof-method
+residual, not a counterexample and not a finite-bank omission.
 It sits exactly on the Q4 slope wall and one unit of ratio arithmetic beyond
 the transfer wall, making it a sharper next target than an unstructured
 “clustered majority.”
@@ -405,15 +408,15 @@ For normalized ratios
 (x,y,z)=(k1,k2,k3)/k4,
 ```
 
-the asymptotic residual is characterized by
+every asymptotic residual obeys the necessary conditions
 
 ```text
 x<=7/8,              x+y+z>=2,
 and the exact three-step Phi path (22) fails.           (28)
 ```
 
-The equality `x=7/8` has an integer-midpoint parity sidecar: even offset span
-is certified at equality, odd span is not.  A census of all `3,646,069`
+The boundary `x=7/8` retains an integer-midpoint parity sidecar: even offset
+span is certified at equality, odd span is not.  A census of all `3,646,069`
 primitive rays with `1<=a<b<c<d<=100` finds `3,054,412` in the strict cone,
 strict Q4 tail, or exact-transfer union and `591,657` residual (`16.2273%`).  This
 is a diagnostic census of ratio space, while (i)--(iv) are the exact finite
@@ -451,6 +454,7 @@ python3 04-computation/lrc14_r5_nonuniformity_refutation_multiplier_cone_codex_2
 
 The script uses `Fraction` throughout, reconstructs the exact counterexample,
 enumerates and disjointly covers all seven affine orbits, checks sharpness on
-all `715` four-sets, guards the optimal chart formula, proves the core atlas
-minimum, asserts every rational identity above, and performs the primitive-ray
-census.
+all `715` four-sets, guards the piecewise chart formula and named cone
+identities, proves the core-atlas minimum, and performs the primitive-ray
+census.  The short algebra deriving Q4 from the displayed mass/component
+bounds remains the paper calculation in THM-1148.

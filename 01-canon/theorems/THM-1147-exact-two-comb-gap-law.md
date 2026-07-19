@@ -6,14 +6,16 @@ source: kind-pasteur-2026-07-18-S128 (cont.70; owner: work the arithmetic alignm
 depends_on:
   - THM-1141    # which identified nonuniformity as the lever and asked for its arithmetic cause
   - THM-1140    # the four-comb reconnaissance
-related: [THM-1097, THM-1094]
+related: [THM-1097, THM-1094, THM-1148, MISTAKE-171]
 script: 04-computation/alignment_arithmetic_kps_S128c70.py (+ .out)
 ---
 
 # THM-1147 — the exact two-comb gap law
 
-THM-1141 found that the surviving gaps are far larger than uniform interleaving predicts,
-and asked whether the bias has an arithmetic cause. It does, and it is closed-form.
+This note isolates one exact coordinate in the labelled endpoint word.  It is
+useful pair-edge telemetry, not a statistic of the full four-comb survivor
+word.  THM-1148 and MISTAKE-171 record the failure of the former transfer to
+a `4/3` actual-mean inequality.
 
 ## (I) The conditional endpoint law
 

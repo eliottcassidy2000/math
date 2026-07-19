@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """general_d_sweep_fast_kps_S128c76.py -- kind-pasteur S128 cont.76 (part 2, float).
 Confirm the 2/21 ceiling on total bad measure over all d-triples in a box.
-Floats suffice for a ceiling check; the exact endpoints are already in THM-1147."""
+Floats suffice for a ceiling check; the exact endpoints are already in THM-1173."""
 import sys, itertools
 sys.stdout.reconfigure(line_buffering=True)
 S=7.0/6.0; H=1.0/12.0; THR=1.0/6.0

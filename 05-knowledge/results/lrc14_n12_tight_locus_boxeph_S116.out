@@ -1,14 +1,15 @@
-which APs {a,a+d,...,a+11d} are tight (M=1/13)?  ONLY a=d (homogeneous c*{1..12}):
-  a=1,d=1: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
-  a=2,d=2: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
-  a=3,d=3: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
-  a=5,d=5: M=   1/13 TIGHT  a==d(mod13)=True  (a=d homogeneous)
-  a=2,d=1: M=   2/15 loose  a==d(mod13)=False  
-  a=3,d=1: M=   3/17 loose  a==d(mod13)=False  
-  a=1,d=2: M=    1/2 loose  a==d(mod13)=False  
-  a=1,d=3: M=  12/35 loose  a==d(mod13)=False  
-  a=2,d=3: M=  13/37 loose  a==d(mod13)=False  
-  a=7,d=1: M=   7/25 loose  a==d(mod13)=False  
-  a=1,d=7: M=  34/79 loose  a==d(mod13)=False  
+finite AP probe: max over reduced denominators q<=300 (a lower bound for M)
+  a=1,d=1: M_q<=300=   1/13  t=1/(2a+11d) gives    1/13  a==d(mod13)=True  (known homogeneous exact row)
+  a=2,d=2: M_q<=300=   1/13  t=1/(2a+11d) gives    1/13  a==d(mod13)=True  (known homogeneous exact row)
+  a=3,d=3: M_q<=300=   1/13  t=1/(2a+11d) gives    1/13  a==d(mod13)=True  (known homogeneous exact row)
+  a=5,d=5: M_q<=300=   1/13  t=1/(2a+11d) gives    1/13  a==d(mod13)=True  (known homogeneous exact row)
+  a=2,d=1: M_q<=300=   2/15  t=1/(2a+11d) gives    2/15  a==d(mod13)=False
+  a=3,d=1: M_q<=300=   3/17  t=1/(2a+11d) gives    3/17  a==d(mod13)=False
+  a=1,d=2: M_q<=300=    1/2  t=1/(2a+11d) gives    1/24  a==d(mod13)=False
+  a=1,d=3: M_q<=300=  12/35  t=1/(2a+11d) gives    1/35  a==d(mod13)=False
+  a=2,d=3: M_q<=300=  13/37  t=1/(2a+11d) gives    2/37  a==d(mod13)=False
+  a=7,d=1: M_q<=300=   7/25  t=1/(2a+11d) gives    7/25  a==d(mod13)=False
+  a=1,d=7: M_q<=300=  34/79  t=1/(2a+11d) gives    1/79  a==d(mod13)=False
 
-=> exact tight locus = {c*{1..12} : c>=1}; PROVED (mod-13 blocking): tight AP => a==d (mod 13).
+PROVED here: a>d => M>1/13; all-nonzero AP residues mod13 <=> a==d (mod13).
+NOT proved here: the a<d branch, a=d as an integer identity, or the general n=12 tight locus.

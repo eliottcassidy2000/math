@@ -28,13 +28,21 @@
 > LRC(14) after gcd normalization.  The structural primitive carrier supplier
 > remains open and is exactly an all-loose Cover14 crown obstruction.
 >
+> **The AP-internal n=12 branch is now closed.**  THM-1171 and the independent
+> boxeph-S118 centering witness prove
+> `M({a,a+d,...,a+11d})=1/13 iff a=d`; `LRCAPCentering` kernel-checks the
+> centered-band consumer.  The remaining equality problem is AP extraction
+> from an arbitrary tight twelve-set, and before that the LRC(14) crown route
+> still needs tight-deletion extraction.  Neither implication follows from
+> AP rigidity itself.
+>
 > THM-1153's harmonic deletion crown independently compresses the top seven
 > speeds through six deletions and identifies `r=7` as the exact zero-density
 > wall.  The faithful objects are multiplier-owner hypergraphs, weighted
 > eroded cyclic interval complexes, q=14 carrier masks, and triple-incidence
 > crown chambers—not transitive runner tournaments.
 
-> ## 2026-07-18 S74 CURRENT FRONTIER (supersedes equivalence claims below)
+> ## 2026-07-18 S75 SEVEN-WALL/CORRECTION UPDATE
 >
 > Global LRC(14), uniform `r=5`, uniform `r=6`, n=12 equality rigidity, and
 > crown collapse remain open.  The compact `1/13` floor is a stronger
@@ -43,11 +51,49 @@
 > separate tight-deletion extraction.  See THM-1099, THM-1149, and
 > MISTAKE-170.
 >
+> **Formal inverse guardrail:** THM-1158 refutes the literal `INVcov`
+> premise even with Covering through 14: `2*{1,...,13}` is Covering, has
+> maximum `1/14<1/13`, and has no 13-dominant speed.  Its Lean consumers are
+> valid implications from a false premise.  `ResidualINV` remains an exact
+> counterexample interface/equivalent restatement under the AP bridge, not a
+> noncircular proof reduction.  Any live primitive version must normalize gcd
+> and then rederive Covering, which dilation does not preserve.
+>
+> **All-N deletion crown / exact seven wall:** THM-1153 proves
+>
+> ```text
+> sum_(s in S) 1/s >= r(N-2r)/(N(N-r) max(V\S))
+> ```
+>
+> after the cited lower LRC input.  At N=14 this gives six exact harmonic
+> rungs and, in the compact branch,
+> `v13/v7<613466231/1350`.  THM-1155 independently formalizes the same
+> ceiling: bulk-plus-endpoint density is informative through six deleted
+> combs and has coefficient exactly zero at seven.  HYP-7678's overlap/owner
+> debt is therefore the live seventh-rung supplier.  THM-1156 proves the
+> qualitative `chi_7` seam bipartition/private-or-triple alternative, and
+> THM-1166 makes the first quantitative crossing: every seven-packet has
+> pair mass `R>=7/24` and global uncovered mass at least `1/12`; a covered
+> lower-LRC needle forces common dilation `G/m<=77/12`, every labelled Fano
+> plane obeys `sum m/G_line>=32/231`, and every forest obeys an adaptive
+> period-corrected Hunter budget.  The arbitrary mixed-period aggregation
+> remains open.  THM-1176 supplies an orthogonal slow-gap crossing: if the
+> slowest deleted speed is `a` and the retained maximum is `m`, then every
+> counterexample split has `a<13m` or `a sum_i 1/b_i>1`, with
+> `b_1<=6a-3`.  Its all-cardinality parity law makes three-comb slow-gap
+> coverage impossible and its toothpick nesting forces
+> `b_1/a<13/6 OR b_2/b_1<13/6 OR b_3/b_2<4/3`.  The unresolved seventh wall
+> is now the harmonic-crowded mixed-phase clock inside these simultaneous
+> Fano/gcd and slow-gap constraints.
+>
 > **Four-comb `r=5`:** THM-1133 closes offset span at most 30.  THM-1148 adds
 > the sharp four-residue multiplier cone, exact `Q4>0` separated-ratio gate,
 > and corrected THM-1137 `Phi` transfer with adjacent ratio `9/5`.  The old
 > `7/6` recursion and `4/3` actual-mean lemma are false.  The first infinite
 > method residual is `m(3,4,5,6)`, `m>=53`.
+> THM-1147's two-edge determinant law is exact local telemetry only; a core
+> can expose a nearly constant short slice, so it does not furnish the missing
+> max/mean factor.
 >
 > **Twelve-speed equality:** THM-1143 identifies the all-height shallow
 > object as a labelled mechanical `A_12` ballot word.  THM-1150 proves its

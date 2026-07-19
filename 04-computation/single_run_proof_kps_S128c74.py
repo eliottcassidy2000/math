@@ -11,9 +11,9 @@ by -d_i/k1 when normalised by k_i's own period 1/k_i.  So for CONSECUTIVE killer
 
 Hence the whole configuration -- and therefore the longest surviving piece -- is a function
 F(u) OF THE SINGLE PARAMETER u.  The point set {0,u,2u,3u} is maximally spread at u = 1/4,
-which is exactly where THM-1145 measured the bad zone (j/k1 = 0.238-0.242).
+which is exactly where THM-1162 measured the bad zone (j/k1 = 0.238-0.242).
 IF F is unimodal on [0,1/2] with its minimum at u = 1/4, then {u : F(u) <= threshold} is an
-INTERVAL, i.e. the bad set is a single run -- which is what THM-1145 needs.
+INTERVAL, i.e. the bad set is a single run -- which is what THM-1162 needs.
 TEST: unimodality, the location of the minimum, and the width of the bad interval.
 PRINT DATA ONLY."""
 import sys
@@ -72,7 +72,7 @@ for k1 in range(157,420,10):
         print("  %-6d %-6d %-7d %-13d %-10.6f %-15.4f %s"%(k1,len(bad),len(runs),len(big),fr,ctr,"ok"))
 print()
 print("  WORST: bad fraction %.6f at k1=%d (%d runs, longest %d)"%(worst[0],worst[1],worst[2],worst[3]))
-print("  THM-1145 asserted a single run of width <= 0.0457*k1 : %s"%(
+print("  THM-1162 asserted a single run of width <= 0.0457*k1 : %s"%(
     "CONSISTENT" if worst[0]<=0.0458 else "VIOLATED"))
 print()
 print("### (3) multi-run check: does the bad set EVER split? ###")
