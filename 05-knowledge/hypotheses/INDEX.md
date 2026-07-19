@@ -3,6 +3,10 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+- **Namespace correction for HYP-7560:** its exact two-comb gap law is
+  `THM-1147`, not `THM-1142`; the latter was already the pushed
+  essential-region theorem.  The HYP-7560 mathematics is unchanged.
+
 - **HYP-7607 / codex-2026-07-18-S67 (THM-1137: exact interval-transfer recursion):** PROVED TWO UNIFORM r=6 CONES.  For a window of normalized length `x>=1`, the guaranteed safe subinterval has normalized length `Phi(x)=min(6/7,(x-1/7)/2)`.  In particular every one-period window contains `3/(7k)`, sharply: `[1/2,3/2]` splits the unit safe arc into two equal `3/7` pieces.  The earlier `6/(7k)` claim and `7/6` recursion were false (MISTAKE-169).  The universal core interval `[1/14,13/168]` is safe for all speeds `1..12`.  The coarse recursion closes `k1>=168` with adjacent ratios at least `7/3`.  Retaining the exact normalized width closes the stronger cone `k1>=312` with every first-five adjacent ratio at least `19/10`; its exact width ledger is `6/7,26/35,111/175,1859/3500,212247/490000`.  The residual is therefore a bottom strip or has a multiplicatively clustered edge; intersect this with THM-1136's first-13-carrier cones and THM-1135's harmonic box.  The proof-state interval path, not the transitive runner tournament, is the faithful carrier. -> THM-1137/1136/1135, MISTAKE-169; codex-S67.
 
 - **CORRECTION / MISTAKE-166 (supersedes HYP-7625/HYP-7615's target descriptions):** the kernel reduction now uses `INVcov := Covering(2..14) ∧ no Lonely13 => 13-fold dominance`, with coverage through 14 derived in the no-Lonely14 branch by `counterexample_needs_all_divisors 14`. The old unqualified `INV` is false: `{1,2,3,5,7,8,9,10,11,12,17,19,104}` has `M=8/105<1/13`, misses 14, and has `rho<13`. Correct theorem names: `LRC14_of_INVcov`, `LRC14_finset_of_INVcov`; the Finset shape bridge remains sound.

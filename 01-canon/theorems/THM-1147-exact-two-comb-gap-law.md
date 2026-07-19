@@ -1,5 +1,5 @@
 ---
-id: THM-1142
+id: THM-1147
 title: THE EXACT TWO-COMB GAP LAW — the "alignment bias" is arithmetic and closed-form, and it supplies the nonuniformity the four-comb theorem needs. (I) THE LAW, verified exactly: a surviving component of a multi-comb complement is the interval from the RIGHT edge of tooth j of one comb a to the LEFT edge of tooth j+1 of another comb b, so its length is **L(a,b,j) = (a − j·d)/(a·b) − 1/(14a) − 1/(14b)** with d = b − a. On the standing worst case (core [1,3,5,6,7,8,11,12], killers 371/374/377/379) the law predicts 127/142883 and the measured longest component IS 127/142883 — the endpoints being 1373/5278 = 98/377 + 1/(14·377) and 1385/5306 = 99/379 − 1/(14·379). (II) SO THE GAP IS **LINEAR IN j**, falling from ≈ 1/a at j = 0 to zero at j ≈ a/d. Numerically for (371,379), d=8: usable gap × b runs 0.856, 0.748, 0.640, 0.424, 0 as j runs 0, 5, 10, 20, 40. For (371,372), d=1 the same descent takes until j ≈ 370. (III) THIS IS THE NONUNIFORMITY SOURCE, and it is provable rather than statistical: a linear descent from 1/a to 0 has mean ≈ 1/(2a) and maximum ≈ 1/a, so **max gap ≈ 2 × mean gap** from the pair law alone — comfortably above the **4/3** that THM-1141 identified as sufficient for the four-comb theorem. With four combs there are six pairs and more accessible indices, which is where THM-1141's measured 3.34 comes from. (IV) HONEST NEGATIVE: my proposed *predictor* — that small j·d/k correlates with large surviving gaps — is NOT confirmed. The measured correlation is inverted (median j*·d_min/k₄ = 0.345 among the worst cases versus 0.758 among the best). The proxy is mis-specified: it uses k₄ and d_min, whereas the law involves the actual bounding PAIR (a,b) and its own d, which need not include k₄. So the mechanism (I)–(III) is confirmed exactly while the summary statistic built on it is not
 status: (I) PROVED and verified exactly in rational arithmetic — the law is an identity about tooth edges, and it reproduces the standing worst case to the last digit. (II) PROVED (immediate from I). (III) is a correct consequence of the linear law for a single pair; the extension to four combs is indicated, not proved. (IV) REFUTED — the proxy correlation is inverted and the test was mis-specified; recorded rather than dropped. Uniform r=5 remains OPEN
 source: kind-pasteur-2026-07-18-S128 (cont.70; owner: work the arithmetic alignment bias)
@@ -10,7 +10,7 @@ related: [THM-1097, THM-1094]
 script: 04-computation/alignment_arithmetic_kps_S128c70.py (+ .out)
 ---
 
-# THM-1142 — the exact two-comb gap law
+# THM-1147 — the exact two-comb gap law
 
 THM-1141 found that the surviving gaps are far larger than uniform interleaving predicts,
 and asked whether the bias has an arithmetic cause. It does, and it is closed-form.
