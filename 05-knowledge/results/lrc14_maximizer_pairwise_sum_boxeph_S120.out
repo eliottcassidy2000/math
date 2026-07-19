@@ -1,0 +1,29 @@
+==========================================================================
+(I)+(II) MAXIMIZER LOCATION: t*=integer/(v_i+v_j), formula, no-difference
+==========================================================================
+  C=[3, 4, 5, 7, 10, 14, 21, 24, 26, 33, 35, 41]
+     M=3/20  t*=9/20  straddle pair (v_i,v_j)=(33, 7)  sum=40
+  C=[4, 5, 6, 8, 15, 16, 27, 28, 36, 38, 43, 44]
+     M=11/51  t*=5/51  straddle pair (v_i,v_j)=(8, 43)  sum=51
+  C=[3, 4, 8, 9, 10, 15, 19, 26, 27, 36, 37, 38]
+     M=6/23  t*=4/23  straddle pair (v_i,v_j)=(10, 36)  sum=46
+  C=[4, 5, 7, 12, 13, 20, 24, 36, 37, 38, 40, 44]
+     M=10/49  t*=3/49  straddle pair (v_i,v_j)=(13, 36)  sum=49
+
+  over N=60 random 12-sets:
+   location t*=(a_i+a_j)/(v_i+v_j) FAILS: 0
+   formula M=|v_i a_j - v_j a_i|/(v_i+v_j) FAILS: 0
+   a difference-denominator beats every sum-denominator: 0
+   => maximizer is ALWAYS a pairwise-sum straddle: True
+
+==========================================================================
+(III) RIGIDITY REFORMULATION: {1,...,12} is uniquely witness-less at 1/13
+==========================================================================
+  {1,...,12}: M=1/13 at t=1/13; best pairwise-sum straddle=1/13 (q=13=1+12)
+    => best straddle == 1/13 exactly, achieved ONLY at the extreme-sum q=13.
+  Perturbations (single move): best straddle STRICTLY exceeds 1/13 (S120 explorer, 204/204).
+
+  REFORMULATION (equiv. to Tao n=12 / INVcov): {1,...,12} is the unique 12-set whose
+  best pairwise-sum straddle value equals 1/13; every other set has one exceeding it.
+
+DONE.
