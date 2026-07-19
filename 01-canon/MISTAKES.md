@@ -5057,7 +5057,7 @@ full defining inequalities and test a non-equality interior point.
 **Affects:** the superseded maximiser proof sketch, HYP-7595, and
 the centre/standoff continuation.  See THM-1203 and MISTAKE-180.
 
-## MISTAKE-182 (codex-2026-07-19-S82) — a multiplied beat relation was mistaken for extra equidistribution
+## MISTAKE-184 (codex-2026-07-19-S82) — a multiplied beat relation was mistaken for extra equidistribution
 
 THM-864 allowed an arbitrary presentation
 
@@ -5119,6 +5119,17 @@ Then `(a,b)=(pk+uh,qk+vh)` and the unimodular change of coordinates preserves
 a scaled presentation.  In the counterexample the primitive relation is
 simply `B-A=1`; replacing it by twelve copies creates no new phase samples.
 
+More exactly, with `c=B^(-1) (mod A)` and
+`k_*=(yc-sigma q)/A`, one has the exact identity
+`gcd(k_*,y)=gcd(p,q)=d`.  After dividing the relation by `d`, Bezout applied
+also to `Bc=1 (mod A)` proves the reduced step primitive.  The unperturbed
+starts are therefore exactly `d` superposed copies of the uniform grid of
+size `y/d`.  Thus a genuine `1/y`-net occurs exactly when `gcd(p,q)=1`.
+This repairs only the net claim.  The published quantitative
+bound also treats an unwrapped path `J` as a circle arc when it may wrap and
+compresses several error ledgers without proved constants, so the displayed
+estimate still requires a fresh proof even after primitive normalization.
+
 **Rule:** relation height, transverse clock, and orbit multiplicity must be
 defined after primitive normalization.  Never infer discrepancy decay from
 a coefficient that changes when the same Diophantine relation is multiplied.
@@ -5127,3 +5138,81 @@ a coefficient that changes when the same Diophantine relation is multiplied.
 bounds, HYP-6925's localization summary, and any downstream argument that
 uses the asserted `1/y` gain.  The static height-seven classification in
 THM-605 is unaffected because it requires coprime pattern coefficients.
+
+## MISTAKE-185 (codex-2026-07-19-S82) — static height-seven positivity was promoted to finite-interval independence
+
+THM-598 and THM-602 split a pair or cluster using only relations of
+coefficient height at most seven.  They then asserted that if every such
+phase completes one cycle across a target interval, all pair intersections
+are forced close to their global mean.  This conflates two different facts:
+THM-605 says a *globally phased primitive pattern* can have zero overlap only
+at height at most seven; it does not say a short segment of a high-height
+exact orbit samples that positive global overlap.
+
+The exact counterfamily is
+
+```text
+(a,b)=(64K,75K),
+I_K=[407/(896K), 407/(896K)+449/(4928K)].
+```
+
+For the base pair `(64,75)`, exact rational endpoint enumeration gives the
+largest zero-overlap gap
+
+```text
+[407/896,489/896],       length=41/448=451/4928.
+```
+
+Thus `I_K` lies strictly inside a scaled copy of that gap and
+
+```text
+D_(64K) intersect D_(75K) intersect I_K = empty.
+```
+
+Nevertheless every nonzero integer vector `(r,s)` with
+`|r|+|s|<=7` satisfies
+
+```text
+|64r+75s|>=11,
+|64Kr+75Ks| |I_K| >=11*449/4928=449/448>1.
+```
+
+So THM-602 declares its truncated resonance lattice zero, and THM-598 calls
+the pair resolved at every listed low pattern, while the local pair overlap
+is exactly zero.  The missing relation is the high primitive exact relation
+
+```text
+75*(64K)-64*(75K)=0,
+```
+
+of height `139`.  Its global fixed-phase overlap is positive, consistently
+with THM-605, but the chosen interval is shorter than the common `1/K`
+period and can miss it completely.
+
+The original THM-598 audit had two additional warning signs.  Its
+`PQ<=16` list contains twenty-one primitive rows, not the claimed thirteen,
+and the sum of the displayed individual envelopes over that list is
+`2788339/2162160>1`, not a small tail.  Its advertised hard examples also
+had minimum resonance `19` at window length `0.01`, hence `19L<1` and were
+frozen rather than resolved by its own definition.  The computation did not
+test the theorem hypothesis it was cited to verify.
+
+There is a second algebraic guardrail: an HNF basis of a truncated relation
+lattice cannot automatically be completed to a unimodular matrix unless the
+lattice is saturated.  A torsion-sheet sidecar is otherwise lost.  This is
+the cluster-level analogue of MISTAKE-184's repeated improper subgrid.
+
+**Correction:** THM-605 parts (i)--(ii), including the exact nine static
+channels, remain proved.  The dynamic carrier must retain both (a) the full
+primitive exact-relation/gcd period and its torsion sheets and (b) low-height
+detuned relations with their actual interval phase.  A height-seven cutoff
+alone is not a finite-interval inverse theorem.
+
+**Rule:** global positivity of every phase fiber does not imply that a finite
+orbit segment samples the fiber.  Before truncating a resonance lattice,
+retain the exact integer kernel, its saturation index, and the ratio of the
+target interval to the common orbit period.
+
+**Affects:** THM-598 Parts B--D, THM-602's fully-resolved branch and claimed
+HNF renormalization, and THM-605(iii)'s assembly restatement.  THM-599's
+global `c`-averaged torus-band identities are unaffected.

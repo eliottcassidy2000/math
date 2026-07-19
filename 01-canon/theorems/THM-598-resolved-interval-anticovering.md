@@ -1,9 +1,21 @@
-# THM-598: The resolved interval anti-covering lemma (forced pair independence, the PQ ≤ 16 dangerous-pattern list, and the κ₇ = 6/49 floor)
+# THM-598: Refuted resolved-interval anti-covering lemma (the static pattern calculations survive; forced local independence does not)
 
-**Status:** PROVED (Parts A–C; Part D = the assembled floor with explicit error policy); adversarially verified
+**Status:** REFUTED in Parts B--D by MISTAKE-185.  The exact family
+`(64K,75K)` is resolved at every height-at-most-seven pattern on `I_K` but
+has zero restricted pair overlap.  Part A's fixed-pattern Fourier identity
+and bounds remain valid static statements; the local forced-independence and
+assembled anti-covering conclusions are not proved.
 **Author:** mac-mini-2026-07-01-S98 (HYP-3854)
-**Verification:** `04-computation/lrc_anticover_forced_independence_macmini_S98.py` (+ `.out`): forced independence for resolved pairs (min overlap 0.0151–0.0178 vs (2r)²=0.0204); escapes exactly at frozen low patterns ((1009,1523)→(2,3), PQ=6, overlap 0; (1000,2001)→(1,2), overlap 0); j=7 adversarial coverage ≤ 0.742 (uncovered ≥ 0.258 vs floor 6/49 = 0.122, 2× margin); near-equal 7-cluster TILES (0.9988) — the dichotomy is necessary.
+**Historical verification:** `04-computation/lrc_anticover_forced_independence_macmini_S98.py` (+ `.out`).  It does not verify the stated resolved hypothesis for its advertised hard rows: the output's minimum low resonance is `19`, so at `L=0.01` (and `0.005`) one has `19L<1`; those examples are frozen by the theorem's own definition.  The coverage telemetry remains exploratory only.
 **Role:** the "interval anti-covering" named target (S97) — the core of the hpartA local-covering program. hpartA fails only if the far cluster covers the G2 window with effectively free phases; this theorem makes that impossible outside an explicit finite renormalization list.
+
+> **Canonical correction (2026-07-19).**  The role sentence above records the
+> original intent, not a proved consequence.  THM-605 sharply replaces the
+> static suspect list by the nine primitive channels `P+Q<=7`, but global
+> positivity above that threshold does not imply finite-interval sampling.
+> MISTAKE-185 gives a high-height exact orbit whose short segment misses the
+> globally positive overlap.  Any repair must retain the full primitive exact
+> relation/gcd period and its torsion sheet in addition to low-height detuning.
 
 ## Setting
 
@@ -20,7 +32,11 @@ Hence the **frozen-pattern floor**: `min_θ ov_{P,Q} ≥ (2r)² − 1/(3PQ)`, st
 ```
 PQ ≥ 17   (at 2r = 1/7:  1/(3PQ) < 1/49 ⟺ PQ > 49/3).
 ```
-**The dangerous-pattern list** is the finite set `𝒫 = {(P,Q) coprime, P ≤ Q, PQ ≤ 16}` — thirteen patterns: `(1,1),…,(1,16)` restricted to `Q ≤ 16`, plus `(2,3), (2,5), (2,7), (3,4), (3,5)`. Only there can a pair's overlap be driven below the independence value materially (to zero when `1/(3PQ) ≥ (2r)²`).
+**The dangerous-pattern list** proposed here is the finite set
+`𝒫 = {(P,Q) coprime, P ≤ Q, PQ ≤ 16}` — **twenty-one**, not thirteen,
+patterns: the sixteen `(1,q)` rows through `q=16`, plus
+`(2,3), (2,5), (2,7), (3,4), (3,5)`.  THM-605 later replaced this coarse
+envelope list by the exact nine zero-phase channels `P+Q<=7`.
 
 ## Part B — resolution forces independence
 

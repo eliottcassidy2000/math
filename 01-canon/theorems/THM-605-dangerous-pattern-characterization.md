@@ -2,7 +2,9 @@
 
 > [renumbered from THM-601 by klein-S99 numbering cleanup (owner-directed); THM-601 = the cap-universe nest lemma (klein, first to origin).]
 
-**Status:** PROVED (part i: one-line box-avoidance argument; part ii: exact finite table, decide-checkable)
+**Status:** PROVED for parts (i)--(ii): the static phase characterization and
+exact table.  Part (iii)'s finite-interval assembly restatement is REFUTED by
+MISTAKE-185; it is not a consequence of the static theorem.
 **Author:** mac-mini-2026-07-01-S100 (HYP-3856)
 **Verification:** `04-computation/lrc_exact_pattern_min_table_macmini_S100.py` (+ `.out`): exact minima for all coprime P ≤ Q, PQ ≤ 64, r = 1/14.
 
@@ -26,6 +28,14 @@ For `P + Q ≥ 8` the minima are positive, exact, and structured (all verified):
 `min ov_{1,7} = min ov_{2,7} = min ov_{1,14} = 1/49` — the independence value itself is the floor at the `7 | Q`-commensurate patterns; `min ov_{1,Q} = min ov_{2,Q} = 2r/Q = 1/(7Q)` on the checked range (Q = 8..13); `(3,5) → 1/105`, `(4,5) → 1/70`, `(1,15) → 2/105`, `(1,17) → 2/119`, `(1,19) → 2/133`. Closed form for general `(P,Q)` = observed-open (Farey two-term shape conjectured); the TABLE is the proof artifact — each entry is a finite rational computation (breakpoint enumeration, piecewise-linearity in θ), i.e. `decide`-checkable.
 
 ## (iii) The Lean-ready normal form of THM-598/599 (restatement)
+
+> **Correction (2026-07-19).**  This assembly proposal is not Lean-ready and
+> is false as a local inverse.  The pair `(64K,75K)` is resolved at every
+> height-at-most-seven channel on the interval of MISTAKE-185, yet its local
+> overlap is empty because the high exact relation `(75,-64)` has common
+> period `1/K` longer than the target window.  The static nine-channel theorem
+> above remains correct.  The bullets below are retained as the superseded
+> proposal and require a full exact-kernel/torsion-period sidecar.
 
 - **Pair layer:** "frozen at a dangerous pattern" = `∃ (P,Q), P+Q ≤ 7, coprime, |Q w_i − P w_j| · |I| < 1` — decidable integer arithmetic. Forced overlap for non-frozen pairs = the exact table minima minus arc-counting boundary terms (count incomplete pattern-cycles and microperiod boundary arcs; no spectral estimates).
 - **d-fold layer (the enumeration improvement):** the same box-avoidance argument applies verbatim in dimension d: a d-pattern `(m₁,…,m_d)` (primitive, `Σ m_i w_i = 0`-direction) can zero the d-fold overlap iff `2r·Σ|m_i| ≤ 1`, i.e. `Σ|m_i| ≤ 7` at LRC(14) — the depth-5 dangerous lists of THM-599 collapse to **lattice points of the ℓ¹-simplex `Σ|m_i| ≤ 7`**, a Farey-simplex count, finite and tiny (the "symbolic ledger" becomes simplex enumeration + a per-pattern exact minimum each).

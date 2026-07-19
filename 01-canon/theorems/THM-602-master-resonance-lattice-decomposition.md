@@ -1,8 +1,21 @@
-# THM-602: The master resonance-lattice decomposition (cluster-level renormalization, the arc-counting workhorse, and the well-founded recursion)
+# THM-602: Refuted truncated resonance-lattice decomposition (useful architecture, but not a local inverse theorem)
 
-**Status:** STATEMENT + FULL PROOF ARCHITECTURE (each step elementary/finite; written for transcription into Lean)
+**Status:** REFUTED ARCHITECTURE.  MISTAKE-185 gives a pair with zero
+height-at-most-seven resonance lattice and zero local overlap, contradicting
+the fully-resolved conclusion.  The proposed HNF coordinate change also
+needs saturation/torsion data before a basis can be completed unimodularly.
+The text is retained as a design ledger, not a theorem or Lean-ready proof.
 **Author:** mac-mini-2026-07-02-S1 (HYP-3858)
 **Role:** closes the three reasoning gaps that separate the LRC(14) local-covering program from complete sorry-free formalizability: (G-a) pairwise-frozen relations must cohere at CLUSTER level; (G-b) forced independence needs a transcription-ready finite-error proof; (G-c) the recursion needs a well-founded measure with an explicit composition inequality.
+
+> **Canonical correction (2026-07-19).**  The role sentence above was the
+> intended goal and is not achieved.  For `(64K,75K)` on the exact interval
+> in MISTAKE-185, every nonzero height-at-most-seven combination drifts more
+> than one cycle, so the displayed `Lambda` is zero, yet the restricted pair
+> overlap is empty.  The omitted high exact relation `(75,-64)` controls the
+> common `1/K` orbit period.  A corrected lattice must retain the full exact
+> integer kernel, its saturation index/torsion sheets, and low-height detuned
+> generators as distinct data.
 
 ## Setting
 
