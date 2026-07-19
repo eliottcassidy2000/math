@@ -5056,3 +5056,74 @@ full defining inequalities and test a non-equality interior point.
 
 **Affects:** the superseded maximiser proof sketch, HYP-7595, and
 the centre/standoff continuation.  See THM-1203 and MISTAKE-180.
+
+## MISTAKE-182 (codex-2026-07-19-S82) — a multiplied beat relation was mistaken for extra equidistribution
+
+THM-864 allowed an arbitrary presentation
+
+```text
+qB-pA=+/-y
+```
+
+and claimed a localization gain proportional to `1/y`.  Multiplying all
+three relation entries was therefore allowed to manufacture an arbitrarily
+stronger estimate without changing the underlying relation.  The claimed
+`y` starting points are a `1/y`-net only when the associated step numerator
+is primitive modulo `y`; the proof explicitly discussed the nonprimitive
+case but incorrectly called a repeated proper subgrid equidistributed.
+
+The boundary case
+
+```text
+delta=1/13,       A=3744,       B=3745,
+E=[1/3,1/2],      kappa=1,
+p=q=y=12
+```
+
+meets every displayed hypothesis: `gcd(A,B)=1`,
+`qB-pA=12=y`, and `A=26qy`.  If both danger conditions hold, then
+
+```text
+||t||=||(B-A)t||<=||At||+||Bt||<=2/13,
+```
+
+so the restricted overlap on `E` is zero.  Since `13|A`, the exact global
+pair mass is `rho=4/169`, and hence
+
+```text
+error=|E|rho=2/507.
+```
+
+THM-864's clean right side is instead
+
+```text
+13rho/[y(p+q-1)] + (8kappa+10y+8)/(13B)
+ =13129/3359265,
+```
+
+smaller by the positive amount `531/14556815`.  Thus the theorem is false as
+stated; a battery containing only primitive relation presentations could not
+test this failure.
+
+The invariant repair is to primitive-normalize the transverse relation
+before attaching a clock.  For coprime coefficients `p,q`, choose `u,v` with
+`qu-pv=1` and put
+
+```text
+h=qa-pb,       k=ub-va.
+```
+
+Then `(a,b)=(pk+uh,qk+vh)` and the unimodular change of coordinates preserves
+`gcd(a,b)=gcd(k,h)`.  A valid positioned estimate may depend on this primitive
+`(p,q;k,h)` datum (and on the actual starting-point multiplicity), but not on
+a scaled presentation.  In the counterexample the primitive relation is
+simply `B-A=1`; replacing it by twelve copies creates no new phase samples.
+
+**Rule:** relation height, transverse clock, and orbit multiplicity must be
+defined after primitive normalization.  Never infer discrepancy decay from
+a coefficient that changes when the same Diophantine relation is multiplied.
+
+**Affects:** THM-864's theorem statement and proof, its clean and exact error
+bounds, HYP-6925's localization summary, and any downstream argument that
+uses the asserted `1/y` gain.  The static height-seven classification in
+THM-605 is unaffected because it requires coprime pattern coefficients.

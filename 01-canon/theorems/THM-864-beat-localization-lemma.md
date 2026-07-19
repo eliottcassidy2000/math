@@ -1,15 +1,25 @@
 ---
 id: THM-864
-title: THE BEAT-LOCALIZATION LEMMA (referee-grade) — for coprime A < B with a relation qB − pA = σy (σ = ±1, q,p ≥ 1) and E a union of κ intervals, the E-restricted overlap deviates from μE·ρ(A,B) by at most 26·κ·ρ(A,B)/(y·min(2A·13⁻¹-cap…)) — precisely: |μ(D_A ∩ D_B ∩ E) − μE·ρ(A,B)| ≤ (2κ/y)·(ρ/|J|) + Dust, |J| = the sub-orbit arc span ≥ 2(p+q−1)/(13y) − 2/(13A), Dust ≤ (8κ + 10y + 8)/(13B); hence err ≤ 13κρ/(y(p+q−1)) + Dust — the y-decay is proved with (p+q) in the DENOMINATOR (sharper than THM-863's conjectured (p+q)/y form), via the sub-orbit AP decomposition and the signed sawtooth cancellation of the y-net over each E-component
-status: PROVED (full proof below: window decomposition, the exact sub-orbit APs, the three-part error ledger with every constant explicit) + REFEREE SCRIPT (the proved bound recomputed per battery row and checked to DOMINATE all ~100 planted-relation cases across 3 prefixes and 7 channel types, and the S313 19-pair map)
+title: REFUTED BEAT-LOCALIZATION LEMMA — multiplied relations do not create a y-point equidistributed net
+status: REFUTED by MISTAKE-182. The exact row A=3744, B=3745, E=[1/3,1/2], p=q=y=12 satisfies every stated hypothesis and violates the clean bound by 531/14556815. The original proof and battery are retained below as a forensic record; no displayed localization estimate is available without a new primitive-orbit hypothesis and proof.
 source: opus-2026-07-15-S314 (owner: prove the beat-localization lemma referee-grade); the sub-orbit route named in THM-863(E); the corrected pair law from codex-S14
 depends_on:
   - THM-863 (the crossing this lemma completes; the sawtooth pair law)
-related: [codex-S14 projective pullback (the g > 1 companion: compose with this lemma on the reduced pair), THM-778 (mechanical words: the same three-distance geometry), THM-856 §4 (the one-comb periodicity)]
+related: [MISTAKE-182, THM-605, codex-S14 projective pullback, THM-778, THM-856]
 verification: 05-knowledge/results/beat_lemma_battery_opus_S314.out, beat_lemma_referee_opus_S314.out
 ---
 
 # THM-864 — the beat-localization lemma
+
+> **Canonical correction (2026-07-19).**  The theorem below is false as
+> stated.  Its §2 assertion that the `y` starting positions remain a perfect
+> `1/y`-equidistributed multiset when the step numerator is nonprimitive is
+> false: a proper subgrid repeated with multiplicity is not a `1/y`-net.
+> MISTAKE-182 gives the exact counterexample and arithmetic comparison.  In
+> primitive transverse coordinates the row is merely `B-A=1`; writing it as
+> `12B-12A=12` cannot buy a factor of twelve in discrepancy.  The text below
+> is retained only to identify the failed step and must not be cited as a
+> theorem.
 
 **Setting.** δ = 1/13. A < B coprime, D_x = {t ∈ T : ||xt|| ≤ δ},
 E = ⊔_{c=1}^{κ} I_c ⊂ (0,1). A relation **qB − pA = σy** with σ ∈ {±1},
