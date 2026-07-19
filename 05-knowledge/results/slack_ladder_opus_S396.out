@@ -1,0 +1,31 @@
+(1) slack = 0 IFF extremal (M = 1/14); slack SCALES under dilation
+    {1,...,13}               M=1/14      D=1    s=14    slack=0     EXTREMAL
+    {1..11,13,24}            M=1/14      D=1    s=14    slack=0     EXTREMAL
+    2*{1,...,13}             M=1/14      D=2    s=28    slack=0     EXTREMAL
+    3*{1,...,13}             M=1/14      D=3    s=42    slack=0     EXTREMAL
+    {1..11,13,36} (3/41)     M=3/41      D=3    s=41    slack=1     
+    2*{1..11,13,36}          M=3/41      D=6    s=82    slack=2     
+
+(2) THE SLACK-1 LADDER  M = D/(14D-1) -- which rungs are REALISED?
+    D    M = D/(14D-1)    value      realised by
+    1  1/13      0.076923   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]  (D=1, s=13, slack=1)
+    2  2/27      0.074074   -- not found in this sweep
+    3  3/41      0.073171   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]  (D=3, s=41, slack=1)
+    4  4/55      0.072727   -- not found in this sweep
+    5  5/69      0.072464   -- not found in this sweep
+    6  6/83      0.072289   -- not found in this sweep
+    7  7/97      0.072165   -- not found in this sweep
+    8  8/111     0.072072   -- not found in this sweep
+
+    ladder limit: D/(14D-1) -> 1/14 = 0.07142857 as D -> infinity
+    D=8 already gives 0.07207207, within 6.44e-04 of the floor
+
+(3) CAN SLACK BE 0 WITH D >= 2 (a 'new' extremal)?  slack=0 => M=1/14, so any
+    such family is extremal -- and dilation is how D>=2 extremals arise:
+      1*{1..13}: M=1/14 D=1 s=14 slack=0  (primitive: True)
+      2*{1..13}: M=1/14 D=2 s=28 slack=0  (primitive: False)
+      3*{1..13}: M=1/14 D=3 s=42 slack=0  (primitive: False)
+SEARCHING (1/14, 3/41) = (0.07142857, 0.07317073)
+  shapes: {1..11,13,x}, {1..12,x}, {1..10,12,13,x}, {1..11,14,x}   x <= 400
+  1552 families scanned; hits strictly inside: 0
+  none -- (1/14, 3/41) appears empty for these shapes

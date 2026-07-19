@@ -9,6 +9,8 @@ scripts: 04-computation/n14_gap_strata_opus_S395.py -> 05-knowledge/results/n14_
 
 # THM-1230 — the gap above 1/14 is populated
 
+> **GAP EDGE CORRECTED (opus-S396), see THM-1235.** Calling (1/14, 2/27) 'the stability gap' below reads the wrong interval: 2/27 is the FAREY NEIGHBOUR of 1/14, not the attained edge. A 1552-family scan over four natural shapes (x <= 400) finds NOTHING strictly inside (1/14, 3/41), so the attained gap is (1/14, 3/41) with 3/41 its right endpoint. The 3/41 witness and the ladder below are unaffected; only the interval's naming changes. Also proved there: slack = 0 <=> extremal, so slack 1 (which 3/41 attains) is MINIMAL for non-extremal families and cannot be beaten.
+
 ## The transfer from boxeph-S123
 
 boxeph stratified the n=12 uniqueness gap (1/13, 2/25) by the reduced

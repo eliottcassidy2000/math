@@ -16,6 +16,38 @@ barely clearing 1/13; verified: covering non-AP cores all have M>1/13, e.g. {1..
 only deep well is strict-interior). RECONCILES S58e (covering is forced, not assumed). Does NOT prove
 the kernel; the covering half is the genuine crux. HYP-7744; reflection + script. Next: bound val' at
 q'=v_i+v_j by distance-from-AP (localized THM-730). -> boxeph, kind-pasteur.
+## opus-2026-07-19-S396 -- THM-1235 SLACK 1 CANNOT BE BEATEN (slack = 0 <=> extremal, so 1 is minimal for non-extremals and 3/41 attains it) + slack SCALES under dilation (primitive families only) + THE TRUE GAP EDGE IS 3/41, NOT 2/27 -- correcting my own THM-1230 framing (HYP-7820)
+
+Owner: work the D=3 stratum and whether slack 1 can be beaten. It cannot, and the reason
+is a one-line identity I had not written down.
+SLACK 1 IS MINIMAL. slack := 14D - s is an INTEGER, and slack = 0 <=> M = D/(14D) = 1/14
+<=> EXTREMAL. So the only way to beat slack 1 is to BE extremal. Among non-extremal
+families slack = 1 is the minimum, and {1,...,11,13,36} attains it at M = 3/41, D = 3,
+s = 41. The question has a clean negative answer and 3/41 is optimal in its class.
+SLACK IS NOT DILATION-INVARIANT, which I should have noticed earlier: V -> kV sends
+D -> kD and s -> ks, so slack -> k*slack. Hence 2*{1,...,11,13,36} has slack 2, and the
+apparent 'D >= 2 extremals' are simply dilates -- 2*{1,...,13} sits at D=2, s=28, still
+slack 0. So slack is only meaningful on PRIMITIVE families. This is THM-1050's dilation
+invariance of M expressed in the (D,s) coordinates.
+THE SLACK-1 LADDER is M = D/(14D-1): 1/13, 2/27, 3/41, 4/55, 5/69, ... -> 1/14. Testing
+which rungs are realised, only D=1 ({1,...,12,14}) and D=3 ({1,...,11,13,36}) turned up;
+D = 2, 4, 5, 6, 7, 8 were not found.
+AND A CORRECTION TO MY OWN PREVIOUS SESSION. A targeted scan of 1552 families over four
+natural shapes -- {1..11,13,x}, {1..12,x}, {1..10,12,13,x}, {1..11,14,x} with x <= 400 --
+found NOTHING strictly inside (1/14, 3/41). In THM-1230 I called (1/14, 2/27) 'the
+stability gap' and reported it populated by 3/41. That is true but reads the wrong
+interval: 2/27 is the FAREY NEIGHBOUR of 1/14, not the ATTAINED edge. The attained gap is
+(1/14, 3/41), with 3/41 its right endpoint. I have amended THM-1230 accordingly; the
+witness and the ladder are unaffected, only the interval's naming.
+THE SHARP OPEN QUESTION this leaves: the unrealised slack-1 rungs D/(14D-1) for D >= 4
+all lie inside (1/14, 3/41) and accumulate at 1/14. So either the interval is genuinely
+empty -- making 3/41 the true second value of the LRC(14) spectrum and the floor isolated
+-- or some D >= 4 rung is realisable by families outside the shapes I tested, in which
+case 1/14 is an accumulation point from above and there is no gap at all. That is a
+sharp, finite-flavoured target and the natural successor here.
+FILES: THM-1235, THM-1230 amended, script + out, HYP-7820. opus; S396.
+
+---
 
 ## opus-2026-07-19-S395 -- THM-1230 THE n=14 STABILITY GAP IS NOT EMPTY: {1,...,11,13,36} realises 3/41 exactly (t*=17/41, pair (5,36), D=3, s=41), the depth-minimal value predicted by transferring boxeph-S123's determinant stratification -- and it sits on the ladder m/(12m+5) which starts at the extremal 1/14 and accumulates at 1/12, unifying the owner's 3/4/1-12 threads (HYP-7810)
 
