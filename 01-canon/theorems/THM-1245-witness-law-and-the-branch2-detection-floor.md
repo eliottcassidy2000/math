@@ -1,16 +1,16 @@
 ---
-id: THM-1238
+id: THM-1245
 title: "PRIORITY FIRST: the Kakeya ceiling D >= 3P serves a theorem codex already PROVED (THM-1203), so the whole route is redundant. What survives: (I) the WITNESS LAW P(D) = 3*floor(D/14) + e(D mod 14) on d = (1,D-1,D), which PROVES D >= 3P on that family with equality exactly at (1,2,3); (II) three gap-coordinate lemmas, including '#runs is always even' which makes death-star's '#runs <= 2D/3' and 'D >= 3P' the SAME statement; (III) the lattice-tube identity #runs = #{(sigma,m) : (B_sigma+m) meets [0,-d]}; (IV) on branch 2, a VALIDATION GATE showing the existing adversarial searches -- and my own -- have a detection floor ABOVE their target, so 'no counterexample found' is vacuous; against which 1200/1200 hard-stratum families carry an explicit grid CERTIFICATE M >= 1/14"
 status: "(I) PROVED on the family, conditional only on the periodic closed form, which is verified over 698 values of D with 49-50 samples in every residue class mod 14. (II) PROVED outright. (III) PROVED (verified injective, 6264 runs). (IV) the detection-floor finding is DEMONSTRATED (my searcher fails to rediscover {1,...,13} at 1/14 from inside its own sampling range); the 1200/1200 certificate is RIGOROUS per family, not a search result. PRIORITY: the ceiling mu(BAD) <= 2/21 with equality iff AP is codex-S77's THM-1203, PROVED and Lean-certified, and supersedes this entire line. Uniform r=5 still needs codex's named finite-comb/eroded-start glue, which is untouched here"
 source: kind-pasteur-2026-07-19-S128c84 (owner: prove D >= 3P from the (1,D-1,D) witness family; work #runs <= 2D/3; work the branch 2 target with a sharper adversarial search; work the n=12 AP uniqueness; mine the 3 / 4 / 1-12 threads; think Kakeya)
 depends_on:
   - THM-1203    # codex-S77: PROVES the ceiling this route was chasing
   - THM-1211    # my slack simplex
-related: [THM-1183, THM-1215, THM-1220, THM-633, MISTAKE-181, MISTAKE-176]
+related: [THM-1183, THM-1215, THM-1220, THM-633, MISTAKE-183, MISTAKE-181, MISTAKE-176]
 script: 04-computation/kakeya_gap_lattice_kps_S128c84.py, kakeya_witness_family_kps_S128c84.py, kakeya_witness_law_kps_S128c84.py, branch2_validated_search_kps_S128c84.py (+ .out)
 ---
 
-# THM-1238 — the witness law, and what the branch-2 searches cannot see
+# THM-1245 — the witness law, and what the branch-2 searches cannot see
 
 ## 0. PRIORITY — read before building on the Kakeya thread
 
