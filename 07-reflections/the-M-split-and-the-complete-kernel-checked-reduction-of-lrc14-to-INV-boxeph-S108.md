@@ -1,6 +1,6 @@
 # Corrected M-split: residual target exposed; historical global-INV claim withdrawn
 
-> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** the later `INVcov` repair is
+> **SECOND CORRECTION (THM-1158 / MISTAKE-170):** the later `INVcov` repair is
 > also false.  `2*{1,...,13}` is positive, Covering through 14, has exact
 > maximum `1/14<1/13`, and has no 13-dominant speed.  Consequently
 > `LRC14_of_INVcov` is a valid implication from a refuted premise, not a live

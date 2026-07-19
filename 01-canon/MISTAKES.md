@@ -4849,7 +4849,7 @@ can still admit new extremal dilations that falsify the intended conclusion.
 
 **Affects:** `LRCMSplit.lean`, `LRCFinsetBridge.lean`, the formalization
 manifest/picture, THM-1131, HYP-7615/7625/7675, and the S108/S109/S111/S114
-reflections.  See THM-1153 and `LRCINVcovCounterexample.lean`.
+reflections.  See THM-1158 and `LRCINVcovCounterexample.lean`.
 
 ## MISTAKE-171 (kind-pasteur-S128c69/c70, caught by S74/codex audit) -- three different gap means were conflated
 

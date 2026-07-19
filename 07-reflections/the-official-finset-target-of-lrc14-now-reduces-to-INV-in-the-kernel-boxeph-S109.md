@@ -1,6 +1,6 @@
 # The official Finset bridges to `INVcov` and `ResidualINV`
 
-> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** literal `INVcov` is refuted
+> **SECOND CORRECTION (THM-1158 / MISTAKE-170):** literal `INVcov` is refuted
 > by `2*{1,...,13}`.  Its Finset consumer is kernel-valid but has a false
 > premise.  The `ResidualINV` bridge and equivalence remain exact; they are the
 > honest formal interface.  Descriptions below of `INVcov` as a useful open

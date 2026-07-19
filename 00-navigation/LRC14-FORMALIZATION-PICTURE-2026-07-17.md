@@ -434,7 +434,7 @@ missing metric/multiplicity statements; the proposed all-`n` black self-line
 law is in fact refuted at `n=8` (`404` quasi-fixed versus `SC(8)=176`).
 
 The former short capstone through `INVcov` is kernel-valid only as a
-conditional implication.  THM-1153 refutes its literal premise even after
+conditional implication.  THM-1158 refutes its literal premise even after
 `Covering(2..14)` was added: the doubled AP `2*{1,...,13}` is Covering, has no
 `Lonely13` time, and has no 13-dominant speed.  `LRCMSplit.lean` now labels
 that interface historical and root-imports a formal counterexample.  The

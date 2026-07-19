@@ -12,7 +12,7 @@
   `1/13`-lonely time by band monotonicity.
 
   `INVcov` is a historical sufficient premise, now REFUTED by the doubled AP
-  `v_i=2(i+1)` (THM-1153):
+  `v_i=2(i+1)` (THM-1158):
 
       positive + Covering(2..14) + no Lonely13  ⟹  13-fold dominance.
 
@@ -56,7 +56,7 @@ theorem M_split (v : Fin 13 → ℤ)
 
 /-- **The historical covering inverse premise (REFUTED, dominance form).**
 Every positive covering 13-family with no `1/13`-lonely time was conjectured to
-have a speed dominating every other speed 13-fold.  THM-1153 refutes this exact
+have a speed dominating every other speed 13-fold.  THM-1158 refutes this exact
 Prop with `2*{1,...,13}`.  It remains named only so the already proved conditional
 implications have a stable interface. -/
 def INVcov : Prop :=

@@ -1,5 +1,5 @@
 ---
-id: THM-1153
+id: THM-1158
 title: The literal covering no-Lonely13 dominance premise is refuted by the doubled tight AP
 status: PROVED — the positive family W=2*{1,...,13} covers every modulus 2,...,14, has no 1/13-lonely time because dilation preserves the exact AP maximum 1/14, and has largest/second-largest ratio 26/24<13.  Thus the Lean proposition INVcov is false.  Its conditional consumer theorems remain kernel-valid, while ResidualINV and residualINV_iff_LRC14 remain the honest exact interface.  A dedicated Lean module checks the counterexample and `not_INVcov` without sorry
 source: codex-2026-07-18-S67 continuation, counterexample identified by concurrent S74 frontier audit
@@ -8,7 +8,7 @@ related: [THM-1131, THM-1149, MISTAKE-170]
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCINVcovCounterexample.lean
 ---
 
-# THM-1153 — `INVcov` is false
+# THM-1158 — `INVcov` is false
 
 The formal proposition introduced in the corrected M-split was
 

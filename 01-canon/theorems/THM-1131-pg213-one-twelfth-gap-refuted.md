@@ -133,7 +133,7 @@ Covering(2..14) v and not exists t, Lonely 13 v t
   => some speed is at least 13 times every other speed.       (INVcov)
 ```
 
-over positive rows.  Although `{1,...,13}` misses modulus 14, THM-1153 shows
+over positive rows.  Although `{1,...,13}` misses modulus 14, THM-1158 shows
 that its dilation `2*{1,...,13}` covers every modulus through 14 and still has
 maximum `1/14` and no dominant speed.  Thus `INVcov` itself is refuted.  The
 Lean surface also exposes the exact outer no-`Lonely 14` residual explicitly:

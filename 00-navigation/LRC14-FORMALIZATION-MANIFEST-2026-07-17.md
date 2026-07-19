@@ -1128,7 +1128,7 @@ from
 INVcov: Covering(2..14) and no Lonely13 imply 13-fold dominance.
 ```
 
-The implication is kernel-valid, but THM-1153 now proves this exact `INVcov`
+The implication is kernel-valid, but THM-1158 now proves this exact `INVcov`
 premise false: `2*{1,...,13}` is Covering through 14, has no `Lonely13` time,
 and has no 13-dominant speed.  The earlier repair exposed the missing divisor
 hypothesis but did not audit common dilation.  `ResidualINV` remains the exact

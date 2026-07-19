@@ -1,6 +1,6 @@
 # The proposed gap theorem is false—and would have been stronger than INV
 
-> **SECOND CORRECTION (THM-1153 / MISTAKE-170):** the comparison target
+> **SECOND CORRECTION (THM-1158 / MISTAKE-170):** the comparison target
 > `INVcov` used below is itself false on the doubled AP `2*{1,...,13}`.  The
 > proposed `1/12` gap remains independently refuted by THM-1131.  Thus the old
 > logical implication points to a refuted premise and supplies no proof route;

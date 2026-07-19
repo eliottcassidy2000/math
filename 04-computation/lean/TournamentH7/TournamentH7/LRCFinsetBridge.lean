@@ -13,7 +13,7 @@
     · use shift invariance to replace `t` by `Int.fract t ∈ [0,1)`.
 
   `LRC14_finset_of_INVcov` records a historical conditional implication
-  `LRC(≤13) + INVcov ⟹ LRC14.LRC14`; THM-1153 refutes its `INVcov` premise with
+  `LRC(≤13) + INVcov ⟹ LRC14.LRC14`; THM-1158 refutes its `INVcov` premise with
   the doubled AP.  The exact residual version is also exported:
   `LRC14_finset_of_residual_INV`.  The latter closes the representation gap, but
   because `ResidualINV` is equivalent to working LRC(14) under the cited bridge, it
@@ -65,7 +65,7 @@ theorem LRC14_finset_of_residual_INV (cite : LRCUpTo13) (inv : ResidualINV) :
 
 /-- **The official Finset target conditionally from the refuted `INVcov` premise
 (PROVED implication).**  `INVcov` supplies `ResidualINV`, after which the
-representation bridge above lands on `LRC14.LRC14`.  THM-1153 proves `¬INVcov`. -/
+representation bridge above lands on `LRC14.LRC14`.  THM-1158 proves `¬INVcov`. -/
 theorem LRC14_finset_of_INVcov (cite : LRCUpTo13) (inv : INVcov) :
     LRC14.LRC14 :=
   LRC14_finset_of_residual_INV cite (residualINV_of_INVcov inv)
