@@ -1,5 +1,5 @@
 ---
-id: THM-1134
+id: THM-1145
 title: The r=6 width-16 extrapolation and THM-1102's scalar sequential threshold are false — an exact covering family has T=1043/3>338, and an infinite covering progression has T/k5 tending to 28/27>1 while remaining lonely at t=5/16
 status: PROVED as a correction/refutation.  The exact Fraction verifier reproduces THM-1102's window witness, proves the finite covering countercertificate, proves the symbolic unbounded-T lemma, and exactly integrates the rational two-dimensional limit atlas for the infinite progression.  THM-1121's weighted atlas on 92<=k<=332 remains fully valid.  This theorem does not refute LRC: every member of the infinite obstruction progression is explicitly lonely at t=5/16.  What is refuted is completion based only on THM-1102's scalar residual threshold T; stronger sequential geometry and THM-1135's order-free harmonic tail are not refuted
 source: codex-2026-07-18-S67 (r6 unbounded-tail referee)
@@ -18,7 +18,7 @@ script: 04-computation/r6_measure_tail_referee_codex_S67.py
 output: 05-knowledge/results/r6_measure_tail_referee_codex_S67.out
 ---
 
-# THM-1134 — the r=6 width-16 tail extrapolation is refuted
+# THM-1145 — the r=6 width-16 tail extrapolation is refuted
 
 ## Exact setup
 
@@ -352,7 +352,7 @@ here.  In fact, the infinite translated progression above has harmonic sum asymp
 `6/m`, so THM-1135 dispatches its sufficiently large members even though the sequential
 threshold has `T/k_6 -> 28/27>1`.
 
-The two theorems therefore sharpen the frontier together: THM-1134 rules out the old
+The two theorems therefore sharpen the frontier together: THM-1145 rules out the old
 max-`T` extrapolation and its uniform sequential-ratio repair; THM-1135 salvages the
 unbounded direction by a different harmonic estimate and reduces it to a finite box.  It
 does not yet verify every tuple inside that box.

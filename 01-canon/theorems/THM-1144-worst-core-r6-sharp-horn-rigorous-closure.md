@@ -1,17 +1,18 @@
 ---
-id: THM-1132
+id: THM-1144
 title: Complete search-free proof that the sharp measure horn certifies the r=6 worst shape — R_sharp(b) < 1 for the core {1,2,4,7,9,11,12} with consecutive killers {b,…,b+8}, all b ≥ 157
 status: PROVED (rigorous). Finite part = exact rational check 157≤b≤399; tail part b≥400 = an explicit rational witness with exact margins. No search, no floating point in the certificate. This closes the "alignment" and "error-control" gaps THM-1123 left open, FOR THE WORST CORE + consecutive-killer shape (the empirical maximizer of R_sharp at r=6). It does NOT yet cover other cores/shapes.
 source: death-star-2026-07-18-S58 (continued)
 depends_on:
-  - THM-1123   # the sharp horn 1/(7L); this discharges its worst-shape uniform bound
+  - THM-1132   # the sharp horn 1/(7L); this discharges its worst-shape uniform bound
 related:
   - THM-1102   # the conservative-constant horn whose "wall" this dissolves
+  - THM-1134   # stronger exact all-core step-two closure, which subsumes the conclusion here
 script: 04-computation/r6_worstcore_finite_exact_deathstar_S58.py
 output: 05-knowledge/results/r6_worstcore_finite_exact_deathstar_S58.out
 ---
 
-# THM-1132 — the r=6 worst shape is closed with no search
+# THM-1144 — the r=6 worst shape is closed with no search
 
 ## Statement
 
@@ -21,10 +22,10 @@ the empirical worst shape). Let `L(b)` be the length of the largest component of
 `G_b = S(P₀) ∖ ⋃_{k∈K_b} danger(k)`, where `danger(k)={t:‖kt‖<1/14}` and
 `S(P₀)={t:‖pt‖≥1/14 ∀p∈P₀}`.
 
-> **THM-1132.** `L(b) > 1/(7(b+8))` for every integer `b ≥ 157`.
+> **THM-1144.** `L(b) > 1/(7(b+8))` for every integer `b ≥ 157`.
 
 Consequently, for any 6th (dodged) killer `k₆ > b+8`, `L(b) > 1/(7k₆)`, so the sharp measure
-horn (THM-1123) exhibits a real `1/14`-lonely time: **R_sharp(b) < 1 for all b ≥ 157**, with
+horn (THM-1132) exhibits a real `1/14`-lonely time: **R_sharp(b) < 1 for all b ≥ 157**, with
 no search and no floating-point in the certificate.
 
 ## Proof

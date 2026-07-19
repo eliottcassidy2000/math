@@ -1,12 +1,12 @@
 ---
 id: THM-1102
 title: r=6 bounded-window R telemetry and the historical candidate-box enumeration wall; no uniform max-T is proved, while THM-1135 later gives a different finite reduction
-status: PARTIAL / SUPERSEDED TAIL COORDINATE — the width-16 census over all 792 cores and the candidate-box feasibility estimate are retained, but interiority inside a fixed window does not make its max T uniform. THM-1134 gives finite and infinite covering refutations of the sequential max-T extrapolation. THM-1135 independently supplies a harmonic-discrepancy tail and a genuine finite mixed-scale box, but does not close that box. Uniform r=5 and r=6 remain open; only r<=4 is uniformly closed in this clustered hierarchy
+status: PARTIAL / SUPERSEDED TAIL COORDINATE — the width-16 census over all 792 cores and the candidate-box feasibility estimate are retained, but interiority inside a fixed window does not make its max T uniform. THM-1145 gives finite and infinite covering refutations of the sequential max-T extrapolation. THM-1135 independently supplies a harmonic-discrepancy tail and a genuine finite mixed-scale box, but does not close that box. Uniform r=5 and r=6 remain open; only r<=4 is uniformly closed in this clustered hierarchy
 source: kind-pasteur-2026-07-18-S128 (cont.64; owner: run the r=6 finite horn, computing max T first)
 depends_on:
   - THM-1101    # bounded r=5 telemetry; its former uniform closure is withdrawn
   - THM-1081    # the R-ladder this extends
-related: [THM-1097, THM-1134, THM-1135, MISTAKE-164]
+related: [THM-1097, THM-1145, THM-1135, MISTAKE-164]
 script: 04-computation/r6_maxT_kps_S128c64.py, r6_maxT_chunk_kps_S128c64.py, r6_feasibility_kps_S128c64.py (+ .out)
 ---
 
@@ -19,7 +19,7 @@ script: 04-computation/r6_maxT_kps_S128c64.py, r6_maxT_chunk_kps_S128c64.py, r6_
 > `308.4` is the scanned maximum and `KB=333` is a candidate cutoff only.
 > The exact all-high r=5 gap in THM-1101 shows why this distinction is real.
 
-> **Tail resolution (codex-S67; THM-1134/1135).**  The sequential coordinate
+> **Tail resolution (codex-S67; THM-1145/1135).**  The sequential coordinate
 > is genuinely nonuniform: a covering finite row has `T=1043/3>338`, and an
 > infinite covering progression has `T/k_5 -> 28/27>1`.  THM-1135 repairs the
 > all-scale reduction by keeping the core safe set intact and charging all six
@@ -85,7 +85,7 @@ later. There is no structural r-cap. The wall at r=6 is **computational**.
 - r = 5: **open**.  The below-235 horn is finite-exact, but THM-1101 has an
   exact covering row above 235 missed by both sides of its former split.
 - r = 6: **open but uniformly finite-reduced by THM-1135**.  The width-16
-  region remains valid telemetry, while THM-1134 proves that neither its
+  region remains valid telemetry, while THM-1145 proves that neither its
   numerical `max T` nor the sequential ratio horn is global.  THM-1135 gives
   the valid replacement box
   `k1<=513, k2<=950, k3<=19000, k4<=313500, k5<=4514400, k6<=58687200`.

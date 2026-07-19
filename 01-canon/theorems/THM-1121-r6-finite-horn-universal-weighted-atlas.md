@@ -1,7 +1,7 @@
 ---
 id: THM-1121
 title: The r=6 finite horn collapses to a 35-point universal weighted atlas — total witness weight 505, while every candidate killer has capacity at most 84, so six killers have capacity at most 504 and cannot cover the atlas
-status: PROVED for the complete finite branch 92 <= k_i < 333 by a dependency-free exact integer verifier; this removes THM-1102's estimated 3.64e12-sextuple enumeration wall. It does NOT close r=6. THM-1134 refutes the proposed sequential max-T tail, while THM-1135 supplies a different harmonic tail and reduces the remaining branch to a much larger finite mixed-scale box
+status: PROVED for the complete finite branch 92 <= k_i < 333 by a dependency-free exact integer verifier; this removes THM-1102's estimated 3.64e12-sextuple enumeration wall. It does NOT close r=6. THM-1145 refutes the proposed sequential max-T tail, while THM-1135 supplies a different harmonic tail and reduces the remaining branch to a much larger finite mixed-scale box
 source: codex-2026-07-18-S67 (r6 structural-compression subtask)
 depends_on:
   - THM-1041   # rational small-modulus witness criterion
@@ -11,7 +11,7 @@ related:
   - THM-1111   # MST overlap prune/dedupe negative; its named-next asks for this dual relaxation
 related:
   - THM-1111   # pairwise MST prune is strong but nonterminal; this weighted dual closes its gap
-  - THM-1134   # refutes the old sequential tail extrapolation
+  - THM-1145   # refutes the old sequential tail extrapolation
   - THM-1135   # valid harmonic finite reduction containing this certified subbox
 script: 04-computation/r6_universal_weighted_atlas_codex_S67.py
 output: 05-knowledge/results/r6_universal_weighted_atlas_codex_S67.out
@@ -155,7 +155,7 @@ about the tournament lens: pair orientation adds no certificate beyond the dual 
 ## What remains open
 
 This theorem eliminates the stated `3.64*10^12` bounded enumeration rather than merely
-accelerating it.  THM-1134 subsequently proves that the proposed five-remove/one-bound
+accelerating it.  THM-1145 subsequently proves that the proposed five-remove/one-bound
 max-`T` tail is false, even on an infinite covering progression.  THM-1135 supplies the
 valid replacement: an order-free harmonic discrepancy bound plus proper-prefix ratio
 horns reduce every uncertified tuple to the finite mixed-scale box

@@ -7,7 +7,7 @@ depends_on:
   - THM-933    # exact singleton primitive discrepancy / interval block-gluing interface
   - THM-955    # prior exact 6/(49k) danger-comb discrepancy and cluster-gap application
   - THM-1121   # universal weighted atlas for the bounded 92..332 subbranch
-  - THM-1134   # refutation of the order-sensitive constant-max-T extrapolation
+  - THM-1145   # refutation of the order-sensitive constant-max-T extrapolation
   - LRC(<=13)  # settled proper-prefix clearance used in the ratio horn
 script: 04-computation/r6_harmonic_tail_finite_box_codex_S67.py
 output: 05-knowledge/results/r6_harmonic_tail_finite_box_codex_S67.out
@@ -103,7 +103,7 @@ number of components.  Unlike the failed max-`T` extrapolation, (3) is
 order-free and global in scale.  Its tail variable is the reciprocal-loss
 ledger, not a constant upper bound on an interval threshold.
 
-This also reconciles THM-1134's infinite translated obstruction with a valid
+This also reconciles THM-1145's infinite translated obstruction with a valid
 tail theorem.  Along that family the sequential threshold `T` tends to
 infinity, but any six-killer completion with smallest killer at least `514` is
 immediately dispatched by (3).  Unbounded `T` and a uniform LRC tail are
@@ -250,7 +250,7 @@ the exact residual data are
 
 Thus THM-1102's last-killer sufficient condition really does fail in the
 covering branch; replacing `333` by the next `13`-multiple `338` is not merely
-the non-covering issue isolated in THM-1134.
+the non-covering issue isolated in THM-1145.
 
 Nevertheless the particularly simple exact rational time
 

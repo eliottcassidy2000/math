@@ -1,31 +1,33 @@
 ---
-id: THM-1134
+id: THM-1146
 title: The sharp measure horn certifies the r=6 consecutive-killer shape for ALL 792 seven-speed cores — R_sharp < 1 uniformly, global max 0.8011 at the P0 core
-status: VERIFIED for all 792 cores (consecutive step-2 killers, the empirical worst shape). The worst core P0 is PROVED exactly (THM-1132). The uniform tail construction + exact witness-existence are established for all 792; the finite heads are float-verified (max 0.8011, margin ≈0.2 from 1). Full exact-rational certification of every core's witness sub-arc / B0 / finite head is mechanical follow-up. SCOPE: the consecutive shape only — the full r=6 uniform theorem needs all killer shapes.
+status: INDEPENDENT CONSTRUCTION / PARTLY EXACT. The theorem conclusion for all 792 cores and every legal scale is independently PROVED by the stronger exact THM-1134 certificate. This file's alternative witness-tail route has exact witness existence and the exact THM-1144 worst core, but its per-core B0 and remaining finite-head maxima are floating telemetry. It is retained as a structural construction, not as an additional exact proof. SCOPE: consecutive step-two killers only.
 source: death-star-2026-07-18-S58 (continued; owner brief: loop the two-part template over all 792 cores)
 depends_on:
-  - THM-1123   # the sharp horn 1/(7L)
-  - THM-1132   # the worst core P0, proved exactly; this generalizes it over cores
+  - THM-1132   # the sharp horn 1/(7L)
+  - THM-1144   # the worst core P0, proved exactly; this generalizes its construction over cores
+related:
+  - THM-1134   # stronger exact all-core theorem, which subsumes the conclusion
 script: 04-computation/r6_allcores_prover_deathstar_S58.py
 output: 05-knowledge/results/r6_allcores_prover_deathstar_S58.out
 ---
 
-# THM-1134 — the consecutive-killer shape closes for all 792 cores
+# THM-1146 — an independent consecutive-killer construction over all 792 cores
 
 ## Statement
 
 For every 7-element core `P ⊆ {1,…,12}` and consecutive step-2 killers
 `K_b = {b, b+2, b+4, b+6, b+8}` with `b ≥ lo_P = 13·max(P)+1`, the largest surviving
 component `L(b)` of `S(P) ∖ ⋃_{k∈K_b} danger(k)` satisfies `L(b) > 1/(7(b+8))`. Hence the
-sharp measure horn (THM-1123) certifies a `1/14`-lonely time for every such family:
+sharp measure horn (THM-1132) certifies a `1/14`-lonely time for every such family:
 
 > **R_sharp(b) < 1 for all 792 cores and all `b ≥ lo_P`.** Global maximum
 > `R_sharp = 10325/12888 = 0.801133`, attained uniquely at the P0 core `{1,2,4,7,9,11,12}`,
-> `b = 171` (THM-1132).
+> `b = 171` (THM-1144).
 
 ## Proof (the two-part template, looped)
 
-Each core is closed by THM-1132's template — an exact **finite head** and a uniform
+Each core is approached by THM-1144's template — an exact **finite head** and a uniform
 **explicit-witness tail** — with a structural collapse that makes the finite head almost
 never needed.
 
@@ -45,7 +47,7 @@ already covers all `b ≥ lo_P` for **791 of the 792 cores — with no finite ch
 
 **Finite head — one core.** The only core with `lo_P < 103` is `{1,2,3,4,5,6,7}` (`lo=92`),
 needing `b ∈ [92,102]` (11 values), which pass. The worst core `P0` (finite head `[157,399]`)
-is proved in exact rational arithmetic in THM-1132.
+is proved in exact rational arithmetic in THM-1144.
 
 **Verification.** `r6_allcores_prover` scans all 792 cores, consecutive step-2 killers,
 `b ∈ [lo_P, 600]`: **zero failures, global max `R_sharp = 0.801133`, witness valid on every
@@ -54,8 +56,8 @@ core.** An independent scan over steps 1–4 (`r6_allcores_scan`) gives the same
 
 ## Rigor ledger
 
-- **Exact:** witness existence on all 792 cores; the P0 finite head + tail (THM-1132);
-  the `G_{2/7}` / `G(σ)` band structure (THM-1123).
+- **Exact:** witness existence on all 792 cores; the P0 finite head + tail (THM-1144);
+  the `G_{2/7}` / `G(σ)` band structure (THM-1132).
 - **Float-verified (margin ≈0.2 from 1, so effectively certain):** the finite-head maxima on
   all 792 cores; the `B₀ ≈ 103` window widths (sampled, not yet interval-certified).
 - **Mechanical follow-up for full formal rigor:** exact-rational per-core witness sub-arc with

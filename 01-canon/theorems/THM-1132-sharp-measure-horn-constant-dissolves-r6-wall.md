@@ -9,7 +9,8 @@ related:
   - THM-1061   # where 1/(3L) was introduced ("a killer leaves gaps 6/(7k), so 1/(3L)=7k/18")
   - THM-724    # deep-well covering-min; the sharp horn certifies the deep well directly
   - THM-1121   # exact bounded atlas, independent of the local improvement here
-  - THM-1134   # refutes extrapolation from a fixed-width sequential bank
+  - THM-1134   # exact multiplier cone and all-scale step-two closure
+  - THM-1145   # refutes extrapolation from a fixed-width sequential max-T bank
   - THM-1135   # harmonic all-scale finite reduction
   - MISTAKE-168
 script:

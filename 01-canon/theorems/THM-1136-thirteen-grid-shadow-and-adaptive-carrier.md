@@ -9,7 +9,7 @@ depends_on:
 related:
   - THM-1121   # exact bounded r=6 atlas
   - THM-1128   # four-center thirteen-grid rectangle
-  - THM-1134   # sequential scalar-tail refutation
+  - THM-1145   # sequential scalar-tail refutation
 script: 04-computation/lrc14_r6_q13_shadow_adaptive_referee_codex_S67.py
 output: 05-knowledge/results/lrc14_r6_q13_shadow_adaptive_referee_codex_S67.out
 ---

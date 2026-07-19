@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact referee for the r=6 harmonic tail and finite-box reduction.
 
-The order-sensitive max-T extrapolation is false (THM-1134).  This verifier
+The order-sensitive max-T extrapolation is false (THM-1145).  This verifier
 instead keeps the seven-speed core safe set E intact and charges each of the
 six killer danger sets by its exact one-interval discrepancy.  For
 
