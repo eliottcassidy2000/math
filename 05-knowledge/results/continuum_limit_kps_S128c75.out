@@ -1,0 +1,34 @@
+### F_inf sampled: where is it below the 1/6 threshold? ###
+  grid points: 20160 ; bad points: 1922 ; bad measure ~ 0.095337
+  runs: 2 ; run widths (as fractions of the period): [0.047669, 0.047669]
+  run centres: [0.2619, 0.7381]
+
+### convergence check: finite k1 per-run fraction vs the limit ###
+  the finite values from THM-1146(IV) were:
+    k1 = 157  0.0382 | 207  0.0386 | 257  0.0428 | 307  0.0423 | 357  0.0448 | 407  0.0467
+  CONTINUUM per-run width  = 0.047669
+  CONTINUUM total bad      = 0.095337
+  finite values are BELOW and rising toward the limit
+
+### the load-bearing comparison ###
+  total bad measure (continuum)      = 0.095337
+  S(P) minimum measure (atlas)       = 0.164
+  counting argument needs total < S  : HOLDS
+  margin                             = 0.068663
+
+### where exactly does F_inf dip?  profile around the minimum ###
+   u        F_inf(u)    vs 1/6
+  0        1.000000    ok
+  1/48     0.927083    ok
+  1/24     0.854167    ok
+  1/16     0.781250    ok
+  1/12     0.708333    ok
+  5/48     0.635417    ok
+  1/8      0.562500    ok
+  7/48     0.489583    ok
+  1/6      0.416667    ok
+  3/16     0.343750    ok
+  5/24     0.270833    ok
+  11/48    0.197917    ok
+  1/4      0.125000    BAD
+DONE

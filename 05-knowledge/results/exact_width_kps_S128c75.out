@@ -1,0 +1,24 @@
+### the linear branch: is F_inf(u) = 1 - (7/2)u on [0,1/4]? ###
+  exact match on u = 0, 1/100, ..., 25/100 : True
+
+### the endpoints of the bad run ###
+  entry: 1 - (7/2)u = 1/6  =>  u = 5/21 = 5/21 = 0.2380952
+  F_inf(5/21)      = 1/6
+  F_inf just below = 10021/60000 (u=5/21 - 1/10000)
+  F_inf just above = 9979/60000 (u=5/21 + 1/10000)
+
+  exit candidate 2/7 = 6/21 = 0.2857143
+  F_inf(2/7)       = 1/6 = 0.1666667
+  F_inf just below = 0.1665500
+  F_inf just above = 0.1667833
+
+### exact bad-set measure on a fine grid ###
+  grid N=44100 : bad measure = 0.0952834
+  2/21 = 0.0952381  ; difference = 4.54e-05
+
+### VERDICT ###
+  per-run width  = 1/21 = 0.0476190  (CONVERGES; finite k1 values rise toward it)
+  total bad      = 2/21 = 0.0952381
+  S(P) minimum   = 0.164
+  counting needs total < S(P): True   margin = 0.06876
+DONE
