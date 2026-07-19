@@ -1,0 +1,4 @@
+Vmax=182 M=14/183 val=14 q=183: edges(val,q-val)=True v*+w*=183(=q?yes) span=155=11val+g0=155 g0=1(in[1,val-1]?True)
+Vmax=26 M=2/27 val=2 q=27: edges(val,q-val)=True v*+w*=27(=q?yes) span=23=11val+g0=23 g0=1(in[1,val-1]?True)
+Vmax=364 M=28/365 val=28 q=365: edges(val,q-val)=True v*+w*=365(=q?yes) span=309=11val+g0=309 g0=1(in[1,val-1]?True)
+Vmax=546 M=42/547 val=42 q=547: edges(val,q-val)=True v*+w*=547(=q?yes) span=463=11val+g0=463 g0=1(in[1,val-1]?True)
