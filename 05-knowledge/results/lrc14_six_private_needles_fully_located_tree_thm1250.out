@@ -1,0 +1,15 @@
+THM-1250 SIX PRIVATE NEEDLES / FULLY LOCATED TREE EXACT AUDIT
+projective tooth-address ceiling = 2011 per label
+total tooth ceiling = 12066
+private tooth floor = 1/(98539 c)
+private interval-stalk floor = 1/(990908184 c)
+positive gcd/lcm tooth handoffs checked = 987496
+labelled six-vertex trees = 1296
+K6 edge incidence across labelled trees = 432/1296 = 1/3
+tree/active-set Hunter checks = 82944
+surjective chronological owner words checked = 112320
+multiplicity-weighted maximum-tree checks = 112320
+private-owner tooth-recurrence rows = 196950
+located debt = cH-1 >= (7c/12) sum_(uv in T) 1/lcm(u,v)
+averaged debt = H >= 1/c + (7/36) sum_(u<v) m_uv/lcm(u,v)
+RESULT: PASS
