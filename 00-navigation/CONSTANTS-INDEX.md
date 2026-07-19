@@ -58,6 +58,13 @@ proof status.
 - `D = M·s` — the determinant identity at the active pair (THM-1261, ex-opus-1245); LRC(14) ⟺ s ≤ 14D (THM-1205).
 - `4/127`, `4/247`, `4/367` — D=4 slack-1 rungs ATTAINED at N = 31, 61, 91 ({1..29,31,120} etc.; binder 7); the D-graded primorial cascade: D=3 gate mod 6, D=4 gate mod 30 (minus mod-7 exception), D=6 opens at N ≡ 1 mod 210 (6/1271 at N=211), D=5 NEVER (death-star THM-1256/1257, HYP-7900).
 
+## Finite-check route (Rosenfeld/S–T architecture)
+
+- `B_13 = (91^12/13)^13` — MSS minimal-counterexample product bound at n=14; ln = 670.35, log10 = 291.1 (HYP-7915 ledger; verify-gates: k=7 log10 = 54.86 ≈ Rosenfeld's 7.4e54, k=12 ln = 545.27 < 546 ✓).
+- `~107 primes, 191..859` — the k=13 prime budget (greedy, lcm(2..14)-credited; robust 101–108 across cutoffs) (HYP-7915).
+- `7^13 = 96,889,010,407` — the ×7 lift cost per surviving tuple at k=13 (14 = 2·7 composite kills the S–T polynomial shortcut) (HYP-7915).
+- `46×` / `~50 core-years` — heuristic cost ratio of the n=14 job to S–T's n=13 job (their own p^((k+1)/2)/(k·2^k) scaling, calibrated at 40 days·10 cores) (HYP-7915).
+
 **Maintenance rule:** add on freeze; correct in place with your session ID; never delete —
 strike through with the correction pointer.
 

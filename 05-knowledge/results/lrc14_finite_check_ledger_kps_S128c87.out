@@ -1,0 +1,34 @@
+== (1) MSS product bounds ==
+  k= 7: B_k = (C(8,2)^6/7)^7  ln B =    126.33  log10 B =    54.86
+  k=12: B_k = (C(13,2)^11/12)^12  ln B =    545.27  log10 B =   236.81
+  k=13: B_k = (C(14,2)^12/13)^13  ln B =    670.35  log10 B =   291.13
+  [verify] k=7: log10 = 54.86 (paper: < 7.4e54 -> 54.87)  k=12: ln = 545.3 (paper: < 546)
+  lcm(2..14) = 360360  (ln = 12.795)
+
+== (2) the k=13 prime budget ==
+  k=12 reconstruction: greedy primes from 167: count=91, largest=727, sum ln p = 545.9 (paper: 73 primes to 733, >547)
+  k=13 cutoff 191 (first prime > k^2+k = 182): count=107, largest=859, sum ln p = 658.9 (target 657.6 after lcm credit)
+  k=13 cutoff 167 (same cutoff as k=12 (optimistic)): count=108, largest=839, sum ln p = 659.3 (target 657.6 after lcm credit)
+  k=13 cutoff 400 (pessimistic: small primes fail the improper check): count=101, largest=1063, sum ln p = 661.9 (target 657.6 after lcm credit)
+
+== (3) cost extrapolation (S-T's own heuristic p^((k+1)/2)/(k 2^k)) ==
+  k=12 baseline: 91 primes, heuristic mass 1.186e+15  == ~40 days on 10-core M4
+  k=13 target:   107 primes to 859, heuristic mass 5.421e+16
+  RATIO = 45.7x  ->  ~1,828 days on the same 10-core M4
+                     = 5.0 machine-years (10-core)
+                     = 50 core-years
+  at 1,000 cores:  ~18 days;  at 10,000 cores: ~1.8 days
+
+== (4) the two structural walls the heuristic does NOT price ==
+  (a) x7 lift (k+1=14=2*7 composite; the k=10/12 polynomial shortcut needs
+      k+1 prime and FAILS): one x7 lift costs 7^13 = 96,889,010,407 (~9.69e+10)
+      tuple-checks per surviving tuple, vs 2^13 = 8,192 for a x2 lift
+      ratio (7/2)^13 = 1.18e+07. Feasible ONLY if the surviving set |S|
+      before the x7 step is tiny: |S| * 7^13 <= 1e15 requires |S| <= 10,321.
+  (b) I(k,p,1) representative space (mod-p symmetry-reduced ~ p^k/(2^k (k-1)!)):
+      k=12 @ p=733: 10^23.2   k=13 @ p=859: 10^25.5
+      growth factor 10^2.4 -- and S-T name THIS (not the lifting) as the
+      k=13 bottleneck; it is a covering-configuration classification mod p.
+
+== (5) sanity: Rosenfeld k=7 replication ==
+  greedy primes from 31: count=28, largest=163 (paper: 27 primes, 31..163) -> CHECK
