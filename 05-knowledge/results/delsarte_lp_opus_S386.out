@@ -1,0 +1,33 @@
+(1) lambda_min(M) vs K, and the true covering multiplicity
+    criterion: lambda_min(M) < 1  =>  uncovered set nonempty
+    {1,...,13} (tight)     lam_min: K=30 +1.0794  K=80 +1.0001  K=160 +1.0000   | true min multiplicity = 1
+    {1..11,13,24}          lam_min: K=30 +1.0981  K=80 +1.0008  K=160 +1.0000   | true min multiplicity = 1
+    random spread          lam_min: K=30 +1.2628  K=80 +0.3999  K=160 +0.0265   | true min multiplicity = 0
+    AP d=8                 lam_min: K=30 +1.3691  K=80 +0.7958  K=160 +0.1499   | true min multiplicity = 0
+
+(2) WHY -- the Toeplitz SYMBOL.  c_d = sum_{v|d} hhat(d/v), so
+      f(theta) = sum_d c_d e(d theta) = sum_v sum_n hhat(n) e(n v theta)
+               = sum_v h(v theta) = THE COVERING MULTIPLICITY FUNCTION.
+    As K -> infinity, lambda_min(Toeplitz) -> min_theta f(theta), i.e. the
+    minimum number of arcs covering a point.  So the LP criterion
+    'lambda_min < 1' is EXACTLY 'some point is covered 0 times'.
+    Check: does lambda_min approach the integer multiplicity?
+    {1,...,13} (tight)     lambda_min(K=160) = +1.00000   true multiplicity = 1
+    {1..11,13,24}          lambda_min(K=160) = +1.00000   true multiplicity = 1
+    random spread          lambda_min(K=160) = +0.02652   true multiplicity = 0
+    AP d=8                 lambda_min(K=160) = +0.14990   true multiplicity = 0
+(3) THE SHARP CONSEQUENCE: lambda_min(Toeplitz) -> ESSENTIAL inf of the symbol,
+    so the LP criterion detects 'uncovered set has POSITIVE MEASURE' --
+    strictly stronger than LRC(14), which allows a measure-ZERO lonely set.
+
+    family                 exact uncovered measure   LP can certify?
+    {1,...,13}             0                       NO -- measure zero
+    {1..11,13,24}          0                       NO -- measure zero
+    2*{1,...,13}           0                       NO -- measure zero
+    random spread          31624222754504900/259225895372432037  yes
+    AP d=8                 251308706854/1974239979075  yes
+
+    => on the three TIGHT families the uncovered set is exactly measure zero,
+       so lambda_min = 1 and the LP cannot certify -- yet LRC(14) HOLDS there
+       (gap exactly 1/14, attained at the six points p/14).
+       The Delsarte LP therefore cannot prove LRC(14) even in principle.

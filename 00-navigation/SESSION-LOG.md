@@ -3,6 +3,41 @@
 Prompt (owner): prove d proportional to (1,2,3) is the maximiser
 
 FILES: THM-1149, HYP-7595, maximiser_proof script + out. -> all (codex: thank you for MISTAKE-171, absorbed and recorded at the head of THM-1149 -- I had measured against the uniform benchmark m0 rather than the actual component mean, and your D*B split is the right way to keep them apart. On the maximiser: the mechanism is that BAD forces the four pieces near 1/8 each, exact balance puts the tooth RIGHT EDGES at (7/24, 7/12, 7/8) which is exactly ratio 1:2:3, and since h_i = (7/6) frac(-d_i u) is AFFINE between wraps, a fixed ratio across an interval forces d3/d2 = 2 and d4/d2 = 3 by the Moebius argument. Grid check confirms it starkly: the 1:2:3 edge ratio holds on 33% of u for (1,2,3) and (2,4,6), and on EXACTLY ZERO for every non-proportional triple tested. What is missing is the wrapping case-analysis in step III, which is routine but unwritten. With it, THM-1148's ceiling is proved and bad <= 2/21 < 0.164 <= |S(P)| becomes a complete analytic tail, leaving only the endpoint bank.)
+## opus-2026-07-17-S386 -- THM-1185 THE DELSARTE LP CANNOT PROVE LRC(14), EVEN IN PRINCIPLE: its Toeplitz symbol IS the covering multiplicity sum_v h(v theta), so lambda_min tends to the ESSENTIAL infimum and the criterion is 'uncovered set has POSITIVE MEASURE' -- which is FALSE on all three tight families, where the lonely set is measure zero (HYP-7720)
+
+Owner: work a new angle. I tried the Delsarte / positive-definite LP -- the standard
+weapon for covering problems, never attempted here, and the only approach that meets the
+13/7 obstruction with a FREE optimisation rather than a fixed bound. It cannot work, and
+the reason is structural rather than a matter of tuning.
+THE SETUP: for P = |sum a_k e(kt)|^2 >= 0 we have int P*1_U >= int P - sum_v int P*1_{D_v},
+and since 1_{D_v}(t) = h(v t) its Fourier mass sits on multiples of v, so
+int P*1_{D_v} = sum_n Phat(nv) hhat(n). With Phat(m) = sum_k a_k a_{k+m} that is a
+quadratic form a^T M a in the symmetric TOEPLITZ matrix M[k,l] = c_{l-k} with
+c_d = sum_{v in V, v | d} hhat(d/v) and c_0 = 13 * 2*lam = 13/7. Criterion:
+lambda_min(M) < 1 certifies a positive-measure uncovered set.
+WHY IT DEGENERATES: the arcs are not arbitrary sets, they are DILATES of one function,
+D_v = h(v.). That forces the symbol to collapse to f(theta) = sum_v h(v theta) -- exactly
+the COVERING MULTIPLICITY function. As K grows lambda_min tends to its essential
+infimum, so the LP is not a relaxation of the problem: it IS the problem.
+MEASURED at K = 30, 80, 160: the tight families give 1.0794 -> 1.0001 -> 1.00000 against
+exact uncovered measure 0; non-tight families give 1.2628 -> 0.3999 -> 0.0265 and
+1.3691 -> 0.7958 -> 0.1499, with uncovered measure positive.
+THE IMPOSSIBILITY: because lambda_min sees only the ESSENTIAL infimum, the LP certifies
+exactly 'the uncovered set has POSITIVE MEASURE'. That is strictly stronger than LRC(14),
+which allows the lonely set to be null -- and it is FALSE on all three tight families:
+{1,...,13}, {1,...,11,13,24} and 2*{1,...,13} all have uncovered measure exactly 0, while
+LRC(14) holds for them with gap exactly 1/14 attained at the six points p/14. So the
+method fails not from weak bounds or insufficient polynomial degree but because the
+quantity it computes is BLIND to measure-zero witnesses, and the extremal families are
+precisely those whose only witnesses are measure-zero.
+WHAT THIS ADDS BEYOND A NEGATIVE: it sharpens THM-1170's reading of where the difficulty
+lives. Every MEASURE-based method in this programme -- Bonferroni (THM-1095), the density
+bounds (THM-1155/1165), and now the LP -- is structurally unable to see the tight
+families, because at the level of measure there is nothing there to see. The methods that
+have survived contact with the tight families are all POINTWISE: the classical sieve, the
+essential-region criterion, and the beat-frequency structure. That looks like the real
+dividing line, and I would use it to triage future approaches.
+FILES: THM-1185, script + out, HYP-7720. opus; S386.
 
 ---
 
