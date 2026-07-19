@@ -1,0 +1,57 @@
+THM-1217 MIXED-PERIOD BEAT-MASK TREE EXACT REFEREE
+method=integer/Fraction only; always-on checks; no dependencies
+master_identity_rows=20000
+pair_mask_rows: sum=79800 difference=160400
+kruskal_vs_all_125_trees_rows=382
+mixed_census: L<=48 configs=734765 proper=582852 full=151913
+mixed_suppliers: common_C<L=538523 tree_CT<L=582796 tree_strict=572063 run_strict=582733
+largest_option_clock=(46, 24)
+first_full_union=(1, (1, 1, 1, 1, 1), (1, 1, 1, 1, 1))
+first_full_without_Q1=(16, (2, 16, 16, 16, 16), (8, 3, 3, 3, 3))
+properness_note=full U has no finite escape run; C<L is required for C+1
+realized_full_no_Q1_guardrail:
+  q=16
+  speeds=(17, 35, 53, 71, 88, 104)
+  periods=(16, 16, 16, 16, 2, 2)
+  masks=((0, 1, 15), (0, 5, 11), (0, 3, 13), (0, 7, 9), (0, 2, 4, 6, 8, 10, 12, 14))
+  common_bound=16
+  tree_bound=16
+  tree=((3, 4), (2, 4), (1, 4), (0, 4))
+  union=full Z/16Z
+
+CORRECTED a=79 RESIDUAL ROW
+a=79
+speeds=(140, 210, 350, 420, 490, 770)
+q=280
+k=11
+g_values=(140, 70, 70, 140, 70, 70)
+periods=(2, 4, 4, 2, 4, 4)
+d0=70
+L=4
+masks=((0, 2), (0,), (0,), (0, 2), (0,))
+union=(0, 2)
+intersection_matrix=((2, 1, 1, 2, 1), (1, 1, 1, 1, 1), (1, 1, 1, 1, 1), (2, 1, 1, 2, 1), (1, 1, 1, 1, 1))
+common_bound=3
+tree_edges=((0, 3), (0, 1), (0, 2), (0, 4))
+tree_credit=5
+tree_bound=2
+run=1
+block=(40, 41, 42)
+witness=41
+packet=(1, 2, 3, 4, 5, 6, 79, 140, 210, 350, 420, 490, 770)
+least_residues=(41, 82, 123, 116, 75, 34, 121, 140, 70, 70, 140, 70, 70)
+clearances=(Fraction(41, 280), Fraction(41, 140), Fraction(123, 280), Fraction(29, 70), Fraction(15, 56), Fraction(17, 140), Fraction(121, 280), Fraction(1, 2), Fraction(1, 4), Fraction(1, 4), Fraction(1, 2), Fraction(1, 4), Fraction(1, 4))
+harmonic=21804/13475
+first_ratio=140/79
+gcd_ratio=70/79
+thresholds: B_common=4 B_tree=3 B_run=2
+witness_time=41/280; all 13 clearances >= 1/14
+frontier_checks: b1/a<13/6; d0/a<397/432; a*sum(1/bi)>1
+
+TOURNAMENT / ALTERNATE-VERTEX AUDIT
+observable=|Mi intersect Mj| (symmetric)
+gauge_path=M1->M4->M2->M3->M5 (period then label)
+scores=(0,1,2,3,4); cycles=0; SCCs=5; Hamilton_paths=1; reverse_flips=10
+faithful_vertices=master residues + quotient clocks + lifted mask obligations
+destroyed_by_tournament=mask placement, quotient maps, block phase, run length
+STATUS=PASS

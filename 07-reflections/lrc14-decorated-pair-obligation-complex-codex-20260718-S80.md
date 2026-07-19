@@ -13,7 +13,7 @@ is a **pair obligation** together with the data needed to interpret it:
 
 Relations among these vertices form small proof-bearing 2-cells.
 
-1. In THM-1210, continuum four-comb BAD forces all six pair differences of
+1. In THM-1203, continuum four-comb BAD forces all six pair differences of
    four phase points into the three-band set
    `A=[1/7,2/7] union [3/7,4/7] union [5/7,6/7]`.  Deleting to a non-AP
    triple leaves the additive circuit `(p,q,p+q)`.  Its six torus alcoves,
@@ -30,7 +30,7 @@ Relations among these vertices form small proof-bearing 2-cells.
    these cells is unsafe: the exponent stalk preserves an alternating sign
    and an exponentially decaying weight.  Its tournament sees the sign but
    not the magnitude.
-5. THM-1215 identifies one terminal beat stalk.  When a defining difference
+5. THM-1204 identifies one terminal beat stalk.  When a defining difference
    is `q=14d` and all six fast speeds have gcd `d` with `q`, every reduced
    danger mask is the same singleton `{0}` in `Z/14Z`.  A slow-gap numerator
    block has at least six consecutive points as soon as `q>=7a`, so it must
@@ -84,7 +84,7 @@ keep every one of those straddles at or below `1/13`.  The active pair is a
 decorated obligation; the other ten phases are its feasibility sidecar.
 This locates the hard object without proving Tao's `n=12` uniqueness.
 
-THM-1215 is the first all-scale example where this transport can be completed
+THM-1204 is the first all-scale example where this transport can be completed
 without averaging.  Its block sidecar supplies six consecutive residues and
 its gcd sidecar identifies every fast mask with `{0}`.  The resulting witness
 is literal, not merely a deficit in a union bound.  This suggests treating
@@ -123,7 +123,7 @@ owner used by every incident 2-cell.
 Klein's `+/-`-fibration gives a precise type for this distinction.  A Cayley
 tournament chooses a section of
 `(Z/qZ)^* -> (Z/qZ)^*/{+/-1}`, while the LRC divisor deck lives in the base.
-The symmetric three-band predicate in THM-1210 also factors through that
+The symmetric three-band predicate in THM-1203 also factors through that
 base.  Seam direction, owner, and beat transport are not a global section;
 they are local lift data attached only where a 2-cell needs them.  This
 explains why the decorated complex can borrow tournament language without
@@ -145,14 +145,14 @@ global problem.
    speed subset alone.
 2. Delete or contract a vertex only when every incident additive, seam, and
    complement-cover cell has an explicit reconstruction map.
-3. Discharge rank-two additive cells by the THM-1210 triangle bound.
+3. Discharge rank-two additive cells by the THM-1203 triangle bound.
 4. Discharge zero-seam cells by third-support/owner debt and retain their gcd
    quantum instead of a uniform scalar floor.
 5. Discharge rational beat cells by a positive puncture deficit; if every
    deficit vanishes, retain the full truncated-block phase as the residual
    state rather than averaging it away.
 6. If all reduced masks on a beat cell coincide, test the retained numerator
-   block directly against that common mask; THM-1215 is the singleton-mask
+   block directly against that common mask; THM-1204 is the singleton-mask
    model.
 7. Route valuation-stalk residuals before applying any finite-height or
    phase-free pair estimate.
@@ -166,11 +166,11 @@ no survivors without pretending that those banks are uniform proofs.
 
 ## Honest boundary
 
-THM-1210 closes the sharp continuum four-comb ceiling and its equality locus.
+THM-1203 closes the sharp continuum four-comb ceiling and its equality locus.
 THM-1214 closes the complete clustered five-killer stratum, and THM-1169 plus
 THM-1212 close the clustered six-killer stratum.  The decorated-complex
 viewpoint does not by itself prove global LRC(14), CrownCollapse14, or the
 uniform non-AP twelve-speed equality classification.  The historical uniform
 `q<=25` good-period claim is false (MISTAKE-143); the new number 25 in
-THM-1210 is the unrelated and rigorously derived finite condition
+THM-1203 is the unrelated and rigorously derived finite condition
 `p+q<=25` for additive-triangle gaps.

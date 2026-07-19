@@ -1,4 +1,4 @@
-THM-1210 continuum bad-set / additive-triangle ceiling exact referee
+THM-1203 continuum bad-set / additive-triangle ceiling exact referee
 arithmetic=fractions.Fraction; chamber endpoints have measure zero
 identity: F_inf=(7/6)*max_j(Delta_j-1/7)_+
 BAD iff maxgap({0,d2*u,d3*u,d4*u})<=2/7
@@ -7,8 +7,8 @@ direct continuum identity chamber rows=454
 triangle quotient: A=[1/7,2/7]U[3/7,4/7]U[5/7,6/7]; BAD forces every pair difference into A
 R={(x,y):x,y,x+y in A}: six exact right triangles; model rows=784; area=3/49; horizontal components<=2
 shear z=x+y: model rows=784; x-sections empty off A, six explicit interval branches and at most two components on A
-tail: J(p,q)<=3/49+6/[7(p+q)]<2/21 for coprime p<q and p+q>=26; cutoff value=60/637
-finite triangle core: pairs=99; distinct=87; maximum=2/21; unique reduced maximizer=((1, 2),); runner-up=13/147
+tail: J(p,q)<=3/49+6/[7(p+q)]<2/21 for coprime p<q and p+q>=26; cutoff value=60/637; strict margin=2/1911
+finite triangle core: pairs=99; distinct=87; top unique strata=2/21@(1, 2); 13/147@(1, 6); 8/105@(3, 10)
 independent carry formula rows=99; J=2/[7(p+q)]*sum_k c_k*L_k
 equality obligation lemma audit: rows=27000; survivors=30 (exactly a=b=c)
 height-30 triples=4060; cycle correlations=12180; triangle implications=4060 (138 reduced types); distinct measures=518; zero=2010

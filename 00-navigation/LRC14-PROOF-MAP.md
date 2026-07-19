@@ -1,8 +1,152 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## 2026-07-19 S82 SIX-COMB CURVATURE SPECTRUM AND ACTIVE-PAIR PATH
+>
+> THM-1219 identifies the exact obstruction left after the five-comb theorem.
+> For `a=7m+s`, `0<=s<=6`, on the `k=m` slow gap, the consecutive killers
+> `a+1,...,a+6` form a near-tiling whose survivor is only `O(a^-2)`.  Its
+> positive curvature charges are
+>
+> ```text
+> s                         0   1   2   3   4   5   6
+> N_s                      48  42  43  46  51  58  67,
+> a^2 S_s(a) -> N_s/14.
+> ```
+>
+> The residue-one family is sharpest, with seven literal holes and
+> `S(a)~3/a^2`.  Hence no universal `C/a` six-comb survivor floor can exist;
+> THM-1198's `1/(49a)` five-comb floor is genuinely one-row fragile.
+>
+> The decisive connection to THM-1205 is exact: every signed boundary or
+> adjacent-tooth defect factors as
+>
+> ```text
+> (x+y)/(xy) * (D/(x+y)-1/14)
+>   = [14D-(x+y)]/[14xy].
+> ```
+>
+> Thus the proof-bearing object is a seven-edge active-pair handoff path with
+> determinant, pair sum, scale, phase, and third-runner blockers as labels.
+> The transitive runner tournament keeps only order and loses the sign and
+> curvature.  The new global target is an active-edge blocking theorem:
+> every positive pair-sum edge would have to be killed by a third support,
+> and the resulting obligation hypergraph must be shown inconsistent.
+
+> ## 2026-07-19 S82 HEAVY CIRCUITS FORCE AP MASK COLLAPSE
+>
+> THM-1218 composes the sharp additive-triangle ceiling THM-1203 with the
+> mixed-period mask nerve.  If a quartet `(bi,bj,b5,b6)` has continuum BAD
+> mass strictly above `60/637`, its four deletion circuits force
+>
+> ```text
+> (bi,bj,b5,b6)=(b5-2q,b5-q,b5,b5+q),   q=b6-b5.
+> ```
+>
+> The heavy pair is unique.  All four AP speeds coincide modulo `q`, so the
+> five relevant beat labels collapse to at most three distinct masks.  On a
+> common reduced clock the escape threshold improves from five classes to
+> `B3(Q)=6ceil(Q/14)-4`; on a mixed clock the same pointwise equality holds
+> on the actual divisor `L=q/gcd(q,b1,...,b6)`.
+>
+> Strict `>` is essential: the sheared tail equals `60/637` at total
+> frequency 26.  THM-1218 is a conditional rigidity theorem, not yet an
+> existence theorem for a heavy pair.  Its faithful graph has the six
+> quartet-pair candidates as vertices, four deletion circuits as proof
+> obligations, and beat-mask class as a sidecar; runner tournaments erase
+> both circuit mass and quotient class.
+
+> ## 2026-07-19 S82 UNIVERSAL FIVE-COMB DUAL DENSITY
+>
+> THM-1198 closes the full five-comb slow-gap problem, without integrality,
+> phase, or ratio restrictions.  On a normalized complete slow gap it builds
+> a six-bin probability density whose load under every one-comb tooth preimage
+> of slope `L>=6/7` is at most `7/36<1/5`.  Five closed danger combs therefore
+> leave dual mass at least `1/36`, normalized length at least `1/42`, and
+> physical survivor length at least `1/(49c)` in every `c`-slow gap.
+>
+> A putative six-comb cover is consequently rigid: its least fast speed obeys
+> `d1<13c/6`; deleting any comb leaves a private region for it of length at
+> least `1/(49c)`; the six private regions are disjoint; and at least `7/9` of
+> the normalized gap is uniquely covered.  The exact phase envelope has
+> twelve rational pieces through slope three, while a BV estimate supplies
+> the tail.  The faithful object is the six-bin dual measure together with
+> labelled private regions and endpoint/bin events, not a runner-order
+> tournament.  These laws substantially narrow the six-comb residual but do
+> not yet exclude it or provide the crown extraction needed for global
+> LRC(14).
+
+> ## 2026-07-19 S82 MIXED-PERIOD BEAT-MASK HUNTER TREE
+>
+> THM-1217 removes THM-1216's common-gcd hypothesis.  At a sum/difference
+> beat denominator `q`, the six reduced periods `Qi=q/gcd(bi,q)` lift to the
+> master clock
+>
+> ```text
+> L=q/gcd(q,b1,...,b6)=lcm_i Qi.
+> ```
+>
+> The defining pair shares a mask, leaving five obligations of exact sizes
+> `Ci=(L/Qi)A(Qi)`.  Their common zero gives the cap
+> `C0=1+sum(Ci-1)`.  More sharply, every spanning tree gives
+> `C_T=sum Ci-sum_edges |Mi intersect Mj|`; a maximum-weight tree is the
+> optimal Hunter credit.  If the union is proper, its longest cyclic
+> dangerous run gives the exact consecutive-block threshold.
+>
+> Properness and strict cap inequalities are essential: an actual `q=16`
+> beat packet with speeds `(17,35,53,71,88,104)` has no period-one mask but
+> its five masks fill all of `Z/16Z`.  Conversely, the corrected frontier row
+> `a=79`, fast speeds `(140,210,350,420,490,770)`, has master masks
+> `({0,2},{0},{0},{0,2},{0})`; the Hunter tree forces the unique witness
+> `t=41/280`, safe for the full thirteen-speed packet.  Thus the theorem
+> closes a mixed-gcd row surviving the harmonic, first-tooth, and old
+> common-period ratio filters, but does not yet force a useful tree/run on
+> every packet.  The faithful object is the quotient-clock incidence tree
+> plus lifted masks and block phase, not a runner tournament.
+
+> ## 2026-07-19 S81 COMMON-PERIOD BEAT-HOLE NERVE
+>
+> THM-1216 replaces the phase-free sum of fast-period caps by their overlap
+> nerve.  For reduced difference period `Q>=2`, every unit danger mask has
+> `A(Q)=2ceil(Q/14)-1` residues and all masks share zero.  If `r` distinct
+> masks occur among the five relevant fast classes, their union has at most
+> `1+r(A-1)` residues; hence `B_r=2+r(A-1)` consecutive beat numerators force
+> an escape.  Uniformly `B_5(Q)<=Q`.  The exact number of possible masks is
+> one for `2<=Q<=14` and `phi(Q)/2` for `Q>=15`, giving a sharper
+> class-sensitive threshold.
+>
+> At reduced `Q=14`, only two numerators are needed.  Thus THM-1204's scale
+> `q/a>=7` improves to `q/a>=7/3`.  This is sharp for a phase-uniform beat
+> guarantee: for even `d`, `a=6d+1` and fast speeds
+> `d(9,11,13,15,17,31)` leave the middle beat block equal to `{7d}`, the
+> common dangerous residue, while `14d/(6d+1)` tends upward to `7/3`.
+> The faithful object is the five-mask nerve with its universal zero vertex
+> and cyclic block phase; the transitive speed tournament loses both.  This
+> closes a structured common-gcd stalk, not arbitrary mixed-period covers or
+> global LRC(14).
+
+> ## 2026-07-18 S78 BV NEEDLE EXTENSION AND FIRST TOP-SEVEN HORN
+>
+> THM-1197 extends the exact bounded-variation slow-gap certificate from
+> carriers at most 30 through every carrier `a<=40`: for every complete
+> `a`-gap and every phase there is a probability density assigning each
+> faster danger comb mass strictly below `1/6`, so six faster combs cannot
+> cover that gap.  The normalized proof object is a density-selection problem
+> over the cyclic torus orbit `({s/a},{sk/a})` and its vertical frequency
+> ladder; a load tournament remembers only an order and loses the margins,
+> phase, and variation budget.  Carriers `a>=41` and a uniform density selector
+> remain open.
+>
+> THM-1194 makes the first literal top-seven application at `v7=78` under
+> `v7>=13v6`.  Distinctness freezes the lower core as `{1,...,6}`; its safe
+> interval contains the complete gap `G_11(78)`, and one exact BV row rules
+> out coverage by `v8,...,v13`.  This closes one genuine horn, not `v7>=79`.
+> The separation between “find a lower-core-safe complete gap” and “puncture
+> its six faster combs” is now an explicit interface shared with the beat-mask
+> programme below.
+
 > ## 2026-07-18 S80 `q=14` BEAT-PUNCTURE STALK
 >
-> THM-1215 closes an all-scale mixed-gcd subcone of the six-on-one-slow-gap
+> THM-1204 closes an all-scale mixed-gcd subcone of the six-on-one-slow-gap
 > branch.  If `q=b6-b5=14d`, `q>=7a`, and all five earlier fast speeds have
 > gcd `d` with `q`, then all six fast danger masks are the same singleton
 > `{0}` on the reduced fourteen-clock.  Every slow-gap beat block contains
@@ -12,10 +156,13 @@
 > plus the consecutive-block phase; the transitive speed tournament erases
 > both.  This is a genuine uniform stalk closure, not the general slow-gap
 > theorem or global LRC(14).
+>
+> THM-1216 above strictly supersedes the numerical scale in this S80 entry;
+> THM-1204 is retained as the independent singleton-mask and THM-1192 replay.
 
 > ## 2026-07-18 S77 CONTINUUM FOUR-COMB CEILING
 >
-> THM-1210 proves the sharp uniform continuum bound
+> THM-1203 proves the sharp uniform continuum bound
 > `mu{u:maxgap({0,d2u,d3u,d4u})<=2/7}<=2/21`.  BAD forces every
 > pair difference into the symmetric three-band set
 > `[1/7,2/7] union [3/7,4/7] union [5/7,6/7]`.  Delete the four integer
@@ -48,7 +195,7 @@
 > nonproportional directions is impossible.  The six-box visualization may
 > remain useful, but incidence must be replaced by contact order or sojourn
 > length.  This correction does not reopen clustered `r=5`, which THM-1214
-> closes independently.  THM-1210 subsequently proves the all-offset `2/21`
+> closes independently.  THM-1203 subsequently proves the all-offset `2/21`
 > continuum bad-measure ceiling by a different additive-triangle quotient.
 
 > ## 2026-07-18 S78 UNIFORM CLUSTERED `r=5` CLOSURE
@@ -97,14 +244,18 @@
 > actual core-component phase needle; at the sole short-needle row it retains
 > the component address explicitly.  The 40,336 new rows at heights 57..64
 > all satisfy the universal radius criterion; their tightest row is
-> `(53,59,60,62)`, with margin `2279/303800`.  Uniform `r=5` for primitive
-> shapes with `d>64` remains open.
+> `(53,59,60,62)`, with margin `2279/303800`.  At the S76 checkpoint,
+> primitive shapes with `d>64` were still open; THM-1214 below subsequently
+> closes their ambient clustered `r=5` stratum by a different owner-window
+> argument.
 
 > ## 2026-07-18 S75 OWNER/EROSION/PRIMITIVE UPDATE
 >
-> Global LRC(14), uniform `r=5`, Cover14 crown collapse, and n=12 equality
-> rigidity remain open.  The full `r=6` clustered stratum is now closed, and
-> four former frontier statements are sharper.
+> At the S75 checkpoint, global LRC(14), uniform `r=5`, Cover14 crown collapse,
+> and n=12 equality rigidity remained open.  The later THM-1214 entry above
+> closes clustered `r=5`; the global, crown, and general n=12 obligations
+> remain.  The full `r=6` clustered stratum was already closed, and four former
+> frontier statements became sharper.
 >
 > **All zero through six 13-carrier strata (`r=6`) are closed.**  THM-1151's thirty
 > two-carrier uniform-cap obstructions are all dispatched by THM-1154's chart
@@ -129,7 +280,8 @@
 > is `9/56`; THM-1148's core floor and legality imply `m ell(P)>9/56` at every
 > legal scale.  Thus `m(3,4,5,6)` leaves a closed interval of length
 > `1/(42m)=1/(7k4)`, which no fifth open danger tooth can cover.  Uniform
-> `r=5` away from this ray remains open.
+> `r=5` away from this ray was open at S75 and is superseded at the proof-map
+> level by THM-1214.
 >
 > **The inverse interface is now normalized.**  THM-1158 formally refutes
 > literal `INVcov`.  THM-1157 proves that under no `Lonely13`, full Covering is
@@ -154,11 +306,13 @@
 
 > ## 2026-07-18 S75 SEVEN-WALL/CORRECTION UPDATE
 >
-> Global LRC(14), uniform `r=5`, uniform `r=6`, n=12 equality rigidity, and
-> crown collapse remain open.  The compact `1/13` floor is a stronger
-> sufficient target than LRC(14)'s `1/14` conclusion; it is not known
-> equivalent.  The n=12 equality probe classifies a deletion only after a
-> separate tight-deletion extraction.  See THM-1099, THM-1149, and
+> This paragraph records the historical S75 frontier: global LRC(14), uniform
+> `r=5`, uniform `r=6`, n=12 equality rigidity, and crown collapse were then
+> open.  THM-1212/1214 now close the clustered `r=6/r=5` strata, while the
+> global, crown, and general n=12 obligations remain.  The compact `1/13`
+> floor is a stronger sufficient target than LRC(14)'s `1/14` conclusion; it
+> is not known equivalent.  The n=12 equality probe classifies a deletion only
+> after a separate tight-deletion extraction.  See THM-1099, THM-1149, and
 > MISTAKE-170.
 >
 > **Formal inverse guardrail:** THM-1158 refutes the literal `INVcov`

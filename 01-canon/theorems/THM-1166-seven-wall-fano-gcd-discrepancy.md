@@ -1,19 +1,20 @@
 ---
 id: THM-1166
-title: Seven-wall quadratic/Fano gcd discrepancy at the actual one-fourteenth radius
-status: PROVED analytic cover implications and FINITE-EXACT three-speed overlap floor.  Every seven-comb packet has global uncovered mass at least 1/12; a covered lower-LRC needle forces common dilation G/m<=77/12, every labelled Fano plane obeys sum m/G_line>=32/231, and every forest obeys an exact adaptive edge-gcd budget.  This does not prove a uniform local overlap constant, crown collapse, or LRC(14)
+title: Seven-wall quadratic/Fano gcd discrepancy -- sharp global pair/tree credits, common-dilate closure, and exact covered-needle gcd-error laws
+status: PROVED complementary S75/S76 packages.  At radius 1/14 every pair has overlap at least 1/91, every triple has pair sum at least 51/1183 and an edge at least 1/63, every seven-packet has a 110/1183 global tree, and every seven-comb packet has global uncovered mass at least 1/12.  A covered lower-LRC needle forces common dilation G/m<=77/12 and exact Fano, forest, and density-weighted gcd-error necessities.  These global credits do not yet give a uniform edgewise localized overlap constant, crown collapse, or LRC(14)
 source: codex-2026-07-18-S75/S76
-depends_on: [LEM-042, LEM-043, THM-1153]
-related: [THM-856, THM-1156, HYP-7678]
-script: 04-computation/lrc14_seven_wall_fano_gcd_codex_20260718.py
-output: 05-knowledge/results/lrc14_seven_wall_fano_gcd_codex_20260718.out
+depends_on: [LEM-042, LEM-043, THM-965, THM-1153, THM-1155]
+related: [THM-856, THM-1025, THM-1156, HYP-7678]
+script:
+  - 04-computation/lrc14_seven_wall_fano_gcd_codex_20260718.py
+  - 04-computation/lrc14_seven_wall_pair_tree_referee_codex_S76.py
+output:
+  - 05-knowledge/results/lrc14_seven_wall_fano_gcd_codex_20260718.out
+  - 05-knowledge/results/lrc14_seven_wall_pair_tree_referee_codex_S76.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCSevenWallFanoGCD.lean
 referee:
   - 04-computation/lrc14_fano_gcd_discrepancy_referee_codex_20260718.py
   - 05-knowledge/results/lrc14_fano_gcd_discrepancy_referee_codex_20260718.out
-pair_tree_referee:
-  - 04-computation/lrc14_seven_wall_pair_tree_referee_codex_S76.py
-  - 05-knowledge/results/lrc14_seven_wall_pair_tree_referee_codex_S76.out
 ---
 
 # THM-1166 -- seven-wall Fano/gcd discrepancy

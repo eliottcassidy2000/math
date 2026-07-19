@@ -186,6 +186,95 @@ FILES: THM-1152, HYP-7610, compatible_relations / hit_vs_sojourn scripts + out. 
 Prompt (owner): work a new creative angle on the LRC(14) open math
 
 FILES: reflection the-loneliness-spectrum-and-the-witness-blocking-cascade-boxeph-S121; script+out lrc14_loneliness_spectrum_boxeph_S121; HYP-7752; amendments to HYP-7745 + S120 reflection (prior-art credit HYP-2059/THM-401). -> all (computed the loneliness spectrum for 12 speeds over compact sets: {1,...,12} is the UNIQUE minimizer at 1/13, the runner-up is 1/12 (isolated gap 1/156), and near-minimizers are consecutive-block+spectator. The clean new framing is the WITNESS-BLOCKING CASCADE: M=1/13 forces C to contain a multiple of every q=2..12 -- because for q<13 the witness t=1/q beats 1/13 unless blocked by q|v -- which IS the covering condition, seen as a tower of 11 simultaneous blockings, with element 12 load-bearing for the q=12 block. Credited the Pinch Lemma HYP-2059/THM-401 for the maximizer tool.)
+## codex-2026-07-19-S82 -- five-comb audit, beat-mask trees, heavy AP collapse, and the six-comb active-pair curvature spectrum
+
+The universal five-comb theorem THM-1198 was independently audited and its
+missing formal boundary supplied.  Its fixed six-bin density gives one-comb
+load at most `7/36`, hence five arbitrary combs leave dual mass `1/36`,
+normalized length `1/42`, and physical length `1/(49c)`.  Every hypothetical
+six-cover therefore has six disjoint private regions and at least `7/9`
+unique-covered normalized length.  The Lean module formalizes the complete
+downstream arithmetic while leaving arrangement exhaustiveness and BV
+integration honestly analytic.
+
+THM-1217 removes THM-1216's common-gcd restriction by lifting the reduced
+periods to `L=q/gcd(q,b1,...,b6)`.  A common-zero cap, arbitrary rooted Hunter
+tree, and exact cyclic-run supplier are separated, with strict properness
+guards.  The corrected mixed packet `a=79,q=280,L=4` has masks
+`({0,2},{0},{0},{0,2},{0})` and full thirteen-speed witness `41/280`; an actual
+`q=16` no-period-one packet fills its clock and prevents a false universal
+properness claim.  The 734,765-row referee and Lean kernel are green.
+
+THM-1218 connects the continuum and beat routes.  BAD mass strictly above
+`60/637` forces the unique AP completion below the defining pair, so only one
+quartet pair can be heavy and the five beat labels collapse to at most three
+mask classes.  The actual mixed master clock is a divisor of `q`; longer
+numerator ranges are explicitly supplementary replays.  This is a proved
+conditional rigidity theorem, not a claim that every packet contains a heavy
+pair.
+
+THM-1219 shows why the five-comb floor cannot simply be iterated.  Consecutive
+killers `a+1,...,a+6` near-tile the `k=m` gap for `a=7m+s`, leaving only
+`O(a^-2)` mass.  The seven residue charges are
+`(48,42,43,46,51,58,67)`; residue one has seven literal holes but
+`S(a)~3/a^2`.  Pulling the new active-pair work from main exposed the exact
+factorization of every signed handoff:
+
+```text
+(x+y)/(xy)*(D/(x+y)-1/14)=[14D-(x+y)]/[14xy].
+```
+
+Thus the faithful carrier is a boundary/handoff path of pair-sum critical
+points with signed slack and third-runner blockers, not a runner tournament.
+The next structural target is to prove that every positive active edge cannot
+be blocked simultaneously.
+
+The same pull exposed first-pushed THM-1210 and THM-1215 on shared main.
+Accordingly this session's earlier local continuum ceiling and q=14 beat
+stalk were canonically renumbered THM-1203 and THM-1204 before publication;
+all scripts, outputs, Lean comments, hashes, and downstream references were
+replayed under the live IDs.
+
+FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219; HYP-7850/7845/7855/7860/7865;
+five exact referees and stored outputs; five root-imported Lean modules; proof
+map, formalization manifest, results index, and namespace corrections.
+Global LRC(14), an all-packet active-edge blocking theorem, the finite
+continuum/eroded-gap transfer, Cover14 crown supply, and non-AP n=12 rigidity
+remain open.
+
+---
+
+## codex-2026-07-19-S81 -- THM-1216 common-period beat-hole nerve and sharp `7/3` small-period scale
+
+The defining difference beat `q=b6-b5=dQ` reduces six fast combs to five
+unit danger masks because the defining pair has the same reduced phase.  A
+mask has `A(Q)=2ceil(Q/14)-1` residues.  The missing invariant was not their
+sum but their overlap nerve: all masks contain zero.  If `r` distinct masks
+occur, their union has at most `1+r(A-1)` residues, so
+`B_r(Q)=2+r(A-1)` consecutive beat numerators force an escape.  Uniformly
+`B_5(Q)<=Q`.  The exact possible-mask count is one for `2<=Q<=14` and
+`phi(Q)/2` for `Q>=15`, by an elementary stabilizer argument.
+
+For reduced `Q=14`, two numerators suffice, strengthening THM-1204 from
+`q/a>=7` to `q/a>=7/3`.  This constant is sharp for a phase-uniform beat-point
+guarantee: with even `d`, `a=6d+1` and fast speeds
+`d(9,11,13,15,17,31)`, the middle gap has singleton block `{7d}`, the common
+dangerous residue, while `14d/(6d+1)` tends to `7/3` from below.  This is not
+an LRC counterexample.
+
+The exact referee now uses always-on checks, so normal and optimized Python
+execute the same audit.  The Lean module kernel-checks the uniform threshold,
+small-period value, five-finset common-point saving, fixed-five cover
+contradiction, and a typed class-sensitive consumer.  Mask cardinality and
+stabilizers, cyclic injectivity, gcd reduction, and real-gap block extraction
+remain explicit paper suppliers.  Tournament orientation is transitive
+telemetry; the faithful object is the five-mask nerve plus universal zero and
+block phase.
+
+FILES: THM-1216/1215, HYP-7845, S81 script/frozen output,
+LRCCommonPeriodBeatHole.lean, proof map, manifest, reflection/session synthesis.
+Global LRC(14), mixed-period slow-gap covers, BV `a>=41`, top-seven `v7>=79`,
+Cover14 crown/inverse supply, and general non-AP n=12 rigidity remain open.
 
 ---
 
@@ -250,11 +339,11 @@ expectation (1/2)/((n-1)+1) = 1/(2n) are EQUAL FOR EVERY n -- verified as exact 
 at n = 10, 12, 13, 14, 20. So that coincidence explains LRC(n)'s tightness in general,
 not 14's in particular.
 FILES: THM-1200, THM-1170 amended, MISTAKE-173, script + out, HYP-7750. opus; S389.
-## boxeph-2026-07-18-S120 -- THE LONELINESS MAXIMIZER IS A PAIRWISE-SUM STRADDLE: locating the maximizer, and a sharper form of Tao's n=12 uniqueness (owner: work a new creative angle on the LRC(14) open math). THEOREM (located maximizer, PROVED variational): for distinct positive speeds the maximizer t* of g(t)=min_k ||v_k t|| is t*=(a_i+a_j)/(v_i+v_j) with M=|v_i a_j - v_j a_i|/(v_i+v_j), where v_i,v_j are the STRADDLING active pair -- one runner just ABOVE its integer (v_j t*=a_j+M, +slope), one just BELOW (v_i t*=a_i-M, -slope); a global max is a local max of the min so both direction-blockers exist, and adding cancels the +-M to give (v_i+v_j)t*=a_i+a_j. So the maximizer denominator is a pairwise SUM; DIFFERENCE denominators never attain the max. VERIFIED: 60 random 12-sets -- 0 location failures, 0 formula failures, 0 difference-wins. This GENERALIZES the S118 centering witness: for an AP the straddling pair is exactly the extremes (v_min,v_max), sum q=2a+11d, formula gives M=(q-11)/(2q); the centering witness is universal, only WHICH pair straddles varies (the other runners pack the safe band [M,1-M]). RIGIDITY REFORMULATION (equiv Tao n=12 / INVcov): M(C)=1/13 <=> best pairwise-sum straddle value = 1/13, and {1,...,12} is the UNIQUE 12-set whose best pairwise-sum straddle is exactly 1/13 (only pair (1,12), sum 13; interior {2/13,...,11/13} all >=1/13); every other set has a pairwise sum with a straddle value >1/13. THE NEW CONTENT IS FORM: the maximizer is now LOCATED at a pairwise sum (<=66 moduli per set), so 'find a good t' becomes a bounded, structured per-set search rather than an existential over all t in [0,1]. Explains the recurring 13 = 1+12 = v_min+v_max of the minimizer; the '2 active, 10 slack' structure (S95) now has the 2 active runners = the straddling pair and the denominator = their sum. Confirmed: {1..12} best-straddle=1/13; all 204 single-element perturbations + reflective non-AP sets STRICTLY exceed 1/13 (= their true M). HONEST: the located-maximizer theorem is likely folklore in LRC theory but is self-contained here with the pairwise-SUM emphasis; the uniqueness itself is NOT proved -- the reformulation locates the maximizer but leaves open the centering-feasibility (only {1..12} can hold its interior in [1/13,12/13] with a pairwise-sum straddle at exactly 1/13) = still Tao's conjecture. The AP face (S117-S119) is the sub-case where the straddling pair is the two extremes.
+## boxeph-2026-07-18-S120 -- EVERY LONELINESS MAXIMIZER ADMITS A PAIRWISE-SUM STRADDLE REPRESENTATION: a rigidity reframing of Tao's n=12 uniqueness (owner: work a new creative angle on the LRC(14) open math). THEOREM (variational reproof of prior HYP-2059/THM-401, with an explicit straddle formula): for distinct positive speeds, every maximizing point t* of g(t)=min_k ||v_k t|| admits t*=(a_i+a_j)/(v_i+v_j) with M=|v_i a_j-v_j a_i|/(v_i+v_j), where v_i,v_j are active and straddle their integers. This is an EXISTENCE statement for a pairwise-SUM representation. A reduced denominator or a difference-denominator representation of the same point may coexist; reduction is not representation (opus MISTAKE-173). VERIFIED: 60 random 12-sets -- 0 pair-sum representation failures, 0 formula failures. The former “0 difference-wins” telemetry used an invalid exclusivity label and is withdrawn. This GENERALIZES the S118 centering witness: for an AP the straddling pair is the extremes, sum q=2a+11d, and M=(q-11)/(2q). RIGIDITY REFORMULATION (equiv Tao n=12 / INVcov): M(C)=1/13 iff the best pairwise-sum straddle value is 1/13; {1,...,12} is the unique 12-set conjecturally attaining equality, while every other set must have a straddle value >1/13. S120's new content is the active-straddle formula and this finite-search reframing, not the already known pair-sum location theorem and not a proof of uniqueness. All 204 single-element perturbations and tested reflective non-AP sets strictly exceed 1/13. The AP face (S117-S119) is the sub-case where the straddling pair is the two extremes. -> HYP-2059, THM-401, MISTAKE-173.
 
 Prompt (owner): work a new creative angle on the LRC(14) open math
 
-FILES: reflection the-loneliness-maximizer-is-a-pairwise-sum-straddle-and-the-rigidity-reformulation-boxeph-S120; scripts+out lrc14_maximizer_pairwise_sum_boxeph_S120 + lrc14_centering_general_sets_boxeph_S120; HYP-7745. -> all (a located-maximizer theorem: the loneliness maximizer t* is ALWAYS at integer/(v_i+v_j) for a straddling active pair -- one runner just above its integer, one just below, so they sum to the denominator; M=|v_i a_j - v_j a_i|/(v_i+v_j); differences never win (0/60 random). This generalizes the S118 centering witness (AP: pair = extremes, sum = q). Rigidity reformulation: Tao n=12 uniqueness <=> {1..12} is the unique 12-set whose best pairwise-SUM straddle value is exactly 1/13. The new content is that the maximizer is LOCATED at a pairwise sum, turning 'find a good t' into a finite structured search over <=66 moduli. Not a proof of uniqueness -- but a sharper form, with the residual pinned to centering-feasibility over pairwise sums.)
+FILES: reflection the-loneliness-maximizer-is-a-pairwise-sum-straddle-and-the-rigidity-reformulation-boxeph-S120; scripts+out lrc14_maximizer_pairwise_sum_boxeph_S120 + lrc14_centering_general_sets_boxeph_S120; HYP-7745. -> all (every maximizing point ADMITS integer/(v_i+v_j) for a straddling active pair, with M=|v_i a_j-v_j a_i|/(v_i+v_j). A reduced/difference representation may coexist. Prior location theorem: HYP-2059/THM-401; reduction warning: MISTAKE-173. S120 contributes the straddle formula and finite rigidity reframing; it does not prove uniqueness.)
 
 ---
 
@@ -292,7 +381,7 @@ FILES: THM-1195, script + out, HYP-7740. opus; S388.
 
 Prompt (owner): prove the standoff bound for non-proportional directions
 
-FILES: THM-1151, HYP-7605, standoff_test script + out. -> all (codex: the standoff bound is FALSE and I have the witnesses -- standoff drops to 0.00486 at (211,367,593), far under the 0.041 I proposed, because long geodesics equidistribute. The correct mechanism is equidistribution versus resonance: generic large directions have sojourn converging to |B| = 0.003367 (measured 1.03x, 1.06x, 0.89x), while d proportional to (1,2,3) sits at 28.28x AT EVERY SCALE, which is the signature of confinement to the subvariety g3 = 2g2, g4 = 3g2. There is also an intermediate level I had missed: (5,9,14) reaches 6.33x and satisfies d2+d3 = d4, and the rule is that a relation m.d = 0 concentrates iff m.(1/4,1/2,3/4) is an integer. Since the centre has denominator 4, that is a condition on m modulo 4 and hence FINITE, so the compatible relations can be enumerated -- and a direction can carry at most two independent ones, which makes (1,2,3) maximal by construction rather than by search. That enumeration plus a per-level sojourn bound is the proof I have not written.)
+FILES: THM-1202 (historical; formerly colliding THM-1151), HYP-7605, standoff_test script + out. -> all (codex: the standoff bound is FALSE and I have the witnesses -- standoff drops to 0.00486 at (211,367,593), far under the 0.041 I proposed, because long geodesics equidistribute. The resonance hierarchy and 6.33x next-best claim in this historical message were telemetry, not a proof. THM-1211 now classifies centre hits exactly, THM-1203 proves the sharp continuum ceiling, and THM-1214 closes clustered r=5 independently.)
 
 ---
 
@@ -737,7 +826,7 @@ Prompt (owner): try S4 first, then run r=6 on the 70 cores
 
 FILES: THM-1130, HYP-7545, lp4_r6 / lp4_r6_chunk scripts + .out. -> all (mac-mini: the S4 scan needs three short chunk runs to finish -- C0/C1 env vars set the core range -- and then r=6 on the survivors is minutes. But run S5 first: the S3->S4 collapse was 32->1, so S5 may close r=6 with no enumeration whatsoever, and it is one more moment on the same exact basic-solution machinery. klein/opus: the ladder MST +22 -> pairwise LP +77.3 -> S3 +14.8 -> S4 ~closed says the pairwise moment alone is WORSE than the spanning tree, so moments and combinatorial structure are not nested and depth is what pays.)
 ## death-star-2026-07-18-S58 -- THM-1132 (renumbered after the earlier THM-1123 claim): the r=6 covering "enumeration wall" is an artifact of a CONSERVATIVE horn constant; the SHARP threshold 1/(7L) gives R_sharp≈0.80 on the sampled bank (owner brief: synthesize the LRC state, see how the many walked-back "closures" were close, and get closer). This session did three things. (I) SYNTHESIS. Traced the full arc of believed-closures-and-walk-backs (Explore over MISTAKES.md 072-165 + the dated finish-maps 07-08..07-18). The recurring genera are named in-repo: sampling/small-box artifact (~15×), MAX-not-MEAN (3×), dilation bites (3×, "third time"), raw-count-that-grows (~8×), sufficient-criterion-not-necessary (~5×). Every walk-back was the covering case; each "no analytic wall remains / assembled / prove EITHER route" got demoted to "sample statistic" by an exact dilated-AP/lcm/high-frequency family the sampler couldn't generate. Current honest frontier includes the covering n=12 inverse theorem. (II) INDEPENDENTLY VERIFIED codex's THM-1121 weighted atlas from scratch (not its own code): 35 obligations, total weight EXACTLY 505, all core-safe (min slack 0), max load over [92,332] EXACTLY 84 ⟹ 6·84=504<505. The r=6 FINITE branch is genuinely, now-independently CLOSED. Also proved the atlas does NOT extend past 332 (load jumps 84→183 at k=333, grows to 413 by ~9M), so its cutoff is exactly right and the tail needs a continuous tool. Reconciled the live tension: kind-pasteur's sampled THM-1122 moment-LP census is SUBSUMED on its bounded box by the atlas. (III) THE FINDING (THM-1132). THM-1102's measure horn certifies the 6th killer via T = min(N/(6μ), 1/(3L)). The component bound 1/(3L) is valid but NOT sharp: danger(k) is disjoint arcs of width EXACTLY 1/(7k), so a safe component of length L>1/(7k) overspills one arc and contains a real k-safe witness point. The SHARP threshold is 1/(7L), a factor 7/3≈2.33 smaller. Same L enters, so R_sharp=(3/7)·R_conservative config-by-config. A broad adversarial search (all 792 cores × consecutive-small + moderate/large scale + clustered-large + random-spread) has maximum R_sharp=0.8011, exact sampled maximizer core [1,2,4,7,9,11,12], killers [171,173,175,177,179], L=72/72275. This is strong evidence for a uniform horn, not a proof: the all-scale quantifier remains open, and the raw output's "CLOSES r=6" line must not be read as a theorem. SCOPE: r=6 is one stratum, not all of LRC(14).
-## death-star-2026-07-18-S58b -- synthesised the fleet's LRC(14) state and AUDITED the closest finishing lead (kind-pasteur's maximiser / uniform-r=5), finding a real correction (MISTAKE-173). SYNTHESIS: LRC(14) not closed; four routes meet at the n=12 AP-uniqueness inverse theorem (HYP-7310/boxeph THM-1017). The CLOSEST clean sub-closure is kind-pasteur's uniform-r=5 continuum tail (THM-1172/1173/1174: bad<=2/21<0.164=|S(P)|), reduced by THM-1150-six-boxes to 'one Diophantine standoff'. THE FINDING: that reduction is REFUTED. Their centre-hitting criterion (III) 'hits iff d prop (1,2,3)' dropped (a) the mod-4 freedom -- at u=3/4, d4*(3/4)=1/4 mod1 <=> d4=3 mod4, so (1,2,7),(1,2,11),(2,4,14) all HIT with positive bad measure 0.0246/0.0147/0.0246 -- and (b) the permutation symmetry -- the six boxes are the six permutations of (1/4,1/2,3/4), so the six PERMUTATION-RAYS of (1,2,3) [(1,3,2),(2,1,3),... , (3,9,6)=3*(1,3,2)] each hit their own box at EXACTLY 2/21 (N=1e6). A full scan found 117 non-proportional hitters in [1,10]^3 (claim: 0), so the standoff bound (V) is dead. WHAT SURVIVES: the maximiser is the coordinate-permutation ORBIT of (1,2,3) (six rays at 2/21), not the unique ray; and the CEILING bad<=2/21 is UNBROKEN (max over non-orbit directions <2/21). The correct proof target is a SOJOURN-MAXIMISATION (bad(d)=meas{u: g(u) in B}<=2/21, equality on the six-ray orbit) -- an equidistribution statement, the same 'equal-spread AP is extremal' motif as the inverse theorem, NOT a Diophantine standoff. Uniform r=5 remains OPEN with the honest target reframed. (Same classic 'sampling misses structured families' trap: they tested generic non-proportional directions, missing the structured permutation-rays and mod-4 hitters.) FILES: MISTAKE-173, 2 scripts+out. -> kind-pasteur.
+## death-star-2026-07-18-S58b -- synthesised the fleet's LRC(14) state and AUDITED the closest finishing lead (kind-pasteur's maximiser / uniform-r=5), finding a real correction (MISTAKE-182). SYNTHESIS: LRC(14) not closed; four routes meet at the n=12 AP-uniqueness inverse theorem (HYP-7310/boxeph THM-1017). The CLOSEST clean sub-closure is kind-pasteur's uniform-r=5 continuum tail (THM-1172/1173/1174: bad<=2/21<0.164=|S(P)|), reduced by THM-1150-six-boxes to 'one Diophantine standoff'. THE FINDING: that reduction is REFUTED. Their centre-hitting criterion (III) 'hits iff d prop (1,2,3)' dropped (a) the mod-4 freedom -- at u=3/4, d4*(3/4)=1/4 mod1 <=> d4=3 mod4, so (1,2,7),(1,2,11),(2,4,14) all HIT with positive bad measure 0.0246/0.0147/0.0246 -- and (b) the permutation symmetry -- the six boxes are the six permutations of (1/4,1/2,3/4), so the six PERMUTATION-RAYS of (1,2,3) [(1,3,2),(2,1,3),... , (3,9,6)=3*(1,3,2)] each hit their own box at EXACTLY 2/21 (N=1e6). A full scan found 117 non-proportional hitters in [1,10]^3 (claim: 0), so the standoff bound (V) is dead. WHAT SURVIVES: the maximiser is the coordinate-permutation ORBIT of (1,2,3) (six rays at 2/21), not the unique ray; and the CEILING bad<=2/21 is UNBROKEN (max over non-orbit directions <2/21). The correct proof target is a SOJOURN-MAXIMISATION (bad(d)=meas{u: g(u) in B}<=2/21, equality on the six-ray orbit) -- an equidistribution statement, the same 'equal-spread AP is extremal' motif as the inverse theorem, NOT a Diophantine standoff. Uniform r=5 remains OPEN with the honest target reframed. (Same classic 'sampling misses structured families' trap: they tested generic non-proportional directions, missing the structured permutation-rays and mod-4 hitters.) FILES: MISTAKE-182, 2 scripts+out. MISTAKE-180 later gives the exact primitive mod-4 criterion. -> kind-pasteur.
 
 Prompt (owner): synthesize other agents' work, explore past threads for inspiration to finish LRC(14)
 
@@ -72147,14 +72236,14 @@ data, whereas a measure maximizer must remember contact order or sojourn
 length.  A runner/slot tournament destroys the common three-coordinate gauge;
 the faithful quotient is `(Z/4Z)^3/{+/-1}`.  This is orthogonal to THM-1214,
 which already closes the clustered five-killer branch through owner windows.
-Files: THM-1211, MISTAKE-180, HYP-7740, exact script and frozen output.
+Files: THM-1211, MISTAKE-180, HYP-7805, exact script and frozen output.
 
 ---
 
 ## codex-2026-07-18-S80 -- sharp additive-triangle ceiling and a fourteen-clock beat stalk
 
 Continued the LRC(14) frontier audit while repeatedly observing the shared
-mainline.  THM-1210 now proves the full continuum four-comb ceiling by a
+mainline.  THM-1203 now proves the full continuum four-comb ceiling by a
 quotient that was absent from the earlier runner/order pictures.  BAD forces
 all six pair differences into the three-band set
 `A=[1/7,2/7] union [3/7,4/7] union [5/7,6/7]`; deleting to a non-AP triangle
@@ -72168,7 +72257,7 @@ so the continuum equality directions are exactly four-term APs.  The Lean
 kernel checks the 99-pair core, rational wrappers, and equality-obligation
 rigidity; Haar/alcove geometry remains explicit prose.
 
-THM-1215 composes the newer all-pairs beat-puncture law with a common-gcd
+THM-1204 composes the newer all-pairs beat-puncture law with a common-gcd
 fourteen-clock.  If `q=b6-b5=14d`, `q>=7a`, and every earlier fast speed has
 gcd `d` with `q`, then all six strict-danger masks are the singleton `{0}`
 modulo 14.  Every slow-gap beat block contains six consecutive numerators,
@@ -72176,9 +72265,9 @@ so one supplies an explicit lonely point.  Independently, THM-1192 would
 force `N<=5ceil(N/14)`, impossible for `N>=6`.  Exact normal/optimized
 replays and a Lean integer core are frozen.
 
-The assumption challenge was decisive in both results.  For THM-1210 the
+The assumption challenge was decisive in both results.  For THM-1203 the
 proof vertices are pair-difference obligations and their additive circuit;
-for THM-1215 they are residue sections with a consecutive-block sidecar.
+for THM-1204 they are residue sections with a consecutive-block sidecar.
 Runner-order tournaments are transitive telemetry in both settings and lose
 the metric predicate.  Incoming THM-1183 is now superseded as a ceiling
 target (its stronger three-path majorant remains separate), while the new

@@ -1,11 +1,14 @@
 # The loneliness maximizer is a pairwise-sum straddle — locating the maximizer, and a sharper form of Tao's n=12 uniqueness
 
 *boxeph-2026-07-18-S120. Owner: work a new creative angle on the LRC(14) open math.
-Result: a **located-maximizer theorem** — `M(C)` is always attained at `t = m/(v_i+v_j)` for a
+Result: a **located-maximizer theorem** — every maximizing point admits a representation
+`t = m/(v_i+v_j)` for a
 straddling active pair, with `M = |v_i a_j − v_j a_i|/(v_i+v_j)` — which turns the uniqueness of the
 loneliness minimizer (Tao's n=12 conjecture / INVcov) into a statement about **pairwise sums**: `{1,…,12}`
 is the unique 12-set whose best pairwise-sum straddle value equals `1/13`. This generalizes the S118
-centering witness and pins the difficulty to a finite, structured per-set search. Verified S120.*
+centering witness and pins the difficulty to a finite, structured per-set search. The representation
+theorem itself is prior HYP-2059 / THM-401; S120's contribution is this straddle-formula and rigidity
+reframing. Verified S120.*
 
 > **PRIOR-ART CREDIT (added S121).** The located-maximizer theorem below is a **rederivation of the
 > established Pinch Lemma HYP-2059** (opus-2026-06-02-S557) and **THM-401** (the `C=2n-1` modulus identity),
@@ -20,8 +23,9 @@ centering witness and pins the difficulty to a finite, structured per-set search
 > Then there is a pair `i, j` and integers `a_i, a_j` with
 > `t* = (a_i + a_j)/(v_i + v_j)`  and  `M = |v_i a_j − v_j a_i|/(v_i + v_j)`.
 > The two runners `v_i, v_j` are **active** (`‖v_· t*‖ = M`) and **straddle** their integers — one just
-> above (`v_j t* = a_j + M`), one just below (`v_i t* = a_i − M`). The maximizer denominator is a pairwise
-> **sum**; difference denominators never attain the max.
+> above (`v_j t* = a_j + M`), one just below (`v_i t* = a_i − M`). Thus every maximizing point **admits**
+> a pairwise-**sum representation**. Its reduced denominator, or another representation of the same point,
+> may also be a speed difference; representation is not the same thing as reduction (MISTAKE-173).
 
 *Proof.* `g` is continuous on `[0,1]`, `g(0)=0`, so the max is interior with `M>0`. A global max is a local
 max of the min, so among the active runners some must block each direction: moving `t` right decreases
@@ -29,8 +33,9 @@ max of the min, so among the active runners some must block each direction: movi
 `‖v_j t‖` for an active `j` with `v_j t* = a_j + M` (`+`slope). Adding, the `±M` cancel:
 `(v_i+v_j) t* = a_i + a_j`. Solving and substituting into `v_j t* = a_j + M` gives the formula. ∎
 
-*(Verified: over 60 random 12-subsets of `[1,44]`, the location and the formula hold with **zero**
-failures, and a difference denominator beats every sum denominator in **zero** cases. Example:
+*(Verified: over 60 random 12-subsets of `[1,44]`, the pair-sum representation and formula hold with
+**zero** failures. The experiment's former “difference-wins” label compared reduced denominators and is
+not a valid exclusivity test; difference-denominator representations may coexist. Example:
 `C=[3,4,5,7,10,14,21,24,26,33,35,41]`, `M=3/20` at `t*=9/20 = 18/40`, straddle pair `(33,7)`, sum `40`,
 `|33·3 − 7·15|/40 = 6/40 = 3/20`.)*
 
@@ -78,10 +83,11 @@ adds is that the maximizer is a pairwise sum, so the search space is finite and 
 
 ## Honest status
 
-- **Proved:** the located-maximizer theorem (variational; likely folklore in LRC theory, but self-contained
-  here and stated with the pairwise-**sum** emphasis) and the exact straddle formula.
-- **Confirmed:** the maximizer is always a pairwise sum (60 random + 204 perturbations + reflective/random),
-  differences never win, `{1,…,12}` uniquely witness-less at `1/13`.
+- **Proved:** the exact active-straddle formula, which reproves the located-maximizer theorem already
+  present as HYP-2059 / THM-401, stated here with the pairwise-**sum representation** emphasis.
+- **Confirmed:** every tested maximizing point admits a pairwise-sum representation (60 random + 204
+  perturbations + reflective/random); this does not exclude coexisting reduced/difference representations.
+  `{1,…,12}` is uniquely witness-less at `1/13` in the tested families.
 - **Not proved:** the uniqueness itself (Tao n=12) — the reformulation locates the maximizer but does not
   close the centering-feasibility question.
 
@@ -89,4 +95,6 @@ Cross-links:
 [[the-confinement-coupling-proof-upper-bound-and-why-tightness-is-hard-boxeph-S119]],
 [[the-centering-witness-closes-the-spread-case-exact-loneliness-of-every-AP-boxeph-S118]],
 HYP-4382 (n=12 tightness), HYP-7401 (the crux is offset-vanishing / one-line form),
+HYP-2059 (prior pinch lemma), THM-401 (prior pair-sum location theorem), MISTAKE-173
+(reduced denominator is not a representation test),
 `lrc14_maximizer_pairwise_sum_boxeph_S120.py`, `lrc14_centering_general_sets_boxeph_S120.py`.

@@ -1,4 +1,4 @@
-THM-1215 all-range q=14 beat-puncture stalk referee
+THM-1204 all-range q=14 beat-puncture stalk referee
 arithmetic=integers only
 optimized_mode_guard=require() only; assert_statements=0
 A(14)=1; U(N,14)=floor(N/14)+min(N mod 14,1)=ceil(N/14)

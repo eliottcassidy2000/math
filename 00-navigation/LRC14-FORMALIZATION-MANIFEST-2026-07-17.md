@@ -1705,14 +1705,16 @@ requires **every** speed, including the extra runner, to lie at distance at
 least `d` from `13d Z`.  Merely containing a `d[12]` deletion does not supply
 that hypothesis.
 
-On the four-comb side, THM-1148 proves three external analytic consumers: the
+On the four-comb side, the following paragraph records the historical S75
+frontier.  THM-1148 proves three external analytic consumers: the
 four-residue multiplier cone, `Q4>0`, and the corrected THM-1137 exact-`Phi`
 transfer with adjacent-ratio corollary `9/5`.  The false historical `7/6`
 recursion is not used.  THM-1159 removes the first infinite method residual
 `m(3,4,5,6)`, including the `m>=53` tail, by an exact erosion certificate:
 the primitive shape has start-set covering radius `9/56`, while legality and
 THM-1148's core floor force a longer phase needle at every scale.  Uniform
-`r=5` away from this ray remains open.  None of the finite orbit/core/ray
+`r=5` away from this ray was then open; THM-1214 below subsequently closes the
+ambient clustered stratum by owner windows.  None of the finite orbit/core/ray
 banks or the erosion atlas has been promoted to kernel code.
 
 `TournamentH7.LRCMultiDeletionCrown` is root-imported for THM-1153.  It
@@ -1784,8 +1786,9 @@ failures).  This explicitly avoids THM-1167's refuted quantification over
 every individual first-comb gap.  All 40,336 additional residual shapes at
 heights 57..64 satisfy the universal radius criterion; the tightest is
 `(53,59,60,62)` with margin `2279/303800`.  Primitive shapes with `d>64` and
-uniform `r=5` remain open.  None of the finite orbit/core/ray banks or either
-erosion atlas has been promoted to kernel code.
+uniform `r=5` remained open at S76; the next addendum supersedes that
+proof-map status.  None of the finite orbit/core/ray banks or either erosion
+atlas has been promoted to kernel code.
 
 ## 2026-07-18 S78 addendum -- the five-killer owner ledger closes `r=5`
 
@@ -1815,7 +1818,7 @@ open branch.  Global LRC(14) is not claimed.
 
 ## 2026-07-18 S77/S79 addendum -- continuum triangle core and exact corrections
 
-THM-1210 proves the uniform continuum four-comb ceiling `mu(BAD)<=2/21`.
+THM-1203 proves the uniform continuum four-comb ceiling `mu(BAD)<=2/21`.
 `LRCContinuumTriangleCeiling.lean` formalizes the non-AP deletion, the exact
 carry numerator, the 99-pair `p+q<=25` cutoff, the unique equality pair
 `(1,2)`, the four-deletion equality rigidity, and the rational ceiling/equality
@@ -1838,7 +1841,7 @@ LRC(14).
 
 ## 2026-07-18 S80 addendum -- the common-gcd fourteen-clock stalk
 
-THM-1215 adds a second exact consumer of THM-1192.  Under
+THM-1204 adds a second exact consumer of THM-1192.  Under
 `q=b6-b5=14d`, `q>=7a`, and `gcd(b_i,q)=d` for the five earlier fast
 speeds, all six fast strict-danger masks reduce to `{0}` in `Z/14Z`.
 Every slow-gap beat block has at least six consecutive numerators, so it
@@ -1858,3 +1861,132 @@ five-cap inequality, the negated phase-free law, and a typed bridge consumer.
 The real-gap-to-block supplier and the speed-gcd reduction remain explicit
 analytic hypotheses.  The module is root-imported and makes no claim about
 the general mixed-gcd slow-gap branch or global LRC(14).
+
+## 2026-07-19 S81 addendum -- common-period mask nerve and sharp small-period scale
+
+THM-1216 strengthens THM-1204 and extends it to every reduced period `Q>=2`.
+A strict unit danger mask has `A(Q)=2ceil(Q/14)-1` residues.  The five
+relevant masks all contain zero, so `r` distinct mask classes have union size
+at most `1+r(A-1)` and `B_r(Q)=2+r(A-1)` consecutive residues force an
+escape.  The uniform threshold `B_5(Q)<=Q` holds for all nontrivial periods.
+The paper also proves that the exact mask-class count is one through `Q=14`
+and `phi(Q)/2` thereafter.
+
+For `2<=Q<=14`, `B_r=2`; the slow-gap scale is therefore `q/a>=7/3`.
+An infinite even-`d` singleton-block family approaches `7/3` from below and
+proves this constant optimal for a phase-uniform beat-point theorem.  This
+strictly improves THM-1204's `q/a>=7` hypothesis at reduced `Q=14`.
+
+`LRCCommonPeriodBeatHole.lean` is root-imported.  It kernel-checks
+`B_5(Q)<=Q`, the threshold-two small-period arithmetic, the fixed five-mask
+common-point saving, the abstract cover contradiction, and a typed
+class-sensitive `B_r` consumer.  Mask cardinality and stabilizers, cyclic
+block injectivity, gcd reduction, and real-gap block extraction remain named
+external suppliers.  The exact referee uses always-on checks under normal and
+optimized Python.  No global mixed-period or LRC(14) conclusion is claimed.
+
+## 2026-07-18 S78 addendum -- BV needles through carrier 40 and the first top-seven horn
+
+THM-1197 extends THM-1182's exact bounded-variation slow-gap certificate to
+every carrier `31<=a<=40`, so the combined theorem covers every `a<=40`, every
+slow-gap phase, and all faster integer speeds.  Each of the 180 new rows is a
+rational probability density on a complete slow gap; its exact low-frequency
+loads are below `1/6`, and THM-1182's variation bound controls the infinite
+tail.  Generator and independent standard-library replays consume the frozen
+integer certificate.  No Lean module currently reconstructs the BV analytic
+estimate or the certificate bank.
+
+THM-1194 applies the same interface to the first actual top-seven horn.  Under
+`v7=78` and `v7>=13v6`, distinctness forces the lower core `{1,...,6}`.  Its
+safe interval contains `G_11(78)`, and a one-row exact density prevents the
+six faster closed danger combs from covering that gap.  This proves LRC(14)
+on that horn only; `v7>=79` remains open.  The faithful formal object would be
+a weighted bin/obligation incidence operator plus a BV norm, not the
+transitive load tournament.  A future kernel boundary should separate the
+real safe-gap inclusion, finite rational load table, and analytic `1/b` tail
+as three typed suppliers.
+
+## 2026-07-19 S82 addendum -- universal five-comb dual arithmetic boundary
+
+THM-1198 proves analytically that one fixed six-bin probability density gives
+every normalized danger comb of slope `L>=6/7` load at most `7/36`.  Hence
+five arbitrary closed combs leave dual mass `1/36`, normalized length `1/42`,
+and physical length `1/(49c)` in a complete `c`-slow gap.  Deleting each row
+from a hypothetical six-cover produces six disjoint private regions, and the
+first-tooth law forces `d1<13c/6`.
+
+`LRCFiveCombDual.lean` is root-imported.  It kernel-checks the six-bin mass
+and variation constants, BV cutoff margin, abstract five-load contradiction,
+survivor and physical-length conversions, six-load overlap surplus,
+unique-provider conversions, integer first-tooth form, the nonmonotone
+phase-envelope guardrail, and an abstract functional-drift consumer.  The
+compact arrangement exhaustiveness, identification of its affine evaluation
+with the integral, equality locus, and Stieltjes/BV integration-by-parts
+estimate are explicit analytic providers.  The module contains no `sorry` or
+`native_decide`; it does not formalize the whole analytic theorem or claim
+six-comb/global LRC(14) noncoverage.
+
+## 2026-07-19 S82 addendum -- mixed-period master clocks and Hunter trees
+
+THM-1217 lifts arbitrary reduced beat periods `Qi=q/gcd(bi,q)` to the exact
+master clock `L=q/gcd(q,b1,...,b6)=lcm_i Qi`.  Five masks remain after the
+defining pair is identified.  Besides the common-zero cap, an arbitrary
+rooted spanning tree deducts the four parent-child intersection
+cardinalities from the naive mask sum.  A proper union's longest cyclic run
+is the exact block threshold.  The paper and referee explicitly require
+`C<L` for cardinal suppliers and properness for run suppliers; neither is
+inferred from `Qi>1`.
+
+`LRCMixedPeriodBeatMaskTree.lean` is root-imported.  It checks the abstract
+fibre-cardinality model, five-mask common-point ledger, arbitrary root-first
+Hunter-tree ledger, subtraction-free cover contradictions, and the
+properness consequence of an exact run supplier.  It also checks all masks,
+periods, residues, and inequalities for the `a=79`, `q=280`, `p=41` packet
+and the realizable full-clock `q=16` guardrail.  The valuation proof of the
+master-clock identity, strict-window cardinality, concrete quotient lift,
+and slow-gap-to-block conversion remain explicit providers.
+
+## 2026-07-19 S82 addendum -- heavy circuits and AP mask collapse
+
+THM-1218 uses the strict cutoff `60/637`.  Above this cutoff, each of the four
+deletion triangles supplied by THM-1203 lies in its ratio-`1:1/1:2/2:1`
+stratum; their simultaneous arithmetic forces a unique four-term AP
+completion below `(b5,b6)`.  The four AP speeds are one residue class modulo
+`q=b6-b5`, so the five beat-mask labels reduce to at most three classes.
+The theorem keeps the strict cutoff, actual master-clock divisor `L|q`, and
+the distinction between master lifts and supplementary numerator-range
+replays explicit.
+
+`LRCHeavyCircuitAPMaskCollapse.lean` is root-imported.  It kernel-checks the
+cutoff/tail arithmetic, exact 99-pair core, generic four-deletion provider
+consumer, AP rigidity and uniqueness, direct residue and arbitrary-numerator
+restriction equality, three-mask common-point ledger, and threshold
+`6ceil(Q/14)-4`.  Haar interpretation, gcd dilation, BAD-to-deletion
+inclusions, and the unbounded sheared tail remain the named THM-1203 analytic
+providers.  The module has no `sorry` or `native_decide` and does not assert
+that every packet contains a heavy pair.
+
+## 2026-07-19 S82 addendum -- near-tiling curvature and active-pair slack
+
+THM-1219 gives exact near-tilings by the consecutive killers
+`a+1,...,a+6`.  For `a=7m+s`, `0<=s<=6`, on the `k=m` slow gap, the positive
+boundary/handoff charges are `(48,42,43,46,51,58,67)` and the exact survivor
+obeys
+
+```text
+N_s/[14(a+6)^2] <= S_s(a) < N_s/(14a^2).
+```
+
+The residue-one coefficient is `3`, and every term is the rescaled active-pair
+slack `[14D-(x+y)]/[14xy]`.  This proves that no six-comb strategy can demand
+a scale-free `C/a` survivor, while exhibiting the signed active-pair path that
+retains the missing second-order information.
+
+`LRCSixCombNearTiling.lean` is root-imported.  It checks the symbolic
+adjacent, boundary, full residue-class, and active-pair factorization
+identities; the curvature-charge table; the termwise denominator envelope;
+the absolute and relative survivor sandwiches; and the `a>168` defeat of the
+five-comb-scale floor.  The unique-tooth intersection, chronological finite
+union, and complement-measure geometry remain explicit paper providers.  The
+module has no `sorry` or `native_decide` and proves a method obstruction, not
+global six-comb noncoverage.

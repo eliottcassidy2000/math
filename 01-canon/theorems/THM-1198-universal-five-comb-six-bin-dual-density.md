@@ -8,6 +8,8 @@ related: [THM-1094, THM-1176, THM-1178]
 script: 04-computation/lrc14_five_comb_universal_six_bin_density_codex_20260718.py
 output: 05-knowledge/results/lrc14_five_comb_universal_six_bin_density_codex_20260718.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCFiveCombDual.lean
+lean_sha256: bb07fa5144768baa78a9285756762ae08e95b0d99e4db588199849464947eea0
+lean_scope: arithmetic consumers downstream of the analytic one-comb load bound; compact arrangement exhaustiveness, integral identification, equality locus, and Stieltjes/BV estimate remain external inputs
 ---
 
 # THM-1198 -- universal five-comb six-bin dual density
@@ -503,14 +505,17 @@ source  4a498cc295ed7a1f3511ca889beecca07e8565c7bef5492ac46e14dc9ec3c73f
 output  38cfd0e710bc9eb8d5dfa2d4d5ef1aefee005d419b59f6a307a93a14925fd772
 ```
 
-The imported Lean module `LRCFiveCombDual` kernel-checks the six-bin mass,
-variation and margin arithmetic, the abstract five-load contradiction, the
-`1/42`, `1/(49c)`, `2/9`, `7/9`, and `2/(3c)` conversions, the six-load
-overlap-surplus consumer, the integer first-tooth form (32), the `L=15/7`
-nonmonotonicity guardrail, and the abstract phase-free functional drift.  The
-arrangement maximum and BV integration-by-parts inequality remain explicitly
-analytic inputs.  Targeted `lake build TournamentH7.LRCFiveCombDual` succeeds
-with no `sorry` or `native_decide`.
+The Lean arithmetic-consumer module `LRCFiveCombDual` kernel-checks the
+six-bin mass, variation and margin arithmetic, the abstract five-load
+contradiction, the `1/36`, `1/42`, `1/(49c)`, `2/9`, `7/9`, and `2/(3c)`
+conversions, the six-load overlap-surplus consumer, the integer first-tooth
+form (32), the `L=15/7` nonmonotonicity guardrail, and the abstract phase-free
+functional drift.  Its provider boundary is explicit: the compact arrangement
+exhaustiveness, the identification of its affine evaluator with the integral
+`A`, the equality locus, and the Stieltjes/BV integration-by-parts inequality
+remain analytic inputs from Sections 1--2 rather than Lean conclusions.
+Targeted `lake build TournamentH7.LRCFiveCombDual` succeeds with no `sorry` or
+`native_decide`.
 
 This theorem completely closes universal five-comb coverage of a slow gap,
 gives the scale-free survivor floor `1/(49c)`, and gives the first-rung plus

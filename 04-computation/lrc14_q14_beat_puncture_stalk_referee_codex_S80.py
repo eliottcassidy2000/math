@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-1215's all-range q=14 beat-puncture stalk.
+"""Exact referee for THM-1204's all-range q=14 beat-puncture stalk.
 
 For a slow carrier ``a`` and six faster speeds ``b1<...<b6``, put
 ``q=b6-b5=14*d``.  The theorem assumes ``q>=7*a`` and
@@ -10,7 +10,7 @@ large bounded prefix of the all-range formulas, and freezes the example
 
     (a;b1,...,b6) = (3;6,10,18,22,26,54).
 
-The proof in THM-1215 is symbolic.  None of the bounded rows below is a
+The proof in THM-1204 is symbolic.  None of the bounded rows below is a
 premise of the theorem.  All comparisons use integers only, and ``require``
 is used instead of ``assert`` so normal and optimized Python execute the
 same checks.
@@ -191,7 +191,7 @@ def main() -> None:
     example = example_audit()
     scores, cycles, sccs, flips, hp_count = tournament_audit()
 
-    print("THM-1215 all-range q=14 beat-puncture stalk referee")
+    print("THM-1204 all-range q=14 beat-puncture stalk referee")
     print("arithmetic=integers only")
     print("optimized_mode_guard=require() only; assert_statements=0")
     print("A(14)=1; U(N,14)=floor(N/14)+min(N mod 14,1)=ceil(N/14)")

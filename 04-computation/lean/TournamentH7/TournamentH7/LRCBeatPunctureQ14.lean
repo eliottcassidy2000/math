@@ -1,9 +1,9 @@
 import Mathlib
 
 /-!
-# The q=14 beat-puncture integer core (THM-1215)
+# The q=14 beat-puncture integer core (THM-1204)
 
-This module formalizes the finite arithmetic contradiction used by THM-1215.
+This module formalizes the finite arithmetic contradiction used by THM-1204.
 For a consecutive block of `N` beat numerators, the THM-1192 cap at reduced
 period 14 is
 

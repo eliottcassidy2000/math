@@ -1,7 +1,7 @@
 ---
 id: THM-1182
 title: Bounded-variation needle closure of every six-comb slow gap through carrier 30
-status: PROVED FINITE-EXACT for every integer carrier 1<=a<=30, every phase, and all faster integer speeds.  A rational step probability density gives a strict 1/6 load cap for every faster comb, so even six repeated closed danger combs cannot cover a complete closed slow gap.  The BV tail lemma is proved on paper here but is not yet in Lean; carriers a>=31 remain open
+status: PROVED FINITE-EXACT for every integer carrier 1<=a<=30, every phase, and all faster integer speeds.  A rational step probability density gives a strict 1/6 load cap for every faster comb, so even six repeated closed danger combs cannot cover a complete closed slow gap.  THM-1197 extends the same exact interface through carrier 40.  The BV tail lemma is proved on paper but is not yet in Lean; carriers a>=41 remain open
 source: codex-2026-07-18-S75 slow-gap exact dual/BV session
 depends_on: [THM-1094, THM-1176]
 related: [THM-1178, THM-1179, HYP-7715]
@@ -231,8 +231,10 @@ incidence is the quotient that retains the needed predicate.
 
 ## 6. Remaining frontier
 
-This closes the entire slow-carrier branch `a<=30`, uniformly over arbitrary
-faster integer speeds.  It does **not** prove universal slow-gap noncoverage
-for `a>=31`, and therefore does not by itself prove LRC(14).  The finite
-certificate is exact.  The analytic BV integration-by-parts lemma above is a
-paper proof and has not yet been formalized in Lean.
+This theorem closes the slow-carrier branch `a<=30`, uniformly over arbitrary
+faster integer speeds.  THM-1197 subsequently extends the same conclusion to
+every `31<=a<=40`, with a separate frozen certificate and independent replay.
+Universal slow-gap noncoverage for `a>=41` remains open, and neither bounded
+range alone proves LRC(14).  The finite certificates are exact.  The analytic
+BV integration-by-parts lemma above is a paper proof and has not yet been
+formalized in Lean.

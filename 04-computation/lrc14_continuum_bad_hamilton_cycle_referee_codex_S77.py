@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-1210's continuum max-gap/triangle ceiling.
+"""Exact referee for THM-1203's continuum max-gap/triangle ceiling.
 
 For D=(d2,d3,d4), the continuum four-comb obstruction is BAD exactly when
 the four circle points {0,{d2*u},{d3*u},{d4*u}} have every cyclic gap at most
@@ -448,7 +448,7 @@ def main() -> None:
     triangle_core = finite_triangle_core()
     equality_audit = equality_obligation_audit()
     census = height_census()
-    print("THM-1210 continuum bad-set / additive-triangle ceiling exact referee")
+    print("THM-1203 continuum bad-set / additive-triangle ceiling exact referee")
     print("arithmetic=fractions.Fraction; chamber endpoints have measure zero")
     print("identity: F_inf=(7/6)*max_j(Delta_j-1/7)_+")
     print("BAD iff maxgap({0,d2*u,d3*u,d4*u})<=2/7")
@@ -474,7 +474,10 @@ def main() -> None:
     print(
         f"finite triangle core: pairs={triangle_core['pairs']}; "
         f"distinct={triangle_core['distinct']}; "
-        f"top unique strata={triangle_core['top_strata']}"
+        "top unique strata="
+        + "; ".join(
+            f"{value}@{pairs[0]}" for value, pairs in triangle_core["top_strata"]
+        )
     )
     print(
         f"independent carry formula rows={triangle_core['carry_rows']}; "

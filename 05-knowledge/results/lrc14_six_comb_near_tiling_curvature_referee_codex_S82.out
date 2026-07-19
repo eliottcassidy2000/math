@@ -1,0 +1,27 @@
+THM-1219 SIX-COMB NEAR-TILING CURVATURE REFEREE
+arithmetic=integers+fractions.Fraction; always-on checks; no dependencies
+family: a=7m, k=m, speeds=(a+1,...,a+6), m>=6
+one intersecting tooth per speed, common centre n=m+1: PASS
+safe component numerators, chronological=(3,5,7,9,11,13): PASS
+S(a)=13/[14a(a+1)]+sum_(r=1)^5 (13-2r)/[14(a+r)(a+r+1)]
+24/[7(a+6)^2] <= S(a) < 24/(7a^2); a^2*S(a) -> 24/7
+survivor_fraction=S/(6/[7a]) is squeezed by 4a/(a+6)^2 and 4/a
+exact replay: m=6..2000 rows=1995 scaled_range=[63347573/20452520,107691308930380424939000/31420154286738159702903]
+for every a=7m>=175: S(a)<1/(49a), so the THM-1198 floor cannot extend to six
+frontier location: harmonic-crowded; b1/a<13/6; defining q=b6-b5=1
+mod-seven spectrum: residues=0..6; charges=(48, 42, 43, 46, 51, 58, 67); component_counts=(6, 7, 6, 5, 4, 3, 2)
+spectrum replay: m=6..1000 rows=6965; charge/[14(a+6)^2] <= S < charge/(14a^2)
+residue-one sharpening: seven holes and a^2*S -> 42/14 = 3
+active-pair factorization: every signed handoff = (x+y)/(xy)*(D/(x+y)-1/14)
+active-pair slacks along boundary path = 14D-(x+y): PASS
+sample rows:
+  a=42: S=63347573/36078245280; a^2*S=63347573/20452520; components=(Fraction(1, 10528), Fraction(5, 30268), Fraction(1, 4140), Fraction(1, 3080), Fraction(1, 2408), Fraction(13, 25284))
+  a=70: S=26406431/40171230225; a^2*S=105625724/32792841; components=(Fraction(1, 26600), Fraction(1, 15540), Fraction(1, 10804), Fraction(1, 8176), Fraction(11, 71568), Fraction(13, 69580))
+  a=700: S=17205695002267/2474923449874075200; a^2*S=430142375056675/126271604585412; components=(Fraction(1, 2322740), Fraction(1, 1389696), Fraction(1, 989824), Fraction(1, 767676), Fraction(11, 6889428), Fraction(13, 6869800))
+  a=7000: S=3369310326095387489/48184300032767040242394000; a^2*S=1684655163047693744500/491676530946602451453; components=(Fraction(1, 229026140), Fraction(1, 137376456), Fraction(1, 98098024), Fraction(1, 76276676), Fraction(11, 686294028), Fraction(13, 686098000))
+Tournament Analysis:
+  observable=chronological tooth order; path=b6->b5->...->b1
+  scores=(0,1,2,3,4,5); cycles=0; SCCs=6; Hamilton_paths=1
+  faithful vertices=7 boundary/handoff active-pair obligations (positive-part path)
+  destroyed by tournament=curvature numerators, denominators, endpoint ownership
+VERDICT=positive survivor but only second order; no universal C/a six-comb floor

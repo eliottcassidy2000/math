@@ -1,0 +1,22 @@
+THM-1218 HEAVY-CIRCUIT / AP-MASK-COLLAPSE EXACT REFEREE
+arithmetic=fractions.Fraction + integers; all checks survive python -O
+strict cutoff H=60/637; AP mass=2/21; AP margin=2/1911
+tail guard: 3/49+6/[7N] <= H for N>=26; equality only N=26; endpoint=60/637
+exact reduced core: rows=99; J>H pairs=((1, 2),); second-stratum margin=11/1911
+top reduced strata=2/21@(1,2); 13/147@(1,6); 8/105@(3,10)
+four deletion obligations: rows=262144; survivors=64 (exactly a=b=c)
+actual BAD census, positive gaps with diameter<=24: rows=2024; heavy=8; largest non-AP mass=4/105
+ordered sextuple census through 16: rows=8008; rows with a heavy pair=795; max heavy-pair count=1
+actual divisor-clock realizations L=q/d0|q: rows=482; row-mask identities=2892; PASS
+direct-q AP coincidences on those rows=482; PASS
+supplementary arbitrary-range restrictions (not master clocks): rows=300; PASS
+common-zero unions of <=3 unit masks, Q=2..40: rows=4242; PASS
+common-Q threshold: B3=2+3(A-1)=3A-1=6*ceil(Q/14)-4 <= Q
+saving against B5: B5-B3=4*(ceil(Q/14)-1)
+Tournament Analysis:
+  candidate vertices=the 6 pairs among b1,b2,b3,b4
+  gauge=lexicographic pair order; scores=(0,1,2,3,4,5); cycles=0; SCCs=6; H=1
+  faithful quotient=four deletion circuits -> equality classes in five-mask nerve
+  alternate vertices=pair candidates|gaps|residues|masks|proof obligations
+  destroyed by runner tournament=Haar mass|additive compatibility|mask equality
+VERDICT: mu(BAD)>60/637 forces the unique AP completion and a three-mask beat threshold

@@ -1,0 +1,50 @@
+THM-1216 COMMON-PERIOD BEAT-HOLE REFEREE
+A(Q) brute Q=1..500; formula/budget Q=1..10000: PASS
+Q>=2 => B(Q)=5*A(Q)-3 <= Q, Q=2..10000: PASS
+forced common-zero hole Q-(5*A-4)>=1, Q=2..10000: PASS
+class-sensitive bound B_r=2+r*(A-1), r=1..5: PASS
+all unions of <=5 distinct unit masks, Q=2..35: PASS
+mask classes: one for Q<=14; phi(Q)/2 for Q=15..100: PASS
+phase-free relaxed-cap tail formula, Q=1..300: PASS
+phase-free no-tail periods: 1,2,3,4,5,15
+exact common-period no-go period: 1 only
+q=14 sharpened corollary: N>=2 and q/a>=7/3: PASS
+q=14 equality-scale row: (a;b)=(6;9,11,13,15,17,31): PASS
+q=14 sharpness family: even d<=400, (a,k,P)=(6d+1,3d,{7d}): PASS
+selected common-period thresholds:
+  Q   A   B_5  B_phi  aligned_N  phase_tail
+   1   1     2    None        None       None
+   2   1     2       2           2       None
+   5   1     2       2           2       None
+   6   1     2       2           2         26
+  10   1     2       2           2          6
+  14   1     2       2           2          6
+  15   3    12      10           4       None
+  16   3    12      10           4        196
+  17   3    12      12           4        106
+  21   3    12      12           4         46
+  28   3    12      12           4         16
+  29   5    22      22           6        151
+  42   5    22      22           6         51
+  56   7    32      32           8         71
+exact worst-run vs distinct-mask cardinal threshold, Q=15..30:
+  Q   B_run  B_phi
+  15      6      10
+  16      4      10
+  17     12      12
+  18      4       8
+  19     12      12
+  20      4      10
+  21      6      12
+  22      4      12
+  23     12      12
+  24      4      10
+  25     10      12
+  26      4      12
+  27      6      12
+  28      4      12
+  29     21      22
+  30      6      18
+tournament gauge: increasing-speed tie path b1->...->b6
+fingerprint: scores=0,1,2,3,4,5 cycles=0 SCCs=6 paths=1 flips=15
+faithful object: five-mask nerve + universal residue 0 + block phase

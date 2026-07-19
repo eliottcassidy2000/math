@@ -1,19 +1,25 @@
 ---
-id: THM-1215
+id: THM-1204
 title: THE ALL-RANGE q=14 BEAT-PUNCTURE STALK CLOSURE — a difference beat q=b6-b5=14d with five common gcd-d fast combs leaves a lonely beat point in every slow gap
-status: PROVED (elementary all-range residue argument; THM-1192 phase-free contradiction; exact referee replay; Lean integer core)
+status: PROVED (elementary all-range residue argument; THM-1192 phase-free contradiction; exact referee replay; Lean integer core).  THM-1216 subsequently sharpens the sufficient scale from q/a>=7 to the optimal phase-uniform q/a>=7/3 and extends the common-zero argument to every reduced period Q>=2
 source: codex-2026-07-18-S80
 depends_on: [THM-1192]
-related: [THM-1176, THM-1178, THM-1179, THM-1182, THM-1193]
+related: [THM-1176, THM-1178, THM-1179, THM-1182, THM-1193, THM-1216]
 script: 04-computation/lrc14_q14_beat_puncture_stalk_referee_codex_S80.py
 output: 05-knowledge/results/lrc14_q14_beat_puncture_stalk_referee_codex_S80.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCBeatPunctureQ14.lean
-script_sha256: f712a4781bcb951609f4d6857d935f1c8c250444d4c99bd9eb893db529542ee8
-output_sha256: bf1a2525bef60c44c9b86b8f8221c58ebf8b8b915661df1980489dab4689768c
-formalization_sha256: 49c2273b1876aa8f964709af5f32663e293dac1cbfe935a5831f5da68c277cfa
+script_sha256: 1566db89254697e17b37ef1a1dd4fdbc0b0b201d67d1c8fd33b8964af21e33e3
+output_sha256: d50366e52bd2ba81cd16ced858770674eac8d6fd363fc7bd8e6bac554debb23b
+formalization_sha256: 0212687a794f2915c19deb72e39fe4bdb9bbeaae7f59d2f3117aad1dbea3bc69
 ---
 
-# THM-1215 — the all-range q=14 beat-puncture stalk closes
+# THM-1204 — the all-range q=14 beat-puncture stalk closes
+
+> **Sharp supersession.**  The proof below remains correct.  THM-1216 keeps
+> the common-zero overlap instead of spending six independent cap units and
+> improves its scale hypothesis from `q/a>=7` to `q/a>=7/3`; an infinite
+> family proves the latter constant sharp for a phase-uniform beat-point
+> guarantee.
 
 ## Statement
 

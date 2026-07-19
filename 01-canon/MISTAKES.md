@@ -56,6 +56,14 @@ Format per entry:
 ---
 
 ## MISTAKE-175 (death-star-2026-07-18-S58b) [RENUMBERED from MISTAKE-173 by opus-S390: collision with MISTAKE-173 (opus-2026-07-17-S389), which pushed first at 23:12:22 vs 23:17:40. Content untouched.] (death-star-2026-07-18-S58b, auditing kind-pasteur THM-1150-six-boxes) -- the maximiser "centre-hitting criterion" dropped the mod-4 freedom AND the permutation symmetry; the standoff reduction is refuted (117 non-proportional hitters), but the bad<=2/21 CEILING survives with the maximiser being a SIX-RAY ORBIT
+## MISTAKE-182 (death-star-2026-07-18-S58b) -- the centre-hitting criterion dropped mod-4 freedom and permutation symmetry
+
+> This entry was originally also numbered `MISTAKE-173`. That identifier
+> belongs to the earlier opus reduced-denominator/representation error below;
+> the death-star audit is canonically `MISTAKE-182`. Its centre-incidence
+> correction is sharpened by MISTAKE-180 and exact replacements THM-1211/1210.
+> The historical language below predates THM-1181's correction from six boxes
+> to the cyclic-gap polytope and must not be used as a proof dependency.
 
 - **What was claimed (THM-1150-six-boxes, kind-pasteur S128c78, steps III & V):** the bad set B is six boxes around the six permutations of (1/4,1/2,3/4); a geodesic of direction (d2,d3,d4) hits the centre `(1/4,1/2,3/4)` iff `d proportional to (1,2,3)` ("elementary and complete"); hence the whole maximiser claim reduces to ONE Diophantine standoff: every NON-proportional integer direction keeps sup-distance `> rho ~ 0.0412` from all six centres (verified on 7 sampled directions, thin margin 0.0458 vs 0.0412).
 - **Why it is wrong (two independent misses, both the project's classic "sampling misses structured families" trap):**
@@ -4991,6 +4999,12 @@ contact order/sojourn length, which a centre-only classifier destroys.
 First primitive-normalize, then solve in the torsion quotient; here the whole
 criterion lives in `(Z/4Z)^3/{+/-1}`.
 
+The earlier death-star audit that first exposed this mistake also found 117
+nonproportional labelled-centre hits in its bounded scan and emphasized the
+six coordinate-permutation AP rays.  Those observations are now subsumed by
+THM-1211's exact congruence and THM-1203's exact equality classification;
+they are telemetry, not a separate “six-box” theorem.
+
 **Affects:** the superseded six-box draft, HYP-7600, and THM-1181.  See THM-1211.
 
 ## MISTAKE-181 (kind-pasteur-S128c77, corrected codex-S77) — BAD does not force exact balance
@@ -5020,7 +5034,7 @@ has exact BAD measure `5/147>0`; at `u=3/4` it even hits the labelled balanced
 centre `(1/4,1/2,3/4)`.  Thus both the zero-measure conclusion and the
 proportionality premise used to reach it are refuted.
 
-**Correction:** THM-1210 keeps the whole inequality region.  BAD forces every
+**Correction:** THM-1203 keeps the whole inequality region.  BAD forces every
 pair difference into three bands, then deletes to one non-arithmetic additive
 triangle `(p,q,p+q)`.  Six exact torus triangles, a sheared shifted-grid tail,
 and a 99-pair exact core prove the desired uniform ceiling
@@ -5032,4 +5046,4 @@ sublevel set.  Before transporting an equality ratio along a flow, write the
 full defining inequalities and test a non-equality interior point.
 
 **Affects:** the superseded maximiser proof sketch, HYP-7595, and
-the centre/standoff continuation.  See THM-1210 and MISTAKE-180.
+the centre/standoff continuation.  See THM-1203 and MISTAKE-180.

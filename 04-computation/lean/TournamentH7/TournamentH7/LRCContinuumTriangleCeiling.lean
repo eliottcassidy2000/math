@@ -1,5 +1,5 @@
 /-
-  TournamentH7.LRCContinuumTriangleCeiling -- THM-1210 finite triangle core
+  TournamentH7.LRCContinuumTriangleCeiling -- THM-1203 finite triangle core
 
   The continuum bad-set argument reduces to the additive three-band event
 
