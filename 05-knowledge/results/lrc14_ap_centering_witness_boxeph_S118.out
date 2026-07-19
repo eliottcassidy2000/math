@@ -1,0 +1,85 @@
+==========================================================================
+(A) EXACT witness verification, n=12, d odd, gcd(a,d)=1
+==========================================================================
+   a    d  q=2a+11d  s=(q-11)/2?    witness    (q-11)/2q  >1/13?
+   1    1        13         True       1/13         1/13   False
+   2    1        15         True       2/15         2/15    True
+   3    1        17         True       3/17         3/17    True
+   1    3        35         True      12/35        12/35    True
+   2    3        37         True      13/37        13/37    True
+   1    5        57         True      23/57        23/57    True
+   2    5        59         True      24/59        24/59    True
+   3    5        61         True      25/61        25/61    True
+   1    7        79         True      34/79        34/79    True
+   2    7        81         True      35/81        35/81    True
+   3    7        83         True      36/83        36/83    True
+   1    9       101         True     45/101       45/101    True
+   2    9       103         True     46/103       46/103    True
+
+  witness == (q-11)/(2q) AND s==(q-11)/2 for ALL tested: True
+
+==========================================================================
+(B)+(C) TRUE M vs witness; uniqueness of the tight AP  (small ranges)
+==========================================================================
+  a   d                         AP     trueM   witness  wit<=M  M>1/13  tight?
+  1   1              {1,2,3,..,12}      1/13      1/13    True   False    True
+  2   1              {2,3,4,..,13}      2/15      2/15    True    True   False
+  3   1              {3,4,5,..,14}      3/17      3/17    True    True   False
+  4   1              {4,5,6,..,15}      4/19      4/19    True    True   False
+  1   2              {1,3,5,..,23}       1/2       1/2    True    True   False
+  3   2              {3,5,7,..,25}       1/2       1/2    True    True   False
+  1   3              {1,4,7,..,34}     12/35     12/35    True    True   False
+  2   3              {2,5,8,..,35}     13/37     13/37    True    True   False
+  4   3             {4,7,10,..,37}     15/41     15/41    True    True   False
+  1   4              {1,5,9,..,45}       1/2       1/2    True    True   False
+  3   4             {3,7,11,..,47}       1/2       1/2    True    True   False
+  1   5             {1,6,11,..,56}     23/57     23/57    True    True   False
+  2   5             {2,7,12,..,57}     24/59     24/59    True    True   False
+  3   5             {3,8,13,..,58}     25/61     25/61    True    True   False
+  4   5             {4,9,14,..,59}     26/63     26/63    True    True   False
+  1   6             {1,7,13,..,67}       1/2       1/2    True    True   False
+  1   7             {1,8,15,..,78}     34/79     34/79    True    True   False
+  2   7             {2,9,16,..,79}     35/81     35/81    True    True   False
+  3   7            {3,10,17,..,80}     36/83     36/83    True    True   False
+  4   7            {4,11,18,..,81}     37/85     37/85    True    True   False
+  1  17           {1,18,35,..,188}    89/189    89/189    True    True   False
+  2  17           {2,19,36,..,189}    90/191    90/191    True    True   False
+  3  17           {3,20,37,..,190}    91/193    91/193    True    True   False
+  1  19           {1,20,39,..,210}   100/211   100/211    True    True   False
+  2  19           {2,21,40,..,211}   101/213   101/213    True    True   False
+  3  19           {3,22,41,..,212}   102/215   102/215    True    True   False
+
+  TIGHT primitive APs found (M==1/13): [(1, 1)]
+  (expected: exactly [(1, 1)] = the set {1,...,12})
+
+==========================================================================
+(D) general-n extension  q = 2a+(n-1)d  (even n-1 => q odd, clean)
+==========================================================================
+  n   a   d     trueM  1/2-(n-1)/2q  wit<=M =1/(n+1)@{1..n}?
+  4   1   1       1/5           1/5    True  M=1/5 vs 1/(n+1)=1/5 -> True
+  4   2   1       2/7           2/7    True  
+  4   1   3      4/11          4/11    True  
+  4   2   3      5/13          5/13    True  
+  4   3   5       3/7           3/7    True  
+  6   1   1       1/7           1/7    True  M=1/7 vs 1/(n+1)=1/7 -> True
+  6   2   1       2/9           2/9    True  
+  6   1   3      6/17          6/17    True  
+  6   2   3      7/19          7/19    True  
+  6   3   5     13/31         13/31    True  
+  8   1   1       1/9           1/9    True  M=1/9 vs 1/(n+1)=1/9 -> True
+  8   2   1      2/11          2/11    True  
+  8   1   3      8/23          8/23    True  
+  8   2   3      9/25          9/25    True  
+  8   3   5     17/41         17/41    True  
+ 10   1   1      1/11          1/11    True  M=1/11 vs 1/(n+1)=1/11 -> True
+ 10   2   1      2/13          2/13    True  
+ 10   1   3     10/29         10/29    True  
+ 10   2   3     11/31         11/31    True  
+ 10   3   5      7/17          7/17    True  
+ 12   1   1      1/13          1/13    True  M=1/13 vs 1/(n+1)=1/13 -> True
+ 12   2   1      2/15          2/15    True  
+ 12   1   3     12/35         12/35    True  
+ 12   2   3     13/37         13/37    True  
+ 12   3   5     25/61         25/61    True  
+
+DONE.
