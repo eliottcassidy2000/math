@@ -56,7 +56,11 @@ theorem total_delta (a : Sheet) : total (delta a) = 1 := by
   simp [total, delta]
 
 theorem total_root (source target : Sheet) : total (root source target) = 0 := by
-  simp [total, root, Finset.sum_sub_distrib, total_delta]
+  change (∑ j, (delta target j - delta source j)) = 0
+  rw [Finset.sum_sub_distrib]
+  change total (delta target) - total (delta source) = 0
+  rw [total_delta, total_delta]
+  norm_num
 
 /-- Sliding `{source,pivot}` to `{pivot,target}` cancels the persistent
     endpoint and leaves exactly the root `delta_target-delta_source`. -/
@@ -69,7 +73,10 @@ theorem edge_slide_eq_root (source pivot target : Sheet) :
 
 theorem total_applyRoot (e : State) (source target : Sheet) :
     total (applyRoot e source target) = total e := by
-  simp [total, applyRoot, Finset.sum_add_distrib, total_root]
+  change (∑ j, (e j + root source target j)) = ∑ j, e j
+  rw [Finset.sum_add_distrib]
+  change total e + total (root source target) = total e
+  rw [total_root, add_zero]
 
 /-- The result of a tied pair does not depend on its artificial order. -/
 theorem applyRoot_comm (e : State) (a b c d : Sheet) :
@@ -83,7 +90,10 @@ theorem total_applyGroup (e : State) (moves : List (Sheet × Sheet)) :
   induction moves generalizing e with
   | nil => rfl
   | cons move moves ih =>
-      simpa [applyGroup] using ih (applyRoot e move.1 move.2)
+      change total (applyGroup (applyRoot e move.1 move.2) moves) = total e
+      calc
+        _ = total (applyRoot e move.1 move.2) := ih _
+        _ = total e := total_applyRoot e move.1 move.2
 
 theorem total_runFrom (e : State) (groups : List (List (Sheet × Sheet))) :
     total (runFrom e groups) = total e := by
