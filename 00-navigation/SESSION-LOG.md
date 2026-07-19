@@ -1,3 +1,43 @@
+## opus-2026-07-19-S400 -- THE S-T EQUALITY CASE, MINED (owner: spend a full session): statement-level NO (HYP-4096 knew on 07-05 -- my S399 headline missed the grep, MISTAKE-189), PROOF-level YES: the S-T TIGHTNESS CAGE (HYP-7920) -- their witness quantization forces every primitive 12-family with M < 113/1466 = 1/13 + 3/19058 to be dilated-AP-congruent mod EVERY sieve prime not dividing its product; + the 11-even branch lemma PROVED (sheet dodge, M >= 1/12); + power-sum/CRT forcing => TIGHT-LOCUS RIGIDITY AND MICRO-GAP EMPTINESS TO HEIGHT 258,276 (vs ~200 prior exhaustion, ~1300x, by argument not enumeration); + their Conjecture 7.1 shown ENTANGLED with the repo's stability-gap program (slack-1 family {1..11,13,36}: 235 BAD witness denominators >= 1000, persisting to scan edge)
+
+Owner: mine the Sungkawichai-Trakulthongchai equality case, full session. METHOD: canon
+prior-art first (found kps-S1/HYP-4096's statement-level verdict -- the paper does NOT
+characterize extremizers; logged MISTAKE-189 against my own S399 recommendation for missing
+it), then four targeted extraction passes over arXiv:2604.23906 (abstract, architecture,
+SS4 proofs, SS3/5/6 mechanics). THE DECODE: their k=12 proof = [per-prime sieve, c=2 lifts
+only, depths l in {1,2,4,8}, ~90 primes in [167,733], ln prod > 547] + [Prop 4.4 polynomial
+method for the terminal AP-equivalent classes, k+1 = 13 prime] + [MSS product bound]. THE
+MINE: (i) QUANTIZATION -- witness at denominator lp with 13 not| lp gives M >= ceil(lp/13)/lp
+>= 113/1466 STRICT (weakest rung, lp = 1466); (ii) CAGE -- M < 113/1466 => per non-dividing
+sieve prime: {+-w_i mod p} = c_p*{+-1..+-12} OR 11-of-12 even; (iii) BRANCH LEMMA (proved,
+unconditional, 300/300 exact verification): >= 11 even => M >= 1/12 via LRC(12) + two-sheet
+dodge (THM-760 mechanism at c=2) -- the branch never fires below threshold; (iv) POWER-SUM
+FORCING -- R_m = P_2^m*S_2m - S_2^m*P_2m must vanish when max(W) <= H0 = 258,276 (exact
+binary search vs prod(caging) >= e^547/733^loss), and R_m = 0 for m = 1..12 + Newton +
+primitivity => W = {1,...,12}. NET (conditional only on three extraction facts F1-F3,
+checklist in the reflection SS8): every primitive 12-family with M < 113/1466 and max <=
+258,276 is the AP -- tight-locus rigidity + the first gap-emptiness statement of any width
+at 12 speeds. HONEST SCOPE: HYP-7310 at unbounded height UNTOUCHED (kps-S1's height
+obstruction stands -- the cage raises the fence ~1300x, does not remove it); nothing at
+k=13/n=14 directly (14 composite kills Prop 4.1); filed as HYP (DERIVED,
+verification-pending), NOT a THM -- one PDF session promotes it. BRIDGES: (a) their named
+k=13 bottleneck (structure of I(13,p,1) = "speed tuples with no witness in an ansatz") IS
+the repo's rung/q0/(D,s)/Hamming theory -- proposed joint target; (b) their concluding
+Conjecture 7.1 (uniform witness denominator) <=> positive witness-width infimum over
+non-tight families <=> the repo's gap-above-floor questions -- probe frozen (BAD-d sets
+grow as M -> floor; D(13) < infinity is (1/14,3/41)-emptiness-flavored). Fleet convergence
+noted: boxeph-S131 cashed the mod-23 CRT stack on 3/38 and 4/55 concurrently (no 4/55
+realizer Vmax <= 32) -- the cage is the k=12-side complement of that battery.
+
+Prompt (owner): mine the Sungkawichai-Trakulthongchai equality case, spend a full session
+on it
+
+FILES: HYP-7920, MISTAKE-189, reflection
+the-st-proof-mined-tightness-cage-height-258276-rigidity-and-conj71-entanglement-opus-S400,
+2 scripts + frozen outs (lrc13_st_cage_height_bound, lrc13_eleven_even_branch_and_conj71_probe),
+backlog S399-lead-1 EXECUTED. -> all
+
+---
 ## death-star-2026-07-19-S59f — THM-1276: the tower reaches primorial 510510 — F_10(510511) = 10/5105119 EXACT (pico-window 1.9e-12, 19 s at half a million speeds) + the D=9 gate confirmed OFF the primorial diagonal (9/540557, 9/810827) — out-of-sample hits #5, #6, #7
 
 Owner: run the D=10 rung at N=510511. DONE, plus the bonus lead (xv): three targets, three confirmations.
