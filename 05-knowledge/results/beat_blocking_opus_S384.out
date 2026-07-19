@@ -1,0 +1,13 @@
+(1) THE REDUNDANCY CLAIM: at q = v_i + v_j, do v_i and v_j kill the same set?
+    200 beat pairs tested; kill-sets differ in 0 cases
+    (0 confirms the pairing is exact -- W_q symmetric and v_j = -v_i mod q)
+
+(2) DOES THE SAME HOLD AT DIFFERENCE BEATS q = |v_i - v_j|?
+    174 difference beats tested; kill-sets differ in 0 cases
+    (at q = |v_i - v_j| we have v_i = v_j mod q -- identical, not antipodal)
+
+(3) THE DECISIVE COUNT: over a family's OWN beat frequencies, how close does
+    (#distinct blockers) * k_q  come to  phi(q)?   Theorem fires if <.
+    families where the counting theorem FIRES at some own-beat q: 30/30
+    best case seen: q=90  phi=24  k_q=2  distinct blockers=7  margin=10
+    median best margin over families: 6   (needs > 0 to certify)

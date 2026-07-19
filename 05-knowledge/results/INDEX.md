@@ -1527,3 +1527,4 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `threespeed_bound_opus_S380.out` | [STORED] | THM-1155: k-comb ceiling table (dies at k=7), 3-speed bounds 14..102, 71890 combos -> 2 families. | (self) |
 | `fourspeed_exhaustive_opus_S381.out` | [STORED] | THM-1165: k=4 exhaustive (2.24M nodes, 85% pruned, 0 empty residues) -> still 2 families. | (self) |
 | `critical_points_opus_S383.out` | [STORED] | THM-1170: optimum at beat frequencies (14/14 verified); 169 = 13^2 candidates; 15.5% witness density. | (self) |
+| `beat_blocking_opus_S384.out` | [STORED] | THM-1175: pairing lemma 0/200 + 0/174; blocker collapse 13 -> 4-8; certificate fires 30/30. | (self) |

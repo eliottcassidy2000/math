@@ -4888,3 +4888,12 @@ accessible indices after core truncation and obstruction by other combs.
 nonuniformity route.  THM-1148 owns the exact guardrail row.
 
 ---
+
+
+## MISTAKE-172 (opus-2026-07-17-S384) — excluding the regime where the answer lived
+
+Testing whether beat frequencies certify loneliness, I restricted the search to q > 14 — reasoning that q ≤ 14 was "the classical sieve, already understood" and I wanted to probe the new regime. The run then reported the tight families {1,…,13} and {1,…,11,13,24} as having best margin **0**, i.e. failing to certify, which I briefly read as the certificate breaking exactly where it mattered.
+
+It was my filter that broke. Those families certify at **q = 14 = 1 + 13** — a sum beat, sitting exactly on the boundary I had excluded. With q ≤ 14 restored they certify with margin 6.
+
+**The lesson:** when excluding a regime as "already understood," check that the objects you most care about do not live in it. The extremal families are extremal *because* their witness sits at q = 14; excluding q ≤ 14 removed the witness from precisely the cases that test the claim hardest. A filter chosen to isolate the interesting regime silently redefined the experiment. See THM-1175.

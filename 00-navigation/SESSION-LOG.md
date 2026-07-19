@@ -3,6 +3,43 @@
 Prompt (owner): compute the continuum limit and settle the width growth
 
 FILES: THM-1147, HYP-7585, continuum_limit / exact_width scripts + out. -> all (codex: settled exactly. The continuum profile is F_inf(u) = 1 - (7/2)u on [0,1/4] -- the d=3 tooth's left edge is literally 1 - (7/2)u -- so the threshold 1/6 is crossed at u = 5/21 and the run ends at 2/7, giving per-run width EXACTLY 1/21 and total bad 2/21 = 0.0952381 against S(P) >= 0.164. The finite k1 values approach 1/21 from below, so the growth worry is resolved. IMPORTANT CAVEAT before anyone banks it: this is the CONSECUTIVE case, d = (1,2,3). For general (d2,d3,d4) the linear branch should persist with slope (7/2)(d_max/3), so per-run width ~ 1/(7 d_max) and TOTAL BAD ~ 2 d_max/21, which GROWS with d_max and would exceed 0.164 once d_max is about 5. If that holds the argument splits -- small d_max by this counting, large d_max by the THM-1140(II) spread cone at adjacent ratios 7/3 -- and whether the two ranges MEET becomes the real remaining question. I would check that before building the bank.)
+## opus-2026-07-17-S384 -- THM-1175 THE BEAT CONSTRAINT COLLAPSES BLOCKING CAPACITY (PROVED: at q = v_i +- v_j the two speeds kill IDENTICAL numerator sets, 0/200 and 0/174; distinct blockers drop from 13 to 4-8) -- THM-1110's construction assumed FREE residues and does not apply at a family's own beats + MISTAKE-172 (HYP-7690)
+
+Owner: work whether the beat constraint breaks the blocking construction. It genuinely
+weakens it, and that part is proved.
+THE PAIRING LEMMA: the forbidden window W_q = {r : min(r,q-r)*14 < q} is SYMMETRIC,
+r in W_q <=> -r in W_q. At a sum beat q = v_i + v_j we have v_j = -v_i (mod q), so for
+every numerator p, v_j p = -v_i p and therefore v_i p in W_q <=> v_j p in W_q. The two
+speeds kill EXACTLY THE SAME numerators. At a difference beat q = |v_i - v_j| it holds
+even more directly since v_j = v_i (mod q). Verified with 0 discrepancies across 200 sum
+beats and 174 difference beats.
+WHY IT MATTERS: THM-1110 established that 13 speeds can block ANY single modulus, because
+each kills k_q numerators and 13*k_q >= phi(q) always. That argument assumed the residues
+were FREE. At a family's own beat frequency they are not -- the defining pair collapses
+to a single blocker, and in practice many more coincidences occur: I measured distinct
+kill-sets as low as 4-8 out of 13 speeds. So THM-1110's blocking does NOT apply verbatim
+at beat frequencies, which is exactly what THM-1170 asked.
+THE UNIFIED CERTIFICATE (classical sieve at q <= 14, counting theorem at q > 14) fired on
+everything tested: {1,...,13} and {1,...,11,13,24} both at q = 14 = 1+13 with margin 6,
+2*{1,...,13} at q=28 margin 10, the all-odd family at q=2 margin 1, and adversarial
+hill-climbing bottomed at margin 1, never 0.
+STATUS, DELIBERATELY GUARDED: the pairing lemma is PROVED; the certificate is NOT, and I
+want two cautions on record. First, the supporting evidence is adversarial hill-climbing,
+which is precisely the evidence class that misled me in MISTAKE-152, 154, 156 and 157 --
+each time a sampled extremum looked like a bound and was not. Second, the certificate is
+STRICTLY STRONGER than LRC(14), because a union bound is sufficient for loneliness but
+not necessary; so it could fail on some family while LRC(14) still holds there, and
+refuting it would prove nothing about the conjecture.
+MISTAKE-172: I first restricted the beat search to q > 14, treating q <= 14 as 'the
+classical sieve, already understood'. The run then reported the TIGHT families as failing
+to certify (margin 0), which I briefly read as the certificate breaking exactly where it
+mattered. It was my filter that broke: those families certify at q = 14 = 1+13, a sum
+beat sitting exactly on the boundary I had excluded. Lesson: when excluding a regime as
+already understood, check that the objects you most care about do not live in it.
+ALSO: the five-speed enumeration (S382) is STILL RUNNING and is slower than my 28-minute
+projection -- later quintuples retain the coarse combs, so essential regions shrink,
+speed bounds grow and branches multiply. I am not going to guess a new completion time.
+FILES: THM-1175, MISTAKE-172, 2 scripts + outs, HYP-7690. opus; S384.
 
 ---
 
