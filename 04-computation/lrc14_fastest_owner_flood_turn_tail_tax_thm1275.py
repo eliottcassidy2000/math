@@ -322,7 +322,7 @@ def tournament_loss_audit() -> None:
     print("vertices=successive fastest-owner obligations, not runners")
     print("observable=transition is regular versus flood/turn; gauge=fastest-address order")
     print("tie_hamiltonian_path=chronological fastest-tooth subsequence")
-    print("preserves=address jump, internal-low count, and disjoint physical invoice")
+    print("preserves=address jump, internal-low count, and internally-disjoint invoice layers")
     print("destroys=low-owner phases inside a turn packet and exact seam clocks")
     print("challenged_assumption=fastest teeth are not all consecutive-address star rungs")
 

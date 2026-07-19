@@ -8,8 +8,8 @@ related: [THM-1199, THM-1256, THM-1267]
 script: 04-computation/lrc14_fastest_owner_flood_turn_tail_tax_thm1275.py
 output: 05-knowledge/results/lrc14_fastest_owner_flood_turn_tail_tax_thm1275.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCFastestFloodTurnTailTax.lean
-script_sha256: 97a711b05bff44cd382243f0a0d866dfcb74b1d054353039dced2b3ef34b051c
-output_sha256: 10c67c429f4a95544ccab5b956b9404d7336fcbf2904abbb7a4d1f89eec0d362
+script_sha256: 622028f9c849e96d221a7bb9a1840a5b66ee458f5c9fdadf7348d551eb56bada
+output_sha256: 3eedb36da439609e6e9d24781452de44c6132dce38a607e5d76ecb838f750ea0
 formalization_sha256: 56d4fc5aedb1f25605e2ea53d4acece53a85200909b32535c7ceffc9cec31eb0
 ---
 
@@ -399,8 +399,8 @@ remain explicit paper providers.
 Frozen hashes are
 
 ```text
-source         97a711b05bff44cd382243f0a0d866dfcb74b1d054353039dced2b3ef34b051c
-output         10c67c429f4a95544ccab5b956b9404d7336fcbf2904abbb7a4d1f89eec0d362
+source         622028f9c849e96d221a7bb9a1840a5b66ee458f5c9fdadf7348d551eb56bada
+output         3eedb36da439609e6e9d24781452de44c6132dce38a607e5d76ecb838f750ea0
 formalization  56d4fc5aedb1f25605e2ea53d4acece53a85200909b32535c7ceffc9cec31eb0
 ```
 
