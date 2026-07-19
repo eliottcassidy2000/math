@@ -1,0 +1,37 @@
+### (0) the atlas: longest component of S(P) over the 495 eight-speed cores ###
+  min ell = 1/70 = 0.014286 at core [1, 2, 6, 7, 8, 9, 10, 11] ; max ell = 0.069048
+  min ell * (13*maxP+1) over cores: 2.0571
+
+### (1) SPREAD half: every step ratio >= 7/6 ==> L >= 6/(7 k4)? ###
+  spread quadruples: 300 ; satisfying L > 1/(7k4): 300
+  worst 7*k4*L = 4.9493 (theorem needs > 1; recursion predicts >= 6) at core [2, 3, 5, 7, 8, 10, 11, 12] ks=(188, 276, 371, 464)
+
+### (2) CLUSTERED half: some ratio < 7/6 -- is the comb union cheap? ###
+  measure |D_a cup D_b| within a unit window vs 2/7 (independent) for close a,b
+  a=157   b=158     |D_a|=0.14286  |D_a u D_b|=0.26530  vs 2/7=0.28571  ratio=0.929
+  a=157   b=160     |D_a|=0.14286  |D_a u D_b|=0.26530  vs 2/7=0.28571  ratio=0.929
+  a=157   b=164     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=157   b=172     |D_a|=0.14286  |D_a u D_b|=0.26530  vs 2/7=0.28571  ratio=0.929
+  a=157   b=182     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=157   b=235     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=157   b=471     |D_a|=0.14286  |D_a u D_b|=0.23810  vs 2/7=0.28571  ratio=0.833
+
+  a=300   b=301     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=300   b=306     |D_a|=0.14286  |D_a u D_b|=0.26527  vs 2/7=0.28571  ratio=0.928
+  a=300   b=315     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=300   b=330     |D_a|=0.14286  |D_a u D_b|=0.26364  vs 2/7=0.28571  ratio=0.923
+  a=300   b=348     |D_a|=0.14286  |D_a u D_b|=0.26542  vs 2/7=0.28571  ratio=0.929
+  a=300   b=450     |D_a|=0.14286  |D_a u D_b|=0.23810  vs 2/7=0.28571  ratio=0.833
+  a=300   b=900     |D_a|=0.14286  |D_a u D_b|=0.23810  vs 2/7=0.28571  ratio=0.833
+
+  a=701   b=702     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=715     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=736     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=771     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=813     |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=1051    |D_a|=0.14286  |D_a u D_b|=0.26531  vs 2/7=0.28571  ratio=0.929
+  a=701   b=2103    |D_a|=0.14286  |D_a u D_b|=0.23810  vs 2/7=0.28571  ratio=0.833
+
+### (3) how often is a real quadruple clustered at some step? ###
+  quadruples with at least one clustered step (ratio < 7/6): 2623 / 3600 = 0.729
+DONE

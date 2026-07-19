@@ -1,0 +1,15 @@
+### fully CLUSTERED quadruples: 7*k4*L, theorem needs > 1 ###
+  regime                    tested  min 7k4L   median   #below 1
+  consecutive k,k+1,k+2,k+3 220     3.7453     4.4904   0
+  step<=3                   220     2.6294     4.0022   0
+  step<=8                   220     3.0455     4.2967   0
+  step<=25                  220     3.2538     4.8032   0
+
+### the worst clustered cases: what do they look like? ###
+  min 7*k4*L over 900 tight-clustered quadruples: 2.3581
+    at core [1, 3, 5, 6, 7, 8, 11, 12], killers (371, 374, 377, 379)
+    (theorem needs > 1 ; spread half measured 4.95)
+
+### does S(P) minus four combs ever become EMPTY? ###
+  empty remainders: 0 / 500
+DONE
