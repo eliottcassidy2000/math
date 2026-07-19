@@ -1,0 +1,5 @@
+k5=165  consecutive [157, 159, 161, 163, 165]: R=4/15=0.26667
+k5=165  NON-consec   [159, 161, 162, 163, 165]: R=26243/48345=0.54283  <-- BEATS consecutive
+  => for fixed k5=165, a non-consecutive shape has strictly larger R_sharp (exact).
+
+global maximizer [171, 173, 175, 177, 179]: R=10325/12888=0.801133 (the record)
