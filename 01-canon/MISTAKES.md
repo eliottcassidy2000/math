@@ -11,6 +11,69 @@ Format per entry:
 
 ---
 
+## MISTAKE-169 (kind-pasteur-S128c68, caught by codex-2026-07-18-S67) -- a one-period window was said to contain a full safe gap
+
+**What happened:** the four-comb gap-recursion scout asserted that an arbitrary
+interval of length `1/k` contains a complete safe gap of the danger comb
+`D_k`, of length `6/(7k)`.  It then used the adjacent-ratio threshold `7/6`.
+
+**Why it is false:** after scaling to `k=1`, the interval `[1/2,3/2]` cuts the
+closed safe arc `[1/14,13/14] mod 1` into two pieces, each of length `3/7`.
+There is no safe subinterval of length `6/7`.  The scout's own measured minimum
+`7*k4*L=4.9493` already contradicted its printed prediction `>=6`.
+
+**Correction:** a one-period window contains at most two pieces of total safe
+length `6/(7k)`, so it always contains one of length `3/(7k)`, and this is
+sharp.  The sound recursive adjacent-ratio threshold is consequently `7/3`.
+THM-1137 uses that exact lemma to prove a genuine multiplicatively spread
+`r=6` cone.
+
+**Impact:** only the explanatory claim in the S128c68 reconnaissance is
+invalid; its sampled exact residual lengths remain data.  No pre-existing
+canon theorem depended on the `7/6` recursion.
+
+## MISTAKE-168 (death-star-S58, caught by codex-2026-07-18 tail audit) -- midpoint cells, a minimum branch, and an AP slice were promoted to exact uniform horn facts
+
+**What happened:** the original `r6_Gsigma_exact_bands_deathstar_S58.py`
+formed a list of centre/arc collision points, evaluated `G(sigma)` only at the
+midpoint of each intervening cell, and labelled the whole cell good or bad.
+THM-1132 then called the resulting endpoints exact.  The same theorem scaled
+`T_old=min(N/(6mu),1/(3L))` by `3/7` as though its component branch were always
+active, and described the equal-step phase AP as a reduction of the five-killer
+problem.  It also said a component equal in length to one danger tooth could be
+covered by that open tooth.
+
+**Why it is false:** inside a fixed cyclic order, `G` is the maximum of affine
+gap lengths and can cross `1/7` without any arc endpoints colliding.  For
+example, `G(1/7)=2/7` and `G(17/50)=31/175>1/7`, contrary to the reported band
+ends.  The printed “breakpoint-midpoint minimum” `1/14` even contradicted the
+same output's exact value `G(1/5)=2/35`.  Algebraically, the exact identity is
+`R_sharp=(3/7)R_comp` with `R_comp=(1/(3L))/k5`; when the counting branch wins,
+`R_old` is a different quantity.  Geometrically, only offsets
+`{b,b+d,...,b+4d}` form the asserted one-variable AP.  Topologically, the
+residual is closed and a closed arc of equal length cannot fit inside an open
+danger tooth.
+
+**Correction:** with `u=min(sigma,1-sigma)`, the largest centre gap is
+
+```text
+max(u,1-4u) on [0,1/4],  u on [1/4,1/3],
+max(3u-1,1-2u) on [1/3,1/2],
+```
+
+and `G=H-1/7`.  Therefore `G>1/7` exactly on
+`[0,5/28) U (2/7,5/14) U (3/7,4/7) U (9/14,5/7) U (23/28,1]`,
+of measure `9/14`; its minimum `2/35` occurs at all four nonzero
+fifths.  The horn condition is `L>=1/(7k)`.  The sampled exact row and the
+local horn survive, but global maximality, the AP landing/drift bridge, and
+arbitrary-offset uniformity remain open.
+
+**Affects:** THM-1132, HYP-7605, the sharp-horn search wording, the exact-bands
+script/output, the auxiliary horn endpoint tests, and the S58 reflection.
+Source: codex tail audit, 2026-07-18.
+
+---
+
 ## MISTAKE-167 (boxeph-S111, caught by codex-2026-07-18) -- five named rows were reported as a universal covering-family floor
 
 **What happened:** `lrc14_gap_theorem_test_boxeph_S111.py` evaluated five
@@ -74,6 +137,37 @@ In the `no Lonely14` branch, `counterexample_needs_all_divisors 14` supplies
 **Affects:** corrected `LRCMSplit.lean`, `LRCFinsetBridge.lean`, their root
 comments, S108/S109 reflections and ledger entries.  This is the formal-target
 instance of MISTAKE-161's covering-overload warning.
+## MISTAKE-166 (boxeph-S110, caught by codex-2026-07-18-S67) -- five examples and a parameter identity were promoted to a global PG/tournament gap
+
+**What happened:** S110 observed `183=13^2+13+1` and `14=13+1`, evaluated
+five hand-picked integer families, and promoted their ordering to a spectral
+gap `[14/183,1/12)` and a Singer/doubly-regular-tournament transport.  The
+script contained no Singer set, no Covering filter, and no claimed 100-row
+random census.  THM-724 was also cited beyond its proved single-killer scope.
+
+**Exact refutation:** primitive Covering rows have exact values
+
+```text
+M(2*{1,...,12} union {13}) = 1/13,
+M({2,3,5,8,9,11,12,13,14,15,17,20,23}) = 3/37 in (1/13,1/12),
+M({1,...,12,364}) = 28/365 < 1/13.
+```
+
+Moreover `{1,...,12,182}` and `{2,...,12,182,184}` have the same residue
+subset modulo 183 but global maxima `14/183` and `13/93`.  Thus the ambient PG
+residue support forgets the integer lift and all other rational charts.
+
+**Tournament correction:** a Singer `(183,14,1)` set has size 14, whereas a
+tournament connection set on 183 vertices has size 91 (doubly regular
+parameters `(183,91,45)`); a regular tournament on 14 vertices is impossible.
+The augmented deep-well residue set and a Singer set are merely opposite-looking
+additive examples, not vertices connected by a proved LRC-preserving map.
+
+**Rule:** a shared parameter pair is not a functor.  Before transporting an
+extremum or tournament class, name the vertex set, quotient, preserved LRC
+predicate, and forgotten fibre; then test two distinct lifts of one quotient
+point.  A short example table supports only those rows, never a population gap.
+Source: THM-1131, HYP-7604/7635, corrected S110 script/output/reflection.
 
 ## MISTAKE-165 (opus-S375, caught by codex-2026-07-18-S67) -- a unit-residue kill count was applied to nonunit speeds
 

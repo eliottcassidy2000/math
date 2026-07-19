@@ -1,69 +1,133 @@
-# The official Finset target of LRC(14) now reduces to `INVcov` in the kernel
+# The official Finset bridges to `INVcov` and `ResidualINV`
 
-*boxeph-2026-07-18-S109; corrected codex-2026-07-18 (MISTAKE-166). The bridge now proves
-`LRC14_finset_of_INVcov : LRC(≤13)[cited] + INVcov[open] ⟹ LRC14.LRC14`,
-kernel-pure. `INVcov` explicitly assumes `Covering(2..14)`; the original unqualified `INV`
-was false, although the transport from the working shape to the Finset target was sound.*
+*boxeph-2026-07-18-S109; corrected codex-2026-07-18 (MISTAKE-166).*
 
-## The gap bridged
+The representation bridge is sound, but its premise must be stated precisely.  The
+formalization now exports two related theorems:
 
-`LRC14_of_INVcov` (corrected S108) concludes in the working shape:
-`∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → ∃ t : ℝ, Lonely 14 v t`.
-The ledger's target is the human-facing shape:
+```lean
+LRC14_finset_of_INVcov :
+  LRCUpTo13 → INVcov → LRC14.LRC14
+
+LRC14_finset_of_residual_INV :
+  LRCUpTo13 → ResidualINV → LRC14.LRC14
 ```
+
+They serve different purposes.  `INVcov` is the useful, noncircular sufficient open
+target.  `ResidualINV` is the exact counterexample target and records the shape of a
+hypothetical obstruction, but—under the cited AP-core bridge—it is logically
+equivalent to the working LRC(14) statement.  The residual theorem therefore closes a
+formal representation gap; it does not turn LRC(14) into a smaller open problem.
+
+## The two inverse interfaces
+
+The stronger interface is
+
+```lean
+def INVcov : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → Covering v →
+    (¬ ∃ t, Lonely 13 v t) →
+    ∃ vstar, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar
+```
+
+Here `Covering v` says that every modulus `2..14` divides at least one speed.
+`INVcov` is sufficient for LRC(14): on the no-`Lonely14` branch, the divisor sieve
+forces Covering and band monotonicity forces no `Lonely13`; dominance then feeds
+`ap_core_bridge`.
+
+The exact residual interface is
+
+```lean
+def ResidualINV : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → Covering v →
+    (¬ ∃ t, Lonely 14 v t) →
+    ∃ vstar, ∀ i, i ≠ vstar → 13 * v i ≤ v vstar
+```
+
+The file proves both directions needed to calibrate it:
+
+```lean
+residualINV_of_INVcov : INVcov → ResidualINV
+
+residualINV_iff_LRC14 (cite : LRCUpTo13) :
+  ResidualINV ↔
+    ∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → ∃ t, Lonely 14 v t
+```
+
+Thus `INVcov` is the genuine sufficient supplier one may try to prove independently;
+`ResidualINV` is a faithful language for counterexample elimination.  Neither is
+currently identified with Tao's `n=12` inverse/AP-uniqueness theorem.  Such an
+identification would require a separate structural bridge.
+
+The old unqualified implication
+
+```text
+(¬ ∃ t, Lonely 13 v t)  →  13-fold dominance
+```
+
+is false.  The canonical family `{1,…,13}` has exact maximum `M = 1/14`, hence no
+`Lonely 13` time, but has no 13-fold dominant speed.  Adding the covering premise is
+not cosmetic: it is the information contributed by the no-`Lonely14` branch.
+
+## The representation gap bridged
+
+The working theorem has shape
+
+```lean
+∀ v : Fin 13 → ℤ, (∀ i, 0 < v i) → ∃ t : ℝ, Lonely 14 v t
+```
+
+whereas the ledger's official target is
+
+```lean
 def LRC14.LRC14 : Prop :=
   ∀ W : Finset ℕ, (∀ w ∈ W, 0 < w) → W.card = 13 →
-    ∃ t ∈ Icc (0:ℝ) 1, ∀ w ∈ W, ∀ a : ℤ, 1/14 ≤ |(w:ℝ)*t - a|
+    ∃ t ∈ Icc (0 : ℝ) 1,
+      ∀ w ∈ W, ∀ a : ℤ, 1 / 14 ≤ |(w : ℝ) * t - a|
 ```
-Two elementary transfers close the gap:
 
-1. **Enumerate the Finset.** `W.equivFinOfCardEq hWcard : W ≃ Fin 13` gives `v i := ((e i : ℕ) : ℤ)`, a
-   `Fin 13 → ℤ` whose range is exactly `W` (positivity transfers from `hWpos`). Feed it to
-   `LRC14_of_INVcov`.
+Two elementary transfers close this mismatch.
 
-2. **Reduce the time to `[0,1)`.** Loneliness is invariant under integer shifts, so the new lemma
-   **`lonely_fract`** replaces `t` by `Int.fract t ∈ [0,1)`:
-   `v_i·fract t − m = v_i·t − (m + v_i·⌊t⌋)`, and `m + v_i⌊t⌋ ∈ ℤ` is absorbed by the universal `m`.
-   `Int.fract_nonneg` / `Int.fract_lt_one` place it in `Icc 0 1`.
+1. **Enumerate the Finset.**  `W.equivFinOfCardEq hWcard : W ≃ Fin 13` gives an
+   equivalence whose inverse defines `v i := ((e i : ℕ) : ℤ)`.  Its range is exactly
+   `W`, and positivity transfers from the ledger hypothesis.
 
-Then `∀ w ∈ W` is discharged pointwise: `w = e (e.symm ⟨w,hw⟩)`, so `(v i : ℝ) = (w : ℝ)` and the
-lonely bound at that index is exactly the target's.
+2. **Normalize the time.**  The proved lemma `lonely_fract` replaces a witness `t`
+   by `Int.fract t ∈ [0,1)`.  Indeed,
+   `vᵢ · fract(t) - m = vᵢ · t - (m + vᵢ⌊t⌋)`, and the parenthesized term is still an
+   integer quantified by `Lonely`.
 
-## What is now in the kernel
+For `w ∈ W`, choose `i = e.symm ⟨w, hw⟩`.  Then `(v i : ℝ) = (w : ℝ)`, so the
+pointwise Lonely inequality is exactly the ledger predicate.
 
-> **`LRC14_finset_of_INVcov` (corrected S109):
-> `LRC(≤13)`[cited] + `INVcov`[open] ⟹ `LRC14.LRC14`** (the ledger target).
+## Kernel-checked formalization ladder
 
-Chaining corrected S108's `LRC14_of_INVcov`, the *official* LRC(14) statement — the one written as the ledger's target
-Prop, over `Finset ℕ` with the lonely time normalized to `[0,1]` — is now a kernel-checked consequence of
-LRC(≤13) and the covering inverse theorem `INVcov`. There is no shape-mismatch caveat between the working
-form and the target; the reduction lands on the actual goal Prop.
+All the following rungs audit to Lean's standard axiom trio
+`[propext, Classical.choice, Quot.sound]`:
 
-## The formalization program (S105–S109), summarized
-
-Every rung kernel-pure (`[propext, Classical.choice, Quot.sound]`), all in the root aggregator:
-
-| rung | theorem | content |
+| rung | theorem | precise content |
 |---|---|---|
-| S105 | `ap_core_bridge` | ρ≥13 + LRC(≤13) ⟹ Lonely 14 (compact/AP-core) |
-| S106 | `sieve_dispatch` | ¬Covering ⟹ Lonely 14 (non-covering sieve) |
-| S107 | `density_far_extension` | d≥91V + frame lonely ⟹ Lonely 14 (density Φ>0) |
-| S108 | `LRC14_of_INVcov` | LRC(≤13) + INVcov ⟹ ∀v, Lonely 14 (covering M-split) |
-| S109 | `LRC14_finset_of_INVcov` | LRC(≤13) + INVcov ⟹ `LRC14.LRC14` (the ledger target) |
-
-The elementary formalization of LRC(14) is complete end-to-end: the ledger's own target Prop reduces, in
-the kernel, to LRC(≤13) plus the single open `INVcov`. Connecting this sufficient dominance target to
-global n=12 AP uniqueness requires a separate structural bridge.
+| S105 | `ap_core_bridge` | 13-fold dominance + LRC(≤13) implies `Lonely 14` |
+| S106 | `sieve_dispatch` | not Covering implies `Lonely 14` |
+| S107 | `density_far_extension` | a sufficiently separated far speed extends a lonely frame |
+| S108 | `M_split` | no `Lonely14` forces Covering and no `Lonely13` |
+| S108 | `LRC14_of_INVcov` | LRC(≤13) + `INVcov` implies working LRC(14) |
+| S108 | `residualINV_iff_LRC14` | under LRC(≤13), the residual target is exact/equivalent |
+| S109 | `LRC14_finset_of_INVcov` | the sufficient route lands on `LRC14.LRC14` |
+| S109 | `LRC14_finset_of_residual_INV` | the exact residual route lands on `LRC14.LRC14` |
 
 ## Net
 
-- **Delivered:** `LRCFinsetBridge.lean`, 2 kernel-pure theorems (`lonely_fract`, `LRC14_finset_of_INVcov`),
-  built and registered. The Lonely-form of LRC(14) now connects to the ledger's Finset target with no
-  remaining shape gap.
-- **Milestone closed:** the official LRC(14) target Prop is a kernel-checked corollary of
-  LRC(≤13) + `INVcov`.
-- **Honest:** `INVcov` remains open. The corpus does not prove LRC(14); it proves the
-  sufficient reduction to `INVcov` at the level of the official goal statement.
+- **Delivered:** `LRCFinsetBridge.lean` exports the time-normalization lemma and both
+  official-target bridges.
+- **Useful open theorem:** proving `INVcov` would prove the official LRC(14) target,
+  given the explicit `LRCUpTo13` citation.
+- **Exact diagnostic language:** `ResidualINV` describes precisely what dominance
+  would have to do on a counterexample, and the formal equivalence theorem prevents
+  us from mistaking that restatement for progress on the open mathematics.
+- **Remaining structural question:** connect a genuinely stronger theorem—possibly a
+  covering inverse, compact-class classification, or tournament/quotient invariant—to
+  this exact residual domain without assuming no `Lonely14` in the supplier itself.
 
 Cross-links:
 [[the-M-split-and-the-complete-kernel-checked-reduction-of-lrc14-to-INV-boxeph-S108]],

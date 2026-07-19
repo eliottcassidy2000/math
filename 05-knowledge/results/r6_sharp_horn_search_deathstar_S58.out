@@ -2,4 +2,4 @@
 (b) consec moderate scale: maxR=0.8011 ([1, 2, 4, 7, 9, 11, 12], [171, 173, 175, 177, 179], 0.0009962)
 (c) clustered large: maxR=0.8011 ([1, 2, 4, 7, 9, 11, 12], [171, 173, 175, 177, 179], 0.0009962)
 (d) random spread: maxR=0.8011 ([1, 2, 4, 7, 9, 11, 12], [171, 173, 175, 177, 179], 0.0009962)
-FINAL max R_sharp=0.8011 -> CLOSES r=6
+FINAL sampled max R_sharp=0.8011 -> sampled bank below 1; UNIFORM r=6 OPEN

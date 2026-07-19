@@ -48,11 +48,15 @@ families = {
     "deep_well": list(range(1, 13)) + [182],
     "compressed_near_dilate": [2 * i for i in range(1, 13)] + [13],
     "divisor_complete_3_over_37": [2, 3, 5, 8, 9, 11, 12, 13, 14, 15, 17, 20, 23],
+    "deep_well_second_rung": list(range(1, 13)) + [364],
+    "same_mod183_different_lift": list(range(2, 13)) + [182, 184],
 }
 expected = {
     "deep_well": Fraction(14, 183),
     "compressed_near_dilate": Fraction(1, 13),
     "divisor_complete_3_over_37": Fraction(3, 37),
+    "deep_well_second_rung": Fraction(28, 365),
+    "same_mod183_different_lift": Fraction(13, 93),
 }
 
 print("THM-1131 exact PG(2,13)-gap referee")
@@ -76,10 +80,23 @@ require(min(clearance(v, 1, 26) for v in near) == Fraction(1, 13), "1/26 witness
 require(expected["compressed_near_dilate"] < Fraction(1, 12), "gap counterexample failed")
 require(Fraction(1, 13) < expected["divisor_complete_3_over_37"] < Fraction(1, 12),
         "open-interval counterexample failed")
+require(expected["deep_well_second_rung"] < Fraction(1, 13),
+        "strict sub-1/13 counterexample failed")
+
+base_mod183 = {v % 183 for v in families["deep_well"]}
+lift_mod183 = {v % 183 for v in families["same_mod183_different_lift"]}
+require(base_mod183 == lift_mod183, "mod-183 residue subsets differ")
+require(expected["deep_well"] != expected["same_mod183_different_lift"],
+        "global M unexpectedly preserved by mod-183 quotient")
+print(
+    "same mod-183 residue subset: deep_well M=14/183; "
+    "same_mod183_different_lift M=13/93"
+)
+print("quotient verdict: Z/183 residue support does NOT preserve global M")
 
 records.sort()
 print("ordered M gauge: " + " < ".join(name for _, name in records))
-print("tournament fingerprint: transitive; scores=0,1,2; cycles=0; SCCs=1,1,1; HP=1")
+print("tournament fingerprint: transitive; scores=0,1,2,3,4; cycles=0; SCCs=1,1,1,1,1; HP=1")
 print("preserved: scalar M order; destroyed: covering carriers, residues, maximizer geometry")
 print("challenged vertices: proof obligations and divisor carriers are more faithful than runners")
 print("VERDICT: the proposed [14/183,1/12) empty gap and non-AP=>M>=1/12 target are FALSE")

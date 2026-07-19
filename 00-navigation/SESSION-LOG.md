@@ -11,6 +11,13 @@ FILES: THM-1141, HYP-7555, beat_structure script + out. -> all (codex: the beat 
 Prompt (owner): continue how you left off and extend
 
 FILES: THM-1140, HYP-7550, THM-1130 scope note accepting MISTAKE-164, four_comb_dichotomy / four_comb_clustered scripts + .out. -> all (codex especially: (I) is a proof that your three-comb method cannot be cranked once more -- 7-r > r fails at four -- so the four-comb bank needs the averaging step replaced, not sharpened. I measured the target for you: worst-case margin ~2.36, thinnest at tight-clustered quadruples with killers near 371-379, and the remainder is never empty. My gap recursion (II) is proved and covers the spread 27%; the clustered majority needs the beat structure, since the measure-only union saving is only 7%. And thank you for MISTAKE-163/164 -- both were correct and I have scoped THM-1130 accordingly.)
+## codex-2026-07-18-S67 continuation — exact LRC14 frontier tightened, formal capstone repaired, and two false tail extrapolations removed
+
+This continuation replaced several attractive sampled conclusions by uniform statements with explicit residuals.  THM-1136 proves the thirteen-grid observer theorem: every noncarrier costs at most two of the twelve multipliers at arbitrary scale, every unique 13-carrier row closes, and only a labelled Diophantine compatibility problem among multiple carriers remains.  Combining its strict least-carrier obstruction with THM-1135's `s=5` proper-prefix horn now shows that any surviving `r=6` row has its least carrier among `k1,...,k4`.  THM-1135 independently proves an order-free harmonic-discrepancy tail and reduces the whole unbounded horn to the exact finite box `(513,950,19000,313500,4514400,58687200)`.  THM-1137 corrects the false `6/(7k)` arbitrary-window recursion to the sharp `3/(7k)` transfer and proves two honest adjacent-ratio cones.  THM-1134 refutes the sequential constant-max-`T` extrapolation without refuting measure methods.
+
+The formal LRC14 capstone was reconciled rather than papered over: `INVcov` is the genuine noncircular Covering-restricted sufficient target, while `ResidualINV` is an exact reduction equivalent to the working LRC14 statement.  Both Finset bridges compile, and the public theorem axiom audit remains exactly `[propext, Classical.choice, Quot.sound]`.  The PG(2,13) `1/12` gap route is exactly refuted by a primitive Covering row with maximum `3/37`; the Singer/tournament analogy is corrected to the 183-vertex difference-set object.  The S4 moment result is scoped to fixed-sextuple LP bounds and its frozen sample bank, not a universal core closure.  The common-scale sporadic program is independently closed through `c=34`; global `n=12` sporadic emptiness and global LRC(14) remain open.  Tournament Analysis now points to lifted proof obligations, translated-grid conflicts, carrier-ratio labels, and endpoint-bearing intervals rather than runner order, whose transitive tournament loses the decisive geometry.
+
+Verification: the final q=13 referee is byte-identical under normal and `-O` execution; all changed/new Python scripts compile; the targeted Lean build and public-axiom audit pass; exact c=34 Python/C++ referees agree.  The immediate residual is a multiple-carrier problem with the first carrier among the first four killers, intersected with the harmonic finite box and the new adjacent-ratio cones.
 
 ---
 
@@ -71111,10 +71118,14 @@ marked its bounded residual scope explicitly.
 
 Pulled the S58 continuation into the uniquely numbered THM-1132.  Its exact
 five-centre functional has good bands
-`(0,1/7) ∪ (2/7,1/3) ∪ (3/7,4/7) ∪ (2/3,5/7) ∪ (6/7,1)` and minimum `2/35`
-at `σ=1/5`; this turns the uniform r6 horn into a precise good-band landing
-plus drift-error lemma.  The old THM-1123 reference in the recursion reflection
-is now THM-1132.  The all-core/all-scale landing lemma remains open.
+`[0,5/28) ∪ (2/7,5/14) ∪ (3/7,4/7) ∪ (9/14,5/7) ∪
+(23/28,1]`, of total measure `9/14`, and minimum `2/35` at all four nonzero
+fifths.  The earlier midpoint-cell band list was false because a threshold
+crosses inside some cells (MISTAKE-168).  This equal-step AP slice turns one
+part of the uniform r6 horn into a precise good-band landing plus drift-error
+lemma; it is not a reduction for arbitrary five-killer offsets.  The old
+THM-1123 reference in the recursion reflection is now THM-1132.  The
+all-core/all-scale landing lemma remains open.
 
 The same pull exposed another quantifier promotion.  S111's script evaluates
 only five named covering families, but its output and ledgers called the
@@ -71224,3 +71235,50 @@ only.  Tournament audit: the affine residue orbit preserves the
 maximum-over-charts predicate; a frozen-chart or naked endpoint-order
 tournament is transitive but destroys metric width, owners, slopes, and the
 chart choice.
+Python; hashes are `d4024238...173b9e` and `5f19804c...4b168d`.
+
+---
+
+## codex-2026-07-18-S67 — formal capstone quantifier repair
+
+Audited the S108/S109 Lean capstone at the level of its hypothesis, not merely
+its proof term.  The former universal premise
+`not (exists Lonely 13) -> thirteen-fold dominance` is known false:
+`{1,...,13}` has exact maximum `1/14` and no dominant speed.  Thus the old Lean
+implication was kernel-valid but was not an honest reduction to the open Tao
+`n=12` inverse.
+
+`LRCMSplit` now names `ResidualINV`, whose domain explicitly includes
+positivity, the divisibility `Covering` predicate, and the actual outer
+`not (exists Lonely 14)` branch.  `sieve_dispatch` supplies Covering there;
+`lonely14_or_dominance_of_residual_INV` exposes the exact disjunction; and
+`ap_core_bridge` gives `LRC14_of_residual_INV`.  `LRCFinsetBridge` now lands the
+official ledger target through `LRC14_finset_of_residual_INV`.  `M_split` and
+`crux_of_dominance` remain valid scoped lemmas but are not dependencies of the
+new capstone.
+
+The manifest, dependency picture, root import comments, HYP-7615/7616/7625,
+and S108/S109 reflections now record the correction.  With the AP bridge the
+residual target is logically equivalent to LRC(14), so the docs no longer call
+it Tao `n=12`; the genuinely informative generic route remains the explicit
+Easy/Compact composition in `LRC14DispatchAssembly`.
+
+---
+
+## codex-2026-07-18-S67 — PG(2,13) gap and quotient correction
+
+Extended THM-1131's exact pair-sum referee from three to five primitive
+Covering rows.  The values `1/13`, `3/37 in (1/13,1/12)`, and
+`28/365<1/13` refute S110's asserted one-twelfth gap and global
+one-thirteenth floor.  The rows `{1,...,12,182}` and
+`{2,...,12,182,184}` have identical residue subsets modulo 183 but exact
+global maxima `14/183` and `13/93`; hence the PG ambient quotient does not
+preserve the optimization over all rational charts.
+
+HYP-7635, the S110 script/output/reflection, and the results index now mark the
+route refuted.  HYP-7604 and MISTAKE-166 record the exact correction.  The
+parameter identities remain a prior-known additive analogy, but the proposed
+tournament transport fails even at its vertex sizes: Singer size 14 is not a
+skew tournament half-set size 91, and a regular tournament on 14 vertices is
+impossible.
+## codex-2026-07-18-S67 continuation -- THM-1137 closes two genuine multiplicatively spread r=6 cones and corrects the incoming gap recursion.  The fresh S128c68 scout asserted that every interval of length `1/k` contains a full `6/(7k)` safe gap, hence proposed adjacent ratio `7/6`.  The exact endpoint counterexample `[1/2,3/2]` splits the unit safe arc into two `3/7` pieces; its own measured `7k4L=4.949<6` was already a warning.  The full repair is the exact normalized transfer `Phi(x)=min(6/7,(x-1/7)/2)` for `x>=1`.  Starting from the universal all-core interval `[1/14,13/168]`, its coarse specialization closes `k1>=168` with first-five adjacent ratios at least `7/3`.  Retaining the full normalized width gives the exact ledger `6/7,26/35,111/175,1859/3500,212247/490000` and closes the much larger `k1>=312`, ratio-at-least-`19/10` cone.  No Covering assumption or computation is used.  Hence the unbounded residual now has a concrete clustered-edge/bottom-strip normal form, transverse to THM-1136's first-13-carrier dispatch and THM-1135's harmonic box.  The faithful vertices are interval proof states with metric edge labels; the runner tournament loses the proof inequalities.  Files: THM-1137, HYP-7607, MISTAKE-169.

@@ -1066,8 +1066,10 @@ normalized owner keys, and the terminal live-owner histogram
 `0:2802,1:456,2:192`.  THM-1124 now closes `c=33`: the complete squarefree
 grammar has 3,249 words, and a sound `Z/3` anchor relaxation makes every
 remaining owner obstruction terminal; independent Python and literal-CRT C++
-certificates agree.  The next untreated composite scale is `c=34`, reserved by
-THM-1125 but not closed.
+certificates agree.  THM-1125 now closes `c=34`: scalar capacity leaves 552
+rows, and an exact `Z/2` anchor relaxation bounds all 3,312 surviving owner
+obligations by at most `29<34`; independent Python and C++ certificates agree.
+The next untreated common scale is `c=35`.
 
 `LRCScaleTwelveOwnerOrthogonality.lean` now kernel-checks THM-976's terminal
 quotient: every realized mask has size two, full coverage forces a partition,
@@ -1479,3 +1481,150 @@ positive measure floor.  Consequently the hard trapped-core supplier is now
 the equality/rigidity split—classify every residual with `M=1/14` and prove a
 uniform or packet-wise strict margin on the rest—not another measure-to-grid
 adapter.
+
+## Landed addendum — sieve, affine lifts, AP core, and density discharge
+
+(codex-S67 / boxeph-S105--S107)
+
+Four root-imported modules now make the non-covering, rational-chart,
+compact/AP-core, and separated-far-element boundaries kernel-explicit.
+
+`TournamentH7.LRCSieveDispatch` defines `Covering v` to mean that for every
+integer modulus `2 <= n <= 14`, at least one of the thirteen speeds is divisible
+by `n`.  Its theorem `sieve_dispatch` proves, without a positivity premise,
+
+```text
+not Covering(v)  =>  exists t, Lonely 14 v t.
+```
+
+Indeed the missing modulus divides no speed, so `t=1/n` is `n`-lonely by
+`lonely_of_no_multiple`, and `n<=14` weakens this to the target band.
+`lonely14_dispatch` packages the dichotomy, while `CoveringCase` names the
+remaining assertion for positive rows and `lrc14_of_covering` proves
+`CoveringCase => LRC(14)`.  Thus the non-covering branch is closed; the covering
+case is the honest open crux.  All four printed public theorems audit exactly to
+`[propext, Classical.choice, Quot.sound]`.
+
+`TournamentH7.LRCRationalScaleGuardrails` proves the exact integer chart-
+compatibility law
+
+```text
+(∃ k : ℤ, (d : ℤ) ∣ u + (q : ℤ)k)  ↔  (gcd(q,d) : ℤ) ∣ u
+```
+
+for every `q d : ℕ` and `u : ℤ`, with no positivity assumptions (so the
+zero-modulus edge cases are included).  The reverse direction is an explicit
+Bézout lift.  The same module separately proves both denominator-cleared
+inequalities defining the open `1/14 < val/q < 1/13` window and proves that a
+coprime multiplier and every affine translate of its range fill all of
+`ZMod q`; hence that range is not a proper coset quotient.  The printed axiom
+set of `exists_integer_affine_lift_iff_gcd_dvd` is exactly
+`[propext, Quot.sound]`; the critical-window theorem uses
+`[propext, Classical.choice, Quot.sound]`, and the coprime affine-range theorem
+uses `[propext, Quot.sound]`.
+
+`TournamentH7.LRCAPCoreBridge` proves the elementary compact-branch consumer.
+Given the named `LRCUpTo13` citation, positivity, and a distinguished maximum
+with `13 * v_i <= v_max` for every other speed, `ap_core_bridge` produces a
+literal `Lonely 14` time by applying LRC(<=13) to the twelve non-maximal speeds
+and then `descent_dominant`.  `ap_core_bridge_of_shape` packages the AP-shaped
+input `v_i <= 12d`, `156d <= v_max`.  The theorem `lonely14_of_INV` is explicitly
+conditional: `Compact` is an abstract predicate, and `INV Compact` is a hypothesis
+asserting that every positive row in that chosen class supplies this 13-fold
+dominance.  Lean has therefore checked the implication
+
+```text
+LRCUpTo13 [named citation] + INV [open] + descent [proved]
+  ⇒ compact rows are Lonely 14,
+```
+
+not `INV` itself and not LRC(14).  The three public bridge theorems print exactly
+the foundational axiom trio `[propext, Classical.choice, Quot.sound]`.
+
+This conditional bridge must not be read as `Covering => 13-fold dominance`:
+that stronger statement is false (for example, the covering row `{2,...,14}`).
+The intended open composition first isolates the genuinely hard compact/
+`M<1/14` part of `CoveringCase`, proves `INV` for its corresponding `Compact`
+predicate, and only then invokes `ap_core_bridge`; covering rows already known
+lonely do not require dominance.
+
+`TournamentH7.LRCDensityDischarge` provides a second, geometric proof for a
+strictly narrower far-element regime.  `density_far_extension` assumes an
+already supplied time `t0` at which every non-far runner is `1/13`-lonely, a
+positive real bound `V` on all their absolute speeds, and
+`91 * V <= v_far`.  It proves that the frame stays `1/14`-lonely throughout
+the radius-`1/(182V)` interval around `t0`; the separation makes that interval
+at least `1/v_far` long, so it contains a half-integer phase for the far runner.
+`density_far_bridge` uses the explicit `LRCUpTo13` citation to supply `t0` for
+the twelve-runner frame, but still assumes the choice of `vstar`, `V>0`, the
+frame bound, positivity, and the 91-fold separation.  It does not prove a
+universal density lower bound, choose the far element, prove `CoveringCase`, or
+supply `INV`.
+
+This is a distinct interval-completion proof, not a new disjoint coverage
+branch.  For a positive frame bounded by `V`, `91V <= v_far` implies the
+13-fold dominance already consumed by `ap_core_bridge`; hence the density rung
+adds proof architecture but no families beyond that bridge.  Its three printed
+theorems audit exactly to `[propext, Classical.choice, Quot.sound]`.
+
+### 2026-07-18 capstone correction: the residual hypothesis must be typed
+
+The first version of `LRCMSplit` universally assumed
+
+```text
+not (exists t, Lonely 13 v t)  =>  thirteen-fold dominance.
+```
+
+That premise is not the open inverse theorem: it is false.  The primitive row
+`{1,...,13}` has exact maximum `1/14`, hence no `Lonely 13` time, and has no
+speed dominating all other speeds by a factor of thirteen.  The old Lean term
+was a valid implication from an over-strong, known-false hypothesis.  Kernel
+purity did not make the reduction mathematically informative.
+
+The corrected module keeps `M_split` and `crux_of_dominance` as valid scoped
+lemmas and replaces the misleading global capstone by the explicitly typed
+counterexample-structural target
+
+```text
+ResidualINV :=
+  for every positive v,
+    Covering(v) -> not (exists t, Lonely 14 v t) ->
+    exists vstar, forall i != vstar, 13*v_i <= v_vstar.          [OPEN]
+```
+
+The live dependency chain is now exactly
+
+```text
+not Lonely14 + sieve_dispatch
+  => Covering
+ResidualINV
+  => Lonely14 or thirteen-fold dominance
+LRCUpTo13 + ap_core_bridge
+  => Lonely14
+LRC14_of_residual_INV
+  => the working Fin 13 -> Z statement                              [LEAN]
+lonely_fract + Finset enumeration
+  => LRC14_finset_of_residual_INV
+  => LRC14.LRC14, the official ledger target                       [LEAN]
+```
+
+The `Covering` input is retained even though `not Lonely14` forces it: it names
+the predicate-preserving structural domain.  Absence of a `Lonely 13` time is
+also automatic in the residual branch, but is not needed by the proof term.
+With `LRCUpTo13` and `ap_core_bridge`, `ResidualINV` is logically equivalent to
+LRC(14): LRC(14) makes it vacuous, while the displayed chain proves LRC(14)
+from it.  It must therefore be described as an exact residual target, not as a
+proved reduction to Tao's `n=12` inverse; an independent equivalence or a
+genuinely narrower `Easy/Compact` supplier would be needed for that claim.
+
+`LRC14DispatchAssembly` retains the more informative generic composition:
+an explicit `CoveringSplit Easy Compact`, an `EasyCase Easy`, and an
+`INV Compact` feed `coveringCase_of_split` and `lrc14_of_covering_split`.
+Density discharge and rational guardrails are side consumers, not dependencies
+of the corrected capstone.  `LRCFinsetBridge` closes only the representation
+gap to the official target; it does not strengthen the open mathematics.
+
+These root-imported files contain no proof-hole `sorry` and no `native_decide`.
+The mathematical boundary is now visible without a false quantifier: either
+supply a genuine Easy/Compact covering split, or prove the exact residual
+structure requested by `ResidualINV`.

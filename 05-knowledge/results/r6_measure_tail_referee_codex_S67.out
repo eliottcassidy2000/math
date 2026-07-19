@@ -1,0 +1,77 @@
+### exact r=6 measure-tail referee ###
+core: 1 2 4 7 9 11 12
+
+THM-1102 finite-window maximizer
+  killers: 158 160 162 164 166
+  components N: 206
+  measure mu: 191259974959/1877944733280
+  largest component L: 67/61992
+  N/(6mu): 64476102509280/191259974959
+  1/(3L): 20664/67
+  T (component branch): 20664/67
+  R=T/k5: 10332/5561
+
+translated counterexample to max-T <= 333
+  killers: 290 292 294 296 298
+  components N: 370
+  measure mu: 214450238441/1981564300485
+  largest component L: 1/1043
+  N/(6mu): 122196465196575/214450238441
+  1/(3L): 1043/3
+  T (component branch): 1043/3
+  R=T/k5: 7/6
+  exact comparison: T-333 = 44/3
+  exact comparison: T-338 = 29/3
+  exact comparison: T-window_max = 7889/201
+
+scope guardrail: the countercertificate survives Covering
+  sixth killer: 338 (outside THM-1121's certified interval 92..332)
+  the THM-1102 measure sufficient condition fails: 338 < T = 1043/3
+  divisibility carriers q=2..14: 2 9 4 290 12 7 296 9 290 11 12 338 294
+  nevertheless t=5/16 has exact minimum distance 1/8
+  the k6=333 variant is noncovering and is dispatched at t=1/13
+  conclusion: covering proof-route counterexample, NOT an LRC counterexample
+
+### deterministic tail probes (all exact) ###
+translated-step-2  k5=1013 T=2375485/3982 R=2345/3982 N=1262 L=3982/7126455
+scaled             k5= 895 T=6265/18 R=7/18 N=638 L=6/6265
+spaced             k5=2000 T=3500/3 R=7/12 N=1240 L=1/3500
+highly-composite   k5=1080 T=17640/41 R=49/123 N=804 L=41/52920
+near-consecutive   k5=1009 T=14098000/19431 R=14098000/19605879 N=1020 L=6477/14098000
+geometric          k5=3200 T=374281600/466383 R=116963/466383 N=868 L=11/44800
+
+### infinite translated obstruction to any constant upper bound on T ###
+m= 290 T=1043/3 >= 7m/36=1015/18; R=7/6
+m=1005 T=2375485/3982 >= 7m/36=2345/12; R=2345/3982
+m=1733 T=21120071/20682 >= 7m/36=12131/36; R=12131/20682
+symbolic law: m == 4 (mod 13) => E_m nonempty and T(E_m) >= 7m/36
+therefore sup_m T(E_m) = infinity; a valid tail lemma must compare T to k6
+this step-2 family alone does not decide uniform R; the next family refutes it
+
+### infinite covering obstruction to the measure horn itself ###
+offsets: 0 10 12 14 18
+limit-atlas area: 76004881/627525360
+limit-atlas component intensity: 14813/13860
+limit-atlas maximum fiber gap: 9/28
+lim count branch T/m: 111778898/76004881
+lim component branch T/m: 28/27
+lim T/(m+18): 28/27 > 1
+m=1360 k6=1379 T=13157480/9243 T-k6=411383/9243
+m=5000 k6=5019 T=58590280/11271 T-k6=2021131/11271
+m=8640 k6=8659 T=174626200/19461 T-k6=6113401/19461
+covering progression: m=1360+3640n
+  every family is covering (carriers are periodic modulo 5,8,10,13,14)
+lonely subprogression: m=5000+7280n
+  every family is explicitly lonely at t=5/16 with minimum 1/8
+  equidistribution/crossing limit 28/27 implies T>k6 for all sufficiently large n
+  conclusion: infinitely many covering failures of this measure certificate
+
+### Tournament Analysis (diagnostic quotient) ###
+vertices: the five removed killers
+observable: one-killer threshold difference; tie gauge: integer label
+Hamiltonian path: 294 -> 296 -> 298 -> 292 -> 290
+score histogram: 0 1 2 3 4
+directed cycles: 0; SCCs: 5 singleton components; Hamiltonian paths: 1
+destroyed by quotient: residual components and all >=2-way bad-set intersections
+proof-facing object: exact residual interval complex
+DONE

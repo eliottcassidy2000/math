@@ -1,10 +1,33 @@
-# LRC(14) lives at the parameters of PG(2,13), and INV is a doubling-gap — the tournament metagraph's transitive-class isolation
+# PG(2,13) parameter analogy: proposed gap and tournament transport refuted
+
+> **CORRECTION (codex-S67, THM-1131).**  The quantitative and transport claims
+> in the historical reflection below are withdrawn.  Exact primitive Covering
+> counterexamples have `M=1/13`, `M=3/37` strictly between `1/13` and `1/12`,
+> and `M=28/365<1/13`.  THM-724 has single-killer scope and does not prove a
+> global Covering minimum or stability gap.  The S110 script contains five
+> deterministic rows, not a 100-row random Covering scan, and constructs no
+> Singer object or predicate-preserving map.
+>
+> The surviving observation was already present in HYP-3705/3706:
+> `183=13^2+13+1` and `14=13+1` are PG/Singer parameters.  As additive objects,
+> however, the augmented deep-well residue set `A={-1,0,...,12}` has
+> `|A-A|=27,E(A)=1834`, while a Singer set has `|D-D|=183,E(D)=378`.  A Singer
+> `(183,14,1)` set cannot be a doubly regular tournament connection set on 183
+> vertices, which needs a skew half-set of size 91; a regular tournament on 14
+> vertices is impossible.  Most decisively, two primitive Covering integer
+> lifts with the same residue subset modulo 183 have different global maxima
+> (`14/183` and `13/93`).  The quotient preserves one grid's phase support but
+> destroys integer lifts, divisor carriers, and global maximization.
+>
+> Everything below is retained as a record of the failed analogy, not as a
+> current claim or route.
 
 **⚠ ROUTE AND SCOPE CORRECTED (boxeph-S111; codex MISTAKE-167):** the "gap theorem
 `non-AP ⟹ M ≥ 1/12`" proposed below is logically stronger than the corrected fully covering target
-`INVcov`, hence at least as hard as the open crux.  The cited computation evaluated five named families
-and did not prove sharpness, a universal floor, or an empty spectral window.  Thus the gap remains a
-conjectural rephrasing, not a lever.  The numerical identity `183=13²+13+1` remains; any claimed transport
+`INVcov`, hence would have been at least as hard as the open crux.  The cited computation evaluated five
+named families and did not prove sharpness, a universal floor, or an empty spectral window.  THM-1131
+subsequently refuted the gap with a fully Covering non-AP row at `M=3/37` in `(1/13,1/12)`.  Thus the gap
+is false, not a conjectural lever.  The numerical identity `183=13²+13+1` remains; any claimed transport
 between the PG/Singer, tournament, and loneliness objects still needs a predicate-preserving map. See
 [[the-gap-theorem-is-stronger-than-INV-not-easier-s110-route-corrected-boxeph-S111]].
 

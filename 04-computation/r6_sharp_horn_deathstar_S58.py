@@ -1,8 +1,8 @@
 # Measure-horn with the SHARP threshold, continuous circle.
 # danger(v) = union of open arcs width 1/(7v) centered at j/v.  safe gap width 6/(7v).
-# Claim (sharp): a connected safe component of length L > 1/(7k) contains a k-safe point.
+# Claim (sharp): a closed connected safe component of length L >= 1/(7k) contains a k-safe point.
 # So if G=(core + 5 killers safe set) has max component L, the 6th killer k6 fails to cover
-# whenever k6 > 1/(7L).  Threshold T_sharp = 1/(7L).  (kind-pasteur used 1/(3L), conservative.)
+# whenever k6 >= 1/(7L).  Threshold T_sharp = 1/(7L).  (kind-pasteur used 1/(3L), conservative.)
 from fractions import Fraction as F
 import itertools, random
 

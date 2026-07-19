@@ -18,12 +18,13 @@ def sub(safe,arcs):
         safe=new
     return safe
 def horn_certifies(speeds):
-    # remove all but the largest; check max component > 1/(7*kmax)
+    # Remove all but the largest.  The residual is closed and the danger teeth
+    # are open, so equality at 1/(7*kmax) certifies as well.
     speeds=sorted(speeds); kmax=speeds[-1]; rest=speeds[:-1]
     safe=[(F(0),F(1))]
     for v in rest: safe=sub(safe,danger(v))
     L=max((hi-lo for lo,hi in safe), default=F(0))
-    return L> F(1,7*kmax), L, kmax
+    return L >= F(1,7*kmax), L, kmax
 # deep well and its tower (all lonely, M=14/183)
 for fam in [list(range(1,13))+[182], list(range(1,13))+[364],
             [1,2,3,4,5,6,7,8,9,10,11,13,24],      # GW second tight (non-covering)

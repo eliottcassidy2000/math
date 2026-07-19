@@ -1,12 +1,12 @@
 ---
 id: THM-1102
-title: r=6 bounded-window R telemetry and the candidate-box enumeration wall; no uniform max-T or r=6 finite reduction is proved
-status: PARTIAL / DOWNSTREAM AUDIT OF MISTAKE-164 — the width-16 census over all 792 cores and the candidate-box feasibility estimate are retained, but interiority inside a fixed window does not make its max T uniform. KB=333 is conditional telemetry, not a proved all-scale split. Uniform r=5 and r=6 both remain open; only r<=4 is uniformly closed in this clustered hierarchy
+title: r=6 bounded-window R telemetry and the historical candidate-box enumeration wall; no uniform max-T is proved, while THM-1135 later gives a different finite reduction
+status: PARTIAL / SUPERSEDED TAIL COORDINATE — the width-16 census over all 792 cores and the candidate-box feasibility estimate are retained, but interiority inside a fixed window does not make its max T uniform. THM-1134 gives finite and infinite covering refutations of the sequential max-T extrapolation. THM-1135 independently supplies a harmonic-discrepancy tail and a genuine finite mixed-scale box, but does not close that box. Uniform r=5 and r=6 remain open; only r<=4 is uniformly closed in this clustered hierarchy
 source: kind-pasteur-2026-07-18-S128 (cont.64; owner: run the r=6 finite horn, computing max T first)
 depends_on:
   - THM-1101    # bounded r=5 telemetry; its former uniform closure is withdrawn
   - THM-1081    # the R-ladder this extends
-related: [THM-1097, MISTAKE-164]
+related: [THM-1097, THM-1134, THM-1135, MISTAKE-164]
 script: 04-computation/r6_maxT_kps_S128c64.py, r6_maxT_chunk_kps_S128c64.py, r6_feasibility_kps_S128c64.py (+ .out)
 ---
 
@@ -18,6 +18,13 @@ script: 04-computation/r6_maxT_kps_S128c64.py, r6_maxT_chunk_kps_S128c64.py, r6_
 > arbitrary larger or independently shifted killers to the window.  Thus
 > `308.4` is the scanned maximum and `KB=333` is a candidate cutoff only.
 > The exact all-high r=5 gap in THM-1101 shows why this distinction is real.
+
+> **Tail resolution (codex-S67; THM-1134/1135).**  The sequential coordinate
+> is genuinely nonuniform: a covering finite row has `T=1043/3>338`, and an
+> infinite covering progression has `T/k_5 -> 28/27>1`.  THM-1135 repairs the
+> all-scale reduction by keeping the core safe set intact and charging all six
+> killers harmonically.  It proves an explicit finite mixed-scale box, not the
+> old `KB=333` box and not an `r=6` closure.
 
 ## (I) Max T, computed first and window-checked
 
@@ -77,15 +84,17 @@ later. There is no structural r-cap. The wall at r=6 is **computational**.
 - r = 2, 3, 4: **uniformly closed**.
 - r = 5: **open**.  The below-235 horn is finite-exact, but THM-1101 has an
   exact covering row above 235 missed by both sides of its former split.
-- r = 6: **open**.  The width-16 failure region is mapped (`max R=1.858`
-  inside that bank), and direct enumeration of the conditional `KB=333` box
-  is infeasible by this implementation.  Neither number is a uniform tail.
+- r = 6: **open but uniformly finite-reduced by THM-1135**.  The width-16
+  region remains valid telemetry, while THM-1134 proves that neither its
+  numerical `max T` nor the sequential ratio horn is global.  THM-1135 gives
+  the valid replacement box
+  `k1<=513, k2<=950, k3<=19000, k4<=313500, k5<=4514400, k6<=58687200`.
 
 ## Named next
 - First close the four-removal `r=5` all-scale bridge; the same endpoint-owner
   overlap/self-similarity information is prerequisite for any honest `r=6`
   finite reduction.
-- r=6 needs a better certificate than enumeration. Three candidates, in order of promise:
+- Inside THM-1135's finite box, r=6 needs a better certificate than raw enumeration. Three reusable candidates are:
   (a) **strengthen the prune** — Σ frac ≥ 1 is weak because it ignores overlap; a bound
   using pairwise |kill(kᵢ) ∩ kill(kⱼ)| would cut the tail far harder, and the positive
   correlation measured in THM-1071(III) says those overlaps are large;

@@ -394,7 +394,9 @@ relaxation: independent Python and C++ certificates agree on the 3,450 scalar
 survivors and live-owner histogram `0:2802,1:456,2:192`.  THM-1124 closes
 `c=33` by a `Z/3` anchor relaxation over the complete squarefree grammar, with
 independent Python and C++ agreement.  The next untreated composite common
-scale is `c=34` (THM-1125 is a reservation, not a closure).
+scale was `c=34`; THM-1125 now closes it by an exact `Z/2` anchor relaxation
+whose 3,312 surviving owner bounds are all at most `29<34`, independently
+replayed in Python and C++.  The next untreated common scale is `c=35`.
 The clustered large-speed branch has also sharpened independently of this
 ramified-scale ledger.  THM-1094 proves the uniform two-comb component theorem
 and THM-1097 proves the uniform three-comb theorem, so clustered `r=3,4` are
@@ -442,3 +444,117 @@ mathematical frontier.  `LRC14DispatchAssembly.lean` gives the complementary
 generic easy/compact split with every producer hypothesis named.
 
 No theorem in this picture proves LRC(14) without the named suppliers above.
+
+## 2026-07-18 boundary update — sieve, modular charts, and the AP-core consumer
+
+The top-level divisibility dispatch is now **LEAN**.  `LRCSieveDispatch` defines
+
+```text
+Covering(v) := every n with 2 <= n <= 14 divides at least one speed,
+```
+
+and proves `not Covering(v) => exists t, Lonely 14 v t`, using the literal
+witness `t=1/n` for a missing modulus.  Its dichotomy and capstone give
+
+```text
+CoveringCase [OPEN]  =>  LRC(14),
+```
+
+for positive thirteen-speed rows.  All four printed dispatch theorems audit to
+`[propext, Classical.choice, Quot.sound]`.  Thus non-covering is proved; the
+positive covering case, not the dispatch, is the open mathematical crux.
+
+The representation-level chart law is now **LEAN** and exact:
+
+```text
+∃ k : ℤ, d ∣ u + qk    ⟺    gcd(q,d) ∣ u.
+```
+
+`LRCRationalScaleGuardrails` proves this for `q,d : ℕ`, `u : ℤ`, including
+zero edge cases, by an explicit Bézout lift.  It also separates the two critical-
+window inequalities (`q < 14 val` and `13 val < q`) and proves that a coprime
+multiple/affine range is all of `ZMod q`, not a proper coset.  Its affine-lift
+and coprime-range theorems audit to `[propext, Quot.sound]`; the combined ordered-
+field window theorem audits to the standard foundational trio.
+
+The compact/AP-core implication is also **LEAN**, while its supplier remains
+**open**:
+
+```text
+CoveringCase [OPEN]
+       └─ hard compact / M<1/14 class
+          └─ INV Compact [OPEN: this chosen class supplies 13-fold dominance]
+       + LRCUpTo13 [explicit named citation]
+       ⇒ ap_core_bridge / ap_core_bridge_of_shape [LEAN]
+       ⇒ ∃ t, Lonely 14 v t.
+```
+
+Here `Compact` is deliberately abstract.  `INV` is not the false blanket claim
+that every covering row has a 13-dominant speed (`{2,...,14}` is an immediate
+counterexample); it is the still-missing inverse theorem for the isolated hard
+class.
+
+The density/far-extension route is a **LEAN conditional consumer**, not another
+independent branch:
+
+```text
+frame 1/13-lonely at supplied t0
+ + |v_i| <= V for the frame, V>0
+ + 91V <= v_far
+ ⇒ frame stays 1/14-lonely on radius 1/(182V)
+ ⇒ that interval contains a half-integer phase for v_far
+ ⇒ Lonely 14.
+```
+
+`density_far_bridge` obtains the frame time from the named `LRCUpTo13` citation,
+but it still assumes the far index, the bound `V`, and 91-fold separation.  It
+does not supply those hypotheses, a universal density estimate, `CoveringCase`,
+or `INV`.  Moreover `91V <= v_far` is strictly stronger than the 13-fold
+dominance used by `ap_core_bridge` when the positive frame is bounded by `V`.
+`LRCDensityDischarge` is therefore a genuinely different interval-completion
+proof of an already covered subcase, not extra family coverage.
+
+### Corrected top-level picture
+
+The former global premise “no Lonely-13 time forces a 13-dominant speed” is
+**FALSE**, not the open crux: `{1,...,13}` has exact maximum `1/14`, no
+Lonely-13 time, and no such dominant speed.  Its old Lean consumer was a valid
+implication from a false hypothesis.  The corrected live graph is:
+
+```text
+                         no Lonely14
+                              |
+                    sieve_dispatch [LEAN]
+                              |
+                           Covering
+                              |
+ ResidualINV [OPEN: positive + Covering + no Lonely14 => dominance]
+                              |
+             Lonely14 OR 13-fold dominance [LEAN]
+                       /              \
+                 immediate     LRCUpTo13 + ap_core_bridge
+                       \              /
+                LRC14_of_residual_INV [LEAN]
+                              |
+             lonely_fract + Finset enumeration [LEAN]
+                              |
+          LRC14_finset_of_residual_INV : LRC14.LRC14 [LEAN]
+```
+
+`M_split` and `crux_of_dominance` remain correct pedagogical/scoped lemmas, but
+they are not dependencies of this capstone.  `ResidualINV` is an exact
+counterexample-structural target and, with the cited bridge, is logically
+equivalent to LRC(14); it is not identified with Tao's `n=12` inverse without
+another theorem.
+
+The noncircular route remains `LRC14DispatchAssembly`: explicitly choose
+predicates `Easy` and `Compact`, prove `CoveringSplit Easy Compact`, supply an
+`EasyCase Easy`, and prove `INV Compact`.  This generic chain is honest because
+the easy/already-lonely branch is a visible input rather than silently forced
+into dominance.  Density discharge and rational guardrails remain useful side
+consumers, not capstone dependencies.
+
+The root-imported modules use no proof-hole `sorry` and no `native_decide`.
+The genuine mathematical gap is a predicate-preserving residual
+classification—not a representation bridge and not the refuted universal
+no-Lonely13 dominance statement.

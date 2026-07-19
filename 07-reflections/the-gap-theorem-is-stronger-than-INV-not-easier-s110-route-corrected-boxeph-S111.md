@@ -1,15 +1,17 @@
-# The gap theorem is stronger than INV, not easier — correcting the S110 route
+# The proposed gap theorem is false—and would have been stronger than INV
 
 *boxeph-2026-07-18-S111; scope correction codex-2026-07-18 (MISTAKE-167). Owner: prove the gap theorem
 "non-AP core ⟹ M ≥ 1/12". The script evaluated five named families; it did **not** enumerate covering
-families and therefore did not verify a universal non-AP floor.  What survives is the logical point: the
-proposed gap theorem is strictly stronger than the corrected covering inverse target `INVcov`, hence at
-least as hard as the open crux. The one genuinely proved piece is the non-covering sieve branch. LRC(14)
-is not closed.*
+families and therefore did not verify a universal non-AP floor.  THM-1131 now gives the primitive fully
+Covering non-AP row `W={2,3,5,8,9,11,12,13,14,15,17,20,23}` with
+`M(W)=3/37` strictly between `1/13` and `1/12`, so the proposed gap theorem and empty window are false.
+What survives is only the logical implication that this false strengthening would have implied the
+corrected covering inverse target `INVcov`.  The one genuinely proved piece is the non-covering sieve
+branch. LRC(14) is not closed.*
 
 Throughout this historical reflection, “INV” should be read as the corrected target `INVcov` on the
 fully covering stratum (MISTAKE-166).  Statements that the `1/12` floor or empty window is “verified” are
-finite evidence from the five displayed rows only, not theorems or exhaustive computations.
+finite evidence from the five displayed rows only and are refuted by THM-1131.
 
 ## What the five-row probe shows
 
@@ -24,8 +26,8 @@ For **covering** 13-families (the INV regime), computing `M`:
 | `{…,24}∪{182}` (repl 5→24) | yes | **no** | `1/9 = 0.111` |
 
 In this five-family probe, AP cores dip below `1/13` and the smallest displayed non-AP value is exactly
-`1/12`.  This motivates—but does not prove—the conjecture that the window `(1/13,1/12)` is empty for
-fully covering non-AP families.
+`1/12`.  The probe simply missed THM-1131's fully Covering non-AP row at `3/37`; it supplies no live
+conjecture about an empty window.
 
 ## The correction: the gap theorem is ≥ INV, not < INV
 
@@ -37,14 +39,14 @@ intuition. **That is wrong here**, and the logic is clean:
 > Same hypothesis; `1/12 > 1/13`, so the gap theorem's **conclusion is strictly stronger**. Hence
 > **gap theorem ⟹ INV**. Proving the gap theorem proves LRC(14)'s covering case.
 
-The displayed `M=1/12` non-AP row proves only that `1/12` would be the best possible constant *if* the
-universal lower bound were established.  It does not establish that lower bound.  The “room” that would
-make `INVcov` easier is precisely the conjectural gap `(1/13,1/12)`; proving that it is empty would already
-prove the needed isolation.  So the proposed gap is not presently a lever. S110's hope is retracted.
+The implication is sound, but its premise is false: THM-1131 gives
+`1/13<3/37<1/12` on the exact fully Covering non-AP row `W`.  Thus the displayed `M=1/12`
+row is not a sharpness witness, and there is no conjectural empty gap to exploit.  S110's route is
+retracted rather than merely left open.
 
 The direction that *does* have room is `INVcov` itself: to prove `non-AP ⟹ M ≥ 1/13` on the fully
-covering stratum one may conjecture that the nearest non-AP is at `1/12` — but that assertion is the gap
-theorem, circular. So the room is illusory; the content is irreducibly INV.
+covering stratum must work at the actual `1/13` boundary and allow non-AP values immediately above it.
+The content remains irreducibly INV.
 
 ## What IS provable (the non-covering side)
 
@@ -62,17 +64,16 @@ covering / INV core — nothing new is bought.
 ## Net (honest)
 
 - **Finite evidence only:** five named covering families were evaluated; among the three displayed
-  non-AP examples the minimum is `1/12`.  No universal floor or empty interval was verified.
-- **Corrected (S110):** the gap theorem is **logically stronger than `INVcov`**; the displayed
-  `M=1/12` row is a sharpness witness should that theorem be proved.  It is at least as hard as the open
-  crux, and the supposed slack is exactly the unproved content.
+  non-AP examples the minimum is `1/12`.  The sample missed a fully Covering row at `3/37`.
+- **Refuted (THM-1131):** the gap theorem is false, although it is logically stronger than `INVcov`.
+  The supposed slack does not exist.
 - **Provable fragment:** non-covering-at-`{2..12}` ⟹ `M ≥ 1/12` (sieve). The remainder is INV.
-- **Could not prove the gap theorem** (it entails the covering crux). The right target reverts to `INVcov`
-  (`M ≥ 1/13`), the open additive inverse theorem = Tao n=12.
+- **Right target:** `INVcov` at the `1/13` boundary.  Relating it to the global Tao `n=12` inverse still
+  needs the separate structural bridge recorded by the corrected formalization.
 
-The PG(2,13) / metagraph picture (S110) stands as a genuine structural connection; but the *proof route* it
-suggested collapses back onto INV. Honest terminus: LRC(14) rests on INV, and every reformulation that
-carries real content (dimension, offset-vanishing, doubling-gap) is equivalent to it, as proved in S94.
+The PG(2,13) / metagraph picture (S110) remains a parameter analogy, not a proved structural connection:
+the residue quotient can identify two integer lifts with different global maxima.  Honest terminus:
+LRC(14) rests on the correctly scoped covering inverse target, with lift data retained.
 
 Cross-links:
 [[lrc14-lives-at-PG-2-13-and-INV-is-the-transitive-class-isolation-a-doubling-gap-boxeph-S110]]

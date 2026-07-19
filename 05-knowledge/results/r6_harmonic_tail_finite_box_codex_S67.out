@@ -1,0 +1,49 @@
+### exact seven-speed core ledger ###
+cores checked exactly: 792
+worst core: 1 2 7 9 10 11 12
+components C: 26
+measure mu: 12559/48510
+harmonic budget 7mu/(6C): 12559/1081080
+strict distinct all-large check at k1=514: 114421278347/370205035514594280
+k1=513 estimate margin (nonpositive): -903688478779/40658356501602840
+CONCLUSION 1: k1 >= 514 implies a surviving core-safe time
+strict distinct k2=951 margin: 4670546220583/4412023437154312980
+k2=950 estimate margin (nonpositive): -9770984417723/2194461919003454100
+CONCLUSION 2: every harmonic-uncertified tuple has k1 <= 513 and k2 <= 950
+
+### proper-prefix interval ratios and finite box ###
+s=1: k_(s+1)/k_s > 27 dispatches all 5 remaining killers
+s=2: k_(s+1)/k_s > 20 dispatches all 4 remaining killers
+s=3: k_(s+1)/k_s > 33/2 dispatches all 3 remaining killers
+s=4: k_(s+1)/k_s > 72/5 dispatches all 2 remaining killers
+s=5: k_(s+1)/k_s > 13 dispatches all 1 remaining killers
+finite residual box (not an exhaustive verification):
+  k1 <= 513
+  k2 <= 950
+  k3 <= 19000
+  k4 <= 313500
+  k5 <= 4514400
+  k6 <= 58687200
+CONCLUSION 3: outside this box, the harmonic or proper-prefix interval horn proves LRC
+GUARDRAIL: no claim is made that the tuples inside this finite box have been enumerated
+
+### the explicit covering max-T failure is arithmetically easy ###
+speeds: 1 2 4 7 9 11 12 290 292 294 296 298 338
+covering 2..14: yes
+first-five residual: N=370 mu=214450238441/1981564300485 L=1/1043 T=1043/3 (component)
+sixth killer 338 < T: the max-T measure horn fails
+simple exact witness t=5/16: minimum distance 1/8, owners [294, 298]
+supplied exact witness t=106/303: minimum distance 15/101, owners [9, 294]
+CONCLUSION 4: this is a certificate failure, not a hard LRC family
+
+### Tournament Analysis (lossy diagnostic) ###
+vertices: the six killer danger sets
+observable: harmonic loss 1/k; tie gauge: increasing integer k
+Hamiltonian path: 290 -> 292 -> 294 -> 296 -> 298 -> 338
+score histogram: 0 1 2 3 4 5
+directed cycles: 0; SCCs: 6 singleton components; Hamiltonian paths: 1
+preserved: the scalar harmonic loss used in the sufficient inequality
+destroyed: interval owners, phases, and every >=2-way danger-set intersection
+proof-facing object: component--danger-set discrepancy ledger
+challenged assumption: proof vertices need not be runners; components carry the loss
+DONE

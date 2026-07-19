@@ -1,17 +1,9 @@
 #!/usr/bin/env python3
-"""
-LRC(14) <-> PG(2,13) and the doubling-gap form of INV  (boxeph-2026-07-18-S110)
+"""Superseded five-row PG(2,13) scout (boxeph-S110; corrected codex-S67).
 
-Creative tournament/metagraph exploration of the LRC(14) inverse theorem:
- (1) the deep-well parameters (183, 14) are exactly those of the projective plane
-     PG(2,13): 183 = 13^2+13+1 = point count, 14 = q+1 = line size (Singer difference set);
- (2) at (183,14) the additive spectrum runs from the AP (deep well, tight M<1/13,
-     the metagraph's transitive pole) to the Singer difference set (loose, M large,
-     the doubly-regular pole);
- (3) M is the order parameter and the AP is the STRICT, ISOLATED minimizer -- a spectral
-     gap [14/183, ~1/12) with 1/13 strictly inside. So INV = the deep-well isolation
-     by a doubling-gap = the metagraph's transitive-class isolation, i.e. the stability
-     companion of THM-724 (covering-min = deep well).
+This script records a parameter analogy and five deterministic examples.  It does not
+construct a Singer set, filter for Covering, run the formerly claimed random census, or
+prove a global gap.  THM-1131 gives exact counterexamples to the original conclusion.
 """
 from math import gcd
 from fractions import Fraction as Fr
@@ -58,7 +50,7 @@ for name, C in cores.items():
     M = Mstar(V)
     print(f"{name:<22} {ddbl(C):>6} {energy(C):>6} {str(M):>10}={float(M):.4f} {str(float(M) < 1 / 13):>8}")
 
-print("\nThe AP is the STRICT, ISOLATED minimizer: M(AP)=14/183=0.0765 (< 1/13=0.0769),")
-print("every non-AP jumps to >= ~1/12=0.0833. The gap [14/183, 1/12) contains 1/13 strictly.")
-print("=> INV = 'non-AP core => M >= 1/12' = the deep-well isolation by an additive-doubling gap")
-print("   = the tournament metagraph's transitive-class isolation, transported to the M-metric.")
+print("\nCORRECTION: these five hand-picked rows do not imply a gap or an extremal theorem.")
+print("Exact primitive Covering counterexamples: M=1/13, M=3/37 in (1/13,1/12),")
+print("and the AP tower M=28/365<1/13; see THM-1131 and its exact pair-sum referee.")
+print("No PG/Singer/tournament quotient preserving global M or Covering is supplied.")

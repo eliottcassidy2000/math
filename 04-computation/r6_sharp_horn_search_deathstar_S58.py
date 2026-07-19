@@ -52,4 +52,5 @@ for _ in range(40000):
     rem=sorted(random.sample(range(lo,lo+random.choice([40,120,400,1500])),5))
     upd(P,rem)
 print("(d) random spread: maxR=%.4f %s"%(worst,wc))
-print("FINAL max R_sharp=%.4f -> %s"%(worst,"CLOSES r=6" if worst<1 else "NOT closed"))
+print("FINAL sampled max R_sharp=%.4f -> sampled bank %s; UNIFORM r=6 OPEN"%(
+    worst, "below 1" if worst <= 1 else "reaches/exceeds 1"))

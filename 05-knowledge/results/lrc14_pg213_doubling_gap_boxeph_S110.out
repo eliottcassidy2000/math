@@ -9,7 +9,7 @@ geometric-ish             113    316       5/29=0.1724    False
 Sidon-like                127    288       7/33=0.2121    False
 powers 2^k                133    276        1/3=0.3333    False
 
-The AP is the STRICT, ISOLATED minimizer: M(AP)=14/183=0.0765 (< 1/13=0.0769),
-every non-AP jumps to >= ~1/12=0.0833. The gap [14/183, 1/12) contains 1/13 strictly.
-=> INV = 'non-AP core => M >= 1/12' = the deep-well isolation by an additive-doubling gap
-   = the tournament metagraph's transitive-class isolation, transported to the M-metric.
+CORRECTION: these five hand-picked rows do not imply a gap or an extremal theorem.
+Exact primitive Covering counterexamples: M=1/13, M=3/37 in (1/13,1/12),
+and the AP tower M=28/365<1/13; see THM-1131 and its exact pair-sum referee.
+No PG/Singer/tournament quotient preserving global M or Covering is supplied.

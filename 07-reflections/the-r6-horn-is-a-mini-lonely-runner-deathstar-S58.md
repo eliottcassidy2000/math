@@ -1,54 +1,79 @@
-# The r=6 sharp horn is itself a mini Lonely Runner problem (death-star-S58)
+# The r=6 sharp horn contains a mini runner problem—but only on the equal-step slice
 
 A self-similar observation from work toward the r=6 uniform bound (THM-1132,
 renumbered after THM-1123 had already been claimed).  The sharp horn and the
-one-variable `G(σ)` bands are proved; the all-core, all-scale landing/drift
-lemma is still open for arbitrary five-killer shapes.  THM-1134 has since
-closed the entire step-two family over all cores and scales, and supplies a
-general multiplier-chart cone plus a separated-ratio gate.
+one-variable `G(σ)` bands are proved. Because the residual safe set is closed while
+each danger tooth is open, a component of length **at least** `1/(7k)` already
+contains a `k`-safe point. THM-1144 closes the former worst core/step-two ray, and
+THM-1134 closes the entire step-two family over all cores and scales while also
+supplying a general multiplier-chart cone plus a separated-ratio gate. Arbitrary
+five-killer shapes outside those gates remain open.
 
-The r=6 covering-killer stratum, after the sharp measure horn, asks: within a core-safe arc,
-do 5 far killers `{b, b+2, …, b+8}` leave a gap wider than one killer's danger arc? Writing
-the killer phases at time `t` as `bt + m·(2t)`, they form an **arithmetic progression of step
-σ = 2t**. So the question becomes:
+For killers `{b,b+d,...,b+4d}`, their phases at time `t` are
 
-> Can 5 points in arithmetic progression (step σ) on the circle simultaneously avoid a fixed
-> arc of width `1/7` around the origin?
+`bt, bt+dt, ..., bt+4dt`.
 
-That is *exactly* a Lonely Runner / view-obstruction problem in miniature — 5 "runners" whose
-positions are a dilation of a single time, all trying to be `≥ 1/14` from a marked point. The
-whole apparatus we are using to attack LRC(**14**) reappears, one level down, as a question
-about **5 runners against a width-`1/7`(= `2/14`) window**. The relevant quantity `G(σ)` — the
-largest gap the 5 arcs leave — is minimized (`2/35`) exactly when the AP is equidistributed
-(`σ=1/5`), the same "resonant/equidistributed is extremal" principle that governs the parent
-problem, and maximized when the AP *collapses* (`σ=1/3` gives only 3 distinct points, `σ=1/2`
-only 2), the same way LRC extremals are the arithmetically degenerate families.
+After writing `phi=bt` and `sigma=dt`, the offsets are the arithmetic progression
+`{0,sigma,2sigma,3sigma,4sigma}`. In the `phi` coordinate the danger centres carry the opposite
+sign, which reflection removes without changing gap lengths. Translation by `phi` must avoid
+five danger arcs of width `1/7`. This is a mini view-obstruction problem: for a *fixed* sigma,
+how large a translation window do those five centres leave? It is not a reduction of arbitrary
+killers, whose offsets need not be equally spaced.
 
-Two things worth keeping:
+The clean object is not the union of arcs but the cyclic gap vector of the five centres. If
+`H(sigma)` is its largest coordinate, then
 
-1. **The 7 is doing double duty.** `1/14 = 1/(2·7)`; the danger window the mini-runners avoid
-   has width `1/7`, and the sharp horn constant is `1/(7L)`. The modulus 7 that makes the
-   Fourier kernel vanish on multiples of 7 (THM-1061) is the same 7 setting the window here.
-   The problem keeps folding `14 = 2·7` back on itself at every scale.
+`G(sigma)=H(sigma)-1/7`.
 
-2. **MAX not MEAN, again.** The reduction lands on an *existence* condition — `∃ t: G(2t)>1/7`
-   — not an average. The bad set (`G<1/7`, near `σ=1/5,2/5,…`) has positive measure; loneliness
-   survives only because the core-safe region can *reach* a good band. This is MISTAKE-129's
-   lesson (good-period existence is a supremum) reappearing as the crux of a different route.
+Reflection reduces to `u=min(sigma,1-sigma) in [0,1/2]`, and sorting the centres gives
 
-The recursion — a runner problem inside the runner problem, with the same extremal principle and
-the same `2·7` arithmetic — is the kind of self-reference this project keeps surfacing. Whether
-the descent continues (does the 5-runner window-problem reduce to a 3-runner one?) is a natural
-question the sharp-horn frame now makes askable.
+```
+H(u)=max(u,1-4u)             on [0,1/4],
+H(u)=u                       on [1/4,1/3],
+H(u)=max(3u-1,1-2u)         on [1/3,1/2].
+```
+
+Thus the strict set `G>1/7` is
+
+```
+[0,5/28) union (2/7,5/14) union (3/7,4/7)
+  union (9/14,5/7) union (23/28,1],
+```
+
+of exact circle measure `9/14`. The equality points are the eight finite endpoints. The minima
+`G=2/35` occur at all four nonzero fifths, `sigma=1/5,2/5,3/5,4/5`; the old band computation
+missed threshold crossings inside its alleged combinatorial cells.
+
+Three perspectives now fit together:
+
+1. **Topology matters at the horn boundary.** A closed component cannot fill an open tooth of
+   equal length. Equality is safe, although an eventual perturbative landing argument may want
+   a strict margin.
+
+2. **The useful “vertices” are gaps, not runners.** A tournament on the five centres records
+   only an orientation or cyclic order. It forgets the metric gap sizes, and `G` depends on the
+   largest size. Tournament fingerprints can classify order changes, but they do not preserve
+   the certification predicate without metric edge labels.
+
+3. **The missing bridge is two-dimensional.** Along an actual time interval, `phi=bt` and
+   `sigma=dt` move simultaneously. The slogan `L*b approximately G(dt)` freezes sigma and is
+   not an equivalence. A proof needs a landing rectangle or a quantitative drift estimate, and
+   then still only handles equal-step offsets. The arbitrary-offset tail is a higher-dimensional
+   phase configuration problem.
+
+The self-similarity remains useful: the parent runner problem produces a five-centre circle
+problem with the same `2*7` window arithmetic. But the sharper lesson is structural. Quotienting
+to a one-variable AP orbit preserves the metric gap predicate only on that orbit; it destroys the
+degrees of freedom that make the full five-killer problem hard.
 
 ## Multiplier charts resolve the fixed-chart arity mirage
 
 The mini-runner recursion sharpened after allowing all core-safe charts
-`t=u/13`, not only `u=1`.  Every at-most-five-point residue pattern has some
+`t=u/13`, not only `u=1`. Every at-most-five-point residue pattern has some
 nonzero multiplier with a six-unit cyclic gap; the exact proof has ten affine
-orbits.  This produces a fixed Kakeya rectangle and the cone
-`B>=17 max(A,80)`.  For the step-two AP pattern, a stronger 792-core rectangle
-atlas plus exact finite complement closes every legal scale.  The lesson is
-that the faithful vertex is not a killer at one frozen time, but an affine
-residue orbit together with the selectable chart.  A single-chart tournament
-forgets precisely the maximization that supplies the wide gap.
+orbits. This produces a fixed Kakeya rectangle and the cone
+`B>=17 max(A,80)`. For the step-two AP pattern, a stronger 792-core rectangle
+atlas plus exact finite complement closes every legal scale. The faithful
+vertex is therefore not a killer at one frozen time, but an affine residue
+orbit together with the selectable chart. A single-chart tournament forgets
+precisely the maximization that supplies the wide gap.

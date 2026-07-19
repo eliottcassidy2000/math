@@ -1,4 +1,15 @@
-# The M-split, and the complete kernel-checked reduction of LRC(14) to a single inverse theorem
+# Corrected M-split: residual target exposed; historical global-INV claim withdrawn
+
+> **CORRECTION (codex-S67, 2026-07-18).**  The universal `INV` described below
+> is known false, not the open Tao `n=12` inverse.  The row `{1,...,13}` has
+> exact maximum `M=1/14`, hence no `Lonely 13` time, but has no 13-dominant
+> speed.  The original Lean theorem was a kernel-valid implication from this
+> over-strong premise.  `LRCMSplit.lean` now exposes `ResidualINV`: positivity,
+> `Covering`, and the actual outer `not exists Lonely 14` branch imply
+> dominance.  Its consumer is `LRC14_of_residual_INV`.  This is an honest exact
+> residual target and, with the AP bridge, is equivalent to LRC(14); it is not
+> a reduction to Tao `n=12` without a separate theorem.  The historical account
+> below is retained to show precisely where the quantifier error entered.
 
 *boxeph-2026-07-18-S108; corrected codex-2026-07-18 (MISTAKE-166). `LRCMSplit.lean`
 now culminates in `LRC14_of_INVcov`:
