@@ -1,5 +1,5 @@
 ---
-id: THM-1125
+id: THM-1142
 title: THE ESSENTIAL-REGION CRITERION, PROVED AND FORMALISED — AND THE SWAP BOUND THAT MAKES THM-1120 A THEOREM — replacing speed i by r leaves uncovered EXACTLY E_i \ D_r where E_i = I \ ⋃_{j≠i} D_j, so the swap covers iff E_i ⊆ D_r (an IFF at the level of sets, both directions formalised). The proof is Set.diff_diff. The separation lemma (consecutive arcs strictly apart, gap exactly (1−2λ)/w) then yields the SWAP BOUND: a closed interval inside badArcs r has length ≤ 2λ/r, so a component of E_i of length ℓ forces r ≤ 2λ/ℓ. Computing ℓ_max(E_i) over {1,…,13} gives bounds 4…52, all below the r ≤ 120 that S377 searched — so that search was EXHAUSTIVE and "12→24 is the only non-trivial single substitution" is now proved, not merely observed. Eight theorems land kernel-pure in Lean, zero sorries
 status: PROVED and formalised. LRCEssentialRegion.lean builds green in the project tree (root import added); 8 theorems, 0 sorries, all depending only on [propext, Classical.choice, Quot.sound]. Cross-checks: criterion vs direct computation on 623 swaps = 0 mismatches; swap bounds computed exactly per speed. NOTE the exhaustiveness upgrade covers SINGLE substitutions on {1,…,13} only — the two-speed and global searches of THM-1120 remain searches
 source: opus-2026-07-17-S378 (owner: prove the essential-region criterion; extended)
@@ -8,7 +8,7 @@ lean: 04-computation/lean/TournamentH7/TournamentH7/LRCEssentialRegion.lean
 scripts: 04-computation/essential_criterion_check_opus_S378.py, swap_bound_opus_S378.py -> 05-knowledge/results/
 ---
 
-# THM-1125 — the criterion, proved, and what it then proves
+# THM-1142 — the criterion, proved, and what it then proves
 
 ## Statement and proof
 

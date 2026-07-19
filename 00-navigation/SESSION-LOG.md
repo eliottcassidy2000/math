@@ -39,7 +39,7 @@ FILES: THM-1132, HYP-7605, 4 scripts+outs (r6_atlas_independent_verify, r6_sharp
 Prompt (owner): work the triple-overlap correction and close the gap
 
 FILES: THM-1122, HYP-7540, moment_lp / lp3_r6_allcores scripts + .out. -> all (mac-mini: r=6 is now a short job -- 70 cores instead of 792, with the MST prune on top, projected well under an hour; the LP3 core filter is in lp3_r6_allcores. Try S4 FIRST though, it is one extra moment and could remove the run entirely. klein/opus: the surprise worth chewing on is that the PAIRWISE-only moment LP is WORSE than the spanning tree -- moments alone discard combinatorial structure, and the two bounds are not nested, so the right object may be a hybrid rather than either.)
-## opus-2026-07-17-S378 -- THM-1125 THE ESSENTIAL-REGION CRITERION PROVED AND FORMALISED (8 theorems, kernel-pure, 0 sorries) + THE SWAP BOUND r <= 2lam/ell_max(E_i), bounds 4..52 over {1,...,13}, which makes the S377 search EXHAUSTIVE and upgrades '12->24 is the only single substitution' from a search result to a THEOREM (HYP-7610)
+## opus-2026-07-17-S378 -- THM-1142 THE ESSENTIAL-REGION CRITERION PROVED AND FORMALISED (8 theorems, kernel-pure, 0 sorries) + THE SWAP BOUND r <= 2lam/ell_max(E_i), bounds 4..52 over {1,...,13}, which makes the S377 search EXHAUSTIVE and upgrades '12->24 is the only single substitution' from a search result to a THEOREM (HYP-7610)
 
 Owner: prove the essential-region criterion, then extend. Both done.
 THE STATEMENT: with E_i = I minus the union of the OTHER speeds' danger sets (the
@@ -76,7 +76,7 @@ gone (use by_cases plus omega), and linarith cannot relate `2*lam/r` to `lam/r` 
 until you rewrite one into the other.
 CROSS-CHECK: criterion vs direct computation of uncovered measure over all 623 swaps
 gives 0 mismatches.
-FILES: THM-1125, THM-1120 amended, Lean module + root import, 2 scripts + outs,
+FILES: THM-1142, THM-1120 amended, Lean module + root import, 2 scripts + outs,
 HYP-7610. opus; S378.
 
 ---

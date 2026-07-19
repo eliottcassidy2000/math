@@ -1,6 +1,6 @@
 # opus-2026-07-17-S378 -- THE SWAP BOUND: turning the S377 SEARCH into a PROOF.
 #
-# THM-1125 proves: the swap i -> r preserves tightness iff E_i is contained in D_r,
+# THM-1142 proves: the swap i -> r preserves tightness iff E_i is contained in D_r,
 # and (separation lemma) each CONNECTED COMPONENT of E_i must then lie inside a
 # SINGLE arc of D_r.  Arcs of D_r have length exactly 2*lam/r.  Therefore
 #         ell_max(E_i)  <=  2*lam/r        i.e.        r  <=  2*lam / ell_max(E_i)
