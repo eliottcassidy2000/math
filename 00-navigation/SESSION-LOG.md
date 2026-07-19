@@ -1,3 +1,53 @@
+## opus-2026-07-19-S399 -- FULL-HISTORY SYNTHESIS (05-30 -> 07-19): the strategy-family table, the FIVE-AXIS TRIAGE LAW (predictive, retrodicts every major death), the WALL CENSUS (2.5 walls: the inverse-theorem complex under seven names + codex's phase-transport as genuinely distinct + the n=12 sporadic half), the tournament arc (transitive projections unfaithful -> THM-1240-codex FORCES nontransitivity: the obstruction is cycle holonomy = the repo's parity mandate resurfacing), and the headline unabsorbed lead: MINE THE SUNGKAWICHAI-TRAKULTHONGCHAI EQUALITY CASE (boxeph-S114, zero uptake -- Wall A may be implicit in a paper we already cite as settled)
+
+Owner: synthesize the LRC(14) history extensively; patterns/mistakes, similarities/differences
+between strategies, big-picture reframings; read incoming ideas deeply. Method: six parallel
+readers (session-log both eras, MISTAKES complete ~175 entries, hypotheses INDEX ~1980 LRC HYPs,
+all 17 navigation docs + theorem inventory, inbox MSG-1599-1850) + my own pass over PROOF-MAP /
+UNIFIED-SYNTHESIS / boxeph-S130; builds on and does not repeat death-star-S58's five genera and
+boxeph-S130's fourteen episodes + rung ladder. MAIN DELIVERABLE: the reflection (see FILES) with
+(1) the full 14-phase era map from FIRST CONTACT 05-30 -- the two great advances were both
+OBJECT-corrections (L->M mean-to-max 06-16; family-statistics->observer-lens 06-29), not
+technique upgrades; (2) the 13-family strategy table with per-family stall mechanisms --
+families 1/2/5 died the same averaging death at different altitudes, and THM-1140 is the one
+place the campaign PROVED why an averaging method halts; (3) the FIVE-AXIS TRIAGE LAW: a method
+can decide near-floor structure only if it breaks translation invariance, works on primitive
+orbits, bounds a max/tail not a mean, tolerates signed cancellation, and is cross-modulus
+adaptive or exactly enumerative -- every refuted route violates a named axis, all three
+rigidity successes (deep well, two-family tight locus, blocker cycle) satisfy all five;
+proposed as a standing one-line-per-axis gate. (4) WALL CENSUS: Wall A = the inverse-theorem
+complex (HYP-7310 = death-star's 5% Freiman core = opus's bound-D via D=M*s = 3/38 and 4/55
+shadows -- identifications all in canon); Wall B = codex's oriented-germ-lift/handoff-debt
+(NOT a bounded certificate, NOT known to reduce to A -- treat as distinct, protect from
+re-aiming); half = n=12 sporadic emptiness (own assembly line). Rule: type every future
+residual A / B / A-half / justified-new. (5) VERIFIED cross-N: death-star's same-day N=31
+discovery {1..29,31,120}=4/127 satisfies D=M*s with straddling pair (7,120), s=127, D=4,
+slack 1 (script+out) -- the (D,s)/slack frame is structural across N and rung realizability is
+N-DEPENDENT, so (1/14,3/41) emptiness needs an n=14-specific mechanism (consistent with
+THM-1220). HOUSEKEEPING DONE: THM-1240/1245 first-push collisions resolved -- MY files
+renumber to THM-1260/THM-1261 (codex 11:22 and kp 11:29 beat my 13:40/14:22); THM-1215 now
+carries the detection-floor re-scope banner accepting kp-c84's audit IN FULL (my branch-2
+search negatives are VACUOUS below 1/14 -- the citable evidence is the 1200/1200 grid
+certificates); subagent scratch moved out of the tree. NOT done, on purpose: the 4/55 CRT
+feasibility check (predicted feasible-and-undecisive = axis-5 with fresh paint; retains value
+as a search-space CARVER for whoever works the rung -- consume boxeph's pending request that
+way). Unabsorbed-ideas ledger in the reflection SS7 (S-T equality mining #1; metagraph
+transport/PG(2,13) #2; function-field deficit->margin; Erdos/Jacobsthal/Pomerance heights;
+hybrid tree x moment; engineering dormancy since March).
+
+Prompt (owner): synthesize the history of the repos work on the 14 runner lonely runner
+conjecture extensively and look for common patterns or mistakes and slight similarities or
+differences between strategies we have pursued, and opportunities to leverage big picture
+understanding for critical math insights and reframing of assumptions, spend a long session
+investigating, and push/pull from git while waiting for computations, read incoming ideas
+deeply for new directions they can provide
+
+FILES: 07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md (main),
+THM-1260 + THM-1261 (renumbered from my 1240/1245), THM-1215 (re-scope banner),
+04-computation/lrc14_dms_identity_crosscheck_opus_S399.py + frozen .out, backlog lead
+opus-S399. -> all
+
+---
 ## death-star-2026-07-19-S59c — THM-1257: the D-graded gate tower is a PRIMORIAL CASCADE — full D=4 gate extracted and confirmed {N≡1 mod 30, N≢1 mod 7}; N=61 predicted-then-found (4/247); N=91 new (4/367); D=6 opens at N=211 (6/1271); D=5 (binder 9=3²) never opens
 
 Owner: extract the full D=4 gate and test N=61. BOTH DONE, with two out-of-sample confirmations and a new law.
