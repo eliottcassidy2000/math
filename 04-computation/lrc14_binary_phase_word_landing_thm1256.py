@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """Dependency-free exact referee for THM-1256.
 
-The audit has four independent layers.
+The audit has five independent layers.
 
 1.  The THM-1254 residual invoice is reduced to the endpoint-address order
     ``P >= nr``.
-2.  A binary relative digit records the order of the two centered phases.
-3.  Ordered minimal interval chains are checked for the alignment-or-adjacent-
-    overlap dichotomy.
-4.  Exact danger teeth are checked for the backtrack detuning law; abstract
+2.  A binary relative digit records the order of the two centered phases;
+    THM-1248's target-wall clearance doubles the uniform phase gap.
+3.  The doubled gap is checked against target/next-tooth widths, producing a
+    positive target-free corridor and excluding adjacency at a cycle minimum.
+4.  Ordered minimal interval chains are checked for the general adjacent-
+    mismatch law and for automatic alignment when the second mark is outside
+    the first tooth (the actual blocker situation).
+5.  Exact danger teeth are checked for the backtrack detuning law; abstract
     owner words are checked for the resulting ABAB exclusion and turn floor.
 
 Only integer arithmetic and ``fractions.Fraction`` are used.
@@ -43,8 +47,10 @@ def determinant_audit() -> int:
     return rows
 
 
-def binary_phase_audit() -> int:
+def binary_phase_audit() -> tuple[int, int, int]:
     rows = 0
+    sharp_rows = 0
+    nonblocker_central_rows = 0
     for Q in range(2, 151):
         for ell in range(1, Q):
             if not 5 * Q < 28 * ell < 23 * Q:
@@ -59,14 +65,144 @@ def binary_phase_audit() -> int:
                 assert Fraction(5, 28 * Q) < abs(phase_difference)
                 assert abs(phase_difference) < Fraction(23, 28 * Q)
                 rows += 1
+
+                # A central-band row need not be an actual blocker edge.
+                # THM-1248 proves the following strict filter for every
+                # actual blocker.  On that filtered bank the lower phase
+                # separation is doubled.
+                if abs(theta - digit) <= Fraction(5, 14):
+                    nonblocker_central_rows += 1
+                    continue
+                assert Fraction(5, 14 * Q) < abs(phase_difference)
+                if digit == 0:
+                    assert theta > Fraction(5, 14)
+                else:
+                    assert theta < Fraction(9, 14)
+                sharp_rows += 1
+    assert sharp_rows + nonblocker_central_rows == rows
+    return rows, sharp_rows, nonblocker_central_rows
+
+
+def sharp_corridor_audit() -> tuple[int, int, int]:
+    """Audit the metric content created by the doubled phase clearance.
+
+    For a target speed ``j>c`` and ``Q=c+j``, the target-wall leg is longer
+    than ``5/(14Q)``.  This already exceeds the whole ``j``-tooth width and
+    leaves more than ``1/(14Q)`` beyond that width.  If ``h>j`` is the next
+    cycle owner, it also exceeds the whole ``h``-tooth width, so the two
+    marked teeth cannot be adjacent in a minimal word.
+    """
+
+    corridor_rows = 0
+    cycle_min_adjacency_exclusions = 0
+    five_comb_invoice_rows = 0
+    for c in range(1, 81):
+        for j in range(c + 1, 4 * c + 17):
+            Q = c + j
+            lower = Fraction(5, 14 * Q)
+            target_width = Fraction(1, 7 * j)
+            assert lower - target_width == Fraction(
+                3 * j - 2 * c, 14 * j * Q
+            )
+            assert lower - target_width > Fraction(1, 14 * Q)
+            assert Fraction(7, 3) * lower == Fraction(5, 6 * Q)
+            corridor_rows += 1
+            five_comb_invoice_rows += 1
+
+            for h in range(j + 1, 4 * j + 7):
+                next_width = Fraction(1, 7 * h)
+                assert lower > next_width
+                assert 5 * h > 2 * Q
+                cycle_min_adjacency_exclusions += 1
+
+    return corridor_rows, cycle_min_adjacency_exclusions, five_comb_invoice_rows
+
+
+def two_wall_residual_path_audit() -> int:
+    rows = 0
+    for left_mark in range(31):
+        for right_mark in range(left_mark + 3, 41):
+            # At least two intermediate teeth means at least three handoffs
+            # between marks; the two outer wall handoffs make a five-edge
+            # chronological path through the six owner labels.
+            between_handoffs = right_mark - left_mark
+            total_handoffs = between_handoffs + 2
+            assert total_handoffs >= 5
+            rows += 1
     return rows
 
 
-def interval_chain_audit() -> tuple[int, int, int, int]:
+def nested_corridor_tariff_audit() -> int:
+    rows = 0
+    assert Fraction(49, 6) * Fraction(3, 14) == Fraction(7, 4)
+    for c in range(1, 31):
+        for j in range(c + 1, 4 * c + 9):
+            Q = c + j
+            clearance = 5 * j + 1
+            corridor = Fraction(clearance, 14 * j * Q)
+            for seam_lcm in range(1, 51):
+                seam = Fraction(1, 14 * seam_lcm)
+                assert Fraction(7, 2) * seam == Fraction(1, 4 * seam_lcm)
+                rearranged = Fraction(7, 3) * corridor + Fraction(49, 6) * seam
+                exact = Fraction(clearance, 6 * j * Q) + Fraction(
+                    7, 12 * seam_lcm
+                )
+                assert rearranged == exact
+                assert exact > Fraction(5, 6 * Q) + Fraction(
+                    7, 12 * seam_lcm
+                )
+                rows += 1
+    return rows
+
+
+def structural_binary_six_word_audit() -> tuple[int, int, int]:
+    low_endpoint = 5 * (
+        Fraction(2, 3) + Fraction(1, 2) + Fraction(2, 5) + Fraction(1, 3)
+    )
+    middle_endpoint = 25 * (
+        Fraction(1, 7) + Fraction(1, 9) + Fraction(1, 11) + Fraction(1, 13)
+    )
+    high_endpoint = 5 * (
+        Fraction(3, 4) + Fraction(3, 5) + Fraction(1, 2) + Fraction(3, 7)
+    )
+    assert low_endpoint == Fraction(19, 2)
+    assert middle_endpoint > 10
+    assert high_endpoint == Fraction(319, 28) > 10
+
+    words = tuple(product((0, 1), repeat=6))
+    singleton_words = tuple(word for word in words if sum(word) in (1, 5))
+    balanced_words = tuple(word for word in words if 2 <= sum(word) <= 4)
+    assert len(singleton_words) == 12
+    assert len(balanced_words) == 50
+    return len(words), len(singleton_words), len(balanced_words)
+
+
+def two_cycle_digit_strip_audit() -> int:
+    rows = 0
+    theta_up = Fraction(1, 2)
+    descent_magnitude = Fraction(1, 2)
+    for m in range(1, 588):
+        ratio = Fraction(m - theta_up, descent_magnitude)
+        lower = Fraction(28 * m - 23, 23)
+        upper = Fraction(28 * m - 5, 10)
+        assert lower < ratio < upper
+        rows += 1
+    for p in range(587):
+        ratio = Fraction(p + theta_up, descent_magnitude)
+        lower = Fraction(28 * p + 5, 23)
+        upper = Fraction(28 * p + 23, 10)
+        assert lower < ratio < upper
+        rows += 1
+    assert Fraction(23, 10) == Fraction(28 - 5, 10)
+    return rows
+
+
+def interval_chain_audit() -> tuple[int, int, int, int, int]:
     chains = 0
     marked_pairs = 0
     mismatch_witnesses = 0
     marked_phase_words = 0
+    safe_target_alignment_witnesses = 0
     grid = range(10)
     half_grid = [Fraction(z, 2) for z in range(19)]
 
@@ -93,6 +229,14 @@ def interval_chain_audit() -> tuple[int, int, int, int]:
                         ys = [y for y in half_grid if lefts[q] < y < rights[q]]
                         for x in xs:
                             for y in ys:
+                                if rights[p] < y:
+                                    # This is the actual blocker geometry:
+                                    # the second centered phase is outside
+                                    # the first marked tooth on the side
+                                    # selected by phase order.  Mismatch is
+                                    # then impossible, even for neighbours.
+                                    assert x < y
+                                    safe_target_alignment_witnesses += 1
                                 if x <= y:
                                     # The consecutive-overlap chain has union
                                     # (left_p,right_q), hence covers [x,y].
@@ -128,7 +272,13 @@ def interval_chain_audit() -> tuple[int, int, int, int]:
                     assert len(used) == len(set(used))
                     marked_phase_words += 1
 
-    return chains, marked_pairs, mismatch_witnesses, marked_phase_words
+    return (
+        chains,
+        marked_pairs,
+        mismatch_witnesses,
+        marked_phase_words,
+        safe_target_alignment_witnesses,
+    )
 
 
 def tooth(speed: int, address: int) -> tuple[Fraction, Fraction]:
@@ -174,10 +324,11 @@ def backtrack_tooth_audit() -> int:
     return rows
 
 
-def word_audit() -> tuple[int, int, int]:
+def word_audit() -> tuple[int, int, int, int]:
     rows = 0
     max_edge_run = 0
     minimum_turn_slack = 10**9
+    same_provider_break_windows = 0
     alphabet = range(4)
 
     for length in range(3, 11):
@@ -190,6 +341,11 @@ def word_audit() -> tuple[int, int, int]:
             )
             if abab:
                 continue
+
+            for a in range(length - 3):
+                if word[a] == word[a + 2]:
+                    assert word[a + 1] != word[a + 3]
+                    same_provider_break_windows += 1
 
             edges = [frozenset((word[a], word[a + 1])) for a in range(length - 1)]
             backtracks = sum(edges[a - 1] == edges[a] for a in range(1, len(edges)))
@@ -214,30 +370,52 @@ def word_audit() -> tuple[int, int, int]:
 
     assert max_edge_run == 2
     assert minimum_turn_slack == 0
-    return rows, max_edge_run, minimum_turn_slack
+    return rows, max_edge_run, minimum_turn_slack, same_provider_break_windows
 
 
 def main() -> None:
     determinant_rows = determinant_audit()
-    phase_rows = binary_phase_audit()
-    chains, marked_pairs, mismatches, phase_words = interval_chain_audit()
+    phase_rows, sharp_phase_rows, filtered_phase_rows = binary_phase_audit()
+    corridor_rows, adjacency_exclusions, five_comb_rows = sharp_corridor_audit()
+    residual_path_rows = two_wall_residual_path_audit()
+    nested_tariff_rows = nested_corridor_tariff_audit()
+    binary_words, singleton_words, balanced_words = structural_binary_six_word_audit()
+    two_cycle_strips = two_cycle_digit_strip_audit()
+    chains, marked_pairs, mismatches, phase_words, aligned_safe = interval_chain_audit()
     backtrack_rows = backtrack_tooth_audit()
-    word_rows, max_run, min_slack = word_audit()
+    word_rows, max_run, min_slack, broken_returns = word_audit()
 
     print("THM-1256 BINARY PHASE / TOOTH-WORD LANDING EXACT AUDIT")
     print(f"endpoint residual/address rows = {determinant_rows}")
     print(f"binary centered-phase rows = {phase_rows}")
+    print(f"sharp actual-blocker phase rows = {sharp_phase_rows}")
+    print(f"central rows rejected by sharp blocker filter = {filtered_phase_rows}")
+    print(f"sharp target-free corridor rows = {corridor_rows}")
+    print(f"cycle-minimum marked-adjacency exclusions = {adjacency_exclusions}")
+    print(f"five-comb corridor invoice rows = {five_comb_rows}")
+    print(f"two-wall residual spanning-path rows = {residual_path_rows}")
+    print(f"nested quotient/word tariff rows = {nested_tariff_rows}")
+    print(f"structural binary six-cycle words = {binary_words}")
+    print(f"singleton-digit six-cycle words excluded = {singleton_words}")
+    print(f"balanced binary six-cycle words remaining = {balanced_words}")
+    print(f"exact slowest-two-cycle digit strips = {two_cycle_strips}")
     print(f"minimal interval chains = {chains}")
     print(f"marked interval pairs = {marked_pairs}")
     print(f"explicit phase/order mismatch witnesses = {mismatches}")
     print(f"marked phase words / adjacent-swap matching checks = {phase_words}")
+    print(f"safe-target automatic-alignment witnesses = {aligned_safe}")
     print(f"exact same-provider backtrack teeth = {backtrack_rows}")
     print(f"ABAB-free owner words = {word_rows}")
     print(f"maximum unordered-edge run = {max_run}")
     print(f"minimum turn-floor slack = {min_slack}")
+    print(f"same-provider windows with forced next turn = {broken_returns}")
     assert 6**4 < 2345 < 6**5
     print("compact-box backtrack-DAG height ceiling = 4")
     print("invoice interpretation: R-endpoint = s0*(P-nr) = s0*(k+delta)")
+    print("actual blocker law: every coherent marked edge is phase/word aligned")
+    print("cycle-minimum law: marked teeth are nonadjacent and export >=3 handoffs")
+    print("two-wall residual law: four wall seams plus an internal bridge force a located tree")
+    print("six-cycle law: structural binary words contain at least two digits of each kind")
     print("word law: backtracks + nonbacktracking turns = N-2")
     print("RESULT: PASS")
 

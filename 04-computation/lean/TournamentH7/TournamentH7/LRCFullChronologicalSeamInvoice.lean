@@ -93,11 +93,17 @@ theorem occurrence_count_consumer
     (hdebt : invc + 7 * lcmSum / 12 ≤ harmonic)
     (hlcm : occurrences * g₀ / d₆ ^ 2 ≤ lcmSum) :
     invc + 7 * g₀ * occurrences / (12 * d₆ ^ 2) ≤ harmonic := by
-  by_cases hd : d₆ = 0
-  · simp [hd] at hlcm ⊢
-    linarith
-  · field_simp [hd] at hlcm ⊢
-    nlinarith
+  have hscaled :
+      (7 / 12 : ℝ) * (occurrences * g₀ / d₆ ^ 2) ≤
+        (7 / 12 : ℝ) * lcmSum :=
+    mul_le_mul_of_nonneg_left hlcm (by norm_num)
+  calc
+    invc + 7 * g₀ * occurrences / (12 * d₆ ^ 2) =
+        invc + (7 / 12 : ℝ) * (occurrences * g₀ / d₆ ^ 2) := by ring
+    _ ≤ invc + (7 / 12 : ℝ) * lcmSum := by
+      simpa [add_comm] using add_le_add_left hscaled invc
+    _ = invc + 7 * lcmSum / 12 := by ring
+    _ ≤ harmonic := hdebt
 
 /-- Multiplying the full occurrence invoice by the positive carrier gives
 its common-dilate invariant form. -/

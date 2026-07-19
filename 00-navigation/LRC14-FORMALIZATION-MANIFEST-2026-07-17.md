@@ -47,8 +47,12 @@ The current addendum now has sixteen new sorry-free arithmetic modules.
   protrusion, endpoint-density quantiles, separated one-comb envelope budget,
   `rho` conversion, and the integer cut `270d1<=563c-1` (THM-1267).
 - `LRCBinaryPhaseWordLanding` checks the endpoint-address interpretation,
-  phase/order mismatch seam, adjacent-swap matching obstruction, detuned
-  backtrack, ABAB contradiction, and half-density turn floor (THM-1256).
+  doubled actual-blocker phase separation, automatic coherent-edge
+  phase/word alignment, target-free corridor and harmonic invoice,
+  cycle-minimum marked-tooth nonadjacency, two-wall residual handoff counts,
+  quotient-plus-word tariff algebra, structurally binary six-cycle balance,
+  the arbitrary-mark adjacent-swap obstruction, detuned backtrack, ABAB
+  contradiction, and half-density turn floor (THM-1256).
 
 The paper providers remain named rather than hidden: compact irredundant
 subcover extraction, strict wall continuation, iteration of aligned interval
@@ -2163,74 +2167,108 @@ and output are
 `04-computation/lrc14_resonant_needle_bank_corridor_thm1246.py` and
 `05-knowledge/results/lrc14_resonant_needle_bank_corridor_thm1246.out`.
 
-## 2026-07-19 addendum -- finite centered-blocker address quotient (THM-1248 proved)
+## 2026-07-19 addendum -- q=15 contracted Fano/blocker guardrail
+
+THM-1247 proves that complete sampled incidence is not cover truth.  Its
+explicit packet realizes the full q=15 mask clock, both invariant Fano planes
+and their common contraction, a valid Kakeya cut, blockers at all six centered
+carrier spokes, blockers at every positive fast-fast sum beat, and a genuinely
+nontransitive cross-clearance tournament, while `t=1/12` is lonely.
+
+`LRCQ15ContractedFanoGuardrail.lean` is root-imported.  It kernel-checks the
+six mask classes, both invariant planes and their common contracted image, the
+degenerate negative line, full witness clock, lonely phase, six spoke blocker
+sets, and all fifteen pair-beat blockers.  The short classification of the
+invariant planes, CRT independence of speed/address colour, and off-grid tooth
+germ interpretation remain paper providers.  The dependency-free referee and
+stored output are
+`04-computation/lrc14_q15_contracted_fano_guardrail_thm1247.py` and
+`05-knowledge/results/lrc14_q15_contracted_fano_guardrail_thm1247.out`.
+
+The formal lesson is negative but exact: quotient masks, Fano incidence, and
+sampled blocker tournaments must retain owner-labelled off-grid continuation
+and reuse before they can feed a closing theorem.  THM-1248 now reconstructs
+the owner germs and the intervening tooth-instance walk; the missing law is a
+signed separation/gain invoice at its turns and retracing events.
+
+## 2026-07-19 addendum -- finite centered-blocker boundary-event lasso (THM-1248 proved)
 
 THM-1248 is `PROVED`, but it is not an LRC(14) closing theorem.  Its audited
-arithmetic replaces an absolute blocker tooth address by a finite relative
-digit.  For an edge `i->j`, put
+arithmetic replaces every absolute blocker address by a finite relative word.
+For an edge `i->j`,
 
 ```text
-Q_i=c+d_i,       X_i=cP_i-kQ_i,
-M_i=k+N_i,       ell_i=P_iQ_j-M_iQ_i,
-delta_i=P_j-M_i.
+Q_i=c+d_i,  X_i=cP_i-kQ_i,  M_i=k+N_i,
+ell_i=P_iQ_j-M_iQ_i,        delta_i=P_j-M_i,
+E_i=2cP_i-(2k+1)Q_i.
 ```
 
-Then the exact target is
+Then
 
 ```text
-5Q_i/28<ell_i<23Q_i/28,
--586<=delta_i<=587,
-ell_i=(P_iQ_j-P_jQ_i) mod Q_i,
-gcd(Q_i,Q_j) | ell_i.
+5Q_i/28<ell_i<23Q_i/28,       -586<=delta_i<=587,
+ell_i=(P_iQ_j-P_jQ_i) mod Q_i, gcd(Q_i,Q_j)|ell_i,
+|ell_i/Q_i-delta_i|>5/14.
 ```
 
-The digit is in `{0,1}` whenever `d_j<=c+d_i`.  Around a cycle the rounding
-errors form an affine local system with multiplier
+The digit is binary when `d_j<=c+d_i`.  The entire slowest-rooted functional
+lasso has at most four proper tail edges and two or more cycle edges.  Its
+exact residue and normalized transports are
 
 ```text
-A=prod_i d_i/(c+d_i),       1-A>4691/5503716.
+Q_iE_j-Q_jE_i=2c(Q_i delta_i-ell_i),
+z_j=[d_i/(c+d_i)]z_i+(delta_i-1/2-beta_i)/d_j,
+prod_nonempty_d1_tail d_i/(c+d_i)<13/19.
 ```
 
-Every genuine blocker cycle also has a speed-ascent edge whose first target
-tooth boundary keeps the source above `3/28`; an actual cover must place a
-third fast label there, hence a fourth support when the carrier is counted.
+Every selected wall, source residue, candidate owner residue, owner tooth,
+and signed forward/backward margin is reconstructed from the full six-state
+`(Q_h,E_h)` quotient.  No absolute `N_i` is needed.  Both walls of every
+blocker tooth lie in `int(G)` and force interior target--owner gcd seams.
+Safe-source walls sharpen these to fourth supports; cycle ascents place them
+in the protected source component.  If a `v`-label lasso has neither lasso
+incidence nor repeated outside ownership, its `2v` wall owners inject into
+`6-v` outside labels, so only the slowest-rooted two-cycle remains.
 
-The new standalone module
-`TournamentH7/LRCCenteredBlockerAddressCompression.lean` checks the gap-gauged
-cocycle and translation invariance, determinant and common-clock divisibility,
-the recentered blocker identity, central remainder band, global and binary
-digit bounds, binary phase separation, triangle affine transport, the exact
-contraction constant, positive triangle holonomy, and wall-event margin.  The
-centered-spoke/set interpretation, general-cycle telescoping, existence of the
-first strict-to-safe tooth boundary, and conversion of coverage there into a
-fourth-support incidence remain explicit paper providers.
+The paper layer then uses a new expiry tournament on active **tooth
+instances**.  Orient by later endpoint in the blocker travel direction and
+take the Hamiltonian maximum.  Strict interval coverage advances endpoints
+until a tooth contains the next centered spoke.  Appending the prescribed
+next blocker tooth and crossing its selected wall through the strict owner
+stitches the full tail and cycle into a finite piecewise-monotone
+boundary-event walk.  The conservative bank is `24,132` boundary instances
+per monotone segment and `144,792` event occurrences for a six-edge lasso.
 
-The dependency-free exact referee
-`04-computation/lrc14_centered_blocker_address_compression_thm1248.py` and its
-stored output
-`05-knowledge/results/lrc14_centered_blocker_address_compression_thm1248.out`
-replay the constants, affine and additive cycle ledgers, the unbounded
-absolute-address family, and the large digit `-390` guardrail.  Both
-guardrails are explicitly globally lonely and are not six-comb covers.
+`TournamentH7/LRCCenteredBlockerAddressCompression.lean` kernel-checks the
+gap cocycle and gauge, determinant/gcd remainder, central band, global/binary
+digits, digit-selected germ, centered-coordinate reconstruction,
+centered-residue edge step, normalized tail recurrence, exact wall coordinate,
+target-clearance lower bound and `>5/14` phase consequence, universal
+endpoint-gcd quantum, reciprocal blocker residue, tail-length bound,
+slowest-rooted `13/19` cap, two-seam Hunter rearrangement, one- and two-wall owner pigeonholes,
+selected-wall source residue, all-candidate owner-residue formula, oriented
+owner-germ width, protected/full-tree tariff composition, strict `258/247`
+base, affine triangle transport, positive triangle holonomy, and wall margin.
+General interval-cover extraction and circle-norm interpretation remain paper
+providers.  There are no proof placeholders or `native_decide` calls.
 
-The paper theorem additionally proves that the wall seam on the slowest
-outgoing edge can be prescribed as one of THM-1244's two positioned Hunter
-credits.  That interval/handoff reselection is intentionally outside the Lean
-arithmetic module.  The exact remaining formalization surface is the sharper
-**orbit-to-owner/cycle bridge**: neither the finite `delta` word nor contraction
-currently transports the anchored first-edge seam along the blocker tail to
-the eventual positive-holonomy cycle or into the private-owner stalk.  The
-common centered orbit
+The dependency-free exact referee and stored output replay all of those
+rational identities, the protected-tree tariff and exact lcm exclusion, its
+pairwise-coprime tangent limitation, and seven globally lonely non-cover
+guardrails: unbounded lift, large digit, alternating tail, orbit-local owner
+ambiguity, fully paid forced lasso, two realizable incidence-free/reuse-free
+two-wall residuals, and identical-seam greedy retracing.
+Normal and optimized outputs are byte-identical.
 
-```text
-E_i=2cP_i-(2k+1)Q_i in [-c,c]
-```
-
-must either feed that oriented owner/cycle transport or descend to an
-alternate carrier cell.  THM-1243/1246 close the known resonant rays, not this
-arbitrary tail transport.  THM-1250 now supplies the fully located tree and
-owner-reuse debt described below.  No current module proves the remaining
-cover-preserving oriented germ lift or asserts global LRC(14).
+THM-1250 supplies the fully located tree and multiplicity debt described
+below.  THM-1252--1256 then select every blocker on one deletion-minimal word,
+pay every handoff, and prove every actual blocker edge phase/word aligned.
+At the cycle minimum there is a target-free five-comb corridor; the two-wall
+trichotomy leaves lasso incidence, outside-owner displacement, or a slowest
+two-cycle with a forced double-star-plus-protected-bridge tree and nested
+quotient/word tariff.  The exact remaining formalization surface is a
+well-founded complete-gap/address descent or metric conversion for that
+aligned typed cell.  No current module asserts global LRC(14).
 
 ## 2026-07-19 addendum -- fully located owner-reuse tree (THM-1250 proved)
 

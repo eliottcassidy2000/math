@@ -3,7 +3,7 @@ Copyright (c) 2026 The TournamentH7 project contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Codex (LRC multi-agent project, 2026-07-19)
 -/
-import Mathlib.Tactic
+import TournamentH7.LRCCenteredBlockerAddressCompression
 
 /-!
 # Binary centered phases land on the irredundant tooth word (THM-1256)
@@ -57,6 +57,277 @@ theorem digit_one_phase_order
     (htransport : Q * phaseDiff = theta - 1) :
     phaseDiff < 0 := by
   nlinarith
+
+/-- THM-1248 doubles the old central-band separation on an actual digit-zero
+blocker edge. -/
+theorem digit_zero_sharp_phase_separation
+    {Q theta phaseDiff : ℚ}
+    (hQ : 0 < Q) (htheta : 5/14 < theta)
+    (htransport : Q * phaseDiff = theta) :
+    5/(14*Q) < phaseDiff := by
+  have hden : 0 < 14*Q := by positivity
+  rw [div_lt_iff₀ hden]
+  nlinarith
+
+/-- The reflected digit-one form of the doubled actual-blocker separation. -/
+theorem digit_one_sharp_phase_separation
+    {Q theta phaseDiff : ℚ}
+    (hQ : 0 < Q) (htheta : theta < 9/14)
+    (htransport : Q * phaseDiff = theta-1) :
+    5/(14*Q) < -phaseDiff := by
+  have hden : 0 < 14*Q := by positivity
+  rw [div_lt_iff₀ hden]
+  nlinarith
+
+/-- The key landing upgrade: if the target's own centered phase lies outside
+the tooth which blocked the source, then phase order and both endpoint orders
+cannot mismatch.  In a minimal word this is exactly chronological alignment. -/
+theorem coherent_blocker_marks_align
+    {aL aR bL bR x y : ℝ}
+    (hxA : aL < x) (hxA' : x < aR)
+    (hyB : bL < y) (hyB' : y < bR)
+    (houtside : y < aL ∨ aR < y) :
+    (y < x ∧ bL < aL) ∨ (x < y ∧ aR < bR) := by
+  rcases houtside with hleft | hright
+  · left
+    constructor <;> linarith
+  · right
+    constructor <;> linarith
+
+/-- The doubled phase clearance is wider than the whole target tooth by more
+than `1/(14Q)` whenever `Q=c+j` and `j>c`. -/
+theorem sharp_corridor_exceeds_target_tooth
+    {c j Q : ℝ} (hc : 0 < c) (hcj : c < j) (hQ : Q = c+j) :
+    1/(7*j)+1/(14*Q) < 5/(14*Q) := by
+  have hj : 0 < j := lt_trans hc hcj
+  have hQpos : 0 < Q := by rw [hQ]; nlinarith
+  have hjden : 0 < 7*j := by positivity
+  have hQden : 0 < 14*Q := by positivity
+  rw [div_add_div, div_lt_div_iff₀] <;> try positivity
+  rw [hQ]
+  nlinarith
+
+/-- If one following tooth spans the sharp target-wall corridor, its owner
+must be smaller than `4j/5`.  Hence this adjacency is impossible when `j` is
+the minimum speed on the blocker cycle. -/
+theorem adjacent_marked_tooth_forces_speed_drop
+    {c j h Q leg : ℝ}
+    (hc : 0 < c) (hcj : c < j) (hh : 0 < h)
+    (hQ : Q = c+j)
+    (hlower : 5/(14*Q) < leg)
+    (hspan : leg < 1/(7*h)) :
+    5*h < 2*Q ∧ 5*h < 4*j := by
+  have hj : 0 < j := lt_trans hc hcj
+  have hQpos : 0 < Q := by rw [hQ]; nlinarith
+  have hleft : 5/(14*Q) < 1/(7*h) := lt_trans hlower hspan
+  have hdenQ : 0 < 14*Q := by positivity
+  have hdenh : 0 < 7*h := by positivity
+  have hcross := (div_lt_div_iff₀ hdenQ hdenh).mp hleft
+  constructor
+  · nlinarith
+  · rw [hQ] at hcross
+    nlinarith
+
+/-- At a strict cycle minimum the preceding lemma contradicts adjacency. -/
+theorem cycle_minimum_marked_teeth_not_adjacent
+    {c j h Q leg : ℝ}
+    (hc : 0 < c) (hcj : c < j) (hjh : j < h)
+    (hQ : Q = c+j)
+    (hlower : 5/(14*Q) < leg)
+    (hspan : leg < 1/(7*h)) : False := by
+  have hh : 0 < h := lt_trans (lt_trans hc hcj) hjh
+  have hdrop := adjacent_marked_tooth_forces_speed_drop
+    hc hcj hh hQ hlower hspan
+  nlinarith
+
+/-- The target-free corridor is covered by the other five combs.  Combining
+the sharp one-interval discrepancy with its `>5/(14Q)` length gives the
+explicit harmonic side invoice `H>5/(6Q)`. -/
+theorem five_comb_corridor_harmonic_invoice
+    {L H Q : ℝ}
+    (hL : 5/(14*Q) < L)
+    (hcover : L ≤ 5*L/7+6*H/49) :
+    5/(6*Q) < H := by
+  calc
+    5/(6*Q) = (7/3)*(5/(14*Q)) := by ring
+    _ < (7/3)*L := by
+      exact mul_lt_mul_of_pos_left hL (by norm_num)
+    _ ≤ H := by nlinarith
+
+/-- The sharp binary corridor is shorter than one target safe gap, so after
+leaving its selected target tooth it cannot reach the next target tooth. -/
+theorem sharp_binary_corridor_shorter_than_target_safe_gap
+    {c j Q : ℝ} (hc : 0 < c) (hcj : c < j) (hQ : Q = c+j) :
+    23/(28*Q) < 6/(7*j) := by
+  have hj : 0 < j := lt_trans hc hcj
+  have hQpos : 0 < Q := by rw [hQ]; positivity
+  have hdenQ : 0 < 28*Q := by positivity
+  have hdenj : 0 < 7*j := by positivity
+  apply (div_lt_div_iff₀ hdenQ hdenj).2
+  rw [hQ]
+  nlinarith
+
+/-- If a full internal handoff is counted twice inside the five-comb
+corridor, the one-interval discrepancy yields an additive `49/6` seam term. -/
+theorem nested_corridor_tariff_rearrangement
+    {L W H : ℝ} (hcover : L+W ≤ 5*L/7+6*H/49) :
+    (7/3)*L+(49/6)*W ≤ H := by
+  nlinarith
+
+/-- In the binary-ascent two-cycle subbranch, four outside combs cover the
+facing gap; the same discrepancy algebra turns a seam quantum into the
+coefficient `1/4`. -/
+theorem four_comb_facing_gap_invoice
+    {L H : ℝ} (hcover : L ≤ 4*L/7+6*H/49) :
+    (7/2)*L ≤ H := by
+  nlinarith
+
+theorem four_comb_seam_coefficient (q : ℝ) :
+    (7/2)*(1/(14*q)) = 1/(4*q) := by
+  ring
+
+/-- Three located gcd seams in the protected component change THM-1244's
+coefficient from `7/6` to `7/4`. -/
+theorem three_located_seams_coefficient (g D : ℝ) :
+    (49/6)*(3*g/(14*D^2)) = 7*g/(4*D^2) := by
+  ring
+
+/-- Normalized reciprocal obstruction for the range `2<x≤3`, proved without
+calculus by splitting once at `x=5/2`. -/
+theorem binary_six_cycle_ratio_obstruction_low
+    {x : ℝ} (hx : 2 < x) (hx3 : x ≤ 3) :
+    7+x < 5*(x/(x+1)+x/(x+2)+x/(x+3)+x/(x+4)) := by
+  by_cases hmid : x ≤ 5/2
+  · have h1 : (2:ℝ)/3 < x/(x+1) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h2 : (1:ℝ)/2 < x/(x+2) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h3 : (2:ℝ)/5 < x/(x+3) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h4 : (1:ℝ)/3 < x/(x+4) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    nlinarith
+  · have hxmid : 5/2 < x := lt_of_not_ge hmid
+    have h1 : (5:ℝ)/7 < x/(x+1) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h2 : (5:ℝ)/9 < x/(x+2) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h3 : (5:ℝ)/11 < x/(x+3) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have h4 : (5:ℝ)/13 < x/(x+4) := by
+      apply (div_lt_div_iff₀ (by norm_num) (by nlinarith)).2
+      nlinarith
+    have hconst : (10:ℝ) < 5*(5/7+5/9+5/11+5/13) := by norm_num
+    nlinarith
+
+/-- The complementary normalized reciprocal obstruction for `x≥3`. -/
+theorem binary_six_cycle_ratio_obstruction_high
+    {x : ℝ} (hx : 3 ≤ x) :
+    7+2*x/(x-1) < 5*(x/(x+1)+x/(x+2)+x/(x+3)+x/(x+4)) := by
+  have h1 : (3:ℝ)/4 ≤ x/(x+1) := by
+    apply (div_le_div_iff₀ (by norm_num) (by nlinarith)).2
+    nlinarith
+  have h2 : (3:ℝ)/5 ≤ x/(x+2) := by
+    apply (div_le_div_iff₀ (by norm_num) (by nlinarith)).2
+    nlinarith
+  have h3 : (1:ℝ)/2 ≤ x/(x+3) := by
+    apply (div_le_div_iff₀ (by norm_num) (by nlinarith)).2
+    nlinarith
+  have h4 : (3:ℝ)/7 ≤ x/(x+4) := by
+    apply (div_le_div_iff₀ (by norm_num) (by nlinarith)).2
+    nlinarith
+  have hratio : 2*x/(x-1) ≤ 3 := by
+    apply (div_le_iff₀ (by nlinarith)).2
+    nlinarith
+  have hconst : (10:ℝ) < 5*(3/4+3/5+1/2+3/7) := by norm_num
+  nlinarith
+
+/-- Exact clock-ratio strip when the slowest two-cycle's descent digit is
+zero and its ascent digit is `m≥1`. -/
+theorem two_cycle_descent_zero_ratio_strip
+    {R m thetaUp downMag : ℝ}
+    (hm : 1 ≤ m)
+    (huLo : 5/28 < thetaUp) (huHi : thetaUp < 23/28)
+    (hdLo : 5/14 < downMag) (hdHi : downMag < 23/28)
+    (hR : R = (m-thetaUp)/downMag) :
+    (28*m-23)/23 < R ∧ R < (28*m-5)/10 := by
+  have hdpos : 0 < downMag := by nlinarith
+  have hloPos : 0 < (28*m-23)/23 := by nlinarith
+  have hupPos : 0 < (28*m-5)/10 := by nlinarith
+  constructor
+  · rw [hR]
+    apply (lt_div_iff₀ hdpos).2
+    calc
+      ((28*m-23)/23)*downMag
+          < ((28*m-23)/23)*(23/28) :=
+            mul_lt_mul_of_pos_left hdHi hloPos
+      _ = m-23/28 := by ring
+      _ < m-thetaUp := by linarith
+  · rw [hR]
+    apply (div_lt_iff₀ hdpos).2
+    calc
+      m-thetaUp < m-5/28 := by linarith
+      _ = ((28*m-5)/10)*(5/14) := by ring
+      _ < ((28*m-5)/10)*downMag :=
+        mul_lt_mul_of_pos_left hdLo hupPos
+
+/-- Reflected clock-ratio strip when the descent digit is one and the ascent
+digit is `-p`, `p≥0`. -/
+theorem two_cycle_descent_one_ratio_strip
+    {R p thetaUp downMag : ℝ}
+    (hp : 0 ≤ p)
+    (huLo : 5/28 < thetaUp) (huHi : thetaUp < 23/28)
+    (hdLo : 5/14 < downMag) (hdHi : downMag < 23/28)
+    (hR : R = (p+thetaUp)/downMag) :
+    (28*p+5)/23 < R ∧ R < (28*p+23)/10 := by
+  have hdpos : 0 < downMag := by nlinarith
+  have hloPos : 0 < (28*p+5)/23 := by nlinarith
+  have hupPos : 0 < (28*p+23)/10 := by nlinarith
+  constructor
+  · rw [hR]
+    apply (lt_div_iff₀ hdpos).2
+    calc
+      ((28*p+5)/23)*downMag
+          < ((28*p+5)/23)*(23/28) :=
+            mul_lt_mul_of_pos_left hdHi hloPos
+      _ = p+5/28 := by ring
+      _ < p+thetaUp := by linarith
+  · rw [hR]
+    apply (div_lt_iff₀ hdpos).2
+    calc
+      p+thetaUp < p+23/28 := by linarith
+      _ = ((28*p+23)/10)*(5/14) := by ring
+      _ < ((28*p+23)/10)*downMag :=
+        mul_lt_mul_of_pos_left hdLo hupPos
+
+/-- Nonadjacent marked teeth contribute at least two corridor handoffs; the
+opposite wall of the first marked tooth supplies a third occurrence. -/
+theorem nonadjacent_marks_export_three_handoffs
+    {p q : ℕ} (hsep : p+2 ≤ q) : 3 ≤ (q-p)+1 := by
+  omega
+
+/-- In the incidence/reuse-free two-cycle residual, distinct owners on the
+two facing walls rule out a unique intermediate tooth.  Including both outer
+wall handoffs leaves a canonical path with at least five occurrences. -/
+theorem distinct_facing_owners_export_five_handoffs
+    {p q : ℕ} (hsep : p+2 ≤ q) (hnotOne : q ≠ p+2) :
+    5 ≤ (q-p)+2 := by
+  omega
+
+/-- In a four-tooth window, the ABAB exclusion says that a same-provider
+target fork is followed by a genuinely different projected edge. -/
+theorem same_provider_fork_forces_next_turn
+    {α : Type*} {h₀ j h₁ h₂ : α}
+    (hnoABAB : ¬ (h₀ = h₁ ∧ j = h₂)) :
+    h₀ ≠ h₁ ∨ j ≠ h₂ := by
+  tauto
 
 /-- If interval A precedes interval B but their marked interior phases occur
 in the reverse order, A and B overlap. -/
@@ -167,6 +438,25 @@ theorem turn_floor_from_no_consecutive_backtracks
 #print axioms residual_invoice_iff_address_order
 #print axioms digit_zero_phase_order
 #print axioms digit_one_phase_order
+#print axioms digit_zero_sharp_phase_separation
+#print axioms digit_one_sharp_phase_separation
+#print axioms coherent_blocker_marks_align
+#print axioms sharp_corridor_exceeds_target_tooth
+#print axioms adjacent_marked_tooth_forces_speed_drop
+#print axioms cycle_minimum_marked_teeth_not_adjacent
+#print axioms five_comb_corridor_harmonic_invoice
+#print axioms sharp_binary_corridor_shorter_than_target_safe_gap
+#print axioms nested_corridor_tariff_rearrangement
+#print axioms four_comb_facing_gap_invoice
+#print axioms four_comb_seam_coefficient
+#print axioms three_located_seams_coefficient
+#print axioms binary_six_cycle_ratio_obstruction_low
+#print axioms binary_six_cycle_ratio_obstruction_high
+#print axioms two_cycle_descent_zero_ratio_strip
+#print axioms two_cycle_descent_one_ratio_strip
+#print axioms nonadjacent_marks_export_three_handoffs
+#print axioms distinct_facing_owners_export_five_handoffs
+#print axioms same_provider_fork_forces_next_turn
 #print axioms phase_position_mismatch_forces_overlap
 #print axioms separated_intervals_cannot_mismatch
 #print axioms adjacent_mismatches_cannot_share_a_mark

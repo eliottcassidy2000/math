@@ -1,9 +1,9 @@
 ---
 id: HYP-7870
 title: The seven-wall crossing now lives on one coherent marked tooth word; the affine sign and first failed phase landing are resolved, while well-founded alternate-gap descent remains
-status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240/1248 force and finitely decorate a blocker cycle. THM-1252--1256 now choose that cycle on one deletion-minimal tooth word: every handoff is disjoint and fully paid, every marked blocker has two adjacent wall seams, a binary speed descent unconditionally selects an original/reflected mixed invoice, and binary phase mismatch is an adjacent charged seam. Immediate toothpick backtracks cannot repeat (ABAB is impossible). The invoice is exactly endpoint-address order, not independent Hunter mass. The live theorem is therefore a well-founded complete-gap/address descent for an aligned typed cell, or a metric conversion beyond the already-counted handoffs. No LRC(14) closure is claimed.
+status: ACTIVE. THM-1221/1234 give two positive global crossings; THM-1237 proves the exact positioned max-forest transfer and protected-needle debt; THM-1226 closes every disconnected strict-high branch; and THM-1233/1241/1236 compactify the six-comb ratios. THM-1240/1248 force and finitely decorate a blocker cycle. THM-1248 further compresses its whole slowest-rooted lasso, reconstructs every sampled owner germ, proves every blocker tooth has two located gcd seams, sharpens the binary target phase distance to `>5/14`, and reduces the no-incidence/no-reuse lasso to a slowest two-cycle. THM-1252--1256 choose that cycle on one deletion-minimal tooth word: every handoff is disjoint and fully paid; every actual blocker edge is automatically phase/word aligned; the cycle minimum has a target-free five-comb corridor and canonical rank-two window; and the exceptional two-cycle has a forced double-star-plus-bridge located tree, protected rank-three forest, and quotient-plus-word tariff. Structurally binary six-cycles have at least two digits of each kind. Immediate toothpick backtracks cannot repeat (ABAB is impossible). The endpoint invoice is address order, not independent Hunter mass. The live theorem is a well-founded complete-gap/address descent for this aligned typed cell, or metric conversion beyond the already-counted handoffs. No LRC(14) closure is claimed.
 source: codex-2026-07-19-S82
-depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1248, THM-1250, THM-1252, THM-1253, THM-1254, THM-1256, HYP-7678]
+depends_on: [THM-605, THM-1166, THM-1203, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1247, THM-1248, THM-1250, THM-1252, THM-1253, THM-1254, THM-1256, HYP-7678]
 ---
 
 # HYP-7870 -- from global incidence to a positioned witness
@@ -63,10 +63,13 @@ existence needed for target 3, THM-1248 exports phase-located first-boundary
 wall seams from that sampled cycle, and THM-1244 supplies the continuous
 rank-two handoff debt on the slowest-spoke component.  THM-1248 also anchors
 the slowest first-edge seam in that debt.  THM-1239 shows that target 3 is
-false if it insists on survival in an arbitrary preselected gap.  The supplier
-problem has therefore become transport from the anchored first edge to the
-eventual cycle/private-owner germ, not an unnamed local inequality or a
-request for another scalar bound.
+false if it insists on survival in an arbitrary preselected gap.  The
+supplier problem subsequently sharpened again: THM-1248's expiry tournament
+performs component-level transport, while THM-1252--1256 choose every blocker
+on one deletion-minimal word and pay every handoff.  The live obstruction is
+now the well-founded continuation or metric conversion of an aligned typed
+cell, not a free turn choice, unnamed local inequality, or another scalar
+bound.
 
 ## The gcd-period route is now sharply split
 
@@ -87,7 +90,9 @@ remainders.
 This is information loss, not a counterexample to positioned overlap.  The
 same family has an explicit protected core-safe interval on which all seven
 deleted combs are active, so every local tree has the maximal value `6|I|`.
-The missing datum is the common wall address.
+The missing datum was once phrased as the common wall address.  THM-1248 now
+reconstructs every sampled wall and owner residue; the surviving datum is the
+signed tooth-instance continuation and displacement between those walls.
 
 Conversely, THM-1221's finite projective channel classifications bound (3)
 whenever `G_gt={rho>1/63}` is disconnected.  THM-1226 obtains
@@ -266,10 +271,11 @@ chain, at least three blocker labels, a rank-two forest `F0` of two located
 handoffs with exact gcd-quantized overlap, and a macroscopic private-owner
 stalk.  Its max-extension inequality is a genuine positioned debt.  THM-1248
 shows that the slowest outgoing blocker edge is an ascent and its wall seam can
-be prescribed as one edge of `F0`.  What is not known is how to transport this
-anchored first-edge seam along the finite blocker tail to the eventual
-positive-holonomy cycle or into the private-owner region without losing the
-common master residue.
+be prescribed as one edge of `F0`.  Its expiry walk transports the seam
+through actual tooth components along the finite tail and cycle.  Downstream
+THM-1252--1256 replace arbitrary continuation by one coherent minimal word;
+every handoff is disjoint, and every actual blocker edge is phase/word
+aligned.
 
 THM-1250 removes the remaining anonymous-tree debt on the complete slow gap.
 All six labels have private mass by THM-1198, so an irredundant strict-tooth
@@ -314,24 +320,28 @@ The resonant alternatives are now narrower as well.  THM-1243 gives a global
 transverse witness for both exact toothpick rays from THM-1239, and THM-1246
 gives a positive corridor through every harmonic bank
 `14a,...,14Ha`, `H<=12`.  They close those rays, not arbitrary finite words.
-THM-1242 remains the sharp warning that the mixed `q=15` sunflower can fill a
-whole nontrivial quotient clock.
+THM-1247 sharpens THM-1242's warning: the mixed `q=15` sunflower can carry a
+full mask clock, complete centered-spoke and positive pair-beat blockers, and
+a nontransitive tournament while an explicit lonely phase survives.
+THM-1248 reconstructs the germ side, every candidate owner residue, and the
+component-level continuation exactly.  The two-wall/coherent-word synthesis
+leaves a sharper trichotomy: lasso-owner incidence, repeated outside-owner
+displacement, or a slowest two-cycle with a forced located double-star and
+protected bridge.
 
 The sharpened remaining theorem is now:
 
-> **Oriented-germ lift or new-seam descent.**  In the compact five-cut kernel,
-> combine the finite relative word (9), determinant sheet (8), prescribed
-> THM-1248 wall credit, THM-1244 private-owner stalk, and THM-1250 multiplicity
-> ledger.  Attempt to lift one oriented private germ along the at-most-six-edge
-> blocker tail and around its positive-holonomy cycle.  A closed lift must make
-> the intermediate address factors telescope and invoke the first branch of
-> (15); the first failed lift must produce a genuinely new disjoint handoff
-> counted by (14), or move to a strictly smaller gap/modulus cell.  Any
-> iteration must terminate at a positioned safe phase or an already-closed
-> bounded packet.
+> **Aligned typed-cell descent.**  In the compact five-cut kernel, combine
+> the finite relative word (9), determinant sheet (8), exact owner germs, the
+> coherent minimal word, and its target-free cycle-minimum corridor.  Convert
+> lasso incidence to torsion/descent, repeated outside ownership to strict
+> tooth-displacement descent, or the residual two-cycle's protected
+> rank-three/nested-carrier tariff to metric excess.  Every branch must reach
+> a smaller complete gap/address cell or an already-closed bounded packet.
 
 This formulation retains exactly the coordinates destroyed by every refuted
-shortcut.  Relative address compression, an anchored wall seam, a fully
-located rank-five tree, repeated-owner charges, and literal private germs are
-now available.  The cover-preserving orientation lift across the affine clock
-shift is not, so no LRC(14) closure follows yet.
+shortcut.  Relative address compression, all sampled owner germs, a bounded
+cover-preserving component lift, an anchored wall seam, a fully located
+rank-five tree, repeated-owner charges, and literal private stalks are now
+available.  A well-founded consumer for the aligned typed-cell trichotomy is
+not, so no LRC(14) closure follows yet.

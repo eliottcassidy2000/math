@@ -119,17 +119,44 @@
 > R-(nr s0-n0 sr)=s0(P-nr)=s0(k+delta).
 > ```
 >
-> This is address order, not new Hunter mass.  Binary phase order either
-> aligns with a literal covered chronological subword or mismatches, forcing
-> the marked teeth to be adjacent and adding a paid seam.  All marked
-> mismatches form disjoint adjacent swaps.  In the full word, an immediate
+> This is address order, not new Hunter mass.  The target's own centered
+> phase lies outside the tooth that blocked the source, on the side selected
+> by the relative digit.  Since both endpoint sequences increase in the
+> minimal word, **every actual blocker edge is phase/word aligned**; the
+> adjacent-swap mismatch law survives only for arbitrary marked pairs.  The
+> sharp target-wall leg gives a target-free five-comb corridor
+>
+> ```text
+> |I_j|>5/[14(c+d_j)],
+> sum_(h!=j)1/h>(5/[6(c+d_j)]).
+> ```
+>
+> At the minimum-speed cycle vertex the next marked tooth cannot be adjacent,
+> so a canonical three-handoff/rank-two window is present.  In the full word,
+> an immediate
 > backtrack `h-j-h` forces `h>6j`; hence `h-j-h-j` is impossible and an
 > unordered-edge run has length at most two.  This breaks literal two-label
 > toothpick self-repetition and forces at least
 > `max(4,floor((sum_i ceil(d_i/(7c))-2)/2))`
 > nonbacktracking turns.
 >
-> THM-1255, THM-1257, THM-1259, THM-1261, and THM-1265 independently extend the exact bounded-variation
+> The two-wall owner pigeonhole now gives a complete recursive split.  A
+> lasso either has a wall owner on the lasso, repeats an outside owner, or is
+> the slowest-rooted two-cycle.  In that residual, the four distinct outside
+> wall owners and one protected internal bridge force a located
+> double-star-plus-bridge spanning tree and a rank-three forest in the
+> slowest safe component:
+>
+> ```text
+> H_B>=(6d_1-c)/[3d_1(c+d_1)]+7g_B/(4d_6^2).
+> ```
+>
+> The descent corridor moreover couples its exact clearance numerator to all
+> full internal word seams, and a structurally binary six-cycle must contain
+> at least two zero digits and two one digits.
+>
+> Carrier-41 THM-1255, carrier-42 THM-1257, THM-1259, THM-1261, and
+> THM-1265 independently extend the exact bounded-variation
 > terminal base: no six faster combs cover any complete slow gap for carriers
 > `c<=45`.  The carrier-41 densities fail literal transport to most
 > carrier-42 phases, carrier 44 first needs cutoff depth 76, and carrier 45
@@ -137,12 +164,82 @@
 > not a fixed finite template atlas.
 >
 > The live implication is now narrower and honest: consume one typed cell
-> carrying a binary phase landing, both target-wall seams, exact lcm/detuning
-> sheets, and address surplus.  An aligned cell must descend to a smaller
+> carrying an aligned phase landing, both target-wall seams, exact
+> lcm/detuning sheets, address surplus, and the protected bridge.  The typed
+> lasso trichotomy leaves incidence torsion, reuse displacement, or the
+> explicit tariffed two-cycle.  An aligned cell must descend to a smaller
 > complete carrier/address cell, or its first failed continuation must be a
 > new handoff already visible in the full-word invoice.  Another global mass
 > bound, sampled Fano incidence, or untyped tournament cannot supply this
 > operation.  See the coherent-word frontier reflection.
+
+> ## 2026-07-19 S82 — FINITE LASSO/OWNER QUOTIENT SHARPENS THE COHERENT WORD
+>
+> THM-1248 now compresses the *whole* slowest-rooted blocker lasso, not only
+> its eventual cycle.  If the proper tail has length `L` and the cycle length
+> is `m`, looplessness gives `L+m<=6`, `m>=2`, hence `L<=4`.  Its centered
+> residues obey
+>
+> ```text
+> Q_iE_j-Q_jE_i=2c(Q_i delta_i-ell_i),
+> z_j=[d_i/(c+d_i)]z_i+(delta_i-1/2-beta_i)/d_j,
+> prod_tail d_i/(c+d_i)<13/19                 (nonempty d1-tail).
+> ```
+>
+> The target-wall leg sharpens the determinant sheet:
+>
+> ```text
+> C_ij=-7 sigma E_j+(14|delta_i-1/2|-1)Q_j>5d_j,
+> |theta_i-delta_i|>5/14.
+> ```
+>
+> More importantly, sampled ownership is not an extra raw-address oracle.
+> Retaining all six `(Q_h,E_h)` reconstructs `||h w_i||` as one exact rational
+> residue `B_(h,i)/L_(h,i)`, and therefore reconstructs the owner tooth,
+> signed forward expiry, backward overlap, and sampled tooth displacement.
+> Absolute tooth lift remains gauge.
+>
+> Coverage supplies the missing between-sample object canonically.  On each
+> wall-to-spoke segment, orient the active **tooth instances** by later forward
+> expiry (travel sign `sigma` is the switch).  This local tournament is
+> transitive; its Hamiltonian maximum is the greedy interval-cover extender.
+> Strict coverage makes expiry endpoints advance until a tooth contains the
+> next spoke.  Appending the prescribed next blocker tooth and crossing its
+> wall through the strict owner stitches the entire tail and cycle into a
+> piecewise-monotone boundary-event walk.  The conservative state bank is
+> `24,132` boundaries per segment and `144,792` event occurrences per lasso.
+>
+> This closes relative-address compression, owner discovery, undirected seam
+> placement, and existential component-level tail transport.  Every blocker
+> tooth lies strictly inside the slow gap, so **both** selected walls export a
+> located gcd seam; source safety is needed only for a fourth label, not for
+> seam existence.  It does **not** by itself close LRC(14).  The exact lonely
+> packet
+>
+> ```text
+> (1;2,3,4,5,12,13),       2->3->12->13->4->5->12
+> ```
+>
+> makes adjacent opposite-direction transports traverse the identical seam
+> `(13/28,85/182)` of length `1/364`.  Thus a turn need not create a new
+> Hunter occurrence under an arbitrary greedy choice.  THM-1252--1256 remove
+> that choice: selecting every blocker from one deletion-minimal chronological
+> word makes all raw handoffs disjoint.  The target's own safe centered spoke
+> then forces every blocker edge to be phase/word aligned; arbitrary marked
+> mismatch is irrelevant to the blocker cycle.  The remaining theorem is the aligned typed-cell
+> descent/first-failed-continuation implication stated above.
+>
+> The combined THM-1244/1250 scalar tariff is also exact.  With
+> `B(x)=(9x+2)/(3x(1+x))` and `w_uv=c/lcm(u,v)`, every cover obeys
+>
+> ```text
+> S>=B(x)+min_F[(7/12)w(F)+((7/12)R(F)-(B(x)-1))_+].
+> ```
+>
+> It newly excludes the `c=52,311` all-pair-lcm-`100c` packet even though its
+> base bound and common-gcd branch pass.  A pairwise-coprime tangent packet on
+> slopes `(1,2,4,20,50,75)` still passes the full tariff, proving that scalar
+> graph weight alone cannot finish the aligned typed-cell descent.
 
 > ## 2026-07-19 S78 FULLY LOCATED OWNER REUSE AND THE AFFINE HOLONOMY FRONTIER
 >
@@ -354,8 +451,12 @@
 > single resonant blocker which erases all seven cracks of an arbitrary
 > selected near-tiling gap, even outside one BAD quartet; the proof must be
 > allowed to move to another gap.  THM-1242 proves common-clock escape but
-> exhibits the sharp mixed `q=15` sunflower filling the entire clock.  Thus
-> “there is a blocker cycle” and “every quotient period is nontrivial” are not
+> exhibits the sharp mixed `q=15` sunflower filling the entire clock.
+> THM-1247 strengthens that warning: one explicit q=15 packet has the full
+> mask clock, a legal Kakeya cut, blockers at all six centered spokes and all
+> fifteen positive pair beats, plus a nontransitive cross-clearance tournament,
+> yet is lonely at `t=1/12`.  Thus “there is a blocker cycle,” “every quotient
+> period is nontrivial,” and even complete sampled blocker incidence are not
 > contradictions by themselves.
 
 > ### 2026-07-19 S82 EXACT PHASE FIBER, CORRECTIONS, AND HOLONOMY
@@ -414,6 +515,16 @@
 > tooth replication therefore does not produce global trapping on either the
 > isolated rays or their first harmonic closure.
 >
+> THM-1247 closes the projective Fano shortcut.  The q=15 sign-address plane
+> has two invariant Fano structures, but both contract to the same six-petal
+> multihypergraph and the negative `chi_7` line degenerates.  Address colour
+> and speed colour vary independently by CRT.  THM-1248 then reconstructs the
+> oriented off-grid tooth germ from `(ell_i-X_i,delta_i)`, with
+> `X_i=(Q_i+E_i)/2` supplied by the retained common orbit, and shows the raw
+> integral lift is gauge.  What survives is not another Fano incidence or an
+> unknown germ coordinate, but owner-labelled continuation/reuse of that
+> reconstructed germ along the common residue orbit.
+>
 > THM-1244 supplies the complementary continuous debt on the slowest centered
 > spoke.  Its protected component `K` has
 >
@@ -445,8 +556,10 @@
 > Here `ell_i` is the least positive residue of the phase determinant
 > `P_iQ_j-P_jQ_i` modulo `Q_i`; it is divisible by `gcd(Q_i,Q_j)`.  The
 > absolute tooth address has therefore collapsed to one global gap gauge plus
-> a finite relative digit.  The digit is binary on every descending-clock
-> edge, the affine rounding-error return has multiplier
+> a finite relative digit.  Its left-minus-right tooth-germ imbalance is
+> exactly `2(ell_i-X_i)/(d_jQ_i)`, while `delta_i<=0` selects the left wall
+> and `delta_i>=1` the right.  The digit is binary on every descending-clock
+> edge, and the affine rounding-error return has multiplier
 >
 > ```text
 > A=prod_i d_i/(c+d_i),       1-A>4691/5503716,
@@ -462,24 +575,19 @@
 >
 > The slowest sampled edge is automatically an ascent, and THM-1248 proves
 > that its wall seam can be prescribed as one of THM-1244's two independent
-> positioned handoffs.  The remaining gap is the sharper
-> **orbit-to-owner/cycle** statement: transport that anchored first-edge seam
-> along the at-most-six-edge blocker tail to the eventual positive-holonomy
-> cycle, or correlate a cycle wall seam with the macroscopic private owner.
-> Equivalently, the shared centered residue orbit
+> positioned handoffs.  The shared centered residue orbit
 >
 > ```text
 > E_i=2cP_i-(2k+1)Q_i in [-c,c]
 > ```
 >
-> still needs either oriented owner-germ transport, a well-founded
-> alternate-gap descent, or a transverse corridor theorem beyond the
-> THM-1243/1246 resonant banks.  Producing that transport is the live
-> mathematics; bounding absolute tooth addresses or using the transitive
-> determinant-sign tournament is no longer the target.  THM-1250 now supplies
-> the fully located five-edge tree and multiplicity debt; the remaining
-> composition is the oriented germ lift/first-new-handoff alternative stated
-> at the top of this map.
+> now reconstructs all sampled owner germs, and the expiry tournament lifts
+> the complete tail/cycle through actual tooth instances.  THM-1250 supplies
+> the fully located five-edge tree and multiplicity debt.  The remaining
+> composition is the signed turn/retrace invoice stated at the top of this
+> map: new disjoint handoff, shifted-clock contradiction, or strict
+> alternate-gap descent.  Bounding absolute addresses or using the transitive
+> determinant-sign tournament is no longer the target.
 
 > ## 2026-07-19 S82 SIX-COMB CURVATURE SPECTRUM AND ACTIVE-PAIR PATH
 >

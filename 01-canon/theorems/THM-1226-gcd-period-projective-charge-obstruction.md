@@ -1,10 +1,10 @@
 ---
 id: THM-1226
 title: THE GCD-PERIOD PROJECTIVE-CHARGE OBSTRUCTION — exact vertex loads, disconnected rescue, primitive phase fibers, and relation-cycle holonomy
-status: PROVED (exact arithmetic obstruction and protected-needle embedding; conditional disconnected-G_gt transfer; sharp forest crown; AP-free strict-high/heavy-circuit separation; THM-605 phase-fiber refinement; primitive-coordinate and relation-cycle identities; THM-1237 scale/gcd dichotomy; centered blocker-cycle positive holonomy). Does not prove the remaining address-compression/alternate-gap descent or LRC(14)
+status: PROVED (exact arithmetic obstruction and protected-needle embedding; conditional disconnected-G_gt transfer; sharp forest crown; AP-free strict-high/heavy-circuit separation; THM-605 phase-fiber refinement; primitive-coordinate and relation-cycle identities; THM-1237 scale/gcd dichotomy; centered blocker-cycle positive holonomy). THM-1248 now solves relative address compression and anchors one positioned wall seam; this theorem does not prove the remaining tail-to-cycle/private-owner transport or LRC(14)
 source: codex-2026-07-19-S82
 depends_on: [THM-605, THM-1166, THM-1218, THM-1221, THM-1233, THM-1236, THM-1237, THM-1240, THM-1241]
-related: [THM-599, THM-773, THM-1234, THM-1238, THM-1242, MISTAKE-184, MISTAKE-185, HYP-7678, HYP-7870]
+related: [THM-599, THM-773, THM-1234, THM-1238, THM-1242, THM-1243, THM-1244, THM-1246, THM-1247, THM-1248, THM-1250, MISTAKE-184, MISTAKE-185, HYP-7678, HYP-7870]
 script: 04-computation/lrc14_gcd_period_projective_charge_obstruction_referee_codex_S82.py
 output: 05-knowledge/results/lrc14_gcd_period_projective_charge_obstruction_referee_codex_S82.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCGCDPeriodProjectiveCharge.lean
@@ -711,15 +711,69 @@ Thus the proved centered cycle is automatically in the positive,
 non-balanced holonomy branch in this fixed lift; a product-one signed cocycle
 cannot hide it.  The product comparison is not invariant under arbitrary
 integer translations of the addresses, which is why the canonical lift is
-part of the statement.  What remains is quantitative **address compression**:
-the present argument supplies no uniform bound on the reduced sizes of
-`P_i,N_i`, so (46) is not yet a uniform crown.
-THM-1239 proves that one resonant blocker can erase every crack on an
-arbitrarily chosen gap, while THM-1242's `q=15` sunflower proves that
-nontrivial quotient periods alone need not leave a beat residue.  A closing
-theorem must therefore turn (46b), the separated cut-clock doublet, and the
-positioned mass debt into an alternate-gap/address descent.  No scalar
-connectivity or low-height inverse can substitute for that global transport.
+part of the statement.
+
+THM-1248 now supplies the missing invariant quotient.  Put
+
+```text
+M_i=k+N_i,
+ell_i=P_iQ_j-M_iQ_i,
+delta_i=P_j-M_i.                                      (46c)
+```
+
+Then
+
+```text
+5Q_i/28<ell_i<23Q_i/28,
+D_ij=P_iQ_j-P_jQ_i=ell_i-delta_iQ_i,
+gcd(Q_i,Q_j) divides ell_i,
+-586<=delta_i<=587.                                  (46d)
+```
+
+The digit is binary whenever `d_j<=Q_i`.  The `delta` word is invariant
+under integral time translation, its affine rounding-error return contracts
+with
+
+```text
+1-prod_cycle d_i/(c+d_i)>4691/5503716,               (46e)
+```
+
+and the positive central remainders strengthen (46b) to
+
+```text
+prod_cycle P_i>prod_cycle M_i>=prod_cycle N_i.        (46f)
+```
+
+The same quotient already retains the oriented tooth germ:
+
+```text
+left_germ-right_germ=2(ell_i-X_i)/(d_jQ_i),           (46g)
+delta_i<=0 selects left,       delta_i>=1 selects right.
+```
+
+Thus quantitative relative-address compression is proved; unbounded raw
+tooth lifts are gauge rather than the live obstruction.
+
+THM-1248 also uses actual coverage between sampled spokes.  Every cycle
+ascent has a phase-located first-tooth wall at which carrier, source, and
+target are safe, forcing a third fast label and a gcd-quantized overlap seam.
+On the slowest outgoing edge, that seam can be prescribed as one of
+THM-1244's two positioned Hunter credits.  THM-1243/1246 globally reroute the
+known resonant rays and banks, while THM-1247 proves that even complete q=15
+Fano/mask/blocker incidence can coexist with loneliness.
+
+The remaining theorem is therefore not address compression or existential
+tail transport.  THM-1248 reconstructs every sampled owner germ, exports two
+wall seams per blocker tooth, and lifts the complete slowest-rooted lasso.
+THM-1250 supplies the fully located prescribed-edge tree, repeated-owner
+multiplicity debt, and literal private stalk.  THM-1252--1256 then select all
+blockers on one deletion-minimal word, pay every handoff, and prove every
+actual blocker edge phase/word aligned.  Their two-wall split leaves
+lasso-owner incidence, repeated outside-owner displacement, or a slowest
+two-cycle with a forced double-star-plus-protected-bridge tree and nested
+quotient/word tariff.  The remaining operation is well-founded descent or
+new metric conversion for that aligned typed cell.  No scalar connectivity
+or low-height inverse can substitute for it.
 
 ## 8. Tournament and alternate-vertex audit
 

@@ -36,9 +36,10 @@ theorem centered_depth_invoice
       1 / 4 < d / (2 * q) := by
   have hqpos : 0 < q := by rw [hq]; linarith
   have hsum : c / (2 * q) + d / (2 * q) = 1 / 2 := by
-    rw [hq]
-    field_simp
-    ring
+    calc
+      c / (2 * q) + d / (2 * q) = (c + d) / (2 * q) := by ring
+      _ = q / (2 * q) := by rw [hq]
+      _ = 1 / 2 := by field_simp [ne_of_gt hqpos]
   constructor
   · linarith
   · apply (div_lt_div_iff₀ (by norm_num : (0 : ℝ) < 4)
@@ -49,9 +50,10 @@ theorem centered_depth_invoice
 /-- A determinant at least `d/2` gives the explicit positive curvature
 slack `14D-q ≥ 6d-c`. -/
 theorem deep_determinant_slack
-    {c d q D : ℝ} (hcd : c < d) (hq : q = c + d)
+    {c d q D : ℝ} (hc : 0 < c) (hcd : c < d) (hq : q = c + d)
     (hD : d / 2 ≤ D) :
     6 * d - c ≤ 14 * D - q ∧ 0 < 14 * D - q := by
+  have hd : 0 < d := lt_trans hc hcd
   constructor <;> rw [hq] <;> nlinarith
 
 /-- If the master residue were zero, every speed divisible by the common
@@ -61,7 +63,10 @@ theorem zero_master_residue_forces_integral
     (hq : q = d₀ * L) (hc : c = d₀ * c') (hp : p = L * r) :
     q ∣ c * p := by
   refine ⟨c' * r, ?_⟩
-  omega
+  calc
+    c * p = (d₀ * c') * (L * r) := by rw [hc, hp]
+    _ = (d₀ * L) * (c' * r) := by ac_rfl
+    _ = q * (c' * r) := by rw [hq]
 
 /-- Seven iterates of a self-map on six labels have an orbit collision, the
 finite core behind the blocker-cycle argument. -/
@@ -83,8 +88,8 @@ theorem spoke_clock_cut_identity (c x y : ℝ) :
     (c + y) - (c + x) = y - x := by
   ring
 
-/-- Exact lower endpoint for the spoke slack. -/
-theorem spoke_slack_is_positive {c d : ℝ} (hcd : c < d) :
+/-- Exact lower endpoint for the spoke slack for positive runner speeds. -/
+theorem spoke_slack_is_positive {c d : ℝ} (hc : 0 < c) (hcd : c < d) :
     0 < 6 * d - c := by
   nlinarith
 

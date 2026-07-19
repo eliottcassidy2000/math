@@ -1,9 +1,9 @@
 ---
 id: HYP-7678
-title: The seventh-deletion Kakeya needle has a finite relative blocker word and an anchored positioned wall seam; tail-to-cycle/private-owner transport remains
-status: OPEN only on the connected strict-high positioned branch. THM-1221/1234 provide two global crossings; THM-1226 closes the disconnected and shallow branches; THM-1237 proves the exact positioned max-forest transfer; THM-1233/1241/1236 compactify the six-comb ratios; THM-1238/1240 force phase-bearing blockers and a directed cycle; and THM-1248 compresses its relative address word, exports a fourth-support wall event, and anchors the slowest first-edge seam in THM-1244's positioned rank-two debt. THM-1244 also forces a private owner stalk, while THM-1243/1246 close the principal resonant rays and harmonic needle banks. The live theorem is to transport the anchored seam along the finite blocker tail to the positive-holonomy cycle/private owner or descend on an alternate gap. Global LRC(14) is not closed
+title: The seventh-deletion Kakeya needle lives on one aligned marked tooth word; incidence torsion, owner displacement, or a tariffed two-cycle must descend
+status: OPEN only on the connected strict-high positioned branch. THM-1221/1234 provide two global crossings; THM-1226 closes the disconnected and shallow branches; THM-1237 proves the exact positioned max-forest transfer; THM-1233/1241/1236 compactify the six-comb ratios; and THM-1238/1240 force phase-bearing blockers and a directed cycle. THM-1248 compresses the entire slowest-rooted lasso, reconstructs all sampled owner germs, proves two located seams per blocker tooth, and reduces the incidence-free/reuse-free shape to a slowest two-cycle. THM-1250 supplies a fully located rank-five tree, repeated-owner multiplicity debt, and literal private stalks. THM-1252--1256 choose every blocker on one deletion-minimal word, pay every handoff, prove every actual blocker edge phase/word aligned, force a target-free five-comb corridor at the cycle minimum, and classify the exceptional two-cycle by a located double-star-plus-bridge tree, protected rank-three forest, and quotient-plus-word tariff. The live theorem is a well-founded complete-gap/address descent or new metric conversion for this aligned typed cell. Global LRC(14) is not closed
 source: codex-2026-07-18-S75
-depends_on: [THM-605, THM-1153, THM-1025, THM-1149, THM-1156, THM-1166, THM-1176, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1248]
+depends_on: [THM-605, THM-1153, THM-1025, THM-1149, THM-1156, THM-1166, THM-1176, THM-1218, THM-1221, THM-1226, THM-1233, THM-1234, THM-1236, THM-1237, THM-1238, THM-1239, THM-1240, THM-1241, THM-1242, THM-1243, THM-1244, THM-1246, THM-1247, THM-1248, THM-1250, THM-1252, THM-1253, THM-1254, THM-1256]
 related: [HYP-7870]
 ---
 
@@ -306,17 +306,26 @@ THM-1244 independently constructs the complementary off-sample object on the
 slowest-spoke component: an irredundant tooth chain with at least three
 blocker labels, a rank-two forest `F0` of located handoffs, two exact
 gcd-quantized overlap credits, and a macroscopic private-owner stalk.
-THM-1248 further shows that the slowest outgoing blocker edge is an ascent
-and its wall seam can be prescribed as one edge of `F0`.  What is not yet
-proved is transport of that anchored first-edge seam along the finite blocker
-tail to the eventual positive-holonomy cycle or into the private-owner germ.
+THM-1248 further shows that the slowest outgoing blocker edge is an ascent,
+that both walls of every blocker tooth export seams, and that its selected
+wall seam can be prescribed as one edge of `F0`.  It reconstructs every
+candidate owner germ and lifts the whole lasso through actual tooth instances.
+THM-1250 supplies a five-edge located tree, repeated-handoff multiplicity
+debt, and a literal private stalk for every label.  THM-1252--1256 then remove
+the arbitrary choice responsible for retracing: every blocker is chosen from
+one deletion-minimal chronological word and every handoff is disjoint and
+paid.  Actual blocker edges are automatically phase/word aligned.
 
 The resonant guardrails have also narrowed.  THM-1243 globally reroutes both
 exact toothpick rays from THM-1239, and THM-1246 leaves an explicit transverse
 corridor through every harmonic bank `14a,...,14Ha` with `H<=12`.  These
 results close those address rays, not arbitrary finite relative words.
-THM-1242's exact `q=15` sunflower still shows that nontrivial quotient periods
-alone need not leave a master-clock residue.
+THM-1247 sharpens THM-1242's `q=15` sunflower: full mask/Fano incidence,
+every centered-spoke blocker, every positive pair-beat blocker, and a
+nontransitive tournament can all coexist with an explicit lonely phase.
+THM-1248 reconstructs the local germ orientation from `(ell_i-X_i,delta_i)`;
+owner-labelled continuation/reuse of that germ, not another incidence
+completion, is required.
 
 This is the toothpick self-similarity that the density ledger erased.  It now
 localizes the unresolved Fano/chi7 work to aligning a sampled determinant
@@ -375,18 +384,18 @@ destroys exactly the Fano incidence the target needs.
 No claim is made that `(F7)` is true with arbitrary `eta,C` as stated.  The
 smallest exact open target is now:
 
-> From `(DG7)`, THM-1244's rank-two located handoff forest, and the finite
-> relative cycle `(RA7)`--`(AC7)`, transport THM-1248's already positioned
-> slowest first-edge seam along the blocker tail to its eventual cycle/private
-> owner.  Either it supplies a new independent seam with usable gcd credit or
-> moves to another carrier gap with a strictly decreasing positive
-> modulus/address potential.  The quotient must retain the exact
-> determinant/gcd sheet, cyclic relative word, endpoint openness, and blocker
-> ownership.
+> From the aligned marked word, consume the two-wall lasso trichotomy.  A
+> lasso-owned wall must yield incidence torsion/descent; a repeated outside
+> owner must yield tooth-displacement descent; and the residual slowest
+> two-cycle must consume its forced double-star-plus-protected-bridge tree and
+> quotient-plus-word nested-carrier tariff.  In every branch produce a
+> smaller complete gap/address cell or metric excess beyond already-counted
+> handoffs.
 
-Addresses, wall events, or proof obligations—not runners—are the promising
-tournament vertices.  The finite cycle word and positioned first-edge seam
-are now proved structural data; transporting the anchor to the eventual
-cycle/private-owner germ is the unresolved consumer.  Another phase-blind
-pair average cannot see the remaining obstruction, and no LRC(14) closure is
-claimed.
+Tooth instances, signed expiry events, or proof obligations—not runners—are
+the promising tournament vertices.  The finite cycle word, sampled owner
+germs, positioned seams, and component-path lift are proved structural data.
+The exact retracing guardrail explains why the common-word choice is
+necessary; it is no longer the live free-choice obstruction.  Another
+phase-blind pair average cannot see the aligned typed-cell descent, and no
+LRC(14) closure is claimed.

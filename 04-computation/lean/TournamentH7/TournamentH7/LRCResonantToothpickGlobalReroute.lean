@@ -23,15 +23,17 @@ theorem consecutive_packet_modEq
     (a + r) * p ≡ (2 * r - 7) * s [ZMOD q] := by
   rw [Int.modEq_iff_dvd]
   refine ⟨-s, ?_⟩
-  omega
+  rw [hq, hp]
+  ring
 
 /-- The resonant blocker `14a` is the terminal multiplier `-98s`. -/
 theorem terminal_blocker_modEq
     (a q p s : ℤ) (hq : q = 2 * a + 7) (hp : p = 2 * s) :
     14 * a * p ≡ -98 * s [ZMOD q] := by
-  have h := consecutive_packet_modEq a q p s 0 hq hp
-  have h14 := Int.ModEq.mul_left 14 h
-  simpa [mul_assoc] using h14
+  rw [Int.modEq_iff_dvd]
+  refine ⟨-14 * s, ?_⟩
+  rw [hq, hp]
+  ring
 
 /-- The second THM-1239 blocker `7a+4` is the terminal multiplier `-41s`. -/
 theorem second_blocker_modEq
@@ -39,7 +41,8 @@ theorem second_blocker_modEq
     (7 * a + 4) * p ≡ -41 * s [ZMOD q] := by
   rw [Int.modEq_iff_dvd]
   refine ⟨-7 * s, ?_⟩
-  omega
+  rw [hq, hp]
+  ring
 
 /-- Every distinct least-residue numerator in the even branch is at least
 the central value `s=3h+2`. -/

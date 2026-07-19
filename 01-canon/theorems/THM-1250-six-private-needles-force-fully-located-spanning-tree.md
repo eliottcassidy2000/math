@@ -3,8 +3,8 @@ id: THM-1250
 title: SIX PRIVATE NEEDLES FORCE A FULLY LOCATED SPANNING TREE — every Hunter edge is paid by an actual tooth handoff inside the slow gap
 status: PROVED (six-label essentiality; irredundant chronological chain; five gcd/lcm-quantized interior handoffs; multiplicity-averaged scale-covariant Hunter debt; uniform per-owner private interval stalk and oriented-germ dichotomy; exact mixed chronological/centered affine interface and sign guardrail; dependency-free exact referee; sorry-free Lean arithmetic core)
 source: codex-2026-07-19-S78 continuation with owner-reuse and located-tree audits
-depends_on: [THM-1166, THM-1178, THM-1198, THM-1233, THM-1248]
-related: [THM-1237, THM-1240, THM-1244, HYP-7870]
+depends_on: [THM-1166, THM-1178, THM-1198, THM-1233]
+related: [THM-1237, THM-1240, THM-1244, THM-1248, HYP-7870]
 script: 04-computation/lrc14_six_private_needles_fully_located_tree_thm1250.py
 output: 05-knowledge/results/lrc14_six_private_needles_fully_located_tree_thm1250.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCSixPrivateLocatedTree.lean
@@ -406,6 +406,11 @@ THM-1250 does not exclude six-comb covers or prove LRC(14).  It replaces the
 two located edges available on the protected slowest-spoke component by a
 fully located five-edge tree on the complete slow gap, charges every repeated
 owner handoff, and extracts a uniform private interval germ for every label.
-The highest-leverage next step is to transport one such germ from the `d_i`
-lcm tree through the `c+d_i` relative-address/positive-holonomy cycle, or
-charge the first failed transport as another occurrence in (17c).
+Downstream THM-1252--1256 perform that transport on one coherent minimal word.
+Every blocker edge is phase/word aligned; the cycle minimum exports a
+target-free five-comb corridor.  The two-wall trichotomy either exposes
+lasso-owner incidence, repeats an outside owner, or forces a slowest two-cycle
+whose four wall seams and protected bridge form a located spanning tree and
+rank-three protected forest.  The open consumer is now well-founded
+complete-gap/address descent or metric excess for this aligned typed cell,
+not anonymous tree placement or failed-transport charging.

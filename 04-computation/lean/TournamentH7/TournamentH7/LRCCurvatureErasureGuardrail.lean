@@ -54,18 +54,39 @@ theorem one_blocker_margin_ledger {m a : ℝ}
   have h5 : 0 < 7 * m + 6 := by nlinarith
   have h6 : 0 < 7 * m + 7 := by nlinarith
   constructor
-  · apply (div_lt_iff₀ h6).2; nlinarith
+  · rw [show 7 * m + 1 + 6 = 7 * m + 7 by ring]
+    apply (div_lt_iff₀ h6).2
+    norm_num
+    nlinarith
   constructor
-  · apply (div_lt_iff₀ h2).2; nlinarith
+  · rw [show 7 * m + 1 + 2 = 7 * m + 3 by ring]
+    apply (div_lt_iff₀ h2).2
+    norm_num
+    nlinarith
   constructor
-  · apply (div_lt_iff₀ h3).2; nlinarith
+  · rw [show 7 * m + 1 + 3 = 7 * m + 4 by ring]
+    apply (div_lt_iff₀ h3).2
+    norm_num
+    nlinarith
   constructor
-  · apply (div_lt_iff₀ h4).2; nlinarith
+  · rw [show 7 * m + 1 + 4 = 7 * m + 5 by ring]
+    apply (div_lt_iff₀ h4).2
+    norm_num
+    nlinarith
   constructor
-  · apply (div_lt_iff₀ h5).2; nlinarith
+  · rw [show 7 * m + 1 + 5 = 7 * m + 6 by ring]
+    apply (div_lt_iff₀ h5).2
+    norm_num
+    nlinarith
   constructor
-  · apply (div_lt_iff₀ h6).2; nlinarith
-  · apply (div_lt_iff₀ h1).2; nlinarith
+  · rw [show 7 * m + 1 + 6 = 7 * m + 7 by ring]
+    apply (div_lt_iff₀ h6).2
+    norm_num
+    nlinarith
+  · rw [show 7 * m + 1 + 1 = 7 * m + 2 by ring]
+    apply (div_lt_iff₀ h1).2
+    norm_num
+    nlinarith
 
 /-- The threshold `a>291` is exactly `m≥42` for `a=7m+1`. -/
 theorem sharp_one_blocker_threshold (m : ℕ) :
@@ -88,7 +109,11 @@ theorem nonbad_quartet_margin (m a : ℚ)
     1 - 3 * ((14 * m + 13) / (14 * a)) - 2 / 7 =
       (28 * m - 29) / (14 * a) := by
   subst a
-  field_simp
+  have ha0' : 1 + m * 7 ≠ 0 := by
+    intro h
+    apply ha0
+    nlinarith
+  field_simp [ha0']
   ring
 
 /-- Exact residues of the explicit thirteen-speed global witness. -/

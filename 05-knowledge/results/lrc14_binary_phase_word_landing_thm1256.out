@@ -1,15 +1,32 @@
 THM-1256 BINARY PHASE / TOOTH-WORD LANDING EXACT AUDIT
 endpoint residual/address rows = 979836
 binary centered-phase rows = 14550
+sharp actual-blocker phase rows = 10500
+central rows rejected by sharp blocker filter = 4050
+sharp target-free corridor rows = 11000
+cycle-minimum marked-adjacency exclusions = 4647600
+five-comb corridor invoice rows = 11000
+two-wall residual spanning-path rows = 713
+nested quotient/word tariff rows = 81750
+structural binary six-cycle words = 64
+singleton-digit six-cycle words excluded = 12
+balanced binary six-cycle words remaining = 50
+exact slowest-two-cycle digit strips = 1174
 minimal interval chains = 3542
 marked interval pairs = 20834
 explicit phase/order mismatch witnesses = 27637
 marked phase words / adjacent-swap matching checks = 61336
+safe-target automatic-alignment witnesses = 395342
 exact same-provider backtrack teeth = 340
 ABAB-free owner words = 63276
 maximum unordered-edge run = 2
 minimum turn-floor slack = 0
+same-provider windows with forced next turn = 87984
 compact-box backtrack-DAG height ceiling = 4
 invoice interpretation: R-endpoint = s0*(P-nr) = s0*(k+delta)
+actual blocker law: every coherent marked edge is phase/word aligned
+cycle-minimum law: marked teeth are nonadjacent and export >=3 handoffs
+two-wall residual law: four wall seams plus an internal bridge force a located tree
+six-cycle law: structural binary words contain at least two digits of each kind
 word law: backtracks + nonbacktracking turns = N-2
 RESULT: PASS

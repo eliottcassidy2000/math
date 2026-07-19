@@ -323,3 +323,145 @@ The uniform `n=12` sporadic-emptiness problem remains a separate open branch.
 Its AP-centred and several bounded/common-sheet strata are closed, but no
 result above supplies the missing all-height extraction.  It should not be
 silently counted as a consequence of the LRC(14) six-comb frontier.
+
+## 8. S82 update — the oriented germ is reconstructed, not additional state
+
+THM-1248 sharpens Sections 5--7 after this reflection was first written.  For
+a blocker edge `i->j`, use the carrier-gap gauge
+
+```text
+X_i=cP_i-kQ_i,
+ell_i=X_i+r_i,
+delta_i=P_j-(k+N_i).
+```
+
+The raw tooth lift `N_i` is not an independent unbounded coordinate.  The
+relative word is uniformly finite, `-586<=delta_i<=587`, and `ell_i` is the
+least positive determinant residue, with `gcd(Q_i,Q_j)|ell_i`.  More
+importantly for (1), the common centered orbit supplies
+
+```text
+X_i=Q_i/2+c epsilon_i=(Q_i+E_i)/2,
+```
+
+and hence
+
+```text
+ell_i^- - ell_i^+
+ =2r_i/(d_jQ_i)=2(ell_i-X_i)/(d_jQ_i),
+delta_i<=0 selects the left wall,
+delta_i>=1 selects the right wall.                    (4)
+```
+
+Thus the oriented germ side and imbalance are already encoded by the
+translation-invariant relative edge.  Integral lift height is gauge; the
+common residue orbit and exact gcd sheet remain visible sidecars.
+
+THM-1248 now advances the continuous bridge further.  The proper tail of the
+slowest-rooted lasso has length at most four, contracts by less than `13/19`,
+and satisfies an exact centered-residue telescope.  The full six-state
+quotient reconstructs not only the blocker wall but every candidate owner's
+wall residue, tooth integer, and signed forward/backward margins.  Sampled
+ownership is therefore derived data, not an external oracle.
+
+Coverage fills the interval between samples via the expiry tournament on
+active tooth instances: orient by later forward endpoint in the current
+travel direction and take the Hamiltonian maximum.  The greedy endpoints
+advance until a tooth contains the next centered spoke.  After appending the
+prescribed next blocker tooth and crossing its wall through the strict owner,
+these local walks stitch the whole tail and cycle.  Existential
+component-level transport is now proved.
+
+THM-1250 is also proved.  It supplies a fully located five-edge tree containing
+any prescribed interior seam forest, charges repeated chronological handoffs
+by multiplicity, and extracts a literal private stalk for every label.  The
+protected/tree scalar tariff closes new lcm cells, but an exact coprime tangent
+packet shows that an undirected MST scalar still cannot finish the problem.
+
+The decisive guardrail is now retracing.  For
+
+```text
+(1;2,3,4,5,12,13),       2->3->12->13->4->5->12,
+```
+
+two consecutive opposite-direction transports use the identical seam
+`(13/28,85/182)` of length `1/364`.  Greedy continuation need not create a
+new Hunter occurrence.  The remaining operation-level theorem is therefore:
+
+> at every travel-sign reversal or same-label/different-tooth return, prove a
+> genuinely new disjoint chronological handoff, a contradiction with the
+> positive shifted-clock holonomy, or strict alternate-gap/address descent.
+
+The missing object is a signed turn/reuse gain on the finite boundary-event
+walk—not raw address compression, owner discovery, component transport, or
+another runner tournament/Fano completion.
+
+## 9. Coherent-word correction — the missing object is an aligned typed cell
+
+The final paragraph of Section 8 is now historical.  THM-1252--1256 remove
+the free greedy choice that made the retracing packet decisive: every
+centered blocker is selected from one deletion-minimal chronological tooth
+word, and all raw handoffs in that word are pairwise disjoint and fully paid.
+The retracing example remains the reason this common-word choice is
+necessary; it is not the live residual obstruction.
+
+The target's own centered spoke gives the further missing observation.  If a
+`d_j`-tooth contains the source phase `t_i`, then `d_j` is more than
+`1/4`-safe at `t_j`, so `t_j` lies outside that tooth.  The relative digit
+chooses which side.  Since both endpoint sequences increase along the minimal
+word, every actual blocker edge is automatically phase/word aligned.  The
+old alignment-or-mismatch dichotomy was too weak: mismatch survives only for
+arbitrary marked pairs, never for a coherent blocker adjacency.
+
+THM-1248's sharp wall clearance turns alignment into metric geometry.  A
+binary edge has a target-free corridor
+
+```text
+5/[14(c+d_j)]<|I_j|<23/[28(c+d_j)]<6/(7d_j),
+sum_(h!=j)1/h>(5/[6(c+d_j)]).
+```
+
+At the minimum-speed cycle vertex the next marked tooth cannot be adjacent;
+the local word therefore exports a canonical three-handoff/rank-two window.
+Using both walls on every blocker tooth gives the exact recursive trichotomy:
+
+1. a wall is owned by a lasso label;
+2. an outside owner label repeats;
+3. the lasso is the slowest-rooted two-cycle.
+
+Indeed, absence of the first two branches injects `2v` wall occurrences into
+`6-v` outside labels, forcing `v=2`.  In that residual the four outside labels
+own the four walls distinctly.  The two marked target teeth are separated by
+at least two intermediate teeth, so their four wall seams form two disjoint
+stars and an internal protected bridge joins them.  This is a forced located
+spanning tree on all six labels, while the two ascent-target seams plus the
+bridge form a rank-three forest in the slowest-safe component:
+
+```text
+H_B>=(6d_1-c)/[3d_1(c+d_1)]+7g_B/(4d_6^2).
+```
+
+Every full internal bridge seam lies in the descent target-free corridor.
+If `C>5d_1` is its exact quotient clearance numerator, the combined
+quotient/word tariff is
+
+```text
+sum_(h!=1)1/h
+ >=C/[6d_1(c+d_1)]
+   +(7/12)sum_internal 1/lcm(s_r,s_(r+1)).
+```
+
+This is the first carrier here that truly couples the centered residue
+quotient to chronological seam mass.  It still does not close LRC(14): exact
+lonely packets realize the four-distinct-owner two-cycle, including one with
+a nonbinary ascent digit.  A structurally binary six-cycle is nevertheless
+pruned further—each digit occurs at least twice—showing that the factor-two
+clearance already excludes finite typed words.
+
+The missing object is now narrower: a well-founded consumer of one **aligned
+typed cell**.  Incidence must become torsion/address descent, repeated outside
+ownership must become strict tooth-displacement descent, or the explicit
+tariffed two-cycle must create metric excess or a smaller complete gap.  This
+is not another tournament on runners; its vertices are marked tooth cells and
+its sidecars are the two wall owners, internal bridge, clearance numerator,
+and complete-gap address.

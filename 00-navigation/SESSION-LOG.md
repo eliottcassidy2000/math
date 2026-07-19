@@ -1006,14 +1006,54 @@ module now checks the channel arithmetic, common-divisor and gcd invariance,
 debt constants, blocker lift, and holonomy sign consumer; analytic Haar and
 canonical-gauge providers remain explicit.
 
+The next S82 continuation closes that address-compression stage but not
+LRC(14).  THM-1248 reconstructs the centered quotient, bounds the functional
+tail by four, places both walls of every selected blocker tooth inside the
+carrier gap, and attaches a positive target-owner gcd seam to each wall.  Its
+two-wall pigeonhole gives an exact lasso trichotomy: an owner lies on the
+lasso, an outside owner repeats, or the lasso is the slowest-rooted two-cycle.
+Two explicit lonely residual packets—one binary, one with ascent digit two—
+show that this trichotomy is sharp and cannot itself be declared a
+contradiction.
+
+THM-1256 then removes a conceptual false branch.  The target's own centered
+phase is safe and therefore lies outside the tooth which blocks the source;
+the relative digit selects its side.  Since both endpoint sequences of the
+deletion-minimal tooth word increase, **every coherent blocker edge is
+automatically phase/word aligned**, for arbitrary integer digit.  At the
+minimum-speed cycle vertex the next marked tooth cannot be adjacent: the
+sharp target clearance gives `5/[14(c+j)]`, while adjacency would force
+`5h<2(c+j)<4j` despite `h>j`.  This exports a literal target-free five-comb
+corridor, harmonic invoice `sum_(h!=j)1/h>5/[6(c+j)]`, and a canonical
+three-handoff/rank-two window.
+
+In the exceptional two-cycle, four distinct outside wall owners form two
+disjoint stars and the internal word supplies a bridge, hence five disjoint
+located seams spanning all six labels.  Three of those seams lie in the
+protected component, and every internal handoff yields the nested tariff
+`H>5/[6(c+a)]+(7/12)sum 1/lcm`.  Exact clock strips split the residual by its
+ascent digit; when the ascent is binary, the facing gap is covered by only
+four outside combs and adds `sum_outside 1/h>=1/[4 lcm(a,b)]`.  A separate
+six-specific argument excludes every binary cycle word with a singleton
+zero or one, leaving exactly 50 of 64 words.  Normal and optimized exact
+referees agree, and the enlarged THM-1248/1256 Lean modules are sorry-free.
+
+The live object is consequently no longer an arbitrary retracing blocker
+walk.  It is one **aligned typed cell** with a well-founded three-way
+consumer still missing: lasso incidence must descend in torsion/address,
+outside-owner reuse must descend in tooth displacement, or the explicit
+tariffed two-cycle must produce metric excess (or a smaller complete gap).
+That descent/metric conversion, not address compression or owner discovery,
+is the remaining LRC(14) wall.
+
 Namespace audit preserved the first-pushed positioned-transfer `HYP-7870` and
 records the later index-only kind-pasteur/THM-1245 collision as `HYP-7871`.
 
-FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219/1221/1226;
-HYP-7850/7845/7855/7860/7865/7870; seven exact referees and stored outputs;
-seven root-imported Lean modules; proof map, formalization manifest, results
-index, and namespace corrections.
-Global LRC(14), an all-packet active-edge blocking theorem, the finite
+FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219/1221/1226/1248/1256;
+HYP-7850/7845/7855/7860/7865/7870; nine exact referees and stored outputs;
+nine root-imported Lean modules; proof map, formalization manifest, results
+index, reflection, and namespace corrections.
+Global LRC(14), the aligned typed-cell descent/metric consumer, the finite
 continuum/eroded-gap transfer, Cover14 crown supply, and non-AP n=12 rigidity
 remain open.
 
