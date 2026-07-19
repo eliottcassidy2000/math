@@ -1,8 +1,8 @@
 # THE LRC(14) FORMALIZATION MANIFEST — boxeph-S48 (the Lean batch, consumable form)
 
-## Landed addendum — coherent full-word package, carriers 41--44, and scale 36 (codex-S78)
+## Landed addendum — coherent full-word package, carriers 41--45, and scale 36 (codex-S78)
 
-The current addendum now has thirteen new sorry-free arithmetic modules.
+The current addendum now has fourteen new sorry-free arithmetic modules.
 
 - `LRCMinimalBlockerTwoWallFork` checks the all-edge carrier-margin estimate,
   two wall quanta, exact detuned toothpick return, `r<=335`, binary reflection
@@ -19,6 +19,9 @@ The current addendum now has thirteen new sorry-free arithmetic modules.
   complete density certificates (THM-1255/1257).
 - `LRCCarrier43BVNeedle` and `LRCCarrier44BVNeedle` extend the same exact
   reflection/cap/six-load consumer through carrier 44 (THM-1259/1261).
+- `LRCCarrier45BVNeedle` extends that consumer through carrier 45, including
+  the unique reflection-fixed phase, exact finite/tail margins, representative
+  coverage, and the common six-load contradiction (THM-1265).
 - `LRCScaleThirtySixComplementaryFibre` checks the generic anchor/deviation
   upper-relaxation implication and the complementary failed-owner consumer
   behind the empty joint `Z/4`--`Z/9` cell (THM-1258).

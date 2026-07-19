@@ -245,9 +245,10 @@ the nonreturning endpoint extension.”
 ## 5. Finite terminal bases and the separate `n=12` branch
 
 The bounded-variation density method now gives exact terminal noncoverage
-through carrier `44` (THM-1255, THM-1257, THM-1259, and THM-1261).  The
+through carrier `45` (THM-1255, THM-1257, THM-1259, THM-1261, and THM-1265).  The
 carrier-41 densities do not transport unchanged to carrier 42, and carrier
-44 first needs cutoff depths 60 and 76.  The self-similar operation is density
+44 first needs cutoff depths 60 and 76, while carrier 45 first reaches cutoff
+depth 108.  The self-similar operation is density
 *selection* with controlled variation on the changing cyclic phase orbit,
 not reuse of a fixed stalk or finite atlas.
 These computations are useful terminal bases for an eventual alternate-gap

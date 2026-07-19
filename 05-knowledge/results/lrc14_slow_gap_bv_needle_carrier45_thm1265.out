@@ -1,0 +1,18 @@
+THM-1265 CARRIER-45 BV NEEDLE CERTIFICATE
+optimization_safe_require_probe=PASS assert_nodes=0
+VERIFIED_EXACT rows=23 carrier=45 phase_representatives=0..22 multipliers=12:7,16:1,28:4,44:9,60:1,108:1
+max_low=12991498270615/77999999992356 gap_to_1/6=8501728111/77999999992356 at_k=6 M=60
+max_tail=294191299975319/1765399999814633 gap_to_1/6=252199962719/10592399998887798 at_k=3 M=28
+reflection=t->1-t sends G_k(45) to G_(44-k)(45)
+phase_orbits=22 pairs plus fixed phase k=22
+finite_layer=exact loads for every 46<=d<=M(k)*45
+tail_layer=BV bound for every d>M(k)*45
+conclusion=no six strict danger combs cover any complete 45-gap
+TOURNAMENT_LOSS_AUDIT
+vertices=phase-obligation stalks k=0..22
+observable=max(finite_load,tail_load); gauge=k
+score_histogram=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+directed_3_cycles=0 scc_sizes=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+hamiltonian_path_count=1
+tie_hamiltonian_path=11,8,9,6,14,0,2,15,5,18,22,10,7,20,16,17,13,1,19,4,21,12,3
+faithful_vertices=density-bin stalks; tournament forgets weights

@@ -25,6 +25,14 @@
 > extra depth buys variation control, not protection from a remote speed.
 > Consequently the useful uniform target is a phase-orbit density-selection
 > lemma with controlled variation, not indefinite multiplier-bank growth.
+> THM-1265 advances the exact terminal base once more, through carrier `45`.
+> Its `23` reflection representatives include the unique fixed phase `k=22`;
+> one row first needs multiplier `108`, yet the finite bottleneck instead
+> occurs at `(k,M,d)=(6,60,156)`.  This sharpens the same diagnosis: growing
+> cutoff depth is the price of selecting controlled-variation densities, not
+> evidence for a single remote nearly-covering speed.  Carrier `46` is the
+> next finite rung, while the uniform density-selection law remains the
+> higher-leverage target.
 >
 > THM-1260 settles the still-open *local* Fano/`chi_7` question negatively.
 > For every toothpick rung `1<=r<=335`, both binary phase sides, and every one
@@ -100,10 +108,11 @@
 > `max(4,floor((sum_i ceil(d_i/(7c))-2)/2))`
 > nonbacktracking turns.
 >
-> THM-1255, THM-1257, THM-1259, and THM-1261 independently extend the exact bounded-variation
+> THM-1255, THM-1257, THM-1259, THM-1261, and THM-1265 independently extend the exact bounded-variation
 > terminal base: no six faster combs cover any complete slow gap for carriers
-> `c<=44`.  The carrier-41 densities fail literal transport to most
-> carrier-42 phases, and carrier 44 first needs cutoff depth 76; the uniform object must be phase-orbit density selection,
+> `c<=45`.  The carrier-41 densities fail literal transport to most
+> carrier-42 phases, carrier 44 first needs cutoff depth 76, and carrier 45
+> first needs cutoff depth 108; the uniform object must be phase-orbit density selection,
 > not a fixed finite template atlas.
 >
 > The live implication is now narrower and honest: consume one typed cell
