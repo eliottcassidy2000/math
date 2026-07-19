@@ -1,9 +1,9 @@
 import Mathlib
 
 /-!
-# Four-torsion centre gauges (THM-1211)
+# Four-torsion centre gauges (THM-1206)
 
-This file formalizes only the finite modular core of THM-1211.  For the
+This file formalizes only the finite modular core of THM-1206.  For the
 labelled centre residue vector `r = (1,2,3)` in `(ZMod 4)^3`, one common
 gauge `a` satisfying
 

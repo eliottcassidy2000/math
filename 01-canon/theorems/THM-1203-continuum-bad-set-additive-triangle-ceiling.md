@@ -3,7 +3,7 @@ id: THM-1203
 title: The continuum four-comb ceiling by the non-arithmetic additive-triangle quotient
 status: PROVED, COMPUTER-ASSISTED.  The comb/max-gap identity, Hamilton-cycle identity, BAD-to-three-band K4 implication, non-AP triangle deletion, six-triangle torus geometry, and p+q>=26 sheared-grid tail are analytic.  The remaining 99 coprime pairs 1<=p<q, p+q<=25 are exhaustively certified by two exact rational evaluators; their unique reduced maximum is J(1,2)=2/21.  Thus mu(BAD)<=2/21, with equality exactly for four-term arithmetic-progression frequencies.  The finite arithmetic core and equality-obligation lemma also have a Lean kernel certificate; the Haar/alcove bridge remains analytic prose.  This theorem does NOT by itself supply the finite-comb/eroded-start glue needed for uniform r=5.
 source: codex-2026-07-18-S77
-related: [THM-527, THM-530, THM-1092, THM-1147, THM-1172, THM-1174, THM-1177, THM-1181, THM-1211, MISTAKE-181]
+related: [THM-527, THM-530, THM-1092, THM-1147, THM-1172, THM-1174, THM-1177, THM-1181, THM-1206, MISTAKE-181]
 script: 04-computation/lrc14_continuum_bad_hamilton_cycle_referee_codex_S77.py
 output: 05-knowledge/results/lrc14_continuum_bad_hamilton_cycle_referee_codex_S77.out
 script_sha256: e99c377006f29cc6182ce11678f3f94923e4cf817e7fa8830818b8b1cce5181a

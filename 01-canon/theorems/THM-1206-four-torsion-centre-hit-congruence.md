@@ -1,5 +1,5 @@
 ---
-id: THM-1211
+id: THM-1206
 title: Exact four-torsion centre-hit congruence and refutation of the proposed uniform standoff
 status: PROVED (elementary algebra; exact referee replay)
 source: codex-2026-07-18-S79
@@ -7,11 +7,13 @@ depends_on: [THM-1181]
 related: [THM-1174, THM-1177, THM-1203, THM-1214, MISTAKE-180]
 script: 04-computation/lrc14_center_hit_congruence_referee_codex_S79.py
 output: 05-knowledge/results/lrc14_center_hit_congruence_referee_codex_S79.out
-script_sha256: 743c485510642732f10302693b49da289e03dee571b2d94a7778e0dcef95240f
-output_sha256: dbdd30ac4508a1554f958591d0abe67eee4bef7a9c828df8fa22e40fa881af8a
+script_sha256: 5b81519ba493768e3ee8207c81c4848a27cc2a61c896539a460610fe6a9abddf
+output_sha256: 8d1faa377088d1c01ec1ef9240fde3a51ff89050999d9c1bea38e85fbbeafc17
+formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCFourTorsionCenter.lean
+formalization_sha256: 00f85c1b646f857561760e8ed13f51ae7e1de4009df81cff250455327ba4f862
 ---
 
-# THM-1211 — the centre-hit condition is congruence, not proportionality
+# THM-1206 — the centre-hit condition is congruence, not proportionality
 
 ## Statement
 

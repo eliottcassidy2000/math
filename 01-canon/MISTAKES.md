@@ -61,7 +61,7 @@ Format per entry:
 > This entry was originally also numbered `MISTAKE-173`. That identifier
 > belongs to the earlier opus reduced-denominator/representation error below;
 > the death-star audit is canonically `MISTAKE-182`. Its centre-incidence
-> correction is sharpened by MISTAKE-180 and exact replacements THM-1211/1210.
+> correction is sharpened by MISTAKE-180 and exact replacements THM-1206/1210.
 > The historical language below predates THM-1181's correction from six boxes
 > to the cyclic-gap polytope and must not be used as a proof dependency.
 
@@ -4985,7 +4985,7 @@ d=(1,2,7),    u=3/4,
 ({-d_i u})=(1/4,1/2,3/4).
 ```
 
-THM-1211 proves the complete replacement.  If `g=gcd(d)` and `e=d/g`, the
+THM-1206 proves the complete replacement.  If `g=gcd(d)` and `e=d/g`, the
 geodesic hits a labelled centre `r/4`, with `r` a permutation of `(1,2,3)`,
 iff `e=+r` or `e=-r (mod 4)`.  Thus `(1,2,4m+3)` supplies infinitely many
 nonproportional exact hits.  In particular its proposed uniform
@@ -5002,10 +5002,10 @@ criterion lives in `(Z/4Z)^3/{+/-1}`.
 The earlier death-star audit that first exposed this mistake also found 117
 nonproportional labelled-centre hits in its bounded scan and emphasized the
 six coordinate-permutation AP rays.  Those observations are now subsumed by
-THM-1211's exact congruence and THM-1203's exact equality classification;
+THM-1206's exact congruence and THM-1203's exact equality classification;
 they are telemetry, not a separate “six-box” theorem.
 
-**Affects:** the superseded six-box draft, HYP-7600, and THM-1181.  See THM-1211.
+**Affects:** the superseded six-box draft, HYP-7600, and THM-1181.  See THM-1206.
 
 ## MISTAKE-181 (kind-pasteur-S128c77, corrected codex-S77) — BAD does not force exact balance
 

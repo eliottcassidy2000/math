@@ -1,4 +1,4 @@
-THM-1211 four-torsion centre-hit congruence referee
+THM-1206 four-torsion centre-hit congruence referee
 complete sorted triples 1<=d1<d2<d3<=64, labelled centres: 249984
 exact centre hits: 9362
 hits outside the literal proportional (1,2,3) ray: 9320

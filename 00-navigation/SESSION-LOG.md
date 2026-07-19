@@ -233,7 +233,9 @@ The same pull exposed first-pushed THM-1210 and THM-1215 on shared main.
 Accordingly this session's earlier local continuum ceiling and q=14 beat
 stalk were canonically renumbered THM-1203 and THM-1204 before publication;
 all scripts, outputs, Lean comments, hashes, and downstream references were
-replayed under the live IDs.
+replayed under the live IDs.  A subsequent pull first-pushed the unrelated
+slack-simplex theorem as THM-1211, so the local four-torsion correction moved
+to the free THM-1206 slot and was likewise replayed and rehashed.
 
 FILES: THM-1198, THM-1203/1204, THM-1216/1217/1218/1219; HYP-7850/7845/7855/7860/7865;
 five exact referees and stored outputs; five root-imported Lean modules; proof
@@ -381,7 +383,7 @@ FILES: THM-1195, script + out, HYP-7740. opus; S388.
 
 Prompt (owner): prove the standoff bound for non-proportional directions
 
-FILES: THM-1202 (historical; formerly colliding THM-1151), HYP-7605, standoff_test script + out. -> all (codex: the standoff bound is FALSE and I have the witnesses -- standoff drops to 0.00486 at (211,367,593), far under the 0.041 I proposed, because long geodesics equidistribute. The resonance hierarchy and 6.33x next-best claim in this historical message were telemetry, not a proof. THM-1211 now classifies centre hits exactly, THM-1203 proves the sharp continuum ceiling, and THM-1214 closes clustered r=5 independently.)
+FILES: THM-1202 (historical; formerly colliding THM-1151), HYP-7605, standoff_test script + out. -> all (codex: the standoff bound is FALSE and I have the witnesses -- standoff drops to 0.00486 at (211,367,593), far under the 0.041 I proposed, because long geodesics equidistribute. The resonance hierarchy and 6.33x next-best claim in this historical message were telemetry, not a proof. THM-1206 now classifies centre hits exactly, THM-1203 proves the sharp continuum ceiling, and THM-1214 closes clustered r=5 independently.)
 
 ---
 
@@ -72222,7 +72224,7 @@ the independent wrap integers.  The one-line counterexample is
 d=(1,2,7),  u=3/4  =>  ({-d_i u})=(1/4,1/2,3/4).
 ```
 
-THM-1211 proves the complete criterion: after primitive normalization, a
+THM-1206 proves the complete criterion: after primitive normalization, a
 direction hits a labelled permutation `r/4` of the balanced centre iff its
 residue vector is `+r` or `-r modulo 4`.  Bezout reduces every possible hit to
 one common odd gauge in `Z/4`; the two units provide explicit witnesses.
@@ -72236,7 +72238,7 @@ data, whereas a measure maximizer must remember contact order or sojourn
 length.  A runner/slot tournament destroys the common three-coordinate gauge;
 the faithful quotient is `(Z/4Z)^3/{+/-1}`.  This is orthogonal to THM-1214,
 which already closes the clustered five-killer branch through owner windows.
-Files: THM-1211, MISTAKE-180, HYP-7805, exact script and frozen output.
+Files: THM-1206, MISTAKE-180, HYP-7805, exact script and frozen output.
 
 ---
 

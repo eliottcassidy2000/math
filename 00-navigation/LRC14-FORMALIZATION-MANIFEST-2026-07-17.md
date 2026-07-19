@@ -1833,7 +1833,7 @@ margin pieces, and the sharp-family address numerator.  Fractional-period
 decomposition and interval/component assembly remain external.  THM-1212's
 `LRCNestedCarrierWindow.lean` instantiates all actual rho-five/rho-six density
 covers and final open-tooth topology; only restricted-cover and owner-chart
-composition remain.  THM-1211's `LRCFourTorsionCenter.lean` checks the mod-four
+composition remain.  THM-1206's `LRCFourTorsionCenter.lean` checks the mod-four
 common-gauge criterion, and `LRCAPHomogeneity.lean` supplies an independent
 formal terminal proof for THM-1171's AP branch.  All five modules are
 root-imported; none claims the non-AP twelve-speed rigidity supplier or global

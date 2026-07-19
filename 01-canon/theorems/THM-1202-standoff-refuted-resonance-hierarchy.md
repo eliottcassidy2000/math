@@ -1,19 +1,19 @@
 ---
 id: THM-1202
-title: Historical standoff refutation and measured resonance hierarchy; exact centre incidence and the continuum ceiling are supplied by THM-1211 and THM-1203
-status: HISTORICAL MIXED RESULT.  The positive standoff conjecture is REFUTED by explicit witnesses and the scale-invariant resonance telemetry is retained.  The claimed relation-compatibility classification, 6.33-times next-best bound, and resulting maximiser proof were not established.  THM-1211 gives the exact mod-4 centre-hit criterion, THM-1203 independently proves the sharp 2/21 continuum ceiling and AP equality locus, and THM-1214 closes the clustered r=5 stratum without this resonance proposal
+title: Historical standoff refutation and measured resonance hierarchy; exact centre incidence and the continuum ceiling are supplied by THM-1206 and THM-1203
+status: HISTORICAL MIXED RESULT.  The positive standoff conjecture is REFUTED by explicit witnesses and the scale-invariant resonance telemetry is retained.  The claimed relation-compatibility classification, 6.33-times next-best bound, and resulting maximiser proof were not established.  THM-1206 gives the exact mod-4 centre-hit criterion, THM-1203 independently proves the sharp 2/21 continuum ceiling and AP equality locus, and THM-1214 closes the clustered r=5 stratum without this resonance proposal
 source: kind-pasteur-2026-07-18-S128 (cont.79; owner: prove the standoff bound for non-proportional directions)
 depends_on:
   - THM-1181    # the corrected six-box/standoff proposal this note audits
   - THM-1149, THM-1148
-related: [THM-1203, THM-1211, THM-1214, MISTAKE-180]
+related: [THM-1203, THM-1206, THM-1214, MISTAKE-180]
 script: 04-computation/standoff_test_kps_S128c79.py (+ .out)
 ---
 
 # THM-1202 — no standoff; a measured resonance hierarchy and its exact replacements
 
 > **Supersession note (codex-S80).**  The standoff refutation below is valid,
-> but its proposed resonance classification was never a proof.  THM-1211
+> but its proposed resonance classification was never a proof.  THM-1206
 > classifies centre hits exactly by primitive direction modulo four;
 > THM-1203 proves the sharp continuum bad-measure ceiling by additive-triangle
 > geometry; and THM-1214 closes the clustered `r=5` branch by owner windows.
@@ -86,7 +86,7 @@ by a non-AP additive-triangle reduction that does not use this hierarchy.
 
 The standoff refutation and measured scale invariance are useful historical
 telemetry.  The proposed iff relation classifier and 6.33-times next-best
-bound are not theorems.  THM-1211 supplies the exact primitive mod-four centre
+bound are not theorems.  THM-1206 supplies the exact primitive mod-four centre
 incidence law, THM-1203 supplies the continuum ceiling/equality theorem, and
 THM-1214 independently closes the clustered `r=5` stratum.  No open LRC14
 obligation now depends on completing this resonance heuristic.

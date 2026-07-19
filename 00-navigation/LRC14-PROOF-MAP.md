@@ -187,7 +187,7 @@
 
 > ## 2026-07-18 S79 FOUR-TORSION CORRECTION
 >
-> THM-1211 refutes the superseded six-box claim that a three-frequency torus
+> THM-1206 refutes the superseded six-box claim that a three-frequency torus
 > geodesic hits a balanced centre only on the proportional `(1,2,3)` ray.
 > For primitive direction `e` and a permutation `r` of `(1,2,3)`, the exact
 > criterion is `e=+/-r (mod 4)`.  In particular every `(1,2,4m+3)` passes

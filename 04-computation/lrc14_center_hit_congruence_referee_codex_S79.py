@@ -6,7 +6,7 @@ geodesic gamma_d(u) = ({-d_i u}) hits the four-torsion centre r/4, where r
 is a permutation of (1,2,3), iff e is congruent to r or -r modulo 4.
 
 This refutes the proposed assertion that only directions proportional to
-(1,2,3) can hit a centre.  The proof in THM-1211 is algebraic; this script
+(1,2,3) can hit a centre.  The proof in THM-1206 is algebraic; this script
 only replays the equivalence exhaustively and freezes explicit witnesses.
 
 Tournament analysis is intentionally not imposed here.  The preserved
@@ -99,7 +99,7 @@ def main() -> None:
         assert direct_hit(d, (1, 2, 3), Fraction(3, 4))
         assert d != (1, 2, 3)
 
-    print("THM-1211 four-torsion centre-hit congruence referee")
+    print("THM-1206 four-torsion centre-hit congruence referee")
     print(f"complete sorted triples 1<=d1<d2<d3<=64, labelled centres: {rows}")
     print(f"exact centre hits: {hits}")
     print(f"hits outside the literal proportional (1,2,3) ray: {nonproportional_hits}")
