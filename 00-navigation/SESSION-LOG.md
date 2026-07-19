@@ -10,6 +10,17 @@ Prompt (owner): now formalize the covering-all-pairs corollary in ZMod 19
 FILES: LRCMod19Spread.lean (antipodal_cover added; 6 kernel-pure theorems); reflection the-mod19-spread-lemma...-boxeph-S126 (Lean section updated); HYP-7812 UPDATE2. -> all (formalized the covering-all-pairs corollary antipodal_cover in ZMod 19, kernel-pure, sorry-free: under the spread hypotheses, for every nonzero u the residues hit u or -u -- the residues cover every antipodal unit-pair of Z/19. The b->b^{-1} packaging is explicit: b=(u^{-1}).val, apply antipodal_spread, read the +-1 residue back as +-u via intCast_eq_intCast_iff + inv_mul_cancel0. LRCMod19Spread.lean is now complete: integer core -> witness -> contrapositive -> per-scale spread -> covering-all-pairs.)
 
 ---
+## death-star-2026-07-19-S58g — pair-sum competitor margin tracks the Schur deficit; binding case proven, uniform bound = Freiman crux (NOT proved)
+
+Attacked the S58f covering half ("pair-sum competitor clears 1/13 for non-AP cores"). Did NOT prove
+it (= the sharp Freiman/E3 inverse = the genuine LRC(14) crux). Established: the competitor is the
+pair-sum q=v*+w* (THM-724); its margin M-1/13 TRACKS the core Schur deficit 66-T(core). Transition
+exactly at deficit 0->1: the AP (deficit 0) is the UNIQUE strict-interior deep well (14/183), every
+non-AP core (deficit>=1) has POSITIVE margin. REFRAME: the smallest-margin case is deficit-1 (near-AP),
+already PROVEN M>=2/25>1/13 by Hamming rigidity THM-1004/5/6 -- the competitor clears exactly where
+tightest. Open residual = far-from-AP near-tight fragmented cores (THM-1028), where deficit is large
+but the witness-table method doesn't reach. HYP-7746; reflection + script. Next: crude deficit->margin
+bound for far cores, or via function fields (boxeph-S90). -> boxeph, kind-pasteur.
 
 ## boxeph-2026-07-19-S127 -- LEAN-FORMALIZED the mod-19 antipodal-spread lemma (kernel-pure) (owner: Lean-formalize the mod-19 antipodal-spread lemma). Wrote LRCMod19Spread.lean (namespace LonelyRunner), the direct mod-19 analogue of the proven LRCMod13Blocking.lean; built clean, sorry-free, all theorems kernel-pure ([propext,(Classical.choice,)Quot.sound]): (1) mod19_middle_far -- integer core: r in [2,17] => 2 <= |19k+r| (two-case omega); (2) sieve19_single -- (v*b)%19 in [2,17] => at t=b/19, ||v*(b/19)|| >= 2/19 (the value = (v*b-19m)/19, numerator >= 2 by mod19_middle_far, lifted by abs_div/gcongr); sieve19_middle_witness -- the family form (=> M(C) >= 2/19); (3) no_middle_band_of_close -- contrapositive: a runner strictly within 2/19 of Z at scale b empties the middle band; (4) antipodal_spread -- THE LEMMA: hunit (no speed divisible by 19) + hclose (at every scale b some runner is <2/19-close, which holds when M(C)<2/19) forces, for every b with 19 not| b, some runner with residue +-1 mod 19 -- the per-scale form of 'the residues cover every antipodal unit-pair of Z/19' (equivalent via the units bijection b -> b^{-1}). The proof: the close runner's residue is not in [2,17] (else sieve19_single contradicts closeness) and not 0 (19 prime + 19 not| c_i, 19 not| b via Prime.dvd_or_dvd), so it is 1 or 18. This is the S126 isoperimetric spread bound on the 1/19 alphabet, now machine-checked; 19 is the apex of 38=2*19 (the 3/38 comb spectrum vanishes at k==0 mod 19, S125). Translation-sensitive (right side of opus THM-1185/1220 triage).
 

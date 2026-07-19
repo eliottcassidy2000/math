@@ -1,0 +1,5 @@
+{1..11,13}       T=65 deficit=1 M=13/161 margin=+0.00382
+{1..11,14}       T=64 deficit=2 M=13/157 margin=+0.00588
+{1..10,12,13}    T=64 deficit=2 M=10/113 margin=+0.01157
+{1..10,13,110}   T=53 deficit=13 M=14/157 margin=+0.01225
+AP{1..12}        T=66 deficit=0 M=14/183 margin=-0.00042
