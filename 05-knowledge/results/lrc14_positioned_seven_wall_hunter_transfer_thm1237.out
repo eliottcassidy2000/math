@@ -1,0 +1,10 @@
+THM-1237 POSITIONED SEVEN-WALL HUNTER TRANSFER EXACT AUDIT
+coprime pair rows checked through 250 = 19023
+unique rho=1/14 row = (1,2)
+labelled seven-vertex trees = 16807
+nonempty active-set forest checks = 2134489
+threshold-rank rational checks = 350
+protected-needle debt = 24m H + 13m sum_T 1/g >= 30/11
+BAD margins = 1/462 and 45/14014
+BAD period debts = 38/(441h) and 34620/(405769h)
+RESULT: PASS
