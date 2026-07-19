@@ -705,6 +705,19 @@ FILES: THM-1061, THM-1051 annotated with (III), HYP-7510, r3_measure_horn / r3_p
 
 ---
 
+## boxeph-2026-07-18-S113 -- THE COMPACT CASE rho<13 => M>=1/13 IS EQUIVALENT TO LRC(14); DESCENT IS THE WRONG TOOL
+
+Owner: prove compact rho<13 covering => M>=1/13. Confirms compact=crux; new negative on descent; not proved.
+= LRC(14): S86 reduction, the SOLE RESIDUAL, equivalent to the full conjecture. Empirically robust (min
+M=3/31=0.097, q*<=47 shallow, ZERO M<1/13 over 100+ compact families). SHARP: boundary {2*{1..12},13} is
+compact (rho=1.09) covering with M=1/13 EXACTLY (M(core)=1/12 drops via resonant v_max=24) => no slack.
+DESCENT TOO WEAK (new negative): THM-1010 M>=rho*M(core)/(rho+1); at compact rho~1 this is ~M(core)/2 but
+actual M~M(core) => loses factor ~2; proves only 5/15. Descent is sharp for large rho (single-killer) and
+useless for small rho (compact). PROVABLE fragment: dilated-AP-core compact => M>=1/13 via THM-1013.
+UNIFICATION: single-killer (THM-724 residual, S112) and compact (non-AP-core residual, S113) bottom on the
+SAME near-dilated-core rigidity -- one wall (inverse theorem) from two sides. Crux open.
+FILES: reflection the-compact-case-is-equivalent-to-LRC14-and-descent-is-the-wrong-tool-boxeph-S113, script+out lrc14_compact_descent_boxeph_S113, HYP-7665. boxeph; S113.
+
 ## boxeph-2026-07-18-S112 -- INV val=14 IS THE SINGLE-KILLER CASE, essentially DONE (THM-724+HYP-4382+THM-1007), NOT the open compact crux
 
 Owner: prove INV directly for primitive val=14. Synthesis + clarification (residual not closed).

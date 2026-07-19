@@ -1,0 +1,6 @@
+boundary compact family [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24]:
+  covering=True  rho=12/11=1.09
+  M(core)=1/12  M(V)=1/13  (=1/13 EXACTLY => the bound is SHARP)
+
+descent LB = rho*M(core)/(rho+1) ~ M(core)/2 at rho~1 << actual M ~ M(core) => descent too weak.
+compact rho<13 => M>=1/13 is equivalent to LRC(14) (open); dilated-AP-core sub-case = THM-1013.
