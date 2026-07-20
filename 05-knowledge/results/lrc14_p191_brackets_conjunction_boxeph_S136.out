@@ -1,0 +1,21 @@
+============================================================================================
+PART 1: p=191 brackets (Q=2674, dk=13; scale-free ratio 13/7 -- see header)
+============================================================================================
+controls: AP13/GW improper mod 2674, z=0 explicit => min-z = 0 exactly
+25 random level-1 bases at p=191:
+  zero-forcing LB histogram: {0: 25}   (zero-only scales: max 0)
+  greedy UB histogram:       {4: 1, None: 24}
+
+============================================================================================
+PART 2: the 43 AND 61 conjunction (shared mod-14 parts; mod-61 parts free)
+============================================================================================
+improper-mod-602 witnesses built: 20/20
+(a) MC random-61-assignment survival mod 854: 464/8000
+(b) greedy conjunction admit (one-sided >=): 20/20 witnesses
+    (each admit's 61-parts are level-1-improper mod 61: 20/20 -- the pure-61 sub-law)
+
+READING: if p=191 brackets match p=43 (LB=0, small UB), gate softness is
+structural (scale-free 13/7); the conjunction admit rate is then the first
+measured rung of the cage -- the shared mod-14 parts must serve BOTH primes'
+slaving laws, and each added prime multiplies the constraint on them.
+DONE.
