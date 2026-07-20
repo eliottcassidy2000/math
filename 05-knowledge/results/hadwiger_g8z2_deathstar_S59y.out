@@ -1,1 +1,33 @@
 building G_8/Z_2 (BFS flip graph, n=8)...
+  ...400 merged classes processed, |seen|=1145
+  ...800 merged classes processed, |seen|=1905
+  ...1200 merged classes processed, |seen|=2360
+  ...1600 merged classes processed, |seen|=2761
+  ...2000 merged classes processed, |seen|=3046
+  ...2400 merged classes processed, |seen|=3265
+  ...2800 merged classes processed, |seen|=3428
+  ...3200 merged classes processed, |seen|=3510
+G_8/Z_2: V=3528, E=45550 (A000568(8)=6880; V=(6880+SC_8)/2 => SC_8=176)
+  degrees 2..28, mean 25.8
+  omega = 5
+
+=== Hadwiger number of G_8/Z_2 (max t with certified K_t minor) ===
+  K_4: YES
+  K_5: YES
+  K_6: YES
+  K_7: YES
+  K_8: YES
+  K_9: YES
+  K_10: YES
+  K_11: YES
+  K_12: YES
+  K_13: YES
+  K_14: YES
+  K_15: YES
+  K_16: YES
+  K_17: YES
+  K_18: YES
+  K_19: YES
+  K_20: YES
+  K_21: YES
+  K_22: YES
