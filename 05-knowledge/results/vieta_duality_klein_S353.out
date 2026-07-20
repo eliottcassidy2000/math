@@ -1,0 +1,67 @@
+==================================================================================
+DOES THE PAIR-SUM RULER HAVE A MULTIPLICATIVE COUNTERPART?
+==================================================================================
+family                                          M      q  #pairs q|(vi+vj)   q | vi*vj too?
+AP {1..12} u {13} (the tight 13-set)         1/14     14                 7              0/7
+the wedge minimiser {1..11,13,84}            7/89     89                 1              0/1
+covering-min {1..12} u {182}               14/183    183                 1              0/1
+equioscillating {1..12} u {26}               2/27     27                 1              0/1
+equioscillating {1..12} u {39}               3/40     40                 1              0/1
+dilated 2*{1..12} u {13}                     1/13     13                 7              1/7
+
+ READING: the ADDITIVE constraint q | v_i+v_j is by construction satisfied by every listed
+ pair.  The MULTIPLICATIVE one q | v_i*v_j is satisfied only sporadically -- so there is NO
+ automatic Vieta companion, and the pair is NOT pinned by the ruler alone.  That is a
+ NEGATIVE and it is the useful content: THM-1002 gives one symmetric function, not two, so it
+ buys a DISJUNCTION over candidate pairs rather than a determination -- structurally the same
+ limitation as the e/pi argument.
+
+==================================================================================
+HOW MANY PAIRS SURVIVE?  (the size of the disjunction the ruler leaves open)
+==================================================================================
+  AP {1..12} u {13} (the tight 13-set)
+     q = 14;  admissible pairs = [(1, 13), (2, 12), (3, 11), (4, 10), (5, 9), (6, 8)] ...
+     their products = [13, 24, 33, 40, 45, 48, 49]   distinct products: 7
+  the wedge minimiser {1..11,13,84}
+     q = 89;  admissible pairs = [(5, 84)]
+     their products = [420]   distinct products: 1
+  covering-min {1..12} u {182}
+     q = 183;  admissible pairs = [(1, 182)]
+     their products = [182]   distinct products: 1
+  equioscillating {1..12} u {26}
+     q = 27;  admissible pairs = [(1, 26)]
+     their products = [26]   distinct products: 1
+  equioscillating {1..12} u {39}
+     q = 40;  admissible pairs = [(1, 39)]
+     their products = [39]   distinct products: 1
+  dilated 2*{1..12} u {13}
+     q = 13;  admissible pairs = [(2, 24), (4, 22), (6, 20), (8, 18), (10, 16), (12, 14)] ...
+     their products = [48, 88, 120, 144, 160, 168, 169]   distinct products: 7
+
+ So the ruler narrows the extremal pair to a SET, never to a point.  To pin the pair one
+ needs a second, independent symmetric function -- exactly the ingredient the e/pi argument
+ also lacks, and exactly the ingredient a one-parameter family supplies in THM-1550.
+
+
+================================================================================
+CORRECTION (klein-S353, on reading my own table)
+================================================================================
+ My summary line said the ruler "narrows the extremal pair to a SET, never to a point".
+ THE TABLE SAYS OTHERWISE in 4 of 6 families.  The correct statement is a DICHOTOMY driven
+ by the size of q relative to max(A):
+
+   LARGE q -- {1..11,13,84} q=89, {1..12,182} q=183, {1..12,26} q=27, {1..12,39} q=40:
+     exactly ONE admissible pair each.  The ruler PINS the extremal pair outright.
+     Mechanism: v_i+v_j must be a multiple of q and at most 2 max(A), and when q is large
+     only ONE multiple is reachable and only one pair attains it (e.g. 5+84 = 89).
+
+   SMALL q -- tight AP {1..13} q=14, and its dilate 2*{1..12}u{13} q=13:
+     SEVEN admissible pairs each (sum = q exactly: (1,13),(2,12),...,(7,7)).
+
+ CONSEQUENCE, and it is the useful one: the pair-sum ruler is MOST informative exactly where
+ the problem is HARDEST -- the wedge minimiser, the covering minimum, the equioscillating
+ family are all pinned -- and LEAST informative on the tight AP, which is already settled by
+ other means.  That inverts the usual pattern and is worth exploiting.
+
+ The multiplicative finding stands: q | v_i*v_j holds in 0/7, 0/1, 0/1, 0/1, 0/1, 1/7 cases,
+ so there is NO automatic Vieta companion to the additive ruler.
