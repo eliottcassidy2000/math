@@ -54,9 +54,14 @@ exists, and 21 = 3·7 needs the impossible 7. Hence h = 21 is never attained. �
 through n = 7 the floor also matches 2F(n)−1 (Leonardo); the two laws split at
 n = 8 (41 vs 45) and the EXHAUSTIVE value is 45 — the Leonardo reading is
 REFUTED, another instance of the repo's fifth-term-break motif (two laws
-agreeing on exactly five terms). Literature: the floor law is likely Busch's
-theorem on minimum Hamiltonian paths in strong tournaments — citation check
-pending; the spectrum-gap statement {7,21} we have not found stated anywhere.
+agreeing on exactly five terms). Literature (pinned S152 via web check): the
+floor law IS the Moon–Busch theorem — Moon 1972 gave the chain construction
+and bounds; A. Busch, "A note on the number of Hamiltonian paths in strong
+tournaments," Electron. J. Combin. (2006), proved Moon's construction optimal.
+Our exhaustive n ≤ 8 floors independently re-derive it. The spectrum-gap
+statement ({7, 21} never attained, any n) we have NOT found stated anywhere —
+it appears to be new as a stated theorem, though its proof is Moon–Busch plus
+elementary gluing.
 
 ## Corollaries and data
 

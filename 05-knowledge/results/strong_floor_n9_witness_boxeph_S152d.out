@@ -1,0 +1,4 @@
+restart  0: local min h = 75  (global best 75)
+
+BEST strong h found at n=9: 75   (Moon-Busch/floor-law predicts min = 75)
+witness adjacency (bitmasks): [6, 128, 482, 471, 455, 475, 387, 1, 131]
