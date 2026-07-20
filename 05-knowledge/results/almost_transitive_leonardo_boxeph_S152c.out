@@ -1,0 +1,13 @@
+n : h(R_n) vs 2F(n)-1   (R_n = transitive with extreme arc reversed)
+ 3:      3  vs      3   MATCH
+ 4:      5  vs      5   MATCH
+ 5:      9  vs      9   MATCH
+ 6:     17  vs     15   differ
+ 7:     33  vs     25   differ
+ 8:     65  vs     41   differ
+ 9:    129  vs     67   differ
+10:    257  vs    109   differ
+11:    513  vs    177   differ
+12:   1025  vs    287   differ
+13:   2049  vs    465   differ
+14:   4097  vs    753   differ

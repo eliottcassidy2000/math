@@ -1,0 +1,22 @@
+n=7 reps loaded: 456
+  ...50/456 reps done
+  ...100/456 reps done
+  ...150/456 reps done
+  ...200/456 reps done
+  ...250/456 reps done
+  ...300/456 reps done
+  ...350/456 reps done
+  ...400/456 reps done
+  ...450/456 reps done
+
+COMPLETE n=8 h-spectrum: 320 distinct values
+first 40: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83]
+last 10: [639, 641, 643, 645, 649, 651, 653, 657, 659, 661]
+
+h=7: False  h=21: False  h=63: True  (gap tower 7*3^k)
+h=189: True  h=105=3*5*7: True
+
+MIN strong h(8) = 45  (Leonardo law predicts 41 = 2F(8)-1): False
+missing odd values at n=8 (up to max): [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+strong-spectrum holes above the floor: [47, 55, 67, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+DONE.
