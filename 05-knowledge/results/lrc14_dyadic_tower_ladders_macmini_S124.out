@@ -1,0 +1,69 @@
+== (D) dyadic set identities ==
+  F_m(13) = odds ∪ 2·K_m(6) = odds ∪ 2·(odds5 ∪ 2·K_m(3))  for m=2..10  OK
+
+== (A) controls (instrument-validation gate) ==
+  F_2(13) = GW {1..11,13,24}   M =     1/14  t* = 1/14  active=[1, 13]
+      straddles: (1,13) s=14 D=1 slack=0 both-odd  MATCH  [floor exactly]
+  F_3(13) {1..11,13,36}        M =     3/41  t* = 17/41  active=[5, 36]
+      straddles: (5,36) s=41 D=3 slack=1 mixed  MATCH
+  F_4(13) {1..11,13,48}        M =     4/53  t* = 22/53  active=[5, 48]
+      straddles: (5,48) s=53 D=4 slack=3 mixed  MATCH
+  K_2(13) {1..12,26}           M =     2/27  t* = 2/27  active=[1, 26]
+      straddles: (1,26) s=27 D=2 slack=1 mixed  MATCH
+  K_3(13) {1..12,39}           M =     3/40  t* = 3/40  active=[1, 39]
+      straddles: (1,39) s=40 D=3 slack=2 both-odd  MATCH
+  K_4(13) {1..12,52}           M =     4/53  t* = 4/53  active=[1, 52]
+      straddles: (1,52) s=53 D=4 slack=3 mixed  MATCH
+
+== (B) the fractional crossing F_{5/2}(13) = {1..11,13,30} ==
+  PREDICTION (registered pre-run): M = 3/41, straddle (11,30)
+  F_{5/2}(13) {1..11,13,30}    M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+
+== (C) the 4/55 single-far candidates {1..11,13,x}, x pairs to 55 ==
+  x=42                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  x=44                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  x=46                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  x=48                         M =     4/53  t* = 22/53  active=[5, 48]
+      straddles: (5,48) s=53 D=4 slack=3 mixed
+  x=50                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  x=52                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  x=54                         M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+  (binder-gate closure predicts none hits 4/55)
+
+== (E) odd-layer defect sweep (ρ-antisymmetric flips) ==
+  AP-14: 56 defect families; M range [1/13, 1/7]; min at [(13, 15), (13, 17), (13, 19), (13, 21), (13, 23), (13, 25), (13, 27), (13, 29)]; below-floor count = 0
+  GW-14: 56 defect families; M range [1/13, 1/7]; min at [(13, 25)]; below-floor count = 0
+
+== (E2) even-layer defect sweep + the Hamming-1 flip spectrum ==
+  AP-14: 144 even-defect families (window e' ≤ 60); min M = 1/14; in-gap: NONE
+      spectrum bottom: [('1/14', 1), ('3/41', 1), ('2/27', 1), ('4/53', 1), ('1/13', 1), ('2/25', 3), ('3/37', 1), ('1/12', 20)]
+  GW-14: 138 even-defect families (window e' ≤ 60); min M = 3/41; in-gap: NONE
+      spectrum bottom: [('3/41', 1), ('2/27', 1), ('4/53', 1), ('1/13', 1), ('3/37', 1), ('1/12', 20), ('4/47', 1), ('2/23', 2)]
+  TAIL (exact, all e' > 60): for the (12→e') / (24→e') defect the
+  12-duty forces e' ∈ 12Z (else t=1/12 gives M = 1/12): the full
+  infinite tail is the F-ladder m/(12m+5) ≥ 3/41; other-even defects
+  keep their duties inside the window — windowed data honest as such.
+  control {1..11,13} (12 speeds) M =     1/12  t* = 1/12  active=[1, 11, 13]
+      straddles: (1,11) s=12 D=1 slack=2 both-odd; (11,13) s=24 D=2 slack=4 both-odd
+
+== (E3) cross-parity defect sweeps (completing windowed Hamming-1) ==
+  AP-14: 216 cross-parity defect families; min M = 2/27; floor-hits: none; in-gap: NONE
+      spectrum bottom: [('2/27', 1), ('4/53', 1), ('1/13', 22), ('2/25', 4), ('1/12', 8), ('4/47', 1), ('2/23', 6), ('1/11', 23)]
+  GW-14: 209 cross-parity defect families; min M = 1/13; floor-hits: none; in-gap: NONE
+      spectrum bottom: [('1/13', 1), ('4/51', 1), ('2/25', 21), ('1/12', 8), ('2/23', 2), ('4/45', 1), ('1/11', 23), ('3/32', 1)]
+
+== (F) the mod-6 mechanism probe ==
+  F_2(13) (N≡1 mod 6, ties)    M =     1/14  t* = 1/14  active=[1, 13]
+      straddles: (1,13) s=14 D=1 slack=0 both-odd  [floor exactly]
+  F_2(9) = {1..7,9,16} (N≢1)   M =     2/19  t* = 7/19  active=[3, 16]
+      straddles: (3,16) s=19 D=2 slack=9 mixed
+  (n=10 floor is 1/10 = 0.1; F_2(9) straddle shows the non-tie mechanism)
+
+Done.

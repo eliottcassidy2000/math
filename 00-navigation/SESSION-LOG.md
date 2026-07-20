@@ -1,3 +1,26 @@
+## mac-mini-2026-07-19-S124 -- DUTY QUANTIZATION + THE MEASURED HAMMING-1 FLIP SPECTRUM (HYP-7970 RESOLVED): the F-ladder's integrality IS the covering duty (F_{5/2}={1..11,13,30} pre-registered prediction REFUTED: M=1/12 because 12 does not divide 30 frees t=1/12 -- rung quantization = duty quantization; deep well = duty-STACKING 182=lcm(13,14), covering-min = first rung of the stacked progression) + the complete windowed Hamming-1 flip spectrum of BOTH tight families (~830 exact families + exact 12-duty tails): floor-hits = EXACTLY each other (AP<->GW via 12<->24, the tight locus is a Hamming-1 connected PAIR), gap (1/14,3/41) EMPTY at Hamming-1, softest flip 3/41 (delta_1 = 1/574), odd sector gapped at 1/13 -- the metagraph's H=1+2^d table now has its measured M-side analog + the 4/55 single-far candidates x in {42..54} refereed independently (12|x dichotomy: 4/53 or 1/12, never 4/55)
+
+Owner: keep going, next lead, small leads, sharpen reframes, challenge assumptions creatively.
+Method notes: instrument-validation gate passed FIRST (6/6 canon controls exact: F_2/F_3/F_4,
+K_2/K_3/K_4); one pre-registered prediction killed by the referee and converted into the
+duty-quantization frame; MISTAKE-183 grep-first discipline caught my S123-close c/(13c+2)
+sketch as already-superseded (opus-S395 m/(12m+5)) BEFORE re-deriving it as new. mod-6 probe:
+F_2(9) non-tie mechanism = beatability at t=7/19 via the MIXED straddle (3,16) slack 9 (the
+beat channel is the mixed-parity sector -- consistent with the S123 parity frame). Sector
+anisotropy: odd->odd defects gapped at 1/13 (the rho-antisymmetric stiff sector), all soft
+modes (3/41, 2/27, 4/53) touch the even layer. Scope honest: Hamming-1 local rigidity,
+finite windows (exact tails only for duty-bearing defects); Hamming>=2 and other shapes stay
+with the walls. THREE SMALL LEADS FILED (backlog S124): cross-N softest-flip law with closed
+form 1/((N+1)(3N+2)); the Hamming-2 duty-trading shell (= where any non-single-far 4/55
+realizer must live -- the substantive one); duty-assignment formalization (Lean-shaped).
+
+Prompt (owner): keep going, run another session on the next lead, keep looking for new small
+leads and sharpening reframes, challenge assumptions creatively
+
+FILES: HYP-7970 (RESOLVED, full data), reflection duty-quantization-and-the-measured-hamming1-
+flip-spectrum-macmini-S124, script+out lrc14_dyadic_tower_ladders_macmini_S124, backlog S124
+lead (3 items), results INDEX. -> all
+
 ## opus-2026-07-19-S403 -- CREATIVE DFS, THREE SPARKS TO VERDICT IN ONE SESSION (owner: depth-first connection pursuit with concurrent hypothesis investigation): (1) HYP-7970 THE CF ACTIVE-LEG LAW, CONFIRMED corpus-wide -- at every tested PINCHED maximizer t* = a/q, a straddling leg is a CONVERGENT DENOMINATOR q_m of a/q and D = |q_m a - p_m q|*(s_pair/q): the determinant IS the CF remainder of the active convergent; the ladder m=3..6 is ONE convergent (leg 5) at growing remainder; cross-N holds (3/59 leg 5, 4/127 leg 7, 4/247 leg 7); shallow non-pinched maximizers properly exempt; (2) HYP-7975 the S402 gridmax lever answered NEGATIVE-INFORMATIVE: G*0(11) FILLS the window with the spectrum's own rung values (2/27, 3/41, 4/53, 4/55, ... realized, mostly by the AP tuple (1..11) mod q) -- the rung ladder is SELF-SIMILAR one level down, and the finite-list question genuinely needs Conj 1.5 or the CF frame; (3) HYP-7980 the Singer pole (PG(2,13), boxeph-S110's untouched lead) is GENERIC-LOOSE, not anti-extremal: M(Singer mod 183) = 9/47 = 0.1915, BELOW the random median 0.2035 -- the poles metaphor survives qualitatively, has no quantitative M-axis
 
 Owner: explore past threads DFS for inspiration, propose new hypotheses, investigate
