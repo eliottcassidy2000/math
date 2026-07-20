@@ -1,0 +1,17 @@
+controls: AP13 improper mod 2674, 1337, 9359  OK (GW analogous, spot-checked)
+
+(A) x14 gate at p=191, min-conflicts (resolving S136's undecided):
+  admit: 3/15   (greedy in S136: 1/25)
+
+(B) x7 gate at p=191, min-conflicts:
+  admit: 2/15
+
+(C) x49 refinement of the x7 witnesses at p=191:
+  refinement admit: 2/2
+
+LADDER UPDATE (one-sided where search): p=43: every rung soft (S135-S137).
+p=191 (this run): x14 3/15, x7 2/15, x49-refine 2/2.
+If x14/x7 admit recovers under min-conflicts, S136's collapse was SEARCH
+hardness, not existence; if the x49 refinement fails where x7 succeeds, the
+cage is localized at the second 7-rung at large p -- the |S| experiment's target.
+DONE.

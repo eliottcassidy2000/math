@@ -7,6 +7,12 @@ FILES: HYP-8010, reflection four-wild-constructs-lagrange-deformation-staircase-
 partitions-opus-S408, script + frozen out (lrc_wild_constructs). -> all
 
 ---
+## boxeph-2026-07-19-S138 -- min-conflicts at p=191 (HYP-8025): ×14 3/15, ×7 2/15, ×49-refine 2/2 ⟹ bottleneck = the FIRST 7-rung at large p; + THE GATE SPECTRUM (improperness functor I(k,Q,θ), M = its phase boundary, banded-CRT slaving, first-rung collapse conjecture)
+
+- **STRONGER SEARCHER (min-conflicts: uncovered-scale pick + max-gain repair + walk + restarts; witnesses verified):** p=191: ×14 admit 3/15 (greedy 1/25 — partial recovery, access still hard); ×7 2/15; ×49 refinement 2/2. With p=43 all-soft: the thinning CONCENTRATES at the sea→tower boundary (first 7-rung) as p grows; inside the tower the AP-fiber slaving keeps refinement cheap. Prediction for death-star |S|-per-height: collapse at height 1, plateau after — S137's "between ×7 and ×49" expectation corrected by data.
+- **CONSTRUCTS (reflection the-gate-spectrum-...-S138):** (1) I(k,Q,θ) unifies certificate rungs + level-1 seas + tower gates + n=12 gap program; (2) M(V) = the PHASE BOUNDARY of I (rung ladder = its discrete spectrum; rung-quantization = boundary on the D/s grid); (3) banded-CRT correspondence: density exactly 1/7 at every gate, AP fibers (diff p mod c): 1-of-7 / 2-of-14 / 7-of-49 — apex-7 = singleton fiber; (4) FIRST-RUNG COLLAPSE conjecture (Z_p(1)/(Z_p(0)·7^13) → 0, higher ratios bounded); (5) service-capacity program: the cage as a first-rung capacity-counting theorem in p (cross-prime counting ruled out by S136).
+- **FILES:** HYP-8025; lrc14_minconflicts_p191_boxeph_S138.py + .out; reflection.
+
 ## boxeph-2026-07-19-S137 -- the ×49 GATE LAW at p=43 (HYP-8010): 7-of-49 slaving = the 7 lifts of the ×7-forced class; ×7 admit 20/20, ×49 refinement 20/20, random 0/6000 -- second 7-rung optimization-soft, randomness-dead; cage funnels to 7-power layers AT LARGE p
 
 - **LAW:** Q=49p, band ±(7p−1)/2 (1/7 scale-free); pure-49 scales = ±3-window spread at 49 + some-7-mult inherited; mixed = 7-of-49 slaving, the 7 allowed c49 = an AP (diff p mod 49) = the lifts of the ×7-forced c7. Tower semantics: ×7 fixes the skeleton (1-of-7, zero freedom), ×49 = its refinement question.
