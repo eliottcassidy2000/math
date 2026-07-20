@@ -91,7 +91,7 @@ re-reduced (degree ≤ 3, symmetric forms, …) — and it fell to an explicit d
 
 Dixmier asks: is every endomorphism an automorphism? The repo's analog objects:
 
-> **Q (HYP-8070(d), finite and checkable):** call a map φ on the n-runner metagraph G_n an
+> **Q (HYP-8090 (ex-8070, ceded to kps-c97 first-push)(d), finite and checkable):** call a map φ on the n-runner metagraph G_n an
 > *H-endomorphism* if it is induced by a flip-substitution rule (tiling-model polynomial
 > map) and preserves the Rédei count H's parity layer structure. Is every H-endomorphism of
 > G_n an automorphism at n = 4, 5? (Both sides finite; a referee enumerates rule-induced
@@ -111,7 +111,7 @@ canon carries it as "owner-supplied, machine-verified exact." If an attribution 
 add it to this file and the INDEX entry.
 
 **Files:** `04-computation/jacobian_counterexample_referee_macmini_S129.py` (+ frozen .out).
-**Cross-links:** HYP-8070; HYP-8015 (σ-descent), HYP-7960 (deficit ties = center), LEM-020,
+**Cross-links:** HYP-8090; HYP-8015 (σ-descent), HYP-7960 (deficit ties = center), LEM-020,
 HYP-7965 (mirror palindrome), THM-1142/724 (the rigidity statements), THM-867/868 (tie-split
 walks), boxeph-S130 rule 3 (type the residual), opus-S399 §3 (triage law), kps-c96 (the
 constructed refutation, same-day precedent).
