@@ -1,0 +1,63 @@
+==============================================================================
+PIECE 1 -- the radial Liouville step: Psi == 0 => p == 0 for REAL p
+==============================================================================
+  h(t) := int_0^inf e^{-v}/(1 - t p(v)) dv.  Psi == 0 (THM-1665) means h == 1.
+  For REAL p of degree D>=1 the boundary-value JUMP across real t>0 is
+     h(t+i0) - h(t-i0) = (2 pi i / t) * sum_{v: p(v)=1/t} e^{-v}/|p'(v)|,
+  each term POSITIVE.  h == 1 (analytic, single-valued -- the sector opening
+  pi(1+D) > pi wraps both boundary values) forces the jump = 0, hence NO v with
+  p(v) = 1/t and p'(v) != 0, for all large 1/t.  A nonconstant polynomial is
+  unbounded, contradiction.  So p is constant, and L(p)=p=0 => p==0.  QED (real p).
+
+  Numerical witness of the positive jump density  D(x) = sum_{p(v)=x} e^{-v}/|p'(v)|:
+            p(v)   x=value      roots v>=0 of p=x  jump density D(x)
+             v-1       2.0      [np.float64(3.0)]           0.049787
+             v-1       5.0      [np.float64(6.0)]           0.002479
+        v^2-3v+1       2.0    [np.float64(3.303)]           0.010201
+        v^2-3v+1       5.0      [np.float64(4.0)]           0.003663
+             v^2       2.0    [np.float64(1.414)]           0.085955
+             v^2       5.0    [np.float64(2.236)]           0.023899
+  D(x) > 0 wherever p hits x with p' != 0  =>  h != const  =>  no real nullcone p.
+
+  Exhaustive check: NO real p (deg<=4, coeffs in [-3,3]) with L(p^m)=0 for m=1..12,
+  other than p == 0:
+    tested 16800 nonzero real polynomials; L-nullcone members found: 0
+
+==============================================================================
+PIECE 2 -- cross-shell coupling: the parity lemma and the shell structure
+==============================================================================
+  CT_w(Lambda_s^m) = sum over balanced m-tuples of s^{(sum|k_i|)/2} prod lambda_{k_i}.
+  PARITY LEMMA: sum|k_i| == sum k_i (mod 2) = 0, so the s-power is ALWAYS an integer.
+  => E[P^m] never sees a half-integer moment; the 'half-shell' worry is a red herring.
+
+  charges       [-1, 0, 1]: balanced tuples with odd sum|k| (m<=5): 0  (parity lemma holds)
+  charges [-2, -1, 0, 1, 2]: balanced tuples with odd sum|k| (m<=5): 0  (parity lemma holds)
+  charges       [-3, 0, 3]: balanced tuples with odd sum|k| (m<=5): 0  (parity lemma holds)
+
+  THE SHELL DECOMPOSITION.  E[P^m] = sum_j L( s^j * c_j(m) ) where j = (sum|k|)/2 is
+  the CHARGE-DEGREE and c_j(m) collects prod lambda_{k_i} over balanced tuples with
+  that charge-degree.  For SPAN 2 (charges {-1,0,1}) only j-pairs occur:
+      E[P^m] = sum_j  m!/(j!^2 (m-2j)!)  L( s^j (lam1 lam_{-1})^j lam0^{m-2j} ).
+  With CONSTANT lambdas this DECOUPLES (THM-1600: m=1 => lam0=0, then rs=0). Check:
+   (lam1,lam0,lam-1)                     E[P^m], m=1..6  nullcone?
+     ([1], [0], [1]) [Fraction(0, 1), Fraction(2, 1), Fraction(0, 1), Fraction(12, 1), Fraction(0, 1), Fraction(120, 1)]      False
+     ([1], [1], [1]) [Fraction(1, 1), Fraction(3, 1), Fraction(7, 1), Fraction(25, 1), Fraction(81, 1), Fraction(331, 1)]      False
+     ([1], [0], [0]) [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]       True
+    ([2], [-1], [3]) [Fraction(-1, 1), Fraction(13, 1), Fraction(-37, 1), Fraction(505, 1), Fraction(-2281, 1), Fraction(32581, 1)]      False
+
+  WHERE CROSS-SHELL COUPLING FIRST BITES.  It is NOT parity (always integer shells).
+  It is that at each m, E[P^m] = sum_j L(s^j c_j) is a SINGLE number mixing all
+  charge-degrees j -- no per-shell separation at fixed m.  Separation must come from
+  varying m.  The TOP shell (all charges +-k_max) has the fastest-growing moment
+  (m k_max/2)!, so it dominates for large m: this is the shell-descent handle.
+  span          charges   top-shell moment growth in m
+     2       [-1, 0, 1]          (m*kmax/2)! = (1m/2)!
+     3 [-2, -1, 0, 1, 2]          (m*kmax/2)! = (2m/2)!
+     4       [-3, 0, 3]          (m*kmax/2)! = (3m/2)!
+
+SUMMARY
+  PIECE 1 (HYP-8350): CLOSED for real p by the jump argument -- no nonconstant real p
+  is in the L-nullcone, so the charge-0/radial layer of GMC(2) closes for Hermitian P.
+  PIECE 2 (HYP-8470): the shells are ALL INTEGER (parity lemma), span-2 decouples
+  (THM-1600), and the genuine coupling is the fixed-m mixing sum_j L(s^j c_j), with
+  the top shell (m kmax/2)! the descent handle. Framed, not closed.

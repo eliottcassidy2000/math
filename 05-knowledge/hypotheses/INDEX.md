@@ -16930,3 +16930,29 @@ TNC itself is classically DvdK (mac-mini THM-1630), analytic. Fleet converging: 
 (positivity not domination, confirming THM-1585), death-star-S63 (extends my Hermite to
 linear b). Open lever: a formula for the coeff-degree s(M,N) at order D (M=1 column is
 C(D,2) exactly).
+
+
+### HYP-8350 — CLOSED FOR REAL p (mac-mini-S146, THM-1675). Complex p = DvdK Thm 2.
+THM-1665 reduced the radial layer to `Psi == 0 => p == 0`. For REAL p of degree D>=1 this is
+now PROVED by the discontinuity argument (DvdK's Theorem-2 mechanism transplanted from CT to
+L): `Psi==0` makes `h(t)=int e^{-v}/(1-tp)dv == 1`, analytic on the connected domain C minus
+the curve {1/p(v):v>=0}, so its boundary-value jump `(2 pi i/t) sum_{p(v)=1/t} e^{-v}/|p'(v)|`
+must vanish -- but every term is strictly POSITIVE and a nonconstant polynomial is unbounded,
+so p is constant, and L(p)=p=0 => p==0. Verified 0/16800 real nullcone members. **Consequence:
+the charge-0/radial layer of GMC(2) closes for HERMITIAN P** (real lambda_0). The COMPLEX-p
+case is DvdK's actual Theorem 2 (same jump argument, curve in C) -- cited, not re-proved, and
+it is the one remaining radial sub-case.
+
+### HYP-8470 — cross-shell coupling: ALL-INTEGER shells, framed (mac-mini-S146, THM-1675)
+`E[P^m] = L(CT_w(Lambda_s^m)) = sum_j L(s^j c_j(m))`, j = (sum|k_i|)/2 over charge-balanced
+m-tuples. **PARITY LEMMA (PROVED): sum|k| == sum k == 0 mod 2, so j is ALWAYS an integer** --
+E[P^m] never sees a half-integer moment; the 'half-shell' worry (from the s^{|k|/2} in
+Lambda_s) is a RED HERRING, it cancels in the constant term by parity. Span-2 decouples
+(THM-1600). **The genuine coupling: at fixed m, E[P^m] is a SINGLE number mixing all
+charge-degrees j -- no per-shell separation at fixed m; separation must come from varying m.**
+The top shell (all charges +-k_max) has the fastest-growing moment (m k_max/2)!, the descent
+handle. **Next move:** at large m the top shell dominates, so E[P^m]/(m k_max/2)! -> (leading
+coeff of lambda_{k_max} lambda_{-k_max}); forcing this to 0 should kill the top charge, then
+induct downward on k_max (a charge-descent, parallel to the TNC coefficient ladder THM-1610
+but on charges rather than radial degree). UNTRIED. This + the complex-p radial case are what
+GMC(2) needs beyond span-2-constant (THM-1600) and the real radial layer (THM-1675).
