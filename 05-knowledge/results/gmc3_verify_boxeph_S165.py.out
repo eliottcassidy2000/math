@@ -1,0 +1,12 @@
+P has 10 monomials, degree 4
+m=1: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(2, 1), Fraction(0, 1)) (predict 2^m m! = 2)
+m=2: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(8, 1), Fraction(0, 1)) (predict 2^m m! = 8)
+m=3: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(48, 1), Fraction(0, 1)) (predict 2^m m! = 48)
+m=4: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(384, 1), Fraction(0, 1)) (predict 2^m m! = 384)
+m=5: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(3840, 1), Fraction(0, 1)) (predict 2^m m! = 3840)
+m=6: E[P^m] = (Fraction(0, 1), Fraction(0, 1)) ; E[Z P^m] = (Fraction(46080, 1), Fraction(0, 1)) (predict 2^m m! = 46080)
+VERIFIED: E[P^m] = 0 and E[Z P^m] = 2^m m! for m = 1..6: True
+
+NOTE: the engine E[U^k] = (1/2)_k and (1+x)^{-1/2} is the repo's
+FIBER-FRACTION/Wallis family — fifth domain (staircase cover, why-pi,
+S162 quarter law, ...). GMC(3) FALSE; GMC(N) false for N >= 3; GMC(2) open.

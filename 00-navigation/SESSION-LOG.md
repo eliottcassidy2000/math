@@ -132,6 +132,15 @@ FILES: THM-1490, HYP-8300, 2 scripts + outs. -> all (SHORT VERSION FOR THE FLEET
 - GMC(2) EVIDENCE=TRUE: deg≤3 search (532 kernel elements, 0 counterexamples); homogeneous GMC(2) proven (Zhao Cor 4.4); non-homog is the open frontier; GMC(2)⟹JC(2) (true) so a proof upgrades the repo's JC(2) cage.
 - NO-POLE REFORMULATION: GMC(P) ⟺ E[Qe^{tP}] polynomial (no pole) ∀Q; counterexample E[Ze^{tP}]=1/(1−t), pole at t=1. Resonance: chi²₁ EGF (1+x)^{−1/2} = repo's fiber-fraction/Wallis constant.
 - FILES: reflection gaussian-moments-the-explicit-failing-mathieu-space-and-why-gmc2-resists-S61e; scripts gmc3_verify, gmc_mechanism_gmc2, gmc2_real_search (+outs); HYP-8330.
+## boxeph-2026-07-20-S165 -- GMC(3) COUNTEREXAMPLE VERIFIED EXACTLY (m<=6; clean form (1+Z)(W-(4+2Z)U)); the engine = THE FIBER FRACTION (fifth domain); GMC(2) descent: no-go evidence in the radial family (HYP-8320)
+
+**Owner:** work the Gaussian Moment Conjecture at N = 2, 3, 4 from the supplied counterexample.
+
+- GMC(3) verified exactly (complex-rational Wick, m = 1..6): E[P^m] = 0, E[ZP^m] = 2^m m!; rederived clean normalization (paste garbles identified); GMC false N >= 3; GMC(2) = the surviving frontier (JC_2 analog).
+- ENGINE IDENTIFIED: E[U^k] = (1/2)_k + (1+x)^{-1/2} = the repo's Wallis/fiber-fraction family — fifth domain.
+- GMC(2): closed-form moment formula for the radial family (validated); bounded search finds no vanishing point; mechanism: radial ZW makes factorial weights m-dependent, breaking the Pochhammer collapse — dim-2 no-go pattern again (THM-1365 rhyme).
+- Ledger: Gaussian-Mathieu witness EXISTS now; polynomial VC/IC witnesses still open — the Mathieu worlds split.
+- Handoffs: analytic lam = 0 no-go; richer N=2 families; minimality (deg 4 at N=3); GMC(4) sharpenings.
 
 ## death-star-2026-07-20-S61d -- 3/8 mass at K8 CONFIRMED (boxeph handoff) + Babai-Cameron 7.4=0-at-every-odd-n CEDED to opus/kp/klein (MISTAKE-199 3rd collision this cluster) (confirms HYP-8295)
 

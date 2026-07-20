@@ -1,0 +1,7 @@
+GMC(2) radial-family search (bounded: 60 restarts, m<=5 fit):
+best objective 2.039e+00 ; |lam| = 0.1783
+holdout |E[P^m]|/m! at m=6,7,8: ['1.340e+01', '7.272e+01', '2.908e+02']
+VERDICT: best-fit stays far from zero and/or holdout explodes => within the
+natural radial family P=(1+Z)(W-(b+cZ)(mu+lam*ZW)) the mechanism does NOT
+descend to N=2 (numeric evidence; m-dependent (m-k+j)! weights break the
+(1/2)_k collapse). Analytic no-go = handoff.
