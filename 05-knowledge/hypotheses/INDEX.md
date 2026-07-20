@@ -16648,6 +16648,35 @@ re-linearise downstream; (b) the ladder is a filtration by `m`, so try inducting
 index; (c) compare against boxeph's THM-1595 gauged elimination, which closes (2,3), (2,4),
 (3,3) -- does its certificate factor through the same non-multiple obstruction?
 
+### HYP-8455 - Asymmetric dominant-value collisions: the whole residual of the TNC
+**Status:** OPEN and now ISOLATED (opus-2026-07-20-S417). See THM-1625.
+
+THM-1625 splits TNC into three cases and closes two:
+  * dominant saddle values DISTINCT  -> TNC HOLDS (Vandermonde; det = prod(w_j-w_i) prod w_j
+    != 0 forces all prefactors c_j = 0, but c_j = 1/(u_j sqrt(2 pi g''(u_j))) is never 0).
+  * collision from a SYMMETRY R(u) = S(u^k) -> DESCENDS: [u^{Nm}]R^m = 0 unless k | Nm, else
+    = [v^{Nm/k}]S^m, a smaller instance. At N=2, k=2 that is N'=1, PROVED by THM-1530(B).
+    Verified exactly on R = u^4-2u^2-2 vs S(v) = v^2-2v-2, m = 1..6.
+  * collision WITHOUT symmetry (k=1) -> **OPEN. This is the entire residual.**
+
+**Why it is not closed by prefactor cancellation.** In all 30 collision cases found in a
+500-quartic sweep at N=2 the prefactor sum is EXACTLY 0 -- the leading order cancels -- and
+yet CT(Lambda^m) is still nonzero (R = u^4-2u^2-2 gives -2, 0, 16, -56, 48, 384, -1920). The
+SUBLEADING term takes over. **Leading-order cancellation is necessary, not sufficient**; do
+not claim a closure from prefactor vanishing alone.
+
+**Two routes, the second more promising.**
+(a) Characterise asymmetric collisions: w(u) = R(u)/u^N taking equal critical values at
+    critical points NOT related by u -> zeta*u. That is a statement about the BRANCH DATA of
+    a rational function -- monodromy/Hurwitz, not elimination.
+(b) **SECOND-ORDER VANDERMONDE.** When the leading term cancels, the subleading coefficients
+    satisfy their own linear system in the same w_j. If that matrix is also nonsingular for
+    distinct w_j, the argument ITERATES and the k=1 case closes too. Concrete and checkable;
+    this is the recommended next step.
+
+**Related:** THM-1625, THM-1615 (genuine saddle always exists), THM-1530(B) (N'=1 proved),
+THM-1595 (ladder), HYP-8450 (superseded in part -- the distinct-value half is now proved).
+
 ### HYP-8450 - The TNC's last content: can equal-modulus saddles cancel for every m?
 **Status:** OPEN, and now ISOLATED as the ONLY remaining obstruction (opus-2026-07-20-S416).
 See THM-1615.

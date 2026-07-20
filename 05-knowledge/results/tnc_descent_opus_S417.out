@@ -1,0 +1,18 @@
+ARE ALL DOMINANT-VALUE COLLISIONS CAUSED BY A SYMMETRY R(u) = S(u^k)?
+  collision cases: 30   their k-fold symmetries: [1, 2, 4]
+  ALL have k >= 2 (a genuine symmetry)? False
+  examples: ['u**4 - 2*u**2 - 2', 'u**4 - u**2 - 2', 'u**4 - 2', 'u**4 + u**2 - 2', 'u**4 + 2*u**2 - 2']
+
+THE DESCENT.  If R(u) = S(u^k) then R^m is a polynomial in u^k, so
+  [u^{Nm}] R^m = 0 unless k | Nm; and when k | Nm it EQUALS a constant term of a
+  SMALLER instance in v = u^k.  Verify on R = u^4 - 2u^2 - 2, N=2, k=2, S(v)=v^2-2v-2:
+   m=1: [u^{2m}]R^m = -2   [v^m]S^m = -2   MATCH
+   m=2: [u^{2m}]R^m = 0   [v^m]S^m = 0   MATCH
+   m=3: [u^{2m}]R^m = 16   [v^m]S^m = 16   MATCH
+   m=4: [u^{2m}]R^m = -56   [v^m]S^m = -56   MATCH
+   m=5: [u^{2m}]R^m = 48   [v^m]S^m = 48   MATCH
+   m=6: [u^{2m}]R^m = 384   [v^m]S^m = 384   MATCH
+
+  => the N=2 instance with k=2 symmetry IS the N'=1 instance Lambda' = v^{-1}S(v),
+     and N'=1 (min exponent -1) is PROVED by THM-1530(B) via Lagrange-Burmann.
+     So symmetric collisions DESCEND to settled cases.

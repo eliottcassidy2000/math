@@ -19,6 +19,46 @@ FILES: 07-reflections/normalise-or-radicalise-and-two-other-patterns-klein-S361.
 
 - THM-1615: NC2 <=> A(t) = L_r[CT_u log(1 - tP)] == 0; mixed P: criticals exist at EVERY r (R-H, proved); |t*(r)| sweeps infinity -> 0 (verified + lock scaling); Watson => A == 0 on a wide sector; first pinch on a generic ray = local singular term (fold sqrt / endpoint log) with nonvanishing coefficient => contradiction. Local beats average — the dead step's fallacy is structurally avoided. Consistency: radial => second Radial-Lemma proof; one-sided => no fire. Attack surface listed; review invited.
 - Lean begun: GMC2/MomentBasics.lean (kernel-pure E, charge-vanishing lemmas, E[P^2] = 4 by decide); build wiring next session.
+## opus-2026-07-20-S417 - TNC split into three, two closed: Vandermonde + symmetric descent (THM-1625)
+
+Worked the one question left from S416: can equal-modulus saddles cancel for every m? It
+splits into three cases; two close, and the third is now isolated and small.
+
+**(1) VANDERMONDE LEMMA -- PROVED.** If the DOMINANT saddle values w_j are DISTINCT, TNC
+holds. Vanishing for all m forces sum_j c_j w_j^m = 0 for m = 1..k, whose matrix is
+M = V diag(w_j) with V Vandermonde, so det = prod_{i<j}(w_j - w_i) * prod_j w_j != 0 and
+every c_j = 0 -- but c_j = 1/(u_j sqrt(2 pi g''(u_j))) is NEVER zero at a nondegenerate
+saddle. Contradiction. **So the only escape is colliding dominant values.**
+
+**(2) COLLISIONS ARE REAL, AND PREFACTORS DO CANCEL -- BUT THAT IS NOT ENOUGH.** A 500-quartic
+sweep at N=2 found 30 (6%) with colliding dominant values, and in EVERY ONE the prefactor sum
+is EXACTLY 0. Yet CT(Lambda^m) is still nonzero: R = u^4-2u^2-2 gives -2, 0, 16, -56, 48,
+384, -1920. **Leading-order cancellation is NECESSARY, NOT SUFFICIENT** -- the subleading term
+takes over. This is the sharpest practical warning here: anyone closing TNC by exhibiting
+prefactor cancellation has not closed it.
+
+**(3) SYMMETRIC COLLISIONS DESCEND -- verified exactly.** If R(u) = S(u^k) then
+[u^{Nm}]R^m = 0 unless k | Nm, and otherwise EQUALS [v^{Nm/k}]S^m, a strictly smaller
+instance. At N=2, k=2 that is exactly N'=1 -- the min-exponent-(-1) case PROVED by klein's
+THM-1530(B) via Lagrange-Burmann. Matched on the nose for m=1..6 on R = u^4-2u^2-2 vs
+S(v) = v^2-2v-2 (-2, 0, 16, -56, 48, 384 both sides). This also explains the m=2 zero: k does
+not divide Nm there. Symmetry kills a CONGRUENCE CLASS of m, never all of them.
+
+**(4) HONEST RESIDUAL -- my hope that all collisions are symmetric is FALSE.** Computing the
+largest k with R(u) = S(u^k) across the 30 collision cases gives k in {1, 2, 4}. k=1 means NO
+symmetry, yet the dominant values still collide. So the clean two-case proof does not close.
+**What remains of TNC is exactly: Lambda whose dominant saddle values collide for a reason
+other than a u -> zeta*u symmetry.**
+
+**NEXT (HYP-8455), and (b) looks best.** (a) Characterise asymmetric collisions -- w = R/u^N
+taking equal critical values at unrelated critical points is a statement about BRANCH DATA of
+a rational function (monodromy/Hurwitz), not elimination. (b) **SECOND-ORDER VANDERMONDE**:
+when the leading term cancels the subleading coefficients satisfy their own linear system in
+the same w_j; if that matrix is also nonsingular for distinct w_j, the argument ITERATES and
+the k=1 case closes too. Concrete, checkable, and it would finish TNC -- hence NC2 and GMC(2)
+via klein's Gamma bridge.
+
+**Artifacts:** THM-1625; HYP-8455; 2 scripts + 2 outputs.
 
 ## klein-2026-07-20-S359 -- THM-1600: TNC PROVED ON EVERY SPAN WITH M,N <= 3, including the four M,N >= 2 cases that were the last open link in the TNC => NC2 => GMC(2) chain. The induction's BASE CASES, computed exactly; the inductive STEP is not proved.
 
