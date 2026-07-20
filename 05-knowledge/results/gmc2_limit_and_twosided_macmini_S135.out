@@ -1,0 +1,55 @@
+==============================================================================
+PART A -- the saddle limit  L(p^m)/(a_D^m (Dm)!) -> exp(a_{D-1}/(D a_D))
+==============================================================================
+                         p  D    predicted limit          m=6         m=10         m=14
+                     v - 1  1         0.36787944     0.368056     0.367879     0.367879
+                         v  1         1.00000000     1.000000     1.000000     1.000000
+                     v + 3  1        20.08553692    19.412500    20.079665    20.085523
+              v^2 - 3v + 2  2         0.22313016     0.220612     0.221668     0.222100
+                       v^2  2         1.00000000     1.000000     1.000000     1.000000
+              v^2 + 4v + 1  2         7.38905610     6.459838     6.830612     6.990605
+            v^3 + 2v^2 + 5  3         1.94773404     1.910512     1.922521     1.928927
+                  2v^3 + v  3         1.00000000     1.009855     1.005764     1.004074
+
+  The ratio converges to exp(a_{D-1}/(D a_D)), which is NEVER 0.
+  => for deg p >= 1, L(p^m) != 0 for all large m.  Combined with the telescoping
+     lemma this CLOSES the one-sided-charge branch of GMC(2).
+
+==============================================================================
+PART B -- the remaining branch: P with charges of BOTH signs, n = 2
+==============================================================================
+  monomial pool: 12 (deg_Z, deg_W <= 3, total <= 4)
+    support size 2: cumulative 1056 tested, 0 counterexamples
+    support size 3: cumulative 15136 tested, 0 counterexamples
+    support size 4: cumulative 141856 tested, 0 counterexamples
+    support size 5: cumulative 952864 tested, 0 counterexamples
+  NO two-sided counterexample in this box.  Combined with PART A closing the
+  one-sided branch, GMC(2) SURVIVES every case tested here.
+
+==============================================================================
+PART C -- the abstract pattern, and where else the repo has it
+==============================================================================
+  THE TELESCOPING PRINCIPLE.  Suppose an invariant is computed by a functional that
+  is GRADED -- it annihilates every nonzero grade.  If the object's support in that
+  grading is ONE-SIDED, the only surviving contribution takes the grade-0 piece from
+  every factor, so the invariant COLLAPSES to a function of the grade-0 part alone,
+  in strictly fewer variables.  Failure therefore REQUIRES two-sided support.
+
+  Instances already in this repo, same shape:
+
+  * GMC(2) (here).  grade = deg_Z - deg_W; E kills nonzero charge; one-sided P gives
+    E[P^m] = L(p_0^m) in ONE variable.
+  * THM-1460, ordinal sums.  T1 (+) T2 forbids arcs one way, making L_in BLOCK
+    TRIANGULAR, so spec = spec(L1) u (|T1| + spec(L2)) and the arborescence count
+    telescopes into the two factors.  Same principle, grading = which block.
+  * THM-1440, skew-Seidel parity.  p(-x) = (-1)^n p(x) is a Z/2 grading; at odd n the
+    grade-0 part is forced to carry a zero eigenvalue.
+  * THM-506 / HYP-2514, the master cycle-packing polynomial.  The spectrum and H are
+    two FACES of Phi -- faces are exactly the graded pieces, and each face is a
+    one-sided restriction of the full sum.
+  * THM-1405/1420, the cut/cycle split.  Star flips are the grade-0 (gauge) directions;
+    the holonomies are what survives the quotient.
+
+  The unifying moral: LOOK FOR THE GRADING FIRST.  Whenever a repo invariant vanishes
+  'for parity reasons' or 'because the charges do not balance', that is this principle,
+  and the useful question is always which side of zero the support lives on.

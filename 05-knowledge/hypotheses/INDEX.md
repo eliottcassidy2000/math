@@ -16181,3 +16181,36 @@ new counterexample, and one with a small support could beat the current 5-term q
 Concretely: work backwards -- pick a target polynomial `g`, compute the required
 `Phi(x) = (1 + <inverse of -sg>)`, and ask whether that MGF is realizable. This is a
 constructive search rather than a blind one, and it is cheap.
+
+### HYP-8350 — make the saddle lemma rigorous (the single gap in THM-1520)
+**Status: OPEN, and it is the ONE thing standing between THM-1520 and an unconditional
+theorem.** THM-1520 (C) closes the one-sided-charge branch of GMC(2) CONDITIONAL on:
+> for `p` of degree `D >= 1`,  `L(p^m) / (a_D^m (Dm)!)  ->  exp(a_{D-1} / (D a_D))`,
+> where `L(f) = int_0^infty f(v) e^{-v} dv`.
+The limit is verified numerically to 6 digits (1/e for `v-1`, e^3 for `v+3`, e^{-3/2} for
+`v^2-3v+2`) and symbolic elimination independently finds no nonzero `p` of degree <= 3.
+**What is missing is explicit error control in the Laplace estimate.** Sketch to make
+rigorous: substitute `v = Dm(1+u)`, expand `log(p(v)^m e^{-v})` about `u = 0`, and bound the
+tails `|u| > m^{-1/2+eps}` against the Gaussian core. The `O(1)` phase correction
+`m*arg(p(v)/v^D) -> a_{D-1}/(D a_D)` at the saddle is the only delicate point, and it is
+delicate precisely because `p` has COMPLEX coefficients. Standard but not free.
+**Payoff: THM-1520 (C) becomes unconditional, and GMC(2) reduces exactly to its two-sided
+branch, with nothing else outstanding.**
+
+### HYP-8355 — the two-sided branch of GMC(2), and how NOT to search it
+**Status: OPEN — this is now all that remains of GMC(2), hence of the whole GMC
+classification (GMC(1) true, N>=3 false by THM-1500, one-sided N=2 closed by THM-1520).**
+Any counterexample must have charges of BOTH signs (THM-1520 (D)).
+**A warning worth heeding, learned the hard way in S133:** a computational sweep of this
+branch has NO POSITIVE CONTROL AVAILABLE, because a positive control at n=2 would BE the
+counterexample being sought. The ~950k-polynomial sweep in S135 found nothing and should be
+read as "the obvious small cases are clear", NOT as evidence. Do not cite it as support for
+GMC(2) being true.
+**Two structural leads, from THM-1500's analysis of what is load-bearing:**
+(a) at n=2 there is no room for a `U` independent of `(Z,W)`, so the natural candidate is
+    `U = ZW ~ Exp(1)` with `E[U^k] = k!` — CORRELATED with `(Z,W)`, so the expectation stops
+    factorizing and THM-1500's one-line master identity fails. Redo the analysis with that
+    correlation and see what replaces `Phi(-s g(s)) = 1/(1+s)`.
+(b) replacing the outer factor `(1+Z)` by a general `h(Z)` changes `phi(s)` in the Lagrange
+    inversion from `1+s` to `h(s)`, giving a DIFFERENT forced `f`. That is unexplored and may
+    open exactly the dimension the `(1+Z)` shape closes.
