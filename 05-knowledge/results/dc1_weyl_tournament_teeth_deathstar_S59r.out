@@ -1,0 +1,21 @@
+=== T1: the weight triple = oriented 3-cycle (A1 on C[x]) ===
+  [p,q] = 1        : True
+  [N,q] = q  (+1)  : True
+  [N,p] = -p (-1)  : True
+  => vertices {N (observer/Euler), q (wt +1), p (wt -1)}; edge signs (+,-)
+     around N and the central +1 on (q,p) = an oriented triangle = n=3 tournament.
+
+=== T2: observer +1 = hbar (classical Poisson shadow) ===
+  {p,q} = {(0, 0): 1}  (=1)
+  {H,p} = {(1, 0): -1}  (= p, wt +1... sign per convention)
+  {H,q} = {(0, 1): 1}  (= -q)
+  => same triple classically. The RHS '1' of [p,q]=1 is hbar; the observer
+     vertex (N=pq, the Euler grading) is what the symplectic PAIR gains to
+     become the n=3 TRIANGLE. observer(+1) = hbar = the S59p/q conserved +1.
+
+=== T3: Redei parity and the odd fiber ===
+  transitive T3: 1 Hamiltonian path(s) (Redei odd: 1 = 1+2*0)
+  3-cycle C3:    3 Hamiltonian path(s) (Redei odd: 3 = 1+2*1)
+  JC3 counterexample fiber over a-axis = 1 (fixed) + 2 (orbit) = 3 = ODD = Redei 1+2 (THM-1305).
+  => fiber-degree ODD is the Redei-parity shadow (NECESSARY, not sufficient:
+     odd 3 > 1 occurs at dim>=3; DC1 needs ODD + the 2D leading-form bound, THM-1345).
