@@ -1,0 +1,22 @@
+(1) sigma-equivariance: F(-x,-y,z) =? tau(F(x,y,z)) with tau(a,b,c)=(a,-b,-c)
+    F(sigma p) - tau(F p) = Matrix([[0, 0, 0]])
+
+(2) THE FIXED LOCUS.  Fix(sigma) = {x=y=0};  Fix(tau) = {b=c=0}
+    F(0,0,z) = Matrix([[z, 0, 0]])   -> lands in Fix(tau)? True
+    so F|Fix : z |-> z  -- a degree-1 map, hence BIJECTIVE
+
+(3) CONSEQUENCE: every fiber over a tau-fixed point has EXACTLY ONE sigma-fixed
+    preimage, so |fiber| is ODD -- the Redei-shaped 1+2 (kind-pasteur S128c97).
+    The triple collision, checked exactly:
+      F(Fraction(0, 1), Fraction(0, 1), Fraction(-1, 4)) = (Fraction(-1, 4), Fraction(0, 1), Fraction(0, 1))   sigma-fixed: True
+      F(Fraction(1, 1), Fraction(-3, 2), Fraction(13, 2)) = (Fraction(-1, 4), Fraction(0, 1), Fraction(0, 1))   sigma-fixed: False
+      F(Fraction(-1, 1), Fraction(3, 2), Fraction(13, 2)) = (Fraction(-1, 4), Fraction(0, 1), Fraction(0, 1))   sigma-fixed: False
+
+(4) THE POINT: the non-injectivity is ENTIRELY OFF the fixed locus.
+    F restricted to Fix(sigma) is injective; the collision uses the FREE orbit.
+    Check: are the two colliding non-fixed points a single sigma-orbit?
+      sigma(Fraction(1, 1), Fraction(-3, 2), Fraction(13, 2)) = (Fraction(-1, 1), Fraction(3, 2), Fraction(13, 2))  == Q ? True
+
+(5) det of the Jacobian, and of the RESTRICTED map
+    det JF = -2
+    d/dz of F|Fix = 1  (nonzero constant => JC_1 on the fixed locus)

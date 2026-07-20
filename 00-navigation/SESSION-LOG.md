@@ -1,3 +1,44 @@
+## opus-2026-07-20-S399 -- THM-1350 A REDUCED JACOBIAN CONJECTURE THAT DOES HOLD: the EQUIVARIANT FIXED-LOCUS JC (F|Fix(sigma) has constant nonzero Jacobian in lower dimension; dim Fix <= 1 makes it JC_1, hence TRUE unconditionally) -- and it FORCES collisions to be ODD, so an equivariant counterexample can never be a DOUBLE, minimum TRIPLE (HYP-8200)
+
+Owner: pull often, high-leverage math, and creatively produce a reduced Jacobian
+Conjecture that DOES hold. Pulling first was essential -- the repo has moved a long way
+past where I was, and working from my stale picture would have been worthless.
+WHAT THE PULL CHANGED: JC is FALSE for n >= 3 (THM-1300, owner-supplied dim-3 map,
+det JF = -2, triple collision, verified exactly), and Dixmier is false for A_n, n >= 3.
+JC_2, DC_1, DC_2 remain open. klein's PROBLEM-LEDGER-S332 marks the live boundary as
+'Aut-group (not End) conjectures SURVIVE'. So 'a reduced JC that holds' is exactly the
+right question for the current state, and the boundary is already named.
+THE REDUCED CONJECTURE, which is a theorem at low fixed dimension: for sigma/tau-
+equivariant F with det JF in C*, F maps Fix(sigma) into Fix(tau), and the restriction is
+again a polynomial map with constant nonzero Jacobian -- in dimension dim Fix(sigma). So
+when dim Fix(sigma) <= 1 it is JC_1, which is trivially true, and F|Fix is injective
+UNCONDITIONALLY. (At dim Fix = 2 it is exactly JC_2, still open.) The consequence is
+structural: all non-injectivity of an equivariant counterexample lives on FREE ORBITS,
+and none of it is visible on the fixed locus.
+VERIFIED EXACTLY on the owner's counterexample: sigma = (-x,-y,z), tau = (a,-b,-c), and
+F(sigma p) - tau(F p) = 0 symbolically. Fix(sigma) = {x=y=0} maps into Fix(tau) = {b=c=0},
+and F(0,0,z) = (z,0,0) -- the restriction to the fixed locus is the IDENTITY map. det JF
+= -2, d/dz of F|Fix = 1, the triple collision confirmed in exact rationals, and the two
+non-fixed preimages form a single sigma-orbit.
+THE FORCING, which is the part I am adding: over a tau-fixed target, sigma acts on the
+fiber, so |fiber| = #Fix(sigma|fiber) mod 2. Since F|Fix is bijective (it is the
+identity), every such fiber has EXACTLY ONE sigma-fixed preimage, hence |fiber| is ODD.
+So an equivariant counterexample can never exhibit a DOUBLE collision -- the minimum is a
+TRIPLE, realised as 1 fixed point + 1 free orbit. That is exactly the shape of the
+owner's example, and it explains why it had to be a triple rather than the simpler double
+one would naturally search for first.
+CREDIT, carefully: the sigma-equivariance and the 'Redei-shaped 1+2 fiber structure' were
+already recorded by kind-pasteur-S128c97 -- I found them in their verification script
+before writing anything, and I do not claim them. What is new here is (i) reading the
+fixed-locus restriction as a SURVIVING REDUCED JC, unconditional at dim Fix <= 1, and
+(ii) the forcing argument from bijectivity to odd fibers to collision >= 3.
+It also sits exactly on klein's boundary: what survives is the statement about the map
+that IS bijective -- on the fixed locus -- while the failure is confined to the
+endomorphism behaviour off it.
+FILES: THM-1350, script + out, HYP-8200. opus; S399.
+
+---
+
 ## death-star-2026-07-20-S59u — THE CONSOLIDATED PROBLEM LEDGER (00-navigation/PROBLEM-LEDGER.md, HYP-8185): novel-results audit across the Jacobian ecosystem + LRC + under-the-radar; 4 audit pulls; reconciled the fleet-wide 4-way collision by consolidating (credited klein-S332/kp-S128c104/mac-mini-S140)
 
 Owner: given JC disproved externally, compile novel non-obvious results on Dixmier/Poisson/Shao/Zhao/Mathieu/
