@@ -1,0 +1,42 @@
+====================================================================================
+CONFIRM r(1,2) over several generic instances
+====================================================================================
+  orders over 6 generic R: [3, 3, 3, 3, 3, 3]   -> generic r(1,2) = 3 (mode)
+
+====================================================================================
+(b) DISCRIMINANT ZERO-TEST for (1,1), (1,2), (2,2)
+====================================================================================
+
+  (M,N)=(1,1) D=2 order r=2 coeff-deg s=1
+     generic (disc!=0): P_0(0)==0? [False, False, False, False]  => P_0(0)!=0 off disc locus: True
+     double-root (disc=0): P_0(0)==0? []
+     -> {disc=0} => {P_0(0)=0} on the sample: False
+
+  (M,N)=(1,2) D=3 order r=3 coeff-deg s=2
+     [generic] nullspace dim 0 at rc=[-4, 4, 1, 3] (s off?)
+     [generic] nullspace dim 0 at rc=[-2, -3, 3, 3] (s off?)
+     [generic] nullspace dim 0 at rc=[1, 0, -3, -4] (s off?)
+     [generic] nullspace dim 0 at rc=[-3, 4, 4, -1] (s off?)
+     [generic] nullspace dim 0 at rc=[1, 0, 2, 2] (s off?)
+     [generic] nullspace dim 0 at rc=[-2, 1, -4, 2] (s off?)
+     [generic] nullspace dim 0 at rc=[2, -4, 4, 3] (s off?)
+     [generic] nullspace dim 0 at rc=[-3, -1, 3, 2] (s off?)
+     [generic] nullspace dim 0 at rc=[2, -2, 1, 4] (s off?)
+     [generic] nullspace dim 0 at rc=[-3, -3, 2, -3] (s off?)
+     [generic] nullspace dim 0 at rc=[-1, -2, 2, -3] (s off?)
+     [generic] nullspace dim 0 at rc=[2, 3, -3, -4] (s off?)
+     [generic] nullspace dim 0 at rc=[-4, -3, -2, -3] (s off?)
+     [generic] nullspace dim 0 at rc=[4, -1, 3, 4] (s off?)
+     [generic] nullspace dim 0 at rc=[-4, 0, 1, 1] (s off?)
+     [generic] nullspace dim 0 at rc=[2, -4, -2, 3] (s off?)
+     [generic] nullspace dim 0 at rc=[-4, -2, 4, 4] (s off?)
+     [generic] nullspace dim 0 at rc=[-3, 2, 4, 2] (s off?)
+     generic (disc!=0): P_0(0)==0? [False, False, False, False]  => P_0(0)!=0 off disc locus: True
+     double-root (disc=0): P_0(0)==0? [False, False, False, False]
+     -> {disc=0} => {P_0(0)=0} on the sample: False
+        HONEST NEGATIVE beyond (1,1): disc=0 but P_0(0)!=0, e.g. R=[-3, 4, 1, -2]
+
+  (M,N)=(2,2) D=4 order r=4 coeff-deg s=5
+     generic (disc!=0): P_0(0)==0? [False, False, False, False]  => P_0(0)!=0 off disc locus: True
+     double-root (disc=0): P_0(0)==0? []
+     -> {disc=0} => {P_0(0)=0} on the sample: False

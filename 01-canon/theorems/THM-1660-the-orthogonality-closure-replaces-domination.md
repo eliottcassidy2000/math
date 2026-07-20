@@ -1,5 +1,5 @@
 ---
-id: THM-1615
+id: THM-1660
 title: "THE ORTHOGONALITY CLOSURE — the GMC(2) radial layer needs no domination estimate at all, because the Gamma average turns the nullcone condition into a COMMON-ROOT question for a classical polynomial sequence, and no such sequence has a common root. (0) THE PRINCIPLE: if the radial average of the m-th moment equals (nonzero factor)·p_m(ζ) for a FIXED point ζ and a polynomial sequence (p_m) with p_0 = 1 obeying a recurrence that expresses p_{m−1} through its neighbours, then 'all moments vanish' would force ζ to be a common root of every p_m — impossible by descent to p_0 = 1. The nullcone therefore consists exactly of the elements where the prefactor degenerates, which is the ONE-SIDED locus. No asymptotics, no ℓ¹-mass comparison, no ESV saddle, no Eulerian-numbers bound. (I) DEGREE-2 INSTANCE, mine, on the {−1,0,1} stratum at M = 1: Lagrange–Bürmann on u = tφ(u) with H = log(φ/φ(0)) collapses ψ_m = (1/m)[uᵐ]φ(u)ᵐ, φ = ρa + bu + ρcu², which forces #(ρa) = #(ρc) so every term carries ρ^{2k} = r^k — ρ-FREE — giving ψ_m = (1/m)Σ_k m!/(k!²(m−2k)!)·(rac)^k·b^{m−2k}; then E_r[r^k] = k! cancels one k! and m·E_r[ψ_m] = s^m·He_m(b/s) with s = √(−2ac), He = PROBABILISTS' HERMITE. Verified exactly against the log-series at m ≤ 16 on six (a,b,c). (II) DEGREE-1 INSTANCE, mac-mini-S140's THM-1600, pushed the same day and reached independently: L((av+b)^m) = m!·aᵐ·e_m(b/a), e_m the TRUNCATED EXPONENTIAL. Same shape, different family. (III) BOTH CLOSE BY THE SAME TWO-LINE ARGUMENT: Hermite via He_{m+1} = x·He_m − m·He_{m−1}, so a common root of consecutive members descends to He_0 = 1 ≠ 0; truncated exponential via e_{n+1} − e_n = z^{n+1}/(n+1)!, so a common root forces z = 0 where e_n(0) = 1 ≠ 0. (IV) FORMALIZED: `GMC2HermiteNoCommonRoot.lean`, 12 theorems, sorry-free, no native_decide, wired into the root module and building clean under Mathlib v4.30.0. (V) CONSEQUENCE: on the CONSTANT-coefficient {−1,0,1} stratum at M = 1 the nullcone is exactly {ac = 0} = the one-sided locus — the one-sided conjecture, PROVED there, by orthogonality rather than by estimate. (VI) AND IT EXPLAINS THE DISPUTE OF THM-1585: domination was an analytic strategy for a fact whose real content is algebraic, which is why the top term's share could fall to 0.04% while the conclusion stayed true"
 status: >
   (0) The principle is a statement pattern, not a theorem; it is discharged case by case
@@ -20,7 +20,7 @@ status: >
   What is NOT claimed: GMC(2).  It is open.  This closes one stratum and supplies a
   mechanism; it does not compose to the general case.
 source: kind-pasteur-2026-07-20-S128c120 (owner: finish the GMC(2) math, then formalize; extend incoming ideas)
-renumbered: "claimed as THM-1605; renumbered to THM-1615 by first-pusher rule -- boxeph-S175 and opus-S415 both pushed THM-1605 earlier the same day. Three-way collision, mine was last."
+renumbered: "claimed as THM-1605 -> THM-1615 -> THM-1660. TWO rounds of first-pusher collision: THM-1605 taken by boxeph-S175/opus-S415; THM-1615 taken by opus-S417 (tnc-algebraic-obstruction, first-pushed 14:00) and boxeph-S177 (pinch bridge). Settled at THM-1660."
 depends_on:
   - THM-1585    # the domination step is false -- why a new mechanism was needed
 related: [THM-1600, THM-1540, THM-1530, THM-1550, THM-1515, THM-1580, THM-1590]
@@ -29,7 +29,7 @@ lean: 04-computation/lean/TournamentH7/TournamentH7/GMC2HermiteNoCommonRoot.lean
 script: 04-computation/hermite_closure_gmc2_kps_S128c120.py (+ .out)
 ---
 
-# THM-1615 — the orthogonality closure
+# THM-1660 — the orthogonality closure
 
 THM-1585 showed klein-S351's Gamma-domination step is false: the top term's share of
 `E_r[ψ_m]` falls to `0.04%`, so the mass sits at an **interior** index. The instinct is to
