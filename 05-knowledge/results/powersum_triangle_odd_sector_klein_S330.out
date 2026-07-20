@@ -1,0 +1,4 @@
+LAW HOLDS on all 28 entries; predicted row 8: [8, 28, 91, 226, 355, 277, 65, 1]
+series1 == harmonic H_n: True; series2: row-harmonic candidate exact n<=3 (29/6 reading), open n>=4
+PS_3 = T^2; PS_5 = T^2(4T-1)/3; PS_7 = T^2(6T^2-4T+1)/3  [Faulhaber verified]
+c3 = C(n,3) - sum C(s_i,2): ALL 64 (n=4) and 1024 (n=5) tournaments: True
