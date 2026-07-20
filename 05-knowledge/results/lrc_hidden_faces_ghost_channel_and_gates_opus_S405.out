@@ -1,0 +1,44 @@
+=== F1: the (N-1)-ray sits on the -1 line in BOTH frames ===
+deep well: (n-1)*a mod Q = 182  (Q-1 means == -1: True)
+  13k residues (k=1..14): [(13, -1), (26, -2), (39, -3), (52, -4), (65, -5), (78, -6), (91, -7), (104, -8), (117, -9), (130, -10), (143, -11), (156, -12), (169, -13), (182, -14)]
+  condemned (|res| < 14): 13k for k <= 13; first safe = 13*14 = 182 = n(n-1),
+  residue -14 => distance exactly 14/183 = M: the PATCH sits AT the floor.
+F_4(31): Q=127, a=55; (N-1)*a mod Q = 126 (== -1: True)
+   distance-<D elements in [1,N] u {x}: [30] (L1 predicts [30], deleted)
+F_3(19): Q=59, a=36; (N-1)*a mod Q = 58 (== -1: True)
+   distance-<D elements in [1,N] u {x}: [18] (L1 predicts [18], deleted)
+
+=== F2: the gate table across generations ===
+GW shape {1..k-2, k, 2(k-1)}: candidate gates 3|(2k+1) (June phrasing) vs k == 1 mod 6 (THM-1065):
+  k=4: M=1/4 tight:False gate3:True gate6:False
+  k=5: M=2/11 tight:False gate3:False gate6:False
+  k=6: M=1/6 tight:False gate3:False gate6:False
+  k=7: M=1/8 tight:True gate3:True gate6:True
+  k=8: M=1/8 tight:False gate3:False gate6:False
+  k=9: M=2/19 tight:False gate3:False gate6:False
+  k=10: M=1/10 tight:False gate3:True gate6:False
+  k=11: M=2/23 tight:False gate3:False gate6:False
+  k=12: M=1/12 tight:False gate3:False gate6:False
+  k=13: M=1/14 tight:True gate3:True gate6:True
+  k=14: M=1/14 tight:False gate3:False gate6:False
+  k=15: M=2/31 tight:False gate3:False gate6:False
+  k=16: M=1/16 tight:False gate3:True gate6:False
+June mod-3 phrasing exact: False;  k == 1 (mod 6) gate exact: True
+
+VERDICT: the operative slack-0 GW gate is k == 1 (mod 6) -- the June mod-3 phrasing
+(as carried in era summaries) over-predicts at k == 4 (mod 6); OPEN-Q-108's 'residue
+class mod 6' language and THM-1065's 6|(n-1) are the correct forms.  AND: this is THE
+SAME CONGRUENCE as death-star's D=3 slack-1 tower gate N == 1 (mod 6) -- the June
+sporadic-tightness gate and the July window gate are ONE congruence class.
+
+UNIFIED GATE TABLE (rung (D, slack) -> congruence gate on N = #speeds):
+  (1, 0) GW/doubling shape: N == 1 (mod 6)        [June: THM-1065 / OPEN-Q-108; verified above]
+  (1, 1) {1..N-1, N+1}    : all N (trivial row)   [M = 1/N]
+  (3, 1) F_3(N)           : N == 1 (mod 6)        [July: death-star THM-1255/1256]  <- SAME GATE as (1,0)
+  (4, 1) F_4(N)           : N == 1 (mod 30), N != 1 (mod 7)   [THM-1257]
+  (5, 1)                  : NEVER (binder 9 composite)         [THM-1257]
+  (6, 1) F_6(N)           : opens N = 211         [primorial cascade]
+  (7, 1) F_7(N)           : N = 2311 confirmed    [THM-1258]
+ONE GENUS, ONE SHARED GATE: congruence gates on N per rung; the (1,0) and (3,1) rows
+coincide -- named across generations for the first time.
+
