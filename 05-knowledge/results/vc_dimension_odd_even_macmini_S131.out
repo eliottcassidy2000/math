@@ -1,0 +1,48 @@
+==============================================================================
+PART A -- on the EVEN/LINEAR side, VC is just the dimension, and the shattered
+          sets are the INDEPENDENT SETS OF A MATROID.  For the cut space of K_n
+          (= the switching group) that matroid is graphic: shattered = FORESTS.
+==============================================================================
+  n  edges  cut dim  VC(cut)  shattered = forests?  cycle dim  VC(cycle)  brute agrees
+  3      3        2        2                  True          1          1          True
+  4      6        3        3                  True          3          3          True
+  5     10        4        4                  True          6          6          True
+  6     15        5        5                  True         10         10          True
+
+  So every SWITCHING CLASS (a coset of the cut space) has VC = n-1 exactly,
+  with the forests of K_n as its shattered sets -- translation cannot change
+  surjectivity of a projection, so cosets and the code agree.
+
+==============================================================================
+PART B -- on the ODD/NONLINEAR side, VC is a real combinatorial quantity
+==============================================================================
+  n  classes  floor(log2 n)  max VC              VC distribution  max Schutte k
+  3        2              1       1                     [(1, 2)]              1
+  4        4              2       2             [(1, 2), (2, 2)]              1
+  5       12              2       2            [(1, 2), (2, 10)]              1
+  6       56              2       2            [(1, 2), (2, 54)]              1
+  7      456              2       2           [(1, 2), (2, 454)]              2
+
+  Upper bound is immediate: shattering a k-set needs 2^k distinct patterns and
+  there are only n vertices, so VC <= floor(log2 n).
+  Lower bound by construction: put a TRANSITIVE tournament on S = {0..k-1}, whose
+  in-S out-neighbourhoods are the k distinct nested sets {1..k-1} ... {} ; assign
+  the remaining 2^k - k patterns freely to outside vertices.  So max VC = floor(log2 n).
+
+  explicit n=8 witness: VC = 3 (floor(log2 8) = 3), code = 202356
+
+==============================================================================
+PART C -- where does VC sit in the invariant tiers?
+==============================================================================
+  n=4: VC changes under switching for 4/4 classes => switching-invariant? False
+  n=5: VC changes under switching for 12/12 classes => switching-invariant? False
+  n=6: VC changes under switching for 22/56 classes => switching-invariant? False
+  n=7: VC changes under switching for 42/456 classes => switching-invariant? False
+
+SUMMARY -- the high-leverage answer
+  LINEARITY TRIVIALISES VC.  On the even/linear side (cut space = switching group,
+  cycle space = even graphs) VC equals the dimension and the shattered sets are
+  matroid independent sets -- forests, for the switching group.  Nothing new is
+  measured.  On the odd/nonlinear side VC is bounded by floor(log2 n), attains it,
+  and varies across tournaments.  THM-1420 says the odd side admits NO F_2-linear
+  invariants, so it can never be pushed into the trivial linear case.

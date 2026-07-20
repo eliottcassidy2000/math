@@ -15898,3 +15898,24 @@ projection lands in the even graphs (the image degree at `w` is `(n−1)·d_w mo
 **Residual (OPEN):** at even `n` there is an `(n−2)`-dimensional bicycle space with no
 canonical complement — nobody has asked what that space *is* combinatorially, nor whether a
 natural even-`n` substitute for the projection exists.
+
+### HYP-8300 — close the VC=1 classification gap
+**Status: OPEN (one residual statement; THM-1450 §C).** THM-1450 proves the strong-component
+reduction: cross-component arcs can never witness `VC >= 2`, so `VC >= 2` iff some component
+`S_i` (`i >= 2`) has `>= 3` vertices, or `S_1` contains a 3-cycle `a,b,u` plus `w in S_1`
+beating both `a` and `b`. That reduces "exactly two VC=1 tournaments" (`TT_n` and
+`C_3 (+) TT_{n-3}`) to **one lemma**:
+> every strong tournament on `>= 4` vertices contains a 3-cycle `a -> b -> u -> a` together
+> with a vertex `w` beating both `a` and `b`.
+Verified `n <= 7`; looks routine (strong tournaments on `>= 4` vertices are vertex-pancyclic
+and have no dominant vertex, so a `w` should always be findable) but **not proved**.
+Prove it and the classification becomes a theorem for all `n`.
+
+### HYP-8305 — why does the switching-sensitivity of VC fall with n?
+**Status: OPEN (observation, THM-1450 §D).** VC dimension changes under some switching for
+`4/4`, `12/12`, `22/56`, `42/456` iso classes at `n = 4..7` — i.e. `100%, 100%, 39%, 9%`.
+The fraction **falls sharply**. Since `max VC = floor(log2 n)` is constant at 2 across
+`n = 5,6,7` while the class count explodes, most classes sit at the ceiling and cannot move
+up; but that does not by itself explain why they stop moving *down*. **Measure at `n = 8`**,
+where the ceiling jumps to 3, and see whether the fraction rebounds — if it does, the effect
+is a ceiling artifact; if not, something structural is pinning VC inside switching classes.
