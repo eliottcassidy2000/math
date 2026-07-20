@@ -1,0 +1,22 @@
+==============================================================================
+BABAI-CAMERON REMARK 7.4 FAILURE SET
+  switching classes admitting an automorphism that fixes NO member
+==============================================================================
+  n    n mod 4  sw classes   labelled bad     bad up to iso 
+  3    3        1            0                0             
+  4    0        2            8                2             
+  5    1        2            0                0             
+  6    2        6            640              4             
+
+  A049313 (Babai-Cameron, switching classes of tournaments up to iso):
+     n=3..7 should read 1, 2, 2, 6, 12
+
+  CONTROL: n = 5 is 1 mod 4, so klein-S338's theorem forces the failure set
+  to be EMPTY there.  A non-zero entry at n = 5 would refute that theorem and
+  would mean this script is wrong -- it is the instrument check, not a result.
+
+  The open cases are n = 3 mod 4 (n = 3, 7) and n even, which is exactly where
+  klein's parity argument gives nothing: at n = 3 mod 4 the score-parity vector
+  has ODD weight, so there is no all-even member to be forced to stay put --
+  instead there are n members with a single odd score, and an automorphism is
+  free to permute them without fixing any.

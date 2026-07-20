@@ -1,0 +1,17 @@
+n = 7, 21 edges, cosets = 2^15
+cut space |C| = 64 (expect 2^6 = 64)
+coset representatives: 32768
+
+======================================================================
+RESULT at n = 7
+======================================================================
+  labelled switching classes that FAIL (some automorphism fixes no member): 0
+  EMPTY.
+  So n = 7 joins n = 3 and n = 5: the failure set is empty at every odd n
+  computed so far, which is STRICTLY STRONGER than klein-S338's theorem
+  (that covers only n = 1 mod 4) and needs a separate argument at 3 mod 4.
+
+  Moon's theorem supplies half of it: an even-order permutation lies in no
+  Aut(T), so it fixes no member automatically -- hence emptiness says NO
+  even-order permutation stabilises any switching class at odd n.  That is
+  the statement to prove.
