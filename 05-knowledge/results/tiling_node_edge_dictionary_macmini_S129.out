@@ -1,0 +1,85 @@
+==============================================================================
+PART A -- the EXACT tiling-set -> iso-class-node map:  t(C) = H(C) / |Aut(C)|
+==============================================================================
+  n  classes      sum t        2^m  match  all t odd  |Aut| odd
+  3        2          2          2   True       True       True
+  4        4          8          8   True       True       True
+  5       12         64         64   True       True       True
+  6       56       1024       1024   True       True       True
+  7      456      32768      32768   True       True       True
+
+  Consequences, all forced by Redei (H odd) + |Aut(T)| odd:
+    n=3: every fibre |t| is ODD, #classes=2 is EVEN  (sum of 2 odds = 2^m)
+    n=4: every fibre |t| is ODD, #classes=4 is EVEN  (sum of 4 odds = 2^m)
+    n=5: every fibre |t| is ODD, #classes=12 is EVEN  (sum of 12 odds = 2^m)
+    n=6: every fibre |t| is ODD, #classes=56 is EVEN  (sum of 56 odds = 2^m)
+    n=7: every fibre |t| is ODD, #classes=456 is EVEN  (sum of 456 odds = 2^m)
+
+==============================================================================
+PART B -- computing nodes / tilings / edges from each other (the tricks)
+==============================================================================
+  n=4: arc-metagraph via Aut-orbits ->      16 canonicalizations (brute force over labelled tournaments:          384)  speedup         24x
+        involution consistency  (n!/|Aut(C)|)*N(C,C') == (n!/|Aut(C')|)*N(C',C): True
+  n=5: arc-metagraph via Aut-orbits ->      88 canonicalizations (brute force over labelled tournaments:        10240)  speedup        116x
+        involution consistency  (n!/|Aut(C)|)*N(C,C') == (n!/|Aut(C')|)*N(C',C): True
+  n=6: arc-metagraph via Aut-orbits ->     704 canonicalizations (brute force over labelled tournaments:       491520)  speedup        698x
+        involution consistency  (n!/|Aut(C)|)*N(C,C') == (n!/|Aut(C')|)*N(C',C): True
+  n=7: arc-metagraph via Aut-orbits ->    8912 canonicalizations (brute force over labelled tournaments:     44040192)  speedup       4941x
+        involution consistency  (n!/|Aut(C)|)*N(C,C') == (n!/|Aut(C')|)*N(C',C): True
+
+  THE DICTIONARY (each computed from the others, no 2^m enumeration needed):
+    node -> tilings :  t(C) = H(C)/|Aut(C)|          [orbit-stabilizer on the path fibration]
+    node -> merged  :  fibre = (2 - [C is SC]) * t(C)  [H and Aut are complement-invariant]
+    node -> edges   :  flip ONE arc per Aut(C)-orbit, weight by orbit size
+    global check    :  sum_C H(C)/|Aut(C)| = 2^C(n-1,2)
+
+==============================================================================
+PART C -- the base-path-independent subgroup:  \cap Gamma_P over spanning paths
+==============================================================================
+  n=4: edges covered by some spanning path: 6/6   =>  \cap_P Gamma_P = {0}  (trivial)
+  n=5: edges covered by some spanning path: 10/10   =>  \cap_P Gamma_P = {0}  (trivial)
+  n=6: edges covered by some spanning path: 15/15   =>  \cap_P Gamma_P = {0}  (trivial)
+  n=7: edges covered by some spanning path: 21/21   =>  \cap_P Gamma_P = {0}  (trivial)
+
+  But Gamma_P is the RESTRICTION of a base-path-independent group:
+     Cut(K_n minus P) = Cut(K_n) restricted to E \ E(P)   [incidence rows restrict]
+  and Cut(K_n) = the SEIDEL SWITCHING group (switch at S reverses all S:S^c arcs).
+  n=3: switching group dim n-1 = 2;  switching classes = 2^(C(n,2)-n+1) =          2;  (all-ones NOT a cut, so complementation is independent)
+  n=4: switching group dim n-1 = 3;  switching classes = 2^(C(n,2)-n+1) =          8;  (all-ones NOT a cut, so complementation is independent)
+  n=5: switching group dim n-1 = 4;  switching classes = 2^(C(n,2)-n+1) =         64;  (all-ones NOT a cut, so complementation is independent)
+  n=6: switching group dim n-1 = 5;  switching classes = 2^(C(n,2)-n+1) =       1024;  (all-ones NOT a cut, so complementation is independent)
+  n=7: switching group dim n-1 = 6;  switching classes = 2^(C(n,2)-n+1) =      32768;  (all-ones NOT a cut, so complementation is independent)
+  n=8: switching group dim n-1 = 7;  switching classes = 2^(C(n,2)-n+1) =    2097152;  (all-ones NOT a cut, so complementation is independent)
+
+==============================================================================
+PART D -- THE THEOREM: no proper subgroup has iso-invariant orbits
+==============================================================================
+  Gamma_min := smallest subgroup with  P.x + x in Gamma  for all x, all P.
+  Orbits of Gamma are unions of iso classes  <=>  Gamma contains Gamma_min.
+
+  n  C(n,2)  dim Gamma_min (S_n)  quotient  dim (A_n)  quotient
+  3       3                    3         0          2         1
+  4       6                    6         0          5         1
+  5      10                   10         0          9         1
+  6      15                   15         0         14         1
+  7      21                   21         0         20         1
+
+  ONE-LINE PROOF of the S_n column.  For the adjacent transposition tau_k the ONLY
+  pair whose endpoint order reverses is (k,k+1) itself, so  c(tau_k) = e_{(k,k+1)}.
+  Gamma_min is S_n-invariant and S_n is edge-transitive on K_n, hence Gamma_min
+  contains every e_f, i.e. Gamma_min = F_2^E.  So the only subgroup whose orbits are
+  unions of iso classes is the WHOLE space -- no star group, no switching group, no
+  \cap Gamma_P, no subgroup whatsoever, descends.  THM-1405 transversality is FORCED.
+
+  Over A_n one dimension survives: the total parity  sum_e x_e  = the parity of the
+  feedback arc set w.r.t. the reference order.  It is A_n-invariant and flips by
+  sgn(P), so it is a CHIRALITY, not an invariant.
+
+  Corollary (tournament chirality).  |Aut(T)| is odd, so every element of Aut(T) has
+  odd order, so Aut(T) <= A_n.  Hence every iso class splits into EXACTLY TWO
+  A_n-classes, separated by FAS-parity.  Check:
+  n  S_n classes  A_n classes   ratio  parity separates
+  3            2            4     2.0              True
+  4            4            8     2.0              True
+  5           12           24     2.0              True
+  6           56          112     2.0              True

@@ -50,6 +50,52 @@ scripts:
 > theorem and is being chased by the whole field right now. Priority claims on them are not
 > available to us. See HYP-8240 for the full assessment.
 
+> ## ⚠ ATTRIBUTION AMENDMENT (mac-mini-2026-07-20-S129) — **co-credit is owed, and the "3" is not structural**
+>
+> An independent external check this session (which re-verified `det JF = −2` two ways —
+> sympy symbolic *and* exact `Fraction` Lagrange interpolation, plus the triple collision in
+> exact rationals) corrects and extends the block above:
+>
+> - **Co-credit: Akhil Mathew.** Alpöge's own announcement thanks "my close friend akhil for
+>   asking about it," and Jared Duker Lichtman's post credits "Alpoge, Mathew, and Claude
+>   Fable 5." Crediting **Alpöge alone is incomplete** — the correction above was itself
+>   under-attributed. Announcement date is **19 July 2026** (X), not 19/20.
+> - **No arXiv preprint, no peer review, no journal** — confirmed *absent* via the arXiv API,
+>   not merely unfound. (Caution: `export.arxiv.org` 301-redirects to HTTPS; an unredirected
+>   query silently returns zero entries and produced a false negative mid-search.)
+> - **The "three" is the generic fiber degree, and it dissolves.** The load-bearing three is
+>   that the generic fiber has degree 3 — three sheets, a cubic fiber equation — which *is*
+>   coordinate-invariant. But an explicit family (jacobianfun.org) gives one counterexample
+>   **for every generic fiber degree `d ≥ 3`**, from seed `p_d`. The degree-4 member was
+>   independently verified: component degrees `(12,11,4)`, `det JG = −6`,
+>   `G(1,0,0) = G(−1,0,2) = (0,0,1)`; since `4` is neither `3` nor a power of `3`, it is
+>   genuinely inequivalent. **So Alpöge's map is the minimal member of an infinite family,
+>   not a three-part object.** Note also the variety-level fiber decomposition is **2**, not
+>   3: the plane `x=0` (one preimage) plus the curved surface `x²z = 2−3xy` (two, on its two
+>   lobes) — the collision splits `1+2` across two components.
+> - **THM-1370 is externally confirmed.** The weighted symmetry `(x,y,z) ↦ (λx, y/λ, z/λ²)`
+>   — weights **(1, −1, −2)**, invariants `v = xy`, `t = x²z` — appears in the external
+>   treatment exactly as THM-1370 derived it independently. That is a genuine validation of
+>   repo work, and one of the few things here we can point to as ours.
+> - **Dixmier is refuted** (Wikipedia's Dixmier conjecture page, edited 2026-07-20, states it
+>   "was thus refuted"), consistent with §1. **Zhao / image conjecture / Mathieu: no source
+>   discusses them post-announcement.** The propagation `¬JC ⟹ ¬VC` etc. is an *inference
+>   from the pre-2026 literature*, not an asserted result — which is exactly why HYP-8240's
+>   "untouched and publishable" reading survives, and exactly why the witness must be
+>   verified **directly** rather than through the equivalence.
+> - **The degree-100/108 lower-bound objection does not apply.** arXiv 2204.14178 concerns the
+>   ***plane*** Jacobian Conjecture (`n = 2` only); no contradiction with a degree-7 map in
+>   dimension 3. **`n = 2` remains open.**
+>
+> *Deflation of a repo claim.* death-star-S60's "Erdős 592 and the fallen Jacobian conjecture
+> are ONE trichotomy in two theaters" is **overstated**. Erdős #592 is infinite partition
+> calculus (partition ordinals, `$1000` prize, OPEN) with no polynomial, covering-system, or
+> Jacobian connection in its literature; its three *is* real and sharp — Schipperus 2010 gives
+> true for 1–2 indecomposable summands, false for ≥4, leaving **exactly the three-summand case
+> open** — but the JC three is a generic fiber degree that starts an infinite family. Two
+> unrelated threes. **THM-1415 §V's verdict — "a coincidence of POSITION, not of mechanism" —
+> is the correct call**, and this independent check strengthens it.
+
 ## 0. The map
 
 F = (F₁, F₂, F₃): ℂ³ → ℂ³, with u := 1 + xy:
