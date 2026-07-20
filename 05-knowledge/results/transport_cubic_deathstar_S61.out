@@ -1,0 +1,22 @@
+G degrees: [4, 6, 7]
+reduction steps=5, companion vars added=5, cubic-map dim Nact=8
+cubic map degrees: [3, 3, 3, 2, 2, 2, 2, 2] (expect all <=3)
+
+cubic map at transported collision pts (expect equal):
+   ['0', '0', '-1/4', '0', '0', '0'] ...
+   ['0', '0', '-1/4', '0', '0', '0'] ...
+   ['0', '0', '-1/4', '0', '0', '0'] ...
+  collision holds: True
+
+cubic-HOMOGENEOUS map G_c: dim N=9
+  every nonlinear part homogeneous deg 3: True
+  det J(G_c) at 8 random pts: ['(-144240918+219702307/2i)', '(13748712457/2+60229784843/2i)', '(3895310+48848109i)', '(-8546316102+3776642988i)', '(-210366234-114495261i)', '(-2652805001-284060325i)', '(-65986171/2-25981582i)', '(-832057346-4899499364i)'] => Keller/det==1: False
+  JH_c nilpotent at random pt (JH_c^N==0): False
+
+G_c at transported collision pts A,B,C (x0=1):
+  G_c(A)=G_c(B)=G_c(C): True
+  A0 first coords: ['0', '0', '-1/4', '0', '0', '0'] ...
+  A1 first coords: ['1', '-3/2', '13/2', '1', '-3/2', '-39/4'] ...
+  A2 first coords: ['-1', '3/2', '13/2', '1', '-3/2', '39/4'] ...
+
+STAGE 2-3 done. N=9, lift target dim 2N=18. Saved Gc for stage 4.

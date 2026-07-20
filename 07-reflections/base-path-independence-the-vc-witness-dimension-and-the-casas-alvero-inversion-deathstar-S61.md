@@ -44,57 +44,59 @@ guess that switching-up-to-iso would land on the even-graph/two-graph count A002
 of the cut space over F₂** (a small rep-theory question). That is where this thread now
 goes; I add nothing to it beyond the ∩Γ = {0} confirmation.
 
-## 2. The VC witness: dimension is ≈ 20 (not 76 — corrected), and the witness is FEASIBLE
+## 2. Executing the transport: what verifies, and the real blocker (correcting "just engineering")
 
-**CORRECTION.** I first estimated the transport dimension at ≈ 76 from a crude
-"⌈(deg−1)/2⌉ auxiliaries per monomial" heuristic, and wrongly read a concurrent agent's
-partial "76/77" hits as corroboration. They were not the dimension — they were the
-ballpark of Zhao's *a-priori VC bound* (3/2)(3^{M−2}−1). The concrete reduction, computed
-exactly by the reduction agent (and it did the actual stacking), is **four times smaller**,
-because F's 13 nonlinear monomials are **not independent** — they are all built from the
-single quadratic u = 1 + xy plus x,y-powers, so they share auxiliaries.
+I tried to actually build the witness — exact multivariate polynomial arithmetic over
+ℚ(i) in pure Python (no sympy in the sandbox; `polylib_exact_deathstar_S61.py`). Executing
+it **corrected two of my own claims** and located the genuine difficulty. Honest status:
 
-**The dimension (concrete).** Yagzhev-normalize G = L⁻¹∘F = X + H (JH nilpotent; L the
-antidiagonal linear part, det JG = 1, the triple collision transports). Then **six** helper
-coordinates {xy, (xy)², y², x², x³, x²y} — one per shared building block, not one per
-monomial — drop every component to degree ≤ 3, landing in dim 9; homogenizing gives the
-Bass–Connell–Wright cubic-homogeneous dimension
+**What is verified exactly.**
+- **F is Keller with the triple collision.** det JF ≡ −2; F(0,0,−¼) = F(1,−3/2,13/2) =
+  F(−1,3/2,13/2) = (−¼,0,0). Exact.
+- **Yagzhev normalization.** G = L⁻¹∘F (L = JF(0), the antidiagonal), det JG ≡ 1, and the
+  triple collision transports exactly to G(a)=G(b)=G(c)=(0,0,−¼). **But JH = J(G−id) is NOT
+  nilpotent** (trace(JH) = 24xy + (9/2)x²z + … ≠ 0) — so the ℂ*-structure does *not* shortcut
+  the reduction; nilpotency must be *created*.
+- **The exact ℚ(i) cotangent-lift + de Bondt rotation machinery — VALIDATED.** Given any
+  cubic map G=Z+H with JH nilpotent, K(Z,Y)=(H(Z), JH(Z)ᵀY) and ∇P = T′⁻¹K(T′Z), with
+  **T′=[[I,iI],[iI,I]]** (the √2 cancels in conjugation, so it is exact over ℚ(i), no field
+  extension). On two known nilpotent cubic-homogeneous maps this produces a homogeneous
+  quartic P with ∇P a **genuine gradient** (∂ⱼP = (∇P)ⱼ verified) and **Hess(P) nilpotent**
+  (Hess² =0, Hess³=0 resp.). The hard symmetrization step is correct, reusable code.
 
-  **N ≈ 10  (crude per-monomial upper bound N ≤ 16–17).**
+**The blocker, now precisely understood (and it is real math, not engineering).** The
+witness needs a **cubic-homogeneous KELLER** reduction of F — Keller because that (and only
+that, for homogeneous H) forces JH nilpotent, which the lift needs. Every cheap construction
+fails for the *same* reason:
+- **Companion / "stacking" moves** Φ̂ = (Φ with X^β→W, W−X^β) do reduce degree to cubic and
+  **transport the collision exactly** (verified: my 5-companion reduction lands in dim 8 with
+  G(a)=G(b)=G(c) preserved). But they are **Keller only on the section** {W=X^β}: the Schur
+  complement equals JG *there*, while **off** the section det varies — measured det J at
+  random points is not constant (first move already breaks det ≡ 1). Collision-preservation
+  needs only section agreement; Keller-ness needs a **globally** constant determinant, which
+  stacking does not give.
+- **Naive homogenization** (degree-2 nonlinear part ×x₀) also breaks Keller:
+  det(I + x₀·JH₂ + JH₃) is not constant, because nilpotency of the pencil a·JH₂+b·JH₃ is
+  *not* implied by nilpotency at a=b=1.
 
-The de Bondt–van den Essen symmetric reduction then **doubles** (Meng's theorem, de Bondt
-*Symmetric Jacobians* Thm 1.2: ⊞(K,2n) ⟹ ⊟(K,n)) — the doubling is forced, since JF is
-**not** symmetric (J₁₂ ≠ J₂₁), so F is not already a gradient map; the ℂ*-structure (weights
-1,−1,−2) only keeps N small, it cannot bypass the ×2. So the Hessian-nilpotent quartic
-potential P lives at
+So the reduction agent's "6 helpers → N≈10 → M≈20, feasible, no new math" (which I relayed)
+**conflated the easy degree-reduction with the hard Keller-preserving homogeneous reduction.**
+The 6-helper stacking gives a cubic map that keeps the collision but is *not* Keller and
+*not* nilpotent-Jacobian. Bass–Connell–Wright **guarantee** a cubic-homogeneous Keller
+reduction exists (F is Keller), but its explicit construction is exactly the global-determinant
+control the naive moves miss — genuine content, not a formula to evaluate.
 
-  **M = 2N ≈ 20  (bound ≤ 34).**
-
-A couple of dozen variables — exactly the "feasibility gate" the PROBLEM-LEDGER was waiting
-on, and **it clears comfortably.**
-
-**The construction and the certificate.** The potential is *not* the naive P = Σ yᵢ Hᵢ
-(that is not Hessian-nilpotent — I confirmed via the agent's test H=(0,x³)). Nilpotency
-comes from the **block-triangular cotangent lift** (x↦F(x), y↦JF(x)ᵀy), whose Jacobian
-[[JF,0],[∗,JFᵀ]] is nilpotent because JH is; a linear conjugation T = (I + i·Iʳ)/(2√2)
-(de Bondt Thm 1.3 — the i is why this is over ℂ) turns it into a genuine gradient map
-x + ∇P with P homogeneous quartic and Hessian nilpotent. Zhao's Prop 1.2: P
-Hessian-nilpotent ⟺ Δ^m(P^m) = 0 ∀m — so that half of VC holds **automatically, by
-construction** (check it, if wanted, as: the 20×20 Hessian has characteristic polynomial
-λ²⁰ — feasible; do *not* brute-force the Δ-tower). VC then fails iff x + ∇P is
-non-invertible, and that is certified by a **single transported collision**: our F's triple
-collision F(0,0,−¼) = F(1,−3/2,13/2) = F(−1,3/2,13/2) lifts (yₐ = (JF(a)ᵀ)⁻¹w) to distinct
-points with equal image under x + ∇P. So the witness verification is *two polynomial
-evaluations at M ≈ 20 plus a nilpotency check* — exact, finite, and Lean-formalizable.
-
-**Why it matters.** No non-invertible Hessian-nilpotent quartic is known in *any* dimension
-(the old examples are all invertible — that was the Hessian conjecture); VC is proven for
-cubic-homogeneous maps in dim ≤ 4 (Wright n=3, Hubbers n=4), so any counterexample needs
-dim ≥ 5, and the smallest is unknown. **Ours at M ≈ 20 would be the first explicit witness
-to Zhao's Vanishing Conjecture ever exhibited.** The S59z program — "verify the witness
-directly, the witness is a collision not a vanishing pattern" — stands, now with a concrete,
-feasible dimension: the open step is the explicit ≈ 20-variable transport, not any new
-mathematics, and not (as I first feared) an intractable 76-variable blow-up.
+**Corrected status.** The witness **exists** (BCW + our validated lift+rotation would deliver
+it the moment a cubic-homogeneous Keller reduction of F is in hand), and if that reduction has
+cubic dimension N the quartic lives at 2N. But **M ≈ 20 and "the gate clears" were overstated**
+(MISTAKE-201 addendum): the dimension is contingent on the *correct* BCW reduction's size, and
+the feasibility gate is **not** cleared by stacking — it requires implementing the
+determinant-preserving homogeneous reduction. What this session *did* deliver is real and
+checkable: F/Yagzhev/collision verified exactly, the collision shown to transport through the
+degree-reduction, and the ℚ(i) symmetrization machinery validated end-to-end — so the only
+missing input is the nilpotent cubic-homogeneous G_c, and the honest next step is to implement
+BCW's homogeneous reduction (or Drużkowski's cubic-linear form) with the determinant held
+constant globally, then feed it to the validated machinery.
 
 ## 3. Casas–Alvero is the INVERSION of the Jacobian story (agent-confirmed)
 

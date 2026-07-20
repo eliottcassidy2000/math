@@ -1,0 +1,20 @@
+
+=== validate lift+rotation on: H=(0, x0^3)  [classic nilpotent cubic-homog, dim 2]  (N=2, 2N=4) ===
+  P degree: 4  (expect 4 if H cubic homogeneous)
+  grad P == dP/dZ (P is a true potential, Jacobian symmetric): True
+  Hess(P) nilpotent: Hess^2==0
+
+[dim-3 map] JH nilpotent? JH^3==0: True
+
+=== validate lift+rotation on: H=(0, x0^3, x0^2 x1)  [nilpotent cubic-homog, dim 3]  (N=3, 2N=6) ===
+  P degree: 4  (expect 4 if H cubic homogeneous)
+  grad P == dP/dZ (P is a true potential, Jacobian symmetric): True
+  Hess(P) nilpotent: Hess^3==0
+
+=== DIAGNOSIS of the full-F transport blocker ===
+  - F, Yagzhev G, companion cubic reduction: collision transports EXACTLY (stage 2-3).
+  - BLOCKER: securing a NILPOTENT Jacobian requires a cubic-HOMOGENEOUS Keller reduction.
+    Naive homogenization (deg-2 nonlinear x x0) breaks Keller: det(I+x0*JH2+JH3) is not
+    const because nilpotency of the pencil a*JH2+b*JH3 is NOT implied by nilpotency at a=b=1.
+  - The lift+rotation machinery ABOVE is validated exact: given ANY nilpotent-Jacobian G,
+    it outputs a Hessian-nilpotent quartic. The one missing input is the nilpotent G_c.

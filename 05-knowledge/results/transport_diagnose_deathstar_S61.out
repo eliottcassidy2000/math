@@ -1,0 +1,10 @@
+append-only: steps=5, dim=8, degrees=[3, 3, 3, 2, 2, 2, 2, 2]
+det J(G3) at 6 pts: ['(-277346+1399119/2i)', '(3189445+472084i)', '(-44669+59615i)', '(-301734-455835i)', '(-373415/2-551639/2i)', '(-7624315/2+34830195/2i)']
+=> cubic map G3 is KELLER (det==1): False
+JH3 nilpotent at random pt (JH3^dim==0): False
+trace(JH3) identically zero: False (else NOT nilpotent as a poly matrix)
+
+CONCLUSION: append-only companion reduction gives a KELLER CUBIC map with the collision,
+but its Jacobian is NOT nilpotent (mixed-degree Keller does not force nilpotency).
+Cubic-HOMOGENEOUS (=> nilpotent) is a strictly further step; naive homogenization breaks
+Keller. Securing nilpotency is the genuine remaining mathematical content.
