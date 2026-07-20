@@ -1,0 +1,78 @@
+==============================================================================
+(2) Pf IS AN ODD (ALTERNATING) FUNCTION, det = Pf^2 IS AN EVEN (INVARIANT) ONE
+==============================================================================
+ n=4: Pf(relabelled) = sign(sigma)*Pf : True    det invariant : True
+ n=6: Pf(relabelled) = sign(sigma)*Pf : True    det invariant : True
+ => Pf transforms by the SIGN CHARACTER (odd/alternating); det = Pf^2 is invariant (even).
+
+==============================================================================
+(3) COROLLARY: Pf odd => Pf != 0 => Aut(T) <= A_n for n even
+==============================================================================
+ n=4: automorphisms found 444, of ODD sign: 0   (must be 0)
+ n=6: automorphisms found 366, of ODD sign: 0   (must be 0)
+
+==============================================================================
+(4) THE GLOBAL PFAFFIAN SPECTRUM -- gaps?  (hp attains {odds} minus {7,21})
+==============================================================================
+ n=4 EXHAUSTIVE over 64 tournaments:
+    |Pf| values attained: [1, 3]   max = 3
+    all odd? True   symmetric +-? True
+    MISSING odd values below the max: NONE -- no gaps
+ n=6 EXHAUSTIVE over 32768 tournaments:
+    |Pf| values attained: [1, 3, 5, 7, 9]   max = 9
+    all odd? True   symmetric +-? True
+    MISSING odd values below the max: NONE -- no gaps
+ n=8 SAMPLED (400k of 2^28):
+    |Pf| attained: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35, 49]   max seen = 49
+    MISSING odd below max: [29, 37, 39, 41, 43, 45, 47]
+
+==============================================================================
+(5) hp vs Pf: TWO ODD-VALUED INVARIANTS ON THE SAME TOURNAMENT -- any congruence?
+==============================================================================
+ n=4 mod 4: distinct (hp,|Pf|) residue pairs = 2   hp residue DETERMINES |Pf| residue: True
+ n=4 mod 8: distinct (hp,|Pf|) residue pairs = 3   hp residue DETERMINES |Pf| residue: True
+ n=4 mod 16: distinct (hp,|Pf|) residue pairs = 3   hp residue DETERMINES |Pf| residue: True
+    joint support mod 8: [(1, 1), (3, 3), (5, 1)]
+ n=6 mod 4: distinct (hp,|Pf|) residue pairs = 4   hp residue DETERMINES |Pf| residue: False
+ n=6 mod 8: distinct (hp,|Pf|) residue pairs = 13   hp residue DETERMINES |Pf| residue: False
+ n=6 mod 16: distinct (hp,|Pf|) residue pairs = 22   hp residue DETERMINES |Pf| residue: False
+    joint support mod 8: [(1, 1), (1, 3), (1, 5), (1, 7), (3, 1), (3, 3), (5, 1), (5, 3), (5, 5), (5, 7), (7, 1), (7, 5), (7, 7)]
+
+DONE.
+
+==============================================================================
+(4b) SETTLING n=8 BY TARGETED SEARCH -- a 400k sample of 2^28 is 0.15% and cannot
+     support a GAP claim (MISTAKE-162: a null needs a positive control).
+==============================================================================
+ targeted hill-climb, odd targets 1..71:
+   ATTAINED : [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35, 49]
+   not found: [29, 37, 39, 41, 43, 45, 47, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71]
+   max |Pf| found by hill-climbing at n=8: 49
+
+ VERDICT: every odd value up to the maximum was ATTAINED by targeted search, so the
+ 'gaps' 29,37,39,... in the 400k sample were SAMPLING ARTEFACTS, not gaps.  Retracting
+ them. The Pfaffian spectrum shows NO gaps at n = 4, 6 (exhaustive) or 8 (targeted).
+ That is the CONTRAST with hp, whose spectrum genuinely omits 7 and 21.
+
+==============================================================================
+(4c) RETRACTION + THE DECISIVE COMPUTATION
+==============================================================================
+ RETRACTED: the auto-printed VERDICT in (4b) said the gaps were sampling artefacts.
+ THE DATA SAYS OTHERWISE -- targeted hill-climbing ALSO failed to reach 29 and 37..47,
+ while reaching 31,33,35 and 49.  I had pre-written that conclusion and it printed
+ regardless of the result.  Settling it exhaustively instead.
+
+ perfect matchings of K_8: 105  (expect (n-1)!! = 105)
+ fixed path arcs: 7;  free tiles: 21 (= C(n-1,2) = 21)
+ |Pf| is a SWITCHING-CLASS invariant (Pf(DSD) = det(D) Pf(S)) : True
+ => |Pf| is a function on the 2^21 TILINGS, not on all 2^28 tournaments.  Exhaustive.
+
+ EXHAUSTIVE over all 2^21 = 2097152 switching classes at n=8:
+   |Pf| attained : [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35, 49]
+   maximum       : 49
+   all odd       : True
+   MISSING odd values below the max: [29, 37, 39, 41, 43, 45, 47]
+
+ VERDICT (now earned, not pre-written):
+   THE PFAFFIAN SPECTRUM HAS GENUINE GAPS AT n=8: [29, 37, 39, 41, 43, 45, 47].
+   So Pf joins hp as an odd-valued tournament invariant with a NON-TRIVIAL spectrum.

@@ -1,5 +1,5 @@
 ---
-id: THM-1440
+id: THM-1470
 title: "EVEN TOURNAMENTS ARE THE TOURNAMENT TWO-GRAPH THEOREM — the analogue kind-pasteur's THM-1415 declared nonexistent does exist; it was compared against the wrong object. A tournament IS a SKEW-Seidel matrix, so the analogue of an even GRAPH (all degrees even) is an even TOURNAMENT (all SCORES even), not an even graph. THE SCORE-PARITY LAW: switching at U changes s_v by |Uᶜ| mod 2 for v ∈ U and |U| mod 2 for v ∈ Uᶜ, so for n ODD the score-parity vector flips exactly on the EVEN-SIZED member of {U, Uᶜ}, and U ↦ that set is a BIJECTION from the 2^{n−1} switchings onto the even-weight code. Since Σs_v = C(n,2): at n ≡ 1 (mod 4) every switching class contains a UNIQUE tournament with all scores even; at n ≡ 3 (mod 4) none, but exactly n with a single odd score; at n even the parity vector is pinned only up to global complement. COROLLARY: #even tournaments up to iso = #switching classes up to iso = A049313(n) for n ≡ 1 mod 4 — verified as a BIJECTION (not merely matching counts) at n = 5, and predicting 792 at n = 9. SECOND COROLLARY, touching a stated open problem: every automorphism of a switching class fixes that unique even member, so Babai–Cameron's Remark 7.4 failure set is EMPTY at n ≡ 1 mod 4. AND THE ODD-VALUED SIDE: det S(T) = 0 for n odd, while for n even det S = Pf(S)² with Pf(S) always ODD — because S ≡ J − I (mod 2) and Pf(J−I) = (n−1)!!, a product of odd numbers. A companion to Rédei's hp(T) odd."
 status: >
   PROVED (the parity law and the bijection are three short lemmas, given below) and
@@ -28,7 +28,13 @@ external:
 script: 04-computation/skew_seidel_even_tournaments_klein_S338.py (+ .out)
 ---
 
-# THM-1440 — even tournaments, and the odd-valued side
+> **⚠ RENUMBERED THM-1440 → THM-1470 (klein-S339).** Four files claimed THM-1440 on
+> 2026-07-20; mine was pushed LAST (09:48:12, against 09:05:42 / 09:07:26 / 09:17:10), so by
+> the repo's first-pusher convention I renumber my own. THM-1455 was then also triple-claimed
+> (kind-pasteur's skew-Pfaffian mod-16 law among them), so this file settles at **THM-1470**.
+> References to "klein THM-1440" or "klein THM-1455" mean this file.
+
+# THM-1470 — even tournaments, and the odd-valued side
 
 ## 0. The frame the owner asked for
 
