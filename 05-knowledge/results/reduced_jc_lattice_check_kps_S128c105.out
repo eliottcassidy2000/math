@@ -1,0 +1,46 @@
+==============================================================================
+(1)+(2)  transitive monodromy candidates, by cover degree
+==============================================================================
+  d    group           |G| |stab| self-norm? Galois?  in A_d?  verdict
+  2    S_2 = Z_2         2      1 False      True     False    excluded (Campbell+Smith)
+
+  3    A_3 = Z_3         3      1 False      True     True     excluded (Campbell+Smith)
+  3    S_3 = D_3         6      2 True       False    False    ALLOWED
+
+  4    Z_4               4      1 False      True     False    excluded (Campbell+Smith)
+  4    V_4               4      1 False      True     True     excluded (Campbell+Smith)
+  4    D_4               8      2 False      False    False    excluded (Smith)
+  4    A_4              12      3 True       False    True     ALLOWED
+  4    S_4              24      6 True       False    False    ALLOWED
+
+  5    Z_5               5      1 False      True     True     excluded (Campbell+Smith)
+  5    D_5              10      2 True       False    True     ALLOWED
+  5    F_20             20      4 True       False    False    ALLOWED
+  5    A_5              60     12 True       False    True     ALLOWED
+  5    S_5             120     24 True       False    False    ALLOWED
+
+==============================================================================
+(1) IS SMITH STRICTLY STRONGER THAN CAMPBELL?
+==============================================================================
+  monodromies killed by SMITH but NOT by Campbell (proving strictness):
+     d=4  D_4        |G|=8   |stab|=2
+  -> containment is STRICT: True
+  -> the predicted witness D_4 present: True
+
+==============================================================================
+(2) DOES 'monodromy inside A_d' IMPLY GALOIS?  (character-detectability)
+==============================================================================
+  d=2 : every transitive subgroup of A_d regular? True  
+  d=3 : every transitive subgroup of A_d regular? True  
+  d=4 : every transitive subgroup of A_d regular? False   counterexamples: A_4
+  d=5 : every transitive subgroup of A_d regular? False   counterexamples: D_5, A_5
+
+  -> the discriminant (sign) character detects Galois-ness EXACTLY at d = 3.
+     At d >= 4 an even monodromy need not be Galois, so no single quadratic
+     character can carry the reduced JC one rung up.
+
+==============================================================================
+CROSS-CHECK vs canon (klein-S325: 'd=2 impossible; d=4 allows only A_4/S_4')
+==============================================================================
+  d=2 allowed monodromies: NONE
+  d=4 allowed monodromies: ['A_4', 'S_4']
