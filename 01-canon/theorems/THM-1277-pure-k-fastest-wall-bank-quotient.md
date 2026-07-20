@@ -162,6 +162,27 @@ the strict fast combs cover `G`, at least one of `d2,d3,d4,d5` is strictly
 dangerous there.  The same remains true after passing to a deletion-minimal
 individual-tooth subcover: some **selected** lower tooth contains the wall.
 
+The crosser label has an exact finite residue form.  Write a fastest wall as
+
+```text
+z=a/(14h),                 a=14n+-1.                 (16a)
+```
+
+For an integer `u`, let `|u|_m` denote the least absolute residue modulo
+`m`.  Then a lower owner `j` crosses this wall exactly when
+
+```text
+||jz||<1/14
+ iff ||ja/(14h)||<1/14
+ iff |ja|_(14h)<h.                                  (16b)
+```
+
+Thus every selected/flood cell can retain the wall numerator `a` and the
+four-bit crosser mask using only multiplication and centered reduction modulo
+`14h`.  This is the exact endpoint digit which a runner-order tournament
+forgets; the referee checks (16b) on both wall signs and negative as well as
+positive addresses.
+
 This is the useful strengthening of THM-1273.  Its longer `67/540` needle can
 enter `E` and encounter bare walls.  The shorter left-hand needle `(x,b)` is
 purely inside `K`, so its wall bank has no bare branch at all.
@@ -189,7 +210,7 @@ deletable.  They cannot even be distinct teeth of the same owner `j`.  Two
 `j` teeth are separated by a safe gap of length `6/(7j)`, whereas
 
 ```text
-|H|=1/(7h)<1/(7j)<6/(7j).                            (16)
+|H|=1/(7h)<1/(7j)<6/(7j).                            (16c)
 ```
 
 Thus the two lower owners are distinct.  Each lower tooth overlaps `H`
@@ -313,46 +334,52 @@ or obtain a non-arithmetic lower bound for the multi-low turn bracket.
 
 ## 8. The exact `c=140` guardrail
 
-In THM-1266/1273's sharp cell, take the same point `x` and the interface `b`:
+In THM-1266/1273's sharp cell, take the displayed control point `x`, the
+interface `b`, and the displayed exterior point `y`:
 
 ```text
 c=140, d1=254, h=1805,
-x=7476011/12938240,             b=1133/1960.          (28)
+x=7476011/12938240, b=1133/1960, y=7425603/12837160. (28)
 ```
 
-Exactly two fastest walls lie in `(x,b)`:
+Exactly one fastest wall lies in the pure-`K` interval `(x,b)`:
+
+```text
+14603/25270 = right wall of 1805@1043.                (29)
+```
+
+Thus `delta=1` and `P=0`.  On the longer mixed `K/E` needle `(x,y)`, the
+wall word is
 
 ```text
 14603/25270 = right wall of 1805@1043,
-2923/5054   = left  wall of 1805@1044.               (29)
+2923/5054   = left  wall of 1805@1044,
+14617/25270 = right wall of 1805@1044.                (30)
 ```
 
-Both are crossed by the single tooth `256@148`.  They bound the complete
-**fastest-safe gap** between two different fastest teeth; they are not the two
-walls of one fastest tooth.  Thus
-
-```text
-W_K=2,             delta=1,             P=0.         (30)
-```
-
-This refutes the tempting count `P>=ceil(W_K/2)`.  The correct paired-wall
-quotient loses the safe-gap pair and retains one forced boundary seam.  The
-ratio corollary is sharp enough to agree:
+The first two are crossed by the single tooth `256@148`.  They bound the
+complete **fastest-safe gap** between different fastest teeth and straddle
+the `K/E` interface; they are not the two walls of one fastest tooth.  This
+shows why the mixed wall count cannot be inserted unchanged into the pure-`K`
+invoice.  The correct quotient retains one pure-`K` boundary seam and no
+complete tooth.  The ratio corollary agrees:
 
 ```text
 floor((1805-2*254)/(14*254))=0.                       (31)
 ```
 
-The row is not a six-cover, so it is only a geometry control.  It shows why
-the alternating wall types, rather than an untyped matching of wall events,
-must survive the quotient.
+The row is not a six-cover, and its concrete `x` was not chosen to realize the
+deeper `b-x>1/12` option in the abstract proof, so it is only a geometry
+control.  It shows why both the alternating wall types and the `K/E` location,
+rather than an untyped matching of wall events, must survive the quotient.
 
 ## 9. Tournament, Fano, Kakeya, and carrier audit
 
 The normalized centered component is the Kakeya needle.  Individual walls
-are too fine a vertex set: the two walls in (29) would be falsely counted as
-one complete-tooth obligation.  Pair walls by the alternating fastest-cell
-type and use the `P` complete fastest teeth as vertices.  The binary switch is
+are too fine a vertex set: the first two mixed walls in (30) would be falsely
+counted as one pure-`K` complete-tooth obligation.  Pair walls by both the
+alternating fastest-cell type and their `K/E` location, and use the `P`
+complete pure-`K` fastest teeth as vertices.  The binary switch is
 
 ```text
 unselected/flood  versus  selected/two-seam fork.    (32)
@@ -399,8 +426,9 @@ the alternating wall bank over rational phases, checks the sharp bound (15)
 and all integer thresholds in (5), enumerates the selected/flood/turn block
 capacity (22)--(24), verifies the pointwise layered truth table and every
 normalization coefficient, rechecks the lcm endpoint quantum and the
-distinct-owner improvement, and reconstructs the two-wall/no-complete-tooth
-`c=140` guardrail.  Normal and optimized outputs are byte-identical.
+distinct-owner improvement, checks the exact wall-residue crosser identity,
+and reconstructs the one-pure-wall/three-mixed-wall `c=140` guardrail.  Normal
+and optimized outputs are byte-identical.
 
 The sorry-free Lean module kernel-checks the wall-length consumer, threshold
 rounding interface, layered multiplicity rule, functional and harmonic bank

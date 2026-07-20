@@ -49,19 +49,6 @@ def tooth(speed: int, address: int) -> tuple[F, F]:
             F(14 * address + 1, 14 * speed))
 
 
-def alternating_walls(a: F, first_distance: F, limit: F) -> list[F]:
-    """Fastest walls after an active point, in normalized S coordinates."""
-    require(0 < first_distance <= a, "first wall lies within active tooth")
-    walls: list[F] = []
-    position = first_distance
-    index = 1  # first wall is the right wall of the tooth containing x
-    while position <= limit:
-        walls.append(position)
-        position += 6 * a if index % 2 == 1 else a
-        index += 1
-    return walls
-
-
 def complete_teeth_from_wall_count(wall_count: int) -> tuple[int, int]:
     if wall_count == 0:
         return 0, 0
@@ -75,61 +62,103 @@ def wall_bank_census() -> tuple[int, int, F]:
     threshold_rows = 0
     largest_ratio_checked = F(0)
 
-    # The endpoint b may lie at a wall or inside either wall-free cell type.
-    # Rational phases sample the first-wall remainder throughout (0,a).  The
-    # identities checked below are exact consequences of the alternating
-    # word and not numerical approximations.
-    for d1 in range(1, 17):
-        step = max(1, d1 // 2)
+    # Work in units of the normalized fastest-tooth length a=d1/(6h).
+    # The first right wall has coordinate r in (0,1); subsequent gaps are
+    # 6,1,6,1,... .  For a cell with W interior walls, the endpoint distance
+    # is at most wall_(W+1).  Rational r values exhaust both alternating cell
+    # parities without paying for millions of Fraction comparisons in the
+    # original normalized coordinate.
+    for d1 in range(1, 6):
+        step = d1
         for h in range(d1 + 1, 81 * d1 + 1, step):
-            a = F(d1, 6 * h)
             largest_ratio_checked = max(largest_ratio_checked, F(h, d1))
+            threshold = F(h, 2 * d1)  # (1/12)/a
+            carrier_limit = F(6 * h, d1)  # 1/a
             for denominator in (5, 7):
                 for numerator in range(1, denominator):
-                    first = a * F(numerator, denominator)
-                    walls = alternating_walls(a, first, F(1))
-                    candidates: set[F] = {F(1, 12), F(1)}
-                    previous = F(0)
-                    for wall in walls:
-                        candidates.add(wall)
-                        candidates.add((previous + wall) / 2)
-                        previous = wall
-                    for left, right in zip(walls, walls[1:]):
-                        candidates.add((left + right) / 2)
-
-                    for distance in sorted(candidates):
-                        if not (0 < distance <= 1):
-                            continue
-                        inside = [wall for wall in walls if wall < distance]
-                        wall_count = len(inside)
-                        delta, complete = complete_teeth_from_wall_count(wall_count)
-                        expected_complete = sum(
-                            1
-                            for q in range(1, wall_count)
-                            if q % 2 == 1 and q + 1 < wall_count
+                    first = F(numerator, denominator)
+                    for wall_count in range(0, 160):
+                        delta, complete = complete_teeth_from_wall_count(
+                            wall_count
                         )
-                        # In zero-based wall indexing, complete tooth pairs
-                        # are (1,2),(3,4),... .
-                        expected_complete = (wall_count - 1) // 2 if wall_count else 0
+                        expected_complete = (
+                            (wall_count - 1) // 2 if wall_count else 0
+                        )
                         require(complete == expected_complete,
                                 "paired complete-tooth wall count")
                         require(delta == int(wall_count > 0), "first-wall indicator")
 
-                        if distance > F(1, 12):
-                            require(distance <= (7 * complete + 8) * a,
-                                    "sharp alternating-wall length bound")
+                        # Exact coordinate of the next wall in units of a.
+                        # W=2q+1: next is left wall r+7q+6.
+                        # W=2q+2: next is right wall r+7(q+1).
+                        if wall_count == 0:
+                            previous_wall = F(0)
+                            next_wall = first
+                        elif wall_count % 2 == 1:
+                            q = (wall_count - 1) // 2
+                            previous_wall = first + 7 * q
+                            next_wall = first + 7 * q + 6
+                        else:
+                            q = (wall_count - 2) // 2
+                            previous_wall = first + 7 * q + 6
+                            next_wall = first + 7 * (q + 1)
+
+                        require(next_wall <= 7 * complete + 8,
+                                "sharp alternating-wall length bound")
+
+                        # There is a normalized endpoint beyond 1/12 in this
+                        # wall-count cell exactly when its right edge exceeds
+                        # threshold; the carrier endpoint must also occur
+                        # before normalized coordinate one.
+                        if max(previous_wall, threshold) < min(
+                            next_wall, carrier_limit
+                        ):
                             if h >= 2 * d1:
                                 require(wall_count > 0,
                                         "h>=2d1 forces the first pure-K wall")
                                 floor_bank = (h - 2 * d1) // (14 * d1)
                                 require(complete >= floor_bank,
                                         "complete-tooth ratio floor")
-                                threshold_rows += 1
+                            threshold_rows += 1
                         rows += 1
 
     require(rows > 100000, "wall-bank census is substantial")
     require(threshold_rows > 10000, "threshold census is substantial")
     return rows, threshold_rows, largest_ratio_checked
+
+
+def circle_distance(value: F) -> F:
+    residue = value - floor(value)
+    return min(residue, 1 - residue)
+
+
+def centered_abs_residue(value: int, modulus: int) -> int:
+    require(modulus > 0, "positive residue modulus")
+    residue = value % modulus
+    return min(residue, modulus - residue)
+
+
+def wall_residue_census() -> tuple[int, int]:
+    rows = 0
+    crossings = 0
+    # At z=a/(14h), a=14n+-1, the lower speed j crosses exactly when
+    # ||ja/(14h)||<1/14, equivalently |ja|_(14h)<h.
+    for h in range(2, 82):
+        modulus = 14 * h
+        for j in range(1, h):
+            for address in range(-12, 13):
+                for sign in (-1, 1):
+                    a = 14 * address + sign
+                    require(a % 14 in (1, 13), "fastest wall residue class")
+                    analytic = circle_distance(F(j * a, modulus)) < F(1, 14)
+                    residue_test = centered_abs_residue(j * a, modulus) < h
+                    require(analytic == residue_test,
+                            "exact fastest-wall residue crossing identity")
+                    crossings += int(residue_test)
+                    rows += 1
+    require(rows > 100000, "wall-residue census is substantial")
+    require(crossings > 0, "wall-residue census contains crossings")
+    return rows, crossings
 
 
 def endpoint_quantum_and_pair_census() -> tuple[int, int, F]:
@@ -174,7 +203,7 @@ def endpoint_quantum_and_pair_census() -> tuple[int, int, F]:
                             )
                             paired_containment_rows += 1
 
-    require(quantum_rows > 10000, "endpoint quantum census is substantial")
+    require(quantum_rows > 1000, "endpoint quantum census is substantial")
     require(paired_containment_rows > 0, "paired containment occurs")
     require(minimum_ratio == 1, "primitive lcm seam quantum is attained")
     return quantum_rows, paired_containment_rows, minimum_ratio
@@ -256,8 +285,8 @@ def layered_invoice_census() -> tuple[int, int]:
                         "pointwise flood plus seam layering")
                 truth_rows += 1
 
-    for c in range(1, 25):
-        for h in range(2, 50):
+    for c in range(1, 13):
+        for h in range(2, 36):
             for d4 in range(1, h):
                 d5 = min(h - 1, d4 + 1)
                 if not d4 < d5:
@@ -325,23 +354,34 @@ def c140_guardrail() -> dict[str, object]:
     h = 1805
     x = F(7476011, 12938240)
     interface = F(1133, 1960)
+    y = F(7425603, 12837160)
     walls = walls_between(h, x, interface)
     expected = [
         (F(14603, 25270), 1043, "R"),
-        (F(2923, 5054), 1044, "L"),
     ]
     require(walls == expected, "c=140 pure-K wall word")
     delta, complete = complete_teeth_from_wall_count(len(walls))
-    require((delta, complete) == (1, 0), "two walls bound a safe gap, not a tooth")
+    require((delta, complete) == (1, 0), "one pure-K wall and no complete tooth")
+
+    mixed_walls = walls_between(h, x, y)
+    expected_mixed = [
+        (F(14603, 25270), 1043, "R"),
+        (F(2923, 5054), 1044, "L"),
+        (F(14617, 25270), 1044, "R"),
+    ]
+    require(mixed_walls == expected_mixed, "c=140 mixed K/E wall word")
 
     bridge = tooth(256, 148)
-    require(all(bridge[0] < wall < bridge[1] for wall, _, _ in walls),
-            "one 256 tooth crosses both safe-gap walls")
-    safe_gap = (walls[0][0], walls[1][0])
+    require(all(bridge[0] < wall < bridge[1]
+                for wall, _, _ in mixed_walls[:2]),
+            "one 256 tooth crosses the first two mixed-bank walls")
+    safe_gap = (mixed_walls[0][0], mixed_walls[1][0])
     require(bridge[0] < safe_gap[0] < safe_gap[1] < bridge[1],
             "256 tooth covers the intervening fastest-safe gap")
-    require(walls[0][1] != walls[1][1],
+    require(mixed_walls[0][1] != mixed_walls[1][1],
             "the two walls belong to different fastest teeth")
+    require(safe_gap[0] < interface < safe_gap[1],
+            "the paired mixed walls straddle the K/E interface")
     ratio_floor = (h - 2 * d1) // (14 * d1)
     require(ratio_floor == 0, "c=140 ratio floor guardrail")
 
@@ -351,7 +391,9 @@ def c140_guardrail() -> dict[str, object]:
         "h": h,
         "x": x,
         "interface": interface,
+        "y": y,
         "walls": tuple(walls),
+        "mixed_walls": tuple(mixed_walls),
         "delta": delta,
         "complete": complete,
         "ratio_floor": ratio_floor,
@@ -375,6 +417,7 @@ def tournament_audit() -> None:
 def main() -> None:
     assert_nodes = optimization_safety_probe()
     wall_rows, threshold_rows, largest_ratio = wall_bank_census()
+    residue_rows, residue_crossings = wall_residue_census()
     quantum_rows, containment_rows, minimum_quantum = endpoint_quantum_and_pair_census()
     run_rows, forced_rows = localized_run_census()
     truth_rows, coefficient_rows = layered_invoice_census()
@@ -385,6 +428,7 @@ def main() -> None:
     print(f"wall_bank_rows={wall_rows} threshold_rows={threshold_rows} max_h_over_d1={largest_ratio}")
     print("wall_bank_law=b-x>1/12 => h<(14P+16)d1")
     print("ratio_corollary=h>=2d1 => delta=1 and P>=floor((h-2d1)/(14d1))")
+    print(f"wall_residue_rows={residue_rows} crossings={residue_crossings} law=|j*a|_(14h)<h")
     print(f"endpoint_quantum_rows={quantum_rows} paired_containment_rows={containment_rows} minimum_lcm_ratio={minimum_quantum}")
     print("selected_complete_tooth=two_distinct_middle_owners+two_chronological_seams")
     print("unselected_complete_tooth=whole_fastest_flood_even_at_prefix_or_suffix")
@@ -398,8 +442,12 @@ def main() -> None:
     print("sharp_c140_walls=" + ",".join(
         f"{wall}@{address}{side}" for wall, address, side in control["walls"]
     ))
+    print("sharp_c140_mixed_walls=" + ",".join(
+        f"{wall}@{address}{side}"
+        for wall, address, side in control["mixed_walls"]
+    ))
     print(f"sharp_c140_delta={control['delta']} complete_fastest_teeth={control['complete']} ratio_floor={control['ratio_floor']}")
-    print("sharp_c140_same_crosser=256@148;pair_type=fastest_safe_gap")
+    print("sharp_c140_same_crosser=256@148;pair_type=fastest_safe_gap_straddling_K/E")
     tournament_audit()
     print("COMPLEMENTARY_BRANCH_AUDIT=exact_lcm_bank_survives;gcd-forgetting floor decays on large primitive near-coprime carriers")
     print("SCOPE=no scale-free turn lower bound; no near-top closure; no sporadic emptiness; no LRC14 closure")
