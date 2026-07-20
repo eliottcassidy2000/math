@@ -1,0 +1,32 @@
+====================================================================
+(1) Keller check
+====================================================================
+  det JF = -2   constant? True
+
+====================================================================
+(2) it IS weighted-homogeneous -- for the MIXED-SIGN weights (1,-1,-2)
+====================================================================
+  F1(lam.v) = (lam**(-2)) * F1(v)
+  F2(lam.v) = (1/lam) * F2(v)
+  F3(lam.v) = (lam) * F3(v)
+
+====================================================================
+(3) SHARPNESS: no strictly POSITIVE weighting exists
+====================================================================
+  F3 monomials (x,y,z exponents): [(3, 0, 1), (2, 1, 0), (1, 0, 0)]
+  weights: x -> a ;  x^2 y -> 2a+b ;  x^3 z -> 3a+c
+  requiring all equal to w(x)=a:  {b: -a, c: -2*a}
+  i.e. (a,b,c) = a*(1,-1,-2)  -- exactly THM-1300's weight vector.
+  With a > 0 this forces b = -a < 0 and c = -2a < 0.
+  => NO strictly positive weight vector exists. QED sharpness.
+
+====================================================================
+VERDICT
+====================================================================
+  THM-1370: elliptic (positively graded) Keller => automorphism, EVERY n.
+  THM-1300's counterexample is graded but INDEFINITELY graded (1,-1,-2),
+  and provably admits no definite grading. JC fails at n>=3 only by a sign.
+  Honest limit: F = X + H (H homogeneous, deg>=2) is NEVER positively graded
+  (x and h cannot share a weight), so the Bass-Connell-Wright cubic reduction
+  escapes this theorem -- the class is thin, which is the price of being
+  dimension-free.

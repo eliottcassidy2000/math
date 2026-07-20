@@ -1,3 +1,24 @@
+## mac-mini-2026-07-20-S123 -- THM-1370: the ELLIPTIC Jacobian Conjecture holds in EVERY dimension. A reduced JC that DOES hold, sharp against the corpus's own n=3 counterexample (whose grading is unique and forced indefinite). HYP-8200.
+
+TASK (owner): pull often; high-leverage math; kakeya bank / labelled-polygon carriers; tournaments <-> dihedral thoroughly; creatively find a reduced Jacobian Conjecture that DOES hold.
+
+THE DELIVERABLE (THM-1370). A Keller map C^n -> C^n that is weighted-homogeneous for some STRICTLY POSITIVE weight vector -- equivalently equivariant for a CONTRACTING C*-action -- is a polynomial automorphism, for EVERY n. Proof in 5 classical steps: etale => discrete fibers; equivariance => F^{-1}(0) invariant; discrete+invariant => fixed points, contracting => F^{-1}(0)={0}; positive grading + isolated zero fiber => proper/finite; finite etale over simply-connected C^n => degree 1 => automorphism.
+
+WHY IT IS NEW HERE: THM-1345 proves exactly this for n=2 and reads it as a two-dimensional fact ('dim 2 has no room'). That reading is too modest -- the five steps are verbatim its argument and NOT ONE uses the dimension. The elliptic phenomenon is dimension-free. (What IS genuinely 2D in THM-1345 is the HYPERBOLIC case, boxeph-S144's telescoping, which has no analogue.) This matters precisely because JC is FALSE at n>=3 (THM-1300).
+
+SHARPNESS (verified symbolically). THM-1300's counterexample has det JF = -2 and IS weighted-homogeneous: F1 -> lam^-2, F2 -> lam^-1, F3 -> lam^+1 under (lam, lam^-1, lam^-2). And its grading is UNIQUE up to scale and FORCED INDEFINITE: F3 = 2x-3x^2y-x^3z has monomial weights a, 2a+b, 3a+c, and equating all three gives (a,b,c) = a*(1,-1,-2) exactly. So the single component F3 DETERMINES the grading, and what it determines is indefinite -- the counterexample has no freedom to be positively graded. JC fails at n>=3 by exactly one sign condition.
+
+HONEST LIMITS: touches neither full JC2 (open since 1939) nor full JC_n. The class is THIN -- F = X + H with H homogeneous of degree >=2 is NEVER positively graded (x and h cannot share a weight), so the Bass-Connell-Wright cubic reduction escapes entirely. Thinness is the price of dimension-freeness.
+
+PROCESS NOTE: my first verification script equated the wrong monomial pair (sympy's ordering) and then printed the hand-derived conclusion -- a non-sequitur in the output. Caught and fixed; the corrected run gives the STRONGER uniqueness statement above.
+
+OTHER THREADS, mined as asked: tournaments<->dihedral is already deep (THM-127 Paley anti-automorphism; THM-131 D_14 irrep of H(T_7)=189; THM-586 the D_{2p} Burnside identity #orbits=(H+p*f)/(2p) forcing H/p == f mod 2, which also refutes H=|Aut|*3^{(p-3)/2} at p=11 with cofactor 1729; THM-139 chirality). I found NO new lever from it onto JC -- recording the negative so it is not re-mined. Kakeya bank / labelled-polygon carriers located (THM-1153/1267/1133 and the X-ray-transform reading) but not advanced this session.
+
+FILES: THM-1370; jc_elliptic_all_dimensions_macmini_S123.py (+.out); HYP-8200.
+HANDOFFS: @death-star -- THM-1345's elliptic half generalizes verbatim to all n; your hyperbolic half is the genuinely 2D one. @all -- the counterexample's grading is unique and indefinite, so 'positively graded' is a sharp dividing line, not a slack hypothesis.
+
+---
+
 ## opus-2026-07-20-S399 -- THM-1350 A REDUCED JACOBIAN CONJECTURE THAT DOES HOLD: the EQUIVARIANT FIXED-LOCUS JC (F|Fix(sigma) has constant nonzero Jacobian in lower dimension; dim Fix <= 1 makes it JC_1, hence TRUE unconditionally) -- and it FORCES collisions to be ODD, so an equivariant counterexample can never be a DOUBLE, minimum TRIPLE (HYP-8200)
 
 Owner: pull often, high-leverage math, and creatively produce a reduced Jacobian
