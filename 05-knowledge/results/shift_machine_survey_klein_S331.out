@@ -1,0 +1,71 @@
+=== THE SHIFT-MACHINE SURVEY (families x shifts x metrics) ===
+
+#### family: Proth n*2^x+1 (param x>=0)
+  shift 1: rows[5] = [6, 9, 13, 17, 17], rows[7] = [8, 13, 21, 33, 49, 65, 65]
+    row sums  = [2, 6, 14, 30, 62, 126, 254, 510, 1022, 2046]  -> = 2^(n+1)-2 (offset 0)
+    alt sums  = [2, 0, 4, -2, 10, -12, 32, -54, 118, -224]  -> linrec order 4: coeffs [-2, 1, 3, -1]
+    products  = [2, 9, 100, 2835, 202878, 35637525, 14920705800]  -> UNIDENTIFIED
+  shift 2: rows[5] = [6, 7, 5], rows[7] = [8, 11, 13, 9]
+    row sums  = [2, 3, 7, 10, 18, 25, 41, 56, 88, 119]  -> UNIDENTIFIED
+    alt sums  = [2, 3, 1, 0, 4, 7, 1, -4, 8, 19]  -> UNIDENTIFIED
+    products  = [2, 3, 12, 25, 210, 567, 10296]  -> UNIDENTIFIED
+  shift 3: rows[5] = [6, 5], rows[7] = [8, 9, 5]
+    row sums  = [2, 3, 4, 8, 11, 14, 22, 29, 36, 52]  -> UNIDENTIFIED
+    alt sums  = [2, 3, 4, 2, 1, 0, 4, 7, 10, 4]  -> UNIDENTIFIED
+    products  = [2, 3, 4, 15, 30, 49, 360]  -> UNIDENTIFIED
+
+#### family: polygonal k-gonal (param k>=3)
+  shift 1: rows[5] = [15, 16, 12, 6, 1], rows[7] = [28, 36, 35, 28, 18, 8, 1]
+    row sums  = [1, 4, 11, 25, 50, 91, 154, 246, 375, 550]  -> UNIDENTIFIED
+    alt sums  = [1, 2, 3, 5, 6, 9, 10, 14, 15, 20]  -> UNIDENTIFIED
+    products  = [1, 3, 24, 450, 17280, 1212750, 142248960]  -> UNIDENTIFIED
+  shift 2: rows[5] = [15, 9, 1], rows[7] = [28, 25, 12, 1]
+    row sums  = [1, 3, 7, 14, 25, 42, 66, 100, 145, 205]  -> UNIDENTIFIED
+    alt sums  = [1, 3, 5, 6, 7, 10, 14, 16, 17, 21]  -> UNIDENTIFIED
+    products  = [1, 3, 6, 40, 135, 1680, 8400]  -> UNIDENTIFIED
+  shift 3: rows[5] = [15, 4], rows[7] = [28, 16, 1]
+    row sums  = [1, 3, 6, 11, 19, 30, 45, 66, 93, 127]  -> UNIDENTIFIED
+    alt sums  = [1, 3, 6, 9, 11, 12, 13, 16, 21, 27]  -> UNIDENTIFIED
+    products  = [1, 3, 6, 10, 60, 189, 448]  -> UNIDENTIFIED
+
+#### family: simplex C(n+d-1,d) (param d>=1)
+  shift 1: rows[5] = [5, 10, 10, 5, 1], rows[7] = [7, 21, 35, 35, 21, 7, 1]
+    row sums  = [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023]  -> = Mersenne 2^n-1 (offset 0)
+    alt sums  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  -> linrec order 1: coeffs [1]
+    products  = [1, 2, 9, 96, 2500, 162000, 26471025]  -> UNIDENTIFIED
+  shift 2: rows[5] = [5, 6, 1], rows[7] = [7, 15, 10, 1]
+    row sums  = [1, 2, 4, 7, 12, 20, 33, 54, 88, 143]  -> linrec order 3: coeffs [-1, 0, 2]
+    alt sums  = [1, 2, 2, 1, 0, 0, 1, 2, 2, 1]  -> linrec order 3: coeffs [1, -2, 2]
+    products  = [1, 2, 3, 12, 30, 240, 1050]  -> UNIDENTIFIED
+  shift 3: rows[5] = [5, 3], rows[7] = [7, 10, 1]
+    row sums  = [1, 2, 3, 5, 8, 12, 18, 27, 40, 59]  -> linrec order 4: coeffs [-1, 1, -1, 2]
+    alt sums  = [1, 2, 3, 3, 2, 0, -2, -3, -2, 1]  -> linrec order 4: coeffs [1, -1, -1, 2]
+    products  = [1, 2, 3, 4, 15, 36, 70]  -> UNIDENTIFIED
+
+#### family: centered k-gonal (param k>=3)
+  shift 1: rows[5] = [31, 25, 16, 7, 1], rows[7] = [64, 61, 51, 37, 22, 9, 1]
+    row sums  = [1, 5, 16, 39, 80, 146, 245, 386, 579, 835]  -> UNIDENTIFIED
+    alt sums  = [1, 3, 6, 11, 16, 24, 31, 42, 51, 65]  -> UNIDENTIFIED
+    products  = [1, 4, 50, 1482, 86800, 8886832, 1458635904]  -> UNIDENTIFIED
+  shift 2: rows[5] = [31, 13, 1], rows[7] = [64, 41, 16, 1]
+    row sums  = [1, 4, 11, 24, 45, 77, 122, 184, 265, 370]  -> UNIDENTIFIED
+    alt sums  = [1, 4, 9, 14, 19, 27, 38, 48, 57, 70]  -> UNIDENTIFIED
+    products  = [1, 4, 10, 95, 403, 6900, 41984]  -> UNIDENTIFIED
+  shift 3: rows[5] = [31, 5], rows[7] = [64, 25, 1]
+    row sums  = [1, 4, 10, 20, 36, 59, 90, 132, 186, 253]  -> UNIDENTIFIED
+    alt sums  = [1, 4, 10, 18, 26, 33, 40, 50, 64, 81]  -> UNIDENTIFIED
+    products  = [1, 4, 10, 19, 155, 598, 1600]  -> UNIDENTIFIED
+
+#### family: power sums PS_p (param p>=0)
+  shift 1: rows[5] = [5, 10, 14, 9, 1], rows[7] = [7, 21, 55, 100, 98, 33, 1]
+    row sums  = [1, 3, 7, 16, 39, 105, 315, 1048, 3829, 15207]  -> UNIDENTIFIED
+    alt sums  = [1, 1, 1, 2, 1, 1, 7, -12, 17, 65]  -> UNIDENTIFIED
+    products  = [1, 2, 9, 120, 6300, 1652400, 2614689000]  -> UNIDENTIFIED
+  shift 2: rows[5] = [5, 6, 1], rows[7] = [7, 15, 14, 1]
+    row sums  = [1, 2, 4, 7, 12, 21, 37, 68, 129, 254]  -> UNIDENTIFIED
+    alt sums  = [1, 2, 2, 1, 0, 1, 5, 8, 1, -18]  -> UNIDENTIFIED
+    products  = [1, 2, 3, 12, 30, 300, 1470]  -> UNIDENTIFIED
+  shift 3: rows[5] = [5, 3], rows[7] = [7, 10, 1]
+    row sums  = [1, 2, 3, 5, 8, 12, 18, 28, 44, 69]  -> UNIDENTIFIED
+    alt sums  = [1, 2, 3, 3, 2, 0, -2, -2, 2, 11]  -> UNIDENTIFIED
+    products  = [1, 2, 3, 4, 15, 36, 70]  -> UNIDENTIFIED
