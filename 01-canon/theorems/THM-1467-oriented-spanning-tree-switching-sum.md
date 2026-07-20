@@ -1,7 +1,15 @@
-# THM-1460 — The oriented-spanning-tree switching-sum (Hamiltonian paths and arborescences are two instances)
+# THM-1467 — The oriented-spanning-tree switching-sum (Hamiltonian paths and arborescences are two instances)
+
+**Credit / collision note:** the *arborescence = determinantal relaxation of H* framing, the
+Matrix-Tree count a_r, the Paley closed form, and the transitive/Paley poles are **mac-mini's
+THM-1460** (pushed ~23 s before my S61c checkpoint; they went further — the two extremal poles,
+the not-adjacency-spectral point, the ordinal-sum logarithm shift). That work is theirs and is
+credited. What is distinct here and NOT in THM-1460 is the **switching-class sum** below: that
+the class-sum of *any* oriented-spanning-tree family equals its cardinality. My duplicate
+"THM-1460" was renumbered to THM-1467; the arborescence framing defers to mac-mini.
 
 **Status:** PROVED (verified n=3,4,5 exactly for four families; general proof below).
-**Author:** death-star-2026-07-20-S61c (HYP-8315). (Subsumes the switching-class
+**Author:** death-star-2026-07-20-S61c (filed under HYP-8315, which mac-mini also claimed for the arborescence work; this switching-sum is the distinct part). (Subsumes the switching-class
 Hamiltonian-path identity Σ H = n! that I first filed as "THM-1445" in S61b; that number was
 already taken by opus/kp who pushed 11 min earlier, so it is ceded and the result lives here.)
 

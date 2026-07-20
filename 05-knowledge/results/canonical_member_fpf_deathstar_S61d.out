@@ -1,0 +1,14 @@
+=== canonical member (all-even / all-odd out-degrees) per switching class ===
+  n=3 (3 mod4): #classes=2, all-EVEN/class={0: 2}, all-ODD/class={1: 2}
+  n=4 (0 mod4): #classes=8, all-EVEN/class={0: 6, 4: 2}, all-ODD/class={0: 6, 4: 2}
+  n=5 (1 mod4): #classes=64, all-EVEN/class={1: 64}, all-ODD/class={0: 64}
+  n=6 (2 mod4): #classes=1024, all-EVEN/class={0: 1024}, all-ODD/class={0: 1024}
+
+=== fixed-point-free automorphism: #switching classes with g (g.C=C) fixing NO member ===
+  n=3 (3 mod4): 0 of 2 switching classes admit a fixed-point-free automorphism   (ODD n => 0, canonical member always fixed)
+  n=4 (0 mod4): 8 of 8 switching classes admit a fixed-point-free automorphism   
+  n=5 (1 mod4): 0 of 64 switching classes admit a fixed-point-free automorphism   (ODD n => 0, canonical member always fixed)
+  n=6 (2 mod4): 640 of 1024 switching classes admit a fixed-point-free automorphism   
+
+  => ODD n: 0 (unique canonical all-even[n=1mod4]/all-odd[n=3mod4] member is fixed by every g).
+     EVEN n: the count is NONZERO -- this is exactly the case Babai-Cameron said 'we cannot do'.

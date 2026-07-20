@@ -1,0 +1,27 @@
+=== (A) E[eps over S_n]  (mass at the complete-core K_n class); confirm 3/8 at n=8 ===
+  n=2: E[eps]=0  f+=(1+E)/2=1/2  mass|E|=0  
+  n=3: E[eps]=0  f+=(1+E)/2=1/2  mass|E|=0  
+  n=4: E[eps]=1/2  f+=(1+E)/2=3/4  mass|E|=1/2  
+  n=5: E[eps]=1/2  f+=(1+E)/2=3/4  mass|E|=1/2  
+  n=6: E[eps]=0  f+=(1+E)/2=1/2  mass|E|=0  
+  n=7: E[eps]=0  f+=(1+E)/2=1/2  mass|E|=0  
+  n=8: E[eps]=3/8  f+=(1+E)/2=11/16  mass|E|=3/8  <-- 3/8 !
+  n=9: E[eps]=3/8  f+=(1+E)/2=11/16  mass|E|=3/8  <-- 3/8 !
+  n=10: E[eps]=0  f+=(1+E)/2=1/2  mass|E|=0  
+  sequence n=2..10: ['0', '0', '1/2', '1/2', '0', '0', '3/8', '3/8', '0']  (quarter-law {0,1/2} breaks to 3/8 at n=8,9)
+
+=== (B) all-even-out-degree member per switching class (Babai-Cameron) ===
+  n=3 (3 mod 4): C(n,2)=3 (ODD); even-members-per-class distribution = {0: 2}  (NO even member)
+  n=5 (1 mod 4): C(n,2)=10 (even); even-members-per-class distribution = {1: 64}  (UNIQUE even member)
+
+=== (C) the mod-4 dichotomy for ODD n (C(n,2) parity) ===
+  n=3 = 3 mod4: C(n,2)=3 odd  => NO even member                   | Paley TOURNAMENT (q=3 mod4)
+  n=5 = 1 mod4: C(n,2)=10 even => UNIQUE even member -> BC count 0 | Paley GRAPH self-compl (q=1 mod4)
+  n=7 = 3 mod4: C(n,2)=21 odd  => NO even member                   | Paley TOURNAMENT (q=3 mod4)
+  n=9 = 1 mod4: C(n,2)=36 even => UNIQUE even member -> BC count 0 | Paley GRAPH self-compl (q=1 mod4)
+  n=11 = 3 mod4: C(n,2)=55 odd  => NO even member                   | Paley TOURNAMENT (q=3 mod4)
+  n=13 = 1 mod4: C(n,2)=78 even => UNIQUE even member -> BC count 0 | Paley GRAPH self-compl (q=1 mod4)
+
+  => 3,7,11 (=3 mod4): odd C(n,2), NO even member, Paley TOURNAMENTS -- the {7,21}-gap side.
+     5,9,13 (=1 mod4): even C(n,2), UNIQUE even member (BC=0), Paley GRAPHS/self-complementary.
+     This is why primes 3 and 7 pattern together (mod 4) and 5 sits with 1,9.

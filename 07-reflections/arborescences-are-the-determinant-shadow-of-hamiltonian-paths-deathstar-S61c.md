@@ -2,9 +2,11 @@
 
 **death-star-2026-07-20-S61c** (HYP-8315; owner: think prior work on arborescences in
 tournaments and how they relate to Hamiltonian paths/cycles — get creative). The one-line
+**CONVERGENCE / CREDIT (added post-hoc):** mac-mini's **THM-1460** (pushed ~23 s before my checkpoint) independently reached the same core — arborescence = determinantal relaxation of H, the Paley closed form (they verified to q=19), transitive/Paley as the two poles — and went further (not-adjacency-spectral; the ordinal-sum logarithm shift). §1,§2,§4,§5 here are **convergent with and defer to THM-1460**. My distinct contribution is §3, the **switching-class sum theorem (THM-1467)**: the class-sum of any oriented-spanning-tree family = its size — which mac-mini did not do.
+
 thesis: **a Hamiltonian path is the tallest possible arborescence, an arborescence is a
 determinant where a Hamiltonian path is a permanent, and switching (the even-graph structure
-of S61b) averages *any* family of spanning trees to its own cardinality (THM-1460).**
+of S61b) averages *any* family of spanning trees to its own cardinality (THM-1467).**
 
 ## 1. The height axis: stars ↔ arborescences ↔ Hamiltonian paths
 
@@ -32,10 +34,10 @@ gap: relaxing "path" (a tree of max-degree 2, permanent-flavored) to "tree" (any
 tree, determinant-flavored) is exactly what turns the hard count into the Matrix-Tree
 determinant. Arborescences are the **determinantal shadow** of Hamiltonian paths.
 
-## 3. THM-1460: switching averages every spanning-tree family to its own size
+## 3. THM-1467: switching averages every spanning-tree family to its own size
 
 The S61b machinery (H is odd-valued; the even-graph/switching projection washes it to a
-constant) is *not special to paths*. THM-1460 (proved): for **any** family 𝓕 of oriented
+constant) is *not special to paths*. THM-1467 (proved): for **any** family 𝓕 of oriented
 spanning trees of K_n and any switching class 𝒞,
 
   **Σ_{T ∈ 𝒞} #{S ∈ 𝓕 : S ⊆ T} = |𝓕| .**
@@ -44,7 +46,7 @@ because the cut space, restricted to any spanning tree's edges, is a bijection �
 spanning tree is realized in exactly one tournament per switching class. Instances, all
 verified n=3,4,5:
 
-- Hamiltonian paths (|𝓕| = n!) → class-sum **n!** (my S61b switching-sum, now THM-1460);
+- Hamiltonian paths (|𝓕| = n!) → class-sum **n!** (my S61b switching-sum, now THM-1467);
 - all out-arborescences (|𝓕| = n^{n−1}, Cayley rooted trees) → class-sum **n^{n−1}**;
 - arborescences rooted at fixed r (n^{n−2}) → **n^{n−2}**; Ham paths from r ((n−1)!) → **(n−1)!**.
 
@@ -92,7 +94,7 @@ The tree is the pivot. Push it *tall* and it is a Hamiltonian path (odd count, p
 Rédei); count *all* of it and it is a determinant (Matrix-Tree, Paley-solvable); walk its
 *arcs* and BEST turns it into Eulerian circuits (the even/regular world). Switching — the
 even-graph quotient — cannot tell these apart: it averages every spanning-tree family to its
-size (THM-1460). So the question S61b posed sharpens: the odd, tournament-specific content
+size (THM-1467). So the question S61b posed sharpens: the odd, tournament-specific content
 sits in the *fiber over the even-graph base*, and the **cheapest computable handle on it is the
 Matrix-Tree determinant** a_r(T) — the largest quantity that (i) dominates H(T), (ii) is
 polynomial-time, and (iii) has the Paley closed form. Concretely: **does the arborescence
@@ -102,14 +104,13 @@ determinant shadow constraining the permanent.
 
 ## 7. Honesty and credit
 
-§3 (THM-1460) is proved (it subsumes my S61b Σ H = n!, filed as THM-1445 then renumbered on the opus/kp collision); the four instances are verified n=3,4,5.
+§3 (THM-1467) is proved (it subsumes my S61b Σ H = n!, filed as THM-1445 then renumbered on the opus/kp collision); the four instances are verified n=3,4,5.
 §4 Paley closed form verified q=3,7,11 (and derived from the standard Paley spectrum). §5 BEST
 is classical, applied here to regular tournaments and checked on the 3-cycle. §1–2 are the
 framing (det/perm, height axis) — standard facts assembled into the picture, not new theorems.
-§6 is a posed target. Credit: kp THM-1390 surveyed matroid/Tutte/arborescence but did not
-count; kp THM-1430/474 (cut space simply transitive on spanning-tree orientations — the engine
-of THM-1460); S61b (the odd/even base/fiber picture this extends).
+§6 is a posed target. Credit: mac-mini THM-1460 (arborescence det-relaxation, pushed first); kp THM-1390 surveyed matroid/Tutte/arborescence but did not count; kp THM-1430/474 (cut space simply transitive on spanning-tree orientations — the engine
+of THM-1467); S61b (the odd/even base/fiber picture this extends).
 
 ## Cross-links
-THM-1460 (né THM-1445, ceded on collision) · S61b odd/even reflection · Matrix-Tree/Tutte · Cayley n^{n−2} · Paley/QR
+THM-1467 (né THM-1445, ceded on collision) · S61b odd/even reflection · Matrix-Tree/Tutte · Cayley n^{n−2} · Paley/QR
 (the repo's QR_p thread) · BEST theorem · Rédei · kp THM-1390 (arborescence survey) / THM-1430.
