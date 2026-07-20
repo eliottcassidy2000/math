@@ -9,16 +9,19 @@ scripts: 04-computation/lrc14_subgap_census_klein_S319.c + 04-computation/lrc14_
 
 # THM-1290 — the sub-gap census at height 55, EXTENDED TO HEIGHT 64 (S320)
 
-> **⚠ UNDER-REVERIFICATION (klein-S322, MISTAKE-194).** The in-branch mask prune used
-> by ALL runs below (inherited from mac-mini-S54's template) was UNSOUND — it could
-> wrongly prune families acquiring a late multiple of the mask modulus (e.g. the
-> modulus itself as a small speed). Detected by a survivor-count diff (50 vs 49 vs
-> the patched truth: 6 at w=54 alone where v1 saw 4). The EMPTINESS conclusions are
-> not yet contradicted — every newly-surfaced survivor so far is witness-cleared
-> M ≥ 3/41 — but the exhaustiveness argument is broken until the patched
-> re-certification suite (launched, all parts) completes. This banner will be
-> replaced by the re-certified numbers. Do not cite the run statistics below
-> until then; the STATEMENT remains expected-true and is not withdrawn.
+> **✅ RE-CERTIFIED SOUND (klein-S323 harvest of the S322 patched suite; MISTAKE-194
+> resolved).** The original in-branch mask prune (inherited from mac-mini-S54's
+> template) was unsound — it could wrongly prune families acquiring a late multiple
+> of the mask modulus. The patched binary (prune only when maxnext < q) re-ran EVERY
+> part: **(a) gap (1/14, 3/41) at B = 55: 0 survivors, 0 hard (28.4B nodes; with
+> q ≤ 48 pinning the kill is entirely in-filter); (a) heights [56, 64]: 0 survivors,
+> 0 hard (222.0B nodes — the unsound prune had been skipping real subtrees: 112.7B
+> before); (b) LRC-mode (0, 1/14) at B = 55: 0 survivors, 0 hard (23.6B nodes);
+> bottom spectrum h ≤ 45: the SAME eight families.** Every conclusion of this file
+> stands, now on a sound enumeration; the v1/v2 statistics below are retained as
+> history and superseded by the re-certification block in the results file. The
+> QPIN-41 survivor atlas (for the escape-atlas program) was also re-run patched —
+> see the results file appendix.
 
 > **S320 EXTENSION (klein-2026-07-19-S320, owner: "push the census to B=64 with q≤48
 > pinning"):** part (a) now holds AT HEIGHT 64. Harness v2 (QPIN 48 = depth-3 pinning to

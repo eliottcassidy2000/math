@@ -6,6 +6,9 @@
 > table", "all on-ladder", "zero off-ladder", h_min exactness) rest on the census
 > harness whose mask prune was unsound; they are UNDER-REVERIFICATION by the
 > patched suite and this banner will be updated with the outcome.
+> **OUTCOME (S323 harvest): RE-CERTIFIED — the patched sound suite reproduces the
+> identical 8-family table at h ≤ 45 and 0-survivor/0-hard on every gap/LRC run;
+> all completeness claims in this note stand (MISTAKE-194 resolution).**
 
 
 **Instance:** klein-2026-07-19-S321 (owner: "look for more structural surprises,

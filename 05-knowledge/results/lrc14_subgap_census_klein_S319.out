@@ -182,3 +182,23 @@ w_max=64 done: visit=23285285055 leaf=1401526483 F1=149074683 F2=149074683 F4=14
 ## STRUCTURAL COROLLARY: covering{2..13} + spread(sigma>12) + pair-sum + unit-pinning(q<=48) is
 ## JOINTLY UNSATISFIABLE for 13-subsets through height 64 -- the filter stack alone kills everything;
 ## no rational witness beyond the filters was needed anywhere in [56,64].
+
+## S322/S323 RE-CERTIFICATION (MISTAKE-194 patched prune: pair-count masks only when maxnext < q)
+# All runs re-executed with the SOUND binary (subgap48f). Per-chunk finals:
+# [rc55_a] w_max=28 done: visit=1101810761 leaf=43317573 F1=8136317 F2=8136317 F4=8126798 prim=8126795 F5=0 scan=0 HARD=0
+# [rc55_b] w_max=46 done: visit=5340857242 leaf=373229868 F1=79139974 F2=79139974 F4=78404545 prim=78401398 F5=0 scan=0 HARD=0
+# [rc55_c] w_max=51 done: visit=8518878636 leaf=754874561 F1=121916953 F2=121916953 F4=120765568 prim=120751158 F5=0 scan=0 HARD=0
+# [rc55_d] w_max=54 done: visit=13454574010 leaf=1558801727 F1=304663315 F2=304663315 F4=302366007 prim=302307512 F5=0 scan=0 HARD=0
+# [rc64_a] w_max=56 done: visit=64725248396 leaf=7838219079 F1=1243805891 F2=1243805891 F4=1242311307 prim=1242137505 F5=0 scan=0 HARD=0
+# [rc64_b] w_max=61 done: visit=103862836163 leaf=18069155017 F1=2111205332 F2=2111205332 F4=2109055075 prim=2108947989 F5=0 scan=0 HARD=0
+# [rc64_c] w_max=64 done: visit=53363422772 leaf=9284804970 F1=1093284355 F2=1093284355 F4=1092165575 prim=1091998274 F5=0 scan=0 HARD=0
+# [rclrc_a] w_max=14 done: visit=930931371 leaf=29993447 F1=4129168 F2=4129168 F4=4129168 prim=4129149 F5=0 scan=0 HARD=0
+# [rclrc_b] w_max=46 done: visit=22626825494 leaf=1952334456 F1=227616741 F2=227616741 F4=227616741 prim=227541863 F5=0 scan=0 HARD=0
+# [rcspec45] w_max=13 done: visit=1810978138 leaf=117081642 F1=28356096 F2=28356096 F4=28356096 prim=28355979 F5=8 scan=0 HARD=8
+#
+## RE-CERTIFIED VERDICTS:
+# (a) gap (1/14,3/41), B=55: F5=0 HARD=0 (28.42B nodes) -- EMPTY, now a total in-filter kill at q<=48.
+# (a) gap, w_max in [56,64]: F5=0 HARD=0 (222.0B nodes vs 112.7B unsound -- the buggy prune had skipped real subtrees).
+# (b) LRC-mode (0,1/14), B=55: F5=0 HARD=0 (23.6B nodes) -- no 13-subset of [1,55] has M < 1/14.
+# bottom spectrum (0,1/13), h<=45: HARD=8, the SAME eight families -- two-ladder table stands.
+# TOTAL recert ~275.8B nodes. EVERY THM-1290/S321/S322 conclusion RE-CERTIFIED SOUND.
