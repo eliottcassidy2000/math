@@ -42,6 +42,42 @@ Prompt (owner): run the hamming-2 duty-trading sweep
 FILES: HYP-7985 (RESOLVED), script+out lrc14_twofar_stratum_sweep_macmini_S125, backlog S124
 lead (ii) EXECUTED with two new follow-ups, results INDEX. -> all
 
+## klein-2026-07-19-S319 -- THM-1290 (TWO EXHAUSTIVE PLANKS AT HEIGHT 55): (a) the sub-gap (1/14, 3/41) is EXHAUSTIVELY EMPTY for all 13-subsets of [1,55] -- 43.9B DFS nodes, 4.69B filtered primitive families, exactly 50 unit-pinning survivors, every one witness-certified M >= 3/41 at q in [43,48], ZERO hard cases; (b) LRC(14) VERIFIED EXHAUSTIVELY at height 55 -- companion run at interval (0,1/14) (covering 2..14, spread 13): 32.7B nodes, 2.45B filtered, 6 survivors certified, 0 hard => any counterexample needs v_max >= 56. PLUS the NEAR-MISS LEDGER + SANDWICH synthesis (owner ask: "see the times we have come close, synthesize multiple perspectives"), the independent 5th G-K extraction closing THM-1289's named residual, and the Kravitz/Fan-Sun <-> repo-slack unification (slack = D - k)
+
+Owner: work to finish LRC(14); see the near-misses; synthesize perspectives. METHOD: canon
+prior-art first (mac-mini S54's n=12 census harness found and adapted, not rewritten; the
+pair-sum filter derives from THM-1269's D = M*s -- gap membership forces a pair summing
+into {55,69,83,96,97,110}, hence v_max >= 28), then a C harness with FOUR rigorous filters
+(covering 2..13 / THM-1043 spread sigma > 12 / pair-sum / unit-pinning depth d(q) =
+ceil(HI*q)-1 for q <= 41) + independent exact-M python referee (complete breakpoint
+method). VALIDATION: 6 exact-M gates + 2 blind rediscovery gates (widened intervals
+re-find {1..11,13,36} -> 3/41 and {1..12,26} -> 2/27 as the UNIQUE hits) + gate C
+(exhaustive (0,1/13) at h <= 26) which yielded BY-CATCH: the complete sub-1/13 spectrum at
+heights <= 26 is {1/14 x2, 2/27 x3} with TWO NEW 2/27 realizers {1..9,11,13,20,24} and
+{1..9,11,12,13,20} (height 20 -- BELOW the ladder family's 26; rung-realizer multiplicity
+grows off-ladder). THE SANDWICH (synthesis doc): bottom = kps HYP-7940 cage (micro-gap to
+281,577, conditional); middle = THM-1290 (full interval, unconditional, h <= 55); top =
+THM-1289 floor-isolation (published G-K Thm 1.4, all heights, delta ineffective); roof =
+window-finiteness CONDITIONAL on G-K Conjecture 1.5 (MISTAKE-190's correction respected).
+UNIFICATION: repo slack and Fan-Sun k are the same stratification (slack = D - k);
+sub-gap <=> k >= 3 with k < D < 3k/2; under Fan-Sun Conj 1.2 the sub-gap candidate list
+is FINITE AND EXPLICIT (D <= 19; D >= 15 unconditionally form-inadmissible). NEXT (named,
+backlog): (i) pinning q <= 48 + B = 60-64; (ii) wire THM-1291's CF law as in-branch
+filter -> B ~ 80+; (iii) death-star gate arithmetic on the five k >= 3 rungs at n = 14;
+(iv) effectivize THM-1289's delta + the gridmax-window question. HYGIENE: HYP-7930
+(kps-first-push vs opus) and HYP-7975 (opus-first-push vs kps) collisions FLAGGED in the
+INDEX with timestamps, not unilaterally renumbered; 5 stale git autostash entries on the
+klein clone flagged (possible unpopped work from earlier rebases); worked from a linked
+worktree to avoid touching a live concurrent session's dirty THM-1277/1278 files.
+
+Prompt (owner): work to finish the 14 runner lonely runner conjecture. see the times we
+have come close, and synthesize multiple valid perspective to keep chipping away
+
+FILES: THM-1290 (both parts), THM-1289 addendum, LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-
+2026-07-19-klein-S319.md, lrc14_subgap_census_klein_S319.c + referee + consolidated .out,
+INDEX entry + collision flags, backlog UPDATE with 4 named next steps. -> all
+
+---
 ## opus-2026-07-19-S404 -- THM-1291: HYP-7970 (the CF ACTIVE-LEG LAW) IS PROVED (owner: prove it, full session). THREE UNCONDITIONAL PIECES + THE LAW UNDER AN EXACT SCOPE: Prop 0 -- at any maximizer t* = a/q the active speeds occupy ONE +- residue class mod q, straddle sums quantize to kq, D = k*(qM); PINCH LEMMA -- both sides are always active (no plateaus, slope argument), so "pinched" is automatic; LEMMA 1 (unimodular basis, self-contained) + (A) -- the FIRST integer u* whose distance at t* drops to <= M is ALWAYS a convergent denominator of a/q (referee: 0 failures / ~200k random instances); (B) THE LAW -- under H (u* is itself a speed <=> no non-speed integer below the smallest active speed beats M): the smallest active speed IS that convergent q_m and every straddling pair through it has s = kq, D = k*delta_m = k*|q_m a - p_m q| -- THE DETERMINANT IS THE CF REMAINDER OF THE ACTIVE CONVERGENT. H is NECESSARY (390 random violations found, (A) intact in every one; S403's two control-failures are exactly H-failures: primes13 u*=1 not a speed, mixed u*=2 not a speed) and holds across the entire known near-floor corpus (which carries {1..11}-type prefixes). COROLLARIES: (1) ladder unification -- {1..11,13,12m} is ONE convergent (leg 5) at growing remainder, and the reduced/represented distinction (MISTAKE-173) is structural (m=5: value reduces to 1/13, maximizer stays at 65 because speed 13 kills every a/13); (2) THE 4/55-HUNT TABLE -- window fractions share CF [0;13,1,k>=2,...], so under H a rung realizer's (smallest-active-speed, numerator) pair is pinned to a FINITE explicit table per rung -- compose with boxeph's CRT stack and death-star's gates: three constraint systems on ONE finite parameter. CONSUMERS AMENDED: THM-1269 now carries the CF-refinement banner ("bound D" = "bound k*delta_m under H" -- Ostrowski territory). FLEET NOTES: mac-mini-S124's log header says "HYP-7970 RESOLVED" for DUTY-QUANTIZATION content -- likely an ID collision (my HYP-7970 = the CF law, pushed at S403 close-out; first-push adjudicates; their duty finding deserves its own number) -- flagged, not unilaterally renumbered; their 12|x dichotomy on the 4/55 single-far candidates converges with Corollary 2's table and their S123 rung-lattice is the dominance face of the same object -- compose.
 
 Prompt (owner): prove HYP-7970, spend a full session on it
