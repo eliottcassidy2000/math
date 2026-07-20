@@ -1,0 +1,7 @@
+  full-scan: removed 12, x=24: M = 1/14  => TIGHT (known iff GW)
+
+3679 one-far families scanned exhaustively (x ≤ 296).
+tights found: 1 (exactly GW: True)
+IN-GAP: NONE.  With the k=1 plateau lemma (x ≥ 297 ⟹ M ≥ 3/41),
+the ONE-FAR STRATUM has no family with M ∈ (1/14, 3/41) at ANY
+height — the first all-heights shape-class closure of the gap.

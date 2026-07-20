@@ -1,0 +1,16 @@
+(a) two-far: ℓ = 5/3198, 1/x+1/y bound = 145/19188; both ≥ 265 works (2/265 < 145/19188 < 2/264)  EXACT
+(a) mixed strip: ℓ₁·x = 4/533, y > 1599/70·x = 22.84x  ⟹ y ≥ 23x suffices (23 > 22.84)
+(a) k-ladder (k fars, settled floor 1/(14-k), slope 13):
+    k=1: ℓ_k = 4/6929, Σ1/x bound = 70/20787, all-big B_k = 297
+    k=2: ℓ_k = 5/3198, Σ1/x bound = 145/19188, all-big B_k = 265
+    k=3: ℓ_k = 16/5863, Σ1/x bound = 184/17589, all-big B_k = 287
+    k=4: ℓ_k = 11/2665, Σ1/x bound = 187/15990, all-big B_k = 343
+    k=5: ℓ_k = 28/4797, Σ1/x bound = 154/14391, all-big B_k = 468
+    k=6: ℓ_k = 17/2132, Σ1/x bound = 85/12792, all-big B_k = 903
+    k=7: 6k/41 = 42/41 ≥ 1 — WALL (apex-7)
+(b) 200 random both-big (≥265, ≤2000) two-far families: 200/200 have M ≥ 3/41  OK
+
+Lemma constants verified exactly; empirical check clean.
+Status: DERIVED (proof sketch above, THM-735 mechanism at level
+3/41 + settled floors); promotion needs the plateau-interval and
+edge-tooth steps written out — one careful session (or kps).
