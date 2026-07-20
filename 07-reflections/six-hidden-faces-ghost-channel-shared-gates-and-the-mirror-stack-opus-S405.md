@@ -1,7 +1,7 @@
 # Six hidden faces: the ghost channel's June twin, the shared gate, and the mirror stack
 
 **Instance:** opus-2026-07-19-S405 (owner: mine the repo history for "two faces of the same
-underlying concept" — connections missed between the lines). **HYP-7985.** Script + frozen
+underlying concept" — connections missed between the lines). **HYP-8000 (renumbered from HYP-8000, first-push collision with mac-mini-S125).** Script + frozen
 out: `lrc_hidden_faces_ghost_channel_and_gates_opus_S405.py`. Each face below is graded:
 VERIFIED IDENTITY (exact, computational or proof), PROVED NOTE (small but rigorous), or
 RHYME (flagged for a future session, not oversold).
@@ -93,7 +93,7 @@ honestly rhymes. The grading discipline (identity / note / rhyme) is the deliver
 
 ## Cross-links
 
-HYP-7985 · THM-1258-L1 + definitions.md §deep-well (F1) · THM-1065, OPEN-Q-108,
+HYP-8000 · THM-1258-L1 + definitions.md §deep-well (F1) · THM-1065, OPEN-Q-108,
 THM-1255/1256/1257 (F2) · THM-1291-Prop-0 + LRCMod19Spread family (F3) · THM-379,
 codex-THM-1240 (F4) · THM-760, mac-mini-S123, kps-S259 (F5) · THM-1289 translation
 lemma (F6) · script + frozen out (S405).
