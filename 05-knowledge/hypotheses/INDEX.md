@@ -16962,9 +16962,9 @@ induct downward on k_max (a charge-descent, parallel to the TNC coefficient ladd
 but on charges rather than radial degree). UNTRIED. This + the complex-p radial case are what
 GMC(2) needs beyond span-2-constant (THM-1600) and the real radial layer (THM-1675).
 ### HYP-8495 - Uniform trinomial coprimality: gcd(CT(m0), CT(2m0)) is always a monomial in the gauge parameter
-**Status:** OPEN, would close ALL trinomials at once (opus-2026-07-20-S420). See THM-1675.
+**Status:** OPEN, would close ALL trinomials at once (opus-2026-07-20-S420). See THM-1680.
 
-THM-1675 reduces TNC for a trinomial charge pattern (N; j, d) to a FINITE GCD: gauge-fix to
+THM-1680 reduces TNC for a trinomial charge pattern (N; j, d) to a FINITE GCD: gauge-fix to
 R = 1 + a u^j + u^d, and TNC holds iff the CT(Lambda^m) polynomials in a have no common
 NONZERO root. Verified 10/10 patterns (gcd = c*a^k). To close ALL trinomials, prove the
 uniform statement:
@@ -17036,3 +17036,27 @@ one-sided terminus is DvdK's degenerate case.
 (iii) the uniform-in-Q `m >> 0` bound for 'one-sided => MZ-harmless'.
 These three + the closed radial layer would prove GMC(2). This is the natural full-attack
 target and is now sharply scoped.
+**Related:** THM-1680, THM-1655, THM-1635, THM-1535 (GMC cascade resonance), HYP-8470/8480.
+
+### HYP-8505 - Uniform CT-level bound closes TNC on the few-terms axis
+**Status:** OPEN, would close TNC for all k-nomials (opus-2026-07-20-S421). See THM-1685.
+
+THM-1685 reduces TNC for a k-term charge pattern to a Nullstellensatz emptiness test
+(V(I) cap (C*)^{k-2} = empty), decidable by one Groebner computation; 17/17 patterns tested
+(trinomial 10, 4-nomial 5, 5-nomial 2) CLOSE. To make this a closed-form certificate rather
+than a terminating algorithm, prove a UNIFORM bound: <= B(k) CT-levels always saturate the
+ideal to 1. Empirically B(k) ~ k+2.
+
+**Load-bearing sub-claim.** CT(2m0) = (CT(m0)/c)^2 + correction, and the correction does NOT
+vanish on V(CT(m0)). This is the GMC-cascade positivity (THM-1535 s3) in the coefficient
+ring. Proving it in general closes every k at once, since {CT(m0), CT(2m0)} would already
+generate the unit ideal after saturation.
+
+**Roots-of-unity angle (THM-415 bridge).** The tuned-cancellation witnesses are roots of
+unity (trinomial: a^2=-1 = primitive 4th root). If forced, the emptiness is a CYCLOTOMIC
+non-vanishing and THM-415's prime/composite vanishing-sums dichotomy applies directly. Same
+object as the JC-monodromy vanishing-sums-of-roots-of-unity residual (HYP-8450) -- worth
+checking whether the two share a lemma.
+
+**Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
+(GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).

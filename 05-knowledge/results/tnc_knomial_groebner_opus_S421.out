@@ -1,0 +1,25 @@
+==============================================================================
+(1) 4-NOMIAL: R = 1 + a u^j + b u^l + u^d  (2 free params a,b), TNC per pattern
+==============================================================================
+   N=2 charges -2,1,2,3: 11 CT-polys; V(I) cap (C*)^2 EMPTY (1 in saturation): True
+   N=2 charges -2,-1,1,2: 11 CT-polys; V(I) cap (C*)^2 EMPTY (1 in saturation): True
+   N=3 charges -3,-2,1,2: 11 CT-polys; V(I) cap (C*)^2 EMPTY (1 in saturation): True
+   N=2 charges -2,1,3,4: 10 CT-polys; V(I) cap (C*)^2 EMPTY (1 in saturation): True
+   N=3 charges -3,-1,1,4: 11 CT-polys; V(I) cap (C*)^2 EMPTY (1 in saturation): True
+
+==============================================================================
+(2) 5-NOMIAL spot-check: R = 1 + a u^j + b u^l + c u^p + u^d (3 params)
+==============================================================================
+   N=2 charges -2,1,2,3,4: 11 CT-polys; V(I) cap (C*)^3 EMPTY: True
+   N=3 charges -3,-2,-1,1,2: 11 CT-polys; V(I) cap (C*)^3 EMPTY: True
+
+==============================================================================
+(3) THE VANISHING-SUMS BRIDGE (THM-415): why the saturation is trivial
+==============================================================================
+   CT(m) = sum over charge-reps of 0 of (multinomial) * (coeff monomial).  Setting all
+   CT(m)=0 is a system of VANISHING SUMS of coefficient monomials.  THM-415: nontrivial
+   vanishing needs 'composite' structure (a sublattice relation among charges).  The
+   MINIMAL rep m0 is the primitive relation; its cancellation (CT(m0)=0) is ONE equation
+   in the params, but CT(2m0) = (that)^2 + correction adds an INDEPENDENT equation, and
+   the two generate the unit ideal after saturation -- exactly the trinomial gcd, now
+   multivariate.  The 'correction' is the GMC-cascade surviving term (THM-1535).

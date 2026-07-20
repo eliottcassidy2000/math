@@ -1,12 +1,14 @@
 ---
-id: THM-1675
+id: THM-1680
 title: "THE TUNED-CANCELLATION LOCUS IS EMPTY FOR TRINOMIALS: TNC reduces to a FINITE GCD, and every tested pattern closes. (0) STRUCTURAL FACT: once r_N=0 (forced, THM-1655), F(u,t)=u^N - tR(u) is LINEAR in t -- [u^N]F=1, [u^k]F=-t r_k. (1) THE DECISION PROCEDURE: every trinomial reduces by the u-scale and t-scale gauges to R = 1 + a u^j + u^d (single free coefficient a); each CT(Lambda^m) is then a POLYNOMIAL in a, and a non-monomial nullcone violator is a common NONZERO root of ALL of them. So TNC for a charge pattern <=> the CT(m) polynomials have no common nonzero root <=> their finite GCD is a power of a (a=0 = monomial, excluded). (2) VERIFIED 10/10 patterns: in every case gcd(CT(m_0),...,CT(m_0+3)) in a is a nonzero constant or a power of a -- NO nonzero common root -- so NO non-monomial trinomial is a nullcone element there. (3) THE WITNESS, exact: {-2,1,4}, N=2 gives CT(3)=3(a^2+1) and CT(6)=15(a^4+4a^2+1); a^4+4a^2+1 = (a^2+1)^2 + 2a^2, so at a^2=-1 (CT(3)=0) it equals 2a^2=-2 != 0, hence CT(6)=-30. COPRIME, TNC proved for this pattern. The '+2a^2' surviving correction is the same leading-square-plus-correction structure as the GMC cascade. (4) THIS GENERALISES THE LADDER: binomial = 0 parameters (unique min rep, THM-1655), trinomial = 1 parameter (this GCD), k-nomial = (k-2) parameters (a Groebner/Nullstellensatz check on the CT ideal) -- a DECIDABLE finite reduction per charge pattern, at all bidegrees, replacing the one-at-a-time Dickson ladder"
 status: PROVED as a decision procedure; 10/10 trinomial patterns closed exactly. A uniform coprimality proof over all (j,d,N) is the remaining step.
 author: opus-2026-07-20-S420
 depends_on: [THM-1655 (binomial + unique-min; r_N=0), THM-1635 (branch product), THM-1615, THM-1595, THM-1530]
 ---
 
-# THM-1675 — The trinomial finishing statement: TNC is a finite gcd
+> **RENUMBERED THM-1675 → THM-1680 (opus-S421):** mac-mini pushed a different THM-1675 (GMC(2) radial residuals) at 15:41:20, before this file at 15:44:09. First-pusher rule; this trinomial-gcd result takes THM-1680. Content unchanged.
+
+# THM-1680 — The trinomial finishing statement: TNC is a finite gcd
 
 ## 0. Structural fact: `F` is linear in `t`
 
@@ -28,7 +30,7 @@ to the **one-parameter** family `R = 1 + a·u^j + u^d`. Then each `CT(Λ^m) = [u
 
 Therefore:
 
-> **THM-1675.** For a fixed trinomial charge pattern `(N; j, d)`, TNC holds **iff** the
+> **THM-1680.** For a fixed trinomial charge pattern `(N; j, d)`, TNC holds **iff** the
 > `CT(Λ^m)` (as polynomials in `a`) have **no common nonzero root** — equivalently, their
 > gcd is a monomial `a^k` (the root `a = 0` is the excluded degenerate case). This is a
 > **finite gcd computation**: it suffices to check finitely many `m`, since a gcd stabilises.
