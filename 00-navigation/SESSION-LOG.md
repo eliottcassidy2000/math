@@ -1,3 +1,49 @@
+## opus-2026-07-20-S406 - Parity eigenspaces: correcting my own THM-1440, and why THM-1415 had to be negative (THM-1445)
+
+Chased the high-leverage question from S405 and it inverted my own attribution.
+
+**SELF-CORRECTION.** THM-1440 credited "reflection = torus" to the fibre cubic being
+DEPRESSED. Wrong emphasis - every cubic depresses by Tschirnhaus, so depression is cheap,
+and worse, it made a general theorem look like a property of one map. **The real engine is
+THM-1350's odd-fibre theorem.** GENERALISED: for ANY sigma/tau-equivariant Keller map of
+degree 3 with dim Fix(sigma) <= 1, the meridian monodromy equals sigma - because the fibre
+is 1 sigma-fixed + 1 free 2-orbit, sigma is linear so permutes the escaping pair, and sigma
+CANNOT fix both (that would be two sigma-fixed points). An involution cannot fix two things
+when it is only allowed to fix one. No depression used.
+
+**AND THE CORRECTION IS VINDICATED EXACTLY.** Composing with the sigma-equivariant
+automorphism phi = (x+yz, y, z) keeps Keller (det = -2) and equivariance, but the fibre
+x-sum becomes 12561/16 and -72057/8 at generic targets while staying 0 at the tau-FIXED
+target. So "sum = 0 everywhere" is a NORMALISATION ARTIFACT; only tau-oddness is invariant.
+The property THM-1440 credited is not even a property of the map.
+
+**GENERAL LEMMA.** For x sigma-odd, Tr_F(x) is tau-ODD (fibre(tau q) = sigma(fibre q) and
+x(sigma p) = -x(p)), so it vanishes on the tau-fixed locus ALWAYS - which is all
+"reflection = torus" ever needed. Verified: the fibre cubic's coefficients sort by
+tau-parity (-1)^k in degree k.
+
+**WHY kind-pasteur's THM-1415 HAD TO COME OUT NEGATIVE.** Switching is conjugation by
+diag(+-1), which preserves each eigenspace of the TRANSPOSE involution. Tournaments are the
+SKEW (odd) eigenspace, graphs the SYMMETRIC (even) one. So skew two-graphs (1,2,2,6) and
+ordinary two-graphs (2,3,7,16,54) sit in different eigenspaces and have no reason to agree.
+kps's E_n guess was refuted for a STRUCTURAL reason, not a computational accident - their
+THM-1415 and my THM-1430 are the odd and even halves of one decomposition. In
+characteristic 2 the eigenspaces COLLAPSE (-1 = +1), which is why the F_2 invariants see
+both sides and why Redei is the mod-2 shadow (THM-1425).
+
+**THE PATTERN.** Every object in both flagship threads sits in a +-1 eigenspace of an
+involution: tournament adjacency (odd), Seidel matrix (even), g_V (even), ||vt||-1/4 (odd),
+fibre coordinate x (odd), Jelonek L (even), Tr_F(x) (odd). The recurring FAILURE is
+assuming two objects match when they sit in opposite eigenspaces - kps's E_n guess, and my
+own depression attribution. THM-1380 section 4 ("freeness and oddness sit on different
+involutions") is the same lesson in the LRC thread.
+
+**METHOD WARNING.** My first control was VACUOUS: phi = (x,y,z+lam x^2) preserves x, so the
+fibre x-coordinates were unchanged and c2=0 was guaranteed with no information. Same as the
+S372 vacuous control. A control that cannot move the quantity under test is not a control.
+
+**Artifacts:** THM-1445; HYP-8295 (resolved: artifact); THM-1440 corrected; 2 scripts + outputs.
+
 ## opus-2026-07-20-S405 - "Reflection = torus" CONFIRMED: meridian monodromy = the lambda=-1 involution (THM-1440)
 
 Owner asked whether "a proper Keller map is an automorphism" is comparable to our JC

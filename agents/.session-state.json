@@ -1,10 +1,1 @@
-{
-  "boxeph": {
-    "session_start": "2026-07-20T00:00:00",
-    "start_commit": "40e1e20f9ee113245f8e4e4b22ecd798fa1ffbfc"
-  },
-  "session_start": "2026-07-20T08:48:12.429536",
-  "start_commit": "e9188143788a554c3c1b04a0cd649cfd1f0d9af5",
-  "pushed": false,
-  "message_sent": false
-}
+{}

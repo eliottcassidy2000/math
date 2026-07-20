@@ -1,0 +1,49 @@
+==============================================================================
+PART A -- IS DEPRESSION THE CAUSE, OR IS EQUIVARIANCE?
+==============================================================================
+A0. Depression alone is CHEAP: every cubic depresses by Tschirnhaus x -> x - c2/(3L).
+    So 'the cubic is depressed' is not the content.  The content is Tr_F(x) = 0.
+
+A1. CLAIM: Tr_F(x) is tau-ODD for any sigma/tau-equivariant F with x sigma-odd.
+    Proof: fibre(tau q) = sigma(fibre q), and x(sigma p) = -x(p), so
+      Tr(tau q) = sum_{p in sigma(fibre q)} x(p) = sum_{p in fibre q} x(sigma p)
+                = - sum_{p in fibre q} x(p) = -Tr(q).   QED
+    => Tr vanishes on the tau-FIXED locus {b=c=0} ALWAYS.  That is all that
+       'reflection = torus' needs.  Vanishing everywhere is a STRONGER accident.
+
+A1-check on our F:
+    leading L  = 27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2
+    x^2 coeff  = 0      <-- identically zero for THIS F
+    L tau-EVEN?   L(tau)-L = 0
+    c0 tau-ODD?   c0(tau)+c0 = 0
+    c1 tau-EVEN?  c1(tau)-c1 = 0
+    => the coefficients sort by tau-parity exactly as the claim predicts:
+       even-degree coeffs tau-EVEN, odd-degree coeffs tau-ODD.  Tr = -c2/L is tau-ODD.
+
+A2. THE GENERAL THEOREM (no depression):
+    Over a tau-fixed target, THM-1350 gives fibre = 1 sigma-fixed + 1 free 2-orbit.
+    sigma is LINEAR so it permutes the escaping sheets.  If sigma fixed BOTH escaping
+    sheets there would be two sigma-fixed points in the fibre -- contradiction.
+    Hence sigma SWAPS the escaping pair; the meridian swaps it too; they agree.
+    => 'reflection = torus' needs only sigma/tau-equivariance + THM-1350 + degree 3,
+       NOT the depressed cubic.  THM-1440's attribution is hereby CORRECTED.
+
+==============================================================================
+PART B -- ODD (skew) vs EVEN (symmetric): why THM-1415 had to be negative
+==============================================================================
+B1. Switching = conjugation by D = diag(+-1).  Check it preserves skew and symmetric:
+    symmetric stays symmetric: True
+    skew stays skew:           True
+    => switching acts WITHIN each eigenspace of the transpose involution.
+
+B2. The two censuses are the two eigenspaces:
+      tournaments = SKEW  (S = -S^T) -> skew two-graphs   -> 1, 2, 2, 6      (THM-1415)
+      graphs      = SYMM  (S = +S^T) -> ordinary two-graphs-> 2, 3, 7, 16, 54 (THM-1430)
+    Different eigenspaces, so no reason for the counts to agree -- kind-pasteur's
+    guess that the tournament quotient lands on E_n was refuted for a STRUCTURAL
+    reason, not a computational accident.
+
+B3. In characteristic 2 the distinction COLLAPSES (-1 = +1, skew = symmetric).
+    That is why the F_2 invariants (cycle space, even graphs mod 2) see both sides,
+    and matches the repo's 'Redei = the mod-2 shadow' (THM-1425).
+    check: skew mod 2 is symmetric mod 2?  True

@@ -1,0 +1,16 @@
+DECISIVE NUMERIC TEST -- is sum(fibre x-coords) = 0 an artifact?
+Compute the eliminated univariate polynomial in x at NUMERIC targets.
+
+  ORIGINAL F, target ('1', '0', '0'): deg=3, sum of fibre x = 0
+  ORIGINAL F, target ('2', '1', '1'): deg=3, sum of fibre x = 0
+  ORIGINAL F, target ('3/2', '-2', '5'): deg=3, sum of fibre x = 0
+
+  composed G = F o phi, phi = (x + y*z, y, z)  [Keller, sigma/tau-equivariant]
+  COMPOSED G, target ('1', '0', '0'): deg=3, sum of fibre x = 0
+  COMPOSED G, target ('2', '1', '1'): deg=3, sum of fibre x = 12561/16
+  COMPOSED G, target ('3/2', '-2', '5'): deg=3, sum of fibre x = -72057/8
+
+READING: targets (1,0,0) are tau-FIXED (b=c=0) -- sum MUST be 0 there by THM-1445-B.
+  Targets with b,c != 0 are the real test: if the sum is nonzero for G but zero
+  for F, then 'sum = 0 everywhere' is a NORMALISATION ARTIFACT of the owner's F,
+  and only tau-ODDNESS (vanishing on the fixed locus) is structural.

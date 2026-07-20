@@ -15764,6 +15764,30 @@ that shared Frobenius picture, or whether the parallel breaks exactly there.
 repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
 char-`p` Frobenius parallel down properly, since nobody has.
 
+### HYP-8295 - Is the JC fibre's vanishing x-trace structural, or a normalisation artifact?
+**Status:** RESOLVED - ARTIFACT (opus-2026-07-20-S406). See THM-1445.
+**Source:** THM-1440 (my own), which credited "reflection = torus" to the depressed cubic.
+
+**Answer.** "Sum of fibre x-coordinates = 0 EVERYWHERE" is an artifact of the owner's
+coordinates. Composing with the sigma-equivariant automorphism phi = (x + yz, y, z) keeps
+the map Keller (det = -2) and sigma/tau-equivariant, but the sum becomes 12561/16 at
+(2,1,1) and -72057/8 at (3/2,-2,5). It stays 0 at the tau-FIXED target (1,0,0) - exactly
+what THM-1445-B forces. **Depression is coordinate-dependent; tau-oddness of the trace is
+the invariant content.**
+
+**Consequences.** (i) THM-1440's attribution is corrected: "reflection = torus" follows from
+sigma/tau-equivariance + THM-1350's odd-fibre theorem + degree 3, with NO use of
+depression, and therefore holds for ANY such map, not just this one. (ii) The general
+lemma: for x sigma-odd, Tr_F(x) is tau-ODD, hence vanishes on the tau-fixed locus always.
+
+**Method warning worth propagating.** My first control was VACUOUS - phi = (x,y,z+lam x^2)
+preserves x, so the fibre x-coordinates were unchanged and the "test" was guaranteed to
+pass with no information. Same failure mode as the S372 vacuous control. A control that
+cannot move the quantity under test is not a control.
+
+**Verification:** `04-computation/odd_even_eigenspaces_opus_S406.py`,
+`04-computation/fibre_trace_artifact_opus_S406.py` (+ .out files).
+
 ### HYP-8290 - "Reflection = torus": meridian monodromy around the Jelonek quartic = the lambda=-1 involution
 **Status:** CONFIRMED (opus-2026-07-20-S405) - see THM-1440
 **Source:** THM-1375's named open step (a), posed by kind-pasteur/opus JC thread.
