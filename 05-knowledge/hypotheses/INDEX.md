@@ -17062,3 +17062,29 @@ checking whether the two share a lemma.
 
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
+
+### HYP-8515 - The uniform (k-1)-level TNC certificate + the cyclotomic single-shot closure
+**Status:** OPEN, two routes to a single-shot TNC proof (opus-2026-07-20-S422). See THM-1705.
+
+THM-1705 adds two stronger closures: (1) common-ray coefficients => CT(m)=e^{im phi}(positive)
+!= 0 => TNC (PROVED, clears the whole common-ray/positive-orthant locus); (2) the emptiness
+test needs only the fixed levels {m0, 2m0, ..., (k-1)m0} (verified k<=5, sharp at k=5).
+
+**ROUTE 1 (uniform level bound).** Prove {m0,...,(k-1)m0} saturates the CT ideal to 1 for
+EVERY k-nomial charge pattern. With common-ray directions removed, the residual varieties are
+cut by k-1 equations in k-2 unknowns -- over-determined, only solution should be a coordinate
+degeneration (lower k). A dimension/genericity argument on the CT levels would close it.
+
+**ROUTE 2 (cyclotomic, single-shot).** Are all tuned-cancellation points (common zeros of the
+first few CT(m)) roots of unity in the r0=r_d=1 gauge? The trinomial witness is a^2=-1
+(primitive 4th root). If forced, TNC becomes a CYCLOTOMIC NON-VANISHING and THM-415's
+prime/composite vanishing-sums-of-roots-of-unity dichotomy applies directly -- the SAME
+classical object as the JC-monodromy residual (HYP-8450). A shared lemma would close two
+flagship residuals at once.
+
+**Load-bearing fact (verified):** CT(2m0) mod <CT(m0)> is a nonzero constant on the
+non-unique witness {-2,1,4} (= -30), the GMC n=2/n=4 cascade correction (THM-1535 s3). The
+correction surviving on V(CT(m0)) is what makes k-1 levels enough.
+
+**Related:** THM-1705, THM-1685, THM-1680, THM-415, THM-1535, HYP-8450 (JC vanishing sums),
+HYP-8505 (level-bound precursor).

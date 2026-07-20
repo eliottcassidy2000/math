@@ -1,0 +1,14 @@
+STRONG CLOSURE 1: common-ray coefficients.  If every nonzero r_k = rho_k e^{i phi}
+(SAME argument phi), then every rep of 0 at level m uses EXACTLY m factors, so
+CT(m) = e^{i m phi} * (positive sum) != 0.  Hence R is TNC-clear.
+  Verify with a complex common phase phi (all coeffs = positive * e^{i phi}):
+   coeffs [1, 1, 1] e^(i pi/5), exps [0, 3, 6], N=2: CT(m0=3) = 6*(-1)**(3/5)  (nonzero: True)
+   coeffs [2, 3, 1] e^(i pi/5), exps [0, 1, 5], N=3: CT(m0=2) = 6*(-1)**(2/5)  (nonzero: True)
+   coeffs [1, 1, 1, 1] e^(i pi/5), exps [0, 3, 4, 5], N=2: CT(m0=2) = 2*(-1)**(2/5)  (nonzero: True)
+  => the nullcone MISSES the entire common-ray locus (real-codim structure). PROVED.
+
+STRONG CLOSURE 2: the (k-1)-level bound -- do {m0,2m0,...,(k-1)m0} saturate?
+  5-NOMIAL (3 params): levels {m0,2m0,3m0,4m0} -- do 4 = k-1 levels suffice?
+   N=2 charges(-2,1,2,3,4): m0=2, levels 1..3*m0 (3 eqs) -> empty: True
+   N=3 charges(-3,-2,-1,1,2): m0=2, levels 1..3*m0 (3 eqs) -> empty: False
+   N=3 charges(-3,-2,-1,1,2): m0=2, levels 1..4*m0 (4 eqs) -> empty: True

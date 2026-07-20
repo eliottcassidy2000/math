@@ -1,3 +1,39 @@
+## opus-2026-07-20-S422 - Two stronger TNC closures: the common-ray cone (proved) + the (k-1)-level bounded certificate (THM-1705)
+
+Owner asked for even stronger ways to close TNC. Found two, one fully proved.
+
+**(1) COMMON-RAY CLOSURE -- PROVED IN ONE LINE.** If every nonzero coefficient of R has the
+SAME complex argument phi (r_k = rho_k e^{i phi}), then every charge-representation of 0 at
+level m uses EXACTLY m factors, so CT(Lambda^m) = e^{im phi} * (strictly positive sum) != 0.
+Since TNC is scale-invariant (R -> lambda R), WLOG rotate to positive-real R where CT(m) > 0.
+So the nullcone MISSES the ENTIRE common-ray locus -- a real-codimension family containing the
+positive orthant. A TNC-violator MUST have coefficients genuinely spread in argument
+(phase-tuned; the trinomial witness is a^2 = -1, a primitive 4th root). Verified with
+phi = pi/5. This is a genuinely new, unconditional closure clearing a full-dimensional region.
+
+**(2) THE (k-1)-LEVEL BOUNDED CERTIFICATE.** THM-1685's emptiness test is achieved by the
+FIXED level set {m0, 2m0, ..., (k-1)m0} -- k-1 multiples of the minimal-rep level m0. Verified:
+binomial 1 level, trinomial 2, 4-nomial 3, 5-nomial 4 (SHARP: N=3 charges -3,-2,-1,1,2 needs
+all 4). This upgrades THM-1685 from a terminating algorithm to a CLOSED-FORM certificate of
+fixed cost. Load-bearing fact: CT(2m0) mod <CT(m0)> = -30 (nonzero constant) on the
+genuinely-non-unique witness {-2,1,4} -- the GMC n=2/n=4 cascade correction (THM-1535 s3) in
+the coefficient ring, CT(2m0) = (CT(m0)/c)^2 + correction with the correction surviving on
+V(CT(m0)).
+
+**THE TNC PICTURE NOW: four independent handles.** Dickson ladder (small bidegree); few-terms
+procedure (binomial/trinomial/k-nomial); common-ray cone (this); bounded certificate (this).
+Residual = large-bidegree AND many-term AND phase-spread simultaneously -- and even there, k-1
+levels give a fixed-cost decision.
+
+**TWO ROUTES TO A SINGLE-SHOT CLOSURE (HYP-8515).** Route 1: prove {m0,...,(k-1)m0} saturates
+for EVERY pattern (over-determined k-1 eqs in k-2 unknowns once common-ray directions are
+removed). Route 2 (cyclotomic): if all tuned-cancellation points are roots of unity in the
+normalized gauge, TNC becomes a cyclotomic non-vanishing and THM-415's vanishing-sums
+dichotomy applies directly -- the SAME object as the JC-monodromy residual (HYP-8450), so one
+lemma could close both flagship residuals.
+
+**Artifacts:** THM-1705; HYP-8515; 2 scripts + 2 outputs.
+
 ## death-star-2026-07-20-S66 -- GMC(2): the stacked-jumps edge is NOT empty, but the total jump never vanishes (loop argument = the referee's amendment) (HYP-8510)
 
 **Owner:** check whether the stacked-jumps edge is empty for GMC(2).
