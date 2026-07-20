@@ -1,0 +1,77 @@
+==============================================================================
+(A) SWITCHING CLASSES OF TOURNAMENTS -- the canonical, base-path-free quotient
+==============================================================================
+  n = 3 : iso classes = 2     SWITCHING classes = 1      A002854(3) = 2
+  n = 4 : iso classes = 4     SWITCHING classes = 2      A002854(4) = 3
+  n = 5 : iso classes = 12    SWITCHING classes = 2      A002854(5) = 7
+  n = 6 : iso classes = 56    SWITCHING classes = 6      A002854(6) = 16
+
+  If the switching-class counts match A002854, the base-path-free quotient IS
+  the even-graph / two-graph side the repo already treats as first-class, and
+  the star group's failure to descend was purely an artifact of restricting
+  the cut space to non-tree edges.
+
+==============================================================================
+(B) THE THREE SIXTIES -- separate causes, and why 60 is an lcm attractor
+==============================================================================
+  ord_1001(2)  = 60   = lcm(ord_7(2), ord_11(2), ord_13(2)) = lcm(3,10,12)
+  pi(10)       = 60   = lcm(pi(2), pi(5)) = lcm(3,20)
+  |A_5|        = 60   = 5!/2, a group order -- no lcm involved at all
+
+  The three are lcm(3,10,12), lcm(3,20), and 5!/2.  Different inputs,
+  different operations.  What they share is the TARGET, and 60 is a magnet:
+  lcm values of subsets of {1..12}, most frequent first:
+     lcm = 120    occurs    924 times (5.26%)
+     lcm = 60     occurs    861 times (4.90%)   <-- 60
+     lcm = 180    occurs    763 times (4.34%)
+     lcm = 360    occurs    742 times (4.22%)
+     lcm = 420    occurs    679 times (3.87%)
+     lcm = 660    occurs    679 times (3.87%)
+     lcm = 840    occurs    581 times (3.31%)
+     lcm = 1320   occurs    581 times (3.31%)
+  60 = 2^2*3*5 is the least common multiple of 1..6, so it absorbs every
+  subset whose members divide it.  Coincidences AT 60 are cheap; a shared
+  cause would have to show up in the INPUTS, and here it does not.
+
+==============================================================================
+(C) FIBONACCI FROM SHIFTED PASCAL, vs the Faulhaber triangle's diagonals
+==============================================================================
+  control -- Pascal's shallow diagonals ARE Fibonacci:
+     sum_k C(m-k,k) vs F(m+1):
+       m=0    sum = 1       F(1) = 1       OK
+       m=1    sum = 1       F(2) = 1       OK
+       m=2    sum = 2       F(3) = 2       OK
+       m=3    sum = 3       F(4) = 3       OK
+       m=4    sum = 5       F(5) = 5       OK
+       m=5    sum = 8       F(6) = 8       OK
+       m=6    sum = 13      F(7) = 13      OK
+       m=7    sum = 21      F(8) = 21      OK
+       m=8    sum = 34      F(9) = 34      OK
+       m=9    sum = 55      F(10) = 55      OK
+       m=10   sum = 89      F(11) = 89      OK
+       m=11   sum = 144     F(12) = 144     OK
+     control holds : True
+
+  the Faulhaber triangle T(n,k) = sum_{j=1}^{n-k+1} j^(k-1), shallow diagonals:
+     diagonal sums : [1, 2, 4, 7, 12, 21, 37, 68, 129, 254, 520, 1099, 2404, 5413]
+
+     against  F(m+1) + 2^(m-3) :
+       m=1    D = 1         F(2)+2^(-2) = 1         OK
+       m=2    D = 2         F(3)+2^(-1) = 2         OK
+       m=3    D = 4         F(4)+2^(0) = 4         OK
+       m=4    D = 7         F(5)+2^(1) = 7         OK
+       m=5    D = 12        F(6)+2^(2) = 12        OK
+       m=6    D = 21        F(7)+2^(3) = 21        OK
+       m=7    D = 37        F(8)+2^(4) = 37        OK
+       m=8    D = 68        F(9)+2^(5) = 66        BREAK  (D - pred = 2)
+       m=9    D = 129       F(10)+2^(6) = 119       BREAK  (D - pred = 10)
+       m=10   D = 254       F(11)+2^(7) = 217       BREAK  (D - pred = 37)
+       m=11   D = 520       F(12)+2^(8) = 400       BREAK  (D - pred = 120)
+       m=12   D = 1099      F(13)+2^(9) = 745       BREAK  (D - pred = 354)
+       m=13   D = 2404      F(14)+2^(10) = 1401      BREAK  (D - pred = 1003)
+       m=14   D = 5413      F(15)+2^(11) = 2658      BREAK  (D - pred = 2755)
+
+  The Fibonacci part is exactly what a PASCAL triangle would give; the
+  2-power part and the break are the measure of how far Faulhaber sits from
+  Pascal.  Where the break first occurs is the first m at which the
+  Faulhaber row stops being a low-order perturbation of the binomial row.
