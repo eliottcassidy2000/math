@@ -22,6 +22,49 @@
 - **BCW UNBLOCK:** research agent returned the COMPLETE verified construction (deg-reduction shear [adjoin 2 vars, subtract product; det global]; doubling+homogenization n→2n→2n+1; Drużkowski/GZ-pairing) — the VC witness is now mechanical: apply to F → cubic-homog nilpotent → klein THM-1435 pipeline. Saved bcw_reduction_verified_construction_agent_S61b.py. Handoff to klein.
 - Housekeeping: ceded THM-1445 (opus/kp first), removed my dup file, THM-1460 self-contained.
 - FILES: THM-1460; reflection arborescences-are-the-determinant-shadow-of-hamiltonian-paths-S61c; scripts arborescence_explore/switching_tree, bcw_reduction_verified_construction_agent; HYP-8315.
+## opus-2026-07-20-S409 - Babai-Cameron Remark 7.4 is ZERO at every ODD n (THM-1460)
+
+Owner pointed at Babai-Cameron EJC 7 (2000) #R38 Remark 7.4 -- enumerate switching classes
+of tournaments in which some automorphism fixes no member; "We cannot do this" -- and
+observed the answer is 0 at n = 1 mod 4 via the unique even member. **Correct, and it
+extends to EVERY odd n.**
+
+**THE MECHANISM.** Switching at W changes s_v by |W^c|-2a (v in W) or |W|-2b (v not in W),
+so the score-PARITY vector flips on W iff |W^c| is odd. For n ODD exactly one of |W|,|W^c|
+is odd; since W ~ W^c take |W| even, and the parity vector flips exactly on W. W ranges over
+the 2^(n-1) even subsets while the class has exactly 2^(n-1) members -- a BIJECTION. So
+**the score-parity vector is a COMPLETE INVARIANT within a switching class at odd n.**
+
+**BOTH ANCHORS.** #odd scores = C(n,2) mod 2, so the reachable parity vectors form the
+even-weight coset at n = 1 mod 4 (containing 0 -> unique ALL-EVEN member) and the odd-weight
+coset at n = 3 mod 4 (containing all-ones, weight n odd -> unique ALL-ODD member). Both are
+permutation-invariant, so any automorphism fixes that member. **Count = 0 at every odd n.**
+
+**VERIFIED.** n=5 exhaustive: 64/64 classes have exactly one all-even member. n=3,7,11:
+exactly one ALL-ODD, zero all-even. n=9: exactly one all-even. EVEN-n control fails exactly
+as the proof predicts (n=4 {0:51,4:9}, n=6 {0:60}, n=8 {0:57,64:3}) because for even n
+|W| and |W^c| share parity, so only TWO parity vectors occur per class. **Oddness of n is
+precisely the hypothesis, and even n is where Remark 7.4 stays genuinely open.**
+
+**THE 3-vs-1 MOD 4 SPLIT the owner noticed** is real, and the residue decides WHICH anchor
+rather than whether one exists: 3,7,11 carry the ALL-ODD anchor (C(p,2) odd makes all-even
+arithmetically impossible) -- the skew world where Paley TOURNAMENTS live; 5,9,13 carry the
+ALL-EVEN anchor -- where Paley GRAPHS live. Same dichotomy as THM-1445's skew-vs-symmetric
+(-1 a non-residue iff p = 3 mod 4). One dichotomy, three faces: C(n,2) parity, Paley
+tournament vs Paley graph, skew vs symmetric.
+
+**NOT CLAIMED, and a wrong argument recorded.** The owner's k=2 <-> JC_2 suggestion has a
+real rhyme (THM-1350 forbids a DOUBLE collision; THM-1455 forbids k=2) but THM-1350's is a
+proved parity argument while the k=2 gap is unexplained -- I am not asserting one mechanism.
+And I recorded a quick argument of mine that FAILED: flipping one arc does NOT always toggle
+a triangle's cyclic/transitive type (false for some transitive triangles), so k is not
+flip-invariant and that easy route to k=2 is dead.
+
+**BEST FOLLOW-UP:** the anchor is a CANONICAL REPRESENTATIVE of each switching class at odd
+n. That is a free normal form which should cheapen the tournament censuses of THM-1415/1455
+considerably -- worth wiring in.
+
+**Artifacts:** THM-1460; HYP-8315; 2 scripts + 2 outputs.
 
 ## kind-pasteur-2026-07-20-S128 (cont.115) -- THM-1455: the odd/even <-> sin/cos link is the PFAFFIAN, the owner's polynomial is realised by an explicit non-Paley tournament, and a PROVED mod-16 law for odd n (owner: work the next step, and see how odd/even relates to sin/cos and x(x^2+7)(x^4+14x^2+17)). THE NEXT STEP, DONE. Three vertex-disjoint odd cycles need 3+3+3 = 9 vertices, so alpha_3 = 0 for every tournament with n <= 8, and therefore hp(T) = 1 + 2 alpha_1 + 4 alpha_2 exactly for all n <= 8 -- verified at n = 6 and 7 with zero violations, extending THM-1445's n <= 5 regime by three. WHERE sin/cos ACTUALLY ENTERS. Give a tournament its SKEW adjacency S, with S_ij = +1 if i->j and -1 if j->i. Odd-order principal minors of a skew matrix vanish identically, and even-order ones are squared Pfaffians: the coefficient of x^{n-2k} in char(S) equals the sum over 2k-subsets A of Pf(S_A)^2. Verified exactly at n = 5, 6, 7 across all k with zero mismatches. Consequently char(S) is parity-pure -- odd for odd n, even for even n -- and its spectrum is purely imaginary in plus/minus pairs, so char(S)(iy) is a real-rooted odd (respectively even) polynomial in y. That is the honest content of the odd/even to sin/cos link: sin and cos are the archetypes of odd and even functions with all zeros real, and the skew characteristic polynomial of a tournament is exactly such an object, with the parity dictated by n. It is a spectral statement rather than an analogy, and the vanishing of odd-order minors is the whole mechanism -- it is why there is no even part when n is odd. THE OWNER'S POLYNOMIAL IS REALISED. x(x^2+7)(x^4+14x^2+17) expands to x^7 + 21x^5 + 115x^3 + 119x, odd of degree 7 with all roots purely imaginary -- the right shape for char(S) at n = 7 -- and it occurs, with an explicit witness tournament carrying hp = 91, found by sampling 80,000 tournaments on 7 vertices. For contrast, Paley T_7 has skew spectrum {0, plus/minus i*sqrt(7) three times} and so char = x(x^2+7)^3 = x^7 + 21x^5 + 147x^3 + 343x: the same x(x^2+7)(x^4+14x^2+c) shape with c = 49 rather than 17, so the owner's polynomial is realised by a NON-Paley tournament. The shared 21 carries no information at all -- for skew S one has tr S = 0 and tr S^2 = -n(n-1), so the coefficient of x^{n-2} is C(n,2) for every tournament, 21 at n = 7 always -- and the discriminating coefficients are those of x^3 and x. A coarseness note worth recording: 80,000 samples at n = 7 produced only ELEVEN distinct skew characteristic polynomials against 456 isomorphism classes, so as an invariant this is very weak. A PROVED mod-16 LAW, AND IT HOLDS ONLY FOR ODD n. The Pfaffian of a 4x4 plus/minus-1 skew matrix is S12*S34 - S13*S24 + S14*S23, a sum of three plus/minus-1 terms, so |Pf| is 1 or 3 and Pf^2 is 1 or 9; hence c_{n-4} = C(n,4) + 8*k4 with k4 the number of 4-subsets having |Pf| = 3, verified at n = 6, 7, 8. THEOREM: if n is odd then k4 is even, so c_{n-4} is congruent to C(n,4) modulo 16. The proof has two steps. The base case is exhaustive over all 2^10 = 1024 labelled 5-vertex tournaments, where k4 is always 0 or 2 -- 384 with 0 and 640 with 2 -- so k4 is even at n = 5. Then double counting: each 4-subset of an n-set lies in exactly n-4 five-subsets, so (n-4)*k4(T) equals the sum over 5-subsets B of k4(T[B]); every term is even by the base case, hence (n-4)*k4(T) is even, and n odd makes n-4 odd, forcing k4(T) even. It fails for even n, and must, since n-4 is then even and the argument gives nothing -- exhaustively at n = 4, sixteen of the sixty-four labelled tournaments have k4 = 1. Direct sampling agrees across the board: always even at n = 5, 7, 9, 11 and mixed at n = 4, 6, 8, 10. At n = 7 the law gives c_3 congruent to 35 congruent to 3 mod 16, which is exactly the congruence displayed by the attained coefficients 35, 67, 83, 99, 115, 131, 147 -- including the owner's 115. The 6-subset analogue is weaker but real: a 6x6 plus/minus-1 skew Pfaffian is a sum of fifteen plus/minus-1 terms and hence odd, so Pf^2 is 1 mod 8 and c_{n-6} is congruent to C(n,6) mod 8, verified with residual 0. HONEST: nothing here advances a named open problem.
 

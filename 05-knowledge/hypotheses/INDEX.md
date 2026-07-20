@@ -16029,3 +16029,43 @@ classes `n <= 7` and cross-tabulate. If they are incomparable — the likely ans
 determinantal relaxation carries information `H` misses, which would make the PAIR `(H, sum a_r)`
 a strictly better fingerprint than either, in the same way THM-506 found `(char, perm)`
 dominates `H`. Cheap to test and directly comparable to THM-506's fingerprint result.
+### HYP-8315 - Babai-Cameron Remark 7.4: is the count zero, and on which n?
+**Status:** RESOLVED for ALL ODD n (opus-2026-07-20-S409) - see THM-1460. Open at even n.
+**Source:** owner, pointing at Babai-Cameron EJC 7 (2000) #R38 Remark 7.4 ("We cannot do
+this") and observing the answer is 0 at n = 1 mod 4 via the unique even member.
+
+**Confirmed and EXTENDED.** The owner's n = 1 mod 4 case is one half; the same argument runs
+at n = 3 mod 4 with an ALL-ODD anchor instead of an all-even one. So the count is ZERO at
+EVERY ODD n.
+
+**The mechanism (proved).** Switching at W changes s_v by |W^c|-2a (v in W) or |W|-2b
+(v not in W), so the score-PARITY vector flips on W iff |W^c| is odd. For n ODD exactly one
+of |W|,|W^c| is odd, and since W ~ W^c we may take |W| even -- then the parity vector flips
+exactly on W. W ranges over the 2^(n-1) EVEN subsets and the class has exactly 2^(n-1)
+members, so the map is a BIJECTION: **the score-parity vector is a COMPLETE INVARIANT inside
+a switching class at odd n**, each reachable vector realised exactly once.
+Since #odd scores = C(n,2) mod 2:
+    n = 1 mod 4 -> C(n,2) even -> even-weight coset -> contains 0        -> ALL-EVEN anchor
+    n = 3 mod 4 -> C(n,2) odd  -> odd-weight coset  -> contains all-ones -> ALL-ODD anchor
+(all-ones has weight n, odd, so it IS in the odd coset). Both anchors are
+permutation-invariant, so any automorphism of the switching class fixes that member.
+
+**Verified.** n=5 exhaustive (64/64 classes, exactly one all-even). n=3,7,11 -> exactly one
+ALL-ODD, zero all-even. n=9 -> exactly one all-even. EVEN-n control FAILS as predicted:
+n=4 gives {0:51, 4:9}, n=6 gives {0:60}, n=8 gives {0:57, 64:3} -- never uniquely 1, because
+for even n |W| and |W^c| share parity so only TWO parity vectors occur per class.
+
+**The 3-vs-1 mod 4 split.** The residue decides WHICH anchor, not whether one exists:
+3,7,11 (= 3 mod 4) carry the ALL-ODD anchor and C(p,2) odd makes all-even arithmetically
+impossible -- the skew/odd world, where Paley TOURNAMENTS live. 5,9,13 (= 1 mod 4) carry the
+ALL-EVEN anchor -- where Paley GRAPHS live. Same dichotomy as THM-1445's skew-vs-symmetric
+(-1 is a non-residue iff p = 3 mod 4). One dichotomy, three faces.
+
+**NOT claimed:** the owner's k=2 <-> JC_2 suggestion. There IS a rhyme (THM-1350 forbids a
+DOUBLE collision, THM-1455 forbids k=2), but THM-1350's is a proved parity argument and the
+k=2 gap is still unexplained. A quick argument I tried is recorded as WRONG in THM-1460 s7:
+flipping an arc does NOT always toggle a triangle's cyclic/transitive type (false for some
+transitive triangles), so k is not flip-invariant and that easy route is dead.
+
+**Verification:** `04-computation/babai_cameron_mod4_opus_S409.py`,
+`04-computation/parity_anchor_all_odd_n_opus_S409.py` (+ .out files).

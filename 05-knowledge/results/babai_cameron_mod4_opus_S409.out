@@ -1,0 +1,48 @@
+==============================================================================
+(0) THE PARITY OBSTRUCTION:  sum of scores = C(n,2)
+==============================================================================
+   n   n mod 4   C(n,2)   C(n,2) parity   all-even tournament possible?
+   3      3         3       ODD             NO -- impossible
+   4      0         6       even            YES
+   5      1        10       even            YES
+   6      2        15       ODD             NO -- impossible
+   7      3        21       ODD             NO -- impossible
+   8      0        28       even            YES
+   9      1        36       even            YES
+  10      2        45       ODD             NO -- impossible
+  11      3        55       ODD             NO -- impossible
+  12      0        66       even            YES
+  13      1        78       even            YES
+
+==============================================================================
+(1) EXHAUSTIVE n = 5:  does every switching class contain exactly ONE all-even?
+==============================================================================
+   labelled tournaments: 1024
+   switching classes:    64   (expected 2^C(n-1,2) = 64)
+   all-even members per switching class: {1: 64}
+   => UNIQUE even member in every class -- CONFIRMED
+
+==============================================================================
+(2) n = 9 (also 1 mod 4), by sampling switching classes
+==============================================================================
+   all-even members per switching class over 60 random classes: {1: 60}
+   => UNIQUE -- CONFIRMED at n=9
+
+==============================================================================
+(3) n = 3, 7 (= 3 mod 4): verify NO all-even tournament exists
+==============================================================================
+   n=3: all-even tournaments found = 0  (C(n,2)=3 is odd, so 0 is forced)
+   n=7: all-even tournaments found = 0  (C(n,2)=21 is odd, so 0 is forced)
+
+==============================================================================
+(4) CONCLUSION FOR BABAI-CAMERON REMARK 7.4
+==============================================================================
+   If each switching class at n = 1 (mod 4) has a UNIQUE all-even member E, then any
+   automorphism g of the switching class permutes the class and preserves the
+   all-even property (relabelling does not change the multiset of scores), so g(E) is
+   an all-even member, hence g(E) = E by uniqueness.  So g FIXES a member.
+   => the number of switching classes with an automorphism fixing NO member is ZERO
+      at n = 1 (mod 4).  Babai-Cameron's 'we cannot do this' has a clean answer on
+      that residue class.
+   At n = 3 (mod 4) there is NO even member to anchor the argument -- which is exactly
+      where the enumeration stays hard, and exactly where Paley TOURNAMENTS live.

@@ -1,0 +1,23 @@
+THE PARITY ARGUMENT, WORKED OUT:
+  switching at W changes s_v by |W^c|-2a (v in W) or |W|-2b (v not in W),
+  so the score-PARITY vector flips on W iff |W^c| odd, off W iff |W| odd.
+  n ODD: exactly one of |W|,|W^c| is odd, and W ~ W^c, so WLOG |W| even and the
+         parity vector flips exactly on W.  W ranges over the 2^(n-1) EVEN subsets,
+         and the class has 2^(n-1) members => PARITY VECTOR IS A COMPLETE INVARIANT.
+  #odd scores = C(n,2) mod 2, so the reachable coset is:
+         n=1 mod 4 -> EVEN-weight coset, contains 0        -> unique ALL-EVEN member
+         n=3 mod 4 -> ODD-weight coset, contains all-ones  -> unique ALL-ODD member
+  BOTH anchors are permutation-invariant, so BOTH kill Babai-Cameron.
+  n EVEN: |W|,|W^c| have the SAME parity -> either NO vertex flips or ALL do,
+         so only 2 parity vectors occur and the argument COLLAPSES.
+
+  n= 3 (3 mod 4): all-EVEN members/class {0: 200}   all-ODD members/class {1: 200}
+  n= 5 (1 mod 4): all-EVEN members/class {1: 200}   all-ODD members/class {0: 200}
+  n= 7 (3 mod 4): all-EVEN members/class {0: 200}   all-ODD members/class {1: 200}
+  n= 9 (1 mod 4): all-EVEN members/class {1: 40}   all-ODD members/class {0: 40}
+  n=11 (3 mod 4): all-EVEN members/class {0: 40}   all-ODD members/class {1: 40}
+
+  n EVEN control (argument should fail):
+  n= 4: all-EVEN members per class {0: 51, 4: 9}  <- NOT always 1 => no canonical anchor
+  n= 6: all-EVEN members per class {0: 60}  <- NOT always 1 => no canonical anchor
+  n= 8: all-EVEN members per class {0: 57, 64: 3}  <- NOT always 1 => no canonical anchor
