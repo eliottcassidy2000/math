@@ -5373,7 +5373,7 @@ headline; the S402 pinning was already scheduled, and the designed process caugh
 ## MISTAKE-192 (kind-pasteur-2026-07-19-S128c91, against my own HYP-7955 H-G2) — hunted the "extinction prime" c(p) > 13 while my own gate, two sessions earlier, had already proved the sea never empties: the AP inhabits I(13,p,1) at EVERY p coprime to 14
 
 **What happened.** HYP-7955 seam G proposed the extinction principle "c(p) > 13 ⟹
-I(13,p,1) = ∅" and HYP-7975 hunted the crossing with compiled code (gated 9/9, greedy
+I(13,p,1) = ∅" and HYP-8000 (ex-7975) hunted the crossing with compiled code (gated 9/9, greedy
 triage over 130 primes to 1200, parallel exhaustive sweeps). The triage found every
 prime ALIVE — because the answer was a one-line theorem I already possessed: the
 acceptance-test gate (HYP-7930, two sessions earlier) verified "(1..13) improper mod
@@ -5411,6 +5411,6 @@ it COLLAPSE TO THE TIGHT-FAMILY SHELL as p grows" — i.e. does c(p) reach and s
 13 with few, classifiable minimal covers — the large-p ansatz-completeness question,
 now sharply posed with instruments in hand.
 
-**Affects:** HYP-7955 (H-G2 struck), HYP-7975 (resolution recorded in place), the
+**Affects:** HYP-7955 (H-G2 struck), HYP-8000 (ex-7975) (resolution recorded in place), the
 S128c90 reflection (seam-G consequence paragraph amended), CONSTANTS-INDEX (no
 extinction-prime entry to add — the non-existence noted at the c(p) line).

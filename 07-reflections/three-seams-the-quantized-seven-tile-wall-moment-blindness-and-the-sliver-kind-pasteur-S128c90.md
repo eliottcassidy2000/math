@@ -55,7 +55,7 @@ Three findings:
    extinction prime does not exist.** The AP {1..13}'s maximizers all sit at sum-14
    pairs (THM-401/1002), hence denominator 14, so the AP is improper mod every p
    coprime to 14: its danger system is a 13-cover at every prime and c(p) ≤ 13
-   identically. The compiled hunt (S128c91, HYP-7975) verified all 130 primes in
+   identically. The compiled hunt (S128c91, HYP-8000) verified all 130 primes in
    [321, 1200] alive with explicit cover certificates, then surfaced the one-line
    proof. The surviving question is the REFRAME: does I(13,p,1) collapse to the
    tight-family shell as p grows (c(p) sticking at 13, minimal covers few and

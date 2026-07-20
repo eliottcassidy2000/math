@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""kind-pasteur-S128c91 -- HYP-7975 analysis: parse the extinction-hunt output,
+"""kind-pasteur-S128c91 -- HYP-8000 analysis: parse the extinction-hunt output,
 stratify c(p) by residue class mod 14, fit within-class growth, and summarize
 the extinction frontier + the k=12 retrodiction."""
 import re, sys, io

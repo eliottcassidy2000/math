@@ -1,0 +1,9 @@
+== Lane A: shell-collapse census ==
+  p=307 (greedy-easy, dk=21, h=153, largest-pf(p-1)=17):
+    minimal covers = 0 (TRUNCATED at budget -- lower bound)  nodes=40,000,001  [135s]
+    sizes {}  exact-ansatz hits NONE
+    near-shell Hamming histogram {}
+  p=331 (greedy-easy, dk=23, h=165, largest-pf(p-1)=11):
+    minimal covers = 0 (TRUNCATED at budget -- lower bound)  nodes=40,000,001  [151s]
+    sizes {}  exact-ansatz hits NONE
+    near-shell Hamming histogram {}

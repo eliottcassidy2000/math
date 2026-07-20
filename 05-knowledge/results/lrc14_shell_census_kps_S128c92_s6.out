@@ -1,0 +1,4 @@
+S6 rider: greedy-easy (n=115): median largest-pf(p-1)/(p-1) = 0.042, safe primes 11 (10%)
+          thin-sea-hard (n=15): median = 0.125, safe primes 4 (27%)
+          means: easy 0.105 vs hard 0.200
+          verdict: CORRELATED

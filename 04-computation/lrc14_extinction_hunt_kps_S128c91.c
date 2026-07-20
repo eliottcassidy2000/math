@@ -1,4 +1,4 @@
-/* kind-pasteur-2026-07-19-S128c91 -- HYP-7975: the extinction prime hunt.
+/* kind-pasteur-2026-07-19-S128c91 -- HYP-8000: the extinction prime hunt.
  *
  * c(p) := minimum number of folded danger-APs A(w) = {fold(j*w mod p) : j<=dk},
  * dk = p/n (integer division; n = 14 for the k=13 problem, threshold 1/14),

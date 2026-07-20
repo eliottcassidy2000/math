@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""kind-pasteur-S128c91 -- HYP-7975 triage: randomized-greedy ALIVE detection.
+"""kind-pasteur-S128c91 -- HYP-8000 triage: randomized-greedy ALIVE detection.
 A found <=13 cover is a certificate that p is ALIVE (c(p) <= 13).  Greedy with
 randomized top-t choice + restarts finds covers fast when they are plentiful;
 failures are INCONCLUSIVE (the exhaustive C search owns the extinct side).
