@@ -1,14 +1,13 @@
 # Investigation Backlog
 
-### Is the tournament odd-cycle-parity functional a Mathieu–Zhao space? (death-star-2026-07-20-S68, HYP-8520)
-- **Source:** the lens-atlas reflection (`07-reflections/an-atlas-of-lenses-linking-famous-problems-S68`), Lens 5.
-- **Status:** OPEN question, the sharpest new lead from the atlas. GMC's charge (Fourier mode of `arg Z`,
-  killed by `E`) and the tournament charge (odd-cycle parity, killed by the OCR/Rédei functional) are the
-  same "graded-piece-killed-by-a-functional" structure. GMC(n) ⟹ JC(n) *because* `ker E` is Mathieu–Zhao.
-- **Next step:** define the tournament parity functional `Λ` (OCR / Rédei sign) on the appropriate algebra
-  and test whether `ker Λ` is Mathieu–Zhao: `Λ(P^m)=0 ∀m ⟹ Λ(QP^m)=0` for `m≫0`. If yes, Rédei's theorem
-  enters the Jacobian ecosystem directly — a concrete tie between the project's CORE object and the JC
-  thread. Small cases (`n≤6`) are computable with the existing tournament/charge machinery.
+### ~~Is the tournament odd-cycle-parity functional a Mathieu–Zhao space?~~ — TESTED, mostly retired (death-star-S69, HYP-8530)
+- **RESOLVED (S69):** trivially yes, deeply no. The Rédei count is a **multiplicative character** (`ham(T⊕S)=ham(T)ham(S)`),
+  so `ker` is MZ *for free* — the degenerate end, not GMC-deep. The faithful non-multiplicative analog (the
+  tournament expectation) is `GMC(\binom n2)`, which for `n≥3` is in the **GMC(≥3)-false** regime. So no deep
+  tournament-MZ tied to Rédei in the direct realization. See reflection `is-redei-parity-mathieu-zhao-tested-mostly-superficial-S69`.
+- **Reframed (open, better-shaped):** the OCR `H(T)−H(T−v)=2Σμ` is a **derivation/difference** operator, so if
+  Rédei↔JC connect it is likely via the **LND/derivation face** (Makar-Limanov), not functional-MZ. Speculative
+  deep survivor: a 2-real-dim/complex spectral reduction landing in GMC(2)-true (no formulation yet).
 
 ### LRC(14) `disc_v` via the GMC reconstruction-from-arcs (death-star-2026-07-20-S67, HYP-8515)
 - **Source:** the GMC(2)↔LRC bridge reflection (`07-reflections/the-same-manoeuvre-twice-...-S67`).

@@ -1,0 +1,19 @@
+=== (1) Redei: ham-count is ODD for every tournament (n=2..5) ===
+  n=2: 2 tournaments, ham-counts [1], all odd: True
+  n=3: 8 tournaments, ham-counts [1, 3], all odd: True
+  n=4: 64 tournaments, ham-counts [1, 3, 5], all odd: True
+  n=5: 1024 tournaments, ham-counts [1, 3, 5, 9, 11, 13, 15], all odd: True
+
+=== (2) Is the parity functional MULTIPLICATIVE (=> trivially Mathieu-Zhao)? ===
+  ham(T)=1, ham(S)=1, ham(T(+)S)=1, product=1, MULTIPLICATIVE: True
+  => the Redei count is a CHARACTER (multiplicative) under ordinal sum.
+  For ANY character chi: chi(P)=0 => chi(Q P^m)=chi(Q)chi(P)^m=0 for all m>=1. So ker(chi) is
+  Mathieu-Zhao TRIVIALLY -- the degenerate end. GMC's depth is that E is NOT multiplicative.
+
+=== (3) The faithful non-multiplicative analog = the ARC expectation = a GMC instance ===
+  n=2 vertices => C(n,2)=1 arc variables => GMC(1) regime (TRUE)
+  n=3 vertices => C(n,2)=3 arc variables => GMC(3) regime (FALSE (GMC>=3 has counterexamples))
+  n=4 vertices => C(n,2)=6 arc variables => GMC(6) regime (FALSE (GMC>=3 has counterexamples))
+  n=5 vertices => C(n,2)=10 arc variables => GMC(10) regime (FALSE (GMC>=3 has counterexamples))
+  So the natural tournament expectation E_T[f]=(1/2^C(n,2)) sum_T f(T) is: n=2 -> GMC(1) true;
+  n>=3 -> GMC(>=3) FALSE, so ker E is NOT Mathieu-Zhao there. Redei/parity does not rescue it.

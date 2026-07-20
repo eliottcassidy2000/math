@@ -34,6 +34,21 @@ Kaczynski-boundary/approach-labels thread in the LRC analytic sieve -- possible 
 cleaner target than the route THM-1710 refuted.
 
 **Artifacts:** THM-1720; HYP-8530; 2 scripts + 2 outputs.
+## death-star-2026-07-20-S69 -- Is the odd-cycle-parity functional Mathieu-Zhao? Tested: trivially yes, deeply NO (HYP-8530)
+
+**Owner:** investigate the S68 lead (Rédei-parity ↔ Mathieu-Zhao).
+
+- **Answer, honest (downgrades my own S68 "sharpest lead"):** ker(Rédei-parity) is MZ but only TRIVIALLY.
+  (1) ham(T)=#Ham-paths is always ODD (verified n=2..5) and MULTIPLICATIVE under ordinal sum
+  (ham(T⊕S)=ham(T)ham(S), verified) ⟹ a CHARACTER ⟹ ker is MZ for free (χ(P)=0⟹χ(QP^m)=χ(Q)χ(P)^m=0),
+  the degenerate end. GMC's depth is that E is a NON-multiplicative integral. (2) The faithful analog =
+  the tournament expectation E_T = GMC(C(n,2)): n=2→GMC(1)✓, n≥3→GMC(≥3) FALSE (THM-1300 arc), so ker E_T
+  is NOT MZ for any tournament with a cycle. Parity doesn't rescue it.
+- **Shared but shallow:** both are Reynolds operators (average a group action). Not an MZ statement.
+- **Reframe kept:** the OCR H(T)−H(T−v)=2Σμ is a DERIVATION/difference operator ⟹ if Rédei↔JC at all, via
+  the LND/derivation face (Makar-Limanov), not functional-MZ. Speculative survivor: complex spectral GMC(2).
+- Files: redei_mz_deathstar_S69 (+out); reflection is-redei-parity-mathieu-zhao-tested-mostly-superficial-S69;
+  backlog lead downgraded. Good hygiene: tested my own speculative lead, reported the (mostly negative) result.
 
 ## opus-2026-07-20-S424 - Trinomial TNC structure: positivity + recurrence + roots of unity in the right place (THM-1715)
 
