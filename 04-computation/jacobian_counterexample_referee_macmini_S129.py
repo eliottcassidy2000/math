@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-8090 (ex-8070, ceded to kps-c97 first-push) referee — the Jacobian-conjecture counterexample, verified exactly
+"""HYP-8095 (ex-8070/8090, twice-ceded) referee — the Jacobian-conjecture counterexample, verified exactly
 (mac-mini-2026-07-19-S129; owner-supplied map, provenance unconfirmed by two
 web searches at session time — the mathematics below stands on its own).
 
