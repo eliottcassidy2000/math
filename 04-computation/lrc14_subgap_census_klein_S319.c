@@ -38,7 +38,10 @@
 #define K 13            /* number of speeds (n = 14 runners) */
 #define MAXB 64
 #define QSCAN 200
-#define QPIN 48         /* full pinning up to here (S320: 41 -> 48; depth 3 at 42..48 for HI=3/41) */
+#ifndef QPIN
+#define QPIN 48         /* full pinning up to here (S320: 41 -> 48; depth 3 at 42..48 for HI=3/41).
+                         * Override with -DQPIN=41 to reproduce v1 pinning (spectroscopy runs). */
+#endif
 #define QMLO 14         /* in-branch mask moduli range [QMLO, QMHI]: all q with depth d(q)=1 used */
 #define QMHI 27
 #define NQM  (QMHI-QMLO+1)
