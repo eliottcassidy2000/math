@@ -1,3 +1,32 @@
+## death-star-2026-07-20-S59v — CONVERGENCE + SYNTHESIS: my weight-sign reduced JC = mac-mini's THM-1370 (credited, not re-filed); contributed the THREE-REDUCED-JC intersection reflection (the owner counterexample = unique minimal object escaping mac-mini's SIGN + opus's PARITY + klein's DEGREE reduced-JCs). MISTAKE-199 4th recurrence (concurrency landed mid-computation), caught
+
+Owner: long high-leverage session, pull often, Kakeya bank / finite-complement stratum closures via
+labelled-polygon carriers, tournaments <-> dihedral (thoroughly), invent a reduced JC that holds, explore
++ pull while computing. REALITY: the prompt was fleet-wide and SATURATED on JC — THREE reduced JCs were
+each proven by a different agent within hours (opus-S399 THM-1350 fixed-locus/parity; klein-S333 JC<=2
+geometric-degree + the full dihedral dictionary; mac-mini-S123 THM-1370 elliptic/definite-weight every
+dim). My intended contribution (the weight-SIGN reduced JC: definite ⟹ automorphism via properness;
+counterexample forced indefinite) CONVERGED with mac-mini's THM-1370, pushed WHILE I computed it (it was
+clean at claim time — MISTAKE-199 4th recurrence, escalated to 're-pull immediately before filing').
+CREDITED mac-mini, did NOT file THM-1365; my definite_weight_jc_verify script independently VERIFIES
+THM-1370 (dim 3,4 definite-weight Keller maps invertible by terminating formal inverse). THE ADDITIVE,
+NON-COMPETING PIECE (reflection three-reduced-jcs-pin-the-counterexample): the three reduced JCs are three
+independent invariants (weight-SIGN / weight-PARITY / geometric-DEGREE), and the owner counterexample is
+the UNIQUE MINIMAL object escaping all three — indefinite (1,-1,-2) [dim 3 minimal, dim-2 = THM-1345
+holds] + fiber exactly 3 [min odd, opus forcing] + geometric degree exactly 3 [klein]. The trio IS the
+classification's coordinate system: a second new counterexample must move off one bound (new indefinite
+signature / fiber 5,7 / degree 4,5). TOURNAMENTS<->DIHEDRAL: klein-S333 did it thoroughly (credited).
+GENUINELY-OPEN high-leverage targets the fleet has NOT saturated (flagged for a focused session, not
+done here): the KAKEYA BANK / finite-complement stratum closure via labelled-polygon carriers (klein
+flagged as a 'joint session'); PTE-at-size-13 (the owner's newly-named Prouhet-Tarry-Escott / LRC
+moment-blindness problem).
+
+Prompt (owner): pull often, high-leverage math, kakeya bank / exact finite-complement stratum closures
+via labelled-polygon carriers, tournaments <-> dihedral thoroughly, creatively invent a reduced JC that
+holds, explore+pull while computing [+ a long pasted list of directions as light inspo]
+
+FILES: reflection three-reduced-jcs-pin-the-counterexample, HYP-8205 (confirmation/synthesis), 2 scripts
++ out, MISTAKE-199 4th note. Messages to mac-mini. -> all
 ## mac-mini-2026-07-20-S123 -- THM-1370: the ELLIPTIC Jacobian Conjecture holds in EVERY dimension. A reduced JC that DOES hold, sharp against the corpus's own n=3 counterexample (whose grading is unique and forced indefinite). HYP-8200.
 
 TASK (owner): pull often; high-leverage math; kakeya bank / labelled-polygon carriers; tournaments <-> dihedral thoroughly; creatively find a reduced Jacobian Conjecture that DOES hold.

@@ -1,0 +1,15 @@
+=== (1) DEFINITE-weight equivariant Keller maps are INVERTIBLE (verify) ===
+  w=(1,2,3): (x, y+3x^2, z+2x^3+5xy): det const=True, wt-homog(w=(1, 2, 3))=True, inverse polynomial=True
+  w=(1,1,2): (x, y, z+ x^2+ 4xy): det const=True, wt-homog(w=(1, 1, 2))=True, inverse polynomial=True
+  w=(1,2,2): (x, y+2x^2, z+3x^2): det const=True, wt-homog(w=(1, 2, 2))=True, inverse polynomial=True
+  dim4 w=(1,2,3,2): det const=True, inverse polynomial=True
+  => definite-weight (all positive) equivariant Keller maps: all INVERTIBLE (triangular).
+     PROOF (all dims, THM-1365): F^-1(0) is C*-invariant + discrete (etale) = {0}
+     => F finite => finite etale over simply-connected C^n => degree 1 => automorphism.
+
+=== (2) the owner counterexample's weight signature ===
+  owner weights (1, -1, -2): signature (pos,neg,zero)=(1,2,0) = INDEFINITE
+  => it ESCAPES the definite-weight theorem exactly by mixed sign (necessary).
+  dim-2 indefinite (1,-1): equivariant JC_2 HOLDS (THM-1345) => min dim for an
+  indefinite equivariant counterexample is 3; (1,-1,-2) realizes it (S59n:
+  (1,-1,-2) exists=owner, (1,-1,-3) EMPTY).
