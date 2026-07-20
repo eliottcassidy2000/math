@@ -1,0 +1,28 @@
+================================================================================
+T6: UNIT-DISTANCE CENSUS OF THE ARC-FLIP METAGRAPHS
+================================================================================
+  control Moser spindle: max|d^2-1| = 4.23e-13, min pair dist = 0.457 -> embedder VALID
+  G_4: V = 4, E = 5, K4-free: True  -> numeric embed: YES realizable (min pair dist 1.000)
+  G_5: V = 12, E = 30, K4-free: False  -> NOT unit-distance (K4 obstruction)
+
+================================================================================
+T1/C1: TORUS-COMPRESSED DEGREE-<=3 PRESENTATION IN DIM 6 -- KELLER OR NOT?
+================================================================================
+  component degrees: [3, 3, 2, 2, 3, 2] (all <= 3: True)
+  section reproduces F and kills gadget rows: True
+  det J(G) constant? False
+  det J(G) = -36*s**4*x**2*z - 12*s**3*x**4*z**2 - 24*s**3*x**3*y*z - 108*s**3*x**2*y**2 - 48*s**3*x**2*z - 90*s**3*x*y + 108*s**3 + 48*s**2*x**4*y**2*z - 6*s**2*x**4*z**2 + 180*s**2*x**3*y**3 - 50*s**2*x**3*y*z - 360*s**2*x**2*y**2 + 30*s**2*x**2*z + 60*s**2*x*y - 27*s**2 + 72*s*x**4*y**2*z + 12*s*x**4*z**2 + 222*s*x**3*y**3 - 24*s*x**3*y*z - 213*s*x**2*y**2 + 81*s*x*y - 27*s + 27*x**4*y**2*z + 3*x**4*z**2 + 89*x**3*y**3 - 3*x**3*y*z - 30*x**2*y**2 - x**2*z + 27*x*y - 2 ... (truncated view at w=t=0)
+  #monomials in det: 89; det on the section s=xy,w=x^2z,t=s^2: -2
+  -> NAIVE SUBSTITUTION GADGET DOES NOT PRESERVE KELLER-NESS (demonstrated).
+     The BCW/dBvdE reductions are genuinely non-naive; S421's 'pin the dimension'
+     understated this: pinning the CONSTRUCTION from van den Essen Ch. 6 is the task.
+
+================================================================================
+T1/C2: TOY SYMMETRIC-QUARTIC STAGE -- HESSIAN NILPOTENCY + ZHAO DELTA MACHINERY
+================================================================================
+  P = y1*x2^3: Hessian nilpotent of index None (HN: False)
+  det J(id + grad P) = -9*v2**4 + 6*v2*v3 + 1 (Keller: False)
+  Zhao vanishing Delta^m(P^m) = 0 for m = 1..4: [False, False, False, False]
+  Delta^m(P^(m+1)) zero-pattern m = 1..6: [False, False, False, False, False, False]
+  (invertible toy: eventual vanishing expected -- this is the machinery the
+   transported F-witness must BREAK at infinitely many m)

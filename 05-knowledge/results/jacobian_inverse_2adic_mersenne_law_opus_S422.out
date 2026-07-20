@@ -1,0 +1,22 @@
+F(G) = id verified through degree 998 (K = 16)
+
+ deg  #terms  min v_2  max height
+   1       3       -1           1
+   2       2       -1           1
+   3       2       -3           2
+   4       4       -3           2
+   5       3       -4           2
+   6       4       -4           2
+   7       5       -7           2
+   8       5       -7           3
+   9       5       -8           3
+  10       7       -8           3
+  11       6      -10           3
+  12       7      -10           4
+  13       8      -11           4
+  14       8      -12           5
+  15       8      -15           5
+  16      10      -15           6
+
+non-termination: nonzero terms at every degree = True
+dyadic ladder (min v_2 per degree): [-1, -1, -3, -3, -4, -4, -7, -7, -8, -8, -10, -10, -11, -12, -15, -15]

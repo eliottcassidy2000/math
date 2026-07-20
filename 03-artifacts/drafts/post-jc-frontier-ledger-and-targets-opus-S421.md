@@ -125,8 +125,11 @@ Each entry: problem — repo hook — why it belongs.
 
 **TARGET 1 (highest; untouched): explicit Zhao vanishing/image counterexample.**
 ¬JC collapses the universal forms of VC and IC, but NO explicit failing witness
-exists anywhere yet. First move: run the de Bondt-van den Essen symmetric reduction
-ON F (pin the exact dimension N and the homogeneous quartic P with F_sym = X + grad P);
+exists anywhere yet. First move (CORRECTED by S422, demonstrated symbolically): PIN THE CONSTRUCTIONS from
+the sources first -- the naive substitution gadget does NOT preserve Keller-ness (89
+off-section det monomials) and the naive potential <y,H(x)> is NOT Hessian-nilpotent;
+extract the exact BCW cubic reduction (van den Essen Ch. 6) and the dBvdE symmetrization
+twist, THEN run the transport (machinery already built: targets_multithread_opus_S422.py);
 then push through van den Essen-Wright-Zhao to the explicit (Delta, P, m) triple whose
 vanishing pattern breaks, and the explicit Mathieu subspace that fails. Deliverable:
 "the first explicit counterexample to the vanishing conjecture" — publishable alone.
@@ -169,3 +172,23 @@ Cross-links: THM-1300, THM-1305, THM-1310, THM-1315, THM-1320, THM-1325, THM-133
 THM-1335, THM-1340, THM-1345, THM-1288/1289/1291/1292/1269, HYP-8070/8075/8155/8170/
 8180, MISTAKE-198, engineering-synthesis-2026-03-10-S53 (the 12-domain mandate — the
 Zhao/Mathieu transport and OEIS pipeline are its number-theory and visibility limbs).
+
+
+## Part III addendum (S422 census)
+- MAJOR HIDDEN THREADS (file counts; each needs one mining/triage session): Goldbach 151,
+  Sidon 114, Kakeya 104, Collatz 93, twin primes 57, perfect numbers 55, RH 32,
+  Hadwiger-Nelson 30 (mostly codex-era lens work; the unit-distance precedent says some
+  hide card->math conversions).
+- NICHE (1-3 files), PROMOTED: **Casas-Alvero conjecture** (2 files; polynomial-derivative
+  rigidity, p-adic partial results in literature, directly adjacent to our 2-adic ladder +
+  Hessian toolkit); **Sendov** (2); cap set (3); abc (3).
+- NEW BRIDGE: Lehmer's Mahler measure vs the S420 shear dial (Pisot growth constants):
+  "which Mahler measures arise as shear-growth constants of relational grids?"
+- S422 RESULTS on the targets: Mersenne-depth law of the 2-adic inverse ladder (full
+  depth v_2 = -d exactly at d = 1,3,7,15; epsilon-law open); G_4 IS unit-distance,
+  G_5 is NOT (K_4 obstruction); T1 negatives demonstrated + machinery built.
+- NOVELTY AUDIT VERDICTS: one joint "explicit consequences" paper (THM-1300 + transport
+  witness when built + monoid-ideal statement), THM-1345 standalone (highest paper-grade),
+  THM-1288 short arXiv note NOW, OEIS batch; Lean queue L1 (F verification), L2 (Dixmier
+  identities), L3 (witness), L4 (hyperbolic lemma). See
+  07-reflections/novelty-audit-mersenne-depth-law-and-the-working-of-six-targets-opus-S422.md
