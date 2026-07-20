@@ -1,0 +1,11 @@
+THE WEDGE AS A SCALE PROBLEM: for a core C plus one element w,
+   sigma>13  <=>  w > 13*min(C)     and     rho<13  <=>  w < 13*max(C).
+So the wedge is a BOUNDED INTERVAL of w per core -- finite, one free parameter.
+
+EXHAUSTIVE CLOSURE for cores C subset [1,13] (all 12-subsets, all admissible w):
+  wedge families with core in [1,13]: 92 (EXHAUSTIVE)
+  minimum M = 7/89 = 0.078652   at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+  below 1/13 (would refute HYP-7355): 0
+  at or below 1/14 (would refute LRC(14)): 0
+
+  => HYP-7355 PROVED EXHAUSTIVELY for all wedge families with core in [1,13]

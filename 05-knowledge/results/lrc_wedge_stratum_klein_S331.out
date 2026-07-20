@@ -1,0 +1,12 @@
+PUSHING THE EXHAUSTIVE WEDGE STRATUM: cores C subset [1,K], |C|=12, all admissible w.
+  (w in (13 min C, 13 max C); V=C+{w} primitive, covering, genuinely in the wedge)
+
+   K | wedge families | min M       | below 1/13 | argmin
+   13 |            92  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   14 |          4226  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   15 |         12982  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   16 |         45411  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   17 |        107939  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   18 |        330218  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   19 |         64069  | 7/89        |          0 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   (time cap reached at K=19; larger K not completed)
