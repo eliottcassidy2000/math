@@ -11,7 +11,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-192 (2026-07-19, boxeph-S136) — pushed conflict-marker debris to main because the marker-grep GATE had inverted logic: `grep -c markers && continue` proceeds exactly when markers ARE found
+## MISTAKE-193 (2026-07-19, boxeph-S136; renumbered from 192 — kind-pasteur first-pushed 192 at 19:09) — pushed conflict-marker debris to main because the marker-grep GATE had inverted logic: `grep -c markers && continue` proceeds exactly when markers ARE found
 
 **What happened.** Resolving a rebase conflict on `agents/.session-state.json` (nested conflict hunks), my single-hunk extraction left two `<<<<<<<` markers behind. The safety check I ran — `grep -c "<<<<<<<" file && git add ... && git rebase --continue && git push` — printed the count (2) and then PROCEEDED, because grep exits 0 precisely when it finds matches. The mangled file reached origin/main for ~1 minute before repair (valid JSON restored, verified marker-free, repushed).
 
