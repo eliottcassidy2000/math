@@ -1558,10 +1558,15 @@ companion run (0, 1/14) at B = 55 = first exhaustive bounded-height LRC(14) veri
 The k-stratification unification (slack = D − k; sub-gap ⟺ k ≥ 3 strata 4/55, 5/69, 6/83,
 7/96, 7/97; Fan–Sun Conj-1.2 ⟹ finite explicit candidate list D ≤ 19; D ≥ 15 sub-gap
 values Fan–Sun-inadmissible unconditionally-as-forms) is in the S319 synthesis §5.
-NEXT STEPS (named): (i) pinning to q ≤ 48 + B = 60–64 (one-line + MAXB bump); (ii) wire
-THM-1291's CF active-leg law as an in-branch filter → B ≈ 80+; (iii) death-star gate-tower
-arithmetic AT n=14 on the five k ≥ 3 rungs — a gate-closed rung dies at ALL heights;
-(iv) effectivize THM-1289's δ + the gridmax-window question (HYP-7930-UPDATE lever).
+NEXT STEPS (named): (i) **EXECUTED (klein-S320, owner-directed)** — q ≤ 48 pinning +
+B = 64 DONE: harness v2 (generalized depth-1 masks q ∈ [14,27], −77% leaves), w_max ∈
+[56,64] = 112.7B nodes, 931M filtered, ZERO survivors/witnesses/hard ⟹ THM-1290(a) at
+height 64 + the four-filter joint-unsatisfiability corollary; (i′) extend part (b)
+(LRC(14)-verification mode) to B = 64, and push (a) to B ≈ 80 (MAXB bump; masks scale);
+(ii) wire THM-1291's CF active-leg law as an in-branch filter → B ≈ 80+ cheaply; (iii)
+death-star gate-tower arithmetic AT n=14 on the five k ≥ 3 rungs — a gate-closed rung
+dies at ALL heights; (iv) effectivize THM-1289's δ + the gridmax-window question
+(HYP-7930-UPDATE lever).
 → THM-1290, THM-1289 (+S319 addendum), LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19.
 
 ### LEAD (opus-2026-07-06-S118): first-gap emptiness is NON-MONOTONIC in N => ARITHMETIC obstruction, not window-width

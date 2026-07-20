@@ -44,6 +44,32 @@ repo, spend a long session exploring many of them and your own hypotheses
 
 FILES: HYP-8005, reflection the-regularity-bridge-the-ghost-loop-and-the-sheet-tower-
 opus-S407, script + frozen out (lrc_connections_tournament_slack2_ghost). -> all
+## klein-2026-07-19-S320 -- THM-1290(a) EXTENDED TO HEIGHT 64 (owner: push the census to B=64 with q<=48 pinning): w_max in [56,64] = 112.69B DFS nodes, 7.74B leaves, 931.0M filtered primitive families, ZERO pinning survivors, ZERO witness scans needed, ZERO hard -- with q<=48 pinning the four-filter stack (covering 2..13 / sigma>12 / pair-sum / unit-pinning) is JOINTLY UNSATISFIABLE at 13 speeds through height 64; the theorem now rests on the filters alone
+
+Owner directive executed in three moves. (1) HARNESS v2: QPIN 41 -> 48 (depth-3 pinning
+at 42..48); in-branch bitmask pruning GENERALIZED from {23,25,27} to all fourteen depth-1
+moduli q in [14,27] (gate-A leaves 2.74M -> 0.63M, -77%); F5-survivor printing; gates
+A/B/C byte-identical to v1. (2) ONLY [56,64] ENUMERATED: the DFS at w_max never looks
+above it, so the S319 run covers [28,55] verbatim; and the q<=48 addendum there needs NO
+rerun -- each of the 50 v1 survivors carries a witness at q in [43,48] with margin >=
+3/41, which IS a depth-d(q) pinning violation at that q, so v2 kills all 50 in-filter.
+(3) NINE PARALLEL CHUNKS (one per w_max; ~1.5h wall on 8 cores): every chunk returned
+F5=0, HARD=0 -- not one family in [56,64] even reached the witness scan. Non-primitive
+completeness at 64: g>=2 cores need w'_max in [28,32], exhausted by v1. NET: **no
+13-subset of [1,64] has M in (1/14, 3/41)**; any sub-3/41 value now needs v_max >= 65.
+SPECTROSCOPY: the survivor-free wipeout at q<=48 vs the 50 survivors at q<=41 pins the
+sub-gap's escape denominators to exactly [43,48] at heights <= 55 and NOTHING at 56..64 --
+data for boxeph's CRT stack and the THM-1291 CF-table composition (all escape q are
+convergent-denominator-eligible). NEXT (backlog): (i') part (b) LRC-verification mode to
+64; B ~ 80 via MAXB bump; (ii) CF active-leg in-branch filter. Fleet cross-links landed
+mid-session: kps-c92 consumed my HYP-collision flags (7975 -> 8000 renumber per my
+timestamps) and cite-noted the slack = D - k double-landing.
+
+Prompt (owner): push the census to B=64 with q<=48 pinning
+
+FILES: THM-1290 (S320 extension banner + title + statement at 64), census harness v2
+(same .c, committed c29856227), consolidated .out appended, INDEX S320 update, backlog
+lead (i) EXECUTED -> (i'). -> all
 
 ---
 ## opus-2026-07-19-S406 -- THM-1292: THE F1 TRANSPORT EXECUTED (owner: tower seals -> new covering-min proof): the GHOST-PACKING CEILING (L3-transport, FIVE LINES): {1..m} in V, m+1 not in V, K(m+1) in V => M(V) <= K/(K(m+1)+1) -- the m+2 orbit points {jt} have m+1 hard gaps (differences are speeds) plus one ghost gap f >= M/K (far-element duty), and 1 >= (m+1)M + M/K; TIGHT at the deep well: M <= 14/183 with PHI6(14)/14 = 183/14 = 13 + 1/14 DECOMPOSED as thirteen core gaps + one ghost gap of duty-weight 1/14 -- the magic constant is a packing count. Plus the L1-TRANSPORT witness four-liner at Q = 183 (14*13 == -1 => danger classes = 13-multiples with |s| <= 13; the deep well's only 13-multiple is 182 = 13*14 at |s| = 14, distance exactly the floor) => M(DW) = 14/183 ENTIRELY SEAL-NATIVELY -- no three-gap, no fragmentation, no census. REFEREE: ceiling exact on the corpus (tight ONLY at DW), 0 violations / ~3000 adversarial hypothesis-satisfying families; L1 danger set exactly as predicted; COMPOSITION IDENTIFIED: the ghost-subfamily {1..m} u {K(m+1)} attains its own ceiling exactly (5/5 shapes) => the lemma = LRCSubfamilyCap o generalized-THM-633 in ONE uniform proof; mac-mini-S124's duty quantization = the lemma's hypothesis failing (no K => no ceiling). HONEST SCOPE: the all-covering-sets lower half stays with THM-726/883; named follow-up = L2-transport to arbitrary covering sets (obstacle: no fixed core); uniqueness rigidity sketched via the equality chain (all hard gaps = M, ghost gap = M/14, adjacency), not completed.

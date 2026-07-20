@@ -151,3 +151,34 @@ first-witness-q histogram: 48:1
 visited=32681472534 leaves=8055838557 F1=2450409431 prim=2449886007 F5-survivors=6 witness-cleared=6 HARD=0
 
 ## VERDICT: no 13-subset of [1,55] has M < 1/14 -- LRC(14) VERIFIED EXHAUSTIVELY AT HEIGHT 55.
+
+## S320 EXTENSION: B=64, q<=48 pinning, harness v2 (generalized depth-1 masks q in [14,27]; QPIN 48)
+# gates A/B/C byte-identical to v1 (frozen above); only w0 in [56,64] enumerated -- [28,55] is covered
+# verbatim by the v1 run above (the DFS at w_max never looks above it), and the q<=48 addendum on
+# [28,55] follows from the frozen histogram: every v1 survivor's witness at q in [43,48] with margin
+# >= 3/41 IS a depth-d(q) pinning violation at that q, so harness v2 kills all 50 in-filter.
+--- w0=56 ---
+w_max=56 done: visit=5090675530 leaf=252639234 F1=59072902 F2=59072902 F4=59051043 prim=59037226 F5=0 scan=0 HARD=0
+--- w0=57 ---
+w_max=57 done: visit=7123496876 leaf=559504426 F1=74148314 F2=74148314 F4=73937255 prim=73937254 F5=0 scan=0 HARD=0
+--- w0=58 ---
+w_max=58 done: visit=7432422838 leaf=367433216 F1=35442676 F2=35442676 F4=35335807 prim=35325825 F5=0 scan=0 HARD=0
+--- w0=59 ---
+w_max=59 done: visit=11493513220 leaf=817312481 F1=74934505 F2=74934505 F4=74755668 prim=74755668 F5=0 scan=0 HARD=0
+--- w0=60 ---
+w_max=60 done: visit=8090289165 leaf=532316136 F1=132367060 F2=132367060 F4=131683070 prim=131662006 F5=0 scan=0 HARD=0
+--- w0=61 ---
+w_max=61 done: visit=15920851550 leaf=1249733119 F1=93978014 F2=93978014 F4=93584993 prim=93584993 F5=0 scan=0 HARD=0
+--- w0=62 ---
+w_max=62 done: visit=16188033011 leaf=955149383 F1=67898328 F2=67898328 F4=67798167 prim=67781905 F5=0 scan=0 HARD=0
+--- w0=63 ---
+w_max=63 done: visit=18062108016 leaf=1601018496 F1=247938126 F2=247938126 F4=246731484 prim=246731468 F5=0 scan=0 HARD=0
+--- w0=64 ---
+w_max=64 done: visit=23285285055 leaf=1401526483 F1=149074683 F2=149074683 F4=148249093 prim=148223273 F5=0 scan=0 HARD=0
+
+## AGGREGATE [56,64]: visited=112686675261 leaves=7736632974 F1=934854608 prim=931039618 F5-survivors=0 witness-scans-needed=0 HARD=0
+
+## VERDICT: (1/14, 3/41) contains NO 13-subset of [1,64] -- EXHAUSTIVELY EMPTY AT HEIGHT 64.
+## STRUCTURAL COROLLARY: covering{2..13} + spread(sigma>12) + pair-sum + unit-pinning(q<=48) is
+## JOINTLY UNSATISFIABLE for 13-subsets through height 64 -- the filter stack alone kills everything;
+## no rational witness beyond the filters was needed anywhere in [56,64].
