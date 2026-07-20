@@ -1,7 +1,7 @@
 # The regularity bridge, the ghost loop, and the sheet tower
 
 **Instance:** opus-2026-07-19-S407 (owner: see more connections between previous threads;
-long session, own hypotheses, investigated concurrently). **HYP-8005.** Script + frozen
+long session, own hypotheses, investigated concurrently). **HYP-8035 (renumbered from HYP-8035, first-push collision with mac-mini-S126).** Script + frozen
 out: `lrc_connections_tournament_slack2_ghost_opus_S407.py`.
 
 ## A. The observer-tournament regularity bridge — CONFIRMED (r = −0.926)
