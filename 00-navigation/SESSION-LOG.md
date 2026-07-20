@@ -77,6 +77,16 @@ FILES: THM-1385; z2_index_aspherical_macmini_S125.py (+.out); HYP-8220.
 HANDOFFS: @opus -- THM-1385 generalizes your THM-1380 no-go from the circle to every aspherical carrier, and identifies asphericity as the mechanism. @all -- if a future session reaches for Borsuk-Ulam on any torus/aspherical carrier here, this caps the yield at one equation before the work starts.
 
 ---
+## boxeph-2026-07-20-S153 -- n=9 COVER (C engine) + f(10)=125 witnessed + THE MOD-27 RUNG (last of the ladder) + the sliver boundary = Z/2-index threshold (HYP-8225)
+
+**Owner directive:** run the n=9 augmentation cover; test f(10)=125 + spectrum completeness; free involution carrying an odd map; k-torus of the resonance lattice in Z/2-index form.
+
+- **n=9 cover:** C engine (gcc -O2), double augmentation 456 reps -> 58,368 n=8 -> 14,942,208 n=9 tournaments covering all 191,536 classes. MIN strong h(9) = 75 EXHAUSTIVE (Moon-Busch confirmed at n=9); h=7/h=21 ABSENT; every other odd in [1,2881] ATTAINED (missing list = {7,21} then jump to 2883+; n=8's near-top holes 611-655 all filled at n=9 => ceiling gaps drift, floor gaps eternal); max h(9) = 3357 = the circulant-9 maximum (symmetric ceiling at odd n confirmed); strong fine structure: holes 77/79/83 just above floor 75 — 77 attained anyway via strong(8) (S152b holes list excludes 77) + dominated vertex: WHY chased, no contradiction. SPECTRUM-COMPLETENESS: attained(9) = odds [1,2881] minus {7,21} — the conjecture spectrum(infty) = odds minus {7,21} now verified through 2881.
+- **f(10) = 125 WITNESSED** (first restart, hill-climb; Busch optimality => f(10) = 125). Moon-Busch floor law now: 3,5,9,15,25,45,75,125 (n=3..10), exhaustive <= 8 + witnessed 9, 10.
+- **MOD-27 RUNG (new, unfiled until today):** M < 2/27 with 3-coprime speeds forces surjection onto the 9 antipodal unit-pairs of (Z/27)*; misses hand back exact witnesses t = a/27. Verified 20,000/20,000; 94% block rate on random 3-coprime 13-tuples. Serves the 3-coprime gcd-stratum (blocker-economy complement of mod-25). Lean port = handoff (mirror LRCMod25).
+- **THE INDEX LAW:** rung exists iff pairs(q) <= 13: q in {19(9), 23(11), 25(10), 27(9)}; q=29 gives 14 > 13 STOP. **The open sliver [2/29, 1/14) begins exactly at the Z/2-index phase transition** — the sliver boundary is a discrete Borsuk-Ulam threshold, not a census accident.
+- **Reflection** the-antipodal-ladder-is-discrete-borsuk-ulam-boxeph-S153.md: the spread lemmas = discrete BU (free -1, odd residue map); the k-torus/CRT gate program in ind_Z/2 form (framing only, honest); the FOUR free-involution laws of the repo unified (antipodal rungs / Moon-S150 / THM-584 complement-antipodal / THM-1365 Cartan freeness).
+- Handoffs: LRCMod27Spread.lean port; ind_Z/2 tower computation for the x7 gate; n=10 cover feasibility (C, 191,536 reps needed first — canon via invariant-bucketed dedupe).
 
 ## boxeph-2026-07-20-S152 -- THM-1370: 7 AND 21 ARE NEVER h-VALUES (all n, complete proof); exhaustive n=7/n=8 spectra via augmentation covers; Moon-Busch floor re-derived + witnessed at n=9 (HYP-8220)
 
