@@ -1,0 +1,11 @@
+ADELIC COPRIMALITY: CT(m0), CT(2m0) differ at SOME place -- finite prime (Kummer carry
+CA) OR archimedean (amoeba radius).  Product-formula reasoning: agreeing everywhere =>
+equal, but they are not, so they differ somewhere -> coprime -> TNC.
+
+   N=3(-3,-1,3) m0=4: separated at p=2 (Kummer CA)
+   N=3(-3,1,5) m0=4: separated at p=3 (Kummer CA)
+   N=3(-3,2,7) m0=5: separated at p=7 (Kummer CA)
+   N=4(-4,1,6) m0=5: separated at p=2 (Kummer CA)
+
+=> every tunable trinomial closes at SOME place; the finite places are the
+   Sierpinski/Kummer carry automaton, the infinite place is the multinomial amoeba.

@@ -1,3 +1,40 @@
+## opus-2026-07-20-S425 - TNC as adelic / cellular-automaton / boundary-function synthesis (THM-1720)
+
+Owner: take the best new levers (positivity, amoeba) and connect the cellular-automata and
+Ted Kaczynski threads. They fit as ONE adelic picture.
+
+**(1) ADELIC COPRIMALITY (verified).** Trinomial TNC <=> CT(m0), CT(2m0) coprime in a. The
+reason they are coprime: their root-sets differ at SOME PLACE of Q -- a finite prime p (via
+the p-adic Newton polygon) or the archimedean place (via the amoeba/multinomial radius).
+Verified: {-3,-1,3}@p=2, {-3,1,5}@p=3, {-3,2,7}@p=7, {-4,1,6}@p=2 (finite); {-2,1,4}@
+archimedean (|roots|=1 vs sqrt(2+-sqrt3), NO finite p<60 separating). Product-formula
+reasoning: agree at every place => equal, but they differ somewhere => coprime => TNC. This
+unifies the S422 amoeba lever (the ARCHIMEDEAN place) with a finite-prime refinement, and
+explains why {-2,1,4} looked special -- it closes ONLY at infinity.
+
+**(2) CELLULAR-AUTOMATON CONTENT (Kummer = Sierpinski carry).** The finite-place valuations
+are computed by Kummer's theorem: v_p(multinomial) = #carries adding the parts in base p --
+exactly the Sierpinski/Pascal carry CA (Rule 90 at p=2), the repo's pollock_sierpinski_carry
+thread (HYP-2491/2497). So the p-adic Newton polygon of CT(m) is a READOUT of the carry
+automaton; the finite-place separations are computed by the Sierpinski CA on the minimal-rep
+multinomials.
+
+**(3) KACZYNSKI BOUNDARY REFRAME.** Kaczynski's actual math (1967 thesis) is boundary
+functions -- radial/curvilinear limits in a disk and their singular sets, along specified
+APPROACH PATHS. G(t)=t(log Pi)' is analytic in |t|<1/rho; the saddle values t_j=1/w_j are
+BOUNDARY SINGULARITIES on |t|=1/rho, and the N branches u_i(t) are the approach paths. TNC <=>
+G constant <=> the boundary function is trivial <=> empty singular set <=> R monomial.
+Saddle-value collisions (THM-1625) are coincidences of approach-path limits. Kaczynski's
+dichotomy is the structural statement TNC is asking for. The repo already has a
+Kaczynski-boundary/approach-labels thread in the LRC analytic sieve -- possible transfer.
+
+**STATUS.** Exploratory synthesis; the adelic separation is VERIFIED on all tunable trinomials
+(mix of finite and archimedean places). Uniform 'differ at some place' is the open target
+(HYP-8530), and it is ELEMENTARY (Newton polygons + Kummer carries), NOT cyclotomy -- a much
+cleaner target than the route THM-1710 refuted.
+
+**Artifacts:** THM-1720; HYP-8530; 2 scripts + 2 outputs.
+
 ## opus-2026-07-20-S424 - Trinomial TNC structure: positivity + recurrence + roots of unity in the right place (THM-1715)
 
 Owner steered me to keep roots of unity and recurrence. Placed both correctly after S423

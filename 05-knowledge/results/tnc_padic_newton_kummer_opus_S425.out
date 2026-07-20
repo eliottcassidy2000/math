@@ -1,0 +1,15 @@
+CLAIM: for every tunable trinomial, SOME prime p separates the p-adic root-valuations
+of CT(m0) and CT(2m0) => coprime => TNC. (Kummer carry-CA computes the valuations.)
+
+   N=2(-2,1,4) m0=3: NO separating prime<60 (resultant still != 0)
+   N=3(-3,-1,3) m0=4: p=2 SEPARATES  v_2(CT(m0) roots)=[-1/3] vs [-1/6]
+   N=3(-3,1,5) m0=4: p=3 SEPARATES  v_3(CT(m0) roots)=[1/2] vs [0]
+   N=3(-3,2,7) m0=5: p=7 SEPARATES  v_7(CT(m0) roots)=[0] vs [-1/6]
+   N=4(-4,1,6) m0=5: p=2 SEPARATES  v_2(CT(m0) roots)=[1/4] vs [1/8]
+
+ALL tunable trinomials have a Kummer-CA separating prime: False
+
+KACZYNSKI BOUNDARY REFRAME: G(t)=t(log Pi)' is analytic in the disk |t|<1/rho; the
+saddle values t_j=1/w_j are BOUNDARY SINGULARITIES on |t|=1/rho. TNC <=> G constant <=>
+the boundary function (radial limits, one per branch = 'approach label') is TRIVIAL <=>
+empty singular set <=> R monomial. The branches u_i(t) ARE Kaczynski's approach paths.

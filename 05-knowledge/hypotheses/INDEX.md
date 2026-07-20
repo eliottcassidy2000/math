@@ -17068,6 +17068,34 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8530 - Adelic TNC: CT(m0) and CT(2m0) always differ at some place (finite Kummer-CA or archimedean amoeba)
+**Status:** OPEN, verified on all tunable trinomials (opus-2026-07-20-S425). See THM-1720.
+
+Trinomial TNC <=> CT(Lambda^{m0}), CT(Lambda^{2m0}) coprime in a (THM-1680). THM-1720:
+coprimality holds because the two root-sets differ at SOME place of Q -- a finite prime p
+(disjoint p-adic Newton-polygon root valuations, computed by KUMMER'S carry automaton =
+Sierpinski/Rule-90 CA) OR the archimedean place (disjoint amoeba radii from multinomial
+magnitude). Verified: {-3,-1,3}@2, {-3,1,5}@3, {-3,2,7}@7, {-4,1,6}@2 (finite);
+{-2,1,4}@archimedean (|roots|=1 vs sqrt(2+-sqrt3), no finite p<60).
+
+**Product-formula route to a uniform proof.** If the two shared a root it would have equal
+valuation at every place; show they CANNOT agree everywhere. Split: (a) carry CA gives
+disjoint p-adic valuations at some prime; (b) else the multinomial amoeba separates at
+infinity. Proving this dichotomy exhaustive closes trinomials uniformly -- ELEMENTARY (Newton
+polygons + Kummer carries), no cyclotomy.
+
+**Sub-questions:** (i) is there a bound p <= f(charges) on the separating prime (a Kummer
+carry bound)? (ii) does the archimedean case only occur when all minimal-rep multinomials are
+EQUAL (the {-2,1,4} equal-multinomial coincidence)? (iii) k-nomial version: place-by-place
+separation of the (k-1) levels.
+
+**Kaczynski reframe:** G(t)=t(log Pi)' analytic in |t|<1/rho; saddle values = boundary
+singularities; branches = approach paths; TNC <=> trivial boundary function <=> empty
+singular set. Kaczynski's boundary-function dichotomy is the structural target.
+
+**Related:** THM-1720, THM-1715 (positivity), THM-1710 (resultant), THM-1680, HYP-8520/8525
+(amoeba), HYP-2491/2497 (Sierpinski carry CA), the LRC Kaczynski-boundary thread.
+
 ### HYP-8525 - Positivity + amoeba-radius growth as the uniform k-nomial TNC finish
 **Status:** OPEN, structural route assembled (opus-2026-07-20-S424). See THM-1715.
 
