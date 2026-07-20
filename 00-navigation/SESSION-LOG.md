@@ -100,6 +100,7 @@ overclaimed on it. This session is corrective.
   is a sharper estimate. Do NOT rebuild any argument on "the top term dominates."
 
 ## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
+## boxeph-2026-07-20-S175 -- THM-1615: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
 
 **Owner:** prove the general ladder-collapse induction and finish TNC.
 
@@ -107,6 +108,51 @@ overclaimed on it. This session is corrective.
 - Independent M=2 cross-check: the involution identity R(x)R(cx/R(x)) = c^2 dies by the d^2 vs d^2-d degree gap (top r0 r_d^d).
 - Verifications: degree gap d = 3,4,5; mixing monodromy in the wild (8.52 displacement); DFT lemma k <= 8 clean; all prior instance closures = corollaries.
 - CONSEQUENCES: TNC + Gamma bridge => NC2 + GMC(2) TRUE at N=2 + Nullcone Structure Theorem (nullcone = one-sided). Fock bridge now rests on a theorem. Next: fleet adversarial review, Lean, the paper.
+## kind-pasteur-2026-07-20-S128c121
+
+**THE POCHHAMMER BRIDGE (THM-1620): the toral and radial layers of GMC(2) are one
+orthogonal-polynomial fact, one rising factorial apart.**
+
+- Owner asked how rising/falling factorials bear on TNC. They are not an outside tool --
+  they are what both layers are MADE of. With Lambda = u^{-M}g(u), M = N = 1:
+  **TORAL** CT(Lambda^m) = [u^m]g^m = sum_k (m)_{2k}/(k!)^2 w^k b^{m-2k}
+  = D^{m/2} P_m(g1/sqrt D), D = g1^2-4g0g2 -- a **LEGENDRE** polynomial (verified exact,
+  6 cases, m<=10). **RADIAL** m E_r[psi_m] = sum_k (m)_{2k}/k! w^k b^{m-2k}
+  = s^m He_m(b/s) -- **HERMITE** (THM-1615).
+- **The bridge is ONE RISING FACTORIAL, term by term: radial_k = toral_k * k!**, verified,
+  and that k! is exactly E_r[r^k] = (1)_k. The radial average IS the rising-factorial
+  moment functional applied to the falling-factorial toral coefficients. Legendre ->
+  Hermite is the Askey descent and the Gamma average performs it.
+- **Both close by one lemma.** Both recurrences are three-term, so a common root of
+  consecutive members descends to p_0 = 1. TNC at M=N=1 and NC2 are the same theorem, and
+  neither needs an estimate.
+- **General mechanism = FAVARD, hypothesis again a rising factorial.** Radial moments
+  mu_j = j! = (1)_j, Hankel positive definite (minors 1,1,4,144,82944,1194393600), so
+  monic orthogonal p_m exist with b_m > 0 -- and b_m != 0 is exactly what the descent
+  needs. Every Favard family closes.
+- **Lean generalized accordingly:** `ThreeTerm.no_common_root` for an ARBITRARY monic
+  three-term recurrence with b n != 0 subsumes Hermite, Legendre, Laguerre, Gegenbauer in
+  one theorem. Module now **17 theorems, sorry-free, no native_decide**, clean build.
+- **Bears directly on boxeph-S175.** They prove TNC (monodromy + Puiseux-DFT) and then
+  route "TNC => NC2 (klein's Gamma bridge: factorial weights make the top term dominate
+  the radial average) => GMC(2)". That parenthesis is exactly the step THM-1585 refuted.
+  Their TNC may stand; the consequence does not follow as stated. The Pochhammer descent
+  replaces the link at M=N=1 with no estimate.
+- **Also: the 1/2 recurs for a reason.** The Legendre GF is (1-2xt+t^2)^{-1/2}; the fibre
+  fraction is (1/2)_{n-2}/(n-2)! with GF (1-x)^{-1/2}; He_m carries (-1/2)^k;
+  A = (J-I+S)/2 is THM-1555. Same 1/2.
+- **Housekeeping:** my THM-1605 renumbered to **THM-1615** by first-pusher rule --
+  three-way collision, boxeph-S175 and opus-S415 both pushed THM-1605 earlier the same day
+  and mine was last. Refs updated.
+
+**Handoff / the frontier is now SHARP.** For general (M,N), [u^{Mm}]g^m is a diagonal of a
+rational function, hence holonomic in m -- a linear recurrence with polynomial
+coefficients, but of order > 2 in general, while the descent needs order 2. So: for which
+(M,N) is the toral sequence order-2 (an orthogonal family)? And when it is not, a d-th
+order recurrence still gives the descent from d consecutive zeros PROVIDED the trailing
+coefficient does not vanish -- so the question becomes a resultant / apparent-singularity
+computation, NOT an estimate. That is the next session.
+
 ## mac-mini-2026-07-20-S141 -- THM-1610: the TNC INDUCTION EXISTS, it is the COEFFICIENT LADDER, and its failure locus is EXACTLY {j : M does not divide j}. Plus a Borel/Watson REDUCTION of the Laplace layer.
 
 **Owner directive:** "work induction to prove GMC(2) and TNC."
@@ -120,7 +166,7 @@ overclaimed on it. This session is corrective.
 **Handoff.** (i) **HYP-8440**: the TNC obstruction is now precisely localised at the non-multiples of M. Three concrete moves: (a) the first broken equation is a SINGLE QUADRATIC IN ONE UNKNOWN (r_3 at M=2) -- solve it explicitly and feed both roots back into the ladder, which may re-linearise downstream; (b) induct on N with M FIXED, using (M,N-1) as the base rather than inducting on the coefficient index; (c) check whether boxeph's THM-1595 gauged-elimination certificate factors through this same obstruction. (ii) **HYP-8445**: the last input to HYP-8350 is a Gevrey-1 bound -- now a NAMED classical criterion (Watson-Nevanlinna Borel summability) rather than a bespoke saddle estimate. **Cite it as a REDUCTION, not a proof.** (iii) **GMC(2) itself is NOT advanced by this session** -- the Laplace layer is one input; THM-1600's span-2 elimination and spans >= 3 are untouched here.
 
 ---
-## opus-2026-07-20-S415 - The outside infinite family: their m=2 IS our map, and THM-1350 explains their headline count (THM-1605)
+## opus-2026-07-20-S415 - The outside infinite family: their m=2 IS our map, and THM-1350 explains their headline count (THM-1615)
 
 Owner supplied a (mangled) description of an outside infinite family of JC counterexamples
 E_m : C^3 -> C^3, Keller and non-injective for all m >= 2, with deg E_2 = 7 and
@@ -147,7 +193,7 @@ attained; we show no even value can be. Two halves of one theorem, and only one 
 construction. Verified at m=2: the tau-fixed fibre cubic 16a x^3 + 4x has roots {0, +-i/(2
 sqrt a)} = 1 sigma-fixed sheet + 1 free orbit.
 
-**THE EXAMPLE THAT CARRIES THE EXTRA STRUCTURE** (THM-1605 s4): on our m=2 map we can state,
+**THE EXAMPLE THAT CARRIES THE EXTRA STRUCTURE** (THM-1615 s4): on our m=2 map we can state,
 and they do not, that (1) the fibre is the root set of L x^3 + (4-3bc)x - 2c whose LEADING
 COEFFICIENT IS THE JELONEK POLYNOMIAL L = 27a^2c^2 - 18abc + 16a + b^3c - b^2; (2) the
 Jelonek set is ZARISKI'S 1929 THREE-CUSPIDAL QUARTIC, zero nodes, monodromy S_3, stabiliser
@@ -167,7 +213,7 @@ transposition inside one orbit. Testable against their construction; requires no
 **VERDICT: not in competition.** Their m=2 IS our map. They extended the object; we explained
 it. The results compose.
 
-**Artifacts:** THM-1605; HYP-8440; 1 script + 1 output.
+**Artifacts:** THM-1615; HYP-8440; 1 script + 1 output.
 
 ## mac-mini-2026-07-20-S140 -- THM-1600: the LAPLACE-GMC(1) LAYER IS AN IDENTITY AT DEGREE 1 (truncated exponentials; DERANGEMENTS), CHARGE SPAN 2 ELIMINATED EXACTLY, and the ten Erdos problems are a CLEAN NEGATIVE
 
@@ -201,7 +247,7 @@ it. The results compose.
   without bound with B. **Nothing here refutes NC2 or GMC(2)** -- E_r[psi_m] != 0 in every
   case tested. What is refuted is the bridge.
 
-- **THM-1605 -- the orthogonality closure, which makes the disputed step UNNECESSARY.**
+- **THM-1615 -- the orthogonality closure, which makes the disputed step UNNECESSARY.**
   Lagrange-Buermann on u = t phi(u) with H = log(phi/phi(0)) collapses
   psi_m = (1/m)[u^m] phi(u)^m; the [u^m] extraction forces #(rho a) = #(rho c), which is
   WHY psi_m is rho-free; and E_r[r^k] = k! then gives

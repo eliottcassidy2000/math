@@ -1,0 +1,69 @@
+========================================================================================
+(A) TORAL LAYER IS LEGENDRE:  [u^m] g^m = D^{m/2} P_m(g1/sqrt(D)),  D = g1^2-4 g0 g2
+========================================================================================
+  Stated without square roots to stay exact: D^{m/2} P_m(g1/sqrt D) is a polynomial
+  in g1 and D, so we compare against sympy's legendre() with the substitution done
+  symbolically.
+  g = ( 1, 1, 1)   D = -3      [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  g = ( 1, 3, 1)   D = 5       [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  g = ( 1, 1,-1)   D = 5       [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  g = ( 2, 5,-3)   D = 49      [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  g = ( 1, 0, 1)   D = -4      [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  g = ( 3, 2, 5)   D = -56     [u^m]g^m == D^{m/2} P_m(g1/sqrt D) for m<=10 : True
+  ALL AGREE: True
+
+========================================================================================
+(B) THE k! BRIDGE:  radial = toral with ONE k! removed, and k! = (1)_k = E_r[r^k]
+========================================================================================
+  (g0,g1,g2)     m    toral (Legendre)       radial (Hermite)       ratio top term
+  (1, 1, 1)      4    19                     25                     k! per term
+  (1, 1, 1)      8    1107                   5937                   k! per term
+  (1, 3, 1)      4    195                    201                    k! per term
+  (1, 3, 1)      8    86515                  147345                 k! per term
+  (1, 1, -1)     4    -5                     1                      k! per term
+  (1, 1, -1)     8    -125                   -895                   k! per term
+
+  Verifying the term-by-term relation explicitly (m = 8):
+     g = (1, 1, 1)     radial_k == toral_k * k!  for every k : True
+     g = (2, 5, -3)    radial_k == toral_k * k!  for every k : True
+
+========================================================================================
+(C) HERMITE CHECK on the radial side (THM-1605/kp), for the record
+========================================================================================
+  w = 1    b = 1     m E_r[psi_m] == s^m He_m(b/s) for m <= 10 : True
+  w = 1    b = 3     m E_r[psi_m] == s^m He_m(b/s) for m <= 10 : True
+  w = -1   b = 1     m E_r[psi_m] == s^m He_m(b/s) for m <= 10 : True
+  w = -6   b = 5     m E_r[psi_m] == s^m He_m(b/s) for m <= 10 : True
+
+========================================================================================
+(D) NO COMMON ROOT holds for BOTH families -- one lemma, two layers
+========================================================================================
+  Legendre: (m+1)P_{m+1} = (2m+1) x P_m - m P_{m-1}   (three-term, m != 0)
+  Hermite : He_{m+1} = x He_m - m He_{m-1}            (three-term, m != 0)
+  In both, a common root of consecutive members forces the previous one to vanish,
+  and the descent ends at p_0 = 1.  Numerically, min root separation:
+  m = 2    Legendre min|root gap| = 0.197246    Hermite min|root gap| = 0.732051
+  m = 3    Legendre min|root gap| = 0.086540    Hermite min|root gap| = 0.602363
+  m = 4    Legendre min|root gap| = 0.045044    Hermite min|root gap| = 0.522556
+  m = 5    Legendre min|root gap| = 0.026290    Hermite min|root gap| = 0.467287
+  m = 6    Legendre min|root gap| = 0.016638    Hermite min|root gap| = 0.426182
+  m = 7    Legendre min|root gap| = 0.011182    Hermite min|root gap| = 0.394107
+  m = 8    Legendre min|root gap| = 0.007870    Hermite min|root gap| = 0.368199
+  m = 9    Legendre min|root gap| = 0.005746    Hermite min|root gap| = 0.346717
+
+========================================================================================
+(E) FAVARD: the general mechanism.  mu_j = j! = (1)_j, a RISING factorial.
+========================================================================================
+  Hankel H_n = (mu_{i+j})_{i,j<=n} with mu_j = j!.  If pos def, Favard gives monic
+  orthogonal p_m with p_{m+1} = (x - a_m) p_m - b_m p_{m-1} and b_m > 0, and b_m != 0
+  is exactly what powers the descent.  Checking positive-definiteness and b_m:
+  n = 1   leading minors = [1, 1]                                     pos def : True
+  n = 2   leading minors = [1, 1, 4]                                  pos def : True
+  n = 3   leading minors = [1, 1, 4, 144]                             pos def : True
+  n = 4   leading minors = [1, 1, 4, 144, 82944]                      pos def : True
+  n = 5   leading minors = [1, 1, 4, 144, 82944, 1194393600]          pos def : True
+  n = 6   leading minors = [1, 1, 4, 144, 82944, 1194393600, 619173   pos def : True
+
+  So the radial moment functional is a bona fide orthogonality functional, its
+  orthogonal family has b_m > 0, and NO point is a common root of all of them.
+  That is the estimate-free replacement for the Gamma-domination step.

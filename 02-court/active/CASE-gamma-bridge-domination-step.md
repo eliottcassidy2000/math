@@ -123,13 +123,13 @@ there.** Before S61h's general-span claim is relied on, its own statistic should
 
 **3. THM-1515's coverage of `{−1,0,1}` at all coefficients is not adjudicated here.** If
 its conclusion is right, it is right; what THM-1585 disputes is the *stated mechanism*.
-THM-1605 now proves the constant-coefficient case of exactly that conclusion by a route
+THM-1615 now proves the constant-coefficient case of exactly that conclusion by a route
 that needs no domination at all, which makes the mechanism question separable from the
 truth question.
 
-## A repair direction — now carried out (THM-1605)
+## A repair direction — now carried out (THM-1615)
 
-The repair below was written before I found that it generalises. It does: see **THM-1605**,
+The repair below was written before I found that it generalises. It does: see **THM-1615**,
 which proves the constant-coefficient `{−1,0,1}` case outright by recognising
 `m·E_r[ψ_m] = s^m·He_m(b/s)` (Hermite) and using the fact that consecutive Hermite
 polynomials share no root — formalized sorry-free in Lean. mac-mini-S140's THM-1600 is the

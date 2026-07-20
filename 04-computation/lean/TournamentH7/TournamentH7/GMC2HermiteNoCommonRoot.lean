@@ -166,4 +166,87 @@ theorem trExp_exists_nonvanishing (z : ℝ) : ∃ n : ℕ, trExp n z ≠ 0 := by
   · exact ⟨1, fun h1 => trExp_no_common_root 0 z h h1⟩
   · exact ⟨0, h⟩
 
+/-!
+## The general form: ANY three-term recurrence, hence any Favard family
+
+kind-pasteur-S128c121.  The Hermite and truncated-exponential arguments above are two
+instances of one fact, and the general fact is what the GMC(2) programme actually needs.
+
+The toral layer (TNC) and the radial layer (NC2) are BOTH orthogonal-polynomial families,
+one level apart:
+
+  * TORAL   `CT(Lambda^m) = [u^m] g^m = sum_k (m)_{2k}/(k!)^2 * w^k * b^{m-2k}`
+            `= D^{m/2} P_m(g1/sqrt D)`, `D = g1^2 - 4 g0 g2`   -- LEGENDRE
+  * RADIAL  `m E_r[psi_m]              = sum_k (m)_{2k}/ k!    * w^k * b^{m-2k}`
+            `= s^m He_m(b/s)`, `s = sqrt(-2w)`                 -- HERMITE
+
+and they differ by exactly ONE factor of `k!` per term, which is `E_r[r^k] = k! = (1)_k`,
+a RISING factorial.  So the radial average is literally the rising-factorial moment
+functional applied to the falling-factorial toral coefficients.
+
+By Favard, any moment functional with positive-definite Hankel matrix has monic orthogonal
+polynomials `p_{n+1} = (x - a n) p_n - b n * p_{n-1}` with `b n > 0`; the radial moments
+`mu_j = j!` have positive-definite Hankel (leading minors 1, 1, 4, 144, 82944, ...).  The
+theorem below shows `b n != 0` alone forces no-common-root, so EVERY such family closes --
+Legendre, Hermite, Laguerre, Gegenbauer alike.  This is the estimate-free replacement for
+klein-S351's domination step, which THM-1585 refuted and on which boxeph-S175 still routes
+`TNC => NC2 => GMC(2)`.
+-/
+
+/-- The data of a monic three-term recurrence with nonvanishing off-diagonal. -/
+structure ThreeTerm where
+  a : ℕ → ℝ
+  b : ℕ → ℝ
+  hb : ∀ n, b n ≠ 0
+
+/-- The monic polynomial sequence attached to a three-term recurrence:
+`p 0 = 1`, `p 1 = x - a 0`, `p (n+2) = (x - a (n+1)) * p (n+1) - b (n+1) * p n`. -/
+def ThreeTerm.p (T : ThreeTerm) : ℕ → ℝ → ℝ
+  | 0,       _ => 1
+  | 1,       x => x - T.a 0
+  | (n + 2), x => (x - T.a (n + 1)) * T.p (n + 1) x - T.b (n + 1) * T.p n x
+
+@[simp] theorem ThreeTerm.p_zero (T : ThreeTerm) (x : ℝ) : T.p 0 x = 1 := rfl
+
+theorem ThreeTerm.p_succ_succ (T : ThreeTerm) (n : ℕ) (x : ℝ) :
+    T.p (n + 2) x = (x - T.a (n + 1)) * T.p (n + 1) x - T.b (n + 1) * T.p n x := rfl
+
+/-- **No common root, for any three-term recurrence with `b n ≠ 0`.**
+
+This subsumes `no_common_root` (Hermite: `a ≡ 0`, `b n = n`) and covers every Favard
+family — in particular the LEGENDRE family governing the toral layer (TNC) and the
+HERMITE family governing the radial layer (NC2).  One lemma, both layers. -/
+theorem ThreeTerm.no_common_root (T : ThreeTerm) :
+    ∀ (n : ℕ) (x : ℝ), T.p n x = 0 → T.p (n + 1) x = 0 → False := by
+  intro n
+  induction n with
+  | zero =>
+      intro x h _
+      rw [ThreeTerm.p_zero] at h
+      exact one_ne_zero h
+  | succ k ih =>
+      intro x h1 h2
+      have hrec : T.p (k + 2) x
+          = (x - T.a (k + 1)) * T.p (k + 1) x - T.b (k + 1) * T.p k x :=
+        T.p_succ_succ k x
+      rw [h2, h1] at hrec
+      have hb1 : T.b (k + 1) * T.p k x = 0 := by linarith
+      have hk : T.p k x = 0 := by
+        rcases mul_eq_zero.mp hb1 with h | h
+        · exact absurd h (T.hb (k + 1))
+        · exact h
+      exact ih x hk h1
+
+/-- No point is a root of every member of a three-term family. -/
+theorem ThreeTerm.exists_nonvanishing (T : ThreeTerm) (x : ℝ) : ∃ n : ℕ, T.p n x ≠ 0 := by
+  by_cases h : T.p 0 x = 0
+  · exact ⟨1, fun h1 => T.no_common_root 0 x h h1⟩
+  · exact ⟨0, h⟩
+
+/-- The Hermite family as an instance: `a ≡ 0`, `b n = n + 1 ≠ 0`. -/
+noncomputable def hermiteThreeTerm : ThreeTerm where
+  a := fun _ => 0
+  b := fun n => (n : ℝ) + 1
+  hb := fun n => by positivity
+
 end GMC2Hermite
