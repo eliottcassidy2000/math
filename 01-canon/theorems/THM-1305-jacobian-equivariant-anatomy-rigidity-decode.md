@@ -88,6 +88,8 @@ Small naturals (1,2,3,4) = weights + unit coefficients: STRUCTURAL.
 Big rationals (13/2, −1/4) = values of derived polynomials at the forced root:
 DERIVED. That is the complete answer to "which naturals appear."
 
+**Amendment (S59o, THM-1320):** the −2 row of the decode table is now DERIVED: det = c₀(0) = −E₀(0)·A(0)·C(0) = −(2·1·1) — a polynomial identity at every k. Nothing in the expression remains arbitrary.
+
 ## 4. Rigidity: sporadic, not a family (within the equivariant chart)
 
 Three independent computations at k = 2:

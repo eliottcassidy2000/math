@@ -5,6 +5,29 @@
 - BONUS: D/W calculus back on m=2 solves the kernel in closed form: (v₀,v₁;φ₀,φ₁) = (1,1;6,4); c = cross-det = −2; K = 3αv₁/(4γφ₁) = 1/16; E = c/(2φ₁) = −1/4. The counterexample is four integers deep.
 - CONJECTURE (next: m=4,5, routine now): kernels exist only at z-weight m = 2 — the lone escape hatch.
 - FILES: HYP-8110; jacobian_port_weight3_boxeph_S143.py + .out; reflection.
+## death-star-2026-07-19-S59o — THE TRAP-STRATUM THEOREM (THM-1320): det = −E₀(0)·A(0)·C(0) at every k (the −2 DECODES — nothing in the owner's expression remains arbitrary); Druzkowski-shaped homogeneous cubes cannot even be Keller in-class; the century's stratum and the witness's symmetry class are TRANSVERSE
+
+Owner: run the TRAP-stratum test on Druzkowski (backlog xliii). THREE PRONGS, ALL EXACT: (P3, the
+heart) evaluating THM-1305's c₀ at t = 0: **det J = −E₀(0)·A(0)·C(0)** as a polynomial identity in all
+coefficients (engine-verified k = 2, 3, 4) — the determinant is the product of the three row-units at
+the origin. Keller ⟹ all constant terms nonzero ⟹ v(0) ≠ 0: the AFFINE (unit) cube is necessary; the
+homogeneous (Druzkowski-shaped) cube gives det ≡ 0 — not merely counterexample-free but Keller-free.
+Witness: −2 = −(2·1·1) — the last mystery constant decodes; W2 refines to "consistency forces
+|E₀(0)A(0)C(0)| = k". (P1) w_i = 3w_j is UNSOLVABLE in weights (1,−1,−2) — the witness's class meets
+the Druzkowski stratum only in the identity (the century's two strategies were transverse); over all
+6858 nontrivial |w| ≤ 9: zero nonzero-weight cycles ⟹ equivariant cubic-linear is always triangular
+over the weight-0 core. (P2) the planar core solved exactly: triangular + shears (ℓ∘F = ℓ identity,
+polynomial inverses) — rootless. VERDICT: TRAP hypothesis confirmed STRONGER than proposed — the
+classical stratum was safe because its normal form cannot build the unit cascade; the entire distance
+between the century and the counterexample is the CONSTANT TERM of one polynomial (v = t vs 1 + t).
+The affine +1 — the observer's +1, the 1 of u = 1+xy (HYP-1992's formal-group denominator) — is where
+the counterexample lives. Follow-up (xlvi): where does the +1 hide under Druzkowski REDUCTION?
+
+Prompt (owner): run the TRAP-stratum test on Druzkowski
+
+FILES: THM-1320, HYP-8110, THM-1305 + reflection amended (−2 row DECODED), backlog xliii completed +
+xlvi filed, script + out, results INDEX. -> all
+
 ## death-star-2026-07-19-S59n — SPORADIC OR FAMILY: the equivariant anatomy answers (THM-1305) — normal form + s-graded det law + cube forced at every k + ALL the owner's rationals DERIVED + RIGIDITY on every computed axis + the k=3 obstruction + W3 refuted + the three-sweep rationals archaeology
 
 Owner: deepest understanding of JC counterexamples (sporadic vs families), explicit examples, comprehensive

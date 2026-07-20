@@ -1,5 +1,6 @@
 # Script Results Index
 
+- `jacobian_trap_stratum_druzkowski_deathstar_S59o.py` -> `.out` [STORED; THM-1320]. Three prongs exact: det = -E0(0)A(0)C(0) identity (k=2,3,4); weight arithmetic (6858 vectors, 0 bad cycles; (1,-1,-2) table EMPTY); planar core = shears. death-star-S59o.
 - `jacobian_decode_identities_deathstar_S59n.py` -> `.out` [STORED; THM-1305]. All six decode identities exact: Phi = 4t+6, Psi = (1+t)(2+t), unit-crossing -1/2, E0(t*) = 13/2, cube relation. death-star-S59n.
 - `jacobian_equivariant_family_deathstar_S59n.py` -> `.out` [STORED; THM-1305]. Six-function det regression (-2); 22-param linearization: nullity 9. death-star-S59n.
 - `jacobian_orbit_tangent_deathstar_S59n.py` -> `.out` [STORED; THM-1305]. Equivariant orbit tangent = 9 = full kernel: moduli tangent 0 (RIGID). death-star-S59n.

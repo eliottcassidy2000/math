@@ -41,7 +41,7 @@ Every constant in the owner's expression is now derived (THM-1305 §3, verified)
 | 13/2 | E₀(t\*) = 2−3t\* = s\* (invariant coordinate of the orbit) | derived |
 | −1/4 | Ψ(t\*), Ψ = E₀A + t²B = (1+t)(2+t) | derived |
 | −1/2 | the crossing value u(t\*) | derived |
-| −2 | det = c₀(t\*-independent const) | the one free normalization-ish datum |
+| −2 | det = −E₀(0)·A(0)·C(0) = −(2·1·1) | DECODED (THM-1320) |
 | 1,2,3,4 | weights (1,−1,−2) + unit coefficients | structural |
 
 The pair (−3/2, 13/2) is exactly the collision's coordinates on the invariant

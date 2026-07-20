@@ -1,0 +1,20 @@
+=== P1: weight arithmetic ===
+  weights (1,-1,-2): pairs with w_i = 3 w_j: []  => equivariant cubic-linear terms possible: False
+  grid |w|<=9, nontrivial: 6858 weight vectors triangular-over-core, 0 with nonzero-weight cycles (expect 0)
+
+=== P2: planar cubic-linear Keller = shears (exact) ===
+  Keller system: 8 (y,z)-monomial equations in (a,b,c,d)
+  shear family (l2 = mu l1, a = -mu^3 b) + triangular: all satisfy Keller: True
+  random (a,d) != (0,0) points violating Keller: 498/~500 (expect ~all)
+  shear injectivity: l∘F = l exactly (identity: a + b*mu^3 = 0 kills the cube term) — inverse is y - l^3, z - mu^3 l^3: POLYNOMIAL. Verified structurally.
+
+=== P3: det factorization c0(0) = -E0(0) A(0) C(0), every k ===
+  k=2: c0(0) == -E0(0)*A(0)*C(0) as a polynomial identity: True
+  k=3: c0(0) == -E0(0)*A(0)*C(0) as a polynomial identity: True
+  k=4: c0(0) == -E0(0)*A(0)*C(0) as a polynomial identity: True
+
+  witness: -(E0(0)=2)*(A(0)=1)*(C(0)=1) = -2 = det  -- THE -2 DECODES.
+  COROLLARY (the TRAP-stratum theorem): Keller => A(0), C(0), E0(0) all
+  nonzero. Homogeneous (Druzkowski-shaped) cubes have A(0) = v(0)^{k+1} = 0
+  => det == 0: the classical stratum admits NO Keller map in this class;
+  the unit's constant term is NECESSARY for the trap to exist.
