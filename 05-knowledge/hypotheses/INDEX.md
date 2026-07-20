@@ -16744,3 +16744,35 @@ estimate, first check whether the sum is a classical polynomial in disguise.
 
 *Open:* non-constant a(r), b(r), c(r) -- E_r[W^k B^{m-2k}] is no longer a product. Target:
 a two-variable Appell/Sheffer family with the fixed point replaced by a curve.
+
+### HYP-8460 — the EFFECTIVE DvdK bound (Sturmfels / ESV): the open question TNC should have been
+**Status: OPEN, and it is the live target now that TNC itself is closed by citation (THM-1630).**
+Sturmfels asked for an effective Duistermaat-van der Kallen. The sharp form, Conjecture 1 of
+Erman-Smith-Varilly-Alvarado (JCTA 118 (2011) 396-402, arXiv:0908.2609): for doubly-monic
+`f = z^{-m} + ... + z^{n}`, the constant terms `[[f^1]],...,[[f^{m+n}]]` generate the unit
+ideal -- i.e. **the first nonzero constant term occurs by index `m+n`**. OPEN as of 2011; no
+resolution found in a 2026 sweep.
+**It is TIGHT:** `f = z^{-N} + z` has first nonzero at exactly `N+1`, so no universal constant
+bound exists -- any effective bound must grow with the exponent range.
+**THE REPO ALREADY HAS THE INSTRUMENT.** The S142 branching ladder, run at (2,2), produced the
+non-degenerate branch `R = 1 + u + u^3 - u^4`, i.e. `Lambda = u^{-2}+u^{-1}+u-u^2` with
+exponents -2..2, and found the first nonzero constant term at **exactly m = 4 = m+n**. The
+computation lands on the ESV bound tightly, from a completely independent direction.
+**Concrete programme:** (a) run the branching ladder across (m,n) and record the first-nonzero
+index; check it never exceeds m+n; (b) ESV's Theorem 2, CONDITIONAL on the conjecture, computes
+`deg I_{m,n}` as the Eulerian number `<m+n-1 / m-1>` -- the repo has Eulerian machinery
+(THM-062/063), so that degree is independently checkable and would be real evidence; (c) the
+tight family `z^{-N}+z` is the extremal case -- characterise all extremals.
+**This is a NAMED OPEN PROBLEM with a published prize-free but well-cited conjecture, and the
+repo's tooling is already pointed at it.** Far better use of the machinery than re-proving 1998.
+
+### HYP-8465 — char p: TNC is FALSE, so audit anything that assumed it
+**Status: CLOSED NEGATIVE, recorded as a guardrail (THM-1630).** DvdK is a CHARACTERISTIC-ZERO
+theorem. Over `F_2`, `f = u + u^{-1}` is two-sided with `CT(f^n) = 0 (mod 2)` for EVERY `n >= 1`
+-- odd `n` give 0, and `n = 2k` gives `C(2k,k)` with `v_2(C(2k,k)) = popcount(k) >= 1` by
+Kummer. Verified computationally to n = 20 by the S142 sweep's source.
+**So any repo argument that quietly works mod p and cites DvdK/TNC is INVALID.** Worth a grep:
+the tiling/metagraph side of this repo is heavily `F_2`, and the toral side is char 0 -- do not
+let a TNC citation cross that boundary. Related: Offutt arXiv:2504.19031 studies the mod-p
+counterpart (first index where ct(P^n) mod p vanishes, bounded via automaticity) and is the
+right entry point if a mod-p version is ever wanted.
