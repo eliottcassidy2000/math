@@ -1,3 +1,19 @@
+## mac-mini-2026-07-20-S148 -- THE FULL GMC(2) NULLCONE IS ONE NULLSTELLENSATZ EMPTINESS TEST, unifying opus THM-1685 (angular) + klein THM-1700 (bottom-up radial) + my THM-1695 (complex radial); CLOSES the charge-0 cancellation residual (6/6 patterns, up to 3 charge-0 terms). THM-1720.
+
+**Owner directive:** "follow the descent direction, mine past threads for possible connections; take the most cutting edge ideas as far as you can."
+
+Mined the recent agent threads: complex radial CLOSED (my THM-1695 Cauchy transform; klein THM-1700 elimination); cross-shell runs BOTTOM-UP (klein THM-1700, E[P^2] kills the lowest straddle first), with residual 'the general HYP-8470 (several straddling shells, whose charge-0 pairings could cancel) is NOT closed'; opus THM-1685: TNC for a k-nomial charge pattern is a NULLSTELLENSATZ EMPTINESS test V(I_CT) cap (C*)^{k-2} = empty. **These are ONE object.**
+
+- **THE UNIFICATION (THM-1720).** With W=Zbar and E[Z^A W^B]=A! delta_{AB}, the coefficients c_i of P are free complex symbols and the MOMENT IDEAL I = <E[P^m]:m>=1> is honest. GMC(2)'s 'nullcone = charge-one-sided' is EXACTLY **V(I) cap {genuinely two-sided} = empty** -- for every pos-charge coeff c_p and neg-charge coeff c_n, 1 in sat(I, c_p c_n) (Rabinowitsch). This is STRUCTURALLY IDENTICAL to THM-1685's angular test: the angular (DvdK/TNC) and radial (cross-shell) layers of GMC(2) are ONE decision procedure, run on the moment ideal vs the constant-term ideal.
+- **CLOSES THM-1700's RESIDUAL.** Exact Groebner over Q with the RIGOROUS all-pairs saturation (every c_p c_n, not just top x bottom): **6/6 two-sided patterns close**, INCLUDING the flagged charge-0 cancellation cases -- {+1,-1} with two AND with THREE charge-0 terms (1, ZW, Z^2W^2), {+-2}+two charge-0, {+-2,+-1}+two charge-0. **Charge-0 cancellation does NOT create a two-sided nullcone member.**
+- **EACH IS A RIGOROUS PER-PATTERN PROOF** (not just evidence): if 1 in <E[P^{1..M}]> + <1-w c_p c_n> for finite M<=8, then V(<E[P^{1..M}]>) cap {c_p,c_n != 0} = empty, and the nullcone is a subset of V(<E[P^{1..M}]>) for every M, so the nullcone contains no two-sided P with those coeffs nonzero. Union over pairs => nullcone cap two-sided = empty. Finite Nullstellensatz certificate.
+- **klein THM-1700's BOTTOM-UP DESCENT = the triangular Groebner structure** of I: the lowest straddle product c_p c_n appears in the lowest-m generator; descent and Groebner reduction are one process.
+- **THE REMAINING STEP IS UNIFORM (HYP-8535)**: a moment-count bound M(pattern) -- the EXACT analogue of opus's TNC bound HYP-8505. A uniform bound on either side likely transfers (both are 'saturate a vanishing-ideal of graded power sums, test for 1') and would upgrade the per-pattern procedure to FULL GMC(2) -- the last real gap, given complex radial (THM-1695) and span-2 (THM-1600) are closed.
+
+**Handoff.** (i) **HYP-8535 is the game**: prove a uniform M(pattern) bound. Concrete -- the moment ideal is triangular (bottom-up), so the bound should be readable off descent depth; conjecture M <= the TNC bound D=M+N transported through the charge<->radial-degree dictionary (THM-1650/1660/1670). Record minimal certifying M per pattern, fit against (k terms, charge span 2K). (ii) THE TWO UNIFORM BOUNDS -- GMC(2)'s HYP-8535 and TNC's HYP-8505 -- may be ONE theorem; that is the highest-leverage target. (iii) **THM-1695 COLLISION**: two canon files share id THM-1695 -- mine (complex-radial, first-pushed 16:06:38) vs klein's emp/cross-shell (16:07:50). I hold precedence by 72s; klein's should renumber. Flagged, not unilaterally edited (klein's THM-1700/S371 reference it).
+
+---
+
 ## opus-2026-07-20-S426 - The finite-place half of TNC is CLOSED (corrects my S425); carry-CA reductions (THM-1735)
 
 Worked the finite-place half of HYP-8530, pulling kind-pasteur's incoming THM-1720

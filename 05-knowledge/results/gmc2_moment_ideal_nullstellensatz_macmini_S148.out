@@ -1,0 +1,41 @@
+==============================================================================
+THE MOMENT IDEAL AS A NULLSTELLENSATZ EMPTINESS TEST (unifying THM-1685 + THM-1700)
+==============================================================================
+  For each pattern: is V(<E[P^m]>) cap {genuinely two-sided} = empty?
+  YES => the only nullcone members are charge-one-sided => GMC(2) for that pattern.
+
+  bottom straddle {+1,-1} + charge-0 rad-0
+     charges [-1, 0, 1], 1 charge-0 term(s), M=6:  CLOSED (empty)
+     ALL 1x1 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+  +1,-1 with TWO charge-0 terms (rad 0 and rad 2: 1, ZW)  <-- cancellation case
+     charges [-1, 0, 1], 2 charge-0 term(s), M=6:  CLOSED (empty)
+     ALL 1x1 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+  klein witness  a Z^3 + b Zbar + c Z
+     charges [-1, 1, 3], 0 charge-0 term(s), M=8:  CLOSED (empty)
+     ALL 2x1 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+  {+2,-2} + TWO charge-0 (1, ZW)  <-- straddle + charge-0 cancellation
+     charges [-2, 0, 2], 2 charge-0 term(s), M=6:  CLOSED (empty)
+     ALL 1x1 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+  {+2,+1,-1,-2} + TWO charge-0 (1, ZW)  <-- multi-straddle + cancellation
+     charges [-2, -1, 0, 1, 2], 2 charge-0 term(s), M=6:  CLOSED (empty)
+     ALL 2x2 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+  {+1,-1} + THREE charge-0 (1, ZW, Z^2W^2)  <-- deep charge-0 cancellation
+     charges [-1, 0, 1], 3 charge-0 term(s), M=6:  CLOSED (empty)
+     ALL 1x1 pos-neg pairs saturate to <1> => V(I) cap two-sided EMPTY => one-sided
+
+==============================================================================
+SUMMARY
+==============================================================================
+  6/6 two-sided patterns CLOSED (nullcone cap two-sided = empty).
+  Each 'closed' means: the moment ideal saturated by (top coeff)*(bottom coeff) = <1>,
+  so no genuinely two-sided P has E[P^m]=0 for all m -- the cross-shell descent holds
+  EVEN WITH multiple charge-0 terms (the cancellation case THM-1700 left open).
+
+  THE UNIFICATION: opus THM-1685 (angular TNC) and this (full GMC(2) cross-shell) are
+  ONE decision procedure -- V(moment ideal) cap {two-sided} = empty by Groebner --
+  and klein THM-1700's bottom-up descent is its triangular Groebner structure.
