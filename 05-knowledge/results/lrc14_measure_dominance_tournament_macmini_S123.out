@@ -1,0 +1,151 @@
+== (T1) dilation invariance spot checks ==
+  P(3,6) = P(1,2) = 1/3  OK
+  P(10,15) = P(2,3) = 2/5  OK
+  P(21,28) = P(3,4) = 3/7  OK
+  P(2,6) = P(1,3) = 1/2  OK
+
+== (T2)+(S) primitive pair sweep a<b<= 40 ==
+  both-odd ties: 158 (ALL both-odd pairs tie: lemma verified)
+  mixed-parity exact ties: 0
+  decided mixed pairs: 331, upsets (a<b, a wins): 0
+
+== (T4) THE DOMINANCE DEFICIT LAW, exact check a<b<= 60 ==
+  1101 primitive pairs: P(a,b) == 1/2 - [mixed]/(2(b^2-a^2))  ALL EXACT
+
+== (T5) active-pair parity census on named (D,s) data ==
+  AP {1..13}               M=D/s=1/14   s parity: EVEN -> both-odd tie possible, delta=0 (pair (1,13) both odd)
+  GW {1..11,13,24}         M=D/s=1/14   s parity: EVEN -> both-odd tie possible, delta=0 (pair (1,13) both odd)
+  deep well {1..12,182}    M=D/s=14/183  s parity: ODD  -> mixed pair, delta=1/66246
+  {1..11,13,36}            M=D/s=3/41   s parity: ODD  -> mixed pair, delta=1/2542
+  {1..12,26}               M=D/s=2/27   s parity: ODD  -> mixed pair, delta=1/1350
+  {1..29,31,120} (N=32)    M=D/s=4/127  s parity: ODD  -> mixed pair, delta=1/28702
+  slack-1 rungs in the gap (D=4..7): s = 55, 69, 83, 97 — ALL ODD
+  => every slack-1 realizer's active pair is mixed-parity (nonzero deficit);
+  the tight floor s=14D is EVEN (both-odd balanced straddle admissible).
+
+== (F) family analysis ==
+
+-- AP (tight #1)  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   M (cited): 1/14 (tight)
+   ties: 25  (both-odd predicted: 21 check below)
+   equal-nu2-after-reduction pairs: 25 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 83, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEO|OEOEOE|OEO|O
+
+-- GW doubling (tight #2)  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+   M (cited): 1/14 (tight)
+   ties: 25  (both-odd predicted: 21 check below)
+   equal-nu2-after-reduction pairs: 25 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 83, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOOE|OEOEOE|OEE|OO
+
+-- deep well (covering min)  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+   M (cited): 14/183
+   ties: 22  (both-odd predicted: 15 check below)
+   equal-nu2-after-reduction pairs: 22 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 92, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEE|OEOEOEO|OEO|O
+
+-- slack-1 D=3  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+   M (cited): 3/41
+   ties: 25  (both-odd predicted: 21 check below)
+   equal-nu2-after-reduction pairs: 25 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 83, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOOE|OEOEOE|OEO|O
+
+-- slack-1 D=2  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26]
+   M (cited): 2/27
+   ties: 22  (both-odd predicted: 15 check below)
+   equal-nu2-after-reduction pairs: 22 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 92, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEE|OEOEOEO|OEO|O
+
+-- near-AP {1..12,14}  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+   M (cited): 1/13 (contains {1..12} core)
+   ties: 22  (both-odd predicted: 15 check below)
+   equal-nu2-after-reduction pairs: 22 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 92, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEE|OEOEOEO|OEO|O
+
+-- translate {2..14}  W=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+   M (cited): (runs up, THM-1225)
+   ties: 22  (both-odd predicted: 15 check below)
+   equal-nu2-after-reduction pairs: 22 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 92, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: EOEOEOEOEOEOE|OEOEOEO|OEO|O
+
+-- translate {3..15}  W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+   M (cited): (runs up, THM-1225)
+   ties: 25  (both-odd predicted: 21 check below)
+   equal-nu2-after-reduction pairs: 25 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 83, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEO|EOEOEO|OEO|O
+
+-- k=10 multi-killer extr.  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 22, 84]
+   M (cited): (covering, L=2227/105105)
+   ties: 22  (both-odd predicted: 15 check below)
+   equal-nu2-after-reduction pairs: 22 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 92, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEOEOEOEOEOEE|OEOEOOE|OEO|O
+
+-- BF38 band family  W=[3, 5, 7, 8, 9, 10, 11, 12, 13, 15, 21, 35]
+   M (cited): 1/8 (killed by spread)
+   ties: 36  (both-odd predicted: 36 check below)
+   equal-nu2-after-reduction pairs: 36 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 28, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OOOEOEOEOOOO|EOE|EO|O
+
+-- powers of 2  W=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+   M (cited): ~0.33 (loose)
+   ties: 0  (both-odd predicted: 0 check below)
+   equal-nu2-after-reduction pairs: 0 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 286, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OEEEEEEEEEEEE|OEEEEEEEEEEE|OEEEEEEEEEE|OEEEEEEEEE|OEEEEEEEE|OEEEEEEE|OEEEEEE|OEEEEE|OEEEE|OEEE|OEE|OE|O
+
+-- odds only (non-covering)  W=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+   M (cited): 1/2 at t=1/2
+   ties: 78  (both-odd predicted: 78 check below)
+   equal-nu2-after-reduction pairs: 78 (= tie count? YES)
+   upset arcs (slower dominates faster): NONE
+   decided triples: 0, cyclic among them: 0
+   decided digraph acyclic: True
+   dyadic word: OOOOOOOOOOOOO
+
+== summary table ==
+family                        ties  upsets  dec-c3  acyclic
+AP (tight #1)                   25       0       0     True
+GW doubling (tight #2)          25       0       0     True
+deep well (covering min)        22       0       0     True
+slack-1 D=3                     25       0       0     True
+slack-1 D=2                     22       0       0     True
+near-AP {1..12,14}              22       0       0     True
+translate {2..14}               22       0       0     True
+translate {3..15}               25       0       0     True
+k=10 multi-killer extr.         22       0       0     True
+BF38 band family                36       0       0     True
+powers of 2                      0       0       0     True
+odds only (non-covering)        78       0       0     True
+
+Done. Interpretation belongs to HYP-7960 in the hypotheses INDEX.

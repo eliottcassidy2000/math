@@ -1,0 +1,78 @@
+
+-- AP (tight): pack=[8, 9, 10, 11, 12, 13], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  3  full-blocker gaps=1/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=0/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  5  full-blocker gaps=1/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  4  full-blocker gaps=0/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  7  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties=  3  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- GW doubling (tight): pack=[8, 9, 10, 11, 13, 24], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  3  full-blocker gaps=0/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=2/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  5  full-blocker gaps=0/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  8  full-blocker gaps=0/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  7  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties=  3  full-blocker gaps=2/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- deep well: pack=[8, 9, 10, 11, 12, 182], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  4  full-blocker gaps=1/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=2/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  6  full-blocker gaps=3/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  4  full-blocker gaps=4/4  odd-cycle gaps=2  parity-loc=OK
+   c=  5: palindrome=OK  ties=  8  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties= 10  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- slack-1 D=3: pack=[8, 9, 10, 11, 13, 36], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  3  full-blocker gaps=0/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=0/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  5  full-blocker gaps=0/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  4  full-blocker gaps=0/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  7  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties=  3  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- slack-1 D=2: pack=[8, 9, 10, 11, 12, 26], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  4  full-blocker gaps=0/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=0/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  6  full-blocker gaps=0/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  4  full-blocker gaps=0/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  8  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties=  4  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- k=10 multi-killer: pack=[8, 9, 10, 13, 22, 84], carriers=[1, 2, 3, 4, 5, 6, 7]
+   c=  1: palindrome=OK  ties=  4  full-blocker gaps=0/1  odd-cycle gaps=0  parity-loc=OK central k=0: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  2: palindrome=OK  ties=  4  full-blocker gaps=0/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  6  full-blocker gaps=0/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  4  full-blocker gaps=2/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  8  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  8  full-blocker gaps=0/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties= 10  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+
+-- BF38 band family: pack=[11, 12, 13, 15, 21, 35], carriers=[3, 5, 7, 8, 9, 10]
+   c=  3: palindrome=OK  ties=  3  full-blocker gaps=3/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  5: palindrome=OK  ties=  1  full-blocker gaps=1/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  7: palindrome=OK  ties=  1  full-blocker gaps=1/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  8: palindrome=OK  ties=  0  full-blocker gaps=0/8  odd-cycle gaps=0  parity-loc=OK
+   c=  9: palindrome=OK  ties=  3  full-blocker gaps=3/9  odd-cycle gaps=0  parity-loc=OK central k=4: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c= 10: palindrome=OK  ties=  2  full-blocker gaps=0/10  odd-cycle gaps=0  parity-loc=OK
+
+-- translate {2..14}: pack=[9, 10, 11, 12, 13, 14], carriers=[2, 3, 4, 5, 6, 7, 8]
+   c=  2: palindrome=OK  ties=  2  full-blocker gaps=2/2  odd-cycle gaps=0  parity-loc=OK
+   c=  3: palindrome=OK  ties=  5  full-blocker gaps=0/3  odd-cycle gaps=0  parity-loc=OK central k=1: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  4: palindrome=OK  ties=  0  full-blocker gaps=0/4  odd-cycle gaps=0  parity-loc=OK
+   c=  5: palindrome=OK  ties=  7  full-blocker gaps=0/5  odd-cycle gaps=0  parity-loc=OK central k=2: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  6: palindrome=OK  ties=  6  full-blocker gaps=2/6  odd-cycle gaps=0  parity-loc=OK
+   c=  7: palindrome=OK  ties=  9  full-blocker gaps=0/7  odd-cycle gaps=0  parity-loc=OK central k=3: odd-spokes at tau=1/2 with evens-block: YES; even-spoke tie-pair equal-B: YES
+   c=  8: palindrome=OK  ties=  0  full-blocker gaps=2/8  odd-cycle gaps=0  parity-loc=OK
+
+All set-valued palindrome / central-column / parity-localization
+claims hold.  LEM-020's tau <-> 1-tau involution acts on THM-1240's
+blocker data as an exact palindrome of choice-sets; the mirror-fixed
+column (odd carriers) sits at tau = 1/2 where odd spokes are blocked
+by exactly the EVEN pack speeds (depth-1 2-adic layer), and any odd
+count of odd-cycle gaps localizes to that column.
