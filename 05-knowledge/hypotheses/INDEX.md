@@ -16410,3 +16410,58 @@ machinery the fiber fraction `(1/2)_k/k!` lives in -- so if any repo constant is
 touch a genuinely open irrationality question, it is that one. **Not a research programme,
 a flag:** do not claim novelty for a transcendence that is just Lindemann, and check against
 this entry before doing so.
+---
+
+## HYP-8385 — the even-`n` Perron deficiency is an algebraic number of full degree
+**Status:** OPEN (verified n = 4, 6; no general statement) — kind-pasteur-2026-07-20-S128c119
+
+At odd `n` the maximum spectral radius over all tournaments is `(n−1)/2`, rational,
+attained by the regular tournaments (THM-1555 I.b/I.c). At even `n` no regular tournament
+exists and the maximum is strictly smaller. Exhaustively:
+
+| `n` | max `ρ` | minimal polynomial | irreducible | deficiency |
+|---|---|---|---|---|
+| 4 | 1.3953369945 | `λ⁴ − 2λ − 1` | yes | 0.10466 |
+| 6 | 2.4339681553 | `λ⁶ − 8λ³ − 12λ² − 8λ − 2` | yes | 0.06603 |
+
+**Hypothesis:** at every even `n` the extremal tournament's characteristic polynomial is
+irreducible of degree `n` — so **the extremal even-`n` tournament has no rational
+eigenvalue at all**, while the extremal odd-`n` one has the rational `ρ = (n−1)/2`. The
+extremal score sequence is the near-regular one (`[1,1,2,2]` at `n=4`, `[2,2,2,3,3,3]`
+at `n=6`).
+
+**Why it matters:** by THM-1555 I.c the deficiency `(n−1)/2 − ρ` *equals* the total
+height of the spectrum above the line `Re = −½`, so this is asking how close to the
+critical line an even-`n` spectrum can sit. A closed form or asymptotic for the
+deficiency would be a quantitative "distance from regularity".
+
+**Next:** `n = 8` (needs iso-class enumeration, not brute force over `2²⁸`); and check
+whether the deficiency sequence `0.10466, 0.06603, …` matches a known asymptotic
+(`~c/n²`? the two points give a ratio of 1.585 against `(6/4)² = 2.25`, so not `n^{-2}`).
+
+**Related:** THM-1555 (I.b, I.c), THM-1575 (D) (the odd-`n` divisor factorisation),
+HYP-8390.
+
+---
+
+## HYP-8390 — `Ψ_d` is irreducible over `ℚ`, i.e. `[ℚ(i·tan(π/d)) : ℚ] = φ(d)`
+**Status:** OPEN (verified n = 3..13) — kind-pasteur-2026-07-20-S128c119
+
+THM-1575(D): the circulant tournament's skew characteristic polynomial factors over `ℚ`
+as `x · ∏_{d|n, d>1} Ψ_d(x)` with `deg Ψ_d = φ(d)`, the factor for `d` collecting the
+roots `i·tan(kπ/d)` with `gcd(k,d) = 1`.
+
+**Hypothesis:** each `Ψ_d` is irreducible, equivalently `i·tan(π/d)` has degree exactly
+`φ(d)` over `ℚ`. Verified at every `n = 3, 5, 7, 9, 11, 13` (sympy factorisation over
+`ℚ`); `n = 9` splits exactly as `1 + φ(3) + φ(9) = 1 + 2 + 6`.
+
+**Why it should be provable:** `i·tan(π/d) = (ζ − ζ^{−1})/(ζ + ζ^{−1})` with
+`ζ = e^{iπ/d}`, so it lies in `ℚ(ζ_{2d})` and the claim is that it generates the index-2
+subfield fixed by `ζ ↦ ζ^{−1}`-composed-with-conjugation. This is a cyclotomic degree
+computation, not a search.
+
+**Why it matters:** it would make the divisor-indexed factorisation a *theorem* rather
+than an observed pattern, and it is the statement that the circulant skew spectrum
+resolves the divisor lattice of `n` exactly — one irreducible factor per divisor.
+
+**Related:** THM-1575, THM-1440(D), HYP-8385.

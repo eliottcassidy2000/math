@@ -1,5 +1,5 @@
 ---
-id: THM-1560
+id: THM-1575
 title: "THE CIRCULANT TOURNAMENT'S SKEW SPECTRUM IS A TANGENT, IN CLOSED FORM — and the eigenvalue equation IS the multiple-angle formula. For the rotational tournament R_n (i→j iff j−i mod n ∈ {1,…,(n−1)/2}), in the half-dictionary coordinate x = 2λ+1: (A) spec(S) = {i·tan(kπ/n) : k = 0,…,n−1} EXACTLY, and (B) char_S(x) = the ODD PART of (1+x)^n = ((1+x)^n − (1−x)^n)/2, so its coefficients are the odd-index binomials C(n,1), C(n,3), …, C(n,n). Both PROVED (closed-form sine sum) and verified n = 3..13. (C) THE TWO ARE THE SAME STATEMENT: substituting x = i·tan θ into the odd part of (1+x)^n yields i times the NUMERATOR of tan(nθ), whose zeros are θ = kπ/n — so 'what are the eigenvalues' and 'what is tan(nθ)' are one question. (D) COROLLARY, ARITHMETIC: since tan(kπ/n) depends only on d = n/gcd(k,n), the factorisation over Q is indexed by the DIVISORS of n with the factor for d of degree φ(d) — char_S(R_9) = x(x²+3)(x⁶+33x⁴+27x²+3), degrees 1+2+6 = 1+φ(3)+φ(9); at prime n the non-trivial factor is irreducible of degree n−1. The circulant skew spectrum SEES THE DIVISOR LATTICE OF n. (E) n = 7 RESOLVED CONCRETELY: there are exactly 3 regular tournaments on 7 vertices; R_7 gives x(x⁶+21x⁴+35x²+7), Paley-7 (connection set the residues {1,2,4}, doubly regular) gives x(x²+7)³, and the third gives x(x²+7)(x⁴+14x²+1). (F) HONEST NEGATIVE on the owner's x(x²+7)(x⁴+14x²+17): NO regular 7-tournament has x⁴+14x²+17 — all three are enumerated above and the closest has constant 1, not 17. The two are not variants of each other: x⁴+14x²+17 has x² = −7±4√2 whereas ours has x² = −7±4√3"
 status: >
   (A) and (B) PROVED, in full, from the closed-form sine sum: the circulant symbol is
@@ -28,7 +28,7 @@ related: [THM-1455, THM-1475]
 script: 04-computation/circulant_tangent_spectrum_kps_S128c119.py, x_half_shift_regular7_kps_S128c119.py, even_n_perron_deficiency_kps_S128c119.py (+ .out)
 ---
 
-# THM-1560 — the circulant skew spectrum is a tangent
+# THM-1575 — the circulant skew spectrum is a tangent
 
 THM-1440(D) established that circulant tournaments "make the sine literal":
 `μ_j = 2i·Σ_{k∈C} sin(2πjk/n)`. That is a **sine sum**. For the standard connection set
