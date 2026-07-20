@@ -1,0 +1,9 @@
+done n=6
+done n=7
+done n=8
+FORBIDDEN odd <=149 (n<=8 sample): [7, 21]
+  of these, PRIME: [7]
+  of these, mult of 7: [7, 21]
+achieved mult-of-7 in [35,149]: [35, 49, 63, 77, 91, 105, 119, 133, 147]
+every odd prime in [3,149] achieved except 7: True
+max sampled value: 661
