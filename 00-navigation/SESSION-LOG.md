@@ -3,6 +3,45 @@
 Prompt (owner): pull often, work high leverage math, think kakeya bank, exact finite-complement stratum closures via labelled-polygon carriers. also consider previous work regarding the relationship between tournaments and dihedral groups thoroughly. think about creatively coming up with a reduced version of the jacobian conjecture that does hold
 
 FILES: THM-1375, 07-reflections/the-third-dihedral-the-jacobian-fibre-is-a-tournament, HYP-8215, 3 scripts + outs. -> all (the reduced JC that holds is the LATTICE, and its maximal element is SMITH's stabiliser condition, not Campbell's Galois criterion -- strictly, with D_4 the witness. Two upgrades for the JC thread: the fibre discriminant being a non-square is PROVED by Campbell rather than verified on 8316 points, and d = 3 is the ONLY degree where a quadratic character detects Galois-ness, so the 2-jet d=4 programme needs an A_4-vs-S_4 invariant instead. For the dihedral thread: THM-1310's S_3 is NOT an order-6 coincidence -- the fibre is a 3-cycle tournament and its S_3 is Aut union anti-Aut, exactly THM-127's rotations-preserve/reflections-reverse split, which makes Campbell read "rotation-only Keller covers are trivial" and every counterexample reflection-driven. And a warning I have now earned twice: the weight twist in THM-1300 is a COORDINATE ARTIFACT -- sigma.F is Keller, non-injective and untwisted -- exactly as the LRC (1,2,3) maximiser was an ordering convention. Before building on a distinguished-looking structure, check it is invariant under the group that preserves the problem.)
+## opus-2026-07-20-S400 -- THM-1375 THE FIVE-CARRIER ATLAS: the carrier budget is EXACTLY k/(7-k) against a window 6/7, so closure holds iff 13k < 42 -- true for c <= 4 (recovering codex THM-1169), FALSE at c = 5, where the budget EXCEEDS the window (1.06x at x=5 to 1.30x at x=12) so truncation cannot help; exact residual x >= 5. PLUS a proof-gap repair to my THM-1350 (HYP-8210)
+
+Owner: merge the five-comb atlas and the multiplier-chart machinery, run long
+computations, pull during them.
+FIRST, INTEGRITY. kind-pasteur-S128c105 self-refuted a 'weight-twist reduced JC' (sigma.F
+is untwisted, Keller and non-injective), and I had filed an equivariant reduced JC one
+session earlier, so I checked mine before building anything. Their refutation does NOT
+apply -- THM-1350 claims only injectivity of the RESTRICTION to Fix(sigma), not of F --
+but the check exposed a real gap in MY proof: I asserted that F|Fix has constant nonzero
+Jacobian, when det JF constant bounds only the PRODUCT of the two sigma-blocks (the +1
+eigenspace tangent to Fix, the -1 eigenspace normal to it). THE MISSING STEP: along Fix,
+det JF = det(tangential)*det(normal), both polynomials in the Fix coordinates, and their
+product is a nonzero constant -- in a domain that forces EACH factor to be a nonzero
+constant, since degrees add. So the tangential block is Keller and the claim stands.
+Verified on the counterexample: tangential 1, normal -2, product -2 = det JF. THM-1350
+amended with the repair.
+THE FIVE-CARRIER ATLAS. The engine of codex's carrier program is my own THM-1155 density
+bound, so I could compute the whole ladder. The first carrier x is safe throughout the
+owner window [1/(14x), 13/(14x)], of length 6/(7x); the k = c-1 later carriers must cover
+it, and since each exceeds x we get sum(1/w) < k/x, making the budget EXACTLY
+k/(7-k)*(1/x): 2/5, 3/4, 4/3, 5/2, 6 for k = 2..6.
+So closure requires k/(7-k) < 6/7, i.e. 7k < 6(7-k), i.e. 13k < 42 -- true for k <= 3
+(c <= 4) and false at k = 4. That RECOVERS codex's THM-1169 exactly as the range where
+the criterion holds, and identifies FIVE CARRIERS as precisely where the uniform density
+argument dies. The threshold 13k < 42 carries the familiar constants: 42 = 6*7, and 13.
+THE FAILURE AT c=5 IS VACUOUS, NOT MARGINAL, which is the part that matters for anyone
+planning to attack it. At four carriers the margin is 6/7 - 3/4 = 3/28 -- small but real.
+At five the budget EXCEEDS the window: ratio 1.06 at x=5, 1.20 at x=8, 1.30 at x=12, and
+growing. So the truncation device that closed the three-carrier row (cutting at the owner
+threshold 1/(14p)) cannot help here -- it would have to ENLARGE the window. A different
+tool is needed, not a sharper cut of the same one.
+EXACT RESIDUAL: using the true best-case later carriers x+1..x+4 rather than the crude
+k/x, the bound still closes x = 1, 2, 3, 4. The residual atlas is x >= 5.
+A CONNECTION WORTH NOTING: k/(7-k) is the r = 1 case of THM-1165's per-level budget
+j/(r(7-j)), so the carrier atlas and my substitution searches have been running on the
+same inequality all along. Both die at k = 7 (THM-1155's ceiling, 1 - 2k*lam = 0), but the
+carrier program dies EARLIER, at k = 4, because it must beat a fixed window 6/7 rather
+than merely stay positive.
+FILES: THM-1375, THM-1350 amended, script + out, HYP-8210. opus; S400.
 
 ---
 

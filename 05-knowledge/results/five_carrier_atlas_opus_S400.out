@@ -1,0 +1,90 @@
+(1) THE CRUDE COMPARISON, carrier count c (c-1 later combs)
+    window = 6/(7x);  crude budget with all later carriers > x
+    c=3: k=2  budget < 2/5/x   vs window 6/7/x   => CLOSED
+    c=4: k=3  budget < 3/4/x   vs window 6/7/x   => CLOSED
+    c=5: k=4  budget < 4/3/x   vs window 6/7/x   => NOT closed by crude bound
+    c=6: k=5  budget < 5/2/x   vs window 6/7/x   => NOT closed by crude bound
+    c=7: k=6  budget < 6/x   vs window 6/7/x   => NOT closed by crude bound
+
+(2) THE FIVE-CARRIER ATLAS: exact residual over first carrier x
+    later carriers are distinct integers > x; best case for the adversary
+    is the four smallest, x+1..x+4.
+    x   sum(1/w) max    budget        window 6/(7x)    closed?
+      1  77/60        0.427778   0.857143      CLOSED
+      2  19/20        0.316667   0.428571      CLOSED
+      3  319/420      0.253175   0.285714      CLOSED
+      4  533/840      0.211508   0.214286      CLOSED
+      5  275/504      0.181878   0.171429      survives
+      6  1207/2520    0.159656   0.142857      survives
+      7  1691/3960    0.142340   0.122449      survives
+      8  763/1980     0.128451   0.107143      survives
+      9  3013/8580    0.117055   0.095238      survives
+     10  3875/12012   0.107531   0.085714      survives
+     11  543/1820     0.099451   0.077922      survives
+     12  6061/21840   0.092506   0.071429      survives
+     13  7409/28560   0.086473   0.065934      survives
+     14  2981/12240   0.081182   0.061224      survives
+     15  10675/46512  0.076504   0.057143      survives
+     16  12617/58140  0.072337   0.053571      survives
+     17  4927/23940   0.068602   0.050420      survives
+     18  17179/87780  0.065235   0.047619      survives
+     19  19823/106260 0.062184   0.045113      survives
+     20  2525/14168   0.059406   0.042857      survives
+     21  25897/151800 0.056866   0.040816      survives
+     22  29351/179400 0.054535   0.038961      survives
+     23  11033/70200  0.052388   0.037267      survives
+     24  37153/245700 0.050404   0.035714      survives
+     25  41525/285012 0.048565   0.034286      survives
+     26  15409/109620 0.046856   0.032967      survives
+     27  51271/377580 0.045263   0.031746      survives
+     28  56669/431520 0.043775   0.030612      survives
+     29  6937/54560   0.042381   0.029557      survives
+     30  68575/556512 0.041074   0.028571      survives
+     31  75107/628320 0.039845   0.027650      survives
+     32  27347/235620 0.038688   0.026786      survives
+     33  89389/792540 0.037596   0.025974      survives
+     34  97163/885780 0.036564   0.025210      survives
+     35  35125/329004 0.035587   0.024490      survives
+     36  114037/1096680 0.034661   0.023810      survives
+     37  123161/1215240 0.033782   0.023166      survives
+     38  14751/149240 0.032947   0.022556      survives
+     39  142843/1480920 0.032152   0.021978      survives
+
+    surviving x (density bound alone insufficient): [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]...
+    total surviving in [1,40): 35
+
+(3) WHAT TRUNCATION WOULD CLOSE THE SURVIVORS
+    (three-carrier case used truncation at the owner threshold 1/(14p);
+     here we ask what window length W would be closed at each x)
+    x=  5: need window <= 0.181878 = 1.0610 x the full window  -> truncate to 106.1%
+    x=  6: need window <= 0.159656 = 1.1176 x the full window  -> truncate to 111.8%
+    x=  7: need window <= 0.142340 = 1.1624 x the full window  -> truncate to 116.2%
+    x=  8: need window <= 0.128451 = 1.1989 x the full window  -> truncate to 119.9%
+    x=  9: need window <= 0.117055 = 1.2291 x the full window  -> truncate to 122.9%
+    x= 10: need window <= 0.107531 = 1.2545 x the full window  -> truncate to 125.5%
+    x= 11: need window <= 0.099451 = 1.2763 x the full window  -> truncate to 127.6%
+    x= 12: need window <= 0.092506 = 1.2951 x the full window  -> truncate to 129.5%
+THE GAP I LEFT IN THM-1350: det JF const bounds only the PRODUCT of blocks.
+sigma acts as (-1,-1,+1), so on Fix(sigma)={x=y=0} the tangent space splits:
+  +1 eigenspace = z-direction (tangent to Fix);  -1 eigenspace = (x,y)-plane.
+
+J at (0,0,z):
+[ 0   0  1]
+[         ]
+[3*z  1  0]
+[         ]
+[ 2   0  0]
+
+  tangential determinant (d/dz of F|Fix) = 1
+  normal 2x2 block det at (0,0,z)        = -2
+  product = -2   det JF = -2
+
+THE REPAIR (the argument I should have written):
+  On Fix, det JF = det(tangential) * det(normal), both POLYNOMIALS in z.
+  Their product is the nonzero constant -2.  In the domain C[z], a product
+  of polynomials equal to a nonzero constant forces EACH factor to be a
+  nonzero constant (degrees add).  Hence the tangential block is a nonzero
+  constant, i.e. F|Fix IS Keller in dimension dim Fix(sigma).  The claim
+  stands; the proof needed this step.
+
+  check both are constants here: tangential 1 (deg 0? 0), normal -2 (deg 0? 0)

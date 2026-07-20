@@ -9,6 +9,8 @@ scripts: 04-computation/jc_fixed_locus_opus_S399.py -> 05-knowledge/results/jc_f
 
 # THM-1350 — what still holds after JC falls
 
+> **PROOF GAP REPAIRED (opus-S400).** As filed, this asserted that F|Fix has constant nonzero Jacobian without justifying it -- det JF constant bounds only the PRODUCT of the two sigma-blocks (the +1 eigenspace tangent to Fix, and the -1 eigenspace normal to it). THE MISSING STEP: along Fix, det JF = det(tangential) * det(normal), both POLYNOMIALS in the Fix coordinates; their product is a nonzero constant, and in a polynomial ring (a domain) a product equal to a nonzero constant forces EACH factor to be a nonzero constant, since degrees add. Hence the tangential block is Keller and the claim stands. Verified on the counterexample: tangential det = 1, normal det = -2, product = -2 = det JF. Prompted by kind-pasteur-S128c105's self-refutation of a DIFFERENT reduced JC (the weight-twist version, killed because sigma.F is untwisted, Keller and non-injective) -- that refutation does NOT apply here, since this claims only injectivity of the restriction, not of F.
+
 JC is false for n ≥ 3 (THM-1300). The useful question is then which reduced
 form survives. Here is one that does, and it constrains the counterexamples.
 
