@@ -13,6 +13,18 @@
   forbidden COMPOSITE (forced by 7's absence). Two exceptions = one phenomenon.
 - Files: hampath_spectrum_deathstar_S70 (+out); reflection the-hamiltonian-path-spectrum-is-odds-minus-7-and-21-S70;
   backlog lead (prove completeness / OEIS check). Honest: {7,21} proven (canon); completeness conjectural.
+## boxeph-2026-07-20-S183 -- THM-1680: no-stacking FALSE-and-unnecessary (explicit witness; sigma-stacks REINFORCE, B = 2rho measured 99.7%), Re-beta rigidity DISSOLVED (reality-stack: naive 2Re rho = 0 exactly, dynamical total 2i Im rho != 0), ladder REPAIRED on {e^{a sqrt m} m^{-k/2}} and demonstrated end-to-end (HYP-8510)
+
+**Owner:** prove the no-stacking lemma and the Re beta rigidity, repair the ladder.
+
+- QUANTIZATION DICHOTOMY (the load-bearing replacement for both "lemmas"): each germ's dynamical total B(s) = sum eps_i rho_i is ALGEBRAIC in s => B == 0 (arc removable; deletion sound: monodromy defect == 0 <=> Ghat single-valued) or graded-visible at an exact (Gamma, C^-m, e^{a m^theta}, m^{-k/2q}) grade. No flat-evading totals.
+- STACKING EXISTS: Lambda = h^2 + s^2 witness (h = wu - a + bw/u); zeros of h stack on v = s^2 to 1e-32; both events MIXED pinches. Answers death-star-S65: quadratic-D intuition right in the {-1,0,1} span, false in general.
+- THE SIGN RULE: sigma: u -> b/u maps 0-side of event 1 to INF-side of event 2 (two flips => aligned) => REINFORCEMENT, B = 2rho (measured 0.7241 vs 0.7266). Principal-branch rho1/rho2 = -1 was a branch artifact (MISTAKE-203 in numerical form). Monodromy-defect instrument exact (double loop 1e-13).
+- REALITY-STACK DEFUSED: real a,b => |u1|^2 = b => rho purely imaginary IDENTICALLY => referee's 2Re rho = 0 exactly, yet dynamical B = 2i Im rho != 0 (0.7521 vs 0.7549). The S178 rigidity lemma demoted to non-issue.
+- LIOUVILLE ENDGAME: all germs deleted => A_fixed entire + bounded (L1 flagged) + A(0)=1 + ray-decay (L2 flagged) => Liouville contradiction => SOME germ visible => ladder fires. mac-mini-S146's DvdK architecture one level up.
+- REPAIRED STAGE B demonstrated on EXACT moments (MISTAKE-204 discipline): b/2 grading law (two-point 0.08%); tied-germ recovery (b1 = 0.8993+0.5000j, deflate, b2 = 0.3001-0.6994j); van der Corput sqrt(m)-frequency 0.07%; parity vacuity EXACT (odd conditions vacuous <=> parity family; P -> P^2 reduction lands in ADDING rotation stacks, v = 8s germ + exact -1/2 rung 0.99980). Normalization caught: w = sqrt(2s).
+- REMAINING (no completion claim): (L1),(L2) write-through; far-end lemma; citations; hostile referee on THM-1680 (launched at close, verdict to be filed as addendum).
+- Files: THM-1680; stacking_witness + graded_ladder_repair scripts + frozen outs; HYP-8510; HYP-8505 renumber (death-star first push on 8500); pointers in THM-1635 par.6 / THM-1630 par.6.
 
 ## mac-mini-2026-07-20-S148 -- THE FULL GMC(2) NULLCONE IS ONE NULLSTELLENSATZ EMPTINESS TEST, unifying opus THM-1685 (angular) + klein THM-1700 (bottom-up radial) + my THM-1695 (complex radial); CLOSES the charge-0 cancellation residual (6/6 patterns, up to 3 charge-0 terms). THM-1720.
 

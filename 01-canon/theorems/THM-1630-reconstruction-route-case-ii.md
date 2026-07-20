@@ -61,6 +61,15 @@ like e^{|u|√m}, so the "(1 + o(1))" form is FALSE for that arc as written;
 β_j(∞) must be read as a dressed/scale-graded coefficient. The §4 domination
 SURVIVES unconditionally: e^{O(√m)} never crosses (C_{j0}/C_j)^m.
 
+(b') **[S183, THM-1680]** The germ-level total is now a defined function-level
+object (the coefficient B(s) of Ĝ's square-root singularity, measurable as a
+monodromy defect), ALGEBRAIC in s: per germ B ≡ 0 (arc removable — delete
+soundly) or exactly graded (ladder fires). Stacking exists (witness) but the
+realized stacks REINFORCE (B = 2ρ); the reality-stack's naive 2Re ρ vanishes
+identically while its dynamical total 2i·Im ρ ≠ 0. The all-deleted extreme is
+closed by the Liouville endgame modulo THM-1680 (L1),(L2). The amendment
+below stands, with "nonzero TOTAL jump" = "B ≢ 0 on the germ".
+
 (b) **§4's "distinct arc moduli" must be read at GERM level with nonzero
 TOTAL jump per germ.** Two distinct root-pairs can collide simultaneously
 along one (r,t) germ (discriminant divisor non-reduced): one germ, TWO

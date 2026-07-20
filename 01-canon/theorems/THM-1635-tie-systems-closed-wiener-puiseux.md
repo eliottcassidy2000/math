@@ -122,3 +122,10 @@ moduli of GERMS CARRYING NONZERO TOTAL JUMP. Full current obligation list for
 the conditional ledger: (a) far-end convergence lemma, (b) citation stack,
 (c) Stage B re-grade repair (√m scale), (d) odd-m nonvacuity for non-parity
 P, (e) obligations (i)+(ii) above. "Ties closed" is NOT earned.
+
+**[S183 UPDATE — see THM-1680:]** (c) EXECUTED (graded ladder, demonstrated);
+(d) CHARACTERIZED (vacuous ⟺ parity family; P ↦ P² reduction); (e)(i)
+no-stacking RESOLVED (false as axiom, unnecessary: quantization dichotomy +
+deletion soundness + Liouville endgame); (e)(ii) Re β rigidity DISSOLVED
+(sign rule: the realized reality-stack has 2Re ρ = 0 exactly yet dynamical
+total 2i·Im ρ ≠ 0). Remaining: (a), (b), THM-1680's (L1),(L2), its review.

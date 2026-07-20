@@ -1,0 +1,41 @@
+==============================================================================
+REPAIRED STAGE B on exact circular-pair moments of P_b = Z + b + W
+==============================================================================
+
+(B1) grading law  log(Ehat_b(m))/sqrt(m) -> b/2  (even m):
+  b=(0.8+0j) (target 0.4000+0.0000j): m=64: 0.3101+0.0000j; m=144: 0.3396+0.0000j; m=256: 0.3546+0.0000j; m=400: 0.3636+0.0000j; m=576: 0.3696+0.0000j
+  b=(0.5+0.6j) (target 0.2500+0.3000j): m=64: 0.1654+0.2987j; m=144: 0.1934+0.2972j; m=256: 0.2073+0.2980j; m=400: 0.2158+0.2983j; m=576: 0.2215+0.2986j
+  b=(-0.3+1j) (target -0.1500+0.5000j): m=64: 0.0695-0.4860j; m=144: 0.0991-0.4989j; m=256: 0.1099-0.4983j; m=400: 0.1183-0.4983j; m=576: 0.1236-0.4987j
+
+(B2) parity vacuity: |E-hat[P_b^m]| for odd m:
+  b=0.0 : ['0.000e+00', '0.000e+00', '0.000e+00'] -> odd conditions VACUOUS (parity family)
+  b=0.4 : ['4.271e-01', '4.553e-01', '4.846e-01'] -> odd conditions NONVACUOUS
+
+(B3) tie recovery: S_m = Ehat_b1 + e^{i phi} Ehat_b2 (tied leading order):
+    b1=(0.9+0.5j) (Re a1=0.450), b2=(0.3-0.7j) (Re a2=0.150), phi=1.1
+      m=144  a-hat = 0.39235+0.24641j  (target b1/2 = 0.45000+0.25000j)
+      m=256  a-hat = 0.40463+0.24629j  (target b1/2 = 0.45000+0.25000j)
+      m=400  a-hat = 0.41385+0.24749j  (target b1/2 = 0.45000+0.25000j)
+      m=576  a-hat = 0.41988+0.24775j  (target b1/2 = 0.45000+0.25000j)
+      m=800  a-hat = 0.42439+0.24810j  (target b1/2 = 0.45000+0.25000j)
+    two-point a-hat = 0.44964+0.25002j -> b1-hat = 0.8993+0.5000j (true (0.9+0.5j))
+    deflate (exact b1 rung), re-grade the remainder:
+      m=256  a-hat = 0.10849-0.34920j  (target b2/2 = 0.15000-0.35000j)
+      m=400  a-hat = 0.11670-0.34878j  (target b2/2 = 0.15000-0.35000j)
+      m=576  a-hat = 0.12221-0.34908j  (target b2/2 = 0.15000-0.35000j)
+      m=800  a-hat = 0.12643-0.34917j  (target b2/2 = 0.15000-0.35000j)
+    two-point a-hat = 0.15005-0.34968j -> b2-hat = 0.3001-0.6994j (true (0.3-0.7j))
+
+(B4) conjugate pair T_m = Ehat_b + Ehat_conj(b) (REAL data):
+    b=(0.6+0.8j): targets Re b/2 = 0.300, |Im b|/2 = 0.400
+    sign-crossing spacing in sqrt(m) = 7.8606 -> extracted |Im b|/2 = 0.3997
+    envelope log-slope = 0.2345 (target Re b/2 = 0.3000)
+
+(B5) mirror-merge -> P^2 rotation stack (v = 8s germ + the -1/2 rung):
+    R_k = E[P_0^{2k}]/(8^k k!) = C(2k,k)/4^k; check R_k*sqrt(pi k) -> 1:
+      k=  10   R_k*sqrt(pi k) = 0.987583
+      k=  40   R_k*sqrt(pi k) = 0.996880
+      k= 160   R_k*sqrt(pi k) = 0.999219
+      k= 640   R_k*sqrt(pi k) = 0.999805
+
+DONE.
