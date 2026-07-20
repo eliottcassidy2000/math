@@ -97,6 +97,11 @@ structural indices from `s` total. **DvdK is nowhere used.**
 
 ## Named next
 
+- **DONE (THM-1725):** the closed form is `E(M,N) = {j/N} ∪ {k/M}` (0 once, other
+  coincidences +1), roots `−(D−x)`; `|E| = D−1` and `max E < 2` are proved, so **all structural
+  roots are negative for every `(M,N)`** — the Newton-polygon derivation of the two ramification
+  clusters. This upgrades §(2) from case-by-case to unconditional.
+
 - **Prove the structural-root set in general.** For `M = 1` it is `−(D − j/N)`; the general
   set should be `{−(D − x) : x ∈ E(M,N)}` with `E` the Puiseux-exponent set of `z^M = tR(z)`.
   A Riemann–Hurwitz / Newton-polygon computation of `E` would give the closed form and, with

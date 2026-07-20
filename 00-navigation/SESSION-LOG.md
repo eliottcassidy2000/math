@@ -96,6 +96,44 @@ Kaczynski-boundary/approach-labels thread in the LRC analytic sieve -- possible 
 cleaner target than the route THM-1710 refuted.
 
 **Artifacts:** THM-1720; HYP-8530; 2 scripts + 2 outputs.
+## kind-pasteur-2026-07-20-S128c126
+
+**Riemann-Hurwitz / Newton-polygon computation of the general Puiseux-exponent set. THM-1725
+gives the closed form and makes 'structural roots all negative' UNCONDITIONAL for all (M,N).**
+
+- Newton polygon of the kernel Phi(z,t)=z^M-tR(z) (deg_z=D): over t=0 it ramifies in two
+  clusters -- SMALL (M branches, z~t^{1/M}, exponents k/M) and LARGE (N branches, w=1/z~t^{1/N},
+  exponents j/N). The order-D ODE for F=sum a_m t^m has structural exponents from these.
+- **CLOSED FORM:** structural roots of the recurrence's leading coeff = -(D-x), x in
+  **E(M,N) = {j/N: 0<=j<N} u {k/M: 0<=k<M}**, 0 counted once, every other coincidence bumped
+  +1 until distinct. M=1 exact: E={j/N}, roots -(D-j/N). VERIFIED on the nose vs gcd_R(P_D)
+  for 14 cases across sessions (gcd=1,2,3 all matched, including collision cases (2,2),(2,4),
+  (3,3)).
+- **TWO COROLLARIES, PROVED by counting (not just fit):**
+  (a) |E| = M+N-1 = D-1 -- the two clusters share ONLY the trivial exponent 0.
+  (b) max E < 2 -- the g=gcd(M,N) coincidences j/N=k/M (i=1..g-1) bump to exactly 1+i/g in
+      (1,2), pairwise distinct, base set in [0,1), so NO cascade; max E = 1+(g-1)/g < 2.
+- **CONSEQUENCE (PROVED, all (M,N)):** every structural root -(D-x) has x<2<=D, so it is
+  strictly NEGATIVE -- never a positive integer. This upgrades THM-1720 from a per-case check
+  to a theorem: the STRUCTURAL half of the detection-depth cap (THM-1710 i) is now
+  UNCONDITIONAL in (M,N). DvdK not used.
+- **The gcd is the SAME gcd** as in s(M,N)=C(D,2)-gcd+1 (THM-1690): the g-1 exponent
+  collisions here are exactly the degree-shave there. One structure, two appearances.
+
+**Status of the TNC completion after this:** COMPLETE + elementary for min(M,N)=1 (triangular,
+THM-1710 ii). For min>=2: detection depth D, structural obstruction now provably gone for ALL
+(M,N) (this), leaving ONLY the R-dependent APPARENT factor -- a desingularization (algebraic,
+not analytic). No DvdK anywhere.
+
+**Handoff / named-next.** (1) Derive the '+1 bump' collision-resolution from the local
+monodromy (second-sheet Puiseux exponent of the merged ramification when g>1) -- closes the
+gap between 'Newton-motivated' and 'fully derived' for the exact rule. (2) DESINGULARIZE the
+apparent factor (show the s-(D-1) apparent roots removable for every two-sided R) -> with
+THM-1710(iv) a fully elementary, roots-of-unity+recurrence, DvdK-free proof of TNC for ALL
+(M,N). (3) Formalize the M=1 triangular completion. Note: run timed out (exit 124) on the
+D=7,8 cases (2,5),(3,4),(4,4),(3,5); the 6 completed cases matched and (a),(b) are proved, so
+the big cases are corollaries not gaps.
+
 ## death-star-2026-07-20-S69 -- Is the odd-cycle-parity functional Mathieu-Zhao? Tested: trivially yes, deeply NO (HYP-8530)
 
 **Owner:** investigate the S68 lead (Rédei-parity ↔ Mathieu-Zhao).

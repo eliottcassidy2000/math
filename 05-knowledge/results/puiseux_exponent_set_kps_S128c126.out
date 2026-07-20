@@ -1,0 +1,35 @@
+==========================================================================================
+THE PUISEUX-EXPONENT RULE  E(M,N) = ({j/N} u {k/M}, 0 once, other coincidences +1)
+==========================================================================================
+  Predicted structural roots -(D - x), x in E(M,N), vs computed gcd_R(P_D) roots.
+
+  (M,N)=(1,2) D=3 gcd=1 : |E|=2 (=D-1? True), max x=1/2 (<2? True)
+       E = ['0', '1/2']
+       predicted roots = ['-3', '-5/2']
+       computed  roots = ['-3', '-5/2']   MATCH: True
+
+  (M,N)=(1,4) D=5 gcd=1 : |E|=4 (=D-1? True), max x=3/4 (<2? True)
+       E = ['0', '1/4', '1/2', '3/4']
+       predicted roots = ['-5', '-19/4', '-9/2', '-17/4']
+       computed  roots = ['-5', '-19/4', '-9/2', '-17/4']   MATCH: True
+
+  (M,N)=(2,2) D=4 gcd=2 : |E|=3 (=D-1? True), max x=3/2 (<2? True)
+       E = ['0', '1/2', '3/2']
+       predicted roots = ['-4', '-7/2', '-5/2']
+       computed  roots = ['-4', '-7/2', '-5/2']   MATCH: True
+
+  (M,N)=(2,3) D=5 gcd=1 : |E|=4 (=D-1? True), max x=2/3 (<2? True)
+       E = ['0', '1/3', '1/2', '2/3']
+       predicted roots = ['-5', '-14/3', '-9/2', '-13/3']
+       computed  roots = ['-5', '-14/3', '-9/2', '-13/3']   MATCH: True
+
+  (M,N)=(2,4) D=6 gcd=2 : |E|=5 (=D-1? True), max x=3/2 (<2? True)
+       E = ['0', '1/4', '1/2', '3/4', '3/2']
+       predicted roots = ['-6', '-23/4', '-11/2', '-21/4', '-9/2']
+       computed  roots = ['-6', '-23/4', '-11/2', '-21/4', '-9/2']   MATCH: True
+
+  (M,N)=(3,3) D=6 gcd=3 : |E|=5 (=D-1? True), max x=5/3 (<2? True)
+       E = ['0', '1/3', '2/3', '4/3', '5/3']
+       predicted roots = ['-6', '-17/3', '-16/3', '-14/3', '-13/3']
+       computed  roots = ['-6', '-17/3', '-16/3', '-14/3', '-13/3']   MATCH: True
+

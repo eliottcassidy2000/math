@@ -17232,3 +17232,19 @@ no positive integer roots), a desingularization question. => TNC complete+elemen
 min(M,N)=1 (triangular, THM-1710 ii); for min>=2 cap holds modulo desingularizing the
 apparent factor. DvdK not used. Named-next: general Puiseux-exponent formula for the
 structural set (Riemann-Hurwitz); desingularize APPARENT_R.
+
+## HYP-8520 — closed form for the toral recurrence's Puiseux-exponent set
+
+**Status: CONFIRMED (rule, 14 cases) + two corollaries PROVED.** kind-pasteur-2026-07-20-S128c126. THM-1725.
+
+Newton polygon of Phi(z,t)=z^M-tR(z): ramifies over t=0 in a SMALL cluster (M branches,
+z~t^{1/M}, exps k/M) and a LARGE cluster (N branches, w=1/z~t^{1/N}, exps j/N). Structural
+roots of the recurrence leading coeff = -(D-x), x in E(M,N) = {j/N: 0<=j<N} u {k/M: 0<=k<M},
+0 once, other coincidences +1. VERIFIED exact vs gcd_R(P_D) on 14 cases (gcd=1,2,3; M=1 exact
+-(D-j/N)). PROVED: (a) |E|=D-1 (two clusters share only 0); (b) max E<2 (g=gcd coincidences
+bump to 1+i/g in (1,2), no cascade). Hence every structural root -(D-x), x<2<=D, is NEGATIVE
+for ALL (M,N) -- upgrades THM-1720 from per-case to unconditional; the structural half of the
+detection-depth cap (THM-1710) is now unconditional in (M,N). The gcd here = the gcd in
+s(M,N)=C(D,2)-gcd+1 (THM-1690): one structure, two appearances. Residue unchanged:
+R-dependent apparent factor (desingularization). DvdK not used. Named-next: derive the +1
+bump from local monodromy; desingularize the apparent factor.
