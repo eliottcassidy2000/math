@@ -1,0 +1,22 @@
+(V2) the three collision points (exact Fractions):
+  F('0', '0', '-1/4') = ('-1/4', '0', '0')
+  F('1', '-3/2', '13/2') = ('-1/4', '0', '0')
+  F('-1', '3/2', '13/2') = ('-1/4', '0', '0')
+  all three -> (-1/4, 0, 0): True  (points distinct: True)
+
+(V1) det J(F) = -2  (== -2 identically: True)
+(V3) equivariance under (x,y,z)->(-x,-y,z): F1 even True, F2 odd True, F3 odd True
+(V4) fixed line: F(0,0,z) = (z, 0, 0)  (bijective on the axis)
+(V5) fiber over (1,0,0): 3 solutions (odd? True):
+    (0, 0, 1)
+    (-I/2, -3*I, -26)
+    (I/2, 3*I, -26)
+
+PARITY LEMMA (proved, three lines): if sigma(x,y,z) = (-x,-y,z) and F is
+sigma-equivariant on target (F1 even; F2,F3 odd), then sigma permutes every
+fiber over the fixed axis {(c,0,0)}; non-fixed preimages come in pairs, fixed
+preimages lie on the line {x=y=0}, where F is the bijection z -> (z,0,0).
+Hence every finite fiber over the axis has cardinality 1 + 2k -- ODD -- and a
+non-injective example needs k >= 1, i.e. fiber >= 3: the discovery realizes
+the minimum.  (The repo's mirror-involution parity lore, S407-D/Redei-style,
+applied verbatim to the new object.)
