@@ -1,0 +1,7 @@
+Poisson bracket preservation on all generators: VERIFIED (all canonical relations hold)
+Non-invertibility: on the section p = 0, Psi(q, 0) = (F(q), 0); the
+three verified collision points give Psi(a,0) = Psi(b,0) = Psi(c,0)
+with a,b,c distinct => Psi is not injective on points => not a
+polynomial automorphism => NOT a Poisson automorphism.
+=> THE POISSON CONJECTURE (PC_3 on C^6, hence stably) IS FALSE,
+   with the explicit witness Psi = (F, (JF^T)^{-1} p).
