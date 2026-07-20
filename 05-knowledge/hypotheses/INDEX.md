@@ -17297,3 +17297,20 @@ theorem -- the uniform bound is what makes it hold for ALL (k,D) at once.
 ### HYP-8535 — SUBSUMED by HYP-8540 (mac-mini-S149)
 The uniform moment bound is now a concrete formula (HYP-8540), not just 'some finite M'. The
 triangular-descent-depth guess in HYP-8535 is superseded by the sharp 2*max-pairs form.
+## HYP-8530 — GMC(2) on bounded charge+degree is a finite Groebner emptiness test (unconditional)
+
+**Status: CONFIRMED (34/34 patterns, span<=4).** kind-pasteur-2026-07-20-S128c127. THM-1740.
+
+Combines my detection depth (THM-1710) + opus Nullstellensatz TNC (THM-1685) + klein
+cross-shell descent (THM-1700) + mac-mini polar bridge (THM-1645). (A) E[P^m] = int
+CT_u[Lambda_s^m] e^{-s} ds is the Laplace integral of the toral (P-recursive-in-m, THM-1670)
+sequence, hence itself P-RECURSIVE in m of finite order ~ charge span (measured 2,2,4,5,5 for
+spans 2,2,4,4,4). So E[P^m]=0 for all m <=> for m<=K finite. (B) GMC(2) per charge pattern =
+one Groebner: moment ideal I=<E[P^m]:m<=K>, Rabinowitsch 1 in I+<1-w*prod(extreme coeffs)>;
+empty <=> no two-sided nullcone member <=> (with one-sided=>Mathieu) GMC(2) for the pattern.
+VERIFIED EMPTY: 7 named patterns + EXHAUSTIVE 34/34 two-sided patterns of span<=4, zero
+failures. (C) klein's cross-shell descent (E[P^2]=2bc, E[P^4]=24ab^3+12b^2c^2, ...) reproduced
+= this elimination, bottom-up. UNCONDITIONAL: no domination (THM-1585 refuted), no positivity
+(klein THM-1640 sign-indefinite), no DvdK. NOT uniform (K grows with span; unbounded limit =
+radial Laplace-determinacy gap, THM-1690). Named-next: a priori K(span); batch larger spans;
+formalize {-1,1} (E[P^2]=2a0a1, ideal <a0a1>).

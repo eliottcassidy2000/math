@@ -1,0 +1,12 @@
+Batch GMC(2) finite-Groebner over all two-sided charge patterns, span <= 4
+(both extremes present; interior charges optional)
+
+  span=2 (M=1,N=1): 2/2 patterns EMPTY (GMC(2) holds)
+  span=3 (M=1,N=2): 4/4 patterns EMPTY (GMC(2) holds)
+  span=3 (M=2,N=1): 4/4 patterns EMPTY (GMC(2) holds)
+  span=4 (M=1,N=3): 8/8 patterns EMPTY (GMC(2) holds)
+  span=4 (M=2,N=2): 8/8 patterns EMPTY (GMC(2) holds)
+  span=4 (M=3,N=1): 8/8 patterns EMPTY (GMC(2) holds)
+
+TOTAL: 34/34 two-sided patterns closed by finite Groebner (span<=4)
+failures: NONE

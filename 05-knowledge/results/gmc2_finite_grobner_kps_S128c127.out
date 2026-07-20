@@ -1,0 +1,42 @@
+==========================================================================================
+(A) DETECTION DEPTH: E[P^m] is P-recursive in m; order vs charge span
+==========================================================================================
+  charges {-1,1}             charge span=2 : E[P^m] P-recursion order r=2, coeff-deg s=1
+  charges {-1,0,1}           charge span=2 : E[P^m] P-recursion order r=2, coeff-deg s=1
+  charges {-1,1,3} (klein)   charge span=4 : E[P^m] P-recursion order r=4, coeff-deg s=3
+  charges {-2,1,2}           charge span=4 : E[P^m] P-recursion order r=5, coeff-deg s=4
+  charges {-2,-1,1,2}        charge span=4 : E[P^m] P-recursion order r=5, coeff-deg s=4
+  charges {-2,1,2,3}         charge span=5 : E[P^m] P-recursion order r=None, coeff-deg s=None
+  -> E[P^m] is P-recursive of finite order; so E[P^m]=0 for all m reduces to
+     finitely many moments (a detection depth), for every fixed charge pattern.
+
+==========================================================================================
+(B) GMC(2) PER CHARGE PATTERN = GROEBNER EMPTINESS (Rabinowitsch, symbolic coeffs)
+==========================================================================================
+  charges {-1,1}               K= 8 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['2*a0*a1', '12*a0**2*a1**2', '120*a0**3*a1**3', '1680*a0**4*a1**4']
+  charges {-1,0,1}             K= 8 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['a1', '2*a0*a2 + a1**2', '6*a0*a1*a2 + a1**3', '12*a0**2*a2**2 + 12*a0*a1**2*a2 + ']
+  charges {-1,1,3} (klein)     K=12 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['2*a1*a2', '24*a0*a1**3 + 12*a1**2*a2**2', '720*a0*a1**4*a2 + 120*a1**3*a2**3', '20160*a0**2*a1**6 + 20160*a0*a1**5']
+  charges {-2,1,2}             K=12 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['4*a0*a2', '6*a0*a1**2', '144*a0**2*a2**2', '720*a0**2*a1**2*a2']
+  charges {-2,-1,1,2}          K=12 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['4*a0*a3 + 2*a1*a2', '6*a0*a2**2 + 6*a1**2*a3', '144*a0**2*a3**2 + 144*a0*a1*a2*a3 ', '720*a0**2*a2**2*a3 + 720*a0*a1**2*']
+  charges {-2,1,2,3}           K=14 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['4*a0*a2', '6*a0*a1**2', '288*a0**2*a1*a3 + 144*a0**2*a2**2', '7200*a0**3*a3**2 + 720*a0**2*a1**2']
+  charges {-3,-1,1,2}          K=14 : two-sided nullcone EMPTY (GMC(2) holds): True
+        first moments E[P^m] = ['2*a1*a2', '36*a0*a2*a3 + 6*a1**2*a3', '288*a0*a1*a3**2 + 24*a0*a2**3 + 12', '7200*a0**2*a3**3 + 1440*a0*a1*a2**']
+
+==========================================================================================
+(C) CROSS-SHELL DESCENT reproduced: klein's P = a*Z^3 + b*conj(Z) + c*Z
+==========================================================================================
+  E[P^1] = 0
+  E[P^2] = 2*b*c
+  E[P^3] = 0
+  E[P^4] = 24*a*b**3 + 12*b**2*c**2
+  E[P^5] = 0
+  E[P^6] = 720*a*b**4*c + 120*b**3*c**3
+  -> E[P^2]=2bc kills the bottom straddle first (bottom-up), higher moments force
+     the top; the moment ideal's two-sided locus is empty = GMC(2) for this pattern.
+     This IS the cross-shell descent, as one finite Groebner elimination.

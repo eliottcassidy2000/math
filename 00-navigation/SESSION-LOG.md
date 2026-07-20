@@ -40,6 +40,41 @@ FILES: MISTAKE-205, THM-1300 banner, INVESTIGATION-BACKLOG.md item. -> all (TWO 
   forbidden COMPOSITE (forced by 7's absence). Two exceptions = one phenomenon.
 - Files: hampath_spectrum_deathstar_S70 (+out); reflection the-hamiltonian-path-spectrum-is-odds-minus-7-and-21-S70;
   backlog lead (prove completeness / OEIS check). Honest: {7,21} proven (canon); completeness conjectural.
+## kind-pasteur-2026-07-20-S128c127
+
+**GMC(2) on any bounded charge-count + degree IS a finite Groebner emptiness test,
+unconditional -- and the cross-shell descent is that test's elimination. THM-1740.**
+
+Worked the owner's framing, systematized + verified. Combines my detection depth (THM-1710),
+opus's Nullstellensatz TNC (THM-1685), klein's cross-shell descent (THM-1700), mac-mini's
+polar bridge (THM-1645).
+
+- **(A) DETECTION DEPTH for the FULL moments.** E[P^m] = int CT_u[Lambda_s^m] e^{-s} ds is the
+  Laplace integral of the toral sequence CT_u[Lambda_s^m], P-recursive in m (THM-1670);
+  holonomicity is closed under integration, so **E[P^m] is itself P-recursive in m** of finite
+  order ~ charge span (measured 2,2,4,5,5 for spans 2,2,4,4,4). So E[P^m]=0 for all m <=> for
+  m<=K finite.
+- **(B) GMC(2) per charge pattern = ONE Groebner.** Moment ideal I=<E[P^m]:m<=K>, Rabinowitsch
+  1 in I+<1-w*prod(extreme coeffs)>; empty <=> no two-sided nullcone member <=> (with
+  one-sided=>Mathieu) GMC(2) for the pattern. VERIFIED EMPTY: 7 named patterns AND an
+  EXHAUSTIVE batch of **34/34 two-sided patterns of span <= 4, zero failures** (span2:2/2,
+  span3:8/8, span4:24/24). So 'GMC(2) on span <= 4' is a single finite certificate -- the
+  full-moment analogue of opus's 17/17 TNC patterns.
+- **(C) CROSS-SHELL DESCENT = this elimination.** klein's P=aZ^3+bZ~+cZ: E[P^2]=2bc,
+  E[P^4]=24ab^3+12b^2c^2, E[P^6]=720ab^4c+120b^3c^3 -- reproduced exactly. E[P^2]=2bc kills the
+  bottom straddle first (bottom-up), higher moments force the top; ideal contains (bc)^k,(ab)^k
+  so variety = {b=0}u{a=c=0} = one-sided. That IS the Rabinowitsch elimination.
+- **UNCONDITIONAL:** no domination (THM-1585 refuted), no positivity (klein THM-1640
+  sign-indefinite), no DvdK. Pure finite algebra.
+- **Honest scope:** a DECISION PROCEDURE per bounded (charge-count,degree), NOT a proof of
+  GMC(2) in full -- K grows with span, no single finite computation covers all P; the unbounded
+  limit is exactly the radial Laplace-determinacy gap (THM-1690).
+
+**Handoff / named-next.** (1) a priori K(span) -- the exact detection depth of E[P^m] vs span
+(measured ~span..span+1); turns 'take enough moments' into 'take exactly K'. (2) Batch larger
+spans (5,6) -> extend the certificate. (3) Formalize the {-1,1} pattern: E[P^2]=2a0a1, ideal
+<a0a1>, emptiness one line -- a kernel-checkable GMC(2) instance (analogue of THM-1710's M=1).
+
 ## boxeph-2026-07-20-S183 -- THM-1680: no-stacking FALSE-and-unnecessary (explicit witness; sigma-stacks REINFORCE, B = 2rho measured 99.7%), Re-beta rigidity DISSOLVED (reality-stack: naive 2Re rho = 0 exactly, dynamical total 2i Im rho != 0), ladder REPAIRED on {e^{a sqrt m} m^{-k/2}} and demonstrated end-to-end (HYP-8510)
 
 **Owner:** prove the no-stacking lemma and the Re beta rigidity, repair the ladder.
