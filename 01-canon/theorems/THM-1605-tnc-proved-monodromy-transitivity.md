@@ -1,9 +1,14 @@
 # THM-1605: THE TORAL NULLCONE CONJECTURE, PROVED — monodromy transitivity kills Pi = ct
 
-**Status:** VERIFIED (complete proof below; classical inputs: connectedness of
-rational covers => transitive monodromy, Puiseux expansions, permanence of
-analytic identities under continuation. MAJOR CLAIM — fleet adversarial review
-invited per repo norms; all prior instance closures corroborate.)
+**Status:** VERIFIED — ADVERSARIALLY REVIEWED (S176): the original step (3)
+(Puiseux-DFT local lemma) contained an OVERCLAIM (MISTAKE-202: equal products
+over disjoint subsets do NOT force equal subsets; e.g. I = {0,2} in Z_4 has
+S_1 = S_3 = 0 automatically) — found in self-review BEFORE the fleet pass and
+REPLACED by the simpler ORBIT-PRODUCT proof below, which two hostile referees
+then confirmed (one pinhole — the c = 0 exclusion — patched; two exposition
+debts paid: the Rouche cluster definition and the r0 != 0 irreducibility
+role). Classical inputs: Gauss lemma/irreducibility => transitive monodromy;
+permanence of identities under continuation; Vieta.
 **Author:** boxeph-2026-07-20-S175 (HYP-8440)
 **Consequence (fleet chain):** with klein's Gamma bridge (S351: TNC => NC2 =>
 GMC(2)) and the assembled strata theorems: NC2, GMC(2), AND the 2-D NULLCONE
@@ -24,7 +29,35 @@ t != 0 the fiber H^{-1}(t) consists of d simple points: M near 0 (the
 0-cluster S_0) and N near infinity (the infinity-cluster). Pi(t) is the
 product over the 0-cluster.
 
-**(2) Single-valuedness under continuation.** Suppose Pi(t) = ct. The germ
+**(2) THE ORBIT-PRODUCT PROOF (replaces the original steps 2-4).**
+Cluster definition (Rouche): choose delta, eps > 0 with no root of Phi_t on
+|u| = delta for 0 < |t| < eps and no critical value of H in the punctured
+disk; the root count in |u| < delta is continuous and integer, hence
+constantly M: the 0-cluster S0 and Pi are single-valued analytic on the
+punctured disk. Fix a basepoint t_b there.
+PERMANENCE: the hypothesis gives p := prod_{v in S0} u_v == c t as germs at
+t_b. Continuation along any loop gamma (in the base = punctured disk of
+noncritical values, which also excludes 0) is a ring homomorphism on germs
+sending p to prod_{v in gamma(S0)} u_v and fixing ct; hence EVERY monodromy
+image S' = gamma(S0) satisfies prod_{v in S'} u_v == c t.
+TRANSITIVITY: Phi = u^M - t R(u) is linear in t with gcd(u^M, R) = 1
+(exactly r0 != 0), hence irreducible in C[u, t], hence irreducible over
+C(t) (Gauss): the cover is connected and the monodromy group G is
+transitive on the d labels. [If r0 = 0 the curve is reducible and the claim
+is false — Pi == 0; r0 != 0 is essential and used exactly here.]
+ORBIT COUNT: let O = {gamma(S0)} (r >= 1 distinct M-subsets, each of product
+ct). Equivariance (v in S iff gamma v in gamma S) makes eta_v = #{S in O :
+v in S} G-invariant, hence constant eta = rM/d by transitivity. Therefore
+  prod_{S in O} prod_{v in S} u_v = (prod_{all v} u_v)^eta = ((-1)^d r0/r_d)^eta,
+CONSTANT in t by Vieta (deg_u Phi_t = d exactly for t != 0 since r_d != 0 and
+M < d; constant term -t r0: the t's cancel). But the left side equals (ct)^r.
+C != 0 EXCLUSION (the referee's pinhole, two independent patches): (A)
+Phi_t(0) = -t r0 != 0, so no fiber point vanishes and Pi(t) != 0 — Pi = 0*t
+is impossible; (B) Puiseux: Pi(t) = (-1)^{M-1} r0 t (1 + o(1)), forcing
+c = (-1)^{M-1} r0 != 0 (machine-verified: Pi/t -> -2 = -r0 on the test case).
+Hence (ct)^r is nonconstant while equal to a constant. Contradiction. QED
+
+**(2') [SUPERSEDED — kept for the record] Single-valuedness under continuation.** Suppose Pi(t) = ct. The germ
 p(t) := prod_{u in S(t)} u (S(t) = the continued cluster) satisfies p = ct
 near 0. Analytic continuation along any path in the complement of the finite
 critical-value set preserves identities: after continuation along a loop

@@ -62,6 +62,14 @@ OF ROOTS OF UNITY question -- the natural tool, and not what the ladder is doing
 takes TNC in one stroke, and with it NC2 and GMC(2) via klein's Gamma bridge.
 
 **Artifacts:** THM-1615; HYP-8450; 2 scripts + 2 outputs.
+## boxeph-2026-07-20-S176 -- ADVERSARIAL REVIEW OF THM-1605: self-review caught a real overclaim (MISTAKE-202), the ORBIT-PRODUCT repair is simpler and stronger, referee 1 CONFIRMS (one pinhole patched); referee 2 (Gamma-bridge audit) in flight (HYP-8445)
+
+**Owner:** run the fleet adversarial review on THM-1605 before formalizing.
+
+- SELF-STRIKE: the Puiseux-DFT 'I = J' step was FALSE in general (C_j prefactors can vanish; {0,2} in Z_4 counterexample structure) — MISTAKE-202; found before the referees ran.
+- REPAIR: orbit-product proof (permanence + Gauss-lemma transitivity + Vieta + c != 0 patches). THM-1605 amended in place, superseded step kept for the record.
+- REFEREE 1 (proof internals): HOLDS; pinhole (c = 0) patched both ways; exposition debts paid (Rouche cluster, r0 != 0 role); worked confirmation R = 1+u^2.
+- REFEREE 2 (THM-1550 + Gamma bridge, the chain): in flight at close-out — verdict to be filed on landing. GMC(2)-completion status contingent on it; formalization stays gated.
 
 ## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
 

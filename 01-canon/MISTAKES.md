@@ -5442,6 +5442,31 @@ THM-1320's headline factorization det = −E₀(0)A(0)C(0) is det JF(0) in disgu
 ## MISTAKE-199 (Nth recurrence, death-star-S61b/c/d) — three ID collisions in one session cluster on fleet-wide owner prompts
 The owner's arborescence and odd/even/Babai-Cameron prompts went fleet-wide, and I collided THREE times by filing before re-pulling: (1) THM-1445 (switching H-sum) vs opus/kp THM-1445, pushed 11 min earlier — renumbered to THM-1460 then again; (2) THM-1460 (arborescence det-shadow) vs mac-mini THM-1460, pushed 23 SECONDS earlier and carried further (two poles, ordinal-sum log) — renumbered mine to THM-1467; (3) THM-1465 (canonical member / Babai-Cameron 7.4 = 0 at every odd n) vs kp THM-1465 (5 min earlier) AND opus THM-1460 (10 min earlier), BOTH identical (all-even anchor n≡1, all-ODD anchor n≡3, via klein's score-parity law) — CEDED entirely, my file deleted. Net: of my three S61b-d "theorems," two were independent rediscoveries of same-day fleet work and one (THM-1467 switching-sum) is the only distinct survivor, plus the 3/8-mass confirmation of boxeph HYP-8295. HARDENED RULE (again): on any owner prompt, `git fetch && rebase` IMMEDIATELY BEFORE the checkpoint that claims an ID, not just at session start — the fleet moves in minutes, not sessions. And when a prompt is visibly fleet-wide (Babai-Cameron had klein+opus+kp already), default to CONFIRMATION/synthesis and do not file a competing theorem number at all. The distinct-contribution test must be applied BEFORE filing, not after the collision.
 
+## MISTAKE-202 (boxeph-2026-07-20-S176) — THM-1605's original local lemma overclaimed: equal products over disjoint subsets do NOT force equal subsets
+
+**What happened:** THM-1605's first proof (S175) concluded from the Puiseux-DFT
+expansion that disjoint index sets I, J with equal branch-products must be
+EQUAL ("Fourier inversion => I = J"). FALSE as stated: the mu^j coefficient of
+the log-difference is C_j * (Sigma_I zeta^{ij} - Sigma_J zeta^{ij}) with a
+UNIVERSAL factor C_j = [mu^j] log(W(mu)/w*) that can VANISH; when it does, the
+j-th character sum is unconstrained. Example: I = {0, 2} in Z_4 has S_1 = S_3
+= 0 automatically, so with C_2 = 0 all constraints hold with I != J. The
+step "no monodromy element moves the cluster" was therefore NOT established
+(and is not even true in general — the identity only forces equal PRODUCTS
+along the orbit).
+
+**How it was caught:** in self-review while PREPARING the fleet adversarial
+review (owner-ordered), before the referees ran. The repaired proof (orbit-
+product: permanence + transitivity + Vieta + the c != 0 patch) is simpler and
+was then confirmed by two hostile referees, who found one further pinhole
+(c = 0 exclusion — patched in place) and two exposition debts (paid).
+
+**Lesson:** when a lemma concludes SET equality from SYMMETRIC-FUNCTION
+equality, check the kernel: products/power sums see subsets only through
+characters, and universal prefactors (here C_j) can kill exactly the
+characters you need. Also: the strongest review step is trying to write the
+attack yourself before delegating it.
+
 ## MISTAKE-201 — Over-estimating the VC-witness reduction dimension 4× by a per-monomial heuristic, then reading noise as corroboration (death-star-S61)
 - **Who/when:** death-star-2026-07-20-S61, caught same session by the reduction agent's concrete computation.
 - **What:** I estimated the de Bondt–van den Essen reduction dimension of F at **≈76** using a crude "~⌈(deg−1)/2⌉ auxiliary variables per nonlinear monomial × 13 monomials" heuristic, then treated a concurrent agent's partial-output "76/77" hits as an independent cross-check. Both were wrong: (a) F's 13 nonlinear monomials are **not independent** — they all share the single quadratic u=1+xy, so **6** helper coordinates reduce everything to cubic (N≈10, not 35–38; M=2N≈20, not 70–77); (b) the "76/77" in the partial output was the ballpark of Zhao's *a-priori VC bound* (3/2)(3^{M−2}−1), NOT the reduction dimension — I pattern-matched a number to the conclusion I'd already written.
