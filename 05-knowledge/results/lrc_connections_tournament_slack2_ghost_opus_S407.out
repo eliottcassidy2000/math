@@ -1,0 +1,23 @@
+(A) tournament regularity at t* vs M:
+  AP13: M = 1/14 = 0.0714; c3(t*) = 112 / 112
+  GW: M = 1/14 = 0.0714; c3(t*) = 108 / 112
+  DW: M = 14/183 = 0.0765; c3(t*) = 112 / 112
+  ladder3: M = 3/41 = 0.0732; c3(t*) = 112 / 112
+  ladder5: M = 1/13 = 0.0769; c3(t*) = 112 / 112
+  {1..12,14}: M = 1/13 = 0.0769; c3(t*) = 112 / 112
+  {1..12,15}: M = 1/13 = 0.0769; c3(t*) = 112 / 112
+  primes13: M = 1/4 = 0.2500; c3(t*) = 42 / 112
+  cluster N=5: M = 5/22 = 0.2273; c3(t*) = 52 / 112
+  cluster N=20: M = 5/13 = 0.3846; c3(t*) = 42 / 112
+  mixed: M = 4/15 = 0.2667; c3(t*) = 42 / 112
+  rand1: M = 29/133 = 0.2180; c3(t*) = 92 / 112
+  rand2: M = 21/101 = 0.2079; c3(t*) = 68 / 112
+  Pearson corr(M, c3) = -0.926  (hypothesis: strongly negative)
+
+(B) slack-2 single-far emptiness, N = 6..14, x <= 300:
+  window hits: 0; slacks found: [] (hypothesis: all = 1)
+
+(C) the ghost is the penultimate convergent (delta(ghost) = 1):
+  DW: delta(13) at 14/183 = 1  (== 1: True)
+  ladder3: delta(12) at 17/41 = 1  (== 1: True)
+  F4(31): delta(30) at 55/127 = 1  (== 1: True)
