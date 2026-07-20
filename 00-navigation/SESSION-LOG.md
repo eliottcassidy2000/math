@@ -1,3 +1,13 @@
+## boxeph-2026-07-20-S170 -- EXTREME-CHARGE LEMMA (charge 0 never extreme; the leading-form law in the moment world); BESSEL CLOSURE OF THE {±1,0} SPAN (prefactor decay kills even the caustic); the Stokes residual named (HYP-8390)
+
+**Owner:** work the remaining ledger; abstract connections to past work; the stronger 2-D nullcone structure theorem alongside GMC(2).
+
+- EXTREME-CHARGE LEMMA proved (hyperbolic gauge + polynomial-in-lambda): nullcone extremes are nullcone; Radial Lemma => charge 0 never extreme. = THM-1345's leading-form law transplanted.
+- BESSEL FORMULA exact: CT[e^{-sP}] = e^{-s phi} I0(2s sqrt(Rfg)); span {±1,0} = Bessel-twisted radial.
+- SPAN {±1,0} CLOSED (mod citations): Watson => A == 1; s -> infty: rate < 0 => 0, rate > 0 => infty, rate = 0 (caustic) => s^{-1/2} prefactor => 0. Resonant search: minimizer collapses to one-sided.
+- RESIDUAL: Stokes-faked flatness for >= 4 charges (resurgence); generic Newton polygon = unique sheet = theorem. Connections: JC caustic/Ghost; (1-x)^{-1/2} sheets (6th domain); tropical leading-form.
+- The stronger NULLCONE STRUCTURE THEOREM (nullcone = one-sided exactly) = the program's true endpoint; every span theorem proves it locally.
+
 ## boxeph-2026-07-20-S169 -- THM-1565: RADIAL LEMMA PROVED (Watson-Nevanlinna + rotation, all degrees) => ONE-SIDED THEOREM FOR ALL TWO-CHARGE SPANS (perfect-power reduction, machine-verified); {+1,0,-1} base case by exact elimination (HYP-8385)
 
 **Owner:** prove the one-sided conjecture for bounded charge span by exact elimination.

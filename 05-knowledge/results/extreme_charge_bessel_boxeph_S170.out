@@ -1,0 +1,21 @@
+(1) EXTREME-CHARGE LEMMA: E[P^m] as polynomial in the gauge lambda is constant;
+    demo: P = Z + W + ZW - 2 (charges +1, -1, 0): if P were nullcone, its
+    extreme components Z and W are nullcone (trivially true, zero charge absent).
+    Structural content: charge-0 can never be extreme: P = 1 + Z: E[P^m] = 1 != 0:
+    E[(1+Z)^m], m=1..4: ['1', '1', '1', '1']  (nonzero as forced)
+
+(2) BESSEL FORMULA: E[P^m] vs the I0-twisted radial integral, exact:
+    5 random (f, g, phi), m <= 6: Bessel/CT expansion matches E[P^m] exactly: True
+
+(3) RESONANT-FAMILY SEARCH: phi^2 = 4Rfg + lower (the caustic locus).
+    Family: f = a0 + a1 R, g = c (const), phi = 2h + e0, h^2 = R f c needs
+    Rfc square: take f = c u^2 R-shifted... simplest exact square: f = R b^2, g = c:
+    R f g = R^2 b^2 c => h = R b sqrt(c): pick c = 1: h = bR: phi = 2bR + e0.
+    P = Z R b^2-family... search nullcone over (b, e0) + subleading exactly:
+    resonant slice (f = b^2 R, g = 1, phi = e0 + 2bR): best objective over 200
+    random points: 7.878e+00 at b = 0.025+0.205i, e0 = -1.062-1.926i
+    (a local-search refinement pass:)
+    refined objective: 6.861e-06 at b = 0.0090+0.0090i, e0 = -0.0363-0.0361i
+    => if bounded away from 0: the resonant slice has NO nullcone member
+       (m <= 6); the caustic alignment alone cannot fake the nullcone.
+DONE.
