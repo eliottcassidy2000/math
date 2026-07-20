@@ -1,0 +1,30 @@
+=== H-PATH spectrum (OCF) and H-CYCLE spectrum, n=3..6 ===
+  n=3: H-path achievable [1, 3]
+        H-path forbidden odd < 3: []
+        H-cycle achievable [0, 1]; forbidden < 1: []
+  n=4: H-path achievable [1, 3, 5]
+        H-path forbidden odd < 5: []
+        H-cycle achievable [0, 1]; forbidden < 1: []
+  n=5: H-path achievable [1, 3, 5, 9, 11, 13, 15]
+        H-path forbidden odd < 15: [7]
+        H-cycle achievable [0, 1, 2, 3]; forbidden < 3: []
+  n=6: H-path achievable [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+        H-path forbidden odd < 45: [7, 21, 35, 39]
+        H-cycle achievable [0, 1, 2, 3, 4, 5]; forbidden < 5: []
+
+=== the {k,3k} exceptional-pair family ===
+  {2,6}: ratio 3, b=2*3, a+b=8, a*b=12, a=T? False, b=C(?,2)? True
+  {7,21}: ratio 3, b=7*3, a+b=28, a*b=147, a=T? False, b=C(?,2)? True
+  {12,24}: ratio 2, b=12*2, a+b=36, a*b=288, a=T? False, b=C(?,2)? False
+  6 = C(4,2)=|E(K_4)|, 21 = C(7,2)=|E(K_7)|; 2 and 7 as vertex-ish: 4 and 7 (K_4,K_7)
+  observer 2n+1: 2*3+1=7 (base 2 -> base 7 via 2*3+1); 6*3+... 
+
+=== group-order hypothesis: S_3 vs F_21 ===
+  S_3 = C_3 rtimes C_2, |S_3|=6, subgroups of order {1,2,3,6}; C_2 (reflection)=2
+  F_21 = C_7 rtimes C_3, |F_21|=21, core C_7=7
+  {2,6}: {|C_2 reflection|, |S_3|}? ; {7,21}: {|C_7 core|, |F_21|}
+  parallel: both G=C_p rtimes C_q with |G|=pq: (p,q)=(3,2)->6, (7,3)->21
+
+=== Omega_p / even-graph dims ===
+  Paley T_7 Omega_p: 7,21,42,63,63,42,21 -> first two = {7,21}
+  V(E_n)=2,3,7,16,54 (n=3..7): E_3=2, E_5=7 -> the '2' and '7' bases live at n=3,5

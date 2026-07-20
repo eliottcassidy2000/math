@@ -195,6 +195,20 @@ all heights (THM-1289, published), δ ineffective.
   Erdős-64 power-of-two cycles, Goldbach/twin-prime lenses, Zeckendorf, the figurate
   zoo (Moser/Faulhaber, HYP-8165/8170/8175), the "cancellation family" meta-result
   (THM-406, with an MRDP proof they are NOT one problem).
+**NICHE additions (death-star-S59w miner, beyond the S59u DEEP top-promotes) — ranked:**
+- **★ Alcuin number vs Robertson–Seymour** [MODERATE] — Alcuin = τ+1 BREAKS minor-closure (monotone under deletion, INCREASES under contraction; K_{2,4} witness); so {G: Alcuin ≤ k} has no finite forbidden-minor set. Self-contained, OPEN-Q-107 (the-plus-one-that-escapes-through-contraction).
+- **★ Hadwiger's conjecture on the metagraph** [MODERATE] — does G_7/Z_2 (272 vtx, first non-perfect, ω=4<χ=6) have a K_6 minor? A single buildable test on the central object (klein-S198).
+- **★ Real-rootedness of I(Ω,x)** [DEEP for tournaments] — PROVED real-rooted n≤8 (claw-free THM-020), DISPROVED n≥9 (THM-025, explicit Newton-violation); OPEN = characterize the real-rooted subclass (OPEN-Q-047/051).
+- **EGZ zero-sum ↔ H-spectrum residue gaps** [PARTIAL] — H ≢ 2 (mod 5) at n=5, predicted for all prime n (a crisp OCF-machinery target).
+- **Bernoulli 1806 / von Staudt–Clausen {2,3,7}** [MODERATE] — B_6 = 1/42 denominator primes {2,3,7} = the same {2,3,7} as the OCF/H-spectrum semigroup? niche, unworked.
+- **Erdős–Selfridge / odd covering systems** [MODERATE] — the LRC danger-arc cover IS a covering system; import Hough's minimum-modulus bound (self-flagged most-promising bridge).
+- **Zarankiewicz (cyclic book)** [MODERATE] — Z(m,m) achieved m≤7; general-m bipartite proof open (THM-922).
+- **Caccetta–Häggkvist** [MODERATE] — the return-residue reframe (sumset-growth ↔ short-return).
+- **Erdős–Moser two-step tower** [MODERATE] — T127=15, T255=23 exact; why does the recurrence persist?
+- **Seymour 2nd-neighborhood + Sumner's conjecture** [GREENFIELD] — named tournament fronts, ZERO work, OCF/score machinery directly applies.
+- **BRAND-NEW fronts (0 hits anywhere = pure greenfield on tournaments):** Manickam–Miklós–Singhi, the 1-2-3 conjecture, antimagic labeling, Tuza's conjecture, the toughness conjecture, Hadwiger–Debrunner (p,q), the Davenport constant, the cap set problem, Alon–Tarsi (currently only a tool). Each is a clean opening the repo has never touched.
+- HYGIENE: a parallel `PROBLEM-PORTFOLIO-2026-07-20.md` (mac-mini-S140) also exists; this file (PROBLEM-LEDGER.md) remains the canonical one — merge, don't fork.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
