@@ -1,0 +1,14 @@
+(A) K8 mass, exact by cycle types (Aut = S8):
+  mass(K8) = 3/8  (predicted 3/8): True
+
+(B) disjoint-union / wreath families at n=8 (exact, direct Aut enumeration):
+  K4+K4                  |Aut|=1152   mass=5/8      f+=13/16    *** NON-QUARTER ***
+  K5+K3                  |Aut|=720    mass=0        f+=1/2      quarter
+  K6+K2                  |Aut|=1440   mass=0        f+=1/2      quarter
+  K7+v                   |Aut|=5040   mass=0        f+=1/2      quarter
+  4K2                    |Aut|=384    mass=3/8      f+=11/16    *** NON-QUARTER ***
+
+(C) random n=8 sweep (400 graphs, mass per graph — class-weighted discovery):
+  f+ values seen (nontrivial-Aut graphs): {'1/2': 95, '1': 77}
+  non-quarter f+ in the wild: none in sample
+DONE.

@@ -1,0 +1,10 @@
+n=3: labeled classes 2 ; UNLABELED switching classes = 1
+  Babai-Cameron count (some class-automorphism fixes NO member): 1
+  all-even-outdegree (Eulerian) members per class: {0: 1}   (n mod 4 = 3)
+n=5: labeled classes 64 ; UNLABELED switching classes = 2
+  Babai-Cameron count (some class-automorphism fixes NO member): 0
+  all-even-outdegree (Eulerian) members per class: {1: 2}   (n mod 4 = 1)
+n=7: labeled classes 32768 ; UNLABELED switching classes = 12
+  Babai-Cameron count (some class-automorphism fixes NO member): 2
+  all-even-outdegree (Eulerian) members per class: {0: 12}   (n mod 4 = 3)
+DONE.
