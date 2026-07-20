@@ -1,0 +1,14 @@
+
+==== k=3 EXTENDED CONTROL (kappa, S free): k=3, Wdeg<=4, Sdeg<=2, R: m<=3, n<=3, two_term=False ====
+  free params after divisibility: 19
+  Keller system: 59 eqs, 19 unknowns [1s]
+  branches: 6
+   *** NONZERO-DET BRANCH: det = -2*kap*r1_1**2/3
+       W = 3*r1_1*x*y**3 + 4*r1_1*y**2 + w2_2*x**2*y**2 + 2*w2_2*x*y + w2_2
+       S = kap*r1_1*y/3 + s0_0
+       R = (x*y + 1)*(r0_3*x**2*y**2 + 2*r0_3*x*y + r0_3 + r1_1*x**2*y + 2*r1_1*x)
+       extra = []
+
+==== k=4 REFINED (kappa free, wide R): k=4, Wdeg<=5, Sdeg<=2, R: m<=5, n<=4, two_term=False ====
+  free params after divisibility: 27
+  Keller system: 114 eqs, 27 unknowns [3s]
