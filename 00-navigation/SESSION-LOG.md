@@ -54,6 +54,13 @@ Prompt (owner): explore these wild conjectures and pull from other agents to for
 explore more
 
 FILES: HYP-8115 (RESOLVED, 4 parts), frozen out, results INDEX, session log. -> all
+## boxeph-2026-07-20-S144 -- THE TRUE-JACOBIAN LEDGER (HYP-8120): the salvage lane -- NEW dim-2 mechanism NO-GO (JC₂ safe: 4-line proof on verified identity) + the MOD-p DECISION THEOREM (automorphy ⟺ bijective mod one large prime; census → certifier); fleet convergences credited; my S141 HYP renumbered 8080→8115
+
+- **FLEET PULL:** overnight swarm covered the anatomy — klein (symplectic ℂ⁶ lift), death-star (THM-1300 Weyl endo crediting the boxeph lead; THM-1305 anatomy + k=3 EMPTY by mod-p/Newton = independent double proof with my S143 D/W), mac-mini (THM-1315: surjective, fiber cubic, S₃ syzygy-pinned, caustic), kind-pasteur (verification, Chebotarev), opus-S414 (normal-form/moduli first-push). My S141 HYP renumbered 8080→8115 (mac-mini first-pushed 8080). The UNTAKEN lane = sharper-TRUE versions; taken it.
+- **(I) DIM-2 NO-GO (new):** equivariant class in ℂ²: F = (yA(s), xh(s)), s = x^k y; det = −[Ah + s(kAh′+A′h)] (verified 8/8, k = 1..4); Keller ⟹ leading coeff (1+a+kb)A_a h_b = 0 impossible ⟹ A, h const ⟹ F LINEAR. The JC₃-killing machinery provably cannot descend to dimension 2.
+- **(II) MOD-p DECISION THEOREM (new):** Keller automorphy ⟺ mod-p bijectivity for one sufficiently large prime (Jordan fixed-point-free element + Chebotarev + Lang–Weil ⟹ non-autos have deficiency δp^n for all large p). Demo: kernel deficiency/p³ = .32325/.32480/.32559 at p = 31/37/41 → 1/3 monotone. The S140 census is a DECISION PROCEDURE.
+- **LEDGER assembled** (reflection): classical floor + in-class corollaries (m=2 unique kernel, m=3 empty ×2, Galois ⟹ auto) + labeled conjectures (kernels only at weight 2; full-symmetric monodromy; effective constant).
+- **FILES:** HYP-8120; jacobian_true_versions_boxeph_S144.py + .out; reflection the-true-jacobian-ledger-boxeph-S144.
 
 ## boxeph-2026-07-19-S143 -- THE WEIGHT-3 PORT IS EMPTY (HYP-8110): ported master factorization + b-system verified; D/W case analysis kills k = 0,1,2 ⟹ NO kernels in (−1,1,3)→(3,1,−1); BONUS: m=2 kernel in closed form — c = φ₁v₀−φ₀v₁ = −2 (cross-determinant), K = 1/16, E = −1/4; CONJECTURE: kernels only at z-weight 2
 
