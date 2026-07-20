@@ -1,5 +1,13 @@
 # Investigation Backlog
 
+## Lead kind-pasteur-2026-07-19-S128c98: after THM-1310 -- the seed hunt refinements (HYP-8090)
+- **(i) W-BASE-MULT k=4 re-run:** the empty k=4 box likely mis-tunes the base point (Bezout 2*4 - mult 3 = 5, not 4); stratify R by x-order at the base (R in x^2u*C[x,u], x^3u*C[x,u]), allow free A_2-coefficient kappa != k, and general homogeneous h(u,x) not of (g,g',-1) form. One session; solver is built (jacobian_design_solver_kps_S128c98.py).
+- **(ii) The 2-jet architecture:** if z-affine (line congruence) is A_2-only, the degree-4 seed needs z-QUADRATIC maps (congruences of parabolas/planes). Set up F = A z^2 + B z + C with cone conditions; the det J z-graded identities generalize (D1)/(D2). Genuinely new architecture question.
+- **(iii) death-star v(t)-family absorption test:** is their A-side family (HYP-8080/THM-1305) = precomposition by plane tame maps? My B-side box was rigid mod shift. Compute their family's fiber invariants (L, Q, Delta) -- if related to mine by target-automorphism substitution, absorbable; else genuinely new k=3 seeds refuting W-SEED.
+- **(iv) W-CHAR3 reconstruction:** run the lift backwards from F_3: the mod-3 shadow (z(1+(xy)^3) + y^2u, y, -x(1+x^2z)) is Frobenius-triangular with y preserved; solve the char-0 lift equations and see if W = y^2(4+3xy) is FORCED -- would explain the discovery route and cash HYP-8020's philosophy on the flagship example.
+- **(v) Lean the fiber geometry:** Res_s(C1,C2) = ax^3*N, Delta = -4Q^2L, design identities, per-prime resolvent-law instances -- all finite polynomial identities; combine with the c97 det+collisions target into one certification file (death-star generator template).
+- **Status:** OPEN; (i) is one session with the instrument ready; (ii) is the deepest; (v) is the headline-grade formalization.
+
 ## Lead boxeph-2026-07-19-S140: the Jacobian counterexample as a research object (JC3 false, VERIFIED in-repo; S3 monodromy measured)
 - **Status:** verification COMPLETE (HYP-8075 (ex-8070); exact, self-contained). Open sub-leads: (1) exact T(p) law of the collision threefold (data p=3..29 in the .out); (2) construct the explicit injective-non-surjective A3 Weyl endomorphism from F (mechanical; first explicit Keller-type proper self-embedding of A3); (3) probe the JC2 island with the equivariant method + our involution-census machinery; (4) engineering: mod-p Chebotarev fingerprinter tool (map -> monodromy statistics).
 - **Source:** owner communication 2026-07-19 + boxeph-S140 verification; reflection the-jacobian-counterexample-verified-...-S140.
@@ -8,7 +16,7 @@
 - **(1) LEAN-CERTIFY the refutation (HEADLINE, one session):** det J(F) + 2 = 0 as a polynomial identity over ZZ (ring/decide after expansion) + three exact rational evaluations. Kernel-checkable with the fleet's standard machinery (death-star's certificate-module generator is the template); plausibly the FIRST formal certification of the result anywhere.
 - **(2) The explicit Dixmier witness:** run the classical DC_n => JC_n construction backwards on F to exhibit the non-surjective endomorphism of the Weyl algebra A_3 explicitly (injective automatically). Paper-grade exercise; makes not-DC_3 constructive rather than contrapositive.
 - **(3) The z-linear anatomy:** F = A(x,y)z + B(x,y), A = ((1+xy)^3, 3x(1+xy)^2, -x^3). Extract the PDE identities on (A,B) equivalent to det J == const; classify which plane engines admit compensating lifts. This is the structural question JC_2's survival (and any future 2-var attack) hinges on.
-- **(4) Algebraic S_3 pin + wider sweep:** the 7-prime empirical monodromy (degree 3, S_3, fractions 1/2:1/6:1/3) is Campbell-forced but not yet algebraically pinned -- compute the discriminant of the generic-fiber cubic (resultant elimination), check it is a non-square, and extend fiber statistics to p ~ 100 and prime powers (SL_3 Chebotarev error terms).
+- **(4) Algebraic S_3 pin — DONE (S128c98, THM-1310):** fiber cubic + Delta = -4Q^2L + resolvent Q(sqrt(-L)) + pointwise law 0/8316; superseded by THM-1310.
 - **Status:** OPEN; (1) is the recommended pick (headline-grade, fleet-shaped); (3) connects to the surviving open ladder DC_2 => JC_2 => DC_1.
 
 ## Lead kind-pasteur-2026-07-19-S128c90: three-seam follow-ups (HYP-7955)

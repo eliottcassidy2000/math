@@ -1,0 +1,37 @@
+
+==== k = 3 (REDISCOVERY CONTROL): W total-deg <= 4, R with x-deg <= 2, u-deg <= 2 ====
+  unknowns: 24
+  after divisibility: 6 free parameters
+  det J computed [1s]; collecting Keller equations...
+  Keller system: 29 equations in 6 unknowns (quadratic)
+  solution branches: 1 [1s]
+   branch: det = -2, dim(free params) = 1, W = w_2_2*x**2*y**2 + 2*w_2_2*x*y + w_2_2 + 3*x*y**3 + 4*y**2, R = x*(x*y + 1)*(x*y + 2)
+  branches with det != 0 (or param-dependent): 1
+  OWNER'S MAP FOUND in branch (det = -2); family dim here = 1
+  INSTRUMENT GATE: owner-map rediscovered = True
+
+==== k = 4 (THE HUNT): W total-deg <= 5, R with x-deg <= 3, u-deg <= 3 ====
+  unknowns: 37
+  after divisibility: 8 free parameters
+  det J computed [1s]; collecting Keller equations...
+  Keller system: 60 equations in 8 unknowns (quadratic)
+  solution branches: 0 [1s]
+  branches with det != 0 (or param-dependent): 0
+
+==== k = 2 (CAMPBELL CONTROL (solutions must be injective)): W total-deg <= 3, R with x-deg <= 2, u-deg <= 2 ====
+  unknowns: 19
+  after divisibility: 9 free parameters
+  det J computed [0s]; collecting Keller equations...
+  Keller system: 25 equations in 9 unknowns (quadratic)
+  solution branches: 0 [0s]
+  branches with det != 0 (or param-dependent): 0
+
+==== k = 5 (PARITY PROBE): W total-deg <= 6, R with x-deg <= 3, u-deg <= 3 ====
+  unknowns: 44
+  after divisibility: 4 free parameters
+  det J computed [1s]; collecting Keller equations...
+  Keller system: 49 equations in 4 unknowns (quadratic)
+  solution branches: 0 [1s]
+  branches with det != 0 (or param-dependent): 0
+
+DONE.

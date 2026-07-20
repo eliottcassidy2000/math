@@ -1,0 +1,18 @@
+== w-family triviality ==
+  F_w == F(x,y,z+w): True  (the solver's 1-param family = trivial z-translation)
+
+== pointwise resolvent test: fiber size vs Legendre(-L) ==
+  p=7: off-wall targets 258, wall targets 85
+    chi=-1 (nonres): sizes {1: 129}   [predict all size 1]
+    chi=+1 (res):    sizes {0: 96, 3: 33}   [predict sizes 0 and 3]
+    VIOLATIONS: 0/258
+  p=13: off-wall targets 1884, wall targets 313
+    chi=-1 (nonres): sizes {1: 942}   [predict all size 1]
+    chi=+1 (res):    sizes {0: 672, 3: 270}   [predict sizes 0 and 3]
+    VIOLATIONS: 0/1884
+  p=19: off-wall targets 6174, wall targets 685
+    chi=-1 (nonres): sizes {1: 3087}   [predict all size 1]
+    chi=+1 (res):    sizes {0: 2160, 3: 927}   [predict sizes 0 and 3]
+    VIOLATIONS: 0/6174
+
+DONE.

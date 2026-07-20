@@ -1,0 +1,54 @@
+== (1) the fiber system at general target (a,b,g) ==
+  G2 collapsed/factored: (s + 1)**2*(3*a*x**2 - b*s*x - b*x + s**2 + s)
+  G3 collapsed/factored: -a*x**3 - g*s**3 - 3*g*s**2 - 3*g*s - g + s**2*x + 3*s*x + 2*x
+  core of G2: [(3*a*x**2 - b*s*x - b*x + s**2 + s, 1)]
+  core of G3: [(a*x**3 + g*s**3 + 3*g*s**2 + 3*g*s + g - s**2*x - 3*s*x - 2*x, 1)]
+  CONIC PAIR:
+    C1 = 3*a*x**2 - b*s*x - b*x + s**2 + s
+    C2 = a*x**3 + g*s**3 + 3*g*s**2 + 3*g*s + g - s**2*x - 3*s*x - 2*x
+  Res_s(C1,C2) factored: a*x**3*(27*a**2*g**2*x**3 - 18*a*b*g*x**3 + 16*a*x**3 + b**3*g*x**3 - b**2*x**3 - 3*b*g*x - 2*g + 4*x)
+  FIBER CUBIC in x: 27*a**2*g**2*x**3 - 18*a*b*g*x**3 + 16*a*x**3 + b**3*g*x**3 - b**2*x**3 - 3*b*g*x - 2*g + 4*x
+  coefficients (deg 3..0): [27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2, 0, -3*b*g + 4, -2*g]
+  s = rational in (x; a,b,g) via deg-1 subresultant: numerator deg_x = 3, denominator deg_x = 2
+  => C(x,y,z) = C(a,b,g)(x): FIELD DEGREE EXACTLY 3, fiber cubic = minimal polynomial
+  cubic at collision target: -4*x*(x - 1)*(x + 1)  (roots should include x=+-1)
+
+== (2) discriminant and the S_3 pin ==
+  Delta(a,b,g) = -4*(27*a*g**2 - 9*b*g + 8)**2*(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2)
+  factor exponents: [('27*a*g**2 - 9*b*g + 8', 2), ('27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2', 1)], unit = -4
+  VERDICT square-in-QQ(a,b,g): False  => Delta NOT a square (odd-exponent factor persists over C too) => Galois closure S_3
+  specialization ('21/2', '13/3', '4'): irreducible cubic = True
+  specialization ('35', '24/5', '4/5'): irreducible cubic = True
+  specialization ('14', '3/2', '27'): irreducible cubic = True
+
+== (3) the Jelonek / asymptotic set ==
+  leading coeff L(a,b,g) = 27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2   (degree-drop escape locus)
+  Delta factored (above) -- {Delta=0} should be ESCAPE not ramification (Keller):
+  pure Q-wall sample (Q=0, L!=0): (a,b,g) = (1/27,1,1); L = -1/27
+  cubic there: -(x - 3)**2*(x + 6)/27; roots: {'-6': 1, '3': 2}
+  x = -6 (mult 1): common s-solutions [(-5,)] -> 1 fiber point(s) at this x
+  x = 3 (mult 2): common s-solutions [(1 - sqrt(3),), (1 + sqrt(3),)] -> 2 fiber point(s) at this x
+  (Keller forbids ramification: the double x must carry at most ONE fiber point; the lost point ESCAPES -> Jelonek)
+  L-wall sample: (a,b,g)=(0,1,1): cubic = x - 2 -> degree drop, roots escape to x = infinity
+  ASYMPTOTIC VARIETY = {Q=0} u {L=0}: degrees 3 + 4 = 7 = deg F
+
+== (4) equivariant-degree uniqueness: k=4 shape dies at J(0) ==
+  random (1,-1,-3)-equivariant instance 1: det J(0) = 0
+  random (1,-1,-3)-equivariant instance 2: det J(0) = 0
+  random (1,-1,-3)-equivariant instance 3: det J(0) = 0
+  (weight -(k-2) = -2 is not a coordinate weight at k=4 => no linear term in F2 => always singular)
+  our k=3 map: J(0) = [[0, 0, 1], [0, 1, 0], [2, 0, 0]], det = -2  (invertible OK)
+
+== (5) iteration F∘F: field degree 9 check mod p=11 ==
+  p=11: F∘F fiber histogram {1: 419, 2: 54, 3: 147, 4: 37, 5: 32, 6: 3, 7: 4, 9: 1}, max fiber = 9, misses = 634
+  (degree multiplicativity => deg(F∘F) = 9; sizes should divide/compose within S_3 wr S_2-type statistics)
+
+== (6) boundary primes p=2, p=3 ==
+  p=2: fiber histogram {1: 5, 3: 1}, image 6/8
+  p=3: fiber histogram {1: 18, 3: 3}, image 21/27
+  F mod 3: F1 = x**3*y**3*z + x*y**3 + y**2 + z
+           F2 = y   (y preserved => plane-family fibration)
+           F3 = -x**3*z - x
+  (u^3 = 1 + (xy)^3 mod 3: Frobenius-additive twist -- the char-3 shadow of the design)
+
+DONE.
