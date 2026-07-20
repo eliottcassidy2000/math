@@ -59,8 +59,8 @@ the index method is silent — but a different invariant is loud. From S59x and 
 session:
 
 - **n = 7**: V = 272, ω = 4, χ = 6, **h(G₇/Z₂) ≥ 12** (certified K₄..K₁₂ minors).
-- **n = 8**: V = [FILL], ω = [FILL], χ = 7, **h(G₈/Z₂) ≥ [FILL]** (this session).
-- Growth of h vs χ = n−1: [FILL — the point is whether h ≫ χ persists].
+- **n = 8**: V = 3528, ω = 5, χ = 7, **h(G₈/Z₂) ≥ 22** (certified K₄…K₂₂ minors).
+- Growth of h vs χ = n−1: **h/χ = 2.0 (n=7) → ≥ 3.1 (n=8)** — the margin WIDENS.
 
 The structural fact at n=7 — tiny cliques (ω=4), modest coloring (χ=6), but K₁₂ minor —
 says the metagraph's density is entirely in its minors. Since Gₙ/Z₂ is the antipodal

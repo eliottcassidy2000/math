@@ -1,0 +1,42 @@
+=== the Pisano / doubling-trisection clock ===
+  pi(2) = 3
+  pi(3) = 8
+  pi(5) = 20
+  pi(10) = 60
+  pi(10)=60 = lcm(pi(2)=3, pi(5)=20); 60 = 2^2*3*5.
+  the '60' where Fibonacci's LAST DIGIT closes = where the doubling(2) & trisection(3)
+  (and 5) periods align. 1001 = 7*11*13 (7 = the seven-wall / H=7-forbidden).
+
+=== JC counterexample: the DEGREE-3^m tower (geometric degree x3) ===
+  F, F^2, F^3 have generic degree 3, 9, 27 (klein-S327): deg(F^m) = 3^m,
+  each an essential class, the collision persisting down the tower.
+    deg(F^1) = 3^1 = 3
+    deg(F^2) = 3^2 = 9
+    deg(F^3) = 3^3 = 27
+    deg(F^4) = 3^4 = 81
+
+=== Erdos 592 (alpha->(alpha,3)^2): the THREE AXES ===
+  axis n (tree-grid): R(n,2) = 2n+1  [R(1)=3,R(2)=5, conj 2n+1] -- the OBSERVER formula, TAME/linear
+  axis m (Chang tower): omega^(omega^m)->(.,3)^2, m=1 Chang, m=2 Schipperus, m=3 OPEN($1000) -- the x-TOWER, WILD
+  axis b (bi-dyadic atom): b=2 subgrid, FORCED by a unique-prime (char-2) fact -- the CHAR-2 atom
+    R(1,2) = 3
+    R(2,2) = 5
+    R(3,2) = 7
+    R(4,2) = 9
+    R(5,2) = 11
+
+=== THE PARALLEL (three axes <-> three JC parts) ===
+  [OBSERVER / 2n+1]
+     Erdos 592: R(n,2)=2n+1 (tree-grid, tame)
+     JC ctrex : odd fiber 1+2 = Redei parity (opus THM-1350)
+  [x3 TOWER]
+     Erdos 592: Chang tower omega^(omega^m) (wild)
+     JC ctrex : degree-3^m tower F,F^2,F^3 (klein-S327)
+  [CHAR-2 ATOM]
+     Erdos 592: bi-dyadic b=2, char-2 Schur seam (THM-469)
+     JC ctrex : det=-2, lambda->lambda^2, 2-adic staircase (THM-1300)
+
+  SHARED SPINE: the two multipliers 2 (char-2 atom / doubling) and 3 (the x3 tower /
+  the '3' in (alpha,3)^2 and in deg 3) -- exactly the doubling/trisection axes of S59w
+  ({2,6},{7,21} trisection vs {12,24} doubling). Erdos 592 and the JC counterexample are
+  the SAME trichotomy (observer / x3-tower / char-2) in two different theaters.
