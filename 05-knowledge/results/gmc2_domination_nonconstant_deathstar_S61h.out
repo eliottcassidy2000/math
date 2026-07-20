@@ -1,0 +1,27 @@
+
+=== CASE1: z + w (two-sided top) ===
+  m=2: E[P^m]=!=0(2), a_max=1, DOMINANT a=1 (=top), |top|/|total|=1.000
+  m=3: no charge-0 (E=0)
+  m=4: E[P^m]=!=0(12), a_max=2, DOMINANT a=2 (=top), |top|/|total|=1.000
+  m=5: no charge-0 (E=0)
+  m=6: E[P^m]=!=0(120), a_max=3, DOMINANT a=3 (=top), |top|/|total|=1.000
+  m=7: no charge-0 (E=0)
+  m=8: E[P^m]=!=0(1680), a_max=4, DOMINANT a=4 (=top), |top|/|total|=1.000
+
+=== CASE2: z^2 + z + (1+u)w  [one-sided top z^2, non-const charge-1] ===
+  m=2: E[P^m]=!=0(6), a_max=2, DOMINANT a=2 (=top), |top|/|total|=0.667
+  m=3: E[P^m]=!=0(114), a_max=4, DOMINANT a=4 (=top), |top|/|total|=0.632
+  m=4: E[P^m]=!=0(228), a_max=4, DOMINANT a=4 (=top), |top|/|total|=0.632
+  m=5: E[P^m]=!=0(23160), a_max=6, DOMINANT a=6 (=top), |top|/|total|=0.622
+  m=6: E[P^m]=!=0(1002720), a_max=8, DOMINANT a=8 (=top), |top|/|total|=0.603
+  m=7: E[P^m]=!=0(6856920), a_max=8, DOMINANT a=8 (=top), |top|/|total|=0.617
+  m=8: E[P^m]=!=0(995858640), a_max=10, DOMINANT a=10 (=top), |top|/|total|=0.612
+
+=== CASE3: z^2 + (1+u)w  [one-sided top, non-const charge-1, genuinely two-sided] ===
+  m=2: no charge-0 (E=0)
+  m=3: E[P^m]=!=0(114), a_max=4, DOMINANT a=4 (=top), |top|/|total|=0.632
+  m=4: no charge-0 (E=0)
+  m=5: no charge-0 (E=0)
+  m=6: E[P^m]=!=0(979560), a_max=8, DOMINANT a=8 (=top), |top|/|total|=0.617
+  m=7: no charge-0 (E=0)
+  m=8: no charge-0 (E=0)
