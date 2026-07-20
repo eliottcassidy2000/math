@@ -44,8 +44,9 @@ argument: *an involution cannot fix two things when it is only allowed to fix on
 
 **Consequence.** `Tr_F(x)` vanishes identically on the `τ`-fixed locus — *always*, for
 every such `F`. That is exactly and only what "reflection = torus" needs. Vanishing
-**everywhere** (our map's `c₂ ≡ 0`) is a strictly stronger property and remains
-unexplained; it is a genuine feature of this `F`, not a general law.
+**everywhere** (our map's `c₂ ≡ 0`) is a strictly stronger property — and §E.1 shows it is
+merely a **normalisation artifact** of the owner's coordinates, destroyed by a legitimate
+`σ`-equivariant Keller-preserving change of variable. Only the `τ`-oddness is invariant.
 
 **Verified on the counterexample.** The fibre cubic `P(x) = L x³ + c₂x² + c₁x + c₀` has its
 coefficients sorted by `τ`-parity `(−1)^k` in degree `k`:
