@@ -12,6 +12,27 @@
 Prompt (owner): work on exploring the novel math this repo has done across areas you are currently unfamiliar with and seeing how it can be leveraged toward open problems in mathematics, from gradual refinements to drastic reframes, think freely, explore many different new hypothesis ideas and their connections this session
 
 FILES: THM-1390, 02-court/active/CASE-path-homology-regularity-convention.md, HYP-8230, 6 scripts + outs. -> all (PRIORITY for whoever owns the homology thread: the corpus is computed in a non-GLMY complex. GLMY allow non-consecutive vertex repeats; the repo requires all-distinct. For tournaments they must diverge at p = 3, and they do: beta_4(T_7) = 0 under GLMY, not 6, and chi(T_p) = p is UNDEFINED because dim Omega_p never terminates. THM-103 and THM-108 are convention-safe and survive -- that is the good half and it should not be lost in the correction. Court case filed with a calibration protocol: reproduce the directed 3-cycle giving beta_1 = 1 before reversing anything. To everyone: two bridges are now closed. hp does NOT control transitive subtournament size -- explicit n=6 counterexamples in both directions -- and the invariant that does, fas, gives a bound that is vacuous in the Erdos-Hajnal regime, so neither is a route to EH. And a methodological note that recurred twice this session: THM-488's certificate stops at |S| <= 6 because that is where its truncated-series instrument stops seeing, not where the mathematics changes -- switching to the Euler product removes the ceiling and the danger saturates at 0.9723. When a certificate's range has a round number at its edge, check whether that number is a property of the object or of the instrument.)
+## mac-mini-2026-07-20-S126 -- THM-1390: the WAGGLY FILTRATION IS A MAP-GRAPH HIERARCHY. Clique explosion is total (saturates to K_V); new invariant d_sat(n) = 2,3,4,7; the formula d_sat = n-2 is REFUTED at n=7. HYP-8230.
+
+TASK (owner): extend ideas abstractly similar to MAP GRAPHS -- vertices = faces, edges = faces meeting at a vertex OR edge.
+
+THE CORRESPONDENCE (the reason the analogy is the right one). A map graph generalizes the planar DUAL by letting faces meet at a POINT and not just along an EDGE -- and the payoff is UNBOUNDED CLIQUES, which planar duals cannot have. The repo's waggly filtration is the same move: d=1 (wiggly, flip one tile) is the edge-contact dual; d>=2 layers are the point contacts; G^(<=k) is the k-map-graph truncation.
+
+THE COMPUTATION (full enumeration, n=4..7; 8/64/1024/32768 tilings -> 4/12/56/456 classes, matching A000568, which validates the canonicalisation):
+  d=1 is SPARSE AND SPARSIFYING: density 0.833, 0.455, 0.188 at n=4,5,6.
+  cumulative layers SATURATE TO COMPLETE: n=6 gives .188 -> .696 -> .964 -> 1.000.
+That is the map-graph clique explosion in extreme form -- the metagraph becomes K_V.
+
+NEW INVARIANT. d_sat(n) := least d with G^(<=d) complete = the S_n-quotient's tile-flip diameter (fewest tile flips relating ANY two iso classes after relabelling). EXACT: 2, 3, 4, 7 for n = 4,5,6,7 (m = 3,6,10,15).
+
+THE MIRAGE, stated plainly. n=4,5,6 give exactly n-2 -- clean, tempting, and FALSE. At n=7 it is 7, not 5 (unreachable pairs 21165/2687/250/20 at d<=3/4/5/6, zero only at 7). Another three-point pattern dying at the fourth point; the same small-n trap that recurred throughout the LRC extremal work. What survives is weaker but real: d_sat stays well under m (15 -> 7 at n=7), so the quotient does compress the hypercube diameter, just not linearly.
+
+HONEST SCOPE: 'the waggly filtration IS a map-graph hierarchy' is a structural ANALOGY, not a proof that G^(<=k) is a k-map graph in the Chen-Grigni-Papadimitriou sense -- that needs a planar bipartite half-square representation and is NOT settled here. It is the natural next question. (Saturation to K_V is at least consistent, since K_V is a map graph for every V.)
+
+CAUGHT ERROR: my first n=7 run printed diameter 99 -- I had truncated its loop (if mask>4000: break) for tractability. An artefact of my own code, not the object. The value 7 is from the corrected exhaustive computation.
+
+FILES: THM-1390; waggly_map_graph_hierarchy_macmini_S126.py (+.out); HYP-8230.
+HANDOFFS: @all -- d_sat is a new metagraph invariant and its sequence 2,3,4,7 has no linear formula; anyone extending it should compute n=8 before conjecturing. The open question worth taking: is G^(<=k) literally a k-map graph (half-square of a planar bipartite graph)?
 
 ---
 

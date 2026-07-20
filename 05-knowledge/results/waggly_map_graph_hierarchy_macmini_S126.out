@@ -1,0 +1,10 @@
+=== layer densities (small n, full layer enumeration) ===
+  n=4: classes=4, |E(d=1)|=5, density(d=1)=0.833  ->  d<=1:0.833  d<=2:1.000
+  n=5: classes=12, |E(d=1)|=30, density(d=1)=0.455  ->  d<=1:0.455  d<=2:0.909  d<=3:1.000
+  n=6: classes=56, |E(d=1)|=290, density(d=1)=0.188  ->  d<=1:0.188  d<=2:0.696  d<=3:0.964  d<=4:1.000
+
+=== saturation depth = S_n-quotient tile-flip diameter (exact) ===
+  n=4: m=3, classes=4, d_sat=2   (n-2 = 2, MATCH)
+  n=5: m=6, classes=12, d_sat=3   (n-2 = 3, MATCH)
+  n=6: m=10, classes=56, d_sat=4   (n-2 = 4, MATCH)
+  n=7: m=15, classes=456, d_sat=7   (n-2 = 5, MISMATCH -- the linear pattern is a mirage)
