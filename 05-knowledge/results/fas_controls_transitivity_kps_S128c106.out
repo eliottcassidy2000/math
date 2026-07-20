@@ -1,0 +1,42 @@
+==============================================================================
+(A)+(B)  tr >= n - fas :  validity and slack,  exhaustive n = 3..6
+==============================================================================
+  n = 3 : violations of tr >= n - fas : 0  -> LEMMA HOLDS
+     slack tr - (n - fas) distribution: {0: '100.0%'}
+     tight (slack 0) fraction: 100.0%
+  n = 4 : violations of tr >= n - fas : 0  -> LEMMA HOLDS
+     slack tr - (n - fas) distribution: {0: '100.0%'}
+     tight (slack 0) fraction: 100.0%
+  n = 5 : violations of tr >= n - fas : 0  -> LEMMA HOLDS
+     slack tr - (n - fas) distribution: {0: '74.2%', 1: '25.8%'}
+     tight (slack 0) fraction: 74.2%
+  n = 6 : violations of tr >= n - fas : 0  -> LEMMA HOLDS
+     slack tr - (n - fas) distribution: {0: '36.9%', 1: '58.0%', 2: '5.1%'}
+     tight (slack 0) fraction: 36.9%
+
+==============================================================================
+(C)  DOES hp CONTROL tr ?   monotonicity of min-tr and max-tr against hp
+==============================================================================
+  n = 3 : min-tr non-increasing in hp : True   violations: none
+          max-tr non-increasing in hp : True   violations: none
+  n = 4 : min-tr non-increasing in hp : True   violations: none
+          max-tr non-increasing in hp : True   violations: none
+  n = 5 : min-tr non-increasing in hp : True   violations: none
+          max-tr non-increasing in hp : True   violations: none
+  n = 6 : min-tr non-increasing in hp : False  violations: [(9, 4, 11, 5), (17, 4, 19, 5)]
+          max-tr non-increasing in hp : False  violations: [(13, 4, 15, 5)]
+
+  Each violation quadruple reads (hp_1, tr_1, hp_2, tr_2) with hp_1 < hp_2
+  but tr_1 < tr_2 -- MORE Hamiltonian paths yet MORE transitivity.
+
+==============================================================================
+VERDICT
+==============================================================================
+  hp does NOT control tr: monotonicity fails in both directions from n = 6.
+  fas DOES, via tr >= n - fas, which is elementary and tight.
+  But for a random tournament fas ~ n^2/4, so n - fas is negative and the
+  bound is VACUOUS exactly in the regime Erdos-Hajnal cares about.
+  Neither invariant is a route to EH.  Recording this so the bridge is not
+  rebuilt: the repo's hp is a GLOBAL count and tr is a LOCAL extremal
+  quantity, and the flip experiment shows hp can move by an order of
+  magnitude while tr does not move at all.
