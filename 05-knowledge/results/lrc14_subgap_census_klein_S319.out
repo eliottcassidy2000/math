@@ -1,0 +1,87 @@
+# lrc14_subgap_census_klein_S319 -- consolidated frozen output (klein-2026-07-19-S319, THM-1290)
+# Machine: klein (darwin). gcc -O2. Four parallel chunks, w_max in [28,55], interval (1/14, 3/41).
+
+## Referee gates (exact-M, python, independent):
+GATE PASS: M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]) = 1/14 (expect 1/14)
+GATE PASS: M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]) = 1/13 (expect 1/13)
+GATE PASS: M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26]) = 2/27 (expect 2/27)
+GATE PASS: M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]) = 1/14 (expect 1/14)
+GATE PASS: M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]) = 3/41 (expect 3/41)
+GATE PASS: M([1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19, 104]) = 8/105 (expect 8/105)
+ALL GATES PASS
+
+## Rediscovery gate A: interval (1/14,2/27), w0=36 -- must find {1..11,13,36} at 3/41
+HARD 1 2 3 4 5 6 7 8 9 10 11 13 36
+CENSUS 13-subsets of [1,36], w_max in [36,36], interval (1/14,2/27):
+visited=26313782 leaves=2741126 F1=1792312 F2=1792312 F4=1784786 prim=1784786 F5=1 witness-cleared=0 HARD=1
+REFEREE: M = 3/41 INGAP (confirmed)
+
+## Rediscovery gate B: interval (1/14,1/13), w0=26 -- must find {1..12,26} at 2/27
+HARD 1 2 3 4 5 6 7 8 9 10 11 12 26
+CENSUS 13-subsets of [1,30], w_max in [26,26], interval (1/14,1/13):
+visited=600226 leaves=123290 F1=117388 F2=117388 F4=117382 prim=117381 F5=1 witness-cleared=0 HARD=1
+REFEREE: M = 2/27 INGAP (confirmed)
+
+## Gate C (LRC-mode regression, interval (0,1/13), heights 13..26 EXHAUSTIVE):
+HARD 1 2 3 4 5 6 7 8 9 10 11 12 26
+HARD 1 2 3 4 5 6 7 8 9 11 13 20 24
+HARD 1 2 3 4 5 6 7 8 9 10 11 13 24
+HARD 1 2 3 4 5 6 7 8 9 11 12 13 20
+HARD 1 2 3 4 5 6 7 8 9 10 11 12 13
+CENSUS 13-subsets of [1,26], w_max in [13,26], interval (0/1,1/13):
+visited=1018746 leaves=206894 F1=198870 F2=198870 F4=198870 prim=198869 F5=5 witness-cleared=0 HARD=5
+# referee: {1..13} FLOOR, {1..11,13,24} FLOOR, {1..12,26} INGAP 2/27,
+# {1..9,11,13,20,24} INGAP 2/27 (NEW realizer), {1..9,11,12,13,20} INGAP 2/27 (NEW realizer, height 20)
+# => complete sub-1/13 spectrum at heights <= 26: {1/14 x2 families, 2/27 x3 families}; ZERO below floor.
+
+## REAL RUN: B=55, interval (1/14, 3/41), four chunks
+--- chunk a (per-w0 progress) ---
+w_max=45 done: visit=273806279 leaf=33413870 F1=8779421 F2=8779421 F4=8745266 prim=8745265 F5=0 scan=0 HARD=0
+w_max=44 done: visit=596178848 leaf=73918940 F1=27493691 F2=27493691 F4=27451826 prim=27451825 F5=0 scan=0 HARD=0
+w_max=43 done: visit=822349454 leaf=98811084 F1=34609860 F2=34609860 F4=34563231 prim=34563230 F5=0 scan=0 HARD=0
+w_max=42 done: visit=959494619 leaf=115314533 F1=41932109 F2=41932109 F4=41884565 prim=41884563 F5=0 scan=0 HARD=0
+w_max=41 done: visit=1081060087 leaf=129570590 F1=46869482 F2=46869482 F4=46819430 prim=46819428 F5=2 scan=2 HARD=0
+w_max=40 done: visit=1170831406 leaf=144298970 F1=56102144 F2=56102144 F4=56050922 prim=56050920 F5=3 scan=3 HARD=0
+w_max=39 done: visit=1240455637 leaf=154068793 F1=60702514 F2=60702514 F4=60651208 prim=60651205 F5=4 scan=4 HARD=0
+w_max=38 done: visit=1285151042 leaf=158752845 F1=62283300 F2=62283300 F4=62231994 prim=62231991 F5=6 scan=6 HARD=0
+w_max=37 done: visit=1316884754 leaf=162164463 F1=63641913 F2=63641913 F4=63590607 prim=63590604 F5=8 scan=8 HARD=0
+w_max=36 done: visit=1339636404 leaf=164642596 F1=65211930 F2=65211930 F4=65160624 prim=65160621 F5=8 scan=8 HARD=0
+w_max=35 done: visit=1352103909 leaf=165777086 F1=65898696 F2=65898696 F4=65847390 prim=65847387 F5=8 scan=8 HARD=0
+w_max=34 done: visit=1361528561 leaf=166521831 F1=66283467 F2=66283467 F4=66232161 prim=66232158 F5=8 scan=8 HARD=0
+w_max=33 done: visit=1367687619 leaf=167256765 F1=66826395 F2=66826395 F4=66775089 prim=66775086 F5=8 scan=8 HARD=0
+w_max=32 done: visit=1371760436 leaf=167687263 F1=67135889 F2=67135889 F4=67084583 prim=67084580 F5=8 scan=8 HARD=0
+w_max=31 done: visit=1374141962 leaf=167929785 F1=67315815 F2=67315815 F4=67264509 prim=67264506 F5=8 scan=8 HARD=0
+w_max=30 done: visit=1375681102 leaf=168186285 F1=67534717 F2=67534717 F4=67483411 prim=67483408 F5=8 scan=8 HARD=0
+w_max=29 done: visit=1376538579 leaf=168272679 F1=67602865 F2=67602865 F4=67551559 prim=67551556 F5=8 scan=8 HARD=0
+w_max=28 done: visit=1377013283 leaf=168362055 F1=67686353 F2=67686353 F4=67635047 prim=67635044 F5=8 scan=8 HARD=0
+CENSUS 13-subsets of [1,55], w_max in [28,45], interval (1/14,3/41):
+visited=1377013283 leaves=168362055 F1=67686353 F2=67686353 F4=67635047 prim=67635044 F5=8 witness-cleared=8 HARD=0
+first-witness-q histogram: 43:2 44:1 45:4 47:1
+--- chunk b (per-w0 progress) ---
+w_max=50 done: visit=3991748120 leaf=1266034014 F1=573445806 F2=573445806 F4=566525890 prim=566513064 F5=24 scan=24 HARD=0
+w_max=49 done: visit=5482376975 leaf=1539275201 F1=649323377 F2=649323377 F4=641165317 prim=641152491 F5=26 scan=26 HARD=0
+w_max=48 done: visit=6366440149 leaf=1691309967 F1=713180493 F2=713180493 F4=704472938 prim=704460111 F5=30 scan=30 HARD=0
+w_max=47 done: visit=7247818880 leaf=1814826512 F1=737554028 F2=737554028 F4=728612344 prim=728599517 F5=31 scan=31 HARD=0
+w_max=46 done: visit=8285161986 leaf=2016234024 F1=808364064 F2=808364064 F4=799024178 prim=799011351 F5=31 scan=31 HARD=0
+CENSUS 13-subsets of [1,55], w_max in [46,50], interval (1/14,3/41):
+visited=8285161986 leaves=2016234024 F1=808364064 F2=808364064 F4=799024178 prim=799011351 F5=31 witness-cleared=31 HARD=0
+first-witness-q histogram: 43:16 45:14 46:1
+--- chunk c (per-w0 progress) ---
+w_max=53 done: visit=4987779159 leaf=1120619024 F1=236992108 F2=236992108 F4=232806952 prim=232806952 F5=1 scan=1 HARD=0
+w_max=52 done: visit=9197189370 leaf=2221270693 F1=674553829 F2=674553829 F4=664420659 prim=664339452 F5=5 scan=5 HARD=0
+w_max=51 done: visit=11429782867 leaf=2741579280 F1=798650516 F2=798650516 F4=786237022 prim=786155814 F5=5 scan=5 HARD=0
+CENSUS 13-subsets of [1,55], w_max in [51,53], interval (1/14,3/41):
+visited=11429782867 leaves=2741579280 F1=798650516 F2=798650516 F4=786237022 prim=786155814 F5=5 witness-cleared=5 HARD=0
+first-witness-q histogram: 43:1 46:1 48:3
+--- chunk d (per-w0 progress) ---
+w_max=55 done: visit=8791048323 leaf=2894387695 F1=1146741535 F2=1146741535 F4=1135833869 prim=1135833869 F5=2 scan=2 HARD=0
+w_max=54 done: visit=22764787034 leaf=8147256210 F1=3082095646 F2=3082095646 F4=3040927925 prim=3040513096 F5=6 scan=6 HARD=0
+CENSUS 13-subsets of [1,55], w_max in [54,55], interval (1/14,3/41):
+visited=22764787034 leaves=8147256210 F1=3082095646 F2=3082095646 F4=3040927925 prim=3040513096 F5=6 witness-cleared=6 HARD=0
+first-witness-q histogram: 43:3 45:1 47:1 48:1
+
+## AGGREGATE (all chunks, w_max in [28,55]):
+visited=43856745170 leaves=13073431569 F1=4756796579 F4=4693824172 prim=4693315305 F5-survivors=50 witness-cleared=50 HARD=0
+first-witness-q histogram (aggregated): 43:22 44:1 45:19 46:2 47:2 48:4
+
+## VERDICT: (1/14, 3/41) contains NO 13-subset of [1,55] -- EXHAUSTIVELY EMPTY AT HEIGHT 55.

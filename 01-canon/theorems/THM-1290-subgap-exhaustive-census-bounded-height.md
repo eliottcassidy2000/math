@@ -1,58 +1,105 @@
 ---
 id: THM-1290
-title: "[CLAIM STUB — census running] THE (1/14, 3/41) SUB-GAP IS EXHAUSTIVELY EMPTY AT BOUNDED HEIGHT — every 13-subset of [1,B] (primitive or not) has M ∉ (1/14, 3/41), by complete enumeration with rigorous necessary-condition pruning: covering 2..13 (else M ≥ 1/q ≥ 1/13), spread w_max > 12·w_min (THM-1043), an active pair summing into the sparse admissible set {s : ∃D ∈ ℤ, s/14 < D < 3s/41} = {55, 69, 83, 96, 97, 110, 111, ...} (THM-1269's D = M·s), unit-direction pinning at depth 1 for all q ≤ 27 and depth 2 for 28 ≤ q ≤ 41 (spread-lemma template), survivors certified out by rational witness (margin ≥ 3/41) or exact pinch-set M. Target B = 36 first, push toward 55."
-status: CLAIMED (klein-2026-07-19-S319), census in flight. What is KNOWN now — the necessary-condition filters are all rigorous consequences of canon (THM-1043, THM-1268/1269, the spread/pinning lemma template of boxeph-S115/S126 and mac-mini S54); non-primitive families reduce to primitive ones at height ≤ B/2 < 28 ≤ (forced v_max), so primitive enumeration suffices for B ≤ 55; prior emptiness evidence is SEARCH only (opus ~12,400 structured + 8.5M random, klein 56k). What NEEDS EVIDENCE — the enumeration itself (script + frozen out + referee re-verification of all HARD survivors and a sample of witness-certified ones + rediscovery gates on {1..12,26} → 2/27 and {1..11,13,36} → 3/41). Nothing below is citable until the run and referee complete.
+title: "THE (1/14, 3/41) SUB-GAP IS EXHAUSTIVELY EMPTY AT HEIGHT 55 — no 13-subset of [1,55] (primitive or not) has M ∈ (1/14, 3/41) — by COMPLETE ENUMERATION: 43.86 billion DFS nodes, 13.07 billion leaves, 4,693,315,305 filtered primitive families, exactly 50 unit-pinning survivors, every one witness-certified M ≥ 3/41 at a denominator in [43,48], ZERO hard cases. All filters are rigorous canon consequences (covering 2..13; THM-1043 spread σ > 12; THM-1269 active-pair sum D = M·s forcing a pair sum in {55,69,83,96,97,110}; depth-d unit pinning for q ≤ 41). Upgrades the emptiness evidence from search (opus ~12,400 structured + 8.5M random; klein 56k — all with the recorded weakness 'scale, not coverage') to EXHAUSTION 1.5× beyond the height of the deepest known family. BY-CATCH (gate C, exhaustive at heights ≤ 26 for M < 1/13): the complete sub-1/13 spectrum at height ≤ 26 is {1/14 (2 families), 2/27 (3 families)} — including TWO NEW 2/27 realizers {1..9,11,13,20,24} and {1..9,11,12,13,20} (height 20 — lower than the ladder family {1..12,26}), and zero families below the floor"
+status: PROVED-BY-EXHAUSTION at B = 55 (script + frozen consolidated output + independent exact-M referee; six exact-M gates pass; two rediscovery gates re-find {1..11,13,36} → 3/41 and {1..12,26} → 2/27 blind under widened intervals; LRC-mode regression gate exhausts heights ≤ 26 and re-finds all known sub-1/13 families). The pinning filter did essentially all the work: 4.69e9 → 50. COMPANION RUN in flight (same harness, interval (0, 1/14), covering 2..14, spread 13): exhaustive LRC(14) verification at height 55 — will be reported separately when complete; gap-mode CANNOT see M < 1/14 families (their active pair sum is not gap-admissible), which is why the companion run exists.
 source: klein-2026-07-19-S319 (owner: work to finish LRC(14); see the near-misses, synthesize perspectives)
-depends_on: [THM-1268 (D ≥ 4 forcing, mediant 4/55), THM-1269 (D = M·s, the pair-sum reduction), THM-1043 (spread rung), THM-1230/1235 (the gap edge 3/41 and its witness), boxeph-S115/S126 (mod-p spread/pinning template), mac-mini-S54 (the census harness architecture this adapts, lrc_gap_census40_S54.c)]
+depends_on: [THM-1268 (D ≥ 4 forcing, mediant 4/55), THM-1269 (D = M·s, the pair-sum reduction), THM-1043 (spread rung σ ≤ n−1 ⟹ M ≥ 1/n), THM-1230/1235 (the gap edge 3/41, its witness, the slack coordinates), boxeph-S115/S126 (mod-p spread/pinning template), mac-mini-S54 (census harness architecture, lrc_gap_census40_S54.c), THM-405 (n=14 spread rung, used by the companion run)]
 scripts: 04-computation/lrc14_subgap_census_klein_S319.c + 04-computation/lrc14_subgap_referee_klein_S319.py -> 05-knowledge/results/lrc14_subgap_census_klein_S319.out
 ---
 
-# THM-1290 — the sub-gap census at bounded height (claim stub)
+# THM-1290 — the sub-gap census at height 55
 
-## Why this census is new
+## Statement
 
-THM-1268/1269 record that all existing emptiness evidence for (1/14, 3/41) is
-search: ~12,400 structured families (opus-S397), 8.5M random families
-(opus-S398, "scale, not coverage" — it missed both known near-floor families),
-56k mixed (klein). No exhaustive bounded-height statement exists for THIS
-interval. The n=12 shadow gap (1/13, 2/25) has one (mac-mini S54, height 48);
-this file transfers that architecture to the n=14 sub-gap.
+**No 13-subset of [1, 55] of distinct positive integers — primitive or not —
+has maximum loneliness M in the open interval (1/14, 3/41).**
 
-## Why bounded height composes forward (the sandwich)
+Consequently the attained 13-speed M-spectrum's second-smallest value, IF any
+value below 3/41 exists at all, requires v_max ≥ 56; equivalently, the gap
+(1/14, 3/41) of THM-1235 is empty through height 55.
 
-opus-S401's HYP-7930 (G-K accumulation revival, citation-pending) retypes
-(1/14, 3/41] as a FINITE list of attained values at ALL heights, ineffectively.
-The named missing piece is an effective height bound near the floor. An
-exhaustive census at height B is exactly the statement that composes with any
-future effective bound H₀ ≤ B: cage-style effectivization from below +
-accumulation finiteness from above + this census in the middle. It is also the
-n=14 twin of HYP-7920's height-258,276 rigidity at n=13.
+## Proof shape (all filters rigorous, from canon)
 
-## The a-priori structure (rigorous, from canon)
+A 13-set W with M(W) ∈ (1/14, 3/41) must satisfy, unconditionally:
 
-A 13-set W ⊆ [1,B] with M(W) ∈ (1/14, 3/41) must satisfy:
+1. **Covering 2..13**: else the witness t = 1/q gives M ≥ 1/q ≥ 1/13 > 3/41.
+2. **Spread** (THM-1043, n = 13 rung): σ = w_max/w_min > 12.
+3. **Active-pair sum** (THM-1269): every maximizer of the lower envelope is a
+   rising/falling crossing of two distinct speeds, giving integer
+   D = M·(v_i+v_j); M ∈ (1/14, 3/41) forces the pair sum into
+   {s : ∃D ∈ ℤ, s/14 < D < 3s/41} ∩ [1,110] = {55, 69, 83, 96, 97, 110}.
+   In particular w_max ≥ 28.
+4. **Unit pinning at depth d(q) = ⌈3q/41⌉ − 1 for all q ≤ 41**: no multiple of
+   q present ⟹ every unit a mod q has some v with dist(v·a mod q) ≤ d(q),
+   else the witness a/q certifies M ≥ ⌈3q/41⌉/q ≥ 3/41. (Depth 1 for
+   14 ≤ q ≤ 27 — the in-branch bitmask moduli 23/25/27 — depth 2 for
+   28 ≤ q ≤ 41.)
 
-1. **Covering 2..13**: no multiple of q ⟹ witness t = 1/q ⟹ M ≥ 1/q ≥ 1/13.
-2. **Spread** (THM-1043): σ ≤ 12 ⟹ M ≥ 1/13; so w_max > 12·w_min.
-3. **Active pair sum** (THM-1269): at any maximizer, the rising/falling pair
-   gives D = M·s with s = v_i + v_j, D ∈ ℤ₊; M ∈ (1/14, 3/41) forces
-   s ∈ {55, 69, 83, 96, 97, 110, 111, 124, 125, ...} (integers whose interval
-   (s/14, 3s/41) contains an integer). In particular v_max ≥ 28, and at
-   B = 36 the family must contain a pair summing to 55 or 69 exactly.
-4. **Pinning** (spread-lemma template): for every q with 3q/41 < d+1, i.e.
-   depth d = 1 for 14 ≤ q ≤ 27 and d = 2 for 28 ≤ q ≤ 41: either q | some v,
-   or for every unit a mod q some v has dist(v·a mod q) ≤ d.
+Non-primitive W = g·W′ (g ≥ 2) would need the primitive core W′ in the gap
+with w′_max ≥ 28, so w_max ≥ 56 > B: primitive enumeration is complete at
+B = 55. DFS in decreasing element order with in-branch feasibility pruning on
+(1), (3), (4); survivors of the full stack get a rational-witness scan
+(margin ≥ 3/41, integer arithmetic, q ≤ 200); anything uncleared prints HARD
+for the independent exact-M referee (complete breakpoint method: all
+c/(v_i±v_j), peaks, valleys — exact rational arithmetic).
 
-Non-primitive W = g·W′ have M(W) = M(W′) and w′_max ≥ 28 (by 3), so
-g·28 ≤ B < 56 forces g = 1: primitive enumeration suffices for B ≤ 55.
+## The run (frozen output in results)
 
-## Deliverables when the run completes
+| stage | count |
+|---|---|
+| DFS nodes visited | 43,856,745,170 |
+| leaves | 13,073,431,569 |
+| pass covering 2..13 | 4,756,796,579 |
+| pass pair-sum | 4,693,824,172 |
+| pass primitivity | 4,693,315,305 |
+| **pass unit pinning (q ≤ 41)** | **50** |
+| witness-cleared (M ≥ 3/41, q ∈ [43,48]) | 50 |
+| HARD (exact-M needed) | **0** |
 
-- Exhaustive emptiness of (1/14, 3/41) at height B (this theorem).
-- By the same run (the filters are implied by M < 3/41 ⊃ M ≤ 1/14): every
-  enumerated 13-subset of [1,B] has exact M ∉ (1/14, 3/41) — any family with
-  M < 1/14 would surface at the exact-M stage and be a counterexample to
-  LRC(14) itself; none is expected.
-- The HARD-survivor spectroscopy (which q certifies, residue anatomy) as data
-  for the rung-realizability program (death-star tower) and the mod-p CRT
-  stack (boxeph).
+First-witness-denominator histogram of the 50 survivors: 43:22, 44:1, 45:19,
+46:2, 47:2, 48:4 — every pinning survivor escapes only into denominators just
+above the pinning ceiling 41, and none survives past 48.
+
+## Validation
+
+- **Six exact-M referee gates**: {1..13} → 1/14, {1..12,14} → 1/13,
+  {1..12,26} → 2/27, {1..11,13,24} → 1/14, {1..11,13,36} → 3/41,
+  {1,2,3,5,7,8,9,10,11,12,17,19,104} → 8/105. All exact.
+- **Rediscovery gate A** (interval widened to (1/14, 2/27), w0 = 36): the
+  pipeline blind-finds exactly {1..11,13,36}, referee-confirmed 3/41 INGAP.
+- **Rediscovery gate B** (widened to (1/14, 1/13), w0 = 26): blind-finds
+  exactly {1..12,26}, referee-confirmed 2/27 INGAP.
+- **Gate C** (LRC-mode regression, interval (0, 1/13), heights 13..26,
+  EXHAUSTIVE): finds exactly 5 families — {1..13} and {1..11,13,24} at the
+  floor 1/14, and THREE 2/27 realizers: the known {1..12,26} plus the new
+  {1,2,3,4,5,6,7,8,9,11,13,20,24} and {1,2,3,4,5,6,7,8,9,11,12,13,20}.
+  Zero families below the floor: **the sub-1/13 spectrum at heights ≤ 26 is
+  exactly {1/14, 2/27} and LRC(14) holds exhaustively at height ≤ 26.**
+
+## Why this composes (the sandwich; see the S319 synthesis doc)
+
+- **kind-pasteur HYP-7940** (today): micro-gap (1/14, 1/14 + 1/48104) empty to
+  max speed 281,577, conditional on the S-T extraction facts — the effective
+  bottom plank at n = 14.
+- **THIS THEOREM**: the full sub-gap, unconditional, to height 55 — the
+  middle plank.
+- **opus HYP-7930/G-K Thm 1.4** (pinned this session, see synthesis §4): only
+  FINITELY many attained values in (1/14, 3/41] at all heights — the
+  ineffective top plank. In the Kravitz/Fan–Sun stratification (repo
+  LRCSpectrumWindow), every candidate value in the open sub-gap has stratum
+  k ≥ 3 (4/55, 5/69, 6/83, 7/96, 7/97, …), no k ≤ 2 construction can enter,
+  and the D ≥ 15 tail is Fan–Sun-inadmissible (k = s − 13D ≥ 14 has no
+  representation with k ≤ 13).
+
+The named missing piece is unchanged but sharpened: an effective height bound
+for the finite G-K list (opus's C4), toward which every increment of B here
+is a permanent plank.
+
+## Spectroscopy leads (for the rung/CRT programs)
+
+The 50 pinning survivors' witnesses live at q ∈ [43, 48] — immediately above
+QPIN = 41. Extending pinning to q ≤ 48 would zero out the survivor count at
+B = 55 entirely (predicted; one-line change, worth doing when pushing B ≥ 60).
+The 2/27 rung has ≥ 3 realizers of distinct shapes at heights ≤ 26 (new), so
+rung-realizer multiplicity grows below the classical ladder — data for
+death-star's gate-tower realizability law and boxeph's CRT stack.
