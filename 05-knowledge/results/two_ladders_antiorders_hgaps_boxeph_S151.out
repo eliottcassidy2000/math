@@ -1,0 +1,69 @@
+================================================================================================
+(1)+(2) n <= 6 exhaustive: |Aut| | h  +  SC cross-table (|Aut|, anti-orders, h)
+================================================================================================
+n=3: classes=2  |Aut| divides h: ALL OK
+    SC: |Aut|=1  anti-orders=[2]      h=1   h/|Aut|=1
+    SC: |Aut|=3  anti-orders=[2]      h=3   h/|Aut|=1
+n=4: classes=4  |Aut| divides h: ALL OK
+    SC: |Aut|=1  anti-orders=[2]      h=1   h/|Aut|=1
+    SC: |Aut|=1  anti-orders=[2]      h=5   h/|Aut|=5
+n=5: classes=12  |Aut| divides h: ALL OK
+    SC: |Aut|=1  anti-orders=[2]      h=1   h/|Aut|=1
+    SC: |Aut|=1  anti-orders=[2]      h=9   h/|Aut|=9
+    SC: |Aut|=1  anti-orders=[2]      h=9   h/|Aut|=9
+    SC: |Aut|=1  anti-orders=[2]      h=11  h/|Aut|=11
+    SC: |Aut|=1  anti-orders=[2]      h=13  h/|Aut|=13
+    SC: |Aut|=3  anti-orders=[2]      h=3   h/|Aut|=1
+    SC: |Aut|=3  anti-orders=[2]      h=15  h/|Aut|=5
+    SC: |Aut|=5  anti-orders=[2]      h=15  h/|Aut|=3
+n=6: classes=56  |Aut| divides h: ALL OK
+    SC: |Aut|=1  anti-orders=[2]      h=1   h/|Aut|=1
+    SC: |Aut|=1  anti-orders=[2]      h=5   h/|Aut|=5
+    SC: |Aut|=1  anti-orders=[2]      h=17  h/|Aut|=17
+    SC: |Aut|=1  anti-orders=[2]      h=17  h/|Aut|=17
+    SC: |Aut|=1  anti-orders=[2]      h=29  h/|Aut|=29
+    SC: |Aut|=1  anti-orders=[2]      h=29  h/|Aut|=29
+    SC: |Aut|=1  anti-orders=[2]      h=33  h/|Aut|=33
+    SC: |Aut|=1  anti-orders=[2]      h=37  h/|Aut|=37
+    SC: |Aut|=1  anti-orders=[2]      h=41  h/|Aut|=41
+    SC: |Aut|=3  anti-orders=[2]      h=45  h/|Aut|=15
+    SC: |Aut|=3  anti-orders=[2, 6]   h=45  h/|Aut|=15  <-- 3|h with order-6 anti
+    SC: |Aut|=9  anti-orders=[2, 6]   h=9   h/|Aut|=1  <-- 3|h with order-6 anti
+LEMMA verified: Aut acts freely on directed Ham paths => |Aut| | h;
+with Redei (h odd) this re-proves MOON (|Aut| odd).
+
+================================================================================================
+(3) circulants: n=7 (all 8) and n=9 (all 16): h values (predict 7*odds / 9*odds)
+================================================================================================
+  n=7: h values = [175, 189]
+      h=175  (h/7=25) e.g. S=[1, 2, 3]  x6
+      h=189  (h/7=27) e.g. S=[1, 2, 4]  x2
+  n=9: h values = [3159, 3267, 3357]
+      h=3159 (h/9=351) e.g. S=[1, 3, 4, 7]  x4
+      h=3267 (h/9=363) e.g. S=[1, 2, 3, 4]  x6
+      h=3357 (h/9=373) e.g. S=[1, 2, 3, 5]  x6
+
+================================================================================================
+(4) EXACT n=7 exclusion: all tournaments with an order-3 automorphism
+================================================================================================
+  cycle type 331: 128 invariant tournaments enumerated
+  cycle type 31111: 2048 invariant tournaments enumerated
+  h-values over ALL order-3-symmetric n=7 tournaments: [3, 9, 15, 27, 33, 45, 51, 57, 69, 75, 99, 111, 123, 129, 135, 159, 171, 189]
+  h = 21 occurrences: 0 ; h = 7 occurrences: 0
+  => h = 21 at n = 7 EXCLUDED outside |Aut| in {1,7}; rotational case decided in (3).
+
+================================================================================================
+(5) anti-order 10 at n = 10: explicit construction (2*mu law upper bound)
+================================================================================================
+  tournament OK: True ; sigma = tau o r is anti-auto: True ; order(sigma) = 10
+  => anti-order 10 realized at n = 10.  Lower bound n >= 10 for order-10:
+  sigma^2 = order-5 auto a; an involutive-part tau commuting with a must map
+  each 5-orbit to a DIFFERENT 5-orbit (centralizer of a 5-cycle in S5 = Z5 has
+  no involution; tau|orbit = id would force an arcless 5-set) => orbits paired
+  => n >= 10.  THE 2*mu(m) LAW: minimal n for anti-order 2m = 2*mu(m), mu = 
+  minimal degree of an order-m permutation.  m=3: n=6 (census); m=5: n=10 (here);
+  m=15: n=16 (predicted, NOT 30: orbits {3,5} paired).
+DONE.
+
+(4b) order-5-symmetric n=7 tournaments (orbits 5+1+1): 32 exact, 5 pair-orbits
+     h-values: [15, 135]

@@ -44,6 +44,15 @@ than merely stay positive.
 FILES: THM-1375, THM-1350 amended, script + out, HYP-8210. opus; S400.
 
 ---
+## boxeph-2026-07-20-S151 -- THE TWO LADDERS: {2,6} and {7,21} are the two shadows of Redei parity; |Aut| | h lemma; 2*mu(m) threshold law; exact n=7 symmetry exclusion (HYP-8215)
+
+**Owner directive:** see how {2,6} relates to {7,21}.
+
+- **The relation:** both are X*{1,3} ladders from ONE source. FREE-ACTION LEMMA (new, verified exhaustively n<=6): Aut acts freely on directed Ham paths => |Aut| | h; + Redei (h odd) => Moon (|Aut| odd) => anti-orders in 2*odds. {2,6} sits in 2*odds BECAUSE {7,21} sits among odds: Redei parity seen through two free actions. The shared 3 = Z3 (sigma^2 of order-6 antis / the 3|h factor).
+- **2*mu(m) threshold law:** minimal n for anti-order 2m = 2*mu(m); anti-order 10 constructed explicitly at n=10 (two-layer Z5 + swap); orbit-pairing lower bound; predicts 30@16 not 30.
+- **Ladders diverge at rung 5:** 35 = 7*5 attained at n=7 (S146 sample) — fifth-term break motif; but EXACT theorem: no n=7 tournament with |Aut|>1 has h in {7,21,35} (2176 + 32 + 8 symmetric tournaments enumerated; h(QR7) = 189; circulant-7 h = {175,189}) => the 35-witness is asymmetric; h in {7,21} at n=7 cornered into |Aut|=1.
+- Path-regular curiosities: h = |Aut| for C3 and the n=6 |Aut|=9 SC class (regular action on Ham paths).
+- Handoffs: n=7 |Aut|=1 exhaustion for h in {7,21}; composite-m threshold proof; path-regular classification.
 
 ## death-star-2026-07-20-S59v — CONVERGENCE + SYNTHESIS: my weight-sign reduced JC = mac-mini's THM-1370 (credited, not re-filed); contributed the THREE-REDUCED-JC intersection reflection (the owner counterexample = unique minimal object escaping mac-mini's SIGN + opus's PARITY + klein's DEGREE reduced-JCs). MISTAKE-199 4th recurrence (concurrency landed mid-computation), caught
 
