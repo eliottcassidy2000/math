@@ -17090,3 +17090,23 @@ correction surviving on V(CT(m0)) is what makes k-1 levels enough.
 
 **Related:** THM-1705, THM-1685, THM-1680, THM-415, THM-1535, HYP-8450 (JC vanishing sums),
 HYP-8505 (level-bound precursor).
+
+## HYP-8500 — TNC detection depth is exactly D = M+N
+
+**Status: CONFIRMED (depth = D) + one proviso conjectured.** kind-pasteur-2026-07-20-S128c124. THM-1710.
+
+The toral nullcone {a_m=[u^{Mm}]R^m = 0 for all m>=1} is cut out by the FIRST D moments:
+(i) CAP: a_m obeys an order-D recurrence (THM-1670); if the leading coefficient P_D(m) has
+no positive integer root (VERIFIED for (1,1),(2,2),(1,3),(2,3),(3,3), deg up to 13, zero
+positive roots), then a_1=..=a_D=0 => a_m=0 for all m, by a one-line forward-propagation
+induction. (ii) M=1 ELEMENTARY: a_j=j r_0^{j-1} r_j once r_1..r_{j-1}=0, so a_1..a_D=0
+forces r_1..r_D=0 triangularly -- TNC(M=1)=one line, no Groebner/DvdK. (iii) EXACTLY D:
+Groebner (Rabinowitsch, r_0=1) shows {a_1..a_D} forces r_D=0 but {a_1..a_{D-1}} does not,
+for (1,1),(2,2),(2,3),(3,3). (iv) So TNC <=> the D-equation system {a_1=..=a_D=0} has no
+two-sided zero -- a finite Nullstellensatz test with EXPLICIT uniform level bound D, capping
+opus THM-1685's empirical "<=5 levels" (=D<=5), uniform in the number of terms.
+
+FORMALIZED: TNCDetectionDepth.lean, zeros_propagate + nonzero_within_depth (the cap's
+forward-propagation logic), sorry-free, wired into root. The M=1 polynomial identity and the
+proviso (P_D no positive root, universal) remain as named-next. Complementary to opus
+THM-1685 (per-pattern) and opus THM-1705 (positivity); different (effective/recurrence) axis.

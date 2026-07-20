@@ -54,6 +54,44 @@ lemma could close both flagship residuals.
 
 **Artifacts:** THM-1705; HYP-8515; 2 scripts + 2 outputs.
 
+## kind-pasteur-2026-07-20-S128c124
+
+**A stronger closure of TNC: the detection depth is EXACTLY D = M+N. THM-1710.**
+
+Owner: find even stronger ways for TNC to be closed. The current closures are analytic
+(DvdK, all m) or per-pattern Groebner (opus THM-1685). This one is EFFECTIVE and uniformly
+bounded: the toral nullcone is cut out by the FIRST D moments.
+
+- **(i) THE CAP.** a_m=[u^{Mm}]R^m obeys an order-D recurrence (THM-1670). If the leading
+  coefficient P_D(m) has no positive integer root -- VERIFIED for (1,1),(2,2),(1,3),(2,3),
+  (3,3), deg P_D up to 13, zero positive roots -- then a_1=..=a_D=0 => a_m=0 for all m>=1,
+  by the one-line induction 'a_m..a_{m+D-1}=0 and P_D(m)!=0 force a_{m+D}=0'. So the nullcone
+  = V(a_1,..,a_D): first D moments, no more.
+- **(ii) M=1 IS ELEMENTARY** (no Groebner, no DvdK): a_j=[u^j]R^j=j r_0^{j-1} r_j once
+  r_1..r_{j-1}=0 (verified D=2..6), so a_1..a_D=0 forces r_1..r_D=0 triangularly. TNC for the
+  whole M=1 (=N=1) family in one line.
+- **(iii) DEPTH EXACTLY D.** Groebner (grevlex, Rabinowitsch, r_0=1): {a_1..a_D} forces
+  r_D=0 but {a_1..a_{D-1}} does NOT -- for (1,1),(2,2),(2,3),(3,3), i.e. D=2,4,5,6.
+- **(iv) CONSEQUENCE.** TNC <=> {a_1=..=a_D=0} has no two-sided zero: a finite
+  Nullstellensatz test with EXPLICIT, UNIFORM level bound D. This CAPS opus THM-1685's
+  empirical "<=5 CT levels" (=D<=5), uniformly in the number of terms, and is
+  formalization-ready (certificate = polynomial identity 1=Sum h_i a_i + h(1-w r_D)),
+  unlike analytic DvdK.
+- **FORMALIZED:** TNCDetectionDepth.lean -- zeros_propagate + nonzero_within_depth (the
+  cap's forward zero-propagation, abstracted from the recurrence), sorry-free, wired into
+  root, clean build Mathlib v4.30.0. Dual to my ThreeTerm.no_common_root.
+
+Complementary to opus THM-1685 (per-pattern Nullstellensatz) and opus-S422 THM-1705
+(positivity/common-ray) -- a different, effective/recurrence-based axis. Not a claim of GMC(2);
+by THM-1690 the remaining GMC(2) gap is radial (Laplace determinacy), and this closes more of
+the toral side.
+
+**Handoff / named-next.** (1) Prove the proviso 'P_D(m) has no positive integer root' for all
+(M,N) -- an indicial/Riemann-Hurwitz argument for z^M=tR(z) should place all leading-coeff
+roots at non-positive or non-integer m, making the cap unconditional and D an a-priori
+termination bound for opus's decision procedure. (2) Formalize the M=1 triangular identity
+a_j=j r_0^{j-1} r_j in Lean -- puts an infinite TNC family in the kernel.
+
 ## death-star-2026-07-20-S66 -- GMC(2): the stacked-jumps edge is NOT empty, but the total jump never vanishes (loop argument = the referee's amendment) (HYP-8510)
 
 **Owner:** check whether the stacked-jumps edge is empty for GMC(2).

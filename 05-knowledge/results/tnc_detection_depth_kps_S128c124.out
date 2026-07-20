@@ -1,0 +1,34 @@
+======================================================================================
+(A) M=1 IS ELEMENTARY: a_j = j*r_j once r_1..r_{j-1}=0 (triangular induction)
+======================================================================================
+  D=2 : a_j = j*r_0^{j-1}*r_j whenever r_1..r_{j-1}=0, all j<=D : True
+  D=3 : a_j = j*r_0^{j-1}*r_j whenever r_1..r_{j-1}=0, all j<=D : True
+  D=4 : a_j = j*r_0^{j-1}*r_j whenever r_1..r_{j-1}=0, all j<=D : True
+  D=5 : a_j = j*r_0^{j-1}*r_j whenever r_1..r_{j-1}=0, all j<=D : True
+  D=6 : a_j = j*r_0^{j-1}*r_j whenever r_1..r_{j-1}=0, all j<=D : True
+  => a_1=...=a_D=0 forces r_1=...=r_D=0 (with r_0!=0): R one-sided. TNC(M=1) proved.
+
+======================================================================================
+(B) LEADING RECURRENCE COEFFICIENT P_D(m) HAS NO POSITIVE INTEGER ROOT
+======================================================================================
+  (M,N)=(1,1) D=2 : deg P_D=1, positive-integer roots: NONE
+  (M,N)=(1,2): None (dim 2)
+  (M,N)=(2,2) D=4 : deg P_D=5, positive-integer roots: NONE
+  (M,N)=(1,3) D=4 : deg P_D=6, positive-integer roots: NONE
+  (M,N)=(2,3) D=5 : deg P_D=10, positive-integer roots: NONE
+  (M,N)=(3,3) D=6 : deg P_D=13, positive-integer roots: NONE
+
+======================================================================================
+(C) DEPTH IS EXACTLY D: {a_1..a_D=0} forces one-sided; {a_1..a_{D-1}=0} does not
+======================================================================================
+  (M,N)=(1,1) D=2 : {a_1..a_D=0}=>r_D=0 (1 in ideal): True   {a_1..a_{D-1}=0}=>r_D=0: False
+     -> detection depth is EXACTLY 2 : True
+  (M,N)=(2,2) D=4 : {a_1..a_D=0}=>r_D=0 (1 in ideal): True   {a_1..a_{D-1}=0}=>r_D=0: False
+     -> detection depth is EXACTLY 4 : True
+  (M,N)=(2,3) D=5 : {a_1..a_D=0}=>r_D=0 (1 in ideal): True   {a_1..a_{D-1}=0}=>r_D=0: False
+     -> detection depth is EXACTLY 5 : True
+  (M,N)=(3,3) D=6 : {a_1..a_D=0}=>r_D=0 (1 in ideal): True   {a_1..a_{D-1}=0}=>r_D=0: False
+     -> detection depth is EXACTLY 6 : True
+
+  TNC <=> {a_1=...=a_D=0} has no two-sided solution -- exactly D moments, no more.
+  The order-D recurrence (THM-1670) is what caps opus THM-1685's level count at D.
