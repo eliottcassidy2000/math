@@ -1,3 +1,36 @@
+## opus-2026-07-19-S403 -- CREATIVE DFS, THREE SPARKS TO VERDICT IN ONE SESSION (owner: depth-first connection pursuit with concurrent hypothesis investigation): (1) HYP-7970 THE CF ACTIVE-LEG LAW, CONFIRMED corpus-wide -- at every tested PINCHED maximizer t* = a/q, a straddling leg is a CONVERGENT DENOMINATOR q_m of a/q and D = |q_m a - p_m q|*(s_pair/q): the determinant IS the CF remainder of the active convergent; the ladder m=3..6 is ONE convergent (leg 5) at growing remainder; cross-N holds (3/59 leg 5, 4/127 leg 7, 4/247 leg 7); shallow non-pinched maximizers properly exempt; (2) HYP-7975 the S402 gridmax lever answered NEGATIVE-INFORMATIVE: G*0(11) FILLS the window with the spectrum's own rung values (2/27, 3/41, 4/53, 4/55, ... realized, mostly by the AP tuple (1..11) mod q) -- the rung ladder is SELF-SIMILAR one level down, and the finite-list question genuinely needs Conj 1.5 or the CF frame; (3) HYP-7980 the Singer pole (PG(2,13), boxeph-S110's untouched lead) is GENERIC-LOOSE, not anti-extremal: M(Singer mod 183) = 9/47 = 0.1915, BELOW the random median 0.2035 -- the poles metaphor survives qualitatively, has no quantitative M-axis
+
+Owner: explore past threads DFS for inspiration, propose new hypotheses, investigate
+concurrently. ROUTES: (D,s)-pinch -> Kakeya lattice-tube (kp) -> Stern-Brocot parents ->
+spark 1; S402 G*0-relocalization -> discrete dilated-interval covering of Z/q -> spark 2;
+boxeph-S110 PG(2,13) poles -> GF(13^3) Singer construction (Frobenius x -> 3x, trace =
+3*const, primitive x+7, lambda=1 verified) -> spark 3. Dead-ends visited and RECORDED
+CHEAPLY: 27 = 3^3 Farey numerology (death-star gate territory, not duplicated);
+witness-component parity (t -> 1-t involution: #components odd iff all speeds odd --
+three-line observation, subsumed by the all-odd dispatch); Vitali-wall-vs-cage tension
+(resolved as triage axes 3/4 vs 5). WHY SPARK 1 MATTERS: proved, it converts "bound D"
+(THM-1268/1269 = Wall A's (D,s) face) into "bound the CF depth/remainder of the active
+convergent" -- three-gap/Ostrowski territory; window fractions in (1/14, 3/41) share CF
+[0;13,1,k>=2,...] so 4/55-realizability localizes to one convergent table; death-star's
+gate laws should be congruence conditions on convergent tables (their L2 Dirichlet step
+is the per-candidate shadow). Proof target NAMED (one session, three-gap exchange at a
+pinched maximizer). INSTRUMENT NOTE, self-caught: first CF run piped through head and
+died on EPIPE mid-file (the MISTAKE-138 genus my own S399 taxonomy catalogues) -- caught
+because cross-N sections were missing; rerun clean. Fleet note: mac-mini-S123 landed the
+dominance/palindrome results concurrently -- their "crossing moduli ARE the (D,s) rung
+lattices" and my spark-1 law look like two faces of the rung lattice (dominance-crossing
+vs CF-remainder); flagged for whoever proves HYP-7970.
+
+Prompt (owner): work an even more more creative connection pursuit session where you
+explore past threads and concepts related to them in a depth first search for
+inspiration, where you creatively propose new hypotheses you investigate regarding them
+concurrently
+
+FILES: HYP-7970/7975/7980, reflection
+dfs-three-sparks-cf-active-leg-law-gridmax-fills-singer-generic-opus-S403, 3 scripts +
+frozen outs. -> all
+
+---
 ## mac-mini-2026-07-19-S123 -- THE TWO QUANTIZATIONS (owner: finish LRC(14), synthesize the near-misses, tournament/metagraph focus): the DOMINANCE DEFICIT LAW P(a,b) = meas{||at||>||bt||} = 1/2 - [mixed-parity]/(2(b^2-a^2)) (both-odd pairs tie EXACTLY -- proved + exact referee, 1101 pairs) => the theta=1/2 dominance tournament is the dyadic preorder, BLIND at the floor (axis-3 confirmed by design), but its crossing moduli ARE the (D,s) rung lattices and slack parity = s parity = straddle parity (odd-slack rungs force mixed strict-deficit straddles; both TIGHT families straddle both-odd (1,13), deficit 0) + THE BLOCKER MIRROR PALINDROME (HYP-7965 PROVED): LEM-020's tau<->1-tau acts on THM-1240's blocker data as an exact set-valued palindrome, central column = EVEN pack speeds at tau=1/2 (2-adic depth-1 inside Wall B), parity localization verified 8 families x all carriers; first-draft same-gap tie claim REFUTED by own referee (c=3,d=12: {8} vs {10}) and corrected to the cross-gap pairing
 
 Owner directive: work to finish LRC(14); see the times we have come close; synthesize multiple
