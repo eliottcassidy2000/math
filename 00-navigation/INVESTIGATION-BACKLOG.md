@@ -1,8 +1,15 @@
 # Investigation Backlog
 
+## Lead kind-pasteur-2026-07-20-S128c101: after THM-1345 (HYP-8150)
+- **(i) Prove the trace module:** conjecture = trace-polynomial monomials are exactly those outside the pure-x cone; suspected proof from z-affinity (z enters fibers linearly), depression (no x^2 term), and the master identity (x^3 reduces with 1/L). Would upgrade THM-1335(4)/1345(3) from computed to explained and settle all towers F^m at once (module closed under Tr => induction).
+- **(ii) The Abel-Ruffini rung:** formalize 'radical-invertible' as a realization-program invariant; the A_5 hunt (2-jet architecture, backlog c99(a)) now carries a second flag: the first non-radical Keller map = the polynomial Abel-Ruffini theorem.
+- **(iii) Sections atlas:** sigma over {g=0} exists because the fiber cubic factors there; classify all divisors D with polynomial sections of F over D (candidates: images of monodromy-degeneration loci; the {E=0} u-fold wall).
+- **(iv) Lean: the section identity F(0,b,a-4b^2) = (a,b,0) is a 3-line polynomial identity; add to the certification package (with the master identities + 108a^2L identity + Tr(y) = 3b/2 + Tr(xy) = -3).
+- **Status:** OPEN; (i) is the explanatory prize; (iv) extends the headline Lean package.
+
 ## Lead kind-pasteur-2026-07-20-S128c99: after THM-1335 -- the trisection/trace follow-ups (HYP-8130)
 - **(a) THE 2-JET ARCHITECTURE (now the priority door):** all z-affine boxes empty at degree != 3 => the degree-4 seed (A_4/S_4 by Smith) needs F = Az^2 + Bz + C. Derive the z-graded det J identities (deg-2 analog of the design equations); the quartic analog of the trisection is the SWALLOWTAIL (A_3) -- W-ADE's next rung. One hard session.
-- **(b) F.F centroid test:** compute the fiber-trace maps of F.F (degree 9) -- polynomial or poled? Decides whether trace-polynomiality is seed-specific or propagates through the monoid (the polynomial-centroid conjecture's first real test).
+- **(b) F.F centroid test -- DONE (S128c101, THM-1345): POLYNOMIAL, via tower transitivity Tr_FF = Tr_F o Tr_F + the trace module ({y^2, xyz, x^2z^2, y^3z} all trace-polynomial); the polynomial-centroid law propagates through the monoid.**
 - **(c) Resolvent-conductor = Jelonek (general cubic Keller):** prove or refute: for every degree-3 Keller cover of C^3, the quadratic resolvent of the fiber cubic ramifies exactly on the asymptotic variety. True for F (Delta = -4Q^2L, Delta_u = -4E^2L, Jelonek = {L=0}). A clean paper-sized statement.
 - **(d) Lean package v2:** master identities + 108a^2L = (12a-b^2)^3 + E^2 + Tr(y) = 3b/2 -- four pure polynomial identities now carry the entire structural analysis; combine with c97 det/collisions into the certification file.
 - **(e) Trace-polynomiality proof attempt:** why are the COORDINATES trace-polynomial while x^2 is not? Suspect: z-affinity + depression; a direct proof would upgrade THM-1335(4) from computed to explained, and shape the general conjecture.
