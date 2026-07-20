@@ -1,0 +1,93 @@
+==============================================================================
+PART A -- Tutte's matrix-tree on tournaments, and Kirchhoff's product
+==============================================================================
+  n  classes  matrixtree == brute force  sum_r a_r == prod nonzero mu
+  3        2                       True                          True
+  4        4                       True                          True
+  5       12                       True                          True
+  6       56                       True                          True
+
+  Transitive tournament: L_in is upper triangular with in-degrees 0,1,...,n-1
+  on the diagonal, so sum_r a_r = (n-1)!  -- and ALL of it sits at the source,
+  since no arborescence can be rooted anywhere else.
+    n=3: sum_r a_r =        2   (n-1)! =        2   H(TT_n) = 1
+    n=4: sum_r a_r =        6   (n-1)! =        6   H(TT_n) = 1
+    n=5: sum_r a_r =       24   (n-1)! =       24   H(TT_n) = 1
+    n=6: sum_r a_r =      120   (n-1)! =      120   H(TT_n) = 1
+    n=7: sum_r a_r =      720   (n-1)! =      720   H(TT_n) = 1
+    n=8: sum_r a_r =     5040   (n-1)! =     5040   H(TT_n) = 1
+
+  Paley tournaments (q = 3 mod 4) are regular, so L_in = ((q-1)/2)I - A and
+  spec(A) = {(q-1)/2} u {(-1 +- i sqrt q)/2}, giving the CLOSED FORM
+      sum_r a_r = [ q(q+1)/4 ] ^ ((q-1)/2),     a_r = (1/q) * that.
+    q= 3: sum_r a_r =                  3  predicted                  3  match True   H = 3
+    q= 7: sum_r a_r =               2744  predicted               2744  match True   H = 189
+    q=11: sum_r a_r =           39135393  predicted           39135393  match True   H = 95095
+    q=19: sum_r a_r = 630249409724609375  predicted 630249409724609375  match True   H = 1172695746915
+
+==============================================================================
+PART B -- arborescences RELAX Hamiltonian paths:  h_r <= a_r,  H <= sum_r a_r
+==============================================================================
+  A Hamiltonian path from r IS a spanning out-arborescence rooted at r with every
+  out-degree <= 1.  Dropping that constraint is exactly the relaxation, and the
+  relaxation is a DETERMINANT while H is not (THM-505/506: only the SIGNED face of
+  the master cycle-packing polynomial collapses to det).
+
+  n  h_r<=a_r always   min ratio Sa/H   max ratio Sa/H                 argmin                 argmax
+  3             True           1.0000           2.0000              [1, 1, 1]              [0, 1, 2]
+  4             True           2.0000           6.0000           [1, 1, 2, 2]           [0, 1, 2, 3]
+  5             True           3.2667          24.0000        [1, 2, 2, 2, 3]        [0, 1, 2, 3, 4]
+  6             True           7.2000         120.0000     [2, 2, 2, 3, 3, 3]     [0, 1, 2, 3, 4, 5]
+  7             True          14.5185         720.0000  [3, 3, 3, 3, 3, 3, 3]  [0, 1, 2, 3, 4, 5, 6]
+  (argmin/argmax reported as score sequences)
+
+==============================================================================
+PART C -- is sum_r a_r ADJACENCY-spectral?  (where it sits vs THM-499/500)
+==============================================================================
+  Kirchhoff makes sum_r a_r LAPLACIAN-spectral by construction.  But L_in = D_in - A
+  knows the scores, and spec(A) pins only sum s_i and sum s_i^2 (via c3 = tr A^3/3).
+  So the question is whether ADJACENCY-cospectral tournaments can differ in sum a_r.
+
+  n=4: 3 adjacency-spectra over 4 classes; 1 cospectral groups; sum_r a_r DIFFERS inside 1 of them  => adjacency-spectral? False
+  n=5: 9 adjacency-spectra over 12 classes; 2 cospectral groups; sum_r a_r DIFFERS inside 2 of them  => adjacency-spectral? False
+  n=6: 28 adjacency-spectra over 56 classes; 19 cospectral groups; sum_r a_r DIFFERS inside 16 of them  => adjacency-spectral? False
+  n=7: 168 adjacency-spectra over 456 classes; 116 cospectral groups; sum_r a_r DIFFERS inside 111 of them  => adjacency-spectral? False
+
+==============================================================================
+PART D -- the LOGARITHM: additive with no interaction (H) vs size-shifted (arbor)
+==============================================================================
+  Ordinal sum T1 (+) T2 makes L_in BLOCK UPPER TRIANGULAR:
+      [ L_in(T1)      -J   ]      so spec = spec(L1)  u  ( |T1| + spec(L2) )
+      [    0      pI + L2  ]
+  hence   sum_r a_r(T1 (+) T2) = sum_r a_r(T1) * det(|T1| I + L_in(T2)).
+  Taking logs:
+      log H (T1(+)T2) = log H(T1)  + log H(T2)                 -- NO interaction
+      log Sa(T1(+)T2) = log Sa(T1) + sum_mu log(|T1| + mu)     -- SIZE-SHIFTED
+
+ |T1|  |T2|      Sa(T)    Sa(T1)*det(pI+L2)    ok    H(T)   H1*H2    ok
+    2     2          6                    6  True       1       1  True
+    2     3         24                   24  True       1       1  True
+    2     3         26                   26  True       3       3  True
+    3     2         24                   24  True       1       1  True
+    3     2         36                   36  True       3       3  True
+    3     3        120                  120  True       1       1  True
+    3     3        126                  126  True       3       3  True
+    3     3        180                  180  True       3       3  True
+    3     3        189                  189  True       9       9  True
+  all ordinal-sum laws hold: True
+
+  TREE ENTROPY (1/n) log(sum_r a_r) -- the determinant made additive:
+  n   transitive   max over classes   min over classes
+  3      0.23105            0.36620            0.23105
+  4      0.44794            0.57565            0.44794
+  5      0.63561            0.80147            0.63561
+  6      0.79792            0.96802            0.79792
+  7      0.93989            1.13102            0.93989
+
+SUMMARY
+  Arborescences are the DETERMINANTAL RELAXATION of Hamiltonian paths: same
+  spanning objects, out-degree constraint dropped, and the drop is exactly what
+  turns an intractable count into a determinant.  The logarithm then converts that
+  determinant into an additive spectral sum -- and the ordinal-sum laws show the
+  precise difference: H's log is additive with NO interaction term, the
+  arborescence log is additive with a SIZE-DEPENDENT SHIFT.

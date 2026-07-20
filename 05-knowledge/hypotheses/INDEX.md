@@ -16005,3 +16005,26 @@ The fraction **falls sharply**. Since `max VC = floor(log2 n)` is constant at 2 
 up; but that does not by itself explain why they stop moving *down*. **Measure at `n = 8`**,
 where the ceiling jumps to 3, and see whether the fraction rebounds — if it does, the effect
 is a ceiling artifact; if not, something structural is pinning VC inside switching classes.
+
+### HYP-8315 — the two arborescence extremals
+**Status: OPEN (verified n<=7, THM-1460 SS B/D).** Two conjectures from the arborescence census:
+(a) the TRANSITIVE tournament MINIMISES `sum_r a_r` over all tournaments on `n` vertices, with
+value exactly `(n-1)!`; (b) the REGULAR (Paley, where it exists) tournament MAXIMISES it.
+Equivalently for tree entropy `(1/n) log sum_r a_r`. Both verified `n = 3..7` only.
+(a) looks the more tractable: `sum_r a_r = prod` of the nonzero eigenvalues of `D_in - A`, and for
+the transitive tournament that is `(n-1)!` because `L_in` is triangular with in-degrees
+`0,1,...,n-1`. A proof probably runs through majorisation of the in-degree sequence.
+**Also open:** the RATIO `sum_r a_r / H` is extremised the same way (transitive max at exactly
+`(n-1)!`, regular min: `1, 2, 3.27, 7.2, 14.52`). Is the min ratio asymptotically `~c^n`? The
+five values roughly double each step, which would make the relaxation exponentially loose even
+at its tightest — worth pinning, since it bounds how useful the determinant is as a proxy for H.
+
+### HYP-8320 — is the arborescence count comparable to H at all?
+**Status: OPEN (raised by THM-1460 SS C).** `sum_r a_r` is Laplacian-spectral but NOT
+adjacency-spectral (differs inside 111/116 cospectral groups at n=7), so it is transverse to the
+THM-499/500 hierarchy rather than above or below it. **The comparison never made:** does
+`sum_r a_r` separate any iso classes that `H` does not, and vice versa? Compute both on all
+classes `n <= 7` and cross-tabulate. If they are incomparable — the likely answer — then the
+determinantal relaxation carries information `H` misses, which would make the PAIR `(H, sum a_r)`
+a strictly better fingerprint than either, in the same way THM-506 found `(char, perm)`
+dominates `H`. Cheap to test and directly comparable to THM-506's fingerprint result.
