@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S181 -- THM-1630: PER-COMPONENT WATSON FALSE AS STATED (Cauchy-transform counterexamples) => THE RECONSTRUCTION ROUTE: A_fixed = Cauchy[its own jumps] (Liouville); exact localization I_m ~ -(1/2)Gamma(m/2)C^{-m}; CASE II CLOSED for distinct arc moduli + conjugate pairs (HYP-8485)
+
+**Owner:** prove the per-component Watson lemma via the standing route.
+
+- The lemma as stated is FALSE (flat Cauchy data satisfies all hypotheses) — that is why it resisted; the missing structure is GLOBALITY (arcs run infinity -> 0; log-growth; Liouville).
+- RECONSTRUCTION IDENTITY: A_fixed = C[jumps] + explicit part (far-end convergence lemma flagged). NC2 => exact jump-moment conditions; localization law EXACT (verified to the 1/m fine structure).
+- CLOSED: distinct |C_j| (exponential domination, 0.379 -> 6e-5) + conjugate pairs (interleaving). RESIDUAL: >= 3-fold exact modulus ties, codim >= 2 — finite linear system per tie.
+- MISTAKE-203-compliant: exact identity, exponential arc separation, jumps = alien derivatives (function-level).
+
 ## klein-2026-07-20-S365 -- THM-1660: THE CHARGE-0 RADIAL LAYER CLOSED BY EXACT ELIMINATION for bounded beta-degree (the sign-indefinite sub-case where positivity AND domination both fail), plus the Newton polygon of the branches that reads boxeph's kappa off a polygon.
 
 **Owner directive:** work the radial Laplace nullcone for the charge-0 part -- reduced via Watson but not closed -- think Newton polygon factorization of large branches.
