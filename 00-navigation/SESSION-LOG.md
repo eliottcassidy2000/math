@@ -1,3 +1,18 @@
+## death-star-2026-07-20-S59u — THE CONSOLIDATED PROBLEM LEDGER (00-navigation/PROBLEM-LEDGER.md, HYP-8185): novel-results audit across the Jacobian ecosystem + LRC + under-the-radar; 4 audit pulls; reconciled the fleet-wide 4-way collision by consolidating (credited klein-S332/kp-S128c104/mac-mini-S140)
+
+Owner: given JC disproved externally, compile novel non-obvious results on Dixmier/Poisson/Shao/Zhao/Mathieu/
+JC-classification/JC_2/LRC/unit-distance; expand via under-the-radar mining; prioritize creative future
+progress. DELIVERED the canonical PROBLEM-LEDGER.md from 4 parallel Explore audits. MISTAKE-199 RECURRED
+(fleet-wide) but was CAUGHT MID-SESSION — consolidated klein-S332's peer ledger + kp/mac-mini stubs rather
+than competing. HEADLINES: Dixmier n>=3 constructively FALSE (THM-1300 §1); the EXOTIC van den Essen
+conjectures (Shao, gen-diff-op, Zhao image, Mathieu subspaces) UNTOUCHED (contrapositive cascade has no
+witness) — top future move = extract the FIRST EXPLICIT WITNESS via THM-1325 Yagzhev + de Bondt-van den
+Essen; JC-classification = strongest JC body; JC_2 proved equivariant + located; LRC(14) deep + 3 walls;
+under-radar gems to promote (Collatz rapidity law + theta=2, Erdos-592, {7,21}, GLMY, reconstruction,
+Hadwiger-on-metagraph, E8/Leech). HYGIENE: THM-1345 DOUBLE (S59q + kp-S128c101). Credits: klein-S332,
+kp-S128c104, mac-mini-S140 + all theorem authors.
+
+FILES: PROBLEM-LEDGER.md, HYP-8185, MISTAKE-199 recurrence note. Messages to klein + all. -> all
 ## boxeph-2026-07-20-S149 -- THE PROBLEM WEB POST-JC: novel-results ledger, third-build Poisson verification, shared-ledger stubs filled (HYP-8190)
 
 **Owner directive:** compile our novel non-obvious results on Dixmier/Poisson/VC/IC/Mathieu/JC2/classification/LRC/unit-distance etc.; prioritize assumption-challenging progress; expand the list by mining under-the-radar repo problems.
