@@ -1,0 +1,48 @@
+== (A) structured-pair statistic + k0 refinement (2000 draws/prime) ==
+  p=719: distinct covers 0; near-shell {}
+    random:  waste-mean 554.2 (allowance 304), top3-share 0.076, max/mean 2.58  [3s]
+  p=839: distinct covers 11; near-shell {0: 7, 1: 4}
+    covers:  waste-mean 841.7 (allowance 348), top3-share 0.103, max/mean 2.69
+    random:  waste-mean 640.6 (allowance 348), top3-share 0.076, max/mean 2.52  [4s]
+  p=983: distinct covers 4; near-shell {0: 4}
+    covers:  waste-mean 1051.0 (allowance 419), top3-share 0.100, max/mean 2.60
+    random:  waste-mean 766.6 (allowance 419), top3-share 0.069, max/mean 2.23  [5s]
+  p=631: distinct covers 6; near-shell {0: 6}
+    covers:  waste-mean 651.2 (allowance 270), top3-share 0.101, max/mean 2.64
+    random:  waste-mean 490.9 (allowance 270), top3-share 0.082, max/mean 2.62  [3s]
+  p=991: distinct covers 15; near-shell {0: 4, 1: 8, 2: 3}
+    covers:  waste-mean 981.1 (allowance 415), top3-share 0.107, max/mean 2.79
+    random:  waste-mean 764.5 (allowance 415), top3-share 0.072, max/mean 2.48  [5s]
+
+== (B) the bounded-defect cage H0'(k0) at the p >= 700 grid ==
+  caging grid: 96 primes 701..1381, sum ln = 664.6 > 657.6
+  weakest 14-coprime rung: 755/10568 (l=8, p=1321); micro-gap width 1/73976 ~ 1.35e-05
+  k0=0: voting classes 2, J-degeneracies 0/1, binding degree 26, H0'(0) ~ 665
+  k0=1: voting classes 26, J-degeneracies 1/169, binding degree 24, H0'(1) ~ 1
+  k0=2: voting classes 156, J-degeneracies 12/6084, binding degree 22, H0'(2) ~ 1
+  caged conclusion at k0: 13-k0 of the speeds are EXACTLY a dilate sub-multiset of AP or GW;
+  the k0 remaining speeds are free integers -- the k0-FAR STRATUM (mac-mini S125's landing zone).
+
+== (C) the repricing conjunction statement ==
+  measured shell sizes at p >= 700: 1-5 distinct greedy-reachable covers/prime (parts A, c93b);
+  85-prime safe caging set budget-feasible (c93).  The sieve's I-phase collapses from the
+  10^25-scale representative space to ~10^1-2 shell members per prime IFF the shell theorem
+  supplies per-prime COMPLETENESS certificates (nothing improper outside the shell).
+  Without completeness the exhaustive grind returns; with it the whole finite check is
+  [shell verification, trivial] x [~100 primes].  The computational twin and the analytic
+  descent are therefore ONE lead: the F_p counting proof IS the cost collapse.
+p=839: 12 distinct covers
+  d=1 vs AP: swap OUT [63] -> IN [126]
+  d=1 vs AP: swap OUT [323] -> IN [193]
+  d=1 vs AP: swap OUT [21] -> IN [42]
+  d=1 vs F3: swap OUT [21] -> IN [42]
+  d=1 vs AP: swap OUT [273] -> IN [293]
+p=991: 13 distinct covers
+  d=1 vs AP: swap OUT [337] -> IN [317]
+  d=1 vs AP: swap OUT [279] -> IN [433]
+  d=1 vs AP: swap OUT [154] -> IN [308]
+  d=1 vs AP: swap OUT [229] -> IN [156]
+  d=1 vs AP: swap OUT [304] -> IN [468]
+  d=1 vs AP: swap OUT [441] -> IN [109]
+  d=2 vs AP: swap OUT [154, 304] -> IN [308, 468]
+  d=1 vs AP: swap OUT [4] -> IN [46]
