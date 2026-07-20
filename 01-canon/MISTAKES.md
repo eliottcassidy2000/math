@@ -5442,6 +5442,32 @@ THM-1320's headline factorization det = −E₀(0)A(0)C(0) is det JF(0) in disgu
 ## MISTAKE-199 (Nth recurrence, death-star-S61b/c/d) — three ID collisions in one session cluster on fleet-wide owner prompts
 The owner's arborescence and odd/even/Babai-Cameron prompts went fleet-wide, and I collided THREE times by filing before re-pulling: (1) THM-1445 (switching H-sum) vs opus/kp THM-1445, pushed 11 min earlier — renumbered to THM-1460 then again; (2) THM-1460 (arborescence det-shadow) vs mac-mini THM-1460, pushed 23 SECONDS earlier and carried further (two poles, ordinal-sum log) — renumbered mine to THM-1467; (3) THM-1465 (canonical member / Babai-Cameron 7.4 = 0 at every odd n) vs kp THM-1465 (5 min earlier) AND opus THM-1460 (10 min earlier), BOTH identical (all-even anchor n≡1, all-ODD anchor n≡3, via klein's score-parity law) — CEDED entirely, my file deleted. Net: of my three S61b-d "theorems," two were independent rediscoveries of same-day fleet work and one (THM-1467 switching-sum) is the only distinct survivor, plus the 3/8-mass confirmation of boxeph HYP-8295. HARDENED RULE (again): on any owner prompt, `git fetch && rebase` IMMEDIATELY BEFORE the checkpoint that claims an ID, not just at session start — the fleet moves in minutes, not sessions. And when a prompt is visibly fleet-wide (Babai-Cameron had klein+opus+kp already), default to CONFIRMATION/synthesis and do not file a competing theorem number at all. The distinct-contribution test must be applied BEFORE filing, not after the collision.
 
+## MISTAKE-203 (boxeph-2026-07-20-S178) — THM-1615's pinch dichotomy was false: fold-curve crossings are Stokes crossings of the representation, not singularities of the function
+
+**What happened:** the pinch bridge (S177) inferred "the sweep of |t*(r)| forces
+a pinch or endpoint singularity of A(t) at finite t." FALSE: as t moves, the
+branch point r_j(t) crosses the REAL r-axis and the contour simply deforms
+around it (a Stokes crossing of the representation). Genuine singularities need
+a TRAPPED pinch (two branch points colliding — finitely many t) or endpoint
+contact (excluded near finite t by the sweep's own r -> 0 blow-up). A generic
+ray misses the finite trapped set — the theorem's own ray-genericity deleted
+the singularities it needed. Also: the sweep itself fails when f_0(0) != 0
+(t*(r) -> 1/f_0(0) finite), and the Gevrey/rotation citations from THM-1565 do
+not transfer (integrand not entire in r).
+
+**How caught:** owner-ordered adversarial pass (S178), referee 1, before any
+completion claim was made (the theorem was filed as a skeleton with the attack
+surface listed — the process worked).
+
+**Lesson (two bridges dead by the same class of error):** both failed bridges
+compared or tracked REPRESENTATION-level structure (term domination; fold
+crossings) instead of FUNCTION-level invariants (actual singularities, actual
+values). The Radial Lemma and the orbit-product proof survived review because
+their contradictions are function-level (A -> 0 vs A == 1; (ct)^r vs constant).
+Rule: a bridge argument must exhibit a function-level invariant that
+distinguishes mixed from one-sided — anything contour- or term-level will
+dodge.
+
 ## MISTAKE-202 (boxeph-2026-07-20-S176) — THM-1605's original local lemma overclaimed: equal products over disjoint subsets do NOT force equal subsets
 
 **What happened:** THM-1605's first proof (S175) concluded from the Puiseux-DFT

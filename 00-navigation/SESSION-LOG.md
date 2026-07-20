@@ -39,6 +39,14 @@ The oscillation that broke the fit is exactly the conjugate-saddle structure tha
 product handles for free.
 
 **Artifacts:** THM-1635; HYP-8470; 3 scripts + 3 outputs (incl. the failed fit, kept).
+## boxeph-2026-07-20-S178 -- LEAN GREEN (GMC2MomentBasics kernel-checked incl. parity-fake death) + THM-1615 REFUTED AS SKETCHED (fold crossings are Stokes, not singularities; MISTAKE-203: only function-level invariants survive) (HYP-8470)
+
+**Owner:** wire the lake build; run the adversarial pass on THM-1615.
+
+- LEAN: module wired into TournamentH7 (Lean 4.30), builds in ~0.8s, kernel-pure: E functional + vanishing lemmas + E[P^2] = 4 + parity-fake E2 = 0 / E4 = -1536 (maxRecDepth fix). H_ne_seven/H_ne_twentyone ancestors discovered in the project root.
+- THM-1615: FATAL on pinch-vs-dodge (contour dodges migrating branch points; trapped pinches = finite set missed by generic rays; endpoint protected by the sweep itself); GAP on Gevrey transfer; sweep false when f_0(0) != 0. Downgraded in place; salvage = Landau-set trapped-pinch reachability. Lemma (a) survives.
+- MISTAKE-203: two bridges died the same death — representation-level arguments dodge; function-level invariants (Radial Lemma, orbit-product) survive. The NC2 target is now precisely specified.
+- Referee 2 (phases + degeneration) in flight at close; verdict to be filed on landing.
 
 ## mac-mini-2026-07-20-S142 -- PRIORITY CORRECTION: THE TORAL NULLCONE CONJECTURE IS A THEOREM, PROVED IN 1998 (Duistermaat-van der Kallen, Thm 2 + Rmk 3). The repo has been re-proving it for months. What survives is the EFFECTIVE question, which IS open -- and our ladder already lands on its bound tightly.
 

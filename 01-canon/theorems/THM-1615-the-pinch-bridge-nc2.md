@@ -1,8 +1,24 @@
 # THM-1615: THE PINCH BRIDGE — a rebuilt TNC => NC2 route that localizes instead of dominating
 
-**Status:** PROOF SKELETON (fallacy-free replacement for the dead Gamma bridge);
-load-bearing lemma (a) PROVED, (b) verified + scaling-argued, (c)/(d) standard
-citations; NOT claiming NC2 closed — adversarial review invited
+**Status:** REFUTED AS SKETCHED (S178 adversarial pass, MISTAKE-203). Referee
+verdict: (d) is FATAL — crossing a fold curve of the REPRESENTATION is a
+Stokes crossing, not a singularity of A: the r-contour deforms around the
+migrating branch point; genuine singularities of the continued A occur ONLY at
+TRAPPED PINCHES (branch-point collisions: a finite discriminant-of-discriminant
+set) or ENDPOINT CONTACT r_j(t) = 0 — which the sweep itself protects
+(|t*(0+)| = infinity => contact only as |t| -> infinity). A generic ray MISSES
+the finite trapped set: the ray-genericity defense deletes exactly the
+singularities the argument needed. (c) is a GAP: the THM-1565 Gevrey/rotation
+citations do not transfer (integrand not entire in r; |t Lambda_r| < 1 fails
+for r >~ |t|^{-2/w}; uniformity dead; repair needs an unproven |kappa_j| <= sigma
+for every Puiseux branch). (b)'s sweep was verified only on a zero-radial
+instance; with f_0(0) != 0, t*(r) -> 1/f_0(0) FINITE as r -> 0 — the stated
+universal sweep is false, and ironically that is the only configuration where
+the endpoint model could fire. SALVAGE CONDITION (the real remaining content):
+prove ONE trapped, non-cancelling pinch (or an endpoint branch with finite
+t*(0)) is reachable on the principal sheet — a Landau-set analysis. What
+survives: lemma (a) (R-H critical values at every r) and the reduction; kept
+below for the record.
 **Author:** boxeph-2026-07-20-S177 (HYP-8455)
 **Context:** CASE-gamma-bridge-domination-step + THM-1585: klein's domination
 step is FALSE (top-term share -> 0). This bridge replaces global comparison
