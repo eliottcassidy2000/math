@@ -718,5 +718,5 @@ import TournamentH7.LRCTerminalEndpointTransferGcdTax  -- codex-S82 / THM-1283: 
 import TournamentH7.LRCAPCentering  -- boxeph-S118 / THM-1171 companion: kernel-pure centered-band arithmetic for the twelve-term AP witness. Together with the elementary modular inverse/common-phase proof, closes AP-internal tight rigidity; AP extraction from an arbitrary tight twelve-set remains open. Standard axiom trio
 import TournamentH7.LRCMod23Spread
 
-import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120 / THM-1585+THM-1605: consecutive Hermite polynomials share no root, so no point kills every He_m. This is the ALGEBRAIC replacement for klein-S351 false Gamma-domination step; closes the sign-mixed branch of the {-1,0,1} M=1 stratum. No sorry/native_decide
+import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120..c122 / THM-1585 (domination false) + THM-1660 (orthogonality closure) + THM-1620 (Pochhammer bridge: toral=Legendre, radial=Hermite) + THM-1670 (order = D, so ThreeTerm descent is (M,N)=(1,1) only). ThreeTerm.no_common_root: any monic 3-term recurrence with b n != 0 has no common root; replaces klein-S351's false Gamma-domination. Hermite/truncated-exp instances. No sorry/native_decide
 import TournamentH7.GMC2MomentBasics

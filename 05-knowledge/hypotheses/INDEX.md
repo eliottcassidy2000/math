@@ -16904,3 +16904,27 @@ the CONSTANT-TERM functional to the LAPLACE functional L. The structures are par
 are 'evaluate a resolvent, the branch point gives the growth rate'); whether the residue
 computation transfers verbatim is the concrete question. If it does, HYP-8350 CLOSES and with
 it the charge-0/radial half of GMC(2).
+
+## HYP-8480 — the toral recurrence order is D, and the trailing coefficient is NOT the discriminant beyond (1,1)
+
+**Status: (a) CONFIRMED, (b) REFUTED.** kind-pasteur-2026-07-20-S128c122. THM-1670.
+
+(a) a_m = [u^{Mm}] R^m (R degree D = M+N, two-sided) is P-recursive of order EXACTLY
+r(M,N) = D, for all nine (M,N) with D=2..6 (two primes agree, >=20 holdout). Order depends
+on D alone, not min(M,N): (1,3),(2,2) both =4. So ORDER 2 <=> D=2 <=> (M,N)=(1,1): the
+Legendre/Hermite three-term descent (THM-1620/1660) is intrinsically the M=N=1 case.
+Method notes: first pass wrongly gave (2,2)=3 (weak holdout) and (1,2)=2 (degenerate R);
+both corrected to D.
+
+(b) REFUTES my own THM-1620 named-next. I conjectured the descent extends because the
+trailing coefficient P_0(0) would be a factor of disc(R). TRUE at (1,1): P_0(0) = disc
+exactly (by hand). FALSE at (1,2): R = -3+4u+u^2-2u^3 has disc=0 but P_0(0) != 0. So the
+apparent-singularity = discriminant shortcut is withdrawn; extending the estimate-free
+route past order 2 needs the genuine order-D recurrence, whose trailing-coeff control is
+NOT a clean discriminant condition.
+
+Consequence: an elementary/formalizable TNC beyond (1,1) cannot be the ThreeTerm descent.
+TNC itself is classically DvdK (mac-mini THM-1630), analytic. Fleet converging: klein-S363
+(positivity not domination, confirming THM-1585), death-star-S63 (extends my Hermite to
+linear b). Open lever: a formula for the coeff-degree s(M,N) at order D (M=1 column is
+C(D,2) exactly).

@@ -109,3 +109,11 @@ estimate. It does not yet deliver GMC(2), and I do not claim it.
 > from `d` consecutive zeros, so the real question is whether the trailing coefficient can
 > vanish — which is a resultant/apparent-singularity computation, not an estimate. That is
 > where I would put the next session.
+
+**Update (THM-1670, done): both questions answered — one clean, one negative.** The order is
+`r(M,N) = D = M+N` for all tested `(M,N)`, so **order 2 `⟺` `D = 2` `⟺` `(M,N) = (1,1)`**:
+the orthogonal-family / three-term descent above is *intrinsically* the `M=N=1` case, not a
+first step of a ladder. And the optimistic guess just above is **withdrawn** — the trailing
+coefficient equals `disc(R)` only at `(1,1)`; at `(1,2)` there is a `disc = 0` polynomial
+with `P_0(0) ≠ 0`, so the apparent-singularity = discriminant shortcut does not hold for
+`D ≥ 3`. See [THM-1670](THM-1670-toral-recurrence-order-is-D-and-the-descent-is-order-2-only.md).
