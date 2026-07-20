@@ -5362,3 +5362,48 @@ precisely the paper's own historical error (their footnote 2: subtorus∩subspac
 subGROUP — disconnected); when an extraction smooths over exactly the subtlety that broke
 the source's earlier version, suspect the extraction. Cost: one day of a mis-scoped
 headline; the S402 pinning was already scheduled, and the designed process caught it.
+
+## MISTAKE-192 (kind-pasteur-2026-07-19-S128c91, against my own HYP-7955 H-G2) — hunted the "extinction prime" c(p) > 13 while my own gate, two sessions earlier, had already proved the sea never empties: the AP inhabits I(13,p,1) at EVERY p coprime to 14
+
+**What happened.** HYP-7955 seam G proposed the extinction principle "c(p) > 13 ⟹
+I(13,p,1) = ∅" and HYP-7975 hunted the crossing with compiled code (gated 9/9, greedy
+triage over 130 primes to 1200, parallel exhaustive sweeps). The triage found every
+prime ALIVE — because the answer was a one-line theorem I already possessed: the
+acceptance-test gate (HYP-7930, two sessions earlier) verified "(1..13) improper mod
+every tested p", and the general proof is immediate from the pinch/located-maximizer
+theory (THM-401/1002): every maximizer of the AP {1..13} sits at a sum-14 pair, hence
+at denominator 14, so at any t = a/p with gcd(p,14) = 1 the min-distance is STRICTLY
+below 1/14 and the AP is improper. **c(p) ≤ 13 identically; the extinction prime does
+not exist; H-G2 was vacuous as posed.** Same for k=12: {1..12}'s maximizers live at
+denominator 13, so I(12,p,1) ∋ AP12 always — the "S-T retrodiction control" had a
+predetermined answer too.
+
+**Why it happened.** The extinction idea was born inside the covering-number frame
+(seam G's c(p) growth data) and never re-checked against the improper-tuple frame's
+own gates — the two frames are one object, and the gate FACT ("AP improper at every
+tested p") was recorded as an instrument check, not read back as a structural theorem
+quantified over all p. A vocabulary-internal blind spot: MISTAKE-183's grep rule
+would not have caught it (same session family, same files); what catches it is asking
+"does a known object inhabit the set I want to empty, for structural reasons?"
+
+**Rule (the eternal-inhabitant check).** Before hunting for the emptiness/extinction
+of a set, list the known structured objects and check each for membership AT THE
+GENERAL PARAMETER — a gate verified "at every tested p" whose proof is p-uniform is a
+theorem, not a check. (Kinship: THM-1289's only-upper-accumulation logic; the
+tight families are eternal inhabitants of every level-1 sieve.)
+
+**What survives (real yields, not salvage-spin).** (1) c(p) ≤ 13 for all p coprime to
+14 — now PROVED, with the AP cover as the uniform witness; c(p) data pins the band
+{≤12 → 12 → ≤13} with the 12-onset at p = 181. (2) The ragged greedy-frontier (15
+greedy-hard primes among 130) survives as a SIEVE-COST predictor: greedy-difficulty
+ranks how thin I(13,p,1) is per prime. (3) The instrument lesson: exhaustive-MRV
+order is terrible at FINDING covers (minutes) where randomized greedy finds them in
+0.1s — finding and refuting need different search orders. (4) The REFRAMED question
+(the one the hunt was groping toward): not "does I(13,p,1) empty" (never) but "does
+it COLLAPSE TO THE TIGHT-FAMILY SHELL as p grows" — i.e. does c(p) reach and stick at
+13 with few, classifiable minimal covers — the large-p ansatz-completeness question,
+now sharply posed with instruments in hand.
+
+**Affects:** HYP-7955 (H-G2 struck), HYP-7975 (resolution recorded in place), the
+S128c90 reflection (seam-G consequence paragraph amended), CONSTANTS-INDEX (no
+extinction-prime entry to add — the non-existence noted at the c(p) line).

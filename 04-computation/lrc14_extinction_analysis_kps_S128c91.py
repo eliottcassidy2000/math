@@ -4,8 +4,15 @@ stratify c(p) by residue class mod 14, fit within-class growth, and summarize
 the extinction frontier + the k=12 retrodiction."""
 import re, sys, io
 
-OUT = "05-knowledge/results/lrc14_extinction_hunt_kps_S128c91.out"
-s = io.open(OUT, encoding='utf-8', errors='replace').read()
+FILES = ["05-knowledge/results/lrc14_extinction_hunt_kps_S128c91.out",
+         "05-knowledge/results/lrc14_extinction_exact_kps_S128c91.out",
+         "05-knowledge/results/lrc14_extinction_decide_kps_S128c91.out",
+         "05-knowledge/results/lrc14_extinction_control_kps_S128c91.out"]
+s = ""
+for f in FILES:
+    try: s += io.open(f, encoding='utf-8', errors='replace').read() + "
+"
+    except OSError: pass
 
 rows = []
 for m in re.finditer(r"p=(\d+) dk=(\d+) bound=(\d+) c=(\d+)", s):

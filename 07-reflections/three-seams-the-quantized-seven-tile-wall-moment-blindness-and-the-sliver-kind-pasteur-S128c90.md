@@ -50,14 +50,17 @@ Three findings:
    factor meeting three-gap rigidity: each folded AP's overlap with a structured
    uncovered residue is forced (boxeph-S125's "wasted overlap" — covering debt
    concentrates at resonances instead of spreading).
-3. **The sieve-design consequence (hypothesis H-G2):** improper 13-tuples need their
-   13 danger-APs to cover, so **if c(p) > 13 then I(13,p,1) = ∅** — the level-1
-   improper sea *vanishes* at primes past the crossing, and Rosenfeld-Lemma-6
-   verification becomes trivial at level 1 there. Extrapolating the log-ish trend puts
-   the crossing far beyond the S–T prime range (~10⁴–10⁵?), but the *existence* of a
-   crossing — and its exact location — is now a well-defined, computable quantity that
-   directly parametrizes finite-check difficulty at large p. Nobody has ever computed
-   the improper-sea extinction point.
+3. ~~**The sieve-design consequence (hypothesis H-G2):** if c(p) > 13 then
+   I(13,p,1) = ∅ — the extinction point.~~ **STRUCK (S128c91, MISTAKE-192): the
+   extinction prime does not exist.** The AP {1..13}'s maximizers all sit at sum-14
+   pairs (THM-401/1002), hence denominator 14, so the AP is improper mod every p
+   coprime to 14: its danger system is a 13-cover at every prime and c(p) ≤ 13
+   identically. The compiled hunt (S128c91, HYP-7975) verified all 130 primes in
+   [321, 1200] alive with explicit cover certificates, then surfaced the one-line
+   proof. The surviving question is the REFRAME: does I(13,p,1) collapse to the
+   tight-family shell as p grows (c(p) sticking at 13, minimal covers few and
+   classifiable) — large-p ansatz-completeness, the right form of what extinction
+   was groping toward.
 
 **Proposed mechanism name:** the *quantized seven-tile wall* — the discrete covering
 number c(p) of the danger system, with its excess-growth law, as the finite-p shadow of
