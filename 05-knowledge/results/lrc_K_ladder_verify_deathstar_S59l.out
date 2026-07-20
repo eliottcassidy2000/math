@@ -1,0 +1,2 @@
+K-ladder exact check: 696 pairs (N,c) in [3,60]x[1,12], violations: 0 (22s)
+law M(K_c(N)) = c/(cN+1): HOLDS on the whole range
