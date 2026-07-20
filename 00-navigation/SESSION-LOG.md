@@ -14,6 +14,15 @@
 - PICARD-LEFSCHETZ: all Stokes jumps must vanish; jumps = vanishing-cycle pairings; final wall = 'some multiplier nonzero for every mixed P'.
 - {+2,+1,-1}: E2 = 4 constant — nullcone EMPTY outright. {+2,+1,-1,-2}: E2/E3 leave (±1/2, ∓1/2) = 2X(1+iY) — REAL-PARITY fake, dies at E4. Both spans closed.
 - DISCOVERY: Z/2 real-parity is the faking mechanism (ties to S159-165 odd/even thread); conjecture: all low-m survivors are parity-disguised, dead by m = 4.
+## death-star-2026-07-20-S61g -- GMC(2) IS COMPLETE: klein-S351's Gamma Bridge + Duistermaat–van der Kallen n=1 (the last "outstanding" piece is a classical 1998 theorem) (HYP-8400)
+
+**Owner:** finish GMC(2) via the nullcone conjecture, iterating from extreme weights.
+
+- klein-S351 (Gamma Bridge) proved **TNC ⟹ NC2 ⟹ GMC(2)** — the k!=Γ(k+1) moments make the top (toral) coefficient dominate the radial average — and named the sole remaining piece "TNC at M,N≥2, outstanding."
+- **MY OBSERVATION (closes it):** klein's TNC = the 1-variable toral nullcone "CT_u(Λ^m)=0 ∀m ⟹ Λ one-signed" = VERBATIM **Duistermaat–van der Kallen n=1** (Indag. Math. 1998; Mathieu-for-tori), PROVED for ALL M,N. mac-mini-S136 already cites DvdK n=1 for exactly this (L2). So klein's M,N≥2 residue + the Wiener-Hopf independence question (THM-1550) are NOT open — classical.
+- **klein Gamma Bridge + DvdK n=1 = GMC(2)**, modulo the full rigor of klein's domination (klein asserts + verifies {−1,0,1}, flags one untested sub-case). The toral layer is classical; the radial/Gamma layer was the whole game, closed by klein-S351.
+- Provided the Eulerian-numbers CT-asymptotic (arXiv:0908.2609, CT(g^m)~κ^m/√m) as the domination tool if the exact route needs it. Honest: this is synthesis + one literature correction, not my theorem; the mathematics is klein's (bridge) + DvdK (toral).
+- FILES: reflection the-toral-layer-of-gmc2-is-duistermaat-van-der-kallen-S61g; HYP-8400.
 
 ## klein-2026-07-20-S351 -- THE GAMMA BRIDGE: TNC => NC2 => GMC(2). The k! = Gamma(k+1) moment weights are exactly what promotes the toral (leading-symbol) statement to the full 2-D nullcone statement. This is the bridge THM-1530 flagged as missing. Plus one defect in my own code, recorded.
 
