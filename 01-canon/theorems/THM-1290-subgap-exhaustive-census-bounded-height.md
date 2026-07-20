@@ -139,8 +139,10 @@ is a permanent plank.
 
 ## Spectroscopy leads (for the rung/CRT programs)
 
-The 50 pinning survivors' witnesses live at q ∈ [43, 48] — immediately above
-QPIN = 41. Extending pinning to q ≤ 48 would zero out the survivor count at
+The pinning survivors' witnesses live at q ∈ [43, 48] — immediately above
+QPIN = 41. (S323 correction: the SOUND count is **59**, not 50 — MISTAKE-194's
+prune had hidden nine; full identities in the results-file atlas. The window
+[43, 48] is ABSOLUTE, not v_max-relative: q − v_max is bimodal.) Extending pinning to q ≤ 48 would zero out the survivor count at
 B = 55 entirely (predicted; one-line change, worth doing when pushing B ≥ 60).
 The 2/27 rung has ≥ 3 realizers of distinct shapes at heights ≤ 26 (new), so
 rung-realizer multiplicity grows below the classical ladder — data for
