@@ -1,0 +1,83 @@
+========================================================================================
+PIECE 1 (HYP-8350) -- the radial Laplace nullcone IS EMP; ker(L) != 0 does not save it
+========================================================================================
+ ker(L) is nonempty: L(s-1) = 1! - 0! = 0.  But EMP (THM-1510): L(p^m)=0 for ALL m => p=0.
+ So the kernel element s-1 must FAIL at some higher m -- check:
+
+   p = s-1  (in ker L at m=1)         L(p^m) m=1..6 = ['0', '1', '2', '9', '44', '265']   first nonzero at m=2
+   p = s^2-4s+2 (an EMP root at m<=2) L(p^m) m=1..6 = ['0', '4', '80', '4752', '440192', '59245120']   first nonzero at m=2
+   p = s-3/2                          L(p^m) m=1..6 = ['-1/2', '5/4', '3/8', '105/16', '807/32', '10413/64']   first nonzero at m=1
+
+   Every kernel/near-kernel p is killed at a higher moment -- EMP.  My THM-1510 PROVED this
+   (Laplace: L(p^m) ~ c_d^m (dm)! e^{c_{d-1}/(c_d d)}, amplitude nonzero), and boxeph re-proved
+   it (Hermite, THM-1615).  So the radial-Laplace obstruction ker(L) != 0 is exactly the concern
+   EMP answers.  PIECE 1 IS CLOSED for polynomial p, by THM-1510.
+
+ And under the RAYLEIGH weight 2 rho e^{-rho^2} (the |Z| law, if the radial variable is
+ rho = sqrt(s) not s), EMP still holds -- E[rho^k] = Gamma(k/2+1) grows, same Laplace
+ argument.  Verify no nonconstant p of degree <= 2 kills all Rayleigh moments:
+
+   Rayleigh, deg p = 1: Groebner variety = origin only : True
+   Rayleigh, deg p = 2: Groebner variety = origin only : True
+   => EMP holds under the Rayleigh weight too: the radial nullcone is trivial there.
+
+========================================================================================
+PIECE 2 (HYP-8470) -- the CROSS-SHELL coupling: top shell one-sided, bottom straddles
+========================================================================================
+ Lambda_s = sqrt(s)*u  (top shell, ONE-SIDED, charge +1) + (a/u + b + c*u) (bottom, straddles).
+ E[P^m] = L( CT_u[Lambda_s^m] ) = sum_k C(m,k) Gamma(k/2+1) [u^{-k}]( a/u + b + c u )^{m-k}.
+ TOP shell k=m: CT_u[u^m] = 0 -- top vanishes, so nonvanishing must come from cross-shell.
+
+ values of E[P^m] (top-shell contribution is CT_u[u^m]=0, verified structurally):
+   a=1,b=0,c=1  (a,c same sign: DEFINITE)     E[P^m] = ['0', 'sqrt(pi) + 2', '0', '6*sqrt(pi) + 12', '0', '45*sqrt(pi) + 80']
+   a=1,b=1,c=1  (all positive)                E[P^m] = ['1', 'sqrt(pi) + 3', '3*sqrt(pi) + 7', '12*sqrt(pi) + 25', '40*sqrt(pi) + 81', '150*sqrt(pi) + 291']
+   a=1,b=0,c=-1 (a,c OPPOSITE sign: indefinite) E[P^m] = ['0', '-2 + sqrt(pi)', '0', '12 - 6*sqrt(pi)', '0', '-80 + 45*sqrt(pi)']
+   a=2,b=0,c=-1 (mixed)                       E[P^m] = ['0', '-4 + 2*sqrt(pi)', '0', '48 - 24*sqrt(pi)', '0', '-640 + 360*sqrt(pi)']
+
+ ROUTE (b) -- THE DEFINITE-SIGN LOCUS.  [u^{-k}](a/u+b+c u)^{m-k} counts lattice paths and is a
+ POSITIVE combination of monomials in a,b,c.  So if a,b,c >= 0 (a,c not both 0), EVERY term
+ C(m,k) Gamma(k/2+1) [u^{-k}]lam0^{m-k} is >= 0 and the k with u^{-k} reachable gives a strictly
+ positive one -> E[P^m] > 0.  THE CROSS-SHELL INTEGRAL CANNOT CANCEL when the straddling shell
+ has nonnegative coefficients.  That is a proved definite-sign sub-locus of HYP-8470.
+
+ verify E[P^m] > 0 for a,b,c >= 0 (two cases, m=1..7): False
+
+ THE HARD SUB-CASE: a,c OPPOSITE signs (indefinite cross-shell).  Is there (a,b,c) with
+ E[P^m] = 0 for all m?  Two-sided (charges {-1,0,1}) so NC2 predicts NO.  Elimination:
+   Groebner basis size = 3;  (a*c)^k in ideal (=> variety in {ac=0} = one-sided): True
+   => a two-sided (ac != 0) nullcone member exists here: False
+
+ READING: if (a*c)^k lies in the ideal then every solution has a*c = 0 (one of the outer
+ charges absent = one-sided) -- so NO two-sided cross-shell nullcone member exists, closing this
+ cross-shell family EXACTLY, mixed signs included.  That is HYP-8470's open step settled for
+ this one-parameter shell family by elimination -- the same normalise-or-radicalise move as S361.
+
+
+========================================================================================
+PIECE 2 -- THE MECHANISM: the SECOND moment closes it by the TRANSCENDENCE of sqrt(pi)
+========================================================================================
+ E[P^2] = 2*a*c + sqrt(pi)*a + b**2
+ It splits as  (2ac + b^2)  +  a*sqrt(pi),  a RATIONAL part plus sqrt(pi) times a.
+ Since sqrt(pi) = 2 Gamma(3/2) is TRANSCENDENTAL, for a,b,c in Q this is 0 IFF both parts
+ vanish: a = 0 AND 2ac + b^2 = 0 => a = 0, b = 0.  But a = 0 (charge -1 absent) with the top
+ shell sqrt(s) u (charge +1) leaves Lambda_s = (sqrt(s)+c) u -- PURE CHARGE +1, ONE-SIDED.
+ So over Q the cross-shell family is closed at m=2 ALONE, by transcendence.  Check:
+   rational part = 2*a*c + b**2;  coefficient of sqrt(pi) = a
+   both zero over Q => a=0 (from sqrt(pi) part) then b=0 (from rational part) => one-sided.
+
+ THIS IS THE CROSS-SHELL RESOLUTION VIA TRANSCENDENCE.  The shells carry Gamma(k/2+1), which
+ is RATIONAL for k even and RATIONAL*sqrt(pi) for k odd -- so consecutive shells live in
+ Q-linearly-INDEPENDENT lines, and their contributions cannot cancel unless the outer-charge
+ coefficient itself vanishes.  This is the multiplication/addition-duality / Vieta transcendence
+ pattern (klein-S353) appearing exactly where HYP-8470 lives: the half-integer Gamma values are
+ the 'family of relations' that upgrades disjunction to rigidity.
+
+========================================================================================
+CORRECTION to the definite-sign claim (my control caught it)
+========================================================================================
+ I wrote 'a,b,c >= 0 => E[P^m] > 0 for all m'; the control returned FALSE.  Reason: at b=0
+ the ODD moments vanish by PARITY (same artifact as S345), so 'all m' is wrong.  CORRECT
+ statement: for a,b,c >= 0 (a,c not both 0) the EVEN moments E[P^{2j}] > 0 (a nonnegative sum
+ of lattice-path counts times Gamma weights, with a strictly positive k=0 term 2ac+b^2>0), so
+ SOME moment is nonzero -- which is all NC2 needs.  Verified:
+   E[P^{2j}] > 0 for a,b,c >= 0, j=1..4 (two cases): True

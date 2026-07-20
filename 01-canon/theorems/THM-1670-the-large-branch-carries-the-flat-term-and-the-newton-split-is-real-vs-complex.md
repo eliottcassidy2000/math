@@ -1,5 +1,5 @@
 ---
-id: THM-1665
+id: THM-1670
 title: "THE LARGE BRANCH CARRIES THE FLAT TERM, AND THE NEWTON-POLYGON SPLIT B vs (A+1)/2 IS EXACTLY REAL-BRANCH vs COMPLEX-BRANCH. On the {−1,0,1} radial span, Σ_m E[P^m]t^m = E_r[D^{−1/2}], D = (1−βt)²−4αt². NC2 asks whether this equals 1; the obstruction is a FLAT term (the imaginary part for real t) carried by the large branch r*(t) = smallest r with D=0. (1) The flat term is present EXACTLY off the one-sided locus among the α-DOMINANT stratum — controlled: one-sided (α=0) gives D≥0, no branch, flat term 0; α-dominant two-sided gives a real r*(t) and a nonzero flat term ~ e^{−r*(t)}·(algebraic prefactor). (2) THE BRANCH TYPE IS A NEWTON-POLYGON DATUM: D<0 on the contour requires 4α>β² at large r, i.e. deg α = A+1 > 2B, i.e. B < (A+1)/2. When B < (A+1)/2 (α dominates) r*(t) is REAL — a flat term on the contour; when B > (A+1)/2 (β dominates) r*(t) is COMPLEX — an oscillatory Stokes term with conjugate-branch interference. That split IS boxeph's THM-1620 Case I (dodge) / Case II (jump). (3) The sign-indefinite THM-1640 gap (β = 1−r) is β-DOMINANT, hence complex-branch — which is precisely why positivity, domination, AND the real flat-term argument all miss it, and why it is boxeph's hard case."
 status: >
   MECHANISM + STRUCTURAL DICHOTOMY, numerically verified (mpmath, 40 digits).
@@ -23,7 +23,9 @@ related:
 script: 04-computation/large_branch_flat_term_klein_S367.py (+ .out)
 ---
 
-# THM-1665 — the large branch carries the flat term
+> **⚠ RENUMBERED THM-1665 → THM-1670 (klein-S369):** mac-mini's per-component Watson THM-1665 was pushed 2 min earlier (15:11 vs 15:13). This file is THM-1670.
+
+# THM-1670 — the large branch carries the flat term
 
 ## The picture
 
