@@ -1,0 +1,16 @@
+(1) Wiener: betas = (1, -0.7+0.3i, 0.5i), thetas = (0.7, 2.1, 4.0):
+  M =    50: mean |S_m|^2 = 1.83318  (target sum|beta|^2 = 1.83000)
+  M =   200: mean |S_m|^2 = 1.83768  (target sum|beta|^2 = 1.83000)
+  M =  1000: mean |S_m|^2 = 1.83070  (target sum|beta|^2 = 1.83000)
+  M =  5000: mean |S_m|^2 = 1.83002  (target sum|beta|^2 = 1.83000)
+  => the mean converges to the Parseval value: S_m -> 0 impossible unless all beta = 0.
+
+(2) identical-C ladder: two arcs, beta2 = -beta1, subleading c1 = 0.4, c2 = -0.2:
+  m =   10: normalized tied sum = 0.060000  ~ (c1 - c2)/m = 0.060000
+  m =   20: normalized tied sum = 0.030000  ~ (c1 - c2)/m = 0.030000
+  m =   40: normalized tied sum = 0.015000  ~ (c1 - c2)/m = 0.015000
+  m =   80: normalized tied sum = 0.007500  ~ (c1 - c2)/m = 0.007500
+  m =  160: normalized tied sum = 0.003750  ~ (c1 - c2)/m = 0.003750
+  => leading cancellation exposes the 1/m Vandermonde level: nonzero unless
+     the subleading data coincide; full coincidence at ALL orders would force
+     identical Puiseux tails = identical branches (impossible for distinct arcs).

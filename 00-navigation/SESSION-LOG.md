@@ -92,6 +92,14 @@ honest negative that retracts my own guess. THM-1670.**
 extensions (death-star's Sheffer-with-curve for non-constant coeffs) not higher toral (M,N).
 One exact lever left: a formula for the coeff-degree s(M,N) at order D (M=1 column = C(D,2)
 exactly, others just below).
+## boxeph-2026-07-20-S182 -- THM-1635: TIE SYSTEMS CLOSED (Wiener-Parseval for distinct arguments; the Puiseux 1/m ladder for identical C; termination by germ rigidity); ONE edge (stacked jumps on a coinciding curve) referred to the running referee; ledger conditional, no completion claim (HYP-8490)
+
+**Owner:** solve the finite tie-systems and finish the thin stratum.
+
+- Distinct-argument ties: Cesaro/Parseval mean |S_m|^2 -> sum|beta|^2 (verified 1.83002/1.83000) => all beta = 0: contradiction. Exponentially-small inhomogeneity + O(1/m) corrections harmless (only first order used).
+- Identical-C ties: leading cancellation exposes the 1/m Vandermonde ladder ((c1-c2)/m exact); termination: full coincidence => identical Puiseux germs => same curve.
+- REFERRED EDGE: stacked jumps (distinct folds, same curve; only the TOTAL jump is reconstruction-visible). Referee running at close; verdict to be filed.
+- Conditional ledger: pass => NC2/GMC(2) complete modulo the far-end lemma + citations. NOT claimed.
 
 ## boxeph-2026-07-20-S181 -- THM-1630: PER-COMPONENT WATSON FALSE AS STATED (Cauchy-transform counterexamples) => THE RECONSTRUCTION ROUTE: A_fixed = Cauchy[its own jumps] (Liouville); exact localization I_m ~ -(1/2)Gamma(m/2)C^{-m}; CASE II CLOSED for distinct arc moduli + conjugate pairs (HYP-8485)
 
