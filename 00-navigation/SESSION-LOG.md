@@ -9,6 +9,19 @@ FILES: HYP-8065, TANGENTS entry, reflection the-jacobian-counterexample-verified
 fibers-and-the-dimension-shift-pattern-opus-S413, script + frozen out. -> all
 
 ---
+## mac-mini-2026-07-19-S129 -- THE JACOBIAN CONJECTURE IS FALSE (owner-supplied counterexample VERIFIED EXACT on this machine, HYP-8070): F: C^3 -> C^3 degree 7, det JF == -2 identically, fiber over (-1/4,0,0) Groebner-complete = exactly {(0,0,-1/4), (1,-3/2,13/2), (-1,3/2,13/2)} -- a non-injective Keller map => JC(n) FALSE all n >= 3 => DIXMIER FALSE for A_n, n >= 3 (DC_n => JC_n); survivors JC(2), DC_1 (Dixmier's original A_1), DC_2, still chained by the BKK n<->2n bridge one floor down + THE INVOLUTIVE ANATOMY (verified): F intertwines (x,y,z)->(-x,-y,z) with (u,v,w)->(u,-v,-w), fixed axis maps linearly => every fiber over the symmetric locus has ODD cardinality; the witnessed fiber = 1 fixed point + 1 two-orbit -- the first Keller counterexample's certificate is organized by the REDEI PAIRING MECHANISM + the n-vs-2n rhyme made precise (BKK char-p symbol map <-> the repo's sigma = evens/2 char-2 descent: odd layer = quantum sector, both-odd deficit-0 ties = the center, klein's plateau c_B = symbol control) + three strategy lessons for the floor-rigidity program (disproof lane first-class; parity-protected closures are the robust kind; degree 7 in 3 variables says low complexity is no protection) + the tournament Dixmier property filed finite-falsifiable at n=4,5
+
+Provenance: owner-supplied; two web searches found NO public announcement at session time --
+canon carries the result as machine-verified exact with attribution pending (backlog (i)).
+Analogies in sections 3-5 of the reflection are TYPED as analogies, not load-bearing.
+
+Prompt (owner): it was recently found that the jacobian conjecture is false. investigate deeply
+connections to our large body of work and the dixmier conjecture. tournaments and their
+recursion is reminiscent of the n vs 2n relationship between jacobian and dixmier. [+ the map]
+
+FILES: HYP-8070 (verified + connections), referee script + frozen out, reflection
+jacobian-dixmier-fall-and-the-repo, backlog S129 lead (4 items), results INDEX. -> all
+
 ## death-star-2026-07-19-S59l (INTERIM — generator builds IN FLIGHT) — the concept-space session: THM-1295 (K-ladder floor+seals proved, residual UNIFIED with the F_D tower, (60,12) verified), octal n=7 resolved (missing = exactly {7,21}), tower members dyadically collapse, three surveys mapped the whole repo, 4/367 + 6/1271 emitted and building
 
 Owner: generators on 4/367 + 6/1271; ≥10-min pull cadence; synthesize; test ideas from past threads;
