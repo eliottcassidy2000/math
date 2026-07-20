@@ -1,0 +1,61 @@
+====================================================================================
+EXACT ELIMINATION on the {-1,0,1} charge span, by (deg alpha, deg beta)
+====================================================================================
+  unknowns: coefficients of alpha (deg A) and beta (deg B).  equations: E_r[L_m] = 0.
+  A Groebner basis {1} means the system is INCONSISTENT away from the trivial locus,
+  i.e. the ONLY solution is alpha = beta = 0 -- the one-sided conclusion, PROVED.
+
+   (A,B)  #unknowns     m used                  Groebner basis of the ideal      verdict
+  (0, 0)          2          4                                     [a0, b0]       ONLY 0
+  (1, 0)          3          5                         [a0 + a1, a1**2, b0]       ONLY 0
+  (0, 1)          3          5               [2*a0 + b1**2, b0 + b1, b1**3]       ONLY 0
+  (1, 1)          4          6   [2*a0 + 2*a1 + b1**2, 12*a1**2 - 7*b1**4,        ONLY 0
+  (2, 1)          5          7   [2*a0 + 2*a1 + 4*a2 + b1**2, 12*a1**2 + 96   nontrivial
+  (1, 2)          5          7   [2*a0 + 2*a1 + b1**2 + 8*b1*b2 + 20*b2**2,   nontrivial
+  (2, 2)          6          8   [2*a0 + 2*a1 + 4*a2 + b1**2 + 8*b1*b2 + 20   nontrivial
+
+====================================================================================
+THE LAPLACE / GMC(1) LAYER, settled exactly on the same strata
+====================================================================================
+  With beta = 0 the odd moments vanish by parity and the even ones read
+      E[P^{2j}] = C(2j,j) E_r[alpha^j],
+  so the span-{-1,+1} case IS the pure Laplace layer: E_r[h^j] = 0 for all j => h = 0
+  for r ~ Exp(1).  Verified by elimination for deg alpha <= 3:
+
+  deg h   m used                     Groebner basis  only h = 0?
+      0        2                               [h0]         True
+      1        3                   [h0 + h1, h1**2]         True
+      2        4   [h0 + h1 + 2*h2, h1**2 + 8*h1*h2         True
+      3        5   [h0 + h1 + 2*h2 + 6*h3, h1**2 +          True
+
+  This is EMP (THM-1510) re-proved by elimination rather than by Laplace asymptotics --
+  exact, finite, and with no tail estimate to wave at.  It settles the GMC(1)/radial layer on
+  every bounded degree, which is precisely what the {-1,+1} span needs.
+
+
+====================================================================================
+FOLLOW-UP: are the 'nontrivial' rows REAL, or did I just use too few equations?
+====================================================================================
+  A nontrivial solution here would be a GMC(2) COUNTEREXAMPLE, so this must be settled
+  rather than reported.  Re-running with MORE moments m and a deeper radical test.
+
+   (A,B)   m used  basis size  is it {1}?   only alpha=beta=0?
+  (2, 1)        7          13       False                 True
+  (2, 1)       11          13       False                 True
+  (2, 1)       15          13       False                 True
+
+  (1, 2)        7          21       False                 True
+  (1, 2)       11          21       False                 True
+  (1, 2)       15          21       False                 True
+
+  (2, 2)        8          51       False                 True
+  (2, 2)       12          51       False                 True
+  (2, 2)       16          51       False                 True
+
+
+ READING.  If the verdict flips to 'only alpha=beta=0' once enough moments are used, then the
+ earlier 'nontrivial' rows were an ARTEFACT OF TRUNCATING THE EQUATION LIST, not solutions --
+ exactly the failure mode of using #unknowns+2 equations for a system whose equations are not
+ independent in low degree.  Any row still showing a nontrivial variety at the largest m would
+ be a genuine GMC(2) counterexample candidate and must be extracted and checked directly.
+
