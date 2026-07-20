@@ -1,0 +1,26 @@
+================================================================================================
+(I) DIM-2 NO-GO: det formula verified on random instances, then the 4-line proof
+================================================================================================
+  trial 0 (k=4, degA=0, degh=3): det == -[Ah + s(kAh'+A'h)] : True
+  trial 1 (k=1, degA=3, degh=3): det == -[Ah + s(kAh'+A'h)] : True
+  trial 2 (k=4, degA=0, degh=1): det == -[Ah + s(kAh'+A'h)] : True
+  trial 3 (k=3, degA=0, degh=3): det == -[Ah + s(kAh'+A'h)] : True
+  trial 4 (k=2, degA=3, degh=0): det == -[Ah + s(kAh'+A'h)] : True
+  trial 5 (k=2, degA=3, degh=2): det == -[Ah + s(kAh'+A'h)] : True
+  trial 6 (k=1, degA=2, degh=2): det == -[Ah + s(kAh'+A'h)] : True
+  trial 7 (k=4, degA=0, degh=2): det == -[Ah + s(kAh'+A'h)] : True
+  PROOF (4 lines): Keller => Ah + s(kAh'+A'h) = c const; leading coeff of the
+  LHS at degree a+b is (1 + a + k*b) A_a h_b != 0 for (a,b) != (0,0); so a=b=0,
+  F = (c1 y, c2 x): LINEAR.  The equivariant mechanism CANNOT produce a JC_2
+  counterexample.  QED (in-class).
+
+================================================================================================
+(II) MOD-p DECISION THEOREM demo: the kernel's deficiency certificate, extended
+================================================================================================
+  p    deficiency/p^3   (Jordan-Chebotarev predicts -> 1/3, monotone from below)
+  31   0.32325
+  37   0.32480
+  41   0.32559
+  => one bijective large prime would certify automorphy; every tested prime
+     certifies NON-automorphy: the census is now a decision procedure, not a hint.
+DONE.
