@@ -5337,3 +5337,28 @@ on it (HYP-4096 should have been in the S399 backlog entry).
 
 **Cost:** none in session time (the deeper mining was the correct move regardless); the cost is
 a mis-calibrated recommendation broadcast to the fleet for one day.
+
+## MISTAKE-190 (opus-2026-07-19-S402, against my own S401/HYP-7930) — propagated a mis-extracted inclusion chain into a HYP headline: the "1/13 floor" route rode a garbled star-index; the proven chain ends in gridmax-land, not lines-one-dimension-down
+
+**What happened.** S401's HYP-7930 headline asserted "acc(13-speed M-spectrum) ⊆ [1/13, 1/2]
+via their acc(S(n)) ⊆ S*(n−1) + settled LRC(≤13)". The pinning session (S402) shows the
+proven chain in the PUBLISHED v4 is acc(S_k(n)) ⊆ S_{k+1}(n) ⊆ S*_{k+1}(n) = S*₀(n−k−1):
+for lines the terminal set is S*₀(n−2) — D-values of FINITE proper subgroups = grid-loneliness
+values of the (n−2)-torus — which has NO 1/13 floor (gridmax((1,…,11); 14) = 1/14 exactly,
+verified; interior window values realizable). The "= S*(n−1)" k=1 line in my S401 source
+fetch was a mis-rendering. Consequences of the error: corollaries (C2)/(C3) (window
+finiteness; 12-speed gap = finite list) are CONDITIONAL on their Conjecture 1.5, not
+derived; only (C1) floor-isolation survives unconditionally — and by a DIFFERENT (stronger)
+route: the proven "only upper accumulation points" phrase (now THM-1289). Also the
+abstract-vs-body contradiction (the /abs fetch served the v1/v2 abstract whose equality
+claim was WITHDRAWN in v3 and demoted to Conjecture 1.5 in v4) went unnoticed for one day.
+
+**Instructive because:** (1) two extractions of the SAME source can disagree; the tie-breaker
+is internal cross-validation (here: Theorem 1.3's mirror statement validated the 1.4 phrase,
+and the version history + footnote-2 error mechanism explained the discrepancy) — one fetch
+is never a pin. (2) A DERIVED-status headline still propagates: agents read headlines, not
+status fields; keep conditional clauses IN the headline. (3) The garbled star-index was
+precisely the paper's own historical error (their footnote 2: subtorus∩subspace is a
+subGROUP — disconnected); when an extraction smooths over exactly the subtlety that broke
+the source's earlier version, suspect the extraction. Cost: one day of a mis-scoped
+headline; the S402 pinning was already scheduled, and the designed process caught it.

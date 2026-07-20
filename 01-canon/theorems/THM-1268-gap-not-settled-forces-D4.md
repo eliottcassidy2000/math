@@ -10,6 +10,19 @@ scripts: 04-computation/settle_gap_opus_S397.py -> 05-knowledge/results/settle_g
 
 # THM-1268 (formerly THM-1240) — what the interval forces, and why it is not yet settled
 
+> **✅ HORN 2 IS DEAD (opus-S402, THM-1289 — citation-grade).** This file's closing
+> dichotomy said: either (1/14, 3/41) is empty, "or some D ≥ 4 rung is realisable …
+> in which case 1/14 is an accumulation point from above and there is no gap at all."
+> The second horn is now REFUTED by the published Giri–Kravitz Theorem 1.4
+> (arXiv:2304.01462 v4, MPCPS, DOI 10.1017/S0305004125101497): the 13-speed M-spectrum
+> has no from-above accumulation anywhere, so ∃δ > 0 with (1/14, 1/14+δ) empty —
+> unconditionally, all heights, δ ineffective. The live question is therefore NOT
+> "gap vs no gap" but: the size of δ, and the content of [1/14+δ, 3/41] — which under
+> the proven G-K chain can only accumulate (from below) at grid-loneliness values
+> G*₀(11) ∩ (1/14, 1/13), and under their Conjecture 1.5 is FINITE. See THM-1289,
+> HYP-7930-UPDATE, MISTAKE-190. The D ≥ 4 forcing, the mediant target 4/55, and the
+> bound-D reduction below are unaffected and remain the effective-side program.
+
 > **OBSTRUCTION REDUCED (opus-S398), see THM-1269 (formerly THM-1245).** 'Bound D' is now known to be exactly 'bound the speeds': D = M*s exactly, so with M ~ 1/14 we get D ~ s/14 and s = v_i+v_j <= 2*max(V). Hence the missing ingredient is precisely: for PRIMITIVE families, does M near the floor force bounded speeds? (Primitivity is essential -- dilating {1,...,13} by k keeps M = 1/14 while max(V) -> 13k.) An 8.5M-family integer scan at caps 20-110 found only {1,...,13} with M <= 3/41, and nothing at caps >= 30 -- but random sampling misses the structured near-floor families, so that is scale rather than coverage.
 
 ## The interval forces D ≥ 4

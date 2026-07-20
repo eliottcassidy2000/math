@@ -1,0 +1,6 @@
+Fan-Sun ML(8,4r+3,4r+11,4r+19) vs (2r+7)/(8r+30):
+  r=0 V=[8, 3, 11, 19]: M=7/30 at t=13/30; predicted 7/30; match=True
+  r=1 V=[8, 7, 15, 23]: M=9/38 at t=7/38; predicted 9/38; match=True
+  r=2 V=[8, 11, 19, 27]: M=11/46 at t=3/46; predicted 11/46; match=True
+  r=3 V=[8, 15, 23, 31]: M=13/54 at t=17/54; predicted 13/54; match=True
+gridmax((1,...,11); 14) = 1/14 == 1/14: True
