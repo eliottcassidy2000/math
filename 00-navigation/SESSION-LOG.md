@@ -23,6 +23,33 @@ find all meaningful triangular-number continuations and compare; triangular numb
 from relation itself (edges of complete graphs); compile as wide a berth as possible.
 
 FILES: HYP-8175 (RESOLVED, complementary lane), frozen out, results INDEX, session log. -> all
+## death-star-2026-07-20-S59t — THE FIGURATE-STAGGER ATLAS (THM-1360): staggering Pascal by slope s = the descending Pisot ladder (2, φ, supergolden, ...); the Proth grid staggered-summed = MERSENNE 2^{m+1}−1 (proved); the RELATIONAL reading (triangular = arcs = tiles, 2^triangular = graphs/tilings, x=triangular the natural exponent); wide figurate-zoo comparison
+
+Owner: stagger the n·2^x+1 grid (down 1 → triangle, down 2 → Fibonacci-analogous), sum AND multiply;
+find as many continuations of the triangular numbers as possible (polygonal, polyhedral, ...), compare
+all at shift 0/1/2 and beyond, added/multiplied; triangular numbers are key = the relation itself, edges
+of complete graphs; compile wide breadth. FINDINGS (2 scripts, 1 repo-mining pull in flight): (1) THE
+SLOPE LADDER (proved): Σ_c C(m−s·c,c) = a(m)=a(m−1)+a(m−s−1), char x^{s+1}=x^s+1 — s=0→2, s=1→φ
+(Fibonacci), s=2→supergolden 1.46557, s=3→1.38028, →1. POWERS OF 2 AND FIBONACCI ARE SLOPE 0 AND 1 OF
+ONE OPERATION (staggering Pascal); the project's growth constants are rungs of one Pisot ladder. (2)
+PROTH→MERSENNE (proved): Σ_{n=0}^m (n·2^{m−n}+1) = 2^{m+1}−1 — the Fermat/Proth +1's and the doubling
+telescope to the Mersenne −1 (realizes THM-227's Mersenne/Fermat Cayley duality). (3) RELATIONAL
+(verified): T_{n−1}=C(n,2)=|E(K_n)|=tournament arcs; T_{n−2}=C(n−1,2)=staircase tiles; 2^{C(n,2)}=#labeled
+graphs, 2^{C(n−1,2)}=#tilings=Q_{T_{n−2}}; so x=triangular is the natural exponent and 2^{T_{n−2}}+1 =
+tilings+observer — the two Proth axes meet at the relation, the +1 = the observer on the tiling hypercube.
+(4) ZOO (atlas): 6 families × slopes 0/1/2 × sum+product, all identified; convergences
+simplicial-slope1=k-ary-slope0=Mersenne, simplicial-slope2=k-ary-slope1=cumulative-Fibonacci; owner
+power-sum triangle shallow = cubic Pisot 1.75488 (x³=2x²−x+1); products = hyperfactorial class. Credits:
+opus-S317/mac-mini-S109/klein-S313, THM-227, THM-466.
+
+Prompt (owner): for the (x,n) grid for n*2^x+1, it could also be a triangle if each column moved down 1
+(down 2 → fibonacci analogous); sum these columns (or take their product); look for other meaningful
+continuations of the triangular numbers like polyhedral and polygonal; compare all moved down 0,1,2 and
+values above; added/multiplied and more metrics; triangular numbers are key, they arise from the relation
+itself, the edges of complete graphs; compile as wide a breadth as possible and investigate it all
+
+FILES: THM-1360, HYP-8175, reflection the-figurate-zoo, 2 scripts + outs, backlog lxi-lxiv, tangent,
+results INDEX. -> all
 
 ## opus-2026-07-20-S419 -- the Faulhaber triangle, Proth-diagonal series, and the bilinear +1 rim
 
