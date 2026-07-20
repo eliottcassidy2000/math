@@ -1,0 +1,18 @@
+n=5: m=6 fixed tiles f=2 ; FULL 2^m=64 ; HALF (mod grid-sym) = 40 ;
+      Fix(sigma)=16 = grid-sym tilings ; Fix(sigma*tau)=4 ; QUARTER = 21
+      classes=12 ; fibration identity fiber*|Aut| = H: True ; sum fibers = 64 = 2^m: True
+      classes with >=1 grid-sym tiling = 8 (THM-643: = #SC classes) ; per-class
+      grid-sym counts all ODD (THM-048/281): True ; total grid-sym = 16 = Fix(sigma): True
+n=6: m=10 fixed tiles f=2 ; FULL 2^m=1024 ; HALF (mod grid-sym) = 544 ;
+      Fix(sigma)=64 = grid-sym tilings ; Fix(sigma*tau)=16 ; QUARTER = 276
+      classes=56 ; fibration identity fiber*|Aut| = H: True ; sum fibers = 1024 = 2^m: True
+      classes with >=1 grid-sym tiling = 12 (THM-643: = #SC classes) ; per-class
+      grid-sym counts all ODD (THM-048/281): True ; total grid-sym = 64 = Fix(sigma): True
+HALF/QUARTER models: half counts SC-side data (Fix sigma = grid-sym = SC witnesses),
+quarter = Burnside orbit count under the dihedral <sigma, tau> — the tiling-side
+shadow of the merged metagraph. Nodes/edges/tilings compute each other via
+fiber*|Aut| = H, sum fibers = 2^m, Fix(sigma) = sum of odd per-SC-class counts.
+NAMED NEXT (not computed): the base-path-independent subgroup = the intersection
+over all spanning paths P of the P-splitting data — candidate canonical invariant
+(the cycle SPACE is already canonical; the intersection of the CUT-embeddings is
+the new object) — handoff to successor session.

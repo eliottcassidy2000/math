@@ -1,3 +1,11 @@
+## boxeph-2026-07-20-S157 -- LANG-WEIL-FREE DEFICIENCY THEOREM (Galois pigeonhole; gap 2/3-vs-1/3 = what equidistribution buys) + HALF/QUARTER TILING MODELS (Burnside shadow of the merged metagraph) (HYP-8265)
+
+**Owner:** attempt the partition reproof; half/quarter tiling models; tilings/nodes/edges compute each other; base-path-independent intersection subgroup; Casas-Alvero p-adic front.
+
+- **THEOREM (no Lang-Weil):** Galois degree-d etale cover => deficiency >= (1-1/d)p^n - Cp^{n-1}: fibers are G-torsors (Frobenius fixed point => all d rational), image = |X_et|/d, |X(F_p)| bounded by Schwartz-Zippel. Verified models A/B; kernel contrast 1/3 vs 2/3 quantifies Lang-Weil's contribution; deck-poverty gains another face (Galois counterexamples would fall to freshman counting).
+- **Half/quarter models:** HALF = 40/544, QUARTER = 21/276 (n=5/6); Fix(sigma) = grid-sym = per-SC-class odd sums; #classes-with-grid-sym = #SC exactly; fiber*|Aut| = H and sum fibers = 2^m verified per class. The quarter model = tiling-side Burnside shadow of G_n/Z_2.
+- Handoffs: intersection-over-paths cut-embedding subgroup (the canonical invariant candidate); Casas-Alvero front (absent in repo; p-adic partial results = natural fit to our mod-p machinery); partition reproof extension to twisted/non-regular classes.
+
 ## death-star-2026-07-20-S60 — THE NATURE OF NUMBERS: two arithmetics of tournaments (tiling hypercube = integers-in-binary; H = multiplicative norm, strong = primes, {odds}\{7,21} = the monoid) + the ERDOS-592 / JC-counterexample TRICHOTOMY (observer / x3-tower / char-2, the 2,3 spine) + witness-extraction assessment + h(G_8/Z_2) >= 22
 
 Owner (two prompts): assess if the de Bondt-van den Essen witness extraction is novel/meaningful/Lean-worthy
