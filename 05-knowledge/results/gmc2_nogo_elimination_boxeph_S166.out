@@ -1,0 +1,27 @@
+E1 = {(0, 0, 0, 0): '2', (1, 0, 0, 1): '-2', (1, 0, 1, 0): '-1'}
+after b-substitution: degrees (c,mu,lam): [4, 5, 8, 9]
+Res_c(E2,E3): 7 monomials, degree 6
+Res_c(E2,E4): 10 monomials, degree 10
+final resultant in lam: degree -1, 0 terms
+  RESULTANT IDENTICALLY ZERO -> spurious (common factor); needs refinement
+DONE-STAGE1.
+E2 stripped by [] ; 7 monomials, deg 4
+E3 stripped by [] ; 8 monomials, deg 5
+E4 stripped by [] ; 18 monomials, deg 8
+E5 stripped by [] ; 20 monomials, deg 9
+H1 stripped by ['(mu+2lam)', '(mu+2lam)'] -> {(0, 4): '-18432', (1, 3): '-26112', (2, 2): '-11904', (3, 1): '-1408', (4, 0): '-64'}
+H2 stripped by ['mu^1', '(mu+2lam)', '(mu+2lam)', '(mu+2lam)', '(mu+2lam)'] -> {(0, 5): '7077888', (1, 4): '11403264', (2, 3): '6488064', (3, 2): '1486848', (4, 1): '132096', (5, 0): '4608'}
+H3 stripped by ['mu^2', '(mu+2lam)', '(mu+2lam)', '(mu+2lam)', '(mu+2lam)'] -> {(0, 5): '114032640', (1, 4): '186777600', (2, 3): '108134400', (3, 2): '25817088', (4, 1): '2248704', (5, 0): '73728'}
+
+final check: common mu-roots of H1s,H2s,H3s at 40 random rational lam values:
+no common (mu) root at any sampled lam: True
+
+CONCLUSION: after stripping the spurious factors (powers of lam, mu, mu+2lam),
+the pairwise c-resultants H1, H2, H3 share NO common (mu, lam) zero (40 exact
+rational lam samples, gcd degree 0 each) except possibly on the stripped loci —
+and the stripped loci are handled separately: lam = 0 (exponential-vs-(1-u)
+impossibility, proved analytically), mu + 2lam = 0 (E1 = 2 != 0), mu = 0 with
+lam != 0 (check directly below).
+mu=0 slice: E-systems monomial counts: [2, 1, 3, 2]
+mu=0: gcd of lam-resultants has degree 0 (0 => no common root except maybe lam=0)
+DONE-STAGE2.
