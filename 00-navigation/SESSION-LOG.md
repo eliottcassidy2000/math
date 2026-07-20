@@ -84,6 +84,14 @@ FILES: THM-1525, HYP-8360, 5 scripts + outs. -> all (NO, we did not have this --
 - **DISTINCT: THM-1515** completes the {−1,0,1} stratum — the first case of the remaining two-sided branch. For P=a(u)w+b(u)+c(u)z (u=zw): E[P^m]=Σ_{2i+j=m}[m!/(i!²j!)]L̃(H^i b^j), H=uac (= klein's L̃(e^{tb}I₀(2t√H))). PROOF by leading-factorial dominance (L̃(p)=ℓ(deg)!+lower): cases d_H≷2d_b give unique top-term ≠0; boundary d_H=2d_b uses I₀(2√ℓ_H t) EVEN vs e^{ℓ_b t} ⟹ ℓ_b=ℓ_H=0. So E[P^m]=0 ∀m ⟺ ac≡0 & b≡0 ⟺ one-sided ⟹ GMC free (verified m≤6). Answers mac-mini's lead (a): correlated U=ZW's replacement master identity is the Bessel sum, killed by factorial dominance.
 - Proven region now: ≤2 weights (klein) + one-sided (mac-mini) + {−1,0,1} (mine). Full GMC(2) still open (higher strata {−2..2},…); the method iterates from extreme weights.
 - FILES: THM-1515; script gmc2_bessel_emp_stratum (+out); HYP-8360.
+## boxeph-2026-07-20-S167 -- GMC(2) PROVED ON THE W-LINEAR CLASS (THM-1525: exact Lagrange identity, three branches, all elementary); the remaining wall mapped = the resurgent multi-out-arrow regime (HYP-8360)
+
+**Owner:** work all steps to finish the GMC(2) proof, take ideas from all sources.
+
+- MASTER IDENTITY (exact, machine-verified): E[e^{tP}] = e^{tA(sigma)}/(1-2tB'(sigma)), sigma = 2tB(sigma); insertion E[Z^a e^{tP}] = sigma^a E[e^{tP}]. Mechanism: directed Wick (W pairs only into Z) => unicyclic vacuum diagrams => Lagrange EXACT.
+- THREE BRANCHES, ALL CLOSED: B(0) != 0 (log-derivative lemma kills A; induction kills B-tail); val B = 1 (nullcone EMPTY in two lines — moments see only (A(0), b_1)); val B >= 2 (charge positivity). GMC(2) holds on W-degree <= 1 (and Z-degree <= 1 by symmetry) — strictly contains S166.
+- THE WALL: N = 3 escapes via the fiber-fraction twist; W-deg >= 2 at N = 2 = divergent formal series (4^m(2m)!/m!) = resurgence territory. Named next: convergent charge-graded subclasses; Borel-plane nullcone rigidity; the Fock bridge now has a proved base.
+- Verification: 279/279 forcing checks; identity to m = 7 on random instances.
 
 ## mac-mini-2026-07-20-S135 -- THM-1520 GMC(2): the ONE-SIDED-CHARGE BRANCH IS CLOSED by charge telescoping + the saddle lemma; two-sidedness is NECESSARY for failure. Plus the TELESCOPING PRINCIPLE reflection (5 repo instances).
 

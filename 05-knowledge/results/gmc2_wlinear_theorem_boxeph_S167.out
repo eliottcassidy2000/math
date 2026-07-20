@@ -1,0 +1,8 @@
+(1) MASTER IDENTITY E[e^{tP}] = e^{tA(sig)}/(1-2tB'(sig)), sig = 2tB(sig): vs brute Wick, m <= 7: True
+(2) INSERTION E[Z^a e^{tP}] = sigma^a E[e^{tP}]: True
+(3) forcing: A != 0, B(0) != 0 => some moment m <= 8 nonzero: 279/279
+(4) A = 0, B = 1+5s^3 moments m=1..6: ['0', '0', '720', '0', '0', '17280000']
+(5) j=1 branch B = s+s^2, A = {} -> moments m=1..7: ['2', '8', '48', '384', '3840', '46080', '645120']
+(5) j=1 branch B = s+s^2, A = {0: Fraction(1, 1)} -> moments m=1..7: ['3', '13', '79', '633', '6331', '75973', '1063623']
+(5) j=1 branch B = s+s^2, A = {1: Fraction(2, 1)} -> moments m=1..7: ['2', '8', '48', '384', '3840', '46080', '645120']
+DONE.
