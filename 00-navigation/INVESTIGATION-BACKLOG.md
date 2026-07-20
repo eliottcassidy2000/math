@@ -5,6 +5,14 @@
 - **Partition/cycle-world Fibonacci analogues** — sum_x S(m-x,x) = 1,0,1,1,2,4,9,22,... and sum_x c(m-x,x) = 1,0,1,1,3,9,36,... proved NOT C-finite (order<=6). What do they count in tournament terms (Hamiltonian analogue in partition/permutation worlds)? STATUS: open.
 - **Primes in sheared Proth rows** — shear-1 Proth rows sum to Mersenne; row PRODUCTS = Proth factorials; prime content of rows vs Sierpinski rows. STATUS: open, engineering-adjacent (primality testbed).
 
+### S150 Kakeya-bank next stratum: general five-comb atlas — EXECUTABLE BLUEPRINT (boxeph-2026-07-20-S150)
+- **What:** the THM-1133 analog at arity 5: all shapes A = {0<a<b<c<d<=30}, all 792 seven-cores, all scales. Sizes: 792 x C(30,4) = 21,704,760 (P,A) pairs; ~1.2B core/order-cell incidences; finite complement a few x 10^7 rows. Exact-arithmetic C++ needed (mirror lrc14_r6_step2_finite_complement_exact_codex_S73.cpp).
+- **Base scripts:** lrc14_r5_offset_polygon_floor_exact_codex_S73.py (THM-1129 atlas; flip cores 8->7 i.e. 495->792, offsets C(30,3)->C(30,4)); lrc14_r6_five_residue_kakeya_exact_codex_S73.py (multiplier-chart loop prototype); lrc14_r6_step2_rectangle_atlas_exact_codex_S73.py (OFFSETS=(-4,-2,0,2,4) hard-coded -> make variable).
+- **The genuinely new piece:** fixed t=1/13 chart FAILS at 5 centers (only 3/13 gap forced, 8/91 < 1/7): needs per-orbit multiplier-chart selection (THM-1134's ten affine orbits) + the 2D (phi=bt, sigma=dt) phase treatment for non-AP offsets (see the-r6-horn-is-a-mini-lonely-runner-deathstar-S58.md pt 3).
+- **Pilot recommendation:** OFFSET_CAP=10 pilot first (792 x C(10,4)=210 = 166,320 pairs, ~1/130 of full) to establish the chart-selection pipeline + measure per-pair cost, THEN scale to 30 in C++.
+- **Secondary open (pure parameter extension):** four-comb span c>30 OUTSIDE the THM-1128 cone k1 >= 26(c+1) — named open in THM-1133 §5; base script parameterized.
+- STATUS: blueprint filed, not run. Next session: execute pilot.
+
 ## Lead kind-pasteur-2026-07-20-S128c101: after THM-1345 (HYP-8150)
 - **(i) Prove the trace module:** conjecture = trace-polynomial monomials are exactly those outside the pure-x cone; suspected proof from z-affinity (z enters fibers linearly), depression (no x^2 term), and the master identity (x^3 reduces with 1/L). Would upgrade THM-1335(4)/1345(3) from computed to explained and settle all towers F^m at once (module closed under Tr => induction).
 - **(ii) The Abel-Ruffini rung:** formalize 'radical-invertible' as a realization-program invariant; the A_5 hunt (2-jet architecture, backlog c99(a)) now carries a second flag: the first non-radical Keller map = the polynomial Abel-Ruffini theorem.

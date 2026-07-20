@@ -1,0 +1,52 @@
+================================================================================================
+FULL CENSUS n <= 6: SC classes and the dihedral/quaternion split
+================================================================================================
+n=3: classes=2  SC=2  quaternionic=0
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=3   #anti=3   anti-orders=[2]  DIHEDRAL(split)
+n=4: classes=4  SC=2  quaternionic=0
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+n=5: classes=12  SC=8  quaternionic=0
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=3   #anti=3   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=3   #anti=3   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=5   #anti=5   anti-orders=[2]  DIHEDRAL(split)
+n=6: classes=56  SC=12  quaternionic=0
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=1   #anti=1   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=3   #anti=3   anti-orders=[2]  DIHEDRAL(split)
+    |Aut|=3   #anti=3   anti-orders=[2, 6]  DIHEDRAL(split)
+    |Aut|=9   #anti=9   anti-orders=[2, 6]  DIHEDRAL(split)
+
+summary (n, classes, SC, quaternionic): [(3, 2, 2, 0), (4, 4, 2, 0), (5, 12, 8, 0), (6, 56, 12, 0)]
+A000568 check: classes should be 2, 4, 12, 56 for n=3..6
+prediction from never-pure-black (n<=7): quaternionic = 0 everywhere
+
+================================================================================================
+CIRCULANT INSTANCE: negation x -> -x is an involutive anti-automorphism (n odd)
+================================================================================================
+  n= 3: all    2 circulant tournaments: negation anti-auto OK ; order(negation)=2
+  n= 5: all    4 circulant tournaments: negation anti-auto OK ; order(negation)=2
+  n= 7: all    8 circulant tournaments: negation anti-auto OK ; order(negation)=2
+  n= 9: all   16 circulant tournaments: negation anti-auto OK ; order(negation)=2
+  n=11: all   32 circulant tournaments: negation anti-auto OK ; order(negation)=2
+  n=13: all   64 circulant tournaments: negation anti-auto OK ; order(negation)=2
+
+=> the dihedral group D_n = <rotation, negation> acts on every circulant
+   tournament with rotations as automorphisms and reflections as
+   anti-automorphisms; the reflection is involutive: circulants are always
+   DIHEDRAL-split.  The staircase reflection sigma(v) = n+1-v plays the
+   same role for grid-symmetric tilings (base-path dihedral).
+DONE.

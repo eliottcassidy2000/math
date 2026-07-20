@@ -47,6 +47,14 @@ FILES: THM-1370; jc_elliptic_all_dimensions_macmini_S123.py (+.out); HYP-8200.
 HANDOFFS: @death-star -- THM-1345's elliptic half generalizes verbatim to all n; your hyperbolic half is the genuinely 2D one. @all -- the counterexample's grading is unique and indefinite, so 'positively graded' is a sharp dividing line, not a slack hypothesis.
 
 ---
+## boxeph-2026-07-20-S150 -- THE GALOIS REDUCTION (a JC that holds, THM-1365) + the dihedral law (anti-order == 2 mod 4) + Kakeya five-comb blueprint (HYP-8205, HYP-8210)
+
+**Owner directive:** pull often; Kakeya bank labelled-polygon closures; tournaments<->dihedral thoroughly; creatively construct a reduced JC that HOLDS.
+
+- **THM-1365 (the reduced JC that holds):** polynomial-Galois Keller maps of C^2 are automorphisms. Proof chain: Cartan freeness (all n, complete in-repo: deck fixed point => identity differential => Cartan lemma), Kambayashi linearization (dim 2), Keller's birational theorem. All-n version = the FIXED-POINT BRIDGE: polynomial-Galois JC_n <= FP(n). Kernel evasion certificate: deck = N_S3(S2)/S2 = 1, pure group theory. NEW NAMED: DECK-POVERTY CONJECTURE (trivial deck for every counterexample; follows from S144 S_d-monodromy conjecture). Structure law: counterexamples are monodromy-rich, deck-poor. JC2(d=2) completion blueprint via Bayle-Beauville filed in the THM.
+- **Dihedral census (HYP-8205):** full n <= 6 exact: quaternionic = 0 (confirms THM-024 = Moon+Cauchy split, prior art found by sweep and credited); NEW anti-order law |sigma| == 2 mod 4; spectra {2} at n<=5, first order-6 at n=6; QR5 Aut+- = D5 literally; negation = involutive anti-auto of all circulants n <= 13. Reflection the-involution-must-live-outside-boxeph-S150.md: Moon = tournament FP property; dictionary rows incl. anti-Redei (THM-647) ~ odd-degree conjecture — reflection-equivariant h-monoid named as next.
+- **Kakeya bank:** Explore extraction of the carrier formalism; next open stratum = general five-comb atlas (792 x C(30,4) = 21.7M pairs, ~1.2B incidences, needs per-orbit multiplier charts — THM-1134's ten affine orbits — for the 2D phase problem); EXECUTABLE BLUEPRINT + OFFSET_CAP=10 pilot plan filed in INVESTIGATION-BACKLOG. Secondary: four-comb span > 30 outside THM-1128 cone (parameter-only extension).
+- 2 Explore pulls (Kakeya formalism; dihedral prior art). Session-state conflict resolved x2 (clean-JSON discipline).
 
 ## opus-2026-07-20-S399 -- THM-1350 A REDUCED JACOBIAN CONJECTURE THAT DOES HOLD: the EQUIVARIANT FIXED-LOCUS JC (F|Fix(sigma) has constant nonzero Jacobian in lower dimension; dim Fix <= 1 makes it JC_1, hence TRUE unconditionally) -- and it FORCES collisions to be ODD, so an equivariant counterexample can never be a DOUBLE, minimum TRIPLE (HYP-8200)
 
