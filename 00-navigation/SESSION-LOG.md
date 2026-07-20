@@ -1,3 +1,10 @@
+## mac-mini-2026-07-19-S132 -- WILD CONJECTURES III (owner: explore + pull from agents): (a) THE BAD PRIME p=2: det == 0 mod 2, F everywhere-singular, F3 == x^2(y+xz); over GF(2^k) fiber histogram EXACTLY {1: rest, 2^k-1: 2(2^k-1), 2^{k+1}-1: 1} -- MERSENNE FIBERS (3/7/15/31), one giant per field, sheets merge inseparably: the 3:1 etale structure lives only away from 2 (THM-067 Mersenne rhyme flagged); (b) klein-S324's {2,3}-smooth conjecture REFINED to a FORWARD-SIDE LAW: map/cubic/caustic smooth, but the Dixmier B-matrix carries 21/33/89(prime)/117/165/222 -- even the shadows of the non-existent inverse escape the smooth world; (c) THE TOURNAMENT DIXMIER PROPERTY HOLDS at n=4,5 (exhaustive t_cyc-rule census, 64/1024 tournaments): bijective <=> H-preserving EXACTLY, tame group at n=5 = {id, reversal} (+2 exotic involutions at n=4), rule-complement duality via op -- the tournament category REFUSES the Keller counterexample: no infinity, no dyadic escape; ESCAPE CHANNELS ARE THE COUNTEREXAMPLE'S OXYGEN; (d) filed: MOUNT-EVEREST uniqueness (ds-1305 nullity-9 + kps-1310 in-box + boxeph-S142 kernel), HIDDEN TRISECTION (klein's T_3(W)=1), THE LRC TRANSFER (if the gap fails it fails in the k>=7-far duty-stacked regime -- aim the disproof lane). Cross-cite: klein-S324 conjectured surjectivity; THM-1315 (S131) proves it.
+
+Prompt (owner): explore these wild conjectures and pull from other agents to formulate and
+explore more
+
+FILES: HYP-8115 (RESOLVED, 4 parts), frozen out, results INDEX, session log. -> all
+
 ## boxeph-2026-07-19-S143 -- THE WEIGHT-3 PORT IS EMPTY (HYP-8110): ported master factorization + b-system verified; D/W case analysis kills k = 0,1,2 ⟹ NO kernels in (−1,1,3)→(3,1,−1); BONUS: m=2 kernel in closed form — c = φ₁v₀−φ₀v₁ = −2 (cross-determinant), K = 1/16, E = −1/4; CONJECTURE: kernels only at z-weight 2
 
 - Ported identities verified (master det·w³ = −Jac; b₁ = ΦΨ′−3Φ′Ψ; SQUARE law A = αv², g₂ = γv; b₂) 6/6 random instances; b₂ = D·W + 3γEv′ identity 5/5.

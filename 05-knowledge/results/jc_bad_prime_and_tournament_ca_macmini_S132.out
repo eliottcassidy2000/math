@@ -1,0 +1,47 @@
+== (a) THE BAD PRIME p = 2 ==
+F1 mod 2 = x**3*y**3*z + x**2*y**4 + x**2*y**2*z + x*y**3 + x*y*z + z
+F2 mod 2 = x**3*y**2*z + x**2*y**3 + x*z + y
+F3 mod 2 = x**3*z + x**2*y
+F1 ≡ (1+xy)((1+xy)²z + xy³): True
+F3 ≡ x²(y + xz):             True
+det J mod 2 = 0   (everywhere-singular in char 2)
+GF( 2): image    6/8     = 0.750; fiber sizes {1: 5, 3: 1}
+GF( 4): image   46/64    = 0.719; fiber sizes {1: 39, 3: 6, 7: 1}
+GF( 8): image  414/512   = 0.809; fiber sizes {1: 399, 7: 14, 15: 1}
+GF(16): image 3646/4096  = 0.890; fiber sizes {1: 3615, 15: 30, 31: 1}
+
+== (b) {2,3}-smoothness of -2·B (THM-1300 Dixmier matrix) ==
+distinct |coeffs| of -2B: [1, 2, 3, 6, 8, 9, 12, 16, 18, 21, 30, 32, 33, 36, 42, 45, 54, 60, 75, 81, 89, 90, 108, 117, 165, 189, 216, 222]
+NON-SMOOTH: [21, 30, 33, 165, 42, 45, 60, 189, 75, 89, 90, 222, 117]  — klein-S324's smoothness conjecture corroborated on the Dixmier side
+n=4: 8 t_cyc-rules; tournaments 64
+rule R          bijective  H-preserving  |image|
+[]              True       True          64
+[0]             True       True          64
+[1]             False      False         40
+[0, 1]          False      False         40
+[2]             False      False         40
+[0, 2]          False      False         40
+[1, 2]          True       True          64
+[0, 1, 2]       True       True          64
+n=5: 16 t_cyc-rules; tournaments 1024
+rule R          bijective  H-preserving  |image|
+[]              True       True          1024
+[0]             False      False         784
+[1]             False      False         424
+[0, 1]          False      False         264
+[2]             False      False         424
+[0, 2]          False      False         544
+[1, 2]          False      False         624
+[0, 1, 2]       False      False         864
+[3]             False      False         864
+[0, 3]          False      False         624
+[1, 3]          False      False         544
+[0, 1, 3]       False      False         424
+[2, 3]          False      False         264
+[0, 2, 3]       False      False         424
+[1, 2, 3]       False      False         784
+[0, 1, 2, 3]    True       True          1024
+
+TOURNAMENT DIXMIER VERDICT (t_cyc rule class):
+  at n=4,5: EVERY H-preserving t_cyc-rule is bijective —
+  the Dixmier property HOLDS for this rule class (finite proof).
