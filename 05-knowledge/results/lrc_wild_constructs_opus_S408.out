@@ -1,0 +1,30 @@
+W1: theta = 0 vs theta = 1 (exact):
+  AP13: M_0 = 1/14 at (1, 14); M_1 = 13/34 = 0.382 at (13, 34)
+  GW: M_0 = 1/14 at (1, 14); M_1 = 13/34 = 0.382 at (13, 34)
+  DW: M_0 = 14/183 at (14, 183); M_1 = 83/216 = 0.384 at (83, 216)
+  ladder3: M_0 = 3/41 at (17, 41); M_1 = 13/34 = 0.382 at (13, 34)
+  {1..12,14}: M_0 = 1/13 at (1, 13); M_1 = 5/13 = 0.385 at (5, 13)
+  {1..12,15}: M_0 = 1/13 at (1, 13); M_1 = 5/13 = 0.385 at (5, 13)
+  primes13: M_0 = 1/4 at (1, 4); M_1 = 183/214 = 0.855 at (51, 214)
+  cluster20: M_0 = 5/13 at (1, 52); M_1 = 800/89 = 8.989 at (2, 89)
+  theta=0 ranking: ['AP13', 'GW', 'ladder3', 'DW', '{1..12,14}', '{1..12,15}', 'primes13', 'cluster20']
+  theta=1 ranking: ['AP13', 'GW', 'ladder3', 'DW', '{1..12,14}', '{1..12,15}', 'primes13', 'cluster20']
+
+W2: displacement partitions at the theta=0 maximizer:
+  AP13 (t*=1/14): lambda = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7]
+  GW (t*=1/14): lambda = [1, 1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6, 7]
+  DW (t*=14/183): lambda = [14, 14, 15, 28, 29, 42, 43, 56, 57, 70, 71, 84, 85]
+  ladder3 (t*=17/41): lambda = [3, 3, 4, 6, 7, 10, 11, 13, 14, 16, 17, 18, 20]
+
+W3: exclusion signatures:
+  AP13: sigma = EMPTY
+  GW: sigma = EMPTY
+  DW: sigma = [(13, 1, 'in V: False', 'duty-payers: [182]')]
+  ladder3: sigma = [(12, 1, 'in V: False', 'duty-payers: [36]')]
+  {1..12,14}: sigma = EMPTY
+  {1..12,15}: sigma = EMPTY
+
+W4: does the tournament see the witnesses?  argmax c3 vs witness set:
+  AP13: max c3 = 112; #argmax(<=30 shown) = 30; witnesses found = 6 with c3 values [112]; witnesses in argmax: 2/6
+  GW: max c3 = 112; #argmax(<=30 shown) = 30; witnesses found = 6 with c3 values [106, 108, 112]; witnesses in argmax: 1/6
+  DW: max c3 = 112; #argmax(<=30 shown) = 30; witnesses found = 380 with c3 values [112]; witnesses in argmax: 0/380
