@@ -60,6 +60,9 @@ proof status.
 
 ## Finite-check route (Rosenfeld/S–T architecture)
 
+- `491/6872 = 1/14 + 1/48104` — the weakest 14-coprime certificate rung of the reconstructed k=13 sieve grid ({1,2,4,8} × primes 191..859); the conditional micro-gap width at n=14 (HYP-7940). At 14 | lp the rung DEGENERATES to 1/14 exactly (the ×7-lift quantization degeneracy).
+- `281,577` — the k=13 two-stage cage height H0: conditional rigidity + micro-gap emptiness for primitive max speed ≤ this (HYP-7940; vs opus's k=12 cage 258,276, HYP-7920; naive T=2 pigeonhole would give only 489).
+- `J(AP) = 98827/83167`, `J(GW) = 3083942821/1978381441` — the c-free separator invariant J = S₂S₆/S₄² of the two tight families; separator integer D_J = 60964769924400, sole caging prime divisor 443 (HYP-7940).
 - `B_13 = (91^12/13)^13` — MSS minimal-counterexample product bound at n=14; ln = 670.35, log10 = 291.1 (HYP-7921 ledger; verify-gates: k=7 log10 = 54.86 ≈ Rosenfeld's 7.4e54, k=12 ln = 545.27 < 546 ✓).
 - `~107 primes, 191..859` — the k=13 prime budget (greedy, lcm(2..14)-credited; robust 101–108 across cutoffs) (HYP-7921).
 - `7^13 = 96,889,010,407` — the ×7 lift cost per surviving tuple at k=13 (14 = 2·7 composite kills the S–T polynomial shortcut) (HYP-7921).

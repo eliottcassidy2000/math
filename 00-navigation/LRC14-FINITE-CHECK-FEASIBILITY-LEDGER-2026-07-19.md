@@ -142,6 +142,33 @@ clean kills). The ×7 lift (§3b) remains the structural risk these theorems mus
 address. Scripts + frozen outs: lrc14_I13p1_acceptance_test_kps_S128c88,
 lrc14_I13p1_minimal_covers_kps_S128c88.
 
+
+## 4c. THE k=13 CONDITIONAL TIGHTNESS CAGE (S128c89, HYP-7940 — the first lift-level
+kill theorem instance, built same day as the redirect)
+
+The §4b redirect's item (a), executed. Full statement in HYP-7940; script
+`lrc14_k13_cage_kps_S128c89.py` (+frozen out). Summary: CONDITIONAL on the un-run
+k=13 sieve (D = {1,2,4,8} × 107 primes 191..859) terminating with terminal classes
+⊆ {AP, GW}-dilates, every primitive 13-family with M < 1/14 + 1/48104 (the weakest
+14-coprime rung, 491/6872) and max speed ≤ 281,577 IS {1..13} or {1..11,13,24} —
+tight-locus rigidity + micro-gap emptiness at the k=12 cage's full strength
+(258,276), despite n=14's two-family tight locus. The repair that makes this
+possible: the c-free separator J = S₂S₆/S₄² (J(AP) ≠ J(GW), separator integer
+divisible by only one caging prime, 443) converts the T=2 pigeonhole (which
+collapses H0 to 489) into a two-stage elimination (stage-1 forcing height 1.03e8 ≫
+stage-2 tower 281,577).
+
+Two structural additions to §3's wall analysis: (a) **the ×7-lift quantization
+degeneracy** — at 14 | lp the certificate rung is 1/14 exactly (zero margin), so the
+lifts forced by composite 14 are precisely where the cage's strictness dies; the
+apex-7 wall's third appearance. Cage rungs must come from the 14-coprime grid only.
+(b) **the terminal table is unconditionally computed**: T = 2 over the entire known
+ladder — every non-tight family is captured by the sieve's very first primes
+(3/41 at q=193; 2/27, 3/40, 4/53, 5/66, 1/13-tier, deep-well all at q=191), so the
+sieve's grind is concentrated entirely on the two tight families and whatever
+exotic survivors exist (Wall A's shadow: each new terminal family would cost one
+more J-separator stage, not a collapse).
+
 ## 5. Honest caveats
 
 1. **The "73 primes to 733" figure from the S–T fetch is arithmetically impossible**

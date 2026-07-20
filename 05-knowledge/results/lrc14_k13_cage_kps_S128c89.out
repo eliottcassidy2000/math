@@ -1,0 +1,42 @@
+== (1) quantization rungs ==
+  g1 k=12 weakest rung over {1,2,4,8}x[167,733]: 381/4952 at l=8,p=619  (opus-S400: 113/1466)  -> DIFFERS
+      margin above 1/13: 1/64376 (opus: 3/19058)
+  k=13 caging primes: 107 primes 191..859
+  k=13 weakest rung, depths level-1 {1}: 61/853 at l=1,p=853  margin above 1/14 = 1/11942 ~ 8.374e-05
+  k=13 weakest rung, depths S-T style {1,2,4,8}: 491/6872 at l=8,p=859  margin above 1/14 = 1/48104 ~ 2.079e-05
+  k=13 weakest rung, depths 7-augmented {1,2,4,7,8,14,28,56}: 1/14 at l=14,p=191  margin above 1/14 = 0 ~ 0.000e+00
+
+== (2) terminal-family table (sieve = depths (1, 2, 4, 8) x 107 primes 191..859) ==
+        AP13 M=    1/14 arg=(1, 14): TERMINAL (sieve-invisible)  [0.0s]
+          GW M=    1/14 arg=(1, 14): TERMINAL (sieve-invisible)  [0.0s]
+     F3-3/41 M=    3/41 arg=(17, 41): captured: smallest q=193 (a=80), 245 capturing q's  [0.2s]
+     K2-2/27 M=    2/27 arg=(2, 27): captured: smallest q=191 (a=14), 417 capturing q's  [0.0s]
+     K3-3/40 M=    3/40 arg=(3, 40): captured: smallest q=191 (a=14), 424 capturing q's  [0.0s]
+     F4-4/53 M=    4/53 arg=(22, 53): captured: smallest q=193 (a=80), 355 capturing q's  [0.2s]
+     K4-4/53 M=    4/53 arg=(4, 53): captured: smallest q=191 (a=14), 426 capturing q's  [0.0s]
+     K5-5/66 M=    5/66 arg=(5, 66): captured: smallest q=191 (a=14), 426 capturing q's  [0.0s]
+    D1a-1/13 M=    1/13 arg=(1, 13): captured: smallest q=191 (a=44), 428 capturing q's  [0.0s]
+    D1b-1/13 M=    1/13 arg=(1, 13): captured: smallest q=191 (a=14), 428 capturing q's  [0.0s]
+   DW-14/183 M=  14/183 arg=(14, 183): captured: smallest q=191 (a=14), 428 capturing q's  [0.0s]
+  => T = 2 terminal families: ['AP13', 'GW']
+
+== (3) multi-family power-sum elimination: the cage height H0(T) ==
+  total caging ln-product = 658.9 over 107 primes
+  AP13: caging primes dividing some S_2m(F): 1 [367]
+  GW: caging primes dividing some S_2m(F): 2 [283, 619]
+  H0(T) = height where product/T stops forcing R_13 = 0 exactly
+  (|R_m| <= S_2(V)^m * S_2m(F) + S_2m(V) * S_2(F)^m; V bounded by H)
+  T = 1: H0 ~ 324,742  (micro-gap emptiness + rigidity below the weakest rung, for max speed <= H0, CONDITIONAL on the sieve run)
+  T = 2: H0 ~ 489  (micro-gap emptiness + rigidity below the weakest rung, for max speed <= H0, CONDITIONAL on the sieve run)
+  T = 3: H0 ~ 26  (micro-gap emptiness + rigidity below the weakest rung, for max speed <= H0, CONDITIONAL on the sieve run)
+  T = 4: H0 ~ 5  (micro-gap emptiness + rigidity below the weakest rung, for max speed <= H0, CONDITIONAL on the sieve run)
+
+== (4) the 12-of-13-even branch (k=12's 11-even analog), spot check ==
+  300 random 12-even+1-odd families: min M = 2/15 ~ 0.1333 at [4, 12, 16, 20, 24]...
+  vs 1/13 = 0.0769: branch floor HOLDS >= 1/13
+== (5) the J-separator two-stage cage ==
+  J = S2*S6/S4^2: J(AP) = 98827/83167, J(GW) = 3083942821/1978381441  -> separator: True
+     separator integer D_J: 60964769924400  (ln = 31.7); caging primes dividing D_J: [443]
+     stage-1 forcing height: H1 ~ 1.034e+08  (below this, one J-identity is EXACT; C_J=27.5, loss-slope 16.7/lnH)
+     stage-2 tower height: H0 ~ 281,577  (near-T=1 strength restored)
+     => TWO-STAGE CAGE HEIGHT = min(stage1, stage2) ~ 281,577
