@@ -1,0 +1,12 @@
+sharpness: odd zero-free map T^k -> R^2 for each k
+  k= 1: w_i odd at i=0; odd & zero-free & free: True
+  k= 2: w_i odd at i=0; odd & zero-free & free: True
+  k= 3: w_i odd at i=2; odd & zero-free & free: True
+  k= 5: w_i odd at i=4; odd & zero-free & free: True
+  k= 8: w_i odd at i=0; odd & zero-free & free: True
+  k=13: w_i odd at i=0; odd & zero-free & free: True
+ALL k verified: True
+
+=> ind(T^k) < 2 for every k; with ind >= 1 this gives ind = 1 EXACTLY.
+   Contrast ind(S^k) = k: S^k is NOT aspherical for k >= 2, which is the
+   entire reason BU works there and collapses on the torus.

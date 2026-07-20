@@ -55,6 +55,28 @@ located maximizer `g = D/s`, the `(D,s)` stratification, substitution-exhaustive
 two sessions.
 
 **Artifacts:** THM-1385; HYP-8225 (refuted); THM-1380 §6 marked resolved; 2 scripts + outputs.
+## mac-mini-2026-07-20-S125 -- THM-1385: the Z/2-index of a free involution on an ASPHERICAL space is EXACTLY 1. Borsuk-Ulam collapses to ONE equation on the resonance k-torus, for every k and every free involution. Sharp, with an explicit witness. HYP-8220.
+
+TASK (owner): abstractly, one involution that is free and carries an odd map; concretely the k-torus of the resonance lattice, with the caveat that T^k != S^k blocks plain BU so it needs the Z/2-index form.
+
+THE CAVEAT IS RIGHT AND THE INDEX FORM ANSWERS IT WITH A NUMBER: 1.
+
+(A) THEOREM, three lines. X aspherical, Z/2 acting FREELY => ind(X) = 1. ind>=1 because the cover is nontrivial. ind<=1: a Z/2-map S^2 -> X descends to RP^2 -> M = X/Z2; equivariance makes pi_1(RP^2)=Z/2 -> Gamma -> Z/2 ONTO, so the generator hits gamma != 1 with gamma^2 = 1 -- but Gamma acts freely on a contractible universal cover and is therefore TORSION-FREE. Contradiction.
+
+(B) CONSEQUENCE. An odd map X -> R^m must vanish only for m=1; for every m>=2 zero-free odd maps exist.
+
+(C) SHARP, explicitly. For tau(x)=x+v on T^k (v=w/2, w not in 2Z^k): pick i with w_i odd, a=e_i, and set f(x)=exp(2 pi i <a,x>) in R^2. Then f(x+v) = -f(x) (odd) and |f|=1 (never zero). Verified k=1,2,3,5,8,13. So the bound is ATTAINED. The Klein-bottle involution (non-translation) gives ind=1 independently via Wu: w_1^2 = w_2 = chi mod 2 = 0.
+
+(D) WHY S^k ESCAPES. ind(S^k)=k precisely because S^k is NOT aspherical for k>=2. The dividing line between 'BU gives k equations' and 'BU gives one' is ASPHERICITY of the carrier -- not dimension, not homology. That is the clean conceptual content.
+
+(E) FOR THE RESONANCE LATTICE. Any BU-type argument on the resonance k-torus, with ANY free involution, yields at most ONE scalar equation -- never the k independent conditions such arguments are reached for. Complementary to THM-1380 (freeness and oddness on different involutions at the circle level): even when they are forced to coincide on a higher-dimensional torus, the index does not grow.
+
+NOT CLAIMED: this bounds the TOPOLOGICAL method only. It says nothing about the truth of the underlying LRC statement, and does not obstruct measure, Fourier or covering arguments on the same torus.
+
+FILES: THM-1385; z2_index_aspherical_macmini_S125.py (+.out); HYP-8220.
+HANDOFFS: @opus -- THM-1385 generalizes your THM-1380 no-go from the circle to every aspherical carrier, and identifies asphericity as the mechanism. @all -- if a future session reaches for Borsuk-Ulam on any torus/aspherical carrier here, this caps the yield at one equation before the work starts.
+
+---
 
 ## boxeph-2026-07-20-S152 -- THM-1370: 7 AND 21 ARE NEVER h-VALUES (all n, complete proof); exhaustive n=7/n=8 spectra via augmentation covers; Moon-Busch floor re-derived + witnessed at n=9 (HYP-8220)
 
