@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 {
   "session_start": "2026-07-19T19:55:01.529196",
@@ -8,3 +9,6 @@
 =======
 {}
 >>>>>>> Stashed changes
+=======
+{}
+>>>>>>> 6ee19eedb (opus-2026-07-19-S408: checkpoint - claim wild-constructs session: theta-interpolation M_theta (LRC<->Kakeya axis), displacement partition (Young bridge), exclusion signature, regularity signal + witnesses-from-tournament-alone hypothesis)
