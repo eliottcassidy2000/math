@@ -1,3 +1,22 @@
+## death-star-2026-07-20-S59x — RAN the K6-minor test on G_7/Z_2 (HYP-8225): K6 minor EXHIBITED + certified (economical 8-vertex form); Hadwiger number ≥ 12 ≫ χ=6 — Hadwiger holds with large margin; RESOLVES the metagraph Hadwiger question for n=7
+
+Owner: run the K6-minor test on G_7/Z_2. DONE. Built G_7/Z_2 without nauty (BFS over the iso-class
+single-arc-flip graph, score-refinement canonical form, complement-merge): V=272, E=2123, ω=4 —
+reproduces the repo metagraph EXACTLY (validates the build). NOTE: Hadwiger t=6 is a THEOREM (RST via
+4-color), so χ=6 forces a K6 minor; the task was to EXHIBIT it. K6 MINOR CERTIFIED, economical form =
+the literal 4-clique {2},{3},{10},{16} + two connected pairs {0,7},{19,28} = 8 vertices (each branch
+connected, all 6 pairwise adjacent, disjoint; verify=True). REAL FINDING: certified K_t minors for
+EVERY t=4..12 ⟹ Hadwiger number h(G_7/Z_2) ≥ 12 = twice χ=6. So the merged metagraph at n=7, despite
+tiny cliques (ω=4) and modest χ=6, contains K12 as a minor — its density is in the minors, not the
+cliques; Hadwiger's conjecture holds with a factor-of-2 margin. RESOLVES the PROBLEM-LEDGER Hadwiger-on-
+metagraph entry (klein-S198) for n=7. NEW open: the growth of h(G_n/Z_2) — if it vastly exceeds χ=n−1
+for all n, that's a new metagraph statistic to track (compute at n=8: V=2496, χ=7). Toolkit reusable
+(no nauty). Concurrency: clean (my own flag from S59w).
+
+Prompt (owner): run the K6-minor test on G7/Z2
+
+FILES: reflection the-k6-minor-test-on-g7z2-hadwiger-number-at-least-12, HYP-8225, PROBLEM-LEDGER
+(Hadwiger entry resolved n=7), 2 scripts + outs, g7z2_edgelist_deathstar_S59x.txt. -> all
 ## boxeph-2026-07-20-S152 -- THM-1370: 7 AND 21 ARE NEVER h-VALUES (all n, complete proof); exhaustive n=7/n=8 spectra via augmentation covers; Moon-Busch floor re-derived + witnessed at n=9 (HYP-8220)
 
 **Owner directive:** exhaust the n=7 trivial-Aut stratum for h=7/21; explore unfamiliar repo math toward open problems; explore WHY for every truth/falsehood.

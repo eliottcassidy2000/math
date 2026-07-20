@@ -1,0 +1,19 @@
+G_7/Z_2: V=272, E=2123
+
+=== exact Hadwiger number (max t with a K_t minor) ===
+  K_4 minor: YES (cert OK), max branch size 78
+  K_5 minor: YES (cert OK), max branch size 83
+  K_6 minor: YES (cert OK), max branch size 127
+  K_7 minor: YES (cert OK), max branch size 87
+  K_8 minor: YES (cert OK), max branch size 51
+  K_9 minor: YES (cert OK), max branch size 80
+  K_10 minor: YES (cert OK), max branch size 56
+  K_11 minor: YES (cert OK), max branch size 73
+  K_12 minor: YES (cert OK), max branch size 61
+  => Hadwiger number h(G_7/Z_2) >= 12  (chi=6, omega=4)
+
+=== ECONOMICAL K_6 minor grown from the literal 4-clique ===
+  base 4-clique (singletons): [2, 3, 10, 16]
+  B5 = [0, 7] (size 2), B6 = [19, 28] (size 2)
+  economical K_6 minor: 4 singletons + 2 sets of size 2,2; certificate: True
+  BRANCH SETS: [[2], [3], [10], [16], [0, 7], [19, 28]]

@@ -197,7 +197,7 @@ all heights (THM-1289, published), δ ineffective.
   (THM-406, with an MRDP proof they are NOT one problem).
 **NICHE additions (death-star-S59w miner, beyond the S59u DEEP top-promotes) — ranked:**
 - **★ Alcuin number vs Robertson–Seymour** [MODERATE] — Alcuin = τ+1 BREAKS minor-closure (monotone under deletion, INCREASES under contraction; K_{2,4} witness); so {G: Alcuin ≤ k} has no finite forbidden-minor set. Self-contained, OPEN-Q-107 (the-plus-one-that-escapes-through-contraction).
-- **★ Hadwiger's conjecture on the metagraph** [MODERATE] — does G_7/Z_2 (272 vtx, first non-perfect, ω=4<χ=6) have a K_6 minor? A single buildable test on the central object (klein-S198).
+- **Hadwiger's conjecture on the metagraph** [RESOLVED n=7, death-star-S59x] — G_7/Z_2 (272 vtx, ω=4<χ=6) has a certified K_6 minor (economical: {2},{3},{10},{16},{0,7},{19,28}, 8 vtx) AND Hadwiger number ≥ 12 ≫ χ=6 — Hadwiger holds with large margin; the metagraph's density is in its minors, not its cliques. NEW open: how does h(G_n/Z_2) grow (compute at n=8)? (klein-S198).
 - **★ Real-rootedness of I(Ω,x)** [DEEP for tournaments] — PROVED real-rooted n≤8 (claw-free THM-020), DISPROVED n≥9 (THM-025, explicit Newton-violation); OPEN = characterize the real-rooted subclass (OPEN-Q-047/051).
 - **EGZ zero-sum ↔ H-spectrum residue gaps** [PARTIAL] — H ≢ 2 (mod 5) at n=5, predicted for all prime n (a crisp OCF-machinery target).
 - **Bernoulli 1806 / von Staudt–Clausen {2,3,7}** [MODERATE] — B_6 = 1/42 denominator primes {2,3,7} = the same {2,3,7} as the OCF/H-spectrum semigroup? niche, unworked.
