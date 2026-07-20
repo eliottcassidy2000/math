@@ -1,3 +1,37 @@
+## mac-mini-2026-07-19-S123 -- THE TWO QUANTIZATIONS (owner: finish LRC(14), synthesize the near-misses, tournament/metagraph focus): the DOMINANCE DEFICIT LAW P(a,b) = meas{||at||>||bt||} = 1/2 - [mixed-parity]/(2(b^2-a^2)) (both-odd pairs tie EXACTLY -- proved + exact referee, 1101 pairs) => the theta=1/2 dominance tournament is the dyadic preorder, BLIND at the floor (axis-3 confirmed by design), but its crossing moduli ARE the (D,s) rung lattices and slack parity = s parity = straddle parity (odd-slack rungs force mixed strict-deficit straddles; both TIGHT families straddle both-odd (1,13), deficit 0) + THE BLOCKER MIRROR PALINDROME (HYP-7965 PROVED): LEM-020's tau<->1-tau acts on THM-1240's blocker data as an exact set-valued palindrome, central column = EVEN pack speeds at tau=1/2 (2-adic depth-1 inside Wall B), parity localization verified 8 families x all carriers; first-draft same-gap tie claim REFUTED by own referee (c=3,d=12: {8} vs {10}) and corrected to the cross-gap pairing
+
+Owner directive: work to finish LRC(14); see the times we have come close; synthesize multiple
+valid perspectives; focus on tournament and metagraph analogies. Executed opus-S399 leads (2)
+[metagraph transport, boxeph-S110 follow-up (b)] and section-5 [cycle-holonomy involution
+typecheck]. SAME-DAY CONVERGENCE absorbed into the synthesis: THM-1289 (G-K floor isolation,
+ineffective delta) + HYP-7920 (S-T cage, effective bounded height) + kps-c87/c88 (feasibility
+ledger, level-1 pruning refuted) + boxeph-S132/133 (in-band censuses, 11-for-11 rung
+quantization) -- four squeezes with non-overlapping weaknesses, all naming the same residual:
+EFFECTIVIZE delta / kill the finite rung list in (1/14, 3/41]. The metagraph reading: Redei
+isolates the transitive pole by [global parity quantization H odd] + [exact local flip spectrum
+H = 1+2^d]; the M-side now has the first (rung lattice D=M*s + THM-1289 isolation) and lacks
+exactly the second (the rung-realizability map near the AP = death-star's gate tower + slack-1
+realizations). Wall A next move, typed: per-rung kills using cage congruences + gate-tower
+witnesses + the NEW slack-parity necessary condition. Wall B next move, typed: quotient
+THM-1248's address compression by the mirror (enumeration halves; parity obligations localize
+onto the central column = even speeds = LEM-020's tower, where covering leaves depth >= 4 live).
+Housekeeping: flagged THM-1287 two-file collision (death-star D12-rung vs codex selected-prefix
+reservation, both files live in canon) -- adjudication left to the parties per first-pusher
+precedent; preserved codex-S82's in-flight THM-1283 Hunter-star worktree changes in my
+checkpoint (labeled not-mine); recovered a stale-autostash pop collision without loss (old
+stash left in place for forensics -- fleet warning in letter); stash-pop protocol lesson: git
+stash creates nothing on a clean tree, so a later blind pop grabs SOMEONE ELSE'S old stash --
+check 'git stash list' timestamps before popping.
+
+Prompt (owner): work to finish the 14 runner lonely runner conjecture. see the times we have
+come close, and synthesize multiple valid perspective to keep hipping away. focus on tournament
+and metagraph analogies
+
+FILES: HYP-7960 (deficit law, RESOLVED), HYP-7965 (mirror palindrome, RESOLVED), reflection
+lrc14-two-quantizations-dominance-deficit-and-mirror-palindrome-macmini-S123, scripts+outs
+lrc14_measure_dominance_tournament_macmini_S123 and lrc14_blocker_mirror_palindrome_macmini_S123,
+backlog opus-S399 lead (2) EXECUTED, results INDEX. -> all
+
 ## opus-2026-07-19-S402 -- THE G-K PINNING (owner: promote HYP-7930): DETECTIVE VERDICT -- the v1/v2 equality acc(S(n)) = S(n-1) that the repo quoted in BOTH the MISTAKE-117 era and my S401 was WITHDRAWN (v3, Dec 2023) and is Conjecture 1.5 in the PUBLISHED v4 (MPCPS, DOI 10.1017/S0305004125101497); their footnote-2 error mechanism (subtorus cap coordinate-subspace = disconnected subGROUP) is exactly the star-subtlety flagged going in. SPLIT PROMOTION: THM-1289 -- the PROVEN "only upper accumulation points" phrase gives, via the exact translation D = 1/2 - M, the UNCONDITIONAL floor isolation: (1/14, 1/14+delta) EMPTY (all heights, delta ineffective) -- THM-1268's "no gap at all" horn is DEAD; same at 12 speeds above 1/13 (the ineffective all-heights sibling of HYP-7920's cage). DEMOTED (MISTAKE-190): window-finiteness (C2)/(C3) are CONDITIONAL on Conj 1.5 -- the proven chain terminates in S*0(n-2) = GRID-LONELINESS LAND, not floored at 1/13 (gridmax((1..11);14) = 1/14, verified exact). THE RELOCALIZATION: window accumulation can only sit AT points of G*0(11), so the finite-list question becomes repo-native -- characterize G*0(11) cap (1/14, 1/13-eps) with our gridmax/rung machinery; and the paper's sufficient condition for Conj 1.5 is S2(n) = S(n-1), a rank-2 statement for which the dusty Route-2 Lean artifacts are aimed equipment. BONUS PINS: G-K Conj 1.1 (Kravitz original) already refuted by Fan-Sun (k=2 rungs at n=4; verified 4/4 exact as scanner control); the live Amended Conj 1.2 IS the repo's (D,s)/slack program verbatim; death-star's D-graded tower = its k = D-1 diagonal with eight out-of-sample confirmations.
 
 Prompt (owner): do the G-K pinning session to promote HYP-7930
