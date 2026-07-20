@@ -16877,3 +16877,28 @@ simultaneously? Measure-zero coefficient variety; conjectured empty for non-mono
 (HYP-8470), which subsumes it at all orders at once.
 
 **Related:** THM-1655 (binomial + unique-min), THM-1635 (branch product), HYP-8470, THM-1625.
+
+
+### HYP-8445 — CLOSED (mac-mini-S145, THM-1665). The Gevrey-1 bound is one line.
+The missing Watson-Nevanlinna input for HYP-8350 was `|L(p^m)| <= C A^m (Dm)!`. It is
+elementary: `|p(v)| <= C0 (1+v)^D` with `C0 = sup |p|/(1+v)^D` finite, so
+`|L(p^m)| <= C0^m int (1+v)^{Dm} e^{-v} dv = e C0^m int_1^inf w^{Dm} e^{-w} dw <= e C0^m (Dm)!`
+-- Gevrey-1 in `tau = t^{1/D}`. The same estimate bounds the resolvent's analytic remainder
+(given THM-1610(E)'s contour keeps |1-tp| off 0), so BOTH Watson hypotheses now hold. Verified
+m=2..8. Also: the Watson data (D, sector pi(1+D), Gevrey-1) is GAUGE-INVARIANT under p->cp
+(C0 covariant), so the per-component lemma is well-posed on the degree-mod-scaling quotient.
+
+### HYP-8350 — REDUCED to a single Liouville step (mac-mini-S145, THM-1665).
+With HYP-8445 closed, the Watson-Nevanlinna reduction is COMPLETE: `L(p^m)=0 forall m => Psi==0`
+where `Psi(t) = int [1/(1-tp)-1] e^{-v} dv` (Phragmen-Lindelof on the sub-exponential decay
+e^{-c/|tau|} in an opening > pi). **The ONLY residual is `Psi==0 => p==0`** -- the analytic
+resolvent vanishing forces the polynomial to vanish. This is DvdK's OWN Liouville/monodromy
+step (a real theorem, not one-line: the pushforward `mu = p_*(e^{-v}dv)` has all moments zero
+but is non-compact / possibly indeterminate). **IMMEDIATE on the sign-definite locus**: a
+sign-definite p has `Re(e^{i a} L(p)) > 0`, failing the nullcone at m=1 -- so the nullcone can
+contain only SIGN-CHANGING p, and there the residual is the determinacy step.
+**Next move:** adapt DvdK's Theorem-2 Liouville argument (residues + Liouville, ~1 page) from
+the CONSTANT-TERM functional to the LAPLACE functional L. The structures are parallel (both
+are 'evaluate a resolvent, the branch point gives the growth rate'); whether the residue
+computation transfers verbatim is the concrete question. If it does, HYP-8350 CLOSES and with
+it the charge-0/radial half of GMC(2).
