@@ -1,0 +1,47 @@
+==============================================================================
+(A) THE CHARACTERISTIC-2 COLLAPSE:  S = J + I mod 2, ALWAYS
+==============================================================================
+  The dictionary needs 1/2.  Over GF(2) it dies, and the skew matrix dies
+  with it: S = A - A^T = A + A^T = J - I mod 2, independent of T.
+  n = 3 : distinct S mod 2 = 1      distinct A mod 2 = 8     
+  n = 4 : distinct S mod 2 = 1      distinct A mod 2 = 64    
+  n = 5 : distinct S mod 2 = 1      distinct A mod 2 = 1024  
+  n = 6 : distinct S mod 2 = 1      distinct A mod 2 = 3000  
+  n = 7 : distinct S mod 2 = 1      distinct A mod 2 = 3000  
+  tournaments checked : 7096 ; failures of S = J + I mod 2 : 0
+  -> S mod 2 takes exactly ONE value at every n.  All tournament information
+     survives mod 2 in A and NONE of it in S.  This is why the repo's GF(2)
+     layer is written in A and its char-0 parity layer is written in S.
+
+==============================================================================
+(B) PERRON END:  2 rho = (1^T x)^2 - 1  <=  n - 1,  equality iff regular
+==============================================================================
+  n = 3 : max rho over all tournaments = 1.000000   (n-1)/2 = 1.0000   attained by a regular T : True   identity failures : 0
+  n = 4 : max rho over all tournaments = 1.395337   (n-1)/2 = 1.5000   attained by a regular T : False   identity failures : 0
+  n = 5 : max rho over all tournaments = 2.000000   (n-1)/2 = 2.0000   attained by a regular T : True   identity failures : 0
+  n = 6 : max rho over all tournaments = 2.433968   (n-1)/2 = 2.5000   attained by a regular T : False   identity failures : 0
+  n = 7 : max rho over all tournaments = 2.929359   (n-1)/2 = 3.0000   attained by a regular T : False   identity failures : 0
+  -> rho never exceeds (n-1)/2.  At ODD n the bound is attained (regular
+     tournaments exist); at EVEN n there are none, so rho is strictly below.
+
+==============================================================================
+(C) THE TRICHOTOMY AND THE EXACT DEFICIENCY IDENTITY
+==============================================================================
+  regular  <=>  rho = (n-1)/2  <=>  all non-Perron eigenvalues on Re = -1/2
+
+  n    #T       reg<=>rho  reg<=>line tr(A^2)=0  max |identity error|
+  3    8        True       True       True       1.11e-15
+  4    64       True       True       True       2.94e-15
+  5    1024     True       True       True       5.55e-15
+  6    4000     True       True       True       8.60e-15
+  7    4000     True       True       True       1.04e-14
+
+  The deficiency identity holds to machine precision at every n: the TOTAL
+  HEIGHT of the spectrum above the line Re = -1/2 equals the PERRON
+  DEFICIENCY (n-1)/2 - rho, which equals ( n - (1^T x)^2 )/2, the Perron
+  vector's deviation from uniform.  One number, three readings.
+
+  And tr(A) = tr(A^2) = 0 for every tournament, so sum lam = sum lam^2 = 0:
+  the spectrum is pinned at its first two power sums before any structure
+  is imposed.  The half-dictionary supplies the third constraint, a HALF-PLANE
+  Re >= -1/2, and regularity is exactly the case of equality throughout.

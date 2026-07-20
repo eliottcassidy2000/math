@@ -1,0 +1,33 @@
+n    char_S(x) = odd part of (1+x)^n ?                        matches    spec = i tan(k pi/n)
+------------------------------------------------------------------------------------------------
+3    x*(x**2 + 3)                                             True       True      
+5    x*(x**4 + 10*x**2 + 5)                                   True       True      
+7    x*(x**6 + 21*x**4 + 35*x**2 + 7)                         True       True      
+9    x*(x**2 + 3)*(x**6 + 33*x**4 + 27*x**2 + 3)              True       True      
+11   x*(x**10 + 55*x**8 + 330*x**6 + 462*x**4 + 165*x**2 + 11) True       True      
+13   x*(x**12 + 78*x**10 + 715*x**8 + 1716*x**6 + 1287*x**4 + 286*x**2 + 13) True       True      
+
+EXPLICIT SMALL CASES (factored over Q):
+  n = 3   char_S(x) = x*(x**2 + 3)
+  n = 5   char_S(x) = x*(x**4 + 10*x**2 + 5)
+  n = 7   char_S(x) = x*(x**6 + 21*x**4 + 35*x**2 + 7)
+  n = 9   char_S(x) = x*(x**2 + 3)*(x**6 + 33*x**4 + 27*x**2 + 3)
+  n = 11  char_S(x) = x*(x**10 + 55*x**8 + 330*x**6 + 462*x**4 + 165*x**2 + 11)
+
+  Coefficients of char_S are the ODD-INDEX BINOMIALS C(n, 2j+1):
+     n = 5   : [5, 10, 1]
+     n = 7   : [7, 35, 21, 1]
+     n = 9   : [9, 84, 126, 36, 1]
+     n = 11  : [11, 165, 462, 330, 55, 1]
+
+WHICH regular 7-tournament is it?  (compare against the three iso classes)
+  char_A(R_7) = (lam - 3)*(lam**6 + 3*lam**5 + 9*lam**4 + 13*lam**3 + 11*lam**2 + 5*lam + 1)
+  -> this is class [1] of x_half_shift_regular7, the one with x^6+21x^4+35x^2+7.
+     Paley-7 (doubly regular, connection set the quadratic residues {1,2,4}) is
+     class [3], char_S = x(x^2+7)^3.  They are DIFFERENT tournaments.
+
+THE OWNER'S x(x^2+7)(x^4+14x^2+17): the closest regular 7-tournament is class [2],
+  char_S = x(x^2+7)(x^4+14x^2+1) -- constant 1, not 17.  Checked: no regular
+  tournament on 7 vertices has x^4+14x^2+17 as a skew factor (all three enumerated).
+  Note x^4+14x^2+17 has x^2 = -7 +- 4 sqrt(2) while ours has x^2 = -7 +- 4 sqrt(3),
+  so the two differ by sqrt(2) vs sqrt(3) -- a different structure, not a variant.

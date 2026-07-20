@@ -1,0 +1,32 @@
+n = 4  exhaustive: True
+   max rho          = 1.3953369945      (n-1)/2 = 3/2
+   deficiency       = 0.1046630055
+   score sequence   = [1, 1, 2, 2]
+   char poly        = lam**4 - 2*lam - 1
+   factored         = lam**4 - 2*lam - 1
+   min poly of rho  = lam**4 - 2*lam - 1   (degree 4)
+
+n = 5  exhaustive: True
+   max rho          = 2.0000000000      (n-1)/2 = 2
+   deficiency       = -0.0000000000
+   score sequence   = [2, 2, 2, 2, 2]
+   char poly        = lam**5 - 5*lam**2 - 5*lam - 2
+   factored         = (lam - 2)*(lam**4 + 2*lam**3 + 4*lam**2 + 3*lam + 1)
+   min poly of rho  = lam - 2   (degree 1)
+
+n = 6  exhaustive: True
+   max rho          = 2.4339681553      (n-1)/2 = 5/2
+   deficiency       = 0.0660318447
+   score sequence   = [2, 2, 2, 3, 3, 3]
+   char poly        = lam**6 - 8*lam**3 - 12*lam**2 - 8*lam - 2
+   factored         = lam**6 - 8*lam**3 - 12*lam**2 - 8*lam - 2
+   min poly of rho  = lam**6 - 8*lam**3 - 12*lam**2 - 8*lam - 2   (degree 6)
+
+n = 7  exhaustive: False
+   max rho          = 3.0000000000      (n-1)/2 = 3
+   deficiency       = -0.0000000000
+   score sequence   = [3, 3, 3, 3, 3, 3, 3]
+   char poly        = lam**7 - 14*lam**4 - 24*lam**3 - 36*lam**2 - 25*lam - 6
+   factored         = (lam - 3)*(lam**2 + lam + 2)*(lam**4 + 2*lam**3 + 5*lam**2 + 4*lam + 1)
+   min poly of rho  = lam - 3   (degree 1)
+

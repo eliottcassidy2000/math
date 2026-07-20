@@ -1,0 +1,17 @@
+regular tournaments on 7 vertices, up to isomorphism: 3
+
+  [1] char_A(lam) = (lam - 3)*(lam**6 + 3*lam**5 + 9*lam**4 + 13*lam**3 + 11*lam**2 + 5*lam + 1)
+      char_S(x)   = (x - 7)*(x**6 + 21*x**4 + 35*x**2 + 7)
+      factors     = [x - 7, x**6 + 21*x**4 + 35*x**2 + 7]
+      char_S = x * EVEN polynomial : False
+
+  [2] char_A(lam) = (lam - 3)*(lam**2 + lam + 2)*(lam**4 + 2*lam**3 + 5*lam**2 + 4*lam + 1)
+      char_S(x)   = (x - 7)*(x**2 + 7)*(x**4 + 14*x**2 + 1)
+      factors     = [x - 7, x**2 + 7, x**4 + 14*x**2 + 1]
+      char_S = x * EVEN polynomial : False
+
+  [3] char_A(lam) = (lam - 3)*(lam**2 + lam + 2)**3
+      char_S(x)   = (x - 7)*(x**2 + 7)**3
+      factors     = [x - 7, x**2 + 7]
+      char_S = x * EVEN polynomial : False
+
