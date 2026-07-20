@@ -1,0 +1,87 @@
+================================================================================
+PART 1 -- SANITY: the criterion must call the ALLOWED cases nullcone, others not
+================================================================================
+case                                                  relative spread of Pi/t      verdict
+R = 2      (Lam = 2u^-1, single weight -> IS nullcone)                1.110e-16     CONSTANT
+R = 2      (Lam = 2u^-3, single weight -> IS nullcone)                1.556e-15     CONSTANT
+R = 1+u    (Lam = u^-1 + 1  -> NOT nullcone)                        9.900e-04       varies
+R = 1+u^2  (Lam = u^-1 + u -> NOT nullcone)                         9.999e-07     CONSTANT
+R = 1+u^2  (Lam = u^-2 + 1 -> NOT nullcone)                         9.900e-04       varies
+R = 1+u+u^2+u^3 (M=2,N=1)                                           9.910e-04       varies
+
+  Pi/t constant  <=>  in the toral nullcone.  Single weights are constant, as they must be.
+
+================================================================================
+PART 2 -- THE DECISIVE SEARCH: can Pi/t be constant with M,N >= 1 and R nonconstant?
+================================================================================
+  (A hit here would be a TNC counterexample, hence a GMC(2) witness candidate.)
+   M=1 N=1 (d=2): tested    112;  Pi/t constant with R nonconstant: 9;  min spread 1.00e-06
+   M=1 N=2 (d=3): tested    784;  Pi/t constant with R nonconstant: 52;  min spread 1.00e-09
+   M=1 N=3 (d=4): tested   5488;  Pi/t constant with R nonconstant: 376;  min spread 1.00e-12
+   M=2 N=1 (d=3): tested    784;  Pi/t constant with R nonconstant: 52;  min spread 1.00e-09
+   M=2 N=2 (d=4): tested   5488;  Pi/t constant with R nonconstant: 175;  min spread 3.00e-12
+   M=2 N=3 (d=5): tested  38416;  Pi/t constant with R nonconstant: 1360;  min spread 1.38e-15
+   M=3 N=1 (d=4): tested   5488;  Pi/t constant with R nonconstant: 376;  min spread 1.01e-12
+   M=3 N=2 (d=5): tested  38416;  Pi/t constant with R nonconstant: 1360;  min spread 1.23e-14
+   M=3 N=3 (d=6): tested 268912;  Pi/t constant with R nonconstant: 5953;  min spread 1.70e-12
+
+  Zero hits anywhere => TNC holds throughout the searched box, including M,N >= 2.
+
+================================================================================
+PART 3 -- THE ORDER ARITHMETIC: which eps-orders actually carry a condition
+================================================================================
+  v_i = w_i(1+delta_i), w_i = r_0^{1/M} zeta^i; the order-eps^k term of sum_i delta_i
+  carries sum_i zeta^{(k+1)i}, which is M when M | (k+1) and 0 otherwise.
+  M      orders k carrying a condition (k <= 12)
+  1   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  2                          [1, 3, 5, 7, 9, 11]
+  3                                [2, 5, 8, 11]
+  4                                   [3, 7, 11]
+
+  M=1 constrains EVERY order -- that is why Lagrange-Buermann closes it in one line
+  (THM-1530).  M=2 constrains the odd orders, M=3 every third, and so on.  The number of
+  free coefficients of R is d = M+N (after scaling), while the conditions are INFINITE in
+  number even at M >= 2 -- sparse but never exhausted.  That is the structural reason to
+  expect TNC to hold for all M, and the reason a proof needs the sparse subsequence to be
+  independent, which is what remains.
+
+
+================================================================================
+CORRECTION (klein-S347): PARTS 1-2 ABOVE ARE INVALID -- BROKEN TEST, RETRACTED
+================================================================================
+
+ MY SANITY CONTROL CAUGHT IT.  Lam = u^-1 + u was reported CONSTANT, but CT(Lam^2) = 2 != 0,
+ so it is NOT in the nullcone.  And Part 2 reported 'hits' at M=1, where THM-1530 PROVES
+ there are none.  Both are false positives from the same design error:
+
+   Pi(t)/t -> c as t -> 0 for EVERY R -- that is just the leading asymptotic.  Evaluating at
+   t = 1e-3 .. 1e-5 and asking whether the values agree to 1e-6 measures CONVERGENCE, not
+   CONSTANCY.  The reported 'min spread' figures 1e-6, 1e-9, 1e-12 are simply O(t^k).
+
+ The criterion itself is unaffected -- it is an exact identity.  Only my test of it was wrong.
+ Redone below at MODERATE t, where a non-constant Pi/t actually separates.
+
+ REDONE PART 1 -- criterion vs. the ground truth CT(Lam^m), m<=10:
+Lam                                 spread(Pi/t) at moderate t   CT(Lam^m)=0 all m<=10   agree
+2u^-1  (single weight)                               0.000e+00                    True    True
+2u^-3  (single weight)                               9.105e-16                    True    True
+u^-1 + 1                                             4.040e-02                   False    True
+u^-1 + u                                             2.407e-03                   False    True
+u^-2 + 1                                             4.040e-02                   False    True
+u^-2+u^-1+1+u                                        4.311e-02                   False    True
+
+  criterion agrees with ground truth on every control: True
+
+================================================================================
+REDONE PART 2 -- the decisive search, at moderate t
+================================================================================
+   M=1 N=1 (d=2): tested    112;  TNC counterexamples: 0
+   M=1 N=2 (d=3): tested    784;  TNC counterexamples: 0
+   M=2 N=1 (d=3): tested    784;  TNC counterexamples: 0
+   M=2 N=2 (d=4): tested   5488;  TNC counterexamples: 0
+   M=3 N=1 (d=4): tested   5488;  TNC counterexamples: 0
+   M=3 N=2 (d=5): tested  38416;  TNC counterexamples: 0
+
+  Zero counterexamples anywhere, now cross-checked against exact CT arithmetic rather than
+  against a tolerance.  M=1 agrees with the THM-1530 proof; M,N >= 2 is bounded evidence.
+
