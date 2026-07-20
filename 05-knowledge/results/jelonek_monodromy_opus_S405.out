@@ -1,0 +1,62 @@
+============================================================================
+(0) SANITY: det JF and the sigma/tau equivariance at lambda = -1
+============================================================================
+  det JF = -2
+  F(sigma p) - tau(F p) =  [0, 0, 0]  (tau = (a,-b,-c))
+  F(0,0,z) = (z, 0, 0)
+
+============================================================================
+(1) THE FIBRE CUBIC: eliminate to one variable
+============================================================================
+  after substituting z, two equations in (x,y):
+    deg_x G1 = 3  deg_y G1 = 3
+    deg_x G2 = 2  deg_y G2 = 2
+  resultant eliminating y: factored form has 4 factors
+  total degree in x: 12
+
+  factors and their x-degrees:
+    deg_x =  3   27*a**2*c**2*x**3 - 18*a*b*c*x**3 + 16*a*x**3 + b**3*c*x**3 - b**2*x**3 - 3*b*c*x - 2*c + 4*x
+
+============================================================================
+(2) WHICH FACTOR IS THE FIBRE? -- test on a known fibre
+============================================================================
+  canon: F^-1(1,0,0) = {(0,0,1)} u {(+-i/2, +-3i, -26)}  (3 points, from THM-1300)
+    F(0, 0, 1) = (1, 0, 0)
+    F(I/2, 3*I, -26) = (1, 0, 0)
+    F(-I/2, -3*I, -26) = (1, 0, 0)
+
+============================================================================
+(3) THE FIBRE CUBIC IS DEPRESSED, AND L IS THE JELONEK POLYNOMIAL
+============================================================================
+  P(x) = L*x^3 + (4-3bc)*x - 2c      (NO x^2 term: depressed)
+  L    = 27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2
+  cross-check vs canon ('-L at g=0 = b^2-16a'):  -L|_{c=0} = -16*a + b**2
+  tau-invariance of L:  L(a,-b,-c) - L(a,b,c) = 0
+  tau acts on P by:  P_tau(x) + P(-x) = 0
+  => sigma acts on the fibre EXACTLY as x -> -x on the roots of P.
+
+  fibre over a tau-fixed target (b=c=0):  P = 16a x^3 + 4x = 4x(4a x^2 + 1)
+    roots: x = 0  and  x = +-1/(2 sqrt(-a)).
+    at a=1: x = 0, +-i/2  -- matches canon F^-1(1,0,0) = {(0,0,1)},{(+-i/2,...)}
+
+============================================================================
+(4) MONODROMY OF A MERIDIAN AROUND THE JELONEK QUARTIC
+============================================================================
+  The a-axis {b=c=0} lies in the tau-FIXED locus, and meets {L=0} at a=0.
+  dL/da at the origin = 16 != 0  => a=0 is a SMOOTH point of the quartic and the a-axis is TRANSVERSE.
+  So a = eps*exp(i theta) is a genuine meridian loop, and it stays inside the
+  tau-fixed locus -- so monodromy and sigma act on the SAME three roots.
+
+  start roots (a=0.3):      [ 0.+0.912871j -0.-0.912871j  0.+0.j      ]
+  after one full loop:       [ 0.-0.912871j -0.+0.912871j  0.+0.j      ]
+  induced permutation of the start labels: [1, 0, 2]
+  fixed labels: [2]   moved: [0, 1]
+  start root at the fixed label: 0j   (x = 0 is the sigma-FIXED root)
+
+  sigma acts as x -> -x.  On the start fibre that is:
+    label 0  (0.912871j)  -> label 1  ((-0-0.912871j))
+    label 1  ((-0-0.912871j))  -> label 0  (0.912871j)
+    label 2  (0j)  -> label 2  ((-0-0j))
+
+  VERDICT: if the meridian permutation equals the sigma permutation, then
+  'reflection = torus' -- THM-1375's named open question resolves AFFIRMATIVELY.

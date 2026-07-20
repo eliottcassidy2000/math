@@ -1,3 +1,50 @@
+## opus-2026-07-20-S405 - "Reflection = torus" CONFIRMED: meridian monodromy = the lambda=-1 involution (THM-1440)
+
+Owner asked whether "a proper Keller map is an automorphism" is comparable to our JC
+understanding. **It is the bottom rung.** Canon already logs that statement as "a three-line
+covering-space argument" and places it as the WEAKEST element of THM-1375's lattice of
+restricted JCs (empty Jelonek => nodal Jelonek => abelian pi_1 => Galois => normal
+stabiliser => Smith's self-normalising condition at the top). It is also a statement about
+maps that are NOT counterexamples - every counterexample is non-proper by necessity. Our
+counterexample's Jelonek set is identified far more precisely: Zariski's 1929
+three-cuspidal quartic, zero nodes, monodromy S_3, stabiliser self-normalising.
+
+So I spent the session on THM-1375's named next step instead, and it resolved.
+
+**RESULT.** The meridian monodromy of a loop around the Jelonek quartic and the lambda=-1
+torus involution induce the SAME transposition of the fibre - both fix the sigma-fixed
+sheet and swap the other two. Permutation [1,0,2] both ways, by a 4000-step continuation
+and by a three-line proof. **"Reflection = torus" holds.**
+
+**THE MECHANISM, which is the better half.** Eliminating gives the fibre as a DEPRESSED
+cubic P(x) = L x^3 + (4-3bc) x - 2c with L = 27a^2c^2 - 18abc + 16a + b^3c - b^2. No x^2
+term, so the three fibre x-coordinates ALWAYS SUM TO ZERO. On the tau-fixed locus the
+sigma-fixed root is x=0, forcing the fibre to be {0, r, -r}; sigma (x -> -x) swaps the
+balanced pair, and the escaping roots x ~ +-sqrt(-(4-3bc)/L) ARE that same balanced pair,
+transposed by the square-root branch cut. One Vieta relation explains both. The agreement
+is structural, not numerical luck.
+
+**CROSS-VALIDATION.** My independent elimination reproduces canon's Jelonek polynomial
+exactly: -L|_{c=0} = b^2 - 16a, matching THM-1330/1375's recorded form. Also verified
+det JF = -2, F(sigma p) = tau(F p) identically, F(0,0,z) = (z,0,0), and the fibre over
+(1,0,0) = {0, +-i/2} matching canon's F^-1(1,0,0).
+
+**NEW.** (i) Sum of fibre x-coordinates identically zero - possibly the repo's
+"polynomial-centroid conjecture" for this map. (ii) TWO sheets are lost over {L=0}, not one:
+the fibre drops 3 -> 1, surviving root x = 2c/(4-3bc). A stronger degeneration than generic.
+
+**SCOPE - what I did NOT do.** This is one transposition; it generates only Z/2. Canon
+records the full monodromy image as S_3, whose other generators live at the three CUSPS,
+where Zariski's non-abelian pi_1(P^2 \ C) of order 12 sits. That is the next step, and
+canon already has the cuspidal edge Groebner-exact at (b^2/12, b, 4/(3b)).
+
+**BEST NEXT QUESTION.** Is depression special to this F, or does every degree-3 Keller
+counterexample admit a coordinate with depressed fibre polynomial? If the latter,
+"reflection = torus" is a GENERAL feature of degree-3 counterexamples rather than a
+property of ours - that is the version worth chasing.
+
+**Artifacts:** THM-1440; HYP-8290; 1 script + output.
+
 ## boxeph-2026-07-20-S160 -- BIJECTION HUNT: signed-Burnside route CLOSED (eps not a character; eps-mass = new {0,1/2,1}-quantized invariant); score-profile route CLOSED (9v11, 22v41); verdict = recursive-bijection or bust (HYP-8280)
 
 **Owner:** pursue signed-Burnside transport + score-profile refinements; hunt the bijection.

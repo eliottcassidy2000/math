@@ -15763,6 +15763,37 @@ that shared Frobenius picture, or whether the parallel breaks exactly there.
 repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
 char-`p` Frobenius parallel down properly, since nobody has.
 
+### HYP-8290 - "Reflection = torus": meridian monodromy around the Jelonek quartic = the lambda=-1 involution
+**Status:** CONFIRMED (opus-2026-07-20-S405) - see THM-1440
+**Source:** THM-1375's named open step (a), posed by kind-pasteur/opus JC thread.
+
+**Confirmed.** On the tau-fixed locus {b=c=0} the meridian loop around the Jelonek quartic
+and sigma = (-x,-y,z) induce the SAME permutation of the 3-element fibre: both fix the
+sigma-fixed sheet x=0 and swap the other two. Numerically [1,0,2] both ways (4000-step
+continuation); proved in three lines from the explicit fibre.
+
+**Mechanism (the real content).** The fibre cubic is DEPRESSED:
+    P(x) = L x^3 + (4-3bc) x - 2c,   L = 27a^2c^2 - 18abc + 16a + b^3c - b^2
+with NO x^2 term, so the three fibre x-coordinates ALWAYS SUM TO ZERO. On the tau-fixed
+locus the sigma-fixed root is x=0, so the fibre is {0, r, -r}; sigma (x -> -x) swaps the
+balanced pair, and the escaping roots x ~ +-sqrt(-(4-3bc)/L) are the same balanced pair,
+transposed by the square-root branch cut. Both maps are "negate the balanced pair, fix the
+odd one out", and the centroid vanishing means there is only one such pair. So the
+agreement is a corollary of one Vieta relation, not a coincidence.
+
+**Side results.** (i) Independent re-derivation of the Jelonek polynomial L, cross-
+validating canon (-L|_{c=0} = b^2 - 16a, exact match). (ii) TWO sheets are lost over
+{L=0}, not one: the fibre drops 3 -> 1, surviving root x = 2c/(4-3bc). (iii) Sum of fibre
+x-coordinates identically zero - flagged as a possible instance of the repo's
+"polynomial-centroid conjecture".
+
+**Explicitly NOT claimed.** This does not compute the full monodromy representation
+pi_1(C^3 \ {L=0}) -> S_3. Canon records the image as ALL of S_3; one transposition
+generates only Z/2. The other generators live at the three CUSPS (Zariski's pi_1 of order
+12), and that is the next step.
+
+**Verification:** `04-computation/jelonek_monodromy_opus_S405.py` (+ .out).
+
 ### HYP-8285 - The GRAPH switching quotient lands on E_n (where the TOURNAMENT one does not)
 **Status:** CONFIRMED (opus-2026-07-20-S404) - see THM-1430
 **Source:** owner directive to compute Seidel switching classes up to isomorphism, framed
