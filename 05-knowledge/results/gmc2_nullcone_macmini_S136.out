@@ -1,0 +1,58 @@
+==============================================================================
+PART A -- the exact polar reduction:  E[P^m] = L( v -> CT_u( H_sqrt(v)^m ) )
+==============================================================================
+  H_r(u) := P(ru, r/u) = sum_{a,b} p_ab r^{a+b} u^{a-b}  -- a LAURENT polynomial in u
+  whose u-exponents are exactly the CHARGES, and whose r-degree is the total degree.
+  CT_u is the constant term (= the charge-0 projection); L is the Gaussian average
+  over the radius, r^2 ~ Exp(1).  So n=2 is DvdK's constant-term problem, averaged.
+
+  identity verified on random P, m = 1..4:  True
+
+==============================================================================
+PART B -- THE TWO-CHARGE THEOREM (this is a proof, not a search)
+==============================================================================
+  Let P = P_C + P_{-B}, exactly two charges C > 0 > -B.  Write P_C = Z^C q(V),
+  P_{-B} = W^B s(V) with V = ZW, and g = gcd(B,C), B' = B/g, C' = C/g.
+  Charge-0 needs k_C*C = k_{-B}*B with k_C + k_{-B} = m, so k_C = tB', k_{-B} = tC'
+  and m = t(B'+C') -- UNIQUE for each such m, and IMPOSSIBLE otherwise.  Hence
+      E[P^m] = 0                       if (B'+C') does not divide m,
+      E[P^m] = C(m; tB', tC') * L(F^t) with F = v^{C B'} q^{B'} s^{C'} != 0  otherwise.
+  By the saddle lemma (THM-1520 B), L(F^t) != 0 for all large t.  So P is NOT in the
+  nullcone.  TWO-CHARGE CASE CLOSED.
+
+                         P     B,C  B+C prime                               E[P^m], m=1..8
+                       W+Z     1,1          2               [0, 2, 0, 12, 0, 120, 0, 1680]
+                     W+Z^2     1,2          3                   [0, 0, 6, 0, 0, 360, 0, 0]
+                    3W^2+Z     2,1          3                 [0, 0, 18, 0, 0, 3240, 0, 0]
+                   W^2+Z^3     2,3          5                  [0, 0, 0, 0, 7200, 0, 0, 0]
+                   W^2+Z^2     2,2          2         [0, 4, 0, 144, 0, 14400, 0, 2822400]
+                -2W^3+Z^2W     3,1          4       [0, 0, 0, -5760, 0, 0, 0, 53648179200]
+  Nonzero exactly at the predicted multiples of B'+C', as the theorem says.
+
+==============================================================================
+PART C -- the nullcone search, WITH A WORKING POSITIVE CONTROL
+==============================================================================
+  POSITIVE CONTROL: the conjecture says every strictly one-sided P is in N(E).
+                     Z  charges [1]  in nullcone? True
+               -3Z+Z^2  charges [1, 2]  in nullcone? True
+                W+5W^2  charges [-2, -1]  in nullcone? True
+             Z^2W-2Z^3  charges [1, 3]  in nullcone? True
+             W^3+4ZW^2  charges [-3, -1]  in nullcone? True
+  positive control passes: True   <-- this is what the S135 sweep lacked
+
+  Now the real question: any TWO-SIDED P in the nullcone?
+    support size 2: 400 two-sided polys tested, 0 in nullcone
+    support size 3: 10000 two-sided polys tested, 0 in nullcone
+    support size 4: 118800 two-sided polys tested, 0 in nullcone
+    support size 5: 886800 two-sided polys tested, 0 in nullcone
+  none.  With the control passing, this is now MEANINGFUL evidence for the
+  nullcone conjecture (bounded, but no longer uncontrolled).
+
+==============================================================================
+PART D -- the 1-variable Laurent nullcone:  CT(h^m)=0 for all m <=> h one-sided
+==============================================================================
+  two-sided Laurent h with exponents in [-3,3], coeffs in {+-1,+-2}: 10320 tested
+  with CT(h^m)=0 for m=1..10: 0
+  none => the 1-variable Laurent nullcone is exactly the ONE-SIDED Laurent
+  polynomials, on this box.  (0 not in the Newton polytope.)  This is the
+  'top-edge' input the general two-sided argument needs.

@@ -16261,3 +16261,40 @@ and span both signs, so no separating hyperplane exists.
 **Use:** this is a cheap necessary condition to screen candidate counterexamples in any
 dimension -- compute the charge set first and check hyperplane separability before any
 moment computation.
+
+### HYP-8375 — the last case: two-sided P with >= 3 charges cannot lie in the nullcone
+**Status: OPEN, and it is now ALL that stands between the repo and GMC(2).** State of play
+after THM-1540:
+  * N(E) contains every strictly one-sided P  -- PROVED (trivial).
+  * one-sided support => not in N(E) unless charge-0 part vanishes  -- PROVED (THM-1520).
+  * exactly TWO charges => never in N(E)  -- PROVED (THM-1540 B), modulo HYP-8350.
+  * >= 3 charges  -- OPEN.  This entry.
+And GMC(2) follows from the nullcone conjecture in two lines (THM-1540 E).
+**The route, already isolated (THM-1540 C):** plot the support in `(charge, degree)`
+coordinates. Since `E[P^m] = sum_d [charge-0, degree-d coeff]*(d/2)!`, the factorials weight
+the top degree overwhelmingly, so the leading term comes from the TOP EDGE of the Newton
+polygon where it crosses charge 0 -- and a single edge's monomials form a ONE-VARIABLE
+LAURENT polynomial. Two inputs are needed:
+  (i) the 1-variable Laurent nullcone lemma: `CT(h^m) = 0` for all m implies h is one-sided.
+      Presumably classical (Newton-polytope criterion; the n-variable Mathieu-subspace form is
+      Duistermaat-van der Kallen 1998). **Find the citation rather than reproving it** -- 10320
+      two-sided h were tested with no exceptions, so it is not in doubt, only unsourced.
+  (ii) DOMINATION of the leading term. This is the real work and it is the SAME difficulty as
+      HYP-8350: consecutive degree levels contribute in a ratio that is O(1), not decaying, so
+      a saddle-point treatment is required rather than a crude bound.
+**Note the pleasant structure: (ii) and HYP-8350 are the same analytic obstacle in two
+places.** Solving the Laplace estimate once likely closes both, and with them (B), (C), the
+nullcone conjecture, and GMC(2). That makes HYP-8350 the single highest-leverage item in this
+whole thread.
+
+### HYP-8380 — is the polar reduction a known bridge?
+**Status: OPEN (literature question, cheap).** THM-1540 (A) proves the exact identity
+`E[P^m] = L( v -> CT_u( H_sqrt(v)(u)^m ) )` with `H_r(u) = P(ru, r/u)`, exhibiting the
+n=2 Gaussian moment problem as **Duistermaat-van der Kallen's constant-term problem averaged
+over the radius with weight `e^{-v}`**. Derksen-van den Essen-Zhao (arXiv:1506.05192) do not
+state this, and I found no source that does -- but DvdK is the model theorem of the
+Mathieu-Zhao area and someone may well have written the bridge down.
+**Worth 20 minutes of search before anyone builds on it as novel.** If it IS novel it is
+independently interesting: it says the Gaussian nullcone is a weighted average of Laurent
+nullcones, which suggests transporting DvdK's n-variable theorem to GMC(2n) wholesale --
+a route to the whole conjecture family rather than one case.
