@@ -9,6 +9,17 @@ scripts: 04-computation/lrc14_subgap_census_klein_S319.c + 04-computation/lrc14_
 
 # THM-1290 — the sub-gap census at height 55, EXTENDED TO HEIGHT 64 (S320)
 
+> **⚠ UNDER-REVERIFICATION (klein-S322, MISTAKE-194).** The in-branch mask prune used
+> by ALL runs below (inherited from mac-mini-S54's template) was UNSOUND — it could
+> wrongly prune families acquiring a late multiple of the mask modulus (e.g. the
+> modulus itself as a small speed). Detected by a survivor-count diff (50 vs 49 vs
+> the patched truth: 6 at w=54 alone where v1 saw 4). The EMPTINESS conclusions are
+> not yet contradicted — every newly-surfaced survivor so far is witness-cleared
+> M ≥ 3/41 — but the exhaustiveness argument is broken until the patched
+> re-certification suite (launched, all parts) completes. This banner will be
+> replaced by the re-certified numbers. Do not cite the run statistics below
+> until then; the STATEMENT remains expected-true and is not withdrawn.
+
 > **S320 EXTENSION (klein-2026-07-19-S320, owner: "push the census to B=64 with q≤48
 > pinning"):** part (a) now holds AT HEIGHT 64. Harness v2 (QPIN 48 = depth-3 pinning to
 > q = 48; in-branch bitmask pruning generalized from {23,25,27} to ALL depth-1 moduli

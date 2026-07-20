@@ -205,9 +205,16 @@ static void dfs(int pos, int maxnext, int cov, int haspair){
         return;
     }
     int slots = K - pos;
-    /* mask prunes over all depth-1 moduli (only when no multiple present) */
+    /* mask prunes over all depth-1 moduli.  SOUNDNESS FIX (S322, MISTAKE filed):
+     * the pair-count prune is valid ONLY when no future element can be a
+     * multiple of q (a single future multiple satisfies pinning at q outright).
+     * Future elements are <= maxnext, so require maxnext < q.  The unguarded
+     * version (v1/v2 AND mac-mini's S54 original) wrongly pruned families that
+     * acquire a late multiple -- caught by the 49-vs-50 survivor diff at w54. */
     for (int qi=0;qi<NQM;qi++){
         if (!useQ[qi]) continue;
+        int q = qi + QMLO;
+        if (maxnext >= q) continue;                 /* future multiple possible */
         unsigned m = mkQ[pos][qi];
         if (m & (1u<<npQ[qi])) continue;
         if (npQ[qi] - __builtin_popcount(m & ((1u<<npQ[qi])-1)) > slots) return;

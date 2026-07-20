@@ -1,5 +1,13 @@
 # The bottom of the n=14 spectrum is two ladders rooted at the AP — with plateaus
 
+> **⚠ SCOPE BANNER (klein-S322, MISTAKE-194):** every EXACT-M fact in this note
+> (ladder rung values, plateau law instances, trichotomy values, K-rungs) is
+> referee-exact and UNAFFECTED. The census-completeness claims ("complete sub-1/13
+> table", "all on-ladder", "zero off-ladder", h_min exactness) rest on the census
+> harness whose mask prune was unsound; they are UNDER-REVERIFICATION by the
+> patched suite and this banner will be updated with the outcome.
+
+
 **Instance:** klein-2026-07-19-S321 (owner: "look for more structural surprises,
 synthesize with bleeding edge from multiple pulls as it changes").
 **Evidence:** exhaustive bottom-spectrum census (interval (0, 1/13), heights ≤ 36,

@@ -6,6 +6,13 @@ Format per entry:
 - What was assumed / done
 - Why it was wrong
 - The correct framing
+
+## MISTAKE-194 (2026-07-19, klein-S322, against my own THM-1290 runs AND flagging mac-mini-S54's census template) — THE UNGUARDED PAIR-COUNT MASK PRUNE IS UNSOUND: "missing unit-pairs > slots ⟹ prune" ignores that ONE future element that is a MULTIPLE of q satisfies pinning at q outright; the prune is valid only when maxnext < q (no future multiple possible)
+
+- **What was done:** the in-branch bitmask prune (inherited from `lrc_gap_census40_S54.c`, mac-mini-S54, and generalized in my S319/S320 harness) pruned a DFS subtree at modulus q whenever the mult-bit was unset and (unhit unit-pairs) > (slots left). All THM-1290 runs (B=55 v1, B=64 S320, the LRC-mode run, the bottom-spectrum censuses) used it.
+- **Why it was wrong:** a family can acquire a multiple of q AFTER the prune point — in descending-element DFS the modulus q ITSELF (q = 19, 23, 25 as a speed) arrives late — and then leaf pinning at q is satisfied via the multiple regardless of pairs. Detected by redundant spectroscopy: the v1 run counted 50 pinning survivors at B=55, the 14-mask rerun 49, and the PATCHED binary finds SIX survivors at w_max=54 alone where v1 had 4 and the rerun 3 — both prior counts were undercounts. The missed families are exactly tiny-anchor + mid-band clusters CONTAINING mask moduli as speeds.
+- **The correct framing:** prune on pair-counts only when `maxnext < q`. Patched in `lrc14_subgap_census_klein_S319.c` (S322); all gates byte-identical; FULL re-certification suite launched (B=55 both parts, B=64, bottom census). **Until it completes, THM-1290's exhaustiveness claims and the S321/S322 "complete table" claims are UNDER-REVERIFICATION** (banners posted). ⚠ **mac-mini-S54's original harness has the same unguarded prune at q = 23, 25** — the n=12 gap census "EMPTY to height 48" (HYP-4117) and any downstream consumer should be re-run with the guard; flagged to mac-mini by broadcast, not unilaterally overridden.
+- **Lesson:** an in-branch prune must be justified against EVERY leaf-escape clause, not just the one it models (here: the pair clause but not the multiple clause). Redundant re-runs with different pruning configurations are not waste — the 49-vs-50 diff was the only visible symptom.
 - Impact on existing results
 - Source (who found it, when)
 
