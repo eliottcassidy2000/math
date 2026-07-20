@@ -5443,3 +5443,28 @@ THM-1320's headline factorization det = −E₀(0)A(0)C(0) is det JF(0) in disgu
 The owner's n·2^x+1 / figurate-triangle prompt went to the WHOLE fleet. I worked it in S59s (HYP-8165) and S59t (HYP-8175, THM-1355/1360) without first grepping for concurrent same-prompt HYP claims — and kind-pasteur (S128c102 Rosetta triangle, S128c103 shear catalog / HYP-8170), opus (S420 shear duality), and mac-mini (S1 Pisot tower) had gone DEEPER on the same objects: the Pisot ladder, the Proth spectrum, the products=ordered-tournaments identity, and the EXACT triangle (Faulhaber + 3 deviations) were all already theirs. My results were correct but ~90% duplicative; I even collided on HYP-8165 (both mine-S59s and kp-S128c102) and HYP-8170 (kp's; I took 8175). My repo-mining agent surfaced the overlap only AFTER I closed both sessions. RULE: on any prompt likely broadcast to the fleet (owner prompts usually are), the FIRST action is `grep -i <topic-keywords> 05-knowledge/hypotheses/INDEX.md` and a scan of same-day SESSION-LOG / inbox for concurrent claims — BEFORE claiming IDs or doing deep work. Convergent independent verification has value, but it must be FRAMED as convergent (credit + priority banner), never presented as primary. Amended THM-1360 + the reflection with priority banners; credited kind-pasteur/opus/mac-mini. **RECURRENCE (S59u, same day):** the NEXT owner prompt (the problem-ledger) was ALSO fleet-wide — klein-S332 wrote a peer ledger, kp-S128c104 + mac-mini-S140 stubbed. This time a mining agent surfaced the collision DURING the session and I consolidated into one canonical PROBLEM-LEDGER.md crediting all rather than competing — the discipline working. Rule: on any owner prompt assume fleet-wide, grep INDEX + same-day SESSION-LOG FIRST; on collision, CONSOLIDATE with credit, never produce a parallel artifact.
 
 **MISTAKE-199 4th recurrence (S59v):** the weight-sign reduced JC was proven by mac-mini-S123 (THM-1370) and pushed WHILE I computed it, though the INDEX was clean when I claimed. Escalated rule: on a hot fleet-wide prompt re-pull IMMEDIATELY BEFORE filing any theorem, and default to synthesis/confirmation over primary claims once 2+ agents are visibly on the prompt. Credited mac-mini; kept only a verification cross-check + the three-reduced-JC synthesis.
+
+## MISTAKE-200 — naming an invariant before grepping canon for it (d_sat = the diameter)
+
+**What happened (mac-mini-S126, caught by kind-pasteur-S128c108 / THM-1400 SS I).** I
+introduced the "saturation depth" `d_sat(n)` — the least `d` at which the waggly truncation
+`G^(<=d)` becomes complete — called it a **new metagraph invariant**, computed `2,3,4,7` for
+`n=4..7`, refuted `d_sat = n-2` at `n=7`, and handed off "compute n=8 before conjecturing."
+
+**Why it was wrong.** `G^(<=d)` is complete exactly when every pair of classes is within `d`
+flips, so `d_sat = diam(G_n)` — trivially, once stated. And the diameter was already canon:
+`07-reflections/diameter-is-feedback-arc-set.md` (opus-2026-03-24-S306) records
+`diam(G_n) = max_T min-FAS(T) = A003141(n)`, growth `~n^2/4`, with `OPEN-QUESTIONS.md`
+listing it **RESOLVED** and `README.md` carrying it as the Waggly Completeness Theorem.
+So: the invariant was a rediscovery, the handoff needed no computation (`A003141(8) = 8`),
+"no linear formula" was a known **quadratic**, and my `n=7` refutation restated opus-S306's.
+
+**The rule.** *Before naming an invariant, grep the reflections, OPEN-QUESTIONS, and README
+for it — including under other names.* A quantity defined by "the least `d` at which X
+becomes complete" is a **diameter**; ask what metric, then search for that metric. I searched
+for "saturation" and "d_sat" (my own coinage, so of course no hits) and not for "diameter."
+
+**What survived.** The map-graph *framing* of THM-1390 (point-contact vs edge-contact, the
+clique-explosion reading) is untouched and THM-1400 explicitly grants it; the point-adjacency
+thread continues correctly in THM-1405. The cost was one invented name and one bad handoff,
+both retracted in place. See `01-canon/theorems/THM-1390-...md` (correction banner).

@@ -15666,3 +15666,15 @@ THM-1380 §6 — move to the `k`-torus of the resonance lattice (THM-1075) and u
 
 **Verification:** `04-computation/borsuk_antipodal_opus_S401.py`,
 `halfrot_involution_opus_S401.py`, `freeness_criterion_opus_S401.py` (+ `.out` in results).
+
+### HYP-8250 — the star (point-adjacency) quotient of the tiling hypercube
+**Status: RESOLVED (THM-1405).** Asked: is `F_2^m/<stars>` the merged metagraph, a
+refinement, or unrelated; and do cycle invariants descend to iso classes?
+**Answers.** `<stars>` = the CUT space of the tile graph (dim `n-1`, PROVED all `n>=4`), so
+the quotient is the dual CYCLE space, orbits `2^(m-n+1)` = 1,4,32,512 at `n=4..7` (exact).
+The partition is **TRANSVERSE** to iso classes: for `n>=5` neither refines the other.
+The 3-cycle count is constant on iso classes, NOT on star orbits; the star-orbit holonomy
+is a tiling function that does not descend to iso classes.
+**Residual (OPEN):** transversality proved only by verification at `n=5,6,7`; only one
+tournament invariant tested; the metagraph fibred over the holonomy bits is unexamined.
+See `01-canon/theorems/THM-1405-star-quotient-is-the-cycle-space-transverse-to-isomorphism.md`.

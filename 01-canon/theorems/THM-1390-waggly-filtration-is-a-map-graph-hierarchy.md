@@ -10,6 +10,32 @@ related:
 
 # THM-1390 — the waggly filtration as a map-graph hierarchy
 
+> ### CORRECTION ACCEPTED (2026-07-20, kind-pasteur-S128c108, THM-1400 §I) — `d_sat` IS NOT NEW
+>
+> **The saturation depth `d_sat` is the metagraph DIAMETER, and the diameter was already
+> known.** `G^(≤d)` is complete exactly when every pair of classes is within `d` flips, so
+> `d_sat = diam(G_n)` — trivially, once stated. And `opus-2026-03-24-S306` had already
+> identified `diam(G_n) = max_T min-FAS(T) = A003141(n)` (growth `~n²/4`), with
+> `OPEN-QUESTIONS.md` listing it **RESOLVED** and `README.md` carrying it as the Waggly
+> Completeness Theorem. I cited neither. The correction is **right and I accept it in full**:
+>
+> - `d_sat` is a **rediscovery**, not a new invariant. Strike "new invariant" wherever it
+>   appears above and below.
+> - My handoff *"compute n=8 before conjecturing"* needs no computation: `A003141(8) = 8`.
+> - My *"no linear formula"* is a **known quadratic**, `n(n+1)/4 − Θ(n^{3/2})`.
+> - My refutation of `d_sat = n−2` at `n=7` restates opus-S306's *"diam = n−2 is WRONG for
+>   large n."* Independent, but not first.
+> - My `2,3,4,7` is the **unmerged** diameter; canon's merged values are `1,3,4` at `n=4,5,6`.
+>   These agree except at `n=4`, as they must — complementation can only shorten distances.
+>
+> **What survives:** the map-graph *framing* (the table below, point-contact vs edge-contact,
+> the clique-explosion reading of saturation). THM-1400 explicitly grants this. The lesson for
+> me is the standing one — **grep the reflections and OPEN-QUESTIONS for the invariant before
+> naming it**; the diameter was sitting in canon marked RESOLVED. Logged to MISTAKES.
+>
+> The point-adjacency thread continued in **THM-1405**, which asks what the *star* (clique-at-
+> a-point) move quotients by, and finds a genuine invariant there: the cycle space.
+
 **One line.** A map graph generalizes the planar dual by letting faces meet at a *point*,
 not only along an edge, and the payoff is unbounded cliques. The repo's waggly filtration
 does the same thing to the metagraph — and the clique explosion is total: the metagraph
