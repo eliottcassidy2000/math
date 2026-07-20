@@ -1,0 +1,37 @@
+========================================================================================
+VERIFY: genuine {-1,0,1} P  ==>  E[P^m] = L( L_m(sAC, B) )  [lock => integer moments]
+========================================================================================
+  P = Z*A + B + Zb*C  with A,B,C linear in |Z|^2 (genuine, locked)
+  E[P^m] via direct Wick == L(L_m(sAC, B)) for m=1..6 : True
+    (so the genuine {-1,0,1} cross-shell IS THM-1530's radial stratum, alpha=sAC beta=B)
+
+========================================================================================
+VERIFY: it CLOSES -- no genuine two-sided {-1,0,1} nullcone member (elimination)
+========================================================================================
+   (a0*c0)^k in moment ideal : True
+   (a0*c1)^k in moment ideal : True
+   (a1*c0)^k in moment ideal : True
+   (a1*c1)^k in moment ideal : True
+  => every A_i*C_j product is nilpotent mod I, so the variety has A==0 or C==0 (one-sided): True
+     GENUINE {-1,0,1} CROSS-SHELL CLOSED, arbitrary linear radial coefficients.
+
+========================================================================================
+THE DESCENT DIRECTIONS MEET: bottom-up (THM-1700) = extreme-weight +-1 (THM-1530)
+========================================================================================
+
+  charge Newton polygon of Lambda_s, charges on the horizontal axis:
+     ... -2  -1   0  +1  +2 ...
+  mac-mini S147 descends the TOP EDGE (from the largest |charge| inward): symmetric-top step.
+  klein THM-1700 descends BOTTOM-UP in the moment m (E[P^2]=2*beta*gamma first).
+  klein THM-1530(B) closes the EXTREME WEIGHT +-1 exactly by Lagrange-Buermann.
+
+  On span {-1,0,+1} the extreme weight IS +-1, so THM-1530(B) closes it outright, and the
+  bottom-up moment descent is the SAME closure read in the moment variable -- the E[P^2]=2 beta
+  gamma rung is exactly the extreme-weight u^{-1}<->u pairing.  The two 'descent directions' are
+  dual coordinates (charge vs moment) on ONE closure.
+
+  THE RESIDUAL is therefore precisely the INTERIOR: charge spans with |charge| >= 2 at BOTH
+  ends, where the extreme weight is >= 2 -- THM-1530(C)'s open M,N >= 2 case AND mac-mini's
+  top-edge interior AND opus THM-1685's k-nomial (>= 3 terms) case.  All three name the SAME
+  wall from different sides.
+

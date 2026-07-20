@@ -1,0 +1,64 @@
+==========================================================================================
+FIRST: the gcd escape -- {-2,0,2} is {-1,0,1} in w=u^2, so already closed. Confirm.
+==========================================================================================
+  P = a Z^2 + b + c Zb^2:  E[P^m] m=1..4 = ['b', '4*a*c + b**2', '12*a*b*c + b**3', '144*a**2*c**2 + 24*a*b**2*c + b**4']
+  (charge +2 pairs with -2 exactly as +1 with -1 -> same {-1,0,1} structure, gcd 2)
+
+==========================================================================================
+THE GENUINE INTERIOR: {-2,-1,1,2}, gcd 1, extreme weight 2  (opus 4-nomial, toral-closed)
+==========================================================================================
+  P = a2 Z^2 + a1 Z + c1 Zb + c2 Zb^2   (two-sided: charges -2,-1,+1,+2)
+  E[P^m], m=1..5:
+     m=1: 0
+     m=2: 2*a1*c1 + 4*a2*c2
+     m=3: 6*a1**2*c2 + 6*a2*c1**2
+     m=4: 12*a1**2*c1**2 + 144*a1*a2*c1*c2 + 144*a2**2*c2**2
+     m=5: 120*a1**3*c1*c2 + 720*a1**2*a2*c2**2 + 120*a1*a2*c1**3 + 720*a2**2*c1**2*c2
+  integer moments (lock, no sqrt(pi)): True
+
+  ELIMINATION: is there a genuine two-sided nullcone member?  one-sided loci =
+   {a2=a1=0} (charges -2,-1) or {c1=c2=0} (charges +1,+2).  Test radical membership.
+     (a2*c1)^k in moment ideal : True
+     (a2*c2)^k in moment ideal : True
+     (a1*c1)^k in moment ideal : True
+     (a1*c2)^k in moment ideal : True
+  => variety lies in the one-sided locus (no two-sided nullcone member): True
+     THE INTERIOR {-2,-1,1,2} RADIAL CROSS-SHELL CLOSES -- opus's toral closure TRANSFERS.
+
+==========================================================================================
+CONTROL: a one-sided P (charges +1,+2 only) must NOT be flagged -- it IS MZ-harmless
+==========================================================================================
+  one-sided P = a1 Z + a2 Z^2;  E[P^m] = ['0', '0', '0', '0']
+  E[Q P^m] (Q=Zb), m=1..5 = ['a1', '0', '0', '0', '0']
+  one-sided => E[P^m]=0 all m AND E[QP^m]=0 for m>1 (MZ-harmless): True
+
+==========================================================================================
+THE REAL BRIDGE TEST: NON-CONSTANT radial coefficient (s-dependence => factorials mix)
+==========================================================================================
+ P = a2 Z^2 + (a10 + a11|Z|^2) Z + c1 Zb + c2 Zb^2  -- the +1 shell has radial DEPTH.
+  E[P^m] m=1..3: ['0', '2*a10*c1b + 4*a11*c1b + 4*a2b*c2b', '6*a10**2*c2b + 36*a10*a11*c2b + 72*a11**2*c2b + 6*a2b*c1b**2']
+  integer moments (no sqrt): True
+  variety in one-sided locus (every pos_i*neg_j nilpotent mod I): True
+  => the INTEGRATED (radial, s-dependent) interior cross-shell CLOSES: True
+
+==========================================================================================
+A 5-CHARGE PATTERN WITH THE CHARGE-0 SHELL: {-2,-1,0,1,2} (constant coeffs)
+==========================================================================================
+  P = d2 Z^2 + d1 Z + d0 + e1 Zb + e2 Zb^2  (charges -2..2)
+  E[P^m] m=1..3: ['d0', 'd0**2 + 2*d1*e1 + 4*d2*e2', 'd0**3 + 6*d0*d1*e1 + 12*d0*d2*e2 + 6*d1**2*e2 + 6*d2*e1**2']
+  d0 (charge-0 coeff) nilpotent mod I (charge 0 forbidden in nullcone): True
+  every pos*neg nilpotent mod I (no straddle): True
+  => the only nullcone members are one-sided (charge 0 absent + one strict sign): True
+     5-CHARGE INTERIOR PATTERN CLOSES RADIALLY.
+
+==========================================================================================
+ASSEMBLY (verified on interior patterns, radially):
+==========================================================================================
+  opus THM-1685 (toral k-nomial TNC, Nullstellensatz, <= 5 charges)
+   + klein THM-1700 (charge-radius LOCK => integer-moment radial functional)
+   + klein S351 Gamma bridge (toral nonvanishing => radial)
+  ==>  GMC(2) for P with <= 5 distinct charges.
+  Directly confirmed here on {-2,-1,1,2} (constant AND s-dependent) and {-2,-1,0,1,2}:
+  the RADIAL (integrated) cross-shell closes wherever opus's TORAL k-nomial does.
+  The number-of-charges complexity parameter (opus) transfers from toral to radial via the lock.
+
