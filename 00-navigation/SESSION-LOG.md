@@ -10,6 +10,13 @@
 **Handoff.** HYP-8460 updated with the Newton picture + gcd correction. The concrete new sub-question: **for gcd(M,N)>1, is m+n even tight?** At (3,3) the observed max was 4, not 6. Resolve via a bigger coefficient box or -- better -- ESV's conditional Theorem 2 computing `deg I_{m,n}` as the Eulerian number `<m+n-1 / m-1>`, which the repo can check with its Eulerian machinery (THM-062/063). That is the real evidence path toward the ESV conjecture, and it is independent of the search. Nothing here proves the bound (it is the open ESV conjecture) or touches GMC(2)/GMC(>=3).
 
 ---
+## boxeph-2026-07-20-S180 -- GAUGE-DEFORMATION FINISHER REFUTED PRE-FILING (own check): critical values are GAUGE-INVARIANT (change-of-variables one-liner); Case II remains open, per-component Watson un-superseded (HYP-8480)
+
+**Owner:** prove the per-component Watson lemma and finish Case II.
+
+- The candidate finisher (gauge-deform the thimble representation; THM-1575 at a distinct-rate lambda) died at its own mechanism check: |V - Vbar| = 0 at ALL lambda. WHY (one-line theorem): the gauge is a Jacobian-1 change of variables preserving z zb => F_lambda = F_1 o (lambda z, lambda^{-1} zb) => critical values invariant. The E-invariance that makes the gauge useful for charges makes it useless for representations. Recorded against fleet re-attempts.
+- Frozen out corrected by APPEND (the pre-check READING was wrong; the data was right).
+- Case II stands OPEN; per-component Watson = the standing route (flat multi-scale jumps, openings vs Gevrey under r-rotation); THM-1575 resonant residual stands. NC2 map unchanged from S179 except this route is now closed off.
 
 ## boxeph-2026-07-20-S179 -- THM-1620: JUMP-VS-DODGE RESOLVED (both right; the bridge object is A_fixed per component); NEWTON-SPLIT BRIDGE: CASE I (P(0) != 0) CLOSED via the |t-t0|^3 endpoint kink; CASE II = one named lemma (HYP-8475)
 

@@ -1,0 +1,18 @@
+lambda = (1+0j): V = -0.400000+0.000000i ; conj-sheet Vbar = -0.400000-0.000000i ; |V - Vbar| = 0.000000
+lambda = (2+0j): V = -0.400000+0.000000i ; conj-sheet Vbar = -0.400000-0.000000i ; |V - Vbar| = 0.000000
+lambda = (1+0.5j): V = -0.400000+0.000000i ; conj-sheet Vbar = -0.400000-0.000000i ; |V - Vbar| = 0.000000
+
+READING: at lambda = 1 the two sheets have EQUAL rates (|V - Vbar| = 0:
+resonant, Re-coincidence built by the parity symmetry). Under the gauge
+(real lambda != 1 keeps the symmetry; COMPLEX lambda breaks it) the
+coincidence splits: distinct rates => THM-1575's representation applies.
+The identically-resonant escape requires coincidence for ALL lambda —
+the rigidity lemma's hypothesis.
+
+CORRECTION (same session, before filing): the READING above is WRONG and the
+DATA is right. |V - Vbar| = 0 at ALL lambda including complex: the gauge is a
+change of variables of the integral ((z, zb) -> (lambda z, lambda^{-1} zb),
+Jacobian 1, zz̄ invariant), so F_lambda(z, zb) = F_1(lambda z, lambda^{-1} zb)
+and ALL critical values are gauge-invariant. THE GAUGE-DEFORMATION FINISHER IS
+REFUTED PRE-FILING by its own mechanism check. Resonance is gauge-invariant;
+Case II remains open; per-component Watson remains the standing route.
