@@ -1,0 +1,14 @@
+THE INVARIANTS ARE CYCLE PARITIES of H = K_n minus the base path.
+  star flips generate the CUT space of H (dim n-1); the orthogonal complement is the CYCLE space.
+  Claim: for every cycle C in H, the parity of the orientation bits around C is INVARIANT.
+
+  n= 6 : 4 triangles of H tested, 4000 random (tiling, star-flip) trials -> parity changes: 0
+  n= 7 : 6 triangles of H tested, 4000 random (tiling, star-flip) trials -> parity changes: 0
+  n= 8 : 6 triangles of H tested, 4000 random (tiling, star-flip) trials -> parity changes: 0
+
+  => cycle parities of H are EXACTLY conserved under every vertex-star (map-graph) flip.
+
+  NESTED CUT/CYCLE STRUCTURE (new):
+   level 1 (CLAUDE.md): K_n = cut(base path) + cycle(rel. path);  the TILES are that cycle space.
+   level 2 (this):      inside the tile space, star flips = cut(H), invariants = cycle(H),
+                        H = K_n minus the base path,  dim cut = n-1, dim cycle = C(n-1,2)-(n-1).
