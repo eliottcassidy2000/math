@@ -1,0 +1,12 @@
+family           duty-idx  descent chain (* = ceiling)
+AP  1/14                1  1/14* 1/7* 1/4* 1/2*
+GW  1/14                1  1/14* 2/13 2/7 1/2*
+B2a 2/27 h20            1  2/27 1/6 1/4* 1/2*
+B2b 2/27 h24            1  2/27 2/11 2/7 1/2*
+K2  2/27 h26            1  2/27 1/7* 1/4* 1/2*
+B2c 2/27 h36            1  2/27 2/11 3/10 1/2*
+F3  3/41 h36            1  3/41 3/19 3/10 1/2*
+K3  3/40 h39            1  3/40 1/7* 1/4* 1/2*
+
+Prediction check: ALL 8 families duty-rigid (index <= 1)  OK
+(deep-well-style index-0 = stacked; none here stack 13&14 — all non-covering)
