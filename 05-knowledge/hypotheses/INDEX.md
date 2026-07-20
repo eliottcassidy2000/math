@@ -16073,3 +16073,32 @@ transitive triangles), so k is not flip-invariant and that easy route is dead.
 
 **Verification:** `04-computation/babai_cameron_mod4_opus_S409.py`,
 `04-computation/parity_anchor_all_odd_n_opus_S409.py` (+ .out files).
+
+### HYP-8330 — is GMC(4) sharp?  (GMC(2) general and GMC(3) are the open cases)
+**Status: OPEN.** DEZ (arXiv:1506.05192) prove **GMC(1) TRUE** (Prop. 4.2) and **GMC(2) only
+for HOMOGENEOUS P** (Cor. 4.4); **general GMC(2) is open and GMC(3) is unknown**. So the
+explicit `n=4` counterexample (THM-1480) does NOT establish sharpness.
+**What THM-1480 contributes toward it:** the obvious dimension-saving move is structurally
+blocked — replacing `|Z|^2` by a real square `X^2` swaps `E[|Z|^{2k}] = k!` for
+`E[X^{2k}] = (2k-1)!!`, and `k!` is *exactly* what cancels `C(m,k)` in the collapsing sum.
+The analogue evaluates to `0,1,0,9,0,225` and does not vanish.
+**What this session did NOT establish:** the `n=3` computational search is worthless — its
+`n=4` positive control also came up empty, so the box was inadequate. **Anyone retrying must
+carry a working positive control**: expand `(1+W)(Wbar - |Z|^2)` in real coordinates first and
+confirm the box contains it before trusting any negative.
+**The sharp question:** is there a mechanism producing `E[P^m] = 0` for all `m` other than the
+alternating-binomial collapse? Every known instance (DEZ's Prop. 1.2 half-disk example, this
+one) is that same identity in disguise. If the collapse is the ONLY mechanism, its dependence
+on `k!` may force an even number of real variables — which would make `n=4` sharp and settle
+GMC(3) affirmatively.
+
+### HYP-8335 — the r-family and what it buys
+**Status: OPEN (raised by THM-1480 SS D).** `Q = Z_2^r` gives
+`E[Q P^m] = (-1)^{r+1} m! sum_{j<r} (-1)^j C(m,j)` — `m!` times a degree-`(r-1)` polynomial in
+`m`. Verified `r = 1..4`. Two questions worth a session:
+(a) the degree-`(r-1)` factor has ZEROS at small `m` (r=2 vanishes at m=1, r=3 at m=1,2, r=4 at
+m=1,2,3) — so higher `r` gives counterexamples that **satisfy** the conclusion for an
+initial stretch and only fail later. That is a sharper probe of the "`m >> 0`" quantifier than
+the `r=1` case, which fails immediately. Is there a construction failing FIRST at arbitrarily
+large `m`? That would show the quantifier is doing real work rather than being cosmetic.
+(b) does the family survive the `lambda`-rigidity of SS E, or is `lambda = 1` forced for every `r`?

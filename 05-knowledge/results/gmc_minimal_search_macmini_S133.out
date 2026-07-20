@@ -1,0 +1,40 @@
+==============================================================================
+PART A -- the 5-term counterexamples hiding inside the published 6-term one
+==============================================================================
+  published P (6 terms) = Wb+WWb+Zb+ZbW-ZZb-ZZbW
+    counterexample with Q = W,  E[QP^m] = [1, 2, 6, 24, 120, 720]...
+
+  DROP Zb  ->  P = Wb+WWb+ZbW-ZZb-ZZbW   (5 terms)
+      Q = W,  E[QP^m] = [1, 2, 6, 24, 120, 720]...
+  DROP ZbW  ->  P = Wb+WWb+Zb-ZZb-ZZbW   (5 terms)
+      Q = W,  E[QP^m] = [1, 2, 6, 24, 120, 720]...
+
+==============================================================================
+PART B -- exhaustive: is there a QUADRATIC counterexample?  (deg <= 2)
+==============================================================================
+  14 monomials of degree <= 2; searching all supports of size <= 5, coefficients in {-1,+1}
+    support size 1: 0 counterexamples
+    support size 2: 0 counterexamples
+    support size 3: 0 counterexamples
+    support size 4: 0 counterexamples
+    support size 5: 0 counterexamples
+    => NO quadratic counterexample with <= 5 terms and unit coefficients.
+       CUBIC appears to be necessary (search is bounded, not a proof).
+
+==============================================================================
+PART C -- exhaustive: fewest CUBIC terms?  (deg <= 3, supports of size <= 4)
+==============================================================================
+  34 monomials of degree <= 3
+    support size 1: 0 counterexamples
+    support size 2: 0 counterexamples
+    support size 3: 0 counterexamples
+    support size 4: >48 counterexamples
+      P = -Wb-WWb+ZZb+ZZbW             (deg 3)  Q = W      E[QP^m] = [-1, 2, -6, 24, -120]...
+      P = -Wb+WWb-ZZb+ZZbW             (deg 3)  Q = W      E[QP^m] = [-1, -2, -6, -24, -120]...
+      P = Wb-WWb+ZZb-ZZbW              (deg 3)  Q = W      E[QP^m] = [1, -2, 6, -24, 120]...
+      P = Wb+WWb-ZZb-ZZbW              (deg 3)  Q = W      E[QP^m] = [1, 2, 6, 24, 120]...
+
+SUMMARY
+  Smallest counterexample support found: 4 terms (published claim was 6).
+  All searches are BOUNDED (unit coefficients, degree <= 3, support <= 5) --
+  absence of a hit is evidence, not proof.

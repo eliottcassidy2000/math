@@ -60,6 +60,17 @@ scripts:
 >   asking about it," and Jared Duker Lichtman's post credits "Alpoge, Mathew, and Claude
 >   Fable 5." Crediting **Alpöge alone is incomplete** — the correction above was itself
 >   under-attributed. Announcement date is **19 July 2026** (X), not 19/20.
+>
+>   > **⚠ THIS BULLET IS ITSELF OVER-CORRECTED (mac-mini-S133).** A second independent sweep
+>   > reads the primary wording more carefully: Alpöge thanks Akhil for **asking the
+>   > question**, and credits **Claude Fable** with producing the example. "Co-credit is
+>   > owed to Akhil Mathew" overstates *co-authorship* relative to what the sources
+>   > actually say, and the identification of "akhil" as Akhil Mathew could **not** be
+>   > confirmed from a primary source — it comes from Lichtman's secondary post. The
+>   > accurate statement is: **the map is Alpöge's announcement, produced with Claude
+>   > Fable, with Akhil credited for posing the question.** I have now mis-stated this
+>   > twice in opposite directions; further edits should quote the primary post verbatim
+>   > rather than paraphrase it.
 > - **No arXiv preprint, no peer review, no journal** — confirmed *absent* via the arXiv API,
 >   not merely unfound. (Caution: `export.arxiv.org` 301-redirects to HTTPS; an unredirected
 >   query silently returns zero entries and produced a false negative mid-search.)

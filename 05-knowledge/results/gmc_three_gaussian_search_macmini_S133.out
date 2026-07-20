@@ -1,0 +1,43 @@
+==============================================================================
+PART 1 -- the natural 3-Gaussian candidate:  P = (1+W)(Wbar - X^2)
+==============================================================================
+  In 3 real Gaussians we cannot use a complex conjugate pair for W and still have
+  a real X left over unless we spend 2 on W.  Write W = u1 + i u2 with
+  u_i ~ N(0,1/2); then (1+W)(Wbar - X^2) has COMPLEX coefficients.  Its real and
+  imaginary parts are each real polynomials in (u1,u2,X), so we test those.
+
+  E[|Z|^{2k}] = k!   but   E[X^{2k}] = (2k-1)!!   -- the factorials that made the
+  alternating binomial sum collapse are GONE.  Checking whether it still works:
+
+    m=1:  real-square analogue =            0    complex |Z|^2 version = 0
+    m=2:  real-square analogue =            1    complex |Z|^2 version = 0
+    m=3:  real-square analogue =            0    complex |Z|^2 version = 0
+    m=4:  real-square analogue =            9    complex |Z|^2 version = 0
+    m=5:  real-square analogue =            0    complex |Z|^2 version = 0
+    m=6:  real-square analogue =          225    complex |Z|^2 version = 0
+    m=7:  real-square analogue =            0    complex |Z|^2 version = 0
+  => the real-square substitution does NOT vanish; the mechanism is specific to
+     the COMPLEX modulus, whose moments k! are exactly what cancel C(m,k).
+
+==============================================================================
+PART 2 -- broad search over 3 real Gaussians
+==============================================================================
+  deg<=3, support<=4, coeffs(-1, 1): 70490 polys tested, 0 counterexamples
+  deg<=3, support<=5, coeffs(-1, 1): 442586 polys tested, 0 counterexamples
+  deg<=2, support<=6, coeffs(-1, 1): 12258 polys tested, 0 counterexamples
+
+==============================================================================
+PART 3 -- CONTROL: the same search at n = 4 real Gaussians must FIND something
+==============================================================================
+  n=4, deg<=3, support<=4, unit coeffs: 792200 tested, 0 counterexamples
+  NOTE: none found in REAL coordinates at this support size, even though the
+  complex-coordinate 4-term example exists -- the real expansion of
+  (1+W)(Wbar-|Z|^2) has more terms and non-unit coefficients, so it lies
+  OUTSIDE this search box.  The box is the limitation, not the mathematics.
+
+SUMMARY
+  The mechanism needs E[|Z|^{2k}] = k! exactly -- that is what cancels the binomial
+  coefficient and turns the sum into sum_j (-1)^j C(m,j).  A real square gives
+  (2k-1)!! instead and the collapse fails.  No 3-real-Gaussian counterexample was
+  found in the searched boxes; n >= 4 SURVIVES as the record, but sharpness is
+  NOT proved -- these are bounded searches over unit coefficients only.

@@ -1,0 +1,60 @@
+==============================================================================
+PART 1 -- the closed forms, derived by hand and checked against brute force
+==============================================================================
+  m     E[P^m]    m!*sum(-1)^j C(m,j)      E[QP^m]         m!    ok
+  1          0                      0            1          1  True
+  2          0                      0            2          2  True
+  3          0                      0            6          6  True
+  4          0                      0           24         24  True
+  5          0                      0          120        120  True
+  6          0                      0          720        720  True
+  7          0                      0         5040       5040  True
+  8          0                      0        40320      40320  True
+  9          0                      0       362880     362880  True
+  closed forms hold for m = 1..9: True
+
+==============================================================================
+PART 2 -- (F1) the family Q = Z2^r :  m! times a degree-(r-1) polynomial
+==============================================================================
+  r          m=1          m=2          m=3          m=4          m=5          m=6   closed form
+  1            1            2            6           24          120          720   m!  match=True
+  2            0            2           12           72          480         3600   m!(m-1)  match=True
+  3            0            0            6           72          720         7200   m!(1-m+C(m,2))  match=True
+  4            0            0            0           24          480         7200   m!(...deg 3...)  match=True
+  So the published counterexample is the r=1 member of an INFINITE FAMILY;
+  every r >= 1 breaks GMC, with growth m! * (degree r-1 polynomial in m).
+
+==============================================================================
+PART 3 -- (F2) lambda-rigidity: E[P^m] = m! (1-lambda)^m, so lambda=1 is FORCED
+==============================================================================
+ lambda        m=1        m=2        m=3        m=4        m=5
+      0          1          2          6         24        120   predicted [1, 2, 6, 24, 120]  match=True
+      1          0          0          0          0          0   predicted [0, 0, 0, 0, 0]  match=True
+      2         -1          2         -6         24       -120   predicted [-1, 2, -6, 24, -120]  match=True
+      3         -2          8        -48        384      -3840   predicted [-2, 8, -48, 384, -3840]  match=True
+     -1          2          8         48        384       3840   predicted [2, 8, 48, 384, 3840]  match=True
+  Only lambda = 1 kills the left-hand side.  The construction is RIGID -- it sits
+  at the unique point where the alternating binomial sum vanishes.
+
+==============================================================================
+PART 4 -- (F3) minimality, with the CORRECT 'not eventually zero' criterion
+==============================================================================
+  full P:  counterexample = True,  E[QP^m] tail = [1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]
+  degree-1 part alone: counterexample = False   E[QP^m] = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]   <-- eventually ZERO, so it SATISFIES GMC
+  degree-2 part alone: counterexample = False   E[QP^m] = None
+  degree-3 part alone: counterexample = False   E[QP^m] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   <-- eventually ZERO, so it SATISFIES GMC
+  dropping any ONE of the 6 terms still a counterexample in 2 cases  => NOT term-minimal
+
+==============================================================================
+PART 5 -- how few REAL Gaussians are needed?  exhaustive small search
+==============================================================================
+  n=1 real Gaussians, deg<=3, coeffs in {-1,0,1} (27 polys): counterexamples found = 0
+  n=2 real Gaussians, deg<=3, coeffs in {-1,0,1} (19683 polys): counterexamples found = 0
+  n=3 real Gaussians, deg<=2, coeffs in {-1,0,1} (19683 polys): counterexamples found = 0
+
+SUMMARY
+  The counterexample is the alternating binomial identity in disguise.  Q shifts
+  the summation index by one and cashes the boundary term C(m,0)=1, turning a sum
+  that vanishes into one that equals m!.  It is rigid in lambda, it is the r=1
+  member of an infinite family, and the degree-1 piece alone is NOT a
+  counterexample (it is eventually zero, so it satisfies the conjecture).

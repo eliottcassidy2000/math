@@ -1,0 +1,42 @@
+==============================================================================
+PART A -- exhaustive over ALL 256 readings of the notation
+==============================================================================
+  readings with E[P^m] = 0 for m=1..7 AND E[QP^m] = m! : 8
+    Z1=   Z  Z2=   W  W1=Zbar  W2=Wbar   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=   Z  Z2=Wbar  W1=Zbar  W2=   W   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=Zbar  Z2=   W  W1=   Z  W2=Wbar   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=Zbar  Z2=Wbar  W1=   Z  W2=   W   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=   W  Z2=   Z  W1=Wbar  W2=Zbar   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=   W  Z2=Zbar  W1=Wbar  W2=   Z   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=Wbar  Z2=   Z  W1=   W  W2=Zbar   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+    Z1=Wbar  Z2=Zbar  W1=   W  W2=   Z   E[QP^m] = [1, 2, 6, 24, 120, 720, 5040]
+  readings that break GMC but with a DIFFERENT growth law: 0
+
+==============================================================================
+PART B -- E[f] = (exp(D) f)(0), D = d_Z d_Zbar + d_W d_Wbar  (the GMC<->VC bridge)
+==============================================================================
+  exp(D)-at-origin reproduces E[.] on P^m and QP^m, m=1..5:  True
+  So GMC is literally the 'evaluate the heat semigroup at the origin' shadow of
+  Zhao's VC, which instead asks about D^m(P^m).  For HOMOGENEOUS P of degree d,
+  exp(D) applied to P^m keeps only the single term k = dm/2, so the two agree up
+  to a factorial.  For INHOMOGENEOUS P they are genuinely different statements.
+
+==============================================================================
+PART C -- is the counterexample ESSENTIALLY INHOMOGENEOUS?
+==============================================================================
+  P has homogeneous components of degrees [1, 2, 3] with [2, 3, 1] terms
+    degree-1 part alone: E[P^m] = [0, 0, 0, 0, 0]   E[QP^m] = [1, 0, 0, 0, 0]   still a counterexample
+    degree-2 part alone: E[P^m] = [0, 2, 0, 24, 0]   E[QP^m] = [0, 0, 0, 0, 0]   NOT a counterexample
+    degree-3 part alone: E[P^m] = [0, 0, 0, 0, 0]   E[QP^m] = [0, 0, 0, 0, 0]   NOT a counterexample
+  dropping any ONE of the 6 terms of P leaves a counterexample in 2 cases  => NOT minimal
+
+==============================================================================
+PART D -- real-coordinate cross-check: u1..u4 ~ N(0,1/2), Z = u1+i u2, W = u3+i u4
+==============================================================================
+    m=1:  E[P^m] = 0 + 0i     E[QP^m] = 1 + 0i   (m! = 1)
+    m=2:  E[P^m] = 0 + 0i     E[QP^m] = 2 + 0i   (m! = 2)
+    m=3:  E[P^m] = 0 + 0i     E[QP^m] = 6 + 0i   (m! = 6)
+    m=4:  E[P^m] = 0 + 0i     E[QP^m] = 24 + 0i   (m! = 24)
+    m=5:  E[P^m] = 0 + 0i     E[QP^m] = 120 + 0i   (m! = 120)
+  real-coordinate cross-check agrees: E[P^m]=0 True, E[QP^m]=m! True
+  => the counterexample genuinely lives in FOUR REAL GAUSSIANS.
