@@ -1,0 +1,21 @@
+(B1) correction cells T - Faulhaber: {(6, 4): 1, (7, 4): 1, (7, 5): 1} | flat-1 on {k>=4, n-k>=2} fits all 28 cells: True
+(B2) integer linear recurrence up to 5 terms/9 shifts: NONE (triangle is not shift-linear on this basis; columns are degree-(k-1) polynomial => any column law needs depth k)
+(B3) row-8 PREDICTION (Faulhaber + flat-1 law): [8, 28, 91, 226, 355, 277, 65, 1]
+(B4) series-2 arbitration vs printed ['1', '5/2', '29/3', '109/12', '1079/60']
+   HYBRID H_n+2^(n-1)-1      : ['1', '5/2', '29/6', '109/12', '1037/60']  exact-hits: 3
+   ERDOS-BORWEIN sum(2^k-1)/k: ['1', '5/2', '29/6', '103/12', '887/60']  exact-hits: 2
+   identity sum C(n,k)/k == sum (2^k-1)/k: True
+   hybrid increments 1/n + 2^(n-2): ['3/2', '7/3', '17/4', '41/5'] | printed dev: n=3: 29/6 (denominator slip 29/3 vs 29/6), n=5: 7/10
+
+(B5) the bilinear a*b+1 rim across the repo (all quantized denominators have the form m*b+e, e in {+1,-1}):
+   Proth numbers (owner's table)          n*2^x+1                    n=5,x=3 -> 41
+   Fermat rim of the triangle             1*2^x+1                    x=5 -> 33 = T(7,6)
+   odd axis                               n*2^1+1 = 2n+1             GW escape M = 2/(2N+1): N=14 -> 2/29
+   S-T ladder rungs                       s/(n*s+1)                  s=8,n=14 -> 8/113; cage rung 113/1466 = 113/(13*113 - 3)
+   (D,s) rung ladder THM-1269             D/((N+1)*D - 1)            N=14, D=2 -> 2/29; D=13 -> 13/194
+   ghost packing THM-1292                 K/(K*(m+1)+1)              K=13,m=13 -> 13/183 = 13/Phi6(14)... wait 14/183
+   deep well                              n/Phi6(n) = n/(n^2-n+1)    14/183; 183 = 13*14+1 BILINEAR
+   harmonic crown THM-1153                sum 1/s over speeds        H_n = series 1
+   Moser trap                             B(n-1,4) = partial binomial 1,2,4,8,16,31: the 2^n illusion
+   width of G_n (repo's own Moser)        C(n-2,floor) claimed       FAILS n=7: predicted 10, actual 15
+   -> 183 = 13*14+1: the deep well denominator IS a Proth-shaped bilinear (13 = n-1, base 14).
