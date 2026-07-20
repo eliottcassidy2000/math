@@ -1,0 +1,19 @@
+=== D1: the +1 IS the Yagzhev X ===
+  JF(0) = [[Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)], [Fraction(0, 1), Fraction(1, 1), Fraction(0, 1)], [Fraction(2, 1), Fraction(0, 1), Fraction(0, 1)]]  (antidiag(A(0)=1 | C(0)=1 | E0(0)=2))
+  G = L^-1 F: G(0) = 0: True; JG(0) = I: True; det JG = {(0, 0, 0): Fraction(1, 1)} (expect 1)
+  triple collision transported to G: True (image (Fraction(0, 1), Fraction(0, 1), Fraction(-1, 4)))
+  => the unit constants ARE L; THM-1320 P3 factorization = det JF(0): true, trivial classically.
+
+=== D2: torus-blindness spot-checks ===
+  sample triangular-over-shear-core map: injectivity violations in 4000 random pts: 0
+  (proof in THM-1325: back-substitution up the triangle; collisions must sit in the core;
+   in dim <= 3 the core is <= 2-dim = shears = injective => equivariant cubic-linear maps
+   in dim <= 3 are ALL injective; in any dim, the torus direction is collision-free.)
+
+=== D3: one verified stabilization step (dim 4, degree 7 -> 4) ===
+  P-solution space: 70 unknowns, rank 66, dim 4
+  directions with nonzero det-const: 0
+Traceback (most recent call last):
+  File "/home/claude/math/04-computation/jacobian_plus_one_tracking_deathstar_S59p.py", line 192, in <module>
+    vb, cv = good[0]
+IndexError: list index out of range

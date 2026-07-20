@@ -24,6 +24,13 @@ scripts:
 
 # THM-1320 — the TRAP-stratum theorem
 
+> **HONESTY AMENDMENT (S59p, THM-1325 §1, MISTAKE-197):** the P3 factorization
+> c₀(0) = −E₀(0)A(0)C(0) is exactly det JF(0) (det const = det of the linear
+> part; JF(0) is the antidiagonal of the unit constants). True and verified,
+> but CLASSICALLY TRIVIAL — "unit constants nonzero" = "linear part
+> invertible." The surviving content of this file: the row-by-row FRAME
+> (units ↔ det factors), P1 (transversality), P2 (the planar core).
+
 ## 1. The determinant factorizes at the origin (P3, the heart)
 
 Evaluating THM-1305's c₀ at t = 0 (where every t-shifted term dies and

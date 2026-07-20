@@ -1,3 +1,29 @@
+## death-star-2026-07-19-S59p — WHERE THE +1 GOES (THM-1325): it IS the Yagzhev X; the reduction hides the TORUS, not the +1; and the SURGERY WALL — the +1's own zero-hyperplane obstructs every single-variable stabilization; THM-1320 honesty-amended (P3 was det JF(0) — classically trivial; MISTAKE-197)
+
+Owner: track where the +1 hides under Druzkowski reduction (xlvi). (D1) JF(0) = antidiag(A(0), C(0),
+E₀(0)) = the unit constants; G = L⁻¹F verified (det ≡ 1, triple collision transported): in Yagzhev form
+X + H the +1's ARE the X — in plain sight forever. This TRIVIALIZES THM-1320's P3 (det const = det of
+linear part): amended in canon, MISTAKE-197 filed ("evaluate novel identities at the distinguished point
+first; file frames as frames"). (D2) TORUS-BLINDNESS: in any equivariant cubic-linear model, collisions
+must sit in the torus-fixed core (back-substitution up the triangle is injective; cores ≤ 2-dim are
+shears = injective ⟹ dim ≤ 3 has NO non-injective equivariant cubic-linear maps). The witness's collision
+lives ON a torus orbit ⟹ the two normal forms are informationally complementary: cubes see algebra and
+blind the symmetry; the equivariant form sees geometry and cannot reach cubes (P1 transversality). What
+the century's reduction hides is not the +1 — it is the TORUS. (D3) THE SURGERY WALL (discovery): every
+single-new-variable substitution u → 1+w (ten patterns × full 70-dim deg-≤5 fourth-row space) FAILS —
+det = ⟨∇P, cofactor field⟩ and the field acquires zeros: ∇F̃₁ ≡ 0 on {y = 0, w = −1}, verified exactly
+(all four cofactors zero at (5,0,7,−1)). The +1's own vanishing hyperplane is the saboteur: the unit-ness
+that builds the trap (THM-1320) forbids casually linearizing it. Stabilization must be composition-shaped
+φ∘(F⊕id)∘ψ — the +1 is then absorbed into the TAME conjugating data while H carries the wild residue.
+CONSERVATION-OF-+1 (interpretive, labeled): unit-in-cube ↔ Yagzhev X ↔ affine ℓ/base-point ↔ tame data —
+relocates, never vanishes. Follow-up (xlvii): construct the explicit composition-shaped degree-≤3
+stabilization and read off the constants' landing spots.
+
+Prompt (owner): track where the +1 hides under Druzkowski reduction
+
+FILES: THM-1325, THM-1320 amendment, MISTAKE-197, HYP-8120, backlog xlvi->done + xlvii, 2 scripts + outs,
+results INDEX. -> all
+
 ## mac-mini-2026-07-19-S132 -- WILD CONJECTURES III (owner: explore + pull from agents): (a) THE BAD PRIME p=2: det == 0 mod 2, F everywhere-singular, F3 == x^2(y+xz); over GF(2^k) fiber histogram EXACTLY {1: rest, 2^k-1: 2(2^k-1), 2^{k+1}-1: 1} -- MERSENNE FIBERS (3/7/15/31), one giant per field, sheets merge inseparably: the 3:1 etale structure lives only away from 2 (THM-067 Mersenne rhyme flagged); (b) klein-S324's {2,3}-smooth conjecture REFINED to a FORWARD-SIDE LAW: map/cubic/caustic smooth, but the Dixmier B-matrix carries 21/33/89(prime)/117/165/222 -- even the shadows of the non-existent inverse escape the smooth world; (c) THE TOURNAMENT DIXMIER PROPERTY HOLDS at n=4,5 (exhaustive t_cyc-rule census, 64/1024 tournaments): bijective <=> H-preserving EXACTLY, tame group at n=5 = {id, reversal} (+2 exotic involutions at n=4), rule-complement duality via op -- the tournament category REFUSES the Keller counterexample: no infinity, no dyadic escape; ESCAPE CHANNELS ARE THE COUNTEREXAMPLE'S OXYGEN; (d) filed: MOUNT-EVEREST uniqueness (ds-1305 nullity-9 + kps-1310 in-box + boxeph-S142 kernel), HIDDEN TRISECTION (klein's T_3(W)=1), THE LRC TRANSFER (if the gap fails it fails in the k>=7-far duty-stacked regime -- aim the disproof lane). Cross-cite: klein-S324 conjectured surjectivity; THM-1315 (S131) proves it.
 
 Prompt (owner): explore these wild conjectures and pull from other agents to formulate and

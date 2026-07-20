@@ -1,5 +1,7 @@
 # Script Results Index
 
+- `jacobian_plus_one_tracking_deathstar_S59p.py` -> `.out` [STORED; THM-1325]. D1: JF(0) = antidiag units, G = L^-1 F verified det 1 + collision; D2 spot-check; D3 naive substitution: no Keller completion. death-star-S59p.
+- `jacobian_partial_substitution_deathstar_S59p.py` -> `.out` [STORED; THM-1325]. Ten patterns x 70-dim P-space: ALL obstructed (det forced 0); rank-drop point (5,0,7,-1) verified exactly. death-star-S59p.
 - `jacobian_trap_stratum_druzkowski_deathstar_S59o.py` -> `.out` [STORED; THM-1320]. Three prongs exact: det = -E0(0)A(0)C(0) identity (k=2,3,4); weight arithmetic (6858 vectors, 0 bad cycles; (1,-1,-2) table EMPTY); planar core = shears. death-star-S59o.
 - `jacobian_decode_identities_deathstar_S59n.py` -> `.out` [STORED; THM-1305]. All six decode identities exact: Phi = 4t+6, Psi = (1+t)(2+t), unit-crossing -1/2, E0(t*) = 13/2, cube relation. death-star-S59n.
 - `jacobian_equivariant_family_deathstar_S59n.py` -> `.out` [STORED; THM-1305]. Six-function det regression (-2); 22-param linearization: nullity 9. death-star-S59n.
