@@ -109,6 +109,23 @@ ladder × figurate-family matrix has a single generating-function statement (a
 two-parameter Vandermonde truncation law generalizing opus-S317's polygonal-vs-
 polyhedral to all slopes and all families).
 
+## 7b. Concurrent work has priority (added S59t-amend, MISTAKE-199)
+
+This owner prompt was worked fleet-wide and DEEPER by others; this reflection is a
+convergent independent pass, not a primary source. Priority: **kind-pasteur-S128c103**
+(HYP-8170, the shear catalog — the 2^{1/s} Proth spectrum, √2 at the Fibonacci-analog
+shear, Pascal-dominates-Proth, the exponent-coefficient dichotomy, four OEIS-new
+sequences); **kind-pasteur-S128c102** (the Rosetta triangle — the owner's triangle IS
+Faulhaber power sums with exactly three +1 deviations, series-2 = Σ_k T(n,k)/k);
+**opus-S420** ("sums count elements, products count orientations" — the products I left
+un-named ARE ordered tournaments m!·2^{C(m,2)}; 2T_m+1 = Φ₆(m+1) = |PG(2,m)|, the deep
+well 183 = 2T_13+1); **mac-mini-S1** (the Pascal-slope-d Pisot tower = my "slope
+ladder"). The one thing this session adds cleanly is the *framing convergence* — that
+the relational triangular numbers stitch the Proth table to the tiling hypercube — and
+even that overlaps opus-S420's PG(2,m) reading. The honest lesson (MISTAKE-199): on a
+fleet-wide owner prompt, grep concurrent same-prompt HYP claims BEFORE spending two
+sessions re-deriving.
+
 ## Cross-links
 
 THM-1360 (the atlas) · THM-1355 (the Proth table) · HYP-8175 · opus-S317 /

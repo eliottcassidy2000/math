@@ -2,6 +2,8 @@
 id: THM-1360
 title: The figurate-stagger atlas — staggering Pascal by slope s gives the recurrence a(m)=a(m−1)+a(m−s−1), whose growth is the DESCENDING PISOT LADDER x^{s+1}=x^s+1 (2, φ, supergolden 1.4656, 1.3803, …); the Proth grid n·2^x+1 staggered-and-summed is the MERSENNE number 2^{m+1}−1 (the Fermat "+1"s and the doubling telescope to the "−1", proved); and the RELATIONAL identity 2^{C(n−1,2)} = #tilings makes x = triangular the natural exponent, so 2^{T}+1 = tilings + observer.
 status: >
+  ATLAS / CONVERGENT RE-DERIVATION (not primary — see the priority banner; the
+  deeper primary results are kind-pasteur-S128c103/S128c102, opus-S420, mac-mini-S1).
   VERIFIED-EXACT / PROVED — (A) Σ_c C(m−s·c, c) satisfies a(m)=a(m−1)+a(m−s−1),
   char x^{s+1}−x^s−1=0, roots 2, φ=1.61803, 1.46557 (supergolden), 1.38028, …
   descending to 1 (verified s=0..3). (B) Σ_{n=0}^{m}(n·2^{m−n}+1) = 2^{m+1}−1
@@ -27,6 +29,27 @@ scripts:
 ---
 
 # THM-1360 — the figurate-stagger atlas
+
+> **PRIORITY / CREDIT BANNER (added S59t-amend, MISTAKE-199).** This owner prompt
+> went FLEET-WIDE and was worked deeper, concurrently, by others — this file is an
+> independent re-derivation that CONVERGES with theirs and does NOT hold priority:
+> • the **Pisot ladder** (§1, x^{s+1}=x^s+1: 2, φ, supergolden, plastic at s=4) is
+>   **mac-mini-S1's Pascal-slope-d Pisot tower** and **kind-pasteur-S128c103's shear
+>   catalog** (HYP-8170) — theirs also give the **Proth 2^{1/s} spectrum** (√2 at the
+>   Fibonacci-analog shear) and prove Pascal DOMINATES Proth at every shear;
+> • the **products** (§4, which I left un-named as "hyperfactorial-class") are
+>   **opus-S420's** exact identity: pure-grid shear-1 row product = **m!·2^{C(m,2)} =
+>   ordered tournaments** (sum side = A000295 Eulerian; "sums count elements, products
+>   count orientations");
+> • the **exact triangle** (the "power-sum Moser-break") is **kind-pasteur-S128c102's
+>   Rosetta triangle**: columns = Faulhaber power sums with EXACTLY three +1 deviations
+>   {(6,4),(7,4),(7,5)}, penultimate = the hypotenuse law 1+2^{n-2}, diagonal law
+>   D_m = F_{m+1}+r(m); and **series-2 = Σ_k T(n,k)/k** (forcing 29/6, the owner's 29/3
+>   a typo). My genuinely-complementary bits: the specific **Proth→Mersenne SUM**
+>   identity (§2) and the **relational 2^{T}+1 = tilings+observer** framing (§3) — and
+>   even these overlap kp-S128c103's "shear-1 = twice Mersenne" and opus-S420's
+>   2T_m+1 = Φ₆(m+1) = |PG(2,m)|. Read this file as a convergent cross-check, and see
+>   those four for the primary, deeper results.
 
 ## 1. The slope ladder (PROVED): moving columns down births a Pisot spectrum
 
