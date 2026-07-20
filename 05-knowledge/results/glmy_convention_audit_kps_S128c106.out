@@ -1,0 +1,31 @@
+==============================================================================
+CONTROL -- the directed 3-cycle (GLMY: beta_1 = 1)
+==============================================================================
+  GLMY (regular)     dim Omega = [3, 3, 0, 0, 0]
+                     betti     = [1, 1, 0, 0]
+  repo (distinct)    dim Omega = [3, 3, 0, 0, 0]
+                     betti     = [1, 1, 0, 0]
+  -> GLMY beta_1 = 1 reproduces the textbook value, so the implementation
+     is calibrated.  Note Omega_3 differs already here: the 3-cycle admits
+     (a,b,c,a) as an allowed regular 3-path, excluded by the repo rule.
+
+==============================================================================
+THE AUDIT -- Paley T_7, both conventions, degrees 0..4
+==============================================================================
+  GLMY (regular)     dim Omega_0..5 = [7, 21, 42, 70, 105, 147]
+                     betti_0..4     = [1, 0, 0, 0, 0]
+  repo (distinct)    dim Omega_0..5 = [7, 21, 42, 63, 63, 42]
+                     betti_0..4     = [1, 0, 0, 0, 6]
+
+==============================================================================
+VERDICT
+==============================================================================
+  Omega_0, Omega_1, Omega_2 agree : True
+  first degree where dim Omega differs : 3  (GLMY 70 vs repo 63)
+  beta_2 under GLMY : 0   (repo: 0)
+  beta_4 under GLMY : 0   (repo canon reports 6)
+
+  If Omega_{0,1,2} agree then beta_1 <= 1 (THM-103) and beta_2 = 0 (THM-108)
+  are CONVENTION-SAFE and survive.  If beta_4 differs from 6, the degree->=3
+  results -- THM-129 chi(T_p) = p, THM-130's Paley Betti formula, THM-096's
+  and THM-099's degree->=3 tables -- are computed in the wrong complex.

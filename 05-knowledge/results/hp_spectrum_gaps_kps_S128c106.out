@@ -1,0 +1,58 @@
+==============================================================================
+(A) EXHAUSTIVE SPECTRUM, n = 3..6
+==============================================================================
+  n = 3 : |spectrum| = 2     max = 3    
+     attained : [1, 3]
+     MISSING odd values below the max : []
+  n = 4 : |spectrum| = 3     max = 5    
+     attained : [1, 3, 5]
+     MISSING odd values below the max : []
+  n = 5 : |spectrum| = 7     max = 15   
+     attained : [1, 3, 5, 9, 11, 13, 15]
+     MISSING odd values below the max : [7]
+  n = 6 : |spectrum| = 19    max = 45   
+     attained : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+     MISSING odd values below the max : [7, 21, 35, 39]
+
+==============================================================================
+(B) NESTING (stabilisation lemma):  spectrum(n) subset spectrum(n+1) ?
+==============================================================================
+  spectrum(3) subset spectrum(4) : True  
+  spectrum(4) subset spectrum(5) : True  
+  spectrum(5) subset spectrum(6) : True  
+  -> consistent with the lemma; the spectra are nested, so 'the spectrum'
+     is the increasing union and the gap question is well-posed.
+
+==============================================================================
+(C) NEAR-TRANSITIVE SEARCH, n = 7..9, all k <= 4 arc flips
+==============================================================================
+  n = 7 : 7547 configurations, 64 distinct hp values
+     values <= 60 : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+  n = 8 : 24158 configurations, 196 distinct hp values
+     values <= 60 : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+  n = 9 : 66712 configurations, 568 distinct hp values
+     values <= 60 : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+
+==============================================================================
+(D) RANDOM SAMPLING, n = 7,8,9,  40000 samples each
+==============================================================================
+  n = 7 : values <= 60 after sampling : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+  n = 8 : values <= 60 after sampling : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+  n = 9 : values <= 60 after sampling : [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+
+==============================================================================
+(E) VERDICT ON THE GAPS
+==============================================================================
+  union of everything found, odd values <= 60 NOT attained : [7, 21]
+  7   attained anywhere in this search : False
+  21  attained anywhere in this search : False
+
+  Values missing at n = 6 but FILLED IN at larger n (so not permanent):
+     [35, 39]
+  Values missing at n = 6 and STILL missing: [7, 21]
+
+  DETECTION FLOOR (MISTAKE-196): (A),(B) are exhaustive and prove
+  non-attainment for n <= 6.  (C),(D) are searches -- they can only prove
+  ATTAINMENT.  The flip search is exhaustive for feedback-arc-set <= 4,
+  so non-attainment of 7 and 21 is established for all tournaments within
+  4 flips of transitive at n <= 9, and NOT beyond that.

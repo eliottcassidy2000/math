@@ -1,0 +1,75 @@
+==============================================================================
+STEP 0 -- truncation safety: winding of the TRUNCATED EULER series must be 0
+          on the safe zone r <= 0.95 (THM-488's condition, re-checked)
+==============================================================================
+  Kmax = 20   w(0.80) = 0  w(0.90) = 0  w(0.95) = 0
+  Kmax = 40   w(0.80) = 0  w(0.90) = 0  w(0.95) = 0
+  Kmax = 80   w(0.80) = 0  w(0.90) = 0  w(0.95) = 0
+  -> safe zone confirmed where all these read 0.
+
+==============================================================================
+STEP 1 -- THE FAMILY  S_j = {1,3,...,2j-1},  j = 1..24
+==============================================================================
+  j    |S|    B(S)     w(0.80)    w(0.90)    w(0.95)    verdict     
+  1    1      1        2          3          3          interior zero
+  2    2      2        0          4          6          interior zero
+  3    3      3        0          0          9          interior zero
+  4    4      4        0          0          10         interior zero
+  5    5      5        0          0          8          interior zero
+  6    6      6        0          0          2          interior zero
+  7    7      7        0          0          0          NO SAFE ZERO
+  8    8      8        0          0          0          NO SAFE ZERO
+  9    9      9        0          0          0          NO SAFE ZERO
+  10   10     10       0          0          0          NO SAFE ZERO
+  11   11     11       0          0          0          NO SAFE ZERO
+  12   12     12       0          0          0          NO SAFE ZERO
+  13   13     13       0          0          0          NO SAFE ZERO
+  14   14     14       0          0          0          NO SAFE ZERO
+  15   15     15       0          0          0          NO SAFE ZERO
+  16   16     16       0          0          0          NO SAFE ZERO
+  17   17     17       0          0          0          NO SAFE ZERO
+  18   18     18       0          0          0          NO SAFE ZERO
+  19   19     19       0          0          0          NO SAFE ZERO
+  20   20     20       0          0          0          NO SAFE ZERO
+  21   21     21       0          0          0          NO SAFE ZERO
+  22   22     22       0          0          0          NO SAFE ZERO
+  23   23     23       0          0          0          NO SAFE ZERO
+  24   24     24       0          0          0          NO SAFE ZERO
+
+==============================================================================
+STEP 2 -- THE BOUNDARY ANNULUS for any j with no certified safe-zone zero
+==============================================================================
+  first j with no safe-zone zero : 7
+  winding DIFFERENCE D(r) = w(F_S,r) - w(F_Euler,r) in the annulus:
+     j = 7   D(0.96) = 7  D(0.97) = 0  D(0.98) = 2  D(0.99) = -2
+     j = 8   D(0.96) = -2  D(0.97) = -1  D(0.98) = 3  D(0.99) = 6
+     j = 9   D(0.96) = -2  D(0.97) = -34  D(0.98) = 2  D(0.99) = 4
+     j = 10  D(0.96) = -2  D(0.97) = -16  D(0.98) = 3  D(0.99) = -8
+     j = 11  D(0.96) = -2  D(0.97) = -26  D(0.98) = 4  D(0.99) = -2
+     j = 12  D(0.96) = -2  D(0.97) = -26  D(0.98) = -7  D(0.99) = 18
+
+  D(r) >= 1 anywhere  => the zero merely moved into the annulus, Theorem A
+                         survives (the safe zone was just too small).
+  D(r) = 0 for all r  => a genuine COUNTEREXAMPLE to Theorem A's hard half:
+                         F_S zero-free in the disk with S non-empty.
+
+==============================================================================
+STEP 3 -- where is the zero?  smallest safe radius carrying a zero
+==============================================================================
+  j = 1   : |z_min| ~ 0.781547   (B = 1, Kmax = 20)
+  j = 2   : |z_min| ~ 0.880050   (B = 2, Kmax = 20)
+  j = 3   : |z_min| ~ 0.910086   (B = 3, Kmax = 20)
+  j = 4   : |z_min| ~ 0.926198   (B = 4, Kmax = 20)
+  j = 5   : |z_min| ~ 0.941139   (B = 5, Kmax = 21)
+  j = 6   : |z_min| ~ 0.949660   (B = 6, Kmax = 23)
+  j = 7   : no zero inside 0.95
+  j = 8   : no zero inside 0.95
+  j = 9   : no zero inside 0.95
+  j = 10  : no zero inside 0.95
+  j = 11  : no zero inside 0.95
+  j = 12  : no zero inside 0.95
+  j = 20  : no zero inside 0.95
+
+  If |z_min| is INCREASING toward 1 with j, Theorem A is under real strain
+  and the next j is worth computing.  If it stabilises or decreases, the
+  near-boundary diagnostic in THM-488 was a small-|S| effect.
