@@ -1,0 +1,36 @@
+==============================================================================
+MINOR EXPANSION: coeff of x^{n-2k} in char(S)  ==  sum over 2k-subsets Pf^2
+==============================================================================
+  n = 5 : mismatches over 40 tournaments and all k : 0  -> IDENTITY HOLDS
+  n = 6 : mismatches over 40 tournaments and all k : 0  -> IDENTITY HOLDS
+  n = 7 : mismatches over 40 tournaments and all k : 0  -> IDENTITY HOLDS
+
+==============================================================================
+THE 4-SUBSET LAW:  c_{n-4} = C(n,4) + 8*k4,  and is k4 EVEN?
+==============================================================================
+  n = 6 : c_{n-4} = C(n,4) + 8*k4 always : True    C(n,4) = 15
+          k4 parity: even 932, odd 568   -> k4 always even : False
+          c_{n-4} mod 16 attained : [7, 15]
+  n = 7 : c_{n-4} = C(n,4) + 8*k4 always : True    C(n,4) = 35
+          k4 parity: even 1500, odd 0   -> k4 always even : True
+          c_{n-4} mod 16 attained : [3]
+  n = 8 : c_{n-4} = C(n,4) + 8*k4 always : True    C(n,4) = 70
+          k4 parity: even 206, odd 169   -> k4 always even : False
+          c_{n-4} mod 16 attained : [6, 14]
+
+==============================================================================
+THE 6-SUBSET LAW:  Pf of a 6x6 +-1 skew matrix is ODD, so Pf^2 == 1 (mod 8)
+==============================================================================
+  n = 6 : every 6x6 Pfaffian odd : True  ; (c_{n-6} - C(n,6)) mod 8 : [0]
+  n = 7 : every 6x6 Pfaffian odd : True  ; (c_{n-6} - C(n,6)) mod 8 : [0]
+
+==============================================================================
+READING
+==============================================================================
+  The parity of char(S) is not a curiosity about tournaments -- it is the
+  Pfaffian.  Odd-order skew minors vanish identically, so only even-order ones
+  enter, and each enters as a SQUARE.  Squares of integers are what produce the
+  congruences: |Pf| in {1,3} at size 4 gives steps of 8, and oddness of Pf at
+  size 6 gives 1 mod 8.  'Odd function' and 'even subgraph' meet here: the
+  even-size principal minors are the only ones that survive, and they survive
+  squared.

@@ -1,0 +1,33 @@
+==============================================================================
+(A) alpha_3 = 0 for n <= 8  =>  hp = 1 + 2*alpha_1 + 4*alpha_2 EXACTLY
+==============================================================================
+  Three vertex-disjoint odd cycles need 3+3+3 = 9 vertices.  So the identity is
+  a counting fact for n <= 8; the check confirms it lands where predicted.
+  n = 6 : 300 tournaments sampled, violations : 0  -> HOLDS
+  n = 7 : 120 tournaments sampled, violations : 0  -> HOLDS
+
+==============================================================================
+(B) SKEW SPECTRAL PARITY: char(S) is ODD for n odd, EVEN for n even
+==============================================================================
+  n = 4 : char(S) has only even powers : True  ; x^{n-2} coeff = C(n,2) : True
+  n = 5 : char(S) has only odd powers : True  ; x^{n-2} coeff = C(n,2) : True
+  n = 6 : char(S) has only even powers : True  ; x^{n-2} coeff = C(n,2) : True
+  n = 7 : char(S) has only odd powers : True  ; x^{n-2} coeff = C(n,2) : True
+  -> the parity of char(S) is exactly the parity of n.  Since S is real skew-
+     symmetric its spectrum is purely imaginary in +-pairs, so char(S)(iy) is a
+     REAL-ROOTED odd/even polynomial in y -- the sin/cos archetype, spectrally.
+
+==============================================================================
+(B2) IS x^7 + 21x^5 + 115x^3 + 119x REALISED AT n = 7?
+==============================================================================
+  sampled 80000 tournaments on 7 vertices; distinct skew char polys : 11
+  target  x^7+21x^5+115x^3+119x realised : True
+     witness bits = 2044631
+     arcs = [(0, 1), (0, 2), (0, 3), (0, 5), (1, 2), (1, 3), (1, 5), (2, 4), (2, 5), (3, 2), (3, 5), (3, 6), (4, 0), (4, 1), (4, 3), (4, 5), (4, 6), (5, 6), (6, 0), (6, 1), (6, 2)]
+     hp = 91
+  Paley form x(x^2+7)^3 = x^7+21x^5+147x^3+343x realised : True
+
+  the x^3 coefficients actually attained (sorted):
+     [35, 67, 83, 99, 115, 131, 147]
+  the x coefficients actually attained (sorted):
+     [7, 23, 39, 55, 71, 119, 135, 183, 231, 343]
