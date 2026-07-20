@@ -1,0 +1,5 @@
+  control AP: exact M = 1/14  OK
+  control GW: exact M = 1/14  OK
+  control F_3(13): exact M = 3/41  OK
+
+==== MAIN PASS: all 286 complements, fars ≤ 200 ====
