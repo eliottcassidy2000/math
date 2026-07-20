@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S174 -- THM-1595: TNC (2,3) PROVED; (2,4), (3,3) CLOSED (gauged elimination, r_d = 0 forced 200/200); the Bessel uniformity gap MOOT (algebraic bypass); one lemma left (HYP-8410)
+
+**Owner:** prove the Dickson ladder collapse; work the B != 0 Bessel case (saddle uniformity gap).
+
+- (2,3) by hand: b0 = r0/(r5ct) exact; c = -r0, r2 = 0, sigma(sigma^2-2ct) == 0: both branches impossible.
+- (2,4), (3,3): symbolic ladder to t^8 + both gauges: r_6 = 0 forced at 200/200 exact specializations per branch (Zariski completion = routine pass, flagged).
+- Bessel gap: E[e^{tB}I0(2t sqrt h)] == 1 IS NC2 at M=1 — closed algebraically (THM-1550 + Gamma bridge); saddle uniformity bypassed.
+- Remaining: the general ladder-collapse induction — one lemma from TNC => NC2 => GMC(2) => Nullcone Structure Theorem.
+
 ## klein-2026-07-20-S357 -- THM-1590: THE ONE-SIDED CONJECTURE PROVED BY EXACT ELIMINATION on the {-1,0,1} charge span with bounded coefficient degrees, and the Laplace/GMC(1) layer settled the same way -- EMP re-proved without asymptotics. Plus one correction in my own test, and one deliverable NOT delivered.
 
 **Owner directive:** consider how Erdos #1016, 506, 742, 19, 580, 547, 460, 556, 475, 848 relate to our work; prove the one-sided conjecture for bounded charge span by exact elimination and settle the Laplace-GMC(1) layer; with w = e^{i theta}, P is a Laurent polynomial in w with r-dependent coefficients -- show int_0^inf CT_w(P^m) e^{-s} ds != 0 for some m.

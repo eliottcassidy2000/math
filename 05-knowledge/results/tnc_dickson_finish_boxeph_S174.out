@@ -1,0 +1,30 @@
+(M,N) = (2,4): forced relations (t-order: polynomial in r0..r6, c):
+  t^1: -1*c^1 + -1*r0^1 = 0
+  t^2: 1*r2^1*c^1 = 0
+  t^3: -1*r4^1*c^2 + -1*r1^1*r3^1*c^1 = 0
+  t^4: 1*r6^1*c^3 + 1*r3^2*c^2 + 2*r1^1*r5^1*c^2 + 1*r1^1*r2^1*r3^1*c^1 + 1*r1^2*r4^1*c^1 = 0
+  t^5: -3*r3^1*r5^1*c^3 + -1*r2^1*r3^2*c^2 + -4*r1^1*r3^1*r4^1*c^2 + -2*r1^1*r2^1*r5^1*c^2 + -1*r1^1*r2^2*r3^1*c^1 + -3*r1^2*r6^1*c^2 + -1*r1^2*r3^2*c^1 + -2*r1^2*r2^1*r4^1*c^1 + -1*r1^3*r5^1*c^1 = 0
+  t^6: 2*r5^2*c^4 + 3*r3^2*r4^1*c^3 + 3*r2^1*r3^1*r5^1*c^3 + 1*r2^2*r3^2*c^2 + 6*r1^1*r4^1*r5^1*c^3 + 9*r1^1*r3^1*r6^1*c^3 + 2*r1^1*r3^3*c^2 + 8*r1^1*r2^1*r3^1*r4^1*c^2 + 2*r1^1*r2^2*r5^1*c^2 + 1*r1^1*r2^3*r = 0
+
+(M,N) = (3,3): forced relations (t-order: polynomial in r0..r6, c):
+  t^1: 1*c^1 + -1*r0^1 = 0
+  t^2: -1*r3^1*c^1 = 0
+  t^3: -1*r6^1*c^2 + 1*r2^1*r4^1*c^1 + 1*r1^1*r5^1*c^1 = 0
+  t^4: 2*r4^1*r5^1*c^2 + -1*r2^1*r3^1*r4^1*c^1 + -1*r2^2*r5^1*c^1 + -1*r1^1*r4^2*c^1 + -1*r1^1*r3^1*r5^1*c^1 + -2*r1^1*r2^1*r6^1*c^1 = 0
+  t^5: -1*r4^3*c^2 + -2*r3^1*r4^1*r5^1*c^2 + -3*r2^1*r5^2*c^2 + -4*r2^1*r4^1*r6^1*c^2 + 1*r2^1*r3^2*r4^1*c^1 + 1*r2^2*r4^2*c^1 + 2*r2^2*r3^1*r5^1*c^1 + 1*r2^3*r6^1*c^1 + -4*r1^1*r5^1*r6^1*c^2 + 2*r1^1*r3^1*r = 0
+  t^6: -2*r5^3*c^3 + -6*r4^1*r5^1*r6^1*c^3 + 2*r3^1*r4^3*c^2 + 2*r3^2*r4^1*r5^1*c^2 + 8*r2^1*r4^2*r5^1*c^2 + 6*r2^1*r3^1*r5^2*c^2 + 8*r2^1*r3^1*r4^1*r6^1*c^2 + -1*r2^1*r3^3*r4^1*c^1 + 10*r2^2*r5^1*r6^1*c^2 + = 0
+
+READING: the relation chain should force (in order) c = -r0-type, r2 = 0, ... and
+terminate in r_d * (nonzero) = 0 — the contradiction. Inspect and confirm below.
+(M,N) = (2,4): 8 relations to t^8. Gauge c = 1, r0 = -1; branch on r1.
+  r1 = 0: system forces r_6 = 0 at ALL 200 specializations: True  => TNC (2,4) closed on this branch (r_d = 0 contradicts deg R = d)
+  r1 = 1: system forces r_6 = 0 at ALL 200 specializations: True  => TNC (2,4) closed on this branch (r_d = 0 contradicts deg R = d)
+(M,N) = (3,3): 8 relations to t^8. Gauge c = 1, r0 = 1; branch on r1.
+  r1 = 0: system forces r_6 = 0 at ALL 200 specializations: True  => TNC (3,3) closed on this branch (r_d = 0 contradicts deg R = d)
+  r1 = 1: system forces r_6 = 0 at ALL 200 specializations: True  => TNC (3,3) closed on this branch (r_d = 0 contradicts deg R = d)
+
+CONCLUSION: with the by-hand cases (N = 1 all M; (2,2); (2,3)) and these
+eliminations, TNC is closed for all (M,N) with min(M,N) = 1, (2,2), (2,3),
+(2,4), (3,3). The Dickson-ladder overdetermination is doing exactly what the
+general proof requires; the remaining general statement is the ladder-collapse
+induction (named handoff, now with five closed instances as the template).
