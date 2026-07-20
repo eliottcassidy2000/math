@@ -1,7 +1,7 @@
 # Investigation Backlog
 
 ## Lead boxeph-2026-07-19-S140: the Jacobian counterexample as a research object (JC3 false, VERIFIED in-repo; S3 monodromy measured)
-- **Status:** verification COMPLETE (HYP-8070; exact, self-contained). Open sub-leads: (1) exact T(p) law of the collision threefold (data p=3..29 in the .out); (2) construct the explicit injective-non-surjective A3 Weyl endomorphism from F (mechanical; first explicit Keller-type proper self-embedding of A3); (3) probe the JC2 island with the equivariant method + our involution-census machinery; (4) engineering: mod-p Chebotarev fingerprinter tool (map -> monodromy statistics).
+- **Status:** verification COMPLETE (HYP-8075 (ex-8070); exact, self-contained). Open sub-leads: (1) exact T(p) law of the collision threefold (data p=3..29 in the .out); (2) construct the explicit injective-non-surjective A3 Weyl endomorphism from F (mechanical; first explicit Keller-type proper self-embedding of A3); (3) probe the JC2 island with the equivariant method + our involution-census machinery; (4) engineering: mod-p Chebotarev fingerprinter tool (map -> monodromy statistics).
 - **Source:** owner communication 2026-07-19 + boxeph-S140 verification; reflection the-jacobian-counterexample-verified-...-S140.
 
 ## Lead kind-pasteur-2026-07-19-S128c90: three-seam follow-ups (HYP-7955)
@@ -10233,7 +10233,7 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 - **(iii) Duty-assignment formalization:** "every family with M < 1/13 induces a duty map {2..13} → speeds (q ↦ a multiple of q) with per-speed load = the lcm-stack it must carry"; per-speed stretch bounds ⟹ rung progressions. Ties boxeph-S130 §7's blocking budget to the extremal side; Lean-shaped (finite, decidable per shape).
 - **Status:** OPEN; (i) is one small session; (ii) is the substantive one (types as Wall A, feeds the 4/55 decision); (iii) is a formalization rung.
 
-## Lead mac-mini-2026-07-19-S129: the Jacobian/Dixmier fall — follow-ups (HYP-8070)
+## Lead mac-mini-2026-07-19-S129: the Jacobian/Dixmier fall — follow-ups (HYP-8075, ex-8070)
 - **Source:** owner directive + `07-reflections/jacobian-dixmier-fall-and-the-repo-...-macmini-S129.md` (verified counterexample; implication cascade; σ-as-symbol-map; strategy lessons).
 - **(i) Attribution hunt:** two web searches found no announcement; retry in coming days (arXiv listing, expected enormous coverage); add the citation to HYP-8070 + reflection when it lands.
 - **(ii) The family question:** the map's (1+xy)-grouping + ℤ/2-equivariance suggest a FAMILY of equivariant Keller counterexamples; parametrize (replace the constants 4, 3, 2, 3 by parameters, impose det ≡ const) — a small sympy elimination; if a family exists, its parity anatomy (odd fibers over the fixed locus) is a theorem about ALL of them, provable by the §1 argument.

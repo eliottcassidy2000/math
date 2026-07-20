@@ -21,12 +21,12 @@ recursion is reminiscent of the n vs 2n relationship between jacobian and dixmie
 
 FILES: HYP-8070 (verified + connections), referee script + frozen out, reflection
 jacobian-dixmier-fall-and-the-repo, backlog S129 lead (4 items), results INDEX. -> all
-## boxeph-2026-07-19-S140 -- JACOBIAN CONJECTURE COUNTEREXAMPLE VERIFIED EXACTLY (HYP-8070): det JF ≡ −2 symbolic + 3-point collision ⟹ JC₃ FALSE (⟹ JC_n, DC_n false ∀n≥3); NEW: S₃ monodromy read by our mod-p census (1/2, 1/6, 1/3 Chebotarev split); ℤ/2 equivariance organizes the collision as 1+2
+## boxeph-2026-07-19-S140 -- JACOBIAN CONJECTURE COUNTEREXAMPLE VERIFIED EXACTLY (HYP-8075, ex-8070): det JF ≡ −2 symbolic + 3-point collision ⟹ JC₃ FALSE (⟹ JC_n, DC_n false ∀n≥3); NEW: S₃ monodromy read by our mod-p census (1/2, 1/6, 1/3 Chebotarev split); ℤ/2 equivariance organizes the collision as 1+2
 
 - **VERIFIED (self-contained, exact):** the owner-communicated map F = ((1+xy)³z + y²(1+xy)(4+3xy), y+3x(1+xy)²z+3xy²(4+3xy), 2x−3x²y−x³z): symbolic det JF ≡ −2; exact collision F(0,0,−1/4)=F(1,−3/2,13/2)=F(−1,3/2,13/2)=(−1/4,0,0). Non-injective Keller map ⟹ **JC₃ FALSE**; stabilization ⟹ JC_n ∀n≥3; DC_n ⟹ JC_n ⟹ **DC_n false ∀n≥3**. Islands: JC₂ open; DC₁/DC₂ open (DC₂ decoupled from dead JC₄, hangs below JC₂ only).
 - **NEW MEASUREMENTS:** exact ℤ/2 equivariance (F∘diag(−1,−1,1)=diag(1,−1,−1)∘F), collision = fixed+2-orbit; mod-p full census p=3..29: fibers ONLY {1,3}, proportions → (1/2, 1/6, 1/3) = S₃ class equation ⟹ generic degree 3, FULL S₃ monodromy, σ = a transposition. T(p) = 3,18,51,205,342,776,1089,1947,3934 — exact law OPEN (collision threefold).
 - **CONNECTIONS (reflection, analogies labeled):** BKK/Tsuchimoto n→2n = mod-p Weyl center doubling ↔ CD-tower doubling; p-power center ↔ our divisible/degeneracy channels; collision orbit census ↔ G_n/ℤ₂ SC/NS; the improperness-mod-p ladder IS the instrument that extracted the monodromy. LEADS: T(p) law; explicit non-surjective A₃ endo; JC₂ island probe; Chebotarev-fingerprinter tool.
-- **FILES:** HYP-8070; jacobian_counterexample_verify_boxeph_S140.py + .out; reflection; backlog lead.
+- **FILES:** HYP-8075 (ex-8070); jacobian_counterexample_verify_boxeph_S140.py + .out; reflection; backlog lead.
 
 ## death-star-2026-07-19-S59l (INTERIM — generator builds IN FLIGHT) — the concept-space session: THM-1295 (K-ladder floor+seals proved, residual UNIFIED with the F_D tower, (60,12) verified), octal n=7 resolved (missing = exactly {7,21}), tower members dyadically collapse, three surveys mapped the whole repo, 4/367 + 6/1271 emitted and building
 
