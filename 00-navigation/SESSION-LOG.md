@@ -19,6 +19,49 @@ Prompt (owner): work induction to prove GMC(2) and TNC.
 FILES: THM-1600, HYP-8435, 1 script + out. -> all (THE LAST OPEN LINK IN TNC IS CLOSED AT SMALL SPAN. THM-1530 proved TNC only at extreme weight +-1 and showed M,N >= 2 is structurally a different problem. Exact Groebner now settles ALL NINE spans with M,N <= 3, including (2,2), (2,3), (3,2), (3,3) -- basis <1> in every case, i.e. inconsistent, i.e. TNC holds. THE TRICK that makes it finite: the two symmetries Lam -> mu Lam and u -> lam u let you normalise c_{-M} = c_N = 1 on exactly the open set where both extremes are nonzero, which is precisely the set TNC says is empty -- so TNC for a span IS inconsistency of the normalised moment system, and that is a Groebner question. I audited the normalisation and machine-checked the u -> lam u invariance before using it. NOTE THE STRENGTH: unlike THM-1590 this bounds NO coefficient degree, because TNC is about constant coefficients -- the span alone bounds the problem. TWO THINGS I AM NOT CLAIMING. The span is bounded at 3 and the Groebner cost grows fast (my first run timed out). And TNC => NC2 is my own Gamma bridge, whose verification had one untested case, so 'GMC(2) on charge span [-3,3]' is CONDITIONAL on that bridge, not proved. CLOSING THE GAMMA BRIDGE -- specifically the non-constant leading-coefficient case -- is now the highest-value remaining item, because TNC has stopped being the blocker. On the induction proper: these are the BASE CASES; the step reducing (M,N) to smaller spans is not proved, and THM-1530's M | (k+1) arithmetic says it cannot be uniform in M.)
 
 ---
+## opus-2026-07-20-S416 - The TNC's algebraic obstruction is EMPTY: a genuine saddle always exists (THM-1615)
+
+Worked the TNC (the last gap before NC2 => GMC(2)) with the owner's rising/falling-factorial
+prompt. Got a refutation of my own first idea and then a stronger correction.
+
+**REFUTED FIRST, my own.** I proposed that a TNC violator must have disc(R) = 0, reasoning
+that the saddle value must vanish so the saddle is a multiple root. FALSE: R = (1+u)^2 at
+N=1 has disc 0 AND nontrivial gcd(R, uR'-NR) = u+1, yet CT(Lambda^m) = C(2m,m) =
+2,6,20,70,252,924 -- never zero. Same for (1+u)^4 at N=2 (C(4m,2m)) and (1-u)^2(1+u)^2. THE
+ERROR: a repeated root of R makes BOTH sides of uR' = NR vanish, so it is a SPURIOUS saddle,
+not a critical point of log R - N log u (which is singular there). Recorded so it is not
+re-proposed -- 'the discriminant vanishes' is a natural guess and cuts nothing.
+
+**THE CORRECTION PROVES MORE.** A GENUINE saddle is a root of S(u) := uR'(u) - N R(u) with
+R(u*) != 0. THEOREM: for deg R = M+N, R(0) != 0, M >= 1, a genuine saddle ALWAYS EXISTS.
+Proof: if every root of S were a root of R, then since deg S = deg R = M+N with leading
+coefficients M*r_d and r_d, we get S = M*R, i.e. uR' = (M+N)R, whose only polynomial
+solutions are R = c*u^{M+N} -- contradicting R(0) != 0. Verified in every test case (the sole
+exception N=1, R=1+u has M=0, the one-sided case already settled by THM-1530(B)).
+
+**CONSEQUENCE -- THE REDUCTION.** At a genuine saddle R(u*)/u*^N is NONZERO, so
+CT(Lambda^m) = [u^{Nm}]R^m carries an m-th power term with nonzero base. **So the ENTIRE
+remaining content of TNC is whether the dominant saddle can be CANCELLED by equal-modulus
+competitors** -- exactly boxeph's 'Bessel uniformity gap'. What this adds: nothing ALGEBRAIC
+stands in the way, and this holds at EVERY bidegree (M,N) SIMULTANEOUSLY, whereas the Dickson
+ladder closes them one at a time. It is a REDUCTION, not a closure, and closes no new
+bidegree by itself -- stated that way in canon.
+
+**WHERE THE FACTORIALS ACTUALLY SIT** (the owner's question). The split is now explicit:
+RADIAL = Gamma(Dm+1) = (Dm)!, the rising factorial from the Laplace weight e^{-s}ds with
+E[s^k] = k! (and mac-mini's THM-1600: L((av+b)^m) = m! a^m e_m(b/a) truncated exponential,
+L((v-1)^m) = derangements). ANGULAR = CT(Lambda^m) = [u^{Nm}]R^m, which is FACTORIAL-FREE.
+GROWTH = the saddle values, Fuss-Catalan/Raney rates -- C(2m,m) and C(4m,2m) above are the
+R=(1+u)^k instances. **So the TNC is precisely the factorial-free residue, which is why no
+factorial identity can close it**: the content is the geometry of the saddle set, not the
+arithmetic of (Dm)!.
+
+**NEXT (HYP-8450).** Can sum_j c_j (rho e^{i phi_j})^m vanish for every m, with c_j the
+algebraic saddle prefactors? For finitely many equal-modulus saddles this is a VANISHING SUMS
+OF ROOTS OF UNITY question -- the natural tool, and not what the ladder is doing. Settling it
+takes TNC in one stroke, and with it NC2 and GMC(2) via klein's Gamma bridge.
+
+**Artifacts:** THM-1615; HYP-8450; 2 scripts + 2 outputs.
 
 ## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
 

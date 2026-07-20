@@ -1,0 +1,22 @@
+CORRECTED ARGUMENT.  A GENUINE saddle is a root of S(u) := u R'(u) - N R(u) that is
+NOT a root of R (else log R is singular there and both sides vanish trivially).
+If a genuine saddle u* exists, the saddle value R(u*)/u*^N is NONZERO, so the
+Cauchy integral has an m-th-power term that cannot vanish for all m.
+
+SO A TNC VIOLATOR NEEDS: every root of S is a root of R.  Degrees:
+   deg R = M+N; leading coeff of S = (M+N)r_d - N r_d = M r_d, so deg S = M+N too.
+   'every root of S is a root of R' with equal degrees and leading ratio M
+   ==> S = M*R  ==>  u R' - N R = M R  ==>  u R' = (M+N) R  ==>  R = c u^{M+N}.
+   But R(0) != 0 (min exponent is exactly -N), so M+N = 0.  CONTRADICTION.
+   => A GENUINE SADDLE ALWAYS EXISTS.  The algebraic obstruction is EMPTY.
+
+verify the ODE step and that genuine saddles exist in the test cases:
+   N=1,R=1+u                S/gcd = -1   genuine saddles: []
+   N=1,R=(1+u)^2            S/gcd = u - 1   genuine saddles: [1]
+   N=2,R=(1+u)^4            S/gcd = 2*(u - 1)   genuine saddles: [1]
+   N=2,R=1+u+u^2+u^3+u^4    S/gcd = (u - 1)*(u + 1)*(2*u**2 + u + 2)   genuine saddles: [1, -1, -1/4 - sqrt(15)*I/4, -1/4 + sqrt(15)*I/4]
+   N=2,R=(1-u)^2(1+u)^2     S/gcd = 2*(u**2 + 1)   genuine saddles: [-I, I]
+   N=3,R=(1+u)^6            S/gcd = 3*(u - 1)   genuine saddles: [1]
+
+check the ODE claim: u R' = (M+N) R has only monomial solutions
+   dsolve(u f' = k f) -> Eq(f(u), u**re(k)*(C1*sin(log(u)*Abs(im(k))) + C2*cos(log(u)*im(k))))   (pure power u^k, so R(0)=0 unless k=0)

@@ -1,0 +1,32 @@
+==============================================================================
+(1) SANITY: the saddle prediction on cases already settled
+==============================================================================
+   Lambda = u^-N R(u).  Nonzero CT(Lambda^m) for some m  <=>  TNC holds there.
+   Prediction: disc(R) != 0  ==>  some CT(Lambda^m) != 0.
+   N=1, R=1+u                 disc=       1  CT m=1..6 = [1, 1, 1, 1, 1, 1]  first nonzero m=1
+   N=1, R=(1+u)^2             disc=       0  CT m=1..6 = [2, 6, 20, 70, 252, 924]  first nonzero m=1
+   N=2, R=1+u^2               disc=      -4  CT m=1..6 = [1, 1, 1, 1, 1, 1]  first nonzero m=1
+   N=2, R=(1+u)^4             disc=       0  CT m=1..6 = [6, 70, 924, 12870, 184756, 2704156]  first nonzero m=1
+   N=2, R=1+u+u^2+u^3+u^4     disc=     125  CT m=1..6 = [1, 5, 19, 85, 381, 1751]  first nonzero m=1
+   N=3, R=(1+u)^6             disc=       0  CT m=1..6 = [20, 924, 48620, 2704156, 155117520, 9075135300]  first nonzero m=1
+   N=2, R=(1-u)^2(1+u)^2      disc=       0  CT m=1..6 = [-2, 6, -20, 70, -252, 924]  first nonzero m=1
+
+==============================================================================
+(2) THE SADDLE EQUATION u R'(u) = N R(u), and whether its roots hit R
+==============================================================================
+   N=1, R=1+u                 gcd(R, uR'-NR) = 1
+   N=1, R=(1+u)^2             gcd(R, uR'-NR) = u + 1
+   N=2, R=1+u^2               gcd(R, uR'-NR) = 1
+   N=2, R=(1+u)^4             gcd(R, uR'-NR) = (u + 1)**3
+   N=2, R=1+u+u^2+u^3+u^4     gcd(R, uR'-NR) = 1
+   N=3, R=(1+u)^6             gcd(R, uR'-NR) = (u + 1)**5
+   N=2, R=(1-u)^2(1+u)^2      gcd(R, uR'-NR) = (u - 1)*(u + 1)
+   nontrivial gcd  <=>  the saddle sits on a root of R  <=>  candidate TNC violator
+
+==============================================================================
+(3) SEARCH: any Laurent with min<=-2, max>=2 and CT(Lambda^m)=0 for m=1..8?
+==============================================================================
+   (THM-1530(C) tested 3456 three-term cases, zero hits.  Widen to FOUR terms,
+    and record whether every survivor has disc(R) = 0 as the saddle argument predicts.)
+   scanned 400 quartics at N=2; CT-vanishing through m=5: 0
+   none -- consistent with TNC, and the saddle condition is not yet stressed.

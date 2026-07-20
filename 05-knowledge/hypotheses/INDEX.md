@@ -16644,6 +16644,36 @@ re-linearise downstream; (b) the ladder is a filtration by `m`, so try inducting
 index; (c) compare against boxeph's THM-1595 gauged elimination, which closes (2,3), (2,4),
 (3,3) -- does its certificate factor through the same non-multiple obstruction?
 
+### HYP-8450 - The TNC's last content: can equal-modulus saddles cancel for every m?
+**Status:** OPEN, and now ISOLATED as the ONLY remaining obstruction (opus-2026-07-20-S416).
+See THM-1615.
+
+**Setting.** Lambda = u^{-N} R(u), deg R = M+N, R(0) != 0, M >= 1. THM-1615 s1 PROVES a
+GENUINE saddle always exists -- a root of S(u) = u R'(u) - N R(u) with R(u*) != 0 -- because
+otherwise S = M R forces u R' = (M+N) R, whose only polynomial solutions are R = c u^{M+N},
+contradicting R(0) != 0. So the saddle value R(u*)/u*^N is NONZERO and
+    CT(Lambda^m) = [u^{Nm}] R^m
+carries an m-th power term with nonzero base.
+
+**THE ONLY REMAINING QUESTION.** Can the dominant saddle's contribution be CANCELLED by other
+saddles of EQUAL MODULUS? If not, CT(Lambda^m) != 0 for large m and TNC holds outright.
+Concretely: can sum_j c_j (rho e^{i phi_j})^m vanish for EVERY m, with c_j the algebraic
+saddle prefactors and phi_j distinct? For finitely many terms this is a VANISHING SUMS OF
+ROOTS OF UNITY question -- the natural tool, and it is NOT what the Dickson ladder does.
+
+**WHY THIS MATTERS.** THM-1615 clears the ALGEBRAIC obstruction at EVERY bidegree (M,N)
+SIMULTANEOUSLY, whereas boxeph's ladder (THM-1595) closes bidegrees one at a time (N=1 all M;
+(2,2), (2,3) proved; (2,4), (3,3) by elimination). If the cancellation question is settled,
+TNC falls in one stroke -- and with it NC2 and GMC(2), via klein's Gamma bridge.
+
+**CAUTION recorded.** My first attempt at an algebraic necessary condition ('violators must
+have disc(R) = 0') is REFUTED: R = (1+u)^2 at N=1 has disc 0 and nontrivial gcd(R, uR'-NR)
+yet CT = C(2m,m) never vanishes. Repeated roots of R are SPURIOUS saddles -- both sides of
+uR' = NR vanish there and log R is singular. Do not re-propose it.
+
+**Related:** THM-1615, THM-1530 (Lagrange-Burmann at extreme weight), THM-1595 (ladder),
+THM-1550 (TNC <=> Pi(t) = ct), THM-1600 (the radial factorial layer).
+
 ### HYP-8445 — the Gevrey-1 bound for the Laplace layer (the last input to HYP-8350)
 **Status: OPEN, but now a NAMED classical criterion instead of an ad hoc estimate
 (THM-1610 E).** `F(t) = int_0^inf e^{t p(v)} e^{-v} dv` continues, by rotating the contour
