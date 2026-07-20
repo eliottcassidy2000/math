@@ -1,0 +1,84 @@
+==========================================================================
+(1) ind(T^k, half-translation) -- symbolic, in the exterior algebra over F_2
+==========================================================================
+  s = translation by (1/2,...,1/2) is FREE on T^k, and T^k/s is again a
+  k-torus (lattice Z^k + Z*(e/2), index 2).  So
+      H*(T^k/s ; F_2) = Lambda_{F2}(x_1,...,x_k),   x_i^2 = 0.
+  Write w_1 = sum a_i x_i.  Then
+      w_1^2 = sum_{i,j} a_i a_j x_i x_j = sum_{i<j} a_i a_j (x_i x_j + x_j x_i) = 0
+  because x_i x_j = -x_j x_i = x_j x_i over F_2, so each bracket is 2*(..)=0.
+
+  brute force over all w_1 in H^1, k=1..8: [True, True, True, True, True, True, True, True]
+  => w_1^2 = 0 for EVERY w_1, every k.   ind(T^k, translation) = 1.
+  (contrast ind(S^k, antipodal) = k, where w_1^k != 0 in H*(RP^k))
+  THE INDEX DOES NOT GROW WITH k.  Raising the dimension buys NOTHING.
+
+==========================================================================
+(2) The parity dichotomy: which combs are antipodal-free?
+==========================================================================
+  s: t -> t+1/2.  D_v = {t : ||vt|| < lam}.  Recall ||v(t+1/2)|| = ||vt|| (v even),
+  = 1/2 - ||vt|| (v odd).  So D_v contains an s-antipodal pair {t,t+1/2} iff ...
+    v= 1 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v= 2 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v= 3 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v= 4 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v= 5 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v= 6 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v= 7 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v= 8 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v= 9 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v=10 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v=11 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v=12 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+    v=13 (odd )  contains an antipodal pair: False   (D_v is s-FREE)
+    v=14 (even)  contains an antipodal pair: True    (D_v is s-INVARIANT)
+
+  PROVED: for lam < 1/4, both ||vt||<lam and 1/2-||vt||<lam is impossible
+  (it would need ||vt|| < lam AND ||vt|| > 1/2-lam, empty when lam<1/4).
+  So: v EVEN => D_v is a union of antipodal pairs;  v ODD => D_v antipodal-FREE.
+
+==========================================================================
+(3) THE DECISIVE COMPARISON: index bound vs measure bound
+==========================================================================
+  Lusternik-Schnirelmann-Borsuk, index form: a free Z/2-space X with
+  ind(X)=m covered by closed ANTIPODAL-FREE sets needs >= m+2 of them.
+  Our configuration space is the circle: ind(S^1, s) = 1.  So the ENTIRE
+  Borsuk-Ulam family can only ever say:  >= 3 combs are needed.
+
+  The trivial UNION BOUND says: each comb has measure 2*lam, so covering
+  the circle needs >= 1/(2 lam) = n/2 combs.
+
+     n     BU/LSB bound      measure bound      speeds available (n-1)
+      4         3                 2.0                 3   <- BU wins
+      5         3                 2.5                 4   <- BU wins
+      6         3                 3.0                 5   <- measure STRICTLY DOMINATES BU
+      7         3                 3.5                 6   <- measure STRICTLY DOMINATES BU
+      8         3                 4.0                 7   <- measure STRICTLY DOMINATES BU
+     10         3                 5.0                 9   <- measure STRICTLY DOMINATES BU
+     14         3                 7.0                 13   <- measure STRICTLY DOMINATES BU
+     20         3                10.0                 19   <- measure STRICTLY DOMINATES BU
+
+  CROSSOVER at n/2 = 3, i.e. n = 6.  For every n >= 7 the measure bound is
+  strictly stronger than anything Borsuk-Ulam can give.  At n = 14: BU says
+  >= 3, measure says >= 7, and we must rule out 13.  BU is DOMINATED by a
+  method THM-1185 already showed is insufficient.
+
+  Worse: LSB constrains only the ANTIPODAL-FREE sets, i.e. only the ODD
+  combs (part 2).  {1,...,13} has 7 odd speeds, and 7 >= 3 comfortably.
+  So the bound is not merely weak -- it is vacuous on the extremal family.
+
+==========================================================================
+(4) Sharpness: 3 antipodal-free closed arcs DO cover S^1 (so 3 is optimal)
+==========================================================================
+    three arcs of length ~0.34: cover S^1 = True; each length < 1/2 (=> antipodal-free) = True
+    => ind+2 = 3 is attained.  The bound cannot be improved.
+
+==========================================================================
+(5) WHY NO ENLARGEMENT ESCAPES: monotonicity of the index
+==========================================================================
+  If there is a Z/2-equivariant map X -> Y then ind(X) <= ind(Y).
+  The LRC data lives on S^1 (index 1).  Any auxiliary free Z/2-space X that
+  maps equivariantly to the circle inherits ind(X) <= 1.  You cannot import
+  a high-index space into the problem; and mapping OUT (S^1 -> X) leaves the
+  conclusion on X, where it says nothing about the combs.
+  => The cap of 3 is structural, not an artifact of a bad choice of space.

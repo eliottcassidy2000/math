@@ -15591,6 +15591,39 @@ OUTCOMES (same session, all machine-exact; figurate_two_axes_macmini_S109.py/.ou
 - **Evidence:** 03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md (the artifact); sweep of THM-1300..1355 + technique indexes.
 - **See:** Part IV for the six targets with first moves and the assumption each challenges.
 
+### HYP-8225 — The ℤ/2-index form of Borsuk–Ulam certifies LRC(14) on the k-torus
+**Status:** REFUTED (opus-2026-07-20-S402) — route closed, see THM-1385
+**Source:** THM-1380 §6 (my own stated next step, from HYP-8220 / kind-pasteur-S31av)
+
+**Tested:** THM-1380 left BU owing "one involution, free *and* carrying an odd map," naming
+the `k`-torus of the resonance lattice (THM-1075) as the fix, with the `Tᵏ ≠ Sᵏ` caveat to
+be handled by the ℤ/2-index / Yang-index form.
+
+**Outcome — the debt is payable and the route dies anyway:**
+- The odd map is **free of charge**: `H := G − G∘s` is `s`-odd for any `G`. Explicitly
+  `H(x) = min_j‖x_j‖ + max_j‖x_j‖ − ½`. The "missing ingredient" was never missing.
+- **`ind(Tᵏ, half-translation) = 1` for every `k`** — `H*(Tᵏ;𝔽₂)` is exterior, so
+  `w₁² = 0` (brute-forced over all `w₁ ∈ H¹`, `k = 1..8`). Contrast `ind(Sᵏ) = k`. **The
+  index does not grow with dimension.** This is the exact content of "`Tᵏ ≠ Sᵏ`".
+- **Cap:** LSB index form ⟹ covering by antipodal-free closed sets needs `≥ ind+2 = 3`.
+  Sharp (three arcs of length ≈0.34). Constant in `n` and `k`.
+- **Dominated:** the union bound gives `n/2`. Crossover at `n = 6`; for all `n ≥ 7` measure
+  strictly beats BU. At `n = 14`: BU 3, measure 7, need 13 — BU is weaker than a method
+  THM-1185 already showed insufficient. And **vacuous** on `{1,…,13}`, which has 7 odd
+  combs against a requirement of 3.
+- **Structural:** the index is monotone under equivariant maps and the data lives on `S¹`
+  (index 1), so no enlargement — deleted joins, configuration spaces — can raise it.
+
+**Side results kept:** the parity dichotomy (for `λ<¼`, `D_v` is antipodal-free iff `v` odd,
+`s`-invariant iff `v` even), and the projection law under `π: t↦2t` (even comb at `λ` ↦
+speed-halved comb at `λ`; odd comb at `λ` ↦ same-speed comb at `2λ`) — the latter **loses**
+(`13/7 → 20/7`), recorded as a dead end.
+
+**Carry-forward:** compute the index *first* before any future topological route. Exterior
+vs truncated-polynomial mod-2 cohomology decided this in one line.
+
+**Verification:** `04-computation/z2_index_lrc_opus_S402.py`, `projection_law_opus_S402.py`.
+
 ### HYP-8220 — Borsuk–Ulam certifies LRC(14) via the free antipodal ℤ/2
 **Status:** REFUTED as stated / REFRAMED (opus-2026-07-20-S401)
 **Source:** kind-pasteur-2026-06-28-S31av (`07-reflections/14-is-the-heptagon-dihedral-group-borsuk-ulam-not-brouwer-kps.md`)

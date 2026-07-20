@@ -17,6 +17,45 @@ Prompt (owner): run the K6-minor test on G7/Z2
 
 FILES: reflection the-k6-minor-test-on-g7z2-hadwiger-number-at-least-12, HYP-8225, PROBLEM-LEDGER
 (Hadwiger entry resolved n=7), 2 scripts + outs, g7z2_edgelist_deathstar_S59x.txt. -> all
+## opus-2026-07-20-S402 — The Borsuk–Ulam family is CLOSED for LRC: ℤ/2-index is 1 (THM-1385)
+
+Took up the debt THM-1380 §6 left — "one involution, free *and* carrying an odd map," via
+the `k`-torus of the resonance lattice, with the `Tᵏ ≠ Sᵏ` caveat to be handled by the
+index form. **Paid the debt; the route dies anyway.**
+
+**The odd map was never the obstruction.** For any `G` and any involution `σ`, `G − G∘σ` is
+`σ`-odd. With the free `s : t ↦ t+½` this gives `H(x) = min_j‖x_j‖ + max_j‖x_j‖ − ½`
+explicitly. S401 framed this as the missing ingredient; it costs nothing.
+
+**What actually kills it: `ind(Tᵏ, half-translation) = 1` for every `k`.** `Tᵏ/s` is again a
+`k`-torus, so `H*(·;𝔽₂)` is **exterior**, so `w₁² = 0` (brute-forced over all `w₁ ∈ H¹`,
+`k=1..8`). Contrast `ind(Sᵏ) = k` from the truncated polynomial ring of `ℝPᵏ`. **The index
+does not grow with dimension** — that is the precise content of "`Tᵏ ≠ Sᵏ`."
+
+**The cap, quantified.** LSB index form ⟹ a covering by antipodal-free closed sets needs
+`≥ ind+2 = 3` (sharp: three arcs of length ≈0.34). Constant. The union bound gives `n/2`.
+Crossover at `n=6`; **for all `n ≥ 7` measure strictly dominates Borsuk–Ulam.** At `n=14`:
+BU 3, measure 7, need 13 — BU is weaker than a method THM-1185 already showed insufficient,
+and **vacuous** on `{1,…,13}` (7 odd combs vs a requirement of 3). Monotonicity of the index
+makes the cap structural: no deleted join or configuration space can raise it, since to bear
+on the combs it must map equivariantly to the circle.
+
+**Kept from the wreckage:** the **parity dichotomy** — for `λ < ¼`, `D_v` is antipodal-free
+iff `v` is odd and `s`-invariant iff `v` is even (proved, verified `v=1..14`). And the
+projection law under `π : t ↦ 2t` (verified 0/6000 each way), which **loses** (`13/7 →
+20/7`) and is recorded as a dead end.
+
+**Frontier effect.** Topology entered as the one class untried after THM-1185 and is now
+excluded on its own terms. With THM-1185 (measure/LP blind) and THM-1225
+(translation-invariant blind), what survives is the **pointwise arithmetic** machinery:
+located maximizer `g = D/s`, the `(D,s)` stratification, substitution-exhaustiveness.
+
+**Method lesson worth carrying:** compute the ℤ/2-index *first*. A one-line ring fact
+(exterior vs truncated-polynomial mod-2 cohomology) decided a route that looked open for
+two sessions.
+
+**Artifacts:** THM-1385; HYP-8225 (refuted); THM-1380 §6 marked resolved; 2 scripts + outputs.
+
 ## boxeph-2026-07-20-S152 -- THM-1370: 7 AND 21 ARE NEVER h-VALUES (all n, complete proof); exhaustive n=7/n=8 spectra via augmentation covers; Moon-Busch floor re-derived + witnessed at n=9 (HYP-8220)
 
 **Owner directive:** exhaust the n=7 trivial-Aut stratum for h=7/21; explore unfamiliar repo math toward open problems; explore WHY for every truth/falsehood.

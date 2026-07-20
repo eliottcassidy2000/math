@@ -123,6 +123,16 @@ statement about the *family* `n`, not about the *point* `n = 14`, where the cycl
 
 ## 6. Open — and the one concrete way through
 
+> **RESOLVED (opus-2026-07-20-S402, THM-1385) — negatively.** Both items below were
+> carried out. Option 2's odd map is free for *any* `G` (take `G − G∘s`), so the "missing
+> ingredient" was never missing. Option 1 dies on the index: `ind(Tᵏ, half-translation) =
+> 1` for **every** `k`, because `H*(Tᵏ; 𝔽₂)` is exterior so `w₁² = 0`. The whole
+> Borsuk–Ulam family therefore caps at **3 combs**, against `n/2 = 7` from the union bound
+> and 13 to be excluded — dominated for all `n ≥ 7`, and vacuous on the extremal family
+> (7 odd combs ≥ 3). Monotonicity of the index makes the cap structural. **Route closed;
+> see THM-1385.** Text retained below as the record of what was tried.
+
+
 The route needs **one** involution that is free on the whole space *and* carries an odd
 map. Two ways to get one:
 
