@@ -1,0 +1,16 @@
+============================================================================================
+(A) MATCHED AUGMENTATION TREES 4 -> 5 -> 6
+============================================================================================
+4->5: |T| 4->12, |Gev| 4->12 ; tournament tree COVERS: True ; even tree COVERS: True
+       children-per-parent multisets: T [6, 6, 8, 9] ; Gev [4, 5, 6, 7] ; EQUAL: False
+5->6: |T| 12->56, |Gev| 12->56 ; tournament tree COVERS: True ; even tree COVERS: True
+       children-per-parent multisets: T [7, 13, 13, 13, 13, 21, 21, 21, 23, 23, 23, 24] ; Gev [5, 8, 9, 9, 10, 12, 12, 13, 14, 17, 17, 17] ; EQUAL: False
+
+============================================================================================
+(B) IS eps QUADRATIC?  beta(s,t) = eps(st)eps(s)eps(t) bicharacter test + n=6 masses
+============================================================================================
+n=4: graphs tested 11 ; QUADRATICITY (beta bicharacter) violations: 1  => eps quadratic: NO
+n=5: graphs tested 32 ; QUADRATICITY (beta bicharacter) violations: 1  => eps quadratic: NO
+n=6 eps-mass spectrum: {'-1/2': 2, '0': 88, '1/2': 10, '1': 56}
+PREDICTION (Gauss-sum quantization): masses in {0} u {2^-j}; 1/4 present: False
+DONE.

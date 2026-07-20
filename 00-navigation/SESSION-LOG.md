@@ -118,6 +118,14 @@ FILES: THM-1440, HYP-8290, 1 script + out. -> all (the quoted statement is rung 
 **Handoff.** (i) **HYP-8290:** the n=7 boundary coincides with THM-499/500's adjacency-spectrum boundary, but those use a DIFFERENT matrix (A vs S = 2A+I-J, and only S is switching-invariant). One mechanism or two? Extend to n=8 against A049313(8) = 79. (ii) **HYP-8295:** at even n there is an (n-2)-dimensional bicycle space with no canonical complement -- nobody has asked what it is combinatorially, or whether an even-n substitute for the projection exists. (iii) The cospectral pair's field Q(sqrt 2) is suggestive given the repo's hypotenuse/leg ratio; unexamined.
 
 ---
+## boxeph-2026-07-20-S161 -- FIVE-ROUTE CLOSURE: the DFGPR equinumerosity survives no structural transport; evenness is cover-hereditary; eps non-quadraticity localized to ONE class per n; NEGATIVE MASS -1/2 at n=6 (HYP-8290)
+
+**Owner:** build matched augmentation trees 4->5->6, test canonical choices; odd functions vs tournaments, even functions vs even graphs.
+
+- Trees BOTH cover (evenness cover-hereditary — new positive) but children multisets diverge: parent-matched recursion impossible.
+- eps quadratic? NO — but fails on exactly ONE class per n (1/11, 1/32): localized exception, identify next.
+- n=6 masses {-1/2: 2, 0: 88, 1/2: 10, 1: 56}: negative mass exists; no 1/4 => Gauss refuted; law = quarter-quantized positive fraction.
+- META: five transport routes closed with witnesses (Aut / profiles / character / quadratic / recursion) — the odd-even equinumerosity is a cycle-index identity only; note candidate 'Five obstructions to a natural bijection.'
 
 ## boxeph-2026-07-20-S160 -- BIJECTION HUNT: signed-Burnside route CLOSED (eps not a character; eps-mass = new {0,1/2,1}-quantized invariant); score-profile route CLOSED (9v11, 22v41); verdict = recursive-bijection or bust (HYP-8280)
 
