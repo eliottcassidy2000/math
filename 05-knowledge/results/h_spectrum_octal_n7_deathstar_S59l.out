@@ -1,0 +1,6 @@
+n=7 random sample 250000 tournaments (111s)
+odd H values realized (<=60): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+odd H values MISSING (<=60): [7, 21]
+35 realized: True (1189x); 39 realized: True (1193x)
+7 absent: True; 21 absent: True
+mod-8 residues of missing: [5, 7]
