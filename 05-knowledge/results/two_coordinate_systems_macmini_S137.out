@@ -1,0 +1,106 @@
+==============================================================================
+PART A -- adjacency vs skew-Seidel IS the map x |-> 2x - 1
+==============================================================================
+  Read the tournament as a PROBABILITY matrix p_ij in {0, 1/2, 1}:
+      p_ij = 1   if i beats j,   0   if j beats i,   1/2 on the diagonal (a tie).
+  Then  S = 2p - 1  in {-1, 0, +1}  is exactly the skew-Seidel matrix of THM-1440.
+
+  S = 2p-1 lands in {-1,0,1} and is skew:            True
+  complement  p -> 1-p   IS   S -> -S:                True
+  the tie p = 1/2 is the FIXED POINT, S = 0 (diagonal): True
+
+  So: EVEN/ODD (multiplicative, S -> -S, the sign character) and
+      POSITIVE/NEGATIVE (additive, p -> 1-p, a probability) are ONE involution
+      in two coordinate systems, and 1/2 <-> 0 is its unique fixed point.
+
+  Paley makes it literal: the skew-Seidel matrix of the Paley tournament is the
+  LEGENDRE SYMBOL chi(j-i), whose value set is exactly {-1,0,+1}; its probability
+  avatar (1+chi)/2 is the quadratic-residue indicator, with 1/2 sitting at 0.
+    q= 7: value set of chi = [-1, 0, 1]   probability avatar (1+chi)/2 = [Fraction(0, 1), Fraction(1, 2), Fraction(1, 1)]
+    q=11: value set of chi = [-1, 0, 1]   probability avatar (1+chi)/2 = [Fraction(0, 1), Fraction(1, 2), Fraction(1, 1)]
+    q=19: value set of chi = [-1, 0, 1]   probability avatar (1+chi)/2 = [Fraction(0, 1), Fraction(1, 2), Fraction(1, 1)]
+
+==============================================================================
+PART B -- the FIBER FRACTION is the probability of an exact TIE
+==============================================================================
+  CLAUDE.md records  f(n) = (1/2)_{n-2}/(n-2)!,  GF = (1-x)^{-1/2}.
+  Three expressions, all equal:
+      (1/2)_k / k!        the Pochhammer form (the repo's)
+      C(2k,k) / 4^k       the CENTRAL BINOMIAL PROBABILITY = P(exact tie in 2k
+                          fair coin flips)
+      E[U^k] / k!         with U = T^2/2, T ~ N(0,1)   (THM-1500's d=1 moment)
+
+  k     (1/2)_k/k!    C(2k,k)/4^k      E[U^k]/k!   equal    decimal
+  0              1              1              1    True   1.000000
+  1            1/2            1/2            1/2    True   0.500000
+  2            3/8            3/8            3/8    True   0.375000
+  3           5/16           5/16           5/16    True   0.312500
+  4         35/128         35/128         35/128    True   0.273438
+  5         63/256         63/256         63/256    True   0.246094
+  6       231/1024       231/1024       231/1024    True   0.225586
+  7       429/2048       429/2048       429/2048    True   0.209473
+  8     6435/32768     6435/32768     6435/32768    True   0.196381
+  all three agree: True
+
+  So the repo's fiber fraction IS a tie probability -- the 1/2 is a FAIR COIN, and
+  the 'two-sheeted branched cover' (1-x)^{-1/2} is its square root.  The tie is the
+  0 of {-1,0,1} and the 1/2 of {0,1/2,1}: the SAME point in the two coordinates.
+
+==============================================================================
+PART C -- THM-1500's admissible ladder IS the three-element set
+==============================================================================
+  THM-1500: U = chi^2_d / 2 has MGF Phi(x) = (1-x)^{-d/2}; the master equation
+  Phi(-s g(s)) = 1/(1+s) forces 1 + s g(s) = (1+s)^{2/d}, POLYNOMIAL iff 2/d is a
+  positive integer, i.e. d in {1,2}.  d = 0 is the obstructed case (n=2).
+
+  d  exponent d/2    2x-1  n = 2+d       g(s)                     status
+  0             0      -1        2 log(1+s)/s   OBSTRUCTED (GMC(2) open)
+  1           1/2       0        3      2 + s     MINIMAL counterexample
+  2             1       1        4          1         the 4-term example
+
+  The exponent ladder {0, 1/2, 1} maps under x |-> 2x-1 onto {-1, 0, +1}.
+  And the MINIMAL counterexample n = 3 sits at the FIXED POINT (1/2 <-> 0) --
+  the same 1/2 as the fiber fraction, and the same 1/2 that makes (1+s)^{2/d}
+  a PERFECT SQUARE.  Square root and square are the same one-half.
+
+==============================================================================
+PART D -- the telescoping principle, read in the two coordinate systems
+==============================================================================
+  THM-1520/1540: the nullcone is the STRICTLY ONE-SIDED charge support, and
+  failure REQUIRES two-sided support.  In the two coordinates:
+
+    SIGN view {-1,0,+1}:  which signs the charge support hits.
+        {+1} only  -> nullcone.   {-1} only -> nullcone.   both -> the open case.
+    BALANCE view {0,1/2,1}:  b = (fraction of the support with positive charge).
+        b = 1 -> nullcone.   b = 0 -> nullcone.   0 < b < 1 -> the open case.
+
+  So THE NULLCONE IS THE ENDPOINTS AND THE HARD CASE IS THE INTERIOR, with the
+  balanced point b = 1/2 the deepest interior point.  That is the same statement
+  as PART A's involution having a unique fixed point, one level up.
+
+                 P     charge signs   balance b   in nullcone?
+                 Z              [1]           1           True
+            Z^2-3Z              [1]           1           True
+            W+5W^2             [-1]           0           True
+               Z+W          [-1, 1]         1/2          False
+             Z^2+W          [-1, 1]         1/2          False
+              ZW+Z           [0, 1]         1/2          False
+
+==============================================================================
+PART E -- census: where each coordinate system actually appears
+==============================================================================
+                            marker   files   coordinate system
+                       skew-Seidel       7   {-1,0,1} sign
+                          Legendre      84   {-1,0,1} sign
+                      odd function       6   {-1,0,1} sign
+                               sgn      20   {-1,0,1} sign
+                      (1-x)^{-1/2}       9   {0,1/2,1} prob
+                    fiber fraction      29   {0,1/2,1} prob
+                             1/2)_      15   {0,1/2,1} prob
+                  merged metagraph      69   {0,1/2,1} prob
+
+SUMMARY
+  One 3-element object, two coordinate systems, and the repo has been working in
+  both without always naming the change of variables.  x |-> 2x-1 is the whole
+  dictionary: EVEN/ODD is the multiplicative chart, POSITIVE/NEGATIVE the additive
+  one, and the tie (1/2 <-> 0) is the fixed point they share.

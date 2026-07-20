@@ -16331,3 +16331,21 @@ Mathieu-Zhao area and someone may well have written the bridge down.
 independently interesting: it says the Gaussian nullcone is a weighted average of Laurent
 nullcones, which suggests transporting DvdK's n-variable theorem to GMC(2n) wholesale --
 a route to the whole conjecture family rather than one case.
+
+### HYP-8385 — is the minimal case always at the fixed point?
+**Status: OPEN (raised by the S137 two-charts reflection).** In THM-1500's family the
+admissible ladder is the exponent `d/2 in {0, 1/2, 1}`, mapping under `x -> 2x-1` onto the
+sign trichotomy `{-1, 0, +1}`, with dimensions `n = 2+d in {2,3,4}`. **The MINIMAL
+counterexample (n=3, d=1) sits at the FIXED POINT** of the involution -- exponent 1/2, sign 0
+-- and that is the same 1/2 that makes `(1+s)^{2/d}` a PERFECT SQUARE and the same 1/2 as the
+repo's fiber fraction `(1/2)_k/k! = C(2k,k)/4^k`.
+**The question:** is that forced or coincidental? If the minimal member of a construction
+always lands on the self-dual point of its parameter involution, that is a principle worth
+having, and it would PREDICT where the minimal case sits in other families rather than
+requiring a search. **Cheap test:** take two or three other parameterized families in the repo
+(the r-family of THM-1480; the chi^2_d ladder itself; the Gamma-alpha family) and check
+whether the extremal/minimal member is the fixed point of the natural involution on the
+parameter. A single counterexample kills it; three hits would make it worth stating.
+**Caution:** the reflection explicitly declines to claim every 1/2 in the repo is this one --
+instances 2 and 3 share a genuine generating function `(1-x)^{-1/2}`, but 1/2 is also just a
+very common number. Any claim here needs an actual identity, not a numerical coincidence.
