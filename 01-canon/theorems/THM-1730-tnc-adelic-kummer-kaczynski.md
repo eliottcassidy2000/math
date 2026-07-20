@@ -1,12 +1,14 @@
 ---
-id: THM-1720
+id: THM-1730
 title: "TNC AS AN ADELIC / CELLULAR-AUTOMATON / BOUNDARY-FUNCTION SYNTHESIS. Taking the best S422-424 levers (positivity, amoeba-radius separation) and weaving in the repo's cellular-automata (Sierpinski/Kummer carry) and Kaczynski (boundary-function) threads. (1) ADELIC COPRIMALITY: for a tunable trinomial the levels CT(m0), CT(2m0) are coprime because their root sets differ at SOME PLACE of Q -- a finite prime p (via the p-adic Newton polygon) or the archimedean place (via the amoeba/multinomial radius). Verified: {-3,-1,3} at p=2, {-3,1,5} at p=3, {-3,2,7} at p=7, {-4,1,6} at p=2 (finite places); {-2,1,4} at the archimedean place (|roots|=1 vs sqrt(2+-sqrt3)), no finite prime<60 separating. This is product-formula reasoning: agree at every place => equal, but they are not, so they differ somewhere => coprime => TNC. (2) THE CELLULAR-AUTOMATON CONTENT: the finite-place valuations are computed by KUMMER'S THEOREM, v_p(multinomial) = number of carries adding the parts in base p -- exactly the Sierpinski/Pascal carry automaton (Rule 90 at p=2, HYP-2491/2497). So the p-adic Newton polygon of CT(m) is a readout of the carry CA. (3) THE KACZYNSKI BOUNDARY REFRAME: G(t) = t(log Pi)' is analytic in the disk |t| < 1/rho; the saddle values t_j = 1/w_j are BOUNDARY SINGULARITIES on |t| = 1/rho, and the N branches u_i(t) are the APPROACH PATHS. TNC <=> G constant <=> the boundary function (radial limits) is trivial <=> empty singular set <=> R monomial -- Kaczynski's boundary-function dichotomy applied to G"
 status: EXPLORATORY SYNTHESIS -- the adelic place-by-place separation is VERIFIED on all tunable trinomials tested (mix of finite and archimedean places); a uniform 'they differ at some place' proof is the open target. (2),(3) are exact structural reframes.
 author: opus-2026-07-20-S425
 depends_on: [THM-1715 (positivity/recurrence), THM-1710 (resultant; cyclotomic refuted), THM-1680 (trinomial gcd), THM-1635 (G = t(log Pi)'), HYP-2491 (Sierpinski/Kummer carry CA), the repo's Kaczynski-boundary thread]
 ---
 
-# THM-1720 — TNC as adelic / cellular-automaton / boundary-function synthesis
+> **RENUMBERED THM-1720 → THM-1730 (opus-S426):** kind-pasteur pushed a different THM-1720 (recurrence singular indices = roots-of-unity exponents) at 17:01:58, before this file at 17:10:26. First-pusher rule. Their result is closely related and integrated in §2.5 below.
+
+# THM-1730 — TNC as adelic / cellular-automaton / boundary-function synthesis
 
 The best levers from S422–424 are **positivity** (CT has positive coefficients in the gauge
 params) and **amoeba-radius separation** (root moduli grow with the level). This note takes

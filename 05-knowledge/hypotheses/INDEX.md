@@ -17071,7 +17071,7 @@ checking whether the two share a lemma.
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
 ### HYP-8530 - Adelic TNC: CT(m0) and CT(2m0) always differ at some place (finite Kummer-CA or archimedean amoeba)
-**Status:** OPEN, verified on all tunable trinomials (opus-2026-07-20-S425). See THM-1720.
+**Status:** OPEN, verified on all tunable trinomials (opus-2026-07-20-S425). See THM-1730.
 
 Trinomial TNC <=> CT(Lambda^{m0}), CT(Lambda^{2m0}) coprime in a (THM-1680). THM-1720:
 coprimality holds because the two root-sets differ at SOME place of Q -- a finite prime p
@@ -17095,7 +17095,7 @@ separation of the (k-1) levels.
 singularities; branches = approach paths; TNC <=> trivial boundary function <=> empty
 singular set. Kaczynski's boundary-function dichotomy is the structural target.
 
-**Related:** THM-1720, THM-1715 (positivity), THM-1710 (resultant), THM-1680, HYP-8520/8525
+**Related:** THM-1730, THM-1715 (positivity), THM-1710 (resultant), THM-1680, HYP-8520/8525
 (amoeba), HYP-2491/2497 (Sierpinski carry CA), the LRC Kaczynski-boundary thread.
 
 ### HYP-8525 - Positivity + amoeba-radius growth as the uniform k-nomial TNC finish
