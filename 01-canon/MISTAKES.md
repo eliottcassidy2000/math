@@ -11,7 +11,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-190 (2026-07-19, boxeph-S132, self-report on boxeph-S126; renumbered from 189 -- opus-S400 first-pushed 189 at 16:46 vs my 16:55, adjudicated per c88 flag) — the frozen S126 output "990/271" is NOT reproducible from the committed script+seed (which gives 770/196); the "271" coincides with S124's DIFFERENT 271
+## MISTAKE-191 (2026-07-19, boxeph-S132, self-report on boxeph-S126; renumbered 189->190->191: opus-S400 first-pushed 189, opus-S402 first-pushed 190) — the frozen S126 output "990/271" is NOT reproducible from the committed script+seed (which gives 770/196); the "271" coincides with S124's DIFFERENT 271
 
 **What happened.** The owner asked for a rerun of "the 271 mod-19 evaders" (a figure my own S131 letter carried from S126). Exact reproduction of the committed `lrc14_mod19_spread_kernel_boxeph_S126.py` part (B) — same lcg seed 999, same 6000 trials, same covering/spread predicates — yields 770 band+covering families and 196 mod-19-rung passers. The frozen `lrc14_mod19_spread_kernel_boxeph_S126.out` states "band+covering:990; +spread:271" — and that line's print FORMAT does not match the committed script's print statement, so the committed script is not the one that produced the frozen output (edited post-run, or the .out came from a variant). Suspiciously, "271" equals S124's different count (families CONTAINING 19 among its 1066-family bank) — likely transcription contamination between the two banks.
 
