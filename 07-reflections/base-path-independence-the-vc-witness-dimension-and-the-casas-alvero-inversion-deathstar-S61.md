@@ -44,36 +44,57 @@ guess that switching-up-to-iso would land on the even-graph/two-graph count A002
 of the cut space over F₂** (a small rep-theory question). That is where this thread now
 goes; I add nothing to it beyond the ∩Γ = {0} confirmation.
 
-## 2. The VC witness: dimension pinned ≈ 76, and the clean verification is the collision
+## 2. The VC witness: dimension is ≈ 20 (not 76 — corrected), and the witness is FEASIBLE
 
-**The dimension.** Transporting F (degrees (7,6,4), dim 3) through the Bass–Connell–Wright
-cubic-homogeneous reduction then the de Bondt–van den Essen symmetric doubling:
-F carries **13 monomials of degree ≥ 2** (F₁: degrees {2,3,4,5,6,7}; F₂: {2,3,4,5,6};
-F₃: {3,4}). Reducing each to cubic costs ~⌈(deg−1)/2⌉ auxiliary variables (the deg-7
-monomial x³y³z alone needs ~2), landing the cubic-homogeneous stage at **N ≈ 35–38**;
-the symmetric doubling gives the quartic-potential dimension
+**CORRECTION.** I first estimated the transport dimension at ≈ 76 from a crude
+"⌈(deg−1)/2⌉ auxiliaries per monomial" heuristic, and wrongly read a concurrent agent's
+partial "76/77" hits as corroboration. They were not the dimension — they were the
+ballpark of Zhao's *a-priori VC bound* (3/2)(3^{M−2}−1). The concrete reduction, computed
+exactly by the reduction agent (and it did the actual stacking), is **four times smaller**,
+because F's 13 nonlinear monomials are **not independent** — they are all built from the
+single quadratic u = 1 + xy plus x,y-powers, so they share auxiliaries.
 
-  **D = 2N ≈ 70–77.**
+**The dimension (concrete).** Yagzhev-normalize G = L⁻¹∘F = X + H (JH nilpotent; L the
+antidiagonal linear part, det JG = 1, the triple collision transports). Then **six** helper
+coordinates {xy, (xy)², y², x², x³, x²y} — one per shared building block, not one per
+monomial — drop every component to degree ≤ 3, landing in dim 9; homogenizing gives the
+Bass–Connell–Wright cubic-homogeneous dimension
 
-This matches an independent web-informed reduction estimate (a concurrent agent's
-computation landed on **76–77**). So the first explicit witness to Zhao's Vanishing
-Conjecture lives, via direct transport, in **≈ 76 variables**.
+  **N ≈ 10  (crude per-monomial upper bound N ≤ 16–17).**
 
-**The attempt, and the honest verdict.** At D ≈ 76 the *direct* VC certificate
-Δ^m(P^m) = 0 ∀m, Δ^m(P^{m+1}) ≠ 0 involves multinomials in 76 variables — finite but
-heavy (m = 2, 3 checkable; the tower expensive). The **cleaner witness is
-non-invertibility**: for a Hessian-nilpotent quartic P, VC fails **iff** x + ∇P is
-non-invertible, and non-invertibility is certified by a *single explicit collision*, not
-an infinite Δ-tower. Our F already has one — the triple collision
-F(0,0,−¼) = F(1,−3/2,13/2) = F(−1,3/2,13/2). Transport those three points through the
-(explicit, constructive) reduction and they become a collision of x + ∇P, directly
-certifying VC-failure. **Recommendation (rigorization):** build P by explicit transport,
-then certify VC-failure by the transported collision — a finite, Lean-able check that
-sidesteps both the Δ-tower and the citation risk of the equivalence. This is the S59z
-"verify the witness directly" program made concrete: *the witness is a collision, not a
-vanishing pattern.* The witness is constructible-in-principle for the first time (it
-could not exist before today's counterexample); the open engineering step is the explicit
-76-variable transport, not any new mathematics.
+The de Bondt–van den Essen symmetric reduction then **doubles** (Meng's theorem, de Bondt
+*Symmetric Jacobians* Thm 1.2: ⊞(K,2n) ⟹ ⊟(K,n)) — the doubling is forced, since JF is
+**not** symmetric (J₁₂ ≠ J₂₁), so F is not already a gradient map; the ℂ*-structure (weights
+1,−1,−2) only keeps N small, it cannot bypass the ×2. So the Hessian-nilpotent quartic
+potential P lives at
+
+  **M = 2N ≈ 20  (bound ≤ 34).**
+
+A couple of dozen variables — exactly the "feasibility gate" the PROBLEM-LEDGER was waiting
+on, and **it clears comfortably.**
+
+**The construction and the certificate.** The potential is *not* the naive P = Σ yᵢ Hᵢ
+(that is not Hessian-nilpotent — I confirmed via the agent's test H=(0,x³)). Nilpotency
+comes from the **block-triangular cotangent lift** (x↦F(x), y↦JF(x)ᵀy), whose Jacobian
+[[JF,0],[∗,JFᵀ]] is nilpotent because JH is; a linear conjugation T = (I + i·Iʳ)/(2√2)
+(de Bondt Thm 1.3 — the i is why this is over ℂ) turns it into a genuine gradient map
+x + ∇P with P homogeneous quartic and Hessian nilpotent. Zhao's Prop 1.2: P
+Hessian-nilpotent ⟺ Δ^m(P^m) = 0 ∀m — so that half of VC holds **automatically, by
+construction** (check it, if wanted, as: the 20×20 Hessian has characteristic polynomial
+λ²⁰ — feasible; do *not* brute-force the Δ-tower). VC then fails iff x + ∇P is
+non-invertible, and that is certified by a **single transported collision**: our F's triple
+collision F(0,0,−¼) = F(1,−3/2,13/2) = F(−1,3/2,13/2) lifts (yₐ = (JF(a)ᵀ)⁻¹w) to distinct
+points with equal image under x + ∇P. So the witness verification is *two polynomial
+evaluations at M ≈ 20 plus a nilpotency check* — exact, finite, and Lean-formalizable.
+
+**Why it matters.** No non-invertible Hessian-nilpotent quartic is known in *any* dimension
+(the old examples are all invertible — that was the Hessian conjecture); VC is proven for
+cubic-homogeneous maps in dim ≤ 4 (Wright n=3, Hubbers n=4), so any counterexample needs
+dim ≥ 5, and the smallest is unknown. **Ours at M ≈ 20 would be the first explicit witness
+to Zhao's Vanishing Conjecture ever exhibited.** The S59z program — "verify the witness
+directly, the witness is a collision not a vanishing pattern" — stands, now with a concrete,
+feasible dimension: the open step is the explicit ≈ 20-variable transport, not any new
+mathematics, and not (as I first feared) an intractable 76-variable blow-up.
 
 ## 3. Casas–Alvero is the INVERSION of the Jacobian story (agent-confirmed)
 
@@ -141,10 +162,12 @@ guess, and decomposed the Fibonacci–Faulhaber "law" into two coincidences — 
 more thoroughly (n=6 included). My only additions there are the **explicit ∩Γ = {0}
 computation** (n ≤ 6, all paths) confirming kp's "do not intersect," and the labeled
 switching count 2,8,64 = #tilings. **The two genuinely new, checkable death-star
-deliverables are §2 and §3:** §2 the VC-witness dimension ≈ 76 (a defensible monomial-count
-+ de Bondt-doubling estimate, cross-checked against a concurrent reduction agent's
-independent ≈ 76–77) with the collision-transport rigorization recipe — the honest path,
-not an executed witness; and §3 the Casas–Alvero status **correction** — agent-confirmed
+deliverables are §2 and §3:** §2 the VC-witness dimension — first mis-estimated at ≈ 76 by
+a crude per-monomial heuristic (and false corroboration from misread partial output),
+then **corrected to ≈ 20** by the reduction agent's concrete stacking (N ≈ 10, M = 2N ≈ 20;
+F's monomials share the single building block u = 1+xy, so 6 helpers suffice) — with the
+HN-by-construction + transported-collision certificate that makes the witness feasible and
+Lean-able; and §3 the Casas–Alvero status **correction** — agent-confirmed
 from the literature (Ghosh arXiv:2501.09272 proves it char 0; 2402.18717 gives char-p
 finiteness), inverting the repo's stale "OPEN" and its illusory 2-adic-ladder adjacency.
 The mod-2/Mersenne facts (§4) and F₈=21 / 1001=7·11·13 resonances are verified/graded
