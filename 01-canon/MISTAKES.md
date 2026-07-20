@@ -5595,3 +5595,32 @@ no-common-root of a classical sequence), not a size comparison. Conceded in full
 case; S61g headline withdrawn, S61h §1 retracted (both banners in place); S61h §2 (the Lean
 NC2 ⇒ GMC(2) reduction, pure charge arithmetic, assumes NC2) is unaffected. See also
 MISTAKE-199 (the same over-eager pattern, there in fleet-coordination form).
+
+
+## MISTAKE-205 — the "Alpoge-Mathew" attribution of the JC counterexample (THM-1300) is a HALLUCINATION (owner-corrected 2026-07-20)
+
+**What happened.** THM-1300's attribution blocks (mac-mini-S127 and S129) confidently attributed the
+dim-3 Jacobian-Conjecture counterexample to **Levent Alpoge** with co-credit to **Akhil Mathew**,
+"obtained with Claude Fable 5, announced 2026-07-19," citing web searches (X posts, a Wikipedia edit,
+an arXiv absence check). The OWNER has flagged this as a **hallucination**: those searches were run on a
+result then roughly ONE DAY OLD, and the specific-name attribution is not reliable — it should not be
+restated as established fact.
+
+**The corrected provenance (per the owner).** The counterexample was **discovered by Claude**. It became
+public on **2026-07-19 via a tweet from an Anthropic employee**, which is where the "shared publicly
+yesterday" signal came from — that is a SHARING event, not a discovery attribution. So the map is a
+Claude discovery that an Anthropic employee surfaced; it is NOT an Alpoge-Mathew result.
+
+**The lesson (this is the reusable part).** Do NOT attribute a very recent result from web searches with
+confidence. A result that is ~1 day old has essentially NO reliable public record: no peer review, no
+stable arXiv, and search engines index tweets and rumors that conflate "who shared it" with "who found
+it." When mac-mini's own search notes flagged "no arXiv preprint, no peer review, no journal," that was
+the tell that NO reliable attribution was available — and the correct move was to record the map as
+**provenance-uncertain**, not to fill the vacuum with plausible names. Confabulated attribution is exactly
+the failure mode a fresh, un-refereed result invites.
+
+**Standing correction for the fleet.** Treat the JC counterexample as **Claude-discovered, provenance
+otherwise uncertain**. Do NOT write "Alpoge-Mathew" (or "Alpoge") as the discoverers in any file, letter,
+or write-up. THM-1300's external-attribution blocks are kept as history but are now marked contested by
+the banner added this session. What the repo legitimately holds is unchanged: the INDEPENDENT exact
+verification (det J ≡ -2, triple collision, all identities) and the equivariant/Dixmier/elliptic anatomy.

@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+### Import the Sym^3(P^1) moduli-origin lens for the JC counterexample (klein-2026-07-20-S377)
+- **Source:** owner-supplied geometric description (Twitter reply, 2026-07-20), checked against the repo's JC threads.
+- **Status:** OPEN — a complementary lens the repo does NOT currently have. A grep across THM-1300/1305/1310/1315/1330/1340/1345/1365/1370/1375 finds NO mention of Sym^3(P^1), the twisted cubic / small diagonal, or the tangent-not-osculating hyperplane construction.
+- **The construction:** pi: P^1 x Sym^2(P^1) -> Sym^3(P^1) = P^3, (p,{q,r}) |-> {p,q,r} (the "adjoin a root" map, generically 3-to-1). R = ramification (repeated-root locus). H = a hyperplane TANGENT BUT NOT OSCULATING to the small diagonal (the twisted cubic {3p}). Then X := (P^1 x Sym^2) \ (R u pi^{-1}(H)) ~ A^3, Y := Sym^3 \ H ~ A^3, and pi|X: X -> Y is the counterexample (etale, degree 3, non-injective).
+- **What it connects to (VERIFIED this session, exact):** this is the projective/moduli ORIGIN of what the repo has in coordinates. The repo's 3-to-1 self-map (THM-1315), its FIBER CUBIC phi whose three roots are the three preimages with S_3 monodromy (THM-1310), and its "caustic Delta ∝ a^2 K, ramification ENTIRELY AT INFINITY" are exactly the coordinate shadow of removing R u pi^{-1}(H). Re-verified in-repo: det J ≡ -2, triple collision F(0,0,-1/4)=F(1,-3/2,13/2)=F(-1,3/2,13/2)=(-1/4,0,0), and lam=-1 (the order-2 element of the residual C*-torus, weights (1,-1,-2)) swaps the two orbit preimages.
+- **Next step:** (a) identify whether the residual C*-action with MIXED-SIGN weights (1,-1,-2) (THM-1300/1370) is a subtorus of Aut(P^1)=PGL_2 acting on the moduli picture, and whether the mixed sign is forced by the tangent-not-osculating choice of H (NOT yet verified — the natural elementary-symmetric weights on Sym^3 are POSITIVE (1,2,3), so the mixed signs come from the affine chart / H). (b) Recover THM-1370's "one sign-condition away" placement geometrically: positive weights <=> H can be chosen osculating <=> automorphism? (c) Does the Sym^k(P^1) family give higher-degree counterexamples in a uniform way?
+- **Why it matters:** the repo is deep on the ARITHMETIC/EQUIVARIANT anatomy (weights, torus doubling lam->lam^2, Jelonek cusp inverse, dyadic-ladder formal inverse, elliptic-all-dimensions THM-1370) but had NO geometric origin story. Importing the Sym^3 lens would let the two explain each other: moduli picture = WHY it exists; equivariant anatomy = HOW it fails injectivity and WHY only n>=3.
+
+
 ### Prove the #Ham-path spectrum is exactly odd \ {7,21} (death-star-2026-07-20-S70, HYP-8540)
 - **Source:** `07-reflections/the-hamiltonian-path-spectrum-is-odds-minus-7-and-21-S70`. Verified ≤149, n≤8.
 - **Status:** OPEN. Canon PROVES H≠7, H≠21; the COMPLETENESS (every other odd achievable) is conjectural.

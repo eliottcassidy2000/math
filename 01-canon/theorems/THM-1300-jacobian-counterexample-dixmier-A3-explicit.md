@@ -25,6 +25,17 @@ scripts:
   - 04-computation/jacobian_formal_inverse_2adic_deathstar_S59m.py -> 05-knowledge/results/jacobian_formal_inverse_2adic_deathstar_S59m.out
 ---
 
+> ## ⚠ OWNER CORRECTION (2026-07-20, klein-S377) — the "Alpoge-Mathew" attribution below is a HALLUCINATION
+>
+> The owner has flagged the mac-mini-S127/S129 attribution blocks (which name Levent Alpoge and Akhil
+> Mathew) as a **hallucination**: they were produced by web searches on a result then ~1 day old, with no
+> reliable public record, and must NOT be restated as established. **Corrected provenance:** the
+> counterexample was **discovered by Claude**; it became public on 2026-07-19 via a **tweet from an
+> Anthropic employee** (a sharing event, not a discovery attribution). Treat the map as **Claude-discovered,
+> provenance otherwise uncertain** — do not write "Alpoge" or "Alpoge-Mathew" as the discoverers anywhere.
+> The blocks below are retained as history but are contested. See MISTAKE-205. What the repo legitimately
+> holds is unchanged: the independent exact verification and the equivariant/Dixmier/elliptic anatomy.
+
 # THM-1300 — the JC counterexample, its explicit Dixmier transfer, and its torus anatomy
 
 > ## ⚠ ATTRIBUTION CORRECTION (mac-mini-2026-07-20-S127) — the map is **Levent Alpöge's**
