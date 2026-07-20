@@ -1,0 +1,147 @@
+==============================================================================
+PART A/B -- THE SCORE-PARITY LAW AND THE CANONICAL REPRESENTATIVE
+==============================================================================
+
+ n=3  (n mod 4 = 3)   C(n,2) = 3  -> #odd scores is ODD
+   parity law holds on all 2^n switchings : True
+   distinct parity vectors per switching class : [4]   (2^(n-1) = 4 predicted for n odd)
+   #reps with ALL SCORES EVEN  : [0]     #reps with exactly ONE odd score : [3]
+
+ n=4  (n mod 4 = 0)   C(n,2) = 6  -> #odd scores is EVEN
+   parity law holds on all 2^n switchings : True
+   distinct parity vectors per switching class : [2]   (2^(n-1) = 8 predicted for n odd)
+   #reps with ALL SCORES EVEN  : [0, 4]     #reps with exactly ONE odd score : [0]
+
+ n=5  (n mod 4 = 1)   C(n,2) = 10  -> #odd scores is EVEN
+   parity law holds on all 2^n switchings : True
+   distinct parity vectors per switching class : [16]   (2^(n-1) = 16 predicted for n odd)
+   #reps with ALL SCORES EVEN  : [1]     #reps with exactly ONE odd score : [0]
+
+ n=6  (n mod 4 = 2)   C(n,2) = 15  -> #odd scores is ODD
+   parity law holds on all 2^n switchings : True
+   distinct parity vectors per switching class : [2]   (2^(n-1) = 32 predicted for n odd)
+   #reps with ALL SCORES EVEN  : [0]     #reps with exactly ONE odd score : [0, 16]
+
+ n=7  (n mod 4 = 3)   C(n,2) = 21  -> #odd scores is ODD
+   parity law holds on all 2^n switchings : True
+   distinct parity vectors per switching class : [64]   (2^(n-1) = 64 predicted for n odd)
+   #reps with ALL SCORES EVEN  : [0]     #reps with exactly ONE odd score : [7]
+
+==============================================================================
+PART C -- THE COUNT: switching classes up to iso  vs  EVEN TOURNAMENTS up to iso
+==============================================================================
+  n  n%4  iso classes  switch cls /iso  even tourns /iso   A049313   match?
+  3    3            2                1                 0         1      n/a
+  4    0            4                2                 1         2      n/a
+  5    1           12                2                 2         2     True
+  6    2           56                6                 0         6      n/a
+  7    3          456               12                 0        12      n/a
+
+ n=7 (= 3 mod 4): every switching class has exactly 7 single-odd-score reps.
+ Counting switching classes up to iso directly is 2^21 x 5040 and is not run here.
+ What IS run: the representative counts above already confirm 'exactly 7' at n=7.
+
+==============================================================================
+PART D -- THE ODD-VALUED SIDE: where the project's parity actually lives
+==============================================================================
+  n         det S(T) over 200 random T
+  3   n ODD   distinct dets: [0]   all zero
+  4   n EVEN  distinct dets: [Fraction(1, 1), Fraction(9, 1)]   all perfect squares (= Pf^2): True
+  5   n ODD   distinct dets: [0]   all zero
+  6   n EVEN  distinct dets: [Fraction(1, 1), Fraction(9, 1), Fraction(25, 1), Fraction(49, 1), Fraction(81, 1)]   all perfect squares (= Pf^2): True
+  7   n ODD   distinct dets: [0]   all zero
+  8   n EVEN  distinct dets: [Fraction(1, 1), Fraction(9, 1), Fraction(25, 1), Fraction(49, 1), Fraction(81, 1), Fraction(121, 1)]...   all perfect squares (= Pf^2): True
+
+ READING: skew-symmetric of ODD order is singular, so det S(T) = 0 for every
+ tournament on an odd number of vertices; for EVEN order det S = Pf(S)^2 is a square.
+ That is the same odd/even split that makes the SCORE-PARITY law work only at odd n,
+ and it is the matrix-level shadow of Redei's theorem that hp(T) is always ODD.
+
+DONE.
+
+==============================================================================
+PART E -- THE BIJECTION ITSELF AT n=5 (not just matching counts), AND Aut
+==============================================================================
+ labelled switching classes: 64  (predicted 2^C(n-1,2) = 64)
+ class sizes: {16}  (predicted 2^(n-1) = 16)
+ all-even members PER switching class: [1]   UNIQUE: True
+ switching classes up to iso: 2;  distinct even reps up to iso: 2
+ BIJECTION on iso classes: True
+
+ per switching class: |Aut(class)|, |Aut(T0)|, does every g in Aut(class) fix T0?
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [0, 2, 2, 2, 4]: |Aut(class)|=3, |Aut(T0)|=3, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+   scores [2, 2, 2, 2, 2]: |Aut(class)|=5, |Aut(T0)|=5, every aut fixes T0: True, |Aut| even: False
+
+==============================================================================
+PART F -- THE PFAFFIAN IS ODD-VALUED (a companion to Redei's hp odd)
+==============================================================================
+ Observed in PART D: det S(T) for n EVEN is always an ODD perfect square
+ (1,9,25,49,81,121 = 1^2,3^2,5^2,7^2,9^2,11^2).  PROOF, one line:
+   every off-diagonal entry of S is +-1 = 1 mod 2, so S = J - I mod 2, hence
+   Pf(S) = Pf(J-I) = #{perfect matchings of K_n} = (n-1)!! mod 2,
+   and (n-1)!! = 1*3*5*...*(n-1) is a product of ODD numbers, so Pf(S) is ODD.
+  n=4: Pf values [Fraction(-3, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(3, 1)];  all odd: True;  (n-1)!! = 3 (odd: True)
+  n=6: Pf values [Fraction(-9, 1), Fraction(-7, 1), Fraction(-5, 1), Fraction(-3, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(3, 1), Fraction(5, 1)]...;  all odd: True;  (n-1)!! = 15 (odd: True)
+  n=8: Pf values [Fraction(-25, 1), Fraction(-23, 1), Fraction(-19, 1), Fraction(-17, 1), Fraction(-15, 1), Fraction(-11, 1), Fraction(-9, 1), Fraction(-7, 1)]...;  all odd: True;  (n-1)!! = 105 (odd: True)
