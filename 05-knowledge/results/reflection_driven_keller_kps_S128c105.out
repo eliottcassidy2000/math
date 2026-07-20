@@ -1,0 +1,54 @@
+==============================================================================
+(A) SELF-REFUTATION -- the weight twist is a coordinate artifact
+==============================================================================
+  source weights (x,y,z)      = (1, -1, -2)
+  target weights (F1,F2,F3)   = (-2, -1, 1)
+  det JF = -2
+
+  G := sigma . F  with sigma(a,b,c) = (c,b,a):
+  target weights (G1,G2,G3)   = (1, -1, -2)
+  det JG = 2   -> constant, non-zero: True
+  G on the three collision points: (0, 0, -1/4)
+  all three still coincide : True
+
+  VERDICT: G is Keller, non-injective, and UNTWISTED (target vector = source
+  vector).  So (RJC-untwisted) is FALSE.  The twist is not invariant under
+  composing with a linear automorphism, while Keller and non-injective are.
+  My proposed hypothesis is refuted before it was ever claimed.
+
+==============================================================================
+(B) THE INTRINSIC REFLECTION -- lambda = -1 acts on the fibre by a
+    TRANSPOSITION of the 3-cycle tournament
+==============================================================================
+  target point q = (-1/4, 0, 0)
+  lambda = -1 acting on q (target weights (-2, -1, 1)) : (-1/4, 0, 0)
+  q is FIXED by lambda = -1 : True
+
+  action of lambda = -1 on the three preimages (source weights (1, -1, -2)):
+     (0, 0, -1/4)               -> (0, 0, -1/4)                (preimage #0)
+     (1, -3/2, 13/2)            -> (-1, 3/2, 13/2)             (preimage #2)
+     (-1, 3/2, 13/2)            -> (1, -3/2, 13/2)             (preimage #1)
+  induced permutation of the fibre : [0, 2, 1]
+  fixed points: [0] ; moved: [1, 2]
+  is a TRANSPOSITION (odd, so NOT in A_3) : True
+
+  READING.  The generic fibre is a 3-cycle tournament (THM-1310).  Its
+  symmetry group is D_3 = S_3 = A_3 (rotations = tournament automorphisms)
+  union the 3 transpositions (ANTI-automorphisms, arc-reversing) -- exactly
+  THM-127's rotations-preserve / reflections-reverse split.  Campbell (1973)
+  says a GALOIS Keller cover is an automorphism, and at d = 3 Galois means
+  monodromy inside A_3.  So a counterexample MUST carry a reflection, and
+  lambda = -1 supplies one explicitly.
+
+==============================================================================
+(C) INSTRUMENT GATE -- minimal ansatz degree that can express G = sigma.F
+==============================================================================
+  G1 = x * A(s,t)          -> deg A = 1
+  G3 = z * D(s,t) + y^2 E  -> deg D = 3, deg E = 2
+
+  MINIMAL ansatz degree needed to express G : 3
+  => any search over untwisted equivariant maps run at ansatz degree < 3
+     CANNOT rediscover the known witness G, so a negative result there has
+     ZERO evidential weight (MISTAKE-196, the instrument-gate rule).
+     My first run used degree 1.  It was vacuous, and I am recording that
+     rather than reporting its 'no non-linear solutions' line as a finding.
