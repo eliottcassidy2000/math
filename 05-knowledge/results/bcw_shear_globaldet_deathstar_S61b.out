@@ -1,0 +1,12 @@
+=== (A) shear gadget preserves det GLOBALLY (contrast S61's on-section-only) ===
+  det at 6 random pts: ['-2', '-2', '-2', '-2', '-2', '-2']
+  GLOBALLY CONSTANT = det JF = -2: True   <-- S61 bug FIXED
+
+=== (B) a shear REDUCES a perfect-power term's degree, det still constant ===
+  M0 degree: [1, 1, 6]  det(M0): ['1', '1', '1', '1']
+  after shear: degrees [1, 1, 5, 2]  (deg-6 (xy)^3 term cancels -> top deg drops)
+  det after shear at 5 pts: ['1', '1', '1', '1', '1']  GLOBALLY CONSTANT = det M0 = 1: True
+
+  => shear composition = the correct BCW move: det preserved GLOBALLY (not on-section),
+     and it reduces degree. Iterating to cubic-homogeneous is the exact construction the
+     research agent is retrieving; the framework fix (S61 bug) is DEMONSTRATED here.
