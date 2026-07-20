@@ -50,4 +50,5 @@ def Pfake : List Mon := [⟨1,2,0⟩, ⟨2,1,0⟩, ⟨2,0,1⟩, ⟨-1,0,2⟩]
 
 theorem E_Pfake_sq_zero : E (pmul Pfake Pfake) = 0 := by decide
 
+set_option maxRecDepth 4096 in
 theorem E_Pfake_four_ne : E (pmul (pmul Pfake Pfake) (pmul Pfake Pfake)) = -1536 := by decide
