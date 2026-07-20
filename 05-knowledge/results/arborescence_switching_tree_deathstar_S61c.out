@@ -1,0 +1,29 @@
+=== SWITCHING-CLASS SUMS: the general oriented-spanning-tree theorem ===
+   family F of oriented spanning trees => Sum_{T in class} #{S in F: S subset T} = |F|
+
+n=3: (over 2 classes)
+  ALL arborescences a(T):   every class-sum = n^(n-1) = 9?  True   (sums seen: [9])
+  arborescences rooted@0:   every class-sum = n^(n-2) = 3?  True   (sums: [3])
+  ALL Ham paths H(T):       every class-sum = n! = 6?  True   (THM-1445)
+  Ham paths from vtx 0:     every class-sum = (n-1)! = 2?  True
+
+n=4: (over 8 classes)
+  ALL arborescences a(T):   every class-sum = n^(n-1) = 64?  True   (sums seen: [64])
+  arborescences rooted@0:   every class-sum = n^(n-2) = 16?  True   (sums: [16])
+  ALL Ham paths H(T):       every class-sum = n! = 24?  True   (THM-1445)
+  Ham paths from vtx 0:     every class-sum = (n-1)! = 6?  True
+
+n=5: (over 64 classes)
+  ALL arborescences a(T):   every class-sum = n^(n-1) = 625?  True   (sums seen: [625])
+  arborescences rooted@0:   every class-sum = n^(n-2) = 125?  True   (sums: [125])
+  ALL Ham paths H(T):       every class-sum = n! = 120?  True   (THM-1445)
+  Ham paths from vtx 0:     every class-sum = (n-1)! = 24?  True
+
+=> ONE theorem: Sum_{T in switching class} #{oriented spanning trees of family F realized in T} = |F|.
+   Ham paths (|F|=n!) and arborescences (|F|=n^(n-1)) are TWO INSTANCES. THM-1445 is the path corollary.
+   Also: a(T) >= H(T) always, with a = 'branchy' trees, H = 'linear' (tallest) trees.
+
+=== BEST theorem: Euler circuits of a regular tournament via arborescences (arc/even world) ===
+  3-cycle: BEST ec = a_r * prod (outdeg-1)! = 1 * 1 = 1  (Euler circuits of C3 = 1) match=True
+  Paley_7: a_r=392, outdeg=3, ec(Euler circuits) = a_r*(((3-1)!)^7) = 392 * 2^7 = 50176
+  Paley_11: a_r=3557763, outdeg=5, ec(Euler circuits) = a_r*(((5-1)!)^11) = 3557763 * 24^11 = 5413780868964456333312
