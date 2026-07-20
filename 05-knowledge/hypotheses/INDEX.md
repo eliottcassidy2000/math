@@ -15850,3 +15850,25 @@ dense, so the corollary may apply to vanishingly few tournaments at large `n`. M
 fraction at `n = 5..8`, and more usefully classify which intersection-graph *shapes* occur —
 each shape gives its own weight-2 independent-set polynomial, so the OCF is a family of
 identities indexed by realizable intersection graphs, of which the path is one member.
+
+### HYP-8290 — does the skew-Seidel cospectrality boundary at n=7 share a mechanism with THM-499/500?
+**Status: OPEN (raised by THM-1440).** THM-1440(B): the **skew-Seidel** spectrum of `S = A − Aᵀ`
+is a complete invariant of the switching class for `n ≤ 6` and first fails at `n = 7`
+(11 spectra vs `A049313(7) = 12`, one cospectral pair, closed form
+`p(x) = x(x²+7)(x⁴+14x²+17)`, splitting field `ℚ(√2)`). THM-499/500: the **adjacency**
+spectrum loses `H` at `n = 6` and the odd-cycle count at `n = 7`.
+**Different matrices** — the `S`-spectrum is switching-invariant, the `A`-spectrum is not —
+yet the same boundary. **Is this one mechanism or two?** Nothing currently connects them.
+**Next:** extend to `n = 8` against `A049313(8) = 79`; if the count of cospectral pairs grows
+the way the adjacency defect does, that is evidence for a shared cause.
+
+### HYP-8295 — the canonical splitting is exactly at odd n
+**Status: RESOLVED-PARTIAL (THM-1440 §C).** THM-1405 flagged that its "gauge bits / holonomy
+bits" splitting of a tiling mask is a *choice* of complement because `Cut ∩ Cycle` (the bicycle
+space) may be nonzero. Now settled: the bicycle space of `K_n` is **0 iff n is odd**, and has
+dimension **n−2** when `n` is even (verified `n = 3..9`). So the splitting is **canonical
+exactly at odd n**, which is also exactly when the repo's `T_cycle = (I+L(K_n))T mod 2`
+projection lands in the even graphs (the image degree at `w` is `(n−1)·d_w mod 2`).
+**Residual (OPEN):** at even `n` there is an `(n−2)`-dimensional bicycle space with no
+canonical complement — nobody has asked what that space *is* combinatorially, nor whether a
+natural even-`n` substitute for the projection exists.

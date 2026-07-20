@@ -1,0 +1,88 @@
+============================================================================
+PART A -- the skew-Seidel characteristic polynomial has the PARITY OF sin/cos
+============================================================================
+  p(-x) = det(-xI - S) = (-1)^n det(xI + S) = (-1)^n det(xI - S^T) = (-1)^n p(x)
+  => p EVEN at even n (like cos), ODD at odd n (like sin), so odd n forces a ZERO.
+
+  n  classes  all eigs imaginary  p parity = (-1)^n  0 in spec (odd n)  rank always even
+  3        2                True               True               True              True
+  4        4                True               True                n/a              True
+  5       12                True               True               True              True
+  6       56                True               True                n/a              True
+  7      456                True               True               True              True
+
+============================================================================
+PART B -- the Seidel spectrum IS switching-invariant (unlike H, FAS, triangles)
+============================================================================
+  Switching at X sends S -> DSD with D = diag(+-1), and D = D^{-1}, so it is a
+  SIMILARITY: the spectrum cannot move.  Contrast THM-1420/THM-1415 addendum,
+  where H, min-FAS and the cyclic-triangle count are all NOT switching-invariant.
+
+  n  iso classes  distinct spectra  switching classes  spectrum complete?
+  3            2                 1                  1                 YES
+  4            4                 2                  2                 YES
+  5           12                 2                  2                 YES
+  6           56                 6                  6                 YES
+  7          456                11                 12       no -- coarser
+  (switching invariance verified numerically on every class at every n)
+
+============================================================================
+PART C -- WHY the even-graph projection is odd-n only:  two parity facts
+============================================================================
+  C1. The repo's map T_cycle = (I + L(K_n)) T mod 2.  Degree of the image at w:
+      sum_{e at w} [(I+L)T]_e = (n-1)*d_w + sum_x d_x = (n-1)*d_w  (mod 2),
+      since sum_x d_x = sum_f 2 T_f = 0.  So the image is EVEN iff n is ODD.
+  C2. The BICYCLE space Cut & Cycle of K_n: a cut delta(S) is even-degree iff
+      |S| and |S^c| are both even, impossible when n is odd.  So bicycle = 0 iff
+      n odd -- which is exactly when Cut (+) Cycle is a DIRECT sum.
+
+  n  parity  cut dim  BICYCLE dim  predicted   (I+L)T even?
+  3     odd        2            0          0           True
+  4    even        3            2          2          False
+  5     odd        4            0          0           True
+  6    even        5            4          4          False
+  7     odd        6            0          0           True
+  8    even        7            6          6          False
+  9     odd        8            0          0           None
+
+============================================================================
+PART D -- circulant tournaments: the eigenvalues ARE pure sine sums
+============================================================================
+  mu_j = sum_{k in C} (w^{jk} - w^{-jk}) = 2i * sum_{k in C} sin(2 pi j k / n)
+  and since C u (-C) = Z_n\{0} disjointly, z_j = sum_{k in C} w^{jk} obeys
+  z_j + conj(z_j) = -1, i.e. Re(z_j) = -1/2 for EVERY j != 0: the cosine part is
+  PINNED to a critical line and all the content sits in the sine part.
+
+  n= 5:    4 circulant tournaments   max |eig - sine-sum| = 2.22e-15   max |Re(z_j) + 1/2| = 1.05e-15
+  n= 7:    8 circulant tournaments   max |eig - sine-sum| = 7.99e-15   max |Re(z_j) + 1/2| = 6.44e-15
+  n= 9:   16 circulant tournaments   max |eig - sine-sum| = 8.88e-15   max |Re(z_j) + 1/2| = 8.16e-15
+  n=11:   32 circulant tournaments   max |eig - sine-sum| = 1.89e-14   max |Re(z_j) + 1/2| = 8.44e-15
+
+  Paley check (n = q = 3 mod 4): spectrum should be {0} u {+-i sqrt(q)}.
+    q= 3: sqrt(q)=1.73205   distinct |eig| = [0.0, 1.73205]
+    q= 7: sqrt(q)=2.64575   distinct |eig| = [0.0, 2.64575]
+    q=11: sqrt(q)=3.31662   distinct |eig| = [0.0, 3.31662]
+    q=19: sqrt(q)=4.35890   distinct |eig| = [0.0, 4.3589]
+    q=23: sqrt(q)=4.79583   distinct |eig| = [0.0, 4.79583]
+
+============================================================================
+PART E -- interlacing: vertex deletion reproduces the sin/cos zero interlacing
+============================================================================
+  iS is Hermitian, so Cauchy interlacing holds for principal submatrices.
+  Odd n: spectrum symmetric about 0 and CONTAINS 0   <->  zeros of sin (0, +-pi, ...)
+  Even n: spectrum symmetric about 0 and OMITS 0     <->  zeros of cos (+-pi/2, ...)
+  Deleting a vertex alternates the two, and the spectra must interlace.
+
+  n=4 -> 3: Cauchy interlacing holds on all 16 deletions? True   (strict in 8/16)
+  n=5 -> 4: Cauchy interlacing holds on all 60 deletions? True   (strict in 44/60)
+  n=6 -> 5: Cauchy interlacing holds on all 336 deletions? True   (strict in 220/336)
+  n=7 -> 6: Cauchy interlacing holds on all 3192 deletions? True   (strict in 2342/3192)
+
+SUMMARY
+  The two 'odd n only' facts are the same parity fact:
+    skew side  -- p(-x) = (-1)^n p(x) forces a zero eigenvalue at odd n;
+    GF(2) side -- the image degree is (n-1)*d_w, and bicycle = 0, both at odd n.
+  sin is odd and vanishes at 0; cos is even and does not.  The tournament
+  characteristic polynomial is sin-like at odd n and cos-like at even n, the
+  circulant eigenvalues are literal sine sums with the cosine part pinned at
+  -1/2, and vertex deletion interlaces the two exactly as sin and cos interlace.
