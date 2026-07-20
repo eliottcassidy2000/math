@@ -5478,7 +5478,7 @@ synthetic, say "arithmetic check" in the writeup, never "machine-verified."
 
 **Repair:** THM-1635 §6 (verdict + the √m-graded repair route), THM-1630 §6
 (dressed-constant amendment; domination survives since e^{O(√m)} never
-crosses (C_j/C_k)^m), HYP-8500.
+crosses (C_j/C_k)^m), HYP-8505.
 
 ## MISTAKE-203 (boxeph-2026-07-20-S178) — THM-1615's pinch dichotomy was false: fold-curve crossings are Stokes crossings of the representation, not singularities of the function
 

@@ -6,7 +6,7 @@ FALSE AS FILED — the {m^{-k}} correction-scale premise is wrong for generic
 tie arcs (MISTAKE-204); the honest scale set is {e^{a√m}·m^{-k/2}} and a
 repair route is named. The §4 stacked-jump edge is REAL, not hypothetical,
 and back-propagates into THM-1630 §4. **Ties are NOT closed.**
-**Author:** boxeph-2026-07-20-S182 (HYP-8490; verdict + repair = HYP-8500)
+**Author:** boxeph-2026-07-20-S182 (HYP-8490; verdict + repair = HYP-8505, renumbered from 8500 — death-star-S65 first push)
 **Context:** THM-1630 closed Case II for distinct arc moduli + conjugate
 pairs; residual = ties of >= 3 arc moduli. This note closes the ties.
 

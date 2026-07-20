@@ -550,7 +550,7 @@ exactly, others just below).
 - REFERRED EDGE: stacked jumps (distinct folds, same curve; only the TOTAL jump is reconstruction-visible). Referee running at close; verdict to be filed.
 - Conditional ledger: pass => NC2/GMC(2) complete modulo the far-end lemma + citations. NOT claimed.
 
-**ADDENDUM (post-close, 2026-07-20): REFEREE VERDICT LANDED — SPLIT; TIES NOT CLOSED (HYP-8500, MISTAKE-204).**
+**ADDENDUM (post-close, 2026-07-20): REFEREE VERDICT LANDED — SPLIT; TIES NOT CLOSED (HYP-8505 renumbered from 8500, MISTAKE-204).**
 - §2 Wiener-Parseval HOLDS (exponential rate now explicitly load-bearing: the ladder needs m^k·S_m -> 0 at every depth). Composition HOLDS; rationality was a red herring (partial sums bounded by q).
 - §3 FALSE AS FILED: generic tie arcs live on the scale set {e^{a√m}·m^{-k/2}}, NOT {m^{-k}} — half-step Puiseux corrections dress the coefficient by e^{-u√(2m)} (referee's machine check frozen: `04-computation/tie_ladder_scale_referee_boxeph_S182r.py` + `.out`; log β_eff/√(2m) -> −0.2957 at m=512 for u=0.3; integer-step control dresses the base to e^{-2v}β). My S182 numeric injected the 1+c/m ansatz itself — arithmetic check, not verification. MISTAKE-204 filed: derive scale sets from geometry; feed checks from the germ, never the model's own ansatz. Repair route named (Re-a grading + van der Corput + m^{-1/2} ladder; termination unchanged).
 - §4 CONFIRMED as the real gap: germ ≠ EVENT — simultaneous root-pair collisions (non-reduced discriminant) stack TWO jumps on ONE germ; the reconstruction reads only TOTALS; zero total deletes the contradiction silently. Stacking REAL on self-conjugate arcs (total = 2Re β; Re β ≠ 0 = the S178 rigidity lemma). Even-m-only caveat live (parity families exist in canon).
