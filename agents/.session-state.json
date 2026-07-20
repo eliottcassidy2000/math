@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 {
-  "session_start": "2026-07-19T19:55:01.529196",
-  "start_commit": "fa49a0f12014b87f36c1e946a365078fc3811026",
+  "session_start": "2026-07-19T20:23:22.038908",
+  "start_commit": "87706e843081a0c924398e7f65a86f9cf5e53d0e",
   "pushed": false,
   "message_sent": false
 }
-=======
-{}
->>>>>>> Stashed changes
-=======
-{}
->>>>>>> 6ee19eedb (opus-2026-07-19-S408: checkpoint - claim wild-constructs session: theta-interpolation M_theta (LRC<->Kakeya axis), displacement partition (Young bridge), exclusion signature, regularity signal + witnesses-from-tournament-alone hypothesis)
