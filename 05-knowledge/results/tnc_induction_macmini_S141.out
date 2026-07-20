@@ -1,0 +1,88 @@
+==============================================================================
+PART A -- the restatement, and the m = 1 seed
+==============================================================================
+  CT(Lambda^m) = [u^{Mm}] R(u)^m.   m = 1 gives  [u^M] R = r_M = 0.
+  So the FIRST coefficient is killed for free.  Checking the ladder numerically.
+
+  TNC(1,1)  d=2:  peeled 2/2 coefficients ['r1', 'r2']
+      ladder: ['m=1:solves r1 (linear)', 'm=2:solves r2 (linear)', 'm=3:vacuous', 'm=4:vacuous', 'm=5:vacuous']
+      => FULL TRIANGULAR PEEL: every r_j forced. Residual: [0, 0]
+
+  TNC(1,2)  d=3:  peeled 3/3 coefficients ['r1', 'r2', 'r3']
+      ladder: ['m=1:solves r1 (linear)', 'm=2:solves r2 (linear)', 'm=3:solves r3 (linear)', 'm=4:vacuous', 'm=5:vacuous', 'm=6:vacuous']
+      => FULL TRIANGULAR PEEL: every r_j forced. Residual: [0, 0, 0]
+
+  TNC(1,3)  d=4:  peeled 4/4 coefficients ['r1', 'r2', 'r3', 'r4']
+      ladder: ['m=1:solves r1 (linear)', 'm=2:solves r2 (linear)', 'm=3:solves r3 (linear)', 'm=4:solves r4 (linear)', 'm=5:vacuous', 'm=6:vacuous']
+      => FULL TRIANGULAR PEEL: every r_j forced. Residual: [0, 0, 0, 0]
+
+  TNC(2,1)  d=3:  peeled 2/3 coefficients ['r2', 'r3']
+      ladder: ['m=1:solves r2 (linear)', 'm=2:solves r3 (linear)', 'm=3:vacuous', 'm=4:vacuous', 'm=5:vacuous', 'm=6:vacuous']
+
+  TNC(2,2)  d=4:  peeled 2/4 coefficients ['r2', 'r4']
+      ladder: ['m=1:solves r2 (linear)', 'm=2:solves r4 (linear)', 'm=3:deg 2 in r3 -- LADDER BREAKS', 'm=4:deg 2 in r3 -- LADDER BREAKS', 'm=5:deg 3 in r3 -- LADDER BREAKS', 'm=6:deg 4 in r3 -- LADDER BREAKS']
+      => breaks first at 3
+
+  TNC(2,3)  d=5:  peeled 3/5 coefficients ['r2', 'r4', 'r5']
+      ladder: ['m=1:solves r2 (linear)', 'm=2:solves r4 (linear)', 'm=3:solves r5 (linear)', 'm=4:deg 3 in r3 -- LADDER BREAKS', 'm=5:deg 4 in r3 -- LADDER BREAKS', 'm=6:deg 4 in r3 -- LADDER BREAKS']
+      => breaks first at 4
+
+  TNC(3,1)  d=4:  peeled 2/4 coefficients ['r3', 'r4']
+      ladder: ['m=1:solves r3 (linear)', 'm=2:solves r4 (linear)', 'm=3:vacuous', 'm=4:vacuous', 'm=5:vacuous', 'm=6:vacuous']
+
+  TNC(3,2)  d=5:  peeled 2/5 coefficients ['r3', 'r5']
+      ladder: ['m=1:solves r3 (linear)', 'm=2:solves r5 (linear)', 'm=3:deg 2 in r4 -- LADDER BREAKS', 'm=4:deg 3 in r4 -- LADDER BREAKS', 'm=5:deg 3 in r4 -- LADDER BREAKS', 'm=6:deg 4 in r4 -- LADDER BREAKS']
+      => breaks first at 3
+
+==============================================================================
+PART B -- what the peel actually forces: brute search over small integer R
+==============================================================================
+  M   N   d      R with [u^Mm]R^m=0 for m=1..8, coeffs in [-3,3]
+  1   1   2                             ONLY R = 1 (all r_i = 0)
+  1   2   3                             ONLY R = 1 (all r_i = 0)
+  2   1   3      [(-3, 0, 0), (-2, 0, 0), (-1, 0, 0), (1, 0, 0)]
+  2   2   4 [(-3, 0, 0, 0), (-2, 0, 0, 0), (-1, 0, 0, 0), (1, 0, 0, 0)]
+  2   3   5 [(-3, 0, 0, 0, 0), (-2, 0, 0, 0, 0), (-1, 0, 0, 0, 0), (1, 0, 0, 0, 0)]
+  3   1   4 [(-3, -3, 0, 0), (-3, -2, 0, 0), (-3, -1, 0, 0), (-3, 0, 0, 0)]
+  3   2   5 [(-3, -3, 0, 0, 0), (-3, -2, 0, 0, 0), (-3, -1, 0, 0, 0), (-3, 0, 0, 0, 0)]
+  A nonzero hit here would be a TNC COUNTEREXAMPLE at that bidegree.
+
+==============================================================================
+PART C -- the Laplace layer (GMC(2) side): a Borel/Watson reduction
+==============================================================================
+  HYP-8350 asks: L(p^m) = 0 for all m >= 1  =>  p = 0,  L(f) = int_0^inf f e^{-v} dv.
+  Exponential generating function:
+      F(t) := sum_m L(p^m) t^m / m!  'is'  int_0^inf e^{t p(v)} e^{-v} dv.
+  If all L(p^m) = 0 for m >= 1 then F is asymptotically the CONSTANT 1 at t = 0.
+
+  CONVERGENCE.  On the ray v = rho e^{i phi} (|phi| < pi/2, so Re v > 0 keeps e^{-v}
+  decaying, and L(v^k) = k! is unchanged by contour rotation since the integrand is
+  entire), the integral converges when Re( t a_D e^{i D phi} ) < 0, an OPEN HALF-PLANE
+  in t.  Sweeping phi over (-pi/2, pi/2) rotates that half-plane through D*pi, so F
+  continues analytically to a sector of opening
+      pi + D*pi = pi(1 + D).
+
+  D   sector opening   > pi (Watson threshold)?
+  1    6.2832 = pi*2                       True
+  2    9.4248 = pi*3                       True
+  3   12.5664 = pi*4                       True
+  4   15.7080 = pi*5                       True
+  5   18.8496 = pi*6                       True
+  6   21.9911 = pi*7                       True
+
+  So for EVERY D >= 1 the sector exceeds Watson's threshold pi, which is the
+  hypothesis of the Watson-Nevanlinna theorem: a function analytic in a sector of
+  opening > pi with Gevrey-1 asymptotics is BOREL-DETERMINED by its asymptotic
+  series.  Here that series is identically 1, so F == 1, so the pushforward of
+  e^{-v}dv under p is delta_0, so p == 0.
+
+  WHAT IS AND IS NOT ESTABLISHED.  The sector computation is elementary and is done
+  above.  The Gevrey-1 bound |L(p^m)| <= C A^m (m!)^{1} needed to APPLY
+  Watson-Nevanlinna is NOT verified here -- and it is exactly the estimate HYP-8350
+  has been missing all along, now in a named classical form rather than an ad hoc
+  one.  Checking the growth numerically:
+             p   m         |L(p^m)|     |L(p^m)|/(Dm)!
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/tnc_induction_macmini_S141.py", line 156, in <module>
+    print(f"{nm:>14} {m:>3} {abs(val):>16} {float(abs(val))/factorial(D*m):>18.6f}")
+TypeError: unsupported format string passed to Fraction.__format__

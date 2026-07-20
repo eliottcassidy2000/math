@@ -16593,3 +16593,36 @@ sufficiently large n, small cases open* -- an unusual concentration, and EXACTLY
 the `m >> 0` quantifier defining a Mathieu-Zhao subspace and of THM-1600(A)'s explicit
 threshold. **That is a resonance of PROOF SHAPE, not of content**, and is almost certainly
 how the list was filtered. Do not cite it as a mathematical connection.
+
+### HYP-8440 — the TNC obstruction is exactly the non-multiples of M
+**Status: OPEN, and now precisely localised (THM-1610).** Restating `CT(Lambda^m) =
+[u^{Mm}]R(u)^m` makes the whole family a coefficient condition on powers of one polynomial.
+The natural induction is the COEFFICIENT LADDER: `m=1` gives `r_M = 0`, and each successive
+`m` peels one more coefficient LINEARLY -- **but only at multiples of M**.
+  * M = 1: the peel is COMPLETE, proving TNC(1,N) outright (recovers THM-1530).
+  * M = 2: peels r_2, r_4, then BREAKS at r_3 (degree 2 in r_3).
+  * M = 3: peels r_3, r_5, then BREAKS at r_4.
+**This independently reproduces THM-1550's `Sum_i zeta^{(k+1)i}` arithmetic from a different
+route** (coefficient extraction vs Wiener-Hopf). Two derivations, one divisibility condition.
+**So the induction exists, is canonical, and provably cannot close M >= 2 alone.** What is
+needed is a handle on the `r_j` with `M !| j`, where the equations are genuinely nonlinear.
+**Concrete next moves:** (a) the first broken equation is a single quadratic in one unknown
+(`r_3` at M=2) -- solve it explicitly and feed both roots back into the ladder, which may
+re-linearise downstream; (b) the ladder is a filtration by `m`, so try inducting on `N` with
+`M` FIXED, using the (M,N-1) result as the base rather than inducting on the coefficient
+index; (c) compare against boxeph's THM-1595 gauged elimination, which closes (2,3), (2,4),
+(3,3) -- does its certificate factor through the same non-multiple obstruction?
+
+### HYP-8445 — the Gevrey-1 bound for the Laplace layer (the last input to HYP-8350)
+**Status: OPEN, but now a NAMED classical criterion instead of an ad hoc estimate
+(THM-1610 E).** `F(t) = int_0^inf e^{t p(v)} e^{-v} dv` continues, by rotating the contour
+`v = rho e^{i phi}` over `|phi| < pi/2`, to a sector of opening **`pi(1+D)`**, which exceeds
+Watson's threshold `pi` for EVERY `D >= 1`. If all `L(p^m) = 0` then F's asymptotic series is
+identically 1, and Watson-Nevanlinna would give `F == 1`, hence the pushforward of `e^{-v}dv`
+under p is `delta_0`, hence `p == 0`.
+**THE ONE MISSING INPUT is the Gevrey-1 bound** `|L(p^m)| <= C A^m m!` in the correct
+variable. Numerically `|L(p^m)|/(Dm)!` is `O(1)`, i.e. Gevrey-D in `t` = Gevrey-1 in
+`t^{1/D}` -- the same variable the sector was measured in, so the normalisations agree. But
+that is an OBSERVATION, not a proof.
+**Note this is strictly a REDUCTION**: HYP-8350 now sits on a standard Borel-summability
+theorem rather than on a bespoke saddle estimate. Cite it as a reduction, not a proof.
