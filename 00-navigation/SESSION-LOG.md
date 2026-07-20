@@ -34,6 +34,23 @@ net: proposed a unification, tested it, refuted it, and extracted the real (clea
 before building on it caught it. (Same discipline as the sin(7t) and three-sixties refutations.)
 
 **Artifacts:** THM-1710; HYP-8520; THM-1705 s4/HYP-8515 route 2 withdrawn; 2 scripts + 2 outputs.
+## death-star-2026-07-20-S68 -- ATLAS: the GMC/LRC lenses link ~a dozen famous problems into 6 lenses (HYP-8520)
+
+**Owner:** link famous problems via these lenses / define new ones.
+
+- A navigational MAP (not reductions); famous placements are established facts, the links to our threads
+  are the contribution; 2 anchored numerically.
+- **L1 Positivity-past-the-cancellation-wall:** RH (Weil/Li), circle-method Goldbach/Waring, Erdős
+  discrepancy (Tao), Chowla/Sarnak, LRC disc_v, GMC Hankel — MISTAKE-202 = a local instance of a
+  universal law. **L2 L^p-energy of a structured exp-sum** [anchored: merit-factor energy=Parseval,
+  3=3.000]: Littlewood, merit factor/Golay, LRC disc_v, GMC reconstruction = ONE object. **L3
+  fold/critical-point/loop:** Sendov, Smale, Gauss-Lucas, GMC S66 loop. **L4 no-common-root/interlacing**
+  [anchored: Hermite interlace]: Kadison-Singer (MSS), Lee-Yang/de Bruijn-Newman (RH), GMC Hermite. **L5
+  charge-grading:** JC/Mathieu/Dixmier, GMC, AND the CORE Rédei/OCR (odd-cycle parity = charge). **L6
+  meta:** representation-vs-function (MISTAKE-203).
+- GMC(2) touches ALL 6 lenses; LRC & Rédei each share ≥2. **Sharpest new question (→backlog): is the
+  tournament odd-cycle-parity functional a Mathieu-Zhao space?** (would place Rédei in the JC ecosystem).
+- Files: lens_atlas_crosslinks_deathstar_S68 (+out); reflection an-atlas-of-lenses-linking-famous-problems-S68.
 
 ## death-star-2026-07-20-S67 -- GMC(2) ⟷ LRC(14): the same "positivity past the cancellation wall", one shared object (HYP-8515)
 

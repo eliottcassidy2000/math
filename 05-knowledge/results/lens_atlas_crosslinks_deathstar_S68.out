@@ -1,0 +1,10 @@
+=== LENS 2 (autocorrelation energy): merit factor / Littlewood / LRC disc_v are ONE object ===
+  +-1 seq [1, 1, 1, -1, -1, 1, -1]: autocorr energy sum C_k^2 = 3, Parseval (int|S|^4 - N^2)/2 = 3.000  (equal => same object)
+  So merit factor F = N^2/(2*energy), Littlewood L^1/L^4, and LRC disc_v are all L^p-energies of a
+  structured exponential sum -> one lens.
+
+=== LENS 4 (no-common-root / real-rootedness): GMC-Hermite = Lee-Yang/MSS interlacing ===
+  He_3 roots [-1.732  0.     1.732], He_4 roots [-2.334 -0.742  0.742  2.334]: interlace=True, share a root=False
+  He_4 roots [-2.334 -0.742  0.742  2.334], He_5 roots [-2.857 -1.356  0.     1.356  2.857]: interlace=True, share a root=False
+  Consecutive Hermite are real-rooted and INTERLACE (no common root) -- the exact rigidity behind
+  Lee-Yang / de Bruijn-Newman (RH via real-rooted approximants) and MSS/Kadison-Singer (interlacing).

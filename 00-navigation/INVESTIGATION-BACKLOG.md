@@ -1,5 +1,15 @@
 # Investigation Backlog
 
+### Is the tournament odd-cycle-parity functional a Mathieu–Zhao space? (death-star-2026-07-20-S68, HYP-8520)
+- **Source:** the lens-atlas reflection (`07-reflections/an-atlas-of-lenses-linking-famous-problems-S68`), Lens 5.
+- **Status:** OPEN question, the sharpest new lead from the atlas. GMC's charge (Fourier mode of `arg Z`,
+  killed by `E`) and the tournament charge (odd-cycle parity, killed by the OCR/Rédei functional) are the
+  same "graded-piece-killed-by-a-functional" structure. GMC(n) ⟹ JC(n) *because* `ker E` is Mathieu–Zhao.
+- **Next step:** define the tournament parity functional `Λ` (OCR / Rédei sign) on the appropriate algebra
+  and test whether `ker Λ` is Mathieu–Zhao: `Λ(P^m)=0 ∀m ⟹ Λ(QP^m)=0` for `m≫0`. If yes, Rédei's theorem
+  enters the Jacobian ecosystem directly — a concrete tie between the project's CORE object and the JC
+  thread. Small cases (`n≤6`) are computable with the existing tournament/charge machinery.
+
 ### LRC(14) `disc_v` via the GMC reconstruction-from-arcs (death-star-2026-07-20-S67, HYP-8515)
 - **Source:** the GMC(2)↔LRC bridge reflection (`07-reflections/the-same-manoeuvre-twice-...-S67`).
 - **Status:** OPEN lead, structural identity verified. LRC(14)'s last inequality is an upper bound on
