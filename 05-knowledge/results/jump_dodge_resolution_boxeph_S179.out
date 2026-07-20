@@ -1,0 +1,15 @@
+t (near t0 = 1.4286)   A_fixed(t)         d2A/dt2 (finite diff)
+1.2286   0.265561+1.501276i   -0.6625-0.8209i
+1.3286   0.343813+1.538852i   -0.5665-0.5543i
+1.3786   0.380756+1.555418i   -0.5262-0.4765i
+1.4086   0.402284+1.564774i   -0.5040-0.4382i
+1.4186   0.409358+1.567803i   -0.4969-0.4264i
+1.4236   0.412877+1.569302i   -0.4934-0.4208i
+
+fit d2A/dt2 ~ C log|t - t0| + D  (two-point solves):
+  C ~ -0.0182  (nonzero => genuine (t-t0)^2 log endpoint singularity)
+  C ~ -0.0076  (nonzero => genuine (t-t0)^2 log endpoint singularity)
+
+=> CASE I (P(0) != 0): the endpoint singularity at t0 = 1/P(0) is REAL with
+   nonvanishing coefficient: any A_fixed == 0 forced by moments on the
+   0-component contradicts it. The Newton split is the theorem structure.

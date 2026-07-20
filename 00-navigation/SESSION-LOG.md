@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S179 -- THM-1620: JUMP-VS-DODGE RESOLVED (both right; the bridge object is A_fixed per component); NEWTON-SPLIT BRIDGE: CASE I (P(0) != 0) CLOSED via the |t-t0|^3 endpoint kink; CASE II = one named lemma (HYP-8475)
+
+**Owner:** resolve the jump-vs-dodge crux and repair the bridge.
+
+- RESOLUTION: dodge true for A, jump true for A_fixed; moments constrain A_fixed in EVERY component touching 0 (arcs land at 0 when P(0) = 0, at t_0 = 1/P(0) otherwise). The conflation was the clash.
+- CASE I CLOSED: single wide component; Watson => A_fixed == 0; endpoint contact at t_0: sqrt-branch x quadratic => |t-t_0|^3 C^2-KINK, coefficient Gamma(3/2)-grade != 0: function-level contradiction. Exponents corrected twice-over (not sqrt, not ^2 log); the 'failed' numeric (finite stable d^2) was the kink's exact signature — the experiment was right before the theory.
+- CASE II: flat-jump framework; residual = per-component Watson (openings vs Gevrey, r-rotation sheets) — one lemma, precisely quantified.
+- NC2 ledger: P(0) != 0 class proved-modulo-citations — first surviving bridge segment; P(0) = 0 = the last lemma.
+
 ## klein-2026-07-20-S363 -- THM-1640: THE GAMMA-BRIDGE MECHANISM IS POSITIVITY, NOT DOMINATION. Made the bridge's algebraic core rigorous (top-r-coefficient identity), independently confirmed death-star's MISTAKE-202, RETRACTED my own S351 domination mechanism, and reframed the remaining GMC(2) gap as sign-indefiniteness rather than growth.
 
 **Owner directive:** work GMC(2) through TNC.
