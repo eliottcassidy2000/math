@@ -1,0 +1,42 @@
+=== COLUMNS (0-indexed j = col-1) vs power sums Sum_{k=1}^{m} k^j ===
+  col j=0: [1, 2, 3, 4, 5, 6, 7]
+    Sum k^0: [1, 2, 3, 4, 5, 6]   MATCH=False  <-- DEVIATES (Moser-type)
+  col j=1: [1, 3, 6, 10, 15, 21]
+    Sum k^1: [1, 3, 6, 10, 15]   MATCH=False  <-- DEVIATES (Moser-type)
+  col j=2: [1, 5, 14, 30, 55]
+    Sum k^2: [1, 5, 14, 30]   MATCH=False  <-- DEVIATES (Moser-type)
+  col j=3: [1, 9, 37, 101]
+    Sum k^3: [1, 9, 36]   MATCH=False  <-- DEVIATES (Moser-type)
+  col j=4: [1, 17, 99]
+    Sum k^4: [1, 17]   MATCH=False  <-- DEVIATES (Moser-type)
+  col j=5: [1, 33]
+    Sum k^5: [1]   MATCH=False  <-- DEVIATES (Moser-type)
+
+=== SUBDIAGONAL (col=row-1) and last diagonal ===
+  subdiagonal T(r,r-1): [2, 3, 5, 9, 17, 33]   vs 2^x+1: [3, 5, 9, 17, 33, 65]
+  main diagonal T(r,r): [1, 1, 1, 1, 1, 1, 1] (all 1)
+
+=== ROW SUMS and ANTIDIAGONAL (shallow) SUMS ===
+  row sums: [1, 3, 7, 16, 39, 106, 317]
+  shallow-diagonal sums: [1, 2, 4, 7, 12, 21, 37, 60, 93, 118, 100, 33, 1]
+
+=== RECURRENCE SEARCH: T(r,c) = a*T(r-1,c) + b*T(r-1,c-1) + e*T(r-2,c-1) + g*T(r-2,c-2)? ===
+  no consistent 6-term linear recurrence (of this shape) -- try OEIS
+
+=== THE n*2^x+1 TABLE (x=0..5 rows, n=0..6 cols) ===
+       n=0  n=1  n=2  n=3  n=4  n=5  n=6
+  x=0: [0, 1, 2, 3, 4, 5, 6]  (x=0: naturals)
+  x=1: [1, 3, 5, 7, 9, 11, 13]  <- 2n+1 (observer/Redei)
+  x=2: [1, 5, 9, 13, 17, 21, 25]
+  x=3: [1, 9, 17, 25, 33, 41, 49]
+  x=4: [1, 17, 33, 49, 65, 81, 97]
+  x=5: [1, 33, 65, 97, 129, 161, 193]
+  column n=1 (down): [1, 3, 5, 9, 17, 33]  <- 2^x+1 (hypotenuse/Fermat)
+  ODD check: n*2^x+1 for x>=1 is ODD for all n (n*2^x even) -> the family is ODD numbers.
+
+=== RATIONAL SERIES ===
+  harmonic H_n: ['1', '3/2', '11/6', '25/12', '137/60', '49/20']  (matches 1,3/2,11/6,25/12,137/60)
+  sum (2^k-1)/k: ['1', '5/2', '29/6', '103/12', '887/60', '1517/60']
+  sum 2^(k-1)/k: ['1', '2', '10/3', '16/3', '128/15', '208/15']
+  owner series 2: ['1', '5/2', '29/3', '109/12', '1079/60']  differences from H_n: ['0', '1', '47/6', '7', '157/10']
+  owner2 / H_n: ['1', '5/3', '58/11', '109/25', '1079/137']
