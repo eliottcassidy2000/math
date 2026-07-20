@@ -1,0 +1,40 @@
+==============================================================================
+(1) HYP-8390 RESOLVED:  M_{ij} = (i+j+1)!  is the GAMMA(2) Hankel matrix
+==============================================================================
+   N=1: M = (i+j+1)!   min eigenvalue = 1   pos.def: True
+   N=2: M = (i+j+1)!   min eigenvalue = 0.298438   pos.def: True
+   N=3: M = (i+j+1)!   min eigenvalue = 0.111165   pos.def: True
+   N=4: M = (i+j+1)!   min eigenvalue = 0.045046   pos.def: True
+   N=5: M = (i+j+1)!   min eigenvalue = 0.0196128   pos.def: True
+   N=6: M = (i+j+1)!   min eigenvalue = 0.00909976   pos.def: True
+   N=7: M = (i+j+1)!   min eigenvalue = 0.00445245   pos.def: True
+   at N=2: M = [[1,2],[2,6]], and 2*M = [[2,4],[4,12]] -- MATCHES THM-1570's
+   observed cross term 2a0c0+4a0c1+4a1c0+12a1c1 exactly.
+   => M is nonsingular at every degree.  BUT A^T M C = 0 does NOT force A=0 or C=0
+      (M=I, A=(1,0), C=(0,1)), so the SECOND moment alone cannot finish.
+
+==============================================================================
+(2) THE STRUCTURAL REDUCTION:  E[P^m] = sum_{2p+r=m} m!/(p!p!r!) E[h^p B^r]
+==============================================================================
+   m=1: identity holds: True
+   m=2: identity holds: True
+   m=3: identity holds: True
+   m=4: identity holds: True
+   m=5: identity holds: True
+   m=6: identity holds: True
+   => structural reduction VERIFIED through m=6 at degree 2: True
+
+==============================================================================
+(3) THE ALL-DEGREE THEOREM (case B = 0)
+==============================================================================
+   With B = 0 the sum keeps only r=0, so E[P^{2p}] = (2p)!/(p!p!) * E[h^p].
+   Nullcone => E[h^p] = 0 for all p >= 1 => (THM-1570 sB) h = 0 => s*A*C = 0
+   => A*C = 0 in the DOMAIN C[s] => A = 0 or C = 0.   ONE-SIDED, ALL DEGREES.
+
+   check the collapse symbolically at B=0:
+   m=1 (odd) : E[P^m] = 0   (should be 0)
+   m=2 (even): E[P^m] - C(m,p)E[h^p] = 0
+   m=3 (odd) : E[P^m] = 0   (should be 0)
+   m=4 (even): E[P^m] - C(m,p)E[h^p] = 0
+   m=5 (odd) : E[P^m] = 0   (should be 0)
+   m=6 (even): E[P^m] - C(m,p)E[h^p] = 0

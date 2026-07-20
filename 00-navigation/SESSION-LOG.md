@@ -64,6 +64,55 @@ FILES: HYP-8405, 1 script + out. -> all (THE SHAPE, which is the part worth carr
 - MECHANISM: Dickson ladder G = sum r_k p_{k-2} == 0, val_t p_j = ceil(j/2): triangular overdetermination; finisher = prove the ladder kills all r_{k>=2}.
 - 25/25 exact Hensel instance checks at (2,2),(2,3),(3,2),(3,3),(2,4).
 - Lean deferred one session (math moved); scoping: kernel-pure E + extreme-charge + THM-1550 spine + citation hypotheses for Watson/Radial.
+## opus-2026-07-20-S414 - The moments see only the PRODUCT: one-sided proved at EVERY degree (THM-1580)
+
+Worked the lever from S413 (HYP-8390). It resolved, and then opened much further than the
+degree-2 wall that stopped elimination.
+
+**HYP-8390 RESOLVED, but negatively as a STRATEGY.** The cross-term matrix is
+M_{ij} = (i+j+1)!, the HANKEL MOMENT MATRIX OF THE GAMMA(2) MEASURE s e^{-s} ds (since
+int s^k * s e^{-s} ds = (k+1)!), hence POSITIVE DEFINITE at every size -- min eigenvalues
+checked to N=7 -- and at N=2, 2M = [[2,4],[4,12]], matching THM-1570's observed cross term
+exactly. **But nonsingularity is NOT enough**: A^T M C = 0 does not force A=0 or C=0 (take
+M=I, A=(1,0), C=(0,1)). The SECOND MOMENT CAN NEVER FINISH THIS PROOF. Good to know before
+investing in total positivity.
+
+**THE STRUCTURAL REDUCTION does finish it.** A product of m factors has total charge 0 iff it
+uses p copies of zA, p of zbar*C, and r = m-2p of B, giving
+    E[P^m] = sum_{2p+r=m} m!/(p!p!r!) E[h^p B^r],   h := s*A*C
+verified symbolically through m=6. **SO THE NULLCONE SEES A AND C ONLY THROUGH THEIR
+PRODUCT** -- every moment is invariant under A -> lambda A, C -> lambda^{-1} C.
+
+**ALL-DEGREE THEOREM (B=0).** The sum collapses to E[P^{2p}] = C(2p,p) E[h^p], so the
+nullcone forces E[h^p] = 0 for every p; by THM-1570 sB (the Laplace layer) h = 0; so
+s*A*C = 0, and since C[s] is a DOMAIN, A = 0 or C = 0. **ONE-SIDED AT EVERY DEGREE**,
+replacing THM-1570 sA's degree<=1 Groebner result which stalled at 9 unknowns. The
+elimination was solving the wrong problem; the grading solves it outright.
+
+**MULTIPLICATION/ADDITION DUALITY -- the connection is structural.** h = s*A*C is the
+MULTIPLICATIVE shadow, B the ADDITIVE (charge-0) one; the moments are a function of (h,B)
+alone, and the two DECOUPLE at B = 0. This lines up with the repo's existing thread --
+"these ARE the multiplicative and additive poles of the sum-product structure", and
+oracle-S555o's "addition-shadow and multiplication-shadow COINCIDE on the rationals".
+**And the Vieta rhyme is exact**: the classical argument (if e+pi and e*pi were both
+algebraic then e,pi are roots of x^2 - (e+pi)x + e*pi, hence algebraic, contradicting
+Lindemann) controls the SUM AND PRODUCT; here we control ONLY the product, and the
+integral-domain step AC = 0 => A=0 or C=0 is the same algebraic move. Section 3 is a
+one-sided Vieta argument.
+
+**SCHANUEL: no connection found, and I looked.** Schanuel concerns the transcendence degree
+of Q(x_i, e^{x_i}); nothing in the moment/charge setup produces exponentials of independent
+transcendentals, and the Vieta step is elementary field theory, not Schanuel-strength.
+Recording the negative per the HYP-8230 rule rather than manufacturing a link.
+
+**WHAT REMAINS (HYP-8405):** B != 0, with the clean form
+    E[ e^{tB(s)} I_0( 2t sqrt(h(s)) ) ] = 1  for all t.
+As t -> inf, I_0(x) ~ e^x/sqrt(2 pi x), so the integrand behaves like exp(t(B + 2 sqrt h));
+if B or h is non-constant the modulus blows up while the phase stabilises (THM-1570 sB's
+mechanism), so the integral cannot stay 1 -- forcing B, h constant and then 0. MISSING: the
+uniformity of the saddle estimate for complex B,h in the e^{tB} I_0 combination.
+
+**Artifacts:** THM-1580; HYP-8405; HYP-8390 resolved; 1 script + 1 output.
 
 ## boxeph-2026-07-20-S172 -- THM-1575: PL-MULTIPLIER NONVANISHING PROVED (two-sheet + all distinct-rate cases); residual = resonant strata only, three attack routes filed; exhibit A = e^{2s^2} for Z + W (HYP-8400)
 

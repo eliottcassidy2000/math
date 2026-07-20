@@ -16514,3 +16514,28 @@ iso classes, leaving **39 unseparated**. Two cheap questions:
 `H` is not, so the cheap invariant is also the strong one. If a small cheap package is complete
 at n = 7 that is a genuinely useful tournament fingerprint, and directly comparable to
 THM-506's `(char, perm)`.
+### HYP-8405 - The B != 0 case: does E[e^{tB} I_0(2t sqrt(h))] = 1 force B = h = 0?
+**Status:** OPEN, sketch only (opus-2026-07-20-S414). See THM-1580 s5.
+
+With THM-1580 s3 the B=0 case of the one-sided conjecture is PROVED at all degrees. The only
+remainder at charge span {-1,0,+1} is B != 0, and it has a clean generating-function form:
+
+    E[ exp(tB(s)) * I_0( 2t sqrt(h(s)) ) ]  =  1     for all t,     h = s*A*C
+
+(I_0(x) = sum x^p/(p!)^2, the modified Bessel function; the identity is the resummation of
+E[P^m] = sum_{2p+r=m} m!/(p!p!r!) E[h^p B^r]).
+
+**Sketch.** As t -> infinity, I_0(x) ~ e^x / sqrt(2 pi x), so the integrand behaves like
+exp(t(B + 2 sqrt(h))). If B or h is NON-CONSTANT then |B + 2 sqrt h| -> infinity as
+s -> infinity while its argument stabilises to that of the leading coefficient -- the SAME
+phase-stabilisation mechanism proved in THM-1570 sB -- so the integral cannot remain equal
+to 1. Hence B and h are constant; expanding e^{t b0} I_0(2t sqrt(h0)) = 1 in powers of t
+then gives b0 = 0 and h0 = 0, so A*C = 0 and one factor dies.
+
+**What is missing:** the uniformity of the saddle-point estimate for COMPLEX B and h in the
+combination e^{tB} I_0(2t sqrt h). THM-1570 sB did exactly this for a single function g^m;
+the two-function combination needs the same treatment. This is the last step for charge span
+{-1,0,+1}, after which only WIDER SPANS remain.
+
+**Related:** THM-1580 (the reduction and the B=0 theorem), THM-1570 sB (the engine),
+HYP-8375 (the both-signs case), HYP-8390 (RESOLVED by THM-1580 s1).
