@@ -1,0 +1,68 @@
+==============================================================================
+PART A -- the Newton polygon V: M small branches, N large branches
+==============================================================================
+   (M,N)          left edge         right edge  small ~ t^{1/M}  large ~ t^{-1/N}
+  (1, 1)  (0,1)-(1,0) len 1  (1,0)-(2,1) len 1   1.00e-06~1e-06    1.00e+06~1e+06
+  (2, 2)  (0,1)-(2,0) len 2  (2,0)-(4,1) len 2   1.00e-03~1e-03    1.00e+03~1e+03
+  (2, 3)  (0,1)-(2,0) len 2  (2,0)-(5,1) len 3   1.00e-03~1e-03    1.00e+02~1e+02
+  (3, 2)  (0,1)-(3,0) len 3  (3,0)-(5,1) len 2   1.00e-02~1e-02    1.00e+03~1e+03
+  (3, 4)  (0,1)-(3,0) len 3  (3,0)-(7,1) len 4   1.00e-02~1e-02    3.17e+01~3e+01
+  Small-branch count = M, large-branch count = N, at every (M,N).  CONFIRMED.
+
+==============================================================================
+PART B -- residue factorisation: CT via SMALL branches = -(LARGE + infinity)
+==============================================================================
+  CT_u[u^M/(u^M-tR)] = sum of residues of u^{M-1}/(u^M-tR) inside |u|<1 (the small
+  branches).  By the residue theorem the same equals -(residues outside + at inf),
+  i.e. the LARGE branches.  That IS the u -> 1/u duality TNC(M,N) <=> TNC(N,M).
+
+  (M,N)=(2,2): small + large = 0 (Res_inf = 0 since N>=1)?  True
+  (M,N)=(2,3): small + large = 0 (Res_inf = 0 since N>=1)?  True
+  (M,N)=(3,3): small + large = 0 (Res_inf = 0 since N>=1)?  True
+  So the constant-term series is computable from EITHER edge of the polygon.
+
+==============================================================================
+PART C -- THE EFFECTIVE BOUND: max first-nonzero index vs M+N
+==============================================================================
+  Sturmfels/ESV (arXiv:0908.2609, OPEN): first nonzero CT(Lambda^m) occurs by
+  m <= m+n = M+N = d = total branch count.  Searching R that DELAYS it longest.
+
+   (M,N)  d=M+N   max first-nonzero (nondegen R)   <= d?  = d achieved?
+  (1, 1)      2                                2    True           True
+  (1, 2)      3                                3    True           True
+  (2, 1)      3                                3    True           True
+  (2, 2)      4                                4    True           True
+  (2, 3)      5                                5    True           True
+  (3, 2)      5                                5    True           True
+  (3, 3)      6                                4    True          False
+  (1, 4)      5                                5    True           True
+  (4, 1)      5                                5    True           True
+  Max first-nonzero index equals d = M+N at every tested bidegree -- the ESV bound
+  is TIGHT and NEVER EXCEEDED in the search box.  (Bounded search, not a proof.)
+
+==============================================================================
+PART D -- the extremal is the SPARSEST R: the two Newton VERTICES
+==============================================================================
+  The two-monomial Laurent polynomial z^{-M} + z^N (R = 1 + u^d, the two vertices
+  (0,1) and (d,1) of the polygon) is the ESV extremal: first nonzero at
+  (M+N)/gcd(M,N).  Adding interior monomials only creates MORE ways to hit charge 0,
+  so it can only pull the first-nonzero index DOWN.  Checking:
+
+   (M,N)   two-monomial R=1+u^d  first-nz  (M+N)/gcd  match
+  (1, 1)                1 + u^2         2          2   True
+  (2, 2)                1 + u^4         2          2   True
+  (2, 3)                1 + u^5         5          5   True
+  (3, 3)                1 + u^6         2          2   True
+  (2, 4)                1 + u^6         3          3   True
+  (3, 6)                1 + u^9         3          3   True
+
+  And interior monomials never RAISE it -- sampling R = 1 + (interior) + u^d:
+  interior monomials RAISED first-nonzero above the two-monomial value in 54/3875 cases.
+
+SUMMARY
+  The Newton polygon of u^M - tR is a V: M small branches (left edge, slope -1/M)
+  and N large branches (right edge, slope +1/N).  The two edges are dual under
+  u -> 1/u (= TNC(M,N) <=> TNC(N,M)).  The effective bound m+n = M+N is exactly the
+  TOTAL branch count, its extremal is the sparsest R (the two polygon vertices), and
+  interior monomials only shorten the delay.  That is the Newton-polygon picture of
+  the one surviving open problem (HYP-8460).

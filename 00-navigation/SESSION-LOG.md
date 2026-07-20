@@ -1,3 +1,16 @@
+## mac-mini-2026-07-20-S144 -- THE NEWTON POLYGON OF u^M - tR: M small + N large branches, dual under u->1/u (= TNC duality); the effective DvdK bound m+n IS the total branch count; and my 'sparsest R is extremal' guess is REFUTED (gcd-graded). THM-1650.
+
+**Owner directive:** "think newton polygon factorization of large branches."
+
+- **THE POLYGON (proved).** For `Lambda = u^{-M} R(u)`, the CT generating function is `F(t) = CT_u[u^M/(u^M - tR)] - 1`, denominator `Phi = u^M - tR` has `d = M+N` roots. Newton polygon in (u-exp, t-exp): support `(M,0)` and the `(j,1)`; lower hull is a **V** with vertices `(0,1)-(M,0)-(d,1)`. LEFT edge len M slope -1/M = **M SMALL branches** `u ~ t^{1/M}`; RIGHT edge len N slope +1/N = **N LARGE branches** `u ~ t^{-1/N}`. Verified n=1..4: exactly M roots inside |u|<1, N outside, predicted valuations.
+- **THE DUALITY IS THE TWO EDGES (proved).** `CT_u[u^M/(u^M-tR)]` = residues at the SMALL branches (u=0 is a zero of order M, not a pole) = `-(`LARGE branches `+ Res_inf)`, and `Res_inf = 0` for N>=1. Verified small + large = 0. So the CT series is computable from EITHER edge, and `u -> 1/u` (R -> R*, M <-> N, small <-> large) IS `TNC(M,N) <=> TNC(N,M)` -- the THM-1595 min(M,N) duality, now geometric.
+- **THE EFFECTIVE BOUND IS THE TOTAL BRANCH COUNT.** HYP-8460 (Sturmfels/ESV, OPEN): first nonzero CT(Lambda^m) by index `m+n = M+N = d = ` both edge lengths summed. Searching R that delays longest: max first-nonzero `<= M+N` and never exceeded across nine bidegrees; tight at the coprime ones.
+- **MY OWN HEURISTIC REFUTED, by my own run.** I expected the extremal R to be the SPARSEST -- the two Newton vertices `R = 1 + u^d = z^{-M}+z^N`. That gives first-nonzero `(M+N)/gcd(M,N)`, `= M+N` ONLY for `gcd(M,N)=1`. For gcd>1 it is FAST (`m=2` at (3,3), since 6/3=2), and interior monomials RAISE the index in **54/3875** sampled cases -- directly refuting 'interior only pulls down'. **The extremal is gcd-graded**; the two-vertex picture is the coprime special case. And at (3,3) the box max first-nonzero was **4 < 6**, so the bound m+n is NOT observed tight there.
+
+**Handoff.** HYP-8460 updated with the Newton picture + gcd correction. The concrete new sub-question: **for gcd(M,N)>1, is m+n even tight?** At (3,3) the observed max was 4, not 6. Resolve via a bigger coefficient box or -- better -- ESV's conditional Theorem 2 computing `deg I_{m,n}` as the Eulerian number `<m+n-1 / m-1>`, which the repo can check with its Eulerian machinery (THM-062/063). That is the real evidence path toward the ESV conjecture, and it is independent of the search. Nothing here proves the bound (it is the open ESV conjecture) or touches GMC(2)/GMC(>=3).
+
+---
+
 ## boxeph-2026-07-20-S179 -- THM-1620: JUMP-VS-DODGE RESOLVED (both right; the bridge object is A_fixed per component); NEWTON-SPLIT BRIDGE: CASE I (P(0) != 0) CLOSED via the |t-t0|^3 endpoint kink; CASE II = one named lemma (HYP-8475)
 
 **Owner:** resolve the jump-vs-dodge crux and repair the bridge.

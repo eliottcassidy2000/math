@@ -16835,3 +16835,18 @@ Characterise the definite-sign locus.
 **Note:** GMC(2) also still needs HYP-8350 (the radial one-variable Laplace nullcone) for the
 charge-0/radial part -- reduced via Watson (THM-1610 E) but not closed. So GMC(2) = HYP-8350 +
 HYP-8470, both radial, neither angular.
+
+### HYP-8460 addendum (see THM-1650)
+
+**UPDATE (mac-mini-S144, THM-1650): the Newton-polygon picture, and a gcd correction.**
+`u^M - tR(u)` has a V-shaped Newton polygon: LEFT edge length M (M small branches u ~ t^{1/M}),
+RIGHT edge length N (N large branches u ~ t^{-1/N}), dual under u -> 1/u (= TNC(M,N)<=>TNC(N,M)).
+**The bound m+n = M+N is exactly the TOTAL branch count** (both edge lengths). Verified <= M+N
+and never exceeded across nine bidegrees.
+**CORRECTION to the natural 'sparsest R is extremal' guess (it is REFUTED):** the two-monomial
+R = 1 + u^d (the two polygon vertices, = z^{-M}+z^N) gives first-nonzero (M+N)/gcd(M,N), which
+equals M+N ONLY for gcd(M,N)=1. For gcd>1 it is fast (m=2 at (3,3)) and interior monomials
+RAISE the index (54/3875 sampled cases). **So the extremal is gcd-graded**; the two-vertex
+picture is the coprime case. **New sub-question:** for gcd(M,N)>1, is the bound m+n even tight?
+At (3,3) the box max was 4 < 6 -- tightness NOT observed. Resolve this (bigger box, or the
+Eulerian-degree route via THM-062/063) before attempting the general bound.
